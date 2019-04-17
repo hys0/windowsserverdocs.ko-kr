@@ -1,3 +1,0 @@
-Windows Admin Center (비-미리 보기) 릴리스는 Microsoft의 [최신 수명 주기 정책](https://support.microsoft.com/help/30881/modern-lifecycle-policy)에 따라 계속 지원 합니다. 즉, 최신 버전의 Windows Admin Center는 서비스 및 지원 및 가용성에 30 일 이내 최신 Windows Admin Center 버전으로 업그레이드 하 여 사용자가 현재 유지 해야 합니다. 이 정책은 Windows Admin Center 확장 피드에 게시 된 모든 릴리스 (비-미리 보기) Microsoft 확장 뿐만 아니라 자체 Windows Admin Center 플랫폼에 적용 됩니다. 참고 일부 확장 Windows Admin Center 버전 간의 다른 보다 더 자주 업데이트 될 수 있습니다.
-
-Windows Admin Center 미리 보기 버전에 대 한 정보를 [Windows 참가자 미리 보기 릴리스](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver)를 참조 하세요.

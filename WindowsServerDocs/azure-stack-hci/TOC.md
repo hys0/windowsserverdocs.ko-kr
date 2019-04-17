@@ -1,7 +1,0 @@
-# [Azure Stack HCI](index.md)
-## [Hyper-V](../virtualization/hyper-v/index.md)
-## [직접 액세스 저장소 공간](../storage/storage-spaces/storage-spaces-direct-overview.md)
-## [장애 조치 클러스터링](../failover-clustering/failover-clustering-overview.md)
-## [소프트웨어 정의 네트워킹](https://docs.microsoft.com/windows-server/networking/sdn/)
-## [Windows Admin Center](../manage/windows-admin-center/overview.md)
-## [Azure에 연결](../azure-hybrid-services/index.md)
