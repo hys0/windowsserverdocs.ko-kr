@@ -1,6 +1,6 @@
 ---
-title: Hyper-v 네트워크 가상화
-description: 이 항목에서는 Windows Server 2016에 Hyper-v 네트워크 가상화 관련 된 내용에 대 한 링크를 제공 합니다.
+title: Hyper-V 네트워크 가상화
+description: 이 항목에서는 Windows Server 2016에서 Hyper-v 네트워크 가상화에 대 한 콘텐츠 링크를 제공합니다.
 manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -13,24 +13,25 @@ ms.topic: article
 ms.assetid: 150976f0-ccd5-487a-a458-92261444a846
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 62fd572fc2bc609f2d4fd10f4cecc38fd8c3b6a4
-ms.sourcegitcommit: 19d9da87d87c9eefbca7a3443d2b1df486b0b010
+ms.openlocfilehash: daf8d507258328d2199779b48a7a5c98567c919f
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59812064"
 ---
-# <a name="hyper-v-network-virtualization"></a>Hyper-v 네트워크 가상화
+# <a name="hyper-v-network-virtualization"></a>Hyper-V 네트워크 가상화
 
->적용 대상: Windows Server (세미콜론 연간 채널) Windows Server 2016
+>적용 대상: Windows Server (반기 채널), Windows Server 2016
 
-Windows Server 2012에 소개 된, Hyper-v 네트워크 가상화 (HNV) 실제 네트워크 공유 infrastructure 위에 고객 네트워크 가상화를 수 있습니다. 실제 네트워크 패브릭에 필요한 변경 최소화, HNV 제공 서비스 공급자는 유연성 배포 하 고 세 구름에서 아무 곳 이나 테 작업 마이그레이션하: 클라우드 서비스 공급자, 개인 클라우드 나 공개 Microsoft Azure 클라우드.  
+Windows Server 2012에 도입 된, Hyper-v 네트워크 가상화 (HNV) 고객 네트워크 공유의 실제 네트워크 인프라의 가상화를 수 있습니다. 실제 네트워크 패브릭에서 필요한 최소한의 변화를 통해 HNV를 통해 서비스 공급자 배포 하 고 세 개의 클라우드에 걸쳐 아무 곳 이나 테 넌 트 작업을 마이그레이션하는 민첩성과: 서비스 공급자 클라우드, 사설 클라우드 또는 Microsoft Azure 공용 클라우드입니다.  
   
-자세한 내용은 다음 항목을 참조 하십시오.  
+자세한 내용은 다음 항목을 참조하십시오.  
   
--   [Windows Server 2016에에서 hyper V 네트워크 가상화 개요](../../../sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-overview-windows-server.md)  
+-   [Windows Server 2016의에서 Hyper-v 네트워크 가상화 개요](../../../sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-overview-windows-server.md)  
   
--   [Hyper-v 네트워크 가상화 Windows server 2016의에서 새로운 기능](../../../sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md)  
+-   [Windows Server 2016의에서 Hyper-v 네트워크 가상화의 새로운 기능](../../../sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md)  
   
 |||  
 |-|-|  
-|![구름](../../../media/Hyper-V-Network-Virtualization/All_Symbols_Cloud.png)|Microsoft Azure 클라우드에서 비슷한 기능을 제공 한다는 알고 계 셨나요? 에 대 한 자세한 내용은 [Microsoft Azure virtualization 솔루션](http://aka.ms/f9bh7g)합니다.<br /><br />Microsoft Azure에 하이브리드 virtualization 솔루션을 만듭니다.<br />- [온-프레미스 네트워크 Azure 통해 사이트에 VPN에 연결 하 고 Active Directory Azure에서 IaaS VM DC에 확장](http://aka.ms/d1dinb)|  
+|![클라우드](../../../media/Hyper-V-Network-Virtualization/All_Symbols_Cloud.png)|Microsoft Azure를 이용하면 클라우드에서 유사한 기능을 사용할 수 있다는 것을 아시나요? [Microsoft Azure 가상화 솔루션](https://aka.ms/f9bh7g)에 대해 자세히 알아보세요.<br /><br />Microsoft Azure에서 하이브리드 가상화 솔루션을 만들어 보세요.<br />- [사이트 간 VPN 통해 Azure에 온-프레미스 네트워크를 연결 하 고 Azure에서 IaaS VM DC에 Active Directory 확장](https://aka.ms/d1dinb)|  

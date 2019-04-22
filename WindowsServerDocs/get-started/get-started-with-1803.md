@@ -1,5 +1,5 @@
 ---
-title: Windows Server 버전 1803 소개
+title: Windows Server, 버전 1803 소개
 description: 구입, 설치 및 정품 인증 방법
 ms.prod: windows-server-threshold
 ms.mktglfcycl: manage
@@ -10,25 +10,25 @@ ms.date: 05/02/2018
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9cf87597-b15d-4f43-8aa1-91e60367f011
-ms.openlocfilehash: c5cd8fbcf8424fa158ad31ca64e3eabe426240a6
-ms.sourcegitcommit: 8e2903c9b58646840eedd63b47a9bba6c6a06bf7
-ms.translationtype: HT
+ms.openlocfilehash: c0a4917d0fdb3e911204601d6137d8c8a296e57a
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "1859879"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59812284"
 ---
-# <a name="introducing-windows-server-version-1803"></a>Windows Server 버전 1803 소개
+# <a name="introducing-windows-server-version-1803"></a>Windows Server, 버전 1803 소개
 
 >적용 대상: Windows Server(반기 채널)
 
-**Windows Server 버전 1803은 새 반기 채널의 현재 릴리스입니다.**
+**Windows Server 버전 1803는 새로운 반기 채널의 현재 릴리스**
 
 
 ## <a name="what-the-semi-annual-channel-is--and-isnt"></a>반기 채널에 대한 진실과 오해
 Windows Server 버전 1803은 Windows Server 2016의 "업데이트" 또는 "서비스 팩"이 *아닙니다*. 현재 릴리스 트랙에서 1년에 두 번 출시되는 서버 릴리스이며 신속한 개발 주기에서와 같이 "클라우드 흐름"에서 이동하는 고객을 위해 디자인되었습니다. 이 트랙은 최신 응용 프로그램과 컨테이너 및 마이크로 서비스 등의 혁신 시나리오에 이상적입니다. 이 트랙의 각 릴리스는 최초 릴리스 후 18개월 동안 지원됩니다. 반기 채널에 대한 자세한 내용과 **가입(또는 유지)할 채널을 결정하기 위한 팁**은 [반기 채널 개요](semi-annual-channel-overview.md)를 참조하세요.
 
 
-**Windows Server 2016은 현재 장기 서비스 채널(LTSC) 제품입니다.** LTSC는 기존의 워크로드 및 응용 프로그램을 지원하기 위해 서버 운영 체제에서 장기적인 안정성과 예측 가능성이 필요한 경우에 가장 적합합니다. LTSC를 계속 사용하고 싶다면 Server Core 모드나 데스크톱 환경 포함 서버 모드에서 설치가 가능한 Windows Server 2016을 설치하거나 계속 사용해야 합니다. 자세한 내용은 [Windows Server 2016 시작](https://docs.microsoft.com/windows-server/get-started/server-basics)을 참조하세요.
+**Windows Server 2016은 현재 장기 서비스 채널 (LTSC) 제품입니다.** LTSC는 기존의 워크로드 및 응용 프로그램을 지원하기 위해 서버 운영 체제에서 장기적인 안정성과 예측 가능성이 필요한 경우에 가장 적합합니다. LTSC를 계속 사용하고 싶다면 Server Core 모드나 데스크톱 환경 포함 서버 모드에서 설치가 가능한 Windows Server 2016을 설치하거나 계속 사용해야 합니다. 자세한 내용은 [Windows Server 2016 시작](https://docs.microsoft.com/windows-server/get-started/server-basics)을 참조하십시오.
 
 
 ## <a name="whats-different-about-windows-server-version-1803"></a>Windows Server 버전 1803에서 무엇이 다릅니까?
@@ -57,11 +57,11 @@ Windows Server 버전 1803에 대한 주요 사항의 포괄적으로 살펴보�
 
 이 릴리스는 새로 설치되어야 합니다.
 
-- 볼륨 라이선스 서비스 센터(VLSC): [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx)를 보유한 볼륨 라이선스 고객은 [볼륨 라이선스 서비스 센터](https://www.microsoft.com/Licensing/servicecenter/default.aspx)로 이동하고 **로그인**을 클릭하여 이 릴리스를 구매할 수 있습니다. 그런 다음 **다운로드 및 키**를 클릭하고 이 릴리스를 검색합니다. 
+- 볼륨 라이선스 서비스 센터 (VLSC): 볼륨 라이선스 고객에 게 [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx) 로 이동 하 여이 릴리스를 가져올 수 있습니다 합니다 [볼륨 라이선스 서비스 센터](https://www.microsoft.com/Licensing/servicecenter/default.aspx) 를 클릭 하 고 **로그인**. 그런 다음 **다운로드 및 키**를 클릭하고 이 릴리스를 검색합니다. 
 
 - Windows Server 버전 1803은 [Microsoft Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/Microsoft.WindowsServer?tab=Overview)에서도 사용할 수 있습니다.
 
-- Visual Studio 구독: Visual Studio 구독자는 [Visual Studio 구독자 다운로드 페이지](https://my.visualstudio.com/downloads?pid=2347)에서 다운로드하여 Windows Server 버전 1803을 얻을 수 있습니다. 이미 구독자가 아닌 경우 [Visual Studio 구독](https://www.visualstudio.com/subscriptions/) 페이지로 이동하고 로그인한 다음 위와 같이 [Visual Studio 구독자 다운로드 페이지](https://my.visualstudio.com/downloads?pid=2347)로 이동합니다. Visual Studio 구독을 통해 얻은 릴리스는 개발 및 테스트용으로만 사용됩니다.
+- Visual Studio 구독: Visual Studio 구독자는 Windows Server, 버전 1803에서 다운로드 하 여 가져올 수는 [Visual Studio 구독자 다운로드 페이지](https://my.visualstudio.com/downloads?pid=2347)합니다. 이미 구독자가 아닌 경우 [Visual Studio 구독](https://www.visualstudio.com/subscriptions/) 페이지로 이동하고 로그인한 다음 위와 같이 [Visual Studio 구독자 다운로드 페이지](https://my.visualstudio.com/downloads?pid=2347)로 이동합니다. Visual Studio 구독을 통해 얻은 릴리스는 개발 및 테스트용으로만 사용됩니다.
 
 
 

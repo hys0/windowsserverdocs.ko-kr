@@ -1,6 +1,6 @@
 ---
-title: "자격 증명 보호 및 관리"
-description: "Windows Server 보안"
+title: 자격 증명 보호 및 관리
+description: Windows Server 보안
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,65 +14,66 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ms.openlocfilehash: 16cc1f2260bf0552da6902dc3e97de65d29c7931
-ms.sourcegitcommit: db290fa07e9d50686667bfba3969e20377548504
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59812204"
 ---
 # <a name="credentials-protection-and-management"></a>자격 증명 보호 및 관리
 
->적용 대상: Windows Server (세미콜론 연간 채널) Windows Server 2016
+>적용 대상: Windows Server (반기 채널), Windows Server 2016
 
-IT 전문가 위한이 항목 기능과 자격 증명 도용의 줄이기 위해 Windows Server 2012 R2 및 Windows 8.1 도메인 인증 컨트롤 및 보호 자격 증명에 도입 하는 방법에 설명 합니다.
+IT 전문가 위한이 항목에서는 자격 증명 도난을 자격 증명 보호 및 도메인 인증 제어를 위한 Windows 8.1 및 Windows Server 2012 R2에 도입 된 메서드와 기능을 설명 합니다.
 
 ## <a name="BKMK_CredentialsProtectionManagement"></a>
-### <a name="restricted-admin-mode-for-remote-desktop-connection"></a>원격 데스크톱 연결에 대 한 제한 관리자 모드
-제한 된 관리자 모드 대화형 자격 증명 서버에 전송 하지 않고 호스트 원격 서버에 로그온 하는 방법을 제공 합니다. 이렇게 하면 더라도 서버 초기 연결 과정 수집 되 고에서 자격 증명을 않습니다.
+### <a name="restricted-admin-mode-for-remote-desktop-connection"></a>원격 데스크톱 연결에 대한 제한된 관리자 모드
+제한된 관리자 모드에서는 서버에 자격 증명을 전송하지 않고 원격 호스트 서버에 대화형으로 로그온하는 방법을 제공합니다. 이 방법을 사용하면 서버가 손상된 경우 초기 연결 프로세스 중에 자격 증명이 수집되지 않습니다.
 
-원격 데스크톱 클라이언트가이 모드를 사용 하 여 관리자 자격 증명을 자격 증명을 보내지 않고이 모드를 지원 되는 호스트에 로그온 대화형 하려고 합니다. 호스트 확인 사용자 계정에 연결 관리자 권한이 한 제한 된 관리자 모드가 지원, 연결 성공 합니다. 그렇지 않은 경우 연결이 실패 합니다. 제한 관리자 모드가 지점 보내기 일반 텍스트 또는 다시 사용할 수 있는 기타 형태의 자격 증명을 원격 컴퓨터에서 하지 않습니다.
+관리자 자격 증명으로 이 모드를 사용하면 원격 데스크톱 클라이언트에서 자격 증명을 보내지 않고 이 모드를 지원하는 호스트에 대화형으로 로그온합니다. 호스트에서 연결하는 사용자 계정에 관리자 권한이 있으며 제한된 관리자 모드를 지원한다는 것을 확인하면 연결에 성공합니다. 그렇지 않으면 연결 시도에 실패합니다. 제한된 관리자 모드에서는 어떤 경우에도 일반 텍스트 또는 다른 형식의 재사용 가능한 자격 증명을 원격 컴퓨터에 보내지 않습니다.
 
 ### <a name="lsa-protection"></a>LSA 보호
-LSA 로컬 보안 기관을 (), 있는 로컬 보안 기관을 서비스 LSASS (보안) 프로세스 내에서 서버 지역 및 원격 기호 기능에 대 한 사용자의 유효성을 검사 하 고 로컬 보안 정책이 적용 됩니다. Windows 8.1 운영 체제 LSA 코드 삽입 비 암호로 보호 된 프로세스를 통해 방지에 대 한 추가 보호 기능을 제공 합니다. 더 나은 보안 LSA 저장 하 고 관리 자격 증명을 제공 합니다. 이 보호 된 프로세스 LSA에 대 한 Windows 8.1 구성할 수 있습니다 하지만 Windows RT 8.1에서에서 기본적으로 켜져 설정과 변경할 수 없습니다.
+LSASS(Local Security Authority Subsystem Service) 프로세스 내에 상주하는 LSA(로컬 보안 기관)는 사용자의 로컬 및 원격 로그인에 대한 유효성을 검사하고 로컬 보안 정책을 적용합니다. Windows 8.1 운영 체제 보호 되지 않은 프로세스에 의해 코드 삽입을 방지 하기 위해 LSA에 대 한 추가 보호를 제공 합니다. 이로 인해 LSA에서 저장 및 관리하는 자격 증명에 대한 보안이 강화됩니다. LSA에 대 한이 보호 된 프로세스 설정은 Windows 8.1 구성할 수 있습니다 Windows RT 8.1에서 기본적으로 설정 되어 있고 변경할 수 없습니다.
 
-구성 LSA 보호에 대 한 정보를 참조 하세요. [추가 LSA 보호 구성](configuring-additional-lsa-protection.md)합니다.
+LSA 보호 구성에 대한 자세한 내용은 [Configuring Additional LSA Protection](configuring-additional-lsa-protection.md)을 참조하세요.
 
-### <a name="protected-users-security-group"></a>사용자가 보안 그룹 보호
-이 새 도메인 전 세계 그룹 트리거하 장치 및 Windows Server 2012 R2 및 Windows 8.1 실행 호스트 컴퓨터에서 새 구성할 수 없는 보호 합니다. Users 보호 그룹 도메인 컨트롤러 및 Windows Server 2012 R2 도메인에 있는 도메인에 대 한 추가 보호 수 있습니다. 이렇게 하면 줄어듭니다 유형의 자격 증명을 사용할 수 있는 사용자가 로그인 네트워크에서 컴퓨터에 아닌 손상 컴퓨터에서 합니다.
+### <a name="protected-users-security-group"></a>보호된 사용자 보안 그룹
+이 새 도메인 글로벌 그룹 장치 및 Windows Server 2012 R2 및 Windows 8.1 실행 하는 호스트 컴퓨터에서 구성할 수 없는 새 보호 그룹을 트리거합니다. 보호 된 사용자 그룹에는 Windows Server 2012 R2 도메인에서 도메인 컨트롤러 및 도메인에 대 한 추가 보호 수 있습니다. 이는 사용자가 손상되지 않은 컴퓨터에서 네트워크의 컴퓨터에 로그인하는 경우 사용 가능한 자격 증명 유형을 크게 줄여 줍니다.
 
-보호 사용자 그룹의 회원은 제한 된 인증 다음과 같은 방법으로 추가 합니다.
+보호된 사용자 그룹의 구성원은 다음 인증 방법을 통해 추가로 제한됩니다.
 
--   보호 사용자 그룹의 회원 Kerberos 프로토콜을 사용 하 여에 로그인 할 수 있습니다. 계정을 사용 하 여 NTLM, 요약 인증 또는 CredSSP 인증할 수 없습니다. .1 Windows 8을 실행 하는 디바이스에서 암호 캐시 되지 않으므로 하므로 이러한 보안 지원 공급자 (규칙이) 중 하나를 사용 하는 장치는 계정을 보호 사용자 그룹의 회원 때 도메인에 인증 되지 않습니다.
+-   보호된 사용자 그룹의 구성원은 Kerberos 프로토콜을 통해서만 서명할 수 있습니다. NTLM, 다이제스트 인증 또는 CredSSP를 사용하여 계정을 인증할 수 없습니다. Windows 8.1 실행 장치에서는 암호가 캐시 되지, 이러한 보안 지원 공급자 (Ssp) 중 하나를 사용 하는 장치 계정이 보호 된 사용자 그룹의 구성원 인 경우 도메인에 인증에 실패 합니다.
 
--   Kerberos 프로토콜 사전 인증 과정에서 DES 또는 r c 4 암호화 약한 종류를 사용 하지 않습니다. 즉, 도메인 최소한 AES 암호 제품군을 지원 하도록 구성 되어야 합니다.
+-   Kerberos 프로토콜은 사전 인증 프로세스에서 보다 약한 DES 또는 RC4 암호화 종류를 사용하지 않습니다. 즉, 해당 도메인이 최소한 AES 암호 제품군을 지원하도록 구성되어야 합니다.
 
--   사용자의 계정을 Kerberos 제약 없이 또는 제한 된 위임 수 없는 위임 합니다. 즉, 사용자가 보호 사용자 그룹의 회원 경우 다른 시스템을 이전 연결 되지 않을 수 있습니다.
+-   제한 되었거나 제한 되지 않은 Kerberos를 사용 하 여 사용자 계정을 위임할 수 없음 위임 합니다. 즉, 사용자가 보호된 사용자 그룹의 구성원인 경우 다른 시스템에 대한 이전 연결이 실패할 수 있습니다.
 
--   4 시간이 Kerberos 티켓 부여 티켓 (Tgt) 수명 기본 설정을 인증 정책 및 사일로 액세스를 통해의 Active Directory 관리 센터 (ADAC)를 사용 하 여 구성할 수 있습니다. 이 4 시간 경과 때 사용자가 인증 해야 다시 의미 합니다.
+-   ADAC(Active Directory 관리 센터)를 통해 액세스한 인증 정책 및 사일로를 사용하여 기본 Kerberos TGT(허용 티켓) 수명 설정(4시간)을 구성할 수 있습니다. 즉, 4시간이 경과한 경우 사용자가 다시 인증을 받아야 합니다.
 
 > [!WARNING]
-> 서비스 및 컴퓨터에 대 한 계정을 보호 사용자 그룹의 회원 수 없습니다. 이 그룹 암호 또는 인증서 항상 호스트에서 사용할 수 없기 때문 없이 로컬 보호를 제공 합니다. Authentication will fail with the error "the user name or password is incorrect" for any service or computer that is added to the Protected Users group.
+> 서비스 및 컴퓨터 계정은 보호된 사용자 그룹의 구성원이 될 수 없습니다. 암호 또는 인증서를 호스트에서 항상 사용할 수 있으므로, 이 그룹에는 로컬 보호 기능이 제공되지 않습니다. 인증이 실패 오류가 발생 하 여 "사용자 이름 또는 암호가 올바르지 않습니다" 모든 서비스 또는 보호 된 사용자 그룹에 추가 되는 컴퓨터에 대 한 합니다.
 
-이 그룹에 대 한 자세한 내용은 참조 [사용자가 보안 그룹 보호](protected-users-security-group.md)합니다.
+이 그룹에 대한 자세한 내용은 [보호된 사용자 보안 그룹](protected-users-security-group.md)을 참조하세요.
 
 ### <a name="authentication-policy-and-authentication-policy-silos"></a>인증 정책 및 인증 정책 사일로
-숲 기반 Active Directory 정책 도입 하 고 Windows Server 2012 R2 도메인 기능 수준으로 도메인에 있는 계정에 적용 될 수 있습니다. 이러한 인증 정책을 사용자에 로그인 하는 데 사용할 수 있는 호스트 제어할 수 있습니다. 관리자 계정 인증에 대 한 액세스를 제어 조건 적용할 수 있는 및 사용자를 보호 보안 그룹와 함께에서 작동 합니다. 이러한 인증 정책 관련된 계정을 제한 네트워크 범위를 분리 합니다.
+포리스트 기반 Active Directory 정책이 도입 되어 및 Windows Server 2012 R2 도메인 기능 수준으로 도메인의에서 계정에 적용 될 수 있습니다. 이러한 인증 정책은 사용자가 로그인하는 데 사용할 수 있는 호스트를 제어할 수 있습니다. 보호된 사용자 보안 그룹과 함께 작동하며 관리자는 계정 인증을 위한 액세스 제어 조건을 적용할 수 있습니다. 이러한 인증 정책은 관련 계정을 격리하여 네트워크 범위를 제한합니다.
 
-새 Active Directory 개체 클래스 인증 정책, Windows Server 2012 R2 도메인 기능 수준으로 도메인에 있는 계정 클래스 인증 구성 적용할 수 있습니다. Kerberos AS 또는 TGS 중 인증 정책이 적용 되어 exchange 합니다. Active Directory 계정 클래스는 다음과 같습니다.
+새로운 Active Directory 개체 클래스인 인증 정책을 사용 하면 Windows Server 2012 R2 도메인 기능 수준으로 도메인의 계정 클래스에 인증 구성을 적용할 수 있습니다. 인증 정책은 Kerberos AS 또는 TGS 교환 중에 적용됩니다. Active Directory 계정 클래스는 다음과 같습니다.
 
 -   사용자
 
--   컴퓨터
+-   Computer
 
 -   관리 서비스 계정
 
 -   그룹 관리 서비스 계정
 
-자세한 내용은 참조 [인증 정책 및 인증 정책 사일로](authentication-policies-and-authentication-policy-silos.md)합니다.
+자세한 내용은 [인증 정책 및 인증 정책 사일로](authentication-policies-and-authentication-policy-silos.md)를 참조하세요.
 
-자세한 내용은 구성 계정을 보호 하는 방법을 참조 [계정 보호 구성 하는 방법을](how-to-configure-protected-accounts.md)합니다.
+보호된 계정을 구성하는 방법에 대한 자세한 내용은 [보호된 계정을 구성하는 방법](how-to-configure-protected-accounts.md)을 참조하세요.
 
-## <a name="see-also"></a>참조 하십시오
-For more information about the LSA and the LSASS, see the [Windows Logon and Authentication Technical Overview](https://technet.microsoft.com/library/dn169029(v=ws.10).aspx).
+## <a name="see-also"></a>참조
+LSA 및 LSASS에 대한 자세한 내용은 [Windows 로그온 및 인증 기술 개요](https://technet.microsoft.com/library/dn169029(v=ws.10).aspx)를 참조하세요.
 
 
 

@@ -1,10 +1,11 @@
 ---
 redirect_url: /windows-server/windows-server
-ms.openlocfilehash: aa1bc1d94f91a2b9584f72398385575d22db33a9
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.openlocfilehash: 6f6e0d21fdf43ce3cf9f713d5731cfea5bb069de
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59812274"
 ---
 # <a name="windows-server-2016"></a>Windows Server 2016
 
@@ -13,18 +14,18 @@ ms.lasthandoff: 10/17/2017
 > [!Note] 
 > Windows Server의 다음 버전은 변하고 있습니다! 곧 적용될 변화에 대한 자세한 내용은 [Windows Server 반기 채널 개요](./get-started/semi-annual-channel-overview.md)에서 찾을 수 있습니다. 
 
-[![WWindows Server 2016 개요 비디오](media/front-page-video.png)](https://www.youtube.com/embed/V8oF0JpDzaM)
+[![Windows Server 2016 개요 비디오](media/front-page-video.png)](https://www.youtube-nocookie.com/embed/V8oF0JpDzaM)
 
 <table border="0" width="100%" align='center'>
   <tr style="text-align:center;">
     <td align='center' style="width:25%; border:0;">
       <a href="/windows-server/get-started/what-s-new-in-windows-server-2016">
-        <img height=145 src="media/whats-new-highlight.png" alt="What's new icon" title="WindowsServer 16의 새로운 기능"/></a>
-        <br/>새로운 기능
+        <img height=145 src="media/whats-new-highlight.png" alt="What's new icon" title="Windows Server 16의 새로운 기능"/></a>
+        <br/>새로운 기능?
     </td>
     <td align='center' style="width:25%; border:0;">
       <a href="/windows-server/get-started/server-basics">
-        <img height=145 src="media/1-getstarted.png" alt="get started icon" title="WindowsServer 16 시작" /></a>
+        <img height=145 src="media/1-getstarted.png" alt="get started icon" title="Windows Server 16 시작" /></a>
       <br/>시작 </td>
     <td align='center' style="width:25%; border:0;">
       <a href="/windows-server/administration/index">
@@ -62,7 +63,7 @@ ms.lasthandoff: 10/17/2017
       <a href="/windows-server/storage/storage">
         <img height=145 src="media/7-storage.png" alt="Storage icon" title="Windows Server 저장소" />
       </a>
-      <br/>저장소 </td>
+      <br/>스토리지 </td>
    <td align='center' style="width:25%; border:0;"><br/>
       <a href="/windows-server/virtualization/virtualization">
         <img height=145 src="media/virtualization.png" alt="virtualization icon" title="Windows Server 가상화" /></a>
@@ -79,18 +80,18 @@ ms.lasthandoff: 10/17/2017
 
 ## <a name="windows-server-2016-editions"></a>Windows Server 2016 버전
 
-Windows Server 2016은 Standard, Datacenter 및 Essentials 버전으로 제공됩니다. Windows Server 2016 Datacenter에는 무제한 가상화 권한과 소프트웨어 정의 데이터 센터를 구축하는 새로운 기능이 포함됩니다. Windows Server 2016 Standard는 제한된 가상화 권한과 함께 엔터프라이즈급 기능을 제공합니다. Windows Server Essentials는 이상적인 클라우드로 연결된 최초 서버입니다. 고유의 [광범위한 문서](http://go.microsoft.com/fwlink/?LinkID=827171)를 포함하며 여기에서는 Standard 및 Datacenter 버전에 대해 주로 다룹니다. 다음 표에서는 Standard 및 Datacenter 버전 간의 주요 차이점을 간략히 요약하여 보여 줍니다.
+Windows Server 2016은 Standard, Datacenter 및 Essentials 버전으로 제공됩니다. Windows Server 2016 Datacenter에는 무제한 가상화 권한과 소프트웨어 정의 데이터 센터를 구축하는 새로운 기능이 포함됩니다. Windows Server 2016 Standard는 제한된 가상화 권한과 함께 엔터프라이즈급 기능을 제공합니다. Windows Server Essentials는 이상적인 클라우드로 연결된 최초 서버입니다. 고유의 [광범위한 문서](https://go.microsoft.com/fwlink/?LinkID=827171)를 포함하며 여기에서는 Standard 및 Datacenter 버전에 대해 주로 다룹니다. 다음 표에서는 Standard 및 Datacenter 에디션 간의 주요 차이점을 간략히 요약하여 보여 줍니다.
 
 |기능|Datacenter|Standard|  
 |-------------------|----------|-----------------------|  
 |Windows Server의 핵심 기능| 예| 예|
-|OSE / Hyper-V 컨테이너|무제한|   2|
-|Windows Server 컨테이너|무제한|   무제한|
+|OSE / Hyper-V 컨테이너|제한 없음|   2|
+|Windows Server 컨테이너|제한 없음|   제한 없음|
 |호스트 보호 서비스| 예| 예|
 |Nano Server 설치 옵션| 예| 예|
-|저장소 공간 다이렉트 및 저장소 복제본을 포함한 저장소 기능| 예| 아니요|
-|보호된 가상 컴퓨터| 예| 아니요|
-|소프트웨어 방식 네트워킹 인프라(네트워크 컨트롤러, 소프트웨어 부하 분산 장치, 다중 테넌트 게이트웨이)| 예| 아니요|
+|저장소 공간 다이렉트 및 저장소 복제본을 포함한 저장소 기능| 예| no|
+|보호된 가상 컴퓨터| 예| no|
+|소프트웨어 방식 네트워킹 인프라(네트워크 컨트롤러, 소프트웨어 부하 분산 장치, 다중 테넌트 게이트웨이)| 예| no|
 
 자세한 내용은 [Windows Server 2016의 가격 및 라이선싱](https://www.microsoft.com/en-us/cloud-platform/windows-server-pricing) 및 [Windows Server 버전의 기능 비교](https://www.microsoft.com/en-us/cloud-platform/windows-server-comparison)를 참조하세요.
 
@@ -106,14 +107,14 @@ Standard 및 Datacenter 버전은 세 가지 설치 옵션을 제공합니다.
 > 일부 이전 릴리스의 Windows Server와 달리 설치 후 Server Core와 데스크톱 경험 기능이 설치된 서버 간에 변환할 수 없습니다. 예를 들어 Server Core를 설치하고 나중에 데스크톱 경험이 설치된 서버를 사용하기로 결정하는 경우에는 새로 설치를 수행해야 하고, 그 반대의 경우도 마찬가지입니다.
 
 
-적합한 버전 및 설치 옵션에 대해 알아보았으니 이제 아래를 클릭하여 Windows Server 2016을 시작합니다.
+이제 적합한 버전 및 설치 옵션에 대해 알았으므로 아래를 클릭하여 Windows Server 2016을 시작합니다.
 <br/>
 <br/>
 
 <table border="0" width="100%" align='center'>
   <tr style="text-align:center;">
     <td align='center' style="width:33%; border:0;">
-      <a  href="/windows-server/get-started/getting-started-with-nano-server"> <img width="175" src="media/nano.png" alt="Icon representing Nano server" title="Nano 서버 - 가장 간단한 버전" /><br/>Nano 서버 - <br/>가장 간단한 버전</a>
+      <a  href="/windows-server/get-started/getting-started-with-nano-server"> <img width="175" src="media/nano.png" alt="Icon representing Nano server" title="Nano 서버 - 가장 간단한 버전" /><br/>Nano 서버 - <br/>낮은 가중치가</a>
     </td>
     <td align='center' style="width:33%; border:0;"><a href="/windows-server/get-started/getting-started-with-server-core"> <img width="175" src="media/servercore.png" alt="Icon representing the Server Core installation" title="Server Core - 권장" /><br/>Server Core - <br/>권장</a></td>
    <td align='center' style="width:33%; border:0;"><a href="/windows-server/get-started/getting-started-with-server-with-desktop-experience"><img width="175" src="media/desktop.png" alt="Icon representing the full desktop experience installation option for Windows Server" title="데스크톱 환경 - 전체 환경" /><br/>데스크톱 환경 - <br/>전체 인터페이스</a></td>
@@ -129,9 +130,7 @@ Standard 및 Datacenter 버전은 세 가지 설치 옵션을 제공합니다.
 <table border="0" width="100%" align='center'>
   <tr style="text-align:center;">
     <td align='center' style="width:10%; border:0;"></td>
-    <td align='center' style="width:50%; border:0;"><a href="/windows-server/sddc"><img width="400" src="media/sddc/WS16-heading.png" alt="Icon representing SDDC" title="Windows Server SDDC(소프트웨어 정의 데이터 센터)" /><br/>Windows Server SDDC(소프트웨어 정의 데이터 센터)</a></td>
+    <td align='center' style="width:50%; border:0;"><a href="/windows-server/sddc"><img width="400" src="media/sddc/WS16-heading.png" alt="Icon representing SDDC" title="Windows Server SDDC(소프트웨어 정의 데이터 센터)" /><br/>Windows Server 소프트웨어 정의 데이터 센터 (SDDC)</a></td>
     <td align='center' style="width:10%; border:0;"></td>
   </tr>
 </table>
-
-필요한 콘텐츠를 찾을 수 없으신가요? Windows 10 사용자라면 [피드백 허브](feedback-hub://?referrer=techDocsUcPage&tabid=2&contextid=898&newFeedback=true&topic=Windows-Server-2016.md)를 사용하여 의견을 알려주세요. 
