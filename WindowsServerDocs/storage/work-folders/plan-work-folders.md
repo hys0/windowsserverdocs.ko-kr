@@ -1,6 +1,6 @@
 ---
 ms.assetid: a7c39656-81ee-4c2b-80ef-4d017dd11b07
-title: "클라우드 폴더 배포 계획 수립"
+title: 클라우드 폴더 배포 계획 수립
 ms.prod: windows-server-threshold
 ms.technology: storage-work-folders
 ms.topic: article
@@ -8,16 +8,17 @@ author: JasonGerend
 manager: dongill
 ms.author: jgerend
 ms.date: 4/5/2017
-description: "시스템 요구 사항을 포함한 클라우드 폴더 배포 계획을 수립하는 방법과 네트워크 환경을 준비하는 방법을 설명합니다."
-ms.openlocfilehash: 877b418439e77e39cbdc6821808e296f977c26dd
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+description: 시스템 요구 사항을 포함한 클라우드 폴더 배포 계획을 수립하는 방법과 네트워크 환경을 준비하는 방법을 설명합니다.
+ms.openlocfilehash: 2ac52b15f266fce7202df4c9c76e774fca4098cc
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59824644"
 ---
 # <a name="planning-a-work-folders-deployment"></a>클라우드 폴더 배포 계획 수립
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 8.1, Windows 7
+>적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 8.1, Windows 7
 
 이 항목에서는 클라우드 폴더 구현을 위한 디자인 프로세스를 설명하며, 다음과 같은 배경 지식이 있는 것으로 가정합니다.  
   
@@ -73,49 +74,49 @@ ms.lasthandoff: 10/17/2017
   
 -   Windows 7 PC에서 다음 Windows 버전 중 하나를 실행해야 합니다.  
   
-    -   Windows 7 Professional  
+    -   Windows 7 Professional  
   
-    -   Windows 7 Ultimate  
+    -   Windows 7 Ultimate  
   
-    -   Windows 7 Enterprise  
+    -   Windows 7 Enterprise  
   
 -   Windows 7 PC는 조직의 도메인에 가입되어 있어야 하며 작업 그룹에는 가입할 수 없습니다.  
   
 -   모든 사용자 파일을 클라우드 폴더에 저장할 수 있는 충분한 여유 공간이 NTFS로 포맷된 로컬 드라이브에 있어야 하며, 클라우드 폴더가 시스템 드라이브에 있는 경우 기본적으로 6GB의 추가 여유 공간이 있어야 합니다. 클라우드 폴더의 위치는 기본적으로 **%USERPROFILE%\Work Folders**입니다.  
   
-     그러나 설정하는 동안 사용자가 위치를 변경할 수 있습니다(NTFS 파일 시스템으로 포맷된 microSD 카드와 USB 드라이브가 지원되는 위치이며, 드라이브가 제거되면 동기화가 중지됨).  
+     그러나 설정하는 동안 사용자가 위치를 변경할 수 있습니다(NTFS 파일 시스템으로 포맷된 microSD 카드와 USB 드라이브가 지원되는 위치이며, 드라이브가 제거된 경우 동기화가 중지됨).  
   
      개별 파일의 최대 크기는 기본적으로 10GB입니다. 관리자가 파일 서버 리소스 관리자의 할당량 기능을 사용하여 할당량을 구현할 수 있지만 사용자당 저장소 제한은 없습니다.  
   
--   클라우드 폴더는 클라이언트 가상 컴퓨터의 가상 컴퓨터 상태 롤백을 지원하지 않습니다. 대신 시스템 이미지 백업 또는 다른 백업 앱을 사용하여 클라이언트 가상 컴퓨터 내에서 백업 및 복원 작업을 수행하면 됩니다.  
+-   클라우드 폴더는 클라이언트 가상 컴퓨터의 가상 컴퓨터 상태 롤백을 지원하지 않습니다. 대신 시스템 이미지 백업 또는 다른 백업 응용 프로그램을 사용하여 클라이언트 가상 컴퓨터 내에서 백업 및 복원 작업을 수행합니다.  
   
 > [!NOTE]
->  Windows 8 또는 Windows Server 2012 R2를 실행하는 모든 클라우드 폴더 서버와 클라이언트 컴퓨터에 Windows 8.1 및 Windows Server 2012 R2 일반 공급 업데이트 롤업을 설치해야 합니다. 자세한 내용은 Microsoft 기술 자료 문서 [2883200](http://support.microsoft.com/kb/2883200)을 참조하세요.  
+>  Windows 8 또는 Windows Server 2012 R2를 실행하는 모든 클라우드 폴더 서버와 클라이언트 컴퓨터에 Windows 8.1 및 Windows Server 2012 R2 일반 공급 업데이트 롤업을 설치해야 합니다. 자세한 내용은 Microsoft 기술 자료 문서 [2883200](https://support.microsoft.com/kb/2883200) 을 참조하세요.  
   
 ## <a name="deployment-scenarios"></a>배포 시나리오  
- 고객 환경 내의 여러 파일 서버에 원하는 만큼 클라우드 폴더를 구현할 수 있습니다. 따라서 고객의 요구 사항에 따라 클라우드 폴더 구현을 확장할 수 있으므로 고도로 개별화된 배포가 가능합니다. 그러나 대부분의 배포는 다음 세 가지 기본 시나리오 중 하나에 해당합니다.  
+ 고객 환경 내의 원하는 파일 서버에 클라우드 폴더를 구현할 수 있습니다. 따라서 고객의 요구 사항에 따라 클라우드 폴더 구현을 확장할 수 있으므로 고도로 개별화된 배포가 가능합니다. 그러나 대부분의 배포는 다음 세 가지 기본 시나리오 중 하나에 해당합니다.  
   
 ### <a name="single-site-deployment"></a>단일 사이트 배포  
  단일 사이트 배포에서는 파일 서버가 고객 인프라의 중앙 사이트 내에서 호스팅됩니다. 이 배포 유형은 인프라가 중앙에 매우 집중되어 있거나 로컬 파일 서버를 유지하지 않는 소규모 지점이 많은 고객에게 일반적입니다. 이 배포 모델은 모든 서버 자산이 로컬이므로 IT 직원이 보다 쉽게 관리할 수 있으며, 인터넷 송/수신도 이 위치에서 중앙 집중화될 가능성이 높습니다. 그러나 이 배포 모델은 중앙 사이트와 지점 간의 원활한 WAN 연결을 기반으로 하므로 지점의 사용자가 네트워크 상태로 인한 서비스 중단에 취약할 수 있습니다.  
   
 ### <a name="multiple-site-deployment"></a>다중 사이트 배포  
- 다중 사이트 배포에서는 파일 서버가 고객 인프라 내의 여러 위치에서 호스팅됩니다. 따라서 데이터 센터가 여러 개 있거나 지점에서 개별 파일 서버를 유지 관리할 수 있습니다. 이 배포 모델은 대규모 고객 환경 또는 로컬 서버 자산을 유지 관리하는 여러 개의 대규모 지점이 있는 고객에게 일반적입니다. 이 배포 모델은 IT 담당자가 관리하기 복잡하며, 사용자가 클라우드 폴더의 올바른 동기화 서버를 사용할 수 있도록 AD DS(Active Directory Domain Services)의 데이터 저장 및 유지 관리를 신중히 조정해야 합니다.  
+ 다중 사이트 배포에서는 파일 서버가 고객 인프라 내의 여러 위치에서 호스팅됩니다. 따라서 데이터 센터가 여러 개 있거나 지점에서 개별 파일 서버를 유지 관리할 수 있습니다. 이 배포 모델은 대규모 고객 환경 또는 로컬 서버 자산을 유지 관리하는 여러 개의 대규모 지점이 있는 고객에게 일반적입니다. 이 배포 모델은 IT 담당자가 관리하기 복잡하며, 사용자가 클라우드 폴더의 올바른 동기화 서버를 사용할 수 있도록 AD DS(Active Directory 도메인 서비스)의 데이터 저장 및 유지 관리를 신중히 조정해야 합니다.  
   
 ### <a name="hosted-deployment"></a>호스팅된 배포  
  호스팅된 배포에서는 동기화 서버가 Windows Azure VM과 같은 IAAS(Infrastructure-as-a-Service) 솔루션에 배포됩니다. 이 배포 방법은 고객 회사 내의 WAN 연결에 종속되지 않고 파일 서버를 사용할 수 있는 이점이 있습니다. 장치에서 인터넷에 연결할 수 있으면 해당 동기화 서버에 연결할 수 있습니다. 그러나 호스팅된 환경에 배포된 서버도 사용자를 인증하기 위해 조직의 Active Directory 도메인에 연결할 수 있어야 하며, 온-프레미스 인프라 요구 사항이 없는 대신 이러한 연결을 유지 관리해야 하는 복잡성이 추가됩니다.  
   
 ## <a name="deployment-technologies"></a>배포 기술  
- 클라우드 폴더 배포는 내부 및 외부 네트워크의 디바이스에 서비스를 제공하기 위해 함께 작동하는 여러 기술로 구성됩니다. 클라우드 폴더 배포를 디자인하기 전에 고객은 다음 각 기술에 대한 요구 사항을 알아야 합니다.  
+ 클라우드 폴더 배포는 내부 및 외부 네트워크의 장치에 서비스를 제공하기 위해 함께 작동하는 여러 기술로 구성됩니다. 클라우드 폴더 배포를 디자인하기 전에 고객은 다음 각 기술에 대한 요구 사항을 알아야 합니다.  
   
-### <a name="active-directory-domain-services"></a>Active Directory Domain Services  
- AD DS는 클라우드 폴더 배포에서 중요한 두 가지 서비스를 제공합니다. 첫 째, Windows 인증을 위한 백 엔드로써 AD DS는 사용자 데이터에 대한 액세스 권한을 부여하는 데 사용되는 보안 및 인증 서비스를 제공합니다. 도메인 컨트롤러에 연결할 수 없는 경우 파일 서버가 들어오는 요청을 인증할 수 없으므로 디바이스에서 해당 파일 서버의 동기화 공유에 저장된 데이터에 액세스할 수 없게 됩니다.  
+### <a name="active-directory-domain-services"></a>Active Directory 도메인 서비스  
+ AD DS는 클라우드 폴더 배포에서 중요한 두 가지 서비스를 제공합니다. 첫째, Windows 인증을 위한 백 엔드로서 AD DS는 사용자 데이터에 대한 액세스 권한을 부여하는 데 사용되는 보안 및 인증 서비스를 제공합니다. 도메인 컨트롤러에 연결할 수 없는 경우 파일 서버가 들어오는 요청을 인증할 수 없으므로 디바이스에서 해당 파일 서버의 동기화 공유에 저장된 데이터에 액세스할 수 없게 됩니다.  
   
  둘째, AD DS(Windows Server 2012 R2 스키마 업데이트 포함)는 각 사용자에 대해 사용자를 적절한 동기화 서버로 자동으로 연결하는 데 사용되는 msDS-SyncServerURL 특성을 유지 관리합니다.  
   
 ### <a name="file-servers"></a>파일 서버  
- Windows Server 2012 R2 또는 Windows Server 2016을 실행하는 파일 서버는 클라우드 폴더 역할 서비스와 사용자의 클라우드 폴더 데이터를 저장하는 동기화 공유를 호스팅합니다. 또한 파일 서버는 내부 네트워크에서 작동하는 다른 기술(예: 파일 공유)에 의해 저장된 데이터를 호스팅할 수 있으며, 사용자 데이터에 대한 내결함성을 제공하도록 클러스터할 수 있습니다.  
+ Windows Server 2012 R2 또는 Windows Server 2016을 실행하는 파일 서버는 클라우드 폴더 역할 서비스와 사용자의 클라우드 폴더 데이터를 저장하는 동기화 공유를 호스팅합니다. 또한 파일 서버는 내부 네트워크에서 작동하는 다른 기술(예: 파일 공유)에 의해 저장된 데이터를 호스팅할 수 있으며, 사용자 데이터에 대한 내결함성을 제공하도록 클러스터될 수 있습니다.  
   
-###  <a name="GroupPolicy"></a>그룹 정책  
+###  <a name="GroupPolicy"></a> 그룹 정책  
  환경에 Windows 7 PC가 있는 경우 다음을 수행하는 것이 좋습니다.  
   
 -   클라우드 폴더를 사용하는 모든 도메인 가입 PC에 대해 그룹 정책을 사용하여 암호 정책을 제어합니다.  
@@ -127,20 +128,20 @@ ms.lasthandoff: 10/17/2017
  그룹 정책을 사용하여 사용자 또는 컴퓨터별로 클라우드 폴더를 강제로 설정할 수도 있습니다. 그러나 이 경우 사용자가 로그인(사용자별 정책 설정을 사용할 경우)하는 모든 PC에서 클라우드 폴더가 동기화되며 사용자가 자신의 PC에서 클라우드 폴더의 대체 위치(예: 기본 드라이브의 공간을 절약하기 위한 microSD 카드)를 지정할 수 없게 됩니다. 따라서 자동 설정을 강제로 적용하기 전에 사용자의 요구 사항을 신중히 평가하는 것이 좋습니다.  
   
 ### <a name="windows-intune"></a>Windows Intune  
- Windows Intune도 도메인에 가입되지 않은 디바이스에 대해 다른 방식으로는 제공할 수 없는 보안 및 관리 효율성을 제공합니다. Windows Intune을 사용하여 인터넷을 통해 클라우드 폴더에 연결된 사용자의 개인 디바이스(예: 태블릿)를 구성하고 관리할 수 있습니다. 디바이스에서 사용할 동기화 서버 URL을 Windows Intune이 제공하기도 하며, 만약 그렇지 않으면 사용자는 회사 이메일 주소를 입력하여 설정을 조회하거나(https://workfolders.*contoso.com* 형식으로 공용 클라우드 폴더 URL을 게시하는 경우), 동기화 서버 URL을 직접 입력해야 합니다.  
+ Windows Intune도 도메인에 가입되지 않은 장치에 대해 다른 방식으로는 제공할 수 없는 보안 및 관리 효율성을 제공합니다. Windows Intune을 사용하여 인터넷을 통해 클라우드 폴더에 연결된 사용자의 개인 디바이스(예: 태블릿)를 구성하고 관리할 수 있습니다. 그렇지 않은 사용자가 회사 이메일 주소를 사용 하 여 설정을 조회를 입력 해야 – Windows Intune에 사용할 동기화 서버 URL 사용 하 여 장치를 제공할 수 있습니다 (형식의 공용 클라우드 폴더 URL을 게시할 https://workfolders. *contoso.com*), 동기화 서버 URL을 직접 입력 합니다.  
   
  Windows Intune을 배포하지 않으면 사용자가 외부 디바이스를 수동으로 구성해야 하므로 이로 인해 고객의 지원 데스크 담당자에 대한 문의 횟수가 증가할 수 있습니다.  
   
- Windows Intune을 사용하면 나머지 데이터에 대한 영향 없이 사용자 디바이스의 클라우드 폴더에서 데이터를 선택적으로 지울 수 있습니다. 이는 사용자가 퇴사하거나 장치를 도난 당한 경우에 편리합니다.  
+ Windows Intune을 사용하면 나머지 데이터에 대한 영향 없이 사용자 장치의 클라우드 폴더에서 데이터를 선택적으로 지울 수 있습니다. 이는 사용자가 퇴사하거나 장치를 도난 당한 경우에 편리합니다.  
   
 ### <a name="web-application-proxyazure-ad-application-proxy"></a>웹 응용 프로그램 프록시/Azure AD 응용 프로그램 프록시  
  클라우드 폴더는 인터넷에 연결된 디바이스에서 내부 네트워크에 있는 비즈니스 데이터를 안전하게 검색할 수 있도록 함으로써 사용자가 일반적으로는 회사 파일에 액세스할 수 없는 자신의 태블릿 및 디바이스에서 "데이터를 사용"할 수 있도록 하는 개념을 기반으로 합니다. 이를 위해서는 역방향 프록시를 사용하여 동기화 서버 URL을 게시하고 인터넷 클라이언트에서 이를 사용할 수 있도록 해야 합니다. 
  
 클라우드 폴더는 웹 응용 프로그램 프록시, Azure AD 응용 프로그램 프록시 또는 타사 역방향 프록시 솔루션 사용을 지원합니다. 
 
--  웹 응용 프로그램 프록시는 온-프레미스 역방향 프록시 솔루션입니다. 자세한 내용은 [Windows Server 2016의 웹 응용 프로그램 프록시](https://technet.microsoft.com/windows-server-docs/identity/web-application-proxy/web-application-proxy-windows-server)를 참조하세요.  
+-  웹 응용 프로그램 프록시는 온-프레미스 역방향 프록시 솔루션입니다. 자세한 내용은 [Windows Server 2016의 웹 응용 프로그램 프록시](https://technet.microsoft.com/windows-server-docs/identity/web-application-proxy/web-application-proxy-windows-server)를 참조하세요.  
   
--  Azure AD 응용 프로그램 프록시는 클라우드 역방향 프록시 솔루션입니다. 자세한 내용은 [온-프레미스 응용 프로그램에 대한 보안 원격 액세스를 제공하는 방법](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-get-started)을 참조하세요.
+-  Azure AD 응용 프로그램 프록시는 클라우드 역방향 프록시 솔루션입니다. 자세한 내용은 [온-프레미스 응용 프로그램에 대한 보안 원격 액세스를 제공하는 방법](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)을 참조하세요.
 
 ## <a name="additional-design-considerations"></a>추가 디자인 고려 사항  
  위에 설명된 각 구성 요소를 이해하는 것 외에도 고객은 운영할 동기화 서버 및 공유 수, 장애 조치(failover) 클러스터링을 활용하여 이러한 동기화 서버에 대한 내결함성을 제공할지 여부 등을 결정해야 합니다.  
@@ -150,25 +151,25 @@ ms.lasthandoff: 10/17/2017
   
 -   사용자의 지리적 분산 - 지점 파일 서버 또는 지역 데이터 센터 등  
   
--   데이터 저장소 요구 사항 – 비즈니스 부서에 따라 전용 서버를 사용하면 데이터 저장/처리 요구 사항을 보다 용이하게 해결할 수 있는 경우도 있습니다.  
+-   데이터 저장소 요구 사항 – 특정 비즈니스 부서에 전용 서버를 사용할 경우 보다 용이한 특정 데이터 저장/처리 요구 사항이 있을 수 있습니다.  
   
--   부하 분산 – 대규모 환경의 경우 여러 서버에 사용자 데이터를 저장하면 서버 성능 및 가동 시간이 향상될 수 있습니다.  
+-   부하 분산 – 대규모 환경의 경우 여러 서버에 사용자 데이터를 저장하면 서버 성능 및 가동 시간이 증가할 수 있습니다.  
   
  클라우드 폴더 서버 확장 및 성능에 대한 자세한 내용은 [클라우드 폴더 배포를 위한 성능 고려 사항](http://blogs.technet.com/b/filecab/archive/2013/11/01/performance-considerations-for-large-scale-work-folders-deployments.aspx)(영문)을 참조하세요.  
   
 > [!NOTE]
->  여러 동기화 서버를 사용할 때는 사용자에 대해 자동 서버 검색을 설정하는 것이 좋습니다. 이 프로세스는 AD DS의 각 사용자 계정에 대한 특성 구성을 기반으로 합니다. **msDS-SyncServerURL**이라는 이 특성은 Windows Server 2012 R2 도메인 컨트롤러가 도메인에 추가되거나 Active Directory 스키마 업데이트를 적용한 후 사용자 계정에서 사용할 수 있습니다. 사용자가 적절한 동기화 서버에 연결되도록 하려면 각 사용자에 대해 이 특성을 설정해야 합니다. 자동 서버 검색을 사용하면 조직에서 운영 중인 동기화 서버 수에 상관없이 *https://workfolders.contoso.com*과 같은 "친숙한" URL 뒤에 클라우드 폴더를 게시할 수 있습니다.  
+>  여러 동기화 서버를 사용할 때는 사용자에 대해 자동 서버 검색을 설정하는 것이 좋습니다. 이 프로세스는 AD DS의 각 사용자 계정에 대한 특성 구성을 기반으로 합니다. **msDS-SyncServerURL**이라는 이 특성은 Windows Server 2012 R2 도메인 컨트롤러가 도메인에 추가되거나 Active Directory 스키마 업데이트를 적용한 후 사용자 계정에서 사용할 수 있습니다. 사용자가 적절한 동기화 서버에 연결되도록 하려면 각 사용자에 대해 이 특성을 설정해야 합니다. 자동 서버 검색을 사용 하면 조직 게시할 수 있습니다 "친숙 한" URL 뒤에 클라우드 폴더와 같은 *https://workfolders.contoso.com*작업에서 동기화 서버 수에 관계 없이 합니다.  
   
 ### <a name="number-of-sync-shares"></a>동기화 공유 수  
  개별 동기화 서버에서 여러 동기화 공유를 유지할 수 있습니다. 이 구성의 장점은 다음과 같습니다.  
   
 -   감사 및 보안 요구 사항 – 특정 부서에서 사용하는 데이터에 대해 감사를 강화하거나 보다 장기간 보존해야 하는 경우 관리자는 별도의 동기화 공유를 통해 감사 수준이 서로 다른 사용자 폴더를 별도로 유지할 수 있습니다.  
   
--   서로 다른 할당량 또는 파일 차단 - 여러 저장소 할당량을 설정하거나 사용자 그룹별로 클라우드 폴더에서 허용되는 파일 형식을 제한(파일 차단)하려는 경우 별도의 동기화 공유가 도움이 될 수 있습니다.  
+-   서로 다른 할당량 또는 파일 차단 - 여러 저장소 할당량을 설정하거나 사용자 그룹별로 클라우드 폴더에서 허용되는 파일 형식을 제한(파일 차단)하려는 경우 별도의 동기화 공유가 유용할 수 있습니다.  
   
 -   부서별 제어 – 관리 업무가 부서별로 분산된 경우 부서마다 별도의 공유를 활용하면 관리자가 할당량 또는 기타 정책을 적용하기가 용이해집니다.  
   
--   서로 다른 디바이스 정책 - 조직에서 다양한 사용자 그룹에 대해 여러 디바이스 정책(예: 클라우드 폴더 암호화)을 유지해야 하는 경우 여러 공유를 사용할 수 있습니다.  
+-   서로 다른 장치 정책 - 조직에서 다양한 사용자 그룹에 대해 여러 장치 정책(예: 클라우드 폴더 암호화)을 유지해야 하는 경우 여러 공유를 사용할 수 있습니다.  
   
 -   저장소 용량 - 파일 서버에 여러 볼륨이 있는 경우 추가 공유를 사용하여 이러한 추가 볼륨을 활용할 수 있습니다. 개별 공유에서는 호스팅되는 볼륨에만 액세스할 수 있으며, 파일 서버의 추가 볼륨을 활용할 수 없습니다.  
   
@@ -192,9 +193,9 @@ ms.lasthandoff: 10/17/2017
   
     -   사용자에게 데이터 저장, 보안 또는 보존에 대한 특별한 요구 사항이 있습니까?  
   
-    -   사용자에게 암호화 등의 구체적인 디바이스 정책 요구 사항이 있습니까?  
+    -   사용자에게 암호화와 같은 특정 장치 정책 요구 사항이 있습니까?  
   
-    -   어떤 클라이언트 컴퓨터와 디바이스를 지원해야 합니까(Windows 8.1, Windows RT 8.1, Windows 7)?  
+    -   어떤 클라이언트 컴퓨터와 장치를 지원해야 합니까(Windows 8.1, Windows RT 8.1, Windows 7)?  
   
          Windows 7 PC를 지원하며 암호 정책을 사용하려는 경우 컴퓨터 계정을 저장하는 도메인을 클라우드 폴더 암호 정책에서 제외하고 대신 해당 도메인의 도메인에 가입된 PC에 대해 그룹 정책 암호 정책을 사용합니다.  
   
@@ -202,7 +203,7 @@ ms.lasthandoff: 10/17/2017
   
     -   여러 도메인의 사용자가 인터넷을 통해 단일 서버와 동기화해야 합니까?  
   
-    -   도메인에 가입된 PC에서 로컬 관리자 그룹의 구성원이 아닌 사용자를 지원해야 합니까? (그렇다면 암호화 및 암호 정책과 같은 클라우드 폴더 디바이스 정책에서 관련 도메인을 제외해야 함)  
+    -   도메인에 가입된 PC에서 로컬 관리자 그룹의 구성원이 아닌 사용자를 지원해야 합니까? (그렇다면 암호화 및 암호 정책과 같은 클라우드 폴더 장치 정책에서 관련 도메인을 제외해야 함)  
   
 -   인프라 및 용량 계획  
   
@@ -228,13 +229,13 @@ ms.lasthandoff: 10/17/2017
   
     -   개별 동기화 공유에 대한 특별한 보안 또는 감사 요구 사항이 있습니까?  
   
-    -   MFA(Multi-Factor Authentication)가 필요합니까?  
+    -   MFA(다단계 인증)가 필요합니까?  
   
-    -   PC와 디바이스에서 클라우드 폴더 데이터를 원격으로 지울 수 있어야 합니까?  
+    -   PC와 장치에서 클라우드 폴더 데이터를 원격으로 지울 수 있어야 합니까?  
   
--   디바이스 액세스  
+-   장치 액세스  
   
-    -   인터넷 기반 디바이스에 대한 액세스를 제공하는 데 사용할 URL은 무엇입니까(*이메일 기반 자동 서버 검색에 필요한 기본 URL은 workfolders.domainname*)?  
+    -   인터넷 기반 장치에 대한 액세스를 제공하는 데 사용할 URL은 무엇입니까(*이메일 기반 자동 서버 검색에 필요한 기본 URL은 workfolders.domainname*)?  
   
     -   URL이 인터넷에 어떻게 게시됩니까?  
   
@@ -242,17 +243,17 @@ ms.lasthandoff: 10/17/2017
   
     -   도메인에 가입된 PC를 구성하는 데 그룹 정책을 사용합니까?  
   
-    -   외부 디바이스를 구성하는 데 Windows Intune을 사용합니까?  
+    -   외부 장치를 구성하는 데 Windows Intune을 사용합니까?  
   
-    -   디바이스를 연결하는 데 디바이스 등록이 필요합니까?  
+    -   장치를 연결하는 데 장치 등록이 필요합니까?  
   
 ## <a name="next-steps"></a>다음 단계  
- 클라우드 폴더 구현을 디자인한 후에는 클라우드 폴더를 배포해야 합니다. 자세한 내용은 [클라우드 폴더 배포](deploy-work-folders.md)를 참조하세요.  
+ 클라우드 폴더 구현을 디자인한 후에는 클라우드 폴더를 배포해야 합니다. 자세한 내용은 [Deploying Work Folders](deploy-work-folders.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
- 자세한 내용은 다음 리소스를 참조하세요.  
+## <a name="see-also"></a>참조  
+ 자세한 내용은 다음 리소스를 참조하십시오.  
   
-|콘텐츠 유형|참조|  
+|콘텐츠 형식|참조|  
 |------------------|----------------|  
-|**제품 평가**|-   [클라우드 폴더](work-folders-overview.md)<br />-   [Windows 7용 클라우드 폴더](http://blogs.technet.com/b/filecab/archive/2014/04/24/work-folders-for-windows-7.aspx)(블로그 게시물)|  
-|**배포**|-   [클라우드 폴더 구현 디자인](plan-work-folders.md)<br />-   [클라우드 폴더 배포](deploy-work-folders.md)<br />-   [AD FS 및 WAP(웹 응용 프로그램 프록시)를 사용하여 클라우드 폴더 배포](deploy-work-folders-adfs-overview.md)<br />- [Azure AD 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포](https://blogs.technet.microsoft.com/filecab/2017/05/31/enable-remote-access-to-work-folders-using-azure-active-directory-application-proxy/)<br />-   [클라우드 폴더 배포를 위한 성능 고려 사항](http://blogs.technet.com/b/filecab/archive/2013/11/01/performance-considerations-for-large-scale-work-folders-deployments.aspx)<br />-   [Windows 7용 클라우드 폴더(64비트 다운로드)](http://www.microsoft.com/download/details.aspx?id=42558)<br />-   [Windows 7용 클라우드 폴더(32비트 다운로드)](http://www.microsoft.com/download/details.aspx?id=42559)<br />-   [클라우드 폴더 테스트 랩 배포](http://blogs.technet.com/b/filecab/archive/2013/07/10/work-folders-test-lab-deployment.aspx)(블로그 게시물)|
+|**제품 평가**|-   [작업 폴더](work-folders-overview.md)<br />-   [Windows 7 용 폴더 클라우드](http://blogs.technet.com/b/filecab/archive/2014/04/24/work-folders-for-windows-7.aspx) (블로그 게시물)|  
+|**배포**|-   [클라우드 폴더 구현 디자인](plan-work-folders.md)<br />-   [클라우드 폴더 배포](deploy-work-folders.md)<br />-   [AD FS 및 WAP (웹 응용 프로그램 프록시)를 사용 하 여 클라우드 폴더 배포](deploy-work-folders-adfs-overview.md)<br />- [Azure AD 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포](https://blogs.technet.microsoft.com/filecab/2017/05/31/enable-remote-access-to-work-folders-using-azure-active-directory-application-proxy/)<br />-   [클라우드 폴더 배포를 위한 성능 고려 사항](https://blogs.technet.com/b/filecab/archive/2013/11/01/performance-considerations-for-large-scale-work-folders-deployments.aspx)<br />-   [Windows 7 용 작업 폴더 (64 비트 다운로드)](https://www.microsoft.com/download/details.aspx?id=42558)<br />-   [Windows 7 용 작업 폴더 (32 비트 다운로드)](https://www.microsoft.com/download/details.aspx?id=42559)<br />-   [클라우드 폴더 테스트 랩 배포](http://blogs.technet.com/b/filecab/archive/2013/07/10/work-folders-test-lab-deployment.aspx) (블로그 게시물)|

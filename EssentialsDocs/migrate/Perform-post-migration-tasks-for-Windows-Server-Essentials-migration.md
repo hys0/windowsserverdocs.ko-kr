@@ -1,6 +1,6 @@
 ---
-title: "Windows Server Essentials migration1에 대 한 후 마이그레이션 작업 수행"
-description: "Windows Server Essentials을 사용 하는 방법을 설명 합니다."
+title: Windows Server Essentials migration1에 대 한 마이그레이션 후 작업을 수행 합니다.
+description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
@@ -13,127 +13,128 @@ author: nnamuhcs
 ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: 535a547ded55cb4afc0942259eadf5222a815274
-ms.sourcegitcommit: 70c1b6cedad55b9c7d2068c9aa4891c6c533ee4c
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59821024"
 ---
-# <a name="perform-post-migration-tasks-for-windows-server-essentials-migration1"></a>Windows Server Essentials migration1에 대 한 후 마이그레이션 작업 수행
+# <a name="perform-post-migration-tasks-for-windows-server-essentials-migration1"></a>Windows Server Essentials migration1에 대 한 마이그레이션 후 작업을 수행 합니다.
 
->Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials에 적용 됩니다.
+>적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-다음 작업 일부 원본 서버에 동일한 설정 사용 하 여 목적지 서버 설정을 완료 하는 데 도움이 됩니다. 수 비활성화 되었습니다 이러한 설정 중 일부 원본 서버에 마이그레이션 과정 하므로 대상 서버도 이동 되지 않았습니다. 또는 자녀가 선택적 구성 단계를 수행 해야 할 수도 있습니다.  
-  
-
--   [원본 서버 DNS 항목 삭제](Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_DeleteDNSEntries)  
-  
--   [업무-및 기타 응용 프로그램 데이터 폴더 공유](Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_ShareLineOfBusinessAndOtherApplications)  
-  
--   [후 마이그레이션 클라이언트 컴퓨터 문제 해결](Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_FixClientComputerIssuesAfterMigrating)  
-  
--   [기본 제공 된 관리자가 그룹 일괄 작업으로 로그온 할 수 있는 권한을 제공합니다](Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_AdminGroup)  
-
--   [원본 서버 DNS 항목 삭제](../migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_DeleteDNSEntries)  
-  
--   [업무-및 기타 응용 프로그램 데이터 폴더 공유](../migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_ShareLineOfBusinessAndOtherApplications)  
-  
--   [후 마이그레이션 클라이언트 컴퓨터 문제 해결](../migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_FixClientComputerIssuesAfterMigrating)  
-  
--   [기본 제공 된 관리자가 그룹 일괄 작업으로 로그온 할 수 있는 권한을 제공합니다](../migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_AdminGroup)  
-
-  
-##  <a name="BKMK_DeleteDNSEntries"></a>원본 서버 DNS 항목 삭제  
- 원본 서버를 제거한 후 서비스 DNS (도메인 이름) 서버 원본 서버를 가리키는 항목 여전히 포함 될 수 있습니다. 이러한 DNS 항목이 삭제 됩니다.  
-  
-#### <a name="to-delete-dns-entries-that-point-to-the-source-server"></a>원본 서버를 가리키는 DNS 항목을 삭제 하려면  
-  
-1.  대상 서버에서 엽니다 **DNS 관리자**합니다.  
-  
-2.  DNS 관리자 서버 이름을 마우스 오른쪽 단추로 클릭 **속성**을 차례로 클릭 하 고는 **전달자** 탭 합니다.  
-  
-3.  원본 서버를 가리키는 전달자 목록에서 항목이 있는지 확인 합니다. 없는 경우, 클릭 **편집**, 다음에서 해당 항목을 삭제 하 고 있는 **전달자 편집** 창 합니다.  
-  
-4.  **DNS 관리자**서버 이름 확장 한 다음 확장 **앞 조회 영역이**합니다.  
-  
-5.  각 앞 조회 영역에 대 한 영역을 마우스 오른쪽 단추로 클릭, **속성**을 차례로 클릭 하 고 있는 **이름 서버** 탭 합니다.  
-  
-6.  항목을 클릭는 **이름 서버** 소스 서버에 포인트를 클릭 하는 상자 **제거**을 차례로 클릭 하 고 **확인**합니다.  
-  
-7.  원본 서버에 대 한 모든 포인터를 제거할 때까지 5, 6 단계를 반복 합니다.  
-  
-8.  클릭 **확인** 닫을 수 있는 **속성** 창 합니다.  
-  
-9. 에 **DNS 관리자** 콘솔, 확장 **역방향 조회 영역이**합니다.  
-  
-10. 원본 서버를 가리키는 모든 역방향 조회 영역 제거 9 6 단계를 반복 합니다.  
-  
-##  <a name="BKMK_ShareLineOfBusinessAndOtherApplications"></a>업무-및 기타 응용 프로그램 데이터 폴더 공유  
- 공유 폴더 권한 및 비즈니스 선 및 기타 응용 프로그램 데이터 폴더 대상 서버에 복사한 NTFS 권한이 설정 해야 합니다. 공유 폴더에서 Windows Server Essentials 대시보드에 표시 되는 사용 권한의 설정한 후는 **저장소** 섹션.  
-  
- 로그온 스크립트 공유 폴더를 드라이브 매핑를 사용 하는 경우 스크립트 대상 서버의 드라이브에 매핑됩니다를 업데이트 해야 합니다.  
-  
-##  <a name="BKMK_FixClientComputerIssuesAfterMigrating"></a>후 마이그레이션 클라이언트 컴퓨터 문제 해결  
- Windows Server essentials Windows 작은 Business Server 2003 프리미엄 Edition Microsoft 인터넷 보안 및 라우터 서버가 설치 마이그레이션할 경우 네트워크에서 컴퓨터 클라이언트 아직 Microsoft 방화벽 클라이언트 및 Internet Explorer 프록시 서버를 사용 하도록 구성 합니다.  
-  
- 이 인해 연결 문제가 클라이언트에서 컴퓨터를 프록시 서버 더 이상 존재 하기 때문입니다. 다른 프록시 서버 구성 된 경우 컴퓨터 프록시 서버에 대 한 Windows SBS 2003을 실행 하는 서버를 사용 하 여 계속 합니다. 이 문제를 해결 하려면 Internet Explorer 프록시 서버를 사용 하지 않도록 또는 새 프록시 서버를 사용 하 여를 다시 구성 해야 합니다.  
-  
-#### <a name="to-reconfigure-internet-explorer"></a>Internet Explorer를 다시 구성 하려면  
-  
-1.  Internet Explorer 클릭 **도구**을 차례로 클릭 하 고 **인터넷 옵션**합니다.  
-  
-2.  클릭는 **연결** 탭을 클릭 **LAN 설정**, 하 고 다음 중 하나를 수행 합니다.  
-  
-    -   프록시 서버에서 네트워크를 사용 하지 않는 경우에 모든 확인란의 선택을 취소는 **(LAN) 설정** 대화 상자가 합니다.  
-  
-    -   네트워크에서 새 프록시 서버를 사용 하려면:  
-  
-        1.  **(LAN) 설정** 확인란의 선택을 취소 합니다 대화 상자에서 **자동 구성** 섹션.  
-  
-        2.  에 **프록시 서버** 섹션, 확인란을 모두 선택 되어 있는지 확인 합니다.  
-  
-        3.  에 **주소** 상자에 프록시 서버 (FQDN) 정식된 도메인 이름 입력 합니다.  
-  
-        4.  에 **포트** 상자에 입력 **80**합니다.  
-  
-3.  클릭 **확인** 두 번 합니다.  
-  
-4.  연결 설정이 올바른지 확인 하기 위해 웹 사이트로 이동 합니다.  
-  
-##  <a name="BKMK_AdminGroup"></a>기본 제공 된 관리자가 그룹 일괄 작업으로 로그온 할 수 있는 권한을 제공합니다  
- Windows Server essentials 기존 Windows Small Business Server 2003 도메인 마이그레이션할 권리를 배치 작업으로 로그온 기본 관리자가 그룹 제공 해야 있습니다. 기본 관리자가 그룹 아직 대상 서버에 배치 작업으로 로그온 수 있는 권한이 있는지 확인 합니다. 관리자가이 권리를 알림을 대상 서버에 로그인 하지 않고도 실행 해야 합니다.  
-  
-#### <a name="to-give-the-built-in-administrators-group-the-right-to-log-on-as-a-batch-job"></a>관리자가 그룹 일괄 작업으로 로그온 권한을 제공 기본 제공  
-  
-1.  대상 서버에서 엽니다는 **그룹 정책 관리** 관리 도구입니다.  
-  
-2.  에 **그룹 정책 관리** 콘솔 트리에서, 확장 **숲:***< ServerName\ >*도메인 확장 한 다음 서버를 확장 합니다.  
-  
-3.  확장 **도메인 컨트롤러**를 마우스 오른쪽 단추로 클릭 **기본 도메인 컨트롤러 정책**을 차례로 클릭 하 고 **편집**합니다.  
-  
-4.  **그룹 정책 편집기 관리**, 클릭 **기본 도메인 컨트롤러 정책***< ServerName\ >***정책**를 확장 한 다음 **컴퓨터 구성**합니다.  
-  
-5.  확장 **정책**, 확장 **Windows 설정**를 확장 한 다음 **보안 설정**합니다.  
-  
-6.  **보안 설정** 트리를 확장 **로컬 정책**을 차례로 클릭 하 고 **사용자 권한 할당**합니다.  
-  
-7.  결과 창에서 마우스 오른쪽 단추로 클릭 **일괄 작업으로 로그온**, 마우스 속성을 클릭 합니다.  
-  
-8.  에 **일괄 작업 속성으로 로그온** 페이지, 클릭 **사용자 또는 그룹 추가**합니다.  
-  
-9. 에 **사용자 또는 그룹 추가** 대화 상자를 클릭 **찾아보기**합니다.  
-  
-10. 에 **사용자를 컴퓨터 또는 그룹 선택** 대화 상자에서 유형 **관리자**합니다.  
-  
-11. 클릭 **이름 확인** 기본 관리자가 그룹 나타나면 및 클릭 한 다음 확인 하려면 **확인** 세 번 설정을 저장 합니다.  
-  
-## <a name="see-also"></a>참조 하십시오  
+다음 작업을 통해 원본 서버에 있던 일부 동일한 설정을 사용하여 대상 서버 설정을 완료할 수 있습니다. 마이그레이션 프로세스 중에 원본 서버에서 이러한 설정의 일부를 사용하지 않도록 설정했을 수 있으므로 대상 서버에 마이그레이션되지 않았습니다. 또는 선택적 구성 단계를 수행할 수 있습니다.  
   
 
--   [Windows SBS 2003 마이그레이션](Migrate-Windows-Small-Business-Server-2003-to-Windows-Server-Essentials.md)  
+-   [원본 서버의 DNS 항목 삭제](Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_DeleteDNSEntries)  
   
--   [Windows Server essentials 서버 데이터 마이그레이션](Migrate-Server-Data-to-Windows-Server-Essentials.md)
+-   [기간 업무 및 기타 응용 프로그램 데이터 폴더 공유](Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_ShareLineOfBusinessAndOtherApplications)  
+  
+-   [마이그레이션한 후 클라이언트 컴퓨터 문제 해결](Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_FixClientComputerIssuesAfterMigrating)  
+  
+-   [기본 제공 Administrators 그룹에 일괄 작업으로 로그온 권한을 부여합니다](Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_AdminGroup)  
 
--   [Windows SBS 2003 마이그레이션](../migrate/Migrate-Windows-Small-Business-Server-2003-to-Windows-Server-Essentials.md)  
+-   [원본 서버의 DNS 항목 삭제](../migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_DeleteDNSEntries)  
   
--   [Windows Server essentials 서버 데이터 마이그레이션](../migrate/Migrate-Server-Data-to-Windows-Server-Essentials.md)
+-   [기간 업무 및 기타 응용 프로그램 데이터 폴더 공유](../migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_ShareLineOfBusinessAndOtherApplications)  
+  
+-   [마이그레이션한 후 클라이언트 컴퓨터 문제 해결](../migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_FixClientComputerIssuesAfterMigrating)  
+  
+-   [기본 제공 Administrators 그룹에 일괄 작업으로 로그온 권한을 부여합니다](../migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_AdminGroup)  
+
+  
+##  <a name="BKMK_DeleteDNSEntries"></a> 원본 서버의 DNS 항목 삭제  
+ 원본 서버 서비스를 해제하고 나서 DNS(도메인 이름 서비스) 서버에는 원본 서버를 가리키는 항목이 포함되어 있을 수 있습니다. 이러한 DNS 항목을 삭제합니다.  
+  
+#### <a name="to-delete-dns-entries-that-point-to-the-source-server"></a>원본 서버를 가리키는 DNS 항목을 삭제하려면  
+  
+1.  대상 서버에서 **DNS 관리자**를 엽니다.  
+  
+2.  DNS 관리자에서 서버 이름을 마우스 오른쪽 단추로 클릭하고 **속성**, **전달자** 탭을 차례로 클릭합니다.  
+  
+3.  원본 서버를 가리키는 전달자 목록에서 항목이 있는지 확인합니다. 항목이 있으면 **편집**을 클릭하고 **전달자 편집** 창에서 해당 항목을 삭제합니다.  
+  
+4.  **DNS 관리자**에서 서버 이름을 확장하고 **정방향 조회 영역**을 확장합니다.  
+  
+5.  각 정방향 조회 영역에 대한 영역을 마우스 오른쪽 단추로 클릭하고 **속성**, **이름 서버** 탭을 차례로 클릭합니다.  
+  
+6.  원본 서버를 가리키는 **이름 서버** 상자의 항목을 클릭하고 **제거**, **확인**을 차례로 클릭합니다.  
+  
+7.  원본 서버에 대한 모든 포인터가 제거될 때까지 5 - 6단계를 반복합니다.  
+  
+8.  **확인**을 클릭하여 **속성** 창을 닫습니다.  
+  
+9. **DNS 관리자** 콘솔에서 **역방향 조회 영역**을 확장합니다.  
+  
+10. 6~9단계를 반복하여 원본 서버를 가리키는 모든 역방향 조회 영역을 제거합니다.  
+  
+##  <a name="BKMK_ShareLineOfBusinessAndOtherApplications"></a> 기간 업무 및 기타 응용 프로그램 데이터 폴더 공유  
+ 대상 서버로 복사한 LOB(기간 업무) 및 기타 응용 프로그램 데이터 폴더에 대해 공유 폴더 사용 권한 및 NTFS 사용 권한을 설정해야 합니다. 권한을 설정 하 여 공유 폴더에서 Windows Server Essentials 대시보드에 표시 됩니다는 **저장소** 섹션입니다.  
+  
+ 로그온 스크립트를 사용하여 공유 폴더에 드라이브를 매핑하는 경우 스크립트를 업데이트하여 대상 서버의 드라이브에 매핑해야 합니다.  
+  
+##  <a name="BKMK_FixClientComputerIssuesAfterMigrating"></a> 마이그레이션한 후 클라이언트 컴퓨터 문제 해결  
+ Windows Small Business Server 2003 Premium Edition Microsoft Internet Security를 사용 하 여 설치 된 Acceleration (ISA) Server를 Windows Server Essentials에 마이그레이션하는 경우 클라이언트 컴퓨터 네트워크에 아직 Microsoft 방화벽 클라이언트 및 인터넷 프록시 서버를 사용 하도록 구성 하는 탐색기입니다.  
+  
+ 프록시 서버가 더 이상 없으므로 이 때문에 클라이언트 컴퓨터에서 연결 문제가 발생합니다. 다른 프록시 서버 구성의 경우 클라이언트 컴퓨터에서 계속 프록시 서버에 대 한 Windows SBS 2003을 실행 하는 서버를 사용 합니다. 이 문제를 해결하려면 프록시 서버를 사용하지 않거나 새 프록시 서버를 사용하도록 Internet Explorer를 다시 구성해야 합니다.  
+  
+#### <a name="to-reconfigure-internet-explorer"></a>Internet Explorer를 다시 구성하려면  
+  
+1.  Internet Explorer에서 **도구**, **인터넷 옵션**을 차례로 클릭합니다.  
+  
+2.  **연결** 탭, **LAN 설정**을 차례로 클릭하고 다음의 하나를 수행합니다.  
+  
+    -   네트워크에서 프록시 서버를 사용하고 있지 않으면 **LAN 설정** 대화 상자에서 모든 확인란을 선택 취소합니다.  
+  
+    -   네트워크에서 새 프록시 서버를 사용하려면:  
+  
+        1.  **LAN 설정** 대화 상자의 **자동 구성** 섹션에서 확인란을 선택 취소합니다.  
+  
+        2.  **프록시 서버** 섹션에서 확인란이 둘 다 선택되었는지 확인합니다.  
+  
+        3.  **주소** 상자에 프록시 서버의 FQDN(정규화된 도메인 이름)을 입력합니다.  
+  
+        4.  **포트** 상자에 **80**을 입력합니다.  
+  
+3.  **확인** 을 두 번 클릭합니다.  
+  
+4.  웹 사이트로 이동하여 연결 설정이 올바른지 확인합니다.  
+  
+##  <a name="BKMK_AdminGroup"></a> 기본 제공 Administrators 그룹에 일괄 작업으로 로그온 권한을 부여합니다  
+ Windows Server Essentials를 기존 Windows Small Business Server 2003 도메인을 마이그레이션한 후에 일괄 작업으로 로그온 권한을 기본 제공 Administrators 그룹 부여 해야 합니다. 기본 제공 Administrators 그룹에 대상 서버에 대한 일괄 작업으로 로그온 권한이 있는지 확인합니다. 관리자는 로그온하지 않고 대상 서버에서 경고를 실행하려면 이 권한이 필요합니다.  
+  
+#### <a name="to-give-the-built-in-administrators-group-the-right-to-log-on-as-a-batch-job"></a>기본 제공 Administrators 그룹에 일괄 작업으로 로그온 권한을 부여하려면  
+  
+1.  대상 서버에서 **그룹 정책 관리** 관리 도구를 엽니다.  
+  
+2.  에 **그룹 정책 관리** 콘솔 트리에서 **포리스트:** *< 서버 이름\>*, 도메인을 확장 하 고 다음 서버를 확장 합니다.  
+  
+3.  **도메인 컨트롤러**를 확장하고 **기본 도메인 컨트롤러 정책**을 마우스 오른쪽 단추로 클릭하고 나서 **편집**을 클릭합니다.  
+  
+4.  **그룹 정책 관리 편집기**, 클릭 **기본 도메인 컨트롤러 정책 ***< ServerName\>*** 정책**를 차례로 확장 하 고  **컴퓨터 구성**합니다.  
+  
+5.  **정책**, **Windows 설정**, **보안 설정**을 차례로 확장합니다.  
+  
+6.  **보안 설정** 트리에서 **로컬 정책**을 확장하고 **사용자 권한 할당**을 클릭합니다.  
+  
+7.  결과 창에서 **일괄 작업으로 로그온**을 마우스 오른쪽 단추로 클릭하고 속성을 클릭합니다.  
+  
+8.  **일괄 작업으로 로그온 속성** 페이지에서 **사용자 또는 그룹 추가**를 클릭합니다.  
+  
+9. **사용자 또는 그룹 추가** 대화 상자에서 **찾아보기**를 클릭합니다.  
+  
+10. **사용자, 컴퓨터 또는 그룹 선택** 대화 상자에서 **Administrators**를 입력합니다.  
+  
+11. **이름 확인**을 클릭하여 기본 제공 Administrators 그룹이 나타나는지 확인하고 **확인**을 세 번 클릭하여 설정을 저장합니다.  
+  
+## <a name="see-also"></a>참조  
+  
+
+-   [Windows SBS 2003에서 마이그레이션](Migrate-Windows-Small-Business-Server-2003-to-Windows-Server-Essentials.md)  
+  
+-   [Windows Server Essentials로 서버 데이터 마이그레이션](Migrate-Server-Data-to-Windows-Server-Essentials.md)
+
+-   [Windows SBS 2003에서 마이그레이션](../migrate/Migrate-Windows-Small-Business-Server-2003-to-Windows-Server-Essentials.md)  
+  
+-   [Windows Server Essentials로 서버 데이터 마이그레이션](../migrate/Migrate-Server-Data-to-Windows-Server-Essentials.md)
 

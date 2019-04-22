@@ -1,6 +1,6 @@
 ---
 ms.assetid: d2429185-9720-4a04-ad94-e89a9350cdba
-title: "클라우드 폴더 배포"
+title: 클라우드 폴더 배포
 ms.prod: windows-server-threshold
 ms.technology: storage-work-folders
 ms.topic: article
@@ -8,20 +8,21 @@ author: JasonGerend
 manager: dongill
 ms.author: jgerend
 ms.date: 6/24/2017
-description: "서버 역할을 설치하고 동기화 공유를 만들고 DNS 레코드를 만드는 방법을 포함하여 클라우드 폴더를 배포하는 방법을 설명합니다."
-ms.openlocfilehash: 13570b65ba4e15bffd8d57a9df52150a66608a79
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+description: 서버 역할을 설치하고 동기화 공유를 만들고 DNS 레코드를 만드는 방법을 포함하여 클라우드 폴더를 배포하는 방법을 설명합니다.
+ms.openlocfilehash: 1f7a0aa0b7e08a1dd444cd6b488a1ced6ee3d9d7
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59812544"
 ---
 # <a name="deploying-work-folders"></a>클라우드 폴더 배포
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 8.1, Windows 7
+>적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 8.1, Windows 7
 
 이 항목에서는 클라우드 폴더를 배포할 때 거쳐야 할 단계적 절차에 대해 설명하며, 독자가 [클라우드 폴더 배포 계획](plan-work-folders.md)을 이미 읽어본 것으로 가정합니다.  
   
- 클라우드 폴더를 배포하려면 그 과정에 여러 서버와 기술이 활용될 수 있으며 다음과 같은 단계적 절차를 따릅니다.  
+ 여러 서버와 기술을 포함할 수 있는 클라우드 폴더를 배포하려면 다음 단계를 사용하세요.  
   
 > [!TIP]
 >  가장 간단한 클라우드 폴더 배포는 인터넷을 통한 동기화를 지원하지 않는 단일 파일 서버(종종 동기화 서버라고도 함)이며, 테스트 랩이나 도메인에 가입된 클라이언트 컴퓨터의 동기화 솔루션으로 유용한 배포일 수 있습니다. 단순 배포를 만들기 위해 따라야 하는 최소 단계는 다음과 같습니다. 
@@ -33,9 +34,9 @@ ms.lasthandoff: 10/17/2017
 >  -   7단계: 사용자 데이터에 대한 동기화 공유 만들기  
   
 ## <a name="step-1-obtain-ssl-certificates"></a>1단계: SSL 인증서 가져오기  
- 클라우드 폴더는 HTTPS를 사용하여 클라우드 폴더 클라이언트와 클라우드 폴더 서버 간에 안전하게 파일을 동기화합니다. 클라우드 폴더에서 사용하는 SSL 인증서에 대한 요구 사항은 다음과 같습니다.  
+ 클라우드 폴더는 HTTPS를 사용하여 클라우드 폴더 클라이언트와 클라우드 폴더 서버 간에 안전하게 파일을 동기화합니다. 클라우드 폴더에서 사용되는 SSL 인증서에 대한 요구 사항은 다음과 같습니다.  
   
--   신뢰할 수 있는 인증 기관에서 발급한 인증서여야 합니다. 대부분의 클라우드 폴더 구현에서는 도메인에 가입되지 않은 인터넷 기반 디바이스에서 인증서를 사용하므로 공개적으로 신뢰할 수 있는 CA를 사용하는 것이 좋습니다.  
+-   신뢰할 수 있는 인증 기관에서 발급한 인증서여야 합니다. 대부분의 클라우드 폴더 구현에서는 도메인에 가입되지 않은 인터넷 기반 장치에서 인증서를 사용하므로 공개적으로 신뢰할 수 있는 CA가 권장됩니다.  
   
 -   인증서가 유효해야 합니다.  
   
@@ -50,20 +51,20 @@ ms.lasthandoff: 10/17/2017
 ## <a name="step-2-create-dns-records"></a>2단계: DNS 레코드 만들기  
  사용자가 인터넷을 통해 동기화하도록 허용하려면 인터넷 클라이언트에서 클라우드 폴더 URL을 확인할 수 있도록 공용 DNS에 호스트(A) 레코드를 만들어야 합니다. 이 DNS 레코드는 역방향 프록시 서버의 외부 인터페이스로 확인되어야 합니다.  
   
- 내부 네트워크에서, DNS에 클라우드 폴더 서버의 FDQN을 확인하는 workfolders라는 이름의 CNAME 레코드를 만듭니다 클라우드 폴더 클라이언트가 자동 검색을 사용할 때 클라우드 폴더 서버를 검색할 때 사용되는 URL은 https://workfolders.domain.com입니다. 자동 검색을 사용하려는 경우 workfolders CNAME 레코드가 DNS에 있어야 합니다.  
+ 내부 네트워크에서, DNS에 클라우드 폴더 서버의 FDQN을 확인하는 workfolders라는 이름의 CNAME 레코드를 만듭니다 작업 폴더 클라이언트가 자동 검색을 사용 하면 클라우드 폴더 서버를 검색 하는 데 URL은 https://workfolders.domain.com합니다. 자동 검색을 사용하려면 DNS에 workfolders CNAME 레코드가 있어야 합니다.  
   
 ## <a name="step-3-install-work-folders-on-file-servers"></a>3단계: 파일 서버에 클라우드 폴더 설치  
  서버 관리자를 사용하거나 로컬 또는 네트워크에서 원격으로 Windows PowerShell을 사용하여 도메인에 가입된 서버에 클라우드 폴더를 설치할 수 있습니다. 이는 네트워크에서 여러 동기화 서버를 구성하는 경우에 유용합니다.  
   
 서버 관리자에서 역할을 배포하려면 다음을 수행합니다.  
   
-1.  **역할 및 기능 추가 마법사**를 시작합니다.  
+1.  **역할 및 기능 추가 기능 마법사**를 시작합니다.  
   
 2.  **설치 유형 선택** 페이지에서 **역할 기반 또는 기능 기반 배포**를 선택합니다.  
   
 3.  **대상 서버 선택** 페이지에서 클라우드 폴더를 설치할 서버를 선택합니다.  
   
-4.  **서버 역할 선택** 페이지에서 **파일 및 저장소 서비스**를 확장하고 **파일 및 iSCSI 서비스**를 확장한 다음 **클라우드 폴더**를 선택합니다.  
+4.  **서버 역할 선택** 페이지에서 **File and Storage Services**를 확장하고 **파일 및 iSCSI 서비스**를 확장한 다음 **클라우드 폴더**를 선택합니다.  
   
 5.  **IIS 호스팅 가능한 웹 코어**를 설치할 것인지 묻는 메시지가 나타나면 **확인**을 클릭하여 클라우드 폴더에 필요한 최소 버전의 IIS(인터넷 정보 서비스)를 설치합니다.  
   
@@ -109,7 +110,7 @@ Add-WindowsFeature FS-SyncShareService
 
 4.  **그룹 만들기** 창의 **그룹** 섹션에서 다음 설정을 지정합니다.
 
-    -   **그룹 이름**에 보안 그룹의 이름을 입력합니다(예: **HR Sync Share Users** 또는 **Work Folders Administrators**).  
+    -   **그룹 이름**에 보안 그룹의 이름(예: HR Sync Share Users 또는 **Work Folders Administrators**)을 입력합니다.  
   
     -   **그룹 범위**에서 **보안**을 클릭한 다음 **전역**을 클릭합니다.  
   
@@ -140,9 +141,9 @@ Set-ADGroup -Add:@{'Member'=$Members} -Identity:$GroupName -Server:$DC
   
 2.  **도구** 메뉴에서 **Active Directory 사용자 및 컴퓨터**를 클릭합니다. Active Directory 사용자 및 컴퓨터가 표시됩니다.  
   
-3.  클라우드 폴더에 대한 모든 사용자 개체가 있는 OU(사용자가 여러 OU 또는 도메인에 저장된 경우 모든 사용자에게 공통적인 컨테이너)를 마우스 오른쪽 단추로 클릭한 다음 **제어 위임...**을 클릭합니다. 제어 위임 마법사가 나타납니다.  
+3.  클라우드 폴더에 대한 모든 사용자 개체가 있는 OU(사용자가 여러 OU 또는 도메인에 저장된 경우 모든 사용자에게 공통적인 컨테이너)를 마우스 오른쪽 단추로 클릭한 다음 **제어 위임...** 을 클릭합니다. 제어 위임 마법사가 나타납니다.  
   
-4.  **사용자 또는 그룹** 페이지에서 **추가…**를 클릭합니다. 그런 다음 클라우드 폴더 관리자에 대해 만든 그룹(예: **Work Folders Administrators**)을 지정합니다.  
+4.  **사용자 또는 그룹** 페이지에서 **추가…** 를 클릭합니다. 를 클릭한 다음 클라우드 폴더 관리자에 대해 만든 그룹(예: **Work Folders Administrators**)을 지정합니다.  
   
 5.  **위임할 작업** 페이지에서 **위임할 사용자 지정 작업 만들기**를 클릭합니다.  
   
@@ -169,14 +170,14 @@ DsAcls $ADGroupPath /I:S /G ""$GroupName":RPWP;msDS-SyncServerUrl;user"
   
 2.  서버 관리자에서 **파일 및 저장소 서비스**를 클릭한 다음 **클라우드 폴더**를 클릭합니다.  
   
-3.  기존 동기화 공유 목록이 세부 정보 창의 위쪽에 표시됩니다. 새 동기화 공유를 만들려면 **작업** 메뉴에서 **새 동기화 공유...**를 선택합니다. 새 동기화 공유 마법사가 나타납니다.  
+3.  기존 동기화 공유 목록이 세부 정보 창의 위쪽에 표시됩니다. 새 동기화 공유를 만들려면 **작업** 메뉴에서 **새 동기화 공유...** 를 선택합니다. 새 동기화 공유 마법사가 나타납니다.  
   
 4.  **서버 및 경로 선택** 페이지에서 동기화 공유를 저장할 위치를 지정합니다. 이 사용자 데이터용으로 만들어진 파일 공유가 이미 있는 경우 해당 공유를 선택해도 됩니다. 또는 새 폴더를 만들 수 있습니다.  
   
     > [!NOTE]
-    >  기본적으로 동기화 공유에는 기존 파일 공유를 선택한 경우 외에는 파일 공유를 통해 직접 액세스할 수 없습니다. 파일 공유를 통해 동기화 공유에 액세스할 수 있도록 하려면 서버 관리자의 **공유** 타일 또는 [New-SmbShare](http://technet.microsoft.com/library/jj635722.aspx) cmdlet을 사용하여 파일 공유를 만드세요. 이때 액세스 기반 열거를 사용하는 것이 좋습니다.  
+    >  기본적으로 동기화 공유에는 기존 파일 공유를 선택한 경우 외에는 파일 공유를 통해 직접 액세스할 수 없습니다. 파일 공유를 통해 동기화 공유에 액세스할 수 있도록 하려면 서버 관리자의 **공유** 타일 또는 [New-SmbShare](https://technet.microsoft.com/library/jj635722.aspx) cmdlet을 사용하여 파일 공유를 만드세요. 이때 액세스 기반 열거를 사용하는 것이 좋습니다.  
   
-5.  **사용자 폴더의 구조 지정** 페이지에서 동기화 공유 내 사용자 폴더에 대한 명명 규칙을 선택합니다. 두 가지 옵션을 사용할 수 있습니다.  
+5.  **사용자 폴더의 구조 지정** 페이지에서 동기화 공유 내 사용자 폴더에 대한 명명 규칙을 선택합니다. 사용 가능한 두 가지 옵션이 있습니다.  
   
     -   **사용자 별칭** - 도메인 이름을 포함하지 않는 사용자 폴더를 만듭니다. 폴더 리디렉션 또는 다른 사용자 데이터 솔루션에서 이미 사용 중인 파일 공유를 사용하려면 이 명명 규칙을 선택합니다. 필요한 경우 **다음 하위 폴더만 동기화** 확인란을 선택하여 문서 폴더와 같은 특정 하위 폴더만 동기화할 수 있습니다.  
   
@@ -187,51 +188,51 @@ DsAcls $ADGroupPath /I:S /G ""$GroupName":RPWP;msDS-SyncServerUrl;user"
 7.  **그룹에 동기화 액세스 부여** 페이지에서 이 동기화 공유를 사용하도록 허용된 사용자를 나열할 그룹을 지정합니다.  
   
     > [!IMPORTANT]
-    >  성능 및 보안을 향상하려면 개별 사용자 대신 그룹에 액세스 권한을 부여하고 되도록이면 Authenticated Users 및 Domain Users와 같은 일반적인 그룹 대신 특정 그룹을 지정하세요. 사용자 수가 많은 그룹에 액세스 권한을 부여하면 클라우드 폴더에서 AD DS를 쿼리하는 데 걸리는 시간이 증가합니다. 사용자 수가 많은 경우 여러 동기화 공유를 만들어 부하를 분산할 수 있습니다.  
+    >  성능 및 보안을 향상시키려면 개별 사용자 대신 그룹에 액세스 권한을 부여하고 Authenticated Users 및 Domain Users와 같은 일반적인 그룹이 아니라 가능한 한 특정 그룹을 지정하십시오. 사용자 수가 많은 그룹에 액세스 권한을 부여하면 클라우드 폴더에서 AD DS를 쿼리하는 데 걸리는 시간이 증가합니다. 사용자 수가 많은 경우 여러 동기화 공유를 만들어 부하를 분산시킬 수 있습니다.  
   
-8.  **장치 정책 지정** 페이지에서 클라이언트 PC와 디바이스에 대한 보안 제한을 요청할지 지정합니다. 개별적으로 선택할 수 있는 장치 정책에는 다음 두 가지가 있습니다.  
+8.  **장치 정책 지정** 페이지에서 클라이언트 PC와 장치에 대한 보안 제한을 요청할지 지정합니다. 개별적으로 선택할 수 있는 장치 정책에는 다음 두 가지가 있습니다.  
   
-    -   **클라우드 폴더 암호화** 클라이언트 PC와 디바이스에서 클라우드 폴더를 암호화하도록 요청합니다.  
+    -   **클라우드 폴더 암호화** 클라이언트 PC와 장치에서 클라우드 폴더를 암호화하도록 요청합니다.  
   
-    -   **자동으로 화면 잠금 및 암호 설정** 클라이언트 PC와 디바이스에서 15분 후에 해당 화면을 자동으로 잠그도록 요청합니다. 화면 잠금을 해제하려면 6자 이상의 암호가 필요하며, 재시도에 10번 실패한 후에는 디바이스 잠금 모드가 활성화됩니다.  
+    -   **자동으로 화면 잠금 및 암호 설정** 클라이언트 PC와 장치에서 15분 후에 해당 화면을 자동으로 잠그도록 요청합니다. 화면 잠금을 해제하려면 6자 이상의 암호가 필요하며, 재시도에 10번 실패한 후에는 장치 잠금 모드가 활성화됩니다.  
   
         > [!IMPORTANT]
-        >  Windows 7 PC에 그리고 도메인에 가입된 PC의 관리자가 아닌 사용자에 대해 암호 정책을 적용하려면 컴퓨터 도메인에 대한 그룹 정책 암호 정책을 사용하고 이러한 도메인을 클라우드 폴더 암호 정책에서 제외합니다. 동기화 공유를 만든 후 [Set-Syncshare -PasswordAutoExcludeDomain](http://technet.microsoft.com/library/dn296649\(v=wps.630\).aspx) cmdlet을 사용하여 도메인을 제외할 수 있습니다. 그룹 정책 암호 정책을 설정하는 방법에 대한 자세한 내용은 [암호 정책](https://technet.microsoft.com/library/hh994572(v=ws.11).aspx)을 참조하세요.  
+        >  Windows 7 PC에 그리고 도메인에 가입된 PC의 관리자가 아닌 사용자에 대해 암호 정책을 적용하려면 컴퓨터 도메인에 대한 그룹 정책 암호 정책을 사용하고 이러한 도메인을 클라우드 폴더 암호 정책에서 제외합니다. 동기화 공유를 만든 후 [Set-Syncshare -PasswordAutoExcludeDomain](https://technet.microsoft.com/library/dn296649\(v=wps.630\).aspx) cmdlet을 사용하여 도메인을 제외할 수 있습니다. 그룹 정책 암호 정책을 설정하는 방법에 대한 자세한 내용은 [암호 정책](https://technet.microsoft.com/library/hh994572(v=ws.11).aspx)을 참조하세요.  
   
-9. 선택한 내용을 검토하고 마법사를 완료하여 동기화 공유를 만듭니다.
+9. 선택 항목을 검토하고 마법사를 완료하여 동기화 공유를 만듭니다.
 
-[New-SyncShare](http://technet.microsoft.com/library/dn296635.aspx) cmdlet을 사용하여 Windows PowerShell에서 동기화 공유를 만들 수 있습니다. 다음은 이 방법의 예입니다.  
+[New-SyncShare](https://technet.microsoft.com/library/dn296635.aspx) cmdlet을 사용하여 Windows PowerShell에서 동기화 공유를 만들 수 있습니다. 다음은 이 방법의 예입니다.  
   
 ```powershell  
 New-SyncShare "HR Sync Share" K:\Share-1 –User "HR Sync Share Users"  
 ```  
   
-위의 예제에서는 이름이 *Share01*이고 경로가 *K:\Share-1*이며, *HR Sync Share Users* 그룹에 대한 액세스 권한이 부여된 새 동기화 공유를 만듭니다.  
+위 예에서는 이름이 *Share01*이고 경로가 *K:\Share-1*이며, *HR Sync Share Users* 그룹에 대한 액세스 권한이 부여된 새 동기화 공유를 만듭니다.  
   
 > [!TIP]
->  동기화 공유를 만든 후에는 파일 서버 리소스 관리자 기능을 사용하여 공유의 데이터를 관리할 수 있습니다. 예를 들어 서버 관리자의 클라우드 폴더 페이지에 있는 **할당량** 타일을 사용하여 사용자 폴더에 대한 할당량을 설정할 수 있습니다. 또한 [파일 차단 관리](http://technet.microsoft.com/library/cc732074.aspx)를 사용하여 클라우드 폴더에서 동기화할 파일 형식을 제어하거나, [동적 액세스 제어](https://technet.microsoft.com/windows-server-docs/identity/solution-guides/dynamic-access-control--scenario-overview)에 설명된 시나리오를 사용하여 보다 정교한 파일 분류 작업을 수행할 수 있습니다.  
+>  동기화 공유를 만든 후에는 파일 서버 리소스 관리자 기능을 사용하여 공유의 데이터를 관리할 수 있습니다. 예를 들어 서버 관리자의 클라우드 폴더 페이지에 있는 **할당량** 타일을 사용하여 사용자 폴더에 대한 할당량을 설정할 수 있습니다. 또한 [파일 차단 관리](https://technet.microsoft.com/library/cc732074.aspx)를 사용하여 클라우드 폴더에서 동기화할 파일 형식을 제어하거나, [동적 액세스 제어](https://technet.microsoft.com/windows-server-docs/identity/solution-guides/dynamic-access-control--scenario-overview)에 설명된 시나리오를 사용하여 보다 정교한 파일 분류 작업을 수행할 수 있습니다.  
   
-## <a name="step-8-optionally-specify-a-tech-support-email-address"></a>8단계: 기술 지원 전자 메일 주소 지정(선택 사항)   
+## <a name="step-8-optionally-specify-a-tech-support-email-address"></a>8단계: 필요에 따라 기술 지원 메일 주소를 지정   
  파일 서버에 클라우드 폴더를 설치한 후, 서버에 대한 관리 담당자 전자 메일 주소를 지정하고 싶을 것입니다. 전자 메일 주소를 추가하려면 다음 절차를 수행합니다.  
   
 #### <a name="specifying-an-administrative-contact-email"></a>관리 담당자 전자 메일 지정 
   
-1.  서버 관리자에서 **파일 및 저장소 서비스**를 클릭한 다음 **서버**를 클릭합니다.  
+1.  서버 관리자에서 **File and Storage Services**를 클릭한 다음 **서버**를 클릭합니다.  
   
 2.  동기화 서버를 마우스 오른쪽 단추로 클릭한 다음 **클라우드 폴더 설정**을 클릭합니다. 클라우드 폴더 설정 창이 나타납니다.  
   
 3.  탐색 창에서 **지원 전자 메일**을 클릭한 다음 사용자가 클라우드 폴더에 대한 도움을 요청하는 전자 메일을 보낼 때 사용해야 하는 전자 메일 주소를 입력합니다. 마치면 **확인**을 클릭합니다.  
   
-     클라우드 폴더 사용자는 클라우드 폴더 제어판 항목의 링크를 클릭하여 클라이언트 PC에 대한 진단 정보가 포함된 메일을 여기서 지정한 주소로 보낼 수 있습니다.  
+     클라우드 폴더 사용자는 클라우드 폴더 제어판 항목의 링크를 클릭하여 클라이언트 PC에 대한 진단 정보가 포함된 메일을 여기에서 지정한 주소로 보낼 수 있습니다.  
   
 ## <a name="step-9-optionally-set-up-server-automatic-discovery"></a>9단계: 서버 자동 검색 설정(선택 사항)  
  환경에서 여러 동기화 서버를 호스팅하는 경우 AD DS에서 사용자 계정에 대한 **msDS-SyncServerURL** 속성을 채워 서버 자동 검색을 구성해야 합니다.  
   
 >[!NOTE]
->Active Directory의 msDS-SyncServerURL 속성은 웹 응용 프로그램 프록시 또는 Azure AD 응용 프로그램 프록시와 같은 역방향 프록시 솔루션을 통해 클라우드 폴더에 액세스하는 원격 사용자에 대해서는 정의되어서는 안 됩니다. msDS-SyncServerURL 속성이 정의되면, 클라우드 폴더 클라이언트는 역방향 프록시 솔루션을 통해서는 액세스할 수 없는 내부 URL에 액세스하려 시도합니다. 웹 응용 프로그램 프록시 또는 Azure AD 응용 프로그램 프록시를 사용하는 경우, 각 클라우드 폴더 서버에 대한 고유 프록시 응용 프로그램을 만들어야 합니다. 자세한 내용은 [AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포: 개요](deploy-work-folders-adfs-overview.md) 또는 [Azure AD 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포](https://blogs.technet.microsoft.com/filecab/2017/05/31/enable-remote-access-to-work-folders-using-azure-active-directory-application-proxy/)를 참조하세요.
+>Active Directory의 msDS-SyncServerURL 속성은 웹 응용 프로그램 프록시 또는 Azure AD 응용 프로그램 프록시와 같은 역방향 프록시 솔루션을 통해 클라우드 폴더에 액세스하는 원격 사용자에 대해서는 정의되어서는 안 됩니다. msDS-SyncServerURL 속성이 정의되면, 클라우드 폴더 클라이언트는 역방향 프록시 솔루션을 통해서는 액세스할 수 없는 내부 URL에 액세스하려 시도합니다. 웹 응용 프로그램 프록시 또는 Azure AD 응용 프로그램 프록시를 사용하는 경우, 각 클라우드 폴더 서버에 대한 고유 프록시 응용 프로그램을 만들어야 합니다. 자세한 내용은 참조 하세요. [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 개요](deploy-work-folders-adfs-overview.md) 나 [Azure AD 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포](https://blogs.technet.microsoft.com/filecab/2017/05/31/enable-remote-access-to-work-folders-using-azure-active-directory-application-proxy/)합니다.
 
 
- 이렇게 하려면 먼저 Windows Server 2012 R2 도메인 컨트롤러를 설치하거나 `Adprep /forestprep` 및 `Adprep /domainprep` 명령을 사용하여 포리스트 및 도메인 스키마를 업데이트해야 합니다. 이러한 명령을 안전하게 실행하는 방법에 대한 자세한 내용은 [Running Adprep(Adprep 실행)](http://technet.microsoft.com/library/dd464018.aspx)을 참조하세요.  
+ 이렇게 하려면 먼저 Windows Server 2012 R2 도메인 컨트롤러를 설치하거나 `Adprep /forestprep` 및 `Adprep /domainprep` 명령을 사용하여 포리스트 및 도메인 스키마를 업데이트해야 합니다. 이러한 명령을 안전하게 실행하는 방법에 대한 자세한 내용은 [Adprep 실행](https://technet.microsoft.com/library/dd464018.aspx)을 참조하세요.  
   
  또한 5단계와 6단계에 설명된 대로 파일 서버 관리자에 대한 보안 그룹을 만들어 이 특정 사용자 특성을 수정할 수 있는 권한을 위임할 수도 있습니다. 이러한 단계를 수행하지 않으면 Domain Admins 또는 Enterprise Admins 그룹의 구성원에게 각 사용자에 대한 자동 검색을 구성하게 해야 합니다.  
   
@@ -245,12 +246,12 @@ New-SyncShare "HR Sync Share" K:\Share-1 –User "HR Sync Share Users"
   
 4.  탐색 창에서 **확장**을 클릭합니다.  
   
-5.  **특성 편집기** 탭을 클릭하고 **msDS-SyncServerUrl**을 선택한 다음 **편집**을 클릭합니다. 다중값 문자열 편집기 대화 상자가 나타납니다.  
+5.  **특성 편집기** 탭을 클릭하고 **msDS-SyncServerUrl** 을 선택한 다음 **편집**을 클릭합니다. 다중값 문자열 편집기 대화 상자가 나타납니다.  
   
 6.  **추가할 값** 상자에 이 사용자를 동기화할 동기화 서버의 URL을 입력하고 **추가**, **확인**을 차례로 클릭한 다음 **확인**을 다시 클릭합니다.  
   
     > [!NOTE]
-    >  동기화 서버 URL은 `https://` 또는 `http://`(보안 연결이 필요한지 여부에 따라 결정됨) 뒤에 동기화 서버의 정규화된 도메인 이름이 오는 형식입니다(예: **https://sync1.contoso.com**).
+    >  동기화 서버 URL은 `https://` 또는 `http://`(보안 연결이 필요한지 여부에 따라 결정됨) 뒤에 동기화 서버의 정규화된 도메인 이름이 오는 예: **https://sync1.contoso.com**.
 
 여러 사용자에 대한 특성을 채우려면 Active Directory PowerShell을 사용합니다. 다음은 5단계에서 설명한 *HR Sync Share Users* 그룹의 모든 구성원에 대한 특성을 채우는 예입니다.
   
@@ -263,7 +264,7 @@ Set-ADUser –Add @{"msDS-SyncServerURL"=$SyncServerURL}
   
 ```  
   
-## <a name="step-10-optionally-configure-web-application-proxy-azure-ad-application-proxy-or-another-reverse-proxy"></a>10단계: 선택적으로 웹 응용 프로그램 프록시, Azure AD 응용 프로그램 프록시 또는 다른 역방향 프록시 구성  
+## <a name="step-10-optionally-configure-web-application-proxy-azure-ad-application-proxy-or-another-reverse-proxy"></a>10단계: 필요에 따라 웹 응용 프로그램 프록시, Azure AD 응용 프로그램 프록시 또는 다른 역방향 프록시 구성  
 
 원격 사용자가 자신의 파일에 액세스할 수 있도록 하려면, 역방향 프록시를 통해 클라우드 폴더 서버를 게시하여 외부에서 인터넷을 통해 클라우드 폴더를 사용할 수 있도록 해야 합니다. 웹 응용 프로그램 프록시, Azure Active Directory 응용 프로그램 프록시 또는 다른 역방향 프록시 솔루션을 사용할 수 있습니다.  
   
@@ -277,11 +278,11 @@ Azure Active Directory 응용 프로그램 프록시를 사용하여 클라우�
   
 -   사용자를 동기화할 동기화 서버 지정  
   
--   기본 설정을 사용하여 클라우드 폴더를 강제로 자동 설정(이 작업을 수행하기 전에 [클라우드 폴더 구현 디자인](plan-work-folders.md)에 설명된 그룹 정책을 검토할 것)  
+-   기본 설정을 사용하여 클라우드 폴더를 강제로 자동으로 설정(이 작업을 수행하기 전에 [클라우드 폴더 구현 디자인](plan-work-folders.md)에 설명된 그룹 정책 검토)  
   
  이러한 설정을 제어하려면 클라우드 폴더에 대한 새 GPO(그룹 정책 개체)를 만든 후 다음과 같은 그룹 정책 설정을 적절히 구성합니다.  
   
--   User Configuration\Policies\Administrative Templates\Windows Components\WorkFolders에서 Specify Work Folders settings(작업 폴더 설정 지정) 정책 설정  
+-   사용자 구성\정책\관리 템플릿\Windows 구성 요소\WorkFolders에서 Specify Work Folders settings(작업 폴더 설정 지정) 정책 설정  
   
 -   Computer Configuration\Policies\Administrative Templates\Windows Components\WorkFolders에서 Force automatic setup for all users(모든 사용자에 대한 자동 설정 강제) 정책 설정  
   
@@ -289,11 +290,11 @@ Azure Active Directory 응용 프로그램 프록시를 사용하여 클라우�
 >  이러한 정책 설정은 Windows 8.1 또는 Windows Server 2012 R2 이상의 그룹 정책 관리를 실행하는 컴퓨터에서 그룹 정책을 편집할 때만 사용할 수 있습니다. 이전 운영 체제의 그룹 정책 관리 버전에서는 이 설정을 사용할 수 없습니다. 이러한 정책 설정은 [Windows 7용 클라우드 폴더](http://blogs.technet.com/b/filecab/archive/2014/04/24/work-folders-for-windows-7.aspx) 앱이 설치된 Windows 7 PC에 적용됩니다.  
   
 ##  <a name="BKMK_LINKS"></a> 참고 항목  
- 자세한 내용은 다음 리소스를 참조하세요.  
+ 자세한 내용은 다음 리소스를 참조하십시오.  
   
-|콘텐츠 유형|참조|  
+|콘텐츠 형식|참조|  
 |------------------|----------------|  
-|**이해**|-   [클라우드 폴더](work-folders-overview.md)|  
+|**이해**|-   [작업 폴더](work-folders-overview.md)|  
 |**계획**|-   [클라우드 폴더 구현 디자인](plan-work-folders.md)|
-|**배포**|-   [AD FS 및 WAP(웹 응용 프로그램 프록시)를 사용하여 클라우드 폴더 배포](deploy-work-folders-adfs-overview.md)<br />-   [클라우드 폴더 테스트 랩 배포](http://blogs.technet.com/b/filecab/archive/2013/07/10/work-folders-test-lab-deployment.aspx)(블로그 게시물)<br />-   [클라우드 폴더 서버 URL에 대한 새 사용자 특성](http://blogs.technet.com/b/filecab/archive/2013/10/09/a-new-user-attribute-for-work-folders-server-url.aspx)(블로그 게시물)|  
-|**기술 참조**|-   [대화형 로그온: 컴퓨터 계정 잠금 임계값](https://technet.microsoft.com/library/jj966264(v=ws.11).aspx)<br />-   [동기화 공유 Cmdlet](https://technet.microsoft.com/itpro/powershell/windows/sync-share)|
+|**배포**|-   [AD FS 및 WAP (웹 응용 프로그램 프록시)를 사용 하 여 클라우드 폴더 배포](deploy-work-folders-adfs-overview.md)<br />-   [클라우드 폴더 테스트 랩 배포](http://blogs.technet.com/b/filecab/archive/2013/07/10/work-folders-test-lab-deployment.aspx) (블로그 게시물)<br />-   [클라우드 폴더 서버 Url에 대 한 새 사용자 특성](http://blogs.technet.com/b/filecab/archive/2013/10/09/a-new-user-attribute-for-work-folders-server-url.aspx) (블로그 게시물)|  
+|**기술 참조**|-   [대화형 로그온: 컴퓨터 계정 잠금 임계값](https://technet.microsoft.com/library/jj966264(v=ws.11).aspx)<br />-   [동기화 공유 Cmdlet](https://docs.microsoft.com/powershell/module/syncshare/?view=win10-ps)|

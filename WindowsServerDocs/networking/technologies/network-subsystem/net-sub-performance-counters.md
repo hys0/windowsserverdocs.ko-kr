@@ -1,6 +1,6 @@
 ---
-title: 네트워크 관련 된 성능 카운터
-description: 이 항목은 Windows Server 2016 용 네트워크 하위 시스템 성능 조정 가이드의 일부입니다.
+title: 네트워크 관련 성능 카운터
+description: 이 항목은 Windows Server 2016에 대 한 네트워크 하위 시스템 성능 튜닝 지침의 일부입니다.
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
@@ -8,128 +8,129 @@ ms.assetid: 7ebaa271-2557-4c24-a679-c3d863e6bf9e
 manager: brianlic
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 33551dfd4f76bc13ba69863b782ddae279e0ad16
-ms.sourcegitcommit: 19d9da87d87c9eefbca7a3443d2b1df486b0b010
+ms.openlocfilehash: e5e8abbc19482bcd0dd5670065cde59d5be3169a
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59824354"
 ---
-# <a name="network-related-performance-counters"></a>네트워크 관련 된 성능 카운터
+# <a name="network-related-performance-counters"></a>네트워크 관련 성능 카운터
 
->적용 대상: Windows Server (세미콜론 연간 채널) Windows Server 2016
+>적용 대상: Windows Server (반기 채널), Windows Server 2016
 
-이 항목에서는 카운터 네트워크 성능을 관리 관련 된는 다음 섹션에 포함 되어 있습니다.  
+이 항목에서는 네트워크 성능 관리와 관련 된 다음 섹션이 포함 하는 카운터를 나열 합니다.  
   
--   [리소스 사용](#bkmk_ru)  
+-   [리소스 사용률](#bkmk_ru)  
   
--   [네트워크 문제](#bkmk_np)  
+-   [잠재적인 네트워크 문제](#bkmk_np)  
   
--   [측면 결합 (RSC) 성능 받기](#bkmk_rsc)  
+-   [RSC (수신측) 성능 수신](#bkmk_rsc)  
   
-##  <a name="bkmk_ru"></a>리소스 사용  
+##  <a name="bkmk_ru"></a> 리소스 사용률  
 
-다음과 같은 성능 카운터 네트워크 리소스 사용량 관련이 있습니다.  
+다음 성능 카운터는 네트워크 리소스 사용률에 적용 됩니다.  
   
--   I p v 4을 IPv6  
+-   IPv4, IPv6  
   
-    -   받은 데이터 그램/초  
+    -   Datagrams Received/sec  
   
-    -   보낸 데이터 그램/초  
+    -   Datagrams Sent/sec  
   
--   TCPv6 TCPv4  
+-   TCPv4, TCPv6  
   
-    -   받은 초 나누어  
+    -   세그먼트 Received/sec  
   
-    -   보낸 초 나누어  
+    -   Segments Sent/sec  
   
-    -   다시 전송 초 나누어  
+    -   재전송 세그먼트/sec  
   
--   네트워크 Interface(*), Adapter(\*) 네트워크  
+-   Network Interface(*), Network Adapter(\*)  
   
-    -   받은 바이트 월 초  
+    -   Bytes Received/sec  
   
-    -   보낸 바이트 월 초  
+    -   Bytes Sent/sec  
   
-    -   초당 받은 패킷  
+    -   수신 된 패킷/초  
   
-    -   초당 전송 패킷  
+    -   Packets Sent/sec  
   
-    -   출력 대기  
+    -   출력 큐 길이  
   
-     이 카운터 길이 출력 패킷 큐 \(in packets\)입니다. 2 보다 더 길게 만들면를 지연 발생 합니다. 장애가 찾아 가능 하면 제거할 해야 합니다. NDIS 큐에 요청을 하기 때문에이 길이 항상 0 해야 합니다.  
+     이 카운터는 출력 패킷 큐의 길이 \(패킷의\)합니다. 2 자리 보다 긴 경우 지연이 발생 합니다. 병목 지점을 찾아야 하 고 가능한 경우 제거 해야 합니다. NDIS 큐 요청 때문에이 길이 항상 0 이어야 합니다.  
   
 -   프로세서 정보  
   
-    -   프로세서 시간  
+    -   % 프로세서 시간  
   
-    -   인터럽트 월 초  
+    -   Interrupts/sec  
   
-    -   초당 대기 Dpc  
+    -   Dpc 큐에 대기 수/초  
   
-     이 카운터 Dpc 논리 프로세서 DPC 대기열에 추가 된 평균 속도입니다. 각 논리 프로세서 자체 DPC 큐를 있습니다. Dpc 큐에 Dpc 수가 하지 대기열에 추가 하는 빈도 측정 하 여이 카운터 합니다. 샘플 기간 기간 나눈 마지막 두 샘플에서 발견 된 값 간의 차이점을 표시 합니다.  
+     이 카운터는 Dpc 논리 프로세서의 DPC 큐에 추가 된 위치의 평균 비율입니다. 각 논리적 프로세서에는 고유한 DPC 큐를 있습니다. 이 카운터는 큐의 Dpc 수가 아니라 큐에 Dpc가 추가 되는 속도 측정 합니다. 샘플 간격 기간으로 나눈 마지막 두 샘플에서 관찰 된 값 간의 차이 표시 합니다.  
   
-##  <a name="bkmk_np"></a>네트워크 문제  
+##  <a name="bkmk_np"></a> 잠재적인 네트워크 문제  
 
-다음과 같은 성능 카운터 잠재적인 네트워크 문제 관련이 있습니다.  
+다음 성능 카운터를 잠재적인 네트워크 문제와 관련이 있습니다.  
   
--   네트워크 Interface(*), Adapter(\*) 네트워크  
+-   Network Interface(*), Network Adapter(\*)  
   
-    -   패킷 받은 삭제  
+    -   패킷이 삭제 된 수신  
   
-    -   패킷 받은 오류  
+    -   패킷이 수신 오류  
   
-    -   패킷을 아웃 바운드 삭제  
+    -   삭제 된 아웃 바운드 패킷  
   
-    -   패킷 아웃 바운드 오류  
+    -   아웃 바운드 패킷 오류  
   
--   WFPv6 WFPv4  
+-   WFPv4, WFPv6  
   
-    -   초당 무시 패킷
+    -   패킷 삭제 수/초
 
--   UDPv6 UDPv4
+-   UDPv4, UDPv6
 
-    -   데이터 그램 받은 오류  
+    -   Datagrams Received 오류  
   
--   TCPv6 TCPv4  
+-   TCPv4, TCPv6  
   
-    -   연결이 실패  
+    -   연결 실패  
   
-    -   연결 초기화  
+    -   연결 다시 설정  
   
 -   네트워크 QoS 정책  
   
-    -   핀 패킷  
+    -   삭제 된 패킷  
   
-    -   초당 핀 패킷  
+    -   패킷 삭제 수/초  
   
--   프로세서 네트워크 인터페이스 카드 활동 마다  
+-   Processor Network Interface Card Activity 당  
   
-    -   낮은 리소스 표시/초 받기  
+    -   리소스가 부족 징후 초당 수신  
   
-    -   낮은 리소스 초당 패킷 받은  
+    -   리소스가 부족 받은 패킷/초  
   
 -   Microsoft Winsock BSP  
   
-    -   데이터 삭제 그램  
+    -   데이터 그램 삭제  
   
-    -   장식된 데이터 그램 초당  
+    -   Dropped Datagrams/sec  
   
-    -   거부 연결  
+    -   Rejected Connections  
   
-    -   거부 연결 초당  
+    -   거부 된 연결/sec  
   
-##  <a name="bkmk_rsc"></a>측면 결합 (RSC) 성능 받기  
+##  <a name="bkmk_rsc"></a> RSC (수신측) 성능 수신  
 
-다음과 같은 성능 카운터 RSC 성능 관련이 있습니다.  
+다음 성능 카운터 RSC 성능에 적용 됩니다.  
   
--   네트워크 Adapter(*)  
+-   Network Adapter(*)  
   
-    -   현재 RSC TCP 연결  
+    -   TCP 활성화 RSC 연결  
   
     -   TCP RSC 평균 패킷 크기  
   
-    -   초당 패킷 결합 됩니다 TCP RSC  
+    -   TCP RSC 병합 Packets/sec  
   
-    -   초당 TCP RSC 예외
+    -   TCP RSC Exceptions/sec
 
-이 가이드의 모든 항목에 대 한 링크를 참조 하세요. [네트워크 하위 시스템 성능 조정](net-sub-performance-top.md)합니다.
+이 가이드의 모든 항목에 대 한 링크를 참조 하세요 [네트워크 하위 시스템 성능 튜닝](net-sub-performance-top.md)합니다.

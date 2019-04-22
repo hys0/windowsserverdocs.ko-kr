@@ -10,11 +10,11 @@ author: cosmosdarwin
 ms.date: 01/11/2017
 ms.localizationpriority: medium
 ms.openlocfilehash: 277a676d8e53a7847d54039aab6607be8e5a78c5
-ms.sourcegitcommit: 1533d994a6ddea54ac189ceb316b7d3c074307db
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "1833435"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59823614"
 ---
 # <a name="creating-volumes-in-storage-spaces-direct"></a>저장소 공간 다이렉트에서 볼륨 만들기
 
@@ -31,15 +31,15 @@ ms.locfileid: "1833435"
 
 **New-Volume** cmdlet에는 사용자가 항상 제공해야 할 네 가지 매개 변수가 있습니다.
 
-- **FriendlyName:** 원하는 문자열. 예: *"Volume1"*
-- **FileSystem:** **CSVFS_ReFS**(권장) 또는 **CSVFS_NTFS**
-- **StoragePoolFriendlyName:** 저장소 풀의 이름. 예: *"S2D on ClusterName"*
-- **Size:** 볼륨의 크기. 예: *"10TB"*
+- **FriendlyName:** 예를 들어 원하는 모든 문자열 *"Volume1"*
+- **FileSystem:** 어느 **CSVFS_ReFS** (권장) 또는 **CSVFS_NTFS**
+- **StoragePoolFriendlyName:** 예를 들어 사용자의 저장소 이름 풀 *"S2D에서 ClusterName"*
+- **크기:** 예를 들어 볼륨의 크기 *"10TB"*
 
    >[!NOTE]
-   >  PowerShell을 비롯한 Windows는 2진수(밑 2)를 사용하여 계산되지만 드라이브는 대개 10진수(밑 10)를 사용하여 레이블이 지정됩니다. 따라서 1,000,000,000,000바이트로 정의되는 "테라바이트" 드라이브는 Windows에서 약 "909GB"로 나타납니다. 이것이 예상되는 동작입니다. **New-Volume**을 사용하여 볼륨을 만들 때 **Size** 매개 변수를 이진수(밑2)로 지정해야 합니다. 예를 들어, "909GB" 또는 "0.909495TB"로 지정하면 약 1,000,000,000,000바이트의 볼륨이 생성됩니다.
+   >  PowerShell을 비롯한 Windows는 2진수(밑 2)를 사용하여 계산되지만 드라이브는 대개 10진수(밑 10)를 사용하여 레이블이 지정됩니다. 따라서 1,000,000,000,000바이트로 정의되는 "테라바이트" 드라이브는 Windows에서 약 "909GB"로 나타납니다. 이는 예정된 동작입니다. **New-Volume**을 사용하여 볼륨을 만들 때 **Size** 매개 변수를 이진수(밑2)로 지정해야 합니다. 예를 들어, "909GB" 또는 "0.909495TB"로 지정하면 약 1,000,000,000,000바이트의 볼륨이 생성됩니다.
 
-### <a name="example-with-2-or-3-servers"></a>예: 서버 2개 또는 3개
+### <a name="example-with-2-or-3-servers"></a>예: 2 또는 3 개의 서버를 사용 하 여
 
 두 개의 서버에만 배포하는 경우 작업을 쉽게 하기 위해 저장소 공간 다이렉트는 복원력을 위해 양방향 미러링을 자동 사용합니다. 세 개의 서버에만 배포하는 경우에는 3방향 미러링을 자동 사용합니다.
 
@@ -47,11 +47,11 @@ ms.locfileid: "1833435"
 New-Volume -FriendlyName "Volume1" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 1TB
 ```
 
-### <a name="example-with-4-servers"></a>예: 4개 이상의 서버
+### <a name="example-with-4-servers"></a>예: 4 + 서버를 사용 하 여
 
 4개 이상의 서버가 있는 경우 **ResiliencySettingName** 매개 변수를 복구 유형을 선택적으로 사용하여 복원력 유형을 선택합니다.
 
--   **ResiliencySettingName:** **Mirror** 또는 **Parity**.
+-   **ResiliencySettingName:** 어느 **미러** 하거나 **패리티**합니다.
 
 다음 예제에서 *"Volume2"* 는 3방향 미러링을 사용하며 *"Volume3"* 는 이중 패리티("삭제 코딩"(erasure coding)이라고도 함)를 사용합니다.
 
@@ -60,7 +60,7 @@ New-Volume -FriendlyName "Volume2" -FileSystem CSVFS_ReFS -StoragePoolFriendlyNa
 New-Volume -FriendlyName "Volume3" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 1TB -ResiliencySettingName Parity
 ```
 
-### <a name="example-using-storage-tiers"></a>예: 저장소 계층 사용
+### <a name="example-using-storage-tiers"></a>예: 저장소 계층을 사용 하 여
 
 세 가지 유형의 드라이브를 통한 배포에서 하나의 볼륨은 SSD 및 HDD 계층에 걸쳐 확장되어 각 부분에 부분적으로 상주할 수 있습니다. 마찬가지로, 4개 이상의 서버를 통한 배포에서 하나의 볼륨은 미러링과 이중 패리티를 혼합하여 각 부분에 부분적으로 상주할 수 있습니다.
 
@@ -114,9 +114,9 @@ New-Volume -FriendlyName "Volume4" -FileSystem CSVFS_ReFS -StoragePoolFriendlyNa
 12. 장애 조치(failover) 클러스터 관리자에서 **저장소** -> **디스크**로 이동합니다.
 13. 방금 만든 가상 디스크를 선택하고 오른쪽 작업 창에서 **클러스터 공유 볼륨에 추가**를 선택하거나 가상 디스크를 마우스 오른쪽 단추로 클릭하고 **클러스터 공유 볼륨에 추가**를 선택합니다.
 
-다 되었습니다! 필요에 따라 반복하여 두 개 이상의 볼륨을 만듭니다.
+모든 작업이 끝났습니다. 필요에 따라 반복하여 두 개 이상의 볼륨을 만듭니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [저장소 공간 다이렉트 개요](storage-spaces-direct-overview.md)
-- [저장소 공간 다이렉트에서 볼륨 계획](plan-volumes.md)
+- [저장소 공간 다이렉트 볼륨 계획](plan-volumes.md)

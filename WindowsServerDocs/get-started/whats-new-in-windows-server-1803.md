@@ -1,6 +1,6 @@
 ---
-title: Windows Server 버전 1803의 새로운 기능
-description: 컴퓨팅, ID, 관리, 자동화, 네트워킹, 보안, 저장소의 새로운 기능입니다.
+title: Windows Server, 버전 1803의 새로운 기능
+description: 계산, ID, 관리, 자동화, 네트워킹, 보안, 저장소의 새로운 기능입니다.
 ms.prod: windows-server-threshold
 ms.technology: server-general
 ms.topic: article
@@ -9,11 +9,11 @@ ms.author: greg-lindsay
 ms.localizationpriority: high
 ms.date: 05/07/2018
 ms.openlocfilehash: c4f80b668b91e65b6c8bc528e14f52a1d117a3c9
-ms.sourcegitcommit: e0479b0114eac7f232e8b1e45eeede96ccd72b26
-ms.translationtype: HT
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "2061473"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59823094"
 ---
 # <a name="whats-new-in-windows-server-version-1803"></a>Windows Server 버전 1803의 새로운 기능
 
@@ -41,21 +41,21 @@ Windows Server 버전 1709는 반기 채널의 최초 버전으로 2017년 9월�
 
 |   | 장기 서비스 채널 |  반기 채널 |
 | ------------- | ------------- | ------------ |
-| 권장된 시나리오     | 일반 목적의 파일 서버, 자사 및 타사 워크로드, 기존 앱, 인프라 역할, 소프트웨어 정의 데이터 센터, 하이퍼 컨버지드 인프라  | 더 빠른 혁신을 통해 혜택을 얻는 컨테이너화된 응용 프로그램, 컨테이너 호스트 및 응용 프로그램 시나리오 |
+| 권장 시나리오     | 일반 목적의 파일 서버, 자사 및 타사 워크로드, 기존 앱, 인프라 역할, 소프트웨어 정의 데이터 센터, 하이퍼 컨버지드 인프라  | 더 빠른 혁신을 통해 혜택을 얻는 컨테이너화된 응용 프로그램, 컨테이너 호스트 및 응용 프로그램 시나리오 |
 | 새 릴리스  | 2~3년마다  | 6개월마다 |
 | 지원  | 일반 지원 5년 + 확장 지원 5년  | 18개월 |
-| 버전  | 사용 가능한 모든 Windows Server 버전  | Standard 및 Datacenter 버전 |
+| 버전  | 모든 Windows Server 에디션 사용 가능  | Standard 및 Datacenter 에디션 |
 | 사용할 수 있는 사람  | 모든 채널을 통한 모든 고객 | Software Assurance 및 클라우드 고객만 |
 | 설치 옵션  | Server Core 및 데스크톱 환경 포함 서버  | 컨테이너 호스트, 컨테이너 이미지, Nano 서버 컨테이너 이미지용 Server Core |
 
 ## <a name="application-platform-and-containers"></a>응용 프로그램 플랫폼 및 컨테이너
 
-- 최적화
+- Optimization
     - Server Core 기본 컨테이너 이미지는 Windows Server 버전 1709에서 30% 감소됩니다. 
     - 기존 응용 프로그램의 컨테이너화를 위해 응용 프로그램 호환성도 향상됩니다.
     - 다양한 수정 및 최적화 덕분에 컨테이너 부팅 성능 및 런타임 성능이 개선됩니다.
-- 컨테이너 네트워킹: Localhost 및 http 프록시 지원이 추가되었으며 컨테이너 확장성 및 시작 시간이 향상됩니다.
-- 도구: 빌드 및 디버깅 시나리오에 대한 PowerShell을 보완하기 위해 Curl.exe, Tar.exe, 및 SSH에 대한 지원이 향상되었습니다.
+- 컨테이너 네트워킹: Localhost 및 http 프록시 지원이 추가 되었습니다, 하 고 컨테이너 확장성 및 시작 시간 향상 됩니다.
+- 도구: 빌드 및 디버깅 시나리오에 대 한 PowerShell을 보완 하기 위해 Curl.exe, Tar.exe, 및 SSH에 대 한 지원이 향상 되었습니다.
 
 ### <a name="server-core-container-image"></a>Server Core 컨테이너 이미지
 
@@ -75,9 +75,9 @@ WSL을 통해 서버 관리자는 Windows Server에서 Linux의 기존 도구 �
 Kubernetes(일반적으로 K8s라고 함)는 [Cloud Native Computing Foundation](https://www.cncf.io)의 책임 아래 개발된 컨테이너화된 응용 프로그램의 배포, 확장 및 관리를 자동화하는 오픈 소스 시스템입니다. 
 
 Windows Server 버전 1709에서 사용자는 다음을 비롯한 Windows 네트워킹 기능에서 Kubernetes를 활용할 수 있었습니다.
-- 포드 구획 공유: 인프라 및 작업자 포드가 이제 네트워크 구획(Linux 네임스페이스와 유사)을 공유합니다.
-- 끝점 최적화: 구획 공유 덕분에 컨테이너 서비스는 끝점을 절반만큼만 추적하면 됩니다.
-- 데이터 경로 최적화: 가상 필터링 플랫폼 및 호스트 네트워킹 서비스가 개선되어 커널 기반 부하 분산을 허용합니다.
+- Pod 구획을 공유 합니다. 이제 인프라 및 작업자 pod (Linux 네임 스페이스와 유사) 네트워크 구획을 공유합니다.
+- 끝점 최적화: 구획 공유 덕분 컨테이너 서비스를 적어도 0.5 많은 끝점을 추적 해야 합니다.
+- 데이터 경로 최적화: 커널 기반 부하 분산 허용 하는 가상 필터링 플랫폼 및 호스트 네트워킹 서비스를 개선 합니다.
 
 Windows Server 버전 1803을 통해 더 많은 기능을 이후 Kubernetes 릴리스에서 사용할 수 있습니다. 
 - Kubernetes에 의해 오케스트레이션된 Windows 컨테이너용 [저장소 플러그 인](https://github.com/Microsoft/K8s-Storage-Plugins).
@@ -92,7 +92,7 @@ Windows Server 버전 1803을 통해 더 많은 기능을 이후 Kubernetes 릴�
     - 특히, 알림은 Server Core와 Nano 서버 컨테이너 기반 이미지에 대해 CTRL_SHUTDOWN_EVENT로 변경됩니다. 또한 컨테이너에서 실행되는 서비스에 서비스 종료 알림 메시지를 보내는 등 Server Core 컨테이너 기반 이미지의 알림이 컨테이너에서 실행되는 모든 프로세스에 영향을 미치도록 확장됩니다.
 - 고정된 데이터 드라이브를 쓸 수 있도록 하는 데(FDVDenyWriteAccess) BitLocker 보호가 필요한지 여부를 결정하는 정책 설정과 docker pull 및 docker load의 비호환성 문제가 해결되었습니다. 
 
-## <a name="storage"></a>저장소
+## <a name="storage"></a>스토리지
 
 이 릴리스에서 서비스가 시작되면 모든 볼륨에 파일 서버 리소스 관리자 서비스가 변경 저널(USN 저널이라고도 함)을 만드는 것을 방지할 수 있습니다. 이를 통해 각 볼륨의 공간을 절약할 수 있지만 실시간 파일 분류를 사용할 수 없게 됩니다. 자세한 내용은 [파일 서버 리소스 관리자 개요](https://docs.microsoft.com/windows-server/storage/fsrm/fsrm-overview)를 참조하십시오.
 
@@ -108,7 +108,7 @@ Server Core에서 전송 서버 서비스를 사용하도록 설정하려면 다
 Install-WindowsFeature -Name WDS
 ```
 
-## <a name="see-also"></a>기타 참조
+## <a name="see-also"></a>참조
 
 [Windows Server 릴리스 정보](https://docs.microsoft.com/windows-server/get-started/windows-server-release-info)<br>
-[Windows 10 버전 1803 IT 전문가 콘텐츠의 새로운 내용](https://docs.microsoft.com/windows/whats-new/whats-new-windows-10-version-1803)
+[Windows 10, 버전 1803 IT 전문가 콘텐츠의에서 새로운 기능](https://docs.microsoft.com/windows/whats-new/whats-new-windows-10-version-1803)

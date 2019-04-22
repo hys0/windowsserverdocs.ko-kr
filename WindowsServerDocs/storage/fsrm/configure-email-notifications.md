@@ -1,6 +1,6 @@
 ---
-title: "전자 메일 알림 구성"
-description: "이 문서에서는 전자 메일 알림을 구성하는 방법을 설명합니다."
+title: 전자 메일 알림 구성
+description: 이 문서에서는 전자 메일 알림을 구성하는 방법을 설명합니다.
 ms.date: 7/7/2017
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -9,14 +9,15 @@ author: JasonGerend
 manager: brianlic
 ms.author: jgerend
 ms.openlocfilehash: d53be34d04edfac9f30b6e269833be74a6ebcf22
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59820354"
 ---
 # <a name="configure-e-mail-notifications"></a>전자 메일 알림 구성
 
-> 적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> 적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 할당량 및 파일 차단을 만드는 경우, 할당량 한도에 도달했을 때 또는 사용자가 차단된 파일을 저장하려고 시도한 후 사용자에게 전자 메일 알림을 보낼 수 있는 옵션이 제공됩니다. 저장소 보고서를 생성하는 경우, 특정 수신자에게 전자 메일로 보고서를 보내는 옵션이 제공됩니다. 특정 관리자에게 할당량 및 파일 차단 이벤트에 대해 정기적으로 알리거나 저장소 보고서를 보내려는 경우, 하나 이상의 기본 수신자를 구성할 수 있습니다.
 
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/17/2017
 
 3.  특정 관리자에게 할당량 및 파일 차단 이벤트를 정기적으로 알리거나 전자 메일 저장소 보고서를 보내려면 **기본 수신 관리자** 아래에서 각 전자 메일 주소를 입력합니다.
 
-    *account@domain* 형식을 사용합니다. 여러 계정을 구분하려면 세미콜론을 사용합니다.
+    *account@domain*  형식을 사용합니다. 여러 계정을 구분하려면 세미콜론을 사용합니다.
 
 4.  파일 서버 리소스 관리자에서 보내는 전자 메일 알림 및 저장소 보고서에 대해 다른 "보낸 사람" 주소를 지정하려면, **기본 "보낸 사람" 전자 메일 주소**에서 메시지에 표시될 전자 메일 주소를 입력합니다.
 
@@ -39,6 +40,6 @@ ms.lasthandoff: 10/17/2017
 6.  **확인**을 클릭합니다.
 
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
--   [파일 서버 리소스 관리자 옵션 설정](setting-file-server-resource-manager-options.md)
+-   [설정 파일 서버 리소스 관리자 옵션](setting-file-server-resource-manager-options.md)

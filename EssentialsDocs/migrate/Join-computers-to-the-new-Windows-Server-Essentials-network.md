@@ -1,6 +1,6 @@
 ---
-title: "새로운 Windows Server Essentials 네트워크 1 컴퓨터 가입"
-description: "Windows Server Essentials을 사용 하는 방법을 설명 합니다."
+title: 새 Windows Server Essentials network1에 컴퓨터 가입
+description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
@@ -13,42 +13,43 @@ author: nnamuhcs
 ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: c6abc11ba2ce8a9f1d32c6a884db6332586de78b
-ms.sourcegitcommit: 70c1b6cedad55b9c7d2068c9aa4891c6c533ee4c
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59822644"
 ---
-# <a name="join-computers-to-the-new-windows-server-essentials-network1"></a>새로운 Windows Server Essentials 네트워크 1 컴퓨터 가입
+# <a name="join-computers-to-the-new-windows-server-essentials-network1"></a>새 Windows Server Essentials network1에 컴퓨터 가입
 
->Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials에 적용 됩니다.
+>적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 ##  <a name="BKMK_JoinComputers"></a>   
- 마이그레이션 프로세스의 다음 단계 클라이언트 컴퓨터 새로운 Windows Server Essentials 네트워크에 가입 하 고 그룹 정책 설정을 업데이트 하는 것입니다.  
+ 마이그레이션 프로세스의 다음 단계는 새 Windows Server Essentials 네트워크에 클라이언트 컴퓨터를 가입 시키고 그룹 정책 설정을 업데이트 하는 것입니다.  
   
-### <a name="domain-joined-client-computers"></a>도메인 가입 클라이언트 컴퓨터  
- 찾아보기 **http://***목적지 이름***연결 /** 이것은 새 컴퓨터 하는 경우 Windows Server Connector 소프트웨어를 설치 하 고 있습니다. 설치 프로세스는 도메인에 가입 하거나 도메인 가입 된 클라이언트 컴퓨터에 대 한 동일 합니다.  
-  
-> [!NOTE]
->  Windows Server Connector 소프트웨어는 Windows XP 또는 Windows Vista를 실행 하는 컴퓨터를 지원 하지 않습니다. 도메인에 가입한 이미 Windows XP 또는 Windows Vista를 실행 하는 컴퓨터를 사용 하는 경우이 단계를 건너뛸 수 있습니다.  
-  
-### <a name="non-domain-joined-client-computers"></a>도메인 가입 클라이언트 컴퓨터  
- 찾아보기 **http://***목적지 이름***연결 /** 이것은 새 컴퓨터 하는 경우 Windows Server Connector 소프트웨어를 설치 하 고 있습니다. 설치 프로세스는 도메인에 가입 하거나 비 도메인 결합된 클라이언트 컴퓨터에 대 한 동일 합니다.  
+### <a name="domain-joined-client-computers"></a>도메인에 가입된 클라이언트 컴퓨터  
+ 이동할 **http://***대상-servername***/connect** 하 고 새 컴퓨터인 것 처럼 Windows Server Connector 소프트웨어를 설치 합니다. 설치 프로세스는 도메인에 가입 되거나 도메인에 가입 되지 않은 클라이언트 컴퓨터에 대해 동일합니다.  
   
 > [!NOTE]
->  Windows Server Connector 소프트웨어는 Windows XP 또는 Windows Vista를 실행 하는 컴퓨터를 지원 하지 않습니다. 도메인에 가입한 이미 Windows XP 또는 Windows Vista를 실행 하는 컴퓨터를 사용 하는 경우이 단계를 건너뛸 수 있습니다.  
+>  Windows Server Connector 소프트웨어에서는 Windows XP 또는 Windows Vista를 실행 중인 컴퓨터를 지원하지 않습니다. 이미 도메인에 가입된 Windows XP 또는 Windows Vista를 실행하는 컴퓨터에 있으면 이 단계를 건너뛸 수 있습니다.  
   
-### <a name="ensure-that-group-policy-has-updated"></a>그룹 정책은 업데이트 확인  
+### <a name="non-domain-joined-client-computers"></a>도메인 가입되지 않은 클라이언트 컴퓨터  
+ 이동할 **http://***대상-servername***/connect** 하 고 새 컴퓨터인 것 처럼 Windows Server Connector 소프트웨어를 설치 합니다. 설치 프로세스는 도메인에 가입되거나 도메인에 가입되지 않은 클라이언트 컴퓨터에 대해 동일합니다.  
   
 > [!NOTE]
->  이 단계 이며 기능도 못하는 것은 사용자 지정 그룹 정책 설정 폴더 리디렉션을 등으로 원본 서버 구성 된 경우 필요 합니다.  
+>  Windows Server Connector 소프트웨어에서는 Windows XP 또는 Windows Vista를 실행 중인 컴퓨터를 지원하지 않습니다. 이미 도메인에 가입된 Windows XP 또는 Windows Vista를 실행하는 컴퓨터에 있으면 이 단계를 건너뛸 수 있습니다.  
   
- 원본 서버와 대상 서버는 여전히 온라인, 그룹 정책 설정 클라이언트 컴퓨터에 복제 대상 서버에서 확인 해야 합니다. 각 클라이언트 컴퓨터에서 다음 단계를 수행 합니다.  
+### <a name="ensure-that-group-policy-has-updated"></a>그룹 정책이 업데이트되었는지 확인  
+  
+> [!NOTE]
+>  이 단계는 선택적 단계이고 원본 서버가 폴더 리디렉션과 같은 사용자 지정 그룹 정책 설정을 사용하여 구성된 경우에만 필요합니다.  
+  
+ 원본 서버와 대상 서버가 온라인 상태인 동안 그룹 정책 설정이 대상 서버에서 클라이언트 컴퓨터로 복제되었는지 확인해야 합니다. 각 클라이언트 컴퓨터에서 다음 단계를 수행합니다.  
   
 1.  명령 프롬프트 창을 엽니다.  
   
-2.  명령 프롬프트에 입력 **GPRESULT /R**, ENTER 키를 누릅니다.  
+2.  명령 프롬프트에 **GPRESULT /R**을 입력하고 Enter 키를 누릅니다.  
   
-3.  결과에서 그룹 정책을 적용 된 섹션에 대 한 출력 검토:와 같은 대상 서버가 나열 되어 있는지 확인 하 고 **DestinationSrv.Domain.local**합니다. 예를 들어:  
+3.  섹션에서 적용 한 그룹 정책에 대 한 결과 출력을 검토 합니다: 대상 서버와 같은 나열 되는지 확인 하 고 **DestinationSrv.Domain.local**합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
   
     ```  
     USER SETTINGS  
@@ -62,12 +63,12 @@ ms.lasthandoff: 07/03/2017
   
     ```  
   
-4.  대상 서버 나열 되지 않은 명령 프롬프트에 입력 **gpupdate /force**, enter를 새로 고침 그룹 정책 설정 하 고 있습니다. 그런 다음 다시 이전 절차를 수행 합니다.  
+4.  대상 서버가 나열되지 않으면 명령 프롬프트에서 **gpupdate /force**를 입력하고 Enter 키를 눌러 그룹 정책 설정을 새로 고칩니다. 그런 다음 다시 이전 절차를 수행합니다.  
   
-5.  대상 서버 표시 되지 않는 경우에 특정 클라이언트가 컴퓨터에 적용 오류나 그룹 정책 설정에 오류가 수도 있습니다. 대상 서버 표시 되지 않으면 다음 단계를 수행 합니다.  
+5.  그래도 대상 서버가 나타나지 않으면 그룹 정책 설정에 오류가 있거나 이 특정 클라이언트 컴퓨터에 해당 설정을 적용하는 데 오류가 있을 수 있습니다. 대상 서버가 나타나지 않으면 다음 단계를 수행합니다.  
   
-    1.  클릭 **시작**, 클릭 **실행**, 입력 **rsop.msc** (설정 정책 결과), ENTER 키를 누릅니다.  
+    1.  **시작**, **실행**을 차례로 클릭하고 **rsop.msc** (정책 결과 집합)를 입력하고 Enter 키를 누릅니다.  
   
-    2.  노드를 받을 때까지에 x 트리를 확장 합니다.  
+    2.  노드에 도달할 때까지에 X가 있는 트리를 확장 합니다.  
   
-    3.  노드를 마우스 오른쪽 단추로 클릭 한 **보기 오류** 이유에 대 한 정보에 대 한 그룹 정책 설정을 나열 된 컴퓨터에 실패 합니다.
+    3.  노드를 마우스 오른쪽 단추로 클릭하고 **오류 보기**를 클릭하여 나열된 컴퓨터에서 그룹 정책 설정이 실패하는 이유를 확인합니다.

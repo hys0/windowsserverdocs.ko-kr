@@ -1,6 +1,6 @@
 ---
 ms.assetid: 56fc7f80-9558-467e-a6e9-a04c9abbee33
-title: "오류 도메인 인식"
+title: 오류 도메인 인식
 ms.prod: windows-server-threshold
 ms.author: cosdar
 ms.manager: eldenc
@@ -9,53 +9,54 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 09/16/2016
 ms.openlocfilehash: f5c64bb8f8b7d4b8d13c76c4e94cfcf52ee32c30
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59821474"
 ---
-# <a name="fault-domain-awareness-in-windows-server-2016"></a>Windows Server 2016에서 오류 도메인 인식
+# <a name="fault-domain-awareness-in-windows-server-2016"></a>Windows Server 2016의 장애 도메인 인식
 
-> 적용: Windows Server 2016
+> 적용 대상: Windows Server 2016
 
-클러스터링 여러 서버를 항상 사용 가능 – 하거나 노드 결함 허용 제공 하기 위해 다른 방법으로 전환 하는 데 사용할 수 있습니다. 하지만 오늘 비즈니스 인프라에서 개가 큰 유용성을 요구 합니다. 구름 모양 가동을 위해 섀시 오류나 랙 중단 자연 장애 처럼 발생 하는 더 높은 거의 로부터 보호 되어야 합니다. 이 때문 랙, 섀시와 사이트 결함 허용도 소개 클러스터링 Windows Server 2016에 있습니다.
+장애 조치(failover) 클러스터링을 사용하면 여러 서버가 함께 작동하여 고가용성을 제공하거나, 또 다른 방식으로 노드 내결함성을 제공할 수 있습니다. 하지만 오늘날의 기업은 어느 때 보다 뛰어난 인프라 가용성을에서 요구 합니다. 클라우드와 같은 가동 시간을 달성하려면 섀시 고장, 랙 가동 중단 또는 자연 재해와 같은 발생할 가능성이 거의 없는 사고로부터 보호해야 합니다. 이유는 Windows Server 2016의 장애 조치 클러스터링을 섀시, 랙 및 사이트 내결함성도 소개 합니다.
 
-오류 도메인 및 결함 허용은 관련된 밀접 하 게 개념입니다. 오류 도메인 단일 실패 한을 공유 하는 하드웨어 구성 요소 집합입니다. 특정 수준으로 허용 오류 되도록 수준에서 여러 오류 도메인 해야 합니다. 예를 들어, 랙 되도록 허용 오류, 서버 및 사용자 데이터 배포 해야 여러 개의 간에 합니다.
+장애 도메인과 내결함성을 매우 밀접한 관련이 있는 개념입니다. 장애 도메인은 단일 실패 지점을 공유하는 하드웨어 구성 요소 집합입니다. 특정 수준까지 결함에 견디려면 해당 수준에 여러 장애 도메인이 필요합니다. 예를 들어 랙 내결함성을 위해서는 서버와 데이터를 여러 랙에 분산시켜야 합니다.
 
-이 짧은 동영상 오류 도메인 Windows Server 2016에 간략하게를 설명 합니다.  
-[![이 이미지 오류 도메인 Windows Server 2016에 대 한 개요를 시청 하려면 클릭](media/Fault-Domains-in-Windows-Server-2016/Part-1-Fault-Domains-Overview.jpg)](https://channel9.msdn.com/Blogs/windowsserver/Fault-Domain-Awareness-in-WS2016-Part-1-Overview)
+이 짧은 비디오는 Windows Server 2016의 장애 도메인의 개요를 제공 합니다.  
+[![Windows Server 2016에서 장애 도메인에 대 한 개요를 시청 하려면이 이미지를 클릭 합니다.](media/Fault-Domains-in-Windows-Server-2016/Part-1-Fault-Domains-Overview.jpg)](https://channel9.msdn.com/Blogs/windowsserver/Fault-Domain-Awareness-in-WS2016-Part-1-Overview)
 
 ## <a name="benefits"></a>이점
-- **저장소 공간을 포함 하 여 Storage Spaces Direct 데이터 보안을 극대화 하기 오류 도메인을 사용 합니다.**  
-    저장소 공간에는 복구 분산, 소프트웨어 정의 RAID 같은 개념입니다. 여러 개 모든 데이터는 동기화, 유지 및 하드웨어 오류가 발생 하는 경우 다른 하나는 손실, 복구를 복원 하려면 recopied 다른 합니다. 최상의 가능한 복구를 위해 별도 오류는 도메인의 복사본을 유지 합니다.
+- **저장소 공간을 저장소 공간 다이렉트를 포함 하 여 데이터 보안을 최대화 하기 위해 장애 도메인을 사용 합니다.**  
+    저장소 공간의 복원력은 분산된 소프트웨어 정의 RAID와 개념적으로 유사합니다. 모든 데이터의 여러 복사본이 동기화된 상태로 유지되므로 하드웨어가 실패하고 하나의 복사본이 손실된 경우 나머지 복사본을 다시 복사하여 복원력을 복원할 수 있습니다. 최상의 복원력을 달성하려면 복사본을 별도의 장애 도메인에 보관해야 합니다.
 
-- **[상태 서비스](health-service-overview.md) 결함이 도메인 알아보기 경고를 제공 하기 위해 사용 합니다.**  
-    각 오류 도메인 연결 된 위치 메타 데이터를 자동으로 후속 경고에 포함 될 수 있습니다. 이러한 설명자 유지 관리 담당자 또는 작업을 지원 하 고 하드웨어 구체화 하 여 오류를 줄일 수 있습니다.  
+- **합니다 [Health Service](health-service-overview.md) 사용 하 여 장애 도메인 보다 유용한 경고를 제공 합니다.**  
+    각 장애 도메인을 위치 메타데이터와 연결하여 이후의 모든 경고에 자동으로 포함할 수 있습니다. 이러한 설명자는 운영 또는 유지 관리 담당자를 지원하고 하드웨어를 명확히 구분하여 오류를 줄일 수 있습니다.  
 
-- **연장 클러스터링 저장소 선호도 대 한 오류 도메인을 사용합니다.** 벌 리 기 클러스터링 일반적인 클러스터에 가입 떨어진 서버 수 있습니다. 최상의 성능을 응용 프로그램 또는 가상 컴퓨터 근처의 저장소를 제공 하는 서버에 실행 해야 합니다. 오류 도메인 인식이 저장소 선호도 수 있습니다.   
+- **확장 클러스터링 저장소 선호도 대 한 장애 도메인을 사용 합니다.** 확장 클러스터링을 사용하면 멀리 떨어진 서버를 공통 클러스터에 가입시킬 수 있습니다. 최상의 성능을 위해 응용 프로그램 또는 가상 컴퓨터는 해당 저장소를 제공하는 서버에 인접한 서버에서 실행되어야 합니다. 장애 도메인 인식에는이 저장소 선호도를 수 있습니다.   
 
-## <a name="levels-of-fault-domains"></a>오류 도메인 수준  
-4 개 정식 수준의 오류 도메인-사이트, 랙, 섀시 및 노드 가지가 있습니다. 노드; 자동으로 검색 수준을 선택 사항입니다. 예를 들어, 배포 잎 서버를 사용 하지 않는 경우 섀시 수준 하지 합리적 있습니다.  
+## <a name="levels-of-fault-domains"></a>장애 도메인 수준  
+장애 도메인에는 네 가지 정식 수준(사이트, 랙, 섀시 및 노드)이 있습니다. 노드는 자동으로 검색되며 각 추가 수준은 선택 사항입니다. 예를 들어 배포에서 블레이드 서버를 사용하지 않는 경우 섀시 수준이 의미가 없을 수 있습니다.  
 
-![오류 도메인의 여러 수준 다이어그램](media/Fault-Domains-in-Windows-Server-2016/levels-of-fault-domains.png)
+![장애 도메인의 다른 수준에 있는 다이어그램](media/Fault-Domains-in-Windows-Server-2016/levels-of-fault-domains.png)
 
-## <a name="usage"></a>사용  
-PowerShell 또는 XML 태그를 지정 오류 도메인 사용할 수 있습니다. 두 가지 방법을 동일 하 고 전체 기능을 제공 합니다.
+## <a name="usage"></a>사용법  
+장애 도메인을 지정 하려면 PowerShell 또는 XML 태그를 사용할 수 있습니다. 두 방법 모두 동일하며 전체 기능을 제공합니다.
 
 >[!IMPORTANT]
-> 사용 가능한 경우 Storage Spaces Direct 하기 전에 오류 도메인을 지정 합니다. 이 통해 자동 구성 본체나 랙 결함 허용 풀, 계층을 및 복구 하 고 열 수와 같은 설정을 준비입니다. 풀 및 볼륨을 만든 후 데이터 이동 하지 않습니다은 이전의 변경 내용에 따라에서 오류 도메인 토폴로지 합니다. 노드 본체나 랙 간에 Storage Spaces Direct 사용 하도록 설정한 후을 이동 하려면 해야 먼저를 제거 하면 노드와 사용 하 여 풀에서 드라이브의 `Remove-ClusterNode -CleanUpDisks`합니다.
+> 가능한 경우 저장소 공간 다이렉트를 사용하기 전에 장애 도메인을 지정합니다. 그러면 섀시 또는 랙 내결함성을 위한 풀, 계층 및 설정(예: 복원력 및 열 개수) 준비가 자동으로 구성됩니다. 풀 및 볼륨을 만든 후에는 장애 도메인 토폴로지 변경에 대한 응답으로 데이터가 소급적으로 이동하지 않습니다. 저장소 공간 다이렉트를 사용하도록 설정한 후 섀시 또는 랙 간에 노드를 이동하려면 먼저 `Remove-ClusterNode -CleanUpDisks`를 사용하여 노드와 해당 드라이브를 풀에서 제거해야 합니다.
 
-### <a name="defining-fault-domains-with-powershell"></a>PowerShell 도메인 오류 정의
-Windows Server 2016 오류 도메인을 사용 하려면 다음 cmdlet을 가지가 도입 되었습니다.
+### <a name="defining-fault-domains-with-powershell"></a>PowerShell 사용 하 여 장애 도메인 정의
+Windows Server 2016에는 장애 도메인을 사용 하려면 다음 cmdlet을 제공 합니다.
 * `Get-ClusterFaultDomain`
 * `Set-ClusterFaultDomain`
 * `New-ClusterFaultDomain` 
 * `Remove-ClusterFaultDomain`
 
-이 짧은 동영상 이러한 cmdlet 사용 보여 줍니다.
-[![클러스터 장애 도메인 cmdlet 사용량 짧은 동영상을 시청 하려면이 이미지를 클릭](media/Fault-Domains-in-Windows-Server-2016/Part-2-Using-PowerShell.jpg)](https://channel9.msdn.com/Blogs/windowsserver/Fault-Domain-Awareness-in-WS2016-Part-2-Using-PowerShell)
+이 짧은 비디오에서는 이러한 cmdlet의 사용 방법을 보여 줍니다.
+[![클러스터 장애 도메인 cmdlet 사용에 대 한 짧은 비디오를 시청 하려면이 이미지를 클릭 합니다.](media/Fault-Domains-in-Windows-Server-2016/Part-2-Using-PowerShell.jpg)](https://channel9.msdn.com/Blogs/windowsserver/Fault-Domain-Awareness-in-WS2016-Part-2-Using-PowerShell)
 
-사용 하 여 `Get-ClusterFaultDomain` 현재 오류 도메인 토폴로지 볼 수 있습니다. 이 모든 노드에서 클러스터에 뿐만 아니라 모든, 걸 본체나 만든 사이트에 나열 됩니다. 같은 매개 변수를 사용 하 여 필터링 할 수 **-유형** 또는 **-이름**, 있지만이 필요 하지 않습니다.
+사용 하 여 `Get-ClusterFaultDomain` 현재 장애 도메인 토폴로지를 확인 합니다. 사용자가 만든 모든 섀시, 랙 또는 사이트와 함께 클러스터의 모든 노드가 나열됩니다. **-Type** 또는 **-Name**과 같은 매개 변수를 사용하여 필터링할 수 있지만 이는 필수 사항은 아닙니다.
 
 ```PowerShell
 Get-ClusterFaultDomain
@@ -63,7 +64,7 @@ Get-ClusterFaultDomain -Type Rack
 Get-ClusterFaultDomain -Name "server01.contoso.com"
 ```
 
-사용 하 여 `New-ClusterFaultDomain` 새로운 본체나 걸 사이트 만들 수 있습니다. `-Type` 및 `-Name` 매개는 필요 합니다. 가능한 값 `-Type` 는 `Chassis`, `Rack`, 및 `Site`합니다. `-Name` 문자열이 될 수 있습니다. (에 대 한 `Node` 유형 오류가 도메인 이름 자동으로 노드 실제 이름 집합으로 이어야 합니다).
+사용 하 여 `New-ClusterFaultDomain` 새 섀시, 랙 또는 사이트를 만들려고 합니다. 합니다 `-Type` 고 `-Name` 매개 변수는 필수입니다. 가능한 값에 대 한 `-Type` 됩니다 `Chassis`, `Rack`, 및 `Site`합니다. `-Name` 문자열일 수 있습니다. (에 대 한 `Node` 유형의 장애 도메인 이름을 자동으로 실제 노드 이름 집합으로 이어야 합니다).
 
 ```PowerShell
 New-ClusterFaultDomain -Type Chassis -Name "Chassis 007"
@@ -72,9 +73,9 @@ New-ClusterFaultDomain -Type Site -Name "Shanghai"
 ```
 
 > [!IMPORTANT]  
-> Windows Server 수 없으며 만드는 오류 도메인 모든 실제, 실제 세계에서 아무 것도에 해당 하는 확인 하지 않습니다. (이 분명 하 게 보일 수도 있지만 파악 해야 합니다.) 실제 세계에서 노드가 경우 한 랙에 모두, 만드는 두 `-Type Rack` 오류 도메인 소프트웨어가 랙 결함 허용 마술 제공 하지 않습니다. 사용자는 이러한 cmdlet 사용 하 여 만드는 토폴로지 일치 실제 배열을 하드웨어에 대해 책임입니다.
+> Windows Server가 없으며 모든 장애 도메인을 만들면 실제, 물리적 세계의 어떤 데이터에 해당 하는 것을 확인 하지 않습니다. (당연 하 게 보일 수도 있지만 것을 알고 있어야 합니다.) 실제로 노드가 모두 하나의 랙에 있는 경우 소프트웨어에서 두 개의 `-Type Rack` 장애 도메인을 만들면 랙 내결함성이 제공되지 않습니다. 따라서 사용자는 이러한 cmdlet을 사용하여 만든 토폴로지가 하드웨어의 실제 배열과 일치하는지 확인해야 합니다.
 
-사용 하 여 `Set-ClusterFaultDomain` 한 오류 도메인 다른으로 이동할 수 있습니다. "상위" 및 "자녀가"이 중첩 관계 설명 하기 위해 일반적으로 사용 됩니다. `-Name`및 `-Parent`매개는 필요 합니다. `-Name`, 이동 하는 오류 도메인의 이름을 입력 `-Parent`, 대상의 이름을 입력 합니다. 여러 오류 도메인을 한 번에 이동의 이름을 표시 합니다.
+사용 하 여 `Set-ClusterFaultDomain` 을 다른 장애 도메인 간에 이동 합니다. "부모" 및 "자식"이라는 용어는 이러한 중첩 관계를 설명하는 데 자주 사용됩니다. 합니다 `-Name` 고 `-Parent` 매개 변수는 필수입니다. `-Name`를 이동 하는 장애 도메인의 이름을 제공 `-Parent`, 대상의 이름을 제공 합니다. 여러 장애 도메인을 한 번에 이동하려면 해당 이름을 나열합니다.
 
 ```PowerShell
 Set-ClusterFaultDomain -Name "server01.contoso.com" -Parent "Rack A"
@@ -82,11 +83,11 @@ Set-ClusterFaultDomain -Name "Rack A", "Rack B", "Rack C", "Rack D" -Parent "Sha
 ```
 
 > [!IMPORTANT]  
-> 오류 도메인 이동 자녀 함께 이동 합니다. 위 예에서 랙 A server01.contoso.com 부모는, 후자의 별도로을 하지 않아도 상하이 사이트로 이동할 수 –는 이미 부모 되 고, 에서처럼 실제에서 않아서 합니다.
+> 장애 도메인을 이동하면 해당 자식이 함께 이동합니다. 위 예에서 Rack A가 server01.contoso.com의 부모인 경우 후자를 별도로 Shanghai 사이트로 이동할 필요가 없습니다. 실제와 마찬가지로 해당 부모가 그곳에 있기 때문에 이미 그곳에 있습니다.
 
-출력에서 부모 자녀 관계를 볼 수 `Get-ClusterFaultDomain`에 `ParentName`및 `ChildrenNames`열 합니다.
+출력에 부모-자식 관계를 볼 수 있습니다 `Get-ClusterFaultDomain`를 `ParentName` 고 `ChildrenNames` 열입니다.
 
-사용할 수 있습니다 `Set-ClusterFaultDomain`오류 도메인 특정 다른 속성을 수정할 수 있습니다. 예를 들어, 제공할 수 있습니다 (옵션) `-Location`또는 `-Description`메타 데이터를 모두 오류 도메인. 제공 된 경우이 정보 Health 서비스 로부터 경고 하드웨어에 포함 됩니다. 오류 도메인을 사용 하 여 이름을 바꿀 수 있는 `-NewName`매개 합니다. 이름을 변경 하지 않으면 `Node`오류 도메인을 입력 합니다.
+사용할 수도 있습니다 `Set-ClusterFaultDomain` 장애 도메인의 다른 특정 속성을 수정 합니다. 예를 들어 제공할 수 있습니다 (옵션) `-Location` 또는 `-Description` 장애 도메인에 대 한 메타 데이터입니다. 이 정보를 제공하면 상태 관리 서비스의 하드웨어 경고에 포함됩니다. 장애 도메인을 사용 하 여 이름을 바꿀 수도 있습니다는 `-NewName` 매개 변수입니다. 이름을 바꾸지 마십시오 `Node` 장애 도메인을 입력 합니다.
 
 ```PowerShell
 Set-ClusterFaultDomain -Name "Rack A" -Location "Building 34, Room 4010"
@@ -94,35 +95,35 @@ Set-ClusterFaultDomain -Type Node -Description "Contoso XYZ Server"
 Set-ClusterFaultDomain -Name "Shanghai" -NewName "China Region"
 ```
 
-사용 하 여 `Remove-ClusterFaultDomain`본체나 걸 만든 사이트를 제거 합니다. `-Name`매개가 필요 합니다. 수 없습니다 어린이 포함 된 오류 도메인 제거 – 먼저 자녀를 제거 하거나 사용 하 여 외부 이동 `Set-ClusterFaultDomain`합니다. 다른 모든 오류 도메인 외 오류 도메인을 이동 하려면 설정의 `-Parent`빈 문자열로 (""). 제거할 수 없는 `Node`오류 도메인을 입력 합니다. 한 번에 여러 오류 도메인 제거 하려면 해당 이름의 나열 합니다.
+사용 하 여 `Remove-ClusterFaultDomain` 섀시, 랙 또는 사용자가 만든 사이트를 제거 합니다. `-Name` 매개 변수는 필수입니다. 없습니다 자식을 포함 하는 장애 도메인은 제거할 – 먼저 자식을 제거 하거나 사용 하 여 외부로 이동할 `Set-ClusterFaultDomain`합니다. 다른 모든 장애 도메인 외부에서 장애 도메인을 이동 하려면 해당 `-Parent` 빈 문자열 (""). 제거할 수 없습니다 `Node` 장애 도메인을 입력 합니다. 여러 장애 도메인을 한 번에 제거하려면 해당 이름을 나열합니다.
 
 ```PowerShell
 Set-ClusterFaultDomain -Name "server01.contoso.com" -Parent ""
 Remove-ClusterFaultDomain -Name "Rack A"
 ```
 
-### <a name="defining-fault-domains-with-xml-markup"></a>오류 도메인 XML 태그와 함께 정의
-오류 도메인 XML 표하고자 구문을 사용 하 여 지정할 수 있습니다. Visual Studio Code 등 사용자 좋아하는 텍스트 편집기를 사용 하는 것이 좋습니다 (사용할 수 있는 무료 *[여기](https://code.visualstudio.com/)*) 또는 메모장 저장 하 고 다시 사용할 수 있는 XML 문서를 만듭니다.  
+### <a name="defining-fault-domains-with-xml-markup"></a>XML 태그를 사용하여 장애 도메인 정의
+XML 기반 구문을 사용하여 장애 도메인을 지정할 수 있습니다. 자주 사용하는 텍스트 편집기(예: Visual Studio Code(*[여기](https://code.visualstudio.com/)* 에서 무료로 제공) 또는 메모장)를 사용하여 XML 문서를 만들어 저장하고 재사용할 수 있습니다.  
 
-이 짧은 동영상 XML 태그를 지정 오류 도메인을 사용 하는 방법을 보여 줍니다.
+이 짧은 비디오에서는 XML 태그를 사용하여 장애 도메인을 지정하는 방법을 보여 줍니다.
 
-[![C이 이미지를 XML 지정 오류 도메인을 사용 하는 방법에 대해 짧은 동영상을 시청 lick](media/Fault-Domains-in-Windows-Server-2016/Part-3-Using-XML-Markup.jpg)](https://channel9.msdn.com/Blogs/windowsserver/Fault-Domain-Awareness-in-WS2016-Part-3-Using-XML)
+[![XML을 사용 하 여 장애 도메인을 지정 하는 방법에 대 한 짧은 비디오를 시청 하려면이 이미지를 클릭 합니다.](media/Fault-Domains-in-Windows-Server-2016/Part-3-Using-XML-Markup.jpg)](https://channel9.msdn.com/Blogs/windowsserver/Fault-Domain-Awareness-in-WS2016-Part-3-Using-XML)
 
-PowerShell의 다음 cmdlet 실행: `Get-ClusterFaultDomainXML`합니다. 클러스터 xml 현재 오류 도메인 사양을 반환합니다. 이 반영 모든 발견 `<Node>`열고 닫는에서 래핑된, `<Topology>`태그 합니다.  
+PowerShell에서 다음 cmdlet을 실행 합니다. `Get-ClusterFaultDomainXML`합니다. 클러스터의 현재 장애 도메인 사양이 XML로 반환됩니다. 이 반영 모든 검색 `<Node>`열기 및 닫기 래핑된 `<Topology>` 태그입니다.  
 
-이 출력 파일을 저장 하려면 다음을 실행 합니다.  
+이 출력을 파일에 저장하려면 다음을 실행합니다.  
 
 ```PowerShell
 Get-ClusterFaultDomainXML | Out-File <Path>  
 ```
 
-파일을 열고 추가 `<Site>`, `<Rack>`, 및 `<Chassis>`태그 이러한 노드 사이트, 걸 및 섀시 어떻게 분산 지정할 수 있습니다. 모든 태그 고유한로 식별 해야 **이름**합니다. 노드 기본적으로 채워집니다으로 노드 이름을 유지 해야 합니다.  
+파일을 열고 추가 `<Site>`하십시오 `<Rack>`, 및 `<Chassis>` 사이트, 랙 및 섀시에에서 이러한 노드에 배포 되는 방식을 지정 하는 태그. 모든 태그는 고유한 **Name**으로 식별되어야 합니다. 노드의 경우 노드 이름을 기본적으로 채워진 대로 유지해야 합니다.  
 
 > [!IMPORTANT]  
-> 전이적 사이트 준수 해야 추가 태그를 모두 선택 사항 이지만, &gt;랙 &gt;섀시 &gt;노드 계층 제대로 종료 해야 합니다.  
-이름, 자유형 뿐만 아니라 `Location="..."`및 `Description="..."`설명자 태그를 추가할 수 있습니다.  
+> 모든 추가 태그는 선택 사항이지만 전이적 Site &gt; Rack &gt; Chassis &gt; Node 계층을 준수해야 하며, 적절히 닫혀야 합니다.  
+이름, 자유 형식 외에도 `Location="..."` 고 `Description="..."` 설명자를 태그에 추가할 수 있습니다.  
 
-#### <a name="example-two-sites-one-rack-each"></a>예: 두 개의 사이트 한 랙  
+#### <a name="example-two-sites-one-rack-each"></a>예: 두 사이트 각각 하나의 랙  
 
 ```XML
 <Topology>  
@@ -143,7 +144,7 @@ Get-ClusterFaultDomainXML | Out-File <Path>
 </Topology> 
 ``` 
 
-#### <a name="example-two-chassis-blade-servers"></a>예: 두 개의 섀시, 서버 잎  
+#### <a name="example-two-chassis-blade-servers"></a>예: 두 개의 섀시, 블레이드 서버  
 ```XML
 <Topology>  
   <Rack Name="A01" Location="Contoso HQ, Room 4010, Aisle A, Rack 01">  
@@ -159,21 +160,21 @@ Get-ClusterFaultDomainXML | Out-File <Path>
 </Topology>  
 ```
 
-새 오류 도메인 내역이 설정 하려면 XML에 저장 하 고 PowerShell에서 다음을 실행 합니다.  
+새 장애 도메인 사양의 설정 하려면 XML에 저장 하 고 PowerShell에서 다음을 실행 합니다.  
 
 ```PowerShell
 $xml = Get-Content <Path> | Out-String  
 Set-ClusterFaultDomainXML -XML $xml
 ```
 
-이 가이드에서는 두 가지 예는 있지만 `<Site>`, `<Rack>`, `<Chassis>`, 및 `<Node>`태그 혼합 및 배포의 실제 토폴로지 반영 하기 위해 추가적인 여러 가지 방법으로 일치 수 수 있는 무엇이 든 합니다. 이러한 태그는 유연성과을 명확 하 게 하려면 자유형 위치 설명자 값 이러한 예 설명 바랍니다.  
+이 가이드에서는 두 가지 예만 제공 되지만 `<Site>`, `<Rack>`를 `<Chassis>`, 및 `<Node>` 혼합 하 고 다양 한 방식으로 배포의 실제 토폴로지를 반영 하도록 일치 하는 태그 수 있습니다. 위 예에서는 이러한 태그의 유연성과 이러한 태그를 명확히 구분하는 자유형 위치 설명자의 가치를 보여 주고자 했습니다.  
 
-### <a name="optional-location-and-description-metadata"></a>옵션: 위치 및 설명을 메타 데이터
+### <a name="optional-location-and-description-metadata"></a>선택 사항: 위치와 설명 메타 데이터
 
-(옵션)을 제공할 수 있습니다 **위치** 또는 **설명** 메타 데이터를 모두 오류 도메인. 제공 된 경우이 정보 Health 서비스 로부터 경고 하드웨어에 포함 됩니다. 이 짧은 동영상 이러한 설명자 추가 하는 가치 보여 줍니다.
+옵션을 제공할 수 있습니다 **위치** 하거나 **설명** 장애 도메인에 대 한 메타 데이터입니다. 이 정보를 제공하면 상태 관리 서비스의 하드웨어 경고에 포함됩니다. 이 짧은 비디오에서는 이러한 설명자를 추가 하는 값을 보여 줍니다.
 
-[![C위치 설명자 오류 도메인에 추가 하는 가치를 보여 주는 짧은 동영상을 확인 하려면 전혀](media/Fault-Domains-in-Windows-Server-2016/part-4-location-description.jpg)](https://channel9.msdn.com/Blogs/windowsserver/Fault-Domain-Awareness-in-WS2016-Part-4-Location-Description)
+[![장애 도메인에 위치 설명자를 추가 하는 값을 보여 주는 짧은 비디오를 보려면 클릭](media/Fault-Domains-in-Windows-Server-2016/part-4-location-description.jpg)](https://channel9.msdn.com/Blogs/windowsserver/Fault-Domain-Awareness-in-WS2016-Part-4-Location-Description)
 
-## <a name="see-also"></a>참조 하십시오  
+## <a name="see-also"></a>관련 항목  
 -   [Windows Server 2016](../get-started/windows-server-2016.md)  
--   [Windows Server 2016에에서 저장소 공간 다이렉트](../storage/storage-spaces/storage-spaces-direct-overview.md) 
+-   [Windows Server 2016의에서 저장소 공간 다이렉트](../storage/storage-spaces/storage-spaces-direct-overview.md) 
