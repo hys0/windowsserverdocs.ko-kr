@@ -13,18 +13,18 @@ ms.assetid: e6cac074-c6fc-46dd-9664-fa0342c0a5e8
 author: jaimeo
 ms.author: jaimeo
 manager: dongill
-ms.localizationpriority: high
-ms.openlocfilehash: 2473b4ffae79c29ec7505616c139c03b21a4427b
-ms.sourcegitcommit: e0479b0114eac7f232e8b1e45eeede96ccd72b26
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: f1b1004d02b53cdfc6d82b232a674e7661e32985
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "1284352"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59816414"
 ---
 # <a name="configure-a-server-core-installation-of-windows-server-2016-or-windows-server-version-1709-with-sconfigcmd"></a>Sconfig.cmd로 Windows Server 2016 또는 Windows Server, 버전 1709의 Server Core 설치 구성
-> 적용 대상: Windows Server(반기 채널) 및 Windows Server 2016
+> 적용 대상: Windows Server (반기 채널) 및 Windows Server 2016
 
-Windows Server 2016 및 Windows Server, 버전 1709에서는 서버 구성 도구(Sconfig.cmd)를 사용하여 Server Core 설치의 몇 가지 일반적인 측면을 구성하고 관리할 수 있습니다. 도구를 사용하려면 Administrators 그룹의 구성원이어야 합니다.  
+Windows Server 2016 및 Windows Server, 버전 1709에서는 서버 구성 도구(Sconfig.cmd)를 사용하여 Server Core 설치의 몇 가지 일반적인 측면을 구성하고 관리할 수 있습니다. 이 도구를 사용하려면 Administrators 그룹의 구성원이어야 합니다.  
   
 Server Core 및 Desktop 환경 포함 서버(Windows Server 2016 전용)에서 Sconfig.cmd를 사용할 수 있습니다. 
   
@@ -43,22 +43,22 @@ Sconfig.cmd 사용자 인터페이스 스크린샷
  도메인 사용자가 로컬 Administrators 그룹에 추가되지 않은 경우 도메인 사용자를 사용하여 컴퓨터 이름을 변경하는 등 시스템 내용을 변경할 수 없습니다. 도메인 사용자를 로컬 Administrators 그룹에 추가하려면 컴퓨터를 다시 시작하도록 허용합니다. 그런 다음 로컬 관리자로 컴퓨터에 로그인하고 이 문서의 뒷부분에 나오는 [로컬 관리자 설정](assetId:///3c2f8ca4-6adc-4ebd-8daf-eb0de16c2c7d#BKMK_Localadministratorsettings) 섹션의 단계를 수행합니다.  
   
 > [!NOTE]
->  도메인이나 작업 그룹 구성원 자격에 변경 내용을 적용하려면 서버를 다시 시작해야 합니다. 단, 서버가 여러 번 다시 시작되지 않도록 하려면 원하는 내용을 모두 변경한 후에 서버를 다시 시작할 수 있습니다. 기본적으로, 실행 중인 가상 컴퓨터는 Hyper-V Server를 다시 시작하기 전에 자동으로 저장됩니다.  
+>  도메인이나 작업 그룹 구성원 자격에 변경 내용을 적용하려면 서버를 다시 시작해야 합니다. 단, 서버가 여러 번 다시 시작되지 않도록 하려면 원하는 내용을 모두 변경한 후에 서버를 다시 시작할 수 있습니다. 기본적으로, 실행 중인 가상 컴퓨터는 Hyper-V 서버를 다시 시작하기 전에 자동으로 저장됩니다.  
   
 ## <a name="computer-name-settings"></a>컴퓨터 이름 설정  
  현재 컴퓨터 이름은 기본 서버 구성 도구 화면에 표시됩니다. 주 메뉴의 "컴퓨터 이름" 설정 페이지에 액세스하여 화면엔 표시되는 지침을 수행하여 컴퓨터 이름을 변경할 수 있습니다.  
   
 > [!NOTE]
->  도메인이나 작업 그룹 구성원 자격에 변경 내용을 적용하려면 서버를 다시 시작해야 합니다. 단, 서버가 여러 번 다시 시작되지 않도록 하려면 원하는 내용을 모두 변경한 후에 서버를 다시 시작할 수 있습니다. 기본적으로, 실행 중인 가상 컴퓨터는 Hyper-V Server를 다시 시작하기 전에 자동으로 저장됩니다.  
+>  도메인이나 작업 그룹 구성원 자격에 변경 내용을 적용하려면 서버를 다시 시작해야 합니다. 단, 서버가 여러 번 다시 시작되지 않도록 하려면 원하는 내용을 모두 변경한 후에 서버를 다시 시작할 수 있습니다. 기본적으로, 실행 중인 가상 컴퓨터는 Hyper-V 서버를 다시 시작하기 전에 자동으로 저장됩니다.  
   
 ##  <a name="BKMK_Localadministratorsettings"></a> 로컬 관리자 설정  
- 로컬 관리자 그룹에 사용자를 추가하려면 주 메뉴에서 **로컬 관리자 추가** 옵션을 사용합니다. 도메인에 가입된 컴퓨터에서는 도메인\사용자 이름 형식으로 사용자를 입력하고 도메인에 가입되지 않은 컴퓨터(작업 그룹 컴퓨터)에서는 사용자 이름만 입력합니다. 변경 내용은 바로 적용됩니다.  
+ 로컬 Administrators 그룹에 사용자를 추가하려면 주 메뉴에서 **로컬 관리자 추가** 옵션을 사용합니다. 도메인에 가입된 컴퓨터에서는 도메인\사용자 이름 형식으로 사용자를 입력하고 도메인에 가입되지 않은 컴퓨터(작업 그룹 컴퓨터)에서는 사용자 이름만 입력합니다. 변경 내용은 바로 적용됩니다.  
   
 ## <a name="network-settings"></a>네트워크 설정  
  DHCP 서버에서 자동으로 할당되도록 IP 주소를 구성하거나 고정 IP 주소를 수동으로 할당할 수 있습니다. 이 옵션을 통해 서버의 DNS 서버 설정도 구성할 수 있습니다.  
   
 > [!NOTE]
->  이제 네트워킹 Windows PowerShell cmdlet을 통해 이 옵션 및 기타 여러 옵션을 사용할 수 있습니다. 자세한 내용은 Windows Server 기술 라이브러리에서 [네트워크 어댑터 Cmdlet](https://technet.microsoft.com/library/jj134956.aspx)을 참조하세요.  
+>  이제 네트워킹 Windows PowerShell cmdlet을 통해 이 옵션 및 기타 여러 옵션을 사용할 수 있습니다. 자세한 내용은 Windows Server 라이브러리에서 [네트워크 어댑터 Cmdlet](https://technet.microsoft.com/library/jj134956.aspx) (영문)을 참조하세요.  
   
 ## <a name="windows-update-settings"></a>Windows 업데이트 설정  
  현재 Windows 업데이트 설정은 기본 서버 구성 도구 화면에 표시됩니다. 주 메뉴의 **Windows 업데이트 설정** 구성 옵션에서 자동 또는 수동 업데이트를 사용하도록 서버를 구성할 수 있습니다.  
@@ -87,7 +87,7 @@ Sconfig.cmd 사용자 인터페이스 스크린샷
 ## <a name="windows-activation-settings"></a>Windows 정품 인증 설정
 이 옵션을 사용하여 Windows 정품 인증을 구성할 수 있습니다.
   
-## <a name="to-enable-remote-management"></a>원격 관리를 사용하도록 설정  
+## <a name="to-enable-remote-management"></a>원격 관리를 사용하도록 설정하려면  
 **원격 관리 구성** 주 메뉴 옵션에서 여러 원격 관리 시나리오를 사용하도록 설정할 수 있습니다.  
   
 -   Microsoft Management Console 원격 관리  

@@ -13,11 +13,11 @@ author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
 ms.openlocfilehash: bc1930b681621d4d34c85414dbc2f97df257af20
-ms.sourcegitcommit: e0479b0114eac7f232e8b1e45eeede96ccd72b26
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "2082464"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59817164"
 ---
 # <a name="developing-for-nano-server"></a>Nano 서버용 개발
 
@@ -28,14 +28,14 @@ ms.locfileid: "2082464"
 
 다음 토픽에서는 Nano 서버의 PowerShell이 어떻게 다른지 주요 차이점을 설명하고 Nano 서버에 사용할 고유의 PowerShell cmdlet 개발을 위한 지침을 제공합니다.
 
-- [Nano Server의 PowerShell](PowerShell-on-Nano-Server.md)
-- [Nano Server용 PowerShell Cmdlet 개발](Developing-PowerShell-Cmdlets-for-Nano-Server.md)
+- [Nano 서버의 PowerShell](PowerShell-on-Nano-Server.md)
+- [Nano Server에 대 한 PowerShell Cmdlet 개발](Developing-PowerShell-Cmdlets-for-Nano-Server.md)
 
 ## <a name="using-windows-powershell-remoting"></a>Windows PowerShell 원격 기능 사용  
 Windows PowerShell 원격 기능으로 Nano 서버를 관리하려면 관리 컴퓨터의 신뢰할 수 있는 호스트 목록에 Nano 서버의 IP 주소를 추가하고, 사용하는 계정을 Nano 서버의 관리자에 추가하고, 해당 기능을 사용할 생각이라면 CredSSP를 사용하도록 설정해야 합니다.  
 
  >[!NOTE]  
-    > 대상 Nano 서버와 관리 컴퓨터가 동일한 AD DS 포리스트(또는 트러스트 관계의 포리스트)에 있는 경우 Nano 서버를 신뢰할 수 있는 호스트 목록에 추가하면 안 됩니다. 그 대신 정규화된 도메인 이름을 사용하여 Nano 서버에 연결할 수 있습니다. 예: PS C:\> Enter-PSSession -ComputerName nanoserver.contoso.com -Credential(Get-Credential)
+    > Nano Server를 추가 해서는 안 경우 대상 Nano 서버와 관리 컴퓨터가 동일한 AD DS 포리스트 (또는 트러스트 관계가 있는 포리스트)-신뢰할 수 있는 호스트 목록에 수 연결한 Nano 서버에 정규화 된 도메인 이름을 사용 하 여 예를 들어: PS C:\> Enter-pssession-ComputerName nanoserver.contoso.com-Credential (Get-credential)
   
   
 신뢰할 수 있는 호스트 목록에 Nano 서버를 추가하려면 관리자 권한 Windows PowerShell 명령 프롬프트에서 이 명령을 실행 합니다.  
@@ -55,9 +55,9 @@ Enter-PSSession -ComputerName $ip -Credential $user
 이제 정상적으로 Nano 서버에서 Windows PowerShell 명령을 실행할 수 있습니다.  
   
 > [!NOTE]  
-> 이 Nano 서버 릴리스에서 사용할 수 없는 Windows PowerShell 명령도 있습니다. 사용할 수 있는 명령을 보려면 다음 명령 실행 `Get-Command -CommandType Cmdlet`  
+> 이 Nano 서버 릴리스에서 사용할 수 없는 Windows PowerShell 명령도 있습니다. 사용할 수 있는 확인 하려면 실행 `Get-Command -CommandType Cmdlet`  
   
-다음 명령으로 원격 세션 중지 `Exit-PSSession`  
+명령 사용 하 여 원격 세션 중지 `Exit-PSSession`  
   
 ## <a name="using-windows-powershell-cim-sessions-over-winrm"></a>WinRM을 통해 Windows PowerShell CIM 세션 사용  
 WinRM(Windows Remote Management)을 통해 Windows PowerShell에서 CIM 세션 및 인스턴스를 사용하여 WMI 명령을 실행할 수 있습니다.  
