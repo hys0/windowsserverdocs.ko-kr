@@ -1,0 +1,1 @@
+**DirectAccess 보안 그룹에서 장치를 제거 합니다.** 사용자가 성공적으로 마이그레이션할 때에 DirectAccess 보안 그룹에서 장치를 제거 합니다. 환경에서 DirectAccess를 제거 하기 전에 DirectAccess 보안 그룹이 비어 있는지 확인 합니다. **그렇지 않은** 멤버를 여전히 있으면 보안 그룹을 제거 합니다. 멤버를 사용 하 여 보안 그룹을 제거 수행 하는 경우 해당 장치에서 원격 액세스 권한이 없는 직원을 그대로 두고 위험이 있습니다. 사용 하 여 Microsoft System Center Configuration Manager 또는 Microsoft Intune 장치 할당 정보를 확인 하 고 장치를 검색 하는 각 사용자에 속합니다. 

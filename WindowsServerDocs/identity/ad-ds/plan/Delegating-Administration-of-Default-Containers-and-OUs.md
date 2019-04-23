@@ -1,62 +1,63 @@
 ---
 ms.assetid: ac6604b0-7459-4ff3-af1c-4936897f5d14
-title: "기본 컨테이너 및 Ou 관리 위임"
-description: 
-author: billmath
-ms.author: billmath
-manager: femila
+title: 기본 컨테이너 및 OU의 관리 위임
+description: ''
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: 2504208210c03193451d19478f3bc8c98ec98f23
-ms.sourcegitcommit: 70c1b6cedad55b9c7d2068c9aa4891c6c533ee4c
+ms.openlocfilehash: 9d482854fd82b4bf0d0e61315d36e6222470ca55
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59830894"
 ---
-# <a name="delegating-administration-of-default-containers-and-ous"></a>기본 컨테이너 및 Ou 관리 위임
+# <a name="delegating-administration-of-default-containers-and-ous"></a>기본 컨테이너 및 OU의 관리 위임
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-모든 Active Directory 도메인 표준 집합이 컨테이너 및 조직 (Ou) Active Directory (AD DS 도메인 서비스)를 설치 하는 동안 만든 포함 되어 있습니다. 다음은 다음과 같습니다.  
+모든 Active Directory 도메인에는 컨테이너 및 Active Directory Domain Services (AD DS)를 설치 하는 동안 만든 조직 구성 단위 (Ou)의 표준 집합을 포함 합니다. 여기에는 다음과 같은 옵션이 포함됩니다.  
   
--   계층을 루트 컨테이너로 사용 되는 도메인 컨트롤러  
+-   계층에 루트 컨테이너 역할을 하는 도메인 컨테이너를  
   
 -   기본 서비스 관리자 계정을 보유 하는 기본 제공 컨테이너  
   
--   도메인에서 만든 새 사용자 계정 및 그룹에 대 한 기본 위치는 사용자가 컨테이너  
+-   도메인에서 만든 새 사용자 계정 및 그룹에 대 한 기본 위치는 사용자 컨테이너  
   
--   새 컴퓨터 계정에 대 한 기본 위치는 컴퓨터 컨테이너 도메인에 작성  
+-   도메인에는 새 컴퓨터 계정에 대 한 기본 위치는 컴퓨터 컨테이너 생성  
   
--   도메인 컨트롤러 컴퓨터 계정의 컴퓨터 계정에 대 한 기본 위치는 도메인 컨트롤러 OU  
+-   도메인 컨트롤러 컴퓨터 계정에 대 한 컴퓨터 계정에 대 한 기본 위치는 도메인 컨트롤러 OU  
   
-숲 소유자 이러한 기본 컨테이너 및 Ou 제어할 수 있습니다.  
+포리스트 소유자는 이러한 기본 컨테이너 및 Ou를 제어합니다.  
   
-## <a name="domain-container"></a>도메인 컨트롤러  
-도메인 컨트롤러 루트 컨테이너 도메인 계층입니다. 정책이 나이 컨테이너에 액세스 제어 목록 (ACL)에 대 한 변경 도메인 전체 영향을 미칠 수 있습니다. 이 컨테이너; 제어 위임 되지 않으면 서비스 관리자가 제어할 수 있어야 합니다.  
+## <a name="domain-container"></a>도메인 컨테이너  
+도메인 컨테이너는 루트 컨테이너는 도메인의 계층 구조입니다. 정책 또는이 컨테이너에서 액세스 제어 목록 (ACL)을 변경할 도메인 전체에 영향을 미칠 수 있습니다. 이 컨테이너의 제어를 위임 하지 않는 서비스 관리자에 의해 제어 해야 합니다.  
   
-## <a name="users-and-computers-containers"></a>사용자와 컴퓨터 컨테이너  
-Windows Server 2008를 Windows Server 2003에서 현재 위치에서 도메인 업그레이드를 수행 하면 기존 사용자와 컴퓨터 사용자 및 컨테이너 컴퓨터에 자동으로 배치 됩니다. 만드는 경우 Active Directory 도메인, 사용자와 컴퓨터 컨테이너는 모든 사용자 계정 새 및 도메인 컨트롤러 비 컴퓨터 도메인 계정에 대 한 기본 위치 합니다.  
+## <a name="users-and-computers-containers"></a>사용자 및 컴퓨터 컨테이너  
+Windows Server 2003에서 Windows Server 2008 전체 도메인 업그레이드를 수행한 경우 기존 사용자 및 컴퓨터 사용자 및 컴퓨터 컨테이너에 자동으로 배치 됩니다. 새 Active Directory 도메인, 사용자 및 컴퓨터 컨테이너 만드는 경우 모든 새 사용자 계정 및 도메인의 도메인 컨트롤러가 아닌 컴퓨터 계정에 대 한 기본 위치입니다.  
   
 > [!IMPORTANT]  
-> 사용자 또는 컴퓨터 제어 권한을 위임 필요한 경우 사용자와 컴퓨터의 기본 설정을 수정 하지 컨테이너 합니다. 대신 필요에 따라 새 Ou 만들기 및 사용자와 컴퓨터 개체 기본 컨테이너에서 새로운 Ou로 이동 합니다. 필요에 따라 새 Ou 제어할을 위임 합니다. 하지 수정 하는 기본 컨테이너를 제어 하는 것이 좋습니다.  
+> 사용자 또는 컴퓨터에 대 한 제어를 위임 해야 하는 경우 사용자 및 컴퓨터에서 기본 설정을 수정 하지 마십시오 컨테이너입니다. 대신 필요에 따라 새 Ou를 만들 및 해당 기본 컨테이너에서 새 Ou에 사용자 및 컴퓨터 개체를 이동 합니다. 필요에 따라 새 Ou에 대 한 제어를 위임 합니다. 수정 하지 않는 기본 컨테이너를 제어 하는 것이 좋습니다.  
   
-그룹 정책 설정 기본 사용자와 컴퓨터에 적용할 수 없습니다 또한 컨테이너 합니다. 그룹 정책을 사용자와 컴퓨터에 적용할 새로운 Ou 만들고 사용자와 컴퓨터 개체 Ou 해당로 이동 합니다. 그룹 정책 설정을 새 Ou에 적용 됩니다.  
+기본 사용자 및 컴퓨터에 그룹 정책 설정을 적용할 수 없습니다는 또한 컨테이너입니다. 그룹에 정책을 적용할 사용자 및 컴퓨터를 새 Ou를 만들고 해당 Ou에 사용자 및 컴퓨터 개체를 이동 합니다. 새 Ou에 그룹 정책 설정을 적용 합니다.  
   
-필요에 따라 기본 컨테이너 컨테이너 선택한에 사용할 수 있는 개체에 생성을 리디렉션합니다 수 있습니다.  
+필요에 따라 선택한 컨테이너에 배치 하는 기본 컨테이너에 있는 개체의 생성을 리디렉션할 수 있습니다.  
   
-## <a name="well-known-users-and-groups-and-built-in-accounts"></a>알려진 사용자 및 그룹 기본 제공 된 계정  
-기본적으로 몇 가지 알려진 사용자 및 그룹 기본 제공 된 계정에 새 도메인 만들어집니다. 이러한 계정 관리 된 서비스 관리자에 제어 유지 하는 것이 좋습니다. 이러한 계정 관리 사용자가 서비스 관리자에 위임 하지 않습니다. 다음 표에서 잘 알려져 사용자 및 그룹 서비스 관리자에 제어 유지 해야 하는 기본 제공 된 계정 합니다.  
+## <a name="well-known-users-and-groups-and-built-in-accounts"></a>잘 알려진 사용자와 그룹 및 기본 제공 계정  
+기본적으로 새 도메인에서 몇 가지 잘 알려진 사용자와 그룹 및 기본 제공 계정이 생성 됩니다. 이러한 계정 관리를 서비스 관리자의 제어 아래로 유지 되는 것이 좋습니다. 서비스 관리자가 아닌 사용자 에게만 이러한 계정의 관리를 위임 하지 않는 합니다. 다음 표에서 잘 알려진 사용자와 그룹 및 서비스 관리자의 제어 권한이 유지 해야 하는 기본 제공 계정입니다.  
   
-|알려진 사용자 및 그룹|기본 제공 된 계정|  
+|잘 알려진 사용자 및 그룹|기본 제공 계정|  
 |--------------------------------|----------------------|  
-|인증 게시자<br /><br />도메인 컨트롤러<br /><br />그룹 정책 Creator 소유자<br /><br />KRBTGT<br /><br />도메인 게스트<br /><br />관리자<br /><br />도메인 관리<br /><br />스키마 관리자 (이렇게만)<br /><br />엔터프라이즈 관리자 (이렇게만)<br /><br />사용자 도메인|관리자<br /><br />Guest<br /><br />Guest<br /><br />계정에서<br /><br />관리자<br /><br />백업 관리자<br /><br />수신 숲 신뢰 빌더<br /><br />연산자 인쇄<br /><br />Windows 2000 호환 액세스<br /><br />서버 연산자<br /><br />사용자가|  
+|Cert Publishers<br /><br />도메인 컨트롤러 하나 이상<br /><br />Group Policy Creator Owners<br /><br />KRBTGT<br /><br />도메인 게스트<br /><br />관리자<br /><br />Domain Admins<br /><br />스키마 Admins (포리스트 루트 도메인에만 해당)<br /><br />Enterprise Admins (포리스트 루트 도메인에만 해당)<br /><br />도메인 사용자|관리자<br /><br />게스트<br /><br />Guests<br /><br />Account Operators<br /><br />Administrators<br /><br />Backup Operators<br /><br />들어오는 포리스트 트러스트 작성기<br /><br />Print Operators<br /><br />Pre-Windows 2000 Compatible Access<br /><br />Server Operators<br /><br />사용자|  
   
-## <a name="domain-controller-ou"></a>OU 도메인 컨트롤러  
-도메인 컨트롤러 도메인에 추가 되 면 해당 컴퓨터 개체 도메인 컨트롤러를 자동으로 추가 됩니다. 이 OU 정책이 적용 기본 집합을 있습니다. 이 정책이 모든 도메인 컨트롤러에 동일 하 게 적용 되 되도록이 OU 아웃 도메인 컨트롤러의 컴퓨터 개체 이동 하지 하는 것이 좋습니다. 기본 정책이 적용 하는 도메인 컨트롤러 제대로 작동 하지 않을 수 있습니다.  
+## <a name="domain-controller-ou"></a>도메인 컨트롤러 OU  
+도메인 컨트롤러는 도메인에 추가 되 면 해당 컴퓨터 개체에 도메인 컨트롤러 OU에 자동으로 추가 됩니다. 이 OU 집합이 기본 정책이 적용 됩니다. 이러한 정책은 모든 도메인 컨트롤러에 균일 하 게 적용 됩니다 있도록이 OU에서 도메인 컨트롤러의 컴퓨터 개체를 이동 하지는 것이 좋습니다. 기본 정책을 적용 하려면 도메인 컨트롤러를 제대로 작동 하지 않을 수 있습니다.  
   
-기본적으로 서비스 관리자가이 OU를 제어합니다. 개인 이외의 서비스 관리자에 게이 OU 제어를 위임 하지 않습니다.  
+기본적으로 서비스 관리자는이 OU를 제어합니다. 서비스 관리자가 아닌 개인에 게 해당이 OU의 제어를 위임 하지 않는 합니다.  
   
 
 

@@ -1,6 +1,6 @@
 ---
-title: "Microsoft 온라인 서비스 재판매인 계약 지원 하기 위해 O365 통합 모듈 구입 Try 끝점 URL 바꾸기"
-description: "Windows Server Essentials을 사용 하는 방법을 설명 합니다."
+title: Microsoft 온라인 서비스 재판매인 계약을 지원하기 위해 O365 통합 모듈 구입-평가판 끝점 URL 바꾸기
+description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
@@ -13,69 +13,70 @@ author: nnamuhcs
 ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: b690cedd2f692cc6d11af6e05dd0cd4b4ea5a1d6
-ms.sourcegitcommit: 70c1b6cedad55b9c7d2068c9aa4891c6c533ee4c
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59833104"
 ---
-# <a name="replace-o365-integration-module-buy-try-endpoint-url-in-support-of-microsoft-online-service-reseller-agreement"></a>Microsoft 온라인 서비스 재판매인 계약 지원 하기 위해 O365 통합 모듈 구입 Try 끝점 URL 바꾸기
+# <a name="replace-o365-integration-module-buy-try-endpoint-url-in-support-of-microsoft-online-service-reseller-agreement"></a>Microsoft 온라인 서비스 재판매인 계약을 지원하기 위해 O365 통합 모듈 구입-평가판 끝점 URL 바꾸기
 
->Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials에 적용 됩니다.
+>적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 ##  <a name="BKMK_O365"></a>   
- 포털을 통해 고객 등록 거래를 처리 하기 위해 Microsoft 온라인 서비스 재판매인 계약 (MOSRA) 파트너는 Windows Server Essentials Office 365 통합 모듈에서 사용 되는 endpoint Url 교체 해야 합니다.  
+ 귀하의 포털을 통해 고객 등록 트랜잭션이 처리 되도록 하는 Microsoft 온라인 서비스 재판매인 계약 (MOSRA) 파트너인 경우에 Windows Server Essentials Office 365 통합 모듈에 의해 사용 되는 끝점 Url을 대체 해야 합니다.  
   
- 통합 모듈 다음 네 가지 endpoint Url을 사용합니다.  
+ 통합 모듈에서는 다음 4개의 끝점 URL을 사용합니다.  
   
-1.  Office 365 엔터프라이즈 구독 구매 끝점 합니다.  
+1.  Office 365 Enterprise 정기 가입 구입 끝점입니다.  
   
-    -   Server\MSO\  
+    -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Server\MSO\  
   
-    -   입력 등록이 SZ =  
+    -   유형 = REG-SZ  
   
-    -   키 이름 MOSRASTDBUY =  
+    -   키 이름 = MOSRASTDBUY  
   
-    -   값 = *xxxxx*, 여기서 xxxxx 엔터프라이즈 구독 구매 URL이 합니다. 예를 들어, 가치 http://syndicatepartner.office365.com/enterprisebuy.html =  
+    -   값 = *xxxxx*, 여기서 xxxxx는 기업 정기 가입 구입 URL입니다. 예를 들어, 값 = http://syndicatepartner.office365.com/enterprisebuy.html  
   
-2.  Office 365 엔터프라이즈 구독 평가판 끝점 합니다.  
+2.  Office 365 Enterprise 정기 가입 평가판 끝점입니다.  
   
-    -   Server\MSO\  
+    -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Server\MSO\  
   
-    -   입력 등록이 SZ =  
+    -   유형 = REG-SZ  
   
-    -   키 이름 MOSRASTDTRY =  
+    -   키 이름 = MOSRASTDTRY  
   
-    -   값 = *xxxxx*, 여기서 xxxxx 엔터프라이즈 구독 구매 URL이 합니다. 예를 들어, 가치 http://syndicatepartner.office365.com/enterprisetry.html =  
+    -   값 = *xxxxx*, 여기서 xxxxx는 기업 정기 가입 구입 URL입니다. 예를 들어, 값 = http://syndicatepartner.office365.com/enterprisetry.html  
   
-3.  Office 365 소규모 기업 Premium 구독 구매 끝점 합니다.  
+3.  Office 365 Small Business Premium 정기 가입 구입 끝점입니다.  
   
-    -   Server\MSO\  
+    -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Server\MSO\  
   
-    -   입력 등록이 SZ =  
+    -   유형 = REG-SZ  
   
-    -   키 이름 MOSRALITEBUY =  
+    -   키 이름 = MOSRALITEBUY  
   
-    -   값 = *xxxxx*, 여기서 xxxxx 엔터프라이즈 구독 구매 URL이 합니다. 예를 들어, 가치 http://syndicatepartner.office365.com/smallbizbuy.html =  
+    -   값 = *xxxxx*, 여기서 xxxxx는 기업 정기 가입 구입 URL입니다. 예를 들어, 값 = http://syndicatepartner.office365.com/smallbizbuy.html  
   
-4.  Office 365 소규모 기업 Premium 구독 평가판 끝점 합니다.  
+4.  Office 365 Small Business Premium 정기 가입 평가판 끝점입니다.  
   
-    -   Server\MSO\  
+    -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Server\MSO\  
   
-    -   입력 등록이 SZ =  
+    -   유형 = REG-SZ  
   
-    -   키 이름 MOSRALITETRY =  
+    -   키 이름 = MOSRALITETRY  
   
-    -   값 = *xxxxx*, 여기서 xxxxx 엔터프라이즈 구독 구매 URL이 합니다. 예를 들어, 가치 http://syndicatepartner.office365.com/smallbiztry.html =  
+    -   값 = *xxxxx*, 여기서 xxxxx는 기업 정기 가입 구입 URL입니다. 예를 들어, 값 = http://syndicatepartner.office365.com/smallbiztry.html  
   
-#### <a name="to-add-an-endpoint-url-key-to-the-registry"></a>Endpoint URL 키 레지스트리를 추가 하려면  
+#### <a name="to-add-an-endpoint-url-key-to-the-registry"></a>레지스트리에 끝점 URL 키를 추가하려면  
   
-1.  참조 컴퓨터에서 클릭 **시작**, 입력 **regedit**, ENTER 키를 누릅니다.  
+1.  참조 컴퓨터에서 **시작**을 클릭하고 **regedit**를 입력한 다음 Enter 키를 누릅니다.  
   
-2.  왼쪽된 창에서 확장 **HKEY_LOCAL_MACHINE**, 확장 **소프트웨어**, 확장 **Microsoft**, 확장 **Windows Server**를 확장 한 다음 **MSO**합니다.  
+2.  왼쪽 창에서 **HKEY_LOCAL_MACHINE**, **SOFTWARE**, **Microsoft**, **Windows Server**, **MSO**를 차례로 확장합니다.  
   
-3.  MSO가 없는 경우 마우스 오른쪽 단추로 클릭 **Windows Server**를 가리킨 **새로**, 클릭 **키**, 한 다음 입력 **MSO** 키의 이름에 대 한 합니다.  
+3.  MSO가 없으면 **Windows Server**를 마우스 오른쪽 단추로 클릭하고 **새로 만들기**를 가리킨 다음 **키**를 클릭하고 키 이름으로 **MSO**를 입력합니다.  
   
-4.  MSO를 마우스 오른쪽 단추로 클릭 한 다음 한 **문자열 값**합니다. 하나는 문자열의 이름에 대 한 다음 끝점 문자열 이름을 입력 합니다.  
+4.  MSO를 마우스 오른쪽 단추로 클릭한 다음 **문자열 값**을 클릭합니다. 문자열 이름으로 다음 끝점 문자열 이름 중 하나를 입력합니다.  
   
     -   MOSRASTDBUY  
   
@@ -85,19 +86,19 @@ ms.lasthandoff: 07/03/2017
   
     -   MOSRALITETRY  
   
-5.  새 문자열 오른쪽 창에서 마우스 오른쪽 단추로 클릭 하 고 클릭 한 다음 **수정**합니다.  
+5.  오른쪽 창에서 새 문자열을 마우스 오른쪽 단추로 클릭한 다음 **수정**을 클릭합니다.  
   
-6.  에 새로운 사용자 끝점 URL 입력는 **값 데이터** 텍스트 상자와 클릭 한 다음 **확인**합니다.  
+6.  **값 데이터** 입력란에 새 끝점 URL을 입력한 다음 **확인**을 클릭합니다.  
   
-7.  4 단계에 나열 된 각 문자열 이름에 대해 4 6 단계를 반복 합니다.  
+7.  4단계에 나열된 각 문자열 이름에 대해 4-6단계를 반복합니다.  
   
-## <a name="see-also"></a>참조 하십시오  
+## <a name="see-also"></a>관련 항목  
 
  [만들기 및 이미지를 사용자 지정](Creating-and-Customizing-the-Image.md)   
- [추가로 사용자 지정](Additional-Customizations.md)   
- [배포에 대 한 이미지를 준비 중](Preparing-the-Image-for-Deployment.md)   
- [고객 만족도 테스트](Testing-the-Customer-Experience.md) [만들기 및 이미지를 사용자 지정](../install/Creating-and-Customizing-the-Image.md)   
- [추가로 사용자 지정](../install/Additional-Customizations.md)   
- [배포에 대 한 이미지를 준비 중](../install/Preparing-the-Image-for-Deployment.md)   
- [고객 만족도 테스트합니다.](../install/Testing-the-Customer-Experience.md)
+ [추가 사용자 지정](Additional-Customizations.md)   
+ [배포용 이미지 준비](Preparing-the-Image-for-Deployment.md)   
+ [사용자 환경 테스트](Testing-the-Customer-Experience.md) [를 만들고 이미지를 사용자 지정](../install/Creating-and-Customizing-the-Image.md)   
+ [추가 사용자 지정](../install/Additional-Customizations.md)   
+ [배포용 이미지 준비](../install/Preparing-the-Image-for-Deployment.md)   
+ [사용자 환경 테스트](../install/Testing-the-Customer-Experience.md)
 

@@ -1,6 +1,6 @@
 ---
-title: "폴더 대상 추가"
-description: "이 항목에서는 폴더 대상(UNC 경로)을 추가하는 방법을 설명합니다."
+title: 폴더 대상 추가
+description: 이 항목에서는 폴더 대상(UNC 경로)을 추가하는 방법을 설명합니다.
 ms.prod: windows-server-threshold
 ms.author: jgerend
 ms.manager: brianlic
@@ -8,15 +8,16 @@ ms.technology: storage
 ms.topic: article
 author: jasongerend
 ms-date: 06/05/2017
-ms.openlocfilehash: 71305089553d622f54cb4e5608034edfaf7abc5f
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.openlocfilehash: 8cc61189076669d5c24244294b2f0eee2b783517
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59831004"
 ---
 # <a name="add-folder-targets"></a>폴더 대상 추가
 
-> 적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+> 적용 대상: Windows Server 2019, Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 폴더 대상은 공유 폴더의 UNC(범용 명명 규칙) 경로이거나 네임스페이스의 폴더와 연결된 다른 네임스페이스입니다. 여러 폴더 대상을 추가하면 네임스페이스에서 폴더의 가용성이 향상됩니다.
 
@@ -24,7 +25,7 @@ ms.lasthandoff: 10/17/2017
 
 DFS 관리를 사용하여 폴더 대상을 추가하려면 다음 절차를 따르세요.
 
-1.  **시작**을 클릭하고 **관리 도구**를 가리킨 다음 **DFS 관리**를 클릭합니다.
+1.  **시작**을 클릭하고 **관리 도구**를 가리킨 다음 **DFS 관리**를 클릭합니다.
 
 2.  콘솔 트리의 **네임스페이스** 노드에서 폴더를 마우스 오른쪽 단추를 클릭한 다음 **폴더 대상 추가**를 클릭합니다.
 
@@ -38,8 +39,8 @@ DFS 관리를 사용하여 폴더 대상을 추가하려면 다음 절차를 따
 > [!NOTE]
 > 폴더 계층 구조의 동일한 수준에 폴더 대상과 다른 DFS 폴더 중 하나만 있을 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
--   [DFS 네임스페이스 배포](deploying-dfs-namespaces.md)
--   [DFS 네임스페이스에 대한 관리 권한 위임](delegate-management-permissions-for-dfs-namespaces.md)
--   [DFS 복제를 사용하여 폴더 대상 복제](replicate-folder-targets-using-dfs-replication.md)
+-   [DFS 네임 스페이스를 배포합니다.](deploying-dfs-namespaces.md)
+-   [DFS 네임 스페이스에 대 한 관리 권한 위임](delegate-management-permissions-for-dfs-namespaces.md)
+-   [DFS 복제를 사용 하 여 폴더 대상에 복제](replicate-folder-targets-using-dfs-replication.md)
