@@ -1,21 +1,22 @@
 ---
 ms.assetid: 0fd7b6aa-3e50-45a3-a3a6-56982844363e
-title: "이벤트 ID 2088-복제 성공적으로 DNS 조회 오류가 발생 했습니다."
-description: 
-author: billmath
-ms.author: billmath
-manager: femila
+title: 이벤트 ID 2088-복제 성공과 함께 DNS 조회 실패가 발생
+description: ''
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: 4f223f075775f942f83a1962da28a77e85e89aa0
-ms.sourcegitcommit: db290fa07e9d50686667bfba3969e20377548504
+ms.openlocfilehash: cc090fa749a601e53b4347cce43245f22badc8ae
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59840714"
 ---
-# <a name="event-id-2088-dns-lookup-failure-occurred-with-replication-success"></a>이벤트 ID 2088: DNS 조회 오류가 발생 복제 성공
+# <a name="event-id-2088-dns-lookup-failure-occurred-with-replication-success"></a>Event ID 2088: 복제 성공과 함께 DNS 조회 실패가 발생
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -41,44 +42,43 @@ ms.lasthandoff: 12/12/2017
     Active Directory Domain Services successfully replicated using the NetBIOS 
     or fully qualified computer name of the source domain controller. 
 
-잘못 된 DNS 구성 구성원 컴퓨터에서 도메인 컨트롤러 또는 응용 프로그램 서버 로그온 인증 또는 네트워크 리소스에 대 한 액세스를 포함 하 여이 Active Directory Domain Services 숲 속의 중요 한 작업 영향을 줄 수 있습니다. 
+잘못 된 DNS 구성을 구성원 컴퓨터, 도메인 컨트롤러 또는 응용 프로그램 서버 로그온 인증 또는 네트워크 리소스에 대 한 액세스를 포함 하 여이 Active Directory 도메인 서비스 포리스트의 중요 한 작업 영향을 줄 수 있습니다. 
 
-즉시이 도메인 컨트롤러 DNS 사용 하 여 원본 도메인 컨트롤러의 IP 주소를 해결할 수 있도록이 DNS 구성 오류를 해결 해야 합니다. 
+이 도메인 컨트롤러에서 DNS를 사용 하 여 원본 도메인 컨트롤러의 IP 주소를 확인할 수 있도록 즉시이 DNS 구성 오류를 해결 해야 합니다. 
 
-암호 확인용 서버 이름: d c 1 실패 DNS 호스트 이름: 4a8717eb-8e58-456 c-995a-c92e4add7e8e._msdcs. contoso.com 
+대체 서버 이름: DC1 실패 한 DNS 호스트 이름: 4a8717eb-8e58-456c-995a-c92e4add7e8e._msdcs.contoso.com 
 
-참고: 기본적으로 최대 10 DNS 오류가 표시 되 12 지정 된 시간 동안 10 개 이상의 오류가 발생 하는 경우에 있습니다.  모든 개별 오류 이벤트를 기록 하려면 다음과 같은 진단 레지스트리 값으로 설정 1: 
+참고: 기본적으로 10 개 이상의 오류가 발생 한 경우에 모든 주어진된 12 시간 동안 최대 10 개의 DNS 오류 표시 됩니다.  모든 개별 오류 이벤트를 기록 하려면 진단 레지스트리 값 1로 설정 합니다. 
 
-레지스트리 경로: HKLM\System\CurrentControlSet\Services\NTDS\Diagnostics\22 DS RPC 클라이언트 
+레지스트리 경로: HKLM\System\CurrentControlSet\Services\NTDS\Diagnostics\22 DS RPC Client 
 
-사용자 문제 해결: 
+사용자 작업: 
 
-1) 원본 도메인 컨트롤러 더 긴 경우 다른 컴퓨터 이름으로 다시 설치 작동 또는 운영 체제 또는 NTDSDSA GUID 개체 제거 ntdsutil.exe 메타 데이터 소스 도메인 컨트롤러의 216498 MSKB 문서에서 설명한 단계를 사용 하 여 합니다. 
+1) 원본 도메인 컨트롤러는 더 이상 다른 컴퓨터 이름을 사용 하 여 작동 또는 해당 운영 체제를 다시 설치한 하거나 NTDSDSA 개체 GUID를 제거할 경우 ntdsutil.exe 사용 하 여 원본 도메인 컨트롤러의 메타 데이터 MSKB 문서에 설명 된 단계를 사용 하 여 216498 합니다. 
 
-2) 원본 도메인 컨트롤러 Active Directory를 실행 하 고는 입력 하 여 네트워크에 액세스할 수 있는지 확인 "보기 net \\&lt;소스 DC 이름&gt;" 또는 "ping &lt;소스 DC 이름&gt;" 합니다. 
+2) 원본 도메인 컨트롤러는 실행 중인 Active Directory를 입력 하 여 네트워크에서 액세스할 수 있는 확인 "보기 net \\ &lt;원본 DC 이름&gt;" 또는 "ping &lt;원본 DC 이름&gt;"입니다. 
 
-3) Verify that the source domain controller is using a valid DNS server for DNS services, and that the source domain controller's host record and CNAME record are correctly registered, using the DNS Enhanced version of DCDIAG.EXE available on https://www.microsoft.com/dns 
+3) 원본 도메인 컨트롤러를 사용 하는지 확인 유효한 DNS 서버에 대 한 DNS 서비스와 원본 도메인 컨트롤러의 호스트 레코드 및 CNAME 레코드는 제대로 등록 DCDIAG의 DNS 향상 된 버전을 사용 합니다. 사용할 수 있는 EXE https://www.microsoft.com/dns 
 
-Dcdiag /test: dns 
+dcdiag /test:dns 
 
-4) 이 목적지 도메인 컨트롤러에 사용 하는 올바른 DNS 서버를 DNS 서비스 DCDIAG.EXE 명령을 실행 대상 도메인 컨트롤러의 콘솔 다음과 같습니다. 
+4) 이 대상 도메인 컨트롤러에 사용 하는 유효한 DNS 서버가 DNS 서비스 DCDIAG DNS 향상 된 버전을 실행 하 여 확인 합니다. 다음과 같은 대상 도메인 컨트롤러의 콘솔에서 EXE 명령: 
 
-Dcdiag /test: dns 
+dcdiag /test:dns 
 
-5) For further analysis of DNS error failures see KB 824449: https://support.microsoft.com/?kbid=824449 
+5) DNS 오류 오류 추가 분석은 다음 KB 824449을 참조 하세요. https://support.microsoft.com/?kbid=824449 
 
-추가 데이터 오류 값: 11004 요청된 이름이 올바른지 하지만 요청 형식의 데이터를 찾지 못했습니다</code>
-  </introduction>
+추가 데이터 오류 값: 11004 요청한 이름이 유효 하 하지만 요청 된 형식의 데이터를 찾지 못했습니다.</code> </introduction>
   <section>
-    <title>진단</title>
+    <title>Diagnosis</title>
     <content>
-      <para>DNS (CNAME) 별칭 리소스 레코드를 사용 하 여 원본 도메인 컨트롤러의 이름을 확인 실패 DNS 구성 오류 또는 DNS 데이터 전파에 지연 될 수 있습니다.</para>
+      <para>DNS에서 별칭 (CNAME) 리소스 레코드를 사용 하 여 원본 도메인 컨트롤러의 이름을 확인 하지 못한 DNS 구성 오류 또는 DNS 데이터 전파에 지연이 발생할 수 있습니다.</para>
     </content>
   </section>
   <section>
-    <title>해상도</title>
+    <title>해결 방법</title>
     <content>
-      <para>DNS에 설명 된 대로 테스트를 통해 계속 "<link xlink:href="85b1d179-f53e-4f95-b0b8-5b1c096a8076">2087 이벤트 ID: DNS 조회 오류가 발생 복제가 실패할</link>."</para>
+      <para>DNS 테스트에 설명 된 대로 진행 "<link xlink:href="85b1d179-f53e-4f95-b0b8-5b1c096a8076">이벤트 ID 2087: DNS 조회 실패로 인해 복제가 실패할 수</link>. "</para>
     </content>
   </section>
   <relatedTopics />

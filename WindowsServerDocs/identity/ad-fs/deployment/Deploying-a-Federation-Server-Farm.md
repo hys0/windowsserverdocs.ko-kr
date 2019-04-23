@@ -1,7 +1,7 @@
 ---
 ms.assetid: bbb5b68f-00ad-4715-8176-0c2769b706c4
-title: "지침에 따라 Windows Server 2012 r 2 광고 FS 배포"
-description: 
+title: Windows Server 2012 R2 AD FS 배포 가이드
+description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -10,35 +10,36 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.openlocfilehash: 05f1ea6830237813e6fd2bd6a172f467e8d81065
-ms.sourcegitcommit: db290fa07e9d50686667bfba3969e20377548504
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59839084"
 ---
-# <a name="deploying-a-federation-server-farm"></a>Federation 서버 농장 배포
+# <a name="deploying-a-federation-server-farm"></a>페더레이션 서버 팜 배포
 
->적용 대상: Windows Server 2016, Windows Server 2012 r 2
+>적용 대상: Windows Server 2016, Windows Server 2012 R2
 
-Federation 서버 농장 배포를 위해이 검사 순서로 나열의 작업을 완료 합니다. 이 검사에서 나머지 작업 진행할 수 있도록 개념 항목을 검토 한 후이 검사에 한 참조 링크 개념 항목으로 이동 때 돌아갑니다.  
+페더레이션 서버 팜을 배포하려면 이 검사 목록의 작업을 순서대로 완료합니다. 참조 링크를 클릭하면 개념이 설명된 항목으로 이동하며 이 내용을 읽은 후 이 검사 목록으로 돌아와서 검사 목록의 나머지 작업을 계속할 수 있습니다.  
   
-![연결 된 팜 배포](media/2b05dce3-938f-4168-9b8f-1f4398cbdb9b.gif)**검사: Federation 서버 농장 배포**  
+![페더레이션된 서버 팜 배포](media/2b05dce3-938f-4168-9b8f-1f4398cbdb9b.gif)**검사 목록: 페더레이션 서버 팜 배포**  
   
-||작업|참조|  
+||태스크|참조|  
 |-|--------|-------------|  
-|![연결 된 팜 배포](media/icon_checkboxo.gif)|중요 한 개념 및 사항을 준비 Active Directory Federation Services \(AD FS\) 배포 하는 동안 검토 합니다. **참고:**|![연결 된 팜 배포](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[광고 FS 디자인 가이드 Windows Server 2012 r 2](../../ad-fs/design/AD-FS-Design-Guide-in-Windows-Server-2012-R2.md)<br /><br />![연결 된 팜 배포](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[이해 키 광고 FS 개념](../../ad-fs/technical-reference/Understanding-Key-AD-FS-Concepts.md)|  
-||Microsoft SQL Server ADFS 구성 스토어에 대 한 사용 하려는 경우 배포 하는 기능 SQL Server 인스턴스를 확인 합니다.|[SQL Server ](https://technet.microsoft.com/sqlserver)**경고:** Windows Server 2012 R2, ADFS 농장을 만들고 사용 SQL Server 구성 데이터를 저장 하려는 경우 사용할 수 있습니다 SQL Server 2008 및 SQL Server 2012를 포함 하 여 최신 버전입니다.|  
-|![연결 된 팜 배포](media/icon_checkboxo.gif)|컴퓨터 Active Directory 도메인에 가입입니다.|![연결 된 팜 배포](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[컴퓨터 도메인에 가입](Join-a-Computer-to-a-Domain.md)|  
-|![연결 된 팜 배포](media/icon_checkboxo.gif)|Adfs Secure Socket 계층 \(SSL\) 인증서를 등록 합니다.|![연결 된 팜 배포](media/bc6cea1a-1c6c-4124-8c8f-1df5adfe8c88.gif)[SSL 인증서 adfs 등록](Enroll-an-SSL-Certificate-for-AD-FS.md)|  
-|![연결 된 팜 배포](media/icon_checkboxo.gif)|ADFS 역할 서비스를 설치 합니다.|![연결 된 팜 배포](media/bc6cea1a-1c6c-4124-8c8f-1df5adfe8c88.gif)[ADFS 역할 서비스 설치](Install-the-AD-FS-Role-Service.md)|  
-|![연결 된 팜 배포](media/icon_checkboxo.gif)|Federation 서버를 구성 합니다.|![연결 된 팜 배포](media/bc6cea1a-1c6c-4124-8c8f-1df5adfe8c88.gif)[Federation 서버 구성](Configure-a-Federation-Server.md)|  
-|![연결 된 팜 배포](media/icon_checkboxo.gif)|단계: 장치 등록 서비스 \(DRS\) 사용 federation 서버를 구성 합니다.|![연결 된 팜 배포](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[federation 서버 등록 서비스 디바이스를 구성](Configure-a-federation-server-with-Device-Registration-Service.md)|  
-|![연결 된 팜 배포](media/icon_checkboxo.gif)|호스트 \(A\) 및 별칭 \(CNAME\) 리소스 레코드 federation 서비스에 대 한 회사 Domain Name System \(DNS\) 및 DRS를 추가 합니다.|![연결 된 팜 배포](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Federation 서비스 및 DRS 회사 DNS 구성](Configure-Corporate-DNS-for-the-Federation-Service-and-DRS.md)|  
-|![연결 된 팜 배포](media/icon_checkboxo.gif)|Federation 서버 작동 중인지 확인 합니다.|![연결 된 팜 배포](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[되어 있는지 확인 한 Federation 서버는 운영](Verify-That-a-Federation-Server-Is-Operational.md)|  
+|![페더레이션된 서버 팜 배포](media/icon_checkboxo.gif)|Active Directory Federation Services 배포를 준비할 때 중요 한 개념 및 고려 사항을 검토 \(AD FS\)합니다. **참고:**|![페더레이션된 서버 팜 배포](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Windows Server 2012 R2에서 AD FS 디자인 가이드](../../ad-fs/design/AD-FS-Design-Guide-in-Windows-Server-2012-R2.md)<br /><br />![페더레이션된 서버 팜 배포](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[AD FS 개념 이해 키](../../ad-fs/technical-reference/Understanding-Key-AD-FS-Concepts.md)|  
+||AD FS 구성 저장소에 Microsoft SQL Server를 사용하려는 경우 SQL Server의 기능 인스턴스를 배포해야 합니다.|[SQL Server](https://technet.microsoft.com/sqlserver) **Warning:** Windows Server 2012 R2에서 AD FS 팜을 만들고 SQL Server를 사용하여 구성 데이터를 저장하려면 SQL Server 2008 이상(SQL Server 2012 포함)을 사용하면 됩니다.|  
+|![페더레이션된 서버 팜 배포](media/icon_checkboxo.gif)|Active Directory 도메인에 컴퓨터를 가입시킵니다.|![페더레이션된 서버 팜 배포](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[컴퓨터를 도메인에 가입](Join-a-Computer-to-a-Domain.md)|  
+|![페더레이션된 서버 팜 배포](media/icon_checkboxo.gif)|등록 한 Secure Socket Layer \(SSL\) AD FS에 대 한 인증서입니다.|![페더레이션된 서버 팜 배포](media/bc6cea1a-1c6c-4124-8c8f-1df5adfe8c88.gif)[AD FS에 대 한 SSL 인증서를 등록 합니다.](Enroll-an-SSL-Certificate-for-AD-FS.md)|  
+|![페더레이션된 서버 팜 배포](media/icon_checkboxo.gif)|AD FS 역할 서비스를 설치합니다.|![페더레이션된 서버 팜 배포](media/bc6cea1a-1c6c-4124-8c8f-1df5adfe8c88.gif)[AD FS 역할 서비스 설치](Install-the-AD-FS-Role-Service.md)|  
+|![페더레이션된 서버 팜 배포](media/icon_checkboxo.gif)|페더레이션 서버를 구성합니다.|![페더레이션된 서버 팜 배포](media/bc6cea1a-1c6c-4124-8c8f-1df5adfe8c88.gif)[페더레이션 서버 구성](Configure-a-Federation-Server.md)|  
+|![페더레이션된 서버 팜 배포](media/icon_checkboxo.gif)|선택적 단계: Device Registration Service를 사용 하 여 페더레이션 서버 구성 \(DRS\)합니다.|![페더레이션된 서버 팜 배포](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Device Registration Service를 사용 하 여 페더레이션 서버 구성](Configure-a-federation-server-with-Device-Registration-Service.md)|  
+|![페더레이션된 서버 팜 배포](media/icon_checkboxo.gif)|호스트 추가 \(A\) 및 별칭을 \(CNAME\) 회사 도메인 이름 시스템에 리소스 레코드 \(DNS\) 페더레이션 서비스와 DRS에 대 한 합니다.|![페더레이션된 서버 팜 배포](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[페더레이션 서비스와 DRS에 대해 회사 DNS 구성](Configure-Corporate-DNS-for-the-Federation-Service-and-DRS.md)|  
+|![페더레이션된 서버 팜 배포](media/icon_checkboxo.gif)|페더레이션 서버가 작동하는지 확인합니다.|![페더레이션된 서버 팜 배포](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[확인 하는 페더레이션 서버 작동](Verify-That-a-Federation-Server-Is-Operational.md)|  
   
 
-## <a name="see-also"></a>참조 하십시오  
+## <a name="see-also"></a>관련 항목  
 [AD FS 배포](../../ad-fs/AD-FS-Deployment.md)  
 
-[지침에 따라 Windows Server 2012 r 2 광고 FS 배포](../../ad-fs/deployment/Windows-Server-2012-R2-AD-FS-Deployment-Guide.md)  
+[Windows Server 2012 R2 AD FS 배포 가이드](../../ad-fs/deployment/Windows-Server-2012-R2-AD-FS-Deployment-Guide.md)  
   
 

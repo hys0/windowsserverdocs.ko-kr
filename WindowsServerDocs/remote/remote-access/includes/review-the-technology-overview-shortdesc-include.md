@@ -1,0 +1,1 @@
+**[Always On VPN 기술을 배우고](../vpn/always-on-vpn/always-on-vpn-technology-overview.md)합니다.** 이 배포에 대 한 있습니다 해야 Windows Server 2016을 실행 하는 새로운 원격 액세스 서버를 설치 뿐만 아니라 배포에 대 한 기존 인프라의 일부를 수정 합니다.

@@ -1,6 +1,6 @@
 ---
 title: 도구 확장에 있는 사용자 지정 게이트웨이 플러그 인 사용
-description: Windows Admin Center SDK (Project Honolulu) 도구 확장 개발-도구 확장에 사용자 지정 게이트웨이 플러그 인 사용
+description: Windows Admin Center SDK (프로젝트 브라 티) 도구 확장을 개발-도구 확장에서 사용자 지정 게이트웨이 플러그 인을 사용 하 여
 ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
@@ -8,34 +8,34 @@ ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: 4652616478b7b05bde97db48bf84648984b5a325
-ms.sourcegitcommit: f1edfc6525e09dd116b106293f9260123a94de0c
-ms.translationtype: MT
+ms.openlocfilehash: c9b2e9201d58472286b42a9c89a36423f40d143d
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "9296765"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59834514"
 ---
-# 도구 확장에 있는 사용자 지정 게이트웨이 플러그 인 사용
+# <a name="use-a-custom-gateway-plugin-in-your-tool-extension"></a>도구 확장에 있는 사용자 지정 게이트웨이 플러그 인 사용
 
 >적용 대상: Windows Admin Center, Windows Admin Center 미리 보기
 
-이 문서에서는 Windows Admin Center CLI를 사용 하 여 만든 새, 빈 도구 확장에 사용자 지정 게이트웨이 플러그 인을 사용 합니다.
+이 문서에서는 Windows Admin Center CLI를 사용 하 여 만든 새로운 빈 도구 확장에서 사용자 지정 게이트웨이 플러그 인을 사용 합니다.
 
-## 사용자 환경 준비 ##
+## <a name="prepare-your-environment"></a>사용자 환경 준비 ##
 
-않은 경우 새, 빈 도구 확장을 만들고 환경을 준비 [도구 확장 개발](..\develop-tool.md) 에 지시를 따릅니다.
+이미 않았다면의 지시를 따릅니다 [개발 도구 확장](..\develop-tool.md) 환경을 준비 하 고 새 빈 도구 확장 합니다.
 
-## 프로젝트에 모듈 추가 ##
+## <a name="add-a-module-to-your-project"></a>프로젝트에 모듈을 추가 합니다. ##
 
-않은 경우 다음 단계에서 사용 하는 프로젝트에 새 [빈 모듈](add-module.md) 을 추가 합니다.  
+이미 않았다면 새 추가 [빈 모듈](add-module.md) 다음 단계에서 사용 하는 프로젝트에 있습니다.  
 
-## 사용자 지정 게이트웨이 플러그 인에 통합 추가 ##
+## <a name="add-integration-to-custom-gateway-plugin"></a>통합 사용자 지정 게이트웨이 플러그 인 추가 ##
 
-이제 방금 만든 새, 빈 모듈에서 사용자 지정 게이트웨이 플러그 인을 사용 됩니다.
+이제 방금 만든 비어 있는 모듈의 사용자 지정 게이트웨이 플러그 인을 사용 하겠습니다.
 
-### Plugin.service.ts 만들기
+### <a name="create-pluginservicets"></a>Plugin.service.ts 만들기
 
-위에서 만든 새 도구 모듈의 디렉터리를 변경 (```\src\app\{!Module-Name}```), 새 파일을 만듭니다 ```plugin.service.ts```.
+위에서 만든 새 도구 모듈의 디렉터리 (```\src\app\{!Module-Name}```), 새 파일을 만들고 ```plugin.service.ts```합니다.
 
 방금 만든 파일에 다음 코드를 추가 합니다.
 ``` ts
@@ -61,16 +61,13 @@ export class PluginService {
 }
 ```
 
-변경에 대 한 참조가 ```Sample Uno``` 및 ```Sample%20Uno``` 를 적절 하 게 기능 이름으로 합니다.
+에 대 한 참조를 변경 ```Sample Uno``` 고 ```Sample%20Uno``` 적절 하 게 기능 이름입니다.
 
-[!WARNING]
-> 기본 제공 하는 권장 ```this.appContextService.node``` 에 사용자 지정 게이트웨이 플러그 인에 정의 된 모든 API를 호출 하는 데 사용 됩니다. 이렇게 하면 하는 자격 증명 하는 것은 올바르게 처리 하 여 게이트웨이 플러그 인 내에서 필요한 경우.
+### <a name="modify-modulets"></a>Module.ts 수정
 
-### Module.ts 수정
+엽니다는 ```module.ts``` 앞에서 만든 새 모듈의 파일 (예: ```{!Module-Name}.module.ts```):
 
-Open 합니다 ```module.ts``` 앞에서 만든 새 모듈의 파일 (예: ```{!Module-Name}.module.ts```):
-
-다음 가져오기 문을 추가 합니다.
+다음 import 문을 추가 합니다.
 
 ``` ts
 import { HttpService } from '@microsoft/windows-admin-center-sdk/angular';
@@ -78,7 +75,7 @@ import { Http } from '@microsoft/windows-admin-center-sdk/core';
 import { PluginService } from './plugin.service';
 ```
 
-(선언) 후 다음 공급자를 추가 합니다.
+(선언) 뒤에 다음 공급자를 추가 합니다.
 
 ``` ts
   ,
@@ -89,11 +86,11 @@ import { PluginService } from './plugin.service';
   ]
 ```
 
-### Component.ts 수정
+### <a name="modify-componentts"></a>Component.ts 수정
 
-Open 합니다 ```component.ts``` 앞에서 만든 새 모듈의 파일 (예: ```{!Module-Name}.component.ts```):
+엽니다는 ```component.ts``` 앞에서 만든 새 모듈의 파일 (예: ```{!Module-Name}.component.ts```):
 
-다음 가져오기 문을 추가 합니다.
+다음 import 문을 추가 합니다.
 
 ``` ts
 import { ActivatedRouteSnapshot } from '@angular/router';
@@ -133,9 +130,9 @@ import { PluginService } from './plugin.service';
   }
 ```
 
-### Component.html 수정 ###
+### <a name="modify-componenthtml"></a>Modify component.html ###
 
-Open 합니다 ```component.html``` 앞에서 만든 새 모듈의 파일 (예: ```{!Module-Name}.component.html```):
+엽니다는 ```component.html``` 앞에서 만든 새 모듈의 파일 (예: ```{!Module-Name}.component.html```):
 
 Html 파일에 다음 콘텐츠를 추가 합니다.
 ``` html
@@ -143,6 +140,6 @@ Html 파일에 다음 콘텐츠를 추가 합니다.
 {{ responseResult }}
 ```
 
-## 빌드 및 사이드 로드 확장
+## <a name="build-and-side-load-your-extension"></a>빌드 및 쪽에 확장을 로드합니다.
 
-마쳤으면 이제 준비 [빌드 및 사이드 로드](..\develop-tool.md#build-and-side-load-your-extension) 에 Windows Admin Center 확장 합니다.
+준비가 이제 [빌드 및 부하 쪽](..\develop-tool.md#build-and-side-load-your-extension) Windows Admin Center 확장 합니다.

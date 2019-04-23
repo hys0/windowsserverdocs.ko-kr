@@ -1,6 +1,6 @@
 ---
-title: 액세스 역할 기반 제어
-description: 이 항목은 Windows Server 2016에는 IP 주소 관리 (IPAM) 관리 가이드의 일부입니다.
+title: 역할 기반 액세스 제어
+description: 이 항목은 Windows Server 2016에서 관리 IPAM (IP 주소) 관리 가이드의 일부입니다.
 manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -13,38 +13,39 @@ ms.topic: article
 ms.assetid: ecdfc589-fa14-4bb3-ab7e-456ebc719385
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: eec6d2a89b24d4847cb993bab31d86881f2cae0f
-ms.sourcegitcommit: 19d9da87d87c9eefbca7a3443d2b1df486b0b010
+ms.openlocfilehash: 86a57e5a74073ecf749c4ec8209999e8ace31508
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59838904"
 ---
-# <a name="role-based-access-control"></a>액세스 역할 기반 제어
+# <a name="role-based-access-control"></a>역할 기반 액세스 제어
 
->적용 대상: Windows Server (세미콜론 연간 채널) Windows Server 2016
+>적용 대상: Windows Server (반기 채널), Windows Server 2016
 
-이 항목에서는 IPAM 액세스 역할 기반 컨트롤 사용에 대 한 정보를 제공 합니다.  
+이 항목에서는 IPAM에서 역할 기반 access control을 사용 하는 방법에 대 한 정보를 제공 합니다.  
   
 > [!NOTE]  
-> 이 항목 외에 다음 IPAM 액세스 제어 설명서를이 섹션에서 사용할 수 있습니다.  
+> 이 항목 외에 다음 IPAM 액세스 컨트롤 설명서는이 섹션에서 사용할 수 있습니다.  
 >   
-> -   [역할 기반 관리 액세스 제어 서버 관리자를 사용 하 여](../../technologies/ipam/Manage-Role-Based-Access-Control-with-Server-Manager.md)  
-> -   [역할 기반 관리 액세스를 Windows PowerShell 제어](../../technologies/ipam/Manage-Role-Based-Access-Control-with-Windows-PowerShell.md)  
+> -   [관리 역할 기반 액세스 제어 사용 하 여 서버 관리자](../../technologies/ipam/Manage-Role-Based-Access-Control-with-Server-Manager.md)  
+> -   [역할 기반 관리 Windows PowerShell 사용 하 여 컨트롤에 액세스](../../technologies/ipam/Manage-Role-Based-Access-Control-with-Windows-PowerShell.md)  
   
-액세스 역할 기반 제어 DNS 서버, DNS 영역 DNS 리소스 기록 수준 등 다양 한 수준의 액세스 권한을 지정할 수 있습니다.  
-사용자가 세밀 만드는, 편집 및 삭제 다양 한 유형의 리소스 DNS 레코드에 대 한 작업 기반 역할 액세스 제어를 사용 하 여 지정할 수 있습니다.  
+역할 기반 액세스 제어를 사용 하면 DNS 서버, DNS 영역 및 DNS 리소스 레코드 수준을 비롯 한 다양 한 수준에 대 한 액세스 권한을 지정할 수 있습니다.  
+역할 기반 액세스 제어를 사용 하 여 만들고, 편집 및 다양 한 DNS 리소스 레코드를 삭제 작업을 세부적으로 제어 권한이 있는 사용자를 지정할 수 있습니다.  
   
-사용자는 다음과 같은 권한이 되도록 액세스 제어를 구성할 수 있습니다.  
+사용자는 다음 사용 권한을 제한 된 액세스 제어를 구성할 수 있습니다.  
   
--   사용자가 특정 DNS 리소스 기록만 편집할 수 있습니다.  
+-   사용자만 특정 DNS 리소스 레코드를 편집할 수 있습니다.  
   
--   사용자는 DNS 리소스 기록 PTR MX 등의 특정 종류의 편집할 수 있습니다.  
+-   사용자는 PTR MX 등 특정 유형의 DNS 리소스 레코드를 편집할 수 있습니다.  
   
--   사용자는 DNS 특정 영역에 대 한 리소스 레코드 편집할 수 있습니다.  
+-   사용자가 특정 영역에 대 한 DNS 리소스 레코드를 편집할 수 있습니다.  
   
-## <a name="see-also"></a>참조 하십시오  
-[역할 기반 관리 액세스 제어 서버 관리자를 사용 하 여](../../technologies/ipam/Manage-Role-Based-Access-Control-with-Server-Manager.md)  
-[역할 기반 관리 액세스를 Windows PowerShell 제어](../../technologies/ipam/Manage-Role-Based-Access-Control-with-Windows-PowerShell.md)  
+## <a name="see-also"></a>관련 항목  
+[관리 역할 기반 액세스 제어 사용 하 여 서버 관리자](../../technologies/ipam/Manage-Role-Based-Access-Control-with-Server-Manager.md)  
+[역할 기반 관리 Windows PowerShell 사용 하 여 컨트롤에 액세스](../../technologies/ipam/Manage-Role-Based-Access-Control-with-Windows-PowerShell.md)  
 [IPAM 관리](Manage-IPAM.md)  
   
 

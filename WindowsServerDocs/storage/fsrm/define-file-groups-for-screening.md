@@ -1,6 +1,6 @@
 ---
-title: "차단을 위한 파일 그룹 정의"
-description: "이 문서에서는 파일 차단에 대한 네임스페이스, 파일 차단 예외 또는 파일 그룹별 파일 저장소 보고서를 만드는 데 사용되는 파일 그룹을 정의하는 방법을 설명합니다."
+title: 차단을 위한 파일 그룹 정의
+description: 이 문서에서는 파일 차단에 대한 네임스페이스, 파일 차단 예외 또는 파일 그룹별 파일 저장소 보고서를 만드는 데 사용되는 파일 그룹을 정의하는 방법을 설명합니다.
 ms.date: 7/7/2017
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -9,14 +9,15 @@ author: JasonGerend
 manager: brianlic
 ms.author: jgerend
 ms.openlocfilehash: 6e043692500370b6c084a4db068027d13afc957f
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59838434"
 ---
 # <a name="define-file-groups-for-screening"></a>차단을 위한 파일 그룹 정의
 
-> 적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> 적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 *파일 그룹*은 파일 차단에 대한 네임스페이스, 파일 차단 예외 또는 **파일 그룹별 파일** 저장소 보고서를 정의하는 데 사용됩니다. 파일 그룹은 파일 이름 패턴의 집합으로 구성되며, 이는 다음 기준으로 그룹화됩니다.
 
@@ -40,16 +41,16 @@ ms.lasthandoff: 10/17/2017
 
     -   파일 그룹에 포함하려는 파일 집합의 경우 **포함할 파일** 상자에 파일 이름 패턴을 입력한 다음 **추가**를 클릭합니다.
     -   파일 그룹에서 제외하려는 파일 집합의 경우 **제외할 파일** 상자에 파일 이름 패턴을 입력한 다음 **추가**를 클릭합니다.
-        표준 와일드카드 규칙이 적용됩니다. 예를 들어 **\*.exe**는 모든 실행 가능 파일을 선택합니다.
+        예를 들어 표준 와일드 카드 규칙 적용  **\*.exe** 모든 실행 파일을 선택 합니다.
 
 5.  **확인**을 클릭합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 -   [파일 차단 관리](file-screening-management.md)
--   [파일 차단 만들기](create-file-screen.md)
+-   [파일 화면 만들기](create-file-screen.md)
 -   [파일 차단 예외 만들기](create-file-screen-exception.md)
--   [파일 차단 템플릿 만들기](create-file-screen-template.md)
+-   [파일 화면 템플릿 만들기](create-file-screen-template.md)
 -   [저장소 보고서 관리](storage-reports-management.md)
 
 

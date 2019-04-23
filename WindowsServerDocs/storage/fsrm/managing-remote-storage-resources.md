@@ -1,6 +1,6 @@
 ---
-title: "원격 저장소 리소스 관리"
-description: "이 문서에서는 원격 컴퓨터에서 저장소 리소스를 관리하는 방법을 설명합니다."
+title: 원격 저장소 리소스 관리
+description: 이 문서에서는 원격 컴퓨터에서 저장소 리소스를 관리하는 방법을 설명합니다.
 ms.date: 7/7/2017
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -9,14 +9,15 @@ author: JasonGerend
 manager: brianlic
 ms.author: jgerend
 ms.openlocfilehash: 583c36f399848cf67c6f3a850e62015b224768d9
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59836634"
 ---
 # <a name="managing-remote-storage-resources"></a>원격 저장소 리소스 관리
 
-> 적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> 적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 원격 컴퓨터에서 저장소 리소스를 관리하는 데는 두 가지 옵션이 있습니다.
 
@@ -28,12 +29,12 @@ ms.lasthandoff: 10/17/2017
 > [!Note]
 > 파일 서버 리소스 관리자는 로컬 컴퓨터나 원격 컴퓨터의 리소스를 관리할 수 있지만 동시에 두 리소스를 관리할 수는 없습니다.
 
-예를 들어 다음과 같이 할 수 있습니다.
+예를 들어 다음 작업을 할 수 있습니다.
 
 -   파일 서버 리소스 관리자 MMC 스냅인을 사용하여 도메인의 다른 컴퓨터에 연결하고, 원격 컴퓨터에 위치한 볼륨 또는 폴더의 저장소 활용을 검토합니다.
 -   로컬 서버에 할당량과 파일 차단 템플릿을 만들고 명령줄 도구를 사용하여 지점에 있는 파일 서버로 이러한 템플릿을 가져옵니다.
 
-이 섹션에는 다음 항목이 포함됩니다.
+이 섹션에서는 다음 항목을 다룹니다.
 
 -   [원격 컴퓨터에 연결](connect-to-remote-computer.md)
 -   [명령줄 도구](command-line-tools.md)

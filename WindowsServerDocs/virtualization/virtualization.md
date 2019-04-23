@@ -11,13 +11,13 @@ author: shortpatti
 ms.author: pashort
 ms.localizationpriority: high
 ms.openlocfilehash: 1ae36a2e1be1559094dd55dba41fa9a468118260
-ms.sourcegitcommit: 9ed4c9fe04ebf3ef488170503c9a354c992b6fde
-ms.translationtype: HT
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4339461"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59840064"
 ---
-# 가상화
+# <a name="virtualization"></a>가상화
 
 >[!TIP]
 > 이전 버전의 Windows Server에 대한 자세한 내용이 궁금하십니까? docs.microsoft.com에서 다른 [Windows Server 라이브러리](/previous-versions/windows/)를 확인할 수 있습니다. 또한 특정 정보에 대해 [이 사이트를 검색](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions)할 수 있습니다.
@@ -41,7 +41,7 @@ Windows Server의 가상화 기술은 소프트웨어 정의 인프라를 생성
                     <div class="cardText">
                         <h3>보호된 패브릭 및 보호된 VM</h3>
 <HR />
-                        <p>클라우드 서비스 공급자 또는 엔터프라이즈 사설 클라우드 관리자로서 보호된 패브릭을 사용하여 VM에 대한 더욱 안전한 환경을 제공할 수 있습니다. 보호된 패브릭은 하나의 호스트 보호 서비스 \(HGS\)와 3개 노드로 이루어진 하나의 클러스터, 하나 이상의 보호된 호스트, 보호된 VM 세트로 구성되어 있습니다.</p>
+                        <p>클라우드 서비스 공급자 또는 엔터프라이즈 사설 클라우드 관리자로서 보호된 패브릭을 사용하여 VM에 대한 더욱 안전한 환경을 제공할 수 있습니다. 보호 된 패브릭 호스트 보호자 서비스를 하나의 이루어져 \(HGS\) -일반적으로 세 개의 노드에서와 하나 이상의 보호 된 호스트 클러스터 및 집합이 보호 된 Vm입니다.</p>
                      </div>
                   </div>
               </div>
@@ -99,7 +99,7 @@ Windows Server의 가상화 기술은 소프트웨어 정의 인프라를 생성
                         </div>
                     </div>
                     <div class="cardText">
-                       <h3>엔터프라이즈를 위한 Windows 10: 작업에서 장치를 사용하는 방법</h3>
+                       <h3>엔터프라이즈를 위한 Windows 10: 작업에 대 한 장치를 사용 하는 방법</h3>
 <HR />
                        <p>Hyper-V 기술은 하드웨어 가상화를 통해 컴퓨팅 리소스를 제공합니다. Hyper-V는 운영 체제 및 응용 프로그램을 실행하는 데 사용할 수 있도록 VM이라는 소프트웨어 버전의 컴퓨터를 생성합니다. 동시에 여러 VM을 실행할 수 있으며, 필요에 따라 VM을 생성 및 삭제할 수 있습니다.</p>
                      </div>
@@ -138,7 +138,7 @@ Windows Server의 가상화 기술은 소프트웨어 정의 인프라를 생성
 
 ---
 
-### 관련 항목
+### <a name="related"></a>관련 항목
 
 - Hyper-V에서 가상화 환경을 생성하려면 특정 하드웨어가 필요합니다. 자세한 내용은 [Windows Server 2016의 Hyper-V에 대한 시스템 요구 사항](./hyper-v/system-requirements-for-hyper-v-on-windows.md)을 참조하세요. 
 

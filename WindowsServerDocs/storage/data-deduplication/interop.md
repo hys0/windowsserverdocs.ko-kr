@@ -1,6 +1,6 @@
 ---
 ms.assetid: 60fca6b2-f1c0-451f-858f-2f6ab350d220
-title: "데이터 중복 제거 상호 운용성"
+title: 데이터 중복 제거 상호 운용성
 ms.technology: storage-deduplication
 ms.prod: windows-server-threshold
 ms.topic: article
@@ -9,18 +9,19 @@ manager: klaasl
 ms.author: wgries
 ms.date: 09/16/2016
 ms.openlocfilehash: 2a28be1bdd22915182cbdbb2726ab9d37422e889
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59834434"
 ---
 # <a name="data-deduplication-interoperability"></a>데이터 중복 제거 상호 운용성
 
-> 적용 대상: Windows Server(반기 채널), Windows Server 2016
+> 적용 대상: Windows Server (반기 채널), Windows Server 2016
 
-## <a id="supported"></a>지원 여부
+## <a id="supported"></a>지원
 
-### <a id="supported-clusters"></a>장애 조치(failover) 클러스터링
+### <a id="supported-clusters"></a>장애 조치 클러스터링
 
 [장애 조치(failover) 클러스터링](../..//failover-clustering/failover-clustering-overview.md)은 클러스터의 모든 노드에 [데이터 중복 제거 기능이 설치](install-enable.md#install-dedup)되어 있는 경우 완전히 지원됩니다. 기타 중요한 참고 사항:
 
@@ -60,28 +61,28 @@ Windows Server 백업에서는 최적화된 볼륨을 있는 그대로(즉, 중�
     wbadmin get versions
     ```
 
-    이 출력 버전 ID는 날짜 및 시간 문자열입니다(예: 08/18/2016-06:22).
+    이 출력 버전 ID는 날짜 및 시간 문자열이 됩니다, 예를 들어: 08/18/2016-06:22.
 
 4. 전체 볼륨을 복원합니다.
     ```PowerShell
     wbadmin start recovery –version:02/16/2012-06:22 -itemtype:Volume  -items:E: -recoveryTarget:E:
     ```
 
-    **-또는-**  
+    **--OR--**  
 
     특정 폴더를 복원합니다(이 경우 E:\Docs 폴더).
     ```PowerShell
     wbadmin start recovery –version:02/16/2012-06:22 -itemtype:File  -items:E:\Docs  -recursive
     ```
 
-## <a id="unsupported"></a>지원 안 됨
+## <a id="unsupported"></a>지원 되지 않는
 ### <a id="unsupported-refs"></a>ReFS
 Windows Server 2016에서는 ReFS로 포맷된 볼륨의 데이터 중복 제거가 지원되지 않습니다. [Windows Server vNext에 이 항목이 포함되도록 Windows Server Storage UserVoice에서 투표하실 수 있습니다](https://windowsserver.uservoice.com/forums/295056-storage/suggestions/7962813-support-deduplication-on-refs).
 
-### <a id="unsupported-windows-client"></a>Windows 10(클라이언트 OS)
+### <a id="unsupported-windows-client"></a>Windows 10 (클라이언트 OS)
 Windows 10에서는 데이터 중복 제거가 지원되지 않습니다. Windows Server 2016에서 해당 이진 파일을 분리하여 Windows 10에 설치하는 방법을 설명하는 몇몇 블로그 포스트가 Windows 커뮤니티에서 널리 읽히고 있으나 이러한 시나리오는 데이터 중복 제거 개발 과정에서 검증된 적이 없습니다. [Windows 10 vNext에 이 항목이 포함되도록 Windows Server Storage UserVoice에서 투표하실 수 있습니다](https://windowsserver.uservoice.com/forums/295056-storage/suggestions/9011008-add-deduplication-support-to-client-os).
 
-### <a id="unsupported-windows-search"></a>Windows 검색
+### <a id="unsupported-windows-search"></a>Windows Search
 Windows Search는 데이터 중복 제거를 지원하지 않습니다. 데이터 중복 제거는 Windows Search에서 인덱싱할 수 없는 재분석 지점을 사용하므로 Windows Search에서는 중복 제거된 파일을 모두 건너뛰고 인덱스에서 제외시킵니다. 결과적으로, 중복 제거된 볼륨에 대한 검색 결과는 불완전할 수 있습니다. [Windows Server vNext에 이 항목이 포함되도록 Windows Server Storage UserVoice에서 투표하실 수 있습니다](https://windowsserver.uservoice.com/forums/295056-storage/suggestions/17888647-make-windows-search-service-work-with-data-dedupli).
 
 ### <a id="unsupported-robocopy"></a>Robocopy
