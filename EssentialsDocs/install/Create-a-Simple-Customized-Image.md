@@ -1,6 +1,6 @@
 ---
-title: "간단한 정의 이미지를 만들려면"
-description: "Windows Server Essentials을 사용 하는 방법을 설명 합니다."
+title: 사용자 지정된 단순 이미지 만들기
+description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
@@ -13,40 +13,41 @@ author: nnamuhcs
 ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: e18ff5ded94127449072d28d00b98e17dbe63c3a
-ms.sourcegitcommit: 70c1b6cedad55b9c7d2068c9aa4891c6c533ee4c
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59884614"
 ---
-# <a name="create-a-simple-customized-image"></a>간단한 정의 이미지를 만들려면
+# <a name="create-a-simple-customized-image"></a>사용자 지정된 단순 이미지 만들기
 
->Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials에 적용 됩니다.
+>적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-다음 절차 간단한 정의 이미지를 만들기 위한 사용할 수 있습니다.  
+다음 절차에서는 사용자 지정된 단순 이미지를 만들 수 있습니다.  
   
 #### <a name="to-create-the-image"></a>이미지를 만들려면  
   
-1.  초기 구성에서의 첫 번째 페이지 서버 설치 후 Shift + F10 cmd 창을 누릅니다.  
+1.  서버 설치 후 초기 구성 첫 페이지에서 Shift+F10을 눌러 cmd 창을 시작합니다.  
   
-2.  드라이브 시스템의 루트 SkipIC.txt 파일을 만듭니다.  
+2.  시스템 드라이브 루트에서 SkipIC.txt 파일을 만듭니다.  
   
-3.  서버를 다시 시작 합니다.  
+3.  서버를 다시 시작합니다.  
   
-4.  서버를 USB 플래시 드라이브 또는 DVD, 파일이 포함 되어 있는 unattend.xml를 사용 하 여 시작 합니다. 부팅 가능한 USB 플래시 드라이브를 만드는 방법에 대해 내용은 [부팅 가능한 USB 플래시 드라이브를 만들](Create-a-Bootable-USB-Flash-Drive.md)합니다.  
+4.  unattend.xml 파일이 포함된 USB 플래시 드라이브 또는 DVD를 사용하여 서버를 시작합니다. 부팅 가능 USB 플래시 드라이브 만들기에 대한 자세한 내용은 [Create a Bootable USB Flash Drive](Create-a-Bootable-USB-Flash-Drive.md)를 참조하세요.  
   
-5.  로고 브랜드 대시보드를 추가 합니다. 브랜드 추가 대 한 자세한 내용은 참조 [대시보드, 원격 Web Access 및 실행 패드 브랜드 추가](Add-Branding-to-the-Dashboard--Remote-Web-Access--and-Launchpad.md)합니다.  
+5.  대시보드에 로고 브랜딩을 추가합니다. 브랜딩 추가에 대한 자세한 내용은 [Add Branding to the Dashboard, Remote Web Access, and Launchpad](Add-Branding-to-the-Dashboard--Remote-Web-Access--and-Launchpad.md)를 참조하세요.  
   
-6.  회사 이름을, 로고 EULA 등 사용자 지정 정보를 표시 하려면 OOBE.xml 파일을 만듭니다. OOBE.xml 파일에 대 한 자세한 내용은 참조 [Oobe.xml 파일 등 로고 만들고 EULA](Create-the-Oobe.xml-File-Including-Logo-and-EULA.md)합니다.  
+6.  OOBE.xml 파일을 만들어 회사 이름, 로고 및 EULA와 같은 사용자 지정 정보를 표시합니다. OOBE.xml 파일에 대한 자세한 내용은 [Create the Oobe.xml File Including Logo and EULA](Create-the-Oobe.xml-File-Including-Logo-and-EULA.md)를 참조하세요.  
   
-7.  하지 unattend.xml에서 정의 않으면 기본 서버 이름을 변경 합니다.  
+7.  unattend.xml에 정의하지 않는 경우 기본 서버 이름을 변경합니다.  
   
-8.  기본적으로 서버 이름 임의 문자열로 됩니다. 서버 이름 (예: ContosoServer), 다른 문자열을 변경 하 고 새 서버 이름에 대 한 고객을 알립니다.  
+8.  기본적으로 서버 이름은 임의의 문자열이 됩니다. 서버 이름을 다른 문자열(ContosoServer 등)로 변경한 다음 고객에게 새 서버 이름을 알립니다.  
   
-9. 이미지에 설명 된 대로 배포 준비 [이미지 배포 준비](Preparing-the-Image-for-Deployment.md)합니다.  
+9. [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)의 설명과 같이 이미지 배포를 준비합니다.  
   
-## <a name="see-also"></a>참조 하십시오  
- [Windows Server Essentials ADK 시작](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
+## <a name="see-also"></a>관련 항목  
+ [Windows Server Essentials ADK 시작 하기](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
  [만들기 및 이미지를 사용자 지정](Creating-and-Customizing-the-Image.md)   
- [추가로 사용자 지정](Additional-Customizations.md)   
- [배포에 대 한 이미지를 준비 중](Preparing-the-Image-for-Deployment.md)   
- [고객 만족도 테스트합니다.](Testing-the-Customer-Experience.md)
+ [추가 사용자 지정](Additional-Customizations.md)   
+ [배포용 이미지 준비](Preparing-the-Image-for-Deployment.md)   
+ [사용자 환경 테스트](Testing-the-Customer-Experience.md)

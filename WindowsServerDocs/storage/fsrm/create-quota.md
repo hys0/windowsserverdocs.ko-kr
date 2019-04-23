@@ -1,6 +1,6 @@
 ---
-title: "할당량 만들기"
-description: "이 문서에서는 템플릿을 기반으로 할당량을 만드는 방법을 설명합니다."
+title: 할당량 만들기
+description: 이 문서에서는 템플릿을 기반으로 할당량을 만드는 방법을 설명합니다.
 ms.date: 7/7/2017
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -9,14 +9,15 @@ author: JasonGerend
 manager: brianlic
 ms.author: jgerend
 ms.openlocfilehash: f3c677f5ebf7dda44f4b99a64d0fbf8d2c72b92e
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59883194"
 ---
 # <a name="create-a-quota"></a>할당량 만들기
 
-> 적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> 적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 할당량은 템플릿 또는 사용자 지정 속성으로 만들 수 있습니다. 다음 절차는 템플릿을 기반으로 할당량을 만드는 방법(권장)을 설명합니다. 사용자 지정 속성으로 할당량을 만들려면 이러한 속성을 템플릿으로 저장하여 나중에 다시 사용할 수 있습니다.
 
@@ -48,10 +49,10 @@ ms.lasthandoff: 10/17/2017
 
 7.  **만들기**를 클릭합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 -   [할당량 관리](quota-management.md)
--   [할당량 자동 적용 만들기](create-auto-apply-quota.md)
+-   [만들 자동 적용 할당량을](create-auto-apply-quota.md)
 -   [할당량 템플릿 만들기](create-quota-template.md)
 
 

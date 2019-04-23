@@ -13,11 +13,11 @@ ms.author: jaimeo
 ms.date: 09/06/2017
 ms.localizationpriority: medium
 ms.openlocfilehash: 4c669db414c4f12b6145a26a75b83449f43e8918
-ms.sourcegitcommit: e0479b0114eac7f232e8b1e45eeede96ccd72b26
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "2082495"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59887684"
 ---
 # <a name="developing-powershell-cmdlets-for-nano-server"></a>Nano Server용 PowerShell Cmdlet 개발
 
@@ -27,7 +27,7 @@ ms.locfileid: "2082495"
 > Windows Server, 버전 1709부터 [컨테이너 기본 OS 이미지](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image)로만 Nano 서버를 사용할 수 있습니다. [Nano 서버 변경 사항](nano-in-semi-annual-channel.md)을 확인하여 그 의미를 알아보세요. 
   
 ## <a name="overview"></a>개요  
-설치되는 모든 Nano 서버는 기본적으로 PowerShell Core를 포함하고 있습니다. PowerShell Core는 Nano 서버 및 Windows IoT Core처럼 .NET Core를 기반으로 하고 축소된 Windows 버전에서 실행되는 PowerShell의 축소된 버전입니다. PowerShell Core는 Windows Server 2016에서 실행되는 Windows PowerShell 등의 다른 PowerShell 버전과 같은 방식으로 작동합니다. 그러나 축소된 Nano 서버이기 때문에 Windows Server 2016의 PowerShell 기능 중 Nano 서버의 PowerShell Core에서 사용할 수 없는 기능도 있습니다.  
+Nano 서버의 경우 모든 Nano 서버 설치에 기본적으로 PowerShell Core를 포함합니다. PowerShell Core는 Nano 서버 및 Windows IoT Core처럼 .NET Core를 기반으로 하고 축소된 Windows 버전에서 실행되는 PowerShell의 축소된 버전입니다. PowerShell Core는 Windows Server 2016에서 실행되는 Windows PowerShell 등의 다른 PowerShell 버전과 같은 방식으로 작동합니다. 그러나 축소된 Nano 서버이기 때문에 Windows Server 2016의 PowerShell 기능 중 Nano 서버의 PowerShell Core에서 사용할 수 없는 기능도 있습니다.  
   
 Nano 서버에서 실행하고 싶은 기존 PowerShell cmdlet을 보유하고 있거나 그러한 목적으로 새 cmdlet을 개발 중이라면 이 토픽의 팁과 권장 사항이 도움이 될 것입니다.  
 
@@ -36,8 +36,8 @@ Nano 서버에서 실행하고 싶은 기존 PowerShell cmdlet을 보유하고 �
   
 버전 5.1부터 PowerShell은 다양한 기능 집합 및 플랫폼 호환성을 나타내는 다양한 버전으로 사용 가능합니다.  
   
-- **Desktop Edition:** .NET Framework를 기반으로 구축되며 Server Core 및 Windows Desktop과 같은 전체 버전의 Windows에서 실행되는 PowerShell 버전을 대상 지정하는 스크립트 및 모듈과 호환성을 제공합니다.  
-- **Core Edition:** .NET Framework를 기반으로 구축되며 Nano 서버 및 Windows IoT와 같은 축소된 버전의 Windows에서 실행되는 PowerShell 버전을 대상 지정하는 스크립트 및 모듈과 호환성을 제공합니다.  
+- **데스크톱 버전:** .NET Framework를 기반으로 하며 스크립트 및 모듈의 전체 설치 공간 버전의 Server Core와 같은 Windows 및 Windows 데스크톱에서 실행 중인 PowerShell 버전을 대상으로 호환성을 제공 합니다.  
+- **Core Edition:** .NET Core를 기반으로 하며 스크립트 및 Nano Server와 같은 Windows 및 Windows IoT의 축소 버전에서 실행 되는 powershell 버전을 대상으로 하는 모듈을 사용 하 여 호환성을 제공 합니다.  
   
 실행 중인 PowerShell 버전은 $PSVersionTable의 PSEdition 속성에 표시됩니다.  
 ```powershell  
@@ -107,10 +107,10 @@ At line:1 char:1
   
   
 ## <a name="installing-nano-server"></a>Nano 서버 설치  
-가상 컴퓨터 또는 물리적 컴퓨터에 Nano Server를 설치하기 위한 빠른 시작 및 세부 단계는 이 토픽의 상위 토픽인 [Nano Server 설치](Getting-Started-with-Nano-Server.md)에 나와 있습니다.  
+가상 컴퓨터 또는 물리적 컴퓨터에 Nano 서버를 설치하기 위한 빠른 시작 및 세부 단계는 이 토픽의 상위 토픽인 [Nano 서버 설치](Getting-Started-with-Nano-Server.md)에 나와 있습니다.  
   
 > [!NOTE]  
-> Nano 서버에 대한 개발 작업의 경우 New-NanoServerImage의 -Development 매개 변수를 사용하여 Nano 서버를 설치하는 것이 유용합니다. 그러면 서명되지 않은 드라이버를 설치하고, 디버거 이진 파일을 복사하고, 디버깅을 위한 포트를 열고, 테스트 서명을 사용하고, 개발자 라이선스 없이 AppX 패키지를 설치할 수 있습니다. 예:  
+> Nano 서버에 대한 개발 작업의 경우 New-NanoServerImage의 -Development 매개 변수를 사용하여 Nano 서버를 설치하는 것이 유용합니다. 그러면 서명되지 않은 드라이버를 설치하고, 디버거 이진 파일을 복사하고, 디버깅을 위한 포트를 열고, 테스트 서명을 사용하고, 개발자 라이선스 없이 AppX 패키지를 설치할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
 >  
 >`New-NanoServerImage -DeploymentType Guest -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -Development`  
   
@@ -125,7 +125,7 @@ PowerShell은 다양한 cmdlet 구현 형식을 지원하며, 사용자가 사�
 * %windir%\system32\WindowsPowerShell\v1.0\Modules   
 * %ProgramFiles%\WindowsPowerShell\Modules   
 * %UserProfile%\Documents\WindowsPowerShell\Modules   
-* \<사용자가 보유한 제품 설치 위치>   
+* \<제품 설치 위치 >   
     
  다음 위치에서 세부 정보를 확인합니다.  
  * CIM cmdlet은 .cdxml 파일 확장명을 갖습니다.  
@@ -160,11 +160,11 @@ PowerShell Core SDK 모듈에는 Visual Studio 2015 업데이트 2가 필요합�
 SDK 모듈을 사용하기 전에 Visual Studio 설치를 검토하여 이러한 필수 조건을 충족하는지 확인하세요. Visual Studio를 설치하는 동안 위의 기능을 설치하도록 선택하거나 기존에 설치된 Visual Studio 2015를 수정하여 위의 기능을 설치합니다.  
   
 PowerShell Core SDK 모듈에는 다음 cmdlet이 포함되어 있습니다.  
-- New-NanoCSharpProject: Nano 서버의 Windows Server 2016 릴리스에 포함된 CoreCLR 및 PowerShell Core를 대상으로 하는 새 Visual Studio C# 프로젝트를 만듭니다.  
+- New-NanoCSharpProject: 새 Visual Studio를 만듭니다 C# CoreCLR 및 Nano Server의 Windows Server 2016 릴리스에 포함 된 PowerShell Core를 대상으로 하는 프로젝트입니다.  
 - Show-SdkSetupReadMe: 파일 탐색기에서 SDK 루트 폴더를 열고 수동 설치를 위한 README.txt 파일을 엽니다.  
-- Install-RemoteDebugger: Nano 서버 컴퓨터에 Visual Studio 원격 디버거를 설치 및 구성합니다.  
-- Start-RemoteDebugger: Nano 서버를 실행하는 원격 컴퓨터에서 원격 디버거를 시작합니다.  
-- Stop-RemoteDebugger: Nano 서버를 실행하는 원격 컴퓨터에서 원격 디버거를 중지합니다.  
+- Install-remotedebugger: 설치 하 고 Nano 서버 컴퓨터에 Visual Studio 원격 디버거를 구성 합니다.  
+- Start-RemoteDebugger: Nano Server를 실행 하는 원격 컴퓨터에서 원격 디버거를 시작 합니다.  
+- Stop-remotedebugger: Nano Server를 실행 하는 원격 컴퓨터에서 원격 디버거를 중지 합니다.  
   
 이러한 cmdlet을 사용하는 방법에 대한 자세한 내용을 보려면 다음과 같이 모듈을 설치하고 가져온 후 각 cmdlet에서 Get-help를 실행합니다.  
   
@@ -242,7 +242,7 @@ $result.RemoteAddress = 1.1.1.1
   
 ### <a name="migrating-from-wmi-net-to-mi-net"></a>WMI .NET에서 MI .NET으로 마이그레이션  
   
-[WMI.NET](https://msdn.microsoft.com/library/mt481551(v=vs.110).aspx)이 지원되지 않으므로 이전 API를 사용하는 모든 cmdlet을 지원되는 WMI API: [MI. NET](https://msdn.microsoft.com/library/dn387184(v=vs.85).aspx)으로 마이그레이션해야 합니다. C#을 통해 또는 CimCmdlets 모듈의 cmdlet을 통해 MI.NET에 직접 액세스할 수 있습니다.   
+[WMI.NET](https://msdn.microsoft.com/library/mt481551(v=vs.110).aspx) 는 지원 되지 않으므로 이전 API를 사용 하 여 모든 cmdlet이 지원 되는 WMI API를 마이그레이션해야 합니다. [MI. NET](https://msdn.microsoft.com/library/dn387184(v=vs.85).aspx)으로 마이그레이션해야 합니다. C#을 통해 또는 CimCmdlets 모듈의 cmdlet을 통해 MI.NET에 직접 액세스할 수 있습니다.   
   
 ### <a name="cimcmdlets-module"></a>CimCmdlets 모듈  
   

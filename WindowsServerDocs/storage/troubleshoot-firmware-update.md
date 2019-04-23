@@ -1,6 +1,6 @@
 ---
 ms.assetid: 13210461-1e92-48a1-91a2-c251957ba256
-title: "드라이브 펌웨어 업데이트 문제 해결"
+title: 드라이브 펌웨어 업데이트 문제 해결
 ms.prod: windows-server-threshold
 ms.author: toklima
 ms.manager: masriniv
@@ -9,21 +9,22 @@ ms.topic: article
 author: toklima
 ms.date: 04/18/2017
 ms.openlocfilehash: 7ee5c57839f32d71053e983fc14f76c481236779
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59884164"
 ---
 # <a name="troubleshooting-drive-firmware-updates"></a>드라이브 펌웨어 업데이트 문제 해결
 
->적용 대상: Windows 10, Windows Server(반기 채널),
+>적용 대상: Windows 10, Windows Server (반기 채널)
 
 Windows 10, 버전 1703 이후 버전 및 Windows Server(반기 채널)에는 PowerShell을 통해 펌웨어 업그레이드 가능 추가 한정자(Firmware Upgradeable AQ) 인증을 받은 HDD 및 SSD의 펌웨어를 업데이트하는 기능이 포함되어 있습니다.
 
 다음 웹 사이트에서 이 기능에 대한 자세한 정보를 확인할 수 있습니다.
 
-- [Windows Server 2016에서 드라이브 펌웨어 업데이트](update-firmware.md)
-- [저장소 공간 다이렉트에서 운영 중단 없이 드라이브 펌웨어 업데이트](https://channel9.msdn.com/Blogs/windowsserver/Update-Drive-Firmware-Without-Downtime-in-Storage-Spaces-Direct)
+- [Windows Server 2016에서 드라이브 펌웨어를 업데이트 하는 중](update-firmware.md)
+- [직접 저장소 공간에서 가동 중지 시간 없이 드라이브 펌웨어 업데이트](https://channel9.msdn.com/Blogs/windowsserver/Update-Drive-Firmware-Without-Downtime-in-Storage-Spaces-Direct)
 
 펌웨어 업데이트가 잘못되는 이유는 매우 다양합니다. 이 글은 고급 단계 문제 해결에 도움을 드리기 위해 작성되었습니다.
 
@@ -40,7 +41,7 @@ Windows 10, 버전 1703 이후 버전 및 Windows Server(반기 채널)에는 Po
 이하에서는 문제 해결 정보를 Microsoft 드라이버를 사용한 경우와 타사 드라이버를 사용한 경우에 따라 나눠 개괄적으로 설명합니다.
 
 ## <a name="identifying-inappropriate-hardware"></a>부적합한 하드웨어 확인
-어떤 장치가 올바른 명령 집합을 지원하는지 확인하는 가장 빠른 방법은 간단히 PowerShell을 실행하여 디스크를 나타내는 PhysicalDisk 객체를 Get-StorageFirmwareInfo cmdlet에 전달하는 것입니다. 다음 예제를 참조하세요.
+어떤 장치가 올바른 명령 집합을 지원하는지 확인하는 가장 빠른 방법은 간단히 PowerShell을 실행하여 디스크를 나타내는 PhysicalDisk 객체를 Get-StorageFirmwareInfo cmdlet에 전달하는 것입니다. 다음 예를 참조하세요.
 
 ```powershell
 Get-PhysicalDisk -SerialNumber 15140F55976D | Get-StorageFirmwareInformation
@@ -63,7 +64,7 @@ SupportsUpdate 필드는 최소한 SATA 및 NVMe 장치에 대해서는 자체 �
 
 필요한 명령 집합을 SAS 장치가 지원하는지 확인하는 데는 두 가지 옵션이 있습니다. 
 1.  적절한 펌웨어 이미지와 함께 Update-StorageFirmware cmdlet을 통해 시험해 보는 방법, 또는
-2.  Windows Server 카탈로그(https://www.windowsservercatalog.com/)를 참조해서 어느 SAS 장치가 FW Update AQ를 획득했는지 확인하는 방법.
+2.  Windows Server 카탈로그를 식별 하는 SAS 장치는 성공적으로 FW 업데이트 AQ (작업해왔으며를 참조 하세요. https://www.windowsservercatalog.com/)
 
 ### <a name="remediation-options"></a>재구성 옵션
 테스트 중인 장치가 적절한 명령 집합을 지원하지 않을 경우, 판매업체에 문의해서 필요한 명령 집합을 제공하는 업데이트된 펌웨어가 있는지 확인하거나 Windows Server 카탈로그를 조회해서 적절한 명령 집합을 구현한 소싱 대상 장치가 있는지 확인합니다.
@@ -141,7 +142,7 @@ ClassPnP Operational 채널 외에도, StorAHCI 및 StorNVMe는 장치의 프로
 
 이러한 고급 로그 항목을 수집하려면 로그를 사용 설정하고 해당 펌웨어 업데이트 오류를 재현한 다음, 진단 로그를 저장합니다.
 
-다음은, 다운로드할 이미지가 잘못되어 SATA 장치의 펌웨어 업데이트가 오류를 일으키는 사례입니다(이벤트 ID: 258).
+다음은 예제 SATA 장치 실패에서 펌웨어 업데이트의 이미지를 다운로드 올바르지 않아 (이벤트 ID: 258):
 
 ``` 
 EventData
@@ -173,11 +174,11 @@ Parameter8Value 0
 ```
 
 위 이벤트는 매개 변수 2~6에 상세한 장치 정보를 담고 있습니다. 여기서는 다양한 ATA 레지스터 값이 보입니다. ATA ACS 명세서는 마이크로코드 다운로드 명령의 실패에 대한 아래의 값을 디코딩하는 데 사용될 수 있습니다.
-- 반환 코드: 0 (0000 0000)(해당 없음 - 전송된 페이로드가 없으므로 의미 없음)
-- 기능: 15 (0000 1111)(1비트가 ‘1’로 설정되어 “중단”을 나타냄)
-- SectorCount: 0 (0000 0000)(해당 없음)
-- DriveHead: 160 (1010 0000)(해당 없음 – 사용되지 않는 비트만 설정됨)
-- 명령: 146 (1001 0010)(1비트가 ‘1’로 설정되어 센스 데이터의 가용성을 나타냄)
+- 반환 코드: 0 (0000 0000) (해당 없음-의미가 없는 페이로드 전송 된 이후)
+- 기능: 15 (0000 1111) (비트 1 '1'로 설정 되 고 "중단" 나타냅니다)
+- SectorCount: 0 (0000 0000) (해당 없음)
+- DriveHead: 160 (1010 0000) (해당 없음 – 사용 되지 않는 비트만 설정 됨)
+- 명령: 146 (1001 0010) (비트 1 감지 데이터의 가용성을 나타내는 '1'로 설정 됨)
 
 이를 통해 펌웨어 업데이트 작업이 해당 장치에 의해 중단되었음을 알 수 있습니다.
 

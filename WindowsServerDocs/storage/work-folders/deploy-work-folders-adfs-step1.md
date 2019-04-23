@@ -1,37 +1,38 @@
 ---
-title: "AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포 - 1단계, AD FS 설치"
+title: AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포 - 1단계, AD FS 설치
 ms.prod: windows-server-threshold
 ms.technology: storage-work-folders
 ms.topic: article
 manager: klaasl
 ms.author: jeffpatt
 author: JeffPatt24
-ms.date: 4/5/2017
+ms.date: 10/18/2018
 ms.assetid: 938cdda2-f17e-4964-9218-f5868fd96735
-ms.openlocfilehash: 4a8a044ad6a8ec5275f5be4b949a2ab58d16da61
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.openlocfilehash: a26b784c18049ee473a191abc7bfa0a5d253d15e
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59883034"
 ---
-# <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-1-set-up-ad-fs"></a>AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포: 1단계, AD FS 설치
+# <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-1-set-up-ad-fs"></a>AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. AD FS 설치 1 단계
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016
+>적용 대상: Windows Server (반기 채널), Windows Server 2016
 
 이 항목에서는 AD FS(Active Directory Federation Services) 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더를 배포하는 첫 번째 단계를 설명합니다. 이 과정의 다른 단계는 다음 항목에서 찾을 수 있습니다.  
   
--   [AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포: 개요](deploy-work-folders-adfs-overview.md)  
+-   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 개요](deploy-work-folders-adfs-overview.md)  
   
--   [AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포: 2단계, AD FS 구성 후 작업](deploy-work-folders-adfs-step2.md)  
+-   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 단계 2에서 AD FS 구성 후 작업](deploy-work-folders-adfs-step2.md)  
   
--   [AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포: 3단계, 클라우드 폴더 설치](deploy-work-folders-adfs-step3.md)  
+-   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 단계 3, 작업 폴더 설정](deploy-work-folders-adfs-step3.md)  
   
--   [AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포: 4단계, 웹 응용 프로그램 프록시 설치](deploy-work-folders-adfs-step4.md)  
+-   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 4 단계, 웹 응용 프로그램 프록시 설정](deploy-work-folders-adfs-step4.md)  
   
--   [AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포: 5단계, 클라이언트 설치](deploy-work-folders-adfs-step5.md)  
+-   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 5 단계 클라이언트 설정](deploy-work-folders-adfs-step5.md)  
   
 > [!NOTE]
->   이 섹션에서는 Windows Server 2016 환경에 대한 지침을 다룹니다. Windows Server 2012 R2를 사용하는 경우 [Windows Server 2012 R2 지침](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx)을 따르세요.
+>   이 섹션에서는 Windows Server 2016 환경에 대한 지침을 다룹니다. Windows Server 2012 R2를 사용하는 경우 [Windows Server 2012 R2 instructions(Windows Server 2012 R2 지침)](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx)을 따르세요.
 
 클라우드 폴더에 사용할 AD FS를 설치하려면 다음 절차를 수행하세요.  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/17/2017
   
 회사 정책에 따라 이러한 항목을 모두 준비하는 데 다소 시간이 걸릴 수 있으므로 테스트 환경 만들기를 시작하기 전에 항목 요청 프로세스를 미리 시작하는 것이 좋습니다.  
   
-인증서를 구입할 수 있는 여러 상용 CA(인증 기관)가 있습니다. Microsoft에서 신뢰할 수 있는 CA 목록은 [KB 문서 931125](http://support.microsoft.com/kb/931125)에서 찾을 수 있습니다. 또 다른 방법은 회사의 엔터프라이즈 CA에서 인증서를 얻는 것입니다.  
+인증서를 구입할 수 있는 여러 상용 CA(인증 기관)가 있습니다. Microsoft에서 신뢰할 수 있는 CA 목록은 [KB 문서 931125](https://support.microsoft.com/kb/931125)에서 찾을 수 있습니다. 또 다른 방법은 회사의 엔터프라이즈 CA에서 인증서를 얻는 것입니다.  
   
 테스트 환경에서는 제공된 스크립트 중 하나를 통해 생성되는 자체 서명된 인증서를 사용합니다.  
   
@@ -63,7 +64,7 @@ AD FS 자체 서명된 인증서를 만들려면 다음 단계를 따릅니다.
 3.  실행 정책을 제한 없음으로 설정합니다.  
   
     ```powershell  
-    PS C:\temp\scripts> .\makecert.ps1 C:\temp\scripts> Set-ExecutionPolicy –ExecutionPolicy Unrestricted   
+    Set-ExecutionPolicy –ExecutionPolicy Unrestricted   
     ```  
   
 4.  스크립트를 복사한 디렉터리로 변경합니다.  
@@ -71,7 +72,7 @@ AD FS 자체 서명된 인증서를 만들려면 다음 단계를 따릅니다.
 5.  makecert 스크립트를 실행합니다.  
   
     ```powershell  
-    PS C:\temp\scripts> .\makecert.ps1  
+    .\makecert.ps1  
     ```  
   
 6.  주체 인증서를 변경하라는 메시지가 나타나면 새로운 주체 값을 입력합니다. 이 예의 값은 **blueadfs.contoso.com**입니다.  
@@ -103,7 +104,7 @@ AD FS 인증서는 다음 값을 가진 SAN 인증서여야 합니다.
 enterpriseregistration SAN은 Workplace Join에 필요합니다.  
   
 ### <a name="set-the-server-ip-address"></a>서버 IP 주소 설정  
-서버 IP 주소를 고정 IP 주소로 변경합니다. 테스트 예제에서는 IP 클래스 A: 192.168.0.160/서브넷 마스크: 255.255.0.0/기본 게이트웨이: 192.168.0.1/기본 설정 DNS: 192.168.0.150(도메인 컨트롤러의 IP 주소\)를 사용합니다.  
+서버 IP 주소를 고정 IP 주소로 변경합니다. 테스트 예를 들어 192.168.0.160 인 IP 클래스 A를 사용 하 여 / 서브넷 마스크: 255.255.0.0/기본 게이트웨이: 192.168.0.1/DNS를 기본 설정: 192.168.0.150 (도메인 컨트롤러의 IP 주소\)합니다.  
   
 ## <a name="install-the-ad-fs-role-service"></a>AD FS 역할 서비스 설치  
 AD DS를 설치하려면 다음 단계를 따릅니다.  
@@ -120,7 +121,7 @@ Windows PowerShell을 통해 해당 AD FS 설치를 수행하려면 다음 명�
   
 ```powershell  
 Add-WindowsFeature RSAT-AD-Tools  
-Add-WindowsFeature AD FS-Federation –IncludeManagementTools  
+Add-WindowsFeature ADFS-Federation –IncludeManagementTools  
 ```  
   
 ## <a name="configure-ad-fs"></a>AD FS 구성  
@@ -131,7 +132,7 @@ Add-WindowsFeature AD FS-Federation –IncludeManagementTools
   
 1.  서버 관리자를 엽니다.  
   
-2.  서버 관리자 창의 맨 위에서 **알림** 플래그를 클릭한 다음 **이 서버에 페더레이션 서비스를 구성하십시오.**를 클릭합니다.  
+2.  서버 관리자 창의 맨 위에서 **알림** 플래그를 클릭한 다음 **이 서버에 페더레이션 서비스를 구성하십시오.** 를 클릭합니다.  
   
 3.  Active Directory Federation Services 구성 마법사가 실행됩니다. **AD DS에 연결** 페이지에서 AD FS 계정으로 사용할 도메인 관리자 계정을 입력하고 **다음**을 클릭합니다.  
   
@@ -144,7 +145,7 @@ Add-WindowsFeature AD FS-Federation –IncludeManagementTools
   
 6.  **서비스 계정 지정** 페이지에서 관리 서비스 계정에 사용할 이름을 입력합니다. 테스트 예제의 경우 **그룹 관리 서비스 계정 만들기**를 선택하고 **계정 이름**에 **ADFSService**를 입력합니다. **다음**을 클릭합니다.  
   
-7.  **구성 데이터베이스 지정** 페이지에서 **Windows 내부 데이터베이스를 사용하여 이 서버에 데이터베이스를 만듭니다.**를 선택하고 **다음**을 클릭합니다.  
+7.  **구성 데이터베이스 지정** 페이지에서 **Windows 내부 데이터베이스를 사용하여 이 서버에 데이터베이스를 만듭니다.** 를 선택하고 **다음**을 클릭합니다.  
   
 8.  **검토 옵션** 페이지에 사용자가 선택한 옵션의 개요가 표시됩니다. **다음**을 클릭합니다.  
   
@@ -176,14 +177,14 @@ AD FS를 구성한 후에는 이전 단계에서 만든 관리 서비스 계정�
 AD FS 팜을 설치하려면:  
   
 ```powershell  
-$cert = Get-ChildItem CERT:\LocalMachine\My |where {$_.Subject -match blueadfs.contoso.com} | sort $_.NotAfter -Descending | select -first 1    
+$cert = Get-ChildItem CERT:\LocalMachine\My |where {$_.Subject -match blueadfs.contoso.com} | sort $_.NotAfter -Descending | select -first 1    
 $thumbprint = $cert.Thumbprint  
 Install-ADFSFarm -CertificateThumbprint $thumbprint -FederationServiceDisplayName "Contoso Corporation" –FederationServiceName blueadfs.contoso.com -GroupServiceAccountIdentifier contoso\ADFSService$ -OverwriteConfiguration -ErrorAction Stop  
 ```  
   
-다음 단계: [AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포: 2단계, AD FS 구성 후 작업](deploy-work-folders-adfs-step2.md)  
+다음 단계: [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 단계 2에서 AD FS 구성 후 작업](deploy-work-folders-adfs-step2.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
 [클라우드 폴더 개요](Work-Folders-Overview.md)  
   
 

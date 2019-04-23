@@ -9,17 +9,17 @@ author: greg-lindsay
 ms.author: greg-lindsay
 ms.localizationpriority: high
 ms.openlocfilehash: 62821abc6c9eec660fa6af832bb1aba151708021
-ms.sourcegitcommit: 3883eebbba70bfea0221e510863ee1a724a5f926
-ms.translationtype: HT
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5783675"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59884084"
 ---
-# Windows Server에 대한 Azure 하이브리드 혜택
+# <a name="azure-hybrid-benefit-for-windows-server"></a>Windows Server에 대한 Azure 하이브리드 혜택
 
 >적용 대상: Windows Server
 
-## 혜택 설명, 규칙 및 사용 사례
+## <a name="benefit-description-rules-and-use-cases"></a>혜택 설명, 규칙 및 사용 사례
 
 Windows Server에 대한 Azure 하이브리드 혜택은 온-프레미스 Windows Server 라이선스와 Software Assurance를 함께 사용하여 Azure에서 Windows Server VM에 최대 40%까지 저장이 가능하도록 합니다.  이 경우, Windows Server에 대한 라이선스에 Software Assurance 혜택이 적용되기 때문에 고객은 VM의 인프라 비용만 지불하면 됩니다.  이 혜택은 2008R2, 2012, 2012R2 및 2016 릴리스에서 Standard 및 Datacenter 버전의 Windows Server에 모두 적용할 수 있습니다.  이 혜택은 모든 지역 및 소버린 클라우드에서 사용할 수 있습니다.
 
@@ -37,7 +37,7 @@ SA/구독이 활성 상태인 Windows Server 2-프로세서 라이선스와 SA/�
 
 Azure 하이브리드 혜택을 활용하는 VM은 SA/구독 기간 동안에만 Azure에서 실행이 가능합니다. SA/구독 만료 시간이 가까워지면 고객은 선택에 따라 SA/구독을 갱신하거나, VM에 대한 하이브리드 혜택 기능을 해제하거나, 하이브리드 혜택을 사용하여 VM 프로비전을 해제할 수 있습니다. 
 
-### 절약 효과 예제 
+### <a name="savings-examples"></a>절약 효과 예제 
 
 ![이미지 2](media/ahb02.png)
  
@@ -51,13 +51,13 @@ SA 요구 사항이 포함된 Windows Server 참조 테이블:
 
 몇몇 라이선스 옵션에 대한 구성 예제:
 
-![이미지 4](media/ahb04.png)
-![이미지 5](media/ahb05.png)
+![image 4](media/ahb04.png)
+![image 5](media/ahb05.png)
 
  
 Windows Server에 대한 Azure 하이브리드 혜택에 대한 자세한 내용은 Azure 하이브리드 혜택 웹사이트를 참조하세요.
 
-## 호환성을 유지하는 방법
+## <a name="how-to-maintain-compliance"></a>호환성을 유지하는 방법
 
 Windows Server VM에 Azure 하이브리드 혜택을 적용하고 싶은 고객들은 이 혜택을 정품 인증하기 앞서 자격이 있는 라이선스의 수와 SA/구독의 적용 범위를 확인하고 위의 지침에 따라 혜택과 함께 올바른 수의 VM을 배포해야 합니다. 실행 중인 VM에 이미 Azure 하이브리드 혜택이 적용되고 있는 경우에는 실행 중인 장치의 수에 대해 인벤토리를 수행하고 현재 활성 상태인 SA 라이선스와 비교해 확인해야 합니다.  SA 라이선스 위치의 유효성을 검사하려면 Microsoft Enterprise 계약 라이선스 전문가에게 문의하세요.
 Windows Server에 대한 Azure 하이브리드 혜택 구독을 통해 배포된 모든 VM을 확인하고 계산하려면 다음 중 하나를 수행하세요.
@@ -84,7 +84,7 @@ Windows Server에 대한 Azure 하이브리드 혜택 구독을 통해 배포된
 
 라이선스 위치에 대한 포괄적인 보기를 생성하려면 소유하고 있는 각 구독마다 인벤토리를 수행해야 합니다.
 
-[Azure 하이브리드 혜택 WS SA 개수 도구](http://download.microsoft.com/download/7/1/2/712FEFF0-155C-4ABF-96C0-CE4EC4DB0516/Azure_Hybrid_Benefit_Windows_Server_SA_Count_Tool.xlsx)
+[Azure 하이브리드 혜택 WS SA 수 도구](http://download.microsoft.com/download/7/1/2/712FEFF0-155C-4ABF-96C0-CE4EC4DB0516/Azure_Hybrid_Benefit_Windows_Server_SA_Count_Tool.xlsx)
 
 위와 같이 인벤토리를 수행하고 실행 중인 Azure 하이브리드 혜택 인스턴스의 수에 대해 완전히 사용 허가를 받았음을 확인한 경우에는 더 이상의 추가 조치가 필요하지 않습니다. VM 수를 늘려가며 이 혜택을 적용할 수 있음을 확인했다면 전체 비용을 지불하기 보다 혜택이 적용 중인 인스턴스로 전환하여 추가적으로 비용을 최적화하고 싶을 수 있습니다.
 
@@ -99,7 +99,7 @@ Windows Server Software Assurance 및 구독은 다음과 같은 Microsoft 라�
 
 Microsoft는 Azure 하이브리드 혜택 사용량의 적격 여부를 확인하기 위해 언제든 최종 고객을 감사할 수 있는 권리가 있습니다. 
 
-## 배포 지침 
+## <a name="deployment-guidance"></a>배포 지침 
 
 구입 채널에 관계 없이 적격 라이선스를 보유하고 있는 고객이면 누구나 미리 작성된 갤러리 이미지를 사용할 수 있도록 허용하는 것은 물론이고, 파트너가 고객을 대신하여 배포를 수행할 수 있도록 허용하고 있습니다. 
 

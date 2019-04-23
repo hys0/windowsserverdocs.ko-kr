@@ -1,6 +1,6 @@
 ---
-title: "할당량 템플릿 속성 편집"
-description: "이 문서에서는 할당량 템플릿 속성을 편집하여 변경 사항을 원본 할당량 템플릿으로 만든 할당량에까지 확장하는 방법을 설명합니다."
+title: 할당량 템플릿 속성 편집
+description: 이 문서에서는 할당량 템플릿 속성을 편집하여 변경 사항을 원본 할당량 템플릿으로 만든 할당량에까지 확장하는 방법을 설명합니다.
 ms.date: 7/7/2017
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -9,14 +9,15 @@ author: JasonGerend
 manager: brianlic
 ms.author: jgerend
 ms.openlocfilehash: 0362b30e16dacb354220c770899195240f3e19ee
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59885784"
 ---
 # <a name="edit-quota-template-properties"></a>할당량 템플릿 속성 편집
 
-> 적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> 적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 할당량 템플릿을 변경할 경우, 해당 변경 사항을 원본 할당량 템플릿으로 생성된 할당량으로 확장할 수 있는 옵션을 가지게 됩니다. 원래 템플릿과 일치하는 할당량만 수정하거나, 할당량이 생성된 후의 모든 수정에 관계없이 원본 템플릿에서 파생된 모든 할당량을 수정하도록 선택할 수 있습니다. 이 기능은 모든 변경 사항을 적용할 수 있는 하나의 중앙 지점을 제공하여 할당량의 속성을 업데이트하는 과정을 간소화합니다.
 
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/17/2017
 
 6.  **확인**을 클릭합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 -   [할당량 관리](quota-management.md)
 -   [할당량 템플릿 만들기](create-quota-template.md)

@@ -1,0 +1,76 @@
+---
+title: Servermanagercmd
+description: '에 대 한 Windows 명령을 항목 * * *- '
+ms.custom: na
+ms.prod: windows-server-threshold
+ms.reviewer: na
+ms.suite: na
+ms.technology: manage-windows-commands
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: 507c4b87-8e13-4872-8b34-0c7508eecbc1
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 07/11/2018
+ms.openlocfilehash: ba0b85814d942323b12e1874b852fcf28b8ac068
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59883244"
+---
+# <a name="servermanagercmd"></a>Servermanagercmd
+
+>적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
+> [!IMPORTANT]
+> 이 명령은 Windows Server 2008을 실행 하는 서버 또는 Windows Server 2008 r 2에만 있습니다. **Servermanagercmd.exe** , 되지 않으며 Windows Server 2012에서 사용할 수 있습니다. 설치 또는 Windows Server 2012의 역할, 역할 서비스 및 기능을 제거 하는 방법에 대 한 정보를 참조 하십시오. [설치 또는 역할, 역할 서비스 및 기능 제거](https://go.microsoft.com/fwlink/?LinkID=239563) Microsoft TechNet에 있습니다.
+
+설치 하 고 역할, 역할 서비스 및 기능을 제거 합니다. 또한 모든 역할, 역할 서비스 및 기능을 사용할 수의 목록을 표시 하 고이 컴퓨터에 설치 되는 표시 합니다. 역할, 역할 서비스 및이 도구를 사용 하 여 지정할 수 있는 기능에 대 한 자세한 내용은 참조는 [서버 관리자 도움말](https://go.microsoft.com/fwlink/?LinkID=137387)합니다. 이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
+
+## <a name="syntax"></a>구문
+```
+servermanagercmd -query [[[<Drive>:]<path>]<query.xml>] [-logpath   [[<Drive>:]<path>]<log.txt>]
+servermanagercmd -inputpath  [[<Drive>:]<path>]<answer.xml> [-resultpath <result.xml> [-restart] | -whatif] [-logpath [[<Drive>:]<path>]<log.txt>]
+servermanagercmd -install <Id> [-allSubFeatures] [-resultpath   [[<Drive>:]<path>]<result.xml> [-restart] | -whatif] [-logpath   [[<Drive>:]<path>]<log.txt>]
+servermanagercmd -remove <Id> [-resultpath    <result.xml> [-restart] | -whatif] [-logpath  [[<Drive>:]<path>]<log.txt>]
+servermanagercmd [-help | -?]
+servermanagercmd -version
+```
+
+## <a name="parameters"></a>매개 변수
+|매개 변수|설명|
+|-------|--------|
+|-query [[[\<Drive>:]\<path>]\<*query.xml*>]|서버에서 모든 역할, 역할 서비스 및 설치 하 고 설치할 수 있는 기능 목록을 표시 합니다. 이 매개 변수는 약식을 사용할 수 있습니다 **-q**합니다. XML 파일에 저장 된 쿼리 결과 하려는 경우 바꾸려면 XML 파일을 지정 *query.xml*합니다.|
+|-inputpath  <[[\<Drive>:]\<path>]*answer.xml*>|설치 하거나 제거 하는 역할, 역할 서비스 및 기능으로 표시 하는 XML 응답 파일에 지정 된 *answer.xml*합니다. 이 매개 변수는 약식 ç ï **-p.**|
+|-설치 \< *Id*>|역할, 역할 서비스 또는 기능으로 지정 된 설치 *Id*합니다. 식별자의 대/소문자를 구분 하지 않습니다. 여러 역할, 역할 서비스 및 기능을 공백으로 구분 되어야 합니다. 다음 선택적 매개 변수에 사용 된는 **-설치** 매개 변수입니다.<br /><br />-   **-설정** \< *SettingName*>=\<*SettingValue*> 지정 설치에 대 한 설정이 필요 합니다.<br />-   **-allSubFeatures** 모든 하위 서비스와 함께 상위 역할, 역할 서비스 또는 기능에 명명 된 기능을 설치 하도록 지정 합니다 *Id* 값입니다. **참고:**     일부 역할 컨테이너의 모든 역할 서비스 설치를 허용 하도록 명령줄 식별자를 갖지 않습니다. 또한이 경우 서버 관리자 명령의 동일한 인스턴스에 역할 서비스를 설치할 수 없습니다. 예를 들어 동일한 서버 관리자 명령 인스턴스를 사용 하 여 active directory Federation Services 및 페더레이션 서비스 프록시 역할 서비스의 페더레이션 서비스 역할 서비스를 설치할 수 없습니다.<br />-   **약식인** \< *result.xml > 설치 결과를 나타내는 XML 파일에 저장 *result.xml*합니다. 이 매개 변수는 약식 ç ï **-r**합니다. **참고:**     실행할 수 없습니다 **servermanagercmd** 둘 다를 사용 하 여 합니다 **약식인** 매개 변수 및 **-whatif** 매개 변수가 지정 되었습니다.<br /> -    **-다시 시작** 설치가 (해야 하는 역할 또는 기능 설치) 하는 경우 완료 되 면 컴퓨터를 자동으로 다시 시작 합니다.<br /> -    **-whatif** 에 대해 지정 된 모든 작업 표시를 **-설치** 매개 변수입니다. 약식 형태를 사용할 수도 있습니다는 **-whatif** 매개 변수 **-w**합니다. 실행할 수 없습니다 **servermanagercmd** 둘 다를 사용 하 여 합니다 **약식인** 매개 변수 및 **-whatif** 매개 변수가 지정 되었습니다.<br /> -    **-logpath** \<[[\<드라이브 >:]\<경로 >]* log.txt* > 이름 및 기본값이 아닌 로그 파일의 위치를 지정 합니다 **%windir%\temp\servermanager.log**합니다.|
+|-remove \<*Id*>|역할, 역할 서비스 또는 기능으로 지정 된 제거 *Id*합니다. 식별자의 대/소문자를 구분 하지 않습니다. 여러 역할, 역할 서비스 및 기능을 공백으로 구분 되어야 합니다. 다음 선택적 매개 변수에 사용 된는 **-제거** 매개 변수입니다.<br /><br />-   **약식인** \<[[\<드라이브 >:]\<경로 >]*result.xml*> 제거 결과를 나타내는 XML 파일에 저장 *result.xml*합니다. 이 매개 변수는 약식 ç ï **-r**합니다. **참고:**     실행할 수 없습니다 **servermanagercmd** 둘 다를 사용 하 여 합니다 **약식인** 매개 변수 및 **-whatif** 매개 변수를 지정 합니다.<br />-   **-다시 시작** 제거 (나머지 역할이 나 기능에 필요한 다시 시작) 하는 경우 완료 되 면 컴퓨터를 자동으로 다시 시작 합니다.<br />-   **-whatif를 지원함** 에 대 한 지정 된 모든 작업을 표시 합니다 **-제거** 매개 변수입니다. 약식 형태를 사용할 수도 있습니다는 **-whatif** 매개 변수 **-w**합니다. 실행할 수 없습니다 **servermanagercmd** 둘 다를 사용 하 여 합니다 **약식인** 매개 변수 및 **-whatif** 매개 변수를 지정 합니다.<br />-   **-logpath**\<[[\<드라이브 >:]\<경로 >]*log.txt*> 이름 및 기본값이 아닌 로그 파일의 위치를 지정 **%windir%\temp\ servermanager.log**합니다.|
+|-도움말|명령 프롬프트 창에서 도움말을 표시 합니다. 약식을 사용할 수 있습니다 **-?** 합니다.|
+|-버전|서버 관리자 버전 번호를 표시 합니다. 약식을 사용할 수 있습니다 **-v**합니다.|
+
+## <a name="remarks"></a>설명
+**Servermanagercmd** 는 사용 되지 않으며 이후 버전의 Windows에서 지원 되지 않을 수도 있습니다. Windows Server 2008 r 2를 실행 하는 컴퓨터에서 서버 관리자를 실행 하는 경우 서버 관리자를 사용할 수 있는 Windows PowerShell cmdlet을 사용 하는 것이 좋습니다. 자세한 내용은 참조 [서버 관리자 cmdlet](https://go.microsoft.com/fwlink/?LinkID=137653)합니다.
+Servermanagercmd는 서버의 로컬 드라이브에 모든 디렉터리에서 실행할 수 있습니다. 소프트웨어를 설치 또는 제거 하려는 서버에서 Administrators 그룹의 구성원 이어야 합니다.
+
+> [!IMPORTANT]
+> Windows Server 2008 R2에서 사용자 계정 컨트롤에서 지정한 보안 제한 때문에 실행 해야 합니다 **Servermanagercmd** 명령 프롬프트 창에서 관리자 권한으로 열립니다. 이렇게 하려면 명령 프롬프트 실행 파일을 마우스 오른쪽 단추로 클릭 또는 **명령 프롬프트** 에서 개체를 **시작** 메뉴 및 클릭 **관리자 권한으로 실행**합니다.
+
+## <a name="BKMK_examples"></a>예제
+다음 예제를 사용 하는 방법을 보여 줍니다 **servermanagercmd** 목록은 모든 역할, 역할 서비스 및 기능을 사용할 수 있는 역할, 역할 서비스 및 기능에서 컴퓨터에 설치 되어 표시 됩니다.
+```
+servermanagercmd -query
+```
+다음 예제를 사용 하는 방법을 보여 줍니다 **servermanagercmd** 웹 서버 (IIS) 역할을 설치 하 고 설치 결과 표현 되는 XML 파일에 저장 하려면 *installResult.xml*합니다.
+```
+servermanagercmd -install Web-Server -resultpath installResult.xml
+```
+다음 예제에서는 사용 하는 방법의 * * whatif * * 매개 변수를 **servermanagercmd** 지침에 따라 역할, 역할 서비스 및 기능 설치 또는 제거는 대 한 자세한 정보를 표시 하는 가 나타내는 XML 응답 파일에 지정 된 *install.xml*합니다.
+```
+servermanagercmd -inputpath install.xml -whatif
+```
+
+#### <a name="additional-references"></a>추가 참조
+-   에 지정할 수 있는 역할, 역할 서비스 또는 기능 식별자의 전체 목록은 합니다 *Id* 매개 변수 또는 XML 응답 파일을 사용 하는 방법에 대 한 자세한 내용은 **Servermanagercmd**를 참조 합니다 [서버 관리자 도움말](https://go.microsoft.com/fwlink/?LinkID=137387)합니다. (https://go.microsoft.com/fwlink/?LinkID=137387).
+-   참조 [서버 관리자 cmdlet](https://go.microsoft.com/fwlink/?LinkID=137653) 서버 관리자를 사용할 수 있는 Windows PowerShell cmdlet의 목록은 합니다.
+-   [명령줄 구문 키](command-line-syntax-key.md)

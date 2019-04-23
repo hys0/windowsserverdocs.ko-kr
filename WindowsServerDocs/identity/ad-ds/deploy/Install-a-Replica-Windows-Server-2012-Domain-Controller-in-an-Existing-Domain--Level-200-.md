@@ -1,59 +1,60 @@
 ---
 ms.assetid: e6da5984-d99d-4c34-9c11-4a18cd413f06
-title: "기존 도메인 (200 수준)의 복제 Windows Server 2012 도메인 컨트롤러 설치"
-description: 
-author: billmath
-ms.author: billmath
-manager: femila
+title: 기존 도메인에 복제 Windows Server 2012 도메인 컨트롤러 설치(수준 200)
+description: ''
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: e3151a8beee2870ecc747a64241df9d562ad4cc2
-ms.sourcegitcommit: db290fa07e9d50686667bfba3969e20377548504
+ms.openlocfilehash: cb4432084386cb3296163f24c801be1c74b379df
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59883044"
 ---
-# <a name="install-a-replica-windows-server-2012-domain-controller-in-an-existing-domain-level-200"></a>기존 도메인 (200 수준)의 복제 Windows Server 2012 도메인 컨트롤러 설치
+# <a name="install-a-replica-windows-server-2012-domain-controller-in-an-existing-domain-level-200"></a>기존 도메인에 복제 Windows Server 2012 도메인 컨트롤러 설치(수준 200)
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-이 항목에서는 기존 숲 또는 도메인 Windows Server 2012를 사용 하 여 서버 관리자 또는 Windows PowerShell로 업그레이드 하는 데 필요한 단계에 설명 합니다. 기존 도메인 Windows Server 2012를 실행 하는 도메인 컨트롤러를 추가 하는 방법을 설명 합니다.  
+이 항목에서는 서버 관리자 또는 Windows PowerShell을 사용하여 기존 포리스트나 도메인을 Windows Server 2012로 업그레이드하는 데 필요한 단계를 설명하며, Windows Server 2012를 실행하는 도메인 컨트롤러를 기존 도메인에 추가하는 방법을 알아봅니다.  
   
--   [복제본 워크플로 및 업그레이드](../../ad-ds/deploy/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md#BKMK_Workflow)  
+-   [업그레이드 및 복제본 워크플로](../../ad-ds/deploy/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md#BKMK_Workflow)  
   
--   [복제 Windows PowerShell 및 업그레이드](../../ad-ds/deploy/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md#BKMK_PS)  
+-   [업그레이드 및 복제본 Windows PowerShell](../../ad-ds/deploy/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md#BKMK_PS)  
   
 -   [배포](../../ad-ds/deploy/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md#BKMK_Dep)  
   
-## <a name="BKMK_Workflow"></a>복제본 워크플로 및 업그레이드  
-다음 그림 AD DS 역할을 이전에 설치 되어 있고 Active Directory 도메인 서비스 구성 마법사 서버 관리자를 사용 하 여 기존 도메인에 새 도메인 컨트롤러를 만들기 시작 때 Active Directory 도메인 서비스 구성 프로세스를 보여 줍니다.  
+## <a name="BKMK_Workflow"></a>업그레이드 및 복제본 워크플로  
+다음 다이어그램에서는 이전에 AD DS 역할을 설치하고 서버 관리자를 사용하여 기존 도메인에서 새 도메인 컨트롤러를 만드는 Active Directory 도메인 서비스 구성 마법사를 시작한 경우의 Active Directory 도메인 서비스 구성 프로세스를 보여 줍니다.  
   
-![복제본 설치](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/adds_forestupgrade.png)  
+![복제 데이터베이스를 설치 합니다.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/adds_forestupgrade.png)  
   
-## <a name="BKMK_PS"></a>복제 Windows PowerShell 및 업그레이드  
+## <a name="BKMK_PS"></a>업그레이드 및 복제본 Windows PowerShell  
   
 |||  
 |-|-|  
-|**ADDSDeployment Cmdlet**|인수 (**굵게** 인수가 필요 합니다. *기울임꼴로 표시* 인수 Windows PowerShell 또는 광고 DS 구성 마법사를 사용 하 여 지정할 수 있습니다.)|  
-|설치 AddsDomainController|-SkipPreChecks<br /><br />***-도메인 이름***<br /><br />*-SafeModeAdministratorPassword*<br /><br />*-SiteName*<br /><br />*-ADPrepCredential*<br /><br />-ApplicationPartitionsToReplicate<br /><br />*-AllowDomainControllerReinstall*<br /><br />-확인<br /><br />*-CreateDNSDelegation*<br /><br />***자격 증명***<br /><br />-CriticalReplicationOnly<br /><br />*-데이터베이스 경로*<br /><br />*-DNSDelegationCredential*<br /><br />힘<br /><br />*-InstallationMediaPath*<br /><br />*-InstallDNS*<br /><br />*-LogPath*<br /><br />-MoveInfrastructureOperationMasterRoleIfNecessary<br /><br />-NoDnsOnNetwork<br /><br />*-NoGlobalCatalog*<br /><br />-Norebootoncompletion<br /><br />*-ReplicationSourceDC*<br /><br />-SkipAutoConfigureDNS<br /><br />-SiteName<br /><br />*-SystemKey*<br /><br />*-SYSVOLPath*<br /><br />*-UseExistingAccount*<br /><br />*-Whatif*|  
+|**ADDSDeployment Cmdlet**|인수(**굵게** 표시된 인수는 필수 항목이며, *기울임꼴* 인수는 Windows PowerShell 또는 AD DS 구성 마법사를 사용하여 지정할 수 있음)|  
+|Install-AddsDomainController|-SkipPreChecks<br /><br />***-DomainName***<br /><br />*-SafeModeAdministratorPassword*<br /><br />*-SiteName*<br /><br />*-ADPrepCredential*<br /><br />-ApplicationPartitionsToReplicate<br /><br />*-AllowDomainControllerReinstall*<br /><br />-Confirm<br /><br />*-CreateDNSDelegation*<br /><br />***-Credential***<br /><br />-CriticalReplicationOnly<br /><br />*-DatabasePath*<br /><br />*-DNSDelegationCredential*<br /><br />-Force<br /><br />*-InstallationMediaPath*<br /><br />*-InstallDNS*<br /><br />*-LogPath*<br /><br />-MoveInfrastructureOperationMasterRoleIfNecessary<br /><br />-NoDnsOnNetwork<br /><br />*-NoGlobalCatalog*<br /><br />-Norebootoncompletion<br /><br />*-ReplicationSourceDC*<br /><br />-SkipAutoConfigureDNS<br /><br />-SiteName<br /><br />*-SystemKey*<br /><br />*-SYSVOLPath*<br /><br />*-UseExistingAccount*<br /><br />*-Whatif*|  
   
 > [!NOTE]  
-> **-자격 증명** 인수는만 경우 하지 이미 로그온 (업그레이드 하는 경우 숲)는 엔터프라이즈 관리자 및 스키마 관리자 그룹 또는 도메인 관리자 그룹의 회원으로 (에 추가 하는 새 DC 기존 도메인) 하는 경우 필요 합니다.  
+> **-credential** 인수는 현재 Enterprise Admins 및 Schema Admins 그룹의 구성원(포리스트를 업그레이드하는 경우) 또는 Domain Admins 그룹의 구성원(기존 도메인에 새 DC를 추가하는 경우)으로 로그인되어 있지 않은 경우에만 필요합니다.  
   
 ## <a name="BKMK_Dep"></a>배포  
   
 ### <a name="deployment-configuration"></a>배포 구성  
-![복제본 설치](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradeDeployConfig.png)  
+![복제 데이터베이스를 설치 합니다.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradeDeployConfig.png)  
   
-서버 관리자 모든 도메인 컨트롤러 프로 모션으로 시작 되 고 **배포 구성** 페이지 합니다. 나머지 옵션과 필수 필드가 페이지에서 다음 페이지를 선택 하는 배포 작업에 따라 변경 됩니다.  
+서버 관리자는 **배포 구성** 페이지에서 모든 도메인 컨트롤러 수준 올리기를 시작합니다. 선택한 배포 작업에 따라 이 페이지 및 다음 페이지에 표시되는 나머지 옵션 및 필수 필드가 바뀝니다.  
   
-기존 숲 업그레이드 하거나 기존 도메인에 쓸 수 있는 도메인 컨트롤러 추가 클릭 **도메인 컨트롤러 기존 도메인에 추가** 클릭 **선택** 에 **도메인이이 도메인에 대 한 정보를 지정**합니다. 서버 관리자 묻는 유효한 자격 증명 필요 합니다.  
+기존 포리스트를 업그레이드하거나 쓰기 가능한 도메인 컨트롤러를 기존 도메인에 추가하려면 클릭 **기존 도메인에 도메인 컨트롤러 추가** 를 클릭한 다음 **선택** 을 클릭하여 **이 작업에 대한 도메인 정보를 지정합니다**. 필요한 경우 서버 관리자에 유효한 자격 증명을 제공하라는 메시지가 표시됩니다.  
   
-숲 업그레이드 자격 증명 그룹 구성원 엔터프라이즈 관리자와 스키마 관리자 그룹 Windows Server 2012에 포함 된 필요 합니다. Active Directory 도메인 서비스 구성 묻는 메시지가 나중에 적절 한 권한이 또는 그룹 구성원 현재 자격 증명 되어 있지 않습니다.  
+포리스트를 업그레이드하려면 Windows Server 2012의 Enterprise Admins 그룹 구성원 자격과 Schema Admins 그룹 구성원 자격을 둘 다 포함하는 자격 증명이 있어야 합니다. 현재 자격 증명에 적절한 사용 권한이나 그룹 구성원이 없는 경우 나중에 Active Directory Domain Services 구성 마법사에 자격 증명을 제공하라는 메시지가 표시됩니다.  
   
-자동 Adprep 과정이 기존 Windows Server 2012 도메인 도메인 컨트롤러에서 이전 버전의 Windows Server 실행 하는 도메인을 추가 하는 도메인 컨트롤러 차이 작동 합니다.  
+기존 Windows Server 2012 도메인과 도메인 컨트롤러에서 이전 버전의 Windows Server를 실행하는 도메인에 도메인 컨트롤러를 추가하는 작업 간의 차이점은 자동 Adprep 프로세스뿐입니다.  
   
 배포 구성 ADDSDeployment cmdlet 및 인수는 다음과 같습니다.  
   
@@ -63,23 +64,23 @@ Install-AddsDomainController
 -credential <pscredential>  
 ```  
   
-![복제본 설치](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradeCreds.png)  
+![복제 데이터베이스를 설치 합니다.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradeCreds.png)  
   
-![복제본 설치](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradeSelectDomain.png)  
+![복제 데이터베이스를 설치 합니다.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradeSelectDomain.png)  
   
-나중에으로 이산 필수 검사 반복 중 일부는 각 페이지에서 특정 테스트를 수행 합니다. 예를 들어는 선택한 도메인 최소 기능 수준을 충족 하지 않는 경우 필요가 없습니다 알아보려면 필수 확인으로 통해 프로 모션:  
+특정 테스트는 각 페이지에서 수행되며, 일부 테스트는 나중에 개별 필수 구성 요소 확인으로 반복됩니다. 예를 들어 선택한 도메인이 최소 기능 수준을 충족하지 않으면 수준 올리기부터 필수 구성 요소 확인까지 모든 과정을 수행할 필요가 없습니다.  
   
-![복제본 설치](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradeFFLError.png)  
+![복제 데이터베이스를 설치 합니다.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradeFFLError.png)  
   
 ### <a name="domain-controller-options"></a>도메인 컨트롤러 옵션  
-![복제본 설치](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradeDCOptions.png)  
+![복제 데이터베이스를 설치 합니다.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradeDCOptions.png)  
   
-**도메인 컨트롤러 옵션** 페이지 새 도메인 컨트롤러에 대 한 도메인 컨트롤러 기능을 지정 합니다. 가능한 도메인 컨트롤러 기능은 **DNS 서버**, **드**, 및 **읽기 전용 도메인 컨트롤러**합니다. 모든 도메인 컨트롤러 분산된 환경에서 사용 가능 하도록 DNS 및 GC 서비스를 제공 하는 것이 좋습니다. 기본적으로 GC은 항상 선택 하 고 현재 도메인 호스트 권한 시작 쿼리 기반 DNS 해당 Dc에 이미 있는 경우 DNS 서버 기본적으로 선택 됩니다. **도메인 컨트롤러 옵션** 페이지도 논리 적절 한 Active Directory를 선택할 수 있습니다 **사이트 이름** 숲 구성에서 합니다. 기본적으로 가장 적은 서브넷 사이트에서는 선택 합니다. 사이트가 하나뿐인 경우 자동으로 선택 합니다.  
+**도메인 컨트롤러 옵션** 페이지에서는 새 도메인 컨트롤러에 대한 도메인 컨트롤러 기능을 지정합니다. 구성 가능한 도메인 컨트롤러 기능에는 **DNS 서버**, **글로벌 카탈로그** 및 **읽기 전용 도메인 컨트롤러**가 포함됩니다. 분산된 환경에서의 고가용성을 위해 모든 도메인 컨트롤러에서 DNS 및 GC 서비스를 제공하는 것이 좋습니다. GC는 항상 기본적으로 선택되며, DNS 서버는 현재 도메인에서 권한 시작 쿼리를 기반으로 해당 DC에 이미 있는 DNS를 호스트하는 경우 기본적으로 선택됩니다. **도메인 컨트롤러 옵션** 페이지에서는 포리스트 구성에서 적절한 Active Directory 논리 **사이트 이름** 을 선택할 수도 있습니다. 기본적으로 가장 정확한 서브넷을 포함한 사이트가 선택됩니다. 사이트가 1개만 있는 경우 자동으로 해당 사이트가 선택됩니다.  
   
 > [!NOTE]  
-> 서버 Active Directory 서브넷에 속하지 않는 경우 둘 이상의 Active Directory 사이트가 아무 것도 선택 및 **다음** 단추는 목록에서 사이트를 선택할 때까지 사용할 수 없습니다.  
+> 서버가 어떠한 Active Directory 서브넷에도 속해 있지 않고 둘 이상의 Active Directory 사이트가 있는 경우에는 아무 항목도 선택되지 않습니다. 이 경우 목록에서 사이트를 선택해야 **다음** 단추를 사용할 수 있습니다.  
   
-지정 된 **디렉터리 서비스 복원 모드 암호** 서버에 적용 암호 정책을 준수 해야 합니다. 항상 복잡 하 고 강력한 암호 또는 암호를 선택 합니다.  
+지정한 **디렉터리 서비스 복원 모드 암호** 는 서버에 적용되는 암호 정책을 준수해야 합니다. 항상 강력하고 복잡한 암호 또는 암호 문구를 선택하십시오.  
   
 **도메인 컨트롤러 옵션** ADDSDeployment 인수는 다음과 같습니다.  
   
@@ -91,37 +92,37 @@ Install-AddsDomainController
 ```  
   
 > [!IMPORTANT]  
-> 인수로 제공 된 경우에 이미 사이트 이름이 있어야 **-sitename**합니다. **설치-AddsDomainController** cmdlet 사이트를 생성 하지 않습니다. Cmdlet 사용할 수 **새로운 adreplicationsite** 새 사이트를 만들 수 있습니다.  
+> **-sitename**에 대한 인수로 제공된 경우 사이트 이름이 이미 존재해야 합니다. **install-AddsDomainController** cmdlet은 사이트를 만들지 않습니다. **new-adreplicationsite** cmdlet을 사용하여 새 사이트를 만들 수 있습니다.  
   
-**SafeModeAdministratorPassword** 특별 한 인수의 작업은 다음과 같습니다.  
+**SafeModeAdministratorPassword** 인수의 작업은 특별합니다.  
   
--   하는 경우 *지정 하지* 를 인수로 cmdlet 묻는 메시지를 입력 하 고 마스크 암호를 확인 합니다. 기본 설정된 사용 cmdlet 대화식으로 실행 될 때입니다.  
+-   인수로 *지정하지 않을 경우* cmdlet은 마스킹된 암호를 입력 및 확인하라는 메시지를 표시합니다. cmdlet을 대화형으로 실행할 경우 기본 설정된 사용법입니다.  
   
-    예를 들어, 추가 도메인 컨트롤러에서를 treyresearch.net 도메인 만들고 수 하 라는 메시지가 표시 입력 하 고 마스크 비밀 번호를 확인 합니다.  
+    예를 들어 treyresearch.net 도메인에 추가 도메인 컨트롤러를 만들고 마스킹된 암호를 입력하고 확인하라는 메시지를 표시하려면 다음 명령을 실행합니다.  
   
     ```  
     Install-ADDSDomainController "DomainName treyresearch.net "credential (get-credential)  
     ```  
   
--   지정 된 경우 *값*, 값 보안 문자열 여야 합니다. Cmdlet 대화식으로 실행 될 때 기본 설정된 사용 아닙니다.  
+-   *값과 함께* 지정한 경우 값은 보안 문자열이어야 합니다. cmdlet을 대화형으로 실행할 경우 기본 설정된 사용법이 아닙니다.  
   
-예를 들어, 요청할 수 있습니다 수동으로 암호를 사용 하 여는 **읽기 호스트** cmdlet에 대 한 보안 문자열 묻는:  
+예를 들어 **Read-Host** cmdlet을 사용하여 수동으로 암호를 물어 사용자에게 보안 문자열을 물을 수 있습니다.  
   
 ```  
 -safemodeadministratorpassword (read-host -prompt "Password:" -assecurestring)  
 ```  
   
 > [!WARNING]  
-> 이전 옵션 암호를 확인 하지 않는 주의 사용 하 여: 암호가 표시 되지 않습니다.  
+> 이전 옵션이 암호를 확인하지 않으므로 각별히 주의해야 합니다. 암호는 표시되지 않습니다.  
   
-또한이 것이 좋음 있지만 변환 일반 텍스트 변수와 보안 문자열을 제공할 수 있습니다.  
+변환된 일반 텍스트 변수로 보안 문자열을 제공할 수도 있습니다(권장되지 않음).  
   
 ```  
 -safemodeadministratorpassword (convertto-securestring "Password1" -asplaintext -force)  
   
 ```  
   
-마지막으로 애매 암호에 파일을 저장 하 고 나타나지 암호화 되지 않은 텍스트 암호 없이 나중에 다시 수 있습니다. 예를 들어:  
+마지막으로 난독 처리된 암호를 파일에 저장한 다음 일반 텍스트 암호를 표시하지 않고 나중에 다시 사용할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
   
 ```  
 $file = "c:\pw.txt"  
@@ -133,22 +134,22 @@ $pw | ConvertFrom-SecureString | Set-Content $file
 ```  
   
 > [!WARNING]  
-> 지우기 또는 애매 텍스트 암호를 저장 또는 제공 권장 하지 않습니다. 스크립트가이 명령을 실행 또는이 기사를 통해 모든 사용자 해당 도메인 컨트롤러의 DSRM 암호를 알고 있습니다.  애매 암호를 취소할 수 파일에 액세스할 수 있는 모든 사람이. 해당 정보를 DSRM 시작 DC에 로그온 하 고 자녀의 권한 Active Directory 숲에서 가장 높은 수준의에 상승 도메인 컨트롤러 자체, 가장 결국 수 있습니다. 추가 단계를 사용 하 여 집합 **System.Security.Cryptography** 데이터는 것이 좋습니다 하지만 아니었습니다 텍스트 파일을 암호화 됩니다. 완전히 암호 저장을 방지 하는 것이 좋습니다.  
+> 일반 또는 난독 처리된 텍스트 암호는 제공하거나 저장하지 않는 것이 좋습니다. 스크립트에서 이 명령을 실행하는 사용자나 어깨 너머로 보고 있는 다른 사용자가 해당 도메인 컨트롤러의 DSRM 암호를 알게 될 수 있습니다.  파일에 액세스할 수 있는 모든 사람이 난독 처리된 암호를 반전시킬 수 있습니다. 이 정보를 알면 DSRM에서 시작된 DC에 로그온하여 도메인 컨트롤러 자체를 가장함으로써 Active Directory 포리스트에서 가장 높은 수준으로 해당 권한을 상승시킬 수 있습니다. **System.Security.Cryptography**를 사용하여 텍스트 파일 데이터를 암호화하는 추가 단계를 수행하는 것이 좋지만 이러한 단계는 이 문서의 범위를 벗어납니다. 암호 저장을 완전히 피하는 것이 가장 좋습니다.  
   
-ADDSDeployment cmdlet 자동으로 DNS 클라이언트 설정, 전달자 및 루트 힌트 구성을 건너뛰게 하는 추가 옵션을 제공 합니다. 서버 관리자를 사용 하는 경우이 구성 옵션을 건너뛸 수 없습니다. 이 인수 도메인 컨트롤러 구성 전에 DNS 서버 역할을 설치한 경우에 중요 합니다.  
+ADDSDeployment cmdlet에서는 DNS 클라이언트 설정, 전달자 및 루트 힌트의 자동 구성을 건너뛸 수 있는 추가 옵션을 제공합니다. 서버 관리자를 사용할 때는 이 구성 옵션을 건너뛸 수 없습니다. 이 인수는 도메인 컨트롤러를 구성하기 전에 DNS 서버 역할을 설치한 경우에만 적용됩니다.  
   
 ```  
 -SkipAutoConfigureDNS  
 ```  
   
-**도메인 컨트롤러 옵션** 페이지 경고 기존 도메인 컨트롤러 Windows Server 2003을 실행 하는 경우에 읽기 도메인 컨트롤러를 만들 수는 없습니다. 이 정상적인 동작 한 경고를 해제할 수 있습니다.  
+**도메인 컨트롤러 옵션** 페이지에는 기존 도메인 컨트롤러에서 Windows Server 2003을 실행하는 경우 읽기 전용 도메인 컨트롤러를 만들 수 없다는 경고가 표시됩니다. 이는 예상된 동작이며 경고를 해제할 수 있습니다.  
   
-![복제본 설치](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradeDCOptionsError.png)  
+![복제 데이터베이스를 설치 합니다.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradeDCOptionsError.png)  
   
-### <a name="dns-options-and-dns-delegation-credentials"></a>DNS 옵션과 DNS 위임 자격 증명  
-![복제본 설치](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradeDNSOptions.png)  
+### <a name="dns-options-and-dns-delegation-credentials"></a>DNS 옵션 및 DNS 위임 자격 증명  
+![복제 데이터베이스를 설치 합니다.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradeDNSOptions.png)  
   
-**DNS 옵션** 페이지 선택한 경우 DNS 위임 구성할 수 있습니다의 **DNS 서버** 옵션에 *도메인 컨트롤러 옵션* 페이지 DNS 위임 수 있는 영역을 향하게 하는 경우 합니다. 구성원을 사용자의 암호 확인용 자격 증명을 제공 해야 할 수 있는 **DNS 관리자** 그룹 합니다.  
+**DNS 옵션** 페이지에서는 **도메인 컨트롤러 옵션** 페이지에서 *DNS 서버* 옵션을 선택한 경우 및 DNS 위임이 허용되는 영역을 가리키는 경우 DNS 위임을 구성할 수 있습니다. **DNS Admins** 그룹의 구성원인 사용자의 대체 자격 증명을 제공해야 할 수도 있습니다.  
   
 **DNS 옵션** ADDSDeployment cmdlet 인수는 다음과 같습니다.  
   
@@ -157,18 +158,18 @@ ADDSDeployment cmdlet 자동으로 DNS 클라이언트 설정, 전달자 및 루
 -dnsdelegationcredential <pscredential>  
 ```  
   
-![복제본 설치](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradeCreds.png)  
+![복제 데이터베이스를 설치 합니다.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradeCreds.png)  
   
-For more information about whether you need to create a DNS delegation, see [Understanding Zone Delegation](https://technet.microsoft.com/library/cc771640.aspx).  
+DNS 위임을 업데이트해야 하는지 여부에 대한 자세한 내용은 [영역 위임 이해](https://technet.microsoft.com/library/cc771640.aspx)를 참조하세요.  
   
 ### <a name="additional-options"></a>추가 옵션  
-![복제본 설치](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradeAdditionalOptions.png)  
+![복제 데이터베이스를 설치 합니다.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradeAdditionalOptions.png)  
   
-**추가 옵션** 페이지 복제 원본으로 도메인 컨트롤러의 이름을 지정 구성 옵션을 제공 하거나 도메인 컨트롤러 복제 원본으로 사용할 수 있습니다.  
+**추가 옵션** 페이지에서는 도메인 컨트롤러 이름을 복제 원본으로 지정하는 구성 옵션을 제공하거나 원하는 도메인 컨트롤러를 복제 원본으로 사용할 수 있습니다.  
   
-있습니다 하도록 선택할 수도 있는 도메인 컨트롤러를 사용 하 여 설치 미디어 (IFM) 옵션에서 설치를 사용 하 여 미디어를 백업 합니다. **설치 미디어에서** 확인란을 한 번 찾아보기 옵션을 선택 하 고 클릭 해야 제공 **확인** 제공된 경로 사용할 미디어 확인 하기 위해 합니다. IFM 옵션으로 사용 되는 미디어는 Windows Server 백업 또는 Ntdsutil.exe 컴퓨터에서 만든 다른 기존 Windows Server 2012만 사용 합니다. Windows Server 2012 도메인 컨트롤러에 대해 미디어를 만드는 Windows Server 2008 R2 또는 이전 운영 체제를 사용할 수 없습니다. 변경 IFM에 대 한 자세한 내용은 참조 [관리 부록 간체](../../ad-ds/deploy/Simplified-Administration-Appendix.md)합니다. 한 SYSKEY로 보호 된 미디어를 사용 하 여 확인 하는 동안 서버 관리자 이미지의 암호를 묻습니다.  
+또한 IFM(미디어에서 설치) 옵션을 통해 백업된 미디어를 사용하여 도메인 컨트롤러를 설치하도록 선택할 수도 있습니다. **미디어에서 설치** 확인란을 선택하면 찾아보기 옵션이 제공되며 **확인** 을 클릭하여 제공된 경로가 유효한 미디어임을 확인해야 합니다. IFM 옵션에서 사용된 미디어는 기존의 다른 Windows Server 2012 컴퓨터의 Ntdsutil.exe나 Windows Server 백업으로만 만들어야 합니다. Windows Server 2008 R2나 이전 운영 체제를 사용하여 Windows Server 2012 도메인 컨트롤러용 미디어를 만들 수 없습니다. IFM의 변경 내용에 대한 자세한 내용은 [간소화된 관리 부록](../../ad-ds/deploy/Simplified-Administration-Appendix.md)을 참조하세요. SYSKEY로 보호된 미디어를 사용하는 경우 검증하는 동안 서버 관리자에는 이미지 암호를 제공하라는 메시지가 표시됩니다.  
   
-![복제본 설치](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_NtdsutilIFM.png)  
+![복제 데이터베이스를 설치 합니다.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_NtdsutilIFM.png)  
   
 **추가 옵션** ADDSDeployment cmdlet 인수는 다음과 같습니다.  
   
@@ -179,9 +180,9 @@ For more information about whether you need to create a DNS delegation, see [Und
 ```  
   
 ### <a name="paths"></a>경로  
-![복제본 설치](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradePaths.png)  
+![복제 데이터베이스를 설치 합니다.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradePaths.png)  
   
-**경로** SYSVOL 공유 및 페이지 데이터베이스 트랜잭션 로그가 광고 DS 데이터베이스의 기본 폴더 위치를 무시할 수 있습니다. 기본 위치는 항상 하위 시스템 루트 %의입니다.  
+**경로** 페이지에서 AD DS 데이터베이스, 데이터베이스 트랜잭션 로그 및 SYSVOL 공유의 기본 폴더 위치를 재정의할 수 있습니다. 기본 위치는 항상 %systemroot%의 하위 디렉터리입니다.  
   
 Active Directory 경로 ADDSDeployment cmdlet 인수는 다음과 같습니다.  
   
@@ -192,15 +193,15 @@ Active Directory 경로 ADDSDeployment cmdlet 인수는 다음과 같습니다.
 ```  
   
 ### <a name="preparation-options"></a>준비 옵션  
-![복제본 설치](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradePrepOptions.png)  
+![복제 데이터베이스를 설치 합니다.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradePrepOptions.png)  
   
-**준비 옵션** 페이지에 표시 광고 DS 구성 스키마 (forestprep)를 확장 하 고 업데이트 하는 도메인 (도메인 준비)에 포함 됩니다.  만 수동으로 Adprep.exe 실행 하거나 이전 Windows Server 2012 도메인 컨트롤러 설치 여 숲 및 도메인 준비 되지 있는 경우이 페이지를 표시 합니다. 예를 들어, Active Directory 도메인 서비스 구성 마법사 표시 기존 Windows Server 2012 숲 루트 도메인에 새 도메인 컨트롤러를 추가한 경우이 페이지를 않습니다.  
+**준비 옵션** 페이지에서는 AD DS 구성에 스키마 확장(forestprep) 및 도메인 업데이트(domainprep)가 포함되어 있음을 알려 줍니다.  이 페이지는 이전 Windows Server 2012 도메인 컨트롤러 설치 또는 Adprep.exe 수동 실행에서 포리스트 및 도메인이 준비되지 않은 경우에만 표시됩니다. 예를 들어 기존 Windows Server 2012 포리스트 루트 도메인에 새 도메인 컨트롤러를 추가하는 경우에는 Active Directory Domain Services 구성 마법사에서 이 페이지를 표시하지 않습니다.  
   
-스키마를 확장 하 고 업데이트 하는 도메인 클릭할 때 발생 하지 않으면 **다음**합니다. 이러한 이벤트 설치 단계 에서만 발생합니다. 이 페이지는 설치 나중에 발생 하는 행사에 대해 인식 간단 하 게 제공 됩니다.  
+**다음**을 클릭하면 스키마 확장 및 도메인 업데이트가 실행되지 않습니다. 이러한 이벤트는 설치 단계 중에만 발생합니다. 이 페이지는 설치 후반에서 발생할 이벤트를 알려 주는 역할만 합니다.  
   
-이 페이지도의 유효성을 검사 현재 사용자 자격 증명 스키마 관리자 및 Enterprise 관리자 그룹의 회원 있는 스키마 확장 하거나 도메인 준비 이러한 그룹의 회원 필요 합니다. 클릭 **변경** 페이지 알려 현재 자격 증명 충분 한 사용 권한을 제공 하지 않는 경우 사용자 자격 증명을 합니다.  
+또한 스키마를 확장하거나 도메인을 준비하려면 Schema Admin 및 Enterprise Admins 그룹의 구성원 자격이 필요하므로 이 페이지에서는 현재 사용자 자격 증명이 이러한 그룹의 구성원인지 확인합니다. 이 페이지에 현재 자격 증명의 권한이 부족하다는 메시지가 표시되면 **변경**을 클릭하여 적절한 사용자 자격 증명을 제공합니다.  
   
-![복제본 설치](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradePrepOptionsCreds.png)  
+![복제 데이터베이스를 설치 합니다.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradePrepOptionsCreds.png)  
   
 추가 옵션 ADDSDeployment cmdlet 인수는 다음과 같습니다.  
   
@@ -209,18 +210,18 @@ Active Directory 경로 ADDSDeployment cmdlet 인수는 다음과 같습니다.
 ```  
   
 > [!IMPORTANT]  
-> 서 이전 버전의 Windows Server, Windows Server 2012를 실행 하는 도메인 컨트롤러에 대 한 준비 자동화 된 도메인 실행 되지 않습니다 GPPREP. 실행 **adprep.exe /gpprep** 이전에 Windows Server 2003, Windows Server 2008 또는 Windows Server 2008 r 2에 대 한 준비 되지 된 모든 도메인에 대 한 수동으로 합니다. 모든 업그레이드를 하지는 도메인의 기록에 한 번만 GPPrep 실행 해야 합니다. 해당 작업 모든 도메인 컨트롤러에 다시 복제할 SYSVOL 폴더의 모든 파일 및 폴더를 시킬 수 있으므로 Adprep.exe /gpprep 자동으로 실행 되지 않습니다.  
+> 이전 버전의 Windows Server와 마찬가지로 Windows Server 2012를 실행하는 도메인 컨트롤러에 대한 자동화된 도메인 준비에서는 GPPREP를 실행하지 않습니다. 이전에 Windows Server 2003, Windows Server 2008 또는 Windows Server 2008 R2가 준비되지 않은 모든 도메인에 대해 **adprep.exe /gpprep** 를 수동으로 실행하세요. 업그레이드마다 실행하지 말고 도메인 기록에서 GPPrep를 한 번만 실행해야 합니다. Adprep.exe는 /gpprep를 자동으로 실행하지 않습니다. 자동으로 실행할 경우 SYSVOL 폴더의 모든 파일 및 폴더가 모든 도메인 컨트롤러에서 다시 복제될 수 있기 때문입니다.  
 >   
-> 도메인의 첫 번째 없다고 준비 RODC 홍보 RODCPrep 자동 실행 됩니다. 첫 번째 쓰기 Windows Server 2012 도메인 컨트롤러 홍보 때 발생 하지 않습니다. 또한 수동으로 수 **adprep.exe /rodcprep** 읽기 전용 도메인 컨트롤러 배포를 계획 하는 경우입니다.  
+> 자동 RODCPrep는 도메인에서 준비되지 않은 첫 번째 RODC의 수준을 올릴 때 실행됩니다. 쓰기 가능한 첫 번째 Windows Server 2012 도메인 컨트롤러의 수준을 올릴 때는 실행되지 않습니다. 또한 읽기 전용 도메인 컨트롤러를 배포하려는 경우에도 **adprep.exe /rodcprep** 를 수동으로 실행할 수 있습니다.  
   
-### <a name="review-options-and-view-script"></a>스크립트 보기 및 리뷰 옵션  
-![복제본 설치](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradeReviewOptions.png)  
+### <a name="review-options-and-view-script"></a>옵션 검토 및 스크립트 보기  
+![복제 데이터베이스를 설치 합니다.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradeReviewOptions.png)  
   
-**리뷰 옵션** 페이지를 설정을 확인 하 고 설치를 시작 하기 전에 사용자의 요구 사항을 충족 시키는 확인 수 있습니다. 마지막 기회를 서버 관리자를 사용 하 고 설치를 중단 되었습니다. 이 페이지 간단 하 게 검토 하 고 설정을 구성 계속 하기 전에 확인 수 있습니다.  
+**옵션 검토** 페이지에서 설치를 시작하기 전에 설정을 확인하고 이러한 설정이 요구 사항을 충족하는지도 확인할 수 있습니다. 서버 관리자를 사용하여 설치를 중지할 수 있는 마지막 기회는 아닙니다. 이 페이지에서는 단지 구성을 계속하기 전에 설정을 검토하고 확인합니다.  
   
-**리뷰 옵션** 서버 관리자의 페이지도 선택적 제공 **스크립트 보기** 단추를 현재 ADDSDeployment 구성을 하나의 Windows PowerShell 스크립트도 포함 유니코드 텍스트 파일을 만듭니다. 서버 관리자 그래픽 인터페이스 Windows PowerShell 배포 studio로 사용할 수 있습니다. Active Directory 도메인 서비스 구성 마법사를 사용 하 여 옵션 구성 구성, 내보내고 마법사 취소 합니다.  이 프로세스 추가 수정 또는 직접 사용에 대해 유효 하 고 구문이 샘플을 만듭니다.  
+서버 관리자의 **옵션 검토** 페이지는 현재 ADDSDeployment 구성을 단일 Windows PowerShell 스크립트로 포함하는 유니코드 텍스트 파일을 만들 수 있도록 **스크립트 보기** 단추(선택 사항)도 제공합니다. 이 단추를 통해 서버 관리자 그래픽 인터페이스를 Windows PowerShell 배포 스튜디오로 사용할 수 있습니다. Active Directory 도메인 서비스 구성 마법사를 사용하여 옵션을 구성하고 구성을 내보낸 다음 마법사를 취소합니다.  이 프로세스를 통해 향후 수정을 위해 사용하거나 직접 사용하기 위한 유효하고 구문상으로 정확한 샘플이 만들어집니다.  
   
-예를 들어:  
+예를 들어 다음과 같은 가치를 제공해야 합니다.  
   
 ```  
 #  
@@ -242,24 +243,24 @@ Install-ADDSDomainController `
 ```  
   
 > [!NOTE]  
-> 일반적으로 서버 관리자 모든 인수 및 (에 따라 수 향후 버전의 Windows 또는 서비스 팩 간에) 기본값에 의존 하지 않는 경우 값을 입력 합니다. 이 한 가지 예외는는 **-safemodeadministratorpassword** 인수 합니다. 강제로 프롬프트가 생략 값 cmdlet 대화식으로 실행 될 때  
+> 서버 관리자는 수준을 올릴 때 일반적으로 모든 인수의 값을 채우며 기본값에 의존하지 않습니다. 기본값은 향후 버전의 Windows 또는 서비스 팩 간에 변경될 수 있기 때문입니다. 단, **-safemodeadministratorpassword** 인수는 예외입니다. 확인 프롬프트를 강제로 표시하려면 대화형으로 cmdlet을 실행할 때 이 값을 생략합니다.  
 >   
-> 옵션을 사용 하 여 **Whatif** 인수의 **설치 ADDSDomainController** cmdlet 구성 정보를 검토 합니다. 이렇게 하면 cmdlet에 대 한 인수 명시적 및 암묵적인 값을 볼 수 있습니다.  
+> 선택적 **Whatif** 인수를 **Install-ADDSDomainController** cmdlet과 함께 사용하여 구성 정보를 검토합니다. 이를 통해 cmdlet 인수의 명시적 및 암시적 값을 확인할 수 있습니다.  
   
-![복제본 설치](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_PSWhatIf.png)  
+![복제 데이터베이스를 설치 합니다.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_PSWhatIf.png)  
   
-### <a name="prerequisites-check"></a>필수 확인  
-![복제본 설치](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradePrereqCheck.png)  
+### <a name="prerequisites-check"></a>필수 구성 요소 확인  
+![복제 데이터베이스를 설치 합니다.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradePrereqCheck.png)  
   
-**필수 확인** 광고 DS 도메인 구성의 새로운 기능입니다. 이 새로운 단계 도메인 및 숲은 새 Windows Server 2012 도메인 컨트롤러를 지원할 수를 확인 합니다.  
+**필수 구성 요소 확인**은 AD DS 도메인 구성의 새로운 기능입니다. 이 새 단계에서는 도메인 및 포리스트가 새 Windows Server 2012 도메인 컨트롤러를 지원할 수 있는지 확인합니다.  
   
-새 도메인 컨트롤러를 설치할 때는 서버 관리자 Active Directory 도메인 서비스 구성 마법사 호출 일련의 연속된 모듈식 테스트 합니다. 이러한 테스트 제안 된 복구 옵션을 알립니다. 필요에 따라 여러 번 테스트를 실행할 수 있습니다. 도메인 컨트롤러 프로세스 수 없는 모든 필수 테스트까지 계속 제공 전달 됩니다.  
+새 도메인 컨트롤러를 설치할 때 서버 관리자 Active Directory Domain Services 구성 마법사는 일련의 직렬화된 모듈식 테스트를 호출합니다. 이러한 테스트에서는 제안된 복구 옵션을 알려 줍니다. 필요한 만큼 여러 번 테스트를 실행할 수 있습니다. 모든 필수 구성 요소 테스트를 통과해야만 도메인 컨트롤러 프로세스를 계속 진행할 수 있습니다.  
   
-**필수 확인** 이전 운영 체제에 영향을 주는 보안 변경와 같은 관련 정보를 표면 수도 있습니다.  
+**필수 구성 요소 확인**에서는 이전 운영 체제에 영향을 주는 보안 변경 내용과 같은 관련 정보도 제공합니다.  
   
-특정 필수 검사에 대 한 자세한 내용은 참조 [필수 검사](../../ad-ds/manage/AD-DS-Simplified-Administration.md#BKMK_PrereuisiteChecking)합니다.  
+특정 필수 구성 요소 검사에 대 한 자세한 내용은 참조 [필수 구성 요소 확인](../../ad-ds/manage/AD-DS-Simplified-Administration.md#BKMK_PrereuisiteChecking)합니다.  
   
-무시할 수 없는 **필수 확인** 때 되는데 서버 관리자를 사용 하 여 건너뛸 수 프로세스 AD DS 배포 cmdlet 인수를 사용 하 여 사용 하는 경우:  
+서버 관리자를 사용할 때는 **필수 구성 요소 확인** 을 무시할 수 없지만 AD DS 배포 cmdlet을 사용할 때는 다음 인수를 사용하여 프로세스를 건너뛸 수 있습니다.  
   
 ```  
 -skipprechecks  
@@ -267,14 +268,14 @@ Install-ADDSDomainController `
 ```  
   
 > [!WARNING]  
-> Microsoft 부분 도메인 컨트롤러 프로 모션 발생할 수 있는 되거나 손상 AD DS 숲 필수 검사를 건너뛰는 것이 수 없게 됩니다.  
+> 필수 구성 요소 확인을 건너뛰면 도메인 컨트롤러 수준 올리기가 부분적으로 완료되거나 AD DS 포리스트가 손상될 수 있으므로 건너뛰지 않는 것이 좋습니다.  
   
-클릭 **설치** 도메인 컨트롤러 프로 모션 프로세스를 시작 합니다. 설치를 취소 하 마지막 기회입니다. 시작 된 후 프로 모션 프로세스를 취소할 수 없습니다. 컴퓨터가 끝 프로 모션 결과 관계 없이 프로 모션에 자동으로 재부팅 됩니다. **필수 확인** 페이지 프로세스와 문제를 해결 하기 위한 지침 하는 동안 발생 한 문제에 표시 됩니다.  
+**설치**를 클릭하여 도메인 컨트롤러 수준 올리기 프로세스를 시작합니다. 이때가 설치를 취소할 수 있는 마지막 기회입니다. 시작된 후에는 수준 올리기 프로세스를 취소할 수 없습니다. 수준 올리기가 끝나면 수준 올리기 결과에 상관없이 컴퓨터가 자동으로 다시 부팅됩니다. **필수 구성 요소 확인** 페이지에 프로세스 중에 발생한 문제와 이를 해결할 수 있는 지침이 표시됩니다.  
   
 ### <a name="installation"></a>설치  
-![복제본 설치](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradeInstallProgress.png)  
+![복제 데이터베이스를 설치 합니다.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradeInstallProgress.png)  
   
-때는 **설치** 페이지에 표시, 도메인 컨트롤러 구성 시작 되 고 하거나 수 없는 중단 취소 합니다. 자세한 작업이이 페이지에 표시 되며, 로그에 기록 합니다.  
+**설치** 페이지가 표시되면 도메인 컨트롤러 구성이 시작되며 이는 중지하거나 취소할 수 없습니다. 세부 작업이 이 페이지에 표시되고 다음 로그에 기록됩니다.  
   
 -   %systemroot%\debug\dcpromo.log  
   
@@ -282,47 +283,47 @@ Install-ADDSDomainController `
   
 -   %systemroot%\debug\adprep\logs  
   
--   %systemroot%\debug\netsetup.log (서버 작업 그룹 경우)  
+-   %systemroot%\debug\netsetup.log(서버가 작업 그룹에 속한 경우)  
   
-ADDSDeployment 모듈을 사용 하 여 새 Active Directory 숲을 설치 하려면 다음 cmdlet 사용:  
+ADDSDeployment 모듈을 사용하여 새 Active Directory 포리스트를 설치하려면 다음 cmdlet을 사용합니다.  
   
 ```  
 Install-addsdomaincontroller  
 ```  
   
-참조 [업그레이드와 Windows PowerShell 복제본](../../ad-ds/deploy/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md#BKMK_PS) 인수 필수 및 선택 사항에 대 한 합니다.  
+필수 및 선택적 인수는 [업그레이드 및 복제본 Windows PowerShell](../../ad-ds/deploy/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md#BKMK_PS)을 참조하세요.  
   
-**설치 AddsDomainController** cmdlet (필수 확인 하 고 설치) 2 단계에 있습니다. 아래 두 그림 표시 설치 단계와의 최소는 인수 **-도메인 이름** 및 **-자격 증명**합니다. 어떻게 Adprep 작업을 자동으로 정품 인증을 기존 Windows Server 2003 숲 첫 번째 Windows Server 2012 도메인 컨트롤러 추가의 일부로 note 다음과 같습니다.  
+**Install-AddsDomainController** cmdlet은 두 단계(필수 구성 요소 확인 및 설치)만 수행합니다. 아래 두 그림에는 최소 필수 인수인 **-domainname** 과 **-credential**을 사용한 설치 단계가 나와 있습니다. 기존 Windows Server 2003 포리스트에 첫 번째 Windows Server 2012 도메인 컨트롤러를 추가하는 작업의 일부로 Adprep 작업이 자동으로 수행됩니다.  
   
-![복제본 설치](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_PSGetCred.png)  
+![복제 데이터베이스를 설치 합니다.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_PSGetCred.png)  
   
-참고 방법을 지난번 처럼 서버 관리자 **설치 ADDSDomainController** 프로 모션 서버 자동으로 부팅 하 게 알려줍니다. 다시 부팅 메시지를 자동으로 동의를 사용 하 여는 **-강제로** 또는 **-확인: $false** 인수 모든 ADDSDeployment Windows PowerShell cmdlet 사용 합니다. 서버 끝 프로 모션에 자동으로 다시 부팅 되지 않도록 하려면 사용는 **-norebootoncompletion** 인수 합니다.  
+서버 관리자와 마찬가지로 **Install-ADDSDomainController** 에서도 수준 올리기 후 서버가 자동으로 다시 부팅됨을 미리 알려 줍니다. 다시 부팅 프롬프트를 자동으로 허용하려면 임의의 ADDSDeployment Windows PowerShell cmdlet에서 **-force** 또는 **-confirm:$false** 인수를 사용합니다. 수준 올리기가 끝난 후 서버가 자동으로 다시 부팅되는 것을 방지하려면 **-norebootoncompletion** 인수를 사용합니다.  
   
 > [!WARNING]  
-> 다시 부팅 재정의 것이 좋습니다. 도메인 컨트롤러 제대로 작동 하려면 다시 부팅 해야 합니다.  
+> 다시 부팅을 무시하지 않는 것이 좋습니다. 도메인 컨트롤러가 올바르게 작동하려면 다시 부팅해야 합니다.  
   
-![복제본 설치](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_PSUpgradeConfirm.gif)  
+![복제 데이터베이스를 설치 합니다.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_PSUpgradeConfirm.gif)  
   
-![복제본 설치](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_PSUpgradeProgress.png)  
+![복제 데이터베이스를 설치 합니다.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_PSUpgradeProgress.png)  
   
-배치를 Windows PowerShell를 사용 하 여 원격 도메인 컨트롤러를 구성 하 고 **설치 adddomaincontroller** cmdlet *내* 의 **호출 명령** cmdlet 합니다. 이 경우 기호와 사용 해야 합니다.  
+Windows PowerShell을 사용하여 도메인 컨트롤러를 원격으로 구성하려면 **invoke-command** cmdlet *안에***install-adddomaincontroller** cmdlet을 래핑합니다. 이 경우 중괄호를 사용해야 합니다.  
   
 ```  
 invoke-command {install-addsdomaincontroller "domainname <domain> -credential (get-credential)} -computername <dc name>  
 ```  
   
-예를 들어:  
+예를 들어 다음과 같은 가치를 제공해야 합니다.  
   
-![복제본 설치](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_PSUpgradeExample.gif)  
+![복제 데이터베이스를 설치 합니다.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_PSUpgradeExample.gif)  
   
 > [!NOTE]  
-> 설치 및 Adprep 프로세스가 작동 방식에 대 한 자세한 내용은 참조는 [문제 해결 도메인 컨트롤러 배포](../../ad-ds/deploy/Troubleshooting-Domain-Controller-Deployment.md)합니다.  
+> 설치 및 Adprep 프로세스 작동 방식에 대한 자세한 내용은 [Troubleshooting Domain Controller Deployment](../../ad-ds/deploy/Troubleshooting-Domain-Controller-Deployment.md)을 참조하세요.  
   
 ### <a name="results"></a>결과  
-![복제본 설치](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_ForestSignOff.png)  
+![복제 데이터베이스를 설치 합니다.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_ForestSignOff.png)  
   
-**결과** 프로 모션 및 관리 중요 한 정보가의 성공 여부 페이지에 표시 됩니다. 성공 하면 도메인 컨트롤러 10 초 후 자동으로 다시 부팅 됩니다.  
+**결과** 페이지에는 수준 올리기의 성공 또는 실패와 중요한 관리 정보가 표시됩니다. 성공한 경우에는 10초 후 도메인 컨트롤러가 자동으로 다시 부팅됩니다.  
   
-이전 버전의 Windows Server와 마찬가지로 Windows server 2012를 실행 하는 도메인 컨트롤러에 대 한 자동화 된 도메인 준비 GPPREP 실행 되지 않습니다. 실행 **adprep.exe /gpprep** 이전에 Windows Server 2003, Windows Server 2008 또는 Windows Server 2008 r 2에 대 한 준비 되지 된 모든 도메인에 대 한 수동으로 합니다. 모든 업그레이드를 하지는 도메인의 기록에 한 번만 GPPrep 실행 해야 합니다. 해당 작업 모든 도메인 컨트롤러에 다시 복제할 SYSVOL 폴더의 모든 파일 및 폴더를 시킬 수 있으므로 Adprep.exe /gpprep 자동으로 실행 되지 않습니다.  
+이전 버전의 Windows Server와 마찬가지로 Windows Server 2012를 실행하는 도메인 컨트롤러에 대한 자동화된 도메인 준비에서는 GPPREP를 실행하지 않습니다. 이전에 Windows Server 2003, Windows Server 2008 또는 Windows Server 2008 R2가 준비되지 않은 모든 도메인에 대해 **adprep.exe /gpprep** 를 수동으로 실행하세요. 업그레이드마다 실행하지 말고 도메인 기록에서 GPPrep를 한 번만 실행해야 합니다. Adprep.exe는 /gpprep를 자동으로 실행하지 않습니다. 자동으로 실행할 경우 SYSVOL 폴더의 모든 파일 및 폴더가 모든 도메인 컨트롤러에서 다시 복제될 수 있기 때문입니다.  
   
 

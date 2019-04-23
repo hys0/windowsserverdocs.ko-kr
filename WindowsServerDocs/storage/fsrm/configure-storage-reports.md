@@ -1,6 +1,6 @@
 ---
-title: "저장소 보고서 구성"
-description: "이 문서에서는 저장소 보고서에 대한 기본 매개 변수를 구성하는 방법을 설명합니다."
+title: 저장소 보고서 구성
+description: 이 문서에서는 저장소 보고서에 대한 기본 매개 변수를 구성하는 방법을 설명합니다.
 ms.date: 7/7/2017
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -9,14 +9,15 @@ author: JasonGerend
 manager: brianlic
 ms.author: jgerend
 ms.openlocfilehash: f62109a8d3ea3e4e6386956789d276f9aa911e80
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59885234"
 ---
 # <a name="configure-storage-reports"></a>저장소 보고서 구성
 
-> 적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> 적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 저장소 보고서에 대한 기본 매개 변수를 구성할 수 있습니다. 이러한 기본 매개 변수는 할당량 또는 파일 차단 이벤트가 발생했을 때 생성되는 문제 보고서에 사용됩니다. 또한 예약된 보고서와 요청 시 보고서에도 사용되며, 이러한 보고서의 특정 속성을 정의할 때 기본 매개 변수를 재정의할 수 있습니다.
 
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/17/2017
 
 7.  **확인**을 클릭합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
--   [파일 서버 리소스 관리자 옵션 설정](setting-file-server-resource-manager-options.md)
+-   [설정 파일 서버 리소스 관리자 옵션](setting-file-server-resource-manager-options.md)
 -   [저장소 보고서 관리](storage-reports-management.md)
