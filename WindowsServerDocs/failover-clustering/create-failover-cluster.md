@@ -1,5 +1,5 @@
 ---
-title: 장애 조치 클러스터 만들기
+title: 장애 조치(failover) 클러스터 만들기
 description: Windows Server 2012 R2, Windows Server 2012 및 Windows Server 2016에 대 한 장애 조치 클러스터를 만드는 방법입니다.
 ms.prod: windows-server-threshold
 ms.topic: article
@@ -9,167 +9,167 @@ ms.technology: storage-failover-clustering
 ms.date: 11/05/2018
 ms.localizationpriority: medium
 ms.openlocfilehash: f919e69488c4f2272ddd07e535ba4e2248ddf79c
-ms.sourcegitcommit: 5cbaca9685720f11d896c4ca167c86e74c032feb
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6068981"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59843294"
 ---
-# 장애 조치 클러스터 만들기
+# <a name="create-a-failover-cluster"></a>장애 조치(failover) 클러스터 만들기
 
 >적용 대상: Windows Server 2012 R2, Windows Server 2012, Windows Server 2016
 
-이 항목에는 장애 조치 클러스터 관리자 스냅인 또는 Windows PowerShell을 사용 하 여 장애 조치 클러스터를 만드는 방법을 보여 줍니다. 일반적인 배포에서 Active Directory 도메인 서비스 (AD DS)에 클러스터와 관련된 된 클러스터 된 역할에 대 한 컴퓨터 개체가 만들어지는 설명 합니다. 저장소 공간 다이렉트 클러스터를 배포 하는 경우 대신 [저장소 공간 다이렉트 배포](../storage/storage-spaces/deploy-storage-spaces-direct.md)참조 합니다.
+이 항목에서는 장애 조치(failover) 클러스터 관리자 스냅인 또는 Windows PowerShell을 사용하여 장애 조치(failover) 클러스터를 만드는 방법을 보여 줍니다. AD DS(Active Directory 도메인 서비스)에서 클러스터의 컴퓨터 개체와 관련 클러스터된 역할을 만드는 일반적인 배포에 대해 다룹니다. 저장소 공간 다이렉트 클러스터에 배포 하는 경우 참조 대신 [저장소 공간 다이렉트 배포](../storage/storage-spaces/deploy-storage-spaces-direct.md)합니다.
 
-Active Directory 분리 클러스터를 배포할 수 있습니다. 이 배포 방법은 해당 컴퓨터에서 AD DS 개체는 미리 준비를 요청 해야 또는 AD DS의 컴퓨터 개체를 만들 수 있는 권한이 없는 장애 조치 클러스터를 만들 수 있습니다. 이 옵션만 Windows PowerShell을 통해 사용할 수 있으며 특정 시나리오에만 권장 됩니다. 자세한 내용은 [Active Directory-Detached 클러스터 배포](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265970(v=ws.11))를 참조 하세요.
+또한 Active Directory 분리 클러스터를 배포할 수 있습니다. 이 배포 방법을 사용하면 AD DS에서 컴퓨터 개체를 만들 수 있는 권한 없이 또는 컴퓨터 개체가 AD DS에서 사전 준비되도록 요청하지 않고도 장애 조치(failover) 클러스터를 만들 수 있습니다. 이 옵션은 Windows PowerShell을 통해서만 사용할 수 있으며 특정 시나리오에만 권장됩니다. 자세한 내용은 [Active Directory 분리 클러스터 배포](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265970(v=ws.11))를 참조하십시오.
 
-#### 검사 목록: 장애 조치 클러스터 만들기
+#### <a name="checklist-create-a-failover-cluster"></a>검사 목록: 장애 조치(failover) 클러스터 만들기
 
-|상태|작업|참조|
+|상태|태스크|참조|
 |:---:|---|---|
-|☐|필수 구성 요소를 확인 합니다.|[필수 구성 요소를 확인 합니다.](#verify-the-prerequisites)|
-|☐|클러스터 노드를 추가 하려면 모든 서버에서 장애 조치 클러스터링 기능을 설치 합니다.|[장애 조치 클러스터링 기능 설치](#install-the-failover-clustering-feature)|
-|☐|구성의 유효성을 검사 하려면 클러스터 유효성 검사 마법사 실행|[구성을 확인합니다](#validate-the-configuration)|
-|☐|장애 조치 클러스터를 만들려면 클러스터 만들기 마법사 실행|[장애 조치 클러스터 만들기](#create-the-failover-cluster)|
-|☐|호스트 클러스터 작업에 클러스터링 된 역할 만들기|[클러스터 된 역할을 만듭니다.](#create-clustered-roles)|
+|☐|필수 구성 요소 확인|[필수 구성 요소를 확인 합니다.](#verify-the-prerequisites)|
+|☐|클러스터 노드로 추가할 모든 서버에 장애 조치(failover) 클러스터링 기능 설치|[장애 조치 클러스터링 기능 설치](#install-the-failover-clustering-feature)|
+|☐|클러스터 유효성 검사 마법사를 실행하여 구성 유효성 검사|[구성 유효성 검사](#validate-the-configuration)|
+|☐|클러스터 만들기 마법사를 실행하여 장애 조치(failover) 클러스터 만들기|[장애 조치 클러스터 만들기](#create-the-failover-cluster)|
+|☐|클러스터 작업을 호스트할 클러스터된 역할 만들기|[클러스터 된 역할 만들기](#create-clustered-roles)|
 
-## 필수 구성 요소를 확인 합니다.
+## <a name="verify-the-prerequisites"></a>필수 구성 요소 확인
 
-시작 하기 전에 다음 필수 조건을 확인 합니다.
+시작하기 전에 다음 필수 구성 요소를 확인합니다.
 
-- 모든 서버를 클러스터 노드를 추가 하려면 동일한 버전의 Windows Server를 실행 되 고 있는지 확인 합니다.
-- 구성이 지원 되는지 확인 하려면 하드웨어 요구 사항을 검토 합니다. 자세한 내용은 [장애 조치 클러스터링 하드웨어 요구 사항 및 저장소 옵션을](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj612869(v%3dws.11))참조 하세요. 저장소 공간 다이렉트 클러스터를 만드는 경우에 [저장소 공간 다이렉트 하드웨어 요구 사항을](../storage/storage-spaces/storage-spaces-direct-hardware-requirements.md)참조 하세요.
-- 클러스터 저장소 클러스터를 만드는 동안를 추가 하려면 모든 서버에서 저장소에 액세스할 수 있는지를 확인 합니다. (또한 추가 클러스터 저장소 클러스터를 만든 후.)
-- 클러스터 노드를 추가 하려면 모든 서버 동일한 Active Directory 도메인에 가입 되어 있는지 확인 합니다.
-- (선택 사항) 한 OU (조직 단위)를 만들고 클러스터 노드와 OU에 추가 하려는 서버에 대 한 컴퓨터 계정을 이동 합니다. 모범 사례로, 장애 조치 클러스터는 AD DS에 고유한 OU에 배치 하는 것이 좋습니다. 이 그룹 정책 설정 또는 보안 템플릿 설정을 클러스터 노드에 영향을 효과적으로 제어할 수 있습니다. 고유한 OU에 클러스터를 분리 하 여도 방지할 수 클러스터 컴퓨터 개체의 실수로 삭제 합니다.
+- 클러스터 노드로 추가할 모든 서버가 동일한 버전의 Windows Server를 실행하고 있는지 확인합니다.
+- 하드웨어 요구 사항을 검토하여 사용자의 구성이 지원되는지 확인합니다. 자세한 내용은 [장애 조치(failover) 클러스터링 하드웨어 요구 사항 및 저장소 옵션](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj612869(v%3dws.11))을 참조하세요. 저장소 공간 다이렉트 클러스터를 만드는 경우 참조 [저장소 공간 다이렉트 하드웨어 요구 사항](../storage/storage-spaces/storage-spaces-direct-hardware-requirements.md)합니다.
+- 클러스터를 만드는 동안 클러스터 된 저장소를 추가할 모든 서버 저장소에 액세스할 수 있는지를 확인 합니다. 클러스터를 만든 후 클러스터된 저장소를 추가할 수도 있습니다.
+- 클러스터 노드로 추가할 모든 서버가 동일한 Active Directory 도메인에 가입되어 있는지 확인합니다.
+- (선택 사항) OU(조직 구성 단위)를 만들고 클러스터 노드로 추가할 서버의 컴퓨터 계정을 OU로 이동합니다. AD DS의 고유한 OU에 장애 조치(failover) 클러스터를 배치하는 것이 좋습니다. 이렇게 하면 클러스터 노드에 영향을 주는 그룹 정책 설정 또는 보안 템플릿 설정을 보다 효율적으로 제어할 수 있습니다. 클러스터를 고유한 OU에 격리하면 클러스터 컴퓨터 개체가 실수로 삭제되는 것을 방지하는 데에도 도움이 됩니다.
 
-또한 다음 계정 요구 사항을 확인 합니다.
+또한 다음 계정 요구 사항을 확인합니다.
 
-- 클러스터를 만드는 데 사용할 계정 클러스터 노드를 추가 하려면 모든 서버에서 관리자 권한을 가진 도메인 사용자 인지 확인 합니다.
-- 다음 중 하나에 해당 하는지 확인 합니다.
-    - 클러스터를 만드는 사용자 OU 또는 클러스터를 구성 하는 서버 있는 컨테이너 **만들기 컴퓨터 개체** 권한이 있습니다.
-    - 사용자 **컴퓨터 개체** 권한이 없으면 클러스터에 대 한 클러스터 컴퓨터 개체 사전 준비 하려면 도메인 관리자를 요청 합니다. 자세한 내용은 [Active Directory 도메인 서비스에서 Prestage 클러스터 컴퓨터 개체](prestage-cluster-adds.md)를 참조 하세요.
+- 클러스터를 만드는 데 사용할 계정이 클러스터 노드로 추가할 모든 서버에서 관리자 권한이 있는 도메인 사용자인지 확인합니다.
+- 다음 중 하나에 해당하는지 확인합니다.
+    - 클러스터를 만드는 사용자에게 클러스터를 구성할 서버가 있는 컨테이너 또는 OU에 대한 **컴퓨터 개체 만들기** 권한이 있습니다.
+    - 사용자에게 **컴퓨터 개체 만들기** 권한이 없는 경우 도메인 관리자에게 클러스터에 대한 클러스터 컴퓨터 개체를 사전 준비하도록 요청합니다. 자세한 내용은 [Active Directory 도메인 서비스에서 클러스터 컴퓨터 개체 사전 준비](prestage-cluster-adds.md)를 참조하세요.
 
 >[!NOTE]
->Windows Server 2012 r 2에서 Active Directory 분리 클러스터를 만들려는 경우에이 요구 사항은 적용 되지 않습니다. 자세한 내용은 [Active Directory-Detached 클러스터 배포](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265970(v=ws.11))를 참조 하세요.
+>Windows Server 2012 R2에서 Active Directory 분리 클러스터를 만들려는 경우에이 요구 사항은 적용 되지 않습니다. 자세한 내용은 [Active Directory 분리 클러스터 배포](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265970(v=ws.11))를 참조하십시오.
 
-## 장애 조치 클러스터링 기능 설치
+## <a name="install-the-failover-clustering-feature"></a>장애 조치(failover) 클러스터링 기능 설치
 
-장애 조치 클러스터 노드를 추가 하려면 모든 서버에서 장애 조치 클러스터링 기능을 설치 해야 합니다.
+장애 조치 클러스터 노드로 추가할 모든 서버에 장애 조치 클러스터링 기능을 설치 해야 합니다.
 
-### 장애 조치 클러스터링 기능 설치
+### <a name="install-the-failover-clustering-feature"></a>장애 조치(failover) 클러스터링 기능 설치
 
 1. 서버 관리자를 시작합니다.
-2. **관리** 메뉴에서 **역할 및 기능 추가**선택 합니다.
-3. **시작 하기 전에** 페이지에서 **다음**을 선택 합니다.
-4. **설치 유형 선택** 페이지에서 **역할 기반 또는 기능 기반 설치**를 선택한 **다음**을 선택 합니다.
-5. **대상 서버 선택** 페이지에서이 기능을 설치 하려면 서버를 선택 하 고 **** 을 선택 합니다.
-6. **서버 역할 선택** 페이지에서 **다음**을 선택 합니다.
-7. **기능 선택** 페이지에서 **장애 조치 클러스터링** 확인란을 선택 합니다.
-8. 장애 조치 클러스터 관리 도구를 설치 하려면 **추가 기능**을 선택 하 고 **** 을 선택 합니다.
-9. **확인 설치 선택** 페이지에서 **설치**를 선택 합니다.
-<br>서버를 다시 시작 장애 조치 클러스터링 기능에 대 한 필요 하지 않습니다.
+2. 에 **관리** 메뉴에서 **역할 및 기능 추가**합니다.
+3. 에 **시작 하기 전에** 페이지에서 **다음**합니다.
+4. 에 **설치 유형 선택** 페이지에서 선택 **역할 기반 또는 기능 기반 설치**를 선택한 후 **다음**합니다.
+5. 에 **대상 서버 선택** 페이지에서 기능을 설치 하 고 클릭 하려는 서버를 선택 **다음**합니다.
+6. 에 **서버 역할 선택** 페이지에서 선택 **다음**합니다.
+7. **기능 선택** 페이지에서 **장애 조치(failover) 클러스터링** 확인란을 선택합니다.
+8. 장애 조치 클러스터 관리 도구를 설치 하려면 **기능 추가**를 선택한 후 **다음**합니다.
+9. 에 **설치 선택 확인** 페이지에서 **설치**합니다.
+<br>장애 조치(failover) 클러스터링 기능에는 서버를 다시 시작할 필요가 없습니다.
 
-10. 설치가 완료 되 면 **닫기**를 선택 합니다.
-11. 장애 조치 클러스터 노드를 추가 하려면 모든 서버에서이 절차를 반복 합니다.
-
->[!NOTE]
->장애 조치 클러스터링 기능을 설치한 후에 Windows 업데이트에서 최신 업데이트를 적용 하는 것이 좋습니다. 또한, Windows Server 2012 기반 장애 조치 클러스터에 대 한 [권장 핫픽스 및 업데이트에 대 한 Windows Server 2012 기반 장애 조치 클러스터인 경우](https://support.microsoft.com/help/2784261/recommended-hotfixes-and-updates-for-windows-server-2012-based-failove) Microsoft 지원 문서를 검토 하 고 적용 되는 업데이트를 설치 합니다.
-
-## 구성을 확인합니다
-
-장애 조치 클러스터를 만들기 전에 하드웨어와 하드웨어 설정이 장애 조치 클러스터링과 호환 하는지 확인 하기 위해 구성의 유효성을 검사 하는 것이 좋습니다. Microsoft 구성을 완료 모든 유효성 검사를 통과 하는 경우에 클러스터 솔루션을 지 원하는 테스트 및 클러스터 노드에서 실행 되는 Windows Server 버전에 대 한 모든 하드웨어 인증 되는 경우.
+10. 설치가 완료 되 면 선택 **닫기**합니다.
+11. 클러스터 노드로 추가할 모든 서버에 장애 조치(failover) 클러스터링 기능 설치
 
 >[!NOTE]
->모든 테스트를 실행 하려면 두 개 이상의 노드가 있어야 합니다. 노드가 하나만 있는 경우이 여러 중요 한 저장소 테스트는 실행 되지 않습니다.
+>장애 조치(failover) 클러스터링 기능을 설치한 후에는 Windows 업데이트에서 최신 업데이트를 적용하는 것이 좋습니다. 또한 Windows Server 2012 기반 장애 조치 클러스터에 대 한 검토를 [의 권장 핫픽스 및 Windows Server 2012 기반 장애 조치 클러스터에 대 한 업데이트](https://support.microsoft.com/help/2784261/recommended-hotfixes-and-updates-for-windows-server-2012-based-failove) Microsoft 지원 문서를 적용 되는 업데이트를 설치 합니다.
 
-### 클러스터 유효성 검사 테스트를 실행 합니다.
+## <a name="validate-the-configuration"></a>구성 유효성 검사
 
-1. 원격 서버 관리 도구에서 설치 된 장애 조치 클러스터 관리 도구를 사용 하는 컴퓨터에서 또는 장애 조치 클러스터링 기능을 설치한 서버에서 장애 조치 클러스터 관리자를 시작 합니다. 서버에서 이렇게 하려면 서버 관리자를 시작 하 고 **도구** 메뉴에서 **장애 조치 클러스터 관리자**를 선택 합니다.
-2. **장애 조치 클러스터 관리자** 창의 **관리**, **구성의 유효성을 검사**를 선택 합니다.
-3. **시작 하기 전에** 페이지에서 **다음**을 선택 합니다.
-4. **선택 서버 또는 클러스터** 페이지 **이름 입력** 상자에서 NetBIOS 이름 또는 장애 조치 클러스터 노드를 추가 하려는 서버의 정규화 된 도메인 이름을 입력 하 고 **추가**선택 합니다. 추가 하려는 각 서버에 대해이 단계를 반복 합니다. 이와 동시에 여러 서버를 추가 하려면 이름을 쉼표 또는 세미콜론으로 구분 합니다. 예를 들어 형식 *server1.contoso.com, server2.contoso.com*이름을 입력 합니다. 완료 되 면 **다음**을 선택 합니다.
-5. **테스트 옵션** 페이지에서 선택 **(권장) 모든 테스트를 실행**하 고 **** 을 선택 합니다.
-6. **확인** 페이지에서 **다음**을 선택 합니다.
+장애 조치(failover) 클러스터를 만들기 전에 구성의 유효성을 검사하여 하드웨어 및 하드웨어 설정이 장애 조치(failover) 클러스터링과 호환되는지 확인하는 것이 좋습니다. Microsoft는 전체 구성이 모든 유효성 검사를 통과하고 모든 하드웨어가 클러스터 노드에서 실행하는 Windows Server 버전에 대해 인증된 경우에만 클러스터 솔루션을 지원합니다.
 
-    유효성 검사 페이지 테스트 실행의 상태를 표시 합니다.
-7. **요약** 페이지에서 다음 중 하나를 수행 합니다.
+>[!NOTE]
+>모든 테스트를 실행하려면 두 개 이상의 노드가 있어야 합니다. 노드가 하나만 있으면 중요한 저장소 테스트가 대부분 실행되지 않습니다.
+
+### <a name="run-cluster-validation-tests"></a>클러스터 유효성 검사 테스트를 실행 합니다.
+
+1. 원격 서버 관리 도구에서 장애 조치(failover) 클러스터 관리 도구를 설치한 컴퓨터 또는 장애 조치(failover) 클러스터링 기능을 설치한 서버에서 장애 조치(failover) 클러스터 관리자를 시작합니다. 서버에서이 작업을 수행 하려면 서버 관리자를 시작 한 후 합니다 **도구** 메뉴에서 **장애 조치 클러스터 관리자**합니다.
+2. 에 **장애 조치 클러스터 관리자** 창 아래에 있는 **관리**를 선택 **구성 유효성 검사**합니다.
+3. 에 **시작 하기 전에** 페이지에서 **다음**합니다.
+4. 에 **서버 선택 또는 클러스터** 페이지의 **이름 입력** , 상자 하 고, NetBIOS 이름 또는 장애 조치 클러스터 노드로 추가 하려는 서버의 정규화 된 도메인 이름을 입력 하 고, 선택한 다음 **추가**합니다. 추가하려는 각 서버에 대해 이 단계를 반복합니다. 여러 서버를 동시에 추가하려면 쉼표 또는 세미콜론으로 이름을 구분합니다. 예를 들어 *server1.contoso.com, server2.contoso.com* 형식으로 이름을 입력합니다. 작업을 완료 하는 경우 선택할 **다음**합니다.
+5. 에 **테스트 옵션** 페이지에서 **(권장) 모든 테스트를 실행**를 선택한 후 **다음**합니다.
+6. 에 **확인** 페이지에서 **다음**합니다.
+
+    유효성 검사 중 페이지에 실행 중인 테스트의 상태가 표시됩니다.
+7. **요약** 페이지에서 다음 중 하나를 수행합니다.
     
-      - 결과 테스트가 성공적으로 완료 및 구성을 클러스터링에 적합 합니다.을 즉시 클러스터를 만들려는 경우, **이제 유효성이 검사 된 노드를 사용 하 여 클러스터 만들기** 확인란 선택 되어 있는지 확인 한 후 **완료**를 선택 합니다. 그런 다음, [장애 조치 클러스터 만들기](#create-the-failover-cluster) 절차의 4 단계를 계속 진행 합니다.
-      - 결과 경고 또는 오류가 발생 했음을 나타냅니다, 세부 정보를 보려면 어떤 문제를 해결 해야 결정을 **보고서 보기** 선택 합니다. 특정 유효성 검사 테스트에 대 한 경고 장애 조치 클러스터의이 부분 지원할 수 있지만 권장된 모범 사례를 충족할 수 있음을 인식 합니다.
+      - 결과 테스트가 성공적으로 완료 되 고 구성이 클러스터링에 적합 하 즉시 클러스터를 만들려는 경우를 확인 합니다 **유효성이 검사 된 노드를 사용 하 여 클러스터를 만들** 확인 상자는 선택 및 선택 **완료**합니다. 그런 다음 [장애 조치(failover) 클러스터 만들기](#create-the-failover-cluster) 절차의 4단계를 계속 진행합니다.
+      - 결과 경고 또는 오류가 발생 했음을 나타낼 경우 선택 **보고서 보기** 를 세부 정보를 보고 해결 해야 하는 문제를 확인 합니다. 특정 유효성 검사 테스트에 대한 경고에서는 장애 조치(failover) 클러스터의 해당 측면이 지원될 수 있지만 권장 모범 사례에는 맞지 않을 수 있음을 나타냅니다.
         
         >[!NOTE]
-        >저장소 공간 영구 예약 유효성 검사 테스트에 대 한 경고를 수신 하는 경우에 대 한 자세한 내용은 [Windows 장애 조치 클러스터 유효성 검사 경고 디스크는 저장소 공간에 대 한 영구 예약을 지원 하지 나타냅니다](https://blogs.msdn.microsoft.com/clustering/2013/05/24/validate-storage-spaces-persistent-reservation-test-results-with-warning/) 게시 블로그를 참조 하세요.
+        >저장소 공간 영구 예약 유효성 검사 테스트에 대한 경고를 받은 경우 자세한 내용은 블로그 게시물 [Windows 장애 조치(failover) 클러스터 유효성 검사에서 디스크가 저장소 공간에 대한 영구 예약을 지원하지 않음을 나타내는 경고가 표시됨](https://blogs.msdn.microsoft.com/clustering/2013/05/24/validate-storage-spaces-persistent-reservation-test-results-with-warning/) 을 참조하세요.
 
-하드웨어 유효성 검사 테스트에 대 한 자세한 내용은 [장애 조치 클러스터에 대 한 하드웨어 유효성 검사](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134244(v%3dws.11)>)를 참조 하세요.
+하드웨어 유효성 검사 테스트에 대한 자세한 내용은 [Validate Hardware for a Failover Cluster](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134244(v%3dws.11)>)를 참조하세요.
 
-## 장애 조치 클러스터 만들기
+## <a name="create-the-failover-cluster"></a>장애 조치(failover) 클러스터 만들기
 
-이 단계를 완료 하려면 사용자 계정으로 로그온 하는이 항목의 [필수 구성 요소를 확인](#verify-the-prerequisites) 섹션에서 설명 하는 요구 사항을 충족 하는지 확인 합니다.
+이 단계를 완료하려면 로그온한 사용자 계정이 이 항목의 [필수 구성 요소 확인](#verify-the-prerequisites) 섹션에 설명된 요구 사항을 충족해야 합니다.
 
 1. 서버 관리자를 시작합니다.
-2. **도구** 메뉴에서 **장애 조치 클러스터 관리자**를 선택 합니다.
-3. **장애 조치 클러스터 관리자** 창의 **관리** **클러스터 만들기**를 선택 합니다.
+2. 에 **도구** 메뉴에서 **장애 조치 클러스터 관리자**합니다.
+3. 에 **장애 조치 클러스터 관리자** 창 아래에 있는 **관리**를 선택 **클러스터 만들기**합니다.
     
     클러스터 만들기 마법사가 열립니다.
-4. **시작 하기 전에** 페이지에서 **다음**을 선택 합니다.
-5. **서버 선택** 페이지 **이름 입력** 상자에 표시 되 면 NetBIOS 이름 또는 장애 조치 클러스터 노드를 추가 하려는 서버의 정규화 된 도메인 이름을 입력 하 고 **추가**선택 합니다. 추가 하려는 각 서버에 대해이 단계를 반복 합니다. 이와 동시에 여러 서버를 추가 하려면 이름을 쉼표 또는 세미콜론으로 구분 합니다. 예를 들어 형식 *server1.contoso.com; server2.contoso.com*이름을 입력 합니다. 완료 되 면 **다음**을 선택 합니다.
+4. 에 **시작 하기 전에** 페이지에서 **다음**합니다.
+5. 경우는 **서버 선택** 페이지의 **이름 입력** , 상자 하 고, NetBIOS 이름 또는 장애 조치 클러스터 노드로 추가 하려는 서버의 정규화 된 도메인 이름을 입력 하 고, 선택한 다음 **추가**합니다. 추가하려는 각 서버에 대해 이 단계를 반복합니다. 여러 서버를 동시에 추가하려면 쉼표 또는 세미콜론으로 이름을 구분합니다. 예를 들어 *server1.contoso.com, server2.contoso.com*형식으로 이름을 입력합니다. 작업을 완료 하는 경우 선택할 **다음**합니다.
     
     >[!NOTE]
-    >클러스터 [유효성 검사 구성 절차](#validate-the-configuration)에서 유효성 검사를 실행 한 후 즉시 만들 하기로 선택한 경우 **서버 선택** 페이지를 나타나지 않습니다. 유효성이 검사 된 노드는 다시 입력 하지 않았을 수 있도록 클러스터 만들기 마법사를 자동으로 추가 됩니다.
-6. 이전에 유효성 검사를 건너뛰면 **유효성 검사 경고** 페이지가 나타납니다. 클러스터 유효성 검사를 실행 하는 것이 좋습니다. Microsoft에서 모든 유효성 검사 테스트를 통과 하는 클러스터만 지원 됩니다. 유효성 검사 테스트를 실행 하려면 **예**, 선택 하 고 **** 을 선택 합니다. [유효성 검사 구성에](#validate-the-configuration)에서 설명 된 대로 유효성 검사 구성 마법사를 완료 합니다.
-7. **클러스터를 관리 하기 위한 액세스 지점** 페이지에서 다음을 수행 합니다.
+    >유효성 검사를 실행 한 즉시 클러스터를 만들도록 선택한 경우는 [절차의 유효성을 검사 하는 구성](#validate-the-configuration)에 표시 되지 것입니다는 **서버 선택** 페이지. 유효성을 검사한 노드는 클러스터 만들기 마법사에 자동으로 추가되므로 다시 입력할 필요가 없습니다.
+6. 앞에서 유효성 검사를 건너뛴 경우 **유효성 검사 경고** 페이지가 나타납니다. 클러스터 유효성 검사를 실행하는 것이 좋습니다. Microsoft에서는 모든 유효성 검사 테스트를 통과한 클러스터만 지원합니다. 유효성 검사 테스트를 실행 하려면 **Yes**를 선택한 후 **다음**합니다. 에 설명 된 대로 유효성 검사 구성 마법사를 완료 [구성 유효성 검사](#validate-the-configuration)합니다.
+7. **클러스터 관리 액세스 지점** 페이지에서 다음을 수행합니다.
     
-    1. **클러스터 이름** 상자에서 클러스터를 관리 하는 데 사용할 이름을 입력 합니다. 전에 다음 정보를 검토를 수행 합니다.
+    1. **클러스터 이름** 상자에 클러스터를 관리하는 데 사용할 이름을 입력합니다. 그 전에 먼저 다음 정보를 검토합니다.
         
-          - 클러스터 생성 하는 동안이 이름은 AD DS에서 클러스터 컴퓨터 개체 ( *클러스터 이름 개체* 또는 *CNO*라고도 함)으로 등록 됩니다. 클러스터에 대 한 NetBIOS 이름을 지정 하는 경우 CNO 클러스터 노드에 대 한 컴퓨터 개체 상주 하는 동일한 위치에 만들어집니다. 이 기본 컴퓨터 컨테이너 또는 OU 수 있습니다.
-          - CNO에 대 한 다른 위치를 지정 하려면 OU의 고유 이름 **클러스터 이름** 상자에 입력할 수 있습니다. 예: *CN = ClusterName, OU 클러스터, DC = Contoso, DC = com =* 합니다.
-          - 도메인 관리자가 클러스터 노드가 있는 보다 다른 OU에 CNO 미리 준비 하는 경우 도메인 관리자가 제공 하는 고유 이름을 지정 합니다.
-    2. 서버에 DHCP를 사용 하도록 구성 된 네트워크 어댑터를 찾을 수 없는 경우 장애 조치 클러스터에 대 한 하나 이상의 고정 IP 주소를 구성 해야 합니다. 클러스터 관리에 사용 하려는 각 네트워크 옆에 있는 확인란을 선택 합니다. 선택한 네트워크 옆 **주소** 필드를 선택 하 고 클러스터를 할당 하고자 하는 IP 주소를 입력 합니다. 이 IP 주소 (또는 주소) 클러스터 이름에서 시스템 DNS (도메인 이름)와 연결 됩니다.
-    3. 완료 되 면 **다음**을 선택 합니다.
-8. **확인** 페이지에서 설정을 검토 합니다. 기본적으로 **모든 적격 저장소 클러스터에 추가** 확인란이 선택 되어 있습니다. 다음 중 하나를 수행 하려는 경우이 확인란의 선택을 취소 합니다.
+          - 클러스터를 만드는 동안 이 이름이 AD DS에 클러스터 컴퓨터 개체( *클러스터 이름 개체* 또는 *CNO*라고도 함)로 등록됩니다. 클러스터의 NetBIOS 이름을 지정한 경우 클러스터 노드의 컴퓨터 개체가 있는 곳과 동일한 위치에 CNO가 만들어집니다. 이는 기본 컴퓨터 컨테이너 또는 OU일 수 있습니다.
+          - CNO의 다른 위치를 지정하려면 **클러스터 이름** 상자에 OU의 고유 이름을 입력하면 됩니다. 예를 들어 다음과 같은 가치를 제공해야 합니다. *CN=ClusterName, OU=Clusters, DC=Contoso, DC=com*
+          - 도메인 관리자가 클러스터 노드에 있는 것과 다른 OU에서 CNO를 사전 준비한 경우 도메인 관리자가 제공하는 고유 이름을 지정합니다.
+    2. 서버에 DHCP를 사용하도록 구성된 네트워크 어댑터가 없는 경우 장애 조치(failover) 클러스터의 고정 IP 주소를 하나 이상 구성해야 합니다. 클러스터 관리에 사용할 각 네트워크 옆의 확인란을 선택합니다. 선택 된 **주소** 선택한 네트워크 옆의 필드 및 다음 클러스터에 할당 하려는 IP 주소를 입력 합니다. 이 IP 주소는 DNS(Domain Name System)에서 클러스터 이름에 연결됩니다.
+    3. 작업을 완료 하는 경우 선택할 **다음**합니다.
+8. **확인** 페이지에서 설정을 검토합니다. 기본적으로 **클러스터에 사용할 수 있는 모든 저장소를 추가하세요.** 확인란이 선택되어 있습니다. 다음 중 하나를 수행하려면 이 확인란의 선택을 취소합니다.
     
-      - 나중에 저장소를 구성 하려고 합니다.
-      - 장애 조치 클러스터 관리자를 통해 또는 장애 조치 클러스터링 Windows PowerShell cmdlet을 통해 클러스터 저장소 공간을 만들고 아직 만들지 않은 저장소 공간에서 파일 및 저장소 서비스 계획 합니다. 자세한 내용은 [클러스터 저장소 공간 배포](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj822937(v%3dws.11)>)를 참조 하세요.
-9. **다음** 장애 조치 클러스터 만들기를 선택 합니다.
-10. **요약** 페이지에서 장애 조치 클러스터 성공적으로 만들어졌는지 확인 합니다. 모든 경고 또는 오류가 없다면 요약 출력을 확인 하거나 전체 보고서를 보려면 **보고서 보기** 선택 합니다. **완료**를 선택 합니다.
-11. 클러스터를 만들 것인지 탐색 트리에서 **장애 조치 클러스터 관리자** 에서 클러스터 이름이 나열 되어 있는지 확인 합니다. 클러스터 이름을 확장 하 고 **노드**, **저장소** 또는 **네트워크** 관련된 리소스를 보려면 아래의 항목을 선택할 수 있습니다.
+      - 나중에 저장소를 구성하려는 경우
+      - 파일 및 저장소 서비스에서 저장소 공간을 아직 만들지 않았으며, 장애 조치(failover) 클러스터 관리자 또는 장애 조치(failover) 클러스터링 Windows PowerShell cmdlet을 통해 클러스터된 저장소 공간을 만들려는 경우 자세한 내용은 [클러스터된 저장소 공간 배포](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj822937(v%3dws.11)>)를 참조하세요.
+9. 선택 **다음** 장애 조치 클러스터를 만듭니다.
+10. **요약** 페이지에서 장애 조치(failover) 클러스터가 성공적으로 만들어졌는지 확인합니다. 경고 또는 오류 경우 요약 출력 보거나 선택 **보고서 보기** 전체 보고서를 볼 수 있습니다. 선택 **완료**합니다.
+11. 클러스터가 만들어졌는지 확인하려면 탐색 트리의 **장애 조치(failover) 클러스터 관리자** 아래에 클러스터 이름이 있는지 확인합니다. 클러스터 이름을 확장 하 고를 선택한 다음 아래에 있는 항목 **노드**, **저장소** 또는 **네트워크** 관련된 리소스를 보고 합니다.
     
-    실현 DNS에 성공적으로 복제에 클러스터 이름 시간이 오래 걸릴 수 있습니다. 성공적인 DNS 등록 및 복제 후 서버 관리자에서 **모든 서버** 를 선택 하는 경우 클러스터 이름으로 표시 해야 **관리 효율성** 상태를 **온라인**으로 서버.
+    DNS에서 클러스터 이름을 복제하는 데 약간의 시간일 걸릴 수 있습니다. DNS 등록 및 복제가 완료를 선택 하는 경우 이후에 **모든 서버** 서버 관리자에서 클러스터 이름이 인 서버로 나열 되어 있어야를 **관리 효율성** 상태의 **온라인** .
 
-클러스터를 만든 후 할 수 있는 것 같은 클러스터 쿼럼 구성을 확인 하 고 선택적으로 클러스터 공유 볼륨 (CSV)를 만듭니다. 자세한 내용은 [에서 저장소 공간 다이렉트 이해 쿼럼](../storage/storage-spaces/understand-quorum.md) 및 [장애 조치 클러스터에서 사용 하 여 클러스터 공유 볼륨](failover-cluster-csvs.md)을 참조 하세요.
+클러스터를 만든 후 클러스터 쿼럼 구성을 확인하고 필요에 따라 CSV(클러스터 공유 볼륨)를 만드는 등의 작업을 수행할 수 있습니다. 자세한 내용은 [저장소 공간 다이렉트에서 이해 쿼럼](../storage/storage-spaces/understand-quorum.md) 하 고 [장애 조치 클러스터에서 사용 하 여 클러스터 공유 볼륨](failover-cluster-csvs.md)합니다.
 
-## 클러스터 된 역할을 만듭니다.
+## <a name="create-clustered-roles"></a>클러스터된 역할 만들기
 
-장애 조치 클러스터를 만든 후에 호스트 클러스터 작업에 클러스터링 된 역할을 만들 수 있습니다.
+장애 조치(failover) 클러스터를 만든 후 클러스터 작업을 호스트할 클러스터된 역할을 만들 수 있습니다.
 
 >[!NOTE]
->클라이언트 액세스 포인트를 필요로 하는 클러스터링 된 역할에 대 한 가상 컴퓨터 개체 (VCO) AD DS에 만들어집니다. 기본적으로 클러스터에 대 한 모든 Vco CNO로 동일한 컨테이너 또는 OU에 생성 됩니다. 클러스터를 만든 후 이동할 수 있습니다 CNO OU를 실현 합니다.
+>클라이언트 액세스 지점이 필요한 클러스터된 역할의 경우 AD DS에 VCO(가상 컴퓨터 개체)가 만들어집니다. 기본적으로 클러스터의 모든 VCO는 CNO와 동일한 컨테이너 또는 OU에 만들어집니다. 클러스터를 만든 후 CNO를 원하는 OU로 이동할 수 있습니다.
 
 클러스터 된 역할을 만드는 방법은 다음과 같습니다.
 
-1. 서버 관리자를 사용 하거나 Windows PowerShell 역할 또는 각 장애 조치 클러스터 노드에서 클러스터 된 역할에 필요한 기능을 설치 합니다. 예를 들어 클러스터 된 파일 서버를 만들려는 경우 모든 클러스터 노드에서 파일 서버 역할을 설치 합니다.
+1. 서버 관리자 또는 Windows PowerShell을 사용하여 클러스터된 역할에 필요한 기능 또는 역할을 각 장애 조치(failover) 클러스터 노드에 설치합니다. 예를 들어 클러스터된 파일 서버를 만들려면 모든 클러스터 노드에 파일 서버 역할을 설치합니다.
     
-    다음 표에서 고가용성 마법사와 관련 된 서버 역할 또는 필수 조건으로 설치 해야 하는 기능에서 구성할 수 있는 클러스터 된 역할을 보여 줍니다.
+    다음 표에서는 고가용성 마법사에서 구성할 수 있는 클러스터된 역할 및 필수 구성 요소로 설치해야 하는 관련 서버 역할 또는 기능을 보여 줍니다.
     
     <table>
     <thead>
     <tr class="header">
-    <th>클러스터 된 역할</th>
+    <th>클러스터된 역할</th>
     <th>역할 또는 기능 필수 구성 요소</th>
     </tr>
     </thead>
     <tbody>
     <tr class="odd">
-    <td>DFS Namespace 서버</td>
-    <td>DFS 네임 스페이스 (파일 서버 역할의 일부)</td>
+    <td>DFS 네임스페이스 서버</td>
+    <td>DFS 네임스페이스(파일 서버 역할의 일부)</td>
     </tr>
     <tr class="even">
     <td>DHCP 서버</td>
     <td>DHCP 서버 역할</td>
     </tr>
     <tr class="odd">
-    <td>Distributed Transaction Coordinator DTC)</td>
+    <td>DTC(Distributed Transaction Coordinator)</td>
     <td>없음</td>
     </tr>
     <tr class="even">
@@ -178,23 +178,23 @@ Active Directory 분리 클러스터를 배포할 수 있습니다. 이 배포 �
     </tr>
     <tr class="odd">
     <td>일반 응용 프로그램</td>
-    <td>해당 없음</td>
+    <td>해당 사항 없음</td>
     </tr>
     <tr class="even">
     <td>일반 스크립트</td>
-    <td>해당 없음</td>
+    <td>해당 사항 없음</td>
     </tr>
     <tr class="odd">
     <td>일반 서비스</td>
-    <td>해당 없음</td>
+    <td>해당 사항 없음</td>
     </tr>
     <tr class="even">
-    <td>Hyper-v 복제본 브로커</td>
-    <td>Hyper-v 역할</td>
+    <td>Hyper-V 복제본 브로커</td>
+    <td>Hyper-V 역할</td>
     </tr>
     <tr class="odd">
     <td>iSCSI 대상 서버</td>
-    <td>iSCSI 대상 서버 (파일 서버 역할의 일부)</td>
+    <td>iSCSI 대상 서버(파일 서버 역할의 일부)</td>
     </tr>
     <tr class="even">
     <td>iSNS 서버</td>
@@ -205,12 +205,12 @@ Active Directory 분리 클러스터를 배포할 수 있습니다. 이 배포 �
     <td>메시지 큐 서비스 기능</td>
     </tr>
     <tr class="even">
-    <td>다른 서버</td>
+    <td>기타 서버</td>
     <td>없음</td>
     </tr>
     <tr class="odd">
     <td>가상 컴퓨터</td>
-    <td>Hyper-v 역할</td>
+    <td>Hyper-V 역할</td>
     </tr>
     <tr class="even">
     <td>WINS 서버</td>
@@ -218,59 +218,59 @@ Active Directory 분리 클러스터를 배포할 수 있습니다. 이 배포 �
     </tr>
     </tbody>
     </table>
-2. 장애 조치 클러스터 관리자에서 클러스터 이름을 확장 하 고 **역할**마우스 오른쪽 단추로 클릭 한 다음 **구성 역할**을 선택 합니다.
-3. 클러스터 된 역할을 만드는 고가용성 마법사의 단계를 수행 합니다.
-4. **역할** 창에서 클러스터 된 역할 생성 되었는지 확인 하려면 역할 **실행**의 상태에 있는지 확인 합니다. 또한 역할 창 소유자 노드를 나타냅니다. 장애 조치를 테스트 하려면 역할을 마우스 오른쪽 단추로 클릭 하 고 **이동**을 가리킨 다음 **노드 선택**를 선택 합니다. **클러스터 된 역할 이동** 대화 상자에서 원하는 클러스터 노드를 선택 하 고 **확인**을 선택 합니다. **소유자 노드** 열에서 소유자 노드를 변경 하는 것을 확인 합니다.
+2. 장애 조치 클러스터 관리자에서 클러스터 이름을 확장 하 고 마우스 오른쪽 단추로 클릭 **역할**를 선택한 후 **역할 구성**합니다.
+3. 고가용성 마법사의 단계에 따라 클러스터된 역할을 만듭니다.
+4. 클러스터된 역할이 만들어졌는지 확인하려면 **역할** 창에서 역할의 상태가 **실행 중**인지 확인합니다. 역할 창에는 소유자 노드로 표시됩니다. 장애 조치를 테스트 하려면 역할을 마우스 오른쪽 단추로 클릭, 가리킨 **이동**를 선택한 후 **노드 선택**합니다. 에 **클러스터 된 역할 이동** 대화 상자에서 원하는 클러스터 노드를 선택한 후 **확인**합니다. **소유자 노드** 열에서 소유자 노드가 변경되었는지 확인합니다.
 
-## Windows PowerShell을 사용 하 여 장애 조치 클러스터 만들기
+## <a name="create-a-failover-cluster-by-using-windows-powershell"></a>Windows PowerShell을 사용하여 장애 조치(failover) 클러스터 만들기
 
-다음 Windows PowerShell cmdlet이이 항목의 이전 절차와 동일한 기능을 수행합니다. 표시 될 수 바꿈 여러 줄에서 서식 제약 조건으로 인해 하는 경우에 한 줄에 각 cmdlet을 입력 합니다.
+다음 Windows PowerShell cmdlet이이 항목의 이전 절차와 동일한 기능을 수행 합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.
 
 >[!NOTE]
->Windows Server 2012 r 2에서 Active Directory 분리 클러스터를 만들려면 Windows PowerShell을 사용 해야 합니다. 구문에 대 한 자세한 내용은 [Active Directory-Detached 클러스터 배포](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265970(v=ws.11))를 참조 하세요.
+>Windows Server 2012 R2에서 Active Directory 분리 클러스터를 만드는 Windows PowerShell을 사용 해야 합니다. 구문에 대한 자세한 내용은 [Deploy an Active Directory-Detached Cluster](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265970(v=ws.11))를 참조하세요.
 
-다음 예제에서는 장애 조치 클러스터링 기능을 설치합니다.
+다음 예제에서는 장애 조치(failover) 클러스터링 기능을 설치합니다.
 
 ```PowerShell
 Install-WindowsFeature –Name Failover-Clustering –IncludeManagementTools
 ```
 
-다음 예제에서는 *1* 을 *서버 2*라고 하는 컴퓨터에서 모든 클러스터 유효성 검사 테스트를 실행 합니다.
+다음 예제에서는 *Server1* 및 *Server2*컴퓨터에서 모든 클러스터 유효성 검사 테스트를 실행합니다.
 
 ```PowerShell
 Test-Cluster –Node Server1, Server2
 ```
 
 >[!NOTE]
->**테스트 클러스터** cmdlet은 현재 작업 디렉터리에 로그 파일에 결과 출력합니다. 예: < 사용자 이름 > C:\Users\ \AppData\Local\Temp 합니다.
+>합니다 **Test-cluster** cmdlet은 현재 작업 디렉터리에서 로그 파일에 결과 출력 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다. C:\Users\<username>\AppData\Local\Temp.
 
-다음 예제에서는 *서버 1* 노드와 *MyCluster* 및 *서버 2*라는는 정적 IP 주소 *192.168.1.12*, 할당 및 장애 조치 클러스터에 적합 한 모든 저장소를 추가 하는 장애 조치 클러스터를 만듭니다.
+다음 예제에서는 *Server1* 및 *Server2* 노드가 있는 *MyCluster*라는 장애 조치(failover) 클러스터를 만들고, 고정 IP 주소 *192.168.1.12*를 할당하며, 사용 가능한 모든 저장소를 장애 조치(failover) 클러스터에 추가합니다.
 
 ```PowerShell
 New-Cluster –Name MyCluster –Node Server1, Server2 –StaticAddress 192.168.1.12
 ```
 
-다음 예제에서는 이전 예제와 같이 동일한 장애 조치 클러스터 만들지만 장애 조치 클러스터에 적합 한 저장소를 추가 하지 않습니다.
+다음 예제에서는 이전 예제와 동일한 장애 조치(failover) 클러스터를 만들지만 사용 가능한 저장소를 장애 조치(failover) 클러스터에 추가하지 않습니다.
 
 ```PowerShell
 New-Cluster –Name MyCluster –Node Server1, Server2 –StaticAddress 192.168.1.12 -NoStorage
 ```
 
-다음 예제에서는 라는 *MyCluster* *Contoso.com*도메인의 OU *클러스터* 에서 클러스터를 만듭니다.
+다음 예제에서는 *Contoso.com* 도메인의 *Cluster* OU에 *MyCluster*라는 클러스터를 만듭니다.
 
 ```PowerShell
 New-Cluster -Name CN=MyCluster,OU=Cluster,DC=Contoso,DC=com -Node Server1, Server2
 ```
 
-클러스터링 된 역할을 추가 하는 방법의 예제를 [추가 ClusterFileServerRole](https://docs.microsoft.com/powershell/module/failoverclusters/add-clusterfileserverrole?view=win10-ps) 등 [추가 ClusterGenericApplicationRole](https://docs.microsoft.com/powershell/module/failoverclusters/add-clustergenericapplicationrole?view=win10-ps)항목을 참조 하세요.
+클러스터된 역할을 추가하는 방법의 예는 [Add-ClusterFileServerRole](https://docs.microsoft.com/powershell/module/failoverclusters/add-clusterfileserverrole?view=win10-ps) 및 [Add-ClusterGenericApplicationRole](https://docs.microsoft.com/powershell/module/failoverclusters/add-clustergenericapplicationrole?view=win10-ps)과 같은 항목을 참조하세요.
 
-## 자세한 정보
+## <a name="more-information"></a>자세한 정보
 
   - [장애 조치 클러스터링](failover-clustering.md)
   - [Hyper-v 클러스터 배포](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj863389(v%3dws.11)>)
-  - [응용 프로그램 데이터에 대 한 스케일 아웃 파일 서버](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831349(v%3dws.11)>)
+  - [응용 프로그램 데이터용 스케일 아웃 파일 서버](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831349(v%3dws.11)>)
   - [Active Directory 분리 클러스터 배포](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265970(v=ws.11))
-  - [고가용성을 위한 게스트 클러스터링 사용](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn440540(v%3dws.11)>)
+  - [고가용성을 위한 게스트 클러스터링을 사용 하 여](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn440540(v%3dws.11)>)
   - [클러스터 인식 업데이트](cluster-aware-updating.md)
-  - [새 클러스터](https://docs.microsoft.com/powershell/module/failoverclusters/new-cluster?view=win10-ps)
-  - [테스트 클러스터](https://docs.microsoft.com/powershell/module/failoverclusters/test-cluster?view=win10-ps)
+  - [New-Cluster](https://docs.microsoft.com/powershell/module/failoverclusters/new-cluster?view=win10-ps)
+  - [Test-Cluster](https://docs.microsoft.com/powershell/module/failoverclusters/test-cluster?view=win10-ps)

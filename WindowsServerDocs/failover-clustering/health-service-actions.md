@@ -1,50 +1,51 @@
 ---
-title: "건강 서비스 작업"
+title: 상태 서비스 작업
 ms.prod: windows-server-threshold
 manager: eldenc
 ms.author: cosdar
 ms.technology: storage-health-service
 ms.topic: article
-ms.assetid: 
+ms.assetid: ''
 author: cosmosdarwin
 ms.date: 08/14/2017
 ms.openlocfilehash: efdf8f04e68fcbdc7051e78d6725cb919e740ffa
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59843024"
 ---
-# <a name="health-service-actions"></a>건강 서비스 작업
+# <a name="health-service-actions"></a>상태 서비스 작업
 
-> Windows Server 2016 적용 됩니다.
+> 적용 대상: Windows Server 2016
 
-상태 서비스는 Storage Spaces Direct 실행 클러스터에 대 한 작동 경험과 일상적인 모니터링 개선 하는 Windows Server 2016의 새로운 기능입니다.
+상태 관리 서비스는 저장소 공간 다이렉트를 실행 하는 클러스터에 대 한 작업 경험과 일상적인 모니터링을 향상 시키는 Windows Server 2016의 새로운 기능입니다.
 
-## <a name="actions"></a>작업  
+## <a name="actions"></a>동작  
 
-다음 섹션 어떤 의료 서비스에 의해 자동 워크플로에 대해 설명 합니다. 작업 자율적, 촬영 되 고 실제로 하거나 상태 서비스의 진행률 또는 결과 추적, "작업" 생성 확인 합니다. 로그 달리 작업을 완료 하 고 주로 성능 또는 (예: 복구를 복원 하거나 데이터 재조정) 용량 영향을 줄 수 있는 지속적인 활동에 대 한 정보를 제공 하기 위한 것 후 곧 사라집니다.  
+다음 섹션에서는 상태 관리 서비스에서 자동화되는 워크플로를 설명합니다. 동작이 실제로 자율적으로 수행되는지 확인하거나 해당 진행률 또는 결과를 추적하기 위해 상태 관리 서비스에서 "동작"을 생성합니다. 로그와 달리 동작은 완료되는 즉시 사라지며, 주로 성능이나 용량에 영향을 줄 수 있는 진행 중인 활동(예: 복원력 복원 또는 데이터 리밸런싱)에 대한 정보를 제공합니다.  
 
-### <a name="usage"></a>사용  
+### <a name="usage"></a>사용법  
 
-새 PowerShell cmdlet 모든 작업을 표시합니다.  
+하나의 새 PowerShell cmdlet에 모든 동작이 표시됩니다.  
 
 ```PowerShell
 Get-StorageHealthAction  
 ```
 
-### <a name="coverage"></a>검사  
+### <a name="coverage"></a>적용 범위  
 
-Windows Server 2016에는 **Get StorageHealthAction** cmdlet에 다음과 같은 정보를 돌아갈 수 있습니다.  
+Windows Server 2016에는 **Get-storagehealthaction** cmdlet에 다음 정보를 반환할 수 있습니다.  
 
--   손실, 실패 한 연결이 또는 응답 하지 않는 하 여 실제 디스크를 더 이상 사용  
+-   실패했거나 연결이 끊어졌거나 응답하지 않는 실제 디스크를 사용 중지하는 중  
 
--   교체 실제 디스크를 사용 하 여 저장소 풀 전환  
+-   대체 실제 디스크를 사용하도록 저장소 풀을 전환하는 중  
 
--   데이터를 전체 복구 복원  
+-   데이터의 전체 복원력을 복원하는 중  
 
--   저장소 풀 재조정  
+-   저장소 풀을 리밸런싱하는 중  
 
-## <a name="see-also"></a>참조 하십시오
+## <a name="see-also"></a>참조
 
-- [Windows Server 2016에에서 상태 서비스](health-service-overview.md)
-- [개발자 문서, 샘플 코드 및 msdn API 참조](https://msdn.microsoft.com/windowshealthservice)
+- [Windows Server 2016의에서 상태 관리 서비스](health-service-overview.md)
+- [개발자 설명서, 샘플 코드 및 API 참조](https://msdn.microsoft.com/windowshealthservice)

@@ -1,6 +1,6 @@
 ---
-title: "Microsoft Windows Server Essentials의 온라인 서비스를 관리 합니다."
-description: "Windows Server Essentials을 사용 하는 방법을 설명 합니다."
+title: Windows Server Essentials에서 Microsoft Online Services 관리
+description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
@@ -13,25 +13,26 @@ author: nnamuhcs
 ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: 9feb65903be589e6f6a9cc6c3b8738d858a70f30
-ms.sourcegitcommit: 70c1b6cedad55b9c7d2068c9aa4891c6c533ee4c
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59849514"
 ---
-# <a name="manage-microsoft-online-services-in-windows-server-essentials"></a>Microsoft Windows Server Essentials의 온라인 서비스를 관리 합니다.
+# <a name="manage-microsoft-online-services-in-windows-server-essentials"></a>Windows Server Essentials에서 Microsoft Online Services 관리
 
->Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials에 적용 됩니다.
+>적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-다음 항목 조직에 대 한 온라인 서비스를 관리 하는 데 사용할 수 있는 방법에 대 한 정보를 제공 합니다.  
+다음 항목에서는 조직에 대한 온라인 서비스를 관리하는 데 사용할 수 있는 방법에 대해 설명합니다.  
   
 -   [Office 365 관리](Manage-Office-365-in-Windows-Server-Essentials.md)   
   
--   [Online Backup-관리](Manage-Online-Backup-in-Windows-Server-Essentials.md)  
+-   [온라인 백업 관리](Manage-Online-Backup-in-Windows-Server-Essentials.md)  
   
--   [온라인 SharePoint 관리](Manage-SharePoint-Online-in-Windows-Server-Essentials.md)  
+-   [SharePoint Online 관리](Manage-SharePoint-Online-in-Windows-Server-Essentials.md)  
   
-## <a name="see-also"></a>참조 하십시오  
+## <a name="see-also"></a>참조  
   
 -   [Windows Server Essentials 관리](Manage-Windows-Server-Essentials.md)  
   
--   [Windows Server Essentials을 사용 하 여](../use/Use-Windows-Server-Essentials.md)
+-   [Windows Server Essentials 사용](../use/Use-Windows-Server-Essentials.md)

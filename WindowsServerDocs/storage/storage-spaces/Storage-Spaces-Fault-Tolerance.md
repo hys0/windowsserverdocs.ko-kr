@@ -11,11 +11,11 @@ ms.assetid: 5e1d7ecc-e22e-467f-8142-bad6d82fc5d0
 description: 미러링 및 패리티를 포함하는 저장소 공간 다이렉트의 복원력 옵션에 대한 설명.
 ms.localizationpriority: medium
 ms.openlocfilehash: 4e6a29e82a85ec9570cda827060dfe1cdf192c53
-ms.sourcegitcommit: 1533d994a6ddea54ac189ceb316b7d3c074307db
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "1284981"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59849574"
 ---
 # <a name="fault-tolerance-and-storage-efficiency-in-storage-spaces-direct"></a>저장소 공간 다이렉트의 내결함성 및 저장소 효율성
 
@@ -91,7 +91,7 @@ Windows Server 2016의 저장소 공간 기능에는 '로컬 재구성 코드' �
 
 깊이 있지만 읽기 쉬운 것으로 유명한 [Claus Joergensen](https://twitter.com/clausjor)의 [로컬 재구성 코드가 여러 오류 시나리오를 처리하는 방식과 그 장점에 관한 글](https://blogs.technet.microsoft.com/filecab/2016/09/06/volume-resiliency-and-efficiency-in-storage-spaces-direct/)을 참조하는 것이 좋습니다.
 
-## <a name="mirror-accelerated-parity"></a>미러-가속 패리티
+## <a name="mirror-accelerated-parity"></a>미러 가속 패리티
 
 Windows Server 2016부터는 저장소 공간 다이렉트 볼륨이 일부는 미러이고 일부는 패리티일 수 있습니다. 미러링된 부분에 먼저 쓰기가 표시된 다음 패리티 부분으로 점차 이동합니다. 실제로 이 방식은 [미러링을 사용하여 이레이저 코딩을 가속화](https://blogs.technet.microsoft.com/filecab/2016/09/06/volume-resiliency-and-efficiency-in-storage-spaces-direct/)합니다.
 
@@ -131,7 +131,7 @@ Windows Server 2016부터는 저장소 공간 다이렉트 볼륨이 일부는 �
 
 이 표에서는 하드 디스크 드라이브(HDD)와 반도체 드라이브(SSD)가 모두 포함된 하이브리드 배포에서 각 규모별 이중 패리티 및 로컬 재구성 코드의 저장소 효율성을 보여 줍니다.
 
-|    오류 도메인      |    레이아웃           |    효율   |
+|    오류 도메인      |    레이아웃           |    효율성   |
 |-----------------------|---------------------|-----------------|
 |    2                  |    –                |    –            |
 |    3                  |    –                |    –            |
@@ -153,7 +153,7 @@ Windows Server 2016부터는 저장소 공간 다이렉트 볼륨이 일부는 �
 
 이 표에서는 반도체 드라이브(SSD)만 포함된 플래시 전용 배포에서 각 규모별 이중 패리티 및 로컬 재구성 코드의 저장소 효율성을 보여 줍니다. 패리티 레이아웃은 플래시 전용 구성에서 더 큰 그룹 크기를 사용하고 더 높은 저장소 효율성을 달성할 수 있습니다.
 
-|    오류 도메인      |    레이아웃           |    효율   |
+|    오류 도메인      |    레이아웃           |    효율성   |
 |-----------------------|---------------------|-----------------|
 |    2                  |    –                |    –            |
 |    3                  |    –                |    –            |
@@ -179,18 +179,18 @@ Windows Server 2016부터는 저장소 공간 다이렉트 볼륨이 일부는 �
 
 이러한 여섯 개의 예제는 3방향 미러링 및/또는 이중 패리티로 허용 **가능한** 항목을 보여 줍니다.
 
-- **1.**    하나의 드라이브 손실(캐시 드라이브 포함)
+- **1.**    분실 한 드라이브 (캐시 드라이브 포함)
 - **2.**    하나의 서버 손실
 
 ![fault-tolerance-examples-1-and-2](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-12.png)
 
-- **3.**    하나의 서버와 하나의 드라이브 손실
-- **4.**    서로 다른 서버의 두 드라이브 손실
+- **3.**    한 서버 및 단일 드라이브 손실
+- **4.**    서로 다른 서버에서 두 개의 드라이브 손실
 
 ![fault-tolerance-examples-3-and-4](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-34.png)
 
-- **5.**    최대 두 개의 서버가 영향을 받는 경우 두 개를 초과하는 드라이브 손실
-- **6.**    두 개의 서버 손실
+- **5.**    두 서버에 가장 영향을 받는 한다면 두 개 이상의 드라이브 손실
+- **6.**    두 서버 손실
 
 ![fault-tolerance-examples-5-and-6](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-56.png)
 
@@ -200,23 +200,23 @@ Windows Server 2016부터는 저장소 공간 다이렉트 볼륨이 일부는 �
 
 저장소 공간은 시간이 충분하다면 오류가 각각의 오류 발생 후 완전한 복원력으로 복원되므로 제한 없는 수의 오류를 허용할 수 있습니다. 하지만 특정 시점에 최대 두 개의 오류 도메인이 영향을 받는 경우에만 안전합니다. 따라서 다음은 3방향 미러링 및/또는 이중 패리티에서 허용 **불가능한** 항목의 예제입니다.
 
-- **7.**    한 번에 세 개 이상의 서버에서 드라이브 손실
-- **8.** 한 번에 세 개 이상의 서버 손실
+- **7.** 한 번에 세 개 이상의 서버에서 드라이브 손실
+- **8.** 3 개 이상의 서버를 한 번에 손실
 
 ![fault-tolerance-examples-7-and-8](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-78.png)
 
-## <a name="usage"></a>사용
+## <a name="usage"></a>사용법
 
 [저장소 공간 다이렉트에서 볼륨 만들기](create-volumes.md)를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 아래의 모든 링크는 이 항목의 본문에 포함되어 있습니다.
 
-- [Windows Server 2016의 저장소 공간 다이렉트](storage-spaces-direct-overview.md)
-- [Windows Server 2016의 오류 도메인 인식](../../failover-clustering/fault-domains.md)
-- [Azure에서 Microsoft Research의 이레이저 코딩](https://www.microsoft.com/en-us/research/publication/erasure-coding-in-windows-azure-storage/)
-- [로컬 재구성 코드 및 패리티 볼륨 속도 향상](https://blogs.technet.microsoft.com/filecab/2016/09/06/volume-resiliency-and-efficiency-in-storage-spaces-direct/)
+- [Windows Server 2016의에서 저장소 공간 다이렉트](storage-spaces-direct-overview.md)
+- [Windows Server 2016의에서 장애 도메인 인식](../../failover-clustering/fault-domains.md)
+- [Azure Microsoft Research에서 코딩 지우기](https://www.microsoft.com/en-us/research/publication/erasure-coding-in-windows-azure-storage/)
+- [로컬 재구성 코드 및 가속화 패리티 볼륨](https://blogs.technet.microsoft.com/filecab/2016/09/06/volume-resiliency-and-efficiency-in-storage-spaces-direct/)
 - [저장소 관리 API의 볼륨](https://blogs.technet.microsoft.com/filecab/2016/08/29/deep-dive-volumes-in-spaces-direct/)
-- [Microsoft Ignite 2016의 저장소 효율성 데모](https://www.youtube.com/watch?v=-LK2ViRGbWs&t=36m55s)
-- [저장소 공간 다이렉트용 용량 계산기 미리 보기](http://aka.ms/s2dcalc)
+- [저장소 효율성 데모 microsoft Ignite 2016](https://www.youtube.com/watch?v=-LK2ViRGbWs&t=36m55s)
+- [용량 계산기 PREVIEW 저장소 공간 다이렉트](http://aka.ms/s2dcalc)

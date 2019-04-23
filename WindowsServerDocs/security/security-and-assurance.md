@@ -12,13 +12,13 @@ author: coreyp-at-msft
 ms.author: coreyp
 ms.localizationpriority: high
 ms.openlocfilehash: bd9df9cc9836b15ec22c11b3413aa778192307f9
-ms.sourcegitcommit: 07ac08dea2b8f2763c2614a999dc7967018aa0b4
-ms.translationtype: HT
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "6121312"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59849994"
 ---
-# 보안 | 보증
+# <a name="security--assurance"></a>보안 | 보증
 
 >[!TIP]
 > 이전 버전의 Windows Server에 대한 자세한 내용이 궁금하십니까? docs.microsoft.com에서 다른 [Windows Server 라이브러리](/previous-versions/windows/)를 확인할 수 있습니다. 또한 특정 정보에 대해 [이 사이트를 검색](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions)할 수 있습니다.
@@ -115,7 +115,7 @@ Windows Server 보안은 운영 체제에 기본 제공되는 보호 계층을 �
                                         </div>
                                         <div class="cardText">
                                             <h3>Ignite의 보안 및 보증 개요 세션</h3><hr />
-                                            <p>이 Ignite 세션에서는 영구 위협, 내부자 위반, 조직적인 사이버 범죄, Microsoft 클라우드 플랫폼(온-프레미스 및 Azure와 연결된 서비스) 보안을 다룹니다. 여기에는 워크로드, 대기업 테넌트 및 서비스 공급자 보안에 대한 시나리오가 포함되어 있습니다.</p>
+                                            <p>이 Ignite 세션에서는 영구 위협, 내부자 위반, 조직적인 사이버 범죄 침해, 구성 된 사이버 및 Microsoft 클라우드 플랫폼(온-프레미스 및 Azure와 연결된 서비스) 보안을 다룹니다. 여기에는 워크로드, 대기업 테넌트 및 서비스 공급자 보안에 대한 시나리오가 포함되어 있습니다.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -137,23 +137,23 @@ Windows Server 보안은 운영 체제에 기본 제공되는 보호 계층을 �
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>보호된 VM으로 가상화 보호</h3>
+                        <h3>보호된 VM으로 보안된 가상화</h3>
 <HR />
-                        <p><h3><a href="http://channel9.msdn.com/Shows/Mechanics/Introduction-to-Shielded-Virtual-Machines-in-Windows-Server-2016">Channel 9의 보호된 VM</a></h3>보호된 VM 기술 및 혜택 연습</p>
+                        <p><h3><a href="http://channel9.msdn.com/Shows/Mechanics/Introduction-to-Shielded-Virtual-Machines-in-Windows-Server-2016">Channel 9에서에서 보호 된 VM</a></h3>보호된 VM 기술 및 혜택 연습</p>
 <HR />
-                        <p><h3><a href="https://www.youtube.com/watch?v=xip5Qtk-7d8">보호된 VM 데모</a></h3>이 4분짜리 비디오에서는 보호된 VM의 가치 및 보호된 VM과 보호되지 않은 VM의 차이점을 설명합니다.</p>
+                        <p><h3><a href="https://www.youtube.com/watch?v=xip5Qtk-7d8">보호 된 VM 데모</a></h3>이 4분짜리 비디오에서는 보호된 VM의 가치 및 보호된 VM과 보호되지 않은 VM의 차이점을 설명합니다.</p>
 <HR />
-                        <p><h3><a href="http://microsoft-cloud.cloudguides.com/Guides/Shielded%Virtual%Machines%in%Windows%Server.htm">Windows Server의 보호된 VM 비디오 연습</a></h3>이 비디오 연습에서는 호스트 보호 서비스가 Hyper-V 호스트 관리자의 무단 액세스로부터 중요한 데이터를 보호할 수 있도록 보호된 가상 컴퓨터를 지원하는 방식을 보여 줍니다.</p>
+                        <p><h3><a href="http://microsoft-cloud.cloudguides.com/Guides/Shielded%Virtual%Machines%in%Windows%Server.htm">Windows Server 동영상 연습에서 보호 된 가상 컴퓨터</a></h3>이 비디오 연습에서는 호스트 보호 서비스가 Hyper-V 호스트 관리자의 무단 액세스로부터 중요한 데이터를 보호할 수 있도록 보호된 가상 컴퓨터를 지원하는 방식을 보여 줍니다.</p>
 <HR />
-                        <p><h3><a href="http://channel9.msdn.com/events/ignite/2015/brk3457">패브릭 강화: Hyper-V에서 테넌트 암호 보호(Ignite 비디오)</a></h3>이 Ignite 프레젠테이션은 보호된 VM을 사용하도록 설정하기 위해 Hyper-V Virtual Machine Manager, 새 호스트 보호 서비스 서버 역할에서 개선된 사항에 대해 논의합니다. </p>
+                        <p><h3><a href="http://channel9.msdn.com/events/ignite/2015/brk3457">패브릭 강화: Hyper-v에서 테 넌 트 암호 보호 (Ignite 비디오)</a></h3>이 Ignite 프레젠테이션은 보호된 VM을 사용하도록 설정하기 위해 Hyper-V Virtual Machine Manager, 새 호스트 보호 서비스 서버 역할에서 개선된 사항에 대해 논의합니다. </p>
 <HR />
-                        <p><h3><a href="guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview.md">보호된 패브릭 배포 가이드</a></h3>이 가이드에서는 보호된 패브릭 호스트 및 보호된 VM용 Windows Server 및 System Center Virtual Machine Manager의 설치 및 유효성 검사 정보를 제공합니다.</p>
+                        <p><h3><a href="guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview.md">보호 된 패브릭 배포 가이드</a></h3>이 가이드에서는 보호된 패브릭 호스트 및 보호된 VM용 Windows Server 및 System Center Virtual Machine Manager의 설치 및 유효성 검사 정보를 제공합니다.</p>
 <HR />
-                        <p><h3><a href="guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office.md">지사의 보호된 VM 및 보호된 패브릭</a></h3>이 가이드는 HGS에 대해 Hyper-V 호스트의 연결이 제한된 시간이 있을 수 있는 지사 및 기타 원격 시나리오에서 보호된 가상 컴퓨터를 실행하는 모범 사례를 제공합니다.</p>
+                        <p><h3><a href="guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office.md">보호 된 VM 및 지사에서 보호 된 패브릭</a></h3>이 가이드는 HGS에 대해 Hyper-V 호스트의 연결이 제한된 시간이 있을 수 있는 지사 및 기타 원격 시나리오에서 보호된 가상 컴퓨터를 실행하는 모범 사례를 제공합니다.</p>
 <HR />
-                        <p><h3><a href="guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-overview.md">보호된 VM 및 보호된 패브릭 문제 해결 가이드</a></h3>이 가이드에서는 보호된 VM 환경에서 발생할 수 있는 문제를 해결하는 방법에 대한 정보를 제공합니다.</p>
+                        <p><h3><a href="guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-overview.md">보호 된 VM 및 보호 된 패브릭 문제 해결 가이드</a></h3>이 가이드에서는 보호된 VM 환경에서 발생할 수 있는 문제를 해결하는 방법에 대한 정보를 제공합니다.</p>
 <HR />
-                        <p><h3><a href="http://windowsitpro.com/hyper-v/super-secure-hyper-v-environments-shielded-vms-2016">보호된 VM 문서</a></h3>이 백서에서는 보호된 VM이 전반적인 보안을 강화하여 변조를 방지하는 방법에 대한 개요를 제공합니다.</p>
+                        <p><h3><a href="http://windowsitpro.com/hyper-v/super-secure-hyper-v-environments-shielded-vms-2016">보호 된 VM 문서</a></h3>이 백서에서는 보호된 VM이 전반적인 보안을 강화하여 변조를 방지하는 방법에 대한 개요를 제공합니다.</p>
                     </div>
                 </div>
             </div>
@@ -171,7 +171,7 @@ Windows Server 보안은 운영 체제에 기본 제공되는 보호 계층을 �
                     <div class="cardText">
                         <h3>OS 및 응용 프로그램 보안 강화</h3>
 <HR />
-                        <p><h3><a href="https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control">Windows Defender Application Control(WDAC) 배포 가이드</a></h3>WDAC는 기업이 자신의 환경에서 응용 프로그램이 실행하는 것을 제어하도록 돕고 Windows 10을을 실행하는 것 이외에 특정 하드웨어 또는 소프트웨어 요구 사항이 없는 구성 가능한 코드 무결성(CI) 정책입니다.</p>
+                        <p><h3><a href="https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control">Windows Defender 응용 프로그램 컨트롤 (WDAC) 배포 가이드</a></h3>WDAC는 기업이 자신의 환경에서 응용 프로그램이 실행하는 것을 제어하도록 돕고 Windows 10을을 실행하는 것 이외에 특정 하드웨어 또는 소프트웨어 요구 사항이 없는 구성 가능한 코드 무결성(CI) 정책입니다.</p>
 <HR />
                         <p><h3><a href="https://www.youtube.com/watch?v=F-pTkesjkhI">Device Guard 데모 비디오</a></h3>Device Guard는 WDAC와 하이퍼바이저 보호 코드 무결성(HVCI)의 결합입니다. 이 7분짜리 비디오는 Device Guard를 소개하고 이를 Windows Server에서 사용하는 방법을 보여줍니다.</p>
 <HR />
@@ -197,15 +197,15 @@ Windows Server 보안은 운영 체제에 기본 제공되는 보호 계층을 �
                     <div class="cardText">
                         <h3>권한 있는 액세스 관리</h3>
 <HR />
-                        <p><h3><a href="https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access">권한 있는 액세스 보안</a></h3>권한 있는 액세스를 보호하는 방법에 대한 로드맵. 이 로드맵은 서버 보안 팀, Microsoft IT, Azure 팀 및 Microsoft Consulting Services의 모든 전문 기술을 집약하여 작성되었습니다. </p>
+                        <p><h3><a href="https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access">권한 있는 액세스 보안</a></h3>권한 있는 액세스를 보호하는 방법에 대한 로드맵 이 로드맵은 서버 보안 팀, Microsoft IT, Azure 팀 및 Microsoft Consulting Services의 모든 전문 기술을 집약하여 작성되었습니다. </p>
 <HR />
-                        <p><h3><a href="https://technet.microsoft.com/library/mt150258.aspx">Microsoft Identity Manager를 사용한 JIT(Just in Time) 관리</a></h3> 이 문서에서는 JIT(Just In Time) 권한 있는 액세스 관리 지원을 비롯하여 Microsoft Identity Manager에 포함된 기능을 설명합니다.</p>
+                        <p><h3><a href="https://technet.microsoft.com/library/mt150258.aspx">적시 관리 Microsoft Identity Manager</a></h3> 이 문서에서는 JIT(Just In Time) 권한 있는 액세스 관리 지원을 비롯하여 Microsoft Identity Manager에 포함된 기능을 설명합니다.</p>
 <HR />
-                        <p><h3><a href="http://channel9.msdn.com/events/ignite/2015/brk3873">권한 있는 액세스 관리로 Windows 및 Microsoft Azure Active Directory 보호</a></h3>이 Ignite 프레젠테이션에서는 보다 강력한 인증을 통해 관리자 액세스의 위험을 줄이고 JIT 및 JEA(Just Enough Administration)를 사용하여 액세스를 관리하기 위해 이루어진 Windows Server, PowerShell, Active Directory, Identity Manager 및 Azure Active Directory에 대한 Microsoft의 투자 및 전략을 다룹니다.</p>
+                        <p><h3><a href="http://channel9.msdn.com/events/ignite/2015/brk3873">Privileged Access Management 사용 하 여 Windows 및 Microsoft Azure Active Directory 보호</a></h3>이 Ignite 프레젠테이션에서는 보다 강력한 인증을 통해 관리자 액세스의 위험을 해결하고 Just in Time 및 JEA(Just Enough Administration)를 사용하여 액세스를 관리하기 위해 이루어진 Windows Server, PowerShell, Active Directory, Identity Manager 및 Azure Active Directory에 대한 Microsoft의 투자 및 전략을 다룹니다.</p>
 <HR />
-                        <p><h3><a href="http://aka.ms/JEA">JEA(Just Enough Administration) 문서</a></h3>이 문서에서는 운영자가 특정 작업을 수행하는 데 필요한 범위에서만 액세스할 수 있도록 제한하여 조직에서 위험을 낮추도록 설계된 PowerShell 도구 키트인 JEA(Just Enough Administration)의 비전과 기술 정보를 설명합니다.</p>
+                        <p><h3><a href="http://aka.ms/JEA">Just Enough Administration 문서</a></h3>이 문서에서는 운영자가 특정 작업을 수행하는 데 필요한 범위에서만 액세스할 수 있도록 제한하여 조직에서 위험을 낮추도록 설계된 PowerShell 도구 키트인 Just Enough Administration의 비전과 기술 정보를 설명합니다.</p>
 <HR />
-                        <p><h3><a href="https://www.youtube.com/watch?v=xnBrbkY9P20">JEA(Just Enough Administration) 데모 비디오</a></h3>JEA(Just Enough Administration) 데모 연습입니다.</p>
+                        <p><h3><a href="https://www.youtube.com/watch?v=xnBrbkY9P20">방금 Enough Administration 데모 비디오</a></h3>JEA(Just Enough Administration) 데모 연습입니다.</p>
                     </div>
                 </div>
             </div>
@@ -223,9 +223,9 @@ Windows Server 보안은 운영 체제에 기본 제공되는 보호 계층을 �
                     <div class="cardText">
                         <h3>자격 증명 보호</h3>
 <HR />
-                        <p><h3><a href="https://docs.microsoft.com/windows/security/identity-protection/credential-guard/credential-guard">Credential Guard를 사용하여 파생된 도메인 자격 증명 보호</a></h3>Credential Guard는 가상화 기반 보안을 사용하여 권한 있는 시스템 소프트웨어만 액세스할 수 있도록 암호를 격리합니다. 이 암호에 대한 무단 액세스가 일어나면 Pass-the-Hash 또는 Pass-The-Ticket 같은 자격 증명 도난 공격이 발생할 수 있습니다.</a> Credential Guard에서는 NTLM 암호 해시 및 Kerberos 허용 티켓을 보호하여 이러한 공격을 방지합니다.</p>
+                        <p><h3><a href="https://docs.microsoft.com/windows/security/identity-protection/credential-guard/credential-guard">Credential Guard 사용 하 여 파생 된 도메인 자격 증명 보호</a></h3>Credential Guard는 가상화 기반 보안을 사용하여 권한 있는 시스템 소프트웨어만 액세스할 수 있도록 암호를 격리합니다. 이러한 비밀에 대 한 무단된 액세스 자격 증명 도난 공격,-Pass-the-hash 등 티켓을 통과 시킬 수 있습니다.</a> Credential Guard에서는 NTLM 암호 해시 및 Kerberos 허용 티켓을 보호하여 이러한 공격을 방지합니다.</p>
 <HR />
-                        <p><h3><a href="https://docs.microsoft.com/windows/security/identity-protection/remote-credential-guard">원격 Credential Guard를 사용하여 원격 데스크톱 자격 증명 보호</a></h3> 원격 Credential Guard를 사용하면 연결을 요청하는 장치로 Kerberos 요청을 다시 리디렉션하여 원격 데스크톱 연결을 통해 자격 증명을 보호할 수 있습니다. 또한 원격 데스크톱 세션에 대한 SSO(Single Sign-On)를 제공합니다. </p>
+                        <p><h3><a href="https://docs.microsoft.com/windows/security/identity-protection/remote-credential-guard">원격 Credential Guard 사용 하 여 원격 데스크톱 자격 증명 보호</a></h3> 원격 Credential Guard를 사용하면 연결을 요청하는 장치로 Kerberos 요청을 다시 리디렉션하여 원격 데스크톱 연결을 통해 자격 증명을 보호할 수 있습니다. 또한 원격 데스크톱 세션에 대한 Single Sign On을 제공합니다. </p>
 <HR />
                         <p><h3><a href="https://www.youtube.com/watch?v=eUpKOGSl7yk">Credential Guard 데모 비디오</a></h3>이 5분짜리 비디오는 Credential Guard 및 원격 Credential Guard 데모를 보여줍니다.</p>
                     </div>
@@ -247,9 +247,9 @@ Windows Server 보안은 운영 체제에 기본 제공되는 보호 계층을 �
                     <div class="cardText">
                         <h3>위협 감지 및 대응</h3>
 <HR />
-                        <p><h3><a href="https://channel9.msdn.com/events/ignite/2015/brk3464">Microsoft Operations Management Suite를 사용한 보안 위협 분석</a></h3>이 Ignite 프레젠테이션에서는 Operational Insights를 사용하여 보안 위협 분석을 수행하는 방법을 설명합니다.</p>
+                        <p><h3><a href="https://channel9.msdn.com/events/ignite/2015/brk3464">Microsoft Operations Management Suite를 사용 하 여 보안 위협 분석</a></h3>이 Ignite 프레젠테이션에서는 Operational Insights를 사용하여 보안 위협 분석을 수행하는 방법을 설명합니다.</p>
 <HR />
-                        <p><h3><a href="https://www.youtube.com/watch?v=_SaDw1dRy2k">Microsoft Operations Management Suite(OMS)</a></h3>Microsoft Operations Management Suite(OMS) 보안 및 감사 솔루션은 온-프레미스 및 클라우드 환경의 보안 로그 및 방화벽 이벤트를 처리하여 악의적인 동작을 분석하고 감지합니다.</p>
+                        <p><h3><a href="https://www.youtube.com/watch?v=_SaDw1dRy2k">Microsoft Operations Management Suite (OMS)</a></h3>Microsoft Operations Management Suite(OMS) 보안 및 감사 솔루션은 온-프레미스 및 클라우드 환경의 보안 로그 및 방화벽 이벤트를 처리하여 악의적인 동작을 분석하고 감지합니다.</p>
 <HR />
                         <p><h3><a href="https://www.youtube.com/watch?v=_SaDw1dRy2k">OMS 및 Windows Server</a></h3>이 3분짜리 비디오는 OMS를 통해 Windows Server에서 차단되는 잠재적인 악성 동작을 어떻게 감지할 수 있는지 보여줍니다. 지원</p>
 <HR />
@@ -271,9 +271,9 @@ Windows Server 보안은 운영 체제에 기본 제공되는 보호 계층을 �
                     <div class="cardText">
                         <h3>네트워크 보안</h3>
 <HR />
-                        <p><h3><a href="https://technet.microsoft.com/library/dn920240.aspx">데이터 센터 방화벽 개요</a></h3>이 개요에서는 데이터 센터 방화벽, 네트워크 계층, 5가지 튜플(프로토콜, 소스 및 대상 포트 번호, 소스 및 대상 IP 주소), 상태 저장, 다중 테넌트 방화벽 등을 설명합니다.</p>
+                        <p><h3><a href="https://technet.microsoft.com/library/dn920240.aspx">데이터 센터 방화벽 개요</a></h3>이 개요에서는 데이터 센터 방화벽, 네트워크 계층, 5가지 튜플(프로토콜, 원본 및 대상 포트 번호, 원본 및 대상 IP 주소), 상태 저장, 다중 테넌트 방화벽 등을 설명합니다.</p>
 <HR />
-                        <p><h3><a href="https://technet.microsoft.com/windows-server-docs/networking/dns/what-s-new-in-dns-server">Windows Server에서 제공되는 DNS의 새로운 기능</a></h3>이 개요 항목에서는 DNS의 새로운 기능에 대한 간략한 설명과 함께 자세한 정보를 확인할 수 있는 링크를 제공합니다. </p>
+                        <p><h3><a href="https://technet.microsoft.com/windows-server-docs/networking/dns/what-s-new-in-dns-server">Windows Server에서 DNS의 새로운 기능</a></h3>이 개요 항목에서는 DNS의 새로운 기능에 대한 간략한 설명과 함께 자세한 정보를 확인할 수 있는 링크를 제공합니다. </p>
                     </div>
                 </div>
             </div>
@@ -289,9 +289,9 @@ Windows Server 보안은 운영 체제에 기본 제공되는 보호 계층을 �
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>준수 규정에 보안 기능 매핑</h3>
+                        <h3>규정 준수에 보안 기능 매핑</h3>
 <HR />
-                        <p><a href="https://download.microsoft.com/download/6/D/0/6D06E149-B4C1-4EED-ACD5-DF6066E93CC0/Coalfire_Branded_Hyper_V_Shielded_VMs_Whitepaper_EN_US.pdf">Hyper-V 보호된 VM 규정 준수 매핑 백서</a></p>
+                        <p><a href="https://download.microsoft.com/download/6/D/0/6D06E149-B4C1-4EED-ACD5-DF6066E93CC0/Coalfire_Branded_Hyper_V_Shielded_VMs_Whitepaper_EN_US.pdf">Hyper-v 보호 된 Vm 규정 준수 매핑 백서</a></p>
 <HR />
                         <p><a href="https://download.microsoft.com/download/2/7/A/27A2B5BB-6B52-4482-87C1-DA9D6B6D8C8D/Coalfire_Branded_Privileged_Identity_Manager_Whitepaper_EN_US.pdf">JEA 및 JIT 규정 준수 매핑 백서</a></p>
 <HR />

@@ -1,65 +1,70 @@
 ---
 ms.assetid: 299e4fb9-8f1a-4275-ad7d-dad4f1594657
-title: 연습-는 iOS 디바이스와 회사 가입
+title: 연습-iOS 장치를 사용 하 여 작업 공간 연결
 description: ''
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: mtillman
+ms.date: 10/18/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 0a8643bab913dfec07c6bbea0c068e1240f16c5b
-ms.sourcegitcommit: a2260c96b0e49519d180c7382b921ce8ddb053fe
+ms.openlocfilehash: c9c66b5bbe5fff83010859abe6ea4759d5bc4be0
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59853634"
 ---
-# <a name="walkthrough-workplace-join-with-an-ios-device"></a>연습: Workplace Join는 iOS 디바이스와
+# <a name="walkthrough-workplace-join-with-an-ios-device"></a>연습: iOS 장치를 사용하여 작업 공간 연결
 
->Windows Server 2012 r 2에 적용 됩니다.
+>적용 대상: Windows Server 2012 R2
 
-IOS 디바이스에서이 항목에서는 회사에 참여 합니다. 단계를 완료 해야는 [랩 환경 ADFS Windows Server 2012 r 2에서에 대 한 설정](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md) 섹션 전에이 연습 사용해 볼 수 있습니다. 디바이스를 사용 하 여에 액세스 하는 동일한 회사 웹 응용 프로그램에 액세스 [연습: Windows 디바이스에 회사 참여](Walkthrough--Workplace-Join-with-a-Windows-Device.md)합니다.
+> [!IMPORTANT] 
+> 이 메서드는만 완벽 하 게 온-프레미스 고객에 게 적합 합니다. 하이브리드 또는 클라우드 전용 고객에 게 iOS 장치를 등록 하려면이 메서드를 사용 하지 해야 합니다. 및 온-프레미스 고객은 클라우드로 이동 하려는 경우이 메서드 호환 되지 않습니다. 장치 등록을 취소 하 고 클라우드를 사용 하 여 등록 해야 합니다. 
 
-## <a name="join-an-ios-device-with-workplace-join"></a>IOS 디바이스와 회사 참여 가입
+이 항목에서는 iOS 장치의 작업 공간 연결을 설명합니다. 단계를 완료 해야 합니다 [Windows Server 2012 R2에서 AD FS에 대 한 랩 환경 설정](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md) 섹션 전에이 연습을 시도해 볼 수 있습니다. 장치를 사용 하 여에서 나 액세스할 수 있는 동일한 회사 웹 응용 프로그램에 액세스할 [연습: Windows 장치를 사용 하 여 작업 공간 연결](Walkthrough--Workplace-Join-with-a-Windows-Device.md)합니다.
+
+
+## <a name="join-an-ios-device-with-workplace-join"></a>작업 공간 연결을 사용하여 iOS 장치 연결
 
 > [!IMPORTANT]
-> IOS 디바이스 Active Directory Federation Services ADFS ()를 구성 하는 데 사용 된 Layer SSL (Secure Socket) 인증서를 신뢰 해야 온-프레미스 DRS 구성 된 경우 [2 단계: 장치 등록 서비스와 federation 서버 (ADFS1) 구성](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_4), 성공 가입 회사에 대 한 합니다.
+> 온-프레미스 DRS가 구성 되 면 iOS 장치에는 Active Directory Federation Services (AD FS)를 구성 하는 데 사용 된 보안 소켓 레이어 (SSL) 인증서를 신뢰 해야 [2 단계: 페더레이션 서버 (ADFS1) with Device Registration Service 구성](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_4), 작업 공간 연결에 성공 하려면에 대 한 합니다.
 > 
-> -   광고 FS ssl (캐나다), 테스트 인증 기관에서 발급, iOS 디바이스에서 인증 기관 인증서를 설치 해야 합니다.
-> -   인증 기관 인증서는 웹 사이트에 게시 하는 경우 iOS 디바이스에서 웹 사이트로 이동 하 고 인증서를 설치할 수 있습니다.
+> -   테스트 CA(인증 기관)에서 AD FS SSL 인증서를 발급한 경우 iOS 장치에 해당 인증 기관 인증서를 설치해야 합니다.
+> -   인증 기관 인증서가 웹 사이트에 게시된 경우 iOS 장치에서 해당 웹 사이트로 이동하여 인증서를 설치할 수 있습니다.
 
-이 데모 회사에 디바이스에 가입 하면 합니다.
+이 데모에서는 장치를 작업 공간에 연결합니다.
 
-#### <a name="to-join-an-ios-device-to-a-workplace"></a>회사에 iOS 디바이스를 연결 하려면
+#### <a name="to-join-an-ios-device-to-a-workplace"></a>iOS 장치를 작업 공간에 연결하려면
 
-1.  -   **Azure Active Directory 디바이스 등록 서비스는 구성 된 DRS 때:** 열기 Apple Safari iOS 디바이스에 대 한 Azure Active Directory 디바이스 등록 서비스 Over-the-Air 프로필 끝점으로 이동 하 고 <`https://enterpriseregistration.windows.net/enrollmentserver/otaprofile/<yourdomainname` > 위치 <`yourdomainname`> Azure Active Directory로 구성 된 도메인 이름입니다. 예를 들어 도메인 이름 contoso.com 이면 URL 됩니다. `https://enterpriseregistration.windows.net/enrollmentserver/otaprofile/contoso.com`
+1.  -   **Azure Active Directory 장치 등록 서비스가 구성된 경우 DRS는 다음을 수행합니다.** Apple Safari를 열고 iOS 장치의 Azure Active Directory Device Registration service (over-the-air) 프로필 끝점으로 이동 <`https://enterpriseregistration.windows.net/enrollmentserver/otaprofile/<yourdomainname` > 여기서 <`yourdomainname`> Azure Active Directory를 사용 하 여 구성한 도메인 이름입니다. 예를 들어 도메인 이름이 contoso.com인 경우 URL은 `https://enterpriseregistration.windows.net/enrollmentserver/otaprofile/contoso.com`입니다.
 
-    -   **온-프레미스 DRS 구성 된 DRS 되 면**: 열기 Apple Safari iOS 디바이스에 대 한 디바이스 등록 서비스 (DRS) Over-the-Air 프로필 끝점으로 이동 하 고`https://adf1s.contoso.com/enrollmentserver/otaprofile`
+    -   **온-프레미스 DRS가 구성된 DRS는 다음을 수행합니다.** Apple Safari를 열고 iOS 장치의 DRS Device Registration Service () (over-the-air) 프로필 끝점으로 이동 `https://adf1s.contoso.com/enrollmentserver/otaprofile`
 
-    여러 가지 방법으로 사용자에 게이 URL 통신할 수 있습니다. 권장된 방법 중 하나 거부 Adfs의 메시지에 대 한 액세스를 사용자 지정 응용 프로그램이이 URL를 게시 하입니다. 곧 섹션에 대해서는이: [액세스 정책 응용 프로그램 및 사용자 지정 액세스 거부 메시지가 만들기](https://docs.microsoft.com/azure/active-directory/active-directory-device-registration-on-premises-setup#create-an-application-access-policy-and-custom-access-denied-message)
+    이 URL을 사용자에게 전달하는 방법에는 여러 가지가 있습니다. 한 가지 권장 방법은 AD FS에서 사용자 지정 응용 프로그램 액세스 거부됨 메시지에 이 URL을 게시하는 것입니다. 이 내용은 이후 섹션에서 설명합니다. [응용 프로그램 액세스 정책 및 사용자 지정 액세스 거부됨 메시지 만들기](https://docs.microsoft.com/azure/active-directory/active-directory-device-registration-on-premises-setup#create-an-application-access-policy-and-custom-access-denied-message)
 
-2.  회사의 도메인 계정을 사용 하 여 웹 페이지에 로그온: ** roberth@contoso.com ** 및 암호: ** P@ssword **합니다.
+2.  회사 도메인 계정을 사용 하 여 웹 페이지에 로그온 합니다. **roberth@contoso.com** 및 암호: **P@ssword**합니다.
 
-3.  프로필을 설치 하 라는 메시지가 표시 됩니다. 에 **프로필 설치** 화면에서 클릭 **설치**합니다.
+3.  프로필을 설치하라는 메시지가 표시됩니다. **프로파일 설치** 화면에서 **설치**를 클릭합니다.
 
-4.  설치 프로필을 확인 하 라는 메시지가 나타나면 클릭 **지금 설치**합니다.
+4.  프로필 설치를 확인하라는 메시지가 표시되면 **지금 설치**를 클릭합니다.
 
-5.  디바이스에서 디바이스 잠금을 해제 하는 데 PIN 필요, PIN을 입력 하 라는 메시지가 표시 됩니다.
+5.  장치에 장치의 잠금을 해제하기 위한 PIN이 필요한 경우 PIN을 입력하라는 메시지가 표시됩니다.
 
-6.  표시 되 면 프로필 설치가 완료 되 고 **프로필이 설치** 화면 합니다. 클릭 **완료**합니다.
+6.  **프로파일 설치됨** 화면이 표시되면 프로필 설치가 완료된 것입니다. **완료**를 클릭합니다.
 
-    Safari로 돌아갑니다. 닫을 수 있는 또는 Safari 두고을 알리는 메시지가 표시 됩니다.
+    Safari로 돌아갑니다. Safari를 닫거나 그대로 둘 수 있음을 알리는 메시지가 표시됩니다.
 
 > [!TIP]
-> 찾아보기 보거나 회사 가입 프로필을 제거 하려면 **설정**, 클릭 **일반**을 차례로 클릭 하 고 **프로필** iOS 디바이스에서 합니다.
+> 작업 공간 연결 프로필을 보거나 제거하려면 **설정**으로 이동하여 **일반**을 클릭한 다음 iOS 장치에서 **프로파일**을 클릭합니다.
 
-## <a name="see-also"></a>참조 하십시오
+## <a name="see-also"></a>관련 항목
 
 
-- [SSO 및 원활 하 게 초에 대 한 모든 디바이스에서 회사에 가입 인증 회사 응용 프로그램에서 요인](Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)
-- [Windows Server 2012 r 2에서 adfs 랩 환경을 설정합니다](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
-- [연습: Workplace Join 사용 하 여 Windows 장치](Walkthrough--Workplace-Join-with-a-Windows-Device.md)
+- [SSO 및 원활한 두 번째 위한 모든 장치의 작업 공간 연결 단계 회사 응용 프로그램에서 인증](Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)
+- [Windows Server 2012 R2에서 AD FS에 대 한 랩 환경 설정](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
+- [연습: Windows 장치를 사용 하 여 작업 공간 연결](Walkthrough--Workplace-Join-with-a-Windows-Device.md)
 
 
 
