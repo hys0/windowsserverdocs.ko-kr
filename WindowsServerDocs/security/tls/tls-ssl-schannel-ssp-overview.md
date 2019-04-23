@@ -1,6 +1,6 @@
 ---
-title: "TLS-개요 SSL (Schannel SSP)"
-description: "Windows Server 보안"
+title: TLS/SSL (Schannel SSP) 개요
+description: Windows Server 보안
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -12,52 +12,46 @@ ms.assetid: 1b7b0432-1bef-4912-8c9a-8989d47a4da9
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
-ms.openlocfilehash: afd0b70264dba1e720f95e40d3d201c2c5bf1c64
-ms.sourcegitcommit: db290fa07e9d50686667bfba3969e20377548504
+ms.date: 05/16/2018
+ms.openlocfilehash: a6571e5e06e07fd62ad4cf39bab322b45c90a9f9
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59848604"
 ---
-# <a name="tls---ssl-schannel-ssp-overview"></a>TLS-개요 SSL (Schannel SSP)
+# <a name="tlsssl-overview-schannel-ssp"></a>TLS/SSL (Schannel SSP) 개요
 
->적용 대상: Windows Server (세미콜론 연간 채널) Windows Server 2016
+>적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows 10
 
-IT 전문가 위한이 항목에서는 Schannel 보안 서비스 공급자 (SSP)를 사용 하 여 실제 응용 프로그램에 Microsoft의 구현 및 소프트웨어 요구 사항 외 추가 리소스 변경 사항을 Windows 8 및 Windows Server 2012에 대 한 설명 하 여 Windows의 TLS/SSL 구현을 도입 되었습니다.
+Microsoft의 구현 및 소프트웨어 요구 사항,이 항목에서는 IT 전문가 도입 Schannel 보안 서비스 공급자 (SSP)를 사용 하 여 실제 응용 프로그램을 설명 하 여 Windows에서 TLS 및 SSL 구현에 대 한 변경 및 Windows Server 2012 및 Windows 8에 대 한 추가 리소스입니다.
 
-**Did you mean:**
+## <a name="BKMK_OVER"></a>설명
+Schannel은 TLS(전송 계층 보안) 및 SSL(Secure Sockets Layer) 인터넷 표준 인증 프로토콜을 구현한 SSP(Security Support Provider)입니다.
 
--   [Schannel 보안 패키지](https://msdn.microsoft.com/library/ms678421.aspx)
+SSPI(Security Support Provider Interface)는 인증을 비롯한 보안 관련 기능을 수행하기 위해 Windows 시스템에서 사용되는 API입니다. SSPI는 Schannel SSP를 포함 하 여 여러 Ssp 공용 인터페이스로 함수
 
--   [보안 채널](https://msdn.microsoft.com/library/windows/desktop/aa380123.aspx)
+TLS 버전 1.0, 1.1 및 1.2, SSL 버전 2.0 / 3.0, 데이터 그램 전송 계층 보안 뿐만 아니라 \(DTLS\) 프로토콜 버전 1.0 및 개인 통신 전송 \(PCT\) 프로토콜에 기반한 공개 키 암호화 합니다. Schannel 인증 프로토콜 모음은 이러한 프로토콜을 제공합니다. 모든 Schannel 프로토콜에서는 클라이언트/서버 모델이 사용됩니다.
 
--   [Transport Layer Security 프로토콜](https://msdn.microsoft.com/library/windows/desktop/aa380516.aspx)
+## <a name="BKMK_APP"></a>응용 프로그램
+네트워크를 관리할 때 발생하는 한 가지 문제는 신뢰할 수 없는 네트워크의 응용 프로그램 간에 전송되는 데이터를 보호하는 것입니다. 서버와 클라이언트 컴퓨터를 인증 하 고 다음 프로토콜을 사용 하 여 인증된 된 당사자 간의 메시지를 암호화 하려면 TLS 및 SSL을 사용할 수 있습니다.
 
-## <a name="BKMK_OVER"></a>TLS\SSL \(Schannel\) 설명
-Schannel 주소 \(SSL\) 및 Transport Layer Security \(TLS\) 구현 하는 보안 지원 공급자 \(SSP\)는 인터넷 프로토콜 표준 인증 합니다.
+예를 들어 다음과 같은 작업에 TLS/SSL을 사용할 수 있습니다.
 
-보안 지원 공급자 인터페이스 \(SSPI\)는 API Windows 시스템 security\ 관련 기능 인증 등을 수행 하는 데 사용 합니다. 일반적인 인터페이스 Schannel SSP 포함 하 여 여러 보안 지원 공급자 \(SSPs\)를 SSPI 기능을
-
-1.0 민 1.1, 1.2 주소 \(SSL\) 프로토콜 버전 2.0 및 데이터 그램 Transport Layer Security \(DTLS\) 1.0, 버전 및 개인 커뮤니케이션 전송 3.0 \(PCT\) 프로토콜 Transport Layer Security \(TLS\) 프로토콜 버전 키 공개 암호화를 기반으로 합니다. 보안 채널 \(Schannel\) 인증 프로토콜 제품군 이러한 프로토콜을 제공합니다. 모든 Schannel 프로토콜 client\/서버 모델을 사용 합니다.
-
-## <a name="BKMK_APP"></a>실용적인 응용 프로그램
-네트워크를 관리 하는 경우 한 가지 문제는 응용 프로그램 신뢰할 수 없는 네트워크에서 간에 전송 되는 데이터를 보안이 합니다. TLS\SSL 컴퓨터 클라이언트 및 서버 인증을 다음 프로토콜 인증된 당사자 간에 메시지 암호화를 사용 하 여 사용할 수 있습니다.
-
-예를 들어, TLS\SSL에 사용할 수 있습니다.
-
--   거래는 e\ 상거래 웹 사이트와 SSL\ 보안
-
--   인증 된 클라이언트는 SSL\ 보안 웹 사이트에 대 한 액세스
-
+-   전자 상거래 웹 사이트와의 SSL 보안 트랜잭션
+-   인증된 클라이언트의 SSL 보안 웹 사이트 액세스
 -   원격 액세스
-
 -   SQL 액세스
+-   전자 메일
 
--   E\ 메일
-
-## <a name="BKMK_SOFT"></a>소프트웨어 요구 사항
-TLS\SSL 프로토콜 클라이언트 \ 서버 모델을 사용 하 고 공개 키 인프라 필요한 인증서 인증을 기반으로 합니다.
+## <a name="BKMK_SOFT"></a>요구 사항
+TLS 및 SSL 프로토콜 클라이언트/서버 모델을 사용 및 공개 키 인프라를 해야 하는 인증서 인증을 기반으로 합니다.
 
 ## <a name="BKMK_INSTALL"></a>서버 관리자 정보
-구성 단계가 TLS, SSL 또는 Schannel 구현 하는 데 필요한 합니다.
+TLS, SSL 또는 Schannel을 구현 하는 데 필요한 구성 단계가 있습니다.
 
+## <a name="see-also"></a>참조 ##
+
+-   [Schannel 보안 패키지](https://docs.microsoft.com/windows/desktop/com/schannel)
+-   [보안 채널](https://docs.microsoft.com/windows/desktop/SecAuthN/secure-channel)
+-   [전송 계층 보안 프로토콜](https://docs.microsoft.com/windows/desktop/SecAuthN/transport-layer-security-protocol)

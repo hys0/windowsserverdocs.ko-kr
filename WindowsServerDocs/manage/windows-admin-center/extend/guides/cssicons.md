@@ -1,6 +1,6 @@
 ---
-title: 현재 Windows 관리 센터에서 아이콘 목록
-description: 현재 Windows 관리 센터 sdk (프로젝트 브라 티) 아이콘 목록
+title: 현재 Windows Admin Center는 아이콘 목록
+description: 현재 Windows Admin Center (프로젝트 브라 티) SDK에는 아이콘 목록
 ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
@@ -9,15 +9,15 @@ ms.date: 06/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ms.openlocfilehash: e908e088cd92127a785004e22d51934c13afc1ff
-ms.sourcegitcommit: e0479b0114eac7f232e8b1e45eeede96ccd72b26
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "2074264"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59844564"
 ---
-# <a name="current-list-of-icons-in-windows-admin-center"></a>현재 Windows 관리 센터에서 아이콘 목록
+# <a name="current-list-of-icons-in-windows-admin-center"></a>현재 Windows Admin Center는 아이콘 목록
 
->적용 대상: Windows 관리 센터, Windows 관리 센터 미리 보기
+>적용 대상: Windows Admin Center, Windows Admin Center 미리 보기
 
 ```
 .icon-win-globalNavButton:before { content: "\E700"; }

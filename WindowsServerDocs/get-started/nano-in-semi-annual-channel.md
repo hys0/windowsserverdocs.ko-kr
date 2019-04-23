@@ -11,15 +11,15 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: a270334d-42a7-46ff-8eed-d8656a276544
 ms.openlocfilehash: 7e68d292c32ce58c786a3242203330fcae985913
-ms.sourcegitcommit: 4b9b21ca1f366388a78ead7413cb581f2b23d4c6
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "2711958"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59847774"
 ---
-# Windows Server 반기 채널의 Nano 서버 변경 사항
+# <a name="changes-to-nano-server-in-windows-server-semi-annual-channel"></a>Windows Server 반기 채널의 Nano 서버 변경 사항
 
->적용 대상: Windows Server, 반기 채널
+>적용 대상: Windows Server 반기 채널
 
 
 [Window Server 반기 채널 개요](semi-annual-channel-overview.md)에서 설명한 것처럼, Windows Server 버전 1803은 반기 채널의 최신 릴리스입니다.
@@ -35,5 +35,5 @@ ms.locfileid: "2711958"
 - Docker를 사용하여 새 Nano 컨테이너의 문제를 해결합니다.
 - 이제 IoT Core에서 Nano 컨테이너를 실행할 수 있습니다.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 참가자 프로그램이 시작되면 [Windows 컨테이너 설명서](http://aka.ms/windowscontainers)에서 자세한 내용을 찾아보세요.

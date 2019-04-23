@@ -1,5 +1,5 @@
 ---
-title: "저장소 서비스 품질"
+title: 저장소 서비스 품질
 ms.prod: windows-server-threshold
 manager: dongill
 ms.author: JGerend
@@ -8,23 +8,24 @@ ms.topic: get-started-article
 ms.assetid: 8dcb8cf9-0e08-4fdd-9d7e-ec577ce8d8a0
 author: kumudd
 ms.date: 10/10/2016
-ms.openlocfilehash: 83954552b50f5f89c8b192405744836c53581d23
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.openlocfilehash: 159ed05717cbd0743e5b96215515293025352569
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59849634"
 ---
 # <a name="storage-quality-of-service"></a>저장소 서비스 품질
 
-> 적용 대상: Windows Server(반기 채널), Windows Server 2016
+> 적용 대상: Windows Server (반기 채널), Windows Server 2016
 
 Windows Server 2016의 저장소 서비스 품질(QoS)은 Hyper-V 및 스케일 아웃 파일 서버 역할을 사용하여 가상 컴퓨터의 저장소 성능을 중앙에서 모니터링하고 관리하는 방법을 제공합니다. 이 기능은 동일한 파일 서버 클러스터를 사용하여 여러 가상 컴퓨터 간에 저장소 리소스 공정성을 개선하며 정규화된 IOPS 단위로 정책 기반 최소 및 최대 성능 목표를 구성할 수 있도록 합니다.  
 
 Windows Server 2016의 저장소 QoS를 사용하여 다음을 수행할 수 있습니다.  
 
--   **인접 라우터 소음 문제 완화.** 기본적으로 저장소 QoS는 단일 가상 컴퓨터가 모든 저장소 리소스를 사용하고 다른 가상 컴퓨터의 저장소 대역폭을 소진할 수 없도록 합니다.  
+-   **시끄러운 이웃 문제를 완화 합니다.** 기본적으로 저장소 QoS는 단일 가상 컴퓨터가 모든 저장소 리소스를 사용하고 다른 가상 컴퓨터의 저장소 대역폭을 소진할 수 없도록 합니다.  
 
--   **종단 간 저장소 성능 모니터링.** 스케일 아웃 파일 서버에 저장된 가상 컴퓨터가 시작하는 즉시 해당 성능이 모니터링됩니다. 실행 중인 모든 가상 컴퓨터의 성능 정보와 스케일 아웃 파일 서버 클러스터의 구성을 단일 위치에서 볼 수 있습니다.  
+-   **종단 간 저장소 성능을 모니터링 합니다.** 스케일 아웃 파일 서버에 저장된 가상 컴퓨터가 시작하는 즉시 해당 성능이 모니터링됩니다. 실행 중인 모든 가상 컴퓨터의 성능 정보와 스케일 아웃 파일 서버 클러스터의 구성을 단일 위치에서 볼 수 있습니다.  
 
 -   **기업에 필요한 워크로드별 저장소 I/O 관리** 저장소 QoS 정책은 가상 컴퓨터에 대한 성능 최소값 및 최대값을 정의하고 이러한 값이 충족되는지 확인합니다. 이는 조밀한 환경 및 과도하게 프로비전된 환경에서도 가상 컴퓨터에 일관된 성능을 제공합니다. 정책을 충족할 수 없는 경우 VM이 정책을 벗어나거나 잘못된 정책이 할당되었을 때 경고를 추적할 수 있습니다.  
 
@@ -44,9 +45,9 @@ Windows Server 2016의 저장소 QoS를 사용하여 다음을 수행할 수 있
 
     저장소 QoS의 경우 저장소 서버에 장애 조치(failover) 클러스터가 필요하지만 장애 조치(failover) 클러스터에 계산 서버가 필요하지는 않습니다. 모든 서버(Storage 및 Compute 모두에 사용되는 서버)에서 Windows Server 2016을 실행해야 합니다.  
 
-    평가용으로 배포된 스케일 아웃 파일 서버 클러스터가 없는 경우 기존 서버 또는 가상 컴퓨터를 사용하여 이를 구축하는 방법에 대한 단계별 지침은 [Windows Server 2012 R2 저장소: 저장소 공간, SMB 스케일 아웃 및 공유 VHDX(물리적)를 사용한 단계별 작업](http://blogs.technet.com/b/josebda/archive/2013/07/31/windows-server-2012-r2-storage-step-by-step-with-storage-spaces-smb-scale-out-and-shared-vhdx-physical.aspx)을 참조하세요.  
+    스케일 아웃 파일 서버 클러스터를 평가용 배포를 하는 경우 작성 하는 단계별 지침은 사용 하 여 기존 서버 또는 가상 컴퓨터를 참조 하십시오 [Windows Server 2012 R2 저장소: 저장소 공간, SMB 스케일 아웃 및 공유 VHDX (물리적)를 사용 하 여 단계별](http://blogs.technet.com/b/josebda/archive/2013/07/31/windows-server-2012-r2-storage-step-by-step-with-storage-spaces-smb-scale-out-and-shared-vhdx-physical.aspx)합니다.  
 
--   **클러스터 공유 볼륨을 사용하는 Hyper-V** 이 시나리오에는 다음 두 클러스터가 모두 필요합니다.  
+-   **Hyper-v 클러스터 공유 볼륨을 사용 합니다.** 이 시나리오에는 다음 두 클러스터가 모두 필요합니다.  
 
     -   Hyper-V 역할을 사용하는 계산 클러스터  
 
@@ -59,7 +60,7 @@ Windows Server 2016의 저장소 QoS를 사용하여 다음을 수행할 수 있
 
 ![스케일 아웃 파일 서버와 저장소 QoS](media/overview-Clustering_SOFSStorageQoS.png)  
 
-**그림 1: 스케일 아웃 파일 서버의 소프트웨어 정의 저장소 솔루션에서 저장소 QoS 사용**  
+**그림 1: 스케일 아웃 파일 서버에서 소프트웨어 정의 저장소 솔루션에서 저장소 QoS 사용**  
 
 Hyper-V 서버에서 가상 컴퓨터를 시작하면 정책 관리자가 이를 모니터링합니다. 정책 관리자는 가상 컴퓨터의 성능을 적절히 제어하는 Hyper-V 서버에 저장소 QoS 정책과 모든 제한 또는 예약을 다시 전달합니다.  
 
@@ -73,14 +74,14 @@ Hyper-V 서버에서 가상 컴퓨터를 시작하면 정책 관리자가 이를
 |흐름|Hyper-V Server에서 연 각 파일 핸들부터 VHD 또는 VHDX 파일까지가 "흐름"으로 간주됩니다. 가상 컴퓨터에 두 개의 가상 하드 디스크가 연결된 경우 파일당 파일 서버 클러스터로 하나의 흐름이 생성됩니다. VHDX가 여러 가상 컴퓨터와 공유하는 경우 가상 컴퓨터당 하나의 흐름이 생성됩니다.|  
 |InitiatorName|각 흐름에 대해 스케일 아웃 파일 서버에 보고되는 가상 컴퓨터의 이름입니다.|  
 |InitiatorID|가상 컴퓨터 ID와 일치하는 식별자입니다.  이는 가상 컴퓨터의 InitiatorName이 동일한 경우에도 항상 개별 흐름 가상 컴퓨터를 고유하게 식별하는 데 사용될 수 있습니다.|  
-|정책|저장소 QoS 정책은 클러스터 데이터베이스에 저장되며 PolicyId, MinimumIOPS, MaximumIOPS, ParentPolicy 및 PolicyType 속성을 가집니다.|  
+|정책|저장소 QoS 정책을 클러스터 데이터베이스에 저장 되어 있고 다음 속성: PolicyId, MinimumIOPS, MaximumIOPS, ParentPolicy 및 PolicyType 합니다.|  
 |PolicyId|정책의 고유 식별자입니다.  기본적으로 생성되지만 필요한 경우 지정할 수 있습니다.|  
 |MinimumIOPS|정책에서 제공하는 최소 정규화된 IOPS입니다.  "예약"이라고도 합니다.|  
 |MaximumIOPS|정책에서 제한하는 최대 정규화 IOPS입니다.  "제한"이라고도 합니다.|  
 |집계 |지정된 MinimumIOPS 및 MaximumIOPS와 대역폭이 정책에 할당된 모든 흐름 간에 공유되는 정책 유형입니다. 해당 저장소 시스템에 할당된 VHD의 모든 정책에는 공유할 수 있는 단일 I/O 대역폭 할당이 있습니다.|  
 |Dedicated|지정된 Minimum 및 MaximumIOPs와 대역폭이 개별 VHD/VHDx에 대해 관리되는 정책 유형입니다.|  
 
-## <a name="BKMK_SetUpQoS"></a>저장소 QoS를 설정하고 기본 성능을 모니터링하는 방법  
+## <a name="BKMK_SetUpQoS"></a>저장소 QoS 고 기본 성능을 모니터링을 설정 하는 방법  
 이 섹션에서는 새 저장소 QoS 기능을 사용하도록 설정하는 방법 및 사용자 지정 정책을 적용하지 않고 저장소 성능을 모니터링하는 방법을 설명합니다.  
 
 ### <a name="BKMK_SetupStorageQoSonStorageCluster"></a>저장소 클러스터에서 저장소 QoS 설정  
@@ -94,7 +95,7 @@ Windows Server 2016에서 새로운 장애 조치(failover) 클러스터 및 CSV
 
 ![저장소 QoS 리소스가 클러스터 코어 리소스에 표시됨](media/overview-Clustering_StorageQoSFCM.png)  
 
-**그림 2: 장애 조치(Failover) 클러스터 관리자에 클러스터 코어 리소스로 표시된 저장소 QoS 리소스**  
+**그림 2: 클러스터 코어 리소스로 장애 조치 클러스터 관리자에서 저장소 QoS 리소스 표시**  
 
 다음 PowerShell cmdlet을 사용하여 저장소 QoS 리소스의 상태를 볼 수 있습니다.  
 
@@ -114,14 +115,14 @@ Windows Server 2016의 Hyper-V 역할은 저장소 QoS에 대한 지원을 기�
 
 **RSAT-클러스터링** 선택적 기능에는 저장소 QoS를 포함하여 원격 관리 장애 조치(failover) 클러스터링용 Windows PowerShell 모듈이 포함됩니다.  
 
--   Windows PowerShell: Add-WindowsFeature RSAT-Clustering  
+-   Windows PowerShell: 추가 WindowsFeature RSAT-클러스터링  
 
 **RSAT-Hyper-V-Tools** 선택적 기능에는 Hyper-V의 원격 관리용 Windows PowerShell 모듈이 포함됩니다.  
 
--   Windows PowerShell: Add-WindowsFeature RSAT-Hyper-V-Tools  
+-   Windows PowerShell: -WindowsFeature RSAT-하이퍼-V-도구 추가  
 
 #### <a name="deploy-virtual-machines-to-run-workloads-for-testing"></a>테스트를 위해 워크로드를 실행할 가상 컴퓨터 배포  
-관련 워크로드가 있는 스케일 아웃 파일 서버에 일부 가상 컴퓨터를 저장해야 합니다.  권장 도구(DiskSpd) 및 몇 가지 사용 예를 포함하여 로드를 시뮬레이션하고 일부 스트레스 테스트를 수행하는 방법에 대한 몇 가지 팁은 [DiskSpd, PowerShell 및 저장소 성능: 로컬 디스크와 SMB 파일 공유에 대한 IOPS, 처리량 및 대기 시간 측정](http://blogs.technet.com/b/josebda/archive/2014/10/13/diskspd-powershell-and-storage-performance-measuring-iops-throughput-and-latency-for-both-local-disks-and-smb-file-shares.aspx)을 참조하세요.  
+관련 워크로드가 있는 스케일 아웃 파일 서버에 일부 가상 컴퓨터를 저장해야 합니다.  부하를 시뮬레이션 하 고 일부 스트레스 테스트를 수행 하는 방법에 몇 가지 팁을 권장된 도구 (DiskSpd) 및 몇 가지 예제 사용에 대 한 다음 페이지를 참조 합니다. [DiskSpd, PowerShell 및 저장소 성능: 로컬 디스크와 SMB 파일 공유에 대 한 IOPs, 처리량 및 대기 시간을 측정 합니다.](http://blogs.technet.com/b/josebda/archive/2014/10/13/diskspd-powershell-and-storage-performance-measuring-iops-throughput-and-latency-for-both-local-disks-and-smb-file-shares.aspx)  
 
 이 가이드에 표시된 시나리오 예에는 5개의 가상 컴퓨터가 포함되어 있습니다. BuildVM1, BuildVM2, BuildVM3 및 BuildVM4는 저장소 수요가 낮거나 보통인 데스크톱 워크로드를 실행합니다. TestVm1은 저장소 수요가 높은 온라인 트랜잭션 처리 벤치마크를 실행합니다.  
 
@@ -288,7 +289,7 @@ MaximumIops    : 0
 MinimumIops    : 781  
 ```  
 
-## <a name="BKMK_CreateQoSPolicies"></a>저장소 QoS 정책을 만들고 모니터링하는 방법  
+## <a name="BKMK_CreateQoSPolicies"></a>만들고 저장소 QoS 정책을 모니터링 하는 방법  
 이 섹션에는 저장소 QoS 정책을 만들고, 이러한 정책을 가상 컴퓨터에 적용하고, 정책이 적용된 후 저장소 클러스터를 모니터링하는 방법을 설명합니다.  
 
 ### <a name="create-storage-qos-policies"></a>저장소 QoS 정책 만들기  
@@ -299,13 +300,15 @@ MinimumIops    : 781
 서로 다른 가상 컴퓨터에 대해 유사한 여러 정책을 만들고 가상 컴퓨터의 저장소 수요가 동일한 경우에는 유사한 IOPS 공유가 제공됩니다.  하나의 VM에 더 많이 필요하고 다른 VM에 덜 필요한 경우에는 IOPS가 해당 수요를 따릅니다.  
 
 ### <a name="types-of-storage-qos-policies"></a>저장소 QoS 정책 유형  
-집계(이전의 SingleInstance)와 전용(이전의 MultiInstance) 두 가지 정책 유형이 있습니다. 집계 정책은 VHD/VHDX 파일과 가상 컴퓨터의 조합된 집합에 대한 최대값 및 최소값을 적용합니다. 실제로 지정된 집합의 IOPS 및 대역폭을 공유합니다. 전용 정책은 각 VHD/VHDx에 대해 최소값 및 최대값을 별도로 적용합니다. 따라서 여러 VHD/VHDx 파일에 유사한 제한을 적용하는 단일 정책을 쉽게 만들 수 있습니다.  
+두 가지 정책 유형을 가지합니다 집계 (이전의 SingleInstance)와 전용 (이전의 MultiInstance). 집계 정책은 VHD/VHDX 파일과 가상 컴퓨터의 조합된 집합에 대한 최대값 및 최소값을 적용합니다. 실제로 지정된 집합의 IOPS 및 대역폭을 공유합니다. 전용 정책은 각 VHD/VHDx에 대해 최소값 및 최대값을 별도로 적용합니다. 따라서 여러 VHD/VHDx 파일에 유사한 제한을 적용하는 단일 정책을 쉽게 만들 수 있습니다.  
 
 예를 들어 최소값이 300 IOPS이고 최대값이 500 IOPS인 집계 정책을 만들고 이 정책을 5개의 VHD/VHDx 파일에 적용한 경우 5개의 조합된 VHD/VHDx 파일은 최소 300 IOPS(수요가 있고 저장소 시스템에서 해당 성능을 제공할 수 있는 경우)와 최대 500 IOPS 사이에서 보장됩니다. VHD/VHDx 파일의 IOPS 수요가 유사하게 높고 저장소 시스템에서 이를 유지할 수 있는 경우 각 VHD/VHDx 파일에는 약 100 IOPS가 제공됩니다.  
 
 그러나 유사한 제한이 있는 전용 정책을 만들어 5개의 가상 컴퓨터에 있는 VHD/VHDx 파일에 적용한 경우 각 가상 컴퓨터에는 300~500 IOPS가 제공됩니다. 가상 컴퓨터의 IOPS 수요가 유사하게 높고 저장소 시스템에서 이를 유지할 수 있는 경우 각 가상 컴퓨터에는 약 500 IOPS가 제공됩니다. .  가상 컴퓨터 중 하나에 동일한 MulitInstance 정책이 구성된 여러 VHD/VHDx 파일이 있는 경우 VM의 전체 IO가 제한을 초과하지 않도록 제한을 공유합니다.  
 
-따라서 동일한 성능 특성을 가지고 여러 개의 유사한 정책을 쉽게 만들려는 VHD/VHDx 파일 그룹이 있는 경우 단일 전용 정책을 사용하여 각 가상 컴퓨터의 파일에 적용할 수 있습니다.  
+따라서 동일한 성능 특성을 가지고 여러 개의 유사한 정책을 쉽게 만들려는 VHD/VHDx 파일 그룹이 있는 경우 단일 전용 정책을 사용하여 각 가상 컴퓨터의 파일에 적용할 수 있습니다.
+
+20 이하로 하는 단일 집계 정책을 할당할 VHD/VHDx 파일의 수를 유지 합니다.  이 정책 형식 소수의 Vm 클러스터를 사용 하 여 집계를 수행 하려는 되었습니다.
 
 ### <a name="create-and-apply-a-dedicated-policy"></a>전용 정책 만들기 및 적용  
 먼저 `New-StorageQosPolicy` cmdlet을 사용하여 다음 예와 같이 스케일 아웃 파일 서버에서 정책을 만듭니다.  
@@ -383,7 +386,7 @@ IsDeleted                     : False
 ```  
 
 ### <a name="query-for-storage-qos-policies"></a>저장소 QoS 정책 쿼리  
-`Get-StorageQosPolicy` 는 스케일 아웃 파일 서버에 구성된 모든 정책과 해당 상태를 나열합니다.  
+`Get-StorageQosPolicy` 구성 된 모든 정책 및 스케일 아웃 파일 서버에서 해당 상태를 나열합니다.  
 
 ```PowerShell
 PS C:\> Get-StorageQosPolicy  
@@ -528,10 +531,10 @@ WinOltp1      7e2f3e73-1ae4-4710-8219-0769a4aba072        1500         250      
 WinOltp1      7e2f3e73-1ae4-4710-8219-0769a4aba072        6000        1000            4507  
 ```  
 
-## <a name="BKMK_KnownIssues"></a>일반적인 문제를 식별하고 해결하는 하는 방법  
+## <a name="BKMK_KnownIssues"></a>식별 하 고 일반적인 문제를 해결 하는 방법  
 이 섹션에서는 잘못된 저장소 QoS 정책을 사용하는 가상 컴퓨터를 찾는 방법, 일치하는 정책을 다시 만드는 방법, 가상 컴퓨터에서 정책을 제거하는 방법 및 저장소 QoS 정책 요구 사항을 충족하지 않는 가상 컴퓨터를 식별하는 방법을 설명합니다.  
 
-### <a name="BKMK_FindingVMsWithInvalidPolicies"></a>잘못된 정책을 사용하는 가상 컴퓨터 식별  
+### <a name="BKMK_FindingVMsWithInvalidPolicies"></a>잘못 된 정책을 사용 하 여 가상 컴퓨터를 식별 합니다.  
 
 가상 컴퓨터에서 파일 서버를 제거하기 전에 파일 서버에서 정책이 삭제된 경우 가상 컴퓨터는 적용된 정책이 없는 것처럼 계속 실행됩니다.  
 
@@ -575,7 +578,7 @@ WinOltp1      UnknownPolicyId           0           0            4926 UnknownPol
 WinOltp1      UnknownPolicyId           0           0               0 UnknownPolicyId BOO...  
 ```  
 
-#### <a name="BKMK_RecreateMatchingPolicy"></a>일치하는 저장소 QoS 정책 다시 만들기  
+#### <a name="BKMK_RecreateMatchingPolicy"></a>일치 하는 저장소 QoS 정책을 다시 만듭니다.  
 실수로 정책을 제거한 경우 이전 PolicyId를 사용하여 새 정책을 만들 수 있습니다.  먼저 필요한 PolicyId를 가져옵니다.  
 
 ```PowerShell
@@ -664,7 +667,7 @@ WinOltp1                0           0            1811     Ok IOMETER.VHDX
 WinOltp1                0           0               0     Ok BOOT.VHDX  
 ```  
 
-### <a name="BKMK_VMsThatDoNotMeetStorageQoSPoilicies"></a>저장소 QoS 정책을 충족하지 않는 가상 컴퓨터 찾기  
+### <a name="BKMK_VMsThatDoNotMeetStorageQoSPoilicies"></a>저장소 QoS 정책을 충족 하지 않는 가상 컴퓨터 찾기  
 **InsufficientThroughput** 상태는 다음 흐름에 할당됩니다.  
 
 -   정책에 설정된 최소 IOPS가 정의된 흐름  
@@ -726,7 +729,7 @@ MaximumIops        : 20000
 MinimumIops        : 15000  
 ```  
 
-## <a name="BKMK_Health"></a>저장소 QoS를 사용하여 상태 모니터링  
+## <a name="BKMK_Health"></a>저장소 QoS를 사용 하 여 모니터 상태  
 새로운 상태 서비스는 모든 노드에서 실행 가능한 이벤트를 확인할 단일 장소를 제공하여 저장소 클러스터의 모니터링을 간소화합니다. 이 섹션에서는 `debug-storagesubsystem` cmdlet을 사용하여 저장소 클러스터의 상태를 모니터링하는 방법을 설명합니다.  
 
 ### <a name="view-storage-status-with-debug-storagesubsystem"></a>Debug-StorageSubSystem을 사용하여 저장소 상태 보기  
@@ -794,7 +797,7 @@ PSComputerName            :
 
 이 섹션에는 WMI 스크립트를 사용하여 일반적인 장애를 모니터링할 수 있는 방법을 보여 주는 샘플 스크립트가 포함되어 있습니다.  이 스크립트는 개발자가 상태 이벤트를 실시간으로 검색할 수 있는 시작점으로 설계되었습니다.  
 
-**스크립트 예:**  
+**예제 스크립트:**  
 
 ```PowerShell
 param($cimSession)  
@@ -820,7 +823,7 @@ System Center Virtual Machine Manager를 사용하여 여러 저장소 클러스
 
 정책의 최대값에 도달한 흐름이 있을 때 더 높거나 낮게 만들기 위해 정책을 변경한 경우 PowerShell cmdlet을 사용하여 흐름의 대기 시간/IOPS/대역폭을 즉시 확인할 수 있습니다. 흐름에 대한 정책 변경의 전체 영향이 표시되는 데 최대 5분이 걸립니다.  몇 초 내에 새 제한이 적용되지만 **Get-StorgeQoSFlow** PowerShell cmdlet에서는 5분 길이의 슬라이딩 윈도우를 통해 각 카운터의 평균을 사용합니다.  그렇지 않고 현재 값이 표시되며 PowerShell cmdlet을 여러 번 연속으로 실행한 경우 완전히 다른 값이 표시될 수 있습니다. IOPS 및 대기 시간 값은 초 단위로 크게 변동할 수 있기 때문입니다.
 
-### <a name="BKMK_Updates"></a>Windows Server 2016에 어떤 새로운 기능이 추가되었습니까?
+### <a name="BKMK_Updates"></a>Windows Server 2016에서 추가 된 새로운 기능
 
 Windows Server 2016에서 저장소 QoS 정책 유형 이름이 변경되었습니다.  **다중 인스턴스** 정책 유형은 **전용**으로, **단일 인스턴스** 정책 유형은 **집계**로 바뀌었습니다. 전용 정책의 관리 동작도 수정되었습니다. 동일한 **전용** 정책이 적용된 동일한 가상 컴퓨터 내의 VHD/VHDX 파일이 I/O 할당을 공유하지 않습니다.  
 
@@ -831,7 +834,7 @@ Windows Server 2016에는 두 가지 새로운 저장소 QoS 기능이 있습니
     Windows Server 2016의 저장소 QoS에는 정책에 할당된 흐름에서 사용할 수 있는 최대 대역폭을 지정하는 기능이 도입되었습니다.  **StorageQosPolicy** cmdlet에서 지정할 때 매개 변수는 **MaximumIOBandwidth**이고 출력은 초당 바이트 수로 표시됩니다.  
     **MaximimIops**와 **MaximumIOBandwidth**가 둘 다 정책에 설정된 경우에는 둘 다 적용되며, 흐름에서 도달할 첫 번째 항목이 흐름의 I/O를 제한합니다.  
 
--   **IOPS 정규화 구성 가능**  
+-   **IOPS 정규화를 구성할 수**  
 
     저장소 QoS에서 IOPS 정규화를 사용합니다.  기본값은 정규화 크기 8K입니다.  Windows Server 2016의 저장소 QoS에는 저장소 클러스터의 다른 정규화 크기를 지정하는 기능이 도입되었습니다.  이 정규화 크기는 저장소 클러스터의 모든 흐름에 영향을 주며 변경되는 즉시(몇 초 이내) 적용됩니다.  최소값은 1KB이고 최대값은 4GB입니다(4MB IO를 초과하는 것은 비정상적이므로 4MB 이하로 설정하는 것이 좋음).  
 
@@ -863,7 +866,7 @@ InitiatorLatency   : 1.5455
 InitiatorBandwidth : 37888  
 ```  
 
-#### <a name="example-2-get-iops-normalization-settings-and-specify--a-new-value"></a>예 2: IOPS 정규화 설정 가져오기 및 새 값 지정  
+#### <a name="example-2-get-iops-normalization-settings-and-specify--a-new-value"></a>예 2: IOPS 정규화 설정 가져오기 및 새 값을 지정 합니다.  
 
 다음 예에는 저장소 클러스터 IOPS 표준화 설정(기본값 8KB)을 가져와 32KB로 설정한 다음 다시 표시하는 방법을 보여 줍니다.  바이트로 변환하는 대신 PowerShell을 사용하여 단위를 지정할 수 있으므로 이 예에서는 "32KB"를 지정합니다.   출력에는 초당 바이트 수로 값이 표시됩니다.  
 
@@ -882,7 +885,7 @@ IOPSNormalizationSize
 32768  
 ```    
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
 - [Windows Server 2016](../../get-started/windows-server-2016.md)  
-- [Windows Server 2016의 저장소 복제본](../storage-replica/storage-replica-overview.md)  
-- [Windows Server 2016의 저장소 공간 다이렉트](../storage-spaces/storage-spaces-direct-overview.md)  
+- [Windows Server 2016의에서 저장소 복제본](../storage-replica/storage-replica-overview.md)  
+- [Windows Server 2016의에서 저장소 공간 다이렉트](../storage-spaces/storage-spaces-direct-overview.md)  
