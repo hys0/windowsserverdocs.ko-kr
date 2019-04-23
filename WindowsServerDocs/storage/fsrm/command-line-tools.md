@@ -1,6 +1,6 @@
 ---
-title: "파일 서버 리소스 관리자 명령줄 도구"
-description: "이 문서에서는 Windows Server 2016 명령줄 도구에 대해 설명합니다."
+title: 파일 서버 리소스 관리자 명령줄 도구
+description: 이 문서에서는 Windows Server 2016 명령줄 도구에 대해 설명합니다.
 ms.date: 7/7/2017
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -8,15 +8,16 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 7d36a30ca65ae88afdc11e516968c6f9900a5ae6
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.openlocfilehash: 9b31c133b0ee4382b5b9aeded9b3852c7230d2d8
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59858444"
 ---
 # <a name="file-server-resource-manager-command-line-tools"></a>파일 서버 리소스 관리자 명령줄 도구
 
-> 적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> 적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 파일 서버 리소스 관리자는 [FileServerResourceManager](https://technet.microsoft.com/itpro/powershell/windows/fileserverresourcemanager/fileserverresourcemanager) PowerShell cmdlet과 다음 명령줄 도구를 설치합니다.
 
@@ -26,13 +27,13 @@ ms.lasthandoff: 10/17/2017
 
 이러한 도구를 사용하여 로컬 컴퓨터 또는 원격 컴퓨터의 저장소 리소스를 관리할 수 있습니다. 이러한 명령줄 도구에 대한 자세한 내용은 다음 자료를 참조하세요.
 
--   **Dirquota**: <http://go.microsoft.com/fwlink/?LinkId=92741>
--   **Filescrn**: <http://go.microsoft.com/fwlink/?LinkId=92742>
--   **Storrept**: <http://go.microsoft.com/fwlink/?LinkId=92743>
+-   **Dirquota**: <https://go.microsoft.com/fwlink/?LinkId=92741>
+-   **Filescrn**: <https://go.microsoft.com/fwlink/?LinkId=92742>
+-   **Storrept**: <https://go.microsoft.com/fwlink/?LinkId=92743>
 
 
 > [!Note]
-> 명령에 대한 명령 구문 및 사용 가능한 매개 변수를 보려면 <strong>/?</strong> 매개 변수와 함께 명령을 실행합니다.
+> 명령에 대한 명령 구문 및 사용 가능한 매개 변수를 보려면 <strong>/?</strong> 필요합니다.
 
 
 ## <a name="remote-management-using-the-command-line-tools"></a>명령줄 도구를 사용한 원격 관리
@@ -56,6 +57,6 @@ ms.lasthandoff: 10/17/2017
 -   원격 컴퓨터에서 **원격 파일 서버 리소스 관리자 관리** 예외를 사용하도록 설정되어 있어야 합니다. 이 예외는 제어판의 Windows 방화벽을 통해 사용하도록 설정합니다.
 
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 -   [원격 저장소 리소스 관리](managing-remote-storage-resources.md)

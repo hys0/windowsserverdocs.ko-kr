@@ -1,6 +1,6 @@
 ---
-title: "파일 차단 템플릿 만들기"
-description: "이 문서에서는 파일 차단 템플릿을 만드는 방법을 설명합니다."
+title: 파일 차단 템플릿 만들기
+description: 이 문서에서는 파일 차단 템플릿을 만드는 방법을 설명합니다.
 ms.date: 7/7/2017
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -9,14 +9,15 @@ author: JasonGerend
 manager: brianlic
 ms.author: jgerend
 ms.openlocfilehash: b06597bce0b88ed5a2e98ad45d0cbc355d1b13fc
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59858354"
 ---
 # <a name="create-a-file-screen-template"></a>파일 차단 템플릿 만들기
 
-> 적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> 적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 *파일 차단 템플릿*은 차단할 파일 그룹의 집합, 수행할 차단의 종류(적극적 또는 소극적), 선택적으로 사용자가 허용되지 않은 파일을 저장하거나 저장하려고 시도할 때 자동으로 생성되는 알림 집합을 정의합니다.
 
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/17/2017
 
     **파일 그룹**에서 포함할 각 파일 그룹을 선택합니다. (파일 그룹에 대한 확인란을 선택하려면 파일 그룹 레이블을 두 번 클릭합니다.)
 
-    파일 그룹에 포함되거나 제외되는 파일 형식을 보려면 파일 그룹 레이블을 클릭하고 **편집**을 클릭합니다. 새 파일 그룹을 만들려면 **만들기**를 클릭합니다.
+    파일 그룹 포함 및 제외 하는 파일 형식 보기, 파일 그룹 레이블를 클릭 한 다음 클릭 하려는 경우 **편집**합니다. 새 파일 그룹을 만들려면 **만들기**합니다.
 
     또한, **전자 메일 메시지**, **이벤트 로그**, **명령** 및 **보고서** 탭에서 다음 옵션을 설정하여 파일 서버 리소스 관리자가 하나 이상의 알림을 생성하도록 구성할 수 있습니다.
 
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/17/2017
 
     -   사용자나 응용 프로그램이 허가되지 않은 파일을 저장하려고 시도할 때 관리자에게 알리려면, **다음 관리자에게 전자 메일 보내기** 확인란을 선택한 다음 알림을 받을 관리 계정의 이름을 입력합니다. *account*@*domain* 형식을 사용하고 세미콜론으로 여러 계정을 구분합니다.
     -   파일을 저장하려 시도한 사용자에게 전자 메일을 보내려면 **허용되지 않은 파일을 저장하려고 한 사용자에게 전자 메일 보내기** 확인란을 선택합니다.
-    -   메시지를 구성하려면 기본 제목 줄과 메시지 본문을 편집합니다. 괄호에 있는 텍스트는 알림을 발생시킨 파일 차단 이벤트에 대한 변수 정보를 삽입합니다. 예를 들어 \[**Source Io Owner**\] 변수는 허용되지 않은 파일을 저장하려고 한 사용자의 이름을 삽입합니다. 텍스트에 추가 변수를 삽입하려면 **변수 삽입**을 클릭합니다.
+    -   메시지를 구성하려면 기본 제목 줄과 메시지 본문을 편집합니다. 괄호에 있는 텍스트는 알림을 발생시킨 파일 차단 이벤트에 대한 변수 정보를 삽입합니다. 예를 들어 합니다 \[ **원본 Io 소유자** \] 변수는 허용 되지 않은 파일을 저장 하려고 했습니다. 사용자의 이름을 삽입 합니다. 텍스트에 추가 변수를 삽입하려면 **변수 삽입**을 클릭합니다.
     -   추가 헤더(보낸 사람, 참조, 숨은 참조, 회신)를 구성하려면 **추가 전자 메일 헤더**를 클릭합니다.
 
 8.  사용자가 허용되지 않은 파일을 저장하려고 할 때 오류를 이벤트 로그에 기록하려면:
@@ -70,13 +71,13 @@ ms.lasthandoff: 10/17/2017
 
     **보고서** 탭에서 **보고서 생성** 확인란을 선택한 다음 생성할 보고서를 선택합니다. (보고서를 받을 한 명 이상의 관리 전자 메일 수신자를 선택하거나 파일을 저장하려고 한 사용자에게 보고서를 전자 메일로 보내도록 할 수 있습니다.)
 
-    보고서는 문제 보고서의 기본 위치에 저장되며, 이 위치는 **파일 서버 리소스 관리자 옵션** 대화 상자에서 수정할 수 있습니다.
+    보고서는 문제 보고서의 기본 위치에 저장되며 **파일 서버 리소스 관리자 옵션** 대화 상자에서 수정할 수 있습니다.
 
 11. 사용할 파일 템플릿 속성을 모두 선택한 다음 **확인**을 클릭하여 템플릿을 저장합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 -   [파일 차단 관리](file-screening-management.md)
--   [파일 서버 리소스 관리자 옵션 설정](setting-file-server-resource-manager-options.md)
--   [파일 차단 템플릿 속성 편집](edit-file-screen-template-properties.md)
+-   [설정 파일 서버 리소스 관리자 옵션](setting-file-server-resource-manager-options.md)
+-   [파일 화면 템플릿 속성 편집](edit-file-screen-template-properties.md)
 

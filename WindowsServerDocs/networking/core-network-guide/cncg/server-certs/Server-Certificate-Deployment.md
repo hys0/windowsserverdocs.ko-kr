@@ -1,6 +1,6 @@
 ---
 title: 서버 인증서 배포
-description: 이 항목은 802.1 X 유선 및 무선 배포에 대 한 배포 서버 인증서 가이드
+description: 이 항목은 서버 배포 인증서 802.1 X 유선 및 무선 배포 가이드의 일부
 manager: brianlic
 ms.topic: article
 ms.assetid: 1ae4384b-f4e4-41e8-bc5f-9ac41953bca4
@@ -8,46 +8,47 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 4a10a9bafa6a8c9fddecac799ec8e837bf339d0e
-ms.sourcegitcommit: 19d9da87d87c9eefbca7a3443d2b1df486b0b010
+ms.openlocfilehash: 751c5c5958b3d06ae0f4b701e4d6e10a7fef19dc
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59858494"
 ---
 # <a name="server-certificate-deployment"></a>서버 인증서 배포
 
->적용 대상: Windows Server (세미콜론 연간 채널) Windows Server 2016
+>적용 대상: Windows Server (반기 채널), Windows Server 2016
 
-엔터프라이즈 루트 인증 기관 (캐나다)를 설치 하 고 서버 인증서 PEAP EAP와 사용에 대 한 배포 다음이 단계를 수행 합니다.  
+엔터프라이즈 루트 인증 기관 (CA)를 설치 하 고 PEAP 및 EAP에 사용할 서버 인증서를 배포 하려면 다음이 단계를 수행 합니다.  
   
 > [!IMPORTANT]  
-> Active Directory 인증서 서비스를 설치 하기 전에 컴퓨터 이름 지정 해야, 고정 IP 주소를 사용 하는 컴퓨터 구성 및 컴퓨터에서 도메인에 가입입니다. 그러나 AD CS를 설치한 후 필요한 경우에 IP 주소를 변경할 수는 컴퓨터의 컴퓨터 이름을 또는 도메인 변경할 수 없습니다. 이러한 작업을 수행 하는 방법에 대 한 자세한 내용은 참조 Windows Server&reg; 2016 [Core 네트워크 가이드](../../Core-Network-Guide.md)합니다.  
+> Active Directory 인증서 서비스를 설치 하기 전에 컴퓨터의 이름, 정적 IP 주소를 가진 컴퓨터를 구성 하며 컴퓨터를 도메인에 가입 있습니다. AD CS를 설치한 후 필요한 경우에 IP 주소를 변경할 수 있지만 컴퓨터 이름 또는 도메인 구성원 컴퓨터의 변경할 수 없습니다. 이러한 작업을 수행 하는 방법에 대 한 자세한 내용은 Windows Server 참조&reg; 2016 [핵심 네트워크 가이드](../../Core-Network-Guide.md)합니다.  
 
   
--   [웹 서버 WEB1 설치](../../../core-network-guide/cncg/server-certs/Install-the-Web-Server-WEB1.md)  
+-   [웹 서버 WEB1을 설치 합니다.](../../../core-network-guide/cncg/server-certs/Install-the-Web-Server-WEB1.md)  
   
--   [Dns에서 (CNAME) 별칭 기록 WEB1 만들려면](../../../core-network-guide/cncg/server-certs/Create-an-Alias-CNAME-Record-in-DNS-for-WEB1.md)  
+-   [W e b 1에 대 한 DNS에서 별칭 (CNAME) 레코드 만들기](../../../core-network-guide/cncg/server-certs/Create-an-Alias-CNAME-Record-in-DNS-for-WEB1.md)  
   
--   [인증서 Crl (해지 목록)을 배포 하는 WEB1 구성](../../../core-network-guide/cncg/server-certs/Configure-WEB1-to-Distribute-Certificate-Revocation-Lists.md)  
+-   [Crl (인증서 해지 목록)을 배포 하도록 WEB1 구성](../../../core-network-guide/cncg/server-certs/Configure-WEB1-to-Distribute-Certificate-Revocation-Lists.md)  
   
--   [CAPolicy inf 파일을 준비](../../../core-network-guide/cncg/server-certs/Prepare-the-CAPolicy-inf-File.md)  
+-   [CAPolicy inf 파일을 준비 합니다.](../../../core-network-guide/cncg/server-certs/Prepare-the-CAPolicy-inf-File.md)  
   
 -   [인증 기관 설치](../../../core-network-guide/cncg/server-certs/Install-the-Certification-Authority.md)  
   
--   [확장 CDP 및 AIA CA1에서 구성](../../../core-network-guide/cncg/server-certs/Configure-the-CDP-and-AIA-Extensions-on-CA1.md)  
+-   [C a 1에서 CDP 및 AIA 확장을 구성 합니다.](../../../core-network-guide/cncg/server-certs/Configure-the-CDP-and-AIA-Extensions-on-CA1.md)  
   
--   [가상 디렉터리에는 선택 된 인증서 CRL 복사](../../../core-network-guide/cncg/server-certs/Copy-the-CA-Certificate-and-CRL-to-the-Virtual-Directory.md)  
+-   [가상 디렉터리에 CA 인증서 및 CRL 복사](../../../core-network-guide/cncg/server-certs/Copy-the-CA-Certificate-and-CRL-to-the-Virtual-Directory.md)  
   
--   [서버 인증서 템플릿을 구성합니다](../../../core-network-guide/cncg/server-certs/Configure-the-Server-Certificate-Template.md)  
+-   [서버 인증서 템플릿 구성](../../../core-network-guide/cncg/server-certs/Configure-the-Server-Certificate-Template.md)  
   
--   [자동 서버 인증서 등록이 구성](../../../core-network-guide/cncg/server-certs/Configure-Server-Certificate-Autoenrollment.md)  
+-   [서버 인증서 자동 등록 구성](../../../core-network-guide/cncg/server-certs/Configure-Server-Certificate-Autoenrollment.md)  
   
--   [새로 고침 그룹 정책](../../../core-network-guide/cncg/server-certs/Refresh-Group-Policy.md)  
+-   [그룹 새로 고침 정책](../../../core-network-guide/cncg/server-certs/Refresh-Group-Policy.md)  
   
--   [서버 인증서 등록이 서버를 확인 합니다.](../../../core-network-guide/cncg/server-certs/Verify-Server-Enrollment-of-a-Server-Certificate.md)  
+-   [서버 인증서의 서버 등록 확인](../../../core-network-guide/cncg/server-certs/Verify-Server-Enrollment-of-a-Server-Certificate.md)  
   
 > [!NOTE]  
-> 이 가이드는 절차 있는 경우에 대 한 지침 포함 되지 않는다는 **사용자 계정 컨트롤** 대화 상자에서 열리는 계속에서 사용 권한을 요청 합니다. 이 가이드에서는 절차를 수행 하는 및 프로그램 작업에 대 한 응답에서 대화 상자를 연 경우 클릭 동안이 대화 상자에서 열리는 경우 **계속**합니다.  
+> 이 가이드의 절차에는 사례에 대 한 지침을 포함 하지 마십시오는 **사용자 계정 컨트롤** 를 계속 하려면 권한이 요청 대화 상자가 열립니다. 이 가이드의 절차를 수행 하는 사용자의 작업에 대 한 응답에서 대화 상자를 연 경우 클릭 하는 동안이 대화 상자가 열리면 **계속**합니다.  
   
 
 

@@ -1,7 +1,7 @@
 ---
 ms.assetid: 73542e1c-53ef-4ddb-89b1-bc563b2bfb49
-title: "Office 문서에 대 한 분류 기반 암호화 시나리오"
-description: 
+title: Office 문서에 대 한 분류 기반 암호화 시나리오
+description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -10,45 +10,46 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
 ms.openlocfilehash: 38e058f36522ba6a2c81694cb883d0946b04adda
-ms.sourcegitcommit: 70c1b6cedad55b9c7d2068c9aa4891c6c533ee4c
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59865184"
 ---
-# <a name="scenario-classification-based-encryption-for-office-documents"></a>Office 문서에 대 한 분류 기반 암호화 시나리오:
+# <a name="scenario-classification-based-encryption-for-office-documents"></a>시나리오: Office 문서에 대한 분류 기반 암호화
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-중요 한 정보를 보호 주로 조직에 대 한 위험을 완화입니다. 및 책임 Act (HIPAA) 한 결제 카드 Industry 데이터 보안 표준 (PCI-DSS) 등의 다양 한 규정을 받아쓰게 한 정보를 암호화 되며 비즈니스 중요 한 정보를 암호화 하는 여러 비즈니스 가지 이유가 있습니다. 그러나 듭니다 정보를 암호화 하 고 업무 생산성 손상 될 수 있습니다. 따라서 조직에는 다른 방법 및 우선 순위를 해당 정보를 암호화 하는 경우가 많습니다.  
+중요한 정보를 보호하는 가장 큰 이유는 조직의 위험을 완화하기 위함입니다. HIPAA(Health Insurance Portability and Accountability Act) 및 PCI-DSS(Payment Card Industry Data Security Standard)와 같은 다양한 규정에 정보의 암호화가 명시되어 있고, 비즈니스 측면에서 중요한 비즈니스 정보를 암호화해야 하는 이유는 다양합니다. 그러나 정보 암호화는 비용이 많이 들고 비즈니스 생산성을 저하시킬 수 있습니다. 따라서 조직마다 정보 암호화의 접근 방식과 우선 순위가 다양한 편입니다.  
   
 ## <a name="BKMK_OVER"></a>시나리오 설명  
- Windows Server 2012 자신의 분류에 따라 중요 한 Microsoft Office 파일을 자동으로 암호화 하는 기능을 제공 합니다. 이 파일 파일 서버에 중요 한 파일 것으로 확인 된 후 몇 초 중요 한 문서에 대 한 Active Directory Rights Management Services (AD RMS) 보호 호출 하는 파일 관리 작업을 통해 수행 됩니다. 이 파일 서버에 연속 파일 관리 작업 하 여 쉽게 처리 됩니다.  
+ Windows Server 2012 분류에 따라 중요 한 Microsoft Office 파일을 자동으로 암호화 하는 기능을 제공 합니다. 이 기능은 파일이 파일 서버에서 중요한 파일로 식별되고 몇 초 후 중요한 문서에 대한 AD RMS(Active Directory Rights Management Services) 보호를 호출하는 파일 관리 작업을 통해 수행됩니다. 파일 서버의 연속적인 파일 관리 작업이 이를 용이하게 해줍니다.  
   
-AD RMS 암호화 다른 파일에 대 한 보호 계층을 제공합니다. 실수로 중요 한 파일에 액세스할 수 있는 사람의 메일을 통해 해당 파일을 보내는 하는 경우에 해당 파일 AD RMS 암호화에 의해 보호 됩니다. 사용자 파일에 액세스 하는 암호를 해독 키를 받으려면 AD RMS 서버에 자체적으로 인증 먼저 되어야 합니다. 다음 그림에서는이 프로세스를 보여 줍니다.  
+AD RMS 암호화는 또 다른 파일 보호 계층을 제공합니다. 중요한 파일에 대한 액세스 권한이 있는 사용자가 해당 파일을 실수로 전자 메일을 통해 보낸 경우에도 AD RMS 암호화에 의해 파일이 보호됩니다. 파일에 액세스하려는 사용자는 먼저 AD RMS 서버의 인증을 통해 암호 해독 키를 받아야 합니다. 다음 그림에서는 이 프로세스를 보여줍니다.  
   
-![해결 방법 가이드](media/Scenario--Classification-Based-Encryption-for-Office-Documents/DynamicAccessControl_RevGuide_6.JPG)  
+![솔루션 가이드](media/Scenario--Classification-Based-Encryption-for-Office-Documents/DynamicAccessControl_RevGuide_6.JPG)  
   
-**그림 6** RMS 분류 기반 보호  
+**그림 6** 분류 기반 RMS 보호  
   
-Microsoft가 아닌 타사 파일 형식에 대 한 지원은 비 Microsoft의 공급 업체를 통해 제공 됩니다. 파일 AD RMS 암호화에 의해 보호 된 후 검색 또는 콘텐츠 기반 분류 등 데이터 관리 기능 해당 파일에 대 한 사용할 수 없게 됩니다.  
+타사 파일 형식에 대한 지원은 해당 공급업체를 통해 받을 수 있습니다. 파일이 AD RMS 암호화로 보호된 후에는 검색 또는 콘텐츠 기반 분류와 같은 데이터 관리 기능을 해당 파일에 사용할 수 없습니다.  
   
-## <a name="in-this-scenario"></a>이 경우  
-다음은 이러한 시나리오 사용할 수 있는 지침입니다.  
+## <a name="in-this-scenario"></a>이 시나리오의 내용  
+다음은 이 시나리오에 사용할 수 있는 지침입니다.  
   
--   [암호화 Office 문서를 고려 사항](assetId:///14714ba6-d6a2-45e4-aae5-d3318817e52a)  
+-   [Office 문서 암호화에 대 한 계획 고려 사항](assetId:///14714ba6-d6a2-45e4-aae5-d3318817e52a)  
   
--   [Office 파일 & #40 암호화; 데모 단계 & #41; 배포](Deploy-Encryption-of-Office-Files--Demonstration-Steps-.md)  
+-   [Office 파일 암호화 배포 &#40;데모 단계&#41;](Deploy-Encryption-of-Office-Files--Demonstration-Steps-.md)  
   
--   [동적 액세스 제어: 시나리오 개요](Dynamic-Access-Control--Scenario-Overview.md)  
+-   [동적 Access Control: 시나리오 개요](Dynamic-Access-Control--Scenario-Overview.md)  
   
-## <a name="BKMK_NEW"></a>역할 및이 시나리오에 포함 된 기능  
-다음 표에서 역할 및이 시나리오에 포함 된 기능을 나열 하 고 지 원하는 방식에 대해 설명 합니다.  
+## <a name="BKMK_NEW"></a>역할과이 시나리오에 포함 된 기능  
+다음 표에는 이 시나리오에 포함된 역할 및 기능이 나열되어 있으며, 이러한 역할 및 기능이 시나리오를 지원하는 방법에 대한 설명이 나와 있습니다.  
   
-|역할/기능|이 시나리오를 지 원하는 방법을|  
+|역할/기능|이 시나리오를 지원하는 방법|  
 |-----------------|---------------------------------|  
-|Active Directory Domain Services 역할 (AD DS)|AD DS 저장 하 고 디렉터리 사용 응용 프로그램에서 특정 응용 프로그램 데이터 및 네트워크 리소스에 대 한 정보를 관리 분산된 데이터베이스를 제공 합니다. 이 경우 Windows Server 2012에서 AD DS 사용자 클레임 및 장치 클레임, 복합 신원을 (사용자와 디바이스가 클레임), 새로운 중앙 액세스 정책 모델 및 인증 결정 파일 분류 정보의 사용 만들 수 있는 승인 클레임 기반 플랫폼을 소개 합니다.|  
-|파일 및 저장소 서비스 역할<br /><br />파일 서버 리소스 관리자|파일 및 저장소 서비스 제공 하는 데 도움이 기술을를 설정 하 고 파일을 저장 하 고 사용자와 공유할 수 있는 네트워크를 중앙 위치를 제공 하는 하나 이상의 파일 서버 관리 합니다. 네트워크는 동일한 파일 및 응용 프로그램에 액세스 해야 하는 경우 또는 조직에서 중요 한 경우 백업 및 파일에 대 한 중앙 집중식된 관리 하면으로 설정 해야 하나 이상의 컴퓨터 파일 서버 파일 및 저장소 서비스 역할을 적절 한 역할 서비스 컴퓨터에 추가 하 여 합니다. 이 경우 파일 서버 관리자 파일 중요 한 파일 파일 서버 (연속 파일 서버 관리 작업에는 파일)에 있는 것으로 확인 된 후 몇 초 중요 한 문서에 대 한 AD RMS 보호를 호출 하는 파일 관리 작업 구성할 수 있습니다.|  
-|Active Directory Rights Management Services (AD RMS) 역할|AD RMS 사용 하면 개인 관리자가 (관리 IRM (정보 권한) 정책)를 통해 액세스 권한을 문서, 통합, 문서, 프레젠테이션 지정할 수 있습니다. 인쇄 전달 또는 권한이 없는 사람이 복사한 되지 않도록 중요 한 정보를 방지 합니다. IRM를 사용 하 여 파일에 대 한 사용 권한을 제한 자체 문서 파일에 저장 된 파일에 사용 권한을 때문에 대 한 액세스 및 사용 현황 제한을 하 든 어디 정보 적용 됩니다. 이 경우 AD RMS 암호화 다른 파일에 대 한 보호 계층을 제공합니다. 실수로 중요 한 파일에 액세스할 수 있는 사람의 메일을 통해 해당 파일을 보내는 하는 경우에 해당 파일 AD RMS 암호화에 의해 보호 됩니다. 사용자 파일에 액세스 하는 암호를 해독 키를 받으려면 AD RMS 서버에 자체적으로 인증 먼저 되어야 합니다.|  
+|AD DS(Active Directory 도메인 서비스) 역할|AD DS에서는 디렉터리 사용 응용 프로그램의 네트워크 리소스와 응용 프로그램별 데이터에 대한 정보를 저장하고 관리하는 분산 데이터베이스를 제공합니다. 이 시나리오에서는 Windows Server 2012의 AD DS는 사용자 클레임 및 장치 클레임, 복합 id (사용자 + 장치 클레임), 새로운 중앙 액세스 정책 모델 및 권한 부여 결정에 파일 분류 정보 사용을 만들 수 있도록 하는 클레임 기반 권한 부여 플랫폼을 소개 합니다.|  
+|파일 및 저장소 서비스 역할<br /><br />파일 서버 리소스 관리자|파일 및 저장소 서비스는 파일을 저장하고 다른 사용자와 공유할 수 있는 네트워크의 중앙 위치를 제공하는 하나 이상의 파일 서버를 설정 및 관리할 수 있는 기술을 제공합니다. 네트워크 사용자에게 동일한 파일 및 응용 프로그램에 대한 액세스 권한이 필요하거나 조직에서 중앙 집중 방식의 백업 및 파일 관리가 필요한 경우, 파일 및 저장소 서비스 역할과 해당 역할 서비스를 컴퓨터에 추가하여 하나 이상의 컴퓨터를 파일 서버로 설정해야 합니다. 이 시나리오에서 파일 서버 관리자는 파일이 파일 서버에서 중요한 파일로 식별되고 몇 초 후 중요한 문서에 대한 AD RMS 보호를 호출하는 파일 관리 작업을 구성할 수 있습니다(파일 서버의 연속적인 파일 관리 작업).|  
+|AD RMS(Active Directory Rights Management Services) 역할|AD RMS는 개별 사용자와 관리자가 IRM(정보 권한 관리) 정책을 통해 문서, 통합 문서 및 프레젠테이션에 대한 액세스 권한을 지정할 수 있도록 허용합니다. 따라서 중요한 정보가 권한 없는 사용자에 의해 인쇄, 전달 또는 복사되는 것을 방지할 수 있습니다. IRM을 사용하여 파일에 대한 권한을 제한하고 나면 해당 파일에 대한 권한이 문서 파일 자체에 저장되므로 정보에 관계없이 액세스 및 사용 제한이 적용됩니다. 이 시나리오에서 AD RMS 암호화는 또 다른 파일 보호 계층을 제공합니다. 중요한 파일에 대한 액세스 권한이 있는 사용자가 해당 파일을 실수로 전자 메일을 통해 보낸 경우에도 AD RMS 암호화에 의해 파일이 보호됩니다. 파일에 액세스하려는 사용자는 먼저 AD RMS 서버의 인증을 통해 암호 해독 키를 받아야 합니다.|  
   
 
 

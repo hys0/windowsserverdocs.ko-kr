@@ -1,7 +1,7 @@
 ---
 ms.assetid: 935ea7c2-4678-4033-b50f-2036a0359c5d
-title: "위치를 Federation 서버"
-description: 
+title: 페더레이션 서버를 배치하는 위치
+description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -10,33 +10,34 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.openlocfilehash: 376cec7f3a4fb1f988ac5d458b05220c7b9de970
-ms.sourcegitcommit: db290fa07e9d50686667bfba3969e20377548504
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59857694"
 ---
-# <a name="where-to-place-a-federation-server"></a>위치를 Federation 서버
+# <a name="where-to-place-a-federation-server"></a>페더레이션 서버를 배치하는 위치
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-보안 가장 연습 방화벽 앞 Active Directory Federation Services \(AD FS\) federation 서버 놓고 노출은 인터넷에서 되지 않도록 하 여 회사 네트워크에 연결 합니다. 이 federation 서버 전체 수 있는 권한이 부여 보안 토큰 중요 합니다. 따라서 도메인 컨트롤러도 동일한 보호가 있어야 합니다. Federation 서버 손상 되 면 악의적인 사용자가 및 federation 서버 Active Directory Federation Services \(AD FS\) 모든 리소스 파트너 조직에 의해 보호 되는 모든 웹 응용 프로그램에 대 한 전체 액세스 토큰 드릴 수 있습니다.  
+보안 모범 사례로, 내부 Active Directory Federation Services \(AD FS\)방화벽 앞에 페더레이션 서버를 인터넷에 노출 되지 않도록 회사 네트워크에 연결할 수 있습니다. 이 페더레이션 서버에 보안 토큰을 부여 하려면 전체 권한 부여 중요 합니다. 따라서 도메인 컨트롤러와 동일하게 보호되어야 합니다. 악의적 사용자가 모든 웹 응용 프로그램을 Active Directory Federation Services로 보호 되는 페더레이션 서버에 대 한 전체 액세스 토큰을 발급 하는 기능에 페더레이션 서버 보안이 손상 되 면 \(AD FS\) 모든 리소스 파트너 조직입니다.  
   
 > [!NOTE]  
-> 보안을 위해 인터넷에 액세스할 수 있는 직접 federation 서버 되지 않도록 합니다. 테스트 랩 환경 또는 조직이 주변 네트워크 없는 설정 하는 경우에 해당 federation 서버 직접 인터넷 액세스를 제공 하는 것이 좋습니다.  
+> 보안 모범 사례, 인터넷에 직접 액세스할 수 있는 페더레이션 서버에 있지 않도록 합니다. 테스트 랩 환경 또는 조직에 경계 네트워크가 없을 때를 설정 하는 경우에 페더레이션 서버 직접 인터넷 액세스를 제공 하는 것이 좋습니다.  
   
-일반적인 회사 네트워크에 대 한 주변 네트워크 회사 네트워크와 intranet\ 전면 방화벽 설정 되 고 Internet\ 전면 방화벽 주변 네트워크 및 인터넷 간에 자주 설정 됩니다. 이 경우 회사의 네트워크 안에 federation 서버에 위치 하 고 직접 인터넷 클라이언트에서 액세스할 수 없는 합니다.  
+일반적인 회사 네트워크의 경우 인트라넷\-회사 네트워크 경계 네트워크 및 인터넷 간에 설정 된 방화벽 연결\-경계 네트워크 간에 자주 설정는 방화벽 연결 하며 인터넷입니다. 이 경우 회사 네트워크 내에서 페더레이션 서버 배치 및 인터넷 클라이언트가 직접 액세스할 수 없는 합니다.  
   
 > [!NOTE]  
-> 회사 네트워크에 연결 하는 클라이언트 컴퓨터 Windows 통합 인증을 통해 federation 서버를 사용 하 여 직접 통신할 수 있습니다.  
+> 회사 네트워크에 연결 된 클라이언트 컴퓨터는 Windows 통합 인증을 통해 페더레이션 서버와 직접 통신할 수 있습니다.  
   
-Adfs로 사용 하기 위해 방화벽 서버 구성 하기 전에 federation 서버 프록시 주변 네트워크에 있어야 합니다. 자세한 내용은 참조 [Federation 서버 프록시 위치](Where-to-Place-a-Federation-Server-Proxy.md)합니다.  
+페더레이션 서버 프록시는 AD FS와 함께 사용할 방화벽 서버를 구성 하기 전에 경계 네트워크에 배치 되어야 합니다. 자세한 내용은 참조 [페더레이션 서버 프록시 배치 위치](Where-to-Place-a-Federation-Server-Proxy.md)합니다.  
   
-## <a name="configuring-your-firewall-servers-for-a-federation-server"></a>방화벽 서버 federation 서버에 대 한 구성  
-Federation 서버 프록시와 직접 federation 서버 통신할 수, 방화벽 인트라넷 서버 federation 서버에 federation 서버 프록시에서 프로토콜을 전송 하이퍼텍스트 보안 \(HTTPS\) 교통 수 있도록 설정 해야 합니다. 요구 사항을 방화벽 인트라넷 서버 주변 네트워크에 federation 서버 프록시 federation 서버에 액세스할 수 있도록 443 포트를 사용 하 여 federation 서버 게시 해야 하기 때문입니다.  
+## <a name="configuring-your-firewall-servers-for-a-federation-server"></a>페더레이션 서버에 대한 방화벽 서버 구성  
+페더레이션 서버는 페더레이션 서버 프록시를 사용 하 여 직접 통신할 수 있습니다, 있도록 인트라넷 방화벽 서버 Secure Hypertext Transfer Protocol을 허용 하도록 구성 해야 합니다 \(HTTPS\) 트래픽과에 페더레이션 서버 프록시 페더레이션 서버입니다. 이것이 요구 사항은 인트라넷 방화벽 서버는 경계 네트워크의 페더레이션 서버 프록시가 페더레이션 서버에 액세스할 수 있도록 포트 443을 사용 하 여 페더레이션 서버를 게시 해야 합니다.  
   
-또한 intranet\ 전면 방화벽 인터넷 보안 및 가속 실행 하는 서버와 같은 서버 \(ISA\) 서버를 사용 하 여 서버 게시로 알려진 프로세스 회사 해당 federation 서버로 인터넷 클라이언트 요청을 배포 합니다. 즉, 예를 들어, http:///\/fs.fabrikam.com 클러스터 federation 서버 URL 게시 스크리닝하 실행 인트라넷 서버에 서버 게시 규칙 수동으로 만들 해야 합니다.  
+또한 인트라넷\-Internet Security and Acceleration를 실행 하는 서버와 같은 방화벽 서버에 연결 \(ISA\) 서버, 서버 게시 라고 알려진 프로세스를 사용 하 여 인터넷 클라이언트 요청을 배포 하는 적절 한 회사 페더레이션 서버입니다. 즉, 예를 들어, http, 클러스터 된 페더레이션 서버 URL을 게시 하는 ISA Server를 실행 하는 인트라넷 서버에서 서버 게시 규칙을 수동으로 만들어야 합니다.\/\/fs.fabrikam.com입니다.  
   
-주변 네트워크에 게시 서버 구성 하는 방법에 대 한 자세한 내용은 참조 [Federation 서버 프록시 위치](Where-to-Place-a-Federation-Server-Proxy.md)합니다. 서버를 게시 하 스크리닝하 구성 하는 방법에 대 한 정보를 참조 하세요. [안전한 웹 게시 규칙 만들](https://go.microsoft.com/fwlink/?LinkId=75182)합니다.  
+경계 네트워크에 서버 게시를 구성하는 방법에 대한 자세한 내용은 [Where to Place a Federation Server Proxy](Where-to-Place-a-Federation-Server-Proxy.md)를 참조하세요. 서버를 게시 하도록 ISA Server를 구성 하는 방법에 대 한 정보를 참조 하세요 [안전한 웹 게시 규칙 만들기](https://go.microsoft.com/fwlink/?LinkId=75182)합니다.  
   
-## <a name="see-also"></a>참조 하십시오
-[Windows Server 2012의에서 지침에 따라 AD FS 디자인](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+## <a name="see-also"></a>관련 항목
+[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)

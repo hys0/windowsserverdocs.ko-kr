@@ -1,6 +1,6 @@
 ---
 title: BranchCache 배포
-description: 이 항목은 Windows Server 2016을 지점에서 WAN 대역폭 사용을 최적화 하 분산 / 호스팅된 캐시 모드로 BranchCache 배포 하는 방법을 보여 주는 BranchCache 배포 가이드
+description: 이 항목은 일부는 BranchCache 배포 가이드에 대 한 Windows Server 2016, 지사에 WAN 대역폭 사용량을 최적화 하기 위해 분산 및 호스트 캐시 모드로 BranchCache를 배포 하는 방법을 보여 주는
 manager: brianlic
 ms.prod: windows-server-threshold
 ms.technology: networking-bc
@@ -9,28 +9,29 @@ ms.topic: get-started-article
 ms.assetid: 30b0a6d9-d6d5-4019-b8dc-ed5365d9921f
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: e3c163e60777258c403b812adc19d6a598608052
-ms.sourcegitcommit: 19d9da87d87c9eefbca7a3443d2b1df486b0b010
+ms.openlocfilehash: 80184322719292c4776923e4023e783eb632c26e
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59862054"
 ---
 # <a name="deploy-branchcache"></a>BranchCache 배포
 
->적용 대상: Windows Server (세미콜론 연간 채널) Windows Server 2016
+>적용 대상: Windows Server (반기 채널), Windows Server 2016
 
-다음 섹션에서는 분산 / 호스팅된 캐시 모드로 BranchCache 배포에 대 한 정보를 제공 합니다.  
+다음 섹션에서는 분산 및 호스트 캐시 모드로 BranchCache를 배포 하는 방법에 대 한 정보를 제공 합니다.  
   
--   [설치 및 구성 콘텐츠 서버](Install-and-Configure-Content-Servers.md)  
+-   [콘텐츠 서버 설치 및 구성](Install-and-Configure-Content-Servers.md)  
   
--   [배포 호스트 캐시 서버 & #40; 옵션 & #41;](deploy-hosted-cache-servers.md)  
+-   [호스트 캐시 서버 배포 &#40;선택 사항&#41;](deploy-hosted-cache-servers.md)  
   
--   [Prehashing 및 미리 로드 콘텐츠를 호스트 캐시 서버 & #40; 옵션 & #41;](prehashing-and-preloading.md)  
+-   [Prehashing 및 호스트 캐시 서버에서 콘텐츠 미리 로드 &#40;선택 사항&#41;](prehashing-and-preloading.md)  
   
--   [BranchCache 클라이언트 컴퓨터 구성](Configure-BranchCache-Client-Computers.md)  
+-   [BranchCache 클라이언트 컴퓨터를 구성 합니다.](Configure-BranchCache-Client-Computers.md)  
   
 > [!NOTE]  
-> 이 가이드는 절차 있는 경우 지침 포함 되지 않는다는 **사용자 계정 컨트롤** 대화 상자에서 열리는 계속에서 사용 권한을 요청 합니다. 이 가이드에서는 절차를 수행 하는 및 프로그램 작업에 대 한 응답에서 대화 상자를 연 경우 클릭 동안이 대화 상자에서 열리는 경우 **계속**합니다.  
+> 이 가이드의 절차에는 계속하기 위해 권한을 요청하는 **사용자 계정 컨트롤** 대화 상자가 열리는 경우에 대한 지침은 포함되어 있지 않습니다. 이 가이드의 절차를 수행 하는 사용자의 작업에 대 한 응답에서 대화 상자를 연 경우 클릭 하는 동안이 대화 상자가 열리면 **계속**합니다.  
   
 
 

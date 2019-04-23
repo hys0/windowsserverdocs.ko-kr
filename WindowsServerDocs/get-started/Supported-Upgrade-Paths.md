@@ -15,13 +15,13 @@ ms.author: jaimeo
 manager: dongill
 ms.localizationpriority: medium
 ms.openlocfilehash: 796ee001e20cff5587c5409f7571d223ff7900a8
-ms.sourcegitcommit: ae0a69e9eb994c0b47a842ef4ca452f8c587a0f4
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5858898"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59857944"
 ---
-# Windows Server 2016에 대한 업그레이드 및 변환 옵션
+# <a name="upgrade-and-conversion-options-for-windows-server-2016"></a>Windows Server 2016에 대한 업그레이드 및 변환 옵션
 
 >적용 대상: Windows Server 2019, Windows Server 2016
 
@@ -48,7 +48,7 @@ Windows Server 2016으로 이동하는 프로세스는 작업을 시작하는 �
 > [!IMPORTANT]  
 > 서버에서 NIC 팀을 사용하는 경우 업그레이드하기 전에 NIC 팀을 비활성화했다가 업그레이드가 완료된 후 다시 활성화합니다. 자세한 내용은 [NIC 팀 개요](https://technet.microsoft.com/library/hh831648(v=ws.11).aspx)를 참조하세요.
 
-## Windows Server 정품 이전 버전을 Windows Server 2016으로 업그레이드
+## <a name="upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016"></a>Windows Server 정품 이전 버전을 Windows Server 2016으로 업그레이드
 
 아래 표는 **이미 사용 허가를 받은**, 즉 평가판이 아닌 각 Windows 운영 체제를 Windows Server 2016의 어떤 버전으로 업그레이드할 수 있는지를 간략하게 요약한 것입니다.
 
@@ -67,8 +67,8 @@ Windows Server 2016으로 이동하는 프로세스는 작업을 시작하는 �
 
 |이 버전을 실행 중인 경우:|업그레이드 가능한 버전|  
 |-------------------|----------|  
-|Windows Server2012 Standard|Windows Server 2016 Standard 또는 Datacenter|
-|Windows Server2012 Datacenter|Windows Server 2016 Datacenter|
+|Windows Server 2012 Standard|Windows Server 2016 Standard 또는 Datacenter|
+|Windows Server 2012 Datacenter|Windows Server 2016 Datacenter|
 |Windows Server 2012 R2 Standard|Windows Server 2016 Standard 또는 Datacenter|
 |Windows Server 2012 R2 Datacenter|Windows Server 2016 Datacenter|
 |Windows Server 2012 R2 Essentials|Windows Server 2016 Essentials|
@@ -78,11 +78,11 @@ Windows Server 2016으로 이동하는 프로세스는 작업을 시작하는 �
 |Windows Storage Server 2012 R2 Workgroup|Windows Storage Server 2016 작업 그룹|
 
 
-## 업그레이드 시 서버 역할 고려 사항
+## <a name="per-server-role-considerations-for-upgrading"></a>업그레이드 시 서버 역할 고려 사항
 
 이전 일반 정품 버전에서 Windows Server 2016으로 업그레이드가 가능한 지원되는 업그레이드 경로에서도 이미 설치된 특정 서버 역할이 업그레이드 후에도 계속 작동할 수 있도록 준비 작업이나 기타 작업이 필요할 수 있습니다. 필요할 수 있는 추가 단계에 대한 자세한 내용은 업그레이드하려는 각 서버 역할에 대한 특정 TechNet 라이브러리 항목을 참조하세요.
 
-## 현재 평가판을 현재 일반 정품 버전으로 변환
+## <a name="converting-a-current-evaluation-version-to-a-current-retail-version"></a>현재 평가판을 현재 일반 정품 버전으로 변환
 
 Windows Server 2016 Standard 평가판을 Windows Server 2016 Standard(일반 정품) 또는 Datacenter(일반 정품)로 변환할 수 있습니다. 마찬가지로, Windows Server 2016 Datacenter 평가판을 일반 정품 버전으로 변환할 수 있습니다.
 
@@ -99,7 +99,7 @@ Windows Server 2016 Standard 평가판을 Windows Server 2016 Standard(일반 �
 
 서버에서 평가판 대신 일반 정품 버전을 실행하는 경우 이 항목의 "이전 일반 정품 버전의 Windows Server를 Windows Server 2016으로 업그레이드" 섹션에서 Windows Server 2016로 업그레이드하는 방법을 확인할 수 있습니다.
 
-**Windows Server 2016 Essentials**의 경우: **slmgr.vbs** 명령에서 일반 정품, 볼륨 라이선스 또는 OEM 키를 입력하여 완전한 정품으로 변환할 수 있습니다.
+에 대 한 **Windows Server 2016 Essentials**: 명령에서 일반 정품, 볼륨 라이선스 또는 OEM 키를 입력 하 여 완전 한 정품 버전으로 변환할 수 있습니다 **slmgr.vbs**합니다.
 
 서버에서 Windows Server 2016 Standard 또는 Windows Server 2016 Datacenter의 평가판을 실행하는 경우 다음과 같은 방법으로 일반 정품으로 전환할 수 있습니다.
 
@@ -111,14 +111,14 @@ Windows Server 2016 Standard 평가판의 경우 동일한 명령 및 적절한 
 
 > Dism.exe에 대한 자세한 내용은 [DISM 명령줄 옵션](https://go.microsoft.com/fwlink/?LinkId=192466)을 참조하세요.
 
-## 현재 일반 정품 버전을 다른 현재 일반 정품 버전으로 변환
+## <a name="converting-a-current-retail-edition-to-a-different-current-retail-edition"></a>현재 일반 정품 버전을 다른 현재 일반 정품 버전으로 변환
 
 Windows Server 2016을 설치한 후 언제든지 설치 프로그램을 실행하여 설치를 복구("전체 복구"라고도 함)하거나, 경우에 따라 다른 버전으로 전환할 수 있습니다.
 설치 프로그램을 실행하여 Windows Server 2016 버전에 대한 "전체 복구"를 수행하면 처음 시작한 버전으로 돌아갑니다.
 
-Windows Server 2016 Standard의 경우 다음과 같이 시스템을 Windows Server 2016 Datacenter로 변환할 수 있습니다. 관리자 권한 명령 프롬프트에서 **DISM /online /Get-CurrentEdition** 명령을 사용하여 현재 버전 이름을 확인합니다. Windows Server 2016 standard 됩니다 `ServerStandard`. 명령을 실행 합니다 **DISM /online /Get-TargetEditions** 버전으로 업그레이드할 수의 ID를 가져옵니다. 이 버전 ID, 에디션 이름의 간략된 한 형태를 기록해 둡니다. 그러고 나 서 **DISM /online /Set-Edition: \ < edition ID\ > /ProductKey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX /AcceptEula**, 대상 및 일반 정품 제품 키 버전 ID를 제공 합니다. 서버가 두 번 다시 시작됩니다.
+Windows Server 2016 Standard에 대 한 변환할 수 있습니다 시스템에서 Windows Server 2016 Datacenter로 다음과 같습니다. 관리자 권한 명령 프롬프트에서 **DISM /online /Get-CurrentEdition**명령을 사용하여 현재 버전 이름을 확인합니다. Windows Server 2016 Standard에 대 한 됩니다 `ServerStandard`합니다. 명령을 실행 **DISM /online /Get-TargetEditions** 버전으로 업그레이드할 수 있습니다의 ID를 가져옵니다. 버전 이름의 축약 된 형태일이 버전 ID를 기록해 둡니다. 그런 다음 실행 **DISM 온라인 / /Set-Edition:\<버전 ID\> /productkey:-XXXXX-XXXXX-XXXXX-XXXXX /AcceptEula**, 대상 버전 ID의 정품 제품 키를 제공 합니다. 서버가 두 번 다시 시작됩니다.
 
-## 현재 일반 정품 버전을 현재 볼륨 라이선스 버전으로 변환
+## <a name="converting-a-current-retail-version-to-a-current-volume-licensed-version"></a>현재 일반 정품 버전을 현재 볼륨 라이선스 버전으로 변환
 
 Windows Server 2016을 설치한 후 언제든지 일반 정품 버전, 볼륨 라이선스 버전 또는 OEM 버전 간에 자유롭게 변환할 수 있습니다. 이러한 변환에서 버전은 동일하게 유지됩니다. 평가판 버전으로 시작하는 경우 먼저 일반 정품 버전으로 변환한 다음 위의 설명대로 상호 변환할 수 있습니다.
 

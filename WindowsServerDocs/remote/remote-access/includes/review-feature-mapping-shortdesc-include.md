@@ -1,0 +1,1 @@
+**[Always On VPN 및 DirectAccess의 기능 비교에 알아봅니다](../vpn/vpn-map-da.md)합니다.** DirectAccess와 마찬가지로, Always On VPN에는 많은 보안, 연결, 인증 및 기타 옵션
