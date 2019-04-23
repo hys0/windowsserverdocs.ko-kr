@@ -1,6 +1,6 @@
 ---
-title: "설치 및 Windows Server Essentials 구성"
-description: "Windows Server Essentials을 사용 하는 방법을 설명 합니다."
+title: Windows Server Essentials 설치 및 구성
+description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 06/17/2013
 ms.prod: windows-server-2016-essentials
@@ -13,170 +13,171 @@ author: nnamuhcs
 ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: cdad118c30fbf303b55ec7ea25bbe3e209c016db
-ms.sourcegitcommit: 70c1b6cedad55b9c7d2068c9aa4891c6c533ee4c
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59870164"
 ---
-# <a name="install-and-configure-windows-server-essentials"></a>설치 및 Windows Server Essentials 구성
+# <a name="install-and-configure-windows-server-essentials"></a>Windows Server Essentials 설치 및 구성
 
->Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials에 적용 됩니다.
+>적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 ##  <a name="BKMK_InstallConfigure"></a>   
 
- 이 문서 설치 및 Windows Server Essentials 구성에 대 한 단계별 지침을 제공 합니다. 설치, 시작 하기 전에 검토 하 고에 대해 설명 하는 작업을 완료 [하기 전에 사용자 설치 Windows Server Essentials](Before-You-Install-Windows-Server-Essentials.md)합니다.  
+ 이 문서에서는 설치 및 Windows Server Essentials를 구성 하기 위한 단계별 지침을 제공 합니다. 설치를 시작 하기 전에 검토 하 고에 설명 된 작업을 완료 [하기 전에 있습니다 Windows Server Essentials 설치](Before-You-Install-Windows-Server-Essentials.md)합니다.  
 
- 이 문서 설치 및 Windows Server Essentials 구성에 대 한 단계별 지침을 제공 합니다. 설치, 시작 하기 전에 검토 하 고에 대해 설명 하는 작업을 완료 [하기 전에 사용자 설치 Windows Server Essentials](../install/Before-You-Install-Windows-Server-Essentials.md)합니다.  
+ 이 문서에서는 설치 및 Windows Server Essentials를 구성 하기 위한 단계별 지침을 제공 합니다. 설치를 시작 하기 전에 검토 하 고에 설명 된 작업을 완료 [하기 전에 있습니다 Windows Server Essentials 설치](../install/Before-You-Install-Windows-Server-Essentials.md)합니다.  
   
- 설치 및 Windows Server Essentials 두 단계에서 구성 합니다.  
+ 설치 하 고 두 단계에서 Windows Server Essentials를 구성 합니다.  
   
 
-1.  [1 단계: Windows Server Essentials 운영 체제 설치](Install-and-Configure-Windows-Server-Essentials.md#BKMK_ManualInstallation) 이 단계 서버에 운영 체제 설치 합니다.  
+1.  [1단계: Windows Server Essentials 운영 체제 설치](Install-and-Configure-Windows-Server-Essentials.md#BKMK_ManualInstallation) 이 단계에서는 서버에서 운영 체제 설치 합니다.  
   
-2.  [2 단계: Windows Server Essentials 운영 체제의 구성](Install-and-Configure-Windows-Server-Essentials.md#BKMK_Step2Configure) 여기서, 회사, 도메인 설정 및 네트워크 관리자에 대 한 정보를 제공 하 여 설치를 완료 합니다. 이 정보를 사용 하는 서버를 사용할 수 있습니다.  
+2.  [2단계: Windows Server Essentials 운영 체제 구성](Install-and-Configure-Windows-Server-Essentials.md#BKMK_Step2Configure) 이 단계에서는 회사, 도메인 설정 및 네트워크 관리자에 대 한 정보를 제공 하 여 설치를 완료 합니다. 이러한 정보는 서버를 사용할 수 있도록 준비하는 데 사용됩니다.  
 
-1.  [1 단계: Windows Server Essentials 운영 체제 설치](../install/Install-and-Configure-Windows-Server-Essentials.md#BKMK_ManualInstallation) 이 단계 서버에 운영 체제 설치 합니다.  
+1.  [1단계: Windows Server Essentials 운영 체제 설치](../install/Install-and-Configure-Windows-Server-Essentials.md#BKMK_ManualInstallation) 이 단계에서는 서버에서 운영 체제 설치 합니다.  
   
-2.  [2 단계: Windows Server Essentials 운영 체제의 구성](../install/Install-and-Configure-Windows-Server-Essentials.md#BKMK_Step2Configure) 여기서, 회사, 도메인 설정 및 네트워크 관리자에 대 한 정보를 제공 하 여 설치를 완료 합니다. 이 정보를 사용 하는 서버를 사용할 수 있습니다.  
+2.  [2단계: Windows Server Essentials 운영 체제 구성](../install/Install-and-Configure-Windows-Server-Essentials.md#BKMK_Step2Configure) 이 단계에서는 회사, 도메인 설정 및 네트워크 관리자에 대 한 정보를 제공 하 여 설치를 완료 합니다. 이러한 정보는 서버를 사용할 수 있도록 준비하는 데 사용됩니다.  
 
   
-###  <a name="BKMK_ManualInstallation"></a>1 단계: Windows Server Essentials 운영 체제 설치  
+###  <a name="BKMK_ManualInstallation"></a> 1 단계: Windows Server Essentials 운영 체제를 설치 합니다.  
   
 > [!IMPORTANT]
->  운영 체제 설치 되 면 사용자 지정 하지 않은 서버 마칠 때까지 [2 단계: Windows Server Essentials 운영 체제를 구성](#BKMK_Step2Configure)합니다.  
+>  운영 체제를 설치한 후 사용자 지정 하지 않은 서버를 끝내기 전 까지는 [2 단계: Windows Server Essentials 운영 체제 구성](#BKMK_Step2Configure)합니다.  
   
- **완성 시간:** 약 30 분 정도입니다.  
+ **예상 완료 시간:** 약 30 분입니다.  
   
 > [!NOTE]
->  이 절차 전체 예상된 완료 번 최소 하드웨어 요구 사항을 기반으로 합니다.  
+>  이 절차의 예상 완료 시간은 최소 하드웨어 요구 사항을 기준으로 합니다.  
   
-##### <a name="to-install-the-operating-system"></a>운영 체제 설치 하려면  
+##### <a name="to-install-the-operating-system"></a>운영 체제를 설치하려면  
   
-1.  컴퓨터가 네트워크 케이블을 사용 하 여 네트워크에 연결 합니다.  
-  
-    > [!IMPORTANT]
-    >  설치 중 네트워크에서 컴퓨터를 끊지 마세요. 그렇게 실패 하 여 설치가 될 수 있습니다.  
-  
-2.  컴퓨터를 켜고 DVD 드라이브에 Windows Server Essentials DVD를 넣습니다.  
-  
-     자동된 설치를 수행 하는 경우 대답이 파일이 포함 된 이동식 미디어 (예: 플로피 디스크 또는 USB 플래시 드라이브)를 연결 합니다. 대답 파일의 내용에 따라 일부 또는 다음 설치 화면 하지 표시 될 수 있습니다.  
-  
-3.  컴퓨터를 다시 시작 합니다. 때 메시지 **CD 또는 DVD에서 부팅 하려면 아무 키나 눌러** 나타나면 아무 키나 누릅니다.  
-  
-    > [!NOTE]
-    >  DVD에서 컴퓨터 시작 되지 않는 경우에 BIOS 부팅 순서 CD-ROM 드라이브 먼저 나열 되어 있는지 확인 합니다. BIOS 부팅 순서에 대 한 자세한 내용은 컴퓨터 제조업체에서 설명서를 참조 하세요.  
-  
-4.  선택는 **언어** 를 설치 하려는 **시간 및 통화 형식**, 및 **키보드 또는 입력된 방법**을 차례로 클릭 하 고 **다음**합니다.  
-  
-5.  클릭 **지금 설치**합니다.  
-  
-6.  **제품 키를 입력**, 제품 키를 입력 합니다.  
-  
-7.  읽기는 **사용권 계약**합니다. 동의 하면 선택는 **사용 약관에 동의** 확인란을 선택한 다음 클릭 **다음**합니다.  
-  
-    > [!NOTE]
-    >  하는 경우 사용 약관에 동의를 선택 하지 않으면, 설치 계속 하지 않습니다.  
-  
-8.  **설치 유형을 원하는 수행 하나요? **, 클릭 **사용자 지정: Windows 설치만 (고급)**  
-  
-9. **Windows 설치를 원하는 어디 인가요? **, Windows 운영 체제를 설치 하려면 하드 드라이브를 선택 합니다. 내장 하드 드라이브의 모든를 설치 하기 위해 사용할 수 있는지 확인 합니다.  
+1.  네트워크 케이블을 사용하여 컴퓨터를 네트워크에 연결합니다.  
   
     > [!IMPORTANT]
-    >   Windows Server Essentials로 c: 볼륨을 설치 해야 하 고 볼륨의 크기 60 g B 이상 이어야 합니다. 운영 체제 디스크에 두 가지 파티션을 만드는 하지 비즈니스 데이터를 저장할 c: (시스템 파티션)를 사용 하는 것이 좋습니다.  
+    >  설치 도중에 컴퓨터의 네트워크 연결을 끊지 마세요. 설치가 실패할 수 있습니다.  
+  
+2.  컴퓨터를 켠 다음 DVD 드라이브에 Windows Server Essentials DVD를 삽입 합니다.  
+  
+     무인 설치를 수행하는 경우에는 응답 파일이 포함된 플로피 디스크나 USB 플래시 드라이브와 같은 이동식 미디어를 연결하세요. 응답 파일의 내용에 따라 다음 설치 화면 중 전체나 일부가 표시되지 않을 수 있습니다.  
+  
+3.  컴퓨터를 다시 시작합니다. **CD 또는 DVD에서 부팅하려면 아무 키나 누르세요.** 라는 메시지가 나타나면 아무 키나 누릅니다.  
   
     > [!NOTE]
-    >  하드 드라이브 (예: 직렬 고급 기술 첨부 (SATA) 하드 디스크)에 없는 경우 해당 하드 디스크에 대 한 디바이스 드라이버를 로드 해야 합니다. 제조업체에서 디바이스 드라이버를 획득 하 고 (플로피 디스크 또는 USB 플래시 드라이브와 같은) 이동식 미디어에 저장 합니다. 이동식 미디어를 컴퓨터에 연결 하 고 클릭 한 다음 **드라이버 로드**합니다.  
+    >  컴퓨터가 DVD에서 시작되지 않으면 BIOS 부팅 시퀀스에서 CD-ROM 드라이브가 첫 번째로 나열되어 있는지 확인합니다. BIOS 부팅 시퀀스에 대한 자세한 내용은 컴퓨터 제조업체의 설명 문서를 참조하세요.  
   
-     삭제 하거나 파티션을 만드는 하려는 경우 다음 단계를 참조 하세요.  
+4.  설치할 **언어**를 선택하고 **시간 및 통화 형식** 및 **키보드 또는 입력 메서드**를 선택한 후 **다음**을 클릭합니다.  
   
-    1.  파티션을 삭제 하려면을 파티션을 선택 **드라이브 옵션 (고급)**을 차례로 클릭 하 고 **삭제**합니다. 시스템 파티션 삭제 하면 두 단계 지침을 사용 하 여 새 파티션을 만드는 **b** 또는 단계 **c**합니다.  
+5.  **지금 설치**를 클릭합니다.  
+  
+6.  **제품 키 입력**에서 제품 키를 입력합니다.  
+  
+7.  **사용 조건**을 읽어 봅니다. 조건에 동의하면 **동의함** 확인란을 선택한 후 **다음**을 클릭합니다.  
+  
+    > [!NOTE]
+    >  사용 조건에 동의하지 않는 경우 설치가 계속 진행되지 않습니다.  
+  
+8.  **설치 유형을 시겠습니까?**, 클릭 **사용자 지정: Windows만 설치 (고급)**  
+  
+9. **Windows를 설치할 위치를 지정하세요.** 에서 Windows 운영 체제를 설치할 하드 드라이브를 선택합니다. 모든 내부 하드 드라이브를 설치에 사용할 수 있는지 확인합니다.  
+  
+    > [!IMPORTANT]
+    >   C: 볼륨으로 Windows Server Essentials를 설치 해야 하 고 볼륨 크기가 60GB 이상 이어야 합니다. 운영 체제 디스크를 두 개의 파티션으로 나누고 C:(시스템 파티션)에는 비즈니스 데이터를 저장하지 않는 것이 좋습니다.  
+  
+    > [!NOTE]
+    >  하드 드라이브가 목록에 표시되지 않으면(예: SATA(Serial Advanced Technology Attachment) 하드 디스크) 해당 하드 디스크의 장치 드라이버를 로드해야 합니다. 제조업체에서 장치 드라이버를 구하여 플로피 디스크나 USB 플래시 드라이브와 같은 이동식 미디어에 저장합니다. 이동식 미디어를 컴퓨터에 연결한 후 **드라이버 로드**를 클릭합니다.  
+  
+     파티션을 삭제 및/또는 만들어야 하는 경우 다음 단계를 참조하세요.  
+  
+    1.  파티션을 삭제하려면 파티션을 선택하고 **드라이브 옵션(고급)** 을 클릭한 후 **삭제**를 클릭합니다. 시스템 파티션을 삭제한 후 **b** 단계 또는 **c** 단계의 지침을 사용하여 새 파티션을 만듭니다.  
   
         > [!NOTE]
-        >  클릭 한 후 **드라이브 옵션 (고급)**, 옵션 다시 표시 되지 것입니다. 경우에 드라이브 옵션을 참조 하 여 단계 부분을 건너뜁니다.  
+        >  **드라이브 옵션(고급)** 을 클릭한 후에는 이 옵션이 다시 나타나지 않습니다. 이런 경우에는 단계에서 드라이브 옵션을 참조하는 부분을 건너뜁니다.  
   
-    2.  파티션을 분할 공간에서을 만들려면 하드 디스크 파티션을 클릭 하려는 클릭 **드라이브 옵션 (고급)**, 클릭 **새로**, 한 다음는 **크기** 텍스트 상자를 만들 파티션 크기를 입력 합니다. 예를 들어 120 g b 권장된 파티션 크기를 사용 하는 경우 입력 **122880**을 차례로 클릭 하 고 **적용**합니다. 파티션을 만든 후에 클릭 **다음**합니다. 설치를 계속 하기 전에 파티션 포맷 됩니다.  
+    2.  분할되지 않은 공간에서 파티션을 만들려면 파티션을 분할할 하드 디스크를 클릭한 후 **드라이브 옵션(고급)** 및 **새로 만들기**를 클릭하고 **크기** 텍스트 상자에 만들 파티션 크기를 입력합니다. 예를 들어 권장 파티션 크기인 120GB(기가바이트)를 사용하려면 **122880**을 입력한 후 **적용**을 클릭합니다. 파티션이 만들어지면 **다음**을 클릭합니다. 파티션이 포맷된 후 설치가 계속됩니다.  
   
-    3.  모든 분할된 공간을 사용 하는 파티션에 만들려면 하드 디스크 파티션을 클릭 하려는 클릭 **드라이브 옵션 (고급)**, 클릭 **새로**, 클릭 한 다음 **적용** 기본 파티션 크기를 적용 해야 합니다. 파티션을 만든 후에 클릭 **다음**합니다. 설치를 계속 하기 전에 파티션 포맷 됩니다.  
+    3.  분할되지 않은 공간을 모두 사용하는 파티션을 만들려면 파티션을 만들 하드 디스크를 클릭한 후 **드라이브 옵션(고급)** 및 **새로 만들기**를 클릭하고 **적용**을 클릭하여 기본 파티션 크기를 사용합니다. 파티션이 만들어지면 **다음**을 클릭합니다. 파티션이 포맷된 후 설치가 계속됩니다.  
   
         > [!IMPORTANT]
-        >  이 단계를 완료 한 후 다른 파티션 운영 체제 이동할 수 없습니다.  
+        >  이 단계를 마친 후엔 운영 체제를 다른 파티션으로 이동할 수 없습니다.  
   
- 설치 하는 동안 임시 파일 30 분 정도 걸리며 컴퓨터에 설치 폴더에 복사 됩니다. Windows Server Essentials 운영 체제 설치 되 면 컴퓨터를 다시 시작 합니다. 이제 Windows Server Essentials 운영 체제를 구성 준비가 되었습니다.  
+ 설치하는 동안 컴퓨터의 설치 폴더로 임시 파일이 복사되며 여기에 30분 정도 소요됩니다. Windows Server Essentials 운영 체제를 설치한 후 컴퓨터 다시 시작 합니다. 이제 Windows Server Essentials 운영 체제를 구성할 준비가 되었습니다.  
   
-###  <a name="BKMK_Step2Configure"></a>2 단계: Windows Server Essentials 운영 체제를 구성 합니다.  
+###  <a name="BKMK_Step2Configure"></a> 2 단계: Windows Server Essentials 운영 체제 구성  
   
 > [!IMPORTANT]
->  Windows Server Essentials에는 이전 버전의 Windows Small Business Server에서 마이그레이션하는, 다른 프로세스를 수행 해야 합니다. 마이그레이션 설치에 대 한 정보를 참조 하십시오.  
+>  마이그레이션하려는 경우 이전 버전의 Windows Small Business Server에서 Windows Server Essentials에, 다른 프로세스를 따라야 합니다. 마이그레이션 설치에 대한 자세한 내용은 다음을 참조하세요.  
 >   
->  -   [Windows SBS 2003 마이그레이션](../migrate/Migrate-Windows-Small-Business-Server-2003-to-Windows-Server-Essentials.md)  
-> -   [마이그레이션 SBS 2008 창에서](../migrate/Migrate-Windows-Small-Business-Server-2008-to-Windows-Server-Essentials.md)  
+>  -   [Windows SBS 2003에서 마이그레이션](../migrate/Migrate-Windows-Small-Business-Server-2003-to-Windows-Server-Essentials.md)  
+> -   [Windows SBS 2008에서 마이그레이션](../migrate/Migrate-Windows-Small-Business-Server-2008-to-Windows-Server-Essentials.md)  
   
- 설치가 단계 조직에 대 한 몇 가지 질문에 대답 하 라는 메시지가 표시 됩니다. 이 정보는 운영 체제를 구성 하는 데 사용 합니다.  
+ 이 설치 단계에서 조직에 대한 몇 가지 질문에 답해야 하는 메시지가 표시됩니다. 이러한 정보는 운영 체제를 구성하는 데 사용됩니다.  
   
 > [!IMPORTANT]
->  이 단계를 시작 하기 전에 로컬 네트워크 어댑터에 연결 되었으며 라우터 또는 켜져 스위치를 작동 제대로 있는지 확인 합니다.  
+>  이 단계를 시작하기 전에 켜져 있고 제대로 작동하는 라우터 또는 스위치에 로컬 네트워크 어댑터가 연결되어 있는지 확인합니다.  
   
- **완성 시간:** 약 30 분  
+ **예상 완료 시간:** 약 30 분  
   
-##### <a name="to-configure-the-operating-system"></a>운영 체제의 구성 하려면  
+##### <a name="to-configure-the-operating-system"></a>운영 체제를 구성하려면  
   
-1.  에 **확인 날짜 및 시간 설정을** 페이지, 클릭 **시스템 날짜 및 시간 설정을 변경** 날짜, 시간 및 표준 시간대에 대 한 서버 설정을 선택 합니다. 완료 되 면 클릭 **다음**합니다.  
-  
-    > [!IMPORTANT]
-    >  가상 컴퓨터에서 Windows Server Essentials를 설치 하는 경우 호스트 운영 체제에서 사용 하는 동일한 표준 시간대 설정을 선택 하 고 있는지 확인 합니다. 표준 시간대 설정이 다 서버 설치 성공 하지 않을 수 있습니다.  
-  
-2.  에 **선택 서버 설치 모드** 페이지에서 다음 중 하나를 수행 합니다.  
-  
-    1.  선택 **새로 설치** Windows Server Essentials 서버 소프트웨어를 설치 하는 새로운 설정 합니다.  
-  
-    2.  선택 **서버 마이그레이션** 를 Windows Server Essentials를 설치 하 여이 서버 기존 Windows 도메인에 연결 합니다.  
-  
-3.  에 **개인 설정 하 여 서버** 페이지에서 회사의 이름, 내부 도메인 이름, 서버 이름을 입력 합니다.  
+1.  **날짜 및 시간 설정 확인** 페이지에서 **시스템 날짜 및 시간 설정 변경** 을 클릭하여 서버의 날짜, 시간 및 표준 시간대 설정을 선택합니다. 작업이 완료되면 **다음**을 클릭합니다.  
   
     > [!IMPORTANT]
-    >  서버 이름 네트워크의 고유한 이름을 이어야 합니다. 이 단계를 완료 한 후 서버 이름 또는 내부 도메인 이름 변경할 수 없습니다.  
+    >  가상 머신에서 Windows Server Essentials를 설치 하는 경우 호스트 운영 체제에서 사용 중인 동일한 표준 시간대 설정을 선택 해야 있는지 확인 합니다. 표준 시간대 설정이 다르면 서버가 설치되지 않을 수도 있습니다.  
   
-4.  클릭 **다음**합니다.  
+2.  **서버 설치 모드 선택** 페이지에서 다음 중 하나를 수행합니다.  
   
-5.  에 **관리자 계정 정보를 제공** 페이지에서 새 관리자 계정에 대 한 정보를 입력 합니다.  
+    1.  선택할 **새로 설치** 를 Windows Server Essentials 서버 소프트웨어의 전체 새로 설치를 설정 합니다.  
+  
+    2.  선택할 **서버 마이그레이션** 를 Windows Server Essentials를 설치 하 여이 서버를 기존 Windows 도메인에 가입 합니다.  
+  
+3.  **서버 개인 설정** 페이지에서 조직 이름, 내부 도메인 이름 및 서버 이름을 입력합니다.  
+  
+    > [!IMPORTANT]
+    >  서버 이름은 네트워크에서 고유한 이름이어야 합니다. 이 단계를 마친 후에는 서버 이름 또는 내부 도메인 이름을 변경할 수 없습니다.  
+  
+4.  **다음**을 클릭합니다.  
+  
+5.  **관리자 계정 정보 입력** 페이지에서 새 관리자 계정의 정보를 입력합니다.  
   
     > [!CAUTION]
-    >  관리자 또는 네트워크 관리자에 게 네트워크 관리자 계정을 이름을 지정 하지 않습니다. 이러한 계정 이름은 사용에 대 한 시스템에 의해 예약 되어 있습니다.  
+    >  관리자 또는 네트워크 관리자에 게 네트워크 관리자 계정의 이름을 바꾸지 마십시오. 이 계정 이름은 시스템에서 사용하도록 예약되어 있습니다.  
   
-6.  에 **표준 사용자 계정 정보를 제공** 페이지 새로운 표준 사용자 계정에 대 한 정보를 입력 한 다음 클릭 **다음**합니다.  
+6.  **표준 사용자 계정 정보 입력** 페이지에서 새 표준 사용자 계정의 정보를 입력한 후 **다음**을 클릭합니다.  
   
-7.  에 **서버를 자동으로 최신 상태로 유지** 페이지에서 선택 하 여 서버에 대 한 Windows 업데이트를 받도록 클릭 한 다음 원하는 **다음**합니다.  
+7.  **서버를 자동으로 최신 상태로 유지** 페이지에서 서버에 대한 Windows Update를 받을 방법을 선택한 후 **다음**을 클릭합니다.  
   
-8.  **업데이트 서버를 준비 하 고** 페이지를 표시 하는 최종 설치 프로세스 진행 중입니다. 완료 하는 데 시간이 걸립니다이 및 컴퓨터 몇 번 다시 시작 됩니다.  
+8.  **서버를 업데이트 및 준비하는 중** 페이지에 최종 설치 프로세스 진행 상황이 표시됩니다. 이 단계는 완료되는 데 시간이 걸리며 컴퓨터가 몇 번 다시 시작됩니다.  
   
-9. 마지막 서버 후 다시 시작, **서버 사용할 준비가 되어** 페이지가 나타납니다. 클릭 **닫기**합니다.  
+9. 마지막 서버가 다시 시작된 후 **서버를 사용할 준비가 되었습니다.** 페이지가 나타납니다. **닫기**를 클릭합니다.  
   
-10. 대시보드 타일을 클릭는 **시작** 화면에서 한 후 대시보드에서 완료는 **내 서버 설정** 작업에 **Home** 페이지 합니다. Windows Server Essentials 설치가 완료 된 후에 바로 이러한 작업을 완료 해야 합니다.  
+10. **시작** 화면에서 대시보드 타일을 클릭한 후 대시보드에서 **홈** 페이지의 **서버 설정** 작업을 완료합니다. Windows Server Essentials 설치가 완료 된 후에 즉시 이러한 작업을 완료 해야 합니다.  
   
 > [!NOTE]
->  설치가 완료 되 면 자동으로 로그온 설치 과정에서 추가 하는 새로운 관리자 계정 사용 하 여 서버에 있습니다. 기본 제공 된 관리자 계정 암호 새 관리자 계정으로 동일한 암호를 설정 되 고 기본 관리자 계정 불가능 합니다.  
+>  설치를 마치고 나면 설치 도중에 추가한 관리자 계정을 사용하여 자동으로 서버에 로그온됩니다. 기본 제공 관리자 계정 암호는 새 관리자 계정과 동일한 암호로 설정되어 있으며, 기본 제공 관리자 계정은 사용하지 않도록 설정되어 있습니다.  
   
- (평가 기간 라고도 함)를 제한 된 시간에 대 한 제품 키를 입력 하지 않고 새로 설치한 서버를 사용할 수 있습니다. 평가 기간 후 정품 인증 서버 또는 평가 기간 확장 제품 키를 입력 해야 합니다. 평가 기간 최대 두 번 한 확장할 수 있습니다. 평가 기간에 허용 된 일 최대에 도달 하면 서버를 정품 인증 해야 제품 키를 사용 합니다.  
+ (평가 기간이 라고도 함)는 제한 된 기간에 대 한 제품 키를 입력 하지 않고 새로 설치 된 서버를 사용할 수 있습니다. 평가 기간 후에는 제품 키를 입력하여 서버를 정품 인증하거나 평가 기간을 연장해야 합니다. 평가 기간은 최대 2회 연장할 수 있습니다. 평가 기간으로 허용되는 최대 날짜 수에 도달하면 제품 키를 사용하여 서버를 정품 인증해야 합니다.  
   
 ### <a name="customize-windows-server-essentials"></a>Windows Server Essentials 사용자 지정  
- **Home** Windows Server Essentials 대시보드의 페이지에 연결 **설치** 후 즉시 완료 되도록 해야 하는 작업 서버를 설치 합니다. 이러한 작업을 수행 하 여 서버에 저장 된 정보를 보호 하 고 Windows Server Essentials에서 사용할 수 있는 기능을 활성화할 수 있습니다.  
+ 합니다 **홈** Windows Server Essentials 대시보드 페이지에 연결 **설치** 직후에 완료 해야 하는 작업 서버를 설치 합니다. 이러한 작업을 수행 하면 서버에 저장 된 정보를 보호 하 고 Windows Server Essentials에서 사용할 수 있는 기능을 활성화할 수 있습니다.  
   
- 작업을 수행 하지 않도록 선택 하면 사용자가 네트워크 일부 기능에 대 한 액세스 되지 않았을 수 있습니다. 나중에 이러한 작업을 반환 하 고 Windows Server Essentials 대시보드도 돌아갈 **Home** 페이지 합니다.  
+ 이 작업을 수행하지 않도록 선택하면 사용자는 일부 네트워크 기능에 액세스하지 못할 수 있습니다. Windows Server Essentials 대시보드를 나중에 이러한 작업을 반환 하려면 돌아갑니다 **홈** 페이지입니다.  
   
- 다음 표에 정의 되어 설정 작업 목록에 표시 될 수 있는 항목 합니다.  
+ 다음 표는 설정 작업 목록에 나타날 수 있는 항목을 정의합니다.  
   
-|작업|설명
+|태스크|설명
 |----------|-----------------|  
-|기타 Microsoft 제품에 대 한 업데이트 가져오기|Microsoft 업데이트를 자동으로 Windows Server Essentials 및 Office와 같은 다른 Microsoft 제품에 대 한 업데이트를 가져오는 사용 하려는 경우 지정할 수 있는 도구를 실행 하는 링크를에 액세스 하 여이 작업을 클릭 합니다.  
-|사용자 계정 추가|사용자 계정 추가 대 한 간략 한 정보를 보려면이 작업을 클릭 합니다. 링크를 실행 하는 **사용자 계정 마법사 추가** 제공 됩니다. 자세한 내용은 참조 [사용자 계정을 추가](../manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage1)합니다.  
-|서버 폴더 추가|서버 폴더 추가 대 한 간략 한 정보를 보려면이 작업을 클릭 합니다. 링크를 실행 하는 **추가 폴더 마법사** 제공 됩니다. 서버 폴더를 사용 하는 온라인 도움말 항목에 대 한 링크는도 제공 합니다. 자세한 내용은 참조 [추가 하거나 서버 폴더 이동](../manage/Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_5)합니다. 
-|서버 백업 설정|서버 백업을 사용 하 여 데이터를 보호에 대 한 간략 한 정보를 보려면이 작업을 클릭 합니다. 링크를 실행 하 고 **서버 설정 백업 마법사** 제공 됩니다. 자세한 내용은 참조 [설정 또는 사용자 지정 서버 백업](../manage/Manage-Server-Backup-in-Windows-Server-Essentials.md#BKMK_1)합니다. 
-|어디서 나 액세스를 설정|Windows Server Essentials에서 액세스 어디서 나 기능에 대 한 간략 한 정보를 보려면이 작업을 클릭 합니다. 에 대 한 링크는 **어디서 나 액세스 설정** 페이지가 제공 됩니다. 자세한 내용은 참조 [관리 어디서 나 액세스](../manage/Manage-Anywhere-Access-in-Windows-Server-Essentials.md)합니다. 
-|메일 알림 설정|메일 알림에 대 한 간략 한 정보를 보려면이 작업을 클릭 합니다. 링크를 실행 하는 **알림에 대 한 메일 알림을 설정** 도구가 제공 됩니다. 자세한 내용은 참조 [알림에 대 한 메일 알림을 설정](../manage/Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Email)합니다.  
-|미디어 서버 설정|음악, 동영상 및 이미지 파일 공유 미디어 서버 사용에 대 한 간략 한 정보를 보려면이 작업을 클릭 합니다. 에 대 한 링크는 **미디어 설정** 페이지가 제공 됩니다. 미디어 서버에 대 한 자세한 내용을 보려면 온라인 도움말 항목 프로그램에 대 한 링크는도 제공 합니다. 자세한 내용은 참조 [디지털 미디어 관리](../manage/Manage-Digital-Media-in-Windows-Server-Essentials.md)합니다. 
-|컴퓨터에 연결|네트워크 컴퓨터 서버에 연결 하는 방법에 대 한 간략 한 정보를 보려면이 작업을 클릭 합니다. 자세한 내용은 참조 [서버에 컴퓨터를 연결](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)합니다.
+|다른 Microsoft 제품에 대한 업데이트 가져오기|자동으로 Windows Server Essentials 및 Office와 같은 다른 Microsoft 제품에 대 한 업데이트를 얻으려면 Microsoft 업데이트를 사용 하려는 경우 지정할 수 있는 도구를 실행 하는 링크에 액세스 하려면이 작업을 클릭 합니다.  
+|사용자 계정 추가|사용자 계정 추가에 대한 간략한 정보를 보려면 이 작업을 클릭합니다. **사용자 계정 추가 마법사** 를 실행하는 링크가 제공됩니다. 자세한 내용은 [Add a user account](../manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage1)를 참조하세요.  
+|서버 폴더 추가|서버 폴더 추가에 대한 간략한 정보를 보려면 이 작업을 클릭합니다. **폴더 추가 마법사**를 실행하는 링크가 제공됩니다. 서버 폴더에 대한 온라인 도움말 항목 링크도 제공됩니다. 자세한 내용은 [서버 폴더 추가 또는 이동](../manage/Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_5)(영문)을 참조하세요. 
+|서버 백업 설정|서버 백업을 사용한 데이터 보호에 대해 간략한 정보를 보려면 이 작업을 클릭합니다. **서버 백업 설정 마법사** 를 실행하는 링크가 제공됩니다. 자세한 내용은 [서버 백업 설정 또는 사용자 지정](../manage/Manage-Server-Backup-in-Windows-Server-Essentials.md#BKMK_1)을 참조하세요. 
+|원격 액세스 설정|Windows Server Essentials에서 원격 액세스 기능에 대 한 간략 한 정보를 보려면이 작업을 클릭 합니다. **원격 액세스 설정** 페이지 링크가 제공됩니다. 자세한 내용은 [Manage Anywhere Access](../manage/Manage-Anywhere-Access-in-Windows-Server-Essentials.md)합니다. 
+|전자 메일 경고 알림 설정|메일 경고 알림에 대한 간략한 정보를 보려면 이 작업을 클릭합니다. **경고에 대한 메일 알림 설정** 도구를 실행하는 링크가 제공됩니다. 자세한 내용은 [Set up email notifications for alerts](../manage/Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Email)를 참조하세요.  
+|미디어 서버 설정|미디어 서버를 사용한 음악, 비디오 및 이미지 파일 공유에 대해 간략한 정보를 보려면 이 작업을 클릭합니다. **미디어 설정** 페이지 링크가 제공됩니다. 미디어 설정에 대한 온라인 도움말 항목 링크도 제공됩니다. 자세한 내용은 [디지털 미디어 관리](../manage/Manage-Digital-Media-in-Windows-Server-Essentials.md)합니다. 
+|컴퓨터 연결|네트워크 컴퓨터를 서버에 연결하는 방법에 대해 간략한 정보를 보려면 이 작업을 클릭합니다. 자세한 내용은 [서버에 컴퓨터 연결](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)을 참조하세요.
   
-## <a name="see-also"></a>참조 하십시오  
+## <a name="see-also"></a>참조  
   
 -   [Windows Server Essentials 설치](Install-Windows-Server-Essentials.md)
 

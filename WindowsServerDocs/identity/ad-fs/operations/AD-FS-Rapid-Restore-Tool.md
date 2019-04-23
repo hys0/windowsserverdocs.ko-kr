@@ -1,50 +1,48 @@
 ---
 ms.assetid: 4deff06a-d0ef-4e5a-9701-5911ba667201
-title: "광고 FS 신속한 복원 도구"
-description: 
+title: AD FS 신속 복원 도구
+description: ''
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 02/20/2018
+ms.date: 09/19/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: cd1cc8dab07288ba73c507bc551f089bb79502bc
-ms.sourcegitcommit: 36d7b1dfd7da8e9f303d007a628e76149de000f2
-ms.translationtype: MT
+ms.openlocfilehash: 6fb023529ac8857f7c2eb35586be497f0c809a51
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59874174"
 ---
-# <a name="ad-fs-rapid-restore-tool"></a>광고 FS 신속한 복원 도구
+# <a name="ad-fs-rapid-restore-tool"></a>AD FS 신속 복원 도구
 
->적용 대상: Windows Server 2016, Windows Server 2012 r 2
+>적용 대상: Windows Server 2016, Windows Server 2012 R2
 
 ## <a name="overview"></a>개요
-오늘 ADFS ADFS 농장 설정 하 여 매우 사용할 수 있게 됩니다. 여러 ADFS 서버와 쓰지 여전히 몇 가지를 않고도 인프라 균형 네트워크 로드 않아도 보증 서비스를 복원할 수 빠르게에 문제가 있는 경우, 일부 조직 단일 서버 ADFS 배포 하는 방법을 싶습니다.
-새 광고 FS 신속한 복구 도구 전체 백업 및 복원 운영 체제 또는 시스템 상태를 않고도 ADFS 데이터를 복원 하는 방법을 제공 합니다. Azure 또는 온-프레미스 위치 ADFS 구성 내보낼 새로운 도구를 사용할 수 있습니다.  그런 다음 다시 만들거나 ADFS 환경 복제 내보낸된 데이터 ADFS 새로 설치를 적용할 수 있습니다. 
+오늘날 AD FS는 항상 사용 가능 하 여 AD FS 팜을 설정 하 여 합니다. 일부 조직에서는 단일 서버 AD FS 배포 하는 방법을 싶습니다, 그리고 여러 AD FS 서버 및 네트워크 부하 않고 일부 인프라를 분산 하지 않아도 서비스 보증 경우 복원할 수 신속 하 게 문제가 있습니다.
+새 AD FS 신속 하 게 복원 도구를 전체 백업 및 복원의 운영 체제 또는 시스템 상태를 요구 하지 않고 AD FS 데이터를 복원 하는 방법을 제공 합니다. Azure 또는 온-프레미스 위치에 AD FS 구성을 내보내려면 새로운 도구를 사용할 수 있습니다.  그런 다음 다시 만들거나 AD FS 환경을 복제 내보낸된 데이터 새로 AD FS 설치를 적용할 수 있습니다. 
 
 ## <a name="scenarios"></a>시나리오
-다음과 같은 경우에는 광고 FS 신속한 복구 도구를 사용할 수 있습니다.
+다음과 같은 시나리오에서 AD FS 신속 하 게 복원 도구를 사용할 수 있습니다.
 
-1. 신속 하 게 문제 후 ADFS 기능을 복원
-    - 온라인 ADFS 서버 대신 신속 하 게 배포 될 수 있는 Adfs의 콜드 대기 설치를 만드는 도구를 사용 하 여
-2. 배포 동일한 테스트 및 생산 환경
-    - 신속 하 게 만들 프로덕션 Adfs의 정확 하 게 복사본 테스트 환경에서 하거나 유효성을 검사 테스트 구성 프로덕션 신속 하 게 배포 하는 도구를 사용 하 여
+1. 문제가 후 AD FS 기능을 신속 하 게 복원
+    - 온라인 AD FS 서버 대신 신속 하 게 배포할 수 있는 AD FS의 콜드 대기 설치를 만드는 도구를 사용 합니다.
+2. 동일한 테스트 및 프로덕션 환경에 배포
+    - 신속 하 게 테스트 환경에서 프로덕션 AD FS의 정확한 복사본을 만들려면 또는 신속 하 게 유효성을 검사 하는 테스트 구성을 프로덕션에 배포 하는 도구를 사용 하 여
 
-## <a name="what-is-backed-up"></a>항목 백업
-이 도구는 다음과 같은 ADFS 구성을 백업합니다
+## <a name="what-is-backed-up"></a>백업 항목
+도구는 다음과 같은 AD FS 구성 백업
     
-- 광고 FS 구성 데이터베이스 (SQL 또는 WID)
+- AD FS 구성 데이터베이스 (SQL 또는 WID)
 - 구성 파일 (ADFS 폴더에 있음)
-- 토큰 서명 하 고 암호를 해독 인증서 및 (출처: 된 Active Directory DKM 컨테이너) 개인 키를 자동으로 생성
-- 및 SSL 인증서 외부 등록 인증서 (토큰 서명, 토큰 암호 해독 한 서비스 통신)와 개인 해당 키 (참고: 개인 키 내보낼 수 있어야 하며 사용자 스크립트를 실행할에 액세스할 수 있는 권한이 있어야 합니다.)
-- 설치 되어 있는 신뢰 하는 사용자 지정 인증 공급자, 특성 저장소 및 로컬 클레임 공급자 목록 합니다.
+- 토큰 서명 및 인증서와 개인 키 (에서 Active Directory DKM 컨테이너)를 암호 해독을 자동으로 생성
+- SSL 인증서와 외부에서 등록 한 인증서 (토큰 서명, 토큰 암호 해독 및 서비스 통신)와 해당 개인 키 (참고: 개인 키를 내보낼 수 있어야 하 고 스크립트를 실행 하는 사용자에 대 한 액세스 권한이 있어야 합니다.)
+- 사용자 지정 인증 공급자, 특성 저장소 및 로컬 클레임 공급자의 목록이 설치 되어 있는 것을 신뢰 합니다.
 
 ## <a name="how-to-use-the-tool"></a>이 도구를 사용 하는 방법
-먼저 [다운로드](https://go.microsoft.com/fwlink/?LinkId=825646) MSI ADFS 서버에 설치 하 고 있습니다.  
-
->[!NOTE]
->광고 FS 신속한 복원 도구 호환 FIPS 않습니다.
+첫째, [다운로드](https://go.microsoft.com/fwlink/?LinkId=825646) 및 AD FS 서버에 MSI를 설치 합니다.  
 
 PowerShell 프롬프트에서 다음 명령을 실행 합니다.
 
@@ -53,165 +51,205 @@ import-module 'C:\Program Files (x86)\ADFS Rapid Recreation Tool\ADFSRapidRecrea
 ```
 
 >[!NOTE] 
->Windows 통합 데이터베이스 (WID)를 사용 하는 경우이 도구 주 ADFS 서버의 실행 해야 합니다.  사용할 수 있는 `Get-SyncProperties` 주 서버 되어 여부 서버에 연결 되어 있는지 여부를 PowerShell cmdlet 합니다.
+>통합 데이터베이스 WID (Windows)를 사용 하는 경우이 도구는 기본 AD FS 서버에서 실행 되도록 해야 합니다.  사용할 수는 `Get-AdfsSyncProperties` 주 서버 인지 여부는 서버에 있는 확인 하려면 PowerShell cmdlet.
 
 ### <a name="system-requirements"></a>시스템 요구 사항
 
-- 이 도구 ADFS 나중에 및 Windows Server 2012 r 2에서에 대해 작동합니다. 
-- 필요한.NET framework 4.0 적어도입니다. 
-- 백업으로 동일한 버전의 ADFS 서버에서 복원을 수행 해야 하 고 ADFS 서비스 계정으로 동일한 Active Directory 계정을 사용 하는 합니다.
+- 이 도구는 Windows Server 2012 R2 이상 AD FS에 대 한 작동합니다. 
+- 필요한.NET framework에는 적어도 4.0입니다. 
+- 백업으로 동일한 버전의 AD FS 서버에서 실행 되어야 하는 복원 하 고 AD FS 서비스 계정으로 동일한 Active Directory 계정을 사용 하 합니다.
 
-## <a name="create-a-backup"></a>백업
-백업을 만드는, 백업 ADFS cmdlet을 사용 합니다. 이 cmdlet ADFS 구성, 데이터베이스, SSL 인증서 등을 백업합니다. 
+## <a name="create-a-backup"></a>백업 만들기
+백업을 만들 백업 ADFS cmdlet을 사용 합니다. 이 cmdlet은 AD FS 구성, 데이터베이스, SSL 인증서 등을 백업합니다. 
 
-사용자는 최소 로컬 관리자가이 cmdlet 실행 해야 합니다. Active Directory DKM 컨테이너 (광고 기본 FS 구성에서 필요)을 백업 하는 사용자도 도메인 관리자 여야 합니다 하거나 ADFS 서비스 계정 자격 증명 전달할 필요 합니다.
+사용자가이 cmdlet을 실행 하려면 최소한 로컬 관리자 여야 합니다. (기본 AD FS 구성에 필수) Active Directory DKM 컨테이너를 백업 하기 위해 사용자가 도메인 관리자 여야, AD FS 서비스 계정 자격 증명을 전달 해야 하는 경우 또는 DKM 컨테이너에 대 한 액세스 권한이 있습니다.  사용자는 컨테이너; 권한을 가지 거 나 도메인 관리자 여야 합니다 gMSA 계정을 사용 하는 경우 gMSA 자격 증명을 제공할 수 없습니다. 
 
-백업은 "adfsBackup_ID_Date 시간" 패턴에 따라 이름이 지정 됩니다. 버전 번호, 날짜 및 시간 백업을 수행한 포함 됩니다.
-다음 형식을 cmdlet 다음과 같습니다.
+백업 "adfsBackup_ID_Date 시간" 패턴에 따라 이름이 지정 됩니다. 버전 번호, 날짜 및 시간에 백업이 수행 된 포함 됩니다.
+Cmdlet은 다음 매개 변수를 사용 합니다.
     
-매개 설정
+매개 변수 집합
 
-![광고 FS 신속한 복원 도구](media/AD-FS-Rapid-Restore-Tool/parameter1.png)
+![AD FS 신속 복원 도구](media/AD-FS-Rapid-Restore-Tool/parameter1.png)
 
-### <a name="detailed-description"></a>자세한 내용
+### <a name="detailed-description"></a>자세한 설명
 
-- **BackupDKM** -기본 구성 (자동으로 생성 된 토큰 서명 인증서의 암호를 해독 및) ADFS 키가 포함 된 Active Directory DKM 컨테이너 백업 합니다. 이 광고 컨테이너 하 고 모든 하위 내보낼 광고 도구 'ldifde' 사용 합니다.
+- **BackupDKM** -기본 구성 (자동으로 생성 된 토큰 서명 및 인증서를 암호 해독)에서 AD FS 키를 포함 하는 Active Directory DKM 컨테이너를 백업 합니다. 이 AD 컨테이너 및 모든 해당 하위 트리를 내보내려면 'ldifde' 하는 AD 도구를 사용 합니다.
 
-- -**StorageType &lt;문자열&gt; ** -저장소를 사용 하 여 사용자가 입력 합니다. "파일 시스템" 사용자가 폴더 로컬로 또는 네트워크 "Azure" 나타냅니다 백업을 수행할 때 Azure 스토리지 컨테이너에 저장 하는 사용자가, 백업 위치 파일 시스템을 선택 또는 클라우드 저장소를 나타냅니다. 사용할 Azure에 대 한 cmdlet에 Azure 저장소 자격 증명을 전달 합니다. 계정 이름 및 키 저장소 자격 증명 포함 되어 있습니다. 이외에 컨테이너 이름에 전달 합니다. 컨테이너 없으면 백업 하는 동안 만들어집니다. 사용 하려면 파일 시스템, 저장 경로 제공 해야 합니다. 디렉터리에 있는 새 디렉터리 각 백업에 대해 생성 됩니다. 각 디렉터리 만든 백업된 파일이 포함 됩니다. 
+- -**StorageType &lt;문자열&gt;**  -사용자가 사용 하려는 저장소 유형입니다. 사용자가 로컬로 "Azure" 나타냅니다 백업을 수행할 때 Azure 저장소 컨테이너에 저장 하는 사용자가 파일 시스템 백업 위치를 선택 하는 네트워크 또는 폴더에 저장 하는 "FileSystem" 나타냅니다는 클라우드입니다. 사용할 Azure에 대 한 Azure 저장소 자격 증명을 cmdlet으로 전달 되어야 합니다. 저장소 자격 증명의 계정 이름 및 키를 포함 합니다. 또한이 컨테이너 이름에 전달 합니다. 컨테이너가 존재 하지 않으면 백업 하는 동안 만들어집니다. 사용할 파일 시스템에 대 한 저장소 경로 제공 합니다. 해당 디렉터리에 각 백업에 대해 새 디렉터리가 생성 됩니다. 만든 각 디렉터리에는 백업된 파일이 포함 됩니다. 
 
-- **EncryptionPassword &lt;문자열&gt; ** -암호를 저장 하기 전에 백업된 된 모든 파일을 암호화 하는 데 사용할으로 이동
+- **EncryptionPassword &lt;문자열&gt;** -백업된 된 모든 파일을 저장 하기 전에 암호화 하는 데 사용 될 것 이라고 암호
 
-- **AzureConnectionCredentials &lt;pscredential&gt; ** -계정 이름이 및 Azure 저장소 계정에 대 한 키
+- **AzureConnectionCredentials &lt;pscredential&gt;** -계정 이름 및 Azure 저장소 계정에 대 한 키
 
-- **AzureStorageContainer &lt;문자열&gt; ** -Azure에서 백업의 저장할 저장소 컨테이너
+- **AzureStorageContainer &lt;문자열&gt;** -백업이 Azure에 저장 될 저장소 컨테이너
 
-- **StoragePath &lt;문자열&gt; ** -위치는 백업에 저장
+- **StoragePath &lt;문자열&gt;** -위치에 백업을 저장 됩니다
 
-- **ServiceAccountCredential &lt;pscredential&gt; ** -현재 실행 중인 ADFS 서비스에 대 한 사용 되는 서비스 계정을 지정 합니다. 이 매개 사용자는 DKM 백업 하려는 경우에 필요 고 도메인 관리자
+- **ServiceAccountCredential &lt;pscredential&gt;**  -현재 실행 되는 AD FS 서비스에 사용 되는 서비스 계정을 지정 합니다. 이 매개 변수는 사용자는 DKM을 백업 하려는 경우에 필요 및 도메인 관리자가 아닌 또는 컨테이너의 내용에 액세스할 수 없습니다. 
 
-- **BackupComment &lt;문자열&gt; ** -유사한 검사점 이름 지정 Hyper-v의 개념을 복원 하는 동안 표시 되는 백업에 대 한 정보 문자열 합니다. 기본값은 없으면
+- **BackupComment &lt;string&gt;** -Hyper-v가 검사점 이름을 지정 하는 개념과 비슷합니다 복원 되는 동안 표시 되는 백업에 대 한 정보는 문자열입니다. 기본값은 빈 문자열
 
  
 ## <a name="backup-examples"></a>백업 예제
-광고 FS 신속한 복구 도구를 사용 하 여 백업 예는 다음과 같습니다.
+AD FS 신속 복원 도구를 사용 하는 백업 예는 다음과 같습니다.
 
-### <a name="backup-the-ad-fs-configuration-with-the-dkm-to-the-file-system-while-running-as-the-domain-admin"></a>ADFS 구성 된 파일 시스템 도메인 관리자 권한으로 실행 하면서 DKM 백업
+### <a name="backup-the-ad-fs-configuration-with-the-dkm-to-the-file-system-and-has-access-to-the-dkm-container-contents-either-domain-admin-or-delegated"></a>파일 시스템에 DKM 사용 하 여의 AD FS 구성 백업 및 DKM 컨테이너 내용에 대 한 액세스 권한이 (두 도메인 관리자 또는 위임 된)
 
 ```powershell
 Backup-ADFS -StorageType "FileSystem" -StoragePath "C:\Users\administrator\testExport\" -EncryptionPassword "password" -BackupComment "Clean Install of ADFS (FS)" -BackupDKM
 ```
  
-### <a name="backup-the-ad-fs-configuration-with-the-dkm-to-the-file-system-with-the-service-account-credential-running-as-local-admin"></a>로컬 관리자 실행 서비스 계정 자격 증명을 사용 하 여 파일 시스템을 DKM와 백업 광고 FS 구성
+### <a name="backup-the-ad-fs-configuration-with-the-dkm-to-the-file-system-with-the-service-account-credential-running-as-local-admin"></a>로컬 관리자로 실행 중인 서비스 계정 자격 증명을 사용 하 여 파일 시스템에 DKM 사용 하 여 백업 된 AD FS 구성
 
 ```powershell
 Backup-ADFS -StorageType "FileSystem" -StoragePath "C:\Users\administrator\testExport\" -EncryptionPassword "password" -BackupComment "Clean Install of ADFS (FS)" -BackupDKM -ServiceAccountCredential $cred
 ```
 
-### <a name="backup-the-ad-fs-configuration-without-the-dkm-to-the-azure-storage-container"></a>Azure Storage 컨테이너 DKM 없이 ADFS 구성을 백업 합니다.
+### <a name="backup-the-ad-fs-configuration-without-the-dkm-to-the-azure-storage-container"></a>Azure Storage 컨테이너에 DKM 없이 ADFS 구성을 백업 합니다.
 
 ```powershell
 Backup-ADFS -StorageType "Azure" -AzureConnectionCredentials $cred -AzureStorageContainer "adfsbackups"  -EncryptionPassword "password" -BackupComment "Clean Install of ADFS"
 ```
 
-### <a name="backup-the-ad-fs-configuration-without-the-dkm-to-the-file-system"></a>백업 없이 파일 시스템으로 DKM ADFS 구성
+### <a name="backup-the-ad-fs-configuration-without-the-dkm-to-the-file-system"></a>파일 시스템에 DKM 없이 ADFS 구성을 백업 합니다.
 
 ```powershell   
 Backup-ADFS -StorageType "FileSystem" -StoragePath "C:\Users\administrator\testExport\" -EncryptionPassword "password" -BackupComment "Clean Install of ADFS (FS)"
 ```
 
 ## <a name="restore-from-backup"></a>백업에서 복원
-백업 ADFS ADFS 새로 설치에 사용 하 여 만든 구성을 적용 하려면 복원 ADFS cmdlet을 사용 합니다.
+새 AD FS 설치 백업 ADFS를 사용 하 여 만든 구성 적용 복원 ADFS cmdlet을 사용 합니다.
 
-이 cmdlet 만들어 cmdlet 사용 하 여 새 ADFS 농장 `Install-AdfsFarm` ADFS 구성, 데이터베이스, 인증서 등을 복원 합니다. ADFS 역할 서버에 설치 되어 있지 cmdlet 설치 됩니다.  Cmdlet에 대 한 기존 백업 복원 위치 확인 하 고 찍은 날짜/시간 및 모든 백업 설명을 사용자는 백업에 연결 될 수 있습니다에 따라에 대해 적절 한 백업을 선택 하 라는 메시지. 다른 federation 서비스 이름 사용 하 여 여러 ADFS 구성을 인 다음 사용자가 선택 하 라는 메시지가 처음 적절 한 ADFS 구성 합니다.
-사용자는이 cmdlet 실행 하려면 관리자 로컬 및 도메인 해야 합니다.
+이 cmdlet은 cmdlet을 사용 하 여 새 AD FS 팜을 만듭니다 `Install-AdfsFarm` 되 고 AD FS 구성, 데이터베이스, 인증서 등을 복원 합니다.  AD FS 역할 서버에 설치 되지 않은, 경우 cmdlet를 설치 합니다.  Cmdlet는 기존 백업 복원 위치를 확인 하 고는 적절 한 백업을 수행 된 날짜/시간 및 백업 주석을 백업에 사용자 연결 수에 따라 선택 하 라는 메시지. 다른 페더레이션 서비스 이름으로 여러 AD FS 구성의 경우 다음 사용자가 선택 하 라는 메시지가 먼저 적절 한 AD FS 구성 합니다.
+사용자가이 cmdlet을 실행 하려면 로컬 및 도메인 관리자 여야 합니다.
 
 
 >[!NOTE] 
->광고 FS 신속한 Recovery Tool을 사용 하기 전에 서버 백업을 복원 하기 전에 도메인에 가입 되어 있는지 확인 합니다. 
+>AD FS 신속한 복구 도구를 사용 하기 전에 서버 백업을 복원 하기 전에 도메인에 가입 되어 있는지 확인 합니다. 
 
-다음 형식을 cmdlet 다음과 같습니다. 
+Cmdlet은 다음 매개 변수를 사용 합니다. 
 
-![광고 FS 신속한 복원 도구](media/AD-FS-Rapid-Restore-Tool/parameter2.png)
+![AD FS 신속 복원 도구](media/AD-FS-Rapid-Restore-Tool/parameter2.png)
 
-### <a name="detailed-description"></a>자세한 내용
+### <a name="detailed-description"></a>자세한 설명
 
-- **StorageType &lt;문자열&gt; ** -저장소를 사용 하 여 사용자가 입력 합니다.
- 사용자가 로컬 폴더에 저장 하려는 또는 네트워크 "Azure" 나타냅니다 Azure 스토리지 컨테이너에 저장 하는 사용자가 원하는. "파일 시스템" 나타냅니다.
+- **StorageType &lt;문자열&gt;** -사용자가 사용 하려는 저장소 유형입니다.
+ 사용자가 로컬 폴더에 저장 하려는 또는 네트워크의 "Azure" 이면 사용자가 Azure 저장소 컨테이너에 저장 하려면 "FileSystem" 나타냅니다.
 
-- **DecryptionPassword &lt;문자열&gt; ** -백업된 된 모든 파일을 암호화 하는 데 사용 된 암호 
+- **DecryptionPassword &lt;문자열&gt;** -백업된 된 모든 파일 암호화에 사용 된 암호 
 
-- **AzureConnectionCredentials &lt;pscredential&gt; ** -계정 이름이 및 Azure 저장소 계정에 대 한 키
+- **AzureConnectionCredentials &lt;pscredential&gt;** -계정 이름 및 Azure 저장소 계정에 대 한 키
 
-- **AzureStorageContainer &lt;문자열&gt; ** -Azure에서 백업의 저장할 저장소 컨테이너
+- **AzureStorageContainer &lt;문자열&gt;** -백업이 Azure에 저장 될 저장소 컨테이너
 
-- **StoragePath &lt;문자열&gt; ** -위치는 백업에 저장
+- **StoragePath &lt;문자열&gt;** -위치에 백업을 저장 됩니다
 
-- **ADFSName &lt; 문자열 &gt; ** -federation 백업 및 복원로 이동 하는 이름입니다. 이 제공 되지 않는 경우 하나만 federation 서비스 이름 다음 있는 사용 됩니다. 있는 경우 둘 이상의 federation 서비스는 위치를 백업 후 사용자 백업 Federation Services 중 하나를 선택 하 라는 메시지가 표시 됩니다.
+- **ADFSName &lt; 문자열 &gt;** -백업 및 복원 하려고 하는 페더레이션의 이름입니다. 이 제공 되지 않았고는 하나의 페더레이션 서비스 이름 다음에 사용 됩니다. 있는 경우에 둘 이상의 페더레이션 서비스 위치에 백업 후 사용자는 페더레이션 서비스 백업 중 하나를 선택 하 라는 메시지가 표시 됩니다.
 
-- **ServiceAccountCredential &lt; pscredential &gt; ** -새 ADFS 서비스 복원 되 고에 사용할 수 있는 서비스 계정을 지정 
+- **ServiceAccountCredential &lt; pscredential &gt;**  -복원 되 고 새 AD FS 서비스에 사용할 서비스 계정 지정 
 
-- **GroupServiceAccountIdentifier &lt;문자열&gt; ** -새 ADFS 서비스 복원를 사용 하 여 사용자가 The GMSA 합니다. 기본적으로 둘 다이 제공 된 백업한 다음을 계정 이름을 사용 됩니다 GMSA, 다른 사용자가 서비스 계정에 추가 하 라는 메시지가 않은 경우
+- **GroupServiceAccountIdentifier &lt;문자열&gt;**  -The GMSA 하면 사용자가 복원 되 고 새 AD FS 서비스에 대 한 사용 합니다. 기본적으로, 둘 중 아무것도 제공 다음 백업를 계정 이름이 사용 됩니다 GMSA를 다른 서비스 계정에 넣을 묻는 것
 
-- **DBConnectionString &lt;문자열&gt; ** -해야 통과 SQL 연결 문자열 또는 형식에 WID WID.에 대 한 다음 다른 DB 복원이 사용 하 여 사용자가 원하는 경우
+- **DBConnectionString &lt;문자열&gt;** -은 전달 해야 SQL 연결 문자열 또는 형식 WID WID.에 대 한 다음 다른 데이터베이스에 복원에 사용 하 여 사용자가 원하는 경우
 
-- **힘 &lt;bool&gt; ** -백업을 수 있다고 표시 되 면 도구가 포함 될 수 있는 프롬프트를 건너뛰는
+- **Force &lt;bool&gt;** -도구는 백업을 선택 하 고 나면 가질 수 있는 프롬프트를 건너뛰고
 
-- **RestoreDKM &lt;bool&gt; ** -DKM 컨테이너 광고를 복원, 새로운 광고를 설정 하 고 있는 DKM 처음 백업 된 합니다.
+- **RestoreDKM &lt;bool&gt;** -복원 DKM 컨테이너 AD로 새 광고를 하려는 경우 설정 해야 하 고는 DKM 처음 백업 합니다.
 
-## <a name="restore-examples"></a>예를 복원
+## <a name="restore-examples"></a>Restore 예
 
-### <a name="restore-the-ad-fs-configuration-without-the-dkm-from-the-azure-storage-container"></a>ADFS 구성에서 DKM 없이 Azure Storage 컨테이너에서 복원
+### <a name="restore-the-ad-fs-configuration-without-the-dkm-from-the-azure-storage-container"></a>Azure 저장소 컨테이너에서 DKM 없이 ADFS 구성을 복원합니다
 
 ```powershell
 Restore-ADFS -StorageType "Azure" -AzureConnectionCredential $cred -DecryptionPassword "password" -AzureStorageContainer "adfsbackups"
 ```
 
-### <a name="restore-the-ad-fs-configuration-without-the-dkm-from-the-file-system"></a>ADFS 구성에서 DKM 하지 않고 파일 시스템에서 복원
+### <a name="restore-the-ad-fs-configuration-without-the-dkm-from-the-file-system"></a>파일 시스템에서 DKM 없이 ADFS 구성을 복원합니다
  
 ```powershell
 Restore-ADFS -StorageType "FileSystem" -StoragePath "C:\uSERS\administrator\testExport\" -DecryptionPassword "password"
 ```
 
-### <a name="restore-the-ad-fs-configuration-with-the-dkm-to-the-file-system"></a>ADFS 구성에서 DKM와 파일 시스템 복원 
+### <a name="restore-the-ad-fs-configuration-with-the-dkm-to-the-file-system"></a>파일 시스템에 DKM 사용 하 여 ADFS 구성 복원 
  
 ```powershell
 Restore-ADFS -StorageType "FileSystem" -StoragePath "C:\uSERS\administrator\testExport\" -DecryptionPassword "password" -RestoreDKM
 ```
 
-### <a name="restore-the-ad-fs-configuration-to-wid"></a>AD FS 구성을 WID 복원
+### <a name="restore-the-ad-fs-configuration-to-wid"></a>WID를 AD FS 구성 복원
 
 ```powershell
 Restore-ADFS -StorageType "FileSystem" -StoragePath "C:\uSERS\administrator\testExport\" -DecryptionPassword "password" -DBConnectionString "WID"
 ``` 
 
-### <a name="restore-the-ad-fs-configuration-to-sql"></a>AD FS 구성을 SQL 복원
+### <a name="restore-the-ad-fs-configuration-to-sql"></a>SQL의 AD FS 구성 복원
 
 ```powershell
 Restore-ADFS -StorageType "FileSystem" -StoragePath "C:\uSERS\administrator\testExport\" -DecryptionPassword "password" -DBConnectionString "Data Source=TESTMACHINE\SQLEXPRESS; Integrated Security=True"
 ```
 
-### <a name="restores-the-ad-fs-configuration-with-the-specified-gmsa"></a>지정 된 GMSA와 AD FS 구성을 복원합니다
+### <a name="restores-the-ad-fs-configuration-with-the-specified-gmsa"></a>지정 된 GMSA 사용 하 여 AD FS 구성 복원
 
 ```powershell
 Restore-ADFS -StorageType "FileSystem" -StoragePath "C:\uSERS\administrator\testExport\" -DecryptionPassword "password" -GroupServiceAccountIdentifier "mangupd1\adfsgmsa$"
 ```
-### <a name="restore-the-ad-fs-configuration-with-the-specified-service-account-creds"></a>지정 된 서비스 계정 자격 증명으로 AD FS 구성을 복원합니다
+### <a name="restore-the-ad-fs-configuration-with-the-specified-service-account-creds"></a>지정 된 서비스 계정 자격 증명을 사용 하 여 AD FS 구성을 복원합니다
 
 ```powershell
 Restore-ADFS -StorageType "FileSystem" -StoragePath "C:\uSERS\administrator\testExport\" -DecryptionPassword "password" -ServiceAccountCredential $cred
 ```
 
 ## <a name="encryption-information"></a>암호화 정보
-클라우드에 밀거나 파일 시스템에 저장 하기 전에 모든 백업 데이터가 암호화 됩니다.  
+모든 백업 데이터는 클라우드로 푸시하 또는 파일 시스템에 저장 하기 전에 암호화 됩니다.  
 
-백업의 일부로 생성 되는 문서 aes-256 사용 암호화 됩니다. 이 도구에 전달 암호 Rfc2898DeriveBytes 클래스 사용 하 여 새 암호를 생성 하는으로 사용 됩니다. 
+백업의 일부로 생성 하는 각 문서는 S-256을 사용 하 여 암호화 됩니다. 이 도구에 전달 된 암호 Rfc2898DeriveBytes 클래스를 사용 하 여 새 암호를 생성 하는 전달 구를으로 사용 됩니다. 
 
-RngCryptoServiceProvider는 AES 및 Rfc2898DeriveBytes 클래스 사용 되는 소금 생성 하는 데 사용 됩니다. 
+RngCryptoServiceProvider는 AES 및 Rfc2898DeriveBytes 클래스에서 사용 하는 솔트를 생성 하는 데 사용 됩니다. 
 
 ## <a name="log-files"></a>로그 파일
-백업 및 복원을 수행 때마다 로그 파일이 만들어집니다. 이러한 다음 위치에서 찾을 수 있습니다.
+백업 또는 복원을 수행 될 때마다 로그 파일이 생성 됩니다. 다음 위치에서 찾을 수 있습니다.
 
 - **%localappdata%\ADFSRapidRecreationTool**
 
 >[!NOTE]
-> 추가 인증 공급자 개요 포함 된 PostRestore_Instructions 파일을 만들 수 있습니다 복원을 수행, 특성 저장 하 고 로컬 클레임 공급자 신뢰 하는 ADFS 서비스를 시작 하기 전에 수동으로 설치할 수 때 합니다.
+> 특성 저장소 추가 인증 공급자의 개요를 포함 하는 PostRestore_Instructions 파일을 만들 수 있습니다 복원을 수행할 시간과 로컬 클레임 공급자 트러스트를 AD FS 서비스를 시작 하기 전에 수동으로 설치 해야 합니다.
+
+## <a name="version-release-history"></a>버전 릴리스 기록
+
+### <a name="version-10750"></a>버전: 1.0.75.0
+릴리스: 2018년 8월
+
+**수정 된 문제:**
+* -BackupDKM 스위치를 사용 하는 경우 백업 ADFS를 업데이트 합니다.  이 도구는 현재 컨텍스트 DKM 컨테이너에 액세스할 수 있는지 결정 됩니다.  그렇다면 도메인 관리자 권한 또는 서비스 계정 자격 증명 필요 하지 않습니다.  이 자동화 된 백업을 자격 증명을 제공 하는 명시적으로 또는 도메인 관리자 계정으로 실행 하지 않고 발생할 수 있습니다.
+
+### <a name="version-10730"></a>버전: 1.0.73.0
+릴리스: 2018년 8월
+
+**수정 된 문제:**
+* 암호화 알고리즘을 응용 프로그램 FIPS와 호환 되도록 업데이트
+    
+    >[!NOTE]
+    > 오래 된 백업은 FIPS 준수에 따라 암호화 알고리즘의 변경으로 인해 새 버전과 작동 하지 않습니다.
+    
+* 병합 복제를 사용 하는 SQL 클러스터에 대 한 지원 추가
+
+### <a name="version-10720"></a>버전: 1.0.72.0
+릴리스: 2018 년 7 월
+
+**수정 된 문제:**
+
+   - 버그 수정: 고정 합니다. 전체 업그레이드를 지원 하기 위해 MSI 설치 관리자 
+
+### <a name="10180"></a>1.0.18.0
+릴리스: 2018 년 7 월
+
+**수정 된 문제:**
+
+   - 버그 수정: 서비스 계정 암호에 특수 문자를 포함 하는 처리 (즉, '&')
+   - 버그 수정: Microsoft.IdentityServer.Servicehost.exe.config 다른 프로세스에서 사용 되는 복원 실패
+
+
+### <a name="1000"></a>1.0.0.0
+릴리스 날짜: 2016년 10월
+
+AD FS 신속 복원 도구의 초기 릴리스

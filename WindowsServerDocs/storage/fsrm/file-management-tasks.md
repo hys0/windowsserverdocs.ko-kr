@@ -1,6 +1,6 @@
 ---
-title: "파일 관리 작업"
-description: "이 문서에서는 파일 관리 작업을 자동화하는 과정을 설명합니다."
+title: 파일 관리 작업
+description: 이 문서에서는 파일 관리 작업을 자동화하는 과정을 설명합니다.
 ms.date: 7/7/2017
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -9,18 +9,19 @@ author: JasonGerend
 manager: brianlic
 ms.author: jgerend
 ms.openlocfilehash: e83d0b79117144d42a0aff748f482f3c181cb300
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59874054"
 ---
 # <a name="file-management-tasks"></a>파일 관리 작업
 
-> 적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> 적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 파일 관리 작업은 서버에서 파일의 하위 집합을 찾아 간단한 명령을 적용하는 과정을 자동화합니다. 이러한 작업은 반복 비용을 절감하기 위해 정기적으로 실행하도록 예약할 수 있습니다. 파일 관리 작업으로 처리되는 파일은 다음 중 어떤 속성으로도 정의할 수 있습니다.
 
--   위치
+-   Location
 -   분류 속성
 -   생성 시간
 -   수정 시간
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/17/2017
 > 개별 파일 관리 작업은 독립 일정으로 실행됩니다.
 
 <br />
-이 섹션에는 다음 항목이 포함됩니다.
+이 섹션에서는 다음 항목을 다룹니다.
 
 -   [파일 만료 작업 만들기](create-file-expiration-task.md)
 -   [사용자 지정 파일 관리 작업 만들기](create-custom-file-management-task.md)
@@ -40,8 +41,8 @@ ms.lasthandoff: 10/17/2017
 > [!Note]
 > 전자 메일 알림과 특정 보고 기능을 설정하려면, 먼저 일반 파일 서버 리소스 관리자 옵션을 구성해야 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
--   [파일 서버 리소스 관리자 옵션 설정](setting-file-server-resource-manager-options.md)
+-   [설정 파일 서버 리소스 관리자 옵션](setting-file-server-resource-manager-options.md)
 
 

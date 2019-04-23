@@ -15,15 +15,15 @@ ms.topic: article
 ms.assetid: a8c6d5fa-399b-4823-8f10-affec1bbfe65
 ms.localizationpriority: medium
 ms.openlocfilehash: 601261780f64a779d0aa43ea8d14f58fdcb5f502
-ms.sourcegitcommit: 3883eebbba70bfea0221e510863ee1a724a5f926
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5783635"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59874144"
 ---
-# 원격 데스크톱 서비스 - 계획 포스터
+# <a name="remote-desktop-services---planning-poster"></a>원격 데스크톱 서비스 - 계획 포스터
 
-## Windows Server의 원격 데스크톱 서비스
+## <a name="remote-desktop-services-in-windows-server"></a>Windows Server의 원격 데스크톱 서비스
 
 원격 데스크톱 서비스 팀은 RDS 환경의 계획, 빌드 및 실행에 도움이 되도록 포스터를 만들었습니다.
 
@@ -31,12 +31,12 @@ ms.locfileid: "5783635"
 
 해당 이미지를 마우스 오른쪽 버튼으로 클릭하여 로컬 시스템에 저장하는 방법으로 포스터의 복사본을 얻을 수 있습니다.
 
-계획 하는 데 대 한 자세한 내용은 다음 항목을 살펴보세요.
+계획에 대해 자세히 알아보려면 다음 항목을 확인 합니다.
 
-- [RDS 배포 계획 및 설계](rds-plan-and-design.md)
-- [RDS 빌드 및 배포](rds-build-and-deploy.md)
-- [RDS 환경 실행 및 조정](rds-run-and-tune.md)
+- [계획 및 RDS 배포를 디자인 합니다.](rds-plan-and-design.md)
+- [빌드 및 RDS를 배포 합니다.](rds-build-and-deploy.md)
+- [실행 및 RDS 환경 조정](rds-run-and-tune.md)
 
-## Windows 가상 데스크톱
+## <a name="windows-virtual-desktop"></a>Windows 가상 데스크톱
 
-수 봤 원격 데스크톱에 대 한 새 "최신 인프라" 이야기 주세요. 어쩌면 "RDmi" 구문을 사용 하 여 us 들어왔습니다. 알아야 할 구를 "Windows 가상 데스크톱." [Microsoft 365 Azure에서 최신 바탕 화면을 추가](https://azure.microsoft.com/blog/microsoft-365-adds-modern-desktop-on-azure/) 하 고 [Windows 가상 데스크톱 2018 Ignite 프레젠테이션에서](https://www.youtube.com/watch?v=_7G37PFYVe4)는 제공 하는이 새로운 가상화에 알아봅니다. Windows 가상 데스크톱은 현재 개인 미리 보기입니다.
+들어보았을 원격 데스크톱에 대 한 새 "최신 인프라로" 이야기해 주세요. 아마도 보았다면 "RDmi." 라는 문구를 사용 합니다. 알아야 할 문구는 "Windows 가상 데스크톱." 이 새 가상화의 제품에 대해 알아봅니다 [Azure에서 최신 데스크톱을 추가 하는 Microsoft 365](https://azure.microsoft.com/blog/microsoft-365-adds-modern-desktop-on-azure/) 및 [Windows 가상 데스크톱의 Ignite 2018 프레젠테이션](https://www.youtube.com/watch?v=_7G37PFYVe4)합니다. Windows 가상 데스크톱 현재 비공개 미리 보기 중입니다.

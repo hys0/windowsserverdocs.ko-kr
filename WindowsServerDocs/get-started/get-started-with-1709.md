@@ -1,6 +1,6 @@
 ---
 title: Windows Server, 버전 1709 소개
-description: 얻기, 설치 및 정품 인증 방법
+description: 구입, 설치 및 정품 인증 방법
 ms.prod: windows-server-threshold
 ms.mktglfcycl: manage
 ms.sitesec: library
@@ -10,24 +10,24 @@ ms.date: 12/5/2017
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9cf87597-b15d-4f43-8aa1-91e60367f011
-ms.openlocfilehash: a2da7b8437a9dc7f44fc83837e3ebad93b7fe3ab
-ms.sourcegitcommit: e0479b0114eac7f232e8b1e45eeede96ccd72b26
-ms.translationtype: HT
+ms.openlocfilehash: 96f098457b9bac4541421c7889aefb030e3d8804
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "1410403"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59868804"
 ---
 # <a name="introducing-windows-server-version-1709"></a>Windows Server, 버전 1709 소개
 
 >적용 대상: Windows Server(반기 채널)
 
-**Windows Server, 버전 1709는 새로운 반기 채널의 첫 번째 릴리스입니다.** 
+**Windows Server 1709 버전은 새 반기 채널의 첫 번째 릴리스입니다.** 
 
 ## <a name="what-the-semi-annual-channel-is--and-isnt"></a>반기 채널에 대한 진실과 오해
 이 새 채널의 첫 번째 릴리스인 Windows Server, 버전 1709는 Windows Server 2016을 위한 "업데이트" 또는 "서비스 팩"이 *아닙니다*. **새로운 릴리스 트랙**에서 1년에 두 번 출시되는 릴리스의 첫 번째 버전으로서, 개발 주기가 짧은 고객이나 최신 Hyper-V 기술에 계속해서 투자하고 있는 호스터 같이 "클라우드 주기"에서 이동 중인 고객을 위해 개발되었습니다. 이 트랙의 각 릴리스는 최초 릴리스 후 18개월 동안 지원됩니다. 반기 채널에 대한 자세한 내용과 **가입(또는 유지)할 채널을 결정하기 위한 팁**은 [반기 채널 개요](semi-annual-channel-overview.md)를 참조하세요.
 
 
-**장기 서비스 채널(LTSC) 제품의 최신 버전은 Windows Server 2016**입니다. LTSC는 기존의 워크로드 및 응용 프로그램을 지원하기 위해 서버 운영 체제에서 장기적인 안정성과 예측 가능성이 필요한 경우에 가장 적합합니다. LTSC를 계속 사용하고 싶다면 Server Core 모드나 데스크톱 환경 포함 서버 모드에서 설치가 가능한 Windows Server 2016을 설치하거나 계속 사용해야 합니다. 자세한 내용은 [Windows Server 2016 시작](https://docs.microsoft.com/windows-server/get-started/server-basics)을 참조하세요.
+**장기 서비스 채널(LTSC) 제품의 최신 버전은 Windows Server 2016**입니다. LTSC는 기존의 워크로드 및 응용 프로그램을 지원하기 위해 서버 운영 체제에서 장기적인 안정성과 예측 가능성이 필요한 경우에 가장 적합합니다. LTSC를 계속 사용하고 싶다면 Server Core 모드나 데스크톱 환경 포함 서버 모드에서 설치가 가능한 Windows Server 2016을 설치하거나 계속 사용해야 합니다. 자세한 내용은 [Windows Server 2016 시작](https://docs.microsoft.com/windows-server/get-started/server-basics)을 참조하십시오.
 
 
 ## <a name="whats-different-about-1709"></a>1709의 차이점은 무엇입니까?
@@ -56,11 +56,11 @@ Windows Server, 버전 1709에 관한 핵심 정보를 포괄적으로 알아보
 
 이 릴리스는 새로 설치되어야 합니다.
 
-- VLSC: [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx)를 사용하는 볼륨 라이선스 고객은 [볼륨 라이선싱 서비스 센터](https://www.microsoft.com/Licensing/servicecenter/default.aspx)로 이동하고 **로그인**을 클릭하여 이 릴리스를 얻을 수 있습니다. 그런 다음 **다운로드 및 키**를 클릭하고 이 릴리스를 검색합니다. 
+- VLSC: 볼륨 라이선스 고객에 게 [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx) 로 이동 하 여이 릴리스를 가져올 수 있습니다 합니다 [볼륨 라이선스 서비스 센터](https://www.microsoft.com/Licensing/servicecenter/default.aspx) 를 클릭 하 고 **로그인**. 그런 다음 **다운로드 및 키**를 클릭하고 이 릴리스를 검색합니다. 
 
 - Windows Server, 버전 1709는 [Microsoft Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/Microsoft.WindowsServer?tab=Overview)에서도 사용할 수 있습니다.
 
-- **Visual Studio 구독** 참여자: 이미 Visual Studio 구독에 참여하고 있는 경우 [Visual Studio 구독자 다운로드 페이지](https://my.visualstudio.com/downloads?pid=2347)로 이동하고 그곳에서 이용 가능한 다운로드를 완료하여 Windows Server, 버전 1709를 얻을 수 있습니다. 이미 구독자가 아닌 경우 [Visual Studio 구독](https://www.visualstudio.com/subscriptions/) 페이지로 이동하고 로그인한 다음 위와 같이 [Visual Studio 구독자 다운로드 페이지](https://my.visualstudio.com/downloads?pid=2347)로 이동합니다. Visual Studio 구독을 통해 얻은 릴리스는 개발 및 테스트용으로만 사용됩니다.
+- 참가자 **Visual Studio 구독:** Visual Studio 구독에 이미 참여 하는 경우 Windows Server 1709 버전으로 이동 하 여 얻을 수 있습니다 합니다 [Visual Studio 구독자 다운로드 페이지](https://my.visualstudio.com/downloads?pid=2347) 있습니다 제공 되는 다운로드를 완료 합니다. 이미 구독자가 아닌 경우 [Visual Studio 구독](https://www.visualstudio.com/subscriptions/) 페이지로 이동하고 로그인한 다음 위와 같이 [Visual Studio 구독자 다운로드 페이지](https://my.visualstudio.com/downloads?pid=2347)로 이동합니다. Visual Studio 구독을 통해 얻은 릴리스는 개발 및 테스트용으로만 사용됩니다.
 
 
 

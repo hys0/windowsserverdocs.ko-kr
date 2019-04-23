@@ -10,20 +10,20 @@ author: JasonGerend
 ms.date: 08/24/2016
 ms.localizationpriority: medium
 ms.openlocfilehash: 0c39d704056c4ae6935f3be9c521c12ca1014820
-ms.sourcegitcommit: 9db0d8b328a286b9a40fe3ab1890703ab025a0f3
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "5014066"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59870554"
 ---
-# Windows의 저장소 클래스 메모리(NVDIMM-N) 상태 관리
-> 적용 대상: Windows Server 2016, Windows 10(버전 1607)
+# <a name="storage-class-memory-nvdimm-n-health-management-in-windows"></a>Windows의 저장소 클래스 메모리(NVDIMM-N) 상태 관리
+> 적용 대상: Windows Server 2016, Windows 10 (버전 1607)
 
 이 문서에서는 시스템 관리자 및 IT 전문가에게 저장소 클래스 메모리와 기존 저장 장치 간의 차이점을 중심으로 Windows의 저장소 클래스 메모리(NVDIMM-N) 장치에 특정한 오류 처리 및 상태 관리에 대한 정보를 제공합니다.
 
 Windows의 저장소 클래스 메모리 장치 지원에 익숙하지 않은 경우 다음의 짧은 비디오에서 개요를 확인할 수 있습니다.
-- [Windows Server 2016에서 블록 저장소로 비휘발성 메모리(NVDIMM-N) 사용](https://channel9.msdn.com/Events/Build/2016/P466)
-- [Windows Server 2016에서 바이트 주소 지정 가능 저장소로 비휘발성 메모리(NVDIMM-N) 사용](https://channel9.msdn.com/Events/Build/2016/P470)
+- [Windows Server 2016에서에서 블록 저장소로 비휘발성 메모리 (Nvdimm-n) 사용](https://channel9.msdn.com/Events/Build/2016/P466)
+- [Windows Server 2016에서에서 바이트 주소 지정 가능 저장소로 비휘발성 메모리 (Nvdimm-n) 사용](https://channel9.msdn.com/Events/Build/2016/P470)
 - [Windows Server 2016에서 영구 메모리로 SQL Server 2016 성능 가속화](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-Windows-Server-2016-SCM--FAST)
 
 JEDEC 규격 NVDIMM-N 저장소 클래스 메모리 장치는 Windows Server 2016 및 Windows 10(버전 1607)부터 기본 드라이버를 통해 Windows에서 지원됩니다. 이러한 장치는 다른 디스크(HDD 및 SSD)와 유사하게 동작하지만 몇 가지 차이점이 있습니다.
@@ -39,7 +39,7 @@ PS C:\>Get-PhysicalDisk | fl
 ```
 cmdlet 출력에서 매개 변수 BusType이 버스 유형을 "SCM"으로 올바르게 표시합니다.
 
-## 저장소 클래스 메모리의 상태 확인
+## <a name="checking-the-health-of-storage-class-memory"></a>저장소 클래스 메모리의 상태 확인
 저장소 클래스 메모리의 상태를 쿼리하려면 Windows PowerShell 세션에서 다음 명령을 사용합니다.
 
 ```powershell
@@ -50,7 +50,7 @@ PS C:\> Get-PhysicalDisk | where BusType -eq "SCM" | select SerialNumber, Health
 
 |SerialNumber|HealthStatus|OperationalStatus|OperationalDetails|
 |---|---|---|---|
-|802c-01-1602-117cb5fc|Healthy|확인||
+|802c-01-1602-117cb5fc|정상|확인||
 |802c-01-1602-117cb64f|경고|자동 완성 오류|{Threshold Exceeded,NVDIMM\_N Error}|
 
 > [!NOTE]
@@ -58,13 +58,13 @@ PS C:\> Get-PhysicalDisk | where BusType -eq "SCM" | select SerialNumber, Health
 
 다양한 상태 조건을 이해하는 데 도움이 되도록 다음 섹션을 참조하세요.
 
-## "Warning" 상태
+## <a name="warning-health-status"></a>"Warning" 상태
 
 이 조건은 저장소 클래스 메모리 장치의 상태를 확인할 때 다음 출력 예와 같이 상태가 **Warning**으로 나열되는 경우에 해당합니다.
 
 |SerialNumber|HealthStatus|OperationalStatus|OperationalDetails|
 |---|---|---|---|
-|802c-01-1602-117cb5fc|Healthy|확인||
+|802c-01-1602-117cb5fc|정상|확인||
 |802c-01-1602-117cb64f|경고|자동 완성 오류|{Threshold Exceeded,NVDIMM\_N Error}|
 
 다음 표에 이 조건에 대한 몇 가지 정보가 나와 있습니다.
@@ -78,13 +78,13 @@ PS C:\> Get-PhysicalDisk | where BusType -eq "SCM" | select SerialNumber, Health
 |추가 정보|PhysicalDisk 개체의 OperationalStatus 필드. EventLog – Microsoft-Windows-ScmDisk0101/Operational|
 |수행할 작업|위반한 경고 임계값에 따라 NVDIMM-N의 특정 부분 또는 전체를 교체하는 것이 현명할 수 있습니다. 예를 들어 NVM 수명 임계값을 위반한 경우 NVDIMM-N을 교체하는 것이 좋습니다.|
 
-## NVDIMM-N에 쓰기 실패
+## <a name="writes-to-an-nvdimm-n-fail"></a>NVDIMM-N에 쓰기 실패
 
 이 조건은 저장소 클래스 메모리 장치의 상태를 확인할 때 다음 출력 예와 같이 상태가 **Unhealthy**로 나열되고 작동 상태에 **IO Error**가 표시되는 경우에 해당합니다.
 
 |SerialNumber|HealthStatus|OperationalStatus|OperationalDetails|
 |---|---|---|---|
-|802c-01-1602-117cb5fc|Healthy|확인||
+|802c-01-1602-117cb5fc|정상|확인||
 |802c-01-1602-117cb64f|Unhealthy|{Stale Metadata, IO Error, Transient Error}|{Lost Data Persistence, Lost Data, NV...}|
 
 다음 표에 이 조건에 대한 몇 가지 정보가 나와 있습니다.
@@ -98,13 +98,13 @@ PS C:\> Get-PhysicalDisk | where BusType -eq "SCM" | select SerialNumber, Health
 |추가 정보|PhysicalDisk 개체의 OperationalStatus 필드.<br>EventLog – Microsoft-Windows-ScmDisk0101/Operational|
 |수행할 작업|영향을 받는 NVDIMM-N의 데이터를 백업하는 것이 좋습니다. 읽기 권한을 얻으려면 디스크를 수동으로 온라인 상태로 전환하면 됩니다(디스크가 읽기 전용 NTFS 볼륨으로 표시됨).<br><br>이 조건을 완전히 해소하려면 근본 원인을 해결(즉, 문제에 따라 전원 공급 장치를 수리하거나 NVDIMM-N을 교체)하고 NVDIMM-N의 볼륨을 오프라인으로 전환했다가 다시 온라인으로 전환하거나 시스템을 다시 시작해야 합니다.<br><br>저장소 공간에서 NVDIMM-N을 다시 사용할 수 있도록 하려면 **Reset-PhysicalDisk** cmdlet을 사용하여 장치를 다시 통합하고 복구 프로세스를 시작합니다.|
 
-## NVDIMM-N이 "Generic Physical Disk"로 표시되거나 해당 용량이 '0'바이트로 표시됨
+## <a name="nvdimm-n-is-shown-with-a-capacity-of-0-bytes-or-as-a-generic-physical-disk"></a>NVDIMM-N이 "Generic Physical Disk"로 표시되거나 해당 용량이 '0'바이트로 표시됨
 
 이 조건은 저장소 클래스 메모리 장치가 0바이트 용량으로 표시되어 초기화할 수 없거나, 다음 출력 예와 같이 작동 상태가 **Lost Communication**인 "Generic Physical Disk" 개체로 노출되는 경우에 해당합니다.
 
 |SerialNumber|HealthStatus|OperationalStatus|OperationalDetails|
 |---|---|---|---|
-|802c-01-1602-117cb5fc|Healthy|확인||
+|802c-01-1602-117cb5fc|정상|확인||
 ||경고|Lost Communication||
 
 다음 표에 이 조건에 대한 몇 가지 정보가 나와 있습니다.
@@ -118,13 +118,13 @@ PS C:\> Get-PhysicalDisk | where BusType -eq "SCM" | select SerialNumber, Health
 |추가 정보|PhysicalDisk 개체의 OperationalStatus 필드. <br>EventLog – Microsoft-Windows-ScmDisk0101/Operational|
 |수행할 작업|서버 플랫폼에서 NVDIMM-N 장치를 호스트 OS에 다시 노출할 수 있도록 NVDIMM-N 장치를 교체하거나 삭제해야 합니다. 수정할 수 없는 오류가 추가로 발생할 수 있으므로 장치를 교체하는 것이 좋습니다. 교체 장치를 저장소 공간 구성에 추가하려면 **Add-Physicaldisk** cmdlet을 사용하면 됩니다.|
 
-## 다시 부팅한 후 NVDIMM-N이 RAW 또는 빈 디스크로 표시됨
+## <a name="nvdimm-n-is-shown-as-a-raw-or-empty-disk-after-a-reboot"></a>다시 부팅한 후 NVDIMM-N이 RAW 또는 빈 디스크로 표시됨
 
 이 조건은 저장소 클래스 메모리 장치의 상태를 확인할 때 다음 출력 예와 같이 상태가 **Unhealthy**로 표시되고 작동 상태에 **Unrecognized Metadata**가 표시되는 경우에 해당합니다.
 
 |SerialNumber|HealthStatus|OperationalStatus|OperationalDetails|
 |---|---|---|---|
-|802c-01-1602-117cb5fc|Healthy|확인|{Unknown}|
+|802c-01-1602-117cb5fc|정상|확인|{Unknown}|
 |802c-01-1602-117cb64f|Unhealthy|{Unrecognized Metadata, Stale Metadata}|{Unknown}|
 
 다음 표에 이 조건에 대한 몇 가지 정보가 나와 있습니다.
@@ -138,7 +138,7 @@ PS C:\> Get-PhysicalDisk | where BusType -eq "SCM" | select SerialNumber, Health
 |추가 정보|PhysicalDisk 개체의 OperationalStatus 필드.<br>EventLog – Microsoft-Windows-ScmDisk0101/Operational|
 |수행할 작업|영향을 받는 장치를 교체하지 않으려는 경우 **Reset-PhysicalDisk** cmdlet을 사용하여 영향을 받는 NVDIMM-N에서 읽기 전용 조건을 해소할 수 있습니다. 이 cmdlet은 저장소 공간 환경에서 NVDIMM-N을 저장소 공간에 다시 통합하고 복구 프로세스를 시작합니다.|
 
-## 인터리브 집합
+## <a name="interleaved-sets"></a>인터리브 집합
 
 플랫폼의 BIOS에서 인터리브 집합을 만들어 여러 NVDIMM-N 장치가 호스트 운영 체제에 단일 장치로 표시되도록 할 수 있습니다.
 

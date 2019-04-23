@@ -13,11 +13,11 @@ author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
 ms.openlocfilehash: 15d9ebfe72744ed26239587ef297b06361233425
-ms.sourcegitcommit: e0479b0114eac7f232e8b1e45eeede96ccd72b26
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "2082469"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59874044"
 ---
 # <a name="mpio-on-nano-server"></a>Nano Server의 MPIO
 
@@ -28,7 +28,7 @@ ms.locfileid: "2082469"
 
 이 항목에서는 Windows Server 2016의 Nano 서버 설치에서 MPIO의 사용에 대해 소개합니다. Windows Server에서 MPIO에 대한 일반 정보는 [다중 경로 I/O 개요](https://technet.microsoft.com/library/cc725907.aspx)를 참조하세요.  
 
-## <a name="using-mpio-on-nano-server"></a>Nano 서버에서 MPIO 사용  
+## <a name="using-mpio-on-nano-server"></a>Nano Server에서 MPIO 사용  
 Nano 서버에서 MPIO를 사용할 수 있으나 다음과 같은 차이점이 있습니다.  
   
 -   MSDSM만 지원됩니다.  

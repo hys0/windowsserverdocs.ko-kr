@@ -1,32 +1,33 @@
 ---
-title: "ReFS 무결성 스트림"
-description: 
+title: ReFS 무결성 스트림
+description: ''
 author: gawatu
 ms.author: jgerend
 manager: dmoss
-ms.date: 11/14/2016
+ms.date: 10/16/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
 ms.assetid: 1f1215cd-404f-42f2-b55f-3888294d8a1f
-ms.openlocfilehash: d9e14e74591b341048316e9c2e69a312062c3304
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.openlocfilehash: 11f0a696fb843f5cd8b4a7ff3318c28d6c1adeb8
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59871344"
 ---
 # <a name="refs-integrity-streams"></a>ReFS 무결성 스트림
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
+>적용 대상: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server (반기 채널), Windows 10
 
 무결성 스트림은 체크섬을 사용하여 데이터 무결성을 검사하고 유지하는 ReFS의 선택적 기능입니다. ReFS는 메타데이터에 대해서는 항상 체크섬을 사용하지만, 기본적으로 파일 데이터에 대해서는 체크섬을 생성하거나 체크섬의 유효성을 검사하지 않습니다. 무결성 스트림은 사용자가 파일 데이터에 대한 체크섬을 활용할 수 있는 선택적 기능입니다. 무결성 스트림을 사용하도록 설정할 경우 ReFS는 데이터가 유효한지 손상되었는지 명확하게 판별할 수 있습니다. 또한 ReFS와 저장소 공간은 공동으로 손상된 메타데이터 및 데이터를 자동 수정할 수 있습니다.
 
-## <a name="how-it-works"></a>작동 방식 
+## <a name="how-it-works"></a>작동 방법 
 
 무결성 스트림은 개별 파일, 디렉터리 또는 볼륨 전체에 사용하도록 설정할 수 있으며, 무결성 스트림 설정은 언제든지 전환할 수 있습니다. 또한 파일 및 디렉터리에 대한 무결성 스트림 설정은 상위 디렉터리에서 상속됩니다. 
 
 무결성 스트림을 사용하도록 설정하면 ReFS는 해당 파일의 메타데이터에 지정된 파일에 대한 체크섬을 만들고 유지합니다. 이 체크섬을 통해 ReFS는 데이터에 액세스하기 전에 데이터의 무결성을 확인할 수 있습니다. 무결성 스트림을 사용할 수 있는 모든 데이터를 반환하기 전에 ReFS는 먼저 해당 체크섬을 계산합니다.
 
-<img src=media/compute-checksum.gif alt="Compute checksum for file data"/>
+![파일 데이터에 대 한 체크섬을 계산](media/compute-checksum.gif)
 
 그런 다음 이 체크섬을 파일 메타데이터에 포함된 체크섬과 비교합니다. 체크섬이 일치하는 경우 데이터가 유효한 것으로 표시되고 사용자에게 반환됩니다. 체크섬이 일치하지 않으면 데이터가 손상된 것입니다. 볼륨의 복원력에 따라 ReFS가 손상에 대응하는 방식이 결정됩니다.
 
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/17/2017
 
 ReFS는 모든 손상을 시스템 이벤트 로그에 기록하고 손상의 수정 여부가 로그에 반영됩니다. 
 
-<img src=media/corrective-write.gif alt="Corrective write restores data integrity."/>
+![데이터 무결성을 복원 하는 정정 쓰기](media/corrective-write.gif)
 
 ## <a name="performance"></a>성능 
 
@@ -92,7 +93,7 @@ PS C:\> Set-FileIntegrity H:\ -Enable $True
 PS C:\> Set-FileIntegrity H:\Docs -Enable $True
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 -   [ReFS 개요](refs-overview.md)
 -   [ReFS 블록 복제](block-cloning.md)

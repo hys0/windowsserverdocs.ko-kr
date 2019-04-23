@@ -1,7 +1,7 @@
 ---
 ms.assetid: eb047a19-e5cb-43f4-a7bb-c4b7c8fc55a5
-title: "지침에 따라 AD FS 배포"
-description: 
+title: AD FS 배포 가이드
+description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -10,23 +10,24 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.openlocfilehash: b1ac5cee1c4ba404308fde6959016dd765ccc4af
-ms.sourcegitcommit: 70c1b6cedad55b9c7d2068c9aa4891c6c533ee4c
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59872594"
 ---
-# <a name="ad-fs-2016-deployment-guide"></a>광고 FS 2016 배포 가이드
+# <a name="ad-fs-2016-deployment-guide"></a>AD FS 2016 배포 가이드
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-ADFS 배포 가이드 포괄적인 가이드 ADFS 배포입니다.  이 가이드는 다음의 구성 됩니다.
+AD FS 배포 가이드는 AD FS 배포를 위한 포괄적인 살펴보도록 하겠습니다.  이 가이드의 다음 구성 됩니다.
 
   
-* [Windows Server 2016에에서 Adfs로 업그레이드](Upgrading-to-AD-FS-in-Windows-Server-2016.md)  
+* [Windows Server 2016에서에서 AD FS로 업그레이드](Upgrading-to-AD-FS-in-Windows-Server-2016.md)  
 
 * [Windows Server 2016 및 2012 R2 배포 가이드](Windows-Server-2012-R2-AD-FS-Deployment-Guide.md)
 
 * [Windows Server 2012 배포 가이드](Windows-Server-2012-AD-FS-Deployment-Guide.md)
 
-* [온-프레미스 신원을 인프라와 동기화 서비스 클라우드 모니터링](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-health)
+* [클라우드에서 온-프레미스 id 인프라 및 동기화 서비스 모니터링](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-health)
   

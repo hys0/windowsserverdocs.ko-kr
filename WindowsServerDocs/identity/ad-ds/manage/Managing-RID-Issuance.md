@@ -1,66 +1,67 @@
 ---
 ms.assetid: aac117a7-aa7a-4322-96ae-e3cc22ada036
-title: "RID 발급 관리"
-description: 
-author: billmath
-ms.author: billmath
-manager: femila
+title: RID 발급 관리
+description: ''
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: f84bcc1aa32e9993903e094fc43feffcbe16a05b
-ms.sourcegitcommit: db290fa07e9d50686667bfba3969e20377548504
+ms.openlocfilehash: 49798f785fe02b5a97fd8bd979c327b86c9ddef2
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59874224"
 ---
 # <a name="managing-rid-issuance"></a>RID 발급 관리
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-이 항목에서는 RID 마스터 FSMO 역할을 포함 하 여 새 발급 및 모니터링 RID 마스터 및 분석과 RID 발급 문제를 해결 하는 방법에 대 한 기능을 변경에 설명 합니다.  
+이 항목에서는 RID 마스터의 새로운 발급 및 모니터링 기능과 RID 발급 분석 및 문제 해결 방법을 비롯하여 RID 마스터 FSMO 역할의 변경 내용을 설명합니다.  
   
 -   [RID 발급 관리](../../ad-ds/manage/Managing-RID-Issuance.md#BKMK_Manage)  
   
 -   [RID 발급 문제 해결](../../ad-ds/manage/Managing-RID-Issuance.md#BKMK_Tshoot)  
   
-더 많은 정보를에서 사용할 수 있는 [AskDS 블로그](http://blogs.technet.com/b/askds/archive/2012/08/10/managing-rid-issuance-in-windows-server-2012.aspx)합니다.  
+자세한 내용은 제공 되는 [AskDS 블로그](http://blogs.technet.com/b/askds/archive/2012/08/10/managing-rid-issuance-in-windows-server-2012.aspx)합니다.  
   
 ## <a name="BKMK_Manage"></a>RID 발급 관리  
-기본적으로 도메인 용량은 약 1 십억 보안 사용자 등 사용자가, 그룹과 컴퓨터에 있습니다. 물론 적극적으로 사용 되는 많은 개체 사용 하는 도메인 가지가 있습니다. 그러나 Microsoft 고객 지원의 경우 찾았습니다 위치:  
+기본적으로 도메인은 사용자, 그룹 및 컴퓨터와 같은 보안 주체를 10억 개 가량 수용할 수 있지만 이처럼 많은 개체가 활발하게 사용되는 도메인은 없습니다. 하지만 Microsoft 고객 지원에서는 다음과 같은 사례를 발견했습니다.  
   
--   소프트웨어 또는 실수로 대량 관리 스크립트 프로비저닝 사용자가, 그룹 및 컴퓨터를 만들었습니다.  
+-   소프트웨어 또는 관리 스크립트 프로비전에서 실수로 사용자, 그룹 및 컴퓨터를 대량으로 만든 경우  
   
--   사용 하지 않는 한 보안과 메일 그룹 위임된 사용자가 만든  
+-   위임된 사용자가 사용되지 않는 많은 보안 및 메일 그룹을 만든 경우  
   
--   복원 된 많은 도메인 컨트롤러 내리는 또는 메타 데이터 치료  
+-   많은 도메인 컨트롤러가 강등 또는 복원되었거나 메타데이터가 정리된 경우  
   
--   숲 복구 수행한  
+-   포리스트 복구가 수행된 경우  
   
--   자주 InvalidateRidPool 작업을 수행  
+-   InvalidateRidPool 작업이 자주 수행된 경우  
   
--   지우려는 블록 크기 레지스트리 값 올바르게 증가  
+-   RID 블록 크기 레지스트리 값이 잘못 증가된 경우  
   
-이러한 상황이 모든 위치 불필요, 자주 실수로 Rid을 사용합니다. 많은 년 동안 Rid 부족 하 여는 몇 가지 환경 이며이 강제 새 도메인 마이그레이션 또는 숲 복구 수행할 수 있습니다.  
+이 모든 상황에서 RID가 불필요하게 소진되며, 이는 실수에서 비롯된 경우가 많습니다. 지난 몇 년 동안 일부 소수의 환경에서는 RID가 부족했고, 그로 인해 새 도메인으로 마이그레이션하거나 포리스트를 복구해야 했습니다.  
   
-Windows Server 2012 RID 할당 있는 문제가 있는 연령 및 Active Directory 널리 사용 되는 문제를 해결 합니다. 여기에 더 나은 이벤트 로깅에서, 더 적합 한 제한 전체 크기의 글로벌 RID 공간 도메인에 대 한 두 번 하는 기능을--비상시에 포함 됩니다.  
+Windows Server 2012에서는 Active Directory의 사용 연한 및 편재로 인해 문제가 되는 경우에만 RID 할당 문제를 해결합니다. 여기에 향상 된 이벤트 로깅, 보다 적절 한 제한 수에-비상시에서 도메인에 대 한 전역 RID 공간의 전체 크기를 두 번 포함 됩니다.  
   
-### <a name="periodic-consumption-warnings"></a>주기적 소비 경고  
-Windows Server 2012 추가 글로벌 RID 공간 이벤트 추적 하는 중요 시점 교차 때 조기 경고를 제공 합니다. 모델 계산 열 (10) % 부호 글로벌 풀의 사용에 도달 하면 이벤트를 기록 합니다. 다음 사용 하 고 남은 다음 10 %를 계산 하 고 이벤트 주기 계속 됩니다. 글로벌 RID 공간 소모 되는 대로 이벤트는 더욱 빠르게 이용할 10% 성공적으로 더 빠르게 줄어드는 풀의 (이벤트 로그 불필요 한 방지 발생 하지만 시간별 개 이상의 항목). 모든 도메인 컨트롤러의 시스템 이벤트 로그 디렉터리-서비스-삼로 경고 이벤트를 16658 씁니다.  
+### <a name="periodic-consumption-warnings"></a>정기적인 사용 경고  
+Windows Server 2012에서는 주요 지표를 교차한 경우 조기 경고를 제공하는 전역 RID 공간 이벤트 추적 기능이 추가되었습니다. 이 모델은 전역 풀에서 10% 사용 표시를 계산하여 여기에 도달한 경우 이벤트를 로깅합니다. 그런 다음 나머지 공간의 10% 사용을 계산하는 식으로 이벤트 주기가 계속됩니다. 전역 RID 공간이 소진됨에 따라 줄어드는 풀에서 10%에 도달하는 속도가 빨라져 이벤트가 가속화됩니다(하지만 이벤트 로그 완화로 인해 시간당 두 번 이상의 입력이 방지됨). 모든 도메인 컨트롤러의 시스템 이벤트 로그에서 Directory-Services-SAM 경고 이벤트 16658을 기록합니다.  
   
-가정는 기본 30 비트 글로벌 RID 공간을 포함 하 여 107,374,182 풀 할당 때 첫 번째 이벤트 로그<sup>일</sup> RID 합니다. 이벤트 속도 전체에서 생성 110 이벤트와 함께 100, 000의 마지막 체크 포인트 될 때까지 자연스럽 게 가속 합니다. 동작은 잠금 해제 한 31 비트 글로벌 RID 공간에 대 한 유사: 214,748,365에서 시작 하 고 117 이벤트를 완료 합니다.  
+기본 30비트 전역 RID 공간을 가정할 때 첫 번째 이벤트는 107,374,182번째<sup></sup> RID를 포함하는 풀을 할당할 때 로깅됩니다. 총 110개의 이벤트가 생성되는 마지막 검사점(100,000)까지 이벤트 속도가 자연적으로 가속화됩니다. 이 동작은 잠금 해제된 31비트 전역 RID 공간(214,748,365에서 시작하고 117개의 이벤트로 완료됨)에서도 유사합니다.  
   
 > [!IMPORTANT]  
-> 이 이벤트는 사용할 수 없습니다. 사용자, 컴퓨터 및 즉시 도메인에 있는 그룹 만들기 프로세스 조사 합니다. 100 백만 더 이상 광고 DS 개체 만들기 매우 않은입니다.  
+> 이 이벤트는 예상치 못한 것이므로 도메인에서 사용자, 컴퓨터 및 그룹 만들기 프로세스를 즉시 조사해야 합니다. 1억 개보다 많은 AD DS 개체를 만드는 것은 일반적인 상황이 아닙니다.  
   
-![제거 발급](media/Managing-RID-Issuance/ADDS_RID_TR_EventWaypoints2.png)  
+![RID 발급](media/Managing-RID-Issuance/ADDS_RID_TR_EventWaypoints2.png)  
   
-### <a name="rid-pool-invalidation-events"></a>풀 무효화 이벤트 제거  
-새는 이벤트 경고 DC 제거 풀을 삭제 했습니다. 이들 알림 되며 특히 VDC의 새로운 기능으로 인해 발생할 수 있습니다. 이벤트에 대 한 자세한 내용은 아래 이벤트 목록을 참조 하세요.  
+### <a name="rid-pool-invalidation-events"></a>RID 풀 무효화 이벤트  
+로컬 DC RID 풀이 삭제되었음을 알리는 새로운 이벤트가 있습니다. 이는 정보 이벤트이며, 특히 새로운 VDC 기능으로 인해 예상할 수 있습니다. 이 이벤트에 대한 자세한 내용은 아래의 이벤트 목록을 참조하세요.  
   
-### <a name="BKMK_RIDBlockMaxSize"></a>블록 크기 제한을 제거합니다  
-일반적으로 도메인 컨트롤러의 500 rid 블록 RID 할당 한 번에 요청합니다. 다음 레지스트리 REG_DWORD 값 도메인 컨트롤러에서 사용 하 여이 기본을 무시할 수 있습니다.  
+### <a name="BKMK_RIDBlockMaxSize"></a>RID 블록 크기 제한  
+일반적으로 도메인 컨트롤러는 한 번에 500개의 RID 블록에서 RID 할당을 요청합니다. 도메인 컨트롤러에서 다음 레지스트리 REG_DWORD 값을 사용하여 이 기본값을 재정의할 수 있습니다.  
   
 ```  
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\RID Values  
@@ -68,68 +69,68 @@ RID Block Size
   
 ```  
   
-Windows Server 2012 전에 최대 값 암묵적인 DWORD 최대 (있음 0xffffffff 또는 4294967295 값은)을 제외 하 고 해당 레지스트리 키에서 적용 했습니다. 이 값은 전체 글로벌 RID 공간 보다 상당히 큰. 관리자 부적절 하 게 또는 실수로 경우도 블록 크기 제거 값으로 구성 거 대 한 속도로 글로벌 RID 모두 사용 하는 합니다.  
+Windows Server 2012 이전에는 값이 0xffffffff 또는 4294967295인 암시적 DWORD 최대값 외에는 이 레지스트리 키에 적용되는 최대값이 없었습니다. 이 값은 전체 전역 RID 공간보다 훨씬 큽니다. 관리자는 부적절하거나 실수로 전역 RID를 매우 빠르게 소진하는 값으로 RID 블록 크기를 구성할 때가 있습니다.  
   
-Windows Server 2012에서이 레지스트리 값 15, 000 소수점 (16 진 0x3A98) 보다 높은 설정할 수 없습니다. 의도 하지 않은 거 대 한 RID 할당을 수 없습니다.  
+Windows Server 2012에서는 이 레지스트리 값을 10진수 15,000(16진수 0x3A98)보다 크게 설정할 수 없습니다. 따라서 의도하지 않은 대규모 RID 할당이 방지됩니다.  
   
-값 설정 *높은* 15, 000 보다 값 15, 000으로 간주 되 고 도메인 컨트롤러에서 16653 이벤트를 기록 디렉터리 서비스 이벤트 로그 값 해결 될 때까지 재부팅할에 있습니다.  
+15,000보다 *큰* 값을 설정하면 15,000으로 간주되며, 값이 수정될 때까지 도메인 컨트롤러에서는 다시 부팅할 때마다 디렉터리 서비스에 이벤트 16653을 로깅합니다.  
   
-### <a name="BKMK_GlobalRidSpaceUnlock"></a>글로벌 RID 공간 크기를 잠금 해제  
-Windows Server 2012 전에 글로벌 RID 공간 2 제한적 이었습니다<sup>30</sup> (또는 1073741823) Rid 총 합니다. 에 도달 하면만 도메인 마이그레이션 또는 숲 하는 복구 오래 된 기간에 모든 측정 하 여 새 Sid 만들기 복구를 사용할 수 있습니다. 2, Windows Server 2012에서 시작<sup>31</sup> 비트 글로벌 풀 2,147,483,648 Rid 향상 하기 위해 잠금을 해제할 수 있습니다.  
+### <a name="BKMK_GlobalRidSpaceUnlock"></a>전역 RID 공간 크기 잠금 해제  
+Windows Server 2012 이전 전역 RID 공간이 2 개로 제한 되었습니다<sup>30</sup> (또는 1073741823) 개의 Rid 총 합니다. 이 제한에 도달하면 도메인을 마이그레이션하거나 이전 기간으로 포리스트를 복구하는 경우에만 새 SID를 만들 수 있었습니다(어떤 기준에서든 재해 복구에 해당). Windows Server 2012부터 전역 풀을 2,147,483,648개의 RID로 늘리기 위해 2<sup>31</sup>비트의 잠금을 해제할 수 있습니다.  
   
-AD DS 라는 특별 한 숨겨진된 특성에서이 설정을 저장 **SidCompatibilityVersion** 모든 도메인 컨트롤러의 RootDSE 컨텍스트가에 있습니다. 이 특성 ADSIEdit, LDP 또는 기타 도구를 사용 하 여 읽을 수 없는 경우 글로벌 RID 공간 증가 보려면의 시스템 이벤트 삼로-디렉터리-서비스에서 16655 경고 이벤트에 대 한 로그를 또는 다음 Dcdiag 명령을 사용:  
+AD DS에서는 모든 도메인 컨트롤러의 RootDSE 컨텍스트에서 **SidCompatibilityVersion**이라는 특수한 숨겨진 특성에 이 설정을 저장합니다. 이 특성은 ADSIEdit, LDP 또는 기타 도구를 사용하여 읽을 수 없습니다. 전역 RID 공간의 증가를 확인하려면 시스템 이벤트 로그에서 Directory-Services-SAM의 경고 이벤트 16655를 검토하거나 다음 Dcdiag 명령을 사용합니다.  
   
 ```  
 Dcdiag.exe /TEST:RidManager /v | find /i "Available RID Pool for the Domain"  
   
 ```  
   
-글로벌 RID 풀을 강화 하는 경우 사용 가능한 풀 기본 1,073,741,823 대신 2147483647으로 변경 됩니다. 예를 들어:  
+전역 RID 풀을 늘리면 사용 가능한 풀이 기본 1,073,741,823에서 2,147,483,647로 변경됩니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
   
-![제거 발급](media/Managing-RID-Issuance/ADDS_RID_TR_Dcdiag.png)  
+![RID 발급](media/Managing-RID-Issuance/ADDS_RID_TR_Dcdiag.png)  
   
 > [!WARNING]  
-> 이 잠금 해제를 위한 것입니다 *만* RID 부족 방지 하기 위해 사용 되 고 *만* 최대 집행 제거와 함께에서 (다음 섹션 참조). 응용 프로그램 호환성 문제 Sid 잠금이 해제 되어 RID 풀에서 생성 된 사용자 존재 Rid 낮은 성장 하 고 남은 수백만 있는 환경에서 설정 하지 "선점 하 여"을 수행 합니다.  
+> 이 잠금 해제는 RID 부족을 방지하기 의도일 *뿐*이며 RID 최대값 적용(다음 섹션 참조)과 함께 사용하는 경우에*만* 사용할 수 있습니다. 응용 프로그램 호환성 문제는 잠금 해제된 RID 풀에서 생성된 SID에 잠재적으로 존재하므로 수백만 개의 RID가 남아 있고 느리게 증가하는 환경에서는 이를 "미리" 설정하지 마세요.  
 >   
-> 이 작업을 잠금 해제 하 여 이전 백업 하는 전체 숲 복구 제외를 제거 하거나 되돌릴 수 없습니다.  
+> 이 잠금 해제 작업은 이전 백업으로 전체 포리스트 복구를 수행하는 경우 외에는 되돌리거나 제거할 수 없습니다.  
   
-#### <a name="important-caveats"></a>중요 한  
-Windows Server 2003 및 Windows Server 2008 도메인 컨트롤러의 글로벌 RID 31 풀 때 Rid를 실행할 수 없는<sup>세인트</sup> 비트 잠금이 해제 되어 있습니다. Windows Server 2008 R2 domain controllers *can* use 31<sup>st</sup> bit RIDs *but only if* they have hotfix [KB 2642658](https://support.microsoft.com/kb/2642658) installed. 지원 되지 않는 및 패치되지 도메인 컨트롤러 잠금을 해제 하는 경우 본으로 글로벌 RID 풀을 처리 합니다.  
+#### <a name="important-caveats"></a>중요한 제한 사항  
+Windows Server 2003 및 Windows Server 2008 도메인 컨트롤러는 전역 RID 풀의 31번째<sup></sup> 비트가 잠금 해제된 경우 RID를 발급할 수 없습니다. Windows Server 2008 R2 도메인 컨트롤러 *수* 31를 사용 하 여<sup>st</sup> 비트의 Rid *경우에* 핫픽스 있는 [KB 2642658](https://support.microsoft.com/kb/2642658) 설치 합니다. 지원되지 않는 도메인 컨트롤러 및 패치가 적용되지 않은 도메인 컨트롤러는 잠금 해제된 경우 전역 RID 풀을 소진된 것으로 간주합니다.  
   
-이 기능은 도메인 기능 수준;에서 적용 되지 Windows Server 2012 또는 Windows Server 2008 R2 도메인 컨트롤러 업데이트 된 도메인의 존재 하는 훌륭한 주의 수행 합니다.  
+이 기능은 도메인 기능 수준에서 적용되지 않습니다. 도메인에는 Windows Server 2012 또는 업데이트된 Windows Server 2008 R2 도메인 컨트롤러만 존재합니다.  
   
-#### <a name="implementing-unlocked-global-rid-space"></a>구현 공간 잠금이 해제 되어 글로벌 제거  
-31 RID 풀의 잠금을 해제 하려면<sup>세인트</sup> 비트 (아래 참조) RID 최대 알림을 받은 후 다음 단계를 수행 합니다.  
+#### <a name="implementing-unlocked-global-rid-space"></a>잠금 해제된 전역 RID 공간 구현  
+RID 풀을 31 번째 잠금을 해제 하려면<sup>st</sup> 비트 (아래 참조)의 RID 최대값 알림을 받은 후 다음 단계를 수행 합니다.  
   
-1.  지우려는 마스터 역할 도메인 컨트롤러 Windows Server 2012에서 실행 되 고 있는지 확인 합니다. 그렇지 않은 경우 Windows Server 2012 도메인 컨트롤러로 전송할 수도 있습니다.  
+1.  RID 마스터 역할이 Windows Server 2012 도메인 컨트롤러에서 실행되고 있는지 확인합니다. 그렇지 않으면 Windows Server 2012 도메인 컨트롤러로 전송합니다.  
   
-2.  LDP.exe 실행  
+2.  LDP.exe를 실행합니다.  
   
-3.  클릭 하 고 **연결** 메뉴를 클릭 **연결** Windows Server 2012 제거 마스터에 389를 포트를 누른 **연결** 도메인 관리자 권한으로 합니다.  
+3.  **연결** 메뉴를 클릭하고 포트 389에서 Windows Server 2012 RID 마스터에 대해 **연결**한 다음 도메인 관리자로 **바인딩**을 클릭합니다.  
   
 4.  클릭 하 고 **찾아보기** 메뉴를 클릭 **수정**합니다.  
   
-5.  되도록 **DN** 비어 있습니다.  
+5.  확인 **DN** 비어 있습니다.  
   
-6.  **항목 특성 편집**를 입력 합니다.  
+6.  **항목 편집 특성**, 유형:  
   
     ```  
     SidCompatibilityVersion  
     ```  
   
-7.  **값**를 입력 합니다.  
+7.  **값**, 유형:  
   
     ```  
     1  
     ```  
   
-8.  되도록 **추가** 에서 선택한 **작업** 클릭 **Enter**합니다. 이 업데이트는 **항목 목록**합니다.  
+8.  **작업**에 **추가**가 선택되어 있는지 확인하고 **입력**을 클릭합니다. 이 업데이트는 **항목 목록**합니다.  
   
-9. 선택는 **동기** 및 **추가** 옵션을 클릭 한 다음 **실행**합니다.  
+9. 선택 된 **동기** 및 **확장** 옵션을 차례로 클릭 합니다. **실행**합니다.  
   
-    ![제거 발급](media/Managing-RID-Issuance/ADDS_RID_TR_LDPModify.png)  
+    ![RID 발급](media/Managing-RID-Issuance/ADDS_RID_TR_LDPModify.png)  
   
-10. 성공적으로 실행 되는 LDP 출력 창에 표시 합니다.  
+10. 성공한 경우 LDP 출력 창이 표시됩니다.  
   
     ```  
     ***Call Modify...  
@@ -138,59 +139,59 @@ Windows Server 2003 및 Windows Server 2008 도메인 컨트롤러의 글로벌 
   
     ```  
   
-    ![제거 발급](media/Managing-RID-Issuance/ADDS_RID_TR_LDPModifySuccess.png)  
+    ![RID 발급](media/Managing-RID-Issuance/ADDS_RID_TR_LDPModifySuccess.png)  
   
-11. 전 세계 RID 풀 증가 디렉터리-서비스-삼로 정보 이벤트 16655 해당 도메인 컨트롤러의 시스템 이벤트 로그를 검사 하 여 확인 합니다.  
+11. 해당 도메인 컨트롤러의 시스템 이벤트 로그에서 Directory-Services-SAM 정보 이벤트 16655를 검토하여 전역 RID 풀이 증가되었는지 확인합니다.  
   
-### <a name="rid-ceiling-enforcement"></a>최대 집행 제거  
-하기 위해 보호에 게 제공 하 고 관리 인식 상승, Windows Server 2012 인공 있는 최대를 열 (10) %Rid 글로벌 공간에서 남은 글로벌 RID 범위 내에 도입 되었습니다. 개 (1) 인공 최대 %, 내에 있는 경우 도메인 컨트롤러 RID 풀 요청 디렉터리-서비스-삼로 경고 이벤트 16656 로그에 기록의 시스템 이벤트 합니다. 지우려는 FSMO 마스터에 최대 10 %에 도달 디렉터리-서비스-삼로 이벤트 16657의 시스템 이벤트 로그에 기록 하 고는 할당할 더 이상 RID 풀 최대 재정의까지 합니다. 이렇게 하면 도메인에 있는 RID 마스터 상태 평가 하 고 잠재적인 런어웨이 RID 할당; 해결할 수 있습니다. 이 전체 RID 공간 낭비에서 도메인 보호 됩니다.  
+### <a name="rid-ceiling-enforcement"></a>RID 최대값 적용  
+보호 조치를 취하고 관리 인식을 강화하기 위해 Windows Server 2012에는 전역 RID 범위에 대한 인공 최대값(전역 공간에 남은 RID가 10%인 상태)이 도입되었습니다. 인공 최대값의 1% 이내에 들면 RID 풀을 요청하는 도메인 컨트롤러에서 해당 시스템 이벤트 로그에 Directory-Services-SAM 경로 이벤트 16656을 기록합니다. 또한 RID 마스터 FSMO에서 10% 상한값에 도달하면 해당 시스템 이벤트 로그에 Directory-Services-SAM 이벤트 16657을 기록하고 최대값을 재정의할 때까지 추가 RID 풀을 할당하지 않습니다. 따라서 도메인의 RID 마스터 상태를 평가하고 잠재적인 RID 할당 급증을 해결해야 합니다. 이는 도메인이 전체 RID 공간을 소진하는 것을 방지하기도 합니다.  
   
-이 최대 10 %의 사용 가능한 RID 공간 남은에서 하드 코드입니다. 즉, 최대 RID 마스터 할당 풀의 글로벌 RID 공간 90 비율에 맞게 RID 포함 된 때를 활성화 합니다.  
+이 최대값은 사용 가능한 RID 공간이 10% 남은 수준에서 하드 코드됩니다. 즉, RID 마스터가 전역 RID 공간의 90%에 해당하는 RID가 포함된 풀을 할당할 경우 최대값이 활성화됩니다.  
   
--   기본 도메인에 대 한 첫 번째 트리거 점은 2<sup>30</sup>-1 * 0.90 = 966,367,640 (또는 남은 107,374,183 Rid).  
+-   기본 도메인의 경우 첫 번째 트리거 시점은 2<sup>30</sup>-1 * 0.90 = 966,367,640(또는 남은 RID 107,374,183개)입니다.  
   
--   트리거 지점은 2 잠금이 해제 되어 31 비트 RID 공간이 도메인에 대 한<sup>31</sup>-1 * 0.90 = 1,932,735,282 Rid (또는 남은 214,748,365 Rid).  
+-   잠금 해제된 31비트 RID 공간이 있는 도메인의 경우 트리거 시점은 2<sup>31</sup>-1 * 0.90 = 1,932,735,282개의 RID(또는 남은 RID 214,748,365개)입니다.  
   
-RID 마스터 Active Directory 특성 설정 때 **를 RIDPoolAllocationEnabled** (일반 이름 **ms-DS-RID-Pool-Allocation-Enabled**) 개체에 대해 다음과 같습니다.  
+트리거되면 RID 마스터가 해당 개체에서 Active Directory 특성 **msDS-RIDPoolAllocationEnabled**(일반 이름 **ms-DS-RID-Pool-Allocation-Enabled**)를 FALSE로 설정합니다.  
   
-CN RID 관리자 CN$ = 시스템, DC = =*<domain>*  
+CN = RID Manager$, CN = System, DC =*<domain>*  
   
-16657 이벤트 쓰고 방지 RID 블록 발급 모든 도메인 컨트롤러에 추가 합니다. 도메인 컨트롤러 계속 이미 발행 된 모든 뛰어난 RID 풀 사용 합니다.  
+그러면 16657 이벤트가 기록되고 모든 도메인 컨트롤러에 대한 추가 RID 블록 발급이 차단됩니다. 도메인 컨트롤러는 이미 발급된 미처리 RID 풀을 계속 사용합니다.  
   
-차단이 해제 하 고 계속 풀 할당 RID 하도록, 값을 참을 설정 합니다. RID 마스터 수행한 다음 RID 할당에 특성 기본 하지 설정 값으로 돌아갑니다. 그 후 없는 추가 방 되며 결국 글로벌 RID 공간 소진 숲 복구 또는 도메인 마이그레이션 요구 합니다.  
+블록을 제거하고 RID 풀 할당이 계속되도록 허용하려면 이 값을 TRUE로 설정합니다. RID 마스터에서 다음에 RID 할당을 수행할 때 특성이 해당 기본값인 NOT SET 값으로 복원됩니다. 이후에는 더 이상 최대값이 없으므로 전역 RID 공간이 소진되어 포리스트를 복구하거나 도메인을 마이그레이션해야 합니다.  
   
-#### <a name="removing-the-ceiling-block"></a>최대 차단 제거  
-인공 최대를 한 번에 도달 블록을 제거 하려면 다음 단계를 수행 합니다.  
+#### <a name="removing-the-ceiling-block"></a>최대값 블록 제거  
+인공 최대값에 도달한 후 블록을 제거하려면 다음 단계를 수행합니다.  
   
-1.  지우려는 마스터 역할 도메인 컨트롤러 Windows Server 2012에서 실행 되 고 있는지 확인 합니다. 그렇지 않은 경우 Windows Server 2012 도메인 컨트롤러로 전송할 수도 있습니다.  
+1.  RID 마스터 역할이 Windows Server 2012 도메인 컨트롤러에서 실행되고 있는지 확인합니다. 그렇지 않으면 Windows Server 2012 도메인 컨트롤러로 전송합니다.  
   
-2.  LDP.exe 실행 합니다.  
+2.  LDP.exe를 실행합니다.  
   
-3.  클릭 하 고 **연결** 메뉴를 클릭 *연결* Windows Server 2012 제거 마스터에 389를 포트를 누른 **연결** 도메인 관리자 권한으로 합니다.  
+3.  **연결** 메뉴를 클릭하고 포트 389에서 Windows Server 2012 RID 마스터에 대해 *연결*한 다음 도메인 관리자로 **바인딩**을 클릭합니다.  
   
-4.  클릭는 **보기** 메뉴를 클릭 **트리**에 대 한 다음는 **Base DN** 제거 마스터의 고유한 도메인 이름 컨텍스트를 선택 합니다. 클릭 **확인**합니다.  
+4.  클릭 된 **보기** 메뉴를 클릭 **트리**, 에 대 한 다음는 **Base DN** RID 마스터의 자체 도메인 명명 컨텍스트를 선택 합니다. **확인**을 클릭합니다.  
   
-5.  탐색 창에서 자세히는 **CN 시스템 =** 컨테이너 클릭 하 고 있는 **CN RID 관리자 $ =** 개체 합니다. 마우스 오른쪽 단추로 클릭 하 고 클릭 **수정**합니다.  
+5.  탐색 창에서 드릴 다운은 **CN = System** 컨테이너를 클릭은 **CN = RID Manager$** 개체입니다. 마우스 오른쪽 단추로 클릭 하 고 클릭 **수정**합니다.  
   
-6.  항목 특성 편집에 입력 합니다.  
+6.  항목 편집 특성에 다음을 입력합니다.  
   
     ```  
     MsDS-RidPoolAllocationEnabled  
     ```  
   
-7.  **값**, 형식 (대문자):  
+7.  **값**에 다음(대문자)을 입력합니다.  
   
     ```  
     TRUE  
     ```  
   
-8.  선택 **교체** 에 **작업** 클릭 **Enter**합니다. 이 업데이트는 **항목 목록**합니다.  
+8.  **작업**에서 **바꾸기**를 선택하고 **입력**을 클릭합니다. 이 업데이트는 **항목 목록**합니다.  
   
-9. 설정에서 **동기** 및 **추가** 옵션을 클릭 한 다음 **실행**:  
+9. 사용 하도록 설정 된 **동기** 및 **확장** 옵션을 차례로 클릭 합니다. **실행**:  
   
-    ![제거 발급](media/Managing-RID-Issuance/ADDS_RID_TR_LDPRaiseCeiling.png)  
+    ![RID 발급](media/Managing-RID-Issuance/ADDS_RID_TR_LDPRaiseCeiling.png)  
   
-10. 성공적으로 실행 되는 LDP 출력 창에 표시 합니다.  
+10. 성공한 경우 LDP 출력 창이 표시됩니다.  
   
     ```  
     ***Call Modify...  
@@ -199,109 +200,109 @@ CN RID 관리자 CN$ = 시스템, DC = =*<domain>*
   
     ```  
   
-    ![제거 발급](media/Managing-RID-Issuance/ADDS_RID_TR_LDPRaiseCeilingSuccess.png)  
+    ![RID 발급](media/Managing-RID-Issuance/ADDS_RID_TR_LDPRaiseCeilingSuccess.png)  
   
-### <a name="other-rid-fixes"></a>다른 RID 수정 사항  
-이전 Windows Server 운영 체제 RID 풀 때 누수 있었습니다 누락 rIDSetReferences 특성 합니다. To resolve this problem on domain controllers that run Windows Server 2008 R2, install the hotfix from [KB 2618669](https://support.microsoft.com/kb/2618669).  
+### <a name="other-rid-fixes"></a>기타 RID 수정 프로그램  
+이전 Windows Server 운영 체제에서는 rIDSetReferences 특성이 누락된 경우 RID 풀 누수가 발생했습니다. Windows Server 2008 r 2를 실행 하는 도메인 컨트롤러에서이 문제를 해결 하려면에서 핫픽스를 설치 [KB 2618669](https://support.microsoft.com/kb/2618669)합니다.  
   
-### <a name="unfixed-rid-issues"></a>고정 되지 않은 RID 문제  
-여기 역사적 RID 누수를 켜 둬야 계정 만들기 실패 합니다. 계정 만들기, 오류 RID을 계속 사용 됩니다. 일반적인 예 사용자 복잡성 만족 하지 않는 한 암호를 만드는 것입니다.  
+### <a name="unfixed-rid-issues"></a>해결되지 않은 RID 문제  
+지금까지 계정 만들기에 실패한 경우 RID 누수가 발생했습니다. 즉, 계정을 만들 때 오류로 인해 여전히 RID가 소진됩니다. 일반적인 예로, 복잡성을 충족하지 않는 암호로 사용자를 만드는 경우가 있습니다.  
   
-### <a name="rid-fixes-for-earlier-versions-of-windows-server"></a>이전 버전의 Windows Server에 대 한 수정 프로그램 제거  
-모든 수정 및 변경 사항을 위의 출시 된 Windows Server 2008 R2 핫픽스 합니다. 현재 없는 Windows Server 2008 핫픽스 계획 된 나 사항이 진행 중에서입니다.  
+### <a name="rid-fixes-for-earlier-versions-of-windows-server"></a>이전 버전의 Windows Server에 대한 RID 수정 프로그램  
+위의 모든 수정 프로그램 및 변경 내용에서 Windows Server 2008 R2 핫픽스가 릴리스되었습니다. 현재 계획되거나 진행 중인 Windows Server 2008 핫픽스는 없습니다.  
   
 ## <a name="BKMK_Tshoot"></a>RID 발급 문제 해결  
   
 ### <a name="introduction-to-troubleshooting"></a>문제 해결 소개  
-제거 발급 문제 해결을 논리 선형 방법은 필요합니다. 로그 신중 하 게 경고 RID 발생 한 오류를 모니터링 하는 하지 않는 한 첫 번째에 문제가 있는지 실패 계정 만들기 될 수 있습니다. 여부; 증상 예상 되는 때를 파악 하는 RID 발급 문제를 해결 하는 키 많은 RID 발급 문제 하나만 도메인 컨트롤러에 영향을 줄 수 있으며, 구성 요소 개선와 관련이 없는 수 있습니다. 아래 간단한이 다이어그램 그러한 결정 명확 하 게 있습니다.  
+RID 발급 문제 해결에는 논리적이고 선형적인 방법이 필요합니다. RID에서 트리거된 경고 및 오류에 대해 이벤트 로그를 신중하게 모니터링하지 않으면 계정 만들기에 실패하는 문제가 가장 먼저 발생할 가능성이 높습니다. RID 발급 문제 해결의 핵심은 증상이 예상된 경우 또는 그렇지 않은 경우를 이해하는 것입니다. 많은 RID 발급 문제는 하나의 도메인 컨트롤러에만 영향을 줄 수 있으며 구성 요소 개선 사항과는 관련이 없습니다. 아래의 간단한 다이어그램은 이러한 사항에 대한 보다 명확한 의사 결정을 도와줍니다.  
   
-![제거 발급](media/Managing-RID-Issuance/adds_rid_issuance_troubleshooting.png)  
+![RID 발급](media/Managing-RID-Issuance/adds_rid_issuance_troubleshooting.png)  
   
 ### <a name="troubleshooting-options"></a>문제 해결 옵션  
   
-#### <a name="logging-options"></a>로그인 옵션  
-시스템 이벤트 로그 디렉터리-서비스-삼로 원본에서 발급 RID에에서 로그인 발생 합니다. 로깅 사용 되며, 최대 세부 정보 표시 수준에 기본적으로 구성 수도 있습니다. Windows Server 2012에서 새 구성 변경 없이 항목이 기록 하는 경우 문제 축제 (레거시 즉, 이전 Windows Server 2012)으로 취급 RID 발급 문제 Windows 2008 R2 또는 이전 운영 체제에 표시 됩니다.  
+#### <a name="logging-options"></a>로깅 옵션  
+RID 발급의 모든 로그는 시스템 이벤트 로그의 원본 Directory-Services-SAM 아래에 기록됩니다. 로깅은 기본적으로 사용하도록 설정되며 최대한의 자세한 표시 수준으로 구성됩니다. Windows Server 2012의 새로운 구성 요소 변경 내용에 대해 로깅된 항목이 없는 경우에는 이 문제를 Windows 2008 R2 또는 이전 운영 체제에서 확인된 기존의(Windows Server 2012 이전의 레거시) RID 발급 문제로 간주합니다.  
   
-#### <a name="utilities-and-commands-for-troubleshooting"></a>유틸리티 및 문제 해결에 대 한 명령  
-앞에서 언급 한 로그-으로 하지 설명 하는 문제를 해결 하려면 특히 이전 RID 발급 문제-다음과 같은 도구를 사용 하 여 시작 지점으로:  
+#### <a name="utilities-and-commands-for-troubleshooting"></a>문제 해결을 위한 유틸리티 및 명령  
+앞서 설명한 로그에 설명되지 않은 문제, 특히 이전 RID 발급 문제를 해결하려면 먼저 다음 도구 목록을 사용하는 것에서 시작합니다.  
   
 -   Dcdiag.exe  
   
 -   Repadmin.exe  
   
--   네트워크 3.4 모니터  
+-   Network Monitor 3.4  
   
-### <a name="general-methodology-for-troubleshooting-domain-controller-configuration"></a>일반 방법론 도메인 컨트롤러 구성 문제 해결  
+### <a name="general-methodology-for-troubleshooting-domain-controller-configuration"></a>도메인 컨트롤러 구성 문제 해결을 위한 일반적인 방법  
   
-1.  간단한 인해 발생 한 오류 사용 권한이 나 도메인 컨트롤러 가용성 문제가 있나요?  
+1.  단순한 사용 권한 또는 도메인 컨트롤러 가용성 문제로 인해 오류가 발생하나요?  
   
-    1.  보안 필요한 권한 없이 계정 만들기 하려고 하면? 액세스 거부 오류에 대 한 출력을 검사 합니다.  
+    1.  필요한 권한 없이 보안 주체를 만들려고 했나요? 액세스 거부 오류에 대한 출력을 검토해 보세요.  
   
-    2.  도메인 컨트롤러를 사용할 수 있나요? 반환된 오류 또는 LDAP 도메인 컨트롤러 가용성 메시지를 검사 합니다.  
+    2.  도메인 컨트롤러를 사용할 수 있나요? 반환된 오류나 LDAP 또는 도메인 컨트롤러 가용성 메시지를 검토해 보세요.  
   
-2.  특히 반환 오류 Rid, 언급 관련 지침으로 사용 되 고 있나요? 그렇다면 제공 된 지침을 따릅니다.  
+2.  반환된 오류에 RID가 구체적으로 언급되어 있고 지침으로 사용할 수 있는 구체적인 정보가 포함되어 있나요? 그렇다면 해당 지침을 따르세요.  
   
-3.  그렇지 않으면 비 특정 하지만 특히 반환 오류 Rid 언급 수 있을까요? 예를 들어, "Windows 만들 수 없습니다 개체 디렉터리 서비스 관련 식별자 할당 하지 못했습니다."  
+3.  반환된 오류에 RID가 구체적으로 언급되어 있지만 그 밖에 "디렉터리 서비스가 관련 식별자를 할당할 수 없어 개체를 만들 수 없습니다."와 같은 특정한 정보는 없나요?  
   
-    1.  Examine the System Event log on the domain controller for "legacy" (pre-Windows Server 2012) RID events detailed in [RID Pool Request](https://technet.microsoft.com/en-us/library/ee406152(WS.10).aspx) (16642, 16643, 16644, 16645, 16656).  
+    1.  "레거시" (Windows Server 2012)에 대 한 도메인 컨트롤러에 대 한 시스템 이벤트 로그에 자세히 설명 되어 RID 이벤트 [RID 풀 요청](https://technet.microsoft.com/library/ee406152(WS.10).aspx) (16642, 16643, 16644, 16645, 16656).  
   
-    2.  도메인 컨트롤러의 시스템 이벤트와 제거 마스터 아래에 자세히 설명 (16655, 16656, 16657)이이 항목의 새로운 블록 나타내는 이벤트를 검사 합니다.  
+    2.  도메인 컨트롤러 및 RID 마스터의 시스템 이벤트 로그에서 이 항목의 아래에 자세히 설명된 새 블록을 나타내는 이벤트(16655, 16656, 16657)를 검토해 보세요.  
   
-    3.  Repadmin.exe 및 제거 마스터 공개 된 Active Directory 복제 건강의 유효성을 검사 **Dcdiag.exe /test:ridmanager /v**합니다. 이러한 테스트 최종 없는 경우 도메인 컨트롤러 및 제거 마스터 간에 양면 네트워크 캡처를 사용 하도록 설정 합니다.  
+    3.  Repadmin.exe를 사용하여 Active Directory 복제 상태를 확인하고 **Dcdiag.exe /test:ridmanager /v**를 사용하여 RID 마스터 가용성을 확인해 보세요. 이러한 테스트를 통해 결론을 얻지 못한 경우 도메인 컨트롤러와 RID 마스터 간에 양쪽 네트워크 캡처를 사용하도록 설정해 보세요.  
   
 ### <a name="troubleshooting-specific-problems"></a>특정 문제 해결  
-다음 새 메시지의 시스템 이벤트 로그 Windows Server 2012 도메인 컨트롤러에에 로그인 합니다. 이러한 이벤트에 대 한 추적 System Center Operations Manager 같은 시스템 자동화 된 광고 건강 모니터링 해야 모든 눈에 띄는, 되며 몇 가지 중요 한 도메인 문제의 표시기 됩니다.  
+다음 새 메시지는 Windows Server 2012 도메인 컨트롤러의 시스템 이벤트 로그에 로깅됩니다. System Center Operations Manager와 같은 자동화된 AD 상태 추적 시스템에서 이러한 이벤트를 모니터링해야 합니다. 모든 이벤트가 중요하며, 일부는 심각한 도메인 문제를 나타냅니다.  
   
 |||  
 |-|-|  
 |이벤트 ID|16653|  
-|원본|삼-디렉터리-서비스|  
-|심각도|경고|  
-|메시지|관리자 권한으로 구성 된 계정-Rid (식별자)에 대 한 풀 크기는 지원 되는 최대 보다 더 깁니다. 도메인 컨트롤러 RID 마스터 때 %1의 최대 값 사용 됩니다.<br /><br />자세한 내용은 참조 [제거 블록 크기 제한을](../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/Managing-RID-Issuance.md#BKMK_RIDBlockMaxSize)합니다.|  
-|노트 및 해결 방법|지우려는 블록 크기 최대 값 15000 소수점 (16 진 3A98) 됩니다. 도메인 컨트롤러 15, 000 개 이상의 Rid 요청할 수 없습니다. 이 이벤트는 값이이 최대 이하로 값으로 설정 되어 있을 때까지 부팅할 때마다 로그입니다.|  
+|Source|Directory-Services-SAM|  
+|Severity|경고|  
+|메시지|관리자가 구성한 RID(계정 ID)의 풀 크기가 지원되는 최대값보다 큽니다. %1의 최대값은 도메인 컨트롤러가 RID 마스터인 경우 사용됩니다.<br /><br />자세한 내용은 참조 [RID 블록 크기 제한](../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/Managing-RID-Issuance.md#BKMK_RIDBlockMaxSize)합니다.|  
+|참고 사항 및 해결 방법|RID 블록 크기의 최대값은 이제 10진수 15,000(16진수 0x3A98)입니다. 도메인 컨트롤러에서는 15,000개가 넘는 RID를 요청할 수 없습니다. 값이 이 최대값 이하로 설정될 때까지 부팅 시마다 이 이벤트가 로깅됩니다.|  
   
 |||  
 |-|-|  
 |이벤트 ID|16654|  
-|원본|삼-디렉터리-서비스|  
-|심각도|알림|  
-|메시지|계정-Rid (식별자)의 풀 무효화 되었습니다. 예상 되는 다음과 같은 경우에 발생할 수 있습니다.<br /><br />1. 도메인 컨트롤러 백업에서 복원 됩니다.<br /><br />2. 실행 가상 컴퓨터에서 도메인 컨트롤러 스냅숏을에서 복원 됩니다.<br /><br />3. 관리자 풀을 무효화 수동으로 했습니다.<br /><br />See https://go.microsoft.com/fwlink/?LinkId=226247 for more information.|  
-|노트 및 해결 방법|이 이벤트 예기치 않은 모든 도메인 관리자에 게 문의 하 고 있는 작업을 수행 하는 중 확인 합니다. 디렉터리 서비스 이벤트 로그도 한 자세한 정보에 경우이 단계 중 하나를 수행 합니다.|  
+|Source|Directory-Services-SAM|  
+|Severity|정보|  
+|메시지|RID(계정 ID)가 무효화되었습니다. 이는 다음과 같은 경우에 발생할 수 있습니다.<br /><br />1. 도메인 컨트롤러가 백업에서 복원되었습니다.<br /><br />2. 가상 컴퓨터에서 실행 중인 도메인 컨트롤러가 스냅숏에서 복원되었습니다.<br /><br />3. 관리자가 풀을 수동으로 무효화했습니다.<br /><br />자세한 내용은 https://go.microsoft.com/fwlink/?LinkId=226247를 참조하세요.|  
+|참고 사항 및 해결 방법|이 이벤트가 예상치 못한 이벤트인 경우 모든 도메인 관리자에게 문의하여 이러한 작업 중 어떤 작업이 수행되었는지 확인하세요. 디렉터리 서비스 이벤트 로그에는 이러한 단계 중 하나가 수행된 시점에 대한 자세한 정보도 포함됩니다.|  
   
 |||  
 |-|-|  
 |이벤트 ID|16655|  
-|원본|삼-디렉터리-서비스|  
-|심각도|알림|  
-|메시지|%1 계정-Rid (식별자)에 대 한 전 세계 최대 증가 되었습니다.|  
-|노트 및 해결 방법|이 이벤트 예기치 않은 모든 도메인 관리자에 게 문의 하 고 있는 작업을 수행 하는 중 확인 합니다. 이 이벤트 메모 전체 RID 증가 풀 2 기본 이상 크기<sup>30</sup>자동으로 이루어집니다 하지 해야만 관리 작업입니다.|  
+|Source|Directory-Services-SAM|  
+|Severity|정보|  
+|메시지|RID(계정 ID)의 전역 최대값이 %1(으)로 증가했습니다.|  
+|참고 사항 및 해결 방법|이 이벤트가 예상치 못한 이벤트인 경우 모든 도메인 관리자에게 문의하여 이러한 작업 중 어떤 작업이 수행되었는지 확인하세요. 이 이벤트는 전체 RID 풀 크기가 기본값인 2<sup>30</sup>을 넘어 증가했음을 나타내며, 자동으로 발생하지 않습니다. 관리 작업에 의해서만 발생합니다.|  
   
 |||  
 |-|-|  
 |이벤트 ID|16656|  
-|원본|삼-디렉터리-서비스|  
-|심각도|경고|  
-|메시지|%1 계정-Rid (식별자)에 대 한 전 세계 최대 증가 되었습니다.|  
-|노트 및 해결 방법|별도 작업이 필요 합니다. 계정 식별자 (RID) 풀은이 도메인 컨트롤러에 할당 되었습니다. 풀 값이 도메인 총 사용할 수 있는 계정-식별자의 많은 부분을 사용 했습니다.<br /><br />도메인 총 사용할 수 있는 계정-식별자 남은 다음 임계값에 도달 하면 보호 메커니즘을 정품 인증 됩니다. %1 합니다.  보호 메커니즘 수동으로 다시 설정한 후 계정 식별자 할당 RID 마스터 도메인 컨트롤러에서 계정을 만들 수 없게 됩니다.<br /><br />See https://go.microsoft.com/fwlink/?LinkId=228610 for more information.|  
+|Source|Directory-Services-SAM|  
+|Severity|경고|  
+|메시지|RID(계정 ID)의 전역 최대값이 %1(으)로 증가했습니다.|  
+|참고 사항 및 해결 방법|조치가 필요합니다! RID(계정 ID) 풀이 이 도메인 컨트롤러에 할당되었습니다. 풀 값은 이 도메인이 사용 가능한 전체 계정 ID의 많은 부분을 사용했음을 나타냅니다.<br /><br />도메인에는 총 사용 가능한 계정 id의 남은 다음 임계값에 도달 하면 보호 메커니즘이 활성화 됩니다: %1입니다.  이 보호 메커니즘으로 인해 RID 마스터 도메인 컨트롤러에서 계정 ID 할당을 수동으로 다시 사용하도록 설정할 때까지 계정 만들기가 차단됩니다.<br /><br />자세한 내용은 https://go.microsoft.com/fwlink/?LinkId=228610를 참조하세요.|  
   
 |||  
 |-|-|  
 |이벤트 ID|16657|  
-|원본|삼-디렉터리-서비스|  
-|심각도|오류|  
-|메시지|별도 작업이 필요 합니다. 이 도메인은 총 사용할 수 있는 계정-Rid (식별자)의 많은 부분을 사용 했습니다. 총 사용할 수 있는 계정-식별자 남은 보호 메커니즘 활성화 된 미만: X % [인공 최대 인수] 합니다.<br /><br />보호 메커니즘 수동으로 다시 설정한 후 계정 식별자 할당 RID 마스터 도메인 컨트롤러에서 계정을 만들을 수 없습니다.<br /><br />것은 매우 중요 특정 진단 계정이이 도메인 수 있도록 생성 비정상적 속도로 계정 식별자를 사용 하 고 하지 다시 사용 하기 전에 수행 됩니다. 한 문제 식별 계정 만들기를 다시 사용 하기 전에 해결 해야 합니다.<br /><br />이후에 계정 만들기가 영구적으로에서 해제할 수이 도메인 도메인에 있는 계정 식별자 소모 오류를 진단 하 고 계정 식별자 소비의 비정상적 속도 모든 기본 문제 해결 될 수 있습니다.<br /><br />See https://go.microsoft.com/fwlink/?LinkId=228610 for more information.|  
-|노트 및 해결 방법|모든 도메인 관리자에 게 문의 하 고 알려 없이 추가 보안 사용자 보호이 기능을 재정의 때까지이 도메인에 만들 수 있습니다. 풀을 보호를 무시 하 고 전체 RID 가능 증가 하는 방법에 대 한 자세한 내용은 참조 하십시오 [글로벌 제거 공간 크기의 잠금을 해제](../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/Managing-RID-Issuance.md#BKMK_GlobalRidSpaceUnlock)합니다.|  
+|Source|Directory-Services-SAM|  
+|Severity|Error|  
+|메시지|조치가 필요합니다! 이 도메인이 사용 가능한 전체 RID(계정 ID)의 많은 부분을 사용했습니다. 사용 가능한 전체 계정 ID 중 남은 ID가 X%개[인공 최대값 인수]보다 적으므로 보호 메커니즘이 활성화되었습니다.<br /><br />이 보호 메커니즘으로 인해 RID 마스터 도메인 컨트롤러에서 계정 ID 할당을 수동으로 다시 사용하도록 설정할 때까지 계정 만들기가 차단됩니다.<br /><br />이 도메인이 비정상적으로 높은 비율의 계정 ID를 사용하지 못하도록 하려면 계정 만들기를 다시 사용하도록 설정하기 전에 특정 진단을 수행해야 합니다. 또한 계정 만들기를 다시 사용하도록 설정하기 전에 식별된 모든 문제를 해결해야 합니다.<br /><br />기본 문제의 진단 및 해결에 실패하면 비정상적으로 높은 비율의 계정 ID 사용으로 인해 도메인의 계정 ID가 소진되어 이후 이 도메인에서 계정을 영구적으로 만들지 못하게 될 수 있습니다.<br /><br />자세한 내용은 https://go.microsoft.com/fwlink/?LinkId=228610를 참조하세요.|  
+|참고 사항 및 해결 방법|모든 도메인 관리자에게 이 보호를 재정의할 때까지 이 도메인에서 더 이상 보안 주체를 만들 수 없음을 알려 주세요. 풀에서 보호를 재정의 하 고 가능한 전체 RID 증가 하는 방법에 대 한 자세한 내용은 참조 하십시오. [전역 RID 공간 크기 잠금 해제](../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/Managing-RID-Issuance.md#BKMK_GlobalRidSpaceUnlock)합니다.|  
   
 |||  
 |-|-|  
 |이벤트 ID|16658|  
-|원본|삼-디렉터리-서비스|  
-|심각도|경고|  
-|메시지|이 이벤트는 사용할 수 있는 계정-Rid (식별자)의 나머지 총 수량에 정기적으로 업데이트 합니다. 나머지 계정 식별자 수 약는: 1% 합니다.<br /><br />계정 식별자 계정을 만든 새 계정을 설정 하지 않고 도메인에 만들 수 소진은으로 사용 됩니다.<br /><br />See https://go.microsoft.com/fwlink/?LinkId=228745 for more information.|  
-|노트 및 해결 방법|모든 도메인 관리자에 게 문의 하 고 RID 소비 주요 중요 시점; 알려주므로는 알려 이 정상적인된 동작 또는 하지 보안 트러스티 생성 패턴을 검토 하 여 확인 합니다. 적이 이벤트를 표시 되지 않는 매우 평소 해당 이상 ~ 100 백만 RID 할당 된 되었음을 의미 합니다.|  
+|Source|Directory-Services-SAM|  
+|Severity|경고|  
+|메시지|이 이벤트는 사용 가능한 RID(계정 ID) 중 남아 있는 총 개수에 대한 정기적인 업데이트입니다. 남아 있는 계정 id 수는 약: %1입니다.<br /><br />계정 ID는 계정이 만들어질 때 사용됩니다. 계정 ID가 모두 소진되면 도메인에서 새 계정이 만들어지지 않습니다.<br /><br />자세한 내용은 https://go.microsoft.com/fwlink/?LinkId=228745를 참조하세요.|  
+|참고 사항 및 해결 방법|모든 도메인 관리자에게 RID 사용량이 주요 지표를 초과했음을 알려 주세요. 또한 보안 트러스티 만들기 패턴을 검토하여 이 동작이 예상된 동작인지 여부를 확인해야 합니다. 이 이벤트가 매우 비정상적인 것으로 간주되는 경우 이는 1억 개 이상의 RID가 할당되었음을 의미합니다.|  
   
-## <a name="see-also"></a>참조 하십시오  
-[Windows Server 2012에서에서 발급 RID 관리](http://blogs.technet.com/b/askds/archive/2012/08/10/managing-rid-issuance-in-windows-server-2012.aspx)  
+## <a name="see-also"></a>관련 항목  
+[Windows Server 2012에서에서 RID 발급 관리](http://blogs.technet.com/b/askds/archive/2012/08/10/managing-rid-issuance-in-windows-server-2012.aspx)  
   
 
 
