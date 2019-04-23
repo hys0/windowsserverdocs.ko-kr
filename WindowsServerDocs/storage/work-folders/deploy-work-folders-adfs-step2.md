@@ -1,5 +1,5 @@
 ---
-title: "AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포 - 2단계, AD FS 구성 후 작업"
+title: AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포 - 2단계, AD FS 구성 후 작업
 ms.prod: windows-server-threshold
 ms.technology: storage-work-folders
 ms.topic: article
@@ -8,30 +8,31 @@ ms.author: jeffpatt
 author: JeffPatt24
 ms.date: 4/5/2017
 ms.assetid: 0a48852e-48cc-4047-ae58-99f11c273942
-ms.openlocfilehash: 2a07f31e3040f63edfb8c73d454b6301aad46583
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.openlocfilehash: 87fdcf06c601d3362488eaf6a83e4f88ad191305
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59828234"
 ---
-# <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-2-ad-fs-post-configuration-work"></a>AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포: 2단계, AD FS 구성 후 작업
+# <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-2-ad-fs-post-configuration-work"></a>AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 단계 2에서 AD FS 구성 후 작업
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016
+>적용 대상: Windows Server (반기 채널), Windows Server 2016
 
 이 항목에서는 AD FS(Active Directory Federation Services) 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더를 배포하는 두 번째 단계를 설명합니다. 이 과정의 다른 단계는 다음 항목에서 찾을 수 있습니다.  
   
--   [AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포: 개요](deploy-work-folders-adfs-overview.md)  
+-   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 개요](deploy-work-folders-adfs-overview.md)  
   
--   [AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포: 1단계, AD FS 설치](deploy-work-folders-adfs-step1.md)  
+-   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 1 단계, AD FS 설정](deploy-work-folders-adfs-step1.md)  
   
--   [AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포: 3단계, 클라우드 폴더 설치](deploy-work-folders-adfs-step3.md)  
+-   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 단계 3, 작업 폴더 설정](deploy-work-folders-adfs-step3.md)  
   
--   [AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포: 4단계, 웹 응용 프로그램 프록시 설치](deploy-work-folders-adfs-step4.md)  
+-   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 4 단계, 웹 응용 프로그램 프록시 설정](deploy-work-folders-adfs-step4.md)  
   
--   [AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포: 5단계, 클라이언트 설치](deploy-work-folders-adfs-step5.md)  
+-   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 5 단계 클라이언트 설정](deploy-work-folders-adfs-step5.md)  
   
 > [!NOTE]
->   이 섹션에서는 Windows Server 2016 환경에 대한 지침을 다룹니다. Windows Server 2012 R2를 사용하는 경우 [Windows Server 2012 R2 지침](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx)을 따르세요.
+>   이 섹션에서는 Windows Server 2016 환경에 대한 지침을 다룹니다. Windows Server 2012 R2를 사용하는 경우 [Windows Server 2012 R2 instructions(Windows Server 2012 R2 지침)](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx)을 따르세요.
 
 1단계에서 AD FS를 설치하고 구성했습니다. 이제 다음과 같은 AD FS 구성 후 단계를 수행해야 합니다.  
   
@@ -57,7 +58,7 @@ AD FS에 대한 A 및 CNAME 레코드를 만들려면 다음 단계를 따릅니
   
 1.  도메인 컨트롤러에서 DNS 관리자를 엽니다.  
   
-2.  정방향 조회 영역 폴더를 확장하고 도메인을 마우스 오른쪽 단추로 클릭한 다음 **새로운 호스트(A)**를 선택합니다.  
+2.  정방향 조회 영역 폴더를 확장하고 도메인을 마우스 오른쪽 단추로 클릭한 다음 **새로운 호스트(A)** 를 선택합니다.  
   
 3.  **새 호스트** 창이 열립니다. **이름** 필드에 AD FS 서비스 이름의 별칭을 입력합니다. 테스트 예제에서는 **blueadfs**입니다.  
   
@@ -68,7 +69,7 @@ AD FS에 대한 A 및 CNAME 레코드를 만들려면 다음 단계를 따릅니
     >   
 4.  **IP 주소**에 AD FS 서버의 IP 주소를 입력합니다. 테스트 예제에서는 **192.168.0.160**입니다. **호스트 추가**를 클릭합니다.  
   
-5.  정방향 조회 영역 폴더에서 다시 한 번 도메인을 마우스 오른쪽 단추로 클릭하고 **새 별칭(CNAME)**을 선택합니다.  
+5.  정방향 조회 영역 폴더에서 다시 한 번 도메인을 마우스 오른쪽 단추로 클릭하고 **새 별칭(CNAME)** 을 선택합니다.  
   
 6.  **새 리소스 레코드** 창에서 별칭 이름 **enterpriseregistration**을 추가하고 AD FS 서버의 FQDN을 입력합니다. 이 별칭은 디바이스 연결에 사용되며 **enterpriseregistration**으로 불러야 합니다.
   
@@ -100,7 +101,7 @@ Add-DnsServerResourceRecord  -ZoneName "contoso.com" -Name enterpriseregistratio
   
 7.  **URL 구성** 페이지에서 **다음**을 클릭합니다.  
   
-8. **식별자 구성** 페이지에서 **https://windows-server-work-folders/V1** 식별자를 추가합니다. 이 식별자는 클라우드 폴더에서 사용하는 하드 코드 값이며, 클라우드 폴더가 AD FS와 통신할 때 이 식별자를 전송합니다. **다음**을 클릭합니다.  
+8. 에 **식별자 구성** 페이지에서 다음 식별자 추가: **https://windows-server-work-folders/V1**합니다. 이 식별자는 클라우드 폴더에서 사용하는 하드 코드 값이며, 클라우드 폴더가 AD FS와 통신할 때 이 식별자를 전송합니다. **다음**을 클릭합니다.  
   
 9. 액세스 제어 정책 선택 페이지에서 **모든 사용자 허용**을 선택하고 **다음**을 클릭합니다.  
   
@@ -120,13 +121,13 @@ Add-DnsServerResourceRecord  -ZoneName "contoso.com" -Name enterpriseregistratio
   
 17. 매핑 테이블에서 다음 값을 입력합니다.  
   
-    -   User-Principal-Name: UPN  
+    -   사용자-사용자 이름: UPN  
   
-    -   Display Name: 이름  
+    -   표시 이름: 이름  
   
-    -   Surname: 성  
+    -   성: 성  
   
-    -   Given-Name: 이름  
+    -   지정 된 이름: 지정된 이름  
   
 18. **마침**을 클릭합니다. 발급 변환 규칙 탭에 WorkFolders 규칙이 보이면 **확인**을 클릭합니다.  
   
@@ -146,11 +147,11 @@ AD FS의 신뢰 당사자 트러스트를 설치한 후에는 5개의 Windows Po
 이러한 옵션을 설정하려면 다음 명령을 사용합니다.  
   
 ```powershell  
-Set-ADFSRelyingPartyTrust -TargetIdentifier "https://windows-server-work-folders/V1" -EnableJWT $true   
-Set-ADFSRelyingPartyTrust -TargetIdentifier "https://windows-server-work-folders/V1" -Encryptclaims $false   
+Set-ADFSRelyingPartyTrust -TargetIdentifier "https://windows-server-work-folders/V1" -EnableJWT $true   
+Set-ADFSRelyingPartyTrust -TargetIdentifier "https://windows-server-work-folders/V1" -Encryptclaims $false   
 Set-ADFSRelyingPartyTrust -TargetIdentifier "https://windows-server-work-folders/V1" -AutoupdateEnabled $true   
-Set-ADFSRelyingPartyTrust -TargetIdentifier "https://windows-server-work-folders/V1" -IssueOAuthRefreshTokensTo AllDevices
-Grant-AdfsApplicationPermission -ServerRoleIdentifier "https://Windows-Server-Work-Folders/V1" -AllowAllRegisteredClients  
+Set-ADFSRelyingPartyTrust -TargetIdentifier "https://windows-server-work-folders/V1" -IssueOAuthRefreshTokensTo AllDevices
+Grant-AdfsApplicationPermission -ServerRoleIdentifier "https://windows-server-work-folders/V1" -AllowAllRegisteredClients -ScopeNames openid,profile  
 ```  
   
 ## <a name="enable-workplace-join"></a>Workplace Join을 사용하도록 설정  
@@ -185,17 +186,17 @@ Set-ADFSGlobalAuthenticationPolicy -DeviceAuthenticationEnabled $true
   
 4.  **사용 가능한 스냅인** 목록에서 **인증서**를 선택한 다음 **추가**를 클릭합니다. 인증서 스냅인 마법사가 시작됩니다.  
   
-5.  **컴퓨터 계정**을 선택하고 **다음**을 클릭합니다.  
+5.  **컴퓨터 계정**을 선택한 다음 **다음**을 클릭합니다.  
   
-6.  **로컬 컴퓨터: (이 콘솔이 실행되고 있는 컴퓨터)**를 선택하고 **마침**을 클릭합니다.  
+6.  **로컬 컴퓨터: (이 콘솔이 실행되고 있는 컴퓨터)** 를 선택하고 **마침**을 클릭합니다.  
   
 7.  **확인**을 클릭합니다.  
   
 8.  **Console Root\Certificates\(Local Computer)\Personal\Certificates** 폴더를 확장합니다.  
   
-9.  **AD FS 인증서**를 마우스 오른쪽 단추로 클릭하고 **모든 작업**을 클릭한 다음 **내보내기...**를 클릭합니다.  
+9.  **AD FS 인증서**를 마우스 오른쪽 단추로 클릭하고 **모든 작업**을 클릭한 다음 **내보내기...** 를 클릭합니다.  
   
-10. 인증서 내보내기 마법사가 열립니다. **예, 개인 키를 내보냅니다.**를 선택합니다.  
+10. 인증서 내보내기 마법사가 열립니다. **예, 개인 키를 내보냅니다.** 를 선택합니다.  
   
 11. **파일 내보내기 형식** 페이지에서 기본 옵션을 선택한 상태로 두고 **다음**을 클릭합니다.  
   
@@ -216,9 +217,9 @@ Set-ADFSGlobalAuthenticationPolicy -DeviceAuthenticationEnabled $true
   
 4.  **사용 가능한 스냅인** 목록에서 **인증서**를 선택한 다음 **추가**를 클릭합니다. 인증서 스냅인 마법사가 시작됩니다.  
   
-5.  **컴퓨터 계정**을 선택하고 **다음**을 클릭합니다.  
+5.  **컴퓨터 계정**을 선택한 다음 **다음**을 클릭합니다.  
   
-6.  **로컬 컴퓨터: (이 콘솔이 실행되고 있는 컴퓨터)**를 선택하고 **마침**을 클릭합니다.  
+6.  **로컬 컴퓨터: (이 콘솔이 실행되고 있는 컴퓨터)** 를 선택하고 **마침**을 클릭합니다.  
   
 7.  **확인**을 클릭합니다.  
   
@@ -234,16 +235,16 @@ Set-ADFSGlobalAuthenticationPolicy -DeviceAuthenticationEnabled $true
   
 13. **권한** 창에서 계정에 적어도 읽기 권한 이상을 부여하고 **확인**을 클릭합니다.  
   
-개인 키를 관리하는 옵션이 없는 경우 다음 명령을 실행해야 할 수도 있습니다. `certutil -repairstore my *`  
+개인 키를 관리 하는 옵션 목록에 없으면 다음 명령을 실행 해야 합니다. `certutil -repairstore my *`  
   
 ## <a name="verify-that-ad-fs-is-operational"></a>AD FS가 작동하는지 확인  
-AD FS가 작동하는지 확인하려면 브라우저 창을 열고 https://blueadfs.contoso.com/federationmetadata/2007-06/federationmetadata.xml로 이동합니다. 
+AD FS 작동 중인지를 확인 하려면 브라우저 창을 열고로 이동 https://blueadfs.contoso.com/federationmetadata/2007-06/federationmetadata.xml 
   
 브라우저 창에 아무 서식 없는 페더레이션 서버 메타데이터가 표시됩니다. SSL 오류나 경고 없이 데이터가 표시되면 페더레이션 서버가 정상적으로 작동하는 것입니다.  
   
-다음 단계: [AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포: 3단계, 클라우드 폴더 설치](deploy-work-folders-adfs-step3.md)  
+다음 단계: [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 단계 3, 작업 폴더 설정](deploy-work-folders-adfs-step3.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
 [클라우드 폴더 개요](Work-Folders-Overview.md)  
   
 

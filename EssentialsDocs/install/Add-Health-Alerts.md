@@ -1,6 +1,6 @@
 ---
-title: "건강 알림 추가"
-description: "Windows Server Essentials을 사용 하는 방법을 설명 합니다."
+title: 상태 경고 추가
+description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
@@ -13,43 +13,44 @@ author: nnamuhcs
 ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: cf0c062b92c687f5f7b33b419eafdca2dd3bbbfc
-ms.sourcegitcommit: db290fa07e9d50686667bfba3969e20377548504
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59828514"
 ---
-# <a name="add-health-alerts"></a>건강 알림 추가
+# <a name="add-health-alerts"></a>상태 경고 추가
 
->Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials에 적용 됩니다.
+>적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-건강 추가 기능에서 정의 알림과 상태 확인 네트워크 문제에 대 한 수리를 제공합니다. 건강 추가 기능에 코드 또는 특정 기능에 대 한 의료 정보를 확인 하는 데 사용 하는 데이터에 주석을 단 xml 파일 이루어져 있습니다. 건강 추가 기능은 개발자가 만든 및 관리자가 컴퓨터에 설치 되어 있습니다.  
+상태 추가 기능은 알림, 상태 검사 및 네트워크 문제 복구에 대한 정의를 제공합니다. 상태 추가 기능은 특정 기능에 대한 상태 정보를 평가하기 위해 사용하는 코드나 데이터에 주석을 추가하는 xml 파일로 구성되어 있습니다. 상태 추가 기능은 개발자가 만들고 관리자에 의해 서버 및 클라이언트 컴퓨터에 설치됩니다.  
   
- 참조 하십시오는 [Windows Server 솔루션 SDK](https://go.microsoft.com/fwlink/?LinkID=248648) 건강 추가 기능에 대 한 자세한 내용은 합니다.  
+ 상태 추가 기능을 만드는 방법에 대한 자세한 내용은 [Windows Server Solutions SDK](https://go.microsoft.com/fwlink/?LinkID=248648) 를 참조하세요.  
   
-## <a name="installing-health-add-in-files"></a>파일에서 추가 기능 설치 건강  
- 개발자가 파일 xml를 만든 후 파일의 복사본 클라이언트 컴퓨터에 적절 한 위치에 배치 해야 합니다.  
+## <a name="installing-health-add-in-files"></a>상태 추가 기능 파일 설치  
+ 개발자가 xml 파일을 만들고 나면 사용자는 서버와 클라이언트 컴퓨터에서 적절한 위치에 파일의 복사본을 배치해야 합니다.  
   
-#### <a name="to-install-the-xml-files-on-the-server"></a>서버에서 xml 파일을 설치 하려면  
+#### <a name="to-install-the-xml-files-on-the-server"></a>서버에 xml 파일을 설치하려면  
   
-1.  에 **%ProgramFiles%\Windows Server\Bin\Feature 정의** 폴더를 새 폴더 만들기 **MyHealthAddIn**합니다. 이 폴더 이름을 지정할 수 있습니다. 폴더의 이름을 기능 이름과 같은 된다는 것이 좋습니다.  
+1.  **%ProgramFiles%\Windows Server\Bin\Feature Definitions** 폴더에서 이름이 **MyHealthAddIn**인 새 폴더를 만듭니다. 이 폴더에 임의의 이름을 지정할 수 있습니다. 폴더 이름은 기능 이름과 동일하게 지정하는 것이 좋습니다.  
   
-2.  Definition.xml 및 Definition.xml.config 파일을 새 폴더로 복사 합니다.  
+2.  Definition.xml 및 Definition.xml.config 파일을 새 폴더에 복사합니다.  
   
-3.  해당 파일을 복사도 해야 조건 나 소송에 대해 이진 파일, 만든 경우 **%ProgramFiles%\Windows 실행**합니다.  
+3.  조건이나 작업에 대한 이진 파일을 만든 경우 이러한 파일을 **%ProgramFiles%\Windows Server\Bin**에도 복사해야 합니다.  
   
- 클라이언트 컴퓨터 예약된 작업 6 시간 마다 XML 파일 해당 위치를 가져오는 실행 합니다. 직접 작업을 실행 하 여 서버 클라이언트 컴퓨터와 동기화를 할 수 있습니다.  
+ 클라이언트 컴퓨터는 XML 파일을 적절한 위치로 가져오는 예약된 작업을 6시간마다 실행합니다. 작업을 수동으로 실행하여 클라이언트 컴퓨터와 서버 간 동기화를 강제로 실행할 수 있습니다.  
   
-#### <a name="to-install-the-xml-files-on-the-client-computer"></a>가지의 xml 파일을 설치 하려면  
+#### <a name="to-install-the-xml-files-on-the-client-computer"></a>클라이언트 컴퓨터에 xml 파일을 설치하려면  
   
-1.  작업 스케줄러를 엽니다.  
+1.  작업 Scheduler를 엽니다.  
   
-2.  실행는 **HealthDefintionUpdateTask** 작업 스케줄러에서 합니다.  
+2.  작업 Scheduler에서 **HealthDefintionUpdateTask**를 실행합니다.  
   
     > [!NOTE]
-    >  이 작업 이진 파일을 설치 하지 않습니다. 수동으로 이진 파일을 복사 해야는 **%ProgramFiles%\Windows 실행** 클라이언트 컴퓨터에서 폴더 합니다.  
+    >  이 작업은 이진 파일을 설치하지 않습니다. 클라이언트 컴퓨터의 **%ProgramFiles%\Windows Server\Bin** 폴더에 이진 파일을 수동으로 복사해야 합니다.  
   
-## <a name="see-also"></a>참조 하십시오  
+## <a name="see-also"></a>관련 항목  
  [만들기 및 이미지를 사용자 지정](Creating-and-Customizing-the-Image.md)   
- [추가로 사용자 지정](Additional-Customizations.md)   
- [배포에 대 한 이미지를 준비 중](Preparing-the-Image-for-Deployment.md)   
- [고객 만족도 테스트합니다.](Testing-the-Customer-Experience.md)
+ [추가 사용자 지정](Additional-Customizations.md)   
+ [배포용 이미지 준비](Preparing-the-Image-for-Deployment.md)   
+ [사용자 환경 테스트](Testing-the-Customer-Experience.md)

@@ -13,11 +13,11 @@ author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
 ms.openlocfilehash: 8973302fc8a0c6bdb5b19f9296e711dcc6465589
-ms.sourcegitcommit: e0479b0114eac7f232e8b1e45eeede96ccd72b26
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "2082499"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59826804"
 ---
 # <a name="manage-nano-server"></a>Nano 서버 관리
 
@@ -34,13 +34,13 @@ Nano 서버는 원격으로 관리됩니다. 로컬 로그온 기능이 전혀 �
   
 -   컴퓨터에 직렬 케이블을 연결하고 EMS를 사용합니다.  
   
--   Nano 서버를 구성할 때 할당한 컴퓨터 이름을 사용하면 ping으로 IP 주소를 가져올 수 있습니다. 정의합니다(예: `ping NanoServer-PC /4`).  
+-   Nano 서버를 구성할 때 할당한 컴퓨터 이름을 사용하면 ping으로 IP 주소를 가져올 수 있습니다. `ping NanoServer-PC /4`) 을 입력합니다.  
   
 ## <a name="using-windows-powershell-remoting"></a>Windows PowerShell 원격 기능 사용  
 Windows PowerShell 원격 기능으로 Nano 서버를 관리하려면 관리 컴퓨터의 신뢰할 수 있는 호스트 목록에 Nano 서버의 IP 주소를 추가하고, 사용하는 계정을 Nano 서버의 관리자에 추가하고, 해당 기능을 사용할 생각이라면 CredSSP를 사용하도록 설정해야 합니다.  
 
  >[!NOTE]  
-    > 대상 Nano 서버와 관리 컴퓨터가 동일한 AD DS 포리스트(또는 트러스트 관계의 포리스트)에 있는 경우 Nano 서버를 신뢰할 수 있는 호스트 목록에 추가하면 안 됩니다. 그 대신 정규화된 도메인 이름을 사용하여 Nano 서버에 연결할 수 있습니다. 예: PS C:\> Enter-PSSession -ComputerName nanoserver.contoso.com -Credential(Get-Credential)
+    > Nano Server를 추가 해서는 안 경우 대상 Nano 서버와 관리 컴퓨터가 동일한 AD DS 포리스트 (또는 트러스트 관계가 있는 포리스트)-신뢰할 수 있는 호스트 목록에 수 연결한 Nano 서버에 정규화 된 도메인 이름을 사용 하 여 예를 들어: PS C:\> Enter-pssession-ComputerName nanoserver.contoso.com-Credential (Get-credential)
   
   
 신뢰할 수 있는 호스트 목록에 Nano 서버를 추가하려면 관리자 권한 Windows PowerShell 명령 프롬프트에서 이 명령을 실행 합니다.  
@@ -60,9 +60,9 @@ Enter-PSSession -ComputerName $ip -Credential $user
 이제 정상적으로 Nano 서버에서 Windows PowerShell 명령을 실행할 수 있습니다.  
   
 > [!NOTE]  
-> 이 Nano 서버 릴리스에서 사용할 수 없는 Windows PowerShell 명령도 있습니다. 사용할 수 있는 명령을 보려면 다음 명령 실행 `Get-Command -CommandType Cmdlet`  
+> 이 Nano 서버 릴리스에서 사용할 수 없는 Windows PowerShell 명령도 있습니다. 사용할 수 있는 확인 하려면 실행 `Get-Command -CommandType Cmdlet`  
   
-다음 명령으로 원격 세션 중지 `Exit-PSSession`  
+명령 사용 하 여 원격 세션 중지 `Exit-PSSession`  
   
 ## <a name="using-windows-powershell-cim-sessions-over-winrm"></a>WinRM을 통해 Windows PowerShell CIM 세션 사용  
 WinRM(Windows Remote Management)을 통해 Windows PowerShell에서 CIM 세션 및 인스턴스를 사용하여 WMI 명령을 실행할 수 있습니다.  
@@ -91,15 +91,15 @@ WinRM(Windows Remote Management)을 사용하여 Nano 서버에서 원격으로 
   
 **winrm quickconfig**  
   
-**winrm set winrm/config/client @{TrustedHosts="&lt;Nano 서버 ip 주소"}**  
+**winrm 설정 winrm/config/client @{TrustedHosts = "< Nano 서버의 ip 주소"}**  
   
 **chcp 65001**  
   
-이제 Nano 서버에서 원격으로 명령을 실행할 수 있습니다. 예제:  
+이제 Nano 서버에서 원격으로 명령을 실행할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
   
-**winrs -r:\<Nano 서버 IP 주소> -u:Administrator -p:\<Nano 서버 관리자 암호> ipconfig**  
+**winrs-r:\<Nano 서버의 IP 주소 >-u: 관리자-p:\<Nano 서버 관리자 암호 > ipconfig**  
   
-Windows Remote Management에 대한 자세한 내용은 [Windows Remote Management(WinRM) Overview(WinRM(Windows 원격 관리) 개요)](https://technet.microsoft.com/library/dn265971.aspx)를 참조하세요.  
+Windows Remote Management에 대한 자세한 내용은 [WinRM(Windows 원격 관리) 개요](https://technet.microsoft.com/library/dn265971.aspx)를 참조하세요.  
    
    
   
@@ -122,26 +122,26 @@ Stop-NetEventSession [-Name]
   
 서비스 패키지 또는 핫픽스는 종종 .cab 파일이 포함된 KB 항목으로 다운로드됩니다. 다음 단계에 따라 .cab file 파일을 추출합니다. 그런 다음 -ServicingPackagePath 매개 변수를 사용하여 이 파일을 설치할 수 있습니다.  
   
-1.  서비스 패키지를 다운로드합니다(관련 기술 자료 문서에서 또는 [Microsoft 업데이트 카탈로그](https://catalog.update.microsoft.com/v7/site/home.aspx)에서). 로컬 디렉터리 또는 네트워크 공유에 저장합니다(예: C:\ServicingPackages).  
+1.  서비스 패키지를 다운로드합니다(관련 기술 자료 문서에서 또는 [Microsoft 업데이트 카탈로그](https://catalog.update.microsoft.com/v7/site/home.aspx)에서). 예를 들어 로컬 디렉터리 또는 네트워크 공유에 저장 합니다. C:\ServicingPackages  
 2.  추출된 서비스 패키지를 저장할 폴더를 만듭니다.  예: c:\KB3157663_expanded  
-3.  Windows PowerShell 콘솔을 열고 `Expand` 명령을 사용하여 `-f:*` 매개 변수 및 서비스 패키지를 추출할 경로가 포함된 서비스 패키지의 .msu 파일 경로를 지정합니다.  예:  `Expand "C:\ServicingPackages\Windows10.0-KB3157663-x64.msu" -f:* "C:\KB3157663_expanded"`  
+3.  Windows PowerShell 콘솔을 열고 `Expand` 명령을 사용하여 `-f:*` 매개 변수 및 서비스 패키지를 추출할 경로가 포함된 서비스 패키지의 .msu 파일 경로를 지정합니다.  예를 들어  `Expand "C:\ServicingPackages\Windows10.0-KB3157663-x64.msu" -f:* "C:\KB3157663_expanded"`  
   
     확장된 파일은 다음과 비슷하게 표시됩니다.  
-C:&gt;dir C:\KB3157663_expanded   
+C:>dir C:\KB3157663_expanded   
 C 드라이브의 볼륨은 OS  
 볼륨 일련 번호는 B05B-CC3D  
    
       C:\KB3157663_expanded의 디렉터리  
    
-      2016/04/19 오후 01:17    \<DIR>          .  
-      2016/04/19 오후 01:17    \<DIR>          ..  
-        2016/04/17 오전 12:31               517 Windows10.0-KB3157663-x64-pkgProperties.txt  
+      2016/04/19  오후 01:17    \<DIR>          .  
+      2016/04/19  오후 01:17    \<DIR>          ..  
+        2016/04/17  오전 12:31               517 Windows10.0-KB3157663-x64-pkgProperties.txt  
 2016/04/17  오전 12:30 AM        93,886,347 Windows10.0-KB3157663-x64.cab  
 2016/04/17  오전 12:31               454 Windows10.0-KB3157663-x64.xml  
 2016/04/17  오전 12:36           185,818 WSUSSCAN.cab  
                4개 파일     94,073,136바이트  
                2개 디렉터리  328,559,427,584바이트 여유 공간  
-4.  -ServicingPackagePath 매개 변수를 사용하여 `New-NanoServerImage` 명령을 실행하고 다음과 같이 이 디렉터리의 .cab 파일을 지정합니다. `New-NanoServerImage -DeploymentType Guest -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -ServicingPackagePath C:\KB3157663_expanded\Windows10.0-KB3157663-x64.cab`  
+4.  실행 `New-NanoServerImage` 예를 들어이 디렉터리의.cab 파일을 가리키는-ServicingPackagePath 매개 변수를 사용 하 여: `New-NanoServerImage -DeploymentType Guest -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -ServicingPackagePath C:\KB3157663_expanded\Windows10.0-KB3157663-x64.cab`  
 
 ## <a name="managing-updates-in-nano-server"></a>Nano Server에서 업데이트 관리
 
@@ -178,7 +178,7 @@ At line:1 char:16
    CimCmdlets.InvokeCimMethodCommand  
 ```  
 
-### <a name="install-all-available-updates"></a>사용 가능한 업데이트 모두 설치  
+### <a name="install-all-available-updates"></a>사용 가능한 모든 업데이트 설치  
 ---  
 다음 명령을 사용하여 사용 가능한 **모든** 업데이트를 한 번에 검색하여 다운로드 및 설치할 수 있습니다.  
 
@@ -224,7 +224,7 @@ WSUS에 대한 이러한 값이 설정되면 위 섹션의 명령은 해당 서�
 
 
 ## <a name="performance-and-event-monitoring-on-nano-server"></a>Nano 서버의 성능 및 이벤트 모니터링
-[comment]: # (Venkat Yalla 합니다.)
+[comment]: # (Venkat Yalla에서.)
 Nano 서버는 [ETW(Windows 용 이벤트 추적)](https://aka.ms/u2pa0i) 프레임 워크를 완벽하게 지원하지만, 추적 및 성능 카운터에 사용되는 몇 가지 친숙한 도구는 현재 Nano 서버에서 사용할 수 없습니다. 그러나 Nano 서버에는 대부분의 일반적인 성능 분석 시나리오를 수행할 수 있는 도구와 cmdlet이 있습니다.
 
 상위 수준 워크플로는 여느 Windows Server 설치와 똑같이 유지됩니다. 오버헤드가 낮은 추적은 대상(Nano 서버) 컴퓨터에서 수행되고, 그 결과로 얻는 추적 파일 및/또는 로그는 별도의 컴퓨터에서 [Windows Performance Analyzer](https://msdn.microsoft.com/library/windows/hardware/hh448170.aspx), [Message Analyzer](https://www.microsoft.com/download/details.aspx?id=44226) 등의 도구를 사용하여 오프라인으로 후 처리됩니다.
@@ -240,7 +240,7 @@ Nano 서버는 [ETW(Windows 용 이벤트 추적)](https://aka.ms/u2pa0i) 프레
 wpr.exe -providers
 ```
 
-사용자는 관심 있는 이벤트의 형식에 대한 출력을 필터링 할 수 있습니다. 예:
+사용자는 관심 있는 이벤트의 형식에 대한 출력을 필터링 할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 ```
 PS C:\> wpr.exe -providers | select-string "Storage"
 
@@ -284,7 +284,7 @@ Mode                LastWriteTime         Length Name
 > 다음 예에서는 단일 추적 공급자를 세션에 추가하는 방법을 보여 주지만, 공급자 GUID가 다른 추적 세션에서 ```Add-EtwTraceProvider``` cmdlet을 여러 차례 사용하여 여러 원본에서 추적을 사용하도록 설정하는 방법도 있습니다. 또 다른 방법은 아래에 설명된 ```wpr.exe``` 프로필을 사용하는 것입니다.
 
 ### <a name="record-traces-from-multiple-etw-providers"></a>여러 ETW 공급자에서 레코드 추적
-```-profiles``` [Windows Performance Recorder](https://msdn.microsoft.com/library/hh448229.aspx)의  옵션은 동시에 여러 동급자에서 추적을 활성화합니다. CPU, 네트워크, DiskIO 등 여러 가지 기본 제공 프로필 중에 선택할 수 있습니다.
+[Windows Performance Recorder](https://msdn.microsoft.com/library/hh448229.aspx)의 ```-profiles``` 옵션은 동시에 여러 동급자에서 추적을 활성화합니다. CPU, 네트워크, DiskIO 등 여러 가지 기본 제공 프로필 중에 선택할 수 있습니다.
 ```
 PS C:\Users\Administrator\Documents> wpr.exe -profiles 
 
@@ -349,7 +349,7 @@ PS C:\> Remove-AutologgerConfig -Name BootPnpLog
 다양한 시스템 또는 디스크 없는 시스템에서 부팅 및 설치 추적을 수집하려면 [설치 및 부팅 이벤트 수집](../administration/get-started-with-setup-and-boot-event-collection.md)을 고려해 보세요.
 
 ### <a name="capture-performance-counter-data"></a>성능 카운터 데이터 캡처
-일반적으로 Perfmon.exe GUI를 사용하여 성능 카운터 데이터를 모니터링합니다. Nano 서버에서는 그에 해당하는 ```Typeperf.exe``` 명령줄을 사용합니다. 예:
+일반적으로 Perfmon.exe GUI를 사용하여 성능 카운터 데이터를 모니터링합니다. Nano 서버에서는 그에 해당하는 ```Typeperf.exe``` 명령줄을 사용합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
 사용 가능한 카운터 쿼리--출력을 필터링하여 원하는 항목을 간편하게 찾을 수 있습니다.
 ```

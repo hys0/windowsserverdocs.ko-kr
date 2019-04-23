@@ -7,22 +7,22 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.localizationpriority: high
 ms.prod: windows-server-threshold
-ms.openlocfilehash: d941e9884dced40ce750645b662d8df73503bc41
-ms.sourcegitcommit: 475292afc919c6d17569f05007a97bc6b92dd225
+ms.openlocfilehash: e23d02fd8da96392f44874ad6ea4d6c40e2be940
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "9267779"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59828204"
 ---
-# Windows Admin Center
+# <a name="windows-admin-center"></a>Windows Admin Center
 
 >적용 대상: Windows Admin Center, Windows Admin Center 미리 보기
 
 Windows Admin Center를 시작합니다!
 
-**Windows Admin Center**(코드명 **Project Honolulu**)는 Windows Server 기본 제공 관리 도구의 혁신으로서, 로컬 및 원격 서버 관리의 모든 측면을 통합하는 단일 창입니다. 로컬로 배포되는 브라우저 기반 관리 환경이므로 인터넷 연결과 Azure를 사용할 필요가 없습니다. Windows Admin Center를 통해 인터넷에 연결되지 않은 개인 네트워크를 포함하여 배포의 모든 측면을 완전히 제어할 수 있습니다.
+**Windows Admin Center** (코드명 **프로젝트 브라 티**) Windows Server의 기본 관리 도구, 진화 된 것이 로컬 및 원격 서버 관리의 모든 측면을 통합 하는 투명 효과 단일 창이 있습니다. 로컬로 배포되는 브라우저 기반 관리 환경이므로 인터넷 연결과 Azure를 사용할 필요가 없습니다. Windows Admin Center를 통해 인터넷에 연결되지 않은 개인 네트워크를 포함하여 배포의 모든 측면을 완전히 제어할 수 있습니다.
 
-## 소개
+## <a name="introduction"></a>소개
 
 >[!VIDEO https://www.youtube.com/embed/PcQj6ZklmK0]
 
@@ -30,15 +30,15 @@ Windows Admin Center를 시작합니다!
 
 [PDF 다운로드](https://github.com/MicrosoftDocs/windowsserverdocs/raw/master/WindowsServerDocs/manage/windows-admin-center/media/WindowsAdminCenter1809Poster.pdf)
 
-## 빠른 시작
+## <a name="quick-start"></a>빠른 시작
 
 몇 분만에 자신의 환경에 Windows Admin Center를 구축 및 가동할 수 있습니다.
 
 1. [다운로드](https://aka.ms/windowsadmincenter)
 2. [설치](deploy/install.md)
-3. [시작하기](use/get-started.md)
+3. [시작](use/get-started.md)
 
-## 내용 한눈에 보기
+## <a name="contents-at-a-glance"></a>한눈에 콘텐츠
 
 <table>
     <tr></tr>
@@ -46,19 +46,19 @@ Windows Admin Center를 시작합니다!
         <td style="vertical-align: top;">
             <h3>이해</h3>
             <ul>
-            <li><a href="understand/what-is.md">Windows Admin Center란?</a>
+            <li><a href="understand/what-is.md">Windows Admin Center 란?</a>
             <li><a href="understand/faq.md">FAQ</a>
             <li><a href="understand/case-studies.md">사례 연구</a>
-            <li><a href="understand/related-management.md">관련 관리 제품</a>
+            <li><a href="understand/related-management.md">관련된 관리 제품</a>
             <li><a href="understand/videos.md">비디오</a>
             </ul>
         </td>
         <td style="vertical-align: top;">
-            <h3>요금제</h3>
+            <h3>계획</h3>
             <ul>
-            <li><a href="plan/installation-options.md">나에게 적합한 유형의 설치는 무엇입니까?</a>
+            <li><a href="plan/installation-options.md">적절 한는 설치의 유형은 무엇입니까?</a>
             <li><a href="plan/user-access-options.md">사용자 액세스 옵션</a>
-            <li><a href="plan/azure-integration-options.md">어떤 Azure 통합 옵션이 있습니까?</a>
+            <li><a href="plan/azure-integration-options.md">어떤 Azure 통합 옵션이 있나요?</a>
             <br>
             </ul>
         </td>
@@ -67,43 +67,43 @@ Windows Admin Center를 시작합니다!
         <td style="vertical-align: top;">
             <h3>배포</h3>
             <ul>
-            <li><a href="deploy/prepare-environment.md">사용자 환경 준비</a>
+            <li><a href="deploy/prepare-environment.md">환경 준비</a>
             <li><a href="deploy/install.md">Windows Admin Center 설치</a>
-            <li><a href="deploy/high-availability.md">고가용성 구현</a>
+            <li><a href="deploy/high-availability.md">고가용성을 사용 하도록 설정</a>
          </ul>
         </td>
         <td style="vertical-align: top;">
             <h3>구성</h3>
             <ul>
             <li><a href="configure/settings.md">Windows Admin Center 설정</a>
-            <li><a href="configure/user-access-control.md">사용자 액세스 제어 및 사용 권한</a>
+            <li><a href="configure/user-access-control.md">사용자 액세스 제어 및 권한</a>
             <li><a href="configure/using-extensions.md">확장</a>
             <li><a href="configure/azure-integration.md">Azure와 통합</a>
-            <li><a href="configure/manage-azure-vms.md">Windows Admin Center를 사용하여 Azure VM 관리</a>
+            <li><a href="configure/manage-azure-vms.md">Windows Admin Center 사용 하 여 Azure Vm 관리</a>
             </ul>
         </td>
     </tr>
     <tr>
         <td style="vertical-align: top;">
-            <h3>사용</h3>
+            <h3>이후</h3>
             <ul>
             <li><a href="use/get-started.md">시작 및 연결 추가</a>
             <li><a href="use/manage-servers.md">서버 관리</a>
-            <li><a href="use/manage-hyper-converged.md">하이퍼 컨버지드 인프라 관리</a>
+            <li><a href="use/manage-hyper-converged.md">하이퍼 수렴 형 인프라 관리</a>
             <li><a href="use/manage-failover-clusters.md">장애 조치 클러스터 관리</a>
-            <li><a href="use/manage-virtual-machines.md">가상 컴퓨터 관리</a>
-            <li><a href="use/azure-services.md">Azure 서비스 활용</a>
+            <li><a href="use/manage-virtual-machines.md">Virtual machines 관리</a>
+            <li><a href="use/azure-services.md">Azure 서비스를 활용</a>
             <li><a href="use/troubleshooting.md">일반적인 문제 해결 단계</a>
-            <li><a href="use/logging.md">로깅</a>
+            <li><a href="use/logging.md">Logging</a>
             <li><a href="use/known-issues.md">알려진 문제</a>
             </ul>
         </td>
         <td style="vertical-align: top;">
             <h3>확장</h3>
             <ul>
-            <li><a href="extend/extensibility-overview.md">확장 개요</a>
-            <li><a href="extend/understand-extensions.md">확장 이해</a>
-            <li><a href="extend/developing-extensions.md">확장 개발</a>
+            <li><a href="extend/extensibility-overview.md">확장의 개요</a>
+            <li><a href="extend/understand-extensions.md">이해 확장</a>
+            <li><a href="extend/developing-extensions.md">확장을 개발</a>
             <li><a href="extend/publish-extensions.md">가이드</a>
             <li><a href="extend/publish-extensions.md">확장 게시</a>
             </ul>
@@ -112,12 +112,11 @@ Windows Admin Center를 시작합니다!
 
 </table>
 
-## 릴리스 기록
+## <a name="release-history"></a>릴리스 기록
 
 최신 출시된 기능에 대해 자세히 알아보세요.
 
-- 버전 [1903](https://aka.ms/wac1903)은 Active Directory에서 Server 또는 PC 연결을 추가하는 기능인 Azure Monitor와 Active Directory, DHCP, DNS를 관리하는 새로운 도구의 이메일 알림을 가져옵니다.
-- 버전 [1902](https://aka.ms/wac1902)에 ACL, 게이트웨이 연결 및 논리 네트워크를 관리하기 위한 새로운 SDN 도구를 포함하는 소프트웨어 정의 네트워크(SDN) 관리에 대한 공유 연결 목록 및 향상된 기능이 추가되었습니다.
+- 버전 [1902] (https://aka.ms/wac1902) 소프트웨어 정의 네트워크 (sdn 소프트웨어) 관리, Acl, 게이트웨이 연결 및 논리 네트워크를 관리 하는 새로운 SDN 도구를 포함 하 여 공유 연결 목록 및 향상 된 기능을 추가 합니다.
 - 버전 [1812](https://aka.ms/wac1812)어두운 테마 (미리보기에서) 추가됨, 전원 구성 설정, BMC 정보 및 PowerShell 지원으로 관리 가능 [추가](./configure/using-extensions.md#manage-extensions-with-powershell) 및 [연결](./use/get-started.md#use-powershell-to-import-or-export-your-connections-with-tags).
 - 버전 [1809.5](https://aka.ms/wac1809.5) 는 플랫폼 전반에 걸쳐 다양한 품질 및 기능 향상과 버그 수정 및 하이퍼 컨버지드 인프라 관리 솔루션의 몇 가지 새로운 기능을 포함하는 GA 누적 업데이트입니다.
 - 버전 [1809](https://cloudblogs.microsoft.com/windowsserver/2018/09/20/windows-admin-center-1809-and-sdk-now-generally-available/) 는 이전에 미리보기에 있던 기능을 GA 채널에 가져온 GA 버전이었습니다.
@@ -132,8 +131,8 @@ Windows Admin Center를 시작합니다!
 - 버전 [1711](https://cloudblogs.microsoft.com/windowsserver/2017/12/01/1711-update-to-project-honolulu-technical-preview-is-now-available/) 요구가 높았던 도구(원격 데스크톱 및 PowerShell) 및 기타 개선 사항이 추가되었습니다.
 - 버전 [1709](https://cloudblogs.microsoft.com/windowsserver/2017/09/22/project-honolulu-technical-preview-is-now-available-for-download/)는 최초 공용 미리 보기 릴리스로 시작했습니다.
 
-## 업데이트 상태 유지
+## <a name="stay-updated"></a>최신 상태로 유지
 
-<a target="_blank" class="mscom-link twitter-follow-link" title="Twitter에서 Microsoft 팔로우" aria-label="Follow us on Twitter" data-info="Twitter" href="https://twitter.com/servermgmt"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR" alt="Follow us on Twitter" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR"></picture></a>
+<a target="_blank" class="mscom-link twitter-follow-link" title="Twitter에서 팔 로우" aria-label="Follow us on Twitter" data-info="Twitter" href="https://twitter.com/servermgmt"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR" alt="Follow us on Twitter" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR"></picture></a>
  | 
-<a target="_blank" class="mscom-link blogs-follow-link" title="블로그 읽기" aria-label="Visit our Blogs" data-info="Blogs" href="https://blogs.technet.microsoft.com/servermanagement/"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" alt="Follow us on Blogs" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw"></picture></a>
+<a target="_blank" class="mscom-link blogs-follow-link" title="이 블로그 읽기" aria-label="Visit our Blogs" data-info="Blogs" href="https://blogs.technet.microsoft.com/servermanagement/"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" alt="Follow us on Blogs" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw"></picture></a>

@@ -1,7 +1,7 @@
 ---
 ms.assetid: 9cafa3e1-8118-4a75-a7c2-1dbe40b1a444
-title: "청구 규칙 구성"
-description: 
+title: 클레임 규칙 구성
+description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -10,37 +10,38 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.openlocfilehash: f9e0509e2f870fd0edc7f0c6a241d789945e7ccb
-ms.sourcegitcommit: 70c1b6cedad55b9c7d2068c9aa4891c6c533ee4c
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59829414"
 ---
-# <a name="configure-claim-rules"></a>클레임은 규칙 구성
+# <a name="configure-claim-rules"></a>클레임 규칙 구성
 
->적용 대상: Windows Server 2016, Windows Server 2012 r 2
+>적용 대상: Windows Server 2016, Windows Server 2012 R2
 
-Claims\ 기반 id 모델에서 Active Directory Federation Services \(AD FS\) federation 서비스로 서의 기능은 클레임의 집합을 포함 한 토큰 드릴 것입니다. 청구 규칙 규정 ADFS 문제 클레임 관련 의사 결정 합니다. 클레임 규칙과 모든 서버 구성 데이터 ADFS 구성 데이터베이스에 저장 됩니다.  
+클레임에서\-기반된 id 모델, Active Directory Federation Services의 기능 \(AD FS\) services 클레임 집합이 포함 된 토큰을 발급 하는 페더레이션으로 합니다. 클레임 규칙은 AD FS에서 발급 하는 클레임 관련 하 여 의사 결정을 제어 합니다. 클레임 규칙 및 모든 서버 구성 데이터는 AD FS 구성 데이터베이스에 저장 됩니다.  
   
-Adfs은 클레임 형태의 제공 되는 id 정보 및 상황에 맞는 기타 정보를 기반으로 하는 발급 결정 합니다. 높은 수준의 ADFS 하나를 수행 하 여 규칙 프로세서 클레임 입력으로 설정 다양 한 변환 수행 하 고 다음 출력으로 클레임의 다른 세트를 반환 작동 합니다. 
+AD FS 클레임의 형태로 제공 되는 id 정보 및 기타 컨텍스트 정보를 기반으로 하는 발급 결정을 내립니다. 높은 수준에서 AD FS 작동 하나를 수행 하 여 규칙 프로세서 클레임 집합을 입력으로 다양 한 변환 수행 하 고 결과로 다른 클레임 집합을 반환 합니다. 
 
-다음 항목은 만드는 데 사용 규칙을 ADFS 처리할 다음과 같습니다. 
+다음 항목을 도와 AD FS에서 처리 하는 규칙 만들기: 
   
--   [규칙을 통해 전달 하거나 수신 클레임 필터링 만들기](Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim.md)  
+-   [통과 또는 들어오는 클레임을 필터링 하는 규칙 만들기](Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim.md)  
   
--   [모든 사용자가 허용 하는 규칙 만들기](Create-a-Rule-to-Permit-All-Users.md)  
+-   [모든 사용자를 허용 하는 규칙 만들기](Create-a-Rule-to-Permit-All-Users.md)  
   
--   [허용 하거나 사용자가 수신 클레임에 따라 거부할 규칙 만들기](Create-a-Rule-to-Permit-or-Deny-Users-Based-on-an-Incoming-Claim.md)  
+-   [허용 또는 거부 들어오는 클레임을 기반으로 하는 사용자를 위한 규칙 만들기](Create-a-Rule-to-Permit-or-Deny-Users-Based-on-an-Incoming-Claim.md)  
   
--   [LDAP 특성 클레임 파일로 보낼 규칙 만들기](Create-a-Rule-to-Send-LDAP-Attributes-as-Claims.md)  
+-   [클레임으로 LDAP 특성을 보내도록 규칙 만들기](Create-a-Rule-to-Send-LDAP-Attributes-as-Claims.md)  
   
--   [클레임으로 보내기 그룹 구성원에 규칙 만들기](Create-a-Rule-to-Send-Group-Membership-as-a-Claim.md)  
+-   [클레임으로 보내기 그룹 멤버 자격 규칙 만들기](Create-a-Rule-to-Send-Group-Membership-as-a-Claim.md)  
   
--   [수신 클레임 변환할 규칙 만들기](Create-a-Rule-to-Transform-an-Incoming-Claim.md)  
+-   [들어오는 클레임 변환 규칙 만들기](Create-a-Rule-to-Transform-an-Incoming-Claim.md)  
   
--   [인증 방법을 클레임 보내려면 규칙 만들기](Create-a-Rule-to-Send-an-Authentication-Method-Claim.md) 
--   [AD FS 1.x 호환 클레임 보내려면 규칙 만들기](Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim.md) 
+-   [인증 방법 클레임을 보내도록 규칙 만들기](Create-a-Rule-to-Send-an-Authentication-Method-Claim.md) 
+-   [AD FS 1.x 호환 클레임을 보내도록 규칙 만들기](Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim.md) 
   
--   [사용 하 여 사용자 지정 규칙 클레임 보낼 규칙 만들기](Create-a-Rule-to-Send-Claims-Using-a-Custom-Rule.md)  
+-   [사용자 지정 규칙을 사용 하 여 클레임을 보내도록 규칙 만들기](Create-a-Rule-to-Send-Claims-Using-a-Custom-Rule.md)  
 
-## <a name="see-also"></a>참조 하십시오  
+## <a name="see-also"></a>관련 항목  
 [AD FS 작업](../../ad-fs/AD-FS-2016-Operations.md) 

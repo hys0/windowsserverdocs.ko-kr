@@ -1,201 +1,202 @@
 ---
 ms.assetid: 79b9c912-ea3e-4679-ab41-893e096c4d09
-title: "부록 B-권한이 계정과 Active Directory에 그룹"
-description: 
-author: billmath
-ms.author: billmath
-manager: femila
+title: 부록 B-권한 있는 계정 및 Active Directory에서 그룹을
+description: ''
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: c4f98b1b68ebdf290ba15b75274d7a876912565b
-ms.sourcegitcommit: db290fa07e9d50686667bfba3969e20377548504
+ms.openlocfilehash: 4423bcc5357dd3010c63208afbcb0c9620e5b82f
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59830434"
 ---
-# <a name="appendix-b-privileged-accounts-and-groups-in-active-directory"></a>부록 b: 권한이 있는 계정 및 그룹 Active Directory에
+# <a name="appendix-b-privileged-accounts-and-groups-in-active-directory"></a>부록 B: 권한 있는 계정 및 Active Directory의 그룹
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
-## <a name="appendix-b-privileged-accounts-and-groups-in-active-directory"></a>부록 b: 권한이 있는 계정 및 그룹 Active Directory에  
-"권한" 계정과 그룹 Active Directory에 하는 강력한 권한, 권한 및 사용 권한을 부여 되 Active Directory 및 도메인에 가입 거의 모든 작업을 수행 하도록 허용 하는입니다. 이 부록 권한을 권리에 논의 하 시작 되며 사용 권한 이어서 "최고 권한" 계정과 Active Directory에 있는 그룹에 대 한 정보, 가장 강력한 계정과 그룹 됩니다.  
+## <a name="appendix-b-privileged-accounts-and-groups-in-active-directory"></a>부록 B: 권한 있는 계정 및 Active Directory의 그룹  
+Active Directory의 "권한 있는" 계정 및 그룹을 강력한 권한, 권한 및 사용 권한을 부여 되어 Active Directory 및 도메인에 가입 된 시스템에서 거의 모든 작업을 수행할 수 있도록 하는입니다. 이 부록 권한, 권한, 사용 하 여 시작 하 고 사용 권한을 가장 강력한 계정 및 그룹 즉, "최고 권한" 계정 및 Active Directory의 그룹에 대 한 정보로 수행 합니다.  
 
-기본 제공 및 기본 계정과 자녀의 권한 뿐 아니라 Active Directory에 그룹에 대 한 정보가 제공 됩니다. 최고 권한 계정과 그룹을 보호 하기 위한 특정 구성 권장을 제공 되는 별도 부록으로 있지만이 부록 식별 사용자 및 그룹 보안에 초점 해야 하는 데 도움이 되는 배경 정보를 제공 합니다. 손상 Active Directory 설치도 삭제 공격자에서 사용할 수 있으므로 이렇게 해야 합니다.  
+기본 제공 및 기본 계정 및 해당 권한 외에도 Active Directory의 그룹에 대 한 정보도 제공 됩니다. 특정 구성 권장 사항은 가장 높은 권한 계정 및 그룹을 보호 하기 위한 별도 부록으로 제공 하지만이 부록 사용자 및 보안에 중점을 두어야 하는 그룹을 식별 하는 데 도움이 되는 배경 정보를 제공 합니다. 손상 하 고 Active Directory 설치를 파괴도 공격자가 활용할 수 있으므로 이렇게 해야 합니다.  
 
-### <a name="rights-privileges-and-permissions-in-active-directory"></a>권한과 권한을, Active Directory에 사용  
-혼동 및 Microsoft 로부터 설명서 내 에서도 상반 된 권한, 권한 및 권한을 간의 차이점 될 수 있습니다. 이 문서에 사용 되는이 여기서 각각의 특성 중 일부를 설명 합니다. 이러한 설명 간주 하지 말아야 기타 Microsoft 문서에 대 한 권한이이 사용 약관 다르게 사용 될 수 있습니다.  
+### <a name="rights-privileges-and-permissions-in-active-directory"></a>권한, 권한 및 Active Directory의 사용 권한  
+권한, 권한 및 권한 간의 차이점은 혼란 스 러 모순 설명서 Microsoft에서 내 에서도 사용할 수 있습니다. 이 문서에 사용 되는이 섹션에서는 각각의 특성 중 일부 설명 합니다. 이러한 설명은 간주 되지 않아야 다른 Microsoft 문서에 대 한 신뢰할 수 있는 이러한 용어를 다르게 사용 될 수 있습니다.  
 
-#### <a name="rights-and-privileges"></a>권한  
-권한 효과적으로 같은 시스템 수준의 하는 기능이 등 사용자가, 서비스, 컴퓨터 또는 그룹 보안 사용자에 게 부여 됩니다. 인터페이스 IT 전문가가 일반적으로 사용 되는이 일반적으로 라고 "권한" 또는 "사용자 권한" 하 고 자주 그룹 정책 개체도 지정 됩니다. 다음 스크린샷 표시 되는 가장 일반적인 사용자 권한 보안 사용자 지정할 수 있는 몇 가지 (Windows Server 2012 도메인에 기본 도메인 컨트롤러 GPO 표시) 합니다. 일부 이러한 권한에 적용 Active Directory 등의 **위임 신뢰할 수 있도록 컴퓨터 및 사용자 계정을** 사용자와 같은 다른 권리는 Windows 운영 체제에 적용 되는 동안 올바른 **시스템 시간을 변경할**합니다.  
+#### <a name="rights-and-privileges"></a>권한 및 사용 권한  
+권한 및 특권와 동일한 시스템 차원의 기능을 사용자, 서비스, 컴퓨터 또는 그룹과 같은 보안 주체에 부여 되어 시작 됩니다. IT 전문가에 게 일반적으로 사용 되는 인터페이스에서이 일반적으로 라고 "권한" 또는 "사용자 권한이" 하 고 그룹 정책 개체에 의해 할당 된 경우가 많습니다. 다음 스크린샷은 일부의 보안 주체에 할당할 수 있는 가장 일반적인 사용자 권한 (Windows Server 2012 도메인에서 기본 도메인 컨트롤러 GPO 나타냅니다). 와 같은 Active Directory에 적용이 권한 중 일부는 **컴퓨터 및 사용자 계정을 위임용으로 신뢰할 수** 사용자와 같은 다른 권한이 Windows 운영 체제에 적용 하는 동안에 권한을 **시스템 시간 변경**합니다.  
 
-![권한이 있는 계정 및 그룹](media/Appendix-B--Privileged-Accounts-and-Groups-in-Active-Directory/SAD_8.gif)  
+![권한 있는 계정 및 그룹](media/Appendix-B--Privileged-Accounts-and-Groups-in-Active-Directory/SAD_8.gif)  
 
-그룹 정책 개체 편집기 등 인터페이스에서 이러한 할당할 수 있는 기능을 모두 이라고에 광범위 하 게 사용자 권한 합니다. 하지만 실제로, 사용자는 일부 권한만 프로그래밍 방식으로 라고 권리를 다른 사용자는 프로그래밍 방식으로 라고 권한을 동안 합니다. 표 B-1: 사용자 권한 제공 가장 일반적인 할당할 수 사용자 권한 및 해당 프로그래밍 방식으로 상수의 일부 합니다. 그룹 정책 및 기타 인터페이스 참조 하지만 권한으로 이러한 모든, 일부 프로그래밍 방식으로으로 구분 됩니다 권리를 권한을으로 정의 다른 사람이 동안.  
+그룹 정책 개체 편집기와 같은 인터페이스에 할당할 수 있는 이러한 기능은 모두 라고 광범위 하 게 사용자 권한. 그러나 실제로 일부 사용자 권한은 프로그래밍 방식으로 라고 권한을 다른 사용자는 프로그래밍 방식으로 라고 권한 하는 동안. 테이블 B-1: 사용자 권한과 권한을 몇 가지 가장 일반적인 할당할 수 있는 사용자 권한 및 프로그래밍 방식으로 해당 상수를 제공 합니다. 그룹 정책 및 다른 인터페이스를 참조 하지만 이러한 사용자 권한으로 모든, 일부 프로그래밍 방식으로 식별 됩니다 권한의으로 동안 다른 사용자 권한으로 정의 됩니다.  
 
-각은 아래에 나열 된 사용자 권한에 대 한 자세한 내용은 대 한 링크를 표에서 사용 또는 표시 [위협과 대책 가이드: 권한](https://technet.microsoft.com/library/hh125917(v=ws.10).aspx) 에 [위협과 취약성 Mitigation](https://technet.microsoft.com/library/cc755181(v=ws.10).aspx) Microsoft TechNet 사이트에서 Windows Server 2008 r 2에 대 한 가이드 합니다. Windows Server 2008에 해당 정보를 참조 하세요 [권한](https://technet.microsoft.com/library/dd349804(v=WS.10).aspx) 에 [위협과 취약성 Mitigation](https://technet.microsoft.com/library/cc755181(v=ws.10).aspx) Microsoft TechNet 사이트에 대 한 설명서 합니다. 이 문서 작성, 일부 터 Windows Server 2012에 대 한 해당 설명서 하지 아직 게시 됩니다.  
+각 사용자 권한에 다음 표에 나열 된에 대 한 자세한 내용은 표의 링크를 사용 하 여 또는 참조 [위협 및 대책 가이드: 사용자 권한](https://technet.microsoft.com/library/hh125917(v=ws.10).aspx) 에 [위협 및 취약점 완화](https://technet.microsoft.com/library/cc755181(v=ws.10).aspx) Microsoft TechNet 사이트에서 Windows Server 2008 R2에 대 한 가이드입니다. Windows Server 2008에 적용 가능한 사용 되는 정보를 참조 하십시오 [사용자 권한](https://technet.microsoft.com/library/dd349804(v=WS.10).aspx) 에 [위협 및 취약점 완화](https://technet.microsoft.com/library/cc755181(v=ws.10).aspx) Microsoft TechNet 사이트에 대 한 설명서입니다. 이 문서를 작성할 당시 Windows Server 2012에 대 한 해당 설명서 아직 게시 되지 않은 합니다.  
 
 > [!NOTE]  
-> 이 문서에서는 "권한" 및 "사용자 권한" 달리 명시 권한을 식별 하는 데 사용 됩니다.  
+> 이 문서에서는 "권한" 및 "사용자 권한을" 달리 지정 하지 않으면 권한과 사용 권한을 식별 하는 데 사용 됩니다.  
 
-##### <a name="table-b-1-user-rights-and-privileges"></a>표 B-1: 사용자 권리와 권한  
+##### <a name="table-b-1-user-rights-and-privileges"></a>테이블 B-1: 사용자 권한  
 
 |||  
 |-|-|  
-|**그룹 정책에서 즉시 사용자**|**상수의 이름**|  
-|[신뢰할 수 있는 발신자로 자격 증명 관리자 액세스](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_2)|SeTrustedCredManAccessPrivilege|  
-|[네트워크에서이 컴퓨터에 액세스](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_1)|SeNetworkLogonRight|  
-|[운영 체제의 일환으로 작동 합니다.](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_3)|내부적|  
+|**사용자 그룹 정책에서 오른쪽**|**상수의 이름**|  
+|[신뢰할 수 있는 호출자로 액세스 자격 증명 관리자](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_2)|SeTrustedCredManAccessPrivilege|  
+|[네트워크에서이 컴퓨터 액세스](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_1)|SeNetworkLogonRight|  
+|[운영 체제의 일부로 작동](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_3)|SeTcbPrivilege|  
 |[도메인에 워크스테이션 추가](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_4)|SeMachineAccountPrivilege|  
-|[메모리 할당량 프로세스에 대 한 조정](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_5)|SeIncreaseQuotaPrivilege|  
-|[로컬 로그 허용](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_6)|SeInteractiveLogonRight|  
-|[로그온 터미널 서비스를 통해 허용](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_7)|SeRemoteInteractiveLogonRight|  
-|[파일과 디렉터리가 백업](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_8)|SeBackupPrivilege|  
-|[사용 안 함 통과 확인](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_9)|SeChangeNotifyPrivilege|  
+|[프로세스의 메모리 할당량 조정](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_5)|SeIncreaseQuotaPrivilege|  
+|[로컬 로그온 허용](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_6)|SeInteractiveLogonRight|  
+|[터미널 서비스를 통한 로그온 허용](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_7)|SeRemoteInteractiveLogonRight|  
+|[파일 및 디렉터리 백업](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_8)|SeBackupPrivilege|  
+|[트래버스 검사 무시](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_9)|SeChangeNotifyPrivilege|  
 |[시스템 시간 변경](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_10)|SeSystemtimePrivilege|  
 |[표준 시간대 변경](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_11)|SeTimeZonePrivilege|  
 |[페이지 파일 만들기](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_12)|SeCreatePagefilePrivilege|  
 |[토큰 개체 만들기](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_13)|SeCreateTokenPrivilege|  
-|[전 세계 개체 만들기](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_14)|SeCreateGlobalPrivilege|  
+|[전역 개체 만들기](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_14)|SeCreateGlobalPrivilege|  
 |[영구 공유 개체 만들기](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_15)|SeCreatePermanentPrivilege|  
 |[기호 링크 만들기](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_16)|SeCreateSymbolicLinkPrivilege|  
-|[프로그램](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_17)|SeDebugPrivilege|  
-|[네트워크에서이 컴퓨터에 대 한 액세스 거부](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_18)|SeDenyNetworkLogonRight|  
-|[로그온 일괄 작업으로 거부](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_18a)|SeDenyBatchLogonRight|  
-|[로그온 서비스 거부](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_19)|SeDenyServiceLogonRight|  
+|[프로그램 디버그](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_17)|SeDebugPrivilege|  
+|[네트워크에서이 컴퓨터 액세스 거부](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_18)|SeDenyNetworkLogonRight|  
+|[일괄 작업으로 로그온 거부](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_18a)|SeDenyBatchLogonRight|  
+|[서비스로 로그온 거부](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_19)|SeDenyServiceLogonRight|  
 |[로컬 로그온 거부](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_20)|SeDenyInteractiveLogonRight|  
-|[로그온 터미널 서비스를 통해 거부](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_21)|SeDenyRemoteInteractiveLogonRight|  
-|[컴퓨터 및 사용자 계정을 위임 신뢰할 수 있도록 허용](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_22)|SeEnableDelegationPrivilege|  
+|[터미널 서비스를 통한 로그온 거부](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_21)|SeDenyRemoteInteractiveLogonRight|  
+|[컴퓨터 및 사용자 계정을 위임용으로 신뢰할 수](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_22)|SeEnableDelegationPrivilege|  
 |[원격 시스템에서 강제 종료](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_23)|SeRemoteShutdownPrivilege|  
-|[보안 감사 만들기](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_24)|SeAuditPrivilege|  
-|[클라이언트 인증 후 가장](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_25)|SeImpersonatePrivilege|  
-|[프로세스 작업 집합을 늘리기](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_26)|SeIncreaseWorkingSetPrivilege|  
-|[예약 우선 순위 늘리기](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_27)|SeIncreaseBasePriorityPrivilege|  
-|[로드 하 고 디바이스 드라이버를 언로드하](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_28)|SeLoadDriverPrivilege|  
-|[메모리의 잠금 페이지](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_29)|SeLockMemoryPrivilege|  
+|[보안 감사 생성](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_24)|SeAuditPrivilege|  
+|[인증 후 클라이언트 가장](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_25)|SeImpersonatePrivilege|  
+|[프로세스 작업 집합 향상](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_26)|SeIncreaseWorkingSetPrivilege|  
+|[예약 우선 순위 높임](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_27)|SeIncreaseBasePriorityPrivilege|  
+|[장치 드라이버를 로드 및 언로드](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_28)|SeLoadDriverPrivilege|  
+|[메모리의 페이지 잠금](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_29)|SeLockMemoryPrivilege|  
 |[일괄 작업으로 로그온 합니다.](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_30)|SeBatchLogonRight|  
-|[서비스 로그인](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_31)|SeServiceLogonRight|  
-|[관리 하 고 보안 감사 로그](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_32)|SeSecurityPrivilege|  
+|[서비스로 로그온](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_31)|SeServiceLogonRight|  
+|[감사 및 보안 로그 관리](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_32)|SeSecurityPrivilege|  
 |[개체 레이블 수정](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_33)|SeRelabelPrivilege|  
-|[펌웨어 환경을 값 수정](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_34)|SeSystemEnvironmentPrivilege|  
+|[펌웨어 환경 값 수정](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_34)|SeSystemEnvironmentPrivilege|  
 |[볼륨 유지 관리 작업 수행](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_35)|SeManageVolumePrivilege|  
 |[단일 프로세스 프로필](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_36)|SeProfileSingleProcessPrivilege|  
 |[시스템 성능 프로필](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_37)|SeSystemProfilePrivilege|  
-|[도킹 스테이션의 컴퓨터를 제거 합니다.](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_38)|SeUndockPrivilege|  
-|[수준 토큰 프로세스 바꾸기](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_39)|SeAssignPrimaryTokenPrivilege|  
-|[파일과 디렉터리가 복원](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_40)|SeRestorePrivilege|  
+|[도킹 스테이션에서 컴퓨터 제거](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_38)|SeUndockPrivilege|  
+|[프로세스 수준 토큰 바꾸기](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_39)|SeAssignPrimaryTokenPrivilege|  
+|[파일 및 디렉터리 복원](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_40)|SeRestorePrivilege|  
 |[시스템 종료](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_41)|SeShutdownPrivilege|  
-|[디렉터리 서비스의 데이터를 동기화](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_42)|SeSyncAgentPrivilege|  
-|[파일 또는 기타 개체의 소유권을](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_43)|SeTakeOwnershipPrivilege|  
+|[디렉터리 서비스 데이터 동기화](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_42)|SeSyncAgentPrivilege|  
+|[파일 또는 다른 개체의 소유권](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_43)|SeTakeOwnershipPrivilege|  
 
 #### <a name="permissions"></a>사용 권한  
-사용 권한은 등 파일 시스템, 레지스트리, 서비스 및 Active Directory 개체로 보안 개체에 적용 되는 액세스 제어 합니다. 각 보안 개체 액세스 제어 ace () 하거나 거부 보안 사용자 (사용자가, 서비스, 컴퓨터 또는 그룹)의 개체에서 다양 한 작업을 수행 하는 기능을 포함 하는 연결 된 액세스 제어 목록 (ACL)에 있습니다. 예를 들어, Active directory에서 개체의 많은 Acl Ace 인증 된 사용자가 개체에 대 한 일반 정보를 읽을 수 있도록 하지만 중요 한 정보를 읽는 하거나 개체를 변경 하는 기능이 부여 하지 않는 포함 됩니다.
-각 도메인의 기본 제공 Guest 계정을 제외한 로그온 한 Active Directory 숲 또는 신뢰할 수 있는 숲 도메인 컨트롤러에서 인증 하는 모든 보안 사용자가 있는 인증 된 사용자가 보안 SID (식별자) 기본적으로 액세스 토큰에 추가 합니다. 따라서 사용자, 서비스 또는 컴퓨터에서 도메인에 있는 사용자 개체 일반 속성을 읽는 계정 시도 읽기 인지 실패 합니다.  
+사용 권한은 파일 시스템, 레지스트리, 서비스 및 Active Directory 개체와 같은 보안 개체에 적용 되는 액세스 제어 합니다. 각 보안 개체에 부여 하거나 거부할 보안 주체 (사용자, 서비스, 컴퓨터 또는 그룹)의 개체에 대 한 다양 한 작업을 수행할 수 있는 액세스 제어 항목 (Ace)를 포함 하는 연결 된 액세스 제어 목록 (ACL)에 있습니다. 예를 들어, Active Directory의 많은 개체에 대 한 Acl에는 인증 된 사용자 개체에 대 한 일반 정보를 읽을 수 있도록 하지만 중요 한 정보를 읽을 하거나 개체를 변경 하는 기능이 부여 하지 마십시오 ace가 포함 되어 있습니다.
+각 도메인의 기본 제공 Guest 계정을 제외 하 고 로그온 하 고 Active Directory 포리스트 또는 트러스트 된 포리스트의 도메인 컨트롤러에서 인증 하는 모든 보안 주체는 인증 된 사용자 SID (보안 식별자) 기본적으로 해당 액세스 토큰에 추가 했습니다. 따라서 사용자, 서비스 또는 컴퓨터 계정 도메인의 사용자 개체에 대 한 일반 속성을 읽는 시도, 읽기 작업 인지 성공 합니다.  
 
-보안 주 시도 개체 없는 Ace 어떤에 대 한 액세스에 정의 된 경우 사용자의 액세스 토큰에 있는 SID가 들어 있는 경우 주 개체를 액세스할 수 없습니다. 또한에서 개체의 ACL ACE 거부 항목에 대 한 사용자의 액세스 토큰 "거부" ACE 일치 하는 SID 포함 되어 있는 경우 일반적으로 충돌 하는 재정의 "하면" ACE 수 있습니다. Windows에 대 한 액세스 컨트롤에 대 한 자세한 내용은 참조 [액세스 제어](https://msdn.microsoft.com/library/aa374860(v=VS.85).aspx) MSDN 웹 사이트에서 합니다.  
+개체에 액세스 하지는 Ace에 대 한 보안 주체 시도가 정의 된 경우 주 서버의 액세스 토큰에 있는 SID를 포함 하는 보안 주체 개체를 액세스할 수 없습니다. 또한 개체의 ACL에서 ACE는 사용자의 액세스 토큰을 "deny" ACE 일치 하는 SID에 대 한 거부 항목을 포함 하는 경우는 일반적으로 재정의 충돌 하는 "허용" ACE입니다. Windows에서 액세스 제어에 대 한 자세한 내용은 참조 [액세스 제어](https://msdn.microsoft.com/library/aa374860(v=VS.85).aspx) MSDN 웹 사이트입니다.  
 
-이 문서에서 사용 권한을 부여 되거나 보안 개체에 대해 보안 사용자에 거부 된 기능을 나타냅니다. 사용자는 권한을 권한을 충돌 때마다 일반적으로 사용자 권한을 우선 합니다. 예를 들어, Active directory에서 개체 모든 읽기와 개체에 대 한 쓰기 관리자 거부 된 ACL으로 구성 된 경우 도메인의 관리자가 그룹의 회원 인 사용자가 됩니다 하지 개체에 대 한 많은 정보를 볼 수 있습니다. 그러나 관리자가 그룹 사용자 오른쪽 "의 소유권 파일 또는 기타 개체" 부여, 되므로 사용자 수 간단 하 게의 소유권을 개체, 다음 개체의 ACL 개체의 관리자 모든 권한을 부여을 다시 작성 합니다.  
+이 문서에서 사용 권한 또는 보안 개체에 대해 보안 주체에 거부 되는 기능을 참조 합니다. 사용자 권한 및 사용 권한을 사이 충돌이 있을 때마다 일반적으로 사용자 권한이 우선 합니다. 예를 들어, Active Directory에서 개체 관리자 대 한 모든 읽기 및 개체에 대 한 쓰기 액세스 거부 하는 ACL로 구성 된 경우 해당 도메인의 관리자 그룹의 구성원 인 사용자 되지 것입니다 개체에 대 한 많은 정보를 볼 수 있습니다. 그러나 Administrators 그룹에 사용자 오른쪽 "소유권 가져오기 파일 또는 다른 개체의" 부여 되므로, 사용자 수, 개체의 소유권을 가져올 다음 하면 관리자는 개체의 모든 권한을 부여 하는 개체의 ACL을 다시 작성 됩니다.  
 
-이 문서는 계정 및 그룹의 기능이 제한 하려고 하는 것이 아니라 강력한 계정과 그룹을 사용 하 여 일상적인 관리를 방지 하는 권장 이런 이유이 때문입니다. 결정된 된 사용자는 액세스할 강력한 자격 증명을 해당 자격 증명을 사용 하 여 모든 보안 리소스에 액세스를 중지 하려면 효과적으로 불가능 합니다.  
+이 문서 권장 계정 및 그룹의 기능을 제한 하는 대신 강력한 계정 및 그룹을 사용 하 여 일상적인 관리에 대 한 방지 하는 이러한 이유 때문입니다. 이러한 자격 증명을 사용 하 여 모든 보안 리소스에 액세스 하기를 강력한 자격 증명에 액세스 권한이 있는 사용자를 중지 하려면 사실상 불가능 합니다.  
 
-### <a name="built-in-privileged-accounts-and-groups"></a>기본 제공 특권 계정 및 그룹  
-Active Directory는 쉽게 관리 위임 하 고 권한과 할당의 최소 권한 원칙 것입니다. 계정이 Active Directory 도메인에 있는 "일반" 사용자는 기본적으로 디렉터리에 저장 된 많이 읽을 수 있지만 매우 제한 된 집합 디렉터리에 데이터를 변경할 수 있습니다. 사용자는 추가 사용 권한이 필요한의 역할와 관련 된 특정 작업을 수행할 수 있으 해당 관세와 관련 된 작업을 수행할 수 없는 되도록 디렉터리에 기본 제공 되는 다양 한 권한이 있는 그룹 구성원에에서 부여할 수 있습니다.  
+### <a name="built-in-privileged-accounts-and-groups"></a>기본 제공 계정 및 그룹 권한  
+Active Directory 관리 권한을 위임 하 고 권한 및 사용 권한 할당에 최소 권한의 원칙을 용이 하 게 하는 데 사용 됩니다. Active Directory 도메인에 계정이 있는 "일반" 사용자는 기본적으로 대부분의 디렉터리에 저장 된 것을 읽을 수 있지만 디렉터리에 있는 데이터의 매우 제한 된 집합만 변경할 수 있습니다. 추가 권한이 필요한 사용자 역할에 관련 된 특정 작업을 수행할 수 있으 업무와 관련 되지 않은 작업을 수행할 수 없습니다 있도록 디렉터리에 제공 되는 다양 한 권한 있는 그룹의 구성원 자격을 부여할 수 있습니다.  
 
-Active Directory를 내는 디렉터리에 있는 가장 높은 권한 그룹 구성 하는 세 기본 제공 그룹: Enterprise 관리자 (EA) 그룹, 도메인 관리자 (DA) 그룹와 기본 제공 (모음) 관리자가 그룹입니다.  
+Active directory는 디렉터리의 가장 높은 권한 그룹을 구성 하는 세 가지 기본 제공 그룹: Enterprise Admins (EA) 그룹, 도메인 관리자 (DA) 그룹 및 기본 제공 관리자 (BA) 그룹입니다.  
 
-4 번째 그룹, 스키마 관리자 (SA) 그룹에 있는 수 악용가 손상 되거나 삭제 된 전체 Active Directory 숲 권한을 있지만이 그룹 더 보다 제한 된 기능에서 EA, DA, 및 모음 그룹 합니다.  
+네 번째 그룹, 스키마 관리자 (SA) 그룹 수를 악용 하는 경우를 손상 시키거나 삭제는 전체 Active Directory 포리스트에 권한이 있지만이 그룹은 더 보다 제한 된 기능에는 EA, DA 및 BA 그룹입니다.  
 
-다음 네 가지 그룹 외에도 추가 기본 제공 하 고 기본 계정 및 그룹 Active directory에 권리와 특정 관리 작업을 수행할 수 있도록 하는 사용 권한을 부여 되는 여러 가지가 있습니다. 이 부록 Active Directory 모든 내장형 또는 기본 그룹의 확실 한 토론을 제공 하지 없지만 그룹과 설치 프로그램에서 가장 자주 표시 하는 계정 목차를 제공 합니다.  
+이러한 4 개의 그룹 외에도 추가 기본 제공 하 고 기본 계정 및 권한 및 특정 관리 작업을 수행할 수 있도록 권한을 부여 되는 Active Directory에서 그룹에는 여러 가지가 있습니다. 이 부록에는 Active Directory의 모든 기본 제공 필드 또는 기본 그룹에 대 한 자세한 설명은 제공 되지 않아도, 그룹 및 설치에서 가능성이 가장 높은 참조 하는 계정에 테이블을 제공지 않습니다.  
 
-예를 들어, Microsoft Exchange Server Active Directory 숲을 설치한 경우 추가 계정 및 그룹 수 만들 수 도메인에 기본 제공 및 사용자가 컨테이너에서 합니다. 이 부록 그룹과 기본 역할 및 기능에 따라 Active Directory에 기본 제공 및 사용자가 컨테이너에서 만든 계정을 설명 합니다. 계정과 엔터프라이즈 소프트웨어를 설치 하 여 만든 그룹 포함 되지 않습니다.  
+예를 들어 Microsoft Exchange Server Active Directory 포리스트를 설치한 추가 계정 및 그룹 생성 될 수도 있습니다 도메인에 기본 제공 및 사용자 컨테이너에 있습니다. 이 부록에는 그룹 및 기본 역할 및 기능에 따라 Active Directory에서 기본 제공 및 사용자 컨테이너에서 만든 계정에 설명 합니다. 계정 및 엔터프라이즈 소프트웨어의 설치에서 만들어지는 그룹에 포함 되지 않습니다.  
 
-#### <a name="enterprise-admins"></a>엔터프라이즈 관리  
-엔터프라이즈 관리자 (EA) 그룹 숲 루트 도메인에 있는 며 기본적으로 모든 도메인 숲에서 기본 제공 관리자가 그룹의 회원. 숲 루트 도메인에 기본 제공 관리자 계정에만 기본 멤버 EA 그룹입니다. EAs 권리와 숲 수준 변경에 영향을 줄 수 있도록 하는 사용 권한을 부여 됩니다. 숲 속, 추가 또는 제거 도메인, 숲 신뢰를 설정 하거나 숲 기능 수준 향상 등의 모든 도메인에 영향을입니다. 먼저 숲 생성 하거나 아웃 바운드 숲 신뢰 설정와 같은 특정 숲 수준 변경 하는 경우에 제대로 설계 및 구현 위임 모델 EA 멤버십이 해야 합니다.  
+#### <a name="enterprise-admins"></a>Enterprise Admins  
+Enterprise Admins (EA) 그룹은 포리스트 루트 도메인에 있으며 기본적으로 포리스트의 모든 도메인에 기본 제공 Administrators 그룹의 구성원은. 포리스트 루트 도메인에 기본 제공 관리자 계정에는 EA 그룹의 유일한 기본 멤버입니다. EAs 권한 및 포리스트 차원의 변경 작업에 영향을 줄 수 있는 권한이 부여 됩니다. 이들은 추가 또는 제거 하는 도메인, 포리스트 트러스트를 설정 또는 포리스트 기능 수준 올리기 등 포리스트의 모든 도메인에 영향을 주는 변경 내용입니다. 제대로 설계 및 구현 된 위임 모델에서는 먼저 포리스트를 구성 하는 경우에 또는 아웃 바운드 포리스트 트러스트를 구축 하는 등 특정 포리스트 차원의 변경을 수행할 때 EA 멤버 자격이 필요 합니다.  
 
-EA 그룹은 사용자가 컨테이너 숲 루트 도메인에 기본적으로 있으며 숲 루트 도메인 있는 경우 해당 그룹은 전 세계 보안 그룹 Windows 2000 Server 혼합된 모드에서 실행 하는 것은 유니버설 보안 그룹 합니다. EA 그룹에 직접는 일부 권한만 부여 되는 있지만이 그룹 권리 많이 실제로 상속 EA 그룹 각 도메인 숲에서 관리자가 그룹의 회원 있기 때문에 합니다. 엔터프라이즈 관리자 권한이 없는 기본 워크스테이션 또는 멤버 서버에 합니다.  
+EA 그룹은 포리스트 루트 도메인의 사용자 컨테이너에는 기본적으로 있으며 포리스트 루트 도메인 경우 그룹은 글로벌 보안 그룹이 있는 Windows 2000 Server 혼합된 모드에서 실행 되지 않으면 그룹은 유니버설 보안 그룹. EA 그룹에 직접 일부 권한이 부여 되지만 다양 한이 그룹의이 권한이 실제로 상속 EA 그룹 포리스트의 각 도메인의 관리자 그룹의 구성원이 아니어서 합니다. 엔터프라이즈 관리자 권한이 없는 기본 워크스테이션 또는 구성원 서버에서 합니다.  
 
-#### <a name="domain-admins"></a>도메인 관리  
-한 숲 속의 각 도메인 도메인에 가입 하는 모든 컴퓨터에서 로컬 관리자가 그룹의 회원 외에 해당 도메인 기본 제공 (모음) 관리자가 그룹의 회원은 자체 도메인 관리자 (DA) 그룹을 있습니다. 도메인에 대 한 DA 그룹의만 기본 멤버 해당 도메인에 대 한 기본 제공 관리자 계정입니다.  
+#### <a name="domain-admins"></a>Domain Admins  
+포리스트의 각 도메인에 도메인에 가입 하는 모든 컴퓨터에서 로컬 관리자 그룹의 구성원 외에도 해당 도메인의 기본 제공 관리자 (BA) 그룹의 구성원 인 자체 도메인 관리자 (DA) 그룹을 있습니다. 도메인에 대 한 DA 그룹의 유일한 기본 멤버는 해당 도메인에 대 한 기본 제공 관리자 계정.  
 
-숲 전체 권한이 EAs DAs 되는 도메인 내 모든 권한을 가집니다 됩니다. 제대로 설계 및 구현 위임 모델의 경우 도메인에 있는 모든 컴퓨터에서 권한 높은 수준의으로 계정, 필요한 또는 때 특정 도메인 너비가 변경 해야 합니다 "유리창 중단" 시나리오에만 DA 멤버십 받아야 합니다. 기본 Active Directory 위임 메커니즘 위임 허용 하는 DA 계정을 긴급 한 경우에만 사용할 수, 있지만 효과적인 위임 모델 구성 시간이 오래 걸릴 수 있으며 과정을 지원 하기를 제 3 자 응용 프로그램을 사용 하는 많은 조직 있습니다.  
+DAs는 EAs 포리스트 전체 권한을 있지만 자신의 도메인 내에서 모든 권한을 가집니다. 제대로 설계 및 구현 된 위임 모델을 DA 멤버 자격이 필요 하다 고는 도메인의 모든 컴퓨터에서 높은 수준의 권한 가진 계정 또는 때 특정 도메인 넓은 변경 해야 하는 경우 "유리 중단" 시나리오에만 받아야 합니다. 네이티브 Active Directory 위임 메커니즘을 허용 않으면 위임 정도로 DA 계정을 응급 시나리오에만 사용할 수 있지만 효과적인 위임 모델 생성 시간이 오래 걸릴 수 있으며 대부분의 조직에서는 타사 응용 프로그램을 사용 하 여 프로세스를 신속 하 게 처리 합니다.  
 
-DA 그룹은 사용자가 컨테이너 도메인에 있는 글로벌 보안 그룹입니다. 숲 속의 각 도메인에 대 한 DA 그룹 이며 DA 그룹의만 기본 멤버는 도메인의 기본 제공 관리자 계정. 도메인의 DA 그룹이 도메인 모음 그룹과 모든 도메인 가입 시스템 로컬 관리자가 그룹에서 중첩 된을 하기 때문에 DAs 도메인 관리자 명시적으로 허가 된 사용 권한을 할 뿐만 아니라 하지만 권한 및 사용 권한을 부여 하는 도메인의 관리자가 그룹 로컬 관리자가 그룹 도메인에 가입 하는 모든 시스템에 모든도 상속 합니다.  
+DA 그룹 도메인의 사용자 컨테이너에 있는 글로벌 보안 그룹이입니다. 포리스트의 각 도메인에 대해 하나의 DA 그룹 않으며 DA 그룹의 유일한 기본 멤버는 해당 도메인의 기본 제공 관리자 계정입니다. 도메인의 DA 그룹은 도메인의 BA 그룹 및 모든 도메인에 가입 된 시스템의 로컬 관리자 그룹에 중첩 된, DAs 뿐만 아니라 사용 권한이 특별히 Domain Admins에 부여 된 하지만 모든 권한 및 도메인의 관리자 그룹 및 도메인에 가입 하는 모든 시스템에서 로컬 관리자 그룹에 부여 된 권한을 또한 상속.  
 
-#### <a name="administrators"></a>관리자  
-기본 제공 (모음) 관리자가 그룹 DAs 및 EAs 중첩 된 하 고은이 그룹 많은 직접 권한 및 디렉터리에 및 도메인 컨트롤러에서 사용 권한을 부여 되는 도메인의 기본 제공 컨테이너 도메인 로컬 그룹이입니다. 그러나 도메인에 대 한 관리자가 그룹 권한이 없습니다 모든 구성원 서버 또는 워크스테이션 합니다. 도메인 가입 컴퓨터의 로컬 관리자가 그룹의 회원은 어디 로컬 권한을 부여 됩니다. 한만 DAs는 기본적으로 모든 도메인에 가입 컴퓨터의 로컬 관리자가 그룹의 회원에 수시로 이야기 그룹의 합니다.  
+#### <a name="administrators"></a>Administrators  
+기본 제공 관리자 (BA) 그룹에는 도메인의 기본 제공 컨테이너를 DAs과 EAs 중첩 되어 있고이 그룹에 다 수의 직접 권한 및 도메인 컨트롤러와 디렉터리에 대 한 권한이 부여 되는 도메인 로컬 그룹이입니다. 그러나 도메인에 대 한 관리자 그룹 모든 권한이 없는 워크스테이션 또는 구성원 서버에 있습니다. 도메인에 가입 된 컴퓨터의 로컬 Administrators 그룹의 멤버 자격이 있는 로컬 권한 부여 됩니다. 되며 설명 그룹의 DAs만 기본적으로 모든 도메인에 가입 된 컴퓨터의 로컬 관리자 그룹의 구성원.  
 
-관리자가 그룹에 기본 제공 되는 도메인의 컨테이너 도메인 로컬 그룹이입니다. 기본적으로 모든 도메인 모음 그룹 로컬 도메인 기본 제공 관리자 계정, 로컬 도메인 DA 그룹과 숲 루트 도메인 EA 그룹 포함 되어 있습니다. 관리자가 그룹 EAs 또는 DAs 전문으로 Active Directory에 및 도메인 컨트롤러에서 많은 사용자 권한은 부여 됩니다. 도메인의 모음 그룹 대부분 directory 개체의 모든 권한을 부여 및 directory 개체의 소유권을 얻을 수 있습니다. EA 및 DA 그룹 숲 및 도메인에 있는 특정 개체 전용 권한이 부여 됩니다, 있지만 그룹 강력 실제로 "상속" 모음 그룹 구성원에서 합니다.  
+Administrators 그룹은 도메인의 기본 제공 컨테이너에는 도메인 로컬 그룹입니다. 모든 도메인 BA 그룹에는 기본적으로 로컬 도메인의 기본 제공 관리자 계정, 로컬 도메인의 DA 그룹과 포리스트 루트 도메인의 EA 그룹이 포함 됩니다. Active Directory 및 도메인 컨트롤러에 많은 수의 사용자 권한은 EAs 또는 DAs Administrators 그룹에 명시적으로 부여 됩니다. 도메인의 BA 대부분의 디렉터리 개체에 대 한 모든 권한이 부여 됩니다 그룹과 디렉터리 개체의 소유권을 가져올 수 있습니다. EA 및 DA 그룹 포리스트 및 도메인의 특정 개체에 한정 사용 권한이 부여 될 경우 그룹의 강력은 실제로 "상속" BA 그룹의 멤버 자격은에서.  
 
 > [!NOTE]  
-> 이러한 옵션은 기본 구성 권한이 부여 된 이러한 그룹을 세 그룹의 회원 디렉터리의 다른 그룹 구성원을 얻을 수를 조작할 수 있습니다. 경우에 따라 다른 더욱 어렵게 표시 되지만 가능한 권한은 관점 세 그룹 모두 고려해 야 효과적으로 해당 하는 동안 달성 하기 위해 쉽습니다.  
+> 이러한 옵션은 이러한 권한 있는 그룹의 기본 구성, 세 그룹 중 하나의 멤버인 다른 그룹의 구성원을 얻으려고 디렉터리를 조작할 수 있습니다. 일부 경우에는 더 어렵게 하지만 잠재적인 문제점 관점에서 세 그룹 고려해 야과 동등 달성 하기 위해 쉽기도 합니다.  
 
-#### <a name="schema-admins"></a>스키마 관리  
-관리자 스키마 (SA) 그룹 숲 루트 도메인에 있는 그룹 유니버설 이며 해당 도메인 기본 제공 관리자 계정만 유사한 EA 그룹에 기본 멤버와 있습니다. SA 그룹의 회원 공격자는 전체 Active Directory 숲에 대 한 프레임 워크, Active Directory 스키마를 손상 시킬 수 있지만 몇 가지 기본 권한과 스키마 이상 SAs 해야 합니다.  
+#### <a name="schema-admins"></a>Schema Admins  
+스키마 관리자 (SA) 그룹 포리스트 루트 도메인의 유니버설 그룹 이며 해당 도메인의 기본 제공 관리자 계정에만 EA 그룹 비슷합니다 기본 멤버로 있습니다. SA 그룹의 멤버 자격 공격자가 전체 Active Directory 포리스트에 대 한 프레임 워크인 Active Directory 스키마를 손상 시킬 수 있지만 SAs 몇 가지 기본 권한을 갖습니다 스키마 이상.  
 
-이 그룹은 일부 측면에서 신중 하 게 관리 및 모니터링 SA 그룹의 회원 해야 하지만 "보다 높은 세 가지" 권한이 있는 덜 그룹 해당 권한 범위가 매우 특수; 되므로 앞에 설명 된 권한 즉, SAs 없습니다 관리자 권한이 스키마 이외의 곳입니다.  
+신중 하 게 관리 하 고 SA 그룹의 멤버 자격을 모니터링 해야 하지만이 그룹은 몇 가지 측면에서 "가장 높은 세 가지 보다" 권한 있는 덜 권한 있는 그룹의 권한 범위가 매우 좁은; 때문에 앞에서 설명한 즉, SAs 관리 권한이 없습니다 스키마 이외의 위치입니다.  
 
-#### <a name="additional-built-in-and-default-groups-in-active-directory"></a>기본 제공 추가 및 기본 그룹 Active Directory에  
-관리 디렉터리에 위임 돕기 위해, Active Directory 특정 권한이 부여 된 다양 한 기본와 기본 제공 그룹 함께 제공 됩니다. 다음 표에 이러한 그룹 간략하게 설명 되어 있습니다.  
+#### <a name="additional-built-in-and-default-groups-in-active-directory"></a>추가 기본 제공 및 Active Directory의 기본 그룹  
+디렉터리에 대 한 관리를 위임 하려면 Active Directory 특정 권한 및 사용 권한이 부여 된 다양 한 기본 제공 및 기본 그룹 함께 제공 됩니다. 이러한 그룹은 다음 표에 간략하게 설명 되어 있습니다.  
 
-다음 표에서 기본 제공 및 기본 그룹 Active Directory에 나열합니다. 기본적으로 두 가지 그룹 존재 하지만 기본 제공 그룹 (기본적으로)에 있는 Active Directory에 기본 제공 컨테이너 기본 그룹 기본적으로 사용자가 컨테이너 Active Directory에 있는 동안 합니다. 그룹에 기본 제공 컨테이너는 모든 도메인 로컬, 그룹 사용자 컨테이너에는 세 가지 사용자 계정 (관리자, 게스트 및 Krbtgt) 뿐 아니라 로컬 도메인, Global, 및 유니버설 그룹 혼합 합니다.  
+다음 표에서 Active Directory의 기본 제공 및 기본 그룹을 나열 합니다. 기본적으로 그룹의 두 집합이 존재 그러나 기본 제공 그룹은 기본적으로 컨테이너에 있는 기본 제공 Active Directory에서 기본 그룹 (기본적으로) Active Directory의 사용자 컨테이너에 있는 동안. 기본 제공 컨테이너의 그룹의 사용자 컨테이너의 그룹은 개별 사용자 계정 3 개 (관리자, Guest 및 Krbtgt) 외에도 도메인 로컬, 글로벌 및 유니버설 그룹의 혼합 하는 동안 모든 도메인 로컬 그룹 됩니다.  
 
-이 부록 앞에서 설명한 최고 권한이 있는 그룹, 뿐만 아니라 몇 가지 기본 제공 및 기본 계정과 그룹 부여 권한을 올려 및도 보호이 고 안전한 관리 호스트 에서만 사용 됩니다. 이러한 그룹와 계정을 표 B-1에 있는 회색된 행에서 찾을 수 있습니다: 계정 Active Directory에 기본 제공 및 그룹 기본 합니다. 에 설명 된 대로 추가 보호 권리와 Active Directory 또는 도메인 컨트롤러 손상 잘못 사용 될 수 있는 권한을 부여 된 이러한 그룹 및 계정 중 일부 때문에 제공 되어 자녀가 [부록 c: 보호 계정 및 Active Directory에 그룹](../../../ad-ds/plan/security-best-practices/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory.md)합니다.  
+이 부록 앞부분에서 설명한 가장 높은 권한 있는 그룹, 외에도 몇 가지 기본 제공 및 기본 계정 및 그룹 부여 된 승격 된 권한을 사용 하 고 해야도 보호 및 보안 관리 호스트에만 사용 합니다. 테이블 B-1의 음영 처리 된 행에는 이러한 그룹 및 계정을 찾을 수 있습니다. 기본 제공 및 기본 그룹 및 Active Directory의 계정입니다. 에 설명 된 대로 추가 보호 권한과 사용 권한을 Active Directory 또는 도메인 컨트롤러를 손상 시키는 잘못 사용 될 수 있는 권한이 부여 되므로 이러한 그룹 및 계정 중 일부를 제공 되는 [부록 c: 보호 된 계정 및 Active Directory에서 그룹](../../../ad-ds/plan/security-best-practices/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory.md)합니다.  
 
-##### <a name="table-b-1-built-in-and-default-accounts-and-groups-in-active-directory"></a>표 B-1: 기본 제공 하 고 기본 계정과 그룹 Active Directory에  
+##### <a name="table-b-1-built-in-and-default-accounts-and-groups-in-active-directory"></a>테이블 B-1: 기본 제공 및 기본 계정 및 Active Directory의 그룹  
 
 ||||  
 |-|-|-|  
-|**계정 또는 그룹**|**기본 컨테이너, 그룹 범위 및 유형**|**에 대 한 기본 사용자 권한**|  
-|액세스를 제어 지원 연산자 (Windows Server 2012에서에서 Active Directory)|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 회원 승인 특성 및 리소스가이 컴퓨터에 대 한 권한을 쿼리 원격으로 수 있습니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|계정에서|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|도메인 사용자 및 그룹 계정을 관리할 수 있습니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|관리자 계정|사용자가 컨테이너<br /><br />그룹 되지 않음|도메인 관리 하기 위한 기본 제공 된 계정입니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />메모리 할당량 프로세스에 대 한 조정<br /><br />로컬 로그 허용<br /><br />원격 데스크톱 서비스를 통해 로그온 허용<br /><br />파일과 디렉터리가 백업<br /><br />사용 안 함 통과 확인<br /><br />시스템 시간 변경<br /><br />표준 시간대 변경<br /><br />페이지 파일 만들기<br /><br />전 세계 개체 만들기<br /><br />기호 링크 만들기<br /><br />프로그램<br /><br />컴퓨터 및 사용자 계정을 위임 신뢰할 수 있도록 허용<br /><br />원격 시스템에서 강제 종료<br /><br />클라이언트 인증 후 가장<br /><br />프로세스 작업 집합을 늘리기<br /><br />예약 우선 순위 늘리기<br /><br />로드 하 고 디바이스 드라이버를 언로드하<br /><br />일괄 작업으로 로그온 합니다.<br /><br />관리 하 고 보안 감사 로그<br /><br />펌웨어 환경을 값 수정<br /><br />볼륨 유지 관리 작업 수행<br /><br />단일 프로세스 프로필<br /><br />시스템 성능 프로필<br /><br />도킹 스테이션의 컴퓨터를 제거 합니다.<br /><br />파일과 디렉터리가 복원<br /><br />시스템 종료<br /><br />파일 또는 기타 개체의 소유권을|  
-|관리자가 그룹|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|관리자는 도메인 모든 액세스 권한을된 해야합니다.<br /><br />**직접 사용자 권한 다음과 같습니다.**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />메모리 할당량 프로세스에 대 한 조정<br /><br />로컬 로그 허용<br /><br />원격 데스크톱 서비스를 통해 로그온 허용<br /><br />파일과 디렉터리가 백업<br /><br />사용 안 함 통과 확인<br /><br />시스템 시간 변경<br /><br />표준 시간대 변경<br /><br />페이지 파일 만들기<br /><br />전 세계 개체 만들기<br /><br />기호 링크 만들기<br /><br />프로그램<br /><br />컴퓨터 및 사용자 계정을 위임 신뢰할 수 있도록 허용<br /><br />원격 시스템에서 강제 종료<br /><br />클라이언트 인증 후 가장<br /><br />예약 우선 순위 늘리기<br /><br />로드 하 고 디바이스 드라이버를 언로드하<br /><br />일괄 작업으로 로그온 합니다.<br /><br />관리 하 고 보안 감사 로그<br /><br />펌웨어 환경을 값 수정<br /><br />볼륨 유지 관리 작업 수행<br /><br />단일 프로세스 프로필<br /><br />시스템 성능 프로필<br /><br />도킹 스테이션의 컴퓨터를 제거 합니다.<br /><br />파일과 디렉터리가 복원<br /><br />시스템 종료<br /><br />파일 또는 기타 개체의 소유권을<br /><br />권한이 상속된 사용자:<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|허용된 RODC 암호 복제 그룹|사용자가 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 회원 도메인에 있는 모든 읽기 전용 도메인 컨트롤러에 복제 암호 있을 수 있습니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|백업 관리자|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|백업 연산자 백업 또는 파일을 복원 하는 용도로에 대 한 보안 제한을 무시 수 있습니다.<br /><br />**직접 사용자 권한 다음과 같습니다.**<br /><br />로컬 로그 허용<br /><br />파일과 디렉터리가 백업<br /><br />일괄 작업으로 로그온 합니다.<br /><br />파일과 디렉터리가 복원<br /><br />시스템 종료<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|인증 게시자|사용자가 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 회원은 인증서 디렉터리에 게시할 수 있습니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|인증서 서비스 DCOM 액세스|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|인증서 서비스 (권장 하지 않음) 도메인 컨트롤러에 설치 되어 있으면이 그룹 도메인 사용자와 도메인 컴퓨터에 DCOM 등록 액세스 권한을 부여 합니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|복제할 수 도메인 컨트롤러 (Windows Server 2012AD DS AD DS)|사용자가 컨테이너<br /><br />그룹 글로벌 보안|이 그룹의 회원은 도메인 컨트롤러 복제 될 수 있습니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|암호화 연산자|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|회원 실시 권 자 암호화 작업을 수행 하는 합니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|사용자가 디버거|기본 지도 기본 제공 그룹 이지만 AD DS에 있는 경우이 추가 확인을 위해 원인 합니다.|사용자가 디버거 그룹의 디버깅 도구 Visual Studio, SQL, Office 스토어 또는 기타 응용 프로그램을 통해 필요 하 고이 디버깅 환경을 지원 여부을 준비해 줍니다 시스템에 설치 되어 있는 나타냅니다. 이 그룹 원격 디버깅 컴퓨터에 액세스할 수 있게합니다. 도메인 수준에서이 그룹이 있는 경우 디버거 또는 응용 프로그램 디버거 포함 되어 있는 도메인 컨트롤러에 설치 되어 있는지를 나타냅니다.|  
-|거부 RODC 암호 복제 그룹|사용자가 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 회원 도메인에 있는 모든 읽기 전용 도메인 컨트롤러에 복제 암호를 사용할 수 없습니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|DHCP 관리자|사용자가 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 회원 DHCP 서버 서비스에 액세스할 관리 합니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|DHCP 사용자|사용자가 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 회원 DHCP 서버 서비스에 대 한 보기 전용 액세스를 했습니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|분산된 COM 사용자|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 회원 실행를 정품 인증 하 고 분산된 COM 개체가이 컴퓨터에서 사용할 수 있습니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|DnsAdmins|사용자가 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 회원 DNS 서버 서비스에 관리 액세스할 수 있습니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|DnsUpdateProxy|사용자가 컨테이너<br /><br />그룹 글로벌 보안|이 그룹의 회원 클라이언트 동적 업데이트를 자동으로 수행할 수 없는 대신 동적 업데이트를 수행할 수 있는 DNS 클라이언트 됩니다. 이 그룹의 회원은 일반적으로 DHCP 서버 합니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|도메인 관리|사용자가 컨테이너<br /><br />그룹 글로벌 보안|지정 된 도메인; 관리자 도메인 관리자 모든 도메인에 가입 컴퓨터 로컬 관리자가 그룹의 회원 이며 권한 및 사용 권한을 부여 하는 도메인의 관리자가 그룹 뿐 아니라 로컬 관리자가 그룹 합니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />메모리 할당량 프로세스에 대 한 조정<br /><br />로컬 로그 허용<br /><br />원격 데스크톱 서비스를 통해 로그온 허용<br /><br />파일과 디렉터리가 백업<br /><br />사용 안 함 통과 확인<br /><br />시스템 시간 변경<br /><br />표준 시간대 변경<br /><br />페이지 파일 만들기<br /><br />전 세계 개체 만들기<br /><br />기호 링크 만들기<br /><br />프로그램<br /><br />컴퓨터 및 사용자 계정을 위임 신뢰할 수 있도록 허용<br /><br />원격 시스템에서 강제 종료<br /><br />클라이언트 인증 후 가장<br /><br />프로세스 작업 집합을 늘리기<br /><br />예약 우선 순위 늘리기<br /><br />로드 하 고 디바이스 드라이버를 언로드하<br /><br />일괄 작업으로 로그온 합니다.<br /><br />관리 하 고 보안 감사 로그<br /><br />펌웨어 환경을 값 수정<br /><br />볼륨 유지 관리 작업 수행<br /><br />단일 프로세스 프로필<br /><br />시스템 성능 프로필<br /><br />도킹 스테이션의 컴퓨터를 제거 합니다.<br /><br />파일과 디렉터리가 복원<br /><br />시스템 종료<br /><br />파일 또는 기타 개체의 소유권을|  
-|도메인 컴퓨터|사용자가 컨테이너<br /><br />그룹 글로벌 보안|이 그룹에 기본 멤버 하 여 모든 워크스테이션과 도메인에 가입 하는 서버 됩니다.<br /><br />**직접 사용자 권한 기본:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|도메인 컨트롤러|사용자가 컨테이너<br /><br />그룹 글로벌 보안|도메인에 있는 모든 도메인 컨트롤러 합니다. 참고: 도메인 컨트롤러는 도메인 컴퓨터 그룹의 회원 되지 않습니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|도메인 게스트|사용자가 컨테이너<br /><br />그룹 글로벌 보안|도메인에 있는 모든 게스트<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|사용자 도메인|사용자가 컨테이너<br /><br />그룹 글로벌 보안|도메인에 있는 모든 사용자에 게<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|(이렇게에만 있음)는 엔터프라이즈 관리자|사용자가 컨테이너<br /><br />그룹 유니버설 보안|엔터프라이즈 관리자 권한이; 숲 전체 구성 설정을 변경 하려면 엔터프라이즈 관리자 모든 도메인 관리자가 그룹의 회원 이며 권한 및 해당 그룹에 허용 된 권한 합니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />메모리 할당량 프로세스에 대 한 조정<br /><br />로컬 로그 허용<br /><br />원격 데스크톱 서비스를 통해 로그온 허용<br /><br />파일과 디렉터리가 백업<br /><br />사용 안 함 통과 확인<br /><br />시스템 시간 변경<br /><br />표준 시간대 변경<br /><br />페이지 파일 만들기<br /><br />전 세계 개체 만들기<br /><br />기호 링크 만들기<br /><br />프로그램<br /><br />컴퓨터 및 사용자 계정을 위임 신뢰할 수 있도록 허용<br /><br />원격 시스템에서 강제 종료<br /><br />클라이언트 인증 후 가장<br /><br />프로세스 작업 집합을 늘리기<br /><br />예약 우선 순위 늘리기<br /><br />로드 하 고 디바이스 드라이버를 언로드하<br /><br />일괄 작업으로 로그온 합니다.<br /><br />관리 하 고 보안 감사 로그<br /><br />펌웨어 환경을 값 수정<br /><br />볼륨 유지 관리 작업 수행<br /><br />단일 프로세스 프로필<br /><br />시스템 성능 프로필<br /><br />도킹 스테이션의 컴퓨터를 제거 합니다.<br /><br />파일과 디렉터리가 복원<br /><br />시스템 종료<br /><br />파일 또는 기타 개체의 소유권을|  
-|엔터프라이즈 읽기 전용 도메인 컨트롤러|사용자가 컨테이너<br /><br />그룹 유니버설 보안|이 그룹에 있는 숲 속의 모든 읽기 전용 도메인 컨트롤러에 대 한 계정을 포함 되어 있습니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|이벤트 로그 판독기|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹에의 회원 이벤트 로그 도메인 컨트롤러를 읽을 수 있습니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|그룹 정책 Creator 소유자|사용자가 컨테이너<br /><br />그룹 글로벌 보안|이 그룹의 회원 만들고 도메인에 있는 그룹 정책 개체 수정할 수 있습니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|Guest|사용자가 컨테이너<br /><br />그룹 되지 않음|인증 된 사용자가 SID 액세스 토큰을 추가 하지 않은 AD DS 도메인에 있는 계정이입니다. 따라서 리소스를 인증 된 사용자 그룹에 대 한 액세스 권한을 부여 하도록 구성 된이 계정에 액세스할 수 없습니다. 그러나이 문제는의 경우에 도메인 게스트 및 게스트 그룹의 회원-해당 그룹의 수행가지고 없이 사용자에 게 SID 인증 액세스 토큰에 추가 합니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|Guest|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|게스트 Guest 계정 제외한 기본적으로 동일한의 사용자 그룹의 회원 액세스 있는 앞에서 설명한 대로 제한 하는 추가 됩니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|Hyper-v 관리자 (Windows Server 2012)|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 회원 Hyper-v의 모든 기능에 제한 없이 액세스할 수 있는 합니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|IIS_IUSRS|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|인터넷 정보 서비스에서 사용 하는 기본 제공 그룹입니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|수신 숲 신뢰 빌더 (이렇게에만 있음)|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 회원 들어오는, 단방향 신뢰가이 숲을 만들 수 있습니다. (생성 아웃 바운드 숲 신뢰 엔터프라이즈 관리자 예약 되어 있습니다.)<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|Krbtgt|사용자가 컨테이너<br /><br />그룹 되지 않음|Krbtgt 계정이 Kerberos 키 메일 센터 도메인에 대 한 서비스 계정을입니다. 이 계정에 액세스 Active Directory에 저장 된 모든 계정 자격 증명 합니다. 이 계정은 기본적으로 사용 하지 않도록 설정 하 고 사용 하지 말아야<br /><br />**사용자 권한을:** 해당 없음|  
-|네트워크 운영자 구성|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 회원 네트워킹 기능의 구성 관리할 수 있는 권한은 부여 됩니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|성능 로그 사용자|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 회원 로깅을 성능 카운터 예약 하 고 추적 공급자를 사용 하 고 컴퓨터에 대 한 원격 액세스를 통해 하 고 로컬 이벤트 추적 수집 수 있습니다.<br /><br />**직접 사용자 권한 다음과 같습니다.**<br /><br />일괄 작업으로 로그온 합니다.<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|모니터 사용자가 성능|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 회원 로컬 및 원격으로 성능 카운터 데이터 액세스할 수 있습니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|Windows 2000 호환 액세스|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹 운영 체제 Windows 2000 Server, 이전 버전과 호환성 있고 사용자 및 그룹 정보 도메인에 있는 읽으려면 구성원이 기능을 제공 합니다.<br /><br />**직접 사용자 권한 다음과 같습니다.**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />사용 안 함 통과 확인<br /><br />**권한이 상속된 사용자:**<br /><br />도메인에 워크스테이션 추가<br /><br />프로세스 작업 집합을 늘리기|  
-|연산자 인쇄|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 회원 도메인 프린터 관리할 수 있습니다.<br /><br />**직접 사용자 권한 다음과 같습니다.**<br /><br />로컬 로그 허용<br /><br />로드 하 고 디바이스 드라이버를 언로드하<br /><br />시스템 종료<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|RAS 및 IAS 서버|사용자가 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹에 있는 서버 도메인에 있는 사용자 계정에 대 한 원격 액세스 속성에 읽을 수 있습니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|RDS 끝점 서버 (Windows Server 2012)|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹에 있는 서버 개인 가상 데스크톱 및 사용자가 RemoteApp 프로그램 실행 되는 위치 가상 컴퓨터 및 호스트 세션 실행 합니다. 이 그룹 RD 연결 중개 업체를 실행 하는 서버에 사용자를 해야 합니다. 세션 호스트 RD 서버 및 배포에서 사용 되는 RD Virtualization 호스트 서버가 그룹에서에 있어야 합니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|RDS 관리 서버 (Windows Server 2012)|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹에 있는 서버 원격 데스크톱 서비스가 실행 되는 서버 관리 일상적인 작업을 수행할 수 있습니다. 이 그룹에 배포 원격 데스크톱 서비스에서에서 모든 서버 해야 합니다. RDS 중앙 관리 서비스를 실행 하는 서버가이 그룹에 포함 합니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|RDS 원격 액세스 서버 (Windows Server 2012)|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹에 있는 서버 RemoteApp 프로그램 및 이러한 리소스에 액세스 개인 가상 데스크톱 사용자가 수 있도록 합니다. 인터넷 연결 배포에서 이러한 서버 일반적으로 지 네트워크에서 배포 됩니다. 이 그룹 RD 연결 중개 업체를 실행 하는 서버에 사용자를 해야 합니다. 이 그룹에에 RD 게이트웨이 서버 및 사용 하는 배포에서 RD Web Access 서버 있어야 합니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|읽기 도메인 컨트롤러|사용자가 컨테이너<br /><br />그룹 글로벌 보안|이 그룹 도메인에 있는 모든 읽기 전용 도메인 컨트롤러 포함 되어 있습니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|원격 데스크톱 사용자가 서비스|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 회원 원격으로 RDP 사용 하 여 로그온 수 있는 권한을 부여 됩니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|원격 관리 서버 (Windows Server 2012)|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 회원 (예: Ws-management을 통해 Windows 원격 관리 서비스) 관리 프로토콜 WMI 리소스에 액세스할 수 있습니다. 이 사용자에 대 한 액세스 권한을 부여 WMI 네임에만 적용 됩니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|복제|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|도메인의 레거시 파일 복제를 지원합니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|(이렇게에만 있음) 스키마 관리자|사용자가 컨테이너<br /><br />그룹 유니버설 보안|스키마 관리자는 Active Directory 스키마 한 경우에만에 대 한 수정 스키마 만들 수 있는 사용자만 쓰기 사용 하도록 설정 합니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|서버 연산자|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 회원 도메인 서버를 관리할 수 있습니다.<br /><br />**직접 사용자 권한 다음과 같습니다.**<br /><br />로컬 로그 허용<br /><br />파일과 디렉터리가 백업<br /><br />시스템 시간 변경<br /><br />표준 시간대 변경<br /><br />원격 시스템에서 강제 종료<br /><br />파일과 디렉터리가 복원<br /><br />시스템 종료<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|서버 터미널 라이선스 서버|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 회원 Active Directory에 사용자 계정에 대 한 라이선스 발급 관리 하 고 보고 TS 당 사용자 CAL 사용 하기 위한 목적으로 정보를 업데이트할 수 있습니다.<br /><br />**직접 사용자 권한 기본:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|사용자가|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|사용자가 가장 자주 변경할 수는 있지만 많은 개체와 Active Directory의 특성을 읽을 수 있도록 하는 권한이 합니다. 사용자가 시스템 전체 변경할 수 없습니다 및 대부분의 응용 프로그램을 실행할 수 있습니다.<br /><br />**직접 사용자 권한 다음과 같습니다.**<br /><br />프로세스 작업 집합을 늘리기<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인|  
-|권한|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 회원 사용자 개체 계산된 tokenGroupsGlobalAndUniversal 특성에 액세스할 수 있는<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
-|WinRMRemoteWMIUsers_ (Windows Server 2012)|사용자가 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 회원 (예: Ws-management을 통해 Windows 원격 관리 서비스) 관리 프로토콜 WMI 리소스에 액세스할 수 있습니다. 이 사용자에 대 한 액세스 권한을 부여 WMI 네임에만 적용 됩니다.<br /><br />**사용자 권한 직접:** 없음<br /><br />**권한이 상속된 사용자:**<br /><br />네트워크에서이 컴퓨터에 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />사용 안 함 통과 확인<br /><br />프로세스 작업 집합을 늘리기|  
+|**계정 또는 그룹**|**기본 컨테이너, 그룹 범위 및 종류**|**설명 및 기본 사용자 권한**|  
+|액세스 제어 지원 연산자 (Windows Server 2012의에서 Active Directory)|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 멤버는이 컴퓨터의 리소스에 대 한 사용 권한과 권한 부여 특성에 원격으로 쿼리할 수 있습니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|Account Operators|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|멤버에는 도메인 사용자 및 그룹 계정을 관리할 수 있습니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|관리자 계정|사용자 컨테이너<br /><br />그룹 아님|도메인 관리에 대 한 기본 제공 계정입니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />프로세스의 메모리 할당량 조정<br /><br />로컬 로그온 허용<br /><br />원격 데스크톱 서비스를 통한 로그온 허용<br /><br />파일 및 디렉터리 백업<br /><br />트래버스 검사 무시<br /><br />시스템 시간 변경<br /><br />표준 시간대 변경<br /><br />페이지 파일 만들기<br /><br />전역 개체 만들기<br /><br />바로 가기 링크 만들기<br /><br />프로그램 디버그<br /><br />위임 시 컴퓨터 및 사용자 계정을 신뢰할 수 있도록 설정<br /><br />원격 시스템에서 강제 종료<br /><br />인증 후 클라이언트 가장<br /><br />프로세스 작업 집합 늘리기<br /><br />예약 우선 순위 높이기<br /><br />장치 드라이버 로드 및 언로드<br /><br />일괄 작업으로 로그온<br /><br />감사 및 보안 로그 관리<br /><br />펌웨어 환경 값 수정<br /><br />볼륨 유지 관리 작업 수행<br /><br />단일 프로세스 프로필<br /><br />시스템 성능 프로필<br /><br />도킹 스테이션에서 컴퓨터 제거<br /><br />파일 및 디렉터리 복원<br /><br />시스템 종료<br /><br />파일 또는 기타 개체의 소유권 가져오기|  
+|관리자 그룹|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|관리자가 도메인에 제한 없이 액세스할 수 있으며<br /><br />**직접 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />프로세스의 메모리 할당량 조정<br /><br />로컬 로그온 허용<br /><br />원격 데스크톱 서비스를 통한 로그온 허용<br /><br />파일 및 디렉터리 백업<br /><br />트래버스 검사 무시<br /><br />시스템 시간 변경<br /><br />표준 시간대 변경<br /><br />페이지 파일 만들기<br /><br />전역 개체 만들기<br /><br />바로 가기 링크 만들기<br /><br />프로그램 디버그<br /><br />위임 시 컴퓨터 및 사용자 계정을 신뢰할 수 있도록 설정<br /><br />원격 시스템에서 강제 종료<br /><br />인증 후 클라이언트 가장<br /><br />예약 우선 순위 높이기<br /><br />장치 드라이버 로드 및 언로드<br /><br />일괄 작업으로 로그온<br /><br />감사 및 보안 로그 관리<br /><br />펌웨어 환경 값 수정<br /><br />볼륨 유지 관리 작업 수행<br /><br />단일 프로세스 프로필<br /><br />시스템 성능 프로필<br /><br />도킹 스테이션에서 컴퓨터 제거<br /><br />파일 및 디렉터리 복원<br /><br />시스템 종료<br /><br />파일 또는 기타 개체의 소유권 가져오기<br /><br />상속 된 사용자 권한:<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|허용 된 RODC 암호 복제 그룹|사용자 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 멤버에에서는 도메인의 모든 읽기 전용 도메인 컨트롤러에 복제 암호를 가질 수 있습니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|Backup Operators|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|백업 운영자를 백업 하거나 복원할 파일의 유일한 용도 대 한 보안 제한을 재정의할 수 있습니다.<br /><br />**직접 사용자 권한:**<br /><br />로컬 로그온 허용<br /><br />파일 및 디렉터리 백업<br /><br />일괄 작업으로 로그온<br /><br />파일 및 디렉터리 복원<br /><br />시스템 종료<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|Cert Publishers|사용자 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 구성원은 디렉터리에 인증서 게시 허용 됩니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|인증서 서비스 DCOM 액세스|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|(권장 하지 않음)는 도메인 컨트롤러에서 인증서 서비스가 설치 되어 있는 경우이 그룹에 도메인 사용자와 도메인 컴퓨터에 DCOM 등록 액세스 권한을 부여 합니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|복제 가능 도메인 컨트롤러 (Windows Server 2012AD DS에서 AD DS)|사용자 컨테이너<br /><br />글로벌 보안 그룹|도메인 컨트롤러를 복제할 수 있는이 그룹의 멤버입니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|Cryptographic Operators|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|암호화 작업을 수행 하는 멤버가 있는 합니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|디버거 사용자|이와 기본값도 아니고는 기본 제공 그룹은 아니지만 AD DS에 있는 경우 추가로 조사 하기 위해 원인입니다.|디버거 사용자 그룹의 존재는 디버깅 도구를 Visual Studio, SQL, Office 또는 다른 응용 프로그램을 통해 필요 하 고이 디버깅 환경 지원 하는지 여부를 특정 시점에 시스템에 설치 되어 있는지를 나타냅니다. 이 그룹에는 컴퓨터에 원격 디버깅 액세스할 수 있습니다. 이 그룹에 도메인 수준의 있으면 디버거 또는 디버거를 포함 하는 응용 프로그램 도메인 컨트롤러에 설치 되어 있는지를 나타냅니다.|  
+|거부 된 RODC 암호 복제 그룹|사용자 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의에서 구성원 도메인의 모든 읽기 전용 도메인 컨트롤러에 복제 암호를 사용할 수 없습니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|DHCP 관리자|사용자 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 구성원 DHCP 서버 서비스에 대 한 관리 액세스를 보유 합니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|DHCP 사용자|사용자 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 구성원 DHCP 서버 서비스에 대 한 보기 전용 액세스를 보유 합니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|Distributed COM Users|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 멤버는 시작, 활성화 및이 컴퓨터에 분산된 COM 개체를 사용할 수 있습니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|DnsAdmins|사용자 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 구성원 DNS 서버 서비스에 대 한 관리 액세스를 보유 합니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|DnsUpdateProxy|사용자 컨테이너<br /><br />글로벌 보안 그룹|이 그룹의 멤버는 동적 업데이트를 직접 수행할 수 없는 클라이언트를 대신 하 여 동적 업데이트를 수행 하도록 허용 된 DNS 클라이언트입니다. 이 그룹의 구성원은 일반적으로 DHCP 서버.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|Domain Admins|사용자 컨테이너<br /><br />글로벌 보안 그룹|지정 된 관리자는 도메인입니다. Domain Admins 모든 도메인에 가입 된 컴퓨터의 로컬 관리자 그룹의 구성원이 며 권한 및 도메인의 관리자 그룹 외에도 로컬 관리자 그룹에 부여 된 사용 권한을 받습니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />프로세스의 메모리 할당량 조정<br /><br />로컬 로그온 허용<br /><br />원격 데스크톱 서비스를 통한 로그온 허용<br /><br />파일 및 디렉터리 백업<br /><br />트래버스 검사 무시<br /><br />시스템 시간 변경<br /><br />표준 시간대 변경<br /><br />페이지 파일 만들기<br /><br />전역 개체 만들기<br /><br />바로 가기 링크 만들기<br /><br />프로그램 디버그<br /><br />위임 시 컴퓨터 및 사용자 계정을 신뢰할 수 있도록 설정<br /><br />원격 시스템에서 강제 종료<br /><br />인증 후 클라이언트 가장<br /><br />프로세스 작업 집합 늘리기<br /><br />예약 우선 순위 높이기<br /><br />장치 드라이버 로드 및 언로드<br /><br />일괄 작업으로 로그온<br /><br />감사 및 보안 로그 관리<br /><br />펌웨어 환경 값 수정<br /><br />볼륨 유지 관리 작업 수행<br /><br />단일 프로세스 프로필<br /><br />시스템 성능 프로필<br /><br />도킹 스테이션에서 컴퓨터 제거<br /><br />파일 및 디렉터리 복원<br /><br />시스템 종료<br /><br />파일 또는 기타 개체의 소유권 가져오기|  
+|도메인 컴퓨터|사용자 컨테이너<br /><br />글로벌 보안 그룹|모든 워크스테이션 및 도메인에 가입 된 서버는이 그룹의 기본 구성원으로 됩니다.<br /><br />**기본 직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|도메인 컨트롤러 하나 이상|사용자 컨테이너<br /><br />글로벌 보안 그룹|도메인의 모든 도메인 컨트롤러입니다. 참고: 도메인 컨트롤러는 도메인 컴퓨터 그룹의 멤버인 되지 않습니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|도메인 게스트|사용자 컨테이너<br /><br />글로벌 보안 그룹|도메인에 있는 모든 게스트<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|도메인 사용자|사용자 컨테이너<br /><br />글로벌 보안 그룹|도메인의 모든 사용자<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|Enterprise Admins (포리스트 루트 도메인에만 존재)|사용자 컨테이너<br /><br />유니버설 보안 그룹|포리스트 전체의 구성 설정을 변경할 수 있는 권한이 Enterprise Admins Enterprise Admins 모든 도메인의 관리자 그룹의 구성원이 며 권한 및 해당 그룹에 부여 된 사용 권한을 받습니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />프로세스의 메모리 할당량 조정<br /><br />로컬 로그온 허용<br /><br />원격 데스크톱 서비스를 통한 로그온 허용<br /><br />파일 및 디렉터리 백업<br /><br />트래버스 검사 무시<br /><br />시스템 시간 변경<br /><br />표준 시간대 변경<br /><br />페이지 파일 만들기<br /><br />전역 개체 만들기<br /><br />바로 가기 링크 만들기<br /><br />프로그램 디버그<br /><br />위임 시 컴퓨터 및 사용자 계정을 신뢰할 수 있도록 설정<br /><br />원격 시스템에서 강제 종료<br /><br />인증 후 클라이언트 가장<br /><br />프로세스 작업 집합 늘리기<br /><br />예약 우선 순위 높이기<br /><br />장치 드라이버 로드 및 언로드<br /><br />일괄 작업으로 로그온<br /><br />감사 및 보안 로그 관리<br /><br />펌웨어 환경 값 수정<br /><br />볼륨 유지 관리 작업 수행<br /><br />단일 프로세스 프로필<br /><br />시스템 성능 프로필<br /><br />도킹 스테이션에서 컴퓨터 제거<br /><br />파일 및 디렉터리 복원<br /><br />시스템 종료<br /><br />파일 또는 기타 개체의 소유권 가져오기|  
+|Enterprise 읽기 전용 도메인 컨트롤러|사용자 컨테이너<br /><br />유니버설 보안 그룹|이 그룹에는 포리스트에 있는 모든 읽기 전용 도메인 컨트롤러에 대 한 계정을 포함합니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|Event Log Readers|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 구성원은 도메인 컨트롤러의 이벤트 로그를 읽을 수 있습니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|Group Policy Creator Owners|사용자 컨테이너<br /><br />글로벌 보안 그룹|이 그룹의 멤버를 만들고 도메인의 그룹 정책 개체를 수정할 수 있습니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|게스트|사용자 컨테이너<br /><br />그룹 아님|인증 된 사용자 SID 액세스 토큰에 추가 되지 않은 AD DS 도메인에 있는 유일한 계정입니다. 따라서 Authenticated Users 그룹에 대 한 액세스를 부여 하도록 구성 된 모든 리소스는이 계정에 액세스할 수 없습니다. 하지만이 동작은 도메인 게스트 및 Guests 그룹의 구성원의 true 이면-해당 그룹의가 인증 된 사용자 SID 액세스 토큰에 추가 합니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|Guests|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|게스트 액세스 권한이 게스트 계정 제외 하 고 기본적으로 Users 그룹의 구성원으로 동일한 액세스 앞에서 설명한 대로 제한 추가입니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|Hyper-v 관리자 (Windows Server 2012)|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 구성원 Hyper-v의 모든 기능에 대 한 완전 한 무제한 액세스를 가집니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|IIS_IUSRS|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|인터넷 정보 서비스에서 사용 되는 기본 제공 그룹입니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|들어오는 포리스트 트러스트 작성기 (포리스트 루트 도메인에만 존재)|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 멤버는이 포리스트에 들어오는 단방향 트러스트를 만들 수 있습니다. (아웃 바운드 포리스트 트러스트 만들기 Enterprise Admins 예약 되어 있습니다.)<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|Krbtgt|사용자 컨테이너<br /><br />그룹 아님|Krbtgt 도메인에서 Kerberos 키 배포 센터에 대 한 서비스 계정이입니다. 이 계정에 Active Directory에 저장 된 모든 계정 자격 증명에 액세스할 수 있습니다. 이 계정은 기본적으로 비활성화 되 고 활성화 해야<br /><br />**사용자 권한:** 해당 사항 없음|  
+|Network Configuration Operators|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 구성원에는 네트워킹 기능의 구성을 관리할 수 있는 권한이 부여 됩니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|성능 로그 사용자|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 구성원 성능 카운터 로깅을 예약 하 고 추적 공급자를 사용 하도록 설정 하 고 컴퓨터에 로컬 및 원격 액세스를 통해 이벤트 추적을 수집할 수 있습니다.<br /><br />**직접 사용자 권한:**<br /><br />일괄 작업으로 로그온<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|성능 모니터 사용자|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 멤버는 로컬 및 원격으로 성능 카운터 데이터를 액세스할 수 있습니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|Pre-Windows 2000 Compatible Access|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|Windows 2000 이전의 운영 체제를 사용 하 여 이전 버전과 호환성을 위해이 그룹이 존재 하 고 멤버 사용자 및 도메인의 그룹 정보를 읽을 수 있는 기능 쉽게 키를 누릅니다.<br /><br />**직접 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />트래버스 검사 무시<br /><br />**상속 된 사용자 권한:**<br /><br />도메인에 워크스테이션 추가<br /><br />프로세스 작업 집합 늘리기|  
+|Print Operators|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 구성원 도메인 프린터를 관리할 수 있습니다.<br /><br />**직접 사용자 권한:**<br /><br />로컬 로그온 허용<br /><br />장치 드라이버 로드 및 언로드<br /><br />시스템 종료<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|RAS and IAS Servers|사용자 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 서버는 도메인 사용자 계정에 원격 액세스 속성을 읽을 수 있습니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|RDS 끝점 서버 (Windows Server 2012)|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 서버 실행 가상 컴퓨터 및 호스트 세션 사용자가 RemoteApp 프로그램 및 개인용 가상 데스크톱 실행 되는 위치입니다. 이 그룹 RD 연결 브로커를 실행 하는 서버에 채울 수 있어야 합니다. RD 세션 호스트 서버 및 RD 가상화 호스트 서버 배포에 사용이 그룹에 포함 되도록 해야 합니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|RDS 관리 서버 (Windows Server 2012)|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 서버는 원격 데스크톱 서비스를 실행 하는 서버에서 일상적인 관리 작업을 수행할 수 있습니다. 이 그룹을 원격 데스크톱 서비스 배포의 모든 서버에서 입력 하도록 해야 합니다. RDS 중앙 관리 서비스를 실행 하는 서버는이 그룹에 포함 되어야 합니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|RDS 원격 액세스 서버 (Windows Server 2012)|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 서버는 RemoteApp 프로그램 및 이러한 리소스에 대 한 개인용 가상 데스크톱 액세스의 사용자를 사용 합니다. 인터넷 연결 배포에서는 이러한 서버는 일반적으로 경계 네트워크에 배포 됩니다. 이 그룹 RD 연결 브로커를 실행 하는 서버에 채울 수 있어야 합니다. RD 게이트웨이 서버 및 RD 웹 액세스 서버 배포에 사용이 그룹에 포함 되도록 해야 합니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|Read-only Domain Controllers|사용자 컨테이너<br /><br />글로벌 보안 그룹|이 그룹은 도메인의 모든 읽기 전용 도메인 컨트롤러를 포함합니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|원격 데스크톱 서비스 사용자|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 구성원은 RDP를 사용 하 여 로그온 할 권한이 부여 됩니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|원격 관리 서버 (Windows Server 2012)|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 구성원 (예: Ws-management Windows 원격 관리 서비스를 통해) 관리 프로토콜을 통해 WMI 리소스에 액세스할 수 있습니다. 이 사용자에 게 액세스 권한을 부여 하는 WMI 네임 스페이스에만 적용 됩니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|Replicator|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|도메인에 레거시 파일 복제를 지원합니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|스키마 Admins (포리스트 루트 도메인에만 존재)|사용자 컨테이너<br /><br />유니버설 보안 그룹|스키마 관리자는 Active Directory 스키마 및 경우에만 수정 스키마를 제공할 수 있는 사용자만 쓰기 가능 합니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|Server Operators|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 구성원 도메인 서버를 관리할 수 있습니다.<br /><br />**직접 사용자 권한:**<br /><br />로컬 로그온 허용<br /><br />파일 및 디렉터리 백업<br /><br />시스템 시간 변경<br /><br />표준 시간대 변경<br /><br />원격 시스템에서 강제 종료<br /><br />파일 및 디렉터리 복원<br /><br />시스템 종료<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|터미널 서버 라이선스 서버|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 구성원 추적 및 TS 사용자 단위 CAL 사용 현황 보고 목적으로 라이선스 발급 하는 방법에 대 한 정보를 사용 하 여 사용자 계정에 Active Directory를 업데이트할 수 있습니다.<br /><br />**기본 직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|사용자|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|사용자는 대부분 변경할 수 없습니다 있지만 많은 개체와 Active Directory에서 특성을 읽을 수 있는 권한이 있습니다. 사용자는 시스템 차원의 변경을 있으며 대부분의 응용 프로그램을 실행할 수 있습니다.<br /><br />**직접 사용자 권한:**<br /><br />프로세스 작업 집합 늘리기<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시|  
+|Windows Authorization Access Group|기본 제공 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 구성원 사용자 개체에 계산 된 tokenGroupsGlobalAndUniversal 특성에 권한이 포함 됩니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  
+|WinRMRemoteWMIUsers_ (Windows Server 2012)|사용자 컨테이너<br /><br />도메인 로컬 보안 그룹|이 그룹의 구성원 (예: Ws-management Windows 원격 관리 서비스를 통해) 관리 프로토콜을 통해 WMI 리소스에 액세스할 수 있습니다. 이 사용자에 게 액세스 권한을 부여 하는 WMI 네임 스페이스에만 적용 됩니다.<br /><br />**직접 사용자 권한:** 없음<br /><br />**상속 된 사용자 권한:**<br /><br />네트워크에서 이 컴퓨터 액세스<br /><br />도메인에 워크스테이션 추가<br /><br />트래버스 검사 무시<br /><br />프로세스 작업 집합 늘리기|  

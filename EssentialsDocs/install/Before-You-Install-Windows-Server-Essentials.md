@@ -1,6 +1,6 @@
 ---
-title: "Windows Server Essentials를 설치 하기 전에"
-description: "Windows Server Essentials을 사용 하는 방법을 설명 합니다."
+title: Windows Server Essentials를 설치하기 전에
+description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
@@ -13,51 +13,52 @@ author: nnamuhcs
 ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: e7eb1b7bed780b41f1a87589add4ab015f41624a
-ms.sourcegitcommit: 70c1b6cedad55b9c7d2068c9aa4891c6c533ee4c
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59828724"
 ---
-# <a name="before-you-install-windows-server-essentials"></a>Windows Server Essentials를 설치 하기 전에
+# <a name="before-you-install-windows-server-essentials"></a>Windows Server Essentials를 설치하기 전에
 
->Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials에 적용 됩니다.
+>적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-##  <a name="BKMK_BeforeYouBegin"></a>Windows Server Essentials의 설치를 시작 하기 전에 다음과 같은 작업을 수행 합니다.  
+##  <a name="BKMK_BeforeYouBegin"></a> Windows Server Essentials의 설치를 시작 하기 전에 다음 작업을 수행 합니다.  
 
--   **컴퓨터가 최소 하드웨어 요구 사항을 충족 하는지 확인**합니다. 추가 하드웨어가 필요 확인 하 고 확인 하 여 하드웨어에 대 한 드라이버 Windows Server Essentials에서 지원 되는 포함 됩니다. 자세한 내용은 참조 [Windows Server Essentials의 시스템 요구 사항에 대 한](../get-started/system-requirements.md)합니다.   
+-   **컴퓨터가 최소 하드웨어 요구 사항을 충족하는지 확인합니다**. 여기에 추가 하드웨어가 필요한 경우를 결정 하 고 하드웨어에 대 한 드라이버를 Windows Server Essentials에서 지원 하는지 확인 합니다. 자세한 내용은 [Windows Server Essentials의 시스템 요구 사항에 대 한](../get-started/system-requirements.md)합니다.   
 
   
     > [!IMPORTANT]
-    >  Windows Server Essentials 기존 컴퓨터에 설치 하기 전에 포맷 완벽 하 게 하 고 기존 컴퓨터의 하드 디스크 다음 다시 하는 것이 좋습니다. 포맷을 하 고 하드 디스크 파티션 설정을 다시 하드 디스크에 파티션 숨겨진된 남아 있는 가능성을 제거할 수 있습니다.  
+    >  기존 컴퓨터에 Windows Server Essentials를 설치 하기 전에 다음 기존 컴퓨터의 하드 디스크를 포맷 한 완벽 하 게 서식을 지정 하는 것이 좋습니다. 하드 디스크를 포맷하고 다시 분할하면 하드 디스크에 숨겨진 파티션이 남아 있을 가능성이 없어집니다.  
   
--   **네트워크 준비** Windows Server Essentials를 설치 하 여 네트워크를 준비 하 고 다음을 수행 합니다.  
+-   **네트워크 준비** Windows Server Essentials를 설치 하 여 네트워크를 준비 하려면 다음을 수행 합니다.  
     
   
-    -   **운영 체제 클라이언트 컴퓨터를 업그레이드** Windows Server Essentials 지원 다음 운영 체제: Windows 8, Windows 7, Windows 10 및 OS X 사자 Macintosh 큰 합니다. 이 운영 체제 기능이 필요한 보안, 안정성, 성능 및 로컬 네트워크에 대 한 기능을 제공합니다.  
+    -   **클라이언트 컴퓨터의 운영 체제 업그레이드** Windows Server Essentials는 다음 운영 체제를 지원 합니다.  Windows 8, Windows 7, Windows 10 및 Macintosh OS X Lion 이상. 이러한 운영 체제는 로컬 네트워크에 필요한 보안 기능, 안정성, 성능 및 기능을 제공합니다.  
   
-    -   **라우터 구성** 라우터 다음과 같은 구성 되어 있는지 확인 합니다.  
+    -   **라우터 구성** 라우터가 다음과 같이 구성되어 있는지 확인합니다.  
   
-        -   라우터에서 UPnP 프레임 워크 활성화 됩니다.  
+        -   라우터에서 UPnP 프레임워크가 사용됩니다.  
   
-        -   Lan DHCP Dynamic Host Configuration Protocol () 서버 서비스 사용 하도록 설정 하거나 사용 하지 않도록 설정 될 수 있습니다.  Windows Server Essentials 서버 및 라우터 DHCP 실행 하지 설치할 수 있도록 보장? 라우터에서 DHCP를 사용 DHCP 사용 하지 않습니다 서버에 설치 하는 동안.  
+        -   LAN에 대한 DHCP(Dynamic Host Configuration Protocol) 서버 서비스를 사용하거나 사용하지 않도록 설정할 수 있습니다.  DHCP 서버와 라우터에서 동시에 실행 고 있지 않음을 확인 하는 Windows Server Essentials? 라우터에서 DHCP 사용 하는 경우 DHCP 사용 되지 않습니다 서버에서 설치 하는 동안.  
   
-        -   외부 인터페이스 인터넷 서비스 공급자 (ISP)에서 제공 하 여 라우터의 IP 주소를 해야 합니다. IP 주소 동적으로 isp, DHCP 서버 서비스에서 할당 될 수 있는 하거나 고정 IP 주소를 라우터의 관리 콘솔을 사용 하 여 수동으로 구성 해야 합니다.  
+        -   라우터의 외부 인터페이스에 대한 IP 주소가 있으며 이 주소는 ISP(인터넷 서비스 공급자)에서 제공합니다. IP 주소는 ISP의 DHCP 서버 서비스에서 동적으로 할당될 수 있습니다. 아니면 라우터 관리 콘솔을 사용하여 수동으로 정적 IP 주소를 구성해야 합니다.  
   
-        -   사용자 이름 및 암호를 (이더넷상의), 지점 간 프로토콜 라고도 인터넷 연결에 필요한 경우 장치에서 UPnP framework를 지원 하는 경우 라우터에서 이러한 설정은 구성 됩니다.  
+        -   인터넷에 연결하는 데 사용자 이름과 암호 및 PPPoE(Point-to-Point Protocol over Ethernet)가 필요한 경우 라우터가 UPnP 프레임워크를 지원하는 경우에도 라우터에서 이러한 설정이 구성됩니다.  
   
-        -   라우터 LAN와 인터넷에 연결 되어 하 고, 켜져 제대로 작동 합니다.  
+        -   라우터가 LAN 및 인터넷에 연결되어 있으며, 켜져 있고, 제대로 작동하고 있습니다.  
   
-     라우터 UPnP framework를 지원 하지 않는 경우 또는 설치 시 라우터를 구성할 수 없거나 직접 구성 해야 설정을 사용 하 여 네트워크에 대 한 합니다. 다음 포트 열기 되며 대상 서버의 IP 주소를 전달 있는지 확인 합니다.  
+     라우터가 UPnP 프레임워크를 지원하지 않는 경우 또는 설치 도중 라우터를 구성할 수 없는 경우 네트워크 설정을 사용하여 수동으로 라우터를 구성해야 합니다. 다음 포트가 열려 있으며 대상 서버의 IP 주소로 보내지는지 확인하세요.  
   
-    |포트 번호|응용 프로그램|  
+    |포트 번호|애플리케이션|  
     |-----------------|-----------------|  
-    |포트 80|HTTP 웹 교통량|  
-    |포트 443|HTTPS 웹 교통량|  
+    |포트 80|HTTP 웹 트래픽|  
+    |포트 443|HTTPS 웹 트래픽|  
   
 
--   **Windows Server Essentials 릴리스 문서 읽기**합니다. 릴리스 설명서 중요 하며 제대로 설치 및 Windows Server Essentials 구성 될 수 있는 최신 정보를 포함 합니다. 참조를 보거나 인쇄 릴리스 설명서 [Windows에 대 한 설명서 릴리스 Server Essentials](../get-started/release-notes.md)합니다.  
+-   **Windows Server Essentials 릴리스 문서를 읽을**합니다. 릴리스 문서를 적절히 설치 하 고 Windows Server Essentials 구성 중요할 수 있는 최신 정보를 포함 합니다. 참조를 확인 하거나 릴리스 문서를 인쇄 하려면 [Release Documentation for Windows Server Essentials](../get-started/release-notes.md)합니다.  
   
-## <a name="see-also"></a>참조 하십시오  
+## <a name="see-also"></a>참조  
   
 -   [Windows Server Essentials 설치](Install-Windows-Server-Essentials.md)
 
