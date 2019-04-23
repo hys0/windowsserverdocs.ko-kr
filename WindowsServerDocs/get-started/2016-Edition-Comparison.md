@@ -15,35 +15,35 @@ ms.author: jaimeo
 manager: dongill
 ms.localizationpriority: medium
 ms.openlocfilehash: 2c26d6d0c4c4465b5f9073dbcac951fc0adce1d5
-ms.sourcegitcommit: e0479b0114eac7f232e8b1e45eeede96ccd72b26
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "1534012"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59882054"
 ---
 # <a name="comparison-of-standard-and-datacenter-editions-of-windows-server-2016"></a>Windows Server 2016 Standard Edition과 Datacenter Edition의 비교
 
 > 적용 대상: Windows Server 2016
   
 ## <a name="locks-and-limits"></a>잠금 및 제한
-|잠금 및 제한|Windows Server 2016 Standard|Windows Server 2016 Datacenter|  
+|잠금 및 제한|Windows Server 2016 Standard|Windows Server 2016 Datacenter|  
 |-------------------|----------|---------------------------|  
 |최대 사용자 수|CAL 기준|CAL 기준|
 |최대 SMB 연결 수|16777216|16777216|
 |최대 RRAS 연결 수|제한 없음|제한 없음|
 |최대 IAS 연결 수|2147483647|2147483647|
-|최대 RDS 연결 수:|-65535|-65535|
+|최대 RDS 연결 수:|65535|65535|
 |64비트 소켓 최대 수|64|64|
 |최대 코어 수|제한 없음|제한 없음|
 |최대 RAM|24TB|24TB|
 |가상화 게스트로 이용 가능 여부|예(두 대의 가상 컴퓨터 및 라이선스당 하나의 Hyper-V 호스트)|예(가상 컴퓨터 무제한 허용 및 라이선스당 하나의 Hyper-V 호스트)|
 |서버의 도메인 가입 가능 여부|예|예|
-|경계 네트워크 보호/방화벽|아니요|아니요|
+|경계 네트워크 보호/방화벽|no|no|
 |DirectAccess|예|예|
 |DLNA 코덱 및 웹 미디어 스트리밍|예(데스크톱 환경 포함 서버로 설치된 경우)|예(데스크톱 환경 포함 서버로 설치된 경우)|
 
 ## <a name="server-roles"></a>서버 역할
-|사용 가능한 Windows Server 역할|역할 서비스|Windows Server 2016 Standard|Windows Server 2016 Datacenter|  
+|사용 가능한 Windows Server 역할|역할 서비스|Windows Server 2016 Standard|Windows Server 2016 Datacenter|  
 |-------------------|----------|----------|---------------------------|  
 |Active Directory 인증서 서비스| |예|예|
 |Active Directory 도메인 서비스| |예|예|
@@ -69,7 +69,7 @@ ms.locfileid: "1534012"
 |호스트 보호 서비스| |예|예|
 |Hyper-V| |예|예(보호된 가상 컴퓨터 포함)|
 |MultiPoint 서비스| |예|예|
-|네트워크 컨트롤러| |아니요|예|
+|네트워크 컨트롤러| |아니오|예|
 |네트워크 정책 및 액세스 서비스| |예(데스크톱 환경 포함 서버로 설치된 경우)|예(데스크톱 환경 포함 서버로 설치된 경우)|
 |인쇄 및 문서 서비스| |예|예|
 |원격 액세스| |예|예|
@@ -82,7 +82,7 @@ ms.locfileid: "1534012"
 
 ## <a name="features"></a>기능
 
-|Windows Server 기능(서버 관리자 또는 PowerShell을 사용하여 설치 가능)|WindowsServer 2016 Standard|Windows Server 2016 Datacenter|  
+|Windows Server 기능(서버 관리자 또는 PowerShell을 사용하여 설치 가능)|Windows Server 2016 Standard|Windows Server 2016 Datacenter|  
 |-------------------|----------|---------------------------|  
 |.NET Framework 3.5|예|예|
 |.NET framework 4.6|예|예|
@@ -97,7 +97,7 @@ ms.locfileid: "1534012"
 |강화된 저장소|예|예|
 |장애 조치(failover) 클러스터링|예|예|
 |그룹 정책 관리|예|예|
-|호스트 보호 Hyper-V 지원|아니요|예|
+|호스트 보호 Hyper-V 지원|아니오|예|
 |I/O 서비스 품질|예|예|
 |IIS 호스팅 가능한 웹 코어|예|예|
 |인터넷 인쇄 클라이언트|예(데스크톱 환경 포함 서버로 설치된 경우)|예(데스크톱 환경 포함 서버로 설치된 경우)|
@@ -146,7 +146,7 @@ ms.locfileid: "1534012"
 |WoW64 지원|설치됨|설치됨|
 |XPS 뷰어|예(데스크톱 환경 포함 서버로 설치된 경우)|예(데스크톱 환경 포함 서버로 설치된 경우)|
 
-|일반적으로 사용 가능한 기능|WindowsServer 2016 Standard|Windows Server 2016 Datacenter|  
+|일반적으로 사용 가능한 기능|Windows Server 2016 Standard|Windows Server 2016 Datacenter|  
 |-------------------|----------|---------------------------|  
 |모범 사례 분석기|예|예|
 |직접 액세스|예|예|
@@ -165,7 +165,7 @@ ms.locfileid: "1534012"
 |저장소 공간|예|예|
 |저장소 공간 다이렉트|아니요|예|
 |볼륨 정품 인증 서비스|예|예|
-|VSS(볼륨 섀도 복사본 서비스) 통합|예|예|
+|VSS (Volume Shadow Copy Service) integration|예|예|
 |Windows Server Update Services|예|예|
 |Windows 시스템 리소스 관리자|예|예|
 |서버 라이선싱 로깅|예|예|

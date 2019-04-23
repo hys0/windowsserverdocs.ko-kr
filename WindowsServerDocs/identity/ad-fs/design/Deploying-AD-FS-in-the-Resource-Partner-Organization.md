@@ -1,7 +1,7 @@
 ---
 ms.assetid: 41d6b897-1e72-4522-aad6-eece1154a154
-title: "ADFS 리소스 파트너 조직에서 배포"
-description: 
+title: 리소스 파트너 조직에 AD FS 배포
+description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -10,29 +10,30 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.openlocfilehash: 4a556c07e7d6e0bec4c947ea9d1a75eef9964cef
-ms.sourcegitcommit: 70c1b6cedad55b9c7d2068c9aa4891c6c533ee4c
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59877604"
 ---
-# <a name="deploying-ad-fs-in-the-resource-partner-organization"></a>ADFS 리소스 파트너 조직에서 배포
+# <a name="deploying-ad-fs-in-the-resource-partner-organization"></a>리소스 파트너 조직에 AD FS 배포
 
->적용 대상: Windows Server 2016, Windows Server 2012 r 2
+>적용 대상: Windows Server 2016, Windows Server 2012 R2
 
-Active Directory Federation Services \(AD FS\)에 리소스 파트너 조직을 나타냅니다 조직을 웹 서버가 해당 federation resource\ 측 서버에 의해 보호 됩니다 수 있습니다. 리소스 파트너에서 federation 서버 클레임 리소스 파트너에는 웹 서버에 제공 하는 계정 파트너가 생성 되는 보안 토큰을 사용 합니다.  
+Active Directory Federation Services에서 리소스 파트너 조직 \(AD FS\) 웹 서버가 속한 리소스를 보호 하는 조직을 나타냅니다\-쪽 페더레이션 서버입니다. 리소스 파트너 페더레이션 서버는 리소스 파트너에 있는 웹 서버에 대 한 클레임을 제공 하는 계정 파트너에서 생성 되는 보안 토큰을 사용 합니다.  
   
-연결 된 서비스에 대 한 액세스 또는 응용 프로그램 많은 다른 사용자에 게 제공 하기 위해 필요한 경우 등 다른 조직에서 일부 사용자가 있는 경우-여러 계정 파트너 배포할 수 있도록 리소스 federation 서버 구성할 수 있습니다.  
+페더레이션된 서비스에 대 한 액세스 또는 많은 다른 사용자에 게 응용 프로그램을 제공 해야 하는 시나리오에서-일부 사용자에 게 서로 다른 조직에 상주 하는 경우 등 여러 계정 파트너를 배포할 수 있도록 리소스 페더레이션 서버를 구성할 수 있습니다.  
   
-설치 및 구성 리소스 파트너 조직 하는 방법에 대 한 자세한 내용은 참조 [검사: 리소스 파트너 조직 구성](../../ad-fs/deployment/Checklist--Configuring-the-Resource-Partner-Organization.md)합니다.  
+설정 하 고 리소스 파트너 조직 구성 하는 방법에 대 한 자세한 내용은 참조 하세요. [검사 목록: Configuring the Resource Partner Organization](../../ad-fs/deployment/Checklist--Configuring-the-Resource-Partner-Organization.md)합니다.  
   
-## <a name="in-this-section"></a>이 섹션에서  
+## <a name="in-this-section"></a>단원 내용  
   
--   [해당 Federation 서버의 리소스 파트너에 역할을 검토](Review-the-Role-of-the-Federation-Server-in-the-Resource-Partner.md)  
+-   [리소스 파트너에 페더레이션 서버의 역할 검토](Review-the-Role-of-the-Federation-Server-in-the-Resource-Partner.md)  
   
--   [리소스 파트너에 Federation 서버 프록시 역할을 검토](Review-the-Role-of-the-Federation-Server-Proxy-in-the-Resource-Partner.md)  
+-   [리소스 파트너에서 페더레이션 서버 프록시의 역할 검토](Review-the-Role-of-the-Federation-Server-Proxy-in-the-Resource-Partner.md)  
   
--   [연결 된 응용 프로그램이 전략 리소스 파트너에 결정](Determine-Your-Federated-Application-Strategy-in-the-Resource-Partner.md)  
+-   [리소스 파트너의 페더레이션된 응용 프로그램 전략 결정](Determine-Your-Federated-Application-Strategy-in-the-Resource-Partner.md)  
   
 
-## <a name="see-also"></a>참조 하십시오
-[Windows Server 2012의에서 지침에 따라 AD FS 디자인](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+## <a name="see-also"></a>관련 항목
+[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)

@@ -1,6 +1,6 @@
 ---
-title: "마이그레이션 ADFS 웹 에이전트"
-description: "Windows Server 2012 ADFS 웹 상담원에 정보를 제공합니다."
+title: AD FS 웹 에이전트 마이그레이션
+description: Windows Server 2012로 AD FS 웹 에이전트에서 정보를 제공합니다.
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,30 +9,31 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.openlocfilehash: 945a5f4cf0e6c491479b095671ff5e77416c6fa3
-ms.sourcegitcommit: 70c1b6cedad55b9c7d2068c9aa4891c6c533ee4c
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59877594"
 ---
-# <a name="migrate-the-ad-fs-web-agent"></a>마이그레이션 ADFS 웹 에이전트
+# <a name="migrate-the-ad-fs-web-agent"></a>AD FS 웹 에이전트 마이그레이션
 
-ADFS 1.1 마이그레이션하 Windows 토큰 따라 에이전트 또는 광고 FS 1.1 클레임 인식 에이전트와 Windows Server 2008 R2 또는 Windows Server 2008, Windows Server 2012를 설치 하는 업그레이드 중 에이전트 Windows Server 2012를 호스트 하는 컴퓨터의 운영 체제를 수행 합니다. 자세한 내용은 참조 [Windows Server 2012를 설치](https://technet.microsoft.com/library/jj134246.aspx)합니다. 더 이상 구성이 필요 하지 않습니다.  
+마이그레이션하려면 AD FS 1.1 Windows 토큰 기반 에이전트 또는 AD FS 1.1 클레임 인식 에이전트를 Windows Server 2008 R2 나 Windows Server 2012, Windows Server 2008에 설치 된 에이전트 중 하나를 호스트 하는 컴퓨터의 운영 체제의 전체 업그레이드를 수행 합니다. Windows Server 2012로 자세한 내용은 [Installing Windows Server 2012](https://technet.microsoft.com/library/jj134246.aspx)를 참조하세요. 추가 구성은 필요하지 않습니다.  
   
 > [!IMPORTANT]
->  마이그레이션된 AD FS 1.1 Windows 에이전트 토큰 기반의 Windows Server 2008 R2 또는 Windows Server 2008 설치 되어 있는 ADFS 1.1 federation 서비스에만 작동 합니다. 자세한 내용은 참조 [Adfs와 상호 작용 1.x](Interoperating-with-AD-FS-1.x.md)합니다.  
+>  마이그레이션된 AD FS 1.1 Windows 토큰 기반 에이전트는 Windows Server 2008 R2 또는 Windows Server 2008과 함께 설치된 AD FS 1.1 페더레이션 서비스에서만 작동합니다. 자세한 내용은 [Interoperating with AD FS 1.x](Interoperating-with-AD-FS-1.x.md)를 참조하세요.  
 >   
->  1.1 클레임 인식 마이그레이션된 ADFS 웹 다음 에이전트 기능:  
+>  마이그레이션된 AD FS 1.1 클레임 인식 웹 에이전트는 다음에서 작동합니다.  
 >   
->  -   Windows Server 2008 R2 또는 Windows Server 2008 설치 된 광고 FS 1.1 federation 서비스  
-> -   Windows Server 2008 R2 또는 Windows Server 2008에 설치 된 ADFS 2.0 federation 서비스  
-> -   Windows Server 2012와 함께 설치 된 ADFS federation 서비스  
+>  -   Windows Server 2008 R2 또는 Windows Server 2008과 함께 설치된 AD FS 1.1 페더레이션 서비스  
+> -   Windows Server 2008 R2 또는 Windows Server 2008에 설치된 AD FS 2.0 페더레이션 서비스  
+> -   Windows Server 2012를 사용 하 여 설치 된 AD FS 페더레이션 서비스  
 >   
->  자세한 내용은 참조 [Adfs와 상호 작용 1.x](Interoperating-with-AD-FS-1.x.md)합니다.  
+>  자세한 내용은 [Interoperating with AD FS 1.x](Interoperating-with-AD-FS-1.x.md)를 참조하세요.  
   
   
 ## <a name="next-steps"></a>다음 단계
- [광고 FS 2.0 Federation 서버 마이그레이션을 준비합니다](prepare-to-migrate-ad-fs-fed-server.md)   
- [광고 FS 2.0 Federation 서버 프록시 마이그레이션을 준비합니다](prepare-to-migrate-ad-fs-fed-proxy.md)   
- [광고 FS 2.0 Federation Server를 마이그레이션해야](migrate-the-ad-fs-fed-server.md)   
- [광고 FS 2.0 Federation 서버 프록시 마이그레이션](migrate-the-ad-fs-2-fed-server-proxy.md)   
- [광고 FS 1.1 웹 에이전트 마이그레이션](migrate-the-ad-fs-web-agent.md)
+ [AD FS 2.0 페더레이션 서버 마이그레이션 준비](prepare-to-migrate-ad-fs-fed-server.md)   
+ [AD FS 2.0 페더레이션 서버 프록시 마이그레이션 준비](prepare-to-migrate-ad-fs-fed-proxy.md)   
+ [AD FS 2.0 페더레이션 서버 마이그레이션](migrate-the-ad-fs-fed-server.md)   
+ [AD FS 2.0 페더레이션 서버 프록시 마이그레이션](migrate-the-ad-fs-2-fed-server-proxy.md)   
+ [AD FS 1.1 웹 에이전트 마이그레이션](migrate-the-ad-fs-web-agent.md)

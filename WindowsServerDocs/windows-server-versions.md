@@ -15,11 +15,11 @@ ms.author: elizapo
 manager: dongill
 ms.localizationpriority: medium
 ms.openlocfilehash: 8d14ccf734d5242301030bbb6e3c2489e1a0266a
-ms.sourcegitcommit: e0479b0114eac7f232e8b1e45eeede96ccd72b26
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "2082488"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59876354"
 ---
 # <a name="windows-server---it-administrator-content-for-current-and-previous-releases"></a>Windows Server - 현재 및 이전 릴리스에 대한 IT 관리자 콘텐츠
 
@@ -30,7 +30,7 @@ Windows Server는 작업 그룹에서 데이터 센터까지 응용 프로그램
 > [!IMPORTANT]
 > PC에서 실행되는 Windows가 실행되고 있습니까? Windows 10, Windows 8 또는 8.1입니까? Windows 7입니까? 문제가 있으십니까? [Microsoft 지원](https://support.microsoft.com)으로 이동하고 검색 창에 문제를 바로 입력하세요. Windows, Office, Skype에 대한 많은 정보가 있습니다. 
 
-> 아래 정보는 Windows **Server** *전용*입니다.
+> 아래 정보는 Windows **Server***전용*입니다.
 
 ## <a name="windows-server-2016"></a>Windows Server 2016
 

@@ -1,7 +1,7 @@
 ---
 ms.assetid: 7e804590-6d6c-4cca-ac14-02d4dff06cec
-title: "업데이트 암호 사용자 지정"
-description: 
+title: 사용자 지정 암호를 업데이트 합니다.
+description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -10,28 +10,29 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.openlocfilehash: 4b06992bfb398b66988ad4882217a8a83738365e
-ms.sourcegitcommit: 78d8839ccafa9530784cb9e38c3127ed2c215423
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59876574"
 ---
-# <a name="update-password-customization"></a>업데이트 암호 사용자 지정 
+# <a name="update-password-customization"></a>사용자 지정 암호를 업데이트 합니다. 
 
->적용 대상: Windows Server 2016, Windows Server 2012 r 2
+>적용 대상: Windows Server 2016, Windows Server 2012 R2
 
-경우에 따라 사용자가 자신의 계정 암호를 변경 하 여 회사 네트워크에 연결할 수 되지 않을 수 있습니다. 이 팩터 가장 가까운에서 라이브 수 있는 직원 원격 특히 문제가 발생할 수 있습니다 본사 합니다. 이러한 특정 경우에 대 한 업데이트 암호 페이지만 인터넷에 연결 하 여 사용할 수 있습니다.  
+경우에 따라 사용자가 자신의 계정 암호를 변경하기 위해 회사 네트워크에 연결하지 못할 수도 있습니다. 이 요소는 가장 가까운 회사 사무실에서 멀리 떨어진 곳에 살고 있을 수 있는 원격 직원에게 특히 문제가 될 수 있습니다. 이 특정한 경우 인터넷에 연결하는 것만으로 암호 업데이트 페이지를 사용할 수 있습니다.  
   
-직접 설명 페이지에 제공 하 여 업데이트 암호 페이지를 사용자 지정할 수 있습니다.  
+페이지에 대한 고유한 설명을 제공하여 암호 업데이트 페이지를 사용자 지정할 수 있습니다.  
   
-> 암호 업데이트 페이지를 사용 하려면 아래 끝점 AD FS 관리로 이동 합니다. 암호 업데이트에 대 한 끝점은 기타-/ adfs/포털/updatepassword/에서 맨 아래에 있습니다. 끝점 설정한 후 ADFS 서비스 다시 시작 해야 합니다. 이 수동으로 수행 해야 합니다. Https://로 이동할 수 있습니다<fqdn>/adfs/포털/updatepassword/회사에서 디바이스를 연결 하 고 업데이트 암호 페이지가 표시 됩니다.  
+> 암호 업데이트 페이지를 사용하도록 설정하려면 AD FS 관리에서 끝점으로 이동합니다. 암호 업데이트 끝점은 기타(/adfs/portal/updatepassword/)의 맨 아래에 있습니다. 끝점을 사용하도록 설정한 후에는 AD FS 서비스를 다시 시작해야 합니다. 이 작업은 수동으로 수행해야 합니다. 그런 다음 작업 공간에 연결된 장치에서 https://<fqdn>/adfs/portal/updatepassword/로 이동하면 암호 업데이트 페이지를 볼 수 있습니다.  
   
 ![업데이트](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom5.png)  
   
-## <a name="customize-the-update-password-page-description"></a>업데이트 암호 페이지 설명 사용자 지정  
-업데이트 암호 페이지 설명을 사용자 지정 하려면 다음 Windows PowerShell cmdlet와 구문을 사용 합니다.  
+## <a name="customize-the-update-password-page-description"></a>암호 업데이트 페이지 설명 사용자 지정  
+암호 업데이트 페이지 설명을 사용자 지정 하려면 다음 Windows PowerShell cmdlet 및 구문을 사용 합니다.  
   
 
     Set-AdfsGlobalWebContent -UpdatePasswordPageDescriptionText "This is the Contoso Update Password page."  
 
 ## <a name="additional-references"></a>추가 참조 
-[광고 FS 사용자 지정 로그인](AD-FS-user-sign-in-customization.md)  
+[AD FS 사용자 로그인 사용자 지정](AD-FS-user-sign-in-customization.md)  

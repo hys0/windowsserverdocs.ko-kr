@@ -1,0 +1,100 @@
+---
+title: forfiles
+description: '에 대 한 Windows 명령을 항목 * * *- '
+ms.custom: na
+ms.prod: windows-server-threshold
+ms.reviewer: na
+ms.suite: na
+ms.technology: manage-windows-commands
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: 43f6b004-446d-4fdd-91c5-5653613524a4
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 08/21/2018
+ms.openlocfilehash: 127f715620321354792d46f024ee12a06925d866
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59881314"
+---
+# <a name="forfiles"></a>forfiles
+
+
+
+선택한 파일 또는 파일 집합에서 명령을 실행 합니다. 이 명령은 일괄 처리 작업에 유용합니다.
+
+이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
+
+## <a name="syntax"></a>구문
+
+```
+forfiles [/p <Path>] [/m <SearchMask>] [/s] [/c "<Command>"] [/d [{+|-}][{<Date>|<Days>}]]
+```
+
+
+## <a name="parameters"></a>매개 변수
+
+|매개 변수|설명|
+|---------|-----------|
+|/p \<Path>|검색을 시작 하는 경로 지정 합니다. 기본적으로 현재 작업 디렉터리에서 시작 검색 합니다.|
+|/m \<SearchMask>|지정 된 검색 마스크에 따라 파일을 검색합니다. 기본 검색 마스크는 **\*.\*** 합니다.|
+|/s|지시는 **하위 폴더** 하위 디렉터리가 재귀적으로 검색 하는 명령입니다.|
+|/c "\<명령 >"|각 파일에 지정된 된 명령을 실행합니다. 명령 문자열을 따옴표로 묶어야 합니다. 기본 명령은 **"cmd /c echo @file"** 합니다.|
+|/d&nbsp;[{+\|-}]&#8288;[{\<Date>\|&#8288;\<Days>}]|지정 된 시간 프레임 내에서 마지막으로 수정한 날짜를 사용 하 여 파일을 선택합니다.</br>-마지막으로 수정한 날짜 보다 이후 또는 같음를 사용 하 여 파일을 선택 합니다. (**+**) 보다 이전 또는 같음 (**-**) 지정된 된 날짜 여기서 *날짜* MM/DD/YYYY 형식으로 되어 있습니다.</br>--마지막으로 수정한 날짜 보다 이후 또는 같음를 사용 하 여 파일을 선택 하는 중 (**+**) 현재 날짜와는 지정 된 일 수 또는 이전의 크거나 (**-**) 일 수를 뺀 현재 날짜를 지정 합니다.</br>에 대 한 유효한 값 *일* 범위 0-32, 768에서에서 다 수를 포함 합니다. 기호가 없으면 지정 된 경우 **+** 기본적으로 사용 됩니다.|
+|/?|명령 프롬프트에 도움말을 표시합니다.|
+
+## <a name="remarks"></a>설명
+
+-   **하위 폴더** 배치 파일에서 가장 많이 사용 됩니다.
+-   **하위 폴더 /s** 비슷합니다 **이름만 있습니다.**
+-   다음 변수를 사용 하 여 명령 문자열에 지정 된 대로는 **/c** 명령줄 옵션입니다.  
+
+|변수|설명|
+|--------|-----------|
+|@FILE|파일 이름입니다.|
+|@FNAME|확장명 없이 파일 이름입니다.|
+|@EXT|파일 이름 확장명입니다.|
+|@PATH|파일의 전체 경로입니다.|
+|@RELPATH|파일의 상대 경로입니다.|
+|@ISDIR|파일 형식을 디렉터리 이면 TRUE로 평가 합니다. 그렇지 않은 경우이 변수를 FALSE로 평가합니다.|
+|@FSIZE|파일 크기 (바이트)에서입니다.|
+|@FDATE|파일에 마지막으로 수정한 날짜 스탬프입니다.|
+|@FTIME|파일의 마지막 수정된 타임 스탬프입니다.|
+
+-   와 **하위 폴더**, 에서 명령을 실행 하거나 여러 파일에 인수를 전달할 수 있습니다. 예를 들어, 실행할 수는 **형식** .txt 파일 이름 확장명을 사용 하 여 트리의 모든 파일에서 명령입니다. 또는 모든 배치 파일을 실행할 수 있습니다 (*.bat) C 드라이브에 파일 이름을 "Myinput.txt"는 첫 번째 인수입니다.
+-   와 **하위 폴더**, 다음 중 하나를 수행할 수 있습니다.  
+    -   파일을 사용 하 여 절대 날짜 또는 상대 날짜 선택은 **/d** 매개 변수입니다.
+    -   같은 변수를 사용 하 여 파일의 보관 트리를 작성 @FSIZE 고 @FDATE입니다.
+    -   사용 하 여 디렉터리에서 파일을 구분 합니다 @ISDIR 변수입니다.
+    -   문자, 0 x에 대 한 16 진수 코드를 사용 하 여 명령줄에 특수 문자를 포함*HH* 형식 (예: 탭에는 0x09).
+-   **하위 폴더** 구현 하 여 작동는 **하위 디렉터리를 recurse** 파일을 한 개만 처리 하도록 설계 된 도구에 대 한 플래그입니다.
+
+## <a name="BKMK_examples"></a>예제
+
+C 드라이브에 배치 파일의 모든를 나열 하려면 다음을 입력 합니다.
+```
+forfiles /p c:\ /s /m *.bat /c "cmd /c echo @file is a batch file"
+```
+C 드라이브에 있는 디렉터리를 나열 하려면 다음을 입력 합니다.
+```
+forfiles /p c:\ /s /m *.* /c "cmd /c if @isdir==TRUE echo @file is a directory"
+```
+현재 디렉터리에 있는 파일을 적어도 1 년 전의 모든를 나열 하려면 다음을 입력 합니다.
+```
+forfiles /s /m *.* /d -365 /c "cmd /c echo @file is at least one year old."
+```
+텍스트를 표시 하려면 "*파일* 오래 된" 2007 년 1 월 1 일 보다 오래 된 현재 디렉터리에 파일을 각각 입력 합니다.
+```
+forfiles /s /m *.* /d -01/01/2007 /c "cmd /c echo @file is outdated." 
+```
+열 형식으로 현재 디렉터리에 있는 모든 파일의 파일 이름 확장명을 나열 하 고 확장명 앞에 탭 추가 하려면 다음을 입력 합니다.
+```
+forfiles /s /m *.* /c "cmd /c echo The extension of @file is 0x09@ext" 
+```
+
+#### <a name="additional-references"></a>추가 참조
+
+[명령줄 구문 키](command-line-syntax-key.md)

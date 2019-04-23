@@ -1,6 +1,6 @@
 ---
-title: "보고서 집합 예약"
-description: "이 문서에서는 정기적으로 보고서 집합을 생성하는 방법을 설명합니다."
+title: 보고서 집합 예약
+description: 이 문서에서는 정기적으로 보고서 집합을 생성하는 방법을 설명합니다.
 ms.date: 7/7/2017
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -9,14 +9,15 @@ author: JasonGerend
 manager: brianlic
 ms.author: jgerend
 ms.openlocfilehash: 15b69e723af3a30375beae73782ab122c68f8880
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59879724"
 ---
 # <a name="schedule-a-set-of-reports"></a>보고서 집합 예약
 
-> 적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> 적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 정기적으로 보고서를 생성하려면 *보고서 작업*을 예약합니다. 보고서 작업은 어떤 보고서를 생성하고 어떤 매개 변수를 사용할지, 어떤 볼륨과 폴더에 대해 보고할지, 얼마나 자주 보고서를 생성할지, 어떤 형식으로 저장할지 지정합니다.
 
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/17/2017
 6.  보고서의 복사본을 관리자에게 전달하려면:
 
     - **전달** 탭에서 **다음 관리자에게 보고서 보내기** 확인란을 선택하고 보고서를 받을 관리자 계정 이름을 입력합니다. 
-    - *account@domain* 형식을 사용하고 세미콜론으로 여러 계정을 구분합니다.
+    - *account@domain*  형식을 사용하고 세미콜론으로 여러 계정을 구분합니다.
 
 7.  보고서를 예약하려면:
 
@@ -76,9 +77,9 @@ ms.lasthandoff: 10/17/2017
 
 또한 보고서의 현재 상태(보고서가 실행 중인지 여부), 마지막 실행 시간과 실행의 결과, 예약된 다음 실행 시간을 볼 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 -   [저장소 보고서 관리](storage-reports-management.md)
--   [파일 서버 리소스 관리자 옵션 설정](setting-file-server-resource-manager-options.md)
+-   [설정 파일 서버 리소스 관리자 옵션](setting-file-server-resource-manager-options.md)
 
 

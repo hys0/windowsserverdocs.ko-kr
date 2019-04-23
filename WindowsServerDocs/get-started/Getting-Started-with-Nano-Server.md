@@ -13,20 +13,20 @@ author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
 ms.openlocfilehash: 295402a3bcdcec07025ad1f803cddd47127baa8d
-ms.sourcegitcommit: e84e328c13a701e8039b16a4824a6e58a6e59b0b
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "4133739"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59878954"
 ---
-# Nano 서버 설치
+# <a name="install-nano-server"></a>Nano 서버 설치
 
 >적용 대상: Windows Server 2016
 
 > [!IMPORTANT]
 > Windows Server, 버전 1709부터 [컨테이너 기본 OS 이미지](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image)로만 Nano 서버를 사용할 수 있습니다. [Nano 서버 변경 사항](nano-in-semi-annual-channel.md)을 확인하여 그 의미를 알아보세요. 
 
-Windows Server 2016은 새로운 설치 옵션인 Nano 서버를 제공합니다. Nano 서버는 사설 클라우드 및 데이터 센터에 최적화된 원격 관리 서버 운영 체제입니다. Server Core 모드의 Windows Server와 유사하지만 훨씬 작고 로컬 로그온 기능이 없으며 64비트 응용 프로그램, 도구 및 에이전트에만 지원합니다. Windows Server보다 훨씬 적은 디스크 공간을 차지하고, 훨씬 빠르게 설치되며, 필요한 업데이트 및 다시 시작 횟수가 훨씬 적습니다. 다시 시작 속도가 훨씬 빠릅니다. Nano 서버 설치 옵션은 Windows Server 2016 Standard 및 Datacenter 버전에 제공됩니다.  
+Windows Server 2016에서는 새 설치 옵션을 제공합니다. Nano 서버입니다. Nano 서버는 사설 클라우드 및 데이터 센터에 최적화된 원격 관리 서버 운영 체제입니다. Server Core 모드의 Windows Server와 유사하지만 훨씬 작고 로컬 로그온 기능이 없으며 64비트 응용 프로그램, 도구 및 에이전트에만 지원합니다. Windows Server보다 훨씬 적은 디스크 공간을 차지하고, 훨씬 빠르게 설치되며, 필요한 업데이트 및 다시 시작 횟수가 훨씬 적습니다. 다시 시작 속도가 훨씬 빠릅니다. Nano 서버 설치 옵션은 Windows Server 2016 Standard 및 Datacenter 버전에 제공됩니다.  
 
 Nano 서버는 다음과 같은 다양한 시나리오에 이상적입니다.  
   
@@ -40,14 +40,14 @@ Nano 서버는 다음과 같은 다양한 시나리오에 이상적입니다.
   
 -   클라우드 응용 프로그램 패턴을 사용하여 개발되어 컨테이너 또는 가상 컴퓨터 게스트 운영 체제에서 실행되는 응용 프로그램의 호스트  
   
-## Nano 서버의 중요한 차이점
+## <a name="important-differences-in-nano-server"></a>Nano 서버의 중요한 차이점
 
 Nano 서버는 컨테이너 및 마이크로서비스를 기반으로 하는 "클라우드-네이티브" 응용 프로그램을 실행하기 위한 간단한 운영 체제로 또는 훨씬 더 작은 공간을 차지하는 민첩하고 비용 효과적인 데이터 센터 호스트로 최적화되어 있으므로 Nano 서버와 Server Core 또는 데스크톱 환경 포함 서버 간에는 중요한 차이점이 있습니다.
 
 - Nano 서버는 "헤드리스" 방식이며, 로컬 로그온 기능 또는 그래픽 사용자 인터페이스가 없습니다.
 - 64비트 응용 프로그램, 도구 및 에이전트만 지원됩니다.
 - Nano 서버는 Active Directory 도메인 컨트롤러로 작동할 수 없습니다.
-- 그룹 정책은 지원되지 않습니다. 그렇지만 [필요한 상태 구성](https://msdn.microsoft.com/powershell/dsc/nanoDsc)을 사용하여 대규모로 설정을 적용할 수 있습니다.
+- 그룹 정책은 지원되지 않습니다. 그렇지만 [원하는 상태 구성](https://msdn.microsoft.com/powershell/dsc/nanoDsc)을 사용하여 대규모로 설정을 적용할 수 있습니다.
 - Nano 서버는 프록시 서버를 사용하여 인터넷에 액세스하도록 구성할 수 없습니다.
 - NIC 팀(부하 분산과 장애 조치(failover), LBFO)은 지원되지 않습니다. 대신 SET(Switch-embedded teaming)가 지원됩니다.
 - System Center Configuration Manager 및 System Center Data Protection Manager는 지원되지 않습니다.
@@ -57,17 +57,17 @@ Nano 서버는 컨테이너 및 마이크로서비스를 기반으로 하는 "�
 - Nano 서버와 함께 제공되는 Windows PowerShell 버전에는 중요한 차이점이 있습니다. 자세한 내용은 [Nano 서버의 PowerShell](PowerShell-on-Nano-Server.md)을 참조하세요.
 - Nano 서버는 CBB(비즈니스용 현재 분기) 모델에서만 지원되며, 현재는 Nano 서버의 LTSB(장기 서비스 분기) 릴리스가 없습니다. 자세한 내용은 다음 하위 섹션을 참조하세요.
 
-### 비즈니스용 현재 분기
+### <a name="current-branch-for-business"></a>비즈니스용 현재 분기
 Nano 서버는 빠른 개발 주기를 사용하여 "클라우드 주기"에 따라 이동하는 고객을 지원하기 위해 CBB(비즈니스용 현재 분기)라고 하는 좀 더 활성화된 모델로 제공됩니다. 이 모델에서는 Nano 서버의 기능 업데이트 릴리스가 1년에 2~3회로 예상됩니다. 또한 프로덕션에 배포되고 작동되는 Nano 서버에 대한 [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx)가 필요합니다. 지원을 유지하려면 관리자가 CBB 릴리스를 2개까지 유지해야 합니다. 그러나 이러한 릴리스는 기존 배포를 자동으로 업데이트하지 않습니다. 따라서 관리자가 편리할 때 새 CBB 릴리스를 수동으로 설치합니다. 추가 정보에 대해서는 [Windows Server 2016의 새 비즈니스용 현재 분기 서비스 옵션](https://blogs.technet.microsoft.com/windowsserver/2016/07/12/windows-server-2016-new-current-branch-for-business-servicing-option/)을 참조하세요.
 
 Server Core 및 데스크톱 환경 포함 서버 설치 옵션은 5년 간의 주요 지원과 5년 간의 연장 지원으로 구성된 [LTSB(장기 서비스 분기) 모델](https://support.microsoft.com/lifecycle#gp%2Fgp_msl_policy)에 따라 계속 제공됩니다.
 
-## 설치 시나리오
+## <a name="installation-scenarios"></a>설치 시나리오
 
-### 평가
-[Windows Server 평가판](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016)에서 Windows Server 180일 라이선스 평가판 사본을 얻을 수 있습니다. Nano 서버를 사용해 보려면 **Nano 서버 | 64비트 EXE 옵션**을 선택한 다음 [Nano 서버 빠른 시작](Nano-Server-Quick-Start.md) 또는 [Nano 서버 배포](Deploy-Nano-Server.md)로 돌아가서 시작합니다.
+### <a name="evaluation"></a>Evaluation
+[Windows Server 평가판](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016)에서 Windows Server 180일 라이선스 평가판 사본을 얻을 수 있습니다. Nano Server를 실행 하려면 선택 합니다 **Nano 서버 | 64 비트 EXE 옵션**, 돌아가 다음을 [Nano 서버 빠른 시작](Nano-Server-Quick-Start.md) 또는 [Nano 서버 배포](Deploy-Nano-Server.md) 시작 하려면.
 
-### 새로 설치
+### <a name="clean-installation"></a>새로 설치
 VHD를 구성하여 Nano 서버를 설치하기 때문에 새로 설치하는 것이 가장 빠르고 간단한 배포 방법입니다.
 
 - DHCP로 IP 주소를 가져와서 신속하게 Nano 서버 기본 배포를 시작하려면 [Nano 서버 빠른 시작](Nano-Server-Quick-Start.md)을 참조하세요. 
@@ -76,10 +76,10 @@ VHD를 구성하여 Nano 서버를 설치하기 때문에 새로 설치하는 �
 > [!IMPORTANT]  
 > 설치가 완료되고 필요한 모든 서버 역할과 기능을 설치하는 즉시 Windows Server 2016에 제공되는 업데이트를 확인하고 설치합니다. Nano 서버의 경우 [Nano 서버 관리](Manage-Nano-Server.md)의 "Nano Server에서 업데이트 관리"를 참조하세요.
 
-### 업그레이드
+### <a name="upgrade"></a>업그레이드
 Nano 서버는 Windows Server 2016의 새로운 제품이므로 이전 운영 체제 버전에서 Nano 서버로 업그레이드하는 경로가 없습니다.
 
-### 마이그레이션
+### <a name="migration"></a>마이그레이션
 Nano 서버는 Windows Server 2016의 새로운 제품이므로 이전 운영 체제 버전에서 Nano 서버로 마이그레이션하는 경로가 없습니다.
   
 -------------------------------------

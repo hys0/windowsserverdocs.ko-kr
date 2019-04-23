@@ -1,6 +1,6 @@
 ---
 ms.assetid: d11acbc2-40c6-4ab2-9514-2bc3ad81499a
-title: "데이터 중복 제거의 새로운 기능"
+title: 데이터 중복 제거의 새로운 기능
 ms.technology: storage-deduplication
 ms.prod: windows-server-threshold
 ms.topic: article
@@ -9,14 +9,15 @@ manager: klaasl
 ms.author: wgries
 ms.date: 09/15/2016
 ms.openlocfilehash: 4a69221548d9defff5a45413ccfe824f9788755a
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59876454"
 ---
 # <a name="whats-new-in-data-deduplication"></a>데이터 중복 제거의 새로운 기능
 
-> 적용 대상: Windows Server(반기 채널), Windows Server 2016
+> 적용 대상: Windows Server (반기 채널), Windows Server 2016
 
 Windows Server 2016의 [데이터 중복 제거](overview.md) 기능이 사설 클라우드 규모에서 매우 뛰어난 성능, 유연성 및 관리 효율성을 제공하도록 최적화되었습니다. Windows Server 2016의 소프트웨어 정의 저장소 스택에 대한 자세한 내용은 [Windows Server 2016에서 제공되는 저장소의 새로운 기능](../whats-new-in-storage.md)을 참조하세요.
 
@@ -26,9 +27,9 @@ Windows Server 2016에서 향상된 데이터 중복 제거 기능은 다음과 
 |---------------|----------------|-------------|
 | [대규모 볼륨 지원](whats-new.md#large-volume-support) | 업데이트됨 | Windows Server 2016 이전에는 특별히 예상되는 변동에 대비해 볼륨의 크기를 조정해야 했으며, 10TB가 넘는 볼륨은 중복 제거에 적합하지 않았습니다. Windows Server 2016에서는 데이터 중복 제거에서 최대 64TB의 볼륨 크기를 지원합니다. |
 | [대용량 파일 지원](whats-new.md#large-file-support) | 업데이트됨 | Windows Server 2016 이전에는 크기가 1TB에 가까운 파일은 중복 제거에 적합하지 않았습니다. Windows Server 2016에서는 최대 1TB의 파일이 완전히 지원됩니다. |
-| [Nano Server 지원](whats-new.md#nano-server-support) | 새로 만들기 | 데이터 중복 제거는 Windows Server 2016의 새로운 Nano Server 배포 옵션에서 사용할 수 있으며 완전히 지원됩니다. |
-| [간소화된 백업 지원](whats-new.md#simple-backup-support) | 새로 만들기 | Windows Server 2012 R2에서는 일련의 수동 구성 단계를 통해 Microsoft의 [Data Protection Manager](https://technet.microsoft.com/library/hh758173.aspx)와 같은 가상화된 백업 응용 프로그램을 지원했습니다. Windows Server 2016에서는 가상화된 백업 응용 프로그램에 대한 데이터 중복 제거의 원활한 배포를 위해 새로운 기본 사용 유형(백업)이 추가되었습니다.|
-| [클러스터 OS 롤링 업그레이드 지원](whats-new.md#cluster-upgrade-support) | 새로 만들기 | 데이터 중복 제거는 Windows Server 2016의 [클러스터 OS 롤링 업그레이드](../..//failover-clustering/cluster-operating-system-rolling-upgrade.md) 기능을 완전히 지원합니다. |
+| [Nano Server에 대 한 지원](whats-new.md#nano-server-support) | 단추를 사용하여 새 | 데이터 중복 제거는 Windows Server 2016의 새로운 Nano Server 배포 옵션에서 사용할 수 있으며 완전히 지원됩니다. |
+| [간소화 된 백업 지원](whats-new.md#simple-backup-support) | 단추를 사용하여 새 | Windows Server 2012 R2에서는 일련의 수동 구성 단계를 통해 Microsoft의 [Data Protection Manager](https://technet.microsoft.com/library/hh758173.aspx)와 같은 가상화된 백업 응용 프로그램을 지원했습니다. Windows Server 2016에서는 가상화된 백업 응용 프로그램에 대한 데이터 중복 제거의 원활한 배포를 위해 새로운 기본 사용 유형(백업)이 추가되었습니다.|
+| [클러스터 OS 롤링 업그레이드 지원](whats-new.md#cluster-upgrade-support) | 단추를 사용하여 새 | 데이터 중복 제거는 Windows Server 2016의 [클러스터 OS 롤링 업그레이드](../..//failover-clustering/cluster-operating-system-rolling-upgrade.md) 기능을 완전히 지원합니다. |
 
 ## <a name="large-volume-support"></a>대규모 볼륨 지원
 
@@ -53,7 +54,7 @@ Windows Server 2012 R2에서 대용량 파일은 데이터 중복 제거 처리 
 **달라진 기능**  
 Windows Server 2016에서는 데이터 중복 제거에서 새로운 스트림 맵 구조 및 기타 "세부적인" 개선 사항을 활용하여 최적화 처리량 및 액세스 성능을 개선합니다. 또한 이제는 중복 제거 처리 파이프라인이 다시 시작하는 대신 장애 조치(failover) 후 최적화 진행을 재개할 수 있습니다. 이러한 변경 내용으로 인해 최대 1TB 파일에 대한 중복 제거가 매우 효율적입니다.
 
-## <a name="nano-server-support"></a>Nano Server 지원
+## <a name="nano-server-support"></a>Nano Server에 대 한 지원
 **이와 같은 변경을 통해 더해지는 가치**  
 Nano Server는 Windows Server 2016의 새로운 헤드리스 배포 옵션으로, Windows Server Core 배포 옵션보다 매우 작은 시스템 리소스 설치 공간이 필요하며, 훨씬 더 빠르게 시작되고, 필요한 업데이트 및 다시 시작 횟수가 더 적습니다. 데이터 중복 제거는 Nano Server에서 완전히 지원됩니다. Nano Server에 대한 자세한 내용은 [Nano Server 시작](../../get-started/getting-started-with-nano-server.md)을 참조하세요.
 

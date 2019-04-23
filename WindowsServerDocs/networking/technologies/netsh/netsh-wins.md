@@ -1,6 +1,6 @@
 ---
-title: 네트워크 셸 (Netsh) 예 배치 파일
-description: Netsh Windows Server 2016에 사용 하 여 여러 가지 작업을 수행 하는 배치 파일 만드는 방법을이 항목을 사용할 수 있습니다.
+title: Netsh(네트워크 셸) 배치 파일 예
+description: Windows Server 2016에서 Netsh를 사용 하 여 여러 작업을 수행 하는 배치 파일을 만드는 방법에 알아보려면이 항목에서는 사용할 수 있습니다.
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
@@ -9,34 +9,35 @@ manager: brianlic
 ms.author: pashort
 author: shortpatti
 ms.openlocfilehash: b0528cfaef201ba30e00e30f56a763be39a6b828
-ms.sourcegitcommit: 19d9da87d87c9eefbca7a3443d2b1df486b0b010
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59880174"
 ---
-# <a name="network-shell-netsh-example-batch-file"></a>네트워크 셸 \(Netsh\) 예 배치 파일
+# <a name="network-shell-netsh-example-batch-file"></a>네트워크 셸 \(Netsh\) 배치 파일 예
 
-Windows Server 2016 적용 됩니다.
+적용 대상: Windows Server 2016
 
-Netsh Windows Server 2016에 사용 하 여 여러 가지 작업을 수행 하는 배치 파일 만드는 방법을이 항목을 사용할 수 있습니다. 이 들어 배치 파일에는 **netsh wins** 컨텍스트가 사용 됩니다.
+Windows Server 2016에서 Netsh를 사용 하 여 여러 작업을 수행 하는 배치 파일을 만드는 방법에 알아보려면이 항목에서는 사용할 수 있습니다. 이 예제 배치 파일에는 **netsh wins** 컨텍스트가 사용 됩니다.
 
-## <a name="example-batch-file-overview"></a>예 배치 파일 개요
+## <a name="example-batch-file-overview"></a>예제에서는 일괄 처리 파일 개요
 
-Windows Internet 이름 서비스 \(WINS\) 배치 파일에서에 대 한 Netsh 명령 및 기타 스크립트 작업 자동화을 사용할 수 있습니다. 다음 배치 파일 예제 wins Netsh 명령을 사용 하 여 다양 한 관련된 작업을 수행 하는 방법을 보여 줍니다.
+Windows Internet Name Service에 대 한 Netsh 명령을 사용할 수 있습니다 \(WINS\) 배치 파일에 작업을 자동화 하는 다른 스크립트입니다. 다음 배치 파일 예제 WINS에 대 한 Netsh 명령을 사용 하 여 다양 한 관련된 작업을 수행 하는 방법에 설명 합니다.
 
-이 들어 배치 파일에 WINS\ A 192.168.125.30 IP 주소와 WINS 서버 이며 WINS\ B WINS 서버 192.168.0.189 IP 주소를 사용 합니다.
+이 예제 배치 파일에서 WINS\-A 192.168.125.30 IP 주소 및 WINS를 사용 하 여 WINS 서버는\-B는 192.168.0.189 IP 주소를 사용 하 여 WINS 서버.
 
-배치 파일의 예는 다음과 같은 작업을 수행 합니다.
+배치 파일 예는 다음과 같은 작업을 수행합니다.
 
-- 동적 이름 레코드 192.168.0.205 IP 주소, MY\_RECORD \[04h\ 추가]에 WINS\ A
-- 푸시/방향으로 빼냅니다 복제 파트너 WINS\ a WINS\ B 설정
-- WINS\ B에 연결 하 고 다음 설정 WINS\ b 푸시/방향으로 빼냅니다 복제 파트너 WINS\ A
-- WINS\ b WINS\ a에서 푸시 복제 시작
-- 새 녹음 MY\_RECORD를 성공적으로 복제 확인 하기 위해 WINS\-B에 연결
+- 레코드를 추가 동적 이름을 IP 주소로 192.168.0.205, MY\_레코드 \[04 h\], wins\-는
+- WINS 설정\-WINS의 푸시/끌어오기 복제 파트너로 B\-는
+- WINS 연결할\-B 및 집합 WINS\-WINS의 푸시/끌어오기 복제 파트너는\-B
+- Wins에서 밀어넣기 복제를 시작\-wins는\-B
+- WINS 연결할\-되어 있는지 확인 하기 위해 B 새 레코드를 내\_레코드를 성공적으로 복제 된
 
-## <a name="netsh-example-batch-file"></a>Netsh 예 배치 파일
+## <a name="netsh-example-batch-file"></a>Netsh 배치 파일 예
 
-다음 예 배치 파일에서 주석이 포함 된 줄 의견에 대 한 "rem" 앞 됩니다. Netsh 의견 무시합니다.
+다음 예제에서는 배치 파일에서 주석을 포함 하는 줄 앞에 "rem" 묶어 표시에 대 한 합니다. Netsh는 주석을 무시합니다.
 
     rem: Begin example batch file.
     
@@ -68,14 +69,14 @@ Windows Internet 이름 서비스 \(WINS\) 배치 파일에서에 대 한 Netsh 
     
     rem 6. End example batch file.
 
-## <a name="netsh-wins-commands-used-in-the-example-batch-file"></a>Netsh WINS 명령 예 배치 파일에 사용
+## <a name="netsh-wins-commands-used-in-the-example-batch-file"></a>예제에서는 배치 파일에서 사용 되는 WINS Netsh 명령
 
-다음 목록 섹션의 **netsh wins** 이 예제 절차에 사용 되는 명령을 합니다.
+다음 섹션 나열 된 **netsh wins** 이 예제 절차에서 사용 되는 명령입니다.
 
-- **서버**합니다. 서버 이름 또는 IP 주소를 지정 현재 WINS 줄 command\ 컨텍스트가 이동 합니다.
-- **이름 추가**합니다. 이름을 WINS 서버에 등록합니다.
-- **파트너 추가**합니다. 복제 파트너 WINS 서버에 추가 합니다.
-- **초기화 푸시**합니다. 시작 및 푸시 트리거 WINS 서버에 전송 합니다.
-- **표시 이름**합니다. WINS 서버 데이터베이스에는 특정 기록에 대 한 자세한 정보를 표시 합니다.  
+- **서버**합니다. 현재 WINS 명령 이동\-줄 컨텍스트 이름 또는 IP 주소에서 지정한 서버를 합니다.
+- **이름을 추가**합니다. WINS 서버의 이름을 등록합니다.
+- **파트너 추가**합니다. WINS 서버에서 복제 파트너를 추가합니다.
+- **init push**. 시작 하 고 밀어넣기 트리거 WINS 서버에 보냅니다.
+- **이름 표시**합니다. WINS 서버 데이터베이스에 있는 특정 레코드에 대 한 자세한 정보를 표시 합니다.  
 
-자세한 내용은 참조 [네트워크 (Netsh) 셸](netsh.md)합니다.
+자세한 내용은 [네트워크 셸 (Netsh)](netsh.md)합니다.

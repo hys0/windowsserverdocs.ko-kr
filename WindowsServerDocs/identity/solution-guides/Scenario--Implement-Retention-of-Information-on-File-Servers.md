@@ -1,7 +1,7 @@
 ---
 ms.assetid: 81c55015-82e5-4ba1-b15e-cc7b49af28fc
-title: "파일 서버에서 정보가 구현 보존 시나리오"
-description: 
+title: 시나리오 파일 서버의 정보 보존 구현
+description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -10,39 +10,40 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
 ms.openlocfilehash: 59fd7f0a0a4d9ed8f5cec57b17be21e1aa4cd592
-ms.sourcegitcommit: 70c1b6cedad55b9c7d2068c9aa4891c6c533ee4c
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59880254"
 ---
-# <a name="scenario-implement-retention-of-information-on-file-servers"></a>파일 서버에 보유 한 정보를 구현 하는 시나리오:
+# <a name="scenario-implement-retention-of-information-on-file-servers"></a>시나리오: 파일 서버에 정보 보존 구현
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-보유 기간은 문서 되어야 하는 시간을 만료 되기 전에 유지 합니다. 조직에 따라 보존 기간 다를 수 있습니다. 짧은, 중간 또는 장기 보존 기간 것으로 폴더의 파일을을 분류 하 고 각 기간에 대 한 된 시간을 지정할 수 있습니다. 법률 대기 하 여 파일을 계속 유지 수도 있습니다.  
+보존 기간은 문서가 만료되기 전에 보관되어야 하는 기간입니다. 조직에 따라 보존 기간이 다를 수 있습니다. 폴더의 파일을 단기, 중기 또는 장기 보존 기간으로 분류한 다음 각 기간의 시간 범위를 할당할 수 있습니다. 파일에 법적 보존을 설정하여 파일을 무기한으로 보관할 수도 있습니다.  
   
 ## <a name="BKMK_OVER"></a>시나리오 설명  
-파일 분류 인프라와 파일 서버 리소스 관리자 및 사용 하 여 파일 관리 작업 파일 분류 일련의 파일에 대 한 보존 기간을 적용 합니다. 폴더에 고정 기간 지정 하 고 파일 관리 작업을 사용 하 여 마지막에 할당 된 보존 기간은 얼마나 걸리나요 구성할 수 있습니다. 폴더의 파일 만료 되 면 통보 이메일이 해당 파일의 소유자가 받습니다. 파일을 하는 파일 관리 작업 파일을 만료 되지 것입니다 법적 보류 중으로 분류 수도 있습니다.  
+파일 분류 인프라 및 파일 서버 리소스 관리자는 파일 관리 작업 및 파일 분류를 사용하여 파일 집합의 보존 기간을 적용합니다. 폴더에 보존 기간을 할당한 다음 파일 관리 작업을 사용하여 할당된 보존 기간을 얼마나 오래 유지할지 구성할 수 있습니다. 폴더의 파일이 곧 만료될 경우 파일 소유자에게 알림 메일이 전송됩니다. 또한 파일 관리 작업으로 인해 파일이 만료되지 않도록 파일을 법적 보존이 설정된 것으로 분류할 수도 있습니다.  
   
-찾을 수 계획에 보존 구성에 대 한 정보 [파일 서버에 보존의 정보에 대 한 계획](assetId:///edf13190-7077-455a-ac01-f534064a9e0c)합니다.  
+[Plan for Retention of Information on File Servers](assetId:///edf13190-7077-455a-ac01-f534064a9e0c)에서 보존을 구성하기 위한 계획 정보를 확인할 수 있습니다.  
   
-파일에 대 한 법적 보류 분류 하 고 보존 기간을 구성 단계를 찾을 수 [배포 구현 유지에 대 한 정보 파일 서버 & #40; 데모 단계 & #41;](Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-.md).  
+법적 보존을 위해 파일을 분류 하 고의 보존 기간을 구성에 대 한 단계를 찾을 수 있습니다 [배포 구현 정보 보존 파일 서버에 &#40;데모 단계&#41;](Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-.md)합니다.  
   
 > [!NOTE]  
-> 시나리오를 수동으로 법적 길게에 대 한 문서를 분류 하는 방법에 대해서만 설명 합니다. 그러나 법적 길게에 대 한 문서를 자동으로 분류 Windows Server 2012에서 불가능 합니다. 이 작업을 수행 하는 방법은 파일 소유자의 사용자 계정 법적 보류 중인 목록에 비교 하 여 Windows PowerShell 분류자 만드는 것입니다. 파일 소유자의 사용자 계정 목록에서 일부 경우, 해당 파일에 대 한 법적 보류 분류 됩니다.  
+> 이 시나리오에서는 법적 보존할 문서를 수동으로 분류하는 방법에 대해 설명합니다. 그러나 법적 보존을 위해 문서를 자동으로 분류에 Windows Server 2012의 가능성이 있습니다. 예를 들어 법적 보존이 적용되는 사용자 계정 목록과 파일 소유자를 비교하는 Windows PowerShell 분류자를 만들면 됩니다. 파일 소유자가 사용자 계정 목록에 있으면 파일이 법적 보존용으로 분류됩니다.  
   
-## <a name="in-this-scenario"></a>이 경우  
-이 시나리오는 동적 액세스 제어 시나리오의 일부입니다. 동적 액세스 제어 대 한 자세한 내용은 참조 하십시오.  
+## <a name="in-this-scenario"></a>이 시나리오의 내용  
+이 시나리오는 동적 Access Control 시나리오의 일부입니다. 동적 액세스 제어에 대한 자세한 내용은 다음을 참조하세요.  
   
--   [동적 액세스 제어: 시나리오 개요](Dynamic-Access-Control--Scenario-Overview.md)  
+-   [동적 Access Control: 시나리오 개요](Dynamic-Access-Control--Scenario-Overview.md)  
   
-## <a name="BKMK_NEW"></a>이 경우에 포함 된 기능  
-다음 표에서이 시나리오에 포함 된 기능을 설명 하 고 지 원하는 방법을 설명 합니다.  
+## <a name="BKMK_NEW"></a>이 시나리오에 포함 된 기능  
+다음 표에는 이 시나리오에 포함된 기능이 나열되어 있으며, 이 기능이 시나리오를 지원하는 방법에 대한 설명이 나와 있습니다.  
   
-|기능|이 시나리오를 지 원하는 방법을|  
+|기능|이 시나리오를 지원하는 방법|  
 |-----------|---------------------------------|  
-|[파일 서버 리소스 관리자 개요](https://technet.microsoft.com/library/hh831701.aspx)|파일 분류 인프라 파일 서버 리소스 관리자에 포함 된 기능입니다.|  
-|[파일 및 저장소 서비스 개요](https://technet.microsoft.com/library/hh831487.aspx)|파일 서버 리소스 관리자 파일 서비스 거부에 포함 된 기능입니다.|  
+|[파일 서버 리소스 관리자 개요](https://technet.microsoft.com/library/hh831701.aspx)|파일 분류 인프라는 파일 서버 리소스 관리자에 포함되어 있는 기능입니다.|  
+|[File and Storage Services 개요](https://technet.microsoft.com/library/hh831487.aspx)|파일 서버 리소스 관리자는 파일 서비스 서버 역할에 포함되어 있는 기능입니다.|  
   
   
 
