@@ -1,6 +1,6 @@
 ---
-title: Microsoft Azure and SDN
-description: Microsoft Azure에서 제공 되는 소프트웨어 정의 네트워킹 (SDN) 기술에 대 한 자세한 내용은이 항목을 사용할 수 있습니다.
+title: Microsoft Azure 및 SDN
+description: Microsoft Azure에서 제공 되는 소프트웨어 정의 네트워킹 (SDN) 기술에 대해 자세히 알아보려면이 항목에서는 사용할 수 있습니다.
 manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -12,20 +12,21 @@ ms.topic: article
 ms.assetid: 79e87013-7f27-4031-8383-288bcb291731
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 5edca4e83fd919562e6864c18da1e01ac87879cb
-ms.sourcegitcommit: 19d9da87d87c9eefbca7a3443d2b1df486b0b010
+ms.openlocfilehash: 4988285ab19d8d3a5e2880a75386ead7eef8b731
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59864834"
 ---
 # <a name="microsoft-azure-and-software-defined-networking"></a>Microsoft Azure 및 소프트웨어 정의 네트워킹
 
->적용 대상: Windows Server (세미콜론 연간 채널) Windows Server 2016
+>적용 대상: Windows Server (반기 채널), Windows Server 2016
 
-Microsoft Azure는 Microsoft가 클라우드에 플랫폼: 통합된 서비스 컴퓨팅, 저장소, 데이터, 네트워킹 및 앱에서 더 빠르게 이동 하는 데 도움이 되는 성장 컬렉션 활용도 하 고 비용을 절감 됩니다.  
+Microsoft Azure는 Microsoft의 클라우드 플랫폼: 나날이 다양 해지 통합된 서비스-계산, 저장소, 데이터, 네트워킹 및 앱-더 빠르게 이동 하는 데 도움이 되 고 더 많은 수행 비용을 절약 합니다.  
   
-디자인 빌드하고 작동 하는 세계적인 규모 datacenter 네트워크와 같은 Microsoft Azure 서비스에 대 한 Microsoft의 접근 방식 네트워킹 정의 된 소프트웨어에 포함 되어 있습니다. 전 세계 Microsoft Azure 데이터 센터 매일 가능한 소프트웨어 정의 네트워킹 때문만 있는 수십만 개의 네트워크 변경을 수행 합니다.  
+Microsoft의 접근 방식을 소프트웨어 정의 네트워킹 설계, 구축 및 Microsoft Azure 같은 서비스에 대 한 전역 규모의 데이터 센터 네트워크 운영에 포함 되어 있습니다. Microsoft Azure 글로벌 데이터 센터에는 매일 수만 개의 네트워크 변경이 있으며 이는 소프트웨어 방식 네트워킹 때문에 가능한 것입니다.  
   
-Microsoft Azure는 동일한 Windows Server 및 Windows Server에 포함 된 Hyper-v 플랫폼에서 실행 됩니다. Windows Server 및 System Center 개선 사항 및 모범 사례 Microsoft의 경험을 같은 Microsoft Azure 데이터 센터 네트워크 세계적인 규모 네트워킹 기술을 설계 된 소프트웨어를 사용 하는 경우 동일한 기술을 유연성, 자동화, 및 컨트롤에 대 한 배포할 수 있도록 운영 포함 됩니다.  
+Microsoft Azure는 Windows Server에 포함된 동일한 Windows Server 및 Hyper-V 플랫폼에서 실행됩니다. Windows Server 및 System Center 포함 유연성, 자동화 및 제어를 위해 동일한 기술을 배포할 수 있도록 할 Microsoft Azure 같은 세계적인 데이터 센터 네트워크 운영에서 향상 된 기능 및 Microsoft의 경험에서 모범 사례 경우 소프트웨어를 사용 하 여 네트워킹 기술을 설계 되었습니다.  
   
-For more information, see [What is Microsoft Azure?](https://azure.microsoft.com/overview/what-is-azure/?WT.mc_id=azurebg_us_sem_bing_br_nontest_whatisazure_whatisazure&WT.srch=1).  
+자세한 내용은 [Microsoft Azure 란?](https://azure.microsoft.com/overview/what-is-azure/?WT.mc_id=azurebg_us_sem_bing_br_nontest_whatisazure_whatisazure&WT.srch=1)합니다.  

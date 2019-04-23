@@ -1,6 +1,6 @@
 ---
-title: "할당량 자동 적용 만들기"
-description: "이 문서에서는 할당량 템플릿을 기반으로 할당량 자동 적용을 만드는 방법을 설명합니다."
+title: 할당량 자동 적용 만들기
+description: 이 문서에서는 할당량 템플릿을 기반으로 할당량 자동 적용을 만드는 방법을 설명합니다.
 ms.date: 7/7/2017
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -9,14 +9,15 @@ author: JasonGerend
 manager: brianlic
 ms.author: jgerend
 ms.openlocfilehash: e2837df448434252470d783a6c06f0690ba09021
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59847924"
 ---
 # <a name="create-an-auto-apply-quota"></a>할당량 자동 적용 만들기
 
-> 적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> 적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 할당량 자동 적용을 사용하면 상위 볼륨 또는 폴더에 할당량 템플릿을 할당할 수 있습니다. 그런 다음 파일 서버 리소스 관리자가 템플릿을 기반으로 한 할당량을 자동으로 생성합니다. 할당량은 기존 하위 폴더와 앞으로 만들 하위 폴더에 대해 생성됩니다.
 
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/17/2017
 > [!Note]
 > **할당량** 노드를 선택한 다음 **새로 고침**을 선택하여 자동으로 생성된 모든 할당량을 확인할 수 있습니다. 각 하위 폴더에 대한 개별 할당량과 상위 볼륨 및 폴더의 할당량 자동 적용 프로필이 나열됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 -   [할당량 관리](quota-management.md)
--   [할당량 자동 적용 속성 편집](edit-auto-apply-quota-properties.md)
+-   [자동 편집 할당량 속성 적용](edit-auto-apply-quota-properties.md)

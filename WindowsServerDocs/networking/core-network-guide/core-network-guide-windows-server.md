@@ -1,6 +1,6 @@
 ---
-title: Windows server의 핵심 네트워크 가이드
-description: 이 항목에서는 계획 하 고 배포 완벽 하 게 작동 네트워크와 Windows Server 2016와 새 숲 속의 새로운 Active Directory 도메인에 필요한 핵심 구성 요소 수 있는 Core 네트워크 가이드 소개
+title: Windows Server에 대한 핵심 네트워크 지침
+description: 이 항목에서는 계획 하 고는 완벽 하 게 작동 하는 네트워크와 Windows Server 2016 새 포리스트의 새 Active Directory 도메인에 필요한 핵심 구성 요소를 배포할 수 있는 핵심 네트워크 가이드의 개요
 manager: brianlic
 ms.prod: windows-server-threshold
 ms.technology: networking
@@ -9,61 +9,62 @@ ms.date: ''
 ms.assetid: 9b3ef3eb-4246-4e0e-8bf1-53224ca5f2f9
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 63e4cf8c5bf56ef5131e835163a5fcb5dfd98b55
-ms.sourcegitcommit: 19d9da87d87c9eefbca7a3443d2b1df486b0b010
+ms.openlocfilehash: a905fd0c11237edd3a408998f8f71aa25a054328
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59847904"
 ---
-# <a name="core-network-guide-for-windows-server"></a>Windows server의 핵심 네트워크 가이드
+# <a name="core-network-guidance-for-windows-server"></a>Windows Server에 대한 핵심 네트워크 지침
 
 >적용 대상: Windows Server, Windows Server 2016
 
-이 항목에서는 Windows Server에 대 한 핵심 네트워크 가이드 간략하게&reg; 2016을 다음 섹션에 포함 되어 있습니다.  
+이 항목에서는 Windows Server 용 핵심 네트워크 가이드의 개요를 제공 합니다.&reg; 2016의 경우 다음 섹션이 포함 되어 있습니다.  
   
--   [Windows Server의 핵심 네트워크 소개](#bkmk_intro)  
+-   [Windows Server 핵심 네트워크 소개](#bkmk_intro)  
   
--   [Windows server의 핵심 네트워크 가이드](#bkmk_core)  
+-   [Windows Server 용 핵심 네트워크 가이드](#bkmk_core)  
   
-## <a name="bkmk_intro"></a>Windows Server의 핵심 네트워크 소개
+## <a name="bkmk_intro"></a>Windows Server 핵심 네트워크 소개
 
-핵심 네트워크의 네트워크 하드웨어, 디바이스, 컬렉션 이며 조직의 IT 정보 기술 ()에 대 한 기본 서비스를 제공 하는 소프트웨어 필요 합니다.
+핵심 네트워크는 조직의 IT(정보 기술) 요구 사항에 맞는 기반 서비스를 제공하는 네트워크 하드웨어, 장치 및 소프트웨어의 모음입니다.
 
-Windows Server의 핵심 네트워크는 다음을 포함 한 여러 가지 이점을 제공 합니다.
+Windows Server 핵심 네트워크는 다음을 포함한 다양한 이점을 제공합니다.
 
-- 컴퓨터와 다른 TCP/IP (TCP/IP) 호환 디바이스 간에 네트워크 연결에 대 한 핵심 프로토콜 합니다. TCP/IP는 컴퓨터를 연결 하 고 네트워크 빌드에 대 한 프로토콜 표준 제품군입니다. TCP/IP는 Microsoft와 함께 제공 되는 네트워크 프로토콜 소프트웨어&reg; Windows&reg; TCP/IP 지원 및 구현 하는 운영 체제 프로토콜 제품군입니다.
+- 컴퓨터와 다른 TCP/IP 호환 장치 사이의 네트워크 연결을 위한 핵심 프로토콜. TCP/IP는 컴퓨터를 연결하고 네트워크를 구성하기 위한 표준 프로토콜 집합입니다. TCP/IP는 Microsoft와 함께 제공 되는 네트워크 프로토콜 소프트웨어&reg; Windows&reg; 프로토콜을 구현 하 고 TCP/IP를 지 원하는 운영 체제 제품군입니다.
 
-- DHCP(Dynamic Host Configuration Protocol) (DHCP) 서버 자동 IP 주소 지정 합니다. 네트워크의 모든 컴퓨터의 IP 주소를 수동으로 구성 시간이 및 덜 동적으로 IP 주소 임대 DHCP 서버에서 된 컴퓨터 및 기타 장치를 제공 하는 보다 효율적입니다.
+- DHCP(Dynamic Host Configuration Protocol) 서버 자동 IP 주소. 네트워크에 있는 모든 컴퓨터의 IP 주소를 수동으로 구성하는 작업은 DHCP 서버에서 컴퓨터 및 기타 장치에 IP 주소를 동적으로 임대하는 것보다 시간이 많이 걸리고 유연성도 낮습니다.
 
-- 시스템 DNS (도메인 이름) 해상도 서비스의 이름을 지정 합니다. DNS는 사용자가, 컴퓨터, 응용 프로그램 및 서비스 네트워크에서 완벽 하 게 된 도메인의 이름을 컴퓨터나 디바이스를 사용 하 여 컴퓨터와 디바이스의 IP 주소를 찾을 수 있습니다.
+- DNS(Domain Name System) 이름 확인 서비스. DNS를 통해 사용자, 컴퓨터, 응용 프로그램 및 서비스는 컴퓨터나 장치의 정규화된 도메인 이름을 사용하여 네트워크에 있는 컴퓨터와 장치의 IP 주소를 찾을 수 있습니다.
 
-- 숲-동일한 클래스 및 특성 정의 (스키마), (구성) 하는 사이트 및 복제 정보 및 숲 검색 기능 (드)를 공유 하는 하나 이상의 Active Directory 도메인은 합니다.
+- 동일한 클래스와 특성 정의(스키마), 사이트와 복제 정보(구성) 및 포리스트 전체 검색 기능(글로벌 카탈로그)을 공유하는 하나 이상의 Active Directory 도메인인 포리스트
 
-- 새 숲 속의 첫 번째 도메인 숲 루트 도메인에 만들었습니다. 숲 속 전체 관리 그룹 인는 엔터프라이즈 관리자 및 스키마 관리자 그룹 숲 루트 도메인에 있습니다. 또한 이렇게, 다른 도메인와 마찬가지로 모음입니다 컴퓨터, 사용자 및 그룹 개체 Active Directory Domain Services (AD DS)에서 관리자 권한으로 정의 됩니다. 이러한 물체 일반적인 디렉터리 데이터베이스 및 보안 정책이 공유합니다. 또한 증가 하는 조직 도메인을 추가 하는 경우 보안 관계 다른 도메인 공유할 수 있습니다. 디렉터리 서비스는 또한 디렉터리 데이터를 저장 하 고 권한이 부여 된 컴퓨터, 응용 프로그램 및 사용자 데이터에 액세스할 수 있게 합니다.
+- 새 포리스트에서 처음으로 만든 도메인인 포리스트 루트 도메인. 포리스트 전체 관리 그룹인 Enterprise Admins 및 Schema Admins 그룹은 포리스트 루트 도메인에 위치합니다. 또한 포리스트 루트 도메인은 다른 도메인과 마찬가지로 AD DS(Active Directory 도메인 서비스)에서 관리자가 정의한 컴퓨터, 사용자 및 그룹 개체의 모음입니다. 이러한 개체는 공통의 디렉터리 데이터베이스 및 보안 정책을 공유합니다. 또한 조직의 규모가 커짐에 따라 도메인을 추가하는 경우 다른 도메인과의 보안 관계도 공유할 수 있습니다. 또한 디렉터리 서비스는 디렉터리 데이터를 저장하고, 권한 있는 컴퓨터, 응용 프로그램 및 사용자는 이 서비스를 통해 데이터에 액세스할 수 있습니다.
 
-- 컴퓨터와 사용자 계정 데이터베이스 합니다. 디렉터리 서비스는 사람 및 리소스 응용 프로그램, 데이터베이스, 공유 파일 및 폴더, 프린터 등 네트워크와 액세스 네트워크에 연결 하려면 실시 권 자는 컴퓨터에 대 한 사용자와 컴퓨터 계정을 만들 수 있게 해 주는 중앙된 사용자 계정 데이터베이스를 제공 합니다.
+- 사용자 및 컴퓨터 계정 데이터베이스. 디렉터리 서비스는 네트워크에 연결할 수 있도록 권한이 부여된 사람 및 컴퓨터를 위한 사용자 및 컴퓨터 계정을 만들고 응용 프로그램, 데이터베이스, 공유된 파일과 폴더, 프린터 등의 네트워크 리소스에 액세스할 수 있는 중앙 집중식 사용자 계정 데이터베이스를 제공합니다.
 
-핵심 네트워크 조직 성장 하 고 IT 요구 사항을 변경 때이 네트워크에 맞게 수도 있습니다. 예를 들어, core 네트워크 도메인, IP 서브넷, 원격 액세스 서비스, 무선 서비스 및 기타 기능 및 Windows Server 2016에서 제공 하는 서버 역할을 추가할 수 있습니다.
+또한 핵심 네트워크를 사용하면 조직의 규모가 커지고 IT 요구 사항이 변함에 따라 네트워크를 조정할 수 있습니다. 예를 들어 핵심 네트워크와 도메인, IP 서브넷, 원격 액세스 서비스, 무선 서비스 및 기타 기능 및 Windows Server 2016에서 제공 하는 서버 역할을 추가할 수 있습니다.
 
-## <a name="bkmk_core"></a>Windows server의 핵심 네트워크 가이드
+## <a name="bkmk_core"></a>Windows Server 용 핵심 네트워크 가이드
 
-Windows Server 2016 Core 네트워크 가이드 계획 하 고 새 Active Directory를 완벽 하 게 작동 네트워크에 필요한 핵심 구성 요소를 배포 하는 방법에 대해 설명&reg; 새 숲 속의 도메인. 이 가이드를 사용 하 여, 다음과 같은 Windows 서버 구성 요소를 구성 된 컴퓨터 배포할 수 있습니다.
+계획 하 고는 완벽 하 게 작동 하는 네트워크와 새로운 Active Directory에 필요한 핵심 구성 요소를 배포 하는 방법에 지침을 제공 하는 Windows Server 2016 핵심 네트워크 가이드&reg; 새 포리스트에 있는 도메인입니다. 이 가이드를 사용하여 다음 Windows Server 구성 요소로 구성된 컴퓨터를 배포할 수 있습니다.
 
-- Active Directory Domain Services (AD DS) 서버 역할
+- AD DS(Active Directory Domain Services) 서버 역할
 
-- 시스템 DNS (도메인 이름) 서버 역할
+- DNS(Domain Name System) 서버 역할
 
-- DHCP(Dynamic Host Configuration Protocol) (DHCP) 서버 역할
+- DHCP(Dynamic Host Configuration Protocol) 서버 역할
 
-- 액세스 서비스 및 네트워크 정책 서버 역할의 네트워크 NPS 정책 서버 () 역할 서비스
+- 네트워크 정책 및 액세스 서비스 서버 역할의 NPS(네트워크 정책 서버) 역할 서비스
 
-- 웹 IIS () 서버 역할
+- 웹 서버(IIS) 서버 역할
 
-- TCP/IP 버전 4 (TCP/IP) 개별 서버에 연결
+- 개별 서버에 대한 TCP/IP(전송 컨트롤 프로토콜/인터넷 프로토콜) 버전 4 연결
 
 이 가이드는 다음 위치에서 사용할 수 있습니다.
 
-- [네트워크 가이드 핵심](../core-network-guide/Core-Network-Guide.md) Windows Server 2016 찾아볼 수 있습니다.
+- [핵심 네트워크 가이드](../core-network-guide/Core-Network-Guide.md) Windows Server 2016 기술 라이브러리에서입니다.
   
 
 

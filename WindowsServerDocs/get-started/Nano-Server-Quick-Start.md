@@ -1,6 +1,6 @@
 ---
 title: Nano 서버 빠른 시작
-description: 물리적 또는 가상 컴퓨터에서 기본적인 Nano Server를 신속하게 배포하는 단계
+description: 실제 또는 가상 컴퓨터에서 기본적인 Nano 서버를 신속하게 배포하는 단계
 ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
@@ -12,11 +12,11 @@ author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
 ms.openlocfilehash: 488d0bed661cf2078d20e491a8c68b2a29a42b73
-ms.sourcegitcommit: e0479b0114eac7f232e8b1e45eeede96ccd72b26
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "2082470"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59859524"
 ---
 # <a name="nano-server-quick-start"></a>Nano 서버 빠른 시작
 
@@ -29,7 +29,7 @@ ms.locfileid: "2082470"
 
 이러한 빠른 시작 단계로 기본 사항을 시도한 후에는 [Nano 서버 배포](Deploy-Nano-Server.md)에 나와 있는 다양한 방법, 도메인 작업 등으로 고유한 사용자 지정 이미지, 패키지 관리를 만드는 정보를 확인할 수 있습니다.
   
-**가상 컴퓨터에서 Nano 서버**  
+**가상 컴퓨터에서 Nano Server**  
   
 다음 단계에 따라 가상 컴퓨터에서 실행할 Nano 서버 VHD를 만듭니다.  
   
@@ -37,15 +37,15 @@ ms.locfileid: "2082470"
   
 1.  Windows Server 2016 ISO의 \NanoServer 폴더에서 하드 드라이브의 폴더로 *NanoServerImageGenerator* 폴더를 복사합니다.  
   
-2.  관리자 권한으로 Windows PowerShell을 시작하고, NanoServerImageGenerator 폴더가 있는 폴더로 디렉터리를 변경한 다음 아래를 사용하여 모듈을 가져옵니다. `Import-Module .\NanoServerImageGenerator -Verbose`  
+2.  관리자, NanoServerImageGenerator 폴더가 배치 하 고 사용 하 여 모듈을 가져와서 있는 폴더로 디렉터리를 변경으로 Windows PowerShell 시작 `Import-Module .\NanoServerImageGenerator -Verbose`  
 >[!NOTE]  
->Windows PowerShell 실행 정책을 조정해야 합니다. `Set-ExecutionPolicy RemoteSigned` 제대로 작동해야 합니다.  
+>Windows PowerShell 실행 정책을 조정해야 합니다. `Set-ExecutionPolicy RemoteSigned` 제대로 작동 해야 합니다.  
   
 3.  다음 명령을 실행하여 컴퓨터 이름을 설정하고 Hyper-V **게스트 드라이버**를 포함하는 Standard 버전용 VHD를 만듭니다. 명령을 실행하면 새 VHD에 대한 관리자 암호를 묻는 메시지가 표시됩니다.  
   
-    `New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath <path to root of media> -BasePath .\Base -TargetPath .\NanoServerVM\NanoServerVM.vhd -ComputerName <computer name>` 각 항목은 다음을 의미합니다.  
+    `New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath <path to root of media> -BasePath .\Base -TargetPath .\NanoServerVM\NanoServerVM.vhd -ComputerName <computer name>` 위치  
   
-    -   **-MediaPath<미디어의 루트 경로\>** 는 Windows Server 2016 ISO의 콘텐츠에 대한 루트 경로를 지정합니다. 예를 들어 ISO의 콘텐츠를 해당 경로를 사용하는 d:\TP5ISO로 복사한 경우가 있습니다.  
+    -   **-MediaPath <미디어의 루트 경로\>** 는 Windows Server 2016 ISO의 콘텐츠에 대한 루트 경로를 지정합니다. 예를 들어 ISO의 콘텐츠를 해당 경로를 사용하는 d:\TP5ISO로 복사한 경우가 있습니다.  
   
     -   **-BasePath**(선택 사항)는 Nano 서버 WIM 및 패키지를 복사하기 위해 생성할 폴더를 지정합니다.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "2082470"
   
 7.  Nano 서버 가상 컴퓨터의 IP 주소를 가져오고 Windows PowerShell 원격 기능 또는 기타 원격 관리 도구를 사용하여 가상 컴퓨터에 연결하여 원격으로 관리합니다.  
   
-**물리적 컴퓨터에서 Nano 서버**  
+**물리적 컴퓨터에서 Nano Server**  
   
 미리 설치된 장치 드라이버를 사용하여 물리적 컴퓨터에서 Nano 서버를 실행할 VHD를 만들 수도 있습니다. 사용자의 하드웨어를 부팅 또는 네트워크에 연결하기 위해서 아직 제공되지 않은 드라이버가 필요한 경우 이 가이드의 "드라이버 추가" 섹션의 단계를 따릅니다.  
   
@@ -78,16 +78,16 @@ ms.locfileid: "2082470"
   
 1.  Windows Server 2016 ISO의 \NanoServer 폴더에서 하드 드라이브의 폴더로 *NanoServerImageGenerator* 폴더를 복사합니다.  
   
-2.  관리자 권한으로 Windows PowerShell을 시작하고, NanoServerImageGenerator 폴더가 있는 폴더로 디렉터리를 변경한 다음 아래를 사용하여 모듈을 가져옵니다. `Import-Module .\NanoServerImageGenerator -Verbose`  
+2.  관리자, NanoServerImageGenerator 폴더가 배치 하 고 사용 하 여 모듈을 가져와서 있는 폴더로 디렉터리를 변경으로 Windows PowerShell 시작 `Import-Module .\NanoServerImageGenerator -Verbose`  
   
 >[!NOTE]  
->Windows PowerShell 실행 정책을 조정해야 합니다. `Set-ExecutionPolicy RemoteSigned` 제대로 작동해야 합니다.  
+>Windows PowerShell 실행 정책을 조정해야 합니다. `Set-ExecutionPolicy RemoteSigned` 제대로 작동 해야 합니다.  
   
 3.  다음 명령을 실행하여 컴퓨터 이름을 설정하고 OEM 드라이버를 포함하는 VHD를 만듭니다. 명령을 실행하면 새 VHD에 대한 관리자 암호를 묻는 메시지가 표시됩니다.  
   
-    `New-NanoServerImage -Edition Standard -DeploymentType Host -MediaPath <path to root of media> -BasePath .\Base -TargetPath .\NanoServerPhysical\NanoServer.vhd -ComputerName <computer name> -OEMDrivers -Compute -Clustering` 각 항목은 다음을 의미합니다.  
+    `New-NanoServerImage -Edition Standard -DeploymentType Host -MediaPath <path to root of media> -BasePath .\Base -TargetPath .\NanoServerPhysical\NanoServer.vhd -ComputerName <computer name> -OEMDrivers -Compute -Clustering` 위치  
   
-    -   **-MediaPath<미디어의 루트 경로\>** 는 Windows Server 2016 ISO의 콘텐츠에 대한 루트 경로를 지정합니다. 예를 들어 ISO의 콘텐츠를 해당 경로를 사용하는 d:\TP5ISO로 복사한 경우가 있습니다.  
+    -   **-MediaPath <미디어의 루트 경로\>** 는 Windows Server 2016 ISO의 콘텐츠에 대한 루트 경로를 지정합니다. 예를 들어 ISO의 콘텐츠를 해당 경로를 사용하는 d:\TP5ISO로 복사한 경우가 있습니다.  
   
     -   **BasePath**는 Nano 서버 WIM 및 패키지를 복사하기 위해 생성할 폴더를 지정합니다. (이 매개 변수는 선택 사항입니다.)  
   

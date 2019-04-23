@@ -1,5 +1,5 @@
 ---
-title: "AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포 - 4단계, 웹 응용 프로그램 프록시 설치"
+title: AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포 - 4단계, 웹 응용 프로그램 프록시 설치
 ms.prod: windows-server-threshold
 ms.technology: storage-work-folders
 ms.topic: article
@@ -9,29 +9,30 @@ author: JeffPatt24
 ms.date: 6/242017
 ms.assetid: 4a11ede0-b000-4188-8190-790971504e17
 ms.openlocfilehash: 1f452fd1e2f054c449660eb0ee12642fefe4da8f
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59865054"
 ---
-# <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-4-set-up-web-application-proxy"></a>AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포: 4단계, 웹 응용 프로그램 프록시 설치
+# <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-4-set-up-web-application-proxy"></a>AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 4 단계, 웹 응용 프로그램 프록시 설치
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016
+>적용 대상: Windows Server (반기 채널), Windows Server 2016
 
 이 항목에서는 AD FS(Active Directory Federation Services) 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더를 배포하는 네 번째 단계를 설명합니다. 이 과정의 다른 단계는 다음 항목에서 찾을 수 있습니다.  
   
--   [AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포: 개요](deploy-work-folders-adfs-overview.md)  
+-   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 개요](deploy-work-folders-adfs-overview.md)  
   
--   [AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포: 1단계, AD FS 설치](deploy-work-folders-adfs-step1.md)  
+-   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 1 단계, AD FS 설정](deploy-work-folders-adfs-step1.md)  
   
--   [AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포: 2단계, AD FS 구성 후 작업](deploy-work-folders-adfs-step2.md)  
+-   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 단계 2에서 AD FS 구성 후 작업](deploy-work-folders-adfs-step2.md)  
   
--   [AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포: 3단계, 클라우드 폴더 설치](deploy-work-folders-adfs-step3.md)  
+-   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 단계 3, 작업 폴더 설정](deploy-work-folders-adfs-step3.md)  
   
--   [AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포: 5단계, 클라이언트 설치](deploy-work-folders-adfs-step5.md)  
+-   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 5 단계 클라이언트 설정](deploy-work-folders-adfs-step5.md)  
 
 > [!NOTE]
->   이 섹션에서는 Windows Server 2016 환경에 대한 지침을 다룹니다. Windows Server 2012 R2를 사용하는 경우 [Windows Server 2012 R2 지침](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx)을 따르세요.
+>   이 섹션에서는 Windows Server 2016 환경에 대한 지침을 다룹니다. Windows Server 2012 R2를 사용하는 경우 [Windows Server 2012 R2 instructions(Windows Server 2012 R2 지침)](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx)을 따르세요.
 
 클라우드 폴더에 사용할 웹 응용 프로그램 프록시를 설정하려면 다음 절차를 수행합니다.  
   
@@ -50,9 +51,9 @@ ms.lasthandoff: 10/17/2017
   
 4.  **사용 가능한 스냅인** 목록에서 **인증서**를 선택한 다음 **추가**를 클릭합니다. 인증서 스냅인 마법사가 시작됩니다.  
   
-5.  **컴퓨터 계정**을 선택하고 **다음**을 클릭합니다.  
+5.  **컴퓨터 계정**을 선택한 다음 **다음**을 클릭합니다.  
   
-6.  **로컬 컴퓨터: (이 콘솔이 실행되고 있는 컴퓨터)**를 선택하고 **마침**을 클릭합니다.  
+6.  **로컬 컴퓨터: (이 콘솔이 실행되고 있는 컴퓨터)** 를 선택하고 **마침**을 클릭합니다.  
   
 7.  **확인**을 클릭합니다.  
   
@@ -102,7 +103,7 @@ ms.lasthandoff: 10/17/2017
   
 5.  **AD FS 프록시 인증서** 페이지에서 이전에 가져온 AD FS 인증서를 선택합니다. 테스트 예제에서는 **blueadfs.contoso.com**입니다. **다음**을 클릭합니다.  
   
-6.  확인 페이지에 서비스 구성을 실행하는 Windows PowerShell 명령이 표시됩니다. **구성**을 클릭합니다.  
+6.  확인 페이지에 서비스 구성을 실행하는 Windows PowerShell 명령이 표시됩니다. 클릭 **구성**합니다.  
   
 ## <a name="publish-the-work-folders-web-application"></a>클라우드 폴더 웹 응용 프로그램 게시  
 다음 단계는 클라이언트에 클라우드 폴더를 제공할 웹 응용 프로그램을 게시하는 것입니다. 클라우드 폴더 웹 응용 프로그램을 게시하려면 다음 단계를 따릅니다.  
@@ -115,7 +116,7 @@ ms.lasthandoff: 10/17/2017
   
 4.  시작 페이지에서 **다음**을 클릭합니다.  
   
-5.  **사전 인증** 페이지에서 **AD FS(Active Directory Federation Services)**를 선택하고 **다음**을 클릭합니다.  
+5.  **사전 인증** 페이지에서 **AD FS(Active Directory Federation Services)** 를 선택하고 **다음**을 클릭합니다.  
   
 6.  **클라이언트 지원** 페이지에서 **OAuth2**를 선택하고 **다음**을 클릭합니다.
 
@@ -139,7 +140,7 @@ ms.lasthandoff: 10/17/2017
   
     외부 URL: **https://workfolders.contoso.com**  
   
-    외부 인증서: **이전에 설치한 클라우드 폴더 인증서**  
+    외부 인증서: **이전에 설치 하는 클라우드 폴더 인증서**  
   
     백 엔드 서버 URL: **https://workfolders.contoso.com**  
   
@@ -149,9 +150,9 @@ ms.lasthandoff: 10/17/2017
    >[!NOTE]
    > 여러 클라우드 폴더 서버가 있는 경우, 각 클라우드 폴더 서버에 대해 클라우드 폴더 웹 응용 프로그램을 게시(1 ~ 10단계 반복)해야 합니다.  
   
-다음 단계: [AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포: 5단계, 클라이언트 설치](deploy-work-folders-adfs-step5.md)  
+다음 단계: [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 5 단계 클라이언트 설정](deploy-work-folders-adfs-step5.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
 [클라우드 폴더 개요](Work-Folders-Overview.md)  
   
 
