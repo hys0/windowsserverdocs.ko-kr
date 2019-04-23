@@ -1,7 +1,7 @@
 ---
 ms.assetid: eb778f63-f7be-438e-8c5e-1fd9b194b967
-title: "웹 SSO 디자인"
-description: 
+title: 웹 SSO 디자인
+description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -10,26 +10,27 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.openlocfilehash: 1b8344594c9fc477ed8424c716ec8d7f7fd91ef3
-ms.sourcegitcommit: 70c1b6cedad55b9c7d2068c9aa4891c6c533ee4c
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59852804"
 ---
 # <a name="web-sso-design"></a>웹 SSO 디자인
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-웹에서 Active Directory Federation Services \(AD FS\) Single\ Sign\-켜 짐 \(SSO\) 디자인 사용자 여러 광고 FS\ 보안 응용 프로그램 또는 서비스에 액세스할 한 번만 인증 해야 합니다. 이 디자인 모든 사용자가 외부 및 federation 신뢰 하지 파트너 않았기 때문에 문제가 발생 합니다. 일반적으로 다음과 같이 인터넷을 통해 하나 이상의 FS-보안 서비스 광고 또는 응용 프로그램에 대 한 개별 소비자 또는 고객 액세스를 제공 하려는 경우이 디자인을 배포 됩니다.  
+단일 웹\-기호\-온 \(SSO\) Active Directory Federation Services에서 디자인 \(AD FS\), 여러 AD FS에 액세스 하려면 사용자는 한 번만 인증 해야\- 보안된 응용 프로그램 또는 서비스입니다. 이 디자인에서 모든 사용자는 외부 사용자이며, 파트너 조직이 없기 때문에 페더레이션 트러스트가 없습니다. 일반적으로 다음 그림에 나와 있는 것 처럼 인터넷을 통해 하나 이상의 AD FS 보안 서비스 또는 응용 프로그램에 대 한 개별 소비자 또는 고객 액세스를 제공 하려는 경우이 디자인을 배포 합니다.  
   
 ![웹 sso 디자인](media/adfs2_WebSSODesign.gif)  
   
-웹 SSO 일반적으로 응용 프로그램 광고 FS\ 보안 호스트 하는 조직 디자인 하거나 주변 네트워크의 서비스 격리할 직원 계정에서 고객 계정을 쉽게 주변 네트워크에 있는 고객 계정의 별도 저장소를 유지할 수 있습니다.  
+웹 SSO 디자인을 조직 일반적으로 호스팅하는 AD FS\-보안된 응용 프로그램 또는 서비스 경계 네트워크에 쉽게 고객 격리 경계 네트워크에 고객 계정의 별도 저장소를 유지할 수 있습니다 계정과 직원 계정 합니다.  
   
-Active Directory 도메인 서비스 \(AD DS\), SQL Server 또는 사용자 지정 된 특성 저장소를 사용 하 여 주변 네트워크에 있는 고객을 위한 로컬 계정을 관리할 수 있습니다.  
+Active Directory 도메인 서비스를 사용 하 여 경계 네트워크에서에서 고객에 대 한 로컬 계정을 관리할 수 있습니다 \(AD DS\), SQL Server, 또는 사용자 지정 특성 저장소입니다.  
   
-이 디자인에 배포 목표에 맞춰 [제공 나만의 Active Directory 사용자에 대 한 액세스 클레임 인식 나만의 응용 프로그램과 서비스](Provide-Your-Active-Directory-Users-Access-to-Your-Claims-Aware-Applications-and-Services.md)합니다.  
+이 디자인은 [Provide Your Active Directory Users Access to Your Claims-Aware Applications and Services](Provide-Your-Active-Directory-Users-Access-to-Your-Claims-Aware-Applications-and-Services.md)의 배포 목표와 일치합니다.  
   
-계획 하 고 웹 SSO 디자인 배포 사용할 수 있는 작업 자세한 목록은 [검사: 웹 SSO 디자인을 구현](../../ad-fs/deployment/Checklist--Implementing-a-Web-SSO-Design.md)합니다.  
+에서 사용자 웹 SSO 디자인 계획 및 배포에 사용할 수 있는 세부 작업 목록은 참조 하세요. [검사 목록: 웹 SSO 디자인 구현](../../ad-fs/deployment/Checklist--Implementing-a-Web-SSO-Design.md)합니다.  
   
-## <a name="see-also"></a>참조 하십시오
-[Windows Server 2012의에서 지침에 따라 AD FS 디자인](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+## <a name="see-also"></a>관련 항목
+[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)

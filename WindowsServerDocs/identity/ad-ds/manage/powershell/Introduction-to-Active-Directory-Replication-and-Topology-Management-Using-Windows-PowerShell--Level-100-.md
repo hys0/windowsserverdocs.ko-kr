@@ -1,159 +1,160 @@
 ---
 ms.assetid: c54b544f-cc32-4837-bb2d-a8656b22f3de
-title: "Windows PowerShell (수준을 100)를 사용 하 여 토폴로지 관리 및 Active Directory 복제 소개"
-description: 
-author: billmath
-ms.author: billmath
-manager: femila
+title: Windows PowerShell을 사용한 Active Directory 복제 및 토폴로지 관리 소개(수준 100)
+description: ''
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: 006179bb3220f7bccfc7510e1b8ef69678321074
-ms.sourcegitcommit: db290fa07e9d50686667bfba3969e20377548504
+ms.openlocfilehash: d5760820613c3b791b577a600cae543621eee257
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59845594"
 ---
-# <a name="introduction-to-active-directory-replication-and-topology-management-using-windows-powershell-level-100"></a>Windows PowerShell (수준을 100)를 사용 하 여 토폴로지 관리 및 Active Directory 복제 소개
+# <a name="introduction-to-active-directory-replication-and-topology-management-using-windows-powershell-level-100"></a>Windows PowerShell을 사용한 Active Directory 복제 및 토폴로지 관리 소개(수준 100)
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Windows PowerShell Active Directory에 대 한 복제, 사이트, 도메인 및 숲, 도메인 컨트롤러 및 파티션을 관리 하는 기능을 포함 합니다. 이전 관리 도구 Active Directory 사이트 및 서비스와 같은 사용자에 게 스냅인 및 repadmin.exe 비슷한 기능에 대 한 Active Directory 상황에 맞는 Windows PowerShell에서 사용할 수 있는 이제 인지 알 수 있습니다. 또한 cmdlet의 기존 Windows PowerShell cmdlet, Active Directory에 대 한 간소화 된 환경을 만들고 고객 자동화 스크립트 쉽게 만들 수 있게 되므로와 호환 됩니다.
+Active Directory용 Windows PowerShell에는 복제, 사이트, 도메인/포리스트, 도메인 컨트롤러 및 파티션 관리 기능이 포함되어 있습니다. Active Directory 사이트, 서비스 스냅인 및 repadmin.exe와 같은 이전 관리 도구 사용자는 이제 Active Directory용 Windows PowerShell 컨텍스트 내에서 유사한 기능이 제공됨을 확인할 수 있습니다. 또한 cmdlet은 기존의 Active Directory용 Windows PowerShell cmdlet과 호환되므로 편리한 환경이 생성되며 고객이 자동화 스크립트를 쉽게 만들 수 있습니다.
 
 > [!NOTE]
-> Windows PowerShell Active Directory 복제 및 토폴로지 cmdlet에 대 한 다음 환경에서 사용할 수 있습니다.
+> Active Directory용 Windows PowerShell 복제 및 토폴로지 cmdlet은 다음 환경에서 사용할 수 있습니다.
 > 
 > -    Windows Server 2012 도메인 컨트롤러
-> -    Windows Server 2012 AD DS 및 광고 LDS에 대 한 원격 서버 관리 도구를 설치 합니다.
-> -   Windows&reg; AD DS 및 광고 LDS 설치에 대 한 원격 서버 관리 도구와 8 합니다.
+> -    Windows Server 2012 AD DS 및 AD LDS 용 원격 서버 관리 도구와 함께 설치 합니다.
+> -   Windows&reg; 8 AD DS 및 AD LDS 설치에 대 한 원격 서버 관리 도구를 사용 합니다.
 
-## <a name="installing-the-active-directory-module-for-windows-powershell"></a>Windows PowerShell에 대 한 Active Directory 모듈 설치
-Windows Server 2012를 실행 하는 서버에 AD DS 서버 역할을 설치할 때 Windows PowerShell에 대 한 Active Directory 모듈 기본적으로 설치 됩니다. 없이 추가 단계는 이외의 서버 역할을 추가 합니다. 원격 서버 관리 도구를 설치 하 여 Windows Server 2012를 실행 하는 서버에 Active Directory 모듈 설치할 수도 있습니다와 Active Directory 모듈 다운로드 및 설치 하 여 Windows 8을 실행 하는 컴퓨터에서 설치할 수 있는 [관리 도구 RSAT (원격 서버)](https://www.microsoft.com/download/details.aspx?id=28972)합니다. 참조 [지침](https://www.microsoft.com/download/details.aspx?id=28972)설치 단계에 있습니다.
+## <a name="installing-the-active-directory-module-for-windows-powershell"></a>Windows PowerShell용 Active Directory 모듈 설치
+Active Directory 모듈에 대 한 Windows PowerShell은 Windows Server 2012를 실행 하는 서버에 AD DS 서버 역할을 설치할 때 기본적으로 설치 됩니다. 서버 역할 추가 외에 다른 추가 단계는 필요하지 않습니다. 원격 서버 관리 도구를 설치 하 여 Windows Server 2012를 실행 하는 서버에서 Active Directory 모듈을 설치할 수도 있습니다와 다운로드 및 설치 하 여 Windows 8을 실행 하는 컴퓨터에서 Active Directory 모듈을 설치할 수는 [원격 서버 관리 도구 (RSAT)](https://www.microsoft.com/download/details.aspx?id=28972)합니다. 설치 단계는 [지침](https://www.microsoft.com/download/details.aspx?id=28972)을 참조하세요.
 
-## <a name="scenarios-for-testing-windows-powershell-for-active-directory-replication-and-topology-management-cmdlets"></a>Windows PowerShell Active Directory 복제 및 토폴로지 관리 cmdlet에 대 한 테스트용 시나리오
-다음과 같은 경우 새로운 관리 cmdlet 파악할 관리자 위한 다음과 같습니다.
+## <a name="scenarios-for-testing-windows-powershell-for-active-directory-replication-and-topology-management-cmdlets"></a>Windows PowerShell에서 Active Directory 복제 및 토폴로지 관리 cmdlet을 테스트하는 시나리오
+관리자는 다음 시나리오를 통해 새로운 관리 cmdlet을 파악할 수 있습니다.
 
--   모든 도메인 컨트롤러 및 해당 광고주 사이트의 목록을 보려면
+-   모든 도메인 컨트롤러 및 해당 사이트 목록 가져오기
 
 -   복제 토폴로지 관리
 
--   복제 상태 보기 및 정보
+-   복제 상태 및 정보 확인
 
 ## <a name="lab-requirements"></a>랩 요구 사항
 
--   두 명의 Windows Server 2012 도메인 컨트롤러: **d c 1** 및 **d c 2** contoso.com 도메인에 속한 하 고 그 도메인 회사 사이트에 있는 합니다.
+-   두 개의 Windows Server 2012 도메인 컨트롤러: 컨트롤러(**DC1** 및 **DC2**)
 
-## <a name="view-domain-controllers-and-their-sites"></a>도메인 컨트롤러 및 광고주 사이트 보기
-이 단계에서 Windows PowerShell에 대 한 Active Directory 모듈 기존 도메인 컨트롤러 및 복제 토폴로지 도메인을 볼 수 사용 합니다.
+## <a name="view-domain-controllers-and-their-sites"></a>도메인 컨트롤러 및 해당 사이트 확인
+이 단계에서는 Windows PowerShell용 Active Directory 모듈을 사용하여 기존 도메인 컨트롤러 및 도메인의 복제 토폴로지를 확인합니다.
 
-다음 절차에 나와 있는 단계를 완료 하려면 관리자 도메인 그룹 구성원 하거나 권한이 동일 해야 합니다.
+다음 절차의 단계를 완료 하려면 Domain Admins 그룹의 구성원 이어야 하거나 해당 권한이 해야 합니다.
 
-#### <a name="to-view-all-active-directory-sites"></a>모든 Active Directory 사이트를 보려면
+#### <a name="to-view-all-active-directory-sites"></a>모든 Active Directory 사이트를 확인하려면
 
-1.  **d c 1**, 클릭 **Windows PowerShell** 작업 표시줄에서 합니다.
+1.  **DC1**의 작업 표시줄에서 **Windows PowerShell**을 클릭합니다.
 
-2.  다음 명령을 입력.
+2.  다음 명령을 입력합니다.
 
     `Get-ADReplicationSite -Filter *`
 
-    각 사이트에 대 한 자세한 정보를 반환합니다. `Filter`반환 목록을 제한 Active Directory PowerShell cmdlet 전체 매개 변수를 사용 합니다. 이 경우 별표 (*) 모든 사이트 개체를 의미 합니다.
+    그러면 각 사이트에 대한 자세한 정보가 반환됩니다. `Filter` 매개 변수는 Active Directory PowerShell cmdlet 전체에서 반환되는 개체 목록을 제한하는 데 사용됩니다. 여기서 별표(*)는 모든 사이트 개체를 나타냅니다.
 
     > [!TIP]
-    > Tab 키 명령 자동 완성를 Windows PowerShell에서 사용할 수 있습니다.
+    > Tab 키를 사용하여 Windows PowerShell에서 명령을 자동 완성할 수 있습니다.
     > 
-    > 예: 입력 `Get-ADRep`Tab 키를 눌러 여러 번 될 때까지 일치 하는 명령 이동 하 고 `Get-ADReplicationSite`합니다. 자동 완성에 대해서도 작동 매개 이름와 같은 `Filter`합니다.
+    > 예: `Get-ADRep`를 입력하고 Tab 키를 여러 번 눌러 `Get-ADReplicationSite`에 도달할 때까지 일치하는 명령을 건너뜁니다. 자동 완성은 `Filter` 등의 매개 변수 이름에 대해서도 작동합니다.
 
-    출력을 포맷 하려면는 `Get-ADReplicationSite`표로 명령을 하 고 디스플레이 제한 하 고 특정 필드에 출력 파이프 수는 `Format-Table`명령 (또는 "`ft`" 간단히):
+    출력의 서식을 지정 하는 `Get-ADReplicationSite` 테이블로 표시를 제한 한 특정 필드에는 출력을 파이프할 수 있습니다는 `Format-Table` 명령 (또는 "`ft`" 줄여서):
 
     `Get-ADReplicationSite -Filter * | ft Name`
 
-    이 짧은 이름 필드만 포함 한 사이트 목록 버전을 반환 합니다.
+    그러면 이름 필드만 포함된 사이트 목록의 짧은 버전이 반환됩니다.
 
-#### <a name="to-produce-a-table-of-all-domain-controllers"></a>모든 도메인 컨트롤러의 표 생성 하기 위해
+#### <a name="to-produce-a-table-of-all-domain-controllers"></a>모든 도메인 컨트롤러의 표를 생성하려면
 
--   다음 명령을 입력 하 고 **Windows PowerShell 모듈 Active Directory** 프롬프트:
+-   **Windows PowerShell용 Active Directory 모듈** 프롬프트에 다음 명령을 입력합니다.
 
     `Get-ADDomainController -Filter * | ft Hostname,Site`
 
-    이 명령의 이름을 뿐만 아니라 해당 사이트 연결 개최 된 도메인 컨트롤러를 반환 합니다.
+    이 명령은 도메인 컨트롤러 호스트 이름과 해당 사이트 연결을 반환합니다.
 
 ## <a name="manage-replication-topology"></a>복제 토폴로지 관리
-명령을 실행 한 후 이전 단계에서 `Get-ADDomainController -Filter * | ft Hostname,Site`, **d c 2** 의 일환으로 나열 된는 **회사** 사이트 합니다. 아래 절차에 새로운 지점 사이트, 만들어집니다 **분기 1**만들고 새로운 사이트 링크 사이트 링크 비용과 복제 빈도 설정 하 고 다음 이동 **d c 2** 에 **분기 1**합니다.
+이전 단계에서 `Get-ADDomainController -Filter * | ft Hostname,Site`명령을 실행하고 나면 **DC2** 가 **CORPORATE** 사이트의 일부분으로 나열됩니다. 아래 절차에서는 새 지점 사이트 **BRANCH1**을 만들고 새 사이트 링크를 만든 다음, 사이트 링크 비용 및 복제 빈도를 설정하고 나서 **DC2**를 **BRANCH1**로 이동합니다.
 
-다음 절차에 나와 있는 단계를 완료 하려면 관리자 도메인 그룹 구성원 하거나 권한이 동일 해야 합니다.
+다음 절차의 단계를 완료 하려면 Domain Admins 그룹의 구성원 이어야 하거나 해당 권한이 해야 합니다.
 
 #### <a name="to-create-a-new-site"></a>새 사이트를 만들려면
 
--   다음 명령을 입력 하 고 **Windows PowerShell 모듈 Active Directory** 프롬프트:
+-   **Windows PowerShell용 Active Directory 모듈** 프롬프트에 다음 명령을 입력합니다.
 
     `New-ADReplicationSite BRANCH1`
 
-    이 명령을 새로운 지점 사이트, 분기 1 만듭니다.
+    이 명령은 새 지점 사이트인 branch1을 만듭니다.
 
-#### <a name="to-create-a-new-site-link"></a>새 사이트 링크를 만들려면
+#### <a name="to-create-a-new-site-link"></a>새 로그 파일을 만들려면
 
--   다음 명령을 입력 하 고 **Windows PowerShell 모듈 Active Directory** 프롬프트:
+-   **Windows PowerShell용 Active Directory 모듈** 프롬프트에 다음 명령을 입력합니다.
 
     `New-ADReplicationSiteLink 'CORPORATE-BRANCH1'  -SitesIncluded CORPORATE,BRANCH1 -OtherAttributes @{'options'=1}`
 
-    이 명령을 사이트 링크를 만든 **분기 1** 및 변경 알림 프로세스 켜져 있습니다.
+    이 명령은 **BRANCH1**에 대한 사이트 링크를 만들고 변경 알림 프로세스를 설정합니다.
 
     > [!TIP]
-    > 탭 사용 하 여 자동 완성 매개 이름에와 같은 `-SitesIncluded`및 `-OtherAttributes`수동으로 입력 하는 대신 합니다.
+    > Tab 키를 사용하여 `-SitesIncluded` 및 `-OtherAttributes` 등의 매개 변수 이름을 수동으로 입력하는 대신 자동 완성할 수 있습니다.
 
-#### <a name="to-set-the-site-link-cost-and-replication-frequency"></a>사이트 링크 비용과 복제 빈도 설정 하려면
+#### <a name="to-set-the-site-link-cost-and-replication-frequency"></a>사이트 링크 비용 및 복제 빈도를 설정하려면
 
--   다음 명령을 입력 하 고 **Windows PowerShell 모듈 Active Directory** 프롬프트:
+-   **Windows PowerShell용 Active Directory 모듈** 프롬프트에 다음 명령을 입력합니다.
 
     `Set-ADReplicationSiteLink CORPORATE-BRANCH1 -Cost 100 -ReplicationFrequencyInMinutes 15`
 
-    사이트 링크 비용 설정 **분기 1** 에 **100** 복제 하는 사이트와 빈도 설정 하 고 **15 분**합니다.
+    이 명령은 **BRANCH1** 에 대한 사이트 링크 비용을 **100** 으로 설정하고 사이트 복제 빈도를 **15분**으로 설정합니다.
 
-#### <a name="to-move-a-domain-controller-to-a-different-site"></a>도메인 컨트롤러 다른 사이트를 이동 하려면
+#### <a name="to-move-a-domain-controller-to-a-different-site"></a>도메인 컨트롤러를 다른 사이트로 이동하려면
 
--   다음 명령을 입력 하 고 **Windows PowerShell 모듈 Active Directory** 프롬프트:
+-   **Windows PowerShell용 Active Directory 모듈** 프롬프트에 다음 명령을 입력합니다.
 
     `Get-ADDomainController DC2 | Move-ADDirectoryServer -Site BRANCH1`
 
-    이 명령을 이동 도메인 컨트롤러 **d c 2** 하는 **분기 1** 사이트 합니다.
+    이 명령은 도메인 컨트롤러 **DC2** 를 **BRANCH1** 사이트로 이동합니다.
 
 ### <a name="verification"></a>확인
 
-##### <a name="to-verify-site-creation-new-site-link-and-cost-and-replication-frequency"></a>사이트 만들고 새 사이트 링크, 비용과 복제 주파수를 확인 하려면
+##### <a name="to-verify-site-creation-new-site-link-and-cost-and-replication-frequency"></a>사이트 만들기, 새 사이트 링크 및 비용과 복제 빈도를 확인하려면
 
--   클릭 **서버 관리자**, 클릭 **도구** 차례로 클릭 하 고 **Active Directory 사이트 및 서비스** 다음을 확인 하 고 있습니다.
+-   **서버 관리자**, **도구** , **Active Directory 사이트 및 서비스** 를 차례로 클릭하고 다음을 확인합니다.
 
-    확인 하는 **분기 1** 사이트에서 Windows PowerShell 명령 올바르지 값 모두 포함 합니다.
+    **BRANCH1** 사이트에 Windows PowerShell 명령의 올바른 값이 모두 포함되어 있는지 확인합니다.
 
-    확인는 **회사 분기 1** 사이트 링크 만들고 연결는 **분기 1** 및 **회사** 사이트 합니다.
+    **CORPORATE-BRANCH1** 사이트 링크가 작성되었으며 **BRANCH1** 및 **CORPORATE** 사이트에 연결되는지 확인합니다.
 
-    확인 **d c 2** 이제는 **분기 1** 사이트 합니다. 열 수 있습니다의 **Active Directory Windows PowerShell 모듈** 확인 하려면 다음 명령을 입력 하 고 **d c 2** 에서 이제은 **분기 1** 사이트: `Get-ADDomainController -Filter * | ft Hostname,Site`합니다.
+    **DC2** 가 현재 **BRANCH1** 사이트에 있는지 확인합니다. 또한 **Windows PowerShell용 Active Directory 모듈**을 열고 다음 명령을 입력하여 **DC2**가 현재 **BRANCH1** 사이트에 있는지 확인할 수도 있습니다. `Get-ADDomainController -Filter * | ft Hostname,Site`.
 
-## <a name="view-replication-status-information"></a>복제 상태 정보 보기
-다음 절차에는 중 하나를 사용할 Windows PowerShell Active Directory 복제 및 관리 cmdlet에 대 한 `Get-ADReplicationUpToDatenessVectorTable DC1`, 각 도메인 컨트롤러에서 관리 최신 vector 표를 사용 하는 간단한 복제 보고서를 생성 합니다. 최신 vector 다음 표는 추적 하 고 숲 속의 각 도메인 컨트롤러에서 본 높은 원래 쓰기 USN 합니다.
+## <a name="view-replication-status-information"></a>복제 상태 정보 확인
+다음 절차에서는 Active Directory용 Windows PowerShell 복제 및 관리 cmdlet 중 하나인 `Get-ADReplicationUpToDatenessVectorTable DC1`을 사용하여 간단한 복제 보고서(각 도메인 컨트롤러가 유지 관리하는 최신 벡터 테이블 사용)를 생성합니다. 이 최신 벡터 테이블은 포리스트의 각 도메인 컨트롤러에 표시되는 최고 원래 쓰기 USN을 추적합니다.
 
-다음 절차에 나와 있는 단계를 완료 하려면 관리자 도메인 그룹 구성원 하거나 권한이 동일 해야 합니다.
+다음 절차의 단계를 완료 하려면 Domain Admins 그룹의 구성원 이어야 하거나 해당 권한이 해야 합니다.
 
-#### <a name="to-view-the-up-to-dateness-vector-table-for-a-single-domain-controller"></a>단일 도메인 컨트롤러에 대 한 최신 vector 표를 보려면
+#### <a name="to-view-the-up-to-dateness-vector-table-for-a-single-domain-controller"></a>단일 도메인 컨트롤러에 대한 최신 벡터 테이블을 확인하려면
 
-1.  다음 명령을 입력 하 고 **Windows PowerShell 모듈 Active Directory** 프롬프트:
+1.  **Windows PowerShell용 Active Directory 모듈** 프롬프트에 다음 명령을 입력합니다.
 
     `Get-ADReplicationUpToDatenessVectorTable DC1`
 
-    있을 때 보면 최고 Usn 목록이 표시 **d c 1** 숲 모든 도메인 컨트롤러에 대 한 합니다. **서버** 값이 경우에 테이블 유지 하는 서버 참조 **d c 1**합니다. **파트너** 값 변경 사항이 복제 파트너 (직접 또는 간접)에 게 말합니다. UsnFilter 값이 표시 높은 USN **d c 1** 파트너 로부터 합니다. 새 도메인 컨트롤러를 숲에 추가 되지에 표시 됩니다 **d c 1**까지 표의 **d c 1** 새 도메인에서 수집한 변경 받습니다.
+    그러면 포리스트의 모든 도메인 컨트롤러에 대해 **DC1**에서 확인되는 최고 USN 목록이 표시됩니다. **Server** 값은 테이블을 유지 관리하는 서버(여기서는 **DC1**)를 나타냅니다. **Partner** 값은 변경된 복제 파트너(직접 또는 간접)를 나타냅니다. UsnFilter 값은 Partner에서 **DC1** 에서 확인되는 최고 USN입니다. 새 도메인 컨트롤러를 포리스트에 추가 되는 경우에 나타나지 것입니다 **d c 1**될 때까지 테이블의 **d c 1** 새 도메인에서 시작 하는 변경 받습니다.
 
-#### <a name="to-view-the-up-to-dateness-vector-table-for-all-domain-controllers-in-a-domain"></a>도메인에 있는 모든 도메인 컨트롤러에 대 한 최신 vector 표를 보려면
+#### <a name="to-view-the-up-to-dateness-vector-table-for-all-domain-controllers-in-a-domain"></a>도메인의 모든 도메인 컨트롤러에 대한 최신 벡터 테이블을 확인하려면
 
-1.  Windows PowerShell 프롬프트에 대 한 Active Directory 모듈에서 다음 명령을 입력.
+1.  Windows PowerShell용 Active Directory 모듈 프롬프트에 다음 명령을 입력합니다.
 
     `Get-ADReplicationUpToDatenessVectorTable * | sort Partner,Server | ft Partner,Server,UsnFilter`
 
-    이 명령을 대체 **d c 1** 으로 `*`, 따라서 모든 도메인 컨트롤러에서 최신 vector 표 데이터를 수집 합니다. 데이터도 정렬 **파트너** 및 **서버** 테이블에 표시 합니다.
+    이 명령은 **DC1** 을 `*`로 바꿔 모든 도메인 컨트롤러에서 최신 벡터 테이블 데이터를 수집합니다. 데이터는 **Partner** 및 **Server** 를 기준으로 정렬된 다음 테이블에 표시됩니다.
 
-    정렬 쉽게 비교 마지막 USN 지정된 복제 파트너에 대 한 각 도메인 컨트롤러에서 볼 수 있습니다. 귀하의 환경에서 복제 되는지 확인 하는 빠른 방법입니다. 복제 제대로 작동 하는 경우 특정된 복제 파트너에 대 한 보고 UsnFilter 값 있어야 비슷함 전체 도메인 컨트롤러 합니다.
+    이처럼 데이터가 정렬되므로 지정된 복제 파트너에 대해 각 도메인 컨트롤러가 마지막으로 표시한 USN을 쉽게 비교할 수 있습니다. 이러한 방법으로 환경 전체에서 수행되는 복제를 빠르게 확인할 수 있습니다. 복제가 정상적으로 작동하면 지정된 복제 파트너에 대해 보고되는 UsnFilter 값은 모든 도메인 컨트롤러에서 비슷해야 합니다.
 
-## <a name="see-also"></a>참조 하십시오
-[향상 된 Active Directory 복제 및 Windows PowerShell 및 #40;를 사용 하 여 토폴로지 관리 200 수준 & #41;](Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-.md)
+## <a name="see-also"></a>관련 항목
+[고급 Active Directory 복제 및 토폴로지 관리 Windows PowerShell을 사용 하 여 &#40;수준 200&#41;](Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-.md)
 
 

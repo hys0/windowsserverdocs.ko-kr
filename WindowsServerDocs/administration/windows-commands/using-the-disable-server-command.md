@@ -1,0 +1,52 @@
+---
+title: 서버 사용 안 함-명령을 사용 하 여
+description: '에 대 한 Windows 명령을 항목 * * *- '
+ms.custom: na
+ms.prod: windows-server-threshold
+ms.reviewer: na
+ms.suite: na
+ms.technology: manage-windows-commands
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: b69fcfe0-b744-4794-bc75-2c9218c0ba66
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/16/2017
+ms.openlocfilehash: 3b229146206c1fbe6ce8b6f585b2ff9b50ae6104
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59853034"
+---
+# <a name="using-the-disable-server-command"></a>서버 사용 안 함-명령을 사용 하 여
+
+
+
+Windows 배포 서비스 서버에 대 한 모든 서비스를 사용 하지 않도록 설정 합니다.
+
+## <a name="syntax"></a>구문
+
+```
+WDSUTIL [Options] /Disable-Server [/Server:<Server name>]
+```
+
+## <a name="parameters"></a>매개 변수
+
+|매개 변수|설명|
+|---------|-----------|
+|[/ 서버:\<서버 이름 >]|서버 이름을 지정합니다. 이 NetBIOS 이름 또는 정규화 된 도메인 이름 (FQDN) 수 있습니다. 서버 이름이 없는 지정 하는 경우 로컬 서버 사용 됩니다.|
+
+## <a name="BKMK_examples"></a>예제
+
+서버를 비활성화 하려면 다음 중 하나를 실행 합니다.
+```
+WDSUTIL /Disable-Server
+WDSUTIL /Verbose /Disable-Server /Server:MyWDSServer
+```
+
+#### <a name="additional-references"></a>추가 참조
+
+[명령줄 구문 키](command-line-syntax-key.md)
+

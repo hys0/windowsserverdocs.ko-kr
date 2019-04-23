@@ -1,7 +1,7 @@
 ---
 ms.assetid: 963a3d37-d5f1-4153-b8d5-2537038863cb
-title: "보안 및 배포 Adfs의에 대 한 유용한"
-description: 
+title: AD FS 보안 계획 및 배포 모범 사례
+description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,28 +9,29 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: ed8c36d4bec455879ffd00ad40b72fd5e90484ab
-ms.sourcegitcommit: db290fa07e9d50686667bfba3969e20377548504
+ms.openlocfilehash: 67b122353ca9dff3a4df6cbfac56b16bed52b539
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59848084"
 ---
-# <a name="best-practices-for-secure-planning-and-deployment-of-ad-fs"></a>보안 및 배포 Adfs의에 대 한 유용한
+# <a name="best-practices-for-secure-planning-and-deployment-of-ad-fs"></a>AD FS 보안 계획 및 배포 모범 사례
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-이 항목을 계획 하 고 보안 Active Directory Federation Services (ADFS) 배포 디자인할 때 평가 하는 데 도움이 모범 사례 정보를 제공 합니다. 이 항목을 검토 하 고 평가 전체적인 보안 Adfs의 사용에 영향을 주는 고려 시작 지점. 이 항목의 정보는 칭찬 기존 보안 계획 및 기타 디자인 모범 사례 확장을 위한 것입니다.  
+이 항목에서는 계획 하 고 Active Directory Federation Services (AD FS) 배포를 디자인할 때 보안을 평가 하는 데 유용한 정보를 제공 합니다. 이 항목은 검토 하 고 AD FS 사용의 전반적인 보안에 영향을 주는 고려 사항을 평가 대 한 시작 지점입니다. 이 항목의 정보는 기존 보안 계획 및 기타 디자인 모범 사례를 보완하고 확장하기 위해 작성되었습니다.  
   
-## <a name="core-security-best-practices-for-ad-fs"></a>핵심 보안에 대 한 유용한 ADFS  
-다음의 핵심 모범 사례 개선 하거나 디자인 또는 배포 보안 확장 하려는 모든 ADFS 설치 일반적인는 다음과 같습니다.  
+## <a name="core-security-best-practices-for-ad-fs"></a>AD FS에 대한 핵심 보안 모범 사례  
+다음 핵심 모범 사례에 공통적인 모든 AD FS 설치 개선 하거나 디자인 또는 배포의 보안을 확장 하려는:  
   
--   **보안 구성 마법사를 사용 하 여 광고 FS 관련 보안에 대 한 유용한 정보 federation 서버와 federation 서버 프록시 컴퓨터에 적용할**  
+-   **보안 구성 마법사를 사용 하 여 페더레이션 서버 및 페더레이션 서버 프록시 컴퓨터에 AD FS 관련 보안 모범 사례 적용**  
   
-    구성 SCW 보안 마법사 () Windows Server 2008, Windows Server 2008 R2 및 Windows Server 2012 컴퓨터에 사전 설치 된 제공 되는 도구입니다. 도움이 되는 유용한 하든지 서버 역할을 설치 하는 경우에 따라, 서버에 대 한 보안 적용 사용할 수 있습니다.  
+    구성 마법사 SCW (보안)는 미리 설치 된 모든 Windows Server 2008, Windows Server 2008 R2 및 Windows Server 2012 컴퓨터에서 제공 되는 도구입니다. 이 도구를 사용하여 설치하는 서버 역할에 따라 서버의 공격 노출을 줄일 수 있는 보안 모범 사례를 적용할 수 있습니다.  
   
-    ADFS 설치할 경우 설치 프로그램이 만들어 역할 특정 ADFS 하는 서버 역할 (federation 서버 또는 federation 서버 프록시) 설치 중에 선택 하 게 적용 되는 보안 정책을 만드는 데 SCW로 사용할 수 있는 확장 파일  
+    AD FS를 설치할 때 설치 프로그램은 SCW에서 설치 중에 선택하는 특정 AD FS 서버 역할(페더레이션 서버 또는 페더레이션 서버 프록시)에 적용할 보안 정책을 만드는 데 사용할 수 있는 역할 확장 파일을 만듭니다.  
   
-    설치 된 각 역할 확장 파일 유형을 역할 및 각 컴퓨터 구성 된 하위 나타냅니다. 다음과 같은 역할 확장 파일 C:WindowsADFSScw 디렉터리에 설치 됩니다.  
+    설치된 각 역할 확장 파일은 역할의 유형 및 각 컴퓨터가 구성되는 하위 역할을 나타냅니다. 다음 역할 확장 파일이 C:WindowsADFSScw 디렉터리에 설치 됩니다.  
   
     -   Farm.xml  
   
@@ -38,107 +39,111 @@ ms.lasthandoff: 12/12/2017
   
     -   StandAlone.xml  
   
-    -   Proxy.xml (이 파일은 컴퓨터 federation 서버 프록시 역할으로 구성 된 경우에 제공 됩니다.)  
+    -   Proxy.xml(이 파일은 페더레이션 서버 프록시 역할로 컴퓨터를 구성한 경우에만 제공됨)  
   
-    SCW의 ADFS 역할 확장을 적용 하려면 순서 대로 다음 단계를 완료 합니다.  
+    SCW에서 AD FS 역할 확장을 적용하려면 다음 단계를 순서대로 완료합니다.  
   
-    1.  ADFS 설치 하 고 해당 컴퓨터에 대 한 적절 한 서버 역할을 선택 합니다. 자세한 내용은 참조 [Federation 서비스 프록시 역할 서비스 설치](../../ad-fs/deployment/Install-the-Federation-Service-Proxy-Role-Service.md) AD FS 배포 가이드에 있습니다.  
+    1.  AD FS를 설치하고 해당 컴퓨터에 대한 적절한 서버 역할을 선택합니다. 자세한 내용은 [페더레이션 서비스 프록시 역할 서비스 설치](../../ad-fs/deployment/Install-the-Federation-Service-Proxy-Role-Service.md) AD FS 배포 가이드에서.  
   
-    2.  Scwcmd 명령줄 도구를 사용 하 여 적절 한 역할 확장 파일을 등록 합니다. 이 도구를 사용 하 여 역할 컴퓨터 구성에 대 한 자세한 내용은 다음 표를 참조 하세요.  
+    2.  Scwcmd 명령줄 도구를 사용하여 적절한 역할 확장 파일을 등록합니다. 컴퓨터가 구성된 역할에서 이 도구를 사용하는 방법에 대한 자세한 내용은 다음 표를 참조하세요.  
   
-    3.  명령 완료 된 것은 WindowssecurityMsscwLogs 디렉터리에 있는 SCWRegister_log.xml 파일을 검사 하 여 확인 합니다.  
+    3.  이 명령은 WindowssecurityMsscwLogs 디렉터리에 있는 SCWRegister_log.xml 파일을 검사 하 여 성공적으로 완료 되었는지 확인 합니다.  
   
-    각 federation 서버 또는 광고 FS 기반 SCW 보안 정책이 적용 하려면 federation 서버 프록시 컴퓨터에서 모든이 단계를 수행 해야 합니다.  
+    AD FS 기반 SCW 보안 정책을 적용할 각 페더레이션 서버 또는 페더레이션 서버 프록시 컴퓨터에서 이 모든 단계를 수행해야 합니다.  
   
-    다음 표에서 ADFS 설치 된 컴퓨터에서 선택한 역할 ADFS 서버에 따라 적절 한 SCW 역할 확장 등록 하는 방법을 설명 합니다.  
+    다음 표에서는 AD FS를 설치한 컴퓨터에서 선택한 AD FS 서버 역할에 따라 적절한 SCW 역할 확장을 등록하는 방법에 대해 설명합니다.  
   
-    |광고 FS 서버 역할|ADFS 구성 데이터베이스 사용|명령 프롬프트에서 다음 명령을 입력 합니다.|  
+    |AD FS 서버 역할|사용하는 AD FS 구성 데이터베이스|명령 프롬프트에서 다음 명령을 입력합니다.|  
     |---------------------|-------------------------------------|---------------------------------------------------|  
-    |독립 실행형 federation 서버|Windows 내부 데이터베이스|`scwcmd register /kbname:ADFS2Standalone /kbfile:"WindowsADFSscwStandAlone.xml"`|  
-    |Federation 팜 가입 서버|Windows 내부 데이터베이스|`scwcmd register /kbname:ADFS2Standalone /kbfile:"WindowsADFSscwFarm.xml"`|  
-    |Federation 팜 가입 서버|SQL Server|`scwcmd register /kbname:ADFS2Standalone /kbfile:"WindowsADFSscwSQLFarm.xml"`|  
-    |Federation 서버 프록시|해당 없음|`scwcmd register /kbname:ADFS2Standalone /kbfile:"WindowsADFSscwProxy.xml"`|  
+    |독립 실행형 페더레이션 서버|Windows 내부 데이터베이스|`scwcmd register /kbname:ADFS2Standalone /kbfile:"WindowsADFSscwStandAlone.xml"`|  
+    |팜에 가입된 페더레이션 서버|Windows 내부 데이터베이스|`scwcmd register /kbname:ADFS2Standalone /kbfile:"WindowsADFSscwFarm.xml"`|  
+    |팜에 가입된 페더레이션 서버|SQL Server|`scwcmd register /kbname:ADFS2Standalone /kbfile:"WindowsADFSscwSQLFarm.xml"`|  
+    |페더레이션 서버 프록시|해당 사항 없음|`scwcmd register /kbname:ADFS2Standalone /kbfile:"WindowsADFSscwProxy.xml"`|  
   
-    ADFS 함께 사용할 수 있는 데이터베이스에 대 한 자세한 내용은 참조 [AD FS 구성 데이터베이스의 The 역할](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)합니다.  
+    AD FS에서 사용할 수 있는 데이터베이스에 대한 자세한 내용은 [AD FS 구성 데이터베이스의 역할](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)을 참조하세요.  
   
--   **경우에는 보안 매우 중요 한 관심사 예를 들어, 단말기를 사용할 때 토큰 재생 검색을 사용 합니다.**  
-    토큰 재생 검색 토큰 연합 서비스에는 요청을 재생할 하려고 감지 되 고 요청 삭제 되는 Adfs의 기능입니다. 토큰 재생 검색 기본적으로 활성화 됩니다. 동일한 토큰 두 번 이상 사용 하지 않도록 함으로써 WS Federation 수동 프로필 및 보안 설정 Markup 언어 (SAML) WebSSO 프로필에 대해 작동 합니다.  
+-   **에 보안을 매우 중요 한 상황을 예를 들어 키오스크 사용 하는 경우 토큰 재생 검색을 사용 합니다.**  
+    토큰 재생 검색에는 페더레이션 서비스에 대 한 토큰 요청을 재생 하려는 모든 시도 검색 하는 요청이 삭제 되는 AD FS의 기능입니다. 토큰 재생 검색은 기본적으로 사용됩니다. 동일한 토큰을 두 번 이상 사용하지 않는 경우 WS-Federation Passive 프로필과 SAML(Security Assertion Markup Language) WebSSO 프로필 둘 다에서 작동합니다.  
   
-    Federation 서비스를 시작 하는 실현 토큰 요청의 캐시 빌드 하기 시작 합니다. 시간이 지남에 따라 이후 토큰 요청 캐시를에 추가 되 Federation 서비스에 대 한 여러 번 토큰 요청을 재생 하려고를 감지 하는 기능 증가 합니다. 토큰 재생 검색을 사용 하지 않도록 설정 하 고 나중에 다시 사용 하도록 선택 하면 Federation 서비스 사용 된 이전에 재생 캐시 수 있는 시간이 충분 내용을 다시 시작할 때까지 된 시간 동안 토큰 허용 여전히 됩니다 기억 합니다. 자세한 내용은 참조 [AD FS 구성 데이터베이스의 The 역할](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)합니다.  
+    페더레이션 서비스를 시작하면 이행하는 모든 토큰 요청의 캐시가 생성되기 시작합니다. 시간이 지나면서 후속 토큰 요청이 캐시에 추가되면 페더레이션 서비스에 대해 토큰 요청을 여러 번 재생하려는 시도를 검색할 수 있는 기능이 증가합니다. 토큰 재생 검색을 사용하지 않도록 설정한 후 나중에 다시 사용하도록 설정하는 경우 페더레이션 서비스는 재생 캐시가 해당 콘텐츠를 다시 작성할 수 있는 충분한 시간이 경과할 때까지 일정 기간 동안 이전에 사용되었을 수 있는 토큰을 계속 허용합니다. 자세한 내용은 [AD FS 구성 데이터베이스의 역할](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)을 참조하세요.  
   
--   **지원 SAML 아티팩트 해상도 사용 하는 경우에 특히 토큰 암호화를 사용 합니다.**  
+-   **특히 지 원하는 SAML 아티팩트 확인을 사용 하는 경우 토큰 암호화를 사용 합니다.**  
   
-    보안 및 ADFS 배포에 대해 시도할 수 있는 잠재적 남자 중간 (MITM) 공격 으로부터 보호를 강화 하기 위해 토큰 암호화는 것이 좋습니다. 사용 암호화를 사용 하 여 될 수 있습니다 영향을에 전체 하지만 일반적으로 것은 일반적으로 발견 되지 있고 많은 배포에서 보안을 강화에 대 한 혜택 초과 서버 성능이 비용이 합니다.  
+    AD FS 배포에 대해 시도 될 수 있는 잠재적인 중간자 개입 (mitm 메시지 가로채기) 공격을 방지 및 보안을 높이기 위해 토큰의 암호화를 사용 하는 것이 좋습니다. 암호화를 사용하면 처리량이 약간 저하되지만 일반적으로 인식할 수 있는 수준은 아니며, 대부분의 배포에서는 강화된 보안 이점이 서버 성능 면에서 소요되는 모든 비용을 능가합니다.  
   
-    첫 번째 세트 토큰 암호화를 사용 하려면 신뢰 파티 신뢰 프로그램에 대 한 암호화 인증서를 추가 합니다. 신뢰를 파티에 의존 만들 때 중 하나는 한 암호화 인증서를 구성할 수 이상 합니다. 을 추가 하려면 한 암호화 인증서 나중에 기존 신뢰 파티 신뢰 하는 인증서 사용에 대 한에 설정할 수 있습니다의 **암호화** ADFS 스냅인 사용 하는 동안 신뢰 속성에서 탭 합니다. ADFS cmdlet 사용 하는 기존 보안에 대 한 인증서를 지정 하려면 EncryptionCertificate 매개 중 하나를 사용 하 여는 **설정 ClaimsProviderTrust** 또는 **설정 RelyingPartyTrust** cmdlet 합니다. 토큰 암호를 해독 때 사용 하 여 Federation 서비스에 대 한 인증서를 설정 하려면는 **설정 ADFSCertificate** cmdlet 지정 하 고 "`Token-Encryption`"에 대 한는 *CertificateType* 매개 합니다. 설정 및 특정 당사자에 대 한 암호화 해제 신뢰를 사용 하 여 편집할 수는 *EncryptClaims* 매개는 **설정 RelyingPartyTrust** cmdlet 합니다.  
+    토큰 암호화를 사용하려면 먼저 신뢰 당사자 트러스트에 대한 암호화 인증서 추가를 설정합니다. 신뢰 당사자 트러스트를 만들 때 또는 그 이후에 암호화 인증서를 구성할 수 있습니다. 암호화 인증서를 추가 하려면 나중에 기존 신뢰 당사자 트러스트에 사용할 인증서를 설정할 수 있습니다 합니다 **암호화** AD FS 스냅인을 사용 하는 동안 트러스트 속성 내의 탭 합니다. AD FS cmdlet을 사용 하 여 기존 트러스트에 대 한 인증서를 지정 하거나의 EncryptionCertificate 매개 변수를 사용 합니다 **집합 ClaimsProviderTrust** 또는 **집합 RelyingPartyTrust** cmdlet. 토큰을 암호 해독할 때 사용할 페더레이션 서비스에 대 한 인증서를 설정 하려면 사용 합니다 **Set-adfscertificate** cmdlet 지정 "`Token-Encryption`"에 대 한 합니다 *CertificateType* 매개 변수입니다. 특정 신뢰 당사자 트러스트에 대해 암호화를 사용하거나 사용하지 않도록 설정하려면 *Set-RelyingPartyTrust* cmdlet의 **EncryptClaims** 매개 변수를 사용하면 됩니다.  
   
--   **추가 보호 인증에 대 한 이용**  
+-   **인증에 대 한 확장 된 보호 활용**  
   
-    배포 보안을 위해 설정 고 Adfs로 인증 기능에 대 한 추가 보호 기능을 사용할 수 있습니다. 이 설정은 federation 서버에서 지 원하는 인증에 대 한 연장된 차단 수준을 지정 합니다.  
+    배포, 보호를 설정할 수 있으며 확장된 된 보호를 사용 하 여 AD FS 사용 하 여 인증 기능에 대 한 키를 누릅니다. 이 설정은 페더레이션 서버에서 지 원하는 인증에 대 한 확장 된 보호 수준을 지정 합니다.  
   
-    인증에 대 한 연장된 보호를 공격자 클라이언트 자격 증명을 차단 하 고 서버에 전달 남자 중간 (MITM) 공격 으로부터 보호할 수 있습니다. 이러한 공격 으로부터 보호 기능을 통해는 채널 구속력 토큰 CBT () 하거나 될 수 있는 중 하나가 필요한, 허용 하는 클라이언트와의 커뮤니케이션을 설정할 때 서버에서 필요 하지 수 있게 됩니다.  
+    인증에 대한 확장된 보호는 공격자가 클라이언트 자격 증명을 가로채 서버로 전달하는 MITM(메시지 가로채기) 공격을 방지하는 데 도움이 됩니다. 이러한 공격은 CBT(채널 바인딩 토큰)를 통해 방지할 수 있으며, CBT는 클라이언트와의 통신을 설정할 때 서버에서 필요로 하거나, 허용하거나, 필요로 하지 않을 수 있습니다.  
   
-    사용 하 여 확장된 보호 기능을 사용 하려면는 **ExtendedProtectionTokenCheck** 매개에는 **설정 ADFSProperties** cmdlet 합니다. 다음 표에 가능한 값 설정과 값을 제공 하는 보안 수준에이 대 한 설명 되어 있습니다.  
+    확장된 보호 기능을 사용하려면 **Set-ADFSProperties** cmdlet에서 **ExtendedProtectionTokenCheck** 매개 변수를 사용합니다. 이 설정의 가능한 값과 해당 값에서 제공하는 보안 수준은 다음 표에 설명되어 있습니다.  
   
-    |매개 값|보안 수준|보호 설정|  
+    |매개 변수 값|보안 수준|보호 설정|  
     |-------------------|------------------|----------------------|  
-    |필요|서버를 완전히 강화 된 합니다.|추가 보호 적용 되며 언제 든 지 필요한 수도 있습니다.|  
-    |허용|서버는 강화 된 부분입니다.|추가 보호 기능을 지 원하는 관련 된 시스템을 패치 적용 된 적용 됩니다.|  
-    |없음|서버 취약입니다.|추가 보호 적용 되지 않습니다.|  
+    |필요|서버가 완전히 강화됨|확장된 보호가 적용되며 항상 필요함|  
+    |허용|서버가 부분적으로 강화됨|관련된 시스템에 확장된 보호를 지원하기 위한 패치가 적용된 경우 확장된 보호가 적용됨|  
+    |없음|서버가 취약함|확장된 보호가 적용되지 않음|  
   
--   **로그인 및 추적을 사용 하는 경우 모든 중요 한 정보가의 개인 정보를 확인 합니다.**  
+-   **로깅 및 추적을 사용 하는 경우 중요 한 정보의 개인 정보를 확인 합니다.**  
   
-    ADFS 하거나 하지 않는, 기본적으로 제공 Federation 서비스의 정상적인 동작 일부로 직접 (PII) 개인 식별 정보를 추적 합니다. 하지만 이벤트 로깅 및 디버그 추적 로깅 활성화 되어 있으면 adfs에서, 일부 클레임 구성한 클레임 정책에 따라 유형과 관련 된 값 포함 될 수 있습니다 ADFS 이벤트 또는 추적 로그에 기록 될 수 있는 PII 합니다.  
+    AD FS는 그렇지 않으면 기본적으로 노출 또는 페더레이션 서비스 또는 정상 작업의 일부로 직접 개인 식별이 가능한 정보 (PII)를 추적 합니다. 그러나 AD FS에서 이벤트 로깅 및 디버그 추적 로깅이 설정 되 면 일부 클레임을 구성 하는 클레임 정책에 따라 형식 및 연결 된 값 포함 될 수 있습니다 AD FS 이벤트 또는 추적 로그에 로깅될 수 있는 pii가 있습니다.  
   
-    따라서 ADFS 구성 하 고 로그 파일에 액세스 제어 적용는 것이 좋습니다. 이러한 정보를 볼 수를 하지 않을 경우 loggin를 사용 하지 않도록 설정 하거나 필터링 PII 또는 중요 한 데이터가 로그에 다른 사용자와 공유 하기 전에 해야 합니다.  
+    따라서 AD FS 구성과 해당 로그 파일에 대 한 액세스 제어를 적용는 것이 좋습니다. 이러한 종류의 정보를 표시하지 않으려면 로깅을 해제하거나 다른 사람과 로그를 공유하기 전에 로그에서 PII 또는 중요한 데이터를 필터링해야 합니다.  
   
-    다음 팁 로그 파일의 콘텐츠 실수로 노출 되지 않도록 방지할 수 있습니다.  
+    다음은 로그 파일 내용이 의도치 않게 노출되는 것을 방지하는 데 도움이 되는 몇 가지 팁입니다.  
   
-    -   ADFS 이벤트 로그 및 추적 로그 파일에 액세스 해야 하는 신뢰할 수 있는 관리자만에 대 한 액세스를 제한 하는 액세스 제어 목록 (ACL)으로 보호 되 고 있는지 확인 합니다.  
+    -   AD FS 이벤트 로그 및 추적 로그 파일에 액세스 해야 하는 신뢰할 수 있는 관리자로 액세스를 제한 하는 액세스 제어 목록 (ACL)로 보호 되는 것을 확인 합니다.  
   
-    -   복사 하거나 로그 파일 파일 확장명 또는 웹 요청을 사용 하 여 쉽게 처리할 수 있는 경로 사용 하 여 보관 하지 않습니다. 예를 들어 파일 이름 확장명.xml 안전 선택을 않습니다. 제공 될 수 있는 확장의 목록을 보려면 정보 IIS (인터넷 서비스) 관리 가이드를 확인할 수 있습니다.  
+    -   웹 요청을 통해 쉽게 제공될 수 있는 파일 확장명 또는 경로를 사용하여 로그 파일을 복사하거나 보관하지 마세요. 예를 들어 .xml 파일 이름 확장명은 안전한 선택이 아닙니다. 사용 가능한 확장명 목록은 IIS(인터넷 정보 서비스) 관리 가이드에서 확인할 수 있습니다.  
   
-    -   경로를 로그 파일을 수정 하는 경우 웹 브라우저를 사용 하 여 외부에서 액세스 하 않도록 웹 호스트 가상 루트 (vroot) 공개 디렉터리 외 있어야 하 고 로그 파일 위치에 대 한 명확 경로를 지정할 해야 합니다.  
+    -   로그 파일의 경로를 수정하는 경우 외부 사용자가 웹 브라우저를 통해 액세스하지 못하도록 웹 호스트 가상 루트(vroot) 공용 디렉터리 외부에 있는 로그 파일 위치에 대한 절대 경로를 지정해야 합니다.  
 
--   **광고 FS 엑스트라넷 잠금 보호**  
+-   **AD FS 엑스트라넷 소프트 잠금 및 AD FS 엑스트라넷 잠금 보호 스마트**  
     
-    웹 응용 프로그램 프록시를 통해 제공 되는 invalid(bad) 암호를 사용 하 여 인증 요청의 형태로 공격이 발생할 경우 ADFS 익스트라넷 잠금 ADFS 계정 잠금에서 사용자가 보호할 수 있습니다. 계정 잠금 Adfs에서 사용자를 보호 하는 것 외에도, ADFS 익스트라넷 잠금도 무단 암호 추측 공격 으로부터 보호 합니다.  자세한 내용은 참조 [광고 FS 엑스트라넷 잠금 보호](../../ad-fs/operations/Configure-AD-FS-Extranet-Lockout-Protection.md)합니다.  
+    웹 응용 프로그램 프록시를 통해 제공 되는 invalid(bad) 암호로 인증 요청의 형태로 공격이 발생할 경우 AD FS 엑스트라넷 잠금을 사용 하면 사용자가 AD FS 계정 잠금에서 보호할 수 있습니다. AD FS에서 사용자를 보호 하는 것 외에도 계정 잠금, AD FS 엑스트라넷 잠금도 무차별 암호 추측 공격 으로부터 보호 합니다.  
+    
+    Windows Server 2012 R2에서 AD FS에 대 한 엑스트라넷 소프트 잠금에 대 한 참조 [AD FS 엑스트라넷 소프트 잠금 보호](../../ad-fs/operations/Configure-AD-FS-Extranet-Soft-Lockout-Protection.md)합니다.  
+
+     Windows Server 2016에서 AD FS에 대 한 엑스트라넷 잠금에 대 한 참조 [AD FS 엑스트라넷 스마트 잠금 보호](../../ad-fs/operations/Configure-AD-FS-Extranet-Smart-Lockout-Protection.md)합니다.  
   
-## <a name="sql-serverspecific-security-best-practices-for-ad-fs"></a>SQL Server 관련 보안에 대 한 유용한 ADFS  
-이러한 데이터베이스 기술을 ADFS 디자인 및 배포에서 데이터를 관리 하는 데 사용 된 경우 다음과 같은 보안 유용한 Microsoft SQL Server® 또는 Windows 내부 데이터베이스 (WID)의 사용에 적용 됩니다.  
+## <a name="sql-serverspecific-security-best-practices-for-ad-fs"></a>AD FS에 대한 SQL Server 관련 보안 모범 사례  
+다음 보안 모범 사례를 이러한 데이터베이스 기술이 사용 하 여 AD FS 디자인 및 배포에서 데이터를 관리할 때 Microsoft SQL Server® 또는 Windows 내부 데이터베이스 WID ()를 사용 하 여와 관련이 있습니다.  
   
 > [!NOTE]  
-> 이러한 권장은 확장을 있지만 대체 하지 SQL Server 제품 보안 가이드 하기 위한 것입니다. 보안 SQL Server 설치 계획에 대 한 자세한 내용은 참조 [보안 SQL 설치에 대 한 보안 고려](https://go.microsoft.com/fwlink/?LinkID=139831) (https://go.microsoft.com/fwlink/?LinkID=139831).  
+> 이러한 권장 사항은 SQL Server 제품 보안 지침을 대체하는 것이 아니라 확장하는 것입니다. 보안 SQL Server 설치 계획에 대 한 자세한 내용은 참조 하세요. [보안 SQL 설치를 위한 보안 고려 사항](https://go.microsoft.com/fwlink/?LinkID=139831) (https://go.microsoft.com/fwlink/?LinkID=139831)합니다.  
   
--   **항상 실제로 안전한 네트워크 환경에서 방화벽이 SQL Server을 배포 합니다.**  
+-   **항상 물리적으로 안전한 네트워크 환경에서 방화벽 뒤에 SQL Server를 배포 합니다.**  
   
-    SQL Server 설치 하는 인터넷을 바로 노출 하지 않아야 합니다. 내 데이터 센터에 컴퓨터만 체결 ADFS 지 SQL server 설치 해야 합니다. 자세한 내용은 참조 [최적의 보안 관행 검사 목록](https://go.microsoft.com/fwlink/?LinkID=189229) (https://go.microsoft.com/fwlink/?LinkID=189229).  
+    SQL Server 설치를 인터넷에 직접 노출해서는 안 됩니다. 데이터 센터 내에 있는 컴퓨터만 AD FS를 지 원하는 SQL server 설치에 연결할 수 있어야 합니다. 자세한 내용은 [보안 모범 사례 검사 목록](https://go.microsoft.com/fwlink/?LinkID=189229) (https://go.microsoft.com/fwlink/?LinkID=189229)합니다.  
   
--   **기본 제공 시스템 서비스 계정을 사용 하는 대신 서비스 계정 SQL Server 실행 합니다.**  
+-   **기본 제공 시스템 서비스 계정을 사용 하는 대신 서비스 계정으로 SQL Server를 실행 합니다.**  
   
-    기본적으로 SQL Server 자주 설치 되 고 구성 로컬 시스템 또는 NetworkService 계정 같이 지원 되는 기본 제공 된 시스템 계정 중 하나를 사용 하도록 합니다. Adfs SQL Server 설치의 보안을 강화 하려면 가능한 SQL Server 서비스에 액세스 하기 위해 별도 서비스 계정을 사용 장소와 Kerberos 인증 Active Directory 배포에는 보안 SPN (사용자 이름)이이 계정에 등록 하 여 사용 합니다. 이 통해 클라이언트 및 서버 간의 상호 인증 합니다. SPN 등록 별도 서비스 계정, 없이 SQL Server 사용할지 NTLM for Windows 기반 인증 클라이언트는 인증 합니다.  
+    기본적으로 SQL Server는 지원되는 기본 제공 시스템 계정(예: LocalSystem 또는 NetworkService 계정) 중 하나를 사용하도록 설치 및 구성되는 경우가 많습니다. AD FS에 대 한 SQL Server 설치의 보안을 강화 하려면 가능한 별도 사용 하는 아무 곳에 나 서비스 계정에 SQL Server 서비스에 액세스 하 고이 계정에 보안 주체 이름 (SPN)을 등록 하 여 Kerberos 인증을 사용 하도록 설정 하면 Active Directory 배포 합니다. 이는 클라이언트와 서버 간의 상호 인증을 지원합니다. 별도 서비스 계정의 SPN을 등록하지 않으면 SQL Server에서 Windows 기반 인증용 NTLM을 사용하므로 클라이언트만 인증됩니다.  
   
--   **Surface 영역 SQL server를 최소화 하세요.**  
+-   **SQL Server의 노출 영역을 최소화 합니다.**  
   
-    필요한 SQL Server 끝점만 사용 하도록 설정 합니다. 기본적으로 SQL Server 제거할 수 없는 단일 기본 TCP 끝점을 제공 합니다. Adfs,이 TCP 끝점 Kerberos 인증에 사용 해야 합니다. 사용자 정의 추가 TCP 포트 SQL 설치에 추가 되는 현재 TCP 끝점을 검토 하기 위해 사용할 수 있습니다의 "선택 * sys.tcp_endpoints에서" 쿼리 (T SQL)이 세션의 문 합니다. SQL Server 끝점 구성에 대 한 자세한 내용은 참조 [How To: 다중 TCP 포트에서 수신 하는 데이터베이스 엔진 구성](https://go.microsoft.com/fwlink/?LinkID=189231) (https://go.microsoft.com/fwlink/?LinkID=189231).  
+    필요한 SQL Server 끝점만 사용합니다. 기본적으로 SQL Server는 제거할 수 없는 단일 기본 제공 TCP 끝점을 제공합니다. AD FS에 대 한 Kerberos 인증에이 TCP 끝점을 사용 해야 합니다. 현재 TCP 끝점을 검토하여 추가 사용자 정의 TCP 포트가 SQL 설치에 추가되었는지 알아보려면 Transact-SQL(T-SQL) 세션에서 "SELECT * FROM sys.tcp_endpoints" 쿼리 문을 사용하면 됩니다. SQL Server 끝점 구성에 대 한 자세한 내용은 참조 하세요. [방법: 여러 TCP 포트에서 수신 하도록 데이터베이스 엔진 구성](https://go.microsoft.com/fwlink/?LinkID=189231) (https://go.microsoft.com/fwlink/?LinkID=189231)합니다.  
   
--   **SQL 기반 인증을 사용 하지 않습니다.**  
+-   **SQL 기반 인증을 사용 하지 마십시오.**  
   
-    텍스트로 암호 네트워크를 통해 전송 또는 구성 설정에서 암호를 저장 하면 Windows 인증 SQL Server 설치 있는 경우에 사용 하 여 하지 않아도 됩니다. SQL Server 인증 레거시 인증 하는 모드입니다. (SQL 사용자 이름 및 암호) 구조적 쿼리 SQL (언어) 로그인 자격 증명 저장을 사용 중인 경우 SQL Server 인증 권장 되지 않습니다. 자세한 내용은 참조 [인증 모드](https://go.microsoft.com/fwlink/?LinkID=189232) (https://go.microsoft.com/fwlink/?LinkID=189232).  
+    암호가 네트워크를 통해 일반 텍스트로 전송되거나 구성 설정에 저장되는 것을 방지하려면 SQL Server 설치에서 Windows 인증만 사용합니다. SQL Server 인증은 레거시 인증 모드입니다. SQL Server 인증을 사용할 때는 SQL(Structured Query Language) 로그인 자격 증명(SQL 사용자 이름 및 암호)을 저장하지 않는 것이 좋습니다. 자세한 내용은 [인증 모드](https://go.microsoft.com/fwlink/?LinkID=189232) (https://go.microsoft.com/fwlink/?LinkID=189232)합니다.  
   
--   **추가 채널 보안 SQL 설치에서에 대 한 필요성을 신중 하 게 평가 합니다.**  
+-   **SQL 설치에서 추가 채널 보안의 필요성을 신중 하 게 평가 합니다.**  
   
-    Kerberos 인증 된도 실제로 SQL Server 보안 지원 공급자 Interface (SSPI) 제공 하지 않습니다 채널 수준 보안. 그러나 설치용 있는 서버 안전 하 게에 있는 방화벽으로 보호 된 네트워크 SQL 통신 암호화 되지 않을 수 있습니다 필요 합니다.  
+    Kerberos 인증을 적용하는 경우에도 SQL Server SSPI(Security Support Provider Interface)는 채널 수준 보안을 제공하지 않습니다. 그러나 서버가 방화벽으로 보호된 네트워크에 안전하게 있는 설치의 경우 SQL 통신을 암호화하지 않아도 됩니다.  
   
-    암호화 보안을 강화 하는 유용한 도구를 수 있지만 하지 않을 모든 데이터 나 연결에 대 한 간주 됩니다. 암호화를 구현할 것인지 결정할 때에 사용자가 데이터 액세스 하는 방법을 하는 것이 좋습니다. 사용자가 공개 네트워크를 통해 데이터를 액세스 데이터가 암호화 보안을 강화 하기 필요할 수 있습니다. 그러나 ADFS 하 여 SQL 데이터에 대 한 모든 액세스 관련 보안 인트라넷 구성 경우 암호화 되지 필요할 수 있습니다. 암호화를 사용 한다고 키, 암호, 인증서 유지 관리 전략을 포함 해야 합니다.  
+    암호화는 보안을 유지하는 데 도움이 되는 중요한 도구이지만 모든 데이터 또는 연결에서 고려할 필요는 없습니다. 암호화를 구현할지 결정할 때 사용자가 데이터에 액세스하는 방법을 고려하세요. 사용자가 공용 네트워크를 통해 데이터에 액세스하는 경우에는 보안을 강화하기 위해 데이터 암호화가 필요할 수 있습니다. 그러나 AD FS에서 SQL 데이터의 모든 액세스가 보안 인트라넷 구성이 포함 된, 하는 경우 암호화 필요가 없을 수도 있습니다. 또한 암호화의 사용에는 암호, 키 및 인증서에 대한 유지 관리 전략이 포함되어야 합니다.  
   
-    모든 SQL 데이터 볼 수 또는 드라이버를 변조 했는지 네트워크를 통해를 사용 하 여 인터넷 프로토콜 보안 또는 소켓 SSL (Secure Layer) 보안 SQL 연결 문제가 있는 경우 합니다. 그러나이 영향 되거나 경우도 ADFS 성능이 제한 될 수 있는 SQL Server 성능 저하를 할 수 있습니다. 예를 들어, SQL 기반 속성 스토어에서 특성 조회는 토큰 발급에 대 한 중요 한 하면 토큰 발급에서 ADFS 성능이 저하 될 수 있습니다. 더 강력한 주변 보안 구성 하 여 위협 변조 SQL 제거할 수 있습니다. 예를 들어, 더 나은 SQL Server 설치를 보호 하기 위한 방법은 사용자가 인터넷에 액세스할 수 없는 상태를 유지 하 고 컴퓨터와 하는 계속 사용자 또는 컴퓨터 datacenter 환경에만 액세스할 수 있습니다.  
+    SQL 데이터가 네트워크를 통해 확인되거나 변조될 수 있는 문제가 있는 경우에는 IPsec(인터넷 프로토콜 보안) 또는 SSL(Secure Sockets Layer)을 사용하여 SQL 연결의 보안을 강화할 수 있습니다. 그러나이 SQL Server 성능에 영향을 줄 수도 있고 제한 상황에 따라 AD FS 성능에 부정적인 영향을 할 수 있습니다. 예를 들어 SQL 기반 특성 저장소에서의 특성 조회가 토큰 발급에 중요 한 경우의 토큰 발급 ADFS 성능이 저하 될 수 있습니다. 더 강력한 경계 보안 구성을 통해 SQL 변조 위협을 보다 효율적으로 제거할 수 있습니다. 예를 들어 SQL Server 설치의 보안을 유지하는 향상된 솔루션은 인터넷 사용자 및 컴퓨터의 액세스를 차단하고 데이터 센터 환경 내의 사용자 또는 컴퓨터만 액세스할 수 있게 합니다.  
   
-    자세한 내용은 참조 [SQL Server에 대 한 암호화 연결](https://go.microsoft.com/fwlink/?LinkID=189234) 또는 [SQL Server 암호화](https://go.microsoft.com/fwlink/?LinkID=189233)합니다.  
+    자세한 내용은 [SQL Server 연결 암호화](https://go.microsoft.com/fwlink/?LinkID=189234) 하거나 [SQL Server 암호화](https://go.microsoft.com/fwlink/?LinkID=189233)합니다.  
   
--   **저장된 프로시저를 사용 하 여 모든 SQL 기반 조회 AD SQL FS 저장 된 데이터 하 여 수행 하 여 설계 된 안전 하 게 액세스를 구성 합니다.**  
+-   **AD FS의 SQL에 저장 된 데이터에서 모든 SQL 기반 조회를 수행 하려면 저장된 프로시저를 사용 하 여 안전 하 게 디자인 된 액세스를 구성 합니다.**  
   
-    더 나은 서비스와 데이터를 격리를 제공 하려면 모든 특성 스토어 조회 명령에 대해 수 없도록 만들 수 있습니다. 데이터베이스 역할 있는 다음 권한을 부여 하면 실행할 수 없도록 만들 수 있습니다. 이 데이터베이스 역할을 FS Windows 광고 서비스의 서비스 id를 할당 합니다. 광고 FS Windows 서비스는 특성 조회 하는 데 사용 된 저장된 적절 한 프로시저 이외의 다른 SQL 문의 실행할 수 없습니다. 상승 공격 위험을 감소 SQL Server 데이터베이스 이런 방식에서에 대 한 액세스를 중지 합니다.  
+    더 나은 서비스 및 데이터 격리를 제공하기 위해 모든 특성 저장소 조회 명령에 대한 저장 프로시저를 만들 수 있습니다. 그런 다음 저장 프로시저 실행 권한을 부여할 데이터베이스 역할을 만들 수 있습니다. 이 데이터베이스 역할에 AD FS Windows 서비스의 서비스 id를 할당 합니다. AD FS Windows 서비스는 특성 조회에 사용 되는 적절 한 저장된 프로시저 외의 다른 SQL 문을 실행할 수 없습니다. 이 방식으로 SQL Server 데이터베이스에 대한 액세스를 잠그면 권한 상승 공격의 위험이 줄어듭니다.  
   
-## <a name="see-also"></a>참조 하십시오
-[Windows Server 2012의에서 지침에 따라 AD FS 디자인](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+## <a name="see-also"></a>관련 항목
+[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
