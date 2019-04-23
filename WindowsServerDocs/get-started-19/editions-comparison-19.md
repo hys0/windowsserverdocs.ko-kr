@@ -1,5 +1,5 @@
 ---
-title: Standard 및 Datacenter 버전의 Windows Server 2019의 비교
+title: Windows Server 2019의 Standard 및 Datacenter edition 비교
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -12,35 +12,35 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: jasgroce
 ms.localizationpriority: medium
-ms.openlocfilehash: e94c88ab7fb4aede7554dd621843b613fa16b6dc
-ms.sourcegitcommit: 0b51cf8d0a1db31d6d2e2e45a145011311fbdf34
-ms.translationtype: MT
+ms.openlocfilehash: ba7487a7e063775219182645a273d49c473f52e2
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "9169937"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59854134"
 ---
-# Standard 및 Datacenter 버전의 Windows Server 2019의 비교
+# <a name="comparison-of-standard-and-datacenter-editions-of-windows-server-2019"></a>Windows Server 2019의 Standard 및 Datacenter edition 비교
 
-> 적용 대상: WindowsServer 2019
+> 적용 대상: Windows Server 2019
   
-## 잠금 및 제한
+## <a name="locks-and-limits"></a>잠금 및 제한
 |잠금 및 제한|Windows Server 2019 Standard|Windows Server 2019 Datacenter|  
 |-------------------|----------|---------------------------|  
 |최대 사용자 수|CAL 기준|CAL 기준|
 |최대 SMB 연결 수|16777216|16777216|
-|최대 RRAS 연결 수|무제한|무제한|
+|최대 RRAS 연결 수|제한 없음|제한 없음|
 |최대 IAS 연결 수|2147483647|2147483647|
 |최대 RDS 연결 수:|65535|65535|
 |64비트 소켓 최대 수|64|64|
-|최대 코어 수|무제한|무제한|
+|최대 코어 수|제한 없음|제한 없음|
 |최대 RAM|24TB|24TB|
 |가상화 게스트로 이용 가능 여부|예(두 대의 가상 컴퓨터 및 라이선스당 하나의 Hyper-V 호스트)|예(가상 컴퓨터 무제한 허용 및 라이선스당 하나의 Hyper-V 호스트)|
 |서버의 도메인 가입 가능 여부|예|예|
-|경계 네트워크 보호/방화벽|아니요|아니요|
+|경계 네트워크 보호/방화벽|no|no|
 |DirectAccess|예|예|
 |DLNA 코덱 및 웹 미디어 스트리밍|예(데스크톱 환경 포함 서버로 설치된 경우)|예(데스크톱 환경 포함 서버로 설치된 경우)|
 
-## 서버 역할
+## <a name="server-roles"></a>서버 역할
 |사용 가능한 Windows Server 역할|역할 서비스|Windows Server 2019 Standard|Windows Server 2019 Datacenter|  
 |-------------------|----------|----------|---------------------------|  
 |Active Directory 인증서 서비스| |예|예|
@@ -66,6 +66,7 @@ ms.locfileid: "9169937"
 |파일 및 저장소 서비스|저장소 서비스|예|예|
 |호스트 보호 서비스| |예|예|
 |Hyper-V| |예|예(보호된 가상 컴퓨터 포함)|
+|MultiPoint 서비스| |예|예|
 |네트워크 컨트롤러| |아니요|예|
 |네트워크 정책 및 액세스 서비스| |예(데스크톱 환경 포함 서버로 설치된 경우)|예(데스크톱 환경 포함 서버로 설치된 경우)|
 |인쇄 및 문서 서비스| |예|예|
@@ -74,13 +75,13 @@ ms.locfileid: "9169937"
 |볼륨 정품 인증 서비스| |예|예|
 |Web Services(IIS)| |예|예|
 |Windows 배포 서비스| |예*|예*|
-|Windows Server Essentials Experience| |예|예|
+|Windows Server 필수 패키지 환경| |예|예|
 |Windows Server Update Services| |예|예|
 
-* WDS 전송 서버는 새로운 기능 (Windows Server, 버전 1803부터 반기 채널)에 Windows Server 2019의 Server Core 설치입니다.
+* WDS 전송 서버 (Windows Server, 버전 1803부터 반기 채널)에 Windows Server 2019에 Server Core 설치에 새로운
 
 
-## 기능
+## <a name="features"></a>기능
 
 |Windows Server 기능(서버 관리자 또는 PowerShell을 사용하여 설치 가능)|Windows Server 2019 Standard|Windows Server 2019 Datacenter|  
 |-------------------|----------|---------------------------|  
@@ -97,7 +98,7 @@ ms.locfileid: "9169937"
 |강화된 저장소|예|예|
 |장애 조치(failover) 클러스터링|예|예|
 |그룹 정책 관리|예|예|
-|호스트 보호 Hyper-V 지원|아니요|예|
+|호스트 보호 Hyper-V 지원|아니오|예|
 |I/O 서비스 품질|예|예|
 |IIS 호스팅 가능한 웹 코어|예|예|
 |인터넷 인쇄 클라이언트|예(데스크톱 환경 포함 서버로 설치된 경우)|예(데스크톱 환경 포함 서버로 설치된 경우)|
@@ -124,7 +125,7 @@ ms.locfileid: "9169937"
 |SMTP 서버|예|예|
 |SNMP 서비스|예|예|
 |소프트웨어 부하 분산 장치|예|예|
-|저장소 복제본|아니요|예|
+|저장소 복제본|아니오|예|
 |텔넷 클라이언트|예|예|
 |TFTP 클라이언트|예(데스크톱 환경 포함 서버로 설치된 경우)|예(데스크톱 환경 포함 서버로 설치된 경우)|
 |패브릭 관리를 위한 VM 보호 도구|예|예|
@@ -149,7 +150,7 @@ ms.locfileid: "9169937"
 |일반적으로 사용 가능한 기능|Windows Server 2019 Standard|Windows Server 2019 Datacenter|  
 |-------------------|----------|---------------------------|  
 |모범 사례 분석기|예|예|
-|제한 된 저장소 복제본|예, (파트너 관계 1과 1 리소스 그룹 단일 2TB 볼륨이)|예, 무제한|
+|제한 된 저장소 복제본|예 (1 파트너 관계 및 1 리소스 그룹 단일 2TB 볼륨을 사용 하 여)|예, 무제한|
 |직접 액세스|예|예|
 |동적 메모리(가상화의 경우)|예|예|
 |Hot Add/Replace RAM|예|예|
@@ -161,12 +162,12 @@ ms.locfileid: "9169937"
 |Nano Server 설치 옵션|예|예|
 |서버 관리자|예|예|
 |SMB 다이렉트 및 SMB over RDMA|예|예|
-|소프트웨어 정의 네트워킹|아니요|예|
+|소프트웨어 정의 네트워킹|아니오|예|
 |저장소 관리 서비스|예|예|
 |저장소 공간|예|예|
 |저장소 공간 다이렉트|아니요|예|
 |볼륨 정품 인증 서비스|예|예|
-|VSS(볼륨 섀도 복사본 서비스) 통합|예|예|
+|VSS (Volume Shadow Copy Service) integration|예|예|
 |Windows Server Update Services|예|예|
 |Windows 시스템 리소스 관리자|예|예|
 |서버 라이선싱 로깅|예|예|

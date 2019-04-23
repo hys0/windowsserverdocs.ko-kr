@@ -1,6 +1,6 @@
 ---
-title: 파일 서비스 서버 역할을 구성 합니다.
-description: 이 항목은 Windows Server 2016을 지점에서 WAN 대역폭 사용을 최적화 하 분산 / 호스팅된 캐시 모드로 BranchCache 배포 하는 방법을 보여 주는 BranchCache 배포 가이드
+title: 파일 서비스 서버 역할 구성
+description: 이 항목은 일부는 BranchCache 배포 가이드에 대 한 Windows Server 2016, 지사에 WAN 대역폭 사용량을 최적화 하기 위해 분산 및 호스트 캐시 모드로 BranchCache를 배포 하는 방법을 보여 주는
 manager: brianlic
 ms.prod: windows-server-threshold
 ms.technology: networking-bc
@@ -8,21 +8,22 @@ ms.topic: get-started-article
 ms.assetid: 68b0f5a0-1ae8-489e-b8f8-1190267a0e1d
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 558b05b494e9dbe08fc6c04c2250ac6d029f6bc2
-ms.sourcegitcommit: 19d9da87d87c9eefbca7a3443d2b1df486b0b010
+ms.openlocfilehash: 9674f125adad7d278954dcd07534dfb8e3d78026
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59855584"
 ---
-# <a name="configure-the-file-services-server-role"></a>파일 서비스 서버 역할을 구성 합니다.
+# <a name="configure-the-file-services-server-role"></a>파일 서비스 서버 역할 구성
 
->적용 대상: Windows Server (세미콜론 연간 채널) Windows Server 2016
+>적용 대상: Windows Server (반기 채널), Windows Server 2016
 
-BranchCache 파일 서버 기반 콘텐츠 서버 Windows Server 2016 및와 파일 서비스 서버 역할을 실행 하는 컴퓨터에 배포할 수는 **BranchCache 네트워크 파일에 대 한** 역할 서비스를 설치 합니다.  
+BranchCache 파일 서버 기반 콘텐츠 서버와 파일 서비스 서버 역할 및 Windows Server 2016 실행 중인 컴퓨터에 배포할 수는 **네트워크 파일용 BranchCache** 역할 서비스가 설치 되어 있습니다.  
   
--   파일 서비스 설치 되어 있지 않은 하는 컴퓨터에서 BranchCache 콘텐츠 서버를 설치 하려면 확인 [콘텐츠 서버에 따라 새 파일 서버 설치](../../branchcache/deploy/Install-a-New-File-Server-as-a-Content-Server.md)합니다.  
+-   없는 파일 서비스를 설치 하는 컴퓨터에서 BranchCache 콘텐츠 서버를 설치 하려면 참조 [콘텐츠 서버와 파일 서버를 새로 설치](../../branchcache/deploy/Install-a-New-File-Server-as-a-Content-Server.md)합니다.  
   
--   BranchCache 콘텐츠 서버를 이미 파일 서비스 서버 역할으로 구성 된 컴퓨터에 설치 하려면 확인 [콘텐츠 서버로 기존 파일 서버 구성](../../branchcache/deploy/Configure-an-Existing-File-Server-as-a-Content-Server.md)합니다.  
+-   파일 서비스 서버 역할 이미 구성 되어 있는 컴퓨터에서 BranchCache 콘텐츠 서버를 설치 하려면 참조 [기존 파일 서버를 콘텐츠 서버로 구성](../../branchcache/deploy/Configure-an-Existing-File-Server-as-a-Content-Server.md)합니다.  
   
 
 

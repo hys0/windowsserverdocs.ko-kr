@@ -1,6 +1,6 @@
 ---
 title: Windows Server 2019 시스템 요구 사항
-description: 저장소, CPU, 네트워크, 메모리 및 RAM에는 새로 설치 된 Windows Server 2019에 대 한 최소 요구 사항입니다.
+description: 저장소, CPU, 네트워크, 메모리 및 RAM이 Windows Server 2019 새로 설치에 대 한 최소 요구 사항입니다.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,20 +14,20 @@ ms.author: coreyp
 manager: jasgroce
 ms.localizationpriority: medium
 ms.openlocfilehash: 82a42cd219e41330fe4215124c21e799a41e412c
-ms.sourcegitcommit: fcc26ec5a2cc73b59c5752377b39c070d288655e
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "8976659"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59853144"
 ---
-# 시스템 요구 사항
+# <a name="system-requirements"></a>시스템 요구 사항
 
->적용 대상: WindowsServer 2019 
+>적용 대상: Windows Server 2019 
 
-이 항목에서는 Windows Server를 실행 하려면 최소 시스템 요구 사항을 설명&reg; 2019 합니다.
+이 항목에서는 Windows Server를 실행 하려면 최소 시스템 요구 사항에 간략하게 설명&reg; 2019 합니다.
 
-## 시스템 요구 사항 검토  
-다음은 Windows Server 2019 예상된 시스템 요구 사항입니다. 컴퓨터의 사양이 "최소" 요구 사항보다 낮으면 이 제품을 제대로 설치할 수 없습니다. 실제 요구 사항은 사용자가 설치하는 응용 프로그램과 기능 및 시스템 구성에 따라 달라질 수 있습니다.
+## <a name="review-system-requirements"></a>시스템 요구 사항 검토  
+예상 되는 시스템 요구 사항 Windows Server 2019 다음과 같습니다. 컴퓨터의 사양이 "최소" 요구 사항보다 낮으면 이 제품을 제대로 설치할 수 없습니다. 실제 요구 사항은 사용자가 설치하는 응용 프로그램과 기능 및 시스템 구성에 따라 달라질 수 있습니다.
 
 달리 지정되지 않는 경우 이러한 최소 시스템 요구 사항은 모든 설치 옵션(Server Core, 데스크톱 환경 포함 서버, Nano 서버)과 Standard 및 Datacenter 버전에 적용됩니다.  
 
@@ -35,24 +35,24 @@ ms.locfileid: "8976659"
 > 매우 다양한 잠재적인 배포 범위로 인해 일반적으로 적용되는 "권장" 시스템 요구 사항이 비현실적일 수 있습니다. 특정 서버 역할에 필요한 리소스에 대한 자세한 내용은 배포하려는 각 서버 역할에 대한 설명서를 참조하세요. 최상의 결과를 얻으려면 테스트 배포를 수행하여 특정 배포 시나리오에 적합한 시스템 요구 사항을 확인하세요.  
 
 
-## 프로세서  
+## <a name="processor"></a>프로세서  
 프로세서 성능은 프로세서의 클록 주파수뿐만 아니라 프로세서 코어의 수와 프로세서 캐시의 크기에 따라 달라집니다. 다음은 이 제품을 설치하기 위한 프로세서 요구 사항입니다.  
 
-**최소 요구 사항**:  
+**최소**:  
 - 1.4GHz 64비트 프로세서  
 - X64 호환 명령 집합  
 - NX 및 DEP 지원  
 - CMPXCHG16b, LAHF/SAHF 및 PrefetchW 지원  
 - 두 번째 수준 주소 변환(EPT 또는 NPT) 지원  
 
-[Coreinfo](https://technet.microsoft.com/sysinternals/cc835722.aspx) 는 확인 하는 CPU가 이러한 기능을 사용할 수 있는 도구입니다.
+[Coreinfo](https://technet.microsoft.com/sysinternals/cc835722.aspx) 는 도구는 CPU가 이러한 기능을 확인 하는 데 사용할 수 있습니다.
 
-## RAM  
+## <a name="ram"></a>RAM  
 다음은 이 제품 설치를 위해 예상되는 RAM 관련 요구 사항입니다.  
 
-**최소 요구 사항**:  
+**최소**:  
 - 512MB(데스크톱 환경 포함 서버 설치 옵션인 경우 2GB)
-- ECC (오류 수정 코드) 형식 또는 물리적 호스트가 배포에 대 한 유사한 기술
+- ECC (오류 수정 코드) 형식 또는 실제 호스트 배포에 대 한 유사한 기술
 
 > [!IMPORTANT]  
 > 지원되는 최소 하드웨어 매개 변수(프로세서 코어 1개, 512MB RAM)를 사용하여 가상 컴퓨터를 만든 다음 가상 컴퓨터에서 이 릴리스를 설치하려고 하면 설치가 실패합니다.  
@@ -60,38 +60,38 @@ ms.locfileid: "8976659"
 > 이 문제를 방지하려면 다음 중 하나를 수행합니다.  
 >   
 > -   이 릴리스를 설치하려는 가상 컴퓨터에 800MB를 초과하는 RAM을 할당합니다. 설치가 완료되면 실제 서버 구성에 따라 할당 크기를 512MB RAM 정도로 변경할 수 있습니다.  
-> -   Shift+F10을 사용하여 가상 컴퓨터에서 이 릴리스의 부팅 프로세스를 중단합니다. 명령 프롬프트가 열리면 Diskpart.exe를 사용하여 설치 파티션을 만들고 포맷합니다. **Wpeutil createpagefile /path=C:\pf.sys**를 실행합니다(만든 설치 파티션이 C:인 경우 예제). 명령 프롬프트를 닫고 설치를 계속 진행합니다.  
+> -   Shift+F10을 사용하여 가상 컴퓨터에서 이 릴리스의 부팅 프로세스를 중단합니다. 명령 프롬프트가 열리면 Diskpart.exe를 사용하여 설치 파티션을 만들고 포맷합니다. **Wpeutil createpagefile /path=C:\pf.sys** 를 실행합니다(만든 설치 파티션이 C:인 경우 예제). 명령 프롬프트를 닫고 설치를 계속 진행합니다.  
 
-## 저장소 컨트롤러 및 디스크 공간 요구 사항  
-Windows Server 2019를 실행 하는 컴퓨터는 PCI Express 아키텍처 사양과 호환 되는 저장소 어댑터가 포함 해야 합니다. 서버에서 하드 디스크 드라이브로 분류된 영구 저장 장치는 PATA가 아니어야 합니다. Windows Server 2019 부팅, 페이지 또는 데이터 드라이브에 ATA/PATA/IDE/EIDE를 허용 하지 않습니다.  
+## <a name="storage-controller-and-disk-space-requirements"></a>저장소 컨트롤러 및 디스크 공간 요구 사항  
+Windows Server 2019를 실행 하는 컴퓨터에는 PCI Express 아키텍처 사양과 호환 되는 저장소 어댑터가 포함 해야 합니다. 서버에서 하드 디스크 드라이브로 분류된 영구 저장 장치는 PATA가 아니어야 합니다. Windows Server 2019 부팅, 페이지 또는 데이터 드라이브에 대 한 ATA/PATA/IDE/EIDE를 허용 하지 않습니다.  
 
 다음은 시스템 파티션을 위한 **최소** 예상 디스크 공간 요구 사항입니다.  
 
 **최소**: 32GB  
 
    > [!NOTE]  
-    > 32GB는 성공적인 설치의 *최소 절대*값으로 간주됩니다. 이 최소 수를 웹 서비스 (IIS) 서버 역할을 사용 하 여 Server Core 모드에서 Windows Server 2019를 설치 합니다. Server Core 모드의 서버는 GUI 포함 서버 모드의 동일한 서버보다 약 4GB 작습니다. 
+    > 32GB는 성공적인 설치의 *최소 절대*값으로 간주됩니다. 이 최소 Windows Server 2019 웹 서비스 (IIS) 서버 역할을 사용 하 여 Server Core 모드에서 설치 하도록 허용 해야 합니다. Server Core 모드의 서버는 GUI 포함 서버 모드의 동일한 서버보다 약 4GB 작습니다. 
     >   
     > 시스템 파티션은 다음의 환경에서 추가 공간을 필요로 합니다.  
     >   
     > -   네트워크에 시스템을 설치한 경우  
     > -   RAM이 16GB를 넘는 컴퓨터에서는 페이징, 최대 절전 모드 및 덤프 파일을 위해 더 많은 디스크 공간이 필요합니다.  
 
-## 네트워크 어댑터 요구 사항  
+## <a name="network-adapter-requirements"></a>네트워크 어댑터 요구 사항  
 
 이 릴리스에서 사용되는 네트워크 어댑터는 다음 기능을 포함해야 합니다.  
 
-**최소 요구 사항**:  
+**최소**:  
 - 최소 기가비트 처리량을 지원하는 이더넷 어댑터  
 - PCI Express 아키텍처 사양 준수  
 
 네트워크 디버깅을 지원하는 네트워크 어댑터(KDNet)는 유용하지만 최소 요구 사항이 아닙니다.   
 
-네트워크 어댑터를 지 원하는 (PXE (pre-boot Execution Environment)는 유용 하지만 최소 요구 사항이 아닙니다.
+네트워크 어댑터 지원 (PXE (pre-boot Execution Environment)는 유용 하지만 최소 요구 사항이 없습니다.
 
 
 
-## 기타 요구 사항  
+## <a name="other-requirements"></a>기타 요구 사항  
 이 릴리스를 실행하는 컴퓨터에는 다음 항목도 있어야 합니다.  
 
 -   DVD 드라이브(DVD 미디어에서 운영 체제를 설치하려는 경우)  

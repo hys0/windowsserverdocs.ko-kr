@@ -1,7 +1,7 @@
 ---
-title: "관리 센터 Active Directory 탐색 창 사용자 지정"
+title: Active Directory 관리 센터 탐색 창 사용자 지정
 ms.prod: windows-server-threshold
-description: "Windows Server 보안"
+description: Windows Server 보안
 ms.custom: na
 ms.reviewer: na
 ms.suite: na
@@ -12,29 +12,30 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ms.openlocfilehash: e7b1128d93912f724225905bedd38131f8aab0b2
-ms.sourcegitcommit: db290fa07e9d50686667bfba3969e20377548504
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59854844"
 ---
-# <a name="customize-the-active-directory-administrative-center-navigation-pane"></a>관리 센터 Active Directory 탐색 창 사용자 지정
+# <a name="customize-the-active-directory-administrative-center-navigation-pane"></a>Active Directory 관리 센터 탐색 창 사용자 지정
 
->적용 대상: Windows Server (세미콜론 연간 채널) Windows Server 2016
+>적용 대상: Windows Server (반기 채널), Windows Server 2016
 
-  You can browse through the Active Directory Administrative Center navigation pane by using the tree view, which is similar to the Active Directory Users and Computers console tree, or by using the list view.
+  인 Active Directory 사용자 및 컴퓨터 콘솔 트리와 비슷한 트리 뷰를 사용 하 여 또는 목록 보기를 사용 하 여 Active Directory 관리 센터 탐색 창을 통해 찾아볼 수 있습니다.
 
- Whether you use the tree view or the list view, you can customize your Active Directory Administrative Center navigation pane anytime by adding various containers from the local domain or any foreign domain \(that is, a domain other than the local domain that has an established trust with the local domain\) to the navigation pane as separate nodes. Customizing the Active Directory Administrative Center navigation pane can provide quicker access to Active Directory objects. 자세한 내용은 참조 [Active Directory 관리 센터에서 다른 도메인 관리](manage-different-domains-in-active-directory-administrative-center.md)합니다.
+ 트리 뷰 또는 목록 보기를 사용 하는지 여부를 사용자 지정할 수 있습니다 Active Directory 관리 센터 탐색 창에 언제 든 지 로컬 도메인 또는 외부 도메인에서 다양 한 컨테이너를 추가 하 여 \(즉, 로컬 도메인 이외의 도메인 로컬 도메인과 트러스트 관계가 설정된 된\) 별도 노드로 탐색 창에 있습니다. Active Directory 관리 센터 탐색 창 사용자 지정 Active Directory 개체에 대 한 빠른 액세스를 제공할 수 있습니다. 자세한 내용은 [Active Directory 관리 센터에서 다른 도메인 관리](manage-different-domains-in-active-directory-administrative-center.md)합니다.
 
- 또한, 탐색 창을 추가로 사용자 지정 하려면 이름 바꾸기 또는 이러한 수동으로 추가 탐색 창 노드 제거, 이러한 노드 복제 만들기 하거나 이동할 수 위나 아래로 탐색 창에서 합니다.
+ 또한 탐색 창을 보다 세부적으로 사용자 지정하려면 수동으로 추가한 탐색 창 노드의 이름을 바꾸거나, 해당 노드를 제거하거나, 해당 노드의 복제본을 만들거나, 해당 노드를 탐색 창에서 위 또는 아래로 이동합니다.
 
 > [!NOTE]
->  기본 로컬 도메인 노드 사용자 지정할 수 없습니다.
+>  기본 로컬 도메인 노드는 사용자 지정할 수 없습니다.
 
-### <a name="to-customize-the-active-directory-administrative-center-navigation-pane"></a>To customize the Active Directory Administrative Center navigation pane
+### <a name="to-customize-the-active-directory-administrative-center-navigation-pane"></a>Active Directory 관리 센터 탐색 창을 사용자 지정 하려면
 
-1.  In the Active Directory Administrative Center navigation pane, right\-click the node that you want to modify. 위치나 노드를 수정할 수 또는 그의 복사본을 만들 수 있습니다.
+1.  Active Directory 관리 센터 탐색 창에서 마우스 오른쪽\-수정 하려는 노드를 클릭 합니다. 노드의 위치 또는 이름을 수정하거나 노드의 복제본을 만들 수 있습니다.
 
-2.  다음 명령을 중 하나를 클릭 합니다.
+2.  다음 명령 중 하나를 클릭 합니다.
 
     -   **이름 바꾸기**
 
@@ -46,7 +47,7 @@ ms.lasthandoff: 12/12/2017
 
     -   **아래로 이동**
 
- 목록 보기를 사용 하 여 최근에 사용한 \(MRU\) 목록 이용할 수 있습니다. 최근에 사용한 목록 자동으로 사용자가 방문이 탐색 노드에서 하나 이상의 컨테이너 탐색 노드 아래에 나타납니다. You can also view the current MRU list by expanding the breadcrumb bar at the top of the Active Directory Administrative Center window. 최근에 사용한 목록에 특정 탐색 노드에서 방문 마지막 사진 3 컨테이너 항상 포함 되어 있습니다. 특정 컨테이너 선택 해야 할 때마다가이 컨테이너 최근에 사용한 목록의 맨 위로에 추가 되 고 마지막 컨테이너 최근에 사용한 목록에서 제거 됩니다.
+ 목록 보기를 사용 하 여 가장 최근에 사용한 활용을 걸릴 수 있습니다 \(MRU\) 목록입니다. 이 탐색 노드의 하나 이상의 컨테이너를 방문 하면 MRU 목록은 탐색 노드 아래 자동으로 나타납니다. 또한 Active Directory 관리 센터 창의 맨 위에 있는 이동 경로 탐색 막대를 확장 하 여 현재 MRU 목록을 볼 수 있습니다. MRU 목록에는 항상 특정 탐색 노드를 방문 하는 마지막 세 개의 컨테이너를 포함 합니다. 특정 컨테이너를 선택할 때마다 이 컨테이너가 MRU 목록의 맨 위에 추가되고 MRU 목록의 마지막 컨테이너는 제거됩니다.
 
   
 

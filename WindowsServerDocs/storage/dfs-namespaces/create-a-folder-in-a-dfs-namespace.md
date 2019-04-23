@@ -1,6 +1,6 @@
 ---
-title: "DFS 네임스페이스에 폴더 만들기"
-description: "이 문서에서는 DFS 네임스페이스에 폴더를 만드는 방법을 설명합니다."
+title: DFS 네임스페이스에 폴더 만들기
+description: 이 문서에서는 DFS 네임스페이스에 폴더를 만드는 방법을 설명합니다.
 ms.date: 6/5/2017
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -8,15 +8,16 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 1ca9fa0b87c6e995f3f0c38abec80fef9068df90
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.openlocfilehash: 47bb13aa404cdf4fef86b7250425a92cc208ba9d
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59856854"
 ---
 # <a name="create-a-folder-in-a-dfs-namespace"></a>DFS 네임스페이스에 폴더 만들기
 
-> 적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+> 적용 대상: Windows Server 2019, Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 폴더를 사용하여 네임스페이스에 추가 계층 구조 수준을 만들 수 있습니다. 폴더 대상을 가진 폴더를 만들어 네임스페이스에 공유 폴더를 추가할 수도 있습니다. 폴더 대상을 가진 DFS 폴더는 다른 DFS 폴더를 포함할 수 없으므로 네임스페이스에 계층 구조 수준을 추가하려는 경우 폴더에 폴더 대상을 추가하지 않습니다.
 
@@ -24,7 +25,7 @@ ms.lasthandoff: 10/17/2017
 
 ## <a name="to-create-a-folder-in-a-dfs-namespace"></a>DFS 네임스페이스에 폴더를 만들려면
 
-1.  **시작**을 클릭하고 **관리 도구**를 가리킨 다음 **DFS 관리**를 클릭합니다.
+1.  **시작**을 클릭하고 **관리 도구**를 가리킨 다음 **DFS 관리**를 클릭합니다.
 
 2.  콘솔 트리의 **네임스페이스** 노드에서 네임스페이스나 네임스페이스 내의 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 폴더**를 클릭합니다.
 
@@ -37,9 +38,9 @@ ms.lasthandoff: 10/17/2017
 > Windows PowerShell을 사용하여 네임스페이스에 폴더를 만들려면 [New-DfsnFolder](https://docs.microsoft.com/powershell/module/dfsn/new-dfsnfolder) cmdlet을 사용합니다. DFSN Windows PowerShell 모듈은 Windows Server 2012에서 도입되었습니다.
 
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
--   [DFS 네임스페이스 배포](deploying-dfs-namespaces.md)
--   [DFS 네임스페이스에 대한 관리 권한 위임](delegate-management-permissions-for-dfs-namespaces.md)
+-   [DFS 네임 스페이스를 배포합니다.](deploying-dfs-namespaces.md)
+-   [DFS 네임 스페이스에 대 한 관리 권한 위임](delegate-management-permissions-for-dfs-namespaces.md)
 
 

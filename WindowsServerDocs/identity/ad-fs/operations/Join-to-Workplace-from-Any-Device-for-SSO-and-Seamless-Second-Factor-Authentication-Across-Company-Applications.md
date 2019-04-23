@@ -1,6 +1,6 @@
 ---
 ms.assetid: e22d84a5-113d-4bec-b484-036ed29f0c28
-title: SSO 및 원활 하 게 초에 대 한 모든 디바이스에서 회사에 가입 인증 회사 응용 프로그램에서 요인
+title: 회사 응용 프로그램 전반에 SSO 및 연속된 두 번째 단계 인증을 위한 모든 장치의 작업 공간 연결
 description: ''
 author: billmath
 ms.author: billmath
@@ -9,58 +9,59 @@ ms.date: 12/05/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 4926eb32a0bbffb092ec02ca2508fe97d52d1466
-ms.sourcegitcommit: 46439194e5deb0fa5f338b428f95dd6b5b799337
+ms.openlocfilehash: 0ee22afd6fdec96ab69d915e4730bb834d2ab8ad
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59855524"
 ---
-# <a name="join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications"></a>SSO 및 원활 하 게 초에 대 한 모든 디바이스에서 회사에 가입 인증 회사 응용 프로그램에서 요인
+# <a name="join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications"></a>회사 응용 프로그램 전반에 SSO 및 연속된 두 번째 단계 인증을 위한 모든 장치의 작업 공간 연결
 
->Windows Server 2012 r 2에 적용 됩니다.
+>적용 대상: Windows Server 2012 R2
 
-소비자 디바이스 및 보편적 정보 액세스 수가 증가 하 여 신속 하 게 사람들이 기술을 요소임는 방식으로 변경 됩니다. 일정 정보를 쉽게 액세스할 수 있도록 함께 하루 종일 정보 기술 사용 업무와 홈 번체 경계 흐림이입니다. 하면 경계 이동 이러한 동반 기술 선택 하 고 사용자의 개성도, 활동 및 일정에 맞게 사용자 지정이 개인-직장으로 확장 됩니다. 엔터프라이즈 네트워크에 연결 되어 개인 소비자 디바이스 데스크톱이 요구 사항에 맞게, 다음과 같은 가치 제안 소개:
+소비자 장치와 유비쿼터스 정보 액세스의 급증으로 사용자가 기술을 인식하는 방식이 바뀌고 있습니다. 정보 기술의 지속적인 사용은 정보의 간편한 액세스와 함께 업무와 개인 생활 간의 기존 경계를 무너뜨리고 있습니다. 믿음이 수반 됩니다 변화 하는 경계 이러한 기술을 선택 하 고 사용자의 개성, 활동 및 일정에 맞게 사용자 지정 하는 개인-작업 공간으로 확장 되어야 합니다. 엔터프라이즈 네트워크에 연결해야 하는 개인 소비자 장치의 증가하는 요구 사항을 수용하기 위해 다음과 같은 가치 제안을 도입했습니다.
 
--   관리자는 응용 프로그램, 사용자, 디바이스 및 위치를 기반으로 하는 회사 리소스에 액세스할 수 있는 사람을 제어할 수 있습니다.
+-   관리자는 응용 프로그램, 사용자, 장치 및 위치를 기반으로 하는 회사 리소스에 액세스할 수 있는 사람을 제어할 수 있습니다.
 
--   직원이 응용 프로그램 및 데이터를 어디서 나 모든 장치에서 액세스할 수 있습니다. 직원이 Single Sign-on 브라우저 응용 프로그램이 나 엔터프라이즈 응용 프로그램에서 사용할 수 있습니다.
+-   직원은 위치에 관계없이 모든 장치에서 응용 프로그램 및 데이터에 액세스할 수 있습니다. 직원은 브라우저 응용 프로그램 또는 엔터프라이즈 응용 프로그램에서 Single Sign-On을 사용할 수 있습니다.
 
-## <a name="key-concepts-introduced-in-the-solution"></a>솔루션의 개념을 키
+## <a name="key-concepts-introduced-in-the-solution"></a>솔루션에 도입된 주요 개념
 
-### <a name="workplace-join"></a>Workplace Join
-Workplace Join를 사용 하 여 정보 작업자 회사 리소스 및 서비스에 액세스 하려면 해당 회사의 회사 컴퓨터와 개인 디바이스에 연결할 수 있습니다. 회사 계정에 개인 디바이스를 연결할 때 되는 알려진된 디바이스 및 원활 하 게 초 제공 인증과 Single Sign-on 회사 리소스와 응용 프로그램을 고려 합니다. 디바이스는 Workplace Join로 결합, 경우 디바이스의 특성 디렉터리에서 발급 응용 프로그램에 대 한 보안 토큰를 승인 하기 위해 드라이브 조건부 액세스 검색할 수 있습니다. Windows 8.1 및 iOS 6.0 + Android 및 4.0 + 장치 Workplace Join 사용 하 여 결합 될 수 있습니다.
+### <a name="workplace-join"></a>작업 공간 연결
+작업 공간 연결을 사용하면 정보 작업자가 개인 장치를 회사의 작업 공간 컴퓨터에 연결하여 회사 리소스 및 서비스에 액세스할 수 있습니다. 개인 장치를 작업 공간에 연결한 경우 해당 장치는 알려진 장치가 되며, 작업 공간 리소스 및 응용 프로그램에 연속된 두 번째 단계 인증과 Single Sign-On을 제공합니다. 작업 공간 연결을 통해 장치를 연결하면 디렉터리에서 장치의 특성을 검색하여 응용 프로그램의 보안 토큰 발급 권한을 부여하기 위한 조건부 액세스를 유도할 수 있습니다. 작업 공간 연결을 사용하여 Windows 8.1 및 iOS 6.0+, Android 4.0+ 장치를 연결할 수 있습니다.
 
-### <a name="BKMK_DRS"></a>Azure Active Directory 디바이스 등록 서비스
-Workplace Join Azure Active Directory 디바이스 등록 서비스에 의해 수 있게 됩니다. 하는 디바이스에 Workplace Join 하 여 참여 서비스에서 Azure Active Directory 개체를 장치를 제공 하 고 디바이스 id를 나타내는 데 사용 되는 로컬 디바이스에는 키를 설정 합니다. 이 디바이스 id 클라우드 및 온-프레미스 호스트 된 응용 프로그램에 대 한 액세스를 제어 규칙과 함께 사용할 수 있습니다.
+### <a name="BKMK_DRS"></a>Azure Active Directory Device Registration 서비스
+작업 공간 연결은 Azure Active Directory 장치 등록 서비스에서 가능합니다. 작업 공간 연결을 통해 장치가 연결되면 서비스에서 Azure Active Directory에 장치 개체를 프로비전하고 장치 ID를 나타내는 데 사용되는 키를 로컬 장치에 설정합니다. 그러면 클라우드 및 온-프레미스에서 호스트되는 응용 프로그램에 대한 액세스 제어 규칙에서 이 장치 ID를 사용할 수 있습니다.
 
-Azure Active Directory 디바이스 등록 서비스 사용에 대 한 자세한 내용은 참조 [Azure Active Directory 디바이스 등록 서비스 개요](https://msdn.microsoft.com/6a14cb1f-a058-4453-8ede-d9f4a66a7073.aspx)합니다.
+자세한 내용은 참조 하세요. [Azure Active Directory의 장치 관리 소개](https://docs.microsoft.com/azure/active-directory/device-management-introduction)합니다.
 
-### <a name="workplace-join-as-a-seamless-second-factor-authentication"></a>원활 하 게 번째도 Workplace Join 단계 인증
-회사 정보 액세스 및 관리 드라이브 준수 소비자 디바이스 기업 리소스에 대 한 액세스 권한을 부여 하는 동안와 관련 된 위험을 관리할 수 있습니다. 디바이스에서 Workplace Join 다음과 같은 기능을 관리자에 게 제공합니다.
+### <a name="workplace-join-as-a-seamless-second-factor-authentication"></a>연속된 두 번째 단계 인증으로서의 작업 공간 연결
+회사에서는 소비자 장치에 회사 리소스에 대한 액세스 권한을 부여하는 동시에 정보 액세스와 관련된 위험을 관리하고 관리 방식 및 규정 준수를 유도할 수 있습니다. 장치의 작업 공간 연결을 통해 관리자는 다음을 할 수 있습니다.
 
--   장치 인증 알려진된 장치를 식별합니다. 관리자는 리소스에 조건부 액세스 및 제어 액세스를 생성 하려면이 정보를 사용할 수 있습니다.
+-   장치 인증을 사용하여 알려진 장치 식별. 관리자는 이 정보를 사용하여 조건부 액세스를 유도하고 리소스 액세스를 제어할 수 있습니다.
 
--   사용자가 신뢰할 수 있는 디바이스를 회사 리소스에 액세스를 더욱 원활 하 게 로그인 환경을 제공 합니다.
+-   사용자가 신뢰할 수 있는 장치에서 회사 리소스에 액세스할 수 있는 보다 원활한 로그인 환경 제공
 
-### <a name="single-sign-on"></a>Single Sign-on
-Single Sign-on (SSO)이이 시나리오의 컨텍스트에서 암호를 확인 알려진된 디바이스에서 회사 리소스에 액세스할 수를 입력 하는 최종 사용자의 수를 줄일 수 있는 기능입니다. 이 기능은 사용자가이 디바이스에서 액세스 회사 응용 프로그램 및 리소스에 SSO 수명 동안 한 번 메시지가 표시 되는 의미입니다. 디바이스를 사용 하는 Workplace Join 하는 경우이 디바이스를 사용 하 여 등록 한 사용자가 영구 SSO를 7 일 동안 기본적으로 가져옵니다. 이 사용자가 원활 하 게 로그인 환경이 같은 세션 또는 새 세션에 있습니다.
+### <a name="single-sign-on"></a>Single Sign-On
+이 시나리오의 컨텍스트에서 SSO(Single Sign-On)는 최종 사용자가 알려진 장치에서 회사 리소스에 액세스하기 위해 입력해야 하는 암호 프롬프트 수를 줄이는 기능입니다. 이 기능은 사용자가 SSO 수명 동안 단 한 번 표시되는 프롬프트를 통해 이 장치에서 회사 응용 프로그램 및 리소스에 액세스할 수 있음을 의미합니다. 장치에서 작업 공간 연결을 사용하는 경우 이 장치를 사용하도록 등록된 사용자에게는 기본적으로 7일간의 영구 SSO가 제공됩니다. 따라서 같은 세션 또는 새 세션에서 원활한 로그인 환경을 경험할 수 있습니다.
 
-## <a name="solution-overview"></a>해결 방법 개요
-이 솔루션의 일환으로, Workplace Join 지원 되는 디바이스에서 사용 하 고 Single Sign-on 회사 리소스에 발생 하는 방법을 알아보세요.
+## <a name="solution-overview"></a>솔루션 개요
+이 솔루션의 일부로, 지원되는 장치에서 작업 공간 연결을 사용하고 Single Sign-On을 통해 회사 리소스에 액세스하는 방법을 배웁니다.
 
 > [!NOTE]
-> Windows 8.1, iOS 6.0 + Android 및 4.0 + 장치를 지원 하기 위해 다시 쓰기 장치 개체 함께 Azure Active Directory 장치 등록 구성, 참조 해야 [온-프레미스 조건부 액세스를 사용 하 여 Azure Active Directory 디바이스 등록 서비스에 대 한 단계별 가이드](https://msdn.microsoft.com/library/azure/dn788908.aspx)
+> Windows 8.1, iOS 6.0+ 및 Android 4.0+ 장치를 지원하려면 장치 개체 나중 쓰기와 함께 Azure Active Directory 장치 등록을 구성해야 합니다. [Azure Active Directory 장치 등록 서비스를 사용하여 온-프레미스 조건부 액세스를 위한 단계별 가이드](https://msdn.microsoft.com/library/azure/dn788908.aspx)를 참조하세요.
 
-이 해결 방법 안내 걸리는 연습 다음 단계를 안내 합니다.
+이 솔루션에서는 다음 연습 단계를 안내합니다.
 
-1.  [연습: Workplace Join 사용 하 여 Windows 장치](../../ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
+1.  [연습: Windows 장치를 사용 하 여 작업 공간 연결](../../ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
 
-2.  [연습: Workplace Join는 iOS 디바이스와](../../ad-fs/operations/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
+2.  [연습: IOS 장치를 사용 하 여 작업 공간 연결](../../ad-fs/operations/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
 
-3.  [연습: Workplace Join Android 디바이스를](../../ad-fs/operations/walkthrough--workplace-join-to-an-android-device.md)
+3.  [연습: Android 장치를 사용 하 여 작업 공간 연결](../../ad-fs/operations/walkthrough--workplace-join-to-an-android-device.md)
 
-## <a name="see-also"></a>참조 하십시오
-[디바이스 등록 서비스에 federation 서버를 구성 합니다.](../deployment/configure-a-federation-server-with-device-registration-service.md)
+## <a name="see-also"></a>관련 항목
+[Device Registration Service를 사용 하 여 페더레이션 서버 구성](../deployment/configure-a-federation-server-with-device-registration-service.md)
 
 
 

@@ -1,6 +1,6 @@
 ---
-title: "디스크를 다른 컴퓨터로 이동"
-description: "이 문서에서는 디스크를 다른 컴퓨터로 이동하는 방법을 설명합니다."
+title: 디스크를 다른 컴퓨터로 이동
+description: 이 문서에서는 디스크를 다른 컴퓨터로 이동하는 방법을 설명합니다.
 ms.date: 10/12/2017
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -9,14 +9,15 @@ author: JasonGerend
 manager: brianlic
 ms.author: jgerend
 ms.openlocfilehash: 6b235ce8e5b936940629d5977a17bbc729efbe82
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59854004"
 ---
 # <a name="move-disks-to-another-computer"></a>디스크를 다른 컴퓨터로 이동
 
-> **적용 대상:** Windows 10, Windows 8.1, Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> **적용 대상:** Windows 10, Windows 8.1, Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 이 섹션에서는 디스크를 다른 컴퓨터로 이동하는 것과 관련된 수행할 단계와 고려 사항을 설명합니다. 디스크를 한 컴퓨터에서 다른 컴퓨터로 이동하려 하기 전에 이 절차를 인쇄하거나 단계를 적어두는 것이 좋습니다.
 
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/17/2017
 
 장치 관리자를 사용하여 이동하고자 하는 디스크를 제거합니다.
 
-**디스크 제거**
+**디스크를 제거 하려면**
 
 1.  컴퓨터 관리에서 장치 관리자를 엽니다.
 

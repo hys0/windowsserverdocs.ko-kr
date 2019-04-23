@@ -1,6 +1,6 @@
 ---
-title: NPS 서버 관리
-description: 이 항목에서는 Windows Server 2016에 NPS 서버 관리 하기 위한 절차 링크를 제공 합니다.
+title: NPS 관리
+description: 이 항목에서는 Windows Server 2016에서 NPSs 관리에 대 한 프로시저에 대 한 링크를 제공 합니다.
 manager: brianlic
 ms.prod: windows-server-threshold
 ms.technology: networking
@@ -8,34 +8,35 @@ ms.topic: article
 ms.assetid: 6005dc27-f49e-427f-92f7-b0e558ffe3ff
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: fd9732b95c1d500dfa66e9c12aadf5c351738ecc
-ms.sourcegitcommit: 19d9da87d87c9eefbca7a3443d2b1df486b0b010
+ms.openlocfilehash: 0d8b32ddc6eb1dacff2fa70bbbe045b16805c42b
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59855554"
 ---
-# <a name="manage-nps-servers"></a>NPS 서버 관리
+# <a name="manage-npss"></a>NPS 관리
 
->적용 대상: Windows Server (세미콜론 연간 채널) Windows Server 2016
+>적용 대상: Windows Server (반기 채널), Windows Server 2016
 
-이 섹션의 NPS 서버 관리 하려면 항목을 사용할 수 있습니다.
+NPSs를 관리 하려면이 섹션의 항목을 사용할 수 있습니다.
 
 >[!NOTE]
->추가 네트워크 정책 서버 설명서 다음 라이브러리 섹션을 사용할 수 있습니다.
->- [네트워크 정책 서버 시작](nps-getstart-top.md)
+>추가 네트워크 정책 서버 설명서에 대 한 다음 라이브러리 섹션을 사용할 수 있습니다.
+>- [네트워크 정책 서버를 사용 하 여 시작](nps-getstart-top.md)
 >- [네트워크 정책 서버를 배포 합니다.](nps-deploy.md) 
 
-이 섹션 다음과 같은 항목이 포함 되어 있습니다.
+이 섹션에서는 다음 항목을 다룹니다.
 
-- [다중 홈 컴퓨터 NPS 구성](nps-multihomed-configure.md)
-- [구성 NPS UDP 포트 정보](nps-udp-ports-configure.md)
-- [NAS 알림 전달 사용 안 함](nps-disable-nas-notifications.md)
-- [다른 서버의 가져오기 NPS 서버 구성 내보내기](nps-manage-export.md)
-- [동시 인증 NPS에 의해 처리 늘리기](nps-concurrent-auth.md)
+- [멀티홈 컴퓨터에 NPS 구성](nps-multihomed-configure.md)
+- [NPS UDP 포트 정보 구성](nps-udp-ports-configure.md)
+- [NAS 알림 전달을 사용 하지 않도록 설정](nps-disable-nas-notifications.md)
+- [다른 서버에서 가져오기에는 NPS 구성 내보내기](nps-manage-export.md)
+- [NPS를 통해 처리 증가 동시 인증](nps-concurrent-auth.md)
 - [네트워크 정책 서버 설치](nps-manage-install.md)
 - [NPS 프록시 서버 부하 분산](nps-manage-proxy-lb.md)
-- [NPS 서버 Active Directory 도메인 프로그램 등록](nps-manage-register.md)
-- [등록 된 Active Directory 도메인 NPS 서버](nps-manage-unregister.md)
-- [일반 식 NPS 사용](nps-crp-reg-expressions.md)
-- [구성 NPS 서버 변경 된 후 확인](nps-manage-verify.md)
+- [Active Directory 도메인에는 NPS를 등록 합니다.](nps-manage-register.md)
+- [Active Directory 도메인에서 NPS를 등록 취소](nps-manage-unregister.md)
+- [NPS에서 정규식 사용](nps-crp-reg-expressions.md)
+- [NPS 변경 된 후 구성 확인](nps-manage-verify.md)
 

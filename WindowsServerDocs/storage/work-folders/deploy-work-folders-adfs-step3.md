@@ -1,5 +1,5 @@
 ---
-title: "AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포 - 3단계, 클라우드 폴더 설치"
+title: AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포 - 3단계, 클라우드 폴더 설치
 ms.prod: windows-server-threshold
 ms.technology: storage-work-folders
 ms.topic: article
@@ -9,26 +9,27 @@ author: JeffPatt24
 ms.date: 4/5/2017
 ms.assetid: 5a43b104-4d02-4d73-a385-da1cfb67e341
 ms.openlocfilehash: 81f30a7a4d50423a68719343fec3032cc6a1602e
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59854714"
 ---
-# <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-3-set-up-work-folders"></a>AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포: 3단계, 클라우드 폴더 설치
+# <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-3-set-up-work-folders"></a>AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 단계 3, 작업 폴더 설정
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016
+>적용 대상: Windows Server (반기 채널), Windows Server 2016
 
 이 항목에서는 AD FS(Active Directory Federation Services) 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더를 배포하는 세 번째 단계를 설명합니다. 이 과정의 다른 단계는 다음 항목에서 찾을 수 있습니다.  
   
--   [AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포: 개요](deploy-work-folders-adfs-overview.md)  
+-   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 개요](deploy-work-folders-adfs-overview.md)  
   
--   [AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포: 1단계, AD FS 설치](deploy-work-folders-adfs-step1.md)  
+-   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 1 단계, AD FS 설정](deploy-work-folders-adfs-step1.md)  
   
--   [AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포: 2단계, AD FS 구성 후 작업](deploy-work-folders-adfs-step2.md)  
+-   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 단계 2에서 AD FS 구성 후 작업](deploy-work-folders-adfs-step2.md)  
   
--   [AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포: 4단계, 웹 응용 프로그램 프록시 설치](deploy-work-folders-adfs-step4.md)  
+-   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 4 단계, 웹 응용 프로그램 프록시 설정](deploy-work-folders-adfs-step4.md)  
   
--   [AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포: 5단계, 클라이언트 설치](deploy-work-folders-adfs-step5.md)  
+-   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 5 단계 클라이언트 설정](deploy-work-folders-adfs-step5.md)  
   
 > [!NOTE]
 >   이 섹션에서는 Windows Server 2016 환경에 대한 지침을 다룹니다. Windows Server 2012 R2를 사용하는 경우 [Windows Server 2012 R2 instructions(Windows Server 2012 R2 지침)](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx)을 따르세요.
@@ -41,14 +42,14 @@ ms.lasthandoff: 10/17/2017
 테스트 예제의 경우 클라우드 폴더를 실행할 컴퓨터를 Contoso 도메인에 가입하고 다음 섹션에 설명된 대로 네트워크 인터페이스를 설정하면 됩니다. 
 
 ### <a name="set-the-server-ip-address"></a>서버 IP 주소 설정  
-서버 IP 주소를 고정 IP 주소로 변경합니다. 테스트 예제에서는 IP 클래스 A: 192.168.0.170/서브넷 마스크: 255.255.0.0/기본 게이트웨이: 192.168.0.1/기본 설정 DNS: 192.168.0.150(도메인 컨트롤러의 IP 주소)를 사용합니다. 
+서버 IP 주소를 고정 IP 주소로 변경합니다. 테스트 예를 들어 192.168.0.170 인 IP 클래스 A를 사용 하 여 / 서브넷 마스크: 255.255.0.0/기본 게이트웨이: 192.168.0.1/DNS를 기본 설정: 192.168.0.150 (도메인 컨트롤러의 IP 주소). 
   
 ### <a name="create-the-cname-record-for-work-folders"></a>클라우드 폴더의 CNAME 레코드 만들기  
 클라우드 폴더의 CNAME 레코드를 만들려면 다음 단계를 따릅니다.  
   
 1.  도메인 컨트롤러에서 **DNS 관리자**를 엽니다.  
   
-2.  정방향 조회 영역 폴더를 확장하고 도메인을 마우스 오른쪽 단추로 클릭한 다음 **새 별칭(CNAME)**을 클릭합니다.  
+2.  정방향 조회 영역 폴더를 확장하고 도메인을 마우스 오른쪽 단추로 클릭한 다음 **새 별칭(CNAME)** 을 클릭합니다.  
   
 3.  **새 리소스 레코드** 창의 **별칭 이름** 필드에 클라우드 폴더의 별칭을 입력합니다. 테스트 예제에서는 **workfolders**입니다.  
   
@@ -75,9 +76,9 @@ AD FS를 설치하는 동안 만든 AD FS 인증서를 다음 단계에 따라 �
   
 4.  **사용 가능한 스냅인** 목록에서 **인증서**를 선택한 다음 **추가**를 클릭합니다. 인증서 스냅인 마법사가 시작됩니다.  
   
-5.  **컴퓨터 계정**을 선택하고 **다음**을 클릭합니다.  
+5.  **컴퓨터 계정**을 선택한 다음 **다음**을 클릭합니다.  
   
-6.  **로컬 컴퓨터: (이 콘솔이 실행되고 있는 컴퓨터)**를 선택하고 **마침**을 클릭합니다.  
+6.  **로컬 컴퓨터: (이 콘솔이 실행되고 있는 컴퓨터)** 를 선택하고 **마침**을 클릭합니다.  
   
 7.  **확인**을 클릭합니다.  
   
@@ -188,7 +189,7 @@ AD FS를 설치하는 동안 만든 AD FS 인증서를 다음 단계에 따라 �
 ### <a name="bind-the-certificate"></a>인증서 연결  
 클라우드 폴더는 SSL을 통해서만 통신하며 사용자가 이전에 만든(또는 인증서 기관에서 발급한) 자체 서명된 인증서가 포트에 연결되어야 합니다.  
   
-Windows PowerShell을 통해 인증서를 포트에 연결하는 두 가지 방법이 있는데, 하나는 IIS cmdlet이고 다른 하나는 netsh입니다.  
+사용 하 여 Windows PowerShell을 통해 포트에 인증서를 바인딩할 수 있는 방법은 두 가지가 있습니다. IIS cmdlet 및 netsh 합니다.  
   
 #### <a name="bind-the-certificate-by-using-netsh"></a>netsh를 사용하여 인증서 연결  
 Windows PowerShell에서 netsh 명령줄 스크립팅 유틸리티를 사용하려면 명령을 netsh에 파이프해야 합니다. 다음은 netsh를 사용하여 주체가 **workfolders.contoso.com**인 인증서를 찾아서 443 포트에 연결하는 예제 스크립트입니다.  
@@ -198,7 +199,7 @@ $subject = "workfolders.contoso.com"
 Try  
 {  
 #In case there are multiple certificates with the same subject, get the latest version   
-$cert = Get-ChildItem CERT:\LocalMachine\My |where {$_.Subject -match $subject} | sort $_.NotAfter -Descending | select -first 1    
+$cert = Get-ChildItem CERT:\LocalMachine\My |where {$_.Subject -match $subject} | sort $_.NotAfter -Descending | select -first 1    
 $thumbprint = $cert.Thumbprint  
 $Command = "http add sslcert ipport=0.0.0.0:443 certhash=$thumbprint appid={CE66697B-3AA0-49D1-BDBD-A25C8359FD5D} certstorename=MY"  
 $Command | netsh  
@@ -249,7 +250,7 @@ AD FS 인증을 사용하도록 클라우드 폴더를 구성하려면 다음 �
   
 4.  **클라우드 폴더 설정** 창에서 **Active Directory Federation Services**를 선택하고 페더레이션 서비스 URL을 입력합니다. **적용**을 클릭합니다.  
   
-    테스트 예제의 URL은 **https://blueadfs.contoso.com**입니다.  
+    URL은 테스트 예에서 **https://blueadfs.contoso.com**합니다.  
   
 Windows PowerShell을 통해 같은 작업을 수행하는 cmdlet은 다음과 같습니다.  
   
@@ -270,11 +271,11 @@ Set-SyncServerSetting -ADFSUrl "https://blueadfs.contoso.com"
   
 -   도메인에 가입되지 않은 Windows 클라이언트  
   
-인증서를 내보내려면 앞에서 [AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포: 2단계, AD FS 구성 후 작업](deploy-work-folders-adfs-step2.md)의 설명에 따라 AD FS 인증서를 내보낸 것과 똑같은 방법으로 AD FS 인증서를 내보내면 됩니다.  
+인증서를 내보내려면에 설명 된 대로 이전에 AD FS 인증서 내보내기에 사용 되는 동일한 단계를 수행 [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 단계 2에서 AD FS 구성 후 작업](deploy-work-folders-adfs-step2.md), AD FS 인증서를 내보냅니다.  
   
-다음 단계: [AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포: 4단계, 웹 응용 프로그램 프록시 설치](deploy-work-folders-adfs-step4.md)  
+다음 단계: [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 4 단계, 웹 응용 프로그램 프록시 설정](deploy-work-folders-adfs-step4.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
 [클라우드 폴더 개요](Work-Folders-Overview.md)  
   
 

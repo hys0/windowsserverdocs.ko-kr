@@ -1,6 +1,6 @@
 ---
-title: 다중 홈 컴퓨터 NPS 구성
-description: 이 항목 서버를 실행 하는 네트워크 정책 Windows Server 2016에 여러 네트워크 어댑터와 구성에 대해 설명 합니다.
+title: 멀티홈 컴퓨터에서 NPS 구성
+description: 이 항목에서는 Windows Server 2016에서 네트워크 정책 서버를 실행 중인 여러 네트워크 어댑터를 사용 하 여 서버를 구성 하는 방법에 지침을 제공 합니다.
 manager: brianlic
 ms.prod: windows-server-threshold
 ms.technology: networking
@@ -8,73 +8,74 @@ ms.topic: article
 ms.assetid: d9d9e9ac-4859-4522-89ed-a23092c9e12a
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: f80e83a4d79036729b6b442e6362d52fbda12edd
-ms.sourcegitcommit: 19d9da87d87c9eefbca7a3443d2b1df486b0b010
+ms.openlocfilehash: 55eccf3afc649e84c5b6f5ce7932ed97617ddca9
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59856804"
 ---
-# <a name="configure-nps-on-a-multihomed-computer"></a>다중 홈 컴퓨터 NPS 구성
+# <a name="configure-nps-on-a-multihomed-computer"></a>멀티홈 컴퓨터에서 NPS 구성
 
->적용 대상: Windows Server (세미콜론 연간 채널) Windows Server 2016
+>적용 대상: Windows Server (반기 채널), Windows Server 2016
 
-네트워크 어댑터가 여러 NPS 서버 구성 하려면이 항목을 사용할 수 있습니다.
+여러 네트워크 어댑터를 사용 하 여 NPS를 구성 하려면이 항목에서는 사용할 수 있습니다.
 
-네트워크 NPS 정책 서버 ()를 실행 하는 서버에 여러 네트워크 어댑터를 사용 하면 다음 구성할 수 있습니다.
+네트워크 정책 (NPS 서버)를 실행 하는 서버에서 여러 네트워크 어댑터를 사용 하는 경우 다음을 구성할 수 있습니다.
 
-- 네트워크 어댑터를 수행 하 고 수행 하지 보내고 받는 RADIUS(Remote Authentication Dial-In User Service) \(RADIUS\) 교통 합니다.
-- 여부-네트워크 어댑터 별로 NPS이 인터넷 프로토콜 버전 4 \(IPv4\), IPv6 또는 둘 다 IPv4 및에서 IPv6 RADIUS 교통량을 모니터링합니다.
-- 어떤 RADIUS 통해 교통은에서 보내고 받은 프로토콜에 따라 UDP 포트 번호 \-네트워크 어댑터 별로 (IPv4 또는 IPv6\).
+- 수행 하 고 수행 하지 송신 및 수신 원격 인증 전화 접속 사용자 서비스는 네트워크 어댑터 \(RADIUS\) 트래픽입니다.
+- 각 네트워크 어댑터 별로 여부 NPS RADIUS 트래픽을 모니터링 인터넷 프로토콜 버전 4 \(IPv4\), IPv6 또는 IPv4 및 IPv6입니다.
+- UDP 포트 번호는 RADIUS를 통한 트래픽을 전달 하 고 개별 프로토콜에서 받은 \(IPv4 또는 IPv6\), 당 네트워크 어댑터를 기반으로 합니다.
 
-기본적으로 NPS 수신 1812, 1813 1645 1646 및 포트의 RADIUS 교통 IPv6와 IPv4에 대 한 모든 설치 된 네트워크 어댑터에 대 한 합니다. 자동으로 NPS RADIUS 교통 모든 네트워크 어댑터 사용을 하기 때문에 NPS 특정 네트워크 어댑터를 사용 하지 못하도록 하려는 경우 네트워크 어댑터 NPS RADIUS에 대 한 사용 하 여 원하는 교통를 지정 하기만 하면 됩니다.
+기본적으로 NPS 수신 대기 포트 1812, 1813, 1645 및 1646에서 RADIUS 트래픽에 대 한 IPv6 및 IPv4 둘 다에 대 한 모든 네트워크 어댑터를 설치 합니다. NPS RADIUS 트래픽에 대 한 모든 네트워크 어댑터를 자동으로 사용, 때문에 NPS를 RADIUS를 사용 하 여 원하는 네트워크 어댑터 트래픽이 특정 네트워크 어댑터를 사용 하 여 NPS를 방지 하려는 경우 지정 해야 합니다.
 
 >[!NOTE]
->네트워크 어댑터에 IPv4 또는 IPv6 제거, NPS RADIUS 교통 제거 프로토콜에 대 한을 모니터링 하지 않습니다.
+>네트워크 어댑터에 IPv4 또는 IPv6 중 하나를 제거 하는 경우 NPS RADIUS 트래픽을 제거 된 프로토콜에 대 한 모니터링 하지 않습니다.
 
-네트워크 어댑터가 있는 여러 설치 NPS 서버, NPS RADIUS 교통 사용자가 지정 어댑터에 대해서만 송수신를 구성할 좋습니다.
+여러 네트워크 어댑터가 설치 되어 있는 NPS에서 RADIUS 트래픽을 지정 하는 어댑터를 수신 하는 NPS를 구성 하는 것이 좋습니다.
 
-예를 들어, NPS 서버에 설치 된 네트워크 어댑터가 RADIUS 클라이언트 포함 되지 않는 네트워크 분할을 이어질 수, 네트워크 어댑터를 추가로 제공 하는 동안에 네트워크 경로로 NPS RADIUS 클라이언트를 구성 했으므로 합니다. 이이 시나리오 nps RADIUS 교통량 모든 두 번째 네트워크 어댑터를 사용 하 여 중요 합니다.
+예를 들어 NPS에 설치 된 하나의 네트워크 어댑터는 두 번째 네트워크 어댑터를 NPS의 네트워크 경로 사용 하 여 구성 된 RADIUS 클라이언트에 제공 하는 동안 RADIUS 클라이언트를 포함 하지 않는 네트워크 세그먼트에 발생할 수 있습니다. 이 시나리오에서 모든 RADIUS 트래픽에 대해 두 번째 네트워크 어댑터를 사용 하도록 NPS를 반드시 합니다.
 
-NPS 서버 설치 세 네트워크 어댑터에 있지만 NPS RADIUS 교통량 어댑터 중 두 사용 하 여 원하는 경우 다른 예에서 두 어댑터에 대 한 포트 정보를 구성할 수 있습니다. 세 번째 어댑터에 대 한 포트 구성 제외 하 고, NPS RADIUS 교통량 어댑터를 사용 하 여 방지할.
+에 NPS에 세 개의 네트워크 어댑터가 설치 되어 있지만 NPS를 RADIUS 트래픽에 대 한 두 가지 어댑터를 사용 하려는 경우 또 다른 예로, 두 어댑터에 대 한 포트 정보를 구성할 수 있습니다. 세 번째 어댑터의 포트 구성을 제외 하 고, RADIUS 트래픽에 대 한 어댑터를 사용 하 여 NPS 방지할 수 있습니다.
 
 ## <a name="using-a-network-adapter"></a>네트워크 어댑터를 사용 하 여
 
-수신 하 고 네트워크 어댑터에 RADIUS 교통 전송 NPS 구성, NPS 콘솔에서 네트워크 정책 서버의 속성 대화 상자에서 다음 구문을 사용 합니다.
+수신 대기할 네트워크 어댑터에서 RADIUS 트래픽을 전송 하는 NPS를 구성 하려면 NPS 콘솔에서 네트워크 정책 서버 속성 대화 상자에서 다음 구문을 사용 합니다.
 
-- IPv4 교통 구문을: IPAddress:UDPport 여기서 ip 주소 IPv4 주소 RADIUS 교통 있는 보내려는 네트워크 어댑터에서 구성 된 이며 UDPport RADIUS 포트 번호를 인증 RADIUS 또는 계정 교통에 사용 하려는 합니다.
-- IPv6 교통 구문을: [IPv6Address]: UDPport 되는 IPv6Address 대괄호, IPv6Address IPv6 주소 RADIUS 교통 있는 보내려는 네트워크 어댑터에서 구성 된 이며 UDPport RADIUS 포트 번호를 인증 RADIUS 또는 계정 교통에 사용 하려는 합니다.
+- IPv4 트래픽 구문: IPAddress:UDPport, 여기서 IPAddress가 RADIUS 트래픽을 보내도록 원하는는 네트워크 어댑터에 구성 되어 있는 IPv4 주소 및 UDPport 계정 관리 트래픽의 RADIUS 인증에 사용 하려는 RADIUS 포트 번호입니다.
+- IPv6 트래픽 구문: [IPv6Address]: UDPport, 여기서 IPv6Address 묶는 대괄호가 필요, IPv6Address RADIUS 트래픽을 보내도록 원하는는 네트워크 어댑터에 구성 된 IPv6 주소 이며 UDPport는 RADIUS 인증을 위해 사용 하려는 RADIUS 포트 번호 또는 계정 관리 트래픽의 합니다.
 
-다음 문자 IP 주소와 UDP 포트 정보 구성 구분으로 사용할 수 있습니다.
+IP 주소 및 UDP 포트 정보 구성에 대 한 문자를 구분 기호로 사용할 수 있습니다.
 
-- 주소/구분 포트:으로 (:)
-- 포트 구분: 쉼표 (,)
-- 구분 인터페이스: 세미콜론 (;)
+- 구분 기호에 대 한 주소/포트: 콜론 (:)
+- 포트 구분 기호: 쉼표 (,)
+- 인터페이스 구분 기호: 세미콜론 (;)
 
-## <a name="configuring-network-access-servers"></a>네트워크 액세스 서버 구성
+## <a name="configuring-network-access-servers"></a>네트워크 액세스 서버를 구성합니다.
 
-네트워크 액세스 서버 NPS 서버에서 구성 하는 동일한 UDP RADIUS 포트 번호 구성 되어 있는지 확인 합니다. 2865와 2866 Rfc에 정의 된 RADIUS 표준 UDP 포트가 인증을 위한 1812 및 1813입니다. 그러나 일부 액세스 서버 인증 요청을 UDP 포트 1645 및 UDP 포트 1646 계정 요청에 대 한 사용 하는 기본적으로 구성 됩니다.
+네트워크 액세스 서버에 NPSs에서 구성 하는 동일한 RADIUS UDP 포트 번호를 사용 하 여 구성 되었는지 확인 합니다. Rfc 2865 및 2866에에서 정의 된 RADIUS 표준 UDP 포트 1812 인증 되며 1813입니다. 그러나 일부 액세스 서버는 계정 요청에 대 한 인증 요청에 대 한 UDP 포트 1645 및 1646 UDP 포트를 사용 하 여 구성 됩니다.
 
 >[!IMPORTANT]
->RADIUS 기본 포트 번호를 사용 하지 않는 경우 방화벽 RADIUS 트래픽을 새로운 포트에서 허용 하는 로컬 컴퓨터에 대 한 예외 구성 해야 합니다. 자세한 내용은 참조 [RADIUS 교통에 대 한 구성 방화벽](nps-firewalls-configure.md)합니다.
+>RADIUS 기본 포트 번호를 사용 하지 않는 경우에 새 포트에서 RADIUS 트래픽을 허용 하도록 로컬 컴퓨터에 대 한 방화벽 예외를 구성 해야 합니다. 자세한 내용은 [RADIUS 트래픽에 대 한 방화벽 구성](nps-firewalls-configure.md)합니다.
 
-## <a name="configure-the-multihomed-nps-server"></a>다중 홈 NPS 서버 구성
+## <a name="configure-the-multihomed-nps"></a>멀티홈 NPS 구성
 
-다음 절차 구성 다중 홈 NPS 서버를 사용할 수 있습니다.
+프로그램 멀티홈 NPS를 구성 하려면 다음 절차를 사용할 수 있습니다.
 
-회원 **도메인 관리자**, 해당 하는이 절차를 수행 하는 데 필요한 최소 또는 합니다.
+**Domain Admins**의 구성원이거나 이에 준하는 자격이 있어야 이 절차를 완료할 수 있습니다.
 
-### <a name="to-specify-the-network-adapter-and-udp-ports-that-nps-uses-for-radius-traffic"></a>네트워크 어댑터와 NPS RADIUS 교통에 사용 하는 UDP 포트를 지정 하려면
+### <a name="to-specify-the-network-adapter-and-udp-ports-that-nps-uses-for-radius-traffic"></a>네트워크 어댑터와 NPS RADIUS 트래픽에 사용 되는 UDP 포트를 지정 하려면
 
-1. 서버 관리자 클릭 **도구**을 차례로 클릭 하 고 **네트워크 정책 서버** NPS 콘솔을 엽니다.
+1. 서버 관리자에서 클릭 **도구**를 클릭 하 고 **네트워크 정책 서버** NPS 콘솔을 엽니다.
 
-2. 마우스 오른쪽 단추로 클릭 **네트워크 정책 서버**을 차례로 클릭 하 고 **속성**합니다.
+2. 마우스 오른쪽 단추로 클릭 **네트워크 정책 서버**를 클릭 하 고 **속성**합니다.
 
-3. 클릭는 **포트** 탭 하 고 앞에 IP 주소 RADIUS 교통량 기존 포트 번호를 사용 하 여 네트워크 어댑터에 대 한 추가 합니다. 예를 들어, 인증 요청 192.168.1.2 IP 주소와 1812 및 1645 RADIUS 포트 사용 하려는 경우에서 포트 설정을 변경 **1812,1645** 에 **192.168.1.2:1812,1645**합니다. RADIUS 인증과 계정 UDP RADIUS 포트가 기본값 다른 경우 포트 설정을 변경 적절 하 게 됩니다.
+3. 클릭 합니다 **포트** 탭 및 기존 포트 번호에 RADIUS 트래픽에 사용 하려는 네트워크 어댑터에 대 한 IP 주소 앞에 추가 합니다. 예를 들어, 인증 요청에 대 한 IP 주소 192.168.1.2 및 1645와 1812 RADIUS 포트를 사용 하려는 경우는에서 포트 설정을 변경 **1812,1645** 하 **192.168.1.2:1812,1645**합니다. RADIUS 인증 및 RADIUS 계정 UDP 포트가 다른 경우 기본값에서 변경 포트 설정을 적절 하 게 합니다.
 
-4. 인증 또는 계정 요청에 대 한 여러 포트 설정을 사용 하려면 포트 번호 쉼표로 구분 합니다.
+4. 인증 또는 계정 요청에 대 한 여러 포트 설정을 사용 하려면 포트 번호를 쉼표로 구분 합니다.
 
-포트 NPS UDP에 대 한 자세한 내용은 참조 [구성 NPS UDP 포트 정보](nps-udp-ports-configure.md)
+NPS UDP 포트에 대 한 자세한 내용은 참조 하세요. [NPS UDP 포트 정보 구성](nps-udp-ports-configure.md)
 
 
-NPS에 대 한 자세한 내용은 참조 [네트워크 정책 서버](nps-top.md)
+NPS에 대 한 자세한 내용은 참조 하세요. [네트워크 정책 서버](nps-top.md)
 

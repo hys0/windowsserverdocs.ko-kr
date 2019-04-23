@@ -13,11 +13,11 @@ author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
 ms.openlocfilehash: 1461f3e3266d77d2510aba37208347253a8f78e7
-ms.sourcegitcommit: e0479b0114eac7f232e8b1e45eeede96ccd72b26
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "2082494"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59851624"
 ---
 # <a name="iis-on-nano-server"></a>Nano Server의 IIS
 
@@ -32,7 +32,7 @@ Microsoft-NanoServer-IIS-Package와 함께 -Package 매개 변수를 사용하�
 
 |기능|기본적으로 사용하도록 설정됨|  
 |-----------|----------------------|  
-|**일반적인 HTTP 기능**||  
+|**일반 HTTP 기능**||  
 |기본 문서|x|  
 |디렉터리 검색|x|  
 |HTTP 오류|x|  
@@ -65,7 +65,7 @@ Microsoft-NanoServer-IIS-Package와 함께 -Package 매개 변수를 사용하�
 |**관리 도구**||  
 |Windows PowerShell용 IIS 관리 모듈|x|  
 
-콘텐츠 회까지 게시 됩니다 (예: ASP.NET, PHP, 및 Java 사용), IIS 뿐아니라 다른의 다른 구성에서 문서 시리즈의 관련 [http://iis.net/learn](http://iis.net/learn)합니다.  
+다른 구성 (예: ASP.NET, PHP 및 Java 사용), IIS와 다른 문서 시리즈의 관련 콘텐츠에 게시 되어 [ http://iis.net/learn ](http://iis.net/learn)합니다.  
 
 ## <a name="installing-iis-on-nano-server"></a>Nano 서버에 IIS 설치  
 이 서버 역할을 오프라인으로(Nano 서버를 끄고) 설치할 수도 있고 온라인으로(Nano 서버가 실행 중인 상태로) 설치할 수도 있지만 오프라인 설치를 권장합니다.  
@@ -90,7 +90,7 @@ Microsoft-NanoServer-IIS-Package와 함께 -Package 매개 변수를 사용하�
 이제 IIS를 사용하여 Nano 서버를 시작할 수 있습니다.  
 
 ### <a name="installing-iis-on-nano-server-online"></a>온라인으로 Nano 서버에 IIS 설치  
-서버 역할은 오프라인으로 설치하는 것이 좋지만, 컨테이너 시나리오에서 온라인으로(Nano 서버가 실행 중인 상태로) 설치해야 할 수도 있습니다. 이렇게 하려면 다음 단계를 따르십시오.  
+서버 역할은 오프라인으로 설치하는 것이 좋지만, 컨테이너 시나리오에서 온라인으로(Nano 서버가 실행 중인 상태로) 설치해야 할 수도 있습니다. 이렇게 하려면 다음 단계를 수행합니다.  
 
 1.  설치 미디어의 패키지 폴더를 실행 중인 Nano 서버에(예: C:\packages) 로컬로 복사합니다.  
 
@@ -129,7 +129,7 @@ Microsoft-NanoServer-IIS-Package와 함께 -Package 매개 변수를 사용하�
 
     **dism /online /get-packages**  
 
-    "패키지 ID: Microsoft-NanoServer-IIS-Package~31bf3856ad364e35~amd64~~10.0.14393.1000"이 두 번 표시되어야 합니다. 한 번은 릴리스 종류: 언어 팩에 대해, 한 번은 릴리스 종류: 기능 팩에 대해 표시됩니다.  
+    표시 "Package Identity: Microsoft NanoServer-IIS 패키지 ~ 31bf3856ad364e35 ~ amd64 ~ ~ 10.0.14393.1000 "을 두 번 한 번에 대해 나열 된 릴리스 종류: 언어 팩에 대해 한 번씩 릴리스 종류: 기능 팩입니다.  
 
 6.  **net start w3svc**를 사용하여 또는 Nano 서버를 다시 시작하여 W3SVC 서비스를 시작합니다.  
 
@@ -177,7 +177,7 @@ IIS 하위 기능 전체 집합은 이 토픽의 부록 1에 포함되어 있고
     ```
 
 ## <a name="other-common-iis-configuration-tasks"></a>기타 일반적인 IIS 구성 작업  
-**웹 사이트 만들기**  
+**Websites 만들기**  
 
 이 cmdlet을 사용합니다.  
 
@@ -185,7 +185,7 @@ IIS 하위 기능 전체 집합은 이 토픽의 부록 1에 포함되어 있고
 
 그런 다음 `Get-IISSite`를 실행하여 사이트 상태를 확인할 수 있습니다(웹 사이트 이름, ID, 상태, 실제 경로 및 바인딩을 반환).  
 
-**웹 사이트 삭제**  
+**웹 사이트를 삭제합니다.**  
 
 `Remove-IISSite -Name TestSite -Confirm:$false`을 실행합니다.  
 
@@ -242,7 +242,7 @@ Nano 서버에서 웹 사이트에 대한 HTTPS를 구성하는 방법을 보여
     $sm.CommitChanges()  
     ```  
 
-    또한 다음 구문을 통해 특정 호스트 이름으로 SNI(서버 이름 표시)를 사용할 수 있습니다. `$sm.Sites["Default Web Site"].Bindings.Add("*:443:www.foo.bar.com", $hash, "My", "Sni".`  
+    또한이 구문 사용 하 여 특정 호스트 이름으로 서버 이름 표시 (SNI)를 사용할 수 있습니다. `$sm.Sites["Default Web Site"].Bindings.Add("*:443:www.foo.bar.com", $hash, "My", "Sni".`  
 
 ## <a name="appendix-1-list-of-iis-sub-features"></a>부록 1: IIS 하위 기능 목록
 
@@ -293,7 +293,7 @@ IIS의 각 기능은 구성 요소 집합으로 존재합니다. 이 부록에�
 |`<handlers>`|`<add name="StaticFile" path="*" verb="*" modules="DefaultDocumentModule" resourceType="EiSecther" requireAccess="Read" />`|  
 |`<defaultDocument>`|`<defaultDocument enabled="true"><br /><files><br /> <add value="Default.htm" /><br />        <add value="Default.asp" /><br />        <add value="index.htm" /><br />        <add value="index.html" /><br />        <add value="iisstart.htm" /><br />    </files><br /></defaultDocument>`|  
 
-`StaticFile <handlers>` 항목이 이미 존재할 수 있습니다. 그런 경우에는 \<모듈> 특성에 "DefaultDocumentModule"을 추가하고 쉼표로 구분합니다.  
+`StaticFile <handlers>` 항목이 이미 존재할 수 있습니다. 만약 그렇다면 \<모듈 > 특성에 "DefaultDocumentModule"을 추가하고 쉼표로 구분합니다.  
 
 **디렉터리 검색**  
 
@@ -303,7 +303,7 @@ IIS의 각 기능은 구성 요소 집합으로 존재합니다. 이 부록에�
 |`<modules>`|`<add name="DirectoryListingModule" lockItem="true" />`|  
 |`<handlers>`|`<add name="StaticFile" path="*" verb="*" modules="DirectoryListingModule" resourceType="Either" requireAccess="Read" />`|  
 
-`StaticFile <handlers>` 항목이 이미 존재할 수 있습니다. 그런 경우에는 \<모듈> 특성에 "DirectoryListingModule"을 추가하고 쉼표로 구분합니다.  
+`StaticFile <handlers>` 항목이 이미 존재할 수 있습니다. 만약 그렇다면 \<모듈 > 특성에 "DirectoryListingModule"을 추가하고 쉼표로 구분합니다.  
 
 **HTTP 오류**  
 
@@ -321,7 +321,7 @@ IIS의 각 기능은 구성 요소 집합으로 존재합니다. 이 부록에�
 |`<modules>`|`<add name="StaticFileModule" lockItem="true" />`|  
 |`<handlers>`|`<add name="StaticFile" path="*" verb="*" modules="StaticFileModule" resourceType="Either" requireAccess="Read" />`|  
 
-`StaticFile \<handlers>` 항목이 이미 존재할 수 있습니다. 그런 경우에는 \<모듈> 특성에 "StaticFileModule"을 추가하고 쉼표로 구분합니다.  
+`StaticFile \<handlers>` 항목이 이미 존재할 수 있습니다. 만약 그렇다면 \<모듈 > 특성에 "StaticFileModule"을 추가하고 쉼표로 구분합니다.  
 
 **HTTP 리디렉션**  
 
@@ -370,7 +370,7 @@ IIS의 각 기능은 구성 요소 집합으로 존재합니다. 이 부록에�
 |`<modules>`|`<add name="StaticCompressionModule" lockItem="true" />`|  
 |`<httpCompression>`|`<httpCompression directory="%SystemDrive%\inetpub\temp\IIS Temporary Compressed Files"><br />    <scheme name="gzip" dll="%Windir%\system32\inetsrv\gzip.dll" /><br />   <staticTypes><br />        <add mimeType="text/*" enabled="true" /><br />        <add mimeType="message/*" enabled="true" /><br />        <add mimeType="application/javascript" enabled="true" \/><br />        <add mimeType="application/atom+xml" enabled="true" /><br />        <add mimeType="application/xaml+xml" enabled="true" /><br />        <add mimeType="\*\*" enabled="false" /><br />    </staticTypes><br /></httpCompression>`|  
 
-**정적 콘텐츠 압축**  
+**동적 콘텐츠 압축**  
 
 |섹션|구성 요소|  
 |-----------|--------------------------|  
@@ -474,7 +474,7 @@ IIS의 각 기능은 구성 요소 집합으로 존재합니다. 이 부록에�
 |`<globalModules>`|`<add name="IsapiFilterModule" image="%windir%\System32\inetsrv\filter.dll" />`|  
 |`<modules>`|`<add name="IsapiFilterModule" lockItem="true" />`|  
 
-**SSI(Server Side Include)**  
+**서버 쪽 포함**  
 
 |섹션|구성 요소|  
 |----------------|--------------------------|  
