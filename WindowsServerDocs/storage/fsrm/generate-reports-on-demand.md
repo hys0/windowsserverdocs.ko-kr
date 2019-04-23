@@ -1,6 +1,6 @@
 ---
-title: "주문형 보고서 생성"
-description: "이 문서에서는 서버의 디스크 사용량을 분석하는 주문형 보고서를 생성하는 방법을 설명합니다."
+title: 주문형 보고서 생성
+description: 이 문서에서는 서버의 디스크 사용량을 분석하는 주문형 보고서를 생성하는 방법을 설명합니다.
 ms.date: 7/7/2017
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -9,14 +9,15 @@ author: JasonGerend
 manager: brianlic
 ms.author: jgerend
 ms.openlocfilehash: e91bfbc306d1d2712f7b35ec48114b3a8a84ec83
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59890994"
 ---
 # <a name="generate-reports-on-demand"></a>주문형 보고서 생성
 
-> 적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> 적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 일상적 작업을 하는 동안, **지금 보고서 생성** 옵션을 사용하여 하나 이상의 주문형 보고서를 생성할 수 있습니다. 이러한 보고서를 통해 서버의 현재 디스크 사용량의 여러 측면을 분석할 수 있습니다. 현재 데이터는 보고서가 생성되기 전에 수집됩니다.
 
@@ -54,7 +55,7 @@ ms.lasthandoff: 10/17/2017
 6.  보고서의 복사본을 관리자에게 전달하려면:
 
     -  **전달** 탭에서 **다음 관리자에게 보고서 보내기** 확인란을 선택하고 보고서를 받을 관리자 계정 이름을 입력합니다. 
-    - *account@domain* 형식을 사용하고 세미콜론으로 여러 계정을 구분합니다.
+    - *account@domain*  형식을 사용하고 세미콜론으로 여러 계정을 구분합니다.
 
 7.  데이터를 수집하고 보고서를 생성하려면 **확인**을 클릭합니다. 이렇게 하면 **저장소 보고서 생성** 대화 상자가 열립니다.
 
@@ -65,8 +66,8 @@ ms.lasthandoff: 10/17/2017
 
     두 옵션 모두 보고서를 저장하고, 전자 메일 전달을 사용하도록 설정한 경우 선택한 보고서 형식으로 관리자에게 보냅니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 -   [저장소 보고서 관리](storage-reports-management.md)
--   [파일 서버 리소스 관리자 옵션 설정](setting-file-server-resource-manager-options.md)
+-   [설정 파일 서버 리소스 관리자 옵션](setting-file-server-resource-manager-options.md)
 
