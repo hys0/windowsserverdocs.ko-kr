@@ -1,6 +1,6 @@
 ---
-title: "배포에 대 한 이미지를 준비 중"
-description: "Windows Server Essentials을 사용 하는 방법을 설명 합니다."
+title: 이미지 배포 준비
+description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
@@ -13,53 +13,54 @@ author: nnamuhcs
 ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: 16411ab073e9417c52592aa9a6b13707dd461537
-ms.sourcegitcommit: db290fa07e9d50686667bfba3969e20377548504
-ms.translationtype: MT
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59838534"
 ---
-# <a name="preparing-the-image-for-deployment"></a>배포에 대 한 이미지를 준비 중
+# <a name="preparing-the-image-for-deployment"></a>이미지 배포 준비
 
->Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials에 적용 됩니다.
+>적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-이미지를 준비 하는 일반적인 도구가 sysprep.exe입니다. 이 도구를 실행 이미지 일반화할 하 고 이미지를 포함 하는 서버를 다시 시작할 때 실행 초기 구성에서 서버를 종료 합니다. Sysprep.exe 실행 하기 전에 이미지를 모두 수정 작업을 완료 해야 합니다.  
+이미지를 준비하는 일반적인 도구는 sysprep.exe입니다. 이 도구를 실행하면 이미지를 포함한 서버가 다시 시작되었을 때 초기 구성이 실행되도록 이미지를 일반화하고 서버를 중지시킵니다. sysprep.exe를 실행하기 전에 이미지에 대한 모든 수정을 완료해야 합니다.  
   
 > [!NOTE]
->  Windows 정품 인증에 최대 세 번 sysprep.exe을 사용 하 여 초기화할 수 있습니다.  
+>  sysprep.exe를 실행하여 최대 3회까지 Windows 정품 인증을 재설정할 수 있습니다.  
   
-#### <a name="to-prepare-the-image"></a>이미지를 준비 하  
+#### <a name="to-prepare-the-image"></a>이미지를 준비하려면  
   
-1.  추가 하는 SkipIC.txt 삭제 하나요?  
+1.  추가한 SkipIC.txt를 삭제합니다.  
   
-2.  관리자 권한 명령 프롬프트 창을 엽니다. 클릭 **시작**를 마우스 오른쪽 단추로 클릭 **명령 프롬프트**를 선택한 다음 **관리자 권한으로 실행**합니다.  
+2.  관리자 권한으로 명령 프롬프트 창을 엽니다. **시작**을 클릭하고 **명령 프롬프트**를 마우스 오른쪽 단추로 클릭한 다음 **관리자 권한으로 실행**을 선택합니다.  
   
-3.  사용자는 전체 유예 기간이 서버 정책을 준수 하지 않는 되기 전에 되도록 레지스트리 키를 다시 설정 하려면 다음 명령을 실행 합니다.  
+3.  다음 명령을 실행하여 레지스트리 키를 재설정함으로써 서버 호환이 중단되기 전에 사용자가 전체 유예 기간을 갖도록 합니다.  
   
     ```  
     %systemroot%\system32\reg.exe add HKLM\Software\Microsoft\ServerInfrastructureLicensing /v Rearm /t REG_DWORD /d 1 /f  
     ```  
   
-4.  키를 언어 페이지, 로캘 페이지 및 EULA 페이지를 표시 레지스트리 키를 추가 하려면 다음 명령을 실행 합니다. 기본적으로 초기 구성 하는 동안 다음이 페이지 표시 되지 않습니다. 따라서 사전 설치 된 상자 해제 하는 경우이 레지스트리 키를 추가 해야 합니다. 그러나 DVD 해제 하는 경우 하지 추가 해야이 키를 WinPE 및 초기 구성 하는 동안 다음이 페이지 표시 됩니다.  
+4.  다음 명령을 실행하여 레지스트리 키를 디스플레이 키, 언어 페이지, 로캘 페이지 및 EULA 페이지에 추가합니다. 기본적으로 이러한 페이지는 초기 구성 중 표시되지 않습니다. 따라서 사전 설치한 박스를 다시 릴리스하는 경우 이 레지스트리 키를 추가해야 합니다. 하지만 DVD를 공개하는 경우 이러한 페이지가 WinPE 및 초기 구성 중에 표시되므로 이 키를 추가하지 말아야 합니다.  
   
     ```  
     %systemroot%\system32\reg.exe add "HKLM\Software\microsoft\windows server\setup" /v ShowPreinstallPages /t REG_SZ /d true /f  
     ```  
   
-5.  확인란이 미리 키가 경우 초기 구성 키 페이지를 사용할 수 있습니다. 주요 페이지 표시만 ShowPreinstallPages 않게 및 KeyPreInstalled! 않게 합니다.  
+5.  박스에 키가 사전 지정된 경우 초기 구성 키를 비활성화하세요. 키 페이지는 ShowPreinstallPages = true이고 KeyPreInstalled != true일 때만 표시됩니다.  
   
     ```  
     %systemroot%\system32\reg.exe add "HKLM\Software\microsoft\windows server\setup" /v KeyPreInstalled /t REG_SZ /d true /f  
     ```  
   
-6.  하드웨어 요구 사항을 검사를 사용 하지 않도록 설정 하려면 레지스트리 키를 추가 하려면 다음 명령을 실행 합니다. 하드웨어 요구 사항을 충족 하지 않는 된 사용자 사전 설치 된 상자에 대해서만입니다. DVD를 배포 하거나, 사용자가 상자 하드웨어 요구 사항을 충족,이 키를 추가 하지 않는 것이 좋습니다.  
+6.  하드웨어 요구 사항 검사를 비활성화하려면 다음 명령을 실행하여 레지스트리 키를 추가하세요. 이것은 하드웨어 요구 사항을 충족하지 않는 사전 설치 박스에만 해당됩니다. DVD를 릴리스하는 경우 또는 박스가 하드웨어 요구 사항을 충족하는 경우 이 키를 추가하지 않는 것이 좋습니다.  
   
     ```  
     %systemroot%\system32\reg.exe add "HKLM\Software\microsoft\windows server\setup" /v HWRequirementChecks /t REG_DWORD /d 0 /f  
     ```  
   
-7.  (선택 사항) 아래에서 로그 제거 **%programdata%\Microsoft\Windows Server\Logs**합니다.  
+7.  (선택 사항) **%programdata%\Microsoft\Windows Server\Logs**에서 로그를 제거합니다.  
   
-8.  Sysprep 다음 템플릿을 같이 대 한 자동된 xml 파일을 준비 합니다.  
+8.  다음 템플릿에 표시된 것처럼 sysprep을 위해 unattended xml 파일을 준비합니다.  
   
     ```  
     <unattend xmlns="urn:schemas-microsoft-com:unattend" xmlns:ms="urn:schemas-microsoft-com:asm.v3">  
@@ -115,31 +116,31 @@ ms.lasthandoff: 12/12/2017
     </unattend>  
     ```  
   
-9. Sysprep에 대 한 다음 명령을 실행 합니다.  
+9. sysprep에 대한 다음 명령을 실행합니다.  
   
     ```  
     %systemroot%\system32\sysprep\sysprep.exe /generalize /OOBE /unattend:xxx.xml /Quit  
     ```  
   
     > [!IMPORTANT]
-    >  또한 sysprep 매개도 대신 캡처하에서 unattend.xml 추가할 수 있습니다. 아래에 파일이 c:\ 사용자 s 설정 적용 있지만 sysprep 매개도 사용 하는 경우 것 사용자 s 설정 적용 되지 않습니다. 서버를 다시 시작 될 때마다 unattend.xml 캡처하 아래에서 삭제 됩니다. 따라서 unattend.xml 캡처하 아래를 만든 후 서버를 다시 시작 하지 않으면 있는지 확인 합니다.  
+    >  unattend.xml을 sysprep의 매개 변수로 추가하지 않고 %systemdrive% 아래에 추가할 수도 있습니다. 파일을 c:\ 아래에 있는 경우 s 사용자 설정에 따라 적용 됩니다 있지만 sysprep의 매개 변수로 사용 하는 경우 해당 s 사용자 설정에 의해 적용 되지 됩니다. %systemdrive% 아래에 있는 unattend.xml은 서버가 다시 시작될 때마다 삭제됩니다. 따라서 %systemdrive% 아래에 unattend.xml을 만든 후에는 서버가 다시 시작되지 않도록 하세요.  
   
-10. 레지스트리 키 건너뛰고 Windows OOBE 키 페이지를 추가 하려면 다음 명령을 실행 합니다.  
+10. 다음 명령을 실행하여 레지스트리 키를 추가하고 Windows OOBE 키 페이지를 건너뜁니다.  
   
     ```  
     %systemroot%\system32\reg.exe add "HKLM\Software\microsoft\Windows\CurrentVersion\Setup\OOBE" /v SetupDisplayedProductKey /t REG_DWORD /d 1 /f  
     ```  
   
-11. Windows 언어 페이지 선택 하지 않으려면 레지스트리 키를 추가 하려면 다음 명령을 실행 합니다.  
+11. 다음 명령을 실행하여 레지스트리 키를 추가하고 Windows 언어 선택 페이지를 건너뜁니다.  
   
     ```  
     %systemroot%\system32\reg.exe add "HKLM\Software\microsoft\Windows\CurrentVersion\Setup\OOBE" /v SetupDisplayedLanguageSelection /t REG_DWORD /d 1 /f  
     ```  
   
     > [!IMPORTANT]
-    >  Windows OOBE 페이지 초기 구성 페이지 및 break 원격 관리 서버 시나리오는은 내놓는 아이디어는 의미 하거나 마지막 2 단계를 수행 해야 합니다.  
+    >  마지막 2개의 단계를 수행하지 않으면 초기 구성 페이지로 인한 Windows OOBE 페이지가 표시되며 원격 관리 서버 시나리오가 깨지게 됩니다.  
   
-12. Sysprep 후 상자 종료, 이미지를 캡처할 또는 초기 구성 클라이언트 컴퓨터에서 계속 서버를 다시 시작 수 있습니다.  
+12. sysprep 후 박스를 종료하면 이미지를 캡처하거나 서버를 다시 시작하여 클라이언트 컴퓨터에서 초기 구성을 계속할 수 있습니다.  
   
 > [!IMPORTANT]
->  파트너에 게 서버 복구 미디어를 만드는 계획 사진 촬영 하 고 단계로 진행 하기 전에 복구 미디어를 만드는 해야 합니다.
+>  서버 복구 미디어를 만들려는 파트너는 다음 단계를 진행하기 전에 이미지를 캡처하고 복구 미디어를 만들어야 합니다.

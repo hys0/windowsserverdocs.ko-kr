@@ -1,6 +1,6 @@
 ---
-title: "서버 저장소 구성"
-description: "Windows Server Essentials을 사용 하는 방법을 설명 합니다."
+title: 서버 저장소 구성
+description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
@@ -13,46 +13,47 @@ author: nnamuhcs
 ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: 6de485f6fd46464ba707bc0871f60ac2fec5a1db
-ms.sourcegitcommit: 70c1b6cedad55b9c7d2068c9aa4891c6c533ee4c
-ms.translationtype: MT
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59859984"
 ---
 # <a name="configure-server-storage"></a>서버 저장소 구성
 
->Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials에 적용 됩니다.
+>적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 ## <a name="sample-hard-disk-configurations"></a>샘플 하드 디스크 구성  
- 다음 표에서 제안 샘플 하드 디스크 구성 합니다. 예상치 일반적인 사용 및 기능을 기반으로 있지만 최적 성능에 영향을 주는 문제 해결 하지 않습니다. 모든 종류의 지원 되는 하드 디스크가이 구성 (예: SATA 또는 SCSI)에 대 한 기본 설정 및 고객의 요구에 따라 사용할 수 있습니다.  
+ 다음 표는 샘플 하드 디스크 구성을 제안합니다. 예상치는 일반적 사용과 기능을 기준으로 하지만 최적 성능에 영향을 미치는 문제는 다루지 않습니다. 고객의 기본 설정과 요구 사항에 따라 이러한 구성에 지원되는 모든 유형의 하드 디스크(예: SATA 또는 SCSI)를 사용할 수 있습니다.  
   
 > [!IMPORTANT]
->   Windows Server Essentials로 c: 볼륨을 설치 해야 하 고 볼륨의 크기 60 g B 이상 이어야 합니다. 운영 체제 디스크에 두 가지 파티션을 만드는 하지 비즈니스 데이터를 저장할 c: (시스템 파티션)를 사용 하는 것이 좋습니다.  
+>   C: 볼륨으로 Windows Server Essentials를 설치 해야 하 고 볼륨 크기가 60GB 이상 이어야 합니다. 운영 체제 디스크를 두 개의 파티션으로 나누고 C:(시스템 파티션)에는 비즈니스 데이터를 저장하지 않는 것이 좋습니다.  
   
 |서버 수준|디스크 구성|  
 |------------------|------------------------|  
-|항목|-실제 디스크 2<br /><br /> 다음을 포함 하 미러 RAID 1 집합으로 구성 다음과 같습니다.<br /><br /> -C: 볼륨? 60 G B<br /><br /> -D: 볼륨? 1000 G B|  
-|보통|3 세 실제 디스크<br /><br /> 다음을 포함 하 여 RAID 5 집합으로 구성 다음과 같습니다.<br /><br /> -C: 볼륨? 60 G B<br /><br /> -D: 볼륨? 1500 G B|  
-|높은|-5 개 이상의 총 실제 디스크<br /><br /> -RAID 1에서 2 디스크 미러링할 c: 볼륨 포함 된 집합? 100 G B<br /><br /> -다음을 포함 RAID 5 세트에 모든 남은 디스크가 다음과 같습니다.<br /><br /> -D: 볼륨? 1500 G B<br /><br /> -E: 볼륨? 1500 G B|  
+|입력|-두 개의 실제 디스크<br /><br /> -다음을 포함 하는 RAID 1 미러링 세트로 구성:<br /><br /> C: 볼륨? 60GB<br /><br /> -D: 볼륨? 1,000 GB|  
+|보통|-실제 디스크 3 개<br /><br /> -다음을 포함 하는 RAID 5 세트로 구성:<br /><br /> C: 볼륨? 60GB<br /><br /> -D: 볼륨? 1500GB|  
+|높음|-총 5 개 이상의 실제 디스크<br /><br /> -C: 볼륨을 포함 하는 RAID 1 미러링 집합 두 개의 디스크? 100GB<br /><br /> -다음을 포함 하는 RAID 5 집합에서 모든 남은 디스크:<br /><br /> -D: 볼륨? 1500GB<br /><br /> -E: 볼륨? 1500GB|  
   
- 이러한 권장 고려해 설치 된 운영 체제의 크기를 평균 크기 서버를 사용 하는 데이터 스토리지와 서버의 수명 주기 동안 예상 되는 데이터 저장소 성장 합니다. 볼륨 단일 실제 디스크에 파티션 또는 별도 실제 디스크에 배치 될 수 있습니다. 고객에 대 한 중요 한 데이터를 저장 하는 서버, 여러 실제 디스크를 사용 하 고 하드웨어 RAID 또는 저장소 공간을 사용 하 여 고객의 데이터를 보호 하는 데 도움이 것이 좋습니다.  
+ 이러한 권장 사항은 설치된 운영 체제의 크기, 서버에서 사용하는 데이터 저장소의 평균 크기 및 서버 사용 수명 동안 예상되는 데이터 저장소의 증가를 고려한 것입니다. 볼륨은 단일 실제 디스크에 있는 여러 파티션이거나 별도의 실제 디스크에 둘 수 있습니다. 서버에 고객을 위해 중요 한 데이터를 저장 하므로 여러 실제 디스크를 사용 하 고 하드웨어 RAID 또는 저장소 공간을 사용 하 여 고객의 데이터를 보호 하는 데 도움이 되는 것이 좋습니다.  
   
 ## <a name="configuring-your-server-backup"></a>서버 백업 구성  
- 서버에 내장 하드 디스크, 뿐만 아니라 백업에 외장형 USB 하드 디스크를 사용 하 여 고객 고려해 야 합니다. 고객 두 개 이상의 외장형 하드 디스크 서버에 데이터를 모두 백업 용량이 부족 한 것이 가장 좋습니다 합니다. 외장형 하드 디스크를 사용 하는 추가 데이터를 보호 하 고 각 밤 고객 디스크 오프 한 걸릴 수 있습니다.  
+ 서버에 있는 내부 하드 디스크 이외에 고객은 외부 USB 하드 디스크를 백업에 사용할 수 있습니다. 이상적인 경우 고객은 서버의 모든 데이터를 백업할 만한 충분한 공간을 가진 최소 두 개 이상의 외부 하드 디스크를 사용합니다. 외부 하드 디스크를 사용하는 경우 고객은 매일 밤 하나의 디스크를 오프사이트로 이동하여 데이터를 추가적으로 보호할 수 있습니다.  
   
 ## <a name="partition-configuration"></a>파티션 구성  
- 서버에 대 한 초기 구성 하는 동안 클라이언트 컴퓨터 백업 폴더와 공유 폴더를 포함 하는 기본 서버 폴더의 설정에 0 디스크에 가장 큰 데이터 파티션을 만들어집니다.  
+ 서버의 초기 구성 동안 공유 폴더 및 클라이언트 컴퓨터 백업 폴더를 포함하는 일련의 기본 서버 폴더가 디스크 0의 가장 큰 데이터 파티션에 만들어집니다.  
   
-## <a name="see-also"></a>참조 하십시오  
+## <a name="see-also"></a>관련 항목  
 
- [Windows Server Essentials ADK 시작](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
+ [Windows Server Essentials ADK 시작 하기](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
  [만들기 및 이미지를 사용자 지정](Creating-and-Customizing-the-Image.md)   
- [추가로 사용자 지정](Additional-Customizations.md)   
- [배포에 대 한 이미지를 준비 중](Preparing-the-Image-for-Deployment.md)   
- [고객 만족도 테스트합니다.](Testing-the-Customer-Experience.md)
+ [추가 사용자 지정](Additional-Customizations.md)   
+ [배포용 이미지 준비](Preparing-the-Image-for-Deployment.md)   
+ [사용자 환경 테스트](Testing-the-Customer-Experience.md)
 
- [Windows Server Essentials ADK 시작](../install/Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
+ [Windows Server Essentials ADK 시작 하기](../install/Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
  [만들기 및 이미지를 사용자 지정](../install/Creating-and-Customizing-the-Image.md)   
- [추가로 사용자 지정](../install/Additional-Customizations.md)   
- [배포에 대 한 이미지를 준비 중](../install/Preparing-the-Image-for-Deployment.md)   
- [고객 만족도 테스트합니다.](../install/Testing-the-Customer-Experience.md)
+ [추가 사용자 지정](../install/Additional-Customizations.md)   
+ [배포용 이미지 준비](../install/Preparing-the-Image-for-Deployment.md)   
+ [사용자 환경 테스트](../install/Testing-the-Customer-Experience.md)
 

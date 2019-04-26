@@ -1,6 +1,6 @@
 ---
-title: "문제 해결 컴퓨터 백업 및 복원 Windows Server Essentials의 오류"
-description: "Windows Server Essentials을 사용 하는 방법을 설명 합니다."
+title: Windows Server Essentials의 컴퓨터 백업 및 복원 오류 문제 해결
+description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 06/25/2013
 ms.prod: windows-server-2016-essentials
@@ -13,234 +13,235 @@ author: nnamuhcs
 ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: 37e79661442ba9f66a564b6c6c8fb57db1978454
-ms.sourcegitcommit: db290fa07e9d50686667bfba3969e20377548504
-ms.translationtype: MT
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59812334"
 ---
-# <a name="troubleshoot-computer-backup-and-restore-errors-in-windows-server-essentials"></a>문제 해결 컴퓨터 백업 및 복원 Windows Server Essentials의 오류
+# <a name="troubleshoot-computer-backup-and-restore-errors-in-windows-server-essentials"></a>Windows Server Essentials의 컴퓨터 백업 및 복원 오류 문제 해결
 
->Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials에 적용 됩니다.
+>적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-이 절차를 사용 하 여 컴퓨터 백업을 백업 구성 문제, 불완전 하거나 실패 백업을, 백업 건강 경고 및을 파일, 폴더 또는 전체 시스템 복원을 문제를 비롯 한 Windows Server Essentials의 문제를 해결 합니다.  
+다음 절차를 통해 백업 구성 문제, 불완전한 백업 또는 실패한 백업, 백업 상태 경고 및 파일, 폴더 또는 전체 시스템 복원 문제 등 Windows Server Essentials의 컴퓨터 백업 문제를 해결할 수 있습니다.  
   
 > [!NOTE]
->  Windows Server Essentials 커뮤니티에서 가장 최근에 문제 해결 정보를 방문 하 여 [Windows Server Essentials 포럼](https://social.technet.microsoft.com/Forums//winserveressentials/threads)합니다.  
+>  Windows Server Essentials 커뮤니티에서 최신 문제 해결 정보를 참조 하세요. 합니다 [Windows Server Essentials 포럼](https://social.technet.microsoft.com/Forums//winserveressentials/threads)합니다.  
   
-##  <a name="BKMK_TroubleshootBackupConfigurationIssues"></a>연결 된 컴퓨터에 대 한 백업 구성 문제 해결  
- 이 절차를 사용 하 여 Windows Server Essentials 서버에 백업 하는 컴퓨터에 대 한 백업 구성 된 문제를 해결 합니다.  
-  
-### <a name="errors"></a>오류  
-  
--   백업 구성 성공적으로 완료 되지 않았습니다.  
-  
--   컴퓨터에 대 한 오류 수집 정보  
-  
--   백업에서 제거 컴퓨터 오류  
-  
-### <a name="resolutions"></a>해결 방법  
-  
-##### <a name="to-troubleshoot-errors-that-occur-while-you-configure-backups-for-a-connected-computer"></a>연결 된 컴퓨터에 대 한 백업을 구성 하는 동안 발생 하는 오류를 해결 하려면  
-  
-1.  네트워크 장치를 통해 컴퓨터가 네트워크에 연결 되어 있는지 확인 합니다.  
-  
-2.  제대로 작동 하 고 컴퓨터에 연결 된 네트워크 디바이스도 전원이 켜져 네트워크에 연결 되어 있는지를 확인 합니다.  
-  
-3.  Windows Server 클라이언트 백업 서비스 및 Windows Server 클라이언트 컴퓨터 백업 공급자 서비스 서버에서 실행 되 고 있는지 확인 합니다.  
-  
-    ###### <a name="to-start-computer-backup-services-on-the-server"></a>서버에서 컴퓨터 백업 서비스를 시작 하려면  
-  
-    1.  서버에서 **시작**, 클릭 **관리 도구**을 차례로 클릭 하 고 **서비스**합니다.  
-  
-    2.  누른 다음 아래로 스크롤하여 **Windows Server 클라이언트 컴퓨터 백업 공급자 서비스**합니다. 서비스의 상태 없으면 **시작**를 서비스를 마우스 오른쪽 단추로 클릭 한 다음 **시작**합니다.  
-  
-    3.  클릭 **Windows Server 클라이언트 컴퓨터 백업 서비스**합니다. 서비스의 상태 없으면 **시작**를 서비스를 마우스 오른쪽 단추로 클릭 한 다음 **시작**합니다.  
-  
-    4.  닫기 **서비스**합니다.  
-  
-4.  Windows Server 클라이언트 컴퓨터 백업 공급자 서비스 클라이언트 컴퓨터에서 실행 되 고 있는지 확인 합니다.  
-  
-    ###### <a name="to-start-the-computer-backup-service-on-the-client-computer"></a>클라이언트 컴퓨터의 컴퓨터 백업 서비스를 시작 하려면  
-  
-    1.  클라이언트 컴퓨터에서 클릭 **시작**, 입력 **서비스** 에 **프로그램 및 파일 검색** 텍스트 상자 하 고 Enter 키를 누릅니다.  
-  
-    2.  누른 다음 아래로 스크롤하여 **Windows Server 클라이언트 컴퓨터 백업 공급자 서비스**합니다. 서비스의 상태 없으면 **시작**를 서비스를 마우스 오른쪽 단추로 클릭 한 다음 **시작**합니다.  
-  
-    3.  닫기 **서비스**합니다.  
-  
-5.  백업 데이터베이스에 오류가 있는지 확인 하려면 알림을 확인 합니다. 오류가 있는 경우 복구 백업 데이터베이스에 알림에 표시 지침을 따릅니다.  
-  
-6.  컴퓨터에서 Windows Server Essentials 커넥터 소프트웨어를 제거한 다음 다시 설치 합니다. 자세한 내용은 참조 항목 [커넥터 소프트웨어를 제거](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_13) 및 [커넥터 소프트웨어를 설치](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_11)합니다.  
-  
-##  <a name="BKMK_TroubleshootaBackupThatDidNotCompleteProperly"></a>올바르게 완료 되지 않은 백업 문제 해결  
- 백업이 실패 상태에 있는 경우 성공 백업의 및 데이터가 사용할 수 복원할 수 있습니다. 그러나 백업에 완료 되지 않은 상태가 이면 구성 백업한 있지만 일부 데이터를 복원할 수에 사용할 수는 백업에 모든 항목 지정 됩니다.  
+##  <a name="BKMK_TroubleshootBackupConfigurationIssues"></a> 연결된 된 컴퓨터에 대 한 백업 구성 문제 해결  
+ 다음 절차를 통해 Windows Server Essentials 서버에 백업된 컴퓨터의 백업 구성 문제를 해결할 수 있습니다.  
   
 ### <a name="errors"></a>오류  
   
--   백업을 완료 되지 않았습니다.  
+-   백업 구성이 완료되지 않았습니다.  
   
--   백업이 실패  
+-   컴퓨터에 대한 정보를 수집하는 동안 오류가 발생했습니다.  
+  
+-   백업에서 컴퓨터를 제거하는 동안 오류가 발생했습니다.  
   
 ### <a name="resolutions"></a>해결 방법  
   
-##### <a name="to-identify-volumes-that-were-not-backed-up-successfully"></a>백업 되지 않았기 성공적으로 볼륨을 식별 하기 위해  
+##### <a name="to-troubleshoot-errors-that-occur-while-you-configure-backups-for-a-connected-computer"></a>연결된 컴퓨터에 대한 백업을 구성하는 동안 발생하는 오류 문제를 해결하려면  
   
-1.  Windows Server Essentials 대시보드 열고 클릭 **컴퓨터와 백업**합니다.  
+1.  컴퓨터가 네트워크 장치를 통해 네트워크에 연결되어 있는지 확인합니다.  
   
-2.  백업 무엇 하지 성공적으로 완료 장소와 클릭 한 다음 컴퓨터의 이름을 클릭 **컴퓨터 속성 보기** 에 **작업** 창 합니다.  
+2.  컴퓨터가 연결된 네트워크 장치가 네트워크에도 연결되어 있고 전원이 켜져 있으며 제대로 작동하는지 확인합니다.  
   
-3.  클릭 한 다음 및 성공적으로 완료 되지 않은 백업을 클릭 **자세한 내용을 보려면**합니다.  
+3.  Windows Server Client Backup Service 및 Windows Server Client Computer Backup Provider Service가 서버에서 실행되고 있는지 확인합니다.  
   
-4.  에 **백업 세부 정보** 대화 상자에서 녹색 성공적으로 백업 된 모든 볼륨의 상태에 표시 됩니다.  
+    ###### <a name="to-start-computer-backup-services-on-the-server"></a>서버에서 컴퓨터 백업 서비스를 시작하려면  
   
-##### <a name="to-troubleshoot-an-unsuccessful-backup-of-a-volume"></a>볼륨 실패 백업을 문제를 해결 하려면  
+    1.  서버에서 **시작**, **관리 도구** 및 **서비스**를 차례로 클릭합니다.  
   
-1.  제대로 작동 하 고 하드 디스크 설정, 컴퓨터에 연결 되어 있는지를 확인 합니다.  
+    2.  아래로 스크롤하여 **Windows Server Client Computer Backup Provider Service**를 클릭합니다. 서비스의 상태가 **시작됨**이 아니면 서비스를 마우스 오른쪽 단추로 클릭한 후 **시작**을 클릭합니다.  
   
-2.  실행 **chkdsk /f /r** 하드 디스크 오류 해결 (**/f**) 하 고 읽을 수 있는 정보 불량 섹터 복구 (**/r**). 실행 중인에 대 한 자세한 내용은 **chkdsk**, 참조 [CHKDSK](https://go.microsoft.com/fwlink/?LinkId=206562)합니다.  
+    3.  **Windows Server Client Computer Backup Service**를 클릭합니다. 서비스의 상태가 **시작됨**이 아니면 서비스를 마우스 오른쪽 단추로 클릭한 후 **시작**을 클릭합니다.  
   
-3.  컴퓨터를 종료 하거나 백업을 실행 하는 동안에 네트워크에서 연결이 끊어진 하지 있는지 확인 합니다.  
+    4.  **서비스**를 닫습니다.  
   
-4.  각 볼륨 실행 하는 백업에 대 한 충분 한 공간이 있는지 확인 합니다. 백업은 VSS 스냅숏을 만드는 클라이언트 컴퓨터에 추가 디스크 공간을 확보 해야 합니다. 시스템 예약된 하지 않은 모든 볼륨의 사용 가능한 디스크 공간 최소 10% 무료 있어야 합니다. 시스템 예약 볼륨의 볼륨의 크기는 500 MB 보다 작은 경우 VSS 32 활용 하려면 사용 가능한 공간이 스냅숏을; 만들려면 볼륨이 500MB 이상이 VSS 320MB의 여유 공간이 필요 합니다.  
+4.  Windows Server Client Computer Backup Provider Service가 클라이언트 컴퓨터에서 실행되고 있는지 확인합니다.  
   
-     사용 가능한 공간이 부족 볼륨에 사용할 수 있는 경우 이러한 해결 방법 중 하나를 수행 합니다.  
+    ###### <a name="to-start-the-computer-backup-service-on-the-client-computer"></a>클라이언트 컴퓨터에서 컴퓨터 백업 서비스를 시작하려면  
   
-    -   볼륨을 확장 합니다. 예약 시스템 볼륨을 제외 하 고 기본 또는 동적 볼륨을 확장할 수 있습니다.  
+    1.  클라이언트 컴퓨터에서 **시작**을 클릭하고 **프로그램 및 파일 검색** 텍스트 상자에 **서비스**를 입력한 후 Enter 키를 누릅니다.  
   
-        ###### <a name="to-extend-a-volume"></a>볼륨을 확장 하  
+    2.  아래로 스크롤하여 **Windows Server Client Computer Backup Provider Service**를 클릭합니다. 서비스의 상태가 **시작됨**이 아니면 서비스를 마우스 오른쪽 단추로 클릭한 후 **시작**을 클릭합니다.  
   
-        1.  제어판에서 클릭 **시스템 및 보안**합니다.  
+    3.  **서비스**를 닫습니다.  
   
-        2.  아래에서 **관리 도구**, 클릭 **하드 디스크 파티션 만들기 및 포맷**합니다.  
+5.  경고를 확인하여 백업 데이터베이스에 오류가 있는지 확인합니다. 오류가 있는 경우 경고의 지침에 따라 백업 데이터베이스를 복구합니다.  
   
-        3.  확장을 볼륨을 마우스 오른쪽 단추로 클릭 합니다. 하는 경우 **볼륨 확장** 이 사용 하도록 설정 해당 옵션을 선택 합니다. 옵션을 사용 하지 않는 경우 볼륨을 확장할 수는 없습니다.  
+6.  컴퓨터에서 Windows Server Essentials Connector 소프트웨어를 제거한 후 다시 설치합니다. 자세한 내용은 [Connector 소프트웨어 제거](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_13)(영문) 및 [Connector 소프트웨어 설치](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_11)(영문) 항목을 참조하세요.  
   
-        4.  볼륨을 확장 확장 볼륨 마법사의 단계를 따릅니다.  
+##  <a name="BKMK_TroubleshootaBackupThatDidNotCompleteProperly"></a> 제대로 완료 되지 않은 백업 문제 해결  
+ 백업 상태가 실패인 경우 백업에 성공한 부분이 없으며 복원에 사용할 수 있는 데이터가 없습니다. 그러나 백업의 상태가 완료 안 됨인 경우 백업 구성에 지정된 항목 중 일부가 백업되지 않았지만 일부 데이터는 복원에 사용할 수도 있습니다.  
   
-    -   더 많은 공간을 확보 하려면 볼륨에서 콘텐츠를 삭제 합니다.  
+### <a name="errors"></a>오류  
+  
+-   백업이 완료되지 않았습니다.  
+  
+-   백업에 실패했습니다.  
+  
+### <a name="resolutions"></a>해결 방법  
+  
+##### <a name="to-identify-volumes-that-were-not-backed-up-successfully"></a>백업되지 않은 볼륨을 식별하려면  
+  
+1.  Windows Server Essentials Dashboard를 연 후 **컴퓨터 및 백업**을 클릭합니다.  
+  
+2.  백업이 완료되지 않은 컴퓨터의 이름을 클릭한 후 **작업** 창에서 **컴퓨터 속성 보기**를 클릭합니다.  
+  
+3.  완료되지 않은 백업을 클릭한 후 **자세히 보기**를 클릭합니다.  
+  
+4.  **백업 세부 정보** 대화 상자에서 백업된 모든 볼륨의 상태에 녹색 확인 표시가 표시되어 있습니다.  
+  
+##### <a name="to-troubleshoot-an-unsuccessful-backup-of-a-volume"></a>볼륨의 실패한 백업 문제를 해결하려면  
+  
+1.  하드 디스크가 컴퓨터에 연결되어 있고 켜져 있으며 제대로 작동하는지 확인합니다.  
+  
+2.  **chkdsk /f /r** 을 실행하여 하드 디스크에 대한 모든 오류를 해결하고(**/f**), 모든 불량 섹터에서 읽을 수 있는 정보를 복구합니다(**/r**). **chkdsk**를 실행하는 방법에 대한 자세한 내용은 [CHKDSK](https://go.microsoft.com/fwlink/?LinkId=206562)를 참조하세요.  
+  
+3.  백업이 실행되는 동안 컴퓨터가 종료되거나 네트워크에서 연결이 끊어지지 않았는지 확인합니다.  
+  
+4.  각 볼륨에 백업을 실행하기 위한 사용 가능한 공간이 충분한지 확인합니다. 백업을 실행하려면 클라이언트 컴퓨터에 VSS 스냅숏을 만들기 위한 추가 디스크 공간이 필요합니다. 시스템에서 사용하지 않는 모든 볼륨에서는 사용 가능한 디스크 공간의 10% 이상을 사용할 수 있어야 합니다. 시스템에서 사용하는 볼륨에서 볼륨 크기가 500MB 미만인 경우 VSS에 스냅숏을 만들기 위해 사용 가능한 공간이 32MB 필요하고, 볼륨이 500MB 이상인 경우 VSS에 사용 가능한 공간이 320MB 필요합니다.  
+  
+     볼륨에서 사용 가능한 공간이 부족한 경우 다음 해결 방법 중 하나를 시도해 보세요.  
+  
+    -   볼륨을 확장합니다. 시스템에서 사용하는 볼륨을 제외한 모든 기본 또는 동적 볼륨을 확장할 수 있습니다.  
+  
+        ###### <a name="to-extend-a-volume"></a>볼륨을 확장하려면  
+  
+        1.  제어판에서 **시스템 및 보안**을 클릭합니다.  
+  
+        2.  **관리 도구**에서 **하드 디스크 파티션 만들기 및 포맷**을 클릭합니다.  
+  
+        3.  확장하려는 볼륨을 마우스 오른쪽 단추로 클릭합니다. **볼륨 확장** 이 사용하도록 설정된 경우 해당 옵션을 선택합니다. 이 옵션이 사용하도록 설정되지 않은 경우 볼륨을 확장할 수 없습니다.  
+  
+        4.  볼륨 확장 마법사의 단계에 따라 볼륨을 확장합니다.  
+  
+    -   볼륨에서 콘텐츠를 삭제하여 더 많은 공간을 사용할 수 있도록 만듭니다.  
   
         > [!NOTE]
-        >  시스템 예약 볼륨의 공간을 확보 해야 하는 경우 시스템 복구 이미지를 다른 볼륨 이동할 수 있습니다. 자세한 내용은 [시스템 복구 이미지를 배포](https://technet.microsoft.com/library/dd744280\(v=ws.10\).aspx)합니다.  
+        >  시스템에서 사용하는 볼륨에서 공간을 확보해야 경우 시스템 복구 이미지를 다른 볼륨으로 이동할 수 있습니다. 자세한 내용은 [시스템 복구 이미지 배포](https://technet.microsoft.com/library/dd744280\(v=ws.10\).aspx)를 참조하세요.  
   
-    -   볼륨 클라이언트 백업에서 제외 합니다. 볼륨의 데이터 백업 복사본을 유지 하는 것이 중요 하지 않는 경우에이 작업을 수행 합니다.  
+    -   클라이언트 백업에서 볼륨을 제외합니다. 볼륨에 데이터의 백업 복사본을 유지하는 것이 중요하지 않은 경우에만 이렇게 하세요.  
   
         > [!WARNING]
-        >  클라이언트 백업에서 시스템 예약 볼륨을 제외 클라이언트 시스템을 백업 하지는 하 고 컴퓨터의 모든 시스템 복원을 수행할 수 없습니다.  
+        >  클라이언트 백업에서 시스템에서 사용하는 볼륨을 제외하면 클라이언트 시스템이 백업되지 않아 컴퓨터에서 전체 시스템 복원을 수행할 수 없습니다.  
   
-5.  다른 나타날 수를 성공적으로 완료 백업에 대 한 서버에서 디스크 공간이 부족 하는 서버에 알림에 대 한 확인 합니다. 문제 해결을 위해 경고의 지침을 따릅니다.  
+5.  서버에 백업을 완료하기 위한 공간이 충분하지 않음을 나타낼 수 있는, 서버에 대한 다른 경고를 확인합니다. 경고의 지침에 따라 문제를 해결합니다.  
   
-6.  실행 **vssadmin** 섀도 복사본 서비스 VSS (볼륨) 문제를 해결 하는 명령 프롬프트에서 발행 합니다. 에 대 한 내용은 **vssadmin**, 참조 [VSSADMIN](https://go.microsoft.com/fwlink/?LinkID=94332)합니다.  
+6.  명령 프롬프트에서 **vssadmin**을 실행하여 VSS(볼륨 섀도 복사본 서비스) 문제를 해결합니다. **vssadmin**에 대한 자세한 내용은 [VSSADMIN](https://go.microsoft.com/fwlink/?LinkID=94332)(영문)을 참조하세요.  
   
-##  <a name="BKMK_TroubleshootBackupHealthAlertIssues"></a>백업 건강 경고 문제 해결  
+##  <a name="BKMK_TroubleshootBackupHealthAlertIssues"></a> 백업 상태 경고 문제 해결  
   
 ### <a name="errors"></a>오류  
   
--   Windows Server 솔루션 컴퓨터 백업 공급자 서비스 작동 중지 됨  
+-   Windows Server Solutions Computer Backup Provider Service의 작동이 중지되었습니다.  
   
--   Windows Server 솔루션 클라이언트 컴퓨터 백업 공급자 서비스가 작동을 중지  
+-   Windows Server 솔루션 클라이언트 컴퓨터 백업 공급자 서비스의 작동이 중지되었습니다.  
   
 ### <a name="resolutions"></a>해결 방법  
   
-##### <a name="to-troubleshoot-a-backup-health-alert"></a>백업 상태 경고를 문제를 해결 하려면  
+##### <a name="to-troubleshoot-a-backup-health-alert"></a>백업 상태 경고 문제를 해결하려면  
   
-1.  알림을 백업 데이터베이스에 문제가 있음을 알리는, 경우 문제 해결을 위해 경고의 지침을 따릅니다.  
+1.  경고에 백업 데이터베이스에 문제가 있다고 표시되는 경우 경고의 지침에 따라 문제를 해결합니다.  
   
-2.  알림을 백업 서비스가 실행 되 고 있지는 메시지가 표시, 서버 또는 오류 메시지가 수신 되는 클라이언트 컴퓨터에서 서비스를 시작 하려고 합니다.  
+2.  경고에 백업 서비스가 실행되고 있지 않다고 표시되는 경우 오류 메시지를 받은 서버 또는 클라이언트 컴퓨터에서 서비스를 시작해 봅니다.  
   
-    ###### <a name="to-start-backup-services-on-the-server"></a>서버에 백업 서비스를 시작 하려면  
+    ###### <a name="to-start-backup-services-on-the-server"></a>서버에서 백업 서비스를 시작하려면  
   
-    1.  서버에서 **시작**를 클릭 하 고 **관리 도구**을 차례로 클릭 하 고 **서비스**합니다.  
+    1.  서버에서 **시작**, **관리 도구** 및 **서비스**를 차례로 클릭합니다.  
   
         > [!NOTE]
-        >  서버를 원격으로 관리 하는 경우 서버 바탕 화면에 액세스 하려면 원격 데스크톱 연결을 사용 해야 합니다. 원격 데스크톱 연결을 사용 하 여에 대 한 정보를 참조 하세요. [원격 데스크톱 연결을 사용 하 여 다른 컴퓨터에 연결](https://windows.microsoft.com/windows-vista/Connect-to-another-computer-using-Remote-Desktop-Connection)합니다.  
+        >  서버를 원격으로 관리하는 경우 원격 데스크톱 연결을 사용하여 서버 데스크톱에 액세스해야 합니다. 원격 데스크톱 연결을 사용하는 방법에 대한 자세한 내용은 [원격 데스크톱 연결을 사용하여 다른 컴퓨터에 연결](https://windows.microsoft.com/windows-vista/Connect-to-another-computer-using-Remote-Desktop-Connection)을 참조하세요.  
   
-    2.  누른 다음 아래로 스크롤하여 **Windows Server 클라이언트 컴퓨터 백업 공급자 서비스**합니다. 서비스의 상태 없으면 **시작**를 서비스를 마우스 오른쪽 단추로 클릭 한 다음 **시작**합니다.  
+    2.  아래로 스크롤하여 **Windows Server Client Computer Backup Provider Service**를 클릭합니다. 서비스의 상태가 **시작됨**이 아니면 서비스를 마우스 오른쪽 단추로 클릭한 후 **시작**을 클릭합니다.  
   
-    3.  클릭 **Windows Server 클라이언트 컴퓨터 백업 서비스**합니다. 서비스의 상태 없으면 **시작**를 서비스를 마우스 오른쪽 단추로 클릭 한 다음 **시작**합니다.  
+    3.  **Windows Server Client Computer Backup Service**를 클릭합니다. 서비스의 상태가 **시작됨**이 아니면 서비스를 마우스 오른쪽 단추로 클릭한 후 **시작**을 클릭합니다.  
   
-    4.  닫기 **서비스**합니다.  
+    4.  **서비스**를 닫습니다.  
   
-    ###### <a name="to-start-backup-services-on-a-client-computer"></a>백업 서비스 클라이언트 컴퓨터를 시작 하려면  
+    ###### <a name="to-start-backup-services-on-a-client-computer"></a>클라이언트 컴퓨터에서 백업 서비스를 시작하려면  
   
-    1.  클라이언트 컴퓨터에서 클릭 **시작**, 입력 **서비스** 에 **프로그램 및 파일 검색** 텍스트 상자를 클릭 하 고 있습니다.  
+    1.  클라이언트 컴퓨터에서 **시작**을 클릭하고 **프로그램 및 파일 검색** 텍스트 상자에 **서비스**를 입력한 후 Enter 키를 클릭합니다.  
   
-    2.  마우스 오른쪽 단추로 클릭 **Windows Server 클라이언트 컴퓨터 백업 공급자 서비스**을 차례로 클릭 하 고 **시작**합니다.  
+    2.  **Windows Server Client Computer Backup Provider Service**를 마우스 오른쪽 단추로 클릭한 후 **시작**을 클릭합니다.  
   
-    3.  닫는 **서비스**합니다.  
+    3.  **서비스**를 닫습니다.  
   
-3.  이벤트 로그 클라이언트 컴퓨터 또는 서비스 또는 드라이버를 백업 관련 된 문제에 대 한 서버를 확인 합니다.  
+3.  클라이언트 컴퓨터 또는 서버에서 백업 서비스 또는 드라이버에 관련된 문제가 있는지 이벤트 로그를 확인합니다.  
   
-4.  서버 또는 오류 메시지가 수신 되는 클라이언트 컴퓨터를 다시 부팅 합니다.  
+4.  오류 메시지를 받은 서버 또는 클라이언트 컴퓨터를 다시 부팅합니다.  
   
-5.  클라이언트 백업에 영향을 미칠 수 있는 기타 문제에 대 한 상태 알림을 확인 합니다.  
+5.  클라이언트 백업에 영향을 미칠 수 있는 다른 문제가 있는지 상태 경고를 확인합니다.  
   
-##  <a name="BKMK_FileAndFolder"></a>파일 또는 폴더 복원 문제 해결  
+##  <a name="BKMK_FileAndFolder"></a> 파일 또는 폴더 복원 문제 해결  
   
 ### <a name="errors"></a>오류  
   
--   파일 또는 폴더 복원 성공적으로 완료 되지 않았습니다.  
+-   파일 또는 폴더 복원이 완료되지 않았습니다.  
   
 ### <a name="resolutions"></a>해결 방법  
   
-##### <a name="to-troubleshoot-an-unsuccessful-file-or-folder-restore"></a>실패 한 파일 또는 폴더 복원의 문제를 해결 하려면  
+##### <a name="to-troubleshoot-an-unsuccessful-file-or-folder-restore"></a>실패한 파일 또는 폴더 복원 문제를 해결하려면  
   
-1.  네트워크 장치를 통해 컴퓨터가 네트워크에 연결 되어 있는지 확인 합니다.  
+1.  컴퓨터가 네트워크 장치를 통해 네트워크에 연결되어 있는지 확인합니다.  
   
-2.  제대로 작동 하 고 컴퓨터에 연결 된 네트워크 디바이스도 전원이 켜져 네트워크에 연결 되어 있는지를 확인 합니다.  
+2.  컴퓨터가 연결된 네트워크 장치가 네트워크에도 연결되어 있고 전원이 켜져 있으며 제대로 작동하는지 확인합니다.  
   
-3.  백업 데이터베이스에 오류가 있는지 확인 하려면 알림을 확인 합니다. 오류가 있는 경우 복구 백업 데이터베이스에 알림에 표시 지침을 따릅니다.  
+3.  경고를 확인하여 백업 데이터베이스에 오류가 있는지 확인합니다. 오류가 있는 경우 경고의 지침에 따라 백업 데이터베이스를 복구합니다.  
   
-4.  다른 백업에서 파일 또는 폴더를 복원 해 보세요.  
+4.  다른 백업에서 파일 또는 폴더를 복원해 봅니다.  
   
-5.  하 않도록는 **Windows Server 솔루션 컴퓨터 복원 드라이버** 제대로 작동 하 고 설치 합니다.  
+5.  **Windows Server Solution Computer Restore Driver**가 설치되어 있으며 제대로 작동하는지 확인합니다.  
   
-    ###### <a name="to-check-the-status-of-the-windows-server-solution-computer-restore-driver"></a>Windows Server 솔루션 컴퓨터 복원 드라이버의 상태를 확인 하려면  
+    ###### <a name="to-check-the-status-of-the-windows-server-solution-computer-restore-driver"></a>Windows Server Solution Computer Restore Driver의 상태를 확인하려면  
   
-    1.  클릭 **시작**, 입력 **장치 관리자** 에 **프로그램 및 파일 검색** 텍스트 상자를 클릭 하 고 있습니다.  
+    1.  **시작**을 클릭하고 **프로그램 및 파일 검색** 텍스트 상자에 **장치 관리자**를 입력한 후 Enter 키를 클릭합니다.  
   
-    2.  장치 관리자에서 클릭 **시스템 장치**,으로 스크롤하고 **Windows Server 솔루션 컴퓨터 복원 드라이버**합니다.  
+    2.  장치 관리자에서 **시스템 장치**를 클릭하고 **Windows Server Solutions Computer Restore Driver**로 스크롤합니다.  
   
-    3.  드라이버 표시 되지 않으면 다음과 같습니다.  
+    3.  드라이버가 표시되지 않는 경우  
   
-        1.  관리자 권한으로 명령 프롬프트를 열고 하 고 다음 명령을 실행 합니다.  
+        1.  관리자 권한으로 명령 프롬프트를 열고 다음 명령을 실행합니다.  
   
-             **%ProgramFiles%\Windows Server\Bin\BackupDriverInstaller.exe 있나요?  저는**  
+             **%ProgramFiles%\Windows Server\Bin\BackupDriverInstaller.exe?  �i**  
   
-        2.  장치 관리자를 새로 고칩니다. 드라이버 나타나면 정상입니다.  
+        2.  장치 관리자를 새로 고칩니다. 드라이버가 표시되어야 합니다.  
   
-    4.  표시 되는 아이콘은 컴퓨터 모니터, 경우 드라이버가 설치 되어 실행 제대로 합니다. 장치 관리자를 닫습니다.  
+    4.  표시된 아이콘이 컴퓨터 모니터인 경우 드라이버가 설치되어 있고 제대로 실행되고 있는 것입니다. 장치 관리자를 닫습니다.  
   
-    5.  표시 되는 아이콘 컴퓨터 모니터 없는 경우  
+    5.  표시된 아이콘이 컴퓨터 모니터가 아닌 경우  
   
-        1.  마우스 오른쪽 단추로 클릭 **Windows Server 솔루션 컴퓨터 복원 드라이버**을 차례로 클릭 하 고 **속성**합니다.  
+        1.  **Windows Server Solutions Computer Restore Driver**를 마우스 오른쪽 단추로 클릭한 후 **속성**을 클릭합니다.  
   
-        2.  클릭 하 고 **드라이버** 탭을 클릭 한 다음 **드라이버 업데이트**합니다.  
+        2.  **드라이버** 탭을 클릭한 후 **드라이버 업데이트**를 클릭합니다.  
   
-        3.  클릭 **업데이트 된 드라이버 소프트웨어 자동으로 검색**, 드라이버를 업데이트 하는 지침을 따릅니다.  
+        3.  **업데이트된 드라이버 소프트웨어 자동으로 검색**을 클릭한 후 지침에 따라 드라이버를 업데이트합니다.  
   
     6.  장치 관리자를 닫습니다.  
   
-6.  컴퓨터에서 Windows Server Essentials 커넥터 소프트웨어를 제거한 다음 다시 설치 합니다. 자세한 내용은 참조 항목 [커넥터 소프트웨어를 제거](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_13) 및 [커넥터 소프트웨어를 설치](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_11)합니다.  
+6.  컴퓨터에서 Windows Server Essentials Connector 소프트웨어를 제거한 후 다시 설치합니다. 자세한 내용은 [Connector 소프트웨어 제거](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_13)(영문) 및 [Connector 소프트웨어 설치](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_11)(영문) 항목을 참조하세요.  
   
-##  <a name="BKMK_Troubleshootfullsystemrestoreissues"></a>전체 시스템 복원을 문제 해결  
+##  <a name="BKMK_Troubleshootfullsystemrestoreissues"></a> 전체 시스템 복원 문제 해결  
   
 ### <a name="errors"></a>오류  
   
--   전체 시스템 복원을 후 클라이언트 컴퓨터에 로그온 할 수 없습니다.  
+-   전체 시스템 복원 후에 클라이언트 컴퓨터에 로그온할 수 없습니다.  
   
 ### <a name="resolutions"></a>해결 방법  
- 컴퓨터의 이름을 변경 하 고 나중에 변경 하기 전에 컴퓨터 이름, 복원 후 도메인 계정에 로그인 하려고 할 때 저장 된 백업 복원 해야 할 경우이 오류가 발생 합니다. "서버의 보안 데이터베이스가 워크스테이션 신뢰 관계에 대 한 계정을 않습니다." 네트워크 액세스를 컴퓨터에 다시, 커넥터 소프트웨어를 제거 하 고는 Windows 도메인에서 컴퓨터를 제거 다시 서버에 연결 합니다.  
+ 컴퓨터의 이름을 변경하고 나중에 컴퓨터 이름이 변경되기 전에 저장된 백업으로 복원해야 할 경우, 복원 후 도메인 계정에 로그온하려고 하면 "서버의 보안 데이터베이스가 이 워크스테이션 트러스트 관계를 위한 컴퓨터 계정을 가지고 있지 않습니다." 오류가 표시됩니다. 다시 컴퓨터에 대한 네트워크 액세스 권한을 얻으려면 Connector 소프트웨어를 제거하고 Windows 도메인에서 컴퓨터를 제거한 후 서버에 다시 연결합니다.  
   
-##### <a name="to-regain-network-access-to-a-restored-computer-after-a-computer-name-change"></a>네트워크에 다시 액세스 컴퓨터를 복원한 후 컴퓨터 이름 변경 하려면  
+##### <a name="to-regain-network-access-to-a-restored-computer-after-a-computer-name-change"></a>컴퓨터 이름 변경 후 복원된 컴퓨터에 대한 네트워크 액세스 권한을 다시 얻으려면  
   
-1.  로컬 관리자는 컴퓨터에 로그온 합니다.  
+1.  로컬 관리자로 컴퓨터에 로그온합니다.  
   
-2.  커넥터 소프트웨어를 제거 합니다. 자세한 내용은 참조 [커넥터 소프트웨어를 제거](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_13)합니다.  
+2.  Connector 소프트웨어를 제거합니다. 자세한 내용은 [Uninstall the Connector software](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_13)를 참조하세요.  
   
-3.  도메인에서 컴퓨터를 제거 합니다. 자세한 내용은 참조 [Windows 도메인에서 컴퓨터를 제거](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_8)합니다.  
+3.  도메인에서 컴퓨터를 제거합니다. 자세한 내용은 [Remove a computer from a Windows domain](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_8)를 참조하세요.  
   
-4.  서버에 컴퓨터를 다시 연결 합니다. 자세한 내용은 참조 [서버에 컴퓨터를 연결](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)합니다.  
+4.  서버에 컴퓨터를 다시 연결합니다. 자세한 내용은 [서버에 컴퓨터 연결](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)을 참조하세요.  
   
-## <a name="see-also"></a>참조 하십시오  
+## <a name="see-also"></a>참조  
   
 -   [Windows Server Essentials 지원](Support-Windows-Server-Essentials.md)

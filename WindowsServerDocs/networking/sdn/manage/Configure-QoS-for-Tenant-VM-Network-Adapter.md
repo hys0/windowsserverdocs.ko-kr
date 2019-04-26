@@ -1,7 +1,7 @@
 ---
-title: 테 VM 네트워크 어댑터에 대 한 서비스의 품질을 구성 합니다.
-description: 이 항목은 관리 테 작업 및 Windows Server 2016에 가상 네트워크 방법에 대해 소프트웨어 네트워킹 정의 가이드 일부입니다.
-manager: brianlic
+title: 테 넌 트 VM 네트워크 어댑터에 대 한 서비스 품질 (QoS) 구성
+description: 데이터 센터 브리징 사이 선택할 수 있습니다 테 넌 트 VM 네트워크 어댑터에 대 한 QoS를 구성할 때 \(DCB\)또는 소프트웨어 정의 네트워킹 \(SDN\) QoS 합니다.
+manager: dougkim
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -12,33 +12,37 @@ ms.topic: article
 ms.assetid: 6d783ff6-7dd5-496c-9ed9-5c36612c6859
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: cde4e21beaec58a98a5d5fbe5c4631e2f113dbf7
-ms.sourcegitcommit: 19d9da87d87c9eefbca7a3443d2b1df486b0b010
-ms.translationtype: MT
+ms.date: 08/23/2018
+ms.openlocfilehash: 0b9ce318c3d249b23d7560e0b6bb90a83e60d64d
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59880604"
 ---
-# <a name="configure-quality-of-service-qos-for-a-tenant-vm-network-adapter"></a>테 VM 네트워크 어댑터에 대 한 서비스의 품질을 구성 합니다.
+# <a name="configure-quality-of-service-qos-for-a-tenant-vm-network-adapter"></a>테 넌 트 VM 네트워크 어댑터에 대 한 서비스 품질 (QoS) 구성
 
->적용 대상: Windows Server (세미콜론 연간 채널) Windows Server 2016
+>적용 대상: Windows Server (반기 채널), Windows Server 2016
 
-데이터 센터 브리지 중에서 선택 있는 QoS 테 VM 네트워크 어댑터에 대 한를 구성 \ (DCB\) 또는 소프트웨어 네트워킹 정의 \(SDN\) QoS 합니다.
+데이터 센터 브리징 사이 선택할 수 있습니다 테 넌 트 VM 네트워크 어댑터에 대 한 QoS를 구성할 때 \(DCB\)또는 소프트웨어 정의 네트워킹 \(SDN\) QoS 합니다.
 
-1.  **DCB**합니다. Windows PowerShell NetQoS cmdlet 사용 하 여 DCB 구성할 수 있습니다. 예를 들어 항목에 "데이터 센터 브리지 사용" 섹션을 참조 [원격 직접 메모리 Access (RDMA) 및 스위치 Embedded 팀 (설정)](../../../virtualization/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md)합니다.
+1.  **DCB**. Windows PowerShell NetQoS cmdlet을 사용 하 여 DCB를 구성할 수 있습니다. 예를 들어 항목의 "데이터 센터 브리징 사용 하도록 설정" 섹션을 참조 하세요 [원격 직접 메모리 액세스 (RDMA) 및 스위치 포함 된 팀 (SET)](../../../virtualization/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md)합니다.
 
-2.  **SDN QoS**합니다. SDN QoS 대역폭 높은 교통 VM 다른 사용자를 차단 하지 못하도록 가상 인터페이스를 제한 하도록 설정할 수 있는 네트워크 컨트롤러를 사용 하 여 사용할 수 있습니다.  또한 특정 VM 네트워크 교통 기간 액세스할 수 있는지 확인 하려면 vm 대역폭 기간을 예약 하도록 SDN QoS 구성할 수 있습니다.  
+2.  **SDN QoS**. 트래픽이 많은 VM을 다른 사용자를 차단 하지 않도록 하려면 가상 인터페이스에서 대역폭 제한으로 설정할 수 있는 네트워크 컨트롤러를 사용 하 여 SDN QoS를 사용할 수 있습니다.  또한 특정 크기의 VM 네트워크 트래픽 양에 관계 없이 액세스할 수 있는지 확인 하 여 VM의 대역폭 예약 SDN QoS를 구성할 수 있습니다.  
 
-다음 표에서에 따라 네트워크 인터페이스 속성 포트 설정을 통해 모든 SDN Qos 설정이 적용 됩니다.
+네트워크 인터페이스 속성의 포트 설정을 통해 모든 SDN QoS 설정을 적용 합니다. 자세한 내용은 아래 표를 참조 하세요.
 
 |요소 이름|설명|
 |------------|-----------| 
-|macSpoofing|Vm에서 보내는 패킷 소스 미디어 액세스 제어 \(MAC\) 주소 VM에 할당 되지 않은 MAC 주소를 변경할 수 있는지 여부를 지정 합니다. 값은 "설정" 허용 \ (VM 다른 MAC address\ 사용을 허용) "사용할 수 없습니다"와 \ (VM만 it\에 할당 MAC 주소를 사용 하도록 허용).|
-|arpGuard|ARP 가드를 사용할 수 있는지 여부를 지정 합니다.  ARP 보호 ArpFilter 포트를 통해 전달 하기 위해에 지정 된 주소만 수 있게 합니다.  허용 되는 "활성화" 또는 "사용 안 함".
-|dhcpGuard|DHCP를 것인지 VM에서 DHCP 메시지 핀을 지정 합니다. 허용 되는 "를 사용 하도록 설정" 가상화 DHCP 서버 것으로 간주 됩니다 신뢰할 수 없는 또는 "사용 안 함"를 메시지를 신뢰할 수 있는 것으로 간주는 가상화 DHCP 서버 하기 때문에 받으려면 수 있는 이므로 DHCP 메시지를 삭제 하는 합니다.
-|stormLimit|VM 지정 된 가상 네트워크 어댑터를 통해 보낼 수 있는 초당 브로드캐스트 멀티 캐스트 및 알 수 없는 유니캐스트 패킷 지정 합니다. 이 한 두 번째 기간 동안 제한 초과 브로드캐스트 멀티 캐스트 및 알 수 없는 유니캐스트 패킷이 삭제 됩니다. 0 \(0\) 값 제한이 의미 합니다.
-|portFlowLimit|포트 실행 될 수 있는 흐름 최대 수를 지정 합니다.  빈 또는 0 \(0\) 제한이 의미 합니다.
-|vmqWeight|가상 네트워크 어댑터에서 가상 컴퓨터 대기열 (VMQ)를 사용할 수 있는지 여부를 지정 합니다. 상대적 두께 VMQ 사용 하 여 가상 네트워크 어댑터의 선호도 설명 합니다. 값 영역은 0-100 됩니다. 가상 네트워크 어댑터에 VMQ 하지 않으려면 0을 지정 합니다.
-|iovWeight|인지를 지정 단일 루트 I/O virtualization \(SR-IOV\)가 가상 네트워크 어댑터에서 사용할 수 있습니다. 가상 네트워크 어댑터의 선호도 s R IOV 가상 할당 된 기능을 설정 하는 상대적 두께 합니다. 값 영역은 0-100 됩니다. S R IOV 가상 네트워크 어댑터에서 사용 하지 않도록 하려면 0을 지정 합니다. 
-|iovInterruptModeration|가상 네트워크 어댑터에 할당 단일 루트 I/O virtualization \(SR-IOV\) 가상 함수 인터럽트 중재 값을 지정 합니다. 허용 "기본", "자동", "끄기", "부족", "보통" 및 "고급" 됩니다.   기본 채택 되 면 값 실제 네트워크 어댑터 공급 업체의 설정에 따라 결정 됩니다.  적응 채택 되 면 인터럽트 조정 속도가 런타임 교통 패턴을 기반으로 합니다. 
-|iovQueuePairsRequested|하드웨어 큐 쌍 s R IOV 가상 기능에 할당 될 수를 지정 합니다. 수신 측면 크기 조정 \(RSS\) 필요 하 고 가상 스위치를 연결 하는 실제 네트워크 어댑터 RSS 가상 s R IOV에 있으면 다음 개 이상의 하나의 큐 페어링 기능을가 필요 합니다. 1 값 범위 4294967295부터 사용할 수 있습니다. 
-|QosSettings|모든 데이터 옵션은 다음과 같은 Qos 설정을 구성할 수 있습니다.  <br/><br />**outboundReservedValue:**<br/>"절대"으로 간주 outboundReservedMode 값 대역폭 전송 (송신)에 대 한 가상 포트 보장 m b p s 나타냅니다. OutboundReservedMode "무게"는 값 보장 대역폭의가 중된 일부를 나타냅니다. <br/><br />**outboundMaximumMbps:**  <br/>허용 되는 최대 보내기 측 대역폭 m b p s에서 가상 포트 (송신)에 대 한 나타냅니다. <br/><br/>**InboundMaximumMbps:**  <br/>최대 m b p s에서 가상 포트 (수신)에 대 한 받을 측 대역폭 사용할 수 없음을 나타냅니다. |
+|macSpoofing| Vm의 원본 미디어 액세스 제어를 변경 하도록 허용 \(MAC\) VM에 할당 되지 않은 MAC 주소로 나가는 패킷의 주소입니다.<p>허용되는 값:<ul><li>사용 – 다른 MAC 주소를 사용 합니다.</li><li>사용 안 함-할당 된 MAC 주소만을 사용 합니다.</li></ul>|
+|arpGuard| ARP guard 포트를 통해 전달할 ArpFilter에 지정 된 유일한 주소를 허용 합니다.<p>허용되는 값:<ul><li>사용 하도록 설정-허용</li><li>사용 안 함 – 허용 되지 않습니다</li></ul>|
+|dhcpGuard| 허용 하거나 DHCP 서버를 VM에서 모든 DHCP 메시지를 삭제 합니다. <p>허용되는 값:<ul><li>사용 – 삭제 DHCP 메시지 되므로 가상화 된 DHCP 서버는 신뢰할 수 없는 것으로 간주 됩니다.</li><li>사용 안 함 – 가상화 된 DHCP 서버는 신뢰할 수 있는 것으로 간주 되므로 받을 메시지를 허용 합니다.</li></ul>|
+|stormLimit| 가상 네트워크 어댑터를 통해 보낼 수 (브로드캐스트, 멀티 캐스트 및 알 수 없는 유니캐스트) vm의 초당 패킷 수입니다. 해당 1 초 간격 동안 제한 초과한 패킷은 삭제 합니다. 값이 0 \(0\) 제한이 있다는 것을 나타냅니다.|
+|portFlowLimit| 포트에 대해 실행 하도록 허용 하는 흐름의 최대 수입니다. 0 또는 빈 값 \(0\) 제한이 없음을 의미 합니다. |
+|vmqWeight| 상대적 가중치는 가상 머신 큐 (VMQ)를 사용 하도록 가상 네트워크 어댑터의 선호도 설명 합니다. 값의 범위는 0부터 100입니다.<p>허용되는 값:<ul><li>0 – 가상 네트워크 어댑터에서 VMQ를 사용 하지 않도록 설정 합니다.</li><li>1-100 – 가상 네트워크 어댑터에서 VMQ 사용 합니다.</li></ul>|
+|iovWeight| 할당 된 단일 루트 I/O 가상화를 가상 네트워크 어댑터의 선호도 설정 하는 상대적 가중치 \(SR-IOV\) 가상 함수입니다. <p>허용되는 값:<ul><li>0-사용 하지 않도록 설정의 SR-IOV 가상 네트워크 어댑터입니다.</li><li>1-100 – 사용 하도록 설정의 SR-IOV 가상 네트워크 어댑터입니다.</li></ul>|
+|iovInterruptModeration|<p>허용되는 값:<ul><li>기본 – 설정을 실제 네트워크 어댑터 공급 업체의 값을 결정합니다.</li><li>adaptive - </li><li>끕니다 </li><li>낮음</li><li>보통</li><li>고가용성</li></ul><p>선택 하면 **기본**, 실제 네트워크 어댑터 공급 업체의 설정 값을 결정 합니다.  원하는 경우 **적응**, 런타임 트래픽 패턴 였다면 인터럽트 조절 속도가 결정 합니다.|
+|iovQueuePairsRequested| SR-IOV 가상 함수에 할당 된 하드웨어 큐 쌍의 수입니다. 경우 수신측 크기 조정을 \(RSS\) 필요 하 고 실제 네트워크 어댑터가 가상 스위치에 바인딩되는 경우 RSS를 지 원하는 SR-IOV 가상 함수를 둘 이상의 큐 쌍이 필요 합니다. <p>허용되는 값: 1에서 4294967295 합니다.|
+|QosSettings| 다음 설정을 구성 합니다 Qos에는 모두 선택 사항: <ul><li>**outboundReservedValue** -outboundReservedMode가 "absolute" 값 (mbps)를 전송 (송신)에 대 한 가상 포트에 보장 된 대역폭을 나타냅니다. OutboundReservedMode "가중치" 이면 값은 보장 된 대역폭 중 가중치가 적용 된 일부를 나타냅니다.</li><li>**outboundMaximumMbps** -허용 되는 최대 송신 쪽 대역폭 (mbps)를 가상 포트 (송신)를 나타냅니다.</li><li>**InboundMaximumMbps** -수신측 대역폭 (mbps) 가상 포트 (수신)에 대해 허용 되는 최대값을 나타냅니다.</li></ul> |
+
+---
