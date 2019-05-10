@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: 1b78432ca92028bc96b2cbfc9fa40196f61e8bf8
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59833704"
@@ -34,7 +34,7 @@ ms.locfileid: "59833704"
   
  **원격 액세스:** 원격 웹 액세스는 인터넷이 연결되는 거의 모든 곳에서 거의 모든 장치를 사용하여 응용 프로그램 및 데이터에 액세스할 수 있는 간소한 터치 지원 브라우저 경험을 제공합니다. Windows Server Essentials에서는 업데이트 된 Windows Phone 앱 및 새 앱을 Windows 8.1 클라이언트에 대 한 컴퓨터, 연결 검색 하 고 서버에서 파일 및 폴더에 액세스할 사용자를 직관적으로 허용 합니다. 또한 파일은 오프라인 액세스를 위해 자동으로 캐시되었다가 서버 연결을 사용할 수 있게 되면 동기화됩니다. Windows Server Essentials를 가상 사설망 (VPN)을 몇 번의 간편한, 마법사 기반 프로세스로 설정 설정 및 사용자에 대 한 VPN 액세스 관리를 간소화 합니다. 클라이언트 컴퓨터는 VPN 연결을 활용하여 사무실에 통근하지 않고도 Windows SBS 환경에 원격으로 참가할 수 있습니다.  
   
- **작업 유연성:** Windows Server Essentials는 고객이 응용 프로그램 및 서비스는 온-프레미스에서 실행 하 고 클라우드에서 실행 하는 선택할 수 있도록 설계 되었습니다. 이전 버전인 Windows Small Business Server Standard에는 Exchange Server가 구성 요소 제품으로 포함되어 클라우드 기반 메시징 및 공동 작업 서비스를 활용하려는 고객 입장에서는 비용과 복잡성이 높았습니다. Windows Server Essentials를 사용 하 여 고객 것인지를 Exchange Server의 온-프레미스 복사본을 실행 하거나 호스트 된 Exchange 서비스에 가입 하거나 Microsoft Office 365를 구독할 선택할 수 있도록 동일한 유형의 통합된 관리 환경 활용을 걸릴 수 있습니다.  
+ **작업 유연성:** Windows Server Essentials는 고객이 응용 프로그램 및 서비스는 온-프레미스에서 실행 하 고 클라우드에서 실행 하는 선택할 수 있도록 설계 되었습니다. 이전 버전인 Windows Small Business Server Standard에는 Exchange Server가 구성 요소 제품으로 포함되어 클라우드 기반 메시징 및 협업 서비스를 활용하려는 고객 입장에서는 비용과 복잡성이 높았습니다. Windows Server Essentials를 사용 하 여 고객 것인지를 Exchange Server의 온-프레미스 복사본을 실행 하거나 호스트 된 Exchange 서비스에 가입 하거나 Microsoft Office 365를 구독할 선택할 수 있도록 동일한 유형의 통합된 관리 환경 활용을 걸릴 수 있습니다.  
   
  **상태 모니터링:** Windows Server Essentials는 자체 상태 및 Windows 8.1, Windows 7 및 Mac OS X 버전 10.5 이상을 실행 하는 클라이언트 컴퓨터의 상태를 모니터링 합니다. 상태 모니터링 이후 컴퓨터 백업, 서버 저장소, 디스크 공간 부족 등의 관련 문제에 대해 알립니다.  
   

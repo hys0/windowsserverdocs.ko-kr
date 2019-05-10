@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: 29f861b6d6f115dc1a1d2cab3ae04f566da90d8f
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59879834"
@@ -52,7 +52,7 @@ ms.locfileid: "59879834"
   
 -    위치와 관계없이 인터넷에 연결된 장치에서 비즈니스 데이터에 안전하게 액세스하는 방법을 알아보려면 [중소기업의 원격 액세스 보안](https://technet.microsoft.com/library/dn629457.aspx)을 참조하세요.  
   
--    파트너 및 공급업체와 안전하게 공동 작업을 수행하는 방법을 알아보려면 [중소기업의 공동 작업 개선](https://technet.microsoft.com/library/dn747893.aspx)을 참조하세요.  
+-    파트너 및 공급업체와 안전하게 협업을 수행하는 방법을 알아보려면 [중소기업의 협업 개선](https://technet.microsoft.com/library/dn747893.aspx)을 참조하세요.  
   
 ## <a name="see-also"></a>참조  
     

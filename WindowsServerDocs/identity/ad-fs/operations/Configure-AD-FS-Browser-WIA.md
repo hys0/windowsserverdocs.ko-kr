@@ -11,7 +11,7 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.openlocfilehash: f71680bb721635bd37197dca9d3ae4726099525f
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59845484"
@@ -20,7 +20,7 @@ ms.locfileid: "59845484"
 
 기본적으로, 통합 인증 WIA (Windows)는 사용 Active Directory Federation Services (AD FS)에서 Windows Server 2012 r 2에서의 인증에 대 한 브라우저를 사용 하는 모든 응용 프로그램에 대 한 조직의 내부 네트워크 (인트라넷) 내에서 발생 하는 인증 요청에 대 한 합니다.
 
-이제 AD FS 2016 하지도 (잘못) catch 하면 Windows Phone도 동안 WIA를 수행 하려면 Edge 브라우저를 사용 하도록 설정 하는 향상 된 기본 설정에 있습니다.
+이제 AD FS 2016 하지도 (잘못) catch 하면 Windows Phone도 동안 WIA를 수행 하려면 Microsoft Edge 브라우저를 사용 하도록 설정 하는 향상 된 기본 설정에 있습니다.
 
     =~Windows\s*NT.*Edge
 

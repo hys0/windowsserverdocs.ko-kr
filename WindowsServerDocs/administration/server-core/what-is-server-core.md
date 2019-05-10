@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 ms.date: 02/20/2018
 ms.openlocfilehash: 08229e458d0aa0c8e8397f0f053f37a207a1aea5
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59885604"
@@ -71,7 +71,7 @@ UI를 외에도 Server Core도 다른 데스크톱 환경 포함 서버에서 �
 | 작업 표시줄                            | 사용할 수 없음   | available                      |
 | 작업 표시줄 알림              | 사용할 수 없음   | available                      |
 | taskmgr                            | available       | available                      |
-| Internet Explorer 또는 Edge          | 사용할 수 없음   | available                      |
+| Internet Explorer 또는 Microsoft Edge          | 사용할 수 없음   | available                      |
 | 기본 제공 도움말 시스템               | 사용할 수 없음   | available                      |
 | Windows 10 Shell                   | 사용할 수 없음   | available                      |
 | Windows Media Player               | 사용할 수 없음   | available                      |
