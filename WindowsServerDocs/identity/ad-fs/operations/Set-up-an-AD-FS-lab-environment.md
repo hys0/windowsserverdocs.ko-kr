@@ -11,7 +11,7 @@ ms.technology: identity-adfs
 ms.author: billmath
 ms.openlocfilehash: 53d0e24f7fcb9efc64406dc6ed01f5bb1deb2277
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59868084"
@@ -329,7 +329,7 @@ Windows Identity Foundation SDK를 다운로드할 수 있습니다 ([https://ww
 2.  **데이터 원본 선택** 페이지에서 **온라인 또는 로컬 네트워크에 게시된 신뢰 당사자에 대한 데이터 가져오기**를 선택하고 **claimapp**에 대한 메타데이터 URL을 입력한 후 **다음**을 클릭합니다. FedUtil.exe를 실행하면 메타데이터 .xml 파일이 생성됩니다. 파일은   
     **https://webserv1.contoso.com/claimapp/federationmetadata/2007-06/federationmetadata.xml**.  
   
-3.  **표시 이름 지정** 페이지에서 신뢰 당사자 트러스트에 대한 **표시 이름****claimapp**을 지정하고 **다음**을 클릭합니다.  
+3.  **표시 이름 지정** 페이지에서 신뢰 당사자 트러스트에 대한 **표시 이름** **claimapp**을 지정하고 **다음**을 클릭합니다.  
   
 4.  **지금 다단계 인증을 구성하시겠습니까?** 페이지에서 **이 신뢰 당사자 트러스트에 대한 다단계 인증 설정을 지금 지정 안 함**을 선택하고 **다음**을 클릭합니다.  
   
