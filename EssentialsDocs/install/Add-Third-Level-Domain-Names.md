@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: 64bf24e45155fdd981e2061b3de7ebce1c53b36c
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59833324"
@@ -534,7 +534,7 @@ ms.locfileid: "59833324"
   
 3.  **공급자**를 마우스 오른쪽 단추로 클릭하고 **새로 만들기**를 가리킨 다음 **키**를 클릭합니다.  
   
-4.  키 이름으로 공급자에 대한 식별자를 입력합니다. 식별자는 [Add an implementation of the IDomainSignupProvider interface to the assembly](Add-Third-Level-Domain-Names.md#BKMK_DomainSignup)의 8단계에서 공급자에 대해 정의된 GUID입니다.  
+4.  키 이름으로 공급자에 대한 식별자를 입력합니다. 식별자는 [어셈블리에 IDomainSignupProvider 인터페이스 구현 추가](Add-Third-Level-Domain-Names.md#BKMK_DomainSignup)의 8단계에서 공급자에 대해 정의된 GUID입니다.  
   
 5.  방금 만든 키를 마우스 오른쪽 단추로 클릭한 다음 **문자열 값**을 클릭합니다.  
   
