@@ -11,7 +11,7 @@ ms.assetid: dda9d148-d72f-4bff-aa2a-f2249fa47e4c
 ms.technology: identity-adfs
 ms.openlocfilehash: 05728f04f6fb924cf3793bc843df3832c7c383f7
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59855694"
@@ -75,7 +75,7 @@ AD FS에는 또한 미리 정의 된 클레임 발급 및 일반적인 구현 �
   
 |조건 설명|조건 구문 예|  
 |-------------------------|----------------------------|  
-|이 규칙에 지정 된 클레임 형식을 사용 하 여 각 클레임, 두 개의 입력을 확인 하는 조건이 ("http://test/name"및"http://test/email"). 두 개의 일치하는 클레임이 입력 클레임에 있으면 규칙이 이름 클레임을 출력 클레임 집합에 복사합니다.|``` c1: [type  == "http://test/name"] && c2: [type == "http://test/email"] => issue (claim  = c1 );```|  
+|이 규칙에 지정 된 클레임 형식을 사용 하 여 각 클레임, 두 개의 입력을 확인 하는 조건이 ("http://test/name" 및 "http://test/email"). 두 개의 일치하는 클레임이 입력 클레임에 있으면 규칙이 이름 클레임을 출력 클레임 집합에 복사합니다.|``` c1: [type  == "http://test/name"] && c2: [type == "http://test/email"] => issue (claim  = c1 );```|  
   
 #### <a name="regular--condition-examples"></a>일반-예제 조건  
 다음 표에서, 정규식의 예가-조건을 기반으로 합니다.  

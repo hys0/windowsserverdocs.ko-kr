@@ -15,7 +15,7 @@ manager: dongill
 ms.date: 10/16/2017
 ms.openlocfilehash: b36d22cea5b7b0c0e1768736d6c80c67b3c733f9
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59857654"
@@ -33,7 +33,7 @@ bootcfg /dbg1394 {ON | OFF}[/s <computer> [/u <Domain>\<User> /p <Password>]] [/
 ## <a name="parameters"></a>매개 변수
 |매개 변수|설명|
 |-------|--------|
-|{ON & #124; OFF}|1394 포트 디버깅에 대 한 값을 지정합니다.<br /><br />-   **ON** -지정 된/dbg1394 옵션을 추가 하 여 원격 디버깅 지원을 통해 <OSEntryLineNum>합니다.<br />-   **OFF** -지정 된 위치 에서/dbg1394 옵션을 제거 하 여 원격 디버깅 지원을 해제 <OSEntryLineNum>합니다.|
+|{ON &#124; OFF}|1394 포트 디버깅에 대 한 값을 지정합니다.<br /><br />-   **ON** -지정 된/dbg1394 옵션을 추가 하 여 원격 디버깅 지원을 통해 <OSEntryLineNum>합니다.<br />-   **OFF** -지정 된 위치 에서/dbg1394 옵션을 제거 하 여 원격 디버깅 지원을 해제 <OSEntryLineNum>합니다.|
 |/s <computer>|이름 또는 원격 컴퓨터의 IP 주소를 지정 합니다 (백슬래시를 사용 하지 않습니다). 기본값은 로컬 컴퓨터입니다.|
 |/u <Domain>\\<User>|지정한 사용자의 계정 권한으로 명령을 실행 <User> 나 <Domain> \\ <User>합니다. 기본값은 현재 로그온 된 명령을 실행 하는 컴퓨터에서 사용자의 사용 권한.|
 |/p <Password>|에 지정 된 사용자 계정의 암호를 지정 된 **/u** 매개 변수입니다.|
