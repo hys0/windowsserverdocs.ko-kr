@@ -11,7 +11,7 @@ ms.topic: article
 ms.date: 10/16/2017
 ms.openlocfilehash: b55063c3c5ea41b43573e6322b5efb36d2dad90e
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59828334"
@@ -61,7 +61,7 @@ fsutil resource [stop] <RmRootPathname>
 |<containers>|트랜잭션 리소스 관리자에서 사용 되는 데이터 개체를 지정 합니다.|
 |maxextent|컨테이너의 최대 수에 대 한 지정된 된 트랜잭션 리소스 관리자를 지정합니다.|
 |minextent|컨테이너의 최소 수에 대 한 지정된 된 트랜잭션 리소스 관리자를 지정합니다.|
-|{전체 & #124; 실행 취소} 모드|모든 트랜잭션을 기록할지 여부를 지정 합니다 ( **전체**) 또는 롤백 이벤트가 기록 됩니다 (**실행 취소**).|
+|{전체 &#124; 실행 취소} 모드|모든 트랜잭션을 기록할지 여부를 지정 합니다 ( **전체**) 또는 롤백 이벤트가 기록 됩니다 (**실행 취소**).|
 |이름 바꾸기|트랜잭션 리소스 관리자에 대 한 GUID를 변경합니다.|
 |축소|트랜잭션 리소스 관리자 로그 자동으로 줄일 수 있는 백분율을 지정 합니다.|
 |크기|트랜잭션 리소스 관리자의 크기를 지정된 된 수로 지정 *컨테이너*합니다.|

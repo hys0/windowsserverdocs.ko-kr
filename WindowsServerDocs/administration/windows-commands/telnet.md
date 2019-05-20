@@ -15,7 +15,7 @@ manager: dongill
 ms.date: 10/16/2017
 ms.openlocfilehash: 6439a91d82d6d199666629e333d8130bf65a384b
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59858564"
@@ -36,7 +36,7 @@ telnet [/a] [/e <EscapeChar>] [/f <FileName>] [/l <UserName>] [/t {vt100 | vt52 
 |/e \<EscapeChar>|텔넷 클라이언트 프롬프트를 입력 하는 데 사용 되는 문자를 이스케이프 합니다.|
 |/f \<FileName>|클라이언트 쪽 로깅에 사용 되는 파일 이름입니다.|
 |/l \<사용자 이름 >|원격 컴퓨터에서 사용 하 여 로그온 사용자 이름을 지정 합니다.|
-|/t {v t 100 & #124, v t 52 & #124, ansi 및 #124, vtnt}|터미널 유형을 지정합니다. 지원 되는 터미널 유형은 v t 100, v t 52, ansi 및 vtnt입니다.|
+|/t {v t 100 &#124, v t 52 &#124, ansi 및 #124, vtnt}|터미널 유형을 지정합니다. 지원 되는 터미널 유형은 v t 100, v t 52, ansi 및 vtnt입니다.|
 |\<호스트 > [\<포트 >]|호스트 이름 또는 원격 컴퓨터에 연결 하 고 선택적으로 사용 하 여 TCP 포트의 IP 주소를 지정 합니다 (기본값은 TCP 포트 23).|
 |/?|명령 프롬프트에 도움말을 표시합니다. 또는 /h를 입력할 수 있습니다.|
 

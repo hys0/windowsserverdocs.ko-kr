@@ -14,7 +14,7 @@ author: jaimeo
 ms.author: jaimeo
 ms.openlocfilehash: 781ed17fb07d2aecd4bb0b7bc672056096ab8060
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59837064"
@@ -311,7 +311,7 @@ Nano 서버에 의해 제공 되는 최소 인터페이스 때로는 하기가 �
   
 ||Error|오류 설명|증상|잠재적인 문제|  
 |-|---------|---------------------|-----------|---------------------|  
-|Dism.exe|87|기능 이름 옵션은이 컨텍스트에서 아닙니다.||-이 기능 이름이 잘못 된 경우 발생할 수 있습니다. 올바른 철자 있고 다시 시도 확인 합니다.<br />-이 기능은 사용 중인 운영 체제 버전에서 사용할 수 있는지 확인 합니다. Windows PowerShell에서 실행 **dism /online /get-features & #124;? { $_-"부팅"과 일치}** 합니다. 일치 하는 항목이 반환 되 면이 기능을 지원 하지 않는 버전을 실행 아마도 해야 합니다.|  
+|Dism.exe|87|기능 이름 옵션은이 컨텍스트에서 아닙니다.||-이 기능 이름이 잘못 된 경우 발생할 수 있습니다. 올바른 철자 있고 다시 시도 확인 합니다.<br />-이 기능은 사용 중인 운영 체제 버전에서 사용할 수 있는지 확인 합니다. Windows PowerShell에서 실행 **dism /online /get-features &#124;? { $_-"부팅"과 일치}** 합니다. 일치 하는 항목이 반환 되 면이 기능을 지원 하지 않는 버전을 실행 아마도 해야 합니다.|  
 |Dism.exe|0x800f080c|기능 \<이름 >를 알 수 없습니다.||위와 동일|  
   
 ### <a name="troubleshooting-the-collector"></a>수집기 문제 해결  

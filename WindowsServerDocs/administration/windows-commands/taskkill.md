@@ -15,7 +15,7 @@ manager: dongill
 ms.date: 10/16/2017
 ms.openlocfilehash: db264181ef8e5e3632f3312ade61183cac3fc8f5
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59853084"
@@ -46,7 +46,7 @@ taskkill [/s <computer> [/u [<Domain>\]<UserName> [/p [<Password>]]]] {[/fi <Fil
 #### <a name="BKMK_table"></a>필터 이름, 연산자 및 값
 |필터 이름|유효한 연산자|유효한 값|
 |--------|----------|----------|
-|STatUS|eq, ne|실행 및 #124; 응답 중 & #124; 하지 알 수 없음|
+|STatUS|eq, ne|실행 및 #124; 응답 중 &#124; 하지 알 수 없음|
 |IMAGENAME|eq, ne|이미지 이름|
 |PID|eq, ne, gt, lt, ge, le|PID 값|
 |세션|eq, ne, gt, lt, ge, le|세션 번호|

@@ -11,7 +11,7 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adds
 ms.openlocfilehash: fcb6d90832ed032302ceb0b3c4ec6a0eaff7d807
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59886874"
@@ -143,12 +143,12 @@ Windows PowerShell 스위치에서는 $TRUE 또는 $FALSE 인수를 사용할 �
 |DelegatedAdministratorAccountName <string>|RODC를 설치하고 관리할 수 있는 사용자 또는 그룹의 이름을 지정합니다.<br /><br />기본적으로 Domain Admins 그룹의 구성원만 RODC를 관리할 수 있습니다.|  
 |DenyPasswordReplicationAccountName <string []>|해당 암호가 이 RODC로 복제되지 않는 컴퓨터 계정, 그룹 계정 및 사용자 계정의 이름을 지정합니다. 사용자나 컴퓨터의 자격 증명 복제를 거부하지 않으려면 빈 문자열 ""을 사용합니다. 기본적으로 Administrators, Server Operators, Backup Operators, Account Operators 및 Denied RODC Password Replication Group이 거부됩니다. 기본적으로 Denied RODC Password Replication Group에는 Cert Publishers, Domain Admins, Enterprise Admins, Enterprise Domain Controllers, Enterprise Read-Only Domain Controllers, Group Policy Creator Owners, krbtgt 계정 및 Schema Admins가 포함됩니다.<br /><br />값을 문자열 배열로 제공합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.<br /><br />코드-<br /><br />-DenyPasswordReplicationAccountName "RegionalAdmins", "AdminPCs"|  
 |DnsDelegationCredential <PS Credential> **참고 합니다.** Add-ADDSReadOnlyDomainController cmdlet을 실행할 경우에는 이 인수를 지정할 수 없습니다.|사용자 이름 및 규칙에 따라 DNS 위임 만들기에 대 한 암호 지정 [Get-credential](https://technet.microsoft.com/library/dd315327.aspx) 및 PSCredential 개체입니다.|  
-|DomainMode <DomainMode> {w i n 2003 & #124; Win2008 & #124; Win2008R2 & #124; W i n 2012 & #124; Win2012R2}<br /><br />또는<br /><br />DomainMode <DomainMode> {2 & #124; 3 & #124; 4 & #124; 5 & #124; 6}|새 도메인을 만드는 동안 도메인 기능 수준을 지정합니다.<br /><br />도메인 기능 수준은 포리스트 기능 수준보다 낮은 값으로 설정할 수 없으며, 포리스트 기능 수준보다 높은 값으로 설정할 수는 있습니다.<br /><br />기본값은 자동으로 계산되며 **-ForestMode**에 대해 설정된 값이나 기존의 포리스트 기능 수준으로 설정됩니다.|  
+|DomainMode <DomainMode> {w i n 2003 &#124; Win2008 &#124; Win2008R2 &#124; W i n 2012 &#124; Win2012R2}<br /><br />또는<br /><br />DomainMode <DomainMode> {2 &#124; 3 &#124; 4 &#124; 5 &#124; 6}|새 도메인을 만드는 동안 도메인 기능 수준을 지정합니다.<br /><br />도메인 기능 수준은 포리스트 기능 수준보다 낮은 값으로 설정할 수 없으며, 포리스트 기능 수준보다 높은 값으로 설정할 수는 있습니다.<br /><br />기본값은 자동으로 계산되며 **-ForestMode**에 대해 설정된 값이나 기존의 포리스트 기능 수준으로 설정됩니다.|  
 |**DomainName**<br /><br />Install-ADDSForest 및 Install-ADDSDomainController cmdlet에 필요합니다.|추가 도메인 컨트롤러를 설치할 도메인의 FQDN을 지정합니다.|  
 |**DomainNetbiosName <string>**<br /><br />FQDN 접두사 이름이 15자보다 긴 경우 Install-ADDSForest에 필요합니다.|Install-ADDSForest와 함께 사용합니다. 새 포리스트 루트 도메인에 NetBIOS 이름을 할당합니다.|  
-|DomainType <DomainType> {ChildDomain & #124; TreeDomain} 또는 {자식 & #124; 트리}|만들려는 도메인의 유형, 즉 새 포리스트, 기존 포리스트의 새 도메인 트리 또는 기존 도메인의 자식 도메인을 나타냅니다.<br /><br />DomainType의 기본값은 ChildDomain입니다.|  
+|DomainType <DomainType> {ChildDomain &#124; TreeDomain} 또는 {자식 &#124; 트리}|만들려는 도메인의 유형, 즉 새 포리스트, 기존 포리스트의 새 도메인 트리 또는 기존 도메인의 자식 도메인을 나타냅니다.<br /><br />DomainType의 기본값은 ChildDomain입니다.|  
 |Force|이 매개 변수가 지정된 경우 도메인을 추가 및 설치하는 동안 일반적으로 나타날 수 있는 모든 경고가 표시되지 않아 cmdlet에서 해당 실행을 완료할 수 있습니다. 이 매개 변수는 설치 스크립팅 시 포함하면 유용할 수 있습니다.|  
-|ForestMode <ForestMode> {w i n 2003 & #124; Win2008 & #124; Win2008R2 & #124; W i n 2012 & #124; Win2012R2}<br /><br />또는<br /><br />ForestMode <ForestMode> {2 & #124; 3 & #124; 4 & #124; 5 & #124; 6}|새 포리스트를 만들 때 포리스트 기능 수준을 지정합니다.<br /><br />기본값은 Win2012입니다.|  
+|ForestMode <ForestMode> {w i n 2003 &#124; Win2008 &#124; Win2008R2 &#124; W i n 2012 &#124; Win2012R2}<br /><br />또는<br /><br />ForestMode <ForestMode> {2 &#124; 3 &#124; 4 &#124; 5 &#124; 6}|새 포리스트를 만들 때 포리스트 기능 수준을 지정합니다.<br /><br />기본값은 Win2012입니다.|  
 |InstallationMediaPath|새 도메인 컨트롤러를 설치하는 데 사용될 설치 미디어의 위치를 나타냅니다.|  
 |InstallDns|도메인 컨트롤러에 DNS 서버 서비스를 설치 및 구성할지 여부를 지정합니다.<br /><br />새 포리스트의 경우 기본값은 **$True**이며, DNS 서버가 설치됩니다.<br /><br />새 자식 도메인 또는 도메인 트리의 경우, 부모 도메인(또는 도메인 트리에 대한 포리스트 루트 도메인)이 이미 도메인에 대한 DNS 이름을 호스트하고 저장한 경우 이 매개 변수의 기본값은 $True입니다.<br /><br />기존 도메인에 도메인 컨트롤러 설치에 대 한이 매개 변수가 지정 하지 않으면 및 현재 도메인에서 이미 호스트 하 고 기본적으로이 매개 변수는 다음에 도메인에 대 한 DNS 이름을 저장 **$True**합니다. 그렇지 않고 DNS 도메인 이름이 Active Directory 외부에서 호스트된 경우에는 기본값이 **$False**이며 DNS 서버가 설치되지 않습니다.|  
 |LogPath <string>|도메인 로그 파일을 포함하는 로컬 컴퓨터의 고정 디스크에 있는 디렉터리에 대한 UNC(범용 명명 규칙)가 아닌 정규화된 경로를 지정합니다(예: **C:\Windows\Logs**).<br /><br />기본값은 **%SYSTEMROOT%\NTDS**합니다. **중요:** ReFS(Resilient File System)로 포맷된 데이터 볼륨에 Active Directory 로그 파일을 저장하지 마십시오.|  
@@ -375,19 +375,19 @@ AD DS를 설치하는 데 필요한 자격 증명 요구 사항은 선택한 배
         > [!NOTE]  
         > 컴퓨터가 도메인에 가입되어 있고 로컬 설치를 수행하는 경우에만 기본적으로 도메인 이름 및 현재 사용자의 자격 증명이 제공됩니다. 원격 서버에 AD DS를 설치하는 경우에는 설계상 자격 증명을 지정해야 합니다. 현재 사용자 자격 증명에 설치를 수행 하는 데 충분 하지도 경우 **변경...** 다른 자격 증명을 지정 합니다.  
   
-        자세한 내용은 참조 [기존 도메인 & #40;에 복제 Windows Server 2012 도메인 컨트롤러를 설치 합니다. 200 수준 & #41;](../../ad-ds/deploy/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md)합니다.  
+        자세한 내용은 참조 [기존 도메인 &#40;에 복제 Windows Server 2012 도메인 컨트롤러를 설치 합니다. 200 수준 &#41;](../../ad-ds/deploy/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md)합니다.  
   
     -   새 자식 도메인을 설치 하는 경우 클릭 **를 기존 포리스트에 새 도메인을 추가**, 에 대 한 **도메인 유형 선택**, 선택, **자식 도메인**, 입력 또는 부모 도메인 DNS 이름 (예: corp.contoso.com)의 이름을 찾고, 새 자식 도메인 (예: emea)을 사용 하 여 새 도메인 만들기를 클릭 한 다음에 자격 증명을 입력의 상대 이름을 입력 **다음**합니다.  
   
-        자세한 내용은 참조 [는 새 Windows Server 2012 Active Directory 자식 또는 트리 도메인 및 #40; 설치 200 수준 & #41;](../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md)합니다.  
+        자세한 내용은 참조 [는 새 Windows Server 2012 Active Directory 자식 또는 트리 도메인 및 #40; 설치 200 수준 &#41;](../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md)합니다.  
   
     -   새 도메인 트리를 설치 하는 경우 클릭 **를 기존 포리스트에 새 도메인 추가**, 에 대 한 **도메인 유형 선택**, 선택 **트리 도메인**, 루트 도메인 (예: corp.contoso.com)의 이름을 입력, 새 도메인 (예: fabrikam.com)을 사용 하 여 새 도메인 만들기를 클릭 한 다음에 자격 증명을 입력의 DNS 이름을 입력 **다음**합니다.  
   
-        자세한 내용은 참조 [는 새 Windows Server 2012 Active Directory 자식 또는 트리 도메인 및 #40; 설치 200 수준 & #41;](../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md)합니다.  
+        자세한 내용은 참조 [는 새 Windows Server 2012 Active Directory 자식 또는 트리 도메인 및 #40; 설치 200 수준 &#41;](../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md)합니다.  
   
     -   새 포리스트를 설치 하는 경우 클릭 **새 포리스트 추가** 고 루트 도메인 (예: corp.contoso.com)의 이름을 입력 합니다.  
   
-        자세한 내용은 참조 [#40; & 새 Windows Server 2012 Active Directory 포리스트 설치 200 수준 & #41;](../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-.md)합니다.  
+        자세한 내용은 참조 [#40; & 새 Windows Server 2012 Active Directory 포리스트 설치 200 수준 &#41;](../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-.md)합니다.  
   
 11. **도메인 컨트롤러 옵션** 페이지에서 다음 옵션 중 하나를 선택합니다.  
   

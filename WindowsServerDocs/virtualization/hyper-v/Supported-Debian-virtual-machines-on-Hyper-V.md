@@ -13,7 +13,7 @@ ms.author: kathydav
 ms.date: 10/03/2016
 ms.openlocfilehash: 6ec089f501a0999a4460501dbc4d03428d36af40
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59863834"
@@ -28,7 +28,7 @@ ms.locfileid: "59863834"
 
 * **기본 제공** -LIS이 Linux 배포판의 일부로 포함 됩니다. Microsoft에서 제공한 LIS 다운로드 패키지는 모듈을 설치 하지 않으면이 배포에 대해 작동 하지 않습니다. LIS에서 기본 제공에 대 한 커널 모듈 버전 번호 (볼 수 있듯이 **lsmod**, 예를 들어)는 Microsoft에서 제공한 LIS 다운로드 패키지에 버전 번호가 다릅니다. 불일치가는 LIS에서 작성 된 지 오래 된 나타내지 않습니다.
 
-* & #10004; -사용 가능한 기능
+* &#10004; -사용 가능한 기능
 
 * (*빈*)-기능을 사용할 수 없음
 
@@ -46,9 +46,9 @@ ms.locfileid: "59863834"
 |TCP 조각화와 체크섬 오프 로드|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;참고 8|||
 |SR-IOV|2019, 2016|&#10004;참고 8||
 |**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**|
-|VHDX 크기 조정|2019, 2016, 2012 R2|& #10004; 참고 1|& #10004; 참고 1|& #10004; 참고 1|
+|VHDX 크기 조정|2019, 2016, 2012 R2|&#10004; 참고 1|&#10004; 참고 1|&#10004; 참고 1|
 |가상 파이버 채널|2019, 2016, 2012 R2|||
-|가상 머신 백업|2019, 2016, 2012 R2|& #10004; 참고 4, 5|& #10004; 참고 4, 5|& #10004; 참고 4|
+|가상 머신 백업|2019, 2016, 2012 R2|&#10004; 참고 4, 5|&#10004; 참고 4, 5|&#10004; 참고 4|
 |TRIM 지원|2019, 2016, 2012 R2|&#10004;참고 8|||
 |SCSI WWN|2019, 2016, 2012 R2|&#10004;참고 8||
 |**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**|
@@ -60,14 +60,14 @@ ms.locfileid: "59863834"
 |**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**|
 |하이퍼-V-특정 비디오 장치|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;||
 |**[기타](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)**|
-|키-값 쌍|2019, 2016, 2012 R2, 2012, 2008 R2|& #10004; 참고 4|& #10004; 참고 4||
+|키-값 쌍|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004; 참고 4|&#10004; 참고 4||
 |마스크 불가능 인터럽트|2019, 2016, 2012 R2|&#10004;|&#10004;|
-|호스트에서 게스트로 파일 복사|2019, 2016, 2012 R2|& #10004; 참고 4|& #10004; 참고 4||
+|호스트에서 게스트로 파일 복사|2019, 2016, 2012 R2|&#10004; 참고 4|&#10004; 참고 4||
 |lsvmbus 명령|2019, 2016, 2012 R2, 2012, 2008 R2|||
 |Hyper-v 소켓|2019, 2016|&#10004;참고 8|||
 |PCI 통과/DDA|2019, 2016|&#10004;참고 8|||
 |**[2 세대 가상 컴퓨터](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)**|
-|UEFI를 사용 하 여 부팅|2019, 2016, 2012 R2|& #10004; 참고 7|& #10004; 참고 7||
+|UEFI를 사용 하 여 부팅|2019, 2016, 2012 R2|&#10004; 참고 7|&#10004; 참고 7||
 |보안 부팅|2019, 2016|||
 
 ## <a name="BKMK_notes"></a>참고 사항

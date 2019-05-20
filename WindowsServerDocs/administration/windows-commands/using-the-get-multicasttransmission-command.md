@@ -15,7 +15,7 @@ manager: dongill
 ms.date: 10/16/2017
 ms.openlocfilehash: fdbb9283285bcf56cd83c18ea076e3d36a51b966
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59823234"
@@ -56,7 +56,7 @@ wdsutil [Options] /Get-MulticastTransmissiomedia:<Image name>
 |[/ 서버:<Server name>]|서버 이름을 지정합니다. 이 NetBIOS 이름 또는 정규화 된 도메인 이름 (FQDN) 수 있습니다. 서버 이름을 지정 하지, 로컬 서버가 사용 됩니다.|
 mediatype:Install|이미지 유형을 지정합니다. 이 옵션을 설정 해야 하는 참고 **설치**합니다.|
 |\mediaGroup:<Image group name>]|이미지가 포함 된 이미지 그룹을 지정 합니다. 이미지 그룹 이름을 지정 하지 않으면 하나의 이미지 그룹 서버에 존재 하는 경우에 해당 이미지 그룹이 사용 됩니다. 이미지 그룹 둘 이상의 서버에 있는 경우에 이미지 그룹을 지정 하려면이 옵션을 사용 해야 합니다.|
-|/ 아키텍처: {x86 & #124 ia64 & #124; x64}|연결에서 전송 된 부팅 이미지의 아키텍처를 지정 합니다. 다른 아키텍처에서 부팅 이미지에 동일한 이미지 이름을 가질 수 있기 때문에 올바른 이미지를 사용 해야 하는 아키텍처를 지정 해야 합니다.|
+|/ 아키텍처: {x86 &#124 ia64 &#124; x64}|연결에서 전송 된 부팅 이미지의 아키텍처를 지정 합니다. 다른 아키텍처에서 부팅 이미지에 동일한 이미지 이름을 가질 수 있기 때문에 올바른 이미지를 사용 해야 하는 아키텍처를 지정 해야 합니다.|
 |[/ 파일 이름:<File name>]|이미지를 포함 하는 파일을 지정 합니다. 이미지 이름으로 고유 하 게 식별할 수 없으면, 파일 이름을 지정 하려면이 옵션을 사용 해야 합니다.|
 |[/ 쇼: 클라이언트]<br /><br />로 구분하거나 여러<br /><br />[/details:Clients]|멀티 캐스트 전송에 연결 된 클라이언트 컴퓨터에 대 한 정보를 표시 합니다.|
 ## <a name="BKMK_examples"></a>예제

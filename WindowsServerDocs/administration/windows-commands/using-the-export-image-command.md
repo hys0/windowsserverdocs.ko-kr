@@ -15,7 +15,7 @@ manager: dongill
 ms.date: 10/16/2017
 ms.openlocfilehash: efa9b2d09c37a383a91883ee02c995eedb2f235e
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59823144"
@@ -54,7 +54,7 @@ wdsutil [Options] /Export-Imagmedia:<Image name> [/Server:<Server name>]
 |[/ 서버:<Server name>]|서버 이름을 지정합니다. 이 NetBIOS 이름 또는 정규화 된 도메인 이름 (FQDN) 수 있습니다. 서버 이름이 없는 지정 하는 경우 로컬 서버 사용 됩니다.|
 mediatype: {부팅 &#124; 설치}|내보낼 수는 이미지의 유형을 지정 합니다.|
 |\mediaGroup:<Image group name>]|내보낼 이미지가 포함 된 이미지 그룹을 지정 합니다. 이미지 그룹 이름을 지정 하지 않으면 하나의 이미지 그룹 서버에 존재 하는 경우에 해당 이미지 그룹 기본적으로 사용 됩니다. 이미지 그룹 둘 이상의 서버에 있는 경우에 이미지 그룹을 지정 되어야 합니다.|
-|/ 아키텍처: {x86 & #124 ia64 & #124; x64}|내보낼 이미지의 아키텍처를 지정 합니다. 다른 아키텍처에서 부팅 이미지에 동일한 이미지 이름을 가질 수 있기 때문에 아키텍처 값을 지정 하는 올바른 이미지를 반환할 것을 확인 합니다.|
+|/ 아키텍처: {x86 &#124 ia64 &#124; x64}|내보낼 이미지의 아키텍처를 지정 합니다. 다른 아키텍처에서 부팅 이미지에 동일한 이미지 이름을 가질 수 있기 때문에 아키텍처 값을 지정 하는 올바른 이미지를 반환할 것을 확인 합니다.|
 |[/ 파일 이름:<Filename>]|이미지 이름으로 고유 하 게 식별할 수 없으면, 파일 이름을 지정 해야 합니다.|
 |/ DestinationImage|대상 이미지에 대 한 설정을 지정합니다. 다음 옵션을 사용 하 여 이러한 설정을 지정할 수 있습니다.<br /><br />-/Filepath:<File path and name> -새 이미지에 대 한 전체 파일 경로 지정 합니다.<br />-[/Name:<Name>]-이미지의 표시 이름을 설정 합니다. 이름이 없는 지정 하는 경우 원본 이미지의 표시 이름을 사용 됩니다.<br />-   [/Description: <Description>]-이미지의 설명을 설정 합니다.|
 |[/Overwrite: {예 &#124; 아니요 &#124; 추가}]|파일에 지정 되었는지 여부를 결정 합니다 **/DestinationImage** 옵션 해당 이름 가진 기존 파일의 /filepath 이미 있으면 덮어씁니다.<br /><br />-   **예** 하면 기존 파일을 덮어쓸 수 있습니다.<br />-   **이상** (기본 옵션) 하면 오류가 동일한 이름의 파일이 이미 있는 경우 발생 합니다.<br />-   **추가** 하면 생성 된 이미지가 기존.wim 파일 내에서 새 이미지로 추가 합니다.|

@@ -15,7 +15,7 @@ manager: dongill
 ms.date: 10/16/2017
 ms.openlocfilehash: af46aec7c8f02b3600983b66bd1b0ac6f5dd1dcc
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59852564"
@@ -33,7 +33,7 @@ wdsutil [Options] /Reject-AutoaddDevices [/Server:<Server name>] /RequestId:<Req
 |매개 변수|설명|
 |-------|--------|
 |[/ 서버:<Server name>]|서버 이름을 지정합니다. 이 NetBIOS 이름 또는 정규화 된 도메인 이름 (FQDN) 수 있습니다. 서버 이름이 없는 지정 하는 경우 로컬 서버 사용 됩니다.|
-|/ 요청 Id: < ID & #124; 요청 모든 >|보류 중인 컴퓨터에 할당 된 요청 ID를 지정 합니다. 모든 보류 중인 컴퓨터를 거부 하려면 지정 **모든**합니다.|
+|/ 요청 Id: < ID &#124; 요청 모든 >|보류 중인 컴퓨터에 할당 된 요청 ID를 지정 합니다. 모든 보류 중인 컴퓨터를 거부 하려면 지정 **모든**합니다.|
 ## <a name="BKMK_examples"></a>예제
 단일 컴퓨터를 거부 하려면 다음을 입력 합니다.
 ```

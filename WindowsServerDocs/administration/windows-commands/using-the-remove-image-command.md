@@ -15,7 +15,7 @@ manager: dongill
 ms.date: 10/16/2017
 ms.openlocfilehash: 2aaf7d63d858045f9dd5df399c5f3f92b038bc2e
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59846704"
@@ -40,7 +40,7 @@ wdsutil [Options] /remove-Imagmedia:<Image name> [/Server:<Server name>mediatype
 미디어:<Image name>|이미지의 이름을 지정합니다.|
 |[/ 서버:<Server name>]|서버 이름을 지정합니다. 이 NetBIOS 이름 또는 정규화 된 도메인 이름 (FQDN) 수 있습니다. 서버 이름이 없는 지정 하는 경우 로컬 서버 사용 됩니다.|
 mediatype: {부팅 &#124; 설치}|이미지의 유형을 지정합니다.|
-|/ 아키텍처: {x86 & #124 ia64 & #124; x64}|이미지의 아키텍처를 지정합니다. 다른 아키텍처에서 다른 부팅 이미지에 대 한 동일한 이미지 이름을 가질 수 있기 때문에 아키텍처 값을 지정 하는 올바른 이미지를 제거할 것을 확인 합니다.|
+|/ 아키텍처: {x86 &#124 ia64 &#124; x64}|이미지의 아키텍처를 지정합니다. 다른 아키텍처에서 다른 부팅 이미지에 대 한 동일한 이미지 이름을 가질 수 있기 때문에 아키텍처 값을 지정 하는 올바른 이미지를 제거할 것을 확인 합니다.|
 |\mediaGroup:<Image group name>]|이미지가 포함 된 이미지 그룹을 지정 합니다. 이미지 그룹 이름을 지정 하지 않으면 하나의 이미지 그룹 서버에 존재 하는 경우 해당 이미지 그룹 사용 됩니다. 이미지 그룹을 여러 개 있는 경우에 이미지 그룹을 지정 하려면이 옵션을 사용 해야 합니다.|
 |[/ 파일 이름:<File name>]|이미지 이름으로 고유 하 게 식별할 수 없으면, 파일 이름을 지정 하려면이 옵션을 사용 해야 합니다.|
 ## <a name="BKMK_examples"></a>예제

@@ -11,7 +11,7 @@ ms.topic: article
 ms.date: 10/16/2017
 ms.openlocfilehash: 4e8d67de42342f5a0828df9f57ca6d7e2870586e
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59873194"
@@ -47,7 +47,7 @@ fsutil 8dot3name [strip] [/t] [/s] [/f] [/l [<log file.] ] [/v] <DirectoryPath>
 |-------------|---------------|
 |쿼리 [<VolumePath>]|8.3 형식이 약식 이름 만들기 동작의 상태에 대 한 파일 시스템을 쿼리합니다.<br /><br />경우에 *VolumePath* 모든 볼륨에 대 한 기본 8dot3name 만들기 동작 설정을 표시 되는 매개 변수도 지정 되지 않았습니다.|
 |검색 <DirectoryPath>|에 있는 파일 검색에 지정 된 *DirectoryPath* 8.3 형식이 짧은 이름을 파일 이름에서 제거 된 경우 영향을 받을 수 있는 레지스트리 키에 대 한 합니다.|
-|설정 { <DefaultValue> & #124; <VolumePath>}|다음과 같은 경우에서 8.3 이름 만들기에 대 한 파일 시스템 동작을 변경 합니다.<br /><br /><ul><li>때 *DefaultValue* 지정 된 레지스트리 키를 **HKLM\System\CurrentControlSet\Control\FileSystem\NtfsDisable8dot3NameCreationNtfsDisable8dot3NameCreationNtfsDisable8dot3NameCreation**로 설정 되는 *DefaultValue*합니다.<br /><br />    *DefaultValue* 값은 다음과 같을 수 있습니다.<br /><br /><ul><li>**0**: 모든 시스템 볼륨에서 8.3 이름 만들기를 사용 하도록 설정 합니다.</li><li>**1**: 모든 시스템 볼륨에서 8.3 이름 만들기를 사용 하지 않도록 설정 합니다.</li><li>**2**: 당 볼륨 별로 8.3 이름 만들기를 설정합니다.</li><li>**3**: 시스템 볼륨을 제외한 모든 볼륨에 대해에서 8.3 이름 만들기를 사용 하지 않도록 설정 합니다.</li></ul></li><li>경우는 *VolumePath* 지정, 디스크 플래그 8dot3name 속성에 지정된 된 볼륨은 지정 된 볼륨에서 8.3 이름 만들기를 사용 하도록 설정 되어 (**0**) 또는 집합에서 8.3 이름 만들기를 사용 하지 않도록 설정 합니다 지정한 볼륨 (**1**).<br /><br />    기본 파일 시스템 동작에서 8.3 이름 만들기에 대 한 값으로 설정 해야 **2** 전에 지정 된 볼륨에서 8.3 이름 만들기를 사용 하지 않도록 설정 하거나 설정할 수 있습니다.</li></ul>|
+|설정 { <DefaultValue> &#124; <VolumePath>}|다음과 같은 경우에서 8.3 이름 만들기에 대 한 파일 시스템 동작을 변경 합니다.<br /><br /><ul><li>때 *DefaultValue* 지정 된 레지스트리 키를 **HKLM\System\CurrentControlSet\Control\FileSystem\NtfsDisable8dot3NameCreationNtfsDisable8dot3NameCreationNtfsDisable8dot3NameCreation**로 설정 되는 *DefaultValue*합니다.<br /><br />    *DefaultValue* 값은 다음과 같을 수 있습니다.<br /><br /><ul><li>**0**: 모든 시스템 볼륨에서 8.3 이름 만들기를 사용 하도록 설정 합니다.</li><li>**1**: 모든 시스템 볼륨에서 8.3 이름 만들기를 사용 하지 않도록 설정 합니다.</li><li>**2**: 당 볼륨 별로 8.3 이름 만들기를 설정합니다.</li><li>**3**: 시스템 볼륨을 제외한 모든 볼륨에 대해에서 8.3 이름 만들기를 사용 하지 않도록 설정 합니다.</li></ul></li><li>경우는 *VolumePath* 지정, 디스크 플래그 8dot3name 속성에 지정된 된 볼륨은 지정 된 볼륨에서 8.3 이름 만들기를 사용 하도록 설정 되어 (**0**) 또는 집합에서 8.3 이름 만들기를 사용 하지 않도록 설정 합니다 지정한 볼륨 (**1**).<br /><br />    기본 파일 시스템 동작에서 8.3 이름 만들기에 대 한 값으로 설정 해야 **2** 전에 지정 된 볼륨에서 8.3 이름 만들기를 사용 하지 않도록 설정 하거나 설정할 수 있습니다.</li></ul>|
 |strip <DirectoryPath>|8.3 형식이 파일 이름에 있는 모든 파일에 대 한 제거에 지정 된 *DirectoryPath*합니다. 8.3 형식이 파일 이름이 모든 파일에 대 한 제거 되지 않습니다 여기서는 *DirectoryPath* 결합 된 파일 이름에는 최대 260 자가 포함 되어 있습니다.<br /><br />이 명령은 목록, 있지만 8.3 형식이 파일 이름을 영구적으로 제거 하는 파일을 가리키는 레지스트리 키를 수정 하지는 않습니다.<br /><br />8.3 형식이 파일 이름 파일에서 영구적으로 제거 중의 효과 대 한 자세한 내용은 참조 [주의](Fsutil-8dot3name.md#BKMK_remarks)합니다.|
 |<VolumePath>|드라이브 이름 뒤에 콜론 또는 GUID 형식으로 지정 **볼륨 {0}***GUID***}** 합니다.|
 |/f|모든 파일 지정 하는 지정 된 *DirectoryPath* 8.3 형식이 파일 이름의 제거 8.3 형식이 파일 이름을 사용 하 여 파일을 가리키는 레지스트리 키가 있을 경우에 합니다. 이 경우 작업이 8.3 형식이 파일 이름을 제거 했지만 8.3 형식이 파일 이름을 사용 하는 파일을 가리키도록 하는 모든 레지스트리 키를 수정 하지는 않습니다. **경고:** 디렉터리 또는 사용 하기 전에 볼륨을 백업 하는 것이 좋습니다.는 **/f** 매개 변수 예기치 않은 응용 프로그램 오류를 일으킬 수 있기 때문에 제거 하지 포함 프로그램입니다.|

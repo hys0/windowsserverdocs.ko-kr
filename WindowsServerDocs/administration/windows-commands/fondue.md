@@ -15,7 +15,7 @@ manager: dongill
 ms.date: 10/16/2017
 ms.openlocfilehash: 09708c239b5399f3284c42877970443cc2605cbe
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59817154"
@@ -34,7 +34,7 @@ fondue.exe /enable-feature:<feature_name> [/caller-name:<program_name>] [/hide-u
 |-------|--------|
 |/enable-feature:<*feature_name*>|사용 하려는 Windows 선택적 기능의 이름을 지정 합니다. 명령줄 당 기능 중 하나에 사용할 수 있습니다. 여러 기능을 사용 하려면 각 기능에 대해 fondue.exe를 사용 합니다.|
 |/caller-name:<*program_name*>|스크립트 또는 배치 파일에서 fondue.exe를 호출할 때 프로그램이 나 프로세스 이름을 지정 합니다. 이 옵션을 사용 하 여 오류가 발생 하는 경우 프로그램 이름을 SQM 보고서에 추가할 수 있습니다.|
-|/hide-ux: {모든 & #124; rebootRequest}|사용 하 여 **모든** Windows Update에 액세스 하는 진행률 및 사용 권한 요청을 포함 하 여 사용자에 게 모든 메시지를 숨기려면 합니다. 권한이 필요한 경우 작업이 실패 합니다.<br /><br />사용 하 여 **rebootRequest** 만 메시지를 숨기려면 사용자 컴퓨터를 다시 부팅 수 있는 권한을 요청 합니다. 컨트롤 요청 다시 부팅 하는 스크립트가 있으면이 옵션을 사용 합니다.|
+|/hide-ux: {모든 &#124; rebootRequest}|사용 하 여 **모든** Windows Update에 액세스 하는 진행률 및 사용 권한 요청을 포함 하 여 사용자에 게 모든 메시지를 숨기려면 합니다. 권한이 필요한 경우 작업이 실패 합니다.<br /><br />사용 하 여 **rebootRequest** 만 메시지를 숨기려면 사용자 컴퓨터를 다시 부팅 수 있는 권한을 요청 합니다. 컨트롤 요청 다시 부팅 하는 스크립트가 있으면이 옵션을 사용 합니다.|
 ## <a name="BKMK_Examples"></a>예제
 Microsoft.NET Framework 3.5를 사용 하려면 다음을 입력 합니다.
 ```

@@ -15,7 +15,7 @@ manager: dongill
 ms.date: 10/16/2017
 ms.openlocfilehash: 6e645e16a3d78dd91bad98fedbb04896025b0eaf
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59852704"
@@ -35,7 +35,7 @@ wdsutil /Set-DriverGroup /DriverGroup:<Group Name> [/Server:<Server Name>] [/Nam
 |/DriverGroup:<Group Name>|드라이버 그룹의 이름을 지정합니다.|
 |[/ 서버:<Server name>]|서버 이름을 지정합니다. 이 NetBIOS 이름이 나 FQDN 수 있습니다. 서버 이름을 지정 하지 않으면 로컬 서버가 사용 됩니다.|
 |[/Name:<New Group Name>]|드라이버 그룹에 대 한 새 이름을 지정합니다.|
-|[/ 활성화: {예 & #124; No}|드라이버 그룹을 사용 하지 않도록 설정 하거나 사용 합니다.|
+|[/ 활성화: {예 &#124; No}|드라이버 그룹을 사용 하지 않도록 설정 하거나 사용 합니다.|
 |[/ 적응성: {일치 (& a) #124; 모든}]|필터 조건이 충족 되는 경우 설치 하는 패키지를 지정 합니다. **일치** 의미의 클라이언트 하드웨어와 일치 하는 드라이버 패키지를 설치 합니다. **모든** 의미를 클라이언트의 하드웨어에 관계 없이 모든 패키지를 설치 합니다.|
 ## <a name="BKMK_examples"></a>예제
 드라이버 그룹에 대 한 속성을 설정 하려면 다음 중 하나를 입력 합니다.

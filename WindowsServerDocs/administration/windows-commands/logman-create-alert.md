@@ -15,7 +15,7 @@ manager: dongill
 ms.date: 10/16/2017
 ms.openlocfilehash: 1bb131d4cff6dc40909a05c39e0819307ca472dc
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59873824"
@@ -43,11 +43,11 @@ logman create alert <[-n] <name>> [options]
 |-b < M/d/yyyy h:mm: ss [AM (& a) #124; PM] >|지정된 된 시간에 데이터 수집을 시작 합니다.|  
 |-e < M/d/yyyy h:mm: ss [AM (& a) #124; PM] >|지정된 된 시간에 대 한 데이터 수집을 종료 합니다.|  
 |-si < [[hh:] mm:] ss >|성능 카운터 데이터 수집기에 대 한 샘플 간격을 지정합니다.|  
-|-o < 경로 & #124; dsn! 로그 >|SQL 데이터베이스에 출력 로그 파일 또는 DSN 및 로그 설정 이름을 지정 합니다.|  
+|-o < 경로 &#124; dsn! 로그 >|SQL 데이터베이스에 출력 로그 파일 또는 DSN 및 로그 설정 이름을 지정 합니다.|  
 |-[-]r|지정 된 시작 및 종료 시간에 매일 데이터 수집기를 반복 합니다.|  
 |-[-]a|기존 로그 파일을 추가 합니다.|  
 |-[-] ow|기존 로그 파일을 덮어씁니다.|  
-|-[-v < nnnnnn & #124; mmddhhmm >|파일 버전 정보를 로그 파일 이름 끝에 연결 합니다.|  
+|-[-v < nnnnnn &#124; mmddhhmm >|파일 버전 정보를 로그 파일 이름 끝에 연결 합니다.|  
 |-[-]rc <task>|지정 된 명령을 실행 될 때마다 로그가 닫힙니다.|  
 |-[-] 최대 <value>|최대 로그 파일 크기 (mb) 또는 SQL 로그에 대 한 레코드의 최대 수입니다.|  
 |-[-] cnf < [[hh:] mm:] ss >|시간을 지정 하면 지정 된 시간이 경과 하는 경우 새 파일을 만듭니다. 시간을 지정 하지 않으면, 최대 크기를 초과 하는 경우 새 파일을 만듭니다.|  

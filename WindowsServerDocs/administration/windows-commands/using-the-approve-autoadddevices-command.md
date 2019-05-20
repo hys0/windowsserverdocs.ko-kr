@@ -15,7 +15,7 @@ manager: dongill
 ms.date: 10/16/2017
 ms.openlocfilehash: 9ce9824c45a00ccb9f1f9e357c7e3d36b2857f69
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59886824"
@@ -34,12 +34,12 @@ wdsutil [Options] /Approve-AutoaddDevices [/Server:<Server name>] /RequestId:{<R
 |매개 변수|설명|
 |-------|--------|
 |[/ 서버:<Server name>]|서버 이름을 지정합니다. 이 NetBIOS 이름 또는 정규화 된 도메인 이름 (FQDN) 수 있습니다. 서버 이름을 지정 하지 않으면 로컬 서버가 사용 됩니다.|
-|/ 요청 Id: {요청 ID & #124; 모든}|보류 중인 컴퓨터에 할당 된 요청 ID를 지정 합니다. 지정 **모든** 모든 보류 중인 컴퓨터를 승인 합니다.|
+|/ 요청 Id: {요청 ID &#124; 모든}|보류 중인 컴퓨터에 할당 된 요청 ID를 지정 합니다. 지정 **모든** 모든 보류 중인 컴퓨터를 승인 합니다.|
 |[/ MachineName:<Device name>]|추가할 컴퓨터의 이름을 지정 합니다. 모든 컴퓨터를 승인 하는 경우이 옵션을 사용할 수 없습니다.|
 |[/OU:<DN of OU>]|컴퓨터 계정 개체를 만들 수는 조직 구성 단위 (OU)의 고유 이름을 지정 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다. **OU=MyOU,CN=Test,DC=Domain,DC=com**. 기본 위치는 기본 컴퓨터의 컨테이너입니다.|
 |[/User:<Domain\User &#124; User@Domain>]|필요한 권한이 지정된 된 사용자를 할당 하려면 컴퓨터 계정 개체에 사용 권한을 설정 합니다.|
-|[/ JoinRights: {JoinOnly & #124; 전체}]|지정된 된 사용자에 할당할 권한의 유형을 지정 합니다.<br /><br />-   **JoinOnly** 위해서는 관리자가 사용자 컴퓨터를 도메인에 가입 하기 전에 컴퓨터 계정 다시 설정 합니다.<br />-   **전체** 도메인에 컴퓨터를 가입 시킬 수 있는 포함 하는 사용자에 게 모든 권한을 부여 합니다.|
-|[/ JoinDomain: {예 & #124; No}]|컴퓨터가 운영 체제를 설치 하는 동안이 컴퓨터 계정으로 도메인에 가입 되어야 해야 여부를 지정 합니다. 기본값은 **예**합니다.|
+|[/ JoinRights: {JoinOnly &#124; 전체}]|지정된 된 사용자에 할당할 권한의 유형을 지정 합니다.<br /><br />-   **JoinOnly** 위해서는 관리자가 사용자 컴퓨터를 도메인에 가입 하기 전에 컴퓨터 계정 다시 설정 합니다.<br />-   **전체** 도메인에 컴퓨터를 가입 시킬 수 있는 포함 하는 사용자에 게 모든 권한을 부여 합니다.|
+|[/ JoinDomain: {예 &#124; No}]|컴퓨터가 운영 체제를 설치 하는 동안이 컴퓨터 계정으로 도메인에 가입 되어야 해야 여부를 지정 합니다. 기본값은 **예**합니다.|
 |[/ ReferralServer:<Server name>]|간단한 파일 전송 프로토콜 tftp ()를 사용 하 여 네트워크 부팅 프로그램 및 부팅 이미지를 다운로드 하려면 연결할 서버의 이름을 지정 합니다.|
 |[/ BootProgram:<Relative path>]|이 컴퓨터에서 수신 해야 하는 네트워크 부팅 프로그램에 remoteInstall 폴더에서 상대 경로 지정 합니다. 예를 들어: **boot\x86\pxeboot.com**합니다.|
 |[/ WdsClientUnattend:<Relative path>]|Windows 배포 서비스 클라이언트를 자동화 하는 무인 파일에는 remoteInstall 폴더에서 상대 경로 지정 합니다.|

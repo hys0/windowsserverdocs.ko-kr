@@ -15,7 +15,7 @@ manager: dongill
 ms.date: 10/16/2017
 ms.openlocfilehash: c321c4ebcaf5fbbae30f6825fef18b478554f665
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59884194"
@@ -42,14 +42,14 @@ tlntadmn [<computerName>] [-u <UserName>] [-p <Password>] [{start | stop | pause
 |-k {\<SessionID > &#124; 모든}|텔넷 세션을 종료 합니다. 특정 세션을 종료 하려면 세션 ID를 입력 하거나 모든 세션을 종료 하려면 all을 입력 합니다.|  
 |-m {\<SessionID> &#124; all}  <Message>|하나 이상의 세션에 메시지를 보냅니다. 메시지를 보내는 특정 세션에 세션 ID를 입력 하거나 모든 세션에 메시지를 보낼 모든 입력 합니다. 따옴표 사이 보낼 메시지를 입력 합니다.|  
 |config dom = \<도메인 >|서버에 대 한 기본 도메인을 구성합니다.|  
-|config ctrlakeymap = {예 & #124; 아니요}|CTRL + A ALT로 해석 하는 텔넷 서버 할지 지정 합니다. 형식 **예** 맵 바로 가기 키 또는 형식 **없습니다** 를 매핑하지 않도록 합니다.|  
+|config ctrlakeymap = {예 &#124; 아니요}|CTRL + A ALT로 해석 하는 텔넷 서버 할지 지정 합니다. 형식 **예** 맵 바로 가기 키 또는 형식 **없습니다** 를 매핑하지 않도록 합니다.|  
 |config timeout = \<hh>:\<mm>:\<ss>|시, 분 및 초 시간 제한 기간을 설정합니다.|  
-|config timeoutactive = {예 & #124; 아니요|유휴 세션 제한 시간을 수 있습니다.|  
+|config timeoutactive = {예 &#124; 아니요|유휴 세션 제한 시간을 수 있습니다.|  
 |config maxfail = \<attempts>|연결을 끊기 전에 실패 한 로그온 시도의 최대 수를 설정 합니다.|  
 |config maxconn = \<연결 >|최대 연결 수를 설정합니다.|  
 |config port = <\Number>|텔넷 포트를 설정합니다. 포트 1024 보다 작은 정수를 지정 해야 합니다.|  
-|config sec {+ & #124;-} NTLM {+ & #124;-} passwd|로그온 시도 인증에 NTLM, 암호 또는 둘 다 사용 하 여 지정 합니다. 특정 유형의 인증을 사용 하려면 더하기 기호를 입력 (**+**) 형식 앞에 인증 합니다. 특정 형식의 인증을 사용 하 여를 방지 하려면 빼기 기호를 입력 (**-**) 형식 앞에 인증 합니다.|  
-|구성 모드 = {콘솔 & #124; 스트림}|작업 모드를 지정합니다.|  
+|config sec {+ &#124;-} NTLM {+ &#124;-} passwd|로그온 시도 인증에 NTLM, 암호 또는 둘 다 사용 하 여 지정 합니다. 특정 유형의 인증을 사용 하려면 더하기 기호를 입력 (**+**) 형식 앞에 인증 합니다. 특정 형식의 인증을 사용 하 여를 방지 하려면 빼기 기호를 입력 (**-**) 형식 앞에 인증 합니다.|  
+|구성 모드 = {콘솔 &#124; 스트림}|작업 모드를 지정합니다.|  
 |-?|명령 프롬프트에 도움말을 표시합니다.|  
 
 ## <a name="remarks"></a>설명  

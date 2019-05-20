@@ -15,7 +15,7 @@ manager: dongill
 ms.date: 10/16/2017
 ms.openlocfilehash: e396ee678e22885a50c02800d77ecea1cc5ef8ba
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59819654"
@@ -55,7 +55,7 @@ wdsutil [Options] /replace-Imagmedia:<Image name> [/Server:<Server name>]
 미디어:<Image name>|교체 이미지의 이름을 지정 합니다.|
 |[/ 서버:<Server name>]|서버 이름을 지정합니다. 이 NetBIOS 이름 또는 정규화 된 도메인 이름 (FQDN) 수 있습니다. 서버 이름이 없는 지정 하는 경우 로컬 서버 사용 됩니다.|
 mediatype: {부팅 &#124; 설치}|교체는 이미지의 유형을 지정 합니다.|
-|/ 아키텍처: {x86 & #124 ia64 & #124; x64}|교체 이미지의 아키텍처를 지정 합니다. 다른 아키텍처에서 다른 부팅 이미지에 대 한 동일한 이미지 이름을 가질 수 있기 때문에 아키텍처를 지정 하 하면 올바른 이미지 대체 됩니다.|
+|/ 아키텍처: {x86 &#124 ia64 &#124; x64}|교체 이미지의 아키텍처를 지정 합니다. 다른 아키텍처에서 다른 부팅 이미지에 대 한 동일한 이미지 이름을 가질 수 있기 때문에 아키텍처를 지정 하 하면 올바른 이미지 대체 됩니다.|
 |[/ 파일 이름:<File name>]|이미지 이름으로 고유 하 게 식별할 수 없으면, 파일 이름을 지정 하려면이 옵션을 사용 해야 합니다.|
 |/replacementImage|대체 이미지에 대 한 설정을 지정합니다. 다음 옵션을 사용 하 여 이러한 설정을 설정할 수 있습니다.<br /><br />-mediaFile: <file path> -이름 및 새.wim 파일의 위치 (전체 경로)을 지정 합니다.<br />-[/ SourceImage: <image name>]-.wim 파일에 여러 이미지가 포함 된 경우 사용할 이미지를 지정 합니다. 이 옵션은 설치 이미지에만 적용 됩니다.<br />-[/Name:<Image name>] 이미지의 표시 이름을 가져오거나 설정 합니다.<br />-[/ 설명:<Image description>]-이미지의 설명을 설정 합니다.|
 ## <a name="BKMK_examples"></a>예제

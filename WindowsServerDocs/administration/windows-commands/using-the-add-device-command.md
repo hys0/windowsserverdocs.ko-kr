@@ -15,7 +15,7 @@ manager: dongill
 ms.date: 10/16/2017
 ms.openlocfilehash: 85e9ef4445b4dabbe85c2397d62b06756e17879d
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59878544"
@@ -40,8 +40,8 @@ wdsutil /add-Device /Device:<Device name> /ID:<UUID | MAC address> [/ReferralSer
 |[/ BootProgram:<Relative path>]|이 컴퓨터에서 수신 해야 하는 네트워크 부팅 프로그램에 remoteInstall 폴더에서 상대 경로 지정 합니다. 예: "boot\x86\pxeboot.com"|
 |[/ WdsClientUnattend:<Relative path>]|상대 경로 remoteInstall 폴더에서 Windows 배포 서비스 클라이언트의 설치 화면을 자동화 하는 무인된 설치 파일을 지정 합니다.|
 |[/User:<Domain\User &#124; User@Domain>]|컴퓨터를 도메인에 가입 하는 데 필요한 권한이 지정된 된 사용자에 게 컴퓨터 계정 개체에 사용 권한을 설정 합니다.|
-|[/ JoinRights: {JoinOnly & #124; 전체}]|사용자에 게 할당할 권한의 유형을 지정 합니다.<br /><br />-   **JoinOnly** 위해서는 관리자가 사용자 컴퓨터를 도메인에 가입 하기 전에 컴퓨터 계정 다시 설정 합니다.<br />-   **전체** 도메인에 컴퓨터를 가입 시킬 수 있는 포함 하는 사용자에 게 모든 권한을 부여 합니다.|
-|[/ JoinDomain: {예 & #124; No}]|컴퓨터가 운영 체제를 설치 하는 동안이 컴퓨터 계정으로 도메인에 가입 되어야 해야 여부를 지정 합니다. 기본값은 **예**합니다.|
+|[/ JoinRights: {JoinOnly &#124; 전체}]|사용자에 게 할당할 권한의 유형을 지정 합니다.<br /><br />-   **JoinOnly** 위해서는 관리자가 사용자 컴퓨터를 도메인에 가입 하기 전에 컴퓨터 계정 다시 설정 합니다.<br />-   **전체** 도메인에 컴퓨터를 가입 시킬 수 있는 포함 하는 사용자에 게 모든 권한을 부여 합니다.|
+|[/ JoinDomain: {예 &#124; No}]|컴퓨터가 운영 체제를 설치 하는 동안이 컴퓨터 계정으로 도메인에 가입 되어야 해야 여부를 지정 합니다. 기본값은 **예**합니다.|
 |[/BootImagepath:<Relative path>]|이 컴퓨터를 사용 해야 하는 부팅 이미지에 remoteInstall 폴더에서 상대 경로 지정 합니다.|
 |[/OU:<DN of OU>]|컴퓨터 계정 개체 만들어야 하는 조직 구성 단위의 고유 이름입니다. 예를 들어 다음과 같은 가치를 제공해야 합니다. **OU=MyOU,CN=Test, DC=Domain,DC=com**. 기본 위치는 기본 컴퓨터의 컨테이너입니다.|
 |[/ 도메인:<Domain>]|도메인 컴퓨터 계정 개체 만들어야 합니다. 기본 위치는 로컬 도메인입니다.|

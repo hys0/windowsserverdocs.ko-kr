@@ -1,6 +1,6 @@
 ---
 ms.assetid: 9a06cd41-426f-4cb9-89cf-f5be730e0b79
-title: '어떤 & #39,의 Active Directory 도메인 서비스의 새로운 기능'
+title: 어떤 &#39,의 Active Directory 도메인 서비스의 새로운 기능
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,12 +14,12 @@ ms.author: billmath
 ms.date: 05/31/2017
 ms.openlocfilehash: ffa8bcb43b17ae8779c70d499bff27a8f77cce75
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59841334"
 ---
-# <a name="what39s-new-in-active-directory-domain-services"></a>어떤 & #39,의 Active Directory 도메인 서비스의 새로운 기능 
+# <a name="what39s-new-in-active-directory-domain-services"></a>어떤 &#39,의 Active Directory 도메인 서비스의 새로운 기능 
 
 >적용 대상: Windows Server 2016
 
