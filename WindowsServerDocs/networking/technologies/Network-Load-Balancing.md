@@ -152,8 +152,8 @@ Windows PowerShell을 사용 하 여 NLB를 설치 하려면 다음 명령을 �
   
 |콘텐츠 형식|참조|  
 |----------------|--------------|  
-|배포|[네트워크 부하 분산 배포 가이드](https://technet.microsoft.com/library/cc754833(WS.10).aspx) & #124; [네트워크 부하 분산 된 터미널 서비스 구성](https://technet.microsoft.com/library/cc771300(v=WS.10).aspx)|  
-|작업|[네트워크 부하 분산 클러스터 관리](https://technet.microsoft.com/library/cc753954(WS.10).aspx) & #124; [네트워크 로드 균형 조정 매개 변수를 설정](https://technet.microsoft.com/library/cc731619(WS.10).aspx) & #124; [네트워크 부하 분산 클러스터에서 호스트 제어](https://technet.microsoft.com/library/cc770870(WS.10).aspx)|  
-|문제 해결|[네트워크 부하 분산 클러스터 문제 해결](https://technet.microsoft.com/library/cc732592(WS.10).aspx) & #124; [NLB 클러스터 이벤트 및 오류](https://technet.microsoft.com/library/cc731678(WS.10).aspx)|
+|배포|[네트워크 부하 분산 배포 가이드](https://technet.microsoft.com/library/cc754833(WS.10).aspx) &#124; [네트워크 부하 분산 된 터미널 서비스 구성](https://technet.microsoft.com/library/cc771300(v=WS.10).aspx)|  
+|작업|[네트워크 부하 분산 클러스터 관리](https://technet.microsoft.com/library/cc753954(WS.10).aspx) &#124; [네트워크 로드 균형 조정 매개 변수를 설정](https://technet.microsoft.com/library/cc731619(WS.10).aspx) &#124; [네트워크 부하 분산 클러스터에서 호스트 제어](https://technet.microsoft.com/library/cc770870(WS.10).aspx)|  
+|문제 해결|[네트워크 부하 분산 클러스터 문제 해결](https://technet.microsoft.com/library/cc732592(WS.10).aspx) &#124; [NLB 클러스터 이벤트 및 오류](https://technet.microsoft.com/library/cc731678(WS.10).aspx)|
 |도구 및 설정|[네트워크 부하 분산 Windows PowerShell cmdlet](https://go.microsoft.com/fwlink/p/?LinkId=238123)|
 |커뮤니티 리소스|[High Availability \(클러스터링\) 포럼](https://go.microsoft.com/fwlink/p/?LinkId=230641)

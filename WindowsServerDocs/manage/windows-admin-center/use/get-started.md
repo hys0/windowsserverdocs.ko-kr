@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ms.date: 02/15/2019
-ms.openlocfilehash: 61fdd70e53a49b704e11f71f0e5eb3176c31c378
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: f4fd9f69e75ed80bbdb345b4041c2337c65ec2e6
+ms.sourcegitcommit: 2977c707a299929c6ab0d1e0adab2e1c644b8306
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59876014"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63742602"
 ---
 # <a name="get-started-with-windows-admin-center"></a>Windows Admin Center 시작
 
@@ -64,7 +64,7 @@ Windows Admin Center 설치를 완료 한 후에 서버 또는 기본 개요 페
 
     ![](../media/launch/addserver2.png)
 
-   **-- OR --**  
+   **-- OR --**
 
 **대량 여러 서버 가져오기**
 
@@ -73,6 +73,18 @@ Windows Admin Center 설치를 완료 한 후에 서버 또는 기본 개요 페
     ![](../media/launch/import-servers.png)
 
  2. 클릭 **찾아보기** 쉼표를 포함 하는 텍스트 파일을 선택 하거나 새 줄으로 구분 된 추가 하려는 서버에 대 한 Fqdn의 목록입니다.
+
+    **-- OR --**
+
+**Active Directory를 검색 하 여 서버를 추가 합니다.**
+
+ 1. 에 **서버 연결 추가** 페이지를 선택 합니다 **Active Directory 검색** 탭 합니다.
+
+    ![](../media/launch/search-ad.png)
+
+ 2. 검색 조건을 입력 하 고 클릭 **검색**합니다. 와일드 카드 (*)가 지원 됩니다.
+
+ 3. 검색 완료-선택 결과 중 하나 이상을, 필요에 따라 태그를 추가 하 고 클릭 **추가**합니다.
 
 ## <a name="authenticate-with-the-managed-node"></a>관리 되는 노드를 사용 하 여 인증 ##
 
@@ -142,9 +154,6 @@ Windows Server에서 Windows Admin Center 서비스 모드에서 실행 중인 �
 
 Windows Admin Center 미리 보기 PowerShell 모듈을 가져오기 또는 내보내기 연결 목록에 포함 됩니다.
 
->[!IMPORTANT]
->Windows Admin Center Windows Server 게이트웨이 서비스로 배포 된 가져오기 및 내보내기 PowerShell 모듈을 사용 하 여 연결 에서만 지원 합니다.
-
 ```powershell
 # Load the module
 Import-Module "$env:ProgramFiles\windows admin center\PowerShell\Modules\ConnectionTools"
@@ -158,7 +167,7 @@ Import-Connection "https://wac.contoso.com" -fileName "WAC-connections.csv"
 
 ### <a name="csv-file-format-for-importing-connections"></a>연결을 가져오기 위한 CSV 파일 형식
 
-CSV 파일의 형식은 세 개의 머리글과 함께 시작: ```"name","type","tags"```고 뒤에 새 줄에 각 연결 합니다.
+CSV 파일의 형식은 4 개의 머리글과 함께 시작 ```"name","type","tags","groupId"```고 뒤에 새 줄에 각 연결 합니다.
 
 **이름** 은 연결의 FQDN
 
@@ -173,15 +182,17 @@ CSV 파일의 형식은 세 개의 머리글과 함께 시작: ```"name","type",
 
 **태그** 파이프 구분 됩니다.
 
+**groupId** 공유 연결에 사용 됩니다. 값을 사용 하 여 ```global``` 이 공유 연결을 설정 하려면이 열에 있습니다.
+
 ### <a name="example-csv-file-for-importing-connections"></a>연결 가져오기에 대 한 예제 CSV 파일
 
 ```
-"name","type","tags"
+"name","type","tags","groupId"
 "myServer.contoso.com","msft.sme.connection-type.server","hyperv"
 "myDesktop.contoso.com","msft.sme.connection-type.windows-client","hyperv"
-"mycluster.contoso.com","msft.sme.connection-type.cluster","legacyCluster|WS2016"
+"teamcluster.contoso.com","msft.sme.connection-type.cluster","legacyCluster|WS2016","global"
 "myHCIcluster.contoso.com,"msft.sme.connection-type.hyper-converged-cluster","myHCIcluster|hyperv|JIT|WS2019"
-"myclusterNode.contoso.com","msft.sme.connection-type.server","legacyCluster|WS2016"
+"teamclusterNode.contoso.com","msft.sme.connection-type.server","legacyCluster|WS2016","global"
 "myHCIclusterNode.contoso.com","msft.sme.connection-type.server","myHCIcluster|hyperv|JIT|WS2019"
 ```
 
@@ -270,7 +281,7 @@ CSV 파일의 형식은 세 개의 머리글과 함께 시작: ```"name","type",
    RdgToWacCsv -RDGfilepath "path\to\myRDCManfile.rdg"
    ```
 
-3. 결과 가져옵니다. CSV 파일에서 Windows Admin Center 및 모든 RDCMan 그룹화 계층 연결 목록에서 태그로 표시 됩니다. 세부 정보를 참조 하세요 [가져오기 및 내보내기 (태그)로 연결 하려면 PowerShell을 사용 하 여](#use-powershell-to-import-or-export-your-connections-(with-tags))입니다.
+3. 결과 가져옵니다. CSV 파일에서 Windows Admin Center 및 모든 RDCMan 그룹화 계층 연결 목록에서 태그로 표시 됩니다. 세부 정보를 참조 하세요 [가져오기 및 내보내기 (태그)로 연결 하려면 PowerShell을 사용 하 여](#use-powershell-to-import-or-export-your-connections-with-tags)입니다.
 
 ## <a name="view-powershell-scripts-used-in-windows-admin-center"></a>Windows Admin Center 사용 되는 PowerShell 스크립트 보기
 

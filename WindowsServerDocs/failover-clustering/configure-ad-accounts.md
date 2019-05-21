@@ -6,17 +6,17 @@ ms.technology: storage-failover-clustering
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: 2fcc6047a0e85170754d8f05d10f728a4c529049
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 454783a13b834ef705bd896155195750de2b183c
+ms.sourcegitcommit: 4ff3d00df3148e4bea08056cea9f1c3b52086e5d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59871964"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64772717"
 ---
 # <a name="configuring-cluster-accounts-in-active-directory"></a>Active Directory에서 클러스터 계정 구성하는 중
 
 
-적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 및 Windows Server 2008
+적용 대상: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 및 Windows Server 2008
 
 Windows Server 장애 조치 클러스터를 만들고 클러스터 된 서비스 또는 응용 프로그램을 구성 하는 경우 장애 조치 클러스터 마법사 (컴퓨터 개체 라고도 함) 수 있는 Active Directory 컴퓨터 계정에 필요한 만들고 특정 권한을 부여 합니다. 마법사 제외 하 고 Hyper-v 가상 컴퓨터 (이 계정은 라고도 함은 클러스터 이름 개체 또는 CNO) 클러스터 자체에 대 한 컴퓨터에 대 한 계정 및 대부분의 클러스터 된 서비스 및 응용 프로그램에 대 한 컴퓨터 계정을 만듭니다. 장애 조치 클러스터 마법사에서 이러한 계정에 대 한 사용 권한은 자동으로 설정 됩니다. 사용 권한을 변경 하는 경우 클러스터 요구 사항에 맞게 다시 변경 해야 합니다. 이 가이드 이러한 Active Directory 계정 및 권한에 대해 설명 하 고, 중요 한 이유에 대 한 배경 정보를 제공, 구성 하 고 계정을 관리 하는 단계를 설명 합니다.
       
@@ -113,7 +113,7 @@ Windows Server 장애 조치 클러스터를 만들고 클러스터 된 서비�
 
 ### <a name="planning-ahead-for-password-resets-and-other-account-maintenance"></a>암호 재설정 및 기타 계정 유지 관리에 대 한 미리 계획
 
-장애 조치 클러스터의 관리자는 클러스터 이름 계정 암호를 재설정 해야 경우에 따라 합니다. 이 작업에 특정 권한이 필요 합니다 **암호 재설정** 권한. 따라서 것이 좋습니다 (사용 하 여 Active Directory 사용자 및 컴퓨터 스냅인) 클러스터 이름 계정 권한 편집 클러스터의 관리자에 게 제공 하는 **암호 재설정** 클러스터에 대 한 사용 권한 계정 이름입니다. 자세한 내용은 [클러스터를 사용 하 여 암호 관련 문제 해결 단계에는 계정 이름을](#steps_for_troubleshooting_password_problems_with_the_cluster_name_account)이 가이드의 뒷부분에 나오는.
+장애 조치 클러스터의 관리자는 클러스터 이름 계정 암호를 재설정 해야 경우에 따라 합니다. 이 작업에 특정 권한이 필요 합니다 **암호 재설정** 권한. 따라서 것이 좋습니다 (사용 하 여 Active Directory 사용자 및 컴퓨터 스냅인) 클러스터 이름 계정 권한 편집 클러스터의 관리자에 게 제공 하는 **암호 재설정** 클러스터에 대 한 사용 권한 계정 이름입니다. 자세한 내용은 [클러스터를 사용 하 여 암호 관련 문제 해결 단계에는 계정 이름을](#steps-for-troubleshooting-password-problems-with-the-cluster-name-account)이 가이드의 뒷부분에 나오는.
 
 ## <a name="steps-for-configuring-the-account-for-the-person-who-installs-the-cluster"></a>클러스터를 설치 하는 사람의 계정을 구성 하는 단계
 
