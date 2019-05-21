@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: 7cc1207f36d3a921b49cc3ecd02acf3fe4fa243c
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59827374"
@@ -31,7 +31,7 @@ ms.locfileid: "59827374"
   
 1.  대상 서버에서 **그룹 정책 관리** 관리 도구를 엽니다.  
   
-2.  **그룹 정책 관리**를 확장 하 고 **포리스트: * * * YourNetworkDomainName*를 확장 **도메인**를 확장 *YourNetworkDomainName* 을 펼쳐 **그룹 정책 개체**합니다.  
+2.  **그룹 정책 관리**를 확장 하 고 **포리스트:***YourNetworkDomainName*를 확장 **도메인**를 확장 *YourNetworkDomainName* 을 펼쳐 **그룹 정책 개체**합니다.  
   
 3.  **SBS 그룹 정책 폴더 리디렉션**을 마우스 오른쪽 단추로 클릭하고 **삭제**를 클릭합니다.  
   

@@ -34,7 +34,7 @@ wdsutil [Options] /Set-Device /Device:<Device name> [/ID:<UUID | MAC address>] [
 |매개 변수|설명|
 |-------|--------|
 |/ 장치:<computer name>|컴퓨터 (SAM 계정 이름)의 이름을 지정합니다.|
-|[/ ID: < UUID (& a) #124; MAC 주소 >]|GUID/UUID 또는 컴퓨터의 MAC 주소를 지정합니다. 이 값은 다음 세 가지 형식 중 하나 여야 합니다.<br /><br />-이진 문자열: **/ID:ACEFA3E81F20694E953EB2DAA1E8B1B6**<br />-GUID/UUID 문자열: / ID:**E8A3EFAC-201F-4E69-953E-B2DAA1E8B1B6**<br />MAC 주소: **00B056882FDC** (대시가 없는) 또는 **00-B0-56-88-2F-DC** (대시로)|
+|[/ ID: < UUID &#124; MAC 주소 >]|GUID/UUID 또는 컴퓨터의 MAC 주소를 지정합니다. 이 값은 다음 세 가지 형식 중 하나 여야 합니다.<br /><br />-이진 문자열: **/ID:ACEFA3E81F20694E953EB2DAA1E8B1B6**<br />-GUID/UUID 문자열: / ID:**E8A3EFAC-201F-4E69-953E-B2DAA1E8B1B6**<br />MAC 주소: **00B056882FDC** (대시가 없는) 또는 **00-B0-56-88-2F-DC** (대시로)|
 |[/ ReferralServer:<Server name>]|간단한 파일 전송 프로토콜 tftp ()를 사용 하 여 네트워크 부팅 프로그램 및 부팅 이미지를 다운로드 하려면 연결할 서버의 이름을 지정 합니다.|
 |[/ BootProgram:<Relative path>]|지정된 된 컴퓨터를 받을 네트워크 부팅 프로그램에 remoteInstall 폴더에서 상대 경로 지정 합니다. 예를 들어: **boot\x86\pxeboot.com**|
 |[/ WdsClientUnattend:<Relative path>]|Windows 배포 서비스 클라이언트에 대 한 설치 화면을 자동화 하는 무인 파일에는 remoteInstall 폴더에서 상대 경로 지정 합니다.|

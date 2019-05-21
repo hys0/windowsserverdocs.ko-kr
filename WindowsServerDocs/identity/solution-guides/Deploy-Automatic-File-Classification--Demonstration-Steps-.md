@@ -11,7 +11,7 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adds
 ms.openlocfilehash: 77fb8cc6e13cb82e4d07808c3ae77757a4b2de79
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59826784"
@@ -56,7 +56,7 @@ ms.locfileid: "59826784"
   
 5.  **개인 식별이 가능한 정보**를 마우스 오른쪽 단추로 클릭한 다음 **사용**을 클릭합니다.  
   
-![솔루션 가이드](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)Windows PowerShell 해당 명령을 * * *  
+![솔루션 가이드](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell 해당 명령을****  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   

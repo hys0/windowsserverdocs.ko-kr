@@ -387,7 +387,7 @@ AD DS를 설치하는 데 필요한 자격 증명 요구 사항은 선택한 배
   
     -   새 포리스트를 설치 하는 경우 클릭 **새 포리스트 추가** 고 루트 도메인 (예: corp.contoso.com)의 이름을 입력 합니다.  
   
-        자세한 내용은 참조 [#40; & 새 Windows Server 2012 Active Directory 포리스트 설치 200 수준 &#41;](../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-.md)합니다.  
+        자세한 내용은 참조 [&#40; 새 Windows Server 2012 Active Directory 포리스트 설치 200 수준 &#41;](../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-.md)합니다.  
   
 11. **도메인 컨트롤러 옵션** 페이지에서 다음 옵션 중 하나를 선택합니다.  
   

@@ -15,7 +15,7 @@ ms.author: pashort
 author: shortpatti
 ms.openlocfilehash: 0d51ac71fa2fbe4d0bb7121a9ef511524c47f4f4
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59826614"
@@ -57,7 +57,7 @@ ms.locfileid: "59826614"
   
 6.  **설치 진행률** 페이지에서 설치가 완료되었는지 확인하고 **닫기**를 클릭합니다.  
   
-![설치 진행률 성공](../../../media/Step-2-Configuring-DirectAccess-Servers/PowerShellLogoSmall.gif)Windows PowerShell 해당 명령을 * * *  
+![설치 진행률 성공](../../../media/Step-2-Configuring-DirectAccess-Servers/PowerShellLogoSmall.gif)****Windows PowerShell 해당 명령을****  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   

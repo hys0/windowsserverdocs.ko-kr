@@ -15,7 +15,7 @@ manager: dongill
 ms.date: 10/16/2017
 ms.openlocfilehash: 5cd84269a5ac1a85d4b6cf359cc97f478a500c4f
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59825984"
@@ -32,7 +32,7 @@ arp [/a [<Inetaddr>] [/n <ifaceaddr>]] [/g [<Inetaddr>] [-n <ifaceaddr>]] [/d <I
 ### <a name="parameters"></a>매개 변수
 |매개 변수|설명|
 |-------|--------|
-|/a [<Inetaddr>] [/n <ifaceaddr>]|모든 인터페이스에 대 한 현재 arp 캐시 테이블을 표시합니다. /N 매개 변수는 대 소문자를 구분 합니다.<br /><br />사용 하 여 특정 IP 주소에 대 한 arp 캐시 항목을 표시 하려면 **arp/a** 사용 하 여 합니다 *Inetaddr* 매개 변수를 여기서 *Inetaddr* IP 주소입니다. 하는 경우 *Inetaddr* 지정 하지 않으면 첫 번째 해당 인터페이스를 사용 합니다.<br /><br />특정 인터페이스에 대 한 arp 캐시 테이블을 표시 하려면 사용는 **n / * * * ifaceaddr* 와 함께에서 매개 변수를 **/a** 매개 변수 위치 *ifaceaddr* 는 IP 주소 인터페이스에 할당 합니다.|
+|/a [<Inetaddr>] [/n <ifaceaddr>]|모든 인터페이스에 대 한 현재 arp 캐시 테이블을 표시합니다. /N 매개 변수는 대 소문자를 구분 합니다.<br /><br />사용 하 여 특정 IP 주소에 대 한 arp 캐시 항목을 표시 하려면 **arp/a** 사용 하 여 합니다 *Inetaddr* 매개 변수를 여기서 *Inetaddr* IP 주소입니다. 하는 경우 *Inetaddr* 지정 하지 않으면 첫 번째 해당 인터페이스를 사용 합니다.<br /><br />특정 인터페이스에 대 한 arp 캐시 테이블을 표시 하려면 사용는 **n/***ifaceaddr* 와 함께에서 매개 변수를 **/a** 매개 변수 위치 *ifaceaddr* 는 IP 주소 인터페이스에 할당 합니다.|
 |/g [<Inetaddr>] [/n <ifaceaddr>]|동일 **/a**합니다.|
 |[/d <Inetaddr> [<ifaceaddr>]|특정 IP 주소를 가진 항목을 삭제 합니다. 여기서 *Inetaddr* IP 주소입니다.<br /><br />특정 인터페이스에 대 한 테이블에서 항목을 삭제 하려면 사용 합니다 *ifaceaddr* 매개 변수 위치 *ifaceaddr* 인터페이스에 할당 된 IP 주소입니다.<br /><br />모든 항목을 삭제 하려면 별표를 사용 하 여 (\*) 대신 와일드 카드 문자 *Inetaddr*합니다.|
 |/s <Inetaddr> <Etheraddr> [<ifaceaddr>]|IP 주소를 확인 하 여 arp 캐시에 정적 항목을 추가 *Inetaddr* 실제 주소로 *Etheraddr*합니다.<br /><br />특정 인터페이스에 대 한 테이블에는 정적 arp 캐시 항목을 추가 하려면 사용 합니다 *ifaceaddr* 매개 변수 위치 *ifaceaddr* 인터페이스에 할당 된 IP 주소입니다.|
