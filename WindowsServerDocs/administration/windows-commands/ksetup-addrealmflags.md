@@ -15,7 +15,7 @@ manager: dongill
 ms.date: 10/16/2017
 ms.openlocfilehash: bbc878bd0ee25ad92c640710ab6b46bbc0eaf62a
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59827684"
@@ -52,7 +52,7 @@ ksetup /addrealmflags <RealmName> [sendaddress] [tcpsupported] [delegate] [ncsup
 |0x08|NcSupported|이 영역에서는 DNS 및 영역 이름 지정 표준이 허용 하는 이름을 정규화를 지원 합니다.|
 |0x80|RC4|이 영역 TLS 사용에 대 한 수 있는 상호 영역 트러스트를 사용 하도록 설정 하려면 RC4 암호화를 지원 합니다.|
 
-영역 플래그 레지스트리의 아래에 저장 됩니다 **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Domains\*** 영역-name * 합니다. 이 항목은 기본적으로 레지스트리에 없습니다. 사용할 수는 [ksetup: addrealmflags](ksetup-addrealmflags.md) 레지스트리를 채우는 데 명령입니다.
+영역 플래그 레지스트리의 아래에 저장 됩니다 **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Domains\*** 영역-name* 합니다. 이 항목은 기본적으로 레지스트리에 없습니다. 사용할 수는 [ksetup: addrealmflags](ksetup-addrealmflags.md) 레지스트리를 채우는 데 명령입니다.
 
 어떤 영역 플래그는 설정 및 사용 가능한 표시 ksetup 또는 ksetup /dumpstate의 출력을 확인 하 여 합니다.
 
