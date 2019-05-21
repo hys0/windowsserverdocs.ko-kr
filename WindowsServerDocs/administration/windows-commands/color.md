@@ -15,7 +15,7 @@ manager: dongill
 ms.date: 10/16/2017
 ms.openlocfilehash: f8d23cc1bb5739b47c755d90c927cbcf82b8da7f
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59825024"
@@ -44,7 +44,7 @@ color [[<B>]<F>]
 
 ## <a name="remarks"></a>설명
 
--   다음 표에서 대 한 값으로 사용할 수 있는 유효한 16 진수 *B* 하 고 *F*합니다.  
+-   다음 표에서 대 한 값으로 사용할 수 있는 유효한 16 진수 *B* 하 고 *F*합니다.   
     |값|색|
     |-----|-----|
     |0|검정|
