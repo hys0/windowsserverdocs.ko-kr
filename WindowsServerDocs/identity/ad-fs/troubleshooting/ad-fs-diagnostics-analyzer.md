@@ -5,16 +5,16 @@ author: billmath
 ms.author: billmath
 manager: mtillman
 ms.reviewer: anandyadavMSFT
-ms.date: 02/13/2019
+ms.date: 03/29/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: a5b5f895a0575094f8f1af950bde82e1d56325b2
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 8d9acd1adcb8d9566b154abfef940e21609a6684
+ms.sourcegitcommit: 4ff3d00df3148e4bea08056cea9f1c3b52086e5d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59829124"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64773378"
 ---
 # <a name="ad-fs-help-diagnostics-analyzer"></a>AD FS 도움말 진단 분석기
 
@@ -32,15 +32,15 @@ AD FS에 다양 한 인증 및 응용 프로그램 개발을 위해 제공 하�
 
 ## <a name="step-1-setup-the-adfstoolbox-module-on-ad-fs-server"></a>1단계: AD FS 서버에서 ADFSToolbox 모듈 설치
 
-실행 하는 [진단 분석기](https://aka.ms/adfsdiagnosticsanalyzer), ADFSToolbox PowerShell 모듈을 설치 해야 합니다. AD FS 서버에 인터넷에 연결 하는 경우에 PowerShell 갤러리에서 직접 ADFSToolbox 모듈을 설치할 수 있습니다. 인터넷에 연결 되지 않은, 경우 수동 설치에 대 한 GitHub 리포지토리를 복제 합니다. 
+실행 하는 [진단 분석기](https://aka.ms/adfsdiagnosticsanalyzer), ADFSToolbox PowerShell 모듈을 설치 해야 합니다. AD FS 서버에 인터넷에 연결 하는 경우에 PowerShell 갤러리에서 직접 ADFSToolbox 모듈을 설치할 수 있습니다. 인터넷에 연결 되지 않은, 경우 수동 설치에 대 한 GitHub 리포지토리를 복제 합니다.
 
 ![AD FS 진단 분석기-설치](media/ad-fs-diagonostics-analyzer/step1.png)
 
 ### <a name="setup-using-powershell-gallery"></a>PowerShell 갤러리를 사용 하 여 설치
 
 AD FS 서버에 인터넷에 연결 하는 경우에 아래의 PowerShell 명령을 사용 하 여 PowerShell 갤러리에서 직접 ADFSToolbox 모듈을 설치 하는 것이 좋습니다.
- 
-   ```powershell 
+
+   ```powershell
     Install-Module -Name ADFSToolbox -force
     Import-Module ADFSToolbox -force
    ```
@@ -51,8 +51,8 @@ ADFSToolbox 모듈을 수동으로 설치할 수 있습니다 GitHub에서 직�
 1. 다운로드는 [리포지토리](https://github.com/Microsoft/adfsToolbox/archive/master.zip)
 2. 다운로드 한 파일의 압축을 풀고 % SYSTEMDRIVE %adfsToolbox 마스터 폴더를 복사\\Program Files\\WindowsPowerShell\\모듈\\합니다.
 3. PowerShell 모듈을 가져옵니다. 관리자 권한 PowerShell 창에서 다음을 실행 합니다.
- 
-   ```powershell 
+
+   ```powershell
     Import-Module ADFSToolbox -Force
    ```
 
@@ -78,6 +78,11 @@ Server 2016 AD FS 팜에서 명령을 AD FS 구성에서 AD FS 서버 목록을 
 
 클릭할 **업로드** 업로드를 완료 하 여 다음 단계로 이동 합니다.
 
+
+Microsoft 계정으로 로그인 하 여 진단 결과 보기 나중에 저장할 수 있는 및 Microsoft에 보낼 수 있습니다를 지원 합니다. 언제 든 지 지원 사례를 열 경우 Microsoft 진단 분석기 결과 확인 하 고 더 빠르게 문제를 해결 하는 일을 할 수 있습니다.
+
+![AD FS 진단 분석기 도구에 로그인](media/ad-fs-diagonostics-analyzer/sign_in_step.png)
+
 ## <a name="step-3-view-diagnostics-analysis-and-resolve-any-issues"></a>3단계: 진단 분석을 확인 하 고 문제 해결
 
 테스트 결과의 네 섹션 가지가 있습니다.
@@ -87,19 +92,15 @@ Server 2016 AD FS 팜에서 명령을 AD FS 구성에서 AD FS 서버 목록을 
 3. 해당 없음: 이 섹션에서는 테스트 명령은 실행 하는 특정 서버에 적용할 수 없기 때문에 실행 되지 않은 목록을 포함 합니다.
 4. 전달 합니다. 이 섹션에서는 사용자에 대 한 작업 항목이 있고 전달 하는 테스트의 목록을 포함 합니다.
 
-테스트 및 확인 단계를 설명 하는 세부 정보를 사용 하 여 각 테스트 결과가 표시 됩니다.
+![AD FS 진단 분석기 도구-테스트 결과 목록](media/ad-fs-diagonostics-analyzer/step3a_v2.png) 테스트 및 확인 단계를 설명 하는 세부 정보를 사용 하 여 각 테스트 결과가 표시 됩니다.
 
 1. 테스트 이름: 실행 된 테스트의 이름
 2. 세부 정보: 테스트 중 수행 된 전체 작업의 설명
 3. 해결 단계: 테스트에서 강조 표시 된 문제를 해결 하는 제안된 단계
 
-![AD FS 진단 분석기 도구-테스트 결과 목록](media/ad-fs-diagonostics-analyzer/step3a.png)
-
-![AD FS 진단 분석기 도구-실패 해결](media/ad-fs-diagonostics-analyzer/step3b.png)
+![AD FS 진단 분석기 도구-실패 해결](media/ad-fs-diagonostics-analyzer/step3b_v2.png)
 
 ## <a name="next"></a>다음
 
 - [AD FS 도움말 troublehshooting 가이드를 사용 합니다.](https://aka.ms/adfshelp/troubleshooting )
 - [AD FS 문제 해결](ad-fs-tshoot-overview.md)
-
- 
