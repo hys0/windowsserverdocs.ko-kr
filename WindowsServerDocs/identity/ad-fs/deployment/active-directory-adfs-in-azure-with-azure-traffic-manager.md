@@ -17,7 +17,7 @@ ms.date: 09/01/2016
 ms.author: anandy;billmath
 ms.openlocfilehash: 4af0386ef97694baa9ba7f1e5e7163554d79734a
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59874124"
@@ -106,7 +106,7 @@ AD FS를 테스트 하는 가장 쉬운 방법은 IdpInitiatedSignon.aspx 페이
 
 1. 실행을 사용 하도록 설정 하려면 PowerShell을 사용 하 여 AD FS 서버의 cmdlet 아래. 
    Set-AdfsProperties -EnableIdPInitiatedSignonPage $true
-2. 모든 외부 컴퓨터 액세스 https://에서<yourfederationservicedns>/adfs/ls/IdpInitiatedSignon.aspx
+2. 모든 외부 컴퓨터 액세스 https://에서 <yourfederationservicedns>/adfs/ls/IdpInitiatedSignon.aspx
 3. AD FS 페이지를 참조 해야 아래와 같은:
    
     ![ADFS 테스트-인증 질문](./media/active-directory-adfs-in-azure-with-azure-traffic-manager/adfstest1.png)
