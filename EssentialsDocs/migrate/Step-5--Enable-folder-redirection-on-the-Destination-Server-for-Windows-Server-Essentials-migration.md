@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: 613ff4c80a80ed4f3207cb0c1ead6db12c723e85
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59815384"
@@ -43,7 +43,7 @@ ms.locfileid: "59815384"
   
 1.  대상 서버에서 **그룹 정책 관리** 관리 도구를 엽니다.  
   
-2.  **그룹 정책 관리**를 확장 하 고 **포리스트: * * * YourNetworkDomainName*를 확장 **도메인**를 확장 *YourNetworkDomainName* 을 펼쳐 **그룹 정책 개체**합니다.  
+2.  **그룹 정책 관리**를 확장 하 고 **포리스트:***YourNetworkDomainName*를 확장 **도메인**를 확장 *YourNetworkDomainName* 을 펼쳐 **그룹 정책 개체**합니다.  
   
 3.  삭제하려는 정책을 마우스 오른쪽 단추로 클릭한 후 **삭제**를 클릭합니다.  
   

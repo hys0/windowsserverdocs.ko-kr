@@ -11,7 +11,7 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adds
 ms.openlocfilehash: cb4432084386cb3296163f24c801be1c74b379df
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59883044"
@@ -306,7 +306,7 @@ Install-addsdomaincontroller
   
 ![복제 데이터베이스를 설치 합니다.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_PSUpgradeProgress.png)  
   
-Windows PowerShell을 사용하여 도메인 컨트롤러를 원격으로 구성하려면 **invoke-command** cmdlet *안에***install-adddomaincontroller** cmdlet을 래핑합니다. 이 경우 중괄호를 사용해야 합니다.  
+Windows PowerShell을 사용하여 도메인 컨트롤러를 원격으로 구성하려면 **invoke-command** cmdlet *안에* **install-adddomaincontroller** cmdlet을 래핑합니다. 이 경우 중괄호를 사용해야 합니다.  
   
 ```  
 invoke-command {install-addsdomaincontroller "domainname <domain> -credential (get-credential)} -computername <dc name>  

@@ -16,7 +16,7 @@ manager: dongill
 ms.localizationpriority: medium
 ms.openlocfilehash: 8d14ccf734d5242301030bbb6e3c2489e1a0266a
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59876354"
@@ -30,7 +30,7 @@ Windows Server는 작업 그룹에서 데이터 센터까지 응용 프로그램
 > [!IMPORTANT]
 > PC에서 실행되는 Windows가 실행되고 있습니까? Windows 10, Windows 8 또는 8.1입니까? Windows 7입니까? 문제가 있으십니까? [Microsoft 지원](https://support.microsoft.com)으로 이동하고 검색 창에 문제를 바로 입력하세요. Windows, Office, Skype에 대한 많은 정보가 있습니다. 
 
-> 아래 정보는 Windows **Server***전용*입니다.
+> 아래 정보는 Windows **Server** *전용*입니다.
 
 ## <a name="windows-server-2016"></a>Windows Server 2016
 

@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: f8cf1b12a8fffe2a6e3389aad518ac96bc136cc9
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59872174"
@@ -314,13 +314,13 @@ ms.locfileid: "59872174"
   
 ##### <a name="to-log-on-to-remote-web-access-from-a-mobile-device"></a>모바일 장치에서 원격 웹 액세스에 로그온하려면  
   
-1.  웹 브라우저를 열고 입력 **https://***< YourDomainName\>***/원격** 주소 표시줄에 있습니다.  Https에서 s를 포함 하는 있는지 확인 합니다.  
+1.  웹 브라우저를 열고 입력 **https://***<YourDomainName\>***/원격** 주소 표시줄에 있습니다.  Https에서 s를 포함 하는 있는지 확인 합니다.  
   
 2.  원격 웹 액세스 로그온 페이지에 텍스트 상자에 사용자 이름 및 암호를 입력 하 고 화살표를 클릭 합니다. 원격 웹 액세스의 모바일 버전에 로그온됩니다.  
   
 ##### <a name="to-switch-to-the-desktop-version-of-remote-web-access"></a>원격 웹 액세스의 데스크톱 버전으로 전환하려면  
   
-1.  웹 브라우저를 열고 입력 **https://***< YourDomainName\>***/원격** 주소 표시줄에 있습니다.  Https에서 s를 포함 하는 있는지 확인 합니다.  
+1.  웹 브라우저를 열고 입력 **https://***<YourDomainName\>***/원격** 주소 표시줄에 있습니다.  Https에서 s를 포함 하는 있는지 확인 합니다.  
   
 2.  원격 웹 액세스 로그온 페이지에서 사용자 이름 및 암호를 텍스트 상자에 입력, 클릭 **데스크톱 버전 보기**를 선택한 다음 화살표를 클릭 합니다. 원격 웹 액세스의 데스크톱 버전에 로그온됩니다.  
   
@@ -328,7 +328,7 @@ ms.locfileid: "59872174"
   
 1.  로그 오프 합니다.  
   
-2.  웹 브라우저를 열고 입력 **https://***< YourDomainName\>***/원격/m** 주소 표시줄에 있습니다. Https에서 s를 포함 하는 있는지 확인 합니다.  
+2.  웹 브라우저를 열고 입력 **https://***<YourDomainName\>***/원격/m** 주소 표시줄에 있습니다. Https에서 s를 포함 하는 있는지 확인 합니다.  
   
 3.  원격 웹 액세스의 모바일 버전이 표시 됩니다. 원격 웹 액세스 로그온 페이지에 텍스트 상자에 사용자 이름 및 암호를 입력 하 고 화살표를 클릭 합니다. 원격 웹 액세스의 모바일 버전에 로그온 합니다.  
   

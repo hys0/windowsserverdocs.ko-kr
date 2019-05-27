@@ -15,7 +15,7 @@ manager: dongill
 ms.date: 10/16/2017
 ms.openlocfilehash: 39478e9b7dd8e8c69ed07f5d431486a7ed96b9cb
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59815504"
@@ -814,7 +814,7 @@ IP 주소, FQDN 또는 호스트 이름으로 표시를 관리 하려면 DNS 서
 만들 영역 유형을 지정 합니다. 각 영역 형식에 다른 필수 매개 변수:  
 **/dsprimary**  
 active directory 통합된 영역을 만듭니다.  
-* * / 기본 /file <FileName>**  
+**/기본 /file <FileName>**  
 표준 기본 영역을 만들고 영역 정보를 저장 하는 파일의 이름을 지정 합니다.  
 **/secondary <MasterIPaddress> [<MasterIPaddress>...]**  
 표준 보조 영역을 만듭니다.  
@@ -822,7 +822,7 @@ active directory 통합된 영역을 만듭니다.
 스텁 파일 지원 영역을 만듭니다.  
 **/dsstub <MasterIPaddress> [<MasterIPaddress>...]**  
 active directory 통합된 스텁 영역을 만듭니다.  
-* * / 전달자 <MasterIPaddress> [<MasterIPaddress>]... / 파일 <FileName>**  
+**/전달자 <MasterIPaddress> [<MasterIPaddress>]... / 파일 <FileName>**  
 만든된 영역 전달 해결 되지 않은 다른 DNS 서버 쿼리를 지정 합니다.  
 **/dsforwarder**  
 만든된 active directory 통합된 영역에 확인 되지 않은 다른 DNS 서버 쿼리를 전달를 지정 합니다.  
@@ -876,7 +876,7 @@ AD DS에서 영역을 삭제합니다.
 **<ZoneExportFile>**  
 만들려는 파일의 이름을 지정 합니다. # # # 주의-는 **zoneexport** 작업 문제 해결을 위해는 active directory 통합된 영역에 대 한 리소스 레코드의 파일을 만듭니다. 기본적으로이 명령은 파일 %systemroot%/System32/Dns 디렉터리는 기본적으로는 DNS 디렉터리에 배치 됩니다. # # # 예제에서는 참조 [예제 10: 영역 리소스 레코드 목록 파일로 내보내려면](https://technet.microsoft.com/library/cc784399(v=ws.10).aspx)합니다.  
 ### <a name="BKMK_26"></a>dnscmd /zoneinfo  
-지정 된 영역의 레지스트리에의 섹션에서 설정을 표시: * * HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DNS\Parameters\Zones\\<ZoneName>* * # # # 구문을 ```  
+지정 된 영역의 레지스트리에의 섹션에서 설정을 표시: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DNS\Parameters\Zones\\<ZoneName>** # # # 구문을 ```  
 dnscmd [<ServerName>] /zoneinfo <ZoneName> [<Setting>] ```  
 #### Parameters  
 **<ServerName>**  
@@ -884,7 +884,7 @@ IP 주소, FQDN 또는 호스트 이름으로 표시를 관리 하려면 DNS 서
 **<ZoneName>**  
 영역 이름을 지정합니다.  
 **<Setting>**  
-설정 하는 개별적으로 지정할 수 있습니다 합니다 **zoneinfo** 명령이 반환 합니다. 설정을 지정 하지 않으면 모든 설정이 반환 됩니다. # # # 주의-는 **zoneinfo** 명령은 표시에 포함 된 DNS 영역 수준 레지스트리 설정 * * HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DNS\Parameters\Zones\\<ZoneName>* * 합니다. -표시 하려면 서버 수준 레지스트리 설정을 사용 하십시오는 [정보](#BKMK_12) 명령입니다. -이 명령을 사용 하 여 표시할 수 있는 설정 목록을 참조 하십시오는 [config](#BKMK_3) 명령입니다. # # # 예제에서는 참조 [예제 11: 디스플레이 RefreshInterval 설정을 레지스트리에서](https://technet.microsoft.com/library/cc784399(v=ws.10).aspx) 또는 [예제 12: 디스플레이 에이징 설정을 레지스트리에서](https://technet.microsoft.com/library/cc784399(v=ws.10).aspx)합니다.  
+설정 하는 개별적으로 지정할 수 있습니다 합니다 **zoneinfo** 명령이 반환 합니다. 설정을 지정 하지 않으면 모든 설정이 반환 됩니다. # # # 주의-는 **zoneinfo** 명령은 표시에 포함 된 DNS 영역 수준 레지스트리 설정 **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DNS\Parameters\Zones\\<ZoneName>** 합니다. -표시 하려면 서버 수준 레지스트리 설정을 사용 하십시오는 [정보](#BKMK_12) 명령입니다. -이 명령을 사용 하 여 표시할 수 있는 설정 목록을 참조 하십시오는 [config](#BKMK_3) 명령입니다. # # # 예제에서는 참조 [예제 11: 디스플레이 RefreshInterval 설정을 레지스트리에서](https://technet.microsoft.com/library/cc784399(v=ws.10).aspx) 또는 [예제 12: 디스플레이 에이징 설정을 레지스트리에서](https://technet.microsoft.com/library/cc784399(v=ws.10).aspx)합니다.  
 ### <a name="BKMK_27"></a>dnscmd /zonepause  
 다음 쿼리 요청을 무시 하는 지정된 된 영역을 일시 중지 합니다. # # # 구문을 ```  
 dnscmd [<ServerName>] /zonepause <ZoneName> ```  
@@ -985,7 +985,7 @@ dnscmd [<ServerName>] /zoneresettype <ZoneName> <Zonetype> [/ overwrite_mem | /o
 만들 영역 유형을 지정 합니다. 각 형식에 다른 필수 매개 변수:  
 **/dsprimary**  
 active directory 통합된 영역을 만듭니다.  
-* * / 기본 /file <FileName>**  
+**/기본 /file <FileName>**  
 기본 표준 시간대를 만듭니다.  
 **/secondary <MasterIPaddress> [,<MasterIPaddress>...]**  
 표준 보조 영역을 만듭니다.  
@@ -993,7 +993,7 @@ active directory 통합된 영역을 만듭니다.
 스텁 파일 지원 영역을 만듭니다.  
 **/dsstub <MasterIPaddress>[,<MasterIPaddress>...]**  
 active directory 통합된 스텁 영역을 만듭니다.  
-* * / 전달자 <MasterIPaddress[,<MasterIPaddress>]... / 파일<FileName>**  
+**/전달자 <MasterIPaddress[,<MasterIPaddress>]... / 파일<FileName>**  
 만든된 영역 전달 해결 되지 않은 다른 DNS 서버 쿼리를 지정 합니다.  
 **/dsforwarder**  
 만든된 active directory 통합된 영역에 확인 되지 않은 다른 DNS 서버 쿼리를 전달를 지정 합니다.  

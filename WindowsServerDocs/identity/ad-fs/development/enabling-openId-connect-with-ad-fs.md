@@ -11,7 +11,7 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.openlocfilehash: 74a493e6568b71a05116140ec67586d36f439aa8
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59882664"
@@ -48,7 +48,7 @@ Windows Server 2012 r 2의 AD FS에서 초기 Oauth 지원을 기반으로 AD FS
   
     ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_2.PNG)  
   
-5.  에 **응용 프로그램 자격 증명 구성** 화면에서에 체크 **공유 암호를 생성** secret을 복사 합니다.  **다음**을 클릭합니다.  
+5.  에 **응용 프로그램 자격 증명 구성** 화면에서에 체크 **공유 암호를 생성** secret을 복사 합니다. **다음**을 클릭합니다.  
   
     ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_3.PNG)  
   
