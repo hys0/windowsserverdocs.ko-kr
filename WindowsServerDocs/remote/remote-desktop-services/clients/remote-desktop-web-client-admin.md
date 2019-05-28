@@ -8,12 +8,12 @@ ms.date: 11/2/2018
 ms.topic: article
 author: Heidilohr
 ms.localizationpriority: medium
-ms.openlocfilehash: 2cb819a7f91646c61b84c3ee70550af6033ba340
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: bf10f7f7444967247e51065bc6138fc0afd5ed1a
+ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59865974"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65976777"
 ---
 # <a name="set-up-the-remote-desktop-web-client-for-your-users"></a>사용자에 대한 원격 데스크톱 웹 클라이언트 설정
 
@@ -249,6 +249,35 @@ RD 세션 호스트 서버는 RD 브로커 서버와 다른 경우 다음이 단
     > RD 세션 호스트 및 RD 브로커 서버를 둘 다 동일한 컴퓨터를 공유 하는 경우 RD 브로커 서버 인증서를 설정 합니다. RD 세션 호스트 및 RD 브로커 서버가 다른 컴퓨터를 사용 하는 경우 둘 다 고유한 인증서를 사용 하 여 구성 해야 합니다.
 
 * 합니다 **주체 대체 이름 (SAN)** 컴퓨터의 각 인증서를 설정 해야에 대 한 **정규화 된 도메인 이름 (FQDN)** 합니다. 합니다 **CN (일반 이름)** 각 인증서에 대 한 SAN과 일치 해야 합니다.
+
+## <a name="how-to-pre-configure-settings-for-remote-desktop-web-client-users"></a>원격 데스크톱 웹 클라이언트 사용자에 대 한 설정을 미리 구성 하는 방법
+이 섹션에서는 PowerShell을 사용 하 여 원격 데스크톱 웹 클라이언트 배포에 대 한 설정을 구성 하는 방법을 알려줍니다. 이러한 PowerShell cmdlet 컨트롤 사용자 설정을 변경 하려면 조직의 보안 고려 사항에 따라 또는 워크플로 위한 것입니다. 다음 설정을 모두에 있는 합니다 **설정을** 웹 클라이언트의 사이드 패널입니다. 
+
+### <a name="suppress-telemetry"></a>원격 분석 표시 안 함
+기본적으로 사용자를 Microsoft로 전송 되는 원격 분석 데이터의 컬렉션을 사용할지 선택할 수 있습니다. Microsoft가 수집 원격 분석 데이터에 대 한 내용은에서 링크를 통해이 개인정보취급방침 참조 하십시오 합니다 **에 대 한** 측면 패널입니다.
+
+관리자 권한으로 다음 PowerShell cmdlet을 사용 하 여 배포에 대 한 원격 분석 수집 하지 않으려면 선택할 수 있습니다.
+
+   ```PowerShell
+    Set-RDWebClientDeploymentSetting -SuppressTelemetry $true
+   ```
+
+기본적으로 사용자는 원격 분석을 사용할지 여부를 선택할 수 있습니다. 부울 값을 **$false** 클라이언트의 기본 동작이 일치 합니다. 부울 값을 **$true** 원격 분석을 사용 하지 않도록 설정 하 고 원격 분석 설정에서 사용자를 제한 합니다.
+
+### <a name="remote-resource-launch-method"></a>원격 리소스 launch 메서드
+기본적으로 사용자가 브라우저에서 (1) 또는 (2) 해당 컴퓨터에 설치 하는 다른 클라이언트를 사용 하 여 처리 하는.rdp 파일을 다운로드 하 여 원격 리소스를 시작할 수 있습니다. 관리자 권한으로 다음 Powershell 명령 사용 하 여 배포에 원격 리소스 시작 메서드를 제한 하려면 선택할 수 있습니다.
+
+   ```PowerShell
+    Set-RDWebClientDeploymentSetting -LaunchResourceInBrowser ($true|$false)
+   ```
+ 기본적으로 사용자 시작 방법 중 하나를 선택할 수 있습니다. 부울 값을 **$true** 브라우저에서 리소스를 시작 하려면 사용자에 게 강제 됩니다. 부울 값을 **$false** .rdp 파일을 로컬에 설치 된 RDP 클라이언트를 사용 하 여 처리를 다운로드 하 여 리소스를 시작 하려면 사용자에 게 강제 됩니다.
+
+### <a name="reset-rdwebclientdeploymentsetting-configurations-to-default"></a>RDWebClientDeploymentSetting 구성을 기본값으로 다시 설정
+모든 배포 수준 웹 클라이언트 설정을 기본 구성으로 다시 설정 하려면 다음 PowerShell cmdlet을 실행 합니다.
+
+   ```PowerShell
+    Reset-RDWebClientDeploymentSetting 
+   ```
 
 ## <a name="troubleshooting"></a>문제 해결
 

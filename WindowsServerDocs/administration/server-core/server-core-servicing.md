@@ -7,12 +7,12 @@ ms.sitesec: library
 author: lizap
 ms.localizationpriority: medium
 ms.date: 10/17/2017
-ms.openlocfilehash: f51ffae5ed8f91cca386eb209e7a1d8cc664ceeb
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b19512a6f34e13469433aba6051f1232824beb0e
+ms.sourcegitcommit: 21165734a0f37c4cd702c275e85c9e7c42d6b3cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59817354"
+ms.lasthandoff: 05/03/2019
+ms.locfileid: "65034150"
 ---
 # <a name="patch-a-server-core-installation"></a>Server Core 설치를 패치 합니다.
 
@@ -66,7 +66,7 @@ Windows 업데이트가 강제로 사용 가능한 업데이트를 즉시 검색
 Wuauclt /detectnow 
 ```
 
-설치된 업데이트에 따라 시스템에서 알림 메시지를 제공하지 않은 경우에도 컴퓨터를 다시 시작해야 할 수 있습니다. 설치 프로세스가 완료 된 경우를 확인 하려면 확인 하려면 작업 관리자를 사용 하는 **Wuauclt** 또는 **신뢰할 수 있는 설치자** 프로세스가 적극적으로 실행 합니다. 메서드를 사용할 수도 있습니다 [Server Core 서버에 설치 된 업데이트 보기](#view-the-updates-installed-on-your-Server-Core-server) 설치 된 업데이트 목록을 확인 합니다.
+설치된 업데이트에 따라 시스템에서 알림 메시지를 제공하지 않은 경우에도 컴퓨터를 다시 시작해야 할 수 있습니다. 설치 프로세스가 완료 된 경우를 확인 하려면 확인 하려면 작업 관리자를 사용 하는 **Wuauclt** 또는 **신뢰할 수 있는 설치자** 프로세스가 적극적으로 실행 합니다. 메서드를 사용할 수도 있습니다 [Server Core 서버에 설치 된 업데이트 보기](#view-the-updates-installed-on-your-server-core-server) 설치 된 업데이트 목록을 확인 합니다.
 
 ## <a name="patch-the-server-with-wsus"></a>WSUS 사용 하 여 서버 패치 
 

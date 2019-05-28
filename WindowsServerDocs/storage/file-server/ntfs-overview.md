@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 09/06/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 556110fe7bed1aed002ef6d985324ff5171e770e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f85e321381adcf607c3504005a0a3448ab0f098a
+ms.sourcegitcommit: 2977c707a299929c6ab0d1e0adab2e1c644b8306
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59885374"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63738441"
 ---
 # <a name="ntfs-overview"></a>NTFS 개요
 
@@ -25,7 +25,7 @@ Windows Server 2012 R2에는 NTFS의 새로운 기능과 변경 된 기능에 �
 
 ## <a name="practical-applications"></a>유용한 팁
 
-### <a name="increased-reliability"></a>향상 된 안정성
+### <a name="increased-reliability"></a>향상된 안정성
 
 NTFS는 시스템 오류가 발생 한 후 컴퓨터를 다시 시작할 때 파일 시스템 일관성을 복원 하려면 로그 파일 및 검사점 정보를 사용 합니다. 불량 섹터 오류가 발생 한 후 동적으로 NTFS 불량 섹터를 포함, 새 클러스터를 데이터에 대 한 할당, 불량, 원래 클러스터를 표시 및 더 이상 이전 클러스터를 사용 하 여 클러스터를 다시 매핑합니다. 예를 들어, 서버 충돌 후 NTFS 데이터를 복구할 수 해당 로그 파일을 재생 하 여 합니다.
 

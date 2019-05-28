@@ -12,16 +12,16 @@ ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
 manager: dongill
-ms.openlocfilehash: 2f4fc63c6ff7c1254fda630a8f34188d8fedc8e5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: e20b4960faac0ef40ad68271fa907394344e9c47
+ms.sourcegitcommit: 21165734a0f37c4cd702c275e85c9e7c42d6b3cb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59825044"
+ms.lasthandoff: 05/03/2019
+ms.locfileid: "65034420"
 ---
 # <a name="add-the-rd-connection-broker-server-to-the-deployment-and-configure-high-availability"></a>배포에 RD 연결 브로커 서버 추가 및 고가용성 구성
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016
 
 가용성과 원격 데스크톱 서비스 인프라의 규모를 개선 하기 위해 원격 데스크톱 연결 브로커 (RD 연결 브로커) 클러스터를 배포할 수 있습니다. 
 
@@ -62,7 +62,7 @@ ms.locfileid: "59825044"
 
 ## <a name="step-2-configure-load-balancing-on-the-rd-connection-brokers"></a>2단계: RD 연결 브로커에 부하 분산 구성 
 
-Azure 인프라를 사용 하는 경우 만들 수 있습니다는 [Azure load balancer](#create-a-load-balancer)설정 하는 경우, 설정할 수 있습니다 [DNS 라운드 로빈](#configure-dns-round--robin)합니다. 
+Azure 인프라를 사용 하는 경우 만들 수 있습니다는 [Azure load balancer](#create-a-load-balancer)설정 하는 경우, 설정할 수 있습니다 [DNS 라운드 로빈](#configure-dns-round-robin)합니다.
 
 ### <a name="create-a-load-balancer"></a>Load balancer 만들기  
 1. Azure 부하 분산 장치 만들기   
@@ -90,7 +90,7 @@ Azure 인프라를 사용 하는 경우 만들 수 있습니다는 [Azure load b
       3. 왼쪽 창에서 확장 **DNS**DNS 컴퓨터 클릭, 클릭 **정방향 조회 영역**, 및 도메인 이름 (예: Contoso.com)을 클릭 합니다. (정보에 대 한 DNS 서버 쿼리를 처리 하는 데 몇 초 걸릴 수 있습니다.)  
       4. 클릭 **작업 > 새 호스트 (A 또는 AAAA)** 합니다.   
       9. 이름 (예를 들어 hacb) 및 이전에 지정한 IP 주소 (예를 들어 10.0.0.32)을 입력 합니다.   
-  
+
 ### <a name="configure-dns-round-robin"></a>DNS 라운드 로빈 구성  
   
 다음 단계는 Azure 내부 부하 분산 장치를 만드는 대신 합니다.   

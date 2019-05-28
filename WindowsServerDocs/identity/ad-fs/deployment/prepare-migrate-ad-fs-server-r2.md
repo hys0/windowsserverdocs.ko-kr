@@ -8,18 +8,18 @@ ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 4d0ff53b9118db1dd6ba5af94b3e627bf1597e0c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b5658676d08318d88ddee44a0589db5873b4660b
+ms.sourcegitcommit: 21165734a0f37c4cd702c275e85c9e7c42d6b3cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59889024"
+ms.lasthandoff: 05/03/2019
+ms.locfileid: "65034293"
 ---
 # <a name="prepare-to-migrate-the-ad-fs-20-federation-server-to-ad-fs-on-windows-server-2012-r2"></a>Windows Server 2012 R2에서 AD FS를 AD FS 2.0 페더레이션 서버 마이그레이션 준비
 
 이 문서에서는 Windows Server 2012 R2 AD FS 팜에 AD FS 2.0 또는 페더레이션 서버 팜을 Windows Server 2012를 마이그레이션하는 방법을 설명 합니다.  기본 데이터베이스로 WID 또는 SQL Server를 사용 하는 AD FS 팜을 사용 하 여 단계를 사용할 수 있습니다.  
   
--   [마이그레이션 프로세스 개요](prepare-migrate-ad-fs-server-r2.md#migrate-process-outline)  
+-   [마이그레이션 프로세스 개요](prepare-migrate-ad-fs-server-r2.md#migration-process-outline)  
   
 -   [Windows Server 2012 R2의 새로운 AD FS 기능](prepare-migrate-ad-fs-server-r2.md#new-ad-fs-functionality-in-windows-server-2012-r2)  
   
@@ -29,7 +29,8 @@ ms.locfileid: "59889024"
   
 -   [기타 마이그레이션 작업 및 고려 사항](prepare-migrate-ad-fs-server-r2.md#other-migration-tasks-and-considerations)  
   
-##  <a name="migration-process-outline"></a>마이그레이션 프로세스 개요  
+##  <a name="migration-process-outline"></a>마이그레이션 프로세스 개요
+
  AD FS 페더레이션 서버 팜을 Windows Server 2012 R2로 마이그레이션하려면 다음 작업을 완료해야 합니다.  
   
 1.  기존 AD FS 팜에 다음 구성 데이터를 내보내고 기록 및 백업합니다. 이러한 작업을 완료하는 방법에 자세한 내용은 [AD FS 페더레이션 서버 마이그레이션](migrate-ad-fs-fed-server-r2.md)을 참조하십시오.  

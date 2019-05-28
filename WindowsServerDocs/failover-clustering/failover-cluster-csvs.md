@@ -8,16 +8,16 @@ ms.author: jgerend
 ms.technology: storage-failover-clustering
 ms.date: 04/05/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: f5bd0ad05bdc2573a5ea0abbe165de2d3e7f5c8f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 00f29c70628f2869e9f3aeffd0d08032bce5aeda
+ms.sourcegitcommit: 21165734a0f37c4cd702c275e85c9e7c42d6b3cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59857704"
+ms.lasthandoff: 05/03/2019
+ms.locfileid: "65034188"
 ---
 # <a name="use-cluster-shared-volumes-in-a-failover-cluster"></a>장애 조치 클러스터에서 클러스터 공유 볼륨 사용
 
->적용 대상: Windows Server 2012 R2, Windows Server 2012, Windows Server 2016
+>적용 대상: Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2
 
 CSV(클러스터 공유 볼륨)는 장애 조치 클러스터의 여러 노드에서 NTFS 볼륨으로 프로비전된 동일한 LUN(디스크)에 동시에 읽기/쓰기 액세스할 수 있도록 지원합니다. (Windows Server 2012 R2에서 디스크를 프로 비전 할 수 NTFS 또는 ReFS (복원 파일 시스템)로 합니다.) CSV를 사용하면 드라이브 소유권을 변경하거나 볼륨을 분리하고 다시 탑재할 필요 없이 클러스터된 역할을 노드 간에 신속하게 장애 조치(failover)할 수 있습니다. 또한 장애 조치(failover) 클러스터에서 잠재적으로 많은 LUN을 간소화할 수 있습니다.
 
@@ -55,10 +55,10 @@ CSV를 지원하는 네트워크를 구성할 때 고려할 사항은 다음과 
     >Windows Server 2012 R2의 장애 조치 클러스터 노드당 여러 서버 서비스 인스턴스가 있습니다. 일반 파일 공유에 액세스한 SMB 클라이언트에서 들어오는 트래픽을 처리하는 기본 인스턴스와 노드 간 CSV 트래픽만 처리하는 두 번째 CSV 인스턴스가 있습니다. 또한 노드의 서버 서비스가 비정상 상태가 되면 CSV 소유권이 자동으로 다른 노드로 전환됩니다.
 
     SMB 3.0에는 CSV 트래픽을 클러스터의 여러 네트워크에서 스트리밍할 수 있으며 RDMA(원격 직접 메모리 액세스)가 지원되는 네트워크 어댑터를 활용할 수 있는 SMB 다중 채널 및 SMB 다이렉트 기능이 포함되어 있습니다. 기본적으로 SMB 다중 채널은 CSV 트래픽에 사용됩니다. 자세한 내용은 [서버 메시지 블록 개요](../storage/file-server/file-server-smb-overview.md)를 참조하세요.
-  - **Microsoft 장애 조치(failover) 클러스터 가상 어댑터 성능 필터**. 이 설정은 CSV에 연결해야 하는 경우(예: 연결 실패로 인해 CSV 디스크에 직접 연결할 수 없는 경우) I/O 리디렉션을 수행하는 노드의 기능을 향상시킵니다. 자세한 내용은 [About I/O synchronization 및 CSV 통신의 I/O 리디렉션](#about-i/o-synchronization-and-i/o-redirection-in-csv-communication) 이 항목의에서 뒷부분에 있습니다.
+  - **Microsoft 장애 조치(failover) 클러스터 가상 어댑터 성능 필터**. 이 설정은 CSV에 연결해야 하는 경우(예: 연결 실패로 인해 CSV 디스크에 직접 연결할 수 없는 경우) I/O 리디렉션을 수행하는 노드의 기능을 향상시킵니다. 자세한 내용은 [About I/O synchronization 및 CSV 통신의 I/O 리디렉션](#about-io-synchronization-and-io-redirection-in-csv-communication) 이 항목의에서 뒷부분에 있습니다.
 - **클러스터 네트워크 우선 순위**. 일반적으로 클러스터에서 구성한 네트워크 기본 설정을 변경하지 않는 것이 좋습니다.
 - **IP 서브넷 구성**. CSV를 사용하는 네트워크의 노드에는 특정 서브넷 구성이 필요하지 않습니다. CSV는 다중 서브넷 클러스터를 지원할 수 있습니다.
-- **정책 기반 QoS(서비스 품질)**. CSV를 사용하는 경우 각 노드의 네트워크 트래픽에 대한 QoS 우선 순위 정책 및 최소 대역폭 정책을 구성하는 것이 좋습니다. 자세한 내용은 [서비스 품질 (QoS)](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831679(v%3dws.11)>)합니다.
+- **정책 기반 QoS(서비스 품질)** . CSV를 사용하는 경우 각 노드의 네트워크 트래픽에 대한 QoS 우선 순위 정책 및 최소 대역폭 정책을 구성하는 것이 좋습니다. 자세한 내용은 [서비스 품질 (QoS)](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831679(v%3dws.11)>)합니다.
 - **저장소 네트워크**. 저장소 네트워크 권장 사항은 저장소 공급업체에서 제공하는 지침을 검토합니다. Csv 저장소에 대 한 추가 고려 대해서 [저장소 및 디스크 구성 요구 사항](#storage-and-disk-configuration-requirements) 이 항목의 뒷부분에 나오는.
 
 장애 조치(Failover) 클러스터의 하드웨어, 네트워크 및 저장소 요구 사항에 대한 개요는 [Failover Clustering Hardware Requirements and Storage Options](clustering-requirements.md)을 참조하세요.
@@ -144,7 +144,7 @@ CSV를 사용하는 장애 조치(failover) 클러스터에 대한 저장소 구
 
   - 어떤 조직에서 VDI(가상 데스크톱 인프라)를 지원할 가상 컴퓨터를 배포하려고 합니다(비교적 작업량이 적음). 클러스터에서는 고성능 저장소를 사용합니다. 클러스터 관리자는 저장소 공급업체에 문의한 후 CSV 볼륨당 비교적 많은 수의 가상 컴퓨터를 배치하기로 결정합니다.
   - 또 다른 조직에서는 자주 사용되는 데이터베이스 응용 프로그램을 지원할 많은 가상 컴퓨터를 배포하려고 합니다(비교적 작업량이 많음). 클러스터에서는 성능이 낮은 저장소를 사용합니다. 클러스터 관리자는 저장소 공급업체에 문의한 후 CSV 볼륨당 비교적 적은 수의 가상 컴퓨터를 배치하기로 결정합니다.
-- 특정 가상 컴퓨터에 대한 저장소 구성을 계획할 때는 해당 가상 컴퓨터에서 지원할 서비스, 응용 프로그램 또는 역할에 대한 디스크 요구 사항을 고려합니다. 이러한 요구 사항을 이해하면 성능을 저하시킬 수 있는 디스크 경합을 방지할 수 있습니다. 가상 컴퓨터에 대한 저장소 구성은 동일한 서비스, 응용 프로그램 또는 역할을 실행하는 실제 서버에 사용할 수 있는 저장소 구성과 유사해야 합니다. 자세한 내용은 [정렬을의 Lun, 볼륨 및 VHD 파일](#arrangement-of-luns,-volumes,-and-vhd-files) 이 항목의에서 앞부분입니다.
+- 특정 가상 컴퓨터에 대한 저장소 구성을 계획할 때는 해당 가상 컴퓨터에서 지원할 서비스, 응용 프로그램 또는 역할에 대한 디스크 요구 사항을 고려합니다. 이러한 요구 사항을 이해하면 성능을 저하시킬 수 있는 디스크 경합을 방지할 수 있습니다. 가상 컴퓨터에 대한 저장소 구성은 동일한 서비스, 응용 프로그램 또는 역할을 실행하는 실제 서버에 사용할 수 있는 저장소 구성과 유사해야 합니다. 자세한 내용은 [정렬을의 Lun, 볼륨 및 VHD 파일](#arrangement-of-luns-volumes-and-vhd-files) 이 항목의에서 앞부분입니다.
 
     저장소에 독립된 실제 하드 디스크를 많이 배치하여 디스크 경합을 완화할 수도 있습니다. 그에 따라 저장소 하드웨어를 선택하고 공급업체와 상의하여 저장소의 성능을 최적화합니다.
 - 클러스터 워크로드를 및 I/O 작업의 필요성에 따라 각 LUN에 액세스할 비율의 가상 컴퓨터만 구성하고, 나머지 가상 컴퓨터는 연결하지 않으며 대신 컴퓨팅 작업에만 전용되도록 구성할 수 있습니다.
@@ -274,5 +274,5 @@ Windows Server 2012에서 기본적으로 CSV 캐시가 비활성화 됩니다. 
 
 ## <a name="more-information"></a>자세한 정보
 
-- [장애 조치 클러스터링](failover-clustering.md)
+- [장애 조치(failover) 클러스터링](failover-clustering.md)
 - [클러스터 된 저장소 공간 배포](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj822937(v%3dws.11)>)
