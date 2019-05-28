@@ -6,18 +6,18 @@ ms.author: nedpyle
 ms.technology: storage-replica
 ms.topic: get-started-article
 author: nedpyle
-ms.date: 10/26/2016
+ms.date: 04/26/2019
 ms.assetid: 6c5b9431-ede3-4438-8cf5-a0091a8633b0
-ms.openlocfilehash: 18c3c694e1d2e21a7068877ba22786862824bea6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: fc49674d518756424acc02bd5b830c361c7400df
+ms.sourcegitcommit: 4ff3d00df3148e4bea08056cea9f1c3b52086e5d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59888374"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64772421"
 ---
 # <a name="stretch-cluster-replication-using-shared-storage"></a>공유 저장소를 사용하여 확장 클러스터 복제
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server 2019, Windows Server 2016, Windows Server (반기 채널)
 
 이 평가 예제에서는 이러한 컴퓨터와 해당 저장소를 단일 확장 클러스터에서 구성합니다. 이 클러스터에서는 두 노드가 하나의 저장소 집합과 또 다른 저장소 집합을 공유한 다음 즉각적인 장애 조치(failover)가 가능하도록 복제에서 미러된 두 저장소 집합을 모두 클러스터에 유지합니다. 필수 사항은 아니지만 이러한 노드와 해당 저장소는 별도의 실제 사이트에 있어야 합니다. Hyper-V 및 파일 서버 클러스터를 샘플 시나리오로 만들기 위한 별도의 단계가 있습니다.  
 
@@ -40,7 +40,7 @@ ms.locfileid: "59888374"
 
 ## <a name="prerequisites"></a>사전 요구 사항  
 -   Active Directory 도메인 서비스 포리스트(Windows Server 2016을 실행하지 않아도 됨).  
--   Windows Server 2016 Datacenter Edition이 설치된 서버 2개 이상 최대 64개의 노드 클러스터 지원  
+-   Windows Server 2019 또는 Windows Server 2016 Datacenter Edition을 실행 하는 2-64 서버. Windows Server 2019를 실행 하는 경우 대신 사용할 수 있습니다 Standard Edition 단일 볼륨에만 복제 확인 하는 경우 최대 2TB의 크기입니다. 
 -   SAS JBOD(저장소 공간 등), 파이버 채널 SAN, 공유 VHDX 또는 iSCSI 대상을 사용하는 공유 저장소 집합 2개. 저장소는 HDD 및 SSD 미디어가 혼합되고 영구 예약을 지원해야 합니다. 각 저장소 집합을 두 개의 서버에만 사용할 수 있도록 설정합니다(비대칭).  
 -   각 저장소 집합에서 복제된 데이터용과 로그용으로 둘 이상의 가상 디스크를 만들 수 있어야 합니다. 실제 저장소의 섹터 크기는 모든 데이터 디스크의 섹터 크기와 동일해야 합니다. 실제 저장소의 섹터 크기는 모든 로그 디스크의 섹터 크기와 동일해야 합니다.  
 -   각 서버에 하나 이상의 동기 복제용 1GbE 연결(RDMA 권장)   
@@ -53,7 +53,7 @@ ms.locfileid: "59888374"
 
 ## <a name="provision-operating-system-features-roles-storage-and-network"></a>운영 체제, 기능, 역할, 저장소 및 네트워크 프로비전  
 
-1.  모든 서버 노드에 Windows Server 2016 Datacenter Edition을 설치합니다. Standard Edition(사용 가능한 경우)에는 저장소 복제본이 포함되어 있지 않으므로 이 버전을 선택하지 마세요. Windows Server Desktop Experience, Core 및 Nano 설치 모드가 모두 지원됩니다.  
+1.  데스크톱 환경 설치 옵션을 사용 하 여 Server Core 또는 서버를 사용 하 여 모든 서버 노드에 Windows Server를 설치 합니다.  
     > [!IMPORTANT]
     > 이 시점부터는 항상 모든 서버에서 기본 제공 관리자 그룹의 구성원인 도메인 사용자로 로그온합니다. 그래픽 서버 설치 또는 Windows 10 컴퓨터에서 실행할 때는 항상 PowerShell 및 명령줄 프롬프트를 관리자 권한으로 사용해야 합니다.
 
@@ -92,7 +92,7 @@ ms.locfileid: "59888374"
 
         ```  
 
-        이러한 단계에 대한 자세한 내용은 [역할, 역할 서비스 또는 기능 설치 또는 제거](https://technet.microsoft.com/library/hh831809.aspx)를 참조하세요.  
+        이러한 단계에 대한 자세한 내용은 [역할, 역할 서비스 또는 기능 설치 또는 제거](../../administration/server-manager/install-or-uninstall-roles-role-services-or-features.md)를 참조하세요.  
 
 
 8. 다음과 같이 저장소를 구성합니다.  
@@ -114,13 +114,13 @@ ms.locfileid: "59888374"
 
         1.  각 쌍을 이루는 서버 노드 집합에서 해당 사이트의 저장소 엔클로저만(즉, 비대칭 저장소) 볼 수 있는지, 그리고 SAS 연결이 제대로 구성되어 있는지 확인합니다.  
 
-        2.  Windows PowerShell 또는 서버 관리자를 [사용하여 독립 실행형 서버에서 저장소 공간 배포에](https://technet.microsoft.com/library/jj822938.aspx) 제공된 **1~3단계에** 따라 저장소 공간을 사용하는 저장소를 프로비전합니다.  
+        2.  Windows PowerShell 또는 서버 관리자를 [사용하여 독립 실행형 서버에서 저장소 공간 배포에](../storage-spaces/deploy-standalone-storage-spaces.md) 제공된 **1~3단계에** 따라 저장소 공간을 사용하는 저장소를 프로비전합니다.  
 
     -   **ISCSI 저장소:**  
 
         1.  각 쌍을 이루는 서버 노드 집합에서 해당 사이트의 저장소 엔클로저만(즉, 비대칭 저장소) 볼 수 있는지 확인합니다. iSCSI를 사용하는 경우 둘 이상의 단일 네트워크 어댑터를 사용해야 합니다.  
 
-        2.  공급업체 설명서를 사용하여 저장소를 프로비전합니다. Windows 기반 iSCSI 대상을 사용하는 경우 [iSCSI 대상 블록 저장소, 방법](https://technet.microsoft.com/library/hh848268.aspx)을 참조하세요.  
+        2.  공급업체 설명서를 사용하여 저장소를 프로비전합니다. Windows 기반 iSCSI 대상을 사용하는 경우 [iSCSI 대상 블록 저장소, 방법](../iscsi/iscsi-target-server.md)을 참조하세요.  
 
     -   **FC SAN 저장소:**  
 
@@ -139,7 +139,7 @@ ms.locfileid: "59888374"
 >[!NOTE]
 > Hyper-V 클러스터가 아니라 파일 서버 클러스터를 만들려면 이 섹션을 건너뛰고 [범용 파일 서버 클러스터 구성](#BKMK_FileServer) 섹션으로 이동하세요.  
 
-이제 일반적인 장애 조치(failover) 클러스터를 만듭니다. 구성, 유효성 검사 및 테스트 후 저장소 복제본을 사용하여 확장합니다. 아래의 모든 단계를 클러스터 노드에서 직접 수행하거나 Windows Server 2016 RSAT 관리 도구가 포함된 원격 관리 컴퓨터에서 수행할 수 있습니다.  
+이제 일반적인 장애 조치(failover) 클러스터를 만듭니다. 구성, 유효성 검사 및 테스트 후 저장소 복제본을 사용하여 확장합니다. 클러스터 노드에서 직접 또는 Windows Server 원격 서버 관리 도구를 포함 하는 원격 관리 컴퓨터에서 아래 단계를 모두 수행할 수 있습니다.  
 
 #### <a name="graphical-method"></a>그래픽 사용  
 
@@ -150,15 +150,15 @@ ms.locfileid: "59888374"
     > [!NOTE]  
     > 비대칭 저장소의 사용으로 인해 클러스터 유효성 검사에서 저장소 오류가 발생합니다.  
 
-3.  Hyper-V 계산 클러스터를 만듭니다. 클러스터 이름이 15자 이하인지 확인합니다. 아래에서 사용된 예는 SR-SRVCLUS입니다. 노드가 다른 서브넷에, 하려고 하는 경우 각 서브넷에 대 한 클러스터 이름에 대 한 IP 주소 만들기 하며 "또는" 종속성을 사용 합니다.  자세한 정보를 찾을 수 있습니다 [IP 주소 구성 및 제 3 부-다중 서브넷 클러스터에 대 한 종속성](https://blogs.msdn.microsoft.com/clustering/2011/08/31/configuring-ip-addresses-and-dependencies-for-multi-subnet-clusters-part-iii/)합니다.  
+3.  Hyper-V 계산 클러스터를 만듭니다. 클러스터 이름이 15자 이하인지 확인합니다. 아래에서 사용된 예는 SR-SRVCLUS입니다. 노드가 다른 서브넷에, 하려고 하는 경우 각 서브넷에 대 한 클러스터 이름에 대 한 IP 주소 만들기 하며 "또는" 종속성을 사용 합니다.  자세한 정보를 찾을 수 있습니다 [IP 주소 구성 및 제 3 부-다중 서브넷 클러스터에 대 한 종속성](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698)합니다.  
 
 4.  사이트 손실 시 쿼럼을 제공하도록 파일 공유 감시 또는 클라우드 감시를 구성합니다.  
 
     > [!NOTE]  
-    > 이제 Windows Server 2016에는 클라우드(Azure) 기반 감시 기능이 포함되어 있습니다. 파일 공유 감시 대신 이 쿼럼 옵션을 선택할 수 있습니다.  
+    > 이제 WIndows Server 클라우드 (Azure)에 대 한 옵션을 포함-미러링 모니터 서버를 기반으로 합니다. 파일 공유 감시 대신 이 쿼럼 옵션을 선택할 수 있습니다.  
 
     > [!WARNING]  
-    > 쿼럼 구성에 대한 자세한 내용은 [Windows Server2012 장애 조치(failover) 클러스터에서 쿼럼 구성 및 관리 가이드의 감시 구성](https://technet.microsoft.com/library/jj612870.aspx)을 참조하세요. `Set-ClusterQuorum` cmdlet에 대한 자세한 내용은 [Set-ClusterQuorum](https://technet.microsoft.com/library/hh847275.aspx)을 참조하세요.  
+    > 쿼럼 구성에 대한 자세한 내용은 [Windows Server2012 장애 조치(failover) 클러스터에서 쿼럼 구성 및 관리 가이드의 감시 구성](https://technet.microsoft.com/library/jj612870.aspx)을 참조하세요. `Set-ClusterQuorum` cmdlet에 대한 자세한 내용은 [Set-ClusterQuorum](https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterquorum)을 참조하세요.  
 
 5.  [Windows Server 2012의 Hyper-V 클러스터에 대한 네트워크 권장 사항](https://technet.microsoft.com/library/dn550728.aspx)을 검토하여 클러스터 네트워킹을 가장 적절하게 구성했는지 확인합니다.  
 
@@ -242,12 +242,13 @@ ms.locfileid: "59888374"
     > [!NOTE]
     >  비대칭 저장소의 사용으로 인해 클러스터 유효성 검사에서 저장소 오류가 발생합니다.  
 
-2.  Hyper-V 계산 클러스터를 만듭니다(클러스터에서 사용할 고유한 고정 IP 주소를 지정해야 함). 클러스터 이름이 15자 이하인지 확인합니다.  노드를 서로 다른 서브넷에 있는 경우 추가 사이트에 대 한 IP 주소 보다 만들어야 "OR" 종속성을 사용 합니다. 자세한 정보를 찾을 수 있습니다 [IP 주소 구성 및 제 3 부-다중 서브넷 클러스터에 대 한 종속성](https://blogs.msdn.microsoft.com/clustering/2011/08/31/configuring-ip-addresses-and-dependencies-for-multi-subnet-clusters-part-iii/)합니다.
+2.  Hyper-V 계산 클러스터를 만듭니다(클러스터에서 사용할 고유한 고정 IP 주소를 지정해야 함). 클러스터 이름이 15자 이하인지 확인합니다.  노드를 서로 다른 서브넷에 있는 경우 추가 사이트에 대 한 IP 주소 보다 만들어야 "OR" 종속성을 사용 합니다. 자세한 정보를 찾을 수 있습니다 [IP 주소 구성 및 제 3 부-다중 서브넷 클러스터에 대 한 종속성](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698)합니다.
 ```PowerShell  
 New-Cluster -Name SR-SRVCLUS -Node SR-SRV01, SR-SRV02, SR-SRV03, SR-SRV04 -StaticAddress <your IP here>  
 Add-ClusterResource -Name NewIPAddress -ResourceType “IP Address” -Group “Cluster Group”
 Set-ClusterResourceDependency -Resource “Cluster Name” -Dependency “[Cluster IP Address] or [NewIPAddress]”
 ```  
+
 3.  클러스터에서 도메인 컨트롤러 또는 일부 다른 독립 서버에서 호스트되는 공유를 가리키는 파일 공유 감시 또는 클라우드(Azure) 감시를 구성합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
 
     ```PowerShell  
@@ -255,9 +256,9 @@ Set-ClusterResourceDependency -Resource “Cluster Name” -Dependency “[Clust
     ```  
 
     > [!NOTE]
-    > 이제 Windows Server 2016에는 클라우드(Azure) 기반 감시 기능이 포함되어 있습니다. 파일 공유 감시 대신 이 쿼럼 옵션을 선택할 수 있습니다.  
+    > 이제 WIndows Server 클라우드 (Azure)에 대 한 옵션을 포함-미러링 모니터 서버를 기반으로 합니다. 파일 공유 감시 대신 이 쿼럼 옵션을 선택할 수 있습니다.  
     
-    쿼럼 구성에 대한 자세한 내용은 [Windows Server2012 장애 조치(failover) 클러스터에서 쿼럼 구성 및 관리 가이드의 감시 구성](https://technet.microsoft.com/library/jj612870.aspx)을 참조하세요. `Set-ClusterQuorum` cmdlet에 대한 자세한 내용은 [Set-ClusterQuorum](https://technet.microsoft.com/library/hh847275.aspx)을 참조하세요.  
+    쿼럼 구성에 대한 자세한 내용은 [Windows Server2012 장애 조치(failover) 클러스터에서 쿼럼 구성 및 관리 가이드의 감시 구성](https://technet.microsoft.com/library/jj612870.aspx)을 참조하세요. `Set-ClusterQuorum` cmdlet에 대한 자세한 내용은 [Set-ClusterQuorum](https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterquorum)을 참조하세요.  
 
 4.  [Windows Server 2012의 Hyper-V 클러스터에 대한 네트워크 권장 사항](https://technet.microsoft.com/library/dn550728.aspx)을 검토하여 클러스터 네트워킹을 가장 적절하게 구성했는지 확인합니다.  
 
@@ -304,7 +305,7 @@ Set-ClusterResourceDependency -Resource “Cluster Name” -Dependency “[Clust
 >[!NOTE]
 > [Hyper-V 장애 조치(failover) 클러스터 구성](#BKMK_HyperV)에 설명된 대로 Hyper-V 장애 조치(failover) 클러스터를 이미 구성한 경우에는 이 섹션을 건너뜁니다.  
 
-이제 일반적인 장애 조치(failover) 클러스터를 만듭니다. 구성, 유효성 검사 및 테스트 후 저장소 복제본을 사용하여 확장합니다. 아래의 모든 단계를 클러스터 노드에서 직접 수행하거나 Windows Server 2016 RSAT 관리 도구가 포함된 원격 관리 컴퓨터에서 수행할 수 있습니다.  
+이제 일반적인 장애 조치(failover) 클러스터를 만듭니다. 구성, 유효성 검사 및 테스트 후 저장소 복제본을 사용하여 확장합니다. 클러스터 노드에서 직접 또는 Windows Server 원격 서버 관리 도구를 포함 하는 원격 관리 컴퓨터에서 아래 단계를 모두 수행할 수 있습니다.  
 
 #### <a name="graphical-method"></a>그래픽 사용  
 
@@ -313,13 +314,13 @@ Set-ClusterResourceDependency -Resource “Cluster Name” -Dependency “[Clust
 2.  제안된 클러스터의 유효성을 검사하고 결과를 분석하여 계속할 수 있는지 확인합니다.  
     >[!NOTE]
     >비대칭 저장소의 사용으로 인해 클러스터 유효성 검사에서 저장소 오류가 발생합니다.   
-3. 범용 파일 서버 저장소 클러스터를 만듭니다. 클러스터 이름이 15자 이하인지 확인합니다. 아래에서 사용된 예는 SR-SRVCLUS입니다.  노드가 다른 서브넷에, 하려고 하는 경우 각 서브넷에 대 한 클러스터 이름에 대 한 IP 주소 만들기 하며 "또는" 종속성을 사용 합니다.  자세한 정보를 찾을 수 있습니다 [IP 주소 구성 및 제 3 부-다중 서브넷 클러스터에 대 한 종속성](https://blogs.msdn.microsoft.com/clustering/2011/08/31/configuring-ip-addresses-and-dependencies-for-multi-subnet-clusters-part-iii/)합니다.  
+3. 범용 파일 서버 저장소 클러스터를 만듭니다. 클러스터 이름이 15자 이하인지 확인합니다. 아래에서 사용된 예는 SR-SRVCLUS입니다.  노드가 다른 서브넷에, 하려고 하는 경우 각 서브넷에 대 한 클러스터 이름에 대 한 IP 주소 만들기 하며 "또는" 종속성을 사용 합니다.  자세한 정보를 찾을 수 있습니다 [IP 주소 구성 및 제 3 부-다중 서브넷 클러스터에 대 한 종속성](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698)합니다.  
 
 4.  사이트 손실 시 쿼럼을 제공하도록 파일 공유 감시 또는 클라우드 감시를 구성합니다.  
     >[!NOTE]
-    > 이제 Windows Server 2016에는 클라우드(Azure) 기반 감시 기능이 포함되어 있습니다. 파일 공유 감시 대신 이 쿼럼 옵션을 선택할 수 있습니다.                                                                                                                                                                             
+    > 이제 WIndows Server 클라우드 (Azure)에 대 한 옵션을 포함-미러링 모니터 서버를 기반으로 합니다. 파일 공유 감시 대신 이 쿼럼 옵션을 선택할 수 있습니다.                                                                                                                                                                             
     >[!NOTE]
-    >  쿼럼 구성에 대한 자세한 내용은 [Windows Server2012 장애 조치(failover) 클러스터에서 쿼럼 구성 및 관리 가이드의 감시 구성](https://technet.microsoft.com/library/jj612870.aspx)을 참조하세요. Set-ClusterQuorum cmdlet에 대한 자세한 내용은 [Set-ClusterQuorum](https://technet.microsoft.com/library/hh847275.aspx)을 참조하세요. 
+    >  쿼럼 구성에 대한 자세한 내용은 [Windows Server2012 장애 조치(failover) 클러스터에서 쿼럼 구성 및 관리 가이드의 감시 구성](https://technet.microsoft.com/library/jj612870.aspx)을 참조하세요. Set-ClusterQuorum cmdlet에 대한 자세한 내용은 [Set-ClusterQuorum](https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterquorum)을 참조하세요. 
 
 5.  2-노드 확장 클러스터를 만드는 경우 먼저 모든 저장소를 추가해야 합니다. 이렇게 하려면 클러스터 노드에서 관리자 권한으로 PowerShell 세션을 열고 다음 명령을 실행합니다. `Get-ClusterAvailableDisk -All | Add-ClusterDisk`
 
@@ -365,33 +366,40 @@ Set-ClusterResourceDependency -Resource “Cluster Name” -Dependency “[Clust
 
 16.  (선택 사항) 보다 빠른 DNS 사이트 장애 조치(failover)를 위해 클러스터 네트워킹 및 Active Directory를 구성합니다. 확장된 VLAN, 네트워크 추상화 장치, 낮은 DNS TTL 및 기타 일반적인 기술을 활용할 수 있습니다.  
 
-    자세한 내용은 Microsoft Ignite 세션 [Windows Server vNext에서 장애 조치(Failover) 클러스터 확장 및 저장소 복제본 사용](http://channel9.msdn.com/events/ignite/2015/brk3487) 및 블로그 게시물 [사이트 간에 변경 알림 사용 - 방법과 이유](http://blogs.technet.com/b/qzaidi/archive/2010/09/23/enable-change-notifications-between-sites-how-and-why.aspx)를 참조하세요.    
+자세한 내용은 Microsoft Ignite 세션 [Windows Server vNext에서 장애 조치(Failover) 클러스터 확장 및 저장소 복제본 사용](http://channel9.msdn.com/events/ignite/2015/brk3487) 및 블로그 게시물 [사이트 간에 변경 알림 사용 - 방법과 이유](http://blogs.technet.com/b/qzaidi/archive/2010/09/23/enable-change-notifications-between-sites-how-and-why.aspx)를 참조하세요.    
 
-#### <a name="powershell-method"></a>PowerShell 사용  
+#### <a name="powershell-method"></a>PowerShell 사용
+
 1. 제안된 클러스터를 테스트하고 결과를 분석하여 계속할 수 있는지 확인합니다.    
 
-        Test-Cluster SR-SRV01, SR-SRV02, SR-SRV03, SR-SRV04  
+    ```PowerShell
+    Test-Cluster SR-SRV01, SR-SRV02, SR-SRV03, SR-SRV04
+    ```
 
     > [!NOTE]
     >  비대칭 저장소의 사용으로 인해 클러스터 유효성 검사에서 저장소 오류가 발생합니다.   
 
-2.  Hyper-V 계산 클러스터를 만듭니다(클러스터에서 사용할 고유한 고정 IP 주소를 지정해야 함). 클러스터 이름이 15자 이하인지 확인합니다.  노드를 서로 다른 서브넷에 있는 경우 추가 사이트에 대 한 IP 주소 보다 만들어야 "OR" 종속성을 사용 합니다. 자세한 정보를 찾을 수 있습니다 [IP 주소 구성 및 제 3 부-다중 서브넷 클러스터에 대 한 종속성](https://blogs.msdn.microsoft.com/clustering/2011/08/31/configuring-ip-addresses-and-dependencies-for-multi-subnet-clusters-part-iii/)합니다.  
+2.  Hyper-V 계산 클러스터를 만듭니다(클러스터에서 사용할 고유한 고정 IP 주소를 지정해야 함). 클러스터 이름이 15자 이하인지 확인합니다.  노드를 서로 다른 서브넷에 있는 경우 추가 사이트에 대 한 IP 주소 보다 만들어야 "OR" 종속성을 사용 합니다. 자세한 정보를 찾을 수 있습니다 [IP 주소 구성 및 제 3 부-다중 서브넷 클러스터에 대 한 종속성](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698)합니다.  
 
-        New-Cluster -Name SR-SRVCLUS -Node SR-SRV01, SR-SRV02, SR-SRV03, SR-SRV04 -StaticAddress <your IP here> 
+    ```PowerShell
+    New-Cluster -Name SR-SRVCLUS -Node SR-SRV01, SR-SRV02, SR-SRV03, SR-SRV04 -StaticAddress <your IP here> 
 
-        Add-ClusterResource -Name NewIPAddress -ResourceType “IP Address” -Group “Cluster Group”
+    Add-ClusterResource -Name NewIPAddress -ResourceType “IP Address” -Group “Cluster Group”
 
-        Set-ClusterResourceDependency -Resource “Cluster Name” -Dependency “[Cluster IP Address] or [NewIPAddress]”
+    Set-ClusterResourceDependency -Resource “Cluster Name” -Dependency “[Cluster IP Address] or [NewIPAddress]”
+    ```
 
 
 3. 클러스터에서 도메인 컨트롤러 또는 일부 다른 독립 서버에서 호스트되는 공유를 가리키는 파일 공유 감시 또는 클라우드(Azure) 감시를 구성합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
 
-       Set-ClusterQuorum -FileShareWitness \\someserver\someshare  
+    ```PowerShell
+    Set-ClusterQuorum -FileShareWitness \\someserver\someshare
+    ```
 
     >[!NOTE]
-    > 이제 Windows Server 2016에는 클라우드(Azure) 기반 감시 기능이 포함되어 있습니다. 파일 공유 감시 대신 이 쿼럼 옵션을 선택할 수 있습니다.  
+    > Windows Server는 이제 Azure를 사용 하 여 클라우드 감시에 대 한 옵션을 포함 합니다. 파일 공유 감시 대신 이 쿼럼 옵션을 선택할 수 있습니다.  
 
-   쿼럼 구성에 대한 자세한 내용은 [Windows Server2012 장애 조치(failover) 클러스터에서 쿼럼 구성 및 관리 가이드의 감시 구성](https://technet.microsoft.com/library/jj612870.aspx)을 참조하세요. Set-ClusterQuorum cmdlet에 대한 자세한 내용은 [Set-ClusterQuorum](https://technet.microsoft.com/library/hh847275.aspx)을 참조하세요.   
+   쿼럼 구성에 대 한 자세한 내용은 참조는 [이해 클러스터 및 풀 쿼럼을](../storage-spaces/understand-quorum.md)합니다. Set-ClusterQuorum cmdlet에 대한 자세한 내용은 [Set-ClusterQuorum](https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterquorum)을 참조하세요.
 
 4.  2-노드 확장 클러스터를 만드는 경우 먼저 모든 저장소를 추가해야 합니다. 이렇게 하려면 클러스터 노드에서 관리자 권한으로 PowerShell 세션을 열고 다음 명령을 실행합니다. `Get-ClusterAvailableDisk -All | Add-ClusterDisk`
 
@@ -399,16 +407,16 @@ Set-ClusterResourceDependency -Resource “Cluster Name” -Dependency “[Clust
 
 5. 클러스터 네트워킹을 가장 적절하게 구성했는지 확인합니다.  
 
-6.  파일 서버 역할을 구성합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.   
+6.  파일 서버 역할을 구성합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
-        ```PowerShell  
-        Get-ClusterResource  
-        Add-ClusterFileServerRole -Name SR-CLU-FS2 -Storage "Cluster Disk 4"  
+    ```PowerShell  
+    Get-ClusterResource  
+    Add-ClusterFileServerRole -Name SR-CLU-FS2 -Storage "Cluster Disk 4"  
 
-        MD e:\share01  
+    MD e:\share01  
 
-        New-SmbShare -Name Share01 -Path f:\share01 -ContinuouslyAvailable $false  
-        ```
+    New-SmbShare -Name Share01 -Path f:\share01 -ContinuouslyAvailable $false  
+    ```
 
 7. SR-SRV01 및 SR-SRV02 서버가 Redmond 사이트에 있고, SR-SRV03 및 SR-SRV04 서버가 Bellevue에 있으며, Redmond가 원본 저장소 및 가상 컴퓨터의 노드 소유권에 대한 기본 설정이 되도록 확장 클러스터 사이트 인식을 구성합니다.  
 
@@ -430,7 +438,7 @@ Set-ClusterResourceDependency -Resource “Cluster Name” -Dependency “[Clust
     자세한 내용은 Microsoft Ignite 세션 [Windows Server vNext에서 장애 조치(Failover) 클러스터 확장 및 저장소 복제본 사용](http://channel9.msdn.com/events/ignite/2015/brk3487) 및 블로그 게시물 [사이트 간에 변경 알림 사용 - 방법과 이유](http://blogs.technet.com/b/qzaidi/archive/2010/09/23/enable-change-notifications-between-sites-how-and-why.aspx)를 참조하세요.
 
 ### <a name="configure-a-stretch-cluster"></a>확장 클러스터를 구성합니다.  
-이제 장애 조치(Failover) 클러스터 관리자 또는 Windows PowerShell을 사용하여 확장 클러스터를 구성합니다. 아래의 모든 단계를 클러스터 노드에서 직접 수행하거나 Windows Server 2016 RSAT 관리 도구가 포함된 원격 관리 컴퓨터에서 수행할 수 있습니다.  
+이제 장애 조치(Failover) 클러스터 관리자 또는 Windows PowerShell을 사용하여 확장 클러스터를 구성합니다. 클러스터 노드에서 직접 또는 Windows Server 원격 서버 관리 도구를 포함 하는 원격 관리 컴퓨터에서 아래 단계를 모두 수행할 수 있습니다.  
 
 #### <a name="failover-cluster-manager-method"></a>장애 조치(failover) 클러스터 관리자 사용  
 
@@ -622,7 +630,7 @@ Set-ClusterResourceDependency -Resource “Cluster Name” -Dependency “[Clust
     ```  
 
 ### <a name="manage-stretched-cluster-replication"></a>확장 클러스터 복제 관리  
-이제 확장 클러스터를 관리하고 운영합니다. 아래의 모든 단계를 클러스터 노드에서 직접 수행하거나 Windows Server 2016 RSAT 관리 도구가 포함된 원격 관리 컴퓨터에서 수행할 수 있습니다.  
+이제 확장 클러스터를 관리하고 운영합니다. 클러스터 노드에서 직접 또는 Windows Server 원격 서버 관리 도구를 포함 하는 원격 관리 컴퓨터에서 아래 단계를 모두 수행할 수 있습니다.  
 
 #### <a name="graphical-tools-method"></a>그래픽 도구 사용  
 
@@ -658,7 +666,7 @@ Set-ClusterResourceDependency -Resource “Cluster Name” -Dependency “[Clust
         > [!NOTE]
         > 저장소 복제본이 대상 볼륨을 분리합니다. 이것은 의도적입니다.  
 
-4.  Windows Server 2016에서 로그 크기를 기본 8GB에서 변경하려면 원본 및 대상 로드 디스크를 둘 다 마우스 오른쪽 단추로 클릭하고 **복제 로그** 탭을 클릭한 다음 두 디스크의 크기를 일치하도록 변경합니다.  
+4.  로그 크기를 기본 8GB에서에서 변경, 원본 및 대상 로그 디스크를 마우스 오른쪽 단추로 클릭 한 다음 클릭 하 여 **복제 로그** 탭을 선택한 후에 맞게 두 디스크의 크기를 변경 합니다.  
 
     > [!NOTE]  
     > 기본 로그 크기는 8GB입니다. `Test-SRTopology` cmdlet의 결과에 따라 값이 더 높거나 낮은 `-LogSizeInBytes`를 사용할 수도 있습니다.  
@@ -737,7 +745,7 @@ Set-ClusterResourceDependency -Resource “Cluster Name” -Dependency “[Clust
 
     -   \Storage Replica Statistics(*)\Number of Messages Sent  
 
-    Windows PowerShell의 성능 카운터에 대한 자세한 내용은 [Get-Counter](https://technet.microsoft.com/library/hh849685.aspx)를 참조하세요.  
+    Windows PowerShell의 성능 카운터에 대한 자세한 내용은 [Get-Counter](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Diagnostics/Get-Counter)를 참조하세요.  
 
 3.  확장 클러스터 내에서 복제 원본 및 대상을 변경하려면 다음 방법을 사용합니다.  
 
@@ -762,7 +770,7 @@ Set-ClusterResourceDependency -Resource “Cluster Name” -Dependency “[Clust
         > [!NOTE]  
         > 저장소 복제본이 대상 볼륨을 분리합니다. 이것은 의도적입니다.  
 
-4.  Windows Server 2016에서 로그 파일을 기본 8GB에서 변경하려면 원본 및 대상 저장소 복제본 그룹 모두에서 **Set-SRGroup**을 사용합니다.   예를 들어 모든 로그를 2GB로 설정하려면 다음을 수행합니다.  
+4.  로그 크기를 기본 8GB에서에서 변경 하려면 사용 하세요 **Set-srgroup** 원본 및 대상 저장소 복제본 그룹에서 합니다.   예를 들어 모든 로그를 2GB로 설정하려면 다음을 수행합니다.  
 
     ```PowerShell  
     Get-SRGroup | Set-SRGroup -LogSizeInBytes 2GB  
@@ -788,8 +796,8 @@ Set-ClusterResourceDependency -Resource “Cluster Name” -Dependency “[Clust
 - [저장소 복제본 개요](storage-replica-overview.md)  
 - [서버 간 저장소 복제](server-to-server-storage-replication.md)  
 - [클러스터 간 저장소 복제](cluster-to-cluster-storage-replication.md)  
-- [저장소 복제본: 알려진된 문제](storage-replica-known-issues.md) 
-- [저장소 복제본: 질문과 대답](storage-replica-frequently-asked-questions.md)  
+- [스토리지 복제본: 알려진된 문제](storage-replica-known-issues.md) 
+- [스토리지 복제본: 질문과 대답](storage-replica-frequently-asked-questions.md)  
 
 ## <a name="see-also"></a>관련 항목  
 - [Windows Server 2016](../../get-started/windows-server-2016.md)  

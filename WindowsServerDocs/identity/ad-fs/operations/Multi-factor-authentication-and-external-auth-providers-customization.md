@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.assetid: 08724d45-9be4-4c56-a5f1-2cf40864e136
 ms.technology: identity-adfs
-ms.openlocfilehash: 6d06c017601003e3b93df32f5fa50190ce54541d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 347b4783e82a6561334f8757029b1fddec6a85a3
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59864804"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189077"
 ---
 # <a name="multi-factor-authentication-and-external-authentication-providers-customization"></a>다단계 인증 및 외부 인증 공급자 사용자 지정 
 
->적용 대상: Windows Server 2016, Windows Server 2012 R2
+
 
 AD FS에서 다단계 인증에 대 한 지원으로 제공 됩니다\-의\-는\-상자입니다. 예를 들어 AD FS를 구성할 수 있습니다 사용 하 여 빌드된\-두 번째 단계 인증으로 인증서 인증에서. 또한 외부 인증 공급자를 사용할 수 있습니다. 이 방법은 Azure multi-factor Authentication과 같은 추가 서비스와 통합 하도록 AD FS를 설정할 수 있습니다. 또는 사용자 고유의 공급자를 개발할 수 있습니다. 참조 [솔루션 가이드: 다중을 사용한 위험 관리\-액세스 제어를 팩터링](https://technet.microsoft.com/library/dn280937.aspx) AD FS를 사용 하 여 외부 인증 공급자를 등록 하는 방법에 대 한 자세한 내용은 합니다.  
   

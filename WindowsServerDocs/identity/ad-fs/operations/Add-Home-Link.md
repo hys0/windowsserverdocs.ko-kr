@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: fb903c62e717e36099934e64e1c939a502f691a3
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a9a043390f5bfb412e549779ed4a9048d1c8a0b5
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59823014"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190185"
 ---
 # <a name="add-home-link"></a>홈 링크 추가 
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2
 
 로그인에 표시 되는 홈 링크를 추가 하려면\-페이지에서 다음 Windows PowerShell cmdlet 및 구문을 사용 합니다. 
 

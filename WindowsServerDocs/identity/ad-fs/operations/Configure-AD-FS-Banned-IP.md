@@ -8,16 +8,15 @@ ms.date: 06/28/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: b8ff87a1043b589e83faa875467ddced536291b5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 01ef992554a1e0961d8d795e9baa7730a1a1d682
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59867514"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189893"
 ---
 # <a name="ad-fs-and-banned-ip-addresses"></a>AD FS 및 금지 된 IP 주소
 
->적용 대상: Windows Server 2016
 
 Windows Server 2016에서 AD FS 2018 년 6 월에에서 도입 **Ip 차단** AD FS를 사용 하 여 2018 년 6 월 업데이트 합니다.  이 업데이트를 사용 하면 AD FS에서 IP 주소 집합을 전역적으로 구성 하려면 또는 해당 IP 주소에서 들어오는 요청 해당 IP 주소를 가질 수 있도록 합니다 **x-전달 기능에 대 한** 또는 **x-ms-전달-클라이언트-ip** 헤더를 AD FS에서 차단 됩니다.
 

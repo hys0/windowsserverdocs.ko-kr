@@ -8,12 +8,12 @@ author: cosmosdarwin
 ms.date: 09/07/2018
 Keywords: 저장소 공간 다이렉트
 ms.localizationpriority: medium
-ms.openlocfilehash: 828a3265c9770bab0158067c4f856866d03e3d42
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 1916d2d5e4d1fc846bec19826437b200afe36f42
+ms.sourcegitcommit: 4ff3d00df3148e4bea08056cea9f1c3b52086e5d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59870864"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64772217"
 ---
 # <a name="performance-history-for-storage-spaces-direct"></a>저장소 공간 다이렉트에 대 한 성능 기록
 
@@ -153,7 +153,7 @@ Get-VM "MyVM" | Get-ClusterPerf -VMSeriesName "VM.Cpu.Usage" -TimeFrame LastHour
 
 볼륨은 저장소 공간에서 지원 하 고 간단 하 고 양방향 미러 또는 클러스터의 노드 수에 따라 3 방향 미러 복원 력을 사용 합니다. 와 같이 저장소 공간 다이렉트의 다른 모든 볼륨 드라이브 또는 서버 오류 후 복구 하는 것.
 
-볼륨은 ReFS를 사용 하 여 있지만 클러스터 그룹 소유자 노드에서 표시 되도록 클러스터 공유 볼륨 (CSV) 아닙니다. 자동으로 만들어지는 것 외에이 볼륨에 대 한 특별: 표시, 찾아봅니다, 크기를 변경 하거나 (권장 하지 않음) 삭제할 수 있습니다. 문제가 있는 경우, 참조 [문제 해결](#troubleshooting)합니다. 
+볼륨은 ReFS를 사용 하 여 있지만 클러스터 그룹 소유자 노드에서 표시 되도록 클러스터 공유 볼륨 (CSV) 아닙니다. 자동으로 만들어지는 것 외에이 볼륨에 대 한 특별: 표시, 찾아봅니다, 크기를 변경 하거나 (권장 하지 않음) 삭제할 수 있습니다. 문제가 있는 경우, 참조 [문제 해결](#troubleshooting)합니다.
 
 ### <a name="object-discovery-and-data-collection"></a>개체 검색 및 데이터 수집
 
@@ -163,7 +163,7 @@ Get-VM "MyVM" | Get-ClusterPerf -VMSeriesName "VM.Cpu.Usage" -TimeFrame LastHour
 
 ### <a name="handling-measurement-gaps"></a>측정 차이 처리합니다.
 
-측정에 설명 된 대로 더 많은 시간에 걸쳐 있는 덜 세분화 된 계열로 병합 되는 경우 [기간](#Timeframes), 누락 된 데이터의 마침표는 제외 됩니다. 예를 들어, 서버를 아래로 30 분에 대 한 경우 다음 실행 50 %CPU 다음 30 분간의 `ClusterNode.Cpu.Usage` 시간 50% (없습니다 25%)으로 올바르게 기록 됩니다에 대 한 평균입니다.
+측정에 설명 된 대로 더 많은 시간에 걸쳐 있는 덜 세분화 된 계열로 병합 되는 경우 [기간](#timeframes), 누락 된 데이터의 마침표는 제외 됩니다. 예를 들어, 서버를 아래로 30 분에 대 한 경우 다음 실행 50 %CPU 다음 30 분간의 `ClusterNode.Cpu.Usage` 시간 50% (없습니다 25%)으로 올바르게 기록 됩니다에 대 한 평균입니다.
 
 ### <a name="extensibility-and-customization"></a>확장성 및 사용자 지정
 
@@ -206,7 +206,7 @@ Stop-ClusterPerformanceHistory -DeleteHistory
 
 ### <a name="the-cmdlet-doesnt-work"></a>Cmdlet이 작동 하지 않습니다.
 
-오류 메시지와 같은 "*' Get-ClusterPerf' 용어는 cmdlet의 이름으로 인식 되지 않습니다*" 기능을 사용할 수 없거나 설치 된 것을 의미 합니다. Windows Server Insider Preview 빌드 17692 이상 있는지, 장애 조치 클러스터링 및 저장소 공간 다이렉트 실행 중인지를 설치 했는지 확인 합니다.
+오류 메시지와 같은 " *' Get-ClusterPerf' 용어는 cmdlet의 이름으로 인식 되지 않습니다*" 기능을 사용할 수 없거나 설치 된 것을 의미 합니다. Windows Server Insider Preview 빌드 17692 이상 있는지, 장애 조치 클러스터링 및 저장소 공간 다이렉트 실행 중인지를 설치 했는지 확인 합니다.
 
    > [!NOTE]
    > 이 기능은 Windows Server 2016에서 사용할 수 있거나 이전있지 않습니다.

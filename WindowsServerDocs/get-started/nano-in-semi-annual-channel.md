@@ -4,29 +4,27 @@ description: 새로운 Windows Server 서비스 모델에서, Nano 서버는 특
 ms.prod: Windows Server
 ms.mktglfcycl: manage
 ms.sitesec: library
-author: jaimeo
+author: jasongerend
+ms.author: jgerend
 ms.localizationpriority: medium
-ms.date: 05/02/2018
+ms.date: 05/21/2019
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: a270334d-42a7-46ff-8eed-d8656a276544
-ms.openlocfilehash: 7e68d292c32ce58c786a3242203330fcae985913
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c9fede02b90e285803a8bcdbc983f264d65a4589
+ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59847774"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65976510"
 ---
 # <a name="changes-to-nano-server-in-windows-server-semi-annual-channel"></a>Windows Server 반기 채널의 Nano 서버 변경 사항
 
 >적용 대상: Windows Server 반기 채널
 
+이미 Nano Server를 실행 하는 경우는 [창의 서버 반기 채널](..\get-started-19\servicing-channels-19.md) 서비스 모델도 곧 익숙해질, 이전의 CBB (비즈니스용) 모델에 대 한 현재 분기에서 처리 된 것 이므로 합니다. Windows 서버 반기 채널은 동일한 모델에 대 한 새 이름만입니다. 이 모델에서는 Nano 서버의 기능 업데이트 릴리스가 1년에 2~3회로 예상됩니다.
 
-[Window Server 반기 채널 개요](semi-annual-channel-overview.md)에서 설명한 것처럼, Windows Server 버전 1803은 반기 채널의 최신 릴리스입니다.
-
-이미 Nano 서버를 실행 중인 경우 CBB(비즈니스용 현재 분기) 모델에서 이전에 서비스되었으므로 이 서비스 모델은 친숙할 것입니다. Windows Server의 새로운 반기 채널은 같은 모델의 새 이름일 뿐입니다. 이 모델에서는 Nano 서버의 기능 업데이트 릴리스가 1년에 2~3회로 예상됩니다.
-
-그러나 이 버전의 Windows Server 버전 1803에서 Nano 서버는 **컨테이너 기본 운영 체제 이미지**로만 사용할 수 있습니다. Windows Server의 Server Core 설치와 같은 컨테이너 호스트의 컨테이너로만 Nano 서버를 실행해야 합니다. 이 릴리스에서 Nano 서버를 기반으로 컨테이너를 실행하는 작업은 다음과 같은 방법으로 이전 버전과 다릅니다.
+그러나부터 Windows Server, 버전 1803에서 Nano Server는 보기로 사용할 수는 **컨테이너 기본 OS 이미지가**합니다. Windows Server의 Server Core 설치와 같은 컨테이너 호스트의 컨테이너로만 Nano 서버를 실행해야 합니다. 이 릴리스에서 Nano 서버를 기반으로 컨테이너를 실행하는 작업은 다음과 같은 방법으로 이전 버전과 다릅니다.
 
 - Nano 서버가 .NET Core 응용 프로그램을 위해 최적화되었습니다.
 - Nano 서버가 Windows Server 2016 버전보다도 더 작습니다.
@@ -36,4 +34,6 @@ ms.locfileid: "59847774"
 - 이제 IoT Core에서 Nano 컨테이너를 실행할 수 있습니다.
 
 ## <a name="related-topics"></a>관련 항목
-참가자 프로그램이 시작되면 [Windows 컨테이너 설명서](http://aka.ms/windowscontainers)에서 자세한 내용을 찾아보세요.
+
+- [Windows 컨테이너 설명서](http://aka.ms/windowscontainers)
+- [창 서버 반기 채널 개요](..\get-started-19\servicing-channels-19.md)

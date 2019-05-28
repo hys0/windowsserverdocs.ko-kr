@@ -3,22 +3,20 @@ ms.assetid: 8e7015bc-c489-4ec7-8b6e-3ece90f72317
 title: 인증 정책 구성
 description: ''
 author: billmath
-ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 7faffb7ccbb4b0ea3c65329d18f915d7dafcd46f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.author: billmath
+ms.openlocfilehash: 9345f995af2f256dddcbcbd7d05c4bf6170b563e
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59861794"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189864"
 ---
 # <a name="configure-authentication-policies"></a>인증 정책 구성
-
->적용 대상: Windows Server 2012 R2
 
 Windows Server 2012 r 2에서 AD FS에 모두 액세스 제어 및 사용자, 장치, 위치 및 인증 데이터를 포함 하는 다중 요소 인증 메커니즘 개선 됩니다. 사용자 인터페이스를 통해 또는 AD FS에 대 한 액세스 권한 부여의 위험을 관리 하려면 Windows PowerShell을 통해 이러한 향상 된 기능,\-다중을 통해 응용 프로그램 보안\-액세스 제어 및 다중 팩터링\-사용자 id 또는 그룹 멤버 자격, 네트워크 위치, 작업 공간에 연결 하는 장치 데이터를 기반으로 하는 요소 인증\-조인 인증 상태 및 다중\-요소 인증 \(MFA\) 수행 되었습니다.  
   
@@ -27,7 +25,7 @@ MFA 및 다중 하는 방법에 대 한 자세한 내용은\-Active Directory Fe
 
 -   [SSO 및 원활한 두 번째 위한 모든 장치의 작업 공간 연결 단계 회사 응용 프로그램에서 인증](../../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)
 
--   [조건부 액세스 제어를 사용한 위험 관리](../../ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md)
+-   [조건부 액세스 제어를 사용하여 위험 관리](../../ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md)
 
 -   [추가 Multi-factor Authentication for Sensitive Applications 사용 하 여 위험 관리](../../ad-fs/operations/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 

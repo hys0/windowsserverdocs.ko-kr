@@ -9,16 +9,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 3a015c27f784d5b1f488f984450612820d4a06b1
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8bcc653cc9eb9adb6d31331463d01774d4faec1a
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59828984"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189223"
 ---
 # <a name="custom-error-messages-for-ad-fs-sign-in-page"></a>AD FS 로그인 페이지에 대 한 사용자 지정 오류 메시지  
 
->적용 대상: Windows Server 2016, Windows Server 2012 R2
 
 조직에 맞게 조정할 수 있는 사용자 지정 오류 메시지를 구성할 수 있습니다. 다음 그림에는 사용자 지정된 오류 페이지 설명과 일반 오류 메시지가 나와 있습니다. 다음 Windows PowerShell cmdlet을 사용 하 여 오류 메시지를 사용자 지정할 수 있습니다.  
   

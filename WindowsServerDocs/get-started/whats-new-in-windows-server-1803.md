@@ -8,18 +8,18 @@ author: greg-lindsay
 ms.author: greg-lindsay
 ms.localizationpriority: high
 ms.date: 05/07/2018
-ms.openlocfilehash: c4f80b668b91e65b6c8bc528e14f52a1d117a3c9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a489d3f8958304d685116186f5db9e1c854114bf
+ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59823094"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65976538"
 ---
 # <a name="whats-new-in-windows-server-version-1803"></a>Windows Server 버전 1803의 새로운 기능
 
 >적용 대상: Windows Server(반기 채널)
 
-<img src="../media/landing-icons/new.png" style='float:left; padding:.5em;' alt="Icon showing a newspaper">&nbsp;이 섹션의 콘텐츠는 Windows Server 버전 1803의 새로운 기능과 변경된 기능을 설명합니다. 여기에 나열된 새로운 기능 및 변경 사항은 이 릴리스를 사용할 때 가장 많은 영향을 줄 수 있습니다. 또한 [Windows Server 반기 채널 업데이트](https://cloudblogs.microsoft.com/windowsserver/2018/03/29/windows-server-semi-annual-channel-update/)를 참조하십시오.
+<img src="../media/landing-icons/new.png" style='float:left; padding:.5em;' alt="Icon showing a newspaper">&nbsp;Windows의 최신 기능을 알아보려면 [What's New in Windows Server](whats-new-in-windows-server.md)합니다. 이 섹션에서는 새로운 기능 및 Windows Server, 버전 1803에서에서 변경 된 것을 설명 합니다. 여기에 나열된 새로운 기능 및 변경 사항은 이 릴리스를 사용할 때 가장 많은 영향을 줄 수 있습니다. 또한 [Windows Server 반기 채널 업데이트](https://cloudblogs.microsoft.com/windowsserver/2018/03/29/windows-server-semi-annual-channel-update/)를 참조하십시오.
 
 ## <a name="windows-admin-center"></a>Windows Admin Center
 
@@ -92,7 +92,7 @@ Windows Server 버전 1803을 통해 더 많은 기능을 이후 Kubernetes 릴�
     - 특히, 알림은 Server Core와 Nano 서버 컨테이너 기반 이미지에 대해 CTRL_SHUTDOWN_EVENT로 변경됩니다. 또한 컨테이너에서 실행되는 서비스에 서비스 종료 알림 메시지를 보내는 등 Server Core 컨테이너 기반 이미지의 알림이 컨테이너에서 실행되는 모든 프로세스에 영향을 미치도록 확장됩니다.
 - 고정된 데이터 드라이브를 쓸 수 있도록 하는 데(FDVDenyWriteAccess) BitLocker 보호가 필요한지 여부를 결정하는 정책 설정과 docker pull 및 docker load의 비호환성 문제가 해결되었습니다. 
 
-## <a name="storage"></a>스토리지
+## <a name="storage"></a>저장 공간
 
 이 릴리스에서 서비스가 시작되면 모든 볼륨에 파일 서버 리소스 관리자 서비스가 변경 저널(USN 저널이라고도 함)을 만드는 것을 방지할 수 있습니다. 이를 통해 각 볼륨의 공간을 절약할 수 있지만 실시간 파일 분류를 사용할 수 없게 됩니다. 자세한 내용은 [파일 서버 리소스 관리자 개요](https://docs.microsoft.com/windows-server/storage/fsrm/fsrm-overview)를 참조하십시오.
 

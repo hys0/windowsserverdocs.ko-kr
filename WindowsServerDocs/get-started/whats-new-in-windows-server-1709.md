@@ -7,25 +7,25 @@ ms.topic: article
 author: coreyp-at-msft
 ms.author: coreyp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1d63721dde484756e67b68bcff078257c130ae36
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 32ce591a8b50c6e35c3fde4fedb177b6d76fccdd
+ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59825494"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65976735"
 ---
 # <a name="whats-new-in-windows-server-version-1709"></a>Windows Server, 버전 1709의 새로운 기능
 
 >적용 대상: Windows Server(반기 채널)
 
-<img src="../media/landing-icons/new.png" style='float:left; padding:.5em;' alt="Icon showing a newspaper">&nbsp;이 콘텐츠는 Windows Server, 버전 1709의 새로운 기능과 변경된 기능을 설명하는 내용입니다. 여기에 나열된 새로운 기능 및 변경 사항은 이 릴리스를 사용할 때 가장 많은 영향을 줄 수 있습니다. [Windows Server, 버전 1709](https://blogs.technet.microsoft.com/windowsserver/2017/08/24/sneak-peek-1-windows-server-version-1709/)도 참조하세요.
+<img src="../media/landing-icons/new.png" style='float:left; padding:.5em;' alt="Icon showing a newspaper">&nbsp;Windows의 최신 기능을 알아보려면 [What's New in Windows Server](whats-new-in-windows-server.md)합니다. 이 콘텐츠는 Windows Server, 버전 1709의 새로운 기능과 변경된 기능을 설명하는 내용입니다. 여기에 나열된 새로운 기능 및 변경 사항은 이 릴리스를 사용할 때 가장 많은 영향을 줄 수 있습니다. [Windows Server, 버전 1709](https://blogs.technet.microsoft.com/windowsserver/2017/08/24/sneak-peek-1-windows-server-version-1709/)도 참조하세요.
    
 
 ## <a name="new-cadence-of-releases"></a>새로운 릴리스 흐름
 
 이 릴리스부터 Windows Server 기능 업데이트를 받는 방법은 두 가지입니다.
-- **장기 서비스 채널 (LTSC)**: 5 년 간의 연장 지원 및 5 년 추가 지원으로 일반적인 방식으로 비즈니스입니다. 지난 20년 동안 지원되었던 것과 동일한 방법으로 2~3년마다 다음 LTSC로 업그레이드하는 옵션이 있습니다.
-- **반기 채널 (SAC)**: Software Assurance 혜택 이며 프로덕션 환경에서 완전히 지원 됩니다. 차이점은 18개월 동안 지원되고 6개월마다 새 버전이 있다는 것입니다.
+- **장기 서비스 채널 (LTSC)** : 5 년 간의 연장 지원 및 5 년 추가 지원으로 일반적인 방식으로 비즈니스입니다. 지난 20년 동안 지원되었던 것과 동일한 방법으로 2~3년마다 다음 LTSC로 업그레이드하는 옵션이 있습니다.
+- **반기 채널 (SAC)** : Software Assurance 혜택 이며 프로덕션 환경에서 완전히 지원 됩니다. 차이점은 18개월 동안 지원되고 6개월마다 새 버전이 있다는 것입니다.
 
 릴리스 채널에는 이와 관련된 요구 사항이 요약되어 있습니다.
 
@@ -36,7 +36,7 @@ ms.locfileid: "59825494"
 | 가용성  | Software Assurance 또는 Azure(클라우드 호스트)  | 모든 채널 |
 | 명명 규칙  | Windows Server, 버전 YYMM  | Windows Server YYYY |
 
-자세한 내용은 [Windows Server 반기 채널 개요](https://docs.microsoft.com/windows-server/get-started/semi-annual-channel-overview)를 참조하세요.
+자세한 내용은 [채널 서비스 비교](https://docs.microsoft.com/windows-server/get-started/semi-annual-channel-overview)합니다.
 
 ## <a name="application-containers-and-micro-services"></a>응용 프로그램 컨테이너 및 마이크로 서비스
 
@@ -70,7 +70,7 @@ Project Honolulu에는 PC, Windows 서버, 장애 조치 클러스터는 물론 
 
 **컨테이너 스토리지 - SMB 글로벌 매핑이 포함된 영구 데이터 볼륨**입니다. Windows Server, 버전 1709에 컨테이너 내 드라이브 문자(SMB 글로벌 매핑)에 대한 SMB 파일 공유 매핑 지원이 추가되었습니다. 이 매핑된 드라이브는 로컬 서버의 모든 사용자가 액세스할 수 있어 데이터 볼륨의 컨테이너 I/O는 탑재된 드라이브를 통과하여 기본 파일 공유로 향합니다. 자세한 내용은 [CSV(클러스터 공유 볼륨), S2D(저장소 공간 다이렉트), SMB 글로벌 매핑을 통한 컨테이너 저장소 지원](https://blogs.msdn.microsoft.com/clustering/2017/08/10/container-storage-support-with-cluster-shared-volumes-csv-storage-spaces-direct-s2d-smb-global-mapping/)을 참조하세요.
 
-**VM 구성 파일 형식(업데이트)**. 구성 버전이 8.2 이상인 VM에 추가 파일(.vmgs)이 추가되었습니다. VM 게스트 상태(VMGS)는 이전에 VM 런타임 상태 파일의 일부였던 장치 상태를 포함하는 새로운 내부 파일입니다.
+**VM 구성 파일 형식(업데이트)** . 구성 버전이 8.2 이상인 VM에 추가 파일(.vmgs)이 추가되었습니다. VM 게스트 상태(VMGS)는 이전에 VM 런타임 상태 파일의 일부였던 장치 상태를 포함하는 새로운 내부 파일입니다.
 
 ## <a name="security-and-assurance"></a>보안 및 보증
 
@@ -84,7 +84,7 @@ Project Honolulu에는 PC, Windows 서버, 장애 조치 클러스터는 물론 
 
 **SMBLoris 취약점** 서비스 거부를 일으킬 수 있는, “SMBLoris”라고 알려진 문제가 해결되었습니다.
 
-## <a name="storage"></a>스토리지
+## <a name="storage"></a>저장 공간
 
 **저장소 복제본**: Windows Server 2016에서 저장소 복제본에서 추가 재해 복구 보호는 이제 포함 하도록 확장 됩니다.
 - **테스트 장애 조치**: 대상 저장소를 탑재하는 옵션이 이제 테스트 장애 조치 기능을 통해 이용 가능합니다. 테스트 및 백업을 목적으로 대상 노드에 있는 복제된 저장소의 스냅숏을 일시적으로 탑재할 수 있습니다.  Microsoft 업데이트에 대한 자세한 내용은 [저장소 복제본 관련 질문과 대답](https://aka.ms/srfaq)을 참조하세요. 
@@ -115,7 +115,7 @@ Project Honolulu에는 PC, Windows 서버, 장애 조치 클러스터는 물론 
 **Windows Kubernetes에 대 한 Linux와 동등한 수준 네트워킹**: Windows는 네트워킹 측면에서 Linux와 동등한 사용 합니다. 고객은 혼합 OS인 Kubernetes 클러스터를 Azure, 온-프레미스 및 Linux에서 지원되는 동일한 네트워크 원형 및 토폴로지가 포함된 타사 클라우드 스택을 포함한 모든 환경에 배포할 수 있습니다. 문제 해결이나 스위치 확장을 할 필요는 없습니다.
 
 **핵심 네트워크 스택을**: 핵심 네트워크 스택의 몇 가지 기능이 개선 되었습니다. 이러한 기능에 관한 자세한 내용은 [Windows 10 크리에이터스 업데이트의 핵심 네트워크 스택 기능](https://blogs.technet.microsoft.com/networking/2017/07/13/core-network-stack-features-in-the-creators-update-for-windows-10/)을 참조하세요.
-- **TCP 빠른 열기 (TFO)**: TCP 3 방향 핸드셰이크 프로세스를 최적화 하기 위해 TFO에 대 한 지원이 추가 되었습니다. TFO는 최초 연결 시 표준 3단계 핸드셰이크를 사용하여 보안 TFO 쿠키를 설정합니다.  이후 동일한 서버로의 연결 시 3단계 핸드셰이크 대신 TFO 쿠키를 사용하여 왕복 시간 없이 연결합니다.
+- **TCP 빠른 열기 (TFO)** : TCP 3 방향 핸드셰이크 프로세스를 최적화 하기 위해 TFO에 대 한 지원이 추가 되었습니다. TFO는 최초 연결 시 표준 3단계 핸드셰이크를 사용하여 보안 TFO 쿠키를 설정합니다.  이후 동일한 서버로의 연결 시 3단계 핸드셰이크 대신 TFO 쿠키를 사용하여 왕복 시간 없이 연결합니다.
 - **입방 형 3**: 실험적 Windows 네이티브의 입방 형 3, TCP 정체 제어 알고리즘 구현은 사용할 수 있습니다. 다음 명령은 CUBIC을 각각 사용 또는 사용하지 않도록 설정합니다.
 
     ```
@@ -140,7 +140,7 @@ Project Honolulu에는 PC, Windows 서버, 장애 조치 클러스터는 물론 
     ```
 
     - **ISATAP 및 6to4**: 이후 사용 중단 향한 단계로 크리에이터 스 업데이트를 이러한 기술은 기본적으로 사용 하지 않도록 설정 해야 합니다.
-- **작동 하지 않는 게이트웨이 검색 (DGD)**: DGD 알고리즘으로 자동 전환 연결을 통해 다른 게이트웨이 현재 게이트웨이에 연결할 수 없는 경우. 이 릴리스에서 알고리즘이 개선되어 주기적으로 네트워크 환경을 다시 검색합니다.
+- **작동 하지 않는 게이트웨이 검색 (DGD)** : DGD 알고리즘으로 자동 전환 연결을 통해 다른 게이트웨이 현재 게이트웨이에 연결할 수 없는 경우. 이 릴리스에서 알고리즘이 개선되어 주기적으로 네트워크 환경을 다시 검색합니다.
 - [Test-NetConnection](https://technet.microsoft.com/itpro/powershell/windows/nettcpip/test-netconnection)은 다양한 네트워크 진단을 수행하는 Windows PowerShell 내 기본 제공 cmdlet입니다.  이 릴리스에서 경로 선택 및 원본 주소 선택 관련 세부 정보를 제공하도록 cmdlet이 향상되었습니다.
 
 **소프트웨어 정의 네트워킹**

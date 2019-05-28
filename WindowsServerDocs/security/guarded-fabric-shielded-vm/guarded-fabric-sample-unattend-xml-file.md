@@ -8,12 +8,12 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 1d9e91ec8f4c998f34e324b5d551a387eba5a310
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 5717fcc9e1732b6273620e633c140c6df58ec8b7
+ms.sourcegitcommit: 29ad32b9dea298a7fe81dcc33d2a42d383018e82
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59823634"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65624648"
 ---
 # <a name="create-os-specialization-answer-file"></a>OS 전문화 응답 파일 만들기
 
@@ -38,10 +38,8 @@ Install-Module GuardedFabricTools -Repository PSGallery -MinimumVersion 1.0.0
 - [기본 Windows 응답 파일](#basic-windows-answer-file)
 - [Windows는 도메인 가입을 사용 하 여 파일 응답](#windows-answer-file-with-domain-join)
 - [고정 IPv4 주소를 사용 하 여 Windows 응답 파일](#windows-answer-file-with-static-ipv4-addresses)
-- [사용자 지정 로캘 사용 하 여 Windows 응답 파일](#windows-answer-file-with-custom-locale)
+- [사용자 지정 로캘 사용 하 여 Windows 응답 파일](#windows-answer-file-with-a-custom-locale)
 - [기본 Linux 응답 파일](#basic-linux-answer-file)
-
-검토할 수도 있습니다는 [함수 매개 변수](#function-parameters)이 항목의 뒷부분에 나오는.
 
 ## <a name="basic-windows-answer-file"></a>기본 Windows 응답 파일
 
@@ -51,7 +49,7 @@ VM 네트워크 어댑터를 사용 하 여 DHCP IP 주소를 얻는 하 고 VM�
 내장 된 Administrator 계정을 구성 하려는 경우에 사용자 이름에 대 한 "관리자"를 사용 합니다.
 
 ```powershell
-$adminCred = Get-Credential -Prompt "Local administrator account"
+$adminCred = Get-Credential -Message "Local administrator account"
 
 New-ShieldingDataAnswerFile -Path '.\ShieldedVMAnswerFile.xml' -AdminCredentials $adminCred
 ```
@@ -69,8 +67,8 @@ VM 네트워크 어댑터 IP 주소를 가져올 DHCP를 사용 합니다.
 값을 변경 해야 합니다 "-DomainName" Active Directory 도메인의 FQDN으로 매개 변수입니다.
 
 ```powershell
-$adminCred = Get-Credential -Prompt "Local administrator account"
-$domainCred = Get-Credential -Prompt "Domain join credentials"
+$adminCred = Get-Credential -Message "Local administrator account"
+$domainCred = Get-Credential -Message "Domain join credentials"
 
 New-ShieldingDataAnswerFile -Path '.\ShieldedVMAnswerFile.xml' -AdminCredentials $adminCred -DomainName 'my.contoso.com' -DomainJoinCredentials $domainCred
 ```
@@ -97,7 +95,7 @@ Virtual Machine Manager IP 풀을 사용 하 여 고정 IP 주소에는 세 가�
 그런 다음 사용할 수 있습니다는 `-StaticIPPool` 매개 변수를 응답 파일에 정적 IP 요소를 포함 합니다. 매개 변수 `@IPAddr-1@`, `@NextHop-1-1@`, 및 `@DNSAddr-1-1@` 답에서 파일 다음 바뀝니다 Virtual Machine Manager 배포 시에 지정한 값은 실제 값입니다.
 
 ```powershell
-$adminCred = Get-Credential -Prompt "Local administrator account"
+$adminCred = Get-Credential -Message "Local administrator account"
 
 New-ShieldingDataAnswerFile -Path '.\ShieldedVMAnswerFile.xml' -AdminCredentials $adminCred -StaticIPPool IPv4Address
 ```
@@ -110,8 +108,8 @@ New-ShieldingDataAnswerFile -Path '.\ShieldedVMAnswerFile.xml' -AdminCredentials
 내장 된 Administrator 계정을 구성 하려는 경우에 사용자 이름에 대 한 "관리자"를 사용 합니다.
 
 ```powershell
-$adminCred = Get-Credential -Prompt "Local administrator account"
-$domainCred = Get-Credential -Prompt "Domain join credentials"
+$adminCred = Get-Credential -Message "Local administrator account"
+$domainCred = Get-Credential -Message "Domain join credentials"
 
 New-ShieldingDataAnswerFile -Path '.\ShieldedVMAnswerFile.xml' -AdminCredentials $adminCred -Locale es-ES
 ```
@@ -132,5 +130,5 @@ New-ShieldingDataAnswerFile -Path '.\ShieldedVMAnswerFile.xml' -RootPassword $ro
 
 ## <a name="see-also"></a>참조
 
-- [보호 된 Vm 배포](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
-- [보호 된 패브릭 및 보호 된 Vm](guarded-fabric-and-shielded-vms-top-node.md)
+- [보호된 VM 배포](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
+- [보호된 패브릭 및 보호된 VM](guarded-fabric-and-shielded-vms-top-node.md)
