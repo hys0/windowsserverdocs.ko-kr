@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 3300c16be6d516d7ec0bf4d0c3a025e59e6126b6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 06cc4bd37905f6bb7afbc513ffce216104654aba
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59834524"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191484"
 ---
 # <a name="determine-your-ad-fs-deployment-topology"></a>AD FS 배포 토폴로지 결정
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Active Directory Federation Services의 배포 계획의 첫 번째 단계 \(AD FS\) single sign에 맞게 올바른 배포 토폴로지를 결정 하는 것\-온 \(SSO\) 요구에 조직입니다. 이 섹션의에서 항목에서는 AD FS와 함께 사용할 수 있는 여러 가지 배포 토폴로지를 설명 합니다. 또한 특정 비즈니스 요구 사항에 가장 적합한 토폴로지를 선택할 수 있도록 각 배포 토폴로지와 연관된 이점 및 제한 사항을 설명합니다.  
   
@@ -34,16 +32,16 @@ Active Directory Federation Services의 배포 계획의 첫 번째 단계 \(AD 
   
 위 표를 검토했으면 이 섹션의 다음 항목을 계속 검토합니다.  
   
--   [WID를 사용 하 여 독립 실행형 페더레이션 서버](Stand-Alone-Federation-Server-Using-WID.md)  
+-   [WID를 사용하는 독립 실행형 페더레이션 서버](Stand-Alone-Federation-Server-Using-WID.md)  
   
--   [WID를 사용 하 여 페더레이션 서버 팜](Federation-Server-Farm-Using-WID-2012.md)  
+-   [WID를 사용하는 페더레이션 서버 팜](Federation-Server-Farm-Using-WID-2012.md)  
   
--   [WID와 프록시를 사용 하 여 페더레이션 서버 팜](Federation-Server-Farm-Using-WID-and-Proxies-2012.md)  
+-   [WID와 프록시를 사용하는 페더레이션 서버 팜](Federation-Server-Farm-Using-WID-and-Proxies-2012.md)  
   
--   [SQL Server를 사용 하 여 페더레이션 서버 팜](Federation-Server-Farm-Using-SQL-Server-2012.md)  
+-   [SQL Server를 사용하는 페더레이션 서버 팜](Federation-Server-Farm-Using-SQL-Server-2012.md)  
   
 AD FS 배포 토폴로지를 선택 하면를 마친 후 항목을 검토 하는 것이 좋습니다 [AD FS 서버 용량 계획](Planning-for-AD-FS-Server-Capacity.md) 이 토폴로지를 지원 하기 위해 배포 해야 하는 서버의 권장 되는 수를 결정 합니다.  
   
 ## <a name="see-also"></a>관련 항목
-[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
 

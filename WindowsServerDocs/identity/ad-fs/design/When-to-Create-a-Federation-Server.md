@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 8013764b88a1061cfcaa3a507466c111bfd59aad
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7e61c734780baa1482670af3f24697c10345b292
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59864814"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190593"
 ---
 # <a name="when-to-create-a-federation-server"></a>페더레이션 서버를 만들어야 하는 경우
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 페더레이션 serverin Active Directory Federation Services를 만들면 \(AD FS\), 조직 수 있는 수단을 제공 합니다.  
   
@@ -79,5 +77,5 @@ AD FS 페더레이션 서버 구성 마법사 또는 Fsconfig.exe 명령을 사�
 페더레이션 서버를 배포 하는 데 필요한 모든 필수 구성 요소를 설정 하는 방법에 대 한 자세한 내용은 참조 하세요. [검사 목록: 페더레이션 서버를 설정할](../../ad-fs/deployment/Checklist--Setting-Up-a-Federation-Server.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목
-[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
 

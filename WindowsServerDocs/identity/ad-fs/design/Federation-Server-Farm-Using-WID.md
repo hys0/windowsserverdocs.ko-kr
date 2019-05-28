@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 41c2179cbd8bf2c6032f233335099b512c02f880
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 067461b90ed5ce03d9470a450917dcbb93cf653a
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59832504"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191315"
 ---
 # <a name="federation-server-farm-using-wid"></a>WID를 사용하는 페더레이션 서버 팜
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2
 
 Active Directory Federation Services의 기본 토폴로지 \(AD FS\) Windows 내부 데이터베이스를 사용 하 여 페더레이션 서버 팜 \(WID\)합니다. 이 토폴로지에서 AD FS를 해당 팜에 가입 된 모든 페더레이션 서버에 대 한 AD FS 구성 데이터베이스에 대 한 저장소로 WID를 사용 합니다. 팜에서는 각 서버의 페더레이션 데이터를 구성 데이터베이스에 복제하고 유지 관리합니다. Windows Server 2012 r 2에서 AD FS WID를 사용 하 여 최대 30 명의 서버와 페더레이션 서버 팜을 구성 하려면 100 개 이하인 신뢰 당사자 트러스트를 통해 조직 수 있습니다.  
   

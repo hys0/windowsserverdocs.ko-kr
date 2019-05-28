@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: e7fb8e71afed1c0eb6b55857835d95f2dd0ec9d5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ca0b25480eedfc6471837ab8ae83b0d1d522e61e
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59875724"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191656"
 ---
 # <a name="certificate-requirements-for-federation-server-proxies"></a>페더레이션 서버 프록시에 대한 인증서 요구 사항
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Active Directory Federation Services에서 페더레이션 서버 프록시 역할에서 실행 되는 서버 \(AD FS\) Secure Sockets Layer를 사용 하는 데 필요한 \(SSL\) 서버 인증 인증서. 페더레이션 서버 프록시는 SSL 서버 인증 인증서를 사용하여 웹 클라이언트와 웹 서버의 트래픽 통신을 보호합니다.  
   
@@ -36,4 +34,4 @@ SSL 인증서를 사용 하는 방법에 대 한 일반적인 내용은 IIS 7.0�
 사용 하 여 인증서 해지 목록에는 모든 인증서 \(Crl\), 구성 된 인증서를 사용 하 여 서버 Crl을 배포 하는 서버에 연결할 수 있어야 합니다. CRL 유형에 따라 사용되는 포트가 결정됩니다.  
   
 ## <a name="see-also"></a>관련 항목
-[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)

@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 74701cbaa403611b081942f016b21db1c0b3ff70
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e2776cc29b8c9ede884a6b304cd541f700f516ca
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59845464"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191265"
 ---
 # <a name="name-resolution-requirements-for-federation-servers"></a>페더레이션 서버에 대한 이름 확인 요구 사항
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 회사 네트워크의 클라이언트 컴퓨터를 응용 프로그램 또는 Active Directory Federation Services로 보호 되는 웹 서비스에 액세스 하려고 하는 경우 \(AD FS\), 먼저 페더레이션 서버에 인증 해야 합니다. Windows 통합 인증을 통해 로컬 페더레이션 서버에 액세스 하는 회사 네트워크 클라이언트를 인증 하는 한 가지 방법은 이며  
   
@@ -37,4 +35,4 @@ NLB를 사용 하 여 FQDN 클러스터 또는 클러스터 IP 주소를 구성 
   
 
 ## <a name="see-also"></a>관련 항목
-[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)

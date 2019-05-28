@@ -9,16 +9,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 11baba5bfdb699f120a506feb8361db21d26cff1
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 103ee707c88f4e88b231a833f739cf75b6503e18
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59837864"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190104"
 ---
 # <a name="add-an-attribute-store"></a>특성 저장소 추가
 
->적용 대상: Windows Server 2016, Windows Server 2012 R2
 
 사용자 계정 및 Active Directory Federation Services로 보호 되는 리소스에 액세스 해야 하는 컴퓨터 계정의 \(AD FS\) Active Directory Domain Services와 같은 특성 저장소에 저장 된 \(AD DS \). 클레임 발급 엔진 특성 저장소를 사용 하 여 클레임을 발급 하는 데 필요한 데이터를 수집 합니다. 그런 다음 특성 저장소의 데이터는 클레임으로 투영 됩니다.  
   

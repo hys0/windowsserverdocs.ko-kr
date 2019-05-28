@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 4bd815daccdd72a8c612b9b728ce12378c1926e7
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 19e73e43a863ec60fbc9da09b24173220bb331ed
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59817624"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191361"
 ---
 # <a name="federation-server-farm-using-wid-and-proxies"></a>WID와 프록시를 사용하는 페더레이션 서버 팜
-
->적용 대상: Windows Server 2012
 
 Active Directory Federation Services에 대 한이 배포 토폴로지 \(AD FS\) 는 Windows 내부 데이터베이스를 사용 하 여 페더레이션 서버 팜에 동일 \(WID\) 토폴로지를 만들었지만 추가 페더레이션 서버 프록시 외부 사용자를 지원 하도록 경계 네트워크. 페더레이션 서버 프록시는 페더레이션 서버 팜에 회사 네트워크 외부에서 발생 하는 클라이언트 인증 요청을 리디렉션합니다.  
   
@@ -51,4 +49,4 @@ Active Directory Federation Services에 대 한이 배포 토폴로지 \(AD FS\)
 페더레이션 서버 또는 페더레이션 서버 프록시를 사용 하기 위해 네트워킹 환경을 구성 하는 방법에 대 한 자세한 내용은 참조 [페더레이션 서버에 대 한 이름 확인 요구 사항](Name-Resolution-Requirements-for-Federation-Servers.md) 또는 [페더레이션 서버 프록시에 대 한 이름 확인 요구 사항](Name-Resolution-Requirements-for-Federation-Server-Proxies.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목
-[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)

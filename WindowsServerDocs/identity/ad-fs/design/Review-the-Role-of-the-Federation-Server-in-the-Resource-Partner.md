@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 6d4c7763d7204dd2340d10a234e48f47c96788dc
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b2ed7a09bbc50c83d3bf6f8f2688152ed5202abc
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59841844"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190822"
 ---
 # <a name="review-the-role-of-the-federation-server-in-the-resource-partner"></a>리소스 파트너에서 페더레이션 서버의 역할 검토
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 리소스 파트너 조직의 페더레이션 서버 계정 페더레이션 서버에서 보낸 들어오는 보안 토큰을 가로채의 유효성을 검사 하 고, 서명 및 웹용 되는 자체 보안 토큰을 발급 합니다\-기반 응용 프로그램입니다.  
   
@@ -31,5 +29,5 @@ ms.locfileid: "59841844"
 > 리소스 파트너 조직의 페더레이션 서버 컴퓨터를 설정할 수 있습니다, 전에 리소스 파트너 조직의 Active Directory 도메인에 컴퓨터를 연결 해야 합니다. 자세한 내용은 참조 하세요. [검사 목록: 페더레이션 서버를 설정할](../../ad-fs/deployment/Checklist--Setting-Up-a-Federation-Server.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목
-[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
 

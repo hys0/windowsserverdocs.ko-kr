@@ -9,16 +9,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: b4ec08182e2523b0fcb16088ec9c1d094a5923fe
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4a13332cd7cf6361824f05ead4568a45211cc70a
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59836534"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191022"
 ---
 # <a name="provide-users-in-another-organization-access-to-your-claims-aware-applications-and-services"></a>다른 조직의 사용자에게 클레임 인식 응용 프로그램 및 서비스에 대한 액세스 제공
 
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Active Directory Federation Services에서 리소스 파트너 조직의 관리자 인 경우 \(AD FS\) 다른 조직의 사용자에 대 한 페더레이션된 액세스 권한을 제공 하려는 배포 목표가 있고 \(합니다 계정 파트너 조직\) 을 클레임\-인식 응용 프로그램 또는 웹\-기반 조직에 있는 서비스 \(리소스 파트너 조직의\):  
   
@@ -49,4 +48,4 @@ Active Directory Federation Services에서 리소스 파트너 조직의 관리�
 ![사용자 클레임에 대 한 액세스](media/75358b16-2a6f-4e16-9cc4-b0e614480305.gif)  
   
 ## <a name="see-also"></a>관련 항목
-[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)

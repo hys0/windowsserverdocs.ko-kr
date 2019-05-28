@@ -9,16 +9,15 @@ ms.date: 11/14/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 615faf4153949aa4ad989f017068d1809fca26b1
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 5bc43717f37fb3b14ac7f384a061ee64c734222d
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59820874"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189663"
 ---
 # <a name="configuring-alternate-login-id"></a>대체 로그인 ID 구성
 
->적용 대상: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
 ## <a name="what-is-alternate-login-id"></a>대체 로그인 ID 란?
 대부분의 시나리오에서 사용자는 해당 계정에 로그인 하는 UPN (사용자 계정 이름)을 사용합니다. 그러나 회사 정책 또는 온-프레미스 기간 업무 응용 프로그램 종속성으로 인해 일부 환경에서는 사용자가 사용할 수 있습니다 다른 형태의 로그인. 
@@ -37,9 +36,9 @@ Active Directory Federation Services (ADFS) 사용 하도록 설정 페더레이
 위에서 언급 한 시나리오에서 AD FS 사용 하 여 대체 ID를 사용 하면 로그인에 Azure AD에 온-프레미스 Upn을 수정 하지 않고 있습니다. 
 
 ## <a name="end-user-experience-with-alternate-login-id"></a>대체 로그인 ID 사용 하 여 최종 사용자 환경
-최종 사용자 환경을 대체 로그인 id를 사용 하 여 사용 된 인증 방법에 따라 달라 집니다.  현재 여기 세 가지 방법으로 대체 로그인 id를 사용 하 여 수행할 수 있습니다.  다음 창이 여기에 포함됩니다.
+최종 사용자 환경을 대체 로그인 id를 사용 하 여 사용 된 인증 방법에 따라 달라 집니다.  현재 여기 세 가지 방법으로 대체 로그인 id를 사용 하 여 수행할 수 있습니다.  구현되지 않은 것은 다음과 같습니다.
 
-- **일반 인증 (레거시)**-기본 인증 프로토콜을 사용 합니다.
+- **일반 인증 (레거시)** -기본 인증 프로토콜을 사용 합니다.
 - **최신 인증** -응용 프로그램에 Active Directory 인증 라이브러리 ADAL 기반 로그인을 제공 합니다. 이 통해 로그인 기능와 같은 다단계 인증 (MFA), SAML 기반 타사 Id 공급자 Office 클라이언트 응용 프로그램, 스마트 카드 및 인증서 기반 인증을 사용 하 여.
 - **하이브리드 최신 인증** -최신 인증의 장점을 모두 제공 하 고 클라우드 로부터 얻은 권한 부여 토큰을 사용 하 여 온-프레미스 응용 프로그램에 액세스할 수 있도록 사용자를 제공 합니다.
 
@@ -127,18 +126,19 @@ Set-AdfsClaimsProviderTrust -TargetIdentifier "AD AUTHORITY" -AlternateLoginID $
 
 다음 추가 구성으로 사용자 환경을 크게 향상 됩니다 하 고 조직에서 대체 id 사용자에 대 한 인증에 대 한 0 프롬프트 거의 얻을 수 있습니다.
 
-##### <a name="step-1-update-to-required-office-version"></a>1단계. 필요한 office 버전으로 업데이트
-Office 버전 1712 (없습니다 8827.2148 빌드) 위의 대체 id 시나리오를 처리 하는 인증 논리를 업데이트 합니다. 새 논리를 활용 하기 위해 클라이언트 컴퓨터 위에 office 버전 1712 (없습니다 8827.2148 빌드)를 업데이트 해야 합니다.
+##### <a name="step-1-update-to-required-office-version"></a>1단계. 필요한 Office 버전으로 업데이트
+Office 버전 1712 (없습니다 8827.2148 빌드) 위의 대체 id 시나리오를 처리 하는 인증 논리를 업데이트 합니다. 새 논리를 활용 하기 위해 클라이언트 컴퓨터 위에 Office 버전 1712 (없습니다 8827.2148 빌드)를 업데이트 해야 합니다.
 
-##### <a name="step-2-configure-registry-for-impacted-users-using-group-policy"></a>2단계. 그룹 정책을 사용 하 여 영향을 받는 사용자에 대 한 레지스트리 구성
+##### <a name="step-2-update-to-required-windows-version"></a>2단계. 필요한 Windows 버전으로 업데이트
+Windows 버전 1709 이상 대체 id 시나리오를 처리 하는 인증 논리를 업데이트 합니다. 새 논리를 활용 하기 위해 클라이언트 컴퓨터는 Windows 버전 1709 이상 업데이트 해야 합니다.
+
+##### <a name="step-3-configure-registry-for-impacted-users-using-group-policy"></a>3단계. 그룹 정책을 사용 하 여 영향을 받는 사용자에 대 한 레지스트리 구성
 Office 응용 프로그램 디렉터리 관리자가 대체 id 환경을 식별할 푸시 정보를 사용 합니다. 다음 레지스트리 키 추가 프롬프트를 표시 하지 않고 대체 id를 사용 하 여 사용자를 인증 하는 office 응용 프로그램을 구성 해야 합니다.
 
 |레지스트리 키 추가|레지스트리 키 데이터 이름, 형식 및 값|Windows 7/8|Windows 10|설명|
 |-----|-----|-----|-----|-----|
 |HKEY_CURRENT_USER\Software\Microsoft\AuthN|DomainHint</br>REG_SZ</br>contoso.com|필수|필수|이 레지스트리 키의 값에는 조직의 테 넌 트에서 확인 된 사용자 지정 도메인 이름입니다. 예를 들어, Contoso corp Contoso.com을 사용 하면 Contoso.onmicrosoft.com 테 넌 트에서 확인 된 사용자 지정 도메인 이름 중 하나인 경우 Contoso.com이 레지스트리이 키의 값을 제공할 수 있습니다.|
 HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Identity|EnableAlternateIdSupport</br>REG_DWORD</br>1|Outlook 2016 ProPlus에 대 한 필요|Outlook 2016 ProPlus에 대 한 필요|이 레지스트리 키의 값 1은 0 / Outlook 응용 프로그램에 게 향상 된 대체 id 인증 논리를 활용 해야 하는지 여부를 나타내기 위해.|
-HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\Identity|DisableADALatopWAMOverride</br>REG_DWORD</br>1|해당 사항 없음|필수.|이렇게 하면 Office에서 사용 하지 않음을 WAM alt id WAM에서 지원 되지 않습니다.|
-HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\Identity|DisableAADWAM</br>REG_DWORD</br>1|해당 사항 없음|필수.|이렇게 하면 Office에서 사용 하지 않음을 WAM alt id WAM에서 지원 되지 않습니다.|
 HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\Domains\contoso.com\sts|&#42;</br>REG_DWORD</br>1|필수|필수|인터넷 설정에 신뢰할 수 있는 영역으로 STS를 설정 하려면이 레지스트리 키를 사용할 수 있습니다. 표준 ADFS 배포 Internet explorer 로컬 인트라넷 영역에 ADFS 네임 스페이스를 추가 하는 것이 좋습니다.|
 
 ## <a name="new-authentication-flow-after-additional-configuration"></a>추가 구성 후 새 인증 흐름

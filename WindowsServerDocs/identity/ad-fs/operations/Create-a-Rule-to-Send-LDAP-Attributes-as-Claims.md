@@ -9,16 +9,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: e9762e4bc50a1c2b862999af5269a0da376ec9a1
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 00ea4f9f868b9c82c2a0859be971db26394251a3
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59887614"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189355"
 ---
 # <a name="create-a-rule-to-send-ldap-attributes-as-claims"></a>LDAP 특성을 클레임으로 전송 하는 규칙 만들기
 
->적용 대상: Windows Server 2016, Windows Server 2012 R2
 
 Active Directory Federation Services에 대 한 클레임 규칙 템플릿으로 보내기 LDAP 특성을 사용 하 여 \(AD FS\), Lightweight Directory Access Protocol에서 특성을 선택 하는 규칙을 만들 수 있습니다 \(LDAP\)신뢰 당사자에 대 한 클레임으로 보내기을 Active Directory와 같은 특성 저장소입니다. 클레임 규칙에서 인증 된 사용자에 대 한 특성 값을 추출 하는 보내기 LDAP 특성을 만들려면이 규칙 서식 파일을 사용할 수는 예를 들어 합니다 **displayName** 하 고 **telephoneNumber** Active 디렉터리 특성 및 두 개의 서로 다른 나가는 클레임으로 이러한 값을 보낼 수 있습니다.  
   
@@ -108,9 +107,9 @@ Active Directory Federation Services에 대 한 클레임 규칙 템플릿으로
 ## <a name="additional-references"></a>추가 참조 
 [클레임 규칙 구성](Configure-Claim-Rules.md)  
  
-[검사 목록: 신뢰 당사자 트러스트에 대 한 클레임 규칙 만들기](https://technet.microsoft.com/library/ee913578.aspx)  
+[검사 목록: 신뢰 당사자 트러스트를 위한 클레임 규칙 만들기](https://technet.microsoft.com/library/ee913578.aspx)  
 
-[검사 목록: 클레임 공급자에 대 한 클레임 규칙 만들기 신뢰](https://technet.microsoft.com/library/ee913564.aspx)  
+[검사 목록: 클레임 공급자 트러스트를 위한 클레임 규칙 만들기](https://technet.microsoft.com/library/ee913564.aspx)  
   
 [권한 부여 클레임 규칙을 사용 하는 경우](../../ad-fs/technical-reference/When-to-Use-an-Authorization-Claim-Rule.md)  
 

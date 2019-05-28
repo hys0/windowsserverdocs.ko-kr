@@ -9,16 +9,14 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 44448088184d86874e91855d8a51ef40d8cea049
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d46fc3246ed6ead54d58f44aaed0e8863ea189a6
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59880504"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192341"
 ---
 # <a name="checklist-setting-up-a-federation-server"></a>검사 목록: 페더레이션 서버 설치
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 이 검사 목록에는 Active Directory Federation Services에서 페더레이션 서버 역할에 대 한 Windows Server® 2012를 실행 하는 서버를 준비 하는 데 필요한 배포 작업이 포함 \(AD FS\)합니다.  
   

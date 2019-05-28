@@ -9,16 +9,14 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 7bc890c744de5cd86d4e8b0418e75512518f656c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: da91a3e8c34c86f7fd03ca875b3800fdb6001750
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59880944"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192122"
 ---
 # <a name="import-a-server-authentication-certificate-to-the-default-web-site"></a>기본 웹 사이트로 서버 인증 인증서 가져오기
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 인증 기관에서 서버 인증 인증서 가져온 후 \(CA\)를 수동으로 설치 해야 해당 인증서를 기본 웹 사이트에서 각 페더레이션 서버 또는 서버 팜에 페더레이션 서버 프록시에 대 한 합니다.  
   
@@ -52,9 +50,9 @@ ms.locfileid: "59880944"
   
 [검사 목록: 페더레이션 서버 프록시 설정](Checklist--Setting-Up-a-Federation-Server-Proxy.md)  
   
-[페더레이션 서버에 대 한 인증서 요구 사항](https://technet.microsoft.com/library/dd807040.aspx)  
+[페더레이션 서버에 대한 인증서 요구 사항](https://technet.microsoft.com/library/dd807040.aspx)  
   
-[페더레이션 서버 프록시에 대 한 인증서 요구 사항](https://technet.microsoft.com/library/dd807054.aspx)  
+[페더레이션 서버 프록시에 대한 인증서 요구 사항](https://technet.microsoft.com/library/dd807054.aspx)  
    
   
 

@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: e372f066fc82b9857d438234b491732a177e24fa
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d49ae34d83d4a0b912bd92dbb9de16e18cc5b7ff
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59860394"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191343"
 ---
 # <a name="federation-server-farm-using-wid-and-proxies"></a>WID와 프록시를 사용하는 페더레이션 서버 팜
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2
 
 Active Directory Federation Services에 대 한이 배포 토폴로지 \(AD FS\) 는 Windows 내부 데이터베이스를 사용 하 여 페더레이션 서버 팜에 동일 \(WID\) 토폴로지를 만들었지만 프록시 컴퓨터를 추가 합니다 외부 사용자를 지원 하도록 경계 네트워크입니다. 이러한 프록시는 페더레이션 서버 팜에 회사 네트워크 외부에서 제공 하는 클라이언트 인증 요청을 리디렉션합니다. AD FS의 이전 버전에서는 이러한 프록시는 페더레이션 서버 프록시를 이라고 했습니다.  
   

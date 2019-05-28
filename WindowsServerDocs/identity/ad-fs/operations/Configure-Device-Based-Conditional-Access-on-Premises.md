@@ -9,16 +9,15 @@ ms.date: 08/11/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: fa96fbeed1445b1add2e5de3aad45ad369a6cafa
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 0df290248f049b3f8a823e902cefa860fa074091
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59847224"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189846"
 ---
 # <a name="configure-on-premises-conditional-access-using-registered-devices"></a>등록 된 장치를 사용 하 여 구성 온-프레미스 조건부 액세스
 
->적용 대상: Windows Server 2016, Windows Server 2012 R2  
 
 다음 문서는 설치 및 등록 된 장치를 사용 하 여 온-프레미스 조건부 액세스 구성 과정을 안내 합니다.
 
@@ -155,7 +154,7 @@ Windows 10 도메인 공간 (Azure AD에 자동 등록)를 설명 된 대로 여
 - 장치 등록 서비스 컨테이너 및 개체의 구성에서 서비스--> 장치 등록 구성-->  
 
 ### <a name="enable-device-write-back-in-azure-ad-connect"></a>장치 쓰기를 사용 합니다. Azure AD에서 다시 연결  
-되기 전에, 수행 하지 않은 경우 Azure AD Connect에서 다시 장치 쓰기를 사용 하도록 설정 마법사를 한 번 실행 하 고 선택 하 여 **"사용자 지정 동기화 옵션"**, 한 후 장치 쓰기 되돌림에 대 한 확인란을 선택 하 고 위의 cmdlet을 실행 한 있는 포리스트를 선택 합니다.  
+되기 전에, 수행 하지 않은 경우 Azure AD Connect에서 다시 장치 쓰기를 사용 하도록 설정 마법사를 한 번 실행 하 고 선택 하 여 **"사용자 지정 동기화 옵션"** , 한 후 장치 쓰기 되돌림에 대 한 확인란을 선택 하 고 위의 cmdlet을 실행 한 있는 포리스트를 선택 합니다.  
 
 ### <a name="configure-device-authentication-in-ad-fs"></a>AD FS에서 장치 인증을 구성 합니다.  
 다음 명령을 실행 하 여 AD FS 정책을 구성 관리자 권한 PowerShell 명령 창을 사용 하 여,  

@@ -9,16 +9,14 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 2a89bab2fd1af1a1d7234da29f2025b4b12d6774
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b01e2ae567155cd3d53d6d7972bfd0b9ec0cf51b
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59861804"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192283"
 ---
 # <a name="configure-a-computer-for-the-federation-server-proxy-role"></a>페더레이션 서버 프록시 역할에 대해 컴퓨터 구성
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 필요한 인증서를 사용 하 여 컴퓨터를 구성 하 고 페더레이션 서비스 프록시 역할 서비스를 설치한 후 페더레이션 서버 프록시 컴퓨터를 구성할 준비가 되었습니다. 다음 절차를 사용하여 컴퓨터가 페더레이션 서버 프록시 역할을 하도록 설정할 수 있습니다.  
   

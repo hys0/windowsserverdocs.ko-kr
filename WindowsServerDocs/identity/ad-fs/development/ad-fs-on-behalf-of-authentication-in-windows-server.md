@@ -1,6 +1,6 @@
 ---
 ms.assetid: 5052f13c-ff35-471d-bff5-00b5dd24f8aa
-title: On-Behalf-Of (OBO) OAuth를 사용 하 여 ad FS 2016을 사용 하 여 다중 계층 응용 프로그램 빌드
+title: On-Behalf-Of (OBO) OAuth를 사용 하 여 AD fs 2016 이상의 버전을 사용 하 여 다중 계층 응용 프로그램 빌드
 description: ''
 author: billmath
 ms.author: billmath
@@ -9,18 +9,17 @@ ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 33d0bfa4139f16c90f3d79f5b61188b4d311538b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f98141745cb5bc8355d1ad3c37e72b4710eb4fc9
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59858944"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190624"
 ---
-# <a name="build-a-multi-tiered-application-using-on-behalf-of-obo-using-oauth-with-ad-fs-2016"></a>On-Behalf-Of (OBO) OAuth를 사용 하 여 ad FS 2016을 사용 하 여 다중 계층 응용 프로그램 빌드
+# <a name="build-a-multi-tiered-application-using-on-behalf-of-obo-using-oauth-with-ad-fs-2016-or-later"></a>On-Behalf-Of (OBO) OAuth를 사용 하 여 AD fs 2016 이상의 버전을 사용 하 여 다중 계층 응용 프로그램 빌드
 
->적용 대상: Windows Server 2016
 
-이 연습에서는 AD FS를 사용 하 여 Windows Server 2016 TP5에 대 한 대리 (OBO) 인증을 구현 하기 위한 지침을 제공 합니다. 읽으십시오 OBO 인증에 자세히 알아보려면 [개발자를 위한 AD FS 시나리오](../../ad-fs/overview/AD-FS-Scenarios-for-Developers.md)
+이 연습을에서-대리 (OBO) 인증 이상 Windows Server 2016 TP5에서 AD FS를 사용 하 여 구현 하기 위한 지침을 제공 합니다. 읽으십시오 OBO 인증에 자세히 알아보려면 [개발자를 위한 AD FS 시나리오](../../ad-fs/overview/AD-FS-Scenarios-for-Developers.md)
 
 >경고: 여기 빌드할 수 있는 예제는 교육용 으로만입니다. 이러한 지침은 모델의 필수 요소를 노출할 수 가장 간단 하 고 가장 최소한의 구현에 대 한 것입니다. 예제에서는 오류 처리의 모든 측면을 포함 되지 않아야 하 고 다른 관련 기능에 성공적으로 OBO 인증을 가져오는 중점을 두고 있습니다.
 
@@ -84,7 +83,7 @@ WebAPIOBO | 백 엔드 웹 ToDoService 사용자 ToDoItem을 추가할 때 필�
 
 ## <a name="modifying-the-sample"></a>이 샘플을 수정합니다.
 
-WebAPI-OnBehalfOf-DotNet.sln 솔루션을 열면 즉시 알게 될 것-솔루션에 두 개의 프로젝트가 있는 경우
+WebAPI-영문-DotNet.sln 솔루션을 열면 즉시 알게 됩니다 솔루션에 프로젝트가 있다고
 
 * **ToDoListClient**: 이 역할을 사용자 상호 작용 하는 OpenID 클라이언트
 * **ToDoListService**: 이 중간 계층 웹 앱 / 서비스에 인증된 된 사용자 다른 백 엔드 WebAPI OBO 상호 작용
@@ -128,9 +127,6 @@ AD FS 관리 MMC를 열고 새 응용 프로그램 그룹을 추가 합니다. W
     @RuleName = "All claims"
     c:[]
     => issue(claim = c);
-
-    @RuleName = "Issue open id scope"
-    => issue(Type = "https://schemas.microsoft.com/identity/claims/scope", Value = "openid");
 
     @RuleName = "Issue user_impersonation scope"
     => issue(Type = "https://schemas.microsoft.com/identity/claims/scope", Value = "user_impersonation");
@@ -281,7 +277,7 @@ MySampleGroup 응용 프로그램 그룹을 엽니다. 추가 응용 프로그�
 |ida: 대상| 예를 들어 ToDoListService WebAPI을 구성 하는 동안 AD FS에 지정 된 대로 ToDoListService의 ID https://localhost:44321/|
 |ida: ClientID| 예를 들어 ToDoListService WebAPI을 구성 하는 동안 AD FS에 지정 된 대로 ToDoListService의 ID https://localhost:44321/ </br>**반드시 즉 ida: 대상 및 ida: ClientID 서로 일치**|
 |ida: ClientSecret| 이 AD FS에는 AD FS에서 ToDoListService 클라이언트 구성할 때 생성 되는 암호|
-|ida: ADFSMetadata| 이 AD FS 메타 데이터를 URL에 대 한 예: https://fs.anandmsft.com/federationmetadata/2007-06/federationmetadata.xml|
+|ida:AdfsMetadataEndpoint| 이 AD FS 메타 데이터를 URL에 대 한 예: https://fs.anandmsft.com/federationmetadata/2007-06/federationmetadata.xml|
 |ida: OBOWebAPIBase| 예를 들어 백 엔드 API를 호출 하는 데 사용 하는 하는 기본 주소 https://localhost:44300|
 |ida: 기관| 이 url은 AD FS 서비스에 대 한 URL 예 https://fs.anandmsft.com/adfs/|
 
@@ -362,17 +358,19 @@ AD FS에서 Nmae 클레임을 실행 하는 것 하지만 하지 NameIdentifier 
     // POST api/todolist
     public async Task Post(TodoItem todo)
     {
-        if (!ClaimsPrincipal.Current.FindFirst("https://schemas.microsoft.com/identity/claims/scope").Value.Contains("user_impersonation"))
+      if (!ClaimsPrincipal.Current.FindFirst("http://schemas.microsoft.com/identity/claims/scope").Value.Contains("user_impersonation"))
         {
             throw new HttpResponseException(new HttpResponseMessage { StatusCode = HttpStatusCode.Unauthorized, ReasonPhrase = "The Scope claim does not contain 'user_impersonation' or scope claim not found" });
         }
 
-        //
-        // Call the WebAPIOBO On Behalf Of the user who called the To Do list web API.
-        //
-        string augmentedTitle = null;
-        string custommessage = await CallGraphAPIOnBehalfOfUser();
-        if (custommessage != null)
+      //
+      // Call the WebAPIOBO On Behalf Of the user who called the To Do list web API.
+      //
+
+      string augmentedTitle = null;
+      string custommessage = await CallGraphAPIOnBehalfOfUser();
+
+      if (custommessage != null)
         {
             augmentedTitle = String.Format("{0}, Message: {1}", todo.Title, custommessage);
         }
@@ -381,15 +379,15 @@ AD FS에서 Nmae 클레임을 실행 하는 것 하지만 하지 NameIdentifier 
             augmentedTitle = todo.Title;
         }
 
-        if (null != todo && !string.IsNullOrWhiteSpace(todo.Title))
+      if (null != todo && !string.IsNullOrWhiteSpace(todo.Title))
         {
             db.TodoItems.Add(new TodoItem { Title = augmentedTitle, Owner = ClaimsPrincipal.Current.FindFirst(ClaimTypes.Name).Value });
             db.SaveChanges();
         }
-    }
+      }
 
-    public static async Task<string> CallGraphAPIOnBehalfOfUser()
-    {
+      public static async Task<string> CallGraphAPIOnBehalfOfUser()
+      {
         string accessToken = null;
         AuthenticationResult result = null;
         AuthenticationContext authContext = null;
@@ -398,11 +396,12 @@ AD FS에서 Nmae 클레임을 실행 하는 것 하지만 하지 NameIdentifier 
 
         //
         // Use ADAL to get a token On Behalf Of the current user.  To do this we will need:
-        //      The Resource ID of the service we want to call.
-        //      The current user's access token, from the current request's authorization header.
-        //      The credentials of this application.
-        //      The username (UPN or email) of the user calling the API
+        // The Resource ID of the service we want to call.
+        // The current user's access token, from the current request's authorization header.
+        // The credentials of this application.
+        // The username (UPN or email) of the user calling the API
         //
+
         ClientCredential clientCred = new ClientCredential(clientId, clientSecret);
         var bootstrapContext = ClaimsPrincipal.Current.Identities.First().BootstrapContext as System.IdentityModel.Tokens.BootstrapContext;
         string userName = ClaimsPrincipal.Current.FindFirst(ClaimTypes.Upn) != null ? ClaimsPrincipal.Current.FindFirst(ClaimTypes.Upn).Value : ClaimsPrincipal.Current.FindFirst(ClaimTypes.Email).Value;
@@ -418,30 +417,31 @@ AD FS에서 Nmae 클레임을 실행 하는 것 하지만 하지 NameIdentifier 
         int retryCount = 0;
 
         do
-        {
-            retry = false;
-            try
-            {
-                result = await authContext.AcquireTokenAsync(...);
-                accessToken = result.AccessToken;
-            }
-            catch (AdalException ex)
-            {
-                if (ex.ErrorCode == "temporarily_unavailable")
+          {
+              retry = false;
+              try
                 {
-                    // Transient error, OK to retry.
-                    retry = true;
-                    retryCount++;
-                    Thread.Sleep(1000);
+                    result = await authContext.AcquireTokenAsync(OBOWebAPIBase, clientCred, userAssertion);
+                    //result = await authContext.AcquireTokenAsync(...);
+                    accessToken = result.AccessToken;
                 }
-            }
-        } while ((retry == true) && (retryCount < 1));
+              catch (AdalException ex)
+                {
+                    if (ex.ErrorCode == "temporarily_unavailable")
+                    {
+                        // Transient error, OK to retry.
+                        retry = true;
+                        retryCount++;
+                        Thread.Sleep(1000);
+                    }
+                }
+          } while ((retry == true) && (retryCount < 1));
 
         if (accessToken == null)
-        {
-            // An unexpected error occurred.
-            return (null);
-        }
+          {
+              // An unexpected error occurred.
+              return (null);
+          }
 
         // Once the token has been returned by ADAL, add it to the http authorization header, before making the call to access the To Do list service.
         httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", result.AccessToken);
@@ -451,17 +451,17 @@ AD FS에서 Nmae 클레임을 실행 하는 것 하지만 하지 NameIdentifier 
 
 
         if (response.IsSuccessStatusCode)
-        {
-            // Read the response and databind to the GridView to display To Do items.
-            string s = await response.Content.ReadAsStringAsync();
-            JavaScriptSerializer serializer = new JavaScriptSerializer();
-            custommessage = serializer.Deserialize<string>(s);
-            return custommessage;
-        }
+          {
+              // Read the response and databind to the GridView to display To Do items.
+              string s = await response.Content.ReadAsStringAsync();
+              JavaScriptSerializer serializer = new JavaScriptSerializer();
+              custommessage = serializer.Deserialize<string>(s);
+              return custommessage;
+          }
         else
-        {
-            custommessage = "Unsuccessful OBO operation : " + response.ReasonPhrase;
-        }
+          {
+              custommessage = "Unsuccessful OBO operation : " + response.ReasonPhrase;
+          }
         // An unexpected error occurred calling the Graph API.  Return a null profile.
         return (null);
     }

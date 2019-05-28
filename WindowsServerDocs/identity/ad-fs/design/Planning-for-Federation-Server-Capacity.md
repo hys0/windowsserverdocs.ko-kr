@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 618dc9419be965dedaaf7dc946da436a5001f121
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 569bea74fe7750eaf2b410a552876e0862b1e24b
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59839634"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191086"
 ---
 # <a name="planning-for-federation-server-capacity"></a>페더레이션 서버 용량 계획
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 페더레이션 서버를 위한 용량 계획에 예측할 수 있습니다.  
   
@@ -56,7 +54,7 @@ AD FS 구성 데이터베이스에 대 한 추가 배포 정보를 참조 하세
 > 이 스프레드시트는 것을 권장 하는 페더레이션 서버 수가 테스트 하는 동안 AD FS 제품 팀에는 하드웨어 및 네트워크 사양을 기반으로 합니다. 따라서이 컨텍스트 내에서 스프레드시트에서 권장 하는 페더레이션 서버 수를 이해할 수 있어야 합니다.  테스트 중 사용 된 사양에 대 한 자세한 내용은 항목을 참조 [AD FS 서버 용량 계획](Planning-for-AD-FS-Server-Capacity.md)합니다.  
   
 ### <a name="using-the-ad-fs-capacity-planning-sizing-spreadsheet"></a>AD FS 용량 계획 규모 산정 스프레드시트를 사용 하 여  
-이 스프레드시트를 사용 하면 값을 선택 해야 합니다 \(중 하나 **40%** 를 **60%**, 또는 **80%** \) 는 가장의 비율을 나타냅니다. 총 예상 피크 사용 기간 중에 페더레이션 서버에 인증 요청을 보내기는 사용자입니다.  
+이 스프레드시트를 사용 하면 값을 선택 해야 합니다 \(중 하나 **40%** 를 **60%** , 또는 **80%** \) 는 가장의 비율을 나타냅니다. 총 예상 피크 사용 기간 중에 페더레이션 서버에 인증 요청을 보내기는 사용자입니다.  
   
 그런 다음 값을 선택 해야 합니다 \(중 하나 **1minute**를 **15 분**, 또는 **1 시간** \) 가장 예상 되는 시간의 길이 나타내는 마지막으로 최대 사용 기간입니다. 예를 들어 15 분 기간 내 로그인은 사용자 또는 사용자의 60 %1 시간의 기간 내에 로그인 됩니다 사용자의 총 수에 대 한 값으로 40%를 예측할 수 있습니다. 함께 이러한 값에는 크기 조정 권장 사항 계산할 수는 최대 부하 프로필을 정의 합니다.  
   
@@ -95,4 +93,4 @@ AD FS 구성 데이터베이스에 대 한 추가 배포 정보를 참조 하세
 > 이라는 셀의 오른쪽에 있는 셀에 자동으로 계산 하는 값을 **총 권장 하는 페더레이션 서버** 스프레드시트의 맨 아래에 수식이 들어 추가 20% 버퍼에 추가 하는 합니다 각 개별 행 앞에 있는 모든 값의 합계입니다. 수식에 추가 합니다 **총 권장 하는 페더레이션 서버** 셀이 있도록는 팜의 전체 부하에 도달 하 가능성이 거의 없어야 하는 배포 된 페더레이션 서버 수 권장 되는 총이 버퍼에서 빌드 해당 채도 지점입니다.  
   
 ## <a name="see-also"></a>관련 항목
-[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)

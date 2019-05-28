@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: d2b60ce593c2ca7eb902595ee6a42850cb7605d9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: dbceb19d31738bdc5b628a9a2b069e5d3022d145
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59870844"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190947"
 ---
 # <a name="review-the-role-of-the-federation-server-proxy-in-the-account-partner"></a>계정 파트너에서 페더레이션 서버 프록시의 역할 검토
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Active Directory Federation Services에서 계정 파트너 조직의 경계 네트워크의 페더레이션 서버 프록시의 기본 역할 \(AD FS\) 로그온 하는 클라이언트 컴퓨터에서 인증 자격 증명을 수집 하는 것 인터넷을 통해 및 페더레이션 서버에 이러한 자격 증명을 전달 하는 계정 파트너 조직의 회사 네트워크 내부 있는 합니다. 클라이언트 컴퓨터용 계정은 계정 파트너의 특성 저장소에 저장됩니다.  
   
@@ -35,4 +33,4 @@ Active Directory Federation Services에서 계정 파트너 조직의 경계 네
   
 
 ## <a name="see-also"></a>관련 항목
-[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
