@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.assetid: dda9d148-d72f-4bff-aa2a-f2249fa47e4c
 ms.technology: identity-adfs
-ms.openlocfilehash: 05728f04f6fb924cf3793bc843df3832c7c383f7
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: bf36f12803b8ba621f2249b53ad868fcd8f6c4a7
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59855694"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188463"
 ---
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 # <a name="the-role-of-the-claim-rule-language"></a>클레임 규칙 언어의 역할
 Active Directory Federation Services (AD FS) 클레임 규칙 언어 클레임 엔진 역할 클레임 규칙 언어의 논리에에서 대해 처리 엔진을 하지만 들어오고 나가는 클레임의 동작에 대 한 관리 문서 블록으로 작동 하는 사용자 지정 규칙을 정의합니다. 모든 규칙은 클레임 엔진에서 처리 하는 방법에 대 한 자세한 내용은 참조 하십시오. [클레임 엔진의 역할](The-Role-of-the-Claims-Engine.md)합니다.  
   
@@ -121,7 +119,7 @@ AD FS에는 또한 미리 정의 된 클레임 발급 및 일반적인 구현 �
 |특성 저장소|다음 규칙은 Active Directory 특성 저장소를 쿼리하는 데 들어오는 클레임 값을 사용합니다.|```c: [Type  == "http://test/name" ] => issue (store  = "Enterprise AD Attribute Store", types  =  ("http://test/email" ), query  = ";mail;{0}", param  = c.Value )```|  
 |특성 저장소|다음 규칙 이전에 구성 된 구조적 쿼리 언어 (SQL) 특성 저장소를 쿼리 하는 들어오는 클레임의 값을 사용 합니다.|```c: [type  == "http://test/name"] => issue (store  = "Custom SQL store", types  =  ("http://test/email","http://test/displayname" ), query  = "SELECT mail, displayname FROM users WHERE name ={0}", param  = c.value );```|  
   
-#### <a name="expressions"></a>식  
+#### <a name="expressions"></a>표현식  
 식은 클레임 선택기 제약 조건과 발급 문 매개 변수 둘 다에 대해 오른쪽에 사용됩니다. 언어가 지원하는 다양한 종류의 식이 있습니다. 언어의 모든 식은 문자열 기반이며 이는 문자열을 입력으로 사용하고 문자열을 생성함을 의미합니다. 식에서 날짜/시간 등 숫자 또는 다른 데이터 형식은 지원되지 않습니다. 다음은 언어가 지원하는 식의 형식입니다.  
   
 -   문자열 리터럴: 양쪽에 따옴표 (") 문자로 구분 된 값을 문자열입니다.  
@@ -160,6 +158,6 @@ exists([issuer == "MSFT"])
 규칙 본문에는 단일 발급 문만 포함될 수 있습니다. Exists 함수를 사용하지 않고 조건이 사용되는 경우 규칙 본문은 조건 부분이 일치될 때마다 한 번씩 실행됩니다.  
   
 ## <a name="additional-references"></a>추가 참조  
-[사용자 지정 규칙을 사용 하 여 클레임을 보내도록 규칙 만들기](https://technet.microsoft.com/library/dd807049.aspx)  
+[사용자 지정 규칙을 사용하여 클레임을 보내는 규칙 만들기](https://technet.microsoft.com/library/dd807049.aspx)  
   
 

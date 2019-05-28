@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 2e7c991cf87bc0e6914e158f0878bcadbede3c22
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 91a0122198639bf75e9e43e9da9edf68dd0453d9
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59816234"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190682"
 ---
 # <a name="when-to-create-a-federation-server-farm"></a>페더레이션 서버 팜을 만들어야 하는 경우
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Active Directory Federation Services에서 페더레이션 서버 팜을 만드는 것이 좋습니다 \(AD FS\) 있고 경우에 AD FS 배포를 더 큰 내결함성을 제공, 로드 하려는\-분산 또는 확장성을 프로그램 조직의 페더레이션 서비스입니다. 동일한 네트워크에 둘 이상의 페더레이션 서버를 만들고, 각각 동일한 페더레이션 서비스를 사용 하도록 구성 하 고 각 서버의 공개 키 토큰의 추가 act\-서명 인증서를 AD FS 관리 스냅인\-에서 페더레이션 서버 팜을 만듭니다.  
   
@@ -55,4 +53,4 @@ Microsoft NLB 기술을 사용 하 여 클러스터 FQDN을 구성 하는 방법
 |동일한 SQL Server 인스턴스 가리키기|AD FS 구성 데이터베이스를 SQL 데이터베이스에 저장할 경우 새 페더레이션 서버는 새 서버 팜에 참여할 수 있도록는 팜의 다른 페더레이션 서버에서 사용 되는 동일한 SQL Server 인스턴스를 가리키도록 해야 합니다.|  
   
 ## <a name="see-also"></a>관련 항목
-[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)

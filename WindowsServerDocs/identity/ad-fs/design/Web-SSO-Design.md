@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 1b8344594c9fc477ed8424c716ec8d7f7fd91ef3
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 29d50a4d1855e609b6ac9ee627256201074a5033
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59852804"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190717"
 ---
 # <a name="web-sso-design"></a>웹 SSO 디자인
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 단일 웹\-기호\-온 \(SSO\) Active Directory Federation Services에서 디자인 \(AD FS\), 여러 AD FS에 액세스 하려면 사용자는 한 번만 인증 해야\- 보안된 응용 프로그램 또는 서비스입니다. 이 디자인에서 모든 사용자는 외부 사용자이며, 파트너 조직이 없기 때문에 페더레이션 트러스트가 없습니다. 일반적으로 다음 그림에 나와 있는 것 처럼 인터넷을 통해 하나 이상의 AD FS 보안 서비스 또는 응용 프로그램에 대 한 개별 소비자 또는 고객 액세스를 제공 하려는 경우이 디자인을 배포 합니다.  
   
@@ -33,4 +31,4 @@ Active Directory 도메인 서비스를 사용 하 여 경계 네트워크에서
 에서 사용자 웹 SSO 디자인 계획 및 배포에 사용할 수 있는 세부 작업 목록은 참조 하세요. [검사 목록: 웹 SSO 디자인 구현](../../ad-fs/deployment/Checklist--Implementing-a-Web-SSO-Design.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목
-[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)

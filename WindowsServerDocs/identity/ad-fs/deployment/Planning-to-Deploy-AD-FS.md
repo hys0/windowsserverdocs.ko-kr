@@ -9,16 +9,14 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: ca9e53d7d98f3ae5e6b7b329e52d4979e8c10215
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 1459cade5071374ca39d453b9915a68e4bcfe539
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59831694"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192043"
 ---
 # <a name="planning-to-deploy-ad-fs"></a>AD FS 배포 계획
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
 사용자 환경에 대 한 정보를 수집 하 고 Active Directory Federation Services를 사용 하도록 결정 한 후 \(AD FS\) 의 지침에 따라 디자인 된 [Windows Server 2012의 AD FS 디자인 가이드](https://technet.microsoft.com/library/dd807036.aspx), 조직의 AD FS 디자인 배포 계획을 시작할 수 있습니다. 완료 된 디자인 및이 항목의 정보를 사용 하 여 조직에서 AD FS를 배포 하는 데는 작업을 확인할 수 있습니다.  

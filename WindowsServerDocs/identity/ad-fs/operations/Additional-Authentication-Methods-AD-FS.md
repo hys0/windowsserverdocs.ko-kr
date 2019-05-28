@@ -8,16 +8,15 @@ ms.date: 09/19/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 68cd67dc14d3407985579a49e2f8603634fafdb7
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b0d5754a4622df9ca26a80bd4e32c355dda0f684
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59824434"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190057"
 ---
-# <a name="configure-3rd-party-authenticaiton-providers-as-primary-authentication-in-ad-fs-2019"></a>AD FS 2019에에서 기본 인증으로 타사 authenticaiton 공급자 구성
+# <a name="configure-3rd-party-authentication-providers-as-primary-authentication-in-ad-fs-2019"></a>AD FS 2019에에서 기본 인증으로 타사 인증 공급자 구성
 
->적용 대상: Windows Server 2019
 
 조직 공격 (brute force)을 시도 하는 발생 하는, 손상 또는 그렇지 않은 경우 암호 기반 인증 요청을 전송 하 여 사용자를 잠글  AD FS는 조직 손상 으로부터 보호 하기 위해, IP 주소 기반 차단 "스마트" 엑스트라넷 잠금 등의 기능을 도입 되었습니다.  
 

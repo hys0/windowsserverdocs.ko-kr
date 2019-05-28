@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 2e57f34b173c10e9e753c7f3b8dcd88d7bf6742c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c3efbb4081336ebfdfe9d3ab8a2b91412aa82dee
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59888904"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191083"
 ---
 # <a name="planning-for-federation-server-proxy-capacity"></a>페더레이션 서버 프록시 용량 계획
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 페더레이션 서버 프록시를 위한 용량 계획 예측할 수 있습니다.  
   
@@ -47,4 +45,4 @@ AD FS 제품 팀에서 수행 된 테스트를 각 페더레이션 서버 프록
 그러나 내결함성을 위해, 배포한 각 페더레이션 서버 팜에 대 한 두 명의 페더레이션 서버 프록시 최소를 권장 합니다.  
   
 ## <a name="see-also"></a>관련 항목
-[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)

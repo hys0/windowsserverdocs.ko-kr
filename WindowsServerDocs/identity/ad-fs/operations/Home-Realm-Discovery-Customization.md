@@ -9,16 +9,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 1198d8b76f2ecdad728e2de6ce7a5c0d053f779f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e91306ecd8ef08dd6af9173ead314a39dd5d2eff
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59868934"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189133"
 ---
 # <a name="home-realm-discovery-customization"></a>홈 영역 검색 사용자 지정
 
->적용 대상: Windows Server 2016, Windows Server 2012 R2
 
 먼저 AD FS 클라이언트는 리소스를 요청할 때 리소스 페더레이션 서버는 클라이언트의 영역에 대 한 정보가 없습니다. 리소스 페더레이션 서버에서 사용 하 여 AD FS 클라이언트에 응답 한 **클라이언트 영역 검색** 페이지에서 사용자 목록에서 홈 영역을 선택 합니다. 목록 값은 클레임 공급자 트러스트의 표시 이름 속성에서 채워집니다. 다음 Windows PowerShell cmdlet을 사용 하 여 수정 하 고 AD FS 홈 영역 검색 환경을 사용자 지정 합니다.  
   

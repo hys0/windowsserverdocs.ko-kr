@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: d5cfb5de77843eebfc152b9c79ac55bab1fa7727
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 5e90df713f08dd387a2438b34839d16efe6e470f
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59818174"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191686"
 ---
 # <a name="appendix-a-reviewing-ad-fs-requirements"></a>부록 a: AD FS 요구 사항 검토
-
->적용 대상: Windows Server 2012
 
 Active Directory Federation Services (AD FS) 배포의 조직 파트너가 성공적으로 공동 작업할 수 있도록 먼저 해야 회사 네트워크 인프라 구성 되어 있는지를 지원 하기 위해 AD FS 요구 사항 계정에 대 한 이름 확인 및 인증서를 제공 합니다. AD FS에는 다음과 같은 유형의 요구 사항이 있습니다.  
   
@@ -182,4 +180,4 @@ AD FS 인증 (암호, SSL 클라이언트 인증 또는 Windows 통합 인증)�
 일부 시나리오에서 특정 인증 강도 요구 사항을 지원하기 위해 사용자가 인증된 방식을 나타내는 클레임을 만들도록 AD FS를 구성할 수도 있습니다. 그런 다음 신뢰 당사자가 이 클레임을 사용하여 권한 부여 결정을 내릴 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목
-[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)

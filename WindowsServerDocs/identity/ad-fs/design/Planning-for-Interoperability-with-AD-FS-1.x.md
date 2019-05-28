@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: f287261ce6cb56e40385ef4de922045153819a23
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7a1082b873f65a9f98b25425a392b2c62de8ca22
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59877564"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191007"
 ---
 # <a name="planning-for-interoperability-with-ad-fs-1x"></a>AD FS 1.x와의 상호 운용성 계획
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Active Directory Federation Services \(AD FS\) Windows Server® 2012를 실행 하는 페더레이션 서버는 AD FS 1.0 상호 운용할 수 있습니다 \(Windows Server 2003 R2와 함께 설치\) 페더레이션 서비스 및 AD FS 1.1 \(Windows Server 2008 또는 Windows Server 2008 R2와 함께 설치\) 페더레이션 서비스입니다. 다음과 같은 상호 운용성 조합이 지원됩니다.  
   
@@ -49,4 +47,4 @@ AD FS 1입니다. *x*\-호환 클레임은 Windows Server 2012의 AD FS 페더�
 > AD FS 1입니다. *x* 페더레이션 서비스는 Uniform Resource Identifier를 시작 하는 들어오는 클레임 유형만 해석할 수 있습니다 \(URI\) 의 http://schemas.xmlsoap.org/claims/합니다.  
   
 ## <a name="see-also"></a>관련 항목
-[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)

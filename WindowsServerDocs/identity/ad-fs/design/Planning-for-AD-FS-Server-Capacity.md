@@ -9,16 +9,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 484dd08edef85b91e777f8963f175a6172c75430
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 0191c822ec068c5486a1b0d5da4c1ae2ee9e4d31
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59847394"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191103"
 ---
 # <a name="planning-for-ad-fs-server-capacity"></a>AD FS 서버 용량 계획
 
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
   
 > [!NOTE]  
@@ -36,7 +35,7 @@ Active Directory Federation Services를 위한 용량 계획 \(AD FS\) 페더레
   
 |권장 작업|설명|참조|  
 |--------------------|---------------|-------------|  
-|AD FS 페더레이션 서버 및 페더레이션 서버 프록시를 배포 하기 위한 요구 사항 이해|페더레이션 서버 및 페더레이션 서버 프록시를 배포하는 데 필요한 중요한 하드웨어 및 소프트웨어 요구 사항을 검토합니다.|[부록 a: AD FS 요구 사항 검토](Appendix-A--Reviewing-AD-FS-Requirements.md)|  
+|AD FS 페더레이션 서버 및 페더레이션 서버 프록시를 배포 하기 위한 요구 사항 이해|페더레이션 서버 및 페더레이션 서버 프록시를 배포하는 데 필요한 중요한 하드웨어 및 소프트웨어 요구 사항을 검토합니다.|[부록 A: AD FS 요구 사항 검토](Appendix-A--Reviewing-AD-FS-Requirements.md)|  
 |조직에서 배포할 AD FS 구성 데이터베이스의 유형 선택|이 섹션의 용량 계획 데이터를 사용 하 여를 시작 하기 전에 먼저 결정 해야 AD FS 구성 데이터베이스 유형, 배포 하거나 Windows 내부 데이터베이스 \(WID\) 또는 구조적 쿼리 언어 \(SQL\) 데이터베이스입니다.|[The Role of the AD FS Configuration Database](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)<br /><br />[AD FS 배포 토폴로지 고려 사항](AD-FS-Deployment-Topology-Considerations.md)|  
 |선택한 새 AD FS 구성 데이터베이스에서 사용할 토폴로지 레이아웃의 유형 결정|배포에 사용할 AD FS 구성 데이터베이스의 유형을 결정했으면 프로덕션 환경에서 페더레이션 서버 및 페더레이션 서버 프록시를 배치해야 하는 위치와 가장 일치하는 배포 토폴로지를 고려해야 합니다.|[AD FS 배포 토폴로지 결정](Determine-Your-AD-FS-Deployment-Topology.md)|  
 |키 AD FS 관련 용량 계획 용어 이해|일반적인 용량 계획 AD FS 용량 계획 설명 전체에서 사용 되는 용어의 정의 검토 합니다.|이 항목의 [AD FS capacity planning terms](Planning-for-AD-FS-Server-Capacity.md#bk_terms) 섹션을 참조하세요.|  
@@ -103,4 +102,4 @@ Active Directory Federation Services를 위한 용량 계획 \(AD FS\) 페더레
 -   [페더레이션 서버 프록시 용량 계획](Planning-for-Federation-Server-Proxy-Capacity.md)  
   
 ## <a name="see-also"></a>관련 항목
-[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)

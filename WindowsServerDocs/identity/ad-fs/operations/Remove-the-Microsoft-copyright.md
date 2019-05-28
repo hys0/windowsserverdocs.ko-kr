@@ -9,16 +9,16 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: aa27a014b0803712a20fdd23f075486dc35f33c2
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6e15f9d1490ad62f1458cd32da6e78a6febec58d
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59820984"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189034"
 ---
 # <a name="remove-the-microsoft-copyright"></a>Microsoft 저작권 정보를 제거 합니다. 
 
->적용 대상: Windows Server 2016, Windows Server 2012 R2
+
  
 기본적으로 AD FS 페이지는 Microsoft 저작권 정보를 포함 합니다. 사용자 지정된 페이지에서 이 저작권 정보를 제거하려면 다음 절차를 따르면 됩니다. 
 

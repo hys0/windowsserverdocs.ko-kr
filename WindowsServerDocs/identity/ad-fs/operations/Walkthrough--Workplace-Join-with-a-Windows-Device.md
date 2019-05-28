@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: fd222eb47982591e051594e8a572443b65c0357f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8b3b2934e7aa177e873e19d77530b2d796ccd521
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59864004"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188903"
 ---
 # <a name="walkthrough-workplace-join-with-a-windows-device"></a>연습: Windows 장치를 사용하여 작업 공간 연결
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2
 
 이 항목에서는 작업 공간 연결을 사용하여 Windows 장치를 작업 공간과 연결하는 방법 및 Single Sign-On을 사용하여 웹 응용 프로그램에 액세스하는 방법을 설명합니다. 단계를 완료 해야 합니다 [Windows Server 2012 R2에서 AD FS에 대 한 랩 환경 설정](../deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md) 섹션 전에이 연습을 시도해 볼 수 있습니다.
 
@@ -84,7 +82,7 @@ ms.locfileid: "59864004"
 ## <a name="see-also"></a>관련 항목
 [SSO 및 원활한 두 번째 단계 인증에서 회사 응용 프로그램에 대 한 모든 장치에서 작업 공간 가입](Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)
 [Windows Server 2012 R2에서 AD FS에 대 한 랩 환경 설정](../deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md) 
- [ 연습: IOS 장치를 사용 하 여 작업 공간 연결](Walkthrough--Workplace-Join-with-an-iOS-Device.md)
+ [ 연습: iOS 디바이스를 사용하여 작업 공간 연결](Walkthrough--Workplace-Join-with-an-iOS-Device.md)
 
 
 

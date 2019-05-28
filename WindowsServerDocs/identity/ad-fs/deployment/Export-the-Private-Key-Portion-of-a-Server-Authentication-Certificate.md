@@ -9,16 +9,14 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: c968f0702d56b56d0a80459e5cf0c9e658c56741
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c3a39f9d51ed8243118522ae37bc7d205a7ea416
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59857194"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192144"
 ---
 # <a name="export-the-private-key-portion-of-a-server-authentication-certificate"></a>서버 인증 인증서의 개인 키 부분 내보내기
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 모든 페더레이션 서버에는 Active Directory Federation Services \(AD FS\) 팜에는 서버 인증 인증서의 개인 키에 액세스할 수 있어야 합니다. 서버 팜에 페더레이션 서버 또는 웹 서버를 구현 하는 경우 단일 인증 인증서를 해야 합니다. 이 인증서를 엔터프라이즈 인증 기관에서 발급 해야 \(CA\), 되며 내보낼 수 있는 개인 키가 있어야 합니다. 서버 인증 인증서의 개인 키는 팜의 모든 서버에서 사용할 수 있도록 내보낼 수 있어야 합니다.  
   
@@ -59,8 +57,8 @@ ms.locfileid: "59857194"
   
 [검사 목록: 페더레이션 서버 프록시 설정](Checklist--Setting-Up-a-Federation-Server-Proxy.md)  
   
-[페더레이션 서버에 대 한 인증서 요구 사항](https://technet.microsoft.com/library/dd807040.aspx)  
+[페더레이션 서버에 대한 인증서 요구 사항](https://technet.microsoft.com/library/dd807040.aspx)  
   
-[페더레이션 서버 프록시에 대 한 인증서 요구 사항](https://technet.microsoft.com/library/dd807054.aspx)  
+[페더레이션 서버 프록시에 대한 인증서 요구 사항](https://technet.microsoft.com/library/dd807054.aspx)  
   
 

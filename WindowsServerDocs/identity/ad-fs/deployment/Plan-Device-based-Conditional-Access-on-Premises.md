@@ -9,16 +9,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: d878134824ea14a511ad59520d8f6522a14693b3
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ffd7131f7f3772ab47b62c9755008fe3b1c4b274
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59854244"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192072"
 ---
 # <a name="plan-device-based-conditional-access-on-premises"></a>온-프레미스 장치 기반 조건부 액세스 계획
 
->적용 대상: Windows Server 2016
 
 이 문서에서는 온-프레미스 디렉터리를 Azure AD Connect를 사용 하 여 Azure AD에 연결 되어 있는 하이브리드 시나리오에서 장치 기반 조건부 액세스 정책을 설명 합니다.     
 
@@ -38,7 +37,7 @@ AD FS는 하이브리드 시나리오에서 조건부 액세스 정책의 온-�
 |장치를 관리 하는 방법    |      MDM 정책 (Intune 등록 추가)   | MDM 정책 (Intune 등록 추가)        |   그룹 정책, System Center Configuration Manager (SCCM) |
 |Azure AD 트러스트 종류|작업 공간 연결|Azure AD 조인 됨|도메인 가입  |     
 |W10 설정 위치    | 설정 > 계정 > 계정 > 회사 또는 학교 계정 추가        | 설정 > 시스템 > 정보 > Azure AD에 가입       |   설정 > 시스템 > 정보 > 도메인에 가입 |       
-|또한 iOS 및 Android 장치에서 사용할 수 있습니까?   |    예     |       아니오  |   아니오   |   
+|또한 iOS 및 Android 장치에서 사용할 수 있습니까?   |    예     |       아니오  |   아니요   |   
 
   
 

@@ -9,16 +9,14 @@ ms.date: 08/17/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 0b0d4d085a94631b70df81fd53bff974d8425611
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f3719277c80eae2bf2a4d923146920d17546601d
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59877764"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188733"
 ---
 # <a name="ad-fs-single-sign-on-settings"></a>AD FS Single Sign On 설정
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2
 
 Single Sign-on (SSO)를 사용 하면 한 번 인증 하 고 추가 자격 증명을 묻지 않고 여러 리소스에 액세스할 수 있습니다.  이 문서는이 동작을 사용자 지정할 수 있도록 하는 구성 설정 뿐만 아니라 SSO에 대 한 기본 AD FS 동작을 설명 합니다.  
 

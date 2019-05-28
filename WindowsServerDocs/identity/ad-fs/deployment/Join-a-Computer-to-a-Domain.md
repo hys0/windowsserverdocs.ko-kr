@@ -9,16 +9,14 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 811f5296143637974cf82e59d57665f8a96f1c8c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 02df9659ee3a1121c0cee3f7c5fa21b91c36b87c
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59884114"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192047"
 ---
 # <a name="join-a-computer-to-a-domain"></a>컴퓨터를 도메인에 가입
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Active Directory Federation Services에 대 한 \(AD FS\) 페더레이션 서버를 도메인에 가입 되어 있어야 하는 대로 작동 하는 각 컴퓨터 작동 합니다. 페더레이션 서버 프록시를 도메인에 조인할 수 있지만 이것이 요구 사항은 없습니다.  
   

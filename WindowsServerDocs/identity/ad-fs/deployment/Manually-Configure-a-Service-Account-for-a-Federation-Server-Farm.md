@@ -9,16 +9,14 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 7d215c80c03236df9479aff8046981741dfc83e2
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b027bff4645203c44e228f11c651b767fa4502e0
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59838154"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192065"
 ---
 # <a name="manually-configure-a-service-account-for-a-federation-server-farm"></a>페더레이션 서버 팜에 대해 수동으로 서비스 계정 구성
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Active Directory Federation Services에서 페더레이션 서버 팜 환경을 구성 하려면 \(AD FS\)를 만들고 Active Directory Domain Services에서 전용된 서비스 계정을 구성 해야 \(AD DS\) 팜에서 상주 합니다. 그런 다음 이 계정을 사용하도록 팜의 각 페더레이션 서버를 구성합니다. Windows 통합 인증을 사용 하 여 AD FS 팜에 페더레이션 서버에 인증 하려면 회사 네트워크에서 클라이언트 컴퓨터를 허용 하려는 경우 조직에서 다음 작업을 완료 해야 합니다.  
 

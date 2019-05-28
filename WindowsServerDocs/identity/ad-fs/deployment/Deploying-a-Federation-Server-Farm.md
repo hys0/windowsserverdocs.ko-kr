@@ -9,16 +9,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 05f1ea6830237813e6fd2bd6a172f467e8d81065
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c0f8dca425f644952c36a289ec72651f6383e846
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59839084"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192190"
 ---
 # <a name="deploying-a-federation-server-farm"></a>페더레이션 서버 팜 배포
 
->적용 대상: Windows Server 2016, Windows Server 2012 R2
 
 페더레이션 서버 팜을 배포하려면 이 검사 목록의 작업을 순서대로 완료합니다. 참조 링크를 클릭하면 개념이 설명된 항목으로 이동하며 이 내용을 읽은 후 이 검사 목록으로 돌아와서 검사 목록의 나머지 작업을 계속할 수 있습니다.  
   

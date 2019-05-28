@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: d50d26c5c654e5c91b82f6f209e21f257221c12d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: fc0cbb461a48d04ddaa677d4de2369ef58fd5390
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59843584"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190962"
 ---
 # <a name="provide-your-active-directory-users-access-to-the-applications-and-services-of-other-organizations"></a>Active Directory 사용자에게 다른 조직의 응용 프로그램 및 서비스에 대한 액세스 제공
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 이 Active Directory Federation Services \(AD FS\) 목표를 기반으로 하는 배포 목표 [제공 하면 Active Directory 사용자가 액세스 클레임 인식 응용 프로그램 및 서비스](Provide-Your-Active-Directory-Users-Access-to-Your-Claims-Aware-Applications-and-Services.md)합니다.  
   
@@ -47,4 +45,4 @@ ms.locfileid: "59843584"
 ![응용 프로그램에 대 한 액세스](media/50af4837-31e0-451f-a942-e705c2300065.gif)  
   
 ## <a name="see-also"></a>관련 항목
-[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)

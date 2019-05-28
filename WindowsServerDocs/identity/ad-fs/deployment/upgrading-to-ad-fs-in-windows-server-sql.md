@@ -9,16 +9,15 @@ ms.prod: windows-server-threshold
 ms.assetid: 70f279bf-aea1-4f4f-9ab3-e9157233e267
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 59b761e69da5b1c1e27fea71b32447b19d2b83c6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8ada2ae5c9fcdb77f35200581848041f222ed7f3
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59812084"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191957"
 ---
 # <a name="upgrading-to-ad-fs-in-windows-server-2016-with-sql-server"></a>SQL Server 사용 하 여 Windows Server 2016에서에서 AD FS로 업그레이드
 
->적용 대상: Windows Server 2016
 
 
 ## <a name="moving-from-a-windows-server-2012-r2-ad-fs-farm-to-a-windows-server-2016-ad-fs-farm"></a>Windows Server 2016 AD FS 팜을 Windows Server 2012 R2 AD FS 팜에서 이동  
@@ -44,7 +43,7 @@ Windows Server 2016 AD FS 서버를 Windows Server 2012 R2 팜에 추가할 수 
 
 다음 아키텍처 다이어그램의 유효성을 검사 하 고 다음 단계를 기록 하는 데 사용 된 설치를 보여 줍니다.
 
-![Architecture](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/arch.png) 
+![Architecture](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/arch.png)
 
 
 #### <a name="join-the-windows-2016-ad-fs-server-to-the-ad-fs-farm"></a>Windows 2016 AD FS 서버를 AD FS 팜에 조인
@@ -58,18 +57,18 @@ Windows Server 2016 AD FS 서버를 Windows Server 2012 R2 팜에 추가할 수 
 ![팜 조인](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure3.png)
 5.  에 **SSL 인증서 지정** 화면에서 인증서를 지정 하 고 클릭 **다음**합니다.
 ![팜 조인](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure4.png)
-6.  에 **서비스 계정 지정** 화면에서 서비스 계정을 지정 하 고 클릭 **다음**합니다. 
-7.  에 **옵션을 검토** 화면에서 옵션을 검토 하 고 클릭 **다음**합니다. 
+6.  에 **서비스 계정 지정** 화면에서 서비스 계정을 지정 하 고 클릭 **다음**합니다.
+7.  에 **옵션을 검토** 화면에서 옵션을 검토 하 고 클릭 **다음**합니다.
 8.  에 **필수 조건 검사** 화면에서 모든 필수 구성 요소 검사 통과 및 클릭 **구성**합니다.
 9.  에 **결과** 화면에서 해당 서버가 제대로 구성 되었는지 확인 하 고 클릭 **닫기**합니다.
- 
-   
+
+
 #### <a name="remove-the-windows-server-2012-r2-ad-fs-server"></a>Windows Server 2012 R2 AD FS 서버를 제거 합니다.
 
 >[!NOTE]
 >AdfsSyncProperties 집합을 사용 하 여 기본 AD FS 서버를 설정할 필요가 없습니다-데이터베이스와 SQL을 사용 하는 경우 역할입니다.  이 구성에서 기본으로 간주 됩니다 모든 노드의 때문입니다.
 
-1.  Windows Server 2012 R2 AD FS 서버에서 서버 관리자 사용 **역할 및 기능 제거** 아래에서 **관리**합니다. 
+1.  Windows Server 2012 R2 AD FS 서버에서 서버 관리자 사용 **역할 및 기능 제거** 아래에서 **관리**합니다.
 ![서버 제거](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/remove1.png)
 2.  **시작하기 전** 화면에서 **다음**을 클릭합니다.
 3.  에 **서버 선택** 화면에서 클릭 **다음**합니다.
@@ -78,12 +77,12 @@ Windows Server 2016 AD FS 서버를 Windows Server 2012 R2 팜에 추가할 수 
 5.  에 **기능** 화면에서 클릭 **다음**합니다.
 6.  에 **확인** 화면에서 클릭 **제거**합니다.
 7.  이 완료 되 면 서버를 다시 시작 합니다.
-     
+
 #### <a name="raise-the-farm-behavior-level-fbl"></a>팜 동작 수준을 (FBL)를 발생 시킵니다.
 이 단계 전에 forestprep 및 domainprep Active Directory 환경에서 실행 하 고 Active Directory에 Windows Server 2016 스키마를 지정 해야 합니다.  이 문서는 Windows 2016 도메인 컨트롤러를 사용 하 여 시작 하 고 AD가 설치 될 때 실행 하는 것 때문에 이러한 실행 필요가 없습니다.
 
 >[!NOTE]
->아래 프로세스를 시작 하기 전에 설정을에서 Windows 업데이트를 실행 하 여 Windows Server 2016를 최신 상태로 유지 합니다.  업데이트가 더 이상 필요하지 않을 때까지 이 프로세스를 계속합니다. 
+>아래 프로세스를 시작 하기 전에 설정을에서 Windows 업데이트를 실행 하 여 Windows Server 2016를 최신 상태로 유지 합니다.  업데이트가 더 이상 필요하지 않을 때까지 이 프로세스를 계속합니다.
 
 1. 이제 Windows Server 2016 서버에서 PowerShell을 열고 다음을 실행 합니다. **$cred = Get-credential** 하 고 enter 키를 누릅니다.
 2. SQL Server에 대 한 관리자 권한이 있는 자격 증명을 입력 합니다.
@@ -93,3 +92,24 @@ Windows Server 2016 AD FS 서버를 Windows Server 2012 R2 팜에 추가할 수 
 3. 이제 AD FS 관리 하려는 경우 Windows Server 2016에서 AD FS에 대 한 추가 된 새 노드가 표시 됩니다.  
 4. 마찬가지로, PowerShell cmdlt을 사용할 수 있습니다.  Get-AdfsFarmInformation 현재 FBL 보여 줍니다.  
 ![업데이트 완료](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/finish2.png)
+
+#### <a name="upgrade-the-configuration-version-of-existing-wap-servers"></a>기존 WAP 서버의 구성 버전 업그레이드
+1. 각 웹 응용 프로그램 프록시에 다시 나타나는 창에서 다음 PowerShell 명령을 실행 하 여 WAP 구성:  
+    ```powershell
+    $trustcred = Get-Credential -Message "Enter Domain Administrator credentials"
+    Install-WebApplicationProxy -CertificateThumbprint {SSLCert} -fsname fsname -FederationServiceTrustCredential $trustcred  
+    ```
+2. 클러스터에서 이전 서버를 제거 하 고 WAP 서버만 최신 서버 버전에서 실행 된 다음 Powershell commandlet을 실행 하 여 위의 다시 구성 하는 유지 합니다.
+    ```powershell
+    Set-WebApplicationProxyConfiguration -ConnectedServersName WAPServerName1, WAPServerName2
+    ```
+3. Get-WebApplicationProxyConfiguration commmandlet를 실행 하 여 WAP 구성을 확인 합니다. 이전 명령에서 실행 하는 서버를 ConnectedServersName에 반영 됩니다.
+    ```powershell
+    Get-WebApplicationProxyConfiguration
+    ```
+4. ConfigurationVersion WAP 서버를 업그레이드 하려면 다음 Powershell 명령을 실행 합니다.
+    ```powershell
+    Set-WebApplicationProxyConfiguration -UpgradeConfigurationVersion
+    ```
+5. ConfigurationVersion Get WebApplicationProxyConfiguration Powershell 명령을 사용 하 여 업그레이드를 확인 합니다.
+    

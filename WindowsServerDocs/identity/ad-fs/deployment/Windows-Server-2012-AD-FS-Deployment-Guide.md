@@ -9,16 +9,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 3e555d1003878e12320cb8557bd205ac24e1bbb3
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6be56c25cc6f639f73842f57cdf48a6339dccf9c
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59882444"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191848"
 ---
 # <a name="windows-server-2012-ad-fs-deployment-guide"></a>Windows Server 2012 AD FS 배포 가이드
 
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Active Directory® Federation Services를 사용할 수 있습니다 \(AD FS\) 배포 된 id를 확장 하는 페더레이션된 id 관리 솔루션을 구축 하는 Windows Server® 2012 운영 체제를 사용 하 여 인증 하 고 권한 부여 서비스를 웹\-조직 및 플랫폼 경계를 넘어 응용 프로그램을 기반으로 합니다. AD FS를 배포하여 조직의 기존 ID 관리 기능을 인터넷으로 확장할 수 있습니다.  
   
@@ -62,7 +61,7 @@ AD FS를 배포하면 다음이 가능해집니다.
   
 -   [AD FS 배포 계획](Planning-to-Deploy-AD-FS.md)  
   
--   [계획을 디자인 AD FS를 구현 합니다.](Implementing-Your-AD-FS-Design-Plan.md)  
+-   [AD FS 디자인 계획 구현](Implementing-Your-AD-FS-Design-Plan.md)  
   
 -   [검사 목록: 웹 SSO 디자인 구현](Checklist--Implementing-a-Web-SSO-Design.md)  
   
@@ -72,8 +71,8 @@ AD FS를 배포하면 다음이 가능해집니다.
   
 -   [클레임 규칙 구성](Configuring-Claim-Rules.md)  
   
--   [페더레이션 서버를 배포합니다.](Deploying-Federation-Servers.md)  
+-   [페더레이션 서버 배포](Deploying-Federation-Servers.md)  
   
 -   [페더레이션 서버 프록시 배포](Deploying-Federation-Server-Proxies.md)  
   
--   [Interoperating with AD FS 1.x](Interoperating-with-AD-FS-1.x.md)  
+-   [AD FS 1.x와 상호 운용](Interoperating-with-AD-FS-1.x.md)  

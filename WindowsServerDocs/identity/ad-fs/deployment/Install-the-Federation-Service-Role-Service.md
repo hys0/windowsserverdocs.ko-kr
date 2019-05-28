@@ -9,16 +9,14 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: c520cbe22739f2bde263e133c7feb681d824d251
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 80a6cb2bc8e6f0fdb1a777a42f5d245f98ac3dee
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59883714"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192092"
 ---
 # <a name="install-the-federation-service-role-service"></a>페더레이션 서비스 역할 서비스 설치
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Active Directory Federation Services의 페더레이션 서비스 역할 서비스를 설치할 준비가 이제을 필수 구성 요소 응용 프로그램 및 인증서를 사용 하 여 컴퓨터를 올바르게 구성한 \(AD FS\)합니다. 컴퓨터에서 페더레이션 서비스를 설치할 때 해당 컴퓨터에 페더레이션 서버가 됩니다.  
   

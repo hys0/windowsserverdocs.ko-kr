@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 0c5bdcb0a80b15a1905109229ddd20ee642a8dd7
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e3a746ec003cf312ffe0b9804f84a55c98aa8089
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59868524"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190993"
 ---
 # <a name="prepare-client-computers-in-the-account-partner"></a>계정 파트너에서 클라이언트 컴퓨터 준비
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 가장 쉬운 방법은 계정 관리자가 파트너 조직에서 Active Directory Federation Services에 대 한 액세스에 대 한 클라이언트 컴퓨터를 준비 \(AD FS\) 페더레이션된 응용 프로그램 그룹 정책을 사용 하는 것입니다. 그룹 정책은 페더레이션 응용 프로그램에 액세스하는 데 사용하는 모든 클라이언트 컴퓨터에 페더레이션에 필요한 특정 인증서 및 설정을 푸시하는 편리한 방법을 제공합니다.  
   
@@ -34,4 +32,4 @@ ms.locfileid: "59868524"
   
 
 ## <a name="see-also"></a>관련 항목
-[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)

@@ -9,23 +9,22 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 39c735e9dde0fd60c7eb9ccfe0af890bdc5a5950
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c8e72f1075b984506f9f992cd45cf853b50bddeb
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59838324"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191925"
 ---
 # <a name="upgrading-to-ad-fs-in-windows-server-2016-using-a-wid-database"></a>WID 데이터베이스를 사용하여 Windows Server 2016에서 AD FS로 업그레이드
 
->적용 대상: Windows Server 2019, Windows Server 2016
 
 
-## <a name="upgrading-a-windows-server-2012-r2-or-2016-ad-fs-farm-to-windows-server-2019"></a>Windows Server 2012 R2 또는 2016 AD FS 팜을 Windows Server 2019로 업그레이드 
+## <a name="upgrading-a-windows-server-2012-r2-or-2016-ad-fs-farm-to-windows-server-2019"></a>Windows Server 2012 R2 또는 2016 AD FS 팜을 Windows Server 2019로 업그레이드
 다음 문서에서는 WID 데이터베이스를 사용 하는 경우 AD fs Windows Server 2019에 AD FS 팜을 업그레이드 하는 방법을 설명 합니다.  
 
 ### <a name="ad-fs-farm-behavior-levels-fbl"></a>AD FS 팜 동작 수준 (FBL)  
-Windows Server 2016 용 AD FS에서 팜 동작 수준 (FBL) 도입 되었습니다. 기능 AD FS 팜을 사용 하 여 수를 결정 하는 팜 전체 설정입니다. 
+Windows Server 2016 용 AD FS에서 팜 동작 수준 (FBL) 도입 되었습니다. 기능 AD FS 팜을 사용 하 여 수를 결정 하는 팜 전체 설정입니다.
 
 다음 표에서 Windows Server 버전에서 FBL 값을 나열합니다.
 | Windows Server 버전  | FBL | AD FS 구성 데이터베이스 이름 |
@@ -59,7 +58,7 @@ Windows Server 2016 용 AD FS에서 팜 동작 수준 (FBL) 도입 되었습니�
 
 ##### <a name="to-upgrade-your-ad-fs-farm-to-windows-server-2019-farm-behavior-level"></a>Windows Server 2019 팜 동작 수준에 AD FS 팜을 업그레이드 하려면  
 
-1.  Windows Server 2019 Active Directory Federation Services 역할 설치 서버 관리자 사용 
+1.  Windows Server 2019 Active Directory Federation Services 역할 설치 서버 관리자 사용
 
 2.  AD FS 구성 마법사를 사용 하는 새 Windows Server 2019 서버를 기존 AD FS 팜에 가입 시킵니다.  
 
@@ -77,45 +76,56 @@ Windows Server 2016 용 AD FS에서 팜 동작 수준 (FBL) 도입 되었습니�
 
     ![업그레이드](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_5.png)  
 
-6.  각 웹 응용 프로그램 프록시에 다시 나타나는 창에서 다음 PowerShell 명령을 실행 하 여 WAP 구성:  
-```powershell
-$trustcred = Get-Credential -Message "Enter Domain Administrator credentials"
-Install-WebApplicationProxy -CertificateThumbprint {SSLCert} -fsname fsname -FederationServiceTrustCredential $trustcred  
-```
-
-7.  이제 Windows Server 2016 페더레이션 서버의 AD FS 관리를 엽니다. 주 역할에서이 서버에 전송 된 때문에 표시 하는 관리 기능을 모두 이제는 note 합니다.  
+6.  이제 Windows Server 2016 페더레이션 서버의 AD FS 관리를 엽니다. 주 역할에서이 서버에 전송 된 때문에 표시 하는 관리 기능을 모두 이제는 note 합니다.  
 
     ![업그레이드](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_6.png)  
 
-8.  팜 업그레이드가 필요한 AD 스키마를 2019 2016에 AD FS 2012 R2 팜에 업그레이드 하는 경우 85를 최소 수준입니다.  스키마, Windows Server 2016 사용 하 여 설치 미디어를 업그레이드 하려면 명령 프롬프트를 열고 support\adprep 디렉터리로 이동 합니다. 다음을 실행 합니다.  `adprep /forestprep`
+7.  팜 업그레이드가 필요한 AD 스키마를 2019 2016에 AD FS 2012 R2 팜에 업그레이드 하는 경우 85를 최소 수준입니다.  스키마, Windows Server 2016 사용 하 여 설치 미디어를 업그레이드 하려면 명령 프롬프트를 열고 support\adprep 디렉터리로 이동 합니다. 다음을 실행 합니다.  `adprep /forestprep`
 
     ![업그레이드](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_7.png)  
 
     작업이 완료 된 후 실행 `adprep/domainprep`
     >[!NOTE]
-    >다음 단계를 실행 하기 전에 설정을에서 Windows 업데이트를 실행 하 여 Windows Server를 최신 상태로 유지 합니다. 업데이트가 더 이상 필요하지 않을 때까지 이 프로세스를 계속합니다. 
-    > 
-    
+    >다음 단계를 실행 하기 전에 설정을에서 Windows 업데이트를 실행 하 여 Windows Server를 최신 상태로 유지 합니다. 업데이트가 더 이상 필요하지 않을 때까지 이 프로세스를 계속합니다.
+    >
+
     ![업그레이드](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_8.png)  
 
-9. 이제 Windows Server 2016 서버에서 PowerShell을 열고 다음 cmdlt을 실행 합니다.
+8. 이제 Windows Server 2016 서버에서 PowerShell을 열고 다음 cmdlt을 실행 합니다.
     >[!NOTE]
     > 다음 단계를 실행 하기 전에 모든 2012 R2 서버 팜에서 제거 해야 합니다.
- 
+
     `Invoke-AdfsFarmBehaviorLevelRaise`  
 
     ![업그레이드](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_9.png)  
 
-10. 대화 상자가 나타나면 Y를 입력 합니다. 수준 올리기 시작 됩니다. 이 작업이 완료 되는 FBL 제기해 했습니다.  
+9. 대화 상자가 나타나면 Y를 입력 합니다. 수준 올리기 시작 됩니다. 이 작업이 완료 되는 FBL 제기해 했습니다.  
 
     ![업그레이드](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_10.png)  
 
-11. 이제 AD FS 관리로 이동 하면 표시 됩니다 이상 AD FS 버전에 대 한 새 기능이 추가 되었습니다. 
+10. 이제 AD FS 관리로 이동 하면 표시 됩니다 이상 AD FS 버전에 대 한 새 기능이 추가 되었습니다.
 
     ![업그레이드](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_12.png)  
 
-13. 마찬가지로, PowerShell cmdlt을 사용할 수 있습니다: `Get-AdfsFarmInformation` 현재 FBL 보여 줍니다.  
+11. 마찬가지로, PowerShell cmdlt을 사용할 수 있습니다: `Get-AdfsFarmInformation` 현재 FBL 보여 줍니다.  
 
     ![업그레이드](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_13.png)  
-    
 
+12. 각 웹 응용 프로그램 프록시에 최신 수준으로 WAP 서버를 업그레이드 하려면 관리자 권한 창에서 다음 PowerShell 명령을 실행 하 여 WAP 다시 구성:  
+    ```powershell
+    $trustcred = Get-Credential -Message "Enter Domain Administrator credentials"
+    Install-WebApplicationProxy -CertificateThumbprint {SSLCert} -fsname fsname -FederationServiceTrustCredential $trustcred  
+    ```
+    클러스터에서 이전 서버를 제거 하 고 WAP 서버만 최신 서버 버전에서 실행 된 다음 Powershell commandlet을 실행 하 여 위의 다시 구성 하는 유지 합니다.
+    ```powershell
+    Set-WebApplicationProxyConfiguration -ConnectedServersName WAPServerName1, WAPServerName2
+    ```
+    Get-WebApplicationProxyConfiguration commmandlet를 실행 하 여 WAP 구성을 확인 합니다. 이전 명령에서 실행 하는 서버를 ConnectedServersName에 반영 됩니다.
+    ```powershell
+    Get-WebApplicationProxyConfiguration
+    ```
+    ConfigurationVersion WAP 서버를 업그레이드 하려면 다음 Powershell 명령을 실행 합니다.
+    ```powershell
+    Set-WebApplicationProxyConfiguration -UpgradeConfigurationVersion
+    ```
+    이 WAP 서버 업그레이드를 완료 합니다.

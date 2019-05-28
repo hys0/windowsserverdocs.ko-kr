@@ -9,16 +9,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: f0eef89e651585d48ba87d14bc782efa49087669
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ade2a8304288d102608c81a0c29155478e5a4b7b
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59824834"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189426"
 ---
 # <a name="create-a-rule-to-send-claims-using-a-custom-rule"></a>사용자 지정 규칙을 사용하여 클레임을 보내도록 규칙 만들기
 
->적용 대상: Windows Server 2016, Windows Server 2012 R2
 
 사용 하 여 합니다 **사용자 지정 규칙을 사용 하 여 클레임 보내기** 템플릿을 Active Directory Federation Services (AD FS)에서 표준 규칙 템플릿을 요구 사항을 충족 하지 않는 상황에 대 한 사용자 지정 클레임 규칙을 만들 수 있습니다 프로그램 조직입니다. 사용자 지정 클레임 규칙 클레임 규칙 언어 작성 되 고 그런 다음에 복사 해야는 **사용자 지정 규칙** 텍스트 상자는 규칙 집합에서 사용할 수 있습니다. 고급 규칙에 대 한 구문을 구성 하는 방법에 대 한 정보를 참조 하십시오. [클레임 규칙 언어의 역할](../../ad-fs/technical-reference/The-Role-of-the-Claim-Rule-Language.md)합니다.  
   
@@ -125,9 +124,9 @@ ms.locfileid: "59824834"
 ## <a name="additional-references"></a>추가 참조 
 [클레임 규칙 구성](Configure-Claim-Rules.md)  
  
-[검사 목록: 신뢰 당사자 트러스트에 대 한 클레임 규칙 만들기](https://technet.microsoft.com/library/ee913578.aspx)  
+[검사 목록: 신뢰 당사자 트러스트를 위한 클레임 규칙 만들기](https://technet.microsoft.com/library/ee913578.aspx)  
 
-[검사 목록: 클레임 공급자에 대 한 클레임 규칙 만들기 신뢰](https://technet.microsoft.com/library/ee913564.aspx)  
+[검사 목록: 클레임 공급자 트러스트를 위한 클레임 규칙 만들기](https://technet.microsoft.com/library/ee913564.aspx)  
   
 [권한 부여 클레임 규칙을 사용 하는 경우](../../ad-fs/technical-reference/When-to-Use-an-Authorization-Claim-Rule.md)  
 

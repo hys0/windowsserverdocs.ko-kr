@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 300c9fda84285ddfc52a4f47ea0198deb6fd33ef
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2bce52a5704706ad72799d00879e2f4e48f9d703
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59882294"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189250"
 ---
 # <a name="custom-web-themes-in-ad-fs"></a>AD FS에서 사용자 지정 웹 테마 
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2
 
 Out 제공 되는 테마\-의\-는\-상자 기본 테마 라고 합니다. 기본 테마를 내보내 이를 사용하여 빠르게 시작할 수 있습니다. .css 파일을 수정하여 레이아웃을 변경하고, 이 새 테마를 가져와 적용하는 등 모양 및 동작을 사용자 지정한 다음 사용자 지정된 모양과 동작을 사용할 수 있습니다. 또한 .css 파일을 사용하면 웹 디자이너와 함께 보다 쉽게 작업할 수 있습니다.  
   

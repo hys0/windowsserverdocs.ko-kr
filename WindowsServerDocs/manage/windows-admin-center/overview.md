@@ -5,20 +5,19 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
+ms.date: 04/12/2019
 ms.localizationpriority: high
 ms.prod: windows-server-threshold
-ms.openlocfilehash: e23d02fd8da96392f44874ad6ea4d6c40e2be940
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 3208c20e8bf9f4cfab4340aa33b24175bbc72dda
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59828204"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188332"
 ---
 # <a name="windows-admin-center"></a>Windows Admin Center
 
 >적용 대상: Windows Admin Center, Windows Admin Center 미리 보기
-
-Windows Admin Center를 시작합니다!
 
 **Windows Admin Center** (코드명 **프로젝트 브라 티**) Windows Server의 기본 관리 도구, 진화 된 것이 로컬 및 원격 서버 관리의 모든 측면을 통합 하는 투명 효과 단일 창이 있습니다. 로컬로 배포되는 브라우저 기반 관리 환경이므로 인터넷 연결과 Azure를 사용할 필요가 없습니다. Windows Admin Center를 통해 인터넷에 연결되지 않은 개인 네트워크를 포함하여 배포의 모든 측면을 완전히 제어할 수 있습니다.
 
@@ -58,7 +57,6 @@ Windows Admin Center를 시작합니다!
             <ul>
             <li><a href="plan/installation-options.md">적절 한는 설치의 유형은 무엇입니까?</a>
             <li><a href="plan/user-access-options.md">사용자 액세스 옵션</a>
-            <li><a href="plan/azure-integration-options.md">어떤 Azure 통합 옵션이 있나요?</a>
             <br>
             </ul>
         </td>
@@ -78,8 +76,6 @@ Windows Admin Center를 시작합니다!
             <li><a href="configure/settings.md">Windows Admin Center 설정</a>
             <li><a href="configure/user-access-control.md">사용자 액세스 제어 및 권한</a>
             <li><a href="configure/using-extensions.md">확장</a>
-            <li><a href="configure/azure-integration.md">Azure와 통합</a>
-            <li><a href="configure/manage-azure-vms.md">Windows Admin Center 사용 하 여 Azure Vm 관리</a>
             </ul>
         </td>
     </tr>
@@ -92,13 +88,29 @@ Windows Admin Center를 시작합니다!
             <li><a href="use/manage-hyper-converged.md">하이퍼 수렴 형 인프라 관리</a>
             <li><a href="use/manage-failover-clusters.md">장애 조치 클러스터 관리</a>
             <li><a href="use/manage-virtual-machines.md">Virtual machines 관리</a>
-            <li><a href="use/azure-services.md">Azure 서비스를 활용</a>
-            <li><a href="use/troubleshooting.md">일반적인 문제 해결 단계</a>
             <li><a href="use/logging.md">Logging</a>
-            <li><a href="use/known-issues.md">알려진 문제</a>
             </ul>
         </td>
         <td style="vertical-align: top;">
+            <h3>Azure에 연결</h3>
+            <ul>
+            <li><a href="azure/index.md">Azure 하이브리드 서비스</a></li>
+            <li><a href="azure/azure-integration.md">Azure에 Windows Admin Center 연결</a></li>
+            <li><a href="azure/deploy-wac-in-azure.md">Azure에서 Windows Admin Center 배포</a></li>
+            <li><a href="azure/manage-azure-vms.md">Windows Admin Center를 사용하여 Azure VM 관리</a></li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+            <td style="vertical-align: top;">
+            <h3>지원</h3>
+            <ul>
+            <li><a href="support/index.md">지원 정책</a>
+            <li><a href="support/troubleshooting.md">일반적인 문제 해결 단계</a>
+            <li><a href="support/known-issues.md">알려진 문제</a>
+            </ul>
+        </td>
+            <td style="vertical-align: top;">
             <h3>확장</h3>
             <ul>
             <li><a href="extend/extensibility-overview.md">확장의 개요</a>
@@ -116,7 +128,9 @@ Windows Admin Center를 시작합니다!
 
 최신 출시된 기능에 대해 자세히 알아보세요.
 
-- 버전 [1902] (https://aka.ms/wac1902) 소프트웨어 정의 네트워크 (sdn 소프트웨어) 관리, Acl, 게이트웨이 연결 및 논리 네트워크를 관리 하는 새로운 SDN 도구를 포함 하 여 공유 연결 목록 및 향상 된 기능을 추가 합니다.
+- 버전 [1904](https://aka.ms/wac1904) Azure 하이브리드 서비스 도구를 소개 하 고 GA 채널 미리 보기에서 이전에 있었던 기능을 제공 하는 최신 GA 릴리스.
+- 버전 [1903](https://aka.ms/wac1903) Active Directory, DHCP 및 DNS를 관리 하려면 Active Directory 및 새 도구에서 서버 또는 PC 연결을 추가 하는 기능, Azure Monitor에서 전자 메일 알림을 제공 합니다.
+- 버전 [1902](https://aka.ms/wac1902) 소프트웨어 정의 네트워크 (sdn 소프트웨어) 관리, Acl, 게이트웨이 연결 및 논리 네트워크를 관리 하는 새로운 SDN 도구를 포함 하 여 공유 연결 목록 및 향상 된 기능을 추가 합니다.
 - 버전 [1812](https://aka.ms/wac1812)어두운 테마 (미리보기에서) 추가됨, 전원 구성 설정, BMC 정보 및 PowerShell 지원으로 관리 가능 [추가](./configure/using-extensions.md#manage-extensions-with-powershell) 및 [연결](./use/get-started.md#use-powershell-to-import-or-export-your-connections-with-tags).
 - 버전 [1809.5](https://aka.ms/wac1809.5) 는 플랫폼 전반에 걸쳐 다양한 품질 및 기능 향상과 버그 수정 및 하이퍼 컨버지드 인프라 관리 솔루션의 몇 가지 새로운 기능을 포함하는 GA 누적 업데이트입니다.
 - 버전 [1809](https://cloudblogs.microsoft.com/windowsserver/2018/09/20/windows-admin-center-1809-and-sdk-now-generally-available/) 는 이전에 미리보기에 있던 기능을 GA 채널에 가져온 GA 버전이었습니다.
@@ -133,6 +147,6 @@ Windows Admin Center를 시작합니다!
 
 ## <a name="stay-updated"></a>최신 상태로 유지
 
-<a target="_blank" class="mscom-link twitter-follow-link" title="Twitter에서 팔 로우" aria-label="Follow us on Twitter" data-info="Twitter" href="https://twitter.com/servermgmt"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR" alt="Follow us on Twitter" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR"></picture></a>
- | 
-<a target="_blank" class="mscom-link blogs-follow-link" title="이 블로그 읽기" aria-label="Visit our Blogs" data-info="Blogs" href="https://blogs.technet.microsoft.com/servermanagement/"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" alt="Follow us on Blogs" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw"></picture></a>
+![ ](//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR)[Twitter에서 팔 로우](https://twitter.com/servermgmt)
+
+![ ](//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw)[이 블로그 읽기](https://blogs.technet.microsoft.com/servermanagement/)

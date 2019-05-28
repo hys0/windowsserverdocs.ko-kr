@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: b85f49ac0556bf9b3542a23514d7fcbf82d2d88e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f7454279f234f65136b9fe6649a6e96ea53e5d51
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59865144"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191512"
 ---
 # <a name="federated-web-sso-design"></a>페더레이션된 웹 SSO 디자인
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 페더레이션 웹 Single\-Sign\-온 \(SSO\) Active Directory Federation Services에서 디자인 \(AD FS\) 여러 방화벽에 걸쳐 있는 보안 통신이 필요 경계 네트워크 이름과\-확인 서버-전체 인터넷 라우팅 인프라 외에도 합니다.  
   
@@ -37,15 +35,15 @@ ms.locfileid: "59865144"
   
 이 예제에서 Fabrikam은 ID 또는 계정 공급자입니다. 페더레이션된 웹 SSO 디자인의 Fabrikam 부분에서는 다음과 같은 AD FS 배포 목표를 사용합니다.  
   
--   [응용 프로그램 및 서비스의 다른 조직에 Active Directory 사용자가 액세스를 제공 합니다.](Provide-Your-Active-Directory-Users-Access-to-the-Applications-and-Services-of-Other-Organizations.md)  
+-   [Active Directory 사용자에게 다른 조직의 애플리케이션 및 서비스에 대한 액세스 제공](Provide-Your-Active-Directory-Users-Access-to-the-Applications-and-Services-of-Other-Organizations.md)  
   
 Contoso는 리소스 공급자입니다. 다음과 같은 AD FS 배포 목표를 달성 하는 페더레이션된 웹 SSO 디자인의 Contoso 부분:  
   
--   [다른 조직 액세스에서 사용자에 게 클레임 인식 응용 프로그램 및 서비스에 제공](Provide-Users-in-Another-Organization-Access-to-Your-Claims-Aware-Applications-and-Services.md)  
+-   [다른 조직의 사용자에게 클레임 인식 애플리케이션 및 서비스에 대한 액세스 제공](Provide-Users-in-Another-Organization-Access-to-Your-Claims-Aware-Applications-and-Services.md)  
   
--   [Active Directory 사용자가 액세스 클레임 인식 응용 프로그램 및 서비스에 제공](Provide-Your-Active-Directory-Users-Access-to-Your-Claims-Aware-Applications-and-Services.md)  
+-   [Active Directory 사용자에게 클레임 인식 애플리케이션 및 서비스에 대한 액세스 제공](Provide-Your-Active-Directory-Users-Access-to-Your-Claims-Aware-Applications-and-Services.md)  
   
 페더레이션된 웹 SSO 디자인 계획 및 배포 하는 데 사용할 수 있는 자세한 작업 목록은 참조 하세요. [검사 목록: 페더레이션된 웹 SSO 디자인 구현](../../ad-fs/deployment/Checklist--Implementing-a-Federated-Web-SSO-Design.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목
-[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)

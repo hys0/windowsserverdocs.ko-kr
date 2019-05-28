@@ -5,20 +5,18 @@ description: ''
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 09/19/2018
+ms.date: 04/01/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 6fb023529ac8857f7c2eb35586be497f0c809a51
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: a831154a8b1e84f5ed879375980882e208c33d73
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59874174"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190354"
 ---
 # <a name="ad-fs-rapid-restore-tool"></a>AD FS 신속 복원 도구
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2
 
 ## <a name="overview"></a>개요
 오늘날 AD FS는 항상 사용 가능 하 여 AD FS 팜을 설정 하 여 합니다. 일부 조직에서는 단일 서버 AD FS 배포 하는 방법을 싶습니다, 그리고 여러 AD FS 서버 및 네트워크 부하 않고 일부 인프라를 분산 하지 않아도 서비스 보증 경우 복원할 수 신속 하 게 문제가 있습니다.
@@ -215,6 +213,16 @@ RngCryptoServiceProvider는 AES 및 Rfc2898DeriveBytes 클래스에서 사용 �
 > 특성 저장소 추가 인증 공급자의 개요를 포함 하는 PostRestore_Instructions 파일을 만들 수 있습니다 복원을 수행할 시간과 로컬 클레임 공급자 트러스트를 AD FS 서비스를 시작 하기 전에 수동으로 설치 해야 합니다.
 
 ## <a name="version-release-history"></a>버전 릴리스 기록
+
+### <a name="version-10810"></a>버전: 1.0.81.0
+릴리스: 2019년 4월
+
+**수정 된 문제:**
+
+
+- 인증서를 백업 및 복원에 대 한 버그 수정
+- 로그 파일에 추가 추적 정보
+
 
 ### <a name="version-10750"></a>버전: 1.0.75.0
 릴리스: 2018년 8월

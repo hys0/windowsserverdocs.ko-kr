@@ -9,16 +9,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 4b06992bfb398b66988ad4882217a8a83738365e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e67c04c98a53f4f1db36e6586fa77bcf181a8d5a
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59876574"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188973"
 ---
 # <a name="update-password-customization"></a>사용자 지정 암호를 업데이트 합니다. 
 
->적용 대상: Windows Server 2016, Windows Server 2012 R2
 
 경우에 따라 사용자가 자신의 계정 암호를 변경하기 위해 회사 네트워크에 연결하지 못할 수도 있습니다. 이 요소는 가장 가까운 회사 사무실에서 멀리 떨어진 곳에 살고 있을 수 있는 원격 직원에게 특히 문제가 될 수 있습니다. 이 특정한 경우 인터넷에 연결하는 것만으로 암호 업데이트 페이지를 사용할 수 있습니다.  
   

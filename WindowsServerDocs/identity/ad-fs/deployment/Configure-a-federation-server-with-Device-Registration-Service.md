@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 511a039afd47cf7570fffdcaf17842e0eccc5683
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f1367f03ea8a9ba96bfe4bae1c324deff92576f0
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59843064"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192262"
 ---
 # <a name="configure-a-federation-server-with-device-registration-service"></a>Device Registration Service를 사용하여 페더레이션 서버 구성
-
->적용 대상: Windows Server 2012 R2
 
 Device Registration Service를 사용할 수 있습니다 \(DRS\) 의 절차를 완료 한 후 페더레이션 서버의 [4 단계: Configure a Federation Server](https://technet.microsoft.com/library/dn303424.aspx)합니다. Device Registration Service에 연속 된 두 번째에 대 한 온 보 딩 메커니즘을 제공 authentication, 영구 single\-대 \(SSO\), 및 회사에 대 한 액세스를 필요로 하는 소비자에 게 조건부 액세스 리소스입니다. DRS에 대 한 자세한 내용은 참조 하세요. [SSO 및 원활한 두 번째 단계 인증에서 회사 응용 프로그램에 대 한 모든 장치에서 작업 공간 연결](../../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)  
   

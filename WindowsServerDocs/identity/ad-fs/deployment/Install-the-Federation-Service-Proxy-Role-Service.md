@@ -9,16 +9,14 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: ed66800aa6bbfdf85816a992ee8eb39799efebb6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6e78c52f1928a3401c0532ab7c25616b012a1d8b
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59865234"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192105"
 ---
 # <a name="install-the-federation-service-proxy-role-service"></a>페더레이션 서비스 프록시 역할 서비스 설치
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Active Directory Federation Services의 페더레이션 서비스 프록시 역할 서비스를 설치할 준비가 필수 구성 요소 응용 프로그램 및 인증서를 사용 하 여 컴퓨터를 구성 하 고 나면 \(AD FS\)합니다. 페더레이션 서비스 프록시 역할 서비스를 설치 하려면 다음 절차를 사용할 수 있습니다. 컴퓨터에서 페더레이션 서비스 프록시 역할 서비스를 설치할 때 해당 컴퓨터가 페더레이션 서버 프록시 됩니다.  
   

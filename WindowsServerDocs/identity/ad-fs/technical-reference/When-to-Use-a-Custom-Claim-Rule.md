@@ -9,15 +9,13 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: b08622cd9eefa153e2fe8403fbe85077644182f4
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e566de4df2895dfa2ed1104f85c1429881ff5bbf
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59813114"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188292"
 ---
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 # <a name="when-to-use-a-custom-claim-rule"></a>사용자 지정 클레임 규칙을 사용하는 경우
 Active Directory Federation Services에서 사용자 지정 클레임 규칙을 작성할 \(AD FS\) 클레임 발급 엔진이 프로그래밍 방식으로 생성 하는 데 사용 하는 프레임 워크인 클레임 규칙 언어를 사용 하 여 변환, 통과 및 필터링 클레임입니다. 사용자 지정 규칙을 사용하여 표준 규칙 템플릿보다 더 복잡한 논리를 포함하는 규칙을 만들 수 있습니다. 다음을 수행하려는 경우 사용자 지정 규칙을 사용하는 것이 좋습니다.  
   

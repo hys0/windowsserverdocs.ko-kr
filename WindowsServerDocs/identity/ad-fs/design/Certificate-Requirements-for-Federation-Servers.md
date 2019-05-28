@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 369c0e9e7ab1ef25baee1c35379cc66b886f20d8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ce301f6320ed3347b1ee802f57c2b2ebd4394970
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59827104"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191643"
 ---
 # <a name="certificate-requirements-for-federation-servers"></a>페더레이션 서버에 대한 인증서 요구 사항
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 모든 Active Directory Federation services에서 \(AD FS\) 디자인, 다양 한 인증서를 사용 하 여 통신을 보호 하 고 인터넷 클라이언트 및 페더레이션 서버 간의 사용자 인증을 용이 하 게를 해야 합니다. 각 페더레이션 서버는 서비스 통신 인증서 및 토큰 있어야\-AD FS 통신에 참여 하려면 먼저 인증서에 서명 합니다. 다음 표에서 페더레이션 서버와 연결 된 인증서 종류를 설명 합니다.  
   
@@ -55,4 +53,4 @@ CA에서 인증서를 받은 후에는 모든 인증서를 로컬 컴퓨터의 �
 사용하는 인증서에 CRL이 있는 경우, 구성된 인증서를 사용하는 서버에서 해당 CRL을 배포한 서버에 연결할 수 있어야 합니다.  
   
 ## <a name="see-also"></a>관련 항목
-[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)

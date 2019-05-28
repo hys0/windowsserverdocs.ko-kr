@@ -1,5 +1,5 @@
 ---
-title: OAuth 및 ADAL을 사용 하 여 단일 페이지 웹 응용 프로그램을 빌드하십시오. AD FS 2016을 사용 하 여 JS
+title: OAuth 및 ADAL을 사용 하 여 단일 페이지 웹 응용 프로그램을 빌드하십시오. AD FS 2016 이상의 버전을 사용 하 여 JS
 description: AngularJS를 보안 하 JavaScript 용 ADAL를 사용 하 여 AD FS에 대 한 인증에 대 한 지침을 제공 하는 연습은 기반 단일 페이지 응용 프로그램
 author: billmath
 ms.author: billmath
@@ -8,16 +8,14 @@ ms.date: 06/12/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: active-directory-federation-services
-ms.openlocfilehash: 78ab9f5d7c3e75650a4efb171d3b9281c56c63d3
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 1292c7e6cd1dec6926516880c34fe60fb97a9ec8
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59865304"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190504"
 ---
-# <a name="build-a-single-page-web-application-using-oauth-and-adaljs-with-ad-fs-2016"></a>OAuth 및 ADAL을 사용 하 여 단일 페이지 웹 응용 프로그램을 빌드하십시오. AD FS 2016을 사용 하 여 JS
-
->적용 대상: Windows Server 2016
+# <a name="build-a-single-page-web-application-using-oauth-and-adaljs-with-ad-fs-2016-or-later"></a>OAuth 및 ADAL을 사용 하 여 단일 페이지 웹 응용 프로그램을 빌드하십시오. AD FS 2016 이상의 버전을 사용 하 여 JS
 
 이 연습에서는 AngularJS를 보호 하는 JavaScript 용 ADAL을 사용 하 여 AD FS에 대 한 인증에 대 한 지침 기반 단일 페이지 응용 프로그램에서 ASP.NET Web API 백 엔드를 사용 하 여 구현 합니다.
 
@@ -157,7 +155,7 @@ ADAL JS를 구성 합니다.
 ## <a name="running-the-solution"></a>솔루션을 실행합니다.
 솔루션을 정리 하 고 솔루션을 다시 실행 합니다. 자세한 추적을 보려는 경우 Fiddler를 시작 하 고 HTTPS 암호 해독을 설정 합니다.
 
-브라우저 SPA가 로드 하 고 다음 화면이 표시 됩니다.
+브라우저 (Chrome 브라우저 사용)가 SPA를 로드 하 고 다음 화면이 표시 됩니다.
 
 ![클라이언트 등록](media/Single-Page-Application-with-AD-FS/singleapp3.PNG)
 

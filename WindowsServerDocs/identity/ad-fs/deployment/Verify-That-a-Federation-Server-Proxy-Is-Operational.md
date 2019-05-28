@@ -9,16 +9,15 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 4900d8621b94a514a07bba55b2f7f3df5dd36353
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 26b0ae4f331607d83c6b94a2655ddc9eded8a356
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59814624"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191872"
 ---
 # <a name="verify-that-a-federation-server-proxy-is-operational"></a>페더레이션 서버 프록시 작동 여부 확인
 
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 다음 절차를 사용 하 여 페더레이션 서버 프록시 Active Directory Federation Services에서 페더레이션 서비스와 통신할 수 있는지 확인 하려면 \(AD FS\)합니다. 실행 한 후이 절차를 실행 합니다 **AD FS 페더레이션 서버 프록시 구성 마법사** 페더레이션 서버 프록시 역할에서 실행 하도록 컴퓨터를 구성 하려면. 이 마법사를 실행 하는 방법에 대 한 자세한 내용은 참조 하세요. [컴퓨터 페더레이션 서버 프록시 역할에 대 한 구성](Configure-a-Computer-for-the-Federation-Server-Proxy-Role.md)합니다.  
   

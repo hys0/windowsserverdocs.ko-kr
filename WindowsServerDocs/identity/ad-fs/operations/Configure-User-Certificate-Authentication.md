@@ -9,16 +9,15 @@ ms.date: 01/18/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: d5c2d84c263517a4c81622ca02538796ccd9da71
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2d819ea036029fbe7cfde9ad5a445db6b2b42c96
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59817504"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189702"
 ---
 # <a name="configuring-ad-fs-for-user-certificate-authentication"></a>사용자 인증서 인증을 위해 AD FS를 구성합니다.
 
->적용 대상: Windows Server 2016, Windows Server 2012 R2
 
 에 설명 된 사용자 인증서 인증 모드 중 하나를 사용 하 여 x509 AD FS를 구성할 수 있습니다 [이 문서에서는](ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication.md)합니다. 이 기능을 사용할 수 있습니다 [Azure Active Directory를 사용 하 여](https://blogs.msdn.microsoft.com/samueld/2016/07/19/adfs-certauth-aad-o365/) 자체적으로 클라이언트 및 장치를 사용 하도록 설정 하려면 프로 비전 된 사용자 인증서 액세스 AD FS 사용 하 여 인트라넷 또는 엑스트라넷에서 리소스 또는 합니다.
 
@@ -43,7 +42,7 @@ Chrome에 대 한이 구성에 대 한 자세한 내용은이를 참조 하십�
 
 
 ## <a name="troubleshooting"></a>문제 해결
-- HTTP 204를 사용 하 여 인증서 인증 요청이 실패 하는 경우 "에서 콘텐츠 없음 https://certauth.fs.contoso.com" 응답 루트 및 중간 CA 인증서 설치 되어 있는지, 각각 신뢰할 수 있는 루트 CA 및 중간 CA 인증서 저장소에 모든 확인 페더레이션 서버입니다.
+- HTTP 204를 사용 하 여 인증서 인증 요청이 실패 하는 경우 "https에서 콘텐츠 없음:\//certauth.fs.contoso.com" 응답 루트 및 중간 CA 인증서 설치 되어 있는지, 각각 신뢰할 수 있는 루트 CA 확인 하 고 중간 CA 인증서는 모든 페더레이션 서버에 저장합니다.
 - 클라이언트 인증서를.cer 파일로 내보내기 및 명령을 실행 하 여 인증서 인증 요청을 알 수 없는 이유로 실패 하는 경우 
 
 `certutil -f -urlfetch -verify certificatefilename.cer`

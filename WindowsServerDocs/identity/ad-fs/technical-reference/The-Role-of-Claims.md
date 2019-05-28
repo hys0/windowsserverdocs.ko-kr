@@ -9,15 +9,13 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: df35348cb51a9021f4aaa2fc6516cb119bdb8b8f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 542d7a24e29b52dd3fa0d7ea6a9b2d27fb620d8d
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59849434"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188497"
 ---
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 # <a name="the-role-of-claims"></a>클레임의 역할
 클레임에서\-기반된 id 모델 클레임은 페더레이션 프로세스에서 중요 한 역할을 재생는 핵심 구성 요소는 모든 웹 결과\-기반된 인증 및 권한 부여 요청에 따라 결정 됩니다. 이 모델을 사용하면 조직에서 보안 및 엔터프라이즈 경계에 표준화된 방식으로 디지털 ID와 권한 또는 *클레임*을 안전하게 적용할 수 있습니다.  
   

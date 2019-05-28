@@ -9,16 +9,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: cddc5d890114dec7e0053b16701db6f03c3cbbdf
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c79524a011336d676fa2e80936e1254a8d2dd6b2
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59889854"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189693"
 ---
 # <a name="configuring-intranet-forms-based-authentication-for-devices-that-do-not-support-wia"></a>WIA를 지원 하지 않는 장치에 대 한 인트라넷 폼 기반 인증 구성
 
->적용 대상: Windows Server 2016, Windows Server 2012 R2
 
 기본적으로, 통합 인증 WIA (Windows)는 사용 Active Directory Federation Services (AD FS)에서 Windows Server 2012 r 2에서의 인증에 대 한 브라우저를 사용 하는 모든 응용 프로그램에 대 한 조직의 내부 네트워크 (인트라넷) 내에서 발생 하는 인증 요청에 대 한 합니다. 예를 들어 Ws-federation을 사용 하는 브라우저 기반 응용 프로그램 또는 OAuth 프로토콜을 사용 하는 SAML 프로토콜 및 리치 응용 수 있습니다. WIA 수동으로 자격 증명을 입력 하지 않고도 최종 사용자가 응용 프로그램에 원활 하 게 로그온을 제공 합니다. 그러나 일부 장치 및 브라우저 WIA를 지원할 수 있습니다. 및 결과적으로 이러한 장치에서 인증 요청 실패 합니다. 또한, NTLM을 협상 하는 특정 브라우저에서 경험은 바람직하지 않습니다. 이러한 장치 및 브라우저에 대 한 폼 기반 인증으로 대체 하는 것이 좋습니다.
 

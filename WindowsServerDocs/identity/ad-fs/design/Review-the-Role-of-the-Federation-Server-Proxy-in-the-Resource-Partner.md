@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 31e285e863e4316a8e0a65f9b68c27442290927d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 377baa8f282f3886284a53b686944fe145b1b15e
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59862894"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190891"
 ---
 # <a name="review-the-role-of-the-federation-server-proxy-in-the-resource-partner"></a>리소스 파트너에서 페더레이션 서버 프록시의 역할 검토
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Active Directory Federation Services에서 페더레이션 서버 프록시 \(AD FS\) 리소스 파트너 조직의 요구를 충족 하도록 서버를 구성 하는 방법에 따라 다음 역할 중 하나 이상으로 작동할 수 있습니다.  
   
@@ -32,5 +30,5 @@ Active Directory Federation Services에서 페더레이션 서버 프록시 \(AD
 > 하드웨어의 규모와 필요한 인증서의 수를 줄이는 데 필요한 경우 페더레이션 서버 프록시 웹 서버와 동일한 컴퓨터에 위치할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목
-[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
 

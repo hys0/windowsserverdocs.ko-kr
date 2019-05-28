@@ -9,16 +9,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 129cd83be4cd8302bd170ba87aad58c50f636006
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f1d38e23d7f1671f729b03b7e6f8000471d2e9f9
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59815854"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188652"
 ---
 # <a name="determine-the-type-of-claim-rule-template-to-use"></a>사용할 클레임 규칙 템플릿 유형 결정
 
->적용 대상: Windows Server 2016, Windows Server 2012 R2
 
 Active Directory 페더레이션 서비스를 디자인 하는 중요 한 부분은 \(AD FS\) 인프라 전체 클레임 규칙 집합을 결정 하는-는 해당 클레임 규칙 템플릿을 만드는 데 사용 해야 하 고, 각 파트너에 대 한 사용자의 조직과 페더레이션에 참여 합니다. AD FS 관리 스냅인에서 클레임 규칙 템플릿을 사용 하 여 규칙을 만들면\-에서 합니다.  
   

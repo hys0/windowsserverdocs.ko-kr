@@ -9,16 +9,14 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 6a7602cddcaee274d42213cd9365f6d1722dab79
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 5426ea929037e59d2105fb2b3b06d4ebfdb7a577
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59852914"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192291"
 ---
 # <a name="configure-performance-monitoring"></a>성능 모니터링 구성
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
   
 ## <a name="bkmk_ConfigurePerfMon"></a>  
 AD FS 페더레이션 서버 및 페더레이션 서버 프록시 컴퓨터의 성능을 모니터링 하는 데는 고유한 전용된 성능 카운터가 포함 됩니다. AD FS 서버 성능을 모니터링 하려면 성능 모니터를 사용 하려면 새 데이터 수집기 집합을 만들고 해당 보기에 AD FS 카운터 추가 유용 합니다. 다음 절차에는 AD FS에 대 한 성능 모니터링을 구성 하는 방법을 설명 합니다.  

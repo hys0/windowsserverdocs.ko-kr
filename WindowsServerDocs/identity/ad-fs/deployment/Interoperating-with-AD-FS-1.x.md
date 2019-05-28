@@ -9,16 +9,14 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: f80425b6f062040c51357353038fd07ff0a79ae6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 0eb9265513d5ca18da1150d3be6752d364b7cd1a
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59812174"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192084"
 ---
 # <a name="interoperating-with-ad-fs-1x"></a>AD FS 1.x와 상호 운용
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Active Directory Federation Services 간의 상호 운용성 \(AD FS\) Windows Server® 2012에 AD FS 1. *x*, 하나 이상을 조직의 요구에 따라 다음 작업을 완료 합니다.  
   

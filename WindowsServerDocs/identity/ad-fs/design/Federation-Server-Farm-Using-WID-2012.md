@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: bb4e5f88f3d62511b185a2b4317416169717c860
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f0f3d8c70a41d512e7cd33282524bc401ce84600
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59851404"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191435"
 ---
 # <a name="federation-server-farm-using-wid"></a>WID를 사용하는 페더레이션 서버 팜
-
->적용 대상: Windows Server 2012
 
 Active Directory Federation Services의 기본 토폴로지 \(AD FS\) Windows 내부 데이터베이스를 사용 하 여 페더레이션 서버 팜 \(WID\), 최대 5 대 페더레이션 서버 호스트의 구성 된 사용자 조직의 페더레이션 서비스입니다. 이 토폴로지에서 AD FS를 해당 팜에 가입 된 모든 페더레이션 서버에 대 한 AD FS 구성 데이터베이스에 대 한 저장소로 WID를 사용 합니다. 팜에서는 각 서버의 페더레이션 데이터를 구성 데이터베이스에 복제하고 유지 관리합니다.  
   
@@ -75,4 +73,4 @@ NLB 호스트에는 클라이언트 요청을 개별 페더레이션 서버에 �
 페더레이션 서버와 함께 사용 하기 위해 네트워킹 환경을 구성 하는 방법에 대 한 자세한 내용은 참조 [페더레이션 서버에 대 한 이름 확인 요구 사항](Name-Resolution-Requirements-for-Federation-Servers.md) AD FS 디자인 가이드에서.  
   
 ## <a name="see-also"></a>관련 항목
-[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)

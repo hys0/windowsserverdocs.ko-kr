@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: a047b94906cf703bb934c93f517b8874af91e092
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9db69cfb2eb42af90b392433a6e05eaab9978160
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59864064"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190811"
 ---
 # <a name="token-signing-certificates"></a>토큰 서명 인증서
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 페더레이션 서버에 토큰 필요\-공격자가 변경 하거나 연결 된 리소스에 무단으로 액세스 하기 위해에서 보안 토큰을 위조 방지 하기 위해 인증서를 서명 합니다. Private\/쌍으로 연결 하는 공개 키 토큰으로 사용 됩니다\-서명 인증서 이므로 모든 페더레이션된 파트너 관계의 가장 중요 한 유효성 검사 메커니즘은 이러한 키는 유효한 파트너 페더레이션 서버에서 보안 토큰을 발행 하 고 토큰이 전송 되는 동안 수정 되지 않았음을 확인 합니다.  
   
@@ -75,4 +73,4 @@ Microsoft 인증서 서비스를 사용 하 여 엔터프라이즈 CA로 인증�
 자체를 설치 하는 방법은\-서명 된 인증서를 참조 하십시오 [IIS 7.0: 자동 만들기\-IIS 7.0에서에서 서버 인증서를 서명](https://go.microsoft.com/fwlink/?LinkID=108271)합니다.  
   
 ## <a name="see-also"></a>관련 항목
-[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)

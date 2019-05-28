@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 4bde30f694c6490962edaa0c3fe1543e74ba7fd7
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9cc40920d366c973ace06a0b6d438a1c2d84b03e
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59842984"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190515"
 ---
 # <a name="where-to-place-a-federation-server-proxy"></a>페더레이션 서버 프록시를 배치하는 위치
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Active Directory Federation Services를 배치할 수 있습니다 \(AD FS\)페더레이션 서버 프록시는 경계 네트워크에 인터넷에서 제공 될 수 있는 악의적 사용자에 대 한 보호 계층을 제공 합니다. 페더레이션 서버 프록시는 토큰을 만드는 데 사용되는 개인 키에 액세스할 수 없으므로 경계 네트워크 환경에 적합합니다. 그러나 페더레이션 서버 프록시 해당 토큰을 생성할 수 있는 권한이 있는 페더레이션 서버에 들어오는 요청을 라우팅할 효율적으로 수 있습니다.  
   
@@ -53,4 +51,4 @@ AD FS 통신 보안을 위해 Secure Sockets Layer를 허용 하도록 ISA Serve
 > 페더레이션 서버 또는 페더레이션 서버 프록시 연결 보안 토큰의 내용을 보호 하는 SSL로 보호할 수는 필요 합니다.  
   
 ## <a name="see-also"></a>관련 항목
-[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)

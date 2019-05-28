@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: e26b7cac971f472bc8b5e48e3dc8cd2592dc22ce
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 585d0195b096056ba769f4e9a08d5c4d2156b96a
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59814784"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191453"
 ---
 # <a name="federation-server-farm-using-sql-server"></a>SQL Server를 사용하는 페더레이션 서버 팜
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2
 
 Active Directory Federation Services에 대 한이 토폴로지 \(AD FS\) Windows 내부 데이터베이스를 사용 하 여 페더레이션 서버 팜에서 다릅니다 \(WID\) 는 배포 토폴로지를 복제 하지 않고 데이터를 팜의 각 페더레이션 서버입니다. 대신 팜의 모든 페더레이션 서버 읽고 회사 네트워크에 있는 Microsoft SQL Server를 실행 하는 서버에 저장 된 일반 데이터베이스로 데이터를 쓸 수 있습니다.  
   

@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: f618add4c4803142b3bd7278908834a412f30999
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2b881553431be873ed9883da67a7989527d7d288
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59862574"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191271"
 ---
 # <a name="identify-your-ad-fs-deployment-goals"></a>AD FS 배포 목표 식별
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2
 
 Active Directory Federation Services를 올바르게 식별 \(AD FS\) 배포 목표는 AD FS 디자인 프로젝트의 성공에 필수적입니다. 우선 순위를 지정 하 고, 필요에 따라 디자인 하 고 반복적인 접근 방식을 사용 하 여 AD FS를 배포할 수 있도록 배포 목표를 결합 합니다. 문서화 하며 AD FS 디자인에 관련 된 상황에 맞는 솔루션을 개발 하는 AD FS 배포 목표를 미리 정의 된 기존 활용 합니다.  
   

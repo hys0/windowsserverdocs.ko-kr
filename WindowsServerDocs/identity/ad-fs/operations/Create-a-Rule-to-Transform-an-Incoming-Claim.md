@@ -9,16 +9,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: e982b7608f7602268657ceae74f641bbaaaec939
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6bd107aca6c6f33cdf5f88e5b48a52fdea8d2086
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59816684"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189338"
 ---
 # <a name="create-a-rule-to-transform-an-incoming-claim"></a>들어오는 클레임 변환 규칙 만들기
 
->적용 대상: Windows Server 2016, Windows Server 2012 R2
 
 사용 하 여 합니다 **들어오는 클레임 변환** Active Directory Federation Services에서 규칙 템플릿을 \(AD FS\), 들어오는 클레임을 선택, 클레임 형식을 변경 및 해당 클레임 값을 변경할 수 있습니다. 예를 들어 들어오는 그룹 클레임의 동일한 클레임 값으로 역할 클레임을 전송 하는 규칙을 만들려면이 규칙 서식 파일을 사용할 수 있습니다. 관리자의 값을 사용 하 여 들어오는 그룹 클레임 하거나 사용자 계정 이름만 보낼 수 있습니다 구매자의 클레임 값을 사용 하 여 그룹 클레임을 보내도록이 규칙을 사용할 수도 있습니다 \(UPN\) 으로 끝나는 클레임 @fabrikam합니다.  
   
@@ -138,9 +137,9 @@ ms.locfileid: "59816684"
 ## <a name="additional-references"></a>추가 참조 
 [클레임 규칙 구성](Configure-Claim-Rules.md)  
  
-[검사 목록: 신뢰 당사자 트러스트에 대 한 클레임 규칙 만들기](https://technet.microsoft.com/library/ee913578.aspx)  
+[검사 목록: 신뢰 당사자 트러스트를 위한 클레임 규칙 만들기](https://technet.microsoft.com/library/ee913578.aspx)  
 
-[검사 목록: 클레임 공급자에 대 한 클레임 규칙 만들기 신뢰](https://technet.microsoft.com/library/ee913564.aspx)  
+[검사 목록: 클레임 공급자 트러스트를 위한 클레임 규칙 만들기](https://technet.microsoft.com/library/ee913564.aspx)  
   
 [권한 부여 클레임 규칙을 사용 하는 경우](../../ad-fs/technical-reference/When-to-Use-an-Authorization-Claim-Rule.md)  
 

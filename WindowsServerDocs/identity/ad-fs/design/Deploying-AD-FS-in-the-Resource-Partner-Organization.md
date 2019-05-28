@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 4a556c07e7d6e0bec4c947ea9d1a75eef9964cef
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: acdecd4afd9c55bdbd71cea9e01f3b3024870ced
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59877604"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191521"
 ---
 # <a name="deploying-ad-fs-in-the-resource-partner-organization"></a>리소스 파트너 조직에 AD FS 배포
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2
 
 Active Directory Federation Services에서 리소스 파트너 조직 \(AD FS\) 웹 서버가 속한 리소스를 보호 하는 조직을 나타냅니다\-쪽 페더레이션 서버입니다. 리소스 파트너 페더레이션 서버는 리소스 파트너에 있는 웹 서버에 대 한 클레임을 제공 하는 계정 파트너에서 생성 되는 보안 토큰을 사용 합니다.  
   
@@ -28,12 +26,12 @@ Active Directory Federation Services에서 리소스 파트너 조직 \(AD FS\) 
   
 ## <a name="in-this-section"></a>단원 내용  
   
--   [리소스 파트너에 페더레이션 서버의 역할 검토](Review-the-Role-of-the-Federation-Server-in-the-Resource-Partner.md)  
+-   [리소스 파트너에서 페더레이션 서버의 역할 검토](Review-the-Role-of-the-Federation-Server-in-the-Resource-Partner.md)  
   
 -   [리소스 파트너에서 페더레이션 서버 프록시의 역할 검토](Review-the-Role-of-the-Federation-Server-Proxy-in-the-Resource-Partner.md)  
   
--   [리소스 파트너의 페더레이션된 응용 프로그램 전략 결정](Determine-Your-Federated-Application-Strategy-in-the-Resource-Partner.md)  
+-   [리소스 파트너의 페더레이션 애플리케이션 전략 결정](Determine-Your-Federated-Application-Strategy-in-the-Resource-Partner.md)  
   
 
 ## <a name="see-also"></a>관련 항목
-[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)

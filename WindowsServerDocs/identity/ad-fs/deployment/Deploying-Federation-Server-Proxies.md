@@ -9,16 +9,14 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: b914141a0445febd3961b688aadc2f444b2eee7b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 02311522ee229eeaf0b27ce8d39090a9529b99ae
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59816264"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192204"
 ---
 # <a name="deploying-federation-server-proxies"></a>페더레이션 서버 프록시 배포
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Active Directory Federation Services에서 페더레이션 서버 프록시를 배포 하려면 \(AD FS\), 각 작업의 완료 [검사 목록: 페더레이션 서버 프록시 설정](Checklist--Setting-Up-a-Federation-Server-Proxy.md)합니다.  
   

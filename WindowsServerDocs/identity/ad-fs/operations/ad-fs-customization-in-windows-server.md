@@ -9,16 +9,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 2e4d463f5f25fe85dc95d767c9c75b722e60b012
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b5aa22ad99529d99e2d7381a434916e8e749f185
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59852034"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188756"
 ---
 # <a name="ad-fs-customization-in-windows-server-2016"></a>Windows Server 2016에서에서 AD FS 사용자 지정 합니다.
 
->적용 대상: Windows Server 2016
 
 AD FS를 사용 하 여 조직에서 피드백에 응답으로 사용자에 맞게 추가 도구 AD FS로 보호 하는 개별 응용 프로그램에 대 한 환경에 로그인 추가 했습니다.  
 이제 설명 텍스트 및 링크와 같은 응용 프로그램별 웹 콘텐츠를 지정 하는 것 외에도 전체 웹 테마 응용 프로그램 별로 지정할 수 있습니다.  이 로고, 그림, 스타일 시트 또는 전체 onload.js 파일을 포함 합니다.  
