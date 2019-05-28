@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
 ms.technology: identity-adds
-ms.openlocfilehash: fe113eb7fe5cb096ff1e94150b929682d137b24b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8e05043d029636ddeb3a24349897ac61a713b2a7
+ms.sourcegitcommit: 21165734a0f37c4cd702c275e85c9e7c42d6b3cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59871954"
+ms.lasthandoff: 05/03/2019
+ms.locfileid: "65034116"
 ---
 # <a name="perform-initial-recovery"></a>초기 복구를 수행 합니다.  
 
@@ -22,9 +22,9 @@ ms.locfileid: "59871954"
 
 이 섹션에는 다음 단계가 포함 됩니다.  
 
-- [각 도메인의 첫 번째 쓰기 가능한 도메인 컨트롤러 복원](#Restore-the-first-writeable-domain-controller-in-each-domain)  
-- [각 복원 된 쓰기 가능한 도메인 컨트롤러 네트워크에 다시 연결](#Reconnect-each-restored-writeable-domain-controller-to-a-common-network)  
-- [포리스트 루트 도메인의 도메인 컨트롤러를 글로벌 카탈로그 추가](#Add-the-global-catalog-to-a-domain-controller-in-the-forest-root-domain)  
+- [각 도메인의 첫 번째 쓰기 가능한 도메인 컨트롤러 복원](#restore-the-first-writeable-domain-controller-in-each-domain)  
+- [각 복원 된 쓰기 가능한 도메인 컨트롤러 네트워크에 다시 연결](#reconnect-each-restored-writeable-domain-controller-to-a-common-network)  
+- [포리스트 루트 도메인의 도메인 컨트롤러를 글로벌 카탈로그 추가](#add-the-global-catalog-to-a-domain-controller-in-the-forest-root-domain)  
 
 ## <a name="restore-the-first-writeable-domain-controller-in-each-domain"></a>각 도메인의 첫 번째 쓰기 가능한 도메인 컨트롤러 복원  
 
@@ -151,12 +151,12 @@ ms.locfileid: "59871954"
 
 ## <a name="next-steps"></a>다음 단계
 
-- [AD 포리스트 복구-필수 구성 요소](AD-Forest-Recovery-Prerequisties.md)  
+- [AD 포리스트 복구 - 필수 조건](AD-Forest-Recovery-Prerequisties.md)  
 - [사용자 지정 포리스트 복구 계획을 고안 AD 포리스트 복구-](AD-Forest-Recovery-Devising-a-Plan.md)  
 - [AD 포리스트 복구 문제를 식별 합니다.](AD-Forest-Recovery-Identify-the-Problem.md)
 - [AD 포리스트 Recovery-복구 하는 방법 결정](AD-Forest-Recovery-Determine-how-to-Recover.md)
 - [AD 포리스트 복구-초기 복구를 수행 합니다.](AD-Forest-Recovery-Perform-initial-recovery.md)  
-- [AD 포리스트 복구 절차](AD-Forest-Recovery-Procedures.md)  
+- [AD 포리스트 복구 - 절차](AD-Forest-Recovery-Procedures.md)  
 - [AD 포리스트 복구-질문과 대답](AD-Forest-Recovery-FAQ.md)  
 - [AD 포리스트 복구-Multidomain 포리스트에 단일 도메인 복구](AD-Forest-Recovery-Single-Domain-in-Multidomain-Recovery.md)  
 - [AD 포리스트 복구-Windows Server 2003 도메인 컨트롤러를 사용 하 여 포리스트 복구](AD-Forest-Recovery-Windows-Server-2003.md)  

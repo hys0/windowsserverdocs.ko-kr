@@ -7,18 +7,18 @@ ms.author: nedpyle
 ms.technology: storage-replica
 ms.topic: get-started-article
 author: nedpyle
-ms.date: 06/04/2018
+ms.date: 04/26/2019
 ms.assetid: 61881b52-ee6a-4c8e-85d3-702ab8a2bd8c
-ms.openlocfilehash: 620d339a505da77649d65537abc92f301760d40d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: dd0a160213e69e59194e1f775040c12769f1eb5e
+ms.sourcegitcommit: 4ff3d00df3148e4bea08056cea9f1c3b52086e5d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59821294"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64772487"
 ---
 # <a name="server-to-server-storage-replication-with-storage-replica"></a>저장소 복제본을 사용 하 여 서버 간 저장소 복제
 
-> 적용 대상: Windows Server (반기 채널), Windows Server 2016
+> 적용 대상: Windows Server 2019, Windows Server 2016, Windows Server (반기 채널)
 
 저장소 복제본을 사용하여 두 서버에서 데이터가 동기화되도록 구성할 수 있으며 따라서 각각 동일한 볼륨의 동일한 복사본을 포함합니다. 이 항목에서는 이 서버 간 복제 구성에 관한 배경 정보와 환경을 설정 및 관리하는 방법을 제공합니다.
 
@@ -31,7 +31,7 @@ ms.locfileid: "59821294"
 ## <a name="prerequisites"></a>사전 요구 사항  
 
 * Active Directory Domain Services 포리스트 (Windows Server 2016을 실행 하려면 필요 하지 않습니다).  
-* Windows Server 2016 Datacenter Edition이 설치된 서버 두 대  
+* Windows Server 2019 또는 Windows Server 2016 Datacenter Edition을 실행 하는 두 서버. Windows Server 2019를 실행 하는 경우 대신 사용할 수 있습니다 Standard Edition 단일 볼륨에만 복제 확인 하는 경우 최대 2TB의 크기입니다.  
 * SAS JBOD, 파이버 채널 SAN, iSCSI 대상 또는 로컬 SCSI/SATA 저장소를 사용하는 저장소 집합 2개 저장소에는 HDD 및 SSD 미디어가 혼합되어 있어야 합니다. 각 저장소 집합은 각 서버에만 사용할 수 있으며 공유 액세스는 없습니다.  
 * 각 저장소 집합에서 복제된 데이터용과 로그용으로 둘 이상의 가상 디스크를 만들 수 있어야 합니다. 실제 저장소의 섹터 크기는 모든 데이터 디스크의 섹터 크기와 동일해야 합니다. 실제 저장소의 섹터 크기는 모든 로그 디스크의 섹터 크기와 동일해야 합니다.  
 * 각 서버에 하나 이상의 동기 복제용 이더넷/TCP 연결(RDMA 권장)   
@@ -52,7 +52,7 @@ ms.locfileid: "59821294"
 
 | 시스템                        | 운영 체제                                            | 소프트웨어가 사용되는 구성 요소     |
 |-------------------------------|-------------------------------------------------------------|------------------|
-| 서버2대 <br>(온-프레미스 하드웨어, Vm 및 Azure Vm을 포함 하 여 Vm 클라우드 혼합)| Windows Server (반기 채널) 또는 Windows Server 2016 Datacenter edition | 저장소 복제본  |
+| 서버2대 <br>(온-프레미스 하드웨어, Vm 및 Azure Vm을 포함 하 여 Vm 클라우드 혼합)| Windows Server 2019, Windows Server 2016 또는 Windows Server (반기 채널) | 저장소 복제본  |
 | 한 대의 PC                     | Windows 10                                                  | Windows Admin Center |
 
 > [!NOTE]
@@ -86,7 +86,7 @@ ms.locfileid: "59821294"
 
 ## <a name="provision-os"></a>2 단계: 운영 체제, 기능, 역할, 저장소 및 네트워크 프로비전
 
-1.  Windows Server 2016 Datacenter **(데스크톱 환경)** 설치 유형으로 두 서버 노드 모두에 Windows Server 2016을 설치합니다. 사용 가능한 경우 Standard Edition을 선택 하지 처럼 저장소 복제본을 포함 하지 않습니다.
+1.  Windows Server의 설치 유형으로 두 서버 노드에 Windows Server를 설치 **(데스크톱 환경)** 합니다. 
  
     ExpressRoute 통해 네트워크에 연결 된 Azure VM을 사용 하려면 참조 [ExpressRoute 통해 네트워크에 연결 하는 Azure VM 추가](#add-azure-vm-expressroute)합니다.
 
@@ -129,7 +129,7 @@ ms.locfileid: "59821294"
         $Servers | ForEach { Install-WindowsFeature -ComputerName $_ -Name Storage-Replica,FS-FileServer -IncludeManagementTools -restart }  
         ```  
 
-        이러한 단계에 대한 자세한 내용은 [역할, 역할 서비스 또는 기능 설치 또는 제거](http://technet.microsoft.co/library/hh831809.aspx)를 참조하세요.  
+        이러한 단계에 대한 자세한 내용은 [역할, 역할 서비스 또는 기능 설치 또는 제거](../../administration/server-manager/install-or-uninstall-roles-role-services-or-features.md)를 참조하세요.  
 
 8.  다음과 같이 저장소를 구성합니다.  
 
@@ -155,7 +155,7 @@ ms.locfileid: "59821294"
 
         1.  각 클러스터에서 해당 사이트의 저장소 엔클로저만 볼 수 있는지 확인합니다. iSCSI를 사용하는 경우 둘 이상의 단일 네트워크 어댑터를 사용해야 합니다.    
 
-        2.  공급업체 설명서를 사용하여 저장소를 프로비전합니다. Windows 기반 iSCSI 대상을 사용하는 경우 [iSCSI 대상 블록 저장소, 방법](https://technet.microsoft.com/library/hh848268.aspx)을 참조하세요.  
+        2.  공급업체 설명서를 사용하여 저장소를 프로비전합니다. Windows 기반 iSCSI 대상을 사용하는 경우 [iSCSI 대상 블록 저장소, 방법](../iscsi/iscsi-target-server.md)을 참조하세요.  
 
     - **FC SAN 저장소:**  
 
@@ -210,7 +210,7 @@ ms.locfileid: "59821294"
 
 ### <a name="using-windows-powershell"></a>Windows PowerShell 사용
 
-이제 Windows PowerShell을 사용하여 서버 간 복제를 구성합니다. 아래의 모든 단계를 노드에서 직접 수행하거나 Windows Server 2016 RSAT 관리 도구가 포함된 원격 관리 컴퓨터에서 수행해야 합니다.  
+이제 Windows PowerShell을 사용하여 서버 간 복제를 구성합니다. 노드에서 직접 또는 Windows Server 원격 서버 관리 도구를 포함 하는 원격 관리 컴퓨터에서 모든 아래 단계를 수행 해야 합니다.  
 
 1. 관리자로서 관리자 권한 Powershell 콘솔을 사용해야 합니다.  
 2. 원본 및 대상 디스크, 원본 및 대상 로그, 원본 및 대상 노드, 로그 크기 등을 지정하여 서버 간 복제를 구성합니다.  
@@ -314,7 +314,7 @@ ms.locfileid: "59821294"
 
 ## <a name="step-4-manage-replication"></a>4단계: 복제 관리
 
-이제 서버 간 복제된 인프라를 관리하고 운영합니다. 아래의 모든 단계를 노드에서 직접 수행하거나 Windows Server 2016 RSAT 관리 도구가 포함된 원격 관리 컴퓨터에서 수행할 수 있습니다.  
+이제 서버 간 복제된 인프라를 관리하고 운영합니다. 노드에서 직접 또는 Windows Server 원격 서버 관리 도구를 포함 하는 원격 관리 컴퓨터에서 아래 단계를 모두 수행할 수 있습니다.  
 
 1.  `Get-SRPartnership` 및 `Get-SRGroup`을 사용하여 복제의 현재 원본과 대상 및 해당 상태를 확인합니다.  
 
@@ -372,7 +372,7 @@ ms.locfileid: "59821294"
 
     -   \Storage Replica Statistics(*)\Number of Messages Sent  
 
-    Windows PowerShell의 성능 카운터에 대한 자세한 내용은 [Get-Counter](https://technet.microsoft.com/library/hh849685.aspx)를 참조하세요.  
+    Windows PowerShell의 성능 카운터에 대한 자세한 내용은 [Get-Counter](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Diagnostics/Get-Counter)를 참조하세요.  
 
 3.  하나의 사이트에서 복제 방향을 이동하려면 `Set-SRPartnership` cmdlet을 사용합니다.  
 
@@ -381,7 +381,7 @@ ms.locfileid: "59821294"
     ```  
 
     > [!WARNING]  
-    > Windows Server 2016은 초기 동기화가 진행 중일 때 역할 전환을 방지하지 않습니다. 초기 복제를 완료할 수 있기 전에 전환하려고 하면 데이터가 손실될 수 있기 때문입니다. 초기 동기화가 완료 될 때까지 스위치 지침을 강요 하지 마십시오.  
+    > Windows Server 초기 복제를 완료할 수 있기 전에 전환 하려고 하면 데이터가 손실 될 수 있기 초기 동기화가 진행 중일 때 역할 전환을 방지 합니다. 초기 동기화가 완료 될 때까지 스위치 지침을 강요 하지 마십시오.  
 
     이벤트 로그에서 복제 방향이 변경되고 복구 모드가 발생했는지 확인한 다음 조정합니다. 그런 다음 쓰기 IO에서 새 원본 서버가 소유한 저장소에 쓸 수 있습니다. 복제 방향을 변경하면 이전 원본 컴퓨터에서 쓰기 IO가 차단됩니다.  
 
@@ -410,7 +410,7 @@ ms.locfileid: "59821294"
 이러한 것이 차단 요소가 아닌 경우 저장소 복제본을 사용하여 DFS 복제 서버를 이 최신 기술로 대체할 수 있습니다.   
 대략적인 프로세스는 다음과 같습니다.  
 
-1.  두 개의 서버에 Windows Server 2016를 설치하고 저장소를 구성합니다. 이는 기존 서버 집합의 업그레이드 또는 새로운 설치를 의미할 수 있습니다.  
+1.  두 서버에서 Windows Server를 설치 하 고 저장소를 구성 합니다. 이는 기존 서버 집합의 업그레이드 또는 새로운 설치를 의미할 수 있습니다.  
 2.  복제하려는 모든 데이터가 C: 드라이브가 아닌 하나 이상의 데이터 볼륨에 있는지 확인합니다.   
 a.  시간을 절약하기 위해 백업 또는 파일 복사본을 사용하여 데이터를 다른 서버에 시드할 뿐만 아니라 씬 프로비전 저장소를 사용할 수도 있습니다. DFS 복제와 달리 메타데이터 같은 완벽한 보안 일치가 필요하지 않습니다.  
 3.  원본 서버에서 데이터를 공유 하 고 DFS 네임 스페이스를 통해 액세스할 수 있도록 합니다. 이는 서버 이름이 재해 사이트의 서버 이름으로 변경된 경우에도 사용자가 액세스할 수 있도록 하는 데 중요합니다.  
@@ -440,7 +440,7 @@ b.  볼륨 섀도 복사본을 사용하도록 설정하고 VSSADMIN 또는 원�
 1. [Azure VM을 만드는](https://docs.microsoft.com/azure/virtual-machines/windows/quick-create-portal) (그림 5에 표시 됨) 다음 설정을 사용 하 여:
     - **공용 IP 주소**: 없음
     - **가상 네트워크**: ExpressRoute를 사용 하 여 추가 하는 리소스 그룹에서 확인을 수행한 가상 네트워크를 선택 합니다.
-    - **네트워크 보안 그룹 (방화벽)**: 이전에 만든 네트워크 보안 그룹을 선택 합니다.
+    - **네트워크 보안 그룹 (방화벽)** : 이전에 만든 네트워크 보안 그룹을 선택 합니다.
     ![ExpressRoute 네트워크 설정을 표시 하는 가상 머신 만들기](media/Server-to-Server-Storage-Replication/azure-vm-express-route.png)
     **그림 5: ExpressRoute 네트워크 설정을 선택 하는 동안 VM 만들기**
 1. VM을 만든 후 [2 단계: 운영 체제, 기능, 역할, 저장소 및 네트워크를 프로 비전](#provision-os)합니다.
@@ -450,6 +450,6 @@ b.  볼륨 섀도 복사본을 사용하도록 설정하고 VSSADMIN 또는 원�
 - [저장소 복제본 개요](storage-replica-overview.md)  
 - [공유 저장소를 사용 하 여 확장 클러스터 복제](stretch-cluster-replication-using-shared-storage.md)  
 - [클러스터 간 저장소 복제](cluster-to-cluster-storage-replication.md)
-- [저장소 복제본: 알려진된 문제](storage-replica-known-issues.md)  
-- [저장소 복제본: 질문과 대답](storage-replica-frequently-asked-questions.md)
+- [스토리지 복제본: 알려진된 문제](storage-replica-known-issues.md)  
+- [스토리지 복제본: 질문과 대답](storage-replica-frequently-asked-questions.md)
 - [Windows Server 2016의에서 저장소 공간 다이렉트](../storage-spaces/storage-spaces-direct-overview.md)  
