@@ -7,12 +7,12 @@ ms.topic: article
 ms.author: HammadBu; VladmiS
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 7ef1eee97e40b9d3d131cef01722a0d42660b609
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 1893c0d2689657a5213b2d59e8d83cea0fc3a0db
+ms.sourcegitcommit: 2977c707a299929c6ab0d1e0adab2e1c644b8306
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59838064"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63722721"
 ---
 # <a name="performance-tuning-remote-desktop-virtualization-hosts"></a>원격 데스크톱 가상화 호스트 조정 성능
 
@@ -30,7 +30,7 @@ Windows Server 2016에는 두 가지 유형의 가상 데스크톱, 개인용 �
 ## <a href="" id="general"></a>일반적인 고려 사항
 
 
-### <a name="storage"></a>스토리지
+### <a name="storage"></a>저장 공간
 
 저장소 가능성이 가장 높은 성능 병목 상태 이며 가상 컴퓨터 상태 변경에 의해 생성 되는 I/O 부하를 올바르게 처리 하려면 저장소 크기를 조정 하는 것이 중요 합니다. 파일럿 실행 또는 시뮬레이션 적절 하지 않은 경우 4 개의 활성 가상 컴퓨터에 대 한 하나의 디스크 스핀 들을 프로 비전 하는 것이 좋습니다. 적절 한 쓰기 성능 (예: RAID 1 + 0)이 있는 디스크 구성을 사용 합니다.
 

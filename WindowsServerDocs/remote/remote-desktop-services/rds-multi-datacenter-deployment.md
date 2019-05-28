@@ -13,16 +13,16 @@ author: haley-rowland
 ms.author: elizapo
 ms.date: 06/14/2017
 manager: dongill
-ms.openlocfilehash: 7d895b1098c4d8cdf162c77f35209b7308872d60
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 2d12062f302c28a8124e0aa49af7f441e77ffe33
+ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59849964"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66222788"
 ---
 # <a name="create-a-geo-redundant-multi-data-center-rds-deployment-for-disaster-recovery"></a>지역 중복, 다중 데이터 센터 재해 복구를 위해 RDS 배포 만들기
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016
 
 Azure에서 여러 데이터 센터를 활용 하 여 원격 데스크톱 서비스 배포에 대 한 재해 복구를 사용할 수 있습니다. 항상 사용 가능한 표준 RDS 배포와 달리 (에 설명 된 대로 합니다 [원격 데스크톱 서비스 아키텍처](desktop-hosting-logical-architecture.md)), 단일 Azure 지역 (예: 서유럽)에 데이터 센터를 사용 하는, 데이터를 사용 하는 다중 데이터 센터 배포 배포-Azure 데이터 센터의 가용성을 높이기 여러 지리적 위치에 센터를 사용할 수 있지만 여러 지역은 동시에 다운 그럴 가능성은입니다. 지역 중복을 RDS 아키텍처를 배포 하 여 전체 영역의 치명적인 실패 한 경우 장애 조치를 사용할 수 있습니다.
 
@@ -44,7 +44,7 @@ Microsoft Azure 인프라 서비스 및 지역 중복 데스크톱 호스팅 서
 
 ![여러 Azure 지역에는 RDS 배포](media/rds-ha-multi-region.png)
 
-전체 RDS 배포 지역 중복 배포를 만들려면 두 번째 Azure 지역에 복제 됩니다. 이 아키텍처에 한 번에 하나만 RDS 배포를 실행 하는 위치는 활성-수동 모델을 사용 합니다. VNet 대 VNet 연결을 통해 두 환경을 서로 통신할 수 있습니다. RDS 배포는 단일 Active Directory 포리스트/도메인을 기반으로 하 고 두 배포 간에 AD 서버 복제 의미 사용자가 동일한 자격 증명을 사용 하 여 두 배포에 로그인 할 수 있습니다. 사용자 설정 및 사용자 프로필 디스크 (UPD)에 저장 된 데이터는 2 노드 클러스터 저장소 공간 다이렉트 (s2d) 스케일 아웃 파일 서버 (SOFS)에 저장 됩니다. 두 번째 (수동) 지역에서 두 번째 동일한 S2D 클러스터를 배포 및 저장소 복제본은 복제 하는 데 사용자 프로필 활성에서 수동 배포 합니다. Azure Traffic Manager의 지역을 사용 하 여 결국 최종 사용자가 어떤 배포 하는 최종 사용자 관점에서 현재 활성-, 단일 URL을 사용 하 여 배포를 액세스 및 인식 되지를 자동으로 보내기 위해 사용 됩니다.
+전체 RDS 배포 지역 중복 배포를 만들려면 두 번째 Azure 지역에 복제 됩니다. 이 아키텍처에 한 번에 하나만 RDS 배포를 실행 하는 위치는 활성-수동 모델을 사용 합니다. VNet 대 VNet 연결을 통해 두 환경을 서로 통신할 수 있습니다. RDS 배포는 단일 Active Directory 포리스트/도메인을 기반으로 하 고 두 배포 간에 AD 서버 복제 의미 사용자가 동일한 자격 증명을 사용 하 여 두 배포에 로그인 할 수 있습니다. 사용자 설정 및 사용자 프로필 디스크 (UPD)에 저장 된 데이터는 2 노드 클러스터 저장소 공간 다이렉트 스케일 아웃 파일 서버 (SOFS)에 저장 됩니다. 두 번째 (수동) 지역에서 두 번째 동일한 저장소 공간 다이렉트 클러스터를 배포 및 저장소 복제본은 복제 하는 데 사용자 프로필 활성에서 수동 배포 합니다. Azure Traffic Manager의 지역을 사용 하 여 결국 최종 사용자가 어떤 배포 하는 최종 사용자 관점에서 현재 활성-, 단일 URL을 사용 하 여 배포를 액세스 및 인식 되지를 자동으로 보내기 위해 사용 됩니다.
 
 
 있습니다 *없습니다* 각 지역에서 항상 사용 가능한 RDS 배포를 만들지만 단일 VM도 다시 시작 되 면 한 지역에서 장애 조치에서 발생 하는 성능에 미치는 영향 연결 장애 조치 발생 가능성이 커집니다.
@@ -74,8 +74,8 @@ Microsoft Azure 인프라 서비스 및 지역 중복 데스크톱 호스팅 서
 
    > [!NOTE]
    > 수동으로 (대신 저장소 PowerShell 스크립트 및 템플릿을 사용 하 여) 프로 비전 할 수 있습니다. 
-   >1. 배포를 [2-노드 S2D SOFS](rds-storage-spaces-direct-deployment.md) RG에 사용자 프로필 디스크 (Upd)를 저장 합니다.
-   >2. RG B의 두 번째, 동일한 S2D SOFS를 배포 합니다.-각 클러스터에서 동일한 양의 저장소를 사용 해야 합니다.
+   >1. 배포를 [2 노드 저장소 공간 다이렉트 SOFS](rds-storage-spaces-direct-deployment.md) RG에 사용자 프로필 디스크 (Upd)를 저장 합니다.
+   >2. 배포 된 두 번째, 동일한 저장소 공간 다이렉트 SOFS RG b에서-각 클러스터에서 동일한 양의 저장소를 사용 해야 합니다.
    >3. 설정할 [비동기 복제를 사용 하 여 저장소 복제본](../../storage/storage-replica/cluster-to-cluster-storage-replication.md) 둘 사이입니다.
 
 ### <a name="enable-upds"></a>Upd를 사용 하도록 설정
@@ -85,7 +85,7 @@ Microsoft Azure 인프라 서비스 및 지역 중복 데스크톱 호스팅 서
 
 두 배포 모두에서 Upd를 사용 하려면 다음을 수행 합니다.
 
-1. 실행 합니다 [집합 RDSessionCollectionConfiguration cmdlet](https://technet.microsoft.com/itpro/powershell/windows/remote-desktop/set-rdsessioncollectionconfiguration) -기본 (활성) 배포에 대 한 사용자 프로필 디스크를 사용할 수 있도록 원본 볼륨 (7 단계에서에서에서 만든 배포 단계)에서 파일 공유에 대 한 경로 제공 합니다.
+1. 실행 합니다 [집합 RDSessionCollectionConfiguration cmdlet](https://docs.microsoft.com/powershell/module/remotedesktop/set-rdsessioncollectionconfiguration) -기본 (활성) 배포에 대 한 사용자 프로필 디스크를 사용할 수 있도록 원본 볼륨 (7 단계에서에서에서 만든 배포 단계)에서 파일 공유에 대 한 경로 제공 합니다.
 2. 대상 볼륨을 원본 볼륨 (이 볼륨을 탑재 및 보조 배포를 통해 액세스할 수 있도록) 되도록 저장소 복제 방향을 반대로 지정 합니다. 실행할 수 있습니다 **Set-srpartnership** cmdlet이 작업을 수행 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
    ```powershell
@@ -105,10 +105,10 @@ Microsoft Azure 인프라 서비스 및 지역 중복 데스크톱 호스팅 서
 
 Traffic Manager 끝점을 "정상입니다."로 표시 하려면 GET 요청에 대 한 응답으로 200 확인 반환 해야 한다는 note RDS 템플릿에서 생성 된 publicIP 개체 함수는 경로 추록을 추가 하지 않습니다. 최종 사용자가 사용 하 여 Traffic Manager URL을 제공할 수 대신 "/ RDWeb" 예를 들어 추가: ```http://deployment.trafficmanager.net/RDWeb```
 
-우선 순위 라우팅 메서드를 사용 하 여 Azure Traffic Manager를 배포 하 여 최종 사용자가 활성 배포가 작동 하는 동안 수동 배포에 액세스 하지 못하도록 방지할 수 있습니다. 최종 사용자가 액세스할 수동 배포 및 장애 조치에 대 한 저장소 복제 방향을 전환 된 되지 않은 사용자 로그인 중단 시도 되는 배포와 수동 S2D 클러스터에서 파일 공유에 액세스 하지 못한 경우 최종적으로 배포 됩니다 포기 하 고 제공 임시 프로필을 사용자입니다.  
+우선 순위 라우팅 메서드를 사용 하 여 Azure Traffic Manager를 배포 하 여 최종 사용자가 활성 배포가 작동 하는 동안 수동 배포에 액세스 하지 못하도록 방지할 수 있습니다. 최종 사용자에 게는 수동 배포에 액세스할 저장소 복제 방향 장애 조치에 대 한 전환 된 하지 않은 경우 사용자 로그인 중단 시도 되는 배포와 배포 결국 수동 저장소 공간 다이렉트 클러스터에서 파일 공유에 액세스 하지 못한 포기 하 고 사용자에 게 임시 프로필을 제공 합니다.  
 
 ### <a name="deallocate-vms-to-save-resources"></a>리소스를 저장 하는 Vm의 할당을 취소합니다 
-두 배포 모두를 구성한 후 필요에 따라 종료 하는 보조 RDS 인프라와 이러한 Vm에서 비용을 절감할 수 RDSH Vm 할당을 취소 합니다. 항상 사용자 계정 및 프로필 동기화를 사용 하도록 설정 하려면 보조/수동 배포에서 실행 중인 S2D SOFS 및 AD 서버 Vm 있어야 합니다.  
+두 배포 모두를 구성한 후 필요에 따라 종료 하는 보조 RDS 인프라와 이러한 Vm에서 비용을 절감할 수 RDSH Vm 할당을 취소 합니다. 항상 사용자 계정 및 프로필 동기화를 사용 하도록 설정 하려면 보조/수동 배포에서 실행 Vm은 저장소 공간 다이렉트 SOFS 및 AD 서버가 있어야 합니다.  
 
 장애 조치가 발생 하는 경우에 할당 취소 된 Vm을 시작 해야 합니다. 이 배포 구성에는 장애 조치 시간이 짧아지며 저렴 한 비용의 장점이 있습니다. 치명적인 장애가 발생 하는 활성 배포의 경우 수동 배포를 수동으로 시작 해야 하거나 자동화 스크립트를 오류를 감지 하 여 수동 배포를 자동으로 시작 해야 합니다. 두 경우 모두 걸릴 수 있습니다 실행 되 고 사용자가 로그인에 사용할 수 있는 수동 배포를 가져오는 데 몇 분 서비스에 대 한 가동 중지 시간이 발생 합니다. 이 가동 중지이 시간에 따라 달라 집니다 기간 해당 RDS 인프라 및 RDSH Vm (일반적으로 2 ~ 4 분에는 Vm이 동시에 보다는 순차적으로 시작 되는 경우) 및 (클러스터의 크기에 따라 달라 집니다 수동 클러스터를 온라인 상태로 전환 하는 시간을 시작 하는 데 걸리는 에서 노드당 2 개의 디스크를 사용 하 여 2 노드 클러스터에 대 한 일반적으로 2 ~ 4 분)입니다. 
 
@@ -123,7 +123,7 @@ Traffic Manager 끝점을 "정상입니다."로 표시 하려면 GET 요청에 �
 
 ## <a name="failover"></a> 장애 조치 
 
-활성-수동 배포의 경우 장애 조치를 사용 하면 보조 배포의 Vm을 시작 해야 합니다. 이 작업은 수동으로 또는 자동화 스크립트를 사용 하 여 수행할 수 있습니다. S2D SOFS의 치명적인 장애 조치의 경우 저장소 복제본 파트너 관계 방향을 변경 하는 원본 볼륨이 대상 볼륨. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+활성-수동 배포의 경우 장애 조치를 사용 하면 보조 배포의 Vm을 시작 해야 합니다. 이 작업은 수동으로 또는 자동화 스크립트를 사용 하 여 수행할 수 있습니다. 저장소 공간 다이렉트 SOFS의 치명적인 장애 조치의 경우 저장소 복제본 파트너 관계 방향을 변경 하는 원본 볼륨이 대상 볼륨. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
    ```powershell
    Set-SRPartnership -NewSourceComputerName "cluster-b-s2d-c" -SourceRGName "cluster-b-s2d-c" -DestinationComputerName "cluster-a-s2d-c" -DestinationRGName "cluster-a-s2d-c"

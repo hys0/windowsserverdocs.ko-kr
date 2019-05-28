@@ -12,12 +12,12 @@ ms.assetid: 0d115697-532b-48c2-a659-9f889e235326
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 91175836e4453860b17d2655e6a5a831645de410
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 008e614ca7ae202d575d2c3e5976ed3d5544b6ea
+ms.sourcegitcommit: 2977c707a299929c6ab0d1e0adab2e1c644b8306
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59873454"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63720698"
 ---
 # <a name="manage-user-accounts-in-windows-server-essentials"></a>Windows Server Essentials에서 사용자 계정 관리
 
@@ -420,7 +420,7 @@ Windows Server Essentials 대시보드의 사용자 페이지에서는 소규모
   
 3.  현재 네트워크 관리자가의 계정을 사용 하 여 도메인 컨트롤러에서 DSRM 암호를 동기화 하려면 다음을 입력 합니다.  
   
-     **도메인 계정에서 동기화** *< current_network_administrator_account >*, 한 다음 Enter를 누릅니다.  
+     **도메인 계정에서 동기화** *< current_network_administrator_account >* , 한 다음 Enter를 누릅니다.  
   
  네트워크 관리자 계정의 암호를 정기적으로 변경하게 되므로 DSRM 암호가 항상 네트워크 관리자의 현재 암호와 동일하게 하려면 매일 DSRM 암호를 네트워크 관리자 암호에 자동으로 동기화하는 일정 작업을 만드는 것이 좋습니다.  
   

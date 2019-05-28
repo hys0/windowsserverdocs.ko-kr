@@ -9,16 +9,14 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: bdfb086c8177e72c074ac5b5b1a38aac49c4082c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e28d050a9aa40c015af16a665e90535cb810b4ff
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59886754"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192333"
 ---
 # <a name="configure-client-computers-to-trust-the-account-federation-server"></a>계정 페더레이션 서버를 신뢰 하도록 클라이언트 컴퓨터를 구성 합니다.
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 클라이언트 컴퓨터는 Active Directory Federation Services를 사용 하 여 페더레이션된 응용 프로그램은 성공적으로 액세스할 수 있도록 \(AD FS\)를 먼저 구성 해야 Internet Explorer 설정은 각 클라이언트 컴퓨터에서 브라우저 트러스트 되도록 계정 페더레이션 서버입니다. 하면이 수동으로 또는 그룹 정책을 통해 관리 사용자의 기본 설정에 따라 다음 절차 중 하나를 완료 합니다.  
   
