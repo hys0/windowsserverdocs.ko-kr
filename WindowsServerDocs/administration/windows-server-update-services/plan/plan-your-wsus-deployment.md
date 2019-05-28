@@ -10,12 +10,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 05/24/2018
-ms.openlocfilehash: 73fd1d83d82da1694d90a2b3cf3f39717536606b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4e4da87e5a2a4cd80e748a05596da3f23b5ac85f
+ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59822124"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66222904"
 ---
 # <a name="plan-your-wsus-deployment"></a>WSUS 배포 계획
 
@@ -25,15 +25,15 @@ WSUS(Windows Server Update Services) 배포의 첫 번째 단계는 WSUS 배포 
 
 |태스크|설명|
 |----|--------|
-|[1.1. 검토 고려 사항 및 시스템 요구 사항](plan-your-wsus-deployment.md#BKMK_1.1)|WSUS 배포에 필요한 하드웨어와 소프트웨어를 모두 갖출 수 있도록 고려 사항 및 시스템 요구 사항의 목록을 검토합니다.|
-|[1.2. WSUS 배포 시나리오를 선택합니다](plan-your-wsus-deployment.md#BKMK_1.2)|사용할 WSUS 배포 시나리오를 결정합니다.|
-|[1.3. WSUS 저장소 전략 선택](plan-your-wsus-deployment.md#BKMK_1.3.)|배포에 가장 적합한 WSUS 저장소 전략을 결정합니다.|
-|[1.4. WSUS 업데이트 언어 선택](plan-your-wsus-deployment.md#BKMK_1.4.)|설치할 WSUS 업데이트 언어를 결정합니다.|
-|[1.5. WSUS 컴퓨터 그룹 계획](plan-your-wsus-deployment.md#BKMK_1.5)|배포에 사용할 WSUS 컴퓨터 그룹 접근 방식을 계획합니다.|
-|[1.6. WSUS 성능 고려 사항 계획: Background Intelligent Transfer Service](plan-your-wsus-deployment.md#BKMK_1.6.)|성능을 최적화할 수 있도록 WSUS 설계를 계획합니다.|
-|[1.7. 자동 업데이트 설정 계획](plan-your-wsus-deployment.md#BKMK_1.7.)|시나리오의 자동 업데이트 설정을 어떻게 구성할지 계획합니다.|
+|[1.1. 검토 고려 사항 및 시스템 요구 사항](#11-review-considerations-and-system-requirements)|WSUS 배포에 필요한 하드웨어와 소프트웨어를 모두 갖출 수 있도록 고려 사항 및 시스템 요구 사항의 목록을 검토합니다.|
+|[1.2. WSUS 배포 시나리오를 선택합니다](#12-choose-a-wsus-deployment-scenario)|사용할 WSUS 배포 시나리오를 결정합니다.|
+|[1.3. WSUS 저장소 전략 선택](#13-choose-a-wsus-storage-strategy)|배포에 가장 적합한 WSUS 저장소 전략을 결정합니다.|
+|[1.4. WSUS 업데이트 언어 선택](#14-choose-wsus-update-languages)|설치할 WSUS 업데이트 언어를 결정합니다.|
+|[1.5. WSUS 컴퓨터 그룹 계획](#15-plan-wsus-computer-groups)|배포에 사용할 WSUS 컴퓨터 그룹 접근 방식을 계획합니다.|
+|[1.6. WSUS 성능 고려 사항 계획: Background Intelligent Transfer Service](#16-plan-wsus-performance-considerations)|성능을 최적화할 수 있도록 WSUS 설계를 계획합니다.|
+|[1.7. 자동 업데이트 설정 계획](#17-plan-automatic-updates-settings)|시나리오의 자동 업데이트 설정을 어떻게 구성할지 계획합니다.|
 
-## <a name="BKMK_1.1"></a>1.1. 고려 사항 및 시스템 요구 사항 검토
+## <a name="11-review-considerations-and-system-requirements"></a>1.1. 고려 사항 및 시스템 요구 사항 검토
 
 ### <a name="system-requirements"></a>시스템 요구 사항
 
@@ -108,7 +108,7 @@ WSUS를 사용하여 업데이트하도록 클라이언트 컴퓨터(서버 포�
 
     사용 하 여 요청 시 패키지에 개별적으로 가져온 기능을 설치할 수 있습니다 [DISM 명령줄 옵션](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-operating-system-package-servicing-command-line-options)합니다.
 
-### <a name="BKM_1.1.1."></a>WSUS 데이터베이스 요구 사항
+### <a name="wsus-database-requirements"></a>WSUS 데이터베이스 요구 사항
 WSUS를 사용하려면 다음 데이터베이스 중 하나가 필요합니다.
 
 -   WID(Windows 내부 데이터베이스)
@@ -144,7 +144,7 @@ WSUS 역할을 데이터베이스 서버 컴퓨터와 별개의 컴퓨터에 설
 
 4.  WSUS 서버와 데이터베이스 서버 동일한 표준 시간대에 있어야 하거나 동일한 협정 세계시 (그리니치 표준시) 소스에 동기화 합니다.
 
-## <a name="BKMK_1.2"></a>1.2. WSUS 배포 시나리오 선택
+## <a name="12-choose-a-wsus-deployment-scenario"></a>1.2. WSUS 배포 시나리오 선택
 이 섹션에서는 모든 WSUS 배포의 기본 기능에 대해 설명합니다. 이 섹션을 사용하면 단일 WSUS 서버가 사용된 단순한 배포뿐만 아니라 WSUS 서버 계층 구조나 격리된 네트워크 세그먼트의 WSUS 서버 같이 보다 복잡한 시나리오에 익숙해질 수 있습니다.
 
 ### <a name="simple-wsus-deployment"></a>단순한 WSUS 배포
@@ -196,7 +196,7 @@ Windows의 지점 기능을 활용하여 WSUS 배포를 최적화할 수 있습�
 2.  본사와의 연결에는 대역폭이 낮지만 인터넷과의 연결에는 대역폭이 높은 지점에서도 이 지점 기능을 사용할 수 있습니다. 이 경우 중앙 WSUS 서버에서 설치할 업데이트에 대한 정보만 얻고 업데이트는 Microsoft 업데이트에서 다운로드하도록 다운스트림 WSUS 서버를 구성할 수 있습니다.
 
 ### <a name="network-load-balancing"></a>네트워크 부하 분산
-NLB(네트워크 부하 분산)를 사용하면 WSUS 네트워크의 안정성과 성능이 증대됩니다. SQL Server 2008 R2 SP1 등 QL Server를 실행 하는 단일 장애 조치 클러스터를 공유 하도록 여러 WSUS 서버를 설정할 수 있습니다. 이 구성에서는 WSUS에서 제공되는 Windows 내부 데이터베이스 설치가 아닌 전체 SQL Server 설치를 사용해야 하며, 데이터베이스 역할이 모든 WSUS 프런트 엔드 서버에 설치되어 있어야 합니다. 또한 모든 WSUS 서버에서 DFS(분산 파일 시스템)를 사용하여 해당 콘텐츠를 저장하도록 할 수 있습니다.
+NLB(네트워크 부하 분산)를 사용하면 WSUS 네트워크의 안정성과 성능이 증대됩니다. SQL Server 2008 R2 SP1 등 SQL Server를 실행 하는 단일 장애 조치 클러스터를 공유 하도록 여러 WSUS 서버를 설정할 수 있습니다. 이 구성에서는 WSUS에서 제공되는 Windows 내부 데이터베이스 설치가 아닌 전체 SQL Server 설치를 사용해야 하며, 데이터베이스 역할이 모든 WSUS 프런트 엔드 서버에 설치되어 있어야 합니다. 또한 모든 WSUS 서버에서 DFS(분산 파일 시스템)를 사용하여 해당 콘텐츠를 저장하도록 할 수 있습니다.
 
 **NLB 용 WSUS 설치:** NLB 용 WSUS 3.2 설치에 비해, 특별 한 설정 호출 및 매개 변수는 더 이상 필요가 NLB 용 WSUS를 구성 합니다. 다음 고려 사항을 염두 각 WSUS 서버에만 설치 프로그램 필요 합니다.
 
@@ -209,7 +209,7 @@ NLB(네트워크 부하 분산)를 사용하면 WSUS 네트워크의 안정성�
 ### <a name="wsus-deployment-with-roaming-client-computers"></a>로밍 클라이언트 컴퓨터를 포함한 WSUS 배포
 여러 위치에서 네트워크에 로그온하는 모바일 사용자가 네트워크에 포함되어 있는 경우, 로밍 사용자는 자신의 클라이언트 컴퓨터를 지리적으로 가장 가까운 WSUS 서버에서 업데이트하도록 WSUS를 구성할 수 있습니다. 예를 들어, 하나의 WSUS 서버가 각 지역 배포 수도 있으며 각 영역에 다른 DNS 서브넷을 사용할 수 있습니다. 가장 가까운 실제 WSUS 서버에 각 서브넷에서 확인 하는 동일한 WSUS 서버에 모든 클라이언트 컴퓨터를 이동할 수 있습니다.
 
-## <a name="BKMK_1.3."></a>1.3. WSUS 저장소 전략 선택
+## <a name="13-choose-a-wsus-storage-strategy"></a>1.3. WSUS 저장소 전략 선택
 WSUS(Windows Server Update Services)에서는 WSUS 구성 및 업데이트 메타데이터를 저장하기 위한 데이터베이스와 업데이트 파일을 저장하기 위한 로컬 파일 시스템(옵션) 등의 두 가지 유형의 저장소 시스템을 사용합니다. WSUS를 설치하기 전에 저장소를 어떻게 구현할지 결정해야 합니다.
 
 업데이트는 두 부분, 즉 업데이트를 설명하는 메타데이터와 업데이트를 설치하는 데 필요한 파일로 구성됩니다. 업데이트 메타데이터는 일반적으로 실제 업데이트보다 휠씬 작고 WSUS 데이터베이스에 저장됩니다. 업데이트 파일은 로컬 WSUS 서버나 Microsoft 업데이트 웹 서버에 저장됩니다.
@@ -236,7 +236,7 @@ WSUS 데이터베이스에 저장되는 정보는 다음과 같습니다.
 기본적으로 설치 마법사는 SUSDB.mdf라는 Windows 내부 데이터베이스를 만들어 사용합니다. 이 데이터베이스는 %windir%\wid\data\ 폴더에 있는데, 여기서 %windir%은 WSUS 서버 소프트웨어가 설치되어 있는 로컬 드라이브입니다.
 
 > [!NOTE]
-> Windows 내부 데이터베이스 WID ()는 Windows Server 2012에서 도입 되었습니다.
+> Windows 내부 데이터베이스 WID ()는 Windows Server 2008에서 도입 되었습니다.
 
 WSUS에서는 데이터베이스 전용 Windows 인증을 지원합니다. SQL Server 인증을 WSUS에 사용할 수 없습니다. WSUS 데이터베이스용 Windows 내부 데이터베이스를 사용하면 WSUS 설치 프로그램이 server\Microsoft##WID라는 SQL Server 인스턴스를 만듭니다. 여기서 server는 컴퓨터의 이름입니다. 어떤 데이터베이스 옵션을 사용하든 WSUS 설치 프로그램은 SUSDB라는 데이터베이스를 만듭니다. 이 데이터베이스의 이름은 구성할 수 없습니다.
 
@@ -278,7 +278,7 @@ WSUS를 설치 및 구성할 때 기본 옵션은 업데이트 파일의 로컬 
 
 이 경우 루트 WSUS 서버는 Microsoft 업데이트와 동기화되며 업데이트 메타데이터를 받습니다. 업데이트 승인 후 클라이언트 컴퓨터는 승인된 업데이트를 Microsoft 업데이트 서버에서 다운로드합니다.
 
-## <a name="BKMK_1.4."></a>1.4. WSUS 업데이트 언어 선택
+## <a name="14-choose-wsus-update-languages"></a>1.4. WSUS 업데이트 언어 선택
 WSUS 서버 계층을 배포할 때 조직 전반에 걸쳐 어떤 언어를 업데이트해야 하는지 확인해야 합니다. 루트 WSUS 서버는 조직 전반에 걸쳐 사용되는 모든 언어의 업데이트를 다운로드할 수 있도록 구성해야 합니다.
 
 예를 들어 본사에서는 영어와 프랑스어를 업데이트해야 하는 반면, 한 지점에서는 영어, 프랑스어, 독일어를 업데이트해야 하고 다른 지점에서는 영어와 스페인어를 업데이트해야 할 수 있습니다. 이 경우 영어, 프랑스어, 독일어 및 스페인어 업데이트를 다운로드할 수 있도록 루트 WSUS 서버를 구성해야 합니다. 그런 다음 첫 번째 지점 WSUS 서버를 영어, 프랑스어, 독일어 업데이트만 다운로드하도록 구성하고, 두 번째 지점은 영어와 스페인어 업데이트만 다운로드하도록 구성합니다.
@@ -326,7 +326,7 @@ WSUS 구성 마법사의 **언어 선택** 페이지에서 모든 언어 또는 
 >
 > 업스트림 서버에서만 언어 옵션을 변경하면 중앙 서버에서 승인된 업데이트 수와 복제 서버에서 승인된 업데이트 수가 일치하지 않을 수 있습니다.
 
-## <a name="BKMK_1.5"></a>1.5. WSUS 컴퓨터 그룹 계획
+## <a name="15-plan-wsus-computer-groups"></a>1.5. WSUS 컴퓨터 그룹 계획
 WSUS에서는 클라이언트 컴퓨터 그룹을 대상으로 하는 업데이트가 허용되므로, 특정 컴퓨터에서 항상 올바른 업데이트를 가장 편한 시간에 가져오도록 할 수 있습니다. 예를 들어 재정 팀 같은 한 부서의 모든 컴퓨터에 구성과 관련된 특정한 사항이 있는 경우 이 팀에 알맞은 그룹을 설정하고, 해당 컴퓨터에 필요한 업데이트와 이러한 업데이트가 설치될 시간을 결정한 다음 WSUS 보고서를 사용해 팀의 업데이트를 평가할 수 있습니다.
 
 > [!NOTE]
@@ -353,7 +353,7 @@ WSUS에서는 클라이언트 컴퓨터 그룹을 대상으로 하는 업데이�
 
 3.  기한
 
-#### <a name="BKMK_Priority"></a>우선 순위
+#### <a name="priority"></a>우선 순위
 우선 순위가 가장 높은 그룹과 관련된 작업은 다른 그룹의 작업을 재정의합니다. 그룹의 계층 구조 내에서 그룹이 더 높은 곳에 표시될수록 우선 순위가 더 높습니다. 우선 순위는 깊이에 따라서만 할당되며, 모든 분기의 우선 순위가 같습니다. 예를 들어 데스크톱 분기에서 두 수준 아래의 그룹은 서버 분기에서 한 수준 아래의 그룹보다 우선 순위가 높습니다.
 
 다음 텍스트 예에서 Update Services 콘솔 계층 구조 창 WSUS-01 이라는 wsus 컴퓨터 그룹 명명 된 데스크톱 컴퓨터와 서버 기본값에 추가 되었습니다 **모든 컴퓨터** 그룹입니다. 데스크톱 컴퓨터 및 서버 그룹 모두 동일한 계층 수준에 있습니다.
@@ -390,14 +390,14 @@ WSUS에서는 클라이언트 컴퓨터 그룹을 대상으로 하는 업데이�
 
 이 예제에서는 데스크톱 컴퓨터 분기 (데스크톱 L2) 아래에 두 수준 그룹에는 높은 우선 순위 보다 한 수준 그룹은 서버 분기 (서버 L1) 아래에 있습니다. 이에 따라 데스크톱-L2 그룹과 서버-L1 그룹에 모두 속해 있는 컴퓨터는 데스크톱-L2 그룹에 대한 모든 작업이 서버-L1 그룹에 지정된 작업보다 우선합니다.
 
-#### <a name="BKMK_Install"></a>설치의 우선 순위 및 제거
+#### <a name="priority-of-install-and-uninstall"></a>설치 및 제거 우선 순위
 설치 작업에서 제거 작업을 재정의합니다. 필수 설치 항목은 선택 설치 항목을 재정의합니다. 선택 설치 항목은 API를 통해서만 사용할 수 있으며, WSUS 관리 콘솔을 통한 업데이트 승인 시 모든 선택 항목의 승인이 지워집니다.
 
-#### <a name="BKMK_Deadline"></a>최종 기한 우선 순위
+#### <a name="priority-of-deadlines"></a>최종 기한 우선 순위
 기한이 있는 작업은 기한이 없는 작업을 재정의합니다.  기한이 더 빠른 작업이 기한이 늦은 작업을 재정의합니다.
 
-## <a name="BKMK_1.6."></a>1.6. WSUS 성능 고려 사항 계획
-성능을 최적화할 수 있도록 WSUS를 배포하기 전에 신중히 계획해야 할 영역이 몇 가지 있습니다. 주요 영역은 다음과 같습니다.
+## <a name="16-plan-wsus-performance-considerations"></a>1.6. WSUS 성능 고려 사항 계획
+성능을 최적화할 수 있도록 WSUS를 배포 하기 전에 신중 하 게 계획 해야 하는 몇 가지 부분이 있습니다. 주요 영역은 다음과 같습니다.
 
 -   네트워크 설정
 
@@ -411,26 +411,26 @@ WSUS에서는 클라이언트 컴퓨터 그룹을 대상으로 하는 업데이�
 
 -   BITS(Background Intelligent Transfer Service)
 
-### <a name="BKMK_1.6.Network"></a>네트워크 설정
+### <a name="network-setup"></a>네트워크 설정
 WSUS 네트워크에서 성능을 최적화하려면 다음 사항을 고려합니다.
 
 1.  WSUS 네트워크를 계층 구조적 토폴로지가 아닌 허브 및 스포크 토폴로지로 구성합니다.
 
 2.  로밍 클라이언트 컴퓨터에 DNS 네트워크 마스크 순서를 사용하고, 로밍 클라이언트 컴퓨터가 로컬 WSUS 서버에서 업데이트를 가져오도록 구성합니다.
 
-### <a name="BKMK_1.6.Deferred"></a>지연 된 다운로드
+### <a name="deferred-download"></a>지연된 다운로드
 업데이트를 승인하고 업데이트 파일을 다운로드하기 전에 업데이트 메타데이터를 다운로드할 수 있는데, 이 방법을 *지연된 다운로드*라고 합니다. 다운로드가 지연되면 업데이트는 승인된 이후에만 다운로드됩니다. 네트워크 대역폭과 디스크 공간을 최적화할 수 있으므로 다운로드를 지연하는 것이 좋습니다.
 
 WSUS 서버 계층 구조에서 WSUS는 루트 WSUS 서버의 지연된 다운로드 설정을 사용하도록 모든 다운스트림 서버를 자동으로 설정합니다. 이 기본 설정은 변경할 수 있습니다. 예를 들면 전체 동기화를 즉시 수행하도록 업스트림 서버를 구성한 후, 다운로드를 지연하도록 다운스트림 서버를 구성할 수 있습니다.
 
 계층 구조로 연결된 WSUS 서버를 배포하는 경우 서버를 깊게 중첩하지 않는 것이 좋습니다. 지연 된 다운로드를 사용 하도록 설정 하 고 다운스트림 서버가 업스트림 서버에서 승인 되지 않은 업데이트를 요청 하는 경우 다운스트림 서버의 요청 강제로 업스트림 서버에서 다운로드 합니다. 그런 다음 다운스트림 서버에서 후속 동기화 시 업데이트를 다운로드합니다. 깊은 WSUS 서버 계층에서 업데이트가 요청 및 다운로드되어 서버 계층을 통해 전달되면 지연이 발생할 수 있습니다. 업데이트를 로컬에 저장하면 지연된 다운로드가 기본적으로 활성화됩니다. 이 옵션은 수동으로 변경할 수 있습니다.
 
-### <a name="BKMK_1.6.Filters"></a>필터
+### <a name="filters"></a>필터
 WSUS에서는 업데이트 동기화를 언어, 제품 및 등급별로 필터링할 수 있습니다. WSUS 서버 계층에서 WSUS는 루트 WSUS 서버에서 선택된 업데이트 필터링 옵션을 사용하도록 모든 다운스트림 서버를 자동으로 설정합니다. 언어 하위 집합만 받도록 다운로드 서버를 재구성할 수 있습니다.
 
 기본적으로 업데이트될 제품은 Windows와 Office이며 기본 등급은 중요 업데이트, 보안 업데이트 및 정의 파일 업데이트입니다. 대역폭과 디스크 공간을 절약하려면 언어를 실제로 사용하는 언어로 제한하는 것이 좋습니다.
 
-### <a name="BKMK_1.6.Installation"></a>설치
+### <a name="installation"></a>설치
 일반적으로 업데이트는 업데이트될 컴퓨터에 이미 존재하는 파일의 새 버전으로 구성됩니다. 이진 수준에서 이러한 기존 파일은 업데이트된 버전과 크게 다르지 않을 수 있습니다. 빠른 설치 파일 기능은 버전 간의 정확한 바이트를 식별해서 이러한 차이 만큼만 업데이트를 만들어 분산한 후 기존 파일과 업데이트된 바이트를 병합합니다.
 
 경우에 따라만 델타 (차이) 파일의 두 버전 간의 다운로드 하기 때문에이 기능은 "델타 배달" 이라고 합니다. 빠른 설치 파일에는 업데이트될 각 파일에 대해 가능한 버전이 모두 포함되어 있어서 그 크기가 클라이언트 컴퓨터에 분산되는 업데이트보다 더 큽니다.
@@ -439,19 +439,19 @@ WSUS에서는 업데이트 동기화를 언어, 제품 및 등급별로 필터�
 
 일부 업데이트는 빠른 설치 파일을 사용한 분산 작업에 적당하지 않습니다. 이 옵션을 선택하면 모든 업데이트에 대한 빠른 설치 파일을 확보하게 됩니다. 업데이트를 로컬로 저장하지 않으면 Windows 업데이트 에이전트는 빠른 설치 파일 또는 전체 파일 업데이트 배포를 다운로드할지를 결정합니다.
 
-### <a name="BKMK_1.6.LargeUpdates"></a>대규모 업데이트 배포
+### <a name="large-update-deployment"></a>대규모 업데이트 배포
 서비스 팩 같은 대규모 업데이트를 배포하는 경우 다음 관행을 사용하여 네트워크 혼잡을 방지할 수 있습니다.
 
-1.  BITS(Background Intelligent Transfer Service) 제한을 사용합니다. BITS 대역폭 제한은 사용 시간을 기준으로 제어할 수 있지만 BITS가 사용되는 모든 응용 프로그램에 적용됩니다. BITS 제한을 제어하는 방법에 대한 자세한 내용은 [그룹 정책](https://msdn.microsoft.com/library/windows/desktop/aa362844(v=vs.85).aspx)을 참조하세요.
+1.  BITS(Background Intelligent Transfer Service) 제한을 사용합니다. BITS 대역폭 제한은 사용 시간을 기준으로 제어할 수 있지만 BITS가 사용되는 모든 응용 프로그램에 적용됩니다. BITS 제한을 제어 하는 방법은 참조 하세요 [그룹 정책](https://msdn.microsoft.com/library/windows/desktop/aa362844(v=vs.85).aspx)합니다.
 
 2.  IIS(인터넷 정보 서비스) 제한을 사용해 하나 이상의 웹 서비스에 대한 제한을 설정할 수 있습니다.
 
 3.  컴퓨터 그룹을 사용하여 출시를 제어합니다. 클라이언트 컴퓨터는 WSUS 서버로 정보를 보낼 때 특정 컴퓨터 그룹의 구성원으로 식별됩니다. WSUS 서버는 이 정보를 사용하여 해당 컴퓨터에 배포해야 할 업데이트를 확인합니다. 컴퓨터 그룹을 여러 개 그룹을 설정한 다음 이러한 그룹의 하위 집합에 대규모 서비스 팩 다운로드를 승인할 수 있습니다.
 
-### <a name="BKMK_1.6.BITS"></a>Background Intelligent Transfer Service
+### <a name="background-intelligent-transfer-service"></a>BITS(Background Intelligent Transfer Service)
 모든 파일 전송 작업 시 WSUS에서는 BITS(Background Intelligent Transfer Service) 프로토콜을 사용합니다. 이 작업에는 클라이언트 컴퓨터에 대한 다운로드와 서버 동기화가 포함됩니다. BITS에서 프로그램은 스패어 대역폭을 사용해 파일을 다운로드할 수 있습니다. BITS는 네트워크 연결이 끊어졌거나 컴퓨터가 다시 시작하는 동안에도 파일 전송 상태를 그대로 유지합니다. 참조 항목: [BITS(Background Intelligent Transfer Service)](https://msdn.microsoft.com/library/bb968799.aspx).
 
-## <a name="BKMK_1.7."></a>1.7. 자동 업데이트 설정 계획
+## <a name="17-plan-automatic-updates-settings"></a>1.7. 자동 업데이트 설정 계획
 WSUS 서버의 업데이트를 승인할 최종 기한을 지정할 수 있습니다. 최종 기한을 지정하면 클라이언트 컴퓨터가 특정 기간에 업데이트를 설치합니다. 그러나 최종 기한이 만료되었는지, 컴퓨터 큐에 설치할 다른 업데이트가 있는지, 업데이트(또는 큐의 다른 업데이트)를 다시 시작해야 하는지 등에 따른 여러 가지 상황이 있을 수 있습니다.
 
 기본적으로 자동 업데이트는 22시간에서 임의 오프셋 시간을 뺀 시간마다 승인된 업데이트에 대해 WSUS 서버를 폴링합니다. 설치해야 할 새 업데이트가 있으면 다운로드됩니다. 업데이트 검색 주기는 1시간에서 22시간 사이의 값으로 설정할 수 있습니다.

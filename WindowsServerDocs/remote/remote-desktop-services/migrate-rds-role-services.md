@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: 9b1fa833-4325-48a8-bf34-46265f40c001
 author: christianmontoya
 manager: scottman
-ms.openlocfilehash: 73beb1539420f4b4aad818ffe0b0bdaabe901748
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 63037dd7e32320b6e640396e20344e5678ed91dd
+ms.sourcegitcommit: 21165734a0f37c4cd702c275e85c9e7c42d6b3cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59870264"
+ms.lasthandoff: 05/03/2019
+ms.locfileid: "65034435"
 ---
 # <a name="migrate-your-remote-desktop-services-deployment-to-windows-server-2016"></a>원격 데스크톱 서비스 배포에 Windows Server 2016으로 마이그레이션
 
@@ -28,8 +28,8 @@ Windows Server 2012 R2의 원격 데스크톱 서비스를 현재 실행 중인 
 
 업그레이드 프로세스 및 요구 사항에 대 한 자세한 내용은 참조 하세요. [원격 데스크톱 서비스 배포에 Windows Server 2016으로 업그레이드](upgrade-to-rds-2016.md)합니다.
 
-원격 데스크톱 서비스 배포를 마이그레이션하려면 다음 단계를 사용 합니다. 
-- [RD 연결 브로커 서버 마이그레이션](#migrate-rd-connection-broker-servers) 
+원격 데스크톱 서비스 배포를 마이그레이션하려면 다음 단계를 사용 합니다.
+- [RD 연결 브로커 서버 마이그레이션](#migrate-rd-connection-broker-servers)
 - [세션 컬렉션 마이그레이션](#migrate-session-collections)
 - [가상 데스크톱 컬렉션 마이그레이션](#migrate-virtual-desktop-collections)
 - [RD 웹 액세스 서버 마이그레이션](#migrate-rd-web-access-servers)
@@ -54,7 +54,7 @@ Windows Server 2012 R2의 원격 데스크톱 서비스를 현재 실행 중인 
 
 Windows Server 2016의 세션 컬렉션에 Windows Server 2012 R2의 세션 컬렉션을 마이그레이션하려면 다음이 단계를 수행 합니다.
 > [!IMPORTANT] 
-> 이전 단계를 완료 한 후에 세션 컬렉션을 마이그레이션하세요 [마이그레이션하려면 RD 연결 브로커 서버](#Migrate-RD-Connection-Broker-servers)합니다.
+> 이전 단계를 완료 한 후에 세션 컬렉션을 마이그레이션하세요 [마이그레이션하려면 RD 연결 브로커 서버](#migrate-rd-connection-broker-servers)합니다.
 
 1. [세션 컬렉션을 업그레이드](Upgrade-to-RDSH-2016.md) Windows Server 2012 R2를 Windows Server 2016에서.
 2. 세션 컬렉션에 Windows Server 2016을 실행 하는 새 RD 세션 호스트 서버를 추가 합니다.
@@ -69,7 +69,7 @@ Windows Server 2016의 세션 컬렉션에 Windows Server 2012 R2의 세션 컬�
 Windows Server 2016을 실행 하는 대상 서버를 Windows Server 2012 R2를 실행 하는 원본 서버에서 가상 데스크톱 컬렉션을 마이그레이션하려면 다음이 단계를 수행 합니다.
 
 > [!IMPORTANT] 
-> 이전 단계를 완료 한 후에 가상 데스크톱 컬렉션을 마이그레이션하세요 [마이그레이션하려면 RD 연결 브로커 서버](#Migrate-RD-Connection-Broker-servers)합니다.
+> 이전 단계를 완료 한 후에 가상 데스크톱 컬렉션을 마이그레이션하세요 [마이그레이션하려면 RD 연결 브로커 서버](#migrate-rd-connection-broker-servers)합니다.
 
 1. [가상 데스크톱 컬렉션을 업그레이드](Upgrade-to-RDVH-2016.md) 서버에서 Windows Server 2016으로 Windows Server 2012 R2를 실행 합니다.
 2. 가상 데스크톱 컬렉션에 새 Windows Server 2016 RD 가상화 호스트 서버를 추가 합니다.
@@ -85,14 +85,14 @@ Windows Server 2016을 실행 하는 대상 서버를 Windows Server 2012 R2를 
 RD 웹 액세스 서버를 마이그레이션하려면 다음이 단계를 수행 합니다.
 - 원격 데스크톱 서비스 배포에 Windows Server 2016을 실행 하는 대상 서버를 가입 및 RD 웹 역할을 설치 합니다.
 - 사용 하 여 [IIS 웹 배포 도구](https://www.iis.net/) Windows Server 2016을 실행 하는 대상 서버에 현재 RD 웹 액세스 서버에서 RD 웹 웹 사이트 설정을 마이그레이션할 수 있습니다.
-- [인증서 마이그레이션](#Migrate-certificates) 대상 서버에 Windows Server 2016을 실행 합니다.
+- [인증서 마이그레이션](#migrate-certificates) 대상 서버에 Windows Server 2016을 실행 합니다.
 - 원격 데스크톱 서비스 배포에서 원본 서버 제거  
 
 ## <a name="migrate-rdgateway-servers"></a>RD 게이트웨이 서버 마이그레이션
 RD 게이트웨이 서버를 마이그레이션하려면 다음이 단계를 수행 합니다.
 - 원격 데스크톱 서비스 배포에 Windows Server 2016을 실행 하는 대상 서버를 가입 및 RD 게이트웨이 역할 설치
 - 사용 하 여 [IIS 웹 배포 도구](https://www.iis.net/) Windows Server 2016을 실행 하는 대상 서버에 현재 RD 게이트웨이 서버에서 RD 게이트웨이 끝점 설정을 마이그레이션할 수 있습니다.
-- [인증서 마이그레이션](#Migrate-certificates) 대상 서버에 Windows Server 2016을 실행 합니다.
+- [인증서 마이그레이션](#migrate-certificates) 대상 서버에 Windows Server 2016을 실행 합니다.
 - 원격 데스크톱 서비스 배포에서 원본 서버 제거  
 
 ## <a name="migrate-rdlicensing-servers"></a>RD 라이선싱 서버 마이그레이션

@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 05/18/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: a7a14b1a1e0f91002b201869e4c68187ffaf3f8f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: eaec563157a77fd4e782842a81e5b59e49a5ea09
+ms.sourcegitcommit: 7cb939320fa2613b7582163a19727d7b77debe4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59865084"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65621296"
 ---
 # <a name="use-robocopy-to-preseed-files-for-dfs-replication"></a>DFS 복제에 대 한 파일을 미리 시드하고를 Robocopy를 사용 하 여
 
@@ -28,9 +28,9 @@ Robocopy (강력한 파일 복사) 명령줄 유틸리티의 Windows Server를 �
 
 Robocopy를 사용 하 여 DFS 복제에 대 한 파일을 미리 시드하고 하려면 다음이 단계를 수행 합니다.
 
-1. [다운로드 하 고 Robocopy의 최신 버전을 설치 합니다.](#step-1:-download-and-install-the-latest-version-of-robocopy)
-2. [복제할 파일을 안정화 합니다.](#step-2:-stabilize-files-that-will-be-replicated)
-3. [대상 서버에 복제 된 파일을 복사 합니다.](#step-3:-copy-the-replicated-files-to-the-destination-server)
+1. [다운로드 하 고 Robocopy의 최신 버전을 설치 합니다.](#step-1-download-and-install-the-latest-version-of-robocopy)
+2. [복제할 파일을 안정화 합니다.](#step-2-stabilize-files-that-will-be-replicated)
+3. [대상 서버에 복제 된 파일을 복사 합니다.](#step-3-copy-the-replicated-files-to-the-destination-server)
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -38,7 +38,7 @@ Preseeding DFS 복제 직접 포함 되지 않은, 때문에 Robocopy 사용 하
 
 - 원본 및 대상 서버의 로컬 관리자 그룹의 구성원 인 계정이 필요 합니다.
 
-- 파일을 복사 하는 데 사용할 서버인 Robocopy의 최신 버전 설치-원본 서버나 대상 서버 운영 체제 버전에 대 한 최신 버전을 설치 해야 합니다. 자세한 내용은 [2 단계: 복제할 파일 안정화](#step-2:-stabilize-files-that-will-be-replicated)합니다. Windows Server 2003 R2를 실행 하는 서버에서 파일, preseeding 하는 경우가 아니면 Robocopy 원본 또는 대상 서버에서 실행할 수 있습니다. 일반적으로 최신 운영 체제 버전에는 대상 서버 Robocopy의 최신 버전에 액세스할 수 있습니다.
+- 파일을 복사 하는 데 사용할 서버인 Robocopy의 최신 버전 설치-원본 서버나 대상 서버 운영 체제 버전에 대 한 최신 버전을 설치 해야 합니다. 자세한 내용은 [2 단계: 복제할 파일 안정화](#step-2-stabilize-files-that-will-be-replicated)합니다. Windows Server 2003 R2를 실행 하는 서버에서 파일, preseeding 하는 경우가 아니면 Robocopy 원본 또는 대상 서버에서 실행할 수 있습니다. 일반적으로 최신 운영 체제 버전에는 대상 서버 Robocopy의 최신 버전에 액세스할 수 있습니다.
 
 - 충분 한 저장소 공간이 대상 드라이브에 사용할 수 있는지 확인 합니다. 경로 복사 하려는 폴더를 만들지 마세요. Robocopy는 루트 폴더를 만들어야 합니다.
     
@@ -105,7 +105,7 @@ Robocopy를 사용 하 여 파일을 미리 시드하고 먼저 다운로드 하
     |"\<대상 폴더 경로 복제\>"|Preseeded 파일을 보관할 폴더 경로를 지정 합니다.<br><br>대상 폴더 대상 서버에 이미 존재 하지 해야 합니다. 일치 하는 파일 해시를 가져오려면 Robocopy 파일 preseeds 해당 하는 경우 루트 폴더를 만들어야 합니다.|
     |/e|하위 디렉터리 및 해당 파일 뿐만 아니라 빈 디렉터리를 복사합니다.|
     |/b|백업 모드에서 파일을 복사 합니다.|
-    |/copyal|감사 정보 및 데이터, 특성, 타임 스탬프, NTFS ACL (액세스 제어 목록), 소유자 정보를 포함 하 여 모든 파일 정보를 복사 합니다.|
+    |/copyall|감사 정보 및 데이터, 특성, 타임 스탬프, NTFS ACL (액세스 제어 목록), 소유자 정보를 포함 하 여 모든 파일 정보를 복사 합니다.|
     |/r:6|6 배 작업 다시 시도 오류가 발생 합니다.|
     |/w:5|다시 시도 간에 5 초 동안 대기합니다.|
     |MT:64|64 파일을 동시에 복사합니다.|

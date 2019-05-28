@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: de85af27e699242977054420178dd3c424b2ddb3
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: abb00e14dd0b3ce7b06efba816fbd7452e7bf0f1
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59822594"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189410"
 ---
 # <a name="create-a-rule-to-permit-all-users"></a>모든 사용자를 허용하는 규칙 만들기
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2
 
 Windows Server 2016에서 사용할 수 있습니다는 **액세스 제어 정책** 을 액세스할 모든 사용자가 신뢰 당사자에 게는 규칙을 만듭니다.  Windows Server 2012 R2에서 사용 하는 **모든 사용자 허용** Active Directory Federation Services에서 규칙 템플릿을 \(AD FS\)을 액세스할 모든 사용자가 신뢰 하는 권한 부여 규칙을 만들 수 있습니다 당사자입니다. 
 
@@ -61,7 +59,7 @@ Windows Server 2016에서 사용할 수 있습니다는 **액세스 제어 정�
 ## <a name="additional-references"></a>추가 참조 
 [클레임 규칙 구성](Configure-Claim-Rules.md)  
  
-[검사 목록: 신뢰 당사자 트러스트에 대 한 클레임 규칙 만들기](https://technet.microsoft.com/library/ee913578.aspx)  
+[검사 목록: 신뢰 당사자 트러스트를 위한 클레임 규칙 만들기](https://technet.microsoft.com/library/ee913578.aspx)  
   
 [권한 부여 클레임 규칙을 사용 하는 경우](../../ad-fs/technical-reference/When-to-Use-an-Authorization-Claim-Rule.md)  
 

@@ -9,16 +9,14 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 5494f3bd8d012bf1ecc240439ff880d1bb52c280
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3d7389ce806a5e3aebf4fe166b10e5262df0be8a
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59875184"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192241"
 ---
 # <a name="configuring-partner-organizations"></a>파트너 조직 구성
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Active Directory Federation Services에서 새 파트너 조직 배포할 \(AD FS\)에서 작업을 완료 [검사 목록: Configuring the Resource Partner Organization](Checklist--Configuring-the-Resource-Partner-Organization.md) 또는 [검사 목록: 계정 파트너 조직 구성](Checklist--Configuring-the-Account-Partner-Organization.md)AD FS 디자인에 따라 합니다.  
   

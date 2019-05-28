@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 96ab653393fbc5f0a4306db53f84c2d9ba6c7f5f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c9c4cdb881d77fe902776551b4e99061e67660ea
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59847454"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189377"
 ---
 # <a name="create-a-rule-to-send-group-membership-as-a-claim"></a>클레임으로 그룹 멤버 자격을 보내는 규칙 만들기
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2
 
 Active Directory Federation Services에서 클레임 규칙 템플릿으로 보내기 그룹 멤버 자격을 사용 하 여 \(AD FS\)을 클레임으로 보내기을 Active Directory 보안 그룹을 선택할 수 있도록 하는 규칙을 만들 수 있습니다. 하나의 클레임을 선택 하는 그룹에 따라이 규칙에서 발생 합니다. 예를 들어 사용자가 Domain Admins 보안 그룹의 멤버인 경우이 값이 Admin 그룹 클레임을 전송할 규칙을 만들려면이 규칙 서식 파일을 사용할 수 있습니다. 이 규칙을 로컬 Active Directory 도메인의 사용자에 대해서만 사용 해야 합니다.  
   
@@ -111,9 +109,9 @@ Active Directory Federation Services에서 클레임 규칙 템플릿으로 보�
 ## <a name="additional-references"></a>추가 참조 
 [클레임 규칙 구성](Configure-Claim-Rules.md)  
  
-[검사 목록: 신뢰 당사자 트러스트에 대 한 클레임 규칙 만들기](https://technet.microsoft.com/library/ee913578.aspx)  
+[검사 목록: 신뢰 당사자 트러스트를 위한 클레임 규칙 만들기](https://technet.microsoft.com/library/ee913578.aspx)  
 
-[검사 목록: 클레임 공급자에 대 한 클레임 규칙 만들기 신뢰](https://technet.microsoft.com/library/ee913564.aspx)  
+[검사 목록: 클레임 공급자 트러스트를 위한 클레임 규칙 만들기](https://technet.microsoft.com/library/ee913564.aspx)  
   
 [권한 부여 클레임 규칙을 사용 하는 경우](../../ad-fs/technical-reference/When-to-Use-an-Authorization-Claim-Rule.md)  
 

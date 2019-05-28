@@ -9,15 +9,13 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: aa205c46bf67dc25a55232b799bdd39fee4ac3c6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 09f26e256793d30936496f7a936550acb7b20025
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59812214"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188347"
 ---
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 # <a name="when-to-use-a-pass-through-or-filter-claim-rule"></a>통과 또는 필터 클레임 규칙을 사용하는 경우
 Active Directory Federation Services에서이 규칙을 사용할 수 있습니다 \(AD FS\) 들어오는 클레임의 값에 따라 특정 들어오는 클레임 유형을 가져오고 출력을 사용할지 결정 하는 작업을 적용 해야 합니다. 이 규칙을 사용하는 경우 규칙에서 구성하는 옵션 중 하나에 따라 다음 표의 규칙 논리와 일치하는 클레임을 통과 또는 필터링합니다.  
   

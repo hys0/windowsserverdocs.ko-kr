@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 5c7cec9ad92605f3dc98f8ce8fb7853a7ae61299
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 0206197b24f13d80019cbc864057e99e195ebc4b
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59863694"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191144"
 ---
 # <a name="planning-your-deployment"></a>배포 계획
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 계획할 때 교차\-조직 \(페더레이션\-기반\) Active Directory Federation Services를 사용 하 여 공동 작업 \(AD FS\)를 먼저 확인 조직 인터넷을 통해 다른 조직에서 액세스 하는 웹 리소스를 호스트 하는 경우 조직에서 직원에 대 한 웹 리소스에 대 한 액세스를 제공 합니다. 이 결정 AD FS를 배포 하는 방법에 영향을 줍니다. 및 AD FS 인프라에 대 한 계획의 기반이 됩니다.  
   
@@ -33,17 +31,17 @@ ms.locfileid: "59863694"
   
 ## <a name="in-this-section"></a>단원 내용  
   
--   [AD FS의 보안 계획 및 배포에 대 한 모범 사례](Best-Practices-for-Secure-Planning-and-Deployment-of-AD-FS.md)  
+-   [AD FS 보안 계획 및 배포 모범 사례](Best-Practices-for-Secure-Planning-and-Deployment-of-AD-FS.md)  
   
--   [AD FS와의 상호 운용성에 대 한 계획 1.x](Planning-for-Interoperability-with-AD-FS-1.x.md)  
+-   [AD FS 1.x와의 상호 운용성 계획](Planning-for-Interoperability-with-AD-FS-1.x.md)  
   
 -   [Id 위임을 사용 하는 경우](When-to-Use-Identity-Delegation.md)  
   
--   [계정 파트너 조직에서 AD FS를 배포합니다.](Deploying-AD-FS-in-the-Account-Partner-Organization-2012.md)  
+-   [계정 파트너 조직에서 AD FS 배포](Deploying-AD-FS-in-the-Account-Partner-Organization-2012.md)  
   
--   [리소스 파트너 조직에서 AD FS를 배포합니다.](Deploying-AD-FS-in-the-Resource-Partner-Organization-2012.md)  
+-   [리소스 파트너 조직에 AD FS 배포](Deploying-AD-FS-in-the-Resource-Partner-Organization-2012.md)  
   
 ## <a name="see-also"></a>관련 항목
-[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
 
 

@@ -1,27 +1,42 @@
 ---
 title: 저장소 공간 다이렉트에서 볼륨 확장
-ms.assetid: fa48f8f7-44e7-4a0b-b32d-d127eff470f0
+description: 저장소 공간 다이렉트 Windows Admin Center 및 PowerShell을 사용 하 여 볼륨 크기를 조정 하는 방법.
 ms.prod: windows-server-threshold
-ms.author: cosmosdarwin
-ms.manager: eldenc
-ms.technology: storage-spaces
-ms.topic: article
+ms.reviewer: cosmosdarwin
 author: cosmosdarwin
-ms.date: 01/23/2017
-ms.localizationpriority: medium
-ms.openlocfilehash: 51f58ec23c55a6cb1664d800d6f4a75dae545899
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.author: cosdar
+manager: eldenc
+ms.technology: storage-spaces
+ms.date: 05/07/2019
+ms.openlocfilehash: 3be6a4cda20f4d7d7d881ad8a272dc38fd787bba
+ms.sourcegitcommit: 75f257d97d345da388cda972ccce0eb29e82d3bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59824974"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65613230"
 ---
 # <a name="extending-volumes-in-storage-spaces-direct"></a>저장소 공간 다이렉트에서 볼륨 확장
 > 적용 대상: Windows Server 2019, Windows Server 2016
 
-이 항목에서는 [저장소 공간 다이렉트](storage-spaces-direct-overview.md)에서 볼륨의 크기를 조정하는 데 대한 지침을 제공합니다.
+이 항목에서는의 볼륨 크기 조정에 대 한 지침을 제공 된 [저장소 공간 다이렉트](storage-spaces-direct-overview.md) Windows Admin Center 사용 하 여 클러스터.
 
-## <a name="prerequisites"></a>사전 요구 사항
+볼륨 크기를 조정 하는 방법에 대 한 빠른 비디오를 시청 하세요.
+
+> [!VIDEO https://www.youtube-nocookie.com/embed/hqyBzipBoTI]
+
+## <a name="extending-volumes-using-windows-admin-center"></a>Windows Admin Center 사용 하 여 볼륨을 확장 합니다.
+
+1. Windows Admin Center 저장소 공간 다이렉트 클러스터에 연결 하 고 선택한 **볼륨이** 에서 합니다 **도구** 창입니다.
+2. 볼륨 페이지에서 선택 합니다 **인벤토리** 탭을 선택한 다음 크기를 조정 하려는 볼륨입니다.
+
+    볼륨 세부 정보 페이지에서 볼륨에 대 한 저장소 용량 표시 됩니다. 또한 대시보드에서 직접 볼륨 세부 정보 페이지를 열 수 있습니다. 대시보드에서 경고 창에 저장소 용량에 대 한 볼륨 낮게 실행 중인 경우 알려, 경고를 선택 하 고 선택한 **볼륨을 이동**합니다.
+
+4. 볼륨 세부 정보 페이지의 맨 위에 있는 선택 **크기 조정**합니다.
+5. 더 큰 새 크기를 입력 한 다음 선택 **크기 조정**합니다.
+
+    볼륨 세부 정보 페이지에서 볼륨에 대 한 더 큰 저장소 용량을 지정 하 고 대시보드에서 경고의 선택을 취소 합니다.
+
+## <a name="extending-volumes-using-powershell"></a>PowerShell을 사용 하 여 볼륨을 확장 합니다.
 
 ### <a name="capacity-in-the-storage-pool"></a>저장소 풀의 용량
 
@@ -49,7 +64,7 @@ Get-VirtualDisk
 Get-VirtualDisk <FriendlyName> | Get-Disk | Get-Partition | Get-Volume 
 ```
 
-## <a name="step-1--resize-the-virtual-disk"></a>1단계 - 가상 디스크의 크기 조정
+### <a name="step-1--resize-the-virtual-disk"></a>1단계 - 가상 디스크의 크기 조정
 
 가상 디스크는 만들어진 방법에 따라 저장소 계층을 사용할 수도 있고 사용하지 못할 수도 있습니다.
 
@@ -61,7 +76,7 @@ Get-VirtualDisk <FriendlyName> | Get-StorageTier
 
 cmdlet이 아무 것도 반환하지 않는 경우 가상 디스크는 저장소 계층을 사용하지 않습니다.
 
-### <a name="no-storage-tiers"></a>저장소 계층이 없음
+#### <a name="no-storage-tiers"></a>저장소 계층이 없음
 
 가상 디스크에 저장소 계층이 없는 경우 **Resize-VirtualDisk** cmdlet을 사용하여 직접 크기를 조정할 수 있습니다.
 
@@ -75,7 +90,7 @@ Get-VirtualDisk <FriendlyName> | Resize-VirtualDisk -Size <Size>
 
 ![Resize-VirtualDisk](media/resize-volumes/Resize-VirtualDisk.gif)
 
-### <a name="with-storage-tiers"></a>저장소 계층이 있음
+#### <a name="with-storage-tiers"></a>저장소 계층이 있음
 
 가상 디스크가 저장소 계층을 사용하는 경우 **Resize-StorageTier** cmdlet을 사용하여 각 계층의 크기를 개별적으로 조정할 수 있습니다.
 
@@ -98,7 +113,7 @@ Get-StorageTier <FriendlyName> | Resize-StorageTier -Size <Size>
 
 ![Resize-StorageTier](media/resize-volumes/Resize-StorageTier.gif)
 
-## <a name="step-2--resize-the-partition"></a>2단계 - 파티션 크기 조정
+### <a name="step-2--resize-the-partition"></a>2단계 - 파티션 크기 조정
 
 다음으로 **Resize-Partition** cmdlet을 사용하여 파티션의 크기를 조정합니다. 가상 디스크에는 두 개의 파티션이 있는데 첫 번째 파티션은 예약되어 있으므로 수정할 수 없습니다. 크기를 조정해야 하는 파티션에는 **PartitionNumber = 2** 및 **Type = Basic**이 있습니다.
 
@@ -129,3 +144,4 @@ $Partition | Resize-Partition -Size ($Partition | Get-PartitionSupportedSize).Si
 - [Windows Server 2016의에서 저장소 공간 다이렉트](storage-spaces-direct-overview.md)
 - [저장소 공간 다이렉트 볼륨 계획](plan-volumes.md)
 - [저장소 공간 다이렉트에서 볼륨 만들기](create-volumes.md)
+- [저장소 공간 다이렉트의 볼륨 삭제](delete-volumes.md)

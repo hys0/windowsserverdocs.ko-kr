@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: 52e4b215c406eeae11dbab41e367f6ce4cd83507
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b4df753a1635a0935e70a76278b097d2f9f70142
+ms.sourcegitcommit: b190fac4bfa5599751a60d3fc3b4c4a64dd9afd7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59849254"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66009097"
 ---
 # <a name="ad-ds-installation-and-removal-wizard-page-descriptions"></a>AD DS 설치 및 제거 마법사 페이지 설명
 
@@ -61,7 +61,7 @@ ms.locfileid: "59849254"
   
 -   새 포리스트를 만들 때 포리스트 루트 도메인의 이름을 지정해야 합니다. 포리스트 루트 도메인 이름을 단일 레이블이 지정 된 일 수 없습니다 (예를 들어 이어야 함 "contoso" 대신 "contoso.com"). 허용된 DNS 도메인 명명 규칙을 사용해야 합니다. IDN(다국어 도메인 이름)을 지정할 수 있습니다. DNS 도메인 명명 규칙에 대 한 자세한 내용은 참조 [KB 909264](https://support.microsoft.com/kb/909264)합니다.  
   
--   외부 DNS 이름과 동일한 이름으로 새 Active Directory 포리스트를 만들지 마십시오. 예를 들어 인터넷 DNS URL이 http://contoso.com, 이후 버전과 호환성 문제를 방지 하려면 내부 포리스트에 대해 다른 이름을 선택 해야 합니다. 내부 포리스트 이름은 웹 트래픽에 대해 고유하고 제공될 가능성이 없는 이름이어야 합니다(예: corp.contoso.com).  
+-   외부 DNS 이름과 동일한 이름으로 새 Active Directory 포리스트를 만들지 마십시오. 예를 들어 인터넷 DNS URL은 http: \/ /contoso.com 이후 버전과 호환성 문제를 방지 하려면 내부 포리스트에 대해 다른 이름을 선택 해야 합니다. 내부 포리스트 이름은 웹 트래픽에 대해 고유하고 제공될 가능성이 없는 이름이어야 합니다(예: corp.contoso.com).  
   
 -   새 포리스트를 만들 서버에서 관리자그룹의 구성원이어야 합니다.  
   

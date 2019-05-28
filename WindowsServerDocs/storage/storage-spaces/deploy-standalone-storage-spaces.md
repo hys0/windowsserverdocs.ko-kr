@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.technology: storage-spaces
 ms.date: 07/09/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 40265e767ac9aca05386c0893def259aca3a5633
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7090657a0936aed0f4b2e79007f69d7b082b0b8f
+ms.sourcegitcommit: 2977c707a299929c6ab0d1e0adab2e1c644b8306
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59868274"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63750657"
 ---
 # <a name="deploy-storage-spaces-on-a-stand-alone-server"></a>독립 실행형 서버에서 저장소 공간 배포
 
@@ -265,7 +265,7 @@ Get-VirtualDisk –FriendlyName VirtualDisk1 | Get-Disk | Initialize-Disk –Pas
 
 ## <a name="additional-information"></a>추가 정보
 
-- [저장소 공간](overview.md)
+- [스토리지 공간](overview.md)
 - [Windows PowerShell의 저장소 Cmdlet](https://docs.microsoft.com/powershell/module/storage/index?view=win10-ps)
 - [클러스터 된 저장소 공간 배포](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj822937(v%3dws.11))
 - [저장소 공간 질문과 대답 (FAQ)](https://social.technet.microsoft.com/wiki/contents/articles/11382.storage-spaces-frequently-asked-questions-faq.aspx)

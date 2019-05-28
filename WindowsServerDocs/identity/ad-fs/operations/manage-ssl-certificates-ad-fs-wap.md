@@ -9,16 +9,16 @@ ms.date: 10/02/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: abcff8632bc8a3a75af4eee30c3aed046ca0ccc9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9bae831da9d247c423c2874a5928b7f811ef65dc
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59877344"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188715"
 ---
 # <a name="managing-ssl-certificates-in-ad-fs-and-wap-in-windows-server-2016"></a>Windows Server 2016의 AD FS 및 WAP의 SSL 인증서 관리
 
->적용 대상: Windows Server 2016
+
 
 이 문서에서는 AD FS 및 WAP 서버에 새 SSL 인증서를 배포 하는 방법을 설명 합니다.
 
@@ -125,5 +125,5 @@ Install-WebApplicationProxy -FederationServiceTrustCredential $cred -Certificate
 ```
 
 ## <a name="additional-references"></a>추가 참조  
-* [AD FS 인증서 인증에 대 한 대체 호스트 이름 바인딩에 대 한 지원](../operations/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication.md)
+* [인증서 인증의 대체 호스트 이름 바인딩에 대한 AD FS 지원](../operations/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication.md)
 * [AD FS 및 인증서 KeySpec 속성 정보](../technical-reference/AD-FS-and-KeySpec-Property.md)

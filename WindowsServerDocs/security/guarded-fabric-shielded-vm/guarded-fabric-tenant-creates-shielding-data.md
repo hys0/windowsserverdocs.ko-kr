@@ -8,12 +8,12 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 01/30/2019
-ms.openlocfilehash: 1245b88a42b80218b5557dc89f2b97b5d0059d44
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 25ed17d964f12c2f497ccde443dad9f8bc253b20
+ms.sourcegitcommit: 21165734a0f37c4cd702c275e85c9e7c42d6b3cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59852544"
+ms.lasthandoff: 05/03/2019
+ms.locfileid: "65034679"
 ---
 # <a name="shielded-vms-for-tenants---creating-shielding-data-to-define-a-shielded-vm"></a>테 넌 트-보호 된 VM을 정의 하려면 실딩 데이터 만들기에 대 한 보호 된 Vm
 
@@ -35,7 +35,7 @@ ms.locfileid: "59852544"
 
 다음 보호 데이터 파일을 만들 수 있습니다.
 
-- [실딩 데이터 파일을 만들고 보호자를 추가 합니다.](#create-a-shielding-data-file-and-add-guardians)
+- [실딩 데이터 파일을 만들고 보호자를 추가 합니다.](#create-a-shielding-data-file-and-add-guardians-using-the-shielding-data-file-wizard)
 
 
 ## <a name="obtain-a-certificate-for-remote-desktop-connection"></a>원격 데스크톱 연결에 대 한 인증서 가져오기
@@ -211,7 +211,7 @@ New-HgsGuardian -Name "Owner" -GenerateCertificates
 소유자 인증서 및 가상 컴퓨터를 unshield 이러한 있도록를 해당 개인 키를 사용 하도록 해야 인증서를 백업 및 도용 되지 않도록에서 보호 합니다.
 소유자 인증서에 대 한 액세스를 사용 하 여 공격자 보호 된 가상 컴퓨터를 시작 하거나 보안 구성을 변경 하려면 사용할 수 있습니다.
 
-다음 명령을 실행 하는 각 가상 컴퓨터 (에 기본 데이터 센터, 백업 데이터 센터, 등)를 실행 하려는 보호 된 패브릭에서 보호 정보를 가져오는 경우 [메타 데이터 파일에 보호 된 패브릭에서 검색 ](#Select-trusted-fabrics).
+다음 명령을 실행 하는 각 가상 컴퓨터 (에 기본 데이터 센터, 백업 데이터 센터, 등)를 실행 하려는 보호 된 패브릭에서 보호 정보를 가져오는 경우 [메타 데이터 파일에 보호 된 패브릭에서 검색 ](#select-trusted-fabrics).
 
 ```powershell
 Import-HgsGuardian -Name 'EAST-US Datacenter' -Path '.\EastUSGuardian.xml'
@@ -220,7 +220,7 @@ Import-HgsGuardian -Name 'EAST-US Datacenter' -Path '.\EastUSGuardian.xml'
 > [!TIP]
 > 자체 서명 된 인증서 또는 등록 된 인증서를 사용 하 여 HGS 만료 된 경우 사용 해야 합니다 `-AllowUntrustedRoot` 및/또는 `-AllowExpired` 보안 검사를 건너뛸 가져오기 HgsGuardian 명령으로 플래그 합니다.
 
-또한 해야 [볼륨 서명 카탈로그를 가져올](#Get-the-volume-signature-catalog-file) 이 보호 데이터 파일을 사용 하 여 사용 하려는 각 템플릿 디스크에 대 한와 [실딩 데이터 응답 파일](#Create-an-answer-file) 운영 체제를 완료할 수 있도록 해당 특수화는 자동으로 작업 합니다.
+또한 해야 [볼륨 서명 카탈로그를 가져올](#get-the-volume-signature-catalog-file) 이 보호 데이터 파일을 사용 하 여 사용 하려는 각 템플릿 디스크에 대 한와 [실딩 데이터 응답 파일](#create-an-answer-file) 운영 체제를 완료할 수 있도록 해당 특수화는 자동으로 작업 합니다.
 마지막으로, VM 완벽 하 게 보호 하거나 vTPM-을 사용 하도록 설정 하려는 경우를 결정 합니다.
 사용 하 여 `-Policy Shielded` 완벽 하 게 보호 된 VM에 대 한 또는 `-Policy EncryptionSupported` vTPM는 기본적인 콘솔 연결을 허용 하는 VM 및 PowerShell Direct를 사용 합니다.
 
@@ -242,5 +242,5 @@ Cmdlet 설명서를 참조 하십시오 [새로 만들기-ShieldingDataFile](htt
 
 ## <a name="see-also"></a>참조
 
-- [보호 된 Vm 배포](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
-- [보호 된 패브릭 및 보호 된 Vm](guarded-fabric-and-shielded-vms-top-node.md)
+- [보호된 VM 배포](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
+- [보호된 패브릭 및 보호된 VM](guarded-fabric-and-shielded-vms-top-node.md)

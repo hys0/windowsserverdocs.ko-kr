@@ -11,12 +11,12 @@ ms.assetid: 95ea5f7c-25c6-494b-8ffd-2a77f631ee94
 author: shirgall
 ms.author: shirgall
 ms.date: 11/19/2018
-ms.openlocfilehash: afba885fc49ba129c0ef452704cbfe9f9cf884ba
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: b58193ec570cf0d94b6c95018b8c00c813331986
+ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59834044"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66222638"
 ---
 # <a name="supported-ubuntu-virtual-machines-on-hyper-v"></a>Hyper-v에서 지원 되는 Ubuntu 가상 컴퓨터
 
@@ -39,42 +39,42 @@ Ubuntu 12.04 부터는 게스트 가상 컴퓨터로 사용 하기에 적합 한
 |**기능**|**Windows Server 운영 체제 버전**|**18.10**|**18.04 LTS**|**16.04 LTS**|**14.04 LTS**|**12.04 LTS**|
 |-|-|-|-|-|-|-|
 |**가용성**||기본 제공|기본 제공|기본 제공|기본 제공|기본 제공|
-|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Windows Server 2016 정확한 시간|2019, 2016|&#10004;|&#10004;|&#10004;|||
-|**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)**|||||||
+|**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**|||||||
 |Jumbo 프레임|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |VLAN 태깅, 트렁킹|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |실시간 마이그레이션|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|정적 IP 주입|2019, 2016, 2012 R2, 2012|&#10004; 참고 1|&#10004; 참고 1|&#10004; 참고 1|&#10004; 참고 1|&#10004; 참고 1|
+|정적 IP 주입|2019, 2016, 2012 R2, 2012|& #10004; 참고 1|&#10004; 참고 1|&#10004; 참고 1|&#10004; 참고 1|& #10004; 참고 1|
 |vRSS|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;||
 |TCP 조각화와 체크섬 오프 로드|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;||
 |SR-IOV|2019, 2016|&#10004;|&#10004;|&#10004;|||
-|**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**||||||
+|**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**||||||
 |VHDX 크기 조정|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;||
-|가상 파이버 채널|2019, 2016, 2012 R2|&#10004; 참고 2|&#10004; 참고 2|&#10004; 참고 2|&#10004; 참고 2||
-|가상 머신 백업|2019, 2016, 2012 R2|&#10004;3, 4, 6 note|&#10004; Note 3, 4, 5|&#10004; Note 3, 4, 5|&#10004; Note 3, 4, 5||
+|가상 파이버 채널|2019, 2016, 2012 R2|& #10004; 참고 2|& #10004; 참고 2|& #10004; 참고 2|&#10004; 참고 2||
+|가상 머신 백업|2019, 2016, 2012 R2|&#10004;3, 4, 6 note|& #10004; Note 3, 4, 5|& #10004; Note 3, 4, 5|& #10004; Note 3, 4, 5||
 |TRIM 지원|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |SCSI WWN|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;||
-|**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**||||||
+|**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)**||||||
 |PAE 커널 지원|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |MMIO 간격 구성|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|동적 메모리-즉석 추가|2019, 2016, 2012 R2, 2012|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9||
-|동적 메모리-Ballooning|2019, 2016, 2012 R2, 2012|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9||
+|동적 메모리-즉석 추가|2019, 2016, 2012 R2, 2012|& #10004; Note 7, 8, 9|& #10004; Note 7, 8, 9|& #10004; Note 7, 8, 9|& #10004; Note 7, 8, 9||
+|동적 메모리-Ballooning|2019, 2016, 2012 R2, 2012|& #10004; Note 7, 8, 9|& #10004; Note 7, 8, 9|& #10004; Note 7, 8, 9|& #10004; Note 7, 8, 9||
 |런타임 메모리 크기 조정|2019, 2016|&#10004;|&#10004;|&#10004;|&#10004;||
-|**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**|||||||
+|**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**|||||||
 |Hyper-v 특정 비디오 장치|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;||
-|**[기타](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)**||||||
-|키/값 쌍|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;Note 6, 10|&#10004; 참고 5, 10|&#10004; 참고 5, 10|&#10004; 참고 5, 10|&#10004; 참고 5, 10|
+|**[기타](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)**||||||
+|키/값 쌍|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;Note 6, 10|& #10004; 참고 5, 10|& #10004; 참고 5, 10|& #10004; 참고 5, 10|& #10004; 참고 5, 10|
 |마스크 불가능 인터럽트|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |호스트에서 게스트로 파일 복사|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;||
 |lsvmbus 명령|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;||
 |Hyper-v 소켓|2019, 2016||||||
 |PCI 통과/DDA|2019, 2016|&#10004;|&#10004;|&#10004;|&#10004;||
-|**[2 세대 가상 컴퓨터](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)**||||||
-|UEFI를 사용 하 여 부팅|2019, 2016, 2012 R2|&#10004; 참고 11, 12|&#10004; 참고 11, 12|&#10004; 참고 11, 12|&#10004; 참고 11, 12||
+|**[2 세대 가상 컴퓨터](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines)**||||||
+|UEFI를 사용 하 여 부팅|2019, 2016, 2012 R2|& #10004; 참고 11, 12|& #10004; 참고 11, 12|& #10004; 참고 11, 12|& #10004; 참고 11, 12||
 |보안 부팅|2019, 2016|&#10004;|&#10004;|&#10004;|&#10004;||
 
-## <a name="BKMK_notes"></a>참고 사항
+## <a name="notes"></a>참고
 
 1. 정적 IP 주입 하는 경우 작동 하지 않을 수 **네트워크 관리자** 가 가상 컴퓨터에는 지정 된 하이퍼-V-특정 네트워크 어댑터 구성 되었습니다. 고정 IP를 원활 하 게 작동 되도록 주입 확인 네트워크 관리자 완전히 해제 하 여 특정 네트워크 어댑터에 대 한 해제 되었습니다 해당 **ifcfg ethX** 파일입니다.
 
@@ -184,7 +184,7 @@ Ubuntu 12.04 부터는 게스트 가상 컴퓨터로 사용 하기에 적합 한
 
 * [CentOS 지원 및 Hyper-v Red Hat Enterprise Linux 가상 컴퓨터](Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md)
 
-* [Hyper-v의 Debian 가상 컴퓨터를 지원](Supported-Debian-virtual-machines-on-Hyper-V.md)
+* [Hyper-V에서 지원되는 Debian 가상 머신](Supported-Debian-virtual-machines-on-Hyper-V.md)
 
 * [Hyper-v에서 지원 되는 Oracle Linux 가상 컴퓨터](Supported-Oracle-Linux-virtual-machines-on-Hyper-V.md)
 

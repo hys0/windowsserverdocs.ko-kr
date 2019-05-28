@@ -9,16 +9,14 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: af0aa61f0d16d4ca567b140c95d74445d09f1cf3
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e16289142ea2e53adba52a4ed8f6c01a929a530d
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59879304"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192224"
 ---
 # <a name="create-the-first-federation-server-in-a-federation-server-farm"></a>페더레이션 서버 팜의 첫 번째 페더레이션 서버 만들기
-
- >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 페더레이션 서비스 역할 서비스를 설치 하 고 컴퓨터에 필요한 인증서를 구성 했으면 컴퓨터 페더레이션 서버를 구성할 수 있습니다. AD FS 페더레이션 서버 구성 마법사를 사용 하 여 새 페더레이션 서버 팜에서 첫 번째 페더레이션 서버에 컴퓨터를 설정 하려면 다음 절차를 사용할 수 있습니다.  
   

@@ -9,23 +9,25 @@ ms.topic: article
 author: kaushika-msft
 ms.date: 10/24/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: ecf3cb5703a90976dce15abbd0c9fdd1d4aa24ec
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 48099ad15465b885ccaf562bcf94b4bafdeff388
+ms.sourcegitcommit: 4ff3d00df3148e4bea08056cea9f1c3b52086e5d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59812634"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64772628"
 ---
 # <a name="troubleshoot-storage-spaces-direct"></a>저장소 공간 다이렉트 해결
+
+> 적용 대상: Windows Server 2019, Windows Server 2016
 
 저장소 공간 다이렉트 배포 문제를 해결 하려면 다음 정보를 사용 합니다.
 
 일반적으로 다음 단계를 시작 합니다.
 
-1. SSD의 메이커/모델은 Windows Server 카탈로그를 사용 하 여 Windows Server 2016에 대해 인증을 확인 합니다. 저장소 공간 다이렉트에 대 한 드라이브는 지원 되는 공급 업체를 사용 하 여 확인 합니다.
+1. Windows Server 2016 및 Windows Server 카탈로그를 사용 하 여 Windows Server 2019 ssd 메이커/모델 하도록 인증 되었는지 확인 합니다. 저장소 공간 다이렉트에 대 한 드라이브는 지원 되는 공급 업체를 사용 하 여 확인 합니다.
 2. 잘못 된 모든 드라이브에 대 한 저장소를 검사 합니다. 저장소 관리 소프트웨어를 사용 하 여 드라이브의 상태를 확인 합니다. 드라이브의 있는 경우 결함이 있는, 공급 업체와 함께 작동 합니다. 
 3. 저장소를 업데이트 하 고 필요한 경우에 드라이브 펌웨어.
-   모든 노드에 설치 된 최신 Windows 업데이트를 확인 합니다. Windows Server 2016에 대 한 최신 업데이트를 가져올 수 있습니다 [ https://aka.ms/update2016 ](https://aka.ms/update2016)합니다.
+   모든 노드에 설치 된 최신 Windows 업데이트를 확인 합니다. Windows Server 2016에 대 한 최신 업데이트를 가져올 수 있습니다 [Windows Server 2016 및 Windows 10 업데이트 기록](https://aka.ms/update2016) 및에서 Windows Server 2019 [Windows 10 및 Windows Server 2019 기록을 업데이트](https://support.microsoft.com/help/4464619)합니다.
 4. 네트워크 어댑터 드라이버 및 펌웨어를 업데이트 합니다.
 5. 클러스터 유효성 검사를 실행 하 고 저장소 공간 다이렉트 섹션을 검토, 캐시에 사용 되는 드라이브는 올바르게 보고 확인 하 고 오류 없이 합니다.
 
@@ -195,7 +197,8 @@ Volume Name:
     
 ## <a name="event-5120-with-statusiotimeout-c00000b5"></a>STATUS_IO_TIMEOUT c00000b5 5120 이벤트 
 
->[! 중요 한} 수정 된 업데이트를 적용 하는 동안 이러한 현상이 발생할 가능성을 줄이기 위해 것이 좋습니다 저장소 유지 관리 모드 아래 절차를 설치 하는 [2018 년 10 월 18 일 Windows Server 2016 용 누적 업데이트 ](https://support.microsoft.com/help/4462928) 노드에서 현재 설치 된 Windows Server 2016 누적 업데이트에서 출시 된 경우 이상 버전 [2018 년 5 월 8 일](https://support.microsoft.com/help/4103723) 하 [2018 년 10 월 9 일](https://support.microsoft.com/help/KB4462917)합니다.
+> [!Important]
+> **Windows server 2016:** 수정 된 업데이트를 적용 하는 동안 이러한 현상이 발생할 가능성을 줄이기 위해 것이 좋습니다 저장소 유지 관리 모드 아래 절차를 설치 하는 [2018 년 10 월 18 일의 누적 업데이트는 Windows Server 2016](https://support.microsoft.com/help/4462928)노드가 현재 설치 된 Windows Server 2016 누적 업데이트에서 출시 된 경우 이상 버전 [2018 년 5 월 8](https://support.microsoft.com/help/4103723) 하 [2018 년 10 월 9 일](https://support.microsoft.com/help/KB4462917)합니다.
 
 Windows Server 2016에서에서 발표 된 누적 업데이트를 사용 하 여 노드를 다시 시작한 후 이벤트 5120 STATUS_IO_TIMEOUT c00000b5 사용 하 여 발생할 수 있습니다 [8 2018 년 5 월 KB 4103723](https://support.microsoft.com/help/4103723) 에 [2018 년 10 월 9, KB 4462917](https://support.microsoft.com/help/4462917)설치 합니다.
 
@@ -217,11 +220,7 @@ Event ID: 1135
 Description: Cluster node 'NODENAME'was removed from the active failover cluster membership. The Cluster service on this node may have stopped. This could also be due to the node having lost communication with other active nodes in the failover cluster. Run the Validate a Configuration wizard to check your network configuration. If the condition persists, check for hardware or software errors related to the network adapters on this node. Also check for failures in any other network components to which the node is connected such as hubs, switches, or bridges.
 ```
 
-저장소 공간 다이렉트 클러스터 간 SMB 네트워크 세션에 대 한 SMB 복원 력 있는 처리를 추가 하려면 2018 년 5 월 8 일 누적 업데이트에서 변경 내용을 도입 되었습니다. 이렇게 일시적인 네트워크 오류에 대 한 탄력성 RoCE 네트워크 정체를 처리 하는 방법을 개선할 수 있습니다.
-
-이러한 향상 된이 기능 또한 실수로 증가 SMB 연결에 다시 연결 하려고 하는 경우 시간 제한 및 제한 시간 대기 노드를 다시 시작할 때. 이러한 문제는 시스템은 부하가 발생할 수 있습니다. 계획 되지 않은 가동 중지 시간 중 최대 60 초 일시 중지 IO도 관찰 한 시스템 연결 제한 시간을 대기 하는 동안.
-
-이 문제를 해결 하려면 설치 합니다 [2018 년 10 월 18 일 Windows Server 2016 용 누적 업데이트](https://support.microsoft.com/help/4462928) 이상 버전.
+2018 년 5 월 8, Windows Server 2016에에서 도입 된 저장소 공간 다이렉트 클러스터 간 SMB 네트워크 세션에 대 한 SMB 복원 력 있는 처리를 추가 하려면 누적 업데이트 된 변경 합니다. 이렇게 일시적인 네트워크 오류에 대 한 탄력성 RoCE 네트워크 정체를 처리 하는 방법을 개선할 수 있습니다. 이러한 향상 된이 기능 또한 실수로 증가 SMB 연결에 다시 연결 하려고 하는 경우 시간 제한 및 제한 시간 대기 노드를 다시 시작할 때. 이러한 문제는 시스템은 부하가 발생할 수 있습니다. 계획 되지 않은 가동 중지 시간 중 최대 60 초 일시 중지 IO도 관찰 한 시스템 연결 제한 시간을 대기 하는 동안. 이 문제를 해결 하려면 설치 합니다 [2018 년 10 월 18 일 Windows Server 2016 용 누적 업데이트](https://support.microsoft.com/help/4462928) 이상 버전.
 
 *참고* 이 업데이트에는이 문제를 해결 하려면 SMB 연결 시간 제한이 있는 CSV 제한 맞춥니다. 해결 방법 섹션에 언급 된 라이브 덤프 생성 하지 않으려면 변경 내용을 구현 하지 않습니다.
     
@@ -455,4 +454,4 @@ Azure Vm을 실행 하는 경우에이 이벤트를 무시할 수 있습니다.
 >[!NOTE]
 > 개별 Oem 고유 펌웨어 버전 문자열을 사용 하 여 NVMe 장치는 Intel P3x00 제품군을 기반으로 하는 장치에 있을 수 있습니다. 자세한 최신 펌웨어 버전에 대 한 OEM에 문의 합니다.
 
-하드웨어 기반 NVMe 장치는 Intel P3x00 제품군으로 배포를 사용 하는 경우 사용 가능한 최신 펌웨어를 즉시 적용 하는 것이 좋습니다 (적어도 유지 관리 릴리스 8). 이렇게 [Microsoft 지원 문서](https://support.microsoft.com/en-us/help/4052341/slow-performance-or-lost-communication-io-error-detached-or-no-redunda) 이 문제에 대 한 추가 정보를 제공 합니다. 
+하드웨어 기반 NVMe 장치는 Intel P3x00 제품군으로 배포를 사용 하는 경우 사용 가능한 최신 펌웨어를 즉시 적용 하는 것이 좋습니다 (적어도 유지 관리 릴리스 8). 이렇게 [Microsoft 지원 문서](https://support.microsoft.com/help/4052341/slow-performance-or-lost-communication-io-error-detached-or-no-redunda) 이 문제에 대 한 추가 정보를 제공 합니다. 

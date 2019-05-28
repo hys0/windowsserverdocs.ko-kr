@@ -11,12 +11,12 @@ ms.assetid: a9ee931d-91fc-40cf-9a15-ed6fa6965cb6
 author: shirgall
 ms.author: kathydav
 ms.date: 10/03/2016
-ms.openlocfilehash: 944f8e9d902953ab4d6da0750603a2c40fa9e96d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a574275f6d3495a9cc9bff36fa785f28a7cd8d6f
+ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59844894"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66222881"
 ---
 # <a name="feature-descriptions-for-linux-and-freebsd-virtual-machines-on-hyper-v"></a>Hyper-v의 Linux 및 FreeBSD 가상 컴퓨터에 대 한 설명이
 
@@ -24,7 +24,7 @@ ms.locfileid: "59844894"
 
 이 문서에서는 Linux 및 FreeBSD 가상 컴퓨터에서 사용 하는 경우 코어, 네트워킹, 저장소 및 메모리와 같은 구성 요소에서 사용 가능한 기능을 설명 합니다.
 
-## <a name="BKMK_core"></a>코어
+## <a name="core"></a>Core
 
 |**기능**|**설명**|
 |-|-|
@@ -37,7 +37,7 @@ ms.locfileid: "59844894"
 |Hyper-v 특정 저장 장치|이 기능은 고성능 가상 머신에 연결 된 저장소 장치에 대 한 액세스 권한을 부여 합니다.|
 |Hyper-v가 특정 네트워크 장치|이 기능은 가상 머신에 연결 된 네트워크 어댑터에 고성능 액세스 권한을 부여 합니다.|
 
-## <a name="BKMK_Networking"></a>네트워킹
+## <a name="networking"></a>네트워킹
 
 |**기능**|**설명**|
 |-|-|
@@ -50,7 +50,7 @@ ms.locfileid: "59844894"
 |큰 오프 로드 (LRO)를 수신 합니다.|CPU 오버 헤드 감소, 더 큰 버퍼로 여러 패킷으로 집계 하 여 고대역폭 연결의 인바운드 처리량이 늘어납니다.|
 |SR-IOV|단일 루트 I/O 장치 DDA를 사용 하 여 대기 시간 단축된 및 향상 된 처리량을 허용 하는 특정 NIC 카드의 일부에 대 한 게스트 액세스를 허용 하도록 합니다. SR-IOV에는 호스트에서 최신 실제 함수 (PF) 드라이버 및 게스트의 가상 함수 (VF) 드라이버가 필요합니다.|
 
-## <a name="BKMK_Storage"></a>Storage
+## <a name="storage"></a>저장 공간
 
 |**기능**|**설명**|
 |-|-|
@@ -60,7 +60,7 @@ ms.locfileid: "59844894"
 |TRIM 지원|TRIM 힌트는 이전에 할당 된 특정 섹터 앱에서 더 이상 필요 하며 제거할 수 있는 드라이브를 알립니다. 이 프로세스는 일반적으로 앱 파일을 통해 큰 공간 할당을 사용 하면 고 그런 다음 자체 관리 파일에 할당을 예를 들어, 가상 하드 디스크 파일에 사용 됩니다.|
 |SCSI WWN|Storvsc 드라이버에서 포트 및 가상 컴퓨터에 연결 된 장치는 노드 이름 WWN (World Wide) 정보를 추출 하 고 적절 한 sysfs 파일을 만듭니다. |
 
-## <a name="BKMK_Memory"></a>메모리
+## <a name="memory"></a>메모리
 
 |**기능**|**설명**|
 |-|-|
@@ -70,13 +70,13 @@ ms.locfileid: "59844894"
 |동적 메모리-Ballooning|호스트 수 동적으로 늘리거나 가상 컴퓨터에 사용할 수 있는 메모리의 양을 작업 중인 동안. 프로 비전 하기 전에 관리자가 가상 컴퓨터 설정 패널의 동적 메모리를 사용 하 고 가상 컴퓨터에 대 한 시작 메모리, 최소 메모리 및 최대 메모리를 지정 합니다. 가상 컴퓨터 인 경우 동적 메모리를 해제할 수 없는 작업 및 최소값 및 최대값 설정을 변경할 수 있습니다. (것은 128MB의 배수로으로 이러한 메모리 크기를 지정 하는 것이 좋습니다.)<br /><br />가상 컴퓨터를 먼저 사용할 수 있는 시작할 때 메모리와 같은지를 **시작 메모리**합니다. 응용 프로그램 작업으로 인해 메모리 수요가 증가 하면 Hyper-v Hot-add 메커니즘 (위 참조)을 통해 가상 컴퓨터에 더 많은 메모리를 동적으로 할당할 수 있습니다. 메모리 수요가 감소 하는 대로 Hyper-v 수 자동으로 프로 비전을 해제 풍선 메커니즘을 통해 가상 컴퓨터에서 메모리입니다. Hyper-v는 프로 비전을 해제할 메모리 아래는 **최소 메모리** 매개 변수입니다.<br /><br />Hyper-v 관리자의 메모리 탭에는 가상 컴퓨터에 할당 된 메모리의 양을 표시 됩니다 하지만 가상 컴퓨터 내에서 메모리 통계 최고 할당 된 메모리 양이 표시 됩니다.<br /><br />자세한 내용은 참조 [Hyper-v 동적 메모리 개요](https://technet.microsoft.com/library/hh831766.aspx)합니다.<br /><br />|
 |런타임 메모리 크기 조정|관리자가 설정할 수 사용 가능한 메모리 양을 가상 컴퓨터에 작업 중인 ("핫" 추가) 하는 메모리 증가 또는 감소 ("핫 제거"). 메모리 벌 룬 드라이버를 통해 Hyper-v에 반환 됩니다 ("동적 메모리-Ballooning" 참조). 벌 룬 드라이버 유지은 현재 수요와이 floor 금액 아래 ballooning를 "최소"를 호출 하므로 메모리를 할당 한 후 사용 가능한 메모리의 최소 크기를 줄일 수 없습니다. Hyper-v 관리자의 메모리 탭에는 가상 컴퓨터에 할당 된 메모리의 양을 표시 됩니다 하지만 가상 컴퓨터 내에서 메모리 통계 최고 할당 된 메모리 양이 표시 됩니다. (것은 여러 128MB의 메모리 값을 지정 하는 것이 좋습니다.)|
 
-## <a name="BKMK_Video"></a>Video
+## <a name="video"></a>비디오
 
 |**기능**|**설명**|
 |-|-|
 |하이퍼-V-특정 비디오 장치|이 기능은 가상 머신에 대 한 그래픽 고성능 및 탁월한 해상도 제공합니다. 이 장치에서 고급 세션 모드 또는 RemoteFX 기능을 제공 하지 않습니다.|
 
-## <a name="BKMK_Misc"></a>기타
+## <a name="miscellaneous"></a>기타
 
 |**기능**|**설명**|
 |-|-|
@@ -87,7 +87,7 @@ ms.locfileid: "59844894"
 |Hyper-v 소켓|호스트 및 게스트 운영 체제 간에 추가 통신 채널입니다. 로드 하 고 Hyper-v 소켓 커널 모듈을 사용 하 여, 참조 [통합 서비스를 직접 만들](https://msdn.microsoft.com/virtualization/hyperv_on_windows/develop/make_mgmt_service)합니다.|
 |PCI 통과/DDA|Windows Server 2016 불연속 장치 할당 메커니즘을 통해 관리자는 PCI Express 장치를 통해 전달할 수 있습니다. 일반적인 장치는 네트워크 카드, 그래픽 카드 및 특수 저장 장치입니다. 가상 컴퓨터에 노출 된 하드웨어를 사용 하 여 적절 한 드라이버가 필요 합니다. 하드웨어를 사용할 수 있도록 가상 컴퓨터에 할당 되어야 합니다.<br /><br />자세한 내용은 참조 [불연속 장치 할당-설명 및 배경](https://blogs.technet.microsoft.com/virtualization/2015/11/19/discrete-device-assignment-description-and-background/)합니다.<br /><br />DDA는 SR-IOV 네트워킹에 대 한 필수 조건입니다. 가상 포트는 가상 컴퓨터에 할당 해야 하 고 가상 컴퓨터 장치 멀티플렉싱에 대 한 올바른 VF (가상 함수) 드라이버를 사용 해야 합니다.|
 
-## <a name="BKMK_gen2"></a>2 세대 가상 컴퓨터
+## <a name="generation-2-virtual-machines"></a>2세대 가상 컴퓨터
 
 |**기능**|**설명**|
 |-|-|
@@ -98,7 +98,7 @@ ms.locfileid: "59844894"
 
 * [CentOS 지원 및 Hyper-v Red Hat Enterprise Linux 가상 컴퓨터](Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md)
 
-* [Hyper-v의 Debian 가상 컴퓨터를 지원](Supported-Debian-virtual-machines-on-Hyper-V.md)
+* [Hyper-V에서 지원되는 Debian 가상 머신](Supported-Debian-virtual-machines-on-Hyper-V.md)
 
 * [Hyper-v에서 지원 되는 Oracle Linux 가상 컴퓨터](Supported-Oracle-Linux-virtual-machines-on-Hyper-V.md)
 

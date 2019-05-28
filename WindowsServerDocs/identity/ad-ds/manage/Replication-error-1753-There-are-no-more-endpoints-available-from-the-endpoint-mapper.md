@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: e429c87a2194ecfaf02c3d6c579eda75293250d4
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a280d540d09c6fdcb7846d1cf545856869be1152
+ms.sourcegitcommit: b190fac4bfa5599751a60d3fc3b4c4a64dd9afd7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59827514"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66008961"
 ---
 # <a name="replication-error-1753-there-are-no-more-endpoints-available-from-the-endpoint-mapper"></a>복제 오류 1753 끝점 매퍼에서 사용할 수 있는 끝점이 더 이상 없음
 
@@ -194,7 +194,6 @@ Windows Server 2008 또는 Windows Server 2008 R2에 대 한: 원본 DC의 콘�
           <code>c:&gt;nslookup -type=cname &lt;fully qualified cname of source DC&gt; &lt;destination DCs primary DNS Server IP &gt;
 c:&gt;nslookup -type=cname &lt;fully qualified cname of source DC&gt; &lt;destination DCs secondary DNS Server IP&gt;</code>
           <para>NSLOOKUP에서 반환 된 IP 주소 "을 소유 하는지 확인" 호스트 이름 / 원본 DC의 보안 id:</para>
-
           <code>C:&gt;NBTSTAT -A &lt;IP address returned by NSLOOKUP in the step above&gt;</code>
           <para>로 구분하거나 여러</para>
           <para>원본 DC의 콘솔을 로그온, CMD 프롬프트에서 "IPCONFIG"를 실행 하 고, 원본 DC 위의 NSLOOKUP 명령에서 반환 된 IP 주소를 소유 하는지 확인</para>
@@ -218,7 +217,7 @@ NSLOOKUP -type=hostname &lt;fully qualified computer name of source DC&gt; &lt;s
                   <para>RPC 서버 응용 프로그램</para>
                 </TD>
                 <TD>
-                  <para>포트</para>
+                  <para>Port</para>
                 </TD>
                 <TD>
                   <para>TCP</para>

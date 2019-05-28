@@ -9,15 +9,13 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 305bf0cece742c961604dacda7e27b8eac8065e5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 677d3136305cbddd29f2fd782be33ae1e824d096
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59812224"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188554"
 ---
->적용 대상: Windows Server 2016, Windows Server 2012 R2
-
 # <a name="how-uris-are-used-in-ad-fs"></a>AD FS에서 URI를 사용하는 방법
 Uniform Resource Identifier \(URI\) 는 고유 식별자로 사용 되는 문자의 문자열입니다.  AD FS에서 URI는 파트너 네트워크 주소와 구성 개체를 모두 식별하는 데 사용됩니다.  파트너 네트워크 주소를 식별하는 데 사용되는 경우 URI는 항상 URL이고,  구성 개체를 식별하는 데 사용되는 경우 URI는 URN 또는 URL일 수 있습니다.  URI에 대한 자세한 내용은 [RFC 2396](https://go.microsoft.com/fwlink/?LinkId=48289) 및 [RFC 3986](https://go.microsoft.com/fwlink/?LinkId=90453)을 참조하세요.  
   
@@ -63,7 +61,7 @@ URI의 경로 구문은 계층적으로 구성 되 고 모두로 구분 됩니�
   
 다음 표에서는 추가 예제를 제공합니다.  
   
-|AD FS 구성 데이터베이스의 신뢰 당사자 식별자|요청 메시지의 신뢰 당사자 식별자|요청 식별자가 구성 식별자와 일치하는지 여부|이유|  
+|AD FS 구성 데이터베이스의 신뢰 당사자 식별자|요청 메시지의 신뢰 당사자 식별자|요청 식별자가 구성 식별자와 일치하는지 여부|Reason|  
 |------------------------------------------------------------|-----------------------------------------------|------------------------------------------------------------|----------|  
 |http:\/\/contoso.com|http:\/\/contoso.com|TRUE|정확히 일치|  
 |http:\/\/contoso.com\/|http:\/\/contoso.com|TRUE|후행 슬래시가 무시됩니다.|  

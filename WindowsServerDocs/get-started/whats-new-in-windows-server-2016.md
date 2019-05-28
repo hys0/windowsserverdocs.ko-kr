@@ -5,34 +5,30 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 01/05/2017
+ms.date: 05/21/2019
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2827f332-44d4-4785-8b13-98429087dcc7
-author: jaimeo
-ms.author: jaimeo
+author: jasongerend
+ms.author: jgerend
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: b504c3396200502a09467ae97a36f9de613e4820
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8d36961558066197a54f42d27a3560d653bd81f2
+ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59830334"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65976629"
 ---
 # <a name="whats-new-in-windows-server-2016"></a>Windows Server 2016의 새로운 기능
 
 >적용 대상: Windows Server 2016
 
-<img src="media/whats-new.png" style='float:left; padding:.5em;' alt="Icon showing a newspaper">이 섹션은 Windows Server&reg; 2016의 새로운 기능과 변경된 기능을 설명하는 내용입니다. 여기에 나열된 새로운 기능 및 변경 사항은 이 릴리스를 사용할 때 가장 많은 영향을 줄 수 있습니다.  
-   
-<br>
-<br>
-<br>
-<br>
-<br>
-## <a name="computevirtualizationvirtualizationmd"></a>[계산](../virtualization/virtualization.md)  
+<img src="media/whats-new.png" style='float:left; padding:.5em;' alt="Icon showing a newspaper">Windows의 최신 기능을 알아보려면 [What's New in Windows Server](whats-new-in-windows-server.md)합니다. 이 섹션은 Windows Server&reg; 2016의 새로운 기능과 변경된 기능을 설명하는 내용입니다. 여기에 나열된 새로운 기능 및 변경 사항은 이 릴리스를 사용할 때 가장 많은 영향을 줄 수 있습니다.  
+
+## <a name="computevirtualizationvirtualizationmd"></a>[계산](../virtualization/virtualization.md)
+
 가상화 영역에는 IT 전문가가 Windows Server를 디자인, 배포 및 유지 관리하는 데 유용한 가상화 제품 및 기능이 포함됩니다.  
 
 ### <a name="general"></a>일반  
@@ -67,7 +63,7 @@ Windows Server 2016에서는 손상된 패브릭에서 모든 2세대 가상 컴
 
 보호된 가상 컴퓨터 작업에 대한 지침은 [Windows Server 2016(TPM)에 대한 보호된 VM 및 보호된 패브릭 유효성 검사 가이드](https://aka.ms/shieldedvms)를 참조하세요.  
 
-## <a name="identity-and-accessidentityidentity-and-accessmd"></a>[Id 및 액세스](../identity/Identity-and-Access.md)  
+## <a name="identity-and-accessidentityidentity-and-accessmd"></a>[ID 및 액세스](../identity/Identity-and-Access.md)  
 ID의 새로운 기능은 조직에서 Active Directory 환경을 보호하고 클라우드 전용 배포 및 하이브리드 배포(일부 응용 프로그램 및 서비스는 클라우드에서 호스트되고 다른 응용 프로그램 및 서비스는 온-프레미스에서 호스트됨)로 마이그레이션할 수 있는 기능을 개선합니다.  
 
 ### <a name="active-directory-certificate-services"></a>Active Directory 인증서 서비스  
@@ -162,7 +158,7 @@ Windows Server 2016의 저장소에는 소프트웨어 정의 저장소와 기�
 
 자세한 내용은 [저장소 서비스 품질](../storage/storage-qos/storage-qos-overview.md)을 참조하세요.
 
-## <a name="failover-clusteringfailover-clusteringwhats-new-in-failover-clusteringmd"></a>[장애 조치 클러스터링](../failover-clustering/whats-new-in-failover-clustering.md)
+## <a name="failover-clusteringfailover-clusteringwhats-new-in-failover-clusteringmd"></a>[장애 조치(failover) 클러스터링](../failover-clustering/whats-new-in-failover-clustering.md)
 
 Windows Server 2016에는 여러 새로운 기능과 장애 조치(failover) 클러스터링 기능을 사용하여 여러 서버가 하나의 내결함성 클러스터로 함께 그룹화되는 향상된 기능이 포함됩니다. 몇 가지 추가 사항이 아래에 나와 있으며 전체 목록을 보려면 [Windows Server 2016 장애 조치(failover) 클러스터의 새로운 기능](../failover-clustering/whats-new-in-failover-clustering.md)을 참조하세요.
 
@@ -208,5 +204,5 @@ Microsoft Windows 10 및 Windows Server 2016에 다음과 같은 새로운 기�
 
 
 ## <a name="see-also"></a>관련 항목  
--   [릴리스 정보: Windows Server 2016의에서 주요 문제점](Windows-Server-2016-GA-Release-Notes.md)  
+-   [릴리스 정보: Windows Server 2016의 중요한 이슈](Windows-Server-2016-GA-Release-Notes.md)  
 

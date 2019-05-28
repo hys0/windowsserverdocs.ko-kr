@@ -9,16 +9,16 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: e660c1dabcc5a683fa74068ea148fd4efbeee569
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3f2a6df6a9c9a5cbdfa9c64bc6521e92f4982a15
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59890214"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191726"
 ---
-# <a name="ad-fs-design-guide-in-windows-server-2012"></a>Windows Server 2012의 AD FS 디자인 가이드
+# <a name="ad-fs-design-guide-in-windows-server"></a>Windows server에서 AD FS 디자인 가이드 
 
->적용 대상: Windows Server 2012
+
   
 > [!NOTE]  
 > Windows Server 2012 R2에서 AD FS를 배포 하는 방법에 대 한 자세한 내용은 [Windows Server 2012 R2 AD FS 배포 가이드](../../ad-fs/deployment/Windows-Server-2012-R2-AD-FS-Deployment-Guide.md)합니다.  
@@ -38,7 +38,7 @@ Active Directory® Federation Services를 사용할 수 있습니다 \(AD FS\) W
   
 ## <a name="in-this-guide"></a>이 가이드의 내용  
   
--   [AD FS 배포 목표 식별](Identifying-Your-AD-FS-Deployment-Goals.md)  
+-   [AD FS 배포 목표 확인](Identifying-Your-AD-FS-Deployment-Goals.md)  
   
 -   [AD FS 디자인에 배포 목표 매핑](Mapping-Your-Deployment-Goals-to-an-AD-FS-Design.md)  
   
@@ -52,6 +52,6 @@ Active Directory® Federation Services를 사용할 수 있습니다 \(AD FS\) W
   
 -   [AD FS 서버 용량 계획](Planning-for-AD-FS-Server-Capacity.md)  
   
--   [부록 a: AD FS 요구 사항 검토](Appendix-A--Reviewing-AD-FS-Requirements.md)  
+-   [부록 A: AD FS 요구 사항 검토](Appendix-A--Reviewing-AD-FS-Requirements.md)  
   
 

@@ -9,16 +9,14 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: fd075c5b7d1bfce89cc27c4917a016e7e5037ce5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4b70b0b048f66f9a8ba19cd7990dde57e0655ae4
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59888294"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192235"
 ---
 # <a name="create-a-stand-alone-federation-server"></a>독립 실행형 페더레이션 서버 만들기
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 페더레이션 서비스 역할 서비스를 설치 하 고 컴퓨터에 필요한 인증서를 구성 했으면 컴퓨터 페더레이션 서버를 구성할 수 있습니다. 다음 절차를 사용 하 여 독립 될 컴퓨터를 설정 하려면\-만 페더레이션 서버입니다. 스탠드를 만드는 작업\-만 페더레이션 서버에도 새 페더레이션 서비스를 만듭니다. AD FS 페더레이션 서버 구성 마법사를 사용 하 여 페더레이션 서버를 만들지 합니다.  
   

@@ -13,23 +13,23 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8750094e7357a3aefa307d24abd1470fbf8d2a71
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 7cf99a9124f78189de223018608d9864e51d7897
+ms.sourcegitcommit: 08eba714d3ceb5f2dfb5486d6b990da1aa4dcbdd
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59867174"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65564688"
 ---
 # <a name="manage-bde-wipefreespace"></a>manage-bde: WipeFreeSpace
 
 
 
-공간에 존재 했을 수 있는 모든 데이터 조각 제거 볼륨의 여유 공간을 초기화 합니다. "사용된 된 공간만 사용 하 여 암호화 된 볼륨에이 명령을 실행? 암호화 방법을 동일한 수준의 "전체 볼륨 암호화 한 보호를 제공합니다? 암호화 방법입니다. 이 명령을 사용할 수 있는 방법을의 예 참조 [예제](#BKMK_Examples)합니다.
+공간에 존재 했을 수 있는 모든 데이터 조각 제거 볼륨의 여유 공간을 초기화 합니다. "사용 중인 공간만" 암호화 메서드를 사용 하 여 암호화 된 볼륨에서이 명령을 실행 하는 동일한 수준의 보호를 "전체 볼륨 암호화" 암호화 방법으로 제공 합니다. 이 명령을 사용할 수 있는 방법을의 예 참조 [예제](#BKMK_Examples)합니다.
 
 ## <a name="syntax"></a>구문
 
 ```
-manage-bde –WipeFreeSpace|-w [<Drive>] [-Cancel] [-computername <Name>] [{-?|/?}] [{-help|-h}]
+manage-bde -WipeFreeSpace|-w [<Drive>] [-Cancel] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 ```
 
 ### <a name="parameters"></a>매개 변수
@@ -49,7 +49,7 @@ manage-bde –WipeFreeSpace|-w [<Drive>] [-Cancel] [-computername <Name>] [{-?|/
 ```
 manage-bde -w C:
 ```
-다음 예제를 사용 하는 **-w** 명령과 **– 취소** C 드라이브의 가용 공간 초기화를 취소 하려면 매개 변수
+다음 예제를 사용 하는 **-w** 명령에 **-취소** C 드라이브의 가용 공간 초기화를 취소 하려면 매개 변수
 ```
 manage-bde -w -Cancel C:
 ```

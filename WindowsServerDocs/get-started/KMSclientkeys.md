@@ -4,17 +4,17 @@ description: KMS 서버에서 Windows 제품을 정품 인증하는 데 필요�
 ms.prod: windows-server-threshold
 ms.mktglfcycl: manage
 ms.sitesec: library
-author: jaimeo
+author: jasongerend
+ms.author: jgerend
 ms.localizationpriority: medium
-ms.date: 10/02/2018
-ms.tgt_pltfrm: na
+ms.date: 05/21/2019
 ms.topic: get-started-article
-ms.openlocfilehash: 57ce4c4d7623c2a424efbdf0ff117ede8fad726b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e2aac6db7bb9e118d672190c95f0d73294474f75
+ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59847034"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65976535"
 ---
 # <a name="kms-client-setup-keys"></a>KMS 클라이언트 설정 키
 
@@ -29,9 +29,9 @@ Windows Server, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows 8, Wind
 
 컴퓨터를 KMS 호스트, MAK 또는 Windows 정품 버전에서 KMS 클라이언트로 변환하는 경우 다음 표에서 해당하는 설정 키(GVLK)를 설치합니다. 클라이언트 설정 키를 설치 하려면 형식이 클라이언트에서 관리 명령 프롬프트를 열고 **slmgr /ipk \<설정 키\>**  누릅니다 **Enter**합니다.
 
-| 수행할 작업…                                                                                                                                                                                          | …사용할 리소스                                                                                                         |
-|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| 볼륨 정품 인증 시나리오가 아닌 경우의 Windows 정품 인증(정품 버전의 Windows에 대한 정품 인증을 시도하는 경우) 시에는 **이들 키가 작동하지 않습니다**.                                                     | Windows 일반 정품 버전에 다음 링크를 사용합니다.                                                                              |
+| 수행할 작업…    | …사용할 리소스   |
+|--------------------|------------------------|
+| 볼륨 정품 인증 시나리오가 아닌 경우의 Windows 정품 인증(정품 버전의 Windows에 대한 정품 인증을 시도하는 경우) 시에는 **이들 키가 작동하지 않습니다**. | Windows 일반 정품 버전에 다음 링크를 사용합니다. |
 | Windows 8.1, Windows Server 2012 R2 또는 최신 시스템을 활성화 하려고 할 때 얻을 수 있는이 오류를 해결 합니다. "오류: 0xC004F050 소프트웨어 라이선스 서비스에서 제품 키가 잘못되었다고 보고했습니다."… | Windows 8.1, Windows Server 2012 R2, Windows 8 또는 Windows Server 2012를 실행하고 있으면 KMS 호스트에[이 업데이트를 설치합니다](https://support.microsoft.com/en-us/help/3172614/july-2016-update-rollup-for-windows-8-1-and-windows-server-2012-r2) . |
 
 -   [Windows 10 받기](https://www.microsoft.com/en-us/windows/get-windows-10)
@@ -43,15 +43,14 @@ Windows Server, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows 8, Wind
 
 >   Windows Server 2008 R2 또는 Windows 7을 실행하고 있으면 이 운영 체제를 Windows 10 클라이언트용 KMS 호스트로 사용하도록 지원하는 업데이트가 있는지 자세히 살펴보세요.
 
-
 ## <a name="windows-server-semi-annual-channel-versions"></a>Windows 서버 반기 채널 버전
 
-### <a name="windows-server-version-1809"></a>Windows Server 버전 1809
-| 운영 체제 버전       | KMS 클라이언트 설정 키          |
-|--------------------------------|-------------------------------|
-| Windows Server Datacenter | 6NMRW-2C8FM-D24W7-TQWMY-CWH2D  | 
-| Windows Server Standard | N2KJX-J94YW-TQVFB-DG9YT-724CC  |
+### <a name="windows-server-version-1903-and-windows-server-version-1809"></a>Windows Server, 버전 1903 및 Windows Server 버전 1809
 
+| 운영 체제 버전  | KMS 클라이언트 설정 키          |
+|---------------------------|-------------------------------|
+| Windows Server Datacenter | 6NMRW-2C8FM-D24W7-TQWMY-CWH2D |
+| Windows Server Standard   | N2KJX-J94YW-TQVFB-DG9YT-724CC |
 
 ### <a name="windows-server-version-1803"></a>Windows Server, 버전 1803
 

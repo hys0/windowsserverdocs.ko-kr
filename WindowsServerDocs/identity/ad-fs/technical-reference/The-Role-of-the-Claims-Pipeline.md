@@ -9,15 +9,13 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 5076a686b5d0b9a539f6cad8594aaf84dccc3edb
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7891f1d0b96df84e8ac4f3eb670f30350d3c194c
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59887064"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188445"
 ---
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 # <a name="the-role-of-the-claims-pipeline"></a>클레임 파이프라인의 역할
 Active Directory Federation Services에서 클레임 파이프라인 \(AD FS\) 발급할 수 전에 페더레이션 서비스를 통해 클레임이 따라야 하는 경로 나타냅니다. 페더레이션 서비스 관리 전체 끝\-에\-도 클레임 규칙 엔진에서 클레임 규칙의 처리를 포함 하는 클레임 파이프라인의 다양 한 단계를 통해 클레임 흐름의 프로세스를 종료 합니다.  
   

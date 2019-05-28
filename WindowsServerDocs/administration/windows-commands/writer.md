@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 87b10952c6a851b5536a1589b994b265e8699f59
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 94be02aa25867845436b83d052c4990ff9212975
+ms.sourcegitcommit: 08eba714d3ceb5f2dfb5486d6b990da1aa4dcbdd
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59826404"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65564680"
 ---
 # <a name="writer"></a>기록기
 
@@ -47,7 +47,7 @@ writer exclude [<Writer> | <Component>]
 ```
 writer verify {4dc3bdd4-ab48-4d07-adb0-3bee2926fd7f}
 ```
-"시스템 Writer, 이름의 기록기를 제외 하려면? 형식:
+이름 "시스템 Writer"를 사용 하 여 작성기를 제외 하려면 다음을 입력 합니다.
 ```
 writer exclude "System Writer"
 ```

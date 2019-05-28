@@ -9,16 +9,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 709bb8ae7135126b53ce426c981ee16705234cd9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9d36bb79dd1b71bc435ba9a9af9977e886d58d61
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59862534"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190227"
 ---
 # <a name="ad-fs-user-sign-in-customization"></a>AD FS 사용자 로그인 사용자 지정
 
->적용 대상: Windows Server 2016, Windows Server 2012 R2
 
 AD FS 다양 한 기업에 맞게 사용자 지정 하 고 최종 사용자 환경을 조정할 관리자에 대 한 옵션을 제공 해야 합니다.  다음 페이지 사용자 지정을 위한 중앙 위치로 사용할 합니다.  사용자 지정 옵션을 빠르게 찾을 수 아래 표를 사용할 수 있습니다.
 

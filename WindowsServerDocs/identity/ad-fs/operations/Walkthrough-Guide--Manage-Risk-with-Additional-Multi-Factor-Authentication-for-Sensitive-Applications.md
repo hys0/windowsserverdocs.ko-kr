@@ -9,16 +9,16 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 414f37e86f0072863e5fa2f107c39e5518e560ec
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: bd21f2d6e8dcb167aa2c614d096807305a7728d6
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59860864"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188890"
 ---
 # <a name="walkthrough-guide-manage-risk-with-additional-multi-factor-authentication-for-sensitive-applications"></a>연습 가이드: 추가 다단계 인증을 사용하여 중요한 응용 프로그램에 대한 위험 관리
 
->적용 대상: Windows Server 2012 R2
+
 
 
 ## <a name="about-this-guide"></a>이 가이드 정보
@@ -32,9 +32,9 @@ Adfs에서 MFA 및 인증 메커니즘에 대 한 자세한 내용은 참조 [�
 
 -   [2단계: 기본 AD FS 인증 메커니즘 확인](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_2)
 
--   [3 단계: 페더레이션 서버에서 MFA를 구성 합니다.](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_3)
+-   [3단계: 페더레이션 서버에서 MFA를 구성 합니다.](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_3)
 
--   [4 단계: MFA 메커니즘 확인](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_4)
+-   [4단계: MFA 메커니즘 확인](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_4)
 
 ## <a name="BKMK_1"></a>1 단계: 랩 환경 설정
 이 연습을 완료하려면 다음 구성 요소로 구성된 환경이 필요합니다.
@@ -205,7 +205,7 @@ AD FS 관리 콘솔 또는 Windows PowerShell을 사용하여 MFA 정책을 설�
 
 ##### <a name="to-configure-the-mfa-policy-based-on-users-group-membership-data-for-claimapp--via-the-ad-fs-management-console"></a>AD FS 관리 콘솔을 통해 'claimapp'에 대 한 사용자의 그룹 구성원 자격 데이터에 따라 MFA 정책을 구성 하려면
 
-1.  페더레이션 서버의 AD FS 관리 콘솔에서 **Authentication Policies(인증 정책)**\\**Per Relying Party Trust(신뢰 당사자 트러스트별)** 노드로 이동하여 예제 응용 프로그램(**AD 계정 및**)을 나타내는 신뢰 당사자 트러스트를 선택합니다.
+1.  페더레이션 서버의 AD FS 관리 콘솔에서 **Authentication Policies(인증 정책)** \\**Per Relying Party Trust(신뢰 당사자 트러스트별)** 노드로 이동하여 예제 응용 프로그램(**AD 계정 및**)을 나타내는 신뢰 당사자 트러스트를 선택합니다.
 
 2.  **Actions(작업)** 페이지에서 또는 **claimapp**을 마우스 오른쪽 단추로 클릭하여 **Edit Custom Multi-factor Authentication(사용자 지정 다단계 인증 편집)** 을 선택합니다.
 

@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 9b66bed99cbc2ac2cdf116579adaea282c45fabe
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: cd8febf9eff300b1a83d22828874b4a577b8af36
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59876394"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192322"
 ---
 # <a name="configure-corporate-dns-for-the-federation-service-and-drs"></a>페더레이션된 서비스와 DRS에 대해 회사 DNS 구성
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2
   
 ## <a name="step-6-add-a-host-a-and-alias-cname-resource-record-to-corporate-dns-for-the-federation-service-and-drs"></a>6단계: 호스트 추가 \(A\) 및 별칭 \(CNAME\) 페더레이션 서비스와 DRS에 대해 회사 DNS에 리소스 레코드  
 회사 도메인 이름 시스템에 다음 리소스 레코드를 추가 해야 합니다 \(DNS\) 에 페더레이션 서비스와 이전 단계에서 구성한 Device Registration Service에 대 한 합니다.  

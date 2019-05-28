@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 553ff059693c7b0c0e6f0364d82c1adbca661097
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3e3d1e5d86afbef2fdabd211047f513d31a40300
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59887254"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190316"
 ---
 # <a name="ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication"></a>인증서 인증을 위한 대체 호스트 이름 바인딩에 대한 AD FS 지원
-
->적용 대상: Windows Server 2016
 
 대부분의 네트워크에는 로컬 방화벽 정책 못할 수 있습니다 트래픽 49443 같은 비표준 포트를 통해. Windows Server 2016에서 AD FS 전에 AD FS 사용 하 여 인증서 인증을 수행 하려고 할 때이 큰 문제가 됩니다. 즉, 동일한 호스트에 장치 인증 및 사용자 인증서 인증에 대 한 서로 다른 바인딩을 같을 수 없었습니다. 기본 포트 443 장치 인증서를 받이 바인딩되고 동일한 채널에서 여러 바인딩을 지원 하기 위해 변경할 수 없습니다. 결과적으로 스마트 카드 인증이 작동 하지 않습니다 하 고 사용자가 실제로 변경 된 내용에 대 한 표시가 없습니다 이후 발생 한 일 수 있었습니다.  
   

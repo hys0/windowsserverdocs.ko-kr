@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 83383d3e1c75c7a6e6c8b42c010a17ceebf51e88
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ec111954bbe39a3089072f41778990546b6287e5
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59848114"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191288"
 ---
 # <a name="identifying-your-ad-fs-deployment-goals"></a>AD FS 배포 목표 확인
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Active Directory Federation Services를 올바르게 식별 \(AD FS\) 배포 목표는 AD FS 디자인 프로젝트의 성공에 필수적입니다. 크기에 조직과 정보 기술에 대 한 제공 하려는 참여 수준에 따라 \(IT\) 모든 파트너 조직에서 직원, 명확히 수 있는 프로젝트 팀을 형성 실시간\-비전 설명서에서 전 세계 배포의 문제입니다. 이 팀의 구성원은 AD FS 배포 목표를 달성 하기 위해 배포 프로젝트를 옮겨야 하는 방향을 이해 하 고 있는지 확인 합니다.  
   
@@ -32,5 +30,5 @@ Active Directory Federation Services를 올바르게 식별 \(AD FS\) 배포 목
 |하나의 목표 또는 미리 정의 된 AD FS 배포 목표의 조합을 기존 AD FS 디자인에 매핑|-   [AD FS 디자인에 배포 목표 매핑](Mapping-Your-Deployment-Goals-to-an-AD-FS-Design.md)|  
   
 ## <a name="see-also"></a>관련 항목
-[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
 

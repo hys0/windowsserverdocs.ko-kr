@@ -8,20 +8,20 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: e83d0b79117144d42a0aff748f482f3c181cb300
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d8d798611a00e29337a5d45979947a51f03bcdee
+ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59874054"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65475886"
 ---
 # <a name="file-management-tasks"></a>파일 관리 작업
 
-> 적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> 적용 대상: Windows Server 2019, Windows Server 2016, Windows Server (반기 채널), Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 파일 관리 작업은 서버에서 파일의 하위 집합을 찾아 간단한 명령을 적용하는 과정을 자동화합니다. 이러한 작업은 반복 비용을 절감하기 위해 정기적으로 실행하도록 예약할 수 있습니다. 파일 관리 작업으로 처리되는 파일은 다음 중 어떤 속성으로도 정의할 수 있습니다.
 
--   Location
+-   위치
 -   분류 속성
 -   생성 시간
 -   수정 시간
@@ -43,6 +43,6 @@ ms.locfileid: "59874054"
 
 ## <a name="see-also"></a>참조
 
--   [설정 파일 서버 리소스 관리자 옵션](setting-file-server-resource-manager-options.md)
+-   [파일 서버 리소스 관리자 옵션 설정](setting-file-server-resource-manager-options.md)
 
 

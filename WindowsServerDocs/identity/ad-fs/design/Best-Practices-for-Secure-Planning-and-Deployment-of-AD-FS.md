@@ -9,16 +9,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 67b122353ca9dff3a4df6cbfac56b16bed52b539
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: df1afc77afffd9b737965215a5c9d96f278c8129
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59848084"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191673"
 ---
 # <a name="best-practices-for-secure-planning-and-deployment-of-ad-fs"></a>AD FS 보안 계획 및 배포 모범 사례
 
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 이 항목에서는 계획 하 고 Active Directory Federation Services (AD FS) 배포를 디자인할 때 보안을 평가 하는 데 유용한 정보를 제공 합니다. 이 항목은 검토 하 고 AD FS 사용의 전반적인 보안에 영향을 주는 고려 사항을 평가 대 한 시작 지점입니다. 이 항목의 정보는 기존 보안 계획 및 기타 디자인 모범 사례를 보완하고 확장하기 위해 작성되었습니다.  
   
@@ -146,4 +145,4 @@ ms.locfileid: "59848084"
     더 나은 서비스 및 데이터 격리를 제공하기 위해 모든 특성 저장소 조회 명령에 대한 저장 프로시저를 만들 수 있습니다. 그런 다음 저장 프로시저 실행 권한을 부여할 데이터베이스 역할을 만들 수 있습니다. 이 데이터베이스 역할에 AD FS Windows 서비스의 서비스 id를 할당 합니다. AD FS Windows 서비스는 특성 조회에 사용 되는 적절 한 저장된 프로시저 외의 다른 SQL 문을 실행할 수 없습니다. 이 방식으로 SQL Server 데이터베이스에 대한 액세스를 잠그면 권한 상승 공격의 위험이 줄어듭니다.  
   
 ## <a name="see-also"></a>관련 항목
-[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)

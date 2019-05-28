@@ -6,17 +6,17 @@ ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: f1d77b6640bc0d6a5832a5a19c80d9d0af5d2b00
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3782667e54f5e6b52c07645704b95fc9e7409a27
+ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59832664"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65476067"
 ---
 # <a name="dfs-replication-frequently-asked-questions-faq"></a>DFS 복제: FAQ(질문과 대답)
 
 
-업데이트됨: 2013 년 10 월 9
+업데이트됨: 2019 년 4 월 30 일
 
 적용 대상: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
@@ -451,13 +451,13 @@ RDC (원격 차등 압축)는 효율적으로 제한 된 대역폭 네트워크�
 <td><p>Windows Server 2008</p></td>
 <td><p>아니오</p></td>
 <td><p>사용자 계정 컨트롤</p></td>
-<td><p>아니오</p></td>
+<td><p>아니요</p></td>
 </tr>
 <tr class="even">
 <td><p>Windows Server 2003 R2</p></td>
-<td><p>아니요</p></td>
-<td><p>사용자 계정 컨트롤</p></td>
 <td><p>아니오</p></td>
+<td><p>사용자 계정 컨트롤</p></td>
+<td><p>아니요</p></td>
 </tr>
 </tbody>
 </table>
@@ -730,7 +730,7 @@ DFS 복제에서 충돌을 감지 하는 경우 마지막으로 저장 된 파�
 <tr class="header">
 <th>Date</th>
 <th>설명</th>
-<th>이유</th>
+<th>Reason</th>
 </tr>
 </thead>
 <tbody>

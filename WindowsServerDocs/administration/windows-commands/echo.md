@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: afb4b10a0d347367780dbaf19b764f2cabd480d9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: eb5c9650b95703f1316e6f5f179b910d22574f68
+ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59819544"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66222961"
 ---
 # <a name="echo"></a>echo
 
@@ -26,7 +26,7 @@ ms.locfileid: "59819544"
 
 메시지를 표시 하거나 명령 에코 기능의 해제 하거나 설정 합니다. 매개 변수 없이 사용 하는 경우 **echo** 현재 에코 설정을 표시 합니다.
 
-이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
+이 명령을 사용하는 방법의 예는 [예](#examples)를 참조하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -49,9 +49,9 @@ echo [on | off]
 -   때 **echo** 꺼져, 명령 프롬프트 명령 프롬프트 창에 나타나지 않습니다. 명령 프롬프트를 표시 하려면 입력 **화면 표시 합니다.**
 -   배치 파일에서 사용 하는 경우 **화면 표시** 및 **오프 에코** 명령 프롬프트에서 설정 하는 데 영향을 주지 않습니다.
 -   배치 파일에서 특정 명령 출력을 방지 하려면 삽입는 at 기호 (@) 명령 앞에 있습니다. 배치 파일에서 모든 명령 에코를 방지 하려면 포함는 **오프 에코** 파일의 시작 부분에 명령 합니다.
--   파이프를 표시 하려면 (**|**) 또는 리디렉션 문자 (**<** 또는 **>**) 사용 하는 **echo**, 리디렉션 또는 파이프 문자 바로 앞에 캐럿 (^)를 사용 하 여 (예를 들어 **^|**, **^>**, 또는 **^<**). 캐럿을 표시 하려면 두 캐럿 연속으로 입력 합니다 (**^^**).
+-   파이프를 표시 하려면 ( **|** ) 또는 리디렉션 문자 ( **<** 또는 **>** ) 사용 하는 **echo**, 리디렉션 또는 파이프 문자 바로 앞에 캐럿 (^)를 사용 하 여 (예를 들어 **^|** , **^>** , 또는 **^<** ). 캐럿을 표시 하려면 두 캐럿 연속으로 입력 합니다 ( **^^** ).
 
-## <a name="BKMK_examples"></a>예제
+## <a name="examples"></a>예
 
 현재 표시 하려면 **echo** 설정에 입력 합니다.
 ```

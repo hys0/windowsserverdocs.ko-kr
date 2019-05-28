@@ -9,16 +9,16 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 11d2d567f9264dca53a3426263a172649d7d7c11
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f034c2eeafe9d52569e8181bbbb2e582b1059d51
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59826654"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188863"
 ---
 # <a name="walkthrough-guide-manage-risk-with-conditional-access-control"></a>연습 가이드: 조건부 액세스 제어를 사용한 위험 관리
 
->적용 대상: Windows Server 2012 R2
+
 
 
 ## <a name="about-this-guide"></a>이 가이드 정보
@@ -30,9 +30,9 @@ ms.locfileid: "59826654"
 
 -   [2단계: 기본 AD FS 액세스 제어 메커니즘 확인](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_2)
 
--   [3 단계: 사용자 데이터를 기반으로 하는 조건부 액세스 제어 정책 구성](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_3)
+-   [3단계: 사용자 데이터를 기반으로 하는 조건부 액세스 제어 정책 구성](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_3)
 
--   [4 단계: 조건부 액세스 제어 메커니즘 확인](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_4)
+-   [4단계: 조건부 액세스 제어 메커니즘 확인](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_4)
 
 ## <a name="BKMK_1"></a>1 단계: 랩 환경 설정
 이 연습을 완료하려면 다음 구성 요소로 구성된 환경이 필요합니다.
@@ -72,7 +72,7 @@ AD FS 관리 콘솔 또는 Windows PowerShell을 통해 이 작업을 완료할 
 
 #### <a name="to-configure-conditional-access-control-policy-based-on-user-data-via-the-ad-fs-management-console"></a>AD FS 관리 콘솔을 통해 사용자 데이터에 따라 조건부 액세스 제어 정책을 구성하려면
 
-1.  AD FS 관리 콘솔에서 **Trust Relationships(트러스트 관계)**, **Relying Party Trusts(신뢰 당사자 트러스트)** 로 차례로 이동합니다.
+1.  AD FS 관리 콘솔에서 **Trust Relationships(트러스트 관계)** , **Relying Party Trusts(신뢰 당사자 트러스트)** 로 차례로 이동합니다.
 
 2.  샘플 응용 프로그램(**claimapp**)을 나타내는 신뢰 당사자 트러스트를 선택하고 **작업** 창에서 또는 이 신뢰 당사자 트러스트를 마우스 오른쪽 단추로 클릭하여 **클레임 규칙 편집**을 선택합니다.
 
