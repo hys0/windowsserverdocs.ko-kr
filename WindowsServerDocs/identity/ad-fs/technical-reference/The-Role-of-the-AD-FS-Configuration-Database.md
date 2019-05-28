@@ -9,15 +9,13 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 3372e1f051ba7f900753a4961d948ddabdef6f4d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 40f1f4952730fad0749a173fdc968714d043b1c1
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59867624"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188510"
 ---
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 # <a name="the-role-of-the-ad-fs-configuration-database"></a>AD FS 구성 데이터베이스의 역할
 Active Directory Federation Services의 단일 인스턴스를 나타내는 모든 구성 데이터를 저장 하는 AD FS 구성 데이터베이스 \(AD FS\) \(페더레이션 서비스,\)합니다. AD FS 구성 데이터베이스는 페더레이션 서비스가 파트너, 인증서, 특성 저장소, 클레임 및 이러한 관련 엔터티에 대한 다양한 데이터를 식별하는 데 필요한 매개 변수 집합을 정의합니다. Microsoft SQL Server® 데이터베이스 또는 Windows 내부 데이터베이스에이 구성 데이터를 저장할 수 있습니다 \(WID\) Windows Server® 2008, Windows Server 2008 R2 및 Windows Server® 2012에 포함 되어 있는 기능입니다.  
   

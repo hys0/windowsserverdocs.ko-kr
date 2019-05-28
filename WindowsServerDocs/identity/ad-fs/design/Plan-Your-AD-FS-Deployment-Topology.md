@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 7e41f7728c42912ec6ce680e1ed0c6a906a33392
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 00c43a56d9b57a2ae2c8b9aeca56807fe1d1841f
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59821714"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191181"
 ---
 # <a name="plan-your-ad-fs-deployment-topology"></a>AD FS 배포 토폴로지 계획
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2
 
 Active Directory Federation Services의 배포 계획의 첫 번째 단계 \(AD FS\) 조직의 요구 사항을 충족 하는 올바른 배포 토폴로지를 결정 하는 것입니다.  
   
@@ -37,10 +35,10 @@ AD FS는 데이터베이스를 사용 하 여 구성을 저장 하 고-경우도
 ||기능|WID에서 지원?|SQL Server에서 지원?
 | --- | --- | --- |--- |
 |AD FS 기능|페더레이션 서버 팜 배포|예 WID 팜에 100 개 이하인 신뢰 당사자 트러스트를 설정한 경우 페더레이션 서버를 30 제한 됩니다.</br></br>WID 팜 토큰 재생 검색 또는 아티팩트 해상도 (Assertion Markup Language (SAML (Security) 프로토콜의 일부)를 지원 하지 않습니다. |예 단일 팜에 배포할 수 있는 페더레이션 서버 수에 대한 제한 없음  
-|AD FS 기능|SAML 아티팩트 확인 </br></br>**참고:** 이 기능은 Microsoft Online Services, Microsoft Office 365, Microsoft Exchange 또는 Microsoft Office SharePoint 시나리오에는 필요하지 않습니다.|아니오|예  
+|AD FS 기능|SAML 아티팩트 확인 </br></br>**참고:** 이 기능은 Microsoft Online Services, Microsoft Office 365, Microsoft Exchange 또는 Microsoft Office SharePoint 시나리오에는 필요하지 않습니다.|아니요|예  
 |AD FS 기능|SAML\/WS\-페더레이션 토큰 재생 검색|아니오|예  
-|데이터베이스 기능|하나 또는 읽기 호스팅 서버를 더 끌어오기 복제를 사용 하 여 기본 데이터베이스 중복성\-읽기를 호스트 하는 원본 서버에 적용 된 데이터베이스 요청 변경의 전용 복사본\/데이터베이스의 복사본을 작성|예|아니오 
-|데이터베이스 기능|고가용성을 사용 하 여 데이터베이스 중복성\-장애 조치 클러스터링 또는 미러링을 같은 가용성 솔루션 \(데이터베이스 계층 에서만\) **참고:** 모든 AD FS 배포 토폴로지는 AD FS 서비스 계층의 클러스터링을 지원 합니다.|아니오|예  
+|데이터베이스 기능|하나 또는 읽기 호스팅 서버를 더 끌어오기 복제를 사용 하 여 기본 데이터베이스 중복성\-읽기를 호스트 하는 원본 서버에 적용 된 데이터베이스 요청 변경의 전용 복사본\/데이터베이스의 복사본을 작성|예|아니요 
+|데이터베이스 기능|고가용성을 사용 하 여 데이터베이스 중복성\-장애 조치 클러스터링 또는 미러링을 같은 가용성 솔루션 \(데이터베이스 계층 에서만\) **참고:** 모든 AD FS 배포 토폴로지는 AD FS 서비스 계층의 클러스터링을 지원 합니다.|아니요|예  
 
   
 ## <a name="sql-server-considerations"></a>SQL Server 고려 사항  
@@ -71,11 +69,11 @@ SQL Server 데이터베이스를 사용하는 팜에 배포된 페더레이션 
 ## <a name="supported-deployment-topologies"></a>지원 되는 배포 토폴로지  
 다음 항목은 AD FS와 함께 사용할 수 있는 여러 가지 배포 토폴로지를 설명 합니다. 또한 특정 비즈니스 요구 사항에 가장 적합한 토폴로지를 선택할 수 있도록 각 배포 토폴로지와 연관된 이점 및 제한 사항을 설명합니다.  
   
--   [WID를 사용 하 여 페더레이션 서버 팜](Federation-Server-Farm-Using-WID.md)  
+-   [WID를 사용하는 페더레이션 서버 팜](Federation-Server-Farm-Using-WID.md)  
   
--   [WID와 프록시를 사용 하 여 페더레이션 서버 팜](Federation-Server-Farm-Using-WID-and-Proxies.md)  
+-   [WID와 프록시를 사용하는 페더레이션 서버 팜](Federation-Server-Farm-Using-WID-and-Proxies.md)  
   
--   [SQL Server를 사용 하 여 페더레이션 서버 팜](Federation-Server-Farm-Using-SQL-Server.md)  
+-   [SQL Server를 사용하는 페더레이션 서버 팜](Federation-Server-Farm-Using-SQL-Server.md)  
   
 ## <a name="see-also"></a>관련 항목  
 [Windows Server 2012 R2의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012-R2.md)  

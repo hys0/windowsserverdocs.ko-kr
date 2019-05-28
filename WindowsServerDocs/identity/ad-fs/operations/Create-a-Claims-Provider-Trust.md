@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: fbc8bb63435211a92cb7fc6aa05b1413aef939c6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 1c47986cda3f091033274aa2c59a656ec861a98f
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59854234"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189707"
 ---
 # <a name="create-a-claims-provider-trust"></a>클레임 공급자 트러스트 만들기
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2
 
 AD FS 관리 스냅인을 사용 하 여 클레임 공급자 트러스트 추가 새\-및 수동으로 설정을 구성, 리소스 파트너 조직의 리소스 파트너 페더레이션 서버에서 다음 절차를 수행 합니다.  
   
@@ -84,7 +82,7 @@ AD FS 관리 스냅인을 사용 하 여 클레임 공급자 트러스트 추가
 ## <a name="additional-references"></a>추가 참조  
 [검사 목록: 리소스 파트너 조직 구성](../../ad-fs/deployment/Checklist--Configuring-the-Resource-Partner-Organization.md)  
   
-[검사 목록: 클레임 공급자에 대 한 클레임 규칙 만들기 신뢰](../../ad-fs/deployment/Checklist--Creating-Claim-Rules-for-a-Claims-Provider-Trust.md)  
+[검사 목록: 클레임 공급자 트러스트를 위한 클레임 규칙 만들기](../../ad-fs/deployment/Checklist--Creating-Claim-Rules-for-a-Claims-Provider-Trust.md)  
   
 ## <a name="see-also"></a>관련 항목  
 [AD FS 작업](../../ad-fs/AD-FS-2016-Operations.md) 

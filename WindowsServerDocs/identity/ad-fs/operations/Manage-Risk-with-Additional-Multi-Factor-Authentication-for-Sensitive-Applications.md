@@ -9,19 +9,19 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: e9ee275e6fe38005394cd071e9cfe9a7999350e8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a37c0b0a1de06b65e0cb867ec4d160bbb0373a15
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59855894"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189067"
 ---
 # <a name="manage-risk-with-additional-multi-factor-authentication-for-sensitive-applications"></a>추가 다단계 인증을 사용하여 중요한 응용 프로그램에 대한 위험 관리
 
->적용 대상: Windows Server 2012 R2
 
 
--   [Windows Server 2012 R2에서 AD FS에 대 한 랩 환경 설정](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
+
+-   [Windows Server 2012 R2의 AD FS에 대한 랩 환경 설정](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
 
 -   [연습 가이드: 추가 Multi-factor Authentication for Sensitive Applications 사용 하 여 위험 관리](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 

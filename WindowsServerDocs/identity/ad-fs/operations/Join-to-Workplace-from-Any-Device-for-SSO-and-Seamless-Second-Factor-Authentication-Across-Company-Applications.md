@@ -9,16 +9,16 @@ ms.date: 12/05/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 0ee22afd6fdec96ab69d915e4730bb834d2ab8ad
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e9d6161666be89673cff6ef1a975d3205fa4b5c9
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59855524"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189090"
 ---
 # <a name="join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications"></a>회사 응용 프로그램 전반에 SSO 및 연속된 두 번째 단계 인증을 위한 모든 장치의 작업 공간 연결
 
->적용 대상: Windows Server 2012 R2
+
 
 소비자 장치와 유비쿼터스 정보 액세스의 급증으로 사용자가 기술을 인식하는 방식이 바뀌고 있습니다. 정보 기술의 지속적인 사용은 정보의 간편한 액세스와 함께 업무와 개인 생활 간의 기존 경계를 무너뜨리고 있습니다. 믿음이 수반 됩니다 변화 하는 경계 이러한 기술을 선택 하 고 사용자의 개성, 활동 및 일정에 맞게 사용자 지정 하는 개인-작업 공간으로 확장 되어야 합니다. 엔터프라이즈 네트워크에 연결해야 하는 개인 소비자 장치의 증가하는 요구 사항을 수용하기 위해 다음과 같은 가치 제안을 도입했습니다.
 
@@ -54,11 +54,11 @@ ms.locfileid: "59855524"
 
 이 솔루션에서는 다음 연습 단계를 안내합니다.
 
-1.  [연습: Windows 장치를 사용 하 여 작업 공간 연결](../../ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
+1.  [연습: Windows 디바이스를 사용하여 작업 공간 연결](../../ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
 
-2.  [연습: IOS 장치를 사용 하 여 작업 공간 연결](../../ad-fs/operations/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
+2.  [연습: iOS 디바이스를 사용하여 작업 공간 연결](../../ad-fs/operations/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
 
-3.  [연습: Android 장치를 사용 하 여 작업 공간 연결](../../ad-fs/operations/walkthrough--workplace-join-to-an-android-device.md)
+3.  [연습: Android 디바이스를 사용하여 작업 공간 연결](../../ad-fs/operations/walkthrough--workplace-join-to-an-android-device.md)
 
 ## <a name="see-also"></a>관련 항목
 [Device Registration Service를 사용 하 여 페더레이션 서버 구성](../deployment/configure-a-federation-server-with-device-registration-service.md)

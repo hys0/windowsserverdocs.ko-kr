@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 9ec4150a7d3adfaac786219d253e1d0898c18204
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 31e2e1b04383adc8bec12e7290a7acec80e0402f
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59876524"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190794"
 ---
 # <a name="stand-alone-federation-server-using-wid"></a>WID를 사용하는 독립 실행형 페더레이션 서버
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 독립\-만 페더레이션 서버에서 Active Directory Federation Services \(AD FS\) Windows 내부 데이터베이스를 사용 하도록 구성 된 페더레이션 서비스를 호스팅하는 단일 서버 이루어져 \(WID\). 이 AD FS 토폴로지는 테스트 환경입니다. 바람직하지 않습니다 것 프로덕션 환경에 대 한 않기 때문에 최대 하나의 페더레이션 서버를 더 많은 서버 크기를 사용할 수 없습니다.  
   
@@ -45,4 +43,4 @@ ms.locfileid: "59876524"
   
 
 ## <a name="see-also"></a>관련 항목
-[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)

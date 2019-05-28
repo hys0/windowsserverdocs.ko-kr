@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: a94e4de181cd8794d479bbd6695a94658aba0f86
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8aef8b3d8f1e6dde4f960a3bee5a93964d07c72b
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59855024"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191277"
 ---
 # <a name="name-resolution-requirements-for-federation-server-proxies"></a>페더레이션 서버 프록시에 대한 이름 확인 요구 사항
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 인터넷 상의 클라이언트 컴퓨터를 Active Directory Federation Services에서 보호 되는 응용 프로그램에 액세스 하려고 하는 경우 \(AD FS\), 먼저 페더레이션 서버에 인증 해야 합니다. 대부분의 경우에서 페더레이션 서버 없는 일반적으로 인터넷에서 직접 액세스할 수 있습니다. 따라서 인터넷 클라이언트 컴퓨터 리디렉션되어야 페더레이션 서버 프록시를 대신 합니다. 적절 한 도메인 이름 시스템을 추가 하 여 성공적인 리디렉션을 수행할 수 있습니다 \(DNS\) 레코드 DNS 영역 또는 인터넷 직면 하는 영역입니다.  
   
@@ -69,4 +67,4 @@ ms.locfileid: "59855024"
 경계 네트워크와 인터넷 DNS 영역을 수정 하는 방법에 대 한 자세한 내용은 참조 [DNS 영역을 역할 모두 경계 네트워크 및 인터넷 클라이언트에서 페더레이션 서버 프록시에 대 한 이름 확인 구성](../../ad-fs/deployment/Configure-Name-Resolution-for-a-Federation-Server-Proxy-in-a-DNS-Zone-That-Serves-Both-the-Perimeter-Network-and-Internet-Clients.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목
-[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)

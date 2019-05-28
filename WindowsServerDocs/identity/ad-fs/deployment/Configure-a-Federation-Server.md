@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 13ce514dc5f3f70217a26c898cde6fe24d4967c6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d2f597994aa74f453903e09f7d3eefd83f26faba
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59847384"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192275"
 ---
 # <a name="configure-a-federation-server"></a>페더레이션 서버 구성
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2
 
 Active Directory Federation Services를 설치한 후 \(AD FS\) 역할 서비스 컴퓨터에서이 컴퓨터를 페더레이션 서버로 구성할 수 있습니다. 다음 중 하나를 수행하십시오.  
   

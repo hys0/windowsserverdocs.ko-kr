@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 5b4ba00aa9fed1022d9c0137d05ac6240b44b276
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 93f61bc7fd147b2e0220178bcd163b6ca56279cf
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59837914"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191573"
 ---
 # <a name="deploying-ad-fs-in-the-account-partner-organization"></a>계정 파트너 조직에서 AD FS 배포
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2
 
 Active Directory Federation Services를 사용 하는 계정 파트너 \(AD FS\) 지원 되는 특성 저장소에 사용자 계정을 실제로 저장 하는 페더레이션 트러스트 관계의 조직을 나타냅니다. 저장소 지원 되는 특성에 대 한 자세한 내용은 참조 하세요. [The 특성 저장소의 역할](../../ad-fs/technical-reference/The-Role-of-Attribute-Stores.md)입니다.  
   
@@ -37,4 +35,4 @@ Active Directory Federation Services를 사용 하는 계정 파트너 \(AD FS\)
 -   [계정 파트너에서 클라이언트 컴퓨터 준비](Prepare-Client-Computers-in-the-Account-Partner.md)  
   
 ## <a name="see-also"></a>관련 항목
-[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)

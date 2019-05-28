@@ -9,16 +9,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 048bce75c52895b2d9e215bdccef9cb13dc23533
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 13d8ae8b8f3e4c8160f61284e5fb97e21b6a51b6
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59866824"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191253"
 ---
 # <a name="mapping-your-deployment-goals-to-an-ad-fs-design"></a>AD FS 디자인에 배포 목표 매핑
 
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 기존 Active Directory Federation Services 검토를 완료 한 후 \(AD FS\) 배포 목표 확인 배포에 관련 된 목표, 특정 AD FS 디자인에 이러한 목표를 매핑할 수 있습니다. 자세한 내용은 AD FS 배포 목표 미리 정의 참조 [AD FS 배포 목표 식별](Identifying-Your-AD-FS-Deployment-Goals.md)합니다.  
   
@@ -26,11 +25,11 @@ ms.locfileid: "59866824"
   
 |AD FS 배포 목표|[웹 SSO 디자인](Web-SSO-Design.md)|[페더레이션된 웹 SSO 디자인](Federated-Web-SSO-Design.md)|  
 |---------------------------------------------------------------------------|----------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|  
-|[Active Directory 사용자가 액세스 클레임 인식 응용 프로그램 및 서비스에 제공](Provide-Your-Active-Directory-Users-Access-to-Your-Claims-Aware-Applications-and-Services.md)|아니오|예, 계정 파트너에서|  
-|[응용 프로그램 및 서비스의 다른 조직에 Active Directory 사용자가 액세스를 제공 합니다.](Provide-Your-Active-Directory-Users-Access-to-the-Applications-and-Services-of-Other-Organizations.md)|아니요|예, 계정 파트너에서 선택 사항|  
-|[다른 조직 액세스에서 사용자에 게 클레임 인식 응용 프로그램 및 서비스에 제공](Provide-Users-in-Another-Organization-Access-to-Your-Claims-Aware-Applications-and-Services.md)|예|예|  
+|[Active Directory 사용자에게 클레임 인식 애플리케이션 및 서비스에 대한 액세스 제공](Provide-Your-Active-Directory-Users-Access-to-Your-Claims-Aware-Applications-and-Services.md)|아니요|예, 계정 파트너에서|  
+|[Active Directory 사용자에게 다른 조직의 애플리케이션 및 서비스에 대한 액세스 제공](Provide-Your-Active-Directory-Users-Access-to-the-Applications-and-Services-of-Other-Organizations.md)|아니요|예, 계정 파트너에서 선택 사항|  
+|[다른 조직의 사용자에게 클레임 인식 애플리케이션 및 서비스에 대한 액세스 제공](Provide-Users-in-Another-Organization-Access-to-Your-Claims-Aware-Applications-and-Services.md)|예|예|  
 
 ## <a name="see-also"></a>관련 항목
-[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
   
 

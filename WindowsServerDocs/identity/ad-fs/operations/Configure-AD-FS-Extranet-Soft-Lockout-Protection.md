@@ -9,16 +9,14 @@ ms.date: 02/01/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 37b8c4b9b07e3111fce1bfc0a9aae10c8754bb3a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6612c05e664b50c5a50b10b712b91715cc85d230
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59884634"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189876"
 ---
 # <a name="configure-ad-fs-extranet-lockout-protection"></a>AD FS 엑스트라넷 잠금 보호를 구성 합니다.
-
->적용 대상: Windows Server 2012 R2
 
 Windows Server 2012 R2에서 AD FS 엑스트라넷 잠금 라는 보안 기능을 소개 했습니다.  이 기능을 사용 하 여 AD FS는 "stop" 기간에 대 한 외부에서 "악의적인" 사용자 계정을 인증 합니다.  이렇게 하면 사용자 계정을 Active Directory에서 잠기지 않습니다.  사용자가 AD 계정 잠금에서를 보호 하는 것 외에도 AD FS 엑스트라넷 잠금도 막을 무차별 암호 추측 공격
 
@@ -95,7 +93,7 @@ AD fs에서 엑스트라넷 잠금 기능은 작동 하지 AD 잠금 정책에�
 
 ## <a name="additional-references"></a>추가 참조  
 - [Active Directory Federation Services 보안에 대 한 모범 사례](../../ad-fs/deployment/best-practices-securing-ad-fs.md)
-- [관리자가 아닌 사용자에 게 AD FS Powershell Commandlet 액세스 위임](delegate-ad-fs-pshell-access.md)
+- [관리자가 아닌 사용자에게 AD FS Powershell Commandlet 액세스 위임](delegate-ad-fs-pshell-access.md)
 - [Set-AdfsProperties](https://technet.microsoft.com/itpro/powershell/windows/adfs/set-adfsproperties)
 
 [AD FS 작업](../../ad-fs/AD-FS-2016-Operations.md)

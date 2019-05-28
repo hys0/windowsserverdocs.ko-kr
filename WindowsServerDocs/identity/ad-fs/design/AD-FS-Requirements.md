@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 1310792158995608e8f477b6df9d6cf7c0284571
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c6aa91956f4a90b32b82e6c970e68b3164c732f0
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59822254"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191716"
 ---
 # <a name="ad-fs-requirements"></a>AD FS 요구 사항
-
->적용 대상: Windows Server 2012 R2
 
 다음은 AD FS를 배포 하는 경우를 준수 해야 하는 다양 한 요구 사항:  
   

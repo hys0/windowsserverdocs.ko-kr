@@ -9,24 +9,22 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 53d0e24f7fcb9efc64406dc6ed01f5bb1deb2277
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 01db8ecc9f84123bbc3159c3cb2399d61d6344c2
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59868084"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188964"
 ---
 # <a name="set-up-an-ad-fs-lab-environment"></a>AD FS 실습 환경 설정
 
->적용 대상: Windows Server 2012 R2
-
 이 항목에서는 다음 연습 가이드의 연습을 완료하는 데 사용할 수 있는 테스트 환경을 구성하는 단계에 대해 간략히 설명합니다.  
   
--   [연습: IOS 장치를 사용 하 여 작업 공간 연결](Walkthrough--Workplace-Join-with-an-iOS-Device.md)  
+-   [연습: iOS 디바이스를 사용하여 작업 공간 연결](Walkthrough--Workplace-Join-with-an-iOS-Device.md)  
   
--   [연습: Windows 장치를 사용 하 여 작업 공간 연결](Walkthrough--Workplace-Join-with-a-Windows-Device.md)  
+-   [연습: Windows 디바이스를 사용하여 작업 공간 연결](Walkthrough--Workplace-Join-with-a-Windows-Device.md)  
   
--   [연습 가이드: 조건부 액세스 제어를 사용한 위험 관리](Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)  
+-   [연습 가이드: 조건부 액세스 제어를 사용하여 위험 관리](Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)  
   
 -   [연습 가이드: 추가 Multi-factor Authentication for Sensitive Applications 사용 하 여 위험 관리](Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)  
   
@@ -39,9 +37,9 @@ ms.locfileid: "59868084"
   
 2.  [2단계: 페더레이션 서버 (ADFS1) with Device Registration Service 구성](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_4)  
   
-3.  [3 단계: 웹 서버 (WebServ1) 및 샘플 클레임 기반 응용 프로그램 구성](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_5)  
+3.  [3단계: 웹 서버 (WebServ1) 및 샘플 클레임 기반 응용 프로그램 구성](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_5)  
   
-4.  [4 단계: 클라이언트 컴퓨터 (Client1) 구성](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_10)  
+4.  [4단계: 클라이언트 컴퓨터 (Client1) 구성](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_10)  
   
 ## <a name="BKMK_1"></a>1 단계: 도메인 컨트롤러(DC1) 구성  
 이 테스트 환경을 위해 루트 Active Directory 도메인을 호출할 수 있습니다 **contoso.com** 지정 **pass@word1** 을 관리자 암호로 합니다.  
@@ -327,7 +325,7 @@ Windows Identity Foundation SDK를 다운로드할 수 있습니다 ([https://ww
 1.  페더레이션 서버(ADFS1)의 **AD FS 관리 콘솔**에서 **신뢰 당사자 트러스트**로 이동하여 **신뢰 당사자 트러스트 추가**를 클릭합니다.  
   
 2.  **데이터 원본 선택** 페이지에서 **온라인 또는 로컬 네트워크에 게시된 신뢰 당사자에 대한 데이터 가져오기**를 선택하고 **claimapp**에 대한 메타데이터 URL을 입력한 후 **다음**을 클릭합니다. FedUtil.exe를 실행하면 메타데이터 .xml 파일이 생성됩니다. 파일은   
-    **https://webserv1.contoso.com/claimapp/federationmetadata/2007-06/federationmetadata.xml**.  
+    **https://webserv1.contoso.com/claimapp/federationmetadata/2007-06/federationmetadata.xml** .  
   
 3.  **표시 이름 지정** 페이지에서 신뢰 당사자 트러스트에 대한 **표시 이름** **claimapp**을 지정하고 **다음**을 클릭합니다.  
   

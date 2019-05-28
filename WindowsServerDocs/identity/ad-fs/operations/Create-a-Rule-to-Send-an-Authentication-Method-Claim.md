@@ -9,16 +9,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 4065a61e042f52298da656899289e718e010f932
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: be3a16bac9c146637117aa7b9720cb4aa76177e2
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59819094"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189392"
 ---
 # <a name="create-a-rule-to-send-an-authentication-method-claim"></a>인증 방법 클레임을 보내도록 규칙 만들기
 
->적용 대상: Windows Server 2016, Windows Server 2012 R2
 
 하나를 사용할 수는 **그룹 구성원을 클레임으로 보내기** 규칙 서식 파일 또는 **들어오는 클레임 변환** 보낼 인증 방법 클레임 규칙 템플릿. 신뢰 당사자 Active Directory Federation Services에서 사용자를 사용 하 여 인증 하 고 얻을 로그온 메커니즘 클레임을 결정 하는 인증 방법 클레임을 사용할 수 \(AD FS\)합니다. Active Directory Federation Services의 인증 메커니즘 보증 기능을 사용할 수도 있습니다 \(AD FS\) 나타나는 상황에 대 한 인증 방법 클레임을 생성 하려면 입력으로 되는 Windows Server 2012 R2에서 신뢰 당사자 스마트 카드 로그온을 기반으로 하는 액세스 수준을 확인 하려고 합니다. 예를 들어 개발자 신뢰 당사자 응용 프로그램의 페더레이션된 사용자에 게 서로 다른 수준의 액세스를 할당할 수 있습니다. 액세스 수준은 기준으로 사용자가 여부 자신의 사용자 이름 및 암호 자격 증명으로가 아니라 스마트 카드 로그온 합니다.  
   
@@ -285,9 +284,9 @@ ms.locfileid: "59819094"
 ## <a name="additional-references"></a>추가 참조 
 [클레임 규칙 구성](Configure-Claim-Rules.md)  
  
-[검사 목록: 신뢰 당사자 트러스트에 대 한 클레임 규칙 만들기](https://technet.microsoft.com/library/ee913578.aspx)  
+[검사 목록: 신뢰 당사자 트러스트를 위한 클레임 규칙 만들기](https://technet.microsoft.com/library/ee913578.aspx)  
 
-[검사 목록: 클레임 공급자에 대 한 클레임 규칙 만들기 신뢰](https://technet.microsoft.com/library/ee913564.aspx)  
+[검사 목록: 클레임 공급자 트러스트를 위한 클레임 규칙 만들기](https://technet.microsoft.com/library/ee913564.aspx)  
   
 [권한 부여 클레임 규칙을 사용 하는 경우](../../ad-fs/technical-reference/When-to-Use-an-Authorization-Claim-Rule.md)  
 

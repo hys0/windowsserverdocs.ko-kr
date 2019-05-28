@@ -9,16 +9,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 167e43d49c08d0e39549bf46888118f985e3876d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 72fe425b040f83a217a144976265c7754830c91b
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59863774"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189497"
 ---
 # <a name="create-a-rule-to-permit-or-deny-users-based-on-an-incoming-claim"></a>들어오는 클레임에 따라 사용자를 허용 또는 거부하는 규칙 만들기 
 
->적용 대상: Windows Server 2016, Windows Server 2012 R2
 
 Windows Server 2016에서 사용할 수 있습니다는 **액세스 제어 정책** 됩니다 사용자 허용 또는 거부 들어오는 클레임을 기반으로 하는 규칙을 만들려고 합니다.  Windows Server 2012 R2에서 사용 하는 **허용 또는 거부 들어오는 클레임에 따라 사용자가** Active Directory Federation Services에서 규칙 템플릿을 \(AD FS\), 부여 됩니다.이 권한 부여 규칙을 만들 수 있습니다 또는 유형 및 들어오는 클레임의 값에 따라 신뢰 당사자에 대 한 사용자 액세스를 거부 합니다. 
 
@@ -117,7 +116,7 @@ Windows Server 2016에서 사용할 수 있습니다는 **액세스 제어 정�
 ## <a name="additional-references"></a>추가 참조 
 [클레임 규칙 구성](Configure-Claim-Rules.md)  
  
-[검사 목록: 신뢰 당사자 트러스트에 대 한 클레임 규칙 만들기](https://technet.microsoft.com/library/ee913578.aspx)  
+[검사 목록: 신뢰 당사자 트러스트를 위한 클레임 규칙 만들기](https://technet.microsoft.com/library/ee913578.aspx)  
   
 [권한 부여 클레임 규칙을 사용 하는 경우](../../ad-fs/technical-reference/When-to-Use-an-Authorization-Claim-Rule.md)  
 

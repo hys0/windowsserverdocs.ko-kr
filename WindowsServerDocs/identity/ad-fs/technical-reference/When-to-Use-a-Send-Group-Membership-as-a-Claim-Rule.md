@@ -9,15 +9,13 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: dffd886ffd0bedd429918f72408b2d13d9fa1bdf
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ea537aa61cd7bfbe05ed1dd151eddd4a0bfc5ca7
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59859174"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188303"
 ---
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 # <a name="when-to-use-a-send-group-membership-as-a-claim-rule"></a>그룹 구성원을 클레임으로 보내기 규칙을 사용할 경우
 Active Directory Federation Services에서이 규칙을 사용할 수 있습니다 \(AD FS\) 을 새 나가는 클레임 값을 지정된 된 Active Directory 보안 그룹의 멤버인 사용자만 발급 하려는 경우. 이 규칙을 사용하는 경우 다음 표에 설명된 대로 직접 지정하고 규칙 논리와 일치하는 그룹에 대한 단일 클레임만 발급합니다.  
   

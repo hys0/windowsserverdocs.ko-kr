@@ -9,16 +9,15 @@ ms.date: 10/25/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 3d622686a3cc34316f0cf5187839785195c2f104
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2f6e4abb4255281be85b7fa928566f681bcf2de2
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59880234"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188365"
 ---
 # <a name="auditing-enhancements-to-ad-fs-in-windows-server-2016"></a>Windows Server 2016 AD FS의 향상된 감사 기능
 
->적용 대상: Windows Server 2016
 
 현재 AD FS Windows Server 2012 R2에 대 한 단일 요청 및 로그인에 대 한 관련 정보에 대해 생성 된 다양 한 감사 이벤트는 또는 토큰 발급 활동은 없는 (AD FS의 일부 버전)에서 또는 여러 감사 이벤트에 걸쳐 있습니다. AD FS 기본적으로 감사 이벤트의 자세한 특성으로 인해 해제 됩니다.  
     Windows Server 2016에서 AD FS의 릴리스부터 감사 되었습니다 더 효율적이 고 상대적으로 간단 합니다.  

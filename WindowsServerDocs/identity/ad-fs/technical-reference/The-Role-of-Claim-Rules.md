@@ -9,15 +9,13 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: e47dbecdeee620d3a237ad8d8c41a550d3ef069c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 06f2f0d1fb48c6b9dea89762a30fdf77643d0e53
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59860784"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188572"
 ---
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 # <a name="the-role-of-claim-rules"></a>클레임 규칙의 역할
 Active Directory Federation Services에서 페더레이션 서비스의 전반적인 기능은 \(AD FS\) 클레임 집합을 포함 하는 토큰을 발급 하는 것입니다. AD FS 수락 하 고 실행 한 다음 클레임에 대 한 결정은 클레임 규칙에 따라 적용 됩니다.  
   

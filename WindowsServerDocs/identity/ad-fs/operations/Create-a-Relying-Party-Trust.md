@@ -9,16 +9,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 14e1cc732ed60b7f05a9a4a9aac9037c48b702f2
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 42df338ee5a5aecb3cf32f91a2b1aedae1210164
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59879924"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189512"
 ---
 # <a name="create-a-relying-party-trust"></a>신뢰 당사자 트러스트 추가
 
->적용 대상: Windows Server 2016, Windows Server 2012 R2
 
 다음 문서에서는 신뢰 당사자 트러스트를 수동으로 만들고 페더레이션 메타 데이터를 사용 하 여 설명 합니다.
   

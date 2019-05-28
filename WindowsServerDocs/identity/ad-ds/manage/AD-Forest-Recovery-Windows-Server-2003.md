@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
 ms.technology: identity-adds
-ms.openlocfilehash: bd15df5360a50e417881d83319344dbdf48f35fa
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e2af1bfc295469d43e59593d69d4ba88f476e427
+ms.sourcegitcommit: 21165734a0f37c4cd702c275e85c9e7c42d6b3cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59829644"
+ms.lasthandoff: 05/03/2019
+ms.locfileid: "65034145"
 ---
 # <a name="ad-forest-recovery---windows-server-2003-recovery"></a>AD 포리스트 복구-Windows Server 2003 복구
 
@@ -22,9 +22,9 @@ ms.locfileid: "59829644"
 
 이 항목에서는 Windows Server 2003을 실행 하는 도메인 컨트롤러 (Dc)에 대 한 포리스트 복구 절차를 포함 합니다. 포리스트 복구를 위한 일반적인 프로세스는 Windows Server 2003 Dc와 다르지 않지만 다른 tools 인해 특정 프로시저 다를 수 있습니다. 예를 들어, 백업 및 Windows Server Backup 또는 Wbadmin.exe 이상인 Windows Server 2008을 실행 하는 Dc에 사용 되는 반면 Windows Server 2003 Dc를 실행 하는 Dc를 복원 하려면 Ntdsutil.exe는 사용할 수 있습니다.  
   
-- [시스템 상태 데이터 백업](#Backing-up-the-System-State-data)  
-- [신뢰할 수 없는 복원을 수행합니다.](#Performing-a-nonauthoritative restore)  
-- [DNS 서버 서비스 설치 및 구성](#Install-and-configure-the-DNS-Server-service)  
+- [시스템 상태 데이터 백업](#backing-up-the-system-state-data)  
+- [신뢰할 수 없는 복원을 수행합니다.](#performing-a-nonauthoritative-restore)  
+- [DNS 서버 서비스 설치 및 구성](#install-and-configure-the-dns-server-service)
 
 ## <a name="backing-up-the-system-state-data"></a>시스템 상태 데이터 백업
 Windows Server 2003을 실행 하는 DC의 현재 백업 작업을 위해 선택한 다른 데이터와 함께 시스템 상태 데이터를 백업 하려면 다음 절차를 따르십시오. Windows Server 2003 시스템 상태 데이터를 백업 하는 데 사용할 수 있는 Ntbackup 도구를 포함 합니다.  
@@ -119,12 +119,12 @@ Windows Server 2003을 실행 하는 DC에서 SYSVOL의 신뢰할 수 있는 (�
 
 ## <a name="next-steps"></a>다음 단계
 
-- [AD 포리스트 복구-필수 구성 요소](AD-Forest-Recovery-Prerequisties.md)  
+- [AD 포리스트 복구 - 필수 조건](AD-Forest-Recovery-Prerequisties.md)  
 - [사용자 지정 포리스트 복구 계획을 고안 AD 포리스트 복구-](AD-Forest-Recovery-Devising-a-Plan.md)  
 - [AD 포리스트 복구 문제를 식별 합니다.](AD-Forest-Recovery-Identify-the-Problem.md)
 - [AD 포리스트 Recovery-복구 하는 방법 결정](AD-Forest-Recovery-Determine-how-to-Recover.md)
 - [AD 포리스트 복구-초기 복구를 수행 합니다.](AD-Forest-Recovery-Perform-initial-recovery.md)  
-- [AD 포리스트 복구 절차](AD-Forest-Recovery-Procedures.md)  
+- [AD 포리스트 복구 - 절차](AD-Forest-Recovery-Procedures.md)  
 - [AD 포리스트 복구-질문과 대답](AD-Forest-Recovery-FAQ.md)  
 - [AD 포리스트 복구-Multidomain 포리스트에 단일 도메인 복구](AD-Forest-Recovery-Single-Domain-in-Multidomain-Recovery.md)  
 - [AD 포리스트 복구-Windows Server 2003 도메인 컨트롤러를 사용 하 여 포리스트 복구](AD-Forest-Recovery-Windows-Server-2003.md) 

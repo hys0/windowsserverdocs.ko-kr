@@ -9,16 +9,15 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 32b8e3cc133ce95872881115608bb8cfb17b2427
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7d046c720c5c6250b6efa03e068aa66e2a6bbe3d
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59816014"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192299"
 ---
 # <a name="configure-name-resolution-for-a-federation-server-proxy-in-a-dns-zone-that-serves-only-the-perimeter-network"></a>경계 네트워크에서만 작동하는 DNS 영역에 페더레이션 서버 프록시에 대한 이름 확인 구성
 
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 페더레이션 서버는 Active Directory Federation Services에 대 한 이름 확인이 성공적으로 작업할 수 있도록 \(AD FS\) 시나리오는 하나 이상의 도메인 이름 시스템 \(DNS\) 영역 경계 에서만 제공 네트워크, 다음 작업을 완료 해야 합니다.  
   
@@ -69,6 +68,6 @@ ms.locfileid: "59816014"
 ## <a name="additional-references"></a>추가 참조  
 [검사 목록: 페더레이션 서버 프록시 설정](Checklist--Setting-Up-a-Federation-Server-Proxy.md)  
   
-[페더레이션 서버 프록시에 대 한 이름 확인 요구 사항](https://technet.microsoft.com/library/dd807055.aspx)  
+[페더레이션 서버 프록시에 대한 이름 확인 요구 사항](https://technet.microsoft.com/library/dd807055.aspx)  
   
 

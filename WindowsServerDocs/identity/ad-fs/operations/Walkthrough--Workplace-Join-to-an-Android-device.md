@@ -9,16 +9,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: cfe26947b6b0de28ea50367f82d52815fff8f323
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 73dbe4d62d460f9487467c7d4198d62b3b6af539
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59873834"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188933"
 ---
 # <a name="walkthrough-workplace-join-to-an-android-device"></a>연습: Android 장치에 작업 공간 연결
 
->적용 대상: Windows Server 2016, Windows Server 2012 R2
 
 
 ## <a name="join-your-device-with-workplace-join"></a>작업 공간 연결을 사용하여 장치를 연결합니다.

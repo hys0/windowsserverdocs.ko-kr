@@ -9,15 +9,13 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: fac6437e9b6c3893064769a8279c2cf96cbc47d6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f2e373f45088105a7ac9ca5cb43fbebc6452ccb9
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59833784"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188576"
 ---
->적용 대상: Windows Server 2016, Windows Server 2012 R2
-
 # <a name="device-registration-technical-reference"></a>장치 등록 기술 참조
 Device Registration Service \(DRS\) 는 Windows Server 2012 R2에서 Active Directory 페더레이션 서비스 역할을 사용 하 여 포함 된 새 Windows 서비스입니다.  DRS는 AD FS 팜의 모든 페더레이션 서버에서 설치 및 구성해야 합니다.  DRS 배포에 대한 자세한 내용은 [Device Registration Service를 사용하여 페더레이션 서버 구성](https://technet.microsoft.com/library/dn486831.aspx)을 참조하세요.  
   
@@ -25,7 +23,7 @@ Device Registration Service \(DRS\) 는 Windows Server 2012 R2에서 Active Dire
 Device Registration Service 중 다음 Active Directory 개체가 만들어집니다.  
   
 ### <a name="device-registration-configuration"></a>장치 등록 구성  
-장치 등록 구성은 Active Directory 포리스트의 구성 명명 컨텍스트로 저장됩니다(예: \(예를 들어 **CN\=Device Registration Configuration, CN\=Services < configuration\-명명\-컨텍스트 >**\)합니다. 이 개체는 Active Directory 포리스트가 장치 등록을 위해 초기화될 때 생성됩니다.  
+장치 등록 구성은 Active Directory 포리스트의 구성 명명 컨텍스트로 저장됩니다(예: \(예를 들어 **CN\=Device Registration Configuration, CN\=Services < configuration\-명명\-컨텍스트 >** \)합니다. 이 개체는 Active Directory 포리스트가 장치 등록을 위해 초기화될 때 생성됩니다.  
   
 장치 등록 구성에는 다음 요소가 포함됩니다.  
   
@@ -40,7 +38,7 @@ Device Registration Service 중 다음 Active Directory 개체가 만들어집�
 ### <a name="registered-devices-container"></a>등록된 장치 컨테이너  
 장치 개체 컨테이너는 Active Directory 포리스트에 있는 도메인 중 하나에 만들어집니다.  이 개체 컨테이너에는 Active Directory 포리스트의 모든 장치 개체가 포함됩니다.  
   
-기본적으로 컨테이너는 AD FS와 동일한 도메인에 만들어집니다(예:  \(예를 들어 **CN\=RegisteredDevices, DC\=< 기본값\-명명\-컨텍스트 >**\)합니다. 이 개체는 Active Directory 포리스트가 장치 등록을 위해 초기화 될 때 생성 됩니다.  
+기본적으로 컨테이너는 AD FS와 동일한 도메인에 만들어집니다(예:  \(예를 들어 **CN\=RegisteredDevices, DC\=< 기본값\-명명\-컨텍스트 >** \)합니다. 이 개체는 Active Directory 포리스트가 장치 등록을 위해 초기화 될 때 생성 됩니다.  
   
 ### <a name="registered-devices"></a>등록된 장치  
 장치 개체는 Active Directory의 새로운 경량 개체로,  사용자, 장치 및 회사 간의 관계를 나타내는 데 사용됩니다.  장치 개체는 AD FS에서 서명한 인증서를 사용하여 Active Directory의 논리적 장치 개체에 물리적 장치를 고정합니다.  

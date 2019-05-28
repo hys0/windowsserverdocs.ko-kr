@@ -9,15 +9,13 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 27282c6b88b0457af3b4cf031fdadced7b40268c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ac666539170bb7aabf0b7f58a7ef003ebe87c2a8
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59878134"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188388"
 ---
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 # <a name="understanding-key-ad-fs-concepts"></a>주요 AD FS 개념 이해
 Active Directory Federation Services에 대 한 중요 한 개념을 알아봅니다 하 고 해당 기능 집합에 익숙해지는 것이 좋습니다.  
   
@@ -66,6 +64,6 @@ AD FS를 사용 하 여 무시할 수 있습니다 보조 자격 증명에 대 �
   
 -   [클레임 규칙 템플릿 사용 하 여 형식을 결정합니다](Determine-the-Type-of-Claim-Rule-Template-to-Use.md)  
   
--   [AD FS에서 Uri 사용 하는 방법](How-URIs-Are-Used-in-AD-FS.md)  
+-   [AD FS에서 URI를 사용하는 방법](How-URIs-Are-Used-in-AD-FS.md)  
   
 

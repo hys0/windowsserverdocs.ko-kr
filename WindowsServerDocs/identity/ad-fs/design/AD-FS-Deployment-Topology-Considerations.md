@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: bbd3ec26e5fb0ce9857f2c9e5321300fb835b303
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c5a3c85d40baee137ecdf7a1a5507b25361cac6d
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59834594"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191766"
 ---
 # <a name="ad-fs-deployment-topology-considerations"></a>AD FS 배포 토폴로지 고려 사항
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 이 항목에서는 계획 하 고는 Active Directory Federation Services를 디자인 하는 데 중요 한 고려 사항 설명 \(AD FS\) 프로덕션 환경에서 사용 하는 배포 토폴로지입니다. 이 항목은 검토 하 고 어떤 기능 또는 기능 됩니다 할 수 있는 AD FS를 배포한 후에 영향을 주는 고려 사항을 평가 대 한 시작 지점입니다. 예를 들어 데이터베이스에 따라 AD FS 구성 데이터베이스를 저장 하도록 선택 하면 형식이 결정 됩니다 있는지 여부를 특정 Security Assertion Markup Language를 구현할 수 있습니다 \(SAML\) SQL을 필요로 하는 기능 서버입니다.  
   
@@ -32,14 +30,14 @@ AD FS 기능
 |기능|WID에서 지원?|SQL Server에서 지원?|이 기능에 대한 자세한 정보|  
 |-----------|---------------------|----------------------------|---------------------------------------|  
 |페더레이션 서버 팜 배포|예, 팜의 각 페더레이션 서버를 30 개로 제한|예 단일 팜에 배포할 수 있는 페더레이션 서버 수에 대한 제한 없음|[AD FS 배포 토폴로지 결정](Determine-Your-AD-FS-Deployment-Topology.md)|  
-|SAML 아티팩트 확인 **참고 합니다.** 이 기능은 Microsoft Online Services, Microsoft Office 365, Microsoft Exchange 또는 Microsoft Office SharePoint 시나리오에는 필요하지 않습니다.|아니요|예|[AD FS 구성 데이터베이스의 역할](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)<br /><br />[AD FS의 보안 계획 및 배포에 대 한 모범 사례](Best-Practices-for-Secure-Planning-and-Deployment-of-AD-FS.md)|  
-|SAML\/WS\-페더레이션 토큰 재생 검색|아니요|예|[AD FS 구성 데이터베이스의 역할](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)<br /><br />[AD FS의 보안 계획 및 배포에 대 한 모범 사례](Best-Practices-for-Secure-Planning-and-Deployment-of-AD-FS.md)|  
+|SAML 아티팩트 확인 **참고 합니다.** 이 기능은 Microsoft Online Services, Microsoft Office 365, Microsoft Exchange 또는 Microsoft Office SharePoint 시나리오에는 필요하지 않습니다.|아니요|예|[AD FS 구성 데이터베이스의 역할](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)<br /><br />[AD FS 보안 계획 및 배포 모범 사례](Best-Practices-for-Secure-Planning-and-Deployment-of-AD-FS.md)|  
+|SAML\/WS\-페더레이션 토큰 재생 검색|아니요|예|[AD FS 구성 데이터베이스의 역할](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)<br /><br />[AD FS 보안 계획 및 배포 모범 사례](Best-Practices-for-Secure-Planning-and-Deployment-of-AD-FS.md)|  
   
 데이터베이스 기능  
   
 |기능|WID에서 지원?|SQL Server에서 지원?|이 기능에 대한 자세한 정보|  
 |-----------|---------------------|----------------------------|---------------------------------------|  
-|하나 또는 읽기 호스팅 서버를 더 끌어오기 복제를 사용 하 여 기본 데이터베이스 중복성\-읽기를 호스트 하는 원본 서버에 적용 된 데이터베이스 요청 변경의 전용 복사본\/데이터베이스의 복사본을 작성|예|아니오|[AD FS 구성 데이터베이스의 역할](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)|  
+|하나 또는 읽기 호스팅 서버를 더 끌어오기 복제를 사용 하 여 기본 데이터베이스 중복성\-읽기를 호스트 하는 원본 서버에 적용 된 데이터베이스 요청 변경의 전용 복사본\/데이터베이스의 복사본을 작성|예|아니요|[AD FS 구성 데이터베이스의 역할](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)|  
 |고가용성을 사용 하 여 데이터베이스 중복성\-장애 조치 클러스터링 또는 미러링을 같은 가용성 솔루션 \(데이터베이스 계층 에서만\) **참고:** 모든 AD FS 배포 토폴로지는 AD FS 서비스 계층의 클러스터링을 지원 합니다.|아니요|예|[AD FS 구성 데이터베이스의 역할](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)<br /><br />[고가용성 솔루션 개요](https://go.microsoft.com/fwlink/?LinkId=179853)|  
   
 ### <a name="sql-server-considerations"></a>SQL Server 고려 사항  
@@ -66,4 +64,4 @@ SQL Server 데이터베이스를 사용하는 팜에 배포된 페더레이션 
 -   네트워크 로드 균형 조정 \(NLB\)  
   
 ## <a name="see-also"></a>관련 항목
-[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)

@@ -5,483 +5,276 @@ description: ''
 author: billmath
 ms.author: billmath
 manager: mtilman
-ms.date: 02/20/2019
+ms.date: 03/20/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 904b563da2f1404d873c7352db9eadb7bfe252f2
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: dd6dea2fb8a16bfdbe93f93fbdd1dc5ac47af4be
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59869764"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189899"
 ---
 # <a name="ad-fs-extranet-lockout-and-extranet-smart-lockout"></a>AD FS 엑스트라넷 잠금 및 엑스트라넷 잠금
 
-# <a name="overview"></a>개요
+## <a name="overview"></a>개요
 
->적용 대상: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
+엑스트라넷 스마트 잠금 (ESL)를 악의적인 활동 으로부터 엑스트라넷 계정 잠금 경험에서 사용자를 보호 합니다.  
 
-Windows Server 2012 R2에서 AD FS에서 호출 하는 보안 기능을 도입 했습니다 [엑스트라넷 소프트 잠금](configure-ad-fs-extranet-soft-lockout-protection.md)합니다.  이 기능을 사용 하 여 AD FS 기간에 대 한 사용자가 엑스트라넷에서 인증을 중지 합니다.  이렇게 하면 사용자 계정을 Active Directory에서 잠기지 않습니다. 사용자 AD 계정 잠금에서를 보호 하는 것 외에도 AD FS 엑스트라넷 잠금도 무차별 암호 추측 공격 으로부터 보호 합니다.
+ESL AD FS를 사용자에 대 한 친숙 한 위치에서 로그인 시도 공격자 수에서 로그인 시도 구분할 수 있습니다. AD FS 유효한 사용자가 해당 계정을 사용 하 여 계속 하도록 허용 하는 동안 공격자를 잠글 수 있습니다. 이렇게 하면 수 없으며 서비스 거부 및 특정 부류의 사용자에 대 한 암호 스프레이 공격 으로부터 보호 합니다. ESL은 Windows Server 2016에서 AD FS에 대해 사용할 수 있으며 Windows Server 2019에서 AD FS에 빌드됩니다. 
 
-Windows Server 2016에서 AD FS 2018 년 6 월에에서 도입 **엑스트라넷 스마트 잠금 (ESL)** 합니다.  ESL AD Fs에서를 유효한 사용자 것 처럼 보이는 로그인 시도 공격자 수에서 로그인 구분할 수 있습니다. 결과적으로, AD FS는 유효한 사용자가 해당 계정을 사용 하 여 계속 하도록 허용 하는 동안 공격자가 out 잠글 수 있습니다. 이 사용자의 서비스 거부를 방지 하 고 "암호-스프레이" 공격과 같은 대상된 공격 으로부터 보호 합니다.  
-ESL은 Windows Server 2016에서 AD FS에 대해 사용할 수 있으며 Windows Server 2019에서 AD FS에 빌드됩니다.
+ESL 수만 사용자 이름 및 암호 인증 요청을 통해 웹 응용 프로그램 프록시 또는 지원 되는 엑스트라넷는 제공 3rd 파티 프록시입니다.   
 
-> [!NOTE]
-> 이 기능에만 작동 합니다 **엑스트라넷 시나리오** 웹 응용 프로그램 프록시를 통해 제공 되는 인증 요청 및에 적용 됩니다 **사용자 이름 및 암호 인증**합니다.
+## <a name="additional-features-in-ad-fs-2019"></a>2019 AD FS에서 추가 기능 
+AD FS 2019에서에서 엑스트라넷 잠금 추가 AD FS 2016에 비해 다음과 같은 이점이 있습니다. 
+- 알려진된 적절 한 위치에 사용자가 주의 대상 위치에서 요청 보다 오류에 대 한 더 많은 공간을 그려볼 수 있도록 친숙 하 고 알 수 없는 위치에 대 한 독립적인 잠금 임계값을 설정 합니다. 
+- 이전 소프트 잠금 동작을 적용 하면서 스마트 잠금에 대 한 감사 모드를 사용 합니다. 이 옵션을 사용 하면 사용자 친숙 한 위치에 대해 알아보고 여전히 AD FS 2012 r2에서 제공 되는 엑스트라넷 잠금 기능으로 보호 될 수 있습니다.  
 
-## <a name="advantages-of-extranet-smart-lockout-in-ad-fs-2016"></a>AD FS 2016에서에서 엑스트라넷 잠금의 장점
-다음과 같은 주요 이점을 제공 하는 AD FS 2012 r 2에서에서 엑스트라넷 소프트 잠금:
-- 사용자 계정을 보호 **무차별 암호 대입 공격** 지속적으로 인증 요청을 전송 하 여 및에서 사용자의 암호를 추측 하려고 공격자의 **암호 스프레이 공격** 위치 공격자가 여러 서로 다른 계정으로 일반적인 암호를 사용 하려고 합니다.
-- 사용자 계정을 보호 **Active Directory 계정 잠금** 잘못 된 암호를 사용 하 여 악의적인 인증 요청에서. 이 경우 엑스트라넷 액세스에 대 한 사용자 계정이 잠기게 됩니다, 있지만 사용자 수는 회사 네트워크에서 AD에 로그인 합니다. 이것을 **소프트 잠금**합니다.
+## <a name="how-it-works"></a>작동 방법 
+### <a name="configuration-information"></a>구성 정보 
+ESL을 사용 하는 AdfsArtifactStore.AccountActivity, 아티팩트 데이터베이스에 새 테이블을 만들고 "사용자 활동" 마스터와 AD FS 팜에 노드를 선택 합니다. WID 구성에서이 노드는 항상 주 노드. SQL 구성에서 노드 하나를 사용자 작업 마스터가 되도록 선택 됩니다.  
 
-다음을 추가 하 여 엑스트라넷 잠금 엑스트라넷 소프트 잠금의 장점에 기반 합니다.
-- 사용자를 보호 하에서 발생 **엑스트라넷 계정 잠금** 악성 인증 요청에서.  스마트 잠금에서는 실제 사용자가 친숙 한 위치에서 엑스트라넷에서 로그온 할 수 있도록 하는 동안 알 수 없는 위치에서 잠재적으로 악의적인 요청을 차단 (위치는 사용자가 성공적으로 로그인 하기 전에).
-- 시스템 계정을 사용 하지 않도록 설정 하지 않고 장점과 악성 signon 활동을 알 수 있도록 로그 전용 모드에
+선택한 사용자 작업 마스터 노드를 표시 합니다. Get-AdfsFarmInformation.FarmRoles 
 
-## <a name="additional-advantages-of-extranet-smart-lockout-in-ad-fs-2019"></a>AD FS 2019의에서 스마트 잠금 엑스트라넷의 추가적인 이점
-AD FS 2019에서에서 엑스트라넷 잠금 추가 AD FS 2016에 비해 다음과 같은 이점이 있습니다.
-- 알려진된 적절 한 위치에 사용자가 주의 대상 위치에서 요청 보다 오류에 대 한 더 많은 공간을 그려볼 수 있도록 친숙 하 고 알 수 없는 위치에 대 한 독립적인 잠금 임계값을 설정 합니다.
-- 이전 소프트 잠금 동작을 적용 하면서 스마트 잠금에 대 한 감사 모드를 사용 하도록 설정
+모든 보조 노드에 잘못 된 암호 수의 최신 값 및 새 익숙한 위치 값을 포트 80을 통해 새로운 각 로그인에 마스터 노드를 문의 하 고 로그인이 처리 된 후 해당 노드를 업데이트 됩니다. 
 
-## <a name="pre-requisites-for-extranet-smart-lockout-in-ad-fs-2016"></a>AD FS 2016에서에서 엑스트라넷 잠금에 대 한 필수 조건
-다음과 같은 필수가 ad FS 2019 ESL 필요 합니다.
+![구성](media/configure-ad-fs-extranet-smart-lockout-protection/esl1.png)
 
-### <a name="install-updates-on-all-nodes-in-the-farm"></a>팜의 모든 노드에서 업데이트를 설치 합니다.
-먼저, 2018 년 6 월 Windows 업데이트를 기준으로 최신 상태입니다. 모든 Windows Server 2016 AD FS 서버 및 AD FS 2016 팜 2016 팜 동작 수준에서 실행 되 고 있는지 확인 합니다.
+ 보조 노드에서 마스터에 연결할 수 없는 경우 AD FS 관리자 로그에 오류 이벤트를 기록 합니다. 인증 처리를 계속 하지만 AD FS 업데이트 상태를 로컬로 기록만 합니다. AD FS 마스터 10 분 마다 연결 다시 시도 하 고 마스터 마스터를 사용할 수 있으면 다시 전환 됩니다. 
 
-### <a name="update-artifact-database-permissions"></a>아티팩트 데이터베이스 권한을 업데이트합니다
-엑스트라넷 잠금에는 AD FS 서비스 계정에 ADFS 아티팩트 데이터베이스에 새 테이블로 권한이 필요 합니다.  PowerShell 명령 창에서 다음 명령을 실행 하 여이 권한을 부여 합니다.
-``` powershell
-PS C:\>$cred = Get-Credential
-PS C:\>Update-AdfsArtifactDatabasePermission -Credential $cred
-```
-여기서 `$cred` AD FS 관리자 권한이 있는 계정 (AD FS 관리자 권한은 변경이 데이터베이스를 확인 해야 합니다.)
+### <a name="terminology"></a>용어 
+- **FamiliarLocation**: 인증 요청을 하는 동안 ESL Ip를 제공 하는 모든 확인 합니다. 이러한 Ip 네트워크 IP를 IP 전달 및 선택적 x-전달 기능에 대 한 IP 조합 됩니다. Ip의 모든 요청이 성공 하면 "친숙 한 ip" 계정 활동 테이블에 추가 됩니다. 요청에 있는 경우 "친숙 한 Ip"에 있는 모든 Ip를 요청 "익숙한" 위치로 간주 됩니다.
+- **UnknownLocation**: 요청에서 제공 되는 기존 "FamiliarLocation" 목록에 없는 하나 이상의 IP가 요청을 "Unknown" 위치로 처리 됩니다. 이 Exchange Online 주소 성공 및 실패 한 요청을 처리 하는 위치에 Exchange Online 레거시 인증과 같은 프록시 시나리오를 처리 하는 것입니다.  
+- **badPwdCount**: 인증 및 잘못 된 암호를 전송 된 횟수를 나타내는 값을 실패 했습니다. 각 사용자에 대해 별도 카운터는 친숙 한 위치 및 알 수 없는 위치에 대해 유지 됩니다. 
+- **UnknownLockout**: 알 수 없는 위치에서 액세스 하지 못하도록 사용자 잠겨 있으면 사용자별 부울 값입니다. 이 값은 badPwdCountUnfamiliar 및 ExtranetLockoutThreshold 값에 따라 계산 됩니다. 
+- **ExtranetLockoutThreshold**: 이 값이 잘못 된 암호 시도의 최대 수를 결정합니다. 임계값에 도달 하면 ADFS 관찰 창 경과할 때까지 엑스트라넷의 요청을 거부 합니다.
+- **ExtranetObservationWindow**: 이 값이 알 수 없는 위치에서 사용자 이름 및 암호 요청이 잠겨 있는 기간을 결정 합니다. 창에 전달 되는 경우 ADFS는 알 수 없는 위치에서 사용자 이름 및 암호 인증을 다시 수행 하기 시작 합니다. 
+- **ExtranetLockoutRequirePDC**: 사용 하도록 설정 하면 엑스트라넷 잠금 주 도메인 컨트롤러 (PDC) 필요 합니다. 사용 하지 않도록 설정, 엑스트라넷 잠금 PDC를 사용할 수 없는 경우 다른 도메인 컨트롤러에 대체가 됩니다.  
+- **ExtranetLockoutMode**: 컨트롤의 스마트 엑스트라넷 잠금 적용 하는 vs 모드만 로그 
+    - **ADFSSmartLockoutLogOnly**: 엑스트라넷 잠금 활성화 되어 있지만 AD FS는만 관리 하 고 감사 이벤트를 쓰지만 거부 인증 요청 하지 것입니다. 이 모드는 처음에 사용할 수 있도록 FamiliarLocation 'ADFSSmartLockoutEnforce'를 사용 하기 전에 채워질 것입니다.
+    - **ADFSSmartLockoutEnforce**: 임계값에 도달 하면 알 수 없는 인증 요청을 차단 하는 것에 대 한 전체 지원 합니다. 
 
->[!NOTE]
->WID 데이터베이스를 사용 하는 여러 서버 팜에서 위의 cmdlet은 모든 AD FS 서버는 Windows 원격 관리를 사용할 필요
+IPv4 및 IPv6 주소가 지원 됩니다. 
 
-AD FS 관리자 권한이 없으면 구성할 수 있습니다 데이터베이스 사용 권한을 수동으로 SQL 또는 WID AdfsArtifactStore 데이터베이스에 연결 하는 경우 다음 명령을 실행 하 여.
-```
-sp_addrolemember 'db_owner', 'db_genevaservice'
-```
-### <a name="ensure-ad-fs-security-audit-logging-is-enabled"></a>AD FS 보안 감사 로깅을 사용 하도록 설정 확인
-이 기능을 사용 하면 모든 AD FS 서버의 로컬 정책을 비롯 하 여 AD FS에 따라서 감사 로그를 사용할 수 있어야 합니다 보안 감사를 사용 합니다.
+### <a name="anatomy-of-a-transaction"></a>트랜잭션의 분석 
+- **사전 인증 검사**: 인증 요청을 하는 동안 ESL Ip를 제공 하는 모든 확인 합니다. 이러한 Ip 네트워크 IP를 IP 전달 및 선택적 x-전달 기능에 대 한 IP 조합 됩니다. 감사 로그에 이러한 Ip에 나열 되는 <IpAddress> x-ms-전달-클라이언트-ip, x-전달 기능에 대 한 순서 대로 x-ms-프록시-클라이언트-ip 필드입니다. 
+ 
+  이러한 Ip에 따라 ADFS 결정 하는 경우 또는 요청 친숙 한 또는 알 수 없는 위치에서 이며 그런 다음 해당 badPwdCount 임계값 제한 설정 보다 작은 경우를 확인 하는 경우 마지막 **실패 한** 시도 발생 한 이상는 관찰 창 시간 프레임입니다. 이러한 조건 중 하나가 true 인 경우 ADFS 추가 처리를 위해이 트랜잭션이 있으며 유효성 검사를 자격 증명입니다. 두 조건을 모두 false 인 경우 계정은 이미 잠긴 상태의 관찰 창 전달 될 때 까지입니다. 관찰 창에 통과 한 후 사용자 인증을 시도한을 허용 됩니다. 2019에서 ADFS를 기반으로 하는 적절 한 임계값 제한에 대해 IP 주소와 일치 하는지 확인 익숙한 위치 여부 note 합니다.
+- **로그인이 성공한**: 로그인에 성공 하면 요청에서 Ip는 사용자의 친숙 한 위치 IP 목록에 추가 됩니다.  
+- **로그인 하지 못했습니다.** : 로그인 실패를 badPwdCount 경우 증가 합니다. 공격자가 더 이상 잘못 된 암호 시스템에 허용 된 임계값 보다 전송 하는 경우 사용자는 잠금 상태로 전환 됩니다. (badPwdCount > ExtranetLockoutThreshold)  
 
-## <a name="pre-requisites-for-extranet-smart-lockout-in-ad-fs-2019"></a>2019 AD fs에서 엑스트라넷 잠금에 대 한 필수 조건
-다음과 같은 필수가 AD FS 2016을 사용 하 여 ESL 필요 합니다.
+![구성](media/configure-ad-fs-extranet-smart-lockout-protection/esl2.png)
 
-### <a name="ensure-ad-fs-security-audit-logging-is-enabled"></a>AD FS 보안 감사 로깅을 사용 하도록 설정 확인
-이 기능을 사용 하면 모든 AD FS 서버의 로컬 정책을 비롯 하 여 AD FS에 따라서 감사 로그를 사용할 수 있어야 합니다 보안 감사를 사용 합니다.
+계정이 잠겨 때로 "UnknownLockout" 값은 같습니다. 이 사용자의 badPwdCount 임을 의미를 통해 임계값 보다 즉, 누군가가 시스템에서 허용 된 것 보다 더 많은 암호를 시도 합니다. 이 상태는 유효한 사용자가 로그인 할 수는 2 가지가 있습니다. 
+- 사용자 ObservationWindow 시간 경과를 기다려야 합니다. 또는
+- 잠금 상태를 다시 설정 하기 위해는 badPwdCount ' 재설정 ADFSAccountLockout'를 사용 하 여 0으로 다시 설정 합니다. 
 
-## <a name="lockout-settings"></a>잠금 설정
-엑스트라넷 잠금 신규 및 기존 AD FS 속성으로 제어 하는 새 기능 집합으로 구성 됩니다.
+없는 재설정 발생 하는 경우 각 관찰 창에 대 한 AD에 대해 단일 암호 시도 하는 계정이 허용 됩니다. 계정 이후에 잠긴된 상태를 관찰 창과 시도 다시 시작을 반환 합니다. BadPwdCount 값 성공적인 암호 로그인 한 후 자동으로 다시 설정만 됩니다. 
 
-### <a name="extranet-lockout-enabled"></a>엑스트라넷 잠금 사용
-엑스트라넷 잠금 이전에 "soft" 엑스트라넷 잠금 제어에 사용 된 동일한 AD FS 속성을 사용 합니다.  ExtranetLockoutEnabled 라고 속성과 Get-adfsproperties 통해 확인할 수 있습니다.
+### <a name="log-only-mode-versus-enforce-mode"></a>'적용' 모드 및 로그 전용 모드 
+AccountActivity 테이블은 모두 ' 로그 전용 ' 모드 및 '적용' 모드 중에 채워집니다. ' 로그 전용 ' 모드를 생략 하 고 ESL 권장 되는 유예 기간이 없는 모드 '적용'으로 직접 이동 하는 경우 사용자의 친숙 한 Ip ADFS에 알 수 없게 됩니다. 이 경우 잠재적으로 사용자 계정이 active 무차별 공격을 받고 합법적인 사용자 트래픽을 차단 'ADBadPasswordCounter' 같은 ESL 작동 합니다. ' 로그 전용 ' 모드를 시행 하지 않으며 상태 "UnknownLockout"를 사용 하 여 사용자가 잠긴 경우 = TRUE 및 로그인 수 없습니다 "익숙한" IP 목록에 없는 IP에서 적절 한 암호 로그인을 시도 합니다. 이 시나리오를 방지 하려면 3 ~ 7 일 동안 로그 전용 모드 것이 좋습니다. 계정이 있으면 적극적으로 공격을 받고, 최소 24 ' 로그 전용 ' 모드의 경우 합법적인 사용자가 잠금을 방지 하는 데 필요한  
 
-### <a name="extranet-smart-lockout-mode"></a>엑스트라넷 잠금 모드
-스마트 vs "soft" 잠금 동작을 제어 하려면 ExtranetLockoutMode 라는 새 AD FS 속성이 추가 되었습니다.  Set-adfsproperties 통해 설정할 수 있습니다 하 고 3 개의 값을 포함 합니다.
+## <a name="extranet-smart-lockout-configuration"></a>엑스트라넷 잠금 구성  
+ 
+### <a name="prerequisites-for-ad-fs-2016"></a>AD FS 2016에 대 한 필수 구성 요소 
+ 
+1. **팜의 모든 노드에서 업데이트를 설치 합니다.**
 
-    - **ADPasswordCounter** – 레거시 위치에 따라 달라 지지 않습니다 ADFS "엑스트라넷 소프트 잠금" 모드입니다.  이것은 기본값입니다.
+   먼저, 2018 년 6 월 Windows 업데이트를 기준으로 최신 상태입니다. 모든 Windows Server 2016 AD FS 서버 및 AD FS 2016 팜 2016 팜 동작 수준에서 실행 되 고 있는지 확인 합니다.
+1. **권한 확인** 
 
-    - **ADFSSmartLockoutLogOnly** – 엑스트라넷 잠금 이지만 인증 요청을 거부 하는 대신 AD FS는 쓰기 관리 및 감사 이벤트에만 합니다.
+   엑스트라넷 잠금에는 모든 AD FS 서버에서 Windows 원격 관리를 사용할 필요 합니다.
+3. **아티팩트 데이터베이스 권한을 업데이트합니다** 
+ 
+   엑스트라넷 잠금에는 AD FS 서비스 계정을 AD FS 아티팩트 데이터베이스에 새 테이블을 만들 수 있는 권한이 필요 합니다. AD FS 관리자의 경우 AD FS 서버에 로그인 하 고 PowerShell 명령 프롬프트 창에서 다음 명령을 실행 하 여이 권한을 부여 합니다. 
 
-    - **ADFSSmartLockoutEnforce** -엑스트라넷 잠금 임계값에 도달 하면 알 수 없는 요청을 차단 하는 것에 대 한 전체 지원입니다.
+   ``` powershell
+   PS C:\>$cred = Get-Credential 
+   PS C:\>Update-AdfsArtifactDatabasePermission -Credential $cred 
+   ``` 
+   >[!NOTE]
+   >$Cred 자리 표시자는 AD FS 관리자 권한이 있는 계정입니다. 이 테이블을 만들 수 있는 쓰기 권한을 제공 해야 합니다. 
 
-Ad FS 2019에서 해당 소프트 잠금 계속 스마트 잠금에 대 한 준비 하는 동안 적용 됩니다 있도록 ADPasswordCounter 및 ADFSSmartLockoutLogOnly 값을 결합할 수 있습니다.
+   위의 명령을 AD FS 팜의 SQL Server를 사용 하는 위에 제공 된 자격 증명을 SQL server에서 관리자 권한이 없는 것 이므로 충분 한 사용 권한 부족으로 인해 실패할 수 있습니다. 이 경우 구성할 수 있습니다 데이터베이스 사용 권한을 수동으로 SQL Server 데이터베이스의 AdfsArtifactStore 데이터베이스에 연결 되 면 다음 명령을 실행 하 여. 
+    ```  
+    # when prompted with “Are you sure you want to perform this action?”, enter Y. 
 
-### <a name="lockout-threshold-and-observation-window"></a>잠금 임계값 및 관찰 창
-AD FS 2019의에서 스마트 잠금 사용 하 여 동일한 두 개의 AD FS 속성을 이전에 사용 되는 소프트 잠금: ExtranetObservationWindow 및 ExtranetLockoutThreshold 합니다.
+    [CmdletBinding(SupportsShouldProcess=$true,ConfirmImpact = 'High')] 
+    Param() 
 
-- **ExtranetLockoutThreshold &lt;정수&gt;**  이 잘못 된 암호 시도의 최대 수를 정의 합니다. 임계값에 도달 ADFSSmartLockoutEnforce에서 AD FS 모드는 요청을 거부 엑스트라넷에서 관찰 창 경과할 때까지 합니다.  AD FS는 ADFSSmartLockoutLogOnly 모드로 로그 항목을 작성 합니다.  
-- **ExtranetObservationWindow &lt;TimeSpan&gt;**  기간 사용자 이름 및 암호에 대 한 알 수 없는 위치에서 요청이 잠겨 지를 결정 합니다. AD FS는 창에 전달 되 면 사용자 이름 및 암호 인증을 다시 수행 하기 시작 합니다.
+    $fileLocation = "$env:windir\ADFS\Microsoft.IdentityServer.Servicehost.exe.config" 
 
-> [!NOTE]
-> AD FS 엑스트라넷 잠금 AD 잠금 정책에서 독립적으로 작동 합니다. 설정 하는 것을 권장 합니다 **ExtranetLockoutThreshold** AD 계정 잠금 임계값 보다 작은 값으로 매개 변수 값입니다. 이렇게 하려면 실패 한 AD FS에서 Active Directory에서 잠긴 계정을 보호 하는 것으로 반환 됩니다. 
+    if (-not [System.IO.File]::Exists($fileLocation)) 
+    { 
+    write-error "Unable to open ADFS configuration file." 
+    return 
+    } 
 
-Ad FS 2019에서 알려진 좋은 위치로 특정 새 잠금 임계값을 도입 했습니다. ExtranetLockoutThresholdFamiliarLocation.
-- **ExtranetLockoutThresholdFamiliarLocation &lt;정수&gt;**  이 익숙한 위치에서 잘못 된 암호 시도의 최대 수를 정의 합니다. Ad FS 2019에서 원래 매개 변수 ExtranetLockoutThreshold 알 수 없는 위치 (IP 주소 수를 알 수 없는)에 적용 됩니다.
+    $doc = new-object Xml 
+    $doc.Load($fileLocation) 
+    $connString = $doc.configuration.'microsoft.identityServer.service'.policystore.connectionString 
+    $connString = $connString -replace "Initial Catalog=AdfsConfigurationV[0-9]*", "Initial Catalog=AdfsArtifactStore" 
 
-### <a name="primary-domain-controller-requirement"></a>주 도메인 컨트롤러 요구 사항
-AD FS 2016 PDC를 사용할 수 없는 경우 다른 도메인 컨트롤러에 대체 (fallback)를 허용 하는 매개 변수를 제공 합니다.
+    if ($PSCmdlet.ShouldProcess($connString, "Executing SQL command sp_addrolemember 'db_owner', 'db_genevaservice' ")) 
+    { 
+    $cli = new-object System.Data.SqlClient.SqlConnection 
+    $cli.ConnectionString = $connString 
+    $cli.Open() 
 
-- **ExtranetLockoutRequirePDC &lt;부울&gt;**  엑스트라넷 잠금 주 도메인 컨트롤러 (PDC) 사용 하도록 설정 하는 경우 필요 합니다. 사용 하지 않도록 설정, 엑스트라넷 잠금 PDC를 사용할 수 없는 경우 다른 도메인 컨트롤러에 대체가 됩니다.
+    try 
+    {     
 
-   다음 예제에서는 cmdlet을 사용 하지 않도록 설정 PDC 필요가 있는 잠금을 사용 하도록 설정 합니다.
+    $cmd = new-object System.Data.SqlClient.SqlCommand 
+    $cmd.CommandText = "sp_addrolemember 'db_owner', 'db_genevaservice'" 
+    $cmd.Connection = $cli 
+    $rowsAffected = $cmd.ExecuteNonQuery()  
+    if ( -1 -eq $rowsAffected ) 
+    { 
+    write-host "Success" 
+    } 
+    } 
+    finally 
+    { 
+    $cli.CLose() 
+    } 
+    } 
+    ``` 
 
-    ```powershell
-    Set-AdfsProperties -EnableExtranetLockout $true -ExtranetLockoutThreshold 15 -ExtranetObservationWindow (new-timespan -Minutes 30) -ExtranetLockoutRequirePDC $false
-    ```
+### <a name="ensure-ad-fs-security-audit-logging-is-enabled"></a>AD FS 보안 감사 로깅을 사용 하도록 설정 확인 
+이 기능을 사용 하면 모든 AD FS 서버의 로컬 정책을 비롯 하 여 AD FS에 따라서 감사 로그를 사용할 수 있어야 합니다 보안 감사를 사용 합니다. 
+ 
+### <a name="configuration-instructions"></a>구성 지침 
+ADFS 속성을 사용 하는 엑스트라넷 스마트 잠금 **ExtranetLockoutEnabled**합니다. 이 속성 컨트롤 "엑스트라넷 소프트 잠금" Server 2012R2에 이전에 사용 되었습니다. 실행의 현재 속성 구성을 보려면 엑스트라넷 소프트 잠금 활성화 된 경우 ` Get-AdfsProperties` 합니다. 
 
-## <a name="configuring-ad-fs-with-smart-lockout-in-log-only-mode"></a>스마트 잠금 로그 전용 모드에서를 사용 하 여 AD FS를 구성합니다.
+### <a name="configuration-recommendations"></a>구성 권장 사항 
+엑스트라넷 잠금을 구성할 때 임계값을 설정 하는 것에 대 한 모범 사례를 따릅니다.  
 
-### <a name="ad-fs-2016"></a>AD FS 2016
-다음 cmdlet을 실행 하 여만 기록 잠금 동작을 먼저 설정 하는 것이 좋습니다.
+`ExtranetObservationWindow (new-timespan -Minutes 30)` 
 
- ```powershell
-PS C:\>Set-AdfsProperties -ExtranetLockoutMode AdfsSmartlockoutLogOnly
- ```
+`ExtranetLockoutThreshold: – 2x AD Threshold Value` 
 
-이 모드에서는 AD FS 보안 감사 이벤트를 기록 하며 모든 요청을 차단 하지 않습니다 사용자 친숙 한 위치 정보를 채웁니다.  이 모드는 스마트 잠금 실행 되 고 AD를 사용 하도록 설정 하려면 사용자에 대 한 친숙 한 위치를 사용 하도록 설정 하기 전에 "알아보려면" FS "강제 적용" 모드는 유효성 검사에 사용 됩니다.
-AD FS 학습 하는 대로 저장 사용자별 로그인 작업 (로그 전용 모드에서 든 또는 강제 적용 모드). 
+AD 값: 20, ExtranetLockoutThreshold: 10 
 
->[!NOTE]
->구성 `ExtranetLockoutMode` 하 `AdfsSmartlockoutLogOnly` 적용 되어 더 이상 레거시 AD FS "엑스트라넷 소프트 잠금" 동작 하면 경우에는 `EnableExtranetLockout` 속성이 True로 설정 됩니다.  이 친숙 한 또는 알 수 없는 IP 주소에서의 잠금 임계값을 초과 하는 사용자가 잠기지 않도록 AD FS에 대 한 스마트 잠금에 의해 것을 의미 합니다. 그러나 온-프레미스 AD 잠금 여기에 구성을 기반으로 사용자를 수 있습니다.   참조 하세요 [계정 잠금 정책](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/account-lockout-policy) 알아보려면 어떻게 온-프레미스 AD 잠금 사용자 수 있습니다. "  이 임시 상태 시스템 다시 새 스마트 잠금 동작을 사용 하 여 잠금 적용을 소개 하기 전에 로그인 동작을 알 수 있도록 할 것입니다.
+Active Directory 잠금 독립적으로 작동에서 엑스트라넷 잠금. 그러나 Active Directory 잠금 사용 하는 경우, AD FS에서 ExtranetLockoutThreshold < AD의 계정 잠금 임계값 
 
-적용 하려면 새 모드에서는 팜의 모든 노드에서 AD FS 서비스를 다시 시작
-  
-  ``` powershell
-PS C:\>Restart-service adfssrv
-  ```
-스마트 잠금 사용 하 여 설정할 수 있습니다. 모드를 구성한 후의 `EnableExtranetLockout` 매개 변수
-
-
-``` powershell
-PS C:\>Set-AdfsProperties -EnableExtranetLockout $true
-```
-
-잠금 해제 하려면 동일한 cmdlet을 사용할 수 있습니다 note
-
-예: 잠금 해제
-
-``` powershell
-PS C:\>Set-AdfsProperties -EnableExtranetLockout $false
-```
-### <a name="ad-fs-2019"></a>AD FS 2019
-현재 AD FS 엑스트라넷 소프트 잠금을 사용 하지 않는 경우 AD FS 2016 위의 경우와 동일한 지침을 따르는 것이 좋습니다.
-소프트 잠금을 사용 하는 경우 좋습니다 소프트 잠금 적용을 사용 하 여 유지 하지만 스마트 잠금에 대 한 로그를 AD FS 2019 잠금 동작을 설정 하는 아래 powershell:
-
- ```powershell
-PS C:\>Set-AdfsProperties -ExtranetLockoutMode 3
- ```
-
-이 cmdlet을 실행 하면 ExtranetLockoutMode AD FS 속성의 값을 쿼리할 Get-adfsproperties 사용할 수 있습니다.  ADPasswordCounter 및 ADFSSmartLockoutLogOnly의 조합에 해당 값이 업데이트 되었는지를 표시 됩니다.
-
-## <a name="observing-audit-events"></a>감사 이벤트를 관찰합니다.
-AD FS 엑스트라넷 잠금 이벤트는 보안 감사 로그에 작성 합니다.
--   사용자가 차단 하는 경우 아웃 (실패 한 로그인 시도 대 한 잠금 임계값에 도달)
--   AD FS 잠금 상태에서 이미 사용자에 대 한 로그인 시도 수신 하는 경우
-
-로그 전용 모드에서 작업 하는 동안 잠금 이벤트에 대 한 보안 감사 로그를 확인할 수 있습니다.  찾을 수 있는 이벤트에 대 한 잠금이 발생 한 경우 두 번 확인 하는 친숙 한 또는 알 수 없는 IP 주소에서 해당 사용자에 대 한 친숙 한 IP 주소 목록을 결정할 ADFSAccountActivity Get cmdlet을 사용 하 여 사용자 상태를 확인할 수 있습니다.
-
-예제 이벤트:
-```
-Log Name:      Security
-Source:        AD FS Auditing
-Date:          5/21/2018 12:55:59 AM
-Event ID:      1210
-Task Category: (3)
-Level:         Information
-Keywords:      Classic,Audit Failure
-User:          CONTOSO\adfssvc
-Computer:      ADFS2016FS1.corp.contoso.com
-Description:
-An extranet lockout event has occurred. See XML for failure details. 
-
-Activity ID: fa7a8052-0694-48f0-84e2-b51cde40ac3d 
-
-Additional Data 
-XML: <?xml version="1.0" encoding="utf-16"?>
-<AuditBase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ExtranetLockoutAudit">
-  <AuditType>ExtranetLockout</AuditType>
-  <AuditResult>Failure</AuditResult>
-  <FailureType>ExtranetLockoutError</FailureType>
-  <ErrorCode>AccountRestrictedAudit</ErrorCode>
-  <ContextComponents>
-    <Component xsi:type="ResourceAuditComponent">
-      <RelyingParty>http://fs.contoso.com/adfs/services/trust</RelyingParty>
-      <ClaimsProvider>N/A</ClaimsProvider>
-      <UserId>CONTOSO\user</UserId>
-    </Component>
-    <Component xsi:type="RequestAuditComponent">
-      <Server>N/A</Server>
-      <AuthProtocol>WSFederation</AuthProtocol>
-      <NetworkLocation>Extranet</NetworkLocation>
-      <IpAddress>64.187.173.10</IpAddress>
-      <ForwardedIpAddress>64.187.173.10</ForwardedIpAddress>
-      <ProxyIpAddress>N/A</ProxyIpAddress>
-      <NetworkIpAddress>N/A</NetworkIpAddress>
-      <ProxyServer>ADFS2016PROXY2</ProxyServer>
-      <UserAgentString>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36</UserAgentString>
-      <Endpoint>/adfs/ls/</Endpoint>
-    </Component>
-    <Component xsi:type="LockoutConfigAuditComponent">
-      <CurrentBadPasswordCount>5</CurrentBadPasswordCount>
-      <ConfigBadPasswordCount>5</ConfigBadPasswordCount>
-      <LastBadAttempt>05/21/2018 00:55:05</LastBadAttempt>
-      <LockoutWindowConfig>00:30:00</LockoutWindowConfig>
-    </Component>
-  </ContextComponents>
-</AuditBase>
-Event Xml:
-<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
-  <System>
-    <Provider Name="AD FS Auditing" />
-    <EventID Qualifiers="0">1210</EventID>
-    <Level>0</Level>
-    <Task>3</Task>
-    <Keywords>0x8090000000000000</Keywords>
-    <TimeCreated SystemTime="2018-05-21T00:55:59.921880300Z" />
-    <EventRecordID>35521235</EventRecordID>
-    <Channel>Security</Channel>
-    <Computer>ADFS2016FS1.contoso.com</Computer>
-    <Security UserID="S-1-5-21-1156273042-1594504307-2076964089-1104" />
-  </System>
-  <EventData>
-    <Data>fa7a8052-0694-48f0-84e2-b51cde40ac3d</Data>
-    <Data><?xml version="1.0" encoding="utf-16"?>
-<AuditBase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ExtranetLockoutAudit">
-  <AuditType>ExtranetLockout</AuditType>
-  <AuditResult>Failure</AuditResult>
-  <FailureType>ExtranetLockoutError</FailureType>
-  <ErrorCode>AccountRestrictedAudit</ErrorCode>
-  <ContextComponents>
-    <Component xsi:type="ResourceAuditComponent">
-      <RelyingParty>http://fs.contoso.com/adfs/services/trust</RelyingParty>
-      <ClaimsProvider>N/A</ClaimsProvider>
-      <UserId>CONTOSO\user</UserId>
-    </Component>
-    <Component xsi:type="RequestAuditComponent">
-      <Server>N/A</Server>
-      <AuthProtocol>WSFederation</AuthProtocol>
-      <NetworkLocation>Extranet</NetworkLocation>
-      <IpAddress>64.187.173.10</IpAddress>
-      <ForwardedIpAddress>64.187.173.10</ForwardedIpAddress>
-      <ProxyIpAddress>N/A</ProxyIpAddress>
-      <NetworkIpAddress>N/A</NetworkIpAddress>
-      <ProxyServer>ADFS2016PROXY2</ProxyServer>
-      <UserAgentString>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36</UserAgentString>
-      <Endpoint>/adfs/ls/</Endpoint>
-    </Component>
-    <Component xsi:type="LockoutConfigAuditComponent">
-      <CurrentBadPasswordCount>5</CurrentBadPasswordCount>
-      <ConfigBadPasswordCount>5</ConfigBadPasswordCount>
-      <LastBadAttempt>05/21/2018 00:55:05</LastBadAttempt>
-      <LockoutWindowConfig>00:30:00</LockoutWindowConfig>
-    </Component>
-  </ContextComponents>
-</AuditBase></Data>
-  </EventData>
-</Event>
-```
-
-## <a name="observing-user-activity"></a>사용자 활동을 관찰합니다.
-AD FS 사용자 계정 활동 데이터 보기 및 관리 하는 powershell cmdlet을 제공 합니다.  사용자 계정에 대 한 현재 계정 활동을 읽습니다.  아래 cmdlet를 사용 합니다.
+`ExtranetLockoutRequirePDC - $false`
+ 
+사용 하도록 설정 하면 엑스트라넷 잠금 주 도메인 컨트롤러 (PDC) 필요 합니다. 사용 하지 않도록 설정 하 고 false로 구성 하면 엑스트라넷 잠금 PDC를 사용할 수 없는 경우 다른 도메인 컨트롤러에 대체가 됩니다. 
+ 
+실행 하는이 속성을 설정 합니다. 
 
 ``` powershell
-PS C:\>Get-ADFSAccountActivity user@contoso.com
+Set-AdfsProperties -EnableExtranetLockout $true -ExtranetLockoutThreshold 15 -ExtranetObservationWindow (new-timespan -Minutes 30) -ExtranetLockoutRequirePDC $false 
 ```
+### <a name="enable-log-only-mode"></a>로그 전용 모드를 사용 하도록 설정 
+ 
+로그 전용 모드에서 AD FS 보안 감사 이벤트를 기록 하며 모든 요청을 차단 하지 않습니다 사용자 친숙 한 위치 정보를 채웁니다. 이 모드는 스마트 잠금 실행 되 고 AD를 사용 하도록 설정 하려면 사용자에 대 한 친숙 한 위치를 사용 하도록 설정 하기 전에 "알아보려면" FS "강제 적용" 모드는 유효성 검사에 사용 됩니다. AD FS 학습 하는 대로 저장 사용자별 로그인 작업 (로그 전용 모드에서 든 또는 강제 적용 모드). 다음 commandlet을 실행 함으로써만 기록할 잠금 동작을 설정 합니다.  
 
-예제 출력
-```
-Identifier             : CONTOSO\user
-BadPwdCountFamiliar    : 0
-BadPwdCountUnknown     : 0
-LastFailedAuthFamiliar : 1/1/0001 12:00:00 AM
-LastFailedAuthUnknown  : 1/1/0001 12:00:00 AM
-FamiliarLockout        : False
-UnknownLockout         : False
-FamiliarIps            : {}
-```
+`Set-AdfsProperties -ExtranetLockoutMode AdfsSmartlockoutLogOnly` 
 
-현재 활동 출력에는 다음 데이터가 포함 됩니다.
+로그 전용 모드는 임시 상태 시스템의 스마트 잠금 동작을 사용 하 여 잠금 적용을 소개 하기 전에 로그인 동작을 알 수 있도록 할 것입니다. 로그 전용 모드에 대 한 권장 되는 기간에는 3 ~ 7 일입니다. 계정이 있으면 적극적으로 공격을 받고, 24 시간 동안 최소 로그 전용 모드를 실행 해야 합니다. 
 
-**식별자**:이 사용자 이름
+AD FS 2016에서 엑스트라넷 잠금 사용 하기 전에 2012R2 ' 엑스트라넷 소프트 잠금 ' 동작을 사용 하는 경우 로그 전용 모드는 사용 안 함 ' 엑스트라넷 소프트 잠금 ' 동작 AD FS에 대 한 스마트 잠금 로그 전용 모드의 사용자를 잠그지 않음. 그러나 온-프레미스 AD AD 구성에 따라 사용자를 잠글 수 있습니다. 자세한 AD 잠금 정책을 검토 하세요 어떻게 온-프레미스 AD 잠금 사용자 수 있습니다. 
 
-**BadPwdCountFamiliar**:이 값은 잘못 된 암호 로그인 시도 시도 시 "FamiliarIps" 목록에는 IP 주소에서의 현재 개수
+AD FS 2019에 추가 점으로 손꼽을 하는 것을 계속 사용 하 여 이전 소프트 잠금 동작을 적용 하는 동안 스마트 잠금에 대 한 로그 전용 모드를 사용 하도록 설정할 수는 아래 Powershell. 
 
-**BadPwdCountUnknown**:이 값은 잘못 된 암호 로그인 시도 되지 않은 "FamiliarIps" 목록에서 시도 시 IP 주소에서의 현재 개수
+`Set-AdfsProperties -ExtranetLockoutMode 3` 
+ 
+적용 하려면 새 모드에서는 팜의 모든 노드에서 AD FS 서비스를 다시 시작 
 
-**LastFailedAuthFamiliar**: 시도 시 "FamiliarIps" 목록에 있는 IP 주소의 마지막 잘못 된 암호 로그인 시도의 시간
+`Restart-service adfssrv` 
+ 
+EnableExtranetLockout 매개 변수를 사용 하 여 스마트 잠금 모드를 구성 되 면 설정할 수 있습니다. 
+ 
+`Set-AdfsProperties -EnableExtranetLockout $true` 
 
-**LastFailedAuthUnknown**: 시도 시 "FamiliarIps" 목록에 없는 IP 주소에서 마지막 잘못 된 암호 로그인 시도의 시간
+### <a name="enable-enforce-mode"></a>강제 적용 모드 사용 
+ 
+잠금 임계값 및 관찰 창에 익숙해지면 후 ESL 모드를 다음 PSH cmdlet을 사용 하 여 "적용" 이동할 수 있습니다. 
 
-**FamiliarLockout**:이 경우 사용자가 현재 잠금 상태에서 올바른 암호 "FamiliarIps" 목록에 IP 주소에서 시도 대 한 나타냅니다 
+`Set-AdfsProperties -ExtranetLockoutMode AdfsSmartLockoutEnforce` 
 
-**UnknownLockout**:이 경우 사용자가 현재 잠금 상태에서 올바른 암호 "FamiliarIps" FamiliarIps의 목록에 없는 IP 주소에서 시도 대 한 나타냅니다: 현재 사용자에 대 한 친숙 한 IP 주소의 목록
+적용 하려면 새 모드의 경우 다음 명령을 사용 하 여 팜의 모든 노드에서 AD FS 서비스를 다시 시작 합니다. 
 
-## <a name="adjust-threshold-and-window"></a>조정 임계값 및 창
-일단 로그인 위치에 알아보려면 AD FS에 대 한 충분 한 기간에 대 한 실행 로그 전용 모드에서 되었습니다, 기본 설정에서 임계값 또는 관찰 창을 조정할 수도 있습니다.  이렇게 사용 하 여 `Set-AdfsProperties` 아래 예제와 같이:
+`Restart-service adfssrv` 
 
-관찰 창을 사용 하 여 설정 됩니다 `ExtranetObservationWindow`:
+## <a name="manage-user-account-activity"></a>사용자 계정 활동 관리 
+AD FS 계정 활동 데이터를 관리 하기 위한 세 가지 cmdlet을 제공 합니다. 이러한 cmdlet 마스터 역할을 보유 하는 노드에 자동으로 연결 합니다. 
+>[!NOTE] 
+>계정 잠금 다시 설정 하려면 AD FS commandlet 위임할 관리 JEA (just Enough)를 사용할 수 있습니다. 예를 들어 헬프 데스크 직원 ESL commandlet을 사용 하는 위임 된 권한을 수 있습니다. 이러한 cmdlet을 사용 하 여에 대 한 권한을 위임에 대 한 내용은 참조 [대리자 AD FS Powershell Commandlet에 대 한 액세스 비관리자 사용자](delegate-ad-fs-pshell-access.md)
 
-예: 
+전달 하 여이 동작을 재정의할 수 있습니다-Server 매개 변수입니다. 
 
-``` powershell
-PS C:\>Set-AdfsProperties -ExtranetObservationWindow ( new-timespan -minutes 30 )
-```
+- Get-ADFSAccountActivity 
 
-값은 TimeSpan
+  사용자 계정에 대 한 현재 계정 활동을 읽습니다. Cmdlet는 항상 자동으로 계정 활동 REST 끝점을 사용 하 여 팜 마스터에 연결 합니다. 따라서 모든 데이터 항상 일치 해야 합니다. 
 
-### <a name="setting-threshold-value-in-ad-fs-2016"></a>AD FS 2016에서에서 임계값을 설정합니다.
-AD FS 2016에서는 임계값 ExtranetLockoutThreshold를 사용 하 여 설정 됩니다.
+  예: Get-ADFSAccountActivity user@contoso.com 
 
-예:
+  속성: 
+    - BadPwdCountFamiliar: 알려진된 위치에서 인증을 성공적으로 증가 합니다.
+    - BadPwdCountUnknown: 알 수 없는 위치에서 인증을 성공적으로 수행 되지 때 증가 합니다.
+    - LastFailedAuthFamiliar: LastFailedAuthUnknown 실패 한 인증의 시간으로 설정 되어 친숙 한 위치에서 인증 성공 하지 못한 경우 
+    - LastFailedAuthUnknown: 알 수 없는 위치에서 인증에 성공 하지 LastFailedAuthUnknown 실패 한 인증의 시간으로 설정 됩니다. 
+    - FamiliarLockout: 됩니다 "True"를 부울 값 "BadPwdCountFamiliar" > ExtranetLockoutThreshold 
+    - UnknownLockout: 됩니다 "True"를 부울 값 "BadPwdCountUnknown" > ExtranetLockoutThreshold  
+    - FamiliarIPs: 최대 20 개 Ip는 사용자에 대해 잘 알고 있습니다. 이 값을 초과 하는 경우 가장 오래 된 IP 목록에서 제거 됩니다. 
+-    Set-ADFSAccountActivity 
+     
+     새 친숙 한 위치를 추가합니다. 친숙 한 IP 목록에 최대 20 개의 항목의이 값을 초과 하는 경우 가장 오래 된 IP 목록에서 제거 됩니다. 
 
-``` powershell
-PS C:\>Set-AdfsProperties -ExtranetLockoutThreshold 5
-```
+     예: 집합 ADFSAccountActivity user@contoso.com -AdditionalFamiliarIps "1.2.3.4"
 
-### <a name="setting-threshold-values-in-ad-fs-2019"></a>AD FS 2019에서에서 임계값을 설정합니다.
-AD FS 2019에에서는 알려진된 좋은 및 알 수 없는 위치에 대 한 고유한 임계값
+- Reset-ADFSAccountLockout 
+   
+  사용자 계정에 대 한 각 친숙 한 위치 (badPwdCountFamiliar) 잠금 또는 알 수 없는 위치 카운터 (badPwdCountUnfamiliar)를 다시 설정합니다. 카운터를 다시 설정 하 여 "FamiliarLockout" 또는 "UnfamiliarLockout" 값을 업데이트 됩니다, 재설정 카운터 임계값 보다 작아야 합니다.  
 
-알 수 없는 위치에 대 한 임계값을 설정 하려면 위의 AD FS 2016에 사용 되는 동일한 속성을 사용 합니다.
+   예: 재설정 ADFSAccountLockout user@contoso.com -위치 친숙 한 예제:  Reset-ADFSAccountLockout user@contoso.com -Location Unknown 
 
-예:
+## <a name="event-logging--user-activity-information-for-ad-fs-extranet-lockout"></a>이벤트 로깅 및 AD FS 엑스트라넷 잠금에 대 한 사용자 작업 정보 
 
-``` powershell
-PS C:\>Set-AdfsProperties -ExtranetLockoutThreshold 5
-```
+### <a name="connect-health"></a>Connect Health 
+Connect Health를 통해 사용자 계정 작업을 모니터링 하는 방법이 권장된 됩니다. 연결 상태 위험한 Ip에 대 한 다운로드 가능한 보고를 생성 하 고 잘못 된 암호 시도 합니다. 위험한 IP 보고서의 각 항목에는 실패 한 AD FS 로그인 활동이 지정 된 임계값을 초과 하는 방법에 대 한 집계 정보가 표시 됩니다. 전자 메일 알림은 사용자 지정 가능한 이메일 설정을 사용 하 여 발생 하는 즉시 관리자에 게 경고를 설정할 수 있습니다. 추가 정보 및 설치 지침을 방문 합니다 [Connect Health 설명서](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-health-adfs)합니다. 
 
-알려진된 적절 한 위치에 대 한 임계값을 설정 하려면 아래 예제 에서처럼 ExtranetLockoutThresholdFamiliarLocation, 새 속성을 사용 합니다.
+### <a name="ad-fs-extranet-smart-lockout-events"></a>AD FS 엑스트라넷 잠금 이벤트입니다. 
+기록할 엑스트라넷 잠금 이벤트에 대 한 ESL '적용' 또는 ' 로그 전용 ' 모드에서 활성화 해야 하며 ADFS 보안 감사를 사용할 수 있습니다. AD FS 엑스트라넷 잠금 이벤트는 보안 감사 로그에 작성 합니다. 
+- 사용자가 차단 하는 경우 아웃 (실패 한 로그인 시도 대 한 잠금 임계값에 도달) 
+- AD FS 잠금 상태에서 이미 사용자에 대 한 로그인 시도 수신 하는 경우 
 
-예:
-
-``` powershell
-PS C:\>Set-AdfsProperties -ExtranetLockoutThresholdFamiliarLocation 10
-```
-
-
-## <a name="enable-enforce-mode"></a>강제 적용 모드 사용
-AD FS 로그인 위치에 알아보려면 및 모든 잠금 동작을 관찰 하기에 충분 한 시간에 대 한 로그 전용 모드에서 실행 했습니다 후 스마트 잠금 모드를 사용 하 여 "적용"로 이동할 수 있습니다 잠금 임계값 및 관찰 창을 사용 하 여 편리 하 게 控 制 합니다 아래 PSH cmdlet:
-
-``` powershell
-PS C:\>Set-AdfsProperties -ExtranetLockoutMode AdfsSmartLockoutEnforce
-```
-
-적용 하려면 새 모드에서는 팜의 모든 노드에서 AD FS 서비스를 다시 시작
-
-``` powershell
-PS C:\>Restart-service adfssrv
-```
+로그 전용 모드에서 작업 하는 동안 잠금 이벤트에 대 한 보안 감사 로그를 확인할 수 있습니다. 찾을 수 있는 이벤트에 대 한 잠금이 발생 한 경우 두 번 확인 하는 친숙 한 또는 알 수 없는 IP 주소에서 해당 사용자에 대 한 친숙 한 IP 주소 목록을 결정할 ADFSAccountActivity Get cmdlet을 사용 하 여 사용자 상태를 확인할 수 있습니다. 
 
 
-## <a name="manage-user-account-activity"></a>사용자 계정 활동 관리
-AD FS 사용자 계정 활동 데이터를 관리 하는 3 개의 cmdlet을 제공 합니다.  이러한 cmdlet은 마스터 역할을 보유 하는 팜에 있는 노드를 자동으로 연결 (전달 하 여이 동작을 재정의할 수 있지만-Server 매개 변수).
+|이벤트 ID|설명|
+|-----|-----| 
+|1203|잘못 된 암호를 시도할 때마다이 이벤트가 기록 됩니다. badPwdCount ExtranetLockoutThreshold 지정 된 값에 도달 하면 즉시 계정이 잠깁니다 ADFS에서 ExtranetObservationWindow에 지정 된 기간에 대 한 합니다.</br>작업 ID: %1</br>XML: %2|
+|1201|이 이벤트는 사용자 때마다 잠겨 기록 됩니다. </br>작업 ID: %1</br>XML: %2| 
+|557 (ADFS 2019)| 노드 %1에 계정 저장소 rest 서비스와 통신 하는 동안 오류가 발생 했습니다. WID 팜의 경우 주 노드가 오프 라인일 수 있습니다. 이 경우 ADFS SQL 팜 사용자 저장소 마스터 역할을 호스트에 새 노드를 자동으로 선택 됩니다.| 
+|562 (ADFS 2019)|오류가 발생 했습니다. 계정 사용 하 여 communcating %1 서버의 끝점을 저장 하는 경우.</br>예외 메시지: %2| 
+|563 (ADFS 2019)|엑스트라넷 잠금 상태를 계산 하는 동안 오류가 발생 했습니다. 이 사용자에 대해 허용 됩니다 인증 설정 %1 값 하 고 토큰 발급 계속 됩니다. WID 팜의 경우 주 노드가 오프 라인일 수 있습니다. 이 경우 ADFS SQL 팜 사용자 저장소 마스터 역할을 호스트에 새 노드를 자동으로 선택 됩니다.</br>계정 저장소 서버 이름: %2</br>사용자 Id: %3</br>예외 메시지: %4|
+|512|다음 사용자의 계정이 잠겼습니다. 로그인 시도 사용 하는 시스템 구성 했기 때문에 허용 됩니다.</br>작업 ID: %1 </br>사용자: %2 </br>클라이언트 IP: %3 </br>잘못 된 암호 수: %4  </br>잘못 된 암호 시도가 마지막: %5|
+|515|잠긴된 상태 였던 사용자 계정 및 올바른 암호를 제공한 것입니다. 이 계정이 손상 될 수 있습니다.</br>추가 데이터 </br>작업 ID: %1 </br>사용자: %2 </br>클라이언트 IP: %3 |
+|516|사용자 계정으로 잘못 된 암호로 너무 많이 시도 하면 인해 잠 궜 습니다.</br>작업 ID: %1  </br>사용자: %2  </br>클라이언트 IP: %3  </br>잘못 된 암호 수: %4  </br>잘못 된 암호 시도가 마지막: %5|
 
-> [!NOTE] 
-> 이러한 cmdlet을 사용 하 여에 대 한 권한을 위임에 대 한 내용은 참조 [대리자 AD FS Powershell Commandlet에 대 한 액세스 비관리자 사용자](delegate-ad-fs-pshell-access.md)
+## <a name="esl-frequently-asked-questions"></a>ESL에 대 한 질문과 대답 
+ 
+**엑스트라넷 잠금에 사용 하 여 ADFS 팜 모드 적용 악의적인 사용자가 잠금을 확인할 수 있습니까?**  
 
-이러한 cmdlet은:
+A: 경우 ADFS에 대 한 잠금 정보는 표시 되지 것입니다 (brute force) 또는 서비스 거부가 잠겨 합법적인 사용자의 계정이 다음 모드를 '적용'으로 설정 됩니다. 악의적인 계정 잠금에 사용자가 로그인 하지 못할 수 있습니다 하는 유일한 방법은 되었거나 경우 악의적 행위자 사용자 암호가 해당 사용자에 대 한 알려진된 좋은 (친숙 한) IP 주소에서 요청을 보낼 수 있습니다.  
+ 
+**ESL가 활성화 되어 있고 잘못 된 행위자 사용자 암호를 어떻게 되나요?**  
 
-`Get-ADFSAccountActivity`
+A: 무차별 공격 시나리오의 일반적인 목표는 암호를 추측 하 고 성공적으로 로그인 하는 것입니다.  사용자가 피싱 또는 암호를 추측 된 경우 다음 ESL 기능을 차단 하지 않습니다 액세스 이후 로그인에는 올바른 암호와 새 IP "성공" 조건을 충족 됩니다. 믿지 못할 자 IP는 다음 "익숙한"으로 표시 됩니다. 이 시나리오에서 가장 좋은 완화에는 ad FS의 사용자 활동의 선택을 취소 하 고 사용자에 대 한 다단계 인증을 요구 하도록입니다. 시스템으로 추측할 수 있는 암호를 얻지 못하는 보장 하는 AAD 암호 보호를 설치 하는 것이 좋습니다. 
+ 
+**내 사용자가 되지 성공적으로 로그인 ip에서 하 고 다음 잘못 된 암호를 사용 하 여 시도 몇 번 경우 될 로그인 할 마지막 입력 암호가 잘못 되 면?**  
 
-사용자 계정에 대 한 현재 계정 활동을 읽습니다.  Cmdlet은 항상 자동으로 마스터에 연결 하는 팜 계정 활동 REST 끝점을 사용 하 여 모든 데이터가 항상 일치 해야
+A: 사용자 (즉, 합법적인 방식으로 입력 잘못) 여러 개의 잘못 된 암호를 제출 하는 경우에 다음 시도가 잘못 된 암호를 가져옵니다 하 고 사용자 로그인을 즉시 성공 합니다.  잘못 된 암호 수를 지우고 추가 FamiliarIPs 목록에 해당 IP입니다.  그러나 알 수 없는 위치에서 로그인 실패 임계값 이동, 잠금 상태로 입력할 것 및 과거 관찰 창 및 로그인 올바른 암호로 기다리거나 해당 계정을 다시 설정 하려면 관리자가 개입 해야 하는 데 필요한 됩니다.  
+ 
+**ESL 작동 인트라넷에 너무?**    A: 클라이언트 웹 응용 프로그램 프록시 서버 통해서가 아닌 ADFS 서버에 직접 연결 하는 경우 ESL 동작이 적용 되지 않습니다.  
+ 
+**클라이언트 IP 필드에 Microsoft IP 주소를 표시 합니다. 않습니다 ESL 블록 EXO 프록시 무차별 암호 대입 공격?**   
 
-``` powershell
-Get-ADFSAccountActivity user@contoso.com
-```
-`
-Set-ADFSAccountActivity
-`
-
-사용자 계정에 대 한 계정 활동을 업데이트 합니다.  이 새 친숙 한 위치를 추가 하 여 모든 계정에 대 한 상태를 지울 수 있습니다.
-
-``` powershell
-Set-ADFSAccountActivity user@upnsuffix.com -FamiliarLocation “1.2.3.4”
-```
-`Reset-ADFSAccountLockout`
-
-사용자 계정 잠금 카운터를 다시 설정
-
-``` powershell
-Reset-ADFSAccountLockout user@upnsuffix.com -Familiar
-```
-
-## <a name="troubleshooting-esl"></a>ESL 문제 해결
-다음 도움이 될 수 있습니다 엑스트라넷 스마트 잠금 기능 문제를 해결 합니다.
-
-### <a name="updating-database-permissions-for-esl"></a>ESL에 대 한 데이터베이스 사용 권한 업데이트
-오류에서 반환 되는 경우는 `Update-AdfsArtifactDatabasePermission` cmdlet에서 다음을 확인 합니다
-
-1.  팜 노드 목록이 정확있지 않습니다.  노드는 AD FS 팜은 되지만 활성 패치 확인에 실패 하는 더 이상.  실행 하 여이 문제를 해결할 수 있습니다. `remove-adfsnode <node name >`
-2.  패치를는 팜의 모든 노드에서 배포 되었는지 확인
-3.  Ad fs 아티팩트 데이터베이스 스키마의 소유자를 수정할 수 있는 권한이 cmdlet으로 전달 하는 자격 증명을 확인 합니다.  
-
-### <a name="logging--auditing"></a>로깅/감사
-AD FS 작성 계정 잠금 임계값을 초과 하기 때문에 인증 요청이 거부 되는 경우는 `ExtranetLockoutEvent` 보안 감사 스트림에 합니다.  
-
-예제 이벤트:
-
-엑스트라넷 잠금 이벤트 발생 했습니다. 오류 세부 정보에 대 한 XML을 참조 하세요. 
-
-**활동 ID: 172332e1-1301-4e56-0e00-0080000000db**
-
-```
-Additional Data 
-XML: <?xml version="1.0" encoding="utf-16"?>
-<AuditBase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ExtranetLockoutAudit">
-  <AuditType>ExtranetLockout</AuditType>
-  <AuditResult>Failure</AuditResult>
-  <FailureType>ExtranetLockoutError</FailureType>
-  <ErrorCode>AccountRestrictedAudit</ErrorCode>
-  <ContextComponents>
-    <Component xsi:type="ResourceAuditComponent">
-      <RelyingParty>http://contoso.com/adfs/services/trust</RelyingParty>
-      <ClaimsProvider>N/A</ClaimsProvider>
-      <UserId>TQDFTD\Administrator</UserId>
-    </Component>
-    <Component xsi:type="RequestAuditComponent">
-      <Server>N/A</Server>
-      <AuthProtocol>WSFederation</AuthProtocol>
-      <NetworkLocation>Intranet</NetworkLocation>
-      <IpAddress>4.4.4.4</IpAddress>
-      <ForwardedIpAddress />
-      <ProxyIpAddress>1.2.3.4</ProxyIpAddress>
-      <NetworkIpAddress>1.2.3.4</NetworkIpAddress>
-      <ProxyServer>N/A</ProxyServer>
-      <UserAgentString>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36</UserAgentString>
-      <Endpoint>/adfs/ls</Endpoint>
-    </Component>
-    <Component xsi:type="LockoutConfigAuditComponent">
-      <CurrentBadPasswordCount>5</CurrentBadPasswordCount>
-      <ConfigBadPasswordCount>5</ConfigBadPasswordCount>
-      <LastBadAttempt>02/07/2018 21:47:44</LastBadAttempt>
-      <LockoutWindowConfig>00:30:00</LockoutWindowConfig>
-    </Component>
-  </ContextComponents>
-</AuditBase>
-
-```
-
-## <a name="banned-ip-addresses"></a>금지 된 IP 주소
-엑스트라넷 스마트 잠금 기능 외에 AD FS 2018 년 6 월 업데이트를 구성할 수 있습니다 IP 주소 집합을 전체적으로 AD FS에서 또는 해당 IP 주소에서 들어오는 요청 해당 IP 주소를 가질 수 있도록는 **x-전달 기능에 대 한**  나 **x-ms-전달-클라이언트-ip** 헤더, AD FS에서 차단 됩니다.
-
-##### <a name="adding-banned-ips"></a>Ip 차단 추가
-전역 목록에 금지 된 Ip를 추가 하려면 사용는 아래 Powershell cmdlet:
-
-``` powershell
-PS C:\ >Set-AdfsProperties -AddBannedIps "1.2.3.4", "::3", "1.2.3.4/16"
-```
-
-허용 된 형식
-
-1.  IPv4
-2.  IPv6
-3.  IPv4 또는 v6을 사용 하 여 CIDR 형식
-4.  IPv4 또는 v6을 사용 하 여 IP 범위 (예: 1.2.3.4-1.2.3.6)
-
-#### <a name="removing-banned-ips"></a>Ip 차단 제거
-전역 목록에서 금지 된 Ip를 제거 하려면 사용는 아래 Powershell cmdlet:
-
-``` powershell
-PS C:\ >Set-AdfsProperties -RemoveBannedIps "1.2.3.4"
-```
-
-#### <a name="read-banned-ips"></a>Ip를 차단 하는 읽기
-금지 된 IP 주소의 현재 집합을 읽으려면 사용은 아래 Powershell cmdlet:
-
-``` powershell
-PS C:\ >Get-AdfsProperties 
-```
-
-출력의 예:
-
-```
-BannedIpList                   : {1.2.3.4, ::3,1.2.3.4/16}
-```
-
+A: ESL은 Exchange Online 또는 다른 레거시 인증 무차별 공격 시나리오를 방지 하는 잘 작동 합니다. 레거시 인증 00000000-0000-0000-0000-000000000000 "활동 ID"가 있습니다. 이러한 공격에서는 잘못 된 행위자 클라이언트 IP 주소 하나를 Microsoft로 표시 되도록 Exchange Online 기본 인증 (레거시 인증이 라고도 함)를 활용 하 고는 합니다. 클라우드 프록시 인증 확인 하는 Outlook 클라이언트를 대신 하 여 Exchange online 서버. 이러한 시나리오에서는 악의적인 제출자의 IP 주소 x-ms-전달-클라이언트-ip 및 IP ms 클라이언트 ip x 값에 포함 될 Microsoft Exchange Online 서버 됩니다. 엑스트라넷 잠금 Ip의 x-전달-클라이언트-IP 및 ms 클라이언트 ip x 값을 전달 하는 네트워크 Ip 확인 합니다. 요청이 성공 하면 모든 Ip는 친숙 한 목록에 추가 됩니다. 요청이 들어오면 및 제공 된 Ip의 모든 친숙 한 목록에 없는 경우 다음 요청이 표시 됩니다으로 알 수 없는 합니다. 친숙 한 사용자는 알 수 없는 위치에서 요청을 차단할지 동안 성공적으로 로그인 할 수 됩니다.  
 
 
 ## <a name="additional-references"></a>추가 참조  

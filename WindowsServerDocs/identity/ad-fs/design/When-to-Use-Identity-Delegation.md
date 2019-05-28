@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: af227d9e87ddb73f194dd46c8ce45fcdf12a34cf
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2544001b871a1eda2c03005c384a99d5209e7282
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59872554"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190547"
 ---
 # <a name="when-to-use-identity-delegation"></a>ID 위임을 사용하는 시기
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
   
 ## <a name="what-is-identity-delegation"></a>ID 위임이란 무엇인가요?  
 Id 위임은 Active Directory Federation Services의 기능 \(AD FS\) 관리자를 허용 하는\-계정 사용자를 가장 하도록 지정 합니다. 사용자를 가장하는 계정을 *위임*이라고 합니다. 이 위임 기능은 원래 요청의 권한 부여 체인에 있는 각 응용 프로그램, 데이터베이스 또는 서비스에 대해 순차적으로 이루어져야 하는 일련의 액세스 제어 검사가 있는 여러 분산 응용 프로그램에 중요합니다. 많은 실제\-세계 시나리오가 있는 웹 응용 프로그램 "프런트 엔드"는 더 안전한 "백 엔드", Microsoft SQL Server 데이터베이스에 연결 된 웹 서비스 등에서 데이터를 검색 해야 합니다.  
@@ -61,4 +59,4 @@ AD FS 관리 스냅인에서 신뢰 신뢰 당사자에 게 위임 권한 부여
 개발자는 웹 프런트 적절 하 게 프로그래밍 하는 데 사용할 수 있는 여러 옵션이\-AD FS 컴퓨터에 위임 요청을 리디렉션하는 응용 프로그램 또는 서비스를 종료 합니다. ID 위임 작업을 위해 웹 응용 프로그램을 사용자 지정하는 방법에 대한 자세한 내용은 [Windows Identity Foundation SDK](https://go.microsoft.com/fwlink/?LinkId=122266)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목
-[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)

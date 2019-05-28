@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 8935760cad272d5b82edb675cda85caf0456565f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c33475d7420383448439e2b769562e55127c7b0e
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59859444"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190633"
 ---
 # <a name="when-to-create-a-federation-server-proxy-farm"></a>페더레이션 서버 프록시 팜을 만들어야 하는 경우
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 대규모 Active Directory Federation Services를 해야 하는 경우 추가 페더레이션 서버 프록시를 설치 하는 것이 좋습니다 \(AD FS\) 내결함성을 제공, 로드를 배포 하려면\-분산 및 확장성 프록시 배포 합니다. 동일한 경계 네트워크에 두 개 이상의 페더레이션 서버 프록시를 만들기 및 구성 하는 각각 동일한 AD FS 페더레이션 서비스를 보호 하는 작업에는 페더레이션 서버 프록시 팜을 만듭니다.  
   
@@ -39,4 +37,4 @@ Microsoft NLB 기술을 사용 하 여 클러스터에 대 한 FQDN을 구성 �
 페더레이션 서버 프록시 팜을 만들어야 하는 새 페더레이션 서버 프록시를 추가 하는 방법에 대 한 자세한 내용은 참조 하세요. [검사 목록: 페더레이션 서버 프록시 설정](../../ad-fs/deployment/Checklist--Setting-Up-a-Federation-Server-Proxy.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목
-[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)

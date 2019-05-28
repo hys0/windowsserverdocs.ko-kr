@@ -5,29 +5,27 @@ description: ''
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 02/26/2019
+ms.date: 04/23/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: faa0590dc38921a56952aa54bf38243b6ff84d82
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: fbb289c16d82da79aded49e3af4134ac7f6df325
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59867714"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188702"
 ---
 # <a name="whats-new-in-active-directory-federation-services"></a>Active Directory Federation Services의 새로운 기능
 
-
->적용 대상: Windows Server 2019, Windows Server 2016
 
 ## <a name="whats-new-in-active-directory-federation-services-for-windows-server-2019"></a>Active Directory 페더레이션 서비스에 대 한 Windows Server 2019의 새로운 기능
 
 ### <a name="protected-logins"></a>보호 된 로그인
 다음은 AD FS 2019에서에서 사용할 수 있는 보호 된 로그인에 대 한 업데이트의 간단한 요약입니다.
-- **기본 외부 인증 공급자** -고객은 이제 타사 인증 제품을 사용 하 여 첫 번째 단계로 첫 번째 단계로 암호를 노출 하지 않습니다. 기다리기 auth 공급자를 2 요소를 증명할 수 있는 경우에서 해당 MFA를 요구할 수 없습니다. 
+- **기본 외부 인증 공급자** -고객은 이제 타사 인증 제품을 사용 하 여 첫 번째 단계로 첫 번째 단계로 암호를 노출 하지 않습니다. 외부 인증 공급자를 2 요소를 증명할 수 있는 경우에서 해당 MFA를 요구할 수 없습니다. 
 - **추가 인증 방법으로 암호 인증** -고객은 추가 단계 후 암호 적은 옵션에 대 한 첫 번째 단계로 사용 되는 암호를 사용 하는 완전히 지원 되는 수신함 옵션입니다. 따라서 고객은 있는 그대로 지원 되는 github 어댑터를 다운로드 해야 하는 ADFS 2016에서 고객 만족도를 향상 됩니다. 
-- **플러그형 위협 모듈 Framework** -고객은 이제 사전 인증 단계 중 특정 유형의 요청을 차단 하는 모듈 자체 플러그 인을 빌드할 수 있습니다. 그러면 고객이 Id 보호와 같은 클라우드 인텔리전스를 사용 하 여 위험한 사용자 또는 위험한 트랜잭션을 실행 하는 것에 대 한 로그인을 차단 하는 데 더 쉽습니다.
+- **플러그형 위험 평가 모듈** -고객은 이제 사전 인증 단계 중 특정 유형의 요청을 차단 하는 모듈 자체 플러그 인을 빌드할 수 있습니다. 그러면 고객이 Id 보호와 같은 클라우드 인텔리전스를 사용 하 여 위험한 사용자 또는 위험한 트랜잭션을 실행 하는 것에 대 한 로그인을 차단 하는 데 더 쉽습니다.  자세한 내용은 참조 하세요. [ AD FS 2019 위험 평가 모델을 사용 하 여 플러그 인 빌드](../../ad-fs/development/ad-fs-risk-assessment-model.md) 
 - **ESL 향상** -다음과 같은 기능을 추가 하 여 ESL QFE 2016에서 개선
     - 통해 ADFS 2012R2부터 사용할 수 있음 '클래식' 엑스트라넷 잠금 기능을 통해 보호 되는 동안 감사 모드로 설정 될 수 있습니다. 현재 2016 고객에 게 감사 모드에서 보호 되지 않음 해야 합니다. 
     - 친숙 한 위치에 대 한 독립적인 잠금 임계값을 사용 하도록 설정 합니다. 이렇게 하면 최소한의 영향을 사용 하 여 암호를 롤오버 하는 일반적인 서비스 계정으로 실행 되는 앱의 여러 인스턴스에 대 한 합니다. 

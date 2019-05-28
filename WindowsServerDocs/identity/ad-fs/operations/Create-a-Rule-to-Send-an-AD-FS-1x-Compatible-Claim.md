@@ -9,17 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 3745a0ab9d313223c611e58864dd6b4d747f0624
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c87b76224d1ac5dbe3befc837fad8879d0b9a1ef
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59881044"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189401"
 ---
 # <a name="create-a-rule-to-send-an-ad-fs-1x-compatible-claim"></a>AD FS 1.x 호환 클레임을 보내도록 규칙 만들기
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2
-
 
 Active Directory Federation Services을 사용 하는 경우에서 \(AD FS\) AD FS 1.0을 실행 하는 페더레이션 서버에서 수신 됩니다 문제 클레임 \(Windows Server 2003 R2\) 또는 AD FS 1.1 \(Windows Server 2008 또는 Windows Server 2008 R2\), 다음을 수행 해야 합니다.  
   
@@ -332,9 +329,9 @@ Active Directory Federation Services을 사용 하는 경우에서 \(AD FS\) AD 
 ## <a name="additional-references"></a>추가 참조 
 [클레임 규칙 구성](Configure-Claim-Rules.md)  
  
-[검사 목록: 신뢰 당사자 트러스트에 대 한 클레임 규칙 만들기](https://technet.microsoft.com/library/ee913578.aspx)  
+[검사 목록: 신뢰 당사자 트러스트를 위한 클레임 규칙 만들기](https://technet.microsoft.com/library/ee913578.aspx)  
 
-[검사 목록: 클레임 공급자에 대 한 클레임 규칙 만들기 신뢰](https://technet.microsoft.com/library/ee913564.aspx)  
+[검사 목록: 클레임 공급자 트러스트를 위한 클레임 규칙 만들기](https://technet.microsoft.com/library/ee913564.aspx)  
   
 [권한 부여 클레임 규칙을 사용 하는 경우](../../ad-fs/technical-reference/When-to-Use-an-Authorization-Claim-Rule.md)  
 

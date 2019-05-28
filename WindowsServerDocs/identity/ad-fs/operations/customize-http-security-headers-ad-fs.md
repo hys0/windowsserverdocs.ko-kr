@@ -9,15 +9,14 @@ ms.date: 02/19/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: cd3ad4e6547194a971d8a51ecb95ee56f5e4e8c2
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 54b0e055d6cfde5e5c69540ac804a38cbceb1e59
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59822724"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188773"
 ---
 # <a name="customize-http-security-response-headers-with-ad-fs-2019"></a>AD FS 2019를 사용 하 여 HTTP 보안 응답 헤더를 사용자 지정 
-적용 대상: Windows Server 2019 
  
 일반적인 보안 취약점 으로부터 보호 하 고 관리자에 게 브라우저 기반 보호 메커니즘의 최신 향상 기능을 활용 하는 기능 제공, AD FS 2019 추가 HTTP 보안 응답 헤더를 사용자 지정 하는 기능 AD FS에서 전송 합니다. 이 두 개의 새로운 cmdlet의 도입을 통해 수행 됩니다. `Get-AdfsResponseHeaders` 고 `Set-AdfsResponseHeaders`입니다.  
  

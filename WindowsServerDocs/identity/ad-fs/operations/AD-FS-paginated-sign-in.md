@@ -8,16 +8,15 @@ ms.date: 09/19/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 2b11454427a65e37604b430a63b5ed745f4a2bb1
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 946e99448d13bf6782c10bce5a0b8566da4deb17
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59864454"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190380"
 ---
 # <a name="ad-fs-paginated-sign-in"></a>AD FS 로그인 페이지를 매긴
 
->적용 대상: Windows Server 2019
 
 AD FS 2019에 대 한 로그인 UI를 새롭게 디자인 했습니다.  이제 AD FS 로그인 해야 Azure AD의 동일한 모양과 느낌입니다.  사용자가 더 일관 된 로그인 환경을 통합 가운데 맞춤 및 페이지가 매겨진 사용자 흐름을 제공 합니다. 
 

@@ -9,15 +9,13 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 730411ed7efbb9cf0db3d7e94a486cec4c363849
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: bec3ebf1bd12b260dbbb245a6a905277ff0d749f
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59860414"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188543"
 ---
- >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 # <a name="the-role-of-attribute-stores"></a>특성 저장소의 역할
 Active Directory Federation Services 사용 "특성 저장소" 라는 용어는 조직이 해당 사용자 계정 및 관련된 특성 값을 저장 하기 위해 사용 하는 디렉터리 또는 데이터베이스를 가리키도록 합니다. AD FS id 공급자 조직에 구성 된 후 저장소에서 이러한 특성 값을 검색 하 고 웹 응용 프로그램 또는 신뢰 당사자 조직에서 호스트 되는 서비스 수 있도록 적절 한 정보에 따라 클레임을 만듭니다. 때마다 페더레이션된 사용자 권한 부여 결정 \(계정이 id 공급자 조직에 저장 된 사용자\) 응용 프로그램 또는 서비스에 액세스 하려고 합니다.  
   

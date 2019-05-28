@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 376cec7f3a4fb1f988ac5d458b05220c7b9de970
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b883126f60950c0015b3a21e2ca5abc251b25b84
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59857694"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190462"
 ---
 # <a name="where-to-place-a-federation-server"></a>페더레이션 서버를 배치하는 위치
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 보안 모범 사례로, 내부 Active Directory Federation Services \(AD FS\)방화벽 앞에 페더레이션 서버를 인터넷에 노출 되지 않도록 회사 네트워크에 연결할 수 있습니다. 이 페더레이션 서버에 보안 토큰을 부여 하려면 전체 권한 부여 중요 합니다. 따라서 도메인 컨트롤러와 동일하게 보호되어야 합니다. 악의적 사용자가 모든 웹 응용 프로그램을 Active Directory Federation Services로 보호 되는 페더레이션 서버에 대 한 전체 액세스 토큰을 발급 하는 기능에 페더레이션 서버 보안이 손상 되 면 \(AD FS\) 모든 리소스 파트너 조직입니다.  
   
@@ -40,4 +38,4 @@ ms.locfileid: "59857694"
 경계 네트워크에 서버 게시를 구성하는 방법에 대한 자세한 내용은 [Where to Place a Federation Server Proxy](Where-to-Place-a-Federation-Server-Proxy.md)를 참조하세요. 서버를 게시 하도록 ISA Server를 구성 하는 방법에 대 한 정보를 참조 하세요 [안전한 웹 게시 규칙 만들기](https://go.microsoft.com/fwlink/?LinkId=75182)합니다.  
   
 ## <a name="see-also"></a>관련 항목
-[Windows Server 2012의에서 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
