@@ -1,22 +1,25 @@
 ---
-title: Azure의 동일 지역 내 클러스터 간 저장소 복제
-description: Azure에서 동일한 지역 내에서 클러스터 간 저장소 복제
+title: Azure에서 동일한 지역 내에서 저장소 복제본 클러스터로 클러스터
+description: 클러스터에서 Azure에서 동일한 지역 내에서 클러스터 저장소 복제
 keywords: 저장소 복제본, 서버 관리자, Windows Server, Azure, 클러스터, 동일한 지역
 author: arduppal
 ms.author: arduppal
-ms.date: 12/19/2017
+ms.date: 04/26/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage-replica
 manager: mchad
-ms.openlocfilehash: 8dbfab96404f5c98b9861476c0bc654af1bda775
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4371192d44878d3c953374b8d307b4d5612869f5
+ms.sourcegitcommit: 7e54a1bcd31cd2c6b18fd1f21b03f5cfb6165bf3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59829144"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65461974"
 ---
-# <a name="cluster-to-cluster-storage-replica-within-the-same-region-in-azure"></a>Azure의 동일 지역 내 클러스터 간 저장소 복제
+# <a name="cluster-to-cluster-storage-replica-within-the-same-region-in-azure"></a>Azure에서 동일한 지역 내에서 저장소 복제본 클러스터로 클러스터
+
+> 적용 대상: Windows Server 2019, Windows Server 2016, Windows Server (반기 채널)
+
 Azure에서 동일한 지역 내에서 클러스터 간 저장소 복제를 구성할 수 있습니다. 아래 예제에서 두 노드 클러스터를 사용 하지만 클러스터 간 저장소 복제본 2 개 노드 클러스터로 제한 되지 않습니다. 아래 그림은 서로 통신할 수 있는 2 노드 저장소 공간 다이렉트 클러스터는 동일한 지역 내의 동일한 도메인에 있습니다.
 
 프로세스의 전체 연습에 대 한 아래 비디오를 시청 하세요.
@@ -57,10 +60,10 @@ Azure에서 동일한 지역 내에서 클러스터 간 저장소 복제를 구�
     
 9. 클러스터를 만들려면 (**SRAZC1**하십시오 **SRAZC2**). 다음은 예제에 대 한 PowerShell 명령
 ```PowerShell
-    New-Cluster -Name SRAZC1 -Node az2az1,az2az2 – StaticAddress 10.3.0.100
+    New-Cluster -Name SRAZC1 -Node az2az1,az2az2 –StaticAddress 10.3.0.100
 ```
 ```PowerShell
-    New-Cluster -Name SRAZC2 -Node az2az3,az2az4 – StaticAddress 10.3.0.101
+    New-Cluster -Name SRAZC2 -Node az2az3,az2az4 –StaticAddress 10.3.0.101
 ```
 10. 저장소 공간 다이렉트를 사용 하도록 설정
 ```PowerShell

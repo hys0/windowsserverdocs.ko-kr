@@ -10,21 +10,21 @@ ms.topic: article
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c1c64336af9c72b97539d2ded750ee4414fccb7
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 71b56a0bc4f53879ebaf3610f60dded39484375b
+ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59868184"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66222349"
 ---
 # <a name="get-started-with-windows-server-2016"></a>Windows Server 2016 시작
 
 >적용 대상: Windows Server 2016
 
 >[!TIP]
-> 이전 버전의 Windows Server에 대한 자세한 내용이 궁금하십니까? docs.microsoft.com에서 다른 [Windows Server 라이브러리](/previous-versions/windows/)를 확인할 수 있습니다. 또한 특정 정보에 대해 [이 사이트를 검색](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions)할 수 있습니다.
+> 이전 버전의 Windows Server에 대한 자세한 내용이 궁금하십니까? docs.microsoft.com에서 다른 [Windows Server 라이브러리](/previous-versions/windows/)를 확인하세요. 또한 특정 정보에 대해 [이 사이트를 검색](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions)할 수 있습니다.
 
-<img src="../media/landing-icons/getstarted.png" style='float:left; padding:.5em;' alt="Icon showing a box with a checkmark"> 이 컬렉션에는 Windows Server 2016으로 이동할 준비가 되면 확인할 수 있는 자세한 정보가 포함되어 있습니다. 시스템 요구 사항, 업그레이드 옵션 및 Windows Server 2016으로 전환에 대한 기타 정보를 확인했으면 기본 [Windows Server 2016](Windows-Server-2016.md) 허브로 돌아가 요구 사항에 가장 적합한 버전 및 설치 옵션을 설치하는 과정을 시작할 수 있습니다. 
+![확인 표시가 있는 상자를 보여 주는 아이콘](../media/landing-icons/getstarted.png) 이 이곳에서 Windows Server 2016으로 전환할 준비가 경우를 결정할 수 있도록 자세한 정보를 포함 합니다. 시스템 요구 사항, 업그레이드 옵션 및 Windows Server 2016으로 전환에 대한 기타 정보를 확인했으면 기본 [Windows Server 2016](Windows-Server-2016.md) 허브로 돌아가 요구 사항에 가장 적합한 버전 및 설치 옵션을 설치하는 과정을 시작할 수 있습니다. 
 
 >[!Note]
 > Windows Server 2016을 다운로드 하려면 참조 [Windows Server 평가판](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016)합니다.
@@ -36,7 +36,7 @@ Windows Server 2016을 설치 및 실행하기 위한 최소 하드웨어 요�
 ## <a name="release-notes-important-issues-in-windows-serverwindows-server-2016-ga-release-notesmd"></a>[릴리스 정보: Windows Server의 주요 문제점](Windows-Server-2016-GA-Release-Notes.md)
 방지하지 않거나 해결하지 않으면 심각한 문제를 일으킬 수 있는 문제
 
-## <a name="recommendations-for-moving-to-windows-server-2016recommendations-moving-to-server2016md"></a>[Windows Server 2016으로 전환 하기 위한 권장 사항](Recommendations-moving-to-Server2016.md)
+## <a name="recommendations-for-moving-to-windows-server-2016recommendations-moving-to-server2016md"></a>[Windows Server 2016으로 전환 시 권장 사항](Recommendations-moving-to-Server2016.md)
 다양한 시나리오에서 Windows Server 2016으로 전환하기 위해 사용할 수 있는 방법을 제공하는 포괄적인 표입니다.
 
 ## <a name="features-removed-or-deprecated-in--windows-server-2016deprecated-featuresmd"></a>[기능 제거 또는 Windows Server 2016에서에서 사용 되지 않음](deprecated-features.md)

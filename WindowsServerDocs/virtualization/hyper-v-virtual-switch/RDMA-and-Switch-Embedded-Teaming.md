@@ -8,12 +8,12 @@ ms.topic: get-started-article
 ms.assetid: 68c35b64-4d24-42be-90c9-184f2b5f19be
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: c945144194ac86623bfa8ce60a306f0202df0874
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 485da451eb092336ec93eddfadc6ffa0e677452b
+ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59881664"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66222756"
 ---
 # <a name="remote-direct-memory-access-rdma-and-switch-embedded-teaming-set"></a>원격 직접 메모리 액세스 \(RDMA\) 포함 된 팀 전환 \(설정\)
 
@@ -120,7 +120,7 @@ RDMA 기능 확인 기능은 0이 아닌 위치에 있는지 확인 합니다.
     Get-NetAdapterRdma | fl *
 
 
-## <a name="bkmk_sswitchembedded"></a>포함 된 팀 (SET) 전환  
+## <a name="switch-embedded-teaming-set"></a>스위치가 포함 된 팀 (설정)  
 
 이 섹션의 스위치 포함 된 팀 (SET) Windows Server 2016의 개요를 제공 하며 다음과 같은 섹션이 포함 되어 있습니다.
 

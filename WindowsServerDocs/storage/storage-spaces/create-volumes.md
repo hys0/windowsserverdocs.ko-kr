@@ -1,29 +1,98 @@
 ---
-ms.assetid: a9f229eb-bef4-4231-97d0-0899e17cef32
 title: 저장소 공간 다이렉트에서 볼륨 만들기
+description: 저장소 공간 다이렉트 Windows Admin Center 및 PowerShell을 사용 하 여 볼륨을 만드는 방법입니다.
 ms.prod: windows-server-threshold
-ms.author: cosdar
-ms.manager: eldenc
-ms.technology: storage-spaces
-ms.topic: article
+ms.reviewer: cosmosdarwin
 author: cosmosdarwin
-ms.date: 01/11/2017
-ms.localizationpriority: medium
-ms.openlocfilehash: 277a676d8e53a7847d54039aab6607be8e5a78c5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.author: cosdar
+manager: eldenc
+ms.technology: storage-spaces
+ms.date: 05/09/2019
+ms.openlocfilehash: d7c842a9b393f67c482dadeaa4090627887a67a3
+ms.sourcegitcommit: 75f257d97d345da388cda972ccce0eb29e82d3bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59823614"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65613218"
 ---
 # <a name="creating-volumes-in-storage-spaces-direct"></a>저장소 공간 다이렉트에서 볼륨 만들기
 
->적용 대상: Windows Server 2016
+>적용 대상: Windows Server 2019, Windows Server 2016
 
-이 항목에서는 PowerShell 또는 장애 조치(failover) 클러스터 관리자를 사용하여 저장소 공간 다이렉트에서 볼륨을 만드는 방법을 설명합니다.
+이 항목에서는 Windows Admin Center, PowerShell 또는 장애 조치 클러스터 관리자를 사용 하 여 저장소 공간 다이렉트 클러스터에서 볼륨을 만드는 방법을 설명 합니다.
 
    >[!TIP]
    >  아직 확인하지 않은 경우 [저장소 공간 다이렉트에서 볼륨 계획](plan-volumes.md)을 먼저 확인하세요.
+
+## <a name="create-a-three-way-mirror-volume"></a>3 방향 미러 볼륨 만들기
+
+Windows Admin Center 3 방향 미러 볼륨을 만들려면: 
+
+1. Windows Admin Center 저장소 공간 다이렉트 클러스터에 연결 하 고 선택한 **볼륨이** 에서 합니다 **도구** 창입니다.
+2. 볼륨 페이지에서 선택 합니다 **인벤토리** 탭을 선택한 후 **볼륨 만들기**합니다.
+3. 에 **볼륨 만들기** 볼륨에 대 한 이름을 입력 하 고 유지 하는 창 **복원 력** 으로 **3 방향 미러**합니다.
+4. **HDD 크기**, 볼륨의 크기를 지정 합니다. 예를 들어 5 TB (테라바이트).
+5. **만들기**를 선택합니다.
+
+크기에 따라 볼륨을 만드는 몇 분 정도 걸릴 수 있습니다. 오른쪽 위에 알림 볼륨이 만들어질 때를 알 수 있습니다. 새 볼륨 인벤토리 목록에 나타납니다.
+
+3 방향 미러 볼륨을 만드는 방법에 대 한 빠른 비디오를 시청 하세요.
+
+> [!VIDEO https://www.youtube-nocookie.com/embed/o66etKq70N8]
+
+## <a name="create-a-mirror-accelerated-parity-volume"></a>미러 가속 패리티 볼륨 만들기
+
+미러 가속 패리티 HDD에 있는 볼륨의 공간을 줄일 수 있습니다. 예를 들어, 3 방향 미러 볼륨 크기의 모든 10 테라바이트에 대 한 필요 30tb 공간으로 의미 합니다. 공간을 차지 하는 오버 헤드를 줄이기 위해 미러 가속 패리티를 사용 하 여 볼륨을 만듭니다. 이 공간 30tb에서 4 명의 서버를 사용 하더라도 방금 22 테라바이트 여 줄입니다 데이터의 가장 활동적인 20% 미러링 및 패리티 공간을 효율적 나머지 부분을 저장 하는 사용 하 여. 워크 로드에 적합 한 용량 균형 성능과 수 있도록 미러 및 패리티가이 비율을 조정할 수 있습니다. 예를 들어, 90% 패리티 및 10% 미러 성능을 낮추려면 생성 하지만 공간을 더욱 간소화 합니다.
+
+Windows Admin Center 미러 가속 패리티를 사용 하 여 볼륨을 만들려면:
+
+1. Windows Admin Center 저장소 공간 다이렉트 클러스터에 연결 하 고 선택한 **볼륨이** 에서 합니다 **도구** 창입니다.
+2. 볼륨 페이지에서 선택 합니다 **인벤토리** 탭을 선택한 후 **볼륨 만들기**합니다.
+3. 에 **볼륨 만들기** 창 볼륨에 대 한 이름을 입력 합니다.
+4. **복원 력**를 선택 **패리티 미러 가속**합니다.
+5. **패리티 백분율**, 패리티 비율을 선택 합니다.
+6. **만들기**를 선택합니다.
+
+미러 가속 패리티 볼륨을 만드는 방법에 대 한 빠른 비디오를 시청 하세요.
+
+> [!VIDEO https://www.youtube-nocookie.com/embed/R72QHudqWpE]
+
+## <a name="open-volume-and-add-files"></a>볼륨을 열고 파일 추가
+
+볼륨을 열고 Windows Admin Center 볼륨에 파일을 추가 합니다.
+
+1. Windows Admin Center 저장소 공간 다이렉트 클러스터에 연결 하 고 선택한 **볼륨이** 에서 합니다 **도구** 창입니다.
+2. 볼륨 페이지에서 선택 합니다 **인벤토리** 탭 합니다.
+2. 볼륨의 목록에서 열려는 볼륨의 이름을 선택 합니다.
+
+    볼륨 세부 정보 페이지에서 볼륨에 대 한 경로 볼 수 있습니다.
+
+4. 페이지의 맨 위에 있는 선택 **열려**합니다. 파일 도구를 Windows Admin Center 시작 됩니다.
+5. 볼륨의 경로를 이동 합니다. 다음 볼륨의 파일을 찾아볼 수 있습니다.
+6. 선택 **업로드**에 업로드할 파일을 선택 합니다.
+7. 브라우저를 사용 하 여 **다시** Windows Admin Center 도구 창으로 다시 이동 합니다.
+
+볼륨을 열고 파일을 추가 하는 방법에 대 한 빠른 비디오를 시청 하세요.
+
+> [!VIDEO https://www.youtube-nocookie.com/embed/j59z7ulohs4]
+
+## <a name="turn-on-deduplication-and-compression"></a>중복 제거 및 압축 설정
+
+중복 제거 및 압축은 볼륨 별로 관리 됩니다. 중복 제거 및 압축 실행 될 때까지 절감 효과 표시 하지 않습니다는 사후 처리 모델을 사용 합니다. 이 경우 앞에서 있었습니까 하는 모든 파일을 통해 작동할 것입니다.
+
+1. Windows Admin Center 저장소 공간 다이렉트 클러스터에 연결 하 고 선택한 **볼륨이** 에서 합니다 **도구** 창입니다.
+2. 볼륨 페이지에서 선택 합니다 **인벤토리** 탭 합니다.
+3. 볼륨의 목록에서 관리 하려는 볼륨의 이름을 선택 합니다.
+4. 볼륨 세부 정보 페이지에서 레이블이 지정 된 스위치를 클릭 **중복 제거 및 압축**합니다.
+5. 중복 제거 설정 창에서 중복 제거 모드를 선택 합니다.
+
+    복잡 한 설정 하는 대신 Windows Admin Center 다양 한 워크 로드에 대 한 바로 사용할 수 있는 프로필을 선택할 수 있습니다. 확실 하지 않은 경우 기본 설정을 사용 합니다.
+
+6. **사용**을 선택합니다.
+
+중복 제거 및 압축 설정 하는 방법에 대 한 빠른 비디오를 시청 하세요.
+
+> [!VIDEO https://www.youtube-nocookie.com/embed/PRibTacyKko]
 
 ## <a name="create-volumes-using-powershell"></a>PowerShell을 사용하여 볼륨 만들기
 
@@ -120,3 +189,5 @@ New-Volume -FriendlyName "Volume4" -FileSystem CSVFS_ReFS -StoragePoolFriendlyNa
 
 - [저장소 공간 다이렉트 개요](storage-spaces-direct-overview.md)
 - [저장소 공간 다이렉트 볼륨 계획](plan-volumes.md)
+- [저장소 공간 다이렉트에서 볼륨 확장](resize-volumes.md)
+- [저장소 공간 다이렉트의 볼륨 삭제](delete-volumes.md)

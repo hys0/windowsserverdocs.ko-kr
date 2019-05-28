@@ -9,12 +9,12 @@ ms.date: 10/16/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: networking
-ms.openlocfilehash: 7cf3b3f2bb9a2c9f95c50aa6a7b7690f89cdd0af
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7426c3ede013905ba65a659baead928d3e2bbadf
+ms.sourcegitcommit: 21165734a0f37c4cd702c275e85c9e7c42d6b3cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59840664"
+ms.lasthandoff: 05/03/2019
+ms.locfileid: "65034567"
 ---
 # <a name="windows-time-service-tools-and-settings"></a>Windows 시간 서비스 도구 및 설정
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10 이상
@@ -70,7 +70,7 @@ Windows 시간 서비스 설정을 구성 하려면 W32tm.exe 사용 됩니다. 
 ---  
 에 대 한 자세한 내용은 **W32tm.exe**, 도움말 및 지원 센터에서 Windows XP, Windows Vista, Windows 7, Windows Server 2003, Windows Server 2003 R2, Windows Server 2008 및 Windows Server 2008 R2를 참조 하세요.  
   
-## <a name="windows-time-service-registry-entries"></a>Windows 시간 서비스 레지스트리 항목  
+## <a name="windows-time-service-registry-entries"></a>Windows 시간 서비스 레지스트리 항목
 다음 레지스트리 항목은 Windows 시간 서비스와 연결 합니다.  
   
 이 정보는 문제 해결에 필요한 설정을 적용 되었는지 확인 하는 사용에 대 한 참조로 제공 됩니다. 하면 직접 편집 하지 않는 레지스트리 다른 대체 방법이 없는 경우를 제외 하는 것이 좋습니다. 레지스트리를 수정 하지 전에 유효성을 검사 나 Windows 레지스트리 편집기에서 적용 되 고 결과적으로, 잘못 된 값을 저장할 수 있습니다. 이 시스템에 복구할 수 없는 오류가 발생할 수 있습니다.  
@@ -86,11 +86,11 @@ Windows 시간 서비스에 대 한 여러 레지스트리 항목이 동일한 �
 
   
 이 레지스트리 위치는 레지스트리 키입니다. Windows 시간 설정은 이러한 키의 모든 값에 저장 됩니다.
-* [매개 변수](#Parameters)
-* [Config](#Configuration)
-* [NtpClient](#NtpClient)
-* [NtpServer](#NtpServer)
-  
+
+* [매개 변수](#hklmsystemcurrentcontrolsetservicesw32timeparameters)
+* [Config](#hklmsystemcurrentcontrolsetservicesw32timeconfig)
+* [NtpClient](#hklmsystemcurrentcontrolsetservicesw32timetimeprovidersntpclient)
+* [NtpServer](#hklmsystemcurrentcontrolsetservicesw32timetimeprovidersntpserver)
 
 대부분의 레지스트리 W32Time 절의 값 내부적으로 사용 W32Time 정보를 저장 합니다. 언제 든 지 이러한 값을 수동으로 변경할 수 해야 합니다. 수정 하지 마십시오이 섹션의 설정 중 필요한 설정을 사용 하 여 익숙한는 새 값을 예상 대로 작동 하는 경우가 아니면. 다음 레지스트리 항목은 다음 위치에
 
@@ -114,10 +114,9 @@ W32time 키 정책을 사용 하 여 만들어집니다.  정책을 제거 하�
   
 -   1 ms에 설명 된 대로 Windows 시스템에서 10,000 클록 틱 = [DateTime.Ticks Property](https://docs.microsoft.com/dotnet/api/system.datetime.ticks?redirectedfrom=MSDN&view=netframework-4.7.2#System_DateTime_Ticks)합니다.  
   
-예를 들어 5 분 5 * 60 할\*1000\*10000 = 3000000000 클록 틱입니다. 
+예를 들어 5 분 5 할\*60\*1000\*10000 = 3000000000 클록 틱입니다. 
 
 모든 버전에는 Windows 7, Windows 8, Windows 10, Windows Server 2008 및 Windows Server 2008 R2, Windows Server 2012, Windows Server 2012R2, Windows Server 2016 포함 됩니다.  일부 항목은 최신 Windows 버전에서 사용할 수만 있습니다.
-
 
 #### <a name="hklmsystemcurrentcontrolsetservicesw32timeparameters"></a>HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Parameters
 
@@ -140,7 +139,7 @@ W32time 키 정책을 사용 하 여 만들어집니다.  정책을 제거 하�
 |LargePhaseOffset|All|항목 시간 오프셋 보다 큰 또는 10에서이 값을 지정 합니다<sup>-7</sup> 초 급증 하는 것으로 간주 됩니다. 많은 양의 트래픽이 같은 네트워크 중단이 발생 하는 급등을 유발할 수 있습니다. 급증은 오랜 기간 동안 유지 하지 않으면 무시 됩니다. 도메인 멤버에서 기본값은 50000000 합니다. 독립 실행형 클라이언트 및 서버에서 기본값은 50000000 합니다.  |
 |LastClockRate|All|항목은 W32Time에서 유지 됩니다. Windows 운영 체제에서 사용 되는 예약 된 데이터를 포함 하 고이 설정 변경 하면 예기치 않은 결과가 발생할 수 있습니다. 도메인 멤버에서 기본값은 156250 합니다. 독립 실행형 클라이언트 및 서버에서 기본값은 156250 합니다.  |
 |LocalClockDispersion|All|항목 제어 때 가정해 야 하는 초 단위로 경향에 기본 제공 시계 원본이 있습니다. 도메인 구성원의 기본값은 10입니다. 독립 실행형 클라이언트 및 서버에서 기본값은 10입니다.|
-|MaxAllowedPhaseOffset|All|항목에는 최대 오프셋 (초)는 W32Time 클록 속도 사용 하 여 컴퓨터 시계를 조정 하려고 지정 합니다. 오프셋이이 비율을 초과 하면 W32Time 직접 컴퓨터 시계를 설정 합니다. 도메인 구성원에 대 한 기본값은 300입니다. 독립 실행형 클라이언트 및 서버에 대 한 기본값은 1입니다.  [자세한 내용은 아래를 참조 하세요](#MaxAllowedPhaseOffset)합니다.|
+|MaxAllowedPhaseOffset|All|항목에는 최대 오프셋 (초)는 W32Time 클록 속도 사용 하 여 컴퓨터 시계를 조정 하려고 지정 합니다. 오프셋이이 비율을 초과 하면 W32Time 직접 컴퓨터 시계를 설정 합니다. 도메인 구성원에 대 한 기본값은 300입니다. 독립 실행형 클라이언트 및 서버에 대 한 기본값은 1입니다.  [자세한 내용은 아래를 참조 하세요](#maxallowedphaseoffset-information)합니다.|
 |MaxClockRate|All|항목은 W32Time에서 유지 됩니다. Windows 운영 체제에서 사용 되는 예약 된 데이터를 포함 하 고이 설정 변경 하면 예기치 않은 결과가 발생할 수 있습니다. 도메인 구성원에 대 한 기본값은 155860 합니다. 독립 실행형 클라이언트 및 서버에 대 한 기본값은 155860 합니다.  |
 |MaxNegPhaseCorrection|All|서비스에서 수행 하는 시간 (초)에서 가장 큰 음수 시간 수정을 지정 합니다. 서비스에서이 값 보다 큰 변경이 필요 하다 고 결정 하는 경우 그 대신 이벤트를 기록 합니다. 특별 한 경우: 0xFFFFFFFF 항상 시간 수정 확인을 의미 합니다. 도메인 구성원에 대 한 기본값은 0xFFFFFFFF입니다. 독립 실행형 클라이언트 및 서버에 대 한 기본값은 54,000 (15 시간).  |
 |MaxPollInterval|All|항목은 최대 간격을 초 단위로 지정 log2, 시스템 폴링 간격에 대 한 허용 합니다. 예약 된 간격에 따라 시스템 폴링해야, 하지만 작업을 수행 하도록 요청 하면 샘플을 생성 하는 공급자 거부할 수 있습니다 note 합니다. 도메인 컨트롤러에 대 한 기본값은 10입니다. 도메인 구성원에 대 한 기본값은 15입니다. 독립 실행형 클라이언트 및 서버에 대 한 기본값은 15입니다.  |
@@ -209,7 +208,7 @@ W32tm /query /status /verbose
 ClockRate: 0.0156000s  
 ```  
   
-SystemclockRate는 시스템 클록의 속도. 156000 시간 (초)을 사용 하 여 예를 들어,는 SystemclockRate는 수 = 0.0156000 * 1000 \* 10000 = 156000 클록 틱입니다.  
+SystemclockRate는 시스템 클록의 속도. 156000 시간 (초)을 사용 하 여 예를 들어,는 SystemclockRate는 수 = 0.0156000 \* 1000 \* 10000 = 156000 클록 틱입니다.  
   
 MaxAllowedPhaseOffset 초 이기도합니다. 변환할 클록 틱, MaxAllowedPhaseOffset 곱하기 * 1000\*10000입니다.  
   
@@ -297,7 +296,7 @@ YES/TRUE
 > [!WARNING]  
 > 일부 그룹 정책 개체 (GPO)에 대 한 시스템 관리 템플릿 파일 (System.adm)에 구성 된 미리 설정 된 값은 해당 기본 레지스트리 항목을 다릅니다. GPO를 사용 하 여 모든 Windows 시간 설정을 구성 하려는 경우 반드시 검토 될 [Windows 시간 서비스 그룹 정책 설정에 대 한 기본 설정 값은 Windows Server 2003의 해당 Windows 시간 서비스 레지스트리 항목에서 다른 ](https://go.microsoft.com/fwlink/?LinkId=186066). 이 문제는 Windows Server 2008 R2, Windows Server 2008, Windows Server 2003 R2 및 Windows Server 2003에 적용 됩니다.  
   
-다음 표에서 각 설정과 연결 된 미리 설정된 된 값은 Windows 시간 서비스와 연결 된 전역 그룹 정책 설정을 나열 합니다. 각 설정에 대 한 자세한 내용은 해당 레지스트리 항목을 참조 하세요. "[Windows 시간 서비스 레지스트리 항목](#w2k3tr_times_tools_uhlp)"이이 주제에서 이전 합니다. 다음 설정은 라고 하는 단일 GPO에 포함 됩니다 **전역 구성 설정을**합니다.  
+다음 표에서 각 설정과 연결 된 미리 설정된 된 값은 Windows 시간 서비스와 연결 된 전역 그룹 정책 설정을 나열 합니다. 각 설정에 대 한 자세한 내용은 해당 레지스트리 항목을 참조 하세요 [Windows 시간 서비스 레지스트리 항목](#windows-time-service-registry-entries) 이 주제에서 이전 합니다. 다음 설정은 라고 하는 단일 GPO에 포함 됩니다 **전역 구성 설정을**합니다.  
   
 **Windows 시간을 사용 하 여 연결 된 전역 그룹 정책 설정**  
   
@@ -319,7 +318,7 @@ YES/TRUE
 |SpikeWatchPeriod|90|  
 |UpdateInterval|100|  
   
-다음 표에서 사용 가능한 설정 합니다 **Windows NTP 클라이언트 구성** GPO 및 Windows 시간 서비스와 연결 된 미리 설정된 된 값입니다. 각 설정에 대 한 자세한 내용은 해당 레지스트리 항목을 참조 하세요. "[Windows 시간 서비스 레지스트리 항목](#w2k3tr_times_tools_uhlp)"이이 주제에서 이전 합니다.  
+다음 표에서 사용 가능한 설정 합니다 **Windows NTP 클라이언트 구성** GPO 및 Windows 시간 서비스와 연결 된 미리 설정된 된 값입니다. 각 설정에 대 한 자세한 내용은 해당 레지스트리 항목을 참조 하세요 [Windows 시간 서비스 레지스트리 항목](#windows-time-service-registry-entries) 이 주제에서 이전 합니다.  
   
 **연결 된 Windows 시간 NTP 클라이언트 그룹 정책 설정**  
   

@@ -9,16 +9,14 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 1122ee3814f656a7229dc2946d7441d525de5ae2
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 1f7a65687ac07c9f7d9a814b50c4090c70817b4f
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59869674"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192374"
 ---
 # <a name="checklist-implementing-a-federated-web-sso-design"></a>검사 목록: 페더레이션된 웹 SSO 디자인 구현
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 크로스이 상위 검사 목록에 포함 되어\-페더레이션 웹 단일 항목에 대 한 중요 한 개념에 대 한 링크를 참조\-Sign\-온 \(SSO\) Active Directory Federation services 디자인\(AD FS\)합니다. 또한 이 디자인을 구현하는 데 필요한 작업을 완료하는 데 도움이 되는 하위 검사 목록의 링크가 포함되어 있습니다.  
   

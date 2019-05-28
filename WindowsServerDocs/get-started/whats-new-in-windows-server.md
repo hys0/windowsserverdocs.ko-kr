@@ -2,36 +2,38 @@
 title: Windows Server의 새로운 기능
 description: 계산, ID, 관리, 자동화, 네트워킹, 보안, 저장소의 새로운 기능입니다.
 ms.prod: windows-server
-ms.date: 10/17/2017
+ms.date: 05/21/2019
 ms.technology: server-general
 ms.topic: article
-author: greg-lindsay
-ms.author: greg-lindsay
+author: jasongerend
+ms.author: jgerend
 ms.localizationpriority: medium
-ms.openlocfilehash: 98da95e8ee01e9f59b06a2b609727cb68ce9f386
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: c39336dfa02e798a609fd5b16f5f844442f32c89
+ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59861944"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65976668"
 ---
 # <a name="whats-new-in-windows-server"></a>Windows Server의 새로운 기능
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server 2019, Windows Server 2016, Windows Server (반기 채널)
 
-각 이러한 Windows Server 2016의 새로운 기능을 찾을 수 있습니다 및 Windows Server (반기 채널)를 해제 합니다.  
-   
-<br>
-<br>
-<br>
-<br>
-[새로운 Windows Server, 버전 1803의 기능](whats-new-in-windows-server-1803.md)
-<br>
-[Windows Server 버전 1709의 새로운 기능](whats-new-in-windows-server-1709.md)<BR>
-[Windows Server 2016의에서 새로운 기능](whats-new-in-windows-server-2016.md)
+각 이러한 Windows Server 버전에 대 한 새로운 기능을 찾을 수 있습니다.  
 
+장기 서비스 채널 (LTSC) 릴리스:
 
+- [Windows Server 2019의에서 새로운 기능](../get-started-19/whats-new-19.md)
+- [Windows Server 2016의 새로운 기능](whats-new-in-windows-server-2016.md)
 
-## <a name="see-also"></a>관련 항목  
--   [릴리스 정보: Windows Server 2016의에서 주요 문제점](Windows-Server-2016-GA-Release-Notes.md)  
+반기 채널 릴리스:
 
+- [Windows Server 버전 1903의 새로운 기능](../get-started-19/whats-new-in-windows-server-1903.md)
+- [Windows Server 버전 1809의 새로운 기능](whats-new-in-windows-server-1809.md)
+- [Windows Server 버전 1803의 새로운 기능](whats-new-in-windows-server-1803.md)
+- [Windows Server 버전 1709의 새로운 기능](whats-new-in-windows-server-1709.md)
+
+## <a name="see-also"></a>참조
+
+- [릴리스 정보: Windows Server 2019의 중요한 이슈](../get-started-19/rel-notes-19.md)
+- [릴리스 정보: Windows Server 2016의 중요한 이슈](Windows-Server-2016-GA-Release-Notes.md)

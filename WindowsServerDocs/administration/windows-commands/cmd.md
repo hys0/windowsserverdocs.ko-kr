@@ -13,16 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 966ac7f70984dff6d26265e07a26a6eebcde9fb6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7d9b99dbe7e26190e87c5dfc9de29980b9cb2f43
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59874394"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192592"
 ---
 # <a name="cmd"></a>Cmd
-
-
 
 Cmd.exe 명령 인터프리터를의 새 인스턴스를 시작합니다. 매개 변수 없이 사용 하는 경우 **cmd** 운영 체제의 버전 및 저작권 정보를 표시 합니다.
 
@@ -104,6 +102,7 @@ cmd [/c|/k] [/s] [/q] [/d] [/a|/u] [/t:{<B><F>|<F>}] [/e:{on|off}] [/f:{on|off}]
 
 > [!CAUTION]
 > 레지스트리를 잘못 편집하면 시스템에 심각한 손상을 줄 수 있습니다. 따라서 레지스트리를 변경하기 전에 컴퓨터의 중요한 데이터를 백업해 두어야 합니다.
+
 -   명령 확장을 사용 하도록 설정
 
     명령 확장은 Windows XP에서 기본적으로 활성화 됩니다. 특정 프로세스에 사용 하 여 비활성화할 수 있습니다 **/e: 해제**합니다. 모든 확장을 사용 하지 않도록 설정 하거나 설정할 수 있습니다 **cmd** 명령줄 옵션에 다음을 설정 하 여 컴퓨터 또는 사용자 세션 **REG_DWORD** 값:
@@ -114,34 +113,35 @@ cmd [/c|/k] [/s] [/q] [/d] [/a|/u] [/t:{<B><F>|<F>}] [/e:{on|off}] [/f:{on|off}]
 
     설정 된 **REG_DWORD** 값을 **0 × 1** (사용) 또는 **0 × 0** (사용 안 함) 레지스트리에서 Regedit.exe를 사용 하 여 합니다. 사용자 지정 설정이 컴퓨터 설정 보다 우선 하며 명령줄 옵션 레지스트리 설정 보다 우선 합니다.
 
->     [!CAUTION]
->     Incorrectly editing the registry may severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.
+> [!CAUTION]
+> 레지스트리를 잘못 편집하면 시스템에 심각한 손상을 줄 수 있습니다. 따라서 레지스트리를 변경하기 전에 컴퓨터의 중요한 데이터를 백업해 두어야 합니다.
 
     When you enable command extensions, the following commands are affected:  
-    -   **assoc**
-    -   **call**
-    -   **chdir (cd)**
-    -   **color**
-    -   **del (erase)**
-    -   **endlocal**
-    -   **for**
-    -   **ftype**
-    -   **goto**
-    -   **if**
-    -   **mkdir (md)**
-    -   **popd**
-    -   **prompt**
-    -   **pushd**
-    -   **set**
-    -   **setlocal**
-    -   **shift**
-    -   **start** (also includes changes to external command processes)
+    -  **assoc**
+    -  **call**
+    -  **chdir (cd)**
+    -  **color**
+    -  **del (erase)**
+    -  **endlocal**
+    -  **for**
+    -  **ftype**
+    -  **goto**
+    -  **if**
+    -  **mkdir (md)**
+    -  **popd**
+    -  **prompt**
+    -  **pushd**
+    -  **set**
+    -  **setlocal**
+    -  **shift**
+    -  **start** (also includes changes to external command processes)
+
 -   지연 된 환경 변수 확장을 사용 하도록 설정
 
     지연 된 환경 변수 확장을 사용 하도록 설정 하면 런타임 시 환경 변수 값을 대체 느낌표 문자를 사용할 수 있습니다.
 -   파일 및 디렉터리 이름 완성을 사용 하도록 설정
 
-    파일 및 디렉터리 이름 완성 기본적으로 사용 되지 않습니다. 특정 프로세스에 대 한 파일 이름 완성을 사용 하지 않도록 설정 하거나 설정할 수 있습니다는 **cmd** 명령과 **/f:**{**온**|**해제**}. 모든 프로세스에 대 한 파일 및 디렉터리 이름 완성을 사용 하지 않도록 설정 하거나 설정할 수 있습니다 합니다 **cmd** 컴퓨터에서 또는 다음을 설정 하 여 사용자 로그온 세션에 대 한 명령을 **REG_DWORD** 값:
+    파일 및 디렉터리 이름 완성 기본적으로 사용 되지 않습니다. 특정 프로세스에 대 한 파일 이름 완성을 사용 하지 않도록 설정 하거나 설정할 수 있습니다는 **cmd** 명령과 **/f:** {**온**|**해제**}. 모든 프로세스에 대 한 파일 및 디렉터리 이름 완성을 사용 하지 않도록 설정 하거나 설정할 수 있습니다 합니다 **cmd** 컴퓨터에서 또는 다음을 설정 하 여 사용자 로그온 세션에 대 한 명령을 **REG_DWORD** 값:
 
     **HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\CompletionChar\REG_DWORD**
 

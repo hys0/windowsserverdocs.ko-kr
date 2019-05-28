@@ -13,12 +13,12 @@ ms.topic: get-started-article
 ms.assetid: f2f2f1a5-ac2f-41b7-a495-98ad0e2a9b20
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 1305f889339fb4ca6815912924ba2232cfaf4cab
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 04838cba63805d20ba31629ed9c8e95290046320
+ms.sourcegitcommit: 29ad32b9dea298a7fe81dcc33d2a42d383018e82
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59880754"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65624681"
 ---
 # <a name="whats-new-in-ipam"></a>IPAM의 새로운 기능
 
@@ -43,7 +43,7 @@ Windows Server 2016에서 IPAM에 대 한 새로운 기능과 향상 된 기능�
 ### <a name="EIP"></a>향상 된 IP 주소 관리  
 다음과 같은 기능 IPAM 주소 관리 기능을 개선 합니다.  
 >[!NOTE]
->IPAM Windows PowerShell 명령 참조를 참조 하십시오 [Windows PowerShell의 IPAM IP 주소 관리 () 서버 Cmdlet](https://technet.microsoft.com/library/jj553807.aspx)합니다.  
+>IPAM Windows PowerShell 명령 참조를 참조 하십시오 [Windows PowerShell의 IPAM IP 주소 관리 () 서버 Cmdlet](https://docs.microsoft.com/en-us/powershell/module/ipamserver/)합니다.  
   
 #### <a name="support-for-31-32-and-128-subnets"></a>/31 지원, / 32, /128 서브넷  
 Windows Server 2016 이제 /31, / 32, 및 /128 지원 서브넷에 IPAM. 예를 들어, 두 주소 서브넷 (/ 31 IPv4) 스위치 간에 지점 간 연결에 필요할 수 있습니다. 또한 일부 스위치 단일 루프백 주소를 필요할 수 있습니다 (/ 32 ipv4, ipv6 /128).  
@@ -57,7 +57,7 @@ Windows Server 2016 이제 /31, / 32, 및 /128 지원 서브넷에 IPAM. 예를 
 >[!NOTE]
 >이 함수는 실제로 서브넷을 할당 하지 않고 해당 가용성만 보고 합니다. 하지만 Cmdlet 출력을 파이프 될 수 있습니다 합니다 **추가 IpamSubnet** 서브넷을 만드는 명령입니다.  
   
-자세한 내용은 [찾기 IpamFreeSubnet](https://technet.microsoft.com/library/mt712782.aspx)합니다.  
+자세한 내용은 [찾기 IpamFreeSubnet](https://docs.microsoft.com/en-us/powershell/module/ipamserver/Find-IpamFreeSubnet)합니다.  
   
 #### <a name="find-free-address-ranges-with-find-ipamfreerange"></a>**찾기 IpamFreeRange를 사용 하 여 사용 가능한 주소 범위를 찾기**  
   
@@ -68,7 +68,7 @@ Windows Server 2016 이제 /31, / 32, 및 /128 지원 서브넷에 IPAM. 예를 
 > [!NOTE]
 > 이 함수는 실제로 범위를 할당 하지 않고 해당 가용성만 보고 합니다. 하지만 Cmdlet 출력을 파이프 될 수 있습니다 합니다 **추가 IpamRange** 범위를 만드는 명령입니다.  
   
-자세한 내용은 [찾기 IpamFreeRange](https://technet.microsoft.com/library/mt712772.aspx)합니다.  
+자세한 내용은 [찾기 IpamFreeRange](https://docs.microsoft.com/en-us/powershell/module/ipamserver/Find-IpamFreeRange)합니다.  
   
 ### <a name="EDNS"></a>향상 된 DNS 서비스 관리  
 이제 Windows Server 2016에서 IPAM IPAM 실행 되는 Active Directory 포리스트에 파일 기반, 도메인에 가입 된 DNS 서버 검색을 지원 합니다.  
@@ -129,5 +129,5 @@ Windows Server 2012 R2의 IPAM에서 검색 하 고 IPAM 서버와 동일한 Act
   
 -   DHCP 범위  
   
-자세한 내용은 [역할 기반 Access Control 관리 Windows PowerShell을 사용 하 여](../../technologies/ipam/Manage-Role-Based-Access-Control-with-Windows-PowerShell.md) 하 고 [Windows PowerShell의 IPAM IP 주소 관리 () 서버 Cmdlet](https://technet.microsoft.com/library/jj553807.aspx)합니다.  
+자세한 내용은 [역할 기반 Access Control 관리 Windows PowerShell을 사용 하 여](../../technologies/ipam/Manage-Role-Based-Access-Control-with-Windows-PowerShell.md) 하 고 [Windows PowerShell의 IPAM IP 주소 관리 () 서버 Cmdlet](https://docs.microsoft.com/en-us/powershell/module/ipamserver/)합니다.  
 

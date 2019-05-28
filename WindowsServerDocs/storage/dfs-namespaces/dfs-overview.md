@@ -2,22 +2,22 @@
 title: DFS 네임스페이스 개요
 ms.prod: windows-server-threshold
 ms.author: jgerend
-ms.manager: brianlic
+ms.manager: daveba
 ms.technology: storage
 ms.topic: article
 author: jasongerend
-ms.date: 10/15/2018
+ms.date: 05/09/2019
 description: 이 항목에서는 다른 서버에 있는 여러 공유 폴더를 하나 이상의 논리적으로 구성된 네임스페이스로 그룹화할 수 있도록 하는 Windows Server의 역할 서비스인 DFS 네임스페이스에 대해 설명합니다.
-ms.openlocfilehash: 0f80e5a25254513702c25ce895a28c4cb1e0f2b4
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 33b5a36c9f13179286a95735621272f79983231c
+ms.sourcegitcommit: 75f257d97d345da388cda972ccce0eb29e82d3bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59844254"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65613189"
 ---
 # <a name="dfs-namespaces-overview"></a>DFS 네임스페이스 개요
 
-> 적용 대상: Windows Server 2019, Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+> 적용 대상: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows Server (반기 채널)
 
 DFS 네임스페이스는 다른 서버에 있는 공유 폴더를 하나 이상의 논리적으로 구성된 네임스페이스로 그룹화할 수 있도록 하는 Windows Server의 역할 서비스입니다. 이를 통해 사용자에게 공유 폴더의 가상 보기를 제공할 수 있습니다. 여기서 다음 그림과 같이 여러 서버에 위치한 파일이 한 경로로 연결됩니다.
 
@@ -42,11 +42,12 @@ DFS 관리 실행 또는 DFS 네임스페이스 사용을 위한 추가 하드�
 
 다음 운영 체제를 실행하는 서버는 여러 도메인 기반 네임스페이스와 하나의 독립 실행형 네임스페이스를 호스팅할 수 있습니다. 
 
-- Windows Server(반기 채널)
+- Windows Server 2019
 - Windows Server 2016
 - Windows Server 2012 R2
 - Windows Server 2012
-- Windows Server 2008 R2 Datacenter/Enterprise
+- Windows Server 2008 R2 Datacenter 및 Enterprise Edition
+- Windows Server(반기 채널)
 
 다음 운영 체제를 실행하는 서버는 하나의 독립 실행형 네임스페이스를 호스팅할 수 있습니다.
 
@@ -126,5 +127,5 @@ Azure 가상 컴퓨터를 시작하는 방법에 대해 자세히 알아보려�
 |**작업**|[DFS 네임 스페이스: 질문과 대답](https://technet.microsoft.com/library/ee404780.aspx)|
 |**커뮤니티 리소스**|[파일 서비스 및 저장소 TechNet 포럼](https://social.technet.microsoft.com/forums/winserverfiles/threads/)|
 |**프로토콜**|[파일 서비스 Windows Server의 프로토콜](https://msdn.microsoft.com/en-us/library/cc239318.aspx) (사용 되지 않음)|
-|**관련 기술**| [장애 조치 클러스터링](../../failover-clustering/failover-clustering-overview.md)|
+|**관련 기술**| [장애 조치(failover) 클러스터링](../../failover-clustering/failover-clustering-overview.md)|
 |**지원**|[Windows IT Pro 지원](https://www.microsoft.com/itpro/windows/support)|

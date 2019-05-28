@@ -1,29 +1,27 @@
 ---
 title: Windows Server 설치 및 업그레이드
-description: ''
-ms.custom: na
+description: 설치, 업그레이드 또는 Windows Server의 최신 버전으로 마이그레이션 하는 방법.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.date: 07/12/2018
+ms.date: 05/14/2019
 ms.technology: server-general
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 98f876bd-63ff-4c3a-95d4-a8dd8d0d119c
-author: jaimeo
-ms.author: jaimeo
+author: jasongerend
+ms.author: jgerend
 manager: dougkim
 ms.localizationpriority: medium
-ms.openlocfilehash: c3b9070fc6cb9227ccfa445e23983d9e91fe5c82
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f859253188c46d3e34e7a6ae504bf3eeafbae75c
+ms.sourcegitcommit: 75f257d97d345da388cda972ccce0eb29e82d3bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59859194"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65613176"
 ---
 # <a name="windows-server-installation-and-upgrade"></a>Windows Server 설치 및 업그레이드
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+
+Windows Server 2019 찾으시나요? 참조 [설치, 업그레이드 또는 Windows Server 2019로](../get-started-19/install-upgrade-migrate-19.md)합니다.
 
 > [!IMPORTANT]
 > Windows Server 2008 R2 및 Windows Server 2008에 대한 연장 지원이 2020년 1월에 종료됩니다. [업그레이드 옵션에 대 한 자세한](#upgrading-from-windows-server-2008-r2-or-windows-server-2008)합니다.
@@ -31,13 +29,14 @@ ms.locfileid: "59859194"
 Windows Server 새 버전으로 전환할 시점입니까? 현재 무엇을 실행 중인가에 따라 다양한 옵션이 있습니다.
 
 ## <a name="installation"></a>설치
+
 동일한 하드웨어에서 Windows Server 새 버전으로 전환하고자 할 경우 언제나 확실한 방법은 새 운영 체제를 같은 하드웨어에 있는 기존 버전 위에 바로 설치하여 기존 운영 체제를 삭제하는 **새로 설치**입니다. 가장 간단한 방법이지만 먼저 데이터를 백업하고 나중에 응용 프로그램을 재설치할 계획을 세워야 합니다. 시스템 요구 사항 등과 같이 미리 알아야 할 사항들이 몇 가지 있으니 [Windows Server 2016](https://go.microsoft.com/fwlink/?LinkID=825558), [Windows Server 2012 R2](https://technet.microsoft.com/library/dn303418), [Windows Server 2012](https://technet.microsoft.com/library/jj134246.aspx) 등의 세부 사항을 반드시 확인하시기 바랍니다.
 
 Windows Server 2016 Technical Preview 등과 같은 시험판 버전에서 정식 버전(Windows Server 2016)으로 전환하는 경우에는 항상 새로 설치가 필요합니다.
 
 ## <a name="migration-recommended-for-windows-server-2016"></a>마이그레이션(Windows Server 2016에 권장)
 
-Windows Server [마이그레이션] 설명서는 Windows Server를 실행하는 원본 컴퓨터로부터 동일 버전 또는 새 버전의 Windows Server를 실행하는 다른 대상 컴퓨터로 역할 또는 기능을 한 번에 하나씩 마이그레이션할 때 도움이 됩니다. 이와 같은 목적일 때 마이그레이션은 동일한 컴퓨터에서 기능을 업그레이드하는 작업이 아니라 하나의 역할 또는 기능과 그 데이터를 다른 컴퓨터로 옮기는 작업으로 정의됩니다. 기존 워크로드와 데이터를 더 최신 버전의 Windows Server로 옮기기 위해 권장되는 방식입니다. 시작하려면 Windows Server 2016의 [server role upgrade and migration matrix(서버 역할 업그레이드 및 마이그레이션 매트릭스)](https://go.microsoft.com/fwlink/?LinkId=828595)를 확인하시기 바랍니다.
+Windows Server 마이그레이션 설명서를 사용 하면 동일한 버전 또는 최신 버전 Windows Server를 실행 하는 다른 대상 컴퓨터에 Windows Server를 실행 하는 원본 컴퓨터에서 한 번에 하나의 역할이 나 기능을 마이그레이션할 수 있습니다. 이와 같은 목적일 때 마이그레이션은 동일한 컴퓨터에서 기능을 업그레이드하는 작업이 아니라 하나의 역할 또는 기능과 그 데이터를 다른 컴퓨터로 옮기는 작업으로 정의됩니다. 기존 워크로드와 데이터를 더 최신 버전의 Windows Server로 옮기기 위해 권장되는 방식입니다. 시작 하려면 확인 합니다 [서버 역할 업그레이드 및 마이그레이션 매트릭스](https://go.microsoft.com/fwlink/?LinkId=828595) Windows Server에 대 한 합니다.
 
 ## <a name="cluster-os-rolling-upgrade"></a>클러스터 운영 체제 롤링 업그레이드
 클러스터 OS 롤링 업그레이드는 관리자가 Hyper-V 또는 스케일 아웃 파일 서버 워크로드를 중지하지 않고 클러스터 노드의 운영 체제를 Windows Server 2012 R2에서 Windows Server 2016으로 업그레이드할 수 있는 Windows Server 2016의 새로운 기능입니다. 이 기능을 사용하면 서비스 수준 계약에 영향을 줄 수 있는 가동 중지 시간을 방지할 수 있습니다. 이 새로운 기능은 [클러스터 운영 체제 롤링 업그레이드](https://technet.microsoft.com/windows-server-docs/failover-clustering/cluster-operating-system-rolling-upgrade)에 자세히 설명되어 있습니다.
@@ -139,7 +138,7 @@ Windows Server 2012 Standard 평가판을 Windows Server 2012 Standard(일반 �
 
 에 설명 된 대로 [업그레이드 Windows Server 2008 및 Windows Server 2008 R2](modernize-windows-server-2008.md), Windows Server 2008 R2 또는 Windows Server 2008에 대 한 연장된 지원은 2020 년 1 월의 끝나는 합니다. 지원 되는 버전의 Windows Server를 업그레이드 하거나 이동 하 여 Azure에서 rehost 해야을 보장 하기 위해 지원에 간격이 없어야 [특수 용 Windows Server 2008 R2 Vm](uploading-specialized-WS08-image-to-azure.md)합니다. 체크 아웃 합니다 [Windows Server에 대 한 마이그레이션 가이드](https://go.microsoft.com/fwlink/?linkid=872689) 정보 및 마이그레이션/업그레이드 계획에 대 한 고려 사항에 대 한 합니다.
 
-온-프레미스 서버에 대 한 Windows Server 2008 R2를 Windows Server 2016 이상에서 직접 업그레이드 경로가 없는 있습니다. 대신, Windows Server 2012 R2로 먼저 업그레이드 한 다음 [Windows Server 2016으로 업그레이드](#Upgrading-to-Windows-Server-2016)합니다.
+온-프레미스 서버에 대 한 Windows Server 2008 R2를 Windows Server 2016 이상에서 직접 업그레이드 경로가 없는 있습니다. 대신, Windows Server 2012 R2로 먼저 업그레이드 한 다음 [Windows Server 2016으로 업그레이드](#upgrading-to-windows-server-2016)합니다.
 
 업그레이드를 계획 하는 Windows Server 2012 R2로 업그레이드 하는 중간 단계에 대 한 다음 지침에 주의 해야 합니다.
 

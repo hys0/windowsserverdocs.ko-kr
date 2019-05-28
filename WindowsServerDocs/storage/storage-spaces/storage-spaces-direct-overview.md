@@ -6,16 +6,16 @@ ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 03/06/2019
+ms.date: 03/26/2019
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 description: 저장소 공간 다이렉트를 사용 하면 내부 저장소를 사용 하 여 클러스터 서버에는 소프트웨어 정의 저장소 솔루션에는 Windows Server의 기능 개요.
 ms.localizationpriority: medium
-ms.openlocfilehash: 25de20b398f780f5da07b6b6cf4d396a7d12204a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 87e7f2549578ba1ceb62772ca7ed156aed115c5f
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59823894"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192780"
 ---
 # <a name="storage-spaces-direct-overview"></a>저장소 공간 다이렉트 개요
 
@@ -27,144 +27,40 @@ Windows Server 2019 Datacenter, Windows Server 2016 데이터 센터에에서 �
 
 공유 SAS 클러스터 및 독립 실행형 서버와 같은 다른 응용 프로그램의 저장소 공간에 대해서 [저장소 공간 개요](overview.md)합니다. 찾으려는 경우에 대 한 정보에 대 한 저장소 공간을 사용 하 여 Windows 10 PC에서를 참조 하세요 [Windows 10의 저장소 공간](https://support.microsoft.com/help/12438/windows-10-storage-spaces)입니다.
 
-<table>
-    <tr style="border: 0;">
-        <td style="padding: 5px; border: 0;">
-            <strong>이해</a></strong>
-            <ul>
-              <li>개요(현재 위치)</li>
-              <li><a href="understand-the-cache.md">캐시를 이해 합니다.</a></li>
-              <li><a href="storage-spaces-fault-tolerance.md">오류 허용 하 고 저장소 효율성</a></li>
-              <li><a href="drive-symmetry-considerations.md">드라이브 대칭 고려 사항</a></li>
-              <li><a href="understand-storage-resync.md">이해 하 고 다시 동기화 저장소 모니터링</a></li>
-              <li><a href="understand-quorum.md">클러스터 및 풀 쿼럼을 이해</a></li>
-              <li><a href="cluster-sets.md">클러스터 설정</a></li>
-            </ul>
-        </td>
-        <td style="padding: 5px; border: 0;">
-            <strong>계획</a></strong>
-            <ul>
-              <li><a href="storage-spaces-direct-hardware-requirements.md">하드웨어 요구 사항</a></li>
-              <li><a href="csv-cache.md">읽기 캐시를 CSV에 메모리를 사용 하 여</li>
-              <li><a href="choosing-drives.md">드라이브를 선택 합니다.</a></li>
-              <li><a href="plan-volumes.md">볼륨 계획</a></li>
-              <li><a href="storage-spaces-direct-in-vm.md">게스트 VM 클러스터를 사용 하 여</a></li>
-              <li><a href="storage-spaces-direct-disaster-recovery.md">재해 복구</a></li>
-            </ul>
-        </td>
-    </tr>
-    <tr style="border: 0;">
-        <td style="padding: 5px; border: 0;">
-            <strong>배포</a></strong>
-            <ul>
-                    <li><a href="deploy-storage-spaces-direct.md">저장소 공간 다이렉트 배포</a></li>
-                    <li><a href="create-volumes.md">볼륨을 만듭니다.</a></li>
-              <li><a href="nested-resiliency.md">중첩 된 복원 력</a></li>
-              <li><a href="../../failover-clustering/manage-cluster-quorum.md">쿼럼 구성</a></li>
-              <li><a href="upgrade-storage-spaces-direct-to-windows-server-2019.md">Windows Server 2019에 저장소 공간 다이렉트 클러스터 업그레이드</a></li>
-            </ul>
-        </td>        
-        <td style="padding: 5px; border: 0;">
-            <strong>관리</a></strong>
-            <ul>
-              <li><a href="../../manage/windows-admin-center/use/manage-hyper-converged.md">Windows Admin Center 사용 하 여 관리</a></li>
-              <li><a href="add-nodes.md">서버 또는 드라이브 추가</a></li>
-              <li><a href="maintain-servers.md">유지 관리를 위해 서버를 오프 라인</li>
-              <li><a href="remove-servers.md">서버 제거</a></li>
-              <li><a href="resize-volumes.md">볼륨 확장</a></li>
-              <li><a href="../update-firmware.md">드라이브 펌웨어 업데이트</a></li>
-              <li><a href="performance-history.md">성능 기록</a></li>
-              <li><a href="delimit-volume-allocation.md">볼륨 할당을 구분 합니다.</a></li>
-            </ul>
-        </td>
-    </tr>
-    <tr style="border: 0;">
-         <td style="padding: 5px; border: 0;">
-            <strong>문제 해결</a></strong>
-            <ul>
-              <li><a href="storage-spaces-states.md">상태 및 작동 상태 문제 해결</a></li>
-              <li><a href="data-collection.md">저장소 공간 다이렉트를 사용 하 여 진단 데이터 수집</a></li>
-            </ul>
-         <td style="padding: 5px; border: 0;">
-            <strong>최근 블로그 게시물</a></strong>
-            <ul>
-              <li><a href="https://blogs.technet.microsoft.com/filecab/2018/10/30/windows-server-2019-and-intel-optane-dc-persistent-memory/">저장소 공간 다이렉트를 사용 하 여 13.7 백만 IOPS: 하이퍼 수렴 형 인프라에 대 한 새 업계 레코드</a></li>
-              <li><a href="https://blogs.technet.microsoft.com/filecab/2018/10/02/hci-the-countdown-clock-starts-now/">Windows Server 2019-에서 하이퍼 수렴 형 인프라 대신 카운트다운 시계가 나타납니다 시작할 수 있습니다.</a></li>
-              <li><a href="https://blogs.technet.microsoft.com/filecab/2018/06/27/windows-server-summit-recap/">Windows Server Summit의 빅 공지를 5 개</a></li>
-              <li><a href="https://blogs.technet.microsoft.com/filecab/2018/03/27/storage-spaces-direct-momentum/">10,000 저장소 공간 다이렉트 클러스터 및 계산 하는 중...</a></li>
-            </ul>
-</table>
+|       |       |
+|   -   |   -   |
+|**이해**<br><ul><li>개요(현재 위치)</li><li>[캐시 이해](understand-the-cache.md)</li><li>[내결함성 및 스토리지 효율성](storage-spaces-fault-tolerance.md)<li>[드라이브 대칭 고려 사항](drive-symmetry-considerations.md)</li><li>[스토리지 다시 동기화 이해 및 모니터링](understand-storage-resync.md)</li><li>[클러스터 및 풀 쿼럼의 이해](understand-quorum.md)</li><li>[클러스터 세트](cluster-sets.md)</li>|**계획**<br><ul><li>[하드웨어 요구 사항](storage-spaces-direct-hardware-requirements.md)</li><li>[CSV 메모리 내 읽기 캐시 사용](csv-cache.md)</li><li>[드라이브 선택](choosing-drives.md)</li><li>[볼륨 계획](plan-volumes.md)</li><li>[게스트 VM 클러스터 사용](storage-spaces-direct-in-vm.md)</li><li>[재해 복구](storage-spaces-direct-disaster-recovery.md)</li>|
+|**배포**<br><ul><li>[스토리지 공간 다이렉트 배포](deploy-storage-spaces-direct.md)</li><li>[볼륨 만들기](create-volumes.md)</li><li>[중첩된 복원력](nested-resiliency.md)</li><li>[쿼럼 구성](../../failover-clustering/manage-cluster-quorum.md)</li><li>[스토리지 공간 다이렉트 클러스터를 Windows Server 2019로 업그레이드](upgrade-storage-spaces-direct-to-windows-server-2019.md)</li>|**관리**<br><ul><li>[Windows Admin Center를 통해 관리](../../manage/windows-admin-center/use/manage-hyper-converged.md)</li><li>[서버 또는 드라이브 추가](add-nodes.md)</li><li>[유지 관리를 위해 서버를 오프라인으로 전환](maintain-servers.md)</li><li>[서버 제거](remove-servers.md)</li><li>[볼륨 확장](resize-volumes.md)</li><li>[볼륨 삭제](delete-volumes.md)</li><li>[드라이브 펌웨어 업데이트](../update-firmware.md)</li><li>[성능 기록](performance-history.md)</li><li>[볼륨 할당 구분](delimit-volume-allocation.md)</li><li>[Azure Monitor를 사용 하 여 하이퍼 수렴 형 클러스터](configure-azure-monitor.md)</li>|
+|**문제 해결**<br><ul><li>[상태 및 작동 상태 문제 해결](storage-spaces-states.md)</li><li>[저장소 공간 다이렉트를 사용 하 여 진단 데이터 수집](data-collection.md)</li>|**최근 블로그 게시물**<br><ul><li>[저장소 공간 다이렉트를 사용 하 여 13.7 백만 IOPS: 하이퍼 수렴 형 인프라에 대 한 새 업계 레코드](https://blogs.technet.microsoft.com/filecab/2018/10/30/windows-server-2019-and-intel-optane-dc-persistent-memory/)</li><li>[Windows Server 2019-에서 하이퍼 수렴 형 인프라 대신 카운트다운 시계가 나타납니다 시작할 수 있습니다.](https://blogs.technet.microsoft.com/filecab/2018/10/02/hci-the-countdown-clock-starts-now/)</li><li>[Windows Server Summit의 빅 공지를 5 개](https://blogs.technet.microsoft.com/filecab/2018/06/27/windows-server-summit-recap)</li><li>[10,000 저장소 공간 다이렉트 클러스터 및 계산 하는 중...](https://blogs.technet.microsoft.com/filecab/2018/03/27/storage-spaces-direct-momentum/)</li>|
 
 ## <a name="videos"></a>비디오
 
 **빠른 비디오 개요 (5 분)**
 
-<iframe src="https://www.youtube-nocookie.com/embed/raeUiNtMk0E" width="560" height="315" allowfullscreen></iframe>
+> [!Video https://www.youtube-nocookie.com/embed/raeUiNtMk0E]
 
 **Microsoft Ignite 2018 (1 시간)에서 저장소 공간 다이렉트**
 
-[YouTube에서 시청](https://www.youtube.com/watch?v=5kaUiW3qo30)
+> [!Video https://www.youtube-nocookie.com/embed/5kaUiW3qo30]
 
 **Microsoft Ignite 2017 (1 시간)에서 저장소 공간 다이렉트**
 
-[YouTube에서 시청](https://www.youtube.com/watch?v=YDr2sqNB-3c)
+> [!Video https://www.youtube-nocookie.com/embed/YDr2sqNB-3c]
 
 **Microsoft Ignite 2016 (1 시간)에서 이벤트를 시작 합니다.**
 
-[YouTube에서 시청](https://www.youtube.com/watch?v=-LK2ViRGbWs)
+> [!Video https://www.youtube-nocookie.com/embed/LK2ViRGbWs]
 
 ## <a name="key-benefits"></a>주요 이점
 
-<table>
-    <tr style="border: 0;">
-        <td style="padding: 10px; border: 0; width:100px">
-            <img src="media/storage-spaces-direct-in-windows-server-2016/simplicity-icon.png" width="100" alt="">
-        </td>
-        <td style="padding: 10px; border: 0;">
-            <b>간단 합니다.</b> Windows Server 2016을 실행하는 업계 표준 서버에서 첫 번째 저장소 공간 다이렉트 클러스터로 15분 내에 이동합니다. System Center 사용자의 경우 확인란 하나만으로 배포됩니다.
-        </td>
-    </tr>
-    <tr style="border: 0;">
-        <td style="padding: 10px; border: 0; width:100px">
-            <img src="media/storage-spaces-direct-in-windows-server-2016/performance-icon.png" width="100" alt="">
-        </td>
-        <td style="padding: 10px; border: 0;">
-            <b>독보적인된 성능을 제공 합니다.</b> 전체 플래시 또는 하이브리드와 상관없이 저장소 공간 다이렉트는 하이퍼바이저 포함 아키텍처, 기본 제공되는 읽기/쓰기 캐시, PCIe 버스에 직접 탑재된 최첨단 NVMe 드라이브 지원 덕분에 일관되고 짧은 대기 시간과 함께 <a href="https://blogs.technet.microsoft.com/filecab/2016/07/26/storage-iops-update-with-storage-spaces-direct/">서버당 150,000 혼합 4k 임의 IOPS</a>를 쉽게 초과합니다.
-        </td>
-    </tr>
-    <tr style="border: 0;">
-        <td style="padding: 10px; border: 0; width:100px">
-            <img src="media/storage-spaces-direct-in-windows-server-2016/fault-tolerance-icon.png" width="100" alt="">
-        </td>
-        <td style="padding: 10px; border: 0;">
-            <b>내결함성입니다. </b> 기본 제공 복원 력 지속적인 가용성을 사용 하 여 드라이브, 서버 또는 구성 요소 오류를 처리합니다. 더 큰 규모의 배포에서도 <a href="../../failover-clustering/fault-domains.md">섀시 및 랙 내결함성</a>을 구성할 수 있습니다. 하드웨어 오류가 발생할 경우 교체하면 됩니다. 소프트웨어는 복잡한 관리 단계 없이 자체적으로 수정됩니다.
-        </td>
-    </tr>
-    <tr style="border: 0;">
-        <td style="padding: 10px; border: 0; width:100px">
-            <img src="media/storage-spaces-direct-in-windows-server-2016/efficiency-icon.png" width="100" alt="">
-        </td>
-        <td style="padding: 10px; border: 0;">
-            <b>리소스 효율성입니다.</b> 삭제 코딩(erasure coding)은 로컬 재구성 코드 및 ReFS 실시간 계층과 같은 고유한 혁신적인 기능으로 2.4배 이상의 저장소 효율성을 제공하여 이러한 이점을 하드 디스크 드라이브 및 혼합형 핫/콜드 워크로드로 확장하는 한편, CPU 사용을 최소화하여 가장 필요한 곳(VM)에 리소스를 돌려줍니다.
-        </td>
-    </tr>
-    <tr style="border: 0;">
-        <td style="padding: 10px; border: 0; width:100px">
-            <img src="media/storage-spaces-direct-in-windows-server-2016/manageability-icon.png" width="100" alt="">
-        </td>
-        <td style="padding: 10px; border: 0;">
-            <b>관리 효율성입니다.</b> <a href="../storage-qos/storage-qos-overview.md">저장소 QoS 컨트롤</a>을 사용하여, 과부하 상태의 VM에서 VM당 최소 및 최대 IOPS 제한을 지속적으로 확인합니다. <a href="../../failover-clustering/health-service-overview.md">상태 관리 서비스</a>는 기본 제공 연속 모니터링 및 경고를 제공하며, 새로운 API를 사용하면 클러스터 전체의 풍부한 성능 및 용량 메트릭을 수집할 수 있습니다.
-        </td>
-    </tr>
-    <tr style="border: 0;">
-        <td style="padding: 10px; border: 0; width:100px">
-            <img src="media/storage-spaces-direct-in-windows-server-2016/scalability-icon.png" width="100" alt="">
-        </td>
-        <td style="padding: 10px; border: 0;">
-            <b>확장성입니다.</b> 클러스터당 최대 16대의 서버 및 400개가 넘는 드라이브로 최대 1페타바이트(1,000테라바이트)의 저장소를 구성할 수 있습니다.  규모를 확장하려면 드라이브와 서버를 추가하기만 하면 됩니다. 저장소 공간 다이렉트가 자동으로 새 드라이브를 인식하여 사용하기 시작합니다. 규모에 따라 저장소 효율성과 성능이 예측 가능한 방식으로 개선됩니다.
-        </td>
-    </tr>
-</table>
+|       |       |
+|   -   |   -   |
+|![단순함](media/storage-spaces-direct-in-windows-server-2016/simplicity-icon.png)   |**간단 합니다.** Windows Server 2016을 실행하는 업계 표준 서버에서 첫 번째 저장소 공간 다이렉트 클러스터로 15분 내에 이동합니다. System Center 사용자의 경우 확인란 하나만으로 배포됩니다.       |
+|![독보적인된 성능을 제공](media/storage-spaces-direct-in-windows-server-2016/performance-icon.png)   | **독보적인된 성능을 제공 합니다.** 전체 플래시 또는 하이브리드와 상관없이 저장소 공간 다이렉트는 하이퍼바이저 포함 아키텍처, 기본 제공되는 읽기/쓰기 캐시, PCIe 버스에 직접 탑재된 최첨단 NVMe 드라이브 지원 덕분에 일관되고 짧은 대기 시간과 함께 [서버당 150,000 혼합 4k 임의 IOPS](https://blogs.technet.microsoft.com/filecab/2016/07/26/storage-iops-update-with-storage-spaces-direct/)를 쉽게 초과합니다.      |
+|![내결함성](media/storage-spaces-direct-in-windows-server-2016/fault-tolerance-icon.png)   |**내결함성입니다.** 지속적인 가용성과 함께 기본 제공 복원력이 드라이브, 서버 또는 구성 요소 오류를 처리합니다. 더 큰 규모의 배포에서도 [섀시 및 랙 내결함성](../../failover-clustering/fault-domains.md)을 구성할 수 있습니다. 하드웨어 오류가 발생할 경우 교체하면 됩니다. 소프트웨어는 복잡한 관리 단계 없이 자체적으로 수정됩니다.       |
+|![리소스 효율성](media/storage-spaces-direct-in-windows-server-2016/efficiency-icon.png)   |**리소스 효율성입니다.** 삭제 코딩(erasure coding)은 로컬 재구성 코드 및 ReFS 실시간 계층과 같은 고유한 혁신적인 기능으로 2.4배 이상의 저장소 효율성을 제공하여 이러한 이점을 하드 디스크 드라이브 및 혼합형 핫/콜드 워크로드로 확장하는 한편, CPU 사용을 최소화하여 가장 필요한 곳(VM)에 리소스를 돌려줍니다.       |
+|![관리 효율성](media/storage-spaces-direct-in-windows-server-2016/manageability-icon.png)   | **관리 효율성**합니다. [저장소 QoS 컨트롤](../storage-qos/storage-qos-overview.md)을 사용하여, 과부하 상태의 VM에서 VM당 최소 및 최대 IOPS 제한을 지속적으로 확인합니다. [상태 관리 서비스](../../failover-clustering/health-service-overview.md)는 기본 제공 연속 모니터링 및 경고를 제공하며, 새로운 API를 사용하면 클러스터 전체의 풍부한 성능 및 용량 메트릭을 수집할 수 있습니다.      |
+|![확장성](media/storage-spaces-direct-in-windows-server-2016/scalability-icon.png)   |**확장성**- 클러스터당 최대 16대의 서버 및 400개가 넘는 드라이브로 최대 1페타바이트(1,000테라바이트)의 저장소를 구성할 수 있습니다.  규모를 확장하려면 드라이브와 서버를 추가하기만 하면 됩니다. 저장소 공간 다이렉트가 자동으로 새 드라이브를 인식하여 사용하기 시작합니다. 규모에 따라 저장소 효율성과 성능이 예측 가능한 방식으로 개선됩니다.       |
 
 ## <a name="deployment-options"></a>배포 옵션
 
@@ -227,7 +123,7 @@ Windows Server 2019 Datacenter, Windows Server 2016 데이터 센터에에서 �
 | [Windows Admin Center](../../manage/windows-admin-center/overview.md)     | 그래픽    | 포함 |
 | 서버 관리자 및 장애 조치 클러스터 관리자                                 | 그래픽    | 포함 |
 | Windows PowerShell                                                        | 명령줄 | 포함 |
-| [System Center Virtual Machine Manager (SCVMM)](https://technet.microsoft.com/system-center-docs/vmm/manage/manage-storage-spaces-direct-vmm) & [Operations Manager (SCOM)](https://www.microsoft.com/download/details.aspx?id=54700) | 그래픽    | 유료     |
+| [System Center Virtual Machine Manager (SCVMM)](https://technet.microsoft.com/system-center-docs/vmm/manage/manage-storage-spaces-direct-vmm) <br>& [Operations Manager (SCOM)](https://www.microsoft.com/download/details.aspx?id=54700) | 그래픽    | 유료     |
 
 ## <a name="get-started"></a>시작
 
@@ -235,10 +131,10 @@ Windows Server 2019 Datacenter, Windows Server 2016 데이터 센터에에서 �
 
 ## <a name="see-also"></a>참조
 
--   [오류 허용 하 고 저장소 효율성](storage-spaces-fault-tolerance.md)
--   [저장소 복제본](../storage-replica/storage-replica-overview.md)
--   [Microsoft 블로그 저장소](https://blogs.technet.microsoft.com/filecab/)
--   [Storage Spaces Direct throughput with iWARP(iWARP 이용 시 저장소 공간 다이렉트의 처리량)](https://blogs.technet.microsoft.com/filecab/2017/03/13/storage-spaces-direct-throughput-with-iwarp)(TechNet 블로그)
--   [Windows Server에서 장애 조치 클러스터링의 새로운 기능](../../failover-clustering/whats-new-in-failover-clustering.md)  
--   [저장소 서비스 품질](../storage-qos/storage-qos-overview.md)
--   [Windows IT Pro 지원](https://www.microsoft.com/itpro/windows/support)
+- [내결함성 및 스토리지 효율성](storage-spaces-fault-tolerance.md)
+- [스토리지 복제본](../storage-replica/storage-replica-overview.md)
+- [Microsoft 블로그 저장소](https://blogs.technet.microsoft.com/filecab/)
+- [Storage Spaces Direct throughput with iWARP(iWARP 이용 시 저장소 공간 다이렉트의 처리량)](https://blogs.technet.microsoft.com/filecab/2017/03/13/storage-spaces-direct-throughput-with-iwarp)(TechNet 블로그)
+- [Windows Server에서 장애 조치 클러스터링의 새로운 기능](../../failover-clustering/whats-new-in-failover-clustering.md)  
+- [저장소 서비스 품질](../storage-qos/storage-qos-overview.md)
+- [Windows IT Pro 지원](https://www.microsoft.com/itpro/windows/support)

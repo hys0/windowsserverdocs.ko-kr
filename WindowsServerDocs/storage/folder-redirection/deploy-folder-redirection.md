@@ -8,23 +8,23 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 07/09/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 33942db34314e0ff60b24d4b9c8e5e33b4ca92fd
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2bb15d5ae29da6c9dbcd6b58af280026d06febc8
+ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59831574"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66222743"
 ---
 # <a name="deploy-folder-redirection-with-offline-files"></a>오프 라인 파일을 사용 하 여 폴더 리디렉션 배포
 
->적용 대상: Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Vista
+>적용 대상: Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Vista, Windows Server 2019, Windows Server 2016, Windows Server (반기 채널), Windows Server 2012, Windows Server 2012 R2, Windows Server 2008 R2
 
 이 항목에서는 Windows Server 폴더 리디렉션 오프 라인 파일을 사용 하 여 Windows 클라이언트 컴퓨터에 배포를 사용 하는 방법을 설명 합니다.
 
 이 항목에서는 최신 변경 내용 목록을 참조 하세요. [변경 내용](#change-history)합니다.
 
 >[!IMPORTANT]
->보안 변경 내용으로 인해 [MS16 072](https://support.microsoft.com/en-us/help/3163622/ms16-072-security-update-for-group-policy-june-14-2016)를 업데이트 했습니다 [3 단계: 폴더 리디렉션에 대 한 GPO를 만들어](#step-3:-create-a-gpo-for-folder-redirection) 해당 Windows 고 수 있도록 제대로 폴더 리디렉션 정책 적용 (영향을 받는 Pc에서 리디렉션된 폴더를 전환 되지 않고)이이 항목의 합니다.
+>보안 변경 내용으로 인해 [MS16 072](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14-2016)를 업데이트 했습니다 [3 단계: 폴더 리디렉션에 대 한 GPO를 만들어](#step-3-create-a-gpo-for-folder-redirection) 해당 Windows 고 수 있도록 제대로 폴더 리디렉션 정책 적용 (영향을 받는 Pc에서 리디렉션된 폴더를 전환 되지 않고)이이 항목의 합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -37,7 +37,7 @@ ms.locfileid: "59831574"
 폴더 리디렉션에 다음 소프트웨어 요구 사항:
 
 - 폴더 리디렉션을 관리 하려면 Domain Administrators 보안 그룹, Enterprise Administrators 보안 그룹 또는 Group Policy Creator Owners 보안 그룹의 구성원으로 로그인 해야 합니다.
-- 클라이언트 컴퓨터는 Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 또는 Windows Server 2008 실행 해야 합니다.
+- 클라이언트 컴퓨터는 Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server (반기 채널), Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 또는 Windows Server 2008 실행 해야 합니다.
 - 현재 관리 중인 AD DS(Active Directory 도메인 서비스)에 클라이언트 컴퓨터가 가입되어 있어야 합니다.
 - 그룹 정책 관리 및 설치된 Active Directory 관리 센터에서 컴퓨터를 사용할 수 있어야 합니다.
 - 파일 서버는 리디렉션된 폴더를 호스트에 사용할 수 있어야 합니다.
@@ -70,13 +70,13 @@ ms.locfileid: "59831574"
 >[!NOTE]
 >다른 버전의 Windows Server를 실행하는 서버에서 파일 공유를 만드는 경우 일부 기능이 다르거나 사용하지 못할 수도 있습니다.
 
-Windows Server 2012 및 Windows Server 2016에서 파일 공유를 만드는 방법에는 다음과 같습니다.
+Windows Server 2019, Windows Server 2016 및 Windows Server 2012에서 파일 공유를 만드는 방법에는 다음과 같습니다.
 
 1. 서버 관리자 탐색 창에서 선택 **File and Storage Services**를 선택한 후 **공유** 공유 페이지를 표시 합니다.
 2. 에 **공유** 타일을 선택 **태스크**를 선택한 후 **새 공유**합니다. 새 공유 마법사가 나타납니다.
 3. 에 **프로필 선택** 페이지에서 선택 **SMB 공유 – 빠르게**합니다. 파일 서버 리소스 관리자가 설치 되어 있고 폴더 관리 속성을 사용 하는 경우 대신 선택할 **SMB 공유-고급**합니다.
 4. **공유 위치** 페이지에서 공유를 만들 서버 및 볼륨을 선택합니다.
-5. 에 **공유 이름** 페이지, 공유에 대 한 이름을 입력 (예를 들어 **사용자 $**)에 **공유 이름** 상자입니다.
+5. 에 **공유 이름** 페이지, 공유에 대 한 이름을 입력 (예를 들어 **사용자 $** )에 **공유 이름** 상자입니다.
     >[!TIP]
     >공유를 만들 때 공유 이름 뒤에 ```$``` 를 붙여 공유를 숨깁니다. 이렇게 하면 일반 브라우저에서 공유가 숨겨집니다.
 6. 에 **기타 설정** 페이지에서 있는 경우 사용 지속적인 가용성 확인란의 선택을 취소 하 고 필요에 따라 선택 합니다 **액세스 기반 열거 사용** 및 **데이터액세스암호화** 확인란입니다.
@@ -93,50 +93,15 @@ Windows Server 2012 및 Windows Server 2016에서 파일 공유를 만드는 방
 
 ### <a name="required-permissions-for-the-file-share-hosting-redirected-folders"></a>파일에 필요한 권한을 공유 호스팅 리디렉션된 폴더
 
-<table>
-<tbody>
-<tr class="odd">
-<td>사용자 계정</td>
-<td>액세스 권한</td>
-<td>적용 대상</td>
-</tr>
-<tr class="even">
-<td>시스템</td>
-<td>모든 권한</td>
-<td>이 폴더, 하위 폴더 및 파일</td>
-</tr>
-<tr class="odd">
-<td>Administrators</td>
-<td>모든 권한</td>
-<td>이 폴더만</td>
-</tr>
-<tr class="even">
-<td>만든 이/소유자</td>
-<td>모든 권한</td>
-<td>하위 폴더 및 파일만</td>
-</tr>
-<tr class="odd">
-<td>공유 (폴더 리디렉션 사용자)에 데이터를 저장 해야 하는 사용자의 보안 그룹</td>
-<td>폴더 나열/데이터 읽기<sup>1</sup><br />
-<br />
-폴더 만들기/데이터 추가<sup>1</sup><br />
-<br />
-특성을 읽을<sup>1</sup><br />
-<br />
-확장 특성 읽기<sup>1</sup><br />
-<br />
-읽기 권한이<sup>1</sup></td>
-<td>이 폴더만</td>
-</tr>
-<tr class="even">
-<td>다른 그룹 및 계정</td>
-<td>없음(제거)</td>
-<td></td>
-</tr>
-</tbody>
-</table>
 
-1 고급 권한
+|사용자 계정  |액세스 권한  |적용 대상  |
+|---------|---------|---------|
+| 사용자 계정 | 액세스 권한 | 적용 대상 |
+|시스템     | 모든 권한        |    이 폴더, 하위 폴더 및 파일     |
+|Administrators     | 모든 권한       | 이 폴더만        |
+|만든 이/소유자     |   모든 권한      |   하위 폴더 및 파일만      |
+|공유 (폴더 리디렉션 사용자)에 데이터를 저장 해야 하는 사용자의 보안 그룹     |   폴더 나열 / 데이터 읽기 *(고급 권한)* <br /><br />폴더 만들기 / 데이터 추가 *(고급 권한)* <br /><br />특성을 읽을 *(고급 권한)* <br /><br />확장 특성 읽기 *(고급 권한)* <br /><br />읽기 권한이 *(고급 권한)*      |  이 폴더만       |
+|다른 그룹 및 계정     |  없음(제거)       |         |
 
 ## <a name="step-3-create-a-gpo-for-folder-redirection"></a>3단계: 폴더 리디렉션에 대 한 GPO 만들기
 
@@ -225,9 +190,9 @@ Windows Server 2012 및 Windows Server 2016에서 파일 공유를 만드는 방
 
 다음 표에는 이 항목의 중요한 최근 변경 내용이 요약되어 있습니다.
 
-|Date|설명|이유|
+|Date|설명|Reason|
 |---|---|---|
-|2017 년 1 월 18 일|추가 하는 단계 [3 단계: 폴더 리디렉션에 대 한 GPO를 만들어](#step-3:-create-a-gpo-for-folder-redirection) 현재 인증 된 사용자에 게 읽기 권한을 위임 하려면 그룹 정책 보안 업데이트로 인해 필요 합니다.|고객 의견|
+|2017 년 1 월 18 일|추가 하는 단계 [3 단계: 폴더 리디렉션에 대 한 GPO를 만들어](#step-3-create-a-gpo-for-folder-redirection) 현재 인증 된 사용자에 게 읽기 권한을 위임 하려면 그룹 정책 보안 업데이트로 인해 필요 합니다.|고객 의견|
 
 ## <a name="more-information"></a>자세한 정보
 

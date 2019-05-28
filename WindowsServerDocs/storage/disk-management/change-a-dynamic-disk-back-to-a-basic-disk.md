@@ -8,12 +8,12 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: d018b417aeba21e2b1303fd9e72b58b4e2fc334f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e7655ca78868d40d354b5260fa99fcfa3a21d0de
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59836054"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192752"
 ---
 # <a name="change-a-dynamic-disk-back-to-a-basic-disk"></a>동적 디스크를 기본 디스크로 변경
 
@@ -26,22 +26,20 @@ ms.locfileid: "59836054"
 
 ## <a name="changing-a-dynamic-disk-back-to-a-basic-disk"></a>동적 디스크를 기본 디스크로 변경
 
--   [Windows 인터페이스를 사용 하 여](#BKMK_WINUI)
--   [명령줄을 사용 하 여](#BKMK_CMD)
+-   [Windows 인터페이스를 사용 하 여](#to-change-a-dynamic-disk-back-to-a-basic-disk-using-the-windows-interface)
+-   [명령줄을 사용 하 여](#to-change-a-dynamic-disk-back-to-a-basic-disk-using-a-command-line)
 
 > [!NOTE]
 > **Backup Operators** 또는 **Administrators** 그룹의 구성원이어야 이 단계를 완료할 수 있습니다.
 
-<a href="" id="BKMK_WINUI"></a>
 #### <a name="to-change-a-dynamic-disk-back-to-a-basic-disk-using-the-windows-interface"></a>Windows 인터페이스를 사용하여 동적 디스크를 기본 디스크로 변경
+
 1.  동적에서 기본으로 변환하고자 하는 디스크의 모든 볼륨을 백업합니다.
 
 2.  디스크 관리에서 기본 디스크로 변환하고자 하는 동적 디스크에서 각 볼륨을 마우스 오른쪽 단추로 클릭한 다음 디스크의 각 볼륨에 대하여 **볼륨 삭제**를 클릭합니다.
 
 3.  디스크의 모든 볼륨이 삭제되었을 경우 디스크를 마우스 오른쪽 단추로 클릭한 다음 **기본 디스크로 변환**을 클릭합니다.
 
-
-<a href="" id="BKMK_CMD"></a>
 #### <a name="to-change-a-dynamic-disk-back-to-a-basic-disk-using-a-command-line"></a>명령줄을 사용하여 동적 디스크를 기본 디스크로 변경
 
 1.  동적에서 기본으로 변환하고자 하는 디스크의 모든 볼륨을 백업합니다.

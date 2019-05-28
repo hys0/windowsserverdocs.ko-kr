@@ -8,12 +8,12 @@ ms.author: jeffpatt
 author: JeffPatt24
 ms.date: 4/5/2017
 ms.assetid: f168292b-0dbc-44b9-965f-d480e5134a0c
-ms.openlocfilehash: fa8b2b15ff411a59b28308a329d7ca2341ef0886
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4b2c771a83824318f889c955f6194bcb062761f3
+ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59871944"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65976805"
 ---
 # <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-5-set-up-clients"></a>AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 5 단계 설정 클라이언트
 
@@ -79,7 +79,7 @@ ms.locfileid: "59871944"
   
 2.  **클라우드 폴더 설정**을 클릭합니다.  
   
-3.  에 **회사 전자 메일 주소를 입력** 페이지에서 사용자의 전자 메일 주소를 입력 (예를 들어 user@contoso.com) 또는 클라우드 폴더 URL (테스트 예에서 https://workfolders.contoso.com), 클릭 하 고 **다음**합니다.  
+3.  에 **회사 메일 주소를 입력** 페이지에서 사용자의 전자 메일 주소를 입력 (예를 들어 user@contoso.com) 또는 클라우드 폴더 URL (테스트 예제에서는 https:\//workfolders.contoso.com), 를클릭하고 **다음**합니다.  
   
 4.  사용자가 회사 네트워크에 연결된 경우 Windows 통합 인증을 통해 인증이 수행됩니다. 사용자가 회사 네트워크에 연결되지 않은 경우 ADFS(OAuth)를 통해 인증이 수행되고 사용자는 자격 증명을 입력해야 합니다. 자격 증명을 입력하고 **확인**을 클릭합니다.  
   

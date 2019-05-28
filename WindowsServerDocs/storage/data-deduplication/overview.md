@@ -8,23 +8,23 @@ author: wmgries
 manager: klaasl
 ms.author: wgries
 ms.date: 05/09/2017
-ms.openlocfilehash: 4344108f96d14475c15a31bd1ab917e7fc78ef9f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4376dbb2c172a82c4ab64dc63acefbc37457110f
+ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59860134"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65476038"
 ---
 # <a name="data-deduplication-overview"></a>데이터 중복 제거 개요
 
-> 적용 대상: Windows Server (반기 채널), Windows Server 2016
+> 적용 대상: Windows Server 2019, Windows Server 2016, Windows Server (반기 채널) 
 
 ## <a name="what-is-dedup"></a>데이터 중복 제거란 무엇입니까?
 
-데이터 중복 제거는 저장소 비용에 대한 중복 데이터의 영향을 줄이도록 도와주는 Windows Server 2016의 기능입니다. 사용하도록 설정된 경우 데이터 중복 제거는 볼륨에서 중복된 부분을 찾기 위해 볼륨의 데이터를 검사하여 볼륨의 여유 공간을 최적화합니다. 볼륨의 데이터 집합에서 중복된 부분이 한 번 저장되며 필요한 경우 추가적인 절약을 위해 압축됩니다. 데이터 중복 제거는 데이터 충실도 또는 무결성을 손상시키지 않고 중복성을 최적화합니다. 데이터 중복 제거 작동 방식에 대한 자세한 내용은 '[데이터 중복 제거 작동 방식](understand.md#how-does-dedup-work)' 섹션([데이터 중복 제거 이해](understand.md) 페이지)에서 확인할 수 있습니다.
+데이터 중복 제거를 줄여서 중복 제거 라고도 기능은 중복 데이터 저장소 비용의 영향을 줄일 수 있습니다. 사용하도록 설정된 경우 데이터 중복 제거는 볼륨에서 중복된 부분을 찾기 위해 볼륨의 데이터를 검사하여 볼륨의 여유 공간을 최적화합니다. 볼륨의 데이터 집합에서 중복된 부분이 한 번 저장되며 필요한 경우 추가적인 절약을 위해 압축됩니다. 데이터 중복 제거는 데이터 충실도 또는 무결성을 손상시키지 않고 중복성을 최적화합니다. 데이터 중복 제거 작동 방식에 대한 자세한 내용은 '[데이터 중복 제거 작동 방식](understand.md#how-does-dedup-work)' 섹션([데이터 중복 제거 이해](understand.md) 페이지)에서 확인할 수 있습니다.
 
 > [!Important]  
-> [KB4025334](https://support.microsoft.com/kb/4025334)에는 중요한 안정성 문제 해결을 포함하여 데이터 중복 제거에 대한 수정 사항 롤업이 포함되어 있으므로 Windows Server 2016에서 데이터 중복 제거를 사용할 때 이 업데이트를 설치하는 것이 좋습니다.
+> [KB4025334](https://support.microsoft.com/kb/4025334) 롤포워드를 포함 합니다. 중요 한 안정성을 포함 하 여 데이터 중복 제거에 대 한 수정 프로그램의 최대 수정 사항, 및 Windows Server 2016 및 Windows Server 2019를 사용 하 여 데이터 중복 제거를 사용 하는 경우 설치는 것이 좋습니다.
 
 ## <a name="why-is-dedup-useful"></a>데이터 중복 제거 유용한 이유는 무엇입니까?
 
@@ -53,7 +53,7 @@ ms.locfileid: "59860134"
 일반용 파일 서버는 일반적으로 다음과 같은 유형의 공유를 포함할 수 있는 범용 파일 서버입니다. <ul>
                     <li>팀 공유</li>
                     <li>사용자 홈 폴더</li>
-                    <li><a href="https://technet.microsoft.com/library/dn265974.aspx">작업 폴더</a></li>
+                    <li><a href="https://technet.microsoft.com/library/dn265974.aspx">클라우드 폴더</a></li>
                     <li>소프트웨어 개발 공유</li>
                 </ul>
 일반용 파일 서버는 여러 사용자가 같은 파일의 여러 복사본 또는 버전을 가지고 있는 경향이 많기 때문에 데이터 중복 제거에 적합한 대상입니다. 소프트웨어 개발 공유는 많은 이진 파일이 빌드 간에 기본적으로 변경되지 않은 상태로 유지되기 때문에 데이터 중복 제거의 이점을 활용할 수 있습니다. 

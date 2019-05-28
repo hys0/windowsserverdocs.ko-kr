@@ -8,18 +8,21 @@ author: wmgries
 manager: klaasl
 ms.author: wgries
 ms.date: 09/16/2016
-ms.openlocfilehash: 2a28be1bdd22915182cbdbb2726ab9d37422e889
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9453811b0f76b249c245990293ba82cf5a6e0867
+ms.sourcegitcommit: 29ad32b9dea298a7fe81dcc33d2a42d383018e82
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59834434"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65624635"
 ---
 # <a name="data-deduplication-interoperability"></a>데이터 중복 제거 상호 운용성
 
-> 적용 대상: Windows Server (반기 채널), Windows Server 2016
+> 적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2019
 
 ## <a id="supported"></a>지원
+
+### <a id="supported-ReFS"></a>ReFS
+데이터 중복 제거는 Windows Server 2019부터 지원 됩니다. 
 
 ### <a id="supported-clusters"></a>장애 조치 클러스터링
 
@@ -76,8 +79,6 @@ Windows Server 백업에서는 최적화된 볼륨을 있는 그대로(즉, 중�
     ```
 
 ## <a id="unsupported"></a>지원 되지 않는
-### <a id="unsupported-refs"></a>ReFS
-Windows Server 2016에서는 ReFS로 포맷된 볼륨의 데이터 중복 제거가 지원되지 않습니다. [Windows Server vNext에 이 항목이 포함되도록 Windows Server Storage UserVoice에서 투표하실 수 있습니다](https://windowsserver.uservoice.com/forums/295056-storage/suggestions/7962813-support-deduplication-on-refs).
 
 ### <a id="unsupported-windows-client"></a>Windows 10 (클라이언트 OS)
 Windows 10에서는 데이터 중복 제거가 지원되지 않습니다. Windows Server 2016에서 해당 이진 파일을 분리하여 Windows 10에 설치하는 방법을 설명하는 몇몇 블로그 포스트가 Windows 커뮤니티에서 널리 읽히고 있으나 이러한 시나리오는 데이터 중복 제거 개발 과정에서 검증된 적이 없습니다. [Windows 10 vNext에 이 항목이 포함되도록 Windows Server Storage UserVoice에서 투표하실 수 있습니다](https://windowsserver.uservoice.com/forums/295056-storage/suggestions/9011008-add-deduplication-support-to-client-os).

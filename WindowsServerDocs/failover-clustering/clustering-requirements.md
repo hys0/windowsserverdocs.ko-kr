@@ -8,21 +8,21 @@ ms.author: jgerend
 ms.technology: storage-failover-clustering
 ms.date: 04/26/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 4706372b06d0554196b692c3ddcda145dee5bae5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e6eb6f2acd420ae657a5c1b698e9733751378552
+ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59848174"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65476076"
 ---
 # <a name="failover-clustering-hardware-requirements-and-storage-options"></a>장애 조치 클러스터링 하드웨어 요구 사항 및 저장소 옵션
 
-적용 대상: Windows Server 2012 R2, Windows Server 2012, Windows Server 2016
+적용 대상: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 장애 조치 클러스터를 만들려면 다음 하드웨어가 필요합니다. Microsoft의 지원을 받으려면 모든 하드웨어가 현재 실행 중인 Windows Server 버전에 대해 인증되어야 하며 완전한 장애 조치(failover) 클러스터 솔루션이 구성 유효성 검사 마법사의 모든 테스트를 통과해야 합니다. 장애 조치(Failover) 클러스터 유효성 검사에 대한 자세한 내용은 [Validate Hardware for a Failover Cluster](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134244(v%3dws.11)>)를 참조하세요.
 
 - **서버**: 동일하거나 유사한 구성 요소가 포함된 하나의 일치하는 컴퓨터 집합을 사용하는 것이 좋습니다.
-- **네트워크 어댑터 및 케이블(네트워크 통신용)**: iSCSI를 사용하는 경우 각 네트워크 어댑터는 네트워크 통신 전용이나 iSCSI 전용 중 하나여야 합니다.
+- **네트워크 어댑터 및 케이블(네트워크 통신용)** : iSCSI를 사용하는 경우 각 네트워크 어댑터는 네트워크 통신 전용이나 iSCSI 전용 중 하나여야 합니다.
 
     클러스터 노드를 연결하는 네트워크 인프라에는 단일 실패 지점이 없도록 해야 합니다. 예를 들면 여러 개별 네트워크를 사용하여 클러스터 노드를 연결할 수 있습니다. 또는 팀으로 구성 된 네트워크 어댑터, 중복 스위치, 중복 라우터 또는 단일 실패 지점을 제거 하는 유사한 하드웨어를 사용 하 여 생성 된 하나의 네트워크를 사용 하 여 클러스터 노드를 연결할 수 있습니다.
 
@@ -73,6 +73,6 @@ Hyper-V 역할에 대한 자세한 내용은 [Hyper-V 개요](<https://docs.micr
 
 ## <a name="more-information"></a>자세한 정보
 
-- [장애 조치 클러스터링](failover-clustering.md)
-- [저장소 공간](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831739(v%3dws.11)>)
+- [장애 조치(failover) 클러스터링](failover-clustering.md)
+- [스토리지 공간](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831739(v%3dws.11)>)
 - [고가용성을 위한 게스트 클러스터링을 사용 하 여](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn440540(v%3dws.11)>)

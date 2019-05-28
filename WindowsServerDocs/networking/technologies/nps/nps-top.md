@@ -9,12 +9,12 @@ ms.assetid: 9c7a67e0-0953-479c-8736-ccb356230bde
 ms.author: pashort
 author: shortpatti
 ms.date: 06/20/2018
-ms.openlocfilehash: c76483031bdca184e0943738a8c921776440d1fc
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 0439c0f45a604f6b3ef90369f5fe77a59568d9d7
+ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59829034"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66222583"
 ---
 # <a name="network-policy-server-nps"></a>NPS(네트워크 정책 서버)
 
@@ -39,10 +39,10 @@ ms.locfileid: "59829034"
 
 NPS를 사용 하면 중앙에서 구성 하 고 네트워크 액세스 인증, 권한 부여 및 다음 기능을 통해 계정을 관리할 수 있습니다.
 
-- **RADIUS 서버**합니다. NPS 중앙 집중식된 인증, 권한 부여 및 계정에 대해 수행 무선 스위치, 원격 액세스 전화 접속 및 가상 사설망 (VPN) 연결을 인증 합니다. NPS를 RADIUS 서버로 사용할 경우 무선 액세스 지점 및 VPN 서버와 같은 네트워크 액세스 서버를 NPS에서 RADIUS 클라이언트로 구성할 수 있습니다. 또한 NPS가 연결 요청에 권한을 부여하는 데 사용하는 네트워크 정책을 구성하고, NPS가 로컬 하드 디스크의 로그 파일이나 Microsoft SQL Server 데이터베이스에 계정 정보를 기록하도록 RADIUS 계정을 구성할 수 있습니다. 자세한 내용은 [RADIUS 서버](#bkmk_server)합니다.
-- **RADIUS 프록시**합니다. RADIUS 프록시로 NPS를 사용 하는 경우 NPS 연결 요청을 전달 하려는 RADIUS 서버를 다른 RADIUS 서버로 전달 하는 연결 요청을 알리는 연결 요청 정책을 구성 합니다. 또한 원격 RADIUS 서버 그룹에 있는 하나 이상의 컴퓨터에서 기록할 계정 데이터를 전달하도록 NPS를 구성할 수도 있습니다. NPS를 RADIUS 프록시 서버를 구성 하려면 다음 항목을 참조 합니다. 자세한 내용은 [RADIUS 프록시](#bkmk_proxy)합니다.
+- **RADIUS 서버**합니다. NPS 중앙 집중식된 인증, 권한 부여 및 계정에 대해 수행 무선 스위치, 원격 액세스 전화 접속 및 가상 사설망 (VPN) 연결을 인증 합니다. NPS를 RADIUS 서버로 사용할 경우 무선 액세스 지점 및 VPN 서버와 같은 네트워크 액세스 서버를 NPS에서 RADIUS 클라이언트로 구성할 수 있습니다. 또한 NPS가 연결 요청에 권한을 부여하는 데 사용하는 네트워크 정책을 구성하고, NPS가 로컬 하드 디스크의 로그 파일이나 Microsoft SQL Server 데이터베이스에 계정 정보를 기록하도록 RADIUS 계정을 구성할 수 있습니다. 자세한 내용은 [RADIUS 서버](#radius-server)합니다.
+- **RADIUS 프록시**합니다. RADIUS 프록시로 NPS를 사용 하는 경우 NPS 연결 요청을 전달 하려는 RADIUS 서버를 다른 RADIUS 서버로 전달 하는 연결 요청을 알리는 연결 요청 정책을 구성 합니다. 또한 원격 RADIUS 서버 그룹에 있는 하나 이상의 컴퓨터에서 기록할 계정 데이터를 전달하도록 NPS를 구성할 수도 있습니다. NPS를 RADIUS 프록시 서버를 구성 하려면 다음 항목을 참조 합니다. 자세한 내용은 [RADIUS 프록시](#radius-proxy)합니다.
     - [연결 요청 정책 구성](nps-crp-configure.md)
-- **RADIUS 계정**합니다. 로컬 로그 파일 또는 Microsoft SQL Server의 로컬 또는 원격 인스턴스에 이벤트를 기록 하는 NPS를 구성할 수 있습니다. 자세한 내용은 [NPS 로깅](#bkmk_logging)합니다.
+- **RADIUS 계정**합니다. 로컬 로그 파일 또는 Microsoft SQL Server의 로컬 또는 원격 인스턴스에 이벤트를 기록 하는 NPS를 구성할 수 있습니다. 자세한 내용은 [NPS 로깅](#nps-logging)합니다.
 
 >[!IMPORTANT]
 >네트워크 액세스 보호 \(NAP\), 상태 등록 기관 \(HRA\), 및 호스트 자격 인증 프로토콜 \(HCAP\) Windows Server 2012 R2에서 사용 되지 않는 및를 Windows Server 2016에서 사용할 수 없습니다. Windows Server 2016 이전의 운영 체제를 사용 하 여 NAP 배포를 사용 하는 경우에 Windows Server 2016으로 NAP 배포를 마이그레이션할 수 없습니다.
@@ -66,7 +66,7 @@ Windows Server 2016 Standard 또는 Datacenter에 NPS를 사용 하 여 RADIUS �
 
 NPS를 RADIUS 서버로, RADIUS 프록시 또는 둘 다로 사용할 수 있습니다.
 
-### <a name="bkmk_server"></a>RADIUS 서버
+### <a name="radius-server"></a>RADIUS 서버
 
 NPS는 Microsoft에서 구현한 RADIUS 표준 Internet Engineering Task Force에서 지정한 \(IETF\) Rfc 2865 및 2866에에서 있습니다. RADIUS 서버로 NPS에서 중앙 집중식된 연결 인증, 권한 부여 및 계정에 대 한 다양 한 유형의 네트워크 액세스, 무선, 인증 스위치를 포함 하 여 전화 접속 및 가상 사설망 \(VPN\) 원격 액세스 및 라우터 연결 합니다.
 
@@ -97,7 +97,7 @@ NPS를 RADIUS 서버로 사용할 수 있습니다 때:
 
 ![NPS를 RADIUS 서버로](../../media/Nps-Server/Nps-Server.jpg)
 
-### <a name="bkmk_proxy"></a>RADIUS 프록시
+### <a name="radius-proxy"></a>RADIUS 프록시
 
 RADIUS 프록시로 NPS NPS 및 다른 RADIUS 서버에 인증 및 계정 메시지 전달합니다. RADIUS 클라이언트 간의 메시지 반지름의 라우팅을 제공 하기를 RADIUS 프록시로 NPS 사용할 수 있습니다 \(네트워크 액세스 서버 라고도\) 및 사용자 인증, 권한 부여 및 계정에 대해 수행 하는 RADIUS 서버는 연결 시도 합니다. 
 
@@ -183,7 +183,7 @@ NPS를 RADIUS 프록시로 구성 하려면 RADIUS 클라이언트, 원격 RADIU
 - [원격 RADIUS 서버 그룹 구성](nps-crp-rrsg-configure.md)
 - [연결 요청 정책 구성](nps-crp-configure.md)
 
-## <a name="bkmk_logging"></a>NPS 로깅
+## <a name="nps-logging"></a>NPS 로깅
 
 NPS 로깅 RADIUS 계정을 라고도 합니다. NPS를 RADIUS 서버로, 프록시 또는 이러한 구성은 조합으로 사용 되는지 여부를 NPS 로깅 요구 사항에 맞게 구성 합니다.
 

@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: lizapo
 ms.date: 10/16/2017
-ms.openlocfilehash: 26aad48db4a5f0a593dfcb29160031a0c9f3dc75
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9c5272ba0a5ff7c0a30f61631bb6c8dac6552ef0
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59886864"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192613"
 ---
 # <a name="chkdsk"></a>chkdsk
 
@@ -35,7 +35,7 @@ ms.locfileid: "59886864"
 > [!IMPORTANT]
 > **참고:** Chkdsk 로컬 디스크에 대해서만 사용할 수 있습니다. 이 명령은 네트워크를 통해 리디렉션된는 로컬 드라이브 문자를 사용 하 여 사용할 수 없습니다.
 
-이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
+이 명령을 사용하는 방법의 예는 [예](#examples)를 참조하세요.
 
 ##<a name="syntax"></a>구문
 
@@ -60,7 +60,7 @@ chkdsk [<Volume>[[<Path>]<FileName>]] [/f] [/v] [/r] [/x] [/i] [/c] [/l[:<Size>]
 |/b|NTFS에만 해당: 볼륨에 잘못 된 클러스터의 목록을 지우고 오류에 대 한 모든 할당 및 사용 가능한 클러스터를 다시 검사 합니다. **/ b** 의 기능을 포함 **/r**합니다. 새 하드 디스크 드라이브에 볼륨 이미징 후이 매개 변수를 사용 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-##<a name="remarks"></a>설명
+## <a name="remarks"></a>설명
 
 -   건너뛸 볼륨 확인
 
@@ -114,7 +114,7 @@ chkdsk [<Volume>[[<Path>]<FileName>]] [/f] [/v] [/r] [/x] [/i] [/c] [/l[:<Size>]
 -   **chkdsk** 다른 매개 변수와 함께 명령을 복구 콘솔에서 사용할 수 있습니다.
 -   을 자주 다시 시작 하는 서버에서 사용 하려면 수는 **chkntfs** 또는 **fsutil 더티 쿼리** chkdsk를 실행 하기 전에 이미 있는지 확인할 볼륨의 더티 비트 명령을 설정 합니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="examples"></a>예
 
 D 드라이브에 디스크를 확인 하 고 windows에서 오류를 해결 하려면 다음을 입력 합니다.
 ```

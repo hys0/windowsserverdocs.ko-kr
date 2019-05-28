@@ -8,16 +8,16 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 04/05/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 4e3cf32cd718b906f16fc09901284d8520177df8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ad44ba4bbe0b31f423a4ae4593e349571d838de2
+ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59824284"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65475913"
 ---
 # <a name="folder-redirection-offline-files-and-roaming-user-profiles-overview"></a>폴더 리디렉션, 오프라인 파일 및 로밍 사용자 프로필 개요
 
->적용 대상: Windows 10, Windows 8, Windows 8.1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016
+>적용 대상: Windows 10, Windows 8, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2
 
 이 항목에서는 폴더 리디렉션, 오프 라인 파일 (클라이언트 쪽 캐싱 또는 CSC), 및 로밍 사용자 프로필 (RUP 라고도 함) 기술, 새로운 기능 및 추가 정보를 찾을 수 있는 위치를 포함 하 여 설명 합니다.
 
@@ -76,7 +76,7 @@ Windows 8, Windows Server 2012 이전 사용자는 전환 온라인 및 오프 �
 비용 인식 동기화를 통해 Windows는 사용자가 4G 모바일 네트워크 등의 요금제 네트워크 연결을 사용하고 가입자가 자신의 대역폭 한계에 이르렀거나 이를 넘어선 경우 또는 다른 공급자의 네트워크에서 로밍하는 경우 백그라운드 동기화를 사용하지 않도록 설정합니다.
 
 >[!NOTE]
->요금제 네트워크 연결에는 일반적으로 왕복 네트워크 대기 시간은 Windows 8, Windows Server 2012 및 Windows Server 2016에서 오프 라인 (저속 연결) 모드로 전환 하기 위한 35 밀리초 대기 시간의 기본값인 보다 느린 경우 따라서 이러한 연결은 대개 오프라인(저속 연결) 모드로 자동 전환됩니다.
+>요금제 네트워크 연결은 일반적으로 Windows 8, Windows Server 2019, Windows Server 2016 및 Windows Server에서 오프 라인 (저속 연결) 모드로 전환 하기 위한 35 밀리초 대기 시간의 기본값인 보다 느린 왕복 네트워크 대기에는 2012입니다. 따라서 이러한 연결은 대개 오프라인(저속 연결) 모드로 자동 전환됩니다.
 
 ### <a name="what-value-does-cost-aware-synchronization-add"></a>비용 인식 동기화에 추가 값은?
 
@@ -123,7 +123,7 @@ Windows 8 및 Windows Server 2012 이전의 요금제 네트워크 연결에서 
 기본 컴퓨터를 지정 하려면 사용자 환경에는 다음 요구 사항을 충족 해야 합니다.
 
 - Windows Server 2012 스키마 및 조건을 포함 하도록 Active Directory Domain Services (AD DS) 스키마를 업데이트 해야 합니다 (스키마 업데이트는 Windows Server 2012 또는 이후 도메인 컨트롤러를 자동으로 설치). AD DS 스키마를 업그레이드 하는 방법에 대 한 자세한 내용은 참조 하세요. [도메인 컨트롤러를 Windows Server 2016으로 업그레이드](../../identity/ad-ds/deploy/upgrade-domain-controllers.md)합니다.
-- 클라이언트 컴퓨터 Windows 10, Windows 8.1, Windows 8, Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012를 실행 해야 하며 관리 중인 Active Directory 도메인에 가입 되어 합니다.
+- 클라이언트 컴퓨터 Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012를 실행 해야 하며 관리 중인 Active Directory 도메인에 가입 되어 합니다.
 
 ## <a name="more-information"></a>자세한 정보
 

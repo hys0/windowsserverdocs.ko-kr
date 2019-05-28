@@ -9,16 +9,14 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 0eba51521e7ef88542bccf93d92d2e783d800b5e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: cf89972120f3f0effa3eb1cf0fee6d29dbc8ed4e
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59842214"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192477"
 ---
 # <a name="add-a-token-decrypting-certificate"></a>토큰 암호 해독 인증서 추가
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 토큰을 사용 하는 페더레이션 서버\-암호 해독 인증서 신뢰 당사자 페더레이션 서버를 새 인증서를 기본 암호 해독 인증서로 설정 되 면 이전 인증서를 사용 하 여 발급 된 토큰의 암호를 해독 해야 합니다. Active Directory Federation Services \(AD FS\) Secure Sockets Layer를 사용 하 여 \(SSL\) 인터넷 정보 서비스에 대 한 인증서 \(IIS\) 기본 암호 해독을 인증서입니다.  
   
@@ -42,6 +40,6 @@ ms.locfileid: "59842214"
 ## <a name="additional-references"></a>추가 참조  
 [검사 목록: 페더레이션 서버 설정](Checklist--Setting-Up-a-Federation-Server.md)  
   
-[페더레이션 서버에 대 한 인증서 요구 사항](https://technet.microsoft.com/library/dd807040.aspx)  
+[페더레이션 서버에 대한 인증서 요구 사항](https://technet.microsoft.com/library/dd807040.aspx)  
   
 

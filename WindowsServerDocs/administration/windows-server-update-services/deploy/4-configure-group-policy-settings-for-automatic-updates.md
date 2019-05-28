@@ -12,12 +12,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 08cc0b31aa123aadd57a0ea5ddbbeb96bffc3d6e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 69b433ee3e0f57398db1e7814d2de24df7dd1696
+ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59880104"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66222919"
 ---
 # <a name="step-4-configure-group-policy-settings-for-automatic-updates"></a>4단계: 자동 업데이트에 대 한 그룹 정책 설정 구성
 
@@ -27,69 +27,69 @@ Active directory 환경에서 컴퓨터 및 사용자 (이 문서에 WSUS 클라
 
 이 항목에서는 두 개의 주요 섹션.
 
-[WSUS 클라이언트 업데이트를 위한 그룹 정책 설정](4-configure-group-policy-settings-for-automatic-updates.md#BKMK_PolSettings), 규범적인 지침을 제공 하는 및 동작 세부 정보 그룹 정책의 Windows Update 및 유지 관리 스케줄러 설정에 대 한 WSUS 클라이언트가 자동 업데이트를 가져오려면 Windows Update를 통해 조작할 수 있는 방법을 제어 하 합니다.
+[WSUS 클라이언트 업데이트를 위한 그룹 정책 설정](#group-policy-settings-for-wsus-client-updates), 규범적인 지침을 제공 하는 및 동작 세부 정보 그룹 정책의 Windows Update 및 유지 관리 스케줄러 설정에 대 한 WSUS 클라이언트가 자동 업데이트를 가져오려면 Windows Update를 통해 조작할 수 있는 방법을 제어 하 합니다.
 
-[추가 정보](4-configure-group-policy-settings-for-automatic-updates.md#BKMK_Supplemental) 에 다음 섹션이 있습니다.
+[추가 정보](#supplemental-information) 에 다음 섹션이 있습니다.
 
--   [그룹 정책의 Windows Update 설정에 액세스](4-configure-group-policy-settings-for-automatic-updates.md#BKMK_OpenGPO)의 업데이트 서비스 정책 확장 및 유지 관리 스케줄러 설정에 액세스 하는 방법에 대 한 정보와 그룹 정책 관리 편집기를 사용 하는 방법에 대 한 일반적인 지침을 제공 하는 그룹 정책입니다.
+-   [그룹 정책의 Windows Update 설정에 액세스](#accessing-the-windows-update-settings-in-group-policy)의 업데이트 서비스 정책 확장 및 유지 관리 스케줄러 설정에 액세스 하는 방법에 대 한 정보와 그룹 정책 관리 편집기를 사용 하는 방법에 대 한 일반적인 지침을 제공 하는 그룹 정책입니다.
 
--   [이 가이드에 관련 되는 WSUS에 변경](4-configure-group-policy-settings-for-automatic-updates.md#BKMK_changes): WSUS 3.2 및 이전 버전에 익숙한 관리자에 대 한이 섹션에서는 주요 차이점은 현재 및 이전 버전의 WSUS가이 가이드와 관련 한 간단한 요약입니다.
+-   [이 가이드에 관련 되는 WSUS에 변경](#changes-to-wsus-relevant-to-this-guide): WSUS 3.2 및 이전 버전에 익숙한 관리자에 대 한이 섹션에서는 주요 차이점은 현재 및 이전 버전의 WSUS가이 가이드와 관련 한 간단한 요약입니다.
 
--   [용어 및 정의](4-configure-group-policy-settings-for-automatic-updates.md#BKMK_Terms):이 가이드에 사용 되는 WSUS 및 업데이트 서비스와 관련 된 다양 한 용어에 대 한 정의입니다.
+-   [용어 및 정의](#terms-and-definitions):이 가이드에 사용 되는 WSUS 및 업데이트 서비스와 관련 된 다양 한 용어에 대 한 정의입니다.
 
-## <a name="BKMK_PolSettings"></a>WSUS 클라이언트 업데이트를 위한 그룹 정책 설정
+## <a name="group-policy-settings-for-wsus-client-updates"></a>WSUS 클라이언트 업데이트에 대 한 그룹 정책 설정
 이 섹션의 그룹 정책에 대 한 세 가지 확장 정보를 제공합니다. 이러한 확장 WSUS 클라이언트가 자동 업데이트를 받으려면 Windows Update를 통해 조작할 수 있는 방법을 구성 하는 데 사용할 수 있는 설정을 찾을 수 있습니다.
 
--   [컴퓨터 구성 &gt; Windows 업데이트 정책 설정](#BKMK_computerPol)
+-   [컴퓨터 구성 &gt; Windows 업데이트 정책 설정](#computer-configuration--windows-update-policy-settings)
 
--   [컴퓨터 구성 &gt; 유지 관리 스케줄러 정책 설정](#BKMK_MtncScheduler)
+-   [컴퓨터 구성 &gt; 유지 관리 스케줄러 정책 설정](#computer-configuration--maintenance-scheduler-policy-settings)
 
--   [사용자 구성 &gt; Windows 업데이트 정책 설정](#BKMK_UserPol)
+-   [사용자 구성 &gt; Windows 업데이트 정책 설정](#user-configuration--windows-update-policy-settings)
 
 > [!NOTE]
-> 이 항목에서는 이미 사용 하는 그룹 정책에 익숙한 가정 합니다. 그룹 정책에 잘 알고 있지 않다면 것이 좋습니다에 정보를 검토 하 고 [보충 정보를](#BKMK_Supplemental) WSUS에 대 한 정책 설정을 구성 하기 전에이 문서의 섹션입니다.
+> 이 항목에서는 이미 사용 하는 그룹 정책에 익숙한 가정 합니다. 그룹 정책에 잘 알고 있지 않다면 것이 좋습니다에 정보를 검토 하 고 [보충 정보를](#supplemental-information) WSUS에 대 한 정책 설정을 구성 하기 전에이 문서의 섹션입니다.
 
-### <a name="BKMK_computerPol"></a>컴퓨터 구성 > Windows 업데이트 정책 설정
+### <a name="computer-configuration--windows-update-policy-settings"></a>컴퓨터 구성 > Windows 업데이트 정책 설정
 이 섹션에서는 다음과 같은 컴퓨터 기반 정책 설정에 대 한 세부 정보를 제공 합니다.
 
--   [자동 업데이트 즉시 설치 허용](#BKMK_comp1)
+-   [자동 업데이트 즉시 설치 허용](#allow-automatic-updates-immediate-installation)
 
--   [관리자가 아닌 업데이트 알림 내용을 받도록 허용](#BKMK_comp2)
+-   [관리자가 아닌 업데이트 알림 내용을 받도록 허용](#allow-non-administrators-to-receive-update-notifications)
 
--   [인트라넷 Microsoft 업데이트 서비스 위치에서에서 서명 된 업데이트 허용](#BKMK_comp3)
+-   [인트라넷 Microsoft 업데이트 서비스 위치에서에서 서명 된 업데이트 허용](#allow-signed-updates-from-an-intranet-microsoft-update-service-location)
 
--   [자동 업데이트 검색 주기](#BKMK_comp4)
+-   [자동 업데이트 검색 주기](#automatic-updates-detection-frequency)
 
--   [자동 업데이트 구성](#BKMK_comp5)
+-   [자동 업데이트 구성](#configure-automatic-updates)
 
--   [예약 된 설치에 대 한 다시 시작 지연](#BKMK_comp6)
+-   [예약 된 설치에 대 한 다시 시작 지연](#delay-restart-for-scheduled-installations)
 
--   [Windows 중단 종료 대화 상자에서 "설치 업데이트 하 고 종료"를 기본 옵션을 조정 하지 마십시오](#BKMK_comp7)
+-   [Windows 중단 종료 대화 상자에서 "설치 업데이트 하 고 종료"를 기본 옵션을 조정 하지 마십시오](#do-not-adjust-default-option-to-install-updates-and-shut-down-in-shut-down-windows-dialog)
 
--   [Windows 아래로 종료 대화 상자에 "아래로 업데이트 및 시스템 종료 설치" 옵션을 표시 하지 않음](#BKMK_comp8)
+-   [Windows 아래로 종료 대화 상자에 "아래로 업데이트 및 시스템 종료 설치" 옵션을 표시 하지 않음](#do-not-display-install-updates-and-shut-down-option-in-shut-down-windows-dialog)
 
--   [클라이언트 측 대상 사용](#BKMK_comp9)
+-   [클라이언트 측 대상 사용](#enable-client-side-targeting)
 
--   [예약 된 업데이트를 설치 하려면 컴퓨터를 자동으로 절전 Windows Update 전원 관리를 사용 하도록 설정](#BKMK_comp10)
+-   [예약 된 업데이트를 설치 하려면 컴퓨터를 자동으로 절전 Windows Update 전원 관리를 사용 하도록 설정](#enabling-windows-update-power-management-to-automatically-wake-up-the-computer-to-install-scheduled-updates)
 
--   [예약 된 자동에 대 한 사용자가 로그온된을 사용 하 여 자동 다시 시작 업데이트 설치](#BKMK_comp11)
+-   [예약 된 자동에 대 한 사용자가 로그온된을 사용 하 여 자동 다시 시작 업데이트 설치](#no-auto-restart-with-logged-on-users-for-scheduled-automatic-updates-installations)
 
--   [예약 된 설치를 사용 하 여 다시 시작 하기 전에 다시 확인](#BKMK_comp12)
+-   [예약 된 설치를 사용 하 여 다시 시작 하기 전에 다시 확인](#re-prompt-for-restart-with-scheduled-installations)
 
--   [자동 업데이트 예약 된 설치를 다시 예약](#BKMK_comp13)
+-   [자동 업데이트 예약 된 설치를 다시 예약](#reschedule-automatic-updates-scheduled-installations)
 
--   [인트라넷 Microsoft 업데이트 서비스 위치 지정](#BKMK_comp14)
+-   [인트라넷 Microsoft 업데이트 서비스 위치 지정](#specify-intranet-microsoft-update-service-location)
 
--   [자동 업데이트를 통해 권장 된 업데이트 설정](#BKMK_comp15)
+-   [자동 업데이트를 통해 권장 된 업데이트 설정](#turn-on-recommended-updates-via-automatic-updates)
 
--   [소프트웨어 알림 사용](#BKMK_comp16)
+-   [소프트웨어 알림 사용](#turn-on-software-notifications)
 
 GPME에서 컴퓨터 기반 구성에 대 한 Windows 업데이트 정책 경로에 있습니다. *PolicyName* > **컴퓨터 구성** > **정책은** > **관리 템플릿**  >  **Windows 구성 요소** > **Windows 업데이트**합니다.
 
 > [!NOTE]
 > 기본적으로 이러한 설정이 구성 되지 않습니다.
 
-#### <a name="BKMK_comp1"></a>자동 업데이트 즉시 설치 허용
+#### <a name="allow-automatic-updates-immediate-installation"></a>자동 업데이트로 바로 설치 허용
 자동 업데이트에서 자동으로 Windows 서비스를 중단 하지 않거나 Windows를 다시 시작 하는 업데이트를 설치 하는지 여부를 지정 합니다.
 
 |지원 됩니다.|제외:|
@@ -108,7 +108,7 @@ GPME에서 컴퓨터 기반 구성에 대 한 Windows 업데이트 정책 경로
 
 **옵션:** 이 설정에 대 한 가지가 있습니다.
 
-#### <a name="BKMK_comp2"></a>관리자가 아닌 업데이트 알림 내용을 받도록 허용
+#### <a name="allow-non-administrators-to-receive-update-notifications"></a>관리자가 아닌 업데이트 알림 내용을 받도록 허용
 관리 권한이 없는 사용자는 자동 업데이트 구성 정책 설정에 따라 업데이트 알림을 받을지 여부를 지정 합니다.
 
 |지원 됩니다.|제외:|
@@ -130,7 +130,7 @@ GPME에서 컴퓨터 기반 구성에 대 한 Windows 업데이트 정책 경로
 
 **옵션:** 이 설정에 대 한 가지가 있습니다.
 
-#### <a name="BKMK_comp3"></a>인트라넷 Microsoft 업데이트 서비스 위치에서에서 서명 된 업데이트 허용
+#### <a name="allow-signed-updates-from-an-intranet-microsoft-update-service-location"></a>인트라넷 Microsoft 업데이트 서비스 위치에서에서 서명 된 업데이트를 허용 합니다.
 자동 업데이트는 업데이트는 인트라넷 Microsoft 업데이트 서비스 위치에서 발견 되 면 Microsoft 이외의 엔터티로 서명 된 업데이트를 허용 하는지 여부를 지정 합니다.
 
 |지원 됩니다.|제외:|
@@ -173,7 +173,7 @@ GPME에서 컴퓨터 기반 구성에 대 한 Windows 업데이트 정책 경로
 
 **옵션:** 이 설정을 사용 하는 경우에 강제 컴퓨터를 다시 시작 되기 전에 업데이트가 설치 된 후 경과 시간을 지정할 수 있습니다.
 
-#### <a name="BKMK_comp4"></a>자동 업데이트 검색 주기
+#### <a name="automatic-updates-detection-frequency"></a>자동 업데이트 검색 주기
 Windows 사용 가능한 업데이트를 확인 하기 전에 대기할 시간을 결정 하는 데 사용할 시간을 지정 합니다. 정확한 대기 시간-20 %의 시간에 0 여기에 지정 된 시간을 사용 하 여 결정 됩니다 지정 합니다. 예를 들어, 20 시간 검색 빈도 지정 하려면이 정책을 사용 하는 경우이 정책이 적용 되는 모든 클라이언트 어디서 나 16 비트 및 20 시간 사이 업데이트 확인 합니다.
 
 |지원 됩니다.|제외:|
@@ -197,7 +197,7 @@ Windows 사용 가능한 업데이트를 확인 하기 전에 대기할 시간�
 
 **옵션:** 이 설정을 사용 하는 경우에 Windows Update 업데이트 확인 전에 대기 하는 시간에서 간격을 지정할 수 있습니다.
 
-#### <a name="BKMK_comp5"></a>자동 업데이트 구성
+#### <a name="configure-automatic-updates"></a>자동 업데이트 구성
 지정이 컴퓨터에서 자동 업데이트를 사용할 수 있는지 여부를 지정 합니다.
 
 |지원 됩니다.|제외:|
@@ -212,10 +212,10 @@ Windows 사용 가능한 업데이트를 확인 하기 전에 대기할 시간�
 |-|-|
 |**상태를 설정 하는 정책**|**동작**|
 |**구성 되지 않음**|그룹 정책 수준에서 자동 업데이트의 사용이 지정 되지 않습니다 지정 합니다. 그러나 컴퓨터 관리자가 제어판의 자동 업데이트를 구성할 수 있습니다.|
-|**Enabled**|Windows 컴퓨터가 온라인 상태이 고 인터넷 연결을 사용 하 여 사용 가능한 업데이트에 대 한 Windows Update를 검색 하는 경우 인식 하는지 지정 합니다.<br /><br />사용 하도록 설정 하면 로컬 관리자가 선택한 구성 옵션을 선택 하려면 Windows Update 제어판을 사용 하 여 허용 됩니다. 그러나 로컬 관리자가 자동 업데이트에 대 한 구성을 사용 하지 않도록 허용 되지 됩니다.<br /><br />-   **2-다운로드 및 설치할 때 알림**<br />    Windows Update가 컴퓨터에 적용 되는 업데이트를 찾으면 업데이트 되 면 다운로드에 대 한 사용자를 알림이 표시 됩니다. Windows 업데이트를 다운로드 하 여 사용 가능한 업데이트를 설치 합니다. 그런 다음 실행할 수 있습니다.<br />-   **3-자동으로 다운로드 및 설치할 때 알림** (기본 설정)<br />    Windows Update가 적용 가능한 업데이트를 찾아; 백그라운드에서 다운로드 사용자가 알림을 하거나 프로세스 중에 중단 되지 않습니다. 다운로드가 완료 되 면 사용자는 설치 준비 완료 하는 업데이트가 있다는 알림을 받습니다. 그런 다음 Windows Update 다운로드 한 업데이트 설치를 실행할 수 있습니다.<br />-   **4-자동으로 다운로드 하 고 설치 예약**<br />    이 그룹 정책 설정에서 옵션을 사용 하 여 일정을 지정할 수 있습니다. 모든 설치에 대 한 기본 일정을 매일 오전 3 시에 됩니다 없는 일정을 지정 하는 경우 설치를 완료 하려면 다시 시작 해야 하는 모든 업데이트를 하는 경우 Windows 컴퓨터를 자동으로 시작 됩니다. (사용자가 로그인 컴퓨터에 Windows를 다시 시작할 준비가 때, 사용자 알림이 표시 되며 나중에 다시 시작할 수 있는 옵션이 제공 합니다.) **참고:** Windows 8 부터는 Windows 업데이트에 연결 된 특정 일정을 사용 하는 대신 자동 유지 관리 하는 동안 설치에 대 한 업데이트를 설정할 수 있습니다. 자동 유지 관리는 컴퓨터 사용에 없을 때 업데이트를 설치 하 고 컴퓨터가 배터리 전원으로 실행 중인 경우 업데이트를 설치 하지 않습니다. 자동 유지 관리를 일 내에 업데이트를 설치할 수 없는 경우 Windows Update 업데이트 즉시 설치 됩니다. 사용자가 보류 중인 다시 시작 하는 방법에 대 한 다음 알림이 표시 됩니다. 실수로 데이터가 손실 될 가능성이 없는 경우 다시 시작이 보류 진행만 됩니다.    경로에 있는 GPME 유지 관리 스케줄러 설정에서 일정 옵션을 지정할 수 있습니다 *PolicyName* > **컴퓨터 Configuration**  >  **정책을** > **관리 템플릿** > **Windows 구성 요소** > **유지 관리 Scheduler** > **자동 유지 관리 활성화 경계**합니다. 라는이 참조 섹션을 참조 하세요. [유지 관리 스케줄러 설정](#BKMK_MtncScheduler), 세부 정보를 설정 합니다.    **5-로컬 관리자가 설정을 선택할을 허용 합니다.**<br />-로컬 관리자가 예약 된 설치 시간을 선택할 수 있는지 여부를 예를 들어, 선택한 구성 옵션을 선택 하는 자동 업데이트 제어판을 사용 하 여 로컬 관리자가 허용 되는지 여부를 지정 합니다.<br />    로컬 관리자가 자동 업데이트에 대 한 구성을 사용 하지 않도록 수 없습니다.|
+|**Enabled**|Windows 컴퓨터가 온라인 상태이 고 인터넷 연결을 사용 하 여 사용 가능한 업데이트에 대 한 Windows Update를 검색 하는 경우 인식 하는지 지정 합니다.<br /><br />사용 하도록 설정 하면 로컬 관리자가 선택한 구성 옵션을 선택 하려면 Windows Update 제어판을 사용 하 여 허용 됩니다. 그러나 로컬 관리자가 자동 업데이트에 대 한 구성을 사용 하지 않도록 허용 되지 됩니다.<br /><br />-   **2-다운로드 및 설치할 때 알림**<br />    Windows Update가 컴퓨터에 적용 되는 업데이트를 찾으면 업데이트 되 면 다운로드에 대 한 사용자를 알림이 표시 됩니다. Windows 업데이트를 다운로드 하 여 사용 가능한 업데이트를 설치 합니다. 그런 다음 실행할 수 있습니다.<br />-   **3-자동으로 다운로드 및 설치할 때 알림** (기본 설정)<br />    Windows Update가 적용 가능한 업데이트를 찾아; 백그라운드에서 다운로드 사용자가 알림을 하거나 프로세스 중에 중단 되지 않습니다. 다운로드가 완료 되 면 사용자는 설치 준비 완료 하는 업데이트가 있다는 알림을 받습니다. 그런 다음 Windows Update 다운로드 한 업데이트 설치를 실행할 수 있습니다.<br />-   **4-자동으로 다운로드 하 고 설치 예약**<br />    이 그룹 정책 설정에서 옵션을 사용 하 여 일정을 지정할 수 있습니다. 모든 설치에 대 한 기본 일정을 매일 오전 3 시에 됩니다 없는 일정을 지정 하는 경우 설치를 완료 하려면 다시 시작 해야 하는 모든 업데이트를 하는 경우 Windows 컴퓨터를 자동으로 시작 됩니다. (사용자가 로그인 컴퓨터에 Windows를 다시 시작할 준비가 때, 사용자 알림이 표시 되며 나중에 다시 시작할 수 있는 옵션이 제공 합니다.) **참고:** Windows 8 부터는 Windows 업데이트에 연결 된 특정 일정을 사용 하는 대신 자동 유지 관리 하는 동안 설치에 대 한 업데이트를 설정할 수 있습니다. 자동 유지 관리는 컴퓨터 사용에 없을 때 업데이트를 설치 하 고 컴퓨터가 배터리 전원으로 실행 중인 경우 업데이트를 설치 하지 않습니다. 자동 유지 관리를 일 내에 업데이트를 설치할 수 없는 경우 Windows Update 업데이트 즉시 설치 됩니다. 사용자가 보류 중인 다시 시작 하는 방법에 대 한 다음 알림이 표시 됩니다. 실수로 데이터가 손실 될 가능성이 없는 경우 다시 시작이 보류 진행만 됩니다.    경로에 있는 GPME 유지 관리 스케줄러 설정에서 일정 옵션을 지정할 수 있습니다 *PolicyName* > **컴퓨터 Configuration**  >  **정책을** > **관리 템플릿** > **Windows 구성 요소** > **유지 관리 Scheduler** > **자동 유지 관리 활성화 경계**합니다. 라는이 참조 섹션을 참조 하세요. [유지 관리 스케줄러 설정](#computer-configuration--maintenance-scheduler-policy-settings), 세부 정보를 설정 합니다.    **5-로컬 관리자가 설정을 선택할을 허용 합니다.**<br />-로컬 관리자가 예약 된 설치 시간을 선택할 수 있는지 여부를 예를 들어, 선택한 구성 옵션을 선택 하는 자동 업데이트 제어판을 사용 하 여 로컬 관리자가 허용 되는지 여부를 지정 합니다.<br />    로컬 관리자가 자동 업데이트에 대 한 구성을 사용 하지 않도록 수 없습니다.|
 |**사용 안 함**|공용 Windows Update 서비스에서 사용할 수 있는 모든 클라이언트 업데이트 해야 수동으로 인터넷에서 다운로드 되어 설치를 지정 합니다.|
 
-#### <a name="BKMK_comp6"></a>예약 된 설치에 대 한 다시 시작 지연
+#### <a name="delay-restart-for-scheduled-installations"></a>예약 된 설치에 대 한 다시 시작 지연
 자동 업데이트 예약 된 다시 시작 하 여 계속 진행 하기 전에 대기할 시간을 지정 합니다.
 
 |지원 됩니다.|제외:|
@@ -234,7 +234,7 @@ Windows 사용 가능한 업데이트를 확인 하기 전에 대기할 시간�
 
 **옵션:** 이 설정을 사용 하는 경우 예약 된 다시 시작 하 여 계속 진행 하기 전에 대기 하는 자동 업데이트 시간 (분)의 양을 지정 하려면이 옵션을 사용할 수 있습니다.
 
-#### <a name="BKMK_comp7"></a>Windows 중단 종료 대화 상자에서 "설치 업데이트 하 고 종료"를 기본 옵션을 조정 하지 마십시오
+#### <a name="do-not-adjust-default-option-to-install-updates-and-shut-down-in-shut-down-windows-dialog"></a>Windows 중단 종료 대화 상자에서 업데이트 설치 및 시스템 종료를 기본 옵션을 조정 하지 마십시오
 이 정책 설정을 지정할 수 있습니다. 여부는 **업데이트 설치 및 시스템 종료** 옵션에서 기본 선택 사항으로 허용 되는 **Windows 종료** 대화 상자입니다.
 
 |지원 됩니다.|제외:|
@@ -274,7 +274,7 @@ Windows 사용 가능한 업데이트를 확인 하기 전에 대기할 시간�
 
 **옵션:** 이 설정에 대 한 가지가 있습니다.
 
-#### <a name="BKMK_comp8"></a>Windows 아래로 종료 대화 상자에 "아래로 업데이트 및 시스템 종료 설치" 옵션을 표시 하지 않음
+#### <a name="do-not-display-install-updates-and-shut-down-option-in-shut-down-windows-dialog"></a>설치 업데이트 및 종료 옵션 Windows 아래로 종료 대화 상자에서 표시 하지 않습니다
 지정 여부는 **업데이트 설치 및 시스템 종료** 옵션에 표시 됩니다는 **Windows 종료** 대화 상자입니다.
 
 |지원 됩니다.|제외:|
@@ -290,7 +290,7 @@ Windows 사용 가능한 업데이트를 확인 하기 전에 대기할 시간�
 
 **옵션:** 이 설정에 대 한 가지가 있습니다.
 
-#### <a name="BKMK_comp9"></a>클라이언트 측 대상 사용
+#### <a name="enable-client-side-targeting"></a>클라이언트 측 대상 사용
 대상 그룹 이름 또는 WSUS에서 업데이트를 받을 수 있는 WSUS 콘솔에 구성 된 이름을 지정 합니다.
 
 |지원 됩니다.|제외:|
@@ -312,7 +312,7 @@ Windows 사용 가능한 업데이트를 확인 하기 전에 대기할 시간�
 
 **옵션:** 하나 이상의 대상 그룹 이름을 지정 하려면이 공간을 사용 합니다.
 
-#### <a name="BKMK_comp10"></a>예약 된 업데이트를 설치 하려면 컴퓨터를 자동으로 절전 Windows Update 전원 관리를 사용 하도록 설정
+#### <a name="enabling-windows-update-power-management-to-automatically-wake-up-the-computer-to-install-scheduled-updates"></a>예약 된 업데이트를 설치 하려면 컴퓨터를 자동으로 다시 시작 하려면 Windows Update 전원 관리를 사용 하도록 설정
 Windows Update에서 자동으로 설치를 위한 예약 된 업데이트가 있는 경우 최대 절전 모드에서 컴퓨터를 절전 모드를 Windows 전원 관리 또는 전원 옵션 기능을 사용할지 여부를 지정 합니다.
 
 컴퓨터는 Windows Update 업데이트를 자동으로 설치 하도록 구성 된 경우에 자동으로 절전 모드 해제 됩니다. 컴퓨터가 최대 절전 모드인 경우 예약된 된 설치 시간에 발생 되며 업데이트를 적용 하는 경우 Windows Update는 자동으로 업데이트를 설치 하는 컴퓨터의 절전 모드를 Windows 전원 관리 또는 전원 옵션 기능을 사용 합니다. Windows Update 또한 절전 모드를 해제 하 고 설치 마감일 발생 하는 경우 업데이트를 설치 합니다.
@@ -332,7 +332,7 @@ Windows Update에서 자동으로 설치를 위한 예약 된 업데이트가 �
 
 **옵션:** 이 설정에 대 한 가지가 있습니다.
 
-#### <a name="BKMK_comp11"></a>예약 된 자동에 대 한 사용자가 로그온된을 사용 하 여 자동 다시 시작 업데이트 설치
+#### <a name="no-auto-restart-with-logged-on-users-for-scheduled-automatic-updates-installations"></a>예약된 자동 업데이트 설치 시 로그온한 사용자로 자동 다시 시작 사용 안 함
 예약된 된 설치를 완료 하려면 모든 사용자에 게 컴퓨터를 자동으로 다시 유발 하는 대신 로그인 하 여 다시 시작 해야 하는 컴퓨터에 대 한 자동 업데이트 대기는 지정 합니다.
 
 |지원 됩니다.|제외:|
@@ -351,7 +351,7 @@ Windows Update에서 자동으로 설치를 위한 예약 된 업데이트가 �
 
 **옵션:** 이 설정에 대 한 가지가 있습니다.
 
-#### <a name="BKMK_comp12"></a>예약 된 설치를 사용 하 여 다시 시작 하기 전에 다시 확인
+#### <a name="re-prompt-for-restart-with-scheduled-installations"></a>예약 설치 후 다시 시작하기 전에 다시 확인
 자동 업데이트 예약 된 다시 시작 하 여 시작 알림 다시 표시 하기 전에 대기할 시간을 지정 합니다.
 
 |지원 됩니다.|제외:|
@@ -373,7 +373,7 @@ Windows Update에서 자동으로 설치를 위한 예약 된 업데이트가 �
 
 **옵션:** 사용 하도록 설정 하면 예약 된 다시 시작 하는 방법에 대 한 사용자가 다시 입력 하기 전에 경과 기간 (분)에 지정 하려면이 설정을 옵션을 사용할 수 있습니다.
 
-#### <a name="BKMK_comp13"></a>자동 업데이트 예약 된 설치를 다시 예약
+#### <a name="reschedule-automatic-updates-scheduled-installations"></a>예약된 자동 업데이트 설치 일정 변경
 다음 컴퓨터 시작을 이전에 수행 되지 않은 예약된 된 설치를 계속 하기 전에 대기 하는 자동 업데이트에 대 한 시간을 지정 합니다.
 
 상태 설정 하는 경우 **구성 되지 않은**, 컴퓨터가 다음 1 분에 시작 예약 발생 합니다.
@@ -394,7 +394,7 @@ Windows Update에서 자동으로 설치를 위한 예약 된 업데이트가 �
 
 **옵션:** 이 정책 설정을 사용 하는 경우에 컴퓨터를 다시 시작 후 시간 (분) 수를 지정 하려면 사용할 수 있습니다, 수행 되지 않은 예약 된 설치를 이전 배치 발생 합니다.
 
-#### <a name="BKMK_comp14"></a>인트라넷 Microsoft 업데이트 서비스 위치 지정
+#### <a name="specify-intranet-microsoft-update-service-location"></a>인트라넷 Microsoft 업데이트 서비스 위치 지정
 Microsoft Update에서 업데이트를 호스트 하도록 인트라넷 서버를 지정합니다. 그런 다음 네트워크에서 컴퓨터를 자동으로 업데이트 하도록 WSUS를 사용할 수 있습니다.
 
 |지원 됩니다.|제외:|
@@ -425,7 +425,7 @@ Microsoft Update에서 업데이트를 호스트 하도록 인트라넷 서버�
 |업데이트를 검색 하는 것에 대 한 인트라넷 업데이트 서비스 설정|http://wsus01:8530|
 |인트라넷 통계 서버 설정|http://IntranetUpd01|
 
-#### <a name="BKMK_comp15"></a>자동 업데이트를 통해 권장 된 업데이트 설정
+#### <a name="turn-on-recommended-updates-via-automatic-updates"></a>자동 업데이트를 통해 권장된 업데이트 설정
 자동 업데이트 중요 제공 및 WSUS에서 권장 되는 업데이트 여부를 지정 합니다.
 
 |지원 됩니다.|제외:|
@@ -441,7 +441,7 @@ Microsoft Update에서 업데이트를 호스트 하도록 인트라넷 서버�
 
 **옵션:** 이 설정에 대 한 가지가 있습니다.
 
-#### <a name="BKMK_comp16"></a>소프트웨어 알림 사용
+#### <a name="turn-on-software-notifications"></a>소프트웨어 알림 사용
 이 정책 설정을 사용 하면 컨트롤에 사용자가 Microsoft 업데이트 서비스에서 기능 갖춘된 소프트웨어에 대 한 자세한 향상 된 알림 메시지를 표시할지 여부입니다. 향상 된 알림 메시지의 값을 전달 하 고 설치와 선택적 소프트웨어의 사용 수준을 높입니다. 이 정책 설정은 Microsoft Update 서비스에 대 한 최종 사용자 액세스를 허용 하는 잘 관리 되지 않는 환경에서 사용 하 여 위한 것입니다.
 
 Microsoft Update 서비스를 사용 하지 않는 경우 "소프트웨어 알림" 정책 설정은 효과가 없습니다.
@@ -464,16 +464,16 @@ Microsoft Update 서비스를 사용 하지 않는 경우 "소프트웨어 알�
 
 **옵션:** 이 설정에 대 한 가지가 있습니다.
 
-### <a name="BKMK_MtncScheduler"></a>컴퓨터 구성 > 유지 관리 스케줄러 정책 설정
+### <a name="computer-configuration--maintenance-scheduler-policy-settings"></a>컴퓨터 구성 > 유지 관리 스케줄러 정책 설정
 옵션을 선택 하면 자동 업데이트 구성 설정에서 **4-자동으로 다운로드 하 고 설치 예약**, 를 지정할 수 있습니다 일정 Windows 8 및 Windows RT를 실행 하는 컴퓨터에 대 한 GPMC에서 유지 관리 스케줄러 설정 "자동 업데이트 구성" 설정에 4 옵션을 선택 하지 않은 경우 자동 업데이트 하기 위해 이러한 설정을 구성할 필요가 없습니다. 유지 관리 스케줄러 설정은 경로에 있습니다. *PolicyName* > **컴퓨터 구성** > **정책은** > **관리 템플릿**  >  **Windows 구성 요소** > **유지 관리 스케줄러**합니다. 그룹 정책의 유지 관리 스케줄러 확장에는 다음 설정을 포함 합니다.
 
--   [자동 유지 관리 활성화 경계](#BKMK_comp5a)
+-   [자동 유지 관리 활성화 경계](#automatic-maintenance-activation-boundary)
 
--   [자동 유지 관리 임의 지연](#BKMK_comp5b)
+-   [자동 유지 관리 임의 지연](#automatic-maintenance-random-delay)
 
--   [자동 절전 모드 해제 정책](#BKMK_comp5c)
+-   [자동 절전 모드 해제 정책](#automatic-wakeup-policy)
 
-#### <a name="BKMK_comp5a"></a>자동 유지 관리 활성화 경계
+#### <a name="automatic-maintenance-activation-boundary"></a>자동 유지 관리 활성화 경계
 이 정책에는 "자동 유지 관리 활성화 경계" 설정을 구성할 수 있습니다.
 
 유지 관리 활성화 경계에 자동 유지 관리 시작 되는 매일 예약 된 시간입니다.
@@ -492,7 +492,7 @@ Microsoft Update 서비스를 사용 하지 않는 경우 "소프트웨어 알�
 |**Enabled**|이 정책 설정을 사용 하면 모든 기본값을 재정의 하거나의 클라이언트 컴퓨터에서 구성 된 설정을 수정할 **제어판** > **관리 센터** > **자동 유지 관리** (또는 일부 클라이언트 버전에서 **유지 관리**).|
 |**사용 안 함**|이 정책 설정을 설정한 경우 **사용 안 함**, 매일 예약 된 시간에 지정 된 대로 합니다 **관리 센터** > **자동 유지 관리**, 컨트롤에서 패널 적용 됩니다.|
 
-#### <a name="BKMK_comp5b"></a>자동 유지 관리 임의 지연
+#### <a name="automatic-maintenance-random-delay"></a>자동 유지 관리 임의 지연
 이 정책 설정을 활성화 자동 유지 관리 임의 지연을 구성할 수 있습니다.
 
 유지 관리 임의 지연 시간은 시간까지 자동 유지 관리의 정품 인증 경계에서 시작 지연 됩니다. 이 설정은 임의 유지 관리 성능 요구 사항 수 있는 가상 컴퓨터에 유용 합니다.
@@ -513,7 +513,7 @@ Microsoft Update 서비스를 사용 하지 않는 경우 "소프트웨어 알�
 |**Enabled**|자동 유지 관리 하 여 지정 된 기간까지 활성화 경계에서 시작을 지연 합니다.|
 |**사용 안 함**|임의 지연 없음 자동 유지 관리에 적용 됩니다.|
 
-#### <a name="BKMK_comp5c"></a>자동 절전 모드 해제 정책
+#### <a name="automatic-wakeup-policy"></a>자동 절전 모드 해제 정책
 이 정책 설정을 사용 하면 자동 유지 관리 절전 정책을 구성할 수 있습니다.
 
 유지 관리 절전 정책 자동 유지 관리 매일 예약 된 유지 관리에 대 한 운영 체제 컴퓨터에 절전 요청을 확인 해야 하는지 여부를 지정 합니다.
@@ -535,14 +535,14 @@ Microsoft Update 서비스를 사용 하지 않는 경우 "소프트웨어 알�
 |**Enabled**|이 정책 설정을 사용 하도록 설정 하면 필요한 경우 자동 유지 관리는 운영 체제 절전 정책을 설정 하 고 매일 예약된 된 시간에 대 한 절전 모드 해제 요청을 시도 합니다.|
 |**사용 안 함**|절전으로 설정에 지정 된 경우이 정책 설정을 사용 하 여 **관리 센터** > **자동 유지 관리** 제어판 적용 됩니다.|
 
-### <a name="BKMK_UserPol"></a>사용자 구성 > Windows 업데이트 정책 설정
+### <a name="user-configuration--windows-update-policy-settings"></a>사용자 구성 > Windows 업데이트 정책 설정
 이 섹션에서는 다음 사용자 기반 정책 설정에 대 한 세부 정보를 제공 합니다.
 
--   [Windows 중단 종료 대화 상자에서 "설치 업데이트 하 고 종료" 옵션을 표시 하지 않습니다](#BKMK_Client1)
+-   [Windows 중단 종료 대화 상자에서 "설치 업데이트 하 고 종료" 옵션을 표시 하지 않습니다](#do-not-display-install-updates-and-shut-down-option-in-shut-down-windows-dialog)
 
--   [Windows 중단 종료 대화 상자에서 "설치 업데이트 하 고 종료"를 기본 옵션을 조정 하지 마십시오](#BKMK_Client2)
+-   [Windows 중단 종료 대화 상자에서 "설치 업데이트 하 고 종료"를 기본 옵션을 조정 하지 마십시오](#do-not-adjust-default-option-to-install-updates-and-shut-down-in-shut-down-windows-dialog)
 
--   [모든 Windows Update 기능에 대 한 액세스를 제거 합니다.](#BKMK_Client3)
+-   [모든 Windows Update 기능에 대 한 액세스를 제거 합니다.](#remove-access-to-use-all-windows-update-features)
 
 Gpmc에서 컴퓨터 자동 업데이트에 대 한 사용자 설정은 경로에 있습니다. *PolicyName* > **사용자 구성** > **정책은** > **관리 템플릿**  >  **Windows 구성 요소** > **Windows 업데이트**합니다. 컴퓨터 구성 및 사용자 구성 그룹 정책 확장에 표시 되는 설정이 동일한 순서로 나열 됩니다 때는 합니다 **설정을** 설정을 정렬 하는 Windows 업데이트 정책 탭을 선택 사전순으로 합니다.
 
@@ -552,7 +552,7 @@ Gpmc에서 컴퓨터 자동 업데이트에 대 한 사용자 설정은 경로�
 > [!TIP]
 > 이러한 설정 각각에 대 한 설정, 해제 또는 설정 사이 탐색 하려면 다음 단계를 사용할 수 있습니다.
 
-#### <a name="BKMK_Client1"></a>Windows 중단 종료 대화 상자에서 '업데이트 설치 및 시스템 종료' 옵션을 표시 하지 않습니다
+#### <a name="do-not-display-install-updates-and-shut-down-option-in-shut-down-windows-dialog-box"></a>Windows 종료 대화 상자에서 '업데이트 설치 및 시스템 종료' 옵션을 표시 하지 않습니다
 지정 여부는 **업데이트 설치 및 시스템 종료** 옵션에 표시 됩니다는 **Windows 종료** 대화 상자입니다.
 
 |지원 됩니다.|제외:|
@@ -568,7 +568,7 @@ Gpmc에서 컴퓨터 자동 업데이트에 대 한 사용자 설정은 경로�
 
 **옵션:** 이 설정에 대 한 가지가 있습니다.
 
-#### <a name="BKMK_Client2"></a>Windows 중단 종료 대화 상자에서 "설치 업데이트 하 고 종료"를 기본 옵션을 조정 하지 마십시오
+#### <a name="do-not-adjust-default-option-to-install-updates-and-shut-down-in-shut-down-windows-dialog-box"></a>Windows 종료 대화 상자에서 "설치 업데이트 하 고 종료"를 기본 옵션을 조정 하지 마십시오
 지정 여부는 **업데이트 설치 및 시스템 종료** 에서 기본 선택으로 옵션은 사용할 수는 **Windows 종료** 대화 상자입니다.
 
 |지원 됩니다.|제외:|
@@ -586,8 +586,8 @@ Gpmc에서 컴퓨터 자동 업데이트에 대 한 사용자 설정은 경로�
 |**사용 안 함**|지정 여부는 **업데이트 설치 및 시스템 종료** 옵션에서 기본 옵션을 수는 **Windows 종료** 업데이트 사용자가 컴퓨터를 종료 하려면 종료 옵션을 선택 하는 시간에 설치 하기 위해 사용할 수 있는 경우 대화 상자.|
 
 **옵션:** 이 설정에 대 한 가지가 있습니다.
-
-#### <a name="BKMK_Client3"></a>모든 Windows Update 기능에 대 한 액세스를 제거 합니다.
+    
+#### <a name="remove-access-to-use-all-windows-update-features"></a>모든 Windows Update 기능에 대 한 액세스를 제거 합니다.
 이 설정은 사용 하면 Windows Update에 대 한 WSUS 클라이언트 액세스를 제거할 수 있습니다.
 
 |지원 됩니다.|제외:|
@@ -603,10 +603,10 @@ Gpmc에서 컴퓨터 자동 업데이트에 대 한 사용자 설정은 경로�
 
 **옵션:** 참조 **사용** 이 설정에 대 한 테이블에 있습니다.
 
-## <a name="BKMK_Supplemental"></a>추가 정보
+## <a name="supplemental-information"></a>추가 정보
 이 섹션에서는 열기 및이 가이드에 사용 되는 용어에 대 한 WSUS 설정을 그룹 정책 및 정의에 저장을 사용 하는 방법에 대 한 추가 정보를 제공 합니다. 이전 버전의 WSUS (WSUS 3.2 및 이전 버전)에 익숙한 관리자에 대 한 간단 하 게 WSUS 버전 간의 차이점을 요약 하는 표가 포함 되어 있습니다.
 
-### <a name="BKMK_OpenGPO"></a>그룹 정책의 Windows Update 설정에 액세스
+### <a name="accessing-the-windows-update-settings-in-group-policy"></a>그룹 정책에서 Windows Update 설정에 액세스
 이후에 나오는 절차에는 도메인 컨트롤러에서 GPMC를 여는 방법을 설명 합니다. 프로시저에는 다음 편집을 위해 기존 도메인 수준 그룹 정책 개체 (GPO)를 열고 또는 새 도메인 수준 GPO를 만들어 및 열어 편집 하는 방법을 설명 합니다.
 
 > [!NOTE]
@@ -668,7 +668,7 @@ Gpmc에서 컴퓨터 자동 업데이트에 대 한 사용자 설정은 경로�
 
     -   대화 상자를 닫고 저장 되지 않은 변경 사항을 모두 취소를 클릭 **취소**합니다.
 
-### <a name="BKMK_changes"></a>이 가이드에 관련 되는 WSUS에 변경 내용
+### <a name="changes-to-wsus-relevant-to-this-guide"></a>이 가이드에 관련 되는 WSUS에 변경 내용
 다음 표에서이 가이드에 관련 된 WSUS의 현재 버전과 이전 버전 간의 주요 차이점을 보여 줍니다.
 
 |Windows Server 및 WSUS 버전|설명|
@@ -676,7 +676,7 @@ Gpmc에서 컴퓨터 자동 업데이트에 대 한 사용자 설정은 경로�
 | Windows Server 2012 R2 WSUS 6.0 및 이후 버전|Windows Server 2012 부터는 WSUS 서버 역할의 운영 체제와 통합 되며 WSUS 클라이언트에 대 한 연결 된 그룹 정책 설정, 기본적으로 그룹 정책에 포함 합니다.|
 | Windows Server 2008 (및 이전 버전의 Windows Server) WSUS 3.2 및 이전 버전|WSUS 클라이언트를 관리 하는 그룹 정책 설정은 Windows Server 2008 (및 이전 버전의 Windows Server)의 WSUS 3.2 (및 이전) 버전을 사용 하 여,이 Windows Server 운영 체제에 포함 되지 않습니다. WSUS 관리 템플릿 정책 설정이 되었는지 **wuau.adm**합니다. 이러한 서버 버전에 WSUS 관리 템플릿 처음 먼저 추가 해야 그룹 정책 관리 콘솔 (GPMC)에 WSUS 클라이언트 설정을 구성할 수 있습니다.|
 
-### <a name="BKMK_Terms"></a>용어 및 정의
+### <a name="terms-and-definitions"></a>용어 및 정의
 다음은이 가이드에 사용 되는 용어 목록입니다.
 
 |용어|정의|

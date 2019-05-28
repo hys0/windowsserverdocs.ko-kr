@@ -9,12 +9,12 @@ manager: dougkim
 ms.author: jgerend
 ms.date: 6/11/2017
 description: 클라우드 폴더 개요 - 사용자가 PC와 디바이스에서 일관적인 방법으로 작업 파일에 액세스할 수 있게 해주는 Windows Server의 서버 역할입니다.
-ms.openlocfilehash: dd32b84e6442ec55414da27ea94ef16eeab769eb
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e3e3c86efb2f781dc88cac6851ea22f19c6ae812
+ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59890484"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66222851"
 ---
 # <a name="work-folders-overview"></a>클라우드 폴더 개요
 
@@ -24,18 +24,18 @@ ms.locfileid: "59890484"
   
 다운로드 하 여 클라우드 폴더를 사용 하 여 Windows 10, Windows 7, Android 또는 iOS 장치에 원하는 경우 다음을 참조 합니다.
 
--   [Windows 10 용 작업 폴더](https://support.microsoft.com/help/12370/windows-10-work-folders)
--   [Windows 7 용 작업 폴더 (64 비트 다운로드)](https://www.microsoft.com/download/details.aspx?id=42558)
--   [Windows 7 용 작업 폴더 (32 비트 다운로드)](https://www.microsoft.com/download/details.aspx?id=42559)
+- [Windows 10 용 작업 폴더](https://support.microsoft.com/help/12370/windows-10-work-folders)
+- [Windows 7 용 작업 폴더 (64 비트 다운로드)](https://www.microsoft.com/download/details.aspx?id=42558)
+- [Windows 7 용 작업 폴더 (32 비트 다운로드)](https://www.microsoft.com/download/details.aspx?id=42559)
 - [IOS 용 작업 폴더](https://itunes.apple.com/app/work-folders/id950878067)
 - [Android 용 작업 폴더](https://play.google.com/store/apps/details?id=com.microsoft.workfolders)
 
-##  <a name="BKMK_OVER"></a> 역할 설명  
+## <a name="role-description"></a>역할 설명  
  클라우드 폴더를 통해 사용자는 개인용 컴퓨터 및 장치에 작업 파일을 저장하고 여기에 액세스할 수 있습니다. 이를 회사 PC 외의 BYOD(bring-your-own device)라고도 합니다. 사용자는 작업 파일을 저장하고 어디에서나 액세스할 수 있는 편리한 위치를 얻을 수 있습니다. 조직은 중앙에서 관리 되는 파일 서버에 파일을 저장하고 선택적으로 사용자 장치 정책(예: 암호화 및 잠금 화면 암호)을 지정하여 회사 데이터에 대한 제어를 유지합니다.  
   
  기존에 배포된 폴더 리디렉션, 오프라인 파일 및 홈 폴더를 사용하여 클라우드 폴더를 배포할 수 있습니다. 클라우드 폴더는 *동기화 공유*라고 하는 서버의 폴더에 사용자 파일을 저장합니다. 이미 사용자 데이터가 포함된 폴더를 지정할 수 있으며, 따라서 서버와 데이터를 마이그레이션하거나 기존 솔루션을 즉시 폐지하지 않고도 클라우드 폴더를 채택할 수 있습니다.  
   
-##  <a name="BKMK_APP"></a> 실제 응용 프로그램  
+## <a name="practical-applications"></a>유용한 팁  
  관리자는 클라우드 폴더를 사용하여 사용자에게 작업 파일에 대한 액세스를 제공하면서도 중앙 집중식 저장소를 유지하고 조직의 데이터를 제어할 수 있습니다. 클라우드 폴더는 다음과 같은 방식으로 응용이 가능합니다.  
   
 -   사용자의 회사/개인용 컴퓨터 및 디바이스에서 작업 파일에 액세스할 수 있는 단일 액세스 지점을 제공  
@@ -50,7 +50,8 @@ ms.locfileid: "59890484"
   
 -   클라우드 폴더에 장애 조치(failover) 클러스터링을 사용하여 고가용성 솔루션 제공  
   
-##  <a name="BKMK_NEW"></a> 중요 한 기능  
+## <a name="important-functionality"></a>중요 기능
+
  클라우드 폴더는 다음 기능을 포함하고 있습니다.  
   
 |기능|가용성|설명|  
@@ -60,7 +61,8 @@ ms.locfileid: "59890484"
 |클라우드 폴더를 Windows와 통합|Windows 10<br /><br /> Windows 8.1<br /><br /> Windows RT 8.1<br /><br /> Windows 7(다운로드 필요)|클라우드 폴더는 Windows 컴퓨터에서 다음 기능을 제공합니다.<br /><br /> -   클라우드 폴더를 설정하고 모니터링하는 제어판 항목<br />-   클라우드 폴더의 파일에 쉽게 액세스할 수 있도록 파일 탐색기 통합<br />-   중앙의 파일 서버와 파일을 주고 받는 한편 배터리 사용 시간과 시스템 성능을 최대화하는 동기화 엔진|  
 |디바이스용 클라우드 폴더 앱|Android<br /><br /> Apple iPhone 및 iPad®|인기 있는 디바이스에서 클라우드 폴더의 파일에 액세스할 수 있게 해주는 앱|  
   
-##  <a name="BKMK_New"></a> 새로운 기능과 변경 된 기능  
+## <a name="new-and-changed-functionality"></a>새로운 기능 및 변경된 기능
+  
  다음 표에는 클라우드 폴더의 주요 변경 내용 중 일부가 설명되어 있습니다.  
   
 |기능|새로운 기능 또는 업데이트된 기능|설명|  
@@ -70,7 +72,7 @@ ms.locfileid: "59890484"
 |WIP(Windows Information Protection)와 통합|Windows 10 버전 1607에 추가|관리자가 WIP를 배포하면 클라우드 폴더는 PC의 데이터를 암호화하여 데이터 보호를 적용할 수 있습니다. 암호화에는 엔터프라이즈 ID와 연결된 키가 사용되며, 이 키는 Microsoft Intune 등의 지원되는 모바일 디바이스 관리 패키지를 사용하여 원격으로 지울 수 있습니다.|  
 |Microsoft Office 통합|Windows 10 버전 1511에 추가|Windows 8.1에서는 이 PC를 클릭하거나 탭한 후 PC의 클라우드 폴더 위치를 탐색하여 Office 앱 내부에서 클라우드 폴더를 탐색할 수 있습니다. Windows 10에서는 파일을 저장하거나 열 때 Office가 표시하는 위치 목록에 클라우드 폴더를 추가하면 훨씬 간편하게 클라우드 폴더로 이동할 수 있습니다. 자세한 내용은 [Windows 10의 클라우드 폴더](https://windows.microsoft.com/windows-10/work-folders-in-windows-10) 및  [Troubleshooting using Work Folders as a Place in Microsoft Office(클라우드 폴더를 Microsoft Office의 장소로 사용할 때의 문제 해결](https://social.technet.microsoft.com/wiki/contents/articles/32881.troubleshooting-using-work-folders-as-a-place-in-microsoft-office.aspx)를 참조하세요.|  
   
-##  <a name="BKMK_SOFT"></a> 소프트웨어 요구 사항  
+## <a name="software-requirements"></a>소프트웨어 요구 사항
 
 클라우드 폴더에는 파일 서버와 네트워크 인프라에 대한 다음과 같은 소프트웨어 요구 사항이 있습니다.  
   
@@ -126,7 +128,7 @@ ms.locfileid: "59890484"
   
 -   클라우드 폴더는 클라이언트 가상 컴퓨터의 가상 컴퓨터 상태 롤백을 지원하지 않습니다. 대신 시스템 이미지 백업 또는 다른 백업 응용 프로그램을 사용하여 클라이언트 가상 컴퓨터 내에서 백업 및 복원 작업을 수행합니다.  
   
-##  <a name="BKMK_Comparison"></a> 클라우드 폴더 동기화 기술과 비교  
+## <a name="work-folders-compared-to-other-sync-technologies"></a>다른 동기화 기술과 클라우드 폴더 비교  
 
 다음 표에서는 다양한 Microsoft 동기화 기술의 위치와 각 기술을 사용하는 시기에 대해 설명합니다.  
   
@@ -141,7 +143,7 @@ ms.locfileid: "59890484"
 > [!NOTE]
 >  위의 표에 나열된 동기화 기술 외에도 Microsoft는 서버 간 복제를 위해 설계된 DFS 복제와 지사 WAN 가속 기술로 설계된 BranchCache를 비롯한 다른 복제 기술을 제공합니다. 자세한 내용은 [DFS 네임스페이스 및 DFS 복제](https://technet.microsoft.com/library/jj127250(v=ws.11).aspx) 및 [BranchCache 개요](https://technet.microsoft.com/library/hh831696(v=ws.11).aspx)를 참조하세요.  
   
-##  <a name="BKMK_INSTALL"></a> 서버 관리자 정보  
+## <a name="server-manager-information"></a>서버 관리자 정보  
 
 클라우드 폴더는 파일 및 저장소 서비스 역할의 일부입니다. 역할 및 기능 추가 마법사 또는 `Install-WindowsFeature` cmdlet을 사용하여 클라우드 폴더를 설치할 수 있습니다. 두 방법 모두 다음 작업을 수행합니다.  
   
@@ -151,12 +153,13 @@ ms.locfileid: "59890484"
   
 -   클라우드 폴더를 관리하기 위해 서버에 SyncShare Windows PowerShell 모듈 설치  
   
-##  <a name="BKMK_Azure"></a> Windows Azure 가상 컴퓨터와의 상호 운용성  
+## <a name="interoperability-with-windows-azure-virtual-machines"></a>Windows Azure 가상 컴퓨터와의 상호 운용성
+
  Windows Azure의 가상 컴퓨터에서 이 Windows Server 역할 서비스를 실행할 수 있습니다. 이 시나리오는 Windows Server 2012 R2 및 Windows Server 2016에서 테스트되었습니다.  
   
 Windows Azure 가상 컴퓨터를 시작하는 방법에 대해 자세히 알아보려면 [Windows Azure 웹 사이트](http://www.windowsazure.com/documentation/services/virtual-machines)를 방문하세요.  
   
-##  <a name="BKMK_LINKS"></a> 참고 항목  
+## <a name="see-also"></a>참조  
  자세한 내용은 다음 리소스를 참조하십시오.  
   
 |콘텐츠 형식|참조|  

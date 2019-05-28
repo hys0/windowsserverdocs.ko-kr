@@ -8,16 +8,16 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: c0d750fd139865daa92319c1d1926dc5d36669b2
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 62215aa802e2509be5305aef53069ae9643562f1
+ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59885774"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65476095"
 ---
 # <a name="storage-reports-management"></a>저장소 보고서 관리
 
-> 적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> 적용 대상: Windows Server 2019, Windows Server 2016, Windows Server (반기 채널), Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 파일 서버 리소스 관리자 MMC(Microsoft<sup>®</sup> Management Console) 스냅인의 **저장소 보고서 관리** 노드에서 다음과 같은 작업을 수행할 수 있습니다.
 
@@ -34,14 +34,14 @@ ms.locfileid: "59885774"
 
 이 섹션에서는 다음 항목을 다룹니다.
 
--   [일련의 보고서를 예약 합니다.](schedule-set-of-reports.md)
--   [필요에 따라 보고서를 생성 합니다.](generate-reports-on-demand.md)
+-   [보고서 세트 예약](schedule-set-of-reports.md)
+-   [주문형 보고서 생성](generate-reports-on-demand.md)
 
 > [!Note]
 > 전자 메일 알림과 특정 보고 기능을 설정하려면, 먼저 일반 파일 서버 리소스 관리자 옵션을 구성해야 합니다.
 
 ## <a name="see-also"></a>참조
 
--   [설정 파일 서버 리소스 관리자 옵션](setting-file-server-resource-manager-options.md)
+-   [파일 서버 리소스 관리자 옵션 설정](setting-file-server-resource-manager-options.md)
 
 

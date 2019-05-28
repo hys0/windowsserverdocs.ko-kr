@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d7a55ddc3caea1002ab51ce4f992b36673ea312b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3229e6ccb07c925a900b298a8332c5e48cefefe7
+ms.sourcegitcommit: 08eba714d3ceb5f2dfb5486d6b990da1aa4dcbdd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59825644"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65564672"
 ---
 # <a name="seceditgeneraterollback"></a>secedit:generaterollback
 
@@ -36,19 +36,19 @@ Secedit /generaterollback /db <database file name> /cfg <configuration file name
 
 |매개 변수|설명|
 |---------|-----------|
-|db|필수 사항입니다.</br>분석은 수행할 저장된 된 구성을 포함 하는 데이터베이스의 경로 파일 이름을 지정 합니다.</br>파일 이름을 연결 된 보안 템플릿 (구성 파일에 표시 됨) 처럼 되지 않은 데이터베이스를 지정 하는 경우는 `/cfg \<configuration file name>` 명령줄 옵션 지정 해야 합니다.|
-|cfg|필수 사항입니다.</br>분석을 위해 데이터베이스로 가져올 보안 서식 파일에 대 한 경로 파일 이름을 지정 합니다.</br>이 /cfg 옵션은 함께 사용할만 `/db \<database file name>` 매개 변수입니다. 지정 하지 않으면 데이터베이스에 이미 저장 된 모든 구성에 대해 분석이 수행 됩니다.|
+|db|필수.</br>분석은 수행할 저장된 된 구성을 포함 하는 데이터베이스의 경로 파일 이름을 지정 합니다.</br>파일 이름을 연결 된 보안 템플릿 (구성 파일에 표시 됨) 처럼 되지 않은 데이터베이스를 지정 하는 경우는 `/cfg \<configuration file name>` 명령줄 옵션 지정 해야 합니다.|
+|cfg|필수.</br>분석을 위해 데이터베이스로 가져올 보안 서식 파일에 대 한 경로 파일 이름을 지정 합니다.</br>이 /cfg 옵션은 함께 사용할만 `/db \<database file name>` 매개 변수입니다. 지정 하지 않으면 데이터베이스에 이미 저장 된 모든 구성에 대해 분석이 수행 됩니다.|
 |rbk|필수.</br>롤백 정보 기록 되는 보안 템플릿을 지정 합니다. 보안 템플릿 스냅인을 사용 하 여 보안 템플릿은 만듭니다. 이 명령을 사용 하 여 롤백 파일을 만들 수 있습니다.|
 |로그|(선택 사항)</br>프로세스에 대 한 로그 파일의 경로 파일 이름을 지정합니다.|
 |quiet|(선택 사항)</br>화면 및 로그 출력을 표시 하지 않습니다. 보안 구성 및 분석에 스냅인을 Microsoft Management Console (MMC)를 사용 하 여 분석 결과 보기 수 있습니다.|
 
 ## <a name="remarks"></a>설명
 
-로그 파일의 경로를 제공 하지 않으면, 기본 로그 파일 (*systemroot*\Users \*UserAccount*\My Documents\Security\Logs\*DatabaseName*.log) 사용 됩니다.
+로그 파일의 경로를 제공 하지 않으면, 기본 로그 파일 (*systemroot*\Users \*UserAccount *\My Documents\Security\Logs\*DatabaseName*.log) 사용 됩니다.
 
 Windows Server 2008 부터는 `Secedit /refreshpolicy` 바뀌었습니다 `gpupdate`합니다. 보안 설정을 새로 고치는 방법에 대 한 자세한 내용은 [Gpupdate](gpupdate.md)합니다.
 
-이 명령은 성공적으로 실행 하는 상태는 "작업이 성공적으로 완료 했습니다? 및 로그 명시 된 보안 템플릿과 보안 정책 구성 간의 불일치만 합니다. 이러한 불일치는 scesrv.log에 나열 됩니다.
+이 명령은 성공적으로 실행 "작업 완료 되었습니다." 상태는 및 로그 명시 된 보안 템플릿과 보안 정책 구성 간의 불일치만 합니다. 이러한 불일치는 scesrv.log에 나열 됩니다.
 
 기존 롤백 템플릿을 지정 된 경우이 명령은 덮어씁니다. 이 명령을 사용 하 여 새 롤백 서식 파일을 만들 수 있습니다. 두 조건 중 하나에 대 한 추가 매개 변수 없이 필요 합니다.
 

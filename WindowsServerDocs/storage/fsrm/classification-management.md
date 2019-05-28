@@ -8,16 +8,16 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 13323cd380c9df5185a7989721ec2574ea880d4f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d7ea1f6f5d99ef1b55e919af3b8ebe391486ed50
+ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59814794"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65475902"
 ---
 # <a name="classification-management"></a>분류 관리
 
-> 적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> 적용 대상: Windows Server 2019, Windows Server 2016, Windows Server (반기 채널), Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 분류 속성은 파일을 분류하는 데 사용되며, 예약된 파일 관리 작업을 위한 파일 선택에 사용할 수 있습니다.
 
@@ -35,4 +35,4 @@ ms.locfileid: "59814794"
 
 ## <a name="see-also"></a>참조
 
-[설정 파일 서버 리소스 관리자 옵션](setting-file-server-resource-manager-options.md)
+[파일 서버 리소스 관리자 옵션 설정](setting-file-server-resource-manager-options.md)

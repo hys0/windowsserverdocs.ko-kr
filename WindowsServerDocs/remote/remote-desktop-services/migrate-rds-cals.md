@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: 91bdedce-6145-469f-b72e-7e113c4391e9
 author: christianmontoya
 manager: scottman
-ms.openlocfilehash: cb30c703adb7e3a791e41caab4561300faa8fcd3
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3b809d4d624f21eaeae5a66277db683c95c79bdd
+ms.sourcegitcommit: 21165734a0f37c4cd702c275e85c9e7c42d6b3cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59845024"
+ms.lasthandoff: 05/03/2019
+ms.locfileid: "65034449"
 ---
 # <a name="migrate-your-remote-desktop-services-client-access-licenses-rds-cals"></a>RDS CAL(원격 데스크톱 서비스 클라이언트 액세스 라이선스) 마이그레이션
 
@@ -27,12 +27,12 @@ RDS Cal을 마이그레이션하는 세 가지 옵션이 있습니다.
 2. 웹 브라우저를 사용합니다. 이 메서드를 사용 하면 원격 데스크톱 라이선스 관리자 도구를 실행 하는 서버에서 인터넷에 연결 되지 않은 수 있지만 관리자가 별도 장치에 대 한 인터넷에 연결 하는 경우 마이그레이션. 웹 마이그레이션 방법에 대 한 URL 관리 RDS Cal 마법사에 표시 됩니다. 
 3. 전화를 사용합니다. 이 메서드는 Microsoft 담당자에 게 전화를 통해 마이그레이션 프로세스를 완료 하려면 관리자 권한이 있습니다. 적절 한 전화 번호는 서버 활성화 마법사에서 선택한 및 RDS Cal 관리 마법사에 표시 되는 국가/지역에 따라 결정 됩니다.
 
-이 문서에서는 합니다 [RDS CAL 설정 마이그레이션 방법을](#establish-RDS-CAL-migration-method) 모든 RDS CAL 마이그레이션 방법 간에 공통 되는 일반 단계를 강조 표시 하는 동안 [RDS Cal 마이그레이션할](#migrate-RDS-CALs) 각 마이그레이션 하는 특정 단계를 강조 표시 메서드입니다.
+이 문서에서는 합니다 [RDS CAL 설정 마이그레이션 방법을](#establish-rds-cal-migration-method) 모든 RDS CAL 마이그레이션 방법 간에 공통 되는 일반 단계를 강조 표시 하는 동안 [RDS Cal 마이그레이션할](#migrate-rds-cals) 각 마이그레이션 하는 특정 단계를 강조 표시 메서드입니다.
 
 마이그레이션 방법에 관계 없이, 최소한 해야 마이그레이션 단계를 수행 하려면 로컬 Administrators 그룹의 멤버입니다.
 
-
 ## <a name="establish-rds-cal-migration-method"></a>RDS CAL 마이그레이션 방법 설정
+
 1. 라이선스 서버에서 엽니다 **원격 데스크톱 라이선스 관리자**합니다. (클릭 **시작 > 관리 도구**합니다. 입력 된 **원격 데스크톱 서비스** 디렉터리와 시작 **원격 데스크톱 라이선스 관리자**.)
 2. 원격 데스크톱 라이선스 서버에 대 한 연결 방법을 확인 하십시오: RDS Cal을 마이그레이션하고 클릭 하려는 라이선스 서버를 마우스 오른쪽 단추로 클릭 **속성**합니다. 에 **연결 방법을** 탭을 확인 합니다 **연결 방법을** -드롭다운 메뉴에서 변경할 수 있습니다. **확인**을 클릭합니다.
 3. RDS Cal을 마이그레이션하고 클릭 하려는 라이선스 서버를 마우스 오른쪽 단추로 클릭 **RDS Cal 관리**합니다.
@@ -54,12 +54,14 @@ RDS Cal을 마이그레이션하는 세 가지 옵션이 있습니다.
 다음 단계는 Cal 마이그레이션할-마법사를 완료 하려면 아래 정보를 사용 하는 것입니다. Note는 위의 2 단계에서에서 식별 되는 연결 메서드를 종속 마법사에 표시 합니다.
 
 ## <a name="migrate-rds-cals"></a>RDS Cal을 마이그레이션
+
 가지 다음 세 가지 메커니즘을 대상 라이선스 서버 라이선스 마이그레이션 에 해당 하는 단계를 계속 합니다 **연결 방법을** 2 단계에서에서 확인 합니다.
-  - [자동 연결 메서드](#Automatic-connection-method)
-  - [웹 브라우저를 사용 하 여](#Using-a-web-browser)
-  - [전화를 사용 하 여](#Using-a-telephone)
+  - [자동 연결 메서드](#automatic-connection-method)
+  - [웹 브라우저를 사용 하 여](#using-a-web-browser)
+  - [전화를 사용 하 여](#using-a-telephone)
 
 ### <a name="automatic-connection-method"></a>자동 연결 메서드
+
 1. 에 **라이선스 프로그램** 페이지, 프로그램 RDS Cal을 구입한 적절 한 프로그램을 선택한 다음 클릭 **다음**합니다.
 2. 필요한 정보를 입력 (라이선스 코드나 계약 번호에 따라 일반적으로 **라이선스 프로그램**)를 클릭 하 고 **다음**합니다. RDS Cal을 구입할 때 제공 되는 설명서를 참조 하세요.
 4. 적절 한 제품 버전, 라이선스 유형 및 RDS CAL 구입 계약에 따라 해당 환경에 대 한 RDS Cal의 수량을 선택 하 고 클릭 **다음**합니다.

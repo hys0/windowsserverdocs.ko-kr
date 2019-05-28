@@ -9,16 +9,15 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: d67f4c252ad25a05f11b88771f12fd01d13137d4
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 040caf6395b7c70313de900d522241f97699a999
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59880394"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192496"
 ---
 # <a name="add-a-federation-server-to-a-federation-server-farm"></a>페더레이션 서버 팜에 페더레이션 서버 추가
 
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 페더레이션 서비스 역할 서비스를 설치 하 고 컴퓨터에 필요한 인증서를 구성 했으면 컴퓨터 페더레이션 서버를 구성할 수 있습니다. 다음 절차를 사용하여 새 페더레이션 서버 팜에 컴퓨터를 가입시킬 수 있습니다.  
   

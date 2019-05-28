@@ -8,16 +8,16 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 923710fac426f63d2c38d9b9a68c92427783abb1
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 413cf51e5ceb1c4507b71fb77ee6005807a0ff13
+ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59890014"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65476175"
 ---
 # <a name="troubleshooting-file-server-resource-manager"></a>파일 서버 리소스 관리자 문제 해결
 
-> 적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> 적용 대상: Windows Server 2019, Windows Server 2016, Windows Server (반기 채널), Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 이 섹션에서는 파일 서버 리소스 관리자를 사용할 때 발생할 수 있는 일반적인 문제를 나열합니다.
 

@@ -11,19 +11,19 @@ ms.assetid: 02e31413-6140-4723-a8d6-46c7f667792d
 author: KBDAzure
 ms.author: kathydav
 ms.date: 12/05/2016
-ms.openlocfilehash: 48319e057da9c815a77349bba34996f89973d85a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e3c88ef5ee700bb3906746402bf6cc8916976800
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59850504"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192771"
 ---
 # <a name="should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v"></a>1 또는 2 세대 가상 컴퓨터를 Hyper-v에서 만들어야 하나요?
 
 >적용 대상: Windows 10, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
 
-> [!WARNING]
-> 그 어느 때는 Windows VM (가상 머신) 온-프레미스에서 Microsoft azure에 업로드 하려는 경우 **1 세대 Vm만** 의 VHD 파일 형식 및 고정 크기의 디스크는 지원 됩니다. Windows VHD 또는 VHDX를 업로드 하는 방법은 참조 하세요 [Azure에 업로드할 Windows VHD 또는 VHDX 준비](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/prepare-for-upload-vhd-image)합니다.
+> [!NOTE]
+> Microsoft Azure, 1 세대 및 2 세대 Vm VHD 파일 형식으로 온-프레미스에서 Windows 가상 머신 (VM)를 그 어느 때 업로드할 계획 하 고 있는 경우 고정된 크기 디스크를 사용할 수 있습니다. 참조 [Azure에서 2 세대 Vm](https://docs.microsoft.com/azure/virtual-machines/windows/generation-2) Azure에서 지원 되는 2 세대 기능에 자세히 알아보려면 합니다. Windows VHD 또는 VHDX를 업로드 하는 방법은 참조 하세요 [Azure에 업로드할 Windows VHD 또는 VHDX 준비](https://docs.microsoft.com/azure/virtual-machines/windows/prepare-for-upload-vhd-image)합니다.
 
 1 세대 또는 2 세대 가상 컴퓨터를 만드는 사용자가 선택한 설치 및 가상 컴퓨터를 배포 하는 데 사용할 부팅 메서드를 원하는 게스트 운영 체제에 따라 다릅니다. 다음 문 중 하나는 경우에 보안 부팅 등의 기능을 이용 하려면 2 세대 가상 컴퓨터를 만드는 것이 좋습니다.  
 

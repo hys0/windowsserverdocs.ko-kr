@@ -4,25 +4,30 @@ description: 데스크톱 경험, 저장소 마이그레이션 서비스, 시스
 ms.prod: windows-server-threshold
 ms.technology: server-general
 ms.topic: article
-author: coreyp-at-msft
-ms.author: coreyp
+author: jasongerend
+ms.author: jgerend
 ms.localizationpriority: high
-ms.openlocfilehash: 4c454fc397b662e313d5cfb7ed02a83dc7059207
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.date: 05/21/2019
+ms.openlocfilehash: af887c0e1c66a017ee091fb2cab2dc61fa9ac1dc
+ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59871844"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65976550"
 ---
 # <a name="whats-new-in-windows-server-2019"></a>Windows Server 2019의 새로운 기능
 
-이 항목에서는 Windows Server 2019의 새로운 기능 몇 가지를 설명합니다. Windows Server 2019 Windows Server 2016의 강력한 토대를 기반 빌드되고 네 가지 주요 테마의 다양 한 혁신을 제공 합니다. 하이브리드 클라우드, 보안, 응용 프로그램 플랫폼 및 하이퍼 수렴 형 인프라 (HCI). Windows Server 버전 1809의 새로운 기능을 알아보려면 [Windows Server 버전 1809의 새로운 기능](../get-started/whats-new-in-windows-server-1809.md)을 참조하세요.
+> 적용 대상: Windows Server 2019
+
+이 항목에서는 Windows Server 2019의 새로운 기능 몇 가지를 설명합니다. Windows Server 2019 Windows Server 2016의 강력한 토대를 기반 빌드되고 네 가지 주요 테마의 다양 한 혁신을 제공 합니다. 하이브리드 클라우드, 보안, 응용 프로그램 플랫폼 및 하이퍼 수렴 형 인프라 (HCI).
+
+Windows 서버 반기 채널 릴리스의 새로운 기능을 참조 하세요 [What's New in Windows Server](../get-started/whats-new-in-windows-server.md)합니다. 
 
 ## <a name="general"></a>일반
 
 ### <a name="desktop-experience"></a>데스크톱 환경
 
-Windows Server 2019는 장기 서비스 채널(LTSC) 릴리스이므로 <b>데스크톱 환경</b>이 포함되어 있습니다. (반기 채널 때문에 Windows Server, 버전 1709, Windows Server, 버전 1803에서 또는 Windows Server 버전 1809, 포함 되지 않습니다 \(SAC\) 릴리스 디자인에서 데스크톱 경험 포함 되지 않습니다. 즉, 엄격 하 게 서버 Core 및 Nano Server 컨테이너 이미지를 사용 해제합니다.) Windows Server 2016에서와 마찬가지로 운영 체제의 설치 중 선택할 수 있습니다 Server Core 설치 또는 서버 데스크톱 환경을 설치 합니다.
+Windows Server 2019는 장기 서비스 채널(LTSC) 릴리스이므로 <b>데스크톱 환경</b>이 포함되어 있습니다. (반기 채널 \(SAC\) 릴리스 디자인에서 데스크톱 경험 포함 되지 않습니다 하 고 Server Core는 엄격 하 게 Nano Server 컨테이너 이미지를 해제 합니다.) Windows Server 2016에서와 마찬가지로 운영 체제의 설치 중 선택할 수 있습니다 Server Core 설치 또는 서버 데스크톱 환경을 설치 합니다.
 
 ### <a name="system-insights"></a>시스템 인사이트
 
@@ -96,7 +101,7 @@ SDN의 새 기능에 대한 전체 목록은 [Windows Server 2019용 SDN의 새�
 
 - 기본 TCP 정체 공급자를 Cubic으로 변경하여 더 많은 처리량을 제공합니다!
 
-## <a name="storage"></a>스토리지
+## <a name="storage"></a>저장 공간
 
 Windows Server 2019의 저장소에 대한 변경 사항은 다음과 같습니다. 자세한 내용은 [저장소의 새로운 기능](../storage/whats-new-in-storage.md)을 참조하세요.
 
@@ -132,7 +137,7 @@ Windows Server 2019의 저장소에 대한 변경 사항은 다음과 같습니�
 
 장애 조치(failover) 클러스터링의 새로운 기능 목록입니다. 자세한 내용은 [장애 조치(failover) 클러스터링의 새로운 기능](../failover-clustering/whats-new-in-failover-clustering.md)을 참조하세요.
 
-- **클러스터 설정**
+- **클러스터 세트**
 - **Azure에서 인식 클러스터**
 - **도메인 간 클러스터 마이그레이션**
 - **USB 미러링 모니터 서버**
@@ -148,7 +153,7 @@ Windows Server 2019의 저장소에 대한 변경 사항은 다음과 같습니�
 
 이제 동일한 Docker 데몬을 사용하여 동일한 컨테이너 호스트에서 Windows 및 Linux 기반 컨테이너를 실행할 수 있습니다. 이를 통해 응용 프로그램 개발자에게 유연성을 제공하면서 다른 유형의 컨테이너 호스트 환경을 보유할 수 있습니다.
 
-### <a name="building-support-for-kubernetes"></a>Kubernetes에 대한 빌드 지원
+### <a name="built-in-support-for-kubernetes"></a>Kubernetes에 대 한 기본 제공 지원
 
 Windows Server 2019에서는 반기 채널 릴리스부터 Windows에서 Kubernetes를 지원하는 데 필요한 컴퓨팅, 네트워킹 및 저장소 개선을 지속하고 있습니다. 자세한 내용은 이후 Kubernetes 릴리스에서 사용할 수 있습니다.
 

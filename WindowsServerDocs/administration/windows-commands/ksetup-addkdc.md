@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d3e0d38bdec11618561ee4acaa32ffdd06695fab
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 0466bee0b357e896bd971152a56da57612472672
+ms.sourcegitcommit: 08eba714d3ceb5f2dfb5486d6b990da1aa4dcbdd
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59868534"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65564733"
 ---
 # <a name="ksetupaddkdc"></a>ksetup:addkdc
 
@@ -53,7 +53,7 @@ ksetup /addkdc <RealmName> [<KDCName>]
 ```
 ksetup /addkdc CORP.CONTOSO.COM mitkdc.contoso.com
 ```
-로컬 컴퓨터 계정 암호를 설정 하려면 이전 명령과 같이 동일한 컴퓨터의 명령줄에서 Ksetup 도구를 실행 "p@sswrd1%?. 컴퓨터를 다시 시작 합니다.
+로컬 컴퓨터 계정 암호를 설정 하려면 이전 명령과 같이 동일한 컴퓨터의 명령줄에서 Ksetup 도구를 실행 "p@sswrd1%"입니다. 컴퓨터를 다시 시작 합니다.
 ```
 Ksetup /setcomputerpassword p@sswrd1%
 ```

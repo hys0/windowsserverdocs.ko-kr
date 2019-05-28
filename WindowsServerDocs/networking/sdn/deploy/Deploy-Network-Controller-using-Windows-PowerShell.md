@@ -13,12 +13,12 @@ ms.assetid: 2448d381-55aa-4c14-997a-202c537c6727
 ms.author: pashort
 author: shortpatti
 ms.date: 08/23/2018
-ms.openlocfilehash: 31c1579dc840f6f4eb805ac4e10f51192a6b4c99
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d671d044896ae9e71edad8302f06f2a21fe50772
+ms.sourcegitcommit: 21165734a0f37c4cd702c275e85c9e7c42d6b3cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59816194"
+ms.lasthandoff: 05/03/2019
+ms.locfileid: "65034558"
 ---
 # <a name="deploy-network-controller-using-windows-powershell"></a>Windows PowerShell을 사용하여 네트워크 컨트롤러 배포
 
@@ -31,19 +31,19 @@ ms.locfileid: "59816194"
 
 이 항목에는 다음 섹션이 수록되어 있습니다.
 
-- [네트워크 컨트롤러 서버 역할 설치](#bkmk_role)
+- [네트워크 컨트롤러 서버 역할 설치](#install-the-network-controller-server-role)
 
-- [네트워크 컨트롤러 클러스터 구성](#bkmk_configure)
+- [네트워크 컨트롤러 클러스터 구성](#configure-the-network-controller-cluster)
 
-- [네트워크 컨트롤러 응용 프로그램 구성](#bkmk_app)
+- [네트워크 컨트롤러 응용 프로그램 구성](#configure-the-network-controller-application)
 
-- [네트워크 컨트롤러 배포 유효성 검사](#bkmk_validation)
+- [네트워크 컨트롤러 배포 유효성 검사](#network-controller-deployment-validation)
 
-- [네트워크 컨트롤러에 대 한 추가 Windows PowerShell 명령](#bkmk_ps)
+- [네트워크 컨트롤러에 대 한 추가 Windows PowerShell 명령](#additional-windows-powershell-commands-for-network-controller)
 
-- [샘플 네트워크 컨트롤러 구성 스크립트](#bkmk_script)
+- [샘플 네트워크 컨트롤러 구성 스크립트](#sample-network-controller-configuration-script)
 
-- [비-Kerberos 배포에 대 한 배포 후 단계](#bkmk_nonkerb)
+- [비-Kerberos 배포에 대 한 배포 후 단계](#post-deployment-steps-for-non-kerberos-deployments)
 
 ## <a name="install-the-network-controller-server-role"></a>네트워크 컨트롤러 서버 역할 설치
 

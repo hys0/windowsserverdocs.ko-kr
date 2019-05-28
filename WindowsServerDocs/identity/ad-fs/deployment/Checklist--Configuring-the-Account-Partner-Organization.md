@@ -9,16 +9,14 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: df8057bf8afb51cbd9ca2ec704144b5863bdf064
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 5c01daa86b52f3f175d763d09b4c779affef9681
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59878984"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192422"
 ---
 # <a name="checklist-configuring-the-account-partner-organization"></a>검사 목록: 계정 파트너 조직 구성
-
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 계정 파트너 조직의 웹에 액세스 하는 사용자가 포함\-리소스 파트너에 대 한 응용 프로그램을 기반으로 합니다. 이 조직에서 관리자는 AD FS 관리 스냅인을 사용 해야\-리소스 파트너 조직과 트러스트 관계를 나타내는 신뢰 당사자 트러스트를 만들에 있습니다. 차례로 리소스 파트너 관리자가 신뢰 하고자 하는 각 계정 파트너 조직에 대 한 클레임 공급자 트러스트를 만들어야 합니다.  
   
@@ -45,7 +43,7 @@ ms.locfileid: "59878984"
 |![계정 파트너 조직 구성](media/icon_checkboxo.gif)|AD FS에 추가할 특성 저장소의 유형을 결정 합니다. 그런 다음 AD FS 관리 스냅인을 사용 하 여 특성 저장소 추가\-에 있습니다.|![계정 파트너 조직 구성](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[The Role of Attribute Stores](../../ad-fs/technical-reference/The-Role-of-Attribute-Stores.md)<br /><br />![계정 파트너 조직 구성](media/15dd35b6-6cc6-421f-93f8-7109920e7144.gif)[특성 저장소 추가](../../ad-fs/operations/Add-an-Attribute-Store.md)|  
 |![계정 파트너 조직 구성](media/icon_checkboxo.gif)|보내야 할 경우 클레임을 또는 AD FS 1.0 또는 1.1 페더레이션 서비스 중 하나를 사용 하는 리소스 파트너의 클레임을 사용할 AD FS의 이전 버전을 사용 하 여 상호 운용 하도록 AD FS를 구성 하는 방법에 대 한 정보에 대 한 오른쪽에 대 한 링크를 참조 하세요. 리소스 파트너 조직의 AD FS을 사용 하 여 송신 또는 조직에 대 한 클레임을 사용 하는, 하는 경우이 단계를 건너뛰고이 검사 목록에서 다음 작업을 진행할 수 있습니다.|![계정 파트너 조직 구성](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[AD FS와의 상호 운용성에 대 한 계획 1.x](https://technet.microsoft.com/library/ff678040.aspx)|  
 |![계정 파트너 조직 구성](media/icon_checkboxo.gif)|계정 파트너 조직의 첫 번째 페더레이션 서버를 배포한 후 AD FS 관리 스냅인을 사용 하는 신뢰 당사자 트러스트 관계를 만들\-에 있습니다. 리소스 파트너 데이터를 수동으로 입력하거나 리소스 파트너 조직의 관리자가 제공한 페더레이션 메타데이터 URL을 사용하여 신뢰 당사자 트러스트를 구축할 수 있습니다. 또한, 페더레이션 메타데이터를 사용하여 리소스 파트너에 대한 데이터를 자동으로 검색할 수 있습니다. **참고:** 리소스 파트너가 페더레이션 메타데이터를 게시하거나 사용자에게 파일의 복사본을 제공할 수 있는 경우 시간을 절약할 수 있으므로 데이터를 자동으로 검색하는 것이 좋습니다.|![계정 파트너 조직 구성](media/15dd35b6-6cc6-421f-93f8-7109920e7144.gif)[는 수동으로 신뢰 당사자 트러스트 만들기](../../ad-fs/operations/Create-a-Relying-Party-Trust.md)<br /><br />![계정 파트너 조직 구성](media/15dd35b6-6cc6-421f-93f8-7109920e7144.gif)[는 신뢰 당사자 트러스트를 사용 하 여 페더레이션 메타 데이터 만들기](../../ad-fs/operations/Create-a-Relying-Party-Trust.md)|  
-|![계정 파트너 조직 구성](media/icon_checkboxo.gif)|조직의 요구에 따라 하나 만들거나 지정 된 각 신뢰 당사자 트러스트에 대 한 더 많은 클레임 규칙 집합 AD FS 관리 스냅인에서\-에서 클레임 적절 하 게 실행 될 수 있도록 합니다.|![계정 파트너 조직 구성](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[검사 목록: 신뢰 당사자 트러스트에 대 한 클레임 규칙 만들기](Checklist--Creating-Claim-Rules-for-a-Relying-Party-Trust.md)|  
+|![계정 파트너 조직 구성](media/icon_checkboxo.gif)|조직의 요구에 따라 하나 만들거나 지정 된 각 신뢰 당사자 트러스트에 대 한 더 많은 클레임 규칙 집합 AD FS 관리 스냅인에서\-에서 클레임 적절 하 게 실행 될 수 있도록 합니다.|![계정 파트너 조직 구성](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[검사 목록: 신뢰 당사자 트러스트를 위한 클레임 규칙 만들기](Checklist--Creating-Claim-Rules-for-a-Relying-Party-Trust.md)|  
 |![계정 파트너 조직 구성](media/icon_checkboxo.gif)|클레임 설명 아직 없는 경우 만들어야 하는 조직의 요구를 충족 합니다. AD FS 노출 되는 클레임 설명의 기본 집합을 기본 제공 AD FS 관리 스냅인에서\-에 있습니다.|![계정 파트너 조직 구성](media/15dd35b6-6cc6-421f-93f8-7109920e7144.gif)[클레임 설명 추가](../../ad-fs/operations/Add-a-Claim-Description.md)|  
 |![계정 파트너 조직 구성](media/icon_checkboxo.gif)|조직 id 위임을 사용 하 여 권한을 부여 하거나 "역할" 하거나 다른 사용자를 가장할 수 있는 지정 된 계정이 제한 여부를 확인 합니다. 이 작업은 종종 프런트 때 필요\-웹 응용 프로그램 백 상호 작용 해야 종료\-웹 서비스를 종료 합니다.|![계정 파트너 조직 구성](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Use Identity Delegation 하는 경우](https://technet.microsoft.com/library/dd807122.aspx)|  
 |![계정 파트너 조직 구성](media/icon_checkboxo.gif)|페더레이션 하 여 클라이언트 컴퓨터를 준비 합니다.<br /><br />-클라이언트 브라우저에 대 한 신뢰할 수 있는 사이트 목록에 계정 파트너 페더레이션 서버에 대 한 URL을 추가 합니다.<br />사용 하 여 그룹 정책 적절 한 Secure Sockets Layer에 적용할 \(SSL\) 클라이언트 컴퓨터에 인증서입니다.|![계정 파트너 조직 구성](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[계정 파트너의 클라이언트 컴퓨터 준비](https://technet.microsoft.com/library/dd807114(v=ws.11).aspx)<br /><br />![계정 파트너 조직 구성](media/15dd35b6-6cc6-421f-93f8-7109920e7144.gif)[계정 페더레이션 서버를 신뢰 하도록 클라이언트 컴퓨터 구성](Configure-Client-Computers-to-Trust-the-Account-Federation-Server.md)<br /><br />![계정 파트너 조직 구성](media/15dd35b6-6cc6-421f-93f8-7109920e7144.gif)[그룹 정책을 사용 하 여 클라이언트 컴퓨터에 대 한 인증서 배포](Distribute-Certificates-to-Client-Computers-by-Using-Group-Policy.md)| 

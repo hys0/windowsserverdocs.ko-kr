@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ms.date: 02/15/2019
-ms.openlocfilehash: f4fd9f69e75ed80bbdb345b4041c2337c65ec2e6
-ms.sourcegitcommit: 2977c707a299929c6ab0d1e0adab2e1c644b8306
+ms.openlocfilehash: ff1f949c764473a63eafa25346949d710699dbd1
+ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63742602"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66222727"
 ---
 # <a name="get-started-with-windows-admin-center"></a>Windows Admin Center 시작
 
@@ -114,7 +114,7 @@ Windows Server에서 Windows Admin Center 서비스 모드에서 실행 중인 �
 
 **로컬 관리자 암호 솔루션 (랩)**
 
-환경에서 사용 하는 경우 [LAPS](https://technet.microsoft.com/mt227395.aspx), LAPS 자격 증명을 사용 하 여 관리 되는 노드를 사용 하 여 인증 합니다. **이 시나리오를 사용 하세요** [의견](http://aka.ms/WACFeedback)합니다.
+환경에서 사용 하는 경우 [LAPS](https://technet.microsoft.com/mt227395.aspx), 및 Windows 10 PC에 설치 된 Windows Admin Center LAPS 자격 증명을 사용 하 여 관리 되는 노드를 사용 하 여 인증 합니다. **이 시나리오를 사용 하세요** [의견](http://aka.ms/WACFeedback)합니다.
 
 ## <a name="using-tags-to-organize-your-connections"></a>태그를 사용 하 여 연결을 구성할 수
 

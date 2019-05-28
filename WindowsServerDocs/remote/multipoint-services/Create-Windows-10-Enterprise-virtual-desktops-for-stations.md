@@ -13,12 +13,12 @@ ms.assetid: 63f08b5b-c735-41f4-b6c8-411eff85a4ab
 author: evaseydl
 ms.author: evas
 manager: scottman
-ms.openlocfilehash: befd784f4a2179c121992057e298d4ea9068c11b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 0aa81ef3633adf27a25b45b3b7c00082d83bf0bb
+ms.sourcegitcommit: 21165734a0f37c4cd702c275e85c9e7c42d6b3cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59862084"
+ms.lasthandoff: 05/03/2019
+ms.locfileid: "65034628"
 ---
 # <a name="create-windows-10-enterprise-virtual-desktops-for-stations"></a>스테이션용 Windows 10 Enterprise 가상 데스크톱 만들기
 MultiPoint 서비스에서이 옵션 구성은 필수 응용 프로그램가 각 사용자에 대 한 클라이언트 운영 체제의 자체 인스턴스를 필요로 하는 경우에 주로 사용 됩니다. Windows 서버에 설치할 수 없는 응용 프로그램 및 여러 인스턴스를 동일한 호스트 컴퓨터에서 실행 되지 않는 응용 프로그램을 예로 들 수 있습니다.  
@@ -44,13 +44,13 @@ MultiPoint 서비스에서이 옵션 구성은 필수 응용 프로그램가 각
 ## <a name="procedures"></a>절차  
 다음 절차에 따라 수행할 수 있는 작업:  
   
--   [가상 데스크톱 템플릿 만들기](#a-namebkmkcreateatemplateacreate-a-template-for-virtual-desktops)  
+-   [가상 데스크톱 템플릿 만들기](#create-a-template-for-virtual-desktops)  
   
--   [템플릿에서 가상 데스크톱 만들기](#BKMK_CreateVirtualDesktopsfromTemplate)  
+-   [템플릿에서 가상 데스크톱 만들기](#create-virtual-machine-desktops-from-the-template)  
   
--   [기존 가상 데스크톱 템플릿 복사](#BKMK_CopyExiistingVirtualDesktopTemplate)  
+-   [기존 가상 데스크톱 템플릿 복사](#copy-an-existing-virtual-desktop-template)  
   
-### <a name="BKMK_CreateaTemplate"></a>가상 데스크톱 템플릿 만들기  
+### <a name="create-a-template-for-virtual-desktops"></a>가상 데스크톱 템플릿 만들기  
 가상 데스크톱에 대 한 템플릿을 만들려면 MultiPoint Server의 가상 데스크톱 기능을 설정 해야 합니다.  
   
 ##### <a name="to-enable-the-virtual-desktop-feature"></a>가상 데스크톱 기능을 사용 하도록 설정 하려면  
@@ -98,7 +98,7 @@ MultiPoint 서비스에서이 옵션 구성은 필수 응용 프로그램가 각
 4.  사용자 지정, 클릭 하려는 템플릿을 선택 **사용자 지정 서식 파일**, 를 클릭 하 고 **확인**합니다.  
   
     > [!NOTE]  
-    > 가상 데스크톱 스테이션을 만들려면 사용 되지 않은 템플릿을 사용할 수 있습니다. 이미 사용 중인 서식 파일을 업데이트 하려는 경우 서식 파일의 복사본을 사용 하 여 해야는 **템플릿 가져오기** 나중에 설명 된 작업에서 [기존 가상 데스크톱 템플릿 복사](#BKMK_CopyExiistingVirtualDesktopTemplate)합니다.  
+    > 가상 데스크톱 스테이션을 만들려면 사용 되지 않은 템플릿을 사용할 수 있습니다. 이미 사용 중인 서식 파일을 업데이트 하려는 경우 서식 파일의 복사본을 사용 하 여 해야는 **템플릿 가져오기** 나중에 설명 된 작업에서 [기존 가상 데스크톱 템플릿 복사](#copy-an-existing-virtual-desktop-template)합니다.  
   
     Hyper-v에서 템플릿이 열립니다 **VM 연결** 창 및 자동 로그온 내장 된 Administrator 계정을 사용 하 여 수행 됩니다.  
   
@@ -111,7 +111,7 @@ MultiPoint 서비스에서이 옵션 구성은 필수 응용 프로그램가 각
   
 6.  시스템 구성에서는 완료 된 후 두 번 클릭 하 고 **CompleteCustomization** Sysprep를 실행 한 다음 템플릿을를 종료 하는 관리자가 바탕 화면에 바로 가기. 사용자 지정 하는 동안 Sysprep 도구는 이미지를 만들기 위해 Windows 설치를 준비 하려면 모든 고유한 시스템 정보를 제거 합니다.  
   
-### <a name="BKMK_CreateVirtualDesktopsfromTemplate"></a>템플릿에서 가상 머신 데스크톱 만들기  
+### <a name="create-virtual-machine-desktops-from-the-template"></a>템플릿에서 가상 컴퓨터 데스크톱 만들기  
 가상 데스크톱 템플릿으로 수, 가상 데스크톱 만들기를 시작할 준비가 되었습니다. 데스크톱을 원하는 대로 구성 합니다. MultiPoint Server 컴퓨터에 연결 된 각 장치에 대 한 가상 데스크톱 만들어질 수 있습니다. 다음에 사용자를 스테이션에 로그온 하기 전에 표시 된 세션 기반 데스크톱 대신 가상 데스크톱이 표시 됩니다.  
   
 > [!NOTE]  
@@ -141,7 +141,7 @@ MultiPoint 서비스에서이 옵션 구성은 필수 응용 프로그램가 각
 > [!NOTE]  
 > 사용자 계정을 로컬 스테이션 중 하나에 로그온 하는 경우에 새로 만든된 스테이션 가상 데스크톱의 하나에 연결 하려면 스테이션을 가져오려는 세션에서 로그 아웃 해야 합니다.  
   
-### <a name="BKMK_CopyExiistingVirtualDesktopTemplate"></a>기존 가상 데스크톱 템플릿 복사  
+### <a name="copy-an-existing-virtual-desktop-template"></a>기존 가상 데스크톱 템플릿 복사  
 사용자 지정 하 고 사용할 수 있는 기존 가상 데스크톱 템플릿 복사본을 만들려면 다음 절차를 사용 합니다. 이 다음과 같은 상황에서 유용할 수 있습니다.  
   
 -   복사할 마스터 템플릿 MultiPoint Server 호스트 컴퓨터에서 네트워크 공유에서 마스터 템플릿에서 가상 데스크톱 스테이션을 만들 수 있도록 합니다.  

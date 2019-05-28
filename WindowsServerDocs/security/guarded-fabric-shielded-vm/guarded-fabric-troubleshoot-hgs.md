@@ -7,12 +7,12 @@ ms.assetid: 424b8090-0692-49a6-9dc4-3c0e77d74b80
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.openlocfilehash: 2dc9a612fa9760a6ca5f05efe1c287fd0872a1d8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 05888ce57b5b922fc330d9deab430d329fede69b
+ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59861254"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66222529"
 ---
 # <a name="troubleshooting-the-host-guardian-service"></a>호스트 보호자 서비스 문제 해결
 
@@ -93,7 +93,7 @@ $cert.Acl = $cert.Acl | Add-AccessRule $gMSA Read Allow
 HSM 브랜드/시리즈      | 제안
 ----------------------|-------------
 Gemalto SafeNet       | 인증서 요청 파일에서 키 사용량 속성은 설정 확인 0xa0, 서명 및 암호화에 사용할 인증서를 허용 합니다. GMSA 계정에 부여 해야 뿐만 *읽을* 로컬 인증서 관리자 도구를 사용 하 여 개인 키에 대 한 액세스 (위의 단계 참조).
-Thales nShield        | HGS 노드마다 서명 및 암호화 키가 포함 된 보안 권역에 대 한 액세스 권한이 있는지 확인 합니다. GMSA 관련 사용 권한을 구성할 필요가 없습니다.
+nCipher nShield        | HGS 노드마다 서명 및 암호화 키가 포함 된 보안 권역에 대 한 액세스 권한이 있는지 확인 합니다. GMSA 관련 사용 권한을 구성할 필요가 없습니다.
 Utimaco CryptoServers | 인증서 요청 파일의 키 사용 속성이 설정 확인 0x13, 암호화, 해독 및 서명에 사용할 인증서를 허용 합니다.
 
 ### <a name="certificate-requests"></a>인증서 요청

@@ -7,12 +7,12 @@ ms.topic: article
 author: phstee
 ms.author: NedPyle; Danlo; DKruse
 ms.date: 4/14/2017
-ms.openlocfilehash: 93718cf13f28cde8f25b35b42ce20ca75c6fa13c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 337716792a4bb3cf730b723df3abe1029631426b
+ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59832064"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66222498"
 ---
 # <a name="performance-tuning-for-smb-file-servers"></a>SMB 파일 서버 성능 조정
 
@@ -106,10 +106,8 @@ Windows Server 2012에서 도입 된 다음 SMB 성능 카운터 및 SMB 2 및 �
     기본값은 각각 512에서 8192입니다. 이러한 매개 변수는 지정된 된 경계 내에서 동적으로 클라이언트 작업 동시성을 제한 하는 서버를 사용 합니다. 일부 클라이언트에 높은 대역폭, 대기 시간이 긴 연결을 통해 파일 복사 하 여 한도가 더 높은 동시성, 예를 들어, 향상 된 처리량을 얻을 수 있습니다.
     
     >[!TIP]
-    > Windows 10 및 Server 2016 이전의 Smb2CreditsMin 사이의 Smb2CreditsMax 최적의 부여 크레딧 수를 확인 하려고 하는 알고리즘을 기반으로 동적으로 다양 한 클라이언트에 부여 하는 학점 수 기반 네트워크 대기 시간 및 크레딧 사용량입니다. Windows 10 및 Server 2016에서, 무조건 크레딧 크레딧의 구성 된 최대 수는 요청 시 권한을 부여 하려면 SMB 서버 변경 되었습니다. 이 변경의 일환으로, 조정 메커니즘을 서버 메모리가 부족할 때 각 연결의 신용 창의 크기를 줄일 수, 신용 제거 되었습니다. 서버 메모리가 부족 하므로 때 제한 트리거한 커널의 메모리 이벤트가 신호 (< 몇 MB) 쓸모 없게 하는 것에 대 한 합니다. 서버에는 더 이상 신용 windows 축소 하므로 Smb2CreditsMin 설정 기능이 더 이상 필요 하 고 이제 무시 됩니다.
+    > Windows 10 및 Windows Server 2016 이전의 클라이언트에 부여 하는 학점 수가 다양 한 동적으로 Smb2CreditsMin 사이의 네트워크 대기 시간에 따라 최적의 부여할 학점 수를 확인 하려고 하는 알고리즘을 기반으로 Smb2CreditsMax 및 크레딧 사용 합니다. Windows 10 및 Windows Server 2016에서 무조건 크레딧 크레딧의 구성 된 최대 수는 요청 시 권한을 부여 하려면 SMB 서버 변경 되었습니다. 이 변경의 일환으로, 조정 메커니즘을 서버 메모리가 부족할 때 각 연결의 신용 창의 크기를 줄일 수, 신용 제거 되었습니다. 서버 메모리가 부족 하므로 때 제한 트리거한 커널의 메모리 이벤트가 신호 (< 몇 MB) 쓸모 없게 하는 것에 대 한 합니다. 서버에는 더 이상 신용 windows 축소 하므로 Smb2CreditsMin 설정 기능이 더 이상 필요 하 고 이제 무시 됩니다.
 
-
-    >[!TIP]
     > SMB 클라이언트 공유를 모니터링할 수 있습니다\\신용 지연 되는 경우 수/초에 크레딧 사용 하 여 문제가 있는지 확인 합니다.
 
 - **AdditionalCriticalWorkerThreads**
@@ -134,7 +132,8 @@ Windows Server 2012에서 도입 된 다음 SMB 성능 카운터 및 SMB 2 및 �
     >[!TIP]
     > 값을 늘려야 할 수 있는 표시가 SMB2 작업 큐에 점점 매우 큰 경우 (성능 카운터 ' 서버 작업 큐\\Queue Length\\SMB2 비차단 \*' ~ 100 보다 일관 되 게).
 
-     
+    >[!Note]
+    >Windows 10 및 Windows Server 2016에서 MaxThreadsPerQueue 제공 되지 않습니다. 스레드 풀 스레드 수 "20 * NUMA 노드에서 프로세서에에서 개수"입니다.  
 
 -   **AsynchronousCredits**
 
@@ -146,7 +145,7 @@ Windows Server 2012에서 도입 된 다음 SMB 성능 카운터 및 SMB 2 및 �
 
 ### <a name="smb-server-tuning-example"></a>SMB 서버 튜닝 예제
 
-다음 설정은 대부분의 경우에서 파일 서버의 성능에 대 한 컴퓨터를 최적화할 수 있습니다. 설정이 모든 컴퓨터에 적절 한 또는 최적의있지 않습니다. 개별 설정의 영향을 적용 하기 전에 평가 해야 합니다.
+다음 설정은 대부분의 경우에서 파일 서버의 성능에 대 한 컴퓨터를 최적화할 수 있습니다. 이 설정이 모든 컴퓨터에서 최적이거나 적합한 것은 아닙니다. 이 설정을 적용하기 전에 개별 설정이 미치게 될 영향을 먼저 평가해야 합니다.
 
 | 매개 변수                       | 값 | 기본값 |
 |---------------------------------|-------|---------|

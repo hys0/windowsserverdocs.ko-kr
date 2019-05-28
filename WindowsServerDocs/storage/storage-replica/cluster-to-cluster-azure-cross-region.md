@@ -9,14 +9,17 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage-replica
 manager: mchad
-ms.openlocfilehash: 41f435c3d537cbfd204dfa869d750b22200deb33
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d9999f786639ff4aa303ed34ade14849cda8feec
+ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59891134"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65475909"
 ---
 # <a name="cluster-to-cluster-storage-replica-cross-region-in-azure"></a>Azure의 교차 지역 클러스터 간 저장소 복제
+
+> 적용 대상: Windows Server 2019, Windows Server 2016, Windows Server (반기 채널)
+
 Azure에서 응용 프로그램의 지역 간 클러스터 간 저장소 복제를 구성할 수 있습니다. 아래 예제에서 두 노드 클러스터를 사용 하지만 클러스터 간 저장소 복제본 2 개 노드 클러스터로 제한 되지 않습니다. 아래 그림은 서로 통신할 수 있습니다, 같은 도메인에 있으며이 지역 간 2 노드 저장소 공간 다이렉트 클러스터.
 
 프로세스의 전체 연습에 대 한 아래 비디오를 시청 하세요.
@@ -31,7 +34,7 @@ Azure에서 응용 프로그램의 지역 간 클러스터 간 저장소 복제�
 
     예를 들어 **SR AZ2AZ** 에서 **미국 서 부 2** 및 **SR AZCROSS** 에서 **미국 중서부**위와 같이 합니다.
 
-2. 2 개를 만든 [가용성 집합](https://ms.portal.azure.com/#create/Microsoft.AvailabilitySet-ARM), 각 클러스터에 대 한 각 리소스 그룹
+2. 2 개를 만든 [가용성 집합](https://ms.portal.azure.com/#create/Microsoft.AvailabilitySet-ARM), 각 클러스터에 대 한 각 리소스 그룹의 하나입니다.
     - 가용성 집합 (**az2azAS1**)에서 (**SR-AZ2AZ**)
     - 가용성 집합 (**azcross-AS**)에서 (**SR-AZCROSS**)
 
@@ -41,7 +44,7 @@ Azure에서 응용 프로그램의 지역 간 클러스터 간 저장소 복제�
 
 4. 두 네트워크 보안 그룹 만들기
    - 만들기는 [네트워크 보안 그룹](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM) (**az2az NSG**)의 첫 번째 리소스 그룹 (**SR AZ2AZ**).
-   - 만들기는 [네트워크 보안 그룹](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM) (**azcross NSG**)의 두 번째 리소스 그룹 (**SR AZCROSS**). 
+   - 만들기는 [네트워크 보안 그룹](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM) (**azcross NSG**)의 두 번째 리소스 그룹 (**SR AZCROSS**).
 
    네트워크 보안 그룹 모두에 RDP:3389에 대 한 인바운드 보안 규칙을 추가 합니다. 설치를 마친 후이 규칙을 제거 하도록 선택할 수 있습니다.
 
@@ -72,10 +75,10 @@ Azure에서 응용 프로그램의 지역 간 클러스터 간 저장소 복제�
 
    다음은 예제에 대 한 PowerShell 명령
    ```powershell
-      New-Cluster -Name SRAZC1 -Node az2az1,az2az2 – StaticAddress 10.3.0.100
+      New-Cluster -Name SRAZC1 -Node az2az1,az2az2 –StaticAddress 10.3.0.100
    ```
    ```powershell
-      New-Cluster -Name SRAZCross -Node azcross1,azcross2 – StaticAddress 10.0.0.10
+      New-Cluster -Name SRAZCross -Node azcross1,azcross2 –StaticAddress 10.0.0.10
    ```
 
 7. 저장소 공간 다이렉트를 사용 하도록 설정 합니다.
@@ -172,7 +175,7 @@ Azure에서 응용 프로그램의 지역 간 클러스터 간 저장소 복제�
    ```powershell
      Grant-SRAccess -ComputerName az2az1 -Cluster SRAZCross
    ```
-또한이 명령을 실행 하는 Windows Server 2016 사용 하는 경우:
+Windows Server 2016을 사용 하는 경우 다음도이 명령을 실행 합니다.
 
    ```powershell
      Grant-SRAccess -ComputerName azcross1 -Cluster SRAZC1

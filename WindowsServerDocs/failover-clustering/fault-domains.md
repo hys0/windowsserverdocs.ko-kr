@@ -8,23 +8,41 @@ ms.technology: storage-failover-clustering
 ms.topic: article
 author: cosmosdarwin
 ms.date: 09/16/2016
-ms.openlocfilehash: f5c64bb8f8b7d4b8d13c76c4e94cfcf52ee32c30
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 18b7a932cc8a22c356fde89baa316c0532ebc374
+ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59821474"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65475999"
 ---
-# <a name="fault-domain-awareness-in-windows-server-2016"></a>Windows Server 2016의 장애 도메인 인식
+# <a name="fault-domain-awareness"></a>오류 도메인 인식
 
-> 적용 대상: Windows Server 2016
+> 적용 대상: Windows Server 2019 및 Windows Server 2016
 
-장애 조치(failover) 클러스터링을 사용하면 여러 서버가 함께 작동하여 고가용성을 제공하거나, 또 다른 방식으로 노드 내결함성을 제공할 수 있습니다. 하지만 오늘날의 기업은 어느 때 보다 뛰어난 인프라 가용성을에서 요구 합니다. 클라우드와 같은 가동 시간을 달성하려면 섀시 고장, 랙 가동 중단 또는 자연 재해와 같은 발생할 가능성이 거의 없는 사고로부터 보호해야 합니다. 이유는 Windows Server 2016의 장애 조치 클러스터링을 섀시, 랙 및 사이트 내결함성도 소개 합니다.
+장애 조치(failover) 클러스터링을 사용하면 여러 서버가 함께 작동하여 고가용성을 제공하거나, 또 다른 방식으로 노드 내결함성을 제공할 수 있습니다. 하지만 오늘날의 기업은 어느 때 보다 뛰어난 인프라 가용성을에서 요구 합니다. 클라우드와 같은 가동 시간을 달성하려면 섀시 고장, 랙 가동 중단 또는 자연 재해와 같은 발생할 가능성이 거의 없는 사고로부터 보호해야 합니다. 때문에 섀시, 랙 및 사이트 내결함성도 도입 된 Windows Server 2016의 장애 조치 클러스터링 합니다.
+
+## <a name="fault-domain-awareness"></a>오류 도메인 인식
 
 장애 도메인과 내결함성을 매우 밀접한 관련이 있는 개념입니다. 장애 도메인은 단일 실패 지점을 공유하는 하드웨어 구성 요소 집합입니다. 특정 수준까지 결함에 견디려면 해당 수준에 여러 장애 도메인이 필요합니다. 예를 들어 랙 내결함성을 위해서는 서버와 데이터를 여러 랙에 분산시켜야 합니다.
 
 이 짧은 비디오는 Windows Server 2016의 장애 도메인의 개요를 제공 합니다.  
 [![Windows Server 2016에서 장애 도메인에 대 한 개요를 시청 하려면이 이미지를 클릭 합니다.](media/Fault-Domains-in-Windows-Server-2016/Part-1-Fault-Domains-Overview.jpg)](https://channel9.msdn.com/Blogs/windowsserver/Fault-Domain-Awareness-in-WS2016-Part-1-Overview)
+
+### <a name="fault-domain-awareness-in-windows-server-2019"></a>Windows Server 2019의 장애 도메인 인식
+
+장애 도메인 인식을 Windows Server 2019에서 사용할 수 있지만 기본적으로 비활성화 되어 Windows 레지스트리를 통해 사용할 수 있어야 합니다.
+
+Windows Server 2019의 장애 도메인 인식 하려면, Windows 레지스트리로 이동 하 고 (Get 클러스터)를 설정 합니다. 1로 AutoAssignNodeSite 레지스트리 키입니다.
+
+```Registry
+    (Get-Cluster).AutoAssignNodeSite=1
+```
+
+Windows 2019의 장애 도메인 인식 하지 않으려면 Windows 레지스트리로 이동 하 고 (Get 클러스터)를 설정 합니다. 0으로 AutoAssignNodeSite 레지스트리 키입니다.
+
+```Registry
+    (Get-Cluster).AutoAssignNodeSite=0
+```
 
 ## <a name="benefits"></a>이점
 - **저장소 공간을 저장소 공간 다이렉트를 포함 하 여 데이터 보안을 최대화 하기 위해 장애 도메인을 사용 합니다.**  
@@ -103,7 +121,7 @@ Remove-ClusterFaultDomain -Name "Rack A"
 ```
 
 ### <a name="defining-fault-domains-with-xml-markup"></a>XML 태그를 사용하여 장애 도메인 정의
-XML 기반 구문을 사용하여 장애 도메인을 지정할 수 있습니다. 자주 사용하는 텍스트 편집기(예: Visual Studio Code(*[여기](https://code.visualstudio.com/)* 에서 무료로 제공) 또는 메모장)를 사용하여 XML 문서를 만들어 저장하고 재사용할 수 있습니다.  
+XML 기반 구문을 사용하여 장애 도메인을 지정할 수 있습니다. 자주 사용하는 텍스트 편집기(예: Visual Studio Code( *[여기](https://code.visualstudio.com/)* 에서 무료로 제공) 또는 메모장)를 사용하여 XML 문서를 만들어 저장하고 재사용할 수 있습니다.  
 
 이 짧은 비디오에서는 XML 태그를 사용하여 장애 도메인을 지정하는 방법을 보여 줍니다.
 
@@ -176,5 +194,6 @@ Set-ClusterFaultDomainXML -XML $xml
 [![장애 도메인에 위치 설명자를 추가 하는 값을 보여 주는 짧은 비디오를 보려면 클릭](media/Fault-Domains-in-Windows-Server-2016/part-4-location-description.jpg)](https://channel9.msdn.com/Blogs/windowsserver/Fault-Domain-Awareness-in-WS2016-Part-4-Location-Description)
 
 ## <a name="see-also"></a>관련 항목  
--   [Windows Server 2016](../get-started/windows-server-2016.md)  
--   [Windows Server 2016의에서 저장소 공간 다이렉트](../storage/storage-spaces/storage-spaces-direct-overview.md) 
+- [Windows Server 2019 시작](https://docs.microsoft.com/windows-server/get-started-19/get-started-19)  
+- [Windows Server 2016 시작](https://docs.microsoft.com/windows-server/get-started/server-basics)  
+-   [저장소 공간 다이렉트 개요](../storage/storage-spaces/storage-spaces-direct-overview.md) 

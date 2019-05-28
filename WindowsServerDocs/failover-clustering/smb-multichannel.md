@@ -7,18 +7,18 @@ ms.topic: article
 author: RobHindman
 ms.author: robhind
 ms.date: 09/15/2016
-ms.openlocfilehash: 45d8364adf9d3db24a8e6d8f7bc91178ce7d1551
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 1b9271ceac99ac9b21cbfac902ba133d66815df4
+ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59881134"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65476122"
 ---
 # <a name="simplified-smb-multichannel-and-multi-nic-cluster-networks"></a>간소화된 SMB 다중 채널 및 다중 NIC 클러스터 네트워크
 
-> 적용 대상: Windows Server (반기 채널), Windows Server 2016
+> 적용 대상: Windows Server 2019, Windows Server 2016
 
-SMB 다중 채널 및 다중-간체<abbr title="네트워크 인터페이스 카드">NIC</abbr> 클러스터 네트워크는 동일한 클러스터 네트워크 서브넷에 여러 Nic 사용 하도록 설정 하 고 자동으로 SMB 다중 채널을 활성화 하는 Windows Server 2016의 새로운 기능입니다.  
+SMB 다중 채널 및 다중-간체<abbr title="네트워크 인터페이스 카드">NIC</abbr> 클러스터 네트워크는 동일한 클러스터 네트워크 서브넷에 여러 Nic 사용 하도록 설정 하 고 자동으로 SMB 다중 채널을 활성화 하는 기능입니다.
 
 간소화 된 SMB 다중 채널 및 다중 NIC 클러스터 네트워크는 다음과 같은 이점을 제공 합니다.  
 - 모든 Nic는 동일한 스위치를 사용 하는 노드에서 자동으로 인식 장애 조치 클러스터링 동일한 / 서브넷-추가 구성이 필요 없는 합니다.  
@@ -31,7 +31,7 @@ SMB 다중 채널 및 다중-간체<abbr title="네트워크 인터페이스 카
 -   동일한 스위치를 사용 하 여 서버당 여러 Nic / 서브넷입니다.  
 
 ## <a name="how-to-take-advantage-of-multi-nic-clusters-networks-and-simplified-smb-multichannel"></a>네트워크 및 간소화 된 SMB 다중 채널 클러스터 하는 다중 NIC 기능을 활용 하는 방법  
-이 섹션에서는 Windows Server 2016의 새로운 다중 NIC 클러스터 네트워크 및 간소화 된 SMB 다중 채널 기능을 활용 하는 방법을 설명 합니다.  
+이 섹션에서는 새 다중 NIC 클러스터 네트워크와 간소화 된 SMB 다중 채널 기능을 활용 하는 방법을 설명 합니다.  
 
 ### <a name="use-at-least-two-networks-for-failover-clustering"></a>장애 조치 클러스터링에 대 한 두 개 이상의 네트워크를 사용 합니다.   
 드문 경우에 네트워크 스위치에 실패할 수 있습니다-장애 조치 클러스터링에 대 한 두 개 이상의 네트워크를 사용 하려면 여전히 모범 사례입니다. 발견 되는 모든 네트워크는 클러스터 하트 비트에 사용 됩니다. 단일 실패 지점을 방지 하기 위해 장애 조치 클러스터에 대 한 단일 네트워크를 사용 하지 마십시오. 이상적으로 없어야 여러 실제 통신 경로 클러스터의 노드 사이의 단일 실패 지점이 없게 합니다.  
@@ -58,7 +58,7 @@ SMB 다중 채널 및 다중-간체<abbr title="네트워크 인터페이스 카
 **그림 4: 자동 IPv6 링크 로컬 (fe80) 주소 리소스 구성**  
 
 ## <a name="throughput-and-fault-tolerance"></a>처리량 및 내결함성  
-자동으로 Windows Server 2016 NIC 기능을 검색 하 고 가능한 가장 빠른 구성에서 각 NIC를 사용 하려고 합니다. Nic 팀으로 구성 되는, RSS를 사용 하 여 Nic 및 RDMA 기능을 사용 하 여 Nic를 모두 사용할 수 있습니다. 다음 표에서 이러한 기술을 사용 하는 경우 균형 요약 합니다. 최대 처리량은 여러 RDMA 가능 Nic를 사용 하는 경우 수행 됩니다. 자세한 내용은 [SMB Mutlichannel의 기본 사항을](https://blogs.technet.microsoft.com/josebda/2012/06/28/the-basics-of-smb-multichannel-a-feature-of-windows-server-2012-and-smb-3-0/)합니다.
+Windows Server 2016 및 Windows Server 2019 자동으로 NIC 기능을 검색 하 고 가능한 가장 빠른 구성에서 각 NIC를 사용 하려고 합니다. Nic 팀으로 구성 되는, RSS를 사용 하 여 Nic 및 RDMA 기능을 사용 하 여 Nic를 모두 사용할 수 있습니다. 다음 표에서 이러한 기술을 사용 하는 경우 균형 요약 합니다. 최대 처리량은 여러 RDMA 가능 Nic를 사용 하는 경우 수행 됩니다. 자세한 내용은 [SMB Mutlichannel의 기본 사항을](https://blogs.technet.microsoft.com/josebda/2012/06/28/the-basics-of-smb-multichannel-a-feature-of-windows-server-2012-and-smb-3-0/)합니다.
 
 ![여러 NIC 구성에 대 한 처리량 및 내결함성의 예시](media/Simplified-SMB-Multichannel-and-Multi-NIC-Cluster-Networks/Clustering_MulitNIC_Fig5.png)  
 **그림 5: 다양 한 NIC conifigurations에 대 한 처리량 및 내결함성**   

@@ -12,12 +12,12 @@ ms.assetid: 2fe8e35c-69f9-40b3-a270-22e2402510d8
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 2716ffb7ce8f74d7c729565064de91e0598d0753
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: cb62a460c09fdb2874bcc051176a05e88cee19e7
+ms.sourcegitcommit: 7cb939320fa2613b7582163a19727d7b77debe4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59884684"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65621274"
 ---
 # <a name="create-a-bootable-usb-flash-drive"></a>부팅 가능 USB 플래시 드라이브 만들기
 
@@ -31,9 +31,9 @@ Windows Server Essentials를 배포 하는 데 부팅 가능 USB 플래시 드�
   
  부팅 가능 USB 플래시 드라이브를 만들거나 사용할 수 있는 추가적인 시나리오는 다음 항목을 참조하세요.  
   
--   [기존 클라이언트 컴퓨터 백업에서 전체 시스템 복원](../manage/restore-a-full-system-from-an-existing-client-computer-backup.md)  
+-   [기존 클라이언트 컴퓨터 백업으로 전체 시스템 복원](../manage/restore-a-full-system-from-an-existing-client-computer-backup.md)  
   
--   [복원 또는 Windows Server Essentials를 실행 하는 서버를 복구 합니다.](../manage/restore-or-repair-your-server-running-windows-server-essentials.md)  
+-   [Windows Server Essentials를 실행하는 서버 복원 또는 복구](../manage/restore-or-repair-your-server-running-windows-server-essentials.md)  
 
   
 ### <a name="to-create-a-bootable-usb-flash-drive"></a>부팅 가능 USB 플래시 드라이브를 만들려면  
@@ -50,9 +50,9 @@ Windows Server Essentials를 배포 하는 데 부팅 가능 USB 플래시 드�
   
 6.  `clean`을(를) 입력한 다음 ENTER 키를 누릅니다. 이 명령은 USB 플래시 드라이브에서 모든 데이터를 삭제합니다.  
   
-7.  USB 플래시 드라이브에서 새 주 파티션을 만들려면 `create part pri`를 입력한 다음 Enter 키를 누릅니다.  
+7.  USB 플래시 드라이브에서 새 주 파티션을 만들려면 `create partition primary`를 입력한 다음 Enter 키를 누릅니다.  
   
-8.  방금 만든 파티션을 선택하려면 `select part 1`을 입력한 다음 Enter 키를 누릅니다.  
+8.  방금 만든 파티션을 선택하려면 `select partition 1`을 입력한 다음 Enter 키를 누릅니다.  
   
 9. 파티션을 포맷하려면 `format fs=ntfs quick`을(를) 입력한 다음 ENTER 키를 누릅니다.  
   

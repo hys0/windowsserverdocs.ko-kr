@@ -8,16 +8,16 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 09/10/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 98fd5d50645ad454204dcf9dabf58e97c246ab1a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7bdf30a4f721568add4e7902245da2a803b72db1
+ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59853994"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65475864"
 ---
 # <a name="enable-optimized-moves-of-redirected-folders"></a>리디렉션된 폴더의 최적화 된 이동 사용
 
->적용 대상: Windows 10, Windows 8, Windows 8.1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016
+>적용 대상: Windows 10, Windows 8, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server (반기 채널)
 
 이 항목에서는 리디렉션된 폴더 (폴더 리디렉션) 새 파일 공유에 최적화 된 이동 하는 수행 하는 방법을 설명 합니다. 캐시 된 콘텐츠를 모든 지연 없이 로컬 오프 라인 파일 캐시에서 이름이 단순히 관리자로 리디렉션된 폴더를 호스트 하는 파일 공유를 이동 하 고 그룹 정책에서 리디렉션된 폴더의 대상 경로 업데이트 하는 경우이 정책 설정을 사용 하도록 설정 하면 또는 사용자에 대 한 잠재적인 데이터 손실입니다.
 
@@ -28,7 +28,7 @@ ms.locfileid: "59853994"
 최적화 된 이동에 다음 요구 사항이 있습니다.
 
 - 폴더 리디렉션 설정 해야 합니다. 자세한 내용은 참조 [오프 라인 파일을 사용 하 여 폴더 리디렉션 배포](deploy-folder-redirection.md)합니다.
-- 클라이언트 컴퓨터는 Windows 10, Windows 8.1, Windows 8, Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012 실행 해야 합니다.
+- 클라이언트 컴퓨터는 Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 또는 Windows Server (반기 채널) 실행 해야 합니다.
 
 ## <a name="step-1-enable-optimized-move-in-group-policy"></a>1단계: 그룹 정책에 최적화 된 이동을 사용합니다
 

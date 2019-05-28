@@ -9,16 +9,15 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 425cfe794095f1515eb3fae2f1a5e5db90ba3d00
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 5767fa45f8b25680aa1b1d97ddab630923d10fae
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59856184"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192492"
 ---
 # <a name="add-a-host-a-resource-record-to-corporate-dns-for-a-federation-server"></a>페더레이션 서버에 대한 회사 DNS에 호스트(A) 리소스 레코드 추가
 
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
 회사에서 클라이언트를 호스트 하는 Windows 통합 인증을 사용 하 여 페더레이션 서버를 성공적으로 액세스 하려면 네트워크에 대 한 \(A\) 회사 도메인 이름 시스템에 리소스 레코드 먼저 만들어야 합니다 \(DNS\) 계정 페더레이션 서버 호스트 이름을 확인 하는 \(예를 들어 fs.fabrikam.com\) 페더레이션 서버 또는 페더레이션 서버 클러스터의 IP 주소를 합니다. 다음 절차를 사용 하 여 호스트를 추가 하려면 \(는\) 페더레이션 서버에 대해 회사 DNS에 리소스 레코드입니다.  
@@ -40,6 +39,6 @@ ms.locfileid: "59856184"
 ## <a name="additional-references"></a>추가 참조  
 [검사 목록: 페더레이션 서버 설정](Checklist--Setting-Up-a-Federation-Server.md)  
   
-[페더레이션 서버에 대 한 이름 확인 요구 사항](https://technet.microsoft.com/library/dd807055.aspx)  
+[페더레이션 서버에 대한 이름 확인 요구 사항](https://technet.microsoft.com/library/dd807055.aspx)  
   
 

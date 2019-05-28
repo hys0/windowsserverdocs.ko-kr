@@ -8,16 +8,16 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 09/10/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: bc54b1e33d09e7f2b9eea01e4f09fb83f13dc1af
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8684926beb0f0c911ac384970d15ba7d25f84079
+ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59832884"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65475928"
 ---
 # <a name="enable-always-offline-mode-for-faster-access-to-files"></a>파일 액세스에 항상 오프 라인 모드를 사용 하도록 설정
 
->적용 대상: Windows 10, Windows 8, Windows 8.1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016
+>적용 대상: Windows 10, Windows 8, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2 및 Windows (반기 채널)
 
 이 문서에는 캐시 된 파일 및 리디렉션된 폴더에 빠르게 액세스할 수 있도록 오프 라인 파일의 항상 오프 라인 모드를 사용 하는 방법을 설명 합니다. 항상 오프 라인 작업 때문에 사용자는 항상 오프 라인으로 고속 네트워크 연결을 통해 연결 되어 있는 경우 더 낮은 대역폭도 제공 합니다.
 

@@ -12,12 +12,12 @@ ms.assetid: d54a1f5e-af68-497e-99be-97775769a7a7
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dansimp
-ms.openlocfilehash: cc4b0eb51b477ec175040b46c9563f81955c0be3
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 748010e80cf2b54926ca226a7af8c49f1aa16800
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59846214"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192636"
 ---
 # <a name="remote-server-administration-tools"></a>원격 서버 관리 도구
 
@@ -196,5 +196,3 @@ Mmc 스냅인 및 대화 상자와 같은 Windows 10, 모든 GUI 기반 서버 �
 ## <a name="see-also"></a>관련 항목
 >- [Windows 10 용 원격 서버 관리 도구](https://go.microsoft.com/fwlink/?LinkID=404281)
 >- [Windows Vista, Windows 7, Windows 8, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012 및 Windows Server 2012 R2 용 원격 서버 관리 도구 (RSAT)](https://go.microsoft.com/fwlink/p/?LinkID=221055)
-
-

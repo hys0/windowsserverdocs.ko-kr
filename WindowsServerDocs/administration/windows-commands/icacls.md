@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 08/21/2018
-ms.openlocfilehash: 20b2150b1135467cce43ae23bfdc275a5da22141
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2639b8bb913bcd604a7c79015545006a23e1d0f2
+ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59852644"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66222953"
 ---
 # <a name="icacls"></a>icacls
 
@@ -26,7 +26,7 @@ ms.locfileid: "59852644"
 
 지정된 파일의 DACL(임의 액세스 제어 목록)을 표시 또는 수정하고 저장한 DACL을 지정된 디렉터리의 파일에 적용합니다.
 
-이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
+이 명령을 사용하는 방법의 예는 [예](#examples)를 참조하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -121,15 +121,15 @@ icacls <Directory> [/substitute <SidOld> <SidNew> [...]] [/restore <ACLfile> [/c
         **WA** (특성을 작성 합니다.)
 -   권한 상속 하거나 전 *권한* 하 고, 폼에는 디렉터리에만 적용 됩니다.
 
-    **(OI)**: 개체 상속
+    **(OI)** : 개체 상속
 
-    **(CI)**: 컨테이너 상속
+    **(CI)** : 컨테이너 상속
 
-    **(IO)**: 상속만 해당
+    **(IO)** : 상속만 해당
 
-    **(NP)**: 전파 되지 않습니다 상속
+    **(NP)** : 전파 되지 않습니다 상속
 
-## <a name="BKMK_examples"></a>예제
+## <a name="examples"></a>예
 
 모든 파일에 대 한 Dacl는 C:\Windows 디렉터리 및 하위 디렉터리를 ACLFile 파일을 저장 하려면 다음을 입력 합니다.
 ```

@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3f62208d6576890529be80b1c6cb3cc073a2b4e6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 579b0772e4642389b90aa370dad80a3eebea9d34
+ms.sourcegitcommit: 08eba714d3ceb5f2dfb5486d6b990da1aa4dcbdd
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59853364"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65564724"
 ---
 # <a name="ksetupremoverealm"></a>ksetup:removerealm
 
@@ -46,7 +46,7 @@ ksetup /removerealm <RealmName>
 
 ## <a name="BKMK_Examples"></a>예제
 
-실수로 영역 이름 맞춤법 오류 설정한 "입니다. COM? CORP. 로컬 컴퓨터 CONTOSO입니다. CON
+실수로 영역 이름을 설정 ".COM"를 잘못 입력 하 여 로컬 컴퓨터의 CORP. CONTOSO입니다. CON
 ```
 ksetup /setrealm CORP.CONTOSO.CON
 ```

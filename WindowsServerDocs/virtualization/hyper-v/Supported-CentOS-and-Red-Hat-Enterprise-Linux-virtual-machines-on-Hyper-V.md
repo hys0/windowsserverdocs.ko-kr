@@ -10,12 +10,12 @@ ms.assetid: 4bf8783d-dee5-4b3e-8cce-2b11b117c189
 author: danihalfin
 ms.author: daniha
 ms.date: 12/20/2017
-ms.openlocfilehash: 6bf15e5bfff4b875c4debd3c682bbdccd81a7bb6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 6c9ed85c2249a4671e52eb7d512298a75f53b309
+ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59869434"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66222669"
 ---
 # <a name="supported-centos-and-red-hat-enterprise-linux-virtual-machines-on-hyper-v"></a>CentOS 지원 및 hyper-v Red Hat Enterprise Linux 가상 컴퓨터
 
@@ -55,38 +55,38 @@ Hyper-v (Red Hat Enterprise Linux 6.4 이후 사용 가능)에 대 한 기본 �
 |**기능**|**Windows Server 버전**|**7.5-7.6**|**7.3-7.4**|**7.0-7.2**|**7.5-7.6**|**7.4**|**7.3**|**7.2**|**7.1**|**7.0**|
 |-|-|-|-|-|-|-|-|-|-|-|
 |**가용성**||[LIS 4.2](https://www.microsoft.com/download/details.aspx?id=55106)|[LIS 4.2](https://www.microsoft.com/download/details.aspx?id=55106)|[LIS 4.2](https://www.microsoft.com/download/details.aspx?id=55106)|기본 제공|기본 제공|기본 제공|기본 제공|기본 제공|기본 제공||
-|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Windows Server 2016 정확한 시간|2019, 2016|&#10004;|&#10004;|||||||
-|**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)**|||||||
+|**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**|||||||
 |Jumbo 프레임|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |VLAN 태깅, 트렁킹|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |실시간 마이그레이션|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|정적 IP 주입|2019, 2016, 2012 R2, 2012|&#10004; 참고 2|&#10004; 참고 2|&#10004; 참고 2|&#10004; 참고 2|&#10004; 참고 2|&#10004; 참고 2|&#10004; 참고 2|&#10004; 참고 2|&#10004; 참고 2|
+|정적 IP 주입|2019, 2016, 2012 R2, 2012|&#10004; 참고 2|& #10004; 참고 2|& #10004; 참고 2|& #10004; 참고 2|& #10004; 참고 2|& #10004; 참고 2|& #10004; 참고 2|& #10004; 참고 2|&#10004; 참고 2|
 |vRSS|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||
 |TCP 조각화와 체크섬 오프 로드|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||
 |SR-IOV|2019, 2016|&#10004;|&#10004;||&#10004;|&#10004;|&#10004;|||
-|**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**||||
+|**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**||||
 |VHDX 크기 조정|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |가상 파이버 채널|2019, 2016, 2012 R2|&#10004; 참고 3|&#10004; 참고 3|&#10004; 참고 3|&#10004; 참고 3|&#10004; 참고 3|&#10004; 참고 3|&#10004; 참고 3|&#10004; 참고 3|&#10004; 참고 3|
 |가상 머신 백업|2019, 2016, 2012 R2|&#10004; 참고 5|&#10004; 참고 5|&#10004; 참고 5|&#10004; 참고 4, 5|&#10004; 참고 4, 5|&#10004; 참고 4, 5|&#10004; 참고 4, 5|&#10004; 참고 4, 5|&#10004; 참고 4, 5|
 |TRIM 지원|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|||
 |SCSI WWN|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|||||
-|**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**||||
+|**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)**||||
 |PAE 커널 지원|2019, 2016, 2012 R2, 2012, 2008 R2|해당 사항 없음|해당 사항 없음|해당 사항 없음|해당 사항 없음|해당 사항 없음|해당 사항 없음|해당 사항 없음|해당 사항 없음|해당 사항 없음|
 |MMIO 간격 구성|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |동적 메모리-즉석 추가|2019, 2016, 2012 R2, 2012|&#10004; 8, 9, 10 note|&#10004; 8, 9, 10 note|&#10004; 8, 9, 10 note|&#10004; 참고 9, 10|&#10004; 참고 9, 10|&#10004; 참고 9, 10|&#10004; 참고 9, 10|&#10004; 참고 9, 10|&#10004; 8, 9, 10 note|
 |동적 메모리-Ballooning|2019, 2016, 2012 R2, 2012|&#10004; 8, 9, 10 note|&#10004; 8, 9, 10 note|&#10004; 8, 9, 10 note|&#10004; 참고 9, 10|&#10004; 참고 9, 10|&#10004; 참고 9, 10|&#10004; 참고 9, 10|&#10004; 참고 9, 10|&#10004; 8, 9, 10 note|
 |런타임 메모리 크기 조정|2019, 2016|&#10004;|&#10004;|&#10004;|||||||
-|**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**||||
+|**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**||||
 |하이퍼-V-특정 비디오 장치|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|**[기타](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)**||||
+|**[기타](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)**||||
 |키-값 쌍|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |마스크 불가능 인터럽트|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |호스트에서 게스트로 파일 복사|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||
 |lsvmbus 명령|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|||||||
 |Hyper-v 소켓|2019, 2016|&#10004;|&#10004;|&#10004;|||||||
 |PCI 통과/DDA|2019, 2016|&#10004;|&#10004;||&#10004;|&#10004;|&#10004;||||
-|**[2 세대 가상 컴퓨터](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)**|||||
+|**[2 세대 가상 컴퓨터](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines)**|||||
 |UEFI를 사용 하 여 부팅|2019, 2016, 2012 R2|&#10004; 참고 14|&#10004; 참고 14|&#10004; 참고 14|&#10004; 참고 14|&#10004; 참고 14|&#10004; 참고 14|&#10004; 참고 14|&#10004; 참고 14|&#10004; 참고 14|
 |보안 부팅|2019, 2016|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 
@@ -97,38 +97,38 @@ Hyper-v (Red Hat Enterprise Linux 6.4 이후 사용 가능)에 대 한 기본 �
 |**기능**|**Windows Server 버전**|**6.4-6.10**|**6.0-6.3**|**6.10, 6.9, 6.8**|**6.6, 6.7**|**6.5**|**6.4**|
 |-|-|-|-|-|-|-|-|
 |**가용성**||[LIS 4.2](https://www.microsoft.com/download/details.aspx?id=55106)|[LIS 4.2](https://www.microsoft.com/download/details.aspx?id=55106)|기본 제공|기본 제공|기본 제공|기본 제공|
-|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Windows Server 2016 정확한 시간|2019, 2016||||||
-|**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)**|
+|**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**|
 |Jumbo 프레임|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |VLAN 태깅, 트렁킹|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004; 참고 1|&#10004; 참고 1|&#10004; 참고 1|&#10004; 참고 1|&#10004; 참고 1|&#10004; 참고 1|
 |실시간 마이그레이션|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|정적 IP 주입|2019, 2016, 2012 R2, 2012|&#10004; 참고 2|&#10004; 참고 2|&#10004; 참고 2|&#10004; 참고 2|&#10004; 참고 2|&#10004; 참고 2|
+|정적 IP 주입|2019, 2016, 2012 R2, 2012|&#10004; 참고 2|& #10004; 참고 2|& #10004; 참고 2|& #10004; 참고 2|& #10004; 참고 2|&#10004; 참고 2|
 |vRSS|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|||
 |TCP 조각화와 체크섬 오프 로드|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|||
 |SR-IOV|2019, 2016|||||||
-|**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**|
+|**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**|
 |VHDX 크기 조정|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||
 |가상 파이버 채널|2019, 2016, 2012 R2|&#10004; 참고 3|&#10004; 참고 3|&#10004; 참고 3|&#10004; 참고 3|&#10004; 참고 3||
 |가상 머신 백업|2019, 2016, 2012 R2|&#10004; 참고 5|&#10004; 참고 5|&#10004; 참고 4, 5|&#10004; 참고 4, 5|&#10004; 4, 5, 6 note|&#10004; 4, 5, 6 note|
 |TRIM 지원|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;||||
 |SCSI WWN|2019, 2016, 2012 R2|&#10004;|&#10004;|||||
-|**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**|
+|**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)**|
 |PAE 커널 지원|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |MMIO 간격 구성|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |동적 메모리-즉석 추가|2019, 2016, 2012 R2, 2012|&#10004; Note 7, 9, 10|&#10004; Note 7, 9, 10|&#10004; Note 7, 9, 10|&#10004; Note 7, 8, 9, 10|&#10004; Note 7, 8, 9, 10||
 |동적 메모리-Ballooning|2019, 2016, 2012 R2, 2012|&#10004; Note 7, 9, 10|&#10004; Note 7, 9, 10|&#10004; Note 7, 9, 10|&#10004; Note 7, 9, 10|&#10004; Note 7, 9, 10|&#10004; Note 7, 9, 10, 11|
 |런타임 메모리 크기 조정|2019, 2016|||||||
-|**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**|
+|**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**|
 |하이퍼-V-특정 비디오 장치|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||
-|**[기타](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)**|
+|**[기타](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)**|
 |키-값 쌍|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004; 참고 12|&#10004; 참고 12|&#10004; 참고 12, 13|&#10004; 참고 12, 13|
 |마스크 불가능 인터럽트|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |호스트에서 게스트로 파일 복사|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|||
 |lsvmbus 명령|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;||||||
 |Hyper-v 소켓|2019, 2016|&#10004;|&#10004;|||||
 |PCI 통과/DDA|2019, 2016|||||||
-|**[2 세대 가상 컴퓨터](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)**|
+|**[2 세대 가상 컴퓨터](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines)**|
 |UEFI를 사용 하 여 부팅|2012 R2|||||||
 ||2019, 2016|&#10004; 참고 14|&#10004; 참고 14|&#10004; 참고 14||||
 |보안 부팅|2019, 2016||||||
@@ -140,38 +140,38 @@ Hyper-v (Red Hat Enterprise Linux 6.4 이후 사용 가능)에 대 한 기본 �
 |**기능**|**Windows Server 버전**|5.2 -5.11|**5.2-5.11**|**5.9 - 5.11**|
 |-|-|-|-|-|
 |**가용성**||[LIS 4.2](https://www.microsoft.com/download/details.aspx?id=55106)|[LIS 4.1](https://www.microsoft.com/download/details.aspx?id=51612)|기본 제공|
-|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|
+|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|
 |Windows Server 2016 정확한 시간|2019, 2016||||
-|**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)**|
+|**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**|
 |Jumbo 프레임|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|
 |VLAN 태깅, 트렁킹|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004; 참고 1|&#10004; 참고 1|&#10004; 참고 1|
 |실시간 마이그레이션|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|
-|정적 IP 주입|2019, 2016, 2012 R2, 2012|&#10004; 참고 2|&#10004; 참고 2|&#10004; 참고 2|
+|정적 IP 주입|2019, 2016, 2012 R2, 2012|&#10004; 참고 2|& #10004; 참고 2|&#10004; 참고 2|
 |vRSS|2019, 2016, 2012 R2||||
 |TCP 조각화와 체크섬 오프 로드|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;||
 |SR-IOV|2019, 2016||||||
-|**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**|
+|**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**|
 |VHDX 크기 조정|2019, 2016, 2012 R2|&#10004;|&#10004;||
 |가상 파이버 채널|2019, 2016, 2012 R2|&#10004; 참고 3|&#10004; 참고 3||
 |가상 머신 백업|2019, 2016, 2012 R2|&#10004; Note 5, 15|&#10004; 참고 5|&#10004; 4, 5, 6 note|
 |TRIM 지원|2019, 2016, 2012 R2||||
 |SCSI WWN|2019, 2016, 2012 R2||||
-|**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**|
+|**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)**|
 |PAE 커널 지원|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|
 |MMIO 간격 구성|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|
 |동적 메모리-즉석 추가|2019, 2016, 2012 R2, 2012||||
 |동적 메모리-Ballooning|2019, 2016, 2012 R2, 2012|&#10004; Note 7, 9, 10, 11|&#10004; Note 7, 9, 10, 11||
 |런타임 메모리 크기 조정|2019, 2016||||
-|**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**|
+|**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**|
 |하이퍼-V-특정 비디오 장치|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;||
-|**[기타](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)**|
+|**[기타](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)**|
 |키-값 쌍|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;||
 |마스크 불가능 인터럽트|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|
 |호스트에서 게스트로 파일 복사|2019, 2016, 2012 R2|&#10004;|&#10004;||
 |lsvmbus 명령|2019, 2016, 2012 R2, 2012, 2008 R2||||
 |Hyper-v 소켓|2019, 2016||||
 |PCI 통과/DDA|2019, 2016||||||
-|**[2 세대 가상 컴퓨터](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)**|
+|**[2 세대 가상 컴퓨터](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines)**|
 |UEFI를 사용 하 여 부팅|2019, 2016, 2012 R2||||
 |보안 부팅|2019, 2016||||
 
@@ -230,7 +230,7 @@ Hyper-v (Red Hat Enterprise Linux 6.4 이후 사용 가능)에 대 한 기본 �
 
 * [Set-VMFirmware](https://technet.microsoft.com/library/dn464287.aspx)
 
-* [Hyper-v의 Debian 가상 컴퓨터를 지원](Supported-Debian-virtual-machines-on-Hyper-V.md)
+* [Hyper-V에서 지원되는 Debian 가상 머신](Supported-Debian-virtual-machines-on-Hyper-V.md)
 
 * [Hyper-v에서 지원 되는 Oracle Linux 가상 컴퓨터](Supported-Oracle-Linux-virtual-machines-on-Hyper-V.md)
 

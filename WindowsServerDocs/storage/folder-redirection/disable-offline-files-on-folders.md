@@ -8,16 +8,16 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 09/10/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: adc93906cb7ff958fc1db7b00abdc557623e764e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b006742c9256c357d9aff3fb1b765dbed087383a
+ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59834204"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65475878"
 ---
 # <a name="disable-offline-files-on-individual-redirected-folders"></a>개별 리디렉션된 폴더의 오프 라인 파일을 사용 하지 않도록 설정
 
->적용 대상: Windows 10, Windows 8, Windows 8.1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016
+>적용 대상: Windows 10, Windows 8, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2, Windows (반기 채널)
 
 이 항목에서는 오프 라인 파일은 폴더 리디렉션을 사용 하 여 네트워크 공유에 리디렉션되어야 하는 개별 폴더에서 캐싱을 사용 하지 않도록 설정 하는 방법을 설명 합니다. 로컬 캐시에서 제외할 폴더를 지정 하는 기능에서는 오프 라인 파일 캐시를 줄이고 시간 및 크기 하는 데 필요한 파일을 오프 라인 동기화.
 
@@ -29,7 +29,7 @@ ms.locfileid: "59834204"
 특정 리디렉션된 폴더의 오프 라인 파일 캐시를 사용 하지 않으려면 환경의 다음 필수 조건을 충족 해야 합니다.
 
 - 클라이언트 컴퓨터를 도메인에 가입 된의 Active Directory Domain Services (AD DS) 도메인입니다. 포리스트 또는 도메인 기능 수준 요구 사항 또는 스키마 요구 사항이 없는 합니다.
-- Windows 10, Windows 8.1, Windows 8, Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012를 실행 하는 클라이언트 컴퓨터입니다.
+- Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 또는 Windows (반기 채널)를 실행 하는 클라이언트 컴퓨터입니다.
 - 설치 하는 그룹 정책 관리 된 컴퓨터입니다.
 
 ## <a name="disabling-offline-files-on-individual-redirected-folders"></a>개별 리디렉션된 폴더의 오프 라인 파일을 사용 하지 않도록 설정

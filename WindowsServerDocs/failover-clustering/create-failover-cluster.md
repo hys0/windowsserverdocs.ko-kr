@@ -1,6 +1,6 @@
 ---
 title: 장애 조치(failover) 클러스터 만들기
-description: Windows Server 2012 R2, Windows Server 2012 및 Windows Server 2016에 대 한 장애 조치 클러스터를 만드는 방법입니다.
+description: Windows Server 2012 R2, Windows Server 2012, Windows Server 2016 및 Windows Server 2019에 대 한 장애 조치 클러스터를 만드는 방법입니다.
 ms.prod: windows-server-threshold
 ms.topic: article
 author: JasonGerend
@@ -8,16 +8,16 @@ ms.author: jgerend
 ms.technology: storage-failover-clustering
 ms.date: 11/05/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: f919e69488c4f2272ddd07e535ba4e2248ddf79c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4122375a48cae17e5f3ebcd7e9f3ce1fad28a105
+ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59843294"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66222485"
 ---
 # <a name="create-a-failover-cluster"></a>장애 조치(failover) 클러스터 만들기
 
->적용 대상: Windows Server 2012 R2, Windows Server 2012, Windows Server 2016
+>적용 대상: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 및 Windows Server 2012
 
 이 항목에서는 장애 조치(failover) 클러스터 관리자 스냅인 또는 Windows PowerShell을 사용하여 장애 조치(failover) 클러스터를 만드는 방법을 보여 줍니다. AD DS(Active Directory 도메인 서비스)에서 클러스터의 컴퓨터 개체와 관련 클러스터된 역할을 만드는 일반적인 배포에 대해 다룹니다. 저장소 공간 다이렉트 클러스터에 배포 하는 경우 참조 대신 [저장소 공간 다이렉트 배포](../storage/storage-spaces/deploy-storage-spaces-direct.md)합니다.
 
@@ -152,72 +152,24 @@ ms.locfileid: "59843294"
     
     다음 표에서는 고가용성 마법사에서 구성할 수 있는 클러스터된 역할 및 필수 구성 요소로 설치해야 하는 관련 서버 역할 또는 기능을 보여 줍니다.
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th>클러스터된 역할</th>
-    <th>역할 또는 기능 필수 구성 요소</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>DFS 네임스페이스 서버</td>
-    <td>DFS 네임스페이스(파일 서버 역할의 일부)</td>
-    </tr>
-    <tr class="even">
-    <td>DHCP 서버</td>
-    <td>DHCP 서버 역할</td>
-    </tr>
-    <tr class="odd">
-    <td>DTC(Distributed Transaction Coordinator)</td>
-    <td>없음</td>
-    </tr>
-    <tr class="even">
-    <td>파일 서버</td>
-    <td>파일 서버 역할</td>
-    </tr>
-    <tr class="odd">
-    <td>일반 응용 프로그램</td>
-    <td>해당 사항 없음</td>
-    </tr>
-    <tr class="even">
-    <td>일반 스크립트</td>
-    <td>해당 사항 없음</td>
-    </tr>
-    <tr class="odd">
-    <td>일반 서비스</td>
-    <td>해당 사항 없음</td>
-    </tr>
-    <tr class="even">
-    <td>Hyper-V 복제본 브로커</td>
-    <td>Hyper-V 역할</td>
-    </tr>
-    <tr class="odd">
-    <td>iSCSI 대상 서버</td>
-    <td>iSCSI 대상 서버(파일 서버 역할의 일부)</td>
-    </tr>
-    <tr class="even">
-    <td>iSNS 서버</td>
-    <td>iSNS 서버 서비스 기능</td>
-    </tr>
-    <tr class="odd">
-    <td>메시지 큐</td>
-    <td>메시지 큐 서비스 기능</td>
-    </tr>
-    <tr class="even">
-    <td>기타 서버</td>
-    <td>없음</td>
-    </tr>
-    <tr class="odd">
-    <td>가상 컴퓨터</td>
-    <td>Hyper-V 역할</td>
-    </tr>
-    <tr class="even">
-    <td>WINS 서버</td>
-    <td>WINS 서버 기능</td>
-    </tr>
-    </tbody>
-    </table>
+
+|클러스터된 역할  |역할 또는 기능 필수 구성 요소  |
+|---------|---------|
+|Namespace 서버     |   네임 스페이스 (파일 서버 역할의 일부)       |
+|DFS 네임스페이스 서버     |  DHCP 서버 역할       |
+|DTC(Distributed Transaction Coordinator)     | 없음        |
+|파일 서버     |  파일 서버 역할       |
+|일반 응용 프로그램     |  해당 사항 없음       |
+|일반 스크립트     |   해당 사항 없음      |
+|일반 서비스     |   해당 사항 없음      |
+|Hyper-V 복제본 브로커     |   Hyper-V 역할      |
+|iSCSI 대상 서버     |    iSCSI 대상 서버(파일 서버 역할의 일부)     |
+|iSNS 서버     |  iSNS 서버 서비스 기능       |
+|메시지 큐     |  메시지 큐 서비스 기능       |
+|기타 서버     |  없음       |
+|가상 컴퓨터     |  Hyper-V 역할       |
+|WINS 서버     |   WINS 서버 기능      |
+
 2. 장애 조치 클러스터 관리자에서 클러스터 이름을 확장 하 고 마우스 오른쪽 단추로 클릭 **역할**를 선택한 후 **역할 구성**합니다.
 3. 고가용성 마법사의 단계에 따라 클러스터된 역할을 만듭니다.
 4. 클러스터된 역할이 만들어졌는지 확인하려면 **역할** 창에서 역할의 상태가 **실행 중**인지 확인합니다. 역할 창에는 소유자 노드로 표시됩니다. 장애 조치를 테스트 하려면 역할을 마우스 오른쪽 단추로 클릭, 가리킨 **이동**를 선택한 후 **노드 선택**합니다. 에 **클러스터 된 역할 이동** 대화 상자에서 원하는 클러스터 노드를 선택한 후 **확인**합니다. **소유자 노드** 열에서 소유자 노드가 변경되었는지 확인합니다.
@@ -266,7 +218,7 @@ New-Cluster -Name CN=MyCluster,OU=Cluster,DC=Contoso,DC=com -Node Server1, Serve
 
 ## <a name="more-information"></a>자세한 정보
 
-  - [장애 조치 클러스터링](failover-clustering.md)
+  - [장애 조치(failover) 클러스터링](failover-clustering.md)
   - [Hyper-v 클러스터 배포](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj863389(v%3dws.11)>)
   - [응용 프로그램 데이터용 스케일 아웃 파일 서버](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831349(v%3dws.11)>)
   - [Active Directory 분리 클러스터 배포](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265970(v=ws.11))

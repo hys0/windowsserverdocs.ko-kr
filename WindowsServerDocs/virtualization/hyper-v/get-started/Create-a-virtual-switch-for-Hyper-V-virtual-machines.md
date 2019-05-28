@@ -11,12 +11,12 @@ ms.assetid: fdc8063c-47ce-4448-b445-d7ff9894dc17
 author: KBDAzure
 ms.author: kathydav
 ms.date: 10/04/2016
-ms.openlocfilehash: e7c43a1b9173d347a3b6d6e1f8bd9127c62bd081
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2668f9fa21c8efbad455d82c7e110ff89b729187
+ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59880224"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66222873"
 ---
 # <a name="create-a-virtual-switch-for-hyper-v-virtual-machines"></a>Hyper-v 가상 컴퓨터에 대 한 가상 스위치 만들기
 
@@ -24,9 +24,9 @@ ms.locfileid: "59880224"
   
 가상 스위치에 가상 컴퓨터를 다른 컴퓨터와 통신 하는 Hyper-v 호스트에 만들어진 있습니다. 먼저 Windows 서버에 Hyper-v 역할을 설치 하는 경우 가상 스위치를 만들 수 있습니다. 추가 가상 스위치를 만들려면 Hyper-v 관리자 또는 Windows PowerShell을 사용 합니다. 가상 스위치에 대 한 자세한 참조 [Hyper-v 가상 스위치](../../hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md)합니다.  
   
-가상 컴퓨터 네트워킹 복잡 한 주제를 수 있습니다. 처럼 사용할 수 있는 몇 가지 새로운 가상 스위치 기능 되며 [포함 된 팀 전환 (SET)](../../hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md#bkmk_sswitchembedded)합니다. 하지만 기본 네트워킹은 매우 쉽습니다. 이 항목에서는 Hyper-v에서 네트워크로 연결 된 가상 컴퓨터를 만들 수 있도록 데 필요한 만큼만 다룹니다. 네트워킹 인프라를 설정 하는 방법을 하는 방법에 대 한 자세한 내용은 검토는 [네트워킹](../../../networking/Networking.md) 설명서입니다.   
+가상 컴퓨터 네트워킹 복잡 한 주제를 수 있습니다. 처럼 사용할 수 있는 몇 가지 새로운 가상 스위치 기능 되며 [포함 된 팀 전환 (SET)](../../hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md#switch-embedded-teaming-set)합니다. 하지만 기본 네트워킹은 매우 쉽습니다. 이 항목에서는 Hyper-v에서 네트워크로 연결 된 가상 컴퓨터를 만들 수 있도록 데 필요한 만큼만 다룹니다. 네트워킹 인프라를 설정 하는 방법을 하는 방법에 대 한 자세한 내용은 검토는 [네트워킹](../../../networking/Networking.md) 설명서입니다.   
   
-## <a name="BKMK_HyperVMan"></a>Hyper-v 관리자를 사용 하 여 가상 스위치 만들기  
+## <a name="create-a-virtual-switch-by-using-hyper-v-manager"></a>Hyper-v 관리자를 사용 하 여 가상 스위치 만들기  
   
 1.  Hyper-v 관리자를 열고 Hyper-v 호스트 컴퓨터 이름을 선택 합니다.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "59880224"
   
     !["보류 중인 변경 내용을 방해가 될 수 있습니다 네트워크 연결이" 메시지를 보여 주는 스크린 샷](../media/Hyper-V-NewVSwitch-DisruptNetwork.png)  
   
-## <a name="BKMK_WPS"></a>Windows PowerShell을 사용 하 여 가상 스위치 만들기  
+## <a name="create-a-virtual-switch-by-using-windows-powershell"></a>Windows PowerShell을 사용 하 여 가상 스위치 만들기  
   
 1.  Windows 데스크톱에서 시작 단추를 클릭하고 **Windows PowerShell** 이름의 일부를 입력합니다.  
   
@@ -99,7 +99,7 @@ Windows Server 2016에서 개선 된 또는 새 가상 스위치 기능을 소�
 
   
 ## <a name="next-step"></a>다음 단계  
-[Hyper-v에서 가상 머신 만들기](Create-a-virtual-machine-in-Hyper-V.md)  
+[Hyper-V에서 가상 머신 만들기](Create-a-virtual-machine-in-Hyper-V.md)  
   
 
 

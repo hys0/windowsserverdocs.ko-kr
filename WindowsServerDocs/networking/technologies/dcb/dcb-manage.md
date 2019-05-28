@@ -8,12 +8,12 @@ ms.assetid: 1575cc7c-62a7-4add-8f78-e5d93effe93f
 manager: brianlic
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 3912bb6048a06a4656b5b27ccec8f8fb3f5b114b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: daed746fe798ae253956d0977827d0e205bb8b3e
+ms.sourcegitcommit: 21165734a0f37c4cd702c275e85c9e7c42d6b3cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59847414"
+ms.lasthandoff: 05/03/2019
+ms.locfileid: "65034570"
 ---
 # <a name="manage-data-center-bridging-dcb"></a>관리 데이터 센터 브리징 (DCB)
 
@@ -39,7 +39,7 @@ Windows Server 2016에서 구성을 적용할 수 있습니다 DCB 전역 정책
 2. 네트워크 어댑터에 DCB를 사용 하도록 설정 합니다. 참조 [을 사용 하도록 설정 하 고 네트워크 어댑터에 DCB 설정을 표시](#bkmk_enabledcb)합니다.
 
 >[!NOTE]
->DCBX 통해 스위치에서 DCB를 구성 하려는 경우 참조 [DCBX 설정](#BKMK_DCBX_Settings)
+>DCBX 통해 스위치에서 DCB를 구성 하려는 경우 참조 [DCBX 설정](#dcb-configuration-on-network-adapters)합니다.
 
 DCBX 감수 비트 DCB 사양에 설명 되어 있습니다. 경우는 기꺼이 장치의 비트가 true 이면 장치를 통해 DCBX 원격 장치에서 구성을 적용 하려고 합니다. 장치의 감수 비트가 false로 설정 된 경우 장치가 원격 장치에서 모든 구성 시도 거부 하 고 로컬 구성에만 적용 됩니다.
 
@@ -85,7 +85,7 @@ DCB 구성에는 다음 단계를 포함합니다.
     
     b. 우선 순위 흐름 제어 (PFC) 설정
     
-    다. 응용 프로그램 우선 순위 할당
+    c. 응용 프로그램 우선 순위 할당
     
     d. DCBX 설정
 

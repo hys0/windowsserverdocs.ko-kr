@@ -9,16 +9,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 38de2bca413ce7f8aeda2af4392f9a616641b189
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 958bf8455d03ddc04395fafe83e70a49c7659c96
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59873074"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192436"
 ---
 ## <a name="best-practices-for-securing-active-directory-federation-services"></a>Active Directory Federation Services 보안에 대 한 모범 사례
 
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 이 문서에서는 보안 계획 및 Active Directory Federation Services (AD FS) 및 웹 응용 프로그램 프록시 배포에 대 한 모범 사례를 제공 합니다.  이러한 구성 요소 및 권장 사항 특정 사용 사례 및 보안 요구 사항을 사용 하 여 조직에 대 한 추가 보안 구성에 대 한 기본 동작에 대 한 정보를 포함 합니다.
 
@@ -39,7 +38,7 @@ ms.locfileid: "59873074"
 ### <a name="azure-ad-connect-and-federation-serverswap"></a>Azure AD Connect 및 페더레이션 서버/w a P
 이 테이블에는 포트 및 Azure AD Connect 서버와 페더레이션/WAP 서버 간의 통신에 필요한 프로토콜을 설명 합니다.  
 
-프로토콜 |포트 |설명
+Protocol |포트 |설명
 --------- | --------- |---------
 HTTP|80 (TCP/UDP)|Crl (인증서 해지 목록) 확인 SSL 인증서를 다운로드 하는 데 사용 합니다.
 HTTPS|443(TCP/UDP)|Azure AD와 동기화 하는 데 사용 합니다.
@@ -48,14 +47,14 @@ WinRM|5985| WinRM 수신기
 ### <a name="wap-and-federation-servers"></a>WAP 및 페더레이션 서버
 이 테이블에는 포트 및 페더레이션 서버와 WAP 서버 간의 통신에 필요한 프로토콜을 설명 합니다.
 
-프로토콜 |포트 |설명
+Protocol |포트 |설명
 --------- | --------- |---------
 HTTPS|443(TCP/UDP)|인증에 사용 합니다.
 
 ### <a name="wap-and-users"></a>WAP 및 사용자
 이 표에서 포트와 사용자 및 WAP 서버 간의 통신에 필요한 프로토콜.
 
-프로토콜 |포트 |설명
+Protocol |포트 |설명
 --------- | --------- |--------- |
 HTTPS|443(TCP/UDP)|장치 인증에 사용 합니다.
 TCP|49443 (TCP)|인증서 인증에 사용 합니다.

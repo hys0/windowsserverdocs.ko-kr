@@ -8,30 +8,30 @@ author: JasonGerend
 manager: brianlic
 ms.date: 07/09/2018
 ms.author: jgerend
-ms.openlocfilehash: b977af31663b675a56c65e06a2a0d60b1d2ad811
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c662b8c44e3603ec972e06f3fb0ddbd55e1af904
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59857144"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192725"
 ---
 # <a name="deploying-roaming-user-profiles"></a>로밍 사용자 프로필 배포
 
->적용 대상: Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+>적용 대상: Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server (반기 채널), Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 이 항목에서는 Windows Server 배포를 사용 하는 방법 설명 [로밍 사용자 프로필](folder-redirection-rup-overview.md) Windows 클라이언트 컴퓨터에 있습니다. 사용자가 동일한 운영 체제 및 여러 컴퓨터에서 응용 프로그램 설정을 받을 수 있도록 사용자 프로필을 파일 공유로 리디렉션하여 로밍 사용자 프로필입니다.
 
 최근의 변경 내용은이 항목의 목록에 대 한 참조를 [변경 내용](#change-history) 이 항목의 섹션입니다.
 
 >[!IMPORTANT]
->보안 변경 내용으로 인해 [MS16 072](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14%2c-2016)를 업데이트 했습니다 [4 단계: 필요에 따라 로밍 사용자 프로필에 대 한 GPO를 만들어](#step-4:-optionally-create-a-gpo-for-roaming-user-profiles) 해당 Windows 고 수 있도록 제대로 로밍 사용자 프로필 정책 적용 (영향을 받는 Pc에서 로컬 정책으로 전환 되지 않고)이이 항목의 합니다.
+>보안 변경 내용으로 인해 [MS16 072](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14%2c-2016)를 업데이트 했습니다 [4 단계: 필요에 따라 로밍 사용자 프로필에 대 한 GPO를 만들어](#step-4-optionally-create-a-gpo-for-roaming-user-profiles) 해당 Windows 고 수 있도록 제대로 로밍 사용자 프로필 정책 적용 (영향을 받는 Pc에서 로컬 정책으로 전환 되지 않고)이이 항목의 합니다.
 
 > [!IMPORTANT]
 >  사용자 지정 시작 하려면 다음 구성에서 OS의 전체 업그레이드 후 손실 됩니다.
 > - 사용자가 로밍 프로필에 대 한 구성
 > - 시작을 변경 하려면 사용자 수
 >
-> 결과적으로, 시작 메뉴는 OS 업그레이드 한 후 새 OS 버전의 기본으로 재설정 됩니다. 해결 방법은 [부록 c: 작업 업그레이드 한 후 시작 메뉴 레이아웃을 약 재설정](#appendix-c-workaround)합니다.
+> 결과적으로, 시작 메뉴는 OS 업그레이드 한 후 새 OS 버전의 기본으로 재설정 됩니다. 해결 방법은 [부록 c: 작업 업그레이드 한 후 시작 메뉴 레이아웃을 약 재설정](#appendix-c-working-around-reset-start-menu-layouts-after-upgrades)합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -54,7 +54,7 @@ X64 기반 또는 x86 기반 컴퓨터는 필요한 로밍 사용자 프로필 W
     - 파일 공유에서 DFS 복제를 사용하여 다른 서버에 콘텐츠를 복제하는 경우 사용자가 서로 다른 서버에서 충돌하는 편집 작업을 수행하지 못하도록 원본 서버에만 액세스할 수 있도록 해야 합니다.
     - 파일 공유가 클러스터된 경우 성능 문제를 방지하려면 파일 공유에서 지속적인 가용성을 사용하지 않도록 설정합니다.
 - 로밍 사용자 프로필의 기본 컴퓨터 지원을 사용 하려면은 추가 클라이언트 컴퓨터 및 Active Directory 스키마 요구 사항입니다. 자세한 내용은 [폴더 리디렉션 및 로밍 사용자 프로필에 대 한 기본 컴퓨터 배포](deploy-primary-computers.md)합니다.
-- 레이아웃 둘 이상 PC, 원격 데스크톱 세션 호스트 또는 가상화 된 데스크톱 인프라 (VDI) 서버를 사용 하 든 Windows 10 또는 Windows Server 2016에서 메뉴 로밍되지 사용자의 시작입니다. 해결 방법으로이 항목에 설명 된 대로 시작 레이아웃을 지정할 수 있습니다. 할 수 있습니다 또는 제대로 원격 데스크톱 세션 호스트 서버 또는 VDI 서버를 사용 하는 경우 시작 메뉴의 설정 로밍 사용자 프로필 디스크를 사용 합니다. 자세한 내용은 참조 하세요. [Windows Server 2012의 사용자 프로필 디스크를 사용 하 여 사용자 데이터 관리가 쉽습니다](https://blogs.technet.microsoft.com/enterprisemobility/2012/11/13/easier-user-data-management-with-user-profile-disks-in-windows-server-2012/)합니다.
+- 레이아웃 둘 이상 PC, 원격 데스크톱 세션 호스트 또는 가상화 된 데스크톱 인프라 (VDI) 서버를 사용 하 든 Windows 10, Windows Server 2019 또는 Windows Server 2016에서 메뉴 로밍되지 사용자의 시작입니다. 해결 방법으로이 항목에 설명 된 대로 시작 레이아웃을 지정할 수 있습니다. 할 수 있습니다 또는 제대로 원격 데스크톱 세션 호스트 서버 또는 VDI 서버를 사용 하는 경우 시작 메뉴의 설정 로밍 사용자 프로필 디스크를 사용 합니다. 자세한 내용은 참조 하세요. [Windows Server 2012의 사용자 프로필 디스크를 사용 하 여 사용자 데이터 관리가 쉽습니다](https://blogs.technet.microsoft.com/enterprisemobility/2012/11/13/easier-user-data-management-with-user-profile-disks-in-windows-server-2012/)합니다.
 
 ### <a name="considerations-when-using-roaming-user-profiles-on-multiple-versions-of-windows"></a>여러 버전의 Windows에서 로밍 사용자 프로필을 사용할 때의 고려 사항
 
@@ -65,7 +65,7 @@ X64 기반 또는 x86 기반 컴퓨터는 필요한 로밍 사용자 프로필 W
 - 로밍 사용자 프로필에 대한 충분한 저장소를 할당합니다. 두 운영 체제 버전을 지원하는 경우 각 운영 체제 버전에 대해 별도의 프로필이 유지되므로 프로필 수가 두 배로 증가하며, 따라서 사용된 총 공간도 두 배로 증가합니다.
 - Windows Vista/Windows Server 2008 및 Windows 7 또는 Windows Server 2008 R2 실행 하는 컴퓨터에서 로밍 사용자 프로필을 사용 하지 마세요. 이러한 운영 체제 버전 간에 로밍 프로필 버전의 비 호환성으로 인해 지원 되지 않습니다.
 - 하나의 운영 체제 버전에서 적용된 변경 내용이 다른 운영 체제 버전으로 로밍되지 않는다는 점을 사용자에게 알려 줍니다.
-- 다른 프로필 버전을 사용 하는 Windows 버전으로 환경을 이동 하는 경우 (예: Windows 10 버전 1607 Windows 10-참조 [부록 b: 프로필 버전 참조 정보](#appendix-b:-profile-version-reference-information) 목록은), 사용자가 새로 만든 빈 로밍 사용자 프로필을 수신 합니다. 공용 폴더를 리디렉션하도록 폴더 리디렉션을 사용 하 여 새 프로필을 가져오는 영향을 최소화할 수 있습니다. 로밍 사용자 프로필 마이그레이션 프로필을 두 개 버전에서 다른 수 있는 방법은 없습니다.
+- 다른 프로필 버전을 사용 하는 Windows 버전으로 환경을 이동 하는 경우 (예: Windows 10 버전 1607 Windows 10-참조 [부록 b: 프로필 버전 참조 정보](#appendix-b-profile-version-reference-information) 목록은), 사용자가 새로 만든 빈 로밍 사용자 프로필을 수신 합니다. 공용 폴더를 리디렉션하도록 폴더 리디렉션을 사용 하 여 새 프로필을 가져오는 영향을 최소화할 수 있습니다. 로밍 사용자 프로필 마이그레이션 프로필을 두 개 버전에서 다른 수 있는 방법은 없습니다.
 
 ## <a name="step-1-enable-the-use-of-separate-profile-versions"></a>1단계: 별도 프로필 버전 사용
 
@@ -120,7 +120,7 @@ Windows Server에서 파일 공유를 만드는 방법에는 다음과 같습니
 2. 공유 타일에서 선택 **태스크**를 선택한 후 **새 공유**합니다. 새 공유 마법사가 나타납니다.
 3. 에 **프로필 선택** 페이지에서 선택 **SMB 공유 – 빠르게**합니다. 파일 서버 리소스 관리자가 설치 되어 있고 폴더 관리 속성을 사용 하는 경우 대신 선택할 **SMB 공유-고급**합니다.
 4. **공유 위치** 페이지에서 공유를 만들 서버 및 볼륨을 선택합니다.
-5. **공유 이름** 페이지의 **공유 이름** 상자에 공유 이름(예: **User Profiles$**)을 입력합니다.
+5. **공유 이름** 페이지의 **공유 이름** 상자에 공유 이름(예: **User Profiles$** )을 입력합니다.
 
     >[!TIP]
     >공유를 만들 때 공유 이름 뒤에 ```$``` 를 붙여 공유를 숨깁니다. 그러면 일반 브라우저에서 공유가 숨겨집니다.
@@ -138,44 +138,14 @@ Windows Server에서 파일 공유를 만드는 방법에는 다음과 같습니
 
 ### <a name="required-permissions-for-the-file-share-hosting-roaming-user-profiles"></a>파일 공유 호스팅 로밍 사용자 프로필에 필요한 권한
 
-<table>
-<tbody>
-<tr class="odd">
-<td>사용자 계정</td>
-<td>액세스 권한</td>
-<td>적용 대상</td>
-</tr>
-<tr class="even">
-<td>시스템</td>
-<td>모든 권한</td>
-<td>이 폴더, 하위 폴더 및 파일</td>
-</tr>
-<tr class="odd">
-<td>Administrators</td>
-<td>모든 권한</td>
-<td>이 폴더만</td>
-</tr>
-<tr class="even">
-<td>만든 이/소유자</td>
-<td>모든 권한</td>
-<td>하위 폴더 및 파일만</td>
-</tr>
-<tr class="odd">
-<td>공유에 데이터를 저장해야 하는 사용자의 보안 그룹(Roaming User Profiles Users and Computers)</td>
-<td>폴더 나열/데이터 읽기<sup>1</sup><br />
-<br />
-폴더 만들기/데이터 추가<sup>1</sup></td>
-<td>이 폴더만</td>
-</tr>
-<tr class="even">
-<td>다른 그룹 및 계정</td>
-<td>없음(제거)</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-1 고급 권한
+|       |       |       |
+|   -   |   -   |   -   |
+| 사용자 계정 | 액세스 권한 | 적용 대상 |
+|   시스템    |  모든 권한     |  이 폴더, 하위 폴더 및 파일     |
+|  Administrators     |  모든 권한     |  이 폴더만     |
+|  만든 이/소유자     |  모든 권한     |  하위 폴더 및 파일만     |
+| 공유에 데이터를 저장해야 하는 사용자의 보안 그룹(Roaming User Profiles Users and Computers)      |  폴더 나열 / 데이터 읽기 *(고급 권한)* <br />폴더 만들기 / 데이터 추가 *(고급 권한)* |  이 폴더만     |
+| 다른 그룹 및 계정   |  없음(제거)     |       |
 
 ## <a name="step-4-optionally-create-a-gpo-for-roaming-user-profiles"></a>4단계: 로밍 사용자 프로필에 대한 GPO 만들기(선택 사항)
 
@@ -200,7 +170,7 @@ Windows Server에서 파일 공유를 만드는 방법에는 다음과 같습니
 
 ## <a name="step-5-optionally-set-up-roaming-user-profiles-on-user-accounts"></a>5단계: 사용자 계정에 로밍 사용자 프로필 설치(선택 사항)
 
-사용자 계정에 로밍 사용자 프로필을 배포하려면 다음 절차를 사용하여 Active Directory 도메인 서비스의 사용자 계정에 대한 로밍 사용자 프로필을 지정합니다. 배포 하는 경우 로밍 사용자 프로필 컴퓨터에 원격 데스크톱 서비스 또는 가상화 된 데스크톱 배포에 설명 된 절차를 대신 사용할에 대 한 일반적인 방식 대로 [6 단계: 필요에 따라 컴퓨터에 로밍 사용자 프로필을 설정할](#step-6:-optionally-set-up-roaming-user-profiles-on-computers)합니다.
+사용자 계정에 로밍 사용자 프로필을 배포하려면 다음 절차를 사용하여 Active Directory 도메인 서비스의 사용자 계정에 대한 로밍 사용자 프로필을 지정합니다. 배포 하는 경우 로밍 사용자 프로필 컴퓨터에 원격 데스크톱 서비스 또는 가상화 된 데스크톱 배포에 설명 된 절차를 대신 사용할에 대 한 일반적인 방식 대로 [6 단계: 필요에 따라 컴퓨터에 로밍 사용자 프로필을 설정할](#step-6-optionally-set-up-roaming-user-profiles-on-computers)합니다.
 
 >[!NOTE]
 >Active Directory를 사용하여 사용자 계정에 로밍 사용자 프로필을 설치하고, 그룹 정책을 사용하여 컴퓨터에 로밍 사용자 프로필을 설치한 경우 컴퓨터 기반 정책 설정이 우선적으로 적용됩니다.
@@ -223,9 +193,9 @@ Windows Server에서 파일 공유를 만드는 방법에는 다음과 같습니
 
 ## <a name="step-6-optionally-set-up-roaming-user-profiles-on-computers"></a>6단계: 컴퓨터에 로밍 사용자 프로필 설치(선택 사항)
 
-컴퓨터에 로밍 사용자 프로필을 배포하려면 원격 데스크톱 서비스 또는 가상화된 데스크톱 배포에 일반적인 방식대로 다음 절차를 사용합니다. 사용자 계정에 로밍 사용자 프로필을 배포 하는 경우에 설명 된 절차를 대신 사용할 [5 단계: 필요에 따라 사용자 계정에 로밍 사용자 프로필을 설정할](#step-5:-optionally-set-up-roaming-user-profiles-on-user-accounts)합니다.
+컴퓨터에 로밍 사용자 프로필을 배포하려면 원격 데스크톱 서비스 또는 가상화된 데스크톱 배포에 일반적인 방식대로 다음 절차를 사용합니다. 사용자 계정에 로밍 사용자 프로필을 배포 하는 경우에 설명 된 절차를 대신 사용할 [5 단계: 필요에 따라 사용자 계정에 로밍 사용자 프로필을 설정할](#step-5-optionally-set-up-roaming-user-profiles-on-user-accounts)합니다.
 
-Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 또는 Windows Server 2008을 실행 하는 컴퓨터에 로밍 사용자 프로필을 적용할 그룹 정책을 사용할 수 있습니다.
+Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 또는 Windows Server 2008을 실행 하는 컴퓨터에 로밍 사용자 프로필을 적용할 그룹 정책을 사용할 수 있습니다.
 
 >[!NOTE]
 >그룹 정책을 사용하여 컴퓨터에 로밍 사용자 프로필을 설치하고, Active Directory를 사용하여 사용자 계정에 로밍 사용자 프로필을 설치한 경우 컴퓨터 기반 정책 설정이 우선적으로 적용됩니다.
@@ -238,7 +208,7 @@ Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2016, Windows S
 4. 그룹 정책 관리 편집기 창에서 **컴퓨터 구성**, **정책**, **관리 템플릿**, **시스템**, **사용자 프로필**로 차례로 이동합니다.
 5. 마우스 오른쪽 단추로 클릭 **이 컴퓨터에 로그온 하는 모든 사용자의 로밍 프로필 경로 설정** 선택한 후 **편집**합니다.
     > [!TIP]
-    > 사용자의 홈 폴더(구성된 경우)는 Windows PowerShell과 같은 일부 프로그램에서 사용하는 기본 폴더입니다. AD DS에서 사용자 계정 속성의 **홈 폴더** 섹션을 사용하여 사용자별 대체 로컬 또는 네트워크 위치를 구성할 수 있습니다. 가상 데스크톱 환경에서 Windows 8.1, Windows 8, Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012를 실행 하는 컴퓨터의 모든 사용자에 대해 홈 폴더 위치를 구성 하려면 사용 하도록 설정 합니다 **사용자 홈 폴더** 정책 설정을 매핑하거나 로컬 폴더를 지정 하는 파일 공유 및 드라이브 문자를 지정 합니다. 환경 변수나 줄임표를 사용하지 마세요. 사용자가 로그온한 동안 지정한 경로 끝에 사용자의 별칭이 추가됩니다.
+    > 사용자의 홈 폴더(구성된 경우)는 Windows PowerShell과 같은 일부 프로그램에서 사용하는 기본 폴더입니다. AD DS에서 사용자 계정 속성의 **홈 폴더** 섹션을 사용하여 사용자별 대체 로컬 또는 네트워크 위치를 구성할 수 있습니다. Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012 가상 데스크톱 환경에서 실행 하는 컴퓨터의 모든 사용자의 홈 폴더 위치를 구성 하려면 사용 하도록 설정 된 **사용자 홈 폴더**  정책 설정 하 고 매핑하거나 로컬 폴더를 지정 하는 파일 공유 및 드라이브 문자를 지정 합니다. 환경 변수나 줄임표를 사용하지 마세요. 사용자가 로그온한 동안 지정한 경로 끝에 사용자의 별칭이 추가됩니다.
 6. 에 **속성** 대화 상자에서 **사용**
 7. 에 **이 컴퓨터에 로그온 하는 사용자가 로밍 프로필 경로 사용 해야** 상자에 사용자의 로밍 사용자 프로필을 뒤에 저장 하려는 파일 공유 경로 입력 합니다 `%username%` (하는 자동으로 바뀝니다 사용자는 첫 번째 이름으로 사용자가 로그인)입니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
@@ -259,43 +229,18 @@ Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2016, Windows S
 3. 그룹 정책을 사용 하 여 로밍 사용자 프로필에 대해 만든 GPO를 사용자 지정된 시작 레이아웃을 적용 합니다. 이렇게 하려면 참조 [도메인의 사용자 지정된 시작 레이아웃을 적용할 그룹 정책을 사용 하 여](https://docs.microsoft.com/windows/configuration/customize-windows-10-start-screens-by-using-group-policy#bkmk-domaingpodeployment)입니다.
 4. 그룹 정책을 사용 하 여 Windows 10 Pc에서 다음 레지스트리 값을 설정 합니다. 이렇게 하려면 참조 [레지스트리 항목 구성](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753092(v=ws.11)>)합니다.
 
-    <table>
-    <thead>
-    <tr class="header">
-    <th>작업</th>
-    <th>Update</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Hive</td>
-    <td><strong>HKEY_LOCAL_MACHINE</strong></td>
-    </tr>
-    <tr class="even">
-    <td>키 경로</td>
-    <td><strong>Software\Microsoft\Windows\CurrentVersion\Explorer</strong></td>
-    </tr>
-    <tr class="odd">
-    <td>값 이름</td>
-    <td><strong>SpecialRoamingOverrideAllowed</strong></td>
-    </tr>
-    <tr class="even">
-    <td>값 유형</td>
-    <td><strong>REG_DWORD</strong></td>
-    </tr>
-    <tr class="odd">
-    <td>값 데이터</td>
-    <td><strong>1</strong> (또는 <strong>0</strong> 사용 하지 않도록 설정)</td>
-    </tr>
-    <tr class="even">
-    <td>기본</td>
-    <td><strong>10 진수</strong></td>
-    </tr>
-    </tbody>
-    </table>
+| **동작** | **업데이트** |
+|------------|------------|
+|Hive|**HKEY_LOCAL_MACHINE**|
+|키 경로|**Software\Microsoft\Windows\CurrentVersion\Explorer**|
+|값 이름|**SpecialRoamingOverrideAllowed**|
+|값 유형|**REG_DWORD**|
+|값 데이터|**1** (또는 **0** 사용 하지 않도록 설정)|
+|기본|**10 진수**|
+
 5. (선택 사항) 사용자가 더 빠르게 로그인 할 수 있도록 처음 로그온 최적화를 사용 합니다. 이렇게 하려면 참조 [로그인 시간을 개선 하는 정책을 적용할](https://docs.microsoft.com/windows/client-management/mandatory-user-profile#apply-policies-to-improve-sign-in-time)합니다.
-6. (선택 사항) 추가 클라이언트 Pc를 배포 하는 Windows 10 기본 이미지에서 필요 하지 않은 앱을 제거 하 여 로그인 시간을 줄입니다. 서버 이미지에이 단계를 건너뛸 수 있도록 Windows Server 2016 미리 프로 비전 된 모든 앱이 없습니다.
--앱을 제거 하려면 다음을 수행 합니다 사용 된 [제거 AppxProvisionedPackage](https://docs.microsoft.com/powershell/module/dism/remove-appxprovisionedpackage?view=win10-ps) 다음 응용 프로그램을 제거 하려면 Windows PowerShell cmdlet. Pc에 이미 배포 된 경우 사용 하 여 이러한 앱의 제거를 스크립팅할 수 있습니다 합니다 [제거 AppxPackage](https://docs.microsoft.com/powershell/module/appx/remove-appxpackage?view=win10-ps)합니다.
+6. (선택 사항) 추가 클라이언트 Pc를 배포 하는 Windows 10 기본 이미지에서 불필요 한 앱을 제거 하 여 로그인 시간을 줄입니다. Windows Server 2016 및 Windows Server 2019 기능이 미리 프로 비전 된 모든 앱 서버 이미지에이 단계를 건너뛸 수 있습니다.
+    - 앱을 제거 하려면 사용 합니다 [제거 AppxProvisionedPackage](https://docs.microsoft.com/powershell/module/dism/remove-appxprovisionedpackage?view=win10-ps) 다음 응용 프로그램을 제거 하려면 Windows PowerShell cmdlet. Pc에 이미 배포 된 경우 사용 하 여 이러한 앱의 제거를 스크립팅할 수 있습니다 합니다 [제거 AppxPackage](https://docs.microsoft.com/powershell/module/appx/remove-appxpackage?view=win10-ps)합니다.
     
       - Microsoft.windowscommunicationsapps\_8wekyb3d8bbwe
       - Microsoft.BingWeather\_8wekyb3d8bbwe
@@ -369,7 +314,7 @@ Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2016, Windows S
 |Windows 10|```\\<servername>\<fileshare>\<username>.V5```|
 |Windows 10, 버전 1703 및 버전 1607|```\\<servername>\<fileshare>\<username>.V6```|
 
-## <a id="appendix-c-workaround"></a>부록 c: 작업은 업그레이드 한 후 시작 메뉴 레이아웃을 약 재설정
+## <a name="appendix-c-working-around-reset-start-menu-layouts-after-upgrades"></a>부록 C: 작업은 업그레이드 한 후 시작 메뉴 레이아웃을 약 재설정
 
 몇 가지 방법으로 전체 업그레이드 한 후 다시 시작 하는 시작 메뉴 레이아웃을 해결할 수는 다음과 같습니다.
 
@@ -392,19 +337,20 @@ Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2016, Windows S
 
 다음 표에는 이 항목의 중요한 최근 변경 내용이 요약되어 있습니다.
 
-|Date|설명 |이유|
+|Date|설명 |Reason|
 |--- |---         |---   |
+|2019 년 5 월 1 일부 터|2019에 대 한 추가 업데이트|
 |2018 년 4 월 10 일|운영 체제 현재 위치 업그레이드 한 후 손실 사용자 지정 시작 하는 경우 추가 토론|설명선 알려진 문제입니다.|
 |2018 년 3 월 13 일 |Windows Server 2016 용 업데이트 | 이전 버전 라이브러리 외부로 이동 하 고 현재 버전의 Windows Server 용으로 업데이트 합니다.|
 |2017 년 4 월 13 일|Windows 10 버전 1703에 대 한 프로필 정보를 추가 하 고 운영 체제를 업그레이드 하는 경우 어떻게 로밍 프로필 버전 작업 설명이 명시 되었습니다-참조 [여러 버전의 Windows에서 로밍 사용자 프로필을 사용할 때의 고려 사항](#considerations-when-using-roaming-user-profiles-on-multiple-versions-of-windows)합니다.|고객 의견|
-|2017 년 3 월 14 일|Windows 10 Pc에 대 한 필수 시작 레이아웃을 지정 하는 것에 대 한 추가 선택적 단계 [부록 a: 로밍 사용자 프로필 배포 검사 목록](#appendix-a:-checklist-for-displaying-roaming-user-profiles)합니다.|최신 Windows 업데이트의 변경 내용 기능입니다.|
-|2017 년 1 월 23 일|추가 하는 단계를 [4 단계: 필요에 따라 로밍 사용자 프로필에 대 한 GPO를 만들어](#step-4:-optionally-create-a-gpo-for-roaming-user-profiles) 현재 인증 된 사용자에 게 읽기 권한을 위임 하려면 그룹 정책 보안 업데이트로 인해 필요 합니다.|보안 그룹 정책 처리를 변경합니다.|
-|2016 년 12 월 29 일|링크를 추가 [7 단계: 로밍 사용자 프로필 GPO 사용](#step-7:-enable-the-roaming-user-profiles-gpo) 쉽게 기본 컴퓨터에 대 한 그룹 정책을 설정 하는 방법에 대 한 정보를 가져올 수 있습니다. 또한 수정 단계 5 및 6의 숫자에 잘못 된에 대 한 몇 가지 참조가 되었습니다.|고객 의견|
+|2017 년 3 월 14 일|Windows 10 Pc에 대 한 필수 시작 레이아웃을 지정 하는 것에 대 한 추가 선택적 단계 [부록 a: 로밍 사용자 프로필 배포 검사 목록](#appendix-a-checklist-for-deploying-roaming-user-profiles)합니다.|최신 Windows 업데이트의 변경 내용 기능입니다.|
+|2017 년 1 월 23 일|추가 하는 단계를 [4 단계: 필요에 따라 로밍 사용자 프로필에 대 한 GPO를 만들어](#step-4-optionally-create-a-gpo-for-roaming-user-profiles) 현재 인증 된 사용자에 게 읽기 권한을 위임 하려면 그룹 정책 보안 업데이트로 인해 필요 합니다.|보안 그룹 정책 처리를 변경합니다.|
+|2016 년 12 월 29 일|링크를 추가 [8 단계: 로밍 사용자 프로필 GPO 사용](#step-8-enable-the-roaming-user-profiles-gpo) 쉽게 기본 컴퓨터에 대 한 그룹 정책을 설정 하는 방법에 대 한 정보를 가져올 수 있습니다. 또한 수정 단계 5 및 6의 숫자에 잘못 된에 대 한 몇 가지 참조가 되었습니다.|고객 의견|
 |2016 년 12 월 5 일|시작 메뉴 설정 로밍 문제를 설명 하는 추가 정보입니다.|고객 의견|
-|2016 년 7 월 6 일|Windows 10 프로필 버전 접미사를 추가 [부록 b: 프로필 버전 참조 정보](#appendix-b:-profile-version-reference-information)합니다. 지원 되는 운영 체제의 목록에서 Windows XP 및 Windows Server 2003 제거 합니다.|새 버전의 Windows를 및 더 이상 지원 되지 않는 Windows 버전에 대 한 제거 정보에 대 한 업데이트 합니다.|
+|2016 년 7 월 6 일|Windows 10 프로필 버전 접미사를 추가 [부록 b: 프로필 버전 참조 정보](#appendix-b-profile-version-reference-information)합니다. 지원 되는 운영 체제의 목록에서 Windows XP 및 Windows Server 2003 제거 합니다.|새 버전의 Windows를 및 더 이상 지원 되지 않는 Windows 버전에 대 한 제거 정보에 대 한 업데이트 합니다.|
 |2015년 7월 7일|클러스터된 파일 서버를 사용하는 경우 지속적인 가용성을 사용하지 않도록 설정하는 단계 및 요구 사항을 추가했습니다.|클러스터된 파일 공유는 지속적인 가용성을 사용하지 않는 경우 작은 쓰기(로밍 사용자 프로필에 일반적임)에 비해 우수한 성능을 제공합니다.|
-|2014년 3월 19일|프로필 버전 접미사 (합니다. V2 합니다. V3. V4)에서 [부록 b: 프로필 버전 참조 정보](#appendix-b:-profile-version-reference-information)합니다.|Windows는 대/소문자 구분, 파일 공유를 사용 하 여 NFS를 사용 하는 경우 이지만 올바른 (대문자) 대/소문자 프로필 접미사에 대 한 것이 중요 합니다.|
-|2013년 10월 9일|몇 가지를 설명 했습니다 추가 Windows Server 2012 R2 및 Windows 8.1 대 한 수정 합니다 [여러 버전의 Windows에서 로밍 사용자 프로필을 사용 하는 경우 고려 사항](#considerations-when-using-roaming-user-profiles-on-multiple-versions-of-windows) 고 [부록 b: 프로필 버전 참조 정보](#appendix-b:-profile-version-reference-information) 섹션입니다.|새 버전에 대 한 업데이트 고객 의견|
+|2014년 3월 19일|프로필 버전 접미사 (합니다. V2 합니다. V3. V4)에서 [부록 b: 프로필 버전 참조 정보](#appendix-b-profile-version-reference-information)합니다.|Windows는 대/소문자 구분, 파일 공유를 사용 하 여 NFS를 사용 하는 경우 이지만 올바른 (대문자) 대/소문자 프로필 접미사에 대 한 것이 중요 합니다.|
+|2013년 10월 9일|몇 가지를 설명 했습니다 추가 Windows Server 2012 R2 및 Windows 8.1 대 한 수정 합니다 [여러 버전의 Windows에서 로밍 사용자 프로필을 사용 하는 경우 고려 사항](#considerations-when-using-roaming-user-profiles-on-multiple-versions-of-windows) 고 [부록 b: 프로필 버전 참조 정보](#appendix-b-profile-version-reference-information) 섹션입니다.|새 버전에 대 한 업데이트 고객 의견|
 
 ## <a name="more-information"></a>자세한 정보
 

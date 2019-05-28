@@ -11,12 +11,12 @@ ms.assetid: 930e758f-bd50-46b4-a3a4-9857110f17b4
 author: shirgall
 ms.author: kathydav
 ms.date: 08/30/2017
-ms.openlocfilehash: 013328953321bc66b3fd30759e5be321eea32dde
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: a398334700f7c292732207919b73a33145a6aae9
+ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59824234"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66222690"
 ---
 # <a name="supported-freebsd-virtual-machines-on-hyper-v"></a>Hyper-v에서 지원 되는 FreeBSD 가상 컴퓨터
 
@@ -35,9 +35,9 @@ ms.locfileid: "59824234"
 |**기능**|**Windows Server 운영 체제 버전**|**11.1/11.2**|**11.0**|**10.3**|**10.2**|**10.0 - 10.1**|**9.1 - 9.3, 8.4**|
 |-|-|-|-|-|-|-|-|
 |**가용성**||기본 제공|기본 제공|기본 제공|기본 제공|기본 제공|[포트](https://svnweb.freebsd.org/ports/branches/2015Q1/emulators/hyperv-is/) |
-|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004; |
+|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004; |
 |Windows Server 2016 정확한 시간|2016|&#10004;||||||
-|**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)**||||||||
+|**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**||||||||
 |Jumbo 프레임|2016, 2012 R2, 2012, 2008 R2|&#10004; 참고 3|&#10004; 참고 3|&#10004; 참고 3|&#10004; 참고 3|&#10004; 참고 3|&#10004; 참고 3|
 |VLAN 태깅, 트렁킹|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |실시간 마이그레이션|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
@@ -46,28 +46,28 @@ ms.locfileid: "59824234"
 |TCP 조각화와 체크섬 오프 로드|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|||
 |큰 오프 로드 (LRO)를 수신 합니다.|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;||||
 |SR-IOV|2016|||||||
-|**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**||참고 1|참고 1|참고 1|참고 1|참고 1, 2|참고 1, 2|
+|**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**||참고 1|참고 1|참고 1|참고 1|참고 1, 2|참고 1, 2|
 |VHDX 크기 조정|2016, 2012 R2|&#10004; 참고 7|&#10004; 참고 7|||||
 |가상 파이버 채널|2016, 2012 R2|||||||
 |가상 머신 백업|2016, 2012 R2|&#10004;||||||
 |TRIM 지원|2016, 2012 R2|&#10004;||||||
 |SCSI WWN|2016, 2012 R2|||||||
-|**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**||||||||
+|**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)**||||||||
 |PAE 커널 지원|2016, 2012 R2, 2012, 2008 R2|||||||
 |MMIO 간격 구성|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |동적 메모리-즉석 추가|2016, 2012 R2, 2012|||||||
 |동적 메모리-Ballooning|2016, 2012 R2, 2012|||||||
 |런타임 메모리 크기 조정|2016|||||||
-|**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**||||||||
+|**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**||||||||
 |Hyper-v 특정 비디오 장치|2016, 2012 R2, 2012, 2008 R2|||||||
-|**[기타](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)**||||||||
+|**[기타](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)**||||||||
 |키/값 쌍|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;참고 6|&#10004; 참고 5, 6|&#10004;참고 6|
 |마스크 불가능 인터럽트|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |호스트에서 게스트로 파일 복사|2016, 2012 R2|||||||
 |lsvmbus 명령|2016, 2012 R2, 2012, 2008 R2|||||||
 |Hyper-v 소켓|2016|||||||
 |PCI 통과/DDA|2016|&#10004;||||||
-|**[2 세대 가상 컴퓨터](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)**||||||||
+|**[2 세대 가상 컴퓨터](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines)**||||||||
 |UEFI를 사용 하 여 부팅|2016, 2012 R2|&#10004;||||||
 |보안 부팅|2016|||||||
 

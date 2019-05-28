@@ -7,22 +7,22 @@ ms.topic: article
 ms.author: Qizha;TristanB
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 5261c856a0a29f9f58526e4f9580a16bbed5be56
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 5fe91888188796c96d5da80e8f9bd3ed627b9d43
+ms.sourcegitcommit: 08eba714d3ceb5f2dfb5486d6b990da1aa4dcbdd
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59874304"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65564736"
 ---
 # <a name="server-hardware-power-considerations"></a>서버 하드웨어에 대 한 전원 고려 사항
 
 엔터프라이즈 및 데이터 센터 환경에서 에너지 효율성 증가 중요성을 인식 하는 것이 반드시 합니다. 고성능 및 낮은 에너지 사용량이 많습니다 충돌 하는 목표, 있지만 서버 구성 요소를 신중 하 게 선택 하 여 올바른 균형을 얻을 수 있습니다. 다음 섹션에서는 전원 특징 및 기능 서버 하드웨어 구성 요소에 대 한 지침을 보여 줍니다.
 
-## <a name="processor-recommendations"></a>프로세서 권장
+## <a name="processor-recommendations"></a>프로세서 추천 사항
 
 빈도, 전압, 캐시 크기 및 프로세스 기술 운영 프로세서의 에너지 소비를 영향을 줍니다. 프로세서 (TDP) 등급 다른 모델을 기준으로 에너지 소비량의 기본 표시를 제공 하는 지점 열 디자인을가지고 있습니다.
 
-일반적으로 성능 목표를 충족 하는 가장 낮은 TDP 프로세서를 선택 합니다. 또한 최신 세대의 프로세서는 일반적으로 더 많은 에너지 효율적인 및 모든 수준의 성능에 더 나은 전원 관리를 사용 하도록 설정 하는 Windows 전원 관리 알고리즘에 대 한 자세한 전원 상태 노출 될 수 있습니다. 새 "협조적 중 일부를 사용할 수 있습니다 또는? Microsoft는 하드웨어 제조업체와 협력에서을 개발 하는 전원 관리 기술.
+일반적으로 성능 목표를 충족 하는 가장 낮은 TDP 프로세서를 선택 합니다. 또한 최신 세대의 프로세서는 일반적으로 더 많은 에너지 효율적인 및 모든 수준의 성능에 더 나은 전원 관리를 사용 하도록 설정 하는 Windows 전원 관리 알고리즘에 대 한 자세한 전원 상태 노출 될 수 있습니다. 또는 Microsoft는 하드웨어 제조업체와 협력에서을 개발 하는 새 "협조적" 전원 관리 기술 중 일부를 사용할 수 있습니다.
 
 협조적 전원 관리 기술에 대 한 자세한 내용은에서 공동 작업 프로세서 성능 제어 라는 섹션을 참조 합니다 [고급 구성 및 전원 인터페이스 사양](http://www.uefi.org/sites/default/files/resources/ACPI_5_1release.pdf)합니다.
 
@@ -36,7 +36,7 @@ ms.locfileid: "59874304"
 ## <a name="disks-recommendations"></a>디스크 권장 사항
 더 높은 RPM 증가 에너지 소비를 의미합니다. SSD 드라이브는 회전 드라이브 보다 더 많은 전력 효율성. 또한 2.5 인치 드라이브는 일반적으로 3.5 인치 드라이브 보다 전원을 해야합니다.
 
-## <a name="network-and-storage-adapter-recommendations"></a>네트워크 및 저장소 어댑터 권장 사항
+## <a name="network-and-storage-adapter-recommendations"></a>네트워크 및 스토리지 어댑터 추천 사항
 일부 어댑터는 유휴 기간 동안 에너지 사용을 줄입니다. 10gb 네트워크 어댑터 및 고대역폭 (4 ~ 8 Gb) 저장소 링크에 대 한 중요 고려 사항입니다. 이러한 장치는 많은 에너지를 사용할 수 있습니다.
 
 
@@ -69,6 +69,6 @@ ms.locfileid: "59874304"
 
 ## <a name="see-also"></a>관련 항목
 - [서버 하드웨어에 대 한 성능 고려 사항](index.md)
-- [전원 및 성능 조정](power/power-performance-tuning.md)
+- [전원 및 성능 튜닝](power/power-performance-tuning.md)
 - [프로세서 전원 관리 튜닝](power/processor-power-management-tuning.md)
-- [분산 된 계획 매개 변수를 권장합니다.](power/recommended-balanced-plan-parameters.md)
+- [분산 전원 계획에 추천되는 매개 변수](power/recommended-balanced-plan-parameters.md)

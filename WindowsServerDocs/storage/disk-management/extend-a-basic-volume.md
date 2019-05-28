@@ -8,12 +8,12 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 29b7b61f7edc20edda7bc18b82db17447badc0f2
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c20e2da3e629743ab4d4d4cf1da16a6e69093ecf
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59834254"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192576"
 ---
 # <a name="extend-a-basic-volume"></a>기본 볼륨 확장
 
@@ -25,30 +25,26 @@ ms.locfileid: "59834254"
 
 ## <a name="extending-a-basic-volume"></a>기본 볼륨 확장
 
--   [Windows 인터페이스를 사용 하 여](#BKMK_WINUI)
--   [명령줄을 사용 하 여](#BKMK_CMD)
+-   [Windows 인터페이스를 사용 하 여](#to-extend-a-basic-volume-using-the-windows-interface)
+-   [명령줄을 사용 하 여](#to-extend-a-basic-volume-using-a-command-line)
 
-<a href="" id="BKMK_WINUI"></a>
 #### <a name="to-extend-a-basic-volume-using-the-windows-interface"></a>Windows 인터페이스를 사용하여 기본 볼륨 확장
 
-1.  디스크 관리자에서 확장하고자 하는 기본 볼륨을 마우스 오른쪽 단추로 클릭합니다.
+1. 디스크 관리자에서 확장하고자 하는 기본 볼륨을 마우스 오른쪽 단추로 클릭합니다.
 
-2.  **볼륨 확장**을 클릭합니다.
+2. **볼륨 확장**을 클릭합니다.
 
-3.  화면상의 지침을 따릅니다.
+3. 화면상의 지침을 따릅니다.
 
-<a href="" id="BKMK_CMD"></a>
 #### <a name="to-extend-a-basic-volume-using-a-command-line"></a>명령줄을 사용하여 기본 볼륨 확장
 
-1.  명령 프롬프트를 열고 `diskpart`를 입력합니다.
+1. 명령 프롬프트를 열고 `diskpart`를 입력합니다.
 
-2.  **DISKPART** 프롬프트에서 `list volume`을 입력합니다. 확장하고자 하는 기본 볼륨을 메모합니다.
+2. **DISKPART** 프롬프트에서 `list volume`을 입력합니다. 확장하고자 하는 기본 볼륨을 메모합니다.
 
-3.  **DISKPART** 프롬프트에서 `select volume <volumenumber>`을 입력합니다. 이를 통해 동일한 디스크의 인접한 비어 있는 공간으로 확장하고자 하는 기본 볼륨 *volumenumber*을 선택합니다.
+3. **DISKPART** 프롬프트에서 `select volume <volumenumber>`을 입력합니다. 이를 통해 동일한 디스크의 인접한 비어 있는 공간으로 확장하고자 하는 기본 볼륨 *volumenumber*을 선택합니다.
 
-4.  **DISKPART** 프롬프트에서 `extend [size=<size>]`을 입력합니다. 이를 통해 선택한 볼륨을 MB(메가바이트) *크기*로 확장합니다.
-
-<br />
+4. **DISKPART** 프롬프트에서 `extend [size=<size>]`을 입력합니다. 이를 통해 선택한 볼륨을 MB(메가바이트) *크기*로 확장합니다.
 
 | 값 | 설명 |
 | --- | --- |
@@ -64,5 +60,3 @@ ms.locfileid: "59834254"
 ## <a name="see-also"></a>관련 항목
 
 -   [명령줄 구문 표기법](https://technet.microsoft.com/library/cc742449(v=ws.11).aspx)
-
-

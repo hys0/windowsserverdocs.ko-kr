@@ -8,16 +8,16 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 09/10/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 7b3c87597e07102d00fc068b7ecd5744e4ba366f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 39b790f39a2bf9c6334eb2176aa2e5f2e0196c0c
+ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59854014"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65475973"
 ---
 # <a name="deploy-primary-computers-for-folder-redirection-and-roaming-user-profiles"></a>폴더 리디렉션 및 로밍 사용자 프로필에 대 한 기본 컴퓨터 배포
 
->적용 대상: Windows 10, Windows 8, Windows 8.1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016
+>적용 대상: Windows 10, Windows 8, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2
 
 이 항목에서는 기본 컴퓨터 지원을 사용 하도록 설정 하 고 사용자의 기본 컴퓨터를 지정 하는 방법을 설명 합니다. 이렇게 컴퓨터 폴더 리디렉션 및 로밍 사용자 프로필을 사용 하는 제어 하도록 합니다.
 
@@ -31,7 +31,7 @@ ms.locfileid: "59854014"
 기본 컴퓨터 지원에 다음 요구 사항이 있습니다.
 
 - Windows Server 2012 스키마 추가 프로그램이 포함 되도록는 Active Directory Domain Services (AD DS) 스키마를 업데이트 해야 합니다 (스키마 업데이트는 Windows Server 2012 도메인 컨트롤러를 자동으로 설치). AD DS 스키마 업데이트에 대 한 자세한 내용은 [Adprep.exe 통합](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh472161(v=ws.11)#adprepexe-integration>) 하 고 [Adprep.exe 실행](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10)>)합니다.
-- 클라이언트 컴퓨터는 Windows 10, Windows 8.1, Windows 8, Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012 실행 해야 합니다.
+- 클라이언트 컴퓨터는 Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012 실행 해야 합니다.
 
 >[!TIP]
 >기본 컴퓨터 지원 폴더 리디렉션 및/또는 로밍 사용자 프로필에 이러한 기술을 처음으로 배포 하는 경우에 필요한 이지만 폴더 리디렉션을 구성 하는 Gpo를 사용 하도록 설정 하기 전에 주 컴퓨터에서 지원 하도록 설정 하 고 로밍 사용자 프로필 그러면 기본 컴퓨터 지원을 사용하기 전에 사용자 데이터가 기본이 아닌 컴퓨터에 복사되는 것이 방지됩니다. 구성 정보를 참조 하세요 [배포 폴더 리디렉션](deploy-folder-redirection.md) 하 고 [로밍 사용자 프로필 배포](deploy-roaming-user-profiles.md)합니다.

@@ -9,16 +9,15 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: fe99487d3a770547af36f69722b442d0e2cbb8b1
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 41a71ff49d211d294768c0e4a55692ced3f2d844
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59828294"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192453"
 ---
 # <a name="checklist-configuring-ad-fs--to-consume-claims-from-ad-fs-1x"></a>검사 목록: AD FS에서 클레임을 사용 하도록 AD FS 구성 1.x
 
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
   
 ## <a name="checklist-configuring-ad-fs-to-consume-claims-from-adfs1x"></a>검사 목록: AD FS에서 클레임을 사용 하도록 AD FS 구성 1.x  
 이 검사 목록에는 Active Directory Federation Services를 구성 하는 데 필요한 작업이 포함 \(AD FS\) AD FS 1에서 전송 되는 클레임을 사용 하도록 Windows Server 2012의 페더레이션 서비스. *x* 페더레이션 서비스입니다.  

@@ -9,16 +9,15 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: bdfd06a28f8ccaa04014024a235cd19512adb181
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: bd4c436c806074f63bf51f497429532d7be32f75
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59887034"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192409"
 ---
 # <a name="checklist-configuring-ad-fs-to-send-claims-to-an-ad-fs-1x-federation-service"></a>검사 목록: AD FS 1.x 페더레이션 서비스에 클레임을 보내도록 AD FS를 구성 합니다.
 
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
   
 ## <a name="checklist-configuring-ad-fs-to-send-claims-to-an-adfs1x-federation-service"></a>검사 목록: AD FS에 대 한 클레임을 보내도록 AD FS 구성 1.x 페더레이션 서비스  
 이 검사 목록에는 Active Directory Federation Services를 구성 하는 데 필요한 작업이 포함 \(AD FS\) AD FS 1에서 인식할 수 있는 클레임을 보내도록 Windows Server 2012의 페더레이션 서비스. *x* 페더레이션 서비스입니다.  

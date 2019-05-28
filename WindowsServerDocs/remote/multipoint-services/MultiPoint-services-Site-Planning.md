@@ -13,12 +13,12 @@ ms.assetid: 063783cd-d748-489e-b175-46eadc993f7a
 author: evaseydl
 manager: scottman
 ms.author: evas
-ms.openlocfilehash: 60d2e1fedc018136f5668d55a8afb2e0574d94de
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: da27467efb842368167b7a315056506e99331e8d
+ms.sourcegitcommit: 21165734a0f37c4cd702c275e85c9e7c42d6b3cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59845074"
+ms.lasthandoff: 05/03/2019
+ms.locfileid: "65034593"
 ---
 # <a name="multipoint-services-site-planning"></a>MultiPoint 서비스 사이트 계획
 MultiPoint 서비스와 연결 된 해당 스테이션을 실행 하는 하나 이상의 컴퓨터를 배포할 위치를 고려해 야 합니다.  
@@ -86,11 +86,11 @@ LAN 클라이언트에 대 한 물리적 거리 제한은 없습니다. 이들�
 ## <a name="using-additional-hubs"></a>추가 hubs를 사용 하 여  
 추가 허브 설치를 쉽게 사용할 수 있습니다. MultiPoint 서비스 시스템에서 사용 되는 허브의는 다음과 같은 세 종류가 있습니다.  
   
--   [스테이션 허브](#Station-hubs)  
+-   [스테이션 허브](#station-hubs)  
   
--   [중간 허브](#Intermediate-hubs)  
+-   [중간 허브](#intermediate-hubs)  
   
--   [다운스트림 허브](#Downstream-hubs)  
+-   [다운스트림 허브](#downstream-hubs)  
   
 ### <a name="station-hubs"></a>스테이션 허브  
 스테이션 허브는 MultiPoint 서비스 스테이션 연관 된 외부 허브. 최소한 스테이션 허브에 키보드에 연결 되도록 해야 합니다. 연결 된 추가 주변 장치는 있을 수도 있습니다. 스테이션 허브 USB 2.0 또는 이후 사양을 따르는 일반 USB 허브 될 수 있습니다. 스테이션 허브 고성능 장치 플러그 인을 하는 경우 외부에서 전원을 끌 수 해야 합니다.  

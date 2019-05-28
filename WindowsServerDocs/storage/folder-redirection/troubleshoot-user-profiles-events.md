@@ -8,16 +8,16 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 04/05/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 6099dac7d77e37b761785b4f58b6106472e5ba1e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f30bfcd531731e3a0d14350536ddf418c50f3ea0
+ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59827954"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65475946"
 ---
 # <a name="troubleshoot-user-profiles-with-events"></a>사용자 프로필 이벤트를 사용 하 여 문제 해결
 
->적용 대상: Windows 10, Windows 8, Windows 8.1, Windows Server 2012, Windows Server 2012 R2 및 Windows Server 2016 합니다.
+>적용 대상: Windows 10, Windows 8, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 및 Windows Server (반기 채널).
 
 이 항목에서는 이벤트 및 추적 로그를 사용 하 여 로드 하는 문제를 해결 하는 방법 및 언로드 사용자 프로필을 설명 합니다. 다음 섹션에서는 사용자 프로필 정보를 기록 하는 세 가지 이벤트 로그를 사용 하는 방법에 설명 합니다.
 
@@ -58,7 +58,7 @@ Windows 응용 프로그램 로그 및 사용자 프로필 서비스 작업 로�
 1. 에 **작업** 이벤트 뷰어를 선택 창 **보기**를 선택한 후 **분석 및 디버그 로그 표시**.
 2. 이동할 **Applications and Services Logs**, 한 다음 **Microsoft**, 다음 **Windows**, 다음 **User Profile Service**, 차례로  **진단**합니다.
 3. 선택 **로그 사용** 선택한 후 **예**합니다. 이렇게 하면 로깅을 시작 하는 진단 로그를 수 있습니다.
-4. 더 자세한 정보를 필요로 하는 경우 참조 [4 단계: 만들기 및 추적을 디코딩](#step-4:-creating-and-decoding-a-trace) 추적 로그를 만드는 방법에 대 한 자세한 내용은 합니다.
+4. 더 자세한 정보를 필요로 하는 경우 참조 [4 단계: 만들기 및 추적을 디코딩](#step-4-creating-and-decoding-a-trace) 추적 로그를 만드는 방법에 대 한 자세한 내용은 합니다.
 5. 로 이동 하는 문제 해결 작업을 완료 하는 경우는 **진단** 로그 선택 **로그 사용 안 함**를 선택 **뷰** 의 선택을 취소 합니다는 **표시 분석 및 디버그 로그** 숨기기 분석 및 디버그 로깅을 사용 하려면 확인란을 선택 합니다.
 
 ## <a name="step-4-creating-and-decoding-a-trace"></a>4단계: 만들기 및 추적을 디코딩

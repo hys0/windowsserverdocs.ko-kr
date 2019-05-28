@@ -13,12 +13,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 05/22/2018
 ms.prod: windows-server-threshold
-ms.openlocfilehash: 4cc9bc5c288eb063f333fa598dbb3511f7be5966
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 5c8df2abd826df2745e10ed773ef50d6cf45c60b
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59820474"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192687"
 ---
 # <a name="windows-commands"></a>Windows 명령
 
@@ -28,34 +28,32 @@ Windows (서버 및 클라이언트)의 모든 지원 되는 버전에는 기본
 
 다음 ㄱ-ㅎ 메뉴에서 특정 명령에 대 한 정보를 찾기 위해 명령을 첫 글자를 클릭 하 고 명령 이름을 클릭 합니다.
 
-[A](#BKMK_a) |
-[B](#BKMK_b) | 
-[C](#BKMK_c) | 
-[D](#BKMK_d) | 
-[E](#BKMK_e) | 
-[F](#BKMK_f) | 
-[G](#BKMK_g) | 
-[H](#BKMK_h) | 
-[I](#BKMK_i) |
-[J](#BKMK_j) | 
-[K](#BKMK_k) | 
-[L](#BKMK_l) | 
-[M](#BKMK_m) | 
-[N](#BKMK_n) | 
-[O](#BKMK_o) | 
-[P](#BKMK_p) | 
-[Q](#BKMK_q) | 
-[R](#BKMK_r) | 
-[S](#BKMK_s) | 
-[T](#BKMK_t) | 
-[U](#BKMK_u) | 
-[V](#BKMK_v) | 
-[W](#BKMK_w) | 
-[X](#BKMK_x) | 
-[Y](#BKMK_y) | 
-[Z](#BKMK_z)
+[A](#a) |
+[B](#b) | 
+[C](#c) | 
+[D](#d) | 
+[E](#e)  | 
+ [F](#f) | 
+[G](#g) | 
+[H](#h) | 
+[합니까](#i)  |
+ [J](#j) | 
+[K](#k) | 
+[L](#l) | 
+[M](#m) | 
+[N](#n)  | 
+ [O](#o) | 
+[P](#p) | 
+[Q](#q) | 
+[R](#r)  | 
+ [S](#s) | 
+[T](#t) | 
+[U](#u) | 
+[V](#v)  | 
+ [W](#w) | 
+[X](#x) | Y | Z
 
-## <a name="BKMK_PREREQ"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 이 PDF에 포함 된 정보에 적용 됩니다.
 
 -   Windows Server 2019
@@ -68,7 +66,7 @@ Windows (서버 및 클라이언트)의 모든 지원 되는 버전에는 기본
 -   Windows 10
 -   Windows 8.1
 
-### <a name="BKMK_OVR"></a>명령 셸 개요
+### <a name="command-shell-overview"></a>명령 셸 개요
 명령 셸에서 배치 (.bat) 파일을 사용 하 여 사용자 계정 관리 또는 야간 백업 같은 일상적인 작업을 자동화 하는 Windows에 기본 제공 되는 첫 번째 셸이 이었습니다. Windows 스크립트 호스트를 사용 하 여 명령 셸에서 보다 정교한 스크립트를 실행할 수 있습니다. 자세한 내용은 [cscript](cscript.md) 하거나 [wscript](wscript.md)합니다. 사용자 인터페이스를 사용 하 여 수 있는 것 보다 스크립트를 사용 하 여 작업을 보다 효율적으로 수행할 수 있습니다. 스크립트는 명령줄에서 사용할 수 있는 모든 명령에 동의 합니다.
 
 Windows 명령 셸에서 두에 있습니다. 명령 셸 및 [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting?view=powershell-6)합니다. 각 shell은 하 고 운영 체제 또는 IT 작업을 자동화 하는 환경을 제공 하는 응용 프로그램 간의 직접 통신을 제공 하는 소프트웨어 프로그램입니다.
@@ -89,37 +87,35 @@ Automation에 대 한 가장 강력 하 고 최신 Windows, Windows 명령 또�
 > 
 > 설정 하는 **reg_DWOrd** 값을 특정 함수에 대 한 제어 문자의 16 진수 값을 사용 (예를 들어 **0 9** 은 탭 및 **0 08** 백스페이스). 사용자 지정 설정이 컴퓨터 설정 보다 우선 하며 명령줄 옵션 레지스트리 설정 보다 우선 합니다.
 
-## <a name="BKMK_CmdRef"></a>명령줄 참조 ㄱ-ㅎ
+## <a name="command-line-reference-a-z"></a>명령줄 참조 ㄱ-ㅎ
 다음 ㄱ-ㅎ 메뉴에서 특정 Windows 명령에 대 한 정보를 찾기 위해 명령을 첫 글자를 클릭 하 고 명령 이름을 클릭 합니다.
 
-[A](#BKMK_a) |
-[B](#BKMK_b) | 
-[C](#BKMK_c) | 
-[D](#BKMK_d) | 
-[E](#BKMK_e) | 
-[F](#BKMK_f) | 
-[G](#BKMK_g) | 
-[H](#BKMK_h) | 
-[I](#BKMK_i) |
-[J](#BKMK_j) | 
-[K](#BKMK_k) | 
-[L](#BKMK_l) | 
-[M](#BKMK_m) | 
-[N](#BKMK_n) | 
-[O](#BKMK_o) | 
-[P](#BKMK_p) | 
-[Q](#BKMK_q) | 
-[R](#BKMK_r) | 
-[S](#BKMK_s) | 
-[T](#BKMK_t) | 
-[U](#BKMK_u) | 
-[V](#BKMK_v) | 
-[W](#BKMK_w) | 
-[X](#BKMK_x) | 
-[Y](#BKMK_y) | 
-[Z](#BKMK_z)
+[A](#a) |
+[B](#b) | 
+[C](#c) | 
+[D](#d) | 
+[E](#e)  | 
+ [F](#f) | 
+[G](#g) | 
+[H](#h) | 
+[합니까](#i)  |
+ [J](#j) | 
+[K](#k) | 
+[L](#l) | 
+[M](#m) | 
+[N](#n)  | 
+ [O](#o) | 
+[P](#p) | 
+[Q](#q) | 
+[R](#r)  | 
+ [S](#s) | 
+[T](#t) | 
+[U](#u) | 
+[V](#v)  | 
+ [W](#w) | 
+[X](#x) | Y | Z)
 
-### <a name="BKMK_a"></a>A
+### <a name="a"></a>변수를 잠그기 위한
 -   [append](append.md)
 -   [arp](arp.md)
 -   [assoc](assoc.md)
@@ -131,14 +127,14 @@ Automation에 대 한 가장 강력 하 고 최신 Windows, Windows 명령 또�
 -   [autoconv](autoconv.md)
 -   [autofmt](autofmt.md)
 
-### <a name="BKMK_b"></a>B
+### <a name="b"></a>B
 -   [bcdboot](bcdboot.md)
 -   [bcdedit](bcdedit.md)
 -   [bdehdcfg](bdehdcfg.md)
 -   [bitsadmin](bitsadmin.md)
   -   [bitsadmin addfile](bitsadmin-addfile.md)
   -   [bitsadmin addfileset](bitsadmin-addfileset.md)
-  -   [bitsadmin 0 인](bitsadmin-addfilewithranges.md)
+  -   [bitsadmin addfilewithranges](bitsadmin-addfilewithranges.md)
   -   [bitsadmin cancel](bitsadmin-cancel.md)
   -   [bitsadmin complete](bitsadmin-complete.md)
   -   [bitsadmin create](bitsadmin-create.md)
@@ -169,17 +165,17 @@ Automation에 대 한 가장 강력 하 고 최신 Windows, Windows 명령 또�
   -   [bitsadmin getreplyprogress](bitsadmin-getreplyprogress.md)
   -   [bitsadmin getstate](bitsadmin-getstate.md)
   -   [bitsadmin gettype](bitsadmin-gettype.md)
-  -   [bitsadmin 도움말](bitsadmin-help.md)
+  -   [bitsadmin help](bitsadmin-help.md)
   -   [bitsadmin info](bitsadmin-info.md)
-  -   [bitsadmin 목록](bitsadmin-list.md)
+  -   [bitsadmin list](bitsadmin-list.md)
   -   [bitsadmin listfiles](bitsadmin-listfiles.md)
-  -   [bitsadmin 모니터](bitsadmin-monitor.md)
+  -   [bitsadmin monitor](bitsadmin-monitor.md)
   -   [bitsadmin nowrap](bitsadmin-nowrap.md)
   -   [bitsadmin rawreturn](bitsadmin-rawreturn.md)
   -   [bitsadmin removecredentials](bitsadmin-removecredentials.md)
   -   [bitsadmin replaceremoteprefix](bitsadmin-replaceremoteprefix.md)
-  -   [bitsadmin 재설정](bitsadmin-reset.md)
-  -   [bitsadmin 다시 시작](bitsadmin-resume.md)
+  -   [bitsadmin reset](bitsadmin-reset.md)
+  -   [bitsadmin resume](bitsadmin-resume.md)
   -   [bitsadmin setaclflag](bitsadmin-setaclflag.md)
   -   [bitsadmin setcredentials](bitsadmin-setcredentials.md)
   -   [bitsadmin setdescription](bitsadmin-setdescription.md)
@@ -191,11 +187,11 @@ Automation에 대 한 가장 강력 하 고 최신 Windows, Windows 명령 또�
   -   [bitsadmin setpriority](bitsadmin-setpriority.md)
   -   [bitsadmin setproxysettings](bitsadmin-setproxysettings.md)
   -   [bitsadmin setreplyfilename](bitsadmin-setreplyfilename.md)
-  -   [bitsadmin 일시 중단](bitsadmin-suspend.md)
+  -   [bitsadmin suspend](bitsadmin-suspend.md)
   -   [bitsadmin takeownership](bitsadmin-takeownership.md)
   -   [bitsadmin 전송](bitsadmin-transfer.md)
   -   [bitsadmin util](bitsadmin-util.md)
-  -   [bitsadmin 줄 바꿈](bitsadmin-wrap.md)
+  -   [bitsadmin wrap](bitsadmin-wrap.md)
 -   [bootcfg](bootcfg.md)
   -   [bootcfg addsw](bootcfg-addsw.md)
   -   [bootcfg copy](bootcfg-copy.md)
@@ -210,15 +206,15 @@ Automation에 대 한 가장 강력 하 고 최신 Windows, Windows 명령 또�
   -   [bootcfg timeout](bootcfg-timeout.md)
 -   [break](break_1.md)
 
-### <a name="BKMK_c"></a>C
+### <a name="c"></a>C
 -   [cacls](cacls_1.md)
 -   [call](call.md)
 -   [cd](cd.md)
 -   [certreq](certreq_1.md)
 -   [certutil](certutil.md)
 -   [change](change.md)
-  -   [로그온 변경](change-logon.md)
-  -   [포트 변경](change-port.md)
+  -   [change logon](change-logon.md)
+  -   [change port](change-port.md)
   -   [change user](change-user.md)
 -   [chcp](chcp.md)
 -   [chdir](chdir_1.md)
@@ -242,7 +238,7 @@ Automation에 대 한 가장 강력 하 고 최신 Windows, Windows 명령 또�
 -   [cprofile](cprofile.md)
 -   [cscript](cscript.md)
 
-### <a name="BKMK_d"></a>D
+### <a name="d"></a>d
 -   [date](date.md)
 -   [dcgpofix](dcgpofix.md)
 -   [defrag](defrag.md)
@@ -261,7 +257,7 @@ Automation에 대 한 가장 강력 하 고 최신 Windows, Windows 명령 또�
 -   [doskey](doskey.md)
 -   [driverquery](driverquery.md)
 
-### <a name="BKMK_e"></a>E
+### <a name="e"></a>E
 -   [echo](echo.md)
 -   [edit](edit.md)
 -   [endlocal](endlocal.md)
@@ -274,7 +270,7 @@ Automation에 대 한 가장 강력 하 고 최신 Windows, Windows 명령 또�
 -   [expand](expand.md)
 -   [extract](extract.md)
 
-### <a name="BKMK_f"></a>F
+### <a name="f"></a>F
 -   [fc](fc.md)
 -   [find](find.md)
 -   [findstr](findstr.md)
@@ -287,18 +283,18 @@ Automation에 대 한 가장 강력 하 고 최신 Windows, Windows 명령 또�
 -   [freedisk](freedisk.md)
 -   [fsutil](fsutil.md)
   -   [fsutil 8dot3name](fsutil-8dot3name.md) 
-  -   [fsutil 동작](fsutil-behavior.md) 
+  -   [fsutil behavior](fsutil-behavior.md) 
   -   [fsutil file](fsutil-file.md)
   -   [fsutil fsinfo](fsutil-fsinfo.md)
   -   [fsutil hardlink](fsutil-hardlink.md)
-  -   [Fsutil objectid](fsutil-objectid.md)
+  -   [fsutil objectid](fsutil-objectid.md)
   -   [fsutil quota](fsutil-quota.md)
-  -   [fsutil 복구](fsutil-repair.md)
+  -   [fsutil repair](fsutil-repair.md)
   -   [fsutil reparsepoint](fsutil-reparsepoint.md)
-  -   [fsutil 리소스](fsutil-resource.md)
-  -   [fsutil 스파스](fsutil-sparse.md)
-  -   [Fsutil 계층화](fsutil-tiering.md)
-  -   [fsutil 트랜잭션](fsutil-transaction.md)
+  -   [fsutil resource](fsutil-resource.md)
+  -   [fsutil sparse](fsutil-sparse.md)
+  -   [fsutil tiering](fsutil-tiering.md)
+  -   [fsutil transaction](fsutil-transaction.md)
   -   [fsutil usn](fsutil-usn.md)
   -   [fsutil volume](fsutil-volume.md)
   -   [fsutil wim](fsutil-wim.md)
@@ -306,7 +302,7 @@ Automation에 대 한 가장 강력 하 고 최신 Windows, Windows 명령 또�
 -   [ftype](ftype.md)
 -   [fveupdate](fveupdate.md)
 
-### <a name="BKMK_g"></a>G
+### <a name="g"></a>G
 -   [getmac](getmac.md)
 -   [gettype](gettype.md)
 -   [goto](goto.md)
@@ -315,12 +311,12 @@ Automation에 대 한 가장 강력 하 고 최신 Windows, Windows 명령 또�
 -   [gpupdate](gpupdate.md)
 -   [graftabl](graftabl.md)
 
-### <a name="BKMK_h"></a>H
+### <a name="h"></a>H
 -   [help](help.md)
 -   [helpctr](helpctr.md)
 -   [hostname](hostname.md)
 
-### <a name="BKMK_i"></a>I
+### <a name="i"></a>I
 -   [icacls](icacls.md)
 -   [if](if.md)
 -   [inuse](inuse.md)
@@ -328,10 +324,10 @@ Automation에 대 한 가장 강력 하 고 최신 Windows, Windows 명령 또�
 -   [ipxroute](ipxroute.md)
 -   [irftp](irftp.md)
 
-### <a name="BKMK_j"></a>J
+### <a name="j"></a>J
 -   [jetpack](jetpack.md)
 
-### <a name="BKMK_k"></a>K
+### <a name="k"></a>K
 -   [klist](klist.md)
 -   [ksetup](ksetup.md)
   -   [ksetup:setrealm](ksetup-setrealm.md)
@@ -359,21 +355,21 @@ Automation에 대 한 가장 강력 하 고 최신 Windows, Windows 명령 또�
 -   [ktmutil](ktmutil.md)
 -   [ktpass](ktpass.md)
 
-### <a name="BKMK_l"></a>L
+### <a name="l"></a>L
 -   [label](label.md)
 -   [lodctr](lodctr.md)
 -   [logman](logman.md)
-  -   [logman 만들기](logman-create.md)
-  -   [logman 쿼리](logman-query.md)
+  -   [logman create](logman-create.md)
+  -   [logman query](logman-query.md)
   -   [logman 시작 & 124; 중지](logman-start-stop.md)
-  -   [logman 삭제](logman-delete.md)
-  -   [logman 업데이트](logman-update.md)
+  -   [logman delete](logman-delete.md)
+  -   [logman update](logman-update.md)
   -   [logman 가져오기 및 124; 내보내기](logman-import-export.md)
 -   [logoff](logoff.md)
 -   [lpq](lpq.md)
 -   [lpr](lpr.md)
 
-### <a name="BKMK_m"></a>M
+### <a name="m"></a>M
 -   [macfile](macfile.md)
 -   [makecab](makecab.md)
 -   [manage-bde](manage-bde.md)
@@ -414,12 +410,12 @@ Automation에 대 한 가장 강력 하 고 최신 Windows, Windows 명령 또�
 -   [msinfo32](msinfo32.md)
 -   [mstsc](mstsc.md)
 
-### <a name="BKMK_n"></a>N
+### <a name="n"></a>N
 -   [nbtstat](nbtstat.md)
 -   [netcfg](netcfg.md)
 -   [netsh](netsh.md)
 -   [netstat](netstat.md)
--   [Net 인쇄](net-print.md)
+-   [Net print](net-print.md)
 -   [nfsadmin](nfsadmin.md)
 -   [nfsshare](nfsshare.md)
 -   [nfsstat](nfsstat.md)
@@ -427,36 +423,36 @@ Automation에 대 한 가장 강력 하 고 최신 Windows, Windows 명령 또�
 -   [nslookup](nslookup.md)
   -   [nslookup exit 명령](nslookup-exit-command.md)
   -   [nslookup 손가락 명령](nslookup-finger-command.md)
-  -   [nslookup 도움말](nslookup-help.md)
+  -   [nslookup help](nslookup-help.md)
   -   [nslookup ls](nslookup-ls.md)
   -   [nslookup lserver](nslookup-lserver.md)
   -   [nslookup root](nslookup-root.md)
   -   [nslookup server](nslookup-server.md)
   -   [nslookup set](nslookup-set.md)
   -   [nslookup set all](nslookup-set-all.md)
-  -   [nslookup set 클래스](nslookup-set-class.md)
+  -   [nslookup set class](nslookup-set-class.md)
   -   [nslookup set d2](nslookup-set-d2.md)
   -   [nslookup set debug](nslookup-set-debug.md)
-  -   [nslookup 도메인 설정](nslookup-set-domain.md)
+  -   [nslookup set domain](nslookup-set-domain.md)
   -   [nslookup set port](nslookup-set-port.md)
   -   [nslookup set querytype](nslookup-set-querytype.md)
   -   [nslookup set recurse](nslookup-set-recurse.md)
   -   [nslookup set retry](nslookup-set-retry.md)
-  -   [nslookup 세트 루트](nslookup-set-root.md)
-  -   [nslookup 집합 검색](nslookup-set-search.md)
+  -   [nslookup set root](nslookup-set-root.md)
+  -   [nslookup set search](nslookup-set-search.md)
   -   [nslookup set srchlist](nslookup-set-srchlist.md)
   -   [nslookup set timeout](nslookup-set-timeout.md)
-  -   [nslookup 유형 설정](nslookup-set-type.md)
+  -   [nslookup set type](nslookup-set-type.md)
   -   [nslookup set vc](nslookup-set-vc.md)
-  -   [nslookup 보기](nslookup-view.md)
+  -   [nslookup view](nslookup-view.md)
 -   [ntbackup](ntbackup.md)
 -   [ntcmdprompt](ntcmdprompt.md)
 -   [ntfrsutl](ntfrsutl.md)
 
-### <a name="BKMK_o"></a>O
+### <a name="o"></a>O
 -   [openfiles](openfiles.md)
 
-### <a name="BKMK_p"></a>P
+### <a name="p"></a>P
 -   [pagefileconfig](pagefileconfig.md)
 -   [path](path.md)
 -   [pathping](pathping.md)
@@ -482,14 +478,14 @@ Automation에 대 한 가장 강력 하 고 최신 Windows, Windows 명령 또�
 -   [pushd](pushd.md)
 -   [pushprinterconnections](pushprinterconnections.md)
 
-### <a name="BKMK_q"></a>Q
+### <a name="q"></a>Q
 -   [qappsrv](qappsrv.md)
 -   [qprocess](qprocess.md)
 -   [query](query.md)
 -   [quser](quser.md)
 -   [qwinsta](qwinsta.md)
 
-### <a name="BKMK_r"></a>R
+### <a name="r"></a>R
 -   [rcp](rcp.md)
 -   [rd](rd.md)
 -   [rdpsign](rdpsign.md)
@@ -514,7 +510,7 @@ Automation에 대 한 가장 강력 하 고 최신 Windows, Windows 명령 또�
 -   [rename](rename.md)
 -   [repair-bde](repair-bde.md)
 -   [replace](replace.md)
--   [세션 다시 설정](reset-session.md)
+-   [reset session](reset-session.md)
 -   [rexec](rexec.md)
 -   [risetup](risetup.md)
 -   [rmdir](rmdir.md)
@@ -526,7 +522,7 @@ Automation에 대 한 가장 강력 하 고 최신 Windows, Windows 명령 또�
 -   [rundll32](rundll32.md)
 -   [rwinsta](rwinsta.md)
 
-### <a name="BKMK_s"></a>S
+### <a name="s"></a>S
 -   [schtasks](schtasks.md)
 -   [scwcmd](Scwcmd.md)
   -   [scwcmd: analyze](scwcmd-analyze.md)
@@ -560,7 +556,7 @@ Automation에 대 한 가장 강력 하 고 최신 Windows, Windows 명령 또�
 -   [sysocmgr](sysocmgr.md)
 -   [systeminfo](systeminfo.md)
 
-### <a name="BKMK_t"></a>T
+### <a name="t"></a>T
 -   [takeown](takeown.md)
 -   [tapicfg](tapicfg.md)
 -   [taskkill](taskkill.md)
@@ -585,17 +581,17 @@ Automation에 대 한 가장 강력 하 고 최신 Windows, Windows 명령 또�
 -   [typeperf](typeperf.md)
 -   [tzutil](tzutil.md)
 
-### <a name="BKMK_u"></a>U
+### <a name="u"></a>U
 -   [unlodctr](unlodctr_1.md)
 
-### <a name="BKMK_v"></a>V
+### <a name="v"></a>V
 -   [ver](ver.md)
 -   [verifier](verifier.md)
 -   [verify](verify_1.md)
 -   [vol](vol.md)
 -   [vssadmin](vssadmin.md)- 
 
-### <a name="BKMK_w"></a>W
+### <a name="w"></a>W
 -   [waitfor](waitfor.md)
 -   [wbadmin](wbadmin.md)
   -   [wbadmin 백업 사용](wbadmin-enable-backup.md)
@@ -626,5 +622,5 @@ Automation에 대 한 가장 강력 하 고 최신 Windows, Windows 명령 또�
 -   [wmic](wmic.md)
 -   [wscript](wscript.md)
 
-### <a name="BKMK_x"></a>X
+### <a name="x"></a>X
 -   [xcopy](xcopy.md)

@@ -13,20 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 82ba51cdb49501492c1fa38c6c93933f4aee90d8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ea306127be9497c21a5b8efa9fd3f0fa2433014c
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59890464"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192675"
 ---
 # <a name="findstr"></a>findstr
 
-
-
 파일에서 텍스트의 패턴을 검색 합니다.
 
-이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
+이 명령을 사용하는 방법의 예는 [예](#examples)를 참조하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -56,7 +54,7 @@ findstr [/b] [/e] [/l | /r] [/s] [/i] [/x] [/v] [/n] [/m] [/o] [/p] [/f:<File>] 
 |/g:\<File>|지정된 된 파일에서 문자열을 검색 하는 가져옵니다.|
 |/d:\<DirList>|지정된 된 디렉터리 목록을 검색합니다. 예를 들어 각 디렉터리는 세미콜론 (;)으로 구분 해야 `dir1;dir2;dir3`합니다.|
 |/a:\<ColorAttribute>|두 개의 16 진수가 color 특성을 지정합니다. 형식 `color /?` 추가 정보에 대 한 합니다.|
-|\<Strings>|검색할 텍스트를 지정 *FileName*합니다. 필수 사항입니다.|
+|\<Strings>|검색할 텍스트를 지정 *FileName*합니다. 필수.|
 |[\<Drive>:][<Path>]<FileName>[ ...]|검색할 파일 및 파일 또는 위치를 지정 합니다. 하나 이상의 파일에 이름이 필요 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
@@ -88,7 +86,7 @@ findstr [/b] [/e] [/l | /r] [/s] [/i] [/x] [/v] [/n] [/m] [/o] [/p] [/f:<File>] 
     b.*ing
     ```
 
-## <a name="BKMK_examples"></a>예제
+## <a name="examples"></a>예
 
 인수는 접두사로 붙습니다 하지 않는 한 여러 개의 검색 문자열을 구분 하 공간을 사용 하 여 **/c**합니다.
 

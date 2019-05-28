@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b60127cf957a30d147c9992c74c01e37e5b8bf89
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 68af5f118b2cc9d7941abddccd2a1bc7fde4c6d0
+ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59871924"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66222932"
 ---
 # <a name="sc-delete"></a>Sc delete
 
@@ -26,7 +26,7 @@ ms.locfileid: "59871924"
 
 레지스트리에서 서비스 하위 키를 삭제합니다. 서비스가 실행 중인지 또는 다른 프로세스에서 열린 핸들을 서비스 하는 경우 서비스 삭제 되도록 표시 됩니다.
 
-이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
+이 명령을 사용하는 방법의 예는 [예](#examples)를 참조하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -46,7 +46,7 @@ sc [<ServerName>] delete [<ServiceName>]
 
 사용 하 여 **프로그램 추가 / 제거** 에 **제어판** DHCP, DNS, 또는 다른 기본 제공 운영 체제 서비스를 삭제 합니다. **프로그램 추가 / 제거** 만 서비스에 대 한 레지스트리 하위 키를 제거 하지 것입니다 하지만 하도 서비스를 제거 하 여 모든 바로 가기를 삭제 합니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="examples"></a>예
 
 서비스 하위 키를 삭제 하려면 **NewServ** 로컬 컴퓨터에서 레지스트리를에서 다음 명령을 입력 합니다.
 ```

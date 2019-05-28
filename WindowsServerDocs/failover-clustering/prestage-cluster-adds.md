@@ -5,26 +5,27 @@ ms.prod: windows-server-threshold
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
+ms.manager: daveba
 ms.technology: storage-failover-clustering
-ms.date: 04/25/2018
+ms.date: 05/09/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 111969b074b33764dbbf72bfb24ad606f8314e41
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 151f02572d7595776539af163831b4a7a060c1c7
+ms.sourcegitcommit: 75f257d97d345da388cda972ccce0eb29e82d3bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59869724"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65613172"
 ---
 # <a name="prestage-cluster-computer-objects-in-active-directory-domain-services"></a>Active Directory Domain Services에서 클러스터 컴퓨터 개체 사전 준비
 
->적용 대상: Windows Server 2012 R2, Windows Server 2012, Windows Server 2016
+>적용 대상: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 이 항목에서는 AD DS(Active Directory 도메인 서비스)에서 클러스터 컴퓨터 개체를 사전 준비하는 방법을 보여 줍니다. 이 절차를 사용하여 사용자 또는 그룹이 AD DS에서 컴퓨터 개체를 만들 권한이 없는 경우 장애 조치(failover) 클러스터를 만들 수 있도록 할 수 있습니다.
 
 클러스터 만들기 마법사 또는 Windows PowerShell을 사용하여 장애 조치(failover) 클러스터를 만들 때는 클러스터 이름을 지정해야 합니다. 클러스터를 만들 때 충분한 권한이 있으면 클러스터 만들기 프로세스에서 클러스터 이름과 일치하는 컴퓨터 개체를 AD DS에 자동으로 만듭니다. 이 개체를 *클러스터 이름 개체* 또는 CNO라고 합니다. 클라이언트 액세스 지점을 사용하는 클러스터된 역할을 구성할 때 CNO를 통해 VCO(가상 컴퓨터 개체)가 자동으로 만들어집니다. 예를 들어 이름이 *FileServer1*인 클라이언트 액세스 지점을 통해 항상 사용 가능한 파일 서버를 만든 경우 CNO는 AD DS에 해당 VCO를 만듭니다.
 
 >[!NOTE]
->Windows Server 2012 R2에서 AD DS에서 CNO 또는 Vco 없습니다 만들어진 Active Directory 분리 클러스터를 만들 수가 있습니다. 이는 특정 유형의 클러스터 배포를 대상으로 합니다. 자세한 내용은 [Active Directory 분리 클러스터 배포](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265970(v%3dws.11)>)를 참조하십시오.
+>AD DS에서 CNO 또는 Vco 없습니다 만들어진 Active Directory 분리 클러스터를 만들 수가 있습니다. 이는 특정 유형의 클러스터 배포를 대상으로 합니다. 자세한 내용은 [Active Directory 분리 클러스터 배포](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265970(v%3dws.11)>)를 참조하십시오.
 
 CNO를 자동으로 만들려면 장애 조치(failover) 클러스터를 만드는 사용자에게 클러스터를 구성할 서버가 있는 컨테이너 또는 OU(조직 구성 단위)에 대한 **컴퓨터 개체 만들기** 권한이 있어야 합니다. 이 권한 없이 사용자 또는 그룹이 클러스터를 만들 수 있도록 하려면 AD DS에서 적절한 권한을 가진 사용자(일반적으로 도메인 관리자)가 AD DS에서 CNO를 사전 준비하면 됩니다. 또한 이 경우 클러스터에 사용되는 명명 규칙과 클러스터 개체가 만들어지는 OU에 대한 도메인 관리자의 제어 권한이 강화됩니다.
 
@@ -95,7 +96,7 @@ AD DS에서 CNO를 사전 준비한 경우 다음 중 하나를 수행하여 VCO
 >[!NOTE]
 >이 옵션에 대한 단계를 완료하려면 최소한 **Domain Admins** 그룹의 구성원이거나 이와 동등한 자격을 갖추고 있어야 합니다.
 
-- 옵션 2: [클러스터 된 역할에 대 한 VCO를 사전 준비](#prestage-a-vco-for-the-clustered-role)합니다. 조직의 요구 사항으로 인해 클러스터된 역할에 대한 계정을 사전 준비해야 하는 경우 이 옵션을 사용합니다. 예를 들어 명명 규칙을 제어하거나 만들어지는 클러스터된 역할을 제어할 수 있습니다.
+- 옵션 2: [클러스터 된 역할에 대 한 VCO를 사전 준비](#prestage-a-vco-for-a-clustered-role)합니다. 조직의 요구 사항으로 인해 클러스터된 역할에 대한 계정을 사전 준비해야 하는 경우 이 옵션을 사용합니다. 예를 들어 명명 규칙을 제어하거나 만들어지는 클러스터된 역할을 제어할 수 있습니다.
 
 >[!NOTE]
 >이 옵션에 대한 단계를 완료하려면 최소한 **Account Operators** 그룹의 구성원이어야 합니다.
@@ -103,7 +104,7 @@ AD DS에서 CNO를 사전 준비한 경우 다음 중 하나를 수행하여 VCO
 ### <a name="grant-the-cno-permissions-to-the-ou"></a>사용 권한을 부여 합니다 CNO에 OU에
 
 1. Active Directory 사용자 및 컴퓨터의 **보기** 메뉴에서 **고급 기능**이 선택되어 있는지 확인합니다.
-2. CNO를 만든 OU를 마우스 오른쪽 단추로 클릭 [1 단계: AD DS에서 CNO를 사전 준비할](#step-1:-prestage-the-CNO-in-ad-ds)를 선택한 후 **속성**합니다.
+2. CNO를 만든 OU를 마우스 오른쪽 단추로 클릭 [1 단계: AD DS에서 CNO를 사전 준비할](#step-1-prestage-the-cno-in-ad-ds)를 선택한 후 **속성**합니다.
 3. 에 **Security** 탭을 선택 **고급**합니다.
 4. 에 **Advanced Security Settings** 대화 상자에서 **추가**합니다.
 5. 옆에 **주체**를 선택 **보안 주체 선택**합니다.
@@ -137,4 +138,5 @@ AD DS에서 CNO를 사전 준비한 경우 다음 중 하나를 수행하여 VCO
 
 ## <a name="more-information"></a>자세한 정보
 
-- [장애 조치 클러스터링](failover-clustering.md)
+- [장애 조치(failover) 클러스터링](failover-clustering.md)
+- [Active Directory에서 클러스터 계정 구성](configure-ad-accounts.md)

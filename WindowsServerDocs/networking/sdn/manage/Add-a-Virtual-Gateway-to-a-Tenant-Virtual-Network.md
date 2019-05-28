@@ -13,12 +13,12 @@ ms.assetid: b9552054-4eb9-48db-a6ce-f36ae55addcd
 ms.author: pashort
 author: shortpatti
 ms.date: 08/23/2018
-ms.openlocfilehash: 6d31cde5252cd7f7e8d286d6f8886f779d17735d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b76019232be5091440c3e0cf5ad85569cbe0d4dc
+ms.sourcegitcommit: 21165734a0f37c4cd702c275e85c9e7c42d6b3cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59875814"
+ms.lasthandoff: 05/03/2019
+ms.locfileid: "65034488"
 ---
 # <a name="add-a-virtual-gateway-to-a-tenant-virtual-network"></a>테넌트 가상 네트워크에 가상 게이트웨이 추가 
 
@@ -100,7 +100,7 @@ Windows PowerShell 예제 스크립트 및 명령에서이 항목에서는 이�
 4. GRE, IPsec을 사용 하 여 사이트 간 VPN 연결을 만들거나 계층 3 (L3) 전달 합니다.  
 
    >[!TIP]
-   >필요에 따라 위의 모든 단계를 결합 하 고 모든 세 가지 연결 옵션을 사용 하 여 테 넌 트 가상 게이트웨이 구성할 수 있습니다.  자세한 내용은 참조 하세요. [모든 세 가지 연결 형식 (IPsec, GRE L3)를 사용 하 여 게이트웨이 구성 및 BGP](#configure-a-gateway-with-all-three-connection-types-ipsec-gre-l3-and-bgp)합니다.
+   >필요에 따라 위의 모든 단계를 결합 하 고 모든 세 가지 연결 옵션을 사용 하 여 테 넌 트 가상 게이트웨이 구성할 수 있습니다.  자세한 내용은 참조 하세요. [모든 세 가지 연결 형식 (IPsec, GRE L3)를 사용 하 여 게이트웨이 구성 및 BGP](#optional-step-configure-a-gateway-with-all-three-connection-types-ipsec-gre-l3-and-bgp)합니다.
   
    **IPsec VPN 사이트 간 네트워크 연결**
   

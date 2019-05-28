@@ -8,12 +8,12 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 1ae755b9c41d66ce5f907f600be17547398acc1a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c42cffec0ddc1ae480ae67982147e9f186f0e50a
+ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59839584"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66222859"
 ---
 # <a name="convert-a-gpt-disk-into-an-mbr-disk"></a>MBR 디스크를 GPT 디스크로 변환
 
@@ -29,8 +29,6 @@ MBR(마스터 부트 레코드) 디스크는 표준 BIOS 파티션 테이블을 
 > [!NOTE]
 > **Backup Operators** 또는 **Administrators** 그룹의 구성원이어야 이 단계를 완료할 수 있습니다.
 
-<a id="BKMK_WINUI"></a>
-
 ## <a name="converting-using-the-windows-interface"></a>Windows 인터페이스를 사용 하 여 변환
 
 1.  MBR 디스크로 변환하고자 하는 기본 GPT 디스크의 모든 볼륨을 백업 또는 이동합니다.
@@ -38,8 +36,6 @@ MBR(마스터 부트 레코드) 디스크는 표준 BIOS 파티션 테이블을 
 2.  디스크에 파티션 또는 볼륨이 포함된 경우 각각을 마우스 오른쪽 단추로 클릭한 다음 **볼륨 삭제**를 클릭합니다.
 
 3.  MBR 디스크로 변경하고자 하는 GPT 디스크를 마우스 오른쪽 단추로 클릭한 다음 **MBR 디스크로 변환**을 클릭합니다.
-
-<a id="BKMK_CMD"></a>
 
 ## <a name="converting-using-a-command-line"></a>명령줄을 사용 하 여 변환
 

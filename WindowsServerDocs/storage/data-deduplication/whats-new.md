@@ -7,21 +7,27 @@ ms.topic: article
 author: wmgries
 manager: klaasl
 ms.author: wgries
-ms.date: 09/15/2016
-ms.openlocfilehash: 4a69221548d9defff5a45413ccfe824f9788755a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.date: 04/17/2019
+ms.openlocfilehash: 44a08443312d4e48b8fa518755e2a9b7aa50643c
+ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59876454"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65476088"
 ---
 # <a name="whats-new-in-data-deduplication"></a>데이터 중복 제거의 새로운 기능
 
-> 적용 대상: Windows Server (반기 채널), Windows Server 2016
+> 적용 대상: Windows Server 2019, Windows Server 2016, Windows Server (반기 채널)
 
-Windows Server 2016의 [데이터 중복 제거](overview.md) 기능이 사설 클라우드 규모에서 매우 뛰어난 성능, 유연성 및 관리 효율성을 제공하도록 최적화되었습니다. Windows Server 2016의 소프트웨어 정의 저장소 스택에 대한 자세한 내용은 [Windows Server 2016에서 제공되는 저장소의 새로운 기능](../whats-new-in-storage.md)을 참조하세요.
+[데이터 중복 제거](overview.md) 매우 뛰어난 성능 제공을 유연 하 고 사설 클라우드 규모에서 관리 하도록 Windows Server에 최적화 되었습니다. Windows Server의 소프트웨어 정의 저장소 스택에 대 한 자세한 내용은 참조 하십시오 [What's New in Windows Server에서 저장소](../whats-new-in-storage.md)합니다.
 
-Windows Server 2016에서 향상된 데이터 중복 제거 기능은 다음과 같습니다.
+데이터 중복 제거는 Windows Server 2019에서 다음과 같은 향상 된 기능을 가집니다.
+
+| 기능 | 새로운 기능 또는 업데이트된 기능 | 설명 |
+|---------------|----------------|-------------|
+| ReFS 지원  | 단추를 사용하여 새            | 최대 10 배 이상의 데이터 중복 제거 및 ReFS 파일 시스템에 대 한 압축을 사용 하 여 동일한 볼륨에 저장 합니다. (있기 [하나만 클릭](https://www.youtube.com/watch?v=PRibTacyKko&feature=youtu.be) 를 Windows Admin Center 사용 하 여 켭니다.) 다중 스레드 사후 처리 아키텍처 유지 성능에 미치는 영향을 최소화 하는 동안 절감 비율이 최대화 하는 선택적 압축을 사용 하 여 가변 크기 청크 저장소입니다. 볼륨을 지 원하는 최대 64TB 및 각 파일의 첫 번째 4TB 중복 제거 됩니다.|
+
+데이터 중복 제거에 Windows Server 2016부터 다음과 같은 향상 기능이 있습니다.
 
 | 기능 | 새로운 기능 또는 업데이트된 기능 | 설명 |
 |---------------|----------------|-------------|

@@ -9,16 +9,15 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 8a94e0724d6fd2a04e2fbfc22b3054b49d87f440
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ac9f9b95ad6226a8e3b7012e317899f1d48c60c9
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59826154"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192470"
 ---
 # <a name="add-a-token-signing-certificate"></a>토큰 서명 인증서 추가
 
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Active Directory Federation Services에서 페더레이션 서버 \(AD FS\) 토큰이 필요한\-공격자가 변경 하거나 무단으로 액세스 하기 위해 보안 토큰을 위조를 방지 하기 위해 인증서를 서명 합니다. 에 연결된 된 리소스입니다. 모든 토큰\-암호화 개인 키와 디지털 서명 하는 데 사용 되는 공개 키 포함 서명 인증서 \(개인 키를 사용 하 여\) 보안 토큰입니다. 나중에 이러한 키 파트너 페더레이션 서버에서 받으면 유효성을 검사 신뢰성 \(공개 키를 사용 하 여\) 암호화 된 보안 토큰입니다.  
   
@@ -42,6 +41,6 @@ Active Directory Federation Services에서 페더레이션 서버 \(AD FS\) 토�
 ## <a name="additional-references"></a>추가 참조  
 [검사 목록: 페더레이션 서버 설정](Checklist--Setting-Up-a-Federation-Server.md)  
   
-[페더레이션 서버에 대 한 인증서 요구 사항](https://technet.microsoft.com/library/dd807040.aspx)  
+[페더레이션 서버에 대한 인증서 요구 사항](https://technet.microsoft.com/library/dd807040.aspx)  
   
 

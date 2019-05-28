@@ -10,12 +10,12 @@ ms.date: 07/12/2018
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.localizationpriority: high
-ms.openlocfilehash: 4127eab613abb429a200f513a11b944e05da0f76
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9d8a8cae62a9be3384c09009dbad52e06623adb0
+ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59851344"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66222909"
 ---
 # <a name="upgrade-windows-server-2008-and-windows-server-2008-r2"></a>Windows Server 2008 및 Windows Server 2008 R2 업그레이드
 
@@ -42,12 +42,11 @@ Windows Server 2003을 실행하는 경우 [Windows Server 2008로 업그레이�
 - SQL Server를 Azure 관리 인스턴스 또는 VM으로 마이그레이션하여 추가 비용 없이 추가 3년 동안 Windows Server 2008 R2 또는 2008 중요 보안 업데이트를 받을 수 있습니다. 
 - 기존 SQL Server 및 Windows Server 라이선스를 활용하여 Azure에 고유하게 클라우드를 절감할 수 있습니다.
 
-<a href="uploading-specialized-WS08-image-to-azure.md"><img src="media/WS08-image-banner-small.png"></a>
+[![특수화 된 이미지를 사용 하 여 Azure로 마이그레이션하기 시작 합니다.](./media/WS08-image-banner-small.png)](uploading-specialized-WS08-image-to-azure.md)
 
 마이그레이션을 시작하려면 [Azure에 Windows Server 2008/2008 R2 특수 이미지 업로드](uploading-specialized-WS08-image-to-azure.md)를 참조하십시오.
 
 기존 IT 리소스를 분석하고 현재 보유한 것을 평가하는 방법과 특정 서비스 및 응용 프로그램을 클라우드로 이동하거나 워크로드를 온-프레미스로 유지하고 Windows Server의 최신 버전으로 업그레이드하는 것의 이점을 파악하려면 [Windows Server 마이그레이션 가이드](https://go.microsoft.com/fwlink/?linkid=872689)를 참조하십시오.
-
 
 ## <a name="upgrade-sql-server-20082008-r2-in-parallel-with-your-windows-servers"></a>Windows Server와 동시에 SQL Server 2008/2008 R2 업그레이드
 

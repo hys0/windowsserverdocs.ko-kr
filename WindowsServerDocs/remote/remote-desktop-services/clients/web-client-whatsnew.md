@@ -11,18 +11,34 @@ ms.topic: article
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 02/22/2019
+ms.date: 05/20/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 2746127c15753ac8f4f6067eef068fe97b425829
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 15218af2f084e9c998d89250aace1d763d03b42a
+ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59844554"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65976334"
 ---
 # <a name="whats-new-for-the-remote-desktop-web-client"></a>원격 데스크톱 웹 클라이언트에 대 한 새로운 기능
 
 정기적으로 업데이트 합니다 [원격 데스크톱 웹 클라이언트](remote-desktop-web-client.md), 새로운 기능을 추가 하 고 문제를 수정 합니다. 아래 최신 업데이트를 확인 합니다.
+
+   >[!NOTE]
+    >웹 클라이언트에 대 한 시스템 버전 관리 변경 했습니다. 1.0.18.0 버전부터 모든 웹 클라이언트 릴리스 버전 ("W.X.Y.Z" 형식의)에서 숫자를 포함 됩니다. 원격 데스크톱 웹 클라이언트에 대 한 릴리스 번호는 0 (예를 들어 W.X.Y.0)를 사용 하 여 항상 종료 됩니다. 각 Windows 가상 데스크톱 웹 클라이언트 릴리스는 다음 원격 데스크톱 웹 클라이언트 릴리스 (예를 들어 1.0.18.1) 될 때까지 마지막 숫자를 변경 합니다.
+
+## <a name="updates-for-version-10180"></a>1.0.18.0 버전에 대 한 업데이트
+*게시 날짜: 5/14/2019*
+
+- 브라우저에서 리소스를 열 또는 다른 클라이언트를 사용 하 여 처리 하는.rdp 파일을 다운로드 할 수 있도록 설정 탭에서 추가 메서드를 시작 하는 리소스 구성입니다. 이 설정은 관리자가 구성할 수 있습니다. 이 기능을 확인할 수 있습니다 관리 구성에 대 한 세부 정보를 [클라이언트 설치 설명서를 웹](remote-desktop-web-client-admin.md)합니다.
+- 원격 세션에서 고정된 색상 렌더링 문제를 사용 하도록 설정 하면 더 선명한 색입니다.
+- 원격 리소스 피드 오류와 관련 된 수정 된 오류 메시지입니다. 
+- 더 많은 office 바로 가기 같은 특수 붙여넣기 (Ctrl + Alt + V)에 대 한 지원이 추가 되었습니다.
+- 원격 세션 ((alt+f3)에서 Windows 키를 호출 하는 사용자에 대 한 추가 바로 가기 키
+- 만료 된 암호를 사용 하 여 인증을 시도 하는 사용자에 대 한 업데이트 된 오류 메시지입니다.
+- 모든 리소스 페이지에서 새로 고친된 피드 UI입니다.
+- 세션 중에 발생 한 확인할된 겹치는 대화 상자에 다시 연결 합니다.
+- 원격 리소스 아이콘 크기 조정 리소스 작업 표시줄에 고정 합니다. 
 
 ## <a name="updates-for-version-1011"></a>버전 1.0.11 업데이트
 *게시 날짜: 2/22/2019*

@@ -1,6 +1,6 @@
 ---
 title: 응용 프로그램 데이터를 위한 스케일 아웃 파일 서버 개요
-description: Windows Server 201 R2, Windows Server 2012 및 Windows Server 2016에 대 한 스케일 아웃 파일 서버 기능의 개요를 설명 합니다.
+description: Windows Server 201 R2 및 Windows Server 2012에 대 한 스케일 아웃 파일 서버 기능의 개요를 설명 합니다.
 ms.prod: windows-server-threshold
 ms.topic: article
 author: JasonGerend
@@ -8,16 +8,16 @@ ms.author: jgerend
 ms.technology: storage-failover-clustering
 ms.date: 04/26/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 04e25e9c69062611d9d14c220614f148ac5de770
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3e6d67eee496d19b216a4366af51ab5736229cf0
+ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59884774"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65476149"
 ---
 # <a name="scale-out-file-server-for-application-data-overview"></a>응용 프로그램 데이터를 위한 스케일 아웃 파일 서버 개요
 
->적용 대상: Windows Server 2012 R2, Windows Server 2012, Windows Server 2016
+>적용 대상: Windows Server 2012 R2, Windows Server 2012
 
 스케일 아웃 파일 서버는 파일 기반 서버 응용 프로그램 저장소에 계속 사용할 수 있는 스케일 아웃 파일 공유를 제공하도록 설계된 기능입니다. 스케일 아웃 파일 공유는 같은 클러스터의 여러 노드에서 동일한 폴더를 공유하는 기능을 제공합니다. 이 시나리오는 스케일 아웃 파일 서버를 계획 및 배포하는 방법에 중점을 둡니다.
 
@@ -52,8 +52,8 @@ ms.locfileid: "59884774"
 
   - [1단계: 스케일 아웃 파일 서버의 필수 구성 요소를 설치 합니다.](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831478%28v%3dws.11%29>)
   - [2단계: 스케일 아웃 파일 서버 구성](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831718%28v%3dws.11%29>)
-  - [3 단계: 스케일 아웃 파일 서버를 사용 하기 위해 Hyper-v 구성](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831463%28v%3dws.11%29>)
-  - [4 단계: 스케일 아웃 파일 서버를 사용 하도록 Microsoft SQL Server 구성](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831815%28v%3dws.11%29>)
+  - [3단계: 스케일 아웃 파일 서버를 사용 하기 위해 Hyper-v 구성](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831463%28v%3dws.11%29>)
+  - [4단계: 스케일 아웃 파일 서버를 사용 하도록 Microsoft SQL Server 구성](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831815%28v%3dws.11%29>)
 
 ## <a name="when-to-use-scale-out-file-server"></a>스케일 아웃 파일 서버를 사용하는 경우
 
@@ -129,7 +129,7 @@ ms.locfileid: "59884774"
 <td>파일 관리</td>
 <td>데이터 중복 제거(Windows Server 2012)</td>
 <td>예</td>
-<td>아니오</td>
+<td>아니요</td>
 </tr>
 <tr class="odd">
 <td>파일 관리</td>
@@ -141,7 +141,7 @@ ms.locfileid: "59884774"
 <td>파일 관리</td>
 <td>DFSN(DFS 네임스페이스) 루트 서버 루트</td>
 <td>예</td>
-<td>아니요</td>
+<td>아니오</td>
 </tr>
 <tr class="odd">
 <td>파일 관리</td>
@@ -165,13 +165,13 @@ ms.locfileid: "59884774"
 <td>파일 관리</td>
 <td>파일 분류 인프라</td>
 <td>예</td>
-<td>아니요</td>
+<td>아니오</td>
 </tr>
 <tr class="odd">
 <td>파일 관리</td>
 <td>동적 Access Control(클레임 기반 액세스, CAP)</td>
 <td>예</td>
-<td>아니오</td>
+<td>아니요</td>
 </tr>
 <tr class="even">
 <td>파일 관리</td>
@@ -255,7 +255,7 @@ ms.locfileid: "59884774"
 </thead>
 <tbody>
 <tr class="odd">
-<td><a href="failover-clustering.md">장애 조치 클러스터링</a></td>
+<td><a href="failover-clustering.md">장애 조치(failover) 클러스터링</a></td>
 <td>장애 조치 클러스터 스케일 아웃 파일 서버를 지원 하도록 Windows Server 2012에는 다음 기능을 추가 했습니다. 분산된 네트워크 이름, 스케일 아웃 파일 서버 리소스 종류, 클러스터 공유 볼륨 (CSV) 2 및 스케일 아웃 파일 서버 고가용성 역할입니다. 이러한 기능에 대 한 자세한 내용은 참조 하세요. <a href="https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265972(v%3dws.11)">What's New in Windows Server 2012 [리디렉션 됨]에서 장애 조치 클러스터링</a>합니다.</td>
 </tr>
 <tr class="even">

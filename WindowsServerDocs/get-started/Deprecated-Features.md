@@ -1,33 +1,32 @@
 ---
 title: Windows Server 2016에서 제거되었거나 사용되지 않는 기능
-description: 릴리스에서 제거되었거나 제거될 예정인 기능
-ms.custom: na
+description: 기능 및 Windows Server 2016에서 현재 릴리스의 제품에서 제거 되었거나 또는 (사용 되지 않음) 하는 후속 릴리스에서 제거 하도록 계획 되어 있는 특성의 목록입니다. 상용 환경에서 운영 체제를 업데이트하는 IT 전문가가 참조하시면 유용합니다.
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
 ms.technology: server-general
-ms.tgt_pltfrm: na
 ms.topic: article
-ms.date: 05/02/2017
+ms.date: 05/21/2019
 ms.assetid: 5d10c5f9-ebac-49a0-b808-c0b1702e0437
-author: jaimeo
-ms.author: jaimeo
+author: jasongerend
+ms.author: jgerend
 manager: dougkim
 ms.localizationpriority: medium
-ms.openlocfilehash: 20178a3be14c076623f647fa139e013528de9a69
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 83855cf7e4fa86a932298dd15735dc5bf7277dfb
+ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59858164"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65976601"
 ---
 # <a name="features-removed-or-deprecated-in--windows-server-2016"></a>Windows Server 2016에서 제거되었거나 사용되지 않는 기능
 
 >적용 대상: Windows Server 2016
 
-아래에는 현재 릴리스에서 제거되었거나 다음 릴리스에서 제거될 예정인 Windows Server 2016의 기능, 즉 더 이상 사용되지 않는 기능의 목록이 나와 있습니다. 상용 환경에서 운영 체제를 업데이트하는 IT 전문가가 참조하시면 유용합니다. 후속 릴리스의 변경 사항에 따라 달라질 수 있으며 일부 사용되지 않는 기능이 생략되었을 수 있습니다. 특정 기능 또는 해당 기능을 대신하는 기능에 대한 자세한 내용은 해당 기능에 대한 설명서를 참조하세요.  
+아래에는 현재 릴리스에서 제거되었거나 다음 릴리스에서 제거될 예정인 Windows Server 2016의 기능, 즉 더 이상 사용되지 않는 기능의 목록이 나와 있습니다. 상용 환경에서 운영 체제를 업데이트하는 IT 전문가가 참조하시면 유용합니다. 후속 릴리스의 변경 사항에 따라 달라질 수 있으며 일부 사용되지 않는 기능이 생략되었을 수 있습니다. 특정 기능 또는 해당 기능을 대신하는 기능에 대한 자세한 내용은 해당 기능에 대한 설명서를 참조하세요.
 
-## <a name="features-removed-from-windows-server-2016"></a>Windows Server 2016에서 제거된 기능 
+항목 제거 되었거나 최신 버전에서 지원 되지 않는 대 한 정보를 참조 하세요 [기능 제거 또는 교체를 시작 하는 Windows Server 2019에 대해 계획 된](../get-started-19/removed-features-19.md)합니다.
+
+## <a name="features-removed-from-windows-server-2016"></a>Windows Server 2016에서 제거된 기능
+
 아래 기능은 이번 Windows Server 2016 릴리스에서 제거되었습니다. 제거된 기능에 종속된 응용 프로그램, 코드, 사용법은 다른 방법을 취하지 않는 한 이번 릴리스에서 실행되지 않습니다.  
 
 > [!NOTE]  

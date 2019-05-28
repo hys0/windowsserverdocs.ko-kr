@@ -8,16 +8,16 @@ ms.topic: article
 author: jasongerend
 ms.date: 5/14/2018
 description: FSRM (파일 서버 리소스 관리자)는 Windows Server 파일 서버에 데이터를 관리 및 분류할 수 있는 도구입니다.
-ms.openlocfilehash: 107d08f247fc56720ccc3d11a3db88c77377257c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8488c7418ac03be53db7164678fad353bc7c637d
+ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59870724"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65476133"
 ---
 # <a name="file-server-resource-manager-fsrm-overview"></a>FSRM(파일 서버 리소스 관리자) 개요
 
-> 적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> 적용 대상: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server (반기 채널) 
 
 FSRM(파일 서버 리소스 관리자)는 파일 서버에 저장된 데이터를 관리 및 분류하는 데 사용할 수 있는 Windows Server의 역할 서비스입니다. 자동으로 파일을 분류, 이러한 분류에 따라 작업 수행, 폴더에 할당량을 설정 및 저장소 사용량을 모니터링 하는 보고서를 만들 파일 서버 리소스 관리자를 사용할 수 있습니다.
 

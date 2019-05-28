@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 07/09/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: fb31cff44cac6bd66f9aa5b7234ff3fd3b215ccf
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9b0d339df588c784f8fe46f7dd0e6ce2975d0c48
+ms.sourcegitcommit: 21165734a0f37c4cd702c275e85c9e7c42d6b3cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59876304"
+ms.lasthandoff: 05/03/2019
+ms.locfileid: "65034656"
 ---
 # <a name="network-file-system-overview"></a>네트워크 파일 시스템 개요
 
@@ -51,7 +51,7 @@ Windows 운영 체제 버전 및 제품군에 따라 서버를 확인 하 고 NF
 
 |기능|새로운 기능 또는 업데이트된 기능|설명|
 |---|---|---|
-|[NFS 버전 4.1](#nfs-version-4.1)|단추를 사용하여 새|향상 된 보안, 성능 및 상호 운용성 NFS 버전 3 비교 합니다.|
+|[NFS 버전 4.1](#nfs-version-41)|단추를 사용하여 새|향상 된 보안, 성능 및 상호 운용성 NFS 버전 3 비교 합니다.|
 |[NFS 인프라](#nfs-infrastructure)|업데이트됨|배포 및 관리 효율성을 개선 하 고 보안을 강화 합니다.|
 |[NFS 버전 3에 대 한 지속적인 가용성](#nfs-version-3-continuous-availability)|업데이트됨|NFS 버전 3 클라이언트에서 지속적인 가용성을 향상 시킵니다.|
 |[배포 및 관리 효율성 향상](#deployment-and-manageability-improvements)|업데이트됨|쉽게 배포 하 고 새 Windows PowerShell cmdlet 및 새로운 WMI 공급자를 사용 하 여 NFS를 관리할 수 있습니다.|

@@ -8,22 +8,22 @@ manager: dongill
 author: JasonGerend
 ms.author: jgerend
 ms.date: 10/18/2018
-ms.openlocfilehash: b4fa59aa62acba5c89f20c191da2c3c1b776b1ca
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3c0792347aaa70fe80d346cc51cbc44b73c42f39
+ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59884754"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65476017"
 ---
 # <a name="whats-new-in-failover-clustering"></a>장애 조치(failover) 클러스터링의 새로운 기능
 
-> 적용 대상: Windows Server 2019, Windows Server 2016, Windows Server (반기 채널)
+> 적용 대상: Windows Server 2019, Windows Server 2016
 
-이 항목에서는 장애 조치 클러스터링에 대 한 Windows Server 2019, Windows Server 2016의에서 새로운 기능과 변경 된 기능에 설명 하 고 Windows 서버 반기 채널 해제 합니다.
+이 항목에서는 장애 조치 클러스터링에 대 한 Windows Server 2019 및 Windows Server 2016의 새로운 기능과 변경 된 기능에 설명 합니다.
 
 ## <a name="whats-new-in-windows-server-2019"></a>Windows Server 2019의 새로운 기능
 
-- **클러스터 설정**
+- **클러스터 세트**
 
     클러스터 집합을 사용 하는 클러스터의 현재 제한 초과 하는 단일 소프트웨어 정의 데이터 센터 (SDDC) 솔루션에 있는 서버의 수를 늘릴 수 있습니다. 이렇게 하려면 클러스터 집합-여러 장애 조치 클러스터의 느슨하게 결합 된 그룹으로 여러 클러스터를 그룹화 하 여: 계산, 저장소 및 하이퍼 수렴 형입니다.
     클러스터 집합을 사용 하 여 온라인 가상 컴퓨터로 이동할 수 있습니다 (실시간 마이그레이션) 클러스터 내 클러스터를 설정 합니다.

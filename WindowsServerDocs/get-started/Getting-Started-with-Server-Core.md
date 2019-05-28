@@ -1,25 +1,22 @@
 ---
 title: Server Core 설치
 description: Windows Server 2019, Windows Server 2016 또는 Windows Server (반기 채널)에서 Server Core 설치를 설치 하는 방법입니다.
-ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.date: 1/04/2019
+ms.date: 05/21/2019
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2d22818c-fbb7-487a-bb82-81ef0a3f7ede
-author: jaimeo
-ms.author: jaimeo
+author: jasongerend
+ms.author: jgerend
 manager: dougkim
 ms.localizationpriority: medium
-ms.openlocfilehash: d99cd0b028d08d5c3247541ce3a868676b60693d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6f685ce29088b56bb243d21315787ab90e6863a4
+ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59869024"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65976716"
 ---
 # <a name="install-server-core"></a>Server Core 설치
 
@@ -35,7 +32,7 @@ ms.locfileid: "59869024"
 -   Windows Server Datacenter
 -   Windows Server Datacenter with Desktop Experience
 
-버전 1709, 1803, 및 1809를 비롯 한 Windows Server (반기 채널)를 설치할 때 다음과 같은 설치 옵션이 표시.
+Windows Server (반기 채널)를 설치할 때 다음과 같은 설치 옵션이 표시.
 
 -   Windows Server Standard 
 -   Windows Server Datacenter
@@ -74,10 +71,10 @@ Server Core 옵션을 선택하면 표준 사용자 인터페이스(Desktop Expe
 - Windows Server Update Server
 - Active Directory Rights Management Server
 - 라우팅 및 원격 액세스 서버와 다음 하위 역할
-- 원격 데스크톱 서비스 연결 브로커
-- 라이선싱
-- 가상화
-- 볼륨 정품 인증 서비스
+   - 원격 데스크톱 서비스 연결 브로커
+   - 라이선싱
+   - 가상화
+   - 볼륨 정품 인증 서비스
 
 Server Core에 포함 되지 않은 역할에 대 한 참조 [역할, 역할 서비스 및 Windows Server에서 Server Core에 없는 기능](../administration/server-core/server-core-removed-roles.md)합니다.
 
@@ -88,13 +85,12 @@ Server Core에 포함 되지 않은 역할에 대 한 참조 [역할, 역할 서
 ## <a name="installing-on-windows-server-semi-annual-channel"></a>Windows Server (반기 채널)에 설치
 
 Windows Server (반기 채널)에 대 한 설치 단계는 이전 버전의 Windows Server 설치와 동일 (에서 합니다. ISO 이미지의 경우) 다음과 같은 예외가 있습니다.
+
 - 이전 버전의 Windows Server로부터 Windows Server, 버전 1709로의 업그레이드가 지원되지 않습니다. 항상 새로 설치해야 합니다.
    이 Windows 컴퓨터의 바탕 화면에서 setup.exe를 실행할 때 설치 환경을 허용 하지 않습니다 (회색으로 표시) 업그레이드 옵션을 의미 합니다.
 - Windows Server (반기 채널)에 대 한 평가 버전 없음
 - OEM 또는 일반 정품 버전이 없습니다. Windows Server (반기 채널) 수만 Software Assurance 또는 충성도 프로그램을 통해 허가 받아야 합니다.
 
-Windows Server, 버전 1709를 알아보려면 [Windows Server, 버전 1709 소개](get-started-with-1709.md)를 참조하세요.
+반기 채널에 대 한 자세한 내용은 참조 하세요. [채널 서비스 비교](../get-started-19/servicing-channels-19.md)합니다.
 
-Windows Server 버전 1803 참조 하세요 [Introducing Windows Server, 버전 1803](get-started-with-1803.md)합니다.
-
-Windows Server 1809, 버전의에서 새로운 기능 참조 [What's New in Windows Server 버전 1809](whats-new-in-windows-server-1809.md)
+Windows 서버 반기 채널의 새로운 기능을 보려면 [What's New in Windows Server](whats-new-in-windows-server.md)

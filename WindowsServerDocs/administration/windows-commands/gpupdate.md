@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 61131d2bf253c66d93408bc66b78d1dca2502087
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d358c47bd278cf11c4bab6887302bf6d053529ec
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59840594"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192660"
 ---
 # <a name="gpupdate"></a>gpupdate
 
 
 
-그룹 정책 설정을 업데이트합니다. 이 명령을 사용할 수 있는 방법을의 예 참조 [예제](#BKMK_Examples)합니다.
+그룹 정책 설정을 업데이트합니다. 이 명령을 사용할 수 있는 방법을의 예 참조 [예제](#examples)합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -48,7 +48,7 @@ gpupdate [/target:{Computer | User}] [/force] [/wait:<VALUE>] [/logoff] [/boot] 
 
 -   합니다 **gpupdate** Windows Server 2008 R2, Windows Server 2008, Windows 7 Ultimate, Windows 7 Professional, Windows Vista Ultimate, Windows Vista Enterprise 및 Windows Vista Business에서 사용할 수 있는 명령입니다.
 
-## <a name="BKMK_Examples"></a>예제
+## <a name="examples"></a>예
 
 변경 내용이 있는지 여부에 관계 없이 모든 그룹 정책 설정의 백그라운드 업데이트를 강제 합니다.
 ```

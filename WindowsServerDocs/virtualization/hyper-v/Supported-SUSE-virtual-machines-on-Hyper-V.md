@@ -11,12 +11,12 @@ ms.assetid: 7ec0e14c-4498-4bd9-8fe6-b94260198efc
 author: shirgall
 ms.author: kathydav
 ms.date: 10/03/2016
-ms.openlocfilehash: 3506c00651951aa2a62637cae6cc4989f9edf1fc
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d7b6d3adb4841ea827c56309307549c911a439ea
+ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59819004"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66222815"
 ---
 # <a name="supported-suse-virtual-machines-on-hyper-v"></a>Hyper-v에서 지원 되는 SUSE 가상 컴퓨터
 
@@ -30,7 +30,7 @@ Hyper-v에 대 한 기본 제공 SUSE Linux Enterprise Service 드라이버 SUSE
 
 * **기본 제공** -LIS이 Linux 배포판의 일부로 포함 됩니다. Microsoft에서 제공한 LIS 다운로드 패키지를 설치 하지 않는 있으므로이 배포에 대 한 작동 하지 않습니다. LIS에서 작성에 대 한 커널 모듈 버전 번호 (에 표시 된 대로 **lsmod**예를 들어)는 Microsoft에서 제공한 LIS 다운로드 패키지에 버전 번호와 다릅니다. LIS에서 작성 된 지 오래 된 불일치를 나타내지 않습니다.
 
-* & #10004; -사용 가능한 기능
+* &#10004; -사용 가능한 기능
 
 * (*빈*)-기능을 사용할 수 없음
 
@@ -39,9 +39,9 @@ SLES12 +는 64 비트 전용입니다.
 |**기능**|**Windows Server 운영 체제 버전**|**SLES 15**|**SLES 12 SP3/SP4**|**SLES 12 SP2**|**SLES 12 SP1**|**SLES 11 SP4**|**SLES 11 SP3**|
 |-|-|-|-|-|-|-|-|
 |**가용성**||기본 제공|기본 제공|기본 제공|기본 제공|기본 제공|기본 제공|
-|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Windows Server 2016 정확한 시간|2019, 2016|&#10004;|&#10004;|&#10004;||||
-|**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)**||||||||
+|**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**||||||||
 |Jumbo 프레임|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |VLAN 태깅, 트렁킹|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |실시간 마이그레이션|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
@@ -49,28 +49,28 @@ SLES12 +는 64 비트 전용입니다.
 |vRSS|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|||
 |TCP 조각화와 체크섬 오프 로드|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||
 |SR-IOV|2019, 2016|&#10004;|&#10004;|&#10004;||||
-|**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**||||||||
+|**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**||||||||
 |VHDX 크기 조정|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |가상 파이버 채널|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |가상 머신 백업|2019, 2016, 2012 R2|& #10004; Note 2, 3, 8|& #10004; Note 2, 3, 8|& #10004; Note 2, 3, 8|& #10004; Note 2, 3, 8|& #10004; Note 2, 3, 8|& #10004; Note 2, 3, 8|
 |TRIM 지원|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||
 |SCSI WWN|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;||||
-|**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**||||||||
+|**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)**||||||||
 |PAE 커널 지원|2019, 2016, 2012 R2, 2012, 2008 R2|해당 사항 없음|해당 사항 없음|해당 사항 없음|해당 사항 없음|&#10004;|&#10004;|
 |MMIO 간격 구성|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|동적 메모리-즉석 추가|2019, 2016, 2012 R2, 2012|& #10004; 참고 5, 6|& #10004; 참고 5, 6|& #10004; 참고 5, 6|& #10004; 참고 5, 6|& #10004; 4, 5, 6 note|& #10004; 4, 5, 6 note|
-|동적 메모리-Ballooning|2019, 2016, 2012 R2, 2012|& #10004; 참고 5, 6|& #10004; 참고 5, 6|& #10004; 참고 5, 6|& #10004; 참고 5, 6|& #10004; 4, 5, 6 note|& #10004; 4, 5, 6 note|
-|런타임 메모리 크기 조정|2019, 2016|& #10004; 참고 5, 6|& #10004; 참고 5, 6|& #10004; 참고 5, 6||||
-|**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**||||||||
+|동적 메모리-즉석 추가|2019, 2016, 2012 R2, 2012|&#10004; 참고 5, 6|&#10004; 참고 5, 6|&#10004; 참고 5, 6|&#10004; 참고 5, 6|&#10004; 4, 5, 6 note|&#10004; 4, 5, 6 note|
+|동적 메모리-Ballooning|2019, 2016, 2012 R2, 2012|&#10004; 참고 5, 6|&#10004; 참고 5, 6|&#10004; 참고 5, 6|&#10004; 참고 5, 6|&#10004; 4, 5, 6 note|&#10004; 4, 5, 6 note|
+|런타임 메모리 크기 조정|2019, 2016|&#10004; 참고 5, 6|&#10004; 참고 5, 6|&#10004; 참고 5, 6||||
+|**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**||||||||
 |하이퍼-V-특정 비디오 장치|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|**[기타](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)**||||||||
-|키/값 쌍|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|& #10004; 참고 7|& #10004; 참고 7|
+|**[기타](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)**||||||||
+|키/값 쌍|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004; 참고 7|&#10004; 참고 7|
 |마스크 불가능 인터럽트|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |호스트에서 게스트로 파일 복사|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||
 |lsvmbus 명령|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;||||
 |Hyper-v 소켓|2019, 2016|&#10004;|&#10004;|||||
 |PCI 통과/DDA|2019, 2016|&#10004;|&#10004;|&#10004;|&#10004;|||
-|**[2 세대 가상 컴퓨터](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)**||||||||
+|**[2 세대 가상 컴퓨터](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines)**||||||||
 |UEFI를 사용 하 여 부팅|2019, 2016, 2012 R2|& #10004; 참고 9|& #10004; 참고 9|& #10004; 참고 9|& #10004; 참고 9|& #10004; 참고 9||
 |보안 부팅|2019, 2016|&#10004;|&#10004;|&#10004;|&#10004;|||
 
@@ -109,7 +109,7 @@ SLES12 +는 64 비트 전용입니다.
 
 * [CentOS 지원 및 Hyper-v Red Hat Enterprise Linux 가상 컴퓨터](Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md)
 
-* [Hyper-v의 Debian 가상 컴퓨터를 지원](Supported-Debian-virtual-machines-on-Hyper-V.md)
+* [Hyper-V에서 지원되는 Debian 가상 머신](Supported-Debian-virtual-machines-on-Hyper-V.md)
 
 * [Hyper-v에서 지원 되는 Oracle Linux 가상 컴퓨터](Supported-Oracle-Linux-virtual-machines-on-Hyper-V.md)
 
