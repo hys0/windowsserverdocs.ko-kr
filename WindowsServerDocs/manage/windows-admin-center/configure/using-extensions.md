@@ -7,12 +7,12 @@ author: daniellee-msft
 ms.author: jol
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: 6091edd7aa7f790f6029ca6b6ae402bf1b7e61ca
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: c775dd5a3011115bbb031c0b9e4e24a8911d378e
+ms.sourcegitcommit: 2977c707a299929c6ab0d1e0adab2e1c644b8306
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59877024"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63748409"
 ---
 # <a name="install-and-manage-extensions"></a>설치 하 고 확장 관리
 
@@ -85,9 +85,6 @@ $feedUrlBase = "https://aka.ms/sme-extension-feed"
 >적용 대상: Windows Admin Center, Windows Admin Center 미리 보기
 
 Windows Admin Center 미리 보기에 게이트웨이 확장을 관리 하기 위한 PowerShell 모듈을 포함 합니다.
-
->[!IMPORTANT]
->PowerShell 모듈을 사용 하 여 게이트웨이 확장 관리에 Windows Server 게이트웨이 서비스로 Windows Admin Center 배포할 때만 지원 됩니다.
 
 ```powershell
 # Add the module to the current session

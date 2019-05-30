@@ -9,13 +9,13 @@ author: jasongerend
 ms.author: jgerend
 manager: jasgroce
 ms.localizationpriority: medium
-ms.date: 05/24/2019
-ms.openlocfilehash: c9af38720df79918bed3404995e81a7f93a10744
-ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
+ms.date: 05/29/2019
+ms.openlocfilehash: e76b7862549814d5453717c40cec45e341141d7a
+ms.sourcegitcommit: 8eea7aadbe94f5d4635c4ffedc6a831558733cc0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/25/2019
-ms.locfileid: "66222892"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66308598"
 ---
 # <a name="server-core-app-compatibility-feature-on-demand-fod"></a>Server Core 앱 호환성 FOD(Feature on Demand)
 
@@ -156,7 +156,7 @@ Windows Server를 실행 하는 서버 1903 이상 버전에 다음 구성 요�
 1. Windows Server 및 Server FOD ISO 이미지 파일을 Windows 컴퓨터에서 로컬 폴더로 다운로드 합니다.
 
    - 볼륨 라이선스가 있는 경우에서 Windows Server 및 Server FOD ISO 이미지 파일을 다운로드할 수 있습니다 합니다 [볼륨 라이선스 서비스 센터](https://www.microsoft.com/Licensing/servicecenter/default.aspx)합니다.
-   - Server FOD ISO 이미지 파일에서 제공 됩니다. 합니다 [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server) 또는 합니다 [Visual Studio 포털](https://visualstudio.microsoft.com) 구독자에 대 한 합니다.
+   - 장기 서비스 채널에서 릴리스를 서버 FOD ISO 이미지 파일을 사용할 수 있는 이기도 합니다 [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server) 또는 [Visual Studio 포털](https://visualstudio.microsoft.com) 구독자에 대 한 합니다.
 
 2. 관리자 권한으로 PowerShell 세션을 열고 드라이브로 이미지 파일을 탑재 하려면 다음 명령을 사용 합니다.
 

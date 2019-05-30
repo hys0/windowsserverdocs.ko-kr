@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f8d23cc1bb5739b47c755d90c927cbcf82b8da7f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 5e1ee9b7c1ade184cf17b867b7fce10ab8885f0f
+ms.sourcegitcommit: 4ff3d00df3148e4bea08056cea9f1c3b52086e5d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59825024"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64771884"
 ---
 # <a name="color"></a>color
 
@@ -44,25 +44,27 @@ color [[<B>]<F>]
 
 ## <a name="remarks"></a>설명
 
--   다음 표에서 대 한 값으로 사용할 수 있는 유효한 16 진수 *B* 하 고 *F*합니다.  
-    |값|색|
-    |-----|-----|
-    |0|검정|
-    |1|파랑|
-    |2|녹색|
-    |3|Aqua|
-    |4|빨강|
-    |5|자주색|
-    |6|노랑|
-    |7|하얀|
-    |8|회색|
-    |9|연한 파랑|
-    |변수를 잠그기 위한|연한 녹색|
-    |B|연한 옥색|
-    |C|연한 빨간색|
-    |d|옅은 자주|
-    |E|밝은 노랑|
-    |F|밝은 백서|
+-   다음 표에서 대 한 값으로 사용할 수 있는 유효한 16 진수 *B* 하 고 *F*합니다.
+
+|값|색|
+|-----|-----|
+|0|검정|
+|1|파랑|
+|2|녹색|
+|3|Aqua|
+|4|빨강|
+|5|자주색|
+|6|노랑|
+|7|하얀|
+|8|회색|
+|9|연한 파랑|
+|변수를 잠그기 위한|연한 녹색|
+|B|연한 옥색|
+|C|연한 빨간색|
+|d|옅은 자주|
+|E|밝은 노랑|
+|F|밝은 백서|
+    
 -   사이 공백을 넣지 마십시오 *B* 하 고 *F*합니다.
 -   하나의 16 진수를 지정 하는 경우 해당 색 전경색으로 사용 됩니다 하 고 배경색 기본 색으로 설정 됩니다.
 -   명령 프롬프트 창의 기본 색을 설정 하려면 명령 프롬프트 창의 왼쪽 위 모퉁이 클릭 하 고 **기본값**를 클릭 합니다 **색** 탭을 클릭 합니다 에대한사용하려는색 **텍스트를 화면** 하 고 **배경 화면**합니다.

@@ -8,12 +8,12 @@ ms.date: 06/12/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: active-directory-federation-services
-ms.openlocfilehash: 1292c7e6cd1dec6926516880c34fe60fb97a9ec8
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 24a9caba7a2745973d7c69c3bd7bc42717e7a06c
+ms.sourcegitcommit: d84dc3d037911ad698f5e3e84348b867c5f46ed8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66190504"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66266690"
 ---
 # <a name="build-a-single-page-web-application-using-oauth-and-adaljs-with-ad-fs-2016-or-later"></a>OAuth 및 ADAL을 사용 하 여 단일 페이지 웹 응용 프로그램을 빌드하십시오. AD FS 2016 이상의 버전을 사용 하 여 JS
 
@@ -78,13 +78,19 @@ AngularJS 단일 페이지 앱에 Azure AD 통합을 수정 하는 것에 대 �
 ## <a name="registering-the-public-client-in-ad-fs"></a>AD FS에서 공용 클라이언트 등록
 이 샘플에서는 WebAPI에서 수신 하도록 구성 되어 https://localhost:44326/입니다. 응용 프로그램 그룹 **웹 응용 프로그램에 액세스 하는 웹 브라우저** 암시적 허용 흐름 응용 프로그램을 구성 하는 데 사용할 수 있습니다.
 
-1. AD FS 관리 콘솔을 열고 클릭 **응용 프로그램 그룹 추가**합니다. 에 **응용 프로그램 그룹 추가 마법사** 응용 프로그램, 설명 및 선택의 이름을 입력 합니다 **웹 응용 프로그램에 액세스 하는 웹 브라우저** 템플릿에서 **클라이언트-서버 응용 프로그램** 아래와 같이 섹션  <br>![새 응용 프로그램 그룹 만들기](media/Single-Page-Application-with-AD-FS/appgroup_step1.png)
+1. AD FS 관리 콘솔을 열고 클릭 **응용 프로그램 그룹 추가**합니다. 에 **응용 프로그램 그룹 추가 마법사** 응용 프로그램, 설명 및 선택의 이름을 입력 합니다 **웹 응용 프로그램에 액세스 하는 웹 브라우저** 템플릿에서 **클라이언트-서버 응용 프로그램** 아래와 같이 섹션
 
-2. 다음 페이지에서 **네이티브 응용 프로그램**응용 프로그램 클라이언트 id를 제공 하 고 아래와 같이 리디렉션 URI  <br>![새 응용 프로그램 그룹 만들기](media/Single-Page-Application-with-AD-FS/appgroup_step2.png)
+    ![새 응용 프로그램 그룹 만들기](media/Single-Page-Application-with-AD-FS/appgroup_step1.png)
+
+2. 다음 페이지에서 **네이티브 응용 프로그램**응용 프로그램 클라이언트 id를 제공 하 고 아래와 같이 리디렉션 URI
+
+    ![새 응용 프로그램 그룹 만들기](media/Single-Page-Application-with-AD-FS/appgroup_step2.png)
 
 3. 다음 페이지에서 **액세스 제어 정책 적용** 권한으로 둡니다 *모든 사용자 허용*
 
-4. 요약 페이지는 아래와 같아야 합니다.  <br>![새 응용 프로그램 그룹 만들기](media/Single-Page-Application-with-AD-FS/appgroup_step3.png)
+4. 요약 페이지는 아래와 같아야 합니다.
+
+    ![새 응용 프로그램 그룹 만들기](media/Single-Page-Application-with-AD-FS/appgroup_step3.png)
 
 5. 클릭할 **다음** 응용 프로그램 그룹 추가 완료 하 고 마법사를 닫습니다.
 

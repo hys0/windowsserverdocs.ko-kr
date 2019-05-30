@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 1c47986cda3f091033274aa2c59a656ec861a98f
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 909be9e4bbcd12b00fd60ff061b1f4e2ede34546
+ms.sourcegitcommit: 8eea7aadbe94f5d4635c4ffedc6a831558733cc0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66189707"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66308535"
 ---
 # <a name="create-a-claims-provider-trust"></a>클레임 공급자 트러스트 만들기
 
@@ -57,7 +57,7 @@ AD FS 관리 스냅인을 사용 하 여 클레임 공급자 트러스트 추가
 새 클레임 공급자 트러스트, AD FS 관리 스냅인을 사용 하 여, 파트너가 로컬 네트워크 또는 인터넷에 게시는 페더레이션 메타 데이터에서 파트너에 대 한 구성 데이터를 자동으로 가져와서 다음 절차를 수행에 리소스 파트너 조직의 페더레이션 서버입니다.
 
 >[!NOTE]
->와 같은 비 정규화 된 호스트 이름으로 인증서를 사용 하는 것이 오래 된 있지만 https://myserver, 이러한 인증서는 보안 가치가 없으므로 및 공격자가 페더레이션 메타 데이터를 게시 하는 페더레이션 서비스를 가장할 수 있습니다. 따라서 페더레이션 메타 데이터를 쿼리할 때만 사용 해야는 정규화 된 도메인 이름 같은 https://myserver.contoso.com합니다.
+>Https와 같은 비 정규화 된 호스트 이름으로 인증서를 사용 하는 것이 오래 된 있지만:\//myserver, 이러한 인증서는 보안 가치가 없으므로 있으며 공격자를 가장할 페더레이션을 게시 하는 페더레이션 서비스를 설정할 수 있습니다. 메타 데이터입니다. 따라서 페더레이션 메타 데이터를 쿼리할 때만 사용 해야는 정규화 된 도메인 이름 같은 `https://myserver.contoso.com`합니다.
 
 1.  서버 관리자에서 클릭 **도구**, 를 선택한 다음 **AD FS 관리**합니다.  
   

@@ -12,12 +12,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: 5dab9ff9924d8afe05bd6b033ca513172d9aaeff
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 28296b588c87bddb0364b9c3e10ad443870dc52f
+ms.sourcegitcommit: d84dc3d037911ad698f5e3e84348b867c5f46ed8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59829504"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66266830"
 ---
 # <a name="how-to-configure-protected-accounts"></a>보호된 계정을 구성하는 방법
 
@@ -25,11 +25,11 @@ ms.locfileid: "59829504"
 
 PtH(Pass-the-hash) 공격을 통해 공격자는 사용자 암호(또는 다른 자격 증명 파생물)의 기본 NTLM 해시를 사용하여 원격 서버 또는 서비스에서 인증을 받을 수 있습니다. Microsoft는 이전에 PtH(Pass-the-hash) 공격을 완화할 수 있는 [지침을 게시](https://www.microsoft.com/download/details.aspx?id=36036) 했습니다.  Windows Server 2012 r 2에는 이러한 공격을 추가로 위험을 완화 하려면 새로운 기능이 있습니다. 자격 증명 도난을 방지하는 데 도움이 되는 다른 보안 기능에 대한 자세한 내용은 [자격 증명 보호 및 관리](https://technet.microsoft.com/library/dn408190.aspx)를 참조하세요. 이 항목에서는 다음과 같은 새로운 기능을 구성하는 방법에 대해 설명합니다.  
   
--   [보호 된 사용자](how-to-configure-protected-accounts.md#BKMK_AddtoProtectedUsers)  
+-   [보호 된 사용자](#protected-users)  
   
--   [인증 정책](how-to-configure-protected-accounts.md#BKMK_CreateAuthNPolicies)  
+-   [인증 정책](#authentication-policies)  
   
--   [인증 정책 사일로](how-to-configure-protected-accounts.md#BKMK_CreateAuthNPolicySilos)  
+-   [인증 정책 사일로](#authentication-policy-silos)  
   
 Windows 8.1 및 Windows Server 2012 R2에는 자격 증명 도난을 방지하는 데 도움이 되는 추가 완화 기능이 기본 제공되며, 이러한 기능은 다음 항목에서 다룹니다.  
   
@@ -37,7 +37,7 @@ Windows 8.1 및 Windows Server 2012 R2에는 자격 증명 도난을 방지하�
   
 -   [LSA 보호](https://technet.microsoft.com/library/dn408187)  
   
-## <a name="BKMK_AddtoProtectedUsers"></a>보호 된 사용자  
+## <a name="protected-users"></a>보호된 사용자  
 보호된 사용자는 새 사용자 또는 기존 사용자를 추가할 수 있는 새로운 글로벌 보안 그룹입니다. Windows 8.1 장치 및 Windows Server 2012 R2 호스트는 자격 증명 도난 방지 보호를 제공 하는이 그룹의 멤버와 특수 한 동작이 있습니다. 그룹의 멤버에 대 한 Windows 8.1 장치 또는 Windows Server 2012 R2 호스트에 보호 된 사용자에 대 한 지원 되지 않는 자격 증명을 캐시 있을 하지 않습니다. 이 그룹의 구성원 Windows 8.1 이전 버전의 Windows 실행 하는 장치에 로그온 한 경우 추가 보호 없이 보유 합니다.  
   
 사용자는 로그온 Windows 8.1 장치에 그룹 보호 된 사용자의 구성원 및 Windows Server 2012 R2 호스트 수 *더 이상* 사용:  
@@ -62,7 +62,7 @@ Windows 8.1 및 Windows Server 2012 R2에는 자격 증명 도난을 방지하�
   
 -   초기 4시간의 수명이 지난 후 사용자 티켓(TGT) 갱신  
   
-그룹에 사용자를 추가 하려면 사용할 수 있습니다 [UI 도구](https://technet.microsoft.com/library/cc753515.aspx) ADAC Active Directory 관리 센터 () 또는 Active Directory 사용자 및 컴퓨터 또는와 같은 명령줄 도구와 같은 [Dsmod 그룹](https://technet.microsoft.com/library/cc732423.aspx), 또는 Windows PowerShell[Add-adgroupmember](https://technet.microsoft.com/library/ee617210.aspx) cmdlet입니다. 서비스 및 컴퓨터 계정은 보호된 사용자 그룹의 구성원이 *될 수 없습니다*. 암호 또는 인증서를 호스트에서 항상 사용할 수 있으므로, 이러한 계정의 구성원 자격에는 로컬 보호 기능이 제공되지 않습니다.  
+그룹에 사용자를 추가 하려면 사용할 수 있습니다 [UI 도구](https://technet.microsoft.com/library/cc753515.aspx) Active Directory 관리 센터 ADAC () 또는 Active Directory 사용자 및 컴퓨터와 같은 명령줄 도구 등 [Dsmod 그룹](https://technet.microsoft.com/library/cc732423.aspx), 나는 Windows PowerShell [Add-adgroupmember](https://technet.microsoft.com/library/ee617210.aspx) cmdlet. 서비스 및 컴퓨터 계정은 보호된 사용자 그룹의 구성원이 *될 수 없습니다*. 암호 또는 인증서를 호스트에서 항상 사용할 수 있으므로, 이러한 계정의 구성원 자격에는 로컬 보호 기능이 제공되지 않습니다.  
   
 > [!WARNING]  
 > 인증 제한은 피할 수 있는 방법이 없습니다. 즉, Enterprise Admins 그룹 또는 Domain Admins 그룹과 같은 매우 강력한 권한의 그룹 구성원에게도 보호된 사용자 그룹의 다른 구성원과 동일한 제한이 적용됩니다. 이러한 그룹의 모든 구성원이 보호된 사용자 그룹에 추가된 경우 해당 계정이 모두 잠길 수 있습니다. 따라서 잠재적 영향을 철저히 테스트할 때까지 매우 강력한 권한의 계정을 보호된 사용자 그룹에 추가해서는 안 됩니다.  
@@ -75,14 +75,14 @@ Windows 8.1 및 Windows Server 2012 R2에는 자격 증명 도난을 방지하�
   
 -   **암호 변경** 보호 된 사용자 계정을 추가 하기 전에 각 사용자에 대 한 그룹 또는 Windows Server 2008을 실행 하는 도메인 컨트롤러에 최근에 변경 된 이상 암호 되었는지 확인 합니다.  
   
-### <a name="BKMK_Prereq"></a>보호 된 계정 사용에 대 한 요구 사항  
+### <a name="requirements-for-using-protected-accounts"></a>보호된 계정 사용을 위한 요구 사항  
 보호된 계정에는 다음과 같은 배포 요구 사항이 있습니다.  
   
 -   호스트는 보호 된 사용자에 대 한 클라이언트 쪽 제한을 제공 하려면 Windows 8.1 또는 Windows Server 2012 r 2를 실행 해야 합니다. 사용자는 보호된 사용자 그룹의 구성원 계정으로만 로그온해야 합니다. 보호 된 사용자 그룹을 만들 수 있습니다이 경우 [주 도메인 컨트롤러 (PDC) 에뮬레이터 역할을 전송](https://technet.microsoft.com/library/cc816944(v=ws.10).aspx) Windows Server 2012 r 2를 실행 하는 도메인 컨트롤러에 있습니다. 해당 그룹 개체를 다른 도메인 컨트롤러에 복제한 후 이전 버전의 Windows Server를 실행하는 도메인 컨트롤러에서 PDC 에뮬레이터 역할을 호스트할 수 있습니다.  
   
 -   NTLM 인증 사용을 제한 하는 것을 하는 보호 된 사용자에 대 한 도메인 컨트롤러 쪽 제한 및 기타 제약을 제공 하려면 도메인 기능 수준이 Windows Server 2012 r 2 이어야 합니다. 기능 수준에 대한 자세한 내용은 [AD DS(Active Directory 도메인 서비스) 기능 수준 이해](../../identity/ad-ds/active-directory-functional-levels.md)를 참조하세요.  
   
-### <a name="BKMK_TrubleshootingEvents"></a>보호 된 사용자와 관련 된 이벤트 문제 해결  
+### <a name="troubleshoot-events-related-to-protected-users"></a>보호된 사용자와 관련된 이벤트 문제 해결  
 이 섹션에서는 보호된 사용자와 관련된 이벤트 문제를 해결하는 데 도움이 되는 새로운 로그 및 보호된 사용자가 TGT(Ticket-Granting Ticket) 만료 또는 위임 문제를 해결하기 위한 변경 사항에 미치는 영향에 대해 알아봅니다.  
   
 #### <a name="new-logs-for-protected-users"></a>보호된 사용자에 대한 새로운 로그  
@@ -106,13 +106,13 @@ Windows 8.1 및 Windows Server 2012 R2에는 자격 증명 도난을 방지하�
   
 ![확인 하는 위치를 보여주는 스크린샷 * * 계정이 민감하여 위임할 수 없음 * * UI 요소](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_TshootDelegation.gif)  
   
-### <a name="BKMK_AuditAuthNattempts"></a>인증 시도 감사  
+### <a name="audit-authentication-attempts"></a>인증 시도 감사  
 **보호된 사용자** 그룹의 구성원에 대한 인증 시도를 명시적으로 감사하기 위해 보안 로그 감사 이벤트를 계속 명시적으로 수집하거나 새로운 작업 관리 로그에서 데이터를 수집할 수 있습니다. 이러한 이벤트에 대한 자세한 내용은 [인증 정책 및 인증 정책 사일로](https://technet.microsoft.com/library/dn486813.aspx)를 참조하세요.  
   
-### <a name="BKMK_ProvidePUdcProtections"></a>서비스 및 컴퓨터에 대 한 DC 쪽 보호 기능을 제공 합니다.  
+### <a name="provide-dc-side-protections-for-services-and-computers"></a>서비스 및 컴퓨터에 대한 DC 쪽 보호 제공  
 서비스 및 컴퓨터 계정은 **보호된 사용자**의 구성원일 수 없습니다. 이 섹션에서는 이러한 계정에 제공할 수 있는 도메인 컨트롤러 기반 보호에 대해 설명합니다.  
   
--   NTLM 인증 거부: 통해 구성할 수 있는 유일한 [NTLM 차단 정책](https://technet.microsoft.com/library/jj865674(v=ws.10).aspx)  
+-   NTLM 인증 거부: 통해 구성할 수 있는 유일한 [NTLM 차단 정책](https://technet.microsoft.com/library/jj865674(v=ws.10).aspx)합니다.  
   
 -   Kerberos 사전 인증에서 DES(데이터 암호화 표준) 거부:  Kerberos와 함께 릴리스된 Windows의 모든 버전에서는 RC4도 지원 때문에 des 구성 되지 않으면 Windows Server 2012 R2 도메인 컨트롤러 컴퓨터 계정에 대해 DES를 허용 하지 않습니다.  
   
@@ -127,7 +127,7 @@ Windows 8.1 및 Windows Server 2012 R2에는 자격 증명 도난을 방지하�
   
     ![계정을 제한 하려면 위치를 보여 주는 스크린샷](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_TshootDelegation.gif)  
   
-## <a name="BKMK_CreateAuthNPolicies"></a>인증 정책  
+## <a name="authentication-policies"></a>인증 정책  
 인증 정책은 인증 정책 개체를 포함하는 AD DS의 새 컨테이너입니다. 인증 정책에서는 계정에 대한 TGT 수명을 제한하거나 다른 클레임 관련 조건을 추가하는 등 자격 증명 도난에 대한 노출 완화에 도움이 되는 설정을 지정할 수 있습니다.  
   
 Windows Server 2012 동적 액세스 제어에는 조직 전체에서 파일 서버를 구성 하는 간편한 방법을 제공 하는 중앙 액세스 정책 이라는 Active Directory 포리스트 범위의 개체 클래스를 도입 했습니다. Windows Server 2012 r 2에서는 인증 정책 (objectClass Msds-authnpolicies) 이라는 새 개체 클래스를 Windows Server 2012 R2 도메인의 계정 클래스에 인증 구성을 적용할 사용할 수 있습니다. Active Directory 계정 클래스는 다음과 같습니다.  
@@ -155,7 +155,7 @@ TGS 교환에서는 계정의 TGT 서비스 티켓을 요청 하는 인증자를
   
 AP 교환은 응용 프로그램 프로토콜 내부의 데이터처럼 일반적으로 발생하며 인증 정책의 영향을 받지 않습니다.  
   
-자세한 내용은 참조 [Kerberos 버전 5 인증 프로토콜 사용 방법] (https://technet.microsoft.com/library/cc772815(v=WS.10.aspx합니다.  
+자세한 내용은 [Kerberos 버전 5 인증 프로토콜의 작동 방식](https://technet.microsoft.com/library/cc772815(v=WS.10.aspx))을 참조하세요.  
   
 ### <a name="overview"></a>개요  
 인증 정책은 계정에 구성 가능한 제한을 적용할 수 있는 방법을 제공하고 서비스 및 컴퓨터 계정에 대한 제한을 제공하여 보호된 사용자를 보완합니다. 인증 정책은 AS 교환 또는 TGS 교환 중에 적용됩니다.  
@@ -172,7 +172,7 @@ AP 교환은 응용 프로그램 프로토콜 내부의 데이터처럼 일반�
   
 -   TGS 교환을 보내는 장치 또는 클라이언트(사용자, 서비스, 컴퓨터)에서 충족해야 하는 액세스 제어 조건  
   
-### <a name="BKMK_ReqForAuthnPolicies"></a>인증 정책을 사용 하 여 요구 사항  
+### <a name="requirements-for-using-authentication-policies"></a>인증 정책 사용을 위한 요구 사항  
   
 |정책|요구 사항|  
 |-----|--------|  
@@ -329,7 +329,7 @@ DAC(동적 액세스 제어)를 구성하지 않고 TGT 수명을 구성할 수 
   
 ![사용 하도록 설정 하려면 그룹 정책 또는 로컬 그룹 정책 편집기를 사용 하는 방법을 보여 주는 스크린 샷 * * 클레임, 복합 인증 및 Kerberos 아머 링에 대 한 Kerberos 클라이언트 지원 * *](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_KerbClientDACSupport.gif)  
   
-### <a name="BKMK_TroubleshootAuthnPolicies"></a>인증 정책 문제 해결  
+### <a name="troubleshoot-authentication-policies"></a>인증 정책 문제 해결  
   
 #### <a name="determine-the-accounts-that-are-directly-assigned-an-authentication-policy"></a>인증 정책이 직접 할당된 계정 확인  
 인증 정책의 계정 섹션에 정책을 직접 적용한 계정이 표시됩니다.  
@@ -339,7 +339,7 @@ DAC(동적 액세스 제어)를 구성하지 않고 TGT 수명을 구성할 수 
 #### <a name="use-the-authentication-policy-failures---domain-controller-administrative-log"></a>인증 정책 실패-도메인 컨트롤러 관리 로그를 사용 하 여  
 새 **인증 정책 실패-도메인 컨트롤러** 관리 로그에서 **응용 프로그램 및 서비스 로그** > **Microsoft** > **Windows** > **인증** 쉽게 인증 정책으로 인 한 오류를 검색 하기 위해 만들었습니다. 이 로그는 기본적으로 사용되지 않습니다. 사용하려면 로그 이름을 마우스 오른쪽 단추로 클릭한 다음 **로그 사용**을 클릭합니다. 새 이벤트는 기존 Kerberos TGT 및 서비스 티켓 감사 이벤트와 내용이 매우 유사합니다. 이러한 이벤트에 대한 자세한 내용은 [인증 정책 및 인증 정책 사일로](https://technet.microsoft.com/library/dn486813.aspx)를 참조하세요.  
   
-### <a name="BKMK_ManageAuthnPoliciesUsingPSH"></a>Windows PowerShell을 사용 하 여 인증 정책 관리  
+### <a name="manage-authentication-policies-by-using-windows-powershell"></a>Windows PowerShell을 사용하여 인증 정책 관리  
 다음 명령은 **TestAuthenticationPolicy**라는 인증 정책을 만듭니다. **UserAllowedToAuthenticateFrom** 매개 변수는 사용자가 someFile.txt 파일의 SDDL 문자열로 인증할 수 있는 장치를 지정합니다.  
   
 ```  
@@ -371,7 +371,7 @@ PS C:\> Remove-ADAuthenticationPolicy -Identity ADAuthenticationPolicy1
 PS C:\> Get-ADAuthenticationPolicy -Filter 'Enforce -eq $false' | Remove-ADAuthenticationPolicy  
 ```  
   
-## <a name="BKMK_CreateAuthNPolicySilos"></a>인증 정책 사일로  
+## <a name="authentication-policy-silos"></a>인증 정책 사일로  
 인증 정책 사일로는 사용자, 컴퓨터 및 서비스 계정에 대한 AD DS의 새 컨테이너(objectClass AuthNPolicySilos)로서, 중요한 계정을 보호하도록 도와줍니다. 모든 조직에서는 Enterprise Admins, Domain Admins 및 Schema Admins 그룹의 구성원(이러한 계정은 공격자가 포리스트의 모든 항목에 액세스하는 데 악용될 수 있기 때문)을 보호해야 하지만 다른 계정도 보호해야 할 수 있습니다.  
   
 일부 조직에서는 조직에 고유한 계정을 만들고 그룹 정책 설정을 적용하여 로컬 및 원격 대화형 로그온 및 관리 권한을 제한하는 방식으로 작업을 격리합니다. 인증 정책 사일로는 사용자, 컴퓨터 및 관리 서비스 계정 간의 관계를 정의하는 방법을 만들어 이러한 작업을 보완합니다. 계정은 하나의 사일로에만 속할 수 있습니다. 각 유형의 계정에 대한 인증 정책을 구성하여 다음을 제어할 수 있습니다.  
@@ -429,7 +429,7 @@ Active Directory 관리 센터 또는 Windows PowerShell을 사용 하 여 인�
   
     ![* * 표시 이름 * *에 사일로의 이름을 입력 합니다. * * 허용 계정 * *을 클릭 * * 추가 * * 고 계정의 이름을 입력 하 고 클릭 * * 확인 * *](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_NewAuthNPolicySiloDisplayName.gif)  
   
-### <a name="BKMK_ManageAuthnSilosUsingPSH"></a>Windows PowerShell을 사용 하 여 인증 정책 사일로 관리  
+### <a name="manage-authentication-policy-silos-by-using-windows-powershell"></a>Windows PowerShell을 사용하여 인증 정책 사일로 관리  
 다음 명령은 인증 정책 사일로 개체를 만들고 적용합니다.  
   
 ```  

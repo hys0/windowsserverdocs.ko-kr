@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 05/31/2018
-ms.openlocfilehash: 4b9deb4fc7fbfccf569250e965274009764054f7
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a98e1a876c972b0f146ff37aff0a77399b684e99
+ms.sourcegitcommit: 8eea7aadbe94f5d4635c4ffedc6a831558733cc0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59849334"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66308556"
 ---
 # <a name="bitsadmin-examples"></a>bitsadmin 예제
 
@@ -28,7 +28,7 @@ ms.locfileid: "59849334"
 
 합니다 **/transfer** 스위치 아래에 나열 된 작업을 수행 하는 것에 대 한 바로 가기입니다. 이 스위치 작업, 파일 작업을 추가 합니다, 활성화 하는 전송 큐에서 작업을 만들고 작업을 완료 합니다. BITSAdmin 계속 전송이 완료 되거나 오류가 발생할 때까지 MS-DOS 창에 진행률 정보를 표시 합니다.
 
-**bitsadmin /transfer myDownloadJob /download /priority 정상적인 https://downloadsrv/10mb.zip c:\\10mb.zip**
+**bitsadmin /transfer myDownloadJob /download /priority 정상 `https://downloadsrv/10mb.zip c:\\10mb.zip`**
 
 ## <a name="create-a-download-job"></a>다운로드 작업 만들기
 
@@ -58,7 +58,7 @@ Created job {C775D194-090F-431F-B5FB-8334D00D1CB6}.
 
 **bitsadmin /resume myDownloadJob**
 
-작업의 진행률을 확인 하려면 사용 합니다 **나열/**, **/info**, 또는 **모니터링/** 전환 합니다.
+작업의 진행률을 확인 하려면 사용 합니다 **나열/** , **/info**, 또는 **모니터링/** 전환 합니다.
 
 ## <a name="determine-the-progress-of-the-download-job"></a>다운로드 작업의 진행률을 확인
 
@@ -97,7 +97,7 @@ NOTIFICATION COMMAND LINE: none
 
 ## <a name="monitoring-jobs-in-the-transfer-queue"></a>전송 큐에서 작업을 모니터링
 
-사용 하 여는 **/list**, **모니터링/**, 또는 **/info** 전송 큐에 작업을 모니터링 하는 스위치입니다. 합니다 **/list** 스위치는 큐의 모든 작업에 대 한 정보를 제공 합니다.
+사용 하 여는 **/list**, **모니터링/** , 또는 **/info** 전송 큐에 작업을 모니터링 하는 스위치입니다. 합니다 **/list** 스위치는 큐의 모든 작업에 대 한 정보를 제공 합니다.
 
 **bitsadmin /list**
 

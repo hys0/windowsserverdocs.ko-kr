@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.date: 04/12/2019
 ms.localizationpriority: high
 ms.prod: windows-server-threshold
-ms.openlocfilehash: 3208c20e8bf9f4cfab4340aa33b24175bbc72dda
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: ee3c4ba5d6c3dc911ab318ade9a46b279317496f
+ms.sourcegitcommit: 39ab8041d166e6817a95417d6aa30bc7abeeef54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66188332"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66260253"
 ---
 # <a name="windows-admin-center"></a>Windows Admin Center
 
@@ -128,6 +128,7 @@ ms.locfileid: "66188332"
 
 최신 출시된 기능에 대해 자세히 알아보세요.
 
+- 버전 1904.1-게이트웨이 플러그 인의 안정성을 개선 하기 위해 유지 관리 업데이트 합니다.
 - 버전 [1904](https://aka.ms/wac1904) Azure 하이브리드 서비스 도구를 소개 하 고 GA 채널 미리 보기에서 이전에 있었던 기능을 제공 하는 최신 GA 릴리스.
 - 버전 [1903](https://aka.ms/wac1903) Active Directory, DHCP 및 DNS를 관리 하려면 Active Directory 및 새 도구에서 서버 또는 PC 연결을 추가 하는 기능, Azure Monitor에서 전자 메일 알림을 제공 합니다.
 - 버전 [1902](https://aka.ms/wac1902) 소프트웨어 정의 네트워크 (sdn 소프트웨어) 관리, Acl, 게이트웨이 연결 및 논리 네트워크를 관리 하는 새로운 SDN 도구를 포함 하 여 공유 연결 목록 및 향상 된 기능을 추가 합니다.

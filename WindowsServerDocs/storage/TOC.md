@@ -56,7 +56,7 @@
 #### [할당량 자동 적용 속성 편집](fsrm/edit-auto-apply-quota-properties.md)
 ### [파일 차단 관리](fsrm/file-screening-management.md)
 #### [차단을 위한 파일 그룹 정의](fsrm/define-file-groups-for-screening.md)
-#### [파일 차단 만들기](fsrm/create-file-screen.md)
+#### [파일 화면 만들기](fsrm/create-file-screen.md)
 #### [파일 차단 예외 만들기](fsrm/create-file-screen-exception.md)
 #### [파일 차단 템플릿 만들기](fsrm/create-file-screen-template.md)
 #### [파일 차단 템플릿 속성 편집](fsrm/edit-file-screen-template-properties.md)
@@ -123,7 +123,7 @@
 #### [볼륨 계획](storage-spaces/plan-volumes.md)
 #### [게스트 VM 클러스터](storage-spaces/storage-spaces-direct-in-vm.md)
 #### [재해 복구](storage-spaces/storage-spaces-direct-disaster-recovery.md)
-### 배포
+### 배포 게스트 클러스터에
 #### [스토리지 공간 다이렉트 배포](storage-spaces/deploy-storage-spaces-direct.md)
 #### [볼륨 만들기](storage-spaces/create-volumes.md)
 #### [중첩된 복원력](storage-spaces/nested-resiliency.md)
@@ -136,13 +136,7 @@
 #### [서버 제거](storage-spaces/remove-servers.md)
 #### [드라이브 펌웨어 업데이트](update-firmware.md)
 #### [볼륨 확장](storage-spaces/resize-volumes.md)
-### 문제 해결
-#### [문제 해결 시나리오](storage-spaces/troubleshooting-storage-spaces.md)
-#### [성능 상태 및 작동 상태](storage-spaces/storage-spaces-states.md)
-#### [데이터 수집](storage-spaces/data-collection.md)
-#### [질문과 대답](storage-spaces/storage-spaces-direct-faq.md)
-### Insider Preview
-#### [클러스터 세트](storage-spaces/cluster-sets.md)
+#### [볼륨 삭제](storage-spaces/delete-volumes.md)
 #### [성능 기록](storage-spaces/performance-history.md)
 ##### [드라이브](storage-spaces/performance-history-for-drives.md)
 ##### [네트워크 어댑터](storage-spaces/performance-history-for-network-adapters.md)
@@ -153,6 +147,12 @@
 ##### [클러스터](storage-spaces/performance-history-for-clusters.md)
 ##### [스크립팅 샘플](storage-spaces/performance-history-scripting.md)
 #### [볼륨 할당 구분](storage-spaces/delimit-volume-allocation.md)
+#### [Azure Monitor를 사용하여 모니터](storage-spaces/configure-azure-monitor.md)
+### 문제 해결
+#### [문제 해결 시나리오](storage-spaces/troubleshooting-storage-spaces.md)
+#### [성능 상태 및 작동 상태](storage-spaces/storage-spaces-states.md)
+#### [데이터 수집](storage-spaces/data-collection.md)
+#### [질문과 대답](storage-spaces/storage-spaces-direct-faq.md)
 ## [클라우드 폴더](work-folders/work-folders-overview.md)
 ### [클라우드 폴더 구현 디자인](work-folders/plan-work-folders.md)
 ### [클라우드 폴더 배포](work-folders/deploy-work-folders.md)

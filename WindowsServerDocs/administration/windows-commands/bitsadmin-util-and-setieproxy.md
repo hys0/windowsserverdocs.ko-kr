@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d4f6ab2e52284895d2e7918364c24bbb69f2b1c9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 81bb333e2bb776bc75789b52ab41d7ef64016f51
+ms.sourcegitcommit: d84dc3d037911ad698f5e3e84348b867c5f46ed8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59853514"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66266463"
 ---
 # <a name="bitsadmin-util-and-setieproxy"></a>bitsadmin util 및 setieproxy
 
@@ -47,7 +47,7 @@ bitsadmin /Util /SetIEProxy <Account> <Usage>[/Conn <ConnectionName>]
 > [!IMPORTANT]
 > 성공적으로 완료 하려면 관리자 권한 명령 프롬프트에서이 명령을 실행 해야 합니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="examples"></a>예
 
 다음 예제에서는 네트워크 서비스 계정에 대 한 프록시 사용을 설정합니다.
 

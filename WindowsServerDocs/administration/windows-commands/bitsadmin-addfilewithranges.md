@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 69b402195f90977aa63299c1a2a550ba310a4513
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 081e5caeb7fb458b367f035b9995929de84a5528
+ms.sourcegitcommit: d84dc3d037911ad698f5e3e84348b867c5f46ed8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59832344"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66266565"
 ---
 # <a name="bitsadmin-addfilewithranges"></a>bitsadmin addfilewithranges
 
@@ -48,7 +48,7 @@ bitsadmin /AddFileWithRanges <Job> <RemoteURL> <LocalName> <RangeList>
 
     해결 방법: 먼저 빈 범위를 지정 하지 마십시오. 예를 들어: bitsadmin /addfilewithranges j2 http://bitsdc/dload/1k.zip c:\1k.zip 100:5, 100:0 합니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="examples"></a>예
 
 다음 예제에서는 0, 100 바이트에서에서 오프셋 오프셋된 2000에서에서 100 바이트를 전송 하는 비트 하 고에서 남아 있는 바이트 오프셋 5000 파일의 끝에 키를 누릅니다.
 ```

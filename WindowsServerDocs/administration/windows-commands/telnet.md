@@ -42,7 +42,7 @@ telnet [/a] [/e <EscapeChar>] [/f <FileName>] [/l <UserName>] [/t {vt100 | vt52 
 
 ## <a name="remarks"></a>설명
 -   이 명령은 실행 하기 전에 텔넷 클라이언트 소프트웨어를 설치 해야 합니다. 자세한 내용은 [텔넷 설치](https://technet.microsoft.com/library/cc754293(v=ws.10).aspx)합니다.
--   텔넷 텔넷 프롬프트로 텔넷 컨텍스트를 입력 매개 변수 없이 실행할 수 있습니다 (**Microsoft 텔넷 >**). 텔넷 프롬프트에서 텔넷 클라이언트를 실행 하는 컴퓨터를 관리 하는 텔넷 명령을 사용할 수 있습니다.
+-   텔넷 텔넷 프롬프트로 텔넷 컨텍스트를 입력 매개 변수 없이 실행할 수 있습니다 (**Microsoft 텔넷 >** ). 텔넷 프롬프트에서 텔넷 클라이언트를 실행 하는 컴퓨터를 관리 하는 텔넷 명령을 사용할 수 있습니다.
 
 ## <a name="BKMK_Examples"></a>예제
 텔넷을 사용 하 여 telnet.microsoft.com에 텔넷 서버 서비스를 실행 하는 컴퓨터에 연결 합니다.

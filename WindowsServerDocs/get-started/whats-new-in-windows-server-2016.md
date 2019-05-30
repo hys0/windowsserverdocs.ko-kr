@@ -14,18 +14,18 @@ author: jasongerend
 ms.author: jgerend
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: 8d36961558066197a54f42d27a3560d653bd81f2
-ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
+ms.openlocfilehash: 8526d86c03f895d5bc8e0776aa958c627e78dfd9
+ms.sourcegitcommit: d84dc3d037911ad698f5e3e84348b867c5f46ed8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65976629"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66266810"
 ---
 # <a name="whats-new-in-windows-server-2016"></a>Windows Server 2016의 새로운 기능
 
 >적용 대상: Windows Server 2016
 
-<img src="media/whats-new.png" style='float:left; padding:.5em;' alt="Icon showing a newspaper">Windows의 최신 기능을 알아보려면 [What's New in Windows Server](whats-new-in-windows-server.md)합니다. 이 섹션은 Windows Server&reg; 2016의 새로운 기능과 변경된 기능을 설명하는 내용입니다. 여기에 나열된 새로운 기능 및 변경 사항은 이 릴리스를 사용할 때 가장 많은 영향을 줄 수 있습니다.  
+![신문의 표시 아이콘](media/whats-new.png) Windows의 최신 기능을 알아보려면 [What's New in Windows Server](whats-new-in-windows-server.md)합니다. 이 섹션은 Windows Server&reg; 2016의 새로운 기능과 변경된 기능을 설명하는 내용입니다. 여기에 나열된 새로운 기능 및 변경 사항은 이 릴리스를 사용할 때 가장 많은 영향을 줄 수 있습니다.
 
 ## <a name="computevirtualizationvirtualizationmd"></a>[계산](../virtualization/virtualization.md)
 

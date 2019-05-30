@@ -7,22 +7,24 @@ ms.topic: article
 ms.author: HammadBu; VladmiS
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 7619d2e2ce394c7f06826d6ebe36bccfa43344ad
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 70b27d45acbfb046d52271a50ca7deffb226b8d0
+ms.sourcegitcommit: d84dc3d037911ad698f5e3e84348b867c5f46ed8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59842574"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66266725"
 ---
 # <a name="performance-tuning-remote-desktop-gateways"></a>원격 데스크톱 게이트웨이 튜닝 하는 성능
 
-**참고**    Windows 8 이상 및 Windows Server 2012 R2 이상에서 원격 데스크톱 게이트웨이 (RD 게이트웨이) TCP, UDP 및 레거시 RPC 전송을 지원 합니다. 다음의 데이터 대부분은 레거시 RPC 전송을 관련입니다. 레거시 RPC 전송 사용 하지 않는 경우이 섹션에서는 적용 되지 않습니다.
+> [!Note]
+> Windows 8 이상 및 Windows Server 2012 R2 이상에서 원격 데스크톱 게이트웨이 (RD 게이트웨이)는 TCP, UDP 및 레거시 RPC 전송을 지원합니다. 다음의 데이터 대부분은 레거시 RPC 전송을 관련입니다. 레거시 RPC 전송 사용 하지 않는 경우이 섹션에서는 적용 되지 않습니다.
 
 이 항목에서는 고객 배포의 성능을 향상 하는 데 도움이 되는 성능 관련 매개 변수 및 고객의 네트워크 사용 패턴을 사용 하는 tunings를 설명 합니다.
 
 RD 게이트웨이 본질적으로 원격 데스크톱 연결 인스턴스 및 고객의 네트워크 내에서 RD 세션 호스트 서버 인스턴스 간에 작업을 전달 하는 많은 패킷을 수행 합니다.
 
-**참고**    RPC 전송만에 다음 매개 변수를 적용 합니다.
+> [!Note]
+> 다음 매개 변수를 RPC 전송에 적용 됩니다.
 
 인터넷 정보 서비스 (IIS) 및 RD 게이트웨이 RD 게이트웨이에서 시스템 성능 향상을 위해 다음 레지스트리 매개 변수를 내보냅니다.
 

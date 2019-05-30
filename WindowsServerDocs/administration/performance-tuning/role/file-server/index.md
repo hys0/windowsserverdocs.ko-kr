@@ -7,12 +7,12 @@ ms.topic: article
 author: phstee
 ms.author: NedPyle; Danlo; DKruse
 ms.date: 4/14/2017
-ms.openlocfilehash: d6dc2739ae45b29bdfd854c1b81b0c8962c8f107
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ed9e9c6e2280aa69408455a111eddb3af7f88750
+ms.sourcegitcommit: d84dc3d037911ad698f5e3e84348b867c5f46ed8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59891414"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66266692"
 ---
 # <a name="performance-tuning-for-file-servers"></a>파일 서버의 성능 조정
 
@@ -94,7 +94,7 @@ ms.locfileid: "59891414"
 
     기본값은 10초입니다. 디렉터리 캐시 시간 제한입니다.
 
-    **참고**   이 매개 변수는 디렉터리 임대가 없을 때 디렉터리 메타데이터의 캐싱을 제어합니다.
+    > [!Note]   이 매개 변수는 디렉터리 임대가 없을 때 디렉터리 메타데이터의 캐싱을 제어합니다.
 
      
 
@@ -214,7 +214,7 @@ ms.locfileid: "59891414"
 
 클라이언트 컴퓨터의 일반 튜닝 매개 변수는 컴퓨터를 원격 파일 공유 액세스, 특히 대기 시간이 긴 일부 네트워크를 통한 액세스(예: 지사, 데이터 센터 간 통신, 홈 오피스, 모바일 광대역)에 적합하도록 최적화합니다. 이 설정이 모든 컴퓨터에서 최적이거나 적합한 것은 아닙니다. 이 설정을 적용하기 전에 개별 설정이 미치게 될 영향을 먼저 평가해야 합니다.
 
-| 매개 변수                   | 값 | 기본값 |
+| 매개 변수                   | Value | Default |
 |-----------------------------|-------|---------|
 | DisableBandwidthThrottling  | 1     | 0       |
 | FileInfoCacheEntriesMax     | 32768 | 64      |

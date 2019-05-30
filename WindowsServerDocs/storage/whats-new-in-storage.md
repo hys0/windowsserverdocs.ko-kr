@@ -7,19 +7,49 @@ ms.manager: dongill
 ms.technology: storage
 ms.topic: article
 author: jasongerend
-ms.date: 10/22/2019
-ms.openlocfilehash: b8b6b1145e5b921fac64c47cbfb1e7489fa3f41e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.date: 05/29/2019
+ms.openlocfilehash: 5469d663f64fdb453e03863f409b675473d3f6aa
+ms.sourcegitcommit: 8eea7aadbe94f5d4635c4ffedc6a831558733cc0
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59847244"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66308567"
 ---
 # <a name="whats-new-in-storage-in-windows-server"></a>Windows Server에서 저장소의 새로운 기능
 
 >적용 대상: Windows Server 2019, Windows Server 2016, Windows Server (반기 채널)
 
 이 항목에서는 Windows Server 2019, Windows Server 2016에서에서 저장소의 새로운 기능과 변경 된 기능에 설명 하 고 Windows 서버 반기 채널 해제 합니다.
+
+## <a name="whats-new-in-storage-in-windows-server-2019-and-windows-server-version-1903"></a>Windows Server 2019에 Windows Server 1903 버전 저장소의 새로운 기능
+
+이 릴리스의 Windows Server는 다음과 같은 변경 및 기술에 추가합니다.
+
+### <a name="storage-migration-service-now-migrates-local-accounts-clusters-and-linux-servers"></a>로컬 계정, 클러스터 및 Linux 서버에 이제 storage Migration Service 마이그레이션
+
+저장소 마이그레이션 서비스를 사용 하면 쉽게 서버를 Windows Server의 최신 버전으로 마이그레이션할 수입니다. 서버에서 데이터를 인벤토리에 포함 하 고 데이터 및 구성을 새 서버로 전송 하는 그래픽 도구를 제공, 앱 또는 사용자가 아무 것도 변경할 필요가 없이 합니다.
+
+이 버전의 Windows Server 마이그레이션을 오케스트레이션 하기 위해 사용 하는 경우에 다음과 같은 기능을 추가 했습니다.
+
+- 새 서버에 로컬 사용자 및 그룹 마이그레이션
+- 장애 조치 클러스터에서 저장소를 마이그레이션
+- Samba를 사용 하는 Linux 서버에서 저장소를 마이그레이션하십시오.
+- 보다 쉽게 Azure File Sync를 사용 하 여 Azure로 마이그레이션된 공유를 동기화
+- Azure와 같은 새 네트워크로 마이그레이션
+
+저장소 마이그레이션 서비스에 대 한 자세한 내용은 참조 하세요. [저장소 마이그레이션 서비스 개요](storage-migration-service/overview.md)합니다.
+
+### <a name="system-insights-disk-anomaly-detection"></a>시스템 Insights 디스크 변칙 검색
+
+[시스템 Insights](../manage/system-insights/overview.md) 로컬 Windows Server 시스템 데이터를 분석 하 고 서버의 기능에 대 한 정보를 제공 하는 예측 분석 기능입니다. 많은 기본 제공 기능을 제공 하지만 디스크 변칙 검색부터 Windows Admin Center 통해 추가 기능을 설치 하는 기능 추가 했습니다.
+
+변칙 검색 디스크는 디스크 동작 하는 경우를 강조 표시 하는 새로운 기능 *다르게* 평소 보다 합니다. 다른 반드시 하는 동안 시스템에서 문제를 해결할 때에 이러한 비정상적인 분 표시 나쁘지 유용할 수 있습니다.
+
+이 기능은 Windows Server 2019를 실행 하는 서버를 사용할 수도 있습니다.
+
+### <a name="windows-admin-center-enhancements"></a>Windows Admin Center 향상 된 기능
+
+Windows Admin Center 새 릴리스가, Windows Server에 새 기능을 추가 합니다. 최신 기능에 대 한 정보를 참조 하세요 [Windows Admin Center](../manage/windows-admin-center/understand/windows-admin-center.md)합니다.
 
 ## <a name="whats-new-in-storage-in-windows-server-2019-and-windows-server-version-1809"></a>Windows Server 2019에 Windows Server 1809 버전 저장소의 새로운 기능
 
@@ -41,7 +71,7 @@ Windows Admin Center Windows Server 2019에 다른 버전의 Windows 실행 하�
 
 - **중복 제거 및 ReFS 볼륨에 대 한 압축**
 
-    최대 10 배 이상의 데이터 중복 제거 및 ReFS 파일 시스템에 대 한 압축을 사용 하 여 동일한 볼륨에 저장 합니다. (있기 [하나만 클릭](https://www.youtube.com/watch?v=PRibTacyKko&feature=youtu.be) 를 Windows Admin Center 사용 하 여 켭니다.) 다중 스레드 사후 처리 아키텍처 유지 성능에 미치는 영향을 최소화 하는 동안 절감 비율이 최대화 하는 선택적 압축을 사용 하 여 가변 크기 청크 저장소입니다. 볼륨은 최대 64TB, 파일은 각각 최대 1TB까지 지원합니다.
+    중복 제거 및 ReFS 파일 시스템에 대 한 압축을 사용 하 여 동일한 볼륨에 10 배 더 많은 데이터를 저장 합니다. (있기 [하나만 클릭](https://www.youtube.com/watch?v=PRibTacyKko&feature=youtu.be) 를 Windows Admin Center 사용 하 여 켭니다.) 다중 스레드 사후 처리 아키텍처 유지 성능에 미치는 영향을 최소화 하는 동안 절감 비율이 최대화 하는 선택적 압축을 사용 하 여 가변 크기 청크 저장소입니다. 볼륨을 지 원하는 최대 64TB 및 각 파일의 첫 번째 4TB 중복 제거 됩니다.
 
 - **영구 메모리에 대 한 기본 지원**
 
@@ -268,4 +298,4 @@ ReFS로 향상되는 기능은 다음과 같습니다.
 Windows Server 2016에서 처음으로 제공하는 기능입니다. 
 
 ## <a name="see-also"></a>참조  
-* [Windows Server 2016의에서 새로운 기능](../get-started/what-s-new-in-windows-server-2016.md)  
+* [Windows Server 2016의 새로운 기능](../get-started/what-s-new-in-windows-server-2016.md)  

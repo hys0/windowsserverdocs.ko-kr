@@ -7,12 +7,12 @@ ms.topic: article
 ms.author: grcusanz; AnPaul
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: dfb8d997c6e04381e5be0ba2c3a7ca27a851df50
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 0e173039c45faa100a434b69a9faa736ff7c9b53
+ms.sourcegitcommit: 21165734a0f37c4cd702c275e85c9e7c42d6b3cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59891324"
+ms.lasthandoff: 05/03/2019
+ms.locfileid: "65034139"
 ---
 # <a name="performance-tuning-software-defined-networks"></a>성능 조정 소프트웨어 정의 네트워크
 
@@ -30,7 +30,7 @@ Windows Server 2016의 SDN(소프트웨어 정의 네트워킹)은 네트워크 
 
 ## <a name="hyper-v-host-networking"></a>Hyper-V 호스트 네트워킹
 
-[Hyper-V 서버 성능 조정](../../role/remote-desktop/session-hosts.md) 가이드의 [Hyper-V 네트워크 I/O 성능](#netio) 섹션에 제공된 지침은 SDN을 사용할 때 적용할 수 있지만 이 섹션의 내용은 SDN을 사용할 때 최상의 성능을 보장하기 위해 따라야 하는 추가 지침입니다.
+[Hyper-V 서버 성능 조정](../../role/remote-desktop/session-hosts.md) 가이드의 Hyper-V 네트워크 I/O 성능 섹션에 제공된 지침은 SDN을 사용할 때 적용할 수 있지만 이 섹션의 내용은 SDN을 사용할 때 최상의 성능을 보장하기 위해 따라야 하는 추가 지침입니다.
 
 ### <a name="physical-network-adapter-nic-teaming"></a>실제 네트워크 어댑터(NIC) 팀
 

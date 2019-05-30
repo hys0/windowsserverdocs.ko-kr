@@ -37,7 +37,7 @@ wdsutil /add-ImageDriverPackages [/Server:<Server name>media:<Image namemediatyp
 |/Server:<Server name>|서버 이름을 지정합니다. 이 NetBIOS 이름이 나 FQDN 수 있습니다. 서버 이름을 지정 하지, 로컬 서버가 사용 됩니다.|
 미디어:<Image name>|드라이버를 추가 하는 이미지의 이름을 지정 합니다.|
 mediatype:Boot|드라이버를 추가 하는 이미지의 유형을 지정 합니다. 드라이버 패키지는 부팅 이미지에만 추가할 수 있습니다.|
-|/ 아키텍처: {x86 &#124 ia64 &#124; x64}|부팅 이미지의 아키텍처를 지정합니다. 다른 아키텍처에서 부팅 이미지에 동일한 이미지 이름을 가질 수 있기 때문에 올바른 이미지를 사용 하도록 아키텍처를 지정 해야 합니다.|
+|/ 아키텍처: {x86 &#124;ia64 &#124; x64}|부팅 이미지의 아키텍처를 지정합니다. 다른 아키텍처에서 부팅 이미지에 동일한 이미지 이름을 가질 수 있기 때문에 올바른 이미지를 사용 하도록 아키텍처를 지정 해야 합니다.|
 |/Filename:<File name>|파일 이름을 지정합니다. 이미지 이름으로 고유 하 게 식별할 수 없으면, 파일 이름을 지정 해야 합니다.|
 |/Filtertype:<Filter type>|드라이버 패키지에 대 한 검색의 특성을 지정 합니다. 단일 명령으로 여러 특성을 지정할 수 있습니다. 도 지정 해야 **/Operator** 및 **/v** 이 옵션을 사용 합니다.<br /><br /><Filter type> 다음 중 하나일 수 있습니다.<br /><br />**PackageId**<br /><br />**PackageName**<br /><br />**PackageEnabled**<br /><br />**Packagedateadded**<br /><br />**PackageInfFilename**<br /><br />**PackageClass**<br /><br />**PackageProvider**<br /><br />**PackageArchitecture**<br /><br />**PackageLocale**<br /><br />**PackageSigned**<br /><br />**PackagedatePublished**<br /><br />**Packageversion**<br /><br />**Driverdescription**<br /><br />**DriverManufacturer**<br /><br />**DriverHardwareId**<br /><br />**DrivercompatibleId**<br /><br />**DriverExcludeId**<br /><br />**DriverGroupId**<br /><br />**DriverGroupName**|
 |/ 연산자: {같은 &#124; NotEqual &#124; GreaterOrEqual &#124; LessOrEqual &#124; (를) 포함|특성 값 사이의 관계입니다. 만 지정할 수 있습니다 **Contains** 문자열 특성입니다. 만 지정할 수 있습니다 **GreaterOrEqual** 및 **LessOrEqual** 날짜 및 버전 특성이 있습니다.|

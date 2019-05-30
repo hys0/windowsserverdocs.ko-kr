@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9224e2572d7d5efded149cd113730dabc1624299
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: c54a747f4dde1113fa735c1408f48dbfaf2e74dc
+ms.sourcegitcommit: 39ab8041d166e6817a95417d6aa30bc7abeeef54
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59843614"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66260268"
 ---
 # <a name="winrs"></a>winrs
 
@@ -32,10 +32,10 @@ winrs [/<parameter>[:<value>]] <command>
 ### <a name="parameters"></a>매개 변수  
 |매개 변수|설명|  
 |-------|--------|  
-|[/remote]:\<endpoint>|NetBIOS 이름이 나 표준 연결을 사용 하 여 대상 끝점을 지정 합니다.<br /><br />-   <url>: [\<transport>://]\<target>[:\<port>]<br /><br />지정 하지 않으면 **/r:localhost** 사용 됩니다.|  
-|/unencrypted]|원격 셸에 메시지 암호화 되지 않았음을 지정 합니다. 이 네트워크 트래픽을 이미 사용 하 여 암호화 하는 경우 나 문제 해결에 유용 **ipsec**, 또는 물리적 보안이 적용 되는 시점입니다.<br /><br />기본적으로 Kerberos 또는 NTLM 키를 사용 하 여 메시지를 암호화 합니다.<br /><br />이 명령줄 옵션에는 HTTPS 전송을 선택한 경우 무시 됩니다.|  
-|/username]:\<username>|명령줄에서 사용자 이름을 지정 합니다.<br /><br />지정 하지 않으면 도구 이름에 대 한 프롬프트 또는 협상 인증 사용 합니다.<br /><br />하는 경우 **/username** 를 지정 하면 **/password** 도 지정 해야 합니다.|  
-|/password]:\<password>|명령줄에서 암호를 지정합니다.<br /><br />하는 경우 **/password** 지정 하지 않으면 하지만 **/username** 되 면 도구는 암호에 대 한 라는 메시지가 표시 됩니다.<br /><br />하는 경우 **/password** 를 지정 하면 **/username** 도 지정 해야 합니다.|  
+|/remote:\<endpoint>|NetBIOS 이름이 나 표준 연결을 사용 하 여 대상 끝점을 지정 합니다.<br /><br />-   <url>: [\<transport>://]\<target>[:\<port>]<br /><br />지정 하지 않으면 **/r:localhost** 사용 됩니다.|  
+|/unencrypted|원격 셸에 메시지 암호화 되지 않았음을 지정 합니다. 이 네트워크 트래픽을 이미 사용 하 여 암호화 하는 경우 나 문제 해결에 유용 **ipsec**, 또는 물리적 보안이 적용 되는 시점입니다.<br /><br />기본적으로 Kerberos 또는 NTLM 키를 사용 하 여 메시지를 암호화 합니다.<br /><br />이 명령줄 옵션에는 HTTPS 전송을 선택한 경우 무시 됩니다.|  
+|/username:\<username>|명령줄에서 사용자 이름을 지정 합니다.<br /><br />지정 하지 않으면 도구 이름에 대 한 프롬프트 또는 협상 인증 사용 합니다.<br /><br />하는 경우 **/username** 를 지정 하면 **/password** 도 지정 해야 합니다.|  
+|/password:\<password>|명령줄에서 암호를 지정합니다.<br /><br />하는 경우 **/password** 지정 하지 않으면 하지만 **/username** 되 면 도구는 암호에 대 한 라는 메시지가 표시 됩니다.<br /><br />하는 경우 **/password** 를 지정 하면 **/username** 도 지정 해야 합니다.|  
 |/timeout:\<seconds>|이 옵션을 사용 하는 사용 되지 않습니다.|  
 |/directory:\<path>|원격 셸에 대 한 시작 디렉터리를 지정합니다.<br /><br />지정 하지 않으면 원격 셸 환경 변수로 정의 된 사용자의 홈 디렉터리에서 시작 됩니다 **% USERPROFILE %** 합니다.|  
 |/environment:\<문자열 > =<value>|셸 시작 되 면 기본 환경에 대 한 변경 허용 셸 설정 해야 하는 단일 환경 변수를 지정 합니다.<br /><br />여러 환경 변수를 지정 하려면이 스위치를 여러 번 사용 되어야 합니다.|  

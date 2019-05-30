@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: cc9f02b9-8ddd-4cae-b397-a832996144dd
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 4ad399e62e1aa76b76b6109e28845b2615efa0fe
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: fb940effaae7989dec397e539b64160c87828d5a
+ms.sourcegitcommit: d84dc3d037911ad698f5e3e84348b867c5f46ed8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59882284"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66266702"
 ---
 # <a name="step-2-plan-the-remote-access-deployment"></a>2 단계 원격 액세스 배포 계획
 
@@ -31,11 +31,11 @@ DirectAccess 클라이언트의 원격 관리를 위해 단일 원격 액세스 
   
 |태스크|설명|  
 |----|--------|  
-|[클라이언트 배포 전략 계획](#bkmk_21client)|DirectAccess 클라이언트로 구성될 관리 컴퓨터를 정합니다.|  
-|[원격 액세스 서버 배포 전략 계획](#bkmk_22server)|원격 액세스 서버를 배포할 방법을 계획합니다.|  
-|[인프라 서버 구성을 계획 합니다.](#bkmk_23Infservers)|DirectAccess 네트워크 위치 서버, DNS 서버 및 DirectAccess 관리 서버를 포함 하 여 원격 액세스 배포에서 인프라 서버를 계획 합니다.|  
+|[클라이언트 배포 전략 계획](#plan-a-client-deployment-strategy)|DirectAccess 클라이언트로 구성될 관리 컴퓨터를 정합니다.|  
+|[원격 액세스 서버 배포 전략 계획](#plan-a-remote-access-server-deployment-strategy)|원격 액세스 서버를 배포할 방법을 계획합니다.|  
+|[인프라 서버 구성을 계획 합니다.](#plan-the-infrastructure-servers-configurations)|DirectAccess 네트워크 위치 서버, DNS 서버 및 DirectAccess 관리 서버를 포함 하 여 원격 액세스 배포에서 인프라 서버를 계획 합니다.|  
   
-## <a name="bkmk_21client"></a>클라이언트 배포 전략 계획  
+## <a name="plan-a-client-deployment-strategy"></a>클라이언트 배포 전략 계획  
 클라이언트 배포를 계획할 때 결정해야 하는 세 가지 사항이 있습니다.  
   
 1.  DirectAccess만을 사용할 수 모바일 컴퓨터에, 또는 지정 된 보안 그룹의 모든 컴퓨터에 있습니까?  
@@ -70,7 +70,7 @@ DirectAccess 클라이언트의 원격 관리를 위해 단일 원격 액세스 
   
         클라이언트는 이름을 로컬로 확인할 주의 해야 합니다. DirectAccess 클라이언트에서 로컬 이름 확인을 사용하도록 허용하면 최종 사용자가 로컬 DNS 서버를 사용하여 이름을 확인할 수 있습니다. 최종 사용자를 이름 확인을 위해 로컬 DNS 서버를 사용 하도록 선택 하는 경우 DirectAccess 단일 레이블 이름에 대 한 확인 요청을 내부 회사 DNS 서버에 보내지 않습니다. 로컬 이름 확인 대신 사용 (링크-로컬 멀티 캐스트 이름 확인 LLMNR () 및 NetBios over TCP/IP 프로토콜 사용)가 있습니다.  
   
-## <a name="bkmk_22server"></a>원격 액세스 서버 배포 전략 계획  
+## <a name="plan-a-remote-access-server-deployment-strategy"></a>원격 액세스 서버 배포 전략 계획  
 원격 액세스 서버를 배포할 계획인 경우을 해야 하는 결정은 다음과 같습니다.  
   
 -   **네트워크 토폴로지**  
@@ -110,7 +110,7 @@ DirectAccess 클라이언트의 원격 관리를 위해 단일 원격 액세스 
   
     원격 액세스를 구성 하기 전에 원격 클라이언트에 대 한 VPN 액세스를 제공 하려는 경우를 결정 합니다. DirectAccess 연결을 지원 하지 않는 조직의 클라이언트 컴퓨터가 있는 경우 VPN 액세스를 제공 해야 합니다 (예를 들어 관리 되지 또는 DirectAccess 지원 되지 않습니다 운영 체제를 실행). 원격 액세스 서버 설치 마법사를 사용 하면 (DHCP를 사용 하 여 또는 고정 주소 풀에서) IP 주소를 할당 하는 방법 및 (사용 하 여 Active Directory 또는 RADIUS 서버) VPN 클라이언트 인증 방법을 구성할 수 있습니다.  
   
-## <a name="bkmk_23Infservers"></a>인프라 서버 구성을 계획 합니다.  
+## <a name="plan-the-infrastructure-servers-configurations"></a>인프라 서버 구성을 계획 합니다.  
 원격 액세스에는 세 가지 유형의 인프라 서버가 필요합니다.  
   
 -   **네트워크 위치 서버**  
@@ -119,7 +119,7 @@ DirectAccess 클라이언트의 원격 관리를 위해 단일 원격 액세스 
   
 -   **관리 서버** 
   
-## <a name="BKMK_Links"></a>참고 항목  
+## <a name="see-also"></a>참조  
   
 -   [1단계: 원격 액세스 인프라 계획](Step-1-Plan-the-Remote-Access-Infrastructure.md)  
   

@@ -8,12 +8,12 @@ ms.topic: article
 ms.assetid: a9ee7a56-f062-474f-a61c-9387ff260929
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: b11064e6b3bd2590d5712afdb7afc69de1ed83f4
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6869ee5f39f1719a3c71025207ef9ffe740492ff
+ms.sourcegitcommit: d84dc3d037911ad698f5e3e84348b867c5f46ed8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59889704"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66266785"
 ---
 # <a name="use-dns-policy-for-geo-location-based-traffic-management-with-primary-secondary-deployments"></a>주-보조 배포를 사용한 지리적 위치 기반 트래픽 관리에 DNS 정책 사용
 
@@ -28,7 +28,7 @@ ms.locfileid: "59889704"
 >[!NOTE]
 >AXFR에 대 한 자세한 내용은 참조는 Task Force IETF (Internet Engineering) [메모 5936에 대 한 요청](https://tools.ietf.org/rfc/rfc5936.txt)합니다. IXFR에 대 한 자세한 내용은 참조는 Task Force IETF (Internet Engineering) [메모 1995에 대 한 요청](https://tools.ietf.org/html/rfc1995)합니다.  
   
-## <a name="bkmk_example"></a>주-보조 지리적 위치 기반 트래픽 관리 예제  
+## <a name="primary-secondary-geo-location-based-traffic-management-example"></a>기본-보조 지리적 위치 기반 트래픽 관리 예제  
 다음은 기본 보조 배포에서 DNS 정책을 사용 트래픽 리디렉션은 DNS 쿼리를 수행 하는 클라이언트의 실제 위치를 기반으로 하는 방법의 예입니다.  
   
 이 예제에서는 두 가상의 회사-웹 및 도메인 호스팅 솔루션을 제공 하는 Contoso 클라우드 서비스 사용 및 Woodgrove 식품 서비스, 전 세계에 걸쳐 여러 도시에서 음식 배달 서비스를 제공 하 고 웹 사이트 (가) 라는 woodgrove.com 합니다.  
@@ -45,14 +45,14 @@ Contoso 클라우드 서비스에서 미국 및 유럽, Contoso는 해당 식료
   
 ![기본-보조 지리적 위치 기반 트래픽 관리 예제](../../media/Dns-Policy_PS1/dns_policy_primarysecondary1.jpg)  
    
-## <a name="bkmk_works"></a>DNS 기본 보조 시스템 작동 방식
+## <a name="how-the-dns-primary-secondary-system-works"></a>DNS 기본 보조 시스템 작동 방식
 
 기본-보조 DNS 배포의 지리적 위치 기반 트래픽 관리를 배포할 때에 전송이 영역 범위 수준 전송 알아보기 전에 먼저 발생 하는 방법을 정상 기본 보조 영역을 이해 하는 것이 중요 합니다. 다음 섹션에서는 영역 및 영역 범위 수준 전송 정보를 제공 합니다.  
   
-- [DNS 기본 보조 배포에서 영역 전송](#bkmk_zone)  
-- [DNS 기본 보조 배포에서 영역 범위 수준 전송](#bkmk_scope)  
+- [DNS 기본 보조 배포에서 영역 전송](#zone-transfers-in-a-dns-primary-secondary-deployment)  
+- [DNS 기본 보조 배포에서 영역 범위 수준 전송](#zone-scope-level-transfers-in-a-dns-primary-secondary-deployment)  
   
-### <a name="bkmk_zone"></a>DNS 기본 보조 배포에서 영역 전송
+### <a name="zone-transfers-in-a-dns-primary-secondary-deployment"></a>DNS 기본 보조 배포에서 영역 전송
 
 DNS 기본 보조 배포를 만들고 다음 단계와 영역을 동기화 할 수 있습니다.  
 1. DNS를 설치 하는 경우에 주 DNS 서버에서 주 영역이 만들어집니다.  
@@ -62,7 +62,7 @@ DNS 기본 보조 배포를 만들고 다음 단계와 영역을 동기화 할 �
 5. 필요한 경우 주 서버 영역 업데이트에 대 한 보조 서버에 알림을 보냅니다.  
 6. 보조 서버 (IXFR) 증분 영역 전송 요청을 수행 합니다. 이 때문에 보조 서버를 주 서버와 동기화 해야 합니다.   
   
-### <a name="bkmk_scope"></a>DNS 기본 보조 배포에서 영역 범위 수준 전송
+### <a name="zone-scope-level-transfers-in-a-dns-primary-secondary-deployment"></a>DNS 기본 보조 배포에서 전송 하는 영역 범위 수준
 
 트래픽 관리 시나리오에는 다른 영역 범위도 영역을 분할 하는 추가 단계가 필요 합니다. 이 인해 가지 추가 단계가 보조 서버에 영역 범위 내의 데이터를 전송 하 고 보조 서버에 정책 및 DNS 클라이언트 서브넷을 전송할 필요 합니다.   
   
@@ -78,7 +78,7 @@ OPT RR의 값에는 요청은 전송 영역 범위 이름입니다. 주 DNS 서�
   
 더 이상 업데이트용 영역 범위에는 IXFR 알림이 동일한 OPT RR와 보조 서버에 전송 됩니다. 해당 알림을 수신 하는 영역 범위 선택 RR 해당 포함 된 IXFR 요청 하 고 동일한 과정은 위에서 설명한 대로 다음과 같은 합니다.  
   
-## <a name="bkmk_config"></a>주-보조 지리적 위치 기반 트래픽 관리에 대 한 DNS 정책을 구성 하는 방법
+## <a name="how-to-configure-dns-policy-for-primary-secondary-geo-location-based-traffic-management"></a>기본-보조 지리적 위치 기반 트래픽 관리에 대 한 DNS 정책을 구성 하는 방법
 
 시작 하기 전에 확인 항목의 단계를 모두 완료 한 [주 서버와 지리적 위치 기반 트래픽 관리에 대 한 DNS 정책을 사용 하 여](../../dns/deploy/Scenario--Use-DNS-Policy-for-Geo-Location-Based-Traffic-Management-with-Primary-Servers.md), 주 DNS 서버 영역, 영역 범위, DNS 클라이언트 서브넷 및 DNS 정책으로 구성 되어 있습니다.  
   
@@ -87,11 +87,11 @@ OPT RR의 값에는 요청은 전송 영역 범위 이름입니다. 주 DNS 서�
   
 기본-보조 지역을 기반으로 쿼리 응답에 대 한 DNS 정책을 구성 하려면 다음 단계를 수행 해야 합니다.  
   
-- [보조 영역 만들기](#bkmk_secondary)  
-- [주 영역에서 영역 전송 설정 구성](#bkmk_zonexfer)  
-- [DNS 클라이언트 서브넷 복사](#bkmk_client)  
-- [보조 서버에서 영역 범위 만들기](#bkmk_zonescopes)  
-- [DNS 정책을 구성합니다](#bkmk_dnspolicy)  
+- [보조 영역 만들기](#create-the-secondary-zones)  
+- [주 영역에서 영역 전송 설정 구성](#configure-the-zone-transfer-settings-on-the-primary-zone)  
+- [DNS 클라이언트 서브넷 복사](#copy-the-dns-client-subnets)  
+- [보조 서버에서 영역 범위 만들기](#create-the-zone-scopes-on-the-secondary-server)  
+- [DNS 정책을 구성합니다](#configure-dns-policy)  
   
 다음 섹션에서는 자세한 구성 지침을 제공 합니다.  
   
@@ -99,7 +99,7 @@ OPT RR의 값에는 요청은 전송 영역 범위 이름입니다. 주 DNS 서�
 >다음 섹션에서는 예제 많은 매개 변수 값이 포함 된 예제 Windows PowerShell 명령을 포함 합니다. 이러한 명령에 대 한 예제 값은 다음이 명령을 실행 하기 전에 배포에 적합 한 값으로 바꾸는 것을 확인 합니다.  
 ><br>멤버 자격이 **DnsAdmins**, 또는 이와 동등한 다음 절차를 수행 해야 합니다.  
   
-### <a name="bkmk_secondary"></a>보조 영역 만들기
+### <a name="create-the-secondary-zones"></a>보조 영역 만들기
 
 SecondaryServer1 및 SecondaryServer2를 복제 하는 데 사용할 영역의 보조 복사본을 만들 수 있습니다 (cmdlet 가정 하 고 실행 되는 동안 원격으로 단일 관리 클라이언트에서).   
   
@@ -115,7 +115,7 @@ SecondaryServer1 및 SecondaryServer2를 복제 하는 데 사용할 영역의 �
 
 자세한 내용은 참조 [추가 DnsServerSecondaryZone](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserversecondaryzone?view=win10-ps)합니다.  
   
-### <a name="bkmk_zonexfer"></a>주 영역에서 영역 전송 설정 구성
+### <a name="configure-the-zone-transfer-settings-on-the-primary-zone"></a>주 영역에서 영역 전송 설정 구성
 
 주 영역 설정을 구성 해야 되도록 합니다.
 
@@ -134,7 +134,7 @@ SecondaryServer1 및 SecondaryServer2를 복제 하는 데 사용할 영역의 �
 자세한 내용은 참조 [집합 시연할](https://docs.microsoft.com/powershell/module/dnsserver/set-dnsserverprimaryzone?view=win10-ps)합니다.  
   
   
-### <a name="bkmk_client"></a>DNS 클라이언트 서브넷 복사
+### <a name="copy-the-dns-client-subnets"></a>DNS 클라이언트 서브넷 복사
 
 주 서버에서 DNS 클라이언트 서브넷 보조 서버에 복사 해야 합니다.
   
@@ -148,7 +148,7 @@ SecondaryServer1 및 SecondaryServer2를 복제 하는 데 사용할 영역의 �
 
 자세한 내용은 참조 [추가 DnsServerClientSubnet](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverclientsubnet?view=win10-ps)합니다.  
   
-### <a name="bkmk_zonescopes"></a>보조 서버에서 영역 범위 만들기
+### <a name="create-the-zone-scopes-on-the-secondary-server"></a>보조 서버에서 영역 범위를 만듭니다
 
 보조 서버에서 영역 범위를 만들어야 합니다. DNS에서 영역 범위 XFRs 주 서버에서 요청를 시작할 수도 있습니다. 주 서버에서 영역 범위에서 변경 되 면 영역 범위 정보를 포함 하는 알림을 보조 서버로 보냅니다. 보조 서버 증분 변경 사항으로 해당 영역 범위를 업데이트할 수 있습니다.  
   
@@ -165,7 +165,7 @@ SecondaryServer1 및 SecondaryServer2를 복제 하는 데 사용할 영역의 �
   
 자세한 내용은 참조 [추가 DnsServerZoneScope](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps)합니다.  
   
-### <a name="bkmk_dnspolicy"></a>DNS 정책을 구성합니다
+### <a name="configure-dns-policy"></a>DNS 정책 구성
 
 서브넷을 만든 후 (영역 범위), 파티션 및 사용자 레코드를 추가 했습니다, 그리고 영역의 올바른 범위 내에서 쿼리 응답의 DNS 클라이언트 서브넷 중 하나의 소스에서 쿼리 되 면 반환 되도록 서브넷과 파티션, 연결 하는 정책을 만들어야 합니다. 정책이 기본 영역 범위 매핑을 지정 해야 합니다.  
   

@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: 460837c79c0e0d2c48331ddaaffcd118fd16ebc1
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 55dd38c966fea8448231b06cde9c1dd63b024197
+ms.sourcegitcommit: d84dc3d037911ad698f5e3e84348b867c5f46ed8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59870614"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66266767"
 ---
 # <a name="authentication-policies-and-authentication-policy-silos"></a>인증 정책 및 인증 정책 사일로
 
@@ -230,7 +230,7 @@ Active Directory 관리 콘솔 또는 Windows PowerShell을 사용하여 각 사
 
 이러한 이벤트는 응용 프로그램 및 서비스 로그( **Microsoft\Windows\Authentication**)에 기록됩니다.
 
-이러한 이벤트를 사용하는 문제 해결 단계는 [Troubleshoot Authentication Policies](how-to-configure-protected-accounts.md#BKMK_TroubleshootAuthnPolicies) 및 [Troubleshoot events related to Protected Users](how-to-configure-protected-accounts.md#BKMK_TrubleshootingEvents)을 참조하세요.
+이러한 이벤트를 사용하는 문제 해결 단계는 [Troubleshoot Authentication Policies](how-to-configure-protected-accounts.md#troubleshoot-authentication-policies) 및 [Troubleshoot events related to Protected Users](how-to-configure-protected-accounts.md#troubleshoot-events-related-to-protected-users)을 참조하세요.
 
 |이벤트 ID 및 로그|설명|
 |----------|--------|
@@ -241,10 +241,10 @@ Active Directory 관리 콘솔 또는 Windows PowerShell을 사용하여 각 사
 |306<br /><br />**AuthenticationPolicyFailures-DomainController**|이유: 사용자 또는 장치가 서버의 인증을 받을 수 없어 Kerberos 제한에 실패했을 수 있습니다.<br /><br />감사 모드에서, 사용자, 장치 또는 둘 다가 적용된 액세스 제어 제한을 충족하지 않아 Kerberos 서비스 티켓이 거부됨을 나타내는 정보 이벤트가 도메인 컨트롤러에 기록됩니다.<br /><br />장치, 정책 및 사일로 이름이 표시됩니다.|
 
 ## <a name="see-also"></a>참조
-[보호 된 계정을 구성 하는 방법](how-to-configure-protected-accounts.md)
+[보호된 계정을 구성하는 방법](how-to-configure-protected-accounts.md)
 
 [자격 증명 보호 및 관리](credentials-protection-and-management.md)
 
-[보호 된 사용자 보안 그룹](protected-users-security-group.md)
+[보호된 사용자 보안 그룹](protected-users-security-group.md)
 
 
