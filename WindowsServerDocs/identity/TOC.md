@@ -38,6 +38,7 @@
 ##### [가상화된 도메인 컨트롤러 기술 참조(수준 300)](ad-ds/deploy/virtual-dc/Virtualized-Domain-Controller-Technical-Reference--Level-300-.md)
 ###### [가상화된 도메인 컨트롤러 아키텍처](ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Architecture.md)
 ###### [가상화된 도메인 컨트롤러 배포 및 구성](ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Deployment-and-Configuration.md)
+###### [Azure VM에서 Active Directory 실행](ad-ds/deploy/virtual-dc/adds-on-azure-vm.md)
 ###### [Hyper-V를 사용한 가상화된 도메인 컨트롤러](ad-ds/get-started/virtual-dc/virtualized-domain-controllers-hyper-v.md)
 ###### [가상화된 도메인 컨트롤러 문제 해결](ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md)
 ###### [가상화된 도메인 컨트롤러 기술 참조 부록](ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-Technical-Reference-appendix.md)
@@ -365,6 +366,9 @@
 
 
 ### [AD FS 개발](ad-fs/AD-FS-Development.md)
+
+#### [AD FS용 사용자 지정 인증 방법 빌드](ad-fs/development/ad-fs-build-custom-auth-method.md)
+#### [AD FS 2019 위험 평가 모델을 사용하여 플러그 인 빌드](ad-fs/development/ad-fs-risk-assessment-model.md)
 #### [AD FS의 사용자 지정 Id 토큰](ad-fs/development/Custom-Id-Tokens-in-AD-FS.md)
 #### [Windows Server 2016의 AD FS 대리 인증](ad-fs/development/AD-FS-On-behalf-of-Authentication-in-Windows-Server.md)
 #### [AD FS 2016에서 OpenId Connect 사용](ad-fs/development/Enabling-OpenId-Connect-with-AD-FS.md)
