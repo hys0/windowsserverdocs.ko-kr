@@ -11,7 +11,7 @@ ms.date: 6/24/2017
 description: 서버 역할을 설치하고 동기화 공유를 만들고 DNS 레코드를 만드는 방법을 포함하여 클라우드 폴더를 배포하는 방법을 설명합니다.
 ms.openlocfilehash: 1f7a0aa0b7e08a1dd444cd6b488a1ced6ee3d9d7
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59812544"
@@ -40,9 +40,9 @@ ms.locfileid: "59812544"
   
 -   인증서가 유효해야 합니다.  
   
--   여러 서버에 인증서를 설치해야 하므로 인증서의 개인 키를 내보낼 수 있어야 합니다.  
+-   여러 서버에 인증서를 설치해야 하므로 인증서의 프라이빗 키를 내보낼 수 있어야 합니다.  
   
--   인증서의 주체 이름에 인터넷에서 클라우드 폴더 서비스를 검색하는 데 사용되는 공용 클라우드 폴더 URL이 포함되어 있어야 합니다(`workfolders.`*<domain_name>* 형식이어야 함).  
+-   인증서의 주체 이름에 인터넷에서 클라우드 폴더 서비스를 검색하는 데 사용되는 공용 클라우드 폴더 URL이 포함되어 있어야 합니다(`workfolders.` *<domain_name>* 형식이어야 함).  
   
 -   사용 중인 각 동기화 서버의 서버 이름이 나열된 인증서에 SAN(주체 대체 이름)이 있어야 합니다.
 
@@ -251,7 +251,7 @@ New-SyncShare "HR Sync Share" K:\Share-1 –User "HR Sync Share Users"
 6.  **추가할 값** 상자에 이 사용자를 동기화할 동기화 서버의 URL을 입력하고 **추가**, **확인**을 차례로 클릭한 다음 **확인**을 다시 클릭합니다.  
   
     > [!NOTE]
-    >  동기화 서버 URL은 `https://` 또는 `http://`(보안 연결이 필요한지 여부에 따라 결정됨) 뒤에 동기화 서버의 정규화된 도메인 이름이 오는 예: **https://sync1.contoso.com**.
+    >  동기화 서버 URL은 `https://` 또는 `http://`(보안 연결이 필요한지 여부에 따라 결정됨) 뒤에 동기화 서버의 정규화된 도메인 이름이 오는 예: **https://sync1.contoso.com** .
 
 여러 사용자에 대한 특성을 채우려면 Active Directory PowerShell을 사용합니다. 다음은 5단계에서 설명한 *HR Sync Share Users* 그룹의 모든 구성원에 대한 특성을 채우는 예입니다.
   
