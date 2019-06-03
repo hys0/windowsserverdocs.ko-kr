@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: 967db5f36ea27fb04eab9a6682a106ba0072d45d
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59820124"
@@ -118,7 +118,7 @@ cfg.ini 파일은 다음 시나리오에서 운영 체제의 설치를 자동화
     |*StdUserName*|설치하는 동안 만들어진 새 표준 사용자 계정의 이름입니다. 요구 사항에 대해서는 *UserName* 매개 변수를 참조하세요.|  
     |*StdUserPlainTextPassword*|설치하는 동안 만들어진 표준 사용자 계정의 암호입니다.|  
     |WebDomainName|(선택 사항) 서버의 인터넷 도메인 이름을 구성합니다. 이 파일을 통해 도메인 이름 설정 마법사의 수동 구성에서 사용한 것과 유사한 방식의 도메인 이름을 구성할 수 있습니다.|  
-    |TrustedCertFileName|(선택 사항) 도메인 이름에 대한 신뢰할 수 있는 인증서를 구성합니다. 개인 키를 포함하는 .PFX 인증서를 구성할 수 있습니다.|  
+    |TrustedCertFileName|(선택 사항) 도메인 이름에 대한 신뢰할 수 있는 인증서를 구성합니다. 프라이빗 키를 포함하는 .PFX 인증서를 구성할 수 있습니다.|  
     |TrustedCertPassword|(선택 사항) .PFX를 가져오기 위한 암호입니다.|  
     |EnableVPN|(선택 사항) 기본적으로 VPN을 켭니다.|  
     |VpnIPv4StartAddress|(선택 사항) VPN 시작 주소를 설정합니다.|  

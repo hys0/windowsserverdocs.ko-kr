@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: 008e614ca7ae202d575d2c3e5976ed3d5544b6ea
 ms.sourcegitcommit: 2977c707a299929c6ab0d1e0adab2e1c644b8306
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/24/2019
 ms.locfileid: "63720698"
@@ -530,7 +530,7 @@ Windows Server Essentials 대시보드의 사용자 페이지에서는 소규모
     4.  **컴퓨터 액세스** 탭에서 사용자에게 액세스를 허용할 네트워크 컴퓨터를 선택합니다.  
   
 ###  <a name="BKMK_Access10"></a> 사용자 계정에 대 한 원격 액세스 권한 변경  
- 사용자는 VPN(가상 사설망), 원격 웹 액세스 또는 기타 웹 서비스 응용 프로그램을 사용하여 원격 위치에서 서버에 있는 리소스에 액세스할 수 있습니다. 기본적으로 원격 액세스 권한은 대시보드를 사용하여 Windows Server Essentials에서 원격 액세스를 구성할 때 네트워크 사용자에 대해 켜집니다.  
+ 사용자는 VPN(가상 사설망), 원격 웹 액세스 또는 기타 웹 서비스 애플리케이션을 사용하여 원격 위치에서 서버에 있는 리소스에 액세스할 수 있습니다. 기본적으로 원격 액세스 권한은 대시보드를 사용하여 Windows Server Essentials에서 원격 액세스를 구성할 때 네트워크 사용자에 대해 켜집니다.  
   
 ##### <a name="to-change-remote-access-permissions-for-a-user-account"></a>사용자 계정에 대한 원격 액세스 권한을 변경하려면  
   

@@ -15,7 +15,7 @@ ms.author: elizapo
 ms.date: 08/04/2016
 ms.openlocfilehash: bb9db8936f8098024f76fc09490de7ffef594760
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59885474"
@@ -23,7 +23,7 @@ ms.locfileid: "59885474"
 # <a name="save-and-share-files-on-a-usb-flash-drive"></a>USB 플래시 드라이브에 파일 저장 및 공유
 공유할 수 있을 뿐만 아니라 Windows 탐색기에서 공용 폴더를 사용 하 여 콘텐츠 공유할 수도 있습니다 대용량 저장 장치 또는 USB 플래시 드라이브 같은 USB 저장 장치를 사용 하 여 콘텐츠입니다. 스테이션 허브가 아닌 USB 허브 또는 호스트 컴퓨터에 USB 저장 장치를 직접 연결하면 이 저장 장치는 MultiPoint 서비스 시스템 전체의 모든 사용자, *표준 사용자* 및 *관리자*에게 이동식 저장 장치로 표시됩니다.  
   
-또한 이동식 저장 장치를 사용하여 **문서** 라이브러리의 **내 문서** 폴더와 같은 Windows 탐색기의 비공개 폴더에 개인 문서를 저장하고 보관할 수도 있습니다.  
+또한 이동식 스토리지 디바이스를 사용하여 **문서** 라이브러리의 **내 문서** 폴더와 같은 Windows 탐색기의 프라이빗 폴더에 프라이빗 문서를 저장하고 보관할 수도 있습니다.  
   
  > [!NOTE]  
  > 대시보드 사용자는 USB 저장소 사용을 차단할 수 있습니다. 자세한 내용은 [USB 저장소 차단 또는 차단 해제](Block-or-Unblock-USB-Storage.md)를 참조하세요.  
@@ -38,7 +38,7 @@ ms.locfileid: "59885474"
 1.  호스트 컴퓨터의 열려 있는 USB 포트나 MultiPoint 서비스 시스템의 *스테이션 허브*가 아닌 USB 허브에 이동식 저장 장치를 연결합니다.  
 2.  공유하려는 콘텐츠를 **문서** 라이브러리의 **공용 문서**와 같은 Windows 탐색기의 공용 폴더에 복사합니다.  
   
-## <a name="to-privately-work-with-content-that-is-stored-on-a-usb-storage-device"></a>USB 저장 장치에 저장된 콘텐츠를 비공개로 작업하려면  
+## <a name="to-privately-work-with-content-that-is-stored-on-a-usb-storage-device"></a>USB 스토리지 디바이스에 저장된 콘텐츠를 비공개로 작업하려면  
   
 이동식 저장 장치를 스테이션 허브의 열려 있는 USB 포트에 연결합니다.  
   

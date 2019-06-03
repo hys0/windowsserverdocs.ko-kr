@@ -15,7 +15,7 @@ ms.author: pashort
 author: shortpatti
 ms.openlocfilehash: 75a47b6a6cb0a345d1d6e46ac8807bba6a895ace
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59820944"
@@ -62,7 +62,7 @@ IPv4 및 IPv6을 사용하는 환경에 단일 서버를 배포하려면 다음 
     -   단일 고정 IPv4 또는 IPv6 주소  
   
 > [!NOTE]  
-> DirectAccess 서버에 두 개 이상의 네트워크 어댑터 (도메인 프로필 및 다른 공개/개인 프로필에서 분류 하나) 표시 되지만 단일 NIC 토폴로지를 사용 하려는 경우 권장 사항이 있습니다.  
+> DirectAccess 서버에 두 개 이상의 네트워크 어댑터 (도메인 프로필 및 다른 공개/프라이빗 프로필에서 분류 하나) 표시 되지만 단일 NIC 토폴로지를 사용하려는 경우 권장 사항이 있습니다.  
 >   
 > 1.  도메인 프로필의 모든 추가 Nic와 두 번째 NIC도 분류 되었는지 확인 합니다.  
 > 2.  어떤 이유로 든 도메인 프로필에 대 한 두 번째 NIC를 구성할 수 없거나, 수동으로 DirectAccess IPsec 정책의 다음 Windows PowerShell 명령을 사용 하 여 모든 프로필에 범위 해야 합니다.  

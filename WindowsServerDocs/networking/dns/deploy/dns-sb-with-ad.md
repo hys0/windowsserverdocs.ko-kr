@@ -10,7 +10,7 @@ ms.author: pashort
 author: shortpatti
 ms.openlocfilehash: 7a5761cafff0a4bf148958a7f14aeaf311075b2e
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59839784"
@@ -62,7 +62,7 @@ DNS 서버를 구성 하 여 필요한 DNS 정책을 사용 하 여, 각 이름 
 
 쿼리가 수신 되 고 있는 서버 인터페이스는 정책 중 하 나와 일치 하는 경우 관련된 영역 범위 쿼리에 응답 하도록 사용 됩니다. 
 
-따라서; 내부 IP 주소를 포함 하는 DNS 응답 수신 개인 IP (10.0.0.56)에 수신 된 www.career.contoso.com에 대 한 DNS 쿼리 예제 및 공용 네트워크 인터페이스에서 수신 된 DNS 쿼리 (이것이 일반적인 쿼리 해상도와 동일) 기본 영역 범위에서 공용 IP 주소를 포함 하는 DNS 응답을 수신 합니다.  
+따라서; 내부 IP 주소를 포함 하는 DNS 응답 수신 프라이빗 IP (10.0.0.56)에 수신된 www.career.contoso.com에 대한 DNS 쿼리 예제 및 공용 네트워크 인터페이스에서 수신된 DNS 쿼리 (이것이 일반적인 쿼리 해상도와 동일) 기본 영역 범위에서 공용 IP 주소를 포함하는 DNS 응답을 수신합니다.  
 
 동적 DNS에 대 한 지원을 \(DDNS\) 업데이트 및 청소 기본 영역 범위 에서만 지원 됩니다. 기본 영역 범위에서 내부 클라이언트는 서비스를 제공 하기 때문에 Contoso DNS 관리자는 (동적 DNS 또는 정적) contoso.com의 레코드를 업데이트 하려면 기존 메커니즘을 사용 하 여 계속 수 있습니다. 에 대 한 비\-기본 영역 범위 \(외부 범위에서이 예제와 같이\), DDNS 또는 고객 지원에 청소를 사용할 수 없습니다.
 

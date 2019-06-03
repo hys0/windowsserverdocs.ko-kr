@@ -11,7 +11,7 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adds
 ms.openlocfilehash: 3cfc047fe1a66617abbda1de5f2c5842dcbdeb12
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59862884"
@@ -26,7 +26,7 @@ ms.locfileid: "59862884"
 > 이 콘텐츠는 Microsoft 고객 지원 엔지니어에 의해 작성되었으며 Windows Server 2012 R2의 기능 및 솔루션에 대해 TechNet에서 일반적으로 제공하는 항목보다 더 자세한 기술적 설명을 찾고 있는 숙련된 관리자 및 시스템 설계자를 대상으로 합니다. 그러나 동일한 편집 과정을 수행하지 않았으므로 일부 언어는 일반적으로 TechNet에서 찾을 수 있는 것보다 완벽하지 않을 수 있습니다.  
   
 ## <a name="overview"></a>개요  
-지원 하는 동안 TPM으로 보호 된 키가 Windows 8부터 존재 했던에 대 한 없었습니다 암호화 인증서 요청자 개인 키의 여는 모듈 TPM (Trusted Platform)을 보호 하 고 실제로 설명 하는 Ca에 대 한 메커니즘 없습니다. 이 업데이트에는 해당 증명을 수행 하 고 해당 증명 발급된 된 인증서에 반영 하는 CA 수 있도록 합니다.  
+지원 하는 동안 TPM으로 보호 된 키가 Windows 8부터 존재 했던에 대 한 없었습니다 암호화 인증서 요청자 프라이빗 키의 여는 모듈 TPM(Trusted Platform)을 보호 하 고 실제로 설명 하는 Ca에 대 한 메커니즘 없습니다. 이 업데이트에는 해당 증명을 수행 하 고 해당 증명 발급된 된 인증서에 반영 하는 CA 수 있도록 합니다.  
   
 > [!NOTE]  
 > 이 문서에서는 판독기가 인증서 템플릿 개념을 알고 있다고 가정 (참조를 참조 하십시오. [인증서 템플릿](https://technet.microsoft.com/library/cc730705.aspx)). 또한 판독기가 인증서 템플릿을 기반으로 인증서를 발급 하는 엔터프라이즈 Ca를 구성 하는 방법을 잘 알고 있다고 가정 (참조를 참조 하십시오 [검사 목록: 인증서 문제에 대 한 Ca를 구성 및 관리](https://technet.microsoft.com/library/cc771533.aspx)).  
@@ -37,12 +37,12 @@ ms.locfileid: "59862884"
 |--------|--------------|  
 |EK|인증 키입니다. TPM (제조 과정에 주입) 내에 포함 하는 비대칭 키입니다. EK 모든 TPM에 대 한 고유 하며이 지정할 수 있습니다. EK 변경 하거나 제거할 수 없습니다.|  
 |EKpub|EK의 공개 키를 참조합니다.|  
-|EKPriv|EK의 개인 키를 참조합니다.|  
+|EKPriv|EK의 프라이빗 키를 참조하세요.|  
 |EKCert|EK 인증서입니다. TPM 제조업체에서 발급 한 인증서 EKPub에 대 한 합니다. 모든 Tpm EKCert 있으며|  
 |TPM|신뢰할 수 있는 플랫폼 모듈입니다. TPM은 하드웨어 기반 보안 관련 기능을 제공 하도록 설계 되었습니다. TPM 칩은 암호화 작업을 수행하도록 설계된 보안 암호화 프로세서입니다. 칩에는 변조를 방지하는 여러 가지 실제 보안 메커니즘이 포함되어 있으며, 악성 소프트웨어가 TPM의 보안 기능을 변조할 수 없습니다.|  
   
 ### <a name="background"></a>배경  
-Windows 8 부터는 신뢰할 수 있는 플랫폼 모듈 (TPM) 데 사용할 수는 인증서의 개인 키 보호 합니다. Microsoft 플랫폼 암호화 공급자 키 저장소 공급자 KSP ()는이 기능을 활성화합니다. 구현으로 두 가지 문제가 있었습니다.  
+Windows 8 부터는 신뢰할 수 있는 플랫폼 모듈 (TPM) 데 사용할 수는 인증서의 프라이빗 키 보호 합니다. Microsoft 플랫폼 암호화 공급자 키 저장소 공급자 KSP ()는이 기능을 활성화합니다. 구현으로 두 가지 문제가 있었습니다.  
 
 -   TPM (사람이 쉽게 스푸핑할 수 있습니다 소프트웨어 KSP로 로컬 관리자 자격 증명으로 TPM KSP)에서 키를 실제로 하 게 보호 하지 않을 수도가 있었습니다.
 

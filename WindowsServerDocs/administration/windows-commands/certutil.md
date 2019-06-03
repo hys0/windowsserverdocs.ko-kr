@@ -15,7 +15,7 @@ manager: dongill
 ms.date: 10/16/2017
 ms.openlocfilehash: faaf936e4c23579e908e12543c07d0764a2cdcc1
 ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/24/2019
 ms.locfileid: "66192617"
@@ -72,11 +72,11 @@ Certutil 추가 매개 변수 없이 인증 기관에서 실행 되는 현재 �
 |[-deleterow](#-deleterow)|서버 데이터베이스에서 행을 삭제 합니다.|
 |[-backup](#-backup)|백업 Active Directory 인증서 서비스|
 |[-backupDB](#-backupdb)|Active Directory 인증서 서비스 데이터베이스를 백업 합니다.|
-|[-backupKey](#-backupkey)|Active Directory 인증서 서비스 인증서와 개인 키를 백업 합니다.|
+|[-backupKey](#-backupkey)|Active Directory 인증서 서비스 인증서 및 프라이빗 키 백업|
 |[-restore](#-restore)|Active Directory 인증서 서비스를 복원 합니다.|
 |[-restoreDB](#-restoredb)|Active Directory 인증서 서비스 데이터베이스를 복원 합니다.|
-|[-restoreKey](#-restorekey)|Active Directory 인증서 서비스 인증서와 개인 키를 복원 합니다.|
-|[-importPFX](#-importpfx)|인증서 가져오기 및 개인 키|
+|[-restoreKey](#-restorekey)|Active Directory 인증서 서비스 인증서 및 프라이빗 키 복원|
+|[-importPFX](#-importpfx)|인증서 및 프라이빗 가져오기|
 |[-dynamicfilelist](#-dynamicfilelist)|동적 파일 목록을 표시 합니다.|
 |[-databaselocations](#-databaselocations)|데이터베이스 위치를 표시 합니다.|
 |[-hashfile](#-hashfile)|생성 하 고 파일을 통해 암호화 해시를 표시 합니다.|
@@ -108,7 +108,7 @@ Certutil 추가 매개 변수 없이 인증 기관에서 실행 되는 현재 �
 |[-TCAInfo](#-tcainfo)|CA에 대 한 정보를 표시 합니다.|
 |[-SCInfo](#-scinfo)|스마트 카드에 대 한 정보를 표시 합니다.|
 |[-SCRoots](#-scroots)|스마트 카드 루트 인증서 관리|
-|[-verifykeys](#-verifykeys)|공용 또는 개인 키 집합 확인|
+|[-verifykeys](#-verifykeys)|공용 또는 프라이빗 키 집합 확인|
 |[-verify](#-verify)|인증서, 인증서 해지 목록 (CRL) 또는 인증서 체인 확인|
 |[-verifyCTL](#-verifyctl)|AuthRoot 확인 하거나 인증서 CTL 허용 되지 않습니다.|
 |[-sign](#-sign)|인증서 해지 목록 (CRL) 또는 인증서를 다시 서명|
@@ -125,8 +125,8 @@ Certutil 추가 매개 변수 없이 인증 기관에서 실행 되는 현재 �
 |[-delreg](#-delreg)|레지스트리 값 삭제|
 |[-ImportKMS](#-importkms)|키를 보관 하 여 서버 데이터베이스에 사용자 키 및 인증서 가져오기|
 |[-ImportCert](#-importcert)|데이터베이스에 인증서 파일 가져오기|
-|[-GetKey](#-getkey)|보관 된 개인 키 복구 blob를 검색 합니다.|
-|[-RecoverKey](#-recoverkey)|보관된 된 개인 키를 복구 합니다.|
+|[-GetKey](#-getkey)|보관된 프라이빗 키 복구 blob 검색|
+|[-RecoverKey](#-recoverkey)|보관된 프라이빗 키를 복구합니다.|
 |[-MergePFX](#-mergepfx)|PFX 파일 병합|
 |[-ConvertEPF](#-convertepf)|PFX 파일 EPF 파일로 변환|
 |-?|동사 목록을 표시합니다.|
@@ -671,7 +671,7 @@ PFX 파일을 복원할를 포함 하는 백업 디렉터리: 디렉터리
 
 CertUtil [Options] -importPFX [CertificateStoreName] PFXFile [Modifiers]
 
-인증서 가져오기 및 개인 키
+인증서 및 프라이빗 가져오기
 
 CertificateStoreName: 인증서 저장소 이름입니다.  참조 [-저장](#-store)합니다.
 
@@ -1636,9 +1636,9 @@ SearchToken: 키 및 복구 해야 하는 인증서를 선택 하는 데 사용 
 
 인증서 체인 및 하나 이상의 키 복구 에이전트 인증서에 암호화 되어 연결 된 개인 키를 포함 하는 하나가: 출력 파일입니다.
 
-OutputScriptFile: 출력을 검색 하 여 개인 키를 복구할 일괄 처리 스크립트를 포함 하는 파일입니다.
+OutputScriptFile: 프라이빗 키를 검색하고 복구하기 위한 배치 스크립트가 포함된 출력 파일입니다.
 
-OutputFileBaseName: 출력 파일 기본 이름입니다. 검색에 대 한 모든 확장 잘리고는 인증서 문자열 및.rec 확장 각 키 복구 blob에 대 한 추가 됩니다.  각 파일에서 인증서 체인 및 하나 이상의 키 복구 에이전트 인증서에 암호화 되어 연결된 된 개인 키를 포함 합니다. 복구에 대 한 모든 확장 잘리고.p12 확장명이 추가 됩니다.  복구 된 인증서 체인 및 PFX 파일로 저장 하는 연결 된 개인 키를 포함 합니다.
+OutputFileBaseName: 출력 파일 기본 이름입니다. 검색에 대 한 모든 확장 잘리고는 인증서 문자열 및.rec 확장 각 키 복구 blob에 대 한 추가 됩니다.  각 파일에는 인증서 체인과 연결된 프라이빗 키가 들어 있으며, 여전히 하나 이상의 키 복구 에이전트 인증서로 암호화되어 있습니다. 복구에 대 한 모든 확장 잘리고.p12 확장명이 추가 됩니다.  PFX 파일로 저장되는 복구된 인증서 체인 및 관련 프라이빗 키가 포함되어 있습니다.
 
 [-f] [-UnicodeText] [-silent] [-config Machine\CAName] [-p Password] [-ProtectTo SAMNameAndSIDList] [-csp Provider]
 
@@ -1714,7 +1714,7 @@ V3CACertId: V3 CA 인증서 일치 토큰입니다.  참조 [-저장](#-store) �
 |-자동|자동 플래그를 사용 하 여 암호화 컨텍스트를 가져오려고 합니다.|
 |-분할|포함 된 ASN.1 요소를 분할 하 고 파일에 저장|
 |-v|작업 세부 정보 표시|
-|-privatekey|암호 및 개인 키 데이터를 표시 합니다.|
+|-privatekey|암호 및 프라이빗 데이터 표시|
 |-핀 고정|스마트 카드 PIN|
 |-urlfetch|검색 하 고 인증서 AIA 및 CDP Crl 확인|
 |-config Machine\CAName|CA 및 컴퓨터 이름 문자열|

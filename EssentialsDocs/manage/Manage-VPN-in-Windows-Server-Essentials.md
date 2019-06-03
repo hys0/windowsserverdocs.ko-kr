@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: ec367337318d12161a250572745d8f303d098ffe
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59849204"
@@ -23,7 +23,7 @@ ms.locfileid: "59849204"
 
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials 
   
- VPN(가상 사설망) 연결을 사용하면 재택 근무자나 이동 중인 사용자가 인터넷과 같은 공용 네트워크에서 제공하는 인프라를 사용하여 개인 네트워크의 서버에 액세스할 수 있습니다. VPN을 사용하여 서버 리소스에 액세스하려면 다음을 완료해야 합니다.  
+ VPN(가상 사설망) 연결을 사용하면 재택 근무자나 이동 중인 사용자가 인터넷과 같은 공용 네트워크에서 제공하는 인프라를 사용하여 프라이빗 네트워크의 서버에 액세스할 수 있습니다. VPN을 사용하여 서버 리소스에 액세스하려면 다음을 완료해야 합니다.  
   
 -   [원격 액세스 서버에 VPN을 사용 하도록 설정](Manage-VPN-in-Windows-Server-Essentials.md#BKMK_1)  
   

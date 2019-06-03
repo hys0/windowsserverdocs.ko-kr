@@ -15,7 +15,7 @@ ms.author: pashort
 author: shortpatti
 ms.openlocfilehash: dc08d89f7d84b5435e97ed5ed77eb72d003b0c84
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59888574"
@@ -65,7 +65,7 @@ ms.locfileid: "59888574"
   
 단일 고정 IPv4 또는 IPv6 주소가 필요합니다.  
   
-원격 액세스 서버에 두 개의 네트워크 어댑터 (하나는 도메인 프로필 및 공용 또는 개인 프로필에 대 한 기타), 단일 네트워크 어댑터 토폴로지를 사용 하는 표시 되지만 권장은 다음과 같습니다.  
+원격 액세스 서버에 두 개의 네트워크 어댑터 (하나는 도메인 프로필 및 공용 또는 프라이빗 프로필에 대 한 기타), 단일 네트워크 어댑터 토폴로지를 사용 하는 표시 되지만 권장은 다음과 같습니다.  
   
 1.  도메인 프로필에 두 번째 네트워크 어댑터는 또한 분류 되었는지 확인 합니다.  
   
@@ -191,7 +191,7 @@ IP-HTTPS 인증에 사용되는 웹 사이트 인증서는 다음 요구 사항�
   
 -   **CRL 배포 지점** 필드의 경우 인터넷에 연결된 DirectAccess 클라이언트에서 액세스할 수 있는 CRL 배포 지점을 지정합니다.  
   
--   IP-HTTPS 인증서에 개인 키가 있어야 합니다.  
+-   IP-HTTPS 인증서에 프라이빗 키가 있어야 합니다.  
   
 -   IP-HTTPS 인증서를 개인 저장소로 직접 가져와야 합니다.  
   
@@ -398,7 +398,7 @@ Add-ADGroupMember -Identity DirectAccess_clients_group_name -Members <computer_n
     > [!NOTE]  
     > 멀티 사이트 배포에는 자체 서명된 인증서를 사용할 수 없습니다.  
   
-개인 인증서 또는 자체 서명 된 인증서를 사용 하는지 여부를 다음 필요 합니다.  
+프라이빗 인증서 또는 자체 서명 된 인증서를 사용하는지 여부를 다음 필요 합니다.  
   
 -   네트워크 위치 서버에 사용되는 웹 사이트 인증서. 인증서 주체는 네트워크 위치 서버의 URL이어야 합니다.  
   

@@ -10,7 +10,7 @@ ms.author: pashort
 author: shortpatti
 ms.openlocfilehash: dc2cb29f0f00c04c4208bd83d70bc4d966bbad00
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59839354"
@@ -55,7 +55,7 @@ Windows Server 2016 핵심 네트워크 가이드에 부록 가이드입니다. 
 
 - 본사에서 또는 클라우드 데이터 센터에서 Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012를 실행 하는 BranchCache 콘텐츠 서버를 배포 합니다. BranchCache 콘텐츠 서버를 배포 하는 방법에 대 한 자세한 내용은 참조 [추가 리소스](11-Bc-Hcm-additional-resources.md)합니다.
 
-- 광역 네트워크를 설정 \(WAN\) 지점 사무실, 본사 간의 연결 및 해당 되는 경우 가상 개인 네트워크를 사용 하 여 클라우드 리소스를 \(VPN\), DirectAccess, 또는 기타 연결 방법을 합니다.
+- 광역 네트워크를 설정 \(WAN\) 지점 사무실, 본사 간의 연결 및 해당되는 경우 가상 사설망을 사용하여 클라우드 리소스를 \(VPN\), DirectAccess, 또는 기타 연결 방법을 합니다.
 
 - BITS Background Intelligent Transfer Service (), 하이퍼 텍스트 전송 프로토콜 (HTTP) 및 서버 메시지 블록 (SMB)를 지 원하는 BranchCache를 제공 하는 다음 운영 체제 중 하나를 실행 하는 지점의 클라이언트 컴퓨터를 배포 합니다.
     - Windows 10 Enterprise

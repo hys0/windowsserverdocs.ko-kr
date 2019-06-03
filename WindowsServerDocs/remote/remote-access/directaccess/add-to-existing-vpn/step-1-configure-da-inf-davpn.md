@@ -15,7 +15,7 @@ ms.author: pashort
 author: shortpatti
 ms.openlocfilehash: acdfdcc44a4166d23246098d4857a851cd2fa31e
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59836964"
@@ -56,7 +56,7 @@ IPv4 및 IPv6을 사용하는 환경에 단일 서버를 배포하려면 다음 
     -   단일 고정 IPv4 또는 IPv6 주소  
   
 > [!NOTE]  
-> 원격 액세스 서버에 두 개의 네트워크 어댑터(하나는 도메인 프로필에서 분류되고 다른 하나는 공용/개인 프로필에서 분류됨)가 있지만 단일 NIC 토폴로지를 사용하려는 경우 권장 사항은 다음과 같습니다.  
+> 원격 액세스 서버에 두 개의 네트워크 어댑터(하나는 도메인 프로필에서 분류되고 다른 하나는 공용/프라이빗 프로필에서 분류됨)가 있지만 단일 NIC 토폴로지를 사용하려는 경우 권장 사항은 다음과 같습니다.  
 >   
 > 1.  두 번째 NIC도 도메인 프로필에서 분류되어야 합니다(권장).  
 > 2.  두 번째 NIC를 도메인 프로필용으로 구성할 수 없는 경우 다음 Windows PowerShell 명령을 사용하여 DirectAccess IPsec 정책의 범위를 모든 프로필로 수동으로 지정해야 합니다.  
@@ -137,7 +137,7 @@ IP-HTTPS 인증에 사용되는 웹 사이트 인증서는 다음 요구 사항�
   
 -   CRL 배포 지점 필드의 경우 인터넷에 연결된 DirectAccess 클라이언트에서 액세스할 수 있는 CRL 배포 지점을 지정합니다.  
   
--   IP-HTTPS 인증서에 개인 키가 있어야 합니다.  
+-   IP-HTTPS 인증서에 프라이빗 키가 있어야 합니다.  
   
 -   IP-HTTPS 인증서를 개인 저장소로 직접 가져와야 합니다.  
   

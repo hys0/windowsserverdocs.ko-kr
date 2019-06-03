@@ -13,7 +13,7 @@ ms.author: coreyp
 ms.localizationpriority: medium
 ms.openlocfilehash: b32b4879ad454d1154c3d65dbf690cdaae73d76c
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59827224"
@@ -32,7 +32,7 @@ ms.locfileid: "59827224"
 Windows Server 보안 팀이 작성한 이 블로그 게시물은 호스팅 및 하이브리드 클라우드 환경에 대한 보안을 강화하는 Windows Server의 다양 한 개선 사항에 대해 다룹니다.
 
 ### <a name="datacenter-and-private-cloud-security-bloghttpsblogstechnetmicrosoftcomdatacentersecurity"></a>[데이터 센터 및 사설 클라우드 보안 블로그](https://blogs.technet.microsoft.com/datacentersecurity/)
-Microsoft 데이터 센터 및 사설 클라우드 보안 팀의 기술 콘텐츠를 제공하는 중앙 블로그 사이트입니다.                                    
+Microsoft 데이터 센터 및 프라이빗 클라우드 보안 팀의 기술 콘텐츠를 제공하는 중앙 블로그 사이트입니다.                                    
 
 ### <a name="addressing-emerging-threats-and-landscape-shiftshttpswwwyoutubecomwatchvb5jmyxywx1kfeatureyoutube"></a>[새로운 위협 및 환경 변화를 주소 지정으로 이동](https://www.youtube.com/watch?v=B5JMYxYWx1k&feature=youtu.be)
 이 6분짜리 비디오에서는 Anders Vinberg가 Microsoft의 보안 및 보증 전략에 대한 개요를 제공하고 보안과 관련된 산업 동향 및 환경 변화를 논의합니다. 그런 다음 기본 패브릭에서 워크로드를 보호하고 권한 있는 계정의 직접적인 공격으로부터 보호하려는 Microsoft의 핵심 이니셔티브를 강조합니다. 마지막으로 위반이 발생한 경우 새로운 감지 및 포렌식 기능을 통해 위협을 보다 효과적으로 식별할 수 있는 방법을 설명합니다.

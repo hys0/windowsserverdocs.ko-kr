@@ -14,7 +14,7 @@ ms.author: jaimeo
 ms.localizationpriority: medium
 ms.openlocfilehash: 295402a3bcdcec07025ad1f803cddd47127baa8d
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59878954"
@@ -26,7 +26,7 @@ ms.locfileid: "59878954"
 > [!IMPORTANT]
 > Windows Server, 버전 1709부터 [컨테이너 기본 OS 이미지](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image)로만 Nano 서버를 사용할 수 있습니다. [Nano 서버 변경 사항](nano-in-semi-annual-channel.md)을 확인하여 그 의미를 알아보세요. 
 
-Windows Server 2016에서는 새 설치 옵션을 제공합니다. Nano 서버입니다. Nano 서버는 사설 클라우드 및 데이터 센터에 최적화된 원격 관리 서버 운영 체제입니다. Server Core 모드의 Windows Server와 유사하지만 훨씬 작고 로컬 로그온 기능이 없으며 64비트 응용 프로그램, 도구 및 에이전트에만 지원합니다. Windows Server보다 훨씬 적은 디스크 공간을 차지하고, 훨씬 빠르게 설치되며, 필요한 업데이트 및 다시 시작 횟수가 훨씬 적습니다. 다시 시작 속도가 훨씬 빠릅니다. Nano 서버 설치 옵션은 Windows Server 2016 Standard 및 Datacenter 버전에 제공됩니다.  
+Windows Server 2016에서는 새 설치 옵션을 제공합니다. Nano 서버입니다. Nano 서버는 프라이빗 클라우드 및 데이터 센터에 최적화된 원격 관리 서버 운영 체제입니다. Server Core 모드의 Windows Server와 유사하지만 훨씬 작고 로컬 로그온 기능이 없으며 64비트 응용 프로그램, 도구 및 에이전트에만 지원합니다. Windows Server보다 훨씬 적은 디스크 공간을 차지하고, 훨씬 빠르게 설치되며, 필요한 업데이트 및 다시 시작 횟수가 훨씬 적습니다. 다시 시작 속도가 훨씬 빠릅니다. Nano 서버 설치 옵션은 Windows Server 2016 Standard 및 Datacenter 버전에 제공됩니다.  
 
 Nano 서버는 다음과 같은 다양한 시나리오에 이상적입니다.  
   

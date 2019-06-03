@@ -10,7 +10,7 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.openlocfilehash: 6bc680d9a0de8946d6f39a5529a297138ee5e262
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59876064"
@@ -30,7 +30,7 @@ ms.locfileid: "59876064"
   
 ###  <a name="to-export-service-settings"></a>서비스 설정을 내보내려면  
   
-1.  .pfx 파일에서 다음 인증서와 해당 개인 키에 액세스할 수 있는지 확인합니다.  
+1.  .pfx 파일에서 다음 인증서와 해당 프라이빗 키에 액세스할 수 있는지 확인합니다.  
   
     -   마이그레이션할 페더레이션 서버 팜에서 사용되는 SSL 인증서  
   
@@ -40,7 +40,7 @@ ms.locfileid: "59876064"
   
 SSL 인증서를 찾으려면 IIS(인터넷 정보 서비스) 관리 콘솔을 열고 왼쪽 창에서 **기본 웹 사이트** 를 선택합니다. 그런 다음 **동작** 에 **작업** 찾기 및 선택 https 바인딩, 창 클릭 **편집**를 클릭 하 고 **보기**합니다.  
   
-페더레이션 서비스에서 사용되는 SSL 인증서와 해당 개인 키를 .pfx 파일로 내보내야 합니다. 자세한 내용은 [서버 인증 인증서의 개인 키 부분 내보내기](export-the-private-key-portion-of-a-server-authentication-certificate.md)를 참조하세요.  
+페더레이션 서비스에서 사용되는 SSL 인증서와 해당 프라이빗 키를 .pfx 파일로 내보내야 합니다. 자세한 내용은 [서버 인증 인증서의 프라이빗 키 부분 내보내기](export-the-private-key-portion-of-a-server-authentication-certificate.md)를 참조하세요.  
   
 > [!NOTE]
 >  Windows Server 2012 R2에서 AD FS를 실행 하는 일부로 장치 등록 서비스를 배포 하려는 경우에 새 SSL 인증서를 가져와야 합니다. 자세한 내용은 [Enroll an SSL Certificate for AD FS](enroll-an-ssl-certificate-for-ad-fs.md) 및 [Configure a federation server with Device Registration Service](configure-a-federation-server-with-device-registration-service.md)을 참조하세요.  
@@ -128,7 +128,7 @@ Get-ADFSClaimDescription | Out-File “.\claimtypes.txt”`.
 >   
 >  **-Force** – 사용자 확인 메시지를 표시하지 않도록 지정합니다.  
 >   
->  **-CertificatePassword < SecureString\>**  -AD FS 인증서의 개인 키를 내보내기 위한 암호를 지정 합니다. 이 매개 변수를 지정하지 않으면 개인 키가 있는 AD FS 인증서를 내보내야 하는 경우 암호를 묻는 메시지가 표시됩니다.  
+>  **-CertificatePassword < SecureString\>**  -AD FS 인증서의 개인 키를 내보내기 위한 암호를 지정 합니다. 이 매개 변수를 지정하지 않으면 프라이빗 키가 있는 AD FS 인증서를 내보내야 하는 경우 암호를 묻는 메시지가 표시됩니다.  
 >   
 >  **입력**: 없음  
 >   
@@ -211,11 +211,11 @@ import-federationconfiguration.ps1
 >   
 >  **-ComputerName < 문자열\>**  -STS 서버의 호스트 이름을 지정 합니다. 기본값은 로컬 컴퓨터입니다. Windows Server 2012의 AD FS 2.0 또는 AD FS를 Windows Server 2012 R2의 AD FS로 마이그레이션하는 경우 이 매개 변수는 기존 AD FS 서버의 호스트 이름으로 설정됩니다.  
 >   
->  **-Credential < PSCredential\>**-이 작업을 수행할 수 있는 권한을 가진 사용자 계정을 지정 합니다. 기본값은 현재 사용자입니다.  
+>  **-Credential < PSCredential\>** -이 작업을 수행할 수 있는 권한을 가진 사용자 계정을 지정 합니다. 기본값은 현재 사용자입니다.  
 >   
 >  **-Force** – 사용자 확인 메시지를 표시하지 않도록 지정합니다.  
 >   
->  **-CertificatePassword < SecureString\>**  -AD FS 인증서의 개인 키를 가져오기 위한 암호를 지정 합니다. 이 매개 변수를 지정하지 않으면 개인 키가 있는 AD FS 인증서를 가져와야 하는 경우 암호를 묻는 메시지가 표시됩니다.  
+>  **-CertificatePassword < SecureString\>**  -AD FS 인증서의 개인 키를 가져오기 위한 암호를 지정 합니다. 이 매개 변수를 지정하지 않으면 프라이빗 키가 있는 AD FS 인증서를 가져와야 하는 경우 암호를 묻는 메시지가 표시됩니다.  
 >   
 >  **Inputs:** 문자열 - 이 명령은 가져오기 폴더 경로를 입력으로 사용합니다. Export-FederationConfiguration을 이 명령에 파이프할 수 있습니다.  
 >   

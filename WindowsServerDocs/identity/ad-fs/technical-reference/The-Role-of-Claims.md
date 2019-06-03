@@ -62,7 +62,7 @@ Active Directory Federation Services에서 페더레이션 서비스 \(AD FS\) �
 |AD FS 1.x UPN|AD FS 1.1 또는 AD FS 1.0과 상호 운용할 때 사용되는 사용자의 UPN입니다.|http:\/\/schemas.xmlsoap.org\/claims\/UPN|  
 |역할|사용자의 역할입니다.|http:\/\/schemas.microsoft.com\/ws\/2008\/06\/identity\/claims\/role|  
 |성|사용자의 성입니다.|http:\/\/schemas.xmlsoap.org\/ws\/2005\/05\/identity\/claims\/surname|  
-|PPID|사용자의 개인 식별자입니다.|http:\/\/schemas.xmlsoap.org\/ws\/2005\/05\/identity\/claims\/privatepersonalidentifier|  
+|PPID|사용자의 프라이빗 식별자입니다.|http:\/\/schemas.xmlsoap.org\/ws\/2005\/05\/identity\/claims\/privatepersonalidentifier|  
 |이름 식별자|사용자의 SAML 이름 식별자입니다.|http:\/\/schemas.xmlsoap.org\/ws\/2005\/05\/identity\/claims\/nameidentifier|  
 |인증 방법|사용자를 인증하는 데 사용되는 방법입니다.|http:\/\/schemas.microsoft.com\/ws\/2008\/06\/identity\/claims\/authenticationmethod|  
 |거부 전용 그룹 SID|Deny\-전용 그룹 사용자의 SID|http:\/\/schemas.xmlsoap.org\/ws\/2005\/05\/identity\/claims\/denyonlysid|  

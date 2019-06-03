@@ -35,7 +35,7 @@ Hyper-V 컨테이너에서 제공하는 추가 격리는 대부분 컨테이너�
 
 Windows Server 컨테이너와 Hyper-V 컨테이너는 Server Core 및 Windows Server 2016에서 사용할 수 있는 새로운 설치 옵션인 [Nano Server](https://technet.microsoft.com/windows-server-docs/compute/nano-server/getting-started-with-nano-server)를 지원합니다. 
 
-Nano 서버는 사설 클라우드 및 데이터 센터에 최적화된 원격 관리 서버 운영 체제입니다. Server Core 모드의 Windows Server와 유사하지만 훨씬 작고 로컬 로그온 기능이 없으며 64비트 응용 프로그램, 도구 및 에이전트에만 지원합니다. 디스크 공간을 훨씬 적게 차지하며 더 빠르게 시작합니다.
+Nano 서버는 프라이빗 클라우드 및 데이터 센터에 최적화된 원격 관리 서버 운영 체제입니다. Server Core 모드의 Windows Server와 유사하지만 훨씬 작고 로컬 로그온 기능이 없으며 64비트 응용 프로그램, 도구 및 에이전트에만 지원합니다. 디스크 공간을 훨씬 적게 차지하며 더 빠르게 시작합니다.
 
 ## <a name="container-start-up-time"></a>컨테이너 시작 시간
 컨테이너 시작 시간은 컨테이너에서 가장 큰 이점을 제공하는 많은 시나리오의 주요 메트릭입니다. 따라서 컨테이너 시작 시간을 최적화하는 방법을 이해해야 합니다. 시작 시간을 향상시키기 위해 이해해야 할 튜닝 상의 몇 가지 절충 사항은 다음과 같습니다.

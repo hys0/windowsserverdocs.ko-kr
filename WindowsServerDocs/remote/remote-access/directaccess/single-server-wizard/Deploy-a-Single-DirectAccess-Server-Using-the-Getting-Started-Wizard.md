@@ -15,7 +15,7 @@ ms.author: pashort
 author: shortpatti
 ms.openlocfilehash: d2bab7abd8acd958ccb0b0c1d64bc4245b61be36
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59854074"
@@ -109,7 +109,7 @@ DirectAccess를 배포 하기 전에 필수 구성 요소 및 기타 정보를 �
   
     -   Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012에 대 한 하드웨어 요구 사항을 충족 하는 컴퓨터.  
   
-    -   서버에는 네트워크 어댑터가 하나 이상 설치되어 있고, 사용하도록 설정되어 있어야 하며, 서버가 내부 네트워크에 연결되어 있어야 합니다. 두 개의 어댑터가 사용된 경우 하나의 어댑터는 내부 회사 네트워크에 연결되어야 하고 나머지 하나는 외부 네트워크(인터넷 또는 개인 네트워크)에 연결되어야 합니다.  
+    -   서버에는 네트워크 어댑터가 하나 이상 설치되어 있고, 사용하도록 설정되어 있어야 하며, 서버가 내부 네트워크에 연결되어 있어야 합니다. 두 개의 어댑터가 사용된 경우 하나의 어댑터는 내부 회사 네트워크에 연결되어야 하고 나머지 하나는 외부 네트워크(인터넷 또는 프라이빗 네트워크)에 연결되어야 합니다.  
   
     -   도메인 컨트롤러가 하나 이상 있어야 합니다. 원격 액세스 서버와 DirectAccess 클라이언트가 도메인 구성원이어야 합니다.  
   

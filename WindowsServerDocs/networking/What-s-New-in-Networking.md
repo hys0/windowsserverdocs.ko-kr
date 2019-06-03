@@ -9,7 +9,7 @@ ms.author: pashort
 author: shortpatti
 ms.openlocfilehash: 43ce6290f6559be7cb078032b79519d1681506d4
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59829194"
@@ -77,7 +77,7 @@ SDN에 대 한 자세한 내용은 참조 [소프트웨어 정의 네트워킹 &
 이 섹션에는 친숙 한 네트워킹 기술에 대 한 새로운 기능에 대 한 정보가 포함 되어 있습니다.
   
 ## <a name="bkmk_dhcp"></a>DHCP  
-DHCP는 사설 인트라넷과 같은 TCP/IP 기반 네트워크에서 호스트를 구성할 때 복잡한 작업 및 관리 부담을 줄일 수 있도록 설계된 IETF(Internet Engineering Task Force) 표준입니다. DHCP 서버 서비스를 사용하면 DHCP 클라이언트에서 TCP/IP를 구성하는 프로세스가 자동으로 수행됩니다.  
+DHCP는 프라이빗 인트라넷과 같은 TCP/IP 기반 네트워크에서 호스트를 구성할 때 복잡한 작업 및 관리 부담을 줄일 수 있도록 설계된 IETF(Internet Engineering Task Force) 표준입니다. DHCP 서버 서비스를 사용하면 DHCP 클라이언트에서 TCP/IP를 구성하는 프로세스가 자동으로 수행됩니다.  
   
 자세한 내용은 참조 [DHCP의 새로운](technologies/dhcp/What-s-New-in-DHCP.md)합니다.  
   
@@ -124,7 +124,7 @@ RAS 게이트웨이 이제 사이트 간 연결 및 게이트웨이 M + N 중복
 자세한 내용은 [Windows Server 2016에서 GRE 터널링](../remote/remote-access/ras-gateway/gre-tunneling-windows-server.md)합니다.  
   
 ## <a name="HNV"></a>Hyper-v 네트워크 가상화  
-Windows Server 2012에 도입 된, Hyper-v 네트워크 가상화 (HNV) 고객 네트워크 공유의 실제 네트워크 인프라의 가상화를 수 있습니다. 실제 네트워크 패브릭에서 필요한 최소한의 변화를 통해 HNV를 통해 서비스 공급자 배포 하 고 세 개의 클라우드에 걸쳐 아무 곳 이나 테 넌 트 작업을 마이그레이션하는 민첩성과: 서비스 공급자 클라우드, 사설 클라우드 또는 Microsoft Azure 공용 클라우드입니다.  
+Windows Server 2012에 도입 된, Hyper-v 네트워크 가상화 (HNV) 고객 네트워크 공유의 실제 네트워크 인프라의 가상화를 수 있습니다. 실제 네트워크 패브릭에서 필요한 최소한의 변화를 통해 HNV를 통해 서비스 공급자 배포 하 고 세 개의 클라우드에 걸쳐 아무 곳 이나 테 넌 트 작업을 마이그레이션하는 민첩성과: 서비스 공급자 클라우드, 프라이빗 클라우드 또는 Microsoft Azure 공용 클라우드입니다.  
   
 자세한 내용은 참조 하세요. [What's New in Windows Server 2016에서 Hyper-v 네트워크 가상화](sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md)  
   

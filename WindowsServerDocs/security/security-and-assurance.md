@@ -13,7 +13,7 @@ ms.author: coreyp
 ms.localizationpriority: high
 ms.openlocfilehash: bd9df9cc9836b15ec22c11b3413aa778192307f9
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59849994"
@@ -60,8 +60,8 @@ Windows Server 보안은 운영 체제에 기본 제공되는 보호 계층을 �
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3>데이터 센터 및 사설 클라우드 보안 블로그</h3><hr />
-                                            <p>Microsoft 데이터 센터 및 사설 클라우드 보안 팀의 기술 콘텐츠를 제공하는 중앙 블로그 사이트입니다. </p>
+                                            <h3>데이터 센터 및 프라이빗 클라우드 보안 블로그</h3><hr />
+                                            <p>Microsoft 데이터 센터 및 프라이빗 클라우드 보안 팀의 기술 콘텐츠를 제공하는 중앙 블로그 사이트입니다. </p>
                                         </div>
                                     </div>
                                 </div>

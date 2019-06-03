@@ -11,7 +11,7 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adds
 ms.openlocfilehash: d2a832d17c4f6ab926aeb44ea3598c1c2ea932b8
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59890864"
@@ -147,7 +147,7 @@ Kerberos 인증 프로토콜은 하위 프로토콜이라고도 하는 세 가�
 
 -   클라이언트/서버(AP) 교환(KRB_AP_ *)
 
-AS 교환 위치 클라이언트가 사용 하는 계정의 암호 또는 개인 키를 허용 티켓 (TGT)을 요청 하는 사전 인증자를 만드는 경우 이 교환은 사용자 로그온 시 또는 서비스 티켓이 처음 필요할 때 발생합니다.
+AS 교환 위치 클라이언트가 사용 하는 계정의 암호 또는 프라이빗 키를 허용 티켓 (TGT)을 요청하는 사전 인증자를 만드는 경우 이 교환은 사용자 로그온 시 또는 서비스 티켓이 처음 필요할 때 발생합니다.
 
 TGS 교환에서는 계정의 TGT 서비스 티켓을 요청 하는 인증자를 만드는 데 사용 되는 위치입니다. 이 교환은 인증된 연결이 필요할 때 발생합니다.
 

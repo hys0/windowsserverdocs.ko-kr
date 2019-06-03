@@ -10,7 +10,7 @@ ms.author: pashort
 author: shortpatti
 ms.openlocfilehash: 769a4165cfd82056a904c79c41e96fb666d05e43
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59842274"
@@ -46,7 +46,7 @@ ms.locfileid: "59842274"
 
 ### <a name="server-types"></a>**서버 유형**  
 이 가이드를 사용 하 여 다음 유형의 서버를 서버 인증서를 배포할 수 있습니다.  
-- 서버 원격 액세스 서비스를 실행 하는 DirectAccess 또는 표준 가상 사설망 (VPN) 서버 및 멤버는 **RAS and IAS Servers** 그룹입니다.  
+- 서버 원격 액세스 서비스를 실행 하는 DirectAccess 또는 표준 VPN(가상 사설망) 서버 및 멤버는 **RAS 및 IAS Servers** 그룹입니다.  
 - 네트워크 정책 (NPS 서버) 서비스를 실행 하는 서버는의 멤버는 **RAS and IAS Servers** 그룹입니다.  
 
 ### <a name="advantages-of-certificate-autoenrollment"></a>**인증서 자동 등록의 장점**  

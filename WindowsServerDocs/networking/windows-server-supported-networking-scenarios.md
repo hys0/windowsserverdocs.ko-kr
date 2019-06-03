@@ -11,7 +11,7 @@ ms.author: pashort
 author: shortpatti
 ms.openlocfilehash: 85f73f1f7caf833d23d3d693c0d754f52c4aa27d
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59812234"
@@ -72,7 +72,7 @@ NFV 시나리오를 수행할 수 있습니다.
   
 -   배포 하 고 계층 3 전달 게이트웨이 사용 합니다.  
   
--   배포 및 사이트 간 IPsec (IKEv2) 터널에 대 한 가상 사설망 (VPN) 게이트웨이 사용 합니다.  
+-   배포 및 사이트 간 IPsec (IKEv2) 터널에 대한 VPN(가상 사설망) 게이트웨이를 사용합니다.  
   
 -   배포 하 고 캡슐화 GRE (Generic Routing) 게이트웨이 사용 합니다.  
   

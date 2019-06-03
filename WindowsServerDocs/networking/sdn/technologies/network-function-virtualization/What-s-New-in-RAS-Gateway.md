@@ -14,7 +14,7 @@ ms.author: pashort
 author: shortpatti
 ms.openlocfilehash: 5cc7d8bab3f2783750dbd723da745b1df3c2e462
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59863024"
@@ -46,7 +46,7 @@ RAS 게이트웨이 이제 세 가지 유형의 VPN 사이트 간 연결을 지�
 Gre 방식에 대 한 자세한 내용은 참조 [Windows Server 2016에서 GRE 터널링](../../../../remote/remote-access/ras-gateway/gre-tunneling-windows-server.md)합니다.  
   
 ## <a name="bkmk_pools"></a>게이트웨이 풀  
-Windows Server 2016에서 서로 다른 유형의 게이트웨이 풀을 만들 수 있습니다. 게이트웨이 풀 RAS 게이트웨이의 여러 인스턴스를 포함 하 고 실제 및 가상 네트워크 간에 네트워크 트래픽을 라우팅합니다. 게이트웨이 풀에 개별 게이트웨이 함수-Internet Key Exchange version 2 (IKEv2)를 수행할 수 또는 사이트 간 가상 사설망 (VPN), (L3) 계층 3 VPN 및 Generic Routing Encapsulation GRE () 터널링-풀 혼합된 풀으로 역할 및 이러한 모든 함수를 수행할 수 있습니다.  
+Windows Server 2016에서 서로 다른 유형의 게이트웨이 풀을 만들 수 있습니다. 게이트웨이 풀 RAS 게이트웨이의 여러 인스턴스를 포함 하 고 실제 및 가상 네트워크 간에 네트워크 트래픽을 라우팅합니다. 게이트웨이 풀에 개별 게이트웨이 함수-Internet Key Exchange version 2 (IKEv2)를 수행할 수 또는 사이트 간 VPN(가상 사설망), (L3) 계층 3 VPN 및 Generic Routing Encapsulation GRE () 터널링-풀 혼합된 풀으로 역할 및 이러한 모든 함수를 수행할 수 있습니다.  
   
 인프라 요구 사항에 따라 선호 하는 논리를 사용 하 여 게이트웨이 풀을 만들 수 있습니다. 예를 들어 다음과 같은 특징 중 하나에 따라 게이트웨이 풀을 만들 수 있습니다.  
   

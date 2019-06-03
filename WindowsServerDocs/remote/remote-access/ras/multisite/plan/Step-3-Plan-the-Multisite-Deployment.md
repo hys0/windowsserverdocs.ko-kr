@@ -15,7 +15,7 @@ ms.author: pashort
 author: shortpatti
 ms.openlocfilehash: 6024b118504a233e9e7483711df4e0a05b632d5a
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59869444"
@@ -45,7 +45,7 @@ ms.locfileid: "59869444"
   
 -   멀티 사이트 배포에서 Windows 7을 실행 하는 클라이언트 컴퓨터를 지 원하는 경우 CRL 배포 지점 필드의 경우에서 인터넷에 연결 된 DirectAccess 클라이언트에서 액세스할 수 있는 CRL 배포 지점을 지정 합니다. 이 기본적으로 CRL 해지 확인을 사용할 수 없게 됩니다 IP-HTTPS이이 클라이언트에 Windows 8을 실행 하는 클라이언트에 대 한 필요 하지 않습니다.  
   
--   IP-HTTPS 인증서에 개인 키가 있어야 합니다.  
+-   IP-HTTPS 인증서에 프라이빗 키가 있어야 합니다.  
   
 -   IP-HTTPS 인증서, 컴퓨터 및 사용자의 개인 저장소로 직접 가져와야 합니다.  
   

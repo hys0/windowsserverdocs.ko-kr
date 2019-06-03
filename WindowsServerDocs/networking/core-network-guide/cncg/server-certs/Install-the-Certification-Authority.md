@@ -10,7 +10,7 @@ ms.author: pashort
 author: shortpatti
 ms.openlocfilehash: 84e4b2fe0b59820b9e51229335f3539bcbeeec90
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59860744"
@@ -68,7 +68,7 @@ ms.locfileid: "59860744"
   
 12. 에 **CA의 유형을 지정** 페이지에서 **루트 CA** 을 선택한 다음 클릭 **다음**합니다.  
   
-13. 에 **개인 키의 형식을 지정** 페이지에서 **새 개인 키를 만들** 을 선택한 다음 클릭 **다음**합니다.  
+13. 에 **프라이빗 키의 형식을 지정** 페이지에서 **새 프라이빗 키를 만들** 을 선택한 다음 클릭 **다음**합니다.  
   
 14. 에 **CA에 대 한 암호화** 페이지, CSP에 대 한 기본 설정을 유지 (**RSA #Microsoft Software Key Storage Provider**) 및 해시 알고리즘 (**SHA2**), 최상의 결정 배포에 대 한 키 문자 길이입니다. 최적의 보안;을 제공 하는 큰 키 문자 길이 그러나 서버 성능에 영향을 줄 수 하며 레거시 응용 프로그램과 호환 되지 않을 수 있습니다. 2048의 기본 설정을 유지 하는 것이 좋습니다. **다음**을 클릭합니다.  
   

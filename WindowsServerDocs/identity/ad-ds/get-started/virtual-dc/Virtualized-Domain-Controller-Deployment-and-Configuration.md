@@ -313,7 +313,7 @@ Stop-computer
 Stop-vm  
 ```  
   
-Stop-computer는 가상화에 상관없이 컴퓨터 종료를 지원하는 cmdlet이며, 레거시 Shutdown.exe 유틸리티와 유사합니다. Stop-vm은 Windows Server 2012 Hyper-V Windows PowerShell 모듈의 새로운 cmdlet이며, Hyper-V 관리자의 전원 옵션에 해당합니다. Stop-vm은 도메인 컨트롤러가 종종 전용 가상화 네트워크에서 작동하는 랩 환경에 유용합니다.  
+Stop-computer는 가상화에 상관없이 컴퓨터 종료를 지원하는 cmdlet이며, 레거시 Shutdown.exe 유틸리티와 유사합니다. Stop-vm은 Windows Server 2012 Hyper-V Windows PowerShell 모듈의 새로운 cmdlet이며, Hyper-V 관리자의 전원 옵션에 해당합니다. Stop-vm은 도메인 컨트롤러가 종종 프라이빗 가상화 네트워크에서 작동하는 랩 환경에 유용합니다.  
   
 ![가상화 된 DC 배포](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_StopComputer2.png)  
   

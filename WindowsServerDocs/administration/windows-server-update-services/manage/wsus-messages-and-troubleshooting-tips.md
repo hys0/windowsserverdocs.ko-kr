@@ -14,7 +14,7 @@ manager: dongill
 ms.date: 10/16/2017
 ms.openlocfilehash: 77a4702ddab987cb3adda7627badb790e3102952
 ms.sourcegitcommit: 8eea7aadbe94f5d4635c4ffedc6a831558733cc0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/29/2019
 ms.locfileid: "66308553"
@@ -63,7 +63,7 @@ WSUS 서버의 업데이트 서비스를 열려고 시도 하면 다음과 같�
 
 이 상황에서 가장 일반적인 원인은 IIS에서 WsusPool 응용 프로그램 풀 중지 된 상태입니다.
 
-또한 개인 메모리 제한 (KB)에서 응용 프로그램 풀은 아마도 1843200 KB의 기본 값으로 설정 됩니다. 이 문제가 발생 하면 4GB (4000000 KB)를 전용 메모리 제한을 늘린 응용 프로그램 풀을 다시 시작 합니다. 전용 메모리 제한의 늘리려면 WsusPool 응용 프로그램 풀을 선택 하 고 응용 프로그램 풀 편집에서 고급 설정을 클릭 합니다. 4GB (4000000 KB)를 전용 메모리 제한을 설정 합니다. 응용 프로그램 풀이 다시 시작 후 SMS_WSUS_SYNC_MANAGER 구성 요소 상태, wcm.log 및 실패에 대 한 wsyncmgr.log를 모니터링 합니다. 환경에 따라 8GB (8000000 KB)로 또는 그 보다 높은 전용 메모리 제한을 늘려야 할 수 있습니다 note 하십시오.
+또한 애플리케이션 풀의 프라이빗 메모리 제한(KB)은 기본값인 1843200K로 설정될 수 있습니다. 이 문제가 발생하면 프라이빗 메모리 제한을 4GB(4000000KB)로 늘리고 애플리케이션 풀을 다시 시작합니다. 전용 메모리 제한의 늘리려면 WsusPool 응용 프로그램 풀을 선택 하 고 응용 프로그램 풀 편집에서 고급 설정을 클릭 합니다. 그런 다음, 프라이빗 메모리 제한을 4GB(4000000 KB)로 설정합니다. 응용 프로그램 풀이 다시 시작 후 SMS_WSUS_SYNC_MANAGER 구성 요소 상태, wcm.log 및 실패에 대 한 wsyncmgr.log를 모니터링 합니다. 환경에 따라 프라이빗 메모리 제한을 8GB(8000000 KB) 이상으로 늘려야 할 수 있습니다.
 
 자세한 내용은 다음을 참조 하세요. [HTTP 503 오류와 함께 ConfigMgr 2012의 WSUS 동기화 실패](http://blogs.technet.com/b/sus/archive/2015/03/23/configmgr-2012-support-tip-wsus-sync-fails-with-http-503-errors.aspx)
 

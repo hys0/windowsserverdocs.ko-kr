@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: c9857cc6dd056e36133736c4888b46505ec8c3c7
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59838614"
@@ -31,7 +31,7 @@ ms.locfileid: "59838614"
   
 -   [VPN 관리](Manage-VPN-in-Windows-Server-Essentials.md)  
   
-     VPN(가상 사설망) 연결을 사용하면 재택 근무자나 이동 중인 사용자가 인터넷과 같은 공용 네트워크에서 제공하는 인프라를 사용하여 개인 네트워크의 서버에 액세스할 수 있습니다.  
+     VPN(가상 사설망) 연결을 사용하면 재택 근무자나 이동 중인 사용자가 인터넷과 같은 공용 네트워크에서 제공하는 인프라를 사용하여 프라이빗 네트워크의 서버에 액세스할 수 있습니다.  
   
 -   [DirectAccess를 구성 합니다.](Configure-DirectAccess-in-Windows-Server-Essentials.md)  
   

@@ -11,7 +11,7 @@ author: JMesser81
 ms.date: 08/14/2018
 ms.openlocfilehash: b6d4ff37186e66bec54794f8d6c9fd8a83e23e7d
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59845394"
@@ -301,7 +301,7 @@ SLB 구성 상태 정보를 찾을 수는 _진단 slbstateResults.Json_ 이 디�
    * MuxState-이 섹션은 하나의 값에 나열 각 SLB 먹 싱 배포는 mux의 상태를 제공 합니다.
    * 라우터 구성-이 섹션에는 업스트림 라우터 (BGP 피어) 나열 됩니다 번호 ASN (Autonomous System), 전송 중인 IP 주소 및 id입니다. 또한 SLB Muxes ASN 및 전송 IP 나열 됩니다.
    * 호스트 정보-이 섹션에 연결 된 목록 관리 IP 다룰 모든 Hyper-v 호스트 부하 분산 된 작업을 실행할 수 있습니다.
-   * Vip 범위-이 섹션은 공용 및 개인 VIP IP 풀 범위를 나열 합니다. SLBM VIP는 이러한 범위 중 하나에서 할당 된 IP로 포함 됩니다. 
+   * Vip 범위-이 섹션은 공용 및 프라이빗 VIP IP 풀 범위를 나열합니다. SLBM VIP는 이러한 범위 중 하나에서 할당 된 IP로 포함 됩니다. 
    * Mux 경로-이 섹션에 대 한 각 SLB 먹 싱 배포 된 모든 해당 특정 mux에 대 한 경로 알림에 포함 된 하나의 값을 나열 됩니다.
  * 테넌트
    * VipConsolidatedState-이 섹션 보급 된 경로 접두사, Hyper-v 호스트 및 DIP 끝점을 포함 하 여 각 테 넌 트 VIP에 대 한 연결 상태를 나열 됩니다.
@@ -536,7 +536,7 @@ Cannot send jumbo packets to the destination. Physical switch ports may not be c
 
 
 #### <a name="check-tenant-vm-nic-connectivity"></a>테 넌 트 VM NIC 연결 확인
-게스트 VM에 할당 된 각 VM NIC에 개인 고객 주소 (CA)와 HNV PA (공급자 주소) 공간 간의 CA-PA 매핑이 있습니다. 이러한 매핑은 각 Hyper-v 호스트에서 OVSDB 서버 테이블에 유지 되 고 다음 cmdlet을 실행 하 여 찾을 수 있습니다.
+게스트 VM에 할당 된 각 VM NIC에 프라이빗 고객 주소(CA)와 HNV PA (공급자 주소) 공간 간의 CA-PA 매핑이 있습니다. 이러한 매핑은 각 Hyper-v 호스트에서 OVSDB 서버 테이블에 유지 되 고 다음 cmdlet을 실행 하 여 찾을 수 있습니다.
 
 ```none
 # Get all known PA-CA Mappings from this particular Hyper-V Host

@@ -15,7 +15,7 @@ ms.author: pashort
 author: shortpatti
 ms.openlocfilehash: 260926e4818ef95db85d00af02a4fa87665ad709
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59864654"
@@ -96,7 +96,7 @@ DirectAccess를 배포 하기 전에 필수 구성 요소 및 기타 정보를 �
   
     -   Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012에 대 한 하드웨어 요구 사항을 충족 하는 컴퓨터.  
   
-    -   서버에는 네트워크 어댑터가 하나 이상 설치되어 있고, 사용하도록 설정되어 있어야 하며, 서버가 내부 네트워크에 연결되어 있어야 합니다. 두 개의 어댑터가 사용된 경우 하나의 어댑터는 내부 회사 네트워크에 연결되어야 하고 나머지 하나는 외부 네트워크(인터넷 또는 개인 네트워크)에 연결되어야 합니다.  
+    -   서버에는 네트워크 어댑터가 하나 이상 설치되어 있고, 사용하도록 설정되어 있어야 하며, 서버가 내부 네트워크에 연결되어 있어야 합니다. 두 개의 어댑터가 사용된 경우 하나의 어댑터는 내부 회사 네트워크에 연결되어야 하고 나머지 하나는 외부 네트워크(인터넷 또는 프라이빗 네트워크)에 연결되어야 합니다.  
   
     -   Teredo가 IPv4-IPv6 전환 프로토콜로 필요한 경우 서버의 외부 어댑터에 연속된 두 개의 공용 IPv4 주소가 있어야 합니다. 단일 IP 주소를 사용할 수 있는 경우 IP-HTTPS만 전환 프로토콜로 사용할 수 있습니다.  
   

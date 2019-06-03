@@ -10,7 +10,7 @@ ms.author: pashort
 author: shortpatti
 ms.openlocfilehash: b757e1914ee263a041f39e9767d3cb8af38403dc
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59816804"
@@ -31,7 +31,7 @@ Windows Server 2016 동안 [핵심 네트워크 가이드](https://technet.micro
 
 확장할 수 있는 인증 프로토콜 인증서 기반 인증 방법을 배포 하는 경우 서버 인증서가 필요한 \(EAP\) 및 보호 된 EAP \(PEAP\) 네트워크 액세스 인증 합니다. Active Directory 인증서 서비스를 사용 하 여 서버 인증서 배포 \(AD CS\) EAP 및 PEAP 인증서 기반 인증에 대 한 메서드는 다음과 같은 이점을 제공 합니다.
 
-- NPS 또는 RAS 서버의 id를 개인 키에 바인딩
+- NPS 또는 RAS 서버의 ID를 프라이빗 키에 바인딩
 - 도메인 구성원 NPS 및 RAS 서버에 인증서를 자동으로 등록 하기 위한 비용 효율적이 고 안전한 메서드
 - 인증서와 인증 기관을 관리하는 효율적인 방법
 - 인증서 기반 인증으로 보안 유지

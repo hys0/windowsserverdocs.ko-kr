@@ -10,7 +10,7 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.openlocfilehash: f207993580e6fd06c9ff185e58e5b7e81af60252
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59847834"
@@ -30,7 +30,7 @@ Windows Server 2012로 AD FS 2.0 페더레이션 서버 프록시 마이그레�
   
 ### <a name="to-export-proxy-service-settings"></a>프록시 서비스 설정을 내보내려면  
   
-1.  SSL(Secure Sockets Layer) 인증서와 해당 개인 키를 .pfx 파일로 내보냅니다. 자세한 내용은 [서버 인증 인증서의 개인 키 부분 내보내기](export-the-private-key-portion-of-a-server-authentication-certificate.md)를 참조하세요.  
+1.  SSL(Secure Sockets Layer) 인증서와 해당 프라이빗 키를 .pfx 파일로 내보냅니다. 자세한 내용은 [서버 인증 인증서의 프라이빗 키 부분 내보내기](export-the-private-key-portion-of-a-server-authentication-certificate.md)를 참조하세요.  
   
 > [!NOTE]
 >  이 단계는 옵션입니다. 이 인증서는 운영 체제 업그레이드 중에 유지되기 때문입니다.  

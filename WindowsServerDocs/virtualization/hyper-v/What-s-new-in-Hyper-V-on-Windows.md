@@ -13,7 +13,7 @@ ms.author: kathydav
 ms.date: 09/21/2017
 ms.openlocfilehash: 1384a15d3b8ecee32d36c6265d478edace0bdb09
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59848104"
@@ -34,7 +34,7 @@ ms.locfileid: "59848104"
 
 ## <a name="encryption-support-for-the-operating-system-disk-in-generation-1-virtual-machines-new"></a>1 세대 가상 컴퓨터에 운영 체제 디스크에 대 한 암호화 지원을 \(새로 만들기)
 
-이제 BitLocker 드라이브 암호화를 사용 하 여 1 세대 가상 컴퓨터에 운영 체제 디스크를 보호할 수 있습니다. 키 저장소는 새로운 기능을 시스템 드라이브의 BitLocker 키를 저장할 수 있는 작은 전용된 드라이브를 만듭니다. 2 세대 가상 컴퓨터에만 제공 되는 가상 모듈 TPM (Trusted Platform)를 사용 하는 대신 수행 됩니다. 디스크의 암호를 해독 하 고 가상 컴퓨터를 시작 하려면 Hyper-v 호스트는 인증 된 가드 된 패브릭의 일부 이거나 가상 컴퓨터의 보호자 중 하나에서 개인 키가 있습니다. 키 저장소 버전 8 가상 컴퓨터를 필요합니다. 가상 컴퓨터 버전에 대 한 자세한 내용은 참조 [Windows 10 또는 Windows Server 2016에 Hyper-v에서 가상 컴퓨터를 업그레이드 버전](./deploy/upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server.md)합니다.  
+이제 BitLocker 드라이브 암호화를 사용 하 여 1 세대 가상 컴퓨터에 운영 체제 디스크를 보호할 수 있습니다. 키 저장소는 새로운 기능을 시스템 드라이브의 BitLocker 키를 저장할 수 있는 작은 전용된 드라이브를 만듭니다. 2 세대 가상 컴퓨터에만 제공 되는 가상 모듈 TPM (Trusted Platform)를 사용 하는 대신 수행 됩니다. 디스크의 암호를 해독 하 고 가상 컴퓨터를 시작하려면 Hyper-v 호스트는 인증된 가드 된 패브릭의 일부 이거나 가상 컴퓨터의 보호자 중 하나에서 프라이빗 키가 있습니다. 키 저장소 버전 8 가상 컴퓨터를 필요합니다. 가상 컴퓨터 버전에 대 한 자세한 내용은 참조 [Windows 10 또는 Windows Server 2016에 Hyper-v에서 가상 컴퓨터를 업그레이드 버전](./deploy/upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server.md)합니다.  
   
 ## <a name="BKMK_host"></a>호스트 리소스 보호 \(새\)
 이 기능을 사용 하면 과도 한 수준의 작업에 대 한 조회 하 여 사용 하 여 시스템 리소스를 공유 하는 보다 많은 가상 컴퓨터. 이렇게 하면 작업이 과도 한 가상 컴퓨터의 호스트 또는 다른 가상 컴퓨터의 성능을 저하 하는 것을 방지할 수 있습니다. 모니터링 프로세스 과도 한 활동을 포함 하는 가상 컴퓨터를 감지, 가상 컴퓨터 리소스가 더 적게 부여 됩니다. 이 모니터링 및 적용은 기본적으로 해제 되어 있습니다. Windows PowerShell를 사용 하 여 설정 하거나 해제 합니다. 이 설정 하려면이 명령을 실행 합니다.  
@@ -59,7 +59,7 @@ Set-VMProcessor TestVM -EnableHostResourceProtection $true
 -   **업데이트 관리 프로토콜** -Hyper-v 관리자는 이제 CredSSP, Kerberos 또는 NTLM 인증 허용 되는 WS-MAN 프로토콜을 사용 하 여 원격 Hyper-v 호스트와 통신 합니다. CredSSP를 사용 하 여 원격 Hyper-v 호스트에 연결할 때 Active Directory에서 제한 된 위임을 사용 하지 않고 실시간 마이그레이션을 수행할 수 있습니다. WS MAN 기반 인프라 또한 쉽게 원격 관리를 위한 호스트를 사용할 수 있도록 합니다. WS-MAN은 기본적으로 열리는 포트 80을 통해 연결합니다.  
   
 ## <a name="BKMK_IS"></a>Integration services Windows Update를 통해 전달 \(업데이트\) 
-Windows 게스트에 대 한 통합 서비스에 대 한 업데이트는 Windows Update를 통해 배포 됩니다. 서비스 공급자 및 사설 클라우드 호스팅 서비스 공급자에 대 한 추가 제어를 가상 컴퓨터를 소유 하는 테 넌 트의 업데이트를 적용 합니다. 테 넌 트가 이제 업데이트할 수 Windows 가상 컴퓨터, 통합 서비스를 비롯 한 모든 업데이트와 단일 메서드를 사용 하 여. Linux 게스트에 대 한 통합 서비스에 대 한 자세한 참조 [Linux 및 FreeBSD 가상 컴퓨터에 Hyper-v](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)합니다.  
+Windows 게스트에 대 한 통합 서비스에 대 한 업데이트는 Windows Update를 통해 배포 됩니다. 서비스 공급자 및 프라이빗 클라우드 호스터의 경우 가상 머신을 소유한 테넌트에 의해 업데이트 적용 제어 권한을 부여합니다. 테 넌 트가 이제 업데이트할 수 Windows 가상 컴퓨터, 통합 서비스를 비롯 한 모든 업데이트와 단일 메서드를 사용 하 여. Linux 게스트에 대 한 통합 서비스에 대 한 자세한 참조 [Linux 및 FreeBSD 가상 컴퓨터에 Hyper-v](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)합니다.  
   
 > [!IMPORTANT]  
 > Vmguest.iso 라 하 고 이미지 파일은 더 이상 필요 Windows Server 2016에 Hyper-v에 포함 되지 않습니다.  

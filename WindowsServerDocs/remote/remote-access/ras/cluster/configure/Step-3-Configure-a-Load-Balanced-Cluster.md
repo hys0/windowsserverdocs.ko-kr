@@ -15,7 +15,7 @@ ms.author: pashort
 author: shortpatti
 ms.openlocfilehash: e075569f6ce5983838edde26f928d41606ac44bb
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59824134"
@@ -137,7 +137,7 @@ Set-RemoteAccessLoadBalancer -InternetDedicatedIPAddress "2.1.1.20/255.255.255.0
   
 6.  **개인 키 내보내기** 페이지에서 **예, 개인 키를 내보냅니다.** 를 클릭하고 **다음**을 클릭합니다.  
   
-7.  에 **파일 내보내기 형식** 페이지에서 클릭 **개인 정보 교환-PKCS #12 (합니다. PFX)**, 를 클릭 하 고 **다음**합니다.  
+7.  에 **파일 내보내기 형식** 페이지에서 클릭 **개인 정보 교환-PKCS #12 (합니다. PFX)** , 를 클릭 하 고 **다음**합니다.  
   
 8.  에 **보안** 페이지에서의 **암호** 확인란에 암호를 입력는 **암호** 상자 및 암호를 확인 하 고 클릭 한 다음 **다음**합니다.  
   
@@ -161,7 +161,7 @@ Set-RemoteAccessLoadBalancer -InternetDedicatedIPAddress "2.1.1.20/255.255.255.0
   
 18. 에 **가져올 파일** 페이지에서 클릭 **찾아보기** 인증서를 찾습니다. 인증서를 선택 하 고 클릭 한 다음 **다음**합니다.  
   
-19. 에 **개인 키 보호** 페이지는 **암호** 상자에 암호를 입력 한 다음 클릭 **다음**합니다.  
+19. 에 **프라이빗 키 보호** 페이지는 **암호** 상자에 암호를 입력 한 다음 클릭 **다음**합니다.  
   
 20. **인증서 저장소** 페이지에서 **다음**을 클릭합니다.  
   

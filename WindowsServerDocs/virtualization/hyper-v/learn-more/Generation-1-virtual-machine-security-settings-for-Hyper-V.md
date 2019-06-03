@@ -13,7 +13,7 @@ ms.author: kathydav
 ms.date: 10/04/2016
 ms.openlocfilehash: 923216142a45071bc3623e3f37b37cc6a2361f26
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59812144"
@@ -39,7 +39,7 @@ Hyper-v 관리자 1 세대 가상 컴퓨터의 보안 설정의 사용 하 여 �
 키 저장소 드라이브의 내용을 해독 하 고 가상 컴퓨터를 시작 하려면 Hyper-v 호스트 여야 필요 합니다.
 
 - 이 가상 컴퓨터에는 권한 있는 가드 된 패브릭의 일부 또는
-- 가상 컴퓨터의 보호자 중 하나에서 개인 키를 있습니다.
+- 가상 머신의 보호자 중 하나에서 프라이빗 키를 있습니다.
 
 보호 된 패브릭에 대 한 자세한 내용은의 차폐 Vm 소개 섹션을 참조 하십시오 [보안 및 보증](../../../security/Security-and-Assurance.md)합니다.
 

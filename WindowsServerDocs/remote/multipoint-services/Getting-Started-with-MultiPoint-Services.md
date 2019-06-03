@@ -15,7 +15,7 @@ ms.author: elizapo
 ms.date: 08/04/2016
 ms.openlocfilehash: 03dcbc97fac91dfec83b257a8e50bfe49ff3bc14
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59884904"
@@ -75,13 +75,13 @@ MultiPoint Service 시스템을 설정한 후 MultiPoint 서비스를 관리 하
   
 **콘텐츠 및 개인 유지 콘텐츠 공유:**  
   
--   사용자는 해당 사용자만 볼 수 있는 개인 폴더에 파일이 나 문서를 저장할 수 있습니다.  
+-   사용자는 해당 사용자만 볼 수 있는 프라이빗 폴더에 파일이나 문서를 저장할 수 있습니다.  
   
 -   또한 사용자가 MultiPoint 서비스 시스템의 모든 사용자가 액세스할 수 있는 공용 폴더에 문서를 저장할 수 있습니다.  
   
--   MultiPoint 서비스 사용자를 개인적으로 사용자의 개인 폴더에 저장 되는 경우에 관리 사용자가 시스템에 모든 파일 및 문서에 대 한 액세스를 알고는 것이 바람직합니다.  
+-   MultiPoint 서비스 사용자를 개인적으로 사용자의 개인 폴더에 저장되는 경우에 관리 사용자가 시스템에 모든 파일 및 문서에 대 한 액세스를 알고는 것이 바람직합니다.  
   
-저장 하 고 개인 및 공용 콘텐츠를 관리 하는 방법에 대 한 자세한 내용은 참조는 [사용자 파일 관리](Manage-User-Files.md) 항목입니다.  
+저장 하 고 프라이빗 및 공용 콘텐츠를 관리 하는 방법에 대 한 자세한 내용은 참조는 [사용자 파일 관리](Manage-User-Files.md) 항목입니다.  
   
 **사용자의 MultiPoint 서비스 세션에 대 한 정보:**  
   

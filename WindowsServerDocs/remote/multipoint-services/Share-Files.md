@@ -15,7 +15,7 @@ ms.date: 08/04/2016
 ms.author: elizapo
 ms.openlocfilehash: 130bd81affba68d92d7db6b691e7817dedfbb22c
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59857474"
@@ -25,7 +25,7 @@ Windows 탐색기에서 공용 폴더에 콘텐츠를 저장하여 다른 MultiP
   
 공유할 수도 있습니다 콘텐츠 이동식 저장 장치에 저장 하 여에 설명 된 대로 [저장 및 USB 플래시 드라이브에 파일 공유](Save-and-Share-Files-on-a-USB-Flash-Drive.md)합니다.  
   
-콘텐츠 전용 유지 하는 방법에 대 한 정보를 참조 하십시오. [파일 개인 유지](Keep-Files-Private.md)합니다.  
+콘텐츠 프라이빗 유지에 대한 자세한 내용은 [파일 프라이빗 유지](Keep-Files-Private.md)를 참조하세요.  
   
 ## <a name="to-share-content-with-other-users-by-using-public-folders"></a>공용 폴더를 사용하여 다른 사용자와 콘텐츠를 공유하려면  
   

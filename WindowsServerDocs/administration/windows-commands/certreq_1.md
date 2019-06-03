@@ -139,19 +139,19 @@ Subject = "CN=W2K8-BO-DC.contoso2.com"
 |Key|정의|값|예제|
 |---|----------|-----|-------|
 |Subject|여러 응용 프로그램 인증서의 주체 정보 사용. 따라서이 키에 대 한 값을 지정 하는 것이 좋습니다. 주체 여기 설정 되지 않은 경우 주체 이름이 주체 대체 이름 인증서 확장의 일부로 포함 되도록 하는 것이 좋습니다.|상대 고유 이름 문자열 값|Subject = "CN=computer1.contoso.com" Subject = "CN = John Smith, CN = Users, DC = Contoso, DC = com"|
-|Exportable|이 특성을 TRUE로 설정 하는 경우 인증서와 개인 키를 내보낼 수 있습니다. 높은 수준의 보안을 보장 하려면 개인 키 안 내보낼 수 있습니다. 그러나 경우에 따라 그 필요할 수 개인 키를 여러 컴퓨터 또는 사용자가 동일한 개인 키를 공유 해야 하는 경우에 내보낼 수 있도록 합니다.|true, false|내보낼 수 = TRUE입니다. CNG 키를이 구별할 수 및 일반 텍스트를 내보낼 수 있습니다. CAPI1 키 수는 없습니다.|
-|ExportableEncrypted|개인 키를 내보낼 수로 설정 해야 하는지 여부를 지정 합니다.|true, false|ExportableEncrypted = true</br>팁:  일부 공개 키 크기와 알고리즘 모든 해시 알고리즘을 사용 하 여 작동 합니다. Tamehe 지정 CSP도 지정된 된 해시 알고리즘을 지원 해야 합니다. 지원 되는 해시 알고리즘의 목록을 보려면 명령을 실행할 수 있습니다. <code>certutil -oid 1 &#124; findstr pwszCNGAlgid &#124; findstr /v CryptOIDInfo</code>|
+|Exportable|이 특성을 TRUE로 설정하면 프라이빗 키를 인증서와 함께 내보낼 수 있습니다. 높은 수준의 보안을 보장하기 위해 프라이빗 키를 내보낼 수 없습니다. 그러나 경우에 따라 여러 대의 컴퓨터 또는 사용자가 동일한 프라이빗 키를 공유해야 하는 경우 프라이빗 키를 내보낼 수 있도록 해야 할 수도 있습니다.|true, false|내보낼 수 = TRUE입니다. CNG 키를이 구별할 수 및 일반 텍스트를 내보낼 수 있습니다. CAPI1 키 수는 없습니다.|
+|ExportableEncrypted|프라이빗 키를 내보낼 수 있도록 설정해야 하는지 여부를 지정합니다.|true, false|ExportableEncrypted = true</br>팁:  일부 공개 키 크기와 알고리즘 모든 해시 알고리즘을 사용 하 여 작동 합니다. Tamehe 지정 CSP도 지정된 된 해시 알고리즘을 지원 해야 합니다. 지원 되는 해시 알고리즘의 목록을 보려면 명령을 실행할 수 있습니다. <code>certutil -oid 1 &#124; findstr pwszCNGAlgid &#124; findstr /v CryptOIDInfo</code>|
 |HashAlgorithm|이 요청에 사용할 해시 알고리즘입니다.|Sha256, sha384, sha512, sha1, md5, md4, md2|HashAlgorithm = s h a 1입니다. 사용 하 여 지원 되는 해시 알고리즘의 목록을 보려면: certutil oid 1 &#124; findstr pwszCNGAlgid &#124; findstr /v CryptOIDInfo|
-|KeyAlgorithm|공용 및 개인 키 쌍을 생성 하려면 서비스 공급자가 사용할 수 있는 알고리즘입니다.|RSA, DH, DSA, ECDH_P256, ECDH_P521, ECDSA_P256, ECDSA_P384, ECDSA_P521|KeyAlgorithm = RSA|
+|KeyAlgorithm|공용 및 프라이빗 키 쌍을 생성하기 위해 서비스 공급자가 사용하는 알고리즘입니다.|RSA, DH, DSA, ECDH_P256, ECDH_P521, ECDSA_P256, ECDSA_P384, ECDSA_P521|KeyAlgorithm = RSA|
 |KeyContainer|하지 않는 새 키 자료를 생성 된 경우 새 요청에 대해이 매개 변수를 설정 하는 것이 좋습니다. 키 컨테이너는 자동으로 생성 하 고 시스템에 의해 유지. 여기서는 기존 키 자료를 사용 해야 하는 요청에 대 한 기존 키의 키 컨테이너 이름으로이 값을 설정할 수 있습니다. certutil을 사용 하 여 – 컴퓨터 컨텍스트에 대 한 사용 가능한 키 컨테이너 목록을 표시 하는 명령 키입니다. certutil을 사용 하 여 – 키 – 현재 사용자의 컨텍스트에 대 한 사용자 명령입니다.|임의의 문자열 값</br>팁:  에 공백 또는 특수 문자를 잠재적인 INF 구문 분석 문제를 방지 하는 모든 INF 키 값 앞뒤에 큰따옴표를 사용 해야 합니다.|KeyContainer = {C347BD28-7F69-4090-AA16-BC58CF4D749C}|
-|키 길이|공용 및 개인 키의 길이 정의합니다. 키 길이 인증서의 보안 수준에 영향이 있습니다. 더 긴 키 길이는 일반적으로 더 높은 보안 수준; 제공 그러나 일부 응용 프로그램 키 길이 관련 된 제한이 있을 수 있습니다.|암호화 서비스 공급자에서 지 원하는 모든 유효한 키 길이입니다.|키 길이 = 2048|
+|키 길이|공개 키와 프라이빗 키의 길이를 정의합니다. 키 길이 인증서의 보안 수준에 영향이 있습니다. 더 긴 키 길이는 일반적으로 더 높은 보안 수준; 제공 그러나 일부 응용 프로그램 키 길이 관련 된 제한이 있을 수 있습니다.|암호화 서비스 공급자에서 지 원하는 모든 유효한 키 길이입니다.|키 길이 = 2048|
 |KeySpec|키 서명, Exchange (암호화), 또는 둘 다에 사용 될 수 하는 경우를 결정 합니다.|AT_NONE, AT_SIGNATURE, AT_KEYEXCHANGE|KeySpec AT_KEYEXCHANGE =|
 |KeyUsage|어떤 인증서 키에 사용할지를 정의 합니다.|CERT_DIGITAL_SIGNATURE_KEY_USAGE-80 (128)</br>팁:  표시 된 값은 각 비트 정의 대 한 16 진수 (10 진수) 값입니다. 오래 된 구문을 사용할 수도 있습니다: 여러 개의 단일 16 진수 값을 비트 기호 표현 하는 대신 집합입니다. 예를 들어 KeyUsage 0xa0 =.</br>CERT_NON_REPUDIATION_KEY_USAGE-40 (64)</br>CERT_KEY_ENCIPHERMENT_KEY_USAGE-20 (32)</br>CERT_DATA_ENCIPHERMENT_KEY_USAGE-10 (16)</br>CERT_KEY_AGREEMENT_KEY_USAGE-8</br>CERT_KEY_CERT_SIGN_KEY_USAGE-4</br>CERT_OFFLINE_CRL_SIGN_KEY_USAGE-2</br>CERT_CRL_SIGN_KEY_USAGE-2</br>CERT_ENCIPHER_ONLY_KEY_USAGE-1</br>CERT_DECIPHER_ONLY_KEY_USAGE-8000 (32768)|KeyUsage = "CERT_DIGITAL_SIGNATURE_KEY_USAGE &#124; CERT_KEY_ENCIPHERMENT_KEY_USAGE"</br>팁:  파이프를 사용 하는 여러 값 (&#124;) 구분 기호입니다. INF 구문 분석 문제를 방지 하려면 여러 값을 사용 하는 경우 큰따옴표를 사용 하는 것을 확인 합니다.|
-|KeyUsageProperty|개인 키를 사용할 수 있는 특정 용도 식별 하는 값을 검색 합니다.|NCRYPT_ALLOW_DECRYPT_FLAG-1</br>NCRYPT_ALLOW_SIGNING_FLAG-2</br>NCRYPT_ALLOW_KEY_AGREEMENT_FLAG-4</br>NCRYPT_ALLOW_ALL_USAGES-ffffff (16777215)|KeyUsageProperty = "NCRYPT_ALLOW_DECRYPT_FLAG 및 #124; NCRYPT_ALLOW_SIGNING_FLAG "|
-|MachineKeySet|이 키는 컴퓨터와 사용자가 아닌 소유 하는 인증서를 만들어야 할 때 중요 합니다. 생성 되는 키 자료의 보안 컨텍스트 보안 주체 (사용자 또는 컴퓨터 계정)가 만든 요청에에서 유지 됩니다. 관리자가 컴퓨터를 대신 하 여 인증서 요청을 만들면 키 자료에 관리자의 보안 컨텍스트가 아닌 컴퓨터의 보안 컨텍스트를 만들어야 합니다. 그렇지 않으면 시스템 관리자의 보안 컨텍스트에서 것은 해당 개인 키를 액세스 하지 못했습니다.|true, false|MachineKeySet = true</br>팁:  기본값은 false입니다.|
+|KeyUsageProperty|프라이빗 키를 사용할 수 있는 특정 용도를 식별하는 값을 검색합니다.|NCRYPT_ALLOW_DECRYPT_FLAG-1</br>NCRYPT_ALLOW_SIGNING_FLAG-2</br>NCRYPT_ALLOW_KEY_AGREEMENT_FLAG-4</br>NCRYPT_ALLOW_ALL_USAGES-ffffff (16777215)|KeyUsageProperty = "NCRYPT_ALLOW_DECRYPT_FLAG 및 #124; NCRYPT_ALLOW_SIGNING_FLAG "|
+|MachineKeySet|이 키는 컴퓨터와 사용자가 아닌 소유 하는 인증서를 만들어야 할 때 중요 합니다. 생성 되는 키 자료의 보안 컨텍스트 보안 주체 (사용자 또는 컴퓨터 계정)가 만든 요청에에서 유지 됩니다. 관리자가 컴퓨터를 대신 하 여 인증서 요청을 만들면 키 자료에 관리자의 보안 컨텍스트가 아닌 컴퓨터의 보안 컨텍스트를 만들어야 합니다. 그렇지 않으면 시스템은 관리자의 보안 컨텍스트에 있기 때문에 해당 프라이빗 키에 액세스할 수 없습니다.|true, false|MachineKeySet = true</br>팁:  기본값은 false입니다.|
 |NotBefore|날짜 또는 날짜 및 되기까지의 요청을 실행할 수 없습니다 시간을 지정 합니다. NotBefore는 ValidityPeriod 유닛의와 사용할 수 있습니다.|날짜 또는 날짜 및 시간|NotBefore = "7/24/2012 10:31 AM"</br>팁:  NotBefore 및 NotAfter는 RequestType = 인증서만 합니다. 날짜 구문 분석은 로캘 구분 하려고 합니다. 명확 하 게 됩니다 이름과 모든 로캘에서 작동 해야 하는 월을 사용 합니다.|
 |NotAfter|날짜 또는 날짜 및 시간을 요청을 실행할 수 없습니다 지정 합니다. ValidityPeriod 또는 유닛의 NotAfter는 사용할 수 없습니다.|날짜 또는 날짜 및 시간|NotAfter = "2014 년 9 월 23 일 오전 10 시 31"</br>팁:  NotBefore 및 NotAfter는 RequestType = 인증서만 합니다. 날짜 구문 분석은 로캘 구분 하려고 합니다. 명확 하 게 됩니다 이름과 모든 로캘에서 작동 해야 하는 월을 사용 합니다.|
-|PrivateKeyArchive|PrivateKeyArchive 설정 키 보관에 대 한 CA를 요청자의 개인 키를 안전 하 게 전송 하는 것에 대 한 요청 형식 CMS (CMC)을 통해 인증서 관리 메시지만 허용 하기 때문에 해당 RequestType "CMC"로 설정 되어 있는 경우에 작동 합니다.|true, false|PrivateKeyArchive = True|
+|PrivateKeyArchive|PrivateKeyArchive 설정 키 보관에 대한 CA를 요청자의 프라이빗 키를 안전하게 전송하는 것에 대한 요청 형식 CMS (CMC)을 통해 인증서 관리 메시지만 허용하기 때문에 해당 RequestType "CMC"로 설정되어 있는 경우에 작동합니다.|true, false|PrivateKeyArchive = True|
 |EncryptionAlgorithm|사용할 암호화 알고리즘입니다.|가능한 옵션에서 운영 체제 버전 및 설치 된 암호화 공급자의 집합에 따라 달라 집니다. 사용 가능한 알고리즘의 목록을 보려면 명령을 <code>certutil -oid 2 &#124; findstr pwszCNGAlgid</code> 지정 된 대칭 암호화 알고리즘 및 길이도 사용 되는 지정 된 CSP 지원 해야 합니다.|EncryptionAlgorithm 3des =|
 |EncryptionLength|사용할 암호화 알고리즘의 길이입니다.|지정한 EncryptionAlgorithm에서 허용 된 길이입니다.|EncryptionLength = 128|
 |ProviderName|공급자 이름은 CSP의 표시 이름입니다.|사용 하는 CSP의 공급자 이름을 모르는 경우 certutil-csplist 명령줄에서 실행 합니다. 이 명령은 로컬 시스템에서 사용할 수 있는 모든 Csp의 이름이 표시 됩니다.|공급자 이름이 "Microsoft RSA SChannel Cryptographic Provider" =|
@@ -164,7 +164,7 @@ Subject = "CN=W2K8-BO-DC.contoso2.com"
 |자동|기본적으로이 옵션에는 사용자에 게 서 스마트 카드 PIN와 같은 대화형 사용자 데스크톱 및 요청 정보를 CSP 액세스할을 수 있습니다. 이 키가 TRUE로 설정, CSP 데스크톱과 상호 작용 해서는 안 하 고 사용자에 게 모든 사용자 인터페이스를 표시 차단 됩니다.|true, false|자동 = true|
 |SMIME|이 매개 변수는 TRUE로 설정 하는 경우 개체 식별자 값 1.2.840.113549.1.9.15 확장이 요청에 추가 됩니다. 개체 식별자의 수에 따라 다릅니다은 Outlook 같은 Secure Multipurpose Internet Mail Extensions (S/MIME) 응용 프로그램에서 사용할 수 있는 대칭 암호화 알고리즘에 대 한 참조는 설치 된 운영 체제 버전 및 CSP 기능에 있습니다.|true, false|SMIME = true|
 |UseExistingKeySet|이 매개 변수를 사용 하 여 인증서 요청을 만드는 기존 키 쌍을 사용 해야 함을 지정 합니다. 이 키가 TRUE로 설정 하는 경우 RenewalCert 키 또는 KeyContainer 이름에 대 한 값도 지정 해야 합니다. 기존 키의 속성을 변경할 수 없으므로 하지 내보낼 수 있는 키를 설정 해야 합니다. 이 경우 키 자료가 인증서 요청을 빌드할 때 생성 됩니다.|true, false|UseExistingKeySet = true|
-|KeyProtection|사용 하기 전에 개인 키를 보호 하는 방법을 나타내는 값을 지정 합니다.|XCN_NCRYPT_UI_NO_PROTCTION_FLAG-0</br>XCN_NCRYPT_UI_PROTECT_KEY_FLAG-1</br>XCN_NCRYPT_UI_FORCE_HIGH_PROTECTION_FLAG-2|KeyProtection NCRYPT_UI_FORCE_HIGH_PROTECTION_FLAG =|
+|KeyProtection|사용하기 전에 프라이빗 키를 보호하는 방법을 나타내는 값을 지정합니다.|XCN_NCRYPT_UI_NO_PROTCTION_FLAG-0</br>XCN_NCRYPT_UI_PROTECT_KEY_FLAG-1</br>XCN_NCRYPT_UI_FORCE_HIGH_PROTECTION_FLAG-2|KeyProtection NCRYPT_UI_FORCE_HIGH_PROTECTION_FLAG =|
 |SuppressDefaults|기본 확장 프로그램 및 특성 요청에 포함 되는지 여부를 나타내는 부울 값을 지정 합니다. 기본값은 해당 Oid (개체 식별자)으로 표현 됩니다.|true, false|SuppressDefaults = true|
 |FriendlyName|새 인증서 이름입니다.|텍스트 모드|FriendlyName = "Server1"|
 |ValidityPeriodUnits</br>참고: 이 사용 됩니다 요청 형식 때 cert =.|ValidityPeriod 함께 사용 되는 단위 수를 지정 합니다.|숫자|유닛의 = 3|
@@ -262,7 +262,7 @@ _continue_ = "%szOID_PKIX_KP_CLIENT_AUTH%"
 ```
 CertReq -accept [Options] [CertChainFileIn | FullResponseFileIn | CertFileIn]
 ```
-– 발급 된 인증서를 사용 하 여 이전에 생성 된 개인 키에 연결 하 고 (있는 경우 일치 하는 요청)의 인증서가 요청 하는 위치는 시스템에서 보류 중인 인증서 요청을 제거 하는 매개 변수를 수락 합니다.
+–accept 매개 변수는 이전에 생성된 프라이빗 키를 발급된 인증서와 연결하고 인증서가 요청된 시스템에서 보류 중인 인증서 요청을 제거합니다(일치하는 요청이 있는 경우).
 
 수동으로 인증서를 수락 하는 것에 대 한이 예제를 사용할 수 있습니다.
 ```
@@ -340,7 +340,7 @@ certreq -enroll –machine –policyserver * "WebServer"
 |-모든|Force ICertRequest::Submit 인코딩 유형을 확인할 수 있습니다.|
 |-attrib \<AttributeString>|콜론으로 구분 된 이름 및 값 문자열 쌍을 지정 합니다.</br>\N (예를 들어 Name1:Value1\nName2:Value2) 별도 이름 및 값 문자열 쌍입니다.|
 |-이진|형식 대신 base64 인코딩된 이진 파일을 출력합니다.|
-|-PolicyServer *\<PolicyServer>*|"ldap: *\<path>*"</br>URI 또는 인증서 등록 정책 웹 서비스를 실행 하는 컴퓨터에 대 한 고유 ID를 삽입 합니다.</br>요청 파일을 이동 하 여 사용 하려는 것을 지정 하려면 삼아 빼기 (-) 기호가  *\<policyserver >* 합니다.|
+|-PolicyServer *\<PolicyServer>*|"ldap: *\<path>* "</br>URI 또는 인증서 등록 정책 웹 서비스를 실행 하는 컴퓨터에 대 한 고유 ID를 삽입 합니다.</br>요청 파일을 이동 하 여 사용 하려는 것을 지정 하려면 삼아 빼기 (-) 기호가  *\<policyserver >* 합니다.|
 |-config \<ConfigString>|CAHostName\CAName 구성 문자열에서 지정 된 CA를 사용 하 여 작업을 처리 합니다. Https 연결에 대 한 등록 서버 URI를 지정 합니다. 로컬 컴퓨터에 대 한 CA를 저장, 빼기를 사용 하 여 기호 (-).|
 |아닌 익명이|인증서 등록 웹 서비스에 대 한 익명 자격 증명을 사용 합니다.|
 |-Kerberos|인증서 등록 웹 서비스에 대 한 Kerberos (도메인) 자격 증명을 사용 합니다.|

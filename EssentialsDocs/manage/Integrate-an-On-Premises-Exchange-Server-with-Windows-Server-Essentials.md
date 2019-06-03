@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: 59478c4c6c04c5b4912b32eff895df6a3cd2f8fa
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59839184"
@@ -348,7 +348,7 @@ New-SendConnector -Name "WSE Internet SendConnector" -Usage "Internet" -AddressS
   
 5.  [KB2732764 for ARR 2.5를 다운로드](https://go.microsoft.com/fwlink/?LinkID=258302)한 다음 Windows Server Essentials를 실행하는 서버에 업데이트를 설치합니다.  
   
-6.  Windows Server Essentials를 실행하는 서버에 Exchange Server의 SSL 인증서 파일을 복사합니다. 인증서 파일은 개인 키를 포함해야 하며 PFX 파일 형식이어야 합니다.  
+6.  Windows Server Essentials를 실행하는 서버에 Exchange Server의 SSL 인증서 파일을 복사합니다. 인증서 파일은 프라이빗 키를 포함해야 하며 PFX 파일 형식이어야 합니다.  
   
     > [!NOTE]
     >  자체 발급된 인증서를 사용하는 경우 Exchange Server 문서 [Exchange 인증서 내보내기](https://technet.microsoft.com/library/dd351274.aspx) 의 지침에 따라 인증서를 내보냅니다.  
@@ -432,7 +432,7 @@ New-SendConnector -Name "WSE Internet SendConnector" -Usage "Internet" -AddressS
 ### <a name="what-do-i-need-to-know-about-email-accounts"></a>메일 계정에 대해 알아야 할 내용은 무엇인가요?  
  호스트된 전자 메일 솔루션은 서버에서 구성됩니다. Microsoft Office 365와 같은 호스트 된 메일 공급자에서 솔루션을 네트워크 사용자에 게 개별 메일 계정을 제공할 수 있습니다. Windows Server Essentials에서 사용자 계정 추가 마법사를 실행하여 사용자 계정을 만들면 마법사는 사용자 계정을 사용 가능한 호스트된 메일 솔루션에 추가하려고 합니다. 동시에 마법사는 사용자에게 메일 이름(별칭)을 할당하고 사서함의 최대 크기(할당량)를 설정합니다. 사서함의 최대 크기는 사용하는 메일 공급자에 따라 다릅니다. 사용자 계정을 추가한 후 계속해서 사용자의 속성 페이지에서 사서함 별칭 및 할당량 정보를 관리할 수 있습니다. 사용자 계정 및 호스트된 메일 공급자의 전체 관리를 위해서는 호스트된 공급자의 관리 콘솔을 사용합니다. 공급자에 따라 웹 기반 포털 또는 서버 대시보드의 탭에서 해당 관리 콘솔에 액세스할 수 있습니다.  
   
- 사용자 계정 추가 마법사를 실행할 때 입력한 별칭은 사용자 별칭에 대한 제안된 이름으로 호스트된 메일 공급자에게 전송됩니다. 예를 들어 사용자 별칭이 *FrankM*, 사용자의 전자 메일 주소가 *FrankM@Contoso.com*합니다.  
+ 사용자 계정 추가 마법사를 실행할 때 입력한 별칭은 사용자 별칭에 대한 제안된 이름으로 호스트된 메일 공급자에게 전송됩니다. 예를 들어 사용자 별칭이 *FrankM*, 사용자의 전자 메일 주소가 *FrankM@Contoso.com* 합니다.  
   
  또한 사용자 계정 추가 마법사에서 사용자에 대해 설정한 암호는 호스트된 메일 솔루션에서 사용자의 초기 암호가 됩니다.  
   

@@ -219,7 +219,7 @@ Windows Server 2012에서 기본적으로 CSV 캐시가 비활성화 됩니다. 
 <tr class="even">
 <td><strong>EnableBlockCache</strong></td>
 <td><strong>CsvEnableBlockCache</strong></td>
-<td>클러스터 실제 디스크 리소스의 개인 속성입니다. 이 속성을 통해 CSV에 추가된 개별 디스크에서 CSV 캐시를 사용하도록 설정할 수 있습니다. Windows Server 2012의 기본 설정은 0입니다 (사용 안 함). 디스크에서 CSV 캐시를 사용하려면 값을 1로 구성합니다. Windows Server 2012 R2에서 기본적으로이 설정을 사용 합니다.</td>
+<td>클러스터 실제 디스크 리소스의 프라이빗 속성입니다. 이 속성을 통해 CSV에 추가된 개별 디스크에서 CSV 캐시를 사용하도록 설정할 수 있습니다. Windows Server 2012의 기본 설정은 0입니다 (사용 안 함). 디스크에서 CSV 캐시를 사용하려면 값을 1로 구성합니다. Windows Server 2012 R2에서 기본적으로이 설정을 사용 합니다.</td>
 </tr>
 </tbody>
 </table>

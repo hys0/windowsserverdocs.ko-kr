@@ -10,7 +10,7 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.openlocfilehash: 0c1fd2bc1026d9aee25c591cf5c91a1c59f66ee0
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59834494"
@@ -39,14 +39,14 @@ AD FS 구성 데이터를 내보내려면 다음 작업을 수행합니다.
 1.  페더레이션 서비스에서 사용하는 SSL 인증서의 인증서 주체 이름 및 지문 값을 기록합니다. SSL 인증서를 찾으려면 IIS(인터넷 정보 서비스) 관리 콘솔을 열고 왼쪽 창에서 **기본 웹 사이트** 를 선택합니다. 그런 다음 **동작** 에 **작업** 찾기 및 선택 https 바인딩, 창 클릭 **편집**를 클릭 하 고 **보기**합니다.  
   
 > [!NOTE]
->  필요한 경우 페더레이션 서비스에서 사용되는 SSL 인증서와 해당 개인 키를 .pfx 파일로 내보낼 수도 있습니다. 자세한 내용은 [서버 인증 인증서의 개인 키 부분 내보내기](Export-the-Private-Key-Portion-of-a-Server-Authentication-Certificate.md)를 참조하세요.  
+>  필요한 경우 페더레이션 서비스에서 사용되는 SSL 인증서와 해당 프라이빗 키를 .pfx 파일로 내보낼 수도 있습니다. 자세한 내용은 [서버 인증 인증서의 프라이빗 키 부분 내보내기](Export-the-Private-Key-Portion-of-a-Server-Authentication-Certificate.md)를 참조하세요.  
 >   
 >  SSL 인증서 내보내기는 선택 사항입니다. 이 인증서는 로컬 컴퓨터 개인 인증서 저장소에 저장되고 운영 체제 업그레이드 중에 유지되기 때문입니다.  
   
 2.  AD FS 서비스 통신, 토큰 암호 해독 및 토큰 서명 인증서의 구성을 기록합니다.  사용되는 모든 인증서를 보려면 Windows PowerShell을 열고 `PSH:>add-pssnapin “Microsoft.adfs.powershell”`명령을 실행하여 Windows PowerShell 세션에 AD FS cmdlet을 추가합니다. 그런 다음 `PSH:>Get-ADFSCertificate | Out-File “.\certificates.txt”` 명령을 실행하여 파일에서 사용 중인 모든 인증서 목록을 만듭니다.  
   
 > [!NOTE]
->  필요한 경우 자체 서명된 모든 인증서 외에 내부적으로 생성되지 않은 토큰 서명, 토큰 암호화 또는 서비스 통신 인증서 및 키도 내보낼 수 있습니다. Windows PowerShell을 사용하여 서버에서 사용 중인 모든 인증서를 볼 수 있습니다. Windows PowerShell을 열고 `PSH:>add-pssnapin “Microsoft.adfs.powershell`명령을 실행하여 Windows PowerShell 세션에 AD FS cmdlet을 추가합니다. 그런 다음 `PSH:>Get-ADFSCertificate` 명령을 실행하여 서버에서 사용 중인 모든 인증서를 확인합니다. 이 명령의 출력은 각 인증서의 저장소 위치를 지정하는 StoreLocation 및 StoreName 값을 포함합니다. 그런 다음 [서버 인증 인증서의 개인 키 부분 내보내기](Export-the-Private-Key-Portion-of-a-Server-Authentication-Certificate.md)의 지침을 사용하여 각 인증서와 해당 개인 키를.pfx 파일로 내보낼 수 있습니다.  
+>  필요한 경우 자체 서명된 모든 인증서 외에 내부적으로 생성되지 않은 토큰 서명, 토큰 암호화 또는 서비스 통신 인증서 및 키도 내보낼 수 있습니다. Windows PowerShell을 사용하여 서버에서 사용 중인 모든 인증서를 볼 수 있습니다. Windows PowerShell을 열고 `PSH:>add-pssnapin “Microsoft.adfs.powershell`명령을 실행하여 Windows PowerShell 세션에 AD FS cmdlet을 추가합니다. 그런 다음 `PSH:>Get-ADFSCertificate` 명령을 실행하여 서버에서 사용 중인 모든 인증서를 확인합니다. 이 명령의 출력은 각 인증서의 저장소 위치를 지정하는 StoreLocation 및 StoreName 값을 포함합니다. 그런 다음, [서버 인증 인증서의 프라이빗 키 부분 내보내기](Export-the-Private-Key-Portion-of-a-Server-Authentication-Certificate.md)의 지침을 사용하여 각 인증서와 해당 프라이빗 키를.pfx 파일로 내보낼 수 있습니다.  
 >   
 >  외부 인증서 내보내기는 선택 사항입니다. 모든 외부 인증서는 운영 체제 업그레이드 중에 유지되기 때문입니다.  
   

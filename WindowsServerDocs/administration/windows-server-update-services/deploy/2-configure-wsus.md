@@ -12,7 +12,7 @@ manager: dongill
 ms.date: 10/16/2017
 ms.openlocfilehash: 9e51d5f69ff62c120cabfbe549a84fc9fd26f822
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59820484"
@@ -303,7 +303,7 @@ active directory에서 네트워크에 설정한 경우에 그룹 정책 개체 
 9. **사용**을 클릭한 다음, **인트라넷 업데이트 서비스에서 업데이트를 검색하도록 설정** 및 **인트라넷 통계 서버 설정** 텍스트 상자에 동일한 WSUS 서버의 URL을 입력합니다. 예를 들어 입력 *http://servername* 상자 모두에서 (여기서 *servername* 은 WSUS 서버의 이름).
 
     > [!WARNING]
-    > WSUS 서버의 인트라넷 주소를 입력할 때는 사용할 포트를 지정해야 합니다. 기본적으로 WSUS는 HTTP용으로 포트 8530을, HTTPS용으로 포트 8531을 사용합니다. 예를 들어 HTTP를 사용 하는 경우 입력 해야 **http://servername:8530**합니다.
+    > WSUS 서버의 인트라넷 주소를 입력할 때는 사용할 포트를 지정해야 합니다. 기본적으로 WSUS는 HTTP용으로 포트 8530을, HTTPS용으로 포트 8531을 사용합니다. 예를 들어 HTTP를 사용 하는 경우 입력 해야 **http://servername:8530** 합니다.
 
 10. **확인**을 클릭합니다.
 
@@ -387,7 +387,7 @@ WSUS에는 SSL을 위해 두 개의 포트가 필요합니다. 한 포트는 HTT
 
 2.  로 이동 **시작**, 형식 **CMD**를 마우스 오른쪽 단추로 클릭 **명령 프롬프트**를 클릭 하 고 **관리자 권한으로 실행**합니다.
 
-3.  로 이동 합니다 *%ProgramFiles%***\Update Services\Tools\\** 폴더입니다.
+3.  로 이동 합니다 *%ProgramFiles%***\Update Services\Tools\\* * 폴더입니다.
 
 4.  명령 프롬프트 창에서 다음 명령을 입력 합니다.
 
@@ -448,7 +448,7 @@ WSUS에는 SSL을 위해 두 개의 포트가 필요합니다. 한 포트는 HTT
 ### <a name="27-configure-a-signing-certificate"></a>2.7. 서명 인증서 구성
 WSUS에서는 Microsoft 및 타사 제품을 업데이트하기 위한 사용자 지정 업데이트 패키지를 게시할 수 있습니다. WSUS에서는 Authenticode 인증서를 사용하여 이러한 사용자 지정 업데이트 패키지에 자동으로 서명할 수 있습니다. 사용자 지정 업데이트 서명을 사용하려면 WSUS 서버에서 패키지 서명 인증서를 설치해야 합니다. 사용자 지정 업데이트 서명과 관련된 몇 가지 고려 사항이 있습니다.
 
-1.  **인증서 배포**. WSUS 서버에 개인 키를 설치하고, 사용자 지정 서명 업데이트를 수신하는 모든 클라이언트 PC와 서버의 신뢰할 수 있는 인증서 저장소에 공개 키를 명시적으로 설치해야 합니다.
+1.  **인증서 배포**. WSUS 서버에 프라이빗 키를 설치하고, 사용자 지정 서명 업데이트를 수신하는 모든 클라이언트 PC와 서버의 신뢰할 수 있는 인증서 저장소에 공개 키를 명시적으로 설치해야 합니다.
 
 2.  **만료**. 자체 서명된 인증서가 만료되거나 만료일이 가까워지면 WSUS에서 이벤트 로그에 이벤트를 기록합니다.
 

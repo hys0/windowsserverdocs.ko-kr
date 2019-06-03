@@ -11,7 +11,7 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adds
 ms.openlocfilehash: e3b44dbc1c869680db91f5e9732a50504d80e7b8
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59877504"
@@ -79,7 +79,7 @@ Windows 업데이트는 Windows 8 및 Windows Server 2012에서 자동 유지 �
 |[Active Directory Federation Services](https://technet.microsoft.com/library/hh831502.aspx)|AD FS는 간소화된 배포 및 향상된 기능을 통해 사용자가 개인 장치에서 리소스에 액세스할 수 있도록 하고 IT 부서에서 액세스 제어를 관리할 수 있도록 지원합니다.|  
 |[SPN 및 UPN 고유성](https://technet.microsoft.com/library/dn535779.aspx)|Windows Server 2012 R2를 실행하는 도메인 컨트롤러에서는 중복된 SPN(서비스 사용자 이름) 및 UPN(사용자 계정 이름)을 만들지 못합니다.|  
 |[Winlogon ARSO(자동 다시 시작 로그온)](https://technet.microsoft.com/library/dn535772.aspx)|잠금 화면 응용 프로그램을 다시 시작하고 Windows 8.1 장치에서 사용할 수 있도록 합니다.|  
-|[TPM 키 증명](https://technet.microsoft.com/library/dn581921.aspx)|인증서 요청자 개인 키가 실제로 TPM(신뢰할 수 있는 플랫폼 모듈)으로 보호된 발급된 인증서를 CA에서 암호화된 방식으로 증명할 수 있도록 합니다.|  
+|[TPM 키 증명](https://technet.microsoft.com/library/dn581921.aspx)|인증서 요청자 프라이빗 키가 실제로 TPM(신뢰할 수 있는 플랫폼 모듈)으로 보호된 발급된 인증서를 CA에서 암호화된 방식으로 증명할 수 있도록 합니다.|  
 |[자격 증명 보호 및 관리](https://technet.microsoft.com/library/dn408190.aspx)|자격 증명 도난을 방지하는 새로운 자격 증명 보호 및 도메인 인증 제어 기능입니다.|  
 |[FRS (파일 복제 서비스)의 사용 중단](https://technet.microsoft.com/library/dn535775.aspx)|Windows Server 2003 도메인 기능 수준에서는 FRS가 SYSVOL을 복제하는 데 사용되므로 이 기능 수준도 더 이상 사용되지 않습니다. 따라서 Windows Server 2012 R2를 실행하는 서버에서 새 도메인을 만들려면 도메인 기능 수준이 Windows Server 2008 이상이어야 합니다. Windows Server 2003 도메인 기능 수준이;는 기존 도메인에 Windows Server 2012 R2를 실행 하는 도메인 컨트롤러를 추가할 수 있습니다. 만 해당 수준에서 새 도메인을 만들 수 없습니다.|  
 |[새 도메인 및 포리스트 기능 수준](../active-directory-functional-levels.md)|Windows Server 2012 R2에 대한 새로운 기능 수준이 있습니다. 새로운 기능은 Windows Server 2012 R2 DFL에서 사용할 수 있습니다.|  

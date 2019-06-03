@@ -14,7 +14,7 @@ ms.author: pashort
 author: shortpatti
 ms.openlocfilehash: ba334e4aee0232d939a52f1173885a5f457adbc8
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59883864"
@@ -144,7 +144,7 @@ Windows Server 2016, Windows Server 2012 R2, Windows Server 2012를 실행 하�
 
 BranchCache는 공유 데이터 캐시를 통해 네트워크 응용 프로그램의 성능을 개선하고 대역폭 사용량을 줄일 수 있습니다.  즉, BranchCache는 작업자들이 클라우드에 배포된 서버를 사용하는 본사와 지점의 생산성을 높여 줍니다.
 
-BranchCache는 하드웨어를 새로 추가하거나 네트워크 토폴로지를 변경하지 않고도 사용할 수 있어 여러 사무실 위치와 공용 및 사설 클라우드 간의 통신을 개선하는 데 최적의 솔루션입니다.
+BranchCache는 하드웨어를 새로 추가하거나 네트워크 토폴로지를 변경하지 않고도 사용할 수 있어 여러 사무실 위치와 공용 및 프라이빗 클라우드 간의 통신을 개선하는 데 최적의 솔루션입니다.
 
 > [!NOTE]
 > 일부 웹 프록시 비표준 Content-encoding 헤더를 처리할 수 없는 때문에 하이퍼 텍스트 전송 프로토콜 보안 (HTTPS) 및 HTTP가 아닌 BranchCache를 사용 하는 것이 좋습니다.
@@ -433,10 +433,10 @@ BranchCache는 암호화 알고리즘에 적합한 초기화 벡터를 생성하
 
 - 클라이언트 컴퓨터가 호스트 캐시 서버에 제공할 수 있는 세그먼트 내에 블록 집합이 포함되어 있어야 합니다. 클라이언트는 제공된 세그먼트에 대한 콘텐츠 정보를 제공해야 합니다. 이 세그먼트는 세그먼트 ID, 세그먼트 데이터 해시, 세그먼트 암호 및 세그먼트 내에 포함된 모든 블록 해시 목록으로 구성됩니다.
 
-- 호스트 캐시에 대 한 인증서와 연결 된 개인 키에는 Windows Server 2008 R2, 호스트 캐시 서버를 실행 하는 서버 필수 이며 인증서를 발급 한 인증 기관 (CA) 지점에서 클라이언트 컴퓨터에서 신뢰할 수 있어야 합니다. 그러면 클라이언트와 서버가 HTTPS 서버 인증에 정상적으로 참가할 수 있습니다.
+- Windows Server 2008 R2를 실행하는 호스트 캐시 서버의 경우, 호스팅된 캐시 서버 인증서와 관련 프라이빗 키가 필요하며 인증서를 발급하는 CA(인증 기관)는 지점에 있는 클라이언트 컴퓨터에서 신뢰할 수 있어야 합니다. 그러면 클라이언트와 서버가 HTTPS 서버 인증에 정상적으로 참가할 수 있습니다.
 
     > [!IMPORTANT]
-    > 호스트 캐시 서버 인증서와 연결 된 개인 키에는 Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012를 실행 하는 호스트 캐시 서버가 필요 하지 않습니다.  
+    > 호스트 캐시 서버 인증서와 연결된 프라이빗 키에는 Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012를 실행하는 호스트 캐시 서버가 필요하지 않습니다.  
 
 - 클라이언트 컴퓨터는 호스트 캐시 서버가 BranchCache 트래픽을 수신 대기하는 TCP(Transmission Control Protocol) 포트 번호와 호스트 캐시 서버의 컴퓨터 이름을 사용해 구성되어 있어야 합니다. 호스트 캐시 서버 인증서는이 포트에 바인딩되어 있습니다. 호스트 캐시 서버의 컴퓨터 이름은 호스트 캐시 서버가 도메인 구성원 컴퓨터인 경우 FQDN(정규화된 도메인 이름)일 수 있으며, 호스트된 캐시 서버가 도메인 구성원이 아닌 경우에는 컴퓨터의 NetBIOS 이름일 수 있습니다.
 

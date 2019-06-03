@@ -18,7 +18,7 @@ ms.locfileid: "66192146"
 ---
 # <a name="enroll-an-ssl-certificate-for-ad-fs"></a>AD FS용 SSL 인증서 등록
 
-Active Directory Federation Services \(AD FS\) Secure Socket Layer 인증서가 필요 \(SSL\) 페더레이션 서버 팜의 각 페더레이션 서버의 서버 인증. 팜의 각 페더레이션 서버에 동일한 인증서를 사용할 수 있습니다. 인증서와 해당 개인 키는 모두 사용할 수 있는 상태여야 합니다. 예를 들어 .pfx 파일에 인증서와 해당 개인 키가 있는 경우 AD FS(Active Directory Federation Services) 구성 마법사에 직접 파일을 가져올 수 있습니다. 이 SSL 인증서에는 다음 사항이 포함되어 있어야 합니다.  
+Active Directory Federation Services \(AD FS\) Secure Socket Layer 인증서가 필요 \(SSL\) 페더레이션 서버 팜의 각 페더레이션 서버의 서버 인증. 팜의 각 페더레이션 서버에 동일한 인증서를 사용할 수 있습니다. 인증서와 해당 프라이빗 키는 모두 사용할 수 있는 상태여야 합니다. 예를 들어 .pfx 파일에 인증서와 해당 프라이빗 키가 있는 경우 AD FS(Active Directory Federation Services) 구성 마법사에 직접 파일을 가져올 수 있습니다. 이 SSL 인증서에는 다음 사항이 포함되어 있어야 합니다.  
   
 1.  주체 이름과 주체 대체 이름에는 fs.contoso.com과 같은 페더레이션 서비스 이름에 포함 해야 합니다.  
   
