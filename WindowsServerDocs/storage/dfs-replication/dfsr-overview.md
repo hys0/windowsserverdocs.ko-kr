@@ -8,7 +8,7 @@ manager: elizapo
 ms.author: jgerend
 ms.openlocfilehash: 17fa97e28d099806c9280e42dd900e8d6c708641
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59850244"
@@ -50,7 +50,7 @@ DFS 복제를 배포하려면 다음과 같이 서버를 구성해야 합니다.
 
 Windows 서버를 사용 하 여 Azure에서 가상 컴퓨터에서 DFS 복제를 사용 하는 테스트 그러나 몇 가지 제한 사항 및 수행 해야 하는 요구 사항입니다.
 
-- SYSVOL 폴더 외 모든 것을 복제하기 위해 DFS 복제를 실행하는 서버를 복원하는 데 스냅숏 또는 저장된 상태를 사용하면 DFS 복제가 실패할 수 있는데, 이 경우 특별한 데이터베이스 복구 단계가 필요합니다. 마찬가지로, 가상 컴퓨터를 내보내거나, 복제 또는 복사하지 마세요. 자세한 내용은 Microsoft 기술 자료 문서 [2517913](http://support.microsoft.com/kb/2517913) 및 [안전하게 DFSR 가상화](https://blogs.technet.microsoft.com/filecab/2013/04/05/safely-virtualizing-dfsr/)를 참조하세요.
+- SYSVOL 폴더 외 모든 것을 복제하기 위해 DFS 복제를 실행하는 서버를 복원하는 데 스냅샷 또는 저장된 상태를 사용하면 DFS 복제가 실패할 수 있는데, 이 경우 특별한 데이터베이스 복구 단계가 필요합니다. 마찬가지로, 가상 컴퓨터를 내보내거나, 복제 또는 복사하지 마세요. 자세한 내용은 Microsoft 기술 자료 문서 [2517913](http://support.microsoft.com/kb/2517913) 및 [안전하게 DFSR 가상화](https://blogs.technet.microsoft.com/filecab/2013/04/05/safely-virtualizing-dfsr/)를 참조하세요.
 - 가상 컴퓨터에서 호스트된 복제된 폴더에 데이터를 백업할 때 게스트 가상 컴퓨터 내에서 백업 소프트웨어를 사용해야 합니다.
 - DFS 복제를 사용 하면 물리적 또는 가상화 된 도메인 컨트롤러에 대 한 액세스-Azure AD와 직접 통신할 수 없습니다.
 - DFS 복제를 사용하려면 온-프레미스 복제 그룹 구성원과 Azure VM에서 호스트된 구성원 간의 VPN 연결이 필요합니다. 또한 RPC 끝점 매퍼(포트 135) 및 49152와 65535 사이에 임의로 할당된 포트를 VPN 연결을 통해 전달할 수 있도록 온-프레미스 라우터(예: Forefront Threat Management Gateway)를 구성해야 합니다. 임의 포트 대신 정적 포트를 지정 하려면 Set-dfsrmachineconfiguration cmdlet 또는 Dfsrdiag 명령줄 도구를 사용할 수 있습니다. DFS 복제에 고정 포트를 지정하는 방법에 대한 자세한 내용은 [Set-DfsrServiceConfiguration](https://docs.microsoft.com/powershell/module/dfsr/set-dfsrserviceconfiguration)을 참조하세요. Windows Server를 관리하기 위해 열려는 관련 포트에 대한 자세한 내용은 Microsoft 기술 자료 문서 [832017](http://support.microsoft.com/kb/832017) 을 참조하세요.

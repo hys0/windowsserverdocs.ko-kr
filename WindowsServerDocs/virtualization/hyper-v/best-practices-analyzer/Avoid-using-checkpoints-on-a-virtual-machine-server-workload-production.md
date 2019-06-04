@@ -12,7 +12,7 @@ author: KBDAzure
 ms.date: 8/16/2016
 ms.openlocfilehash: 166ef839a40452cc4156144e10e9c666e7ce3472
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59856154"
@@ -35,7 +35,7 @@ ms.locfileid: "59856154"
 다음 섹션에서는 기울임꼴이이 문제에 대 한 모범 사례 분석기 도구에 표시 되는 UI 텍스트를 나타냅니다.
 
 > [!NOTE]  
-> Windows Server 2012 R2 가상 컴퓨터 스냅숏 System Center Virtual Machine 관리에 사용 되는 용어와 일치 하도록 Hyper-v 관리자에서 가상 컴퓨터 검사점으로 바뀌었습니다. 자세한 내용은 다음을 참조 하십시오. [검사점 및 스냅숏 개요](https://technet.microsoft.com/library/dn818483.aspx)합니다.  
+> Windows Server 2012 R2 가상 머신 스냅샷 System Center Virtual Machine 관리에 사용되는 용어와 일치하도록 Hyper-v 관리자에서 가상 머신 검사점으로 바뀌었습니다. 자세한 내용은 다음을 참조 하십시오. [검사점 및 스냅샷 개요](https://technet.microsoft.com/library/dn818483.aspx)합니다.  
   
 ## <a name="issue"></a>문제점  
   

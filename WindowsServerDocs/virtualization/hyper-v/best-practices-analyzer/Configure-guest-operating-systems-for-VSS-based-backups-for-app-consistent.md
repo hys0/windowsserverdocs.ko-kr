@@ -1,5 +1,5 @@
 ---
-title: Hyper-v 복제본에 대 한 응용 프로그램 일치 스냅숏을 사용할 수 있도록 VSS 기반 백업에 대 한 게스트 운영 체제를 구성 합니다.
+title: Hyper-v 복제본에 대 한 응용 프로그램 일치 스냅샷을 사용할 수 있도록 VSS 기반 백업에 대 한 게스트 운영 체제를 구성 합니다.
 description: 이 모범 사례 분석기 규칙에 대 한 텍스트의 온라인 버전입니다.
 ms.prod: windows-server-threshold
 ms.service: na
@@ -12,12 +12,12 @@ author: KBDAzure
 ms.date: 8/16/2016
 ms.openlocfilehash: b4300dd4b7adc0cef8544215b5da62044a97301b
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59863894"
 ---
-# <a name="configure-guest-operating-systems-for-vss-based-backups-to-enable-application-consistent-snapshots-for-hyper-v-replica"></a>Hyper-v 복제본에 대 한 응용 프로그램 일치 스냅숏을 사용할 수 있도록 VSS 기반 백업에 대 한 게스트 운영 체제를 구성 합니다.
+# <a name="configure-guest-operating-systems-for-vss-based-backups-to-enable-application-consistent-snapshots-for-hyper-v-replica"></a>Hyper-v 복제본에 대 한 응용 프로그램 일치 스냅샷을 사용할 수 있도록 VSS 기반 백업에 대 한 게스트 운영 체제를 구성 합니다.
 
 >적용 대상: Windows Server 2016
 

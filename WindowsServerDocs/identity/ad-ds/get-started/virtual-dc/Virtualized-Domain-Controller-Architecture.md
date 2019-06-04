@@ -11,7 +11,7 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adds
 ms.openlocfilehash: d69ccfd15004619f890c6f5c1cb630c62e16256b
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59889194"
@@ -60,7 +60,7 @@ VM-GenerationID를 지원하는 하이퍼바이저와 지원하지 않는 하이
   
     1.  ID가 일치하면 새 가상 컴퓨터가 아니므로 복제가 진행되지 않습니다. DCCloneConfig.xml 파일이 있는 경우 도메인 컨트롤러에서 복제를 방지하기 위해 시간 날짜 스탬프를 사용하여 파일 이름을 바꿉니다. 서버는 계속 정상적으로 부팅됩니다. 가상 도메인 컨트롤러의 모든 다시 부팅은 Windows Server 2012에서 이 방식으로 작동합니다.  
   
-    2.  두 ID가 일치하지 않으면 이전 도메인 컨트롤러의 NTDS.DIT가 포함된 새 가상 컴퓨터(또는 복원된 스냅숏)입니다. DCCloneConfig.xml 파일이 있는 경우 도메인 컨트롤러에서 복제 작업을 계속 진행합니다. 파일이 없으면 스냅숏 복원 작업을 계속합니다. [Virtualized domain controller safe restore architecture](../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Architecture.md#BKMK_SafeRestoreArch)를 참조하세요.  
+    2.  두 ID가 일치하지 않으면 이전 도메인 컨트롤러의 NTDS.DIT가 포함된 새 가상 컴퓨터(또는 복원된 스냅샷)입니다. DCCloneConfig.xml 파일이 있는 경우 도메인 컨트롤러에서 복제 작업을 계속 진행합니다. 파일이 없으면 스냅샷 복원 작업을 계속합니다. [Virtualized domain controller safe restore architecture](../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Architecture.md#BKMK_SafeRestoreArch)를 참조하세요.  
   
     3.  하이퍼바이저에서 비교를 위한 VM-Generation ID를 제공하지 않지만 DCCloneConfig.xml 파일이 있는 경우, 게스트는 파일 이름을 바꾼 다음 중복 도메인 컨트롤러로부터 네트워크를 보호하기 위해 DSRM로 부팅됩니다. dccloneconfig.xml 파일이 없으면 게스트가 정상적으로 부팅됩니다(이 경우 네트워크에 중복 도메인 컨트롤러가 있을 수 있음). 이 중복 도메인 컨트롤러를 회수하는 방법에 대한 자세한 내용은 Microsoft 기술 자료 문서 [2742970](https://support.microsoft.com/kb/2742970)을 참조하세요.  
   
@@ -112,7 +112,7 @@ VM-GenerationID를 지원하는 하이퍼바이저와 지원하지 않는 하이
   
 15. 게스트가 다른 도메인 컨트롤러(기본 Windows 시간 서비스 계층에 있는 도메인 컨트롤러이므로 PDCE를 사용함)와의 NT5DS(Windows NTP) 시간 동기화를 강제로 실행합니다. 게스트가 PDCE에 연결하며, 모든 기존 Kerberos 티켓이 플러시됩니다.  
   
-16. 게스트가 DFSR 또는 NTFRS 서비스를 자동으로 실행되도록 구성합니다. 모든 기존 DFSR 및 NTFRS 데이터베이스 파일을 삭제 하는 게스트 (기본값: c:\windows\ntfrs and c:\system volume information\dfsr\\ *< database_GUID >*), 다음 서비스를 시작할 때 SYSVOL의 신뢰할 수 없는 동기화를 강제 합니다. 나중에 동기화가 시작될 때 SYSVOL을 미리 시드하기 위해 게스트는 SYSVOL의 파일 내용은 삭제하지 않습니다.  
+16. 게스트가 DFSR 또는 NTFRS 서비스를 자동으로 실행되도록 구성합니다. 모든 기존 DFSR 및 NTFRS 데이터베이스 파일을 삭제 하는 게스트 (기본값: c:\windows\ntfrs and c:\system volume information\dfsr\\ *< database_GUID >* ), 다음 서비스를 시작할 때 SYSVOL의 신뢰할 수 없는 동기화를 강제 합니다. 나중에 동기화가 시작될 때 SYSVOL을 미리 시드하기 위해 게스트는 SYSVOL의 파일 내용은 삭제하지 않습니다.  
   
 17. 게스트의 이름이 바뀝니다. 일반적인 수준 올리기에서처럼 c:\windows\system32에 포함된 템플릿 데이터베이스를 사용하는 대신 기존 NTDS.DIT 데이터베이스 파일을 원본으로 사용하여 게스트의 DS 역할 서버 서비스가 AD DS 구성(수준 올리기)을 시작합니다.  
   
@@ -145,22 +145,22 @@ VM-GenerationID를 지원하는 하이퍼바이저와 지원하지 않는 하이
 ## <a name="BKMK_SafeRestoreArch"></a>가상화 된 도메인 컨트롤러 안전 복원 아키텍처  
   
 ### <a name="overview"></a>개요  
-AD DS에서는 하이퍼바이저 플랫폼을 기반으로 **VM-Generation ID** 라는 식별자를 노출하여 가상 컴퓨터의 스냅숏 복원을 검색합니다. AD DS는 도메인 컨트롤러의 수준을 올리는 동안 초기에 이 식별자 값을 해당 데이터베이스(NTDS.DIT)에 저장합니다. 관리자가 이전 스냅숏에서 가상 컴퓨터를 복원하면 가상 컴퓨터의 현재 VM-Generation ID 값이 데이터베이스에 있는 값과 비교됩니다. 두 값이 서로 다르면 도메인 컨트롤러에서 호출 ID를 다시 설정하고 RID 풀을 삭제하여 USN이 다시 사용되거나 잠재적으로 중복된 보안 주체가 생성되는 것을 방지합니다. 안전 복원이 발생할 수 있는 다음 두 가지 시나리오가 있습니다.  
+AD DS에서는 하이퍼바이저 플랫폼을 기반으로 **VM-Generation ID** 라는 식별자를 노출하여 가상 컴퓨터의 스냅샷 복원을 검색합니다. AD DS는 도메인 컨트롤러의 수준을 올리는 동안 초기에 이 식별자 값을 해당 데이터베이스(NTDS.DIT)에 저장합니다. 관리자가 이전 스냅샷에서 가상 컴퓨터를 복원하면 가상 컴퓨터의 현재 VM-Generation ID 값이 데이터베이스에 있는 값과 비교됩니다. 두 값이 서로 다르면 도메인 컨트롤러에서 호출 ID를 다시 설정하고 RID 풀을 삭제하여 USN이 다시 사용되거나 잠재적으로 중복된 보안 주체가 생성되는 것을 방지합니다. 안전 복원이 발생할 수 있는 다음 두 가지 시나리오가 있습니다.  
   
--   종료되어 있는 동안 스냅숏이 복원된 후 가상 도메인 컨트롤러가 시작된 경우  
+-   종료되어 있는 동안 스냅샷이 복원된 후 가상 도메인 컨트롤러가 시작된 경우  
   
--   실행 중인 가상 도메인 컨트롤러에서 스냅숏이 복원된 경우  
+-   실행 중인 가상 도메인 컨트롤러에서 스냅샷이 복원된 경우  
   
-    스냅숏의 가상화된 도메인 컨트롤러가 종료되지 않고 일시 중단된 상태에 있는 경우 새 RID 풀 요청을 트리거하려면 AD DS 서비스를 다시 시작해야 합니다. 서비스 스냅인을 사용하거나 Windows PowerShell(Restart-service NTDS-force)을 사용하여 AD DS 서비스를 다시 시작할 수 있습니다.  
+    스냅샷의 가상화된 도메인 컨트롤러가 종료되지 않고 일시 중단된 상태에 있는 경우 새 RID 풀 요청을 트리거하려면 AD DS 서비스를 다시 시작해야 합니다. 서비스 스냅인을 사용하거나 Windows PowerShell(Restart-service NTDS-force)을 사용하여 AD DS 서비스를 다시 시작할 수 있습니다.  
   
 다음 섹션에는 각 시나리오의 안전 복원에 대해 자세히 설명합니다.  
   
 ### <a name="safe-restore-detailed-processing"></a>안전 복원 세부 처리  
-다음 순서도에서는 종료되어 있는 동안 스냅숏이 복원된 후 가상 도메인 컨트롤러가 시작된 경우에 안전 복원이 발생하는 방식을 보여 줍니다.  
+다음 순서도에서는 종료되어 있는 동안 스냅샷이 복원된 후 가상 도메인 컨트롤러가 시작된 경우에 안전 복원이 발생하는 방식을 보여 줍니다.  
   
 ![가상화 된 DC 아키텍처](media/Virtualized-Domain-Controller-Architecture/ADDS_VDC_VirtualizationSafeguardsDuringNormalBoot.png)  
   
-1.  스냅숏이 복원된 후 가상 컴퓨터가 부팅된 경우 스냅숏 복원으로 인해 하이퍼바이저 호스트에서 새 VM-Generation ID를 제공합니다.  
+1.  스냅샷이 복원된 후 가상 컴퓨터가 부팅된 경우 스냅샷 복원으로 인해 하이퍼바이저 호스트에서 새 VM-Generation ID를 제공합니다.  
   
 2.  가상 컴퓨터의 새 VM-Generation ID는 데이터베이스에 있는 VM-Generation ID와 비교됩니다. 두 ID는 일치하지 않으므로 가상화 세이프가드(이전 섹션의 3단계 참조)가 사용됩니다. 복원에서 적용이 완료되면 해당 AD DS 컴퓨터 개체에 설정된 VM-GenerationID가 하이퍼바이저 호스트에서 제공한 새 ID와 일치하도록 업데이트됩니다.  
   
@@ -171,28 +171,28 @@ AD DS에서는 하이퍼바이저 플랫폼을 기반으로 **VM-Generation ID**
     2.  도메인 컨트롤러 데이터베이스에 대한 새 호출 ID 설정  
   
 > [!NOTE]  
-> 안전 복원의 이 부분은 복제 프로세스와 겹칩니다. 이 프로세스는 가상 도메인 컨트롤러의 안전 복원에 대한 프로세스이지만 스냅숏이 복원된 다음 부팅된 후에는 복제 프로세스 중에 동일한 단계가 발생합니다.  
+> 안전 복원의 이 부분은 복제 프로세스와 겹칩니다. 이 프로세스는 가상 도메인 컨트롤러의 안전 복원에 대한 프로세스이지만 스냅샷이 복원된 다음 부팅된 후에는 복제 프로세스 중에 동일한 단계가 발생합니다.  
   
-다음 다이어그램에서는 실행 중인 가상 도메인 컨트롤러에서 스냅숏이 복원된 경우 가상화 안전 조치가 USN 롤백으로 인한 확산을 방지하는 방법을 보여 줍니다.  
+다음 다이어그램에서는 실행 중인 가상 도메인 컨트롤러에서 스냅샷이 복원된 경우 가상화 안전 조치가 USN 롤백으로 인한 확산을 방지하는 방법을 보여 줍니다.  
   
 ![가상화 된 DC 아키텍처](media/Virtualized-Domain-Controller-Architecture/ADDS_VDC_VirtualizationSafeguardsDuringSnapShotRestore.png)  
   
 > [!NOTE]  
 > 위 그림은 개념을 설명하기 위해 간소화된 것입니다.  
   
-1.  T1 시점에 하이퍼바이저 관리자는 가상 DC1의 스냅숏을 만듭니다. 이 시점에 DC1의 USN 값(실제로는 **highestCommittedUsn**)은 100이고, InvocationId(위 다이어그램에 ID로 표시) 값은 A(실제로는 GUID일 수 있음)입니다. savedVMGID 값은 DC의 DIT 파일에 있는 VM-GenerationID입니다(DC 컴퓨터 개체에 대해 **msDS-GenerationId**특성에 저장됨). VMGID는 가상 컴퓨터 드라이버에서 사용할 수 있는 VM-GenerationId의 현재 값입니다. 이 값은 하이퍼바이저에서 제공됩니다.  
+1.  T1 시점에 하이퍼바이저 관리자는 가상 DC1의 스냅샷을 만듭니다. 이 시점에 DC1의 USN 값(실제로는 **highestCommittedUsn**)은 100이고, InvocationId(위 다이어그램에 ID로 표시) 값은 A(실제로는 GUID일 수 있음)입니다. savedVMGID 값은 DC의 DIT 파일에 있는 VM-GenerationID입니다(DC 컴퓨터 개체에 대해 **msDS-GenerationId**특성에 저장됨). VMGID는 가상 컴퓨터 드라이버에서 사용할 수 있는 VM-GenerationId의 현재 값입니다. 이 값은 하이퍼바이저에서 제공됩니다.  
   
 2.  나중에 T2 시점에 100명의 사용자가 이 DC에 추가됩니다. 사용자를 T1과 T2 사이에 이 DC에서 수행되었을 수 있는 업데이트의 예로 간주하면 됩니다. 이러한 업데이트에는 실제로 사용자 만들기, 그룹 만들기, 암호 업데이트, 특성 업데이트 등이 혼합될 수 있습니다. 이 예에서는 각 업데이트에서 하나의 고유한 USN(실제로는 사용자 만들기에 둘 이상의 USN이 사용될 수 있음)을 사용합니다. 이러한 업데이트를 커밋하기 전에 DC1에서 해당 데이터베이스에 있는 VM-GenerationID 값(savedVMGID)이 드라이버에서 사용할 수 있는 현재 값(VMGID)과 일치하는지 확인합니다. 아직 롤백이 발생하지 않아 두 값이 동일하므로 업데이트가 커밋되고 USN이 200까지 이동합니다. 이는 다음 업데이트에서 USN 201을 사용할 수 있음을 나타냅니다. InvocationId, savedVMGID 또는 VMGID는 변경되지 않습니다. 이러한 업데이트는 다음 복제 주기에서 DC2에 복제됩니다. DC2 업데이트 상위 워터 마크 (및 **UptoDatenessVector**) 표현 DC1(A) 단순히 여기서 @USN = 200으로 표시 합니다. 즉, DC2는 InvocationId A 컨텍스트에서 USN 200까지 DC1의 모든 업데이트를 인식합니다.  
   
-3.  T3 시점에는 T1 시점에 생성된 스냅숏이 DC1에 적용됩니다. DC1이 롤백되었으므로 해당 USN이 100으로 롤백됩니다. 이는 101부터 USN을 사용하여 후속 업데이트와 연결할 수 있음을 나타냅니다. 그러나 이 시점에서는 VMGID 값이 VM-GenerationID를 지원하는 하이퍼바이저의 값과 다를 수 있습니다.  
+3.  T3 시점에는 T1 시점에 생성된 스냅샷이 DC1에 적용됩니다. DC1이 롤백되었으므로 해당 USN이 100으로 롤백됩니다. 이는 101부터 USN을 사용하여 후속 업데이트와 연결할 수 있음을 나타냅니다. 그러나 이 시점에서는 VMGID 값이 VM-GenerationID를 지원하는 하이퍼바이저의 값과 다를 수 있습니다.  
   
-4.  이후에 DC1은 업데이트를 수행할 때 해당 데이터베이스에 있는 VM-GenerationId 값(savedVMGID)이 가상 컴퓨터 드라이버의 값(VMGID)과 동일한지 확인합니다. 이 예에서는 같지 않으므로 DC1은 이를 롤백을 암시하는 것으로 추론하여 가상화 안전 조치를 트리거합니다. 즉, 해당 InvocationId(ID = B)를 다시 설정하고 RID 풀(위 다이어그램에는 표시되지 않음)을 삭제합니다. 그런 다음 해당 데이터베이스에 새 VMGID 값을 저장 하 고 새 InvocationId B.의 컨텍스트에서 이러한 업데이트 (USN 101-250) 커밋 다음 복제 주기에 d c 2를 인식 하지 못하므로 d c 1에서 InvocationId B의 컨텍스트에서 없으므로 모든 InvocationID b에 연결 하는 d c 1에서 요청 따라서 스냅숏 적용 후 d c 1에서 수행 된 업데이트가 안전 하 게 수렴 합니다. 또한 T2에 DC1에서 수행된 업데이트 집합(스냅숏 복원 후 DC1에서 손실된)은 DC2에 복제되었으므로 예정된 다음 복제 시 DC1에 다시 복제됩니다(DC1에 다시 연결된 점선으로 표시).  
+4.  이후에 DC1은 업데이트를 수행할 때 해당 데이터베이스에 있는 VM-GenerationId 값(savedVMGID)이 가상 컴퓨터 드라이버의 값(VMGID)과 동일한지 확인합니다. 이 예에서는 같지 않으므로 DC1은 이를 롤백을 암시하는 것으로 추론하여 가상화 안전 조치를 트리거합니다. 즉, 해당 InvocationId(ID = B)를 다시 설정하고 RID 풀(위 다이어그램에는 표시되지 않음)을 삭제합니다. 그런 다음, 해당 데이터베이스에 새 VMGID 값을 저장 하 고 새 InvocationId B.의 컨텍스트에서 이러한 업데이트 (USN 101-250) 커밋 다음 복제 주기에 DC2를 인식 하지 못하므로 DC1에서 InvocationId B의 컨텍스트에서 없으므로 모든 InvocationID B에 연결 하는 DC1에서 요청 따라서 스냅샷 적용 후 DC1에서 수행된 업데이트가 안전하게 수렴합니다. 또한 T2에 DC1에서 수행된 업데이트 집합(스냅샷 복원 후 DC1에서 손실된)은 DC2에 복제되었으므로 예정된 다음 복제 시 DC1에 다시 복제됩니다(DC1에 다시 연결된 점선으로 표시).  
   
 게스트에서 가상화 안전 조치를 적용한 후 NTDS는 파트너 도메인 컨트롤러에서 신뢰할 수 없는 방식으로 Active Directory 개체 차이점을 인바운드로 복제합니다. 대상 디렉터리 서비스의 최신 벡터가 이에 따라 업데이트된 다음 게스트에서 SYSVOL을 동기화합니다.  
   
 -   FRS를 사용하는 경우 게스트는 NTFRS 서비스를 중지하고 D2 BURFLAGS 레지스트리 값을 설정합니다. 그런 다음 가능한 경우 변경되지 않은 기존 SYSVOL 데이터를 다시 사용하여 신뢰할 수 없는 방식으로 인바운드 복제를 수행하는 NTFRS 서비스를 시작합니다.  
   
--   DFSR를 사용 하는 게스트 DFSR 서비스를 중지 하 고 DFSR 데이터베이스 파일 삭제 (기본 위치: %systemroot%\system volume information\dfsr\\*<database GUID>*). 그런 다음 가능한 경우 변경되지 않은 기존 SYSVOL 데이터를 다시 사용하여 신뢰할 수 없는 방식으로 인바운드 복제를 수행하는 DFSR 서비스를 시작합니다.  
+-   DFSR를 사용 하는 게스트 DFSR 서비스를 중지 하 고 DFSR 데이터베이스 파일 삭제 (기본 위치: %systemroot%\system volume information\dfsr\\ *<database GUID>* ). 그런 다음 가능한 경우 변경되지 않은 기존 SYSVOL 데이터를 다시 사용하여 신뢰할 수 없는 방식으로 인바운드 복제를 수행하는 DFSR 서비스를 시작합니다.  
   
 > [!NOTE]  
 > -   하이퍼바이저에서 비교할 수 있는 VM-Generation ID를 제공하지 않는 경우에는 하이퍼바이저에서 가상화 안전 조치를 지원하지 않으므로 게스트가 Windows Server 2008 R2 이하를 실행하는 가상화된 도메인 컨트롤러처럼 작동합니다. 게스트는 파트너 DC에서 마지막으로 확인한 가장 높은 USN을 초과하지 않은 USN으로 복제를 시작하려는 시도가 있는 경우 USN 롤백 격리 보호를 구현합니다. USN 롤백 격리 보호에 대한 자세한 내용은 [USN 및 USN 롤백](https://technet.microsoft.com/library/virtual_active_directory_domain_controller_virtualization_hyperv(WS.10).aspx)을 참조하세요.  

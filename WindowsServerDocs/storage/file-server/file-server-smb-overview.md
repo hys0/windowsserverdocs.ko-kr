@@ -10,7 +10,7 @@ ms.date: 07/09/2018
 ms.localizationpriority: medium
 ms.openlocfilehash: fc4c8b341ee78db80f862ee412400f0a930fe810
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59845054"
@@ -29,7 +29,7 @@ SMB(서버 메시지 블록) 프로토콜은 컴퓨터의 응용 프로그램에
 
 이 섹션에서는 새로운 SMB 3.0 프로토콜에 대한 몇 가지 새롭고 유용한 방법에 대해 설명합니다.
 
-* **가상화용 파일 저장소(SMB를 통한 Hyper-V™)**. Hyper-V는 SMB 3.0 프로토콜을 통한 파일 공유에 구성, VHD(가상 하드 디스크) 파일 및 스냅숏 등의 가상 컴퓨터 파일을 저장할 수 있습니다. 이 방법은 Hyper-V를 클러스터의 공유 파일 저장소와 함께 사용하는 클러스터된 파일 서버와 독립 실행형 파일 서버에 모두 사용할 수 있습니다.
+* **가상화용 파일 저장소(SMB를 통한 Hyper-V™)** . Hyper-V는 SMB 3.0 프로토콜을 통한 파일 공유에 구성, VHD(가상 하드 디스크) 파일 및 스냅샷 등의 가상 컴퓨터 파일을 저장할 수 있습니다. 이 방법은 Hyper-V를 클러스터의 공유 파일 저장소와 함께 사용하는 클러스터된 파일 서버와 독립 실행형 파일 서버에 모두 사용할 수 있습니다.
 * **SMB를 통한 Microsoft SQL Server**. SQL Server는 SMB 파일 공유에 사용자 데이터베이스 파일을 저장할 수 있습니다. 현재 이 방법은 독립 실행형 SQL 서버용 SQL Server 2008 R2에서만 지원됩니다. 후속 버전의 SQL Server에서는 클러스터된 SQL 서버와 시스템 데이터베이스에 대한 지원이 추가됩니다.
 * **기존의 최종 사용자 데이터용 저장소**. SMB 3.0 프로토콜을 사용하면 정보 근로자(또는 클라이언트)의 워크로드 환경을 개선할 수 있습니다. 즉, 지점 사용자가 WAN(광역 네트워크)을 통해 데이터에 액세스할 때 경험하게 되는 응용 프로그램 대기 시간을 단축하고 도청 공격으로부터 데이터를 보호할 수 있습니다.
 

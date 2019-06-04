@@ -10,7 +10,7 @@ ms.author: wgries
 ms.date: 05/09/2017
 ms.openlocfilehash: 4376dbb2c172a82c4ab64dc63acefbc37457110f
 ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/09/2019
 ms.locfileid: "65476038"
@@ -32,7 +32,7 @@ ms.locfileid: "65476038"
 
 - 사용자 파일 공유에 같거나 유사한 파일의 여러 복사본이 있을 수 있습니다.
 - 가상화 게스트가 VM 간에 거의 동일할 수 있습니다.
-- 매일 생성되는 백업 스냅숏이 약간의 차이만 있을 수 있습니다.
+- 매일 생성되는 백업 스냅샷이 약간의 차이만 있을 수 있습니다.
 
 데이터 중복 제거에서 얻을 수 있는 공간 절약은 볼륨의 데이터 집합 또는 워크로드에 따라 달라집니다. 중복성이 높은 데이터 집합은 최적화 비율이 최대 95%에 이르거나 저장소 사용률이 20배 감소할 수 있습니다. 다음 표에는 다양한 콘텐츠 유형에 대한 일반적인 중복 제거 절감률이 나와 있습니다.
 

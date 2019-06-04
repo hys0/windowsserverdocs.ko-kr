@@ -11,7 +11,7 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adds
 ms.openlocfilehash: 0203c6de55a4e691d7c484351a3280c49891f317
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59866284"
@@ -33,7 +33,7 @@ Hyper-V 복제본에 대한 자세한 내용은 [Hyper-V 복제본 개요](https
   
 ## <a name="windows-server-2012-or-newer-domain-controllers-required"></a>Windows Server 2012 또는 필요한 새 도메인 컨트롤러
 
-Windows Server 2012 Hyper-v는 Vm-generationid (VMGenID)를 도입 합니다. VMGenID는 중요한 변경 내용이 발생한 경우 하이퍼바이저에서 게스트 운영 체제와 통신할 수 있는 방법을 제공합니다. 예를 들어 하이퍼바이저는 스냅숏 복원(백업 복원이 아닌 Hyper-V 스냅숏 복원 기술)이 발생한 가상화된 DC와 통신할 수 있습니다. Windows Server 2012 이상 버전의 AD DS는 VMGenID VM 기술을 인식 및 자체를 보호할 수 있도록 하는 스냅숏 복원 같은 하이퍼바이저 작업이 수행 된 시기를 감지 하는 데 사용 합니다.  
+Windows Server 2012 Hyper-v는 Vm-generationid (VMGenID)를 도입 합니다. VMGenID는 중요한 변경 내용이 발생한 경우 하이퍼바이저에서 게스트 운영 체제와 통신할 수 있는 방법을 제공합니다. 예를 들어 하이퍼바이저는 스냅샷 복원(백업 복원이 아닌 Hyper-V 스냅샷 복원 기술)이 발생한 가상화된 DC와 통신할 수 있습니다. Windows Server 2012 이상 버전의 AD DS는 VMGenID VM 기술을 인식 및 자체를 보호할 수 있도록 하는 스냅숏 복원 같은 하이퍼바이저 작업이 수행 된 시기를 감지 하는 데 사용 합니다.  
   
 > [!NOTE]
 > AD DS Windows Server 2012 Dc에서 이상만 VMGenID;에서 이러한 안전 조치를 제공 합니다. 모든 이전 버전의 Windows Server를 실행 하는 Dc는 가상화 된 DC가 스냅숏 복원 같은 지원 되지 않는 메커니즘을 사용 하 여 복원 되는 경우 발생할 수 있는 USN 롤백이 같은 문제가 적용 됩니다. 이러한 안전 조치와 각 안전 조치가 트리거되는 경우에 대한 자세한 내용은 [가상화된 도메인 컨트롤러 아키텍처](https://technet.microsoft.com/library/jj574118.aspx)를 참조하세요.  

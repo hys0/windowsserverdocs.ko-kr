@@ -10,7 +10,7 @@ ms.author: jgerend
 ms.date: 09/11/2018
 ms.openlocfilehash: 9514392da133911c900f68fc8f1be260b6c91138
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59873034"
@@ -365,7 +365,7 @@ ms.locfileid: "59873034"
 </tbody>
 </table>
 
-## <a name="snapshot-limits"></a>스냅숏 제한 사항
+## <a name="snapshot-limits"></a>스냅샷 제한 사항
 
 <table>
 <colgroup>
@@ -387,7 +387,7 @@ ms.locfileid: "59873034"
 <td></td>
 </tr>
 <tr class="even">
-<td><p>스냅숏 복원</p></td>
+<td><p>스냅샷 복원</p></td>
 <td><p>지원됨</p></td>
 <td></td>
 </tr>

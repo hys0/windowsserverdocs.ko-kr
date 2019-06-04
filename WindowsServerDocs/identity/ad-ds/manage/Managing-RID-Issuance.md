@@ -11,7 +11,7 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adds
 ms.openlocfilehash: 49798f785fe02b5a97fd8bd979c327b86c9ddef2
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59874224"
@@ -154,7 +154,7 @@ RID 풀을 31 번째 잠금을 해제 하려면<sup>st</sup> 비트 (아래 참�
   
 트리거되면 RID 마스터가 해당 개체에서 Active Directory 특성 **msDS-RIDPoolAllocationEnabled**(일반 이름 **ms-DS-RID-Pool-Allocation-Enabled**)를 FALSE로 설정합니다.  
   
-CN = RID Manager$, CN = System, DC =*<domain>*  
+CN = RID Manager$, CN = System, DC = *<domain>*  
   
 그러면 16657 이벤트가 기록되고 모든 도메인 컨트롤러에 대한 추가 RID 블록 발급이 차단됩니다. 도메인 컨트롤러는 이미 발급된 미처리 RID 풀을 계속 사용합니다.  
   
@@ -266,7 +266,7 @@ RID 발급의 모든 로그는 시스템 이벤트 로그의 원본 Directory-Se
 |이벤트 ID|16654|  
 |Source|Directory-Services-SAM|  
 |Severity|정보|  
-|메시지|RID(계정 ID)가 무효화되었습니다. 이는 다음과 같은 경우에 발생할 수 있습니다.<br /><br />1. 도메인 컨트롤러가 백업에서 복원되었습니다.<br /><br />2. 가상 컴퓨터에서 실행 중인 도메인 컨트롤러가 스냅숏에서 복원되었습니다.<br /><br />3. 관리자가 풀을 수동으로 무효화했습니다.<br /><br />자세한 내용은 https://go.microsoft.com/fwlink/?LinkId=226247를 참조하세요.|  
+|메시지|RID(계정 ID)가 무효화되었습니다. 이는 다음과 같은 경우에 발생할 수 있습니다.<br /><br />1. 도메인 컨트롤러가 백업에서 복원되었습니다.<br /><br />2. 가상 컴퓨터에서 실행 중인 도메인 컨트롤러가 스냅샷에서 복원되었습니다.<br /><br />3. 관리자가 풀을 수동으로 무효화했습니다.<br /><br />자세한 내용은 https://go.microsoft.com/fwlink/?LinkId=226247를 참조하세요.|  
 |참고 사항 및 해결 방법|이 이벤트가 예상치 못한 이벤트인 경우 모든 도메인 관리자에게 문의하여 이러한 작업 중 어떤 작업이 수행되었는지 확인하세요. 디렉터리 서비스 이벤트 로그에는 이러한 단계 중 하나가 수행된 시점에 대한 자세한 정보도 포함됩니다.|  
   
 |||  

@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: e1f3640f21b95acafa850b2204cd52f9c0f324e5
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59859334"
@@ -296,7 +296,7 @@ ms.locfileid: "59859334"
   
 1.  **실수로 삭제된 파일을 복구합니다**. 파일을 실수로 삭제하면 이전 버전을 열고 안전한 위치로 복사할 수 있습니다.  
   
-2.  **실수로 덮어쓴 파일에서 복구합니다**. 파일을 실수로 덮어쓴 경우 파일의 이전 버전을 복구할 수 있습니다. 버전 수는 만든 스냅숏 수에 따라 다릅니다.  
+2.  **실수로 덮어쓴 파일에서 복구합니다**. 파일을 실수로 덮어쓴 경우 파일의 이전 버전을 복구할 수 있습니다. (버전 수는 만든 스냅샷 수에 따라 다릅니다.)  
   
 3.  **작업 중에 파일 버전을 비교합니다**. 파일 버전 사이에 변경된 내용을 확인하려고 할 때 이전 버전을 사용할 수 있습니다.  
   

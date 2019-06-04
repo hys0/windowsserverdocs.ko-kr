@@ -13,7 +13,7 @@ ms.author: kathydav
 ms.date: 01/17/2017
 ms.openlocfilehash: a33912e09d664296f6eda964c40177353718d49c
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59851544"
@@ -65,7 +65,7 @@ PS C:\> Move-VM LMTest TestServer02 -IncludeStorage -DestinationStoragePath D:\L
  
  ### <a name="failed-because-the-host-hardware-isnt-compatible"></a>호스트 하드웨어에는 호환 되지 않습니다. 실패 했습니다.
  
- 가상 컴퓨터 프로세서 호환성 설정에 없는 하나 이상의 스냅숏이 이동 하는 호스트 프로세서 버전이 다른 경우 실패 합니다. 오류가 발생 하 고이 메시지가 표시 됩니다.
+ 가상 컴퓨터 프로세서 호환성 설정에 없는 하나 이상의 스냅샷이 이동 하는 호스트 프로세서 버전이 다른 경우 실패 합니다. 오류가 발생 하 고이 메시지가 표시 됩니다.
  
 **대상 컴퓨터에 가상 컴퓨터를 이동할 수 없습니다. 대상 컴퓨터의 하드웨어가 가상 컴퓨터의 하드웨어 요구 사항와 호환 되지 않습니다.**
  

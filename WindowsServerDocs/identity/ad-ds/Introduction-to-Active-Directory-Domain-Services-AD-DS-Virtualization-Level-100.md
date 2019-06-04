@@ -32,9 +32,9 @@ AD DS 복제에서는 각 도메인 컨트롤러에서 InvocationID 및 USN을 �
 
 ![USN 롤백이 감지 된 때의 이벤트 순서](../media/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-/ADDS_Exampleofhowreplicationcanbecomeinconsistent.png)
 
-가상 컴퓨터 (VM) 쉽게 롤백할 수는 도메인 컨트롤러의 Usn (논리적 클록), 여 하이퍼바이저 관리자에 대 한 예를 들어, 도메인 컨트롤러의 인식 스냅숏을 적용 합니다. USN 및 USN 하는 방법에 대 한 자세한 내용은 롤백, USN 롤백이 감지 되지 않은 인스턴스를 설명 하기 위해 다른 그림을 포함 하 여 참조 [USN 및 USN 롤백](https://technet.microsoft.com/library/virtual_active_directory_domain_controller_virtualization_hyperv(WS.10).aspx#usn_and_usn_rollback)합니다.
+가상 컴퓨터 (VM) 쉽게 롤백할 수는 도메인 컨트롤러의 Usn (논리적 클록), 여 하이퍼바이저 관리자에 대 한 예를 들어, 도메인 컨트롤러의 인식 스냅샷을 적용 합니다. USN 및 USN 하는 방법에 대 한 자세한 내용은 롤백, USN 롤백이 감지 되지 않은 인스턴스를 설명 하기 위해 다른 그림을 포함 하 여 참조 [USN 및 USN 롤백](https://technet.microsoft.com/library/virtual_active_directory_domain_controller_virtualization_hyperv(WS.10).aspx#usn_and_usn_rollback)합니다.
 
-Windows Server 2012부터, Vm-generation ID 라는 식별자를 노출 하는 하이퍼바이저 플랫폼에서 호스트 되는 AD DS 가상 도메인 컨트롤러 수 감지 하 고 적용할 롤백되는 경우 가상 컴퓨터는 시간에 VM 스냅숏의 응용 프로그램에서 AD DS 환경을 보호 하는 데 필요한 안전 조치 합니다. VM-생성 ID 설계에서는 하이퍼바이저 공급업체에 독립적인 메커니즘을 사용하여 이 식별자를 게스트 가상 컴퓨터의 주소 공간에 표시하므로 VM-생성 ID를 지원하는 모든 하이퍼바이저에서 안전한 가상화 환경을 일관되게 사용할 수 있습니다. 가상 컴퓨터 내에서 실행되는 서비스 및 응용 프로그램을 통해 이 식별자를 샘플링하여 가상 컴퓨터가 제시간에 롤백되었는지 감지할 수 있습니다.
+Windows Server 2012부터, Vm-generation ID 라는 식별자를 노출 하는 하이퍼바이저 플랫폼에서 호스트 되는 AD DS 가상 도메인 컨트롤러 수 감지 하 고 적용할 롤백되는 경우 가상 컴퓨터는 시간에 VM 스냅샷의 응용 프로그램에서 AD DS 환경을 보호 하는 데 필요한 안전 조치 합니다. VM-생성 ID 설계에서는 하이퍼바이저 공급업체에 독립적인 메커니즘을 사용하여 이 식별자를 게스트 가상 컴퓨터의 주소 공간에 표시하므로 VM-생성 ID를 지원하는 모든 하이퍼바이저에서 안전한 가상화 환경을 일관되게 사용할 수 있습니다. 가상 컴퓨터 내에서 실행되는 서비스 및 응용 프로그램을 통해 이 식별자를 샘플링하여 가상 컴퓨터가 제시간에 롤백되었는지 감지할 수 있습니다.
 
 ## <a name="effects-of-usn-rollback"></a>USN 롤백의 효과
 
@@ -84,11 +84,11 @@ Value: 0x4
 
 도메인 컨트롤러를 설치 하는 동안 AD DS 도메인 컨트롤러의 컴퓨터 개체 (디렉터리 정보 트리 또는 DIT 라고도 함)는 데이터베이스에 대 한 Msds-generationid 특성의 일부로 VM 생성 Id 식별자 처음 저장 합니다. VM 생성 ID는 가상 컴퓨터 내 Windows 드라이버를 통해 독립적으로 추적됩니다.
 
-관리자가 이전 스냅숏에서 가상 컴퓨터를 복원하면 가상 컴퓨터 드라이버의 현재 VM 생성 ID 값이 DIT의 값과 비교됩니다.
+관리자가 이전 스냅샷에서 가상 컴퓨터를 복원하면 가상 컴퓨터 드라이버의 현재 VM 생성 ID 값이 DIT의 값과 비교됩니다.
 
 두 값이 다르면 invocationID가 다시 설정되고 RID 풀이 삭제되므로 USN을 다시 사용할 수 없습니다. 값이 같으면 트랜잭션이 정상적으로 커밋됩니다.
 
-또한 AD DS에서는 도메인 컨트롤러가 다시 부팅될 때마다 가상 컴퓨터의 현재 VM 생성 ID 값을 DIT의 값과 비교하며, 값이 다른 경우 invocationID를 다시 설정하고, RID 풀을 삭제하고, DIT를 새 값으로 업데이트합니다. 뿐만 아니라 안전한 복원을 완료하기 위해 SYSVOL 폴더를 비정식으로 동기화합니다. 이를 통해 종료된 VM에서의 스냅숏 적용으로 보호 기능을 확장할 수 있습니다. Windows Server 2012에 도입 된 이러한 보호 기능 배포 및 관리 가상화 된 환경에서 도메인 컨트롤러의 고유한 이점을 제대로 활용 하려면 AD DS 관리자를 사용 합니다.
+또한 AD DS에서는 도메인 컨트롤러가 다시 부팅될 때마다 가상 컴퓨터의 현재 VM 생성 ID 값을 DIT의 값과 비교하며, 값이 다른 경우 invocationID를 다시 설정하고, RID 풀을 삭제하고, DIT를 새 값으로 업데이트합니다. 뿐만 아니라 안전한 복원을 완료하기 위해 SYSVOL 폴더를 비정식으로 동기화합니다. 이를 통해 종료된 VM에서의 스냅샷 적용으로 보호 기능을 확장할 수 있습니다. Windows Server 2012에 도입 된 이러한 보호 기능 배포 및 관리 가상화 된 환경에서 도메인 컨트롤러의 고유한 이점을 제대로 활용 하려면 AD DS 관리자를 사용 합니다.
 
 다음 그림에서는 Vm-generationid를 지 원하는 하이퍼바이저에서 Windows Server 2012를 실행 하는 가상화 된 도메인 컨트롤러에서 동일한 USN 롤백이 감지 된 경우 가상화 보호 기능이 적용 되는 방법을 보여 줍니다.
 
@@ -101,7 +101,7 @@ Windows Server 2012를 사용 하 여 AD DS VM-생성 Id 인식 하이퍼바이�
 도메인 컨트롤러를 복원 하는 가상 머신 스냅숏을 적용 하 여 도메인 컨트롤러를 백업 하는 대체 메커니즘으로 권장 되지 않습니다. Windows Server 백업 또는 기타 VSS 기록기 기반 백업 솔루션을 계속 사용하는 것이 좋습니다.
 
 > [!CAUTION]
-> 프로덕션 환경에서 도메인 컨트롤러가 실수로 스냅숏으로 되돌려 진 응용 프로그램 공급 업체에 문의 하 고 스냅숏 이후에 이러한 프로그램의 상태를 확인에 대 한 지침은 해당 가상 컴퓨터에서 호스팅되는 서비스 복원 것이 좋습니다.
+> 프로덕션 환경에서 도메인 컨트롤러가 실수로 스냅샷으로 되돌려 진 응용 프로그램 공급 업체에 문의 하 고 스냅샷 이후에 이러한 프로그램의 상태를 확인에 대 한 지침은 해당 가상 컴퓨터에서 호스팅되는 서비스 복원 것이 좋습니다.
 
 자세한 내용은 참조 [도메인 컨트롤러 안전 복원 아키텍처를 가상화](../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Architecture.md#BKMK_SafeRestoreArch)합니다.
 
