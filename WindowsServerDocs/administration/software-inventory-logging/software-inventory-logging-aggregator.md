@@ -292,7 +292,7 @@ SIL 푸시와 끌어오기 모드에서 작동 및 병렬 작동 하는 두 가�
 > 이 소프트웨어를 사용하는 동안 데이터가 Microsoft로 전송되지 않습니다.
 
 ## <a name="enable-sil-on-multiple-servers"></a>여러 서버에서 SIL 사용
-가상 컴퓨터의 사설 클라우드와 같은 분산된 서버 인프라에서 SIL을 사용하도록 설정하는 몇 가지 방법이 있습니다.  다음은 네트워크에서 처음으로 시작할 때 인벤토리 데이터를 SIL Aggregator로 자동으로 보내도록 Windows Server 이미지를 설정하는 방법을 보여주는 한 가지 예입니다.
+가상 머신의 프라이빗 클라우드와 같은 분산된 서버 인프라에서 SIL을 사용하도록 설정하는 몇 가지 방법이 있습니다.  다음은 네트워크에서 처음으로 시작할 때 인벤토리 데이터를 SIL Aggregator로 자동으로 보내도록 Windows Server 이미지를 설정하는 방법을 보여주는 한 가지 예입니다.
 
 Windows Server가 설치된 각 실행 중인 VM 또는 실제 컴퓨터/장치의 PowerShell 콘솔에서 다음 cmdlet을 관리자 권한으로 실행합니다( **필수 구성 요소** 섹션 참조).
 
@@ -312,15 +312,15 @@ Windows Server가 설치된 각 실행 중인 VM 또는 실제 컴퓨터/장치�
 
 -   `New-PSDrive -Name $firstAvailableDriveLetter -PSProvider filesystem -root` **<\\pfx 인증서 파일을 보유 하는 공유 server\path >** `-credential $mycreds`
 
--   `Copy-Item ${firstAvailableDriveLetter}:\`**< 새 드라이브 디렉터리의 certificatename.pfx 파일 > c:\<선택한 위치 >**
+-   `Copy-Item ${firstAvailableDriveLetter}:\` **< 새 드라이브 디렉터리의 certificatename.pfx 파일 > c:\<선택한 위치 >**
 
 -   `Remove-PSDrive –Name $firstAvailableDriveLetter`
 
 -   `$mypwd = ConvertTo-SecureString -String "`**<password for the certificate pfx file>**`" -Force –AsPlainText`
 
--   `Import-PfxCertificate -FilePath c:\`**<location\\certificatename.pfx>** `cert:\localMachine\my -Password $mypwd`
+-   `Import-PfxCertificate -FilePath c:\` **<location\\certificatename.pfx>** `cert:\localMachine\my -Password $mypwd`
 
--   `Set-sillogging –targeturi “https://`**<machinename of your SIL Aggregator>** `–certificatethumbprint`
+-   `Set-sillogging –targeturi “https://` **<machinename of your SIL Aggregator>** `–certificatethumbprint`
 
 > [!NOTE] 
 > 클라이언트 pfx 파일에서 인증서 지문을 사용 하 고 사용 하 여 SIL Aggregator에 추가 합니다 **Set-silaggregator '-AddCertificateThumbprint** cmdlet.
