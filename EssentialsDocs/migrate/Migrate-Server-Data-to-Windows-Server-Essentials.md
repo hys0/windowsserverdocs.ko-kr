@@ -75,7 +75,7 @@ ms.locfileid: "59883304"
 -   [Windows Server Essentials 분석기 BPA (모범 사례) 도구를 사용 하는 규칙](../migrate/Rules-used-by-the-Windows-Server-Essentials-Best-Practices-Analyzer--BPA--Tool.md)  
 
   
-## <a name="end-to-end-solution-guides"></a>종단 간 솔루션 가이드  
+## <a name="end-to-end-solution-guides"></a>엔드투엔드 솔루션 가이드  
   
 -    데이터 저장소를 중앙 집중화하고 데이터 액세스 권한을 제한하며 온-프레미스 및 클라우드 모두에 데이터를 백업하는 방법을 알아보려면 [중소기업의 데이터 보호 제공](https://technet.microsoft.com/library/dn582043.aspx)을 참조하세요.  
   

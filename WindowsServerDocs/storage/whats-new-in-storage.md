@@ -10,7 +10,7 @@ author: jasongerend
 ms.date: 05/29/2019
 ms.openlocfilehash: 5469d663f64fdb453e03863f409b675473d3f6aa
 ms.sourcegitcommit: 8eea7aadbe94f5d4635c4ffedc6a831558733cc0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/29/2019
 ms.locfileid: "66308567"
@@ -230,7 +230,7 @@ Windows Server 버전 1709 반기 채널의 첫 번째 Windows Server 릴리스�
 이 기능은 Windows Server 2016의 새로운 기능입니다.  
 
 ### <a name="storage-qos"></a>저장소 서비스 품질  
-이제 저장소 QoS(서비스 품질)를 사용하여 중앙에서 종단 간 저장소 성능을 모니터링하고 Windows Server 2016의 Hyper-V 및 CSV 클러스터를 통해 관리 정책을 만들 수 있습니다.  
+이제 스토리지 QoS(서비스 품질)를 사용하여 중앙에서 엔드투엔드 스토리지 성능을 모니터링하고 Windows Server 2016의 Hyper-V 및 CSV 클러스터를 통해 관리 정책을 만들 수 있습니다.  
 
 **이와 같은 변경을 통해 더해지는 가치**  
 이제 CSV 클러스터에서 저장소 QoS 정책을 만들고 Hyper-V 가상 컴퓨터에서 하나 이상의 가상 디스크에 할당할 수 있습니다. 워크로드와 저장소 로드 변동에 따라 정책을 준수하도록 저장소 성능이 자동으로 재조정됩니다.  

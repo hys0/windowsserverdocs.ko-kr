@@ -31,7 +31,7 @@ IPv4 및 IPv6을 사용하는 단일 서버에 고급 DirectAccess를 배포하�
 |[2.1 클라이언트 배포 계획](#21-plan-for-client-deployment)|클라이언트 컴퓨터에서 DirectAccess를 사용하여 연결하도록 허용할 방법을 계획합니다. DirectAccess 클라이언트로 구성할 관리되는 컴퓨터를 결정하고, 클라이언트 컴퓨터에 네트워크 연결 길잡이를 배포할지 또는 DirectAccess 연결 길잡이를 배포할지 계획합니다.|  
 |[2.2 DirectAccess 서버 배포 계획](#22-plan-for-directaccess-server-deployment)|DirectAccess 서버를 배포할 방법을 계획합니다.|  
 |[2.3 인프라 서버 계획](#23-plan-infrastructure-servers)|DirectAccess 네트워크 위치 서버, DNS(Domain Name System) 서버, DirectAccess 관리 서버 등 DirectAccess 배포를 위한 인프라 서버를 계획합니다.|  
-|[2.4 응용 프로그램 서버 계획](#24-plan-application-servers)|IPv4/IPv6 응용 프로그램 서버를 계획하고 선택적으로 DirectAccess 클라이언트 컴퓨터와 내부 응용 프로그램 서버 사이에 종단 간 인증이 필요한지를 고려합니다.|  
+|[2.4 응용 프로그램 서버 계획](#24-plan-application-servers)|IPv4/IPv6 애플리케이션 서버를 계획하고 선택적으로 DirectAccess 클라이언트 컴퓨터와 내부 애플리케이션 서버 사이에 엔드투엔드 인증이 필요한지를 고려합니다.|  
 |[2.5 DirectAccess 및 타사 VPN 클라이언트 계획](#25-plan-directaccess-and-third-party-vpn-clients)|타사 VPN 클라이언트와 함께 DirectAccess를 배포하려면 두 원격 액세스 솔루션의 원활한 공존을 지원하도록 레지스트리 값을 설정해야 할 수 있습니다.|  
   
 ## <a name="21-plan-for-client-deployment"></a>2.1 클라이언트 배포 계획  
@@ -130,9 +130,9 @@ DirectAccess에는 다음 세 가지 유형의 인프라 서버가 필요합니�
 응용 프로그램 서버는 클라이언트 컴퓨터에서 DirectAccess 연결을 통해 액세스할 수 있는 회사 네트워크의 서버입니다. 응용 프로그램 서버를 식별하려면 보안 그룹에 추가해야 합니다. 그러면 응용 프로그램 서버 GPO가 해당 그룹의 서버에 적용됩니다.  
   
 > [!NOTE]  
-> 종단 간 인증 및 암호화를 요구하려는 경우에만 응용 프로그램 서버를 보안 그룹에 추가하면 됩니다.  
+> 엔드투엔드 인증 및 암호화를 요구하려는 경우에만 애플리케이션 서버를 보안 그룹에 추가하면 됩니다.  
   
-DirectAccess 클라이언트와 선택한 내부 응용 프로그램 서버 간에 선택적으로 종단 간 인증 및 암호화를 요구할 수 있습니다. 종단 간 인증을 구성하면 DirectAccess 클라이언트에서 IPsec 전송 정책을 사용합니다. 이 정책에서는 IPsec 세션의 인증 및 트래픽 보호가 지정된 응용 프로그램 서버에서 종료되도록 요구합니다. 이 경우 원격 액세스 서버는 인증 및 보호된 IPsec 세션을 응용 프로그램 서버로 전달합니다.  
+DirectAccess 클라이언트와 선택한 내부 애플리케이션 서버 간에 선택적으로 엔드투엔드 인증 및 암호화를 요구할 수 있습니다. 엔드투엔드 인증을 구성하면 DirectAccess 클라이언트에서 IPsec 전송 정책을 사용합니다. 이 정책에서는 IPsec 세션의 인증 및 트래픽 보호가 지정된 응용 프로그램 서버에서 종료되도록 요구합니다. 이 경우 원격 액세스 서버는 인증 및 보호된 IPsec 세션을 응용 프로그램 서버로 전달합니다.  
   
 응용 프로그램 서버로 인증을 확장한 경우 기본적으로 DirectAccess 클라이언트와 응용 프로그램 서버 간에 데이터 페이로드가 암호화됩니다. 트래픽을 암호화하지 않고 인증만 사용하도록 선택할 수 있습니다. 그러나이 인증 및 암호화를 사용 하 여 보다 안전 하지 않은 이며 Windows Server 2008 R2 또는 Windows Server 2012 운영 체제를 실행 하는 응용 프로그램 서버에 대해서만 지원 됩니다.  
   

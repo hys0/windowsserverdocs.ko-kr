@@ -202,7 +202,7 @@ DirectAccess를 사용하여 클라이언트 컴퓨터를 프로비전하려면 
   
 4.  **인프라 서버**: 이 목록에는 네트워크 위치 서버 URL, DirectAccess 클라이언트에서 사용하는 DNS 접미사 및 관리 서버 정보가 포함됩니다.  
   
-5.  **응용 프로그램 서버**: 특정 응용 프로그램 서버에 대한 종단 간 인증 상태 외에 DirectAccess 원격 관리 상태가 표시됩니다.  
+5.  **응용 프로그램 서버**: 특정 애플리케이션 서버에 대한 엔드투엔드 인증 상태 외에 DirectAccess 원격 관리 상태가 표시됩니다.  
   
 ## <a name="BKMK_PS"></a>2.8. Windows PowerShell을 사용하여 원격 액세스 서버를 구성하는 방법  
 ![Windows PowerShell](../../../media/Step-2-Configuring-DirectAccess-Servers/PowerShellLogoSmall.gif)**Windows PowerShell 해당 명령**  

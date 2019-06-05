@@ -12,7 +12,7 @@ author: shortpatti
 ms.localizationpriority: medium
 ms.openlocfilehash: 7caa99f1b6b9e25e5a6f2c4333b033fb3088195d
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59862594"
@@ -117,7 +117,7 @@ Hyper-V 가상 스위치 설명서는 Windows Server 2016 목차의 **가상화*
 
 ### <a name="ip-address-management-40ipam41technologiesipamipam-topmd"></a>[IP 주소 관리 &#40;IPAM&#41;](technologies/ipam/ipam-top.md)
 
-IP 주소 관리 \(IPAM\) 는 종단 간 계획, 배포, 사용 하도록 설정 하는 도구의 통합된 모음인 관리 및 풍부한 사용자 환경을 통해 IP 주소 인프라의 모니터링 합니다. IPAM IP 주소 인프라 서버 및 도메인 이름 시스템에 자동으로 검색 \(DNS\) 네트워크 서버에 중앙 인터페이스에서이 관리할 수 있습니다.
+IP 주소 관리 \(IPAM\)는 엔드투엔드 계획, 배포, 사용 하도록 설정 하는 도구의 통합된 모음인 관리 및 풍부한 사용자 환경을 통해 IP 주소 인프라의 모니터링합니다. IPAM IP 주소 인프라 서버 및 도메인 이름 시스템에 자동으로 검색 \(DNS\) 네트워크 서버에 중앙 인터페이스에서이 관리할 수 있습니다.
 
 ### <a name="network-load-balancingtechnologiesnetwork-load-balancingmd"></a>[네트워크 부하 분산](technologies/Network-Load-Balancing.md)
 

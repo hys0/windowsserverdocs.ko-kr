@@ -506,7 +506,7 @@ Verifying Physical Nic : <NIC> Ethernet Adapter
 Physical Nic  <NIC> Ethernet Adapter can support SDN traffic. Encapoverhead value set on the nic is  160
 ```
 
-HNV 공급자 논리 네트워크는 더 큰 MTU 크기에 종단 간 지원 여부를 테스트 하려면 사용 하 여 _테스트 LogicalNetworkSupportsJumboPacket_ cmdlet:
+HNV 공급자 논리 네트워크가 더 큰 MTU 크기를 엔드투엔드 지원하는지 테스트하려면 _Test-LogicalNetworkSupportsJumboPacket_ cmdlet을 사용합니다.
 ```none
 # Get credentials for both source host and destination host (or use the same credential if in the same domain)
 $sourcehostcred = Get-Credential
