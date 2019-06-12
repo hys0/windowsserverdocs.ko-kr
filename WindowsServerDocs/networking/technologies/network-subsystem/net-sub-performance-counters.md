@@ -8,12 +8,12 @@ ms.assetid: 7ebaa271-2557-4c24-a679-c3d863e6bf9e
 manager: brianlic
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: e5e8abbc19482bcd0dd5670065cde59d5be3169a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: bcb0c1c5a08a306fbd9b419d0c458c3bc54e1786
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59824354"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446200"
 ---
 # <a name="network-related-performance-counters"></a>네트워크 관련 성능 카운터
 
@@ -31,43 +31,43 @@ ms.locfileid: "59824354"
 
 다음 성능 카운터는 네트워크 리소스 사용률에 적용 됩니다.  
   
--   IPv4, IPv6  
+- IPv4, IPv6  
   
-    -   Datagrams Received/sec  
+  -   Datagrams Received/sec  
   
-    -   Datagrams Sent/sec  
+  -   Datagrams Sent/sec  
   
--   TCPv4, TCPv6  
+- TCPv4, TCPv6  
   
-    -   세그먼트 Received/sec  
+  -   세그먼트 Received/sec  
   
-    -   Segments Sent/sec  
+  -   Segments Sent/sec  
   
-    -   재전송 세그먼트/sec  
+  -   재전송 세그먼트/sec  
   
--   Network Interface(*), Network Adapter(\*)  
+- Network Interface(*), Network Adapter(\*)  
   
-    -   Bytes Received/sec  
+  - Bytes Received/sec  
   
-    -   Bytes Sent/sec  
+  - Bytes Sent/sec  
   
-    -   수신 된 패킷/초  
+  - 수신 된 패킷/초  
   
-    -   Packets Sent/sec  
+  - Packets Sent/sec  
   
-    -   출력 큐 길이  
+  - 출력 큐 길이  
   
-     이 카운터는 출력 패킷 큐의 길이 \(패킷의\)합니다. 2 자리 보다 긴 경우 지연이 발생 합니다. 병목 지점을 찾아야 하 고 가능한 경우 제거 해야 합니다. NDIS 큐 요청 때문에이 길이 항상 0 이어야 합니다.  
+    이 카운터는 출력 패킷 큐의 길이 \(패킷의\)합니다. 2 자리 보다 긴 경우 지연이 발생 합니다. 병목 지점을 찾아야 하 고 가능한 경우 제거 해야 합니다. NDIS 큐 요청 때문에이 길이 항상 0 이어야 합니다.  
   
--   프로세서 정보  
+- 프로세서 정보  
   
-    -   % 프로세서 시간  
+  - % 프로세서 시간  
   
-    -   Interrupts/sec  
+  - Interrupts/sec  
   
-    -   Dpc 큐에 대기 수/초  
+  - Dpc 큐에 대기 수/초  
   
-     이 카운터는 Dpc 논리 프로세서의 DPC 큐에 추가 된 위치의 평균 비율입니다. 각 논리적 프로세서에는 고유한 DPC 큐를 있습니다. 이 카운터는 큐의 Dpc 수가 아니라 큐에 Dpc가 추가 되는 속도 측정 합니다. 샘플 간격 기간으로 나눈 마지막 두 샘플에서 관찰 된 값 간의 차이 표시 합니다.  
+    이 카운터는 Dpc 논리 프로세서의 DPC 큐에 추가 된 위치의 평균 비율입니다. 각 논리적 프로세서에는 고유한 DPC 큐를 있습니다. 이 카운터는 큐의 Dpc 수가 아니라 큐에 Dpc가 추가 되는 속도 측정 합니다. 샘플 간격 기간으로 나눈 마지막 두 샘플에서 관찰 된 값 간의 차이 표시 합니다.  
   
 ##  <a name="bkmk_np"></a> 잠재적인 네트워크 문제  
 

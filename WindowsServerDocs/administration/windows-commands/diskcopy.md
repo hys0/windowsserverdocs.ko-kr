@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 05/07/2018
-ms.openlocfilehash: 5b9343dc2f6b4c74da5a9d89a2ea804b702248cc
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: aadb3a77cda7f1403cd2f04ced12c17617f046df
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59841174"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66439574"
 ---
 # <a name="diskcopy"></a>diskcopy
 
@@ -84,9 +84,9 @@ diskcopy [<Drive1>: [<Drive2>:]] [/v]
 
 > [!NOTE]
 > 사용할 수 없습니다 **xcopy** 시동 디스크를 복사 합니다.
--   이해 **diskcopy** 종료 코드
+> -   이해 **diskcopy** 종료 코드
 
-    다음 표에서 각 종료 코드를 보여 줍니다.  
+    The following table explains each exit code.  
     |종료 코드|설명|
     |---------|-----------|
     |0|복사 작업의 성공|
@@ -94,7 +94,7 @@ diskcopy [<Drive1>: [<Drive2>:]] [/v]
     |3|하드 오류가 발생 했습니다.|
     |4|초기화 오류가 발생 했습니다.|
 
-    에 의해 반환 된 종료 코드를 처리 하는 데 **diskcomp**를 사용할 수는 *ERRORLEVEL* 에서 환경 변수를 **경우** 일괄 프로그램에서 명령줄입니다.
+    To process the exit codes that are returned by **diskcomp**, you can use the *ERRORLEVEL* environment variable on the **if** command line in a batch program.
 
 ## <a name="BKMK_examples"></a>예제
 

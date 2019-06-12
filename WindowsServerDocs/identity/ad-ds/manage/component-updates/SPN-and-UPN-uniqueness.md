@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: c9a769fdd9fb7d13c47da465b25bc59e7f55237f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 13259f7f12a37c4ceb8bdd2e35ae2fe131ec35cf
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59856744"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66442810"
 ---
 # <a name="spn-and-upn-uniqueness"></a>SPN 및 UPN 고유성
 
@@ -81,7 +81,7 @@ Upn 및 Spn에 대 한 고유성 요구 사항에 대 한 자세한 내용은 �
   
 **그림 SEQ 그림 \\ \* 8648 오류로 아랍어 2 이벤트 ID 2974**  
   
-이벤트 2974 차단 된 값과 이미 해당 값을 포함 하는 10) (최대 하나 이상의 개체의 목록이 나열 합니다.  다음 그림에서는 해당 UPN 특성 값을 볼 수 있습니다 ***dhunt@blue.contoso.com*** 다른 4 개의 개체에 이미 있습니다.  Windows Server 2012 r 2의 새로운 기능 이므로, 혼합된 환경에서 중복 된 UPN 및 Spn 실수로 생성 하위 Dc 쓰기 시도 처리 하는 경우 계속 발생 합니다.  
+이벤트 2974 차단 된 값과 이미 해당 값을 포함 하는 10) (최대 하나 이상의 개체의 목록이 나열 합니다.  다음 그림에서는 해당 UPN 특성 값을 볼 수 있습니다 **<em>dhunt@blue.contoso.com</em>** 다른 4 개의 개체에 이미 있습니다.  Windows Server 2012 r 2의 새로운 기능 이므로, 혼합된 환경에서 중복 된 UPN 및 Spn 실수로 생성 하위 Dc 쓰기 시도 처리 하는 경우 계속 발생 합니다.  
   
 ![SPN 및 UPN 고유성](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig05_Event2974ShowAllDups.gif)  
   

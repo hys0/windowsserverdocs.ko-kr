@@ -8,12 +8,12 @@ ms.topic: article
 ms.assetid: 161446ff-a072-4cc4-b339-00a04857ff3a
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 33fd9447a79346127714a5e5e73977611eba483c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c36475dacb8664352f4ab270878357118d281c60
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59829474"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446424"
 ---
 # <a name="use-dns-policy-for-intelligent-dns-responses-based-on-the-time-of-day"></a>시간 기반 지능형 DNS 응답에 DNS 정책 사용
 
@@ -107,7 +107,7 @@ Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "DublinZoneScop
 #### <a name="bkmk_records"></a>영역 범위에 레코드 추가  
 이제 두 영역 범위에는 웹 서버 호스트를 나타내는 레코드를 추가 해야 합니다.  
   
-예를 들어 **SeattleZoneScope**, 레코드 **www.contosogiftservices.com** 시애틀 데이터 센터에 있는 IP 주소 192.0.0.1 함께 추가 됩니다. 마찬가지로,에서 **DublinZoneScope**, 레코드 **www.contosogiftservices.com** 더블린 데이터 센터에서 141.1.0.3 IP 주소로 추가  
+예를 들어 **SeattleZoneScope**, 레코드 <strong>www.contosogiftservices.com</strong> 시애틀 데이터 센터에 있는 IP 주소 192.0.0.1 함께 추가 됩니다. 마찬가지로,에서 **DublinZoneScope**, 레코드 <strong>www.contosogiftservices.com</strong> 더블린 데이터 센터에서 141.1.0.3 IP 주소로 추가  
   
 레코드를 추가 하려면 영역 범위에는 다음 Windows PowerShell 명령을 사용할 수 있습니다.  
   

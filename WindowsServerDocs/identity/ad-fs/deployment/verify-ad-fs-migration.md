@@ -8,12 +8,12 @@ ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 0a3e8e444f715fe2ae0f0ccd858d90e8664be00c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 38e44ab2f803d8ec8940dbba7574a9f37389112a
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59877774"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66444465"
 ---
 # <a name="verify-the-ad-fs-20-migration-to-windows-server-2012-r2"></a>확인 된 AD FS 2.0 Windows Server 2012 R2 마이그레이션
 
@@ -27,7 +27,7 @@ ms.locfileid: "59877774"
   
 브라우저 창에서 SSL 오류 또는 경고 없이 페더레이션 서버 메타데이터를 볼 수 있는 경우 페더레이션 서버가 작동하는 것입니다.  
   
-2.  AD FS 로그인 페이지로 이동할 수도 있습니다(페더레이션 서비스 이름 뒤에 `adfs/ls/idpinitiatedsignon.htm` 추가, 예: `https://fs.contoso.com/adfs/ls/idpinitiatedsignon.htm`).  도메인 관리자 자격 증명으로 로그인할 수 있는 AD FS 로그인 페이지가 표시됩니다.  
+2. AD FS 로그인 페이지로 이동할 수도 있습니다(페더레이션 서비스 이름 뒤에 `adfs/ls/idpinitiatedsignon.htm` 추가, 예: `https://fs.contoso.com/adfs/ls/idpinitiatedsignon.htm`).  도메인 관리자 자격 증명으로 로그인할 수 있는 AD FS 로그인 페이지가 표시됩니다.  
   
 > [!IMPORTANT]
 >  브라우저의 로컬 인트라넷 영역에 페더레이션 서비스 이름(예: `https://fs.contoso.com`)을 추가하여 페더레이션 서버 역할을 신뢰하도록 브라우저 설정을 구성해야 합니다.  

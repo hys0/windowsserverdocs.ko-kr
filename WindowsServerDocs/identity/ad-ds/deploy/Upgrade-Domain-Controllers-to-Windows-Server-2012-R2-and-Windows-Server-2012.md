@@ -9,12 +9,12 @@ ms.date: 08/09/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: e3b44dbc1c869680db91f5e9732a50504d80e7b8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 6dda30bd15bedab8ea5ca8ca2e9597e1cc196e43
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59877504"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66443057"
 ---
 # <a name="upgrade-domain-controllers-to-windows-server-2012-r2-and-windows-server-2012"></a>Windows Server 2012 R2 및 Windows Server 2012로 도메인 컨트롤러 업그레이드
 
@@ -150,8 +150,8 @@ AD DS와 관련된 몇 가지 변경 사항은 다음과 같습니다.
    - Adprep.exe에는 한 가지 버전만 있는데, 이 버전은 필요에 따라 Windows Server 2008 이상을 실행하는 64비트 서버에서 실행할 수 있습니다. 이 버전은 원격으로 실행할 수 있으며, 대상이 되는 해당 작업의 마스터 역할이 32비트 운영 체제나 Windows Server 2003에서 호스팅되는 경우 원격으로 실행해야 합니다.  
 - **Dcpromo.exe의 사용 중단**
    - Dcpromo는 Windows Server 2012에만 계속 실행할 수 있지만 응답 파일 또는 조직으로 전환할 시간을 기존 자동화는 새로운 Windows PowerShell 설치 옵션을 제공 하는 명령줄 매개 변수를 사용 하 여 사용 되지 않습니다.  
--   **Lm 해시는 사용자 계정에 사용 하지 않도록 설정**
-   - Windows Server 2008, Windows Server 2008 R2 및 Windows Server 2012의 보안 템플릿에서 보안 기본값은 Windows 2000 및 Windows Server 2003 도메인 컨트롤러의 보안 템플릿에서 사용하지 않도록 설정된 NoLMHash 정책을 사용합니다. 필요한 경우 기술 자료 문서 [946405](https://support.microsoft.com/kb/946405)의 단계를 사용하여 LMHash 종속 클라이언트의 NoLMHash 정책을 사용하지 않도록 설정합니다.  
+- **Lm 해시는 사용자 계정에 사용 하지 않도록 설정**
+  - Windows Server 2008, Windows Server 2008 R2 및 Windows Server 2012의 보안 템플릿에서 보안 기본값은 Windows 2000 및 Windows Server 2003 도메인 컨트롤러의 보안 템플릿에서 사용하지 않도록 설정된 NoLMHash 정책을 사용합니다. 필요한 경우 기술 자료 문서 [946405](https://support.microsoft.com/kb/946405)의 단계를 사용하여 LMHash 종속 클라이언트의 NoLMHash 정책을 사용하지 않도록 설정합니다.  
 
 Windows Server 2008부터 도메인 컨트롤러도 포함 되어 Windows Server 2003 또는 Windows 2000을 실행 하는 도메인 컨트롤러에 비해 다음과 같은 보안 기본 설정 합니다.
 

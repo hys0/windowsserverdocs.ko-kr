@@ -11,12 +11,12 @@ ms.assetid: f8f8c569-8b74-4c19-876e-1c7d00cce308
 author: larsiwer
 ms.author: kathydav
 ms.date: 10/04/2016
-ms.openlocfilehash: 923216142a45071bc3623e3f37b37cc6a2361f26
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 73cc2e45367d448aa736644e4a3bc02d3670fc6c
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59812144"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447914"
 ---
 # <a name="generation-1-virtual-machine-security-settings"></a>1 세대 가상 컴퓨터의 보안 설정
 
@@ -45,7 +45,7 @@ Hyper-v 관리자 1 세대 가상 컴퓨터의 보안 설정의 사용 하 여 �
 
 가상 컴퓨터의 IDE 컨트롤러 중 하나를 빈 슬롯 키 저장소 드라이브를 추가할 수 있습니다. 이 작업을 수행 하려면 **키 저장소 드라이브 추가** 이 가상 컴퓨터의 첫 번째 무료 IDE 컨트롤러 슬롯에 키 저장소 드라이브를 추가 합니다.
 
-##<a name="see-also"></a>참조
+## <a name="see-also"></a>참조
 
 - [Hyper-v 관리자에서 2 세대 가상 머신의 보안 설정](Generation-2-virtual-machine-security-settings-for-hyper-v.md)
 - [보안 및 보증](../../../security/Security-and-Assurance.md)

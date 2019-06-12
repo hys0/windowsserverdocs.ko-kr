@@ -6,12 +6,12 @@ ms.author: joflore
 ms.date: 04/19/2018
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.openlocfilehash: 684f3418bf336af4959282e7a8c2088d22a8c8dc
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8a1775a40761e4a489cc39535514d75174edffa5
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59865134"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66442992"
 ---
 # <a name="virtualizing-domain-controllers-using-hyper-v"></a>Hyper-v를 사용 하 여 도메인 컨트롤러 가상화
 
@@ -64,7 +64,7 @@ Rodc에 대 한 자세한 내용은 [읽기 전용 도메인 컨트롤러 계획
 
 가상 컴퓨터를 사용 하면 다양 한 구성 도메인 컨트롤러를 가질 수 있습니다. 신중 하 게 고려 하는 가상 컴퓨터에 영향을 경계 및 Active Directory 토폴로지 트러스트 방식이 지정 되어야 합니다. 다음 표에서 Active Directory 도메인 컨트롤러를 호스트 (Hyper-v 서버) 및 해당 게스트 컴퓨터 (Hyper-v 서버에서 실행 되는 가상 컴퓨터)에 대 한 가능한 구성은 설명 합니다.
 
-|컴퓨터|구성 1|Configuration 2|
+|Machine|구성 1|Configuration 2|
 |-------|---------------|---------------|
 |Host|작업 그룹 또는 멤버 컴퓨터|작업 그룹 또는 멤버 컴퓨터|
 |게스트|도메인 컨트롤러|작업 그룹 또는 멤버 컴퓨터|
@@ -191,19 +191,19 @@ Lightweight Directory Access Protocol (LDAP) 테스트는 실제 도메인 컨�
 
 Hyper-v 같은 가상화 플랫폼을 다양 한, 유지 관리, 백업, 마이그레이션 및 관리 컴퓨터를 더 쉽게 하는 편리한 기능을 제공 합니다. 그러나 다음과 같은 일반적인 배포 사례 및 기능을 해서는 안 가상 도메인 컨트롤러에 대 한 합니다.
 
-   - Active Directory의 지 속성을 위해 가상 도메인 컨트롤러의 데이터베이스 파일 (Active Directory 데이터베이스 (NTDS 배포 하지 마세요. DIT), 로그 및 SYSVOL) 가상 IDE 디스크에 있습니다. 대신 두 번째 가상 SCSI 컨트롤러에 연결 된 VHD를 만들고 데이터베이스, 로그 및 SYSVOL은에 배치 되도록 가상 컴퓨터의 SCSI 디스크 도메인 컨트롤러를 설치 하는 동안 확인 합니다.  
-   - 도메인 컨트롤러로 구성 하는 가상 컴퓨터에서 차이점 보관용 디스크 가상 하드 디스크 (Vhd)를 구현 하지 않습니다. 이렇게 하면 이전 버전으로 되돌리려면 너무 쉽게 및 성능이 줄어듭니다. VHD 형식에 대 한 자세한 내용은 참조 하세요. [새 가상 하드 디스크 마법사](https://go.microsoft.com/fwlink/?linkid=137279)합니다.  
-   - 새 Active Directory 도메인 및 포리스트는 복사본을 시스템 준비 도구 (Sysprep)를 사용 하 여 먼저 준비 되지 않았습니다 하는 Windows Server 운영 체제를 배포 하지 않습니다. Sysprep를 실행 하는 방법에 대 한 자세한 내용은 참조 하세요. [Sysprep (시스템 준비) 개요](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview)
+- Active Directory의 지 속성을 위해 가상 도메인 컨트롤러의 데이터베이스 파일 (Active Directory 데이터베이스 (NTDS 배포 하지 마세요. DIT), 로그 및 SYSVOL) 가상 IDE 디스크에 있습니다. 대신 두 번째 가상 SCSI 컨트롤러에 연결 된 VHD를 만들고 데이터베이스, 로그 및 SYSVOL은에 배치 되도록 가상 컴퓨터의 SCSI 디스크 도메인 컨트롤러를 설치 하는 동안 확인 합니다.  
+- 도메인 컨트롤러로 구성 하는 가상 컴퓨터에서 차이점 보관용 디스크 가상 하드 디스크 (Vhd)를 구현 하지 않습니다. 이렇게 하면 이전 버전으로 되돌리려면 너무 쉽게 및 성능이 줄어듭니다. VHD 형식에 대 한 자세한 내용은 참조 하세요. [새 가상 하드 디스크 마법사](https://go.microsoft.com/fwlink/?linkid=137279)합니다.  
+- 새 Active Directory 도메인 및 포리스트는 복사본을 시스템 준비 도구 (Sysprep)를 사용 하 여 먼저 준비 되지 않았습니다 하는 Windows Server 운영 체제를 배포 하지 않습니다. Sysprep를 실행 하는 방법에 대 한 자세한 내용은 참조 하세요. [Sysprep (시스템 준비) 개요](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview)
 
-      > [!WARNING]
-      > 도메인 컨트롤러에서 Sysprep을 실행 하는 것은 지원 되지 않습니다.
+   > [!WARNING]
+   > 도메인 컨트롤러에서 Sysprep을 실행 하는 것은 지원 되지 않습니다.
 
-   - 잠재적 업데이트 시퀀스 번호 (USN) 롤백 문제를 방지 하려면 추가 도메인 컨트롤러를 배포 하는 이미 배포 된 도메인 컨트롤러를 표시 하는 VHD 파일의 복사본을 사용 하지 마십시오. USN 롤백에 대한 자세한 내용은 [USN 및 USN 롤백](#usn-and-usn-rollback)을 참조하세요.
-      - Windows Server 2012 및 최신 추가 도메인 컨트롤러를 배포 하려는 경우 제대로 준비 하는 경우 도메인 컨트롤러 이미지를 복제 하는 작업을 할당할 수 있습니다.
-   - 도메인 컨트롤러를 실행 하는 가상 머신을 내보낼 Hyper-v 내보내기 기능을 사용 하지 마세요.
-      - Windows Server 2012 이상 버전에서는 내보내기와 가져오기를 게스트 가상 도메인 컨트롤러의 마찬가지로 처리는 신뢰할 수 없는 복원이 생성 ID의 변경을 감지 하 고 복제를 위해 구성 되어 있지 않습니다.
-      - 더 이상 내보낸 게스트를 사용 하지 않는 것을 확인 합니다.
-  - 도메인 컨트롤러의 두 번째 비활성 복사본을 유지 하려면 Hyper-v 복제를 사용할 수 있습니다. 복제 된 이미지를 시작 하는 경우 해야 하지 소스를 사용 하 여 DC 게스트 이미지를 내보낸 후 동일한 이유로 적절 한 정리를 수행 합니다.
+- 잠재적 업데이트 시퀀스 번호 (USN) 롤백 문제를 방지 하려면 추가 도메인 컨트롤러를 배포 하는 이미 배포 된 도메인 컨트롤러를 표시 하는 VHD 파일의 복사본을 사용 하지 마십시오. USN 롤백에 대한 자세한 내용은 [USN 및 USN 롤백](#usn-and-usn-rollback)을 참조하세요.
+   - Windows Server 2012 및 최신 추가 도메인 컨트롤러를 배포 하려는 경우 제대로 준비 하는 경우 도메인 컨트롤러 이미지를 복제 하는 작업을 할당할 수 있습니다.
+- 도메인 컨트롤러를 실행 하는 가상 머신을 내보낼 Hyper-v 내보내기 기능을 사용 하지 마세요.
+  - Windows Server 2012 이상 버전에서는 내보내기와 가져오기를 게스트 가상 도메인 컨트롤러의 마찬가지로 처리는 신뢰할 수 없는 복원이 생성 ID의 변경을 감지 하 고 복제를 위해 구성 되어 있지 않습니다.
+  - 더 이상 내보낸 게스트를 사용 하지 않는 것을 확인 합니다.
+    - 도메인 컨트롤러의 두 번째 비활성 복사본을 유지 하려면 Hyper-v 복제를 사용할 수 있습니다. 복제 된 이미지를 시작 하는 경우 해야 하지 소스를 사용 하 여 DC 게스트 이미지를 내보낸 후 동일한 이유로 적절 한 정리를 수행 합니다.
 
 ## <a name="physical-to-virtual-migration"></a>물리적 컴퓨터에서 가상 컴퓨터로 마이그레이션
 
@@ -240,27 +240,27 @@ Hyper-v 시간 동기화 공급자를 사용 하지 않으려면 VM을 종료 �
 > [!NOTE]
 > 이전 권장 부분적으로 호스트 간에 시간 동기화를 사용 하지 않도록 설정 하는 것 보다는 게스트 도메인 컨트롤러는 도메인 계층에서의 시간을 동기화 하기 위한 현재 권장 사항을 반영 하기 위해이 설명서를 최근에 업데이트 했더라도 시스템 및 게스트 도메인 컨트롤러입니다.
 
-## <a name="storage"></a>스토리지
+## <a name="storage"></a>저장 공간
 
 도메인 컨트롤러 가상 컴퓨터의 성능을 최적화 하 고 Active Directory 쓰기 내 구성을 보장 하려면 다음 권장 사항은 운영 체제, Active Directory 및 VHD 파일을 저장 하는 데 사용 합니다.
 
-   - **게스트 저장소**합니다. Active Directory 데이터베이스 (Ntds.dit) 파일, 로그 파일 및 SYSVOL 파일을 운영 체제 파일에서 별도 가상 디스크에 저장 합니다. 두 번째 가상 SCSI 컨트롤러에 연결 된 VHD를 만들고 가상 컴퓨터의 가상 SCSI 디스크에서 데이터베이스, 로그 및 SYSVOL을 저장 합니다. 가상 SCSI 디스크 가상 IDE에 비해 향상 된 성능을 제공 하 고 강제 단위 액세스 (FUA) 지원 합니다. FUA 사용 하면 운영 체제 기록 되며 모든 캐싱 메커니즘을 우회 하는 미디어에서 직접 데이터를 읽습니다.
+- **게스트 저장소**합니다. Active Directory 데이터베이스 (Ntds.dit) 파일, 로그 파일 및 SYSVOL 파일을 운영 체제 파일에서 별도 가상 디스크에 저장 합니다. 두 번째 가상 SCSI 컨트롤러에 연결 된 VHD를 만들고 가상 컴퓨터의 가상 SCSI 디스크에서 데이터베이스, 로그 및 SYSVOL을 저장 합니다. 가상 SCSI 디스크 가상 IDE에 비해 향상 된 성능을 제공 하 고 강제 단위 액세스 (FUA) 지원 합니다. FUA 사용 하면 운영 체제 기록 되며 모든 캐싱 메커니즘을 우회 하는 미디어에서 직접 데이터를 읽습니다.
 
-   > [!NOTE]
-   > 가상 DC 게스트에 대 한 Bitlocker를 사용 하려는 경우 "자동 잠금 해제"에 대 한 추가 볼륨 구성 되어 있는지 확인 해야 합니다.
-   > 자동 구성에 대 한 자세한 내용은 잠금 해제에서 찾을 수 있습니다 [BitLockerAutoUnlock 사용](https://docs.microsoft.com/powershell/module/bitlocker/enable-bitlockerautounlock)
+  > [!NOTE]
+  > 가상 DC 게스트에 대 한 Bitlocker를 사용 하려는 경우 "자동 잠금 해제"에 대 한 추가 볼륨 구성 되어 있는지 확인 해야 합니다.
+  > 자동 구성에 대 한 자세한 내용은 잠금 해제에서 찾을 수 있습니다 [BitLockerAutoUnlock 사용](https://docs.microsoft.com/powershell/module/bitlocker/enable-bitlockerautounlock)
 
-   - **VHD 파일의 저장소를 호스트**합니다. 권장 사항: VHD 파일의 저장소 권장 사항 주소 저장소를 호스트 합니다. 최상의 성능을 위해 다른 서비스 또는 호스트 Windows 운영 체제가 설치 되어 있는 시스템 디스크 등의 응용 프로그램에서 자주 사용 되는 디스크에 VHD 파일을 저장 하지 마십시오. 호스트 운영 체제에서 별도 파티션에서 각 VHD 파일 및 다른 모든 VHD 파일을 저장 합니다. 이상적인 구성은 별도 실제 드라이브에 있는 각 VHD 파일을 저장 하는 것입니다.  
+- **VHD 파일의 저장소를 호스트**합니다. 권장 사항: VHD 파일의 저장소 권장 사항 주소 저장소를 호스트 합니다. 최상의 성능을 위해 다른 서비스 또는 호스트 Windows 운영 체제가 설치 되어 있는 시스템 디스크 등의 응용 프로그램에서 자주 사용 되는 디스크에 VHD 파일을 저장 하지 마십시오. 호스트 운영 체제에서 별도 파티션에서 각 VHD 파일 및 다른 모든 VHD 파일을 저장 합니다. 이상적인 구성은 별도 실제 드라이브에 있는 각 VHD 파일을 저장 하는 것입니다.  
 
-    호스트 실제 디스크 시스템 충족 해야 합니다 **하나 이상의** 가상화 된 워크 로드 데이터 무결성의 요구 사항을 충족 하기 위해 다음 조건 중:  
+  호스트 실제 디스크 시스템 충족 해야 합니다 **하나 이상의** 가상화 된 워크 로드 데이터 무결성의 요구 사항을 충족 하기 위해 다음 조건 중:  
 
-      - 서버 클래스 디스크 (SCSI, 파이버 채널)이 사용 됩니다.  
-      - 시스템은 디스크는 배터리 백업 캐싱 HBA (호스트 버스 어댑터)에 연결 되어 있는지 있도록 합니다.  
-      - 시스템은 저장소 장치로 저장소 컨트롤러 (예를 들어 RAID 시스템)를 사용합니다.  
-      - 시스템은 디스크에 대 한 전원 무정전 전원 공급 장치 (UPS)로 보호 되는 게 됩니다.  
-      - 시스템은 디스크의 쓰기 캐싱 기능을 해제 하 게 됩니다.  
+   - 서버 클래스 디스크 (SCSI, 파이버 채널)이 사용 됩니다.  
+   - 시스템은 디스크는 배터리 백업 캐싱 HBA (호스트 버스 어댑터)에 연결 되어 있는지 있도록 합니다.  
+   - 시스템은 저장소 장치로 저장소 컨트롤러 (예를 들어 RAID 시스템)를 사용합니다.  
+   - 시스템은 디스크에 대 한 전원 무정전 전원 공급 장치 (UPS)로 보호 되는 게 됩니다.  
+   - 시스템은 디스크의 쓰기 캐싱 기능을 해제 하 게 됩니다.  
 
-   - **통과 디스크 및 VHD를 고정**합니다. 가상 머신에 대 한 저장소를 구성 하는 방법은 여러 가지입니다. VHD 파일을 사용 하는 경우 생성 될 때 고정 크기 Vhd에 대 한 메모리 할당 되므로 고정 크기 Vhd는 동적 Vhd 보다 더 효율적입니다. 통과 디스크의 경우 실제 저장소 미디어에 액세스할 사용할 수 있는 가상 컴퓨터에는 더욱 성능을 위해 최적화 됩니다. 통과 디스크는 기본적으로 실제 디스크 또는 가상 머신에 연결 된 논리 단위 번호 (Lun)입니다. 통과 디스크 스냅숏 기능을 지원 하지 않습니다. 따라서 통과 디스크 되므로 기본 하드 디스크 구성을 한 도메인 컨트롤러를 사용 하 여 스냅숏 사용은 권장 되지 않습니다.  
+- **통과 디스크 및 VHD를 고정**합니다. 가상 머신에 대 한 저장소를 구성 하는 방법은 여러 가지입니다. VHD 파일을 사용 하는 경우 생성 될 때 고정 크기 Vhd에 대 한 메모리 할당 되므로 고정 크기 Vhd는 동적 Vhd 보다 더 효율적입니다. 통과 디스크의 경우 실제 저장소 미디어에 액세스할 사용할 수 있는 가상 컴퓨터에는 더욱 성능을 위해 최적화 됩니다. 통과 디스크는 기본적으로 실제 디스크 또는 가상 머신에 연결 된 논리 단위 번호 (Lun)입니다. 통과 디스크 스냅숏 기능을 지원 하지 않습니다. 따라서 통과 디스크 되므로 기본 하드 디스크 구성을 한 도메인 컨트롤러를 사용 하 여 스냅숏 사용은 권장 되지 않습니다.  
 
 Active Directory 데이터 손상 될 가능성을 줄이기 위해 가상 SCSI 컨트롤러를 사용 합니다.
 
@@ -320,11 +320,11 @@ Windows Server 2012 이상에서 작동 하는 동안 Bitlocker 사용 하 여 �
 
 다음 그림에 가상화 된 도메인 컨트롤러를 복원 하는 최상의 방법을 결정 하는 프로세스를 사용 합니다.
 
-![](media\virtualized-domain-controller-architecture\Dd363553.85c97481-7b95-4705-92a7-006e48bc29d0(WS.10).gif)
+![](media/virtualized-domain-controller-architecture/Dd363553.85c97481-7b95-4705-92a7-006e48bc29d0(WS.10).gif)
 
 Rodc에 대해은 복원 프로세스 및 의사 결정은 간단 합니다.
 
-![](media\virtualized-domain-controller-architecture\Dd363553.4c5c5eda-df95-4c6b-84e0-d84661434e5d(WS.10).gif)
+![](media/virtualized-domain-controller-architecture/Dd363553.4c5c5eda-df95-4c6b-84e0-d84661434e5d(WS.10).gif)
 
 ## <a name="restoring-the-system-state-backup-of-a-virtual-domain-controller"></a>가상 도메인 컨트롤러의 시스템 상태 백업 복원
 
@@ -365,17 +365,17 @@ Rodc에 대해은 복원 프로세스 및 의사 결정은 간단 합니다.
 9. 마우스 오른쪽 단추로 클릭 합니다 **Directory Services** 로깅하고 클릭 **찾을**합니다. **찾을 내용**, 형식 **1109**를 클릭 하 고 **다음 찾기**합니다.
 10. 하나 이상의 이벤트 ID 1109 항목이 표시 됩니다. 이 항목에 표시 되지 않는 경우 다음 단계를 진행 합니다. 그렇지 않으면 항목을 두 번 클릭 하 고 업데이트 InvocationID와 하려고 했음을 확인 하는 텍스트를 검토:
 
-   ```
-   Active Directory has been restored from backup media, or has been configured to host an application partition. 
-   The invocationID attribute for this directory server has been changed. 
-   The highest update sequence number at the time the backup was created is <time>
+    ```
+    Active Directory has been restored from backup media, or has been configured to host an application partition. 
+    The invocationID attribute for this directory server has been changed. 
+    The highest update sequence number at the time the backup was created is <time>
 
-   InvocationID attribute (old value):<Previous InvocationID value>
-   InvocationID attribute (new value):<New InvocationID value>
-   Update sequence number:<USN>
+    InvocationID attribute (old value):<Previous InvocationID value>
+    InvocationID attribute (new value):<New InvocationID value>
+    Update sequence number:<USN>
 
-   The InvocationID is changed when a directory server is restored from backup media or is configured to host a writeable application directory partition.
-   ```
+    The InvocationID is changed when a directory server is restored from backup media or is configured to host a writeable application directory partition.
+    ```
 
 11. 이벤트 뷰어를 닫습니다.
 12. 값을 확인 하려면 레지스트리 편집기를 사용 **DSA 이전 복원 개수** 은에 1을 더한 이전 값과 같습니다. 올바른 값이 아니면 이벤트 뷰어에서 이벤트 ID 1109에 대 한 진입점을 찾을 수 없는 경우 도메인 컨트롤러의 서비스 팩 최신 인지 확인 합니다. 동일한 VHD에서 다시이 절차를 시도 수 없습니다. 1 단계부터 다시 시작 하 여 표준 모드에서 시작 되지 않은 다른 VHD 또는 VHD의 복사본에서 다시 시도할 수 있습니다.
@@ -418,7 +418,7 @@ AD DS 도메인 컨트롤러에서 올바르게 복원 되는 **invocationID** �
 
 예를 들어 VDC1 및 DC2는 동일한 도메인에 두 명의 도메인 컨트롤러를 가정 합니다. 다음 그림 VDC1에 대 한 DC2 맞추고 데이터 조작을 invocationID 값 복원 적절 한 상황에서 재설정 될 때입니다.
 
-![](media\virtualized-domain-controller-architecture\Dd363553.ca71fc12-b484-47fb-991c-5a0b7f516366(WS.10).gif)
+![](media/virtualized-domain-controller-architecture/Dd363553.ca71fc12-b484-47fb-991c-5a0b7f516366(WS.10).gif)
 
 ## <a name="usn-rollback"></a>USN 롤백
 
@@ -445,7 +445,7 @@ Windows Server 2008 및 Windows Server 2003 SP1에서 이전에 사용한 USN을
 
 다음 그림에서는 vdc2, 즉 제공 되는 가상 컴퓨터에서 실행 되는 대상 도메인 컨트롤러에서 USN 롤백이 감지 된 때 발생 하는 이벤트의 순서를 보여 줍니다. 이 그림에서 USN 롤백이 감지 미치는 VDC2 VDC2 VDC2의 데이터베이스가 롤백되어 나타내는 대상 도메인 컨트롤러에 게 이전에 표시 된 최신 USN 값을 전송한는 복제 파트너를 감지할 때 시간에 부적절 하 게 합니다.
 
-![](media\virtualized-domain-controller-architecture\\Dd363553.373b0504-43fc-40d0-9908-13fdeb7b3f14(WS.10).gif)
+![](media/virtualized-domain-controller-architecture/Dd363553.373b0504-43fc-40d0-9908-13fdeb7b3f14(WS.10).gif)
 
 디렉터리 서비스 이벤트 로그에서 이벤트 ID 2095를 보고 즉시 다음 절차를 완료 합니다.
 
@@ -470,7 +470,7 @@ Windows Server 2008 및 Windows Server 2003 SP1에서 이전에 사용한 USN을
 
 두 번째 상황에서 Usn 범위에는 서로 다른 두 변경 집합에 적용 됩니다. 이 검색 되지 않고 오랫동안 계속 수 있습니다. 해당 시간 중에 생성 된 개체를 수정할 때마다 느린 개체가 감지 되 고 이벤트 뷰어에서 이벤트 ID 1988으로 보고 합니다. 다음 그림에서는 USN 롤백이 이러한 상황이 발생에서 검색 되지 않을 수 있습니다 하는 방법을 보여 줍니다.
 
-![](media\virtualized-domain-controller-architecture\Dd363553.63565fe0-d970-4b4e-b5f3-9c76bc77e2d4(WS.10).gif)
+![](media/virtualized-domain-controller-architecture/Dd363553.63565fe0-d970-4b4e-b5f3-9c76bc77e2d4(WS.10).gif)
 
 ## <a name="read-only-domain-controllers"></a>읽기 전용 도메인 컨트롤러
 

@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 94be02aa25867845436b83d052c4990ff9212975
-ms.sourcegitcommit: 08eba714d3ceb5f2dfb5486d6b990da1aa4dcbdd
+ms.openlocfilehash: 8aee4ecca85c7d5f46ee79f3ad928b746c02e7bb
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65564680"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66439978"
 ---
 # <a name="writer"></a>기록기
 
@@ -35,11 +35,11 @@ writer exclude [<Writer> | <Component>]
 
 ## <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------|-----------|
-|확인|백업 또는 복원 프로시저에는 지정 된 작성기 나 구성 요소가 포함 되어 있는지 확인 합니다. 백업 또는 복원 프로시저는 작성기 나 구성 요소가 포함 되어 있지 않으면 실패 합니다.|
-|exclude|백업 또는 복원 프로시저에서 지정 된 작성기 또는 구성 요소를 제외합니다.|
-|[\<Writer> | <Component>]|기록기 또는 구성 요소 확인 하거나 제외할 수를 지정 합니다. GUID 기록기에 의해 또는 예를 들어 "시스템 Writer." 기록기 이름별 기록기를 지정 합니다.|
+| 매개 변수  |                                                                                      설명                                                                                      |
+|------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|   확인   | 백업 또는 복원 프로시저에는 지정 된 작성기 나 구성 요소가 포함 되어 있는지 확인 합니다. 백업 또는 복원 프로시저는 작성기 나 구성 요소가 포함 되어 있지 않으면 실패 합니다. |
+|  exclude   |                                                   백업 또는 복원 프로시저에서 지정 된 작성기 또는 구성 요소를 제외합니다.                                                    |
+| [\<Writer> |                                                                                     <Component>]                                                                                      |
 
 ## <a name="BKMK_examples"></a>예제
 

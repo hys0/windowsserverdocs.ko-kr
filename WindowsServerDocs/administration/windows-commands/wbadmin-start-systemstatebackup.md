@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 591ff7caa554a892bda0bc0e888bd89a87d8b0ef
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d98ba295b2a76baf98e85a01a02677d57922877d
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59863554"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66440266"
 ---
 # <a name="wbadmin-start-systemstatebackup"></a>wbadmin 시작 systemstatebackup
 
@@ -43,10 +43,10 @@ wbadmin start systemstatebackup
 
 ## <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------|-----------|
-|-backupTarget|백업을 저장 하려는 위치를 지정 합니다. 저장소 위치 형식의 GUID 기반 볼륨 또는 드라이브 문자 필요: \\ \\? \Volume {*GUID*}.</br>Windows Server 2008을 실행 하는 컴퓨터에 공유 네트워크 폴더에는 시스템 상태 백업이 지원 되지 않습니다. 서버에서 Windows Server 2008 R2를 실행 하는 경우 나중에 명령을 사용할 수 있습니다 **-backuptarget:\\\\servername\sharedFolder\**  시스템 상태 백업을 저장 합니다.|
-|-quiet|사용자에 게 하위 명령 프롬프트 없이 실행 됩니다.|
+|   매개 변수   |                                                                                                                                                                                                                      설명                                                                                                                                                                                                                      |
+|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| -backupTarget | 백업을 저장 하려는 위치를 지정 합니다. 저장소 위치 형식의 GUID 기반 볼륨 또는 드라이브 문자 필요: \\ \\? \Volume {*GUID*}.</br>Windows Server 2008을 실행 하는 컴퓨터에 공유 네트워크 폴더에는 시스템 상태 백업이 지원 되지 않습니다. 서버에서 Windows Server 2008 R2를 실행 하는 경우 나중에 명령을 사용할 수 있습니다 **-backuptarget:\\\\servername\sharedFolder\\**  시스템 상태 백업을 저장 합니다. |
+|    -quiet     |                                                                                                                                                                                                   사용자에 게 하위 명령 프롬프트 없이 실행 됩니다.                                                                                                                                                                                                    |
 
 ## <a name="remarks"></a>설명
 

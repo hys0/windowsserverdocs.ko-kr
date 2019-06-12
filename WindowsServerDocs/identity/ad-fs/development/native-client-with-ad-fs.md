@@ -9,12 +9,12 @@ ms.date: 07/17/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: active-directory-federation-services
-ms.openlocfilehash: e85a97fa08e4c77588b17aee08ee03e0b897a74c
-ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
+ms.openlocfilehash: 15bb6f1e39f64ff19ebb5515188ee944e277d3b7
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65976872"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66445482"
 ---
 # <a name="build-a-native-client-application-using-oauth-public-clients-with-ad-fs-2016-or-later"></a>네이티브 클라이언트 OAuth 공용 클라이언트를 사용 하 여 AD FS 2016을 사용 하 여 응용 프로그램 또는 이후 빌드
 
@@ -163,7 +163,7 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-native-deskto
 
 이 단계에서는 네이티브 응용 프로그램이 AD fs 및 웹 API에 대 한 ID 토큰 및 액세스 토큰을 가져왔습니다.
 
-3.  입력을을 텍스트 상자에 항목 추가 항목을 클릭 합니다. 이 단계에서는 응용 프로그램에 도달 추가 하는 웹 API는 할 일 항목 및이 위해 AD FS에서 얻은 WebAPI에 액세스 토큰을 제공 합니다. Web API는 토큰에 대 한 것 이며 페더레이션 메타 데이터에서 정보를 사용 하 여 토큰 서명을 확인 되도록 대상 값을 찾습니다.
+3. 입력을을 텍스트 상자에 항목 추가 항목을 클릭 합니다. 이 단계에서는 응용 프로그램에 도달 추가 하는 웹 API는 할 일 항목 및이 위해 AD FS에서 얻은 WebAPI에 액세스 토큰을 제공 합니다. Web API는 토큰에 대 한 것 이며 페더레이션 메타 데이터에서 정보를 사용 하 여 토큰 서명을 확인 되도록 대상 값을 찾습니다.
 
 ![로그인](media/native-client-with-ad-fs-2016/clienttodoadd.png)
 

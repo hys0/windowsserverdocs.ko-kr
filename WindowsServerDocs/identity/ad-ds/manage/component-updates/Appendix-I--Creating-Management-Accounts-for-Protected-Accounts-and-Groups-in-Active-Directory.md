@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: c71b96f6c44cfc2b14b4c5d203f876e55cc728ec
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: e90c2c075ba2dc2b63e9a18c9eba192116265b90
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59855634"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66443518"
 ---
 # <a name="appendix-i-creating-management-accounts-for-protected-accounts-and-groups-in-active-directory"></a>부록 i: Active Directory의 보호 된 계정 및 그룹에 대 한 계정 관리
 
@@ -150,35 +150,35 @@ Active Directory 설치의 권한 있는 그룹의 멤버 자격을 관리 하�
   
 10. 에 **개체** 탭을 선택 **실수로 삭제 되지 않도록에서 개체 보호**합니다. 이 개체도 (권한 있는 사용자의 경우) 하 여 삭제를 수 있지만 방해 하 여 AD DS 계층 구조에서 다른 OU로 이동 되지 특성을 변경할 수 있는 권한이 있는 사용자는 확인란의 선택을 취소 먼저 하지 않는 한 합니다.  
 
-   ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_125.png)  
+    ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_125.png)  
 
 11. 클릭 하 고 **원격 제어** 탭 합니다.  
 
 12. 지우기는 **원격 제어 사용** 플래그입니다. 지원 담당자가이 계정 수정 프로그램을 구현 하는이 세션에 연결 하는 데 필요한 안 있습니다.  
 
-   ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_126.png)  
+    ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_126.png)  
 
-   > [!NOTE]  
-   > Active Directory 모든 개체에에서 지정된 된 IT 소유자 및 있어야 지정 된 비즈니스 소유자가에 설명 된 대로 [손상에 대 한 계획](../../../ad-ds/plan/security-best-practices/Planning-for-Compromise.md)합니다. (외부 데이터베이스)가 아니라 Active Directory에서 AD DS 개체의 소유권을 추적 하는 경우에이 개체의이 속성에 적절 한 소유권 정보를 입력 해야 합니다.  
-   >
-   > 이 경우 비즈니스 소유자는 대개 IT 부서는 andthere 비즈니스 소유자가 있는 IT 소유자에 대 한 금지 없습니다. 개체의 소유권을 설정 하는 점은 변경 해야 할 개체에 아마도 년 초기 생성에서 하는 경우 연락처를 식별할 수 있도록 하는 것입니다.  
+    > [!NOTE]  
+    > Active Directory 모든 개체에에서 지정된 된 IT 소유자 및 있어야 지정 된 비즈니스 소유자가에 설명 된 대로 [손상에 대 한 계획](../../../ad-ds/plan/security-best-practices/Planning-for-Compromise.md)합니다. (외부 데이터베이스)가 아니라 Active Directory에서 AD DS 개체의 소유권을 추적 하는 경우에이 개체의이 속성에 적절 한 소유권 정보를 입력 해야 합니다.  
+    >
+    > 이 경우 비즈니스 소유자는 대개 IT 부서는 andthere 비즈니스 소유자가 있는 IT 소유자에 대 한 금지 없습니다. 개체의 소유권을 설정 하는 점은 변경 해야 할 개체에 아마도 년 초기 생성에서 하는 경우 연락처를 식별할 수 있도록 하는 것입니다.  
 
 13. 클릭 된 **조직** 탭 합니다.  
 
 14. AD DS 개체 표준 프로그램에 필요한 모든 정보를 입력 합니다.  
 
-   ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_127.png)  
+    ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_127.png)  
 
 15. 클릭 된 **전화 접속** 탭 합니다.  
 
 16. 에 **네트워크 액세스 권한** 필드를 선택한 **액세스 거부**합니다. 이 계정은 해야 원격 연결을 통해 연결할 필요는 없습니다.  
 
-   ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_128.png)  
+    ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_128.png)  
 
-   > [!NOTE]  
-   > 이 계정은 사용자 환경에서 읽기 전용 도메인 컨트롤러 (Rodc)에 로그온 하는 많지 않습니다. 그러나 해야 상황에서 필요한 계정에 로그온 RODC에 로그온 추가 해야이 계정이 Denied RODC Password Replication Group에 해당 암호는 RODC에 캐시 되지 않도록 합니다.  
-   >
-   > 각 사용 후 계정 암호를 다시 설정 해야 하 고 계정을 사용 하지 않도록 설정 해야 하지만이 설정을 구현 하는 계정에 나쁜 영향 없고 관리자 계정의 암호를 다시 설정 하 고 비활성화가 잊어버린 경우에 도움이 될 수 있습니다.  
+    > [!NOTE]  
+    > 이 계정은 사용자 환경에서 읽기 전용 도메인 컨트롤러 (Rodc)에 로그온 하는 많지 않습니다. 그러나 해야 상황에서 필요한 계정에 로그온 RODC에 로그온 추가 해야이 계정이 Denied RODC Password Replication Group에 해당 암호는 RODC에 캐시 되지 않도록 합니다.  
+    >
+    > 각 사용 후 계정 암호를 다시 설정 해야 하 고 계정을 사용 하지 않도록 설정 해야 하지만이 설정을 구현 하는 계정에 나쁜 영향 없고 관리자 계정의 암호를 다시 설정 하 고 비활성화가 잊어버린 경우에 도움이 될 수 있습니다.  
 
 17. 클릭 하 고 **소속** 탭 합니다.  
 
@@ -188,42 +188,42 @@ Active Directory 설치의 권한 있는 그룹의 멤버 자격을 관리 하�
 
 20. **확인**을 클릭합니다.  
 
-   ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_129.png)  
+    ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_129.png)  
 
 21. 클릭 하 고 **보안** 탭을 클릭 **고급**합니다.  
 
 22. 에 **고급 보안 설정** 대화 상자를 클릭 하 여 **상속 사용 안 함** 명시적 권한이 상속된 된 사용 권한을 복사 하 고을 클릭 **추가**합니다.  
 
-   ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_130.png)  
+    ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_130.png)  
 
 23. 에 **[Account]에 대 한 사용 권한 항목** 대화 상자를 클릭 **보안 주체 선택** 이전 절차에서 만든 그룹을 추가 합니다. 대화 상자의 아래쪽으로 스크롤하여 클릭 **모두 지우기** 모든 기본 권한을 제거 합니다.  
 
-   ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_131.png)  
+    ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_131.png)  
 
 24. 맨 위에 있는 스크롤은 **권한 항목** 대화 상자입니다. 확인는 **형식** 드롭다운 목록이로 설정 되어 **허용**, 및는 **에 적용 됩니다** 드롭 다운 목록에서 **이 개체만**합니다.  
 
 25. 에 **권한을** 필드를 선택한 **모든 속성 읽기**, **대 한 읽기 권한이**, 및 **암호 재설정**합니다.  
 
-   ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_132.png)  
+    ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_132.png)  
 
 26. 에 **속성** 필드를 선택한 **userAccountControl 읽기** 및 **userAccountControl 쓰기**합니다.  
 
 27. 클릭 **확인**, **확인** 다시는 **고급 보안 설정** 대화 상자입니다.  
 
-   ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_133.png)  
+    ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_133.png)  
 
-   > [!NOTE]  
-   > **userAccountControl** 특성 여러 계정 구성 옵션을 제어 합니다. 특성에 대 한 쓰기 권한을 부여 하는 경우 일부 구성 옵션을 변경할 수 있는 권한을 부여할 수 없습니다.  
+    > [!NOTE]  
+    > **userAccountControl** 특성 여러 계정 구성 옵션을 제어 합니다. 특성에 대 한 쓰기 권한을 부여 하는 경우 일부 구성 옵션을 변경할 수 있는 권한을 부여할 수 없습니다.  
 
 28. 에 **그룹 또는 사용자 이름** 필드는 **보안** 탭에서 액세스 계정을 관리 하거나 허용 되지 않은 모든 그룹을 제거 합니다. Everyone 그룹 및 자체 계산 계정 등 Deny Ace를 사용 하 여 구성 된 모든 그룹을 제거 하지 마십시오 (해당 ACE 때 설정 된는 **사용자 암호를 변경할 수 없음** 플래그 계정 작성 하는 동안 활성화 되었습니다. 또한 방금 추가한 그룹, 시스템 계정 또는 EA, DA, BA, 또는 Windows Authorization Access Group 같은 그룹 제거 하지 마십시오.  
 
-   ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_134.png)  
+    ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_134.png)  
 
 29. 클릭 **고급** 및 고급 보안 설정 대화 상자는 다음 스크린샷과 유사 표시 되는지 확인 합니다.  
 
 30. 클릭 **확인**, 및 **확인** 다시 계정 속성 대화 상자를 닫습니다.  
 
-   ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_135.png)  
+    ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_135.png)  
 
 31. 첫 번째 관리 계정의 설치가 이제 완료 됩니다. 이후 절차에서 계정을 테스트 합니다.  
 
@@ -251,56 +251,56 @@ Active Directory 설치의 권한 있는 그룹의 멤버 자격을 관리 하�
   
 이 경우 있습니다 됩니다 수 부여에 새로 만든된 관리 계정을 읽기 위해 및 멤버 특성에 대 한 쓰기 그룹 개체를 허용 합니다. 그러나 AdminSDHolder 개체 그룹 개체 아니며 그룹 특성 그래픽 ACL 편집기에 표시 되지 않습니다. Dsacls 명령줄 유틸리티를 통해 사용 권한 변경 내용을 구현 하는 이러한 이유 때문입니다. (사용 안 함된) 관리 계정 권한 보호 되는 그룹의 구성원 자격 수정에 부여 하려면 다음 단계를 수행 합니다.  
   
-1.  도메인 컨트롤러는 PDC 에뮬레이터 (PDCE) 역할 이루어졌습니다 DA 그룹의 멤버인 도메인 사용자 계정의 자격 증명으로 도메인 컨트롤러 가급적에 로그온 합니다.  
+1. 도메인 컨트롤러는 PDC 에뮬레이터 (PDCE) 역할 이루어졌습니다 DA 그룹의 멤버인 도메인 사용자 계정의 자격 증명으로 도메인 컨트롤러 가급적에 로그온 합니다.  
   
-    ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_136.png)  
+   ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_136.png)  
   
-2.  관리자 권한 명령 프롬프트를 마우스 오른쪽 단추로 클릭 하 여 **명령 프롬프트** 클릭 **관리자 권한으로 실행**합니다.  
+2. 관리자 권한 명령 프롬프트를 마우스 오른쪽 단추로 클릭 하 여 **명령 프롬프트** 클릭 **관리자 권한으로 실행**합니다.  
   
-    ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_137.gif)  
+   ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_137.gif)  
   
-3.  권한 상승을 승인를 묻는 메시지가 나타나면 클릭 **예**합니다.  
+3. 권한 상승을 승인를 묻는 메시지가 나타나면 클릭 **예**합니다.  
   
-    ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_138.gif)  
+   ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_138.gif)  
   
-    > [!NOTE]  
-    > 권한 상승 및 사용자 계정 컨트롤 (UAC) Windows에서에 대 한 자세한 내용은 참조 [UAC 프로세스 및 상호 작용](https://technet.microsoft.com/library/dd835561(v=WS.10).aspx) TechNet 웹 사이트입니다.  
+   > [!NOTE]  
+   > 권한 상승 및 사용자 계정 컨트롤 (UAC) Windows에서에 대 한 자세한 내용은 참조 [UAC 프로세스 및 상호 작용](https://technet.microsoft.com/library/dd835561(v=WS.10).aspx) TechNet 웹 사이트입니다.  
   
-4.  명령 프롬프트 (도메인 관련 정보로 대체) 하는 형식 **Dsacls [사용자 도메인에 있는 AdminSDHolder 개체의 고유 이름] [관리 계정 UPN] /G: RPWP; 구성원**합니다.  
+4. 명령 프롬프트 (도메인 관련 정보로 대체) 하는 형식 **Dsacls [사용자 도메인에 있는 AdminSDHolder 개체의 고유 이름] [관리 계정 UPN] /G: RPWP; 구성원**합니다.  
   
-    ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_139.gif)  
+   ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_139.gif)  
   
-    이전 명령 (대/소문자 구분 하지 않음)은 다음과 같습니다.  
+   이전 명령 (대/소문자 구분 하지 않음)은 다음과 같습니다.  
   
-    -   Dsacls 설정 하거나 Ace 디렉터리 개체에 표시 됩니다.  
+   - Dsacls 설정 하거나 Ace 디렉터리 개체에 표시 됩니다.  
   
-    -   CN AdminSDHolder, CN = System, DC = 명인 = msft 수정할 개체를 식별 합니다.  
+   - CN AdminSDHolder, CN = System, DC = 명인 = msft 수정할 개체를 식별 합니다.  
   
-    -   /G은 ACE 권한 부여 구성 되어 있는지 나타냅니다.  
+   - /G은 ACE 권한 부여 구성 되어 있는지 나타냅니다.  
   
-    -   PIM001@tailspintoys.msft 이름 UPN (사용자 계정)의 Ace 부여 보안 주체는  
+   - PIM001@tailspintoys.msft 이름 UPN (사용자 계정)의 Ace 부여 보안 주체는  
   
-    -   RPWP 부여 속성 읽기 및 쓰기 권한을 속성  
+   - RPWP 부여 속성 읽기 및 쓰기 권한을 속성  
   
-    -   멤버의 이름인 속성 (특성)에 사용 권한을 설정할 수  
+   - 멤버의 이름인 속성 (특성)에 사용 권한을 설정할 수  
   
-    사용에 대 한 자세한 내용은 **Dsacls**, 명령 프롬프트에서 매개 변수 없이 Dsacls를 입력 합니다.  
+   사용에 대 한 자세한 내용은 **Dsacls**, 명령 프롬프트에서 매개 변수 없이 Dsacls를 입력 합니다.  
   
-    도메인 관리 계정을 여러 개를 만든 경우 각 계정에 대해 Dsacls 명령을 실행 해야 합니다. AdminSDHolder 개체에서 ACL 구성을 완료 했으면, 실행 또는 예약 된 실행이 완료 될 때까지 대기 하도록 SDProp를 강제로 수행 해야 합니다. 실행 하는 SDProp 강제 적용에 대 한 내용은 "실행 SDProp Manually"를 참조 [부록 c: 보호 된 계정 및 Active Directory에서 그룹](../../../ad-ds/plan/security-best-practices/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory.md)합니다.  
+   도메인 관리 계정을 여러 개를 만든 경우 각 계정에 대해 Dsacls 명령을 실행 해야 합니다. AdminSDHolder 개체에서 ACL 구성을 완료 했으면, 실행 또는 예약 된 실행이 완료 될 때까지 대기 하도록 SDProp를 강제로 수행 해야 합니다. 실행 하는 SDProp 강제 적용에 대 한 내용은 "실행 SDProp Manually"를 참조 [부록 c: 보호 된 계정 및 Active Directory에서 그룹](../../../ad-ds/plan/security-best-practices/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory.md)합니다.  
   
-    SDProp이 실행 될 때 도메인의 보호 된 그룹에는 AdminSDHolder 개체에 대 한 변경 내용이 적용 된 것을 확인할 수 있습니다. 앞에서 설명한 이유 때문에 AdminSDHolder 개체에 ACL을 확인 하 여이 확인할 수 없는 있지만 보호 된 그룹에 Acl을 확인 하 여 사용 권한이 적용 된 것을 확인할 수 있습니다.  
+   SDProp이 실행 될 때 도메인의 보호 된 그룹에는 AdminSDHolder 개체에 대 한 변경 내용이 적용 된 것을 확인할 수 있습니다. 앞에서 설명한 이유 때문에 AdminSDHolder 개체에 ACL을 확인 하 여이 확인할 수 없는 있지만 보호 된 그룹에 Acl을 확인 하 여 사용 권한이 적용 된 것을 확인할 수 있습니다.  
   
-5.  **Active Directory 사용자 및 컴퓨터**, 를 설정 했는지 확인 **고급 기능**합니다. 이렇게 하려면 클릭 **보기**, 를 찾아는 **Domain Admins** 그룹의 그룹을 마우스 오른쪽 단추로 클릭 하 고 클릭 **속성**합니다.  
+5. **Active Directory 사용자 및 컴퓨터**, 를 설정 했는지 확인 **고급 기능**합니다. 이렇게 하려면 클릭 **보기**, 를 찾아는 **Domain Admins** 그룹의 그룹을 마우스 오른쪽 단추로 클릭 하 고 클릭 **속성**합니다.  
   
-6.  클릭 된 **보안** 탭을 클릭 **고급** 를 열려면는 **도메인 관리자에 대 한 고급 보안 설정** 대화 상자.  
+6. 클릭 된 **보안** 탭을 클릭 **고급** 를 열려면는 **도메인 관리자에 대 한 고급 보안 설정** 대화 상자.  
   
-    ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_140.gif)  
+   ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_140.gif)  
   
-7.  선택 **관리 계정에 대 한 ACE 허용** 클릭 **편집**합니다. 해당 계정에만 부여 확인 **읽기 구성원** 및 **쓰기 구성원** DA 그룹과 클릭에 대 한 권한을 **확인**합니다.  
+7. 선택 **관리 계정에 대 한 ACE 허용** 클릭 **편집**합니다. 해당 계정에만 부여 확인 **읽기 구성원** 및 **쓰기 구성원** DA 그룹과 클릭에 대 한 권한을 **확인**합니다.  
   
-8.  클릭 **확인** 에 **고급 보안 설정** 대화 상자를 클릭 하 고 **확인** DA 그룹에 대 한 속성 대화 상자를 다시 합니다.  
+8. 클릭 **확인** 에 **고급 보안 설정** 대화 상자를 클릭 하 고 **확인** DA 그룹에 대 한 속성 대화 상자를 다시 합니다.  
   
-    ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_141.gif)  
+   ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_141.gif)  
   
 9. 이전 단계를 반복 하 여 도메인;에서 보호 되는 다른 그룹에 대 한 사용 권한을 모든 보호 그룹에 대해 동일 해야 합니다. 이제이 도메인의 보호 된 그룹에 대 한 관리 계정의 생성 및 구성 완료 했습니다.  
   

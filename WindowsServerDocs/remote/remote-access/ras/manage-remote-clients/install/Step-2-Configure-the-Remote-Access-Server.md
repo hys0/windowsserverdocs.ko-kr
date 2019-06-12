@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: c0257b98-5633-4264-9df6-b6ffae80592c
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: a99a2667733c1a23bcba1134d59223044dc000b7
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 85bc7385fc3413bedb539cdbe9982b33dc653d6f
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59845534"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446893"
 ---
 # <a name="step-2-configure-the-remote-access-server"></a>2 단계 원격 액세스 서버를 구성 합니다.
 
@@ -62,7 +62,7 @@ ms.locfileid: "59845534"
   
 8.  **설치 진행률** 대화 상자에서 설치가 완료되었는지 확인하고 **닫기**를 클릭합니다.  
   
-![Windows PowerShell](../../../../media/Step-2-Configure-the-Remote-Access-Server/PowerShellLogoSmall.gif)Windows PowerShell 해당 명령을 * * *  
+![Windows PowerShell](../../../../media/Step-2-Configure-the-Remote-Access-Server/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -206,7 +206,7 @@ DirectAccess를 사용하여 클라이언트 컴퓨터를 프로비전하려면 
   
 ## <a name="BKMK_Links"></a>참고 항목  
   
--   [3 단계: 배포 확인](Step-3-Verify-the-Deployment_2.md)  
+-   [3단계: 배포 확인](Step-3-Verify-the-Deployment_2.md)  
   
   
 

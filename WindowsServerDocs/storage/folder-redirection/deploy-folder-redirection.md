@@ -6,25 +6,25 @@ ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 ms.technology: storage
-ms.date: 07/09/2018
+ms.date: 06/06/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 2bb15d5ae29da6c9dbcd6b58af280026d06febc8
-ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
+ms.openlocfilehash: 4b6c58f0f33b45052e038a9af941297a294d17b2
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/25/2019
-ms.locfileid: "66222743"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812511"
 ---
 # <a name="deploy-folder-redirection-with-offline-files"></a>오프 라인 파일을 사용 하 여 폴더 리디렉션 배포
 
->적용 대상: Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Vista, Windows Server 2019, Windows Server 2016, Windows Server (반기 채널), Windows Server 2012, Windows Server 2012 R2, Windows Server 2008 R2
+>적용 대상: Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Vista, Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2, Windows Server 2008 R2, Windows Server (반기 채널)
 
 이 항목에서는 Windows Server 폴더 리디렉션 오프 라인 파일을 사용 하 여 Windows 클라이언트 컴퓨터에 배포를 사용 하는 방법을 설명 합니다.
 
 이 항목에서는 최신 변경 내용 목록을 참조 하세요. [변경 내용](#change-history)합니다.
 
->[!IMPORTANT]
->보안 변경 내용으로 인해 [MS16 072](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14-2016)를 업데이트 했습니다 [3 단계: 폴더 리디렉션에 대 한 GPO를 만들어](#step-3-create-a-gpo-for-folder-redirection) 해당 Windows 고 수 있도록 제대로 폴더 리디렉션 정책 적용 (영향을 받는 Pc에서 리디렉션된 폴더를 전환 되지 않고)이이 항목의 합니다.
+> [!IMPORTANT]
+> 보안 변경 내용으로 인해 [MS16 072](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14-2016)를 업데이트 했습니다 [3 단계: 폴더 리디렉션에 대 한 GPO를 만들어](#step-3-create-a-gpo-for-folder-redirection) 해당 Windows 고 수 있도록 제대로 폴더 리디렉션 정책 적용 (영향을 받는 Pc에서 리디렉션된 폴더를 전환 되지 않고)이이 항목의 합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -45,8 +45,8 @@ ms.locfileid: "66222743"
     - 파일 공유에서 DFS 복제를 사용하여 다른 서버에 콘텐츠를 복제하는 경우 사용자가 서로 다른 서버에서 충돌하는 편집 작업을 수행하지 못하도록 원본 서버에만 액세스할 수 있도록 해야 합니다.
     - 클러스터형된 파일 공유를 사용할 때 폴더 리디렉션 및 오프 라인 파일을 사용 하 여 성능 문제를 방지 하려면 파일 공유에서 지속적인 가용성을 사용 하지 않도록 설정 합니다. 또한 오프 라인 파일 수 하지 사용자가 오프 라인 파일의 항상 오프 라인 모드를 사용 하지 않는 사용자가 불편 해질 수는 지속적으로 사용 가능한 파일 공유에 대 한 액세스를 잃어버린 후 3-6 분 동안 오프 라인 모드로 전환 됩니다.
 
->[!NOTE]
->일부 최신 폴더 리디렉션에서 기능이 추가 클라이언트 컴퓨터 및 Active Directory 스키마 요구 사항입니다. 자세한 내용은 참조 하세요. [의 기본 컴퓨터 배포](deploy-primary-computers.md)를 [사용 하지 않도록 설정에서 오프 라인 파일 폴더](disable-offline-files-on-folders.md)를 [사용 항상 오프 라인 모드](enable-always-offline.md), 및 [사용 최적화 폴더 이동 ](enable-optimized-moving.md).
+> [!NOTE]
+> 일부 최신 폴더 리디렉션에서 기능이 추가 클라이언트 컴퓨터 및 Active Directory 스키마 요구 사항입니다. 자세한 내용은 참조 하세요. [의 기본 컴퓨터 배포](deploy-primary-computers.md)를 [사용 하지 않도록 설정에서 오프 라인 파일 폴더](disable-offline-files-on-folders.md)를 [사용 항상 오프 라인 모드](enable-always-offline.md), 및 [사용 최적화 폴더 이동 ](enable-optimized-moving.md).
 
 ## <a name="step-1-create-a-folder-redirection-security-group"></a>1단계: 폴더 리디렉션 보안 그룹 만들기
 
@@ -67,8 +67,8 @@ ms.locfileid: "66222743"
 
 리디렉션된 폴더에 대 한 파일 공유는 아직 없는 경우 Windows Server 2012를 실행 하는 서버에서 파일 공유를 만들려면 다음 절차를 사용 합니다.
 
->[!NOTE]
->다른 버전의 Windows Server를 실행하는 서버에서 파일 공유를 만드는 경우 일부 기능이 다르거나 사용하지 못할 수도 있습니다.
+> [!NOTE]
+> 다른 버전의 Windows Server를 실행하는 서버에서 파일 공유를 만드는 경우 일부 기능이 다르거나 사용하지 못할 수도 있습니다.
 
 Windows Server 2019, Windows Server 2016 및 Windows Server 2012에서 파일 공유를 만드는 방법에는 다음과 같습니다.
 
@@ -93,15 +93,14 @@ Windows Server 2019, Windows Server 2016 및 Windows Server 2012에서 파일 �
 
 ### <a name="required-permissions-for-the-file-share-hosting-redirected-folders"></a>파일에 필요한 권한을 공유 호스팅 리디렉션된 폴더
 
-
-|사용자 계정  |액세스 권한  |적용 대상  |
-|---------|---------|---------|
+| 사용자 계정  | 액세스 권한  | 적용 대상  |
+| --------- | --------- | --------- |
 | 사용자 계정 | 액세스 권한 | 적용 대상 |
-|시스템     | 모든 권한        |    이 폴더, 하위 폴더 및 파일     |
-|Administrators     | 모든 권한       | 이 폴더만        |
-|만든 이/소유자     |   모든 권한      |   하위 폴더 및 파일만      |
-|공유 (폴더 리디렉션 사용자)에 데이터를 저장 해야 하는 사용자의 보안 그룹     |   폴더 나열 / 데이터 읽기 *(고급 권한)* <br /><br />폴더 만들기 / 데이터 추가 *(고급 권한)* <br /><br />특성을 읽을 *(고급 권한)* <br /><br />확장 특성 읽기 *(고급 권한)* <br /><br />읽기 권한이 *(고급 권한)*      |  이 폴더만       |
-|다른 그룹 및 계정     |  없음(제거)       |         |
+| 시스템     | 모든 권한        |    이 폴더, 하위 폴더 및 파일     |
+| Administrators     | 모든 권한       | 이 폴더만        |
+| 만든 이/소유자     |   모든 권한      |   하위 폴더 및 파일만      |
+| 공유 (폴더 리디렉션 사용자)에 데이터를 저장 해야 하는 사용자의 보안 그룹     |   폴더 나열 / 데이터 읽기 *(고급 권한)* <br /><br />폴더 만들기 / 데이터 추가 *(고급 권한)* <br /><br />특성을 읽을 *(고급 권한)* <br /><br />확장 특성 읽기 *(고급 권한)* <br /><br />읽기 권한이 *(고급 권한)*      |  이 폴더만       |
+| 다른 그룹 및 계정     |  없음(제거)       |         |
 
 ## <a name="step-3-create-a-gpo-for-folder-redirection"></a>3단계: 폴더 리디렉션에 대 한 GPO 만들기
 
@@ -121,15 +120,15 @@ Windows Server 2019, Windows Server 2016 및 Windows Server 2012에서 파일 �
     
     이 단계에서 보안 변경으로 인해 되기 [MS16 072](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14-2016)합니다.
 
->[!IMPORTANT]
->보안 변경 내용으로 인해 [MS16 072](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14-2016), 이제 폴더 리디렉션 GPO에 인증 된 사용자 위임 된 그룹 읽기 권한을 부여 해야 합니다-그렇지 않은 경우 사용자에 게 GPO 적용 되지 않습니다 또는 GPO가 이미 적용 된 경우 제거할 폴더를 로컬 PC 다시 리디렉션됩니다. 자세한 내용은 참조 하세요. [배포 그룹 정책 보안 업데이트 MS16-072](https://blogs.technet.microsoft.com/askds/2016/06/22/deploying-group-policy-security-update-ms16-072-kb3163622/)합니다.
+> [!IMPORTANT]
+> 보안 변경 내용으로 인해 [MS16 072](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14-2016), 이제 폴더 리디렉션 GPO에 인증 된 사용자 위임 된 그룹 읽기 권한을 부여 해야 합니다-그렇지 않은 경우 사용자에 게 GPO 적용 되지 않습니다 또는 GPO가 이미 적용 된 경우 제거할 폴더를 로컬 PC 다시 리디렉션됩니다. 자세한 내용은 참조 하세요. [배포 그룹 정책 보안 업데이트 MS16-072](https://blogs.technet.microsoft.com/askds/2016/06/22/deploying-group-policy-security-update-ms16-072-kb3163622/)합니다.
 
 ## <a name="step-4-configure-folder-redirection-with-offline-files"></a>4단계: 오프 라인 파일을 사용 하 여 폴더 리디렉션 구성
 
 다음 절차에 설명 된 대로 폴더 리디렉션 설정에 대 한 GPO를 만든 후 활성화 하 고 구성 폴더 리디렉션 그룹 정책 설정을 편집 합니다.
 
->[!NOTE]
->오프 라인 파일은 Windows 클라이언트 컴퓨터에서 리디렉션된 폴더는 기본적으로 사용 하도록 설정 및 사용자가 변경 하지 않으면 Windows Server를 실행 하는 컴퓨터에서 사용 하지 않도록 설정 합니다. 를 사용 하려면 그룹 정책 제어를 오프 라인 파일 사용 되는지 여부를 사용 합니다 **허용 하거나 오프 라인 파일 기능을 사용을 허용 하지 않습니다** 정책 설정.
+> [!NOTE]
+> 오프 라인 파일은 Windows 클라이언트 컴퓨터에서 리디렉션된 폴더는 기본적으로 사용 하도록 설정 및 사용자가 변경 하지 않으면 Windows Server를 실행 하는 컴퓨터에서 사용 하지 않도록 설정 합니다. 를 사용 하려면 그룹 정책 제어를 오프 라인 파일 사용 되는지 여부를 사용 합니다 **허용 하거나 오프 라인 파일 기능을 사용을 허용 하지 않습니다** 정책 설정.
 > 다른 오프 라인 파일 그룹 정책 설정 중 일부에 대 한 정보를 참조 하세요 [사용 고급 오프 라인 파일 기능](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn270369(v%3dws.11)>), 및 [오프 라인 파일에 대 한 그룹 정책을 구성](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759721(v%3dws.10)>)합니다.
 
 폴더 리디렉션 그룹 정책을 구성 하는 방법을 다음과 같습니다.
@@ -141,6 +140,7 @@ Windows Server 2019, Windows Server 2016 및 Windows Server 2012에서 파일 �
 
     > [!NOTE]
     > 폴더 리디렉션 Windows XP 또는 Windows Server 2003을 실행 하는 클라이언트 컴퓨터에 적용 하려면 선택 합니다 **설정을** 탭을 선택 합니다 **Windows 2000, Windows 2000 Server, Windows XP에 리디렉션 정책을 적용할 수도 및 Windows Server 2003 운영 체제** 확인란을 선택 합니다.
+
 5. 에 **대상 폴더 위치** 섹션에서 **루트 경로 아래의 각 사용자에 대 한 폴더를 만듭니다** 한 다음를 **루트 경로** 상자에 저장 하 여 파일 공유에 대 한 경로 입력 합니다. 예를 들어 폴더 리디렉션:  **\\ \\fs1.corp.contoso.com\\사용자 $**
 6. 선택 합니다 **설정** 탭 및 합니다 **정책 제거** 섹션에서 필요에 따라 **정책이 제거 될 때 로컬 사용자 프로필 위치로 다시 폴더 리디렉션** (이 설정은 가름 adminisitrators와 사용자에 대해 더 예측 가능 하 게 작동 하는 폴더 리디렉션).
 7. 선택 **확인**를 선택한 후 **예** 경고 대화 상자에서.
@@ -149,8 +149,8 @@ Windows Server 2019, Windows Server 2016 및 Windows Server 2012에서 파일 �
 
 폴더 리디렉션 그룹 정책 설정 구성을 마친 후에 영향을 받는 사용자에 게 적용 되도록 허용 하는 GPO를 사용 하도록 설정 하려면 다음 단계가입니다.
 
->[!TIP]
->기본 컴퓨터 지원 또는 다른 정책 설정을 구현하려면 GPO를 사용하도록 설정하기 전에 지금 구현합니다. 그러면 기본 컴퓨터 지원을 사용하기 전에 사용자 데이터가 기본이 아닌 컴퓨터에 복사되는 것이 방지됩니다.
+> [!TIP]
+> 기본 컴퓨터 지원 또는 다른 정책 설정을 구현하려면 GPO를 사용하도록 설정하기 전에 지금 구현합니다. 그러면 기본 컴퓨터 지원을 사용하기 전에 사용자 데이터가 기본이 아닌 컴퓨터에 복사되는 것이 방지됩니다.
 
 폴더 리디렉션 GPO를 사용 하도록 설정 하는 방법을 다음과 같습니다.
 
@@ -175,24 +175,24 @@ Windows Server 2019, Windows Server 2016 및 Windows Server 2012에서 파일 �
 
 ## <a name="appendix-a-checklist-for-deploying-folder-redirection"></a>부록 a: 폴더 리디렉션 배포 검사 목록
 
-|상태|작업|
-|:---:|---|
-|☐<br>☐<br>☐|1. 도메인 준비<br>-도메인에 컴퓨터를 가입 합니다.<br>사용자 계정 만들기|
-|☐<br><br><br>|2. 폴더 리디렉션에 대 한 보안 그룹 만들기<br>그룹 이름:<br>-구성원:|
-|☐<br><br>|3. 리디렉션된 폴더에 대 한 파일 공유 만들기<br>파일 공유 이름:|
-|☐<br><br>|4. 폴더 리디렉션에 대 한 GPO 만들기<br>GPO 이름:|
-|☐<br><br>☐<br>☐<br>☐<br>☐<br>☐|5. 폴더 리디렉션 및 오프 라인 파일 정책 설정을 구성 합니다.<br>-리디렉션된 폴더:<br>-Windows 2000, Windows XP 및 Windows Server 2003 지원이 설정?<br>오프 라인 파일 사용? (Windows 클라이언트 컴퓨터에서 기본적으로 사용)<br>-항상 오프 라인 모드를 사용할 수 있습니까?<br>-백그라운드 파일 동기화가 활성화 되어 있습니까?<br>최적화 사용 하도록 설정 하는 리디렉션된 폴더의 이동?|
-|☐<br><br>☐<br><br>☐<br>☐|6. (선택 사항) 기본 컴퓨터 지원 사용<br>컴퓨터 기반 또는 사용자 기반?<br>-사용자의 기본 컴퓨터를 지정 합니다.<br>사용자 및 기본 컴퓨터 매핑 위치:<br>-폴더 리디렉션에 대 한 기본 컴퓨터 지원 (선택 사항) 사용<br>-로밍 사용자 프로필에 대 한 기본 컴퓨터 지원 (선택 사항) 사용|
-|☐|7. 폴더 리디렉션 GPO 사용|
-|☐|8. 테스트 폴더 리디렉션|
+| 상태           | 작업 |
+| ---              | ---    |
+| ☐<br>☐<br>☐    | 1. 도메인 준비<br>-도메인에 컴퓨터를 가입 합니다.<br>사용자 계정 만들기 |
+| ☐<br><br><br>   | 2. 폴더 리디렉션에 대 한 보안 그룹 만들기<br>그룹 이름:<br>-구성원: |
+| ☐<br><br>       | 3. 리디렉션된 폴더에 대 한 파일 공유 만들기<br>파일 공유 이름: |
+| ☐<br><br>       | 4. 폴더 리디렉션에 대 한 GPO 만들기<br>GPO 이름: |
+| ☐<br><br>☐<br>☐<br>☐<br>☐<br>☐ | 5. 폴더 리디렉션 및 오프 라인 파일 정책 설정을 구성 합니다.<br>-리디렉션된 폴더:<br>-Windows 2000, Windows XP 및 Windows Server 2003 지원이 설정?<br>오프 라인 파일 사용? (Windows 클라이언트 컴퓨터에서 기본적으로 사용)<br>-항상 오프 라인 모드를 사용할 수 있습니까?<br>-백그라운드 파일 동기화가 활성화 되어 있습니까?<br>최적화 사용 하도록 설정 하는 리디렉션된 폴더의 이동? |
+| ☐<br><br>☐<br><br>☐<br>☐ | 6. (선택 사항) 기본 컴퓨터 지원 사용<br>컴퓨터 기반 또는 사용자 기반?<br>-사용자의 기본 컴퓨터를 지정 합니다.<br>사용자 및 기본 컴퓨터 매핑 위치:<br>-폴더 리디렉션에 대 한 기본 컴퓨터 지원 (선택 사항) 사용<br>-로밍 사용자 프로필에 대 한 기본 컴퓨터 지원 (선택 사항) 사용 |
+| ☐         | 7. 폴더 리디렉션 GPO 사용 |
+| ☐         | 8. 테스트 폴더 리디렉션 |
 
 ## <a name="change-history"></a>변경 기록
 
 다음 표에는 이 항목의 중요한 최근 변경 내용이 요약되어 있습니다.
 
-|Date|설명|Reason|
-|---|---|---|
-|2017 년 1 월 18 일|추가 하는 단계 [3 단계: 폴더 리디렉션에 대 한 GPO를 만들어](#step-3-create-a-gpo-for-folder-redirection) 현재 인증 된 사용자에 게 읽기 권한을 위임 하려면 그룹 정책 보안 업데이트로 인해 필요 합니다.|고객 의견|
+| Date | 설명 | Reason|
+| --- | --- | --- |
+| 2017 년 1 월 18 일 | 추가 하는 단계 [3 단계: 폴더 리디렉션에 대 한 GPO를 만들어](#step-3-create-a-gpo-for-folder-redirection) 현재 인증 된 사용자에 게 읽기 권한을 위임 하려면 그룹 정책 보안 업데이트로 인해 필요 합니다. | 고객 의견 |
 
 ## <a name="more-information"></a>자세한 정보
 

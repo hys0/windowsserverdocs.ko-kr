@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2033cbc9b3d9127249656c3e0dcf95d872229797
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a1b5fca329864ebed9eab66671a17493f0fc3ca8
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59842544"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66440915"
 ---
 # <a name="tsdiscon"></a>tsdiscon
 
@@ -36,6 +36,7 @@ tsdiscon [<SessionID> | <SessionName>] [/server:<ServerName>] [/v]
 ```
 
 ## <a name="parameters"></a>매개 변수
+
 |매개 변수|설명|
 |-------|--------|
 |\<SessionId>|연결을 끊을 세션의 ID를 지정 합니다.|
@@ -52,18 +53,18 @@ tsdiscon [<SessionID> | <SessionName>] [/server:<ServerName>] [/v]
 -   콘솔 세션 연결을 끊을 수 없습니다.
 
 ## <a name="BKMK_examples"></a>예제
--   현재 세션의 연결을 끊으려면 다음을 입력 합니다.
-    ```
-    tsdiscon
-    ```
--   10 세션 연결을 끊으려면 다음을 입력 합니다.
-    ```
-    tsdiscon 10
-    ```
--   Term04 세션 연결을 끊으려면 다음을 입력 합니다.
-    ```
-    tsdiscon TERM04
-    ```
-#### <a name="additional-references"></a>추가 참조
-[명령줄 구문 키](command-line-syntax-key.md)
-[원격 데스크톱 서비스 & #40; 터미널 서비스 및 #41; 명령 참조](remote-desktop-services-terminal-services-command-reference.md)
+- 현재 세션의 연결을 끊으려면 다음을 입력 합니다.
+  ```
+  tsdiscon
+  ```
+- 10 세션 연결을 끊으려면 다음을 입력 합니다.
+  ```
+  tsdiscon 10
+  ```
+- Term04 세션 연결을 끊으려면 다음을 입력 합니다.
+  ```
+  tsdiscon TERM04
+  ```
+  #### <a name="additional-references"></a>추가 참조
+  [명령줄 구문 키](command-line-syntax-key.md)
+  [원격 데스크톱 서비스 & #40; 터미널 서비스 및 #41; 명령 참조](remote-desktop-services-terminal-services-command-reference.md)

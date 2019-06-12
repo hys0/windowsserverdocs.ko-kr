@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: faec70ac-88c0-4b0a-85c7-f0fe21e28257
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: beecef692b2ac01e6cb6c36892fec16e55b08209
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f3b2eb55c11348c3abcb1ef9e234cd19ba727758
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59835174"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446594"
 ---
 # <a name="step-2-configure-the-multisite-infrastructure"></a>멀티 사이트 인프라를 구성 하는 2 단계
 
@@ -61,7 +61,7 @@ ms.locfileid: "59835174"
   
 8.  Active Directory 사이트 및 서비스를 닫습니다.  
   
-![Windows PowerShell](../../../../media/Step-2-Configure-the-Multisite-Infrastructure/PowerShellLogoSmall.gif)Windows PowerShell 해당 명령을 * * *  
+![Windows PowerShell](../../../../media/Step-2-Configure-the-Multisite-Infrastructure/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -129,9 +129,9 @@ New-ADReplicationSubnet -Name "2001:db8:2::/64" -Site "Second-Site"
             > [!NOTE]  
             > DNS 서버를 설치 하는 옵션을 선택 하면 DNS 서버에 대 한 DNS 위임을 만들 수 없습니다 및 DNS 서버를 신뢰할 수 있는 이름 확인에 DNS 위임을 수동으로 만들어야 되었음을 나타내는 메시지가 나타날 수 있습니다. 포리스트 루트 도메인 또는 트리 루트 도메인에서 추가 도메인 컨트롤러를 설치 하는 경우 DNS 위임을 만들 필요가 없습니다. 이 경우 클릭 **예** 메시지는 무시 합니다.  
   
-        -   **글로벌 카탈로그 (GC)**"이이 옵션이 기본적으로 선택 됩니다. 글로벌 카탈로그, 읽기 전용 디렉터리 파티션을 도메인 컨트롤러에 추가하고 글로벌 카탈로그 검색 기능을 사용하도록 설정합니다.  
+        -   **글로벌 카탈로그 (GC)** "이이 옵션이 기본적으로 선택 됩니다. 글로벌 카탈로그, 읽기 전용 디렉터리 파티션을 도메인 컨트롤러에 추가하고 글로벌 카탈로그 검색 기능을 사용하도록 설정합니다.  
   
-        -   **읽기 전용 도메인 컨트롤러 (RODC)**"이이 옵션은 기본적으로 선택 되지 않습니다. 읽기 전용 이면 추가 도메인 컨트롤러를 사용 하면 즉, 도메인 컨트롤러는 RODC 수 있습니다.  
+        -   **읽기 전용 도메인 컨트롤러 (RODC)** "이이 옵션은 기본적으로 선택 되지 않습니다. 읽기 전용 이면 추가 도메인 컨트롤러를 사용 하면 즉, 도메인 컨트롤러는 RODC 수 있습니다.  
   
     2.  **사이트 이름**, 를 목록에서 사이트를 선택 합니다.  
   
@@ -170,7 +170,7 @@ New-ADReplicationSubnet -Name "2001:db8:2::/64" -Site "Second-Site"
   
 8.  필요에 따라 모든 진입점에 대 한 보안 그룹을 만들기 위해이 절차를 반복 합니다.  
   
-![Windows PowerShell](../../../../media/Step-2-Configure-the-Multisite-Infrastructure/PowerShellLogoSmall.gif)Windows PowerShell 해당 명령을 * * *  
+![Windows PowerShell](../../../../media/Step-2-Configure-the-Multisite-Infrastructure/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -301,7 +301,7 @@ PDC 에뮬레이터 역할을 실행 하는 도메인 컨트롤러 또는 서버
     ![Windows PowerShell](../../../../media/Step-2-Configure-the-Multisite-Infrastructure/DCAssocFinal.png)  
   
 ### <a name="ConfigDistOptimization"></a>구성 배포의 최적화  
-구성 변경 작업을 수행 하는 경우 서버 Gpo 원격 액세스 서버에 전파 된 후에 변경 내용이 적용 됩니다. 구성 배포 시간을 줄이기 위해 원격 액세스를 자동으로 선택 하이퍼링크는 쓰기 가능한 도메인 컨트롤러 "https://technet.microsoft.com/library/cc978016.aspx" 해당 서버 GPO를 만들 때 원격 액세스 서버에 가장 가까운 합니다.  
+구성 변경 작업을 수행 하는 경우 서버 Gpo 원격 액세스 서버에 전파 된 후에 변경 내용이 적용 됩니다. 구성 배포 시간을 줄이기 위해 원격 액세스를 자동으로 선택 하이퍼링크는 쓰기 가능한 도메인 컨트롤러 "<https://technet.microsoft.com/library/cc978016.aspx>" 해당 서버 GPO를 만들 때 원격 액세스 서버에 가장 가까운 합니다.  
   
 일부 시나리오에서는 해야 구성 배포 시간을 최적화 하기 위해 서버 GPO를 관리 하는 도메인 컨트롤러를 수동으로 수정 해야 합니다.  
   
@@ -335,6 +335,6 @@ PDC 에뮬레이터 역할을 실행 하는 도메인 컨트롤러 또는 서버
   
 ## <a name="BKMK_Links"></a>참고 항목  
   
--   [3 단계: 멀티 사이트 배포를 구성 합니다.](Step-3-Configure-the-Multisite-Deployment.md)  
+-   [3단계: 멀티 사이트 배포를 구성 합니다.](Step-3-Configure-the-Multisite-Deployment.md)  
 -   [1단계: 단일 서버 원격 액세스 배포 구현](Step-1-Implement-a-Single-Server-Remote-Access-Deployment.md)  
 

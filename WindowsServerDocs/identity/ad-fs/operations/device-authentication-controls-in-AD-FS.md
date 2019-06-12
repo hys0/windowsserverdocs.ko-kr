@@ -8,12 +8,12 @@ ms.date: 11/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: d66cfde20060229844c34abeea85dd83b802ddad
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: f52d3d237573e4ed0028e228ff80273862a0aaf2
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59822824"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66444647"
 ---
 # <a name="device-authentication-controls-in-ad-fs"></a>AD FS에서 장치 인증 제어
 다음 문서에는 Windows Server 2016 및 2012 R2에서 장치 인증 제어를 사용 하도록 설정 하는 방법을 보여 줍니다.
@@ -43,7 +43,7 @@ PS:\>Set-AdfsGlobalAuthenticationPolicy –DeviceAuthenticationEnabled $true
 다음 값을 포함 합니다.
  - SignedToken: PRT만
  - PKeyAuth: PRT + PKeyAuth
- - ClientTLS: PRT + clientTLS 
+ - ClientTLS: PRT + clientTLS
  - All: 위의 모든 항목
 
 알 수 있듯이 PRT 일부인 모든 장치 인증 방법의 기본 메서드는 항상를 적용에서 하기 사용할 `DeviceAuthenticationEnabled` 로 설정 된 `$true`합니다.
@@ -53,6 +53,14 @@ PS:\>Set-AdfsGlobalAuthenticationPolicy –DeviceAuthenticationEnabled $true
 ``` powershell
 PS:\>Set-AdfsGlobalAuthenticationPolicy –DeviceAuthenticationEnabled $true
 ```
+
+>[!NOTE]
+> ADFS 2019에 `DeviceAuthenticationMethod` 와 함께 사용할 수는 `Set-AdfsRelyingPartyTrust` 명령입니다.
+
+``` powershell
+PS:\>Set-AdfsRelyingPartyTrust -DeviceAuthenticationMethod ClientTLS
+```
+
 >[!NOTE]
 > 장치 인증을 사용 하도록 설정 (설정 `DeviceAuthenticationEnabled` 를 `$true`) 의미 합니다 `DeviceAuthenticationMethod` 로 암시적으로 설정 되어 `SignedToken`, 동등 **PRT**합니다.
 
@@ -60,8 +68,8 @@ PS:\>Set-AdfsGlobalAuthenticationPolicy –DeviceAuthenticationEnabled $true
 ``` powershell
 PS:\>Set-AdfsGlobalAuthenticationPolicy –DeviceAuthenticationMethod All
 ```
->[!NOTE]
->기본 장치 인증 방법이 `SignedToken`합니다.  다른 값은 **PKeyAuth, *, ClientTLS** 및 **모든**합니다.
+> [!NOTE]
+> 기본 장치 인증 방법이 `SignedToken`합니다.  다른 값은 **PKeyAuth 합니다**<strong>ClientTLS,</strong> 하 고 **모든**합니다.
 
 의미는 `DeviceAuthenticationMethod` AD FS 2016이 릴리스된 이후 값이 약간 변경 합니다.  업데이트 수준에 따라 각 값의 의미에 대 한 아래 표를 참조 하세요.
 

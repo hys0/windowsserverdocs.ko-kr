@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 38582706dfa5db2b5069415b81dafc533c8a89b9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a5ed2ef8b1d0238a3608dabdd165a255855a304d
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59822104"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66440877"
 ---
 # <a name="tsecimp"></a>tsecimp
 
@@ -37,7 +37,7 @@ tsecimp /d
 
 |매개 변수|설명|
 |---------|-----------|
-|/f \<Filename>|필수 사항입니다. 가져올 할당 정보를 포함 하는 XML 파일의 이름을 지정 합니다.|
+|/f \<Filename>|필수. 가져올 할당 정보를 포함 하는 XML 파일의 이름을 지정 합니다.|
 |/v|Tsec.ini 파일에 정보를 가져오지 않고 XML 파일의 구조를 확인 합니다.|
 |/u|각 사용자는 XML 파일에 지정 된 도메인의 구성원 인지 확인 합니다. 이 매개 변수를 사용 하는 컴퓨터는 네트워크에 연결 되어야 합니다. 이 매개 변수는 많은 양의 사용자 할당 정보를 처리 하는 경우 성능이 크게 저하 될 수 있습니다.|
 |/d|설치 된 전화 통신 공급자의 목록이 표시 됩니다. 각 전화 통신 공급자에 대 한 관련된 된 회선 장치가 주소와 각 줄 장치와 연결 된 사용자가 나열 됩니다.|
@@ -68,102 +68,101 @@ tsecimp /d
         각각에 대해 **줄** 설정할 수 있습니다 요소는 **제거** 특성. 이 특성을 설정 하는 경우 사용자가 더 이상 해당 회선 장치를 할당 합니다. 이 특성을 설정 하지 않으면 사용자는 해당 줄 장치에 대 한 액세스를 얻게 됩니다. 회선 장치 사용자에 게 사용할 수 없는 경우 오류가 지정 됩니다.
 
 ## <a name="examples"></a>예
--   다음 예제 XML 코드 세그먼트 위에 정의 된 요소의 올바른 사용법을 보여 줍니다.  
-    -   다음 코드는 user1 계정에 할당 된 모든 줄 장치를 제거 합니다.  
-        ```
-        <UserList>
-          <User NoMerge="1">
-            <DomainUser>domain1\user1</DomainUser>
-          </User>
-        </UserList>
-        ```  
-    -   다음 코드는 99999 주소로 한 줄을 할당 하기 전에 user1 계정에 할당 된 모든 줄 장치를 제거 합니다. User1 회선 장치가 이전에 할당 되었는지 여부에 관계 없이 할당 된 다른 줄 장치 생깁니다.  
-        ```
-        <UserList>
-          <User NoMerge="1">
-            <DomainUser>domain1\user1</DomainUser>
-            <FriendlyName>User1</FriendlyName>
-            <LineList>
-              <Line>
-                <Address>99999</Address>
-              </Line>
-            </LineList>
-          </User>
-        </UserList>
-        
-        ```  
-    -   다음 코드 줄을 이전에 할당 된 장치를 삭제 하지 않고 User1에 대 한 한 줄 장치를 추가 합니다.  
-        ```
-        <UserList>
-          <User>
-            <DomainUser>domain1\user1</DomainUser>
-            <FriendlyName>User1</FriendlyName>
-            <LineList>
-              <Line>
-                <Address>99999</Address>
-              </Line>
-            </LineList>
-          </User>
-        </UserList>
-        
-        ```  
-    -   다음 코드 줄 주소 99999를 추가 하 고 회선 주소 88888 User1의 액세스 제거 합니다.  
-        ```
-        <UserList>
-          <User>
-            <DomainUser>domain1\user1</DomainUser>
-            <FriendlyName>User1</FriendlyName>
-            <LineList>
-              <Line>
-                <Address>99999</Address>
-              </Line>
-              <Line Remove="1">
-                <Address>88888</Address>
-              </Line>
-            </LineList>
-          </User>
-        </UserList>
-        
-        ```  
-    -   다음 코드는 영구 장치 1000을 추가 하 고 회선 88888 User1의 액세스 제거 합니다.  
-        ```
-        <UserList>
-          <User>
-            <DomainUser>domain1\user1</DomainUser>
-            <FriendlyName>User1</FriendlyName>
-            <LineList>
-              <Line>
-                <PermanentID>1000</PermanentID>
-              </Line>
-              <Line Remove="1">
-                <Address>88888</Address>
-              </Line>
-            </LineList>
-          </User>
-        </UserList>
-        
-        
-        ```  
--   뒤에 다음 예제 출력 표시는 **/d** 현재 TAPI 구성을 표시 하려면 명령줄 옵션을 지정 합니다. 각 전화 통신 공급자에 대 한 관련된 된 회선 장치가 주소와 각 줄 장치와 연결 된 사용자가 나열 됩니다.  
+- 다음 예제 XML 코드 세그먼트 위에 정의 된 요소의 올바른 사용법을 보여 줍니다.  
+  - 다음 코드는 user1 계정에 할당 된 모든 줄 장치를 제거 합니다.  
+    ```
+    <UserList>
+      <User NoMerge="1">
+        <DomainUser>domain1\user1</DomainUser>
+      </User>
+    </UserList>
+    ```  
+  - 다음 코드는 99999 주소로 한 줄을 할당 하기 전에 user1 계정에 할당 된 모든 줄 장치를 제거 합니다. User1 회선 장치가 이전에 할당 되었는지 여부에 관계 없이 할당 된 다른 줄 장치 생깁니다.  
+    ```
+    <UserList>
+      <User NoMerge="1">
+        <DomainUser>domain1\user1</DomainUser>
+        <FriendlyName>User1</FriendlyName>
+        <LineList>
+          <Line>
+            <Address>99999</Address>
+          </Line>
+        </LineList>
+      </User>
+    </UserList>
+    ```  
+  - 다음 코드 줄을 이전에 할당 된 장치를 삭제 하지 않고 User1에 대 한 한 줄 장치를 추가 합니다.  
+    ```
+    <UserList>
+      <User>
+        <DomainUser>domain1\user1</DomainUser>
+        <FriendlyName>User1</FriendlyName>
+        <LineList>
+          <Line>
+            <Address>99999</Address>
+          </Line>
+        </LineList>
+      </User>
+    </UserList>
+    ```  
+  - 다음 코드 줄 주소 99999를 추가 하 고 회선 주소 88888 User1의 액세스 제거 합니다.  
+    ```
+    <UserList>
+      <User>
+        <DomainUser>domain1\user1</DomainUser>
+        <FriendlyName>User1</FriendlyName>
+        <LineList>
+          <Line>
+            <Address>99999</Address>
+          </Line>
+          <Line Remove="1">
+            <Address>88888</Address>
+          </Line>
+        </LineList>
+      </User>
+    </UserList>
+    ```  
+  - 다음 코드는 영구 장치 1000을 추가 하 고 회선 88888 User1의 액세스 제거 합니다.  
+    ```
+    <UserList>
+      <User>
+        <DomainUser>domain1\user1</DomainUser>
+        <FriendlyName>User1</FriendlyName>
+        <LineList>
+          <Line>
+            <PermanentID>1000</PermanentID>
+          </Line>
+          <Line Remove="1">
+            <Address>88888</Address>
+          </Line>
+        </LineList>
+      </User>
+    </UserList>
+
+
+~~~
+    ```  
+~~~
+-   The following sample output appears after the **/d** command-line option is specified to display the current TAPI configuration. For each telephony provider, the associated line devices are listed, as well as the addresses and users associated with each line device.  
     ```
     NDIS Proxy TAPI Service Provider
             Line: "WAN Miniport (L2TP)"
                     Permanent ID: 12345678910
-    
+
     NDIS Proxy TAPI Service Provider
             Line: "LPT1DOMAIN1\User1"
                     Permanent ID: 12345678910
-    
+
     Microsoft H.323 Telephony Service Provider
             Line: "H323 Line"
                     Permanent ID: 123456
                     Addresses:
                             BLDG1-TAPI32
-    
+
     ```
 
-#### <a name="additional-references"></a>추가 참조
+#### Additional references
 
-[명령줄 구문 키](command-line-syntax-key.md)
+[Command-Line Syntax Key](command-line-syntax-key.md)
 
-[명령 셸 개요](https://technet.microsoft.com/library/cc737438(v=ws.10).aspx)
+[Command shell overview](https://technet.microsoft.com/library/cc737438(v=ws.10).aspx)

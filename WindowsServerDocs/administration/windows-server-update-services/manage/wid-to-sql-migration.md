@@ -12,12 +12,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dougkim
 ms.date: 07/25/2018
-ms.openlocfilehash: ed6f695947fc17d2e96b5282b3a67a221bb0140d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9015bbc54a4c4bda0f691b79dbb7d3ba8ddbc4a1
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59858034"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66439896"
 ---
 >적용 대상: Windows Server 2012, Windows Server 2012 R2, Windows Server 2016
 
@@ -55,8 +55,8 @@ SQL Server의 로컬 또는 원격 인스턴스에 WSUS 데이터베이스 (SUSD
 
 > [!IMPORTANT]
 > 다음이 단계를 사용 하 여 WSUS 데이터베이스 (SUSDB)를 분리 하는 방법 Windows 내부 데이터베이스 인스턴스를 표시 합니다 **sqlcmd** 유틸리티입니다. 에 대 한 자세한 내용은 합니다 **sqlcmd** 유틸리티를 참조 하십시오 [sqlcmd 유틸리티](https://go.microsoft.com/fwlink/?LinkId=81183)합니다.
-1. 관리자 권한 명령 프롬프트를 열으십시오
-2. 사용 하 여 Windows 내부 데이터베이스 인스턴스에서 WSUS 데이터베이스 (SUSDB)를 분리 하려면 다음 SQL 명령을 실행 합니다 **sqlcmd** 유틸리티.
+> 1. 관리자 권한 명령 프롬프트를 열으십시오
+> 2. 사용 하 여 Windows 내부 데이터베이스 인스턴스에서 WSUS 데이터베이스 (SUSDB)를 분리 하려면 다음 SQL 명령을 실행 합니다 **sqlcmd** 유틸리티.
 
 ```batchfile
         sqlcmd -S \\.\pipe\Microsoft##WID\tsql\query
@@ -70,7 +70,7 @@ SQL Server의 로컬 또는 원격 인스턴스에 WSUS 데이터베이스 (SUSD
 
 ### <a name="copy-the-susdb-files-to-the-sql-server"></a>SQL Server에 SUSDB 파일을 복사 합니다.
 
-1. 복사본 **SUSDB.mdf** 하 고 **SUSDB\_log.ldf** WID 데이터 폴더에서 (**% SystemDrive %**\** Windows\WID\Data * *) SQL 인스턴스 데이터 폴더입니다.
+1. 복사본 **SUSDB.mdf** 하 고 **SUSDB\_log.ldf** WID 데이터 폴더에서 ( **% SystemDrive %** \** Windows\WID\Data * *) SQL 인스턴스 데이터 폴더입니다.
 
 > [!TIP]
 > 예를 들어 SQL 인스턴스 폴더 **C:\Program Files\Microsoft SQL Server\MSSQL12. MSSQLSERVER\MSSQL**, WID 데이터 폴더 이며 **C:\Windows\WID\Data 합니다** SUSDB 파일을 복사할 **C:\Windows\WID\Data** 에 **C:\Program Files\Microsoft SQL Server \MSSQL12 합니다. MSSQLSERVER\MSSQL\Data**
@@ -111,7 +111,7 @@ SQL Server의 로컬 또는 원격 인스턴스에 WSUS 데이터베이스 (SUSD
 합니다 **NT AUTHORITY\NETWORK SERVICE** 계정 나열 되어야 합니다. 없는 경우 새 로그인 이름을 추가 하 여 추가 해야 합니다.
 
 > [!IMPORTANT]
-> WSUS 서버의 컴퓨터 계정 형식에 나열 되어야 합니다 SQL 인스턴스를 다른 컴퓨터에서 WSUS에 있으면 **[FQDN]\\[WSUSComputerName] $** 합니다.  그렇지 않은 추가 하려면 아래 단계를 사용할 수 있는, 경우 교체 **NT AUTHORITY\NETWORK SERVICE** WSUS 서버의 컴퓨터 계정을 사용 하 여 (**[FQDN]\\[WSUSComputerName] $**)이 됩니다 ***외에*** 권리를 부여 **NT AUTHORITY\NETWORK SERVICE**
+> WSUS 서버의 컴퓨터 계정 형식에 나열 되어야 합니다 SQL 인스턴스를 다른 컴퓨터에서 WSUS에 있으면 **[FQDN]\\[WSUSComputerName] $** 합니다.  그렇지 않은 추가 하려면 아래 단계를 사용할 수 있는, 경우 교체 **NT AUTHORITY\NETWORK SERVICE** WSUS 서버의 컴퓨터 계정을 사용 하 여 ( **[FQDN]\\[WSUSComputerName] $** )이 됩니다 ***외에*** 권리를 부여 **NT AUTHORITY\NETWORK SERVICE**
 
 ##### <a name="adding-nt-authoritynetwork-service-and-granting-it-rights"></a>NT AUTHORITY\NETWORK SERVICE를 추가 하 고 부여 권한
 
@@ -126,7 +126,7 @@ SQL Server의 로컬 또는 원격 인스턴스에 WSUS 데이터베이스 (SUSD
     - 아래 **데이터베이스 역할 멤버 자격: SUSDB**을 다음 선택 되어야 합니다.
         - **public**
         - **webService** ![image9](images/image9.png)
-5.  **확인**을 클릭합니다.
+5. **확인**을 클릭합니다.
 
 이제 **NT AUTHORITY\NETWORK SERVICE** 에서 로그인 합니다.
 ![image10](images/image10.png)
@@ -150,7 +150,7 @@ SQL Server의 로컬 또는 원격 인스턴스에 WSUS 데이터베이스 (SUSD
     > ![image11](images/image11.png)
 
 4. 에 **사용자 매핑** 페이지에서 선택 합니다 **SUSDB** 아래에 있는 데이터베이스 **"이이 로그인으로 매핑된 사용자"**
-5. 확인할 **webservice** 아래에서 **"데이터베이스 역할 멤버 자격: SUSDB"**:  ![image12](images/image12.png)
+5. 확인할 **webservice** 아래에서 **"데이터베이스 역할 멤버 자격: SUSDB"** :  ![image12](images/image12.png)
 6. 클릭 **확인** 설정을 저장 합니다.
     > [!NOTE]
     > 변경 내용을 적용 하려면 SQL 서비스를 다시 시작 해야 합니다.
@@ -184,7 +184,7 @@ SQL Server의 로컬 또는 원격 인스턴스에 WSUS 데이터베이스 (SUSD
 ## <a name="uninstalling-the-wid-role-not-recommended"></a>(권장 하지 않음) WID 역할 제거
 
 > [!WARNING]
-> 데이터베이스 폴더 제거 WID 역할을 제거 (**%SystemDrive%\Program Files\Update Services\Database**) WSUSUtil.exe 사후 설치 작업에 대 한 필요한 스크립트를 포함 하는 합니다. WID 역할을 제거 하려는 경우 했는지를 백업 합니다 **%SystemDrive%\Program Files\Update Services\Database** 미리 폴더.
+> 데이터베이스 폴더 제거 WID 역할을 제거 ( **%SystemDrive%\Program Files\Update Services\Database**) WSUSUtil.exe 사후 설치 작업에 대 한 필요한 스크립트를 포함 하는 합니다. WID 역할을 제거 하려는 경우 했는지를 백업 합니다 **%SystemDrive%\Program Files\Update Services\Database** 미리 폴더.
 
 PowerShell을 사용합니다.
 

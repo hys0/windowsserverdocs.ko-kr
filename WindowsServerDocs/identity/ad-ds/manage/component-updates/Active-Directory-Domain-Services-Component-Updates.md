@@ -9,57 +9,58 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.assetid: a3a91034-a4da-4ad7-93f8-0cd2ec3e7824
 ms.technology: identity-adds
-ms.openlocfilehash: 300bf7dafe0ef0ede754302f2c0aa8c36a7adbfd
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b0bd021863e1e25bd222baf9a633438153fe820b
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59889884"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66442765"
 ---
 # <a name="active-directory-domain-services-component-updates"></a>Active Directory 도메인 서비스 구성 요소 업데이트
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2
 
 이 모듈에서는 디렉터리 서비스와 ID 공간에서 부분 업데이트를 수신하는 구성 요소를 소개합니다.  
-  
-|작성자 정보|  
-|--------------------|  
-|**작성자:**|Justin Turner|  
-|**정보:**|Justin은 미국 텍사스 주 어빙에 있는 디렉터리 서비스 팀의 수석 지원 에스컬레이션 엔지니어입니다.  Justin은 지난 12년 간 많은 교육 과정 및 Microsoft 기술 자료를 작성하거나 기고했습니다. Microsoft 직원 및 고객에 게 새로운 제품 아키텍처를 강의 공인 Microsoft Certified Master (MCM), MCT Microsoft Certified Trainer ()를 누르고는 분야의 M.S Computer Education and Cognitive Systems의 수준입니다.|  
-|**참가자**|이 교육 모듈에는 *Michiko Short*, *Dean Wells*, *Alan Jowett*, *Manu Pushpendran*, *Yashar Bahman*, *Anoosh Saboori*, *Rashmi Jha*, *Justin Hall*, *Herbert Mauerer* 등이 참가하고 있습니다.|  
-|**검토자**|개인 시간을 들여 검토하고 피드백을 제공해 주신 *Joey Seifert*, *Justin Hall* 등을 포함하여 많은 분들께 깊은 감사를 드립니다.|  
-  
+
+
+| 작성자 정보 |
+|------------------|
+|   **작성자:**    |
+|     **정보:**     |
+| **참가자** |
+|  **검토자**   |
+
 > [!NOTE]  
 > 이 콘텐츠는 Microsoft 고객 지원 엔지니어에 의해 작성되었으며 Windows Server 2012 R2의 기능 및 솔루션에 대해 TechNet에서 일반적으로 제공하는 항목보다 더 자세한 기술적 설명을 찾고 있는 숙련된 관리자 및 시스템 설계자를 대상으로 합니다. 그러나 동일한 편집 과정을 수행하지 않았으므로 일부 언어는 일반적으로 TechNet에서 찾을 수 있는 것보다 완벽하지 않을 수 있습니다.  
-  
+
 ### <a name="what-you-will-learn"></a>학습 내용  
 이 모듈을 완료하면 다음을 수행할 수 있습니다.  
-  
+
 -   Windows Server 2012 R2의 디렉터리 서비스 및 ID 기술 영역 내에서 수행된 구성 요소 업데이트에 대해 설명합니다.  
-  
+
     -   [SPN 및 UPN 고유성](../../../ad-ds/manage/component-updates/SPN-and-UPN-uniqueness.md)  
-  
+
     -   [Winlogon 자동 다시 시작 로그온 &#40;ARSO&#41;](../../../ad-ds/manage/component-updates/Winlogon-Automatic-Restart-Sign-On--ARSO-.md)  
-  
+
     -   [TPM 키 증명](../../../ad-ds/manage/component-updates/TPM-Key-Attestation.md)  
-  
+
     -   [CA 백업 및 복원 Windows PowerShell cmdlet](../../../ad-ds/manage/component-updates/CA-Backup-and-Restore-Windows-PowerShell-cmdlets.md)  
-  
+
     -   [명령줄 프로세스 감사](../../../ad-ds/manage/component-updates/Command-line-process-auditing.md)  
-  
+
     -   [자격 증명 보호 및 관리](https://technet.microsoft.com/library/dn408190.aspx)  
-  
+
     -   [디렉터리 서비스 구성 요소 업데이트](../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md)  
-  
+
         -   [도메인 및 포리스트 기능 수준](../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_FL)  
-  
+
         -   [NTFRS의 사용 중단](../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_NTFRS)  
-  
+
         -   [LDAP 쿼리 최적화 프로그램 변경 사항](../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_LDAPQuery)  
-  
+
         -   [1644 이벤트 개선 사항](../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_1644)  
-  
+
         -   [Active Directory 복제 처리량 개선 사항](../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_ADRepl)  
-  
+
 
 

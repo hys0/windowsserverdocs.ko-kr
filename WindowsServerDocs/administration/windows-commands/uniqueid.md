@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4cad6607e13d2657433e4e78ce8e65beff73aa9d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d237f4d6d3562e3787efe28ca98f9dc553d74898
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59857514"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66440756"
 ---
 # <a name="uniqueid"></a>uniqueid
 
@@ -37,10 +37,10 @@ uniqueid disk [id={<dword> | <GUID>}] [noerr]
 
 ## <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------|-----------|
-|id={\<dword> | <GUID>}|MBR 디스크에 대해 서명에 대 한 16 진수 형식에는 4 바이트 (DWORD) 값을 지정합니다.</br>GPT 디스크에 대 한 식별자의 GUID를 지정합니다.|
-|noerr|만 스크립팅 합니다. 오류가 발생 하면 오류가 발생 하지 않은 경우에 따라 명령을 처리 하도록 DiskPart 계속 합니다. 이 매개 변수를 크기는 오류 코드를 수행 합니다.|
+|  매개 변수   |                                                                                             설명                                                                                              |
+|--------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| id={\<dword> |                                                                                               <GUID>}                                                                                                |
+|    noerr     | 만 스크립팅 합니다. 오류가 발생 하면 오류가 발생 하지 않은 경우에 따라 명령을 처리 하도록 DiskPart 계속 합니다. 이 매개 변수를 크기는 오류 코드를 수행 합니다. |
 
 ## <a name="remarks"></a>설명
 

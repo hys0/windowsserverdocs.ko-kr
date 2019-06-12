@@ -8,15 +8,15 @@ ms.date: 02/21/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 20e2d0747b98e7c7728230d0768506261f5b0d50
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 1acc00ca376c48f7fb34214cef3a92961d355ae4
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59825124"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66444019"
 ---
 # <a name="ad-fs-troubleshooting---events-and-logging"></a>AD FS 문제 해결-이벤트 및 로깅
-AD FS 문제 해결에 사용할 수 있는 두 개의 기본 로그를 제공 합니다.  다음 창이 여기에 포함됩니다.
+AD FS 문제 해결에 사용할 수 있는 두 개의 기본 로그를 제공 합니다.  구현되지 않은 것은 다음과 같습니다.
 
 - 관리자 로그
 - 추적 로그  
@@ -89,18 +89,21 @@ AD FS 이벤트는 다양 한 유형의 AD FS에서 처리 된 요청 수에 따
 보안 감사는 AD FS 서비스 계정 암호 업데이트, 요청/응답 로깅, 요청 contect 헤더 및 장치 등록 결과 사용 하 여 문제를 추적할 경우에 따라 지원할 수 있습니다.  AD FS 서비스 계정에 대 한 감사는 기본적으로 비활성화 됩니다.
 
 ### <a name="to-enable-security-auditing"></a>보안 감사를 사용 하도록 설정 하려면
-1.       시작을 클릭 **프로그램**, 가리킨 **관리 도구**를 클릭 하 고 **로컬 보안 정책**합니다.
-2.       **보안 설정\로컬 정책\사용자 권한 관리** 폴더로 이동한 다음 **보안 감사 생성**을 두 번 클릭합니다.
-3.       에 **로컬 보안 설정** 탭에서 AD FS 서비스 계정이 나열 되어 있는지 확인 합니다. 제공 되지 사용자 또는 그룹 추가 클릭 하 고 목록에 추가 및 확인을 클릭 합니다.
-4.       상승 된 권한으로 명령 프롬프트를 열고 사용 감사 auditpol.exe /set /subcategory 다음 명령을 실행: "Application Generated" /failure: enable /success:enable 5입니다.       닫기 **로컬 보안 정책**, AD FS 관리 스냅인을 엽니다.
- 
+1. 시작을 클릭 **프로그램**, 가리킨 **관리 도구**를 클릭 하 고 **로컬 보안 정책**합니다.
+2. **보안 설정\로컬 정책\사용자 권한 관리** 폴더로 이동한 다음 **보안 감사 생성**을 두 번 클릭합니다.
+3. 에 **로컬 보안 설정** 탭에서 AD FS 서비스 계정이 나열 되어 있는지 확인 합니다. 제공 되지 사용자 또는 그룹 추가 클릭 하 고 목록에 추가 및 확인을 클릭 합니다.
+4. 상승 된 권한으로 명령 프롬프트를 열고 사용 감사 auditpol.exe /set /subcategory 다음 명령을 실행: "Application Generated" /failure: enable /success:enable
+5. 닫기 **로컬 보안 정책**, AD FS 관리 스냅인을 엽니다.
+ 
 AD FS 관리 스냅인을 열려면 시작을 클릭 하 고 프로그램, 관리 도구를 가리키고 AD FS 관리를 차례로 클릭 합니다.
- 
-6.       작업 창에서 페더레이션 서비스 속성 7 편집을 클릭 합니다.       페더레이션 서비스 속성 대화 상자에서 [이벤트] 탭을 클릭 합니다. 8.       선택 된 **성공 감사** 하 고 **실패 감사** 확인란 합니다.
-9.       확인을 클릭합니다.
+ 
+6. 작업 창에서 페더레이션 서비스 속성 편집 클릭
+7. 페더레이션 서비스 속성 대화 상자에서 [이벤트] 탭을 클릭 합니다.
+8. 선택 된 **성공 감사** 하 고 **실패 감사** 확인란 합니다.
+9. 확인을 클릭합니다.
 
 ![감사 기능 향상](media/ad-fs-tshoot-logging/event4.PNG)  
- 
+ 
 >[!NOTE]
 >위의 지침에 따라 독립 실행형 구성원 서버에서 AD FS가 하는 경우에 사용 됩니다.  AD FS는 로컬 보안 정책, 대신 도메인 컨트롤러에서 실행 중인 경우 사용 합니다 **기본 도메인 컨트롤러 정책** 에 있는 **그룹 정책 관리/포리스트/도메인/도메인 컨트롤러**합니다.  편집을 클릭 하 고 이동할 **컴퓨터 구성 \ 정책 \ Settings\Local Policies\User Rights Management**
 

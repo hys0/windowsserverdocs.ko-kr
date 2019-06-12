@@ -6,12 +6,12 @@ ms.technology: storage-failover-clustering
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: 454783a13b834ef705bd896155195750de2b183c
-ms.sourcegitcommit: 4ff3d00df3148e4bea08056cea9f1c3b52086e5d
+ms.openlocfilehash: c15c33e31bf0bf7261097fbea110f2a0a788dab2
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64772717"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66439753"
 ---
 # <a name="configuring-cluster-accounts-in-active-directory"></a>Active Directory에서 클러스터 계정 구성하는 중
 
@@ -60,12 +60,12 @@ Windows Server 장애 조치 클러스터를 만들고 클러스터 된 서비�
 <tr class="even">
 <td><p>클러스터 이름 계정 (클러스터 자체의 컴퓨터 계정)</p></td>
 <td><p>클러스터 만들기 마법사를 실행 하는 경우 클러스터 이름 계정을 도메인의 컴퓨터 계정에 사용 되는 기본 컨테이너에 만듭니다. 기본적으로 클러스터 이름 계정 (예: 다른 컴퓨터 계정) 도메인에 최대 10 개의 컴퓨터 계정을 만들면 됩니다.</p>
-<p>클러스터를 만들기 전에 클러스터 이름 계정 (클러스터 이름 개체)를 만드는 경우-즉, 계정을 미리 준비-지정 해야 합니다 <strong>컴퓨터 개체 만들기</strong> 하 고 <strong>모든 속성 읽기</strong> 도메인의 컴퓨터 계정에 사용 되는 컨테이너의 권한입니다. 또한 계정을 사용 하지 않도록 설정 하 고 제공 해야 합니다 <strong>전면적인</strong> 클러스터를 설치 하는 관리자에서 사용할 계정에 해당 합니다. 자세한 내용은 [클러스터를 사전 준비 단계에는 계정 이름을](#steps-for-prestaging-the-cluster-name-account)이 가이드의 뒷부분에 나오는.</p></td>
+<p>클러스터를 만들기 전에 클러스터 이름 계정 (클러스터 이름 개체)를 만드는 경우-즉, 계정을 미리 준비-지정 해야 합니다 <strong>컴퓨터 개체 만들기</strong> 하 고 <strong>모든 속성 읽기</strong> 도메인의 컴퓨터 계정에 사용 되는 컨테이너의 권한입니다. 또한 계정을 사용 하지 않도록 설정 하 고 제공 해야 합니다 <strong>전면적인</strong> 클러스터를 설치 하는 관리자에서 사용할 계정에 해당 합니다. 자세한 내용은 <a href="#steps-for-prestaging-the-cluster-name-account" data-raw-source="[Steps for prestaging the cluster name account](#steps-for-prestaging-the-cluster-name-account)">클러스터를 사전 준비 단계에는 계정 이름을</a>이 가이드의 뒷부분에 나오는.</p></td>
 </tr>
 <tr class="odd">
 <td><p>클러스터형된 서비스 또는 응용 프로그램의 컴퓨터 계정</p></td>
 <td><p>고가용성 마법사가 실행 (새 클러스터형된 서비스 또는 응용 프로그램 만들기), 대부분의 경우 클러스터 된 서비스에 대 한 컴퓨터 계정 또는 Active Directory에서 응용 프로그램이 만들어집니다. 클러스터 이름 계정에는이 계정을 제어 하는 데 필요한 권한이 부여 됩니다. 예외는 클러스터 된 Hyper-v 가상 컴퓨터: 컴퓨터 계정이이 만들어집니다.</p>
-<p>클러스터형된 서비스 또는 응용 프로그램에 대 한 컴퓨터 계정을, 미리 준비 하는 경우 필요한 사용 권한으로 구성 해야 합니다. 자세한 내용은 [클러스터형된 서비스 또는 응용 프로그램에 대 한 계정 사전 준비 단계](#steps-for-prestaging-an-account-for-a-clustered-service-or-application)이 가이드의 뒷부분에 나오는.</p></td>
+<p>클러스터형된 서비스 또는 응용 프로그램에 대 한 컴퓨터 계정을, 미리 준비 하는 경우 필요한 사용 권한으로 구성 해야 합니다. 자세한 내용은 <a href="#steps-for-prestaging-an-account-for-a-clustered-service-or-application" data-raw-source="[Steps for prestaging an account for a clustered service or application](#steps-for-prestaging-an-account-for-a-clustered-service-or-application)">클러스터형된 서비스 또는 응용 프로그램에 대 한 계정 사전 준비 단계</a>이 가이드의 뒷부분에 나오는.</p></td>
 </tr>
 </tbody>
 </table>
@@ -144,23 +144,23 @@ Windows Server 장애 조치 클러스터를 만들고 클러스터 된 서비�
 <br>
 
 
-3.  계정에 생성 되었거나 1 단계에서 얻은 도메인 관리자 계정의 경우이 절차의 나머지 부분을 건너뜁니다. 그렇지 않은 경우 계정에 부여 합니다 **컴퓨터 개체 만들기** 하 고 **모든 속성 읽기** 도메인의 컴퓨터 계정에 사용 되는 컨테이너의 사용 권한:
+3. 계정에 생성 되었거나 1 단계에서 얻은 도메인 관리자 계정의 경우이 절차의 나머지 부분을 건너뜁니다. 그렇지 않은 경우 계정에 부여 합니다 **컴퓨터 개체 만들기** 하 고 **모든 속성 읽기** 도메인의 컴퓨터 계정에 사용 되는 컨테이너의 사용 권한:
     
-    1.  도메인 컨트롤러에서 클릭 **시작**, 클릭 **관리 도구**를 클릭 하 고 **Active Directory Users and Computers**합니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **계속**을 클릭합니다.  
+   1.  도메인 컨트롤러에서 클릭 **시작**, 클릭 **관리 도구**를 클릭 하 고 **Active Directory Users and Computers**합니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **계속**을 클릭합니다.  
           
-    2.  에 **보기** 메뉴에서 했는지 **고급 기능** 을 선택 합니다.  
+   2.  에 **보기** 메뉴에서 했는지 **고급 기능** 을 선택 합니다.  
           
-        때 **고급 기능** 을 선택 하면 볼 수 있습니다 합니다 **보안** 계정 (개체)의 속성 탭에서 **Active Directory Users and Computers**합니다.  
+       때 **고급 기능** 을 선택 하면 볼 수 있습니다 합니다 **보안** 계정 (개체)의 속성 탭에서 **Active Directory Users and Computers**합니다.  
           
-    3.  기본값을 마우스 오른쪽 단추로 클릭 **컴퓨터** 컨테이너 또는 기본 컨테이너는 컴퓨터에서 계정 도메인에서 생성 되 고 클릭 **속성**합니다. **컴퓨터** 에 위치한 <b>Active Directory 사용자 및 컴퓨터 /</b><i>도메인 노드</i><b>/Computers</b>합니다.  
+   3.  기본값을 마우스 오른쪽 단추로 클릭 **컴퓨터** 컨테이너 또는 기본 컨테이너는 컴퓨터에서 계정 도메인에서 생성 되 고 클릭 **속성**합니다. **컴퓨터** 에 위치한 <b>Active Directory 사용자 및 컴퓨터 /</b><i>도메인 노드</i><b>/Computers</b>합니다.  
           
-    4.  **보안** 탭에서 **고급**을 클릭합니다.  
+   4.  **보안** 탭에서 **고급**을 클릭합니다.  
           
-    5.  클릭 **추가**1 단계에서 만들어지거나 가져온 계정의 이름을 입력 하 고 클릭 **확인**합니다.  
+   5.  클릭 **추가**1 단계에서 만들어지거나 가져온 계정의 이름을 입력 하 고 클릭 **확인**합니다.  
           
-    6.  에 **에 대 한 사용 권한 항목 * * * 컨테이너* 대화 상자를 **컴퓨터 개체 만들기** 및 **모든 속성 읽기** 권한 되어 있는지 확인 합니다 **허용** 각각에 대 한 확인란을 선택 합니다.  
+   6.  에 **에 대 한 사용 권한 항목 * * * 컨테이너* 대화 상자를 **컴퓨터 개체 만들기** 및 **모든 속성 읽기** 권한 되어 있는지 확인 합니다 **허용** 각각에 대 한 확인란을 선택 합니다.  
           
-        ![](media/configure-ad-accounts/Cc731002.0a863ac5-2024-4f9f-8a4d-a419aff32fa0(WS.10).gif)
+       ![](media/configure-ad-accounts/Cc731002.0a863ac5-2024-4f9f-8a4d-a419aff32fa0(WS.10).gif)
 
 ## <a name="steps-for-prestaging-the-cluster-name-account"></a>클러스터 이름 계정을 사전 준비 단계
 
@@ -309,9 +309,9 @@ Windows Server 장애 조치 클러스터를 만들고 클러스터 된 서비�
 <br>
 
 
-9.  클러스터 이름 계정 (클러스터 이름 개체 또는 CNO 라고도 함)를 위해 **허용** 가 선택 합니다 **컴퓨터 개체 만들기** 하 고 **모든 속성 읽기** 사용 권한입니다.
+9. 클러스터 이름 계정 (클러스터 이름 개체 또는 CNO 라고도 함)를 위해 **허용** 가 선택 합니다 **컴퓨터 개체 만들기** 하 고 **모든 속성 읽기** 사용 권한입니다.
     
-    ![](media/configure-ad-accounts/Cc731002.f5977c4d-a62e-4b17-81e3-8c19ddca2078(WS.10).gif)
+   ![](media/configure-ad-accounts/Cc731002.f5977c4d-a62e-4b17-81e3-8c19ddca2078(WS.10).gif)
 
 10. 클릭 **확인** 돌아갈 때까지 합니다 **Active Directory Users and Computers** 스냅인입니다.
 
@@ -323,17 +323,17 @@ Windows Server 장애 조치 클러스터를 만들고 클러스터 된 서비�
 
 14. 에 **보안** 탭에서 클러스터 이름 계정 권한만 제공 하 고 선택 하는 계정 간에 나열 되어 있는지 확인 합니다. 클러스터 이름 계정에 있는지 확인 **모든 권한** 권한 (합니다 **허용** 확인란을 선택). 표시 되지 않는 경우 클러스터 이름 계정 목록에 추가 하 고 부여 **전면적인** 권한.
     
-    ![](media/configure-ad-accounts/Cc731002.2e614376-87a6-453a-81ba-90ff7ebc3fa2(WS.10).gif)
+   ![](media/configure-ad-accounts/Cc731002.2e614376-87a6-453a-81ba-90ff7ebc3fa2(WS.10).gif)
 
 15. 각 클러스터 된 서비스 및 클러스터에서 구성 하는 응용 프로그램에 대 한 13-14 단계를 반복 합니다.
 
 16. (기본적으로 10) 컴퓨터 개체를 만들기 위한 도메인 전체 할당량에 도달 하지 않은 (해당 하는 경우 도메인 관리자를 사용 하 여 컨설팅)를 확인 합니다. 이 절차에서는 이전 항목 모두 되었는지 검토 하 고 수정 하는 경우 및 할당량에 도달한 경우 할당량을 증가 하는 것이 좋습니다. 할당량을 변경 합니다.
     
-    1.  실행 관리자 권한으로 명령 프롬프트를 열고 **ADSIEdit.msc**합니다.  
+   1.  실행 관리자 권한으로 명령 프롬프트를 열고 **ADSIEdit.msc**합니다.  
           
-    2.  마우스 오른쪽 단추로 클릭 **ADSI 편집**, 클릭 **연결할**를 클릭 하 고 **확인**합니다. 합니다 **기본 명명 컨텍스트** 콘솔 트리에 추가 됩니다.  
+   2.  마우스 오른쪽 단추로 클릭 **ADSI 편집**, 클릭 **연결할**를 클릭 하 고 **확인**합니다. 합니다 **기본 명명 컨텍스트** 콘솔 트리에 추가 됩니다.  
           
-    3.  두 번 클릭 **기본 명명 컨텍스트**, 아래에 있는 도메인 개체를 마우스 오른쪽 단추로 클릭 하 고 클릭 **속성**합니다.  
+   3.  두 번 클릭 **기본 명명 컨텍스트**, 아래에 있는 도메인 개체를 마우스 오른쪽 단추로 클릭 하 고 클릭 **속성**합니다.  
           
-    4.  스크롤하여 **ms-DS-MachineAccountQuota**, 선택, 클릭 **편집**에서 값을 변경 하 고 클릭 **확인**합니다.
+   4.  스크롤하여 **ms-DS-MachineAccountQuota**, 선택, 클릭 **편집**에서 값을 변경 하 고 클릭 **확인**합니다.
 

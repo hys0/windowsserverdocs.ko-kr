@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 216af933aee643ee56feff71c59d9ecc2e62998c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 036d6d0543687e7f82caf3dfd2c3bb0b4a981181
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59842994"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66445054"
 ---
 # <a name="client-access-control-policies-in-ad-fs-20"></a>AD FS 2.0에서에서 클라이언트 액세스 제어 정책
 Active Directory Federation Services 2.0에서 클라이언트 액세스 정책 제한 하거나 리소스에 대 한 사용자 액세스 권한을 부여 할 수 있습니다.  이 문서에는 AD FS 2.0에서에서 클라이언트 액세스 정책을 사용 하도록 설정 하는 방법 및 가장 일반적인 시나리오를 구성 하는 방법을 설명 합니다.
@@ -52,11 +52,13 @@ Active Directory 클레임 공급자 트러스트에서 각 새 요청 컨텍스
     `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application`
 
 
-    `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-user-agent`
+~~~
+`https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-user-agent`
 
-    `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy`
+`https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy`
 
-    `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path`
+`https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path`
+~~~
 
 ### <a name="step-3-update-the-microsoft-office-365-identity-platform-relying-party-trust"></a>3단계: Microsoft Office 365 Id 플랫폼 신뢰 당사자 트러스트를 업데이트 합니다.
 
@@ -160,16 +162,16 @@ Active Directory 클레임 공급자 트러스트에서 각 새 요청 컨텍스
 
 ### <a name="descriptions-of-the-claim-rule-language-syntax-used-in-the-above-scenarios"></a>위의 시나리오에 사용 되는 클레임 규칙 언어 구문 설명
 
-|설명|클레임 규칙 언어 구문|
-|-----|-----| 
-|기본 AD FS 규칙을 모든 사용자에 게 액세스를 허용 합니다. 이 규칙 Microsoft Office 365 Id 플랫폼 신뢰 당사자 트러스트에 발급 권한 부여 규칙 목록에에서 이미 있어야 합니다.|=> issue(Type = "https://schemas.microsoft.com/authorization/claims/permit", Value = "true");| 
-|페더레이션 서버 프록시에서 요청에 나오도록 지정이 절이 새, 사용자 지정 규칙을 추가 (즉,이 x-ms-프록시 헤더 있음)
-모든 규칙을 포함 하는 것이 좋습니다.|exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy"])| 
-|요청 허용 되는 정의 된 범위에서 IP 사용 하 여 클라이언트에서 설정 하는 데 사용 합니다.|없음 ([유형 = = "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip", 값 = ~ "고객이 제공한 공용 ip 주소 regex"])| 
-|이 절을 사용 하 여 액세스 하는 응용 프로그램 Microsoft.Exchange.ActiveSync 없는 경우 요청은 거부 될 할지 지정 하려면.|NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application", Value=="Microsoft.Exchange.ActiveSync"])| 
-|이 규칙을 사용 하면 호출 된 웹 브라우저를 통해 거부 되지 됩니다 있는지 여부를 확인 하는 수 있습니다.|NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path", Value == "/adfs/ls/"])| 
-|이 규칙에 따르면 (SID 값에 따라)를 사용 하 여 특정 Active Directory 그룹의 사용자만을 거부 하도록 해야 합니다. 이 문은 필요가 추가 위치에 관계 없이 사용자 그룹을 허용 하는 것을 의미 합니다.|exists([Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value =~ "{Group SID value of allowed AD group}"])| 
-|이 모든 이전 조건이 충족 되 면 deny를 실행할 필요는 절.|=> issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = "true");|
+|                                                                                                   설명                                                                                                   |                                                                     클레임 규칙 언어 구문                                                                     |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|              기본 AD FS 규칙을 모든 사용자에 게 액세스를 허용 합니다. 이 규칙 Microsoft Office 365 Id 플랫폼 신뢰 당사자 트러스트에 발급 권한 부여 규칙 목록에에서 이미 있어야 합니다.              |                                  => issue(Type = "<https://schemas.microsoft.com/authorization/claims/permit>", Value = "true");                                   |
+|                               페더레이션 서버 프록시에서 요청에 나오도록 지정이 절이 새, 사용자 지정 규칙을 추가 (즉,이 x-ms-프록시 헤더 있음)                                |                                                                                                                                                                    |
+|                                                                                 모든 규칙을 포함 하는 것이 좋습니다.                                                                                  |                                    exists([Type == "<https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy>"])                                    |
+|                                                         요청 허용 되는 정의 된 범위에서 IP 사용 하 여 클라이언트에서 설정 하는 데 사용 합니다.                                                         | 없음 ([유형 = = "<https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip>", 값 = ~ "고객이 제공한 공용 ip 주소 regex"]) |
+|                                    이 절을 사용 하 여 액세스 하는 응용 프로그램 Microsoft.Exchange.ActiveSync 없는 경우 요청은 거부 될 할지 지정 하려면.                                     |       NOT exists([Type == "<https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application>", Value=="Microsoft.Exchange.ActiveSync"])        |
+|                                                      이 규칙을 사용 하면 호출 된 웹 브라우저를 통해 거부 되지 됩니다 있는지 여부를 확인 하는 수 있습니다.                                                      |              NOT exists([Type == "<https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path>", Value == "/adfs/ls/"])               |
+| 이 규칙에 따르면 (SID 값에 따라)를 사용 하 여 특정 Active Directory 그룹의 사용자만을 거부 하도록 해야 합니다. 이 문은 필요가 추가 위치에 관계 없이 사용자 그룹을 허용 하는 것을 의미 합니다. |             exists([Type == "<https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid>", Value =~ "{Group SID value of allowed AD group}"])              |
+|                                                                이 모든 이전 조건이 충족 되 면 deny를 실행할 필요는 절.                                                                 |                                   => issue(Type = "<https://schemas.microsoft.com/authorization/claims/deny>", Value = "true");                                    |
 
 ### <a name="building-the-ip-address-range-expression"></a>IP 주소 범위 식 작성
 
@@ -271,4 +273,4 @@ AD FS 추적 이벤트는 AD FS 2.0 디버그 로그에 기록 됩니다. 추적
 
 ## <a name="related"></a>관련 항목
 새 클레임 유형에 대 한 자세한 내용은 참조 하세요 [AD FS 클레임 유형](AD-FS-Claims-Types.md)합니다.
- 
+

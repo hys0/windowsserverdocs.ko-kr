@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6fd0bea5da83ca9351d5ea1028c94392bdb40422
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 08a9754b6bb11c50e21ba0d30543761be1866326
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59845544"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66440254"
 ---
 # <a name="wbadmin-enable-backup"></a>wbadmin 백업 사용
 
@@ -76,7 +76,6 @@ wbadmin enable backup
 [-password:<Password>]
 [-quiet] 
 [-allowDeleteOldBackups]
-
 ```
 
 ## <a name="parameters"></a>매개 변수
@@ -109,26 +108,26 @@ wbadmin enable backup
 다음 예제에 나온 방법을 **wbadmin 백업 사용** 명령은 다양 한 백업 시나리오에서 사용할 수 있습니다.
 
 시나리오 #1
--   하드 디스크 드라이브의 백업을 예약 e:, d:\mountpoint, 및 \\ \\? \Volume{cc566d14-44a0-11d9-9d93-806e6f6e6963}\
--   가 디스크에 파일 저장
--   매일 오전 9 시에 백업이 실행 오후 6시 사이로
-```
-wbadmin enable backup -addtarget:DiskID -schedule:09:00,18:00 -include:e:,d:\mountpoint,\\?\Volume{cc566d14-44a0-11d9-9d93-806e6f6e6963}\
-```
-시나리오 #2
--   네트워크 위치에 폴더 d:\documents의 백업을 예약 \\ \\backupshare\backup1
--   백업 관리자가 네트워크 공유에 대 한 액세스를 인증 CONTOSOEAST 도메인의 구성원 인 Aaren Ekelund (aekel)에 대 한 네트워크 자격 증명을 사용 합니다. Aaren의 암호가 *$3 hM 9 ^ 5lp*합니다.
--   매일 오전 12 시에 백업이 실행 오후 7 시까지
-```
-wbadmin enable backup –addtarget:\\backupshare\backup1 –include: d:\documents –user:CONTOSOEAST\aekel –password:$3hM9^5lp –schedule:00:00,19:00
-```
-시나리오 #3
--   T: 및 폴더 d:\documents 드라이브 h:에 볼륨의 백업을 예약 제외 폴더 d:\documents\~tmp
--   볼륨 섀도 복사본 서비스를 사용 하 여 전체 백업을 수행 합니다.
--   매일 오전 1 시에 백업이 실행
-```
-wbadmin enable backup –addtarget:H: –include T:,D:\documents –exclude D:\documents\~tmp –vssfull –schedule:01:00
-```
+- 하드 디스크 드라이브의 백업을 예약 e:, d:\mountpoint, 및 \\ \\? \Volume{cc566d14-44a0-11d9-9d93-806e6f6e6963}\
+- 가 디스크에 파일 저장
+- 매일 오전 9 시에 백업이 실행 오후 6시 사이로
+  ```
+  wbadmin enable backup -addtarget:DiskID -schedule:09:00,18:00 -include:e:,d:\mountpoint,\\?\Volume{cc566d14-44a0-11d9-9d93-806e6f6e6963}\
+  ```
+  시나리오 #2
+- 네트워크 위치에 폴더 d:\documents의 백업을 예약 \\ \\backupshare\backup1
+- 백업 관리자가 네트워크 공유에 대 한 액세스를 인증 CONTOSOEAST 도메인의 구성원 인 Aaren Ekelund (aekel)에 대 한 네트워크 자격 증명을 사용 합니다. Aaren의 암호가 *$3 hM 9 ^ 5lp*합니다.
+- 매일 오전 12 시에 백업이 실행 오후 7 시까지
+  ```
+  wbadmin enable backup –addtarget:\\backupshare\backup1 –include: d:\documents –user:CONTOSOEAST\aekel –password:$3hM9^5lp –schedule:00:00,19:00
+  ```
+  시나리오 #3
+- T: 및 폴더 d:\documents 드라이브 h:에 볼륨의 백업을 예약 제외 폴더 d:\documents\~tmp
+- 볼륨 섀도 복사본 서비스를 사용 하 여 전체 백업을 수행 합니다.
+- 매일 오전 1 시에 백업이 실행
+  ```
+  wbadmin enable backup –addtarget:H: –include T:,D:\documents –exclude D:\documents\~tmp –vssfull –schedule:01:00
+  ```
 
 #### <a name="additional-references"></a>추가 참조
 

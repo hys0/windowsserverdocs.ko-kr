@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 805f63e95bcb72416cdacea4ba792af8c9a96c06
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d6b9b5544394bfc69a2dc9f7be26ed8355a3f690
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59813104"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66441963"
 ---
 # <a name="recover"></a>복구
 
@@ -36,17 +36,17 @@ recover [<Drive>:][<Path>]<FileName>
 
 ## <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------|-----------|
-|[\<Drive>:][<Path>]<FileName>|복구 하려는 파일의 이름과 위치를 지정 합니다. *FileName* 가 필요 합니다.|
-|/?|명령 프롬프트에 도움말을 표시합니다.|
+|           매개 변수           |                                          설명                                          |
+|-------------------------------|-----------------------------------------------------------------------------------------------|
+| [\<Drive>:][<Path>]<FileName> | 복구 하려는 파일의 이름과 위치를 지정 합니다. *FileName* 가 필요 합니다. |
+|              /?               |                             명령 프롬프트에 도움말을 표시합니다.                              |
 
 ## <a name="remarks"></a>설명
 
 -   **복구** 명령 파일을 섹터 단위로 읽고 좋은 섹터에서 데이터를 복구 합니다. 불량 섹터의 데이터가 손실 됩니다.
 -   불량 섹터에서 보고 **chkdsk** 작업에 대 한 디스크를 준비할 때 "불량"으로 표시 되었습니다. 위험 하지, 및 **복구** 에 영향을 주지 않습니다.
 -   불량 섹터의 모든 데이터가 손실 되는 파일을 복구 하는 경우 한 번에 하나의 파일을 복구할 해야 있습니다.
--   와일드 카드 문자를 사용할 수 없습니다 (**&#42;** 하 고 **?**) 사용 하 여는 **복구할** 명령입니다. 파일 (및 현재 디렉터리에 없는 경우 파일의 위치)를 지정 해야 합니다.
+-   와일드 카드 문자를 사용할 수 없습니다 ( **&#42;** 하 고 **?** ) 사용 하 여는 **복구할** 명령입니다. 파일 (및 현재 디렉터리에 없는 경우 파일의 위치)를 지정 해야 합니다.
 
 ## <a name="BKMK_examples"></a>예제
 

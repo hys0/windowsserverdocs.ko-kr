@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 940b0931671d5f3c2137fafe4ae73b7cecd0160e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 1e4b9cde10e11558aaa95edda94921144dac1f86
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59821194"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66441806"
 ---
 # <a name="repair"></a>복구
 
@@ -36,11 +36,11 @@ repair disk=<n> [align=<n>] [noerr]
   
 ## <a name="parameters"></a>매개 변수  
   
-|매개 변수|설명|  
-|-------|--------|  
-|disk\=<n>|실패 한 디스크 영역을 대체 하는 동적 디스크를 지정 합니다.|  
-|align\=<n>|모든 볼륨 또는 파티션 범위에 있는 가장 가까운 맞춤 경계선을 맞춥니다. *n* 는 킬로바이트의 수는 \(KB\) 가장 가까운 맞춤 경계선을 디스크의 시작 부분에서.|  
-|noerr|만 스크립팅 합니다. 오류가 발생 하면 오류가 발생 하지 않은 경우에 따라 명령을 처리 하도록 DiskPart 계속 합니다. 이 매개 변수를 크기는 오류 코드를 수행 합니다.|  
+| 매개 변수  |                                                                                             설명                                                                                              |
+|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| disk\=<n>  |                                                                 실패 한 디스크 영역을 대체 하는 동적 디스크를 지정 합니다.                                                                 |
+| align\=<n> |          모든 볼륨 또는 파티션 범위에 있는 가장 가까운 맞춤 경계선을 맞춥니다. *n* 는 킬로바이트의 수는 \(KB\) 가장 가까운 맞춤 경계선을 디스크의 시작 부분에서.           |
+|   noerr    | 만 스크립팅 합니다. 오류가 발생 하면 오류가 발생 하지 않은 경우에 따라 명령을 처리 하도록 DiskPart 계속 합니다. 이 매개 변수를 크기는 오류 코드를 수행 합니다. |
   
 ## <a name="remarks"></a>설명  
   

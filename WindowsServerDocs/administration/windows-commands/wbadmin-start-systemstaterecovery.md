@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7c99a934987e320baaec0e56c69f36eda5a32819
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4282da2011c39daec0315a7f3836d5517f29debb
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59852684"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66440198"
 ---
 # <a name="wbadmin-start-systemstaterecovery"></a>wbadmin 시작 systemstaterecovery
 
@@ -74,14 +74,14 @@ wbadmin start systemstaterecovery
 
 ## <a name="BKMK_examples"></a>예제
 
--   백업의 시스템 상태 복구를 03/31/2013에서 오전 9 시를 수행 하려면 다음을 입력 합니다.  
-    ```
-    wbadmin start systemstaterecovery -version:03/31/2013-09:00
-    ```  
--   04/30/2013에서 오전 9 시 백업의 시스템 상태 복구를 수행 하려면 공유 리소스에 대해 저장 된 \\ \\servername\share server01, 유형:  
-    ```
-    wbadmin start systemstaterecovery -version:04/30/2013-09:00 -backupTarget:\\servername\share -machine:server01
-    ```
+- 백업의 시스템 상태 복구를 03/31/2013에서 오전 9 시를 수행 하려면 다음을 입력 합니다.  
+  ```
+  wbadmin start systemstaterecovery -version:03/31/2013-09:00
+  ```  
+- 04/30/2013에서 오전 9 시 백업의 시스템 상태 복구를 수행 하려면 공유 리소스에 대해 저장 된 \\ \\servername\share server01, 유형:  
+  ```
+  wbadmin start systemstaterecovery -version:04/30/2013-09:00 -backupTarget:\\servername\share -machine:server01
+  ```
 
 #### <a name="additional-references"></a>추가 참조
 

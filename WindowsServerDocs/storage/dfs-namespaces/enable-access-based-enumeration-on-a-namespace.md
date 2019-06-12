@@ -8,12 +8,12 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: e9a2b2162fcf11385a5a866372e57338df87c541
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7e9a5b397127e9eb88352fb4d7bc28955023d4b7
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59850594"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447208"
 ---
 # <a name="enable-access-based-enumeration-on-a-namespace"></a>네임스페이스에 액세스 기반 열거 사용
 
@@ -78,15 +78,15 @@ Windows 인터페이스나 명령줄을 사용하여 개별 DFS 폴더를 볼 �
 
 ## <a name="to-control-folder-visibility-by-using-a-command-line"></a>명령줄을 사용하여 폴더 표시 여부를 제어하려면
 
-1.  **분산 파일 시스템** 역할 서비스나 **분산 파일 시스템 도구** 기능이 설치된 서버에서 명령 프롬프트 창을 엽니다.
+1. **분산 파일 시스템** 역할 서비스나 **분산 파일 시스템 도구** 기능이 설치된 서버에서 명령 프롬프트 창을 엽니다.
 
-2.  다음 명령을 입력 합니다. 여기서 *&lt;DFSPath&gt;* DFS 폴더 (링크)의 경로 *< 도메인\\계정 >* 그룹 또는 사용자 계정 이름 및 *(...)*  추가 액세스 제어 항목 (Ace)으로 바뀝니다.
+2. 다음 명령을 입력 합니다. 여기서 *&lt;DFSPath&gt;* DFS 폴더 (링크)의 경로 *< 도메인\\계정 >* 그룹 또는 사용자 계정 이름 및 *(...)*  추가 액세스 제어 항목 (Ace)으로 바뀝니다.
 
-    ```
-    dfsutil property sd grant <DFSPath> DOMAIN\Account:R (...) Protect Replace
-    ```
+   ```
+   dfsutil property sd grant <DFSPath> DOMAIN\Account:R (...) Protect Replace
+   ```
 
-    예를 들어, 권한이 있는 기존 사용 권한을 바꿉니다 허용 하는 Domain Admins 및 CONTOSO\\Read (R) 강사 그룹에 대 한 액세스는 \\contoso.office\public\training 폴더 다음 명령을 입력 합니다.
+   예를 들어, 권한이 있는 기존 사용 권한을 바꿉니다 허용 하는 Domain Admins 및 CONTOSO\\Read (R) 강사 그룹에 대 한 액세스는 \\contoso.office\public\training 폴더 다음 명령을 입력 합니다.
 
    ```
    dfsutil property sd grant \\contoso.office\public\training "CONTOSO\Domain Admins":R CONTOSO\Trainers:R Protect Replace 
@@ -95,7 +95,7 @@ Windows 인터페이스나 명령줄을 사용하여 개별 DFS 폴더를 볼 �
 3. 명령 프롬프트에서 추가 작업을 수행하려면 다음 명령을 사용합니다.
 
 
-| Command | 설명 |
+| 명령 | 설명 |
 |---|---|
 |[Dfsutil 속성 sd 거부](https://msdn.microsoft.com/library/dd759150(v=ws.11).aspx)|그룹이나 사용자에게 폴더를 볼 수 있는 권한을 주지 않습니다.|
 |[Dfsutil 속성 sd 다시 설정](https://msdn.microsoft.com/library/dd759150(v=ws.11).aspx) |폴더에서 모든 사용 권한을 제거합니다.|
@@ -103,7 +103,7 @@ Windows 인터페이스나 명령줄을 사용하여 개별 DFS 폴더를 볼 �
 
 ## <a name="see-also"></a>참조
 
--   [DFS Namespace 만들기](create-a-dfs-namespace.md)
--   [DFS 네임 스페이스에 대 한 관리 권한 위임](delegate-management-permissions-for-dfs-namespaces.md)
+-   [DFS 네임스페이스 만들기](create-a-dfs-namespace.md)
+-   [DFS 네임스페이스에 대한 관리 권한 위임](delegate-management-permissions-for-dfs-namespaces.md)
 -   [DFS를 설치합니다.](https://technet.microsoft.com/library/cc731089(v=ws.11).aspx)
 -   [상속 된 사용 권한을 액세스 기반 열거 사용](using-inherited-permissions-with-access-based-enumeration.md)

@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ed9518fae07745502d01dc0084b7443a1332db83
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 264bdb6d51622e6323be00b44014b86cd9662e61
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59859804"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66440505"
 ---
 # <a name="using-the-get-driverpackagefile-command"></a>Get DriverPackageFile 명령을 사용 하 여
 
@@ -34,11 +34,11 @@ WDSUTIL /Get-DriverPackageFile /InfFile:<Inf File path> [/Architecture:{x86 | ia
 
 ## <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------|-----------|
-|/ InfFile:\<Inf 파일 경로 >|드라이버 패키지.inf 파일의 전체 경로 파일 이름을 지정합니다.|
-|[/ 아키텍처: {x86 | ia64 | x64}]|드라이버 패키지의 아키텍처를 지정합니다.|
-|[표시 /: {드라이버 | 파일 | All}]|패키지 정보를 표시를 나타냅니다. 경우 **표시/** 를 지정 하지 않으면 기본값은 드라이버만 패키지 메타 데이터를 반환 합니다. **드라이버** 패키지에 드라이버 목록이 표시 됩니다. **파일** 패키지에 파일 목록이 표시 됩니다. **모든** 드라이버와 파일이 표시 됩니다.|
+|         매개 변수         |                              설명                               |
+|---------------------------|------------------------------------------------------------------------|
+| / InfFile:\<Inf 파일 경로 > | 드라이버 패키지.inf 파일의 전체 경로 파일 이름을 지정합니다. |
+|    [/ 아키텍처: {x86    |                                  ia64                                  |
+|     [표시 /: {드라이버      |                                 파일                                  |
 
 ## <a name="BKMK_examples"></a>예제
 

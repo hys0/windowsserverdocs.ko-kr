@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6c7a9e95ebd36209d5729f81b7eae9e2660b3606
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3f934d8c65da939fb60c564b375699f411b7c9ac
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59890694"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66440829"
 ---
 # <a name="using-the-add-alldriverpackages-subcommand"></a>추가 AllDriverPackages 하위 명령 사용
 
@@ -34,12 +34,12 @@ WDSUTIL /Add-AllDriverPackages /FolderPath:<Folder Path> [/Server:<Server name>]
 
 ## <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------|-----------|
-|/FolderPath:\<Folder Path>|드라이버 패키지에 대 한.inf 파일이 있는 폴더의 전체 경로 지정 합니다.|
-|[/ 서버:\<서버 이름 >]|서버 이름을 지정합니다. 이 NetBIOS 이름이 나 FQDN 수 있습니다. 서버 이름을 지정 하지, 로컬 서버가 사용 됩니다.|
-|[/ 아키텍처: {x86 | ia64 | x64}]|추가할 드라이버 패키지의 아키텍처를 지정 합니다. 다른 아키텍처에 대 한 드라이버 패키지는 무시 됩니다.|
-|[/ DriverGroup:\<그룹 이름 >]|패키지를 추가할 드라이버 그룹의 이름을 지정 합니다.|
+|          매개 변수           |                                                              설명                                                              |
+|------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+|  /FolderPath:\<Folder Path>  |                      드라이버 패키지에 대 한.inf 파일이 있는 폴더의 전체 경로 지정 합니다.                      |
+|   [/ 서버:\<서버 이름 >]   | 서버 이름을 지정합니다. 이 NetBIOS 이름이 나 FQDN 수 있습니다. 서버 이름을 지정 하지, 로컬 서버가 사용 됩니다. |
+|     [/ 아키텍처: {x86      |                                                                 ia64                                                                  |
+| [/ DriverGroup:\<그룹 이름 >] |                             패키지를 추가할 드라이버 그룹의 이름을 지정 합니다.                             |
 
 ## <a name="BKMK_examples"></a>예제
 

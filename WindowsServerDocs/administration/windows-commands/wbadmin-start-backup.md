@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 09b2ffabcea414dd4717a2ffa1f6e860a17f3653
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2ac602506960b92333750e7a37692c44c92aae22
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59871704"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66440269"
 ---
 # <a name="wbadmin-start-backup"></a>wbadmin 백업 시작
 
@@ -87,25 +87,25 @@ Wbadmin start backup
 다음 예제에 나온 방법을 **wbadmin 백업 시작** 명령은 다양 한 백업 시나리오에서 사용할 수 있습니다.
 
 시나리오 #1
--   볼륨의 백업을 만드는 e:, d:\mountpoint, 및 \\ \\? \Volume{cc566d14-4410-11d9-9d93-806e6f6e6963}
--   F: 볼륨에 백업을 저장합니다
-```
-wbadmin start backup -backupTarget:f: -include:e:,d:\mountpoint,\\?\Volume{cc566d14-44a0-11d9-9d93-806e6f6e6963}\
-```
-시나리오 #2
--   일회성 백업을 수행 *f:\folder1* 및 *h:\folder2* 볼륨 *d:* 합니다.
--   시스템 상태 백업
--   복사 백업 정상적으로 예약 된 차등 백업에 영향을 받지 않도록 확인 하십시오.
-```
-wbadmin start backup –backupTarget:d: -include:g\folder1,h:\folder2 –systemstate -vsscopy
-```
-시나리오 #3
--   일회성 백업을 수행 *d:\folder1* 는 비재귀적을 백업 해야 합니다.
--   네트워크 위치에 폴더를 백업  *\\ \\backupshare\backup1*
--   멤버에 대 한 백업에 대 한 액세스를 제한 된 **관리자** 또는 **백업 운영자** 그룹입니다.
-```
-wbadmin start backup –backupTarget: \\backupshare\backup1 -noinheritacl -nonrecurseinclude:d:\folder1
-```
+- 볼륨의 백업을 만드는 e:, d:\mountpoint, 및 \\ \\? \Volume{cc566d14-4410-11d9-9d93-806e6f6e6963}
+- F: 볼륨에 백업을 저장합니다
+  ```
+  wbadmin start backup -backupTarget:f: -include:e:,d:\mountpoint,\\?\Volume{cc566d14-44a0-11d9-9d93-806e6f6e6963}\
+  ```
+  시나리오 #2
+- 일회성 백업을 수행 *f:\folder1* 및 *h:\folder2* 볼륨 *d:* 합니다.
+- 시스템 상태 백업
+- 복사 백업 정상적으로 예약 된 차등 백업에 영향을 받지 않도록 확인 하십시오.
+  ```
+  wbadmin start backup –backupTarget:d: -include:g\folder1,h:\folder2 –systemstate -vsscopy
+  ```
+  시나리오 #3
+- 일회성 백업을 수행 *d:\folder1* 는 비재귀적을 백업 해야 합니다.
+- 네트워크 위치에 폴더를 백업  *\\ \\backupshare\backup1*
+- 멤버에 대 한 백업에 대 한 액세스를 제한 된 **관리자** 또는 **백업 운영자** 그룹입니다.
+  ```
+  wbadmin start backup –backupTarget: \\backupshare\backup1 -noinheritacl -nonrecurseinclude:d:\folder1
+  ```
 
 #### <a name="additional-references"></a>추가 참조
 

@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 245f8fb2e6419d22da3e2e76eebd9f801ab90664
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 45545b4e12d31c293ead5b18b83efd50d7bc37bb
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59821484"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66439656"
 ---
 # <a name="dfsutil"></a>dfsutil
 
@@ -53,13 +53,13 @@ command </parameter> </param2>
 개체를 지정 하는 경우 \(네임 스페이스 서버와 같은\) 명령의 끝 대부분의 명령이 표시 됩니다 개체에 대 한 정보 없이 매개 변수 또는 명령입니다. 예를 들어 dfsutil 루트 명령을 사용 하는 경우 네임 스페이스 루트를 루트에 대 한 정보를 보려면 명령에 추가할 수 있습니다.
 
 ## <a name="BKMK_Examples"></a>예제
-<Here is where you put a detailed description of your example.>
+&lt;예제에 대 한 자세한 설명을 배치 하는 위치는 다음과 같습니다.&gt;
 
 ```
 This /is /the /example /of /calling /command /with /parameters
 ```
 
-<Here is where you put a detailed description of another example.>
+&lt;또 다른 예에 대 한 자세한 설명을 배치 하는 위치는 다음과 같습니다.&gt;
 
 ```
 This /is /a:different /example

@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: cc090fa749a601e53b4347cce43245f22badc8ae
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e0c5e838290a8ebf33f0f7891dc10f8b00e5bcba
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59840714"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66442656"
 ---
 # <a name="event-id-2088-dns-lookup-failure-occurred-with-replication-success"></a>Event ID 2088: 복제 성공과 함께 DNS 조회 실패가 발생
 
@@ -58,7 +58,7 @@ ms.locfileid: "59840714"
 
 2) 원본 도메인 컨트롤러는 실행 중인 Active Directory를 입력 하 여 네트워크에서 액세스할 수 있는 확인 "보기 net \\ &lt;원본 DC 이름&gt;" 또는 "ping &lt;원본 DC 이름&gt;"입니다. 
 
-3) 원본 도메인 컨트롤러를 사용 하는지 확인 유효한 DNS 서버에 대 한 DNS 서비스와 원본 도메인 컨트롤러의 호스트 레코드 및 CNAME 레코드는 제대로 등록 DCDIAG의 DNS 향상 된 버전을 사용 합니다. 사용할 수 있는 EXE https://www.microsoft.com/dns 
+3) 원본 도메인 컨트롤러를 사용 하는지 확인 유효한 DNS 서버에 대 한 DNS 서비스와 원본 도메인 컨트롤러의 호스트 레코드 및 CNAME 레코드는 제대로 등록 DCDIAG의 DNS 향상 된 버전을 사용 합니다. 사용할 수 있는 EXE <https://www.microsoft.com/dns> 
 
 dcdiag /test:dns 
 
@@ -66,7 +66,7 @@ dcdiag /test:dns
 
 dcdiag /test:dns 
 
-5) DNS 오류 오류 추가 분석은 다음 KB 824449을 참조 하세요. https://support.microsoft.com/?kbid=824449 
+5) DNS 오류 오류 추가 분석은 다음 KB 824449을 참조 하세요. <https://support.microsoft.com/?kbid=824449> 
 
 추가 데이터 오류 값: 11004 요청한 이름이 유효 하 하지만 요청 된 형식의 데이터를 찾지 못했습니다.</code> </introduction>
   <section>
@@ -78,7 +78,7 @@ dcdiag /test:dns
   <section>
     <title>해결 방법</title>
     <content>
-      <para>DNS 테스트에 설명 된 대로 진행 "<link xlink:href="85b1d179-f53e-4f95-b0b8-5b1c096a8076">이벤트 ID 2087: DNS 조회 실패로 인해 복제가 실패할 수</link>. "</para>
+      <para>에 설명 된 대로 DNS 테스트를 진행 &quot; <link xlink:href="85b1d179-f53e-4f95-b0b8-5b1c096a8076">이벤트 ID 2087: DNS 조회 실패로 인해 복제가 실패할 수</link>입니다.&quot;</para>
     </content>
   </section>
   <relatedTopics />

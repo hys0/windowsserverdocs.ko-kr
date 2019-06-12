@@ -12,16 +12,16 @@ ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
 manager: dongill
-ms.openlocfilehash: d243994a68c0bf4f0584f68475a185acb9cb73d5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 0e3852b4ea5f1080a3798c0806e5c87ca808c3be
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59865494"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446527"
 ---
 # <a name="scale-out-your-remote-desktop-services-deployment-by-adding-an-rd-session-host-farm"></a>RD 세션 호스트 팜을 추가 하 여 원격 데스크톱 서비스 배포 규모를 확장합니다
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016
 
 세션 호스트 RDSH (원격 데스크톱) 팜에 추가 하 여 가용성과 RDS 배포의 확장성을 개선할 수 있습니다.   
   
@@ -39,8 +39,8 @@ ms.locfileid: "59865494"
    3. 도메인 관리자 자격 증명을 입력 합니다. 
    4. 서버 또는 vm 다시 시작 합니다.
 4. 팜에 새 RD 세션 호스트를 추가 합니다.
->[!NOTE] 
-> 1 단계, RDMS 가상 머신에 대 한 공용 IP 주소 만들기, 이며만 필요 합니다 RDMS에 대 한 vm을 사용 하는 경우 할당 된 IP 주소가 없는 경우.
+   >[!NOTE] 
+   > 1 단계, RDMS 가상 머신에 대 한 공용 IP 주소 만들기, 이며만 필요 합니다 RDMS에 대 한 vm을 사용 하는 경우 할당 된 IP 주소가 없는 경우.
    
    1. 원격 데스크톱 관리 서비스 RDMS ()를 실행 하는 가상 컴퓨터에 대 한 공용 IP 주소를 만듭니다. RDMS 가상 컴퓨터는 RD 연결 브로커 역할의 첫 번째 인스턴스를 실행 중인 가상 컴퓨터는 일반적으로 됩니다.  
        1. Azure 포털에서 클릭 **찾아보기 > 리소스 그룹**, RDMS 가상 컴퓨터 (예를 들어 Contoso Cb1)를 클릭 한 다음을 배포에 대 한 리소스 그룹을 클릭 합니다.  

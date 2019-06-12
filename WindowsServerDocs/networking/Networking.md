@@ -10,12 +10,12 @@ manager: dougkim
 ms.author: pashort
 author: shortpatti
 ms.localizationpriority: medium
-ms.openlocfilehash: bb5a605ef6438bfa6a2afe4963b8206f9dc84a3a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 09c98d1bd7d2caa8e4cfaea68f9875b25da94003
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59869354"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66444649"
 ---
 # <a name="networking"></a>네트워킹
 
@@ -43,7 +43,7 @@ ms.locfileid: "59869354"
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                        <h2><a href="../networking/What-s-New-in-Networking.md">네트워킹의 새로운 기능</a></h2>
+                                        <h2><a href="../networking/What-s-New-in-Networking.md">새로운&#39;네트워킹 기능</a></h2>
                                         </div>
                                     </div>
                                 </div>
@@ -66,9 +66,9 @@ ms.locfileid: "59869354"
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                        <h3><a href="https://docs.microsoft.com/windows-server/networking/sdn/">소프트웨어 정의 네트워킹 (SDN)</a><hr /></h3>Windows Server, System Center 및 Microsoft Azure에서 제공 되는 SDN 기술에 대해 자세히 알아보려면이 항목을 사용할 수 있습니다.</p>
+                                        <h3><a href="https://docs.microsoft.com/windows-server/networking/sdn/">SDN(소프트웨어 정의 네트워킹)</a><hr /></h3>Windows Server, System Center 및 Microsoft Azure에서 제공 되는 SDN 기술에 대해 자세히 알아보려면이 항목을 사용할 수 있습니다.</p>
                         
-                                        <p><b>참고:</b> Hyper-v 호스트 및 virtual machines \(Vm\) 실행 노드 네트워크 컨트롤러 및 소프트웨어 부하 분산 등의 SDN 인프라 서버를 설치 해야 하는 Windows Server Datacenter edition. Hyper-v만 포함 하는 호스트 테 넌 트 워크 로드 Vm SDN에 연결 된\-제어 네트워크를 Windows Server Standard edition을 실행할 수 있습니다.</p>                                        </div>
+                                        <p><b>참고:</b> Hyper-v 호스트 및 소프트웨어 부하 분산 및 네트워크 컨트롤러 노드 등의 SDN 인프라 서버를 실행 하는 virtual machines (Vm)에 대 한 Windows Server Datacenter edition을 설치 해야 합니다. 유일한 테 넌 트 워크 로드 SDN 제어 네트워크에 연결 된 Vm을 포함 하는 Hyper-v 호스트에 대 한 Windows Server Standard edition을 실행할 수 있습니다.</p>                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -119,7 +119,7 @@ ms.locfileid: "59869354"
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                        <h3><a href="sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md">소프트웨어 부하 분산 &#40;SLB&#41; SDN에 대 한</a><hr /></h3>클라우드 서비스 공급자 \(Csp\) 및 네트워킹 SDN (소프트웨어)에서 Windows Server 2016을 배포 하는 기업 소프트웨어 부하 분산을 사용 하 여 \(SLB\) 테 넌 트 및 테 넌 트 고객 네트워크 트래픽 가상 네트워크 리소스 간에 고르게 분산 시킵니다. Windows Server SLB 높은 가용성과 확장성이 같은 작업을 호스트 하는 여러 서버를 수 있습니다.</p>                                        </div>
+                                        <h3><a href="sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md">소프트웨어 부하 분산 &#40;SLB&#41; SDN에 대 한</a><hr /></h3>클라우드 서비스 공급자 (Csp) 및 엔터프라이즈 네트워킹 SDN (소프트웨어)에서 Windows Server 2016에 배포 하는 테 넌 트 및 테 넌 트 고객 네트워크 트래픽 가상 네트워크 리소스 간에 고르게 배포할 소프트웨어 부하 분산 (SLB)를 사용할 수 있습니다. Windows Server SLB 높은 가용성과 확장성이 같은 작업을 호스트 하는 여러 서버를 수 있습니다.</p>                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -136,7 +136,7 @@ ms.locfileid: "59869354"
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                        <h3><a href="sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md">SDN 용 RAS 게이트웨이</a><hr /></h3>소프트웨어 기반 인 RAS 게이트웨이, 다중 테 넌 트, 경계 게이트웨이 프로토콜 \(BGP\) Windows Server 2016에서 지원 라우터는 클라우드 서비스 공급자를 위한 \(Csp\) 및 Hyper-v 네트워크 가상화를 사용 하 여 여러 테 넌 트 가상 네트워크를 호스팅하는 기업입니다.</p>                                        </div>
+                                        <h3><a href="sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md">SDN용 RAS 게이트웨이</a><hr /></h3>클라우드 서비스 공급자 (Csp) 및 Hyper-v 네트워크를 사용 하 여 여러 테 넌 트 가상 네트워크를 호스트 하는 기업에 대 한 RAS 게이트웨이 소프트웨어 기반 다중 테 넌 트, Windows Server 2016에서 프로토콜 BGP (경계 게이트웨이) 가능 라우터는 설계 되었습니다. 가상화 합니다.</p>                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -153,7 +153,7 @@ ms.locfileid: "59869354"
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                        <h3><a href="sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md">네트워크 기능 가상화</a><hr /></h3>정의 된 소프트웨어 데이터 센터에서 네트워크 하드웨어 어플라이언스를 통해 수행 되는 함수 \(부하 분산 장치, 방화벽, 라우터, 스위치 등\) 가상 어플라이언스로 가상화 점점 더 됩니다. 이 "네트워크 기능 가상화" 서버 가상화 및 네트워크 가상화의 자연 스러운 진행 됩니다.</p>                                        </div>
+                                        <h3><a href="sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md">네트워크 기능 가상화</a><hr /></h3>소프트웨어 정의 데이터 센터에서 점점 더 가상 어플라이언스로 대 하드웨어 장비 (예: 부하 분산 장치, 방화벽, 라우터, 스위치 및 등)에서 수행 되는 네트워크 기능 가상화 되 고 됩니다. 이렇게 &quot;네트워크 기능 가상화&quot; 서버 가상화 및 네트워크 가상화의 자연 스러운 진행 됩니다.</p>                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -194,7 +194,7 @@ ms.locfileid: "59869354"
                                         </div>
                                         <div class="cardText">
                                         <h3><a href="branchcache/BranchCache.md">BranchCache</a><hr /></h3>
-                                        <p>BranchCache는 광역 네트워크 \(WAN\) 대역폭 최적화 기술입니다. 파일을 사용자가 원격 서버의 콘텐츠에 액세스할 때 WAN 대역폭을 최적화 하려면 BranchCache 본사에서 콘텐츠를 가져오며 또는 호스트 된 클라우드 콘텐츠 서버 및 캐시 지점 사무실 위치에서 콘텐츠를 클라이언트 컴퓨터는 WAN을 통해이 아닌 로컬 콘텐츠를 액세스 하는 지사 사무소에 허용 합니다.</p>
+                                        <p>BranchCache는 WAN(광역 네트워크) 대역폭 최적화 기술입니다. 파일을 사용자가 원격 서버의 콘텐츠에 액세스할 때 WAN 대역폭을 최적화 하려면 BranchCache 본사에서 콘텐츠를 가져오며 또는 호스트 된 클라우드 콘텐츠 서버 및 캐시 지점 사무실 위치에서 콘텐츠를 클라이언트 컴퓨터는 WAN을 통해이 아닌 로컬 콘텐츠를 액세스 하는 지사 사무소에 허용 합니다.</p>
                     </div>
                 </div>
             </div>
@@ -247,8 +247,8 @@ ms.locfileid: "59869354"
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                        <h3><a href="dns/dns-top.md">도메인 이름 시스템 (DNS) "></a><hr /></h3>
-                                        <p>Domain Name System \(DNS\) TCP/IP를 구성 하는 프로토콜의 산업 표준 프로토콜 중 하나입니다 설명과 함께 DNS 클라이언트와 DNS 서버 컴퓨터 이름-IP 주소를 컴퓨터 및 사용자 매핑 이름 확인 서비스입니다.</p>
+                                        <h3><a href="dns/dns-top.md">도메인 이름 시스템 (DNS)&quot;&gt;</a><hr /></h3>
+                                        <p>도메인 이름 시스템 (DNS) TCP/IP를 구성 하는 프로토콜의 산업 표준 프로토콜 중 하나 이며 DNS 클라이언트와 DNS 서버 함께 컴퓨터와 사용자에 게 컴퓨터 이름-IP 주소 매핑 이름 확인 서비스를 제공 합니다.</p>
                     </div>
                 </div>
             </div>
@@ -266,7 +266,7 @@ ms.locfileid: "59869354"
                                         </div>
                                         <div class="cardText">
                                         <h3><a href="technologies/dhcp/dhcp-top.md">Dynamic Host Configuration Protocol &#40;DHCP&#41;</a><hr /></h3>
-                                        <p>동적 호스트 구성 프로토콜 \(DHCP\) 는 자동으로 인터넷 프로토콜을 제공 하는 클라이언트/서버 프로토콜 \(IP\) 호스트의 IP 주소 및 다른 관련 서브넷 마스크 및 기본 게이트웨이 등의 구성 정보입니다.</p>
+                                        <p>동적 호스트 구성 프로토콜 (DHCP)는 자동으로 해당 IP 주소 및 서브넷 마스크 및 기본 게이트웨이 등의 기타 관련된 구성 정보를 사용 하 여 호스트를 IP (인터넷 프로토콜)를 제공 하는 클라이언트/서버 프로토콜.</p>
                     </div>
                 </div>
             </div>
@@ -284,7 +284,7 @@ ms.locfileid: "59869354"
                                         </div>
                                         <div class="cardText">
                                         <h3><a href="sdn/technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md">Hyper-v 네트워크 가상화</a><hr /></h3>
-                                        <p>Hyper-v 네트워크 가상화 \(HNV\) 고객 네트워크 공유의 실제 네트워크 인프라의 가상화를 사용 합니다.</p>
+                                        <p>Hyper-v 네트워크 가상화 (HNV) 고객 네트워크 공유의 실제 네트워크 인프라의 가상화를 수 있습니다.</p>
                     </div>
                 </div>
             </div>
@@ -301,7 +301,7 @@ ms.locfileid: "59869354"
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                        <h3><a href="../virtualization/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md">Hyper-v 가상 스위치</a><hr /></h3>
+                                        <h3><a href="../virtualization/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md">Hyper-V 가상 스위치</a><hr /></h3>
                                         <p>Hyper-V 가상 스위치는 Hyper-V 서버 역할을 설치할 때 Hyper-V 관리자에서 사용할 수 있는 소프트웨어 기반의 계층 2 이더넷 네트워크 스위치입니다. 스위치에는 프로그램 방식으로 관리되며 확장 가능한 기능이 포함되어 있어 가상 시스템을 가상 네트워크와 실제 네트워크에 모두 연결할 수 있습니다. 또한 Hyper-V 가상 스위치를 사용하여 보안, 격리 및 서비스 수준의 정책을 적용할 수 있습니다. </p>
                     </div>
                 </div>
@@ -320,7 +320,7 @@ ms.locfileid: "59869354"
                                         </div>
                                         <div class="cardText">
                                         <h3><a href="technologies/ipam/ipam-top.md">IP 주소 관리 &#40;IPAM&#41;</a><hr /></h3>
-                                        <p>IP 주소 관리 \(IPAM\)는 엔드투엔드 계획, 배포, 사용 하도록 설정 하는 도구의 통합된 모음인 관리 및 풍부한 사용자 환경을 통해 IP 주소 인프라의 모니터링합니다. IPAM IP 주소 인프라 서버 및 도메인 이름 시스템에 자동으로 검색 \(DNS\) 네트워크 서버에 중앙 인터페이스에서이 관리할 수 있습니다. </p>
+                                        <p>IPAM IP 주소 관리 ()은 통합 된 종단 간 계획, 배포, 관리 및 풍부한 사용자 환경을 통해 IP 주소 인프라의 모니터링을 사용 하도록 설정 하는 도구 모음인 합니다. IPAM은 네트워크상의 IP 주소 인프라 서버 및 DNS(도메인 이름 시스템) 서버를 자동으로 검색하여 중앙 인터페이스에서 이들 서버를 관리할 수 있습니다. </p>
                     </div>
                 </div>
             </div>
@@ -338,7 +338,7 @@ ms.locfileid: "59869354"
                                         </div>
                                         <div class="cardText">
                                         <h3><a href="technologies/Network-Load-Balancing.md">네트워크 부하 분산</a><hr /></h3>
-                                        <p>네트워크 로드 균형 조정 \(NLB\) TCP/IP 네트워킹 프로토콜을 사용 하 여 여러 서버로 트래픽을 분산 합니다. NLB 보장을 상태 비저장 SDN 아닌 배포에 대 한 인터넷 정보 서비스를 실행 하는 웹 서버 등의 응용 프로그램 \(IIS\), 부하가 증가 따라 서버를 추가 하 여 확장 가능한 됩니다.</p>
+                                        <p>네트워크 부하 분산 (NLB) TCP/IP 네트워킹 프로토콜을 사용 하 여 여러 서버로 트래픽을 분산 합니다. SDN 아닌 배포에 대 한 NLB 부하가 증가 따라 서버를 추가 하 여 인터넷 정보 서비스 (IIS)를 실행 하는 웹 서버 같은 상태 비저장 응용 프로그램을 확장 가능한 지 확인 합니다.</p>
                     </div>
                 </div>
             </div>
@@ -398,9 +398,9 @@ ms.locfileid: "59869354"
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                        <h3><a href="technologies/netsh/netsh.md">네트워크 셸 (Netsh)</a><hr /></h3>
+                                        <h3><a href="technologies/netsh/netsh.md">Netsh(네트워크 셸)</a><hr /></h3>
                                         <p>
-네트워크 셸을 사용할 수 있습니다 \(netsh\) 네트워킹 Windows Server 2016 및 Windows 10에서 네트워킹 기술을 관리 하기 위한 유틸리티입니다.</p>
+Windows Server 2016 및 Windows 10에서 네트워킹 기술을 관리 하기 위한 네트워크 셸 (netsh) 유틸리티 네트워킹을 사용할 수 있습니다.</p>
                     </div>
                 </div>
             </div>
@@ -419,7 +419,7 @@ ms.locfileid: "59869354"
                                         <div class="cardText">
                                         <h3><a href="technologies/network-subsystem/net-sub-performance-top.md">네트워크 하위 시스템 성능 튜닝</a><hr /></h3>
                                         <p>
-이 항목에서는 서버 작업에 대 한 올바른 네트워크 어댑터를 선택 하는 방법에 대 한 네트워크 인터페이스를 순서에 네트워크 관련 성능 카운터 및 성능 튜닝 네트워크 어댑터 및 관련된 네트워킹 기술와 같은 수신측 배율 \(RSS\), 수신 쪽 병합 \(RSC\), 등입니다.</p>
+이 항목에서는 서버 작업에 대 한 올바른 네트워크 어댑터를 선택 하는 방법에 대 한 네트워크 인터페이스를 순서에 네트워크 관련 성능 카운터 및 성능 튜닝 네트워크 어댑터 및 관련된 네트워킹 기술와 같은 수신 RSS (수신측 배율), 수신 쪽 RSC (), 등입니다.</p>
                     </div>
                 </div>
             </div>
@@ -474,7 +474,7 @@ NIC 팀 하나 이상의 소프트웨어 기반 가상 네트워크 어댑터에
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                        <h3><a href="technologies/wins/wins-top.md">Windows 인터넷 이름 서비스 WINS)</a><hr /></h3>
+                                        <h3><a href="technologies/wins/wins-top.md">WINS(Windows Internet Name Service)</a><hr /></h3>
                                         <p>
 Windows 인터넷 이름 서비스(WINS)는 IP 주소에 NetBIOS 이름을 매핑하는 기존의 컴퓨터 이름 등록 및 확인 서비스입니다. WINS를 사용하기 보다는 DNS를 사용하는 것이 좋습니다.</p>
                     </div>
@@ -495,7 +495,7 @@ Windows 인터넷 이름 서비스(WINS)는 IP 주소에 NetBIOS 이름을 매�
                                         <div class="cardText">
                                         <h3><a href="../remote/remote-access/remote-access.md">원격 액세스</a><hr /></h3>
                                         <p>
-가상 사설망 및 DirectAccess와 같은 원격 액세스 기술을 사용할 수 있습니다 \(VPN\) 내부 네트워크 리소스에 대 한 연결을 사용 하 여 원격 작업자를 제공 합니다. 또한 원격 액세스를 사용 하 여 로컬 영역 네트워크에 대 한 \(LAN\) 라우팅, 및 웹 응용 프로그램 프록시에 대 한 합니다. 웹 응용 프로그램 프록시는 회사 네트워크 내부의 웹 응용 프로그램에 역방향 프록시 기능을 제공하여 모든 장치의 사용자가 회사 네트워크 권역을 벗어나서도 해당 네트워크에 액세스할 수 있도록 합니다.</p>
+내부 네트워크 리소스에 대 한 연결을 사용 하 여 원격 작업자를 제공 하는 DirectAccess와 가상 사설망 (VPN)와 같은 원격 액세스 기술을 사용할 수 있습니다. 또한 웹 응용 프로그램 프록시 및 로컬 영역 네트워크 (LAN) 라우팅에 대 한 원격 액세스를 사용할 수 있습니다. 웹 응용 프로그램 프록시는 회사 네트워크 내부의 웹 응용 프로그램에 역방향 프록시 기능을 제공하여 모든 장치의 사용자가 회사 네트워크 권역을 벗어나서도 해당 네트워크에 액세스할 수 있도록 합니다.</p>
 
                                         <p>원격 액세스 서버 역할의 역할 서비스는 웹 응용 프로그램 프록시에 대 한 자세한 내용은 참조 하세요. <a href="https://docs.microsoft.com/windows-server/remote/remote-access/web-application-proxy/web-application-proxy-windows-server">Windows Server 2016에서 웹 응용 프로그램 프록시</a></p>
                     </div>
@@ -518,7 +518,7 @@ Windows 인터넷 이름 서비스(WINS)는 IP 주소에 NetBIOS 이름을 매�
                                         <p>
 Windows 컨테이너 네트워킹을 사용하면 업계 표준 도구 및 워크플로를 통해 Windows 10 및 Windows Server 호스트에서 컨테이너 끝점을 연결하도록 네트워크를 생성 및 관리할 수 있습니다. Windows 컨테이너 네트워크는 사설 플랫 L2와 라우팅된 L3를 포함하여 여러 토폴로지를 지원합니다.</p>
 
-                                        <p>또한 지원 되 고 만들 수 있는 로컬 호스트에서 Windows 호스트 네트워킹 서비스와 통신 하는 플러그인을 통해 Docker, Kubernetes 또는 Windows PowerShell을 사용 하 여 오버레이 \(HNS\)합니다. 만들고 다중을 관리할 수 있습니다\-각 노드의 HNS에 로컬 에이전트를 통해 통신 하 여 더 높은 수준의 오케스트레이션 시스템을 통해 클러스터 네트워크 노드.</p>
+                                        <p>만들 수 있는 로컬 호스트에서 사용 하 여는 Windows 호스트 네트워킹 서비스 (HNS) 통신 하는 플러그인을 통해 Docker, Kubernetes 또는 Windows PowerShell을 사용 하 여 오버레이도 지원 합니다. 만들기 및 각 노드의 HNS에 로컬 에이전트를 통해 통신 하 여 더 높은 수준의 오케스트레이션 시스템을 통해 다중 노드 클러스터 네트워크를 관리할 수 있습니다.</p>
                     </div>
                 </div>
             </div>
@@ -535,11 +535,11 @@ Windows 컨테이너 네트워킹을 사용하면 업계 표준 도구 및 워�
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                        <h3><a href="../remote/remote-access/vpn/vpn-top.md">가상 사설망 (VPN)</a><hr /></h3>
+                                        <h3><a href="../remote/remote-access/vpn/vpn-top.md">VPN(가상 사설망)</a><hr /></h3>
                                         <p>
 DirectAccess 및 VPN은 원격 액세스 서버 역할의 역할 서비스입니다.</p>
 
-                                        <p>원격 액세스 VPN 서버를 설치할 때 사용할 수는 가상 사설망 \(VPN\) 정보를 유지 하면서 조직 네트워크에 대 한 연결을 사용 하 여 원격 직원-인터넷을 통해 제공 암호화 된 연결을 사용 하 여 개인 정보 취급 합니다.</p>
+                                        <p>원격 액세스 VPN 서버를 설치할 때 가상 사설망 (VPN) 암호화 된 연결을 사용 하 여 개인 정보 보호를 유지 하면서 조직 네트워크에 인터넷에서 연결을 사용 하 여 원격 직원을 제공 하 여 .</p>
 
                                        <p> Windows Server 원격 액세스 VPN과 Windows 10 클라이언트 컴퓨터에서는 Always On VPN을 배포할 수 있습니다. Always On VPN을 사용하면 항시 연결되는 원격 VPN 클라이언트를 관리할 수 있으며, VPN에서 회사 네트워크로의 연결을 수동으로 설정 및 해제할 필요가 없다는 점에서 원격 작업자에게 편의를 제공할 수 있습니다.</p>
 
@@ -557,4 +557,4 @@ DirectAccess 및 VPN은 원격 액세스 서버 역할의 역할 서비스입니
 
 - Windows Server 2012 및 Windows Server 2012 R2 [네트워킹 개요](https://technet.microsoft.com/library/hh831357.aspx)
 - Windows Server 2008 및 Windows Server 2008 R2 [네트워킹](https://technet.microsoft.com/library/cc753940)
-- Windows Server 2003 [Windows Server 2003/2003 R2에서 사용 중지된 콘텐츠 ](https://www.microsoft.com/download/details.aspx?id=53314)
+- Windows Server 2003 [Windows Server 2003 R2 사용 되지 않는 콘텐츠](https://www.microsoft.com/download/details.aspx?id=53314)

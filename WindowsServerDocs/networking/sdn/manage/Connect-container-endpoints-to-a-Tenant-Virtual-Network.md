@@ -13,12 +13,12 @@ ms.assetid: f7af1eb6-d035-4f74-a25b-d4b7e4ea9329
 ms.author: pashort
 author: jmesser81
 ms.date: 08/24/2018
-ms.openlocfilehash: 1968a4db9231459fe5858d9a0f3ba5e8f317ed1b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: cb9c7157ffb07233e41e1c933f6775f1cd0766a9
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59872744"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446357"
 ---
 # <a name="connect-container-endpoints-to-a-tenant-virtual-network"></a>테넌트 가상 네트워크에 컨테이너 끝점 연결
 
@@ -34,9 +34,11 @@ ms.locfileid: "59872744"
 
 차이 *l2bridge* 하 고 *l2tunnel* 드라이버:
 
-| l2bridge | l2tunnel |
-| --- | --- |
-|에 있는 컨테이너 끝점: <ul><li>동일한 컨테이너 가상 머신 호스트 및 동일한 서브넷에는 모든 네트워크 트래픽은 Hyper-v 가상 스위치에서 브리지입니다. </li><li>다른 컨테이너 호스트 Vm 또는 서로 다른 서브넷에 실제 Hyper-v 호스트에 전달 하는 트래픽을 가집니다. </li></ul>물리적 호스트에 동일한 호스트와 동일한 서브넷 컨테이너 간에 네트워크 트래픽을 전달 되지 않습니다 이후 네트워크 정책이 적용 가져오기지 않습니다. 네트워크 정책에만 호스트 간 또는 서브넷 간 컨테이너 네트워크 트래픽에 적용 됩니다. | *모든* 두 컨테이너 끝점 간에 네트워크 트래픽을 호스트 또는 서브넷에 관계 없이 물리적 Hyper-v 호스트에 전달 됩니다. 네트워크 정책 서브넷 간 및 호스트 간 네트워크 트래픽 모두에 적용 됩니다. |
+
+|                                                                                                                                                                                                                                                                            l2bridge                                                                                                                                                                                                                                                                            |                                                                                                 l2tunnel                                                                                                  |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 에 있는 컨테이너 끝점: <ul><li>동일한 컨테이너 가상 머신 호스트 및 동일한 서브넷에는 모든 네트워크 트래픽은 Hyper-v 가상 스위치에서 브리지입니다. </li><li>다른 컨테이너 호스트 Vm 또는 서로 다른 서브넷에 실제 Hyper-v 호스트에 전달 하는 트래픽을 가집니다. </li></ul>물리적 호스트에 동일한 호스트와 동일한 서브넷 컨테이너 간에 네트워크 트래픽을 전달 되지 않습니다 이후 네트워크 정책이 적용 가져오기지 않습니다. 네트워크 정책에만 호스트 간 또는 서브넷 간 컨테이너 네트워크 트래픽에 적용 됩니다. | *모든* 두 컨테이너 끝점 간에 네트워크 트래픽을 호스트 또는 서브넷에 관계 없이 물리적 Hyper-v 호스트에 전달 됩니다. 네트워크 정책 서브넷 간 및 호스트 간 네트워크 트래픽 모두에 적용 됩니다. |
+
 ---
 
 >[!NOTE]
@@ -60,10 +62,10 @@ ms.locfileid: "59872744"
 ## <a name="workflow"></a>워크플로
 
 [1. 네트워크 컨트롤러 (Hyper-v 호스트)를 통해 기존 VM NIC 리소스에 여러 IP 구성 추가](#1-add-multiple-ip-configurations)
-[2입니다. 컨테이너 끝점 (Hyper-v 호스트)에 대 한 CA IP 주소를 할당 하려면 호스트에서 네트워크 프록시를 사용 ](#2-enable-the-network-proxy) 
- [3입니다. 사설 클라우드 (컨테이너 호스트 VM) 컨테이너 끝점 CA IP 주소를 할당 하는 플러그 인 설치 ](#3-install-the-private-cloud-plug-in) 
- [4입니다. 만들기는 *l2bridge* 하거나 *l2tunnel* docker (컨테이너 호스트 VM)를 사용 하 여 네트워크 ](#4-create-an-l2bridge-container-network)
- 
+[2입니다. 컨테이너 끝점 (Hyper-v 호스트)에 대 한 CA IP 주소를 할당 하려면 호스트에서 네트워크 프록시를 사용](#2-enable-the-network-proxy)
+[3입니다. 사설 클라우드 (컨테이너 호스트 VM) 컨테이너 끝점 CA IP 주소를 할당 하는 플러그 인 설치](#3-install-the-private-cloud-plug-in)
+[4입니다. 만들기는 *l2bridge* 하거나 *l2tunnel* docker (컨테이너 호스트 VM)를 사용 하 여 네트워크](#4-create-an-l2bridge-container-network)
+
 >[!NOTE]
 >System Center Virtual Machine Manager를 통해 만든 VM NIC 리소스에 대해 여러 IP 구성이 지원 되지 않습니다. 것이 좋습니다 이러한 배포 유형에 대 한 네트워크 컨트롤러 PowerShell을 사용 하 여 대역 외에서 VM NIC 리소스를 만들어야 합니다.
 
@@ -101,10 +103,10 @@ foreach ($i in 1..10)
         $resourceid += "0$i"
         $ipstr = "192.168.1.10$i"
     }
-    
+
     $newipconfig.ResourceId = $resourceid
     $props.PrivateIPAddress = $ipstr    
-    
+
     $props.PrivateIPAllocationMethod = "Static"
     $props.Subnet = new-object Microsoft.Windows.NetworkController.Subnet
     $props.Subnet.ResourceRef = $vmsubnet.ResourceRef

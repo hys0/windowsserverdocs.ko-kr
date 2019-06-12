@@ -9,16 +9,16 @@ ms.topic: article
 author: JasonGerend
 ms.date: 01/18/2019
 description: Microsoft Azure를 사용 하 여-클라우드에서 Windows Server 장애 조치 클러스터에 대 한 미러링 모니터 서버를 호스트 하는 방법을 클라우드 감시 배포 방법 즉, 합니다.
-ms.openlocfilehash: f7e1c84e54f08044a772f06e591588c1add33026
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 64fd39a37c63d24f8fc0eb4f45c8a7e9f6089013
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59857984"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66439787"
 ---
 # <a name="deploy-a-cloud-witness-for-a-failover-cluster"></a>장애 조치(failover) 클러스터용 클라우드 감시 배포
 
-> 적용 대상: Windows Server 2019, Windows Server 2016, Windows Server (반기 채널)
+> 적용 대상: Windows Server 2019, Windows Server 2016
 
 클라우드 감시는 클러스터 쿼럼의 투표 수 있도록 Microsoft Azure를 사용 하는 장애 조치 클러스터 쿼럼 감시의 형식입니다. 이 항목에서는 클라우드 감시 기능, 시나리오, 지원 및 장애 조치 클러스터에 대 한 클라우드 감시를 구성 하는 방법에 대 한 지침 개요를 제공 합니다.
 
@@ -134,14 +134,14 @@ Azure Storage 계정을 만들고 관리 하는 방법에 대 한 자세한 내�
     **그림 8입니다. 쿼럼 감시 선택**  
 
 5. 에 **클라우드 감시 구성** 페이지에서 다음 정보를 입력 합니다.  
-    1. (필수 매개 변수) Azure Storage 계정 이름입니다.  
-    2. (필수 매개 변수) 저장소 계정에 해당 하는 액세스 키입니다.  
-        1. 를 처음 만들 때 사용할 기본 액세스 키 (그림 5 참조)  
-        2. 보조 액세스 키를 사용 하 여 기본 액세스 키를 회전 하는 경우 (그림 5 참조)  
-    3. (선택적 매개 변수) 다른 Azure 서비스 끝점 (예: 중국의 Microsoft Azure 서비스)을 사용 하려는 경우에 서버 엔드포인트를 업데이트 합니다.  
+   1. (필수 매개 변수) Azure Storage 계정 이름입니다.  
+   2. (필수 매개 변수) 저장소 계정에 해당 하는 액세스 키입니다.  
+       1. 를 처음 만들 때 사용할 기본 액세스 키 (그림 5 참조)  
+       2. 보조 액세스 키를 사용 하 여 기본 액세스 키를 회전 하는 경우 (그림 5 참조)  
+   3. (선택적 매개 변수) 다른 Azure 서비스 끝점 (예: 중국의 Microsoft Azure 서비스)을 사용 하려는 경우에 서버 엔드포인트를 업데이트 합니다.  
 
-    ![클러스터 쿼럼 마법사에서 클라우드 감시 구성 창의 스냅숏](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_10.png)  
-    **그림 9: 클라우드 감시를 구성 합니다.**
+      ![클러스터 쿼럼 마법사에서 클라우드 감시 구성 창의 스냅숏](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_10.png)  
+      **그림 9: 클라우드 감시를 구성 합니다.**
 
 6. 클라우드 미러링 모니터의 구성을 성공적으로으로 볼 수 있습니다 새로 만든된 감시 리소스 장애 조치 클러스터 관리자 스냅인 (그림 10 참조).
 

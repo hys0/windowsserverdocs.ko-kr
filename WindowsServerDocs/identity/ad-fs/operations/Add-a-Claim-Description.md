@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 454d261aa520778a6129ac9809f53894937b036a
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 1023ca7da02d2a1f6af42f68892dc4c5c8f1a2bf
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66190138"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66444373"
 ---
 # <a name="add-a-claim-description"></a>클레임 설명 추가
 
@@ -31,27 +31,29 @@ ms.locfileid: "66190138"
 
 1. 서버 관리자에서 클릭 **도구**, 를 선택한 다음 **AD FS 관리**합니다. 
 
-2.  확장 **서비스** 에서 마우스 오른쪽 단추로 클릭 하 고 **클레임 설명 추가**합니다.
-![클레임 설명 추가](media\Add-a-Claim-Description\claimdesc1.png)
+2. 확장 **서비스** 에서 마우스 오른쪽 단추로 클릭 하 고 **클레임 설명 추가**합니다.
+   ![클레임 설명 추가](media/Add-a-Claim-Description/claimdesc1.png)
 
-3.  추가 클레임 설명 대화 상자의 **표시 이름**, 그룹 또는이 클레임에 대 한 역할을 식별 하는 고유한 이름을 입력 합니다.
+3. 추가 클레임 설명 대화 상자의 **표시 이름**, 그룹 또는이 클레임에 대 한 역할을 식별 하는 고유한 이름을 입력 합니다.
 
-4.  추가 **짧은 이름을**합니다.
+4. 추가 **짧은 이름을**합니다.
 
-5.  **클레임 식별자**, 연결 된 그룹 또는 역할 사용 하는 클레임의 URI를 입력 합니다.
+5. **클레임 식별자**, 연결 된 그룹 또는 역할 사용 하는 클레임의 URI를 입력 합니다.
 
-6.  아래에서 **설명**, 를 가장 잘이 클레임의 용도 설명 하는 텍스트를 입력 합니다.
+6. 아래에서 **설명**, 를 가장 잘이 클레임의 용도 설명 하는 텍스트를 입력 합니다.
 
-7.  조직의 요구에 따라 페더레이션 메타 데이터를이 클레임을 게시할 수 적절 하 게 다음 확인란 중 하나를 선택 합니다.
+7. 조직의 요구에 따라 페더레이션 메타 데이터를이 클레임을 게시할 수 적절 하 게 다음 확인란 중 하나를 선택 합니다.
 
 
-    - 이 클레임을이 서버에이 클레임을 수락할 수 있음을 인식 하는 파트너를 게시 하려면 **이 클레임을이 페더레이션 서비스에서 수락할 수 있는 클레임 유형으로 페더레이션 메타 데이터에 게시**합니다.
-    - 이 클레임을이 서버가이 클레임을 발급할 수 인식 파트너를 게시 하려면 **이 클레임을이 페더레이션 서비스에 보낼 수 있는 클레임 유형으로 페더레이션 메타 데이터에 게시**합니다.
+~~~
+- To publish this claim to make partners aware that this server can accept this claim, click **Publish this claim in federation metadata as a claim type that this Federation Service can accept**.
+- To publish this claim to make partners aware that this server can issue this claim, click **Publish this claim in federation metadata as a claim type that this Federation Service can send**.
+~~~
 
-8.  **확인**을 클릭합니다.
+8. **확인**을 클릭합니다.
 
-![클레임 설명 추가](media\Add-a-Claim-Description\claimdesc2.png)
+![클레임 설명 추가](media/Add-a-Claim-Description/claimdesc2.png)
 
-  
+
 ## <a name="see-also"></a>관련 항목  
 [AD FS 작업](../../ad-fs/AD-FS-2016-Operations.md) 

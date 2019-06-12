@@ -8,12 +8,12 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 215764f48fc8cfa2b28f4b5f6ca7dfeeb53b9cce
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3647c9708ad68dec0ac13c85fced2b12150ccf60
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59851274"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447192"
 ---
 >적용 대상: Windows Server, Windows Server 2016, Windows Server (반기 채널) 2019
 
@@ -57,5 +57,5 @@ TPM 모드의 경우 패브릭 관리자는 세 가지 종류의 호스트 정�
 
 ## <a name="next-step"></a>다음 단계
 
->[!div class="nextstepaction"]
-[증명 확인](guarded-fabric-confirm-hosts-can-attest-successfully.md)
+> [!div class="nextstepaction"]
+> [증명 확인](guarded-fabric-confirm-hosts-can-attest-successfully.md)

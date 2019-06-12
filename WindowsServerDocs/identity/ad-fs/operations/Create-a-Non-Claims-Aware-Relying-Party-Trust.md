@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: cdd0b32b50f676007a6cc922bc15b95bb61323be
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: e94b07d7fa654732526d0b43daadc9ad0ad4f3a8
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66189667"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66444934"
 ---
 # <a name="create-a-non-claims-aware-relying-party-trust"></a>비 클레임 인식 신뢰 당사자 트러스트 만들기
 
@@ -27,7 +27,7 @@ AD FS 관리 스냅인에서\-비에서\-클레임\-인식 신뢰 당사자 트�
   
 로컬 컴퓨터에서 이 절차를 완료하기 위해서는 최소한 **관리자** 또는 이와 동등한 자격이 있어야 합니다.  적절 한 계정을 사용 하는 방법에 대 한 세부 정보를 검토 하 고 그룹 구성원 자격 [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477)합니다.   
   
-##<a name="to-create-a-non-claims-aware-relying-party-trust-manually"></a>비 클레임 인식 신뢰 당사자 트러스트를 수동으로 만들려면 
+## <a name="to-create-a-non-claims-aware-relying-party-trust-manually"></a>비 클레임 인식 신뢰 당사자 트러스트를 수동으로 만들려면 
 1. 서버 관리자에서 클릭 **도구**, 를 선택한 다음 **AD FS 관리**합니다.  
   
 2.  아래에서 **작업**, 클릭 **신뢰 당사자 트러스트 추가**합니다.  

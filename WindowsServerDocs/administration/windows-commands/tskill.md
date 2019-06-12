@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 59958481a7c832aca7bc25d7d4d3ebbf4e8ef80c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b582334d7b79b2badbb86818be1093b6a5f55080
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59835044"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66440808"
 ---
 # <a name="tskill"></a>tskill
 
@@ -36,6 +36,7 @@ tskill {<ProcessID> | <ProcessName>} [/server:<ServerName>] [/id:<SessionID> | /
 ```
 
 ## <a name="parameters"></a>매개 변수
+
 |매개 변수|설명|
 |-------|--------|
 |\<ProcessID>|종료 하려는 프로세스의 ID를 지정 합니다.|
@@ -47,19 +48,19 @@ tskill {<ProcessID> | <ProcessName>} [/server:<ServerName>] [/id:<SessionID> | /
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
 ## <a name="remarks"></a>설명
--   사용할 수 있습니다 **tskill** 관리자가 아닌 사용자에 속하는 프로세스만 종료 합니다. 관리자 권한을 갖기 때문에 모든 **tskill** 함수 및 다른 사용자 세션에서 실행 중인 프로세스를 종료할 수 있습니다.
--   세션에서 실행 되는 모든 프로세스를 종료 하는 경우 세션이 종료 됩니다.
--   사용 하는 경우는 *ProcessName* 및 **/server: * * * ServerName* 매개 변수를 하나 지정 해야 합니다 **/id: * * * SessionID* 또는 **/a** 매개 변수입니다.
+- 사용할 수 있습니다 **tskill** 관리자가 아닌 사용자에 속하는 프로세스만 종료 합니다. 관리자 권한을 갖기 때문에 모든 **tskill** 함수 및 다른 사용자 세션에서 실행 중인 프로세스를 종료할 수 있습니다.
+- 세션에서 실행 되는 모든 프로세스를 종료 하는 경우 세션이 종료 됩니다.
+- 사용 하는 경우는 *ProcessName* 하며 **/server:** <em>ServerName</em> 매개 변수를 하나 지정 해야 합니다 **/id:**  <em>SessionID</em> 또는 **/a** 매개 변수입니다.
 
 ## <a name="BKMK_examples"></a>예제
--   6543 프로세스를 종료 하려면 다음을 입력 합니다.
-    ```
-    tskill 6543
-    ```
--   탐색기"프로세스" 5 세션에서 실행을 종료 하려면 다음을 입력 합니다.
-    ```
-    tskill explorer /id:5
-    ```
-#### <a name="additional-references"></a>추가 참조
-[명령줄 구문 키](command-line-syntax-key.md)
-[원격 데스크톱 서비스 & #40; 터미널 서비스 및 #41; 명령 참조](remote-desktop-services-terminal-services-command-reference.md)
+- 6543 프로세스를 종료 하려면 다음을 입력 합니다.
+  ```
+  tskill 6543
+  ```
+- 탐색기"프로세스" 5 세션에서 실행을 종료 하려면 다음을 입력 합니다.
+  ```
+  tskill explorer /id:5
+  ```
+  #### <a name="additional-references"></a>추가 참조
+  [명령줄 구문 키](command-line-syntax-key.md)
+  [원격 데스크톱 서비스 & #40; 터미널 서비스 및 #41; 명령 참조](remote-desktop-services-terminal-services-command-reference.md)

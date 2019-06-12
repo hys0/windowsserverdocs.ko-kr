@@ -9,12 +9,12 @@ ms.date: 08/07/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: d16447425b86fef979732c4785db27d1542116b8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d3b5f3eee338128fb424c28e7280bb7f543c9f58
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59840174"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66443005"
 ---
 # <a name="introduction-to-active-directory-administrative-center-enhancements-level-100"></a>Introduction to Active Directory Administrative Center Enhancements (Level 100)
 
@@ -57,8 +57,8 @@ Active Directory 휴지통에 Windows Server를 사용 하도록 설정 하려�
 
 - [1단계: 포리스트 기능 수준 올리기](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_raise_ffl)
 - [2단계: 휴지통 사용](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_enable_recycle_bin)
-- [3 단계: 테스트 사용자, 그룹 및 조직 구성 단위 만들기](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_test_env)
-- [4 단계: 삭제 된 개체 복원](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_restore_del_obj)
+- [3단계: 테스트 사용자, 그룹 및 조직 구성 단위 만들기](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_test_env)
+- [4단계: 삭제 된 개체 복원](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_restore_del_obj)
 
 > [!NOTE]
 > 다음 단계를 수행하려면 Enterprise Admins 그룹의 구성원이거나 이와 동등한 권한이 있어야 합니다.
@@ -75,7 +75,7 @@ Active Directory 휴지통에 Windows Server를 사용 하도록 설정 하려�
 
 3. 왼쪽 탐색 창에서 대상 도메인을 클릭하고 **작업** 창에서 **포리스트 기능 수준 올리기**를 클릭합니다. 이상의 포리스트 기능 수준 선택 Windows Server 2008 R2 이상 클릭 하 고 **확인**합니다.
 
-![AD 관리 센터 소개 (영문)](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)Windows PowerShell 해당 명령을 * * *
+![AD 관리 센터 소개](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***
 
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.
 
@@ -99,7 +99,7 @@ Set-ADForestMode -Identity contoso.com -ForestMode Windows2008R2Forest -Confirm:
 
 4. F5 키를 눌러 ADAC를 새로 고칩니다.
 
-![AD 관리 센터 소개 (영문)](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)Windows PowerShell 해당 명령을 * * *
+![AD 관리 센터 소개](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***
 
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.
 
@@ -142,7 +142,7 @@ Enable-ADOptionalFeature -Identity 'CN=Recycle Bin Feature,CN=Optional Features,
 5. **group1**을 클릭하고 **작업** 창 아래에서 **속성**을 클릭합니다.
 6. **구성원**을 클릭하고 **추가**를 클릭한 후 **test1;test2**를 입력하고 **확인**을 클릭합니다.
 
-![AD 관리 센터 소개 (영문)](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)Windows PowerShell 해당 명령을 * * *
+![AD 관리 센터 소개](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***
 
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.
 
@@ -159,7 +159,7 @@ Add-ADGroupMember -Identity group1 -Member test1
 
    - **NameOU1**
 
-![AD 관리 센터 소개 (영문)](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)Windows PowerShell 해당 명령을 * * *
+![AD 관리 센터 소개](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***
 
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.
 
@@ -167,7 +167,6 @@ Add-ADGroupMember -Identity group1 -Member test1
 1..2 | ForEach-Object {New-ADUser -SamAccountName test$_ -Name "test$_" -Path "DC=fabrikam,DC=com" -AccountPassword (ConvertTo-SecureString -AsPlainText "p@ssword1" -Force) -Enabled $true}
 New-ADGroup -Name "group1" -SamAccountName group1 -GroupCategory Security -GroupScope Global -DisplayName "group1"
 New-ADOrganizationalUnit -Name OU1 -Path "DC=fabrikam,DC=com"
-
 ```
 
 ### <a name="bkmk_restore_del_obj"></a>4 단계: 삭제 된 개체 복원
@@ -182,7 +181,7 @@ New-ADOrganizationalUnit -Name OU1 -Path "DC=fabrikam,DC=com"
 
 3. 사용자 **test1** 및 **test2**를 선택하고 **작업** 창에서 **삭제** 를 클릭한 후 **예** 를 클릭하여 삭제를 확인합니다.
 
-    ![AD 관리 센터 소개 (영문)](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)Windows PowerShell 해당 명령을 * * *
+    ![AD 관리 센터 소개](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***
 
     다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.
 
@@ -199,7 +198,7 @@ New-ADOrganizationalUnit -Name OU1 -Path "DC=fabrikam,DC=com"
 
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.
 
-![AD 관리 센터 소개 (영문)](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)Windows PowerShell 해당 명령을 * * *
+![AD 관리 센터 소개](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***
 
 ```powershell
 Get-ADObject -Filter 'Name -Like "*test*"' -IncludeDeletedObjects | Restore-ADObject
@@ -219,7 +218,7 @@ Get-ADObject -Filter 'Name -Like "*test*"' -IncludeDeletedObjects | Restore-ADOb
 
 6. 개체가 **OU1**으로 복원되었는지 확인하려면 대상 도메인으로 이동한 후 **OU1**을 두 번 클릭하고 사용자 계정이 표시되는지 확인합니다.
 
-![AD 관리 센터 소개 (영문)](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)Windows PowerShell 해당 명령을 * * *
+![AD 관리 센터 소개](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***
 
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.
 
@@ -254,10 +253,10 @@ Windows Server 2012에서 세분화 된 암호 정책을 사용 하려는 경우
 
 - [1단계: 도메인 기능 수준 올리기](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_raise_dfl)
 - [2단계: 테스트 사용자, 그룹 및 조직 구성 단위 만들기](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk2_test_fgpp)
-- [3 단계: 새 세분화 된 암호 정책 만들기](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_fgpp)
-- [4 단계: 사용자에 대 한 정책 결과 집합을 보려면](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_view_resultant_fgpp)
+- [3단계: 새 세분화 된 암호 정책 만들기](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_fgpp)
+- [4단계: 사용자에 대 한 정책 결과 집합을 보려면](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_view_resultant_fgpp)
 - [5단계: 세분화 된 암호 정책 편집](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_edit_fgpp)
-- [6 단계: 세분화 된 암호 정책 삭제](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_delete_fgpp)
+- [6단계: 세분화 된 암호 정책 삭제](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_delete_fgpp)
 
 > [!NOTE]
 > 다음 단계를 수행하려면 Domain Admins 그룹의 구성원이거나 이와 동등한 권한이 있어야 합니다.
@@ -274,7 +273,7 @@ Windows Server 2012에서 세분화 된 암호 정책을 사용 하려는 경우
 
 3. 왼쪽 탐색 창에서 대상 도메인을 클릭하고 **작업** 창에서 **도메인 기능 수준 올리기**를 클릭합니다. 이상의 포리스트 기능 수준 선택 하 고 클릭 한 다음 Windows Server 2008 이상 **확인**합니다.
 
-![AD 관리 센터 소개 (영문)](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)Windows PowerShell 해당 명령을 * * *
+![AD 관리 센터 소개](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***
 
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.
 
@@ -284,7 +283,7 @@ Set-ADDomainMode -Identity contoso.com -DomainMode 3
 
 #### <a name="bkmk2_test_fgpp"></a>2 단계: 테스트 사용자, 그룹 및 조직 구성 단위 만들기
 
-테스트 사용자를 만들고이 단계에 대 한 필요성을 그룹화 하려면 여기에 있는 절차를 수행 합니다. [3 단계: 테스트 사용자, 그룹 및 조직 구성 단위 만들기](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_test_env) (필요가 없습니다를 세분화 된 암호 정책을 설명 하려면 OU를 만드는).
+테스트 사용자를 만들고이 단계에 대 한 필요성을 그룹화 하려면 여기에 있는 절차를 수행 합니다. [3단계: 테스트 사용자, 그룹 및 조직 구성 단위 만들기](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_test_env) (필요가 없습니다를 세분화 된 암호 정책을 설명 하려면 OU를 만드는).
 
 #### <a name="bkmk_create_fgpp"></a>3 단계: 새 세분화 된 암호 정책 만들기
 
@@ -304,13 +303,13 @@ Set-ADDomainMode -Identity contoso.com -DomainMode 3
 
     ![AD 관리 센터 소개 (영문)](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/ADDS_ADACNewFGPP.gif)
 
-5. 아래에서 **직접에 적용 됩니다.**, 클릭 **추가**, 형식 **group1**, 를 클릭 하 고 **확인**합니다.
+5. 아래에서 **직접에 적용 됩니다.** , 클릭 **추가**, 형식 **group1**, 를 클릭 하 고 **확인**합니다.
 
     그러면 테스트 환경에 대해 만든 글로벌 그룹의 구성원과 암호 정책 개체가 연결됩니다.
 
 6. **확인** 을 클릭하여 만든 세분화된 암호 정책을 제출합니다.
 
-![AD 관리 센터 소개 (영문)](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)Windows PowerShell 해당 명령을 * * *
+![AD 관리 센터 소개](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***
 
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.
 
@@ -335,7 +334,7 @@ Add-ADFineGrainedPasswordPolicySubject TestPswd -Subjects group1
 
 5. 암호 설정 정책을 확인한 후 **취소**를 클릭합니다.
 
-![AD 관리 센터 소개 (영문)](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)Windows PowerShell 해당 명령을 * * *
+![AD 관리 센터 소개](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***
 
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.
 
@@ -361,7 +360,7 @@ Get-ADUserResultantPasswordPolicy test1
 
 6. **확인**을 클릭합니다.
 
-![AD 관리 센터 소개 (영문)](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)Windows PowerShell 해당 명령을 * * *
+![AD 관리 센터 소개](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***
 
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.
 
@@ -387,7 +386,7 @@ Set-ADFineGrainedPasswordPolicy TestPswd -PasswordHistoryCount:"30"
 
 7. 확인 대화 상자에서 **확인**을 클릭합니다.
 
-![AD 관리 센터 소개 (영문)](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)Windows PowerShell 해당 명령을 * * *
+![AD 관리 센터 소개](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***
 
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.
 

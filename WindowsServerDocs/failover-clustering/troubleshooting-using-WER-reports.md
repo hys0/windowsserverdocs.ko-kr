@@ -9,16 +9,16 @@ ms.topic: article
 author: vpetter
 ms.date: 03/27/2018
 ms.localizationpriority: ''
-ms.openlocfilehash: 55167d0f4c838af5f6f79432ede2dd45eac848a5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6e301b8c46041f107739bbcdb09c2eb0c8252ebb
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59853864"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66452897"
 ---
 # <a name="troubleshooting-a-failover-cluster-using-windows-error-reporting"></a>Windows 오류 보고를 사용 하 여 장애 조치 클러스터 문제 해결 
 
-> 적용 대상: Windows Server 2016, Windows Server
+> 적용 대상: Windows Server 2019, Windows Server 2016, Windows Server
 
 Windows 오류 보고 (WER)는 고급 관리자 또는 계층 3 지원 Windows 검색할 수 있는 하드웨어 및 소프트웨어 문제에 대 한 정보를 수집할 수 있도록 유연한 이벤트 기반 피드백 인프라를 Microsoft에 정보를 보고 및 모든 사용 가능한 솔루션을 사용 하 여 사용자에 게 제공 합니다. 이렇게 [참조](https://docs.microsoft.com/powershell/module/windowserrorreporting/) 모든 WindowsErrorReporting cmdlet에 대 한 설명 및 구문을 제공 합니다.
 
@@ -317,15 +317,15 @@ PS C:\Windows\system32> (Get-ClusterResourceType -Name "Physical Disk").DumpLogQ
 
 Message Analyzer를 사용 하면 캡처, 표시 및 트래픽 메시징 프로토콜을 분석할 수 있습니다. 또한 추적 및 시스템 이벤트와 Windows 구성 요소에서 다른 메시지를 평가할 수 있습니다. 다운로드할 수 있습니다 [여기에서 Microsoft Message Analyzer](https://www.microsoft.com/download/details.aspx?id=44226)합니다. Message Analyzer로 로그를 로드할 때 다음 공급자 및 로그 채널에서 메시지 표시
 
-![Message Analyzer로 로그를 로드합니다.](media\troubleshooting-using-WER-reports\loading-logs-into-message-analyzer.png)
+![Message Analyzer로 로그를 로드합니다.](media/troubleshooting-using-WER-reports/loading-logs-into-message-analyzer.png)
 
 다음 뷰를 가져오려면 공급자에 의해 그룹화 할 수도 있습니다.
 
-![로그 공급자에 의해 그룹화](media\troubleshooting-using-WER-reports\logs-grouped-by-providers.png)
+![로그 공급자에 의해 그룹화](media/troubleshooting-using-WER-reports/logs-grouped-by-providers.png)
 
 디스크 실패 한 이유를 식별 하려면 아래에 있는 이벤트로 이동 **FailoverClustering/진단** 하 고 **FailoverClustering/DiagnosticVerbose**합니다. 다음 쿼리를 실행 합니다. **"클러스터 디스크에 10"을 포함 하는 EventLog.EventData["LogString"]** 합니다.  이렇게 하면 다음 출력이 제공 있습니다.
 
-![실행 중인 로그 쿼리의 출력](media\troubleshooting-using-WER-reports\output-of-running-log-query.png)
+![실행 중인 로그 쿼리의 출력](media/troubleshooting-using-WER-reports/output-of-running-log-query.png)
 
 
 ### <a name="physical-disk-timed-out"></a>실제 디스크 시간이 초과 되었습니다.
@@ -423,7 +423,7 @@ DynamicSig[29].Value=10008
 
 중지는 발생 한 이유를 식별 하려면 dum 파일을 엽니다. 다음 쿼리를 실행 합니다. **EventLog.EventData["LogString"] "클러스터 디스크 10"을 포함** 이렇게 하면 다음과 같은 출력이 제공 있습니다.
 
-![실행 중인 로그 쿼리 2의 출력](media\troubleshooting-using-WER-reports\output-of-running-log-query-2.png)
+![실행 중인 로그 쿼리 2의 출력](media/troubleshooting-using-WER-reports/output-of-running-log-query-2.png)
 
 스레드를 사용 하 여 cross-examine 수 것은 **memory.hdmp** 파일:
 

@@ -11,12 +11,12 @@ ms.assetid: b886b2fd-3567-4f0a-8aa3-4ba7923d2d21
 author: coreyp-at-msft
 ms.author: coreyp
 ms.localizationpriority: medium
-ms.openlocfilehash: b32b4879ad454d1154c3d65dbf690cdaae73d76c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: fed0587b74873005f14a216bac22f952bcc65a4f
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59827224"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447289"
 ---
 # <a name="security-and-assurance-in-windows-server"></a>Windows Server의 보안 및 보증 
 
@@ -87,10 +87,10 @@ Microsoft 데이터 센터 및 프라이빗 클라우드 보안 팀의 기술 �
 JEA(Just Enough Administration) 데모 연습입니다.                                                                                                                  
 ## <a name="credential-protection"></a>자격 증명 보호
 
-### <a name="protect-derived-domain-credentials-with-credential-guardhttpsdocsmicrosoftcomwindowssecurityidentity-protectioncredential-guardcredential-guard"></a>[Credential Guard 사용 하 여 파생 된 도메인 자격 증명 보호](https://docs.microsoft.com/windows/security/identity-protection/credential-guard/credential-guard)
+### <a name="protect-derived-domain-credentials-with-credential-guardhttpsdocsmicrosoftcomwindowssecurityidentity-protectioncredential-guardcredential-guard"></a>[Credential Guard를 사용하여 파생된 도메인 자격 증명 보호](https://docs.microsoft.com/windows/security/identity-protection/credential-guard/credential-guard)
 Credential Guard는 가상화 기반 보안을 사용하여 권한 있는 시스템 소프트웨어만 액세스할 수 있도록 암호를 격리합니다. 이 암호에 대한 무단 액세스가 일어나면 Pass-the-Hash 또는 Pass-The-Ticket 같은 자격 증명 도난 공격이 발생할 수 있습니다. Credential Guard에서는 NTLM 암호 해시 및 Kerberos 허용 티켓을 보호하여 이러한 공격을 방지합니다.
 
-### <a name="protect-remote-desktop-credentials-with-remote-credential-guardhttpsdocsmicrosoftcomwindowssecurityidentity-protectionremote-credential-guard"></a>[원격 Credential Guard 사용 하 여 원격 데스크톱 자격 증명 보호](https://docs.microsoft.com/windows/security/identity-protection/remote-credential-guard)
+### <a name="protect-remote-desktop-credentials-with-remote-credential-guardhttpsdocsmicrosoftcomwindowssecurityidentity-protectionremote-credential-guard"></a>[원격 Credential Guard를 사용하여 원격 데스크톱 자격 증명 보호](https://docs.microsoft.com/windows/security/identity-protection/remote-credential-guard)
 원격 Credential Guard를 사용하면 연결을 요청하는 장치로 Kerberos 요청을 다시 리디렉션하여 원격 데스크톱 연결을 통해 자격 증명을 보호할 수 있습니다. 또한 원격 데스크톱 세션에 대한 Single Sign On을 제공합니다.                                                                                                        |
 ### <a name="credential-guard-demo-videohttpswwwyoutubecomwatchveupkogsl7yk"></a>[Credential Guard 데모 비디오](https://www.youtube.com/watch?v=eUpKOGSl7yk)
 이 5분짜리 비디오는 Credential Guard 및 원격 Credential Guard 데모를 보여줍니다.         
@@ -111,7 +111,7 @@ Device Guard는 WDAC와 하이퍼바이저 보호 코드 무결성(HVCI)의 결�
 ### <a name="windows-defenderhttpstechnetmicrosoftcomwindows-server-docssecuritywindows-defenderwindows-defender-overview-windows-server"></a>[Windows Defender](https://technet.microsoft.com/windows-server-docs/security/windows-defender/windows-defender-overview-windows-server)
 Windows Defender는 알려진 맬웨어를 차단하는 활성 감지 기능을 제공합니다. Windows Defender는 기본적으로 켜져 있으며 Windows Server의 다양한 서버 역할을 지원하도록 최적화됩니다.
 
-##<a name="detecting-and-responding-to-threats"></a>위협 감지 및 대응
+## <a name="detecting-and-responding-to-threats"></a>위협 감지 및 대응
 ### <a name="security-threat-analysis-using-microsoft-operations-management-suitehttpschannel9msdncomeventsignite2015brk3464"></a>[Microsoft Operations Management Suite를 사용 하 여 보안 위협 분석](https://channel9.msdn.com/events/ignite/2015/brk3464)
 이 Ignite 프레젠테이션에서는 Operational Insights를 사용하여 보안 위협 분석을 수행하는 방법을 설명합니다.
 

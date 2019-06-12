@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
 manager: dongill
-ms.openlocfilehash: e20b4960faac0ef40ad68271fa907394344e9c47
-ms.sourcegitcommit: 21165734a0f37c4cd702c275e85c9e7c42d6b3cb
+ms.openlocfilehash: b1e5726e3976527278b11f105007a32548da0bc4
+ms.sourcegitcommit: d888e35f71801c1935620f38699dda11db7f7aad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2019
-ms.locfileid: "65034420"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66805155"
 ---
 # <a name="add-the-rd-connection-broker-server-to-the-deployment-and-configure-high-availability"></a>배포에 RD 연결 브로커 서버 추가 및 고가용성 구성
 
@@ -27,7 +27,7 @@ ms.locfileid: "65034420"
 
 ## <a name="pre-requisites"></a>필수 구성 요소
 
-두 번째 RD 연결 브로커-역할을 서버를 설정 합니다.이 VM 또는 물리적 서버를 수 있습니다.
+두 번째 RD 연결 브로커 역할을 하는 서버 설정-이 물리적 서버 또는 VM 수 있습니다.
 
 연결 브로커에 대 한 데이터베이스를 설정 합니다. 사용할 수 있습니다 [Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-get-started/#create-a-new-aure-sql-database) 인스턴스 또는 로컬 환경에서 SQL Server입니다. 아래, Azure SQL을 사용 하는 방법에 대 한 이야기 하지만 SQL Server에 단계를 여전히 적용 합니다. 데이터베이스에 대 한 연결 문자열을 찾아 올바른 ODBC 드라이버가 있는지 확인 해야 합니다.
 
@@ -36,21 +36,23 @@ ms.locfileid: "65034420"
 1. 만든 데이터베이스에 대 한 연결 문자열을 찾으려면-되도록 모두 필요 하 고 나중에 자체 (3 단계), 연결 브로커를 구성 하는 경우 따라서 문자열을 저장 위치는 쉽게 참조할 수 있습니다 ODBC 드라이버의 버전을 식별 해야 합니다. Azure SQL에 대 한 연결 문자열을 찾는 방법을 다음과 같습니다.  
     1. Azure 포털에서 클릭 **찾아보기 > 리소스 그룹** 배포에 대 한 리소스 그룹을 클릭 합니다.   
     2. (예: CB DB1) 방금 만든 SQL database를 선택 합니다.   
-    3. 클릭 **설정 > 속성 > 데이터베이스 연결 문자열 표시**합니다.   
+    3. 클릭 **설정을** > **속성** > **데이터베이스 연결 문자열 표시**합니다.   
     4. 에 대 한 연결 문자열을 복사 **ODBC (Node.js 포함)** 에 다음과 같아야 합니다.   
       
-        Driver={SQL Server Native Client 13.0};Server=tcp:cb-sqls1.database.windows.net,1433;Database=CB-DB1;Uid=sqladmin@contoso;Pwd={your_password_here};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;   
+        ```
+        Driver={SQL Server Native Client 13.0};Server=tcp:cb-sqls1.database.windows.net,1433;Database=CB-DB1;Uid=sqladmin@contoso;Pwd={your_password_here};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;
+        ```
   
     5. "Your_password_here를"를 실제 암호로 바꿉니다. 확장 저장 프로시저를 데이터베이스에 연결할 때 포함 된 암호를에이 전체 문자열을 사용 합니다. 
 2. 새 연결 브로커에 ODBC 드라이버를 설치 합니다. 
    1. VM 연결 브로커를 사용 하는 경우 첫 번째 RD 연결 브로커에 대 한 공용 IP 주소를 만듭니다. (만 해야 RDMS 가상 머신에 RDP 연결을 허용 하도록 공용 IP가 없는 경우이 작업을 수행 합니다.)
-       1. Azure 포털에서 클릭 **찾아보기 > 리소스 그룹**, 리소스 그룹 배포를 클릭 한 다음 첫 번째 RD 연결 브로커 가상 머신 (예: Contoso-Cb1)를 클릭 합니다.
+       1. Azure 포털에서 클릭 **찾아보기** > **리소스 그룹**, 배포에 대 한 리소스 그룹을 클릭 하 고 (예를 들어, 첫 번째 RD 연결 브로커 가상 컴퓨터를 클릭 Contoso-Cb1).
        2. 클릭 **설정 > 네트워크 인터페이스**, 한 다음 해당 네트워크 인터페이스를 클릭 합니다.
        3. 클릭 **설정 > IP 주소**합니다.
        4. 에 대 한 **공용 IP 주소**, 선택, **Enabled**, 를 클릭 하 고 **IP 주소**합니다.
        5. 사용 하려는 기존 공용 IP 주소를 사용 하는 경우 목록에서 선택 합니다. 그렇지 않은 경우 클릭 **새로 만들기**, 는 이름을 입력 하 고 클릭 한 다음 **확인** 차례로 **저장**합니다.
    2. 첫 번째 RD 연결 브로커에 연결 합니다.
-       1. Azure 포털에서 클릭 **찾아보기 > 리소스 그룹**, 리소스 그룹 배포를 클릭 한 다음 첫 번째 RD 연결 브로커 가상 머신 (예: Contoso-Cb1)를 클릭 합니다.
+       1. Azure 포털에서 클릭 **찾아보기** > **리소스 그룹**, 배포에 대 한 리소스 그룹을 클릭 하 고 (예를 들어, 첫 번째 RD 연결 브로커 가상 컴퓨터를 클릭 Contoso-Cb1).
        2. 클릭 **연결 > 열고** 를 원격 데스크톱 클라이언트를 엽니다.
        3. 클라이언트에서 클릭 **연결**, 를 클릭 하 고 **다른 사용자 계정을 사용 하 여**합니다. 도메인 관리자 계정의 사용자 이름 및 암호를 입력 합니다.
        4. 클릭 **예** 때 인증서에 대 한 경고 메시지를 받습니다.

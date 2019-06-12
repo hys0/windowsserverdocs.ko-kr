@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: 0e7d1f5b-c939-47ca-892f-5bb285027fbc
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: dc08d89f7d84b5435e97ed5ed77eb72d003b0c84
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 95fc9cbef454c8f36b1921eb7f570138bf124256
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59888574"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446945"
 ---
 # <a name="step-1-configure-the-remote-access-infrastructure"></a>1 단계 원격 액세스 인프라 구성
 
@@ -244,7 +244,7 @@ IP-HTTPS 인증에 사용되는 웹 사이트 인증서는 다음 요구 사항�
   
 6.  **완료**를 클릭합니다.  
   
-![Windows PowerShell](../../../../media/Step-1-Configure-the-Remote-Access-Infrastructure/PowerShellLogoSmall.gif)Windows PowerShell 해당 명령을 * * *  
+![Windows PowerShell](../../../../media/Step-1-Configure-the-Remote-Access-Infrastructure/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -316,7 +316,7 @@ Add-DnsServerResourceRecordAAAA -Name <network_location_server_name> -ZoneName <
   
 10. 클릭 **지금 다시 시작** 메시지가 표시 되 면 합니다.  
   
-![Windows PowerShell](../../../../media/Step-1-Configure-the-Remote-Access-Infrastructure/PowerShellLogoSmall.gif)Windows PowerShell 해당 명령을 * * *  
+![Windows PowerShell](../../../../media/Step-1-Configure-the-Remote-Access-Infrastructure/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -456,5 +456,5 @@ Add-ADGroupMember -Identity DirectAccess_clients_group_name -Members <computer_n
   
 ## <a name="BKMK_Links"></a>참고 항목  
   
--   [2단계: 원격 액세스 서버를 구성 합니다.](Step-2-Configure-the-Remote-Access-Server.md)
+-   [2단계: 원격 액세스 서버 구성](Step-2-Configure-the-Remote-Access-Server.md)
 

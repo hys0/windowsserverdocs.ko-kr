@@ -8,12 +8,12 @@ ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: b5658676d08318d88ddee44a0589db5873b4660b
-ms.sourcegitcommit: 21165734a0f37c4cd702c275e85c9e7c42d6b3cb
+ms.openlocfilehash: cb301d0d68f00625ccea8c11d315b9defffe40f3
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2019
-ms.locfileid: "65034293"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66444528"
 ---
 # <a name="prepare-to-migrate-the-ad-fs-20-federation-server-to-ad-fs-on-windows-server-2012-r2"></a>Windows Server 2012 R2에서 AD FS를 AD FS 2.0 페더레이션 서버 마이그레이션 준비
 
@@ -45,17 +45,17 @@ ms.locfileid: "65034293"
   
 다음 사용자 지정 설정은 수동으로 마이그레이션해야 합니다.  
   
- -   서비스 설정:  
+- 서비스 설정:  
   
-     -   엔터프라이즈 또는 공용 인증 기관에서 발급한 기본 인증서가 아닌 토큰 서명 및 토큰 암호 해독 인증서  
+  - 엔터프라이즈 또는 공용 인증 기관에서 발급한 기본 인증서가 아닌 토큰 서명 및 토큰 암호 해독 인증서  
   
-     -   AD FS에서 사용하는 SSL 서버 인증 인증서  
+  - AD FS에서 사용하는 SSL 서버 인증 인증서  
   
-     -   AD FS에서 사용하는 서비스 통신 인증서(기본적으로 SSL 인증서와 같음)  
+  - AD FS에서 사용하는 서비스 통신 인증서(기본적으로 SSL 인증서와 같음)  
   
-      -   AutoCertificateRollover 또는 SSO 수명과 같은 페더레이션 서비스 속성에 대한 기본값이 아닌 값  
+    -   AutoCertificateRollover 또는 SSO 수명과 같은 페더레이션 서비스 속성에 대한 기본값이 아닌 값  
   
-      -   기본 설정이 아닌 AD FS 끝점 설정 및 클레임 설명  
+    -   기본 설정이 아닌 AD FS 끝점 설정 및 클레임 설명  
   
 -   Active Directory 클레임 공급자 트러스트에 대한 사용자 지정 클레임 규칙  
   
@@ -63,11 +63,11 @@ ms.locfileid: "65034293"
   
 자세한 내용은 [AD FS 페더레이션 서버 마이그레이션](migrate-ad-fs-fed-server-r2.md)을 참조하십시오.  
   
-2.  Windows Server 2012 R2 페더레이션 서버 팜을 만듭니다.  
+2. Windows Server 2012 R2 페더레이션 서버 팜을 만듭니다.  
   
-3.  이 새 Windows Server 2012 R2 AD FS 팜으로 원래 구성 데이터를 가져옵니다.  
+3. 이 새 Windows Server 2012 R2 AD FS 팜으로 원래 구성 데이터를 가져옵니다.  
   
-4.  AD FS 로그인 페이지를 구성하고 사용자 지정합니다.  
+4. AD FS 로그인 페이지를 구성하고 사용자 지정합니다.  
   
 ##  <a name="new-ad-fs-functionality-in-windows-server-2012-r2"></a>Windows Server 2012 R2의 새로운 AD FS 기능  
  AD FS 2.0 또는 Windows Server 2012에서 AD FS에서에서 마이그레이션의 Windows Server 2012 R2 영향을 줄에서 변경 하는 다음과 같은 AD FS 기능:  
@@ -109,27 +109,27 @@ Windows Server 2012 R2로 마이그레이션하려는 기존 AD FS 팜에 웹 �
   
  함수를 Windows Server 2012 R2에서 실행 중인 AD FS에 대 한 Active Directory 도메인이 다음 중 하나를 실행 해야 합니다.  
   
--   Windows Server 2012 R2  
+- Windows Server 2012 R2  
   
--   Windows Server 2012  
+- Windows Server 2012  
   
--   Windows Server 2008 R2  
+- Windows Server 2008 R2  
   
--   Windows Server 2008  
+- Windows Server 2008  
   
- 서비스 계정으로 AD FS에 대 한 그룹 관리 서비스 계정 (gMSA)를 사용 하려는 경우 Windows Server 2012 또는 Windows Server 2012 R2 운영 체제에서 실행 되는 환경의 도메인 컨트롤러가 하나 이상 있어야 합니다.  
+  서비스 계정으로 AD FS에 대 한 그룹 관리 서비스 계정 (gMSA)를 사용 하려는 경우 Windows Server 2012 또는 Windows Server 2012 R2 운영 체제에서 실행 되는 환경의 도메인 컨트롤러가 하나 이상 있어야 합니다.  
   
- AD FS 배포의 일부로 AD 작업 공간 연결에 대 한 장치 등록 서비스 (DRS)를 배포 하려는 경우 AD DS 스키마를 Windows Server 2012 R2 수준으로 업데이트 해야 합니다. 스키마를 업데이트하는 방법에는 다음 세 가지가 있습니다.  
+  AD FS 배포의 일부로 AD 작업 공간 연결에 대 한 장치 등록 서비스 (DRS)를 배포 하려는 경우 AD DS 스키마를 Windows Server 2012 R2 수준으로 업데이트 해야 합니다. 스키마를 업데이트하는 방법에는 다음 세 가지가 있습니다.  
   
 1.  기존 Active Directory 포리스트에 Windows Server 2008 이상을 실행 하는 모든 64 비트 서버의 Windows Server 2012 R2 운영 체제 DVD의 \support\adprep 폴더에서 adprep /forestprep을 실행 합니다. 이 경우 추가 도메인 컨트롤러를 설치하거나 기존 도메인 컨트롤러를 업그레이드할 필요가 없습니다.  
   
 adprep/forestprep를 실행하려면 스키마 마스터를 호스트하는 도메인의 Schema Admins 그룹, Enterprise Admins 그룹 및 Domain Admins 그룹의 구성원이어야 합니다.  
   
-2.  기존 Active Directory 포리스트에 Windows Server 2012 R2를 실행 하는 도메인 컨트롤러를 설치 합니다. 이 경우에는 adprep /forestprep가 도메인 컨트롤러 설치의 일부로 자동으로 실행됩니다.  
+2. 기존 Active Directory 포리스트에 Windows Server 2012 R2를 실행 하는 도메인 컨트롤러를 설치 합니다. 이 경우에는 adprep /forestprep가 도메인 컨트롤러 설치의 일부로 자동으로 실행됩니다.  
   
 도메인 컨트롤러 설치 중 adprep /forestprep를 실행하기 위해 추가 자격 증명을 지정해야 할 수도 있습니다.  
   
-3.  Windows Server 2012 R2를 실행 하는 서버에 AD DS를 설치 하 여 새 Active Directory 포리스트를 만듭니다. 이 경우 DRS를 지원하는 데 필요한 모든 컨테이너 및 개체와 함께 스키마가 초기에 만들어지므로 adprep /forestprep를 실행할 필요가 없습니다.  
+3. Windows Server 2012 R2를 실행 하는 서버에 AD DS를 설치 하 여 새 Active Directory 포리스트를 만듭니다. 이 경우 DRS를 지원하는 데 필요한 모든 컨테이너 및 개체와 함께 스키마가 초기에 만들어지므로 adprep /forestprep를 실행할 필요가 없습니다.  
   
 ### <a name="sql-server-support-for-ad-fs-in-windows-server-2012-r2"></a>Windows Server 2012 R2의 AD FS에 대한 SQL Server 지원  
  AD FS 팜을 만들고 SQL Server를 사용하여 구성 데이터를 저장하려면 SQL Server 2008 이상(SQL Server 2012 포함)을 사용하면 됩니다.  

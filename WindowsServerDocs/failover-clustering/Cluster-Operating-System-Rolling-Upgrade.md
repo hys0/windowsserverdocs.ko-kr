@@ -7,16 +7,16 @@ ms.assetid: 6e102c1f-df26-4eaa-bc7a-d0d55d3b82d5
 author: jasongerend
 ms.author: jgerend
 ms.date: 03/27/2018
-ms.openlocfilehash: 60dacf63f1a355b961f84169060dbd7122a6fd32
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f56c036768de7c1afcf3327135a7ff7d7a690a8b
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59842734"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66440145"
 ---
 # <a name="cluster-operating-system-rolling-upgrade"></a>클러스터 운영 체제 롤링 업그레이드
 
-> 적용 대상: Windows Server (반기 채널), Windows Server 2016
+> 적용 대상: Windows Server 2019, Windows Server 2016
 
 클러스터 OS 롤링 업그레이드 관리자가 Hyper-v 또는 스케일 아웃 파일 서버 워크 로드를 중지 하지 않고 클러스터 노드의 운영 체제를 업그레이드 합니다. 이 기능을 사용하면 SLA(서비스 수준 계약)의 가동 중지 시간 위반을 피할 수 있습니다.
 
@@ -226,12 +226,12 @@ Windows Server 2012 R2 클러스터를 Windows Server 2016 노드 클러스터�
         ![Get-VMHostSupportedVersion cmdlet의 출력을 보여 주는 스크린샷](media/Cluster-Operating-System-Rolling-Upgrade/Clustering_GetVMHostSupportVersion.png)  
         **그림 21: 호스트에서 지원 되는 Hyper-v VM 구성 버전 보기**  
 
-   3.  각 노드에서 Hyper-v 호스트 클러스터의 Hyper-v VM 구성 버전 사용자를 사용 하 여 간단한 유지 관리 기간을 예약, 백업, virtual machines를 해제 하 고 실행 하 여 업그레이드할 있습니다 합니다 [ `Update-VMVersion` ](https://docs.microsoft.com/powershell/module/hyper-v/Update-VMVersion?view=win10-ps) cmdlet (참조 그림 22)입니다. 가상 머신 버전은 업데이트 되 고 나중에 Hyper-v 통합 구성 요소 (IC) 업데이트 하지 않아도 새로운 Hyper-v 기능을 사용 하도록 설정 됩니다. VM을 호스팅하는 Hyper-v 노드에서이 cmdlet을 실행할 수 있습니다 또는 `-ComputerName` VM 버전을 원격으로 업데이트 하려면 매개 변수를 사용할 수 있습니다. 이 예에서 여기 업그레이드 VM1의 구성 버전 5.0에서 프로덕션 검사점 (응용 프로그램 일치 백업) 등 이진 VM이 VM 구성 버전과 관련 된 여러 가지 새로운 Hyper-v 기능을 활용 하려면 7.0 구성 파일입니다.  
+   3. 각 노드에서 Hyper-v 호스트 클러스터의 Hyper-v VM 구성 버전 사용자를 사용 하 여 간단한 유지 관리 기간을 예약, 백업, virtual machines를 해제 하 고 실행 하 여 업그레이드할 있습니다 합니다 [ `Update-VMVersion` ](https://docs.microsoft.com/powershell/module/hyper-v/Update-VMVersion?view=win10-ps) cmdlet (참조 그림 22)입니다. 가상 머신 버전은 업데이트 되 고 나중에 Hyper-v 통합 구성 요소 (IC) 업데이트 하지 않아도 새로운 Hyper-v 기능을 사용 하도록 설정 됩니다. VM을 호스팅하는 Hyper-v 노드에서이 cmdlet을 실행할 수 있습니다 또는 `-ComputerName` VM 버전을 원격으로 업데이트 하려면 매개 변수를 사용할 수 있습니다. 이 예에서 여기 업그레이드 VM1의 구성 버전 5.0에서 프로덕션 검사점 (응용 프로그램 일치 백업) 등 이진 VM이 VM 구성 버전과 관련 된 여러 가지 새로운 Hyper-v 기능을 활용 하려면 7.0 구성 파일입니다.  
 
-        ![실행 중인 업데이트 VMVersion cmdlet을 보여 주는 스크린샷](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_StopVM.png)  
-        **그림 22: 업데이트 VMVersion PowerShell cmdlet을 사용 하 여 VM 버전 업그레이드**  
+       ![실행 중인 업데이트 VMVersion cmdlet을 보여 주는 스크린샷](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_StopVM.png)  
+       **그림 22: 업데이트 VMVersion PowerShell cmdlet을 사용 하 여 VM 버전 업그레이드**  
 
-4.  사용 하 여 저장소 풀을 업그레이드할 수 있습니다 합니다 [Update-storagepool](https://docs.microsoft.com/powershell/module/storage/Update-StoragePool?view=win10-ps) PowerShell cmdlet이 작업은 온라인 작업입니다.  
+6. 사용 하 여 저장소 풀을 업그레이드할 수 있습니다 합니다 [Update-storagepool](https://docs.microsoft.com/powershell/module/storage/Update-StoragePool?view=win10-ps) PowerShell cmdlet이 작업은 온라인 작업입니다.  
 
 하지만 특히 Hyper-v 사설 클라우드 시나리오를 대상으로 하 고 클러스터 OS 롤링 업그레이드 프로세스 가동 중지 시간 없이 업그레이드할 수 있는 스케일 아웃 파일 서버 클러스터의 경우 모든 클러스터 역할에 사용할 수 있습니다.  
 
@@ -278,6 +278,6 @@ Windows Server 2012 R2 클러스터를 Windows Server 2016 노드 클러스터�
     예, System Center 2016의 VMM을 사용 하는 클러스터 OS 롤링 업그레이드 프로세스를 자동화할 수 있습니다.  
 
 ## <a name="see-also"></a>참조  
--   [릴리스 정보: Windows Server 2016의에서 주요 문제점](../get-started/Release-Notes--Important-Issues-in-Windows-Server-2016-Technical-Preview.md)  
--   [Windows Server 2016의에서 새로운 기능](../get-started/What-s-New-in-windows-server-2016.md)  
+-   [릴리스 정보: Windows Server 2016의 중요한 이슈](../get-started/Release-Notes--Important-Issues-in-Windows-Server-2016-Technical-Preview.md)  
+-   [Windows Server 2016의 새로운 기능](../get-started/What-s-New-in-windows-server-2016.md)  
 -   [Windows Server에서 장애 조치 클러스터링의 새로운 기능](whats-new-in-failover-clustering.md)  

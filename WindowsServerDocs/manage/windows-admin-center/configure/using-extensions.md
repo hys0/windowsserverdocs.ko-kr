@@ -7,12 +7,12 @@ author: daniellee-msft
 ms.author: jol
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: c775dd5a3011115bbb031c0b9e4e24a8911d378e
-ms.sourcegitcommit: 2977c707a299929c6ab0d1e0adab2e1c644b8306
+ms.openlocfilehash: 9038fd480ed105aed3949b0c48dffc7eab94f970
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63748409"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66445888"
 ---
 # <a name="install-and-manage-extensions"></a>설치 하 고 확장 관리
 
@@ -58,7 +58,7 @@ Windows Admin Center 인터넷에 연결 되어 있지 않습니다 또는 프�
 
 1. 인터넷에 연결 된 다른 컴퓨터에서 웹 브라우저를 열고 다음 URL로 이동: [https://msft-sme.myget.org/gallery/windows-admin-center-feed](https://msft-sme.myget.org/gallery/windows-admin-center-feed) 
 
-  * Msft sme.myget.org 및 확장 패키지를 보려면 로그인에 계정을 만들고 해야 합니다.
+   * Msft sme.myget.org 및 확장 패키지를 보려면 로그인에 계정을 만들고 해야 합니다.
 
 2. 패키지 세부 정보 페이지가 설치 하려는 패키지의 이름을 클릭 합니다.
 3. 클릭 합니다 **다운로드** 패키지 세부 정보 페이지의 오른쪽 창에서 연결 하 고 확장 하 여.nupkg 파일을 다운로드 합니다.

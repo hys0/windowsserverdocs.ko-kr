@@ -7,18 +7,18 @@ ms.topic: article
 author: lizap
 ms.author: elizapo
 ms.localizationpriority: medium
-ms.openlocfilehash: c48979440ab7c5cfa86aa1287b354a1e43692f48
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 1644a61c87953e465895e23c3c8454bae7f3a056
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59867444"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66443380"
 ---
 # <a name="express-updates-for-windows-server-2016-re-enabled-for-november-2018-update"></a>2018 년 11 월에 대 한 다시 사용 하도록 설정 하는 Windows Server 2016에 대 한 업데이트를 express 업데이트
 
->Joel Frauenheim 여
-
->적용 대상: Windows Server 2016
+> Joel Frauenheim 여
+> 
+> 적용 대상: Windows Server 2016
 
 시작 2018 년 11 월 13 일 화요일의 업데이트, Windows를 다시 게시할 Express 업데이트 Windows Server 2016에 대 한 합니다. Windows Server 2016에 대 한 빠른 업데이트를 올바르게 설치할 업데이트를 유지 하는 중요 한 문제를 찾을 수 후 2017 년 중반부터에서 중지 되었습니다. 업데이트 팀 보수적인 접근 방법은 대부분의 고객은 2017 년 11 월 14 일 업데이트 해야 하도록 Express 패키지를 게시 하는 데 걸린 2017 년 11 월에에서는 문제가 수정 되어 있지만 ([KB 4048953](https://support.microsoft.com/help/4048953/windows-10-update-kb4048953)) 해당 서버에 설치 환경 및 되지 문제가 영향을 받을 수 있습니다.
 

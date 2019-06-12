@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.technology: storage-failover-clustering
 ms.date: 04/26/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 3e6d67eee496d19b216a4366af51ab5736229cf0
-ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
+ms.openlocfilehash: e38c53c3458c3f66f24ea2ddaa66febf508c4568
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65476149"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66442451"
 ---
 # <a name="scale-out-file-server-for-application-data-overview"></a>응용 프로그램 데이터를 위한 스케일 아웃 파일 서버 개요
 
@@ -141,7 +141,7 @@ ms.locfileid: "65476149"
 <td>파일 관리</td>
 <td>DFSN(DFS 네임스페이스) 루트 서버 루트</td>
 <td>예</td>
-<td>아니오</td>
+<td>아니요</td>
 </tr>
 <tr class="odd">
 <td>파일 관리</td>
@@ -153,19 +153,19 @@ ms.locfileid: "65476149"
 <td>파일 관리</td>
 <td>DFSR(DFS 복제)</td>
 <td>예</td>
-<td>아니오</td>
+<td>아니요</td>
 </tr>
 <tr class="odd">
 <td>파일 관리</td>
 <td>파일 서버 리소스 관리자(화면 및 할당량)</td>
 <td>예</td>
-<td>아니오</td>
+<td>아니요</td>
 </tr>
 <tr class="even">
 <td>파일 관리</td>
 <td>파일 분류 인프라</td>
 <td>예</td>
-<td>아니오</td>
+<td>아니요</td>
 </tr>
 <tr class="odd">
 <td>파일 관리</td>
@@ -177,25 +177,25 @@ ms.locfileid: "65476149"
 <td>파일 관리</td>
 <td>폴더 리디렉션</td>
 <td>예</td>
-<td>권장되지 않음*</td>
+<td>권장 되지 않음<em></td>
 </tr>
 <tr class="odd">
 <td>파일 관리</td>
 <td>오프라인 파일(클라이언트 쪽 캐싱)</td>
 <td>예</td>
-<td>권장되지 않음*</td>
+<td>권장되지 않음</em></td>
 </tr>
 <tr class="even">
 <td>파일 관리</td>
 <td>로밍 사용자 프로필</td>
 <td>예</td>
-<td>권장되지 않음*</td>
+<td>권장 되지 않음<em></td>
 </tr>
 <tr class="odd">
 <td>파일 관리</td>
 <td>홈 디렉터리</td>
 <td>예</td>
-<td>권장되지 않음*</td>
+<td>권장되지 않음</em></td>
 </tr>
 <tr class="even">
 <td>파일 관리</td>
@@ -207,7 +207,7 @@ ms.locfileid: "65476149"
 <td>NFS</td>
 <td>NFS 서버</td>
 <td>예</td>
-<td>아니오</td>
+<td>아니요</td>
 </tr>
 <tr class="even">
 <td>애플리케이션</td>
@@ -256,13 +256,13 @@ ms.locfileid: "65476149"
 <tbody>
 <tr class="odd">
 <td><a href="failover-clustering.md">장애 조치(failover) 클러스터링</a></td>
-<td>장애 조치 클러스터 스케일 아웃 파일 서버를 지원 하도록 Windows Server 2012에는 다음 기능을 추가 했습니다. 분산된 네트워크 이름, 스케일 아웃 파일 서버 리소스 종류, 클러스터 공유 볼륨 (CSV) 2 및 스케일 아웃 파일 서버 고가용성 역할입니다. 이러한 기능에 대 한 자세한 내용은 참조 하세요. <a href="https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265972(v%3dws.11)">What's New in Windows Server 2012 [리디렉션 됨]에서 장애 조치 클러스터링</a>합니다.</td>
+<td>장애 조치 클러스터 스케일 아웃 파일 서버를 지원 하도록 Windows Server 2012에는 다음 기능을 추가 했습니다. 분산된 네트워크 이름, 스케일 아웃 파일 서버 리소스 종류, 클러스터 공유 볼륨 (CSV) 2 및 스케일 아웃 파일 서버 고가용성 역할입니다. 이러한 기능에 대 한 자세한 내용은 참조 하세요. <a href="https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265972(v%3dws.11)">어떤&#39;[리디렉션 됨]는 Windows Server 2012에서 장애 조치 클러스터링의</a>합니다.</td>
 </tr>
 <tr class="even">
 <td><a href="https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831795(v%3dws.11)">서버 메시지 블록</a></td>
 <td>SMB 3.0 스케일 아웃 파일 서버를 지원 하도록 Windows Server 2012에는 다음 기능을 추가 했습니다. SMB 투명 장애 조치(failover), SMB 다중 채널 및 SMB 다이렉트 기능이 추가되었습니다.<br />
 <br />
-Windows Server 2012 R2의 SMB에 대 한 새로운 기능과 변경 된 기능에 자세한 내용은 참조 <a href="https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831474(v%3dws.11)">What's New in Windows Server에서 SMB</a>합니다.</td>
+Windows Server 2012 R2의 SMB에 대 한 새로운 기능과 변경 된 기능에 자세한 내용은 참조 <a href="https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831474(v%3dws.11)">어떤&#39;새로운 Windows Server에서 SMB</a>합니다.</td>
 </tr>
 </tbody>
 </table>

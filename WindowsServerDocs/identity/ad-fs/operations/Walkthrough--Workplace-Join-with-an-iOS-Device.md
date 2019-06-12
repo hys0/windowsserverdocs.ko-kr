@@ -9,12 +9,12 @@ ms.date: 10/18/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 42b71667758f392d641c5262e34322f8b21cfad9
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 979802469737066612bc6242f942fd3acd077479
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66188907"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66444795"
 ---
 # <a name="walkthrough-workplace-join-with-an-ios-device"></a>연습: iOS 장치를 사용하여 작업 공간 연결
 
@@ -37,23 +37,23 @@ ms.locfileid: "66188907"
 
 #### <a name="to-join-an-ios-device-to-a-workplace"></a>iOS 장치를 작업 공간에 연결하려면
 
-1.  -   **Azure Active Directory 장치 등록 서비스가 구성된 경우 DRS는 다음을 수행합니다.** Apple Safari를 열고 iOS 장치의 Azure Active Directory Device Registration service (over-the-air) 프로필 끝점으로 이동 <`https://enterpriseregistration.windows.net/enrollmentserver/otaprofile/<yourdomainname` > 여기서 <`yourdomainname`> Azure Active Directory를 사용 하 여 구성한 도메인 이름입니다. 예를 들어 도메인 이름이 contoso.com인 경우 URL은 `https://enterpriseregistration.windows.net/enrollmentserver/otaprofile/contoso.com`입니다.
+1. -   **Azure Active Directory 장치 등록 서비스가 구성된 경우 DRS는 다음을 수행합니다.** Apple Safari를 열고 iOS 장치의 Azure Active Directory Device Registration service (over-the-air) 프로필 끝점으로 이동 <`https://enterpriseregistration.windows.net/enrollmentserver/otaprofile/<yourdomainname` > 여기서 <`yourdomainname`> Azure Active Directory를 사용 하 여 구성한 도메인 이름입니다. 예를 들어 도메인 이름이 contoso.com인 경우 URL은 `https://enterpriseregistration.windows.net/enrollmentserver/otaprofile/contoso.com`입니다.
 
-    -   **온-프레미스 DRS가 구성된 DRS는 다음을 수행합니다.** Apple Safari를 열고 iOS 장치의 DRS Device Registration Service () (over-the-air) 프로필 끝점으로 이동 `https://adf1s.contoso.com/enrollmentserver/otaprofile`
+   -   **온-프레미스 DRS가 구성된 DRS는 다음을 수행합니다.** Apple Safari를 열고 iOS 장치의 DRS Device Registration Service () (over-the-air) 프로필 끝점으로 이동 `https://adf1s.contoso.com/enrollmentserver/otaprofile`
 
-    이 URL을 사용자에게 전달하는 방법에는 여러 가지가 있습니다. 한 가지 권장 방법은 AD FS에서 사용자 지정 응용 프로그램 액세스 거부됨 메시지에 이 URL을 게시하는 것입니다. 이 내용은 이후 섹션에서 설명합니다. [응용 프로그램 액세스 정책 및 사용자 지정 액세스 거부됨 메시지 만들기](https://docs.microsoft.com/azure/active-directory/active-directory-device-registration-on-premises-setup#create-an-application-access-policy-and-custom-access-denied-message)
+   이 URL을 사용자에게 전달하는 방법에는 여러 가지가 있습니다. 한 가지 권장 방법은 AD FS에서 사용자 지정 응용 프로그램 액세스 거부됨 메시지에 이 URL을 게시하는 것입니다. 이 내용은 이후 섹션에서 설명합니다. [응용 프로그램 액세스 정책 및 사용자 지정 액세스 거부됨 메시지 만들기](https://docs.microsoft.com/azure/active-directory/active-directory-device-registration-on-premises-setup#create-an-application-access-policy-and-custom-access-denied-message)
 
-2.  회사 도메인 계정을 사용 하 여 웹 페이지에 로그온 합니다. **roberth@contoso.com** 및 암호: **P@ssword**합니다.
+2. 회사 도메인 계정을 사용 하 여 웹 페이지에 로그온 합니다. <strong>roberth@contoso.com</strong> 및 암호: <strong>P@ssword</strong>합니다.
 
-3.  프로필을 설치하라는 메시지가 표시됩니다. **프로파일 설치** 화면에서 **설치**를 클릭합니다.
+3. 프로필을 설치하라는 메시지가 표시됩니다. **프로파일 설치** 화면에서 **설치**를 클릭합니다.
 
-4.  프로필 설치를 확인하라는 메시지가 표시되면 **지금 설치**를 클릭합니다.
+4. 프로필 설치를 확인하라는 메시지가 표시되면 **지금 설치**를 클릭합니다.
 
-5.  장치에 장치의 잠금을 해제하기 위한 PIN이 필요한 경우 PIN을 입력하라는 메시지가 표시됩니다.
+5. 장치에 장치의 잠금을 해제하기 위한 PIN이 필요한 경우 PIN을 입력하라는 메시지가 표시됩니다.
 
-6.  **프로파일 설치됨** 화면이 표시되면 프로필 설치가 완료된 것입니다. **완료**를 클릭합니다.
+6. **프로파일 설치됨** 화면이 표시되면 프로필 설치가 완료된 것입니다. **완료**를 클릭합니다.
 
-    Safari로 돌아갑니다. Safari를 닫거나 그대로 둘 수 있음을 알리는 메시지가 표시됩니다.
+   Safari로 돌아갑니다. Safari를 닫거나 그대로 둘 수 있음을 알리는 메시지가 표시됩니다.
 
 > [!TIP]
 > 작업 공간 연결 프로필을 보거나 제거하려면 **설정**으로 이동하여 **일반**을 클릭한 다음 iOS 장치에서 **프로파일**을 클릭합니다.

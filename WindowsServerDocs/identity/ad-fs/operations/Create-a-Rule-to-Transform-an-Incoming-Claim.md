@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 6bd107aca6c6f33cdf5f88e5b48a52fdea8d2086
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: a29406880481f0e4e257105e94bc1a33ee661164
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66189338"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66444439"
 ---
 # <a name="create-a-rule-to-transform-an-incoming-claim"></a>들어오는 클레임 변환 규칙 만들기
 
@@ -130,9 +130,9 @@ ms.locfileid: "66189338"
 >   
 > 동적 액세스 제어 시나리오에 대 한 자세한 내용은 참조 [동적 액세스 제어 콘텐츠 로드맵](../../solution-guides/dynamic-access-control--scenario-overview.md) 또는 [AD FS와 함께 사용 되는 AD DS 클레임 사용](https://technet.microsoft.com/library/hh831504.aspx)합니다.  
   
-7.  **마침**을 클릭합니다.  
+7. **마침**을 클릭합니다.  
   
-8.  에 **클레임 규칙 편집** 대화 상자를 클릭 **확인** 여 규칙을 저장 합니다.  
+8. 에 **클레임 규칙 편집** 대화 상자를 클릭 **확인** 여 규칙을 저장 합니다.  
 
 ## <a name="additional-references"></a>추가 참조 
 [클레임 규칙 구성](Configure-Claim-Rules.md)  

@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.assetid: 1a1182a6-4462-4a13-806e-0e642a0d5db2
 ms.technology: identity-adds
-ms.openlocfilehash: 6f600ade3d07130d4e1fb3b1a254cb1073f592e9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9cf89c9f4875f602abea89e366cadfba8d0599c3
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59874234"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66443016"
 ---
 # <a name="ad-forest-recovery---performing-a-full-server-recovery"></a>AD 포리스트 복구-전체 서버 복구를 수행 합니다. 
 
@@ -69,15 +69,15 @@ Windows Server 2016, 2012 R2 또는 2012에 대 한 전체 서버 복구를 수�
    ![서버 복원](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore8.png)
 8. 백업 공유 위치에 UNC 경로 입력 (예를 들어 \\\server1\backups)를 누릅니다 **확인**합니다. 입력할 수도 있습니다 대상 서버의 IP 주소와 같은 \\\192.168.1.3\backups 합니다. 
    ![서버 복원](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore9.png)
-10. 클릭 하 고 공유에 액세스 하는 데 필요한 자격 증명을 입력 합니다. 
-11. 이제 **복원할 날짜 및 시간 시스템 이미지 선택** 누릅니다 **다음**합니다.
-12. 옵션을 제공 이제 됩니다.
-   - 디스크 포맷 및 다시 분할
-   - 드라이버 설치
-   - 선택을 취소 하는 **고급** 기능의 자동으로 다시 시작 하 고 확인 하는 디스크 오류입니다. 이러한 옵션은 기본적으로 설정 됩니다.
-13. **다음**을 클릭합니다.
-14. **마침**을 클릭합니다. 계속 하 시겠습니까 묻는 라는 메시지가 표시 됩니다. **예**를 클릭합니다.  
-15. 이 작업이 완료 되 면 수행 SYSVOL의 신뢰할 수 있는 복원 하는 경우에 설명 된 대로 [DFSR 복제 SYSVOL의 신뢰할 수 있는 동기화를 수행할 AD 포리스트 복구](AD-Forest-Recovery-Authoritative-Recovery-SYSVOL.md)합니다.
+9. 클릭 하 고 공유에 액세스 하는 데 필요한 자격 증명을 입력 합니다. 
+10. 이제 **복원할 날짜 및 시간 시스템 이미지 선택** 누릅니다 **다음**합니다.
+11. 옵션을 제공 이제 됩니다.
+    - 디스크 포맷 및 다시 분할
+    - 드라이버 설치
+    - 선택을 취소 하는 **고급** 기능의 자동으로 다시 시작 하 고 확인 하는 디스크 오류입니다. 이러한 옵션은 기본적으로 설정 됩니다.
+12. **다음**을 클릭합니다.
+13. **마침**을 클릭합니다. 계속 하 시겠습니까 묻는 라는 메시지가 표시 됩니다. **예**를 클릭합니다.  
+14. 이 작업이 완료 되 면 수행 SYSVOL의 신뢰할 수 있는 복원 하는 경우에 설명 된 대로 [DFSR 복제 SYSVOL의 신뢰할 수 있는 동기화를 수행할 AD 포리스트 복구](AD-Forest-Recovery-Authoritative-Recovery-SYSVOL.md)합니다.
 
 ## <a name="enabling-the-network-adapter-for-a-network-backup"></a>네트워크 백업에 대 한 네트워크 어댑터를 사용 하도록 설정
 
@@ -133,4 +133,4 @@ Windows Server 2016, 2012 R2 또는 2012에 대 한 전체 서버 복구를 수�
 ## <a name="next-steps"></a>다음 단계
 
 - [AD 포리스트 복구 가이드](AD-Forest-Recovery-Guide.md)
-- [AD 포리스트 복구 절차](AD-Forest-Recovery-Procedures.md)
+- [AD 포리스트 복구 - 절차](AD-Forest-Recovery-Procedures.md)

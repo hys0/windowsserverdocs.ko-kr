@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
 ms.technology: identity-adds
-ms.openlocfilehash: 8e05043d029636ddeb3a24349897ac61a713b2a7
-ms.sourcegitcommit: 21165734a0f37c4cd702c275e85c9e7c42d6b3cb
+ms.openlocfilehash: 9883d337520c3920f8638ddfe5f6bd393e31fd2f
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2019
-ms.locfileid: "65034116"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66442867"
 ---
 # <a name="perform-initial-recovery"></a>초기 복구를 수행 합니다.  
 
@@ -126,7 +126,7 @@ ms.locfileid: "65034116"
 
 - 이름 확인을 해결 하려면 DNS 위임 레코드를 만들고 DNS 전달 및 루트 힌트 필요에 따라 구성 합니다. 실행할 **repadmin /replsum** Dc 간 복제를 확인 합니다. 
 - 복원된 된 DC의 직접 복제 파트너 없으면 복제 복구 더 빠를 것 간에 임시 연결 개체를 만들어 합니다. 
-- 메타 데이터 정리의 유효성을 검사 하려면 **Repadmin /viewlist \***  포리스트에서 모든 Dc의 목록은 합니다. 실행할 **Nltest /DCList:** *< 도메인\>*  도메인의 모든 Dc의 목록은 합니다. 
+- 메타 데이터 정리의 유효성을 검사 하려면 **Repadmin /viewlist \\** * 포리스트에서 모든 Dc의 목록은 합니다. 실행할 **Nltest /DCList:** *< 도메인\>*  도메인의 모든 Dc의 목록은 합니다. 
 - DC 및 DNS 상태를 확인 하려면 오류를 보고할 DCDiag /v 포리스트에서 모든 Dc에서 실행 합니다. 
 
 ## <a name="add-the-global-catalog-to-a-domain-controller-in-the-forest-root-domain"></a>포리스트 루트 도메인의 도메인 컨트롤러를 글로벌 카탈로그 추가

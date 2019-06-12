@@ -10,12 +10,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 05/24/2018
-ms.openlocfilehash: 4e4da87e5a2a4cd80e748a05596da3f23b5ac85f
-ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
+ms.openlocfilehash: a568324ba69b13c7016f4715d3c37f991ae4c1ad
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/25/2019
-ms.locfileid: "66222904"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66439720"
 ---
 # <a name="plan-your-wsus-deployment"></a>WSUS 배포 계획
 
@@ -94,19 +94,19 @@ WSUS 설치 과정에서 다음과 같은 항목이 기본적으로 설치됩니
 
 WSUS를 사용하여 업데이트하도록 클라이언트 컴퓨터(서버 포함)를 구성하면 다음 제한 사항이 적용됩니다.
 
-1.  주문형 기능을 사용하여 제거된 페이로드가 있었던 서버 역할은 Microsoft Update에서 필요에 따라 설치할 수 없습니다. 이러한 서버 역할을 설치 하려고 할 때 설치 원본을 제공 하거나 그룹 정책에서 주문형 기능에 대 한 원본을 구성 해야 합니다.
+1. 주문형 기능을 사용하여 제거된 페이로드가 있었던 서버 역할은 Microsoft Update에서 필요에 따라 설치할 수 없습니다. 이러한 서버 역할을 설치 하려고 할 때 설치 원본을 제공 하거나 그룹 정책에서 주문형 기능에 대 한 원본을 구성 해야 합니다.
 
-2.  Windows 클라이언트 버전은 웹에서 필요에 따라 .NET 3.5를 설치할 수 없습니다. 서버 역할과 같은 고려 사항이 .NET 3.5에 적용됩니다.
+2. Windows 클라이언트 버전은 웹에서 필요에 따라 .NET 3.5를 설치할 수 없습니다. 서버 역할과 같은 고려 사항이 .NET 3.5에 적용됩니다.
 
-    > [!NOTE]
-    > 요청 시 설치 원본에서 기능을 구성 하는 경우에 WSUS 포함 되지 않습니다. 기능을 구성하는 방법에 대한 자세한 내용은 [Windows Server에서 주문형 기능 구성](https://technet.microsoft.com/library/jj127275.aspx)을 참조하세요.
+   > [!NOTE]
+   > 요청 시 설치 원본에서 기능을 구성 하는 경우에 WSUS 포함 되지 않습니다. 기능을 구성하는 방법에 대한 자세한 내용은 [Windows Server에서 주문형 기능 구성](https://technet.microsoft.com/library/jj127275.aspx)을 참조하세요.
 
 3. Windows 10 버전 1709 또는 버전 1803에서를 실행 하는 엔터프라이즈 장치는 WSUS에서 직접 주문형 기능을 설치할 수 없습니다. 주문형 기능을 설치 하려면 [기능 파일 (side-by-side-저장소)을 만듭니다](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127275%28v=ws.11%29#create-a-feature-file-or-side-by-side-store) 또는 다음 원본 중 하나에서 필요 시 패키지에 기능을 가져오려면:
-    - [볼륨 라이선스 서비스 센터](https://www.microsoft.com/licensing/servicecenter) (VLSC)-VL 액세스가 필요
-    - OEM 포털-OEM 액세스가 필요
-    - MSDN 다운로드-MSDN 구독은 필수입니다.
+   - [볼륨 라이선스 서비스 센터](https://www.microsoft.com/licensing/servicecenter) (VLSC)-VL 액세스가 필요
+   - OEM 포털-OEM 액세스가 필요
+   - MSDN 다운로드-MSDN 구독은 필수입니다.
 
-    사용 하 여 요청 시 패키지에 개별적으로 가져온 기능을 설치할 수 있습니다 [DISM 명령줄 옵션](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-operating-system-package-servicing-command-line-options)합니다.
+     사용 하 여 요청 시 패키지에 개별적으로 가져온 기능을 설치할 수 있습니다 [DISM 명령줄 옵션](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-operating-system-package-servicing-command-line-options)합니다.
 
 ### <a name="wsus-database-requirements"></a>WSUS 데이터베이스 요구 사항
 WSUS를 사용하려면 다음 데이터베이스 중 하나가 필요합니다.
@@ -319,7 +319,7 @@ WSUS 구성 마법사의 **언어 선택** 페이지에서 모든 언어 또는 
 > [!NOTE]
 > 다운스트림 서버에서 업스트림 서버와 같은 언어를 다운로드하려고 하더라도 이 작업을 수행해야 합니다.
 
-2.  업스트림 서버가 모든 언어의 업데이트 파일을 다운로드하도록 구성된 경우: WSUS 구성 마법사에서 **업스트림 서버에서 지원되는 모든 언어의 업데이트 다운로드**를 클릭합니다.
+2. 업스트림 서버가 모든 언어의 업데이트 파일을 다운로드하도록 구성된 경우: WSUS 구성 마법사에서 **업스트림 서버에서 지원되는 모든 언어의 업데이트 다운로드**를 클릭합니다.
 
 > [!NOTE]
 > 다운스트림 서버에서 업스트림 서버와 같은 언어를 다운로드하려고 하더라도 이 작업을 수행해야 합니다. 이 설정을 선택하면 업스트림 서버는 원래 업스트림 서버에 대해 구성되지 않았던 언어를 포함하여 모든 언어의 업데이트를 다운로드합니다. 업스트림 서버에 언어를 추가할 경우 새 업데이트를 복제 서버에 복사해야 합니다.
@@ -347,13 +347,13 @@ WSUS에서는 클라이언트 컴퓨터 그룹을 대상으로 하는 업데이�
 ### <a name="conflict-resolution"></a>충돌해결
 서버는 다음 규칙을 적용하여 충돌을 해결하고 클라이언트에 결과로 나타나는 작업을 결정합니다.
 
-1.  우선 순위
+1.  Priority
 
 2.  설치/제거
 
 3.  기한
 
-#### <a name="priority"></a>우선 순위
+#### <a name="priority"></a>Priority
 우선 순위가 가장 높은 그룹과 관련된 작업은 다른 그룹의 작업을 재정의합니다. 그룹의 계층 구조 내에서 그룹이 더 높은 곳에 표시될수록 우선 순위가 더 높습니다. 우선 순위는 깊이에 따라서만 할당되며, 모든 분기의 우선 순위가 같습니다. 예를 들어 데스크톱 분기에서 두 수준 아래의 그룹은 서버 분기에서 한 수준 아래의 그룹보다 우선 순위가 높습니다.
 
 다음 텍스트 예에서 Update Services 콘솔 계층 구조 창 WSUS-01 이라는 wsus 컴퓨터 그룹 명명 된 데스크톱 컴퓨터와 서버 기본값에 추가 되었습니다 **모든 컴퓨터** 그룹입니다. 데스크톱 컴퓨터 및 서버 그룹 모두 동일한 계층 수준에 있습니다.
