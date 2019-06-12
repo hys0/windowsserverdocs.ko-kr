@@ -12,12 +12,12 @@ ms.assetid: d9f18b29-8e03-439e-bdf0-1dac5e4f70c5
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 1545189732194ad5c0aba401f834b0102799e016
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e5bcdd58f4d88f7a555151d755bf427ecc9b5108
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59890194"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66433003"
 ---
 # <a name="demote-and-remove-the-source-server-from-the-new-windows-server-essentials-network1"></a>수준 내리기 및 새 Windows Server Essentials 네트워크 1에서 원본 서버를 제거 합니다.
 
@@ -56,26 +56,26 @@ Windows Server Essentials 설치를 완료 하 고 마이그레이션 마법사�
   
 ##### <a name="to-uninstall-exchange-server-2003-from-the-source-server"></a>원본 서버에서 Exchange Server 2003을 제거 하려면  
   
-1.  관리자로 원본 서버에 로그온합니다.  
+1. 관리자로 원본 서버에 로그온합니다.  
   
-2.  **시작**, **제어판**, **프로그램 추가/제거**를 차례로 클릭합니다.  
+2. **시작**, **제어판**, **프로그램 추가/제거**를 차례로 클릭합니다.  
   
-3.  프로그램 목록에서 선택 **Windows Small Business Server 2003**를 클릭 하 고 **변경/제거**합니다.  
+3. 프로그램 목록에서 선택 **Windows Small Business Server 2003**를 클릭 하 고 **변경/제거**합니다.  
   
-4.  설치 마법사에서 **구성 요소 선택** 페이지가 나타날 때까지 **다음**을 클릭합니다.  
+4. 설치 마법사에서 **구성 요소 선택** 페이지가 나타날 때까지 **다음**을 클릭합니다.  
   
-5.  구성 요소 선택 페이지에서 **Exchange Server**를 확장하고 **제거**를 선택합니다.  
+5. 구성 요소 선택 페이지에서 **Exchange Server**를 확장하고 **제거**를 선택합니다.  
   
-    > [!NOTE]
+   > [!NOTE]
+   > 
+   >  Exchange Server에서는 서버에 사서함 또는 공용 폴더가 없는지 확인합니다. 데이터가 남아 있으면 **제거**를 클릭할 때 오류 메시지가 나타납니다. 이 문제를 방지 하려면 항목의 절차를 모두 완료 했다고 [이동 SBS 2003 설정 및 데이터를 대상 서버로](Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md)입니다.  
+   > 
+   >  Exchange Server에서는 서버에 사서함 또는 공용 폴더가 없는지 확인합니다. 데이터가 남아 있으면 **제거**를 클릭할 때 오류 메시지가 나타납니다. 이 문제를 방지 하려면 항목의 절차를 모두 완료 했다고 [이동 SBS 2003 설정 및 데이터를 대상 서버로](../migrate/Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md)입니다.  
 
-    >  Exchange Server에서는 서버에 사서함 또는 공용 폴더가 없는지 확인합니다. 데이터가 남아 있으면 **제거**를 클릭할 때 오류 메시지가 나타납니다. 이 문제를 방지 하려면 항목의 절차를 모두 완료 했다고 [이동 SBS 2003 설정 및 데이터를 대상 서버로](Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md)입니다.  
-
-    >  Exchange Server에서는 서버에 사서함 또는 공용 폴더가 없는지 확인합니다. 데이터가 남아 있으면 **제거**를 클릭할 때 오류 메시지가 나타납니다. 이 문제를 방지 하려면 항목의 절차를 모두 완료 했다고 [이동 SBS 2003 설정 및 데이터를 대상 서버로](../migrate/Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md)입니다.  
-
   
-6.  **다음**을 클릭합니다.  
+6. **다음**을 클릭합니다.  
   
-7.  메시지가 표시 되 면 Windows Small Business Server 2003 cd#3을 넣고 화면의 지침을 따릅니다.  
+7. 메시지가 표시 되 면 Windows Small Business Server 2003 cd#3을 넣고 화면의 지침을 따릅니다.  
   
 ###  <a name="BKMK_PhysicallyDisconnect"></a> 원본 서버에 직접 연결 된 프린터 연결 끊기  
  원본 서버에서 수준을 내리기 전에 원본 서버에 직접 연결되거나 원본 서버를 통해 공유되는 모든 프린터의 연결을 실제로 끊습니다. 원본 서버에 직접 연결된 프린터에 대한 Active Directory 개체가 남아 있는지 확인합니다. 프린터 수 다음 직접 대상 서버에 연결 되며 Windows Server Essentials에서 공유 합니다.  
@@ -98,22 +98,22 @@ Windows Server Essentials 설치를 완료 하 고 마이그레이션 마법사�
   
 ##### <a name="to-demote-the-source-server"></a>원본 서버 수준을 내리려면  
   
-1.  원본 서버에서 **시작**, **실행**을 차례로 클릭하고 **dcpromo**를 입력하고 나서 **확인**을 클릭합니다.  
+1. 원본 서버에서 **시작**, **실행**을 차례로 클릭하고 **dcpromo**를 입력하고 나서 **확인**을 클릭합니다.  
   
-2.  **다음** 을 두 번 클릭합니다.  
+2. **다음** 을 두 번 클릭합니다.  
   
-    > [!NOTE]
-    >  **이 서버가 도메인의 마지막 도메인 컨트롤러입니다.** 를 선택하지 않습니다.  
+   > [!NOTE]
+   >  **이 서버가 도메인의 마지막 도메인 컨트롤러입니다.** 를 선택하지 않습니다.  
   
-3.  서버에서 새 관리자 계정의 암호를 입력하고 **다음**을 클릭합니다.  
+3. 서버에서 새 관리자 계정의 암호를 입력하고 **다음**을 클릭합니다.  
   
-4.  에 **요약** 대화 상자는 AD DS 컴퓨터에서 제거 되 고 서버 도메인의 구성원이 될 것임을 알 수 있습니다. **다음**을 클릭합니다.  
+4. 에 **요약** 대화 상자는 AD DS 컴퓨터에서 제거 되 고 서버 도메인의 구성원이 될 것임을 알 수 있습니다. **다음**을 클릭합니다.  
   
-5.  **마침**을 클릭합니다. 원본 서버가 다시 시작됩니다.  
+5. **마침**을 클릭합니다. 원본 서버가 다시 시작됩니다.  
   
-6.  원본 서버가 다시 시작되고 나면 네트워크에서 연결을 끊기 전에 원본 서버를 작업 그룹의 구성원으로 추가합니다.  
+6. 원본 서버가 다시 시작되고 나면 네트워크에서 연결을 끊기 전에 원본 서버를 작업 그룹의 구성원으로 추가합니다.  
   
- 원본 서버를 작업 그룹의 구성원으로 추가하고 네트워크에서 연결을 끊고 나서 대상 서버의 AD DS에서 원본 서버를 제거해야 합니다.  
+   원본 서버를 작업 그룹의 구성원으로 추가하고 네트워크에서 연결을 끊고 나서 대상 서버의 AD DS에서 원본 서버를 제거해야 합니다.  
   
 ##### <a name="to-remove-the-source-server-from-active-directory"></a>Active Directory에서 원본 서버를 제거하려면  
   
@@ -128,9 +128,9 @@ Windows Server Essentials 설치를 완료 하 고 마이그레이션 마법사�
 ###  <a name="BKMK_MoveTheDHCPRole"></a> 원본 서버에서 DHCP 서버 역할을 라우터로 이동  
   
 > [!NOTE]
-
+> 
 >  마이그레이션 프로세스를 시작하기 전에 이미 이 작업을 수행했으면 [원본 서버 제거 및 용도 변경](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_RemoveTheSourceServer) 섹션을 계속 진행합니다.  
-
+> 
 >  마이그레이션 프로세스를 시작하기 전에 이미 이 작업을 수행했으면 [원본 서버 제거 및 용도 변경](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_RemoveTheSourceServer) 섹션을 계속 진행합니다.  
 
   

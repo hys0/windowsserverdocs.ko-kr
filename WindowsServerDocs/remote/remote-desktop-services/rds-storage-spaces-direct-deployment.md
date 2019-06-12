@@ -13,16 +13,16 @@ author: haley-rowland
 ms.author: harowl
 ms.date: 07/17/2018
 manager: scottman
-ms.openlocfilehash: 8af3a389ec726bbb5ebd62db57d9b3a9861ac63f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 792c9320f6976a4fc7f2ccd235f66daa0cb19b19
+ms.sourcegitcommit: d888e35f71801c1935620f38699dda11db7f7aad
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59890964"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66805191"
 ---
 # <a name="deploy-a-two-node-storage-spaces-direct-scale-out-file-server-for-upd-storage-in-azure"></a>Azure에서 UPD 저장소에 대 한 2 노드 저장소 공간 다이렉트 스케일 아웃 파일 서버 배포
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016
 
 원격 데스크톱 서비스 (RDS) 사용자 프로필 디스크 (Upd)에 대 한 도메인에 가입 된 파일 서버가 필요합니다. Azure에서 고가용성 도메인에 가입 된 스케일 아웃 파일 서버 (SOFS)를 배포 하려면 Windows Server 2016 저장소 공간 다이렉트를 사용 합니다. Upd 또는 원격 데스크톱 서비스에 잘 알고 아닐 경우 체크 아웃 [원격 데스크톱 서비스를 시작](welcome-to-rds.md)합니다.
 
@@ -66,7 +66,7 @@ DS 시리즈 Vm 및 프리미엄 저장소 데이터 디스크를 사용 하 여
       - 자동으로 생성 된 VNet을 사용 합니다.
       - AD DS를 설치 하는 단계를 수행 합니다.
 5. 파일 서버 클러스터 노드를 설정 합니다. 배포 하 여 이렇게 합니다 [Windows Server 2016 저장소 공간 다이렉트 SOFS 클러스터 Azure 템플릿](https://azure.microsoft.com/resources/templates/301-storage-spaces-direct/) 또는 수동으로 배포 하려면 6 ~ 11 단계를 수행 하 여 합니다.
-5. 파일 서버 클러스터 노드를 수동으로 설정 합니다.
+6. 파일 서버 클러스터 노드를 수동으로 설정 합니다.
    1. 첫 번째 노드를 만듭니다. 
       1. Windows Server 2016 이미지를 사용 하 여 새 가상 컴퓨터를 만듭니다. (클릭 **새로 만들기 > 가상 컴퓨터 > Windows Server 2016 합니다.** 선택 **리소스 관리자**, 를 클릭 하 고 **만들기**.)
       2. 기본 구성을 다음과 같이 설정 합니다.
@@ -80,59 +80,59 @@ DS 시리즈 Vm 및 프리미엄 저장소 데이터 디스크를 사용 하 여
    2. 두 번째 노드를 만듭니다. 다음 변경 내용으로 위의 단계를 반복 합니다.
       - -Fsn2 이름: 내
       - 고가용성-가용성 집합을 선택이 만듭니다.  
-6. [데이터 디스크 연결](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-attach-disk-portal/) 사용자에 따라 클러스터 노드 Vm에 (처럼 위의 표에) 필요 합니다. 후 데이터 디스크를 만들고 VM에 연결 된 설정 **호스트 캐싱** 하 **None**합니다.
-7. 모든 Vm에 대 한 IP 주소를 설정 **정적**합니다. 
+7. [데이터 디스크 연결](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-attach-disk-portal/) 사용자에 따라 클러스터 노드 Vm에 (처럼 위의 표에) 필요 합니다. 후 데이터 디스크를 만들고 VM에 연결 된 설정 **호스트 캐싱** 하 **None**합니다.
+8. 모든 Vm에 대 한 IP 주소를 설정 **정적**합니다. 
    1. 리소스 그룹에서 VM을 선택 하 고 클릭 한 다음 **네트워크 인터페이스** (아래 **설정을**). 표시 되는 네트워크 인터페이스를 선택 하 고 클릭 한 다음 **IP 구성을**합니다. 나열 된 IP 구성을 선택, 선택 **정적**, 를 클릭 하 고 **저장**합니다.
    2. 도메인 컨트롤러 내-dc (예를 들어) 개인 IP 주소 (10.x.x.x) note 합니다.
-8. 내 dc 서버에 클러스터 노드 Vm의 Nic에 기본 DNS 서버 주소를 설정 합니다. VM을 선택한 다음 클릭 **네트워크 인터페이스 > DNS 서버 > 사용자 지정 DNS**합니다. 위에 설명 된 개인 IP 주소를 입력 한 다음 클릭 **저장할**합니다.
-9. 만들기는 [Azure 저장소 계정을 클라우드 감시](https://docs.microsoft.com/windows-server/failover-clustering/deploy-cloud-witness)합니다. (링크 된 지침을 사용 하는 경우 중지 됨 "구성 클라우드 미러링 모니터 서버와 장애 조치 클러스터 관리자 GUI"에 도달할 때 해당 단계 아래 작업을 수행 합니다.)
-10. 저장소 공간 다이렉트 파일 서버를 설정 합니다. 노드 VM에 연결한 다음 Windows PowerShell cmdlet을 실행 합니다.
-   1. 두 개의 파일 서버 클러스터 노드 Vm에 장애 조치 클러스터링 기능 및 파일 서버 기능을 설치 합니다.
+9. 내 dc 서버에 클러스터 노드 Vm의 Nic에 기본 DNS 서버 주소를 설정 합니다. VM을 선택한 다음 클릭 **네트워크 인터페이스 > DNS 서버 > 사용자 지정 DNS**합니다. 위에 설명 된 개인 IP 주소를 입력 한 다음 클릭 **저장할**합니다.
+10. 만들기는 [Azure 저장소 계정을 클라우드 감시](https://docs.microsoft.com/windows-server/failover-clustering/deploy-cloud-witness)합니다. (링크 된 지침을 사용 하는 경우 중지 됨 "구성 클라우드 미러링 모니터 서버와 장애 조치 클러스터 관리자 GUI"에 도달할 때 해당 단계 아래 작업을 수행 합니다.)
+11. 저장소 공간 다이렉트 파일 서버를 설정 합니다. 노드 VM에 연결한 다음 Windows PowerShell cmdlet을 실행 합니다.
+    1. 두 개의 파일 서버 클러스터 노드 Vm에 장애 조치 클러스터링 기능 및 파일 서버 기능을 설치 합니다.
 
-      ```powershell
-      $nodes = ("my-fsn1", "my-fsn2")
-      icm $nodes {Install-WindowsFeature Failover-Clustering -IncludeAllSubFeature -IncludeManagementTools} 
-      icm $nodes {Install-WindowsFeature FS-FileServer} 
-      ```
-   2. 클러스터 노드 Vm을 확인 하 고 2-노드 SOFS 클러스터를 만듭니다.
+       ```powershell
+       $nodes = ("my-fsn1", "my-fsn2")
+       icm $nodes {Install-WindowsFeature Failover-Clustering -IncludeAllSubFeature -IncludeManagementTools} 
+       icm $nodes {Install-WindowsFeature FS-FileServer} 
+       ```
+    2. 클러스터 노드 Vm을 확인 하 고 2-노드 SOFS 클러스터를 만듭니다.
 
-      ```powershell
-      Test-Cluster -node $nodes
-      New-Cluster -Name MY-CL1 -Node $nodes –NoStorage –StaticAddress [new address within your addr space]
-      ``` 
-   3. 클라우드 미러링 모니터 서버를 구성 합니다. 클라우드 미러링 모니터 서버 저장소 계정 이름과 액세스 키를 사용 합니다.
+       ```powershell
+       Test-Cluster -node $nodes
+       New-Cluster -Name MY-CL1 -Node $nodes –NoStorage –StaticAddress [new address within your addr space]
+       ``` 
+    3. 클라우드 미러링 모니터 서버를 구성 합니다. 클라우드 미러링 모니터 서버 저장소 계정 이름과 액세스 키를 사용 합니다.
 
-      ```powershell
-      Set-ClusterQuorum –CloudWitness –AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey> 
-      ```
-   4. 저장소 공간을 직접 사용 하도록 설정 합니다.
+       ```powershell
+       Set-ClusterQuorum –CloudWitness –AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey> 
+       ```
+    4. 저장소 공간을 직접 사용 하도록 설정 합니다.
 
-      ```powershell
-      Enable-ClusterS2D 
-      ```
+       ```powershell
+       Enable-ClusterS2D 
+       ```
       
-   5. 가상 디스크 볼륨을 만듭니다.
+    5. 가상 디스크 볼륨을 만듭니다.
 
-      ```powershell
-      New-Volume -StoragePoolFriendlyName S2D* -FriendlyName VDisk01 -FileSystem CSVFS_REFS -Size 120GB 
-      ```
-      SOFS 클러스터에서 클러스터 공유 볼륨에 대 한 정보를 보려면 다음 cmdlet을 실행 합니다.
+       ```powershell
+       New-Volume -StoragePoolFriendlyName S2D* -FriendlyName VDisk01 -FileSystem CSVFS_REFS -Size 120GB 
+       ```
+       SOFS 클러스터에서 클러스터 공유 볼륨에 대 한 정보를 보려면 다음 cmdlet을 실행 합니다.
 
-      ```powershell
-      Get-ClusterSharedVolume
-      ```
+       ```powershell
+       Get-ClusterSharedVolume
+       ```
    
-   6. 스케일 아웃 파일 서버 (SOFS)를 만듭니다.
+    6. 스케일 아웃 파일 서버 (SOFS)를 만듭니다.
 
-      ```powershell
-      Add-ClusterScaleOutFileServerRole -Name my-sofs1 -Cluster MY-CL1
-      ```
+       ```powershell
+       Add-ClusterScaleOutFileServerRole -Name my-sofs1 -Cluster MY-CL1
+       ```
 
-   7. SOFS 클러스터에서 새로운 SMB 파일 공유를 만듭니다.
+    7. SOFS 클러스터에서 새로운 SMB 파일 공유를 만듭니다.
 
-      ```powershell
-      New-Item -Path C:\ClusterStorage\Volume1\Data -ItemType Directory
-      New-SmbShare -Name UpdStorage -Path C:\ClusterStorage\Volume1\Data
-      ```
+       ```powershell
+       New-Item -Path C:\ClusterStorage\Volume1\Data -ItemType Directory
+       New-SmbShare -Name UpdStorage -Path C:\ClusterStorage\Volume1\Data
+       ```
 
-이제 공유 &#92;\my-sofs1\UpdStorage UPD 저장소에 사용할 수 있는 경우 있습니다 [UPD를 사용 하도록 설정](https://social.technet.microsoft.com/wiki/contents/articles/15304.installing-and-configuring-user-profile-disks-upd-in-windows-server-2012.aspx) 사용자에 대 한 합니다. 
+이제 공유 `\\my-sofs1\UpdStorage`, UPD 저장소에 사용할 수 있는 경우 있습니다 [UPD를 사용 하도록 설정](https://social.technet.microsoft.com/wiki/contents/articles/15304.installing-and-configuring-user-profile-disks-upd-in-windows-server-2012.aspx) 사용자에 대 한 합니다. 

@@ -12,12 +12,12 @@ ms.assetid: c0a8f10d-fd85-4c8d-b9bb-176cb1db1f46
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 6d3303f2c6d84932ad9d5dee8a547cd478447732
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f0a66d0d36a3012369a9bc26c513dad069235ad8
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59864394"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66433788"
 ---
 # <a name="add-entries-to-setup-add-ins-quick-status-and-help-links"></a>설정, 추가 기능, 빠른 상태 및 도움말 링크에 항목 추가
 
@@ -33,111 +33,111 @@ ms.locfileid: "59864394"
   
 ##### <a name="to-define-the-tasks-and-links"></a>작업 및 링크를 정의하려면  
   
-1.  시작 메뉴에서 프로그램을 마우스 오른쪽 단추로 클릭하고 **관리자 권한으로 실행**을 선택하여 관리자로 Visual Studio 2010 이상을 엽니다.  
+1. 시작 메뉴에서 프로그램을 마우스 오른쪽 단추로 클릭하고 **관리자 권한으로 실행**을 선택하여 관리자로 Visual Studio 2010 이상을 엽니다.  
   
-2.  **파일**, **새로 만들기**를 차례로 클릭한 다음 **프로젝트**를 클릭합니다.  
+2. **파일**, **새로 만들기**를 차례로 클릭한 다음 **프로젝트**를 클릭합니다.  
   
-3.  **템플릿** 창에서 **클래스 라이브러리**를 클릭하고 **이름** 상자에 **OEMHomePageContent** 를 입력한 다음 **확인**을 클릭합니다.  
+3. **템플릿** 창에서 **클래스 라이브러리**를 클릭하고 **이름** 상자에 **OEMHomePageContent** 를 입력한 다음 **확인**을 클릭합니다.  
   
-4.  Class1.cs 파일을 삭제합니다.  
+4. Class1.cs 파일을 삭제합니다.  
   
-5.  새 프로젝트를 마우스 오른쪽 단추로 클릭하고, **추가**를 클릭한 다음 **새 항목**을 클릭합니다.  
+5. 새 프로젝트를 마우스 오른쪽 단추로 클릭하고, **추가**를 클릭한 다음 **새 항목**을 클릭합니다.  
   
-6.  **템플릿** 창에서 **XML 파일**을 클릭하고 **이름** 상자에 **OEMHomePageContent.home** 을 입력한 다음 **추가**를 클릭합니다.  
+6. **템플릿** 창에서 **XML 파일**을 클릭하고 **이름** 상자에 **OEMHomePageContent.home** 을 입력한 다음 **추가**를 클릭합니다.  
   
-    > [!NOTE]
-    >  XML 파일을 리소스 파일 없이 설치하는 경우 파일 이름이 OEMHomePageContent.home이어야 합니다. 어셈블리에 포함된 경우 확장자가 .home이면 어떤 이름을 설정해도 됩니다.  
+   > [!NOTE]
+   >  XML 파일을 리소스 파일 없이 설치하는 경우 파일 이름이 OEMHomePageContent.home이어야 합니다. 어셈블리에 포함된 경우 확장자가 .home이면 어떤 이름을 설정해도 됩니다.  
   
-7.  OEMHomePageContent.home 파일에 다음 XML 코드를 추가합니다.  
+7. OEMHomePageContent.home 파일에 다음 XML 코드를 추가합니다.  
   
-    ```  
+   ```  
   
-    <Tasks version=?2.0? xmlns=?https://schemas.microsoft.com/WindowsServerSolutions/2010/01/Dashboard>  
-       <SetupMyServerTasks>  
-          <Task name="MyTask"  
-             description="MyTaskDescription"  
-             id="GUID">  
-                  <Action   
-                  name=?MyAction1Name?   
-                  image=?IconForAction1?  
-                  type=?TaskType?  
-                  exelocation=?ActionExeLocation? />  
-                  <Action   
-                  name=?MyAction2Name?   
-                  image=?IconForAction2?  
-                  type=?TaskType?  
-                  exelocation=?ActionExeLocation? />  
-                   ¦  
-           </Task>  
-                   ¦  
-        </SetupMyServerTasks>  
-    <MailServiceTasks>  
-         <!-- Same schema as in œSetupMyServerTasks? but the tasks are shown in œConnect to Email Service? category. -->  
-    </MailServiceTasks>  
-    <LineOfBusinessTasks>  
-         <!-- Same schema as in œSetupMyServerTasks? but the tasks are shown in œAdd-ins? category. -->  
+   <Tasks version=?2.0? xmlns=?https://schemas.microsoft.com/WindowsServerSolutions/2010/01/Dashboard>  
+      <SetupMyServerTasks>  
+         <Task name="MyTask"  
+            description="MyTaskDescription"  
+            id="GUID">  
+                 <Action   
+                 name=?MyAction1Name?   
+                 image=?IconForAction1?  
+                 type=?TaskType?  
+                 exelocation=?ActionExeLocation? />  
+                 <Action   
+                 name=?MyAction2Name?   
+                 image=?IconForAction2?  
+                 type=?TaskType?  
+                 exelocation=?ActionExeLocation? />  
+                  ¦  
+          </Task>  
+                  ¦  
+       </SetupMyServerTasks>  
+   <MailServiceTasks>  
+        <!-- Same schema as in œSetupMyServerTasks? but the tasks are shown in œConnect to Email Service? category. -->  
+   </MailServiceTasks>  
+   <LineOfBusinessTasks>  
+        <!-- Same schema as in œSetupMyServerTasks? but the tasks are shown in œAdd-ins? category. -->  
   
-    <GetQuickStatusTasks>  
-          <Task name="MyQuickStatusTask1"  
-             description="MyQuickStatusTask1Desc   "  
-             id="GUID"  
-             assembly="AssemblyName of quick status query implementation"  
-             class="ClassName of quick status query implementation"           
-             replaceid="GUID"/>  
-               <!--  Same schema as Actions in œSetupMyServerTasks? -->   
-             </Task>  
-    </GetQuickStatusTasks>  
-       <Links>  
-          <Link  
-             ID=?GUID?  
-             Title="Displayed text of the link"  
-             Description="A very short description"  
-             ShellExecPath="Path to the application or URL"/>  
-       </Links>  
-    </Tasks>  
-    ```  
+   <GetQuickStatusTasks>  
+         <Task name="MyQuickStatusTask1"  
+            description="MyQuickStatusTask1Desc   "  
+            id="GUID"  
+            assembly="AssemblyName of quick status query implementation"  
+            class="ClassName of quick status query implementation"           
+            replaceid="GUID"/>  
+              <!--  Same schema as Actions in œSetupMyServerTasks? -->   
+            </Task>  
+   </GetQuickStatusTasks>  
+      <Links>  
+         <Link  
+            ID=?GUID?  
+            Title="Displayed text of the link"  
+            Description="A very short description"  
+            ShellExecPath="Path to the application or URL"/>  
+      </Links>  
+   </Tasks>  
+   ```  
   
-     각 항목이 나타내는 의미는 다음과 같습니다.  
+    각 항목이 나타내는 의미는 다음과 같습니다.  
   
-    |attribute|설명|  
-    |---------------|-----------------|  
-    |Name (Task)|목록에서 작업에 대해 표시되는 이름입니다. 포함 리소스 파일을 만들 경우 이 특성 값이 문자열 리소스가 됩니다.|  
-    |description (Task)|작업에 대한 설명입니다. 포함 리소스 파일을 만들 경우 이 특성 값이 문자열 리소스가 됩니다.|  
-    |id (Task)|작업의 식별자입니다. 이 식별자는 GUID여야 합니다. **exe** 작업에 대해 새 GUID를 만들지만 **글로벌** 작업의 경우 하위 탭의 작업 창에서 작업을 정의할 때 만든 GUID를 사용합니다. GUID 만들기에 대 한 자세한 내용은 참조 하세요. [Guid 만들기 (guidgen.exe)](https://go.microsoft.com/fwlink/?LinkId=116098)합니다.|  
-    |이미지|이 필드를 무시합니다.|  
-    |Name (Action)|작업 이름을 표시합니다.|  
-    |Type (Action)|작업 유형을 설명합니다. 작업은 **전역** 작업, **exe** 또는 URL 작업 중 하나가 될 수 있습니다. **전역** 작업은 하위 탭의 작업 창에서 작업을 정의할 때 만든 것과 동일한 전역 작업입니다. 하위 탭의 두 작업 창과 홈페이지의 시작 작업 또는 일반 작업 목록에 사용할 수 있는 전역 작업을 만드는 방법에 대 한 자세한 내용은 지원 클래스를 참조 하십시오 œCreating? œHow에: 하위 탭 만들기 [Windows Server Solutions SDK](https://go.microsoft.com/fwlink/?LinkID=248648)합니다. **exe** 작업은 시작 작업 또는 일반 작업 목록에서 응용 프로그램을 실행하는 데 사용할 수 있습니다.|  
-    |exelocation|작업과 관련된 응용 프로그램 경로입니다. 이 특성은 **exe** 작업에 대해서만 사용됩니다.|  
-    |replaceid|이 작업으로 바꿀 작업의 식별자입니다.|  
-    |어셈블리(assembly)|빠른 상태 쿼리를 구현할 클래스를 제공하는 어셈블리의 어셈블리 이름입니다. 어셈블리 Program files\ windows server\bin에 위치 해야\\합니다.|  
-    |class|클래스의 이름은 빠른 상태 쿼리를 구현합니다. 클래스는 **ITaskStatusQuery** 인터페이스를 구현해야 합니다.|  
-    |Title (link)|링크에 대해 표시되는 텍스트입니다. 포함 리소스 파일을 만들 경우 이 특성 값이 문자열 리소스가 됩니다.|  
-    |Description (link)|링크 대상에 대한 설명입니다. 포함 리소스 파일을 만들 경우 이 특성 값이 문자열 리소스가 됩니다.|  
-    |ShellExecPath|응용 프로그램 또는 URL 경로입니다.<br /><br /> **참고:** 환경 변수는 ShellExecPath 특성에서 지원됩니다.|  
+   |attribute|설명|  
+   |---------------|-----------------|  
+   |Name (Task)|목록에서 작업에 대해 표시되는 이름입니다. 포함 리소스 파일을 만들 경우 이 특성 값이 문자열 리소스가 됩니다.|  
+   |description (Task)|작업에 대한 설명입니다. 포함 리소스 파일을 만들 경우 이 특성 값이 문자열 리소스가 됩니다.|  
+   |id (Task)|작업의 식별자입니다. 이 식별자는 GUID여야 합니다. **exe** 작업에 대해 새 GUID를 만들지만 **글로벌** 작업의 경우 하위 탭의 작업 창에서 작업을 정의할 때 만든 GUID를 사용합니다. GUID 만들기에 대 한 자세한 내용은 참조 하세요. [Guid 만들기 (guidgen.exe)](https://go.microsoft.com/fwlink/?LinkId=116098)합니다.|  
+   |image|이 필드를 무시합니다.|  
+   |Name (Action)|작업 이름을 표시합니다.|  
+   |Type (Action)|작업 유형을 설명합니다. 작업은 **전역** 작업, **exe** 또는 URL 작업 중 하나가 될 수 있습니다. **전역** 작업은 하위 탭의 작업 창에서 작업을 정의할 때 만든 것과 동일한 전역 작업입니다. 하위 탭의 두 작업 창과 홈페이지의 시작 작업 또는 일반 작업 목록에 사용할 수 있는 전역 작업을 만드는 방법에 대 한 자세한 내용은 지원 클래스를 참조 하십시오 œCreating? œHow에: 하위 탭 만들기 [Windows Server Solutions SDK](https://go.microsoft.com/fwlink/?LinkID=248648)합니다. **exe** 작업은 시작 작업 또는 일반 작업 목록에서 응용 프로그램을 실행하는 데 사용할 수 있습니다.|  
+   |exelocation|작업과 관련된 응용 프로그램 경로입니다. 이 특성은 **exe** 작업에 대해서만 사용됩니다.|  
+   |replaceid|이 작업으로 바꿀 작업의 식별자입니다.|  
+   |어셈블리(assembly)|빠른 상태 쿼리를 구현할 클래스를 제공하는 어셈블리의 어셈블리 이름입니다. 어셈블리 Program files\ windows server\bin에 위치 해야\\합니다.|  
+   |class|클래스의 이름은 빠른 상태 쿼리를 구현합니다. 클래스는 **ITaskStatusQuery** 인터페이스를 구현해야 합니다.|  
+   |Title (link)|링크에 대해 표시되는 텍스트입니다. 포함 리소스 파일을 만들 경우 이 특성 값이 문자열 리소스가 됩니다.|  
+   |Description (link)|링크 대상에 대한 설명입니다. 포함 리소스 파일을 만들 경우 이 특성 값이 문자열 리소스가 됩니다.|  
+   |ShellExecPath|응용 프로그램 또는 URL 경로입니다.<br /><br /> **참고:** 환경 변수는 ShellExecPath 특성에서 지원됩니다.|  
   
-     다음 코드 예제에서는 응용 프로그램에 대한 링크를 정의하는 방법을 보여 줍니다.  
+    다음 코드 예제에서는 응용 프로그램에 대한 링크를 정의하는 방법을 보여 줍니다.  
   
-    ```  
-    <Links>  
-       <Link Title="Calc" Description="Launches Calc" ShellExecPath="%windir%\system32\calc.exe" />  
-    </Links>  
-    ```  
+   ```  
+   <Links>  
+      <Link Title="Calc" Description="Launches Calc" ShellExecPath="%windir%\system32\calc.exe" />  
+   </Links>  
+   ```  
   
-     다음 코드 예제에서는 웹 페이지에 대한 링크를 정의하는 방법을 보여 줍니다.  
+    다음 코드 예제에서는 웹 페이지에 대한 링크를 정의하는 방법을 보여 줍니다.  
   
-    ```  
-    <Links>  
-       <Link Title="Browser" Description="Open browser" ShellExecPath="http://www.adventureworks.com/" />  
-    </Links>  
-    ```  
+   ```  
+   <Links>  
+      <Link Title="Browser" Description="Open browser" ShellExecPath="http://www.adventureworks.com/" />  
+   </Links>  
+   ```  
   
-8.  작업 또는 링크를 나타내는 특성 값을 변경합니다.  
+8. 작업 또는 링크를 나타내는 특성 값을 변경합니다.  
   
 9. **솔루션 탐색기**에서 **OEMHomePageContent.home**을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  **속성** 창의 **빌드 작업**에서 **포함 리소스**를 선택합니다.  
   
 10. OEMHomePageContent.home 파일을 저장합니다.  
   
- 빠른 상태 쿼리 구현 방법은 [Windows Server Solutions SDK](https://go.microsoft.com/fwlink/?LinkID=248648)의 문서와 샘플을 참조하세요.  
+    빠른 상태 쿼리 구현 방법은 [Windows Server Solutions SDK](https://go.microsoft.com/fwlink/?LinkID=248648)의 문서와 샘플을 참조하세요.  
   
 #### <a name="change-the-status-of-a-setupadd-ins-task"></a>설정/추가 기능 작업 상태 변경  
  설정 및 추가 기능에 열거된 작업은 완료된 상태(추가 기능으로 구성됨) 및 완료되지 않은 상태(추가 기능으로 구성되지 않음)로 토글할 수 있습니다.  

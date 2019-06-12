@@ -14,12 +14,12 @@ author: jaimeo
 ms.author: jaimeo
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: 796ee001e20cff5587c5409f7571d223ff7900a8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 299cf420b44e4a15985d00489edf84784316540d
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59857944"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66810579"
 ---
 # <a name="upgrade-and-conversion-options-for-windows-server-2016"></a>Windows Server 2016에 대한 업그레이드 및 변환 옵션
 
@@ -109,7 +109,8 @@ Windows Server 2016 Standard 평가판을 Windows Server 2016 Standard(일반 �
 
 Windows Server 2016 Standard 평가판의 경우 동일한 명령 및 적절한 제품 키를 사용하여 한 번에 Windows Server 2016 Datacenter 일반 정품으로 전환할 수 있습니다.
 
-> Dism.exe에 대한 자세한 내용은 [DISM 명령줄 옵션](https://go.microsoft.com/fwlink/?LinkId=192466)을 참조하세요.
+> [!TIP] 
+> Dism.exe에 대 한 자세한 내용은 참조 하세요. [DISM 명령줄 옵션](https://go.microsoft.com/fwlink/?LinkId=192466)합니다.
 
 ## <a name="converting-a-current-retail-edition-to-a-different-current-retail-edition"></a>현재 일반 정품 버전을 다른 현재 일반 정품 버전으로 변환
 
@@ -125,7 +126,3 @@ Windows Server 2016을 설치한 후 언제든지 일반 정품 버전, 볼륨 �
 이렇게 하려면 관리자 권한 명령 프롬프트에서 **slmgr /ipk \<key\>** 를 실행합니다.
 
 여기서 \<key\>는 적절한 볼륨 라이선스, 일반 정품 또는 OEM 제품 키입니다.
-
-
- 
-

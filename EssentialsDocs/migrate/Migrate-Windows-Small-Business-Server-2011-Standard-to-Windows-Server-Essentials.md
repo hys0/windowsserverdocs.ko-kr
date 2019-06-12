@@ -12,12 +12,12 @@ ms.assetid: c8325f87-fd79-471b-bf70-3f052692c383
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 5ee0dd816354cb5acc31305de39062e558af1146
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e16026b897a24c15e7a0506fe9e64c688bf363b6
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59842764"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66432806"
 ---
 # <a name="migrate-windows-small-business-server-2011-standard-to-windows-server-essentials"></a>Windows Small Business Server 2011 Standard에서 Windows Server Essentials로 마이그레이션
 
@@ -27,11 +27,11 @@ ms.locfileid: "59842764"
   
 > [!NOTE]
 >  마이그레이션하는 동안 문제를 방지 하려면 Windows Server Essentials 제품 개발 팀의 마이그레이션을 시작 하기 전에이 문서를 읽기을 적극 권장 합니다.  
-  
+> 
 > [!NOTE]
-
+> 
 >  서버 데이터를 Windows Server Essentials의 최신 버전을 마이그레이션하려면 [Windows Server Essentials로 마이그레이션](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md)합니다.  
-
+> 
 >  서버 데이터를 Windows Server Essentials의 최신 버전을 마이그레이션하려면 [Windows Server Essentials로 마이그레이션](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md)합니다.  
 
   

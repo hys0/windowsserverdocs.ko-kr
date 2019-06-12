@@ -9,12 +9,12 @@ ms.date: 08/17/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: f3719277c80eae2bf2a4d923146920d17546601d
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 97e1fa441c5fe4fb7d23743387392732663326de
+ms.sourcegitcommit: cd12ace92e7251daaa4e9fabf1d8418632879d38
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66188733"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66501593"
 ---
 # <a name="ad-fs-single-sign-on-settings"></a>AD FS Single Sign On 설정
 
@@ -56,7 +56,7 @@ AD FS에는 여러 유형의 Single Sign-on 환경 지원합니다.
 
 
 ## <a name="ad-fs-2016---single-sign-on-and-authenticated-devices"></a>AD FS 2016-Single Sign-on 및 인증 된 장치
-등록된 된 장치 최대 90 일로 증가는 authenticvation 14 일 이내 (장치 사용량 창)에서 요청자에 게 인증 하는 경우 AD FS 2016을 PSSO를 변경 합니다.
+AD FS 2016 요청자에 게 인증 하는 등록 된 장치 최대 90 일로 증가 하지만 14 일 이내 (장치 사용량 창) 인증을 요구 하는 경우는 PSSO를 변경 합니다.
 를 처음으로 자격 증명을 입력 한 후 기본적으로 등록 된 장치를 사용 하 여 만료 된 Single sign On 최대 90 일 동안 장치가 14 일 마다 한 번 이상 AD FS 리소스에 액세스를 사용 하 여 제공 합니다.  자격 증명을 입력 한 후 15 일을 대기 하는 경우 사용자에 게는 다시 자격 증명에 대 한 메시지가 있습니다.  
 
 영구 SSO는 기본적으로 사용 됩니다. PSSO 쿠키가 없는 비활성화 된 경우 기록 됩니다. |  
@@ -103,23 +103,23 @@ Set-AdfsProperties –KmsiLifetimeMins <Int32\>
 ## <a name="psso-revocation"></a>PSSO 해지  
  보안을 보호 하려면 AD FS에서 다음 조건이 충족 되 면 이전에 발급 된 모든 영구 SSO 쿠키를 거부 합니다. 사용자가 AD FS를 사용 하 여 다시 인증 하기 위해 자격 증명을 제공 해야 합니다. 
   
--   사용자가 암호 변경  
+- 사용자가 암호 변경  
   
--   AD FS에서 영구 SSO 설정은 사용 불가능  
+- AD FS에서 영구 SSO 설정은 사용 불가능  
   
--   장치를 분실 하거나 도난당 한 경우에서 관리자가 사용할 수 있습니다.  
+- 장치를 분실 하거나 도난당 한 경우에서 관리자가 사용할 수 있습니다.  
   
--   AD FS 사용자 등록된 되지만 해당 사용자에 대해 발급 하는 영구 SSO 쿠키를 수신 하거나 장치가 더 이상 등록 되어 있지 않습니다.  
+- AD FS 사용자 등록된 되지만 해당 사용자에 대해 발급 하는 영구 SSO 쿠키를 수신 하거나 장치가 더 이상 등록 되어 있지 않습니다.  
   
--   AD FS 등록된 된 사용자에 대 한 영구 SSO 쿠키를 받지만 사용자 다시 등록 합니다.  
+- AD FS 등록된 된 사용자에 대 한 영구 SSO 쿠키를 받지만 사용자 다시 등록 합니다.  
   
--   "로그인 유지" 하지만 "로그인 유지"의 결과로 발생 하는 영구 SSO 쿠키를 수신 하는 AD FS 설정을 AD FS에서 사용 불가능  
+- "로그인 유지" 하지만 "로그인 유지"의 결과로 발생 하는 영구 SSO 쿠키를 수신 하는 AD FS 설정을 AD FS에서 사용 불가능  
   
--   AD FS는 등록 된 사용자에 대해 발급 하는 영구 SSO 쿠키를 받지만 인증 중 장치 인증서가 없거나 변경  
+- AD FS는 등록 된 사용자에 대해 발급 하는 영구 SSO 쿠키를 받지만 인증 중 장치 인증서가 없거나 변경  
   
--   AD FS 관리자는 영구 SSO에 대 한 마감 시간을 설정 했습니다. 이 구성 되 면 AD FS에서이 시간 전에 발급 된 모든 영구 SSO 쿠키를 거부  
+- AD FS 관리자는 영구 SSO에 대 한 마감 시간을 설정 했습니다. 이 구성 되 면 AD FS에서이 시간 전에 발급 된 모든 영구 SSO 쿠키를 거부  
   
- 차단 시간을 설정 하려면 다음 PowerShell cmdlet을 실행 합니다.  
+  차단 시간을 설정 하려면 다음 PowerShell cmdlet을 실행 합니다.  
   
 
 ``` powershell
@@ -163,7 +163,7 @@ c:[Type == "http://schemas.microsoft.com/2014/03/psso"]
     <th>예</th>
   </tr>
  <tr align="center">
-    <td>SSO = > 새로 고침 토큰 설정 = ></td>
+    <td>SSO=&gt;set Refresh Token=&gt;</td>
     <td>8 시간</td>
     <td>해당 사항 없음</td>
     <td>해당 사항 없음</td>
@@ -174,7 +174,7 @@ c:[Type == "http://schemas.microsoft.com/2014/03/psso"]
   </tr>
 
  <tr align="center">
-    <td>PSSO=>set Refresh Token=></td>
+    <td>PSSO=&gt;set Refresh Token=&gt;</td>
     <td>해당 사항 없음</td>
     <td>24 시간</td>
     <td>7 일</td>

@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: f3e0553b1919a7f9129d47616d0ffb66b6ff48f8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: fe27b61abe196a2148ced18806be904ebd555fcc
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59874444"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66442895"
 ---
 # <a name="directory-services-component-updates"></a>디렉터리 서비스 구성 요소 업데이트
 
@@ -161,12 +161,12 @@ Install-addsforest 또는 Install-addsdomain cmdlet을 사용 하 여 도메인 
 ### <a name="overview"></a>개요  
 LDAP 쿼리 최적화 프로그램은 알고리즘을 다시 평가 되어 더욱 최적화 합니다.  LDAP 검색 효율성 및 복잡 한 쿼리의 LDAP 검색 시간 성능이 향상 됩니다.  
   
-> [!NOTE]  
-> **개발자에서:** LDAP의 매핑의 향상 된 기능을 통해 검색의 성능이 향상 된 ESE 쿼리를 쿼리 합니다.  특정 수준의 복잡성을 넘어 LDAP 필터 선택을 최적화 된 인덱스 (1000 x 이상) 성능이 크게 저하 결과 방지 합니다. 이 문제를 방지 하려면 LDAP 쿼리에 대 한 인덱스를 선택 하는 방법을 변경 하는이 변경 합니다.  
-  
-> [!NOTE]  
+> [!NOTE]
+> <strong>개발자에서:</strong>LDAP의 매핑의 향상 된 기능을 통해 검색의 성능이 향상 된 ESE 쿼리를 쿼리 합니다.  특정 수준의 복잡성을 넘어 LDAP 필터 선택을 최적화 된 인덱스 (1000 x 이상) 성능이 크게 저하 결과 방지 합니다. 이 문제를 방지 하려면 LDAP 쿼리에 대 한 인덱스를 선택 하는 방법을 변경 하는이 변경 합니다.  
+> 
+> [!NOTE]
 > 결과적으로 LDAP 쿼리 최적화 프로그램은 알고리즘의 전체 정비:  
->   
+> 
 > -   검색 시간 단축  
 > -   많은 작업을 수행 하는 Dc를 허용 하는 효율성 향상  
 > -   지원 호출 덜 AD 성능 관련 문제  

@@ -12,12 +12,12 @@ ms.assetid: 48ea6cd4-3955-4aaf-9236-2515a6c3e730
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 8a2310b178663c6ca32a4e07d11656f1aaf2a11b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f5593c21b99f4f8cb22979d5dc201a38e54be84c
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59844414"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66433482"
 ---
 # <a name="install-and-configure-windows-server-essentials-or-windows-server-essentials-experience"></a>Windows Server Essentials 또는 Windows Server 필수 패키지 환경 설치 및 구성
 
@@ -73,28 +73,28 @@ Windows Server Essentials 또는 Essentials Experience 역할을 설치 하기 �
   
 ##### <a name="to-configure-windows-server-essentials-on-a-physical-server"></a>물리적 서버에서 Windows Server Essentials를 구성 하려면  
   
-1.  Windows **시작** 페이지가 표시된 후 **Windows Server Essentials 구성 마법사**가 바탕 화면에 표시됩니다.  
+1. Windows **시작** 페이지가 표시된 후 **Windows Server Essentials 구성 마법사**가 바탕 화면에 표시됩니다.  
   
-2.  다음과 같이 지침에 따라 마법사를 완료합니다.  
+2. 다음과 같이 지침에 따라 마법사를 완료합니다.  
   
-    1.  **Windows Server Essentials 구성** 페이지에서 **다음**을 클릭합니다.  
+   1.  **Windows Server Essentials 구성** 페이지에서 **다음**을 클릭합니다.  
   
-    2.  **시간 설정**에서 날짜, 시간 및 표준 시간대가 올바른지 확인한 후 **다음**을 클릭합니다.  
+   2.  **시간 설정**에서 날짜, 시간 및 표준 시간대가 올바른지 확인한 후 **다음**을 클릭합니다.  
   
-    3.  **회사 정보**에 해당 회사 이름(예: **Contoso,Ltd.**)을 입력한 후 **다음**을 클릭합니다. 필요에 따라 내부 도메인 이름 및 서버 이름을 변경할 수 있습니다.  
+   3.  **회사 정보**에 해당 회사 이름(예: **Contoso,Ltd.** )을 입력한 후 **다음**을 클릭합니다. 필요에 따라 내부 도메인 이름 및 서버 이름을 변경할 수 있습니다.  
   
-    4.  **네트워크 관리자 만들기**에 새 관리자 계정 이름 및 암호를 입력합니다.  
+   4.  **네트워크 관리자 만들기**에 새 관리자 계정 이름 및 암호를 입력합니다.  
   
-        > [!NOTE]
-        >  기본 **관리자** 계정 이름 및 암호를 사용하지 마세요.  
+       > [!NOTE]
+       >  기본 **관리자** 계정 이름 및 암호를 사용하지 마세요.  
   
-    5.  클릭 **구성**합니다.  
+   5.  클릭 **구성**합니다.  
   
-3.  구성 프로세스가 진행되는 동안 서버가 여러 번 다시 시작되고, 구성이 완료될 때까지 로그온은 자동입니다. 이 프로세스는 20분 정도 걸립니다.  
+3. 구성 프로세스가 진행되는 동안 서버가 여러 번 다시 시작되고, 구성이 완료될 때까지 로그온은 자동입니다. 이 프로세스는 20분 정도 걸립니다.  
   
-4.  바탕 화면에서 대시보드 아이콘을 클릭하여 서버 대시보드를 시작합니다. **홈** 페이지에서 **설치** 탭에 나열된 **시작** 작업을 완료합니다.  
+4. 바탕 화면에서 대시보드 아이콘을 클릭하여 서버 대시보드를 시작합니다. **홈** 페이지에서 **설치** 탭에 나열된 **시작** 작업을 완료합니다.  
   
- 서버 구성을 완료한 후 Windows Server Essentials를 실행하는 서버가 도메인 컨트롤러로 설정됩니다.  
+   서버 구성을 완료한 후 Windows Server Essentials를 실행하는 서버가 도메인 컨트롤러로 설정됩니다.  
   
 ###  <a name="BKMK_DeployWSERole"></a> Windows Server 2012 R2 Standard 및 Datacenter에 Windows Server Essentials Experience 역할 배포  
  사용 하도록 설정 하 고 다음 절차를 사용 하 여 Windows Server 2012 R2 Standard 또는 Windows Server 2012 R2 Datacenter의 Windows Server Essentials Experience 역할을 구성 하려면 서버 관리자를 사용할 수 있습니다.  

@@ -11,12 +11,12 @@ ms.prod: windows-server-threshold
 ms.custom: it-pro
 ms.reviewer: maheshu
 ms.technology: identity-adds
-ms.openlocfilehash: ea56c718394d145a36145d32e5769661a62efd56
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: cb9b5b9448f364760c3d2a7e43edd01a5a9f7f9d
+ms.sourcegitcommit: a3958dba4c2318eaf2e89c7532e36c78b1a76644
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59841004"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719668"
 ---
 # <a name="forest-and-domain-functional-levels"></a>포리스트 및 도메인 기능 수준
 
@@ -34,7 +34,7 @@ Windows Server 2008 및 더 높은 도메인 기능 수준에서 서비스 DFS (
 
 새 포리스트 또는 도메인 기능 수준이이 릴리스에서 추가 없는 합니다.
 
-Windows Server 2019 도메인 컨트롤러를 추가 하기 위해서는 최소한 Windows Server 2008R2 기능 수준입니다.
+Windows Server 2019 도메인 컨트롤러를 추가 하기 위해서는 최소한 Windows Server 2008 기능 수준입니다. 또한 도메인 엔진으로 Dfs-r를 사용 하 여 SYSVOL을 복제 해야 합니다.
 
 ## <a name="windows-server-2016"></a>Windows Server 2016
 
@@ -139,25 +139,27 @@ Windows Server 2019 도메인 컨트롤러를 추가 하기 위해서는 최소�
 ### <a name="windows-server-2008-domain-functional-level-features"></a>Windows Server 2008 도메인 기능 수준 기능
 
 * 모든 기본 AD DS 기능을 모든 Windows Server 2003 도메인 기능 수준에서 기능 및 다음 기능은 사용할 수 있습니다.
-   * 분산된 파일 시스템 (DFS) 복제 Windows Server 2003 시스템 볼륨 (SYSVOL)에 대 한 지원
-      * DFS 복제 지원 SYSVOL 내용의 보다 강력 하 고 세부적인 복제를 제공합니다.
-        [!NOTE]>
-        >Windows Server 2012 R2 부터는 파일 복제 서비스 FRS () 사용 되지 않습니다. 이상을 실행 하는 도메인 컨트롤러에서 만들어진 새 도메인을 Windows Server 2012 R2 Windows Server 2008 도메인 기능 수준 이상으로 설정 되어야 합니다.
+  * 분산된 파일 시스템 (DFS) 복제 Windows Server 2003 시스템 볼륨 (SYSVOL)에 대 한 지원
+    * DFS 복제 지원 SYSVOL 내용의 보다 강력 하 고 세부적인 복제를 제공합니다.
 
-   * 도메인 기반 DFS 네임 스페이스 액세스 기반 열거 및 향상 된 확장성에 대 한 지원을 포함 하는 Windows Server 2008 모드에서 실행 합니다. Windows Server 2008 모드에서 도메인 기반 네임 스페이스는 Windows Server 2003 포리스트 기능 수준을 사용 하려면 포리스트의 필요 합니다. 자세한 내용은 [Namespace 유형을 선택](https://go.microsoft.com/fwlink/?LinkId=180400)합니다.
-   * Kerberos 프로토콜에 대 한 고급 암호화 표준 (AES 128 및 AES 256) 지원입니다. AES를 사용 하 여 발급 되는 Tgt에 대 한 순서 대로 도메인 기능 수준이 Windows Server 2008 이상 이어야 합니다. 및 도메인 암호를 변경 해야 합니다. 
-      * 자세한 내용은 [Kerberos 기능이 향상](https://technet.microsoft.com/library/cc749438(ws.10).aspx)합니다.
-        [!NOTE]>
-        >인증 오류가 발생할 수 있습니다 도메인 컨트롤러에서 Windows Server 2008 이상 도메인 기능 수준을 발생 한 후 도메인 컨트롤러가 이미 DFL 변경 복제 되지만 아직 krbtgt 암호 새로 고쳐지지 않았습니다. 이 경우 도메인 컨트롤러에서 KDC 서비스를 다시 시작 되며 새 krbtgt 암호의 메모리에 새로 고침을 트리거할 관련된 인증 오류를 해결 합니다.
+      > [!NOTE]
+      > Windows Server 2012 R2 부터는 파일 복제 서비스 FRS () 사용 되지 않습니다. 이상을 실행 하는 도메인 컨트롤러에서 만들어진 새 도메인을 Windows Server 2012 R2 Windows Server 2008 도메인 기능 수준 이상으로 설정 되어야 합니다.
 
-   * [대화형 로그온 마지막](https://go.microsoft.com/fwlink/?LinkId=180387) 정보에는 다음 정보가 표시 됩니다.
-      * 도메인에 가입 된 Windows Server 2008 서버 또는 Windows Vista 워크스테이션에서 실패 한 로그온 시도의 총 수
-      * Windows Vista 워크스테이션 또는 Windows Server 2008 서버에 성공적으로 로그온 한 후 실패 한 로그온 시도의 총 수
-      * Windows Server 2008 또는 Windows Vista 워크스테이션에서 마지막 실패 한 로그온 시도의 시간
-      * Windows Server 2008 서버 또는 Windows Vista 워크스테이션에서 마지막으로 성공한 로그온 시간을 시도 합니다.
-   * 세분화 된 암호 정책을 사용 하면 도메인의 사용자 및 글로벌 보안 그룹에 대 한 암호 및 계정 잠금 정책을 지정할 수 있습니다. 자세한 내용은 [세분화 된 암호 및 계정 잠금 정책 구성에 대 한 단계별 가이드](https://go.microsoft.com/fwlink/?LinkID=91477)합니다.
-   * 개인용 가상 데스크톱
-      * Active Directory 사용자 및 컴퓨터에서 사용자 계정 속성 대화 상자에서 개인 가상 데스크톱 탭에서 제공 하는 추가 기능을 사용 하려면 Windows Server 2008 R2 용 AD DS 스키마를 확장 (스키마 개체 버전 = 47). 자세한 내용은 [를 사용 하 여 RemoteApp 및 데스크톱 연결 단계별 가이드에서 개인용 가상 데스크톱 배포](https://go.microsoft.com/fwlink/?LinkId=183552)합니다.
+  * 도메인 기반 DFS 네임 스페이스 액세스 기반 열거 및 향상 된 확장성에 대 한 지원을 포함 하는 Windows Server 2008 모드에서 실행 합니다. Windows Server 2008 모드에서 도메인 기반 네임 스페이스는 Windows Server 2003 포리스트 기능 수준을 사용 하려면 포리스트의 필요 합니다. 자세한 내용은 [Namespace 유형을 선택](https://go.microsoft.com/fwlink/?LinkId=180400)합니다.
+  * Kerberos 프로토콜에 대 한 고급 암호화 표준 (AES 128 및 AES 256) 지원입니다. AES를 사용 하 여 발급 되는 Tgt에 대 한 순서 대로 도메인 기능 수준이 Windows Server 2008 이상 이어야 합니다. 및 도메인 암호를 변경 해야 합니다. 
+    * 자세한 내용은 [Kerberos 기능이 향상](https://technet.microsoft.com/library/cc749438(ws.10).aspx)합니다.
+
+      > [!NOTE]
+      >인증 오류가 발생할 수 있습니다 도메인 컨트롤러에서 Windows Server 2008 이상 도메인 기능 수준을 발생 한 후 도메인 컨트롤러가 이미 DFL 변경 복제 되지만 아직 krbtgt 암호 새로 고쳐지지 않았습니다. 이 경우 도메인 컨트롤러에서 KDC 서비스를 다시 시작 되며 새 krbtgt 암호의 메모리에 새로 고침을 트리거할 관련된 인증 오류를 해결 합니다.
+
+  * [대화형 로그온 마지막](https://go.microsoft.com/fwlink/?LinkId=180387) 정보에는 다음 정보가 표시 됩니다.
+     * 도메인에 가입 된 Windows Server 2008 서버 또는 Windows Vista 워크스테이션에서 실패 한 로그온 시도의 총 수
+     * Windows Vista 워크스테이션 또는 Windows Server 2008 서버에 성공적으로 로그온 한 후 실패 한 로그온 시도의 총 수
+     * Windows Server 2008 또는 Windows Vista 워크스테이션에서 마지막 실패 한 로그온 시도의 시간
+     * Windows Server 2008 서버 또는 Windows Vista 워크스테이션에서 마지막으로 성공한 로그온 시간을 시도 합니다.
+  * 세분화 된 암호 정책을 사용 하면 도메인의 사용자 및 글로벌 보안 그룹에 대 한 암호 및 계정 잠금 정책을 지정할 수 있습니다. 자세한 내용은 [세분화 된 암호 및 계정 잠금 정책 구성에 대 한 단계별 가이드](https://go.microsoft.com/fwlink/?LinkID=91477)합니다.
+  * 개인용 가상 데스크톱
+     * Active Directory 사용자 및 컴퓨터에서 사용자 계정 속성 대화 상자에서 개인 가상 데스크톱 탭에서 제공 하는 추가 기능을 사용 하려면 Windows Server 2008 R2 용 AD DS 스키마를 확장 (스키마 개체 버전 = 47). 자세한 내용은 [를 사용 하 여 RemoteApp 및 데스크톱 연결 단계별 가이드에서 개인용 가상 데스크톱 배포](https://go.microsoft.com/fwlink/?LinkId=183552)합니다.
 
 ## <a name="windows-server-2003"></a>Windows Server 2003
 

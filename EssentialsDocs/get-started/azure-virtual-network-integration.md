@@ -12,14 +12,14 @@ ms.assetid: d7d38505-cff5-4f15-9fd5-ae6dba15ce88
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 6193d2e2a2c0b85e13d4e9474264d2581bea88fa
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 673cb5a2292bab113aefb1de37f80bf4d880b467
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59879364"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66433900"
 ---
-#<a name="azure-virtual-network-integration"></a>Azure 가상 네트워크 통합
+# <a name="azure-virtual-network-integration"></a>Azure 가상 네트워크 통합
 
 >적용 대상: Windows Server 2016 Essentials
 
@@ -73,4 +73,4 @@ Azure 가상 네트워크의 구성을 완료 되 면 상태 연결 됨으로 �
 
 <a name="see-also"></a>참조
 --------
-[Windows Server Essentials를 사용 하 여 시작](get-started.md)
+[Windows Server Essentials 시작](get-started.md)

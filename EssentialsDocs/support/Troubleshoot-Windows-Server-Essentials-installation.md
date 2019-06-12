@@ -12,12 +12,12 @@ ms.assetid: ecf19216-7aac-4aca-839a-342ac28f5329
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 293b392203269a65efffcefb3744bedc659f71c9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4756d3735fd710930e0eb124b7b5c58c50078d9e
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59862024"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66432420"
 ---
 # <a name="troubleshoot-windows-server-essentials-installation"></a>Windows Server Essentials 설치 문제 해결
 
@@ -79,26 +79,26 @@ ms.locfileid: "59862024"
   
 ##### <a name="to-manually-install-a-storage-controller-driver"></a>저장소 컨트롤러 드라이버를 수동으로 설치하려면  
   
-1.  저장소 컨트롤러용 드라이버를 찾습니다. 이러한 드라이버는 하드웨어 제조업체에서 제공되며, 제조업체 웹 사이트에서도 사용할 수 있습니다.  
+1. 저장소 컨트롤러용 드라이버를 찾습니다. 이러한 드라이버는 하드웨어 제조업체에서 제공되며, 제조업체 웹 사이트에서도 사용할 수 있습니다.  
   
-2.  플로피 디스크 또는 USB 플래시 드라이브에 DRIVERS라는 폴더를 만든 다음 이 폴더에 드라이버를 복사합니다.  
+2. 플로피 디스크 또는 USB 플래시 드라이브에 DRIVERS라는 폴더를 만든 다음 이 폴더에 드라이버를 복사합니다.  
   
-3.  드라이버가 포함된 플로피 드라이브 또는 USB 플래시 드라이브를 컴퓨터에 연결합니다.  
+3. 드라이버가 포함된 플로피 드라이브 또는 USB 플래시 드라이브를 컴퓨터에 연결합니다.  
   
-4.  Windows Server Essentials DVD에서 컴퓨터를 부팅 합니다.  
+4. Windows Server Essentials DVD에서 컴퓨터를 부팅 합니다.  
   
-     저장소 컨트롤러 드라이버가 없는 경우에 Windows Server Essentials 설치 오류 대화 상자가 표시 됩니다.  
+    저장소 컨트롤러 드라이버가 없는 경우에 Windows Server Essentials 설치 오류 대화 상자가 표시 됩니다.  
   
-5.  Windows Server Essentials 설치 오류 대화 상자에서 클릭 **예** 추가 저장소 드라이버를 로드 합니다.  
+5. Windows Server Essentials 설치 오류 대화 상자에서 클릭 **예** 추가 저장소 드라이버를 로드 합니다.  
   
-6.  **드라이버의 inf 파일을 선택하세요.** 프롬프트가 표시되면 플로피 디스크 또는 USB 플래시 드라이브의 DRIVERS 폴더에서 .inf 파일을 탐색하여 선택하고 파일 이름을 마우스 오른쪽 단추로 클릭한 다음 **열기**를 클릭합니다. 드라이버가 로드됩니다.  
+6. **드라이버의 inf 파일을 선택하세요.** 프롬프트가 표시되면 플로피 디스크 또는 USB 플래시 드라이브의 DRIVERS 폴더에서 .inf 파일을 탐색하여 선택하고 파일 이름을 마우스 오른쪽 단추로 클릭한 다음 **열기**를 클릭합니다. 드라이버가 로드됩니다.  
   
-    > [!NOTE]
-    >  파일을 로드하기 전에 파일 이름 확장명(.inf)이 소문자인지 확인합니다. 이 작업은 대/소문자를 구분하며, 파일 이름 확장명에 대문자가 있으면 드라이버 파일이 로드되지 않습니다.  
+   > [!NOTE]
+   >  파일을 로드하기 전에 파일 이름 확장명(.inf)이 소문자인지 확인합니다. 이 작업은 대/소문자를 구분하며, 파일 이름 확장명에 대문자가 있으면 드라이버 파일이 로드되지 않습니다.  
   
-7.  프롬프트가 표시되면 **예**를 클릭하여 설치 프로그램의 텍스트 모드 단계에서 저장소 드라이버를 사용할 수 있도록 합니다.  
+7. 프롬프트가 표시되면 **예**를 클릭하여 설치 프로그램의 텍스트 모드 단계에서 저장소 드라이버를 사용할 수 있도록 합니다.  
   
- 이제 설치가 정상적으로 계속됩니다.  
+   이제 설치가 정상적으로 계속됩니다.  
   
 ###  <a name="BKMK_AddingNICdrivers"></a> 네트워크 어댑터용 드라이버 추가  
  컴퓨터의 네트워크 어댑터를 Windows Server Essentials에서 지원 되지 않는 경우 설치가 완료 된 후 컴퓨터를 서버에 연결할 수 없습니다 서버가 네트워크에 연결이 되어 있지 됩니다.  

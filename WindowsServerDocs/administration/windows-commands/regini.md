@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 292dfe5755a10a91f2b8bcffaa6412ccda6c6f8a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e3f8454572b662c9327aeb4783c5e9651ad2022b
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59867634"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66441893"
 ---
 # <a name="regini"></a>regini
 
@@ -35,6 +35,7 @@ regini [-m \\machinename | -h hivefile hiveroot][-i n] [-o outputWidth][-b] text
 ### <a name="parameters"></a>매개 변수
 
 | 매개 변수 | 설명 |
+
 |-m \<\\\\ComputerName>|레지스트리를 수정할 수 있는 원격 컴퓨터 이름을 지정 합니다. 형식을 사용 하 여  **\\ \\ComputerName**합니다.|
 |---------------------|-|
 |-h \<hivefile hiveroot>|수정 하려면 로컬 레지스트리 하이브를 지정 합니다. 형식에서 하이브 파일의 이름 및 루트 하이브를 지정 해야 **hivefile hiveroot**합니다.|

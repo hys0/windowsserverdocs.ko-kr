@@ -7,16 +7,17 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: 76427cc6d86a3d61dcf2d66cdf47ded9ba9be848
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.date: 06/07/2019
+ms.openlocfilehash: 99f1a9a32ef69ba8322b2dba902003f8a750a4d2
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59829044"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66811648"
 ---
 # <a name="what-is-windows-admin-center"></a>Windows Admin Center란?
 
->적용 대상: Windows Admin Center, Windows Admin Center 미리 보기
+> 적용 대상: Windows Admin Center, Windows Admin Center 미리 보기
 
 Windows Admin Center는 Azure 또는 클라우드 종속성 없이 Windows Server를 관리할 수 있는 로컬로 배포하는 브라우저 기반의 새로운 관리 도구 집합입니다. Windows Admin Center는 서버 인프라의 모든 측면에 대한 완전한 제어를 부여하며 인터넷에 연결되지 않은 개인 네트워크에서의 서버 관리에 특히 유용합니다.
 

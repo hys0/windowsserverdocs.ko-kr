@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: c8070268fdf58fbbb71c159a7360b488222ef740
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 1e2ccf6187e4480f94b30632b6f8f9f092052541
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59852184"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66811080"
 ---
 # <a name="powershell"></a>PowerShell
 
@@ -31,22 +31,31 @@ Windows PowerShell 작업 기반 명령줄 셸이자 스크립팅 언어 시스�
 사용할 수는 **PowerShell.exe** 명령 프롬프트 창에서 Windows PowerShell 세션을 시작 하려면 명령줄 도구입니다.
 
 - 명령 프롬프트 창에서 Windows PowerShell 세션을 시작 하려면 입력 `PowerShell`합니다. A **PS** 있음을 나타내는 Windows PowerShell 세션에서 명령 프롬프트에 접두사가 추가 됩니다.
-- 특정 실행 정책을 사용 하 여 세션을 시작 하려면 사용 합니다 **ExecutionPolicy** 매개 변수입니다.  
+
+- 특정 실행 정책을 사용 하 여 세션을 시작 하려면 사용 합니다 **ExecutionPolicy** 매개 변수입니다.
+
     ```
     PowerShell.exe -ExecutionPolicy Restricted
-    ```  
-- Windows PowerShell 프로필 없이 Windows PowerShell 세션을 시작 하려면 사용 합니다 **NoProfile** 매개 변수입니다.  
+    ```
+
+- Windows PowerShell 프로필 없이 Windows PowerShell 세션을 시작 하려면 사용 합니다 **NoProfile** 매개 변수입니다.
+
     ```
     PowerShell.exe -NoProfile
-    ```  
-- 세션을 시작 하려면 사용 합니다 **ExecutionPolicy** 매개 변수입니다.  
+    ```
+  
+- 세션을 시작 하려면 사용 합니다 **ExecutionPolicy** 매개 변수입니다.
+
     ```
     PowerShell.exe -ExecutionPolicy Restricted
-    ```  
+    ```
+  
 - PowerShell.exe 도움말 파일을 보려면 다음 명령 형식을 사용 합니다.  
+    
     ```
     PowerShell.exe -help, -?, /?
-    ```  
+    ```
+
 - 명령 프롬프트 창에서 Windows PowerShell 세션을 종료 하려면 입력 `exit`합니다. 일반적인 명령 프롬프트가 반환 됩니다.
 
 전체 목록은 합니다 **PowerShell.exe** 명령줄 매개 변수를 참조 하십시오 [about_PowerShell.Exe](https://go.microsoft.com/fwlink/?LinkID=113439)합니다.

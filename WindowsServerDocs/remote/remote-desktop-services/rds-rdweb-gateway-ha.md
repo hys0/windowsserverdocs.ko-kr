@@ -12,16 +12,16 @@ author: lizap
 ms.author: elizapo
 ms.date: 11/08/2016
 manager: dongill
-ms.openlocfilehash: fa09532e0b327b24ebb1c0e155c26c25d1043b63
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 4e185e51b09d2e2f8ac4527f9de339de27e02f24
+ms.sourcegitcommit: d888e35f71801c1935620f38699dda11db7f7aad
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59854604"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66805142"
 ---
 # <a name="add-high-availability-to-the-rd-web-and-gateway-web-front"></a>RD 웹 및 게이트웨이 웹 프런트 고가용성 추가
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016
 
 
 가용성과 Windows Server 원격 데스크톱 서비스 (RDS) 배포의 규모를 개선 하기 위해 원격 데스크톱 웹 액세스 (RD 웹 액세스) 및 원격 데스크톱 게이트웨이 (RD 게이트웨이) 팜을 배포할 수 있습니다. 
@@ -46,15 +46,15 @@ ms.locfileid: "59854604"
     4. 선택 확인 페이지에서 **필요에 따라 원격 컴퓨터를 다시 시작**, 를 클릭 하 고 **추가**합니다.  
     5. RD 게이트웨이 서버를 추가 하지만 선택 하려면 다음이 단계를 반복 **RD 게이트웨이 서버** b 단계에서 합니다.
 4. RD 게이트웨이 서버에 대 한 인증서를 다시 설치 합니다.
-    1.  서버 관리자에서 RDMS 서버의 **원격 데스크톱 서비스 > 개요 > 작업 > 배포 속성 편집**합니다.  
-    2.  확장 **인증서**합니다.  
-    3.  테이블까지 아래로 스크롤하십시오. RD 클릭 **게이트웨이 역할 서비스 > 기존 인증서를 선택 합니다.**  
-    4.  클릭 **다른 인증서를 선택** 인증서 위치를 이동 합니다. 예를 들어 \Contoso-CB1\Certificates). 필수 구성 요소 (예: ContosoRdGwCert) 중에 생성 하는 RD 웹 및 게이트웨이 서버에 대 한 인증서 파일을 선택한 다음 클릭 **열려**합니다.  
-    5.  인증서 선택에 대 한 암호를 입력 **대상 컴퓨터의 신뢰할 수 있는 루트 인증 기관 인증서 저장소에 추가할 인증서 허용**를 클릭 하 고 **확인**합니다.  
-    6.  **적용**을 클릭합니다.
-    > [!Note] 
-    > 서버 관리자 또는 작업 관리자를 통해 각 RD 게이트웨이 서버에서 실행 되는 TSGateway 서비스를 수동으로 다시 시작 해야 합니다.
-    7.  A부터 f RD 웹 액세스 역할 서비스에 대 한 단계를 반복 합니다.
+   1. 서버 관리자에서 RDMS 서버의 **원격 데스크톱 서비스 > 개요 > 작업 > 배포 속성 편집**합니다.  
+   2. 확장 **인증서**합니다.  
+   3. 테이블까지 아래로 스크롤하십시오. RD 클릭 **게이트웨이 역할 서비스 > 기존 인증서를 선택 합니다.**  
+   4. 클릭 **다른 인증서를 선택** 인증서 위치를 이동 합니다. 예를 들어 \Contoso-CB1\Certificates). 필수 구성 요소 (예: ContosoRdGwCert) 중에 생성 하는 RD 웹 및 게이트웨이 서버에 대 한 인증서 파일을 선택한 다음 클릭 **열려**합니다.  
+   5. 인증서 선택에 대 한 암호를 입력 **대상 컴퓨터의 신뢰할 수 있는 루트 인증 기관 인증서 저장소에 추가할 인증서 허용**를 클릭 하 고 **확인**합니다.  
+   6. **적용**을 클릭합니다.
+      > [!NOTE] 
+      > 서버 관리자 또는 작업 관리자를 통해 각 RD 게이트웨이 서버에서 실행 되는 TSGateway 서비스를 수동으로 다시 시작 해야 합니다.
+   7. A부터 f RD 웹 액세스 역할 서비스에 대 한 단계를 반복 합니다.
 
 ## <a name="step-2-configure-rd-web-and-rd-gateway-properties-on-the-new-server"></a>2단계: 새 서버에서 RD 웹 및 RD 게이트웨이 속성을 구성 합니다.
 1. RD 게이트웨이 팜의 일부가 되도록 서버를 구성 합니다.
@@ -90,7 +90,7 @@ ms.locfileid: "59854604"
 
 Azure 인프라를 사용 하는 경우에 외부 Azure load balancer;을 만들 수 있습니다. 그렇지 않은 경우 별도 하드웨어 또는 소프트웨어 부하 분산 장치를 설정할 수 있습니다. 부하 분산 되도록 트래픽을 균등 하 게 키를은 사용자 워크 로드 실행 되어야 하는 서버에 RD 게이트웨이 통해 원격 데스크톱 클라이언트의 수명이 연결을 분산 합니다.
 
-> [!Note] 
+> [!NOTE] 
 > RD 웹 및 RD 게이트웨이 실행 하는 이전 서버를 이미 외부 부하 분산 장치 뒤를 설정 하는 경우 건너 뛰 세요 4 단계, 기존 백 엔드 풀을 선택 하 고, 풀에 새 서버를 추가 합니다.
 
 1.  Azure Load Balancer를 만듭니다.  

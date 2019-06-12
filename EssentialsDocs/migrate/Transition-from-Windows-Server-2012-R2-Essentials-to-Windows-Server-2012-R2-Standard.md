@@ -12,12 +12,12 @@ ms.assetid: a14689e3-2310-4229-bd3e-dafc0e739e02
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: d371e24b17310c0687666185f56fe07a135ff91f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ca36533af169c899865789f153960bf5f0dda684
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59840084"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66432555"
 ---
 # <a name="transition-from-windows-server-essentials-to-windows-server-2012-r2-standard"></a>Windows Server Essentials에서 Windows Server 2012 R2 Standard로 전환
 
@@ -52,24 +52,24 @@ Windows Server 2016은 클라우드 컴퓨팅으로 전환할 수 있도록 하�
 ## <a name="transition-to--windows-server-2012-r2-standard"></a>Windows Server 2012 R2 Standard로 전환  
  이러한 두 단계를 Windows Server 2012 R2 Standard, 전체 Windows Server Essentials에서 전환 하기로 결정 했으면 후:  
   
-1.  Windows Server 2012 R2 Standard 및 적절 한 개수의 사용자 및/또는 사용자 환경에 대 한 클라이언트 액세스 라이선스에 대 한 라이선스를 구입 합니다.  
+1. Windows Server 2012 R2 Standard 및 적절 한 개수의 사용자 및/또는 사용자 환경에 대 한 클라이언트 액세스 라이선스에 대 한 라이선스를 구입 합니다.  
   
-     소매점, 배포자에서에서 또는 사용 하 여 Windows Server 2012 R2 Standard에 대 한 라이선스를 구입할 수 있습니다는 [Microsoft 파트너](https://pinpoint.microsoft.com/SelectCulture.aspx)합니다.  
+    소매점, 배포자에서에서 또는 사용 하 여 Windows Server 2012 R2 Standard에 대 한 라이선스를 구입할 수 있습니다는 [Microsoft 파트너](https://pinpoint.microsoft.com/SelectCulture.aspx)합니다.  
   
-    > [!NOTE]
-    >  처음에 Windows Server 2012 R2 Standard를 구입 하 고 Windows Server Essentials를 설치 하는 두 가상 인스턴스 중 하나를 다운 그레이드 권한을 아무것도 구입할 필요가 없습니다.  
-    >   
-    >  볼륨 라이선스 채널을 통해 Windows Server 2012 R2 Standard을 구매 하는 경우 Windows Server 2012 R2 Standard에서 볼륨 라이선스 서비스 센터 (VLSC)에 대 한 ISO 이미지 및 제품 키를 다운로드할 수 있습니다.  
-    >   
-    >  Windows Server Essentials에 대 한 ISO 이미지 및 평가판 제품 키를 다른 채널에서 Windows Server 2012 R2 Standard을 구매 하는 경우 다운로드할 수 있습니다 합니다 [TechNet Evaluation Center](https://technet.microsoft.com/evalcenter/jj659306.aspx)합니다. 다음 단계에 설명된 대로 전환을 수행하면 평가판 제품이 완전히 지원되는 라이선스 제품으로 전환됩니다.  
+   > [!NOTE]
+   >  처음에 Windows Server 2012 R2 Standard를 구입 하 고 Windows Server Essentials를 설치 하는 두 가상 인스턴스 중 하나를 다운 그레이드 권한을 아무것도 구입할 필요가 없습니다.  
+   >   
+   >  볼륨 라이선스 채널을 통해 Windows Server 2012 R2 Standard을 구매 하는 경우 Windows Server 2012 R2 Standard에서 볼륨 라이선스 서비스 센터 (VLSC)에 대 한 ISO 이미지 및 제품 키를 다운로드할 수 있습니다.  
+   >   
+   >  Windows Server Essentials에 대 한 ISO 이미지 및 평가판 제품 키를 다른 채널에서 Windows Server 2012 R2 Standard을 구매 하는 경우 다운로드할 수 있습니다 합니다 [TechNet Evaluation Center](https://technet.microsoft.com/evalcenter/jj659306.aspx)합니다. 다음 단계에 설명된 대로 전환을 수행하면 평가판 제품이 완전히 지원되는 라이선스 제품으로 전환됩니다.  
   
-2.  관리자 권한으로 Windows PowerShell을 열고 다음 명령을 실행합니다.  
+2. 관리자 권한으로 Windows PowerShell을 열고 다음 명령을 실행합니다.  
   
-     **dism /online /set-edition:ServerStandard /accepteula /productkey:** *제품 키* (여기서 *제품 키* 은 Windows Server 2012 R2 Standard의 정품 제품 키).  
+    **dism /online /set-edition:ServerStandard /accepteula /productkey:** *제품 키* (여기서 *제품 키* 은 Windows Server 2012 R2 Standard의 정품 제품 키).  
   
-     전환 프로세스를 완료하기 위해 서버가 다시 시작됩니다.  
+    전환 프로세스를 완료하기 위해 서버가 다시 시작됩니다.  
   
- 전환 후 Windows Server Essentials 서버에 남아 기능과 최대 100 명의 사용자와 200 대의 장치에 대해 지원 됩니다.  
+   전환 후 Windows Server Essentials 서버에 남아 기능과 최대 100 명의 사용자와 200 대의 장치에 대해 지원 됩니다.  
   
 ## <a name="see-also"></a>참조  
   

@@ -13,12 +13,12 @@ ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/07/2018
-ms.openlocfilehash: fceca3c9316cb35a76f1936072bde4225b6f24e7
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e50527358dbffa36f8f14e290a548568e3d0635e
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59877454"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66443265"
 ---
 # <a name="additional-resources"></a>추가 리소스
 
@@ -45,4 +45,4 @@ Active Directory 문제에 대 한 기록 되는 특정 이벤트에 대 한 내
 관리 하 고 Active Directory Domain Services (AD DS)를 구성 하는 방법 및 작동 방식에 대 한 일반적인 내용은 다음 리소스를 참조 합니다.
 
 - [Active Directory 작업 관리](https://go.microsoft.com/fwlink/?LinkId=128798)
-- [Active Directory Collection](<https://go.microsoft.com/fwlink/?LinkId=34157)
+- [Active Directory 컬렉션](https://go.microsoft.com/fwlink/?LinkId=34157)

@@ -9,12 +9,12 @@ ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 220b0b72734d1456e3cf877ebc2ff267a7dd56ad
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 167f74522172790d8f5b3fc1dea46d0b7059cd20
+ms.sourcegitcommit: cd12ace92e7251daaa4e9fabf1d8418632879d38
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66190653"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66501675"
 ---
 # <a name="build-a-server-side-application-using-oauth-confidential-clients-with-ad-fs-2016-or-later"></a>서버 쪽 OAuth 기밀 클라이언트를 사용 하 여 AD FS 2016을 사용 하 여 응용 프로그램 또는 이후 빌드
 
@@ -83,7 +83,7 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-webapi
 
 #### <a name="to-upgrade-the-database-file"></a>데이터베이스 파일을 업그레이드 하려면  
 
-1.  Visual Studio에서 프로젝트를 열고, 응용 프로그램에 SQL Server 2012 Express 필요 여부를 알려주는 팝업 됩니다 또는 데이터베이스를 업그레이드 해야 합니다.  확인을 클릭 합니다.  
+1.  Visual Studio에서 프로젝트를 열고, 응용 프로그램에 SQL Server 2012 Express 필요 함을 알리는 팝업 됩니다 또는 데이터베이스를 업그레이드 해야 합니다.  확인을 클릭 합니다.  
 
     ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_12.PNG)  
 
@@ -226,25 +226,25 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-webapi
 
 #### <a name="testing-the-confidential-client-solution"></a>기밀 클라이언트 솔루션 테스트  
 
-1.  Visual Studio 맨 위에 있는 Internet Explorer가 선택 되어 있는지 확인 하 고 녹색 화살표를 클릭 합니다.  
+1. Visual Studio 맨 위에 있는 Internet Explorer가 선택 되어 있는지 확인 하 고 녹색 화살표를 클릭 합니다.  
 
-    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_36.png)  
+   ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_36.png)  
 
-2.  ASP.Net 페이지가 나타난 후 클릭 **등록** 에서 페이지의 오른쪽 위에 있는 합니다.  사용자 이름 및 암호를 입력 한 다음 클릭 **등록** 단추입니다.  이 SQL 데이터베이스에 로컬 계정을 만듭니다.  
+2. ASP.Net 페이지가 나타난 후 클릭 **등록** 에서 페이지의 오른쪽 위에 있는 합니다.  사용자 이름 및 암호를 입력 한 다음 클릭 **등록** 단추입니다.  이 SQL 데이터베이스에 로컬 계정을 만듭니다.  
 
-    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_31.PNG)  
+   ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_31.PNG)  
 
-4.  알림 이제 ASP.NET 사이트 라는 Hello abby@contoso.com!.  클릭 **프로필**합니다.  
+3. 알림 이제 ASP.NET 사이트 라는 Hello abby@contoso.com!.  클릭 **프로필**합니다.  
 
-    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_32.PNG)  
+   ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_32.PNG)  
 
-5.  이 정보 없이 페이지를 시작 하 고는 우리 해야 여기를 클릭에 로그인 합니다.  클릭 **여기**합니다.  
+4. 이 정보 없이 페이지를 시작 하 고는 우리 해야 여기를 클릭에 로그인 합니다.  클릭 **여기**합니다.  
 
-    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_33.PNG)  
+   ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_33.PNG)  
 
-6.  AD FS에 로그인 하 라는 메시지가 표시 됩니다.  
+5. AD FS에 로그인 하 라는 메시지가 표시 됩니다.  
 
-    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_35.PNG)  
+   ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_35.PNG)  
 
 ## <a name="next-steps"></a>다음 단계
 [AD FS 개발](../../ad-fs/AD-FS-Development.md)  

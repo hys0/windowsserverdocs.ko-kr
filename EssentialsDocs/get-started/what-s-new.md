@@ -12,20 +12,20 @@ ms.assetid: affff774-5fa6-4944-887a-9bfde05f6a3f
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 7fed7e71f7ac163437fe5d32da7c867f93fbcf00
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: bc83686f76c49773203d63a88894841f65ffd1d9
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59869974"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66433766"
 ---
-#<a name="whats-new-in-windows-server-2016-essentials"></a>Windows Server 2016 Essentials의 새로운 기능
+# <a name="whats-new-in-windows-server-2016-essentials"></a>Windows Server 2016 Essentials의 새로운 기능
 
 > 적용 대상: Windows Server 2016 Essentials
 
 다음은 새 Windows Server 2016 Essentials에서 기능을 향상 합니다.
 
-##<a name="integration-with-azure-site-recovery-servicesazure-site-recovery-services-integrationmd"></a>[Azure Site Recovery Services와 통합](azure-site-recovery-services-integration.md)
+## <a name="integration-with-azure-site-recovery-servicesazure-site-recovery-services-integrationmd"></a>[Azure Site Recovery Services와 통합](azure-site-recovery-services-integration.md)
 
 **무엇을** 는 가상 컴퓨터가 보호 실패, 또는 실패 하면 Azure Site Recovery Services를 사용 하 여 장애 조치에서 보호 된 가상 머신에서 실행 되는 호스트 서버가 온-프레미스 가상 머신까지 비즈니스 연속성을 유지 하는 경우-또는 호스트 서버가 복구 되어 사용할 수 있습니다. 
 
@@ -40,7 +40,7 @@ ms.locfileid: "59869974"
 
 
 
-##<a name="support-for-larger-deploymentssupport-for-larger-deploymentsmd"></a>[대규모 배포에 대 한 지원](support-for-larger-deployments.md) 
+## <a name="support-for-larger-deploymentssupport-for-larger-deploymentsmd"></a>[대규모 배포에 대 한 지원](support-for-larger-deployments.md) 
 
 일부 큰 소규모 기업에는 보다 많은 기능 및 Windows Server Essentials를 효과적으로 구현 하기에 용량이 필요 합니다. Windows Server 2016 Essentials 사용 하 여 대규모 배포에 대 한 지원을 추가 하 여 도메인, 사용자 및 장치의 효율성을 제공 합니다.                                                                                                                                                                                                 
 
@@ -52,4 +52,4 @@ ms.locfileid: "59869974"
 <a name="see-also"></a>참조
 --------
 
-[Windows Server Essentials를 사용 하 여 시작](get-started.md)
+[Windows Server Essentials 시작](get-started.md)

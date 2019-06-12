@@ -9,12 +9,12 @@ ms.assetid: 158b7a62-2c52-448b-9467-c00d5018f65b
 ms.author: pashort
 author: shortpatti
 ms.localizationpriority: medium
-ms.openlocfilehash: 005721873ad3a0df942bc9e23eba13728965ccba
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 989216f90e78689b464240cff957bab1d9c1229b
+ms.sourcegitcommit: 0948a1abff1c1be506216eeb51ffc6f752a9fe7e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59864554"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749566"
 ---
 # <a name="configure-vpn-device-tunnels-in-windows-10"></a>Windows 10에서 VPN 장치 터널 구성
 
@@ -92,22 +92,23 @@ Windows Remote Management (WinRM), 원격 GPUpdate 및 원격 SCCM 업데이트 
 각 특정 배포 시나리오의 요구에 따라 다른 VPN 장치 터널을 사용 하 여 구성할 수 있는 기능은 [신뢰할 수 있는 네트워크 검색](https://social.technet.microsoft.com/wiki/contents/articles/38546.new-features-for-vpn-in-windows-10-and-windows-server-2016.aspx#Trusted_Network_Detection)합니다.
 
 ```
- <!-- inside/outside detection --> 
-  <TrustedNetworkDetection>corp.contoso.com</TrustedNetworkDetection> 
+ <!-- inside/outside detection -->
+  <TrustedNetworkDetection>corp.contoso.com</TrustedNetworkDetection>
 ```
 
 ## <a name="deployment-and-testing"></a>배포 및 테스트
 
-Windows PowerShell 스크립트를 사용 하 고 Windows Management Instrumentation을 사용 하 여 장치의 터널을 구성할 수 있습니다 \(WMI\) 브리지입니다. Always On VPN 장치 터널의 컨텍스트에서 구성 해야 합니다 **로컬 시스템** 계정. 이를 위해 사용 하는 데 필요한 됩니다 [PsExec](https://docs.microsoft.com/sysinternals/downloads/psexec)하나씩의 합니다 [PsTools](https://docs.microsoft.com/sysinternals/downloads/pstools) 에 포함는 [Sysinternals](https://docs.microsoft.com/sysinternals/) 유틸리티입니다.
+Windows PowerShell 스크립트를 사용 하 고 Windows Management Instrumentation (WMI) 브리지를 사용 하 여 장치의 터널을 구성할 수 있습니다. Always On VPN 장치 터널의 컨텍스트에서 구성 해야 합니다 **로컬 시스템** 계정. 이를 위해 사용 하는 데 필요한 됩니다 [PsExec](https://docs.microsoft.com/sysinternals/downloads/psexec)하나씩의 합니다 [PsTools](https://docs.microsoft.com/sysinternals/downloads/pstools) 에 포함는 [Sysinternals](https://docs.microsoft.com/sysinternals/) 유틸리티입니다.
 
-배포 하는 방법에 대 한 지침을 장치당 `(.\Device)` 비교는 사용자별 `(.\User)` 프로필을 참조 하세요 [WMI 연결 공급자를 사용 하 여 PowerShell 스크립팅을](https://docs.microsoft.com/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider). 
+배포 하는 방법에 대 한 지침을 장치당 `(.\Device)` 비교는 사용자별 `(.\User)` 프로필을 참조 하세요 [WMI 연결 공급자를 사용 하 여 PowerShell 스크립팅을](https://docs.microsoft.com/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider).
 
 장치 프로필을 성공적으로 배포 되었는지 확인 하려면 다음 Windows PowerShell 명령을 실행 합니다.
 
-    `Get-VpnConnection -AllUserConnection`
+  ```powershell
+  Get-VpnConnection -AllUserConnection
+  ```
 
 출력 장치 목록이 표시 됩니다.\-장치에 배포 된 VPN 프로필 다양 합니다.
-
 
 ### <a name="example-windows-powershell-script"></a>Windows PowerShell 스크립트 예제
 
@@ -166,19 +167,19 @@ Write-Host "$Message"
 
 ## <a name="additional-resources"></a>추가 리소스
 
-다음은 VPN 배포에 도움이 되는 추가 리소스입니다.
+VPN 배포에 도움이 되는 추가 리소스는 다음과 같습니다.
 
 ### <a name="vpn-client-configuration-resources"></a>VPN 클라이언트 구성 리소스
 
-이들은 VPN 클라이언트 구성 리소스입니다.
+VPN 클라이언트 구성 리소스는 다음과 같습니다.
 
 - [System Center Configuration Manager에서 VPN 프로필을 만드는 방법](https://docs.microsoft.com/sccm/protect/deploy-use/create-vpn-profiles)
 - [Windows 10 클라이언트를 VPN 연결에 always On 구성](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)
 - [VPN 프로필 옵션](https://docs.microsoft.com/windows/access-protection/vpn/vpn-profile-options)
 
-### <a name="remote-access-server-ras-gateway-resources"></a>원격 액세스 서버 \(RAS\) 게이트웨이 리소스
+### <a name="remote-access-server-gateway-resources"></a>원격 액세스 서버 게이트웨이 리소스
 
-다음은 RAS 게이트웨이 리소스입니다.
+원격 액세스 서버 (RAS) 게이트웨이 리소스는 다음과 같습니다.
 
 - [컴퓨터 인증 인증서를 사용 하 여 RRAS 구성](https://technet.microsoft.com/library/dd458982.aspx)
 - [IKEv2 VPN 연결 문제 해결](https://technet.microsoft.com/library/dd941612.aspx)
@@ -187,4 +188,3 @@ Write-Host "$Message"
 >[!IMPORTANT]
 >장치 터널을 사용 하 여 Microsoft RAS 게이트웨이 사용 하 여 IKEv2 컴퓨터 인증서 인증을 지원 하도록 RRAS 서버를 구성 해야 합니다는 **IKEv2 용 컴퓨터 인증서 인증을 허용** 인증 방법 설명 된 대로 [여기](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee922682%28v=ws.10%29)합니다. 면이 설정을 사용 하는 것이 좋습니다는 합니다 **집합 VpnAuthProtocol** PowerShell cmdlet을 함께 합니다 **RootCertificateNameToAccept** 하도록 선택적 매개 변수는 RRAS의 IKEv2 연결 에서만 허용 됩니다 VPN 클라이언트 인증서를 명시적으로 정의 된 내부/개인 루트 인증 기관에 연결 합니다. 또는 합니다 **신뢰할 수 있는 루트 인증 기관** RRAS 서버의 저장소는 포함 하지 공용 인증 기관 설명 했 듯이 되도록 이메일과 [여기](https://blogs.technet.microsoft.com/rrasblog/2009/06/10/what-type-of-certificate-to-install-on-the-vpn-server/)합니다. 비슷한 메서드가 다른 VPN gateway에 대 한 것으로 간주 해야 할 수도 있습니다.
 
----

@@ -12,12 +12,12 @@ ms.assetid: 0302d070-c58a-40f2-b56d-7e7842813d02
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 2b0cd926b15d65e5cd4c784681c40df29b18a48f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7e40a4675cf77d55a3047b41e0ab852fd7cd9de9
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59890144"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66433216"
 ---
 # <a name="manage-server-backup-in-windows-server-essentials"></a>Windows Server Essentials에서 서버 백업 관리
 
@@ -27,7 +27,7 @@ ms.locfileid: "59890144"
   
 -   [선택 해야 하는 백업](Manage-Server-Backup-in-Windows-Server-Essentials.md#BKMK_WhichBackup)  
   
--   [설정 하거나 서버 백업 사용자 지정](Manage-Server-Backup-in-Windows-Server-Essentials.md#BKMK_1)  
+-   [서버 백업 설정 또는 사용자 지정](Manage-Server-Backup-in-Windows-Server-Essentials.md#BKMK_1)  
   
 -   [진행 중인 서버 백업 중지](Manage-Server-Backup-in-Windows-Server-Essentials.md#BKMK_2)  
   
@@ -75,17 +75,17 @@ ms.locfileid: "59890144"
   
 #### <a name="to-use-remote-web-access-to-manage-your-server"></a>원격 웹 액세스를 사용하여 서버를 관리하려면  
   
-1.  웹 브라우저를 엽니다.  
+1. 웹 브라우저를 엽니다.  
   
-2.  주소 상자에 Windows Server Essentials 도메인의 이름을 입력합니다.  
+2. 주소 상자에 Windows Server Essentials 도메인의 이름을 입력합니다.  
   
-3.  메시지가 표시되면 사용자 이름과 암호를 입력합니다.  
+3. 메시지가 표시되면 사용자 이름과 암호를 입력합니다.  
   
-4.  원격 웹 액세스에서 서버 이름을 클릭 하면 대시보드의 로그온 페이지가 표시 됩니다.  
+4. 원격 웹 액세스에서 서버 이름을 클릭 하면 대시보드의 로그온 페이지가 표시 됩니다.  
   
-5.  관리자로 대시보드에 로그온하고 **장치**를 클릭합니다.  
+5. 관리자로 대시보드에 로그온하고 **장치**를 클릭합니다.  
   
- 원격 웹 액세스에 대 한 자세한 내용은 참조 하세요. [원격 웹 액세스 개요](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_Overview)합니다.  
+   원격 웹 액세스에 대 한 자세한 내용은 참조 하세요. [원격 웹 액세스 개요](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_Overview)합니다.  
   
 ##  <a name="BKMK_4"></a> 서버 백업 사용 안 함  
  매일 백업을 예약하여 서버와 해당 데이터를 자동으로 보호해야 합니다. 대부분 조직에서는 며칠 동안 생성된 데이터가 손실되면 안 되므로 매일 백업 계획을 유지 관리하는 것이 좋습니다.  
@@ -138,12 +138,12 @@ ms.locfileid: "59890144"
   
 > [!NOTE]
 >  Windows Server Essentials의 기본 설치에서 서버는 매주 한 번 조각 모음을 자동으로 수행하도록 구성됩니다. 따라서 타사 이미징 소프트웨어를 사용할 경우 기본 백업보다 큰 백업이 만들어질 수 있습니다. 서버에서 정기적으로 조각 모음을 수행할 필요가 없으면 다음 단계에 따라 조각 모음 일정을 끌 수 있습니다.  
->   
->  1.  Windows 키 +W를 눌러 **검색**을 엽니다.  
-> 2.  검색 텍스트 상자에 **Defragment**를 입력합니다.  
-> 3.  결과 섹션에서 **드라이브 조각 모음 및 최적화**를 클릭합니다.  
-> 4.  **드라이브 최적화** 페이지에서 드라이브를 선택하고 **설정 변경**을 클릭합니다.  
-> 5.  **최적화 일정** 창에서 **예약 실행(권장)** 확인란을 선택 취소한 후 **확인** 을 클릭하여 변경 내용을 저장합니다.  
+> 
+> 1. Windows 키 +W를 눌러 **검색**을 엽니다.  
+>    2. 검색 텍스트 상자에 **Defragment**를 입력합니다.  
+>    3. 결과 섹션에서 **드라이브 조각 모음 및 최적화**를 클릭합니다.  
+>    4. **드라이브 최적화** 페이지에서 드라이브를 선택하고 **설정 변경**을 클릭합니다.  
+>    5. **최적화 일정** 창에서 **예약 실행(권장)** 확인란을 선택 취소한 후 **확인** 을 클릭하여 변경 내용을 저장합니다.  
   
 ### <a name="items-to-be-backed-up"></a>백업할 항목  
  기본적으로 모든 운영 체제 파일 및 폴더가 백업을 위해 선택됩니다. 서버에 있는 모든 하드 디스크, 파일 및 폴더를 백업하도록 선택하거나 백업할 개별 하드 디스크, 파일 또는 폴더만 선택할 수 있습니다. 백업을 위해 항목을 추가하거나 제거하려면 다음의 하나를 수행합니다.  

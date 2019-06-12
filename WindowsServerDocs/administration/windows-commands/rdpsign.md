@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 648b179f5b2feb8a7585c815aee47804e3bf1532
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9e35d3a3e85ed046fb658bbf5a97ab5fc5eec6d3
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59882274"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66442017"
 ---
 # <a name="rdpsign"></a>rdpsign
 
@@ -36,6 +36,7 @@ rdpsign /sha1 <hash> [/q | /v |] [/l] <file_name.rdp>
 ```
 
 ## <a name="parameters"></a>매개 변수
+
 |매개 변수|설명|
 |-------|--------|
 |/sha1 \<hash>|한 Secure Hash Algorithm 1 (SHA1) 해시는 인증서 저장소에 포함 된 서명 인증서의 지문을 지정 합니다.|
@@ -55,20 +56,20 @@ rdpsign /sha1 <hash> [/q | /v |] [/l] <file_name.rdp>
 -   .rdp 파일의 없습니다 수 읽기 또는 쓰기, 경우 여러 파일이 지정 된 경우 도구는 다음 파일에 계속 됩니다.
 
 ## <a name="BKMK_examples"></a>예제
--   File1.rdp 라는.rdp 파일을 서명 하려면.rdp 파일을 저장 한 폴더를 찾아 다음 코드를 입력 합니다.
-    ```
-    rdpsign /sha1 hash file1.rdp
-    ```
-    > [!NOTE]
-    > *해시* SHA1 인증서 지 문은 공백 없이 값을 나타냅니다.
--   실제로 파일을 서명 하지 않고.rdp 파일에 대 한 성공할 디지털 서명을 지 여부를 테스트 하려면 다음을 입력 합니다.
-    ```
-    rdpsign /sha1 hash /l file1.rdp
-    ```
--   여러.rdp 파일을 서명 하려면 공백을 사용 하 여 파일 이름을 구분 합니다. 예를 들어 File1.rdp, File2.rdp, 및 File3.rdp 여러.rdp 파일을 서명 하려면 다음을 입력 합니다.
-    ```
-    rdpsign /sha1 hash file1.rdp file2.rdp file3.rdp
-    ```
-## <a name="see-also"></a>관련 항목
-[명령줄 구문 키](command-line-syntax-key.md)
-[원격 데스크톱 서비스 & #40; 터미널 서비스 및 #41; 명령 참조](remote-desktop-services-terminal-services-command-reference.md)
+- File1.rdp 라는.rdp 파일을 서명 하려면.rdp 파일을 저장 한 폴더를 찾아 다음 코드를 입력 합니다.
+  ```
+  rdpsign /sha1 hash file1.rdp
+  ```
+  > [!NOTE]
+  > *해시* SHA1 인증서 지 문은 공백 없이 값을 나타냅니다.
+- 실제로 파일을 서명 하지 않고.rdp 파일에 대 한 성공할 디지털 서명을 지 여부를 테스트 하려면 다음을 입력 합니다.
+  ```
+  rdpsign /sha1 hash /l file1.rdp
+  ```
+- 여러.rdp 파일을 서명 하려면 공백을 사용 하 여 파일 이름을 구분 합니다. 예를 들어 File1.rdp, File2.rdp, 및 File3.rdp 여러.rdp 파일을 서명 하려면 다음을 입력 합니다.
+  ```
+  rdpsign /sha1 hash file1.rdp file2.rdp file3.rdp
+  ```
+  ## <a name="see-also"></a>관련 항목
+  [명령줄 구문 키](command-line-syntax-key.md)
+  [원격 데스크톱 서비스 & #40; 터미널 서비스 및 #41; 명령 참조](remote-desktop-services-terminal-services-command-reference.md)

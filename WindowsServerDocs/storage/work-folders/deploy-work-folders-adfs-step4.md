@@ -8,12 +8,12 @@ ms.author: jeffpatt
 author: JeffPatt24
 ms.date: 6/242017
 ms.assetid: 4a11ede0-b000-4188-8190-790971504e17
-ms.openlocfilehash: 1f452fd1e2f054c449660eb0ee12642fefe4da8f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4cbf85f8413353801f048f253859c9f3ef9c7691
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59865054"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812554"
 ---
 # <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-4-set-up-web-application-proxy"></a>AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 4 단계, 웹 응용 프로그램 프록시 설치
 
@@ -32,7 +32,7 @@ ms.locfileid: "59865054"
 -   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 5 단계 클라이언트 설정](deploy-work-folders-adfs-step5.md)  
 
 > [!NOTE]
->   이 섹션에서는 Windows Server 2016 환경에 대한 지침을 다룹니다. Windows Server 2012 R2를 사용하는 경우 [Windows Server 2012 R2 instructions(Windows Server 2012 R2 지침)](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx)을 따르세요.
+>   Windows Server 2019 또는 Windows Server 2016 환경에 대 한 지침은이 섹션에서 설명 합니다. Windows Server 2012 R2를 사용하는 경우 [Windows Server 2012 R2 instructions(Windows Server 2012 R2 지침)](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx)을 따르세요.
 
 클라우드 폴더에 사용할 웹 응용 프로그램 프록시를 설정하려면 다음 절차를 수행합니다.  
   
@@ -108,47 +108,47 @@ ms.locfileid: "59865054"
 ## <a name="publish-the-work-folders-web-application"></a>클라우드 폴더 웹 응용 프로그램 게시  
 다음 단계는 클라이언트에 클라우드 폴더를 제공할 웹 응용 프로그램을 게시하는 것입니다. 클라우드 폴더 웹 응용 프로그램을 게시하려면 다음 단계를 따릅니다.  
   
-1.  **서버 관리자**를 열고 **도구** 메뉴에서 **원격 액세스 관리**를 클릭하여 원격 액세스 관리 콘솔을 엽니다.  
+1. **서버 관리자**를 열고 **도구** 메뉴에서 **원격 액세스 관리**를 클릭하여 원격 액세스 관리 콘솔을 엽니다.  
   
-2.  **구성**에서 **웹 응용 프로그램 프록시**를 클릭합니다.  
+2. **구성**에서 **웹 응용 프로그램 프록시**를 클릭합니다.  
   
-3.  **작업** 아래에서 **게시**를 클릭합니다. 새 응용 프로그램 게시 마법사가 열립니다.  
+3. **작업** 아래에서 **게시**를 클릭합니다. 새 응용 프로그램 게시 마법사가 열립니다.  
   
-4.  시작 페이지에서 **다음**을 클릭합니다.  
+4. 시작 페이지에서 **다음**을 클릭합니다.  
   
-5.  **사전 인증** 페이지에서 **AD FS(Active Directory Federation Services)** 를 선택하고 **다음**을 클릭합니다.  
+5. **사전 인증** 페이지에서 **AD FS(Active Directory Federation Services)** 를 선택하고 **다음**을 클릭합니다.  
   
-6.  **클라이언트 지원** 페이지에서 **OAuth2**를 선택하고 **다음**을 클릭합니다.
+6. **클라이언트 지원** 페이지에서 **OAuth2**를 선택하고 **다음**을 클릭합니다.
 
-7.  **신뢰 당사자** 페이지에서 **클라우드 폴더**를 선택하고 **다음**을 클릭합니다. 이 목록은 AD FS의 웹 응용 프로그램 프록시에 게시됩니다.  
+7. **신뢰 당사자** 페이지에서 **클라우드 폴더**를 선택하고 **다음**을 클릭합니다. 이 목록은 AD FS의 웹 응용 프로그램 프록시에 게시됩니다.  
   
-8.  **게시 설정** 페이지에서 다음 항목을 입력하고 **다음**을 클릭합니다.  
+8. **게시 설정** 페이지에서 다음 항목을 입력하고 **다음**을 클릭합니다.  
   
-    -   웹 응용 프로그램에 사용할 이름  
+   -   웹 응용 프로그램에 사용할 이름  
   
-    -   클라우드 폴더의 외부 URL  
+   -   클라우드 폴더의 외부 URL  
   
-    -   클라우드 폴더 인증서의 이름  
+   -   클라우드 폴더 인증서의 이름  
   
-    -   클라우드 폴더의 백 엔드 URL  
+   -   클라우드 폴더의 백 엔드 URL  
   
-    기본적으로 마법사는 외부 URL과 똑같은 백 엔드 URL을 만듭니다.  
+   기본적으로 마법사는 외부 URL과 똑같은 백 엔드 URL을 만듭니다.  
   
-    테스트 예제에서는 다음 값을 사용합니다.  
+   테스트 예제에서는 다음 값을 사용합니다.  
   
-    이름: **WorkFolders**  
+   이름: **WorkFolders**  
   
-    외부 URL: **https://workfolders.contoso.com**  
+   외부 URL: **https://workfolders.contoso.com**  
   
-    외부 인증서: **이전에 설치 하는 클라우드 폴더 인증서**  
+   외부 인증서: **이전에 설치 하는 클라우드 폴더 인증서**  
   
-    백 엔드 서버 URL: **https://workfolders.contoso.com**  
+   백 엔드 서버 URL: **https://workfolders.contoso.com**  
   
-9.  확인 페이지에 응용 프로그램을 게시하는 Windows PowerShell 명령이 표시됩니다. **게시**를 클릭합니다.  
+9. 확인 페이지에 응용 프로그램을 게시하는 Windows PowerShell 명령이 표시됩니다. **게시**를 클릭합니다.  
   
 10. **결과** 페이지에 응용 프로그램이 게시되었다고 표시될 것입니다.
-   >[!NOTE]
-   > 여러 클라우드 폴더 서버가 있는 경우, 각 클라우드 폴더 서버에 대해 클라우드 폴더 웹 응용 프로그램을 게시(1 ~ 10단계 반복)해야 합니다.  
+    >[!NOTE]
+    > 여러 클라우드 폴더 서버가 있는 경우, 각 클라우드 폴더 서버에 대해 클라우드 폴더 웹 응용 프로그램을 게시(1 ~ 10단계 반복)해야 합니다.  
   
 다음 단계: [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 5 단계 클라이언트 설정](deploy-work-folders-adfs-step5.md)  
   

@@ -6,14 +6,14 @@ ms.manager: daveba
 ms.technology: storage
 ms.topic: article
 author: jasongerend
-ms.date: 05/09/2019
+ms.date: 06/07/2019
 description: 이 항목에서는 다른 서버에 있는 여러 공유 폴더를 하나 이상의 논리적으로 구성된 네임스페이스로 그룹화할 수 있도록 하는 Windows Server의 역할 서비스인 DFS 네임스페이스에 대해 설명합니다.
-ms.openlocfilehash: 33b5a36c9f13179286a95735621272f79983231c
-ms.sourcegitcommit: 75f257d97d345da388cda972ccce0eb29e82d3bc
+ms.openlocfilehash: b16d8145d766cbb9b12feaaa2e5e9443813a69f2
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65613189"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812573"
 ---
 # <a name="dfs-namespaces-overview"></a>DFS 네임스페이스 개요
 
@@ -55,11 +55,11 @@ DFS 관리 실행 또는 DFS 네임스페이스 사용을 위한 추가 하드�
 
 다음 표는 네임스페이스를 호스팅할 서버를 선택할 때 고려해야 하는 추가 요인을 설명합니다.
 
-|독립 실행형 네임스페이스를 호스팅하는 서버|도메인 기반 네임스페이스를 호스팅하는 서버|
-|---|---|
-|네임스페이스를 호스팅할 NTFS 볼륨이 있어야 합니다.|네임스페이스를 호스팅할 NTFS 볼륨이 있어야 합니다.|
-|구성원 서버 또는 도메인 컨트롤러일 수 있습니다.|구성원 서버 또는 네임스페이스가 구성된 도메인의 도메인 컨트롤러여야 합니다. (이 요구 사항은 지정된 도메인 기반 네임스페이스를 호스팅하는 모든 네임스페이스 서버에 적용됩니다.)|
-|네임스페이스의 가용성을 높이기 위해 장애 조치(failover) 클러스터로 호스팅할 수 있습니다.|네임스페이스는 장애 조치(failover) 클러스터에서 클러스터링된 리소스일 수 없습니다. 그러나 네임스페이스를 해당 서버의 로컬 리소스만 사용하도록 구성하는 경우, 장애 조치(failover) 클러스터에서 노드의 역할도 하는 서버에 네임스페이스를 배치할 수 있습니다.|
+| 독립 실행형 네임스페이스를 호스팅하는 서버 | 도메인 기반 네임스페이스를 호스팅하는 서버 |
+| ---                                   |        ---                                |
+| 네임스페이스를 호스팅할 NTFS 볼륨이 있어야 합니다.|네임스페이스를 호스팅할 NTFS 볼륨이 있어야 합니다. |
+| 구성원 서버 또는 도메인 컨트롤러일 수 있습니다.|구성원 서버 또는 네임스페이스가 구성된 도메인의 도메인 컨트롤러여야 합니다. (이 요구 사항은 지정된 도메인 기반 네임스페이스를 호스팅하는 모든 네임스페이스 서버에 적용됩니다.) |
+| 네임스페이스의 가용성을 높이기 위해 장애 조치(failover) 클러스터로 호스팅할 수 있습니다.|네임스페이스는 장애 조치(failover) 클러스터에서 클러스터링된 리소스일 수 없습니다. 그러나 네임스페이스를 해당 서버의 로컬 리소스만 사용하도록 구성하는 경우, 장애 조치(failover) 클러스터에서 노드의 역할도 하는 서버에 네임스페이스를 배치할 수 있습니다. |
 
 ## <a name="installing-dfs-namespaces"></a>DFS 네임스페이스 설치
 
@@ -89,10 +89,10 @@ DFS 네임 스페이스를 사용 하 여 설치 [Windows Admin Center](../../ma
 Install-WindowsFeature <name>
 ```
 
-|역할 서비스 또는 기능|이름|
-|---|---|
-|DFS 네임스페이스|`FS-DFS-Namespace`|
-|DFS 관리 도구|`RSAT-DFS-Mgmt-Con`|
+| 역할 서비스 또는 기능 | 이름 |
+| ----------------------- | ---- |
+| DFS 네임스페이스          | `FS-DFS-Namespace` |
+| DFS 관리 도구    | `RSAT-DFS-Mgmt-Con` |
 
 예를 들어 원격 서버 관리 도구 기능의 분산 파일 시스템 도구 부분을 설치하려면 다음을 입력합니다.
 
@@ -120,12 +120,12 @@ Azure 가상 컴퓨터를 시작하는 방법에 대해 자세히 알아보려�
 
 자세한 내용은 다음 리소스를 참조하십시오.
 
-|콘텐츠 형식|참조|
-|------------------|----------------|
-|**제품 평가**|[DFS 네임 스페이스 및 DFS 복제 Windows Server의 새로운 기능](https://technet.microsoft.com/library/dn281957(v=ws.11).aspx)|
-|**배포**|[DFS Namespace 확장성 고려 사항](http://blogs.technet.com/b/filecab/archive/2012/08/26/dfs-namespace-scalability-considerations.aspx)|
-|**작업**|[DFS 네임 스페이스: 질문과 대답](https://technet.microsoft.com/library/ee404780.aspx)|
-|**커뮤니티 리소스**|[파일 서비스 및 저장소 TechNet 포럼](https://social.technet.microsoft.com/forums/winserverfiles/threads/)|
-|**프로토콜**|[파일 서비스 Windows Server의 프로토콜](https://msdn.microsoft.com/en-us/library/cc239318.aspx) (사용 되지 않음)|
-|**관련 기술**| [장애 조치(failover) 클러스터링](../../failover-clustering/failover-clustering-overview.md)|
-|**지원**|[Windows IT Pro 지원](https://www.microsoft.com/itpro/windows/support)|
+| 콘텐츠 형식        | 참조 |
+| ------------------  | ----------------|
+| **제품 평가** | [DFS 네임 스페이스 및 DFS 복제 Windows Server의 새로운 기능](https://technet.microsoft.com/library/dn281957(v=ws.11).aspx) |
+| **배포**    | [DFS Namespace 확장성 고려 사항](http://blogs.technet.com/b/filecab/archive/2012/08/26/dfs-namespace-scalability-considerations.aspx) |
+| **작업**    | [DFS 네임 스페이스: 질문과 대답](https://technet.microsoft.com/library/ee404780.aspx) |
+| **커뮤니티 리소스** | [파일 서비스 및 저장소 TechNet 포럼](https://social.technet.microsoft.com/forums/winserverfiles/threads/) |
+| **프로토콜**        | [파일 서비스 Windows Server의 프로토콜](https://msdn.microsoft.com/en-us/library/cc239318.aspx) (사용 되지 않음) |
+| **관련 기술** | [장애 조치(failover) 클러스터링](../../failover-clustering/failover-clustering-overview.md)|
+| **지원** | [Windows IT Pro 지원](https://www.microsoft.com/itpro/windows/support)|

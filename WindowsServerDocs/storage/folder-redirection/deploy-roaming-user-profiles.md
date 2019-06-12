@@ -6,14 +6,14 @@ ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
-ms.date: 07/09/2018
+ms.date: 06/07/2019
 ms.author: jgerend
-ms.openlocfilehash: c662b8c44e3603ec972e06f3fb0ddbd55e1af904
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: e6e2e32ff9aeb1b3bcfc8fed9027c7e92e13b118
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66192725"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812489"
 ---
 # <a name="deploying-roaming-user-profiles"></a>로밍 사용자 프로필 배포
 
@@ -23,8 +23,8 @@ ms.locfileid: "66192725"
 
 최근의 변경 내용은이 항목의 목록에 대 한 참조를 [변경 내용](#change-history) 이 항목의 섹션입니다.
 
->[!IMPORTANT]
->보안 변경 내용으로 인해 [MS16 072](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14%2c-2016)를 업데이트 했습니다 [4 단계: 필요에 따라 로밍 사용자 프로필에 대 한 GPO를 만들어](#step-4-optionally-create-a-gpo-for-roaming-user-profiles) 해당 Windows 고 수 있도록 제대로 로밍 사용자 프로필 정책 적용 (영향을 받는 Pc에서 로컬 정책으로 전환 되지 않고)이이 항목의 합니다.
+> [!IMPORTANT]
+> 보안 변경 내용으로 인해 [MS16 072](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14%2c-2016)를 업데이트 했습니다 [4 단계: 필요에 따라 로밍 사용자 프로필에 대 한 GPO를 만들어](#step-4-optionally-create-a-gpo-for-roaming-user-profiles) 해당 Windows 고 수 있도록 제대로 로밍 사용자 프로필 정책 적용 (영향을 받는 Pc에서 로컬 정책으로 전환 되지 않고)이이 항목의 합니다.
 
 > [!IMPORTANT]
 >  사용자 지정 시작 하려면 다음 구성에서 OS의 전체 업그레이드 후 손실 됩니다.
@@ -77,14 +77,15 @@ Windows 8.1, Windows 8, Windows Server 2012 R2 또는 Windows Server 2012를 실
 
     - Windows 8.1 또는 Windows Server 2012 R2: 문서에 설명 된 소프트웨어 업데이트를 설치 [2887595](http://support.microsoft.com/kb/2887595) 에서 Microsoft 기술 자료 (릴리스된 경우).
     - Windows 8 또는 Windows Server 2012: Microsoft 기술 자료 문서 [2887239](http://support.microsoft.com/kb/2887239) 에 설명된 소프트웨어 업데이트를 설치합니다.
+
 2. Windows 8.1, Windows 8, Windows Server 2012 R2 또는 Windows Server 2012는 로밍 사용자 프로필을 실행 하는 모든 컴퓨터에서 레지스트리 편집기를 사용 하 여 또는 다음 레지스트리를 만드는 그룹 정책 키 DWORD 값 및 설정 `1`합니다. 그룹 정책을 사용하여 레지스트리 키를 만드는 방법에 대한 자세한 내용은 [레지스트리 항목 구성](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753092(v=ws.11)>)을 참조하세요.
 
-    ```PowerShell
+    ```
     HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ProfSvc\Parameters\UseProfilePathExtensionVersion
     ```
 
-    >[!WARNING]
-    >레지스트리를 잘못 편집하면 시스템에 심각한 손상을 줄 수 있습니다. 따라서 레지스트리를 변경하기 전에 컴퓨터의 중요한 데이터를 백업해 두어야 합니다.
+    > [!WARNING]
+    > 레지스트리를 잘못 편집하면 시스템에 심각한 손상을 줄 수 있습니다. 따라서 레지스트리를 변경하기 전에 컴퓨터의 중요한 데이터를 백업해 두어야 합니다.
 3. 컴퓨터를 다시 시작합니다.
 
 ## <a name="step-2-create-a-roaming-user-profiles-security-group"></a>2단계: 로밍 사용자 프로필 보안 그룹 만들기
@@ -103,6 +104,7 @@ Windows 8.1, Windows 8, Windows Server 2012 R2 또는 Windows Server 2012를 실
 
     - **그룹 이름**에 보안 그룹의 이름(예: **Roaming User Profiles Users and Computers**)을 입력합니다.
     - **그룹 범위**를 선택 **보안**를 선택한 후 **Global**합니다.
+
 5. 에 **멤버** 섹션에서 **추가**합니다. 사용자, 연락처, 컴퓨터, 서비스 계정 또는 그룹 선택 대화 상자가 나타납니다.
 6. 보안 그룹에 컴퓨터 계정을 포함 하려는 경우 선택 **개체 유형**를 선택 합니다 **컴퓨터** 확인란을 선택한 후 **확인**합니다.
 7. 사용자, 그룹 및/또는 로밍 사용자 프로필 배포를 선택 하려는 컴퓨터의 이름을 입력 **확인**를 선택한 후 **확인** 다시 합니다.
@@ -111,8 +113,8 @@ Windows 8.1, Windows 8, Windows Server 2012 R2 또는 Windows Server 2012를 실
 
 다음 절차를 사용 하 여 Windows를 실행 하는 서버에서 파일 공유를 만들려면 (별개 로밍 프로필 폴더의 부주의 한 캐싱을 방지 하기 위해 리디렉션된 폴더에 대 한 모든 공유), 사용자 프로필 로밍에 대 한 별도 파일 공유를 아직 없는 수행 하는 경우 서버입니다.
 
->[!NOTE]
->일부 기능은 다를 수도 사용 하는 Windows Server의 버전에 따라 사용할 수 없습니다.
+> [!NOTE]
+> 일부 기능은 다를 수도 사용 하는 Windows Server의 버전에 따라 사용할 수 없습니다.
 
 Windows Server에서 파일 공유를 만드는 방법에는 다음과 같습니다.
 
@@ -122,14 +124,15 @@ Windows Server에서 파일 공유를 만드는 방법에는 다음과 같습니
 4. **공유 위치** 페이지에서 공유를 만들 서버 및 볼륨을 선택합니다.
 5. **공유 이름** 페이지의 **공유 이름** 상자에 공유 이름(예: **User Profiles$** )을 입력합니다.
 
-    >[!TIP]
-    >공유를 만들 때 공유 이름 뒤에 ```$``` 를 붙여 공유를 숨깁니다. 그러면 일반 브라우저에서 공유가 숨겨집니다.
+    > [!TIP]
+    > 공유를 만들 때 공유 이름 뒤에 ```$``` 를 붙여 공유를 숨깁니다. 그러면 일반 브라우저에서 공유가 숨겨집니다.
+
 6. **기타 설정** 페이지에서 **지속적인 가용성 사용** 확인란(있는 경우)을 선택 취소하고 필요에 따라 **액세스 기반 열거 사용** 및 **데이터 액세스 암호화** 확인란을 선택합니다.
 7. 에 **사용 권한** 페이지에서 **사용 권한 사용자 지정 하는 중...** . 고급 보안 설정 대화 상자가 나타납니다.
 8. 선택 **상속 사용 안 함**를 선택한 후 **상속 된 사용 권한을이 개체에 대 한 권한이 명시적으로 변환**합니다.
 9. 에 설명 된 대로 사용 권한을 설정 [로밍 사용자 프로필을 호스트 파일에 필요한 권한을 공유](#required-permissions-for-the-file-share-hosting-roaming-user-profiles) 특별 한 다음 화면에 나열 되지 않은 그룹 및 계정에 대 한 권한을 제거 하 고 추가에 표시 1 단계에서에서 만든 Roaming User Profiles Users and Computers 그룹에 대 한 권한입니다.
     
-    ![고급 보안 설정 창 표 1에 설명 된 대로 사용 권한을 표시 합니다.](media\advanced-security-user-profiles.jpg)
+    ![고급 보안 설정 창 표 1에 설명 된 대로 사용 권한을 표시 합니다.](media/advanced-security-user-profiles.jpg)
     
     **그림 1** 로밍 사용자 프로필 공유에 대한 권한 설정
 10. **SMB 공유 - 고급** 프로필을 선택한 경우 **관리 속성** 페이지에서 **사용자 파일** 폴더 사용량 값을 선택합니다.
@@ -138,9 +141,8 @@ Windows Server에서 파일 공유를 만드는 방법에는 다음과 같습니
 
 ### <a name="required-permissions-for-the-file-share-hosting-roaming-user-profiles"></a>파일 공유 호스팅 로밍 사용자 프로필에 필요한 권한
 
-|       |       |       |
-|   -   |   -   |   -   |
 | 사용자 계정 | 액세스 권한 | 적용 대상 |
+|   -   |   -   |   -   |
 |   시스템    |  모든 권한     |  이 폴더, 하위 폴더 및 파일     |
 |  Administrators     |  모든 권한     |  이 폴더만     |
 |  만든 이/소유자     |  모든 권한     |  하위 폴더 및 파일만     |
@@ -172,8 +174,8 @@ Windows Server에서 파일 공유를 만드는 방법에는 다음과 같습니
 
 사용자 계정에 로밍 사용자 프로필을 배포하려면 다음 절차를 사용하여 Active Directory 도메인 서비스의 사용자 계정에 대한 로밍 사용자 프로필을 지정합니다. 배포 하는 경우 로밍 사용자 프로필 컴퓨터에 원격 데스크톱 서비스 또는 가상화 된 데스크톱 배포에 설명 된 절차를 대신 사용할에 대 한 일반적인 방식 대로 [6 단계: 필요에 따라 컴퓨터에 로밍 사용자 프로필을 설정할](#step-6-optionally-set-up-roaming-user-profiles-on-computers)합니다.
 
->[!NOTE]
->Active Directory를 사용하여 사용자 계정에 로밍 사용자 프로필을 설치하고, 그룹 정책을 사용하여 컴퓨터에 로밍 사용자 프로필을 설치한 경우 컴퓨터 기반 정책 설정이 우선적으로 적용됩니다.
+> [!NOTE]
+> Active Directory를 사용하여 사용자 계정에 로밍 사용자 프로필을 설치하고, 그룹 정책을 사용하여 컴퓨터에 로밍 사용자 프로필을 설치한 경우 컴퓨터 기반 정책 설정이 우선적으로 적용됩니다.
 
 사용자 계정에 로밍 사용자 프로필을 설정 하는 방법을 다음과 같습니다.
 
@@ -186,10 +188,10 @@ Windows Server에서 파일 공유를 만드는 방법에는 다음과 같습니
     필수 로밍 사용자 프로필을 지정 하려면 이전에 만든, 예를 들어 NTuser.man 파일의 경로 지정 `fs1.corp.contoso.comUser Profiles$default`합니다. 자세한 내용은 [필수 사용자 프로필을 만들](https://docs.microsoft.com/windows/client-management/mandatory-user-profile)합니다.
 4. **확인**을 선택합니다.
 
->[!NOTE]
->로밍 사용자 프로필을 사용할 때는 기본적으로 모든 Windows® 런타임 기반(Windows 스토어) 앱의 배포가 허용됩니다. 그러나 특수 프로필을 사용할 때는 앱이 기본적으로 배포되지 않습니다. 특수 프로필은 사용자가 로그아웃한 후 변경 내용이 삭제되는 사용자 프로필입니다.
-><br><br>특수 프로필에 대한 앱 배포 제한을 제거하려면 **특수 프로필에서 배포 작업 허용** 정책 설정(컴퓨터 구성\정책\관리 템플릿\앱 패키지 배포에 있음)을 사용합니다. 그러나 이 시나리오에서 배포된 앱은 일부 데이터가 컴퓨터에 그대로 남아 있으므로 단일 컴퓨터의 사용자가 수백 명인 경우 누적될 수 있습니다. 앱을 정리를 찾거나 개발 도구를 사용 하는 [CleanupPackageForUserAsync](https://msdn.microsoft.com/library/windows/apps/windows.management.deployment.packagemanager.cleanuppackageforuserasync.aspx) 프로필을 컴퓨터에 더 이상 사용자 용 앱 패키지를 정리 하는 API입니다.
-><br><br>Windows 스토어 앱에 대한 추가 배경 정보는 [Windows 스토어에 대한 클라이언트 액세스 관리](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh832040(v=ws.11)>)를 참조하세요.
+> [!NOTE]
+> 로밍 사용자 프로필을 사용할 때는 기본적으로 모든 Windows® 런타임 기반(Windows 스토어) 앱의 배포가 허용됩니다. 그러나 특수 프로필을 사용할 때는 앱이 기본적으로 배포되지 않습니다. 특수 프로필은 사용자가 로그아웃한 후 변경 내용이 삭제되는 사용자 프로필입니다.
+> <br><br>특수 프로필에 대한 앱 배포 제한을 제거하려면 **특수 프로필에서 배포 작업 허용** 정책 설정(컴퓨터 구성\정책\관리 템플릿\앱 패키지 배포에 있음)을 사용합니다. 그러나 이 시나리오에서 배포된 앱은 일부 데이터가 컴퓨터에 그대로 남아 있으므로 단일 컴퓨터의 사용자가 수백 명인 경우 누적될 수 있습니다. 앱을 정리를 찾거나 개발 도구를 사용 하는 [CleanupPackageForUserAsync](https://msdn.microsoft.com/library/windows/apps/windows.management.deployment.packagemanager.cleanuppackageforuserasync.aspx) 프로필을 컴퓨터에 더 이상 사용자 용 앱 패키지를 정리 하는 API입니다.
+> <br><br>Windows 스토어 앱에 대한 추가 배경 정보는 [Windows 스토어에 대한 클라이언트 액세스 관리](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh832040(v=ws.11)>)를 참조하세요.
 
 ## <a name="step-6-optionally-set-up-roaming-user-profiles-on-computers"></a>6단계: 컴퓨터에 로밍 사용자 프로필 설치(선택 사항)
 
@@ -197,8 +199,8 @@ Windows Server에서 파일 공유를 만드는 방법에는 다음과 같습니
 
 Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 또는 Windows Server 2008을 실행 하는 컴퓨터에 로밍 사용자 프로필을 적용할 그룹 정책을 사용할 수 있습니다.
 
->[!NOTE]
->그룹 정책을 사용하여 컴퓨터에 로밍 사용자 프로필을 설치하고, Active Directory를 사용하여 사용자 계정에 로밍 사용자 프로필을 설치한 경우 컴퓨터 기반 정책 설정이 우선적으로 적용됩니다.
+> [!NOTE]
+> 그룹 정책을 사용하여 컴퓨터에 로밍 사용자 프로필을 설치하고, Active Directory를 사용하여 사용자 계정에 로밍 사용자 프로필을 설치한 경우 컴퓨터 기반 정책 설정이 우선적으로 적용됩니다.
 
 컴퓨터에 로밍 사용자 프로필을 설정 하는 방법을 다음과 같습니다.
 
@@ -229,14 +231,14 @@ Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2019, Windows S
 3. 그룹 정책을 사용 하 여 로밍 사용자 프로필에 대해 만든 GPO를 사용자 지정된 시작 레이아웃을 적용 합니다. 이렇게 하려면 참조 [도메인의 사용자 지정된 시작 레이아웃을 적용할 그룹 정책을 사용 하 여](https://docs.microsoft.com/windows/configuration/customize-windows-10-start-screens-by-using-group-policy#bkmk-domaingpodeployment)입니다.
 4. 그룹 정책을 사용 하 여 Windows 10 Pc에서 다음 레지스트리 값을 설정 합니다. 이렇게 하려면 참조 [레지스트리 항목 구성](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753092(v=ws.11)>)합니다.
 
-| **동작** | **업데이트** |
-|------------|------------|
-|Hive|**HKEY_LOCAL_MACHINE**|
-|키 경로|**Software\Microsoft\Windows\CurrentVersion\Explorer**|
-|값 이름|**SpecialRoamingOverrideAllowed**|
-|값 유형|**REG_DWORD**|
-|값 데이터|**1** (또는 **0** 사용 하지 않도록 설정)|
-|기본|**10 진수**|
+| **동작**   | **업데이트**                  |
+| ------------ | ------------                |
+| Hive         | **HKEY_LOCAL_MACHINE**      |
+| 키 경로     | **Software\Microsoft\Windows\CurrentVersion\Explorer** |
+| 값 이름   | **SpecialRoamingOverrideAllowed** |
+| 값 유형   | **REG_DWORD**               |
+| 값 데이터   | **1** (또는 **0** 사용 하지 않도록 설정) |
+| 기본         | **10 진수**                 |
 
 5. (선택 사항) 사용자가 더 빠르게 로그인 할 수 있도록 처음 로그온 최적화를 사용 합니다. 이렇게 하려면 참조 [로그인 시간을 개선 하는 정책을 적용할](https://docs.microsoft.com/windows/client-management/mandatory-user-profile#apply-policies-to-improve-sign-in-time)합니다.
 6. (선택 사항) 추가 클라이언트 Pc를 배포 하는 Windows 10 기본 이미지에서 불필요 한 앱을 제거 하 여 로그인 시간을 줄입니다. Windows Server 2016 및 Windows Server 2019 기능이 미리 프로 비전 된 모든 앱 서버 이미지에이 단계를 건너뛸 수 있습니다.
@@ -285,18 +287,18 @@ Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2019, Windows S
 
 ## <a name="appendix-a-checklist-for-deploying-roaming-user-profiles"></a>부록 a: 로밍 사용자 프로필 배포 검사 목록
 
-|상태|작업|
-|:---:|---|
-|☐<br>☐<br>☐<br>☐<br>☐|1. 도메인 준비<br>-도메인에 컴퓨터를 가입 합니다.<br>--별도 프로필 버전 사용을 사용 하는 중<br>사용자 계정 만들기<br>-(선택 사항) 폴더 리디렉션을 사용|
-|☐<br><br><br>|2. 로밍 사용자 프로필에 대한 보안 그룹 만들기<br>그룹 이름:<br>-구성원:|
-|☐<br><br>|3. 로밍 사용자 프로필에 대한 파일 공유 만들기<br>파일 공유 이름:|
-|☐<br><br>|4. 로밍 사용자 프로필에 대한 GPO 만들기<br>GPO 이름:|
-|☐|5. 로밍 사용자 프로필 정책 설정 구성|
-|☐<br>☐<br>☐|6. 로밍 사용자 프로필을 사용 하도록 설정<br>-AD DS에서 사용자 계정에 사용?<br>-컴퓨터 계정에서 그룹 정책에서 사용할 수 있습니까?<br>|
-|☐|7. (선택 사항) Windows 10 Pc에 대 한 필수 시작 레이아웃을 지정 합니다.|
-|☐<br>☐<br><br>☐<br><br>☐|8. (선택 사항) 기본 컴퓨터 지원 사용<br>-사용자의 기본 컴퓨터를 지정 합니다.<br>사용자 및 기본 컴퓨터 매핑 위치:<br>-폴더 리디렉션에 대 한 기본 컴퓨터 지원 (선택 사항) 사용<br>컴퓨터 기반 또는 사용자 기반?<br>-로밍 사용자 프로필에 대 한 기본 컴퓨터 지원 (선택 사항) 사용|
-|☐|9. 로밍 사용자 프로필 GPO 사용|
-|☐|10. 로밍 사용자 프로필 테스트|
+| 상태                     | 작업                                                |
+| ---                        | ------                                                |
+| ☐<br>☐<br>☐<br>☐<br>☐   | 1. 도메인 준비<br>-도메인에 컴퓨터를 가입 합니다.<br>--별도 프로필 버전 사용을 사용 하는 중<br>사용자 계정 만들기<br>-(선택 사항) 폴더 리디렉션을 사용 |
+| ☐<br><br><br>             | 2. 로밍 사용자 프로필에 대한 보안 그룹 만들기<br>그룹 이름:<br>-구성원: |
+| ☐<br><br>                 | 3. 로밍 사용자 프로필에 대한 파일 공유 만들기<br>파일 공유 이름: |
+| ☐<br><br>                 | 4. 로밍 사용자 프로필에 대한 GPO 만들기<br>GPO 이름:|
+| ☐                         | 5. 로밍 사용자 프로필 정책 설정 구성    |
+| ☐<br>☐<br>☐              | 6. 로밍 사용자 프로필을 사용 하도록 설정<br>-AD DS에서 사용자 계정에 사용?<br>-컴퓨터 계정에서 그룹 정책에서 사용할 수 있습니까?<br> |
+| ☐                         | 7. (선택 사항) Windows 10 Pc에 대 한 필수 시작 레이아웃을 지정 합니다. |
+| ☐<br>☐<br><br>☐<br><br>☐ | 8. (선택 사항) 기본 컴퓨터 지원 사용<br>-사용자의 기본 컴퓨터를 지정 합니다.<br>사용자 및 기본 컴퓨터 매핑 위치:<br>-폴더 리디렉션에 대 한 기본 컴퓨터 지원 (선택 사항) 사용<br>컴퓨터 기반 또는 사용자 기반?<br>-로밍 사용자 프로필에 대 한 기본 컴퓨터 지원 (선택 사항) 사용 |
+| ☐                        | 9. 로밍 사용자 프로필 GPO 사용                |
+| ☐                        | 10. 로밍 사용자 프로필 테스트                         |
 
 ## <a name="appendix-b-profile-version-reference-information"></a>부록 B: 프로필 버전 참조 정보
 
@@ -304,53 +306,53 @@ Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2019, Windows S
 
 다음 표에는 여러 Windows 버전의 로밍 사용자 프로필 위치가 나와 있습니다.
 
-|운영 체제 버전|로밍 사용자 프로필 위치|
-|---|---|
-|Windows XP 및 Windows Server 2003|```\\<servername>\<fileshare>\<username>```|
-|Windows Vista and Windows Server 2008|```\\<servername>\<fileshare>\<username>.V2```|
-|Windows 7 및 Windows Server 2008 R2|```\\<servername>\<fileshare>\<username>.V2```|
-|Windows 8 및 Windows Server 2012|```\\<servername>\<fileshare>\<username>.V3``` (소프트웨어 업데이트 및 레지스트리 키 적용 후)<br>```\\<servername>\<fileshare>\<username>.V2``` (전에 소프트웨어 업데이트 및 레지스트리 키 적용)|
-|Windows 8.1 및 Windows Server 2012 R2|```\\<servername>\<fileshare>\<username>.V4``` (소프트웨어 업데이트 및 레지스트리 키 적용 후)<br>```\\<servername>\<fileshare>\<username>.V2``` (전에 소프트웨어 업데이트 및 레지스트리 키 적용)|
-|Windows 10|```\\<servername>\<fileshare>\<username>.V5```|
-|Windows 10, 버전 1703 및 버전 1607|```\\<servername>\<fileshare>\<username>.V6```|
+| 운영 체제 버전 | 로밍 사용자 프로필 위치 |
+| --- | --- |
+| Windows XP 및 Windows Server 2003 | ```\\<servername>\<fileshare>\<username>``` |
+| Windows Vista and Windows Server 2008 | ```\\<servername>\<fileshare>\<username>.V2``` |
+| Windows 7 및 Windows Server 2008 R2 | ```\\<servername>\<fileshare>\<username>.V2``` |
+| Windows 8 및 Windows Server 2012 | ```\\<servername>\<fileshare>\<username>.V3``` (소프트웨어 업데이트 및 레지스트리 키 적용 후)<br>```\\<servername>\<fileshare>\<username>.V2``` (전에 소프트웨어 업데이트 및 레지스트리 키 적용) |
+| Windows 8.1 및 Windows Server 2012 R2 | ```\\<servername>\<fileshare>\<username>.V4``` (소프트웨어 업데이트 및 레지스트리 키 적용 후)<br>```\\<servername>\<fileshare>\<username>.V2``` (전에 소프트웨어 업데이트 및 레지스트리 키 적용) |
+| Windows 10 | ```\\<servername>\<fileshare>\<username>.V5``` |
+| Windows 10, 버전 1703 및 버전 1607 | ```\\<servername>\<fileshare>\<username>.V6``` |
 
 ## <a name="appendix-c-working-around-reset-start-menu-layouts-after-upgrades"></a>부록 C: 작업은 업그레이드 한 후 시작 메뉴 레이아웃을 약 재설정
 
 몇 가지 방법으로 전체 업그레이드 한 후 다시 시작 하는 시작 메뉴 레이아웃을 해결할 수는 다음과 같습니다.
 
- - 장치를 그 어느 때 사용 하는 한 명의 사용자 및 IT 관리자는 SCCM와 같은 관리 되는 OS 배포 전략을 사용 하는 경우 다음을 수행할 수 있습니다.
+- 장치를 그 어느 때 사용 하는 한 명의 사용자 및 IT 관리자는 SCCM와 같은 관리 되는 OS 배포 전략을 사용 하는 경우 다음을 수행할 수 있습니다.
     
-    1. 업그레이드 하기 전에 Export-startlayout를 사용 하 여 시작 메뉴 레이아웃을 내보내기 
-    2. OOBE 하지만 사용자가 로그인 하기 전에 Import-startlayout을 사용 하 여 시작 메뉴 레이아웃을 가져오기  
+  1. 업그레이드 하기 전에 Export-startlayout를 사용 하 여 시작 메뉴 레이아웃을 내보내기 
+  2. OOBE 하지만 사용자가 로그인 하기 전에 Import-startlayout을 사용 하 여 시작 메뉴 레이아웃을 가져오기  
  
-    > [!NOTE] 
-    > 가져오기는 StartLayout 기본 사용자 프로필을 수정 합니다. 모든 사용자 프로필 가져오기 발생 한 후 만든 가져온된 시작 레이아웃을 받게 됩니다.
+     > [!NOTE] 
+     > 가져오기는 StartLayout 기본 사용자 프로필을 수정 합니다. 모든 사용자 프로필 가져오기 발생 한 후 만든 가져온된 시작 레이아웃을 받게 됩니다.
  
- - IT 관리자는 그룹 정책을 사용 하 여 시작의 레이아웃을 관리 하도록 선택할 수 있습니다. 그룹 정책을 사용 하는 표준화 된 시작 레이아웃을 사용자에 게 적용 중앙 집중식된 관리 솔루션을 제공 합니다. 2 모드가 시작 관리에 대 한 그룹 정책을 사용 하는 모드에 있습니다. 전체 잠금 및 잠금 부분입니다. 전체 잠금 시나리오는 사용자 시작의 레이아웃을 변경 하지 못하도록 방지 합니다. 부분 잠금 시나리오를 사용 하면 시작의 특정 영역으로 변경할 수 있습니다. 자세한 내용은 참조 하세요. [사용자 지정 및 내보내기 시작 레이아웃](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout)합니다.
+- IT 관리자는 그룹 정책을 사용 하 여 시작의 레이아웃을 관리 하도록 선택할 수 있습니다. 그룹 정책을 사용 하는 표준화 된 시작 레이아웃을 사용자에 게 적용 중앙 집중식된 관리 솔루션을 제공 합니다. 2 모드가 시작 관리에 대 한 그룹 정책을 사용 하는 모드에 있습니다. 전체 잠금 및 잠금 부분입니다. 전체 잠금 시나리오는 사용자 시작의 레이아웃을 변경 하지 못하도록 방지 합니다. 부분 잠금 시나리오를 사용 하면 시작의 특정 영역으로 변경할 수 있습니다. 자세한 내용은 참조 하세요. [사용자 지정 및 내보내기 시작 레이아웃](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout)합니다.
         
-    > [!NOTE]
-    > 업그레이드 하는 동안 계속 부분 잠금 시나리오에서 사용자가 변경한 변경 내용이 손실 됩니다.
+   > [!NOTE]
+   > 업그레이드 하는 동안 계속 부분 잠금 시나리오에서 사용자가 변경한 변경 내용이 손실 됩니다.
 
- -  시작을 레이아웃 재설정 발생 하 고 최종 사용자가 시작을 다시 구성할 수 있습니다. 알림 전자 메일 또는 기타 알림은 시작 레이아웃을 영향을 최소화 하려면 OS를 업그레이드 한 후 다시 설정 하도록 최종 사용자에 게 보낼 수 있습니다. 
+- 시작을 레이아웃 재설정 발생 하 고 최종 사용자가 시작을 다시 구성할 수 있습니다. 알림 전자 메일 또는 기타 알림은 시작 레이아웃을 영향을 최소화 하려면 OS를 업그레이드 한 후 다시 설정 하도록 최종 사용자에 게 보낼 수 있습니다. 
 
 # <a name="change-history"></a>변경 기록
 
 다음 표에는 이 항목의 중요한 최근 변경 내용이 요약되어 있습니다.
 
-|Date|설명 |Reason|
-|--- |---         |---   |
-|2019 년 5 월 1 일부 터|2019에 대 한 추가 업데이트|
-|2018 년 4 월 10 일|운영 체제 현재 위치 업그레이드 한 후 손실 사용자 지정 시작 하는 경우 추가 토론|설명선 알려진 문제입니다.|
-|2018 년 3 월 13 일 |Windows Server 2016 용 업데이트 | 이전 버전 라이브러리 외부로 이동 하 고 현재 버전의 Windows Server 용으로 업데이트 합니다.|
-|2017 년 4 월 13 일|Windows 10 버전 1703에 대 한 프로필 정보를 추가 하 고 운영 체제를 업그레이드 하는 경우 어떻게 로밍 프로필 버전 작업 설명이 명시 되었습니다-참조 [여러 버전의 Windows에서 로밍 사용자 프로필을 사용할 때의 고려 사항](#considerations-when-using-roaming-user-profiles-on-multiple-versions-of-windows)합니다.|고객 의견|
-|2017 년 3 월 14 일|Windows 10 Pc에 대 한 필수 시작 레이아웃을 지정 하는 것에 대 한 추가 선택적 단계 [부록 a: 로밍 사용자 프로필 배포 검사 목록](#appendix-a-checklist-for-deploying-roaming-user-profiles)합니다.|최신 Windows 업데이트의 변경 내용 기능입니다.|
-|2017 년 1 월 23 일|추가 하는 단계를 [4 단계: 필요에 따라 로밍 사용자 프로필에 대 한 GPO를 만들어](#step-4-optionally-create-a-gpo-for-roaming-user-profiles) 현재 인증 된 사용자에 게 읽기 권한을 위임 하려면 그룹 정책 보안 업데이트로 인해 필요 합니다.|보안 그룹 정책 처리를 변경합니다.|
-|2016 년 12 월 29 일|링크를 추가 [8 단계: 로밍 사용자 프로필 GPO 사용](#step-8-enable-the-roaming-user-profiles-gpo) 쉽게 기본 컴퓨터에 대 한 그룹 정책을 설정 하는 방법에 대 한 정보를 가져올 수 있습니다. 또한 수정 단계 5 및 6의 숫자에 잘못 된에 대 한 몇 가지 참조가 되었습니다.|고객 의견|
-|2016 년 12 월 5 일|시작 메뉴 설정 로밍 문제를 설명 하는 추가 정보입니다.|고객 의견|
-|2016 년 7 월 6 일|Windows 10 프로필 버전 접미사를 추가 [부록 b: 프로필 버전 참조 정보](#appendix-b-profile-version-reference-information)합니다. 지원 되는 운영 체제의 목록에서 Windows XP 및 Windows Server 2003 제거 합니다.|새 버전의 Windows를 및 더 이상 지원 되지 않는 Windows 버전에 대 한 제거 정보에 대 한 업데이트 합니다.|
-|2015년 7월 7일|클러스터된 파일 서버를 사용하는 경우 지속적인 가용성을 사용하지 않도록 설정하는 단계 및 요구 사항을 추가했습니다.|클러스터된 파일 공유는 지속적인 가용성을 사용하지 않는 경우 작은 쓰기(로밍 사용자 프로필에 일반적임)에 비해 우수한 성능을 제공합니다.|
-|2014년 3월 19일|프로필 버전 접미사 (합니다. V2 합니다. V3. V4)에서 [부록 b: 프로필 버전 참조 정보](#appendix-b-profile-version-reference-information)합니다.|Windows는 대/소문자 구분, 파일 공유를 사용 하 여 NFS를 사용 하는 경우 이지만 올바른 (대문자) 대/소문자 프로필 접미사에 대 한 것이 중요 합니다.|
-|2013년 10월 9일|몇 가지를 설명 했습니다 추가 Windows Server 2012 R2 및 Windows 8.1 대 한 수정 합니다 [여러 버전의 Windows에서 로밍 사용자 프로필을 사용 하는 경우 고려 사항](#considerations-when-using-roaming-user-profiles-on-multiple-versions-of-windows) 고 [부록 b: 프로필 버전 참조 정보](#appendix-b-profile-version-reference-information) 섹션입니다.|새 버전에 대 한 업데이트 고객 의견|
+| Date | 설명 |Reason|
+| --- | ---         | ---   |
+| 2019 년 5 월 1 일부 터 | Windows Server 2019에 대 한 추가 업데이트 |
+| 2018 년 4 월 10 일 | 운영 체제 현재 위치 업그레이드 한 후 손실 사용자 지정 시작 하는 경우 추가 토론|설명선 알려진 문제입니다. |
+| 2018 년 3 월 13 일 | Windows Server 2016 용 업데이트 | 이전 버전 라이브러리 외부로 이동 하 고 현재 버전의 Windows Server 용으로 업데이트 합니다. |
+| 2017 년 4 월 13 일 | Windows 10 버전 1703에 대 한 프로필 정보를 추가 하 고 운영 체제를 업그레이드 하는 경우 어떻게 로밍 프로필 버전 작업 설명이 명시 되었습니다-참조 [여러 버전의 Windows에서 로밍 사용자 프로필을 사용할 때의 고려 사항](#considerations-when-using-roaming-user-profiles-on-multiple-versions-of-windows)합니다. | 고객 의견 |
+| 2017 년 3 월 14 일 | Windows 10 Pc에 대 한 필수 시작 레이아웃을 지정 하는 것에 대 한 추가 선택적 단계 [부록 a: 로밍 사용자 프로필 배포 검사 목록](#appendix-a-checklist-for-deploying-roaming-user-profiles)합니다. |최신 Windows 업데이트의 변경 내용 기능입니다. |
+| 2017 년 1 월 23 일 | 추가 하는 단계를 [4 단계: 필요에 따라 로밍 사용자 프로필에 대 한 GPO를 만들어](#step-4-optionally-create-a-gpo-for-roaming-user-profiles) 현재 인증 된 사용자에 게 읽기 권한을 위임 하려면 그룹 정책 보안 업데이트로 인해 필요 합니다.|보안 그룹 정책 처리를 변경합니다. |
+| 2016 년 12 월 29 일 | 링크를 추가 [8 단계: 로밍 사용자 프로필 GPO 사용](#step-8-enable-the-roaming-user-profiles-gpo) 쉽게 기본 컴퓨터에 대 한 그룹 정책을 설정 하는 방법에 대 한 정보를 가져올 수 있습니다. 또한 수정 단계 5 및 6의 숫자에 잘못 된에 대 한 몇 가지 참조가 되었습니다.|고객 의견 |
+| 2016 년 12 월 5 일 | 시작 메뉴 설정 로밍 문제를 설명 하는 추가 정보입니다. | 고객 의견 |
+| 2016 년 7 월 6 일 | Windows 10 프로필 버전 접미사를 추가 [부록 b: 프로필 버전 참조 정보](#appendix-b-profile-version-reference-information)합니다. 지원 되는 운영 체제의 목록에서 Windows XP 및 Windows Server 2003 제거 합니다. | 새 버전의 Windows를 및 더 이상 지원 되지 않는 Windows 버전에 대 한 제거 정보에 대 한 업데이트 합니다. |
+| 2015년 7월 7일 | 클러스터된 파일 서버를 사용하는 경우 지속적인 가용성을 사용하지 않도록 설정하는 단계 및 요구 사항을 추가했습니다. | 클러스터된 파일 공유는 지속적인 가용성을 사용하지 않는 경우 작은 쓰기(로밍 사용자 프로필에 일반적임)에 비해 우수한 성능을 제공합니다. |
+| 2014년 3월 19일 | 프로필 버전 접미사 (합니다. V2 합니다. V3. V4)에서 [부록 b: 프로필 버전 참조 정보](#appendix-b-profile-version-reference-information)합니다. | Windows는 대/소문자 구분, 파일 공유를 사용 하 여 NFS를 사용 하는 경우 이지만 올바른 (대문자) 대/소문자 프로필 접미사에 대 한 것이 중요 합니다. |
+| 2013년 10월 9일 | 몇 가지를 설명 했습니다 추가 Windows Server 2012 R2 및 Windows 8.1 대 한 수정 합니다 [여러 버전의 Windows에서 로밍 사용자 프로필을 사용 하는 경우 고려 사항](#considerations-when-using-roaming-user-profiles-on-multiple-versions-of-windows) 고 [부록 b: 프로필 버전 참조 정보](#appendix-b-profile-version-reference-information) 섹션입니다. | 새 버전에 대 한 업데이트 고객 의견 |
 
 ## <a name="more-information"></a>자세한 정보
 

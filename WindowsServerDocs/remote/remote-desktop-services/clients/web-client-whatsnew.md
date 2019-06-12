@@ -13,19 +13,19 @@ manager: dongill
 ms.author: elizapo
 ms.date: 05/20/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 15218af2f084e9c998d89250aace1d763d03b42a
-ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
+ms.openlocfilehash: 5be9b05da1e78cc54e12254f43d0f44f7ff65c5d
+ms.sourcegitcommit: d888e35f71801c1935620f38699dda11db7f7aad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65976334"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66804879"
 ---
 # <a name="whats-new-for-the-remote-desktop-web-client"></a>원격 데스크톱 웹 클라이언트에 대 한 새로운 기능
 
 정기적으로 업데이트 합니다 [원격 데스크톱 웹 클라이언트](remote-desktop-web-client.md), 새로운 기능을 추가 하 고 문제를 수정 합니다. 아래 최신 업데이트를 확인 합니다.
 
-   >[!NOTE]
-    >웹 클라이언트에 대 한 시스템 버전 관리 변경 했습니다. 1.0.18.0 버전부터 모든 웹 클라이언트 릴리스 버전 ("W.X.Y.Z" 형식의)에서 숫자를 포함 됩니다. 원격 데스크톱 웹 클라이언트에 대 한 릴리스 번호는 0 (예를 들어 W.X.Y.0)를 사용 하 여 항상 종료 됩니다. 각 Windows 가상 데스크톱 웹 클라이언트 릴리스는 다음 원격 데스크톱 웹 클라이언트 릴리스 (예를 들어 1.0.18.1) 될 때까지 마지막 숫자를 변경 합니다.
+> [!NOTE]
+> 웹 클라이언트에 대 한 시스템 버전 관리 변경 했습니다. 1.0.18.0 버전부터 모든 웹 클라이언트 릴리스 버전 ("W.X.Y.Z" 형식의)에서 숫자를 포함 됩니다. 원격 데스크톱 웹 클라이언트에 대 한 릴리스 번호는 0 (예를 들어 W.X.Y.0)를 사용 하 여 항상 종료 됩니다. 각 Windows 가상 데스크톱 웹 클라이언트 릴리스는 다음 원격 데스크톱 웹 클라이언트 릴리스 (예를 들어 1.0.18.1) 될 때까지 마지막 숫자를 변경 합니다.
 
 ## <a name="updates-for-version-10180"></a>1.0.18.0 버전에 대 한 업데이트
 *게시 날짜: 5/14/2019*
@@ -38,7 +38,7 @@ ms.locfileid: "65976334"
 - 만료 된 암호를 사용 하 여 인증을 시도 하는 사용자에 대 한 업데이트 된 오류 메시지입니다.
 - 모든 리소스 페이지에서 새로 고친된 피드 UI입니다.
 - 세션 중에 발생 한 확인할된 겹치는 대화 상자에 다시 연결 합니다.
-- 원격 리소스 아이콘 크기 조정 리소스 작업 표시줄에 고정 합니다. 
+- 원격 리소스 아이콘 크기 조정 리소스 작업 표시줄에 고정 합니다.
 
 ## <a name="updates-for-version-1011"></a>버전 1.0.11 업데이트
 *게시 날짜: 2/22/2019*
@@ -58,7 +58,7 @@ ms.locfileid: "65976334"
 - 고정된 액세스 가능성 버그를 시각 장애가 있는 사용자가 웹 클라이언트를 사용 하도록 설정 합니다.
 - 향상 된 피드 오류에 대 한 사용자에 게 표시 하는 오류 메시지입니다.
 - 추가 Ctrl + Alt + 끝 (Windows) 및 fn + 컨트롤 + 옵션 + 삭제 (Mac) 바로 가기 원격 컴퓨터에서 Ctrl + Alt + Del을 호출 합니다.
-- 중단 이벤트에 대 한 향상 된 원격 분석입니다. 
+- 중단 이벤트에 대 한 향상 된 원격 분석입니다.
 - 빌드 파이프라인 및 빌드 도구를 향상 합니다.
 - 다양 한 버그 수정.
 
@@ -86,7 +86,7 @@ ms.locfileid: "65976334"
 
 - 웹 클라이언트 내에서 환경에 새 로그인 합니다.
 - 데스크톱 또는 앱 연결 (Single sign-on)를 시작할 때 자격 증명을 입력 이상.
-- 웹 클라이언트를 새 URL로 이동 합니다. **https://server_FQDN/RDWeb/webclient/index.html**
+- 웹 클라이언트를 새 URL로 이동 합니다. <https://server_FQDN/RDWeb/webclient/index.html>
 - 추가 된 표준 시간대 리디렉션입니다.
 - 다양 한 버그 수정.
 

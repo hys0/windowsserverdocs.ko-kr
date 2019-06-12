@@ -10,12 +10,12 @@ ms.topic: article
 ms.custom: it-pro
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: fdd31a8b7c2c6ef87d1d22d901b5c6ca69b5c70d
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: f3f84a5c18589d38606825ee064cfb729003a05d
+ms.sourcegitcommit: a3958dba4c2318eaf2e89c7532e36c78b1a76644
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66188721"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719688"
 ---
 # <a name="ad-fs-frequently-asked-questions-faq"></a>AD FS에는 질문과 대답 (FAQ)
 
@@ -120,7 +120,7 @@ Apple에 앱 전송 보안 ATS () 호출에서 AD FS에 인증 하는 iOS 앱에
 자체 id_token에 있는 관련 정보를 추가 하려면 사용자 지정 된 id_token을 사용할 수 있습니다. 자세한 내용은 문서 참조 [id_token에 내보내지는 클레임을 사용자 지정](../development/Custom-Id-Tokens-in-AD-FS.md)합니다.
 
 ### <a name="how-to-issue-json-blobs-inside-jwt-tokens"></a>JWT 토큰 내에서 json blob을 실행 하는 방법
-특수 값 형식 ("http://www.w3.org/2001/XMLSchema#json") 및 AD FS 2016에서에서 추가 된이 character(\x22)를 이스케이프 합니다. 발급 규칙 및 액세스 토큰의 최종 출력에 대 한 아래 샘플 하세요.
+특수 값 형식 ("<http://www.w3.org/2001/XMLSchema#json>") 및 AD FS 2016에서에서 추가 된이 character(\x22)를 이스케이프 합니다. 발급 규칙 및 액세스 토큰의 최종 출력에 대 한 아래 샘플 하세요.
 
 샘플 발급 규칙:
 
@@ -171,13 +171,13 @@ AD FS SSL 인증서는 AD FS 관리 스냅인에 AD FS 서비스 통신 인증�
 = 로그인 프롬프트를 구성 하는 방법에 대 한 정보에 대 한 참조 [Active Directory Federation Services 프롬프트 로그인 매개 변수 지원 =](../operations/AD-FS-Prompt-Login.md)합니다.
 
 ### <a name="how-can-i-change-the-ad-fs-service-account"></a>AD FS 서비스 계정을 어떻게 변경할 수 있나요?
-AD FS 서비스 계정을 변경 하려면 AD FS 도구 상자를 사용 하 여 지침을 따릅니다 [서비스 계정 Powershell 모듈](https://github.com/Microsoft/adfsToolbox/tree/master/serviceAccountModule)합니다. 
+AD FS 서비스 계정을 변경 하려면 AD FS 도구 상자를 사용 하 여 지침을 따릅니다 [서비스 계정 Powershell 모듈](https://github.com/Microsoft/adfsToolbox/tree/master/serviceAccountModule)합니다.
 
 ### <a name="how-can-i-configure-browsers-to-use-windows-integrated-authentication-wia-with-ad-fs"></a>AD FS를 사용 하 여 Windows 통합 인증 WIA ()를 사용 하는 브라우저 구성 어떻게 해야 합니까?
 
 브라우저를 구성 하는 방법에 대 한 내용은 [AD FS를 사용 하 여 Windows 통합 인증 WIA ()를 사용 하는 브라우저 구성](../operations/Configure-AD-FS-Browser-WIA.md)합니다.
 
-### <a name="can-i-trun-off-browserssoenabled"></a>Trun BrowserSsoEnabled 해제 해야 합니까?
+### <a name="can-i-turn-off-browserssoenabled"></a>BrowserSsoEnabled을 해제할 수 있습니까?
 ADFS;를 사용 하 여 비즈니스 인증서 등록 용 ADFS 또는 Windows Hello에서 장치 기반 액세스 제어 정책이 없는 경우 BrowserSsoEnabled를 해제할 수 있습니다. BrowserSsoEnabled ADFS를 PRT (기본 새로 고침 토큰)는 장치 정보를 포함 하는 클라이언트에서 수집할 수 있습니다. ADFS 인증 장치 없이 Windows 10 장치에서 작동 하지 않습니다.
 
 ### <a name="how-long-are-ad-fs-tokens-valid"></a>유효한 AD FS 토큰 얼마나 걸리나요?
@@ -295,3 +295,8 @@ WAP 서버의 집합 WebApplicationProxySslCertificate를 여전히 사용할 �
 
 ### <a name="is-adfs-supported-when-web-application-proxy-wap-servers-are-behind-azure-web-application-firewallwaf"></a>ADFS가 웹 응용 프로그램 프록시 (WAP) 서버는 Azure 웹 응용 프로그램 Firewall(WAF) 뒤 때 지원 되나요?
 ADFS 및 웹 응용 프로그램 서버 끝점에서 SSL 종료를 수행 하지 않는 모든 방화벽을 지원 합니다. 또한 ADFS/WAP 서버 기본적으로 교차 사이트 스크립팅, ADFS 프록시가 등 일반적인 웹 공격을 방지 하 고 정의 된 모든 요구 사항을 충족 하는 메커니즘을 [MS ADFSPIP 프로토콜](https://msdn.microsoft.com/library/dn392811.aspx)합니다.
+
+### <a name="i-am-seeing-an-event-441-a-token-with-a-bad-token-binding-key-was-found-what-should-i-do-to-resolve-this"></a>표시는 "441 이벤트: 잘못 된 토큰 바인딩 키를 사용 하 여 토큰을 찾았습니다. " 이 해결 하려면 어떻게 해야 합니까?
+Ad FS 2016에서 여러 알려진된 문제가 발생 프록시 및 페더레이션 시나리오와 함께 결과 오류가 및 토큰 바인딩 자동으로 활성화 됩니다. 이 해결 하려면 다음 Powershell 명령을 실행 하 고 토큰 바인딩 지원을 제거 합니다.
+
+`Set-AdfsProperties -IgnoreTokenBinding $true`

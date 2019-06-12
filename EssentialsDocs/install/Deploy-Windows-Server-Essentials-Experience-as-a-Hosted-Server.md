@@ -12,12 +12,12 @@ ms.assetid: a455c6b4-b29f-4f76-8c6b-1578b6537717
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: b44b395a39a53194b73a0d503c2310edcbe53a2c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 94d4040b65a63fe64e5d49d55f82c4deead5a121
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59876074"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66433580"
 ---
 # <a name="deploy-windows-server-essentials-experience-as-a-hosted-server"></a>Windows Server Essentials Experienc를 호스트된 서버로 배포
 
@@ -116,35 +116,35 @@ ms.locfileid: "59876074"
   
  다음은 일반적인 서버 쪽 네트워킹 토폴로지 두 가지와 VPN 및 원격 웹 액세스를 구성하는 방법입니다.  
   
--   **토폴로지 1** (기본 설정 토폴로지로서, 모든 서버와 VPN IP 범위를 동일한 서브넷에 배치함):  
+- **토폴로지 1** (기본 설정 토폴로지로서, 모든 서버와 VPN IP 범위를 동일한 서브넷에 배치함):  
   
-    -   서버를 NAT(Network Address Translation) 장치에서 별도의 가상 네트워크에 설정합니다.  
+  -   서버를 NAT(Network Address Translation) 장치에서 별도의 가상 네트워크에 설정합니다.  
   
-    -   가상 네트워크에서 DHCP 서비스를 사용하도록 설정하거나 서버에 고정 IP 주소를 할당합니다.  
+  -   가상 네트워크에서 DHCP 서비스를 사용하도록 설정하거나 서버에 고정 IP 주소를 할당합니다.  
   
-    -   라우터에서 공용 IP 포트 443을 서버의 로컬 네트워크 주소에 전달합니다.  
+  -   라우터에서 공용 IP 포트 443을 서버의 로컬 네트워크 주소에 전달합니다.  
   
-    -   포트 443에 대해 VPN 통과를 허용합니다.  
+  -   포트 443에 대해 VPN 통과를 허용합니다.  
   
-    -   서버 주소와 동일한 서브넷 범위에 VPN IPv4 주소 풀을 설정합니다.  
+  -   서버 주소와 동일한 서브넷 범위에 VPN IPv4 주소 풀을 설정합니다.  
   
-    -   두 번째 서버에 동일한 서브넷 내에 있지만 VPN 주소 풀 외부에 있는 고정 IP 주소를 할당합니다.  
+  -   두 번째 서버에 동일한 서브넷 내에 있지만 VPN 주소 풀 외부에 있는 고정 IP 주소를 할당합니다.  
   
--   **토폴로지 2**:  
+- **토폴로지 2**:  
   
-    -   서버에 개인 IP 주소를 할당합니다.  
+  -   서버에 개인 IP 주소를 할당합니다.  
   
-    -   서버의 포트 443이 공용 포트 443 IP 주소에 도달하도록 합니다.  
+  -   서버의 포트 443이 공용 포트 443 IP 주소에 도달하도록 합니다.  
   
-    -   포트 443에 대해 VPN 통과를 허용합니다.  
+  -   포트 443에 대해 VPN 통과를 허용합니다.  
   
-    -   VPN IPv4 주소 풀 및 서버 주소에 대해 서로 다른 범위를 할당합니다.  
+  -   VPN IPv4 주소 풀 및 서버 주소에 대해 서로 다른 범위를 할당합니다.  
   
- 토폴로지 2의 경우 동일한 도메인에 다른 서버를 추가할 수 없으므로 두 번째 서버 시나리오가 지원되지 않습니다.  
+  토폴로지 2의 경우 동일한 도메인에 다른 서버를 추가할 수 없으므로 두 번째 서버 시나리오가 지원되지 않습니다.  
   
- Windows PowerShell 스크립트를 사용하여 무인 배포 중에 VPN을 사용하도록 설정하거나, 초기 구성 후 마법사를 사용하여 VPN을 구성할 수 있습니다.  
+  Windows PowerShell 스크립트를 사용하여 무인 배포 중에 VPN을 사용하도록 설정하거나, 초기 구성 후 마법사를 사용하여 VPN을 구성할 수 있습니다.  
   
- Windows PowerShell을 사용하여 VPN을 사용하도록 설정하려면 Windows Server Essentials를 실행하는 서버에서 관리자 권한으로 다음 명령을 실행하고 필요한 모든 정보를 제공합니다.  
+  Windows PowerShell을 사용하여 VPN을 사용하도록 설정하려면 Windows Server Essentials를 실행하는 서버에서 관리자 권한으로 다음 명령을 실행하고 필요한 모든 정보를 제공합니다.  
   
 ```  
 ##  
@@ -177,19 +177,19 @@ Install-WssVpnServer -IPv4AddressRange ('192.168.0.160','192.168.0.240') -ApplyT
   
  이 키가 0x1로 설정된 경우 온-프레미스 기능 중 일부가 동작을 변경합니다. 이러한 기능 변경은 다음과 같습니다.  
   
--   **클라이언트 백업** 새로 가입된 클라이언트 컴퓨터에 대해서는 기본적으로 클라이언트 백업이 해제됩니다.  
+- **클라이언트 백업** 새로 가입된 클라이언트 컴퓨터에 대해서는 기본적으로 클라이언트 백업이 해제됩니다.  
   
--   **클라이언트 복원 서비스** 클라이언트 복원 서비스가 사용하지 않도록 설정되며, UI가 대시보드에서 숨겨집니다.  
+- **클라이언트 복원 서비스** 클라이언트 복원 서비스가 사용하지 않도록 설정되며, UI가 대시보드에서 숨겨집니다.  
   
--   **파일 히스토리** 새로 만들어진 사용자 계정에 대한 파일 히스토리 설정은 서버에 의해 자동으로 관리되지 않습니다.  
+- **파일 히스토리** 새로 만들어진 사용자 계정에 대한 파일 히스토리 설정은 서버에 의해 자동으로 관리되지 않습니다.  
   
--   **서버 백업** 서버 백업 서비스는 사용하지 않도록 설정되며, 서버 백업 UI가 대시보드에서 숨겨집니다.  
+- **서버 백업** 서버 백업 서비스는 사용하지 않도록 설정되며, 서버 백업 UI가 대시보드에서 숨겨집니다.  
   
--   **저장소 공간** 저장소 공간을 만들거나 관리하기 위한 UI가 대시보드에서 숨겨집니다.  
+- **저장소 공간** 저장소 공간을 만들거나 관리하기 위한 UI가 대시보드에서 숨겨집니다.  
   
--   **원격 액세스** 원격 액세스 설정 마법사를 실행할 때 라우터 및 VPN 구성은 기본적으로 건너뜁니다.  
+- **원격 액세스** 원격 액세스 설정 마법사를 실행할 때 라우터 및 VPN 구성은 기본적으로 건너뜁니다.  
   
- 나열된 각 기능의 동작을 제어하려면 각 기능의 해당 레지스트리 키를 설정하면 됩니다. 레지스트리 키를 설정하는 방법에 대한 자세한 내용은 [Windows Server 2012 R2에서 Windows Server Essentials 사용자 지정 및 배포](https://technet.microsoft.com/library/dn293241.aspx)를 참조하세요.  
+  나열된 각 기능의 동작을 제어하려면 각 기능의 해당 레지스트리 키를 설정하면 됩니다. 레지스트리 키를 설정하는 방법에 대한 자세한 내용은 [Windows Server 2012 R2에서 Windows Server Essentials 사용자 지정 및 배포](https://technet.microsoft.com/library/dn293241.aspx)를 참조하세요.  
   
 ##  <a name="BKMK_AutomateDeployment"></a> Windows Server Essentials Experience의 배포를 자동화  
  배포를 자동화 하려면 먼저 운영 체제를 배포 하 고 다음 Windows Server Essentials Experience 역할을 설치 해야 합니다.  
@@ -217,9 +217,9 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
   
 > [!NOTE]
 >  원본 서버와 대상 서버를 동일한 서브넷에 배치하는 것이 좋습니다. 이것이 불가능한 경우 다음을 확인해야 합니다.  
->   
->  -   원본 서버와 대상 서버가 서로 액세스할 수 있는 "™ s 내부 DNS 이름입니다.  
-> -   필요한 모든 포트가 열려 있습니다.  
+> 
+> - 원본 서버와 대상 서버가 서로 액세스할 수 있는 "™ s 내부 DNS 이름입니다.  
+>   -   필요한 모든 포트가 열려 있습니다.  
   
  마이그레이션 후 라이선스를 업그레이드하여 잠금 및 제한을 제거할 수 있습니다. 자세한 내용은 [Windows Server Essentials에서 Windows Server 2012 Standard 전환](https://technet.microsoft.com/library/jj247582.aspx)합니다.  
   
@@ -408,4 +408,4 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
 
 -   [Windows Server Essentials 설치](Install-Windows-Server-Essentials.md)  
 
--   [Windows Server Essentials를 사용 하 여 시작](../get-started/get-started.md)
+-   [Windows Server Essentials 시작](../get-started/get-started.md)

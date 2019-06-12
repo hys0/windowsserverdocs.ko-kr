@@ -8,12 +8,12 @@ author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: high
 ms.date: 05/21/2019
-ms.openlocfilehash: 625d71edd00ce404cee9525e06a2237d8be4cfcb
-ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
+ms.openlocfilehash: dee19cd5a30b7d913a7faeeaa38368cee8a91895
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65976457"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66442288"
 ---
 # <a name="windows-server-servicing-channels-ltsc-and-sac"></a>Windows Server 서비스 채널: LTSC 및 SAC
 
@@ -52,14 +52,15 @@ Windows Server 고객, 장기 서비스 채널 및 반기 채널에 사용할 �
 
 다음 표에는 채널 간 주요 차이점이 요약되어 있습니다.
 
-|  | 장기 서비스 채널(Windows Server 2019) |반기 채널(Windows Server) |
-| ------------------- | ------------------------------------ | ------------------------------------------------- |
-|권장 시나리오 | 일반 목적의 파일 서버, Microsoft 및 비 Microsoft 워크로드, 기존 앱, 인프라 역할, 소프트웨어 정의 데이터 센터 및 하이퍼 컨버지드 인프라 | 더 빠른 혁신을 통해 혜택을 얻는 컨테이너화된 응용 프로그램, 컨테이너 호스트 및 응용 프로그램 시나리오 |
-| 새 릴리스 | 2~3년마다 |6개월마다 |
-| 지원 |일반 지원 5년 + 연장 지원 5년 | 18개월 |
-| 버전 | 모든 Windows Server 에디션 사용 가능 | Standard 및 Datacenter 에디션 |
-| 사용할 수 있는 사람 | 모든 채널을 통한 모든 고객 | Software Assurance 및 클라우드 고객만 |
-| 설치 옵션 | Server Core 및 데스크톱 환경 포함 서버 | 컨테이너 호스트 및 이미지 및 Nano 서버 컨테이너 이미지용 Server Core |                |
+
+|                       |                                                              장기 서비스 채널(Windows Server 2019)                                                               |                                   반기 채널(Windows Server)                                   |
+|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
+| 권장 시나리오 | 일반 목적의 파일 서버, Microsoft 및 비 Microsoft 워크로드, 기존 앱, 인프라 역할, 소프트웨어 정의 데이터 센터 및 하이퍼 컨버지드 인프라 | 더 빠른 혁신을 통해 혜택을 얻는 컨테이너화된 응용 프로그램, 컨테이너 호스트 및 응용 프로그램 시나리오 |
+|     새 릴리스      |                                                                               2~3년마다                                                                                |                                              6개월마다                                              |
+|        지원        |                                                       일반 지원 5년 + 연장 지원 5년                                                        |                                                18개월                                                 |
+|       버전        |                                                                    모든 Windows Server 에디션 사용 가능                                                                     |                                     Standard 및 Datacenter 에디션                                     |
+|      사용할 수 있는 사람      |                                                                      모든 채널을 통한 모든 고객                                                                      |                               Software Assurance 및 클라우드 고객만                                |
+| 설치 옵션  |                                                                Server Core 및 데스크톱 환경 포함 서버                                                                |                 컨테이너 호스트 및 이미지 및 Nano 서버 컨테이너 이미지용 Server Core                 |
 
 ## <a name="device-compatibility"></a>디바이스 호환성
 

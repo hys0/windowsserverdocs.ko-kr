@@ -9,12 +9,12 @@ ms.date: 10/02/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 9bae831da9d247c423c2874a5928b7f811ef65dc
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 9acdbe2be56b990876fe365c1f535aaa411009c5
+ms.sourcegitcommit: cd12ace92e7251daaa4e9fabf1d8418632879d38
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66188715"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66501631"
 ---
 # <a name="managing-ssl-certificates-in-ad-fs-and-wap-in-windows-server-2016"></a>Windows Server 2016의 AD FS 및 WAP의 SSL 인증서 관리
 
@@ -109,7 +109,7 @@ WAP에서 기본 인증서 인증 바인딩 또는 대체 클라이언트 TLS �
 웹 응용 프로그램 프록시 SSL 인증서를 바꾸려면 **각** 새 SSL 인증서를 설치 하려면 다음 cmdlet을 사용 하는 웹 응용 프로그램 프록시 서버:
 
 ```powershell
-Set-WebApplicationProxySslCertificate '<thumbprint of new cert>'
+Set-WebApplicationProxySslCertificate -Thumbprint '<thumbprint of new cert>'
 ```
 
 위의 cmdlet은 이전 인증서가 이미 만료 되어 실패 하는 경우 다음 cmdlet을 사용 하 여 프록시를 다시 구성 합니다.

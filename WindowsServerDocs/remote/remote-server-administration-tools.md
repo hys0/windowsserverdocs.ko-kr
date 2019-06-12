@@ -12,12 +12,12 @@ ms.assetid: d54a1f5e-af68-497e-99be-97775769a7a7
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dansimp
-ms.openlocfilehash: 748010e80cf2b54926ca226a7af8c49f1aa16800
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 30ca0a1e8a2f17f54a8f05d7270bf9512be7a8dc
+ms.sourcegitcommit: d888e35f71801c1935620f38699dda11db7f7aad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66192636"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66805175"
 ---
 # <a name="remote-server-administration-tools"></a>원격 서버 관리 도구
 
@@ -97,30 +97,30 @@ Windows 10에서 엽니다는 **설정을** 앱으로 이동 **선택적 기능 
 
 ##### <a name="to-uninstall-remote-server-administration-tools-for-windows-10-after-rsat-package-install"></a>RSAT 패키지 설치) (이후 Windows 10 용 원격 서버 관리 도구를 제거 하려면
 
-1.  바탕 화면에서 **시작**, **모든 앱**, **Windows 시스템**, **제어판**을 차례로 클릭합니다.
+1. 바탕 화면에서 **시작**, **모든 앱**, **Windows 시스템**, **제어판**을 차례로 클릭합니다.
 
-2.  **프로그램**에서 **프로그램 제거**를 클릭합니다.
+2. **프로그램**에서 **프로그램 제거**를 클릭합니다.
 
-3.  **설치된 업데이트 보기**를 클릭합니다.
+3. **설치된 업데이트 보기**를 클릭합니다.
 
-4.  **Microsoft Windows 업데이트(KB2693643)** 를 마우스 오른쪽 단추로 클릭한 다음 **제거**를 클릭합니다.
+4. **Microsoft Windows 업데이트(KB2693643)** 를 마우스 오른쪽 단추로 클릭한 다음 **제거**를 클릭합니다.
 
-5.  이 업데이트를 제거할 것인지 묻는 메시지가 표시되면 **예**를 클릭합니다.
-S
-##### <a name="to-turn-off-specific-tools-after-rsat-package-install"></a>(RSAT 패키지 설치) 후에 특정 도구를 해제 하려면
+5. 이 업데이트를 제거할 것인지 묻는 메시지가 표시되면 **예**를 클릭합니다.
+   S
+   ##### <a name="to-turn-off-specific-tools-after-rsat-package-install"></a>(RSAT 패키지 설치) 후에 특정 도구를 해제 하려면
 
-1.  바탕 화면에서 **시작**, **모든 앱**, **Windows 시스템**, **제어판**을 차례로 클릭합니다.
+6. 바탕 화면에서 **시작**, **모든 앱**, **Windows 시스템**, **제어판**을 차례로 클릭합니다.
 
-2.  **프로그램**을 클릭한 다음 **프로그램 및 기능** 에서 **Windows 기능 사용/사용 안 함**을 클릭합니다.
+7. **프로그램**을 클릭한 다음 **프로그램 및 기능** 에서 **Windows 기능 사용/사용 안 함**을 클릭합니다.
 
-3.  **Windows 기능** 대화 상자에서 **원격 서버 관리 도구**를 확장한 다음 **역할 관리 도구** 또는 **기능 관리 도구**를 확장합니다.
+8. **Windows 기능** 대화 상자에서 **원격 서버 관리 도구**를 확장한 다음 **역할 관리 도구** 또는 **기능 관리 도구**를 확장합니다.
 
-4.  끄려는 도구에 대한 확인란의 선택을 취소합니다.
+9. 끄려는 도구에 대한 확인란의 선택을 취소합니다.
 
-    > [!NOTE]
-    > 서버 관리자 해제를 설정 하면 컴퓨터를 다시 시작 해야, 및에서 액세스할 수 있었던 도구는는 **도구** 서버 관리자의 메뉴에서 열어야는 **관리 도구** 폴더입니다.
+   > [!NOTE]
+   > 서버 관리자 해제를 설정 하면 컴퓨터를 다시 시작 해야, 및에서 액세스할 수 있었던 도구는는 **도구** 서버 관리자의 메뉴에서 열어야는 **관리 도구** 폴더입니다.
 
-5.  사용하지 않으려는 도구를 모두 끄면 **확인**을 클릭합니다.
+10. 사용하지 않으려는 도구를 모두 끄면 **확인**을 클릭합니다.
 
 ### <a name="run-remote-server-administration-tools"></a>원격 서버 관리 도구 실행
 
@@ -158,7 +158,7 @@ Mmc 스냅인 및 대화 상자와 같은 Windows 10, 모든 GUI 기반 서버 �
 ### <a name="issue-rsat-fod-installation-fails-with-error-code-0x800f0954"></a>**문제**: RSAT FOD 설치 0x800f0954 오류 코드로 실패
 
 > **영향**: Windows 10 1809 RSAT FODs (2018 년 10 월 업데이트) WSUS/SCCM 환경에서
-
+> 
 > **해상도**: FODs WSUS 또는 SCCM을 통해 업데이트를 수신 하는 도메인에 가입 된 PC에 설치 하려면 Windows 업데이트 또는 로컬 공유에서 직접 다운로드 FODs를 사용 하도록 설정 하려면 그룹 정책 설정을 변경 해야 합니다. 자세한 세부 정보 및 해당 설정을 변경 하는 방법에 대 한 지침을 참조 하세요 [기능 요청 및 언어 팩에서 사용할 수 있도록 WSUS/SCCM을 사용 하는 방법](https://docs.microsoft.com/windows/deployment/update/fod-and-lang-packs)합니다.
 
 ---
@@ -166,7 +166,7 @@ Mmc 스냅인 및 대화 상자와 같은 Windows 10, 모든 GUI 기반 서버 �
 ### <a name="issue-rsat-fod-installation-via-settings-app-does-not-show-statusprogress"></a>**문제**: 설정 앱을 통해 RSAT FOD 설치 상태/진행률을 표시 하지 않습니다.
 
 > **영향**: Windows 10 1809 (2018 년 10 월 업데이트)에서 RSAT FODs
-
+> 
 > **해상도**: 설치 진행률을 보려면 클릭 합니다 **다시** 에서 상태를 보려면 단추를 **선택적 기능 관리** 페이지.
 
 ---
@@ -174,7 +174,7 @@ Mmc 스냅인 및 대화 상자와 같은 Windows 10, 모든 GUI 기반 서버 �
 ### <a name="issue-rsat-fod-uninstallation-via-settings-app-may-fail"></a>**문제**: 설정 앱을 통해 RSAT FOD 제거가 실패할 수 있습니다.
 
 > **영향**: Windows 10 1809 (2018 년 10 월 업데이트)에서 RSAT FODs
-
+> 
 > **해상도**: 경우에 따라 수동으로 종속성을 제거 해야 하므로 제거 오류는입니다. 특히 RSAT 도구 B에서 RSAT 도구는 필요한 경우 RSAT 도구는 제거 하도록 선택 하지 못합니다 RSAT 도구 B가 아직 설치 되어 있습니다. 이 경우 먼저 RSAT 도구 B를 제거 하 고 RSAT 도구 A. 제거 종속성을 포함 하 여 RSAT FODs 목록을 참조 하세요.
 
 ---
@@ -182,7 +182,7 @@ Mmc 스냅인 및 대화 상자와 같은 Windows 10, 모든 GUI 기반 서버 �
 ### <a name="issue-rsat-fod-uninstallation-appears-to-succeed-but-the-tool-is-still-installed"></a>**문제**: 성공 하려면 RSAT FOD 제거 표시 되지만 여전히이 도구가 설치 된
 
 > **영향**: Windows 10 1809 (2018 년 10 월 업데이트)에서 RSAT FODs
-
+> 
 > **해상도**: PC를 다시 시작 도구 제거를 완료 합니다.
 
 ---
@@ -190,7 +190,7 @@ Mmc 스냅인 및 대화 상자와 같은 Windows 10, 모든 GUI 기반 서버 �
 ### <a name="issue-rsat-missing-after-windows-10-upgrade"></a>**문제**: Windows 10 업그레이드 한 후 누락 된 RSAT
 
 > **영향**: 모든 RSAT 합니다. 자동으로 다시 설치 (이전 RSAT FODs) MSU 패키지 설치
-
+> 
 > **해상도**: Rsat가 설치 된 RSAT 인해 OS 업그레이드에서 유지 될 수 없습니다. MSU로 Windows 업데이트 패키지를 배달 합니다. Windows 10을 업그레이드 한 후 다시 RSAT를 설치 하세요. 이러한 제한 이유는 Windows 10 1809부터 FODs로 이동 하는 이유 중 하나는 note 합니다. 설치 되어 있는 RSAT FODs 이후 Windows 10 버전 업그레이드 간에 유지 됩니다.
 
 ## <a name="see-also"></a>관련 항목

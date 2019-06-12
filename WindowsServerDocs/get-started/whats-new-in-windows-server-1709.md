@@ -7,19 +7,23 @@ ms.topic: article
 author: coreyp-at-msft
 ms.author: coreyp
 ms.localizationpriority: medium
-ms.openlocfilehash: 32ce591a8b50c6e35c3fde4fedb177b6d76fccdd
-ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
+ms.date: 06/03/2019
+ms.openlocfilehash: e17a636c5bf06d194abd1bfe9b6d20970773e993
+ms.sourcegitcommit: cd12ace92e7251daaa4e9fabf1d8418632879d38
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65976735"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66501399"
 ---
 # <a name="whats-new-in-windows-server-version-1709"></a>Windows Server, 버전 1709의 새로운 기능
 
 >적용 대상: Windows Server(반기 채널)
 
 <img src="../media/landing-icons/new.png" style='float:left; padding:.5em;' alt="Icon showing a newspaper">&nbsp;Windows의 최신 기능을 알아보려면 [What's New in Windows Server](whats-new-in-windows-server.md)합니다. 이 콘텐츠는 Windows Server, 버전 1709의 새로운 기능과 변경된 기능을 설명하는 내용입니다. 여기에 나열된 새로운 기능 및 변경 사항은 이 릴리스를 사용할 때 가장 많은 영향을 줄 수 있습니다. [Windows Server, 버전 1709](https://blogs.technet.microsoft.com/windowsserver/2017/08/24/sneak-peek-1-windows-server-version-1709/)도 참조하세요.
-   
+
+> [!IMPORTANT]
+> Windows Server 버전 1709를 벗어난 2019 년 4 월 9 일을 기준으로 지원
+
 
 ## <a name="new-cadence-of-releases"></a>새로운 릴리스 흐름
 
@@ -126,20 +130,20 @@ Project Honolulu에는 PC, Windows 서버, 장애 조치 클러스터는 물론 
 - **수신 창 자동 조정**: TCP 자동 조정 논리는 TCP 연결의 "창 수신" 매개 변수를 계산합니다.  고속 및/또는 긴 지연 시간 연결에서 좋은 성능 특성을 달성하려면 이 알고리즘이 필요합니다.  이 릴리스에서 알고리즘이 수정되어 주어진 연결에 대한 최대 수신 창 값에 모이는 단계 기능을 사용합니다.
 - **TCP 통계 API**: 새 API 도입 SIO_TCP_INFO를 호출 합니다.  SIO_TCP_INFO를 통해 개발자는 소켓 옵션을 사용하여 개별 TCP 연결의 많은 정보를 쿼리할 수 있습니다.
 - **IPv6**: 이 릴리스의 IPv6에서 향상 된 여러 기능이 있습니다.
-    - **RFC 6106** 지원: 라우터 알림의 (RAs)를 통해 DNS 구성을 허용 하는 RFC 6106 합니다. 다음 명령을 사용하여 RFC 6106 지원을 사용하거나 사용하지 않도록 설정할 수 있습니다.
+  - **RFC 6106** 지원: 라우터 알림의 (RAs)를 통해 DNS 구성을 허용 하는 RFC 6106 합니다. 다음 명령을 사용하여 RFC 6106 지원을 사용하거나 사용하지 않도록 설정할 수 있습니다.
 
     ```
     netsh int ipv6 set interface <ifindex> rabaseddnsconfig=<enabled | disabled>
     ```
 
-    - **레이블 흐름**: TCP 및 UDP 아웃 바운드 크리에이터 스 업데이트를 사용 하 여 시작 IPv6 통한 패킷에이 필드가 5 튜플 (원본 IP, 대상 IP, Src 포트, 대상 포트)의 해시를 설정 합니다.  이를 통해 IPv6 only 데이터 센터의 부하 분산 또는 흐름 분류를 더욱 효율적으로 수행하도록 합니다. 흐름 레이블 사용 설정:
+  - **레이블 흐름**: TCP 및 UDP 아웃 바운드 크리에이터 스 업데이트를 사용 하 여 시작 IPv6 통한 패킷에이 필드가 5 튜플 (원본 IP, 대상 IP, Src 포트, 대상 포트)의 해시를 설정 합니다.  이를 통해 IPv6 only 데이터 센터의 부하 분산 또는 흐름 분류를 더욱 효율적으로 수행하도록 합니다. 흐름 레이블 사용 설정:
 
     ```
     netsh int ipv6 set flowlabel=[disabled|enabled] (enabled by default)
     netsh int ipv6 set global flowlabel=<enabled | disabled>
     ```
 
-    - **ISATAP 및 6to4**: 이후 사용 중단 향한 단계로 크리에이터 스 업데이트를 이러한 기술은 기본적으로 사용 하지 않도록 설정 해야 합니다.
+  - **ISATAP 및 6to4**: 이후 사용 중단 향한 단계로 크리에이터 스 업데이트를 이러한 기술은 기본적으로 사용 하지 않도록 설정 해야 합니다.
 - **작동 하지 않는 게이트웨이 검색 (DGD)** : DGD 알고리즘으로 자동 전환 연결을 통해 다른 게이트웨이 현재 게이트웨이에 연결할 수 없는 경우. 이 릴리스에서 알고리즘이 개선되어 주기적으로 네트워크 환경을 다시 검색합니다.
 - [Test-NetConnection](https://technet.microsoft.com/itpro/powershell/windows/nettcpip/test-netconnection)은 다양한 네트워크 진단을 수행하는 Windows PowerShell 내 기본 제공 cmdlet입니다.  이 릴리스에서 경로 선택 및 원본 주소 선택 관련 세부 정보를 제공하도록 cmdlet이 향상되었습니다.
 

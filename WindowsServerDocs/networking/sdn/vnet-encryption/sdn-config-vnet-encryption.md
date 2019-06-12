@@ -9,12 +9,12 @@ ms.assetid: 378213f5-2d59-4c9b-9607-1fc83f8072f1
 ms.author: pashort
 author: shortpatti
 ms.date: 08/08/2018
-ms.openlocfilehash: 90fb33eb4c4b63fdd5c84bf3ffc2447fd52a809b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: d2c09c83a227c5a75ff5b1b39b2ef6d1286bbfc8
+ms.sourcegitcommit: cd12ace92e7251daaa4e9fabf1d8418632879d38
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59845494"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66501558"
 ---
 # <a name="configure-encryption-for-a-virtual-subnet"></a>가상 서브넷에 대 한 암호화 구성
 
@@ -107,75 +107,94 @@ ms.locfileid: "59845494"
     84857CBBE7A1C851A80AE22391EB2C39BF820CE7  CN=MyNetwork
     5EFF2CE51EACA82408572A56AE1A9BCC7E0843C6  CN=EncryptedVirtualNetworks
 
-2.  파일에 인증서를 내보냅니다.<p>인증서, 개인 키를 사용 하 여 하나 및 없는의 사본을 두 개 필요합니다.
+2. 파일에 인증서를 내보냅니다.<p>인증서, 개인 키를 사용 하 여 하나 및 없는의 사본을 두 개 필요합니다.
 
-    $subjectName = "EncryptedVirtualNetworks" $cert = Get-ChildItem cert:\localmachine\my | ? {$_.Subject -eq "CN=$subjectName"} [System.io.file]::WriteAllBytes("c:\$subjectName.pfx", $cert.Export("PFX", "secret")) Export-Certificate -Type CERT -FilePath "c:\$subjectName.cer" -cert $cert
+```
+   $subjectName = "EncryptedVirtualNetworks"
+   $cert = Get-ChildItem cert:\localmachine\my | ? {$_.Subject -eq "CN=$subjectName"}
+   [System.io.file]::WriteAllBytes("c:\$subjectName.pfx", $cert.Export("PFX", "secret"))
+   Export-Certificate -Type CERT -FilePath "c:\$subjectName.cer" -cert $cert
+```
 
-3.  각 hyper-v 호스트에 인증서 설치 
+3. 각 hyper-v 호스트에 인증서 설치 
 
-    PS c:\> dir c:\$subjectname.*
-
-
-        Directory: C:\
-
-
-    모드 LastWriteTime 길이 이름
-    ----                -------------         ------ ----
-    -a----        9/22/2017   4:54 PM            543 EncryptedVirtualNetworks.cer -a----        9/22/2017   4:54 PM           1706 EncryptedVirtualNetworks.pfx
-
-4.  Hyper-v 호스트에서 설치
-
-    $server = "Server01"
-
-    $subjectname "EncryptedVirtualNetworks" copy c =\$SubjectName.* \\$server\c$ 호출 명령-computername $server-ArgumentList "비밀" $subjectname {param ([string] $SubjectName, [string] $Secret) $certFullPath = "c: \$SubjectName.cer "
-
-        # create a representation of the certificate file
-        $certificate = new-object System.Security.Cryptography.X509Certificates.X509Certificate2
-        $certificate.import($certFullPath)
-
-        # import into the store
-        $store = new-object System.Security.Cryptography.X509Certificates.X509Store("Root", "LocalMachine")
-        $store.open("MaxAllowed")
-        $store.add($certificate)
-        $store.close()
-
-        $certFullPath = "c:\$SubjectName.pfx"
-        $certificate = new-object System.Security.Cryptography.X509Certificates.X509Certificate2
-        $certificate.import($certFullPath, $Secret, "MachineKeySet,PersistKeySet")
-
-        # import into the store
-        $store = new-object System.Security.Cryptography.X509Certificates.X509Store("My", "LocalMachine")
-        $store.open("MaxAllowed")
-        $store.add($certificate)
-        $store.close()
-
-        # Important: Remove the certificate files when finished
-        remove-item C:\$SubjectName.cer
-        remove-item C:\$SubjectName.pfx
-    }    
-
-5.  환경의 각 서버에 대해 반복 합니다.<p>각 서버에 대 한 반복을 한 후 루트 및 각 Hyper-v 호스트의 내 저장소에 설치 된 인증서를 사용 해야 합니다. 
-
-6.  인증서의 설치를 확인 합니다.<p>내용을 확인 하 여 인증서를 확인 합니다 내 및 루트 인증서 저장소:
-
-    PS c:\> 입력 pssession Server1
-
-    [Server1]: PS c:\> get-childitem cert://localmachine/my, cert://localmachine/root |? {$_.Subject -eq "CN=EncryptedVirtualNetworks"}
-
-    PSParentPath: Microsoft.PowerShell.Security\Certificate::localmachine\my
-
-    지문 제목
-    ----------                                -------
-    5EFF2CE51EACA82408572A56AE1A9BCC7E0843C6  CN=EncryptedVirtualNetworks
+   PS c:\> dir c:\$subjectname.*
 
 
-    PSParentPath: Microsoft.PowerShell.Security\Certificate::localmachine\root
+~~~
+    Directory: C:\
 
-    지문 제목
-    ----------                                -------
-    5EFF2CE51EACA82408572A56AE1A9BCC7E0843C6  CN=EncryptedVirtualNetworks
 
-7.  지문을 기록해 둡니다.<p>네트워크 컨트롤러에서 인증서 자격 증명 개체를 만들려면 필요 하기 때문에 지문 참고를 해야 합니다.
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----        9/22/2017   4:54 PM            543 EncryptedVirtualNetworks.cer
+-a----        9/22/2017   4:54 PM           1706 EncryptedVirtualNetworks.pfx
+~~~
+
+4. Hyper-v 호스트에서 설치
+
+```
+   $server = "Server01"
+
+   $subjectname = "EncryptedVirtualNetworks"
+   copy c:\$SubjectName.* \\$server\c$
+   invoke-command -computername $server -ArgumentList $subjectname,"secret" {
+       param (
+           [string] $SubjectName,
+           [string] $Secret
+       )
+       $certFullPath = "c:\$SubjectName.cer"
+
+       # create a representation of the certificate file
+       $certificate = new-object System.Security.Cryptography.X509Certificates.X509Certificate2
+       $certificate.import($certFullPath)
+
+       # import into the store
+       $store = new-object System.Security.Cryptography.X509Certificates.X509Store("Root", "LocalMachine")
+       $store.open("MaxAllowed")
+       $store.add($certificate)
+       $store.close()
+
+       $certFullPath = "c:\$SubjectName.pfx"
+       $certificate = new-object System.Security.Cryptography.X509Certificates.X509Certificate2
+       $certificate.import($certFullPath, $Secret, "MachineKeySet,PersistKeySet")
+
+       # import into the store
+       $store = new-object System.Security.Cryptography.X509Certificates.X509Store("My", "LocalMachine")
+       $store.open("MaxAllowed")
+       $store.add($certificate)
+       $store.close()
+
+       # Important: Remove the certificate files when finished
+       remove-item C:\$SubjectName.cer
+       remove-item C:\$SubjectName.pfx
+   }
+```
+
+5. 환경의 각 서버에 대해 반복 합니다.<p>각 서버에 대 한 반복을 한 후 루트 및 각 Hyper-v 호스트의 내 저장소에 설치 된 인증서를 사용 해야 합니다. 
+
+6. 인증서의 설치를 확인 합니다.<p>내용을 확인 하 여 인증서를 확인 합니다 내 및 루트 인증서 저장소:
+
+   PS c:\> 입력 pssession Server1
+
+~~~
+[Server1]: PS C:\> get-childitem cert://localmachine/my,cert://localmachine/root | ? {$_.Subject -eq "CN=EncryptedVirtualNetworks"}
+
+PSParentPath: Microsoft.PowerShell.Security\Certificate::localmachine\my
+
+Thumbprint                                Subject
+----------                                -------
+5EFF2CE51EACA82408572A56AE1A9BCC7E0843C6  CN=EncryptedVirtualNetworks
+
+
+PSParentPath: Microsoft.PowerShell.Security\Certificate::localmachine\root
+
+Thumbprint                                Subject
+----------                                -------
+5EFF2CE51EACA82408572A56AE1A9BCC7E0843C6  CN=EncryptedVirtualNetworks
+~~~
+
+7. 지문을 기록해 둡니다.<p>네트워크 컨트롤러에서 인증서 자격 증명 개체를 만들려면 필요 하기 때문에 지문 참고를 해야 합니다.
 
 ## <a name="step-2-create-the-certificate-credential"></a>2단계. 인증서 자격 증명 만들기
 
@@ -184,12 +203,12 @@ ms.locfileid: "59845494"
 
     # Replace with thumbprint from your certificate
     $thumbprint = "5EFF2CE51EACA82408572A56AE1A9BCC7E0843C6"  
-    
+
     # Replace with your Network Controller URI
     $uri = "https://nc.contoso.com"
 
     Import-module networkcontroller
-    
+
     $credproperties = new-object Microsoft.Windows.NetworkController.CredentialProperties
     $credproperties.Type = "X509Certificate"
     $credproperties.Value = $thumbprint
@@ -223,7 +242,7 @@ ms.locfileid: "59845494"
     New-NetworkControllerVirtualNetwork -ConnectionUri $uri -ResourceId $vnet.ResourceId -Properties $vnet.Properties -force
 
 
-_**축 하!**_ 다음이 단계를 완료 하면 완료 했습니다. 
+_**축 하!** _ 다음이 단계를 완료 하면 완료 했습니다. 
 
 
 ## <a name="next-steps"></a>다음 단계

@@ -5,19 +5,19 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 09/19/2018
+ms.date: 06/07/2019
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: 598eeae64925d24ec6d97b59da9cae1e2d10585d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d018ea65ce61cab67fe2041b9ef885d32de51b17
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59864974"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66811920"
 ---
 # <a name="prepare-your-environment-for-windows-admin-center"></a>Windows Admin Center에 대한 환경 준비
 
->적용 대상: Windows Admin Center, Windows Admin Center 미리 보기
+> 적용 대상: Windows Admin Center, Windows Admin Center 미리 보기
 
 Windows Admin Center를 사용하여 관리할 준비가 되기 전에 추가 준비를 해야 하는 일부 Server 버전이 있습니다.
 
@@ -82,7 +82,7 @@ Hyper-V Server에서 원격 관리를 활성화하는 방법:
 1. **도구** 메뉴에서 **역할 및 기능**을 클릭합니다.
 2. **역할 및 기능**에서 **파일 및 저장소 서비스**를 찾아 **파일 및 iSCSI 서비스** 및 **파일 서버**를 확인합니다.
 
-![](../media/prepare-environment/c6c30b812d96afcc1edcdb6f52f0e13c.png)
+![파일 및 iSCSI 서비스 역할 선택 표시 하는 기능과 역할의 스크린샷](../media/prepare-environment/c6c30b812d96afcc1edcdb6f52f0e13c.png)
 
 ### <a name="step-3-enable-hyper-v-module-for-powershell"></a>**3 단계:** PowerShell용 Hyper-V 모듈을 사용하도록 설정
 
@@ -91,7 +91,7 @@ PowerShell 기능용 Hyper-V 모듈을 사용하도록 설정하는 방법:
 1. **도구** 메뉴에서 **역할 및 기능**을 클릭합니다.
 2. **역할 및 기능**에서 **원격 서버 관리 도구**를 찾아 **역할 관리 도구** 및 **PowerShell용 Hyper-V 모듈**을 확인합니다.
 
-![](../media/prepare-environment/7ab0999602b7083733525bd0c1ba2747.png)
+![선택한 Hyper-v 역할을 보여 주는 기능과 역할의 스크린샷](../media/prepare-environment/7ab0999602b7083733525bd0c1ba2747.png)
 
 Microsoft Hyper-V Server 2016은 이제 Windows Admin Center로 관리할 수 있는 준비가 되었습니다.
 
@@ -106,7 +106,7 @@ Windows Admin Center로 Microsoft Hyper-V Server 2012 R2를 관리하려면 이�
 3. 파일 서버 역할을 사용하도록 설정
 4. PowerShell용 Hyper-V 모듈을 사용하도록 설정
 
-### <a name="step-1-install-windows-management-framework-51"></a>**1 단계:** Windows Management Framework 5.1 설치
+### <a name="step-1-install-windows-management-framework-51"></a>1단계: Windows Management Framework 5.1 설치
 
 Windows Admin Center에는 기본적으로 Microsoft Hyper-V Server 2012 R2에 포함되지 않은 PowerShell 기능이 필요합니다. Windows Admin Center로 Microsoft Hyper-V Server 2012 R2를 관리하려면 WMF 버전 5.1 이상을 설치해야 합니다.
 
@@ -114,7 +114,7 @@ WMF가 설치되어 있는지, 그리고 버전이 5.1 이상인지 확인하려
 
 설치가 되어 있지 않는 경우에 [WMF 5.1을 다운로드](https://docs.microsoft.com/powershell/wmf/5.1/install-configure)할 수 있습니다.
 
-### <a name="step-2-enable-remote-management"></a>**2 단계:** 원격 관리를 사용하도록 설정 
+### <a name="step-2-enable-remote-management"></a>2단계: 원격 관리를 사용하도록 설정
 
 Hyper-V Server 원격 관리를 활성화하는 방법:
 
@@ -130,16 +130,16 @@ Hyper-V Server 원격 관리를 활성화하는 방법:
 1. **도구** 메뉴에서 **역할 및 기능**을 클릭합니다.
 2. **역할 및 기능**에서 **파일 및 저장소 서비스**를 찾아 **파일 및 iSCSI 서비스** 및 **파일 서버**를 확인합니다.
 
-![](../media/prepare-environment/c6c30b812d96afcc1edcdb6f52f0e13c.png)
+![파일 및 iSCSI 서비스 역할 선택 표시 하는 기능과 역할의 스크린샷](../media/prepare-environment/c6c30b812d96afcc1edcdb6f52f0e13c.png)
 
-### <a name="step-4-enable-hyper-v-module-for-powershell"></a>4단계: PowerShell용 Hyper-V 모듈을 사용하도록 설정 ##
+### <a name="step-4-enable-hyper-v-module-for-powershell"></a>4단계: PowerShell용 Hyper-V 모듈을 사용하도록 설정
 
 PowerShell 기능용 Hyper-V 모듈을 사용하도록 설정하는 방법:
 
 1. **도구** 메뉴에서 **역할 및 기능**을 클릭합니다.
 2. **역할 및 기능**에서 **원격 서버 관리 도구**를 찾아 **역할 관리 도구** 및 **PowerShell용 Hyper-V 모듈**을 확인합니다.
 
-![](../media/prepare-environment/7ab0999602b7083733525bd0c1ba2747.png)
+![선택한 Hyper-v 원격 서버 관리 도구를 보여 주는 기능과 역할의 스크린샷](../media/prepare-environment/7ab0999602b7083733525bd0c1ba2747.png)
 
 Microsoft Hyper-V Server 2012 R2은 이제 Windows Admin Center로 관리할 수 있는 준비가 되었습니다.
 

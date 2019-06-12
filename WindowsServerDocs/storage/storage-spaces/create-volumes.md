@@ -7,22 +7,22 @@ author: cosmosdarwin
 ms.author: cosdar
 manager: eldenc
 ms.technology: storage-spaces
-ms.date: 05/09/2019
-ms.openlocfilehash: d7c842a9b393f67c482dadeaa4090627887a67a3
-ms.sourcegitcommit: 75f257d97d345da388cda972ccce0eb29e82d3bc
+ms.date: 06/06/2019
+ms.openlocfilehash: 85eca06a5d8c103851596055099876cb53a902ad
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65613218"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66810562"
 ---
 # <a name="creating-volumes-in-storage-spaces-direct"></a>저장소 공간 다이렉트에서 볼륨 만들기
 
->적용 대상: Windows Server 2019, Windows Server 2016
+> 적용 대상: Windows Server 2019, Windows Server 2016
 
 이 항목에서는 Windows Admin Center, PowerShell 또는 장애 조치 클러스터 관리자를 사용 하 여 저장소 공간 다이렉트 클러스터에서 볼륨을 만드는 방법을 설명 합니다.
 
-   >[!TIP]
-   >  아직 확인하지 않은 경우 [저장소 공간 다이렉트에서 볼륨 계획](plan-volumes.md)을 먼저 확인하세요.
+> [!TIP]
+> 아직 확인하지 않은 경우 [저장소 공간 다이렉트에서 볼륨 계획](plan-volumes.md)을 먼저 확인하세요.
 
 ## <a name="create-a-three-way-mirror-volume"></a>3 방향 미러 볼륨 만들기
 
@@ -105,14 +105,14 @@ Windows Admin Center 미러 가속 패리티를 사용 하 여 볼륨을 만들�
 - **StoragePoolFriendlyName:** 예를 들어 사용자의 저장소 이름 풀 *"S2D에서 ClusterName"*
 - **크기:** 예를 들어 볼륨의 크기 *"10TB"*
 
-   >[!NOTE]
-   >  PowerShell을 비롯한 Windows는 2진수(밑 2)를 사용하여 계산되지만 드라이브는 대개 10진수(밑 10)를 사용하여 레이블이 지정됩니다. 따라서 1,000,000,000,000바이트로 정의되는 "테라바이트" 드라이브는 Windows에서 약 "909GB"로 나타납니다. 이는 예정된 동작입니다. **New-Volume**을 사용하여 볼륨을 만들 때 **Size** 매개 변수를 이진수(밑2)로 지정해야 합니다. 예를 들어, "909GB" 또는 "0.909495TB"로 지정하면 약 1,000,000,000,000바이트의 볼륨이 생성됩니다.
+   > [!NOTE]
+   > PowerShell을 비롯한 Windows는 2진수(밑 2)를 사용하여 계산되지만 드라이브는 대개 10진수(밑 10)를 사용하여 레이블이 지정됩니다. 따라서 1,000,000,000,000바이트로 정의되는 "테라바이트" 드라이브는 Windows에서 약 "909GB"로 나타납니다. 이는 예정된 동작입니다. **New-Volume**을 사용하여 볼륨을 만들 때 **Size** 매개 변수를 이진수(밑2)로 지정해야 합니다. 예를 들어, "909GB" 또는 "0.909495TB"로 지정하면 약 1,000,000,000,000바이트의 볼륨이 생성됩니다.
 
 ### <a name="example-with-2-or-3-servers"></a>예: 2 또는 3 개의 서버를 사용 하 여
 
 두 개의 서버에만 배포하는 경우 작업을 쉽게 하기 위해 저장소 공간 다이렉트는 복원력을 위해 양방향 미러링을 자동 사용합니다. 세 개의 서버에만 배포하는 경우에는 3방향 미러링을 자동 사용합니다.
 
-```
+```PowerShell
 New-Volume -FriendlyName "Volume1" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 1TB
 ```
 
@@ -124,7 +124,7 @@ New-Volume -FriendlyName "Volume1" -FileSystem CSVFS_ReFS -StoragePoolFriendlyNa
 
 다음 예제에서 *"Volume2"* 는 3방향 미러링을 사용하며 *"Volume3"* 는 이중 패리티("삭제 코딩"(erasure coding)이라고도 함)를 사용합니다.
 
-```
+```PowerShell
 New-Volume -FriendlyName "Volume2" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 1TB -ResiliencySettingName Mirror
 New-Volume -FriendlyName "Volume3" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 1TB -ResiliencySettingName Parity
 ```
@@ -137,7 +137,7 @@ New-Volume -FriendlyName "Volume3" -FileSystem CSVFS_ReFS -StoragePoolFriendlyNa
 
 **Get-StorageTier** cmdlet을 실행하여 확인할 수 있습니다.
 
-```
+```PowerShell
 Get-StorageTier | Select FriendlyName, ResiliencySettingName, PhysicalDiskRedundancy
 ```
 
@@ -145,7 +145,7 @@ Get-StorageTier | Select FriendlyName, ResiliencySettingName, PhysicalDiskRedund
 
 계층화된 볼륨을 만들려면 **New-Volume** cmdlet의 **StorageTierFriendlyNames** 및 **StorageTierSizes** 매개 변수를 사용하여 이러한 계층 템플릿을 참조하세요. 예를 들어 다음 cmdlet은 3방향 미러링과 30:70 비율의 이중 패리티를 혼합하는 하나의 볼륨을 만듭니다.
 
-```
+```PowerShell
 New-Volume -FriendlyName "Volume4" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -StorageTierFriendlyNames Performance, Capacity -StorageTierSizes 300GB, 700GB
 ```
 

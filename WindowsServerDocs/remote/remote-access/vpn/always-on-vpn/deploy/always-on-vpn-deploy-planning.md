@@ -9,29 +9,27 @@ ms.localizationpriority: medium
 ms.author: pashort
 author: shortpatti
 ms.date: 11/05/2018
-ms.openlocfilehash: d629f04abda0ce22deb75e487f5b485f50a60a53
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: db309f451eb9187463f71dfd85a82d214c464e2b
+ms.sourcegitcommit: 0948a1abff1c1be506216eeb51ffc6f752a9fe7e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59881914"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749462"
 ---
 # <a name="step-1-plan-the-always-on-vpn-deployment"></a>1단계. Always On VPN 배포 계획
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
+- [**이전:** Always On VPN을 배포 하기 위한 워크플로 알아보기](always-on-vpn-deploy-deployment.md)
+- [**다음:** 2단계. Server 인프라 구성](vpn-deploy-server-infrastructure.md)
 
-&#171;  [**이전:** Always On VPN을 배포 하기 위한 워크플로 알아보기](always-on-vpn-deploy-deployment.md)<br>
-&#187;  [**Next:** 2단계. Server 인프라 구성](vpn-deploy-server-infrastructure.md)
-
-이 단계를 계획 하 고 Always On VPN 배포 준비를 시작 합니다. VPN 서버를 사용 하 여 계획 하는 컴퓨터에 원격 액세스 서버 역할을 설치 하기 전에 다음 작업을 수행 합니다. 적절 한 계획 한 후에 Always On VPN을 배포할 수 있으며 필요에 따라 Azure AD를 사용 하 여 VPN 연결에 대 한 조건부 액세스를 구성할 수 있습니다. 
+이 단계를 계획 하 고 Always On VPN 배포 준비를 시작 합니다. VPN 서버를 사용 하 여 계획 하는 컴퓨터에 원격 액세스 서버 역할을 설치 하기 전에 다음 작업을 수행 합니다. 적절 한 계획 한 후에 Always On VPN을 배포할 수 있으며 필요에 따라 Azure AD를 사용 하 여 VPN 연결에 대 한 조건부 액세스를 구성할 수 있습니다.
 
 [!INCLUDE [always-on-vpn-standard-config-considerations-include](../../../includes/always-on-vpn-standard-config-considerations-include.md)]
 
-
 ## <a name="prepare-the-remote-access-server"></a>원격 액세스 서버를 준비 합니다.
 
-VPN 서버로 사용 되는 컴퓨터에서 다음을 수행 해야 합니다. 
+VPN 서버로 사용 되는 컴퓨터에서 다음을 수행 해야 합니다.
 
 - **VPN 서버 소프트웨어 및 하드웨어 구성이 올바른지 확인**합니다. 원격 액세스 VPN 서버로 사용 하려는 컴퓨터의 Windows Server 2016을 설치 합니다. 이 서버에 설치 하는 두 개의 실제 네트워크 어댑터, 외부 경계 네트워크에 연결할 하나 및 하나 내부 경계 네트워크에 연결할 있어야 합니다.
 
@@ -61,19 +59,18 @@ VPN 클라이언트를 구성 하는 고정 주소 풀에서 주소 또는 DHCP 
 
 - **공용 DNS 영역을 편집할 수 있는지 확인**합니다. VPN 인프라를 지 원하는 공용 DNS 도메인에 DNS 레코드를 추가 합니다. 
 
-- **모든 VPN 사용자가 Active Directory 사용자에 대 한 사용자 계정이 있는지 \(AD DS\)** 합니다. 사용자는 VPN 연결을 사용 하 여 네트워크에 연결할 수 있습니다, 전에 AD DS에서 사용자 계정이 있어야 합니다.
+- **모든 VPN 사용자가 Active Directory 사용자 (AD DS)에 대 한 사용자 계정이 있는지**합니다. 사용자는 VPN 연결을 사용 하 여 네트워크에 연결할 수 있습니다, 전에 AD DS에서 사용자 계정이 있어야 합니다.
 
 ## <a name="prepare-routing-and-firewall"></a>라우팅 준비 및 방화벽 
 
 내부 및 외부 경계 네트워크에 경계 네트워크를 분할 하는 경계 네트워크 내 VPN 서버를 설치 합니다. 네트워크 환경에 따라 여러 라우팅 수정 해야 합니다.
 
-- **\(선택적\) 포트 전달을 구성 합니다.** 에 지 방화벽의 포트 및 프로토콜 IKEv2 VPN과 사용 하 여 연결 된 Id 열고 VPN 서버에 전달 합니다. 대부분의 환경에서 이렇게 하려면 해야 포트 전달을 구성할 수 있습니다. 유니버설 데이터 그램 프로토콜 (UDP) 포트를 500과 4500 VPN 서버로 리디렉션하십시오.
+- **(선택 사항) 포트 전달을 구성 합니다.** 에 지 방화벽의 포트 및 프로토콜 IKEv2 VPN과 사용 하 여 연결 된 Id 열고 VPN 서버에 전달 합니다. 대부분의 환경에서 이렇게 하려면 해야 포트 전달을 구성할 수 있습니다. 유니버설 데이터 그램 프로토콜 (UDP) 포트를 500과 4500 VPN 서버로 리디렉션하십시오.
 
-- **DNS 서버 및 VPN 서버에서 인터넷에 액세스할 수 있도록 라우팅 구성**합니다. 이 배포에서는 IKEv2 및 Network Address Translation \(NAT\)합니다. VPN 서버 모두에 필요한 내부 네트워크 및 네트워크 리소스를 연결할 수 있는지 확인 합니다. 모든 네트워크 또는 VPN 서버에서 연결할 수 없는 리소스 연결 되지 않습니다도 원격 위치에서 VPN 연결을 통해.
+- **DNS 서버 및 VPN 서버에서 인터넷에 액세스할 수 있도록 라우팅 구성**합니다. 이 배포는 IKEv2 및 네트워크 주소 변환 (NAT)를 사용합니다. VPN 서버 모두에 필요한 내부 네트워크 및 네트워크 리소스를 연결할 수 있는지 확인 합니다. 모든 네트워크 또는 VPN 서버에서 연결할 수 없는 리소스 연결 되지 않습니다도 원격 위치에서 VPN 연결을 통해.
 
 대부분의 환경에서 새 내부 경계 네트워크를 연결할 VPN 서버가 경계 면 방화벽에 고정 경로 조정 합니다. 그러나 더 복잡 한 환경에서 내부 라우터를 정적 경로 추가 하거나 VPN 서버 및 VPN 클라이언트를 사용 하 여 연결 된 IP 주소 블록에 대 한 내부 방화벽 규칙을 조정 해야 할 수 있습니다.
 
-## <a name="next-step"></a>다음 단계
-[2 단계입니다. Server 인프라 구성](vpn-deploy-server-infrastructure.md): 이 단계에서는 설치 및 VPN을 지 원하는 데 필요한 서버 측 구성 요소를 구성 합니다. 서버 쪽 구성 요소 사용자, VPN 서버와 NPS 서버에서 사용 된 인증서를 배포 하는 PKI를 구성 하는 포함 됩니다. 
+## <a name="next-steps"></a>다음 단계
 
----
+[2단계. Server 인프라 구성](vpn-deploy-server-infrastructure.md): 이 단계에서는 설치 및 VPN을 지 원하는 데 필요한 서버 측 구성 요소를 구성 합니다. 서버 쪽 구성 요소 사용자, VPN 서버와 NPS 서버에서 사용 된 인증서를 배포 하는 PKI를 구성 하는 포함 됩니다.

@@ -12,12 +12,12 @@ ms.assetid: 51bcf124-c215-4e9d-9fa8-a90fa2c2fa22
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: d2005b72adede72b718fa5b49b93435f5fbac1bd
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 445472822de09263b84821e552c931ca19f14b2b
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59882504"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66432537"
 ---
 # <a name="transition-from-windows-server-essentials-to-windows-server-2012-standard"></a>Windows Server Essentials에서 Windows Server 2012 Standard로 전환
 
@@ -53,28 +53,28 @@ ms.locfileid: "59882504"
 ## <a name="transition-to--windows-server-2012-standard"></a>Windows Server 2012 Standard 전환  
  이러한 두 단계를 Windows Server 2012 Standard, 전체 Windows Server Essentials에서 전환 하기로 결정 했으면 후:  
   
-1.  Windows Server 2012 Standard 및 적절 한 개수의 사용자 환경에 대 한 클라이언트 액세스 라이선스 사용자 및/또는 장치에 대 한 라이선스를 구입 합니다.  
+1. Windows Server 2012 Standard 및 적절 한 개수의 사용자 환경에 대 한 클라이언트 액세스 라이선스 사용자 및/또는 장치에 대 한 라이선스를 구입 합니다.  
   
-     소매점, 배포자에서에서 또는 사용 하 여 Windows Server 2012 Standard 대 한 라이선스를 구입할 수 있습니다는 [Microsoft 파트너](https://pinpoint.microsoft.com/SelectCulture.aspx)합니다.  
+    소매점, 배포자에서에서 또는 사용 하 여 Windows Server 2012 Standard 대 한 라이선스를 구입할 수 있습니다는 [Microsoft 파트너](https://pinpoint.microsoft.com/SelectCulture.aspx)합니다.  
   
-    > [!NOTE]
-    >  처음에 Windows Server 2012 Standard 구입 하 고 Windows Server Essentials를 설치 하는 두 가상 인스턴스 중 하나를 다운 그레이드 권한을 아무것도 구입할 필요가 없습니다.  
-    >   
-    >  볼륨 라이선스 채널을 통해 Windows Server 2012 Standard 구매 하는 경우 Windows Server 2012 Standard에서 볼륨 라이선스 서비스 센터 (VLSC)에 대 한 ISO 이미지 및 제품 키를 다운로드할 수 있습니다.  
-    >   
-    >  그 외 다른 채널에서 Windows Server 2012 Standard 구입 하는 경우 다운로드할 수는 ISO 이미지 및 평가판 제품 키에서 Windows Server Essentials에 대 한 합니다 [TechNet Evaluation Center](https://technet.microsoft.com/evalcenter/jj659306.aspx)합니다. 다음 단계에 설명된 대로 전환을 수행하면 평가판 제품이 완전히 지원되는 라이선스 제품으로 전환됩니다.  
+   > [!NOTE]
+   >  처음에 Windows Server 2012 Standard 구입 하 고 Windows Server Essentials를 설치 하는 두 가상 인스턴스 중 하나를 다운 그레이드 권한을 아무것도 구입할 필요가 없습니다.  
+   >   
+   >  볼륨 라이선스 채널을 통해 Windows Server 2012 Standard 구매 하는 경우 Windows Server 2012 Standard에서 볼륨 라이선스 서비스 센터 (VLSC)에 대 한 ISO 이미지 및 제품 키를 다운로드할 수 있습니다.  
+   >   
+   >  그 외 다른 채널에서 Windows Server 2012 Standard 구입 하는 경우 다운로드할 수는 ISO 이미지 및 평가판 제품 키에서 Windows Server Essentials에 대 한 합니다 [TechNet Evaluation Center](https://technet.microsoft.com/evalcenter/jj659306.aspx)합니다. 다음 단계에 설명된 대로 전환을 수행하면 평가판 제품이 완전히 지원되는 라이선스 제품으로 전환됩니다.  
   
-2.  관리자 권한으로 Windows PowerShell을 열고 다음 명령을 실행합니다.  
+2. 관리자 권한으로 Windows PowerShell을 열고 다음 명령을 실행합니다.  
   
-     **dism /online /set-edition:ServerStandard /accepteula /productkey:** *제품 키*  
+    **dism /online /set-edition:ServerStandard /accepteula /productkey:** *제품 키*  
   
-     여기서 *제품 키* 은 Windows Server 2012 Standard 정품 제품 키입니다.  
+    여기서 *제품 키* 은 Windows Server 2012 Standard 정품 제품 키입니다.  
   
-     전환 프로세스를 완료하기 위해 서버가 다시 시작됩니다.  
+    전환 프로세스를 완료하기 위해 서버가 다시 시작됩니다.  
   
- 전환 후 Windows Server Essentials 서버에 남아 기능과 최대 75 명의 사용자와 75 대의 장치에 대해 지원 됩니다. 이러한 제한 중 하나를 초과 하는 경우에 사용자 계정 및 장치를 관리 하려면 Windows Server 2012 Standard 네이티브 도구를 사용 해야 합니다.  
+   전환 후 Windows Server Essentials 서버에 남아 기능과 최대 75 명의 사용자와 75 대의 장치에 대해 지원 됩니다. 이러한 제한 중 하나를 초과 하는 경우에 사용자 계정 및 장치를 관리 하려면 Windows Server 2012 Standard 네이티브 도구를 사용 해야 합니다.  
   
- 또한 Windows Server 2012 Standard 전환한 후 Windows Server Essentials의 미디어 기능을 사용할 수 없게 됩니다. 여기에는 원격 웹 액세스의 미디어 기능과 대시보드의 미디어 설정이 포함됩니다.  
+   또한 Windows Server 2012 Standard 전환한 후 Windows Server Essentials의 미디어 기능을 사용할 수 없게 됩니다. 여기에는 원격 웹 액세스의 미디어 기능과 대시보드의 미디어 설정이 포함됩니다.  
   
 ## <a name="turn-off--windows-server-essentials-features"></a>Windows Server Essentials 기능 해제  
  서버를 관리 하는 Windows Server Essentials 대시보드를 또는 다른 부가 기능이 더 이상 필요한 경우에 기능을 해제 하 고 서버에서 제거할 수 없습니다.  
@@ -97,13 +97,13 @@ ms.locfileid: "59882504"
   
 #### <a name="from-the-get-help-and-support-pane"></a>도움말 및 지원 창에서  
   
-1.  홈 페이지에서 도움말 및 지원을 클릭합니다.  
+1. 홈 페이지에서 도움말 및 지원을 클릭합니다.  
   
-2.  클릭 **Windows Server Essentials 기능 해제 마법사**합니다.  
+2. 클릭 **Windows Server Essentials 기능 해제 마법사**합니다.  
   
- 수행한 일부 작업이 불가능 합니다 **Windows Server Essentials 기능 해제 마법사** 성공적으로 완료 되지 것입니다. 이로 인해 대시보드가 실행되지 않을 수 있습니다. 이 경우 다음 파일을 실행하여 마법사를 수동으로 시작할 수 있습니다.  
+   수행한 일부 작업이 불가능 합니다 **Windows Server Essentials 기능 해제 마법사** 성공적으로 완료 되지 것입니다. 이로 인해 대시보드가 실행되지 않을 수 있습니다. 이 경우 다음 파일을 실행하여 마법사를 수동으로 시작할 수 있습니다.  
   
- **%systemdrive%\Program Files\Windows Server\Bin\TurnOffFeaturesWizard.exe**  
+   **%systemdrive%\Program Files\Windows Server\Bin\TurnOffFeaturesWizard.exe**  
   
 ## <a name="see-also"></a>참조  
   

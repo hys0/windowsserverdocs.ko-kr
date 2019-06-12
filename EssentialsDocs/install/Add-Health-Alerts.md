@@ -12,12 +12,12 @@ ms.assetid: 270e0aac-dc42-46f3-a20b-a68ffbded06d
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: cf0c062b92c687f5f7b33b419eafdca2dd3bbbfc
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8c3ba4746211690ad52f775b8bdc1ccf9b6c74b7
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59828514"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66433721"
 ---
 # <a name="add-health-alerts"></a>상태 경고 추가
 
@@ -32,13 +32,13 @@ ms.locfileid: "59828514"
   
 #### <a name="to-install-the-xml-files-on-the-server"></a>서버에 xml 파일을 설치하려면  
   
-1.  **%ProgramFiles%\Windows Server\Bin\Feature Definitions** 폴더에서 이름이 **MyHealthAddIn**인 새 폴더를 만듭니다. 이 폴더에 임의의 이름을 지정할 수 있습니다. 폴더 이름은 기능 이름과 동일하게 지정하는 것이 좋습니다.  
+1. **%ProgramFiles%\Windows Server\Bin\Feature Definitions** 폴더에서 이름이 **MyHealthAddIn**인 새 폴더를 만듭니다. 이 폴더에 임의의 이름을 지정할 수 있습니다. 폴더 이름은 기능 이름과 동일하게 지정하는 것이 좋습니다.  
   
-2.  Definition.xml 및 Definition.xml.config 파일을 새 폴더에 복사합니다.  
+2. Definition.xml 및 Definition.xml.config 파일을 새 폴더에 복사합니다.  
   
-3.  조건이나 작업에 대한 이진 파일을 만든 경우 이러한 파일을 **%ProgramFiles%\Windows Server\Bin**에도 복사해야 합니다.  
+3. 조건이나 작업에 대한 이진 파일을 만든 경우 이러한 파일을 **%ProgramFiles%\Windows Server\Bin**에도 복사해야 합니다.  
   
- 클라이언트 컴퓨터는 XML 파일을 적절한 위치로 가져오는 예약된 작업을 6시간마다 실행합니다. 작업을 수동으로 실행하여 클라이언트 컴퓨터와 서버 간 동기화를 강제로 실행할 수 있습니다.  
+   클라이언트 컴퓨터는 XML 파일을 적절한 위치로 가져오는 예약된 작업을 6시간마다 실행합니다. 작업을 수동으로 실행하여 클라이언트 컴퓨터와 서버 간 동기화를 강제로 실행할 수 있습니다.  
   
 #### <a name="to-install-the-xml-files-on-the-client-computer"></a>클라이언트 컴퓨터에 xml 파일을 설치하려면  
   

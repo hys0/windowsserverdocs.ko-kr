@@ -13,16 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 08/21/2018
-ms.openlocfilehash: 2639b8bb913bcd604a7c79015545006a23e1d0f2
-ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
+ms.openlocfilehash: b1aaa329c8925d7fa4245555ed51b08f7366299d
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/25/2019
-ms.locfileid: "66222953"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66811103"
 ---
 # <a name="icacls"></a>icacls
-
-
 
 지정된 파일의 DACL(임의 액세스 제어 목록)을 표시 또는 수정하고 저장한 DACL을 지정된 디렉터리의 파일에 적용합니다.
 
@@ -132,18 +130,25 @@ icacls <Directory> [/substitute <SidOld> <SidNew> [...]] [/restore <ACLfile> [/c
 ## <a name="examples"></a>예
 
 모든 파일에 대 한 Dacl는 C:\Windows 디렉터리 및 하위 디렉터리를 ACLFile 파일을 저장 하려면 다음을 입력 합니다.
+
 ```
 icacls c:\windows\* /save aclfile /t
 ```
+
 C:\Windows 디렉터리 및 하위 디렉터리에 있는 ACLFile 내의 모든 파일에 대 한 Dacl을 복원 하려면 다음을 입력 합니다.
+
 ```
 icacls c:\windows\ /restore aclfile
 ```
+
 사용자에 "Test1" 이라는 파일에 User1 삭제 하 고 DAC 쓰기 권한을 부여 하려면 다음을 입력 합니다.
+
 ```
 icacls test1 /grant User1:(d,wdac)
 ```
+
 "Test2" 라는 파일에 대 한 SID S-1-1-0 삭제 및 DAC를 작성 하 여 정의 된 사용자 권한을 부여 하려면 다음을 입력 합니다.
+
 ```
 icacls test2 /grant *S-1-1-0:(d,wdac)
 ```

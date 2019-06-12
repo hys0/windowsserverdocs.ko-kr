@@ -12,12 +12,12 @@ ms.assetid: c7da0f6c-9732-4784-9c28-7dad72c4071d
 4author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: ac547f97b48e4cd0ebf87e0935cadc2c539b4d0b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e2bbc7bf7af71c671153bf7ba3356ddc08dcc38b
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59855004"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66433635"
 ---
 # <a name="create-a-server-recovery-dvd-for-multi-language-support"></a>다국어 지원을 위한 서버 복구 DVD 만들기
 
@@ -30,20 +30,20 @@ ms.locfileid: "59855004"
   
  설정은 Windows PE(Preinstallation Environment)와 초기 구성의 두 단계로 이루어집니다. 기본적으로 초기 구성의 언어 선택 페이지는 표시되지 않습니다.  
   
--   OEM 원격 관리 설치나 OEM 사전 설치 시나리오의 경우 다음 명령을 사용하여 레지스트리 키를 추가해야 초기 구성에서 언어 선택 페이지가 표시됩니다.  
+- OEM 원격 관리 설치나 OEM 사전 설치 시나리오의 경우 다음 명령을 사용하여 레지스트리 키를 추가해야 초기 구성에서 언어 선택 페이지가 표시됩니다.  
   
-    ```  
-    %systemroot%\system32\reg.exe add "HKLM\Software\microsoft\windows server\setup" /v ShowPreinstallPages /t REG_SZ /d true /f  
-    ```  
+  ```  
+  %systemroot%\system32\reg.exe add "HKLM\Software\microsoft\windows server\setup" /v ShowPreinstallPages /t REG_SZ /d true /f  
+  ```  
   
-    > [!IMPORTANT]
-    >  OEM은 랩에서 이미지를 만드는 경우 Windows PE 설치 단계 중에 **한국어** 를 언어로 선택해야 합니다.  
+  > [!IMPORTANT]
+  >  OEM은 랩에서 이미지를 만드는 경우 Windows PE 설치 단계 중에 **한국어** 를 언어로 선택해야 합니다.  
   
--   ROK(Reseller Option Kit) 시나리오에서는 고객에게 DVD와 일부 하드웨어(해당되는 경우)가 제공됩니다. 고객은 Windows PE 설치 중 언어를 선택할 수 있고 언어 선택 페이지는 초기 구성 중 더 이상 표시되지 않습니다.  
+- ROK(Reseller Option Kit) 시나리오에서는 고객에게 DVD와 일부 하드웨어(해당되는 경우)가 제공됩니다. 고객은 Windows PE 설치 중 언어를 선택할 수 있고 언어 선택 페이지는 초기 구성 중 더 이상 표시되지 않습니다.  
   
- 여러 언어가 포함된 단일 이중 계층 DVD를 제공하도록 선택할 수 있습니다.  
+  여러 언어가 포함된 단일 이중 계층 DVD를 제공하도록 선택할 수 있습니다.  
   
- 이 섹션에서는 Windows 설치 프로그램에 언어 지원을 추가하는 방법에 대해 설명합니다. Windows PE 3.0을 사용자 지정하기 위한 기본 도구는 명령줄 도구인 DISM(배포 이미지 서비스 및 관리)입니다. 이 솔루션은 다음 시나리오를 가능하게 합니다.  
+  이 섹션에서는 Windows 설치 프로그램에 언어 지원을 추가하는 방법에 대해 설명합니다. Windows PE 3.0을 사용자 지정하기 위한 기본 도구는 명령줄 도구인 DISM(배포 이미지 서비스 및 관리)입니다. 이 솔루션은 다음 시나리오를 가능하게 합니다.  
   
 1.  다국어 설치 만들기  
   

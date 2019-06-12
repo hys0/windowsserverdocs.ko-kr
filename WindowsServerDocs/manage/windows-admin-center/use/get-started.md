@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ms.date: 02/15/2019
-ms.openlocfilehash: ff1f949c764473a63eafa25346949d710699dbd1
-ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
+ms.openlocfilehash: bd35e439ee3c76af1306bbbd712d754dd79f555f
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/25/2019
-ms.locfileid: "66222727"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446093"
 ---
 # <a name="get-started-with-windows-admin-center"></a>Windows Admin Center 시작
 
@@ -52,17 +52,17 @@ Windows Admin Center 설치를 완료 한 후에 서버 또는 기본 개요 페
 
  **단일 서버 또는 클러스터를 관리 노드로 추가**
 
- 1. 클릭 **+ 추가** 아래에서 **모든 연결**합니다.
+1. 클릭 **+ 추가** 아래에서 **모든 연결**합니다.
 
-    ![](../media/launch/addserver0.png)
+   ![](../media/launch/addserver0.png)
 
- 2. 서버, 장애 조치 클러스터 또는 Hyper-Converged 클러스터 연결을 추가 하려면 선택 합니다.
+2. 서버, 장애 조치 클러스터 또는 Hyper-Converged 클러스터 연결을 추가 하려면 선택 합니다.
     
-    ![](../media/launch/addserver1.png)
+   ![](../media/launch/addserver1.png)
 
- 3. 서버 또는 관리 하 고 클릭 하는 클러스터의 이름을 입력 **제출**합니다. 서버 또는 클러스터의 개요 페이지에서 연결 목록에 추가 됩니다.
+3. 서버 또는 관리 하 고 클릭 하는 클러스터의 이름을 입력 **제출**합니다. 서버 또는 클러스터의 개요 페이지에서 연결 목록에 추가 됩니다.
 
-    ![](../media/launch/addserver2.png)
+   ![](../media/launch/addserver2.png)
 
    **-- OR --**
 
@@ -96,7 +96,7 @@ Windows Admin Center 관리 되는 노드를 사용 하 여 인증에 대 한 �
 
 **Single sign on Windows Server에 서비스로 배포 하는 경우**
 
-Windows Server에서 Windows Admin Center 설치한 경우 추가 구성은 필요 single sign on에 대 한 합니다.  [위임 위한 환경 구성](..\configure\user-access-control.md)
+Windows Server에서 Windows Admin Center 설치한 경우 추가 구성은 필요 single sign on에 대 한 합니다.  [위임 위한 환경 구성](../configure/user-access-control.md)
 
 **-- OR --**
 

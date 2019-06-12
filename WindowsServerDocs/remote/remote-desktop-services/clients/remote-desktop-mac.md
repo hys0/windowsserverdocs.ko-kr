@@ -14,12 +14,12 @@ manager: dongill
 ms.author: elizapo
 ms.date: 10/09/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: e8c5da1960d0e3129b5520e65c2d5ecf45eef778
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a54ffd3d5596ba8c71deab668e4952da445ca12e
+ms.sourcegitcommit: d888e35f71801c1935620f38699dda11db7f7aad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59886954"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66804946"
 ---
 # <a name="get-started-with-remote-desktop-on-mac"></a>Mac에서 원격 데스크톱 시작
 
@@ -27,7 +27,7 @@ ms.locfileid: "59886954"
 
 Mac 컴퓨터에서 Windows 앱, 리소스 및 데스크톱을 사용 하 여 작동 하려면 Mac에 대 한 원격 데스크톱 클라이언트를 사용할 수 있습니다. 다음 정보를 사용 하 여 시작 하 고 확인 합니다 [FAQ](remote-desktop-client-faq.md) 질문이 있는 경우.
 
->[!Note]
+>[!NOTE]
 > - MacOS 클라이언트에 대 한 새 릴리스에 대 한 주는지 궁금 하세요? 체크 아웃 [Mac에서 원격 데스크톱에 대 한 새로운 기능?](mac-whatsnew.md)
 > - Mac 클라이언트 10.10 및 최신 macOS를 실행 하는 컴퓨터에서 실행 됩니다.
 > - 이 문서의 정보는 Mac 클라이언트-Mac AppStore에서 사용할 수 있는 버전의 전체 버전에 주로 적용 됩니다. 여기서 미리 보기 앱을 다운로드 하 여 새 기능을 시험 사용할 수 있도록 합니다. [베타 클라이언트 릴리스](https://go.microsoft.com/fwlink/?LinkID=619698&clcid=0x409)합니다.
@@ -53,11 +53,11 @@ Mac에서 원격 데스크톱을 사용 하 여 시작 하려면 다음이 단�
       - Windows 컴퓨터 이름일 수 있습니다 (에 **시스템** 설정), 도메인 이름 또는 IP 주소입니다.
       - 이 이름의 끝에 포트 정보 같은 추가할 수도 *MyDesktop:3389*합니다.
    - **사용자 계정** -원격 PC에 액세스 하는 데 사용자 계정을 추가 합니다.
-      - Active Directory (AD)에 컴퓨터 또는 로컬 계정에 가입 된 경우 이러한 형식 중 하나를 사용 합니다. *user_name*를 *domain\user_name*, 또는 *user_name@domain.com*합니다.
-      - 에 대 한 Azure Active Directory (AAD) 가입 컴퓨터를 이러한 형식 중 하나를 사용 합니다. *AzureAD\user_name* 나 *AzureAD\user_name@domain.com*합니다.
-      - 암호 필요 여부를 선택할 수도 있습니다.
-      - 동일한 사용자 이름으로 여러 사용자 계정을 관리 하는 경우 계정을 구분 하기 위해 친숙 한 이름을 설정 합니다.
-      - 앱의 기본 설정에 저장 된 사용자 계정을 관리 합니다. 
+     - Active Directory (AD)에 컴퓨터 또는 로컬 계정에 가입 된 경우 이러한 형식 중 하나를 사용 합니다. *user_name*를 *domain\user_name*, 또는 <em>user_name@domain.com</em>합니다.
+     - 에 대 한 Azure Active Directory (AAD) 가입 컴퓨터를 이러한 형식 중 하나를 사용 합니다. *AzureAD\user_name* 나 <em>AzureAD\user_name@domain.com</em>합니다.
+     - 암호 필요 여부를 선택할 수도 있습니다.
+     - 동일한 사용자 이름으로 여러 사용자 계정을 관리 하는 경우 계정을 구분 하기 위해 친숙 한 이름을 설정 합니다.
+     - 앱의 기본 설정에 저장 된 사용자 계정을 관리 합니다. 
 
 3. 또한 이러한 선택적 설정은 연결을 설정할 수 있습니다.
    - 친숙 한 이름을 설정 합니다. 
@@ -82,7 +82,7 @@ Mac에서 원격 데스크톱을 사용 하 여 시작 하려면 다음이 단�
 
 원격 데스크톱을 가져오려면 다음 단계를 따르십시오. RDP 파일입니다.
 
-1. 메뉴 모음에서 클릭 **파일 > 가져오기**합니다.
+1. 메뉴 모음에서 클릭 **파일** > **가져오기**합니다.
 2. 이동 하 고 있습니다. RDP 파일입니다.
 3. **열기**를 클릭합니다.
 
@@ -113,8 +113,8 @@ Mac에서 원격 데스크톱을 사용 하 여 시작 하려면 다음이 단�
 
 1. 연결 센터에서 클릭 **기본 설정 > 게이트웨이**합니다. 
 2. 클릭 합니다 **+** 다음 정보를 입력 테이블의 맨 위에 있는 단추:
-  - **서버 이름** –를 게이트웨이로 사용 하려면 컴퓨터의 이름입니다. 이 Windows 컴퓨터 이름, 인터넷 도메인 이름으로 또는 IP 주소일 수 있습니다. 서버 이름에 포트 정보를 추가할 수도 있습니다 (예: **RDGateway:443** 나 **10.0.0.1: 443**).
-  - **사용자 이름** -사용자 이름 및 암호를 연결 하는 원격 데스크톱 게이트웨이를 사용 해야 합니다. 선택할 수도 있습니다 **연결 자격 증명을 사용 하 여** 원격 데스크톱 연결에 사용 되는 동일한 사용자 이름 및 암호를 사용 하도록 합니다.
+   - **서버 이름** –를 게이트웨이로 사용 하려면 컴퓨터의 이름입니다. 이 Windows 컴퓨터 이름, 인터넷 도메인 이름으로 또는 IP 주소일 수 있습니다. 서버 이름에 포트 정보를 추가할 수도 있습니다 (예: **RDGateway:443** 나 **10.0.0.1: 443**).
+   - **사용자 이름** -사용자 이름 및 암호를 연결 하는 원격 데스크톱 게이트웨이를 사용 해야 합니다. 선택할 수도 있습니다 **연결 자격 증명을 사용 하 여** 원격 데스크톱 연결에 사용 되는 동일한 사용자 이름 및 암호를 사용 하도록 합니다.
 
 
 ## <a name="manage-your-user-accounts"></a>사용자 계정 관리

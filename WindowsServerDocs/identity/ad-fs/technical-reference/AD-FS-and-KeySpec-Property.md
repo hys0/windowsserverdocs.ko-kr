@@ -9,12 +9,12 @@ ms.prod: windows-server-threshold
 ms.assetid: a5307da5-02ff-4c31-80f0-47cb17a87272
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: db58fcce054f34c4b0a3f6725456badae9fd0468
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 32b0d08f678e9e612bb0ce9cc38d254564bd9b2f
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59879314"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66444094"
 ---
 # <a name="ad-fs-and-certificate-keyspec-property-information"></a>AD FS 및 인증서 KeySpec 속성 정보
 키 사양 ("KeySpec")에 인증서 및 키와 연결 된 속성입니다. 서명, 암호화 또는 둘 다에 대 한 인증서와 연결 된 개인 키를 사용할 수 있는지 여부를 지정 합니다.   
@@ -53,8 +53,8 @@ KeySpec 값 **1**, 또는 **AT_KEYEXCHANGE**, 서명 및 암호화에 사용할 
 ### <a name="example"></a>예제
 기존 CSP의 예로 Microsoft Enhanced Cryptographic Provider입니다. 
 
-Microsoft RSA CSP 키 blob 형식을 하거나 알고리즘 식별자를 포함 **CALG_RSA_KEYX** 하거나 **CALG_RSA_SIGN**각각에 대 한 서비스 요청에 * * AT_KEYEXCHANGE * * 또는 **AT_ 서명** 키입니다.
-  
+Microsoft RSA CSP 키 blob 형식을 하거나 알고리즘 식별자를 포함 **CALG_RSA_KEYX** 하거나 **CALG_RSA_SIGN**각각에 대 한 서비스 요청에 <strong>AT_KEYEXCHANGE * * 또는 * * AT_ 서명</strong> 키입니다.
+
 다음과 같이 KeySpec 값에 매핑되는 RSA 키 알고리즘 식별자
 
 | 알고리즘 공급자 지원| CAPI 호출에 대 한 키 지정 값 |
@@ -82,21 +82,22 @@ CALG_RSA_SIGN : RSA 서명 전용 키 |AT_SIGNATURE (또는 KeySpec = 2)|
 
 
 1. **ProviderType:** 이 레거시 저장소 공급자 (CSP (암호화)를 사용 하는 인증서 또는 키 저장소 공급자를 기반으로 새 인증서 CNG (Next Generation) Api 여부를 나타냅니다.  0이 아닌 모든 값에는 레거시 공급자를 나타냅니다.
-2.  **KeySpec:** 다음은 AD FS 인증서의 유효한 KeySpec 값입니다.
+2. **KeySpec:** 다음은 AD FS 인증서의 유효한 KeySpec 값입니다.
 
-    기존 CSP 공급자 (0과 같지 않은 ProviderType):
-    
-    |AD FS 인증서 용도|유효한 KeySpec 값|
-    | --- | --- |
-    |서비스 통신|1|
-    |토큰 암호 해독|1|
-    |토큰 서명|1과 2|
-    |SSL|1|
+   기존 CSP 공급자 (0과 같지 않은 ProviderType):
 
-    CNG 공급자 (ProviderType = 0):
-    |AD FS 인증서 용도|유효한 KeySpec 값|
-    | --- | --- |   
-    |SSL|0|
+   |AD FS 인증서 용도|유효한 KeySpec 값|
+   | --- | --- |
+   |서비스 통신|1|
+   |토큰 암호 해독|1|
+   |토큰 서명|1과 2|
+   |SSL|1|
+
+   CNG 공급자 (ProviderType = 0):
+
+   |AD FS 인증서 용도|유효한 KeySpec 값|
+   | --- | --- |   
+   |SSL|0|
 
 ## <a name="how-to-change-the-keyspec-for-your-certificate-to-a-supported-value"></a>지원 되는 값에는 인증서에 keyspec 변경 하는 방법
 KeySpec 값을 변경 하는 경우에 다시 생성 하거나 다시 인증 기관에서 발급 한 인증서가 필요 하지 않습니다.  아래 단계를 사용 하 여 인증서 저장소에 완전 한 인증서 및 PFX 파일에서 개인 키를 가져와 다시 KeySpec는 변경할 수 있습니다.

@@ -7,12 +7,12 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 11/03/2018
-ms.openlocfilehash: 2f800dfa01077287f8200dd8abea0be899776683
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 70f6f8c2db742361deecaa216b053d8b1d057a3d
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59866694"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812609"
 ---
 # <a name="setting-up-the-host-guardian-service-for-always-encrypted-with-secure-enclaves-in-sql-server"></a>SQL Server에서 보안 enclaves를 사용 하 여 Always Encrypted에 대 한 호스트 보호 서비스 설정 
 
@@ -39,8 +39,8 @@ ms.locfileid: "59866694"
 
 - 1 ~ 3 서버가 HGS를 실행 합니다. 
 
-  >[!NOTE]
-  >하나의 HGS 서버 테스트 또는 프로덕션 전 환경에 필요합니다.
+  > [!NOTE]
+  > 하나의 HGS 서버 테스트 또는 프로덕션 전 환경에 필요합니다.
 
   이러한 서버는 컴퓨터 보안 enclaves를 사용 하 여 상시 암호화를 사용 하 여 SQL Server 인스턴스를 실행할 수 있습니다 제어 하므로 신중 하 게 보호 되어야 합니다. 
   다른 관리자 HGS 클러스터를 관리 하 고 Azure 구독 또는 별도 가상화 패브릭 또는 인프라의 나머지 부분에서 격리 된 물리적 하드웨어에서 HGS를 실행 하는 것이 좋습니다.
@@ -110,11 +110,13 @@ Get-CimInstance -ClassName Win32_Tpm -Namespace root/cimv2/Security/MicrosoftTpm
    선택한 DNN HgsServiceName를 지정 합니다.
 
    TPM 모드의 경우:
+
    ```powershell
    Initialize-HgsAttestation -HgsServiceName 'hgs' -TrustTpm
    ```
 
    호스트 키 모드:
+
    ```powershell
    Initialize-HgsAttestation -HgsServiceName 'hgs' -TrustHostKey 
    ```
@@ -148,13 +150,13 @@ Get-CimInstance -ClassName Win32_Tpm -Namespace root/cimv2/Security/MicrosoftTpm
 
 HGS 서버를 초기화 하는 경우 기본적으로 HTTP 전용 통신을 위해 IIS 웹 사이트를 구성 합니다 것입니다.
 
->[!NOTE]
->잘 알려져 있고 신뢰할 수 있는 HGS 서버 인증서를 사용 하 여 HTTPS를 구성 하는 중간자 개입 공격을 방지 하는 데 필요한 및 프로덕션 배포에 따라서 것이 좋습니다.
+> [!NOTE]
+> 잘 알려져 있고 신뢰할 수 있는 HGS 서버 인증서를 사용 하 여 HTTPS를 구성 하는 중간자 개입 공격을 방지 하는 데 필요한 및 프로덕션 배포에 따라서 것이 좋습니다.
 
 [!INCLUDE [Configure HTTPS](../../includes/configure-hgs-for-https.md)] 
 
->[!NOTE]
->보안 enclaves를 사용 하 여 Always Encrypted에 대해 SSL 인증서를 SQL Server를 실행 하는 두 호스트 컴퓨터에서 신뢰할 수 하며 database 클라이언트 응용 프로그램을 실행 하는 컴퓨터를 HGS에 문의 해야 합니다. 
+> [!NOTE]
+> 보안 enclaves를 사용 하 여 Always Encrypted에 대해 SSL 인증서를 SQL Server를 실행 하는 두 호스트 컴퓨터에서 신뢰할 수 하며 database 클라이언트 응용 프로그램을 실행 하는 컴퓨터를 HGS에 문의 해야 합니다. 
 
 ## <a name="collect-attestation-info-from-the-host-machines"></a>호스트 컴퓨터의 증명 정보를 수집 합니다.
 
@@ -197,6 +199,7 @@ TPM 모드를 사용 하는 경우 증명에 대 한 지원을 설치 하 고 �
    ```powershell
    Get-ComputerInfo -Property DeviceGuard* 
    ```
+
 5. TPM 식별자 및 기준 수집 합니다.
 
    ```powershell 
@@ -216,6 +219,7 @@ TPM 모드를 사용 하는 경우 증명에 대 한 지원을 설치 하 고 �
    Add-HgsAttestationTpmPolicy -Name ServerA-Baseline -Path C:\temp\TpmBaseline-ServerA.tcglog 
    Add-HgsAttestationCiPolicy -Name AllowMicrosoft-Audit -Path C:\temp\AllowMicrosoft-Audit.bin 
    ```
+
 9. 첫 번째 서버 증명할 준비가 되었습니다! 
    호스트 컴퓨터에서 (HGS 클러스터의 DNS 이름을 일반적으로 사용할지 HGS 도메인 이름과 결합 된 HGS 서비스 이름 변경)를 증명할 수 있는 위치를 확인 하려면 다음 명령을 실행 합니다. 
    HostUnreachable 오류가 발생 하는 경우 해결 하 고 DNS 이름을 HGS 서버를 ping 할 수 있습니다를 확인 합니다. 
@@ -231,8 +235,8 @@ TPM 모드를 사용 하는 경우 증명에 대 한 지원을 설치 하 고 �
 
 ### <a name="collecting-host-keys"></a>호스트 키를 수집합니다. 
 
->[!NOTE] 
->호스트 키 증명만 테스트 환경에서 사용 하기 위해 권장 됩니다. TPM 증명 SQL Server에서 중요 한 데이터를 처리 하는 VBS enclaves 신뢰할 수 있는 코드를 실행 하는 컴퓨터는 권장 되는 보안 설정을 사용 하 여 구성 됩니다 가장 강력한 보증을 제공 합니다. 
+> [!NOTE] 
+> 호스트 키 증명만 테스트 환경에서 사용 하기 위해 권장 됩니다. TPM 증명 SQL Server에서 중요 한 데이터를 처리 하는 VBS enclaves 신뢰할 수 있는 코드를 실행 하는 컴퓨터는 권장 되는 보안 설정을 사용 하 여 구성 됩니다 가장 강력한 보증을 제공 합니다. 
 
 호스트 키 증명 모드에서 HGS 설정 하기로 하 생성 각 호스트 컴퓨터에서 키를 수집 하 고 호스트 보호 서비스에 등록 해야 합니다. 
 

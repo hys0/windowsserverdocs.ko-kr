@@ -8,23 +8,23 @@ ms.date: 02/21/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 91f252f5b0eca0f4c44e0b1a4564037298bf023c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9703a8652b0e0bbafe48858cbfbcc8aa9aa31ef8
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59814064"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812052"
 ---
 # <a name="ad-fs-troubleshooting---integrated-windows-authentication"></a>통합 Windows 인증을 AD FS 문제 해결-
 통합된 Windows 인증 사용자가 Windows 자격 증명 및 환경 single sign-on (SSO), Kerberos 또는 NTLM을 사용 하 여 로그인 할 수 있습니다.
 
 ## <a name="reason-integrated-windows-authentication-fails"></a>따라서 windows 통합된 인증에 실패
-Windows 통합된 인증에 실패 하는 이유 세 가지 주요 이유가 있습니다. 다음 창이 여기에 포함됩니다.
+Windows 통합된 인증에 실패 하는 이유 세 가지 주요 이유가 있습니다. 구현되지 않은 것은 다음과 같습니다.
     - Spn (서비스 주체 (이름) 잘못 된 구성
     - 채널 바인딩 토큰
     - Internet Explorer 구성
 
-## <a name="spn-misonfiguration"></a>SPN misonfiguration
+## <a name="spn-misconfiguration"></a>SPN 구성 오류
 서비스 사용자 이름 (SPN)에 서비스 인스턴스는 고유 식별자입니다. Spn은 서비스 로그온 계정을 사용 하 여 서비스 인스턴스 연결에 Kerberos 인증에서 사용 됩니다. 이렇게 하면 클라이언트에 계정 이름이 없는 경우에 서비스가 계정을 인증을 요청 하려면 클라이언트 응용 프로그램을 수 있습니다.
 
 사용 하 여 SPN이 사용 됩니다 하는 방법의 예로 AD FS는 다음과 같습니다.
@@ -67,13 +67,14 @@ AD FS 서비스 계정의 속성을 확인 하 여 SPN을 확인할 수 있습�
 
 두 가지 주요 happeing에서이 방지할 수는 있습니다.
    - 통합된 Windows 인증 사용 IE의 속성에서 확인 하지 않습니다.  -> 인터넷 옵션 아래에 있는이 고급-> 보안 합니다.
-![integrated](media/ad-fs-tshoot-iwa/iwa4.png)
+   
+   ![통합](media/ad-fs-tshoot-iwa/iwa4.png)
    
    - 보안 영역 올바르게 구성 되지 않습니다.
        - Fqdn은 인트라넷 영역에 있지 않습니다.
        - AD FS URL을 인트라넷 영역에 없는 경우
 
-![통합](media/ad-fs-tshoot-iwa/iwa5.png)
+      ![통합](media/ad-fs-tshoot-iwa/iwa5.png)
 ## <a name="next-steps"></a>다음 단계
 
 - [AD FS 문제 해결](ad-fs-tshoot-overview.md)

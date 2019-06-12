@@ -13,16 +13,16 @@ ms.topic: article
 author: lizap
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: acfdd99fa67e218f58fe650de5607f2a5ba97bf8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 5b9ce1bb87a7a2ad8819235edc412fd095bc2985
+ms.sourcegitcommit: d888e35f71801c1935620f38699dda11db7f7aad
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59833834"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66805134"
 ---
 # <a name="deploy-your-remote-desktop-environment"></a>원격 데스크톱 환경 배포
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016
 
 사용자 환경에서 원격 데스크톱 서버를 배포 하려면 다음 단계를 사용 합니다. 물리적 컴퓨터 또는 가상 컴퓨터를 작성 하는 경우 온-프레미스, 클라우드 기반에 따라 하이브리드 환경에서 서버 역할을 설치할 수 있습니다. 
 
@@ -30,11 +30,11 @@ ms.locfileid: "59833834"
   
   
 1.  For Remote Desktop Services 서버 관리자를 사용 하려는 모든 서버를 추가 합니다.  
-    1.  서버 관리자에서 **관리 > 서버 추가**합니다.  
+    1.  서버 관리자에서 클릭 **관리** > **서버 추가**합니다.  
     2.  클릭 **지금 찾기**합니다.  
     3.  (예: Contoso Cb1, Contoso-WebGw1 및 Contoso Sh1) 배포의 각 서버를 클릭 하 고 클릭 **확인**합니다.  
 2.  원격 데스크톱 서비스 구성 요소를 배포 하는 세션 기반 배포를 만듭니다.  
-    1.  서버 관리자에서 클릭 **관리 > 역할 및 기능 추가**합니다.  
+    1.  서버 관리자에서 클릭 **관리** > **역할 및 기능 추가**합니다.  
     2.  클릭 **원격 데스크톱 서비스 설치**하십시오 **표준 배포**, 및 **세션 기반 데스크톱 배포**합니다.  
     3.  RD 연결 브로커 서버, RD 웹 액세스 서버 및 RD 세션 호스트 서버에 대 한 적절 한 서버 선택 (예: Contoso Cb1, Contoso-WebGw1 및 Contoso-SH1 각각).  
     4.  선택 **필요한 경우 자동으로 대상 서버를 다시 시작**를 클릭 하 고 **배포**합니다.  

@@ -14,16 +14,16 @@ manager: dongill
 ms.author: elizapo
 ms.date: 06/05/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: af41304e08f19ca155f6fd13c9258e9a8f20c163
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d03dcd307696aea55ab6a1569ab907635994772a
+ms.sourcegitcommit: d888e35f71801c1935620f38699dda11db7f7aad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59817014"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66804993"
 ---
 # <a name="remote-desktop---allow-access-to-your-pc"></a>원격 데스크톱-PC에 대 한 액세스를 허용 합니다.
 
->적용 대상: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
+>적용 대상: Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
 원격 데스크톱을 사용 하 여 연결 하 고 사용 하 여 원격 장치에서 PC를 제어할 수는 [Microsoft 원격 데스크톱 클라이언트](remote-desktop-clients.md) (Windows, iOS, macOS 및 Android에 대 한 사용 가능). 사용자 PC에 대 한 원격 연결을 허용 하는 경우에 사용자 PC에 연결 하 여 책상에 앉아 있는 것 처럼 모든 앱, 파일 및 네트워크 리소스에 액세스할 다른 장치를 사용할 수 있습니다.  
 
@@ -64,7 +64,7 @@ ms.locfileid: "59817014"
 사용자 PC에 액세스할 수 있는 모든 계정이 강력한 암호를 사용 하 여 구성 되어 있는지 확인 해야 합니다.
 
 ## <a name="why-allow-connections-only-with-network-level-authentication"></a>네트워크 수준 인증에만 연결 허용 되는 이유? 
- 
-PC에 액세스할 수 있는 사용자를 제한 하려는 경우에 사용 하 여 인증 NLA (네트워크 수준) 액세스를 허용 하도록 선택 합니다. 이 옵션을 사용 하도록 설정 하면 사용자는 사용자 PC에 연결 하기 전에 네트워크에 자신을 인증 해야 합니다. 악의적인 사용자와 소프트웨어 로부터 컴퓨터를 보호 하는 데 도움이 되는 보다 안전한 인증 방법을 NLA를 사용 하 여 원격 데스크톱을 실행 하는 컴퓨터 에서만에서 연결을 허용 합니다. NLA 및 원격 데스크톱에 대 한 자세한 내용은 체크 아웃 [RDS 연결에 대 한 구성 NLA](https://technet.microsoft.com/library/cc732713(v=ws.11).aspx)합니다. 
+
+PC에 액세스할 수 있는 사용자를 제한 하려는 경우에 사용 하 여 인증 NLA (네트워크 수준) 액세스를 허용 하도록 선택 합니다. 이 옵션을 사용 하도록 설정 하면 사용자는 사용자 PC에 연결 하기 전에 네트워크에 자신을 인증 해야 합니다. 악의적인 사용자와 소프트웨어 로부터 컴퓨터를 보호 하는 데 도움이 되는 보다 안전한 인증 방법을 NLA를 사용 하 여 원격 데스크톱을 실행 하는 컴퓨터 에서만에서 연결을 허용 합니다. NLA 및 원격 데스크톱에 대 한 자세한 내용은 체크 아웃 [RDS 연결에 대 한 구성 NLA](https://technet.microsoft.com/library/cc732713(v=ws.11).aspx)합니다.
 
 원격으로 연결한 경우 PC에 해당 네트워크 외부에서 홈 네트워크,이 옵션을 선택 하지 마십시오.

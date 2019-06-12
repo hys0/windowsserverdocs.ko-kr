@@ -8,12 +8,12 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 84e4b2fe0b59820b9e51229335f3539bcbeeec90
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 1774d235703bd75d810f2649cb8ed3f2f92622d5
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59860744"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66811599"
 ---
 # <a name="install-the-certification-authority"></a>인증 기관 설치
 
@@ -38,8 +38,8 @@ ms.locfileid: "59860744"
   
 ### <a name="to-install-active-directory-certificate-services"></a>Active Directory 인증서 서비스를 설치 하려면  
 
->[!TIP]
->참조를 Active Directory 인증서 서비스를 설치 하려면 Windows PowerShell을 사용 하려는 경우 [Install-adcscertificationauthority](https://docs.microsoft.com/powershell/module/adcsdeployment/install-adcscertificationauthority?view=win10-ps) cmdlet 및 선택적 매개 변수입니다.
+> [!TIP]
+> 참조를 Active Directory 인증서 서비스를 설치 하려면 Windows PowerShell을 사용 하려는 경우 [Install-adcscertificationauthority](https://docs.microsoft.com/powershell/module/adcsdeployment/install-adcscertificationauthority?view=win10-ps) cmdlet 및 선택적 매개 변수입니다.
   
 1.  Enterprise Admins 그룹 및 루트 도메인의 Domain Admins 그룹의 구성원으로 로그온 합니다.  
   

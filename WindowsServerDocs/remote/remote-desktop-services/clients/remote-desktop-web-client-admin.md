@@ -8,12 +8,12 @@ ms.date: 11/2/2018
 ms.topic: article
 author: Heidilohr
 ms.localizationpriority: medium
-ms.openlocfilehash: bf10f7f7444967247e51065bc6138fc0afd5ed1a
-ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
+ms.openlocfilehash: 45164e9eca0873c82148aa3b7baa179a3f626dd7
+ms.sourcegitcommit: d888e35f71801c1935620f38699dda11db7f7aad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65976777"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66804968"
 ---
 # <a name="set-up-the-remote-desktop-web-client-for-your-users"></a>사용자에 대한 원격 데스크톱 웹 클라이언트 설정
 
@@ -216,7 +216,7 @@ ms.locfileid: "65976777"
     >
     > SSL 인증서 바인딩 목록에서 올바른 인증서 3392 포트에 바인딩되어 있는지 확인 합니다.
 
-3. Windows 레지스트리 (regedit)를 열고에 nagivate ```HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp``` 키를 찾아서 **WebSocketURI**합니다. 값으로 설정 되어 있어야 **https://+:3392/rdp/** 합니다.
+3. Windows 레지스트리 (regedit)를 열고에 nagivate ```HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp``` 키를 찾아서 **WebSocketURI**합니다. 값으로 설정 되어 있어야 <strong>https://+:3392/rdp/</strong>합니다.
 
 ### <a name="setting-up-the-rd-session-host"></a>RD 세션 호스트 설정
 RD 세션 호스트 서버는 RD 브로커 서버와 다른 경우 다음이 단계를 따르세요.
@@ -238,7 +238,7 @@ RD 세션 호스트 서버는 RD 브로커 서버와 다른 경우 다음이 단
     >
     > SSL 인증서 바인딩 목록에서 올바른 인증서 3392 포트에 바인딩되어 있는지 확인 합니다.
 
-3. Windows 레지스트리 (regedit)를 열고에 nagivate ```HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp``` 키를 찾아서 **WebSocketURI**합니다. 값으로 설정 되어 있어야 **https://+:3392/rdp/** 합니다.
+3. Windows 레지스트리 (regedit)를 열고에 nagivate ```HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp``` 키를 찾아서 **WebSocketURI**합니다. 값으로 설정 되어 있어야 <https://+:3392/rdp/>합니다.
 
 ### <a name="general-observations"></a>일반 관찰
 

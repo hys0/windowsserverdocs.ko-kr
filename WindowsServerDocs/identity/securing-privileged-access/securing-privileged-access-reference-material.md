@@ -9,12 +9,12 @@ ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: daveba
 ms.reviewer: mas
-ms.openlocfilehash: 75474bd37f425388f01986ca32073107ee4fed99
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: bcc06a3ccc4e95fa43a7f8f0ef7d110fd427f5a0
+ms.sourcegitcommit: cd12ace92e7251daaa4e9fabf1d8418632879d38
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59830694"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66501646"
 ---
 # <a name="active-directory-administrative-tier-model"></a>Active Directory 관리 계층 모델
 
@@ -330,11 +330,11 @@ CAB(변경 자문 위원회)는 조직의 보안 프로필에 영향을 줄 수 
 이 시나리오에는 다음 방식을 적용해야 합니다.
 
 - **원격 서버 지원** - 서버에 원격으로 액세스할 때 계층 0 관리자는 다음 지침을 따라야 합니다.
-   - **기본(도구)** - 네트워크 로그온(유형 3)을 사용하는 원격 도구입니다. 자세한 내용은 [관리 도구 및 로그온 유형](http://aka.ms/admintoolsecurity)을 참조하세요.
-   - **기본(대화형)** - 관리 워크스테이션에서 도메인 계정으로 RDP RestrictedAdmin 또는 표준 RDP 세션을 사용합니다.
+  - **기본(도구)** - 네트워크 로그온(유형 3)을 사용하는 원격 도구입니다. 자세한 내용은 [관리 도구 및 로그온 유형](http://aka.ms/admintoolsecurity)을 참조하세요.
+  - **기본(대화형)** - 관리 워크스테이션에서 도메인 계정으로 RDP RestrictedAdmin 또는 표준 RDP 세션을 사용합니다.
 
-   > [!NOTE]
-   > 계층 0 권한 관리 솔루션을 사용하는 경우 추가 "권한 있는 액세스 관리 솔루션에서 적시에 얻은 권한 사용"을 추가합니다.
+    > [!NOTE]
+    > 계층 0 권한 관리 솔루션을 사용하는 경우 추가 "권한 있는 액세스 관리 솔루션에서 적시에 얻은 권한 사용"을 추가합니다.
 
 - **물리적 서버 지원** - 서버 콘솔 또는 가상 컴퓨터 콘솔(Hyper-V 또는 VMWare 도구)에 실제로 존재하는 경우 이러한 계정에는 특정 관리 도구 사용 제한이 없으며 표준 사용자 작업(예: 전자 메일 및 열려 있는 인터넷 검색)의 일반적인 제한만 있습니다.
 
@@ -436,10 +436,10 @@ Microsoft Azure 및 Office 365와 같은 클라우드 서비스에서 관리 권
 - 권한 있는 도메인 관리자만 도메인 관리자 권한으로 응급 액세스 계정에 액세스할 수 있습니다.
 - 응급 액세스 계정은 도메인 컨트롤러 및 기타 계층 0 호스트에만 사용할 수 있습니다.
 - 이 계정은 다음 작업을 수행하는 데에만 사용해야 합니다.
-   - 문제 해결 및 올바른 관리 계정의 사용을 방지하는 기술적 문제 해결
-   - 다음과 같은 드문 작업
-      - 스키마 관리
-      - 엔터프라이즈 관리자 권한이 필요한 포리스트 수준의 작업
+  - 문제 해결 및 올바른 관리 계정의 사용을 방지하는 기술적 문제 해결
+  - 다음과 같은 드문 작업
+    - 스키마 관리
+    - 엔터프라이즈 관리자 권한이 필요한 포리스트 수준의 작업
 
       > [!NOTE]
       > Active Directory 사이트 및 서브넷 관리를 비롯 한 토폴로지 관리는 이러한 권한을 사용할 수 있도록 제한 위임 됩니다.
@@ -555,7 +555,7 @@ Microsoft Azure 및 Office 365와 같은 클라우드 서비스에서 관리 권
 - Server Operators
 - 도메인 컨트롤러 하나 이상
 - Read-only Domain Controllers
-- Group Policy Creators Owners
+- Group Policy Creator Owners
 - Cryptographic Operators
 - Distributed COM Users
 - 다른 위임 된 그룹-유효한 계층 0 액세스 권한이 있을 수 있는 디렉터리 작업을 관리 하려면 조직에서 만들 수 있는 사용자 지정 그룹입니다.

@@ -14,12 +14,12 @@ author: jaimeo
 ms.author: jaimeo
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: eb2e5be2ed19fe7cd64f6c6bd64ca9afafd93bff
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: cf67a1c9675191936a6150bb950c59e6f99b54ad
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59812314"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66810697"
 ---
 # <a name="install-server-with-desktop-experience"></a>데스크톱 환경 포함 서버 설치
 > 적용 대상: Windows Server 2016
@@ -29,9 +29,9 @@ ms.locfileid: "59812314"
 
 데스크톱 환경 포함 서버 옵션은 Windows Server 2012 R2에 별도 설치해야 하는 클라이언트 환경 기능을 포함하여 표준 사용자 인터페이스 및 모든 도구가 설치됩니다. 서버 역할과 기능은 서버 관리자 또는 다른 메서드를 통해 설치됩니다. Server Core 옵션에 비해 디스크에 더 많은 공간이 필요하고 서비스 요구 사항이 높기 때문에 데스크톱 환경 포함 서버 옵션에 포함된 추가 사용자 인터페이스 요소와 그래픽 관리 도구가 특별히 필요한 경우가 아니라면 Server Core 설치 옵션을 선택하는 것이 좋습니다. 추가 요소가 없어도 작업이 가능할 것 같으면 [Server Core 설치](Getting-Started-with-Server-Core.md)를 참조하세요. 더 가벼운 설치 옵션을 원한다면 [Nano 서버 설치](Getting-Started-with-Nano-Server.md)를 참조하세요.
 
->[!NOTE]
+> [!NOTE]
 >
->일부 이전 릴리스의 Windows Server와 달리 설치 후 Server Core와 데스크톱 경험 기능이 설치된 서버 간에 변환할 수 없습니다. 데스크톱 경험을 설치하고 나중에 Server Core를 사용하기로 결정하는 경우에는 새로 설치를 수행해야 합니다.
+> 일부 이전 릴리스의 Windows Server와 달리 설치 후 Server Core와 데스크톱 경험 기능이 설치된 서버 간에 변환할 수 없습니다. 데스크톱 경험을 설치하고 나중에 Server Core를 사용하기로 결정하는 경우에는 새로 설치를 수행해야 합니다.
 
 **사용자 인터페이스:** 표준 그래픽 사용자 인터페이스("서버 그래픽 셸"). 서버 그래픽 셸에 새로운 Windows 10 셸이 포함되어 있습니다. 이 옵션을 통해 기본적으로 설치되는 특정 Windows 기능은 User-Interfaces-Infra, Server-GUI-Shell, Server-GUI-Mgmt-Infra, InkAndHandwritingServices, ServerMediaFoundation 및 데스크톱 환경입니다. 이러한 기능은 이 릴리스의 서버 관리자에 표시되어 있지만 제거할 수 없으며 이후 릴리스에서 제공되지 않습니다.
 
@@ -52,7 +52,7 @@ ms.locfileid: "59812314"
 
 ### <a name="clean-installation"></a>새로 설치
 
-미디어로 데스크톱 환경 포함 서버 옵션을 설치하려면 드라이브에 미디어를 삽입하고, 컴퓨터를 다시 시작하고, Setup.exe를 실행합니다. 열리는 마법사에서 **Windows Server(데스크톱 환경 포함 서버)**(Standard 또는 Datacenter)를 선택한 다음 마법사를 완료합니다.
+미디어로 데스크톱 환경 포함 서버 옵션을 설치하려면 드라이브에 미디어를 삽입하고, 컴퓨터를 다시 시작하고, Setup.exe를 실행합니다. 열리는 마법사에서 **Windows Server(데스크톱 환경 포함 서버)** (Standard 또는 Datacenter)를 선택한 다음 마법사를 완료합니다.
 
 ### <a name="upgrade"></a>업그레이드
 **업그레이드**는 동일한 하드웨어에서 기존 운영 체제 릴리스를 보다 최근 릴리스로 이동하는 작업입니다.
@@ -93,17 +93,17 @@ ms.locfileid: "59812314"
 
 |서버 역할|Windows Server 2012 R2에서 업그레이드 가능 여부|Windows Server 2012에서 업그레이드 가능 여부|마이그레이션 지원 여부|가동 중지 시간 없이 마이그레이션을 완료할 수 있는지 여부|  
 |-------------------|----------|--------------|--------------|----------|  
-|Active Directory 인증서 서비스| 예|    예|    예|    아니오|
+|Active Directory 인증서 서비스| 예|    예|    예|    아니요|
 |Active Directory 도메인 서비스|  예|    예|    예|    예|
-|AD FS(Active Directory Federation Services)|  아니요| 아니요| 예|    아니요(새 노드를 팜에 추가해야 함)|
+|AD FS(Active Directory Federation Services)|  아니오| 아니요| 예|    아니요(새 노드를 팜에 추가해야 함)|
 |Active Directory LDS(Lightweight Directory Services)|   예|    예|    예|    예|
 |Active Directory Rights Management Services|   예|    예|    예|    아니요|
 |장애 조치(failover) 클러스터|예, 노드 일시 중지-드레이닝, 제거, Windows Server 2016으로 업그레이드 및 원본 클러스터 다시 연결을 포함하는 [클러스터 OS 롤링 업그레이드](https://technet.microsoft.com/windows-server-docs/failover-clustering/cluster-operating-system-rolling-upgrade) 프로세스 사용. 예, 서버가 업그레이드를 위해 클러스터에 의해 제거된 후 다른 클러스터에 추가되는 경우.|서버가 클러스터에 속하지 않는 동안은 아님. 예, 서버가 업그레이드를 위해 클러스터에 의해 제거된 후 다른 클러스터에 추가되는 경우.  |예|아니요, Windows Server 2012 장애 조치(failover) 클러스터인 경우. 예, Hyper-V VM 포함 Windows Server 2012 R2 장애 조치 클러스터 또는 스케일 아웃 파일 서버 역할을 실행하는 Windows Server 2012 R2 장애 조치 클러스터인 경우. [클러스터 OS 롤링 업그레이드](https://technet.microsoft.com/windows-server-docs/failover-clustering/cluster-operating-system-rolling-upgrade)를 참조하세요.|
 |파일 및 저장소 서비스| 예|    예|    하위 기능에 따라 다름|  아니요|
-|인쇄 및 팩스 서비스|    아니오| 아니오| 예(Printbrm.exe)| 아니요|
-|원격 데스크톱 서비스|   예, 모든 하위 역할, 혼합 모드 팜은 지원되지 않음|   예, 모든 하위 역할, 혼합 모드 팜은 지원되지 않음|   예|    아니오|
+|인쇄 및 팩스 서비스|    아니요| 아니오| 예(Printbrm.exe)| 아니오|
+|원격 데스크톱 서비스|   예, 모든 하위 역할, 혼합 모드 팜은 지원되지 않음|   예, 모든 하위 역할, 혼합 모드 팜은 지원되지 않음|   예|    아니요|
 |웹 서버(IIS)|  예|    예|    예|    아니오|
-|Windows Server 필수 패키지 환경|  예|    해당 없음 – 새 기능|  예|    아니요|
+|Windows Server 필수 패키지 환경|  예|    해당 없음 – 새 기능|  예|    아니오|
 |Windows Server Update Services|    예|    예|    예|    아니요|
 |클라우드 폴더|  예|    예|    예|    예, [클러스터 OS 롤링 업그레이드](https://technet.microsoft.com/windows-server-docs/failover-clustering/cluster-operating-system-rolling-upgrade)를 사용할 경우 WS 2012 R2 클러스터에서|
 

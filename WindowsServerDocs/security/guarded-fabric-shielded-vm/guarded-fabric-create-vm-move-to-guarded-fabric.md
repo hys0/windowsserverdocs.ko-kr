@@ -9,12 +9,12 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 2da1e33d24fa6d68815f4fbc0891be0616004856
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: dd9b89f34a3b4af8bb98d2399a524790aa65de0e
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59817474"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447479"
 ---
 # <a name="shielded-vms-for-tenants---creating-a-new-shielded-vm-on-premises-and-moving-it-to-a-guarded-fabric"></a>온-프레미스 VM 및 보호 된 패브릭 이동 테 넌 트-새 보호 된 Vm 보호
 
@@ -76,66 +76,66 @@ ms.locfileid: "59817474"
 
 실딩 데이터 파일의 요소는 키 보호기를 보여 주는 예시를 참조 하세요. [실딩 데이터는 무엇 이며 왜 필요?](guarded-fabric-and-shielded-vms.md#what-is-shielding-data-and-why-is-it-necessary)합니다.
 
-1.  테 넌 트 Hyper-v 호스트에 새로운 2 세대 가상 컴퓨터를 만들려면 다음 명령을 실행 합니다.
+1. 테 넌 트 Hyper-v 호스트에 새로운 2 세대 가상 컴퓨터를 만들려면 다음 명령을 실행 합니다.
 
-    에 대 한 &lt;ShieldedVMname&gt;, 예를 들어 VM의 이름을 지정 합니다. **ShieldVM1**
+   에 대 한 &lt;ShieldedVMname&gt;, 예를 들어 VM의 이름을 지정 합니다. **ShieldVM1**
     
-    에 대 한 &lt;VHDPath&gt;, 예를 들어 VM의 VHDX를 저장할 위치를 지정 합니다. **C:\\VMs\\ShieldVM1\\ShieldVM1.vhdx**
+   에 대 한 &lt;VHDPath&gt;, 예를 들어 VM의 VHDX를 저장할 위치를 지정 합니다. **C:\\VMs\\ShieldVM1\\ShieldVM1.vhdx**
     
-    에 대 한 &lt;nnGB&gt;, 예를 들어, VHDX의 크기를 지정 합니다. **60GB**
+   에 대 한 &lt;nnGB&gt;, 예를 들어, VHDX의 크기를 지정 합니다. **60GB**
 
-        New-VM -Generation 2 -Name "<ShieldedVMname>" -NewVHDPath <VHDPath>.vhdx -NewVHDSizeBytes <nnGB>
+       New-VM -Generation 2 -Name "<ShieldedVMname>" -NewVHDPath <VHDPath>.vhdx -NewVHDSizeBytes <nnGB>
 
-2.  지원 되는 운영 체제를 설치 (Windows Server 2012 이상, Windows 8 클라이언트 이상) VM에 원격 데스크톱 연결 및 해당 방화벽 규칙을 사용 하도록 설정 합니다. VM의 IP 주소 및/또는 DNS 이름을; 기록 원격으로 연결 하도록 해야 합니다.
+2. 지원 되는 운영 체제를 설치 (Windows Server 2012 이상, Windows 8 클라이언트 이상) VM에 원격 데스크톱 연결 및 해당 방화벽 규칙을 사용 하도록 설정 합니다. VM의 IP 주소 및/또는 DNS 이름을; 기록 원격으로 연결 하도록 해야 합니다.
 
-3.  RDP를 사용 하 여 원격으로 VM에 연결 하 고 RDP 및 방화벽을 올바르게 구성 되어 있는지 확인 하십시오. 보호 프로세스의 일부로, Hyper-v를 통해 가상 컴퓨터에 대 한 콘솔 액세스를 사용할 수 있으므로 네트워크를 통해 시스템을 원격으로 관리할 수 있도록 합니다.
+3. RDP를 사용 하 여 원격으로 VM에 연결 하 고 RDP 및 방화벽을 올바르게 구성 되어 있는지 확인 하십시오. 보호 프로세스의 일부로, Hyper-v를 통해 가상 컴퓨터에 대 한 콘솔 액세스를 사용할 수 있으므로 네트워크를 통해 시스템을 원격으로 관리할 수 있도록 합니다.
 
-4.  (이 섹션의 시작 부분에서 설명) 새 키 보호기를 만들려면 다음 명령을 실행 합니다.
+4. (이 섹션의 시작 부분에서 설명) 새 키 보호기를 만들려면 다음 명령을 실행 합니다.
 
-    에 대 한 &lt;GuardianName&gt;, 예를 들어, 이전 절차에서 지정한 이름을 사용 합니다. **HostingProvider1**
+   에 대 한 &lt;GuardianName&gt;, 예를 들어, 이전 절차에서 지정한 이름을 사용 합니다. **HostingProvider1**
 
-    포함 **-AllowUntrustedRoot** 자체 서명 된 인증서에 대 한 허용 하도록 합니다.
+   포함 **-AllowUntrustedRoot** 자체 서명 된 인증서에 대 한 허용 하도록 합니다.
 
-        $Guardian = Get-HgsGuardian -Name '<GuardianName>'
+       $Guardian = Get-HgsGuardian -Name '<GuardianName>'
 
-        $Owner = New-HgsGuardian -Name 'Owner' -GenerateCertificates
+       $Owner = New-HgsGuardian -Name 'Owner' -GenerateCertificates
 
-        $KP = New-HgsKeyProtector -Owner $Owner -Guardian $Guardian -AllowUntrustedRoot
+       $KP = New-HgsKeyProtector -Owner $Owner -Guardian $Guardian -AllowUntrustedRoot
 
-    하려는 경우 둘 이상의 데이터 센터에 대 한 보호 된 VM (예: 재해 복구 사이트 및 공용 클라우드 공급자)를 실행할 수 있도록에 대 한 보호자의 목록을 제공할 수 있습니다 합니다 **-보호** 매개 변수입니다. 자세한 내용은 [새로 만들기-HgsKeyProtector]을 참조 하세요. (https://docs.microsoft.com/powershell/module/hgsclient/new-hgskeyprotector?view=win10-ps합니다.
+   하려는 경우 둘 이상의 데이터 센터에 대 한 보호 된 VM (예: 재해 복구 사이트 및 공용 클라우드 공급자)를 실행할 수 있도록에 대 한 보호자의 목록을 제공할 수 있습니다 합니다 **-보호** 매개 변수입니다. 자세한 내용은 [새로 만들기-HgsKeyProtector]을 참조 하세요. (https://docs.microsoft.com/powershell/module/hgsclient/new-hgskeyprotector?view=win10-ps합니다.
 
-5.  키 보호기를 사용 하 여 vTPM을 사용 하도록 설정 하려면 다음 명령을 실행 합니다. 에 대 한 &lt;ShieldedVMname&gt;, 이전 단계에서 사용한 동일한 VM 이름을 사용 합니다.
+5. 키 보호기를 사용 하 여 vTPM을 사용 하도록 설정 하려면 다음 명령을 실행 합니다. 에 대 한 &lt;ShieldedVMname&gt;, 이전 단계에서 사용한 동일한 VM 이름을 사용 합니다.
 
-        $VMName="<ShieldedVMname>"
+       $VMName="<ShieldedVMname>"
 
-        Stop-VM -Name $VMName -Force
+       Stop-VM -Name $VMName -Force
 
-        Set-VMKeyProtector -VMName $VMName -KeyProtector $KP.RawData
+       Set-VMKeyProtector -VMName $VMName -KeyProtector $KP.RawData
 
-        Set-VMSecurityPolicy -VMName $VMName -Shielded $true
+       Set-VMSecurityPolicy -VMName $VMName -Shielded $true
 
-        Enable-VMTPM -VMName $VMName
+       Enable-VMTPM -VMName $VMName
 
-6.  키 보호기 소유자 로컬 인증서를 사용 하 여 작동 하는지 확인 하려면 VM을 시작 하려면 다음 명령을 실행 합니다.
+6. 키 보호기 소유자 로컬 인증서를 사용 하 여 작동 하는지 확인 하려면 VM을 시작 하려면 다음 명령을 실행 합니다.
 
-        Start-VM -Name $VMName
+       Start-VM -Name $VMName
 
-7.  VM에서 Hyper-v 콘솔에서 시작 되었는지 확인 합니다.
+7. VM에서 Hyper-v 콘솔에서 시작 되었는지 확인 합니다.
 
-8.  RDP를 사용 하 여 원격으로 VM에 연결 하 고 보호 된 VM에 연결 된 모든 Vhdx에서 모든 파티션에 대해 BitLocker를 사용 하도록 설정 합니다.
+8. RDP를 사용 하 여 원격으로 VM에 연결 하 고 보호 된 VM에 연결 된 모든 Vhdx에서 모든 파티션에 대해 BitLocker를 사용 하도록 설정 합니다.
 
-    > [!IMPORTANT]
-    > 다음 단계를 계속 하기 전에 BitLocker 암호화를 사용할 수 있는 모든 파티션에 대해 완료 될 때까지 기다립니다.
+   > [!IMPORTANT]
+   > 다음 단계를 계속 하기 전에 BitLocker 암호화를 사용할 수 있는 모든 파티션에 대해 완료 될 때까지 기다립니다.
 
-9.  보호 된 패브릭 이동할 준비가 되 면 VM을 종료 합니다.
+9. 보호 된 패브릭 이동할 준비가 되 면 VM을 종료 합니다.
 
-10.  테 넌 트 Hyper-v 서버에서 VM (Windows PowerShell 또는 Hyper-v 관리자) 사용자가 선택한 도구를 사용 하 여 내보냅니다. 그런 다음 호스팅 공급자 또는 엔터프라이즈 데이터 센터에서 유지 관리 하는 보호 된 호스트에 복사할 파일에 대 한 정렬 합니다.
+10. 테 넌 트 Hyper-v 서버에서 VM (Windows PowerShell 또는 Hyper-v 관리자) 사용자가 선택한 도구를 사용 하 여 내보냅니다. 그런 다음 호스팅 공급자 또는 엔터프라이즈 데이터 센터에서 유지 관리 하는 보호 된 호스트에 복사할 파일에 대 한 정렬 합니다.
 
-11.  **호스팅 공급자 또는 기업 데이터 센터를 위한**:
+11. **호스팅 공급자 또는 기업 데이터 센터를 위한**:
 
     Hyper-v 관리자 또는 Windows PowerShell을 사용 하 여 보호 된 VM을 가져옵니다. VM을 시작 하기 위해 VM 소유자 로부터 VM 구성 파일을 가져와야 합니다. 즉, 키 보호기와 VM의 가상 TPM 구성 파일에 저장 됩니다. VM를 보호 된 패브릭에서 실행 되도록 구성 된 경우이 성공적으로 시작할 수 있어야 합니다.
 
 ## <a name="see-also"></a>참조
 
 - [보호 된 호스트 및 차폐 Vm 호스팅 서비스 공급자 구성 단계](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
-- [보호 된 패브릭 및 보호 된 Vm](guarded-fabric-and-shielded-vms-top-node.md)
+- [보호된 패브릭 및 보호된 VM](guarded-fabric-and-shielded-vms-top-node.md)

@@ -8,12 +8,12 @@ ms.date: 03/01/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 6f85c447ac0816c46e07145dbe9a491a29e17c0f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 228ef34ab25276c1cf98f9b2b64e997390023c87
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59846474"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66444015"
 ---
 # <a name="ad-fs-troubleshooting---azure-ad"></a>AD FS 문제 해결-Azure AD
 클라우드의 증가 사용 하 여 많은 회사가 된 이동 다양 한 앱 및 서비스에 대 한 Azure AD를 사용 합니다.  Azure AD로 페더레이션 여러 조직과 방법이 되었습니다.  이 문서에서는이 페더레이션 사용 하 여 발생 하는 문제 해결의 측면 중 일부를 설명 합니다.  이 문서는 Azure AD 사용 하 여 단순히 세부 사항에 집중할 Azure로 페더레이션에 여전히 관련 일반 문제 해결 문서에서 항목의 여러 및 AD FS 상호 작용 합니다.
@@ -31,11 +31,11 @@ ms.locfileid: "59846474"
 
 ![](media/ad-fs-tshoot-azure/azure2.png)
 
-   2.  Azure portal에서 페더레이션 옆에 있는 도메인을 클릭 하 여 사용자 지정 도메인이 확인 되는 있는지 확인 합니다.
-![](media/ad-fs-tshoot-azure/azure3.png)
+1. Azure portal에서 페더레이션 옆에 있는 도메인을 클릭 하 여 사용자 지정 도메인이 확인 되는 있는지 확인 합니다.
+   ![](media/ad-fs-tshoot-azure/azure3.png)
 
-   3. 마지막으로 확인 하려고 [DNS](ad-fs-tshoot-dns.md) WAP 서버나 AD FS 서버는 인터넷에서 해결 하 고 있는지 확인 합니다.  이 해결 되는지가 이미지로 이동할 수 있는지 확인 합니다.
-   4. PowerShell cmdlt을 사용할 수도 있습니다 `Get-AzureADDomain` 이 정보를 가져올 수도 있습니다.
+2. 마지막으로 확인 하려고 [DNS](ad-fs-tshoot-dns.md) WAP 서버나 AD FS 서버는 인터넷에서 해결 하 고 있는지 확인 합니다.  이 해결 되는지가 이미지로 이동할 수 있는지 확인 합니다.
+3. PowerShell cmdlt을 사용할 수도 있습니다 `Get-AzureADDomain` 이 정보를 가져올 수도 있습니다.
 
 ![](media/ad-fs-tshoot-azure/azure6.png)
 
@@ -48,14 +48,14 @@ Azure에서 리디렉션되면 AuthnContext STS 또는 AD FS 수준에서 지원
 - WS-페더레이션에 대 한 기본 인증 메서드를 WAUTH 쿼리 문자열을 사용 합니다.
 
 - SAML2.0, 다음을 사용 합니다.
-```
-<saml:AuthnContext>
-<saml:AuthnContextClassRef>
-urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport
-</saml:AuthnContextClassRef>
-</saml:AuthnContext>
-```
-잘못 된 값을 사용 하 여 강제 인증 메서드를 보낼 때, AD FS STS에 인증 방법을 지원 되지 않는 경우 인증 된 전에 오류 메시지가 나타납니다.
+  ```
+  <saml:AuthnContext>
+  <saml:AuthnContextClassRef>
+  urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport
+  </saml:AuthnContextClassRef>
+  </saml:AuthnContext>
+  ```
+  잘못 된 값을 사용 하 여 강제 인증 메서드를 보낼 때, AD FS STS에 인증 방법을 지원 되지 않는 경우 인증 된 전에 오류 메시지가 나타납니다.
 
 |원하는 인증 방법|wauth URI|
 |-----|-----|

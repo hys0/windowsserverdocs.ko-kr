@@ -12,12 +12,12 @@ ms.assetid: 0d340223-fa24-4c75-ba8e-b654feb120ab
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 6b49fee7ca4a19d5a501cf96c1ce356f8242c81f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 5654f28aeda3c231376ed888a8aa04bc0cf3d000
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59830924"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66432495"
 ---
 # <a name="run-the-windows-server-essentials-log-collector"></a>Windows Server Essentials 로그 수집기 실행
 네트워크에서 서버 또는 컴퓨터에서 Windows Server Essentials 로그 수집기를 실행할 수 있습니다. 서버에서 로그 수집기를 실행하면 서버에서만 로그를 수집할 수 있습니다. 네트워크 컴퓨터에서 로그 수집기를 실행하면 해당 컴퓨터에 대한 로그 이외에 서버에서 로그를 수집하도록 선택할 수 있습니다.  
@@ -26,20 +26,20 @@ ms.locfileid: "59830924"
   
 #### <a name="to-run-the-log-collector-on-the-server-by-using-the-wizard"></a>마법사를 사용하여 서버에서 로그 수집기를 실행하려면  
   
-1.  에 **시작** 페이지 서버의 클릭 **Windows Server Essentials Log Collector**합니다.  
+1. 에 **시작** 페이지 서버의 클릭 **Windows Server Essentials Log Collector**합니다.  
   
-    > [!NOTE]
-    >  -   에 로그 수집기 프로그램이 표시 되지 않는 경우는 **시작** 페이지에서 이동할 **%system%\Program 파일 (x86) \Windows Server Essentials Log Collector**를 차례로 두 번 클릭 **LogCollector** .  
-    > -   관리자 권한으로 서버에 로그온되어 있지 않으면 로그 수집기에서 자격 증명을 입력하라는 메시지가 표시됩니다.  
+   > [!NOTE]
+   > - 에 로그 수집기 프로그램이 표시 되지 않는 경우는 **시작** 페이지에서 이동할 **%system%\Program 파일 (x86) \Windows Server Essentials Log Collector**를 차례로 두 번 클릭 **LogCollector** .  
+   >   -   관리자 권한으로 서버에 로그온되어 있지 않으면 로그 수집기에서 자격 증명을 입력하라는 메시지가 표시됩니다.  
   
-2.  수집된 된 로그 파일을 저장할 위치를 묻는 경우 기본 위치를 선택할 수 있습니다  **\\ \\< 서버 이름\>\logs**, 또는 다른 위치를 지정 합니다. 기본 위치를 적용하려면 **다음**을 클릭합니다. 위치를 변경하려면 **찾아보기**를 클릭하고 로그 파일을 저장하려는 폴더로 이동한 다음 **저장**을 클릭합니다.  
+2. 수집된 된 로그 파일을 저장할 위치를 묻는 경우 기본 위치를 선택할 수 있습니다  **\\ \\< 서버 이름\>\logs**, 또는 다른 위치를 지정 합니다. 기본 위치를 적용하려면 **다음**을 클릭합니다. 위치를 변경하려면 **찾아보기**를 클릭하고 로그 파일을 저장하려는 폴더로 이동한 다음 **저장**을 클릭합니다.  
   
-    > [!NOTE]
-    >  로그 파일에 대한 파일 이름을 제공할 필요가 없습니다. 로그 수집기 컴퓨터 이름 및 파일의 타임 스탬프를 연결 하 여 zip 파일 컬렉션의 이름을 지정 합니다.  
+   > [!NOTE]
+   >  로그 파일에 대한 파일 이름을 제공할 필요가 없습니다. 로그 수집기 컴퓨터 이름 및 파일의 타임 스탬프를 연결 하 여 zip 파일 컬렉션의 이름을 지정 합니다.  
   
-3.  로그를 수집하는 동안 진행률 표시줄이 표시됩니다.  
+3. 로그를 수집하는 동안 진행률 표시줄이 표시됩니다.  
   
-4.  로그 컬렉션 파일의 콘텐츠를 보려면 **로그가 저장된 파일 위치 열기** 확인란을 선택하고 **닫기** 를 클릭하여 마법사를 닫은 다음 로그 컬렉션 파일을 엽니다.  
+4. 로그 컬렉션 파일의 콘텐츠를 보려면 **로그가 저장된 파일 위치 열기** 확인란을 선택하고 **닫기** 를 클릭하여 마법사를 닫은 다음 로그 컬렉션 파일을 엽니다.  
   
 #### <a name="to-run-the-log-collector-on-a-network-computer-by-using-the-wizard"></a>마법사를 사용하여 네트워크 컴퓨터에서 로그 수집기를 실행하려면  
   

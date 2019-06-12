@@ -9,12 +9,12 @@ ms.date: 07/30/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: 0b937debf2d9156c50f3c0ae51fdab8bd2a2bf2d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c245c5a6b2165385096f32713a92916236cdddfb
+ms.sourcegitcommit: a3958dba4c2318eaf2e89c7532e36c78b1a76644
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59863484"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719697"
 ---
 # <a name="appendix-l-events-to-monitor"></a>부록 l: 모니터링할 이벤트
 
@@ -174,7 +174,7 @@ Windows XP를 실행 하는 클라이언트 컴퓨터와 같은 레거시 버전
 |4707|611|낮음|도메인 트러스트를 제거 되었습니다.|  
 |4709|해당 사항 없음|낮음|IPsec 서비스를 시작 했습니다.|  
 |4710|해당 사항 없음|낮음|IPsec 서비스가 비활성화 되었습니다.|  
-|4711|해당 사항 없음|낮음|다음 중 하나를 포함할 수 있습니다. PAStore 엔진 컴퓨터에 로컬로 캐시 된 복사본 Active Directory 저장소 IPsec 정책 적용 합니다. PAStore 엔진 컴퓨터에 Active Directory 저장소 IPsec 정책을 적용 합니다. PAStore 엔진 컴퓨터의 로컬 레지스트리 저장소 IPsec 정책을 적용 합니다. PAStore 엔진이 컴퓨터의 로컬에 캐시 된 복사본 Active Directory 저장소 IPsec 정책 적용 하지 못했습니다. PAStore 엔진 컴퓨터에서 Active Directory 저장소 IPsec 정책을 적용 하지 못했습니다. PAStore 엔진 컴퓨터의 로컬 레지스트리 저장소 IPsec 정책을 적용 하지 못했습니다. PAStore 엔진 컴퓨터에서 IPsec 정책은의 일부 규칙을 적용 하지 못했습니다. PAStore 엔진 디렉터리 저장소는 컴퓨터에서 IPsec 정책을 로드 하지 못했습니다. PAStore 엔진 디렉터리 저장소는 컴퓨터에서 IPsec 정책을 로드 합니다. PAStore 엔진이 로컬 저장소는 컴퓨터에서 IPsec 정책을 로드 하지 못했습니다. PAStore 엔진을 로컬 저장소는 컴퓨터에서 IPsec 정책을 로드 합니다. PAStore 엔진 IPsec 정책 변경에 대 한 폴링 및 변경 하지 않고 검색 합니다.|  
+|4711|해당 사항 없음|낮음|다음 중 하나를 포함할 수 있습니다. PAStore 엔진 컴퓨터에 로컬로 캐시 된 복사본 Active Directory 저장소 IPsec 정책 적용 합니다. PAStore 엔진 컴퓨터에 Active Directory 저장소 IPsec 정책을 적용 합니다. PAStore 엔진 컴퓨터의 로컬 레지스트리 저장소 IPsec 정책을 적용 합니다. PAStore 엔진이 컴퓨터의 로컬에 캐시 된 복사본 Active Directory 저장소 IPsec 정책 적용 하지 못했습니다. PAStore 엔진 컴퓨터에서 Active Directory 저장소 IPsec 정책을 적용 하지 못했습니다. PAStore 엔진 컴퓨터의 로컬 레지스트리 저장소 IPsec 정책을 적용 하지 못했습니다. PAStore 엔진 컴퓨터에서 IPsec 정책은의 일부 규칙을 적용 하지 못했습니다. PAStore 엔진 디렉터리 저장소는 컴퓨터에서 IPsec 정책을 로드 하지 못했습니다. PAStore 엔진 디렉터리 저장소는 컴퓨터에서 IPsec 정책을 로드 합니다. PAStore 엔진이 로컬 저장소는 컴퓨터에서 IPsec 정책을 로드 하지 못했습니다. PAStore 엔진을 로컬 저장소는 컴퓨터에서 IPsec 정책을 로드 합니다. PAStore 엔진 IPsec 정책 변경에 대 한 폴링 및 변경 하지 않고 검색 합니다. |  
 |4712|해당 사항 없음|낮음|IPsec 서비스를 잠재적으로 심각한 오류가 발생 했습니다.|  
 |4717|621|낮음|시스템 보안 액세스 계정에 부여 했습니다.|  
 |4718|622|낮음|시스템 보안 액세스 계정에서 제거 되었습니다.|  

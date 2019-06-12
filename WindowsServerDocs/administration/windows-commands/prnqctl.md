@@ -13,25 +13,26 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 26af9527b7b16b42fd9d389f3409143dfc3e9aa9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 1ba58970e76497f6e91c53c73a429eb65a275b2f
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59858084"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66442098"
 ---
 # <a name="prnqctl"></a>prnqctl
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 테스트 페이지를 인쇄, 일시 중지 하거나 프린터를 다시 시작 및 프린터 큐를 삭제 합니다.  
-  
+
 ## <a name="syntax"></a>구문  
 ```  
 cscript Prnqctl {-z | -m | -e | -x | -?} [-s <ServerName>]   
 [-p <printerName>] [-u <UserName>] [-w <Password>]  
 ```  
 ## <a name="parameters"></a>매개 변수  
+
 |매개 변수|설명|  
 |-------|--------|  
 |-z|지정 된 프린터에서 인쇄를 일시 중지 합니다 **-p** 매개 변수입니다.|  
@@ -44,11 +45,11 @@ cscript Prnqctl {-z | -m | -e | -x | -?} [-s <ServerName>]
 |/?|명령 프롬프트에 도움말을 표시합니다.|  
 
 ## <a name="remarks"></a>설명  
--   합니다 **prnqctl** 명령입니다는 %WINdir%\System32\printing_Admin_Scripts에 있는 Visual Basic 스크립트\\ <language> 디렉터리입니다. 명령 프롬프트에서이 명령을 사용 하려면 입력 **cscript** 전체 경로 뒤에 prnqctl 파일 또는 디렉터리 적절 한 폴더로 변경 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
-    ```  
-    cscript %WINdir%\System32\printing_Admin_Scripts\en-US\prnqctl  
-    ```  
--   텍스트 주위에 따옴표를 사용 하 여 사용자가 제공한 정보에 공백이 있으면 (예를 들어 `"computer Name"`).  
+- 합니다 **prnqctl** 명령입니다는 %WINdir%\System32\printing_Admin_Scripts에 있는 Visual Basic 스크립트\\ <language> 디렉터리입니다. 명령 프롬프트에서이 명령을 사용 하려면 입력 **cscript** 전체 경로 뒤에 prnqctl 파일 또는 디렉터리 적절 한 폴더로 변경 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+  ```  
+  cscript %WINdir%\System32\printing_Admin_Scripts\en-US\prnqctl  
+  ```  
+- 텍스트 주위에 따옴표를 사용 하 여 사용자가 제공한 정보에 공백이 있으면 (예를 들어 `"computer Name"`).  
 
 ## <a name="BKMK_examples"></a>예제  
 공유 Laserprinter1 프린터에서 테스트 페이지를 인쇄 하는 \\\Server1 컴퓨터를 입력 합니다.  

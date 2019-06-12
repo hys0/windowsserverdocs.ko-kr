@@ -8,12 +8,12 @@ ms.technology: storage
 ms.topic: article
 author: jasongerend
 ms.date: 05/29/2019
-ms.openlocfilehash: 5469d663f64fdb453e03863f409b675473d3f6aa
-ms.sourcegitcommit: 8eea7aadbe94f5d4635c4ffedc6a831558733cc0
-ms.translationtype: HT
+ms.openlocfilehash: f72156b050aa943cfafaf1fa2539911d6d1e089e
+ms.sourcegitcommit: cd12ace92e7251daaa4e9fabf1d8418632879d38
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66308567"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66501475"
 ---
 # <a name="whats-new-in-storage-in-windows-server"></a>Windows Server에서 저장소의 새로운 기능
 
@@ -21,7 +21,7 @@ ms.locfileid: "66308567"
 
 이 항목에서는 Windows Server 2019, Windows Server 2016에서에서 저장소의 새로운 기능과 변경 된 기능에 설명 하 고 Windows 서버 반기 채널 해제 합니다.
 
-## <a name="whats-new-in-storage-in-windows-server-2019-and-windows-server-version-1903"></a>Windows Server 2019에 Windows Server 1903 버전 저장소의 새로운 기능
+## <a name="whats-new-in-storage-in-windows-server-version-1903"></a>Windows server에서는 1903 버전 저장소의 새로운 기능
 
 이 릴리스의 Windows Server는 다음과 같은 변경 및 기술에 추가합니다.
 

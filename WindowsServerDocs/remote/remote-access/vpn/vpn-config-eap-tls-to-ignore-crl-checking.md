@@ -15,19 +15,19 @@ ms.author: pashort
 author: shortpatti
 ms.localizationpriority: medium
 ms.reviewer: deverette
-ms.openlocfilehash: ac59c554c69a6138a106a648c3fab3ed4fe05b7b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 781239f45b9b260b7d374c2a6972cdb8faad2879
+ms.sourcegitcommit: 0948a1abff1c1be506216eeb51ffc6f752a9fe7e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59836424"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749597"
 ---
 # <a name="step-71-configure-eap-tls-to-ignore-certificate-revocation-list-crl-checking"></a>7.1단계. EAP-TLS를 사용하여 CRL(인증서 해지 목록) 확인 무시
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-&#171;  [**이전:** 7단계. (선택 사항) Azure AD를 사용 하 여 VPN 연결에 대 한 조건부 액세스](ad-ca-vpn-connectivity-windows10.md)<br>
-&#187;[ **다음:** 7.2단계. Azure AD를 사용 하 여 VPN 인증에 대 한 루트 인증서 만들기](vpn-create-root-cert-for-vpn-auth-azure-ad.md)
+- [**이전:** 7단계. (선택 사항) Azure AD를 사용 하 여 VPN 연결에 대 한 조건부 액세스](ad-ca-vpn-connectivity-windows10.md)
+- [**다음:** 7.2단계. Azure AD를 사용하여 VPN 인증에 대한 루트 인증서 만들기](vpn-create-root-cert-for-vpn-auth-azure-ad.md)
 
 >[!IMPORTANT]
 >이 레지스트리 변경 내용을 구현 하지 않으면 IKEv2 연결 실패 시 PEAP와 함께 클라우드 인증서를 사용 하 여 시키지만 온-프레미스 CA에서 발급 한 클라이언트 인증 인증서를 사용 하 여 IKEv2 연결은 계속 작동 합니다.
@@ -47,11 +47,11 @@ EAP-TLS 인증 방법 이므로이 레지스트리 값은 EAP\13에서 필요한
 
 2. 이동할 **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\13**합니다.
 
-3. 클릭 **편집 > 새로 만들기** 선택한 **(32 비트) Dword** 유형과 **IgnoreNoRevocationCheck**합니다.
+3. 선택 **편집 > 새로 만들기** 선택한 **(32 비트) Dword** 입력 **IgnoreNoRevocationCheck**합니다.
 
 4. 두 번 클릭 **IgnoreNoRevocationCheck** 값 데이터를 설정 하 고 **1**합니다.
 
-5. 클릭 **확인** 하 고 서버를 다시 부팅 합니다. NPS 및 RRAS 서비스를 다시 시작 충분 하지 않습니다.
+5. 선택 **확인** 하 고 서버를 다시 부팅 합니다. NPS 및 RRAS 서비스를 다시 시작 충분 하지 않습니다.
 
 자세한 내용은 [을 사용 하도록 설정 하거나 클라이언트에서 인증서 해지 확인 하는 중 (CRL)를 사용 하지 않도록 설정 하는 방법을](https://technet.microsoft.com/library/bb680540.aspx)합니다.
 
@@ -62,8 +62,6 @@ EAP-TLS 인증 방법 이므로이 레지스트리 값은 EAP\13에서 필요한
 |HKLM\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\25     |PEAP         |
 |HKLM\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\26     |EAP-MSCHAP v2         |
 
-## <a name="next-step"></a>다음 단계
+## <a name="next-steps"></a>다음 단계
 
-[7.2 단계입니다. Azure AD를 사용 하 여 VPN 인증에 대 한 루트 인증서 만들기](vpn-create-root-cert-for-vpn-auth-azure-ad.md): 이 단계에서는 자동으로 테 넌 트에서 VPN 서버 클라우드 앱을 만드는 Azure AD와 VPN 인증에 대 한 조건부 액세스 루트 인증서를 구성 합니다. 
-
----
+[7.2단계. Azure AD를 사용 하 여 VPN 인증에 대 한 루트 인증서 만들기](vpn-create-root-cert-for-vpn-auth-azure-ad.md): 이 단계에서는 자동으로 테 넌 트에서 VPN 서버 클라우드 앱을 만드는 Azure AD와 VPN 인증에 대 한 조건부 액세스 루트 인증서를 구성 합니다.

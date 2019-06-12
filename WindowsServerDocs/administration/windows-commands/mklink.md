@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: eabbf159a64ab5df7f45ece390d0c2fdb9956b80
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ca9f5f00bc92d7929f782be45562e80bba455d74
+ms.sourcegitcommit: cd12ace92e7251daaa4e9fabf1d8418632879d38
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59826334"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66501449"
 ---
 # <a name="mklink"></a>mklink
 기호화 된 링크를 만듭니다.
@@ -44,9 +44,14 @@ mklink [[/d] | [/h] | [/j]] <Link> <Target>
 
 ## <a name="BKMK_examples"></a>예제
 
-루트 디렉터리에서 MyDocs \Users\User1\Documents 디렉터리 라는 기호화 된 링크를 만들려면 다음을 입력 합니다.
+다음 예제는 만들고 루트 디렉터리에서 MyFolder 및 MyFile.file를 \Users\User1\Documents 디렉터리 라는 기호화 된 링크를 제거는 example.file 디렉터리 내에 있는 방법을 보여 줍니다.
 ```
-mklink /d \MyDocs \Users\User1\Documents
+mklink /d \MyFolder \Users\User1\Documents
+mklink /h \MyFile.file \User1\Documents\example.file
+rd \MyFolder
+del \MyFile.file
 ```
 ## <a name="additional-references"></a>추가 참조
 -   [New-Item](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/new-item?view=powershell-6)
+-   [del](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/del)
+-   [rmdir](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/rd)

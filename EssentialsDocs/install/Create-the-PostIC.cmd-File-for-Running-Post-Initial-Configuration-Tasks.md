@@ -12,12 +12,12 @@ ms.assetid: 99e258bc-0695-48c9-b694-a7f3cbe2a2d0
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: f5042204cd189e3101f5e0126fd98e786a49032d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e15cb8591fc701094dde884d0a55e08d2cf422bb
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59844124"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66433603"
 ---
 # <a name="create-the-posticcmd-file-for-running-post-initial-configuration-tasks"></a>초기 구성 후 작업 실행을 위해 PostIC.cmd 파일 만들기
 
@@ -25,13 +25,13 @@ ms.locfileid: "59844124"
 
 직접 코드를 작성하여 초기 구성 후 사용자 지정을 추가하고 이 코드를 PostIC.cmd라는 스크립트 파일에서 호출할 수 있습니다. PostIC.cmd 파일을 사용하려면 다음 지침을 따라야 합니다.  
   
--   사용자 지정 코드는 자동으로 실행해야 합니다(사용자 인터페이스를 표시할 수 없음).  
+- 사용자 지정 코드는 자동으로 실행해야 합니다(사용자 인터페이스를 표시할 수 없음).  
   
--   사용자 지정 코드는 서버 다시 시작을 시작할 수 없습니다. 초기 구성은 마지막 작업으로 서버를 다시 시작합니다.  
+- 사용자 지정 코드는 서버 다시 시작을 시작할 수 없습니다. 초기 구성은 마지막 작업으로 서버를 다시 시작합니다.  
   
--   사용자 지정 코드는 3분 이내에 실행해야 합니다.  
+- 사용자 지정 코드는 3분 이내에 실행해야 합니다.  
   
- 코드가 성공적으로 실행되면 PostIC.cmd 파일을 정의하여 0을 반환합니다. 다른 값이 반환되면 운영 체제는 이름이 [SetupFailure.cmd](Create-the-PostIC.cmd-File-for-Running-Post-Initial-Configuration-Tasks.md#BKMK_SetupFailure)인 파일을 검색합니다. 이 파일에는 PostIC.cmd 파일에 있는 코드가 성공적으로 실행되지 않는 경우 실행해야 할 코드가 포함되어 있습니다. PostIC.cmd 파일과 SetupFailure.cmd 파일은 모두 C:\Windows\Setup\Scripts에 있어야 합니다.  
+  코드가 성공적으로 실행되면 PostIC.cmd 파일을 정의하여 0을 반환합니다. 다른 값이 반환되면 운영 체제는 이름이 [SetupFailure.cmd](Create-the-PostIC.cmd-File-for-Running-Post-Initial-Configuration-Tasks.md#BKMK_SetupFailure)인 파일을 검색합니다. 이 파일에는 PostIC.cmd 파일에 있는 코드가 성공적으로 실행되지 않는 경우 실행해야 할 코드가 포함되어 있습니다. PostIC.cmd 파일과 SetupFailure.cmd 파일은 모두 C:\Windows\Setup\Scripts에 있어야 합니다.  
   
 #### <a name="to-define-post-initial-configuration-customizations"></a>초기 구성 후 사용자 지정을 정의하려면  
   

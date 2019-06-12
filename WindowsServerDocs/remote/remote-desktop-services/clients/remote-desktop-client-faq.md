@@ -14,20 +14,20 @@ manager: dongill
 ms.author: elizapo
 ms.date: 07/16/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: ec1b0a17c578f2d8ac55d1704af6b267b6bb8e5c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: e6f91aa02cd0f19d480c24309be5797c273b0f2e
+ms.sourcegitcommit: d888e35f71801c1935620f38699dda11db7f7aad
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59865934"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66804953"
 ---
 # <a name="frequently-asked-questions-about-the-remote-desktop-clients"></a>원격 데스크톱 클라이언트에 대 한 질문과 대답
 
->적용 대상: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
+>적용 대상: Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
 원격 데스크톱 클라이언트에서 장치 (Android, Mac, iOS 또는 Windows)에서 설정한 했으므로 질문을 할 수 있습니다. 다음은 원격 데스크톱 클라이언트에 대 한 가장 일반적으로 묻는 질문과 대답입니다. 
 
-- [설정](#Setting-up)
+- [설정](#setting-up)
 - [연결, 게이트웨이 및 네트워크](#connection-gateway-and-networks)
 - [웹 클라이언트](#web-client)
 - [모니터, 오디오 및 마우스](#monitors-audio-and-mouse)
@@ -81,18 +81,20 @@ Windows 8.1에서 원격 연결을 허용 하도록 지침을 따릅니다 [원�
 - **네트워크에 문제가 있습니다.** 인터넷 연결이 되어 있는지 확인 합니다. 
 - **원격 데스크톱 포트는 방화벽으로 차단 될 수 있습니다.** Windows 방화벽을 사용 하는 경우 다음이 단계를 따르십시오.
 
-   1. Windows 방화벽을 엽니다. 
-   2. 클릭 **앱 또는 기능 Windows 방화벽을 통해 허용**합니다. 
-   3. 클릭 **설정을 변경**합니다. 관리자 암호 또는 선택 내용을 확인 하 라는 메시지가 표시 될 수 있습니다.
-   4. 아래에서 **허용 되는 응용 프로그램 및 기능**, 선택, **원격 데스크톱**, 을 탭 하거나 클릭 하 고 **확인**합니다.
+  1. Windows 방화벽을 엽니다. 
+  2. 클릭 **앱 또는 기능 Windows 방화벽을 통해 허용**합니다. 
+  3. 클릭 **설정을 변경**합니다. 관리자 암호 또는 선택 내용을 확인 하 라는 메시지가 표시 될 수 있습니다.
+  4. 아래에서 **허용 되는 응용 프로그램 및 기능**, 선택, **원격 데스크톱**, 을 탭 하거나 클릭 하 고 **확인**합니다.
 
-   다른 방화벽을 사용 하는 경우 원격 데스크톱 (일반적으로 3389)에 대 한 포트가 열려 있는지 확인 합니다.
+     다른 방화벽을 사용 하는 경우 원격 데스크톱 (일반적으로 3389)에 대 한 포트가 열려 있는지 확인 합니다.
 - **원격 PC에 대 한 원격 연결 설정할 수 있습니다.** 이 해결 하려면까지 다시 스크롤하고 [설정 하려면 어떻게 합니까 PC 원격 데스크톱용?](#how-do-i-set-up-a-pc-for-remote-desktop) 이 항목에서 질문 합니다.
 - **원격 PC에 연결할 네트워크 수준 인증을 설정 하는 Pc 수만 있습니다.** 
 - **원격 PC 해제 될 수 있습니다.** 해제 된 경우, PC에 연결할 수 없거나, 절전 있으므로 주의 해야 설정 하기 위해 절전 모드와 원격 PC에 최대 절전 모드 설정에 대 한 **Never** (최대 절전 모드를 모든 Pc에서 사용할 수 없습니다.).
 
 ### <a name="why-cant-i-find-or-connect-to-my-pc"></a>찾기 또는 내 PC에 연결할 수 없는 이유 있습니까?
+
 다음 사항을 확인합니다.
+
 - 절전 모드 해제 및 PC 인가요?
 - 권한 이름 또는 IP 주소를 입력 않은?
 
@@ -105,9 +107,11 @@ Windows 8.1에서 원격 연결을 허용 하도록 지침을 따릅니다 [원�
    > Windows XP Home, Windows Media Center Edition, Windows Vista 홈 페이지 및 Windows 7 Home 또는 시작 타사 소프트웨어 없이 지원 되지 않습니다.
 
 ### <a name="why-cant-i-sign-in-to-a-remote-pc"></a>원격 PC에 로그인 할 수 없습니다는 이유
+
 원격 PC의 로그인 화면을 볼 수 있지만 로그인 할 수 없습니다, 있습니다 수 추가 되지 원격 데스크톱 사용자 그룹 또는 원격 PC에 대 한 관리자 권한이 있는 모든 그룹입니다. 시스템 관리자에 게 있습니다.
 
 ### <a name="which-connection-methods-are-supported-for-company-networks"></a>회사 네트워크에 대 한 어떤 연결 방법이 지원 되나요?
+
 회사 네트워크 외부에서 office 데스크톱에 액세스 하려면 회사 원격 액세스의 의미를 제공 해야 합니다. RD 클라이언트는 현재 다음을 지원합니다.
 
 - 터미널 서버 게이트웨이 또는 원격 데스크톱 게이트웨이
@@ -124,9 +128,11 @@ VPN 문제는 여러 가지 원인이 있을 수 있습니다. VPN PC 또는 Mac
 - **VPN 잘못 구성 되었습니다.** 잘못 구성 된 VPN 서버는 VPN 연결 하지 작동 하거나 이유 잠시 후 작업을 중지할 수 있습니다. 이 경우 동일한 네트워크에서 장치의 웹 브라우저 또는 PC 또는 Mac에서 ios 테스트를 확인 합니다.
 
 ### <a name="how-can-i-test-if-vpn-is-working-properly"></a>VPN 제대로 작동 하는 경우 어떻게 테스트할 수 있습니까?
+
 VPN 장치에서 활성화 되어 있는지 확인 합니다. 내부 네트워크에 웹 페이지를 이동 하거나 VPN을 통해 사용할 수 있는 웹 서비스를 사용 하 여 VPN 연결을 테스트할 수 있습니다.
 
 ### <a name="how-do-i-configure-l2tp-or-pptp-vpn-connections"></a>L2TP 또는 PPTP VPN 연결을 구성 하려면 어떻게 해야 합니까?
+
 PPTP 또는 L2TP VPN를 사용 중인 경우 설정 해야 **모든 트래픽 보내기** 에 **ON** VPN 구성에서 합니다.
 
 ## <a name="web-client"></a>웹 클라이언트

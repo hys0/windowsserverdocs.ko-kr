@@ -12,12 +12,12 @@ ms.assetid: 86244c66-2c5e-488d-adb8-112e1ca3e2e1
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 24a1f2da2333c7e6854e9efd9d996391d0fcb3b9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6842137dd498b11bccc2216023d648d61edbb87e
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59872364"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66432539"
 ---
 # <a name="step-6-demote-and-remove-the-source-server-from-the-new-windows-server-essentials-network"></a>6단계: 새 Windows Server Essentials 네트워크에서 원본 서버 수준 내리기 및 제거
 
@@ -76,17 +76,17 @@ Windows Server Essentials 설치를 마친 후 마이그레이션을 완료 하�
   
 #### <a name="to-force-a-group-policy-update-on-a-client-computer"></a>클라이언트 컴퓨터에서 그룹 정책 업데이트를 강제로 적용하려면  
   
-1.  관리자로 클라이언트 컴퓨터에 로그인합니다.  
+1. 관리자로 클라이언트 컴퓨터에 로그인합니다.  
   
-2.  관리자 권한으로 명령 프롬프트를 엽니다.  
+2. 관리자 권한으로 명령 프롬프트를 엽니다.  
   
-3.  명령 프롬프트에 **gpupdate /force**를 입력하고 Enter 키를 누릅니다.  
+3. 명령 프롬프트에 **gpupdate /force**를 입력하고 Enter 키를 누릅니다.  
   
-4.  프로세스를 완료하려면 로그오프한 후 다시 로그온해야 합니다. **예** 를 클릭하여 확인합니다.  
+4. 프로세스를 완료하려면 로그오프한 후 다시 로그온해야 합니다. **예** 를 클릭하여 확인합니다.  
   
- Windows Server Essentials 또는 이전 버전에서로 마이그레이션하는 경우 서버 수준 내리기 참조 [Active Directory Domain Services 제거](https://technet.microsoft.com/library/hh472163.aspx)합니다. 원본 서버를 작업 그룹의 구성원으로 추가하고 네트워크에서 연결을 끊고 나서 대상 서버의 AD DS에서 원본 서버를 제거해야 합니다.  
+   Windows Server Essentials 또는 이전 버전에서로 마이그레이션하는 경우 서버 수준 내리기 참조 [Active Directory Domain Services 제거](https://technet.microsoft.com/library/hh472163.aspx)합니다. 원본 서버를 작업 그룹의 구성원으로 추가하고 네트워크에서 연결을 끊고 나서 대상 서버의 AD DS에서 원본 서버를 제거해야 합니다.  
   
- Windows Server Essentials에서로 마이그레이션하는 경우 함으로써 다음 절차를 사용 하 여 원본 서버에서 도메인 컨트롤러의 수준을 내립니다 Active Directory Domain Services 역할을 제거 하려면 서버 관리자를 사용 합니다.  
+   Windows Server Essentials에서로 마이그레이션하는 경우 함으로써 다음 절차를 사용 하 여 원본 서버에서 도메인 컨트롤러의 수준을 내립니다 Active Directory Domain Services 역할을 제거 하려면 서버 관리자를 사용 합니다.  
   
 #### <a name="to-remove-the-source-server-from-active-directory"></a>Active Directory에서 원본 서버를 제거하려면  
   

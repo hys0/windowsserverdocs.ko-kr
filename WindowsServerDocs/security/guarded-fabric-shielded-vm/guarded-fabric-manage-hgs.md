@@ -7,12 +7,12 @@ ms.assetid: eecb002e-6ae5-4075-9a83-2bbcee2a891c
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.openlocfilehash: ed3a3d4c5d0e55126f4dae8ecaf0ba1f32e46317
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: dab27e71e42970507f321271edda90f6d161c691
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59820224"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447397"
 ---
 # <a name="managing-the-host-guardian-service"></a>호스트 보호 서비스 관리
 
@@ -221,7 +221,7 @@ Get-HgsKeyProtectionCertificate | Where-Object { $_.CertificateData.GetType().Na
 이러한 설정은 일관성을 위해 중요 하지만 재해 발생 후 다시 온라인 HGS 클러스터를 가져오려는 중요 하지 않습니다.
 
 HGS 서비스의 이름을 캡처할 실행 `Get-HgsServer` 증명 및 키 보호 Url 플랫 이름을 확인 합니다.
-예를 들어 증명 URL "http://hgs.contoso.com/Attestation", "hgs" HGS 서비스 이름입니다.
+예를 들어 증명 URL "<http://hgs.contoso.com/Attestation>", "hgs" HGS 서비스 이름입니다.
 
 HGS에서 사용 하는 Active Directory 도메인은 다른 Active Directory 도메인과 같은 관리 되어야 합니다.
 재해 발생 후 HGS를 복원할 때 없습니다 반드시 해야 현재 도메인에 있는 개체를 다시 만듭니다.
@@ -702,10 +702,10 @@ HGS 노드에 새 쌍을 암호화 및 서명 인증서를 등록 하려면 다�
 10. 업데이트 된 KP는 호스팅 패브릭 다시 복사
 11. KP 원래 VM에 적용 됩니다.
 
-    ```powershell
-    $updatedKP = Get-Content -Path .\updatedVM001.kp
-    Set-VMKeyProtector -VMName VM001 -KeyProtector $updatedKP
-    ```
+   ```powershell
+   $updatedKP = Get-Content -Path .\updatedVM001.kp
+   Set-VMKeyProtector -VMName VM001 -KeyProtector $updatedKP
+   ```
 12. 마지막으로 VM을 시작 하 고 성공적으로 실행을 확인 합니다.
 
 > [!NOTE]
@@ -718,10 +718,10 @@ HGS 노드에 새 쌍을 암호화 및 서명 인증서를 등록 하려면 다�
 
 14. 다음 명령을 실행 하 여 각 인증서를 사용 하지 않도록 설정 합니다.  
 
-    ```powershell
-    Set-HgsKeyProtectionCertificate -CertificateType Signing -Thumbprint <Thumbprint> -IsEnabled $false
-    Set-HgsKeyProtectionCertificate -CertificateType Encryption -Thumbprint <Thumbprint> -IsEnabled $false
-    ```
+   ```powershell
+   Set-HgsKeyProtectionCertificate -CertificateType Signing -Thumbprint <Thumbprint> -IsEnabled $false
+   Set-HgsKeyProtectionCertificate -CertificateType Encryption -Thumbprint <Thumbprint> -IsEnabled $false
+   ```
 
 15. Vm이 시작 수를 확인 한 후 사용 하지 않도록 설정, 인증서 HGS에서 인증서를 다음 명령을 실행 하 여 제거 합니다.
 

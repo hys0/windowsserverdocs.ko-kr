@@ -12,12 +12,12 @@ ms.assetid: f70a79de-9c56-4496-89b5-20a1bff2293e
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: c2cc603f5e0303ada245956a524151393c538b27
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2322fa3f4617e8a8450aaf7fd5ead702574bf759
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59881574"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66433137"
 ---
 # <a name="overview-of-the-dashboard-in-windows-server-essentials"></a>Windows Server Essentials의 대시보드 개요
 
@@ -25,39 +25,39 @@ ms.locfileid: "59881574"
  
  Windows Server Essentials Experience 역할을 사용할 수 있는 Windows Server Essentials 및 Windows Server 2012 R2 Standard에는 Windows Server Essentials 네트워크 및 서버 관리 작업을 손쉽게 수행할 수 있는 관리 대시보드가 포함되어 있습니다. Windows Server Essentials 대시보드를 사용하여 다음을 수행할 수 있습니다.  
   
--   서버 설정 완료  
+- 서버 설정 완료  
   
--   일반적인 관리 작업 액세스 및 수행  
+- 일반적인 관리 작업 액세스 및 수행  
   
--   서버 경고 보기 및 서버 경고에 대한 작업 수행  
+- 서버 경고 보기 및 서버 경고에 대한 작업 수행  
   
--   서버 설정 지정 및 변경  
+- 서버 설정 지정 및 변경  
   
--   웹에서 도움말 항목 액세스 또는 검색  
+- 웹에서 도움말 항목 액세스 또는 검색  
   
--   웹에서 커뮤니티 리소스 액세스  
+- 웹에서 커뮤니티 리소스 액세스  
   
--   사용자 계정 관리  
+- 사용자 계정 관리  
   
--   장치 및 백업 관리  
+- 장치 및 백업 관리  
   
--   서버 폴더 및 하드 드라이브에 대한 액세스 및 설정 관리  
+- 서버 폴더 및 하드 드라이브에 대한 액세스 및 설정 관리  
   
--   추가 기능 응용 프로그램 보기 및 관리  
+- 추가 기능 응용 프로그램 보기 및 관리  
   
--   Microsoft 온라인 서비스와 통합  
+- Microsoft 온라인 서비스와 통합  
   
- 이 항목에는 다음이 포함됩니다.  
+  이 항목에는 다음이 포함됩니다.  
   
--   [대시보드의 기본 기능](#BKMK_Design)  
+- [대시보드의 기본 기능](#BKMK_Design)  
   
--   [대시보드 홈 페이지의 기능](#BKMK_Home)  
+- [대시보드 홈 페이지의 기능](#BKMK_Home)  
   
--   [대시보드의 관리 섹션](#BKMK_Features)  
+- [대시보드의 관리 섹션](#BKMK_Features)  
   
--   [Windows Server Essentials 대시보드 액세스](#BKMK_AccessDb)  
+- [Windows Server Essentials 대시보드 액세스](#BKMK_AccessDb)  
   
--   [안전 모드 사용](#BKMK_UseSafeMode)  
+- [안전 모드 사용](#BKMK_UseSafeMode)  
   
 ##  <a name="BKMK_Design"></a> 대시보드의 기본 기능  
  Windows Server Essentials 대시보드를 통해 서버의 주요 정보와 관리 기능에 빠르게 액세스할 수 있습니다. 대시보드는 여러 섹션이 포함 되어 있습니다. 다음 표에서 섹션을 설명 합니다.  
@@ -97,7 +97,7 @@ ms.locfileid: "59881574"
 |사용자 그룹|**참고:** 이 기능은 사용 하도록 설정 하는 Windows Server Essentials Experience 역할을 사용 하 여 Windows Server Essentials 및 Windows Server 2012 R2 Standard 에서만 사용할 수 있습니다.<br /><br /> 이 페이지에서 수행할 수 있는 작업은 다음과 같습니다.<br /><br /> -사용자 그룹의 목록을 봅니다.<br /><br /> -보기 및 사용자 그룹을 관리 합니다.<br /><br /> 추가 또는 사용자 그룹을 제거 합니다.|  
 |메일 그룹|**참고:** 이 기능은 사용 하도록 설정 하는 Windows Server Essentials Experience 역할을 사용 하 여 Windows Server Essentials 및 Windows Server 2012 R2 Standard 에서만 사용할 수 있습니다. 이 탭은 Windows Server Essentials가 Office 365와 통합되어 있을 때만 표시됩니다.<br /><br /> 이 페이지에서 수행할 수 있는 작업은 다음과 같습니다.<br /><br /> -배포 그룹의 목록을 봅니다.<br /><br /> 추가 또는 배포 그룹을 제거 합니다.|  
 |장치|Windows Server Essentials 네트워크에 컴퓨터를 연결하고 나서 대시보드의 **장치** 페이지에서 컴퓨터를 관리할 수 있습니다. 이 페이지에서 수행할 수 있는 작업은 다음과 같습니다.<br /><br /> -네트워크에 가입 된 컴퓨터 목록을 봅니다.<br /><br /> -Office 365 모바일 장치 관리 기능을 사용 하 여 모바일 장치를 관리 합니다.<br /><br /> **참고:** 이 기능은 Windows Server Essentials 및 Windows Server 2012 R2 Standard에서 사용할 수 있는 Windows Server Essentials Experience 역할이 사용 하도록 설정 합니다.<br /><br /> -컴퓨터 속성 및 각 컴퓨터에 대 한 상태 경고를 봅니다.<br /><br /> -설정 및 컴퓨터 백업 관리 합니다.<br /><br /> -컴퓨터에 파일 및 폴더 복원 합니다.<br /><br /> -컴퓨터에 원격 데스크톱 연결을 설정 합니다.<br /><br /> -컴퓨터 백업 및 파일 기록 설정 사용자 지정.<br /><br /> 컴퓨터 및 백업을 관리 하는 방법에 대 한 내용은 [장치를 관리](Manage-Devices-in-Windows-Server-Essentials.md)합니다.|  
-|스토리지|실행 중인 Windows Server Essentials 버전에 따라 대시보드의 **저장소** 섹션에는 기본적으로 다음 섹션이 포함됩니다.<br /><br /> - **서버 폴더** 하위 섹션에는 도움이 되는 태스크가 포함 되어 있습니다. 서버 폴더에 대 한 속성 보기 및 관리 합니다. 이 페이지에는 서버 폴더를 열고 추가하는 작업도 포함됩니다.<br /><br /> - **하드 드라이브** 페이지 보기 및 확인 서버에 연결 된 드라이브의 상태를 도와주는 작업이 포함 되어 있습니다.<br /><br /> Windows Server Essentials 및 Windows Server 2012 R2 Standard 사용 하도록 설정 하는 Windows Server Essentials Experience 역할을 사용 하 여 옵트인 합니다 **SharePoint 라이브러리** 페이지 도와주는 작업이 포함 되어 있습니다. Office 365에 SharePoint 라이브러리를 관리 서비스입니다.<br /><br /> 서버 폴더를 관리 하는 방법에 대 한 내용은 [Manage Server Folders](Manage-Server-Folders-in-Windows-Server-Essentials.md)합니다.<br /><br /> 하드 드라이브를 관리 하는 방법에 대 한 내용은 [서버 저장소 관리](Manage-Server-Storage-in-Windows-Server-Essentials.md)합니다.|  
+|저장 공간|실행 중인 Windows Server Essentials 버전에 따라 대시보드의 **저장소** 섹션에는 기본적으로 다음 섹션이 포함됩니다.<br /><br /> - **서버 폴더** 하위 섹션에는 도움이 되는 태스크가 포함 되어 있습니다. 서버 폴더에 대 한 속성 보기 및 관리 합니다. 이 페이지에는 서버 폴더를 열고 추가하는 작업도 포함됩니다.<br /><br /> - **하드 드라이브** 페이지 보기 및 확인 서버에 연결 된 드라이브의 상태를 도와주는 작업이 포함 되어 있습니다.<br /><br /> Windows Server Essentials 및 Windows Server 2012 R2 Standard 사용 하도록 설정 하는 Windows Server Essentials Experience 역할을 사용 하 여 옵트인 합니다 **SharePoint 라이브러리** 페이지 도와주는 작업이 포함 되어 있습니다. Office 365에 SharePoint 라이브러리를 관리 서비스입니다.<br /><br /> 서버 폴더를 관리 하는 방법에 대 한 내용은 [Manage Server Folders](Manage-Server-Folders-in-Windows-Server-Essentials.md)합니다.<br /><br /> 하드 드라이브를 관리 하는 방법에 대 한 내용은 [서버 저장소 관리](Manage-Server-Storage-in-Windows-Server-Essentials.md)합니다.|  
 |애플리케이션|- **응용 프로그램** 섹션의 Windows Server Essentials 대시보드를 기본적으로 하위 섹션 두 개가 포함 됩니다.<br /><br /> 추가 기능 응용 프로그램을 관리 하는 방법에 대 한 내용은 [응용 프로그램 관리](Manage-Applications-in-Windows-Server-Essentials.md)합니다.<br /><br /> - **Add-ins** 하위 섹션의 설치 된 추가 기능 목록을 표시 하 고 추가 기능을 제거 하 고 선택한 추가 기능에 대 한 추가 정보를 액세스할 수 있도록 하는 작업을 제공 합니다.<br /><br /> - **Microsoft Pinpoint** 하위 섹션에는 Microsoft Pinpoint에서 사용할 수 있는 응용 프로그램의 목록을 표시 합니다.|  
 |Office 365|**Office 365** 탭은 Windows Server Essentials가 Microsoft Office 365와 통합되어 있을 때만 표시됩니다. 이 섹션에는 365 구독 및 관리자 계정 정보가 포함되어 있습니다.|  
   

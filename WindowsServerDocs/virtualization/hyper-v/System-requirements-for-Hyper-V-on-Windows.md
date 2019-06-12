@@ -11,12 +11,12 @@ ms.assetid: bc4a4971-f727-40cd-91f5-2ee6d24b54cb
 author: KBDAzure
 ms.author: kathydav
 ms.date: 9/30/2016
-ms.openlocfilehash: 55114821b5ac2f1cc028c662217f4bee6980c923
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 97fb1b9003705ba8ad26c2b3e71eda34e88642ee
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59845204"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812619"
 ---
 # <a name="system-requirements-for-hyper-v-on-windows-server"></a>Windows Server에서 Hyper-v에 대 한 시스템 요구 사항
 
@@ -44,7 +44,7 @@ Hyper-v를 실행 중인 가상 컴퓨터의 수와 같은 지원 되는 최대 
 
   - 하드웨어 적용 DEP(데이터 실행 방지)가 제공되고, 사용하도록 설정되어 있어야 합니다. Intel 시스템의 경우이 XD 비트 (execute disable bit). AMD 시스템 NX 비트 (no execute bit)입니다.
 
-## <a name="bkmk_CheckReq"></a>Hyper-v 요구 사항에 대 한 확인 하는 방법
+## <a name="how-to-check-for-hyper-v-requirements"></a>Hyper-v 요구 사항에 대 한 확인 하는 방법
 
 Windows PowerShell 또는 명령 프롬프트 및 종류를 엽니다.
 

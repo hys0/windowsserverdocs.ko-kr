@@ -5,23 +5,23 @@ ms.technology: manage
 ms.topic: article
 author: haley-rowland
 ms.author: harowl
-ms.date: 03/19/2019
+ms.date: 06/07/2019
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: b19657f4ce1a1a2cfb94f7234f07805ba0abd42c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 96d09b25ddb2f473fb4fe22c0cf716bfcf8becaa
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59850574"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66811931"
 ---
 # <a name="configure-user-access-control-and-permissions"></a>사용자 Access Control 및 권한 구성
 
->적용 대상: Windows Admin Center, Windows Admin Center 미리 보기
+> 적용 대상: Windows Admin Center, Windows Admin Center 미리 보기
 
 이미 않았다면 숙지 합니다 [Windows Admin Center 사용자 액세스 제어 옵션](../plan/user-access-options.md)
 
->[!NOTE]
+> [!NOTE]
 > 트러스트 되지 않은 도메인 또는 작업 그룹 환경에서는 그룹 기반 액세스 Windows Admin Center 지원 되지 않습니다.
 
 ## <a name="gateway-access-role-definitions"></a>게이트웨이 액세스 역할 정의
@@ -41,7 +41,7 @@ Windows Admin Center 게이트웨이 서비스에 액세스 하기 위한 두 �
 
 에 **사용자** 게이트웨이 사용자로 Windows Admin Center 액세스할 수 있는 탭을 제어할 수 있습니다. 기본적으로 게이트웨이 URL에 액세스 하는 모든 사용자가 액세스 하는 보안 그룹을 지정 하지 않으면, 및입니다. 사용자 목록에 하나 이상의 보안 그룹을 추가한 후 액세스 해당 그룹의 멤버 에게만 부여 됩니다.
 
-으로 액세스가 제어 됩니다 Active Directory 도메인 환경에서를 사용 하지 않는 경우는 ```Users``` 고 ```Administrators``` Windows Admin Center 게이트웨이 컴퓨터의 로컬 그룹입니다.
+으로 액세스가 제어 됩니다 Active Directory 도메인 환경에서를 사용 하지 않는 경우는 `Users` 고 `Administrators` Windows Admin Center 게이트웨이 컴퓨터의 로컬 그룹입니다.
 
 ### <a name="smartcard-authentication"></a>스마트 카드 인증
 
@@ -143,6 +143,7 @@ Set-ADComputer -Identity $nodeObject -PrincipalsAllowedToDelegateToAccount $null
 
 단일 컴퓨터 배포 모델을 관리 하는 몇 가지 컴퓨터만을 사용 하 여 간단한 환경에 적합 합니다.
 역할 기반 액세스 제어에 대 한 지원을 사용 하 여 컴퓨터를 구성 하면 다음과 같이 변경 합니다.
+
 -   아래 Windows Admin Center 필요한 함수를 사용 하 여 PowerShell 모듈은 시스템 드라이브에 설치 됩니다 `C:\Program Files\WindowsPowerShell\Modules`합니다. 모든 모듈 시작 **Microsoft.Sme**
 -   Desired State Configuration 라는 컴퓨터에서 Just Enough Administration 끝점을 구성 하는 일회성 구성이 실행될지 **Microsoft.Sme.PowerShell**합니다. 이 끝점 Windows Admin Center 사용 하는 3 가지 역할을 정의 하 고 사용자를 연결 하는 경우 임시 로컬 관리자 권한으로 실행 됩니다.
 -   액세스는 역할에 할당 된 사용자 컨트롤에 3 개의 새 로컬 그룹을 만듭니다.
@@ -191,6 +192,7 @@ Invoke-RestMethod -Uri "https://localhost:6516/api/nodes/all/features/jea/endpoi
 ```
 
 Zip 보관 파일을 확장 하면 다음 폴더 구조가 표시 됩니다.
+
 - InstallJeaFeatures.ps1
 - JustEnoughAdministration (디렉터리)
 - 모듈 (디렉터리)
@@ -198,6 +200,7 @@ Zip 보관 파일을 확장 하면 다음 폴더 구조가 표시 됩니다.
     - WindowsAdminCenter.Jea (directory)
 
 노드에서 역할 기반 액세스 제어에 대 한 지원을 구성 하려면 다음 작업을 수행 해야 합니다.
+
 1.  Microsoft.SME JustEnoughAdministration를 복사 합니다. \*, 및 대상 컴퓨터에서 PowerShell 모듈 디렉터리로 WindowsAdminCenter.Jea 모듈입니다. 이 위치는 일반적으로 `C:\Program Files\WindowsPowerShell\Modules`입니다.
 2.  업데이트 **InstallJeaFeature.ps1** RBAC 끝점에 대 한 원하는 구성과 일치 하도록 파일입니다.
 3.  DSC 리소스를 컴파일하는 데 InstallJeaFeature.ps1를 실행 합니다.

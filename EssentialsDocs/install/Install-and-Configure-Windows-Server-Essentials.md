@@ -12,12 +12,12 @@ ms.assetid: e95cf219-46a4-4041-bd81-0c4c2a0622cf
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: cdad118c30fbf303b55ec7ea25bbe3e209c016db
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 48fa18d5baf7d4b48b14cbda5a513c487920d70a
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59870164"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66433471"
 ---
 # <a name="install-and-configure-windows-server-essentials"></a>Windows Server Essentials 설치 및 구성
 
@@ -53,32 +53,32 @@ ms.locfileid: "59870164"
   
 ##### <a name="to-install-the-operating-system"></a>운영 체제를 설치하려면  
   
-1.  네트워크 케이블을 사용하여 컴퓨터를 네트워크에 연결합니다.  
+1. 네트워크 케이블을 사용하여 컴퓨터를 네트워크에 연결합니다.  
   
-    > [!IMPORTANT]
-    >  설치 도중에 컴퓨터의 네트워크 연결을 끊지 마세요. 설치가 실패할 수 있습니다.  
+   > [!IMPORTANT]
+   >  설치 도중에 컴퓨터의 네트워크 연결을 끊지 마세요. 설치가 실패할 수 있습니다.  
   
-2.  컴퓨터를 켠 다음 DVD 드라이브에 Windows Server Essentials DVD를 삽입 합니다.  
+2. 컴퓨터를 켠 다음 DVD 드라이브에 Windows Server Essentials DVD를 삽입 합니다.  
   
-     무인 설치를 수행하는 경우에는 응답 파일이 포함된 플로피 디스크나 USB 플래시 드라이브와 같은 이동식 미디어를 연결하세요. 응답 파일의 내용에 따라 다음 설치 화면 중 전체나 일부가 표시되지 않을 수 있습니다.  
+    무인 설치를 수행하는 경우에는 응답 파일이 포함된 플로피 디스크나 USB 플래시 드라이브와 같은 이동식 미디어를 연결하세요. 응답 파일의 내용에 따라 다음 설치 화면 중 전체나 일부가 표시되지 않을 수 있습니다.  
   
-3.  컴퓨터를 다시 시작합니다. **CD 또는 DVD에서 부팅하려면 아무 키나 누르세요.** 라는 메시지가 나타나면 아무 키나 누릅니다.  
+3. 컴퓨터를 다시 시작합니다. **CD 또는 DVD에서 부팅하려면 아무 키나 누르세요.** 라는 메시지가 나타나면 아무 키나 누릅니다.  
   
-    > [!NOTE]
-    >  컴퓨터가 DVD에서 시작되지 않으면 BIOS 부팅 시퀀스에서 CD-ROM 드라이브가 첫 번째로 나열되어 있는지 확인합니다. BIOS 부팅 시퀀스에 대한 자세한 내용은 컴퓨터 제조업체의 설명 문서를 참조하세요.  
+   > [!NOTE]
+   >  컴퓨터가 DVD에서 시작되지 않으면 BIOS 부팅 시퀀스에서 CD-ROM 드라이브가 첫 번째로 나열되어 있는지 확인합니다. BIOS 부팅 시퀀스에 대한 자세한 내용은 컴퓨터 제조업체의 설명 문서를 참조하세요.  
   
-4.  설치할 **언어**를 선택하고 **시간 및 통화 형식** 및 **키보드 또는 입력 메서드**를 선택한 후 **다음**을 클릭합니다.  
+4. 설치할 **언어**를 선택하고 **시간 및 통화 형식** 및 **키보드 또는 입력 메서드**를 선택한 후 **다음**을 클릭합니다.  
   
-5.  **지금 설치**를 클릭합니다.  
+5. **지금 설치**를 클릭합니다.  
   
-6.  **제품 키 입력**에서 제품 키를 입력합니다.  
+6. **제품 키 입력**에서 제품 키를 입력합니다.  
   
-7.  **사용 조건**을 읽어 봅니다. 조건에 동의하면 **동의함** 확인란을 선택한 후 **다음**을 클릭합니다.  
+7. **사용 조건**을 읽어 봅니다. 조건에 동의하면 **동의함** 확인란을 선택한 후 **다음**을 클릭합니다.  
   
-    > [!NOTE]
-    >  사용 조건에 동의하지 않는 경우 설치가 계속 진행되지 않습니다.  
+   > [!NOTE]
+   >  사용 조건에 동의하지 않는 경우 설치가 계속 진행되지 않습니다.  
   
-8.  **설치 유형을 시겠습니까?**, 클릭 **사용자 지정: Windows만 설치 (고급)**  
+8. **설치 유형을 시겠습니까?** , 클릭 **사용자 지정: Windows만 설치 (고급)**  
   
 9. **Windows를 설치할 위치를 지정하세요.** 에서 Windows 운영 체제를 설치할 하드 드라이브를 선택합니다. 모든 내부 하드 드라이브를 설치에 사용할 수 있는지 확인합니다.  
   
@@ -102,15 +102,15 @@ ms.locfileid: "59870164"
         > [!IMPORTANT]
         >  이 단계를 마친 후엔 운영 체제를 다른 파티션으로 이동할 수 없습니다.  
   
- 설치하는 동안 컴퓨터의 설치 폴더로 임시 파일이 복사되며 여기에 30분 정도 소요됩니다. Windows Server Essentials 운영 체제를 설치한 후 컴퓨터 다시 시작 합니다. 이제 Windows Server Essentials 운영 체제를 구성할 준비가 되었습니다.  
+   설치하는 동안 컴퓨터의 설치 폴더로 임시 파일이 복사되며 여기에 30분 정도 소요됩니다. Windows Server Essentials 운영 체제를 설치한 후 컴퓨터 다시 시작 합니다. 이제 Windows Server Essentials 운영 체제를 구성할 준비가 되었습니다.  
   
 ###  <a name="BKMK_Step2Configure"></a> 2 단계: Windows Server Essentials 운영 체제 구성  
   
 > [!IMPORTANT]
 >  마이그레이션하려는 경우 이전 버전의 Windows Small Business Server에서 Windows Server Essentials에, 다른 프로세스를 따라야 합니다. 마이그레이션 설치에 대한 자세한 내용은 다음을 참조하세요.  
->   
->  -   [Windows SBS 2003에서 마이그레이션](../migrate/Migrate-Windows-Small-Business-Server-2003-to-Windows-Server-Essentials.md)  
-> -   [Windows SBS 2008에서 마이그레이션](../migrate/Migrate-Windows-Small-Business-Server-2008-to-Windows-Server-Essentials.md)  
+> 
+> - [Windows SBS 2003에서 마이그레이션](../migrate/Migrate-Windows-Small-Business-Server-2003-to-Windows-Server-Essentials.md)  
+>   -   [Windows SBS 2008에서 마이그레이션](../migrate/Migrate-Windows-Small-Business-Server-2008-to-Windows-Server-Essentials.md)  
   
  이 설치 단계에서 조직에 대한 몇 가지 질문에 답해야 하는 메시지가 표시됩니다. 이러한 정보는 운영 체제를 구성하는 데 사용됩니다.  
   

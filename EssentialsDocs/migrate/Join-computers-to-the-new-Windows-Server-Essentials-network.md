@@ -12,12 +12,12 @@ ms.assetid: d94de050-3300-4323-a5ea-c824cb9cecc9
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: c6abc11ba2ce8a9f1d32c6a884db6332586de78b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 62f31f859ed3fd0f77baf37d3467d4702b24ad95
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59822644"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66432908"
 ---
 # <a name="join-computers-to-the-new-windows-server-essentials-network1"></a>새 Windows Server Essentials network1에 컴퓨터 가입
 
@@ -27,13 +27,13 @@ ms.locfileid: "59822644"
  마이그레이션 프로세스의 다음 단계는 새 Windows Server Essentials 네트워크에 클라이언트 컴퓨터를 가입 시키고 그룹 정책 설정을 업데이트 하는 것입니다.  
   
 ### <a name="domain-joined-client-computers"></a>도메인에 가입된 클라이언트 컴퓨터  
- 이동할 **http://***대상-servername***/connect** 하 고 새 컴퓨터인 것 처럼 Windows Server Connector 소프트웨어를 설치 합니다. 설치 프로세스는 도메인에 가입 되거나 도메인에 가입 되지 않은 클라이언트 컴퓨터에 대해 동일합니다.  
+ **http://** <em>destination-servername</em> **/connect**로 이동하고 새 컴퓨터인 것처럼 Windows Server Connector 소프트웨어를 설치합니다. 설치 프로세스는 도메인에 가입 되거나 도메인에 가입 되지 않은 클라이언트 컴퓨터에 대해 동일합니다.  
   
 > [!NOTE]
 >  Windows Server Connector 소프트웨어에서는 Windows XP 또는 Windows Vista를 실행 중인 컴퓨터를 지원하지 않습니다. 이미 도메인에 가입된 Windows XP 또는 Windows Vista를 실행하는 컴퓨터에 있으면 이 단계를 건너뛸 수 있습니다.  
   
 ### <a name="non-domain-joined-client-computers"></a>도메인 가입되지 않은 클라이언트 컴퓨터  
- 이동할 **http://***대상-servername***/connect** 하 고 새 컴퓨터인 것 처럼 Windows Server Connector 소프트웨어를 설치 합니다. 설치 프로세스는 도메인에 가입되거나 도메인에 가입되지 않은 클라이언트 컴퓨터에 대해 동일합니다.  
+ **http://** <em>destination-servername</em> **/connect**로 이동하고 새 컴퓨터인 것처럼 Windows Server Connector 소프트웨어를 설치합니다. 설치 프로세스는 도메인에 가입되거나 도메인에 가입되지 않은 클라이언트 컴퓨터에 대해 동일합니다.  
   
 > [!NOTE]
 >  Windows Server Connector 소프트웨어에서는 Windows XP 또는 Windows Vista를 실행 중인 컴퓨터를 지원하지 않습니다. 이미 도메인에 가입된 Windows XP 또는 Windows Vista를 실행하는 컴퓨터에 있으면 이 단계를 건너뛸 수 있습니다.  

@@ -11,12 +11,12 @@ ms.assetid: 92bb573b-03b7-470e-b72e-e35edf52b349
 author: KBDAzure
 ms.author: kathydav
 ms.date: 10/04/2016
-ms.openlocfilehash: 239cce3c9f1acb2d45935e0f60fb1875b004485b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3591e17c9485fc8f9e365f6322c4f48e783db8ce
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59880954"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66442230"
 ---
 # <a name="choose-between-standard-or-production-checkpoints-in-hyper-v"></a>Hyper-v에서 표준 또는 프로덕션 검사점 중에서 선택
 
@@ -29,7 +29,7 @@ Windows Server 2016 및 Windows 10 이상에서는 각 가상 컴퓨터에 대 �
   
 - 표준 검사점 실행 중인 가상 컴퓨터의 상태, 데이터 및 하드웨어 구성을 캡처하고 용도로 개발 및 테스트 시나리오에서 사용 합니다. 문제를 해결할 수 있도록 특정 상태 또는 조건 실행 중인 가상 컴퓨터를 다시 만들어야 할 경우 표준 검사점 유용할 수 있습니다.  
  
- ## <a name="change-checkpoints-to-production-or-standard-checkpoints"></a>프로덕션 또는 표준 검사점 검사점 변경  
+  ## <a name="change-checkpoints-to-production-or-standard-checkpoints"></a>프로덕션 또는 표준 검사점 검사점 변경  
   
 1.  **Hyper-v 관리자**, 가상 컴퓨터를 마우스 오른쪽 단추로 클릭 하 고 클릭 **설정을**합니다.  
   
@@ -50,7 +50,7 @@ Windows Server 2016 및 Windows 10 이상에서는 각 가상 컴퓨터에 대 �
   
 -   [프로덕션 검사점](../What-s-new-in-Hyper-V-on-Windows.md#BKMK_check)  
   
--   [검사점을 사용할지 설정 합니다.](Enable-or-disable-checkpoints-in-Hyper-V.md)  
+-   [검사점 사용 또는 사용 안 함](Enable-or-disable-checkpoints-in-Hyper-V.md)  
   
 
 

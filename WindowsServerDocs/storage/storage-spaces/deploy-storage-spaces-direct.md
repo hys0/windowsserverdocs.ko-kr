@@ -7,15 +7,15 @@ ms.technology: storage-spaces
 ms.topic: get-started-article
 ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 author: stevenek
-ms.date: 8/16/2018
+ms.date: 06/07/2019
 description: Windows Server에서 저장소 공간 다이렉트를 사용 하 여 소프트웨어 정의 저장소 하이퍼 수렴 형 인프라 또는 (세분화 라고도) 수렴 형된 인프라 배포에 대 한 단계별 지침입니다.
 ms.localizationpriority: medium
-ms.openlocfilehash: 55cfa0e066506d7174f9e5b1e61cc0aa290706d7
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a4159c85be23025ef57084b47dcc77d4f749888f
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59865414"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812362"
 ---
 # <a name="deploy-storage-spaces-direct"></a>저장소 공간 다이렉트 배포
 
@@ -24,7 +24,7 @@ ms.locfileid: "59865414"
 이 항목에서는 배포 하는 단계별 지침은 [저장소 공간 다이렉트](storage-spaces-direct-overview.md)합니다.
 
 > [!Tip]
-> Hyper-Converged 인프라를 획득 하려고 하나요? 이러한 것이 좋습니다 [Windows Server 소프트웨어 정의](https://microsoft.com/wssd) 파트너의 솔루션입니다. 이러한 설계, 조립 및 호환성 및 안정성 얻게 되므로 신속 하 게 실행 하기 위한이 참조 아키텍처에 대해 유효성을 검사 합니다.
+> Hyper-Converged 인프라를 획득 하려고 하나요? 배포 도구 및 절차를 포함 하는 파트너의 유효성이 검사 된 하드웨어/소프트웨어 솔루션을 구매 하는 것이 좋습니다. 이러한 솔루션 설계, 조립 및 호환성 및 안정성 얻게 되므로 신속 하 게 실행 하기 위한이 참조 아키텍처에 대해 유효성이 검사 됩니다. Windows Server 2019 솔루션에 대 한 참조를 [Azure Stack HCI solutions 웹 사이트](https://azure.microsoft.com/overview/azure-stack/hci)합니다. Windows Server 2016 솔루션에 대 한 자세한 내용은 [Windows Server 소프트웨어 정의](https://microsoft.com/wssd)합니다.
 
 > [!Tip]
 > Hyper-v 가상 컴퓨터를 포함 하 여 Microsoft Azure에 사용할 수 있습니다 [하드웨어 없이 저장소 공간 다이렉트를 평가](storage-spaces-direct-in-vm.md)합니다. 유용한 검토할 수도 있습니다 [Windows Server 빠른 랩 배포 스크립트](https://aka.ms/wslab), 학습 용도로 사용 합니다.
@@ -229,7 +229,7 @@ Test-Cluster –Node <MachineName1, MachineName2, MachineName3, MachineName4> �
 
 자세한 내용은 다음 항목을 참조하세요.
 
-- [구성 및 쿼럼 관리](../../failover-clustering/manage-cluster-quorum.md)
+- [쿼럼 구성 및 관리](../../failover-clustering/manage-cluster-quorum.md)
 - [장애 조치 클러스터에 대 한 클라우드 감시 배포](../../failover-clustering/deploy-cloud-witness.md)
 
 ### <a name="step-35-enable-storage-spaces-direct"></a>3.5 단계: 저장소 공간 다이렉트 사용
@@ -297,15 +297,15 @@ Write-Output "$ClusterName CSV cache size: $CSVCurrentCacheSize MB"
 
 #### <a name="to-create-a-scale-out-file-server-role-by-using-server-manager"></a>서버 관리자를 사용 하 여 스케일 아웃 파일 서버 역할을 만들려면
 
-1.  장애 조치 클러스터 관리자에서 클러스터를 선택로 이동 **역할**를 클릭 하 고 **역할 구성...** .<br>고가용성 마법사에 표시 됩니다.
-2.  에 **역할 선택** 페이지에서 클릭 **파일 서버**합니다.
-3.  에 **파일 서버 유형** 페이지에서 클릭 **응용 프로그램 데이터용 스케일 아웃 파일 서버**합니다.
-4.  에 **클라이언트 액세스 지점** 페이지에서 스케일 아웃 파일 서버에 대 한 이름을 입력 합니다.
-5.  역할이로 이동 하 여 성공적으로 설정 되었는지 확인 **역할** 지 확인 하는 및를 **상태** 열에 표시 **실행** 만든 클러스터 된 파일 서버 역할 옆에 있는 그림 1 에서처럼.
+1. 장애 조치 클러스터 관리자에서 클러스터를 선택로 이동 **역할**를 클릭 하 고 **역할 구성...** .<br>고가용성 마법사에 표시 됩니다.
+2. 에 **역할 선택** 페이지에서 클릭 **파일 서버**합니다.
+3. 에 **파일 서버 유형** 페이지에서 클릭 **응용 프로그램 데이터용 스케일 아웃 파일 서버**합니다.
+4. 에 **클라이언트 액세스 지점** 페이지에서 스케일 아웃 파일 서버에 대 한 이름을 입력 합니다.
+5. 역할이로 이동 하 여 성공적으로 설정 되었는지 확인 **역할** 지 확인 하는 및를 **상태** 열에 표시 **실행** 만든 클러스터 된 파일 서버 역할 옆에 있는 그림 1 에서처럼.
 
-    ![스크린 샷 장애 조치 클러스터 관리자의 스케일 아웃 파일 서버를 보여 주는](media\Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016\SOFS_in_FCM.png "스케일 아웃 파일 서버 장애 조치 클러스터 관리자")
+   ![스크린 샷 장애 조치 클러스터 관리자의 스케일 아웃 파일 서버를 보여 주는](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/SOFS_in_FCM.png "스케일 아웃 파일 서버 장애 조치 클러스터 관리자")
 
-     **그림 1** 실행 상태를 사용 하 여 스케일 아웃 파일 서버를 보여 주는 장애 조치 클러스터 관리자
+    **그림 1** 실행 상태를 사용 하 여 스케일 아웃 파일 서버를 보여 주는 장애 조치 클러스터 관리자
 
 > [!NOTE]
 >  클러스터 된 역할을 만든 후 있을 일부 네트워크 전파 지연을 몇 분 이상 동안 잠재적으로 파일 공유를 만들지 못하게 방지할 수 있는.  

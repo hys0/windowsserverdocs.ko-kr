@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: cc9f02b9-8ddd-4cae-b397-a832996144dd
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: fb940effaae7989dec397e539b64160c87828d5a
-ms.sourcegitcommit: d84dc3d037911ad698f5e3e84348b867c5f46ed8
+ms.openlocfilehash: 7aec08a19759c98150cf7518643f634947c5133d
+ms.sourcegitcommit: d888e35f71801c1935620f38699dda11db7f7aad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66266702"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66805002"
 ---
 # <a name="step-2-plan-the-remote-access-deployment"></a>2 단계 원격 액세스 배포 계획
 
@@ -56,7 +56,7 @@ DirectAccess 클라이언트의 원격 관리를 위해 단일 원격 액세스 
   
     -   **연결 검증 도구**  
   
-        클라이언트에서 내부 네트워크 연결의 유효성을 검사하는 데 사용하는 기본 웹 검색이 만들어집니다. 기본 이름은 https://directaccess-WebProbeHost.<domain_name>입니다. DNS에 이름을 수동으로 등록해야 합니다. HTTP 또는 PING을 통해 다른 웹 주소를 사용 하는 다른 연결 검증 도구를 만들 수 있습니다. 각 연결 검증 도구에 대한 DNS 항목이 있어야 합니다.  
+        클라이언트에서 내부 네트워크 연결의 유효성을 검사하는 데 사용하는 기본 웹 검색이 만들어집니다. 기본 이름은 `https://directaccess-WebProbeHost.<domain_name>`입니다. DNS에 이름을 수동으로 등록해야 합니다. HTTP 또는 PING을 통해 다른 웹 주소를 사용 하는 다른 연결 검증 도구를 만들 수 있습니다. 각 연결 검증 도구에 대한 DNS 항목이 있어야 합니다.  
   
     -   **기술 지원팀 전자 메일 주소 도움말**  
   

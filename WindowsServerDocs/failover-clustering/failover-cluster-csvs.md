@@ -6,14 +6,14 @@ ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 ms.technology: storage-failover-clustering
-ms.date: 04/05/2018
+ms.date: 06/07/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 00f29c70628f2869e9f3aeffd0d08032bce5aeda
-ms.sourcegitcommit: 21165734a0f37c4cd702c275e85c9e7c42d6b3cb
+ms.openlocfilehash: b41ebd0bb822875a3114de4a849ea3ec5decee11
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2019
-ms.locfileid: "65034188"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66810889"
 ---
 # <a name="use-cluster-shared-volumes-in-a-failover-cluster"></a>장애 조치 클러스터에서 클러스터 공유 볼륨 사용
 
@@ -26,15 +26,15 @@ CSV는 NTFS (또는 Windows Server 2012 R2의 경우 ReFS) 상위 계층에 있�
 - 클러스터된 Hyper-V 가상 컴퓨터의 클러스터된 VHD(가상 하드 디스크) 파일
 - 스케일 아웃 파일 서버 클러스터된 역할의 응용 프로그램 데이터를 저장하는 스케일 아웃 파일 공유. 이 역할의 응용 프로그램 데이터에 대한 예로는 Hyper-V 가상 컴퓨터 파일 및 Microsoft SQL Server 데이터를 들 수 있습니다. ReFS는 스케일 아웃 파일 서버에서 지원되지 않습니다. 스케일 아웃 파일 서버에 대 한 자세한 내용은 참조 하세요. [응용 프로그램 데이터용 스케일 아웃 파일 서버](sofs-overview.md)합니다.
 
->[!NOTE]
->CSV는 SQL Server 2012 및 이전 버전의 SQL Server에서 Microsoft SQL Server 클러스터된 워크로드를 지원하지 않습니다.
+> [!NOTE]
+> Csv는 SQL Server 2012 및 이전 버전의 SQL Server에서 Microsoft SQL Server 클러스터 된 워크 로드를 지원 하지 않습니다.
 
 Windows Server 2012에서는 CSV 기능이 크게 향상 되었습니다. 예를 들어 Active Directory 도메인 서비스에 대한 종속성이 제거되었습니다. **chkdsk**의 기능 향상, 바이러스 백신 및 백업 응용 프로그램과의 상호 운용성, BitLocker로 암호화된 볼륨 및 저장소 공간과 같은 일반적인 저장소 기능과의 통합 등에 대한 지원이 추가되었습니다. Windows Server 2012에 도입 된 CSV 기능 개요를 참조 하세요 [What's New in Windows Server 2012에서 장애 조치 클러스터링 \[리디렉션\]](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265972(v%3dws.11)>)합니다.
 
 Windows Server 2012 R2 분산된 된 CSV 소유권, 서버 서비스를 더 잘 CSV 캐시에 할당할 수 있는 실제 메모리 양의 유연성의 가용성을 통해 향상 된 복원 력 같은 추가 기능이 도입 되었습니다. 진단, 및 ReFS 및 중복 제거에 대 한 지원이 포함 된 향상 된 상호 운용성. 자세한 내용은 [장애 조치 클러스터링의 새로운](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265972(v%3dws.11)>)합니다.
 
->[!NOTE]
->VDI(가상 데스크톱 인프라) 시나리오에 CSV의 데이터 중복 제거를 사용하는 방법에 대한 자세한 내용은 블로그 게시물 [Windows Server 2012 R2에서 VDI 저장소에 대한 데이터 중복 제거 배포](https://blogs.technet.com/b/filecab/archive/2013/07/31/deploying-data-deduplication-for-vdi-storage-in-windows-server-2012-r2.aspx) (영문) 및 [Windows Server 2012 R2에서 새워크로드로 데이터 중복 제거 확장](https://blogs.technet.com/b/filecab/archive/2013/07/31/extending-data-deduplication-to-new-workloads-in-windows-server-2012-r2.aspx)(영문)을 참조하세요.
+> [!NOTE]
+> VDI(가상 데스크톱 인프라) 시나리오에 CSV의 데이터 중복 제거를 사용하는 방법에 대한 자세한 내용은 블로그 게시물 [Windows Server 2012 R2에서 VDI 저장소에 대한 데이터 중복 제거 배포](https://blogs.technet.com/b/filecab/archive/2013/07/31/deploying-data-deduplication-for-vdi-storage-in-windows-server-2012-r2.aspx) (영문) 및 [Windows Server 2012 R2에서 새워크로드로 데이터 중복 제거 확장](https://blogs.technet.com/b/filecab/archive/2013/07/31/extending-data-deduplication-to-new-workloads-in-windows-server-2012-r2.aspx)(영문)을 참조하세요.
 
 ## <a name="review-requirements-and-considerations-for-using-csv-in-a-failover-cluster"></a>장애 조치(failover) 클러스터에서 CSV를 사용하기 위한 요구 사항 및 고려 사항 검토
 
@@ -81,7 +81,7 @@ CSV를 지원하는 네트워크를 구성할 때 고려할 사항은 다음과 
 
 Windows Server 2012 r2에서는 노드 단위로 CSV 볼륨의 상태를 볼 수 있습니다. 예를 들어 I/O가 직접인지, 리디렉션되었는지 또는 CSV 볼륨을 사용할 수 없는지 여부 등을 확인할 수 있습니다. CSV 볼륨이 리디렉션된 I/O 모드에 있으면 이유를 확인할 수도 있습니다. Windows PowerShell cmdlet **Get-ClusterSharedVolumeState** 를 사용하여 이 정보를 볼 수 있습니다.
 
->[!NOTE]
+> [!NOTE]
 > * Windows Server 2012에서에서는 향상 된 CSV 디자인으로 인해 많은 작업을 수행의 직접 I/O 모드 보다 Windows Server 2008 R2에서 오류가 발생 했습니다.
 > * SMB 다중 채널 및 SMB 다이렉트와 같은 SMB 3.0 기능과 CSV의 통합으로 인해 리디렉션된 I/O 트래픽을 여러 클러스터 네트워크에서 스트리밍할 수 있습니다.
 > * I/O 리디렉션 중 코디네이터 노드로 네트워크 트래픽의 잠재적 증가를 허용하도록 클러스터 네트워크를 계획해야 합니다.
@@ -116,8 +116,8 @@ CSV를 사용하려면 노드가 다음 요구 사항을 충족해야 합니다.
 
 이 섹션에는 계획 고려 사항 및 Windows Server 2012 R2 또는 Windows Server 2012를 실행 하는 장애 조치 클러스터에서 CSV를 사용 하는 것에 대 한 권장 사항을 나열 합니다.
 
->[!IMPORTANT]
->CSV의 특정 저장 장치를 구성하는 방법에 대한 권장 사항은 저장소 공급 업체에 문의하세요. 저장소 공급업체의 권장 사항이 이 항목의 정보와 다른 경우에는 저장소 공급업체의 권장 사항을 사용합니다.
+> [!IMPORTANT]
+> CSV의 특정 저장 장치를 구성하는 방법에 대한 권장 사항은 저장소 공급 업체에 문의하세요. 저장소 공급업체의 권장 사항이 이 항목의 정보와 다른 경우에는 저장소 공급업체의 권장 사항을 사용합니다.
 
 ### <a name="arrangement-of-luns-volumes-and-vhd-files"></a>LUN, 볼륨 및 VHD 파일 배열
 
@@ -198,31 +198,14 @@ CSV 캐시는 시스템 메모리(RAM)를 쓰기 캐시로 할당하여 버퍼�
 >[!NOTE]
 >클러스터된 모든 Hyper-V 및 스케일 아웃 파일 서버 배포에 CSV 캐시를 사용하는 것이 좋습니다.
 
-Windows Server 2012에서 기본적으로 CSV 캐시가 비활성화 됩니다. Windows Server 2012 R2에서 기본적으로 CSV 캐시가 사용 됩니다. 그러나 여전히 예약할 블록 캐시의 크기를 할당해야 합니다.
+Windows Server 2012에서 기본적으로 CSV 캐시가 비활성화 됩니다. Windows Server 2012 R2 이상 버전에서는 기본적으로 CSV 캐시가 사용 됩니다. 그러나 여전히 예약할 블록 캐시의 크기를 할당해야 합니다.
 
 다음 표에서는 CSV 캐시를 제어하는 두 가지 구성 설정을 설명합니다.
 
-<table>
-<thead>
-<tr class="header">
-<th>Windows Server 2012 R2의 속성 이름</th>
-<th>Windows Server 2012의에서 속성 이름</th>
-<th>설명</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>BlockCacheSize</strong></td>
-<td><strong>SharedVolumeBlockCacheSizeInMB</strong></td>
-<td>클러스터의 각 노드에서 CSV 캐시용으로 예약할 메모리의 크기(MB)를 정의할 수 있는 클러스터의 공용 속성입니다. 예를 들어 값이 512로 정의된 경우 512MB의 시스템 메모리가 각 노드에 예약됩니다. (대부분의 클러스터에서 512MB 권장 되는 값입니다.) 기본 설정은 0입니다 (사용 안 함).</td>
-</tr>
-<tr class="even">
-<td><strong>EnableBlockCache</strong></td>
-<td><strong>CsvEnableBlockCache</strong></td>
-<td>클러스터 실제 디스크 리소스의 프라이빗 속성입니다. 이 속성을 통해 CSV에 추가된 개별 디스크에서 CSV 캐시를 사용하도록 설정할 수 있습니다. Windows Server 2012의 기본 설정은 0입니다 (사용 안 함). 디스크에서 CSV 캐시를 사용하려면 값을 1로 구성합니다. Windows Server 2012 R2에서 기본적으로이 설정을 사용 합니다.</td>
-</tr>
-</tbody>
-</table>
+| Windows Server 2012 R2 이상 |  Windows Server 2012                 | 설명 |
+| -------------------------------- | ------------------------------------ | ----------- |
+| BlockCacheSize                   | SharedVolumeBlockCacheSizeInMB       | 클러스터의 각 노드에서 CSV 캐시용으로 예약할 메모리의 크기(MB)를 정의할 수 있는 클러스터의 공용 속성입니다. 예를 들어 값이 512로 정의된 경우 512MB의 시스템 메모리가 각 노드에 예약됩니다. (대부분의 클러스터에서 512MB 권장 되는 값입니다.) 기본 설정은 0입니다 (사용 안 함). |
+| EnableBlockCache                 | CsvEnableBlockCache                  | 클러스터 실제 디스크 리소스의 프라이빗 속성입니다. 이 속성을 통해 CSV에 추가된 개별 디스크에서 CSV 캐시를 사용하도록 설정할 수 있습니다. Windows Server 2012의 기본 설정은 0입니다 (사용 안 함). 디스크에서 CSV 캐시를 사용하려면 값을 1로 구성합니다. Windows Server 2012 R2에서 기본적으로이 설정을 사용 합니다. |
 
 **클러스터 CSV 볼륨 캐시**아래에 카운터를 추가하여 성능 모니터에서 CSV 캐시를 모니터링할 수 있습니다.
 
@@ -231,7 +214,7 @@ Windows Server 2012에서 기본적으로 CSV 캐시가 비활성화 됩니다. 
 1. 관리자 권한으로 Windows PowerShell을 시작 합니다.
 2. 각 노드에서 예약할 *512* MB의 캐시를 정의하려면 다음을 입력합니다.
 
-    - Windows Server 2012 r2:
+    - Windows Server 2012 R2 이상:
 
         ```PowerShell
         (Get-Cluster).BlockCacheSize = 512  
@@ -249,14 +232,14 @@ Windows Server 2012에서 기본적으로 CSV 캐시가 비활성화 됩니다. 
     ```
 
 >[!NOTE]
-> * Windows Server 2012에서 CSV 캐시에 총 실제 RAM의 20%만 할당할 수 있습니다. Windows Server 2012 r2에서는 최대 80%를 할당할 수 있습니다. 스케일 아웃 파일 서버에는 일반적으로 메모리 제한이 없으므로 CSV 캐시에 추가 메모리를 사용하여 성능을 크게 향상시킬 수 있습니다.
-> * 리소스 경합을 방지 하려면 다시 시작 해야 각 노드는 클러스터에서 CSV 캐시에 할당 된 메모리를 수정한 후 합니다. Windows Server 2012 R2에서 다시 시작 필요 하지 않습니다.
-> * 개별 디스크에서 CSV 캐시를 사용하거나 사용하지 않도록 설정한 후 이 설정을 적용하려면 실제 디스크 리소스를 오프라인 상태로 전환했다가 다시 온라인 상태로 전환해야 합니다. (Windows Server 2012 R2에서 기본적으로 CSV 캐시가 사용 합니다.) 
+> * Windows Server 2012에서 CSV 캐시에 총 실제 RAM의 20%만 할당할 수 있습니다. Windows Server 2012 R2 이상 버전에서는 최대 80%를 할당할 수 있습니다. 스케일 아웃 파일 서버에는 일반적으로 메모리 제한이 없으므로 CSV 캐시에 추가 메모리를 사용하여 성능을 크게 향상시킬 수 있습니다.
+> * 리소스 경합을 방지 하려면 다시 시작 해야 각 노드는 클러스터에서 CSV 캐시에 할당 된 메모리를 수정한 후 합니다. Windows Server 2012 R2 이상 버전에서는 다시 시작 필요 하지 않습니다.
+> * 개별 디스크에서 CSV 캐시를 사용하거나 사용하지 않도록 설정한 후 이 설정을 적용하려면 실제 디스크 리소스를 오프라인 상태로 전환했다가 다시 온라인 상태로 전환해야 합니다. (Windows Server 2012 R2 이상 버전에서는 기본적으로 CSV 캐시가 사용 합니다.) 
 > * 성능 카운터 정보를 포함하는 CSV 캐시에 대한 자세한 내용은 블로그 게시물 [CSV 캐시를 사용하도록 설정하는 방법](https://blogs.msdn.microsoft.com/clustering/2013/07/19/how-to-enable-csv-cache/)(영문)을 참조하세요.
 
-## <a name="back-up-csv"></a>CSV 백업
+## <a name="backing-up-csvs"></a>Csv 백업
 
-장애 조치(failover) 클러스터의 CSV에 저장된 정보를 백업하는 방법에는 여러 가지 방법이 있습니다. Microsoft 백업 응용 프로그램 또는 타사 응용 프로그램을 사용할 수 있습니다. 일반적으로 CSV는 NTFS 또는 ReFS로 포맷된 클러스터된 저장소에 대한 요구 사항 외에 특별한 백업 요구 사항이 없습니다. 또한 CSV 백업은 다른 CSV 저장소 작업을 방해하지 않습니다.
+장애 조치 클러스터의 Csv에 저장 된 정보를 백업 하는 방법은 여러 가지가 있습니다. Microsoft 백업 응용 프로그램 또는 타사 응용 프로그램을 사용할 수 있습니다. 일반적으로 CSV는 NTFS 또는 ReFS로 포맷된 클러스터된 저장소에 대한 요구 사항 외에 특별한 백업 요구 사항이 없습니다. 또한 CSV 백업은 다른 CSV 저장소 작업을 방해하지 않습니다.
 
 백업 응용 프로그램 및 CSV에 대한 백업 일정을 선택할 때 다음과 같은 요소를 고려해야 합니다.
 
@@ -266,11 +249,11 @@ Windows Server 2012에서 기본적으로 CSV 캐시가 비활성화 됩니다. 
 - CSV는 Windows Server 2012 R2 백업, Windows Server Backup 2012 또는 Windows Server 2008 R2 백업 실행 하는 백업 요청자를 지원 합니다. 그러나 Windows Server 백업에서는 일반적으로 많은 클러스터를 사용하는 조직에 적합하지 않을 수 있는 기본 백업 솔루션만 제공합니다. Windows Server Backup은 CSV에서 응용 프로그램 일치 Virtual Machine 백업을 지원하지 않습니다. 크래시 일치 볼륨 수준 백업만 지원합니다. 크래시 일치 백업을 복원하면 백업이 실행된 시점과 정확히 동일한 시점에 가상 컴퓨터의 작동이 중단된 경우 가상 컴퓨터가 당시와 동일한 상태에 있게 됩니다. CSV 볼륨에서 가상 컴퓨터의 백업에는 성공하지만 이는 지원되지 않음을 나타내는 오류 이벤트가 로깅됩니다.
 - 장애 조치(failover) 클러스터를 백업할 때 관리 자격 증명이 필요할 수 있습니다.
 
->[!IMPORTANT]
+> [!IMPORTANT]
 >백업 응용 프로그램에서 백업 및 복원하는 데이터, 지원하는 CSV 기능 및 각 클러스터 노드의 응용 프로그램에 대한 리소스 요구 사항을 신중하게 검토해야 합니다.
 
->[!WARNING]
->백업 데이터를 CSV 볼륨에 복원해야 하는 경우 클러스터 노드에서 응용 프로그램 일치 데이터를 유지 관리하고 복원하는 백업 응용 프로그램의 기능 및 제한 사항을 알아야 합니다. 예를 들어 일부 응용 프로그램에서는 CSV가 CSV 볼륨이 백업된 노드와 다른 노드에 복원된 경우 복원이 실행된 노드에서 응용 프로그램 상태에 대한 중요한 데이터를 실수로 덮어쓸 수도 있습니다.
+> [!WARNING]
+> 백업 데이터를 CSV 볼륨에 복원해야 하는 경우 클러스터 노드에서 응용 프로그램 일치 데이터를 유지 관리하고 복원하는 백업 응용 프로그램의 기능 및 제한 사항을 알아야 합니다. 예를 들어 일부 응용 프로그램에서는 CSV가 CSV 볼륨이 백업된 노드와 다른 노드에 복원된 경우 복원이 실행된 노드에서 응용 프로그램 상태에 대한 중요한 데이터를 실수로 덮어쓸 수도 있습니다.
 
 ## <a name="more-information"></a>자세한 정보
 

@@ -1,23 +1,23 @@
 ---
 title: 디스크 관리 개요
 description: 디스크 관리는 새 드라이브를 초기화, 볼륨 확장, 축소 파티션 및 드라이브 문자 변경 등의 고급 저장소 작업을 수행할 수 있는 Windows에서 시스템 유틸리티입니다.
-ms.date: 4/2/2018
+ms.date: 06/07/2019
 ms.prod: windows-server-threshold
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 2a467c64a3e0ff38b5165b9e001fc2deb2d92148
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a3885ae6b09ad431fd1ea5e4c593e02c7bb274d9
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59819284"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812551"
 ---
 # <a name="overview-of-disk-management"></a>디스크 관리 개요
 
-> **적용 대상:** Windows 10, Windows 8.1, Windows 7, Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> **적용 대상:** Windows 10, Windows 8.1, Windows 7, Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 디스크 관리는 고급 저장소 작업을 수행할 수 있는 Windows에서 시스템 유틸리티입니다. 일부의 디스크 관리에 대 한 적합 한 작업은 다음과 같습니다.
 

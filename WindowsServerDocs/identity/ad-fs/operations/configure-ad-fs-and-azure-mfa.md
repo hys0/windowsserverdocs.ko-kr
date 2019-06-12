@@ -9,12 +9,12 @@ ms.date: 01/28/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 33b782ded2ae1bdd8b00c08b81e4e0ee7f885899
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 62b366b8fa388319a758ab853d28d1c49cb1bf06
+ms.sourcegitcommit: a3958dba4c2318eaf2e89c7532e36c78b1a76644
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66188830"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719713"
 ---
 # <a name="configure-azure-mfa-as-authentication-provider-with-ad-fs"></a>AD FS와 함께 인증 공급자로 Azure MFA를 구성 합니다.
 
@@ -65,17 +65,14 @@ Set-AdfsClaimsProviderTrust -AnchorClaimType "http://schemas.xmlsoap.org/ws/2005
 AD fs 인증을 위해 Azure MFA를 사용 하는 경우 다음 필수 조건이 필요 합니다.  
   
 - [Azure Active Directory와 Azure 구독](https://azure.microsoft.com/pricing/free-trial/)합니다.  
-- [Azure Multi-factor Authentication](https://azure.microsoft.com/documentation/articles/multi-factor-authentication/)  
-- 웹 앱 프록시는 포트 80 및 443을 통해 다음을 사용 하 여 전달할 수 있습니다.
-
-    - https://adnotifications.windowsazure.com
-    - https://login.microsoftonline.com
+- [Azure Multi-factor Authentication](https://azure.microsoft.com/documentation/articles/multi-factor-authentication/) 
 
 
 > [!NOTE]
 > Azure AD와 Azure MFA는 Azure AD Premium 및 Enterprise Mobility Suite (EMS)에 포함 됩니다.  이러한 경우에 개별 구독을 설치할 필요가 없습니다.
+
 - Windows Server 2016 AD FS 온-프레미스 환경입니다.  
-   - 서버 포트 80 및 443을 통해 다음 Url과 통신할 수 있어야 합니다.
+   - 서버 포트 443 통해 다음 Url과 통신할 수 있어야 합니다.
       - https://adnotifications.windowsazure.com
       - https://login.microsoftonline.com
 - 온-프레미스 환경이 [Azure AD와 페더레이션 합니다.](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-get-started-custom/#configuring-federation-with-ad-fs)  

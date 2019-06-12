@@ -14,12 +14,12 @@ author: jaimeo
 ms.author: jaimeo
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: 29183c62830cbe9e26cce4e0ce4543b554f0ed65
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d089af3562467aa1c222b17d9a1ad69d9c1b5008
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59837314"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66810589"
 ---
 # <a name="system-requirements"></a>시스템 요구 사항
 
@@ -27,10 +27,8 @@ ms.locfileid: "59837314"
 
 이 항목에서는 Windows Server&reg; 2016 또는 Windows Server, 버전 1709를 실행하기 위한 최소 시스템 요구 사항을 설명합니다.
 
-
-> [!Note]  
+> [!NOTE]  
 > 이 릴리스에서는 새로 설치만 권장됩니다.  
->   
 
 > [!NOTE]  
 > 설치 시 Server Core 옵션으로 설치하도록 선택한 경우 GUI 구성 요소는 설치되지 않으며 서버 관리자를 사용하여 설치하거나 제거할 수 있다는 점을 알아야 합니다. GUI 기능이 필요한 경우 Windows Server 2016을 설치할 때 "데스크톱 환경 포함 서버" 옵션을 선택해야 합니다. 자세한 내용은 [Nano 서버 설치](Getting-Started-with-Nano-Server.md)를 참조하세요.  
@@ -79,13 +77,13 @@ Windows Server 2016을 실행하는 컴퓨터에는 PCI Express 아키텍처 사
 
 **최소**: 32GB  
 
-   > [!NOTE]  
-    > 32GB는 성공적인 설치의 *최소 절대*값으로 간주됩니다. 이 최소 설치를 사용하여 웹 서비스(IIS) 서버 역할을 포함하는 Server Core 모드에서 Windows Server 2016을 설치할 수 있습니다. Server Core 모드의 서버는 GUI 포함 서버 모드의 동일한 서버보다 약 4GB 작습니다. 
-    >   
-    > 시스템 파티션은 다음의 환경에서 추가 공간을 필요로 합니다.  
-    >   
-    > -   네트워크에 시스템을 설치한 경우  
-    > -   RAM이 16GB를 넘는 컴퓨터에서는 페이징, 최대 절전 모드 및 덤프 파일을 위해 더 많은 디스크 공간이 필요합니다.  
+> [!NOTE]
+> 32GB는 성공적인 설치의 *최소 절대*값으로 간주됩니다. 이 최소 설치를 사용하여 웹 서비스(IIS) 서버 역할을 포함하는 Server Core 모드에서 Windows Server 2016을 설치할 수 있습니다. Server Core 모드의 서버는 GUI 포함 서버 모드의 동일한 서버보다 약 4GB 작습니다. 
+> 
+> 시스템 파티션은 다음의 환경에서 추가 공간을 필요로 합니다.  
+> 
+> -   네트워크에 시스템을 설치한 경우  
+> -   RAM이 16GB를 넘는 컴퓨터에서는 페이징, 최대 절전 모드 및 덤프 파일을 위해 더 많은 디스크 공간이 필요합니다.  
 
 ## <a name="network-adapter-requirements"></a>네트워크 어댑터 요구 사항  
 
@@ -97,8 +95,6 @@ Windows Server 2016을 실행하는 컴퓨터에는 PCI Express 아키텍처 사
 - PXE(Pre-boot Execution Environment) 지원  
 
 네트워크 디버깅을 지원하는 네트워크 어댑터(KDNet)는 유용하지만 최소 요구 사항이 아닙니다.   
-
-
 
 ## <a name="other-requirements"></a>기타 요구 사항  
 이 릴리스를 실행하는 컴퓨터에는 다음 항목도 있어야 합니다.  
@@ -117,13 +113,13 @@ Windows Server 2016을 실행하는 컴퓨터에는 PCI Express 아키텍처 사
 
 -   인터넷 액세스(사용 요금 부과 가능)  
 
->[!NOTE]  
+> [!NOTE]  
 > TPM(신뢰할 수 있는 플랫폼 모듈) 칩은 이 릴리스를 설치하는 데 반드시 필요한 것은 아니지만 BitLocker 드라이브 암호화와 같은 특정 기능을 사용하는 데 필요합니다. 컴퓨터에서 TPM을 사용하는 경우 다음 요구 사항을 충족해야 합니다.  
 >  
->- 하드웨어 기반 TPM은 TPM 사양 버전 2.0를 구현해야 합니다.  
->- 버전 2.0를 구현하는 TPM에는 하드웨어 공급 업체에 의해 TPM에 사전 구축된 또는 첫 번째로 부팅하는 동안 장치에 의해 검색할 수 있는 EK 인증서가 있어야 합니다.  
->- 버전 2.0을 구현하는 TPM은 SHA-256 PCR 뱅크와 제공되어야 하며 SHA-256에 대해 PCR 0~23을 구현해야 합니다. SHA-1 및 SHA-256 측정 둘 다에 사용할 수 있는 전환 가능한 단일 PCR 뱅크가 포함된 TPM을 사용할 수 있습니다.  
->- TPM을 해제하는 UEFI 옵션은 요구 사항이 아닙니다.  
+> - 하드웨어 기반 TPM은 TPM 사양 버전 2.0를 구현해야 합니다.  
+> - 버전 2.0를 구현하는 TPM에는 하드웨어 공급 업체에 의해 TPM에 사전 구축된 또는 첫 번째로 부팅하는 동안 장치에 의해 검색할 수 있는 EK 인증서가 있어야 합니다.  
+> - 버전 2.0을 구현하는 TPM은 SHA-256 PCR 뱅크와 제공되어야 하며 SHA-256에 대해 PCR 0~23을 구현해야 합니다. SHA-1 및 SHA-256 측정 둘 다에 사용할 수 있는 전환 가능한 단일 PCR 뱅크가 포함된 TPM을 사용할 수 있습니다.  
+> - TPM을 해제하는 UEFI 옵션은 요구 사항이 아닙니다.  
 
 ## <a name="installation-of-nano-server"></a>Nano Server 설치  
 Windows Server 2016을 Nano 서버로 설치하는 자세한 단계는 [Nano 서버 설치](Getting-Started-with-Nano-Server.md)를 참조하세요.
@@ -131,5 +127,5 @@ Windows Server 2016을 Nano 서버로 설치하는 자세한 단계는 [Nano 서
 ## <a name="additional-resources"></a>추가 리소스
 - [Windows 프로세서 요구 사항](https://docs.microsoft.com/windows-hardware/design/minimum/windows-processor-requirements)
 - [Windows Server 2016 Standard 및 Datacenter edition 비교](https://docs.microsoft.com/windows-server/get-started/2016-edition-comparison)
-- [Windows 10 시스템 요구 사항 ](https://www.microsoft.com/windows/windows-10-specifications#system-specifications)
+- [Windows 10 시스템 요구 사항](https://www.microsoft.com/windows/windows-10-specifications#system-specifications)
 - [Windows Server 2016 라이선스 데이터 시트 다운로드](http://download.microsoft.com/download/7/2/9/7290EA05-DC56-4BED-9400-138C5701F174/WS2016LicensingDatasheet.pdf)

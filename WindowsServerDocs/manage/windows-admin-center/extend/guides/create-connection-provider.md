@@ -5,15 +5,15 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 09/18/2018
+ms.date: 06/06/2019
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: 883fba96fcb71cb1c6e8162c1564d66924c4e24d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b79e832ee45990d18baf4c211ab68b907134ceb7
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59885654"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66811838"
 ---
 # <a name="create-a-connection-provider-for-a-solution-extension"></a>솔루션 확장에 대 한 연결 공급자 만들기
 
@@ -76,26 +76,24 @@ ms.locfileid: "59885654"
 | 속성 | 설명 |
 | -------- | ----------- |
 | entryPointType | 이것은 필수 속성입니다. 세 가지 유효한 값: "도구", "솔루션" 및 "connectionProvider"입니다. | 
-| NAME | 솔루션의 범위 내에서 연결 공급자를 식별합니다. 이 값은 전체 Windows Admin Center 인스턴스 (뿐 아니라 솔루션) 내에서 고유 해야 합니다. |
+| name | 솔루션의 범위 내에서 연결 공급자를 식별합니다. 이 값은 전체 Windows Admin Center 인스턴스 (뿐 아니라 솔루션) 내에서 고유 해야 합니다. |
 | path | 솔루션에서 구성 하는 경우 연결에 대해"추가" UI URL 경로를 나타냅니다. 이 값은 앱 routing.module.ts 파일에서 구성 하는 경로 매핑해야 합니다. 솔루션 진입점 연결 rootNavigationBehavior를 사용 하도록 구성 됩니다, 경우에이 경로 추가 연결 UI를 표시 하는 셸에서 사용 되는 모듈을 로드 됩니다. 자세한 정보가 단원의 rootNavigationBehavior에서. |
 | displayName | 여기에 입력 한 값은 검은색 Windows Admin Center 표시줄 사용자 로드 솔루션의 연결 페이지 아래쪽의 셸의 오른쪽에 표시 됩니다. |
 | 아이콘 | 솔루션을 나타내는 데 솔루션에 대 한 드롭다운 메뉴에서에서 아이콘을 나타냅니다. |
 | description | 진입점에 대 한 간단한 설명을 입력 합니다. |
 | connectionType | 공급자가 로드 되는 연결 유형을 나타냅니다. 여기에 입력 한 값도 사용할 솔루션 진입점에서 솔루션 이러한 연결을 로드할 수 있는지를 지정 합니다. 여기에 입력 한 값도 사용할 도구 항목 요소에서이 형식을 사용 하 여 호환 가능한 도구 임을 합니다. 여기에 입력이 값도 RPC에 제출 된 연결 개체에 사용할 "추가 창에서" 응용 프로그램 계층 구현 단계에서 호출 합니다. |
 | connectionTypeName | 연결 테이블에서 연결 공급자를 사용 하는 연결을 나타내는 데 사용 합니다. 이 복수형 이름 형식의 해야 합니다. |
-| connectionTypeUrlName | 인스턴스에 Windows Admin Center 연결 된 후 로드 된 솔루션을 나타내는 URL을 만드는 데. 이 항목이 대상 전과 후 연결에 사용 됩니다. 이 예제에서 "connectionexample" URL에서이 값의 위치는: http://localhost:6516/solutionexample/connections/connectionexample/con-fake1.corp.contoso.com |
-| connectionTypeDefaultSolution | 연결 공급자가 로드 해야 하는 기본 구성 요소를 나타냅니다. 이 값의 조합입니다. [a]; 매니페스트의 맨 위에 있는 정의 된 확장 패키지의 이름 [b] 느낌표 (!). [c] 솔루션 항목 지점 이름입니다.    이 값은 "msft.sme.mySample-확장명"를 사용 하 여 프로젝트 및 솔루션 진입점을 이름 "예"를 사용 하 여 "msft.sme.solutionExample 확장! 예제에서는". |
-| connectionTypeDefaultTool | 기본을 연결을 성공적으로 로드 해야 하는 도구를 나타냅니다. 이 속성 값을 connectionTypeDefaultSolution 비슷합니다 두 부분으로 구성 됩니다. 이 값의 조합입니다. [a]; 매니페스트의 맨 위에 있는 정의 된 확장 패키지의 이름 [b] 느낌표 (!). [처음에 로드 해야 하는 도구에 대 한 c]에서 도구 항목 지점 이름입니다. 이 값은 "msft.sme.solutionExample-확장명"를 사용 하 여 프로젝트 및 솔루션 진입점을 이름 "예"를 사용 하 여 "msft.sme.solutionExample 확장! 예제에서는". |
+| connectionTypeUrlName | 인스턴스에 Windows Admin Center 연결 된 후 로드 된 솔루션을 나타내는 URL을 만드는 데. 이 항목이 대상 전과 후 연결에 사용 됩니다. 이 예제에서 "connectionexample" URL에서이 값의 위치는: `http://localhost:6516/solutionexample/connections/connectionexample/con-fake1.corp.contoso.com` |
+| connectionTypeDefaultSolution | 연결 공급자가 로드 해야 하는 기본 구성 요소를 나타냅니다. 이 값은 조합입니다. <br>[a]; 매니페스트의 맨 위에 있는 정의 된 확장 패키지의 이름 <br>[b] 느낌표 (!). <br>[c] 솔루션 항목 지점 이름입니다.    <br>이 값은 "msft.sme.mySample-확장명"를 사용 하 여 프로젝트 및 솔루션 진입점을 이름 "예"를 사용 하 여 "msft.sme.solutionExample 확장! 예제에서는". |
+| connectionTypeDefaultTool | 기본을 연결을 성공적으로 로드 해야 하는 도구를 나타냅니다. 이 속성 값을 connectionTypeDefaultSolution 비슷합니다 두 부분으로 구성 됩니다. 이 값은 조합입니다. <br>[a]; 매니페스트의 맨 위에 있는 정의 된 확장 패키지의 이름 <br>[b] 느낌표 (!). <br>[처음에 로드 해야 하는 도구에 대 한 c]에서 도구 항목 지점 이름입니다. <br>이 값은 "msft.sme.solutionExample-확장명"를 사용 하 여 프로젝트 및 솔루션 진입점을 이름 "예"를 사용 하 여 "msft.sme.solutionExample 확장! 예제에서는". |
 | connectionStatusProvider | "연결 상태 공급자 정의" 섹션을 참조 하세요 |
 
 ## <a name="define-connection-status-provider"></a>연결 상태 공급자를 정의 합니다.
 
 연결 상태 공급자도 연결 하는 사용자를 대상에 액세스 권한이 있는지를 확인 하는 온라인으로 사용 가능한 대상 검사할지 메커니즘입니다. 현재 두 가지 유형의 연결 상태 공급자  PowerShell 및 RelativeGatewayUrl 합니다.
 
-*   PowerShell 연결 상태 공급자
-    *   온라인 상태이 고 PowerShell 스크립트를 통해 액세스할 수 있는 대상 인지 확인 합니다. 아래에 정의 된 단일 속성 "상태"를 사용 하 여 개체에 결과 반환 합니다.
-*   RelativeGatewayUrl 연결 상태 공급자
-    *   온라인 상태이 고 rest 호출을 통해 액세스할 수 있는 대상 인지 확인 합니다. 아래에 정의 된 단일 속성 "상태"를 사용 하 여 개체에 결과 반환 합니다.
+*   <strong>PowerShell 연결 상태 공급자</strong> -온라인 상태이 고 PowerShell 스크립트를 통해 액세스할 수 있는 대상 인지 여부를 확인 합니다. 아래에 정의 된 단일 속성 "상태"를 사용 하 여 개체에 결과 반환 합니다.
+*   <strong>연결 상태 공급자 RelativeGatewayUrl</strong> -온라인 상태이 고 rest 호출을 통해 액세스할 수 있는 대상 인지 여부를 확인 합니다. 아래에 정의 된 단일 속성 "상태"를 사용 하 여 개체에 결과 반환 합니다.
 
 ### <a name="define-status"></a>상태를 정의 합니다.
 
@@ -113,25 +111,22 @@ ms.locfileid: "59885654"
 
 상태 속성:
 
-* 레이블
-    * 상태를 설명 하는 레이블을 반환 형식입니다. Note 런타임에서 레이블에 대 한 값을 매핑할 수 있습니다. 런타임에서 매핑 값에 대 한 아래 항목을 참조 하세요.
+* <strong>레이블</strong> -상태 반환 형식을 설명 하는 레이블. Note 런타임에서 레이블에 대 한 값을 매핑할 수 있습니다. 런타임에서 매핑 값에 대 한 아래 항목을 참조 하세요.
 
-* 형식
-    * 상태 반환 형식입니다. 형식에는 다음 열거형 값입니다. 임의의 값이 2 이상인 플랫폼 연결 된 개체를 탐색 하지 않습니다 하 고 UI에 오류가 표시 됩니다.
+* <strong>형식</strong> -상태 형식을 반환 합니다. 형식에는 다음 열거형 값입니다. 임의의 값이 2 이상인 플랫폼 연결 된 개체를 탐색 하지 않습니다 하 고 UI에 오류가 표시 됩니다.
 
-형식:
+   형식:
 
-| 값 | Description |
-| ----- | ----------- |
-| 0 | 온라인 |
-| 1 | 경고 |
-| 2 | 권한 없음 |
-| 3 | Error |
-| 4 | 심각한 |
-| 5 | 알 수 없음 |
+  | 값 | Description |
+  | ----- | ----------- |
+  | 0 | 온라인 |
+  | 1 | 경고 |
+  | 2 | 권한 없음 |
+  | 3 | Error |
+  | 4 | 심각한 |
+  | 5 | 알 수 없음 |
 
-* 설명
-    * 자세한 상태를 설명 하는 형식을 반환 합니다.
+* <strong>세부 정보</strong> -상태 반환 형식을 설명 하는 추가 세부 정보입니다.
 
 ### <a name="powershell-connection-status-provider-script"></a>연결 상태 공급자 PowerShell 스크립트
 
@@ -139,7 +134,7 @@ ms.locfileid: "59885654"
 
 PowerShell 스크립트 예제:
 
-``` ts
+```PowerShell
 ## Get-My-Status ##
 
 function Get-Status()

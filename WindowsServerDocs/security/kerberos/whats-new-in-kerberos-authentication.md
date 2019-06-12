@@ -8,12 +8,12 @@ manager: alanth
 author: justinha
 ms.technology: security-authentication
 ms.date: 11/09/2016
-ms.openlocfilehash: 7b046490c606cdf9e1436f503bf46a9cd4280ea9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 90107bd49268f232fd6d532c304c2fdd050bcbf5
+ms.sourcegitcommit: c6acac3622e5d34714ca5c569805931681f98779
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59831094"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66391500"
 ---
 # <a name="whats-new-in-kerberos-authentication"></a>What's New in Kerberos Authentication
 
@@ -50,6 +50,8 @@ HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Paramete
 Spn의 IP 주소가 호스트 이름에 대 한 지원을 구성 하려면 TryIPSPN 항목을 만듭니다. 이 항목은 기본적으로 레지스트리에 없습니다. 항목을 만든 후 DWORD 값을 1로 변경 합니다. 구성 되지 않은 경우에 IP 주소가 호스트 이름 시도 되지 됩니다.
 
 SPN이 Active Directory에서 등록, 인증 Kerberos를 사용 하 여 성공 합니다. 
+
+자세한 내용은 문서를 체크 아웃 [IP 주소에 대 한 Kerberos 구성](configuring-kerberos-over-ip.md)합니다.
 
 ## <a name="kdc-support-for-key-trust-account-mapping"></a>키 트러스트 계정 매핑에 대 한 KDC 지원
 

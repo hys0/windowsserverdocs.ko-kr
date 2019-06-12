@@ -7,14 +7,14 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 03/25/2019
+ms.date: 06/04/2019
 description: IT 전문가 위한 Windows Server에 대 한 온-프레미스 저장소 설명서의 새로운 기능과 업데이트 된 항목입니다.
-ms.openlocfilehash: fa3da6e14c36fecfa48c3688a36518babb257920
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 3245e6bc5320cc0ffae01817a8f7b9caeaa6c685
+ms.sourcegitcommit: cd12ace92e7251daaa4e9fabf1d8418632879d38
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66192681"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66501494"
 ---
 # <a name="change-history-for-storage-topics-in-windows-server"></a>Windows Server의 저장소 변경 기록 항목
 
@@ -22,7 +22,13 @@ ms.locfileid: "66192681"
 
 이 항목에서는의 새로운 기능과 업데이트 된 항목을 나열 합니다 [저장소](storage.md) Windows Server에 대 한 설명서입니다.
 
-> Windows Server 용 업데이트 내역을 찾고, 참조 [Windows Server 2016 및 Windows 10 업데이트 기록](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history)합니다.
+> Windows Server 용 업데이트 내역을 찾고, 참조 [Windows 10 및 Windows Server 2019 기록을 업데이트할](https://support.microsoft.com/help/4464619) 또는 [Windows Server 2016 업데이트 기록](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history)합니다.
+
+## <a name="june-2019"></a>2019 년 6 월
+
+| 신규 항목 또는 변경된 항목                                        | 설명|
+| ---                                                         | ---           |
+| [저장소 마이그레이션 서비스 FAQ](storage-migration-service/faq.md#consolidate-servers) | 성능 최적화 정보를 추가 합니다. |
 
 ## <a name="may-2019"></a>2019년 5월
 
@@ -36,7 +42,7 @@ ms.locfileid: "66192681"
 
 |신규 항목 또는 변경된 항목                                        |설명|
 |---                                                         |---           |
-|[Azure Monitor 사용 하 여 모니터](storage-spaces/configure-azure-monitor.md)| 단추를 사용하여 새|
+|[Azure Monitor를 사용하여 모니터](storage-spaces/configure-azure-monitor.md)| 단추를 사용하여 새|
 |[스토리지 공간 다이렉트 클러스터를 Windows Server 2019로 업그레이드](storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md)| 단추를 사용하여 새        |
 |[DFS 복제](dfs-replication/dfsr-overview.md)        | 마이그레이션된 합니다 [이전 버전](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770278(v%3dws.11)) 라이브러리|
 
@@ -105,7 +111,7 @@ ms.locfileid: "66192681"
 |[독립 실행형 서버에 스토리지 공간 배포](storage-spaces/deploy-standalone-storage-spaces.md)|마이그레이션된 합니다 [이전 버전](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) 라이브러리입니다.|
 |[NTFS 개요](file-server/ntfs-overview.md)|마이그레이션된 합니다 [이전 버전](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) 라이브러리입니다.|
 |[미리 시드하고 파일에 Robocopy를 사용 하 여 DFS 복제에 대 한](dfs-replication/preseed-dfsr-with-robocopy.md)|마이그레이션된 합니다 [이전 버전](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) 라이브러리입니다.|
-|[Vssadmin-이전 버전 명령줄 도구](..\administration\windows-commands\vssadmin.md)|마이그레이션된 합니다 [이전 버전](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) 라이브러리입니다.|
+|[Vssadmin-이전 버전 명령줄 도구](../administration/windows-commands/vssadmin.md)|마이그레이션된 합니다 [이전 버전](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) 라이브러리입니다.|
 |[파일 서버 리소스 관리자 개요](fsrm/fsrm-overview.md)| Windows Server 2016 버전 1803에서에서 새 레지스트리 설정에 대 한 추가 정보입니다.|
 |[서버 간 저장소 복제](storage-replica/server-to-server-storage-replication.md)|Windows Admin Center 사용 하 여 추가 정보입니다.|
 |[저장소 복제본의 알려진 문제](storage-replica/storage-replica-known-issues.md)|새 정보를 추가했습니다.|
@@ -195,13 +201,13 @@ ms.locfileid: "66192681"
 
 ## <a name="may-2017"></a>2017년 5월
 
-|신규 항목 또는 변경된 항목|설명|
-|---|---|
-|[데이터 중복 제거 개요](data-deduplication/overview.md) 및 <br>[데이터 중복 제거 설치](data-deduplication/install-enable.md)|새로운 소프트웨어 업데이트를 포함하도록 시스템 요구 사항을 업데이트했습니다. |
-|[클라우드 폴더 배포](work-folders/deploy-work-folders.md)|Azure AD 응용 프로그램 프록시 지원 및 업데이트된 필수 단계에 대한 정보를 추가했습니다.|
-|[저장소 공간 다이렉트 배포](storage-spaces/deploy-storage-spaces-direct.md)|필요한 기능과 Enable-NetAdapterQos에서 더 이상 사용되지 않는 매개 변수를 수정하여 1.3단계를 추가했습니다.||[저장소 복제본 개요](storage-replica/storage-replica-overview.md)(및 기타 저장소 복제본 항목)|저장소 복제본 로그를 위한 빠른, 단독 저장소 사용을 위한 권장 사항을 추가했습니다.|
-|[저장소 복제본에 대 한 질문과 대답](storage-replica/storage-replica-frequently-asked-questions.md)|다른 복제 토폴로지 중에서 선택하는 방법에 대한 정보를 추가했습니다.|
-|[저장소 공간 다이렉트 하드웨어 요구 사항](storage-spaces/storage-spaces-direct-hardware-requirements.md)|캐시 장치에 대한 드라이브 내구성 요구 사항을 변경했습니다.|
+|                                                           신규 항목 또는 변경된 항목                                                           |                                          설명                                           |
+|------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+| [데이터 중복 제거 개요](data-deduplication/overview.md) 및 <br>[데이터 중복 제거 설치](data-deduplication/install-enable.md) |              새로운 소프트웨어 업데이트를 포함하도록 시스템 요구 사항을 업데이트했습니다.               |
+|                                      [클라우드 폴더 배포](work-folders/deploy-work-folders.md)                                       |         Azure AD 응용 프로그램 프록시 지원 및 업데이트된 필수 단계에 대한 정보를 추가했습니다.          |
+|                            [저장소 공간 다이렉트 배포](storage-spaces/deploy-storage-spaces-direct.md)                             | 필요한 기능과 Enable-NetAdapterQos에서 더 이상 사용되지 않는 매개 변수를 수정하여 1.3단계를 추가했습니다. |
+|               [저장소 복제본에 대 한 질문과 대답](storage-replica/storage-replica-frequently-asked-questions.md)                |             다른 복제 토폴로지 중에서 선택하는 방법에 대한 정보를 추가했습니다.              |
+|               [저장소 공간 다이렉트 하드웨어 요구 사항](storage-spaces/storage-spaces-direct-hardware-requirements.md)               |                    캐시 장치에 대한 드라이브 내구성 요구 사항을 변경했습니다.                     |
 
 ## <a name="april-2017"></a>2017년 4월
 

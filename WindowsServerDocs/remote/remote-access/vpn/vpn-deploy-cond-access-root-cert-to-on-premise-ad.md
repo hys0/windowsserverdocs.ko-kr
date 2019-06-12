@@ -15,12 +15,12 @@ ms.author: pashort
 author: shortpatti
 ms.localizationpriority: medium
 ms.reviewer: deverette
-ms.openlocfilehash: 210540846f5d62dfc74a2e629a6b7675ccf9894d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4aaad98cd04c9b07bdea848294e10d9bcb602064
+ms.sourcegitcommit: 0948a1abff1c1be506216eeb51ffc6f752a9fe7e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59837374"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749544"
 ---
 # <a name="step-74-deploy-conditional-access-root-certificates-to-on-premises-ad"></a>7.4단계. 온-프레미스에 조건부 액세스 루트 인증서를 배포할 AD
 
@@ -28,10 +28,10 @@ ms.locfileid: "59837374"
 
 이 단계에서는 조건부 액세스 루트 인증서와 VPN 인증에 대 한 신뢰할 수 있는 루트 인증서에 배포한 온-프레미스 AD입니다.
 
-&#171;  [**이전:** 7.3단계. 조건부 액세스 정책 구성](vpn-config-conditional-access-policy.md)<br>
-&#187;[ **다음:** 7.5단계. 만들 8.1(OMA-DM 기반 VPNv2 프로 파일을 Windows 10 장치](vpn-create-oma-dm-based-vpnv2-profiles.md)
+- [**이전:** 7.3단계. 조건부 액세스 정책 구성](vpn-config-conditional-access-policy.md)
+- [**다음:** 7.5단계. Windows 10 디바이스에 대한 OMA-DM 기반 VPNv2 프로필 만들기](vpn-create-oma-dm-based-vpnv2-profiles.md)
 
-1. 에 **VPN 연결** 페이지에서 클릭 **인증서 다운로드**합니다. 
+1. 에 **VPN 연결** 페이지에서 **인증서 다운로드**합니다. 
    
     ![조건부 액세스에 대 한 인증서를 다운로드 합니다.](../../media/Always-On-Vpn/06.png)
 
@@ -43,7 +43,7 @@ ms.locfileid: "59837374"
     >[!NOTE]
     >VPN 서버는 Active Directory 도메인에 가입 되지는 환경에 대 한 클라우드 루트 인증서에 추가 해야 합니다 _신뢰할 수 있는 루트 인증 기관_ 수동으로 저장 합니다.
 
-    |Command  |설명  |  
+    |명령  |설명  |  
     |---------|-------------| 
     |`certutil -dspublish -f VpnCert.cer RootCA`     |두 개 만듭니다 **Microsoft VPN 루트 CA gen 1** 에서 컨테이너를 **CN = AIA** 및 **CN = 인증 기관** 컨테이너에서 값으로 각 루트 인증서를 게시 하 고 합니다 _cACertificate_ 특성을 둘 다 **Microsoft VPN 루트 CA gen 1** 컨테이너입니다.|  
     |`certutil -dspublish -f VpnCert.cer NTAuthCA`   |하나 만듭니다 **CN = NTAuthCertificates** 컨테이너를 **CN = AIA** 및 **CN = 인증 기관** 컨테이너에서 값으로 각 루트 인증서를 게시 하 고 합니다 _cACertificate_ 특성을 **CN = NTAuthCertificates** 컨테이너입니다. |  
@@ -58,14 +58,15 @@ ms.locfileid: "59837374"
 
     b.  시작 메뉴에서 VPN 서버에서 입력 **pkiview.msc** 엔터프라이즈 PKI 대화 상자를 엽니다.
 
-    다.  시작 메뉴에서 입력 **pkiview.msc** 엔터프라이즈 PKI 대화 상자를 엽니다.
+    c.  시작 메뉴에서 입력 **pkiview.msc** 엔터프라이즈 PKI 대화 상자를 엽니다.
 
     d.  마우스 오른쪽 단추로 클릭 **엔터프라이즈 PKI** 선택한 **AD 관리 컨테이너**합니다.
 
-    d.  아래에 있는 각 Microsoft VPN 루트 CA gen 1 인증서 있는지 확인 합니다.<ul><li>NTAuthCertificates</li><li>AIA 컨테이너</li><li>인증서 기관 컨테이너</li></ul>
+    d.  아래에 있는 각 Microsoft VPN 루트 CA gen 1 인증서 있는지 확인 합니다.
+      - NTAuthCertificates
+      - AIA 컨테이너
+      - 인증서 기관 컨테이너
 
-    
-## <a name="next-step"></a>다음 단계
-[7.5 단계입니다. 만들 8.1(OMA-DM Windows 10 장치에 VPNv2 프로필 기반](vpn-create-oma-dm-based-vpnv2-profiles.md): 이 단계에서는 OMA-DM를 만들 수 있습니다 기반 VPN 장치 구성 정책을 배포 하려면 Intune을 사용 하 여 VPNv2 프로 파일입니다. VPNv2 프로필을 만드는 SCCM 또는 PowerShell 스크립트를 원한다 면 참조 [VPNv2 CSP 설정이](https://docs.microsoft.com/windows/client-management/mdm/vpnv2-csp) 대 한 자세한 내용은 합니다.
+## <a name="next-steps"></a>다음 단계
 
----
+[7.5단계. 만들 8.1(OMA-DM Windows 10 장치에 VPNv2 프로필 기반](vpn-create-oma-dm-based-vpnv2-profiles.md): 이 단계에서는 OMA-DM를 만들 수 있습니다 기반 VPN 장치 구성 정책을 배포 하려면 Intune을 사용 하 여 VPNv2 프로 파일입니다. VPNv2 프로필을 만드는 SCCM 또는 PowerShell 스크립트를 원한다 면 참조 [VPNv2 CSP 설정이](https://docs.microsoft.com/windows/client-management/mdm/vpnv2-csp) 대 한 자세한 내용은 합니다.

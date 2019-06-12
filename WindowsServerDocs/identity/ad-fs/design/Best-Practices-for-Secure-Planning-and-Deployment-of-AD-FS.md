@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: df1afc77afffd9b737965215a5c9d96f278c8129
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 4a2fb188bd0a46ebd54ae068e8e4eeb63788aaa0
+ms.sourcegitcommit: cd12ace92e7251daaa4e9fabf1d8418632879d38
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66191673"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66501576"
 ---
 # <a name="best-practices-for-secure-planning-and-deployment-of-ad-fs"></a>AD FS 보안 계획 및 배포 모범 사례
 
@@ -23,7 +23,12 @@ ms.locfileid: "66191673"
   
 ## <a name="core-security-best-practices-for-ad-fs"></a>AD FS에 대한 핵심 보안 모범 사례  
 다음 핵심 모범 사례에 공통적인 모든 AD FS 설치 개선 하거나 디자인 또는 배포의 보안을 확장 하려는:  
-  
+
+-   **"계층 0" 시스템으로 AD FS 보안 유지** 
+
+    AD FS는 근본적으로 인증 시스템입니다.  따라서 네트워크에서 다른 id 시스템 같은 "계층 0" 시스템으로 처리 되어야 합니다.  [Microsoft Docs](https://docs.microsoft.com/en-us/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material) Active Directory 관리 계층 모델에 대 한 자세한 내용은 합니다. 
+
+
 -   **보안 구성 마법사를 사용 하 여 페더레이션 서버 및 페더레이션 서버 프록시 컴퓨터에 AD FS 관련 보안 모범 사례 적용**  
   
     구성 마법사 SCW (보안)는 미리 설치 된 모든 Windows Server 2008, Windows Server 2008 R2 및 Windows Server 2012 컴퓨터에서 제공 되는 도구입니다. 이 도구를 사용하여 설치하는 서버 역할에 따라 서버의 공격 노출을 줄일 수 있는 보안 모범 사례를 적용할 수 있습니다.  

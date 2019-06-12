@@ -13,16 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 848c57736c3530e296cffb970237149b4634de67
-ms.sourcegitcommit: d84dc3d037911ad698f5e3e84348b867c5f46ed8
+ms.openlocfilehash: 25c0f997ea0b9f97051baa291bdf87c84b6b1cbb
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66266517"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66811293"
 ---
 # <a name="bitsadmin-replaceremoteprefix"></a>bitsadmin replaceremoteprefix
-
-
 
 해당 원격 URL로 시작 작업의 모든 파일 *OldPrefix* 를 사용 하도록 변경 *NewPrefix*합니다.
 
@@ -43,6 +41,7 @@ bitsadmin /ReplaceRemotePrefix <Job> <OldPrefix> <NewPrefix
 ## <a name="examples"></a>예
 
 다음 예제에서는 명명 된 작업의 모든 파일을 변경 *myDownloadJob* 원격 URL로 시작 갖는 *http://stageserver* 에 *http://prodserver* 합니다.
+
 ```
 C:\>bitsadmin /ReplaceRemotePrefix myDownloadJob http://stageserver http://prodserver
 ```

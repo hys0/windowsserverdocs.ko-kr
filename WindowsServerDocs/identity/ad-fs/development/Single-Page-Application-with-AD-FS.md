@@ -4,16 +4,16 @@ description: AngularJS를 보안 하 JavaScript 용 ADAL를 사용 하 여 AD FS
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 06/12/2018
+ms.date: 06/13/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: active-directory-federation-services
-ms.openlocfilehash: 24a9caba7a2745973d7c69c3bd7bc42717e7a06c
-ms.sourcegitcommit: d84dc3d037911ad698f5e3e84348b867c5f46ed8
+ms.openlocfilehash: f8a8d6b81f63a691954eecf02dba4e33215a462a
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66266690"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66811751"
 ---
 # <a name="build-a-single-page-web-application-using-oauth-and-adaljs-with-ad-fs-2016-or-later"></a>OAuth 및 ADAL을 사용 하 여 단일 페이지 웹 응용 프로그램을 빌드하십시오. AD FS 2016 이상의 버전을 사용 하 여 JS
 
@@ -21,7 +21,8 @@ ms.locfileid: "66266690"
 
 이 시나리오에서는 사용자가 로그인 할 때 JavaScript 프런트 엔드 사용 [Active Directory 인증 라이브러리 (ADAL JavaScript 용. JS)](https://github.com/AzureAD/azure-activedirectory-library-for-js) 및 Azure AD에서 ID 토큰 (id_token)을 가져오려면 암시적 권한 부여 합니다. 토큰이 캐시 되 고 클라이언트 연결 요청에 전달자 토큰으로 백 엔드 OWIN 미들웨어를 사용 하 여 보호 되는 웹 api 호출을 수행할 때.
 
->경고: 여기 빌드할 수 있는 예제는 교육용 으로만입니다. 이러한 지침은 모델의 필수 요소를 노출할 수 가장 간단 하 고 가장 최소한의 구현에 대 한 것입니다. 이 예제에서는 오류 처리의 모든 측면을 포함 하지 않은 하 고 다른 관련 기능입니다.
+>[!IMPORTANT]
+>여기 빌드할 수 있는 예제는 교육용 으로만입니다. 이러한 지침은 모델의 필수 요소를 노출할 수 가장 간단 하 고 가장 최소한의 구현에 대 한 것입니다. 이 예제에서는 오류 처리의 모든 측면을 포함 하지 않은 하 고 다른 관련 기능입니다.
 
 >[!NOTE]
 >이 연습에서는 적용 됩니다 **만** AD FS 서버 2016 이상 
@@ -50,7 +51,7 @@ ADAL 인증에 대 한 트리거를 인식 하는 경우 응용 프로그램에�
 
 도메인 컨트롤러와 AD FS를 설정 하는 방법이 기사의 범위를 벗어납니다. 추가 배포 정보를 참조 하십시오.
 
-- [AD DS 배포](../../ad-ds/deploy/AD-DS-Deployment.md) 
+- [AD DS 배포](../../ad-ds/deploy/AD-DS-Deployment.md)
 - [AD FS 배포](../AD-FS-Deployment.md)
 
 
@@ -109,14 +110,14 @@ ADAL JS를 구성 합니다.
         $httpProvider
         );
 
-|Configuration|설명
-|--------|--------
-|instance|STS URL, 예: https://fs.contoso.com/
-|테넌트(tenant)|'Adfs'로 유지
-|clientID|이 단일 페이지 응용 프로그램에 대 한 공용 클라이언트를 구성 하는 동안 지정 된 클라이언트 ID
+|Configuration|설명|
+|--------|--------|
+|instance|STS URL, 예: https://fs.contoso.com/|
+|테넌트(tenant)|'Adfs'로 유지|
+|clientID|이 단일 페이지 응용 프로그램에 대 한 공용 클라이언트를 구성 하는 동안 지정 된 클라이언트 ID|
 
 ## <a name="configure-webapi-to-use-ad-fs"></a>AD FS를 사용 하는 WebAPI를 구성 합니다.
-열기는 **Startup.Auth.cs** 샘플에서 파일을 시작 부분에 다음을 추가 합니다. 
+열기는 **Startup.Auth.cs** 샘플에서 파일을 시작 부분에 다음을 추가 합니다.
 
     using System.IdentityModel.Tokens;
 
@@ -143,11 +144,11 @@ ADAL JS를 구성 합니다.
     }
     );
 
-|매개 변수|설명
-|--------|--------
-|ValidAudience|이 구성의 'audience' 값이 검사에 대 한 토큰의
-|ValidIssuer|이 구성의 값 ' 토큰에 대 한 확인 되는 발급자
-|MetadataEndpoint|이 STS의 메타 데이터 정보를 가리키는
+|매개 변수|설명|
+|--------|--------|
+|ValidAudience|이 구성의 'audience' 값이 검사에 대 한 토큰의|
+|ValidIssuer|이 구성의 값 ' 토큰에 대 한 확인 되는 발급자|
+|MetadataEndpoint|이 STS의 메타 데이터 정보를 가리키는|
 
 ## <a name="add-application-configuration-for-ad-fs"></a>추가 AD FS에 대 한 응용 프로그램 구성
 아래와 같이 appsettings를 변경 합니다.

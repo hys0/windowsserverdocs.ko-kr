@@ -12,12 +12,12 @@ ms.assetid: 32fc90d8-31c5-4c7e-9fe3-483cf3c35f78
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 5d65429e31e43aa15d1631878ae7e1486e9fd60f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8f41efde192ea039a6ee9c7f9f3a4b49bedf4f48
+ms.sourcegitcommit: 9a4ab3a0d00b06ff16173aed616624c857589459
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59835154"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66826995"
 ---
 # <a name="migrate-windows-small-business-server-2011-essentials-to-windows-server-essentials"></a>Windows Small Business Server 2011 Essentials에서 Windows Server Essentials로 마이그레이션
 
@@ -27,11 +27,11 @@ ms.locfileid: "59835154"
   
 > [!NOTE]
 >  마이그레이션하는 동안 문제를 방지 하려면 Windows Server Essentials 제품 개발 팀의 마이그레이션을 시작 하기 전에이 문서를 읽기을 적극 권장 합니다.  
-  
+> 
 > [!NOTE]
-
+> 
 >  서버 데이터를 Windows Server Essentials의 최신 버전을 마이그레이션하려면 [Windows Server Essentials로 마이그레이션](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md)합니다.  
-
+> 
 >  서버 데이터를 Windows Server Essentials의 최신 버전을 마이그레이션하려면 [Windows Server Essentials로 마이그레이션](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md)합니다.  
 
   
@@ -53,7 +53,7 @@ ms.locfileid: "59835154"
   
 3.  [새 Windows Server Essentials 서버에 컴퓨터 가입](Join-computers-to-the-new-Windows-Server-Essentials-server.md)합니다.  이 섹션에서는 새로운 Windows Server Essentials 서버 및 그룹 정책 설정을 업데이트 하려면 클라이언트 컴퓨터를 가입을 다룹니다.  
   
-4.  [대상 서버에 SBS 2011 Essentials 설정 및 데이터 이동](Move-Windows-SBS-2011-Essentials-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md)합니다.  이 섹션에서는 원본 서버에서 데이터 및 설정을 마이그레이션하는 방법에 대한 정보를 제공합니다.  
+4.  [대상 서버에 SBS 2011 Essentials 설정 및 데이터 이동](Move-Windows-SBS-2011-Essentials-to-the-Destination-Server-for-migration.md)합니다.  이 섹션에서는 원본 서버에서 데이터 및 설정을 마이그레이션하는 방법에 대한 정보를 제공합니다.  
   
 5.  [Windows Server Essentials 대상 서버에서 폴더 리디렉션 사용](Enable-folder-redirection-on-the-Windows-Server-Essentials-Destination-Server.md)합니다.  원본 서버에서 폴더 리디렉션을 사용하는 경우 대상 서버에서 폴더 리디렉션을 사용하도록 설정한 다음 이전 폴더 리디렉션 그룹 정책 설정을 삭제할 수 있습니다.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "59835154"
   
 3.  [새 Windows Server Essentials 서버에 컴퓨터 가입](../migrate/Join-computers-to-the-new-Windows-Server-Essentials-server.md)합니다.  이 섹션에서는 새로운 Windows Server Essentials 서버 및 그룹 정책 설정을 업데이트 하려면 클라이언트 컴퓨터를 가입을 다룹니다.  
   
-4.  [대상 서버에 SBS 2011 Essentials 설정 및 데이터 이동](../migrate/Move-Windows-SBS-2011-Essentials-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md)합니다.  이 섹션에서는 원본 서버에서 데이터 및 설정을 마이그레이션하는 방법에 대한 정보를 제공합니다.  
+4.  [대상 서버에 SBS 2011 Essentials 설정 및 데이터 이동](../migrate/Move-Windows-SBS-2011-Essentials-to-the-Destination-Server-for-migration.md)합니다.  이 섹션에서는 원본 서버에서 데이터 및 설정을 마이그레이션하는 방법에 대한 정보를 제공합니다.  
   
 5.  [Windows Server Essentials 대상 서버에서 폴더 리디렉션 사용](../migrate/Enable-folder-redirection-on-the-Windows-Server-Essentials-Destination-Server.md)합니다.  원본 서버에서 폴더 리디렉션을 사용하는 경우 대상 서버에서 폴더 리디렉션을 사용하도록 설정한 다음 이전 폴더 리디렉션 그룹 정책 설정을 삭제할 수 있습니다.  
   

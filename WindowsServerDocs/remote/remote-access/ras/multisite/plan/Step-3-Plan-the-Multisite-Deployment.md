@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: e5ea9d22-a503-4ed4-96b3-0ee2ccf4fd17
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 6024b118504a233e9e7483711df4e0a05b632d5a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 29d52e57a18bf956d135179b503255efd256b35e
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59869444"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446855"
 ---
 # <a name="step-3-plan-the-multisite-deployment"></a>3 단계 계획 멀티 사이트 배포
 
@@ -151,39 +151,39 @@ VPN 단일 원격 액세스 서버에 배포한 경우 다음 note:
 ### <a name="routing"></a>라우팅  
 멀티 사이트 배포에서 대칭 라우팅 적용 됩니다 Teredo 및 IP-HTTPS를 사용 하 여. IPv6이 회사 네트워크에 배포 하는 경우 다음 note:  
   
-1.  각 진입점의 Teredo 및 IP-HTTPS 접두사는 회사 네트워크 연결 된 해당 원격 액세스 서버를 통해 라우팅할 수 있어야 합니다.  
+1. 각 진입점의 Teredo 및 IP-HTTPS 접두사는 회사 네트워크 연결 된 해당 원격 액세스 서버를 통해 라우팅할 수 있어야 합니다.  
   
-2.  경로 회사 네트워크 라우팅 인프라에서 구성 되어야 합니다.  
+2. 경로 회사 네트워크 라우팅 인프라에서 구성 되어야 합니다.  
   
-3.  각 진입점에 대 한 내부 네트워크에 1 ~ 3 개의 경로 수 해야 합니다.  
+3. 각 진입점에 대 한 내부 네트워크에 1 ~ 3 개의 경로 수 해야 합니다.  
   
-    1.  IP-HTTPS 접두사를이 접두사는 관리자가 선택한 추가 진입점 마법사.  
+   1. IP-HTTPS 접두사를이 접두사는 관리자가 선택한 추가 진입점 마법사.  
   
-    2.  VPN IPv6 접두사 (선택 사항)입니다. 진입점에 대 한 VPN을 사용 하도록 설정한 후이 접두사를 선택할 수 있습니다.  
+   2. VPN IPv6 접두사 (선택 사항)입니다. 진입점에 대 한 VPN을 사용 하도록 설정한 후이 접두사를 선택할 수 있습니다.  
   
-    3.  Teredo 접두사 (선택 사항)입니다. 이 접두사는 원격 액세스 서버는 두 개의 연속 된 공용 IPv4 주소가 외부 어댑터에 구성 된 경우에 적합 합니다. 접두사 주소 쌍의 첫 번째 공용 IPv4 주소를 기반으로 합니다. 예를 들어 외부 주소:  
+   3. Teredo 접두사 (선택 사항)입니다. 이 접두사는 원격 액세스 서버는 두 개의 연속 된 공용 IPv4 주소가 외부 어댑터에 구성 된 경우에 적합 합니다. 접두사 주소 쌍의 첫 번째 공용 IPv4 주소를 기반으로 합니다. 예를 들어 외부 주소:  
   
-        1.  www.xxx.yyy.zzz  
+      1. www.xxx.yyy.zzz  
   
-        2.  www.xxx.yyy.zzz+1  
+      2. www.xxx.yyy.zzz+1  
   
-        구성 하려면 Teredo prefix 2001:0:WWXX:YYZZ 됩니다:: / 64 WWXX:YYZZ IPv4 주소 www.xxx.yyy.zzz의 16 진수 표현입니다.  
+      구성 하려면 Teredo prefix 2001:0:WWXX:YYZZ 됩니다:: / 64 WWXX:YYZZ IPv4 주소 www.xxx.yyy.zzz의 16 진수 표현입니다.  
   
-        Teredo prefix를 계산 하려면 다음 스크립트를 사용할 수 있는 note:  
+      Teredo prefix를 계산 하려면 다음 스크립트를 사용할 수 있는 note:  
   
-        ```  
-        $TeredoIPv4 = (Get-NetTeredoConfiguration).ServerName # Use for a Remote Access server that is already configured  
-        $TeredoIPv4 = "20.0.0.1" # Use for an IPv4 address  
+      ```  
+      $TeredoIPv4 = (Get-NetTeredoConfiguration).ServerName # Use for a Remote Access server that is already configured  
+      $TeredoIPv4 = "20.0.0.1" # Use for an IPv4 address  
   
-            [Byte[]] $TeredoServerAddressBytes = `  
-            [System.Net.IPAddress]::Parse("2001::").GetAddressBytes()[0..3] + `  
-            [System.Net.IPAddress]::Parse($TeredoIPv4).GetAddressBytes() + `  
-            [System.Net.IPAddress]::Parse("::").GetAddressBytes()[0..7]  
+          [Byte[]] $TeredoServerAddressBytes = `  
+          [System.Net.IPAddress]::Parse("2001::").GetAddressBytes()[0..3] + `  
+          [System.Net.IPAddress]::Parse($TeredoIPv4).GetAddressBytes() + `  
+          [System.Net.IPAddress]::Parse("::").GetAddressBytes()[0..7]  
   
-        Write-Host "The server's Teredo prefix is $([System.Net.IPAddress]$TeredoServerAddressBytes)/64"  
-        ```  
+      Write-Host "The server's Teredo prefix is $([System.Net.IPAddress]$TeredoServerAddressBytes)/64"  
+      ```  
   
-    4.  위의 경로의 모든 원격 액세스 서버의 내부 어댑터에 IPv6 주소를 라우팅해야 (또는 분산 된 진입점을 내부 가상 IP (VIP) 주소 부하에 대해).  
+   4. 위의 경로의 모든 원격 액세스 서버의 내부 어댑터에 IPv6 주소를 라우팅해야 (또는 분산 된 진입점을 내부 가상 IP (VIP) 주소 부하에 대해).  
   
 > [!NOTE]  
 > DirectAccess, Teredo에 대 한 경로 통해 원격으로 수행 됩니다 IPv6이 회사 네트워크 및 원격 액세스 서버 관리에 배포 하는 경우 및 트래픽을 수 있도록 각 원격 액세스 서버에 다른 모든 진입점에서 IP-HTTPS 접두사를 추가 해야 합니다. 내부 네트워크로 전달 합니다.  

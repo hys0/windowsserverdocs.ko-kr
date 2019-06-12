@@ -12,12 +12,12 @@ ms.assetid: 8a7b3cc1-21bb-4344-8110-f5d5959b370d
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: f8f99a2051e114b3c890f1cdac23aebf58689980
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 5d7dac41ba6d6f73b0d3d65d3481fe45ff99a6bc
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59884654"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66433615"
 ---
 # <a name="create-the-oobexml-file-including-logo-and-eula"></a>로고 및 EULA를 포함한 Oobe.xml 파일 만들기
 
@@ -29,41 +29,41 @@ Oobe.xml 파일을 사용하여 초기 구성에 사용자 고유의 EULA(최종
   
 #### <a name="to-add-your-company-eula-and-logo"></a>회사 EULA 및 로고를 추가하려면  
   
-1.  Oobe.xml 파일을 메모장과 같은 텍스트 편집기에서 엽니다.  
+1. Oobe.xml 파일을 메모장과 같은 텍스트 편집기에서 엽니다.  
   
-2.  내에서 < /logopath&gt\>< / /logopath&gt\> 태그에 로고 파일의 절대 경로 입력 합니다. 이 파일에는 240 x 100 픽셀의 32비트 .png(이동 네트워크 그래픽) 파일이 있어야 합니다.  
+2. 내에서 < /logopath&gt\>< / /logopath&gt\> 태그에 로고 파일의 절대 경로 입력 합니다. 이 파일에는 240 x 100 픽셀의 32비트 .png(이동 네트워크 그래픽) 파일이 있어야 합니다.  
   
-3.  내에서 < /eulafilename&gt\>< / /eulafilename&gt\> 태그에 EULA 파일의 절대 경로 입력 합니다. EULA 파일은 서식 있는 텍스트(.rtf) 파일이어야 합니다.  
+3. 내에서 < /eulafilename&gt\>< / /eulafilename&gt\> 태그에 EULA 파일의 절대 경로 입력 합니다. EULA 파일은 서식 있는 텍스트(.rtf) 파일이어야 합니다.  
   
-4.  내에서 < 이름\>< / 이름\> 태그에 회사 이름을 입력 합니다.  
+4. 내에서 < 이름\>< / 이름\> 태그에 회사 이름을 입력 합니다.  
   
-     다음 예제에서는 Oobe.xml 파일의 태그를 보여 줍니다.  
+    다음 예제에서는 Oobe.xml 파일의 태그를 보여 줍니다.  
   
-    ```  
+   ```  
   
-    <FirstExperience>  
-       <oobe>  
-          <oem>  
-             <name>Fabrikam</name>  
-             <logopath>c:\fabrikam\fabrikam.png</logopath>  
-             <eulafilename>c:\fabrikam\fabrikam_eula.rtf</eulafilename>  
-          </oem>  
-       </oobe>  
-    </FirstExperience>  
+   <FirstExperience>  
+      <oobe>  
+         <oem>  
+            <name>Fabrikam</name>  
+            <logopath>c:\fabrikam\fabrikam.png</logopath>  
+            <eulafilename>c:\fabrikam\fabrikam_eula.rtf</eulafilename>  
+         </oem>  
+      </oobe>  
+   </FirstExperience>  
   
-    ```  
+   ```  
   
-5.  파일을 저장합니다.  
+5. 파일을 저장합니다.  
   
-6.  Oobe.xml 파일을 다음 위치 중 한 곳에 배치합니다.  
+6. Oobe.xml 파일을 다음 위치 중 한 곳에 배치합니다.  
   
-    |Oobe.xml 위치|위치를 결정하는 조건|  
-    |-----------------------|----------------------------------------|  
-    |%windir%\system32\oobe\info\|서버는 단일 국가/지역 및 단일 언어 시스템으로 배송 됩니다.|  
-    |%windir%\system32\oobe\info\default\\<language\>|서버는 단일 국가/지역 및 다중 언어 시스템으로 배송됩니다.|  
-    |%windir%\system32\oobe\info\\< 국가/지역 > \ 및 %windir%\system32\oobe\info\\< 국가/지역 >\\< 언어\>\|서버는 둘 이상의 국가로 배송 됩니다 / 설정과 지역을 단일 언어를 사용 하 여 각 국가/지역 단위로 사용자 지정 해야합니다. 여기서 < 국가/지역 > 국가 또는 지역의 위치 서버를 배포의 지리적 위치 식별자 (GeoID)의 10 진수 버전은 및 < 언어\> 는 LCID (로캘 식별자)의 10 진수 버전입니다.|  
+   |Oobe.xml 위치|위치를 결정하는 조건|  
+   |-----------------------|----------------------------------------|  
+   |%windir%\system32\oobe\info\|서버는 단일 국가/지역 및 단일 언어 시스템으로 배송 됩니다.|  
+   |%windir%\system32\oobe\info\default\\<language\>|서버는 단일 국가/지역 및 다중 언어 시스템으로 배송됩니다.|  
+   |%windir%\system32\oobe\info\\< 국가/지역 > \ 및 %windir%\system32\oobe\info\\< 국가/지역 >\\< 언어\>\|서버는 둘 이상의 국가로 배송 됩니다 / 설정과 지역을 단일 언어를 사용 하 여 각 국가/지역 단위로 사용자 지정 해야합니다. 여기서 < 국가/지역 > 국가 또는 지역의 위치 서버를 배포의 지리적 위치 식별자 (GeoID)의 10 진수 버전은 및 < 언어\> 는 LCID (로캘 식별자)의 10 진수 버전입니다.|  
   
- 배경이 파란색이므로 흰색 텍스트로 된 대체 회사 로고가 있다면 그 로고가 설정 흐름에서 더 잘 표시될 수 있습니다.  선택적으로 레지스트리 키 및 값을 설정하여 이 로고를 지정할 수 있습니다.  
+   배경이 파란색이므로 흰색 텍스트로 된 대체 회사 로고가 있다면 그 로고가 설정 흐름에서 더 잘 표시될 수 있습니다.  선택적으로 레지스트리 키 및 값을 설정하여 이 로고를 지정할 수 있습니다.  
   
 #### <a name="to-specify-a-company-logo-by-setting-the-oem-registry-key"></a>OEM 레지스트리 키를 설정하여 회사 로고를 지정하려면  
   

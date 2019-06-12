@@ -14,12 +14,12 @@ author: jaimeo
 ms.author: jaimeo
 manager: dougkim
 ms.localizationpriority: medium
-ms.openlocfilehash: 79f15c4c9c635138ae74a61fe1c259b97717155e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 88cab1965e299c7d25c177125cb504432bf987e8
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59862384"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66810643"
 ---
 # <a name="windows-server-2016-activation"></a>Windows Server 2016 정품 인증
 
@@ -32,8 +32,8 @@ KMS 호스트는 서버 전용일 필요가 없으며 KMS는 다른 서비스와
 Windows 10 또는 Windows 8.1에서 실행되는 KMS 호스트는 클라이언트 운영 체제를 실행하는 컴퓨터만을 정품 인증할 수 있습니다.
 다음 표에서는 Windows Server 2016 및 Windows 10 클라이언트를 포함하는 네트워크에 대한 KMS 호스트 및 클라이언트 요구 사항을 요약합니다.
 
->[!NOTE]
->**참고:**  업데이트는 이러한 최신 클라이언트의 활성화를 지원하도록 KMS 서버가 필요할 수 있습니다. 활성화 오류가 발생하면 이 테이블에 나열된 적합한 업데이트가 있는지 확인합니다.
+> [!NOTE]
+> **참고:**  업데이트는 이러한 최신 클라이언트의 활성화를 지원하도록 KMS 서버가 필요할 수 있습니다. 활성화 오류가 발생하면 이 테이블에 나열된 적합한 업데이트가 있는지 확인합니다.
 
 |제품 키 그룹|KMS가 호스트될 수 있는 Windows 버전|이 KMS 호스트에 의해 정품 인증되는 Windows 버전|  
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------|  
@@ -42,11 +42,11 @@ Windows 10 또는 Windows 8.1에서 실행되는 KMS 호스트는 클라이언�
 |"Windows 10용 Windows Server 2012 R2"에 대한 볼륨 라이선스|Windows Server 2008 R2<br /><br /> Windows Server 2012 Standard<br /><br /> Windows Server 2012 Datacenter<br /><br /> Windows Server 2012 R2 Standard<br /><br />Windows Server 2012 R2 Datacenter|Windows 10 Professional<br /><br /> Windows 10 Enterprise<br /><br />Windows 10 Enterprise LTSB (2015)<br><br>Windows 10 Pro for Workstations<br><br>Windows 10 Education<br><br> Windows Server 2012 R2(모든 버전)<br /><br /> Windows 8.1 Professional<br /><br /> Windows 8.1 Enterprise<br /><br /> Windows Server 2012(모든 버전)<br /><br /> Windows Server 2008 R2 (모든 버전)<br /><br />Windows Server 2008 (모든 버전)<br /><br /> Windows 7 Professional<br /><br /> Windows 7 Enterprise|
 
 > [!NOTE]  
->KMS 서버에서 실행하는 운영 체제 또는 활성화하려는 운영 체제에 따라 다음 업데이트 중 하나 이상을 설치해야 할 수 있습니다.
->- Windows 10을 실행하는 클라이언트의 정품 인증을 지원하려면 Windows 7 또는 Windows Server 2008 R2에 KMS를 설치해야 합니다. 자세한 내용은 [Windows 7 및 Windows Server 2008 R2 KMS 호스트에서 Windows 10을 활성화할 수 있도록 업데이트](https://support.microsoft.com/help/3079821/update-that-enables-windows-7-and-windows-server-2008-r2-kms-hosts-to-activate-windows-10)합니다.  
->- Windows 10 및 Windows Server 2016 이상의 클라이언트 또는 서버 운영 체제를 실행하는 클라이언트의 정품 인증을 지원하려면 Windows Server 2012에 KMS 설치가 업데이트되어야 합니다. 자세한 내용은 [Windows Server 2012 용 2016 년 7 월 업데이트 롤업](https://support.microsoft.com/help/3172615/july-2016-update-rollup-for-windows-server-2012)합니다. 
->- Windows 10 및 Windows Server 2016 이상의 클라이언트 또는 서버 운영 체제를 실행하는 클라이언트의 정품 인증을 지원하려면 Windows 8.1 또는 Windows Server 2012 R2에 KMS 설치가 업데이트되어야 합니다. 자세한 내용은 [Windows 8.1 및 Windows Server 2012 R2 용 2016 년 7 월 업데이트 롤업](https://support.microsoft.com/help/3172614/july-2016-update-rollup-for-windows-8.1-and-windows-server-2012-r2)합니다.  
->- Windows Server 2008 R2는 Windows Server 2016 이상의 운영 체제를 실행하는 클라이언트의 정품 인증을 지원도록 업데이트될 수 없습니다. 
+> KMS 서버에서 실행하는 운영 체제 또는 활성화하려는 운영 체제에 따라 다음 업데이트 중 하나 이상을 설치해야 할 수 있습니다.
+> - Windows 10을 실행하는 클라이언트의 정품 인증을 지원하려면 Windows 7 또는 Windows Server 2008 R2에 KMS를 설치해야 합니다. 자세한 내용은 [Windows 7 및 Windows Server 2008 R2 KMS 호스트에서 Windows 10을 활성화할 수 있도록 업데이트](https://support.microsoft.com/help/3079821/update-that-enables-windows-7-and-windows-server-2008-r2-kms-hosts-to-activate-windows-10)합니다.  
+> - Windows 10 및 Windows Server 2016 이상의 클라이언트 또는 서버 운영 체제를 실행하는 클라이언트의 정품 인증을 지원하려면 Windows Server 2012에 KMS 설치가 업데이트되어야 합니다. 자세한 내용은 [Windows Server 2012 용 2016 년 7 월 업데이트 롤업](https://support.microsoft.com/help/3172615/july-2016-update-rollup-for-windows-server-2012)합니다. 
+> - Windows 10 및 Windows Server 2016 이상의 클라이언트 또는 서버 운영 체제를 실행하는 클라이언트의 정품 인증을 지원하려면 Windows 8.1 또는 Windows Server 2012 R2에 KMS 설치가 업데이트되어야 합니다. 자세한 내용은 [Windows 8.1 및 Windows Server 2012 R2 용 2016 년 7 월 업데이트 롤업](https://support.microsoft.com/help/3172614/july-2016-update-rollup-for-windows-8.1-and-windows-server-2012-r2)합니다.  
+> - Windows Server 2008 R2는 Windows Server 2016 이상의 운영 체제를 실행하는 클라이언트의 정품 인증을 지원도록 업데이트될 수 없습니다. 
 
 KMS 호스트는 단 한 개로도 무한히 많은 KMS 클라이언트를 지원할 수 있습니다. 클라이언트가 50개를 초과한다면 KMS 호스트 중 하나를 사용할 수 없게 될 경우를 대비하여 KMS 호스트를 두 개 이상 보유할 것을 권장합니다. 대부분의 조직에서는 KMS 호스트 두 개만으로 전체 인프라를 호스트할 수 있습니다.
 
@@ -65,8 +65,8 @@ KMS 정품 인증에는 TCP/IP 연결이 필요합니다. KMS 호스트 및 클�
 
 조직에서 6개가 넘는 KMS 호스트를 필요로 한다면 조직의 KMS 키에 추가 정품 인증을 요구해야 합니다. 예를 들어 한 볼륨 라이선스 계약에 물리적 위치가 10개 있으며 각 위치에 로컬 KMS 호스트를 하나씩 배치하고자 할 수 있습니다.
 
->[!NOTE] 
->이 예외 사항을 요구하려면 정품 인증 콜 센터에 연락하실 수 있습니다. 자세한 내용은 [Microsoft 볼륨 라이선스]( https://www.microsoft.com/licensing)를 참조하세요.
+> [!NOTE] 
+> 이 예외 사항을 요구하려면 정품 인증 콜 센터에 연락하실 수 있습니다. 자세한 내용은 [Microsoft 볼륨 라이선스]( https://www.microsoft.com/licensing)를 참조하세요.
 
 Windows 10, Windows Server 2016, Windows 8.1, Windows Server 2012 R2, Windows Server 2012, Windows 7, Windows Server 2008 R2의 볼륨 라이선스 버전을 실행하는 컴퓨터는 기본적으로 추가 구성이 필요 없는 KMS 클라이언트입니다.
 

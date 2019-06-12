@@ -7,21 +7,22 @@ author: jwwool
 ms.author: jeffrew
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.date: 04/12/2019
-ms.openlocfilehash: 7bf23c5af5620241574864babd07fd852115a450
-ms.sourcegitcommit: 39ab8041d166e6817a95417d6aa30bc7abeeef54
+ms.date: 06/07/2019
+ms.openlocfilehash: e7cf6fc6a4fae2eee76409bd6af4ef2ff6ed35a3
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66260273"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66811774"
 ---
 # <a name="windows-admin-center-known-issues"></a>Windows Admin Center 알려진 문제
 
->적용 대상: Windows Admin Center, Windows Admin Center 미리 보기
+> 적용 대상: Windows Admin Center, Windows Admin Center 미리 보기
 
 이 페이지에서 설명하지 않은 문제가 발생하는 경우 [알려주십시오](http://aka.ms/WACfeedback).
 
 ## <a name="lenovo-xclarity-integrator"></a>Lenovo XClarity 통합자
+
 이전에 공개 된 호환성 문제 Lenovo XClarity 통합자 확장과 Windows Admin Center 1904 버전의 Windows Admin Center 1904.1 버전을 사용 하 여 해결 되었습니다. Windows Admin Center 지원 되는 최신 버전으로 업데이트 하는 것이 좋습니다.
 
 - Lenovo XClarity 통합자 확장 버전 1.1은 Windows Admin Center 1904.1 완벽 하 게 호환 됩니다. Windows Admin Center 및 Lenovo 확장의 최신 버전으로 업데이트 하는 것이 좋습니다.
@@ -50,8 +51,8 @@ ms.locfileid: "66260273"
 
 - 게이트웨이로 설치 하는 Windows Admin Center 있고 손상 된 것으로 표시 되는 연결 목록에서 다음 단계를 수행 합니다.
 
->[!WARNING]
->이 게이트웨이의 모든 Windows Admin Center 사용자에 대 한 설정을 확인 하 고 연결 목록에 삭제 됩니다.
+   > [!WARNING]
+   >이 게이트웨이의 모든 Windows Admin Center 사용자에 대 한 설정을 확인 하 고 연결 목록에 삭제 됩니다.
 
   1. Windows Admin Center 제거
   2. **C:\Windows\ServiceProfiles\NetworkService\AppData\Roaming\Microsoft** 아래에 있는 **Server Management Experience** 폴더를 삭제합니다.
@@ -82,7 +83,7 @@ ms.locfileid: "66260273"
 
 - Azure Active Directory를 ID 공급자로 사용하고 Windows Admin Center가 자체 서명되었거나 신뢰할 수 없는 인증서로 구성된 경우 Microsoft Edge에서 AAD 인증을 완료할 수 없습니다.  [15968377]
 
-- 서비스로 배포 하는 Windows Admin Center 있고 Microsoft Edge 브라우저를 사용 하는 경우 새 브라우저 창을 생성 한 후 실패할 수 있습니다 azure 게이트웨이 연결 합니다. 추가 하 여이 문제를 해결 하려고 https://login.microsoftonline.com, https://login.live.com,으로 게이트웨이의 URL을 신뢰할 수 있는 사이트 및 클라이언트 쪽 브라우저에서 팝업 차단 설정에 대 한 허용 된 사이트 및 합니다. 에 대 한 자세한 지침은이 해결 합니다 [문제 해결 가이드](troubleshooting.md#azlogin)합니다. [17990376]
+- 서비스로 배포 하는 Windows Admin Center 있고 Microsoft Edge 브라우저를 사용 하는 경우 새 브라우저 창을 생성 한 후 실패할 수 있습니다 azure 게이트웨이 연결 합니다. 추가 하 여이 문제를 해결 하려고 https://login.microsoftonline.com, https://login.live.com,으로 게이트웨이의 URL을 신뢰할 수 있는 사이트 및 클라이언트 쪽 브라우저에서 팝업 차단 설정에 대 한 허용 된 사이트 및 합니다. 에 대 한 자세한 지침은이 해결 합니다 [문제 해결 가이드](troubleshooting.md#azure-features-dont-work-properly-in-edge)합니다. [17990376]
 
 - Windows Admin Center 데스크톱 모드로 설치 된 경우는 favicon Microsoft Edge 브라우저 탭에 표시 되지 않습니다. [17665801]
 
@@ -100,8 +101,6 @@ Windows Admin Center는 Mozilla Firefox에 대해 테스트되지 않지만 대�
 
 - Windows 10 설치: Mozilla Firefox 저장소가 자체 인증서를 가져와야 하므로 ```Windows Admin Center Client``` Windows 10에서 Windows Admin Center 사용 하는 Firefox에는 인증서입니다.
 
-<a id="websockets"></a>
-
 ## <a name="websocket-compatibility-when-using-a-proxy-service"></a>프록시 서비스를 사용 하는 경우 WebSocket 호환성
 
 Windows Admin Center에서 원격 데스크톱, PowerShell 및 이벤트 모듈은 프록시 서비스를 사용할 때 종종 지원되지 않는 WebSocket 프로토콜을 활용합니다. Azure AD 응용 프로그램 프록시 호환성에서 WebSocket 지원은 [미리 보기](https://blogs.technet.microsoft.com/applicationproxyblog/2018/03/28/limited-websocket-support-now-in-public-preview/)이며 호환성에 대한 피드백을 받고 있습니다.
@@ -114,8 +113,6 @@ Windows Admin Center에서 원격 데스크톱, PowerShell 및 이벤트 모듈�
 WMF가 설치되어 있는지, 그리고 버전이 5.1 이상인지 확인하려면 PowerShell에 `$PSVersiontable`을 입력합니다.
 
 설치되어있지 않은 경우 [WMF 5.1을 다운로드하여 설치할](https://www.microsoft.com/en-us/download/details.aspx?id=54616)수 있습니다.
-
-<a id="rbacknownissues"></a>
 
 ## <a name="role-based-access-control-rbac"></a>역할 기반 Access Control (RBAC)
 
@@ -141,7 +138,7 @@ WMF가 설치되어 있는지, 그리고 버전이 5.1 이상인지 확인하려
 
 ### <a name="events"></a>이벤트
 
-- 이벤트는 [프록시 서비스를 사용할 때 웹 소켓 호환성](#websockets)의 영향을 받습니다.
+- 이벤트는 [프록시 서비스를 사용할 때 웹 소켓 호환성](#websocket-compatibility-when-using-a-proxy-service)의 영향을 받습니다.
 
 - 큰 로그 파일을 내보낼 때 "패킷 크기"를 참조하는 오류 메시지가 표시될 수 있습니다. [16630279]
 
@@ -153,7 +150,7 @@ WMF가 설치되어 있는지, 그리고 버전이 5.1 이상인지 확인하려
 
 ### <a name="powershell"></a>PowerShell
 
-- PowerShell은 [프록시 서비스를 사용할 때 웹 소켓 호환성](#websockets)의 영향을 받습니다.
+- PowerShell은 [프록시 서비스를 사용할 때 웹 소켓 호환성](#websocket-compatibility-when-using-a-proxy-service)의 영향을 받습니다.
 
 - 데스크톱 PowerShell 콘솔에서와 같이 마우스 오른쪽 단추를 한 번 클릭하여 붙여넣는 것은 작동하지 않습니다. 대신 붙여넣기를 선택할 수 있는 브라우저의 컨텍스트 메뉴를 얻을 수 있습니다. Ctrl+V도 작동합니다.
 
@@ -173,7 +170,7 @@ WMF가 설치되어 있는지, 그리고 버전이 5.1 이상인지 확인하려
 
 - 일부 구성은 그룹 정책 사용 하 여 Windows Admin Center 원격 데스크톱 클라이언트를 차단할 수 있습니다. 사용이 발생 한 경우 ```Allow users to connect remotely by using Remote Desktop Services``` 아래 ```Computer Configuration/Policies/Administrative Templates/Windows Components/Remote Desktop Services/Remote Desktop Session Host/Connections```
 
-- 원격 데스크톱은 영향을 받지 [websocket 호환성.](#websockets)
+- 원격 데스크톱은 영향을 받지 [websocket 호환성.](#websocket-compatibility-when-using-a-proxy-service)
 
 - 원격 데스크톱 도구는 현재 로컬 데스크톱 및 원격 세션 간에 모든 텍스트, 이미지 또는 파일 복사/붙여넣기를 지원하지 않습니다.
 

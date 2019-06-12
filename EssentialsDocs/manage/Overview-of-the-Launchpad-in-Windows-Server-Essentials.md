@@ -12,12 +12,12 @@ ms.assetid: 198d16cb-3d07-4706-be89-ad14a5f7dc47
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 9c240320d990652a4669499d99c1fc3eba9e06fa
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4dd32d57f6f36bdbf94c763fe0cbd1f37ff990b8
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59883594"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66433116"
 ---
 # <a name="overview-of-the-launchpad-in-windows-server-essentials"></a>Windows Server Essentials의 실행 패드 개요
 
@@ -29,20 +29,20 @@ Windows Server Essentials 실행 패드는 컴퓨터를 서버에 처음 연결�
   
  다음 Windows 운영 체제에서는 Windows Server Essentials 실행 패드를 사용할 수 있습니다.  
   
--   **Windows 8**: 모든 버전.  
+- **Windows 8**: 모든 버전.  
   
--   **Windows 7**: 모든 버전.  
--   **Windows 10**: 모든 버전. 
+- **Windows 7**: 모든 버전.  
+- **Windows 10**: 모든 버전. 
   
- 다음 운영 체제에서는 Windows Server Essentials 실행 패드를 사용할 수 없습니다.  
+  다음 운영 체제에서는 Windows Server Essentials 실행 패드를 사용할 수 없습니다.  
   
--   **추가 서버**: Windows Server 운영 체제를 실행하는 추가적인 컴퓨터에서는 Windows Server Essentials 실행 패드를 실행할 수 없습니다.  
+- **추가 서버**: Windows Server 운영 체제를 실행하는 추가적인 컴퓨터에서는 Windows Server Essentials 실행 패드를 실행할 수 없습니다.  
   
- 항목 내용  
+  항목 내용  
   
--   [실행 패드 사용](Overview-of-the-Launchpad-in-Windows-Server-Essentials.md#BKMK_Launchpad)  
+- [실행 패드 사용](Overview-of-the-Launchpad-in-Windows-Server-Essentials.md#BKMK_Launchpad)  
   
--   [Mac 컴퓨터에서 실행 패드 사용](Overview-of-the-Launchpad-in-Windows-Server-Essentials.md#BKMK_Mac)  
+- [Mac 컴퓨터에서 실행 패드 사용](Overview-of-the-Launchpad-in-Windows-Server-Essentials.md#BKMK_Mac)  
   
 ##  <a name="BKMK_Launchpad"></a> 실행 패드 사용  
  Windows Server Essentials 실행 패드에서 다음 링크와 정보를 사용할 수 있습니다.  
@@ -50,13 +50,13 @@ Windows Server Essentials 실행 패드는 컴퓨터를 서버에 처음 연결�
 ### <a name="backup"></a>백업  
  **백업** 을 클릭하여 컴퓨터에 대한 **백업 속성** 을 엽니다. **백업 속성** 페이지에서 다음을 수행할 수 있습니다.  
   
--   백업을 시작하거나 중지합니다.  
+- 백업을 시작하거나 중지합니다.  
   
--   가장 최근 백업에 대한 상태 및 세부 정보를 봅니다.  
+- 가장 최근 백업에 대한 상태 및 세부 정보를 봅니다.  
   
--   백업이 실행될 때 컴퓨터 전원을 관리하는 방법을 지정합니다.  
+- 백업이 실행될 때 컴퓨터 전원을 관리하는 방법을 지정합니다.  
   
- 실행 패드를 사용 하 여 컴퓨터를 백업 하는 방법에 대 한 정보를 참조 하세요 [Manage Client Backup](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md)합니다.  
+  실행 패드를 사용 하 여 컴퓨터를 백업 하는 방법에 대 한 정보를 참조 하세요 [Manage Client Backup](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md)합니다.  
   
 ### <a name="remote-web-access"></a>원격 웹 액세스  
  **원격 웹 액세스**를 클릭하여 원격 웹 액세스 사이트에 대해 웹 브라우저를 엽니다. 원격 웹 액세스 사이트를 사용하여 다른 컴퓨터에 연결하고 사무실 내에서나 인터넷이 연결된 컴퓨터가 있는 원격 위치에서 일부 네트워크 리소스에 액세스할 수 있습니다. 원격 웹 액세스에 대 한 자세한 내용은 참조 하세요. [원격 웹 액세스 관리](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md)합니다.  

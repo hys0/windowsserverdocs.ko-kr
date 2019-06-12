@@ -13,12 +13,12 @@ ms.assetid: f67d195e-36f6-495a-8361-6d5faa889441
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: f93d7b28177f96725f2e62c40f9c81cbf186ee6d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 50995f0d03b400d6e44d16389afc69e5f25465ac
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59819384"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66432974"
 ---
 # <a name="enable-folder-redirection-on-the-windows-server-essentials-destination-server1"></a>Windows Server Essentials 대상 서버1에서 폴더 리디렉션 사용
 
@@ -42,14 +42,14 @@ ms.locfileid: "59819384"
   
 ### <a name="to-delete-the-old-folder-redirection-group-policy-setting"></a>이전 폴더 리디렉션 그룹 정책 설정을 삭제하려면  
   
-1.  대상 서버에서 **그룹 정책 관리** 관리 도구를 엽니다.  
+1. 대상 서버에서 **그룹 정책 관리** 관리 도구를 엽니다.  
   
-2.  **그룹 정책 관리**를 확장 하 고 **포리스트: * * * YourNetworkDomainName*를 확장 **도메인**를 확장 *YourNetworkDomainName* 을 펼쳐 **그룹 정책 개체**합니다.  
+2. **그룹 정책 관리**, 확장 **포리스트:** <em>YourNetworkDomainName</em>를 확장 하 고 **도메인**, 확장  *YourNetworkDomainName*을 펼친 다음 **그룹 정책 개체**합니다.  
   
-3.  마우스 오른쪽 단추로 클릭 **W7PVP 폴더 리디렉션**을 클릭하고 **삭제**합니다.  
+3. 마우스 오른쪽 단추로 클릭 **W7PVP 폴더 리디렉션**을 클릭하고 **삭제**합니다.  
   
-4.  경고를 읽고 **예**를 클릭합니다.  
+4. 경고를 읽고 **예**를 클릭합니다.  
   
-5.  **그룹 정책 관리**를 닫습니다.  
+5. **그룹 정책 관리**를 닫습니다.  
   
- 폴더 리디렉션에 변경 내용을 적용하려면 네트워크 사용자가 컴퓨터에서 로그오프한 다음 다시 로그온해야 합니다. 이렇게 하면 모든 리디렉션된 폴더가 대상 서버로 전송됩니다.
+   폴더 리디렉션에 변경 내용을 적용하려면 네트워크 사용자가 컴퓨터에서 로그오프한 다음 다시 로그온해야 합니다. 이렇게 하면 모든 리디렉션된 폴더가 대상 서버로 전송됩니다.

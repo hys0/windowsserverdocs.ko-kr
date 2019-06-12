@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e381316372e68d2a43203b8fc90a243af5f40b02
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 5fdfaaf1af2b74fe15530095700005a422b64986
+ms.sourcegitcommit: a3958dba4c2318eaf2e89c7532e36c78b1a76644
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59869214"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719630"
 ---
 # <a name="setting-up-update-synchronizations"></a>업데이트 동기화 설정
 
@@ -60,18 +60,6 @@ WSUS 서버는 지정한 언어에 따라 업데이트를 다운로드 합니다
 
 ### <a name="synchronizing-updates-from-the-microsoft-update-catalog"></a>Microsoft Update 카탈로그에서 업데이트를 동기화합니다.
 Microsoft 업데이트 카탈로그 사이트에서 업데이트를 동기화 하는 방법에 대 한 자세한 내용은 다음을 참조 하세요. [WSUS 및 카탈로그 사이트](wsus-and-the-catalog-site.md)합니다.
-
-### <a name="synchronizing-device-updates-by-inventory-inventory-based-synchronization"></a>인벤토리 (인벤토리 기반 동기화)를 통해 장치 업데이트를 동기화합니다.
-특정 제품 범주 및 분류 (예: 드라이버)에 매우 많은 업데이트를 포함 하 고 이러한 전체 범주 WSUS 서버를 동기화 하는 것은 권장 되지 않습니다. 이렇게 성능 문제 및 지속적인 유지 관리 문제가 발생할 수 있습니다. WSUS 재고 시스템 클라이언트 장치에서 식별할 수 없는 정보를 수집 하 고 해당 인벤토리 정보를 사용 하 여 Microsoft Update에서 충분 한 업데이트 메타 데이터를 검색 합니다. Microsoft Update 카탈로그를 자동으로 검색 되는 WSUS를 지정 하는 거의 동일한이 메커니즘은 관리 되는 장치에서 검색 된 장치에 대 한 업데이트에만 가져오기.
-
-이 인벤토리 기능을 사용 하면 특정 장치 펌웨어 및 Microsoft Update 카탈로그에 게시 되지 않는 모델 기반 서비스 집합을 지원 되는 유일한 방법 이며
-
-이 방식으로 동기화 하는 업데이트를 검토 하 고 다른 업데이트와 마찬가지로 승인 및도 같은 자동 승인 규칙에 따라 교체 만료 및 기타 동작 연결 되어 있는 기존 업데이트 합니다.
-
-WSUS는 클라이언트 인벤토리를 통해 가져온 업데이트를 포함 하 여 특정 드라이버 및 펌웨어 업데이트를 요청 하는 경우 서버 쪽 필터링을 수행 합니다. 따라서 클라이언트 컴퓨터 또는 장치 메타 데이터 및 드라이버에 대 한 detectoids 및 드라이버 업데이트 실제로 해당 장치에 연결 된 장치에 대해서만 받게 됩니다. 이 동작은 클라이언트 검색 시간을 최소화 하 고 WSUS 서버와 클라이언트 간에 전송 되는 데이터를 감소 됩니다.
-
-> [!NOTE]
-> WSUS 장치 단위 별로 장치 인벤토리를 유지 관리 하는 인벤토리 기반 동기화를 사용 하는 경우 업스트림 WSUS 서버에만 요약 롤업 (중복 제거 된 Id 목록이) 적이 보내집니다. 업스트림 WSUS 서버에서 어떤 장치는 어떤 컴퓨터에 연결 하거나 WSUS 계층 내 인스턴스 수가 지정된 된 장치에 존재 하는 방법에 대 한 정보를 받지 않습니다. 일반적으로이 요약 롤업 식별 하거나 WSUS로 관리 되는 네트워크 장치에 계산에 사용할 수 없습니다.
 
 ## <a name="configuring-proxy-server-settings"></a>프록시 서버 설정 구성
 업스트림 서버 또는 Microsoft Update와 동기화 하는 동안 프록시 서버를 사용 하도록 WSUS 서버를 구성할 수 있습니다. 이 설정은 사용자의 WSUS 동기화를 실행 하는 경우에 적용 됩니다. 기본적으로 WSUS 서버는 Microsoft Update 또는 업스트림 서버에 직접 연결 하려고 합니다.

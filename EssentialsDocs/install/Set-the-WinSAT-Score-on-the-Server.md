@@ -12,12 +12,12 @@ ms.assetid: 911dc494-0f8f-4723-93d6-2106f914b906
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 77866acccac13ac48da8779700c8654f2c7f3277
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4e5ce037c7a8c802419cd980fc0272c4f687c6a6
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59819954"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66433454"
 ---
 # <a name="set-the-winsat-score-on-the-server"></a>서버에서 WinSAT 점수 설정
 
@@ -30,19 +30,19 @@ ms.locfileid: "59819954"
   
 #### <a name="to-obtain-the-winsat-cpu-score"></a>WinSAT CPU 점수를 얻으려면  
   
-1.  복사를 Resources\WinServerSAT\\* ADK 미디어 참조 컴퓨터에 있습니다.  
+1. 복사를 Resources\WinServerSAT\\* ADK 미디어 참조 컴퓨터에 있습니다.  
   
-2.  참조 컴퓨터에서 관리자 권한으로 명령 프롬프트 창을 엽니다.  
+2. 참조 컴퓨터에서 관리자 권한으로 명령 프롬프트 창을 엽니다.  
   
-3.  %ProgramFiles%\Windows Server\Bin\OEM 폴더가 존재하지 않는 경우 다음 명령을 입력하고 Enter 키를 누릅니다.  
+3. %ProgramFiles%\Windows Server\Bin\OEM 폴더가 존재하지 않는 경우 다음 명령을 입력하고 Enter 키를 누릅니다.  
   
-     **mkdir "%ProgramFiles%\Windows Server\Bin\OEM"**  
+    **mkdir "%ProgramFiles%\Windows Server\Bin\OEM"**  
   
-4.  다음 명령을 입력하고 Enter 키를 누릅니다.  
+4. 다음 명령을 입력하고 Enter 키를 누릅니다.  
   
-     **WinServerSAT.exe "%ProgramFiles%\Windows Server\Bin\OEM\WinServerSAT.xml"**  
+    **WinServerSAT.exe "%ProgramFiles%\Windows Server\Bin\OEM\WinServerSAT.xml"**  
   
- 다음 예는 만들어진 WinServerSAT.xml 파일의 XML 내용을 보여줍니다.  
+   다음 예는 만들어진 WinServerSAT.xml 파일의 XML 내용을 보여줍니다.  
   
 ```  
   

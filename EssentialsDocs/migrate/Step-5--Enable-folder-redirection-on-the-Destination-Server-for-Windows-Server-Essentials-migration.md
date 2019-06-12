@@ -12,12 +12,12 @@ ms.assetid: d3925f80-552d-431f-b2a6-2af202e50ca4
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 613ff4c80a80ed4f3207cb0c1ead6db12c723e85
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 98b1a7adc23fca15c06ae9588d52bc9bcd532252
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59815384"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66432590"
 ---
 # <a name="step-5-enable-folder-redirection-on-the-destination-server-for-windows-server-essentials-migration"></a>5단계: Windows Server Essentials의 대상 서버에 대 한 마이그레이션에 대 한 폴더 리디렉션을 사용 하도록 설정
 
@@ -41,17 +41,17 @@ ms.locfileid: "59815384"
   
 ### <a name="to-delete-the-old-folder-redirection-group-policy-setting"></a>이전 폴더 리디렉션 그룹 정책 설정을 삭제하려면  
   
-1.  대상 서버에서 **그룹 정책 관리** 관리 도구를 엽니다.  
+1. 대상 서버에서 **그룹 정책 관리** 관리 도구를 엽니다.  
   
-2.  **그룹 정책 관리**를 확장 하 고 **포리스트:***YourNetworkDomainName*를 확장 **도메인**를 확장 *YourNetworkDomainName* 을 펼쳐 **그룹 정책 개체**합니다.  
+2. **그룹 정책 관리**, 확장 **포리스트:** <em>YourNetworkDomainName</em>를 확장 하 고 **도메인**, 확장  *YourNetworkDomainName*을 펼친 다음 **그룹 정책 개체**합니다.  
   
-3.  삭제하려는 정책을 마우스 오른쪽 단추로 클릭한 후 **삭제**를 클릭합니다.  
+3. 삭제하려는 정책을 마우스 오른쪽 단추로 클릭한 후 **삭제**를 클릭합니다.  
   
-4.  경고를 읽고 **예**를 클릭합니다.  
+4. 경고를 읽고 **예**를 클릭합니다.  
   
-5.  **그룹 정책 관리**를 닫습니다.  
+5. **그룹 정책 관리**를 닫습니다.  
   
- 폴더 리디렉션에 대한 변경 내용을 적용하려면 네트워크 사용자가 컴퓨터에서 로그오프했다가 다시 로그온해야 합니다. 이렇게 하면 모든 리디렉션된 폴더가 대상 서버로 전송됩니다.  
+   폴더 리디렉션에 대한 변경 내용을 적용하려면 네트워크 사용자가 컴퓨터에서 로그오프했다가 다시 로그온해야 합니다. 이렇게 하면 모든 리디렉션된 폴더가 대상 서버로 전송됩니다.  
   
 ## <a name="next-steps"></a>다음 단계  
  대상 서버에서 폴더 리디렉션 사용하도록 설정했습니다. 이제 [6 단계: 수준 내리기 및 새 Windows Server Essentials 네트워크에서 원본 서버 제거](Step-6--Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md)합니다.  

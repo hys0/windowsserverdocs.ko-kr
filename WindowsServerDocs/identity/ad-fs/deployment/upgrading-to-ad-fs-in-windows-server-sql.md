@@ -9,15 +9,18 @@ ms.prod: windows-server-threshold
 ms.assetid: 70f279bf-aea1-4f4f-9ab3-e9157233e267
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 8ada2ae5c9fcdb77f35200581848041f222ed7f3
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 0a3db2a095d1a31f55bd1c8bfc5bf3c9f6bb65b8
+ms.sourcegitcommit: ccc802338b163abdad2e53b55f39addcfea04603
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66191957"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66687401"
 ---
 # <a name="upgrading-to-ad-fs-in-windows-server-2016-with-sql-server"></a>SQL Server 사용 하 여 Windows Server 2016에서에서 AD FS로 업그레이드
 
+
+> [!NOTE]  
+> 만 완료에 대 한 계획 된 된 선언적 시간 프레임을 사용 하 여 업그레이드를 시작 합니다. 혼합된 모드 상태의 그대로 유지 되어 AD FS 팜을 사용 하 여 문제를 발생할 수는 확장 된 기간에 대 한 AD FS를 혼합된 모드 상태로 유지 하는 권장 되지 않습니다.
 
 
 ## <a name="moving-from-a-windows-server-2012-r2-ad-fs-farm-to-a-windows-server-2016-ad-fs-farm"></a>Windows Server 2016 AD FS 팜을 Windows Server 2012 R2 AD FS 팜에서 이동  
@@ -112,4 +115,3 @@ Windows Server 2016 AD FS 서버를 Windows Server 2012 R2 팜에 추가할 수 
     Set-WebApplicationProxyConfiguration -UpgradeConfigurationVersion
     ```
 5. ConfigurationVersion Get WebApplicationProxyConfiguration Powershell 명령을 사용 하 여 업그레이드를 확인 합니다.
-    

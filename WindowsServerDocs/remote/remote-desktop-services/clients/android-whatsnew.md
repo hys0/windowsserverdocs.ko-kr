@@ -11,18 +11,27 @@ ms.topic: article
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 05/06/2019
+ms.date: 06/05/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: e2b79a1f914bdbc971299493ca00680e2504fbd3
-ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
+ms.openlocfilehash: 7730790495babf4a70fb5a70ce93464faa86f1e3
+ms.sourcegitcommit: 1102e91571c88c7a1a2e021a6c53af1def7bb0a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65476026"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66736534"
 ---
 # <a name="whats-new-for-the-remote-desktop-client-on-android"></a>Android에서 원격 데스크톱 클라이언트에 대 한 새로운 기능은 무엇입니까?
 
 정기적으로 업데이트 합니다 [Android에 대 한 원격 데스크톱 클라이언트](remote-desktop-android.md), 새로운 기능을 추가 하 고 문제를 수정 합니다. 아래 최신 업데이트를 확인 합니다.
+
+## <a name="updates-for-version-8171"></a>8.1.71 버전에 대 한 업데이트
+
+*게시 날짜: 06/05/2019*
+
+- 4.0.3 및 4.0.4 Android 버전에 대 한 지원을 제거 합니다.
+- 문제를 해결 하 고 동일한 이름을 원격 리소스 올바르게 표시 되지 않은 키를 누릅니다.
+- 앱 아이콘을 업데이트 합니다.
+- 사소한 버그 수정 및 개선 사항
 
 ## <a name="updates-for-version-8170"></a>8.1.70 버전에 대 한 업데이트
 

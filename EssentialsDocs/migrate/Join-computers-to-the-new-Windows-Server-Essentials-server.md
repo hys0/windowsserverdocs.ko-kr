@@ -12,12 +12,12 @@ ms.assetid: cdfa9504-9881-4265-b308-c7ee8721bfaa
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 1a67cda9e4b04e8d861232b48f45915fb2b460d1
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 0240abfff58baedd79ab038af93b107dbb898eb2
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59836414"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66432944"
 ---
 # <a name="join-computers-to-the-new-windows-server-essentials-server1"></a>새 Windows Server Essentials server1에 컴퓨터 가입
 
@@ -31,7 +31,7 @@ ms.locfileid: "59836414"
   
  서버에 클라이언트 컴퓨터를 연결하는 프로세스는 도메인에 가입되거나 도메인 가입되지 않은 컴퓨터에 대해 동일합니다.  
   
--   이동할 **http://***대상-servername***/connect** 하 고 새 컴퓨터인 것 처럼 Windows Server Connector 소프트웨어를 설치 합니다.  
+- **http://** <em>destination-servername</em> **/connect**로 이동하고 새 컴퓨터인 것처럼 Windows Server Connector 소프트웨어를 설치합니다.  
   
 > [!NOTE]
 >  Windows Server Connector 소프트웨어에서는 Windows XP 또는 Windows Vista를 실행 중인 컴퓨터를 지원하지 않습니다. 이미 도메인에 가입된 Windows XP 또는 Windows Vista를 실행하는 컴퓨터에 있으면 이 단계를 건너뛸 수 있습니다.  

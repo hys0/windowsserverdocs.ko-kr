@@ -9,12 +9,12 @@ ms.prod: windows-server-hyper-v
 ms.technology: virtualization
 ms.localizationpriority: low
 ms.assetid: 6cb13f84-cb50-4e60-a685-54f67c9146be
-ms.openlocfilehash: 7af6d68b02367d349580eacb27405c6f37e97ff8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c0c2f85fbbeca9e8ac5d40bbcb71f286fabfb65c
+ms.sourcegitcommit: cd12ace92e7251daaa4e9fabf1d8418632879d38
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59871994"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66501669"
 ---
 # <a name="managing-hyper-v-hypervisor-scheduler-types"></a>관리 Hyper-v 하이퍼바이저 스케줄러 형식
 
@@ -169,6 +169,7 @@ Windows Server 2016 Hyper-v는 기본적으로 클래식 하이퍼바이저 스�
 
 * 클래식
 * Core
+* 루트
 
 시스템 변경 내용을 적용 하려면 하이퍼바이저 스케줄러 형식으로 다시 부팅 해야 합니다.
 

@@ -7,12 +7,12 @@ ms.topic: article
 ms.author: TimWi; ChrisRob; HerbertM; KenBrumf;  MLeary; ShawnRab
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: e1652e45f51500ceeb0026b8892fbe9c54ff38f3
-ms.sourcegitcommit: d84dc3d037911ad698f5e3e84348b867c5f46ed8
+ms.openlocfilehash: 9861703e5ae88dcaec5e76d9fab426b928d0cb9a
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66266632"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66811499"
 ---
 # <a name="proper-placement-of-domain-controllers-and-site-considerations"></a>적절 한 배치의 도메인 컨트롤러와 사이트 고려 사항
 
@@ -64,11 +64,11 @@ Windows Server 2008부터 클라이언트는 사이트를 확인 하기 위해 �
 
     -   DnsAvoidRegisterRecords를 사용 하 여 같은 제네릭 로케이터 광고에서 위성 사이트에 제대로 수행 되지 않았거나 대기 시간이 긴 도메인 컨트롤러를 제거 합니다. 자세한 내용은 참조 하세요. [클라이언트의 사이트 외부에 있는 글로벌 카탈로그 또는 도메인 컨트롤러의 위치를 최적화 하는 방법을](https://support.microsoft.com/kb/306602)합니다.
 
-        > [!Note]   클라이언트에서 사용할 수 있는 도메인 컨트롤러의 수를 50에 대 한 제한이 있습니다. 사이트를 최적의 등급과 가장 높은 용량 가장 해야 이러한 도메인 컨트롤러입니다.
+        > [!NOTE]
+        > 클라이언트에서 사용할 수 있는 도메인 컨트롤러의 수를 50에 대 한 제한이 있습니다. 사이트를 최적의 등급과 가장 높은 용량 가장 해야 이러한 도메인 컨트롤러입니다.
 
-         
-
-    -   동일한 실제 위치에 신뢰할 수 있고 트러스팅 도메인의 도메인 컨트롤러를 배치 하는 것이 좋습니다.
+    
+    -  동일한 실제 위치에 신뢰할 수 있고 트러스팅 도메인의 도메인 컨트롤러를 배치 하는 것이 좋습니다.
 
 모든 신뢰 시나리오에 대 한 자격 증명 인증 요청에 지정 된 도메인에 따라 라우팅됩니다. 에 마찬가지 쿼리에 대 한 LookupAccountName 및 LsaLookupNames (다른 뿐만 아니라 가장 일반적인 옵션 사용) Api입니다. 이러한 Api에 대 한 도메인 매개 변수를 NULL 값을 전달 하는 경우 도메인 컨트롤러를 사용할 수 있는 신뢰할 수 있는 모든 도메인에 지정 된 계정 이름을 찾으려면 하려고 합니다.
 

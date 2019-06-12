@@ -12,12 +12,12 @@ ms.assetid: e143df43-e227-4629-a4ab-9f70d9bf6e84
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: e5a8db44f80c333d589e0c1664174c394701f90d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: fa6ab8e2108e569b7cef6bfbf0d20af4fa31016d
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59835684"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66432572"
 ---
 # <a name="step-4-move-settings-and-data-to-the-destination-server-for-windows-server-essentials-migration"></a>4단계: Windows Server Essentials 마이그레이션을 위해 대상 서버에 설정 및 데이터 이동
 
@@ -46,41 +46,41 @@ ms.locfileid: "59835684"
   
 #### <a name="to-copy-data-from-the-source-server-to-the-destination-server"></a>원본 서버에서 대상 서버로 데이터를 복사하려면  
   
-1.  도메인 관리자로 대상 서버에 로그인한 후 명령 프롬프트 창 또는 Windows PowerShell 명령 프롬프트를 엽니다.  
+1. 도메인 관리자로 대상 서버에 로그인한 후 명령 프롬프트 창 또는 Windows PowerShell 명령 프롬프트를 엽니다.  
   
-2.  명령 프롬프트 창을 사용하는 경우 다음 명령을 입력하고 Enter 키를 누릅니다.  
+2. 명령 프롬프트 창을 사용하는 경우 다음 명령을 입력하고 Enter 키를 누릅니다.  
   
-    `robocopy \\<SourceServerName>\<SharedSourceFolderName> "<PathOfTheDestination>\<SharedDestinationFolderName>" /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt`
+   `robocopy \\<SourceServerName>\<SharedSourceFolderName> "<PathOfTheDestination>\<SharedDestinationFolderName>" /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt`
   
-     각 항목이 나타내는 의미는 다음과 같습니다.  
+    각 항목이 나타내는 의미는 다음과 같습니다.  
   
-    -   \<SourceServerName\> 원본 서버의 이름  
+   - \<SourceServerName\> 원본 서버의 이름  
   
-    -   \<SharedSourceFolderName\> 원본 서버의 공유 폴더의 이름  
+   - \<SharedSourceFolderName\> 원본 서버의 공유 폴더의 이름  
   
-    -   \<PathOfTheDestination\> 폴더를 이동 하려는 절대 경로  
+   - \<PathOfTheDestination\> 폴더를 이동 하려는 절대 경로  
   
-    -   \<SharedDestinationFolderName\> 는 데이터를 복사할 대상 서버의 폴더  
+   - \<SharedDestinationFolderName\> 는 데이터를 복사할 대상 서버의 폴더  
   
      `robocopy \\sourceserver\MyData "d:\ServerFolders\MyData" /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt`를 예로 들 수 있습니다.  
   
-3.  Windows PowerShell을 사용하는 경우 다음 명령을 입력하고 Enter 키를 누릅니다.  
+3. Windows PowerShell을 사용하는 경우 다음 명령을 입력하고 Enter 키를 누릅니다.  
   
-     `Add-Wssfolder  Path \ -Name  -KeepPermission`  
+    `Add-Wssfolder  Path \ -Name  -KeepPermission`  
   
-4.  원본 서버에서 마이그레이션하는 각 공유 폴더에 대해 이 프로세스를 반복합니다.  
+4. 원본 서버에서 마이그레이션하는 각 공유 폴더에 대해 이 프로세스를 반복합니다.  
   
 ##  <a name="BKMK_Network"></a> 네트워크 구성  
   
 #### <a name="to-configure-the-network"></a>네트워크를 구성하려면  
   
-1.  대상 서버에서 대시보드를 엽니다.  
+1. 대상 서버에서 대시보드를 엽니다.  
   
-2.  대시보드 **홈** 페이지에서 **설정**, **원격 액세스 설정**을 차례로 클릭하고 **원격 액세스를 구성하려면 클릭** 옵션을 선택합니다.  
+2. 대시보드 **홈** 페이지에서 **설정**, **원격 액세스 설정**을 차례로 클릭하고 **원격 액세스를 구성하려면 클릭** 옵션을 선택합니다.  
   
-3.  원격 액세스 설정 마법사가 나타납니다. 마법사의 지침을 완료하여 라우터 및 도메인 이름을 구성합니다.  
+3. 원격 액세스 설정 마법사가 나타납니다. 마법사의 지침을 완료하여 라우터 및 도메인 이름을 구성합니다.  
   
- 라우터에서 UPnP 프레임워크를 지원하지 않거나 UPnP 프레임워크가 사용되지 않으면 라우터 이름 옆에 노란색 경고 아이콘이 나타날 수 있습니다. 다음 포트가 열려 있으며 대상 서버의 IP 주소로 보내지는지 확인합니다.  
+   라우터에서 UPnP 프레임워크를 지원하지 않거나 UPnP 프레임워크가 사용되지 않으면 라우터 이름 옆에 노란색 경고 아이콘이 나타날 수 있습니다. 다음 포트가 열려 있으며 대상 서버의 IP 주소로 보내지는지 확인합니다.  
   
 -   포트 80: HTTP 웹 트래픽  
   

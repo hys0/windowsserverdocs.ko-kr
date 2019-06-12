@@ -8,12 +8,12 @@ ms.topic: article
 ms.assetid: bc22d29c-678c-462d-88b3-1c737dceca75
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: a985df9fea31e5ee180caef4e69899ae8468ff71
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f51bfb1c767c0eee3aed64df9879dd0a97f2f7b1
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59865264"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446167"
 ---
 # <a name="use-regular-expressions-in-nps"></a>NPS에서 정규식 사용
 
@@ -25,37 +25,38 @@ ms.locfileid: "59865264"
 
 패턴 일치 구문을 사용 하 여 정규식을 만들면 다음 표에서 참조 원본으로 사용할 수 있습니다.
 
-|문자|설명|예제|
-|---------|-----------|-------|
-|`\`  |일치 하는 문자 다음 문자를 표시 합니다. |`/n/ matches the character "n". The sequence /\n/ matches a line feed or newline character.`  |
-|`^`  |입력 또는 줄의 시작과 일치 합니다. | &nbsp; |
-|`$`  |입력 또는 줄의 끝 부분과 일치 합니다. | &nbsp; |
-|`*`  |선행 문자 0 회 이상 일치 합니다. |`/zo*/ matches either "z" or "zoo."` |
-|`+`  |이전 문자를 한 번 이상 찾습니다. |`/zo+/ matches "zoo" but not "z."` |
-|`?`  |이전 문자 0 회 또는 1 개 찾습니다. |`/a?ve?/ matches the "ve" in "never."` |
-|`.`  |줄 바꿈 문자를 제외 하 고 단일 문자를 찾습니다.  | &nbsp; |
-|`(pattern)`  |일치 하는 기억 하 고 "패턴"과 일치 합니다.<br />리터럴 문자를 일치 하도록 `(` 하 고 `)` (괄호)를 사용 하 여 `\(` 또는 `\)`합니다.   | &nbsp;  |
-|`x|y `  |X 또는 y와 일치합니다.  |`/z|food?/ matches "zoo" or "food."` |
-|`{n} `  |정확히 n 번 일치 \(n은 비\-음의 정수\)합니다.  |`/o{2}/ does not match the "o" in "Bob," but matches the first two instances of the letter o in "foooood."`  |
-|`{n,}`  |적어도 n 번 일치 \(n은 비\-음의 정수\)합니다.  |`/o{2,}/ does not match the "o" in "Bob" but matches all of the instances of the letter o in "foooood." /o{1,}/ is equivalent to /o+/.`  |
-|`{n,m}`  |적어도 n이 고 최대 m 개 일치 \(m과 n은 비\-음수\)합니다.  |`/o{1,3}/ matches the first three instances of the letter o in "fooooood."`  |
-|`[xyz]`  |대괄호로 묶은 문자 중 하 나와 일치 \(문자 집합을\)입니다.  |`/[abc]/ matches the "a" in "plain."`  |
-|`[^xyz]`  |묶이지 않은 모든 문자를 찾습니다 \(부정 문자 집합을\)입니다.  |`/[^abc]/ matches the "p" in "plain."`  |
-|`\b`  |단어 경계와 일치 \(예를 들어 공백을\)합니다.  |`/ea*r\b/ matches the "er" in "never early."`  |
-|`\B`  |비단어 경계와 일치 합니다.  |`/ea*r\B/ matches the "ear" in "never early."`  |
-|`\d`  |숫자를 찾습니다 \(0-9의 숫자에 해당\)합니다.  | &nbsp; |
-|`\D`  |숫자가 아닌 문자를 찾습니다 \(같음 `[^0-9]` \)합니다.  | &nbsp; |
-|`\f`  |용지 공급 문자를 일치 합니다.  | &nbsp; |
-|`\n`  |일치 하는 줄 바꿈 문자입니다.  | &nbsp; |
-|`\r`  |캐리지 리턴 문자를 찾습니다.  | &nbsp; |
-|`\s`  |공백, 탭 및 용지 공급을 비롯 한 모든 공백 문자를 찾습니다 \(같음 `[ \f\n\r\t\v]` \)합니다.  | &nbsp; |
-|`\S`  |공백이 아닌 문자를 찾습니다 \(같음 `[^ \f\n\r\t\v]` \)합니다.  | &nbsp; |
-|`\t`  |탭 문자를 찾습니다.  | &nbsp; |
-|`\v`  |세로 탭 문자를 찾습니다.  | &nbsp; |
-|`\w`  |밑줄을 비롯 한 모든 단어 문자와 일치 \(같음 `[A-Za-z0-9_]` \)합니다.  | &nbsp; |
-|`\W`  |이 아닌 모든 일치\-단어 문자를 밑줄을 제외한 \(같음 `[^A-Za-z0-9_]` \)합니다.  | &nbsp; |
-|`\num`  |기억 된 일치 항목을 가리킵니다 \( `?num`, 여기서 숫자는 양의 정수\)합니다.  이 옵션을 에서만 사용할 수는 **대체** 특성 조작을 구성 하는 경우 텍스트 상자입니다.| `\1` 첫 번째 저장 된 일치 항목에 저장 된 것으로 바꿉니다.  |
-|`/n/ `  |정규식 ASCII 코드 삽입을 허용 \( `?n`, 여기서 n은 8 진수, 16 진수 또는 10 진수 이스케이프 값을\)입니다.  | &nbsp; |
+
+|  문자  |                                                                                 설명                                                                                  |                                                                 예제                                                                 |
+|-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+|     `\`     |                                                              일치 하는 문자 다음 문자를 표시 합니다.                                                               |                      `/n/ matches the character "n". The sequence /\n/ matches a line feed or newline character.`                       |
+|     `^`     |                                                                 입력 또는 줄의 시작과 일치 합니다.                                                                  |                                                                 &nbsp;                                                                  |
+|     `$`     |                                                                    입력 또는 줄의 끝 부분과 일치 합니다.                                                                     |                                                                 &nbsp;                                                                  |
+|     `*`     |                                                             선행 문자 0 회 이상 일치 합니다.                                                              |                                                  `/zo*/ matches either "z" or "zoo."`                                                   |
+|     `+`     |                                                              이전 문자를 한 번 이상 찾습니다.                                                              |                                                   `/zo+/ matches "zoo" but not "z."`                                                    |
+|     `?`     |                                                              이전 문자 0 회 또는 1 개 찾습니다.                                                              |                                                 `/a?ve?/ matches the "ve" in "never."`                                                  |
+|     `.`     |                                                           줄 바꿈 문자를 제외 하 고 단일 문자를 찾습니다.                                                           |                                                                 &nbsp;                                                                  |
+| `(pattern)` |                         일치 하는 기억 하 고 "패턴"과 일치 합니다.<br />리터럴 문자를 일치 하도록 `(` 하 고 `)` (괄호)를 사용 하 여 `\(` 또는 `\)`합니다.                         |                                                                 &nbsp;                                                                  |
+|     \`x     |                                                                                     y \`                                                                                     |                                                         X 또는 y와 일치합니다.                                                          |
+|   `{n} `    |                                                          정확히 n 번 일치 \(n은 비\-음의 정수\)합니다.                                                           |               `/o{2}/ does not match the "o" in "Bob," but matches the first two instances of the letter o in "foooood."`               |
+|   `{n,}`    |                                                          적어도 n 번 일치 \(n은 비\-음의 정수\)합니다.                                                          | `/o{2,}/ does not match the "o" in "Bob" but matches all of the instances of the letter o in "foooood." /o{1,}/ is equivalent to /o+/.` |
+|   `{n,m}`   |                                                적어도 n이 고 최대 m 개 일치 \(m과 n은 비\-음수\)합니다.                                                |                               `/o{1,3}/ matches the first three instances of the letter o in "fooooood."`                               |
+|   `[xyz]`   |                                                       대괄호로 묶은 문자 중 하 나와 일치 \(문자 집합을\)입니다.                                                        |                                                  `/[abc]/ matches the "a" in "plain."`                                                  |
+|  `[^xyz]`   |                                                  묶이지 않은 모든 문자를 찾습니다 \(부정 문자 집합을\)입니다.                                                  |                                                 `/[^abc]/ matches the "p" in "plain."`                                                  |
+|    `\b`     |                                                              단어 경계와 일치 \(예를 들어 공백을\)합니다.                                                               |                                              `/ea*r\b/ matches the "er" in "never early."`                                              |
+|    `\B`     |                                                                         비단어 경계와 일치 합니다.                                                                          |                                             `/ea*r\B/ matches the "ear" in "never early."`                                              |
+|    `\d`     |                                                       숫자를 찾습니다 \(0-9의 숫자에 해당\)합니다.                                                        |                                                                 &nbsp;                                                                  |
+|    `\D`     |                                                           숫자가 아닌 문자를 찾습니다 \(같음 `[^0-9]` \)합니다.                                                           |                                                                 &nbsp;                                                                  |
+|    `\f`     |                                                                        용지 공급 문자를 일치 합니다.                                                                        |                                                                 &nbsp;                                                                  |
+|    `\n`     |                                                                        일치 하는 줄 바꿈 문자입니다.                                                                        |                                                                 &nbsp;                                                                  |
+|    `\r`     |                                                                     캐리지 리턴 문자를 찾습니다.                                                                     |                                                                 &nbsp;                                                                  |
+|    `\s`     |                                   공백, 탭 및 용지 공급을 비롯 한 모든 공백 문자를 찾습니다 \(같음 `[ \f\n\r\t\v]` \)합니다.                                   |                                                                 &nbsp;                                                                  |
+|    `\S`     |                                                  공백이 아닌 문자를 찾습니다 \(같음 `[^ \f\n\r\t\v]` \)합니다.                                                   |                                                                 &nbsp;                                                                  |
+|    `\t`     |                                                                           탭 문자를 찾습니다.                                                                           |                                                                 &nbsp;                                                                  |
+|    `\v`     |                                                                      세로 탭 문자를 찾습니다.                                                                       |                                                                 &nbsp;                                                                  |
+|    `\w`     |                                              밑줄을 비롯 한 모든 단어 문자와 일치 \(같음 `[A-Za-z0-9_]` \)합니다.                                              |                                                                 &nbsp;                                                                  |
+|    `\W`     |                                           이 아닌 모든 일치\-단어 문자를 밑줄을 제외한 \(같음 `[^A-Za-z0-9_]` \)합니다.                                           |                                                                 &nbsp;                                                                  |
+|   `\num`    | 기억 된 일치 항목을 가리킵니다 \( `?num`, 여기서 숫자는 양의 정수\)합니다.  이 옵션을 에서만 사용할 수는 **대체** 특성 조작을 구성 하는 경우 텍스트 상자입니다. |                                       `\1` 첫 번째 저장 된 일치 항목에 저장 된 것으로 바꿉니다.                                       |
+|   `/n/ `    |                      정규식 ASCII 코드 삽입을 허용 \( `?n`, 여기서 n은 8 진수, 16 진수 또는 10 진수 이스케이프 값을\)입니다.                       |                                                                 &nbsp;                                                                  |
 
 ## <a name="examples-for-network-policy-attributes"></a>네트워크 정책 특성에 대 한 예제
 
@@ -81,7 +82,7 @@ ms.locfileid: "59865264"
 
 - 바꿀 대상:
 
-**바꾸려면 *user@example.microsoft.com* 사용 하 여 *example.microsoft.com\user***
+**바꾸려면 <em>user@example.microsoft.com</em> 사용 하 여 *example.microsoft.com\user***
 
 - 찾기:`(.*)@(.*)`
 
@@ -97,7 +98,7 @@ ms.locfileid: "59865264"
 
 
 
-**바꾸려면 *사용자* 사용 하 여 *user@specific_domain***
+<strong>바꾸려면 *사용자* 사용 하 여 *user@specific_domain</strong>*
 
 - 찾기:`$`
 

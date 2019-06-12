@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 6510f8b21186b856eb489c1add0674b8984b0e56
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 5a0991c76ba890bb94b0dcf258df6207ed228e72
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59857094"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66441789"
 ---
 # <a name="reset-session"></a>reset session
 
@@ -36,6 +36,7 @@ reset session {<SessionName> | <SessionID>} [/server:<ServerName>] [/v]
 ```  
 
 ## <a name="parameters"></a>매개 변수  
+
 |매개 변수|설명|  
 |-------|--------|  
 |\<SessionName>|다시 설정 하려면 세션의 이름을 지정 합니다. 세션의 이름을 확인 하려면는 **세션 쿼리** 명령입니다.|  
@@ -51,14 +52,14 @@ reset session {<SessionName> | <SessionID>} [/server:<ServerName>] [/v]
 -   **/server** 매개 변수는 사용 하는 경우에 필요 **세션 다시 설정** 원격 서버에서.  
 
 ## <a name="BKMK_examples"></a>예제  
--   지정 된 rdp-tcp #6 세션을 다시 설정 하려면 다음을 입력 합니다.  
-    ```  
-    reset session rdp-tcp#6  
-    ```  
--   세션 ID가 3을 사용 하 여 세션을 다시 설정 하려면 다음을 입력 합니다.  
-    ```  
-    reset session 3  
-    ```  
+- 지정 된 rdp-tcp #6 세션을 다시 설정 하려면 다음을 입력 합니다.  
+  ```  
+  reset session rdp-tcp#6  
+  ```  
+- 세션 ID가 3을 사용 하 여 세션을 다시 설정 하려면 다음을 입력 합니다.  
+  ```  
+  reset session 3  
+  ```  
 
 #### <a name="additional-references"></a>추가 참조  
 [명령줄 구문 키](command-line-syntax-key.md)  

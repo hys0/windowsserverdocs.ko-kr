@@ -13,12 +13,12 @@ ms.author: jgerend
 manager: jasgro
 ms.date: 05/21/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 820dfed8a0a58d3ccc64023325c373b761461ba8
-ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
+ms.openlocfilehash: 597da91aa40d9af4526b5358a88128b52d040645
+ms.sourcegitcommit: cd12ace92e7251daaa4e9fabf1d8418632879d38
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2019
-ms.locfileid: "65976519"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66501438"
 ---
 # <a name="features-removed-or-planned-for-replacement-starting-windows-server-2019"></a>기능 제거 또는 교체를 시작 하는 Windows Server 2019에 대 한 계획
 
@@ -54,5 +54,5 @@ Windows Server 2019에 설치 된 제품 이미지에서은 다음 기능 및 �
 | 신뢰할 수 있는 플랫폼 모듈 (TPM) 관리 콘솔|TPM 관리 콘솔에서 이전에 제공 되는 정보에 제공 됩니다. 합니다 [ **장치 보안** ](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-security-center/wdsc-device-security) 페이지를 [Windows Defender 보안 센터](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-security-center/windows-defender-security-center)합니다. |
 | 호스트 보호자 서비스에 대 한 Active Directory 증명 모드|호스트 보호자 서비스에 대 한 Active Directory 증명 모드를 더 이상 개발 하는 것-대신 새 증명 모드를 추가 했습니다 [호스트 키 증명](../security/guarded-fabric-shielded-vm/guarded-fabric-create-host-key.md), 훨씬 더 간단 하 고 동일 하 게 Active Directory 기반과 호환 되는 증명 합니다.  이 새로운 모드는 설치 환경, 간편해 진 관리 및 Active Directory 증명 보다 더 적은 인프라 종속성을 사용 하 여 동일한 기능을 제공 합니다. 호스트 키 증명 필요한 어떤 Active Directory 증명 이외의 추가 하드웨어 요구 사항이 없습니다 있으므로 모든 기존 시스템에 새 모드와 호환 상태로 유지 됩니다. 참조 [보호 된 호스트 배포](../security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts.md) 증명 옵션에 대 한 자세한 내용은 합니다. |
 | OneSync 서비스|OneSync 서비스 메일, 일정 및 사용자 앱에 대 한 데이터를 동기화합니다. 동일한 동기화를 제공 하는 Outlook 앱에 동기화 엔진을 추가 했습니다. |
-| 원격 차등 압축 API 지원|네트워크를 통해 전송 되는 데이터 양을 최소화 하는 압축 기술을 사용 하 여 원격 소스와 데이터 동기화를 사용 하는 원격 차등 압축 API 지원 합니다. 이 지원은 Microsoft 제품에서 현재 사용 되지 않습니다. |
+| 원격 차등 압축 API 지원|네트워크를 통해 전송 되는 데이터 양을 최소화 하는 압축 기술을 사용 하 여 원격 소스와 데이터 동기화를 사용 하는 원격 차등 압축 API 지원 합니다. |
 | WFP 간단한 필터 스위치 확장|WFP 간단한 필터 스위치 확장에는 개발자가 만들 수 [Hyper-v 가상 스위치 확장을 필터링 하는 단순한 네트워크 패킷](https://docs.microsoft.com/en-us/windows-hardware/drivers/network/using-virtual-switch-filtering)합니다. 전체 필터링 확장 프로그램을 만들어 동일한 기능을 얻을 수 있습니다. 따라서 우리가에서는 제거할이 확장 나중에입니다. |

@@ -7,22 +7,22 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
-ms.date: 04/12/2018
+ms.date: 06/04/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 84d10ab3e25500720dd13e2ba057dc3c5bf05a6f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f2031afada302c0f73621a75f572c8547620db16
+ms.sourcegitcommit: cd12ace92e7251daaa4e9fabf1d8418632879d38
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59849324"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66501655"
 ---
 # <a name="storage-spaces-direct-hardware-requirements"></a>저장소 공간 다이렉트 하드웨어 요구 사항
 
-> 적용 대상: Windows Server 2016, Windows Server Insider Preview
+> 적용 대상: Windows Server 2019, Windows Server 2016
 
 이 항목에서는 저장소 공간 다이렉트에 대 한 최소 하드웨어 요구 사항을 설명 합니다.
 
-프로덕션 환경에 대 한 것이 좋습니다 이러한 [Windows Server 소프트웨어 정의](https://microsoft.com/wssd) 하드웨어/소프트웨어 배포 도구 및 절차를 포함 하는 파트너에서 제공 합니다. 이러한 설계, 조립 및 호환성 및 안정성 얻게 되므로 신속 하 게 실행 하기 위한이 참조 아키텍처에 대해 유효성을 검사 합니다. 자세히 알아보세요 [ https://microsoft.com/wssd ](https://microsoft.com/wssd)합니다.
+프로덕션 환경에서는 파트너에서 유효성이 검사 된 하드웨어/소프트웨어 솔루션을 구매 권장 배포 도구 및 절차 포함는 합니다. 이러한 솔루션 설계, 조립 및 호환성 및 안정성 얻게 되므로 신속 하 게 실행 하기 위한이 참조 아키텍처에 대해 유효성이 검사 됩니다. Windows Server 2019 솔루션에 대 한 참조를 [Azure Stack HCI solutions 웹 사이트](https://azure.microsoft.com/overview/azure-stack/hci)합니다. Windows Server 2016 솔루션에 대 한 자세한 내용은 [Windows Server 소프트웨어 정의](https://microsoft.com/wssd)합니다.
 
 ![Windows Server 소프트웨어 정의 파트너 로고](media/hardware-requirements/wssd-partners.png)
 
@@ -79,25 +79,27 @@ ms.locfileid: "59849324"
 - 512n, 512e, 및 4k 기본 드라이브 모두 지원
 - 반도체 드라이브를 제공 해야 [전원 손실 방지](https://blogs.technet.microsoft.com/filecab/2016/11/18/dont-do-it-consumer-ssd/)
 - 동일한 수와 모든 서버 – 드라이브 유형의 참조 [드라이브 대칭 고려 사항](drive-symmetry-considerations.md)
+- 캐시 장치 32GB 여야 합니다. 크거나
+- 영구 메모리 장치를 사용 하 여 캐시 장치로, NVMe SSD 용량 장치 (Hdd를 사용할 수 없음) 사용 해야 합니다.
 - NVMe 드라이버는 Microsoft의 기본 또는 NVMe 드라이버를 업데이트 합니다.
 - 권장: 캐시 드라이브 수가의 전체 배수가 용량 드라이브 수
 - 권장: 캐시 드라이브 높은 쓰기 지속 시간과 있어야 합니다.: 3 개 이상의 드라이브 쓰기-매일 (DWPD) 또는 4tb 이상 (TBW) – 하루 기록 참조 [테라바이트 기록 (TBW) 및 최소 저장소에 대 한 권장 이해 드라이브 (DWPD) 하루 기록 공간 다이렉트](https://blogs.technet.microsoft.com/filecab/2017/08/11/understanding-dwpd-tbw/)
 
 저장소 공간 다이렉트에 대 한 드라이브 수 연결 하는 방법을 다음과 같습니다.
 
-1. SATA 드라이브 직접 연결
-2. NVMe 드라이브 직접 연결
-3. SAS 드라이브를 사용 하 여 SAS 호스트 버스 어댑터 (HBA)
-4. SATA 드라이브를 사용 하 여 SAS 호스트 버스 어댑터 (HBA)
-5. **지원 되지 않습니다.** RAID 컨트롤러 카드 또는 SAN (파이버 채널, iSCSI, FCoE) 저장소입니다. 호스트 버스 어댑터 (HBA) 카드는 간단한 통과 모드를 구현 해야 합니다.
+- SATA 드라이브 직접 연결
+- NVMe 드라이브 직접 연결
+- SAS 드라이브를 사용 하 여 SAS 호스트 버스 어댑터 (HBA)
+- SATA 드라이브를 사용 하 여 SAS 호스트 버스 어댑터 (HBA)
+- **지원 되지 않습니다.** RAID 컨트롤러 카드 또는 SAN (파이버 채널, iSCSI, FCoE) 저장소입니다. 호스트 버스 어댑터 (HBA) 카드는 간단한 통과 모드를 구현 해야 합니다.
 
 ![지원 되는 드라이브의 다이어그램에 상호 연결](media/hardware-requirements/drive-interconnect-support-1.png)
 
 드라이브를 서버에 내부 수 또는 꺼내서 외장 하나만 연결 된 서버. 인클로저 서비스 SES (SCSI) 슬롯 매핑 및 식별을 위한 필요합니다. 각 외부 엔클로저는 고유 식별자 (고유 ID)를 제공 해야 합니다.
 
-1. 서버에 내부 드라이브
-2. 드라이브를 꺼내서 외장 "JBOD (") 하나의 서버에 연결
-3. **지원 되지 않습니다.** 공유 SAS 엔클로저 모든 폼의 다중 경로 IO (MPIO) 드라이브 여러 경로 통해 액세스할 수 있는 여러 서버에 연결 합니다.
+- 서버에 내부 드라이브
+- 드라이브를 꺼내서 외장 "JBOD (") 하나의 서버에 연결
+- **지원 되지 않습니다.** 공유 SAS 엔클로저 모든 폼의 다중 경로 IO (MPIO) 드라이브 여러 경로 통해 액세스할 수 있는 여러 서버에 연결 합니다.
 
 ![지원 되는 드라이브의 다이어그램에 상호 연결](media/hardware-requirements/drive-interconnect-support-2.png)
 
@@ -108,8 +110,10 @@ ms.locfileid: "59849324"
 
 | 보유 드라이브 종류   | 필요한 최소 수 |
 |-----------------------|-------------------------|
+| 모든 영구 메모리 (동일한 모델) | 4 영구 메모리 |
 | 모두 NVMe(동일한 모델) | NVMe 4개                  |
 | 모두 SSD(동일한 모델)  | SSD 4개                   |
+| 영구 메모리 + NVMe 또는 SSD | 영구 메모리 2 + 4 NVMe 또는 SSD |
 | NVMe + SSD            | NVMe 2개 + SSD 4개          |
 | NVMe + HDD            | NVMe 2개 + HDD 4개          |
 | SSD + HDD             | SSD 2개 + HDD 4개           |
@@ -120,5 +124,7 @@ ms.locfileid: "59849324"
 
 ### <a name="maximum-capacity"></a>최대 용량
 
-- 권장: 서버당 최대 100 tb (테라바이트) 원시 저장소 용량
-- 최대 1 페타바이트 (1, 000 테라바이트)의 원시 용량 저장소 풀
+| 최대값                | Windows Server 2019  | Windows Server 2016  |
+| ---                     | ---------            | ---------            |
+| 서버당 원시 용량 | 100TB               | 100TB               |
+| 풀 용량           | 4 PB (4,000 TB)      | 1 PB                 |

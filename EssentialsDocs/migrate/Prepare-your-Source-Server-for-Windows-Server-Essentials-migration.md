@@ -12,12 +12,12 @@ ms.assetid: f5861ae9-77cb-4d37-b4c5-8f0757213385
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 929c7506c78667646e429c4f28df7e5642c575ab
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 93f5bdb615adf56b81a1c4c93f802f6da4e48c1b
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59841154"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66432615"
 ---
 # <a name="prepare-your-source-server-for-windows-server-essentials-migration1"></a>Windows Server Essentials에 대 한 원본 서버 준비 migration1
 
@@ -89,20 +89,20 @@ ms.locfileid: "59841154"
   
 ###### <a name="to-use-the-windows-server-solutions-bpa-to-analyze-your-source-server"></a>Windows Server Solutions BPA를 사용하여 원본 서버를 분석하려면  
   
-1.  Microsoft 다운로드 센터에서 [Windows Server Solutions 모범 사례 분석기](https://www.microsoft.com/en-us/download/details.aspx?id=15556)를 다운로드하고 설치하세요.  
+1. Microsoft 다운로드 센터에서 [Windows Server Solutions 모범 사례 분석기](https://www.microsoft.com/en-us/download/details.aspx?id=15556)를 다운로드하고 설치하세요.  
   
-2.  다운로드가 완료되면 **시작**을 클릭하고 **모든 프로그램**을 가리키고 나서 **SBS 모범 사례 분석기 도구**를 클릭합니다.  
+2. 다운로드가 완료되면 **시작**을 클릭하고 **모든 프로그램**을 가리키고 나서 **SBS 모범 사례 분석기 도구**를 클릭합니다.  
   
-    > [!NOTE]
-    >  서버를 검색하기 전에 업데이트를 확인합니다.  
+   > [!NOTE]
+   >  서버를 검색하기 전에 업데이트를 확인합니다.  
   
-3.  탐색 창에서 **검색 시작**을 클릭합니다.  
+3. 탐색 창에서 **검색 시작**을 클릭합니다.  
   
-4.  세부 정보 창에서 검색 레이블을 입력하고 **검색 시작**을 클릭합니다. 검사 레이블은 검사 보고서의 이름(예: **SBS BPA Scan 1Jul2012**)입니다.  
+4. 세부 정보 창에서 검색 레이블을 입력하고 **검색 시작**을 클릭합니다. 검사 레이블은 검사 보고서의 이름(예: **SBS BPA Scan 1Jul2012**)입니다.  
   
-5.  검색이 완료되면 **이 Best Practices 검색 보고서 보기**를 클릭합니다.  
+5. 검색이 완료되면 **이 Best Practices 검색 보고서 보기**를 클릭합니다.  
   
- 서버 구성에 대한 정보를 수집하고 나서 Windows Server Solutions BPA에서는 정보가 올바른지 확인하고 관리자에게 심각도별로 정렬된 정보 및 문제 목록을 제공합니다. 목록에서는 각 문제를 설명하고 권장 사항 또는 가능한 해결 방법을 제공합니다. 세 가지 보고서 유형을 사용할 수 있습니다.  
+   서버 구성에 대한 정보를 수집하고 나서 Windows Server Solutions BPA에서는 정보가 올바른지 확인하고 관리자에게 심각도별로 정렬된 정보 및 문제 목록을 제공합니다. 목록에서는 각 문제를 설명하고 권장 사항 또는 가능한 해결 방법을 제공합니다. 세 가지 보고서 유형을 사용할 수 있습니다.  
   
 |보고서 유형|설명|  
 |-----------------|-----------------|  
@@ -140,25 +140,25 @@ ms.locfileid: "59841154"
   
 ##### <a name="to-verify-that-you-have-the-appropriate-permissions-to-run-the-tool-on-the-source-server"></a>원본 서버에서 도구를 실행할 해당 권한이 있는지 확인하는 방법  
   
-1.  원본 서버에서 **시작**, **관리 도구**, **Active Directory 사용자 및 컴퓨터**를 차례로 클릭합니다.  
+1. 원본 서버에서 **시작**, **관리 도구**, **Active Directory 사용자 및 컴퓨터**를 차례로 클릭합니다.  
   
-2.  콘솔 트리에서 도메인을 클릭하여 확장하고 **사용자**를 클릭합니다.  
+2. 콘솔 트리에서 도메인을 클릭하여 확장하고 **사용자**를 클릭합니다.  
   
-3.  마이그레이션에 사용 중인 관리자 계정을 마우스 오른쪽 단추로 클릭한 후 **속성**을 클릭합니다.  
+3. 마이그레이션에 사용 중인 관리자 계정을 마우스 오른쪽 단추로 클릭한 후 **속성**을 클릭합니다.  
   
-4.  **구성원 소속** 탭을 클릭한 후 **구성원 소속** 텍스트 상자에 Enterprise Admins, Schema Admins 및 Domain Admins이 나열되는지 확인합니다.  
+4. **구성원 소속** 탭을 클릭한 후 **구성원 소속** 텍스트 상자에 Enterprise Admins, Schema Admins 및 Domain Admins이 나열되는지 확인합니다.  
   
-5.  그룹이 나열되지 않는 경우, **추가**를 클릭한 후 나열되지 않은 각 그룹을 추가합니다.  
+5. 그룹이 나열되지 않는 경우, **추가**를 클릭한 후 나열되지 않은 각 그룹을 추가합니다.  
   
-    > [!NOTE]
-    >  -   Netlogon 서비스가 시작되지 않은 경우 권한 오류가 발생할 수 있습니다.  
-    > -   변경 내용을 적용하려면 서버에서 로그오프한 후 다시 로그온해야 합니다.  
+   > [!NOTE]
+   > - Netlogon 서비스가 시작되지 않은 경우 권한 오류가 발생할 수 있습니다.  
+   >   -   변경 내용을 적용하려면 서버에서 로그오프한 후 다시 로그온해야 합니다.  
   
-     Windows Update 에이전트 최신 버전을 사용하여 서버 업데이트 프로세스가 올바르게 작동하는지 확인할 수 있습니다.  
+    Windows Update 에이전트 최신 버전을 사용하여 서버 업데이트 프로세스가 올바르게 작동하는지 확인할 수 있습니다.  
   
- Windows Update 에이전트 최신 버전을 사용하여 서버 업데이트 프로세스가 올바르게 작동하는지 확인할 수 있습니다.  
+   Windows Update 에이전트 최신 버전을 사용하여 서버 업데이트 프로세스가 올바르게 작동하는지 확인할 수 있습니다.  
   
- 원본 서버에서 Windows Update 에이전트를 설치 하려면, 먼저 Windows PowerShell 2.0 및 Microsoft Baseline Configuration Analyzer 2.0를 설치 합니다.  
+   원본 서버에서 Windows Update 에이전트를 설치 하려면, 먼저 Windows PowerShell 2.0 및 Microsoft Baseline Configuration Analyzer 2.0를 설치 합니다.  
   
 -   참조를 다운로드 하 고 Windows PowerShell 2.0을 설치 [968929 문서](https://go.microsoft.com/fwlink/p/?LinkId=241483) Microsoft 기술 자료에서 합니다.  
   
@@ -168,34 +168,34 @@ ms.locfileid: "59841154"
   
 ##### <a name="to-install-and-run-the-migration-preparation-tool-on-the-source-server"></a>원본 서버에서 마이그레이션 준비 도구를 설치하려면  
   
-1.  원본 서버의 DVD 드라이브에 Windows Server Essentials dvd1을 넣습니다를 삽입 합니다.  
+1. 원본 서버의 DVD 드라이브에 Windows Server Essentials dvd1을 넣습니다를 삽입 합니다.  
   
-2.  Windows 탐색기를 열고 DVD의 **\support\tools** 폴더로 이동하고 나서 **sourcetool.msi** 파일을 두 번 클릭합니다.  
+2. Windows 탐색기를 열고 DVD의 **\support\tools** 폴더로 이동하고 나서 **sourcetool.msi** 파일을 두 번 클릭합니다.  
   
-    > [!NOTE]
-    >  -   서버에 마이그레이션 준비 도구가 이미 설치되어 있으면 **시작** 메뉴에서 도구를 실행합니다.  
-    > -   최상의 마이그레이션 준비를 했는지 확인하려면 항상 최신 업데이트 설치를 선택하는 것이 좋습니다.  
+   > [!NOTE]
+   > - 서버에 마이그레이션 준비 도구가 이미 설치되어 있으면 **시작** 메뉴에서 도구를 실행합니다.  
+   >   -   최상의 마이그레이션 준비를 했는지 확인하려면 항상 최신 업데이트 설치를 선택하는 것이 좋습니다.  
   
-     마법사가 원본 서버에 마이그레이션 준비 도구를 설치합니다. 설치가 완료되면 마이그레이션 준비 도구가 자동으로 실행되고 최신 업데이트를 설치합니다.  
+    마법사가 원본 서버에 마이그레이션 준비 도구를 설치합니다. 설치가 완료되면 마이그레이션 준비 도구가 자동으로 실행되고 최신 업데이트를 설치합니다.  
   
-3.  마이그레이션 준비 도구에서 **백업이 있으며 계속할 준비가 되었습니다.** 를 선택한 후 **다음**을 클릭합니다.  
+3. 마이그레이션 준비 도구에서 **백업이 있으며 계속할 준비가 되었습니다.** 를 선택한 후 **다음**을 클릭합니다.  
   
-    > [!WARNING]
-    >  핫픽스 설치와 관련 된 오류 메시지를 나타나면 메서드 2를 참조 하십시오. Catroot2 폴더 이름 바꾸기 [문서 822798](https://go.microsoft.com/FWLink/p/?LinkID=118672) Microsoft 기술 자료에서 합니다.  
+   > [!WARNING]
+   >  핫픽스 설치와 관련 된 오류 메시지를 나타나면 메서드 2를 참조 하십시오. Catroot2 폴더 이름 바꾸기 [문서 822798](https://go.microsoft.com/FWLink/p/?LinkID=118672) Microsoft 기술 자료에서 합니다.  
   
-     마이그레이션 준비 도구가 Active Directory 스키마를 확장함으로써 마이그레이션을 위해 원본 도메인을 준비합니다. 작업이 완료되면 **다음**을 클릭하여 계속하세요.  
+    마이그레이션 준비 도구가 Active Directory 스키마를 확장함으로써 마이그레이션을 위해 원본 도메인을 준비합니다. 작업이 완료되면 **다음**을 클릭하여 계속하세요.  
   
-4.  원본 도메인의 준비를 마친 후 마이그레이션 준비 도구가 2가지 유형의 잠재적 문제를 확인하기 위해 원본 서버를 검사합니다.  
+4. 원본 도메인의 준비를 마친 후 마이그레이션 준비 도구가 2가지 유형의 잠재적 문제를 확인하기 위해 원본 서버를 검사합니다.  
   
-    -   **오류** 마이그레이션을 차단 하거나 마이그레이션 실패를 일으킬 수 있는 원본 서버에서 발견 된 문제입니다. 오류 메시지의 지침을 따라 문제를 해결한 후 **다시 검사**를 클릭합니다.  
+   - **오류** 마이그레이션을 차단 하거나 마이그레이션 실패를 일으킬 수 있는 원본 서버에서 발견 된 문제입니다. 오류 메시지의 지침을 따라 문제를 해결한 후 **다시 검사**를 클릭합니다.  
   
-    -   **경고** 마이그레이션하는 동안 작동 문제가 발생할 수 있는 원본 서버에서 발견 된 문제입니다. 오류 메시지의 지침을 따라 마이그레이션 진행 전에 문제를 해결하는 것이 좋습니다.  
+   - **경고** 마이그레이션하는 동안 작동 문제가 발생할 수 있는 원본 서버에서 발견 된 문제입니다. 오류 메시지의 지침을 따라 마이그레이션 진행 전에 문제를 해결하는 것이 좋습니다.  
   
      모든 문제를 해결하거나 확인한 후 **다음**을 클릭합니다.  
   
-5.  마이그레이션 준비 도구에서 **완료**를 클릭합니다.  
+5. 마이그레이션 준비 도구에서 **완료**를 클릭합니다.  
   
-6.  마이그레이션 준비 도구가 완료 되 면 Windows Server Essentials로 마이그레이션을 시작 하기 전에 원본 서버를 다시 시작 하 라는 메시지가 표시 될 수 있습니다.  
+6. 마이그레이션 준비 도구가 완료 되 면 Windows Server Essentials로 마이그레이션을 시작 하기 전에 원본 서버를 다시 시작 하 라는 메시지가 표시 될 수 있습니다.  
   
 > [!NOTE]
 >  실행을 성공적으로 마이그레이션 준비 도구가 원본 서버에서 대상 서버에서 Windows Server Essentials를 설치한 후 2 주 내에서 완료 해야 합니다. 그렇지 않으면 대상 서버의 Windows Server Essentials 설치 차단 됩니다. 이 경우 원본 서버에서 마이그레이션 준비 도구를 다시 실행해야 합니다.  

@@ -76,7 +76,7 @@
 ### [Windows Server Essentials 마이그레이션을 위한 대상 서버로 설정 및 데이터 이동](migrate/Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md)
 ### [Windows Server Essentials 마이그레이션을 위한 대상 서버로 Windows SBS 2003 설정 및 데이터 이동](migrate/Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md)
 ### [Windows Server Essentials 마이그레이션을 위한 대상 서버로 Windows SBS 2008 설정 및 데이터 이동](migrate/Move-Windows-SBS-2008-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md)
-### [Windows Server Essentials 마이그레이션을 위해 대상 서버로 Windows SBS 2011 Essentials 설정 및 데이터 이동](migrate/Move-Windows-SBS-2011-Essentials-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md)
+### [Windows Server Essentials 마이그레이션을 위해 대상 서버로 Windows SBS 2011 Essentials 설정 및 데이터 이동](migrate/Move-Windows-SBS-2011-Essentials-to-the-Destination-Server-for-migration.md)
 ### [Windows Server Essentials 마이그레이션을 위해 대상 서버로 Windows SBS 2011 Standard 설정 및 데이터 이동](migrate/Move-Windows-SBS-2011-Standard-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md)
 ### [Windows Server Essentials 마이그레이션을 위한 대상 서버로 Windows Server 2008 Foundation 설정 및 데이터 이동](migrate/Move-Windows-Server-2008-Foundation-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md)
 ### [Windows Server Essentials 마이그레이션에 대한 사후 마이그레이션 작업 수행](migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md)

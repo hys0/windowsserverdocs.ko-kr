@@ -7,12 +7,12 @@ ms.topic: article
 ms.author: HammadBu; VladmiS
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: e45d1abb545ad46e654c811a0347c589bd12adf0
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e95671718616fc7c81977434e83a227c858fca17
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59863244"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66811413"
 ---
 # <a name="performance-tuning-remote-desktop-session-hosts"></a>원격 데스크톱 세션 호스트 조정 성능
 
@@ -21,13 +21,13 @@ ms.locfileid: "59863244"
 
 **항목 내용**
 
--   [성능에 대 한 적절 한 하드웨어 선택](#hw)
+-   [성능에 대 한 적절 한 하드웨어 선택](#selecting-the-proper-hardware-for-performance)
 
--   [원격 데스크톱 세션 호스트에 대 한 응용 프로그램 튜닝](#apps)
+-   [원격 데스크톱 세션 호스트에 대 한 응용 프로그램 튜닝](#tuning-applications-for-remote-desktop-session-host)
 
--   [매개 변수를 튜닝 하는 원격 데스크톱 세션 호스트](#host)
+-   [매개 변수를 튜닝 하는 원격 데스크톱 세션 호스트](#remote-desktop-session-host-tuning-parameters)
 
-## <a href="" id="hw"></a>성능에 대 한 적절 한 하드웨어 선택
+## <a name="selecting-the-proper-hardware-for-performance"></a>성능에 맞는 적절한 하드웨어 선택
 
 
 RD 세션 호스트 서버 배포의 경우 하드웨어 선택은 사용자가 사용 하는 방법 및 응용 프로그램 집합으로 제어 됩니다. 사용자와 경험의 수에 영향을 주는 주요 요소는 CPU, 메모리, 디스크 및 그래픽 됩니다. 이 섹션에서는 RD 세션 호스트 서버에 관련 된 추가적인 지침을 제공 하 고 RD 세션 호스트 서버를 다중 사용자 환경에 주로 관련이 있습니다.
@@ -72,7 +72,7 @@ RD 세션 호스트 서버를 구성 하 고 필드에 배포 되는 시스템�
 
     볼륨 및 네트워크 트래픽 프로필을 각 배포에 지정 됩니다.
 
-## <a href="" id="apps"></a>원격 데스크톱 세션 호스트에 대 한 응용 프로그램 튜닝
+## <a name="tuning-applications-for-remote-desktop-session-host"></a>원격 데스크톱 세션 호스트에 대 한 응용 프로그램 튜닝
 
 
 RD 세션 호스트 서버에서 CPU 사용량의 대부분은 앱에서 생성 됩니다. 데스크톱 앱은 응용 프로그램이 사용자 요청에 응답할 걸리는 시간을 최소화 하기를 사용 하 여 응답성으로 일반적으로 최적화 됩니다. 그러나 서버 환경에서 반드시 동일 하 게 다른 세션에 부정적인 영향을 방지 하는 작업을 완료 하는 데 필요한 CPU 사용량의 총 크기를 최소화 하기 위해 합니다.
@@ -111,7 +111,7 @@ RD 세션 호스트 서버에서 사용할 수 있는 앱을 구성할 때 다�
 
     가능한 경우 다른 유사한 실행 엔진으로 유사한 방법을 적용 됩니다.
 
-## <a href="" id="host"></a>매개 변수를 튜닝 하는 원격 데스크톱 세션 호스트
+## <a name="remote-desktop-session-host-tuning-parameters"></a>매개 변수를 튜닝 하는 원격 데스크톱 세션 호스트
 
 
 ### <a name="page-file"></a>페이지 파일

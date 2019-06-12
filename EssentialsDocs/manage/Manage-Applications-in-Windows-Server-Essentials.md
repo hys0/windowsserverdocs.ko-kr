@@ -12,12 +12,12 @@ ms.assetid: ae89c46a-0afd-4858-9150-ec97650f45a4
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: e98d661ac71697bc0e38b6a25fe2f9d2b0b7254f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 1a60a9e7fd958d447b4770431a69546f0ad6f229
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59860174"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66433355"
 ---
 # <a name="manage-applications-in-windows-server-essentials"></a>Windows Server Essentials에서 응용 프로그램 관리
 
@@ -32,21 +32,21 @@ ms.locfileid: "59860174"
 ##  <a name="BKMK_1"></a> 대시보드에서 응용 프로그램 관리 작업  
  대시보드의 **응용 프로그램** 관리 페이지는 다음 정보를 제공합니다.  
   
--   다음을 표시하는 설치된 추가 기능 목록:  
+- 다음을 표시하는 설치된 추가 기능 목록:  
   
-    -   온라인 서비스 또는 추가 기능의 이름  
+  -   온라인 서비스 또는 추가 기능의 이름  
   
-    -   추가 기능의 업데이트 상태  
+  -   추가 기능의 업데이트 상태  
   
-    -   추가 기능의 구독 상태  
+  -   추가 기능의 구독 상태  
   
-    -   추가 기능을 제공하는 회사 또는 게시자의 이름  
+  -   추가 기능을 제공하는 회사 또는 게시자의 이름  
   
--   선택한 추가 기능을 관리하기 위한 작업 집합을 포함하는 작업 창  
+- 선택한 추가 기능을 관리하기 위한 작업 집합을 포함하는 작업 창  
   
--   Microsoft Pinpoint에서 다운로드하여 설치할 수 있는 추가 기능 목록  
+- Microsoft Pinpoint에서 다운로드하여 설치할 수 있는 추가 기능 목록  
   
- 다음 표에서는 서버 대시보드에서 사용할 수 있는 다양한 추가 기능 관리 작업에 대해 설명합니다. 일부 작업은 추가 기능과만 관련되므로 목록에서 추가 기능을 선택할 때만 표시됩니다.  
+  다음 표에서는 서버 대시보드에서 사용할 수 있는 다양한 추가 기능 관리 작업에 대해 설명합니다. 일부 작업은 추가 기능과만 관련되므로 목록에서 추가 기능을 선택할 때만 표시됩니다.  
   
 |작업 이름|설명|  
 |---------------|-----------------|  

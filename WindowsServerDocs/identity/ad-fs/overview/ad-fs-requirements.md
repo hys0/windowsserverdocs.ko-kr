@@ -9,12 +9,12 @@ ms.date: 03/06/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 235030ea913f2fe1860efaa00bdb4641ac56750d
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: e62032533b15ec3d93896d242273612faafdca58
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66188676"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66444106"
 ---
 # <a name="ad-fs-requirements"></a>AD FS 요구 사항
 
@@ -191,16 +191,16 @@ SQL Server AD FS 구성 데이터베이스를 사용 하는 가장 기본적인 
 ## <a name="BKMK_6"></a>브라우저 요구 사항  
 브라우저 또는 브라우저 컨트롤을 통해 AD FS 인증을 수행할 때는 브라우저 다음 요구 사항을 준수 해야 합니다.  
   
--   JavaScript은 사용 하도록 설정  
+- JavaScript은 사용 하도록 설정  
   
--   Single sign on 클라이언트 브라우저가 쿠키를 허용 하도록 구성 해야 합니다.  
+- Single sign on 클라이언트 브라우저가 쿠키를 허용 하도록 구성 해야 합니다.  
   
--   서버 이름 표시 \(SNI\) 지원 되어야 합니다  
+- 서버 이름 표시 \(SNI\) 지원 되어야 합니다  
   
--   브라우저는 사용자 인증서 및 장치 인증서 인증을 위해 SSL 클라이언트 인증서 인증을 지원 해야 합니다.  
+- 브라우저는 사용자 인증서 및 장치 인증서 인증을 위해 SSL 클라이언트 인증서 인증을 지원 해야 합니다.  
 
--   Windows 통합 인증을 페더레이션 서비스 이름을 사용 하 여 원활한 로그인 (예: https:\/\/fs.contoso.com) 로컬 인트라넷 영역 또는 신뢰할 수 있는 사이트 영역에서 구성 해야 합니다.
-## <a name="BKMK_7"></a>네트워크 요구 사항  
+- Windows 통합 인증을 페더레이션 서비스 이름을 사용 하 여 원활한 로그인 (예: https:\/\/fs.contoso.com) 로컬 인트라넷 영역 또는 신뢰할 수 있는 사이트 영역에서 구성 해야 합니다.
+  ## <a name="BKMK_7"></a>네트워크 요구 사항  
  
 **방화벽 요구 사항**  
   
@@ -210,7 +210,7 @@ SQL Server AD FS 구성 데이터베이스를 사용 하는 가장 기본적인 
 
 하이브리드 포트에 대 한 자세한 요구 사항을 참조 하세요 [하이브리드 Identity 포트 및 프로토콜](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-ports)합니다. 
 
-추가 정보를 참조 하세요. [Active Directory Federation Services 보안 모범 사례입니다](..\deployment\Best-Practices-Securing-AD-FS.md)
+추가 정보를 참조 하세요. [Active Directory Federation Services 보안 모범 사례입니다](../deployment/Best-Practices-Securing-AD-FS.md)
   
 **DNS 요구 사항**  
   

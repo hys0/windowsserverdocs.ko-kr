@@ -10,23 +10,23 @@ ms.topic: article
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: 71b56a0bc4f53879ebaf3610f60dded39484375b
-ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
+ms.openlocfilehash: e7ff669b1a1ca3bed5d7c827c40bc46e81ea3f02
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/25/2019
-ms.locfileid: "66222349"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66810595"
 ---
 # <a name="get-started-with-windows-server-2016"></a>Windows Server 2016 시작
 
 >적용 대상: Windows Server 2016
 
->[!TIP]
-> 이전 버전의 Windows Server에 대한 자세한 내용이 궁금하십니까? docs.microsoft.com에서 다른 [Windows Server 라이브러리](/previous-versions/windows/)를 확인하세요. 또한 특정 정보에 대해 [이 사이트를 검색](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions)할 수 있습니다.
+> [!TIP]
+> 이전 버전의 Windows Server에 대한 자세한 내용이 궁금하십니까? docs.microsoft.com에서 다른 [Windows Server 라이브러리](/previous-versions/windows/)를 확인할 수 있습니다. 또한 특정 정보에 대해 [이 사이트를 검색](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions)할 수 있습니다.
 
 ![확인 표시가 있는 상자를 보여 주는 아이콘](../media/landing-icons/getstarted.png) 이 이곳에서 Windows Server 2016으로 전환할 준비가 경우를 결정할 수 있도록 자세한 정보를 포함 합니다. 시스템 요구 사항, 업그레이드 옵션 및 Windows Server 2016으로 전환에 대한 기타 정보를 확인했으면 기본 [Windows Server 2016](Windows-Server-2016.md) 허브로 돌아가 요구 사항에 가장 적합한 버전 및 설치 옵션을 설치하는 과정을 시작할 수 있습니다. 
 
->[!Note]
+> [!Note]
 > Windows Server 2016을 다운로드 하려면 참조 [Windows Server 평가판](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016)합니다.
 
 

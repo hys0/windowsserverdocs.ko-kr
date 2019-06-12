@@ -12,12 +12,12 @@ ms.assetid: 119a7fbc-2c76-4aa3-8a7f-c7073d461b5b
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 83a7f45e91516621400e94c873d59d7cb6976702
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4c89a508745c8db36272aa8d6c646878618656f6
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59846604"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66432887"
 ---
 # <a name="migrate-windows-small-business-server-2003-to-windows-server-essentials"></a>Windows Small Business Server 2003에서 Windows Server Essentials로 마이그레이션
 
@@ -27,14 +27,14 @@ ms.locfileid: "59846604"
   
 > [!IMPORTANT]
 >   Windows Server Essentials 64 비트 환경이 필요 합니다.  Windows Server Essentials는 32 비트 환경을 지원 하지 않습니다.  
-  
+> 
 > [!NOTE]
 >  마이그레이션하는 동안 문제를 방지 하려면 Windows Server Essentials 제품 개발 팀의 마이그레이션을 시작 하기 전에이 문서를 읽기을 적극 권장 합니다.  
-  
+> 
 > [!NOTE]
-
+> 
 >  서버 데이터를 Windows Server Essentials의 최신 버전을 마이그레이션하려면 [Windows Server Essentials로 마이그레이션](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md)합니다.  
-
+> 
 >  서버 데이터를 Windows Server Essentials의 최신 버전을 마이그레이션하려면 [Windows Server Essentials로 마이그레이션](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md)합니다.  
 
   

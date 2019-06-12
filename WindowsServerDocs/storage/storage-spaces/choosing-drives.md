@@ -9,16 +9,16 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 10/08/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 227906685d77c31587c66d1c292f20ca94775058
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d16a9ddea96760b41c6cd2e4239b9bb51c8b3b38
+ms.sourcegitcommit: cd12ace92e7251daaa4e9fabf1d8418632879d38
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59881054"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66501635"
 ---
 # <a name="choosing-drives-for-storage-spaces-direct"></a>저장소 공간 다이렉트용 드라이브 선택
 
->적용 대상: Windows Server 2016
+>적용 대상: Windows 2019, Windows Server 2016
 
 이 항목에서는 성능 및 용량 요구 사항을 충족하는 [저장소 공간 다이렉트](storage-spaces-direct-overview.md)용 드라이브를 선택하는 방법에 대한 지침을 제공합니다.
 
@@ -116,7 +116,7 @@ ms.locfileid: "59881054"
 
 서버당 전체 저장소 용량은 약 100TB로 제한하는 것이 좋습니다. 서버당 저장소 용량이 클수록 소프트웨어 업데이트를 적용하는 경우 등에 가동 중지 시간이나 다시 부팅 후 데이터를 다시 동기화하는 데 필요한 시간이 더 길어집니다.
 
-저장소 풀당 현재 최대 크기는 1PB, 즉 1,000TB입니다.
+저장소 풀 당 최대 크기를 현재 Windows Server 2019에 대 한 4 페타바이트 (PB) (4,000 TB) 또는 Windows Server 2016에 대 한 1 페타바이트 됩니다.
 
 ## <a name="see-also"></a>참조
 
@@ -124,4 +124,4 @@ ms.locfileid: "59881054"
 - [저장소 공간 다이렉트 캐시 이해](understand-the-cache.md)
 - [저장소 공간 다이렉트 하드웨어 요구 사항](storage-spaces-direct-hardware-requirements.md)
 - [저장소 공간 다이렉트 볼륨 계획](plan-volumes.md)
-- [오류 허용 하 고 저장소 효율성](storage-spaces-fault-tolerance.md)
+- [내결함성 및 스토리지 효율성](storage-spaces-fault-tolerance.md)

@@ -7,13 +7,13 @@ ms.topic: article
 author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: high
-ms.date: 05/21/2019
-ms.openlocfilehash: af887c0e1c66a017ee091fb2cab2dc61fa9ac1dc
-ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
+ms.date: 06/04/2019
+ms.openlocfilehash: 7110fe78982fec616174a93514d86fb2e1cf9fa5
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65976550"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66810767"
 ---
 # <a name="whats-new-in-windows-server-2019"></a>Windows Server 2019의 새로운 기능
 
@@ -21,9 +21,17 @@ ms.locfileid: "65976550"
 
 이 항목에서는 Windows Server 2019의 새로운 기능 몇 가지를 설명합니다. Windows Server 2019 Windows Server 2016의 강력한 토대를 기반 빌드되고 네 가지 주요 테마의 다양 한 혁신을 제공 합니다. 하이브리드 클라우드, 보안, 응용 프로그램 플랫폼 및 하이퍼 수렴 형 인프라 (HCI).
 
-Windows 서버 반기 채널 릴리스의 새로운 기능을 참조 하세요 [What's New in Windows Server](../get-started/whats-new-in-windows-server.md)합니다. 
+Windows 서버 반기 채널 릴리스의 새로운 기능을 참조 하세요 [What's New in Windows Server](../get-started/whats-new-in-windows-server.md)합니다.
 
 ## <a name="general"></a>일반
+
+### <a name="windows-admin-center"></a>Windows Admin Center
+
+Windows Admin Center는 서버, 클러스터, 하이퍼 컨버지드 인프라 및 Windows 10 PC를 관리하기 위해 로컬로 배포된 브라우저 기반 응용 프로그램입니다. Windows 이외의 추가 비용 없이 제공되며 프로덕션 환경에서 사용할 준비가 되었습니다.
+
+Windows Server 2019 뿐만 아니라 Windows 10 및 이전 버전의 Windows 및 Windows Server에 Windows Admin Center 설치 하 고 서버 및 Windows Server 2008 R2를 실행 하는 클러스터를 관리 하는 데 사용할 수 이상입니다.
+
+자세한 내용은 참조 하세요. [Windows Admin Center](../manage/windows-admin-center/understand/windows-admin-center.md)합니다.
 
 ### <a name="desktop-experience"></a>데스크톱 환경
 
@@ -60,8 +68,6 @@ ATP의 심층적인 플랫폼 센서와 응답 작업은 메모리 및 커널 �
 -   [제어된 폴더 액세스](https://cloudblogs.microsoft.com/microsoftsecure/2017/10/23/stopping-ransomware-where-it-counts-protecting-your-data-with-controlled-folder-access/?ocid=cx-blog-mmpc?source=mmpc)는 신뢰할 수 없는 프로세스가 보호되는 폴더로 액세스하는 것을 차단하여 랜섬웨어로부터 민감한 데이터를 보호합니다.
 
 -   [Exploit Protection](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/exploit-protection-exploit-guard)은 시스템 및 응용 프로그램 보호를 위해 손쉽게 구성할 수 있는 취약성 악용(EMET 대체)에 대한 완화 세트입니다.
-
-
 
 [Windows Defender Application Control](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)(CI(코드 무결성) 정책이라고도 함)은 Windows Server 2016에서 릴리스되었습니다.
 훌륭한 개념이지만 배포하기 어렵다는 고객 피드백이 있었습니다.
@@ -111,7 +117,7 @@ Windows Server 2019의 저장소에 대한 변경 사항은 다음과 같습니�
 
 ### <a name="storage-spaces-direct"></a>저장소 공간 다이렉트
 
-저장소 공간 다이렉트의 새로운 기능 목록은 다음과 같습니다. 자세한 내용은 [저장소 공간 다이렉트의 새로운 기능](../storage/whats-new-in-storage.md#storage-spaces-direct)을 참조하세요.
+저장소 공간 다이렉트의 새로운 기능 목록은 다음과 같습니다. 자세한 내용은 [저장소 공간 다이렉트의 새로운 기능](../storage/whats-new-in-storage.md#storage-spaces-direct)을 참조하세요. 도 참조 하세요 [Azure Stack HCI](https://docs.microsoft.com/azure-stack/operator/azure-stack-hci-overview) 획득에 대 한 정보 유효성 검사 된 저장소 공간 다이렉트 시스템에 대 한 합니다.
 
 - **중복 제거 및 ReFS 볼륨에 대 한 압축**
 - **영구 메모리에 대 한 기본 지원**

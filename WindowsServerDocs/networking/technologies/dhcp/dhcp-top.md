@@ -8,12 +8,12 @@ ms.topic: article
 ms.assetid: 0ff29ef3-c458-4432-9065-e50a7de5b4b9
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 08b07e902486ae633b30949270e15f8bf94afaaf
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7828d75d58ff328e826cb685899a76347ce56953
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59857494"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812209"
 ---
 # <a name="dynamic-host-configuration-protocol-dhcp"></a>DHCP(동적 호스트 구성 프로토콜)
 
@@ -21,11 +21,11 @@ ms.locfileid: "59857494"
 
 Windows Server 2016에서 DHCP의 간략 한 개요는이 항목을 사용할 수 있습니다.
 
->[!NOTE]
->이 항목 외에 다음 DHCP 설명서는 사용할 수 있습니다.
+> [!NOTE]
+> 이 항목 외에 다음 DHCP 설명서는 사용할 수 있습니다.
 >
->- [DHCP의 새로운 기능](What-s-New-in-DHCP.md)
->- [Windows PowerShell을 사용 하 여 DHCP 배포](dhcp-deploy-wps.md)
+> - [DHCP의 새로운 기능](What-s-New-in-DHCP.md)
+> - [Windows PowerShell을 사용 하 여 DHCP 배포](dhcp-deploy-wps.md)
 
 동적 호스트 구성 프로토콜 (DHCP)는 자동으로 IP (인터넷 프로토콜)를 호스트 하는 IP 주소 및 서브넷 마스크 및 기본 게이트웨이 등의 기타 관련된 구성 정보를 제공 하는 클라이언트/서버 프로토콜입니다. Rfc 2131 및 2132 DHCP로는 IETF Internet Engineering Task Force () 표준에 BOOTP (부트스트랩 프로토콜), DHCP를 사용 하는 많은 구현 세부 사항의 공유 하는 프로토콜 기반을 정의 합니다. DHCP 호스트를 DHCP 서버에서 필요한 TCP/IP 구성 정보를 가져올 수 있습니다.
 

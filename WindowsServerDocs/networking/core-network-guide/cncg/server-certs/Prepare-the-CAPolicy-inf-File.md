@@ -8,12 +8,12 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 80c7155224502379e2e9618ceb38709c5051a6b7
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 19a87df7c4f165d3b0e6c5add4bc40ff97cc87cb
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59857844"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446464"
 ---
 # <a name="capolicyinf-syntax"></a>CAPolicy.inf 구문
 >   적용 대상: Windows Server (반기 채널), Windows Server 2016
@@ -206,53 +206,53 @@ AD CS를 설치 하기 전에 구성한 CAPolicy.inf 파일 특정 설정을 사
 
 **필수 구성 요소:** Administrators 그룹의 멤버 여야 합니다.
 
-1.  AD CS를 Windows PowerShell을 열고 설치 하려는 컴퓨터에서 입력 **메모장 c:\CAPolicy.inf** ENTER 키를 누릅니다.
+1. AD CS를 Windows PowerShell을 열고 설치 하려는 컴퓨터에서 입력 **메모장 c:\CAPolicy.inf** ENTER 키를 누릅니다.
 
-2.  새로운 파일을 생성할지 묻는 메시지가 표시되면 **예**를 클릭합니다.
+2. 새로운 파일을 생성할지 묻는 메시지가 표시되면 **예**를 클릭합니다.
 
-3.  다음을 파일의 내용으로 입력합니다.
+3. 다음을 파일의 내용으로 입력합니다.
    ```
    [Version]  
-    Signature="$Windows NT$"  
-    [PolicyStatementExtension]  
-    Policies=InternalPolicy  
-    [InternalPolicy]  
-    OID=1.2.3.4.1455.67.89.5  
-    Notice="Legal Policy Statement"  
-    URL=https://pki.corp.contoso.com/pki/cps.txt  
-    [Certsrv_Server]  
-    RenewalKeyLength=2048  
-    RenewalValidityPeriod=Years  
-    RenewalValidityPeriodUnits=5  
-    CRLPeriod=weeks  
-    CRLPeriodUnits=1  
-    LoadDefaultTemplates=0  
-    AlternateSignatureAlgorithm=1  
-    [CRLDistributionPoint]  
-    [AuthorityInformationAccess]
+   Signature="$Windows NT$"  
+   [PolicyStatementExtension]  
+   Policies=InternalPolicy  
+   [InternalPolicy]  
+   OID=1.2.3.4.1455.67.89.5  
+   Notice="Legal Policy Statement"  
+   URL=https://pki.corp.contoso.com/pki/cps.txt  
+   [Certsrv_Server]  
+   RenewalKeyLength=2048  
+   RenewalValidityPeriod=Years  
+   RenewalValidityPeriodUnits=5  
+   CRLPeriod=weeks  
+   CRLPeriodUnits=1  
+   LoadDefaultTemplates=0  
+   AlternateSignatureAlgorithm=1  
+   [CRLDistributionPoint]  
+   [AuthorityInformationAccess]
    ```
-1.  클릭 **파일**를 클릭 하 고 **다른 이름으로 저장**합니다.
+4. 클릭 **파일**를 클릭 하 고 **다른 이름으로 저장**합니다.
 
-2.  % Systemroot % 폴더로 이동 합니다.
+5. % Systemroot % 폴더로 이동 합니다.
 
-3.  다음을 확인합니다.
+6. 다음을 확인합니다.
 
-    -   **파일 이름**이 **CAPolicy.inf**로 설정됨
+   -   **파일 이름**이 **CAPolicy.inf**로 설정됨
 
-    -   **파일 형식**이 **모든 파일**로 설정됨
+   -   **파일 형식**이 **모든 파일**로 설정됨
 
-    -   **인코딩**이 **ANSI**임
+   -   **인코딩**이 **ANSI**임
 
-4.  **저장**을 클릭합니다.
+7. **저장**을 클릭합니다.
 
-5.  파일을 덮어쓸지 묻는 메시지가 나타나면 **예**를 클릭합니다.
+8. 파일을 덮어쓸지 묻는 메시지가 나타나면 **예**를 클릭합니다.
 
-    ![CAPolicy.inf 파일에 대 한 이름으로 저장 위치](../../../media/Prepare-the-CAPolicy-inf-File/001-SaveCAPolicyORCA1.gif)
+   ![CAPolicy.inf 파일에 대 한 이름으로 저장 위치](../../../media/Prepare-the-CAPolicy-inf-File/001-SaveCAPolicyORCA1.gif)
 
-    >   [!CAUTION]  
-    >   CAPolicy.inf를 inf 확장명으로 저장하도록 합니다. 파일 이름 끝에 **.inf**를 특별히 입력하지 않고 설명된 대로 옵션을 선택하지 않는다면 파일이 텍스트 파일로 저장되고 CA 설치 중에 사용되지 않습니다.
+   > [!CAUTION]
+   >   CAPolicy.inf를 inf 확장명으로 저장하도록 합니다. 파일 이름 끝에 **.inf**를 특별히 입력하지 않고 설명된 대로 옵션을 선택하지 않는다면 파일이 텍스트 파일로 저장되고 CA 설치 중에 사용되지 않습니다.
 
-6.  메모장을 닫습니다.
+9. 메모장을 닫습니다.
 
->   [!IMPORTANT]  
+> [!IMPORTANT]
 >   CAPolicy.inf에서 보면 URL을 지정 하는 줄 https://pki.corp.contoso.com/pki/cps.txt합니다. CAPolicy.inf의 내부 정책 섹션은 CPS(인증서 사용 약관)의 위치를 지정하는 방법을 보여주는 예시로 제공되었습니다. 이 가이드에서는 하지 지시를 받았습니다는 인증서 cps ()를 만듭니다.

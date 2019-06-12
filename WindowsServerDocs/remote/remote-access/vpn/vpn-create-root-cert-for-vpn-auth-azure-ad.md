@@ -15,25 +15,25 @@ ms.author: pashort
 author: shortpatti
 ms.localizationpriority: medium
 ms.reviewer: deverette
-ms.openlocfilehash: 14ef17ab403cc4e7c9891f4ede48e41c25e8522d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: dc24f0275e8639ffd972ae24550d0ada38eff4f1
+ms.sourcegitcommit: 0948a1abff1c1be506216eeb51ffc6f752a9fe7e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59851564"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749633"
 ---
 # <a name="step-72-create-conditional-access-root-certificates-for-vpn-authentication-with-azure-ad"></a>7.2단계. Azure AD를 사용 하 여 조건부 액세스를 VPN 인증에 대 한 루트 인증서 만들기
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-&#171;  [**이전:** 7.1단계. 인증서 해지 목록 (CRL) 검사를 무시 하도록 EAP-TLS 구성](vpn-config-eap-tls-to-ignore-crl-checking.md)<br>
-&#187;[ **다음:** 7.3단계. 조건부 액세스 정책 구성](vpn-config-conditional-access-policy.md)
+- [**이전:** 7.1단계. EAP-TLS를 사용하여 CRL(인증서 해지 목록) 확인 무시](vpn-config-eap-tls-to-ignore-crl-checking.md)
+- [**다음:** 7.3단계. 조건부 액세스 정책 구성](vpn-config-conditional-access-policy.md)
 
 이 단계에서는 자동으로 테 넌 트에서 VPN 서버를 호출 하는 클라우드 앱을 만드는 Azure AD와 VPN 인증에 대 한 조건부 액세스 루트 인증서를 구성 합니다. VPN 연결에 대 한 조건부 액세스를 구성 하려면:
 
 1. (둘 이상의 인증서를 만들 수)는 Azure 포털에서 VPN 인증서를 만듭니다.
 2. VPN 인증서를 다운로드 합니다.
-2. VPN 및 NPS 서버에 인증서를 배포 합니다.
+3. VPN 및 NPS 서버에 인증서를 배포 합니다.
 
 사용자가 VPN 연결을 시도 하는 경우 VPN 클라이언트는 Windows 10 클라이언트에서 웹 계정 관리자 (WAM)를 호출 합니다. WAM은 VPN 서버 클라우드 앱을 호출 합니다. 조건 및 조건부 액세스 정책에서 컨트롤을 만족할 경우 Azure AD는 WAM에 단기 (1 시간) 인증서의 형태로 토큰을 발급 합니다. WAM 사용자의 인증서 저장소에 인증서를 배치 및 VPN 클라이언트에 컨트롤을 전달 합니다.  
 
@@ -69,9 +69,8 @@ Azure portal에서 두 가지 인증서 하나의 인증서가 만료 될 때 �
 
     b. 에 대 한 **주**를 선택 **예**합니다.
 
-    다. **만들기**를 클릭합니다.
+    c. **만들기**를 선택합니다.
 
-## <a name="next-step"></a>다음 단계
-[7.3 단계입니다. 조건부 액세스 정책을 구성](vpn-config-conditional-access-policy.md): 이 단계에서는 VPN 연결에 대 한 조건부 액세스 정책을 구성할 수 있습니다. 
+## <a name="next-steps"></a>다음 단계
 
----
+[7.3단계. 조건부 액세스 정책을 구성](vpn-config-conditional-access-policy.md): 이 단계에서는 VPN 연결에 대 한 조건부 액세스 정책을 구성할 수 있습니다. 

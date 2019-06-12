@@ -9,16 +9,18 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: c8e72f1075b984506f9f992cd45cf853b50bddeb
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 6f3cdc34ee03fab1a8fb1d42ebed2d2f76e2618d
+ms.sourcegitcommit: ccc802338b163abdad2e53b55f39addcfea04603
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66191925"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66687407"
 ---
 # <a name="upgrading-to-ad-fs-in-windows-server-2016-using-a-wid-database"></a>WID 데이터베이스를 사용하여 Windows Server 2016에서 AD FS로 업그레이드
 
 
+> [!NOTE]  
+> 만 완료에 대 한 계획 된 된 선언적 시간 프레임을 사용 하 여 업그레이드를 시작 합니다. 혼합된 모드 상태의 그대로 유지 되어 AD FS 팜을 사용 하 여 문제를 발생할 수는 확장 된 기간에 대 한 AD FS를 혼합된 모드 상태로 유지 하는 권장 되지 않습니다.
 
 ## <a name="upgrading-a-windows-server-2012-r2-or-2016-ad-fs-farm-to-windows-server-2019"></a>Windows Server 2012 R2 또는 2016 AD FS 팜을 Windows Server 2019로 업그레이드
 다음 문서에서는 WID 데이터베이스를 사용 하는 경우 AD fs Windows Server 2019에 AD FS 팜을 업그레이드 하는 방법을 설명 합니다.  
@@ -27,6 +29,7 @@ ms.locfileid: "66191925"
 Windows Server 2016 용 AD FS에서 팜 동작 수준 (FBL) 도입 되었습니다. 기능 AD FS 팜을 사용 하 여 수를 결정 하는 팜 전체 설정입니다.
 
 다음 표에서 Windows Server 버전에서 FBL 값을 나열합니다.
+
 | Windows Server 버전  | FBL | AD FS 구성 데이터베이스 이름 |
 | ------------- | ------------- | ------------- |
 | 2012 R2  | 1  | AdfsConfiguration |

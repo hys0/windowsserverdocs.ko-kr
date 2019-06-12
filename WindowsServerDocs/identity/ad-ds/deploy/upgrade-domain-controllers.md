@@ -8,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: fe6fb196c996d4d95c6b58d1ab77591602e143d9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6f3907426fd1124c5ed0a411a155490a2a537239
+ms.sourcegitcommit: a3958dba4c2318eaf2e89c7532e36c78b1a76644
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59868424"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719673"
 ---
 # <a name="upgrade-domain-controllers-to-windows-server-2016"></a>Windows Server 2016으로 도메인 컨트롤러 업그레이드
 
@@ -24,17 +24,17 @@ ms.locfileid: "59868424"
 ## <a name="pre-requisites"></a>필수 구성 요소
 도메인을 업그레이드 하는 최신 버전의 Windows Server를 실행 하 고 필요에 따라 이전 도메인 컨트롤러 수준 내리기 도메인 컨트롤러를 승격 하는 것이 좋습니다. 기존 도메인 컨트롤러의 운영 체제를 업그레이드할 때 이 방법이 선호됩니다. 이 목록에서는 최신 버전의 Windows Server를 실행 하는 도메인 컨트롤러의 수준을 올리기 전에 수행 하려면 일반 단계를 다룹니다. 
 
-1.  대상 서버가 시스템 요구 사항을 충족하는지 확인합니다. 
-2.  응용 프로그램 호환성을 확인 합니다. 
-3.  Windows Server 2016으로 전환 하는 것에 대 한 권장 사항 검토 
-4.  보안 설정을 확인합니다. 자세한 내용은 [사용 되지 않는 기능 및 동작 변경 내용은 Windows Server 2016에서 AD DS 관련](../../../get-started\deprecated-features.md)합니다. 
-5.  설치하려고 계획 중인 컴퓨터에서 대상 서버로 연결된 상태를 확인합니다. 
-6.  필요한 작업 마스터 역할의 가용성을 확인합니다. 
-    - 설치를 실행 하는 컴퓨터에서 기존 도메인 및 포리스트를 Windows Server 2016을 실행 하는 첫 번째 DC를 설치 하려면에 대 한 연결을 해야 합니다 **스키마 마스터** 인프라 마스터와 adprep /forestprep을 실행 하려면 하려면 adprep /domainprep을 실행 합니다. 
-    - 포리스트 스키마가 이미 확장된 도메인에 첫 번째 DC를 설치하려면 인프라 마스터에만 연결하면 됩니다. 
-    - 를 설치 하거나 기존 포리스트에 도메인을 제거 하려면 연결 해야 합니다 **도메인 명명 마스터**합니다. 
-    - 모든 도메인 컨트롤러 설치에도 연결 해야 합니다 **RID 마스터입니다.** 
-    - 기존 포리스트에 첫 번째 읽기 전용 도메인 컨트롤러를 설치할 경우에는 비도메인 명명 컨텍스트 또는 NDNC라고도 하는 각 응용 프로그램 디렉터리 파티션용 인프라 마스터에 연결해야 합니다. 
+1. 대상 서버가 시스템 요구 사항을 충족하는지 확인합니다. 
+2. 응용 프로그램 호환성을 확인 합니다. 
+3. Windows Server 2016으로 전환 하는 것에 대 한 권장 사항 검토 
+4. 보안 설정을 확인합니다. 자세한 내용은 [사용 되지 않는 기능 및 동작 변경 내용은 Windows Server 2016에서 AD DS 관련](https://docs.microsoft.com/en-us/windows-server/get-started/deprecated-features)합니다. 
+5. 설치하려고 계획 중인 컴퓨터에서 대상 서버로 연결된 상태를 확인합니다. 
+6. 필요한 작업 마스터 역할의 가용성을 확인합니다. 
+   - 설치를 실행 하는 컴퓨터에서 기존 도메인 및 포리스트를 Windows Server 2016을 실행 하는 첫 번째 DC를 설치 하려면에 대 한 연결을 해야 합니다 **스키마 마스터** 인프라 마스터와 adprep /forestprep을 실행 하려면 하려면 adprep /domainprep을 실행 합니다. 
+   - 포리스트 스키마가 이미 확장된 도메인에 첫 번째 DC를 설치하려면 인프라 마스터에만 연결하면 됩니다. 
+   - 를 설치 하거나 기존 포리스트에 도메인을 제거 하려면 연결 해야 합니다 **도메인 명명 마스터**합니다. 
+   - 모든 도메인 컨트롤러 설치에도 연결 해야 합니다 **RID 마스터입니다.** 
+   - 기존 포리스트에 첫 번째 읽기 전용 도메인 컨트롤러를 설치할 경우에는 비도메인 명명 컨텍스트 또는 NDNC라고도 하는 각 응용 프로그램 디렉터리 파티션용 인프라 마스터에 연결해야 합니다. 
 
 ### <a name="installation-steps-and-required-administrative-levels"></a>설치 단계 및 필요한 관리 수준
 다음 표에서 업그레이드 단계 및 이러한 단계를 수행 하는 사용 권한 요구 사항 요약
@@ -123,35 +123,35 @@ AD DS는 다음과 같은 서버 역할 또는 역할 서비스도 실행하는 
 
 ![업그레이드](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade1.png)
 
-1.  새 Windows Server 2016를 포리스트에 조인 합니다. 메시지가 표시 되 면 다시 시작 합니다. 
-![업그레이드](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade2.png)
-2.  도메인 관리자 계정 사용 하 여 새 Windows Server 2016에 로그인 합니다.
-3.  **서버 관리자**아래에 있는 **역할 및 기능 추가**를 설치 **Active Directory Domain Services** 새 Windows Server 2016에서. Adprep는 2012 R2 포리스트 및 도메인에 자동으로 실행 됩니다.
-![업그레이드](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade3.png) 
-4.  **서버 관리자**노란색 삼각형을 클릭 하 고 드롭다운 목록에서 클릭 **서버를 도메인 컨트롤러로 승격**합니다. 
-![업그레이드](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade4.png)
-5.  에 **배포 구성** 화면에서 **도메인 컨트롤러를 기존 포리스트에 추가** 고 다음을 클릭 합니다. 
-![업그레이드](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade5.png)
-6.  에 **도메인 컨트롤러 옵션** 화면에서 입력 합니다 **디렉터리 서비스 복원 모드 (DSRM)** 암호 하 고 다음 합니다. 
-7.  화면 나머지 클릭 **다음**합니다. 
-8.  에 **필수 구성 요소 검사** 화면에서 클릭 **설치**합니다. 다시 시작 하면 완료 되 면 수 다시 로그인 합니다.
-9.  Windows Server 2012 R2 서버에서의 **서버 관리자**, 도구 선택 **Windows PowerShell 용 Active Directory 모듈**합니다. 
-![업그레이드](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade6.png)
+1. 새 Windows Server 2016를 포리스트에 조인 합니다. 메시지가 표시 되 면 다시 시작 합니다. 
+   ![업그레이드](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade2.png)
+2. 도메인 관리자 계정 사용 하 여 새 Windows Server 2016에 로그인 합니다.
+3. **서버 관리자**아래에 있는 **역할 및 기능 추가**를 설치 **Active Directory Domain Services** 새 Windows Server 2016에서. Adprep는 2012 R2 포리스트 및 도메인에 자동으로 실행 됩니다.
+   ![업그레이드](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade3.png) 
+4. **서버 관리자**노란색 삼각형을 클릭 하 고 드롭다운 목록에서 클릭 **서버를 도메인 컨트롤러로 승격**합니다. 
+   ![업그레이드](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade4.png)
+5. 에 **배포 구성** 화면에서 **도메인 컨트롤러를 기존 포리스트에 추가** 고 다음을 클릭 합니다. 
+   ![업그레이드](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade5.png)
+6. 에 **도메인 컨트롤러 옵션** 화면에서 입력 합니다 **디렉터리 서비스 복원 모드 (DSRM)** 암호 하 고 다음 합니다. 
+7. 화면 나머지 클릭 **다음**합니다. 
+8. 에 **필수 구성 요소 검사** 화면에서 클릭 **설치**합니다. 다시 시작 하면 완료 되 면 수 다시 로그인 합니다.
+9. Windows Server 2012 R2 서버에서의 **서버 관리자**, 도구 선택 **Windows PowerShell 용 Active Directory 모듈**합니다. 
+   ![업그레이드](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade6.png)
 10. PowerShell 창에서 이동-ADDirectoryServerOperationMasterRole 사용 하 여 FSMO 역할을 이동 합니다. 각-OperationMasterRole의 이름을 입력 하거나 숫자를 사용 하 여 역할을 지정할 수 있습니다. 자세한 내용은 참조 하세요. [ADDirectoryServerOperationMasterRole 이동](https://technet.microsoft.com/library/hh852302.aspx)
 
-   ``` powershell
-   Move-ADDirectoryServerOperationMasterRole -Identity "DC-W2K16" -OperationMasterRole 0,1,2,3,4
-   ```
+    ``` powershell
+    Move-ADDirectoryServerOperationMasterRole -Identity "DC-W2K16" -OperationMasterRole 0,1,2,3,4
+    ```
 
-   ![업그레이드](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade7.png)</br>
+    ![업그레이드](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade7.png)</br>
 11. 역할에 Windows Server 2016 서버로 이동 하 여 이동 되었는지 확인 **서버 관리자**아래에 있는 **도구**를 선택 **Windows PowerShell 용 Active Directory 모듈**합니다. 사용 된 `Get-ADDomain` 및 `Get-ADForest` FSMO 역할 소유자를 확인 하기 위한 cmdlet입니다.
-![업그레이드](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade8.png)
-![업그레이드](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade9.png)
+    ![업그레이드](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade8.png)
+    ![업그레이드](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade9.png)
 12. 수준 내리기 및 Windows Server 2012 R2 도메인 컨트롤러를 제거 합니다. Dc 수준 내리기에 대 한 내용은 참조 [도메인 컨트롤러 수준 내리기 및 도메인](../../ad-ds/deploy/Demoting-Domain-Controllers-and-Domains--Level-200-.md)
 13. 서버 강등 되 고 제거 되 면 포리스트 기능 및 Windows Server 2016 도메인 기능 수준을 올릴 수 있습니다.
 
 
 ## <a name="next-steps"></a>다음 단계
--   [새로운 Active Directory 도메인 서비스 설치 및 제거](../../ad-ds/deploy/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md)  
+-   [Active Directory Domain Services 설치 및 제거의 새로운 기능](../../ad-ds/deploy/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md)  
 -   [Active Directory Domain Services 설치 &#40;수준 100&#41;](../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md)     
 -   [Windows Server 2016 기능 수준](../../ad-ds/Windows-Server-2016-Functional-Levels.md)  

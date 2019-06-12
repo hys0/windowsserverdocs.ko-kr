@@ -9,24 +9,21 @@ ms.localizationpriority: medium
 ms.date: 12/20/2018
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 7cb60bdc6d6f3ff074f04827aa95c9e8e8abf35b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 533f0273f6802be209ae5ad79b57f46dd6775149
+ms.sourcegitcommit: 0948a1abff1c1be506216eeb51ffc6f752a9fe7e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59859624"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749466"
 ---
 # <a name="always-on-vpn-deployment-for-windows-server-and-windows-10"></a>Windows Server 및 Windows 10에 대 한 always On VPN 배포
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-&#171;  [**이전:** 원격 액세스](../../../Remote-Access.md)<br>
-&#187;[ **다음:** Always On VPN 기능 알아보기](../../vpn-map-da.md)
+- [**이전:** 원격 액세스](../../../Remote-Access.md)<br>
+- [**다음:** Always On VPN 기능 알아보기](../../vpn-map-da.md)
 
-
-Always On VPN 원격 액세스를 지 원하는 도메인에 가입 된 응집력 있는 단일 솔루션, 비도메인 가입 (작업 그룹) 또는 개인적으로 소유한 장치 Azure AD-조인 된 장치를 제공 합니다.  Always On VPN을 사용 하 여 연결 유형이 되도록 독점적으로 사용자 또는 장치 없지만 둘의 조합일 수 있습니다. 예를 들어, 원격 장치 관리를 위한 장치 인증을 사용 하도록 설정 하 고 내부 회사 사이트 및 서비스에 대 한 연결에 대 한 사용자 인증을 사용 하도록 설정 수 없습니다.
-
-
+Always On VPN 원격 액세스를 지 원하는 도메인에 가입 된 응집력 있는 단일 솔루션, 비도메인 가입 (작업 그룹) 또는 개인적으로 소유한 장치 Azure AD-조인 된 장치를 제공 합니다. Always On VPN을 사용하는 경우 연결 형식이 사용자 또는 디바이스만으로 지정될 필요가 없지만 둘 모두를 조합할 수는 있습니다. 예를 들어 원격 디바이스 관리를 위해 디바이스 인증을 사용하도록 설정한 다음, 내부 회사 사이트 및 서비스에 연결하는 데 사용자 인증을 사용하도록 설정할 수 있습니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -43,39 +40,32 @@ Always On VPN 원격 액세스를 지 원하는 도메인에 가입 된 응집�
 - 각 기술에 대 한 디자인 및 배포 가이드를 검토 합니다. 이러한 가이드는 배포 시나리오는 서비스 및 조직의 네트워크에 필요한 구성을 제공 하는지 여부를 확인할 수 있습니다. 자세한 내용은 [항상의 VPN 기술 개요](../always-on-vpn-technology-overview.md)합니다.
 - 사용자가 선택한 CSP 공급 업체별 없기 때문에 Always On VPN 구성을 배포 하기 위한 관리 플랫폼입니다.
 
-
 >[!IMPORTANT]
 >이 배포에 대 한 것에 인프라 서버, Active Directory Domain Services, Active Directory 인증서 서비스 및 네트워크 정책 서버를 실행 하는 컴퓨터 등의 Windows Server 2016 실행 하는 요구 사항입니다. 인프라 서버 및 원격 액세스를 실행 하는 서버에 대 한 이전 버전의 Windows Server 2012 R2와 같은 Windows Server를 사용할 수 있습니다.
 >
->가상 컴퓨터에서 원격 액세스를 배포 하지 마세요 \(VM\) Microsoft Azure에서. 원격 액세스를 사용 하 여 Microsoft Azure에서 지원 되지 않습니다, 원격 액세스 VPN 및 DirectAccess 등. 자세한 내용은 [Microsoft Azure virtual machines에 대 한 Microsoft 서버 소프트웨어 지원](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines)합니다.
+>Microsoft Azure에서 가상 컴퓨터 (VM)에서 원격 액세스를 배포 하지 마십시오. 원격 액세스를 사용 하 여 Microsoft Azure에서 지원 되지 않습니다, 원격 액세스 VPN 및 DirectAccess 등. 자세한 내용은 [Microsoft Azure virtual machines에 대 한 Microsoft 서버 소프트웨어 지원](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines)합니다.
 
+## <a name="about-this-deployment"></a>이 배포에 대 한
 
-## <a name="bkmk_about"></a>이 배포에 대 한
-
-제공 된 지침에 단일 테 넌 트 RAS 게이트웨이 VPN 지점에 대 한 원격 액세스를 배포 하는 과정 안내\-에\-VPN 연결의 경우 Windows를 실행 하는 원격 클라이언트 컴퓨터에 대 한 아래에 언급 된 시나리오 중 하나를 사용 하 여 사이트 10입니다. 배포에 대 한 기존 인프라의 일부를 수정 하기 위한 지침을 찾을 수도 있습니다. 또한이 배포 전체에서 VPN 연결 프로세스, 구성 하는 서버, ProfileXML VPNv2 CSP 노드 및 Always On VPN을 배포 하는 다른 기술에 대 한 자세한 도움이 링크를 찾을 있습니다.
+제공 된 지침에는 단일 테 넌 트 RAS 게이트웨이 VPN 지점-사이트 간 VPN 연결에 대 한 Windows 10을 실행 하는 원격 클라이언트 컴퓨터에 대 한 아래에 언급 된 시나리오 중 하나를 사용 하 여 원격 액세스를 배포 하는 방법을 안내 합니다. 배포에 대 한 기존 인프라의 일부를 수정 하기 위한 지침을 찾을 수도 있습니다. 또한이 배포 전체에서 VPN 연결 프로세스, 구성 하는 서버, ProfileXML VPNv2 CSP 노드 및 Always On VPN을 배포 하는 다른 기술에 대 한 자세한 도움이 링크를 찾을 있습니다.
 
 **Always On VPN 배포 시나리오:**
 
 1. 항상 VPN에만 배포 합니다.
 2. Azure AD를 사용 하 여 VPN 연결에 대 한 조건부 액세스를 사용 하 여 Always On VPN을 배포 합니다.
 
-
 자세한 내용 및 제시 된 시나리오의 워크플로 참조 하세요 [배포 Always On VPN](always-on-vpn-deploy-deployment.md)합니다.
 
-
-## <a name="bkmk_not"></a>이 배포에서 제공 되지 않는 항목
+## <a name="what-isnt-provided-in-this-deployment"></a>이 배포에 제공 되지 것
 
 이 배포에 대 한 지침을 제공 하지 않습니다.
 
-- Active Directory Domain Services \(AD DS\)합니다.
-- Active Directory 인증서 서비스 \(AD CS\) 및 공개 키 인프라 \(PKI\)합니다.
-- Dynamic Host Configuration Protocol \(DHCP\)합니다. 
+- Active Directory Domain Services (AD DS).
+- Active Directory 인증서 서비스 (AD CS) 및 공개 키 인프라 (PKI).
+- 동적 호스트 구성 프로토콜 (DHCP)입니다.
 - 이더넷 케이블 연결, 방화벽, 스위치 및 허브 등의 하드웨어와 네트워크입니다.
 - Always On VPN 연결을 통해 원격 사용자가 액세스할 수 있는 응용 프로그램 및 파일 서버 등의 추가 네트워크 리소스.
 - 인터넷 연결 또는 Azure AD를 사용 하 여 인터넷 연결에 대 한 조건부 액세스를 제공 합니다. 자세한 내용은 참조 하세요 [Azure Active Directory의 조건부 액세스](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)합니다.
-
-
-
 
 ## <a name="next-steps"></a>다음 단계
 
@@ -88,6 +78,3 @@ Always On VPN 원격 액세스를 지 원하는 도메인에 가입 된 응집�
 - [Always On VPN 기술에 자세히 알아보기](../always-on-vpn-technology-overview.md)
 
 - [Always On VPN 배포 계획 시작](always-on-vpn-deploy-deployment.md)
-
-
----
