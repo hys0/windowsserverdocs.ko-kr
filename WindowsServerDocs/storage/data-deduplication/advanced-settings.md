@@ -8,12 +8,12 @@ author: wmgries
 manager: klaasl
 ms.author: wgries
 ms.date: 09/15/2016
-ms.openlocfilehash: 15cfc054810a2cab85aae9a04d6195c3ae6fe0b9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: af977519b5e77eb768fdf8de1e6a34f7c8274666
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59861214"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447245"
 ---
 # <a name="advanced-data-deduplication-settings"></a>고급 데이터 중복 제거 설정
 
@@ -88,7 +88,7 @@ ms.locfileid: "59861214"
             <td>이 값은 예약해야 하는 작업 유형이기 때문에 필요합니다. 작업을 예약한 후에는 이 값을 변경할 수 없습니다.</td>
         </tr>
         <tr>
-            <td>우선 순위</td>
+            <td>Priority</td>
             <td>예약된 작업의 시스템 우선 순위</td>
             <td>
                 <ul>
@@ -97,7 +97,7 @@ ms.locfileid: "59861214"
                     <li>낮음</li>
                 </ul>
             </td>
-            <td>이 값은 시스템에서 CPU 시간을 할당하는 방법을 결정하도록 도와줍니다. *High*는 사용하는 CPU 시간이 많고 *low*는 적습니다.</td>
+            <td>이 값은 시스템에서 CPU 시간을 할당하는 방법을 결정하도록 도와줍니다. <em>High</em>는 사용하는 CPU 시간이 많고 <em>low</em>는 적습니다.</td>
         </tr>
         <tr>
             <td>요일</td>
@@ -123,7 +123,7 @@ ms.locfileid: "59861214"
             <td>DurationHours</td>
             <td>작업을 실행해야 하는 최대 시간</td>
             <td>양의 정수</td>
-            <td>워크로드의 비유휴 시간에 작업이 실행되는 것을 방지</td>
+            <td>워크 로드를 실행 하는 것에 대 한 작업을 방지 하기 위해&#39;s 비 유휴 시간</td>
         </tr>
         <tr>
             <td>Enabled</td>
@@ -141,7 +141,7 @@ ms.locfileid: "59861214"
             <td>InputOutputThrottle</td>
             <td>작업에 적용된 입/출력 스로틀 양 지정</td>
             <td>정수 0~100(백분율을 나타냄)</td>
-            <td>스로틀은 작업이 다른 I/O 집약적 프로세스를 간섭하지 않도록 합니다.</td>
+            <td>해당 작업 don 스로틀은&#39;t 다른 O 집약적인 프로세스를 방해 합니다.</td>
         </tr>
         <tr>
             <td>메모리</td>
@@ -164,8 +164,8 @@ ms.locfileid: "59861214"
         <tr>
             <td>시작</td>
             <td>작업을 시작해야 하는 시간을 지정합니다.</td>
-            <td>`System.DateTime`</td>
-            <td>*Start*에 제공된 `System.Datetime`의 *date* 부분은 과거인 경우 상관없지만 *time* 부분은 작업이 시작되는 시점을 지정합니다.</td>
+            <td><code>System.DateTime</code></td>
+            <td><em>날짜</em> 부분을 <code>System.Datetime</code> 제공 <em>시작</em> 관련이 없는 (처럼 오래&#39;과거의), 하지만 <em>시간</em> 부분은 작업이 시작 되는 경우 지정 .</td>
         </tr>
         <tr>
             <td>StopWhenSystemBusy</td>
@@ -208,9 +208,9 @@ ms.locfileid: "59861214"
     <tbody>
         <tr>
             <td>ChunkRedundancyThreshold</td>
-            <td>청크가 청크 저장소의 핫스폿 섹션으로 복제되기 전에 청크가 참조되는 횟수입니다. 핫스폿 섹션의 값은 액세스 시간을 개선하기 위해 여러 액세스 경로가 있는 "핫" 청크입니다.</td>
+            <td>청크가 청크 저장소의 핫스폿 섹션으로 복제되기 전에 청크가 참조되는 횟수입니다. 핫스폿 섹션의 값은 즉 소위 &quot;핫&quot; 자주 참조 되는 청크 액세스 시간을 개선 하기 위해 여러 액세스 경로가 있어야 합니다.</td>
             <td>양의 정수</td>
-            <td>이 수치를 수정하는 주된 이유는 중복도가 높은 볼륨의 공간 절약률을 늘리기 위한 것입니다. 일반적으로 기본값(100)이 권장되는 설정이며 이 값을 수정할 필요가 없습니다.</td>
+            <td>이 수치를 수정하는 주된 이유는 중복도가 높은 볼륨의 공간 절약률을 늘리기 위한 것입니다. 권장 되는 설정과 있습니다 해서는 기본값 (100)은 하는 일반적으로&#39;이 값을 수정할 필요는 없습니다.</td>
         </tr>
         <tr>
             <td>ExcludeFileType</td>
@@ -228,13 +228,13 @@ ms.locfileid: "59861214"
             <td>InputOutputScale</td>
             <td>사후 처리 작업 중 볼륨에서 사용할 데이터 중복 제거에 대한 IO 병렬화(IO 큐) 수준을 지정합니다.</td>
             <td>1~36의 양의 정수</td>
-            <td>이 값을 수정하는 주된 이유는 볼륨에서 데이터 중복 제거에 사용할 수 있는 IO 큐 수를 제한하여 높은 IO 워크로드의 성능에 미치는 영향을 줄이기 위한 것입니다. 이 설정을 기본값에서 수정하면 데이터 중복 제거의 사후 처리 작업이 느리게 실행될 수 있습니다.</td>
+            <td>이 값을 수정하는 주된 이유는 볼륨에서 데이터 중복 제거에 사용할 수 있는 IO 큐 수를 제한하여 높은 IO 워크로드의 성능에 미치는 영향을 줄이기 위한 것입니다. 기본값에서이 설정을 수정 하면 데이터 중복 제거 될 수 있습니다&#39;s 사후 처리 작업이 느리게 실행 합니다.</td>
         </tr>
         <tr>
             <td>MinimumFileAgeDays</td>
             <td>파일이 만들어진 후 최적화에 대한 정책 내에 속하는 것으로 간주되기 전까지의 날짜 수입니다.</td>
             <td>양의 정수(0 포함)</td>
-            <td>**기본** 및 **HyperV** 사용 유형은 자주 사용되거나 최근에 만들어진 파일의 성능을 극대화하기 위해 이 값을 3으로 설정합니다. 데이터 중복 제거를 보다 적극적으로 실행하려는 경우 또는 중복 제거와 관련된 추가 대기 시간이 중요하지 않은 경우 이 설정을 수정할 수 있습니다.</td>
+            <td><strong>기본</strong> 및 <strong>HyperV</strong> 사용 유형은 자주 사용되거나 최근에 만들어진 파일의 성능을 극대화하기 위해 이 값을 3으로 설정합니다. 데이터 중복 제거를 보다 적극적으로 실행하려는 경우 또는 중복 제거와 관련된 추가 대기 시간이 중요하지 않은 경우 이 설정을 수정할 수 있습니다.</td>
         </tr>
         <tr>
             <td>MinimumFileSize</td>
@@ -258,7 +258,7 @@ ms.locfileid: "59861214"
             <td>OptimizeInUseFiles</td>
             <td>사용하도록 설정된 경우 활성 핸들이 있는 파일이 최적화에 대한 정책 내에 속하는 것으로 간주됩니다.</td>
             <td>True/false</td>
-            <td>워크로드가 연장된 기간 동안 열린 상태로 유지되는 경우 이 설정을 사용하도록 설정합니다. 이 설정을 사용하도록 설정하지 않으면 워크로드에 열린 핸들이 있는 경우 파일이 최적화되지 않으며, 이는 끝에 데이터가 아주 드물게 추가되는 경우에도 마찬가지입니다.</td>
+            <td>워크로드가 연장된 기간 동안 열린 상태로 유지되는 경우 이 설정을 사용하도록 설정합니다. 이 설정을 사용 하지 않는 경우 파일이 최적화 되지 않으며 워크 로드에 열린 핸들이 있으면 경우에 해당&#39;s 가끔씩만 끝에 데이터를 추가 합니다.</td>
         </tr>
         <tr>
             <td>OptimizePartialFiles</td>
@@ -310,9 +310,9 @@ ms.locfileid: "59861214"
         </tr>
         <tr>
             <td>DeepGCInterval</td>
-            <td>이 설정은 일반 가비지 수집 작업이 [전체 가비지 수집 작업](advanced-settings.md#faq-full-v-regular-gc)이 되는 간격을 구성합니다. 설정 n은 매 n<sup></sup>번째 작업이 전체 가비지 수집 작업임을 의미합니다. [백업 사용 유형](understand.md#usage-type-backup)을 사용하는 볼륨의 경우 전체 가비지 컬렉션은 항상 사용할 수 없습니다(레지스트리 값과 관계없음). `Start-DedupJob -Type GarbageCollection -Full` 백업 볼륨에 전체 가비지 수집을 원하는 경우 사용할 수 있습니다.</td>
+            <td>이 설정은 일반 가비지 수집 작업이 <a href="advanced-settings.md#faq-full-v-regular-gc" data-raw-source="[full Garbage Collection jobs](advanced-settings.md#faq-full-v-regular-gc)">전체 가비지 수집 작업</a>이 되는 간격을 구성합니다. 설정 n은 매 n<sup></sup>번째 작업이 전체 가비지 수집 작업임을 의미합니다. <a href="understand.md#usage-type-backup" data-raw-source="[Backup Usage Type](understand.md#usage-type-backup)">백업 사용 유형</a>을 사용하는 볼륨의 경우 전체 가비지 컬렉션은 항상 사용할 수 없습니다(레지스트리 값과 관계없음). <code>Start-DedupJob -Type GarbageCollection -Full</code> 백업 볼륨에 전체 가비지 수집을 원하는 경우 사용할 수 있습니다.</td>
             <td>정수(-1은 사용할 수 없음을 의미함)</td>
-            <td>[이 질문과 대답](advanced-settings.md#faq-why-disable-full-gc)을 참조하세요.</td>
+            <td><a href="advanced-settings.md#faq-why-disable-full-gc" data-raw-source="[this frequently asked question](advanced-settings.md#faq-why-disable-full-gc)">이 질문과 대답</a>을 참조하세요.</td>
         </tr>
     </tbody>
 </table>

@@ -9,12 +9,12 @@ ms.technology: storage
 audience: IT Pro
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: 76a263c82ebc42de4cc6d136f9a814c3a678666b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b1bc4e45ed2a2b06c72318e0999988ed8f016c40
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59878394"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66438973"
 ---
 # <a name="fsutil-sparse"></a>Fsutil 스파스
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
@@ -34,15 +34,15 @@ fsutil sparse [setrange] <FileName> <BeginningOffset> <Length>
 
 ## <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|-------------|---------------|
-|queryflag|스파스를 쿼리 합니다.|
-|queryrange|파일을 검색 하 고 0이 아닌 데이터를 포함할 수 있는 범위를 검색 합니다.|
-|setflag|스파스로 표시 된 파일을 표시합니다.|
-|setrange|파일의 지정된 된 범위를 0으로 채웁니다.|
-|<FileName>|파일 이름과 확장명을 예를 들어 C:\documents\filename.txt 포함 파일의 전체 경로 지정 합니다.|
-|<BeginningOffset>|스파스로 표시할 파일 내의 오프셋을 지정 합니다.|
-|<Length>|파일을 바이트 단위로 스파스로 표시 영역의 길이 지정 합니다.|
+|     매개 변수     |                                                    설명                                                    |
+|-------------------|-------------------------------------------------------------------------------------------------------------------|
+|     queryflag     |                                                  스파스를 쿼리 합니다.                                                  |
+|    queryrange     |                        파일을 검색 하 고 0이 아닌 데이터를 포함할 수 있는 범위를 검색 합니다.                        |
+|      setflag      |                                        스파스로 표시 된 파일을 표시합니다.                                        |
+|     setrange      |                                   파일의 지정된 된 범위를 0으로 채웁니다.                                   |
+|    <FileName>     | 파일 이름과 확장명을 예를 들어 C:\documents\filename.txt 포함 파일의 전체 경로 지정 합니다. |
+| <BeginningOffset> |                              스파스로 표시할 파일 내의 오프셋을 지정 합니다.                              |
+|     <Length>      |                 파일을 바이트 단위로 스파스로 표시 영역의 길이 지정 합니다.                 |
 
 ## <a name="remarks"></a>설명
 

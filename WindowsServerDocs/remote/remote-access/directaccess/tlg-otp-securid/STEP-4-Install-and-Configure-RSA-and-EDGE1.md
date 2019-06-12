@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: d46ede6f-1a21-414d-b8c3-6b5c87344b9d
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 5bb28ff6131c371e4b2f668fd20ec0a6133a0099
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: db0318f1306102bf19c82012f57e78ce2852d288
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59860004"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446608"
 ---
 # <a name="step-4-install-and-configure-rsa-and-edge1"></a>4 설치 단계 및 RSA 및 EDGE1 구성
 
@@ -294,23 +294,23 @@ EDGE1 RSA 인증을 수행 하도록 구성 하려면이 절차를 따르십시�
   
 #### <a name="configure-the-rsa-authentication-agent"></a>RSA Authentication Agent 구성  
   
-1.  EDGE1에서 Windows 탐색기를 열고 C:\RSA 파일 폴더를 만듭니다. RSA ACE 설치 미디어로 이동 합니다.  
+1. EDGE1에서 Windows 탐색기를 열고 C:\RSA 파일 폴더를 만듭니다. RSA ACE 설치 미디어로 이동 합니다.  
   
-2.  복사본 파일 agent_nsload.exe AM_Config.zip 및 RSA 미디어에서 EDGE1_NodeSecret.zip C:\RSA 파일입니다.  
+2. 복사본 파일 agent_nsload.exe AM_Config.zip 및 RSA 미디어에서 EDGE1_NodeSecret.zip C:\RSA 파일입니다.  
   
-3.  다음 위치에 모두 zip 파일의 콘텐츠를 추출 합니다.  
+3. 다음 위치에 모두 zip 파일의 콘텐츠를 추출 합니다.  
   
-    1.  C:\Windows\system32\  
+   1.  C:\Windows\system32\  
   
-    2.  C:\Windows\SysWOW64\  
+   2.  C:\Windows\SysWOW64\  
   
-4.  C:\Windows\SysWOW64 agent_nsload.exe 복사할\\합니다.  
+4. C:\Windows\SysWOW64 agent_nsload.exe 복사할\\합니다.  
   
-5.  관리자 권한 명령 프롬프트를 열고 C:\Windows\SysWOW64로 이동 합니다.  
+5. 관리자 권한 명령 프롬프트를 열고 C:\Windows\SysWOW64로 이동 합니다.  
   
-6.  형식 **agent_nsload.exe-f nodesecret.rec-p <password>**  여기서 <password> 초기 RSA 구성 중 생성 된 강력한 암호입니다. Enter 키를 누릅니다.  
+6. 형식 **agent_nsload.exe-f nodesecret.rec-p <password>**  여기서 <password> 초기 RSA 구성 중 생성 된 강력한 암호입니다. Enter 키를 누릅니다.  
   
-7.  C:\Windows\System32 C:\Windows\SysWOW64\securid 복사 합니다.  
+7. C:\Windows\System32 C:\Windows\SysWOW64\securid 복사 합니다.  
   
 ## <a name="configOTP"></a>EDGE1 OTP 인증을 지원 하도록 구성  
 Directaccess의 경우 OTP를 구성 하려면이 절차를 사용 하 고 구성을 확인 합니다.  

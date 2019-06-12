@@ -8,12 +8,12 @@ ms.topic: get-started-article
 author: nedpyle
 ms.date: 04/26/2019
 ms.assetid: 12bc8e11-d63c-4aef-8129-f92324b2bf1b
-ms.openlocfilehash: e832dce3eed7d0e5103254fb48683726b82af2e6
-ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
-ms.translationtype: HT
+ms.openlocfilehash: d03407292a797b1cd511937ba40fc0fa373f5dc0
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65475943"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447574"
 ---
 # <a name="frequently-asked-questions-about-storage-replica"></a>저장소 복제본에 대한 질문과 대답
 
@@ -227,7 +227,7 @@ Test-srtopology 도구를 실행 하 여 로그 크기 조정 권장 사항을 �
 그러나 Windows Server 2019의 향상 된 복제 성능을 얻으려면, 파트너 관계의 모든 멤버 Windows Server 2019 실행 해야 하며 관련 된 복제 그룹 및 (시드 된 데이터를 사용 하 여이 다시 만들어야 기존 파트너 관계를 삭제 해야 합니다. 만들 때 파트너 관계 Windows Admin Center 또는 새로 만들기-SRPartnership cmdlet을 사용 하 여).
 
 ## <a name="FAQ17"></a> 저장소 복제본 또는이 가이드를 사용 하 여 문제를 보고 하려면 어떻게 해야 하나요?  
-저장소 복제본에 대한 기술 지원을 받으려면 [Microsoft TechNet 포럼](https://social.technet.microsoft.com/Forums/windowsserver/en-US/home?forum=WinServerPreview)에 게시하면 됩니다. 저장소 복제본에 대한 질문 또는 이 설명서에 대한 문제를 전자 메일(srfeed@microsoft.com)로 보낼 수도 있습니다. https://windowsserver.uservoice.com 인 사이트가 디자인 변경 요청에 대 한 기본 아이디어에 대 한 지원 및 피드백을 제공 하도록 동료 고객에 게 있습니다.
+저장소 복제본에 대한 기술 지원을 받으려면 [Microsoft TechNet 포럼](https://social.technet.microsoft.com/Forums/windowsserver/en-US/home?forum=WinServerPreview)에 게시하면 됩니다. 저장소 복제본에 대한 질문 또는 이 설명서에 대한 문제를 전자 메일(srfeed@microsoft.com)로 보낼 수도 있습니다. <https://windowsserver.uservoice.com> 인 사이트가 디자인 변경 요청에 대 한 기본 아이디어에 대 한 지원 및 피드백을 제공 하도록 동료 고객에 게 있습니다.
 
 
 

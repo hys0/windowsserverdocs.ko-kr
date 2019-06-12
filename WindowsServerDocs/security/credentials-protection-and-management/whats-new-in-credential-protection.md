@@ -13,12 +13,12 @@ author: gitmichiko
 ms.author: michikos
 manager: dongill
 ms.date: 03/06/2017
-ms.openlocfilehash: ec41e85949cb61c8130d8765b4786eefe39ebd0b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 475b6a0b24b811008ee213c1604d98d9aa9eb092
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59855594"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447028"
 ---
 # <a name="whats-new-in-credential-protection"></a>자격 증명 보호의 새로운 기능
 
@@ -49,7 +49,7 @@ Windows 10 버전 1703부터 원격 데스크톱을 사용 하는 경우 원격 
 
 부터 Windows 10 버전 1507 및 Windows Server 2016 도메인 가입 장치를 Windows Server 2016 도메인 컨트롤러 (DC)에 바인딩된 공개 키를 등록할 수 있으면, 다음 장치 인증을 받을 수 PKINIT Kerberos를 사용 하 여 공개 키 Windows Server 2016 DC로 인증 합니다.
 
-Windows Server 2016 부터는 Kdc Kerberos 키 트러스트를 사용 하 여 인증을 지원 합니다.  
+Windows Server 2016 부터는 Kdc Kerberos 키 트러스트를 사용 하 여 인증을 지원 합니다.  
 
 [도메인에 가입 된 장치 및 Kerberos 키 트러스트에 대 한 공개 키 지원에 자세히 알아보려면](https://technet.microsoft.com/windows-server-docs/security/kerberos/whats-new-in-kerberos-authentication)합니다.
 
@@ -63,7 +63,7 @@ Windows Server 2016 부터는 Kdc PKInit 새로 고침 확장을 지원할 수 �
 
 ### <a name="rolling-public-key-only-users-ntlm-secrets"></a>공개 키만 사용자의 NTLM 암호 롤링
 
-(DFL) Windows Server 2016 도메인 기능 수준부터 Dc 공개 키만 사용자의 NTLM 암호 롤링 지원할 수 있습니다. 이 기능은 더 낮은 DFLs에서 unavailble입니다.
+(DFL) Windows Server 2016 도메인 기능 수준부터 Dc 공개 키만 사용자의 NTLM 암호 롤링 지원할 수 있습니다. 이 기능은 더 낮은 DFLs에서 unavailble입니다.
 
 > [!WARNING] 
 > 롤링 DC로 업데이트 되었습니다 이상 2016 년 11 월 8 일 서비스 실행 전에 사용 하도록 설정 하는 NTLM 암호 DC 충돌의 위험이 있는 도메인에 도메인 컨트롤러를 추가 합니다. 
@@ -73,7 +73,7 @@ Windows Server 2016 부터는 Kdc PKInit 새로 고침 확장을 지원할 수 �
 1. Active Directory 관리 센터에서 왼쪽된 창에서 도메인을 마우스 오른쪽 단추로 누르고 **속성**합니다.
 
     ![도메인 속성](../media/Credentials-Protection-And-Management/domain-properties.png)
-    
+
 2. 선택 **롤링 만료 NTLM 암호 로그인 중에 대화형 로그온에 대 한 Microsoft Passport 또는 스마트 카드를 사용 하는 데 필요한 사용자에 게 사용**합니다.
 
     ![Autoroll 만료 NTLM 암호](../media/Credentials-Protection-And-Management/autoroll-ntlm.png)

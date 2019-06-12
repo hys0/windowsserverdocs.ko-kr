@@ -8,12 +8,12 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 06e7aa1309b453da649537d5ae9b22acce830530
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 52568944a98bed7960b37335b2e3cbbde61479ca
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59816864"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447206"
 ---
 # <a name="set-the-ordering-method-for-targets-in-referrals"></a>조회 대상 순서 지정 방법 설정
 
@@ -36,9 +36,9 @@ ms.locfileid: "59816864"
 
 > [!NOTE]
 > Windows PowerShell을 사용하여 네임스페이스 루트 조회 대상 순서 지정 방법을 설정하려면 다음 매개 변수 중 하나와 함께 [Set-DfsnRoot](https://technet.microsoft.com/library/jj884281.aspx) cmdlet을 사용합니다.
-   -   **EnableSiteCosting**은 **최저 비용 순서 지정** 방법을 지정합니다.
-   -   **EnableInsiteReferrals**는 **클라이언트 사이트의 외부 대상 제외** 순서 지정 방법을 지정합니다.
-   -   **순서 없음** 조회 순서 지정 방법을 지정하려면 매개 변수를 생략합니다. 
+>    -   **EnableSiteCosting**은 **최저 비용 순서 지정** 방법을 지정합니다.
+>    -   **EnableInsiteReferrals**는 **클라이언트 사이트의 외부 대상 제외** 순서 지정 방법을 지정합니다.
+>    -   **순서 없음** 조회 순서 지정 방법을 지정하려면 매개 변수를 생략합니다. 
 
 DFSN Windows PowerShell 모듈은 Windows Server 2012에서 도입 되었습니다.
    
@@ -91,5 +91,5 @@ DFSN Windows PowerShell 모듈은 Windows Server 2012에서 도입 되었습니�
 
 ## <a name="see-also"></a>참조 
 
--   [DFS 네임 스페이스를 튜닝합니다.](tuning-dfs-namespaces.md)
--   [DFS 네임 스페이스에 대 한 관리 권한 위임](delegate-management-permissions-for-dfs-namespaces.md)
+-   [DFS 네임스페이스 튜닝](tuning-dfs-namespaces.md)
+-   [DFS 네임스페이스에 대한 관리 권한 위임](delegate-management-permissions-for-dfs-namespaces.md)

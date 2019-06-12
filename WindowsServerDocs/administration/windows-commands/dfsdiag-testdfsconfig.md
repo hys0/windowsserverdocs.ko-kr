@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: affb3c879275228fa0ec17f77ad77db6fc44d6ab
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 922b78b87f3bb66765b87348a3bf136e14c9e837
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59814774"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66436134"
 ---
 # <a name="dfsdiag-testdfsconfig"></a>dfsdiag TestDFSConfig
 
@@ -48,9 +48,9 @@ dfsdiag /TestDFSConfig /DFSRoot:<namespace>
   
 ### <a name="parameters"></a>매개 변수  
   
-|매개 변수|설명|  
-|-------|--------|  
-|\/DFSRoot:<namespace>|네임 스페이스 \(DFS 루트\) 를 진단 합니다.|  
+|       매개 변수       |               설명               |
+|-----------------------|-----------------------------------------|
+| \/DFSRoot:<namespace> | 네임 스페이스 \(DFS 루트\) 를 진단 합니다. |
   
 ## <a name="BKMK_Examples"></a>예제  
 TBD를 입력 합니다.  

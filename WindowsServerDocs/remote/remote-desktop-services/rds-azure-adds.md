@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 author: christianmontoya
 ms.localizationpriority: medium
-ms.openlocfilehash: e60cf70f1f91ad87046bedf024fe9afc459075b6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8b1baf642ffa3c8e8a0a2cfc70d2f49b58f208b3
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59860514"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446585"
 ---
 # <a name="integrate-azure-ad-domain-services-with-your-rds-deployment"></a>RDS 배포에 Azure AD Domain Services 통합
 
@@ -51,26 +51,26 @@ RDS 배포에서 사용 하기 위해 Azure AD에서 id를 상태로 전환 하�
 2. Rds. 설정 Azure 템플릿을 사용 하거나 수동으로 RDS를 배포 합니다.
    - 사용 된 [기존 AD 템플릿](https://azure.microsoft.com/resources/templates/rds-deployment-existing-ad/)합니다. 다음을 사용자 지정할 수 있는지 확인 합니다.
    
-      - **설정**
-         - **리소스 그룹**: RDS 리소스를 만들려는 리소스 그룹을 사용 합니다.
+     - **설정**
+       - **리소스 그룹**: RDS 리소스를 만들려는 리소스 그룹을 사용 합니다.
          > [!NOTE] 
          > 지금 Azure resource manager 가상 네트워크의가 있는 동일한 리소스 그룹 이어야 합니다.
 
-         - **Dns 레이블 접두사**: 입력 URL RD 웹 액세스를 사용 하는 사용자가 있습니다.
-         - **Ad 도메인 이름**: Azure AD 인스턴스, 예: "contoso.onmicrosoft.com" 또는 "contoso.com"의 전체 이름을 입력 합니다.
-         - **Ad Vnet-name** 하 고 **Ad 서브넷 이름**: Azure resource manager 가상 네트워크를 만들 때 사용한 동일한 값을 입력 합니다. RDS 리소스를 연결할 서브넷입니다.
-         - **관리자 사용자 이름** 하 고 **관리자 암호**: 멤버인 관리 사용자에 대 한 자격 증명을 입력 합니다 **AAD DC Administrators** Azure AD의 그룹입니다.
+       - **Dns 레이블 접두사**: 입력 URL RD 웹 액세스를 사용 하는 사용자가 있습니다.
+       - **Ad 도메인 이름**: Azure AD 인스턴스, 예: "contoso.onmicrosoft.com" 또는 "contoso.com"의 전체 이름을 입력 합니다.
+       - **Ad Vnet-name** 하 고 **Ad 서브넷 이름**: Azure resource manager 가상 네트워크를 만들 때 사용한 동일한 값을 입력 합니다. RDS 리소스를 연결할 서브넷입니다.
+       - **관리자 사용자 이름** 하 고 **관리자 암호**: 멤버인 관리 사용자에 대 한 자격 증명을 입력 합니다 **AAD DC Administrators** Azure AD의 그룹입니다.
    
-      - **템플릿**
-         - 모든 속성을 제거 **dnsServers**: 선택한 후 **템플릿 편집** Azure 빠른 시작 템플릿 페이지에서 "dnsServers"를 검색 하 고 속성을 제거 합니다. 
+     - **템플릿**
+        - 모든 속성을 제거 **dnsServers**: 선택한 후 **템플릿 편집** Azure 빠른 시작 템플릿 페이지에서 "dnsServers"를 검색 하 고 속성을 제거 합니다. 
 
-            제거 하기 전에 예를 들어 합니다 **dnsServers** 속성:
+           제거 하기 전에 예를 들어 합니다 **dnsServers** 속성:
       
-            ![DnsSettings 속성을 사용 하 여 azure 빠른 시작 템플릿](media/rds-remove-dnssettings-before.png)
+           ![DnsSettings 속성을 사용 하 여 azure 빠른 시작 템플릿](media/rds-remove-dnssettings-before.png)
 
-            및 다음 속성을 제거한 후 같은 파일은:
+           및 다음 속성을 제거한 후 같은 파일은:
 
-            ![Azure 빠른 시작 템플릿과 dnsSettings 속성 제거](media/rds-remove-dnssettings-after.png)
+           ![Azure 빠른 시작 템플릿과 dnsSettings 속성 제거](media/rds-remove-dnssettings-after.png)
    
    - [RDS를 수동으로 배포](rds-deploy-infrastructure.md)합니다. 
 

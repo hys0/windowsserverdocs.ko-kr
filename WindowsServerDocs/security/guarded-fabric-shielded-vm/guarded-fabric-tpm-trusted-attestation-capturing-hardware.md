@@ -7,13 +7,13 @@ ms.assetid: 915b1338-5085-481b-8904-75d29e609e93
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 12/12/2018
-ms.openlocfilehash: 82171eee10a06cad6bb3ac30e8f771086975c242
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.date: 04/01/2019
+ms.openlocfilehash: 61f56eea59d11264047a9c7b8b6734617ad1802f
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59841664"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447334"
 ---
 # <a name="authorize-guarded-hosts-using-tpm-based-attestation"></a>TPM 기반 증명을 사용 하 여 보호 된 호스트를 권한 부여
 
@@ -99,8 +99,11 @@ Windows Server 버전 1709부터 샘플 코드 무결성 정책을 Windows C:\Wi
 
 3.  CI 정책을 참조 호스트에 적용 됩니다.
 
-    1.  이진 CI 정책 파일을 복사 합니다 (HW1CodeIntegrity.p7b) 다음 위치에 대 한 참조 호스트 (파일 이름은 정확히 일치 해야 합니다).<br>
-        **C:\\Windows\\System32\\CodeIntegrity\\SIPolicy.p7b**
+    1.  CI 정책을 사용 하 여 컴퓨터를 구성 하려면 다음 명령을 실행 합니다. 사용 하 여 CI 정책을 배포할 수도 있습니다 [그룹 정책](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy) 하거나 [System Center Virtual Machine Manager](https://docs.microsoft.com/en-us/system-center/vmm/guarded-deploy-host?view=sc-vmm-2019#manage-and-deploy-code-integrity-policies-with-vmm)합니다.
+
+        ```powershell
+        Invoke-CimMethod -Namespace root/Microsoft/Windows/CI -ClassName PS_UpdateAndCompareCIPolicy -MethodName Update -Arguments @{ FilePath = "C:\temp\HW1CodeIntegrity.p7b" }
+        ```
 
     2.  정책을 적용 하려면 호스트를 다시 시작 합니다.
 
@@ -117,8 +120,8 @@ Windows Server 버전 1709부터 샘플 코드 무결성 정책을 Windows C:\Wi
 5.  다음 명령을 사용 하 여 모든 호스트 (동일한 하드웨어 및 소프트웨어 구성 사용)에 CI 정책에 적용 됩니다.
 
     ```powershell
-    Copy-Item -Path '<Path to HW1CodeIntegrity\_enforced.p7b>' -Destination 'C:\Windows\System32\CodeIntegrity\SIPolicy.p7b'
-
+    Invoke-CimMethod -Namespace root/Microsoft/Windows/CI -ClassName PS_UpdateAndCompareCIPolicy -MethodName Update -Arguments @{ FilePath = "C:\temp\HW1CodeIntegrity.p7b" }
+    
     Restart-Computer
     ```
 
@@ -167,5 +170,5 @@ TPM 기본 하드웨어에 데이터 센터 패브릭의 각 고유 클래스에
 
 ## <a name="next-step"></a>다음 단계
 
->[!div class="nextstepaction"]
-[증명 확인](guarded-fabric-confirm-hosts-can-attest-successfully.md)
+> [!div class="nextstepaction"]
+> [증명 확인](guarded-fabric-confirm-hosts-can-attest-successfully.md)

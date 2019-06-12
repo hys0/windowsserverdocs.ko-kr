@@ -13,12 +13,12 @@ ms.assetid: 8e9e5c81-aa61-479e-abaf-64c5e95f90dc
 ms.author: grcusanz
 author: shortpatti
 ms.date: 08/26/2018
-ms.openlocfilehash: fcd37ebb3739f1d7118ce41dfc61764486c920d3
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 97c20fd07d06b609686daf4d6308a9f248873036
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59844964"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446345"
 ---
 # <a name="guest-clustering-in-a-virtual-network"></a>가상 네트워크에서 게스트 클러스터링
 
@@ -143,7 +143,7 @@ ms.locfileid: "59844964"
    Import-module failoverclusters
 
    $ClusterName = "MyCluster"
-   
+   
    $ClusterNetworkName = "Cluster Network 1"
    $IPResourceName =  
    $ILBIP = “192.168.2.100” 
@@ -182,6 +182,6 @@ ms.locfileid: "59844964"
    Add-ClusterNode $nodes[1]
    ```
 
-_**클러스터 활성 상태입니다.**_ 현재 노드에서 지정된 된 포트에서 VIP로 트래픽을 전달 됩니다.
+_**클러스터 활성 상태입니다.** _ 현재 노드에서 지정된 된 포트에서 VIP로 트래픽을 전달 됩니다.
 
 ---

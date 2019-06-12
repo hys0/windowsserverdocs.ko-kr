@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: ea7ecd52-4c12-4a49-92fd-b8c08cec42a9
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 5c74a9277af3853d709a8ecd58c1e53e1bccc719
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 009ded50b156162ad1f3397fc0708ef8075c6a6f
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59812514"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446828"
 ---
 # <a name="step-3-configure-the-multisite-deployment"></a>멀티 사이트 배포를 구성 하는 3 단계
 
@@ -67,7 +67,7 @@ ms.locfileid: "59812514"
 11.  **설치 진행률** 대화 상자에서 설치가 완료되었는지 확인하고 **닫기**를 클릭합니다.  
   
   
-![Windows PowerShell](../../../../media/Step-3-Configure-the-Multisite-Deployment/PowerShellLogoSmall.gif)Windows PowerShell 해당 명령을 * * *  
+![Windows PowerShell](../../../../media/Step-3-Configure-the-Multisite-Deployment/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
 
   
 1-3 단계 수동으로 수행 해야 하 고이 Windows PowerShell cmdlet을 사용 하 여 수행 되지 않습니다.  
@@ -261,7 +261,7 @@ DirectAccess Windows 클라이언트 컴퓨터에 연결 하 여 DirectAccess를
   
 10. 에 **멀티 사이트 배포를 사용 하도록 설정** 대화 상자를 클릭 하 여 **닫기** 멀티 사이트 배포 사용 마법사에서를 클릭 하 고 **닫기**합니다.  
   
-![Windows PowerShell](../../../../media/Step-3-Configure-the-Multisite-Deployment/PowerShellLogoSmall.gif)Windows PowerShell 해당 명령을 * * *  
+![Windows PowerShell](../../../../media/Step-3-Configure-the-Multisite-Deployment/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -343,7 +343,7 @@ Add-DAClient -EntrypointName 'Edge1-US' -DownlevelSecurityGroupNameList @('corp.
   
 16. 멀티 사이트 배포에 추가 하려는 모든 진입점에 대 한 2 단계에서이 절차를 반복 합니다.  
   
-![Windows PowerShell](../../../../media/Step-3-Configure-the-Multisite-Deployment/PowerShellLogoSmall.gif)Windows PowerShell 해당 명령을 * * *  
+![Windows PowerShell](../../../../media/Step-3-Configure-the-Multisite-Deployment/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   

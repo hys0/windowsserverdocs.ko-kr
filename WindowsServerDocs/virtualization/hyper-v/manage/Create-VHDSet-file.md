@@ -11,12 +11,12 @@ ms.technology: compute-hyper-v
 ms.assetid: 444e1496-9e5a-41cf-bfbc-306e2ed8e00a
 audience: IT Pros
 ms.reviewer: kathydav
-ms.openlocfilehash: 61f2450857cbeaffd7f75f7b259e9f9de06ba5c6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a5a6f79d362b9058ca29d979457a1dcdfc0c9f82
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59870404"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66445694"
 ---
 # <a name="create-hyper-v-vhd-set-files"></a>Hyper-v VHD 설정 파일 만들기
 VHD 설정 파일에는 Windows Server 2016에서 게스트 클러스터에 대 한 새 공유 가상 디스크 모델은입니다. VHD 설정 파일 공유 가상 디스크의 온라인 크기 조정 지원 Hyper-v 복제본을 지원 하며 응용 프로그램 일치 검사점에서 포함 될 수 있습니다. 
@@ -45,20 +45,20 @@ PS c:\>New-VHD -Path c:\base.vhds -SizeBytes 10GB
 
 기존 공유 VHDX를 VHD로 VM을 오프 라인 해야 합니다. 다음은 Windows PowerShell을 사용 하는 권장 되는 프로세스입니다.
 
-1.  VM에서 VHDX를 제거 합니다. 예를 들어, 실행 합니다. 
-  ``` PowerShell
-  PS c:\>Remove-VMHardDiskDrive existing.vhdx
-  ```
+1. VM에서 VHDX를 제거 합니다. 예를 들어, 실행 합니다. 
+   ``` PowerShell
+   PS c:\>Remove-VMHardDiskDrive existing.vhdx
+   ```
   
-2.  VHDX를 VHD로 변환 합니다. 예를 들어, 실행 합니다.
-  ``` PowerShell
-  PS c:\>Convert-VHD existing.vhdx new.vhds
-  ```
+2. VHDX를 VHD로 변환 합니다. 예를 들어, 실행 합니다.
+   ``` PowerShell
+   PS c:\>Convert-VHD existing.vhdx new.vhds
+   ```
   
-3.  VM에 VHD를 추가 합니다. 예를 들어, 실행 합니다.
-  ``` PowerShell
-  PS c:\>Add-VMHardDiskDrive new.vhds
-  ```
+3. VM에 VHD를 추가 합니다. 예를 들어, 실행 합니다.
+   ``` PowerShell
+   PS c:\>Add-VMHardDiskDrive new.vhds
+   ```
   
 
 
