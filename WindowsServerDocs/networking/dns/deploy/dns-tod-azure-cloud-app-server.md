@@ -8,12 +8,12 @@ ms.topic: article
 ms.assetid: 4846b548-8fbc-4a7f-af13-09e834acdec0
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: ed6ac2ebc8839d0e7ecee682d7644251f8a59381
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 68f30973ef58b64006181990425e6ca84c39c059
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59829074"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812041"
 ---
 # <a name="dns-responses-based-on-time-of-day-with-an-azure-cloud-app-server"></a>Azure 클라우드 응용 프로그램 서버로 시간 기반 DNS 응답
 
@@ -23,10 +23,10 @@ ms.locfileid: "59829074"
 
 이 시나리오는 다른 표준 시간대에 있는 Microsoft Azure에서 호스팅되는 웹 서버와 같은 다른 응용 프로그램 서버를 한 표준 시간대에 트래픽을 전달 하려는 경우에 유용 합니다. 사용량이 많은 기간 중 응용 프로그램 인스턴스 간에 트래픽의 부하를 분산 하면 트래픽이 주 서버는 오버 로드 하는 경우 기간입니다. 
 
->[!NOTE]
->Azure를 사용 하지 않고 지능형 DNS 응답에 대 한 DNS 정책을 사용 하는 방법을 알아보려면 다음을 참조 [기반에 대 한 지능형 DNS 응답 시간을 사용 하 여 DNS 정책](Scenario--Use-DNS-Policy-for-Intelligent-DNS-Responses-Based-on-the-Time-of-Day.md)합니다. 
+> [!NOTE]
+> Azure를 사용 하지 않고 지능형 DNS 응답에 대 한 DNS 정책을 사용 하는 방법을 알아보려면 다음을 참조 [기반에 대 한 지능형 DNS 응답 시간을 사용 하 여 DNS 정책](Scenario--Use-DNS-Policy-for-Intelligent-DNS-Responses-Based-on-the-Time-of-Day.md)합니다. 
 
-## <a name="bkmk_azureexample"></a>Azure 클라우드 응용 프로그램 서버를 사용 하 여 하루 중 시간을 기준으로 지능형 DNS 응답의 예
+## <a name="example-of-intelligent-dns-responses-based-on-the-time-of-day-with-azure-cloud-app-server"></a>Azure 클라우드 응용 프로그램 서버와 시간에 따라 지능형 DNS 응답의 예
 
 다음은 하루 중 시간에 따라 응용 프로그램 트래픽 분산을 DNS 정책 사용 방법의 예입니다.
 
@@ -44,8 +44,8 @@ Contosogiftservices.com 고객 웹 사이트에서 응답성이 뛰어난 환경
 
 Contoso 선물 서비스 (192.68.31.44) VM에 대 한 Azure에서 공용 IP 주소를 가져옵니다와 azure 간의 오후 5-10 시 대체 1 시간 동안 허용 되기는 했지만 웹 서버를 배포 하는 자동화를 개발 합니다.
 
->[!NOTE]
->Azure Vm에 대 한 자세한 내용은 참조 [가상 컴퓨터 설명서](https://azure.microsoft.com/documentation/services/virtual-machines/) 
+> [!NOTE]
+> Azure Vm에 대 한 자세한 내용은 참조 [가상 컴퓨터 설명서](https://azure.microsoft.com/documentation/services/virtual-machines/) 
 
 DNS 서버는 5-9 오후 매일 사이의 30%의 쿼리는 Azure에서 실행 되는 웹 서버 인스턴스에 전송 되도록 영역 범위 및 DNS 정책을 사용 하 여 구성 됩니다.
 
@@ -53,7 +53,7 @@ DNS 서버는 5-9 오후 매일 사이의 30%의 쿼리는 Azure에서 실행 �
 
 ![하루 응답 시간에 대 한 DNS 정책](../../media/DNS-Policy-Tod2/dns_policy_tod2.jpg)  
 
-## <a name="bkmk_azurehow"></a>앱 서버를 작동 하는 Azure 사용 하 여 하루 중 시간에 따라 지능형 DNS 응답 하는 방법
+## <a name="how-intelligent-dns-responses-based-on-time-of-day-with-azure-app-server-works"></a>응용 프로그램 서버를 작동 하는 Azure와 시간을 기준으로 지능형 DNS 응답 하는 방법
  
 이 문서에는 두 개의 서로 다른 응용 프로그램 서버 IP 주소로-DNS 쿼리에 응답 하도록 DNS 서버를 구성 하려면 웹 서버 1 개 시애틀에는 및 다른 하나는 Azure 데이터 센터는 방법을 보여줍니다.
 
@@ -63,29 +63,29 @@ DNS 서버는 5-9 오후 매일 사이의 30%의 쿼리는 Azure에서 실행 �
 
 Azure 레코드에서 10 분의 TTL Azure VM을 제거 하기 전에 레코드가 LDNS 캐시에서 만료 된 것을 확인 합니다. 이러한 확장의 이점 중 하나에 DNS 데이터가 온-프레미스를 유지 하 고 수요에 따라 Azure에 확장을 유지 하는 것입니다.
 
-## <a name="bkmk_azureconfigure"></a>Azure 응용 프로그램 서버를 사용 하 여 하루 중 시간에 따라 지능형 DNS 응답에 대 한 DNS 정책을 구성 하는 방법
+## <a name="how-to-configure-dns-policy-for-intelligent-dns-responses-based-on-time-of-day-with-azure-app-server"></a>Azure 응용 프로그램 서버와 시간에 따라 지능형 DNS 응답에 대 한 DNS 정책을 구성 하는 방법
+
 시간 기반 일 응용 프로그램 부하 분산의 쿼리 응답에 대 한 DNS 정책을 구성 하려면 다음 단계를 수행 해야 합니다.
 
+- [영역 범위 만들기](#create-the-zone-scopes)
+- [영역 범위에 레코드 추가](#add-records-to-the-zone-scopes)
+- [DNS 정책 만들기](#create-the-dns-policies)
 
-- [영역 범위 만들기](#bkmk_zscopes)
-- [영역 범위에 레코드 추가](#bkmk_records)
-- [DNS 정책 만들기](#bkmk_policies)
-
-
->[!NOTE]
->구성할 영역에 대 한 권한이 있는 DNS 서버에서 이러한 단계를 수행 해야 합니다. 다음 절차를 수행 하려면 DnsAdmins, 또는 이와 동등한의 멤버 자격이 필요 합니다. 
+> [!NOTE]
+> 구성할 영역에 대 한 권한이 있는 DNS 서버에서 이러한 단계를 수행 해야 합니다. 다음 절차를 수행 하려면 DnsAdmins, 또는 이와 동등한의 멤버 자격이 필요 합니다. 
 
 다음 섹션에서는 자세한 구성 지침을 제공 합니다.
 
->[!IMPORTANT]
->다음 섹션에서는 예제 많은 매개 변수 값이 포함 된 예제 Windows PowerShell 명령을 포함 합니다. 이러한 명령에 대 한 예제 값은 다음이 명령을 실행 하기 전에 배포에 적합 한 값으로 바꾸는 것을 확인 합니다. 
+> [!IMPORTANT]
+> 다음 섹션에서는 예제 많은 매개 변수 값이 포함 된 예제 Windows PowerShell 명령을 포함 합니다. 이러한 명령에 대 한 예제 값은 다음이 명령을 실행 하기 전에 배포에 적합 한 값으로 바꾸는 것을 확인 합니다. 
 
 
-### <a name="bkmk_zscopes"></a>영역 범위 만들기
+### <a name="create-the-zone-scopes"></a>영역 범위를 만듭니다
+
 영역 범위는 영역의 고유 인스턴스입니다. DNS 영역은 자체 DNS 레코드 집합이 포함 된 각 영역 범위를 갖는 여러 영역 범위를 가질 수 있습니다. 동일한 레코드는 동일한 IP 주소 또는 IP 주소가 다른 여러 범위에 있을 수 있습니다. 
 
->[!NOTE]
->기본적으로 영역 범위 DNS 영역에 있습니다. 영역을 같은 이름의이 영역 범위 및 레거시 DNS 작업은이 범위에서 작동 합니다. 
+> [!NOTE]
+> 기본적으로 영역 범위 DNS 영역에 있습니다. 영역을 같은 이름의이 영역 범위 및 레거시 DNS 작업은이 범위에서 작동 합니다. 
 
 Azure 레코드를 호스트 하도록 영역 범위를 만들려면 다음 예제에서는 명령을 사용할 수 있습니다.
 
@@ -95,7 +95,7 @@ Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "AzureZoneScope
 
 자세한 내용은 참조 [DnsServerZoneScope 추가](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps)
 
-### <a name="bkmk_records"></a>영역 범위에 레코드 추가
+### <a name="add-records-to-the-zone-scopes"></a>영역 범위에 레코드를 추가 합니다.
 다음 단계 영역 범위에는 웹 서버 호스트를 나타내는 레코드를 추가 하는 것입니다. 
 
 AzureZoneScope, 레코드 www.contosogiftservices.com Azure 공용 클라우드에 있는 IP 주소, 192.68.31.44와 함께 추가 됩니다. 
@@ -114,7 +114,7 @@ Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -
 
 자세한 내용은 참조 [추가 DnsServerResourceRecord](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps)합니다.  
 
-### <a name="bkmk_policies"></a>DNS 정책 만들기 
+### <a name="create-the-dns-policies"></a>DNS 정책 만들기 
 영역 범위를 만든 후에 다음 작업이 수행 되도록 이러한 범위 간에 들어오는 쿼리를 분산 하는 DNS 정책을 만들 수 있습니다.
 
 1. 클라이언트의 오후 9 시 매일, 30%로 오후 6 시에서 클라이언트의 70% 시애틀 온-프레미스 웹 서버의 IP 주소를 수신 하는 동안 %DNS 응답에는 Azure 데이터 센터에서 웹 서버의 IP 주소를 받습니다.

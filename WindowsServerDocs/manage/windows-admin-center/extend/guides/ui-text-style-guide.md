@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.date: 10/17/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: ab5bee55975b803a77db0b6cdb179b76590e1d83
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: be41267d6584002ebf87e5fe828a41575d305e1b
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59826054"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66445915"
 ---
 # <a name="windows-admin-center-ui-text-and-design-style-guide"></a>Windows Admin Center UI 텍스트와 디자인 스타일 가이드
 
@@ -199,12 +199,12 @@ Microsoft 개발자에 게 사용자를 수동으로 입력을 사용 하는 경
 
 ### <a name="guidelines"></a>지침
 
- - 가능한 경우 기회로 null 상태 상황을 사용 하 여 기능 (예를 들어, 추가 하는 방법, 음악 등 그림을 찾 수 있는 위치입니다.)을 사용 하는 방법에 대 한 사용자 교육  
-- 제목을 UI에 있는 경우 null 상태 (예를 들어, "일부 음악" 추가) "수정" 수행할 동작을 설명 
-- 텍스트와 함께 사용 합니다. 이 공간에 있으므로 해당 않을 표시 됩니다 여러 번 기쁨을 제공할 수 있습니다 수 있습니다. 
-- "이 비어 있습니다."를 방지 합니다. Sad 이며에 저하 되었습니다. 
-- "프린터를 연결 하지 않은?"와 같은 질문을 방지 합니다. 한 번 사용 하 여 확인 하지만이 형식을 가져올 저하 경향이 하 고 질문 추가 부담/부담에 고객. 또한 condescending 느낄 수 것. 
-- Null 상태 텍스트에 다양 한 좋은 것입니다. 
+- 가능한 경우 기회로 null 상태 상황을 사용 하 여 기능 (예를 들어, 추가 하는 방법, 음악 등 그림을 찾 수 있는 위치입니다.)을 사용 하는 방법에 대 한 사용자 교육  
+  - 제목을 UI에 있는 경우 null 상태 (예를 들어, "일부 음악" 추가) "수정" 수행할 동작을 설명 
+  - 텍스트와 함께 사용 합니다. 이 공간에 있으므로 해당 않을 표시 됩니다 여러 번 기쁨을 제공할 수 있습니다 수 있습니다. 
+  - "이 비어 있습니다."를 방지 합니다. Sad 이며에 저하 되었습니다. 
+  - "프린터를 연결 하지 않은?"와 같은 질문을 방지 합니다. 한 번 사용 하 여 확인 하지만이 형식을 가져올 저하 경향이 하 고 질문 추가 부담/부담에 고객. 또한 condescending 느낄 수 것. 
+  - Null 상태 텍스트에 다양 한 좋은 것입니다. 
 
 ### <a name="examples"></a>예
 

@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 080836e406b329cf8c15f95ef6afc99973bb3e4d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: dbccb834f9058f2c3cca097cdf998455f2a6892e
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59853094"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66440488"
 ---
 # <a name="using-the-get-allservers-command"></a>Get AllServers 명령을 사용 하 여
 
@@ -37,11 +37,11 @@ WDSUTIL [Options] /Get-AllServers /Show:{Config | Images | All} [/Detailed] [/Fo
 
 ## <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------|-----------|
-|/ 표시: {0} 구성 | 이미지 | 모든}|반환할 정보의 유형을 지정 합니다.</br>-   **Config** 서버 구성 정보를 반환 합니다.</br>-   **이미지** 서버의 이미지 그룹, 부팅 이미지 및 설치 이미지에 대 한 정보를 반환 합니다.</br>-   **모든** 서버 구성 및 이미지 정보를 반환 합니다.|
-|[/ 자세한]|와 함께에서 사용 하는 경우는 **/Show:Images** 또는 **/Show:All**, 모든 이미지 각 이미지의 메타 데이터를 반환 합니다. 하는 경우는 **자세한/** 옵션이 지정 되지 않은, 이미지 이름, 설명 및 파일 이름을 반환 하는 기본 동작입니다.|
-|[포리스트 /: {예 | No}]|전체 포리스트 또는 로컬 도메인에 대 한 정보를 반환할지 여부를 지정 합니다. 이 옵션에 대 한 값을 지정 하지 않으면 기본 동작은 로컬 도메인의 서버를 반환할 합니다.|
+|   매개 변수   |                                                                                                                 설명                                                                                                                  |
+|---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| / 표시: {0} 구성 |                                                                                                                    이미지                                                                                                                    |
+|  [/ 자세한]  | 와 함께에서 사용 하는 경우는 **/Show:Images** 또는 **/Show:All**, 모든 이미지 각 이미지의 메타 데이터를 반환 합니다. 하는 경우는 **자세한/** 옵션이 지정 되지 않은, 이미지 이름, 설명 및 파일 이름을 반환 하는 기본 동작입니다. |
+| [포리스트 /: {예 |                                                                                                                     No}]                                                                                                                     |
 
 ## <a name="BKMK_examples"></a>예제
 

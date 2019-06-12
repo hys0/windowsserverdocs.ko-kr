@@ -12,12 +12,12 @@ ms.assetid: f1e6b377-4a24-4d28-9b25-05910914826b
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 72fe309e0e7ce6d7227cce8b7f2c5dbf018eb4a1
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 1adf8ae2dd8763d0bc5a514609bb2470de6acde4
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59813094"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66436074"
 ---
 # <a name="troubleshoot-computer-monitoring-in-windows-server-essentials"></a>Windows Server Essentials의 컴퓨터 모니터링 문제 해결
 
@@ -36,13 +36,13 @@ ms.locfileid: "59813094"
   
  **원인** 이 오류는 경고 알림에 대한 설정에 다음과 같은 문제가 있어 발생할 수 있습니다.  
   
--   SMTP 서버 이름 또는 포트 번호가 잘못되었습니다.  
+- SMTP 서버 이름 또는 포트 번호가 잘못되었습니다.  
   
--   SMTP 서버에 SSL(Single Sockets Layer) 연결이 필요하다고 잘못 지정되어 있습니다.  
+- SMTP 서버에 SSL(Single Sockets Layer) 연결이 필요하다고 잘못 지정되어 있습니다.  
   
--   SMTP 서버에 인증이 필요하고, 잘못된 자격 증명이 입력되었습니다.  
+- SMTP 서버에 인증이 필요하고, 잘못된 자격 증명이 입력되었습니다.  
   
- **해결 방법** 메일 알림 설정의 모든 오류를 수정합니다.  
+  **해결 방법** 메일 알림 설정의 모든 오류를 수정합니다.  
   
 ##### <a name="to-identify-issues-in-your-email-notification-settings"></a>전자 메일 알림 설정에서 문제를 식별하려면  
   
@@ -53,7 +53,7 @@ ms.locfileid: "59813094"
      %ProgramData%\Microsoft\Windows Server\Logs\SharedServiceHost-AlertServiceConfig.log  
   
     > [!TIP]
-    >  ProgramData 폴더를 보려면 표시되는 항목을 숨겼음에 틀림없습니다. Don t s 리본의 ProgramData 폴더가 표시 하는 경우 **보기** 탭의 **표시/숨기기** 그룹을 선택 합니다 **숨겨진 항목** 입력란.  
+    >  ProgramData 폴더를 보려면 표시되는 항목을 숨겼음에 틀림없습니다. 리본의 ProgramData 폴더가 표시 되지 않으면 **보기** 탭의 **표시/숨기기** 그룹을 선택 합니다 **숨겨진 항목** 텍스트 상자.  
   
 ##### <a name="to-update-your-email-notification-setup-for-alerts"></a>경고에 대한 메일 알림 설정을 업데이트하려면  
   

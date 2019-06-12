@@ -9,12 +9,12 @@ ms.assetid: e9a8f2fd-48fe-4a90-9250-f6b32488b7a4
 ms.author: grcusanz
 author: shortpatti
 ms.date: 08/27/2018
-ms.openlocfilehash: 3374d1b79b84edd78dca3b61c73ea2db1dff9561
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7916377f58261d0ccaa3fa24f135fccca3d5e79b
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59854464"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446336"
 ---
 # <a name="upgrade-backup-and-restore-sdn-infrastructure"></a>업그레이드, 백업 및 복원 SDN 인프라
 
@@ -55,7 +55,7 @@ Windows Server 2019에 Windows Server 2016에서 SDN 인프라를 업그레이�
 
     b. 이 호스트에서 각 게이트웨이 VM에 업데이트를 설치 합니다.
 
-    다. 업데이트에는 게이트웨이 VM을 재부팅 해야 하는 경우에 다음 VM 다시 부팅 합니다.  
+    c. 업데이트에는 게이트웨이 VM을 재부팅 해야 하는 경우에 다음 VM 다시 부팅 합니다.  
 
     d. 게이트웨이 업데이트 된 VM을 포함 하는 호스트에 업데이트를 설치 합니다.
 
@@ -131,18 +131,18 @@ NetworkControllerClusterVersion NetworkControllerVersion
 
 **절차:**
 
-1.  선택한 VM 백업 메서드를 사용 하거나 Hyper-v를 사용 하 여 각 네트워크 컨트롤러 VM의 복사본을 내보냅니다.<p>네트워크 컨트롤러 VM을 백업 데이터베이스를 암호 해독에 필요한 인증서를 있는지 확인 합니다.  
+1. 선택한 VM 백업 메서드를 사용 하거나 Hyper-v를 사용 하 여 각 네트워크 컨트롤러 VM의 복사본을 내보냅니다.<p>네트워크 컨트롤러 VM을 백업 데이터베이스를 암호 해독에 필요한 인증서를 있는지 확인 합니다.  
 
-2.  System Center Virtual Machine Manager (SCVMM)를 사용 하는 경우 SCVMM 서비스를 중지 하 고 SQL Server를 통해 백업 합니다.<p>여기서 목표는 네트워크 컨트롤러 백업 및 SCVMM 간의 불일치를 만들 수는이 시간 동안 SCVMM에 업데이트가 없는 가져올 수 있도록 합니다.  
+2. System Center Virtual Machine Manager (SCVMM)를 사용 하는 경우 SCVMM 서비스를 중지 하 고 SQL Server를 통해 백업 합니다.<p>여기서 목표는 네트워크 컨트롤러 백업 및 SCVMM 간의 불일치를 만들 수는이 시간 동안 SCVMM에 업데이트가 없는 가져올 수 있도록 합니다.  
 
    >[!IMPORTANT]
    >네트워크 컨트롤러 백업 완료 될 때까지 SCVMM 서비스를 다시 시작 하지 않습니다.
 
-3.  사용 하 여 네트워크 컨트롤러 데이터베이스를 백업 합니다 `new-networkcontrollerbackup` cmdlet.
+3. 사용 하 여 네트워크 컨트롤러 데이터베이스를 백업 합니다 `new-networkcontrollerbackup` cmdlet.
 
-4.  완료 및 사용 하 여 백업 성공 여부를 확인 합니다 `get-networkcontrollerbackup` cmdlet.
+4. 완료 및 사용 하 여 백업 성공 여부를 확인 합니다 `get-networkcontrollerbackup` cmdlet.
 
-5.  SCVMM을 사용 하는 경우 SCVMM 서비스를 시작 합니다.
+5. SCVMM을 사용 하는 경우 SCVMM 서비스를 시작 합니다.
 
 
 

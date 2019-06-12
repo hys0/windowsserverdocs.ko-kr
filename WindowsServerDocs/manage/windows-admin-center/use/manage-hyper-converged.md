@@ -5,15 +5,15 @@ ms.technology: manage
 ms.topic: article
 author: daniellee-msft
 ms.author: jol
-ms.date: 02/11/2019
+ms.date: 03/01/2019
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: 4d849120d2daaa40cb797cc5e7d4c23c74da5bb7
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: fe00072932d9c7f283ebd887a5292ac9a9d0e37f
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59874264"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446034"
 ---
 # <a name="manage-hyper-converged-infrastructure-with-windows-admin-center"></a>Windows Admin Center 사용 하 여 하이퍼 수렴 형 인프라 관리
 
@@ -21,7 +21,7 @@ ms.locfileid: "59874264"
 
 ## <a name="what-is-hyper-converged-infrastructure"></a>Hyper-Converged 인프라란
 
-하이퍼 수렴 형 인프라는 소프트웨어 정의 계산, 저장소 및 네트워킹 고성능, 경제적이 고 제공 하기 위해 하나의 클러스터를 쉽게 확장할 수 있는 가상화를 통합 합니다. 이 기능은 Windows Server 2016에서 도입 되었습니다 [저장소 공간 다이렉트](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-overview) 하 고 [Hyper-v](https://docs.microsoft.com/windows-server/virtualization/hyper-v/hyper-v-on-windows-server)합니다.
+하이퍼 수렴 형 인프라는 소프트웨어 정의 계산, 저장소 및 네트워킹 고성능, 경제적이 고 제공 하기 위해 하나의 클러스터를 쉽게 확장할 수 있는 가상화를 통합 합니다. 이 기능은 Windows Server 2016에서 도입 되었습니다 [저장소 공간 다이렉트](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-overview)를 [소프트웨어 정의 네트워킹](https://docs.microsoft.com/en-us/windows-server/networking/sdn/software-defined-networking) 하 고 [하이퍼-V](https://docs.microsoft.com/windows-server/virtualization/hyper-v/hyper-v-on-windows-server)합니다.
 
 > [!Tip]
 > Hyper-Converged 인프라를 획득 하려고 하나요? 이러한 것이 좋습니다 [Windows Server 소프트웨어 정의](https://microsoft.com/wssd) 파트너의 솔루션입니다. 이러한 설계, 조립 및 호환성 및 안정성 얻게 되므로 신속 하 게 실행 하기 위한이 참조 아키텍처에 대해 유효성을 검사 합니다.
@@ -31,7 +31,7 @@ ms.locfileid: "59874264"
 
 ## <a name="what-is-windows-admin-center"></a>Windows Admin Center란
 
-[Windows Admin Center](../understand/windows-admin-center.md) 기존의 "기본" 서버 관리자와 같은 도구에 대 한 후속 Windows Server의 차세대 관리 도구입니다. 무료 설치 및 인터넷에 연결 하지 않고 사용할 수 있습니다. 관리 및 Windows Server 2016 또는 Windows Server 2019의 Insider Preview 빌드를 실행 하는 Hyper-Converged 인프라를 모니터링 하려면 Windows Admin Center 사용할 수 있습니다.
+[Windows Admin Center](../understand/windows-admin-center.md) 기존의 "기본" 서버 관리자와 같은 도구에 대 한 후속 Windows Server의 차세대 관리 도구입니다. 무료 설치 및 인터넷에 연결 하지 않고 사용할 수 있습니다. 관리 및 Windows Server 2016 또는 Windows Server 2019 실행 Hyper-Converged 인프라를 모니터링 하려면 Windows Admin Center 사용할 수 있습니다.
 
 ![하이퍼 수렴 형 클러스터 대시보드](../media/manage-hyper-converged/hci-dashboard-v1809.png)
 
@@ -42,13 +42,13 @@ Hyper-Converged 인프라에 대 한 Windows Admin Center 주요 기능은 다�
 - **통합 된 단일-창-의-투명 계산, 저장소 및 네트워킹 예정입니다.** 가상 컴퓨터, 호스트 서버, 볼륨, 드라이브 및 하나의 특화 된, 일관성, 상호 연결 된 환경 내에서 자세히 보기
 - **저장소 공간 및 Hyper-v virtual machines를 만들고 설정 합니다.** 근본적으로 간단한 워크플로를 만들고, 열고, 크기 조정; 볼륨을 삭제 및 만들기, 시작, 연결 및 가상 컴퓨터를 이동 합니다. 그 밖의 기능입니다.
 - **강력한 클러스터 전체의 모니터링 합니다.** 대시보드 그래프 메모리 및 CPU 사용량, 저장소 용량, IOPS, 처리량 및 대기 시간에 오류가 발생 하는 경우 일반 경고를 사용 하 여 클러스터의 모든 서버에서 실시간으로 합니다.
-- **소프트웨어 정의 네트워킹 (SDN) 지원 합니다. (새로운 Windows Admin Center 미리 보기 기능)**  관리 및 모니터링 virtual network, 서브넷, 가상 컴퓨터를 가상 네트워크 및 SDN 인프라 모니터링에 연결 합니다.
+- **소프트웨어 정의 네트워킹 (SDN) 지원 합니다.** 관리 가상 네트워크, 서브넷, 가상 컴퓨터를 가상 네트워크에 연결 및 모니터링 SDN 인프라를 모니터링 합니다.
 
 Windows Admin Center Hyper-Converged 인프라에 대 한 Microsoft에서 적극적으로 개발 되는 합니다. 기존 기능을 개선 하 고 새 기능을 추가 하는 자주 업데이트를 수신 합니다.
 
 ## <a name="before-you-start"></a>시작하기 전 주의 사항
 
-클러스터에서 Windows Admin Center Hyper-Converged 인프라를 관리 하려면 Windows Server 2016 또는 Windows Server 2019의 미리 보기 빌드를 실행 해야 하 고 Hyper-v 및 저장소 공간 다이렉트 사용 하도록 설정 합니다.
+클러스터에서 Windows Admin Center Hyper-Converged 인프라를 관리 하려면 Windows Server 2016 또는 Windows Server 2019 실행 해야 하 고 Hyper-v 및 저장소 공간 다이렉트 사용 하도록 설정 합니다. 필요에 따라는 사용 하도록 설정 하 고 Windows Admin Center 통해 관리 되는 소프트웨어 정의 네트워킹도 하는 것이 있습니다.
 
 > [!Tip]
 > 또한 Windows Admin Center Windows Server 2012 이상에 사용 가능한 모든 워크 로드를 지 원하는 모든 클러스터에 대 한 범용 관리 환경을 제공 합니다. Windows Admin Center 클러스터를 추가 하는 경우 적합 한 처럼 생각을 하는 경우 선택할 [ **장애 조치 클러스터** ](manage-failover-clusters.md) 대신 **Hyper-Converged 클러스터**합니다.
@@ -67,14 +67,9 @@ Windows Admin Center Hyper-Converged 인프라에 대 한 관리 Api 추가 Wind
 > [!Tip]
 > 클러스터의 모든 서버에서 cmdlet을 한 번 실행 해야 합니다. Windows PowerShell에서 로컬로 실행할 수도 있고 Credential Security Service Provider (CredSSP)를 사용 하 여 원격으로 실행할 수 있습니다. 구성에 따라 Windows Admin Center 내에서이 cmdlet을 실행 하려면 못할 수 있습니다.
 
-> [!Important]
-> 영어가 아닌 로캘에서 배포용 있습니다 버전 1804 대시보드 (첫 번째 시간에만 해당)를 로드 하지 못하도록 하는 Windows Admin Center 알려진된 문제가입니다. 해결 방법은 실행 하는 것 `Add-ClusterResource -Name 'SDDC Management' -Group 'Cluster Group' -ResourceType 'SDDC Management'` 교체 *' 클러스터 그룹 '* 예를 들어 지역화 된 이름을 가진 *'du 클러스터 그룹'* 프랑스어로 합니다. 이 문제는 다음 업데이트에서 해결 될 예정입니다.
->
-> **UPDATE:** 이 이제 1806 Windows Admin Center 미리 보기 버전에서 해결 됩니다.
-
 ### <a name="prepare-your-windows-server-2019-cluster-for-windows-admin-center"></a>Windows Admin Center 대 한 Windows Server 2019 클러스터 준비
 
-클러스터의 Windows Server 2019 Insider Preview 빌드를 실행 하는 경우에 위의 단계를 필요 하지 않습니다. 다음 섹션에 설명 된 대로 Windows Admin Center 클러스터 추가 계속 진행 하세요! [Windows Server 2019의 최신 미리 보기 빌드를 다운로드](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver)합니다.
+클러스터에서 Windows Server 2019를 실행 하는 경우에 위의 단계를 필요 하지 않습니다. 다음 섹션에 설명 된 대로 Windows Admin Center 클러스터 추가 계속 진행 하세요!
 
 ### <a name="configure-software-defined-networking-optional"></a>소프트웨어 방식 네트워킹 (선택 사항)를 구성 합니다. ###
 
@@ -84,9 +79,9 @@ Windows Admin Center Hyper-Converged 인프라에 대 한 관리 Api 추가 Wind
 2. 모든 폴더 및 SDN Express에서 파일을 다운로드 [ https://github.com/Microsoft/SDN/tree/master/SDNExpress ](https://github.com/Microsoft/SDN/tree/master/SDNExpress)합니다.
 3. 배포 콘솔을 사용 하 여 다른 VM을 준비 합니다. 이 VM은 SDN 호스트에 액세스할 수 있어야 합니다. 또한 VM이 RSAT Hyper-v 도구가 설치 되어 있어야 합니다.
 4. VM 배포 콘솔로 SDN Express에 대 한 다운로드 한 모든 내용을 복사 합니다. 이 공유 하 고 **SDNExpress** 폴더입니다. 모든 호스트에 액세스할 수 있는지 확인 합니다 **SDNExpress** 구성 파일 줄 8에서에서 정의 된 대로 폴더를 공유:
-```
+   ```
     \\$env:Computername\SDNExpress
-```
+   ```
 5. 에 os VHD를 복사 합니다 **이미지** 아래에 폴더를 **SDNExpress** VM 배포 콘솔에는 폴더.
 6. 환경 설치를 사용 하 여 SDN Express 구성을 수정 합니다. 환경 정보에 따라 SDN Express 구성을 수정한 후에 다음 두 단계를 완료 합니다.
 7. SDN을 배포 하려면 관리자 권한으로 PowerShell을 실행 합니다.
@@ -138,9 +133,9 @@ Windows Admin Center 클러스터를 추가 합니다.
 
 ## <a name="frequently-asked-questions"></a>질문과 대답
 
-### <a name="are-there-differences-between-managing-windows-server-2016-and-windows-server-2019-insider-preview"></a>Windows Server 2016 및 Windows Server 2019 Insider Preview 관리 간의 차이점과 있습니까?
+### <a name="are-there-differences-between-managing-windows-server-2016-and-windows-server-2019"></a>Windows Server 2016 및 Windows Server 2019 관리 간의 차이점과 있습니까?
 
-예 Windows Admin Center Hyper-Converged 인프라에 대 한 Windows Server 2016 및 Windows Server 2019 Insider Preview에 대 한 환경을 개선 하는 자주 업데이트를 받습니다. 그러나 특정 새 기능은 참가자 미리 보기 – 예를 들어, 중복 제거 및 압축에 대 한 토글 스위치를 사용할 수 있습니다.
+예 Windows Admin Center Hyper-Converged 인프라에 대 한 Windows Server 2016 및 Windows Server 2019에 대 한 환경을 개선 하는 자주 업데이트를 받습니다. 그러나 특정 새 기능은 Windows Server 2019 – 예를 들어, 중복 제거 및 압축에 대 한 토글 스위치를 사용할 수 있습니다.
 
 ### <a name="can-i-use-windows-admin-center-to-manage-storage-spaces-direct-for-other-use-cases-not-hyper-converged-such-as-converged-scale-out-file-server-sofs-or-microsoft-sql-server"></a>다른 사용 사례 (없습니다 하이퍼 수렴 형), 수렴 형 스케일 아웃 파일 서버 (SoFS) 또는 Microsoft SQL Server와 같은 저장소 공간 다이렉트를 관리 하려면 Windows Admin Center 사용할 수 있나요?
 
@@ -152,7 +147,7 @@ Windows Admin Center Hyper-Converged 인프라에 대 한 관리 또는 저장�
 
 - 합니다 **장애 조치 클러스터 연결** 데스크톱 응용 프로그램을 장애 조치 클러스터 관리자의 후속 버전입니다. Microsoft SQL Server를 포함 하 여 모든 워크 로드를 지 원하는 모든 클러스터에 대 한 친숙 하 고 범용 관리 환경을 제공 합니다. 것이 이상 Windows Server 2012에 사용할 수 있습니다.
 
-- 합니다 **Hyper-Converged 클러스터 연결** 는 완전히 새로운 환경에 맞게 조정 됩니다 저장소 공간 다이렉트 및 Hyper-v입니다. 대시보드 기능과 차트 및 모니터링 알림을 강조합니다. Windows Server 2016에서 사용할 수 있습니다 및 Windows Server 2019의 미리 보기 빌드입니다.
+- 합니다 **Hyper-Converged 클러스터 연결** 는 완전히 새로운 환경에 맞게 조정 됩니다 저장소 공간 다이렉트 및 Hyper-v입니다. 대시보드 기능과 차트 및 모니터링 알림을 강조합니다. Windows Server 2016 및 Windows Server 2019에 대해 제공 됩니다.
 
 ### <a name="why-do-i-need-the-latest-cumulative-update-for-windows-server-2016"></a>Windows Server 2016에 대 한 최신 누적 업데이트를 필요한 이유
 
@@ -294,6 +289,6 @@ Windows Admin Center 강력한 제공 및 Microsoft Azure 클라우드, 핵심 �
 ### <a name="see-also"></a>참조
 
 - [Windows Admin Center](../understand/windows-admin-center.md)
-- [저장소 공간 다이렉트](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
+- [스토리지 공간 다이렉트](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
 - [Hyper-V](https://docs.microsoft.com/windows-server/virtualization/hyper-v/hyper-v-on-windows-server)
 - [소프트웨어 정의 네트워킹](https://docs.microsoft.com/windows-server/networking/sdn/software-defined-networking)

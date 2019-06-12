@@ -12,12 +12,12 @@ author: jaimeo
 ms.author: jaimeo
 ms.date: 09/06/2017
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c669db414c4f12b6145a26a75b83449f43e8918
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c3376d03a2e9f02b20aba608de0228efd7dfddea
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59887684"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66443622"
 ---
 # <a name="developing-powershell-cmdlets-for-nano-server"></a>Nano Server용 PowerShell Cmdlet 개발
 
@@ -127,9 +127,9 @@ PowerShell은 다양한 cmdlet 구현 형식을 지원하며, 사용자가 사�
 * %UserProfile%\Documents\WindowsPowerShell\Modules   
 * \<제품 설치 위치 >   
     
- 다음 위치에서 세부 정보를 확인합니다.  
- * CIM cmdlet은 .cdxml 파일 확장명을 갖습니다.  
- * .NET cmdlet은 .dll 파일 확장명을 갖거나 RootModule, ModuleToProcess 또는 NestedModules 필드의 .psd1 파일에 나열된 GAC에 어셈블리를 설치합니다.  
+  다음 위치에서 세부 정보를 확인합니다.  
+  * CIM cmdlet은 .cdxml 파일 확장명을 갖습니다.  
+  * .NET cmdlet은 .dll 파일 확장명을 갖거나 RootModule, ModuleToProcess 또는 NestedModules 필드의 .psd1 파일에 나열된 GAC에 어셈블리를 설치합니다.  
 * PowerShell 스크립트 cmdlet은 .psm1 또는 .ps1 파일 확장명을 갖습니다.   
   
 ## <a name="porting-cim-cmdlets"></a>CIM cmdlet 이식  

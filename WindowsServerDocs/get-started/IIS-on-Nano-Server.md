@@ -12,12 +12,12 @@ ms.assetid: 16984724-2d77-4d7b-9738-3dff375ed68c
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: 1461f3e3266d77d2510aba37208347253a8f78e7
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 54c8d05c028cbca364b6a46052d12cdcb12c01b0
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59851624"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66443608"
 ---
 # <a name="iis-on-nano-server"></a>Nano Server의 IIS
 
@@ -82,7 +82,7 @@ Microsoft-NanoServer-IIS-Package와 함께 -Package 매개 변수를 사용하�
 3.  .\Tools\dism.exe /Add-Package /PackagePath:.\packages\Microsoft-NanoServer-IIS-Package.cab /Image:.\mountdir
 4.  .\Tools\dism.exe /Add-Package /PackagePath:.\packages\en-us\Microsoft-NanoServer-IIS-Package_en-us.cab /Image:.\mountdir
 5.  .\Tools\dism.exe /Unmount-Image /MountDir:.\MountDir /Commit
- 
+
 
 > [!NOTE]  
 > 4단계에서는 언어 팩을 추가합니다. 이 예제에서는 EN-US를 설치합니다.  
@@ -99,7 +99,7 @@ Microsoft-NanoServer-IIS-Package와 함께 -Package 매개 변수를 사용하�
 
 
 ```  
-   
+
     <unattend xmlns="urn:schemas-microsoft-com:unattend">  
     <servicing>  
         <package action="install">  
@@ -118,20 +118,20 @@ Microsoft-NanoServer-IIS-Package와 함께 -Package 매개 변수를 사용하�
 
 
 
-3.  새로 만든(또는 복사한) XML 파일에서, \packages를 패키지 콘텐츠를 복사한 디렉터리로 편집합니다.  
+3. 새로 만든(또는 복사한) XML 파일에서, \packages를 패키지 콘텐츠를 복사한 디렉터리로 편집합니다.  
 
-4.  새로 만든 XML 파일이 있는 디렉터리로 전환하고 다음 명령을 실행합니다.  
+4. 새로 만든 XML 파일이 있는 디렉터리로 전환하고 다음 명령을 실행합니다.  
 
-    **dism /online /apply-unattend:.\unattend.xml**  
+   **dism /online /apply-unattend:.\unattend.xml**  
 
 
-5.  다음 명령을 실행하여 IIS 패키지와 관련 언어 팩이 올바르게 설치되었는지 확인합니다.  
+5. 다음 명령을 실행하여 IIS 패키지와 관련 언어 팩이 올바르게 설치되었는지 확인합니다.  
 
-    **dism /online /get-packages**  
+   **dism /online /get-packages**  
 
-    표시 "Package Identity: Microsoft NanoServer-IIS 패키지 ~ 31bf3856ad364e35 ~ amd64 ~ ~ 10.0.14393.1000 "을 두 번 한 번에 대해 나열 된 릴리스 종류: 언어 팩에 대해 한 번씩 릴리스 종류: 기능 팩입니다.  
+   표시 "Package Identity: Microsoft NanoServer-IIS 패키지 ~ 31bf3856ad364e35 ~ amd64 ~ ~ 10.0.14393.1000 "을 두 번 한 번에 대해 나열 된 릴리스 종류: 언어 팩에 대해 한 번씩 릴리스 종류: 기능 팩입니다.  
 
-6.  **net start w3svc**를 사용하여 또는 Nano 서버를 다시 시작하여 W3SVC 서비스를 시작합니다.  
+6. **net start w3svc**를 사용하여 또는 Nano 서버를 다시 시작하여 W3SVC 서비스를 시작합니다.  
 
 ## <a name="starting-iis"></a>IIS 시작  
 IIS가 설치되어 실행되면 웹 요청을 처리할 준비가 완료된 것입니다. http://\<Nano 서버 IP 주소>에서 기본 IIS 웹 페이지를 검색하여 IIS가 실행 중인지 확인합니다. 물리적 컴퓨터에서 복구 콘솔을 사용하여 IP 주소를 확인할 수 있습니다. 가상 컴퓨터에서 Windows PowerShell 프롬프트를 사용하고 다음 명령을 실행하여 IP 주소를 얻을 수 있습니다.  
@@ -152,7 +152,7 @@ IIS의 각 기능은 구성 요소 집합으로 존재합니다. 예를 들어 W
 |`<windowsAuthentication>`|`<windowsAuthentication enabled="false" authPersistNonNTLM\="true"><providers><add value="Negotiate" /><add value="NTLM" /><br /></providers><br /></windowsAuthentication>`|  
 
 IIS 하위 기능 전체 집합은 이 토픽의 부록 1에 포함되어 있고 해당 구성 요소는 이 토픽의 부록 2에 포함되어 있습니다.  
- 
+
 
 ### <a name="example-installing-windows-authentication"></a>예: Windows 인증 설치  
 
@@ -381,11 +381,12 @@ IIS의 각 기능은 구성 요소 집합으로 존재합니다. 이 부록에�
 ### <a name="security"></a>보안  
 **요청 필터링**  
 
-|섹션|구성 요소|  
-|----------------|--------------------------|  
-|`<globalModules>`|`<add name="RequestFilteringModule" image="%windir%\System32\inetsrv\modrqflt.dll" />`|  
-|`<modules>`|`<add name="RequestFilteringModule" lockItem="true" />`|  
-|`<requestFiltering>|`<requestFiltering><br />    <fileExtensions allowUnlisted="true" applyToWebDAV="true" /><br />    <verbs allowUnlisted="true" applyToWebDAV="true" /><br />    <hiddenSegments applyToWebDAV="true"><br />        <add segment="web.config" /><br />    </hiddenSegments><br /></requestFiltering>`|  
+
+|       섹션        |                                                                                                                                        구성 요소                                                                                                                                        |
+|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  `<globalModules>`   |                                                                                                        `<add name="RequestFilteringModule" image="%windir%\System32\inetsrv\modrqflt.dll" />`                                                                                                        |
+|     `<modules>`      |                                                                                                                       `<add name="RequestFilteringModule" lockItem="true" />`                                                                                                                        |
+| \`<requestFiltering> | `<requestFiltering><br />    <fileExtensions allowUnlisted="true" applyToWebDAV="true" /><br />    <verbs allowUnlisted="true" applyToWebDAV="true" /><br />    <hiddenSegments applyToWebDAV="true"><br />        <add segment="web.config" /><br />    </hiddenSegments><br /></requestFiltering>` |
 
 **기본 인증**  
 
@@ -413,11 +414,12 @@ IIS의 각 기능은 구성 요소 집합으로 존재합니다. 이 부록에�
 
 **IIS 클라이언트 인증서 매핑 인증**  
 
-|섹션|구성 요소|  
-|----------------|--------------------------|   
-|`<globalModules>`|`<add name="CertificateMappingAuthenticationModule" image="%windir%\System32\inetsrv\authcert.dll" />`|  
-|`<modules>`|`<add name="CertificateMappingAuthenticationModule" lockItem="true" `/>`|  
-|`<clientCertificateMappingAuthentication>`|`<clientCertificateMappingAuthentication enabled="false" />`|  
+
+|                  섹션                   |                                         구성 요소                                         |
+|--------------------------------------------|--------------------------------------------------------------------------------------------------------|
+|             `<globalModules>`              | `<add name="CertificateMappingAuthenticationModule" image="%windir%\System32\inetsrv\authcert.dll" />` |
+|                `<modules>`                 |               `<add name="CertificateMappingAuthenticationModule" lockItem="true" `/>\`                |
+| `<clientCertificateMappingAuthentication>` |                      `<clientCertificateMappingAuthentication enabled="false" />`                      |
 
 **IP 및 도메인 제한**  
 

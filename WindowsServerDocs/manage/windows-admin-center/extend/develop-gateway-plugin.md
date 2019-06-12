@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: 93cee5b8e3611a264119947103d22d9aa3b9a56b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 66e36a349fc6bd38a77ccf4f00d380788ea4b422
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59834394"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66445950"
 ---
 # <a name="develop-a-gateway-plugin"></a>게이트웨이 플러그 인 개발
 
@@ -69,7 +69,7 @@ Windows 관리 프로세스를 다시 시작 되 면 GET을 실행 하 여 사�
 
 ### <a name="optional-attach-to-plugin-for-debugging"></a>선택 사항: 디버깅에 대 한 플러그 인에 연결
 
-Visual Studio 2017에서 디버그 메뉴에서 "프로세스에 연결"을 선택 합니다. 다음 창에서 사용 가능한 프로세스 목록을 스크롤하여 SMEDesktop.exe를 선택 하 고 "연결"을 클릭 합니다. 한 번 후 디버거를 시작, 기능 코드 및 위의 URL 형식을 통해 다음 연습에서 중단점을 배치할 수 있습니다. 샘플 프로젝트에 대 한 (기능 이름: URL은 "샘플 Uno"): "http://localhost:6516/api/nodes/fake-server.my.domain.com/features/Sample%20Uno"
+Visual Studio 2017에서 디버그 메뉴에서 "프로세스에 연결"을 선택 합니다. 다음 창에서 사용 가능한 프로세스 목록을 스크롤하여 SMEDesktop.exe를 선택 하 고 "연결"을 클릭 합니다. 한 번 후 디버거를 시작, 기능 코드 및 위의 URL 형식을 통해 다음 연습에서 중단점을 배치할 수 있습니다. 샘플 프로젝트에 대 한 (기능 이름: URL은 "샘플 Uno"): "<http://localhost:6516/api/nodes/fake-server.my.domain.com/features/Sample%20Uno>"
 
 ## <a name="create-a-tool-extension-with-the-windows-admin-center-cli"></a>Windows Admin Center CLI를 사용 하 여 도구 확장명 만들기 ##
 
@@ -104,8 +104,8 @@ npm install
 
 Windows Admin Center CLI를 사용 하 여 확장을 만든 했으므로 다음이 단계를 수행 하 여 사용자 지정 게이트웨이 플러그 인에 도구 확장을 연결할 수 있습니다.
 
-- 추가 [빈 모듈](guides\add-module.md)
-- 사용 하 여 사용자 [사용자 지정 게이트웨이 플러그 인](guides\use-custom-gateway-plugin.md) 도구 확장의
+- 추가 [빈 모듈](guides/add-module.md)
+- 사용 하 여 사용자 [사용자 지정 게이트웨이 플러그 인](guides/use-custom-gateway-plugin.md) 도구 확장의
  
 ## <a name="build-and-side-load-your-extension"></a>빌드 및 쪽에 확장을 로드합니다.
 

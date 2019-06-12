@@ -9,12 +9,12 @@ ms.date: 02/19/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 54b0e055d6cfde5e5c69540ac804a38cbceb1e59
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 231c8783032f51f607565922d90ea7f7eb877cfd
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66188773"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66444693"
 ---
 # <a name="customize-http-security-response-headers-with-ad-fs-2019"></a>AD FS 2019를 사용 하 여 HTTP 보안 응답 헤더를 사용자 지정 
  
@@ -39,7 +39,7 @@ ms.locfileid: "66188773"
 ## <a name="http-security-response-headers"></a>HTTP 보안 응답 헤더 
 응답 헤더는 웹 브라우저에 AD FS에서 보내는 나가는 HTTP 응답에 포함 됩니다. 사용 하 여 헤더를 나열할 수 있습니다는 `Get-AdfsResponseHeaders` 아래와 같이 cmdlet.  
 
-![헤더 응답](media\customize-http-security-headers-ad-fs\header1.png)
+![헤더 응답](media/customize-http-security-headers-ad-fs/header1.png)
 
 `ResponseHeaders` 위의 스크린샷에 특성은 모든 HTTP 응답에서 AD FS에서 포함 되는 보안 헤더를 식별 합니다. 경우에 응답 헤더를 보낼지 `ResponseHeadersEnabled` 로 설정 된 `True` (기본값). 값을 설정할 수 있는 `False` 보안 헤더를 포함 하 여 HTTP 응답에서 AD FS를 방지 하기 위해. 그러나이 권장 되지 않습니다.  이렇게 하려면 다음을 사용 합니다.
 
@@ -218,7 +218,7 @@ Set-AdfsResponseHeaders -SetHeaderName "TestHeader" -SetHeaderValue "TestHeaderV
 
 설정 되 면 새 머리글 (아래 fiddler 조각) AD FS 응답에 전송 됩니다.  
  
-![Fiddler](media\customize-http-security-headers-ad-fs\header2.png)
+![Fiddler](media/customize-http-security-headers-ad-fs/header2.png)
 
 ## <a name="web-browswer-compatibility"></a>웹 브라우저 호환성
 다음 표 및 링크를 사용 하 여 어떤 웹 브라우저가 각 보안 응답 헤더와 호환 되는지 확인 합니다.

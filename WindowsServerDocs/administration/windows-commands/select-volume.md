@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b0ebf9896621268c384ea8129d32c985028054d9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 98f42324dbd4c6b3add3333cf4687d1613b1f700
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59890734"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66441419"
 ---
 # <a name="select-volume"></a>select volume
 
@@ -36,10 +36,10 @@ select volume={<n>|<d>}
   
 ## <a name="parameters"></a>매개 변수  
   
-|매개 변수|설명|  
-|-------|--------|  
-|<n>|포커스를 받을 때 변환할 볼륨의 수입니다. 사용 하 여 현재 선택 된 디스크에 모든 볼륨에 대 한 숫자를 볼 수는 **볼륨 목록** DiskPart 명령을 합니다.|  
-|<d>|포커스를 받을 때 변환할 볼륨의 드라이브 문자 또는 탑재 지점 경로입니다.|  
+| 매개 변수 |                                                                               설명                                                                                |
+|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    <n>    | 포커스를 받을 때 변환할 볼륨의 수입니다. 사용 하 여 현재 선택 된 디스크에 모든 볼륨에 대 한 숫자를 볼 수는 **볼륨 목록** DiskPart 명령을 합니다. |
+|    <d>    |                                                 포커스를 받을 때 변환할 볼륨의 드라이브 문자 또는 탑재 지점 경로입니다.                                                 |
   
 ## <a name="remarks"></a>설명  
   

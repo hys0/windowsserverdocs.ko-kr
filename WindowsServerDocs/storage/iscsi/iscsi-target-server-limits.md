@@ -8,12 +8,12 @@ author: JasonGerend
 manager: dougkim
 ms.author: jgerend
 ms.date: 09/11/2018
-ms.openlocfilehash: 9514392da133911c900f68fc8f1be260b6c91138
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: d912047ab0e3136c6dc05064f3a28aaaafd36c79
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59873034"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447719"
 ---
 # <a name="iscsi-target-server-scalability-limits"></a>iSCSI 대상 서버 확장성 제한
 
@@ -73,7 +73,7 @@ ms.locfileid: "59873034"
 <td><p>로컬 탑재 된 가상 디스크 또는 저장소 어플라이언스 당 스냅숏</p></td>
 <td><p>32</p></td>
 <td><p>예</p></td>
-<td><p>가상 디스크를 로컬로 탑재 된 모든 iSCSI 관련 기능과 사용 되지 않음-자세한 정보를 제공 하지 않습니다, 참조 <a href="https://technet.microsoft.com/library/dn303411.aspx">Features Removed or Deprecated in Windows Server 2012 R2</a>합니다.</p></td>
+<td><p>로컬 가상 디스크 don 탑재 된&#39;t 제품 모든 iSCSI 관련 기능과 사용 되지 않음-자세한 내용은 참조 <a href="https://technet.microsoft.com/library/dn303411.aspx">Features Removed or Deprecated in Windows Server 2012 R2</a>합니다.</p></td>
 </tr>
 </tbody>
 </table>
@@ -105,7 +105,7 @@ ms.locfileid: "59873034"
 <tr class="even">
 <td><p>여러 활성 클러스터 노드</p></td>
 <td><p>지원됨</p></td>
-<td> 
+<td> 
 <p>해당 사항 없음</p></td>
 <td><p>장애 조치 클러스터의 각 활성 노드 역할을 가능한 소유자 노드에서 다른 노드와 다른 iSCSI 대상 서버 클러스터 된 인스턴스를 소유 합니다.</p></td>
 </tr>
@@ -205,8 +205,7 @@ ms.locfileid: "59873034"
 <tr class="odd">
 <td><p>iSCSI 오프 로드</p></td>
 <td><p>지원되지 않음</p></td>
-<td>              
-<p>해당 사항 없음</p></td>
+<td><br/><p>해당 사항 없음</p></td>
 <td></td>
 </tr>
 <tr class="even">
@@ -249,7 +248,7 @@ ms.locfileid: "59873034"
 </thead>
 <tbody>
 <tr class="odd">
-<td><p>기본 디스크에서 가상 디스크를 동적 디스크로 변환 하는 iSCSI 초기자에서 </p></td>
+<td><p>기본 디스크에서 가상 디스크를 동적 디스크로 변환 하는 iSCSI 초기자에서 </p></td>
 <td><p>예</p></td>
 <td><p>아니요</p></td>
 <td></td>
@@ -312,7 +311,7 @@ ms.locfileid: "59873034"
 <td><p>.vhdx: 예</p>
 <p>.vhd: 예 (Windows Server 2012에는 아니요)</p></td>
 <td><p>예</p></td>
-<td><p>매핑 해제는 지원 되지 않습니다.</p></td>
+<td><p>로그인의 매핑을 해제&#39;t 지원 합니다.</p></td>
 </tr>
 <tr class="odd">
 <td><p>exFAT/FAT32/FAT (호스팅 VHD의 볼륨)</p></td>
@@ -348,7 +347,7 @@ ms.locfileid: "59873034"
 <td><p>씬 프로비저닝</p></td>
 <td><p>아니오</p></td>
 <td><p>해당 사항 없음</p></td>
-<td><p>동적 Vhd 지원 되지만 Unmap 지원 되지 않습니다.</p></td>
+<td><p>동적 Vhd는 지원 되지만 로그인의 매핑을 해제&#39;t 지원 합니다.</p></td>
 </tr>
 <tr class="odd">
 <td><p>논리 단위 축소</p></td>
@@ -542,9 +541,9 @@ ISCSI 대상 서버 소프트웨어는 다음 iSCSI 초기자를 사용 하 여 
 
 다음 목록에서는 iSCSI 대상 서버 및 관련 기술에 대한 추가 리소스를 제공합니다.
 
-  - [iSCSI 대상 블록 저장소 개요](iscsi-target-server.md)
+- [iSCSI 대상 블록 저장소 개요](iscsi-target-server.md)
 
-  - [iSCSI 대상 부팅 개요](iscsi-boot-overview.md)
+- [iSCSI 대상 부팅 개요](iscsi-boot-overview.md)
 
-  - [Windows Server에서 저장소](..\storage.md)
+- [Windows Server에서 저장소](../storage.md)
 

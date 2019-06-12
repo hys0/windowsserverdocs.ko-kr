@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: f3f34b4c86854bfc55cf4b1b57a0fd3c2baf2ffc
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3cce07ba5b3d2cc89f1363bbb2af5acd048c0466
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59839254"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66445944"
 ---
 # <a name="control-your-tools-visibility-in-a-solution"></a>솔루션에서 도구의 표시 유형을 제어합니다 #
 
@@ -194,6 +194,7 @@ SDK는 미리 큐 레이 팅 된 경우 도구 사용할지 여부를 결정 하
 }
 ```
 State 속성에는 제어 도구 목록에서 확장을 표시할지를 결정 하는 중요 한 값입니다.  허용 되는 값은:
+
 | 값 | 설명 |
 | ---- | ----------- |
 | 사용 가능 | 확장 도구 목록에 표시 합니다. |

@@ -13,19 +13,19 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c45e26f6578510837f190ae20e3140e619dc59cb
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6abf8466f90ac29846f2e1ee7d305e7e4280231e
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59841764"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66438636"
 ---
 # <a name="ftp-ls1"></a>ftp: ls_1
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
-
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 
+> 
+> 적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 파일 및 원격 컴퓨터에서 하위 디렉터리의 간단한 목록을 표시합니다.   
 ## <a name="syntax"></a>구문  
@@ -33,10 +33,12 @@ ms.locfileid: "59841764"
 ls [<remotedirectory>] [<LocalFile>]  
 ```  
 ### <a name="parameters"></a>매개 변수  
-|매개 변수|설명|  
-|-------|--------|  
-|[<remotedirectory>]|목록이 표시 하려는 디렉터리를 지정 합니다. 디렉터리가 없는 지정 된 경우 원격 컴퓨터의 현재 작업 디렉터리 사용 됩니다.|  
-|[<LocalFile>]|목록을 저장할 로컬 파일을 지정 합니다. 로컬 파일을 지정 하지 않으면 결과 화면에 표시 됩니다.|  
+
+|      매개 변수      |                                                                       설명                                                                        |
+|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [<remotedirectory>] | 목록이 표시 하려는 디렉터리를 지정 합니다. 디렉터리가 없는 지정 된 경우 원격 컴퓨터의 현재 작업 디렉터리 사용 됩니다. |
+|    [<LocalFile>]    |               목록을 저장할 로컬 파일을 지정 합니다. 로컬 파일을 지정 하지 않으면 결과 화면에 표시 됩니다.               |
+
 ## <a name="BKMK_Examples"></a>예제  
 파일 및 원격 컴퓨터에서 하위 디렉터리의 간단한 목록을 표시 합니다.  
 ```  

@@ -8,12 +8,12 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: d53be34d04edfac9f30b6e269833be74a6ebcf22
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 541ceec25e8cb0fae0b55c3de3be269982546c54
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59820354"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447664"
 ---
 # <a name="configure-e-mail-notifications"></a>전자 메일 알림 구성
 
@@ -25,21 +25,21 @@ ms.locfileid: "59820354"
 
 ## <a name="to-configure-e-mail-options"></a>전자 메일 옵션을 구성하려면
 
-1.  콘솔 트리에서 마우스 오른쪽 단추로 **파일 서버 리소스 관리자**를 클릭하고 **구성 옵션**을 클릭합니다. **파일 서버 리소스 관리자 옵션** 대화 상자가 열립니다.
+1. 콘솔 트리에서 마우스 오른쪽 단추로 **파일 서버 리소스 관리자**를 클릭하고 **구성 옵션**을 클릭합니다. **파일 서버 리소스 관리자 옵션** 대화 상자가 열립니다.
 
-2.  **전자 메일 알림** 탭의 **SMTP 서버 이름 또는 IP 주소**에서, 전자 메일 알림과 저장소 보고서를 전달할 SMTP 서버의 호스트 이름과 IP 주소를 입력합니다.
+2. **전자 메일 알림** 탭의 **SMTP 서버 이름 또는 IP 주소**에서, 전자 메일 알림과 저장소 보고서를 전달할 SMTP 서버의 호스트 이름과 IP 주소를 입력합니다.
 
-3.  특정 관리자에게 할당량 및 파일 차단 이벤트를 정기적으로 알리거나 전자 메일 저장소 보고서를 보내려면 **기본 수신 관리자** 아래에서 각 전자 메일 주소를 입력합니다.
+3. 특정 관리자에게 할당량 및 파일 차단 이벤트를 정기적으로 알리거나 전자 메일 저장소 보고서를 보내려면 **기본 수신 관리자** 아래에서 각 전자 메일 주소를 입력합니다.
 
-    *account@domain*  형식을 사용합니다. 여러 계정을 구분하려면 세미콜론을 사용합니다.
+   <em>account@domain</em>  형식을 사용합니다. 여러 계정을 구분하려면 세미콜론을 사용합니다.
 
-4.  파일 서버 리소스 관리자에서 보내는 전자 메일 알림 및 저장소 보고서에 대해 다른 "보낸 사람" 주소를 지정하려면, **기본 "보낸 사람" 전자 메일 주소**에서 메시지에 표시될 전자 메일 주소를 입력합니다.
+4. 파일 서버 리소스 관리자에서 보내는 전자 메일 알림 및 저장소 보고서에 대해 다른 "보낸 사람" 주소를 지정하려면, **기본 "보낸 사람" 전자 메일 주소**에서 메시지에 표시될 전자 메일 주소를 입력합니다.
 
-5.  설정을 테스트를 하려면 **테스트 전자 메일 보내기**를 클릭합니다.
+5. 설정을 테스트를 하려면 **테스트 전자 메일 보내기**를 클릭합니다.
 
-6.  **확인**을 클릭합니다.
+6. **확인**을 클릭합니다.
 
 
 ## <a name="see-also"></a>참조
 
--   [설정 파일 서버 리소스 관리자 옵션](setting-file-server-resource-manager-options.md)
+-   [파일 서버 리소스 관리자 옵션 설정](setting-file-server-resource-manager-options.md)

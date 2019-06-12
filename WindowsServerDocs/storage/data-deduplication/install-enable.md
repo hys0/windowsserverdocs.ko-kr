@@ -9,12 +9,12 @@ manager: klaasl
 ms.author: wgries
 ms.date: 05/09/2017
 description: Windows Server에 데이터 중복 제거를 설치하는 방법, 워크로드가 중복 제거 대상인지 확인하는 방법, 볼륨에서 중복 제거를 사용하도록 설정하는 방법을 설명합니다.
-ms.openlocfilehash: 153b064b158028c696bad4eeb00764d3e10822e1
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e9ea3a144ae68ba9a51cdad66d493a7b962d3838
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59814904"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447273"
 ---
 # <a name="install-and-enable-data-deduplication"></a>데이터 중복 제거 설치 및 사용
 > 적용 대상: Windows Server(반기 채널), Windows Server 2016
@@ -46,7 +46,7 @@ Nano Server 설치에 데이터 중복 제거를 설치하려면
     Install-WindowsFeature -ComputerName <MyNanoServer> -Name FS-Data-Deduplication
     ```  
     <br />
-    **-- OR --**
+    <strong>-- OR --</strong>
     <br />
     PowerShell 원격 작업을 사용하여 Nano Server 인스턴스에 원격으로 연결한 후 DISM을 사용하여 데이터 중복 제거를 설치합니다.  
     

@@ -14,12 +14,12 @@ manager: dongill
 ms.author: elizapo
 ms.date: 05/20/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 0c10cf6c9355b5f7457a5f17babdfb44aaa679b2
-ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
+ms.openlocfilehash: 0e001b590f524711185e3dd70db3bc52a9b8d9af
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65976795"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447119"
 ---
 # <a name="compare-the-client-apps"></a>클라이언트 앱 비교
 
@@ -35,12 +35,13 @@ ms.locfileid: "65976795"
 
 ### <a name="input-redirection"></a>입력된 리디렉션
 
-| 리디렉션 | 원격 데스크톱<br> 연결 | 범용 | Android | iOS | macOS | 웹 클라이언트 |
-|-------------|-------------------------------|-----------|---------|-----|-------|------------|
-| 키보드    | X                             | X         | X       | X   | X     | X          |
-| 마우스       | X                             | X         | X       | X*    | X     | X          |
-| 터치       | X                             | X         | X       | X   |       | X (Edge 및 IE 지원 되지 않음) |
-| 기타       | 펜                           |           |         |     |       |            |
+| 리디렉션 | 원격 데스크톱<br> 연결 | 범용 | Android | iOS | macOS |          웹 클라이언트           |
+|-------------|-------------------------------|-----------|---------|-----|-------|-------------------------------|
+|  키보드   |               X               |     X     |    X    |  X  |   X   |               X               |
+|    마우스    |               X               |     X     |    X    | X\* |   X   |               X               |
+|    터치    |               X               |     X     |    X    |  X  |       | X (Edge 및 IE 지원 되지 않음) |
+|    기타    |              펜              |           |         |     |       |                               |
+
 * 보기의 [원격 데스크톱 iOS 베타 클라이언트에 대 한 지원 되는 입력된 장치 목록이](remote-desktop-ios.md#supported-input-devices)합니다.
 
 ### <a name="port-redirection"></a>포트 리디렉션   

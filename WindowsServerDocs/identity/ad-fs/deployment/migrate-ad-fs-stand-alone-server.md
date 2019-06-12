@@ -8,12 +8,12 @@ ms.date: 06/28/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 10371349fe19be92fb997c9c28f19def0ecad7e9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 5526afa758a142e30b9a238b4c7204cacebb1812
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59851934"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66444548"
 ---
 # <a name="migrate-a-stand-alone-ad-fs-federation-server-or-a-single-node-ad-fs-farm"></a>독립 실행형 AD FS 페더레이션 서버 또는 단일 노드 AD FS 팜 마이그레이션  
 이 문서는 Windows Server 2012로 AD FS 2.0의 독립 실행형 서버를 마이그레이션하는 방법에 자세한 정보를 제공 합니다.
@@ -29,7 +29,7 @@ AD FS 2.0을 마이그레이션하려면 다음 절차를 사용 하 여 서버�
 > [!IMPORTANT]
 >  운영 체제 업그레이드로 인해 이 서버의 AD FS 구성이 손실되고 AD FS 2.0 서버 역할이 제거됩니다. Windows Server 2012 AD FS 서버 역할 대신 설치 되지만 구성 되지는 않습니다. 수동으로 원래 AD FS 구성을 만들고 나머지 AD FS 설정을 복원하여 페더레이션 서버 마이그레이션을 완료해야 합니다.  
   
-3.  원래 AD FS 구성을 만듭니다. 다음 방법 중 하나를 사용하여 원래 AD FS 구성을 만들 수 있습니다.  
+3. 원래 AD FS 구성을 만듭니다. 다음 방법 중 하나를 사용하여 원래 AD FS 구성을 만들 수 있습니다.  
   
 -   **AD FS 페더레이션 서버 구성 마법사** 를 사용하여 새 페더레이션 서버를 만듭니다. 자세한 내용은 [페더레이션 서버 팜의 첫 번째 페더레이션 서버 만들기](Create-the-First-Federation-Server-in-a-Federation-Server-Farm.md)를 참조하세요.  
   
@@ -52,14 +52,14 @@ AD FS 2.0을 마이그레이션하려면 다음 절차를 사용 하 여 서버�
   
 다음은 Windows PowerShell을 사용하여 페더레이션 서버 또는 단일 노드 SQL Server 팜에서 원래 AD FS 구성을 만드는 방법에 대한 예입니다.  Windows PowerShell 모듈을 열고 다음 명령을 실행합니다. `$fscredential = Get-Credential`. SQL Server 팜의 마이그레이션을 준비하는 동안 기록한 서비스 계정의 이름 및 암호를 입력합니다. 다음 명령을 실행합니다. `C:\PS> Add-AdfsFarmNode -ServiceAccountCredential $fscredential -SQLConnectionString "Data Source=<Data Source>;Integrated Security=True"` 여기서 `Data Source` 는 `%programfiles%\Active Directory Federation Services 2.0\Microsoft.IdentityServer.Servicehost.exe.config`파일의 정책 저장소 연결 문자열 값의 데이터 원본 값입니다.  
   
-4.  나머지 AD FS 서비스 설정 및 트러스트 관계를 복원합니다. 이 단계는 AD FS 마이그레이션을 준비하는 동안 내보낸 파일과 수집한 값을 사용하여 수동으로 수행할 수 있는 단계입니다. 자세한 지침은 나머지 AD FS 팜 구성 복원을 참조하세요.  
+4. 나머지 AD FS 서비스 설정 및 트러스트 관계를 복원합니다. 이 단계는 AD FS 마이그레이션을 준비하는 동안 내보낸 파일과 수집한 값을 사용하여 수동으로 수행할 수 있는 단계입니다. 자세한 지침은 나머지 AD FS 팜 구성 복원을 참조하세요.  
   
 > [!NOTE]
 >  이 단계는 독립 실행형 페더레이션 서버 또는 단일 노드 WID 팜을 마이그레이션하는 경우에만 필요합니다.  페더레이션 서버에서 SQL Server 데이터베이스를 구성 저장소로 사용하는 경우에는 서비스 설정 및 트러스트 관계가 데이터베이스에서 유지됩니다.  
   
-5.  AD FS 웹 페이지를 업데이트합니다. 이것은 수동 단계입니다. 마이그레이션을 준비 하는 동안 사용자 지정된 AD FS 웹 페이지를 백업한 경우 덮어쓰려면 기본 AD FS 웹 페이지에서 기본적으로 생성 된 백업 데이터를 사용 합니다 **%systemdrive%\inetpub\adfs\ls** 의 결과로 디렉터리 Windows Server 2012에서 AD FS 구성 합니다.  
+5. AD FS 웹 페이지를 업데이트합니다. 이것은 수동 단계입니다. 마이그레이션을 준비 하는 동안 사용자 지정된 AD FS 웹 페이지를 백업한 경우 덮어쓰려면 기본 AD FS 웹 페이지에서 기본적으로 생성 된 백업 데이터를 사용 합니다 **%systemdrive%\inetpub\adfs\ls** 의 결과로 디렉터리 Windows Server 2012에서 AD FS 구성 합니다.  
   
-6.  사용자 지정 특성 저장소와 같은 나머지 AD FS 사용자 지정 항목을 복원합니다.  
+6. 사용자 지정 특성 저장소와 같은 나머지 AD FS 사용자 지정 항목을 복원합니다.  
   
 ## <a name="restoring-the-remaining-ad-fs-farm-configuration"></a>나머지 AD FS 팜 구성 복원  
   

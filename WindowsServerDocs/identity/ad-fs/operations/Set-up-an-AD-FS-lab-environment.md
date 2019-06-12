@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 01db8ecc9f84123bbc3159c3cb2399d61d6344c2
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 98d70ea8fb32d48ff34248600cd964d7fa79a0cb
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66188964"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66444828"
 ---
 # <a name="set-up-an-ad-fs-lab-environment"></a>AD FS 실습 환경 설정
 
@@ -42,7 +42,7 @@ ms.locfileid: "66188964"
 4.  [4단계: 클라이언트 컴퓨터 (Client1) 구성](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_10)  
   
 ## <a name="BKMK_1"></a>1 단계: 도메인 컨트롤러(DC1) 구성  
-이 테스트 환경을 위해 루트 Active Directory 도메인을 호출할 수 있습니다 **contoso.com** 지정 **pass@word1** 을 관리자 암호로 합니다.  
+이 테스트 환경을 위해 루트 Active Directory 도메인을 호출할 수 있습니다 **contoso.com** 지정 <strong>pass@word1</strong> 을 관리자 암호로 합니다.  
   
 -   AD DS 역할 서비스를 설치 하 고 Active Directory Domain Services에서 Windows Server 2012 R2 컴퓨터를 도메인 컨트롤러 만들기 (AD DS)를 설치 합니다. 이 작업은 도메인 컨트롤러 만들기의 일부로 AD DS 스키마를 업그레이드합니다. 자세한 내용 및 단계별 지침은 참조 하세요[ https://technet.microsoft.com/ library/hh472162.aspx](https://technet.microsoft.com/library/hh472162.aspx)합니다.  
   
@@ -51,9 +51,9 @@ ms.locfileid: "66188964"
   
 다음 계정을 만듭니다.  
   
--   사용자: **Robert Hatley**, 자격 증명 - 사용자 이름: **RobertH** 및 암호: **P@ssword**  
+- 사용자: **Robert Hatley**, 자격 증명 - 사용자 이름: **RobertH** 및 암호: <strong>P@ssword</strong>  
   
--   그룹: **재무**  
+- 그룹: **재무**  
   
 Active Directory (AD) 사용자 및 그룹 계정을 만드는 방법에 대 한 자세한 내용은 [ https://technet.microsoft.com/library/cc783323%28v=ws.10%29.aspx ](https://technet.microsoft.com/library/cc783323%28v=ws.10%29.aspx)합니다.  
   
@@ -94,21 +94,21 @@ SSL 인증서를 설정하는 방법에 대한 자세한 내용은 [엔터프라
   
 ##### <a name="to-install-the-federation-service-role-service"></a>페더레이션 서비스 역할 서비스를 설치하려면  
   
-1.  도메인 관리자 계정을 사용 하 여 서버에 로그온 administrator@contoso.com합니다.  
+1. 도메인 관리자 계정을 사용 하 여 서버에 로그온 administrator@contoso.com합니다.  
   
-2.  서버 관리자를 시작합니다. 서버 관리자를 시작하려면 Windows **시작** 화면에서 **서버 관리자** 를 클릭하거나 Windows 바탕 화면의 Windows 작업 표시줄에서 **서버 관리자** 를 클릭합니다. **대시보드** 페이지의 **시작** 타일에 있는 **빠른 시작** 탭에서 **역할 및 기능 추가**를 클릭합니다. 또는 **관리** 메뉴에서 **역할 및 기능 추가**를 클릭해도 됩니다.  
+2. 서버 관리자를 시작합니다. 서버 관리자를 시작하려면 Windows **시작** 화면에서 **서버 관리자** 를 클릭하거나 Windows 바탕 화면의 Windows 작업 표시줄에서 **서버 관리자** 를 클릭합니다. **대시보드** 페이지의 **시작** 타일에 있는 **빠른 시작** 탭에서 **역할 및 기능 추가**를 클릭합니다. 또는 **관리** 메뉴에서 **역할 및 기능 추가**를 클릭해도 됩니다.  
   
-3.  **시작하기 전** 페이지에서 **다음**을 클릭합니다.  
+3. **시작하기 전** 페이지에서 **다음**을 클릭합니다.  
   
-4.  **설치 유형 선택** 페이지에서 **역할 기반 또는 기능 기반 설치**를 클릭한 다음 **다음**을 클릭합니다.  
+4. **설치 유형 선택** 페이지에서 **역할 기반 또는 기능 기반 설치**를 클릭한 다음 **다음**을 클릭합니다.  
   
-5.  **대상 서버 선택** 페이지에서 **서버 풀에서 서버 선택**을 클릭하고 대상 컴퓨터가 선택되어 있는지 확인한 후 **다음**을 클릭합니다.  
+5. **대상 서버 선택** 페이지에서 **서버 풀에서 서버 선택**을 클릭하고 대상 컴퓨터가 선택되어 있는지 확인한 후 **다음**을 클릭합니다.  
   
-6.  **서버 역할 선택** 페이지에서 **Active Directory Federation Services**를 클릭한 후 **다음**을 클릭합니다.  
+6. **서버 역할 선택** 페이지에서 **Active Directory Federation Services**를 클릭한 후 **다음**을 클릭합니다.  
   
-7.  **기능 선택** 페이지에서 **다음**을 클릭합니다.  
+7. **기능 선택** 페이지에서 **다음**을 클릭합니다.  
   
-8.  **AD FS(Active Directory Federation Service)** 페이지에서 **다음**을 클릭합니다.  
+8. **AD FS(Active Directory Federation Service)** 페이지에서 **다음**을 클릭합니다.  
   
 9. **설치 선택 확인** 페이지에서 정보를 확인한 후 **필요한 경우 자동으로 대상 서버 다시 시작** 확인란을 선택하고 **설치**를 클릭합니다.  
   
@@ -179,7 +179,7 @@ DC1에서 다음 DNS(Domain Name System) 레코드가 Device Registration Servic
   
 다음 절차를 사용하여 페더레이션 서버 및 Device Registration Service용 회사 DNS 이름 서버에 호스트(A) 리소스 레코드를 추가할 수 있습니다.  
   
-이 절차를 완료하려면 최소한 Administrators 또는 이와 동등한 그룹 구성원 자격이 필요합니다. 적절 한 계정을 사용 하는 방법에 대 한 세부 정보를 검토 하 고 그룹 구성원 자격 하이퍼링크에 "https://go.microsoft.com/fwlink/?LinkId=83477" 로컬 및 도메인 기본 그룹 (https://go.microsoft.com/fwlink/p/?LinkId=83477)합니다.  
+이 절차를 완료하려면 최소한 Administrators 또는 이와 동등한 그룹 구성원 자격이 필요합니다. 적절 한 계정을 사용 하는 방법에 대 한 세부 정보를 검토 하 고 그룹 구성원 자격 하이퍼링크에 "<https://go.microsoft.com/fwlink/?LinkId=83477>" 로컬 및 도메인 기본 그룹 (<https://go.microsoft.com/fwlink/p/?LinkId=83477>).  
   
 ##### <a name="to-add-a-host-a-and-alias-cname-resource-records-to-dns-for-your-federation-server"></a>페더레이션 서버에 대한 DNS에 호스트(A) 및 별칭(CNAME) 리소스 레코드를 추가하려면  
   
@@ -222,24 +222,24 @@ Windows Identity Foundation SDK를 다운로드할 수 있습니다 ([https://ww
   
 ### <a name="BKMK_15"></a>웹 서버 역할 및 Windows Identity Foundation 설치  
   
-1.  > [!NOTE]  
-    > Windows Server 2012 R2 설치 미디어에 액세스할 수 있어야 합니다.  
+1. > [!NOTE]  
+   > Windows Server 2012 R2 설치 미디어에 액세스할 수 있어야 합니다.  
   
-    사용 하 여 WebServ1에 로그온 **administrator@contoso.com** 암호 **pass@word1**합니다.  
+   사용 하 여 WebServ1에 로그온 <strong>administrator@contoso.com</strong> 암호 <strong>pass@word1</strong>합니다.  
   
-2.  서버 관리자 **대시보드** 페이지의 **시작** 타일에 있는 **빠른 시작** 탭에서 **역할 및 기능 추가**를 클릭합니다. 또는 **관리** 메뉴에서 **역할 및 기능 추가**를 클릭해도 됩니다.  
+2. 서버 관리자 **대시보드** 페이지의 **시작** 타일에 있는 **빠른 시작** 탭에서 **역할 및 기능 추가**를 클릭합니다. 또는 **관리** 메뉴에서 **역할 및 기능 추가**를 클릭해도 됩니다.  
   
-3.  **시작하기 전** 페이지에서 **다음**을 클릭합니다.  
+3. **시작하기 전** 페이지에서 **다음**을 클릭합니다.  
   
-4.  **설치 유형 선택** 페이지에서 **역할 기반 또는 기능 기반 설치**를 클릭한 다음 **다음**을 클릭합니다.  
+4. **설치 유형 선택** 페이지에서 **역할 기반 또는 기능 기반 설치**를 클릭한 다음 **다음**을 클릭합니다.  
   
-5.  **대상 서버 선택** 페이지에서 **서버 풀에서 서버 선택**을 클릭하고 대상 컴퓨터가 선택되어 있는지 확인한 후 **다음**을 클릭합니다.  
+5. **대상 서버 선택** 페이지에서 **서버 풀에서 서버 선택**을 클릭하고 대상 컴퓨터가 선택되어 있는지 확인한 후 **다음**을 클릭합니다.  
   
-6.  **서버 역할 선택** 페이지에서 **웹 서버(IIS)** 옆의 확인란을 선택하고 **기능 추가**를 클릭한 후 **다음**을 클릭합니다.  
+6. **서버 역할 선택** 페이지에서 **웹 서버(IIS)** 옆의 확인란을 선택하고 **기능 추가**를 클릭한 후 **다음**을 클릭합니다.  
   
-7.  **기능 선택** 페이지에서 **Windows Identity Foundation 3.5**를 선택하고 **다음**을 클릭합니다.  
+7. **기능 선택** 페이지에서 **Windows Identity Foundation 3.5**를 선택하고 **다음**을 클릭합니다.  
   
-8.  **웹 서버 역할(IIS)** 페이지에서 **다음**을 클릭합니다.  
+8. **웹 서버 역할(IIS)** 페이지에서 **다음**을 클릭합니다.  
   
 9. **역할 서비스 선택** 페이지에서 **응용 프로그램 개발**을 선택하고 확장합니다. **ASP.NET 3.5**를 선택하고 **기능 추가**를 클릭한 후 **다음**을 클릭합니다.  
   
@@ -308,7 +308,7 @@ Windows Identity Foundation SDK를 다운로드할 수 있습니다 ([https://ww
   
     2.  응용 프로그램 구성 위치를 설정 합니다 **C:inetputclaimappweb.config** 사이트에 대 한 URL로 응용 프로그램 URI를 설정 하 고  **https://webserv1.contoso.com /claimapp/** 합니다. **다음**을 클릭합니다.  
   
-    3.  선택 **기존 STS 사용** AD FS 서버의 메타 데이터 URL로 이동 하 고 **https://adfs1.contoso.com/federationmetadata/2007-06/federationmetadata.xml**합니다. **다음**을 클릭합니다.  
+    3.  선택 **기존 STS 사용** AD FS 서버의 메타 데이터 URL로 이동 하 고 **https://adfs1.contoso.com/federationmetadata/2007-06/federationmetadata.xml** 합니다. **다음**을 클릭합니다.  
   
     4.  **인증서 체인 유효성 검사 사용 안 함**을 선택하고 **다음**을 클릭합니다.  
   
@@ -316,7 +316,7 @@ Windows Identity Foundation SDK를 다운로드할 수 있습니다 ([https://ww
   
     6.  **매일 WS-Federation 메타데이터 업데이트를 수행하도록 작업 예약**옆의 확인란을 선택합니다. **마침**을 클릭합니다.  
   
-    7.  이제 예제 응용 프로그램이 구성되었습니다. 응용 프로그램 URL을 테스트 하는 경우 **https://webserv1.contoso.com/claimapp**를 페더레이션 서버로 리디렉션됩니다 해야 합니다. 신뢰 당사자 트러스트를 구성하지 않았으므로 페더레이션 서버에 오류 메시지가 표시됩니다. 즉, AD FS에서이 테스트 응용 프로그램을 보호 하지 않았습니다.  
+    7.  이제 예제 응용 프로그램이 구성되었습니다. 응용 프로그램 URL을 테스트 하는 경우 **https://webserv1.contoso.com/claimapp** 를 페더레이션 서버로 리디렉션됩니다 해야 합니다. 신뢰 당사자 트러스트를 구성하지 않았으므로 페더레이션 서버에 오류 메시지가 표시됩니다. 즉, AD FS에서이 테스트 응용 프로그램을 보호 하지 않았습니다.  
   
 이제 AD FS 사용 하 여 웹 서버에서 실행 되는 샘플 응용 프로그램 보호 해야 합니다. 이렇게 하려면 페더레이션 서버(ADFS1)에서 신뢰 당사자 트러스트를 추가하면 됩니다. 비디오를 참조 하세요. [Active Directory Federation Services 방법 비디오 시리즈: 신뢰 당사자 트러스트 추가](https://technet.microsoft.com/video/adfs-how-to-add-a-relying-party-trust)합니다.  
   

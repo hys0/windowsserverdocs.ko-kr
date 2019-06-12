@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c7d5675aa6c33ddbe1e5e873e1a7cf7a2e8f8017
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 79449bc74dd09246b380b3f892acc1b338650d20
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59824964"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66441504"
 ---
 # <a name="select-partition"></a>파티션을 선택합니다
 
@@ -36,9 +36,9 @@ select partition=<n>
   
 ## <a name="parameters"></a>매개 변수  
   
-|매개 변수|설명|  
-|-------|--------|  
-|partition\=<n>|포커스를 받을 파티션의 수입니다. 사용 하 여 현재 선택 된 디스크에 모든 파티션에 대 한 숫자를 볼 수는 **파티션 목록이** DiskPart 명령을 합니다.|  
+|   매개 변수    |                                                                                    설명                                                                                    |
+|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| partition\=<n> | 포커스를 받을 파티션의 수입니다. 사용 하 여 현재 선택 된 디스크에 모든 파티션에 대 한 숫자를 볼 수는 **파티션 목록이** DiskPart 명령을 합니다. |
   
 ## <a name="remarks"></a>설명  
   

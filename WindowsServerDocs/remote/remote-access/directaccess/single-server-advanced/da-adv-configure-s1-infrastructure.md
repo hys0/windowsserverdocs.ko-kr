@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: 43abc30a-300d-4752-b845-10a6b9f32244
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: edd59208237f9b1042427dfecba0a407a34b30a8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 9d19ac813280981341019330470cc5d53ee00778
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59835814"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446114"
 ---
 # <a name="step-1-configure-advanced-directaccess-infrastructure"></a>1 단계 고급 DirectAccess 인프라 구성
 
@@ -264,7 +264,7 @@ IP-HTTPS 인증에 사용되는 웹 사이트 인증서는 다음 요구 사항�
   
 5.  에 **DNS** 대화 상자에서 클릭 **확인**, 를 클릭 하 고 **수행**합니다.  
   
-![Windows PowerShell](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)Windows PowerShell 해당 명령을 * * *  
+![Windows PowerShell](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -336,7 +336,7 @@ DirectAccess 서버와 모든 DirectAccess 클라이언트 컴퓨터는 Active D
   
 10. 컴퓨터를 다시 시작할지 묻는 메시지가 표시되면 **지금 다시 시작**을 클릭합니다.  
   
-![Windows PowerShell](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)Windows PowerShell 해당 명령을 * * *  
+![Windows PowerShell](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -425,7 +425,7 @@ Restart-Computer
   
     10. 에 **백업 검사** 페이지에서 클릭 **다음**, 를 클릭 하 고 **마침**합니다.  
   
-![Windows PowerShell](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)Windows PowerShell 해당 명령을 * * *  
+![Windows PowerShell](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -556,7 +556,7 @@ Add-ADGroupMember -Identity DirectAccess_clients_group_name -Members <computer_n
   
 ## <a name="BKMK_Links"></a>다음 단계  
   
--   [2단계: 고급 DirectAccess 서버를 구성 합니다.](da-adv-configure-s2-servers.md)  
+-   [2단계: 고급 DirectAccess 서버 구성](da-adv-configure-s2-servers.md)  
   
 
 

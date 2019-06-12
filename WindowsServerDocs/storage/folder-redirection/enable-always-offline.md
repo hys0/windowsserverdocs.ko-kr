@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 09/10/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 8684926beb0f0c911ac384970d15ba7d25f84079
-ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
+ms.openlocfilehash: ddf6a816e417c2eddff090df8dba841a894a3255
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65475928"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447676"
 ---
 # <a name="enable-always-offline-mode-for-faster-access-to-files"></a>파일 액세스에 항상 오프 라인 모드를 사용 하도록 설정
 
@@ -44,7 +44,7 @@ ms.locfileid: "65475928"
 6. **사용**을 선택합니다.
 7. 에 **옵션** 상자에서 **표시**합니다. 합니다 **내용 표시 창** 나타납니다.
 8. 에 **값 이름** 상자에서 항상 오프 라인 모드를 사용 하도록 설정 하려는 파일 공유를 지정 합니다.
-9. 모든 파일 공유에 항상 오프 라인 모드를 사용 하려면 입력 **\*** 합니다.
+9. 모든 파일 공유에 항상 오프 라인 모드를 사용 하려면 입력 * *\\* * * 합니다.
 10. 에 **값** 상자에 입력 합니다 **대기 시간 = 1** 대기 시간 임계값을 1 밀리초로 설정 하 여 선택한 **확인**합니다.
 
 >[!NOTE]

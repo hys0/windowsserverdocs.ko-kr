@@ -12,12 +12,12 @@ ms.assetid: 8b183f8f-1279-4fdf-a495-c7c801563cb0
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: bdd523efa1b1819bde4edb40f29d664df2a07db2
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8a2742c974535d9e92ac88c289ff02f6f1d0d10c
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59847404"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66435863"
 ---
 # <a name="work-remotely-in-windows-server-essentials"></a>Windows Server Essentials에서 원격으로 작업
 
@@ -88,11 +88,11 @@ ms.locfileid: "59847404"
   
  다음 Windows Phone 스토어에서 앱을 다운로드할 수 있습니다.  
   
--   [Windows Phone 용 My Server 설치](http://www.windowsphone.com/store/app/my-server/6c2f98d5-6fcf-4e1d-b8b1-cde62ea1a94a)  
+- [Windows Phone 용 My Server 설치](http://www.windowsphone.com/store/app/my-server/6c2f98d5-6fcf-4e1d-b8b1-cde62ea1a94a)  
   
--   [Windows Phone 용 My Server 2012 R2를 설치 합니다.](http://www.windowsphone.com/store/app/my-server-2012-r2/44f596b5-0477-4096-b96e-ddd6ef64ad6b)  
+- [Windows Phone 용 My Server 2012 R2를 설치 합니다.](http://www.windowsphone.com/store/app/my-server-2012-r2/44f596b5-0477-4096-b96e-ddd6ef64ad6b)  
   
- My Server phone 앱에 대 한 자세한 내용은 블로그 항목을 참조 하세요 [Windows Server Essentials 용 My Server phone 앱](http://blogs.technet.com/b/sbs/archive/2012/09/18/my-server-phone-app-for-windows-server-2012-essentials.aspx)합니다. My Server 2012 R2 phone 앱에 대한 자세한 내용은 블로그 항목 [My Server 2012 R2 Windows 및 Windows Phone 앱](http://blogs.technet.com/b/sbs/archive/2013/11/19/my-server-2012-r2-windows-and-windows-phone-apps.aspx)을 참조하세요.  
+  My Server phone 앱에 대 한 자세한 내용은 블로그 항목을 참조 하세요 [Windows Server Essentials 용 My Server phone 앱](http://blogs.technet.com/b/sbs/archive/2012/09/18/my-server-phone-app-for-windows-server-2012-essentials.aspx)합니다. My Server 2012 R2 phone 앱에 대한 자세한 내용은 블로그 항목 [My Server 2012 R2 Windows 및 Windows Phone 앱](http://blogs.technet.com/b/sbs/archive/2013/11/19/my-server-2012-r2-windows-and-windows-phone-apps.aspx)을 참조하세요.  
   
 ##  <a name="BKMK_O365"></a> Microsoft Office 365를 사용 하 여 Windows Server Essentials를 사용 하 여  
 

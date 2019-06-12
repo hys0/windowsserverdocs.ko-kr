@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: e6978ce20a7c6da8addb217de8d30f733b40d261
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d8d901097eb280679a388ff66161e3514befcd13
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59834404"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66452647"
 ---
 # <a name="add-a-module-to-a-tool-extension"></a>도구 확장에 모듈 추가
 
@@ -23,7 +23,7 @@ ms.locfileid: "59834404"
 
 ## <a name="prepare-your-environment"></a>사용자 환경 준비
 
-이미 않았다면 지침에 따라 개발을 [도구](..\develop-tool.md) (또는 [솔루션](..\develop-solution.md)) 환경을 준비 하 고 새로 만든 빈 도구 확장을 만들어 확장 합니다.
+이미 않았다면 지침에 따라 개발을 [도구](../develop-tool.md) (또는 [솔루션](../develop-solution.md)) 환경을 준비 하 고 새로 만든 빈 도구 확장을 만들어 확장 합니다.
 
 ## <a name="use-the-angular-cli-to-create-a-module-and-component"></a>Angular CLI를 사용 하 여 모듈 (및 구성 요소)를 만들려면
 
@@ -181,4 +181,4 @@ public ngOnInit() {
 
 ## <a name="build-and-side-load-your-extension"></a>빌드 및 쪽에 확장을 로드합니다.
 
-이제 확장에 대 한 모듈을 추가 했습니다.  어 있습니다 [빌드 및 부하 쪽](..\develop-tool.md#build-and-side-load-your-extension) Windows Admin Center 결과를 보려면 확장 합니다.
+이제 확장에 대 한 모듈을 추가 했습니다.  어 있습니다 [빌드 및 부하 쪽](../develop-tool.md#build-and-side-load-your-extension) Windows Admin Center 결과를 보려면 확장 합니다.

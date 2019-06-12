@@ -11,12 +11,12 @@ ms.assetid: 930e758f-bd50-46b4-a3a4-9857110f17b4
 author: shirgall
 ms.author: kathydav
 ms.date: 08/30/2017
-ms.openlocfilehash: a398334700f7c292732207919b73a33145a6aae9
-ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
+ms.openlocfilehash: f11ef246ce4ac4f8773f046a25badd83cff106d0
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/25/2019
-ms.locfileid: "66222690"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447728"
 ---
 # <a name="supported-freebsd-virtual-machines-on-hyper-v"></a>Hyper-v에서 지원 되는 FreeBSD 가상 컴퓨터
 
@@ -94,7 +94,7 @@ ms.locfileid: "66222690"
     # dd if=/dev/da1 of=/dev/da1 count=0
     # gpart recover da1
     ```
-**추가 참고 사항**: 10 안정적이 고 11 안정적인의 기능 행렬은 FreeBSD 11.1 릴리스를 사용 하 여 동일 합니다. 또한, FreeBSD 10.2 및 이전 버전 (10.1, 10.0, 9.x, 8.x) 수명 종료 됩니다. 참조 하세요 [여기](https://security.freebsd.org/) 최신 목록은 지원 되는 버전 및 최신 보안 권고 합니다.
+   **추가 참고 사항**: 10 안정적이 고 11 안정적인의 기능 행렬은 FreeBSD 11.1 릴리스를 사용 하 여 동일 합니다. 또한, FreeBSD 10.2 및 이전 버전 (10.1, 10.0, 9.x, 8.x) 수명 종료 됩니다. 참조 하세요 [여기](https://security.freebsd.org/) 최신 목록은 지원 되는 버전 및 최신 보안 권고 합니다.
 
 **추가 참고 사항**: 10 안정적이 고 11 안정적인의 기능 행렬은 FreeBSD 11.1 릴리스를 사용 하 여 동일 합니다. 또한, FreeBSD 10.2 및 이전 버전 (10.1, 10.0, 9.x, 8.x) 수명 종료 됩니다. 참조 하세요 [여기](https://security.freebsd.org/) 최신 목록은 지원 되는 버전 및 최신 보안 권고 합니다.
 

@@ -8,12 +8,12 @@ ms.topic: get-started-article
 author: nedpyle
 ms.date: 04/26/2019
 ms.assetid: 6c5b9431-ede3-4438-8cf5-a0091a8633b0
-ms.openlocfilehash: fc49674d518756424acc02bd5b830c361c7400df
-ms.sourcegitcommit: 4ff3d00df3148e4bea08056cea9f1c3b52086e5d
+ms.openlocfilehash: 9cfe587983ccce2c9f8ae0f029cf18ade7451465
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64772421"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447646"
 ---
 # <a name="stretch-cluster-replication-using-shared-storage"></a>공유 저장소를 사용하여 확장 클러스터 복제
 
@@ -143,80 +143,80 @@ ms.locfileid: "64772421"
 
 #### <a name="graphical-method"></a>그래픽 사용  
 
-1.  **cluadmin.msc**를 실행합니다.  
+1. **cluadmin.msc**를 실행합니다.  
 
-2.  제안된 클러스터의 유효성을 검사하고 결과를 분석하여 계속할 수 있는지 확인합니다.  
+2. 제안된 클러스터의 유효성을 검사하고 결과를 분석하여 계속할 수 있는지 확인합니다.  
 
-    > [!NOTE]  
-    > 비대칭 저장소의 사용으로 인해 클러스터 유효성 검사에서 저장소 오류가 발생합니다.  
+   > [!NOTE]  
+   > 비대칭 저장소의 사용으로 인해 클러스터 유효성 검사에서 저장소 오류가 발생합니다.  
 
-3.  Hyper-V 계산 클러스터를 만듭니다. 클러스터 이름이 15자 이하인지 확인합니다. 아래에서 사용된 예는 SR-SRVCLUS입니다. 노드가 다른 서브넷에, 하려고 하는 경우 각 서브넷에 대 한 클러스터 이름에 대 한 IP 주소 만들기 하며 "또는" 종속성을 사용 합니다.  자세한 정보를 찾을 수 있습니다 [IP 주소 구성 및 제 3 부-다중 서브넷 클러스터에 대 한 종속성](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698)합니다.  
+3. Hyper-V 계산 클러스터를 만듭니다. 클러스터 이름이 15자 이하인지 확인합니다. 아래에서 사용된 예는 SR-SRVCLUS입니다. 노드가 다른 서브넷에, 하려고 하는 경우 각 서브넷에 대 한 클러스터 이름에 대 한 IP 주소 만들기 하며 "또는" 종속성을 사용 합니다.  자세한 정보를 찾을 수 있습니다 [IP 주소 구성 및 제 3 부-다중 서브넷 클러스터에 대 한 종속성](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698)합니다.  
 
-4.  사이트 손실 시 쿼럼을 제공하도록 파일 공유 감시 또는 클라우드 감시를 구성합니다.  
+4. 사이트 손실 시 쿼럼을 제공하도록 파일 공유 감시 또는 클라우드 감시를 구성합니다.  
 
-    > [!NOTE]  
-    > 이제 WIndows Server 클라우드 (Azure)에 대 한 옵션을 포함-미러링 모니터 서버를 기반으로 합니다. 파일 공유 감시 대신 이 쿼럼 옵션을 선택할 수 있습니다.  
+   > [!NOTE]  
+   > 이제 WIndows Server 클라우드 (Azure)에 대 한 옵션을 포함-미러링 모니터 서버를 기반으로 합니다. 파일 공유 감시 대신 이 쿼럼 옵션을 선택할 수 있습니다.  
 
-    > [!WARNING]  
-    > 쿼럼 구성에 대한 자세한 내용은 [Windows Server2012 장애 조치(failover) 클러스터에서 쿼럼 구성 및 관리 가이드의 감시 구성](https://technet.microsoft.com/library/jj612870.aspx)을 참조하세요. `Set-ClusterQuorum` cmdlet에 대한 자세한 내용은 [Set-ClusterQuorum](https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterquorum)을 참조하세요.  
+   > [!WARNING]  
+   > 쿼럼 구성에 대한 자세한 내용은 [Windows Server2012 장애 조치(failover) 클러스터에서 쿼럼 구성 및 관리 가이드의 감시 구성](https://technet.microsoft.com/library/jj612870.aspx)을 참조하세요. `Set-ClusterQuorum` cmdlet에 대한 자세한 내용은 [Set-ClusterQuorum](https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterquorum)을 참조하세요.  
 
-5.  [Windows Server 2012의 Hyper-V 클러스터에 대한 네트워크 권장 사항](https://technet.microsoft.com/library/dn550728.aspx)을 검토하여 클러스터 네트워킹을 가장 적절하게 구성했는지 확인합니다.  
+5. [Windows Server 2012의 Hyper-V 클러스터에 대한 네트워크 권장 사항](https://technet.microsoft.com/library/dn550728.aspx)을 검토하여 클러스터 네트워킹을 가장 적절하게 구성했는지 확인합니다.  
 
-6.  Redmond 사이트의 디스크 하나를 클러스터 CSV에 추가합니다. 이렇게 하려면 **저장소** 섹션의 **디스크** 노드에서 원본 디스크를 마우스 오른쪽 단추로 클릭한 다음 **클러스터 공유 볼륨에 추가**를 클릭합니다.  
+6. Redmond 사이트의 디스크 하나를 클러스터 CSV에 추가합니다. 이렇게 하려면 **저장소** 섹션의 **디스크** 노드에서 원본 디스크를 마우스 오른쪽 단추로 클릭한 다음 **클러스터 공유 볼륨에 추가**를 클릭합니다.  
 
-7.  클러스터가 첫 번째 테스트 사이트의 저장소를 공유하는 두 노드 내에서 정상적으로 작동하는지 확인하기 위해 [Hyper-V 클러스터 배포](https://technet.microsoft.com/library/jj863389.aspx) 가이드를 사용하여 **Redmond** 사이트 내에서 7~10단계에 따라 테스트 가상 컴퓨터만 만듭니다.  
+7. 클러스터가 첫 번째 테스트 사이트의 저장소를 공유하는 두 노드 내에서 정상적으로 작동하는지 확인하기 위해 [Hyper-V 클러스터 배포](https://technet.microsoft.com/library/jj863389.aspx) 가이드를 사용하여 **Redmond** 사이트 내에서 7~10단계에 따라 테스트 가상 컴퓨터만 만듭니다.  
 
-8.  2-노드 확장 클러스터를 만드는 경우 먼저 모든 저장소를 추가해야 합니다. 이렇게 하려면 클러스터 노드에서 관리자 권한으로 PowerShell 세션을 열고 다음 명령을 실행합니다. `Get-ClusterAvailableDisk -All | Add-ClusterDisk`
+8. 2-노드 확장 클러스터를 만드는 경우 먼저 모든 저장소를 추가해야 합니다. 이렇게 하려면 클러스터 노드에서 관리자 권한으로 PowerShell 세션을 열고 다음 명령을 실행합니다. `Get-ClusterAvailableDisk -All | Add-ClusterDisk`
 
-    이것은 Windows Server 2016의 기본 동작입니다.
+   이것은 Windows Server 2016의 기본 동작입니다.
 
 9. Windows PowerShell을 시작하고 `Test-SRTopology` cmdlet을 사용하여 모든 저장소 복제본 요구 사항을 충족하는지 확인합니다.  
 
     예를 들어 각각 **D:** 및 **E:** 볼륨이 있는 제안된 확장 클러스터 노드 중 2개의 유효성을 검사하고 30분 동안 테스트를 실행하려면 다음 작업을 수행합니다.
-    1. 사용 가능한 모든 저장소를 **SR-SRV01**로 이동합니다.
-    2. 장애 조치(Failover) 클러스터 관리자의 **역할** 섹션에서 **빈 역할 만들기**를 클릭합니다.
-    3. **새 역할**이라는 빈 역할에 온라인 저장소를 추가합니다.
-    4. 사용 가능한 모든 저장소를 **SR-SRV03**으로 이동합니다.
-    5. 장애 조치(Failover) 클러스터 관리자의 **역할** 섹션에서 **빈 역할 만들기**를 클릭합니다.
-    6. 빈 **새 역할(2)** 을 **SR-SRV03**으로 이동합니다.
-    7. **새 역할(2)** 이라는 빈 역할에 온라인 저장소를 추가합니다.
-    8. 드라이브 문자가 있는 모든 저장소를 탑재했으므로 이제 `Test-SRTopology`를 사용하여 클러스터를 평가할 수 있습니다.
+   1. 사용 가능한 모든 저장소를 **SR-SRV01**로 이동합니다.
+   2. 장애 조치(Failover) 클러스터 관리자의 **역할** 섹션에서 **빈 역할 만들기**를 클릭합니다.
+   3. **새 역할**이라는 빈 역할에 온라인 저장소를 추가합니다.
+   4. 사용 가능한 모든 저장소를 **SR-SRV03**으로 이동합니다.
+   5. 장애 조치(Failover) 클러스터 관리자의 **역할** 섹션에서 **빈 역할 만들기**를 클릭합니다.
+   6. 빈 **새 역할(2)** 을 **SR-SRV03**으로 이동합니다.
+   7. **새 역할(2)** 이라는 빈 역할에 온라인 저장소를 추가합니다.
+   8. 드라이브 문자가 있는 모든 저장소를 탑재했으므로 이제 `Test-SRTopology`를 사용하여 클러스터를 평가할 수 있습니다.
 
-        예를 들어 다음과 같은 가치를 제공해야 합니다.
+       예를 들어 다음과 같은 가치를 제공해야 합니다.
 
-            MD c:\temp  
+           MD c:\temp  
 
-            Test-SRTopology -SourceComputerName SR-SRV01 -SourceVolumeName D: -SourceLogVolumeName E: -DestinationComputerName SR-SRV03 -DestinationVolumeName D: -DestinationLogVolumeName E: -DurationInMinutes 30 -ResultPath c:\temp        
+           Test-SRTopology -SourceComputerName SR-SRV01 -SourceVolumeName D: -SourceLogVolumeName E: -DestinationComputerName SR-SRV03 -DestinationVolumeName D: -DestinationLogVolumeName E: -DurationInMinutes 30 -ResultPath c:\temp        
 
       > [!IMPORTANT]
       > 평가 기간 동안 지정된 원본 볼륨에 쓰기 IO 로드가 없는 테스트 서버를 사용하는 경우 워크로드를 추가하는 것이 좋습니다. 그렇지 않으면 Test-SRTopology에서 유용한 보고서를 생성하지 않습니다. 실제 숫자와 권장 로그 크기를 확인하기 위해 프로덕션과 유사한 워크로드로 테스트해야 합니다. 또는 테스트하거나 다운로드하는 동안 일부 파일을 원본 볼륨에 복사하고 DISKSPD를 실행하여 쓰기 IO를 생성합니다. 예를 들어 쓰기 IO 워크로드가 낮은 샘플로 D: 볼륨을 10분 동안 테스트하려면 다음을 실행합니다.   
-        `Diskspd.exe -c1g -d600 -W5 -C5 -b4k -t2 -o2 -r -w5 -i100 d:\test.dat`  
+       `Diskspd.exe -c1g -d600 -W5 -C5 -b4k -t2 -o2 -r -w5 -i100 d:\test.dat`  
 
 10. **TestSrTopologyReport-&lt; date &gt;.html** 보고서를 검사하여 저장소 복제본 요구 사항을 충족하는지 확인하고 초기 동기화 시간 예측 및 로그 권장 사항에 주의합니다.  
 
       ![복제 보고서를 보여 주는 화면](./media/Stretch-Cluster-Replication-Using-Shared-Storage/SRTestSRTopologyReport.png)
 
-11.    디스크를 사용 가능한 저장소로 되돌리고 임시 빈 역할을 제거합니다.
+11. 디스크를 사용 가능한 저장소로 되돌리고 임시 빈 역할을 제거합니다.
 
-12.  충족되면 테스트 가상 컴퓨터를 제거합니다. 추가 평가에 필요한 모든 실제 테스트 가상 컴퓨터를 제안된 원본 노드에 추가합니다.  
+12. 충족되면 테스트 가상 컴퓨터를 제거합니다. 추가 평가에 필요한 모든 실제 테스트 가상 컴퓨터를 제안된 원본 노드에 추가합니다.  
 
 13. **SR-SRV01** 및 **SR-SRV02** 서버가 **Redmond** 사이트에 있고, **SR-SRV03** 및 **SR-SRV04** 서버가 **Bellevue**에 있으며, **Redmond**가 원본 저장소 및 VM의 노드 소유권에 대한 기본 설정이 되도록 확장 클러스터 사이트 인식을 구성합니다.  
 
-   ```PowerShell
-   New-ClusterFaultDomain -Name Seattle -Type Site -Description "Primary" -Location "Seattle Datacenter"  
+    ```PowerShell
+    New-ClusterFaultDomain -Name Seattle -Type Site -Description "Primary" -Location "Seattle Datacenter"  
    
-   New-ClusterFaultDomain -Name Bellevue -Type Site -Description "Secondary" -Location "Bellevue Datacenter"  
+    New-ClusterFaultDomain -Name Bellevue -Type Site -Description "Secondary" -Location "Bellevue Datacenter"  
    
-   Set-ClusterFaultDomain -Name sr-srv01 -Parent Seattle  
-   Set-ClusterFaultDomain -Name sr-srv02 -Parent Seattle  
-   Set-ClusterFaultDomain -Name sr-srv03 -Parent Bellevue  
-   Set-ClusterFaultDomain -Name sr-srv04 -Parent Bellevue  
+    Set-ClusterFaultDomain -Name sr-srv01 -Parent Seattle  
+    Set-ClusterFaultDomain -Name sr-srv02 -Parent Seattle  
+    Set-ClusterFaultDomain -Name sr-srv03 -Parent Bellevue  
+    Set-ClusterFaultDomain -Name sr-srv04 -Parent Bellevue  
 
-   (Get-Cluster).PreferredSite="Seattle"
-   ```
+    (Get-Cluster).PreferredSite="Seattle"
+    ```
 
-   > [!NOTE]
-   > Windows Server 2016에는 장애 조치(Failover) 클러스터 관리자를 사용하여 사이트 인식을 구성하는 옵션은 없습니다.  
+    > [!NOTE]
+    > Windows Server 2016에는 장애 조치(Failover) 클러스터 관리자를 사용하여 사이트 인식을 구성하는 옵션은 없습니다.  
 
 14. **(선택 사항)** 보다 빠른 DNS 사이트 장애 조치(failover)를 위해 클러스터 네트워킹 및 Active Directory를 구성합니다. Hyper-V 소프트웨어 정의 네트워킹, 확장된 VLAN, 네트워크 추상화 장치, 낮은 DNS TTL 및 기타 일반적인 기술을 활용할 수 있습니다.
 
@@ -233,61 +233,61 @@ ms.locfileid: "64772421"
 
 #### <a name="windows-powershell-method"></a>Windows PowerShell 사용  
 
-1.  제안된 클러스터를 테스트하고 결과를 분석하여 계속할 수 있는지 확인합니다.  
+1. 제안된 클러스터를 테스트하고 결과를 분석하여 계속할 수 있는지 확인합니다.  
 
-    ```PowerShell  
-    Test-Cluster SR-SRV01, SR-SRV02, SR-SRV03, SR-SRV04  
-    ```  
+   ```PowerShell  
+   Test-Cluster SR-SRV01, SR-SRV02, SR-SRV03, SR-SRV04  
+   ```  
 
-    > [!NOTE]
-    >  비대칭 저장소의 사용으로 인해 클러스터 유효성 검사에서 저장소 오류가 발생합니다.  
+   > [!NOTE]
+   >  비대칭 저장소의 사용으로 인해 클러스터 유효성 검사에서 저장소 오류가 발생합니다.  
 
-2.  Hyper-V 계산 클러스터를 만듭니다(클러스터에서 사용할 고유한 고정 IP 주소를 지정해야 함). 클러스터 이름이 15자 이하인지 확인합니다.  노드를 서로 다른 서브넷에 있는 경우 추가 사이트에 대 한 IP 주소 보다 만들어야 "OR" 종속성을 사용 합니다. 자세한 정보를 찾을 수 있습니다 [IP 주소 구성 및 제 3 부-다중 서브넷 클러스터에 대 한 종속성](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698)합니다.
-```PowerShell  
-New-Cluster -Name SR-SRVCLUS -Node SR-SRV01, SR-SRV02, SR-SRV03, SR-SRV04 -StaticAddress <your IP here>  
-Add-ClusterResource -Name NewIPAddress -ResourceType “IP Address” -Group “Cluster Group”
-Set-ClusterResourceDependency -Resource “Cluster Name” -Dependency “[Cluster IP Address] or [NewIPAddress]”
-```  
+2. Hyper-V 계산 클러스터를 만듭니다(클러스터에서 사용할 고유한 고정 IP 주소를 지정해야 함). 클러스터 이름이 15자 이하인지 확인합니다.  노드를 서로 다른 서브넷에 있는 경우 추가 사이트에 대 한 IP 주소 보다 만들어야 "OR" 종속성을 사용 합니다. 자세한 정보를 찾을 수 있습니다 [IP 주소 구성 및 제 3 부-다중 서브넷 클러스터에 대 한 종속성](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698)합니다.
+   ```PowerShell  
+   New-Cluster -Name SR-SRVCLUS -Node SR-SRV01, SR-SRV02, SR-SRV03, SR-SRV04 -StaticAddress <your IP here>  
+   Add-ClusterResource -Name NewIPAddress -ResourceType “IP Address” -Group “Cluster Group”
+   Set-ClusterResourceDependency -Resource “Cluster Name” -Dependency “[Cluster IP Address] or [NewIPAddress]”
+   ```  
 
-3.  클러스터에서 도메인 컨트롤러 또는 일부 다른 독립 서버에서 호스트되는 공유를 가리키는 파일 공유 감시 또는 클라우드(Azure) 감시를 구성합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+3. 클러스터에서 도메인 컨트롤러 또는 일부 다른 독립 서버에서 호스트되는 공유를 가리키는 파일 공유 감시 또는 클라우드(Azure) 감시를 구성합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
 
-    ```PowerShell  
-    Set-ClusterQuorum -FileShareWitness \\someserver\someshare  
-    ```  
+   ```PowerShell  
+   Set-ClusterQuorum -FileShareWitness \\someserver\someshare  
+   ```  
 
-    > [!NOTE]
-    > 이제 WIndows Server 클라우드 (Azure)에 대 한 옵션을 포함-미러링 모니터 서버를 기반으로 합니다. 파일 공유 감시 대신 이 쿼럼 옵션을 선택할 수 있습니다.  
+   > [!NOTE]
+   > 이제 WIndows Server 클라우드 (Azure)에 대 한 옵션을 포함-미러링 모니터 서버를 기반으로 합니다. 파일 공유 감시 대신 이 쿼럼 옵션을 선택할 수 있습니다.  
     
-    쿼럼 구성에 대한 자세한 내용은 [Windows Server2012 장애 조치(failover) 클러스터에서 쿼럼 구성 및 관리 가이드의 감시 구성](https://technet.microsoft.com/library/jj612870.aspx)을 참조하세요. `Set-ClusterQuorum` cmdlet에 대한 자세한 내용은 [Set-ClusterQuorum](https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterquorum)을 참조하세요.  
+   쿼럼 구성에 대한 자세한 내용은 [Windows Server2012 장애 조치(failover) 클러스터에서 쿼럼 구성 및 관리 가이드의 감시 구성](https://technet.microsoft.com/library/jj612870.aspx)을 참조하세요. `Set-ClusterQuorum` cmdlet에 대한 자세한 내용은 [Set-ClusterQuorum](https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterquorum)을 참조하세요.  
 
-4.  [Windows Server 2012의 Hyper-V 클러스터에 대한 네트워크 권장 사항](https://technet.microsoft.com/library/dn550728.aspx)을 검토하여 클러스터 네트워킹을 가장 적절하게 구성했는지 확인합니다.  
+4. [Windows Server 2012의 Hyper-V 클러스터에 대한 네트워크 권장 사항](https://technet.microsoft.com/library/dn550728.aspx)을 검토하여 클러스터 네트워킹을 가장 적절하게 구성했는지 확인합니다.  
 
-5.  2-노드 확장 클러스터를 만드는 경우 먼저 모든 저장소를 추가해야 합니다. 이렇게 하려면 클러스터 노드에서 관리자 권한으로 PowerShell 세션을 열고 다음 명령을 실행합니다. `Get-ClusterAvailableDisk -All | Add-ClusterDisk`
+5. 2-노드 확장 클러스터를 만드는 경우 먼저 모든 저장소를 추가해야 합니다. 이렇게 하려면 클러스터 노드에서 관리자 권한으로 PowerShell 세션을 열고 다음 명령을 실행합니다. `Get-ClusterAvailableDisk -All | Add-ClusterDisk`
 
-    이것은 Windows Server 2016의 기본 동작입니다.
+   이것은 Windows Server 2016의 기본 동작입니다.
 
-6.  클러스터가 첫 번째 테스트 사이트의 저장소를 공유하는 두 노드 내에서 정상적으로 작동하는지 확인하기 위해 [Hyper-V 클러스터 배포](https://technet.microsoft.com/library/jj863389.aspx) 가이드를 사용하여 **Redmond** 사이트 내에서 7~10단계에 따라 테스트 가상 컴퓨터만 만듭니다.  
+6. 클러스터가 첫 번째 테스트 사이트의 저장소를 공유하는 두 노드 내에서 정상적으로 작동하는지 확인하기 위해 [Hyper-V 클러스터 배포](https://technet.microsoft.com/library/jj863389.aspx) 가이드를 사용하여 **Redmond** 사이트 내에서 7~10단계에 따라 테스트 가상 컴퓨터만 만듭니다.  
 
-7.  충족되면 테스트 VM을 제거합니다. 추가 평가에 필요한 모든 실제 테스트 가상 컴퓨터를 제안된 원본 노드에 추가합니다.  
+7. 충족되면 테스트 VM을 제거합니다. 추가 평가에 필요한 모든 실제 테스트 가상 컴퓨터를 제안된 원본 노드에 추가합니다.  
 
-8.  **SR-SRV01** 및 **SR-SRV02** 서버가 **Redmond** 사이트에 있고, **SR-SRV03** 및 **SR-SRV04** 서버가 **Bellevue**에 있으며, **Redmond**가 원본 저장소 및 가상 컴퓨터의 노드 소유권에 대한 기본 설정이 되도록 확장 클러스터 사이트 인식을 구성합니다.  
+8. **SR-SRV01** 및 **SR-SRV02** 서버가 **Redmond** 사이트에 있고, **SR-SRV03** 및 **SR-SRV04** 서버가 **Bellevue**에 있으며, **Redmond**가 원본 저장소 및 가상 컴퓨터의 노드 소유권에 대한 기본 설정이 되도록 확장 클러스터 사이트 인식을 구성합니다.  
 
-    ```PowerShell  
-    New-ClusterFaultDomain -Name Seattle -Type Site -Description "Primary" -Location "Seattle Datacenter"  
+   ```PowerShell  
+   New-ClusterFaultDomain -Name Seattle -Type Site -Description "Primary" -Location "Seattle Datacenter"  
 
-    New-ClusterFaultDomain -Name Bellevue -Type Site -Description "Secondary" -Location "Bellevue Datacenter"  
+   New-ClusterFaultDomain -Name Bellevue -Type Site -Description "Secondary" -Location "Bellevue Datacenter"  
 
-    Set-ClusterFaultDomain -Name sr-srv01 -Parent Seattle  
-    Set-ClusterFaultDomain -Name sr-srv02 -Parent Seattle  
-    Set-ClusterFaultDomain -Name sr-srv03 -Parent Bellevue  
-    Set-ClusterFaultDomain -Name sr-srv04 -Parent Bellevue  
+   Set-ClusterFaultDomain -Name sr-srv01 -Parent Seattle  
+   Set-ClusterFaultDomain -Name sr-srv02 -Parent Seattle  
+   Set-ClusterFaultDomain -Name sr-srv03 -Parent Bellevue  
+   Set-ClusterFaultDomain -Name sr-srv04 -Parent Bellevue  
 
-    (Get-Cluster).PreferredSite="Seattle"  
-    ```  
+   (Get-Cluster).PreferredSite="Seattle"  
+   ```  
 
-9.  **(선택 사항)** 보다 빠른 DNS 사이트 장애 조치(failover)를 위해 클러스터 네트워킹 및 Active Directory를 구성합니다. Hyper-V 소프트웨어 정의 네트워킹, 확장된 VLAN, 네트워크 추상화 장치, 낮은 DNS TTL 및 기타 일반적인 기술을 활용할 수 있습니다.  
+9. **(선택 사항)** 보다 빠른 DNS 사이트 장애 조치(failover)를 위해 클러스터 네트워킹 및 Active Directory를 구성합니다. Hyper-V 소프트웨어 정의 네트워킹, 확장된 VLAN, 네트워크 추상화 장치, 낮은 DNS TTL 및 기타 일반적인 기술을 활용할 수 있습니다.  
 
-    자세한 내용은 Microsoft Ignite 세션을 검토 합니다. [Windows Server vNext에서 장애 조치 클러스터 및 저장소 복제본 사용 늘이기](http://channel9.msdn.com/Events/Ignite/2015/BRK3487) 하 고 [-사이트 간에 변경 알림 사용 방법과 이유](http://blogs.technet.com/b/qzaidi/archive/2010/09/23/enable-change-notifications-between-sites-how-and-why.aspx)합니다.  
+   자세한 내용은 Microsoft Ignite 세션을 검토 합니다. [Windows Server vNext에서 장애 조치 클러스터 및 저장소 복제본 사용 늘이기](http://channel9.msdn.com/Events/Ignite/2015/BRK3487) 하 고 [-사이트 간에 변경 알림 사용 방법과 이유](http://blogs.technet.com/b/qzaidi/archive/2010/09/23/enable-change-notifications-between-sites-how-and-why.aspx)합니다.  
 
 10. **(선택 사항)** 노드 장애 중 게스트가 장시간 일시 중지하지 않도록 VM 복원력을 구성합니다. 대신, 게스트는 10초 이내에 새 복제 원본 저장소로 장애 조치(failover)됩니다.  
 
@@ -309,44 +309,44 @@ Set-ClusterResourceDependency -Resource “Cluster Name” -Dependency “[Clust
 
 #### <a name="graphical-method"></a>그래픽 사용  
 
-1.  cluadmin.msc를 실행합니다.  
+1. cluadmin.msc를 실행합니다.  
 
-2.  제안된 클러스터의 유효성을 검사하고 결과를 분석하여 계속할 수 있는지 확인합니다.  
-    >[!NOTE]
-    >비대칭 저장소의 사용으로 인해 클러스터 유효성 검사에서 저장소 오류가 발생합니다.   
+2. 제안된 클러스터의 유효성을 검사하고 결과를 분석하여 계속할 수 있는지 확인합니다.  
+   >[!NOTE]
+   >비대칭 저장소의 사용으로 인해 클러스터 유효성 검사에서 저장소 오류가 발생합니다.   
 3. 범용 파일 서버 저장소 클러스터를 만듭니다. 클러스터 이름이 15자 이하인지 확인합니다. 아래에서 사용된 예는 SR-SRVCLUS입니다.  노드가 다른 서브넷에, 하려고 하는 경우 각 서브넷에 대 한 클러스터 이름에 대 한 IP 주소 만들기 하며 "또는" 종속성을 사용 합니다.  자세한 정보를 찾을 수 있습니다 [IP 주소 구성 및 제 3 부-다중 서브넷 클러스터에 대 한 종속성](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698)합니다.  
 
-4.  사이트 손실 시 쿼럼을 제공하도록 파일 공유 감시 또는 클라우드 감시를 구성합니다.  
-    >[!NOTE]
-    > 이제 WIndows Server 클라우드 (Azure)에 대 한 옵션을 포함-미러링 모니터 서버를 기반으로 합니다. 파일 공유 감시 대신 이 쿼럼 옵션을 선택할 수 있습니다.                                                                                                                                                                             
-    >[!NOTE]
-    >  쿼럼 구성에 대한 자세한 내용은 [Windows Server2012 장애 조치(failover) 클러스터에서 쿼럼 구성 및 관리 가이드의 감시 구성](https://technet.microsoft.com/library/jj612870.aspx)을 참조하세요. Set-ClusterQuorum cmdlet에 대한 자세한 내용은 [Set-ClusterQuorum](https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterquorum)을 참조하세요. 
+4. 사이트 손실 시 쿼럼을 제공하도록 파일 공유 감시 또는 클라우드 감시를 구성합니다.  
+   >[!NOTE]
+   > 이제 WIndows Server 클라우드 (Azure)에 대 한 옵션을 포함-미러링 모니터 서버를 기반으로 합니다. 파일 공유 감시 대신 이 쿼럼 옵션을 선택할 수 있습니다.                                                                                                                                                                             
+   >[!NOTE]
+   >  쿼럼 구성에 대한 자세한 내용은 [Windows Server2012 장애 조치(failover) 클러스터에서 쿼럼 구성 및 관리 가이드의 감시 구성](https://technet.microsoft.com/library/jj612870.aspx)을 참조하세요. Set-ClusterQuorum cmdlet에 대한 자세한 내용은 [Set-ClusterQuorum](https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterquorum)을 참조하세요. 
 
-5.  2-노드 확장 클러스터를 만드는 경우 먼저 모든 저장소를 추가해야 합니다. 이렇게 하려면 클러스터 노드에서 관리자 권한으로 PowerShell 세션을 열고 다음 명령을 실행합니다. `Get-ClusterAvailableDisk -All | Add-ClusterDisk`
+5. 2-노드 확장 클러스터를 만드는 경우 먼저 모든 저장소를 추가해야 합니다. 이렇게 하려면 클러스터 노드에서 관리자 권한으로 PowerShell 세션을 열고 다음 명령을 실행합니다. `Get-ClusterAvailableDisk -All | Add-ClusterDisk`
 
-    이것은 Windows Server 2016의 기본 동작입니다.
+   이것은 Windows Server 2016의 기본 동작입니다.
 
 6. 클러스터 네트워킹을 가장 적절하게 구성했는지 확인합니다.  
     >[!NOTE]
     > 다음 단계를 계속 진행하기 전에 모든 노드에서 파일 서버 역할을 설치해야 합니다.   |  
 
-7.  **역할** 아래에서 **역할 구성**을 클릭합니다. **시작하기 전**을 검토하고 **다음**을 클릭합니다.  
+7. **역할** 아래에서 **역할 구성**을 클릭합니다. **시작하기 전**을 검토하고 **다음**을 클릭합니다.  
 
-8.  **파일 서버**를 선택하고 **다음**을 클릭합니다.  
+8. **파일 서버**를 선택하고 **다음**을 클릭합니다.  
 
-9.  **범용 파일 서버**를 선택된 상태로 두고 **다음**을 클릭합니다.  
+9. **범용 파일 서버**를 선택된 상태로 두고 **다음**을 클릭합니다.  
 
-10.  **클라이언트 액세스 지점** 이름(15자 이하)을 입력하고 **다음**을 클릭합니다.  
+10. **클라이언트 액세스 지점** 이름(15자 이하)을 입력하고 **다음**을 클릭합니다.  
 
-11.  데이터 볼륨으로 사용할 디스크를 선택하고 **다음**을 클릭합니다.  
+11. 데이터 볼륨으로 사용할 디스크를 선택하고 **다음**을 클릭합니다.  
 
-12.  설정을 검토하고 **다음**을 클릭합니다. **마침**을 클릭합니다.  
+12. 설정을 검토하고 **다음**을 클릭합니다. **마침**을 클릭합니다.  
 
-13.  새 파일 서버 역할을 마우스 오른쪽 단추로 클릭한 다음 **파일 공유 추가**를 클릭합니다. 계속해서 마법사를 통해 공유를 구성합니다.  
+13. 새 파일 서버 역할을 마우스 오른쪽 단추로 클릭한 다음 **파일 공유 추가**를 클릭합니다. 계속해서 마법사를 통해 공유를 구성합니다.  
 
-14.  선택 사항: 이 사이트에서 다른 저장소를 사용 하는 다른 파일 서버 역할을 추가 합니다.  
+14. 선택 사항: 이 사이트에서 다른 저장소를 사용 하는 다른 파일 서버 역할을 추가 합니다.  
 
-15.  SR-SRV01 및 SR-SRV02 서버가 Redmond 사이트에 있고, SR-SRV03 및 SR-SRV04 서버가 Bellevue에 있으며, Redmond가 원본 저장소 및 VM의 노드 소유권에 대한 기본 설정이 되도록 확장 클러스터 사이트 인식을 구성합니다.  
+15. SR-SRV01 및 SR-SRV02 서버가 Redmond 사이트에 있고, SR-SRV03 및 SR-SRV04 서버가 Bellevue에 있으며, Redmond가 원본 저장소 및 VM의 노드 소유권에 대한 기본 설정이 되도록 확장 클러스터 사이트 인식을 구성합니다.  
 
     ```PowerShell  
     New-ClusterFaultDomain -Name Seattle -Type Site -Description "Primary" -Location "Seattle Datacenter"  
@@ -361,10 +361,10 @@ Set-ClusterResourceDependency -Resource “Cluster Name” -Dependency “[Clust
     (Get-Cluster).PreferredSite="Seattle"  
     ```  
 
-       >[!NOTE]
-       > Windows Server 2016에는 장애 조치(Failover) 클러스터 관리자를 사용하여 사이트 인식을 구성하는 옵션은 없습니다.  
+      >[!NOTE]
+      > Windows Server 2016에는 장애 조치(Failover) 클러스터 관리자를 사용하여 사이트 인식을 구성하는 옵션은 없습니다.  
 
-16.  (선택 사항) 보다 빠른 DNS 사이트 장애 조치(failover)를 위해 클러스터 네트워킹 및 Active Directory를 구성합니다. 확장된 VLAN, 네트워크 추상화 장치, 낮은 DNS TTL 및 기타 일반적인 기술을 활용할 수 있습니다.  
+16. (선택 사항) 보다 빠른 DNS 사이트 장애 조치(failover)를 위해 클러스터 네트워킹 및 Active Directory를 구성합니다. 확장된 VLAN, 네트워크 추상화 장치, 낮은 DNS TTL 및 기타 일반적인 기술을 활용할 수 있습니다.  
 
 자세한 내용은 Microsoft Ignite 세션 [Windows Server vNext에서 장애 조치(Failover) 클러스터 확장 및 저장소 복제본 사용](http://channel9.msdn.com/events/ignite/2015/brk3487) 및 블로그 게시물 [사이트 간에 변경 알림 사용 - 방법과 이유](http://blogs.technet.com/b/qzaidi/archive/2010/09/23/enable-change-notifications-between-sites-how-and-why.aspx)를 참조하세요.    
 

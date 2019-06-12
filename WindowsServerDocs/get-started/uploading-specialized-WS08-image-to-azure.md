@@ -10,12 +10,12 @@ ms.date: 07/11/2018
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.localizationpriority: high
-ms.openlocfilehash: af98a219a4a5aa708df9c648f1b245a21e95f016
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 425197d3462762c60a7371fc6ca529ad1b70e7ef
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59827814"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66443375"
 ---
 # <a name="upload-a-windows-server-20082008-r2-specialized-image-to-azure"></a>Azure에 Windows Server 2008/2008 R2 특수 이미지 업로드 
 
@@ -29,17 +29,17 @@ ms.locfileid: "59827814"
 - 아직 이미지에 설치하지 않은 경우 Windows Server 2008 Service Pack 2(SP2)를 다운로드하여 설치합니다.
 
 - 원격 데스크톱(RDP) 설정을 구성합니다.
-   1. **제어판** > **시스템 설정**으로 이동합니다.   
-   2. 왼쪽 메뉴에서 **원격 설정**을 선택합니다.
+  1. **제어판** > **시스템 설정**으로 이동합니다.   
+  2. 왼쪽 메뉴에서 **원격 설정**을 선택합니다.
 
-   !["원격 설정"을 강조 표시하는 시스템 설정의 스크린샷](media/1a_remote_settings.png)
+     !["원격 설정"을 강조 표시하는 시스템 설정의 스크린샷](media/1a_remote_settings.png)
 
-   3. 시스템 속성에서 **원격** 탭을 선택합니다.   
+  3. 시스템 속성에서 **원격** 탭을 선택합니다.   
 
-   ![시스템 속성의 원격 탭 스크린샷](media/2c_sysprops.png)
+     ![시스템 속성의 원격 탭 스크린샷](media/2c_sysprops.png)
 
-   4. 모든 버전의 원격 데스크톱(보안 수준 낮음)을 실행하는 컴퓨터에서 연결 허용을 선택합니다.   
-   5. **적용**을 클릭하고 **확인**을 클릭합니다.
+  4. 모든 버전의 원격 데스크톱(보안 수준 낮음)을 실행하는 컴퓨터에서 연결 허용을 선택합니다.   
+  5. **적용**을 클릭하고 **확인**을 클릭합니다.
 - Windows 방화벽 설정을 구성합니다.   
    1. 관리자 모드로 명령 프롬프트에서 Windows 방화벽 및 고급 보안 설정에 대해 "**wf.msc**"를 입력합니다.   
    2. 결과를 **포트**로 정렬하고 **포트 3389**를 선택합니다.   
@@ -94,14 +94,14 @@ Login-AzureRmAccount
 6.  VHD에 대한 [디스크](https://docs.microsoft.com/azure/virtual-machines/windows/prepare-for-upload-vhd-image)를 만듭니다.   
      a. 디스크로 이동하여 **추가**를 클릭합니다.  
      b. 디스크의 이름을 입력합니다. 사용할 구독을 선택하고 영역을 설정하고 계정 유형을 선택합니다.   
-     다. 원본 유형에 대해 저장소를 선택합니다. 스크립트를 사용하여 만든 BLOB VHD 위치를 찾습니다.  
+     c. 원본 유형에 대해 저장소를 선택합니다. 스크립트를 사용하여 만든 BLOB VHD 위치를 찾습니다.  
      d. Windows OS 유형 및 크기 선택 (기본값: 1023).   
      e. **만들기**를 클릭합니다.   
 
 7.  만든 디스크로 이동하여 **VM 만들기**를 클릭합니다.   
      a. VM 이름을 지정합니다.   
      b. 디스크를 업로드한 5단계에서 만든 기존 그룹을 선택합니다.   
-     다. 크기와 VM에 대한 SKU 요금제를 선택합니다.   
+     c. 크기와 VM에 대한 SKU 요금제를 선택합니다.   
      d. 설정 페이지에서 네트워크 인터페이스를 선택합니다. 네트워크 인터페이스에 다음과 같은 규칙이 지정되었는지 확인합니다.
  
         PORT:3389 Protocol: TCP Action: Allow Priority: 1000 Name: ‘RDP-Rule’.   

@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 3a3156eefc4af52fb7daefb618c689b78fef5efc
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: fb1bc5776ea4d24f274c79563d9e346b104de6d9
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66188824"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66444224"
 ---
 # <a name="ad-fs-scenarios-for-developers"></a>개발자를 위한 AD FS 시나리오
 
@@ -115,7 +115,7 @@ AD FS 관리자가 승인의 모델을 사용 하므로 리소스에 액세스�
 1.  네이티브 클라이언트 응용 프로그램에서 ADAL 라이브러리에 대 한 호출을 사용 하 여 흐름을 시작합니다.  이 트리거는 브라우저 기반 권한 부여 끝점을 AD FS에 HTTP GET:  
   
 **권한 부여 요청:**  
-GET https://fs.contoso.com/adfs/oauth2/authorize?  
+GET <https://fs.contoso.com/adfs/oauth2/authorize?>  
   
 매개 변수|값  
 ---------|---------  
@@ -126,9 +126,9 @@ redirect_uri|응용 프로그램 그룹에서 네이티브 응용 프로그램�
   
 **권한 부여 요청 응답:**  
 사용자가 로그인 하지 전에 자격 증명에 대 한 메시지가 표시 됩니다.    
-AD FS 인증 코드의 redirect_uri의 쿼리 구성 요소에서 "코드" 매개 변수로 반환 하 여 응답 합니다.  예를 들어 다음과 같은 가치를 제공해야 합니다. Http/1.1 302 있음 위치:  **http://redirect_uri:80/?code=&lt; 코드&gt;합니다.**  
+AD FS 인증 코드의 redirect_uri의 쿼리 구성 요소에서 "코드" 매개 변수로 반환 하 여 응답 합니다.  예를 들어 다음과 같은 가치를 제공해야 합니다. Http/1.1 302 찾을 위치:  **<http://redirect_uri:80/?code=&lt;code&gt>;.**  
   
-2.  네이티브 클라이언트 코드와 함께 다음 매개 변수를 AD FS 토큰 끝점에 보냅니다.  
+2. 네이티브 클라이언트 코드와 함께 다음 매개 변수를 AD FS 토큰 끝점에 보냅니다.  
   
 **토큰 요청:**  
 올리기 https://fs.contoso.com/adfs/oauth2/token  
@@ -144,7 +144,7 @@ redirect_uri|응용 프로그램 그룹에서 네이티브 응용 프로그램�
 **토큰 요청 응답:**  
 AD FS access_token, refresh_token, 및 id_token 본문에 HTTP 200으로 응답합니다.  
   
-3.  네이티브 응용 프로그램을 다음 HTTP 요청에 Authorization 헤더는 위의 응답의 access_token 일부분 웹 API에 보냅니다.  
+3. 네이티브 응용 프로그램을 다음 HTTP 요청에 Authorization 헤더는 위의 응답의 access_token 일부분 웹 API에 보냅니다.  
   
 ### <a name="single-sign-on-behavior"></a>Single sign-on 동작  
 1 시간 (기본적으로) 한 access_token 계속 유효한 캐시에 있으며 새 요청을 AD FS에 대 한 모든 트래픽이 트리거되지 내의 후속 클라이언트 요청 합니다.  한 access_token ADAL에서 캐시에서 자동으로 페치 됩니다.  
@@ -177,9 +177,9 @@ refresh_token|초기 토큰 요청에 대 한 응답에서 AD FS에서 발급 �
   
 ![프로토콜 흐름 설명](media/ADFS_DEV_4.png)  
   
-1.  AD FS에 HTTP GET을 전송 하는 브라우저를 통해 권한 부여를 요청 하는 웹 응용 프로그램 시작 권한 부여 끝점  
-**권한 부여 요청**:  
-GET https://fs.contoso.com/adfs/oauth2/authorize?  
+1. AD FS에 HTTP GET을 전송 하는 브라우저를 통해 권한 부여를 요청 하는 웹 응용 프로그램 시작 권한 부여 끝점  
+   **권한 부여 요청**:  
+   GET <https://fs.contoso.com/adfs/oauth2/authorize?>  
   
 매개 변수|값  
 ---------|---------  
@@ -190,13 +190,13 @@ redirect_uri|응용 프로그램 그룹에서 웹 응용 프로그램 (서버 �
   
 권한 부여 요청 응답:  
 사용자가 로그인 하지 전에 자격 증명에 대 한 메시지가 표시 됩니다.  
-예를 들어의 redirect_uri의 쿼리 구성 요소에서 "코드" 매개 변수로 권한 부여 코드를 반환 하 여 AD FS 응답: Http/1.1 302 있음 위치: https://webapp.contoso.com/?code=&lt; 코드&gt;합니다.  
+예를 들어의 redirect_uri의 쿼리 구성 요소에서 "코드" 매개 변수로 권한 부여 코드를 반환 하 여 AD FS 응답: Http/1.1 302 찾을 위치: <https://webapp.contoso.com/?code=&lt;code&gt>;.  
   
-2.  위의 302 결과로 브라우저 시작 웹 앱에 HTTP GET 예를 들어: 가져올 http://redirect_uri:80/?code=&lt; 코드&gt;합니다.   
+2. 위의 302 결과로 브라우저 시작 웹 앱에 HTTP GET 예를 들어: GET <http://redirect_uri:80/?code=&lt;code&gt>;.   
   
-3.  웹 응용 프로그램에서 코드를 받은 다음 보내는 AD FS 토큰 끝점에 요청을 개시 하는 시점에서  
-**토큰 요청:**  
-올리기 https://fs.contoso.com/adfs/oauth2/token  
+3. 웹 응용 프로그램에서 코드를 받은 다음 보내는 AD FS 토큰 끝점에 요청을 개시 하는 시점에서  
+   **토큰 요청:**  
+   올리기 https://fs.contoso.com/adfs/oauth2/token  
   
 매개 변수|값  
 ---------|---------  
@@ -210,7 +210,7 @@ client_secret|응용 프로그램 그룹에서 웹 응용 프로그램 (서버 �
 **토큰 요청 응답:**  
 AD FS access_token, refresh_token, 및 id_token 본문에 HTTP 200으로 응답합니다.  
 클레임  
-4.  (경우에는 웹 앱 자체는 리소스를 호스트)는 위의 응답의 access_token 일부분을 사용 하거나 다음 응용 프로그램 이거나 웹으로 HTTP 요청에 Authorization 헤더는 웹 API로 전송 됩니다.  
+4. (경우에는 웹 앱 자체는 리소스를 호스트)는 위의 응답의 access_token 일부분을 사용 하거나 다음 응용 프로그램 이거나 웹으로 HTTP 요청에 Authorization 헤더는 웹 API로 전송 됩니다.  
   
 #### <a name="single-sign-on-behavior"></a>Single sign-on 동작  
 액세스 토큰은 여전히 유효할 수 기본적으로 1 시간 동안 클라이언트의 캐시에 있는 동안에 두 번째 요청은 작동 하는지 위-네이티브 클라이언트 시나리오에서와 같이 새 요청을 트리거되지 않는다고 AD FS에 대 한 모든 트래픽을 액세스 토큰이 자동으로 인출 되는 캐시에서 ADAL에서으로 생각할 수 있습니다.  그러나 것 고유 권한 부여 및 토큰 요청을 샘플 에서처럼 고유 URL 링크를 통해 이전 웹 앱에 보낼 수 있음을 가능 합니다.  
@@ -245,7 +245,7 @@ client_secret|응용 프로그램 그룹에서 웹 응용 프로그램 (서버 �
 1.  AD FS에 HTTP GET을 전송 하는 브라우저를 통해 권한 부여를 요청 하는 웹 응용 프로그램 시작 권한 부여 끝점  
   
 **권한 부여 요청:**  
-GET https://fs.contoso.com/adfs/oauth2/authorize?  
+GET <https://fs.contoso.com/adfs/oauth2/authorize?>  
   
 매개 변수|값  
 ---------|---------  
@@ -260,9 +260,9 @@ redirect_uri|응용 프로그램 그룹에서 웹 응용 프로그램 (서버 �
 AD FS HTTP 200 및 포함 된 폼을 사용 하 여 응답은 아래 숨김으로 요소:  
 * 코드: 인증 코드  
 * id_token: 사용자 인증을 설명 하는 클레임을 포함 하는 JWT 토큰  
-2.  폼에 웹 응용 프로그램 코드와는 id_token 보내기는 웹 앱의 redirect_uri 자동으로 게시 합니다.  
+* 폼에 웹 응용 프로그램 코드와는 id_token 보내기는 웹 앱의 redirect_uri 자동으로 게시 합니다.  
   
-3.  웹 응용 프로그램에서 코드를 받은 다음 보내는 AD FS 토큰 끝점에 요청을 개시 하는 시점에서  
+3. 웹 응용 프로그램에서 코드를 받은 다음 보내는 AD FS 토큰 끝점에 요청을 개시 하는 시점에서  
   
 **토큰 요청:**  
 올리기 https://fs.contoso.com/adfs/oauth2/token
@@ -281,7 +281,7 @@ client_secret|응용 프로그램 그룹에서 웹 응용 프로그램 (서버 �
 **토큰 요청 응답:**  
 AD FS access_token, refresh_token, 및 id_token 본문에 HTTP 200으로 응답합니다.  
   
-4.  (경우에는 웹 앱 자체는 리소스를 호스트)는 위의 응답의 access_token 일부분을 사용 하거나 다음 응용 프로그램 이거나 웹으로 HTTP 요청에 Authorization 헤더는 웹 API로 전송 됩니다.  
+4. (경우에는 웹 앱 자체는 리소스를 호스트)는 위의 응답의 access_token 일부분을 사용 하거나 다음 응용 프로그램 이거나 웹으로 HTTP 요청에 Authorization 헤더는 웹 API로 전송 됩니다.  
   
 #### <a name="single-sign-on-behavior"></a>Single Sign-on 동작  
 동작에 단일 로그인은 위의 Oauth 2.0 기밀 클라이언트 흐름의 경우와 동일 합니다.  

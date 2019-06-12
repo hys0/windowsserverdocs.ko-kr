@@ -8,12 +8,12 @@ ms.topic: article
 ms.assetid: b3cd60f7-d380-4712-9a78-0a8f551e1121
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 0a9ef4c61794aec6c46cdad2c7111a03430972a1
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ef764356c5f74eb0aff15753e7f83a020c68c091
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59850544"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446536"
 ---
 # <a name="core-network-components"></a>핵심 네트워크 구성 요소
 
@@ -561,11 +561,11 @@ AD DS 및 DNS 설치 및 구성 하려면 다음 명령을 사용할 수 있습�
 
 설치를 완료 하는 경우 Windows PowerShell에서 다음과 같은 메시지가 표시 됩니다.
 
-    
+
     Success Restart Needed  Exit Code   Feature Result
     ------- --------------  ---------   --------------
     True    No              Success     {Active Directory Domain Services, Group P...
-    
+
 
 - Windows PowerShell에서 다음 명령을 입력 합니다, 텍스트를 바꾸지 **corp.contoso.com** 을 도메인 이름, 한 다음 ENTER 키를 누릅니다.
 
@@ -583,11 +583,13 @@ Install-ADDSForest -DomainName "corp.contoso.com"
 
 - 다음과 같은 메시지가 표시 되 면 문자를 입력 **Y** 한 다음 ENTER를 누릅니다.
 
-    
-    대상 서버를 도메인 컨트롤러로 구성 하 고이 작업이 완료 되 면 다시 시작 됩니다.
-    이 작업을 계속 하 시겠습니까?
-    [Y] 예 [A] 예 [n] 모든 이상에서 모든 [S] 없습니다 [L] 일시 중단 [?] 도움말 (기본값 "Y"):
-    
+
+~~~
+The target server will be configured as a domain controller and restarted when this operation is complete.
+Do you want to continue with this operation?
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
+~~~
+
 - 원한다 면 일반적으로 성공적인 AD DS 및 DNS 설치 하는 동안 표시 되는 경고 메시지를 읽을 수 있습니다. 이러한 메시지는 정상 및 설치 오류는 표시 되지 않습니다.
 
 - 설치에 성공한 후 컴퓨터를 다시 시작할 수 있도록 컴퓨터에서 기록 하려고 한다고 알리는 메시지가 나타납니다. 클릭 하면 **닫기**, 컴퓨터 즉시 로그온 한 컴퓨터를 다시 시작 합니다. 클릭 하지 않은 경우 **닫기**, 기본 기간 후 컴퓨터를 다시 시작 합니다.

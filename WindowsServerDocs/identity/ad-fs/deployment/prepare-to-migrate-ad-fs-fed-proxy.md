@@ -8,12 +8,12 @@ ms.date: 06/28/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: f207993580e6fd06c9ff185e58e5b7e81af60252
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 2b2275af0934413fa2de02de720d609feda7392c
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59847834"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66444455"
 ---
 # <a name="prepare-to-migrate-the-ad-fs-20-federation-server-proxy"></a>AD FS 2.0 페더레이션 서버 프록시 마이그레이션 준비
 
@@ -35,13 +35,13 @@ Windows Server 2012로 AD FS 2.0 페더레이션 서버 프록시 마이그레�
 > [!NOTE]
 >  이 단계는 옵션입니다. 이 인증서는 운영 체제 업그레이드 중에 유지되기 때문입니다.  
   
-2.  AD FS 2.0 페더레이션 프록시 속성을 파일로 내보냅니다. Windows PowerShell을 사용하여 이 작업을 수행할 수 있습니다.  
+2. AD FS 2.0 페더레이션 프록시 속성을 파일로 내보냅니다. Windows PowerShell을 사용하여 이 작업을 수행할 수 있습니다.  
   
 Windows PowerShell을 열고 `PSH:>add-pssnapin “Microsoft.adfs.powershell”`명령을 실행하여 Windows PowerShell 세션에 AD FS cmdlet을 추가합니다. 그런 다음 `PSH:> Get-ADFSProxyProperties | out-file “.\proxyproperties.txt”`명령을 실행하여 페더레이션 프록시 속성을 파일로 내보냅니다.  
   
-3.  AD FS 페더레이션 서버의 관리자인 계정 또는 AD FS 페더레이션 서비스가 실행되는 서비스 계정의 자격 증명을 알고 있어야 합니다.  프록시 트러스트를 설정하려면 이 정보가 필요합니다.  
+3. AD FS 페더레이션 서버의 관리자인 계정 또는 AD FS 페더레이션 서비스가 실행되는 서비스 계정의 자격 증명을 알고 있어야 합니다.  프록시 트러스트를 설정하려면 이 정보가 필요합니다.  
   
- 이 단계를 완료하면 AD FS 페더레이션 서버 프록시를 구성하는 데 필요한 다음 정보가 수집됩니다.  
+   이 단계를 완료하면 AD FS 페더레이션 서버 프록시를 구성하는 데 필요한 다음 정보가 수집됩니다.  
   
 -   AD FS 페더레이션 서비스 이름  
   

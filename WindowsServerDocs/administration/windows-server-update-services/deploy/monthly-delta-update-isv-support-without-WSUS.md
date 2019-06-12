@@ -11,14 +11,14 @@ author: sakitong
 ms.author: coreyp
 manager: dougkim
 ms.date: 10/16/2017
-ms.openlocfilehash: c89d5eb754685fb8000ac2025af391057e77654c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 272d3865bbe1a9853f5349c5e878155351525ef0
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59848614"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66439944"
 ---
-#<a name="monthly-delta-update-isv-support-without-wsus"></a>월별 델타 업데이트 WSUS 없이 ISV 지원
+# <a name="monthly-delta-update-isv-support-without-wsus"></a>월별 델타 업데이트 WSUS 없이 ISV 지원
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows 10
 
@@ -30,7 +30,7 @@ WSUS가 설치 되어, 현재 없는 그동안에서 패키지 크기를 더 작
 
 ![다운로드 크기 비교](../../media/express-update-delivery-isv-support/delta-1.png)
 
-##<a name="what-is-monthly-delta-update"></a>월별 델타 업데이트는 무엇입니까?
+## <a name="what-is-monthly-delta-update"></a>월별 델타 업데이트는 무엇입니까?
 
 월간 보안 업데이트의 두 가지 변형이 있습니다. 델타 및 누적 합니다.
 
@@ -49,8 +49,8 @@ WSUS가 설치 되어, 현재 없는 그동안에서 패키지 크기를 더 작
 
 델타 및 누적 같은 분류를 사용 하 여 동일한 KB 수를 포함 하 고 동시 릴리스 합니다. 업데이트는 카탈로그에서 업데이트 제목 또는 msu의 이름으로 구분할 수 있습니다.
 
-- 2017-02 *\***델타 업데이트**\** x64 기반 시스템 (KB1234567)에 대 한 Windows 10 버전 1607에 대 한
-- 2017-02 *\***업데이트할**\** x86 기반 시스템 (KB1234567)에 대 한 Windows 10 버전 1607에 대 한                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+- 2017-02 *\***델타 업데이트**\**  x64 기반 시스템 (KB1234567)에 대 한 Windows 10 버전 1607에 대 한
+- 2017-02 *\***업데이트할**\**  x86 기반 시스템 (KB1234567)에 대 한 Windows 10 버전 1607에 대 한                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 
 ### <a name="when-to-use-monthly-delta-update"></a>월별 델타 업데이트를 사용 하는 경우
 

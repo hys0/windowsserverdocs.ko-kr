@@ -8,12 +8,12 @@ ms.topic: article
 ms.assetid: f9c313ac-bb86-4e48-b9b9-de5004393e06
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 1bb3e6695a7ec8fc7d950873403df023b4def3d8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: dca60fc0e216b1b873bd4f94dd1b01174d80fc14
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59881614"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446445"
 ---
 # <a name="use-dns-policy-for-application-load-balancing"></a>응용 프로그램 부하 분산에 대 한 DNS 정책을 사용 하 여
 
@@ -79,7 +79,7 @@ Contoso 선물 서비스에 대 한 기본 시장 북미 지역에 웹 사이트
 
 자세한 내용은 참조 [DnsServerZoneScope 추가](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps)
 
-####<a name="bkmk_records"></a>영역 범위에 레코드 추가
+#### <a name="bkmk_records"></a>영역 범위에 레코드 추가
 
 이제 영역 범위에는 웹 서버 호스트를 나타내는 레코드를 추가 해야 합니다.
 
@@ -100,7 +100,7 @@ Contoso 선물 서비스에 대 한 기본 시장 북미 지역에 웹 사이트
 
 자세한 내용은 참조 [추가 DnsServerResourceRecord](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps)합니다.
 
-####<a name="bkmk_policies"></a>DNS 정책 만들기
+#### <a name="bkmk_policies"></a>DNS 정책 만들기
 
 파티션 (영역 범위)를 만든 후 레코드를 추가한 후 contosogiftservices.com에 대 한 쿼리의 50% 시애틀 데이터 센터의 웹 서버에 대 한 IP 주소를 가진 응답 하 고 나머지 시카고 및 Dallas 데이터 센터 간에 동일 하 게 배포 되도록 이러한 범위 간에 들어오는 쿼리를 분산 하는 DNS 정책을 만들어야 합니다.
 

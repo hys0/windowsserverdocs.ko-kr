@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: 62fa2895-62ae-42cf-817c-53e06ac2a26c
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: a1f47273ab3be6faa762df2fb90d6486bc0ed2d5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6d7a5aa7b699f5a8f24c4a36ee8ae314768329b4
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59849024"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446863"
 ---
 # <a name="monitor-the-existing-load-on-the-remote-access-server"></a>원격 액세스 서버에서 기존 부하 모니터링
 
@@ -51,7 +51,7 @@ ms.locfileid: "59849024"
   
 3.  클릭 된 **추가** 단추 (녹색는 십자형 아이콘으로 표시 됨)에 **성능 모니터** 도구 모음.  
   
-4.  목록에서 **사용 가능한 카운터**, 선택에 있는 모든 카운터는 **RAS** 및 **RAmgmtsvc** 범주 및 클릭 한 다음 **추가 >>**.  
+4.  목록에서 **사용 가능한 카운터**, 선택에 있는 모든 카운터는 **RAS** 및 **RAmgmtsvc** 범주 및 클릭 한 다음 **추가 >>** .  
   
 5.  목록에서 다시 **사용 가능한 카운터**, 선택에 있는 모든 카운터는 **IPsec 연결** 범주 및 클릭 한 다음 **추가 >>.**  
   
@@ -59,7 +59,7 @@ ms.locfileid: "59849024"
   
 **성능 모니터** 선택한 서버 부하 통계 그래픽으로 표시 됩니다.  
   
-![Windows PowerShell](../../../media/Monitor-the-existing-load-on-the-Remote-Access-server/PowerShellLogoSmall.gif)Windows PowerShell 해당 명령을 * * *  
+![Windows PowerShell](../../../media/Monitor-the-existing-load-on-the-Remote-Access-server/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   

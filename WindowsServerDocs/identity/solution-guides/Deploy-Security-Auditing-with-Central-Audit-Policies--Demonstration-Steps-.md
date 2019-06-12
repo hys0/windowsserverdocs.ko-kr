@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: ac2b1643ed151e94c3815abca9a57eb3706c845a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b14ded98c4f1a340349119bd9f5f42e3a1bf9434
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59871134"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66445738"
 ---
 # <a name="deploy-security-auditing-with-central-audit-policies-demonstration-steps"></a>중앙 감사 정책으로 보안 감사 배포(시연 단계)
 
@@ -34,21 +34,21 @@ ms.locfileid: "59871134"
   
 #### <a name="to-configure-a-global-object-access-policy"></a>글로벌 개체 액세스 정책을 구성하려면  
   
-1.  암호를 사용 하 여 contoso\administrator로 도메인 컨트롤러 DC1에 로그인 **pass@word1**합니다.  
+1. 암호를 사용 하 여 contoso\administrator로 도메인 컨트롤러 DC1에 로그인 <strong>pass@word1</strong>합니다.  
   
-2.  서버 관리자에서 **도구**를 가리킨 다음 **그룹 정책 관리**를 클릭합니다.  
+2. 서버 관리자에서 **도구**를 가리킨 다음 **그룹 정책 관리**를 클릭합니다.  
   
-3.  콘솔 트리에서 **도메인**을 두 번 클릭하고 **contoso.com**을 두 번 클릭한 후 **Contoso**를 클릭하고 **파일 서버**를 두 번 클릭합니다.  
+3. 콘솔 트리에서 **도메인**을 두 번 클릭하고 **contoso.com**을 두 번 클릭한 후 **Contoso**를 클릭하고 **파일 서버**를 두 번 클릭합니다.  
   
-4.  **FlexibleAccessGPO**를 마우스 오른쪽 단추로 클릭한 후 **편집**을 클릭합니다.  
+4. **FlexibleAccessGPO**를 마우스 오른쪽 단추로 클릭한 후 **편집**을 클릭합니다.  
   
-5.  **컴퓨터 구성**을 두 번 클릭하고 **정책**을 두 번 클릭한 다음 **Windows 설정**을 두 번 클릭합니다.  
+5. **컴퓨터 구성**을 두 번 클릭하고 **정책**을 두 번 클릭한 다음 **Windows 설정**을 두 번 클릭합니다.  
   
-6.  **보안 설정**을 두 번 클릭하고 **고급 감사 정책 구성**을 두 번 클릭한 다음 **감사 정책**을 두 번 클릭합니다.  
+6. **보안 설정**을 두 번 클릭하고 **고급 감사 정책 구성**을 두 번 클릭한 다음 **감사 정책**을 두 번 클릭합니다.  
   
-7.  **개체 액세스**를 두 번 클릭한 후 **파일 시스템 감사**를 두 번 클릭합니다.  
+7. **개체 액세스**를 두 번 클릭한 후 **파일 시스템 감사**를 두 번 클릭합니다.  
   
-8.  **다음 이벤트 구성** 확인란을 선택하고 **성공** 및 **실패** 확인란을 선택한 다음 **확인**을 클릭합니다.  
+8. **다음 이벤트 구성** 확인란을 선택하고 **성공** 및 **실패** 확인란을 선택한 다음 **확인**을 클릭합니다.  
   
 9. 탐색 창에서 **글로벌 개체 액세스 감사**를 두 번 클릭한 후 **파일 시스템**을 두 번 클릭합니다.  
   
@@ -70,14 +70,14 @@ ms.locfileid: "59871134"
   
 #### <a name="to-update-group-policy-settings"></a>그룹 정책 설정을 업데이트하려면  
   
-1.  파일 서버에 암호를 사용 하 여 contoso\Administrator로 FILE1에 로그인 **pass@word1**합니다.  
+1. 파일 서버에 암호를 사용 하 여 contoso\Administrator로 FILE1에 로그인 <strong>pass@word1</strong>합니다.  
   
-2.  Windows 키+R을 누른 다음 **cmd**를 입력하여 명령 프롬프트 창을 엽니다.  
+2. Windows 키+R을 누른 다음 **cmd**를 입력하여 명령 프롬프트 창을 엽니다.  
   
-    > [!NOTE]  
-    > **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
+   > [!NOTE]  
+   > **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
   
-3.  **gpupdate /force**를 입력한 다음 Enter 키를 누릅니다.  
+3. **gpupdate /force**를 입력한 다음 Enter 키를 누릅니다.  
   
 ## <a name="BKMK_3"></a>글로벌 개체 액세스 정책이 적용 되었는지 확인  
 그룹 정책 설정이 적용된 후 감사 정책 설정이 올바르게 적용되었는지 확인할 수 있습니다.  
@@ -95,8 +95,8 @@ ms.locfileid: "59871134"
   
 -   [시나리오: 파일 액세스 감사](Scenario--File-Access-Auditing.md)  
   
--   [파일에 대 한 계획 액세스 감사](Plan-for-File-Access-Auditing.md)  
+-   [파일 액세스 감사 계획](Plan-for-File-Access-Auditing.md)  
   
--   [동적 Access Control: 시나리오 개요](Dynamic-Access-Control--Scenario-Overview.md)  
+-   [동적 액세스 제어: 시나리오 개요](Dynamic-Access-Control--Scenario-Overview.md)  
   
 

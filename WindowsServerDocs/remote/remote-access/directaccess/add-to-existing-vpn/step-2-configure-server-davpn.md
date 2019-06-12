@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: fe221fc9-c7d9-4508-b8a1-000d2515283c
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 31a5310ddb59831650f6b46108d071c120116dc1
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f8a6448661861fdc9f97c66fb130bfc03d0ce72c
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59830934"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446970"
 ---
 #  <a name="step-2-configure-the-directaccess-vpn-server"></a>2 단계 DirectAccess VPN 서버 구성
 
@@ -83,10 +83,10 @@ DNS 클라이언트의 경우 DNS 검색 기능을 확장하거나 수정하는 
 
 목록에 각 접미사를 추가한 결과로 형성된 모든 FQDN에 대한 쿼리가 확인되지 않으면 쿼리 프로세스에 실패하고 "이름을 찾을 수 없음" 결과가 생성됩니다. 
 
->[!WARNING]
->도메인 접미사 목록을 사용하는 경우 클라이언트는 쿼리가 응답하지 않거나 확인되지 않으면 다른 DNS 도메인 이름을 기반으로 추가 대체 쿼리를 계속 보냅니다. 접미사 목록의 항목을 사용하여 이름이 확인되고 나면 사용되지 않은 목록 항목은 시도되지 않습니다. 따라서 가장 자주 사용하는 도메인 접미사부터 목록을 정렬하는 것이 가장 효율적입니다.
-
->도메인 이름 접미사 검색은 DNS 이름 항목이 정규화되지 않은 경우에만 사용됩니다. DNS 이름을 정규화하려면 이름 끝에 마침표(.)를 입력합니다.
+> [!WARNING]
+> 도메인 접미사 목록을 사용하는 경우 클라이언트는 쿼리가 응답하지 않거나 확인되지 않으면 다른 DNS 도메인 이름을 기반으로 추가 대체 쿼리를 계속 보냅니다. 접미사 목록의 항목을 사용하여 이름이 확인되고 나면 사용되지 않은 목록 항목은 시도되지 않습니다. 따라서 가장 자주 사용하는 도메인 접미사부터 목록을 정렬하는 것이 가장 효율적입니다.
+> 
+> 도메인 이름 접미사 검색은 DNS 이름 항목이 정규화되지 않은 경우에만 사용됩니다. DNS 이름을 정규화하려면 이름 끝에 마침표(.)를 입력합니다.
 
 ## <a name="gpo-configuration"></a>GPO 구성
 

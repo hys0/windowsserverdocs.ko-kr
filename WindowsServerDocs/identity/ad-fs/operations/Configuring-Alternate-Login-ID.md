@@ -9,12 +9,12 @@ ms.date: 11/14/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 5bc43717f37fb3b14ac7f384a061ee64c734222d
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 75ab011ed4931af3d5a03a38b3f7a7f0cfecbe3d
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66189663"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66444912"
 ---
 # <a name="configuring-alternate-login-id"></a>대체 로그인 ID 구성
 
@@ -31,9 +31,9 @@ Active Directory Federation Services (ADFS) 사용 하도록 설정 페더레이
 
 ## <a name="alternate-id-in-azure-ad"></a>Azure AD에서 대체 id
 조직은 다음과 같은 시나리오에서 대체 ID를 사용 해야 할 수 있습니다.
-1.  온-프레미스 도메인 이름은 라우팅할 수 없는, 예입니다. Contoso.local 이며 결과적으로 기본 사용자 계정 이름 라우팅할 수 없는 (jdoe@contoso.local). 회사 정책 또는 로컬 응용 프로그램 종속성으로 인해 기존 UPN은 변경할 수 없습니다. Azure AD 및 Office 365 Azure AD directory 완벽 하 게 라우팅할 수 있는 인터넷에 연결 하는 모든 도메인 접미사 필요 합니다. 
-2.  온-프레미스 UPN 사용자의 전자 메일 주소와 동일 하지 않습니다. 로그인에 Office 365에 사용자 전자 메일 주소를 사용 하 고 조직 제약 조건으로 인해 UPN을 사용할 수 없습니다.
-위에서 언급 한 시나리오에서 AD FS 사용 하 여 대체 ID를 사용 하면 로그인에 Azure AD에 온-프레미스 Upn을 수정 하지 않고 있습니다. 
+1. 온-프레미스 도메인 이름은 라우팅할 수 없는, 예입니다. Contoso.local 이며 결과적으로 기본 사용자 계정 이름 라우팅할 수 없는 (jdoe@contoso.local). 회사 정책 또는 로컬 응용 프로그램 종속성으로 인해 기존 UPN은 변경할 수 없습니다. Azure AD 및 Office 365 Azure AD directory 완벽 하 게 라우팅할 수 있는 인터넷에 연결 하는 모든 도메인 접미사 필요 합니다. 
+2. 온-프레미스 UPN 사용자의 전자 메일 주소와 동일 하지 않습니다. 로그인에 Office 365에 사용자 전자 메일 주소를 사용 하 고 조직 제약 조건으로 인해 UPN을 사용할 수 없습니다.
+   위에서 언급 한 시나리오에서 AD FS 사용 하 여 대체 ID를 사용 하면 로그인에 Azure AD에 온-프레미스 Upn을 수정 하지 않고 있습니다. 
 
 ## <a name="end-user-experience-with-alternate-login-id"></a>대체 로그인 ID 사용 하 여 최종 사용자 환경
 최종 사용자 환경을 대체 로그인 id를 사용 하 여 사용 된 인증 방법에 따라 달라 집니다.  현재 여기 세 가지 방법으로 대체 로그인 id를 사용 하 여 수행할 수 있습니다.  구현되지 않은 것은 다음과 같습니다.
@@ -81,7 +81,7 @@ Set-AdfsClaimsProviderTrust -TargetIdentifier "AD AUTHORITY" -AlternateLoginID <
 Set-AdfsClaimsProviderTrust -TargetIdentifier "AD AUTHORITY" -AlternateLoginID mail -LookupForests contoso.com,fabrikam.com
 ```
 
-3.  이 기능을 해제 하려면 두 매개 변수가 모두 null 일 수에 대 한 값을 설정 합니다.
+3. 이 기능을 해제 하려면 두 매개 변수가 모두 null 일 수에 대 한 값을 설정 합니다.
 
 ``` powershell
 Set-AdfsClaimsProviderTrust -TargetIdentifier "AD AUTHORITY" -AlternateLoginID $NULL -LookupForests $NULL
@@ -155,6 +155,7 @@ HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zo
 ## <a name="applications-and-user-experience-after-the-additional-configuration"></a>추가 구성 후 응용 프로그램 및 사용자 환경
 
 ### <a name="non-exchange-and-skype-for-business-clients"></a>교환과 비즈니스 클라이언트에 대 한 Skype
+
 |클라이언트|지원 문의|설명|
 | ----- | -----|-----|
 |Microsoft Teams|지원됨|<li>Microsoft Teams AD FS 지원 (Saml-p, Ws-fed, Ws-trust 및 OAuth) 및 최신 인증 합니다.</li><li> 핵심 Microsoft Teams 채널, 채팅 및 파일 기능 같은 대체 로그인 ID와 함께 작동 합니다.</li><li>첫 번째 및 세 번째 파티 앱 고객이 개별적으로 조사 해야 합니다. 각 응용 프로그램에 고유한 지원 인증 프로토콜 때문입니다.</li>|     
@@ -173,7 +174,7 @@ HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zo
 |Outlook Web Access|지원됨|지원됨|
 |Android, IOS 및 Windows Phone 용 outlook 모바일 앱|지원됨|지원됨|
 |비즈니스용 Skype / Lync|추가 프롬프트 없이 지원|지원 (설명 했 듯이 제외) 사용자의 혼동 가능성이 있지만.</br></br>모바일 클라이언트에서 대체 Id는 지원 되는 경우에 SIP 주소 = 전자 메일 주소 = 대체 id입니다.</br></br> 사용자는 로그인에 Skype를 두 번 비즈니스 데스크톱 클라이언트를 먼저 온-프레미스 UPN을 사용 하 고 대체 id입니다. 사용 하 여 해야 합니다. ("로그인 주소" 하지 않을 수 있는 "사용자 이름"으로 동일 하지만 자주 SIP 주소 실제로입니다). 먼저 사용자 이름에 대 한 메시지가 표시 되 면이 올바르게 미리 채워져 있지 대체 ID 또는 SIP 주소를 하는 경우에 사용자 UPN을 입력 해야 합니다. 사용자가 로그인 된 UPN, 이름 프롬프트가 다시 표시 하는 사용자,이 이번에는 UPN 미리 채워집니다. 이 현재 사용자의 대체 ID를 사용 하 여이 대체 하며 클릭 로그인 프로세스를 완료 하려면 로그인 합니다. 모바일 클라이언트에서 사용자는 온-프레미스 사용자 ID를 입력 고급 페이지에서 UPN 형식이 아니라 SAM 스타일 형식 (도메인 \ 사용자 이름)을 사용 하 여 합니다.</br></br>성공적인 로그인 후 비즈니스 또는 Lync Skype "교환에는 자격 증명 필요", 표시 되 면 필요한 사서함이에 대 한 유효한 자격 증명을 제공 합니다. 대체 ID를 제공 해야 하는 클라우드에서 사서함이 있는 경우 사서함이 온-프레미스는 온-프레미스 UPN을 제공 해야 합니다.| 
- 
+
 ## <a name="additional-details--considerations"></a>추가 세부 정보 및 고려 사항
 
 -   대체 로그인 ID 기능은 배포 된 AD FS를 사용 하 여 페더레이션된 환경에서 사용할 수 있습니다.  다음 시나리오에서 지원 되지 않습니다.
@@ -211,12 +212,12 @@ HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zo
 
 
 
-**오류 사례**|**로그인 경험에 미치는 영향**|**이벤트**|
----------|---------|---------
-SAMAccountName에 대 한 사용자 개체에 대 한 값을 가져올 수 없습니다.|로그인 실패|이벤트 ID 364 된 예외 메시지 MSIS8012: 사용자에 대 한 samAccountName을 찾을 수 없습니다. '{0}'.|
-CanonicalName 특성에 액세스할 수 없습니다|로그인 실패|MSIS8013 예외 메시지와 이벤트 ID 364: CanonicalName: '{0}' 사용자의:'{1}'에 잘못 된 형식입니다.|
-여러 사용자 개체가 하나의 포리스트에 있습니다.|로그인 실패|이벤트 ID 364 된 예외 메시지 MSIS8015: Id 가진 여러 사용자 계정이 '{0}'포리스트에'{1}' id: {2}|
-여러 포리스트에 걸친 여러 사용자 개체가 있습니다.|로그인 실패|이벤트 ID 364 된 예외 메시지 MSIS8014: Id 가진 여러 사용자 계정이 '{0}' 포리스트에: {1}|
+|                       **오류 사례**                        | **로그인 경험에 미치는 영향** |                                                              **이벤트**                                                              |
+|--------------------------------------------------------------|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| SAMAccountName에 대 한 사용자 개체에 대 한 값을 가져올 수 없습니다. |          로그인 실패           |                  이벤트 ID 364 된 예외 메시지 MSIS8012: 사용자에 대 한 samAccountName을 찾을 수 없습니다. '{0}'.                   |
+|        CanonicalName 특성에 액세스할 수 없습니다         |          로그인 실패           |               MSIS8013 예외 메시지와 이벤트 ID 364: CanonicalName: '{0}' 사용자의:'{1}'에 잘못 된 형식입니다.                |
+|        여러 사용자 개체가 하나의 포리스트에 있습니다.        |          로그인 실패           | 이벤트 ID 364 된 예외 메시지 MSIS8015: Id 가진 여러 사용자 계정이 '{0}'포리스트에'{1}' id: {2} |
+|   여러 포리스트에 걸친 여러 사용자 개체가 있습니다.    |          로그인 실패           |           이벤트 ID 364 된 예외 메시지 MSIS8014: Id 가진 여러 사용자 계정이 '{0}' 포리스트에: {1}            |
 
 ## <a name="see-also"></a>관련 항목
 [AD FS 작업](../../ad-fs/AD-FS-2016-Operations.md)

@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f629d0879958496d1dfbedd516de1783bb0fd357
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ec47dea822c338dfe1b809c662d1e31e9a5a9703
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59837014"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66441334"
 ---
 # <a name="set-verbose"></a>세부 정보 표시 설정
 
@@ -34,9 +34,9 @@ set verbose {on | off}
 
 ## <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------|-----------|
-|{on | off}|자세한 정보 표시 모드를 설정 하거나 해제 합니다.|
+| 매개 변수 | 설명 |
+|-----------|-------------|
+|    {on    |    off}     |
 
 ## <a name="remarks"></a>설명
 

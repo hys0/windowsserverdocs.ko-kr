@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 109d162e8d5c4bdd59871a21f16b6f568df4fbd6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e5805fcc14d6874d95ba90537d72b560229ba99b
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59861664"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66436317"
 ---
 # <a name="pause"></a>일시 중지
 
@@ -44,16 +44,16 @@ pause
 
 ## <a name="remarks"></a>설명
 
--   실행 하는 경우는 **일시 중지** 명령, 다음과 같은 메시지가 나타납니다.  
-    ```
-    Press any key to continue . . .
-    ```  
--   일괄 처리 프로그램을 중지 하려면 CTRL + C를 누를 경우 다음과 같은 메시지가 표시 됩니다.  
-    ```
-    Terminate batch job (Y/N)?
-    ```  
-    이 메시지에 대 한 응답에서 (예) Y를 누를 경우 일괄 처리 프로그램이 종료 되 고 컨트롤의 운영 체제에 반환 합니다.
--   삽입할 수 있습니다 합니다 **일시 중지** 명령을 처리 하지 않을 배치 파일의 섹션 앞입니다. 때 **일시 중지** 일시 중단 일괄 프로그램의 처리, CTRL + c를 일괄 처리 프로그램을 중지 하려면 Y를 누릅니다.
+- 실행 하는 경우는 **일시 중지** 명령, 다음과 같은 메시지가 나타납니다.  
+  ```
+  Press any key to continue . . .
+  ```  
+- 일괄 처리 프로그램을 중지 하려면 CTRL + C를 누를 경우 다음과 같은 메시지가 표시 됩니다.  
+  ```
+  Terminate batch job (Y/N)?
+  ```  
+  이 메시지에 대 한 응답에서 (예) Y를 누를 경우 일괄 처리 프로그램이 종료 되 고 컨트롤의 운영 체제에 반환 합니다.
+- 삽입할 수 있습니다 합니다 **일시 중지** 명령을 처리 하지 않을 배치 파일의 섹션 앞입니다. 때 **일시 중지** 일시 중단 일괄 프로그램의 처리, CTRL + c를 일괄 처리 프로그램을 중지 하려면 Y를 누릅니다.
 
 ## <a name="BKMK_examples"></a>예제
 

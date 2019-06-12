@@ -10,12 +10,12 @@ ms.date: 03/16/2018
 ms.topic: landing-page
 author: kaushika-msft
 ms.author: elizapo
-ms.openlocfilehash: 1a4d28e168e7ce328ac125d12a07cb0c133e2d0e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: fc87bf87a79f5f7e13069ad1a58be0dc940a558e
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59852124"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447783"
 ---
 # <a name="top-support-solutions-for-windows-server"></a>Windows Server를 위한 상위 지원 솔루션
 
@@ -84,10 +84,9 @@ Windows Server 2016을 사용할 때 경험하는 가장 일반적인 문제에 
                         <p><a href="https://technet.microsoft.com/library/ee939272.aspx">(KMS (키 관리 서비스)를 해결 하는 방법</a></p>
 <hr>
                         <p><a href="https://technet.microsoft.com/library/ff793439.aspx">볼륨 정품 인증 문제 해결</a></p>
-<hr>                       
-                        <p><a href="https://technet.microsoft.com/library/ff793399.aspx">정품 인증 오류 코드</a></p>
+<hr><br/>                        <p><a href="https://technet.microsoft.com/library/ff793399.aspx">정품 인증 오류 코드</a></p>
 <hr>
-                        <p><a href="https://support.microsoft.com/help/2796988/windows-8-or-windows-server-2012-installation-may-fail-with-error-mess">Windows 설치 오류로 실패할 수 있습니다 "입력 한 제품 키 일치 하지 않습니다 Windows 이미지를 설치할 수 있습니다. 다른 제품 키를 입력 하는 "</a></p>
+                        <p><a href="https://support.microsoft.com/help/2796988/windows-8-or-windows-server-2012-installation-may-fail-with-error-mess">Windows 설치 오류로 실패할 수 있습니다 &quot;입력 한 제품 키 설치에 사용할 수 있는 Windows 이미지 일치 하지 않습니다. 다른 제품 키를 입력 합니다.&quot;</a></p>
                     </div>
                 </div>
             </div>
@@ -138,10 +137,9 @@ Windows Server 2016을 사용할 때 경험하는 가장 일반적인 문제에 
                         <a href="/azure/active-directory/active-directory-conditional-access-automatic-device-registration-setup">Azure Active Directory를 사용 하 여 Windows 도메인 가입 장치의 자동 등록을 구성 하는 방법</a>
 <hr>
                         <p><a href="/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup#step-2-setup-issuance-of-claims">클레임 발급 설정</a></p>
-<hr>  
-                        <p><a href="../identity/ad-fs/operations/configure-ad-fs-to-authenticate-users-stored-in-ldap-directories.md">LDAP 디렉터리에 저장 된 사용자를 인증 하도록 AD FS를 구성 합니다.</a></p>
+<hr><br/>                        <p><a href="../identity/ad-fs/operations/configure-ad-fs-to-authenticate-users-stored-in-ldap-directories.md">LDAP 디렉터리에 저장된 사용자를 인증하도록 AD FS 구성</a></p>
 <hr>
-                        <p><a href="../identity/ad-fs/operations/ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication.md">AD FS 인증서 인증에 대 한 대체 호스트 이름 바인딩에 대 한 지원</a></p>
+                        <p><a href="../identity/ad-fs/operations/ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication.md">인증서 인증의 대체 호스트 이름 바인딩에 대한 AD FS 지원</a></p>
 <hr>
                         <p><a href="https://blogs.technet.microsoft.com/tspring/2017/01/20/federated-to-microsoft-cloud-and-account-lockouts/">암호 공격을 방지</a>
                         <a href="../identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server-2016.md">WID 데이터베이스를 사용 하 여 Windows Server 2016에서 AD FS로 업그레이드</a></p>

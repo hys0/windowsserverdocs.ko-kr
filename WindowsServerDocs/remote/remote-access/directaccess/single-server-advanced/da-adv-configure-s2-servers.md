@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: 35afec8e-39a4-463b-839a-3c300ab01174
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 0d51ac71fa2fbe4d0bb7121a9ef511524c47f4f4
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: adcd13bda942b756a122e9642da795dd9c847bad
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59826614"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446965"
 ---
 # <a name="step-2-configure-advanced-directaccess-servers"></a>고급 DirectAccess 서버를 구성 하는 2 단계
 
@@ -57,7 +57,7 @@ ms.locfileid: "59826614"
   
 6.  **설치 진행률** 페이지에서 설치가 완료되었는지 확인하고 **닫기**를 클릭합니다.  
   
-![설치 진행률 성공](../../../media/Step-2-Configuring-DirectAccess-Servers/PowerShellLogoSmall.gif)****Windows PowerShell 해당 명령을****  
+![설치 진행률 성공](../../../media/Step-2-Configuring-DirectAccess-Servers/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -248,7 +248,7 @@ Set-DAClientExperienceConfiguration -FriendlyName 'Contoso DirectAccess Connecti
   
 ## <a name="next-step"></a>다음 단계  
   
--   [3 단계: 배포 확인](Step-3-Verify-the-Deployment.md)  
+-   [3단계: 배포 확인](Step-3-Verify-the-Deployment.md)  
   
 
 

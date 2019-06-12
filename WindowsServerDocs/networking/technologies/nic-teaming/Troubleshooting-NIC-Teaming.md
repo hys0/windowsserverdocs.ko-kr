@@ -14,12 +14,12 @@ ms.assetid: fdee02ec-3a7e-473e-9784-2889dc1b6dbb
 ms.author: pashort
 author: shortpatti
 ms.date: 09/13/2018
-ms.openlocfilehash: d39dc6a4dcf5dca8186b0599fb479ed5ae684e0f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a6af3cbd038e97d889269b83d72c77c50680e513
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59856254"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446175"
 ---
 # <a name="troubleshooting-nic-teaming"></a>NIC 팀 문제 해결
 
@@ -44,7 +44,7 @@ ms.locfileid: "59856254"
 
 팀 인터페이스를 사용 하지 않으면 실패 NIC 팀에 대 한 일반적인 이유는 일련의 명령 실행 하는 경우 실수로 경우가 많습니다.  이 특정 명령 시퀀스는 모든 NIC 팀 인터페이스를 제거 하의 모든 Nic의 기본 실제 멤버를 사용 하지 않도록 설정 하므로 사용 하지 않도록 설정 NetAdapters 활성화 되지 않습니다. 
 
-이 경우 NIC 팀 인터페이스를 더 이상 표시 되지 Get NetAdapter에이 인해 **Enable NetAdapter \***  NIC 팀을 사용 하도록 설정 하지 않습니다. 그러나 **사용 NetAdapter \***  명령, 사용 하도록 설정 멤버 Nic를 팀 인터페이스를 다시 만듭니다. 그런 다음 (짧은 시간 후)입니다. 될 때까지 "사용 안 함된" 상태로 유지 됩니다 팀 인터페이스를 다시 사용 하도록 설정, 네트워크 트래픽 흐름이 시작을 허용 합니다. 
+이 경우 NIC 팀 인터페이스를 더 이상 표시 되지 Get NetAdapter에이 인해 **Enable NetAdapter \\** * NIC 팀을 사용 하도록 설정 하지 않습니다. 그러나 **사용 NetAdapter \\** * 명령, 사용 하도록 설정 멤버 Nic를 팀 인터페이스를 다시 만듭니다. 그런 다음 (짧은 시간 후)입니다. 될 때까지 "사용 안 함된" 상태로 유지 됩니다 팀 인터페이스를 다시 사용 하도록 설정, 네트워크 트래픽 흐름이 시작을 허용 합니다. 
 
 다음 Windows PowerShell 명령 시퀀스는 실수로 팀 인터페이스를 비활성화할 수 있습니다.  
   

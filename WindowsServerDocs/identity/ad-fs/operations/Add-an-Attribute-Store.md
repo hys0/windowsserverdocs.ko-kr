@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 103ee707c88f4e88b231a833f739cf75b6503e18
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 8d3027c419e85d1aec4b3b0308926a86bb37620d
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66190104"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66445094"
 ---
 # <a name="add-an-attribute-store"></a>특성 저장소 추가
 
@@ -33,20 +33,20 @@ ms.locfileid: "66190104"
 
 ![특성 저장소 추가](media/Add-an-Attribute-Store/addstore1.PNG)
   
-3.  에 **특성 저장소 추가** 대화 상자에서 추가 하려는 특성 저장소에 대 한 다음 속성을 구성 합니다.  
+3. 에 **특성 저장소 추가** 대화 상자에서 추가 하려는 특성 저장소에 대 한 다음 속성을 구성 합니다.  
   
-    -   **표시 이름**, 특성 저장소를 식별 하는 데 사용할 이름을 입력 합니다.  
+   -   **표시 이름**, 특성 저장소를 식별 하는 데 사용할 이름을 입력 합니다.  
   
-    -   **특성 저장소 유형을**를 하거나 지원 되는 특성 저장소 유형을 선택 **Active Directory**를 **LDAP**, 또는 **SQL**합니다.  
+   -   **특성 저장소 유형**, 를 하거나 지원 되는 특성 저장소 유형을 선택 **Active Directory**, **LDAP**, 또는 **SQL**합니다.  
   
-    -   **연결 문자열**, Lightweight Directory Access Protocol을 선택한 경우, \(LDAP\) 저장소 또는 구조적 쿼리 언어 \(SQL\) 저장, 특성 저장소에 대 한 연결을 설정 하는 데 사용 하는 문자열을 입력 합니다. Active Directory 특성 저장소에 대 한 연결 문자열은 필요 합니다. 따라서이 필드가 비활성화 됩니다.  
+   -   **연결 문자열**, Lightweight Directory Access Protocol을 선택한 경우, \(LDAP\) 저장소 또는 구조적 쿼리 언어 \(SQL\) 저장, 특성 저장소에 대 한 연결을 설정 하는 데 사용 하는 문자열을 입력 합니다. Active Directory 특성 저장소에 대 한 연결 문자열은 필요 합니다. 따라서이 필드가 비활성화 됩니다.  
   
-        > [!NOTE]  
-        > AD FS는 기본적으로 Active Directory 특성 저장소를 자동으로 만듭니다.  
+       > [!NOTE]  
+       > AD FS는 기본적으로 Active Directory 특성 저장소를 자동으로 만듭니다.  
  
 ![특성 저장소 추가](media/Add-an-Attribute-Store/addstore2.PNG) 
 
-4.  **확인**을 클릭합니다.  
+4. **확인**을 클릭합니다.  
   
 ## <a name="additional-references"></a>추가 참조  
 

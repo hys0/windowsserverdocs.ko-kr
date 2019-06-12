@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: 187db7e201e98ae97268b96c2e4faa202a9a5372
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 40471354af5434e77a300303572ccce639ba2489
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59874834"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66443779"
 ---
 # <a name="install-a-new-windows-server-2012-active-directory-forest-level-200"></a>새 Windows Server 2012 Active Directory 포리스트 설치(수준 200)
 
@@ -88,15 +88,15 @@ Dcpromo.exe는 명령줄 무인 설치용으로만 Windows Server 2012에서 지
   
 ![새 포리스트 설치](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_PSInstallADDSForest.png)  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Dcpromo.exe는 더 이상 그래픽 마법사를 제공하지 않으며, 역할 또는 기능 이진 파일을 더 이상 설치하지 않습니다. Explorer 셸에서 Dcpromo.exe를 실행하려고 하면 다음 오류가 반환됩니다.  
->   
-> "Active Directory 도메인 서비스 설치 마법사는 서버 관리자에서 재배치 됩니다. 자세한 내용은 참조 하세요. https://go.microsoft.com/fwlink/?LinkId=220921. "  
->   
+> 
+> "Active Directory 도메인 서비스 설치 마법사는 서버 관리자에서 재배치 됩니다. 자세한 내용은 참조 하세요. <https://go.microsoft.com/fwlink/?LinkId=220921>. "  
+> 
 > Dcpromo.exe /unattend를 실행할 경우 여전히 이진 파일이 설치되지만 이전 운영 체제와 마찬가지로 다음 경고가 발생합니다.  
->   
-> "Dcpromo 무인된 작업이 Windows PowerShell 용 ADDSDeployment 모듈에 의해 대체 됩니다. 자세한 내용은 참조 하세요. https://go.microsoft.com/fwlink/?LinkId=220924. "  
->   
+> 
+> "Dcpromo 무인된 작업이 Windows PowerShell 용 ADDSDeployment 모듈에 의해 대체 됩니다. 자세한 내용은 참조 하세요. <https://go.microsoft.com/fwlink/?LinkId=220924>. "  
+> 
 > dcpromo.exe는 Windows Server 2012에서 더 이상 사용되지 않으며, 앞으로의 Windows 버전에 포함되지 않는 것은 물론 이 운영 체제에서도 더 이상 기능이 개선되지 않습니다. 관리자는 dcpromo.exe의 사용을 중단해야 하며, 명령줄에서 도메인 컨트롤러를 만들려는 경우 지원되는 Windows PowerShell 모듈로 전환해야 합니다.  
   
 #### <a name="prerequisite-checking"></a>필수 구성 요소 확인  

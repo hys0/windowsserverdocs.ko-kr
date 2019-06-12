@@ -10,12 +10,12 @@ ms.topic: article
 author: lizap
 manager: dougkim
 ms.localizationpriority: medium
-ms.openlocfilehash: 241b2b776a68cf5aec68a4d331201a07f0e5ea53
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f9aafaa34d5c16e45681e88b1ce60e99a9ad2842
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59844654"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447090"
 ---
 # <a name="use-performance-counters-to-diagnose-app-performance-problems-on-remote-desktop-session-hosts"></a>성능 카운터를 사용 하 여 원격 데스크톱 세션 호스트에서 앱 성능 문제 진단
 
@@ -25,11 +25,11 @@ ms.locfileid: "59844654"
 
 다음 이미지는 응용 프로그램에 클라이언트에서 사용자 입력된 흐름의 대략적인 표현을 보여 줍니다.
 
-![원격 데스크톱-응용 프로그램에 사용자가 원격 데스크톱 클라이언트에서 사용자 입력된 흐름](.\media\rds-user-input.png)
+![원격 데스크톱-응용 프로그램에 사용자가 원격 데스크톱 클라이언트에서 사용자 입력된 흐름](./media/rds-user-input.png)
 
 사용자 입력 지연 카운터 사이의 대기 중인 입력 앱에서 시작한 경우 (시간 간격) 내 최대 델타를 측정 한 [일반적인 메시지 루프](https://msdn.microsoft.com/library/windows/desktop/ms644927.aspx#loop)다음 흐름 차트에 표시 된 것 처럼:
 
-![원격 데스크톱-사용자 입력 지연 성능 카운터 흐름](.\media\rds-user-input-delay.png)
+![원격 데스크톱-사용자 입력 지연 성능 카운터 흐름](./media/rds-user-input-delay.png)
 
 이 카운터의 하나의 중요 한 세부 정보 구성 가능한 간격 내에서 최대 사용자 입력된 지연을 보고 하는 합니다. 이것이 가장 긴 입력 등의 중요 하 고 표시 작업의 속도 영향을 줄 수 있는 응용 프로그램을 연결할 입력에 걸리는 시간입니다.
 
@@ -52,13 +52,13 @@ reg add "HKLM\System\CurrentControlSet\Control\Terminal Server" /v "EnableLagCou
 
 다음으로, 서버를 다시 시작 합니다. 그런 다음 성능 모니터를 열고 다음 스크린 샷과 같이 더하기 기호 (+)를 선택 합니다.
 
-![원격 데스크톱-사용자를 추가 하는 방법을 보여주는 스크린 샷 입력 지연 성능 카운터](.\media\rds-add-user-input-counter-screen.png)
+![원격 데스크톱-사용자를 추가 하는 방법을 보여주는 스크린 샷 입력 지연 성능 카운터](./media/rds-add-user-input-counter-screen.png)
 
 그 후 표시 카운터 추가 대화 상자에서 선택할 수 있습니다 **프로세스당 사용자 입력 지연** 하거나 **세션당 사용자 입력 지연**합니다.
 
-![원격 데스크톱-세션당 사용자 입력된 지연을 추가 하는 방법을 보여 주는 스크린샷](.\media\rds-user-delay-per-session.png)
+![원격 데스크톱-세션당 사용자 입력된 지연을 추가 하는 방법을 보여 주는 스크린샷](./media/rds-user-delay-per-session.png)
 
-![원격 데스크톱-프로세스당 사용자 입력된 지연을 추가 하는 방법을 보여 주는 스크린샷](.\media\rds-user-delay-per-process.png)
+![원격 데스크톱-프로세스당 사용자 입력된 지연을 추가 하는 방법을 보여 주는 스크린샷](./media/rds-user-delay-per-process.png)
 
 선택 하는 경우 **프로세스당 사용자 입력 지연**를 표시 합니다 **선택한 개체의 인스턴스** (즉, 프로세스)에서 ```SessionID:ProcessID <Process Image>``` 형식.
 
@@ -69,7 +69,7 @@ reg add "HKLM\System\CurrentControlSet\Control\Terminal Server" /v "EnableLagCou
 
 카운터 추가 사용자 입력된 지연을 보고를 시작 합니다. 기본적으로 최대 소수 자릿수 (밀리초)을 100으로 설정 되어 있는지 note 합니다. 
 
-![원격 데스크톱-성능 모니터에서 프로세스 별로 사용자 입력 지연에 대 한 작업 예제](.\media\rds-sample-user-input-delay-perfmon.png)
+![원격 데스크톱-성능 모니터에서 프로세스 별로 사용자 입력 지연에 대 한 작업 예제](./media/rds-sample-user-input-delay-perfmon.png)
 
 다음으로, 살펴보겠습니다 합니다 **세션당 사용자 입력 지연**합니다. 각 세션 ID에 대 한 인스턴스가 및 해당 카운터 지정 된 세션 내에서 모든 프로세스의 사용자 입력된 지연 시간을 표시 합니다. 또한 "Max" (최대 사용자 입력된 지연 모든 세션에 걸쳐) 및 "평균" (의 평균 acorss 모든 세션)를 호출 하는 두 개의 인스턴스가 있습니다.
 
@@ -89,7 +89,7 @@ reg add "HKLM\System\CurrentControlSet\Control\Terminal Server" /v "EnableLagCou
 
 이제 볼 수 있는 내용 보고서에서를 앱의 성능 저하 될 경우를 살펴보겠습니다. 다음 그래프는 Microsoft Word에서 원격으로 작업 하는 사용자에 대 한 정보를 보여 줍니다. 이 경우 RDSH 서버 성능이 저하 되 면 시간이 지남에 따라 더 많은 사용자가 로그인 합니다.
 
-![원격 데스크톱-Microsoft Word를 실행 하는 RDSH 서버에 대 한 예제 성능 그래프](.\media\rds-user-input-perf-graph.png)
+![원격 데스크톱-Microsoft Word를 실행 하는 RDSH 서버에 대 한 예제 성능 그래프](./media/rds-user-input-perf-graph.png)
 
 그래프의 줄 읽기 방법은 다음과 같습니다.
 
@@ -104,7 +104,7 @@ CPU 스파이크 및 사용자 입력된 지연 간에 상관 관계가 있다�
 
 기본적으로 사용자 입력된 지연 1,000 밀리초 간격으로 보고 하는이 성능 카운터를 사용 하 여 때 기억해 야 할 중요 한 점입니다. 으로 설정한 경우 성능 카운터 샘플 간격 속성 (다음 스크린샷에 표시 된)으로 서로 다른 값으로 보고 되는 값 올바르지 않을 수 있습니다.
 
-![원격 데스크톱-성능 모니터에 대 한 속성](.\media\rds-user-input-perfmon-properties.png)
+![원격 데스크톱-성능 모니터에 대 한 속성](./media/rds-user-input-perfmon-properties.png)
 
 이 해결 하려면 사용 하려는 하는 간격 (밀리초)와 일치 하도록 다음 레지스트리 키를 설정할 수 있습니다. 예를 들어 변경 하면 샘플 x 초 마다 5 초를 5000 밀리초를이 키를 설정 해야 합니다.
 
@@ -125,7 +125,7 @@ CPU 스파이크 및 사용자 입력된 지연 간에 상관 관계가 있다�
 
 다음은 모양 두 키를 설정 하는 경우입니다.
 
-![원격 데스크톱-두 키를 사용 하 여 성능 모니터](.\media\rds-user-input-delay-with-two-counters.png)
+![원격 데스크톱-두 키를 사용 하 여 성능 모니터](./media/rds-user-input-delay-with-two-counters.png)
 
 ## <a name="using-the-new-counters-with-non-microsoft-tools"></a>타사 도구를 사용 하 여 새 카운터를 사용 하 여
 

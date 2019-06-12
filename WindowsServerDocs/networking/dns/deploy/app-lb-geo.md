@@ -8,12 +8,12 @@ ms.topic: article
 ms.assetid: b6e679c6-4398-496c-88bc-115099f3a819
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 806c0cdeedb44db44fc0ec5218124f516a6f70e5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9f76163e6b064ac3225ab4d755afd548e1cb720b
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59852554"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446415"
 ---
 # <a name="use-dns-policy-for-application-load-balancing-with-geo-location-awareness"></a>응용 프로그램 부하를 분산 하는 지리적 위치 인식 기능을 위한 DNS 정책을 사용 하 여
 
@@ -45,7 +45,7 @@ DNS 관리자는 또한 모든 데이터 센터 간에 균등 하 게 분산 전
 >[!IMPORTANT]
 >다음 섹션에서는 예제 많은 매개 변수 값이 포함 된 예제 Windows PowerShell 명령을 포함 합니다. 이러한 명령에 대 한 예제 값은 다음이 명령을 실행 하기 전에 배포에 적합 한 값으로 바꾸는 것을 확인 합니다.
 
-###<a name="bkmk_clientsubnets"></a>DNS 클라이언트 서브넷 만들기
+### <a name="bkmk_clientsubnets"></a>DNS 클라이언트 서브넷 만들기
 
 서브넷 또는 IP 주소 공간의 North America 및 Europe 지역을 먼저 식별 해야 합니다.
 
@@ -61,7 +61,7 @@ DNS 클라이언트 서브넷을 만드는 다음 Windows PowerShell 명령을 �
     
 자세한 내용은 참조 [추가 DnsServerClientSubnet](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverclientsubnet?view=win10-ps)합니다.
 
-###<a name="bkmk_zscopes2"></a>영역 범위 만들기
+### <a name="bkmk_zscopes2"></a>영역 범위 만들기
 
 클라이언트 서브넷을 배치한 후에 각 데이터 센터에 대 한 다른 영역 범위도 영역 contosogiftservices.com를 분할 해야 합니다.
 
@@ -85,7 +85,7 @@ DNS 클라이언트 서브넷을 만드는 다음 Windows PowerShell 명령을 �
 
 자세한 내용은 참조 [DnsServerZoneScope 추가](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps)
 
-###<a name="bkmk_records2"></a>영역 범위에 레코드 추가
+### <a name="bkmk_records2"></a>영역 범위에 레코드 추가
 
 이제 영역 범위에는 웹 서버 호스트를 나타내는 레코드를 추가 해야 합니다.
 
@@ -98,7 +98,7 @@ DNS 클라이언트 서브넷을 만드는 다음 Windows PowerShell 명령을 �
 
 자세한 내용은 참조 [추가 DnsServerResourceRecord](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps)합니다.
 
-###<a name="bkmk_policies2"></a>DNS 정책 만들기
+### <a name="bkmk_policies2"></a>DNS 정책 만들기
 
 파티션 (영역 범위)를 만든 후 레코드를 추가한 후에 이러한 범위 간에 들어오는 쿼리를 분산 하는 DNS 정책을 만들어야 합니다.
 

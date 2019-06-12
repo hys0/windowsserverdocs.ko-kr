@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage-replica
 manager: mchad
-ms.openlocfilehash: 4371192d44878d3c953374b8d307b4d5612869f5
-ms.sourcegitcommit: 7e54a1bcd31cd2c6b18fd1f21b03f5cfb6165bf3
+ms.openlocfilehash: 9cf998087e23f45fe5981aef6d1ff5b7b4e85b9b
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65461974"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447614"
 ---
 # <a name="cluster-to-cluster-storage-replica-within-the-same-region-in-azure"></a>Azure에서 동일한 지역 내에서 저장소 복제본 클러스터로 클러스터
 
@@ -30,7 +30,7 @@ Azure에서 동일한 지역 내에서 클러스터 간 저장소 복제를 구�
 2 부
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE269Pq]
 
-![동일한 지역 내에서 Azure의 클러스터 간 저장소 복제본을 표시 하는 아키텍처 다이어그램.](media\Cluster-to-cluster-azure-one-region\architecture.png)
+![동일한 지역 내에서 Azure의 클러스터 간 저장소 복제본을 표시 하는 아키텍처 다이어그램.](media/Cluster-to-cluster-azure-one-region/architecture.png)
 > [!IMPORTANT]
 > 모든 참조 된 예제는 위 그림와 관련이 있습니다.
 
@@ -58,41 +58,43 @@ Azure에서 동일한 지역 내에서 클러스터 간 저장소 복제를 구�
 8. 예제에서는 도메인 컨트롤러 **az2azDC** 개인 IP 주소가 (10.3.0.8이). 가상 네트워크에 (**az2az Vnet**) 10.3.0.8이 DNS 서버를 변경 합니다. "Contoso.com"에 모든 노드를 연결 하 고 "contosoadmin"에 대 한 관리자 권한을 제공 합니다.
    - 모든 노드에서 contosoadmin로 로그인 합니다. 
     
-9. 클러스터를 만들려면 (**SRAZC1**하십시오 **SRAZC2**). 다음은 예제에 대 한 PowerShell 명령
-```PowerShell
+9. 클러스터를 만들려면 (**SRAZC1**하십시오 **SRAZC2**). 
+   다음은 예제에 대 한 PowerShell 명령
+   ```PowerShell
     New-Cluster -Name SRAZC1 -Node az2az1,az2az2 –StaticAddress 10.3.0.100
-```
-```PowerShell
+   ```
+   ```PowerShell
     New-Cluster -Name SRAZC2 -Node az2az3,az2az4 –StaticAddress 10.3.0.101
-```
+   ```
 10. 저장소 공간 다이렉트를 사용 하도록 설정
-```PowerShell
+    ```PowerShell
     Enable-clusterS2D
-```   
+    ```   
    
-   각 클러스터에 대 한 가상 디스크 및 볼륨을 만듭니다. 데이터 및 로그에 대 한 다른 하나입니다. 
+    각 클러스터에 대 한 가상 디스크 및 볼륨을 만듭니다. 데이터 및 로그에 대 한 다른 하나입니다. 
    
 11. 내부 표준 SKU를 만드는 [부하 분산 장치](https://ms.portal.azure.com/#create/Microsoft.LoadBalancer-ARM) 각 클러스터에 대 한 (**azlbr1**하십시오**azlbr2**). 
    
-   부하 분산 장치에 대 한 정적 개인 IP 주소로 클러스터 IP 주소를 제공 합니다.
-   - azlbr1 => Frontend IP: 10.3.0.100 (가상 네트워크에서 사용 되지 않는 IP 주소 선택 (**az2az Vnet**) 서브넷)
-   - 각 부하 분산 장치에 대 한 백 엔드 풀을 만듭니다. 연결 된 클러스터 노드를 추가 합니다.
-   - 포트 59999 상태 프로브를 만듭니다.
-   - 부하 분산 규칙을 만듭니다. 설정 된 부동 IP를 사용 하 여 HA 포트를 허용 합니다. 
+    부하 분산 장치에 대 한 정적 개인 IP 주소로 클러스터 IP 주소를 제공 합니다.
+    - azlbr1 => Frontend IP: 10.3.0.100 (가상 네트워크에서 사용 되지 않는 IP 주소 선택 (**az2az Vnet**) 서브넷)
+    - 각 부하 분산 장치에 대 한 백 엔드 풀을 만듭니다. 연결 된 클러스터 노드를 추가 합니다.
+    - 포트 59999 상태 프로브를 만듭니다.
+    - 부하 분산 규칙을 만듭니다. 설정 된 부동 IP를 사용 하 여 HA 포트를 허용 합니다. 
    
-   부하 분산 장치에 대 한 정적 개인 IP 주소로 클러스터 IP 주소를 제공 합니다.
-   - azlbr2 => Frontend IP: 10.3.0.101 (가상 네트워크에서 사용 되지 않는 IP 주소 선택 (**az2az Vnet**) 서브넷)
-   - 각 부하 분산 장치에 대 한 백 엔드 풀을 만듭니다. 연결 된 클러스터 노드를 추가 합니다.
-   - 포트 59999 상태 프로브를 만듭니다.
-   - 부하 분산 규칙을 만듭니다. 설정 된 부동 IP를 사용 하 여 HA 포트를 허용 합니다. 
+    부하 분산 장치에 대 한 정적 개인 IP 주소로 클러스터 IP 주소를 제공 합니다.
+    - azlbr2 => Frontend IP: 10.3.0.101 (가상 네트워크에서 사용 되지 않는 IP 주소 선택 (**az2az Vnet**) 서브넷)
+    - 각 부하 분산 장치에 대 한 백 엔드 풀을 만듭니다. 연결 된 클러스터 노드를 추가 합니다.
+    - 포트 59999 상태 프로브를 만듭니다.
+    - 부하 분산 규칙을 만듭니다. 설정 된 부동 IP를 사용 하 여 HA 포트를 허용 합니다. 
    
 12. 각 클러스터 노드에서 포트 59999 (상태 프로브)을 엽니다. 
    
     각 노드에서 다음 명령을 실행 합니다.
-```PowerShell
-netsh advfirewall firewall add rule name=PROBEPORT dir=in protocol=tcp action=allow localport=59999 remoteip=any profile=any 
-```   
-13. 클러스터 포트 59999에서 상태 프로브 메시지를 수신 하 고 현재이 리소스를 소유 하는 노드에서 응답을 지시 합니다. 한 번 실행 한 각 클러스터에 대 한 클러스터의 노드에서 합니다. 
+    ```PowerShell
+    netsh advfirewall firewall add rule name=PROBEPORT dir=in protocol=tcp action=allow localport=59999 remoteip=any profile=any 
+    ```   
+13. 클러스터 포트 59999에서 상태 프로브 메시지를 수신 하 고 현재이 리소스를 소유 하는 노드에서 응답을 지시 합니다. 
+    한 번 실행 한 각 클러스터에 대 한 클러스터의 노드에서 합니다. 
     
     예제에서는 "ILBIP" 구성 값에 따라 변경 해야 합니다. 다음 명령을 실행 하는 모든 노드에서 **az2az1**/**az2az2**:
 
@@ -113,16 +115,16 @@ netsh advfirewall firewall add rule name=PROBEPORT dir=in protocol=tcp action=al
     [int]$ProbePort = 59999
     Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";”ProbeFailureThreshold”=5;"EnableDhcp"=0}  
     ```   
-   두 클러스터를 연결 / 서로 통신할 수 있는지 확인 합니다. 
+    두 클러스터를 연결 / 서로 통신할 수 있는지 확인 합니다. 
 
-   하거나 장애 조치 클러스터 관리자에서 "클러스터에 연결" 기능을 사용 하 여 다른 클러스터에 연결 하거나 현재 클러스터의 노드 중 하나에서 다른 클러스터의 응답을 확인 합니다.  
+    하거나 장애 조치 클러스터 관리자에서 "클러스터에 연결" 기능을 사용 하 여 다른 클러스터에 연결 하거나 현재 클러스터의 노드 중 하나에서 다른 클러스터의 응답을 확인 합니다.  
    
-   ```PowerShell
+    ```PowerShell
      Get-Cluster -Name SRAZC1 (ran from az2az3)
-   ```
-   ```PowerShell
+    ```
+    ```PowerShell
      Get-Cluster -Name SRAZC2 (ran from az2az1)
-   ```   
+    ```   
 
 15. 두 클러스터 모두에 대 한 클라우드 미러링 모니터 서버를 만듭니다. 2 개를 만든 [저장소 계정](https://ms.portal.azure.com/#create/Microsoft.StorageAccount-ARM) (**az2azcw**를 **az2azcw2**)는 동일한 리소스 그룹의 각 클러스터에 대 한 azure에서 (**SR AZ2AZ**).
 
@@ -135,25 +137,25 @@ netsh advfirewall firewall add rule name=PROBEPORT dir=in protocol=tcp action=al
 
 18. 클러스터 간 저장소 복제본을 구성 합니다.
    
-   양쪽 방향에서 다른 클러스터에 하나의 클러스터에서 액세스를 부여 합니다.
+    양쪽 방향에서 다른 클러스터에 하나의 클러스터에서 액세스를 부여 합니다.
 
-   예제:
+    예제:
 
-   ```PowerShell
+    ```PowerShell
       Grant-SRAccess -ComputerName az2az1 -Cluster SRAZC2
-   ```
-또한이 명령을 실행 하는 Windows Server 2016 사용 하는 경우:
+    ```
+    또한이 명령을 실행 하는 Windows Server 2016 사용 하는 경우:
 
-   ```PowerShell
+    ```PowerShell
       Grant-SRAccess -ComputerName az2az3 -Cluster SRAZC1
-   ```   
+    ```   
    
 19. 클러스터에 대해 SRPartnership를 만듭니다.</ol>
 
- - 클러스터에 대 한 **SRAZC1**합니다.
-   - 볼륨 위치:-c:\ClusterStorage\DataDisk1
-   - 로그 위치:-g:
- - 클러스터에 대 한 **SRAZC2**
+    - 클러스터에 대 한 **SRAZC1**합니다.
+    - 볼륨 위치:-c:\ClusterStorage\DataDisk1
+    - 로그 위치:-g:
+    - 클러스터에 대 한 **SRAZC2**
     - 볼륨 위치:-c:\ClusterStorage\DataDisk2
     - 로그 위치:-g:
 

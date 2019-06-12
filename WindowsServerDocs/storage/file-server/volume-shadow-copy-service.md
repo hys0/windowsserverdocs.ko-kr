@@ -6,12 +6,12 @@ ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: 7b61a0494b8a63168b40bfaed42dedf0fff40c35
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d67f15d65feb28fb05fc056fd3c34c04cee80d09
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59887264"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447759"
 ---
 # <a name="volume-shadow-copy-service"></a>볼륨 섀도 복사본 서비스
 
@@ -97,7 +97,7 @@ Windows 기능 및 VSS를 사용 하는 응용 프로그램에는 다음과 같�
 > 섀도 복사본을 만드는 기록기 공급자 섀도 복사본을 커밋 하도록 10 초 보다 더 오래 걸릴 경우 60 초 보다 오랫동안 고정 상태로 유지 되 면 중단 될 수 있습니다. 
 <br>
 
-9.  요청자에 게 (1 단계로 다시 이동) 하는 프로세스를 다시 시도할 수 있습니다 하거나 나중에 다시 시도 관리자에 게 알립니다.  
+9. 요청자에 게 (1 단계로 다시 이동) 하는 프로세스를 다시 시도할 수 있습니다 하거나 나중에 다시 시도 관리자에 게 알립니다.  
       
 10. 섀도 복사본을 정상적으로 작성 하는 경우 볼륨 섀도 복사본 서비스 요청자에 게 섀도 복사본 위치 정보를 반환 합니다. 일부 경우에 섀도 복사본을 일시적으로 사용할 수 있습니다 읽기-쓰기 볼륨으로는 VSS 및 하나 이상의 응용 프로그램이 섀도 복사본이 완료 되기 전에 섀도 복사본의 콘텐츠를 변경할 수 있도록 합니다. VSS 및 응용 프로그램 변경 작업을 후 읽기 전용 섀도 복사본이 만들어집니다. 이 단계는 자동 복구 라고 하 고 트랜잭션 실행을 취소 모든 응용 프로그램 또는 파일 시스템 섀도 복사본 볼륨의 섀도 복사본이 만들어지기 전에 완료 되지 않은 데 사용 됩니다.  
       
@@ -376,12 +376,12 @@ VSS는 전체 볼륨의 섀도 복사본을 만들도록 설계 되었습니다.
 
 > [!NOTE]
 > 합니다 <STRONG>FilesNotToSnapshot</STRONG> 레지스트리 키만 응용 프로그램에서 사용할 것입니다. 사용 하려고 하는 사용자는 다음과 같은 제한 사항이 발생 합니다.
-<br>
-<UL>
-<LI>이전 버전 기능을 사용 하 여 Windows 서버에 만들어진 섀도 복사본에서 파일을 삭제할 수 없습니다 것입니다.<BR><BR>
-<LI>공유 폴더의 섀도 복사본에서 파일을 삭제할 수 없습니다 것입니다.<BR><BR>
-<LI>사용 하 여 생성 된 섀도 복사본에서 파일을 삭제할 수 있습니다 합니다 [Diskshadow](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/diskshadow) 유틸리티를 하지만 사용 하 여 생성 된 섀도 복사본에서 파일을 삭제할 수 없습니다는 [Vssadmin](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/vssadmin) 유틸리티입니다.<BR><BR>
-<LI>최상의 노력을 기준으로 섀도 복사본에서 파일이 삭제 됩니다. 이 삭제 되지 않습니다 보장 되는 것을 의미 합니다.<BR><BR></LI></UL>
+> <br>
+> <UL>
+> <LI>이전 버전 기능을 사용 하 여 Windows 서버에 만들어진 섀도 복사본에서 파일을 삭제할 수 없습니다 것입니다.<BR><BR>
+> <LI>공유 폴더의 섀도 복사본에서 파일을 삭제할 수 없습니다 것입니다.<BR><BR>
+> <LI>사용 하 여 생성 된 섀도 복사본에서 파일을 삭제할 수 있습니다 합니다 <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/diskshadow" data-raw-source="[Diskshadow](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/diskshadow)">Diskshadow</a> 유틸리티를 하지만 사용 하 여 생성 된 섀도 복사본에서 파일을 삭제할 수 없습니다는 <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/vssadmin" data-raw-source="[Vssadmin](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/vssadmin)">Vssadmin</a> 유틸리티입니다.<BR><BR>
+> <LI>최상의 노력을 기준으로 섀도 복사본에서 파일이 삭제 됩니다. 이 삭제 되지 않습니다 보장 되는 것을 의미 합니다.<BR><BR></LI></UL>
 
 
 자세한 내용은 [섀도 복사본에서 파일 제외](http://go.microsoft.com/fwlink/?linkid=180904) (http://go.microsoft.com/fwlink/?LinkId=180904) MSDN에서.

@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: 796825c3-5e3e-4745-a921-25ab90b95ede
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: e8a9324e7c5b72f60422b1263e76c7d5e14cccf4
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 2d1661d43cd45614dfabc66fd9a737c55ab388ed
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59880974"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446926"
 ---
 # <a name="step-13-test-directaccess-connectivity-from-behind-a-nat-device"></a>13 NAT 장치 뒤에서 DirectAccess 연결 테스트 단계
 
@@ -39,55 +39,55 @@ DirectAccess 클라이언트는 NAT 장치 또는 웹 프록시 서버 뒤에서
   
 ## <a name="TeredoCLIENT1"></a>Teredo 연결 테스트  
   
-1.  CLIENT1에서 관리자 권한 Windows PowerShell 창을 엽니다.  
+1. CLIENT1에서 관리자 권한 Windows PowerShell 창을 엽니다.  
   
-2.  Teredo 어댑터 사용 유형 **netsh 인터페이스 teredo 설정 상태 enterpriseclient**, 한 다음 ENTER를 누릅니다.  
+2. Teredo 어댑터 사용 유형 **netsh 인터페이스 teredo 설정 상태 enterpriseclient**, 한 다음 ENTER를 누릅니다.  
   
-3.  Windows PowerShell 창에서 입력 **ipconfig /all** ENTER 키를 누릅니다.  
+3. Windows PowerShell 창에서 입력 **ipconfig /all** ENTER 키를 누릅니다.  
   
-4.  ipconfig 명령의 출력을 검사합니다.  
+4. ipconfig 명령의 출력을 검사합니다.  
   
-    이제 이 컴퓨터가 NAT 장치 뒤에서 인터넷에 연결되고 프라이빗 IPv4 주소가 할당됩니다. DirectAccess 클라이언트가 NAT 장치 뒤에 있고 프라이빗 IPv4 주소가 할당된 경우 기본 설정 IPv6 전환 기술은 Teredo입니다. Ipconfig 명령의 출력을 보면 경우 터널 어댑터 Teredo 터널링 의사 (pseudo) 인터페이스에 대 한 섹션을 한 다음 설명을 Microsoft Teredo 터널링 어댑터는 Teredo와 일치 하도록 2001:0로 시작 하는 IP 주소를 사용 하 여 표시 됩니다. 주소입니다. Teredo 터널 어댑터에 대해 나열 된 기본 게이트웨이 다시 표시 ': '.  
+   이제 이 컴퓨터가 NAT 장치 뒤에서 인터넷에 연결되고 프라이빗 IPv4 주소가 할당됩니다. DirectAccess 클라이언트가 NAT 장치 뒤에 있고 프라이빗 IPv4 주소가 할당된 경우 기본 설정 IPv6 전환 기술은 Teredo입니다. Ipconfig 명령의 출력을 보면 경우 터널 어댑터 Teredo 터널링 의사 (pseudo) 인터페이스에 대 한 섹션을 한 다음 설명을 Microsoft Teredo 터널링 어댑터는 Teredo와 일치 하도록 2001:0로 시작 하는 IP 주소를 사용 하 여 표시 됩니다. 주소입니다. Teredo 터널 어댑터에 대해 나열 된 기본 게이트웨이 다시 표시 ': '.  
   
-5.  Windows PowerShell 창에서 입력 **ipconfig /flushdns** ENTER 키를 누릅니다.  
+5. Windows PowerShell 창에서 입력 **ipconfig /flushdns** ENTER 키를 누릅니다.  
   
-    그러면 클라이언트 컴퓨터가 인터넷에 연결된 이후 클라이언트 DNS 캐시에 남아 있을 수 있는 이름 확인 항목이 플러시됩니다.  
+   그러면 클라이언트 컴퓨터가 인터넷에 연결된 이후 클라이언트 DNS 캐시에 남아 있을 수 있는 이름 확인 항목이 플러시됩니다.  
   
-6.  Windows PowerShell 창에서 입력 **ping app1** ENTER 키를 누릅니다. IPv6 주소 APP1, 2001:db8:1::3의 응답이 표시됩니다.  
+6. Windows PowerShell 창에서 입력 **ping app1** ENTER 키를 누릅니다. IPv6 주소 APP1, 2001:db8:1::3의 응답이 표시됩니다.  
   
-7.  Windows PowerShell 창에서 입력 **ping app2** ENTER 키를 누릅니다. EDGE1에서 app2에 fd에이 경우에 할당 한 NAT64 주소에 대 한 회신 나타납니다**c9:9f4e:eb1b**: 7777::a00:4 합니다. 굵게 표시 된 값은 달라 지는 인해 주소 생성 되는 방식을 참고 합니다.  
+7. Windows PowerShell 창에서 입력 **ping app2** ENTER 키를 누릅니다. EDGE1에서 app2에 fd에이 경우에 할당 한 NAT64 주소에 대 한 회신 나타납니다**c9:9f4e:eb1b**: 7777::a00:4 합니다. 굵게 표시 된 값은 달라 지는 인해 주소 생성 되는 방식을 참고 합니다.  
   
-8.  Windows PowerShell 창에서 입력 **ping app1 2** ENTER 키를 누릅니다. 2-APP1 2001:db8:2::3의 IPv6 주소에 대 한 회신에 표시 됩니다.  
+8. Windows PowerShell 창에서 입력 **ping app1 2** ENTER 키를 누릅니다. 2-APP1 2001:db8:2::3의 IPv6 주소에 대 한 회신에 표시 됩니다.  
   
 9. Internet Explorer 주소 표시줄에 Internet Explorer를 열고를 입력 **https://2-app1/** ENTER 키를 누릅니다. 2-APP1에서 기본 IIS 웹 사이트가 표시 됩니다.  
   
 10. Internet Explorer 주소 표시줄에 입력 **https://app2/** ENTER 키를 누릅니다. APP2의 기본 IIS 웹 사이트가 표시됩니다.  
   
-11. 에 **시작** 화면에서 입력 **\\\App2\Files**, 한 다음 ENTER를 누릅니다. 새 텍스트 문서 파일을 두 번 클릭합니다. 이는 SMB를 사용하여 IPv4 전용 호스트의 리소스를 가져오는 IPv4 전용 서버에 연결할 수 있음을 보여 줍니다.  
+11. 에 **시작** 화면에서 입력<strong>\\\App2\Files</strong>, 한 다음 ENTER를 누릅니다. 새 텍스트 문서 파일을 두 번 클릭합니다. 이는 SMB를 사용하여 IPv4 전용 호스트의 리소스를 가져오는 IPv4 전용 서버에 연결할 수 있음을 보여 줍니다.  
   
 12. CLIENT2에서이 절차를 반복 합니다.  
   
 ## <a name="IPHTTPS_CLIENT1"></a>IP-HTTPS 연결 테스트  
   
-1.  CLIENT1에서 열고 관리자 권한 Windows PowerShell 창을 **netsh 인터페이스 teredo 사용 하지 않도록 설정 하는 상태를 설정할** ENTER 키를 누릅니다. 그러면 클라이언트 컴퓨터에서 Teredo가 사용하지 않도록 설정되고, 자체적으로 IP-HTTPS를 사용하도록 구성할 수 있게 됩니다. 명령이 완료되면 **확인** 응답이 나타납니다.  
+1. CLIENT1에서 열고 관리자 권한 Windows PowerShell 창을 **netsh 인터페이스 teredo 사용 하지 않도록 설정 하는 상태를 설정할** ENTER 키를 누릅니다. 그러면 클라이언트 컴퓨터에서 Teredo가 사용하지 않도록 설정되고, 자체적으로 IP-HTTPS를 사용하도록 구성할 수 있게 됩니다. 명령이 완료되면 **확인** 응답이 나타납니다.  
   
-2.  Windows PowerShell 창에서 입력 **ipconfig /all** ENTER 키를 누릅니다.  
+2. Windows PowerShell 창에서 입력 **ipconfig /all** ENTER 키를 누릅니다.  
   
-3.  ipconfig 명령의 출력을 검사합니다. 이제 이 컴퓨터가 NAT 장치 뒤에서 인터넷에 연결되고 프라이빗 IPv4 주소가 할당됩니다. Teredo가 사용하지 않도록 설정되고 DirectAccess 클라이언트가 IP-HTTPS로 대체합니다. 2001:db8:1:1000 또는 2001:db8:2:2000 된 접두사를 기반으로 하는 IP-HTTPS 주소와 일치를 사용 하 여 시작 하는 IP 주소를 사용 하 여 터널 어댑터 iphttpsinterface는 섹션을 참조 하세요 ipconfig 명령의 출력을 보면 DirectAccess를 설정할 때 구성 됩니다. IPHTTPSInterface 터널 어댑터에 대해 나열 된 기본 게이트웨이 표시 되지 않습니다.  
+3. ipconfig 명령의 출력을 검사합니다. 이제 이 컴퓨터가 NAT 장치 뒤에서 인터넷에 연결되고 프라이빗 IPv4 주소가 할당됩니다. Teredo가 사용하지 않도록 설정되고 DirectAccess 클라이언트가 IP-HTTPS로 대체합니다. 2001:db8:1:1000 또는 2001:db8:2:2000 된 접두사를 기반으로 하는 IP-HTTPS 주소와 일치를 사용 하 여 시작 하는 IP 주소를 사용 하 여 터널 어댑터 iphttpsinterface는 섹션을 참조 하세요 ipconfig 명령의 출력을 보면 DirectAccess를 설정할 때 구성 됩니다. IPHTTPSInterface 터널 어댑터에 대해 나열 된 기본 게이트웨이 표시 되지 않습니다.  
   
-4.  Windows PowerShell 창에서 입력 **ipconfig /flushdns** ENTER 키를 누릅니다. 그러면 클라이언트 컴퓨터가 corpnet에 연결된 이후 클라이언트 DNS 캐시에 남아 있을 수 있는 이름 확인 항목이 플러시됩니다.  
+4. Windows PowerShell 창에서 입력 **ipconfig /flushdns** ENTER 키를 누릅니다. 그러면 클라이언트 컴퓨터가 corpnet에 연결된 이후 클라이언트 DNS 캐시에 남아 있을 수 있는 이름 확인 항목이 플러시됩니다.  
   
-5.  Windows PowerShell 창에서 입력 **ping app1** ENTER 키를 누릅니다. IPv6 주소 APP1, 2001:db8:1::3의 응답이 표시됩니다.  
+5. Windows PowerShell 창에서 입력 **ping app1** ENTER 키를 누릅니다. IPv6 주소 APP1, 2001:db8:1::3의 응답이 표시됩니다.  
   
-6.  Windows PowerShell 창에서 입력 **ping app2** ENTER 키를 누릅니다. EDGE1에서 app2에 fd에이 경우에 할당 한 NAT64 주소에 대 한 회신 나타납니다**c9:9f4e:eb1b**: 7777::a00:4 합니다. 굵게 표시 된 값은 달라 지는 인해 주소 생성 되는 방식을 참고 합니다.  
+6. Windows PowerShell 창에서 입력 **ping app2** ENTER 키를 누릅니다. EDGE1에서 app2에 fd에이 경우에 할당 한 NAT64 주소에 대 한 회신 나타납니다**c9:9f4e:eb1b**: 7777::a00:4 합니다. 굵게 표시 된 값은 달라 지는 인해 주소 생성 되는 방식을 참고 합니다.  
   
-7.  Windows PowerShell 창에서 입력 **ping app1 2** ENTER 키를 누릅니다. 2-APP1 2001:db8:2::3의 IPv6 주소에 대 한 회신에 표시 됩니다.  
+7. Windows PowerShell 창에서 입력 **ping app1 2** ENTER 키를 누릅니다. 2-APP1 2001:db8:2::3의 IPv6 주소에 대 한 회신에 표시 됩니다.  
   
-8.  Internet Explorer 주소 표시줄에 Internet Explorer를 열고를 입력 **https://2-app1/** ENTER 키를 누릅니다. 2-APP1에서 기본 IIS 웹 사이트가 표시 됩니다.  
+8. Internet Explorer 주소 표시줄에 Internet Explorer를 열고를 입력 **https://2-app1/** ENTER 키를 누릅니다. 2-APP1에서 기본 IIS 웹 사이트가 표시 됩니다.  
   
 9. Internet Explorer 주소 표시줄에 입력 **https://app2/** ENTER 키를 누릅니다. APP2의 기본 IIS 웹 사이트가 표시됩니다.  
   
-10. 에 **시작** 화면에서 입력 **\\\App2\Files**, 한 다음 ENTER를 누릅니다. 새 텍스트 문서 파일을 두 번 클릭합니다. 이는 SMB를 사용하여 IPv4 전용 호스트의 리소스를 가져오는 IPv4 전용 서버에 연결할 수 있음을 보여 줍니다.  
+10. 에 **시작** 화면에서 입력<strong>\\\App2\Files</strong>, 한 다음 ENTER를 누릅니다. 새 텍스트 문서 파일을 두 번 클릭합니다. 이는 SMB를 사용하여 IPv4 전용 호스트의 리소스를 가져오는 IPv4 전용 서버에 연결할 수 있음을 보여 줍니다.  
   
 11. CLIENT2에서이 절차를 반복 합니다.  
   

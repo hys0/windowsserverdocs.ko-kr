@@ -8,12 +8,12 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 769a4165cfd82056a904c79c41e96fb666d05e43
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 2d4cdcd11e0eb334064ddefec0eda775ffccff2c
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59842274"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446474"
 ---
 # <a name="deploy-server-certificates-for-8021x-wired-and-wireless-deployments"></a>802.1 X 유선 및 무선 배포용 서버 인증서 배포
 
@@ -66,8 +66,8 @@ ms.locfileid: "59842274"
 이 가이드에서는 Windows Server 2016의 AD CS 및 웹 서버 (IIS) 서버 역할을 사용 하 여 서버 인증서를 배포 하는 방법을 설명 합니다. 이 가이드의 절차를 수행 하기 위한 필수 구성 요소는 다음과가 같습니다.  
 
 - Windows Server 2016 핵심 네트워크 가이드를 사용 하 여 핵심 네트워크를 배포 해야 하거나 설치 하 고 네트워크에서 제대로 작동 하는 핵심 네트워크 가이드에서 제공 하는 기술을 이미 있어야 합니다. 이러한 기술은 다음과 TCP/IP v4, DHCP, Active Directory 도메인 서비스 (AD DS), DNS 및 NPS 합니다.  
->[!NOTE]
->Windows Server 2016 핵심 네트워크 가이드는 Windows Server 2016 기술 라이브러리에서 사용할 수 있습니다. 자세한 내용은 참조 [핵심 네트워크 가이드](../../../core-network-guide/Core-Network-Guide.md)합니다.
+  >[!NOTE]
+  >Windows Server 2016 핵심 네트워크 가이드는 Windows Server 2016 기술 라이브러리에서 사용할 수 있습니다. 자세한 내용은 참조 [핵심 네트워크 가이드](../../../core-network-guide/Core-Network-Guide.md)합니다.
 
 - 배포를 수행 하기 전에이 배포에 대 한 준비가 되도록이 가이드의 계획 섹션을 참조 해야 합니다.  
 - 이 가이드에 소개 된 순서에 단계를 수행 해야 합니다. 실패 하는 서버 또는 배포를 배포 하는 단계를 수행 하지 않고 CA 배포을 이동 하지 않고 있습니다.  

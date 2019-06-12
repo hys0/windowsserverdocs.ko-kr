@@ -12,12 +12,12 @@ ms.assetid: 599d6438-a506-4d57-a0ea-1eb7ec19f46e
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: 8973302fc8a0c6bdb5b19f9296e711dcc6465589
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: cc535934705878c7f2b7fdc4e655ab5c853e4f96
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59826804"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66443535"
 ---
 # <a name="manage-nano-server"></a>Nano 서버 관리
 
@@ -39,8 +39,8 @@ Nano 서버는 원격으로 관리됩니다. 로컬 로그온 기능이 전혀 �
 ## <a name="using-windows-powershell-remoting"></a>Windows PowerShell 원격 기능 사용  
 Windows PowerShell 원격 기능으로 Nano 서버를 관리하려면 관리 컴퓨터의 신뢰할 수 있는 호스트 목록에 Nano 서버의 IP 주소를 추가하고, 사용하는 계정을 Nano 서버의 관리자에 추가하고, 해당 기능을 사용할 생각이라면 CredSSP를 사용하도록 설정해야 합니다.  
 
- >[!NOTE]  
-    > Nano Server를 추가 해서는 안 경우 대상 Nano 서버와 관리 컴퓨터가 동일한 AD DS 포리스트 (또는 트러스트 관계가 있는 포리스트)-신뢰할 수 있는 호스트 목록에 수 연결한 Nano 서버에 정규화 된 도메인 이름을 사용 하 여 예를 들어: PS C:\> Enter-pssession-ComputerName nanoserver.contoso.com-Credential (Get-credential)
+> [!NOTE]
+> Nano Server를 추가 해서는 안 경우 대상 Nano 서버와 관리 컴퓨터가 동일한 AD DS 포리스트 (또는 트러스트 관계가 있는 포리스트)-신뢰할 수 있는 호스트 목록에 수 연결한 Nano 서버에 정규화 된 도메인 이름을 사용 하 여 예를 들어: PS C:\> Enter-pssession-ComputerName nanoserver.contoso.com-Credential (Get-credential)
   
   
 신뢰할 수 있는 호스트 목록에 Nano 서버를 추가하려면 관리자 권한 Windows PowerShell 명령 프롬프트에서 이 명령을 실행 합니다.  
@@ -51,7 +51,7 @@ Windows PowerShell 원격 기능으로 Nano 서버를 관리하려면 관리 컴
   
   
 ```  
-$ip = "\<IP address of Nano Server>"  
+$ip = "<IP address of Nano Server>"  
 $user = "$ip\Administrator"  
 Enter-PSSession -ComputerName $ip -Credential $user  
 ```  
@@ -72,7 +72,7 @@ Windows PowerShell 프롬프트에서 다음 명령을 실행하여 CIM 세션�
   
 ```  
 $ip = "<IP address of the Nano Server\>"  
-$ip\Administrator  
+$user = $ip\Administrator  
 $cim = New-CimSession -Credential $user -ComputerName $ip  
 ```  
   
@@ -89,15 +89,17 @@ Get-CimInstance -CimSession $Cim -Query "SELECT * from Win32_Process WHERE name 
 ## <a name="windows-remote-management"></a>Windows 원격 관리  
 WinRM(Windows Remote Management)을 사용하여 Nano 서버에서 원격으로 프로그램을 실행할 수 있습니다. WinRM을 사용하려면 먼저 관리자 권한 명령 프롬프트에서 다음 명령을 실행하여 코드 페이지를 설정합니다.  
   
-**winrm quickconfig**  
-  
-**winrm 설정 winrm/config/client @{TrustedHosts = "< Nano 서버의 ip 주소"}**  
-  
-**chcp 65001**  
+```
+winrm quickconfig
+winrm set winrm/config/client @{TrustedHosts="<ip address of Nano Server>"}
+chcp 65001
+```
   
 이제 Nano 서버에서 원격으로 명령을 실행할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
-  
-**winrs-r:\<Nano 서버의 IP 주소 >-u: 관리자-p:\<Nano 서버 관리자 암호 > ipconfig**  
+
+```
+winrs -r:<IP address of Nano Server> -u:Administrator -p:<Nano Server administrator password> ipconfig
+```
   
 Windows Remote Management에 대한 자세한 내용은 [WinRM(Windows 원격 관리) 개요](https://technet.microsoft.com/library/dn265971.aspx)를 참조하세요.  
    
@@ -115,7 +117,7 @@ Stop-NetEventSession [-Name]
 ```  
 이러한 cmdlet은 [Windows PowerShell의 네트워크 이벤트 패킷 캡처 Cmdlet](https://technet.microsoft.com/library/dn268520(v=wps.630).aspx)에 자세히 설명되어 있습니다.  
 
-##<a name="installing-servicing-packages"></a>서비스 패키지 설치  
+## <a name="installing-servicing-packages"></a>서비스 패키지 설치  
 서비스 패키지를 설치하려면 -ServicingPackagePath 매개 변수를 사용합니다(경로 배열을 .cab 파일에 전달할 수 있음).  
   
 `New-NanoServerImage -DeploymentType Guest -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -ServicingPackagePath \\path\to\kb123456.cab`  
@@ -134,7 +136,7 @@ C 드라이브의 볼륨은 OS
       C:\KB3157663_expanded의 디렉터리  
    
       2016/04/19  오후 01:17    \<DIR>          .  
-      2016/04/19  오후 01:17    \<DIR>          ..  
+      2016/04/19  오후 01:17    \<DIR&gt;          .  
         2016/04/17  오전 12:31               517 Windows10.0-KB3157663-x64-pkgProperties.txt  
 2016/04/17  오전 12:30 AM        93,886,347 Windows10.0-KB3157663-x64.cab  
 2016/04/17  오전 12:31               454 Windows10.0-KB3157663-x64.xml  

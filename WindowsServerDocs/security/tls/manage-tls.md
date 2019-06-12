@@ -12,12 +12,12 @@ author: justinha
 ms.author: justinha
 manager: brianlic-msft
 ms.date: 05/16/2018
-ms.openlocfilehash: 8053a14a74797cccce4c441d41f1f1623ba0ad6e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 872647f09898bf8ae08ee69f28b717d28abf7c78
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59879444"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447298"
 ---
 # <a name="manage-transport-layer-security-tls"></a>전송 계층 보안 (TLS)를 관리 합니다.
 
@@ -39,22 +39,22 @@ TLS 암호화 그룹 순서 변경 내용이 다음 부팅 시 적용 됩니다.
 
 기본 TLS 암호화 그룹 순서를 구성 하는 SSL 암호화 제품군 순서 그룹 정책 설정을 사용할 수 있습니다.
 
-1.  그룹 정책 관리 콘솔에서 이동할 **컴퓨터 구성** > **관리 템플릿** > **네트워크**  >  **SSL 구성 설정을**합니다.
-2.  두 번 클릭 **SSL 암호 도구 모음 순서**를 클릭 하 고는 **Enabled** 옵션.
-3.  마우스 오른쪽 단추로 클릭 **SSL 암호 도구 모음** 선택한 상자 **모두 선택** 팝업 메뉴에서.
+1. 그룹 정책 관리 콘솔에서 이동할 **컴퓨터 구성** > **관리 템플릿** > **네트워크**  >  **SSL 구성 설정을**합니다.
+2. 두 번 클릭 **SSL 암호 도구 모음 순서**를 클릭 하 고는 **Enabled** 옵션.
+3. 마우스 오른쪽 단추로 클릭 **SSL 암호 도구 모음** 선택한 상자 **모두 선택** 팝업 메뉴에서.
 
-    ![그룹 정책 설정](../media/Transport-Layer-Security-protocol/ssl-cipher-suite-order-gp-setting.png)
+   ![그룹 정책 설정](../media/Transport-Layer-Security-protocol/ssl-cipher-suite-order-gp-setting.png)
 
-4.  선택한 텍스트를 마우스 오른쪽 단추로 클릭 **복사** 팝업 메뉴에서.
-5.  Notepad.exe와 새 암호화 제품군 순서 목록 사용 하 여 업데이트와 같은 텍스트 편집기에 텍스트를 붙여 넣습니다.
+4. 선택한 텍스트를 마우스 오른쪽 단추로 클릭 **복사** 팝업 메뉴에서.
+5. Notepad.exe와 새 암호화 제품군 순서 목록 사용 하 여 업데이트와 같은 텍스트 편집기에 텍스트를 붙여 넣습니다.
 
-    > [!NOTE]
-    > TLS 암호화 suite 순서 목록에서 엄격한 쉼표로 구분 된 형식 이어야 합니다. 각 암호화 suite 문자열의 오른쪽에 쉼표 (,)를 사용 하 여 종료 됩니다. 
+   > [!NOTE]
+   > TLS 암호화 suite 순서 목록에서 엄격한 쉼표로 구분 된 형식 이어야 합니다. 각 암호화 suite 문자열의 오른쪽에 쉼표 (,)를 사용 하 여 종료 됩니다. 
+   > 
+   > 또한 암호화 그룹 목록은 1,023 자로 제한 됩니다.
 
-    > 또한 암호화 그룹 목록은 1,023 자로 제한 됩니다.
-
-6.  목록 대체는 **SSL 암호 그룹** 업데이트 된 정렬 된 목록을 사용 하 여 합니다.
-7.  클릭 **확인** 또는 **적용**합니다.
+6. 목록 대체는 **SSL 암호 그룹** 업데이트 된 정렬 된 목록을 사용 하 여 합니다.
+7. 클릭 **확인** 또는 **적용**합니다.
 
 ### <a name="configuring-tls-cipher-suite-order-by-using-mdm"></a>MDM을 사용 하 여 TLS 암호화 그룹 순서를 구성
 

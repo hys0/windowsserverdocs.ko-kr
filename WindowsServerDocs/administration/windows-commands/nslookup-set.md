@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 08a9fad482930d353eff1c09923155a510791c9a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 99ac8736ca8223a1a444784c4cf605a973a9e4dd
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59818434"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66436545"
 ---
 # <a name="nslookup-set"></a>nslookup set
 
@@ -30,11 +30,13 @@ ms.locfileid: "59818434"
 set <KeyWord>[=<Value>]
 ```
 ## <a name="parameters"></a>매개 변수
-|매개 변수|설명|
-|-------|--------|
-|<KeyWord>|파생 된 하위를 식별 하는 **설정** 하위 명령입니다. 예를 들어 하위 **set d2** 의 키워드에 [**없는**]**d2**합니다. 파생 된 하위 목록은 합니다 **설정** 하위 명령을 추가 참조를 참조 하세요.|
-|<Value>|각 하위 명령에 대 한 nslookup 구성 설정 값을 지정합니다.|
-|{도움말 및 #124;?}|간단한 요약이 표시 되며 **nslookup** 하위 명령입니다.|
+
+|    매개 변수    |                                                                                                                    설명                                                                                                                    |
+|-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    <KeyWord>    | 파생 된 하위를 식별 하는 **설정** 하위 명령입니다. 예를 들어 하위 **set d2** 의 키워드에 [**없는**]**d2**합니다. 파생 된 하위 목록은 합니다 **설정** 하위 명령을 추가 참조를 참조 하세요. |
+|     <Value>     |                                                                                      각 하위 명령에 대 한 nslookup 구성 설정 값을 지정합니다.                                                                                      |
+| {도움말 및 #124;?} |                                                                                               간단한 요약이 표시 되며 **nslookup** 하위 명령입니다.                                                                                               |
+
 ## <a name="remarks"></a>설명
 사용 하 여 **모두 설정** 현재 설정 목록을 볼 수 있습니다.
 ## <a name="additional-references"></a>추가 참조

@@ -13,12 +13,12 @@ ms.assetid: 73bff8ba-939d-40d8-b1e5-3ba3ed5439c3
 ms.author: pashort
 author: shortpatti
 ms.date: 08/23/2018
-ms.openlocfilehash: 55847bfbc0362887497514009f6efe1312d79906
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4d53c4bcbe1f37f532f2861d5669201959a9f091
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59819354"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446673"
 ---
 # <a name="configure-the-software-load-balancer-for-load-balancing-and-network-address-translation-nat"></a>부하 분산 및 NAT(Network Address Translation)에 대한 소프트웨어 부하 분산 장치 구성
 
@@ -109,22 +109,22 @@ SDN 소프트웨어 부하 분산 장치 \(SLB\) 응용 프로그램에 고가�
     $LoadBalancerProperties.Probes += $Probe
    ```
 
-5.  부하 분산 프런트 엔드 IP를 백 엔드 ip에 도착 하는 트래픽을 전송 하는 규칙을 정의 합니다.  이 예제에서는 백 엔드 풀에 포트 80에 TCP 트래픽을 받습니다.<p>부하 분산 규칙을 정의 하려면 다음 예제를 사용 합니다.
+5. 부하 분산 프런트 엔드 IP를 백 엔드 ip에 도착 하는 트래픽을 전송 하는 규칙을 정의 합니다.  이 예제에서는 백 엔드 풀에 포트 80에 TCP 트래픽을 받습니다.<p>부하 분산 규칙을 정의 하려면 다음 예제를 사용 합니다.
 
    ```PowerShell
-    $Rule = new-object Microsoft.Windows.NetworkController.LoadBalancingRule
-    $Rule.ResourceId = "webserver1"
+   $Rule = new-object Microsoft.Windows.NetworkController.LoadBalancingRule
+   $Rule.ResourceId = "webserver1"
 
-    $Rule.Properties = new-object Microsoft.Windows.NetworkController.LoadBalancingRuleProperties
-    $Rule.Properties.FrontEndIPConfigurations += $FrontEndIPConfig
-    $Rule.Properties.backendaddresspool = $BackEndAddressPool 
-    $Rule.Properties.protocol = "TCP"
-    $Rule.Properties.FrontEndPort = 80
-    $Rule.Properties.BackEndPort = 80
-    $Rule.Properties.IdleTimeoutInMinutes = 4
-    $Rule.Properties.Probe = $Probe
+   $Rule.Properties = new-object Microsoft.Windows.NetworkController.LoadBalancingRuleProperties
+   $Rule.Properties.FrontEndIPConfigurations += $FrontEndIPConfig
+   $Rule.Properties.backendaddresspool = $BackEndAddressPool 
+   $Rule.Properties.protocol = "TCP"
+   $Rule.Properties.FrontEndPort = 80
+   $Rule.Properties.BackEndPort = 80
+   $Rule.Properties.IdleTimeoutInMinutes = 4
+   $Rule.Properties.Probe = $Probe
 
-    $LoadBalancerProperties.loadbalancingRules += $Rule
+   $LoadBalancerProperties.loadbalancingRules += $Rule
    ```
 
 6. 네트워크 컨트롤러에 부하 분산 장치 구성을 추가 합니다.<p>네트워크 컨트롤러에 부하 분산 장치 구성을 추가 하려면 다음 예제를 사용 합니다.
@@ -205,7 +205,7 @@ SDN 소프트웨어 부하 분산 장치 \(SLB\) 응용 프로그램에 고가�
    ```PowerShell
    $lbresourceid = "LB2"
    $lb = get-networkcontrollerloadbalancer -connectionuri $uri -resourceID $LBResourceId -PassInnerException
-  ```
+   ```
 
 2. 네트워크 인터페이스를 가져와 loadbalancerbackendaddresspools 배열 backendaddress 풀을 추가 합니다.
 
@@ -280,17 +280,17 @@ VIP 및 DIP를 정의 하는 경우 동일한 서브넷으로 다음 같습니�
     PreviousIpConfiguration  :
    ```
  
-1. PublicIPAddress 네트워크 인터페이스에 할당 합니다.
+3. PublicIPAddress 네트워크 인터페이스에 할당 합니다.
 
    ```PowerShell
    $nic = get-networkcontrollernetworkinterface  -connectionuri $uri -resourceid 6daca142-7d94-0000-1111-c38c0141be06
    $nic.properties.IpConfigurations[0].Properties.PublicIPAddress = $publicIP
    New-NetworkControllerNetworkInterface -ConnectionUri $uri -ResourceId $nic.ResourceId -Properties $nic.properties -PassInnerException
    ```
-## <a name="example-remove-a-publicip-address-that-is-being-used-for-forwarding-traffic-and-return-it-to-the-vip-pool"></a>예: 트래픽 전달 되는 PublicIP 주소를 제거 하 고 VIP 풀으로 반환
-이 예제에서는 이전 예제를 통해 만든 PublicIPAddress 리소스를 제거 합니다.  PublicIPAddress에 대 한 참조는 네트워크 인터페이스에서 자동으로 제거 됩니다 PublicIPAddress 제거 되 면 전달 되는 트래픽이 중지 됩니다 및 IP 주소 다시 사용 하기 위해 공용 VIP 풀으로 반환 됩니다.  
+   ## <a name="example-remove-a-publicip-address-that-is-being-used-for-forwarding-traffic-and-return-it-to-the-vip-pool"></a>예: 트래픽 전달 되는 PublicIP 주소를 제거 하 고 VIP 풀으로 반환
+   이 예제에서는 이전 예제를 통해 만든 PublicIPAddress 리소스를 제거 합니다.  PublicIPAddress에 대 한 참조는 네트워크 인터페이스에서 자동으로 제거 됩니다 PublicIPAddress 제거 되 면 전달 되는 트래픽이 중지 됩니다 및 IP 주소 다시 사용 하기 위해 공용 VIP 풀으로 반환 됩니다.  
 
-1. PublicIP를 제거 합니다.
+4. PublicIP를 제거 합니다.
 
    ```PowerShell
    Remove-NetworkControllerPublicIPAddress -ConnectionURI $uri -ResourceId "MyPIP"

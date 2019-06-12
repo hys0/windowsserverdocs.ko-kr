@@ -13,12 +13,12 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: 77700eb5f82ea36cd484e80bd59b9296e1290177
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a9c00d65ad1c59e91f4011ab932bf9f921957c59
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59851174"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446152"
 ---
 # <a name="switch-between-modes"></a>모드 간 전환
 다중 포인트 관리자를 다양 한 유형의 MultiPoint 서비스 시스템 관리를 수행할 수 있도록 다음과 같은 모드 포함 됩니다.  
@@ -27,9 +27,9 @@ ms.locfileid: "59851174"
   
 -   *콘솔 모드*: MultiPoint 서비스 시스템 콘솔 모드의 경우 설치 하 및 소프트웨어 및 드라이버를 업데이트 하거나 다른 유지 관리 작업을 수행할 수 있습니다. 시스템이 콘솔 모드이면 다른 컴퓨터 사용자가 *스테이션*을 사용할 수 없습니다. 이러한 스테이션 다중 포인트 관리자에 표시 되지 않습니다. 서버에 직접 연결 하는 모든 모니터는이 컴퓨터 시스템의 표시로 처리 됩니다.   
   
-> [!NOTE]  
+> [!NOTE]
 > 서버의 설정에서 기본값을 변경하여 시스템이 콘솔 모드에서 시작하도록 강제할 수 있습니다.  
-## <a name="to-switch-from-station-mode-to-console-mode"></a>스테이션 모드에서 콘솔 모드로 전환하려면  
+> ## <a name="to-switch-from-station-mode-to-console-mode"></a>스테이션 모드에서 콘솔 모드로 전환하려면  
   
 1.  스테이션 모드의 다중 포인트 관리자를 열고 클릭는 **홈** 탭 합니다.  
   
@@ -46,4 +46,4 @@ ms.locfileid: "59851174"
 3.  아래 *컴퓨터 이름* **태스크**, 클릭 **스테이션 모드로 전환**합니다. 컴퓨터가 다시 시작되고 모든 스테이션이 사용할 수 있게 됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
-[다중 포인트 관리자를 사용 하 여 시스템 작업 관리](Manage-System-Tasks-Using-MultiPoint-Manager.md)
+[MultiPoint 관리자를 사용하여 시스템 작업 관리](Manage-System-Tasks-Using-MultiPoint-Manager.md)

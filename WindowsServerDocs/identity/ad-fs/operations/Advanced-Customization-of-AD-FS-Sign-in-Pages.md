@@ -9,12 +9,12 @@ ms.date: 01/16/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 73ff3fc6df872edd29735ee96c0918144250d5f1
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: ee7bef2afe61500fe75b2d3c61b92b902f9757fa
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66190044"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66444265"
 ---
 # <a name="advanced-customization-of-ad-fs-sign-in-pages"></a>AD FS 로그인 페이지의 고급 사용자 지정
 
@@ -104,33 +104,33 @@ if (loginMessage)
 ```  
   
 ### <a name="example-2-accept-sam-account-name-as-a-login-format-on-an-ad-fs-form-based-sign-in-page"></a>예제 2: 수락 SAM\-AD FS 폼에서 로그인 형식으로 계정 이름을\-기반 sign\-페이지에서  
-기본 AD FS 폼\-기반 sign\-페이지에서 사용자 계정 이름의 로그인 형식을 지원 \(Upn\) \(예를 들어 **johndoe@contoso.com** \) 또는 도메인 sam 한정\-계정 이름 \( **contoso\\johndoe** 하거나 **contoso.com\\johndoe**\)합니다. 경우에 동일한 도메인에서 가져와야 하는 모든 사용자가 sam만 알고\-sam 하를 사용 하 여 사용자에 서명할 수 있는 시나리오를 지원 하려는 계정 이름,\-계정 이름만 있습니다. 이 시나리오를 지원 하려면 사용 하려는 도메인을 사용 하 여 도메인 "contoso.com" 예에서 아래 바꾸기만 onload.js에 다음 코드를 추가할 수 있습니다.  
+기본 AD FS 폼\-기반 sign\-페이지에서 사용자 계정 이름의 로그인 형식을 지원 \(Upn\) \(예를 들어 <strong>johndoe@contoso.com</strong> \) 또는 도메인 sam 한정\-계정 이름 \( **contoso\\johndoe** 하거나 **contoso.com\\johndoe**\)합니다. 경우에 동일한 도메인에서 가져와야 하는 모든 사용자가 sam만 알고\-sam 하를 사용 하 여 사용자에 서명할 수 있는 시나리오를 지원 하려는 계정 이름,\-계정 이름만 있습니다. 이 시나리오를 지원 하려면 사용 하려는 도메인을 사용 하 여 도메인 "contoso.com" 예에서 아래 바꾸기만 onload.js에 다음 코드를 추가할 수 있습니다.  
   
 ```  
 if (typeof Login != 'undefined'){  
-    Login.submitLoginRequest = function () {   
-    var u = new InputUtil();  
-    var e = new LoginErrors();  
-    var userName = document.getElementById(Login.userNameInput);  
-    var password = document.getElementById(Login.passwordInput);  
-    if (userName.value && !userName.value.match('[@\\\\]'))   
-    {  
-        var userNameValue = 'contoso.com\\' + userName.value;  
-        document.forms['loginForm'].UserName.value = userNameValue;  
-    }  
+    Login.submitLoginRequest = function () {   
+    var u = new InputUtil();  
+    var e = new LoginErrors();  
+    var userName = document.getElementById(Login.userNameInput);  
+    var password = document.getElementById(Login.passwordInput);  
+    if (userName.value && !userName.value.match('[@\\\\]'))   
+    {  
+        var userNameValue = 'contoso.com\\' + userName.value;  
+        document.forms['loginForm'].UserName.value = userNameValue;  
+    }  
   
-    if (!userName.value) {  
-       u.setError(userName, e.userNameFormatError);  
-       return false;  
-    }  
+    if (!userName.value) {  
+       u.setError(userName, e.userNameFormatError);  
+       return false;  
+    }  
   
-    if (!password.value)   
-    {  
-        u.setError(password, e.passwordEmpty);  
-        return false;  
-    }  
-    document.forms['loginForm'].submit();  
-    return false;  
+    if (!password.value)   
+    {  
+        u.setError(password, e.passwordEmpty);  
+        return false;  
+    }  
+    document.forms['loginForm'].submit();  
+    return false;  
 };  
 }  
   

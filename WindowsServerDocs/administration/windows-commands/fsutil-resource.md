@@ -9,12 +9,12 @@ ms.technology: storage
 audience: IT Pro
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: b55063c3c5ea41b43573e6322b5efb36d2dad90e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 38b0947171b7fd8afc44a95b2244a3fd2a0c9e73
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59828334"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66439042"
 ---
 # <a name="fsutil-resource"></a>Fsutil 리소스
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows 2008, Windows Vista
@@ -42,31 +42,30 @@ fsutil resource [setconsistent] <RmRootPathname>
 fsutil resource [setlog] [growth {<Containers> containers|<Percent> percent} <RmRootPathname>] [maxextents <Containers> <RmRootPathname>] [minextents <Containers> <RmRootPathname>] [mode {full|undo} <RmRootPathname>] [rename <RmRootPathname>] [shrink <percent> <RmRootPathname>] [size <Containers> <RmRootPathname>]
 fsutil resource [start] <RmRootPathname> [<RmLogPathname> <TmLogPathname>
 fsutil resource [stop] <RmRootPathname>
-
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|-------------|---------------|
-|만들기|보조 트랜잭션 리소스 관리자를 만듭니다.|
-|<RmRootPathname>|트랜잭션 리소스 관리자 루트 디렉터리 전체 경로 지정합니다.|
-|정보|지정 된 트랜잭션 리소스 관리자 정보를 표시합니다.|
-|setautoreset|기본 트랜잭션 리소스 관리자의 다음 탑재 트랜잭션 메타 데이터를 정리 합니다 있는지 여부를 지정 합니다.<br /><br />-설정 된 **setautoreset** 매개 변수를 **true** 지정할 트랜잭션 리소스 관리자가 기본적으로 다음 탑재 트랜잭션 메타 데이터를 정리 합니다.<br />-설정 된 **setautoreset** 매개 변수를 **false** 지정 기본적으로 트랜잭션 리소스 관리자의 다음 탑재 트랜잭션 메타 데이터 정리 되지 것입니다.|
-|<DefaultRmRootPathname>|드라이브 이름 뒤에 콜론을 지정 합니다.|
-|setavailable|트랜잭션 리소스 관리자를 일관성 보다 가용성을 선호를 지정 합니다.|
-|setconsistent|트랜잭션 리소스 관리자 일관성 가용성 보다를 선호를 지정 합니다.|
-|setlog|트랜잭션 리소스 관리자를 이미 실행 되 고 특성을 변경 합니다.|
-|증가|트랜잭션 리소스 관리자 로그가 증가할 수 있는 크기를 지정 합니다.<br /><br />증가 매개 변수는 다음과 같이 지정할 수 있습니다.<br /><br />-형식을 사용 하 여 컨테이너의 수: *컨테이너***컨테이너**<br />-   형식을 사용 하 여 백분율: *Percent***percent**|
-|<containers>|트랜잭션 리소스 관리자에서 사용 되는 데이터 개체를 지정 합니다.|
-|maxextent|컨테이너의 최대 수에 대 한 지정된 된 트랜잭션 리소스 관리자를 지정합니다.|
-|minextent|컨테이너의 최소 수에 대 한 지정된 된 트랜잭션 리소스 관리자를 지정합니다.|
-|{전체 &#124; 실행 취소} 모드|모든 트랜잭션을 기록할지 여부를 지정 합니다 ( **전체**) 또는 롤백 이벤트가 기록 됩니다 (**실행 취소**).|
-|이름 바꾸기|트랜잭션 리소스 관리자에 대 한 GUID를 변경합니다.|
-|축소|트랜잭션 리소스 관리자 로그 자동으로 줄일 수 있는 백분율을 지정 합니다.|
-|크기|트랜잭션 리소스 관리자의 크기를 지정된 된 수로 지정 *컨테이너*합니다.|
-|start|지정된 된 트랜잭션 리소스 관리자를 시작합니다.|
-|stop|지정된 된 트랜잭션 리소스 관리자를 중지합니다.|
+|        매개 변수        |                                                                                                                                                                                                                                        설명                                                                                                                                                                                                                                         |
+|-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|         만들기          |                                                                                                                                                                                                                    보조 트랜잭션 리소스 관리자를 만듭니다.                                                                                                                                                                                                                     |
+|    <RmRootPathname>     |                                                                                                                                                                                                        트랜잭션 리소스 관리자 루트 디렉터리 전체 경로 지정합니다.                                                                                                                                                                                                         |
+|          정보           |                                                                                                                                                                                                            지정 된 트랜잭션 리소스 관리자 정보를 표시합니다.                                                                                                                                                                                                            |
+|      setautoreset       | 기본 트랜잭션 리소스 관리자의 다음 탑재 트랜잭션 메타 데이터를 정리 합니다 있는지 여부를 지정 합니다.<br /><br />-설정 된 **setautoreset** 매개 변수를 **true** 지정할 트랜잭션 리소스 관리자가 기본적으로 다음 탑재 트랜잭션 메타 데이터를 정리 합니다.<br />-설정 된 **setautoreset** 매개 변수를 **false** 지정 기본적으로 트랜잭션 리소스 관리자의 다음 탑재 트랜잭션 메타 데이터 정리 되지 것입니다. |
+| <DefaultRmRootPathname> |                                                                                                                                                                                                                       드라이브 이름 뒤에 콜론을 지정 합니다.                                                                                                                                                                                                                        |
+|      setavailable       |                                                                                                                                                                                                 트랜잭션 리소스 관리자를 일관성 보다 가용성을 선호를 지정 합니다.                                                                                                                                                                                                 |
+|      setconsistent      |                                                                                                                                                                                                 트랜잭션 리소스 관리자 일관성 가용성 보다를 선호를 지정 합니다.                                                                                                                                                                                                 |
+|         setlog          |                                                                                                                                                                                                  트랜잭션 리소스 관리자를 이미 실행 되 고 특성을 변경 합니다.                                                                                                                                                                                                  |
+|         증가          |                                                                                                  트랜잭션 리소스 관리자 로그가 증가할 수 있는 크기를 지정 합니다.<br /><br />증가 매개 변수는 다음과 같이 지정할 수 있습니다.<br /><br />-형식을 사용 하 여 컨테이너의 수: *컨테이너***컨테이너**<br />-   형식을 사용 하 여 백분율: *Percent***percent**                                                                                                   |
+|      <containers>       |                                                                                                                                                                                                      트랜잭션 리소스 관리자에서 사용 되는 데이터 개체를 지정 합니다.                                                                                                                                                                                                       |
+|        maxextent        |                                                                                                                                                                                                컨테이너의 최대 수에 대 한 지정된 된 트랜잭션 리소스 관리자를 지정합니다.                                                                                                                                                                                                |
+|        minextent        |                                                                                                                                                                                                컨테이너의 최소 수에 대 한 지정된 된 트랜잭션 리소스 관리자를 지정합니다.                                                                                                                                                                                                |
+|  {전체 & #124; 실행 취소} 모드  |                                                                                                                                                                                        모든 트랜잭션을 기록할지 여부를 지정 합니다 ( **전체**) 또는 롤백 이벤트가 기록 됩니다 (**실행 취소**).                                                                                                                                                                                         |
+|         이름 바꾸기          |                                                                                                                                                                                                                  트랜잭션 리소스 관리자에 대 한 GUID를 변경합니다.                                                                                                                                                                                                                  |
+|         축소          |                                                                                                                                                                                              트랜잭션 리소스 관리자 로그 자동으로 줄일 수 있는 백분율을 지정 합니다.                                                                                                                                                                                              |
+|          크기           |                                                                                                                                                                                              트랜잭션 리소스 관리자의 크기를 지정된 된 수로 지정 *컨테이너*합니다.                                                                                                                                                                                               |
+|          start          |                                                                                                                                                                                                                    지정된 된 트랜잭션 리소스 관리자를 시작합니다.                                                                                                                                                                                                                    |
+|          stop           |                                                                                                                                                                                                                    지정된 된 트랜잭션 리소스 관리자를 중지합니다.                                                                                                                                                                                                                     |
 
 ### <a name="BKMK_examples"></a>예제
 에 대 한 트랜잭션 리소스 관리자의 다섯 가지 컨테이너 자동 증가 하도록 c:\test에 지정 된 로그를 설정 하려면 다음을 입력 합니다.

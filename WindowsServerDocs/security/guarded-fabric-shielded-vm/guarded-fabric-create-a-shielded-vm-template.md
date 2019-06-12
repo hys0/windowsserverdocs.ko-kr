@@ -8,12 +8,12 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 01/29/2019
-ms.openlocfilehash: e00322186ea34784048366bf17881af742cb4444
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d9f07d2e6e93d4f8d198c2fc3b62c28c940bdefb
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59853694"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447513"
 ---
 # <a name="create-a-windows-shielded-vm-template-disk"></a>Windows 보호 된 VM 템플릿 디스크 만들기
 
@@ -27,7 +27,7 @@ ms.locfileid: "59853694"
 
 먼저 보호 된 템플릿 디스크 만들기 마법사를 통해 실행할 다음 OS 디스크를 준비 합니다. 이 디스크를 OS 디스크로 테 넌 트의 Vm에서 사용 됩니다. 이 디스크와 같은 Microsoft 데스크톱 이미지 서비스 관리자 (DISM)을 만들고 또는 수동으로 빈 VHDX 사용 하 여 VM을 설정 하 고 해당 디스크에 OS 설치에 모든 기존 도구를 사용할 수 있습니다. 디스크를 설정할 때 2 세대에 따라 다릅니다 및/또는 보호 된 Vm는 다음 요구 사항을 준수 해야 합니다. 
 
-| VHDX에 대 한 요구 사항 | 이유 |
+| VHDX에 대 한 요구 사항 | Reason |
 |-----------|----|
 |GUID 파티션 테이블 (GPT) 디스크 여야 합니다. | UEFI를 지 원하는 2 세대 가상 컴퓨터에 필요한|
 |디스크 유형 이어야 합니다 **기본적인** 반대인 **동적**합니다. <br>참고: 이 "동적 확장" VHDX 기능이 아니라 Hyper-v에서 지 원하는 논리 디스크 형식을 가리킵니다. | BitLocker는 동적 디스크를 지원 하지 않습니다.|
@@ -102,7 +102,7 @@ VMM을 사용 하는 경우 템플릿 디스크를 VMM에서 보호 된 VM 템�
 
     b. 디스크를 마우스 오른쪽 단추로 누른 **속성**합니다.
 
-    다. 에 대 한 **운영 체제**목록을 확장 하 고 디스크에 설치 된 운영 체제를 선택 합니다. 운영 체제를 선택 하면 나타냅니다를 VMM에 VHDX 비어 있지 않음.
+    c. 에 대 한 **운영 체제**목록을 확장 하 고 디스크에 설치 된 운영 체제를 선택 합니다. 운영 체제를 선택 하면 나타냅니다를 VMM에 VHDX 비어 있지 않음.
 
     d. 속성을 업데이트한 경우 **확인**을 클릭합니다.
 
@@ -163,10 +163,10 @@ Save-VolumeSignatureCatalog -TemplateDiskPath 'C:\temp\MyLinuxTemplate.vhdx' -Vo
 
 ## <a name="next-step"></a>다음 단계
 
->[!div class="nextstepaction"]
-[실딩 데이터 파일을 만들려면](guarded-fabric-tenant-creates-shielding-data.md)
+> [!div class="nextstepaction"]
+> [실딩 데이터 파일을 만들려면](guarded-fabric-tenant-creates-shielding-data.md)
 
 ## <a name="see-also"></a>참조
 
 - [보호 된 호스트 및 차폐 Vm 호스팅 서비스 공급자 구성 단계](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
-- [보호 된 패브릭 및 보호 된 Vm](guarded-fabric-and-shielded-vms-top-node.md)
+- [보호된 패브릭 및 보호된 VM](guarded-fabric-and-shielded-vms-top-node.md)

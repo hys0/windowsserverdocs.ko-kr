@@ -8,12 +8,12 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 02/05/2019
-ms.openlocfilehash: 6b67208176b426f52d3c5106f8de09ad334d3b01
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 87878eba785c0e1cc50454a74b2af4a159e88e12
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59829534"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66443665"
 ---
 # <a name="confirm-guarded-hosts-can-attest"></a>보호 된 호스트 증명할 수 확인 
 
@@ -52,16 +52,16 @@ ms.locfileid: "59829534"
         Get-HgsTrace -RunDiagnostics -Detailed
 
     > [!IMPORTANT]
-    > Windows Server 2019 또는 Windows 10 버전 1809 사용 하는 코드 무결성 정책을 사용 하는 경우 `Get-HgsTrace` 에 대 한 오류를 반환할 수 있습니다 합니다 **코드 무결성 정책 Active** 진단 합니다.
+    > Windows Server 2019 또는 Windows 10 버전 1809 사용 하는 코드 무결성 정책을 사용 하는 경우 `Get-HgsTrace` 에 대 한 오류를 반환 합니다 **코드 무결성 정책 Active** 진단 합니다.
     > 이 결과 실패 한 진단 하는 것이 상태일 때에 안전 하 게 무시할 수 있습니다.
 
 ## <a name="next-step"></a>다음 단계
 
->[!div class="nextstepaction"]
-[보호 된 Vm 배포](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
+> [!div class="nextstepaction"]
+> [보호된 VM 배포](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 
 ## <a name="see-also"></a>참조
 
 - [호스트 보호 서비스 (HGS) 배포](guarded-fabric-deploying-hgs-overview.md)
-- [보호 된 Vm 배포](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
+- [보호된 VM 배포](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 

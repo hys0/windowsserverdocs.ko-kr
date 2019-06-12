@@ -9,12 +9,12 @@ ms.topic: article
 author: chrishuybregts
 ms.author: chrihu
 ms.assetid: 67a01889-fa36-4bc6-841d-363d76df6a66
-ms.openlocfilehash: 9e9a36df39c7bd7a96cc8c5681e83bf263ee5f8e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6c528535fd34f57957a37992843933d4cd9f8824
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59833874"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447874"
 ---
 # <a name="deploy-graphics-devices-using-discrete-device-assignment"></a>불연속 장치 할당을 사용 하 여 그래픽 장치를 배포 합니다.
 
@@ -42,19 +42,19 @@ Set-VM -Name VMName -AutomaticStopAction TurnOff
 
 일부 하드웨어에서 VM을 특정 방식으로 구성 된 경우 성능은 향상.  하드웨어에 대 한 다음과 같은 구성이 필요 여부에 대 한 내용은 하세요 하드웨어 공급 업체에 연락 합니다. 추가 세부 정보에서 확인할 수 있습니다 [불연속 장치 할당을 사용 하 여 배포 장치에 대 한 계획](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md) 이 고 [블로그 게시물.](https://blogs.technet.microsoft.com/virtualization/2015/11/23/discrete-device-assignment-gpus/)
 
-1.  CPU에서 쓰기 조합 사용
-```
-Set-VM -GuestControlledCacheTypes $true -VMName VMName
-```
-2.  32 비트 MMIO 공간 구성
-```
-Set-VM -LowMemoryMappedIoSpace 3Gb -VMName VMName
-```
-3.  32 비트 MMIO 공간 보다 큰 구성
-```
-Set-VM -HighMemoryMappedIoSpace 33280Mb -VMName VMName
-```
-Note 위의 MMIO 공간 값은 단일 GPU를 사용 하 여 실험에 대해 설정할 적절 한 값입니다.  VM을 시작한 후 장치는 리소스가 부족와 관련 된 오류를 보고, 이러한 값을 수정 해야 가능성이 높습니다.  또한 여러 Gpu를 할당 하는 경우에 이러한 값을 증가 해야 합니다.
+1. CPU에서 쓰기 조합 사용
+   ```
+   Set-VM -GuestControlledCacheTypes $true -VMName VMName
+   ```
+2. 32 비트 MMIO 공간 구성
+   ```
+   Set-VM -LowMemoryMappedIoSpace 3Gb -VMName VMName
+   ```
+3. 32 비트 MMIO 공간 보다 큰 구성
+   ```
+   Set-VM -HighMemoryMappedIoSpace 33280Mb -VMName VMName
+   ```
+   Note 위의 MMIO 공간 값은 단일 GPU를 사용 하 여 실험에 대해 설정할 적절 한 값입니다.  VM을 시작한 후 장치는 리소스가 부족와 관련 된 오류를 보고, 이러한 값을 수정 해야 가능성이 높습니다.  또한 여러 Gpu를 할당 하는 경우에 이러한 값을 증가 해야 합니다.
 
 ## <a name="dismount-the-device-from-the-host-partition"></a>호스트 파티션에에서 장치를 분리 합니다.
 ### <a name="optional---install-the-partitioning-driver"></a>선택 사항-분할 드라이버 설치
@@ -69,14 +69,14 @@ PCI 위치 경로 호스트에서 장치를 탑재 및 분리 해야 합니다. 
 
 ### <a name="dismount-the-device"></a>장치를 분리 합니다.
 에 따라 경우 공급 업체 완화 드라이버를 제공 하거나 해야 사용 하는 "-강제로" 여부 옵션입니다.
--   완화 드라이버가 설치 된 경우
-```
-Dismount-VMHostAssignableDevice -LocationPath $locationPath
-```
--   완화 드라이버가 설치 되지 않은 경우
-```
-Dismount-VMHostAssignableDevice -force -LocationPath $locationPath
-```
+- 완화 드라이버가 설치 된 경우
+  ```
+  Dismount-VMHostAssignableDevice -LocationPath $locationPath
+  ```
+- 완화 드라이버가 설치 되지 않은 경우
+  ```
+  Dismount-VMHostAssignableDevice -force -LocationPath $locationPath
+  ```
 
 ## <a name="assigning-the-device-to-the-guest-vm"></a>게스트 VM에 장치 할당
 마지막 단계 하기가 Hyper-v VM을 장치에 액세스할 수 있어야 한다는 것입니다.  위에서 찾은 위치 경로 외에도 vm의 이름을 확인 해야 합니다.

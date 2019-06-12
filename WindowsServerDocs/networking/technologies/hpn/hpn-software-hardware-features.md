@@ -9,12 +9,12 @@ manager: dougkim
 ms.author: pashort
 author: shortpatti
 ms.date: 09/12/2018
-ms.openlocfilehash: a58d1e14dc8f543f25ef241f2a65054599136031
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 98857a5a6d665728c1aab2a6a2df64997d4166b0
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59817394"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446218"
 ---
 # <a name="software-and-hardware-sh-integrated-features-and-technologies"></a>SH(소프트웨어 및 하드웨어) 통합 기능 및 기술
 
@@ -51,11 +51,12 @@ DCB에 대 한 Windows Server 우선 순위 기반 흐름 제어 PFC (), IEEE 80
 
 ## <a name="hyper-v-network-virtualization"></a>Hyper-V 네트워크 가상화
 
-| | |
-|---|---|
-| **v1 (HNVv1)**             | Windows Server 2012에 도입 된, Hyper-v 네트워크 가상화 (HNV) 고객 네트워크 공유, 실제 네트워크 인프라의 가상화를 사용 합니다. 실제 네트워크 패브릭에서 필요한 최소한의 변화를 통해 HNV를 통해 서비스 공급자 배포 하 고 세 개의 클라우드에 걸쳐 아무 곳 이나 테 넌 트 작업을 마이그레이션하는 민첩성과: 서비스 공급자 클라우드, 프라이빗 클라우드 또는 Microsoft Azure 공용 클라우드입니다.                                         |
+|                            |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|       **v1 (HNVv1)**       |                     Windows Server 2012에 도입 된, Hyper-v 네트워크 가상화 (HNV) 고객 네트워크 공유, 실제 네트워크 인프라의 가상화를 사용 합니다. 실제 네트워크 패브릭에서 필요한 최소한의 변화를 통해 HNV를 통해 서비스 공급자 배포 하 고 세 개의 클라우드에 걸쳐 아무 곳 이나 테 넌 트 작업을 마이그레이션하는 민첩성과: 서비스 공급자 클라우드, 프라이빗 클라우드 또는 Microsoft Azure 공용 클라우드입니다.                     |
 | **v2 NVGRE (HNVv2 NVGRE)** | Microsoft는 Windows Server 2016 및 System Center Virtual Machine Manager RAS 게이트웨이, 소프트웨어 부하 분산, 네트워크 컨트롤러 등을 포함 하는 종단 간 네트워크 가상화 솔루션을 제공 합니다. 자세한 내용은 [Windows Server 2016에서 Hyper-v 네트워크 가상화 개요](https://technet.microsoft.com/windows-server-docs/networking/sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-overview-windows-server)합니다. |
-| **v2 VxLAN (HNVv2 VxLAN)** | Windows Server 2016의 SDN-하는 확장을 통해 네트워크 컨트롤러 관리의 일부가입니다.    |
+| **v2 VxLAN (HNVv2 VxLAN)** |                                                                                                                                                                                        Windows Server 2016의 SDN-하는 확장을 통해 네트워크 컨트롤러 관리의 일부가입니다.                                                                                                                                                                                        |
+
 ---
 
 ## <a name="ipsec-task-offload-ipsecto"></a>IPsec 작업 오프 로드 (IPsecTO) 

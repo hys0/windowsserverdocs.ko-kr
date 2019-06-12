@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: f034c2eeafe9d52569e8181bbbb2e582b1059d51
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 7e6e1c97ccc903ca3aff558354941e6a84d3fb79
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66188863"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66444739"
 ---
 # <a name="walkthrough-guide-manage-risk-with-conditional-access-control"></a>연습 가이드: 조건부 액세스 제어를 사용한 위험 관리
 
@@ -57,7 +57,7 @@ ms.locfileid: "66188863"
 
 #### <a name="to-verify-the-default-ad-fs-access-control-mechanism"></a>기본 AD FS 액세스 제어 메커니즘을 확인하려면
 
-1.  클라이언트 컴퓨터에서 브라우저 창을 열고 샘플 응용 프로그램으로 이동 합니다. **https://webserv1.contoso.com/claimapp**합니다.
+1.  클라이언트 컴퓨터에서 브라우저 창을 열고 샘플 응용 프로그램으로 이동 합니다. **https://webserv1.contoso.com/claimapp** 합니다.
 
     이 작업을 수행하면 요청이 자동으로 페더레이션 서버로 리디렉션되고 사용자 이름과 암호를 사용하여 로그인하라는 메시지가 표시됩니다.
 
@@ -97,14 +97,18 @@ AD FS 관리 콘솔 또는 Windows PowerShell을 통해 이 작업을 완료할 
 1.  페더레이션 서버에서 Windows PowerShell 명령 창을 열고 다음 명령을 실행합니다.
 
 
-    `$rp = Get-AdfsRelyingPartyTrust -Name claimapp`
+~~~
+`$rp = Get-AdfsRelyingPartyTrust -Name claimapp`
+~~~
 
 
-2.  동일한 Windows PowerShell 명령 창에서 다음 명령을 실행합니다.
+2. 동일한 Windows PowerShell 명령 창에서 다음 명령을 실행합니다.
 
 
-    `$GroupAuthzRule = '@RuleTemplate = "Authorization" @RuleName = "Foo" c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value =~ "^(?i)<group_SID>$"] =>issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = "DenyUsersWithClaim");'
-    Set-AdfsRelyingPartyTrust -TargetRelyingParty $rp -IssuanceAuthorizationRules $GroupAuthzRule`
+~~~
+`$GroupAuthzRule = '@RuleTemplate = "Authorization" @RuleName = "Foo" c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value =~ "^(?i)<group_SID>$"] =>issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = "DenyUsersWithClaim");'
+Set-AdfsRelyingPartyTrust -TargetRelyingParty $rp -IssuanceAuthorizationRules $GroupAuthzRule`
+~~~
 
 > [!NOTE]
 > <group_SID>를 AD **Finance** 그룹의 SID 값으로 바꿔야 합니다.
