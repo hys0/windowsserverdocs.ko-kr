@@ -8,12 +8,12 @@ ms.date: 09/07/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 270fb6efd63e6355c410ee45d09e6fd16b14222b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2380060894ff2f365451bbabfd41b8aa7e6792a0
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59867994"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66445288"
 ---
 # <a name="compound-authentication-and-ad-ds-claims-in-ad-fs"></a>AD FS의 복합 인증 및 AD DS 클레임
 Windows Server 2012는 복합 인증을 도입 하 여 Kerberos 인증을 강화 합니다.  복합 인증을 사용 하면 두 개의 id를 포함 하는 Kerberos 티켓 부여 서비스 (TGS) 요청: 
@@ -87,21 +87,21 @@ Set-AdfsGlobalAuthenticationPolicy -PrimaryIntranetAuthenticationProvider 'Windo
 >SQL 기반 팜에서 팜의 멤버인 모든 AD FS 서버에서 PowerShell 명령을 실행할 수 있습니다.
 
 ### <a name="step-5--add-the-claim-description-to-ad-fs"></a>5단계:  AD fs 클레임 설명 추가
-1.  팜에 클레임 설명을 추가 합니다. 이 클레임 설명은 2012 R2 ADFS에서에서 기본적으로 제공 되지 않으며 수동으로 추가 해야 하는 경우.
-2.  AD FS 관리에서 아래의 **서비스**를 마우스 오른쪽 단추로 클릭 **클레임 설명** 선택한 **클레임 설명 추가**
-3.  클레임 설명에 다음 정보를 입력 합니다.
-    - 표시 이름: ' Windows 장치 그룹 ' 
-    - Claim Description: 'https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsdevicegroup' `
+1. 팜에 클레임 설명을 추가 합니다. 이 클레임 설명은 2012 R2 ADFS에서에서 기본적으로 제공 되지 않으며 수동으로 추가 해야 하는 경우.
+2. AD FS 관리에서 아래의 **서비스**를 마우스 오른쪽 단추로 클릭 **클레임 설명** 선택한 **클레임 설명 추가**
+3. 클레임 설명에 다음 정보를 입력 합니다.
+   - 표시 이름: ' Windows 장치 그룹 ' 
+   - Claim Description: '<https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsdevicegroup>' `
 4. 두 상자에 확인란을 선택 합니다.
 5. **확인**을 클릭합니다.
 
 ![클레임 설명](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc6.png)
 
 6. 사용할 수 있습니다 하는 PowerShell을 사용 하 여 **추가 AdfsClaimDescription** cmdlet.
-``` powershell
-Add-AdfsClaimDescription -Name 'Windows device group' -ClaimType 'https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsdevicegroup' `
--ShortName 'windowsdevicegroup' -IsAccepted $true -IsOffered $true -IsRequired $false -Notes 'The windows group SID of the device' 
-```
+   ``` powershell
+   Add-AdfsClaimDescription -Name 'Windows device group' -ClaimType 'https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsdevicegroup' `
+   -ShortName 'windowsdevicegroup' -IsAccepted $true -IsOffered $true -IsRequired $false -Notes 'The windows group SID of the device' 
+   ```
 
 
 >[!NOTE]
@@ -118,7 +118,7 @@ Add-AdfsClaimDescription -Name 'Windows device group' -ClaimType 'https://schema
 ``` powershell
 Set-ADServiceAccount -Identity “ADFS Service Account” -CompoundIdentitySupported:$true 
 ```
-2.  ADFS 서비스를 다시 시작 합니다.
+2. ADFS 서비스를 다시 시작 합니다.
 
 >[!NOTE]
 >'CompoundIdentitySupported' 다음 오류 – 새 (2016 년 2012R2) 서버 실패에 동일한 gMSA의 true 이면 설치로 설정 되 면 **Install-adserviceaccount: 서비스 계정을 설치할 수 없습니다. 오류 메시지: ' 제공 된 컨텍스트 대상과 일치 하지 않았습니다.'** .
@@ -137,15 +137,15 @@ CompoundIdentitySupported 않도록 설정 했다가 다시 활성화 한 다음
 ![클레임 설명](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc7.png)
 
 ### <a name="step-8-on-the-relying-party-where-the-windowsdevicegroup-claims-are-expected-add-a-similar-pass-through-or-transform-claim-rule"></a>8단계: 'WindowsDeviceGroup' 클레임은 필요한 신뢰 당사자에서 유사한 '통과' 또는 '변환' 클레임 규칙을 추가 합니다.
-2.  **AD FS 관리**, 클릭 **신뢰 당사자 트러스트** 하 고 오른쪽 창에서 마우스 오른쪽 단추 클릭 선택 고 RP **클레임 규칙 편집**.
-3.  에 **발급 변환 규칙** 클릭 **규칙 추가**합니다.
-4.  에 **변환 클레임 규칙 추가 마법사** 선택 **통과 또는 들어오는 클레임 필터링** 누릅니다 **다음**합니다.
-5.  표시 이름을 추가 하 고 선택 **Windows 장치 그룹** 에서 합니다 **들어오는 클레임 유형** 드롭 다운 합니다.
-6.  **마침**을 클릭합니다.  클릭 **적용** 하 고 **확인**합니다.
-![클레임 설명](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc8.png)
+2. **AD FS 관리**, 클릭 **신뢰 당사자 트러스트** 하 고 오른쪽 창에서 마우스 오른쪽 단추 클릭 선택 고 RP **클레임 규칙 편집**.
+3. 에 **발급 변환 규칙** 클릭 **규칙 추가**합니다.
+4. 에 **변환 클레임 규칙 추가 마법사** 선택 **통과 또는 들어오는 클레임 필터링** 누릅니다 **다음**합니다.
+5. 표시 이름을 추가 하 고 선택 **Windows 장치 그룹** 에서 합니다 **들어오는 클레임 유형** 드롭 다운 합니다.
+6. **마침**을 클릭합니다.  클릭 **적용** 하 고 **확인**합니다.
+   ![클레임 설명](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc8.png)
 
 
-##<a name="steps-for-configuring-ad-fs-in-windows-server-2016"></a>Windows Server 2016에서 AD FS를 구성 하는 단계
+## <a name="steps-for-configuring-ad-fs-in-windows-server-2016"></a>Windows Server 2016에서 AD FS를 구성 하는 단계
 다음은 Windows Server 2016 용 AD FS에서 복합 인증을 구성 하는 단계를 설명 합니다.
 
 ### <a name="step-1--enable-kdc-support-for-claims-compound-authentication-and-kerberos-armoring-on-the-default-domain-controller-policy"></a>1단계:  클레임, 복합 인증 및 기본 도메인 컨트롤러 정책에서 Kerberos 아머 링에 대 한 KDC 지원 설정
@@ -189,7 +189,7 @@ Set-AdfsGlobalAuthenticationPolicy -PrimaryIntranetAuthenticationProvider 'Windo
 ``` powershell
 Set-ADServiceAccount -Identity “ADFS Service Account” -CompoundIdentitySupported:$true 
 ```
-2.  ADFS 서비스를 다시 시작 합니다.
+2. ADFS 서비스를 다시 시작 합니다.
 
 >[!NOTE]
 >'CompoundIdentitySupported' 다음 오류 – 새 (2016 년 2012R2) 서버 실패에 동일한 gMSA의 true 이면 설치로 설정 되 면 **Install-adserviceaccount: 서비스 계정을 설치할 수 없습니다. 오류 메시지: ' 제공 된 컨텍스트 대상과 일치 하지 않았습니다.'** .
@@ -208,11 +208,11 @@ CompoundIdentitySupported 않도록 설정 했다가 다시 활성화 한 다음
 
 
 ### <a name="step-6-on-the-relying-party-where-the-windowsdevicegroup-claims-are-expected-add-a-similar-pass-through-or-transform-claim-rule"></a>6단계: 'WindowsDeviceGroup' 클레임은 필요한 신뢰 당사자에서 유사한 '통과' 또는 '변환' 클레임 규칙을 추가 합니다.
-2.  **AD FS 관리**, 클릭 **신뢰 당사자 트러스트** 하 고 오른쪽 창에서 마우스 오른쪽 단추 클릭 선택 고 RP **클레임 규칙 편집**.
-3.  에 **발급 변환 규칙** 클릭 **규칙 추가**합니다.
-4.  에 **변환 클레임 규칙 추가 마법사** 선택 **통과 또는 들어오는 클레임 필터링** 누릅니다 **다음**합니다.
-5.  표시 이름을 추가 하 고 선택 **Windows 장치 그룹** 에서 합니다 **들어오는 클레임 유형** 드롭 다운 합니다.
-6.  **마침**을 클릭합니다.  클릭 **적용** 하 고 **확인**합니다.
+2. **AD FS 관리**, 클릭 **신뢰 당사자 트러스트** 하 고 오른쪽 창에서 마우스 오른쪽 단추 클릭 선택 고 RP **클레임 규칙 편집**.
+3. 에 **발급 변환 규칙** 클릭 **규칙 추가**합니다.
+4. 에 **변환 클레임 규칙 추가 마법사** 선택 **통과 또는 들어오는 클레임 필터링** 누릅니다 **다음**합니다.
+5. 표시 이름을 추가 하 고 선택 **Windows 장치 그룹** 에서 합니다 **들어오는 클레임 유형** 드롭 다운 합니다.
+6. **마침**을 클릭합니다.  클릭 **적용** 하 고 **확인**합니다.
 
 ## <a name="validation"></a>유효성 검사
 'WindowsDeviceGroup' 클레임 릴리스의 유효성을 검사 하는 테스트를 만드는.Net 4.6을 사용 하 여 인식 응용 프로그램을 클레임입니다. With WIF SDK 4.0.

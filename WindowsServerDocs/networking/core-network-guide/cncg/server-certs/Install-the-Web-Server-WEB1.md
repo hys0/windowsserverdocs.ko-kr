@@ -8,12 +8,12 @@ ms.topic: article
 ms.assetid: f51c9e38-98bb-49c1-9d39-427d07021499
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: ef4f10a6ac1998850758f2c9db86bfd950c1ad70
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 15da16094a47a2492dc9054e0671c3709fe23362
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59833284"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446448"
 ---
 # <a name="install-the-web-server-web1"></a>웹 서버 WEB1 설치
 
@@ -40,8 +40,8 @@ Windows Server 2016에서 웹 서버 (IIS) 역할 웹 사이트, 서비스 및 �
 **참고**   
 **시작 하기 전에** 역할 및 추가 기능 마법사의 페이지에는 역할 및 추가 기능 마법사를 이전에 실행 하 고 선택한 경우 표시 되지 않습니다 **기본적으로이 페이지 건너뛰기** 당시에 있습니다.  
 
-3.  **설치 유형** 페이지에서 **다음**을 클릭합니다.  
-4.  에 **서버 선택** 페이지에서 클릭 **다음**합니다.  
-5.  에 **서버 역할** 페이지에서 **웹 서버 (IIS)**, 를 클릭 하 고 **다음**합니다.  
-6.  클릭 **다음** 모든 기본 웹 서버 설정 하 고 클릭 한 다음 사용자가 수락 될 때까지 **설치**합니다.  
-7.  설치 된 모든, 성공 했음을 확인 한 다음 클릭 **닫기**합니다.
+3. **설치 유형** 페이지에서 **다음**을 클릭합니다.  
+4. 에 **서버 선택** 페이지에서 클릭 **다음**합니다.  
+5. 에 **서버 역할** 페이지에서 **웹 서버 (IIS)** , 를 클릭 하 고 **다음**합니다.  
+6. 클릭 **다음** 모든 기본 웹 서버 설정 하 고 클릭 한 다음 사용자가 수락 될 때까지 **설치**합니다.  
+7. 설치 된 모든, 성공 했음을 확인 한 다음 클릭 **닫기**합니다.

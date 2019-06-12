@@ -9,12 +9,12 @@ ms.manager: daveba
 ms.technology: storage-failover-clustering
 ms.date: 05/09/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 151f02572d7595776539af163831b4a7a060c1c7
-ms.sourcegitcommit: 75f257d97d345da388cda972ccce0eb29e82d3bc
+ms.openlocfilehash: fa240ba5fedd98f16639dd19fb8f22c10bfdd9ac
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65613172"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66442465"
 ---
 # <a name="prestage-cluster-computer-objects-in-active-directory-domain-services"></a>Active Directory Domain Services에서 클러스터 컴퓨터 개체 사전 준비
 
@@ -48,14 +48,14 @@ CNO를 자동으로 만들려면 장애 조치(failover) 클러스터를 만드�
 3. 콘솔 트리에서 CNO를 만들려는 OU를 마우스 오른쪽 단추로 가리킵니다 **새로 만들기**를 선택한 후 **컴퓨터**합니다.
 4. 에 **컴퓨터 이름** 상자에 장애 조치 클러스터를 사용할지 선택한 후 이름을 입력 합니다 **확인**합니다.
 
-  >[!NOTE]
-  >이 이름은 클러스터를 만드는 사용자가 클러스터 만들기 마법사의 **클러스터 관리 액세스 지점** 페이지에서 지정하거나 *–Name* Windows PowerShell cmdlet에서 **New-Cluster** 매개 변수 값으로 지정할 클러스터 이름입니다.
+   >[!NOTE]
+   >이 이름은 클러스터를 만드는 사용자가 클러스터 만들기 마법사의 **클러스터 관리 액세스 지점** 페이지에서 지정하거나 *–Name* Windows PowerShell cmdlet에서 **New-Cluster** 매개 변수 값으로 지정할 클러스터 이름입니다.
 
 5. 모범 사례로, 방금 만든 컴퓨터 계정을 마우스 오른쪽 단추로 클릭 한 다음를 선택 합니다 **속성**를 선택한 후 합니다 **개체** 탭 합니다. 에 **개체** 탭을 선택 합니다 **실수로 삭제 되지 않도록에서 개체 보호** 확인란을 선택한 후 **확인**합니다.
 6. 컴퓨터 계정을 방금 만든 단추로 선택한 **계정 사용 안 함**합니다. 선택 **Yes** 여 확인 하 고 선택한 **확인**합니다.
 
-  >[!NOTE]
-  >계정을 사용하지 않도록 설정해야 클러스터를 만드는 동안 클러스터 만들기 프로세스에서 도메인의 기존 컴퓨터 또는 클러스터가 해당 계정을 현재 사용하고 있지 않은지 확인할 수 있습니다.
+   >[!NOTE]
+   >계정을 사용하지 않도록 설정해야 클러스터를 만드는 동안 클러스터 만들기 프로세스에서 도메인의 기존 컴퓨터 또는 클러스터가 해당 계정을 현재 사용하고 있지 않은지 확인할 수 있습니다.
 
 ![예제 Clusters OU에서 사용하지 않도록 설정된 CNO](media/prestage-cluster-adds/disabled-cno-in-the-example-clusters-ou.png)
 
@@ -75,9 +75,9 @@ CNO를 자동으로 만들려면 장애 조치(failover) 클러스터를 만드�
 4. 에 **사용자, 컴퓨터 또는 그룹 선택** 대화 상자에서 사용자 계정 또는 그룹에 권한을 부여 하 고 클릭 하려는 지정 **확인**합니다.
 5. 방금 추가한 사용자 계정 또는 그룹을 선택한 다음 **모든 권한**옆에서 **허용** 확인란을 선택합니다.
   
-  ![클러스터를 만들 사용자 또는 그룹에 모든 권한 부여](media/prestage-cluster-adds/granting-full-control-to-the-user-create-the-cluster.png)
+   ![클러스터를 만들 사용자 또는 그룹에 모든 권한 부여](media/prestage-cluster-adds/granting-full-control-to-the-user-create-the-cluster.png)
   
-  **그림 2입니다. 사용자 또는 클러스터에 만든 그룹에 모든 권한 부여**
+   **그림 2입니다. 사용자 또는 클러스터에 만든 그룹에 모든 권한 부여**
 6. **확인**을 선택합니다.
 
 이 단계를 완료하면 권한을 부여받은 사용자가 장애 조치(failover) 클러스터를 만들 수 있습니다. 그러나 CNO가 OU에 있는 경우 사용자는 3단계를 완료할 때까지 클라이언트 액세스 지점이 필요한 클러스터된 역할을 만들 수 없습니다.
@@ -113,9 +113,9 @@ AD DS에서 CNO를 사전 준비한 경우 다음 중 하나를 수행하여 VCO
 8. **권한 항목** 대화 상자에서 **유형** 목록이 **허용**으로 설정되고, **적용 대상** 목록이 **이 개체 및 모든 하위 개체**로 설정되어 있는지 확인합니다.
 9. **사용 권한**에서 **컴퓨터 개체 만들기** 확인란을 선택합니다.
 
-  ![CNO에 컴퓨터 개체 만들기 권한 부여](media/prestage-cluster-adds/granting-create-computer-objects-permission-to-the-cno.png)
+   ![CNO에 컴퓨터 개체 만들기 권한 부여](media/prestage-cluster-adds/granting-create-computer-objects-permission-to-the-cno.png)
 
-  **그림 3입니다. CNO에 컴퓨터 만들기 개체 권한 부여**
+   **그림 3입니다. CNO에 컴퓨터 만들기 개체 권한 부여**
 10. 선택 **확인** 돌아가게 Active Directory 사용자 및 컴퓨터 스냅인 될 때까지 합니다.
 
 이제 장애 조치(failover) 클러스터의 관리자가 클라이언트 액세스 지점이 있는 클러스터된 역할을 만들고 리소스를 온라인 상태로 전환할 수 있습니다.

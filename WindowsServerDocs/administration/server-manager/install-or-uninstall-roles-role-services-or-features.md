@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 18ba3517f6533a85fe7cb24f24a7f4ffdfad6991
-ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
+ms.openlocfilehash: 526acaadc257d5e8b1dea342756cdeeec240c1dd
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/25/2019
-ms.locfileid: "66222978"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66435462"
 ---
 # <a name="install-or-uninstall-roles-role-services-or-features"></a>역할, 역할 서비스 또는 기능 설치 또는 제거
 
@@ -100,53 +100,53 @@ Windows Server의 서버 관리자 콘솔 및 Windows PowerShell cmdlet에 대 �
   
 #### <a name="to-install-roles-and-features-by-using-the-install-windowsfeature-cmdlet"></a>Install-WindowsFeature cmdlet을 사용하여 역할 및 기능을 설치하려면  
   
-1.  다음 중 하나를 수행하여 관리자 권한으로 Windows PowerShell 세션을 엽니다.  
+1. 다음 중 하나를 수행하여 관리자 권한으로 Windows PowerShell 세션을 엽니다.  
   
-    > [!NOTE]  
-    > 역할 및 기능 설치 하는 원격 서버에는, 관리자 권한으로 Windows PowerShell을 실행할 필요가 없습니다.  
+   > [!NOTE]  
+   > 역할 및 기능 설치 하는 원격 서버에는, 관리자 권한으로 Windows PowerShell을 실행할 필요가 없습니다.  
   
-    -   Windows 바탕 화면의 작업 표시줄에서 **Windows PowerShell**을 마우스 오른쪽 단추로 클릭한 다음 **관리자 권한으로 실행**을 클릭합니다.  
+   -   Windows 바탕 화면의 작업 표시줄에서 **Windows PowerShell**을 마우스 오른쪽 단추로 클릭한 다음 **관리자 권한으로 실행**을 클릭합니다.  
   
-    -   Windows **시작** 화면에서 Windows PowerShell에 대 한 타일을 마우스 오른쪽 단추로 클릭 한 다음 앱 바에서 클릭 **관리자 권한으로 실행**합니다.  
+   -   Windows **시작** 화면에서 Windows PowerShell에 대 한 타일을 마우스 오른쪽 단추로 클릭 한 다음 앱 바에서 클릭 **관리자 권한으로 실행**합니다.  
   
-2.  **Get-WindowsFeature** 를 입력한 다음 **Enter** 키를 누르면 로컬 서버에서 사용 가능하고 설치된 역할 및 기능 목록을 볼 수 있습니다. 로컬 컴퓨터는 서버가 아닌 경우 또는 원격 서버에 대 한 정보를 원하는 경우 실행할 **Get-windowsfeature-computerName <***computer_name***>** 에 있는  *computer_name* Windows Server 2016을 실행 하는 원격 컴퓨터의 이름을 나타냅니다. Cmdlet의 결과는 역할 및 4 단계에서 cmdlet에 추가 기능 명령 이름이 포함 됩니다.  
+2. **Get-WindowsFeature** 를 입력한 다음 **Enter** 키를 누르면 로컬 서버에서 사용 가능하고 설치된 역할 및 기능 목록을 볼 수 있습니다. 로컬 컴퓨터는 서버가 아닌 경우 또는 원격 서버에 대 한 정보를 원하는 경우 실행할 **Get-windowsfeature-computerName <** <em>computer_name</em> **>** 에 나타나는 *computer_name* Windows Server 2016을 실행 하는 원격 컴퓨터의 이름을 나타냅니다. Cmdlet의 결과는 역할 및 4 단계에서 cmdlet에 추가 기능 명령 이름이 포함 됩니다.  
   
-    > [!NOTE]  
-    > Windows PowerShell 3.0 이상 버전의 Windows PowerShell에는 서버 관리자 cmdlet 모듈을 모듈의 일부인 cmdlet을 실행 하기 전에 Windows PowerShell 세션으로 가져올 필요가 없습니다 있습니다. 모듈의 일부인 cmdlet을 처음으로 실행하면 모듈을 자동으로 가져옵니다. 또한 Windows PowerShell cmdlet도 아니고 cmdlet 사용 되는 기능 이름은 대/소문자를 구분 합니다.  
+   > [!NOTE]  
+   > Windows PowerShell 3.0 이상 버전의 Windows PowerShell에는 서버 관리자 cmdlet 모듈을 모듈의 일부인 cmdlet을 실행 하기 전에 Windows PowerShell 세션으로 가져올 필요가 없습니다 있습니다. 모듈의 일부인 cmdlet을 처음으로 실행하면 모듈을 자동으로 가져옵니다. 또한 Windows PowerShell cmdlet도 아니고 cmdlet 사용 되는 기능 이름은 대/소문자를 구분 합니다.  
   
-3.  형식 **get-help Install-windowsfeature**, 누릅니다 **Enter** 구문 및 허용 된 매개 변수를 확인 합니다 `Install-WindowsFeature` cmdlet.  
+3. 형식 **get-help Install-windowsfeature**, 누릅니다 **Enter** 구문 및 허용 된 매개 변수를 확인 합니다 `Install-WindowsFeature` cmdlet.  
   
-4.  다음을 입력 하 고 다음 키를 누릅니다 **Enter**, 여기서 *feature_name* 역할 또는 (2 단계에서 얻은)를 설치 하려는 기능의 명령 이름을 나타냅니다 및 *computer_name* 역할 및 기능을 설치 하려는 원격 컴퓨터를 나타냅니다. *feature_name* 의 값이 여러 개인 경우에는 쉼표로 구분합니다. 역할 또는 기능 설치에 필요한 경우 `Restart` 매개 변수가 대상 서버를 자동으로 다시 시작합니다.  
+4. 다음을 입력 하 고 다음 키를 누릅니다 **Enter**, 여기서 *feature_name* 역할 또는 (2 단계에서 얻은)를 설치 하려는 기능의 명령 이름을 나타냅니다 및 *computer_name* 역할 및 기능을 설치 하려는 원격 컴퓨터를 나타냅니다. *feature_name* 의 값이 여러 개인 경우에는 쉼표로 구분합니다. 역할 또는 기능 설치에 필요한 경우 `Restart` 매개 변수가 대상 서버를 자동으로 다시 시작합니다.  
   
-    ```  
-    Install-WindowsFeature -Name <feature_name> -computerName <computer_name> -Restart  
-    ```  
+   ```  
+   Install-WindowsFeature -Name <feature_name> -computerName <computer_name> -Restart  
+   ```  
   
-    역할 및 기능을 오프라인 VHD에서 설치하려면 `computerName` 매개 변수와 `VHD` 매개 변수를 모두 추가합니다. `computerName` 매개 변수를 추가하지 않으면 cmdlet은 VHD에 액세스하기 위해 로컬 컴퓨터가 탑재되는 것으로 간주합니다. `computerName` 매개 변수에는 VHD를 탑재할 서버의 이름이 포함되며, `VHD` 매개 변수에는 지정된 서버에서의 VHD 파일 경로가 포함됩니다.  
+   역할 및 기능을 오프라인 VHD에서 설치하려면 `computerName` 매개 변수와 `VHD` 매개 변수를 모두 추가합니다. `computerName` 매개 변수를 추가하지 않으면 cmdlet은 VHD에 액세스하기 위해 로컬 컴퓨터가 탑재되는 것으로 간주합니다. `computerName` 매개 변수에는 VHD를 탑재할 서버의 이름이 포함되며, `VHD` 매개 변수에는 지정된 서버에서의 VHD 파일 경로가 포함됩니다.  
   
-    > [!NOTE]  
-    > 추가 해야는 `computerName` 실행 하는 경우 cmdlet은 컴퓨터에서 하는 매개 변수는 Windows 클라이언트 운영 체제를 실행 합니다.  
-    >   
-    > 오프라인 VHD에 역할 및 기능을 설치하려면 대상 VHD가 다음의 요구 사항을 충족해야 합니다.  
-    >   
-    > -   Vhd를 실행 하는 서버 관리자의 버전과 일치 하는 Windows Server의 릴리스를 실행 되어야 합니다. 시작 부분에 나오는 참고 참조 [추가 역할 및 기능 마법사를 사용 하 여 역할, 역할 서비스 및 기능 설치](#install-roles-role-services-and-features-by-using-the-add-roles-and-features-wizard)합니다.  
-    > -   VHD에는 두 개 이상의 시스템 볼륨 또는 파티션이 포함될 수 없습니다.  
-    > -   VHD 파일이 저장된 네트워크 공유 폴더에서 VHD를 탑재하도록 선택한 서버의 컴퓨터(또는 로컬 시스템) 계정에 다음의 액세스 권한을 부여해야 합니다. 사용자 전용 계정 액세스 권한으로는 충분하지 않습니다. 공유는 **읽기** 및 **쓰기** 권한을 **Everyone** 그룹에 부여하여 VHD에 액세스하도록 할 수 있지만 보안상의 이유로 권장되지 않습니다.  
-    >   
-    >     -   **파일 공유** 대화 상자에서 **읽기/쓰기** 권한에 액세스  
-    >     -   **모든 권한** 에 대 한 액세스는 **보안** 탭, 파일 또는 폴더 **속성** 대화 상자입니다.  
+   > [!NOTE]  
+   > 추가 해야는 `computerName` 실행 하는 경우 cmdlet은 컴퓨터에서 하는 매개 변수는 Windows 클라이언트 운영 체제를 실행 합니다.  
+   >   
+   > 오프라인 VHD에 역할 및 기능을 설치하려면 대상 VHD가 다음의 요구 사항을 충족해야 합니다.  
+   >   
+   > -   Vhd를 실행 하는 서버 관리자의 버전과 일치 하는 Windows Server의 릴리스를 실행 되어야 합니다. 시작 부분에 나오는 참고 참조 [추가 역할 및 기능 마법사를 사용 하 여 역할, 역할 서비스 및 기능 설치](#install-roles-role-services-and-features-by-using-the-add-roles-and-features-wizard)합니다.  
+   > -   VHD에는 두 개 이상의 시스템 볼륨 또는 파티션이 포함될 수 없습니다.  
+   > -   VHD 파일이 저장된 네트워크 공유 폴더에서 VHD를 탑재하도록 선택한 서버의 컴퓨터(또는 로컬 시스템) 계정에 다음의 액세스 권한을 부여해야 합니다. 사용자 전용 계정 액세스 권한으로는 충분하지 않습니다. 공유는 **읽기** 및 **쓰기** 권한을 **Everyone** 그룹에 부여하여 VHD에 액세스하도록 할 수 있지만 보안상의 이유로 권장되지 않습니다.  
+   >   
+   >     -   **파일 공유** 대화 상자에서 **읽기/쓰기** 권한에 액세스  
+   >     -   **모든 권한** 에 대 한 액세스는 **보안** 탭, 파일 또는 폴더 **속성** 대화 상자입니다.  
   
-    ```  
-    Install-WindowsFeature -Name <feature_name> -VHD <path> -computerName <computer_name> -Restart  
-    ```  
+   ```  
+   Install-WindowsFeature -Name <feature_name> -VHD <path> -computerName <computer_name> -Restart  
+   ```  
   
-    **예:** 다음 cmdlet을 원격 서버인 ContosoDC1에 active directory Domain Services 역할 및 그룹 정책 관리 기능을 설치합니다. `IncludeManagementTools` 매개 변수를 사용하여 관리 도구와 스냅인을 추가하며 설치 시에 서버를 다시 시작해야 할 경우 대상 서버가 자동으로 다시 시작됩니다.  
+   **예:** 다음 cmdlet을 원격 서버인 ContosoDC1에 active directory Domain Services 역할 및 그룹 정책 관리 기능을 설치합니다. `IncludeManagementTools` 매개 변수를 사용하여 관리 도구와 스냅인을 추가하며 설치 시에 서버를 다시 시작해야 할 경우 대상 서버가 자동으로 다시 시작됩니다.  
   
-    ```  
-    Install-WindowsFeature -Name AD-Domain-Services,GPMC -computerName ContosoDC1 -IncludeManagementTools -Restart  
-    ```  
+   ```  
+   Install-WindowsFeature -Name AD-Domain-Services,GPMC -computerName ContosoDC1 -IncludeManagementTools -Restart  
+   ```  
   
-5.  설치가 완료 되 면 열어 설치를 확인는 **모든 서버** 서버 관리자에서 역할 및 기능을 설치 된 서버를 선택 하 고 보는 페이지는 **역할 및 기능** 선택한 서버에 대 한 페이지에 바둑판식으로 배열입니다. 실행할 수도 있습니다는 `Get-WindowsFeature` 선택한 서버를 대상으로 하는 cmdlet (Get-windowsfeature-computerName <*computer_name*>) 역할 및 서버에 설치 된 기능 목록을 볼 수 있습니다.  
+5. 설치가 완료 되 면 열어 설치를 확인는 **모든 서버** 서버 관리자에서 역할 및 기능을 설치 된 서버를 선택 하 고 보는 페이지는 **역할 및 기능** 선택한 서버에 대 한 페이지에 바둑판식으로 배열입니다. 실행할 수도 있습니다는 `Get-WindowsFeature` 선택한 서버를 대상으로 하는 cmdlet (Get-windowsfeature-computerName <*computer_name*>) 역할 및 서버에 설치 된 기능 목록을 볼 수 있습니다.  
   
 ## <a name="remove-roles-role-services-and-features-by-using-the-remove-roles-and-features-wizard"></a>제거를 사용 하 여 역할, 역할 서비스 및 기능 제거 역할 및 기능 마법사  
 역할, 역할 서비스 및 기능을 제거 하려면 관리자 권한으로 서버에 로그온 해야 합니다. 제거 대상 서버에 대해 관리자 권한이 없는 계정을 사용하여 로컬 컴퓨터에 로그온했으면 **서버** 타일에서 대상 서버를 마우스 오른쪽 단추로 클릭한 후 **다음으로 관리** 를 클릭하여 관리자 권한을 가진 계정을 제공합니다. 오프라인 VHD를 탑재하려는 서버는 서버 관리자에 추가되어 있어야 하며, 사용자는 해당 서버에 대한 관리자 권한이 있어야 합니다.  
@@ -191,49 +191,49 @@ Windows Server의 서버 관리자 콘솔 및 Windows PowerShell cmdlet에 대 �
   
 #### <a name="to-remove-roles-and-features-by-using-the-uninstall-windowsfeature-cmdlet"></a>Uninstall-WindowsFeature cmdlet을 사용하여 역할 및 기능을 제거하려면  
   
-1.  다음 중 하나를 수행하여 관리자 권한으로 Windows PowerShell 세션을 엽니다.  
+1. 다음 중 하나를 수행하여 관리자 권한으로 Windows PowerShell 세션을 엽니다.  
   
-    > [!NOTE]  
-    > 역할 및 기능을 제거 하면 원격 서버에서 관리자 권한으로 Windows PowerShell을 실행할 필요가 없습니다.  
+   > [!NOTE]  
+   > 역할 및 기능을 제거 하면 원격 서버에서 관리자 권한으로 Windows PowerShell을 실행할 필요가 없습니다.  
   
-    -   Windows 바탕 화면의 작업 표시줄에서 **Windows PowerShell**을 마우스 오른쪽 단추로 클릭한 다음 **관리자 권한으로 실행**을 클릭합니다.  
+   -   Windows 바탕 화면의 작업 표시줄에서 **Windows PowerShell**을 마우스 오른쪽 단추로 클릭한 다음 **관리자 권한으로 실행**을 클릭합니다.  
   
-    -   Windows 온 **시작** 화면, Windows PowerShell 타일을 마우스 오른쪽 단추로 클릭 한 다음 앱 바에서를 클릭 **관리자 권한으로 실행**합니다.  
+   -   Windows 온 **시작** 화면, Windows PowerShell 타일을 마우스 오른쪽 단추로 클릭 한 다음 앱 바에서를 클릭 **관리자 권한으로 실행**합니다.  
   
-2.  **Get-WindowsFeature** 를 입력한 다음 **Enter** 키를 누르면 로컬 서버에서 사용 가능하고 설치된 역할 및 기능 목록을 볼 수 있습니다. 로컬 컴퓨터는 서버가 아닌 경우 또는 원격 서버에 대 한 정보를 원하는 경우 실행할 **Get-windowsfeature-computerName <***computer_name***>** 에 있는  *computer_name* Windows Server 2016을 실행 하는 원격 컴퓨터의 이름을 나타냅니다. Cmdlet의 결과는 역할 및 4 단계에서 cmdlet에 추가 기능 명령 이름이 포함 됩니다.  
+2. **Get-WindowsFeature** 를 입력한 다음 **Enter** 키를 누르면 로컬 서버에서 사용 가능하고 설치된 역할 및 기능 목록을 볼 수 있습니다. 로컬 컴퓨터는 서버가 아닌 경우 또는 원격 서버에 대 한 정보를 원하는 경우 실행할 **Get-windowsfeature-computerName <** <em>computer_name</em> **>** 에 나타나는 *computer_name* Windows Server 2016을 실행 하는 원격 컴퓨터의 이름을 나타냅니다. Cmdlet의 결과는 역할 및 4 단계에서 cmdlet에 추가 기능 명령 이름이 포함 됩니다.  
   
-    > [!NOTE]  
-    > Windows PowerShell 3.0 이상 버전의 Windows PowerShell에는 서버 관리자 cmdlet 모듈을 모듈의 일부인 cmdlet을 실행 하기 전에 Windows PowerShell 세션으로 가져올 필요가 없습니다 있습니다. 모듈의 일부인 cmdlet을 처음으로 실행하면 모듈을 자동으로 가져옵니다. 또한 Windows PowerShell cmdlet도 아니고 cmdlet 사용 되는 기능 이름은 대/소문자를 구분 합니다.  
+   > [!NOTE]  
+   > Windows PowerShell 3.0 이상 버전의 Windows PowerShell에는 서버 관리자 cmdlet 모듈을 모듈의 일부인 cmdlet을 실행 하기 전에 Windows PowerShell 세션으로 가져올 필요가 없습니다 있습니다. 모듈의 일부인 cmdlet을 처음으로 실행하면 모듈을 자동으로 가져옵니다. 또한 Windows PowerShell cmdlet도 아니고 cmdlet 사용 되는 기능 이름은 대/소문자를 구분 합니다.  
   
-3.  형식 **get-help Uninstall-windowsfeature**, 누릅니다 **Enter** 구문 및 허용 된 매개 변수를 확인 합니다 `Uninstall-WindowsFeature` cmdlet.  
+3. 형식 **get-help Uninstall-windowsfeature**, 누릅니다 **Enter** 구문 및 허용 된 매개 변수를 확인 합니다 `Uninstall-WindowsFeature` cmdlet.  
   
-4.  다음을 입력한 후 **Enter** 키를 누릅니다. 여기서 *feature_name*은 제거하려는 역할이나 기능의 명령 이름(2단계에서 확보)을 나타내며, *computer_name*은 역할이나 기능을 제거하려는 원격 컴퓨터를 나타냅니다. *feature_name* 의 값이 여러 개인 경우에는 쉼표로 구분합니다. 역할 또는 기능 제거에서 필요한 경우 `Restart` 매개 변수가 대상 서버를 자동으로 다시 시작합니다.  
+4. 다음을 입력한 후 **Enter** 키를 누릅니다. 여기서 *feature_name*은 제거하려는 역할이나 기능의 명령 이름(2단계에서 확보)을 나타내며, *computer_name*은 역할이나 기능을 제거하려는 원격 컴퓨터를 나타냅니다. *feature_name* 의 값이 여러 개인 경우에는 쉼표로 구분합니다. 역할 또는 기능 제거에서 필요한 경우 `Restart` 매개 변수가 대상 서버를 자동으로 다시 시작합니다.  
   
-    ```  
-    Uninstall-WindowsFeature -Name <feature_name> -computerName <computer_name> -Restart  
-    ```  
+   ```  
+   Uninstall-WindowsFeature -Name <feature_name> -computerName <computer_name> -Restart  
+   ```  
   
-    역할 및 기능을 오프라인 VHD에서 제거하려면 `computerName` 매개 변수와 `VHD` 매개 변수를 모두 추가합니다. `computerName` 매개 변수를 추가하지 않으면 cmdlet은 VHD에 액세스하기 위해 로컬 컴퓨터가 탑재되는 것으로 간주합니다. `computerName` 매개 변수에는 VHD를 탑재할 서버의 이름이 포함되며, `VHD` 매개 변수에는 지정된 서버에서의 VHD 파일 경로가 포함됩니다.  
+   역할 및 기능을 오프라인 VHD에서 제거하려면 `computerName` 매개 변수와 `VHD` 매개 변수를 모두 추가합니다. `computerName` 매개 변수를 추가하지 않으면 cmdlet은 VHD에 액세스하기 위해 로컬 컴퓨터가 탑재되는 것으로 간주합니다. `computerName` 매개 변수에는 VHD를 탑재할 서버의 이름이 포함되며, `VHD` 매개 변수에는 지정된 서버에서의 VHD 파일 경로가 포함됩니다.  
   
-    > [!NOTE]  
-    > 추가 해야는 `computerName` 실행 하는 경우 cmdlet은 컴퓨터에서 하는 매개 변수는 Windows 클라이언트 운영 체제를 실행 합니다.  
-    >   
-    > VHD 파일이 저장된 네트워크 공유 폴더에서 VHD를 탑재하도록 선택한 서버의 컴퓨터(또는 로컬 시스템) 계정에 다음의 액세스 권한을 부여해야 합니다. 사용자 전용 계정 액세스 권한으로는 충분하지 않습니다. 공유는 **읽기** 및 **쓰기** 권한을 **Everyone** 그룹에 부여하여 VHD에 액세스하도록 할 수 있지만 보안상의 이유로 권장되지 않습니다.  
-    >   
-    > -   **파일 공유** 대화 상자에서 **읽기/쓰기** 권한에 액세스  
-    > -   **모든 권한** 에 대 한 액세스는 **보안** 탭, 파일 또는 폴더 **속성** 대화 상자입니다.  
+   > [!NOTE]  
+   > 추가 해야는 `computerName` 실행 하는 경우 cmdlet은 컴퓨터에서 하는 매개 변수는 Windows 클라이언트 운영 체제를 실행 합니다.  
+   >   
+   > VHD 파일이 저장된 네트워크 공유 폴더에서 VHD를 탑재하도록 선택한 서버의 컴퓨터(또는 로컬 시스템) 계정에 다음의 액세스 권한을 부여해야 합니다. 사용자 전용 계정 액세스 권한으로는 충분하지 않습니다. 공유는 **읽기** 및 **쓰기** 권한을 **Everyone** 그룹에 부여하여 VHD에 액세스하도록 할 수 있지만 보안상의 이유로 권장되지 않습니다.  
+   >   
+   > -   **파일 공유** 대화 상자에서 **읽기/쓰기** 권한에 액세스  
+   > -   **모든 권한** 에 대 한 액세스는 **보안** 탭, 파일 또는 폴더 **속성** 대화 상자입니다.  
   
-    ```  
-    Uninstall-WindowsFeature -Name <feature_name> -VHD <path> -computerName <computer_name> -Restart  
-    ```  
+   ```  
+   Uninstall-WindowsFeature -Name <feature_name> -VHD <path> -computerName <computer_name> -Restart  
+   ```  
   
-    **예:** 다음 cmdlet을 원격 서버인 ContosoDC1에서 active directory Domain Services 역할 및 그룹 정책 관리 기능을 제거합니다. 관리 도구와 스냅인도 제거되며, 제거 시 서버를 다시 시작해야 할 경우 대상 서버가 자동으로 다시 시작됩니다.  
+   **예:** 다음 cmdlet을 원격 서버인 ContosoDC1에서 active directory Domain Services 역할 및 그룹 정책 관리 기능을 제거합니다. 관리 도구와 스냅인도 제거되며, 제거 시 서버를 다시 시작해야 할 경우 대상 서버가 자동으로 다시 시작됩니다.  
   
-    ```  
-    Uninstall-WindowsFeature -Name AD-Domain-Services,GPMC -computerName ContosoDC1 -IncludeManagementTools -Restart  
-    ```  
+   ```  
+   Uninstall-WindowsFeature -Name AD-Domain-Services,GPMC -computerName ContosoDC1 -IncludeManagementTools -Restart  
+   ```  
   
-5.  제거가 완료 되 면 확인을 열어서 역할 및 기능이 제거 됩니다는 **모든 서버** 서버 관리자에서 제거한 역할 및 기능을 서버를 선택 하 고 보는 페이지는 **역할 및 기능** 선택한 서버에 대 한 페이지에 바둑판식으로 배열입니다. 실행할 수도 있습니다는 `Get-WindowsFeature` 선택한 서버를 대상으로 하는 cmdlet (Get-windowsfeature-computerName <*computer_name*>) 역할 및 서버에 설치 된 기능 목록을 볼 수 있습니다.  
+5. 제거가 완료 되 면 확인을 열어서 역할 및 기능이 제거 됩니다는 **모든 서버** 서버 관리자에서 제거한 역할 및 기능을 서버를 선택 하 고 보는 페이지는 **역할 및 기능** 선택한 서버에 대 한 페이지에 바둑판식으로 배열입니다. 실행할 수도 있습니다는 `Get-WindowsFeature` 선택한 서버를 대상으로 하는 cmdlet (Get-windowsfeature-computerName <*computer_name*>) 역할 및 서버에 설치 된 기능 목록을 볼 수 있습니다.  
   
 ## <a name="install-roles-and-features-on-multiple-servers-by-running-a-windows-powershell-script"></a>Windows PowerShell 스크립트를 실행하여 여러 서버에 역할 및 기능 설치  
 추가 역할 및 기능 마법사를 사용 하 여 단일 마법사 세션에서 둘 이상의 대상 서버에 역할, 역할 서비스 및 기능을 설치 하려면 없습니다, 있지만 Windows PowerShell 스크립트를 여러 대상에 역할, 역할 서비스 및 기능을 설치 하 여 서버 관리자를 사용 하 여 관리 되는 서버입니다. 이 프로세스를 호출할 때 일괄 배포를 수행 하는 데 사용 하는 스크립트 추가 역할 및 기능 마법사를 사용 하 고 클릭 하 여 쉽게 만들 수 있는 XML 구성 파일을 가리키는 **구성 설정 내보내기** 후 마법사를 통해 이동 합니다 **설치 선택 확인** 추가 역할 및 기능 마법사의 페이지입니다.  
@@ -337,25 +337,25 @@ Windows Server 2012 및 Windows 8 부터는.NET Framework 3.5 (.NET Framework 2.
   
 ### <a name="to-install-net-framework-35-by-using-the-add-roles-and-features-wizard"></a>추가 역할 및 기능 마법사를 사용 하 여.NET Framework 3.5를 설치 하려면  
   
-1.  에 **관리** 서버 관리자의 메뉴 클릭 **역할 및 기능 추가**합니다.  
+1. 에 **관리** 서버 관리자의 메뉴 클릭 **역할 및 기능 추가**합니다.  
   
-2.  Windows Server 2016를 실행 하는 대상 서버를 선택 합니다.  
+2. Windows Server 2016를 실행 하는 대상 서버를 선택 합니다.  
   
-3.  에 **기능 선택** 추가 역할 및 기능 마법사의 페이지 **.NET Framework 3.5**합니다.  
+3. 에 **기능 선택** 추가 역할 및 기능 마법사의 페이지 **.NET Framework 3.5**합니다.  
   
-4.  로컬 컴퓨터가 그룹 정책 설정에서 이 작업을 수행할 수 있도록 허용된 경우 설치 프로세스는 Windows 업데이트를 사용해 누락된 기능 파일을 가져옵니다. 다음 단계로 이동할 필요 없이 **설치**를 클릭합니다.  
+4. 로컬 컴퓨터가 그룹 정책 설정에서 이 작업을 수행할 수 있도록 허용된 경우 설치 프로세스는 Windows 업데이트를 사용해 누락된 기능 파일을 가져옵니다. 다음 단계로 이동할 필요 없이 **설치**를 클릭합니다.  
   
-    그룹 정책 설정,이 허용 하지 않습니다 또는에서.NET Framework 3.5 기능 파일에 다른 원본을 사용 하려는 경우는 **설치 선택 확인** 페이지의 마법사를 클릭 **대체 원본 경로 지정** .  
+   그룹 정책 설정,이 허용 하지 않습니다 또는에서.NET Framework 3.5 기능 파일에 다른 원본을 사용 하려는 경우는 **설치 선택 확인** 페이지의 마법사를 클릭 **대체 원본 경로 지정** .  
   
-5.  설치 미디어의 side-by-side 저장소( **SxS**라고 함) 또는 WIM 파일의 경로를 제공합니다. 다음 예에서 설치 미디어는 D 드라이브에 있습니다.  
+5. 설치 미디어의 side-by-side 저장소( **SxS**라고 함) 또는 WIM 파일의 경로를 제공합니다. 다음 예에서 설치 미디어는 D 드라이브에 있습니다.  
   
-    **D:\Sources\SxS\\**  
+   **D:\Sources\SxS\\**  
   
-    WIM 파일을 지정하려면 다음 예에 나와 있는 바와 같이 **WIM:** 접두사를 추가하고 WIM 파일에 사용할 이미지의 인덱스를 접미사로 추가합니다.  
+   WIM 파일을 지정하려면 다음 예에 나와 있는 바와 같이 **WIM:** 접두사를 추가하고 WIM 파일에 사용할 이미지의 인덱스를 접미사로 추가합니다.  
   
-    **WIM:\\\\***server_name***\share\install.wim:3**  
+   **WIM:\\\\** <em>server_name</em> **\share\install.wim:3**  
   
-6.  **확인**을 클릭한 다음 **설치**를 클릭합니다.  
+6. **확인**을 클릭한 다음 **설치**를 클릭합니다.  
   
 ### <a name="to-install-net-framework-35-by-using-dism"></a>DISM을 사용해 .NET Framework 3.5를 설치하려면  
   
@@ -395,23 +395,23 @@ Windows Server 2012 및 Windows 8 부터는.NET Framework 3.5 (.NET Framework 2.
   
 ##### <a name="to-configure-a-default-alternate-source-path-in-group-policy"></a>그룹 정책에 기본 대체 원본 경로를 구성하려면  
   
-1.  로컬 그룹 정책 편집기 또는 그룹 정책 관리 콘솔에서 다음 정책 설정을 엽니다.  
+1. 로컬 그룹 정책 편집기 또는 그룹 정책 관리 콘솔에서 다음 정책 설정을 엽니다.  
   
-    **컴퓨터 구성 \ 관리 템플릿 \ 선택적 구성 요소 설치 및 구성 요소 복구를 위한 설정 지정**  
+   **컴퓨터 구성 \ 관리 템플릿 \ 선택적 구성 요소 설치 및 구성 요소 복구를 위한 설정 지정**  
   
 2. Sselect **사용** 아직 활성화 되지 않은 경우 정책 설정을 사용 하도록 설정 합니다.  
   
-3.  **옵션** 영역의 **대체 원본 파일 경로** 텍스트 상자에 공유 폴더 또는 WIM 파일의 정규화된 경로를 지정합니다. WIM 파일을 대체 원본 파일 위치로 지정하려면 **WIM:** 접두사를 경로에 추가하고 WIM 파일에 사용할 이미지의 인덱스를 접미사로 추가합니다. 다음 예에 나온 값을 지정할 수 있습니다.  
+3. **옵션** 영역의 **대체 원본 파일 경로** 텍스트 상자에 공유 폴더 또는 WIM 파일의 정규화된 경로를 지정합니다. WIM 파일을 대체 원본 파일 위치로 지정하려면 **WIM:** 접두사를 경로에 추가하고 WIM 파일에 사용할 이미지의 인덱스를 접미사로 추가합니다. 다음 예에 나온 값을 지정할 수 있습니다.  
   
-    -   공유 폴더의 경로: * *\\\\***server_name***\share\\* folder_name*  
+   - 공유 폴더의 경로입니다. **\\ \\** <em>server_name</em> **\share\\** <em>folder_name</em>  
   
-    -   경로는 WIM 파일로 **3** 기능 파일을 찾을 수 있는 이미지의 인덱스를 나타냅니다.  **WIM:\\\\***server_name***\share\install.wim:3**  
+   - 경로는 WIM 파일로 **3** 기능 파일을 찾을 수 있는 이미지의 인덱스를 나타냅니다.  **WIM:\\\\** <em>server_name</em> **\share\install.wim:3**  
   
-4.  이 정책 설정은 Windows 업데이트에서 누락 된 기능 파일에 대 한 검색에 의해 제어 되는 컴퓨터를 원하지 않는 경우 **Windows 업데이트에서 페이로드를 다운로드 하지 않음**합니다.  
+4. 이 정책 설정은 Windows 업데이트에서 누락 된 기능 파일에 대 한 검색에 의해 제어 되는 컴퓨터를 원하지 않는 경우 **Windows 업데이트에서 페이로드를 다운로드 하지 않음**합니다.  
   
-5.  이 정책 설정에 따라 제어되는 컴퓨터는 일반적으로 WSUS를 통해 업데이트를 받습니다. 하지만 누락된 기능 파일을 WSUS가 아닌 Windows 업데이트를 통해 검색하려면 **WSUS(Windows Server Update Services) 대신 Windows 업데이트에 직접 연결하여 복구 콘텐츠를 다운로드**를 선택합니다.  
+5. 이 정책 설정에 따라 제어되는 컴퓨터는 일반적으로 WSUS를 통해 업데이트를 받습니다. 하지만 누락된 기능 파일을 WSUS가 아닌 Windows 업데이트를 통해 검색하려면 **WSUS(Windows Server Update Services) 대신 Windows 업데이트에 직접 연결하여 복구 콘텐츠를 다운로드**를 선택합니다.  
   
-6.  이 정책 설정을 변경하면 **확인**을 클릭한 다음 그룹 정책 편집기를 닫습니다.  
+6. 이 정책 설정을 변경하면 **확인**을 클릭한 다음 그룹 정책 편집기를 닫습니다.  
   
 ## <a name="see-also"></a>관련 항목  
 [Windows Server 설치 옵션](https://go.microsoft.com/fwlink/p/?LinkId=241573)  

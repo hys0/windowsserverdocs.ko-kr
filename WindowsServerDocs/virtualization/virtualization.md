@@ -10,12 +10,12 @@ ms.topic: landing-page
 author: shortpatti
 ms.author: pashort
 ms.localizationpriority: high
-ms.openlocfilehash: 1ae36a2e1be1559094dd55dba41fa9a468118260
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 53c927f89fd3ccaa212c998f7102d0fdb9f41bde
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59840064"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447944"
 ---
 # <a name="virtualization"></a>가상화
 
@@ -41,7 +41,7 @@ Windows Server의 가상화 기술은 소프트웨어 정의 인프라를 생성
                     <div class="cardText">
                         <h3>보호된 패브릭 및 보호된 VM</h3>
 <HR />
-                        <p>클라우드 서비스 공급자 또는 엔터프라이즈 사설 클라우드 관리자로서 보호된 패브릭을 사용하여 VM에 대한 더욱 안전한 환경을 제공할 수 있습니다. 보호 된 패브릭 호스트 보호자 서비스를 하나의 이루어져 \(HGS\) -일반적으로 세 개의 노드에서와 하나 이상의 보호 된 호스트 클러스터 및 집합이 보호 된 Vm입니다.</p>
+                        <p>클라우드 서비스 공급자 또는 엔터프라이즈 사설 클라우드 관리자로서 보호된 패브릭을 사용하여 VM에 대한 더욱 안전한 환경을 제공할 수 있습니다. 보호 된 패브릭 하나의 서비스 HGS (호스트 보호)-일반적으로 세 개 노드의 클러스터-1을 더한 구성 되거나 호스트 및 보호 된 Vm 집합을 보호 하는 자세한 내용은 합니다.</p>
                      </div>
                   </div>
               </div>

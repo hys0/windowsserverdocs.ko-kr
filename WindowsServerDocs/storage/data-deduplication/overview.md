@@ -8,12 +8,12 @@ author: wmgries
 manager: klaasl
 ms.author: wgries
 ms.date: 05/09/2017
-ms.openlocfilehash: 4376dbb2c172a82c4ab64dc63acefbc37457110f
-ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
-ms.translationtype: HT
+ms.openlocfilehash: bf346844337740f7585070ff78de4e7f61f25624
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65476038"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447263"
 ---
 # <a name="data-deduplication-overview"></a>데이터 중복 제거 개요
 
@@ -69,7 +69,7 @@ ms.locfileid: "65476038"
                     <li><b>원격 액세스</b>: 사용자가 가정용 컴퓨터, 키오스크, 저전력 하드웨어 및 Windows 이외의 운영 체제와 같은 장치에서 엔터프라이즈 응용 프로그램을 액세스할 수 있습니다.</li>
                     <li><b>지점 액세스</b>: VDI 배포는 사무실 작업자 중앙된 데이터 저장소에 액세스 해야 하는 분기에 대 한 더 나은 응용 프로그램 성능을 제공할 수 있습니다. 데이터 사용량이 많은 응용 프로그램에는 저속 연결에 최적화된 클라이언트/서버 프로토콜이 없는 경우가 있습니다.</li>
                 </ul>
-사용자를 위해 원격 데스크톱을 구동하는 가상 하드 디스크는 기본적으로 동일하기 때문에 VDI 배포는 데이터 중복 제거에 적합한 대상입니다. 또한 데이터 중복 제거는 많은 사용자가 데스크톱에 동시에 로그인하여 일과를 시작할 때 저장소 성능이 저하되는 *VDI 부팅 스톰*에도 도움이 될 수 있습니다.
+사용자를 위해 원격 데스크톱을 구동하는 가상 하드 디스크는 기본적으로 동일하기 때문에 VDI 배포는 데이터 중복 제거에 적합한 대상입니다. 또한 데이터 중복 제거는 많은 사용자가 데스크톱에 동시에 로그인하여 일과를 시작할 때 저장소 성능이 저하되는 <em>VDI 부팅 스톰</em>에도 도움이 될 수 있습니다.
             </td>
         </tr>
         <tr>
@@ -83,7 +83,7 @@ ms.locfileid: "65476038"
             <td style="text-align:center;min-width:150px;vertical-align:center;"><img src="media/overview-other.png" alt="Illustration of other workloads" /></td>
             <td style="vertical-align:top">
                 <b>다른 워크 로드</b><br />
-                [다른 워크로드도 데이터 중복 제거에 매우 적합한 대상일 수 있습니다](install-enable.md#enable-dedup-candidate-workloads).
+                <a href="install-enable.md#enable-dedup-candidate-workloads" data-raw-source="[Other workloads may also be excellent candidates for Data Deduplication](install-enable.md#enable-dedup-candidate-workloads)">다른 워크로드도 데이터 중복 제거에 매우 적합한 대상일 수 있습니다</a>.
             </td>
         </tr>
     </tbody>

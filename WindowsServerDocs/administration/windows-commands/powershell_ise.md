@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 03c765b276a2e61247661e132dd49434b444530c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a5619396e29b446dbc6804ece7444f355dae4c0a
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59817284"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66436304"
 ---
 # <a name="powershellise"></a>PowerShell_ise
 
@@ -33,27 +33,27 @@ Windows PowerShell 통합 스크립팅 환경 (ISE)는 읽기, 쓰기, 실행, �
 ## <a name="using-powershelliseexe"></a>PowerShell_ISE.exe를 사용 하 여
 
 사용할 수 있습니다 **PowerShell_ISE.exe** 시작 하 고 다음과 같이 Windows PowerShell 세션을 종료 합니다.
--   시작 메뉴 또는 Windows PowerShell에서 명령 프롬프트 창에서 Windows PowerShell ISE 세션을 시작 하려면 다음을 입력 합니다.  
-    ```
-    PowerShell_Ise
-    ```  
--   Windows PowerShell ISE에서 스크립트 (.ps1), 스크립트 모듈 (.psm1), 모듈 매니페스트 (.psd1), XML 파일 또는 다른 지원 되는 파일을 열고 다음 명령 형식을 사용 합니다.  
-    ```
-    PowerShell_Ise <FilePath>
-    ```  
-    Windows PowerShell 3.0에서 사용할 수는 선택적 **파일** 다음과 같은 매개 변수:  
-    ```
-    PowerShell_Ise -File <FilePath>
-    ```  
--   Windows PowerShell 프로필 없이 Windows PowerShell ISE 세션을 시작 하려면 사용 합니다 **NoProfile** 매개 변수입니다. (합니다 **NoProfile** 매개 변수는 Windows PowerShell 3.0에서 도입 되었습니다.)  
-    ```
-    PowerShell_Ise -NoProfile
-    ```  
--   보려는 합니다 **PowerShell_ISE.exe** 명령 프롬프트 창에서 파일을 다음 명령 형식을 사용 하 여 도움말:  
-    ```
-    PowerShell_Ise -help, -?, /?
-    ```  
-전체 목록은 합니다 **PowerShell_ISE.exe** 명령줄 매개 변수를 참조 하십시오 [about_PowerShell_Ise.exe](https://go.microsoft.com/fwlink/?LinkId=256512)합니다.
+- 시작 메뉴 또는 Windows PowerShell에서 명령 프롬프트 창에서 Windows PowerShell ISE 세션을 시작 하려면 다음을 입력 합니다.  
+  ```
+  PowerShell_Ise
+  ```  
+- Windows PowerShell ISE에서 스크립트 (.ps1), 스크립트 모듈 (.psm1), 모듈 매니페스트 (.psd1), XML 파일 또는 다른 지원 되는 파일을 열고 다음 명령 형식을 사용 합니다.  
+  ```
+  PowerShell_Ise <FilePath>
+  ```  
+  Windows PowerShell 3.0에서 사용할 수는 선택적 **파일** 다음과 같은 매개 변수:  
+  ```
+  PowerShell_Ise -File <FilePath>
+  ```  
+- Windows PowerShell 프로필 없이 Windows PowerShell ISE 세션을 시작 하려면 사용 합니다 **NoProfile** 매개 변수입니다. (합니다 **NoProfile** 매개 변수는 Windows PowerShell 3.0에서 도입 되었습니다.)  
+  ```
+  PowerShell_Ise -NoProfile
+  ```  
+- 보려는 합니다 **PowerShell_ISE.exe** 명령 프롬프트 창에서 파일을 다음 명령 형식을 사용 하 여 도움말:  
+  ```
+  PowerShell_Ise -help, -?, /?
+  ```  
+  전체 목록은 합니다 **PowerShell_ISE.exe** 명령줄 매개 변수를 참조 하십시오 [about_PowerShell_Ise.exe](https://go.microsoft.com/fwlink/?LinkId=256512)합니다.
 
 ## <a name="start-windows-powershell-ise-in-other-ways"></a>다른 방법으로 Windows PowerShell ISE를 시작 합니다.
 

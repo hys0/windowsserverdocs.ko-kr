@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: bef2cac726b1c4ea9b30f9a2086e3a2670339228
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 2053f0a93f33cdfdd85eec8cdbb6eca4ebad1ff0
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66189827"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66444921"
 ---
 # <a name="configure-ad-fs-to-authenticate-users-stored-in-ldap-directories"></a>LDAP 디렉터리에 저장된 사용자를 인증하도록 AD FS 구성
 
@@ -40,61 +40,60 @@ LDAP 디렉터리에 저장 되는 id에 대 한 Ws-trust 활성 인증 프로�
 ## <a name="configure-ad-fs-to-authenticate-users-stored-in-an-ldap-directory"></a>LDAP 디렉터리에 저장 된 사용자를 인증 하도록 AD FS를 구성 합니다.
 LDAP 디렉터리에서 사용자를 인증 하도록 AD FS 팜을 구성 하려면 다음 단계를 완료할 수 있습니다.
 
-1.  먼저, 사용 하 여 LDAP 디렉터리에 대 한 연결을 구성 합니다 **새로 만들기-AdfsLdapServerConnection** cmdlet:
+1. 먼저, 사용 하 여 LDAP 디렉터리에 대 한 연결을 구성 합니다 **새로 만들기-AdfsLdapServerConnection** cmdlet:
 
-    ```
-    $DirectoryCred = Get-Credential
-    $vendorDirectory = New-AdfsLdapServerConnection -HostName dirserver -Port 50000 -SslMode None -AuthenticationMethod Basic -Credential $DirectoryCred
-    ```
+   ```
+   $DirectoryCred = Get-Credential
+   $vendorDirectory = New-AdfsLdapServerConnection -HostName dirserver -Port 50000 -SslMode None -AuthenticationMethod Basic -Credential $DirectoryCred
+   ```
 
-    > [!NOTE]
-    > 에 연결 하려는 각 LDAP 서버에 대 한 새 연결 개체를 만드는 것이 좋습니다. AD FS는 여러 복제본 LDAP 서버에 연결 하 고 자동으로 장애 조치 특정 LDAP 서버가 다운 된 경우 수 있습니다. 이러한 경우에 대 한 각 복제본 LDAP 서버에 대 한 하나의 AdfsLdapServerConnection 만들기 추가 하는 다음 사용 하 여 연결 개체의 배열-**LdapServerConnection** 의 매개 변수는  **추가 AdfsLocalClaimsProviderTrust** cmdlet.
+   > [!NOTE]
+   > 에 연결 하려는 각 LDAP 서버에 대 한 새 연결 개체를 만드는 것이 좋습니다. AD FS는 여러 복제본 LDAP 서버에 연결 하 고 자동으로 장애 조치 특정 LDAP 서버가 다운 된 경우 수 있습니다. 이러한 경우에 대 한 각 복제본 LDAP 서버에 대 한 하나의 AdfsLdapServerConnection 만들기 추가 하는 다음 사용 하 여 연결 개체의 배열-**LdapServerConnection** 의 매개 변수는  **추가 AdfsLocalClaimsProviderTrust** cmdlet.
 
-    **참고:** LDAP 인스턴스에 바인딩하는 데 사용 될 Get-credential 및 형식에 DN 및 암호를 사용 하려고 하기 때문에 오류가 발생할 수 있습니다는 특정 입력된 형식, 예를 들어 도메인 \ 사용자 이름에 대 한 사용자 인터페이스 요구 사항 또는 user@domain.tld합니다. 대신 사용할 수 있습니다 Convertto-securestring cmdlet은 다음과 같습니다 (아래 예제에서는 가정 uid 관리, ou = LDAP 인스턴스에 바인딩하는 데 사용 될 자격 증명의 dn = 시스템):
+   **참고:** LDAP 인스턴스에 바인딩하는 데 사용 될 Get-credential 및 형식에 DN 및 암호를 사용 하려고 하기 때문에 오류가 발생할 수 있습니다는 특정 입력된 형식, 예를 들어 도메인 \ 사용자 이름에 대 한 사용자 인터페이스 요구 사항 또는 user@domain.tld합니다. 대신 사용할 수 있습니다 Convertto-securestring cmdlet은 다음과 같습니다 (아래 예제에서는 가정 uid 관리, ou = LDAP 인스턴스에 바인딩하는 데 사용 될 자격 증명의 dn = 시스템):
 
-    ```
-    $ldapuser = ConvertTo-SecureString -string "uid=admin,ou=system" -asplaintext -force
-    $DirectoryCred = Get-Credential -username $ldapuser -Message "Enter the credentials to bind to the LDAP instance:"
-    ```
+   ```
+   $ldapuser = ConvertTo-SecureString -string "uid=admin,ou=system" -asplaintext -force
+   $DirectoryCred = Get-Credential -username $ldapuser -Message "Enter the credentials to bind to the LDAP instance:"
+   ```
 
-    Uid에 대 한 암호를 입력 한 다음 = admin 및 나머지 단계를 완료 합니다.
+   Uid에 대 한 암호를 입력 한 다음 = admin 및 나머지 단계를 완료 합니다.
 
-2.  LDAP 특성을 사용 하 여 기존 AD FS 클레임 매핑의 선택적 단계를 수행 하는 다음에 **새로 만들기-AdfsLdapAttributeToClaimMapping** cmdlet. 아래 예에서 givenName, 성 매핑하고 CommonName LDAP 특성을 클레임으로 AD FS:
+2. LDAP 특성을 사용 하 여 기존 AD FS 클레임 매핑의 선택적 단계를 수행 하는 다음에 **새로 만들기-AdfsLdapAttributeToClaimMapping** cmdlet. 아래 예에서 givenName, 성 매핑하고 CommonName LDAP 특성을 클레임으로 AD FS:
 
-    ```
-    #Map given name claim
-    $GivenName = New-AdfsLdapAttributeToClaimMapping -LdapAttribute givenName -ClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname"
-    # Map surname claim
-    $Surname = New-AdfsLdapAttributeToClaimMapping -LdapAttribute sn -ClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname"
-    # Map common name claim
-    $CommonName = New-AdfsLdapAttributeToClaimMapping -LdapAttribute cn -ClaimType "http://schemas.xmlsoap.org/claims/CommonName"
-    ```
+   ```
+   #Map given name claim
+   $GivenName = New-AdfsLdapAttributeToClaimMapping -LdapAttribute givenName -ClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname"
+   # Map surname claim
+   $Surname = New-AdfsLdapAttributeToClaimMapping -LdapAttribute sn -ClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname"
+   # Map common name claim
+   $CommonName = New-AdfsLdapAttributeToClaimMapping -LdapAttribute cn -ClaimType "http://schemas.xmlsoap.org/claims/CommonName"
+   ```
 
-    이 매핑은 특성 LDAP 저장소에서 사용할 수 있도록 AD FS의 조건부 액세스 제어 규칙을 만들기 위해 AD FS에서 클레임으로 수행 됩니다. 또한 AD FS를 클레임으로 LDAP 특성을 매핑할 수 있는 간단한 방법을 제공 하 여 LDAP 저장소에서 사용자 지정 스키마를 작업할 수 있습니다.
+   이 매핑은 특성 LDAP 저장소에서 사용할 수 있도록 AD FS의 조건부 액세스 제어 규칙을 만들기 위해 AD FS에서 클레임으로 수행 됩니다. 또한 AD FS를 클레임으로 LDAP 특성을 매핑할 수 있는 간단한 방법을 제공 하 여 LDAP 저장소에서 사용자 지정 스키마를 작업할 수 있습니다.
 
-3.  마지막으로 등록 해야 LDAP 저장소 AD FS를 사용 하 여 로컬 클레임 공급자 트러스트를 사용 하 여 **추가 AdfsLocalClaimsProviderTrust** cmdlet:
+3. 마지막으로 등록 해야 LDAP 저장소 AD FS를 사용 하 여 로컬 클레임 공급자 트러스트를 사용 하 여 **추가 AdfsLocalClaimsProviderTrust** cmdlet:
 
-    ```
-    Add-AdfsLocalClaimsProviderTrust -Name "Vendors" -Identifier "urn:vendors" -Type Ldap
+   ```
+   Add-AdfsLocalClaimsProviderTrust -Name "Vendors" -Identifier "urn:vendors" -Type Ldap
 
-    # Connection info
-    -LdapServerConnection $vendorDirectory 
+   # Connection info
+   -LdapServerConnection $vendorDirectory 
 
-    # How to locate user objects in directory
-    -UserObjectClass inetOrgPerson -UserContainer "CN=VendorsContainer,CN=VendorsPartition" -LdapAuthenticationMethod Basic 
+   # How to locate user objects in directory
+   -UserObjectClass inetOrgPerson -UserContainer "CN=VendorsContainer,CN=VendorsPartition" -LdapAuthenticationMethod Basic 
 
-    # Claims for authenticated users
-    -AnchorClaimLdapAttribute mail -AnchorClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn" -LdapAttributeToClaimMapping @($GivenName, $Surname, $CommonName) 
+   # Claims for authenticated users
+   -AnchorClaimLdapAttribute mail -AnchorClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn" -LdapAttributeToClaimMapping @($GivenName, $Surname, $CommonName) 
 
-    # General claims provider properties
-    -AcceptanceTransformRules "c:[Type != ''] => issue(claim=c);" -Enabled $true 
+   # General claims provider properties
+   -AcceptanceTransformRules "c:[Type != ''] => issue(claim=c);" -Enabled $true 
 
-    # Optional - supply user name suffix if you want to use Ws-Trust
-    -OrganizationalAccountSuffix "vendors.contoso.com"
+   # Optional - supply user name suffix if you want to use Ws-Trust
+   -OrganizationalAccountSuffix "vendors.contoso.com"
+   ```
 
-    ```
-
-    위의 예에서 "공급 업체" 라는 로컬 클레임 공급자 트러스트를 만듭니다. 이 로컬 클레임 공급자 트러스트를 할당 하 여 나타내는 LDAP 디렉터리에 연결 하려면 AD FS에 대 한 연결 정보를 지정할 `$vendorDirectory` 에 `-LdapServerConnection` 매개 변수입니다. 1 단계에서 하 한이 할당 `$vendorDirectory` 특정 LDAP 디렉터리에 연결할 때 사용할 연결 문자열입니다. 마지막으로 지정 하는 하는 `$GivenName`, `$Surname`, 및 `$CommonName` multi-factor authentication 및 발급을 포함 하 여 조건부 액세스 제어를 사용 해야 하는 LDAP 특성 (AD FS 클레임을 매핑한) 권한 부여와 AD FS에서 발급 한 보안 토큰의 클레임을 통해 발급도 규칙입니다. AD FS를 사용 하 여 Ws-trust 같은 활성 프로토콜을 사용 하려면 현재 권한 부여 요청을 서비스 하는 경우 로컬 클레임 공급자 트러스트를 구분 하도록 AD FS를 사용 하도록 설정 하는 OrganizationalAccountSuffix 매개 변수를 지정 해야 합니다.
+   위의 예에서 "공급 업체" 라는 로컬 클레임 공급자 트러스트를 만듭니다. 이 로컬 클레임 공급자 트러스트를 할당 하 여 나타내는 LDAP 디렉터리에 연결 하려면 AD FS에 대 한 연결 정보를 지정할 `$vendorDirectory` 에 `-LdapServerConnection` 매개 변수입니다. 1 단계에서 하 한이 할당 `$vendorDirectory` 특정 LDAP 디렉터리에 연결할 때 사용할 연결 문자열입니다. 마지막으로 지정 하는 하는 `$GivenName`, `$Surname`, 및 `$CommonName` multi-factor authentication 및 발급을 포함 하 여 조건부 액세스 제어를 사용 해야 하는 LDAP 특성 (AD FS 클레임을 매핑한) 권한 부여와 AD FS에서 발급 한 보안 토큰의 클레임을 통해 발급도 규칙입니다. AD FS를 사용 하 여 Ws-trust 같은 활성 프로토콜을 사용 하려면 현재 권한 부여 요청을 서비스 하는 경우 로컬 클레임 공급자 트러스트를 구분 하도록 AD FS를 사용 하도록 설정 하는 OrganizationalAccountSuffix 매개 변수를 지정 해야 합니다.
 
 ## <a name="see-also"></a>관련 항목
 [AD FS 작업](../../ad-fs/AD-FS-2016-Operations.md)

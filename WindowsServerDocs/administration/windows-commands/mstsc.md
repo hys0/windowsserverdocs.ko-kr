@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 17c050a3504e763488a34bd19faad80558847965
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b6f89c1e3b0d36f14dbd55f9e6994c788305b30d
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59868824"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66437179"
 ---
 # <a name="mstsc"></a>mstsc
 
@@ -37,19 +37,20 @@ mstsc.exe /migrate
 ```
 
 ## <a name="parameters"></a>매개 변수
-|매개 변수|설명|
-|-------|--------|
-|<Connection File>|연결에.rdp 파일의 이름을 지정합니다.|
-|/v: < 서버 [:<Port>]|원격 컴퓨터와 선택적으로 연결 하려면 포트 번호를 지정 합니다.|
-|/admin|서버 관리에 대 한 세션에 연결할 수 있습니다.|
-|/f|전체 화면 모드에서 원격 데스크톱 연결을 시작합니다.|
-|/w:<Width>|원격 데스크톱 창의 너비를 지정합니다.|
-|/h:<Height>|원격 데스크톱 창의 높이 지정합니다.|
-|공용 /|공개 모드에서 원격 데스크톱을 실행합니다. 공개 모드, 암호 및 비트맵 캐시 되지 않습니다.|
-|/span|원격 데스크톱 너비와 높이를 필요에 따라 여러 모니터에 걸쳐 로컬 가상 데스크톱과 일치 합니다.|
-|/edit <Connection File>|편집을 위해 지정 된.rdp 파일을 엽니다.|
-|/ 마이그레이션|레거시 연결 생성 된 파일을 클라이언트 연결 관리자를 사용 하 여을 새로운.rdp 연결 파일로 마이그레이션합니다.|
-|/?|명령 프롬프트에 도움말을 표시합니다.|
+
+|        매개 변수        |                                                         설명                                                         |
+|-------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+|    <Connection File>    |                                   연결에.rdp 파일의 이름을 지정합니다.                                    |
+|   /v: < 서버 [:<Port>]   |                원격 컴퓨터와 선택적으로 연결 하려면 포트 번호를 지정 합니다.                 |
+|         /admin          |                                   서버 관리에 대 한 세션에 연결할 수 있습니다.                                   |
+|           /f            |                                    전체 화면 모드에서 원격 데스크톱 연결을 시작합니다.                                    |
+|       /w:<Width>        |                                      원격 데스크톱 창의 너비를 지정합니다.                                      |
+|       /h:<Height>       |                                     원격 데스크톱 창의 높이 지정합니다.                                      |
+|         공용 /         |                  공개 모드에서 원격 데스크톱을 실행합니다. 공개 모드, 암호 및 비트맵 캐시 되지 않습니다.                  |
+|          /span          | 원격 데스크톱 너비와 높이를 필요에 따라 여러 모니터에 걸쳐 로컬 가상 데스크톱과 일치 합니다. |
+| /edit <Connection File> |                                         편집을 위해 지정 된.rdp 파일을 엽니다.                                          |
+|        / 마이그레이션         |       레거시 연결 생성 된 파일을 클라이언트 연결 관리자를 사용 하 여을 새로운.rdp 연결 파일로 마이그레이션합니다.       |
+|           /?            |                                            명령 프롬프트에 도움말을 표시합니다.                                             |
 
 ## <a name="remarks"></a>설명
 -   Default.rdp 각 사용자에 대 한 사용자의 Documents 폴더에 숨겨진 파일로 저장 됩니다. 사용자가.rdp 파일을 만든 사용자의 Documents 폴더에는 기본적으로 저장 되지만 원하는 위치에 저장할 수 있습니다.
@@ -64,7 +65,7 @@ mstsc.exe /migrate
     ```
     mstsc /edit filename.rdp
     ```
-    
+
 #### <a name="additional-references"></a>추가 참조
 -   [명령줄 구문 키](command-line-syntax-key.md)
 -   [원격 데스크톱 서비스 &#40;터미널 서비스&#41; 명령 참조](remote-desktop-services-terminal-services-command-reference.md)

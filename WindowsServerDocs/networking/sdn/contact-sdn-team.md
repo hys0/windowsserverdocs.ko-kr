@@ -8,12 +8,12 @@ ms.topic: article
 ms.assetid: f9945c55-c2d0-448f-86dd-8c734e1b2987
 ms.author: pashort
 author: kallie-b
-ms.openlocfilehash: ff102fc02208bc12b99b50c3b16e3dc51f397d76
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: dd67fe27c048a15903d18dca43cf331a025933b3
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59884494"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446384"
 ---
 # <a name="contact-the-datacenter-and-cloud-networking-team"></a>데이터 센터 및 클라우드 네트워킹 팀에 문의
 
@@ -37,8 +37,8 @@ Microsoft의 **소프트웨어 정의 네트워킹 \(SDN\)**  하 고 **컨테�
 우리의 [컨테이너 네트워킹 설명서](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/container-networking) 에서 확인할 수 있습니다 [(docs.microsoft.com) Microsoft Docs](https://docs.microsoft.com/)에 있는 **주석 기능을 기본적으로**합니다. 유지 또는 주석에 회신 하려면 Microsoft Docs에서 참조 하려는 Microsoft Docs 페이지의 맨 아래로 스크롤에 로그인 하 고 수 있는 의견을 제출 합니다.
 
 > [Microsoft Docs](https://docs.microsoft.com/) 는 Microsoft의 새로운 통합된 설명서 사이트입니다. 팀의 대부분 [SDN 설명서](https://technet.microsoft.com/windows-server-docs/networking/sdn/software-defined-networking) TechNet에 남아 우리의 [컨테이너 네트워킹 설명서](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/container-networking) Microsoft Docs에서 되었습니다.
-
->*일반적으로 질문 불꽃 모드로 들어가거나 자세한 하고자 하는 Microsoft Docs에서 항목을 실행 하는 경우 의견을 남겨 하도록 도와주는 Microsoft 팀과 의견을 공유 하는 페이지입니다.*
+> 
+> *일반적으로 질문 불꽃 모드로 들어가거나 자세한 하고자 하는 Microsoft Docs에서 항목을 실행 하는 경우 의견을 남겨 하도록 도와주는 Microsoft 팀과 의견을 공유 하는 페이지입니다.*
 
 ## <a name="container-specific-forums"></a>컨테이너 관련 포럼
 자유롭게가이 페이지에서 모든 통로 사용 하 여 컨테이너 및 컨테이너 네트워킹에 관련 된 피드백을 제공 합니다. 그러나 찾으려는 Microsoft의 기본 포럼에 대 한 컨테이너 커뮤니티 특히, 다음을 참조 합니다.

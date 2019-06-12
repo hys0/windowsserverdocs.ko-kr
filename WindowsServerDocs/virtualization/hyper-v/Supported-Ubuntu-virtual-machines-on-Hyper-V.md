@@ -11,12 +11,12 @@ ms.assetid: 95ea5f7c-25c6-494b-8ffd-2a77f631ee94
 author: shirgall
 ms.author: shirgall
 ms.date: 11/19/2018
-ms.openlocfilehash: b58193ec570cf0d94b6c95018b8c00c813331986
-ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
+ms.openlocfilehash: 662541658fe6e7b99e66fe31344450e0a1cbd201
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/25/2019
-ms.locfileid: "66222638"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447834"
 ---
 # <a name="supported-ubuntu-virtual-machines-on-hyper-v"></a>Hyper-v에서 지원 되는 Ubuntu 가상 컴퓨터
 
@@ -91,7 +91,6 @@ Ubuntu 12.04 부터는 게스트 가상 컴퓨터로 사용 하기에 적합 한
    ```bash
    # apt-get update
    # apt-get install linux-azure
-
    ```
 
    별도 가상 커널 12.04에는 없습니다. 제네릭 HWE 커널 12.04에을 설치 하려면 루트 (또는 sudo)로 다음 명령을 실행 합니다.
@@ -99,7 +98,6 @@ Ubuntu 12.04 부터는 게스트 가상 컴퓨터로 사용 하기에 적합 한
    ```bash
    # apt-get update
    # apt-get install linux-generic-lts-trusty
-
    ```
 
    Ubuntu 12.04에 다음과 같은 Hyper-v 데몬 별도로 설치 된 패키지에서:
@@ -112,7 +110,6 @@ Ubuntu 12.04 부터는 게스트 가상 컴퓨터로 사용 하기에 적합 한
 
    ```bash
    # apt-get install hv-kvp-daemon-init linux-tools-lts-trusty linux-cloud-tools-generic-lts-trusty
-
    ```
 
    커널 업데이트 될 때마다 사용 하도록 가상 컴퓨터를 다시 부팅 해야 합니다.
@@ -124,7 +121,6 @@ Ubuntu 12.04 부터는 게스트 가상 컴퓨터로 사용 하기에 적합 한
    ```bash
    # apt-get update
    # apt-get install linux-azure
-
    ```
 
    커널 업데이트 될 때마다 사용 하도록 가상 컴퓨터를 다시 부팅 해야 합니다.
@@ -143,42 +139,37 @@ Ubuntu 12.04 부터는 게스트 가상 컴퓨터로 사용 하기에 적합 한
 
 11. Windows Server 2012 r 2에서 2 세대 가상 컴퓨터 수 있으며 일부 Linux 가상 컴퓨터는 보안 부팅 옵션을 해제 하지 않는 한 부팅 하 고 기본적으로 사용 하도록 설정 하는 보안 부팅 보안 부팅을 사용 하지 않도록 설정할 수는 **펌웨어** 섹션에 있는 가상 컴퓨터에 대 한 설정의 **Hyper-v 관리자** Powershell을 사용 하 여 비활성화할 수 있습니다.
 
-   ```Powershell
-   Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
-
-   ```
+    ```Powershell
+    Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
+    ```
 
 12. 새로운 2 세대 가상 컴퓨터를 만들거나 기존 가상 컴퓨터를 세대 2 VHD의 VHD를 복사 하려면 먼저 다음이 단계를 따르십시오.
 
-   1. 기존 2 세대 가상 컴퓨터에 로그인 합니다.
+    1. 기존 2 세대 가상 컴퓨터에 로그인 합니다.
 
-   2. EFI 부팅 디렉터리에 디렉터리를 변경 합니다.
+    2. EFI 부팅 디렉터리에 디렉터리를 변경 합니다.
 
-      ```bash
-      # cd /boot/efi/EFI
+       ```bash
+       # cd /boot/efi/EFI
+       ```
 
-      ```
+    3. 부팅 라는 새 디렉터리를 ubuntu 디렉터리에 복사 합니다.
 
-   3. 부팅 라는 새 디렉터리를 ubuntu 디렉터리에 복사 합니다.
+       ```bash
+       # sudo cp -r ubuntu/ boot
+       ```
 
-      ```bash
-      # sudo cp -r ubuntu/ boot
+    4. 새로 만든된 부팅 디렉터리에 디렉터리를 변경 합니다.
 
-      ```
+       ```bash
+       # cd boot
+       ```
 
-   4. 새로 만든된 부팅 디렉터리에 디렉터리를 변경 합니다.
+    5. Shimx64.efi 파일을 이름을 바꿉니다.
 
-      ```bash
-      # cd boot
-
-      ```
-
-   5. Shimx64.efi 파일을 이름을 바꿉니다.
-
-      ```bash
-      # sudo mv shimx64.efi bootx64.efi
-
-      ```
+       ```bash
+       # sudo mv shimx64.efi bootx64.efi
+       ```
 
 ## <a name="see-also"></a>관련 항목
 

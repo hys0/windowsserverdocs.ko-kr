@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6dea364b1afe385d03b0519538ff7bbd6bb9df28
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d0c68fbbf3ea776bbf6cd49fc4fa446d5dd46542
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59883254"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66437914"
 ---
 # <a name="label"></a>레이블
 
@@ -45,19 +45,19 @@ label [/mp] [<Volume>] [<Label>]
 
 ## <a name="remarks"></a>설명
 
--   Windows 볼륨 레이블 및 일련 번호 (있으면)의 일부분으로 표시 디렉터리 목록입니다.
--   NTFS 볼륨 레이블의 공백을 포함 하 여 길이가 최대 32 자를 수 있습니다. NTFS 볼륨 레이블 유지 및 레이블을 만들 때 사용 된 사례를 표시 합니다.
--   에 대 한 값을 지정 하지 않으면 경우는 **레이블** 매개 변수를는 **레이블** 명령은 다음과 같은 형식으로 출력을 표시 합니다.  
-    ```
-    Volume in drive C: xxxxxxxxxxx 
-    Volume Serial Number is xxxx-xxxx 
-    Volume label (32 characters, ENTER for none)?
-    ```  
-    새 볼륨 레이블을 입력 하거나 enter 키를 눌러 현재 레이블을 그대로 수 있습니다. ENTER 키를 누르면 하 고 볼륨 레이블을 현재 보유 하는 경우는 **레이블** 명령은 다음과 같은 메시지가 묻는 메시지를 표시 합니다.  
-    ```
-    Delete current volume label (Y/N)?
-    ```  
-    레이블을 삭제 하려면 Y 키 또는 레이블을 변경 하지 않으려면 N 키를 누릅니다.
+- Windows 볼륨 레이블 및 일련 번호 (있으면)의 일부분으로 표시 디렉터리 목록입니다.
+- NTFS 볼륨 레이블의 공백을 포함 하 여 길이가 최대 32 자를 수 있습니다. NTFS 볼륨 레이블 유지 및 레이블을 만들 때 사용 된 사례를 표시 합니다.
+- 에 대 한 값을 지정 하지 않으면 경우는 **레이블** 매개 변수를는 **레이블** 명령은 다음과 같은 형식으로 출력을 표시 합니다.  
+  ```
+  Volume in drive C: xxxxxxxxxxx 
+  Volume Serial Number is xxxx-xxxx 
+  Volume label (32 characters, ENTER for none)?
+  ```  
+  새 볼륨 레이블을 입력 하거나 enter 키를 눌러 현재 레이블을 그대로 수 있습니다. ENTER 키를 누르면 하 고 볼륨 레이블을 현재 보유 하는 경우는 **레이블** 명령은 다음과 같은 메시지가 묻는 메시지를 표시 합니다.  
+  ```
+  Delete current volume label (Y/N)?
+  ```  
+  레이블을 삭제 하려면 Y 키 또는 레이블을 변경 하지 않으려면 N 키를 누릅니다.
 
 ## <a name="BKMK_examples"></a>예제
 
@@ -66,21 +66,21 @@ label [/mp] [<Volume>] [<Label>]
 label a:sales-july
 ```
 C 드라이브에 대 한 현재 레이블을 삭제 하려면 다음이 단계를 따르십시오.
-1.  명령 프롬프트에서 다음을 입력합니다.  
-    ```
-    Label
-    ```  
-    다음과 유사한 출력이 표시 됩니다.  
-    ```
-    Volume in drive C: is Main Disk
-    Volume Serial Number is 6789-ABCD
-    Volume label (32 characters, ENTER for none)?
-    ```  
-2.  Enter 키를 누릅니다. 다음과 같은 메시지가 표시 됩니다.  
-    ```
-    Delete current volume label (Y/N)?
-    ```  
-3.  현재 레이블을 삭제 하려면 Y 누릅니다.
+1. 명령 프롬프트에서 다음을 입력합니다.  
+   ```
+   Label
+   ```  
+   다음과 유사한 출력이 표시 됩니다.  
+   ```
+   Volume in drive C: is Main Disk
+   Volume Serial Number is 6789-ABCD
+   Volume label (32 characters, ENTER for none)?
+   ```  
+2. Enter 키를 누릅니다. 다음과 같은 메시지가 표시 됩니다.  
+   ```
+   Delete current volume label (Y/N)?
+   ```  
+3. 현재 레이블을 삭제 하려면 Y 누릅니다.
 
 #### <a name="additional-references"></a>추가 참조
 

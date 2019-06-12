@@ -11,12 +11,12 @@ ms.assetid: c02fdb5b-62f3-43cb-a190-ab74b3ebcf77
 author: shirgall
 ms.author: kathydav
 ms.date: 06/01/2017
-ms.openlocfilehash: c72fd2c3a72a304fe8372afb93468fc451b3f2bc
-ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
+ms.openlocfilehash: e353ea0b444c07557de99db4472f565decb37349
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/25/2019
-ms.locfileid: "66222660"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447754"
 ---
 # <a name="supported-oracle-linux-virtual-machines-on-hyper-v"></a>Hyper-v에서 지원 되는 Oracle Linux 가상 컴퓨터
 
@@ -167,10 +167,9 @@ Oracle Linux Unbreakable Enterprise Kernel (UEK)는 64 비트 전용 되었으�
 
 13. OnWindows Server 2012 R2Generation 2 가상 컴퓨터는 기본적으로 사용 하도록 설정 하는 보안 부팅 및 일부 Linux 가상 컴퓨터에는 보안 부팅 옵션을 해제 하지 않는 한 부팅 되지 않습니다. 보안 부팅을 사용 하지 않도록 설정할 수는 **펌웨어** 섹션에 있는 가상 컴퓨터에 대 한 설정의 **Hyper-v 관리자** Powershell을 사용 하 여 비활성화할 수 있습니다.
 
-   ```Powershell
-   Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
-
-   ```
+    ```Powershell
+    Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
+    ```
 
     Linux Integration Services 다운로드 기존 세대 2 Vm에 적용할 수 있지만 2 세대 기능을 전달 하지 않습니다.
 

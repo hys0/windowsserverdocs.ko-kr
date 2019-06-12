@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a565a1d5fa1bc3ff57d1578fb54cfa4553e3bb26
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7ebd65fb56114bff9e6ae4b6a76376561c686dfa
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59818874"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66439560"
 ---
 # <a name="diskraid"></a>diskraid
 
@@ -95,7 +95,7 @@ add tpgroup tportal=n [noerr]
 > [!CAUTION]
 > 플렉스로 추가 되 고 LUN에 있는 모든 데이터가 삭제 됩니다.
 
-**tpgroup tportal=***n*
+**tpgroup tportal=** <em>n</em>
 
 현재 선택 된 iSCSI 대상 포털 그룹에 추가 하려면 iSCSI 대상 포털 번호를 지정 합니다.
 
@@ -187,7 +187,7 @@ automagic {set | clear | apply} all <flag=value> [<flag=value> [...]]
 
 플래그는 3 자 약어도 식별 됩니다.
 
-|플래그|설명|
+|Flag|설명|
 |----|-----------|
 |FCR|빠른 크래시 복구가 필요|
 |FTL|내결함성|
@@ -742,7 +742,7 @@ login target iadapter=<iadapter> [type={manual | persistent | boot}] [chap={none
 
 **영구** -자동으로 컴퓨터를 다시 시작할 때 동일한 로그인을 사용 합니다.
 
-**부트** -(이 옵션은 향후 개발을 위한 이며 현재 사용 되지 않습니다 *.*)
+**부트** -(이 옵션은 향후 개발을 위한 이며 현재 사용 되지 않습니다<em>.</em>)
 
 **chap**
 

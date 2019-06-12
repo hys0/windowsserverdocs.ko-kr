@@ -8,12 +8,12 @@ ms.topic: article
 author: gawatu
 ms.date: 10/17/2018
 ms.assetid: ''
-ms.openlocfilehash: ba7454f58255ba7a66624a5c59b062da9f871063
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 0f4fb73941c5d6667d3c13356b6f29178d73788f
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59865944"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447687"
 ---
 # <a name="mirror-accelerated-parity"></a>미러 가속 패리티
 
@@ -100,12 +100,12 @@ ReFS 압축은 미러에 핫 데이터를 위한 여유 공간을 확보하여 �
 ### <a name="performance-counters"></a>성능 카운터
 
 ReFS는 미러-가속 패리티 성능 평가에 도움이 되도록 성능 카운터를 유지합니다. 
--   패리티에 쓰기에 설명된 것과 같이 ReFS가 미러에서 여유 공간을 찾을 수 없을 때 패리티에 직접 씁니다. 이러한 현상은 대개 ReFS가 패리티에 데이터를 순환시킬 수 있는 것보다 빠르게 미러된 계층이 가득 찰 때 발생합니다. 즉, ReFS 순환이 수집 속도를 따라갈 수 없습니다. 아래의 성능 카운터는 ReFS가 패리티에 직접 쓸 때를 식별합니다.
-```
-ReFS\Data allocations slow tier/sec
-ReFS\Metadata allocations slow tier/sec
-```
--   이러한 카운터가 0이 아닐 경우 이는 ReFS가 미러 밖으로 데이터를 충분히 빠르게 순환하고 있지 않음을 나타냅니다. 이를 완화하는 데 도움이 되도록 순환 강도를 변경하거나 미러된 계층의 크기를 늘릴 수 있습니다.
+- 패리티에 쓰기에 설명된 것과 같이 ReFS가 미러에서 여유 공간을 찾을 수 없을 때 패리티에 직접 씁니다. 이러한 현상은 대개 ReFS가 패리티에 데이터를 순환시킬 수 있는 것보다 빠르게 미러된 계층이 가득 찰 때 발생합니다. 즉, ReFS 순환이 수집 속도를 따라갈 수 없습니다. 아래의 성능 카운터는 ReFS가 패리티에 직접 쓸 때를 식별합니다.
+  ```
+  ReFS\Data allocations slow tier/sec
+  ReFS\Metadata allocations slow tier/sec
+  ```
+- 이러한 카운터가 0이 아닐 경우 이는 ReFS가 미러 밖으로 데이터를 충분히 빠르게 순환하고 있지 않음을 나타냅니다. 이를 완화하는 데 도움이 되도록 순환 강도를 변경하거나 미러된 계층의 크기를 늘릴 수 있습니다.
 
 ### <a name="rotation-aggressiveness"></a>회전 강도
 

@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: beb94475-b21f-46a9-ac51-bf2bb28ca94e
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 468854d6e03bbc2abee3b9fce7f7960c7c25cfd3
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2a38e5682b03cdb37ff88332317122b6addd000c
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59879714"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446871"
 ---
 # <a name="monitor-connected-remote-clients-for-activity-and-status"></a>연결된 원격 클라이언트에서 활동 및 상태 모니터링
 
@@ -41,7 +41,7 @@ ms.locfileid: "59879714"
   
 4.  원격 액세스 서버에 연결 되 고 자세한 사용자의 목록을 표시에 대 한 통계입니다. 클라이언트에 해당 하는 목록에서 첫 번째 행을 클릭 합니다. 행을 선택 하면 원격 사용자 활동은 미리 보기 창에 표시 됩니다.  
   
-![Windows PowerShell](../../../media/Monitor-connected-remote-clients-for-activity-and-status/PowerShellLogoSmall.gif)Windows PowerShell 해당 명령을 * * *  
+![Windows PowerShell](../../../media/Monitor-connected-remote-clients-for-activity-and-status/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   

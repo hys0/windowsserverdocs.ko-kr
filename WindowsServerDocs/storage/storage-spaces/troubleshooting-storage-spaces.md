@@ -9,12 +9,12 @@ ms.topic: article
 author: kaushika-msft
 ms.date: 10/24/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 48099ad15465b885ccaf562bcf94b4bafdeff388
-ms.sourcegitcommit: 4ff3d00df3148e4bea08056cea9f1c3b52086e5d
+ms.openlocfilehash: 44bcf48f3e4a3b4b49ff027d3aa3e5704865e7b5
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64772628"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447887"
 ---
 # <a name="troubleshoot-storage-spaces-direct"></a>저장소 공간 다이렉트 해결
 
@@ -35,7 +35,7 @@ ms.locfileid: "64772628"
 
 ## <a name="virtual-disk-resources-are-in-no-redundancy-state"></a>가상 디스크 리소스가 없는 중복 상태
 저장소 공간 다이렉트 시스템의 노드 작동 중단 이나 정전이 오류로 인해 예기치 않게 다시 시작합니다. 그런 다음 하나 이상의 가상 디스크를 온라인 상태로 전환 될 수 있습니다 하 고 설명을 "중복 정보가 부족 합니다."를 참조 하세요
-    
+
 |FriendlyName|ResiliencySettingName| OperationalStatus| HealthStatus| IsManualAttach|크기| PSComputerName|
 |------------|---------------------| -----------------| ------------| --------------|-----| --------------|
 |Disk4| Mirror| 확인|  정상| True|  10TB|  노드-01.conto...|
@@ -52,7 +52,7 @@ ms.locfileid: "64772628"
 ``` 
 
 합니다 **No 중복 작업 상태** 디스크 실패 한 경우 또는 시스템 데이터 가상 디스크에 액세스할 수 없는 경우 발생할 수 있습니다. 이 문제는 노드에서 유지 관리 하는 동안 노드 다시 부팅 하는 경우에 발생할 수 있습니다.
-    
+
 이 문제를 해결 하려면 다음이 단계를 수행 합니다.
 
 1. CSV에서 영향을 받는 가상 디스크를 제거 합니다. 그러면 클러스터의 "Available storage" 그룹에 배치 되 고 "Physical Disk"의 ResourceType 표시 시작
@@ -91,8 +91,8 @@ ms.locfileid: "64772628"
    ```
 
 **DiskRecoveryAction** 는 공간 볼륨 검사 없이 읽기 / 쓰기 모드를 연결할 수 있는 재정의 스위치입니다. 속성을 사용 하는 볼륨이 온라인 상태가 되지 않습니다 이유를 진단을 수행할 수 있습니다. 유지 관리 모드 매우 유사 하지만 실패 함 상태인 리소스에 대해 호출할 수 있습니다. 또한 액세스를 얻을 수 있는 "No 중복성" 같은 상황에서 유용할 수 있는 데이터에 액세스할 수 있습니다 모든 데이터를 복사 합니다. DiskRecoveryAction 속성을 22 2018 년 2 월 업데이트 (kb) 4077525에에서 추가 되었습니다.
-    
-    
+
+
 ## <a name="detached-status-in-a-cluster"></a>클러스터에서 분리 된 상태 
 
 실행 하는 경우는 **Get-virtualdisk** 하나 이상의 저장소 공간 다이렉트는 가상 디스크를 분리할 OperationalStatus cmdlet. 그러나 의해 보고 된 HealthStatus 합니다 **Get-physicaldisk** cmdlet 정상 상태로 있는 모든 실제 디스크를 나타냅니다.
@@ -122,7 +122,7 @@ Data on the disk is out-of-sync and a data integrity scan is required.
 
 To start the scan, run the following command:   
 Get-ScheduledTask -TaskName "Data Integrity Scan for Crash Recovery" | Start-ScheduledTask                
-             
+
 Once you have resolved the condition listed above, you can online the disk by using the following commands in PowerShell:   
 
 Get-VirtualDisk | ?{ $_.ObjectId -Match "{GUID}" } | Get-Disk | Set-Disk -IsReadOnly $false 
@@ -152,7 +152,7 @@ Volume Name:
 ``` 
 
 합니다 **분리 된 작업 상태** 를 영역 (DRT) 추적 로그가 꽉 찬 경우 발생할 수 있습니다. 저장소 공간 영역 (DRT) 미러 공간에 대 한 추적을 사용 하 여 전원 오류가 발생 하는 경우 저장소 공간 다시 실행 하거나 실행 취소 작업에 유연한 저장소 공간을 다시 바인딩할 수 있도록 메타 데이터에 대 한 진행 중인 업데이트가 기록 됩니다 있는지 확인 하려면 전원이 복원 되 면 일관 된 상태와 시스템을 다시 작동 하며 DRT 로그가 꽉 차면 DRT 메타 데이터를 동기화 하 고 플러시될 때까지 가상 디스크가 온라인 상태가 없습니다. 이 프로세스를 완료 하려면 몇 시간이 걸릴 수 있는 전체 검색을 실행 해야 합니다.
-    
+
 이 문제를 해결 하려면 다음이 단계를 수행 합니다.
 1. CSV에서 영향을 받는 가상 디스크를 제거 합니다.
 
@@ -172,9 +172,9 @@ Volume Name:
    ```
    이 태스크는 분리 된 볼륨이 온라인 상태가 되는 모든 노드를 시작 합니다. 복구를 자동으로 시작 해야 합니다. 복구가 완료 될 때까지 기다립니다. 일시 중단 된 상태로 전환 하 고 다시 시작 될 수 있습니다. 진행을 모니터링 합니다. 
    - 실행할 **Get-storagejob** 복구의 상태를 모니터링 하 고 완료 되 면 볼 수 있습니다.
-   -  실행할 **Get-virtualdisk** 공간 반환 된 HealthStatus의 정상 상태 확인 합니다.
-    - "데이터 무결성 검사에 대 한 크래시 복구" 저장소 작업으로 표시 되지 않는 작업은 이며 진행률 표시기가 없습니다. 태스크를 표시 하는 경우 실행 중으로 실행 합니다. 완료 되 면 완료 표시 됩니다.
-    
+   - 실행할 **Get-virtualdisk** 공간 반환 된 HealthStatus의 정상 상태 확인 합니다.
+     - "데이터 무결성 검사에 대 한 크래시 복구" 저장소 작업으로 표시 되지 않는 작업은 이며 진행률 표시기가 없습니다. 태스크를 표시 하는 경우 실행 중으로 실행 합니다. 완료 되 면 완료 표시 됩니다.
+
        또한 다음 cmdlet을 사용 하 여 실행 중인 일정 작업의 상태를 볼 수 있습니다. 
        ```powershell
        Get-ScheduledTask | ? State -eq running
@@ -189,12 +189,12 @@ Volume Name:
    ```powershell
    Add-ClusterSharedVolume -name "VdiskName"
    ```  
-**DiskRunChkdsk 값 7** 공간 볼륨을 연결 하 고 읽기 전용 모드에서 파티션을 하는 데 사용 됩니다. 이 공간을 직접 검색 하 고 치료할 트리거하여 복구를 통해. 복구를 실행 하는 한 번 자동으로 탑재 합니다. 또한 모든 데이터를 복사할 수에 대 한 액세스는 데 도움이 될 수 있는 데이터에 액세스할 수 있습니다. 전체 DRT 로그와 같은 일부 오류 조건에 대 한 크래시 복구 예약 된 작업에 대 한 데이터 무결성 검사를 실행 해야 합니다.
-    
+   **DiskRunChkdsk 값 7** 공간 볼륨을 연결 하 고 읽기 전용 모드에서 파티션을 하는 데 사용 됩니다. 이 공간을 직접 검색 하 고 치료할 트리거하여 복구를 통해. 복구를 실행 하는 한 번 자동으로 탑재 합니다. 또한 모든 데이터를 복사할 수에 대 한 액세스는 데 도움이 될 수 있는 데이터에 액세스할 수 있습니다. 전체 DRT 로그와 같은 일부 오류 조건에 대 한 크래시 복구 예약 된 작업에 대 한 데이터 무결성 검사를 실행 해야 합니다.
+
 **크래시 복구 작업에 대 한 데이터 무결성 검사** 동기화 및 전체 영역 (DRT) 추적 로그의 선택을 취소 하는 데 사용 됩니다. 이 작업을 완료 하는 데 몇 시간이 걸릴 수 있습니다. "데이터 무결성 검사에 대 한 크래시 복구" 저장소 작업으로 표시 되지 않는 작업은 이며 진행률 표시기가 없습니다. 태스크를 표시 하는 경우 실행 중으로 실행 합니다. 완료 되 면 완료 된 것으로 표시 됩니다. 작업을 취소 하거나이 작업이 실행 되는 동안에 노드를 다시 시작 하는 경우 태스크는 처음부터 다시 시작 해야 합니다.
 
 자세한 내용은 [저장소 공간 다이렉트 문제 해결 상태 및 작동 상태](storage-spaces-states.md)합니다.
-    
+
 ## <a name="event-5120-with-statusiotimeout-c00000b5"></a>STATUS_IO_TIMEOUT c00000b5 5120 이벤트 
 
 > [!Important]
@@ -223,7 +223,7 @@ Description: Cluster node 'NODENAME'was removed from the active failover cluster
 2018 년 5 월 8, Windows Server 2016에에서 도입 된 저장소 공간 다이렉트 클러스터 간 SMB 네트워크 세션에 대 한 SMB 복원 력 있는 처리를 추가 하려면 누적 업데이트 된 변경 합니다. 이렇게 일시적인 네트워크 오류에 대 한 탄력성 RoCE 네트워크 정체를 처리 하는 방법을 개선할 수 있습니다. 이러한 향상 된이 기능 또한 실수로 증가 SMB 연결에 다시 연결 하려고 하는 경우 시간 제한 및 제한 시간 대기 노드를 다시 시작할 때. 이러한 문제는 시스템은 부하가 발생할 수 있습니다. 계획 되지 않은 가동 중지 시간 중 최대 60 초 일시 중지 IO도 관찰 한 시스템 연결 제한 시간을 대기 하는 동안. 이 문제를 해결 하려면 설치 합니다 [2018 년 10 월 18 일 Windows Server 2016 용 누적 업데이트](https://support.microsoft.com/help/4462928) 이상 버전.
 
 *참고* 이 업데이트에는이 문제를 해결 하려면 SMB 연결 시간 제한이 있는 CSV 제한 맞춥니다. 해결 방법 섹션에 언급 된 라이브 덤프 생성 하지 않으려면 변경 내용을 구현 하지 않습니다.
-    
+
 ### <a name="shutdown-process-flow"></a>종료 프로세스 흐름:
 
 1. Get-virtualdisk cmdlet을 실행 하 고 HealthStatus 값 정상 인지 확인 합니다.
@@ -293,14 +293,14 @@ reg add "HKLM\Software\Microsoft\Windows\Windows Error Reporting\FullLiveKernelR
 (Get-Cluster).DumpPolicy = ((Get-Cluster).DumpPolicy -band 0xFFFFFFFFFFFFFFFE)
 ```
 이 cmdlet은 컴퓨터를 다시 시작 하지 않고 모든 클러스터 노드에서 즉시 영향을 미칩니다.
-    
+
 ## <a name="slow-io-performance"></a>느린 IO 성능
 
 IO 성능 저하, 표시 되는 경우에 캐시 저장소 공간 다이렉트 구성에서 사용 되는지 여부를 확인 합니다. 
 
 두 가지 방법으로 검사할 수 있습니다. 
-     
- 
+
+
 1. 클러스터 로그를 사용합니다. 원하는 텍스트 편집기에서 클러스터 로그를 열고 검색 "[=== SBL 디스크 ===]." 이 로그에 생성 된 노드에서 디스크 목록이 됩니다. 
 
      캐시는 디스크 예제를 사용 합니다. 상태가 CacheDiskStateInitializedAndBound을 여기 있는 GUID가 다음 note 합니다. 
@@ -338,7 +338,7 @@ IO 성능 저하, 표시 되는 경우에 캐시 저장소 공간 다이렉트 �
    |NVMe INTEL SSDPE7KX02 |PHLF7330001J2P0LGN |SSD| False| 확인| 정상| 자동 선택| 1.82 TB|
    |NVMe INTEL SSDPE7KX02| PHLF733000302P0LGN |SSD| False| 확인|정상| 자동 선택| 1.82 TB|
    |NVMe INTEL SSDPE7KX02| PHLF7330004D2P0LGN |SSD| False| 확인| 정상| 자동 선택 |1.82 TB|
-    
+
 ## <a name="how-to-destroy-an-existing-cluster-so-you-can-use-the-same-disks-again"></a>와 동일한 디스크를 다시 사용할 수 있도록 기존 클러스터를 삭제 하는 방법
 
 저장소 공간 다이렉트 클러스터에서 한 번 저장소 공간 다이렉트를 사용 하지 않도록 하에 설명 된 정리 프로세스를 사용 하 여 [드라이브 청소](deploy-storage-spaces-direct.md#step-31-clean-drives), 오프 라인 상태로 남아 클러스터 된 저장소 풀 및 상태 관리 서비스에서 제거 됩니다 클러스터입니다.
@@ -370,7 +370,7 @@ IO 성능 저하, 표시 되는 경우에 캐시 저장소 공간 다이렉트 �
 ||Msft Virtu... ||정상| 오프라인| 100GB| RAW|
 ||Msft Virtu... ||정상| 오프라인| 100GB| RAW|
 
-    
+
 ## <a name="error-message-about-unsupported-media-type-when-you-create-an-storage-spaces-direct-cluster-using-enable-clusters2d"></a>"지원 되지 않는 미디어 유형"에 대 한 오류 메시지 Enable-ClusterS2D를 사용 하 여 저장소 공간 다이렉트 클러스터를 만들 때  
 
 실행 하면 다음과 유사한 오류가 표시 될 수 있습니다 합니다 **Enable-ClusterS2D** cmdlet:
@@ -378,32 +378,33 @@ IO 성능 저하, 표시 되는 경우에 캐시 저장소 공간 다이렉트 �
 ![시나리오 6 오류 메시지](media/troubleshooting/scenario-error-message.png)
 
 이 문제를 해결 하려면 HBA 어댑터 HBA 모드로 구성 된를 확인 합니다. 없는 HBA RAID 모드로 구성 되어야 합니다.  
-    
+
 ## <a name="enable-clusterstoragespacesdirect-hangs-at-waiting-until-sbl-disks-are-surfaced-or-at-27"></a>Enable-clusterstoragespacesdirect 27% 또는 'SBL까지 디스크는 표시'에서 중단 됩니다.
 
 유효성 검사 보고서에서 다음 정보를 표시 됩니다.
 
     Disk <identifier> connected to node <nodename> returned a SCSI Port Association and the corresponding enclosure device could not be found. The hardware is not compatible with Storage Spaces Direct (S2D), contact the hardware vendor to verify support for SCSI Enclosure Services (SES). 
-    
-  
+
+
 디스크와 HBA 카드 사이 존재 하는 HPE SAS 확장기 카드를 사용 하 여 문제가입니다. SAS 확장기 확장기 및 자체 확장기에 연결 된 첫 번째 드라이브 간에 중복 된 ID를 만듭니다.  해결 되었습니다이 [HPE 스마트 배열 컨트롤러 SAS 확장기 펌웨어. 4.02](https://support.hpe.com/hpsc/swd/public/detail?sp4ts.oid=7304566&swItemId=MTX_ef8d0bf4006542e194854eea6a&swEnvOid=4184#tab3).
-    
+
 ## <a name="intel-ssd-dc-p4600-series-has-a-non-unique-nguid"></a>Intel SSD DC P4600 계열에 고유 하지 않은 NGUID
 Intel SSD DC P4600 시리즈 장치를 같습니다 0100000001000000E4D25C000014E214 또는 0100000001000000E4D25C0000EEE214 아래 예제에서와 같은 여러 네임 스페이스에 대 한 유사한 16 바이트 NGUID를 보고할 수 있는 문제를 확인할 수 있습니다.
 
-|uniqueid| deviceid |MediaType| BusType| serialnumber| 크기|canpool| friendlyname| OperationalStatus|
-|-|-|-|-|-|-|-|-|-
-|5000CCA251D12E30| 0| HDD| SAS| 7PKR197G|                  10000831348736 |False|HGST| HUH721010AL4200| 확인|
-|eui.0100000001000000E4D25C000014E214 |4|SSD| NVMe|   0100_0000_0100_0000_E4D2_5C00_0014_E214.|1600321314816|True| INTEL| SSDPE2KE016T7|  확인|
-|eui.0100000001000000E4D25C000014E214 |5|        SSD|       NVMe|    0100_0000_0100_0000_E4D2_5C00_0014_E214.|  1600321314816|    True| INTEL| SSDPE2KE016T7|  확인|
-|eui.0100000001000000E4D25C0000EEE214| 6|        SSD|       NVMe|    0100_0000_0100_0000_E4D2_5C00_00EE_E214.|  1600321314816|    True| INTEL| SSDPE2KE016T7|  확인|
-|eui.0100000001000000E4D25C0000EEE214| 7|        SSD|       NVMe|    0100_0000_0100_0000_E4D2_5C00_00EE_E214.|  1600321314816|    True| INTEL| SSDPE2KE016T7|  확인|
+
+|               uniqueid               | deviceid | MediaType | BusType |               serialnumber               |      크기      | canpool | friendlyname | OperationalStatus |
+|--------------------------------------|----------|-----------|---------|------------------------------------------|----------------|---------|--------------|-------------------|
+|           5000CCA251D12E30           |    0     |    HDD    |   SAS   |                 7PKR197G                 | 10000831348736 |  False  |     HGST     |  HUH721010AL4200  |
+| eui.0100000001000000E4D25C000014E214 |    4     |    SSD    |  NVMe   | 0100_0000_0100_0000_E4D2_5C00_0014_E214. | 1600321314816  |  True   |    INTEL     |   SSDPE2KE016T7   |
+| eui.0100000001000000E4D25C000014E214 |    5     |    SSD    |  NVMe   | 0100_0000_0100_0000_E4D2_5C00_0014_E214. | 1600321314816  |  True   |    INTEL     |   SSDPE2KE016T7   |
+| eui.0100000001000000E4D25C0000EEE214 |    6     |    SSD    |  NVMe   | 0100_0000_0100_0000_E4D2_5C00_00EE_E214. | 1600321314816  |  True   |    INTEL     |   SSDPE2KE016T7   |
+| eui.0100000001000000E4D25C0000EEE214 |    7     |    SSD    |  NVMe   | 0100_0000_0100_0000_E4D2_5C00_00EE_E214. | 1600321314816  |  True   |    INTEL     |   SSDPE2KE016T7   |
 
 이 문제를 해결 하려면 Intel 드라이브의 펌웨어를 최신 버전으로 업데이트 합니다.  펌웨어 버전 QDV101B1 2018 년 5 월에서에서이 문제를 해결 하려면 이라고 합니다.
 
 합니다 [2018 년 5 월 릴리스의 Intel SSD 데이터 센터 도구](https://downloadmirror.intel.com/27778/eng/Intel_SSD_Data_Center_Tool_3_0_12_Release_Notes_330715-026.pdf) 펌웨어 업데이트 QDV101B1, Intel SSD DC P4600 시리즈에 포함 되어 있습니다.
 
-    
+
 ## <a name="physical-disk-healthy-and-operational-status-is-removing-from-pool"></a>실제 디스크 "정상", 및 작동 상태는 "풀에서 제거" 
 
 Windows Server 2016 저장소 공간 다이렉트 클러스터에서 나타날 수 있습니다 하나 이상의 물리적 디스크에 대 한 HealthStatus "정상"으로 OperationalStatus는 "(제거 확인, 풀에서)." 
@@ -416,7 +417,7 @@ Windows Server 2016 저장소 공간 다이렉트 클러스터에서 나타날 �
 스크립트를 실행 하는 방법을 보여 주는 몇 가지 예는 다음과 같습니다.
 
 - 사용 된 **SerialNumber** 매개 변수를 정상으로 설정 해야 하는 디스크를 지정 합니다. 일련 번호를 가져올 수 있습니다 **WMI MSFT_PhysicalDisk** 하거나 **Get-physicaldisk**합니다. (것만 사용 하는 0으로 아래에 일련 번호에 대 한 합니다.)
-   
+
    ```powershell
    Clear-PhysicalDiskHealthData -Intent -Policy -SerialNumber 000000000000000 -Verbose -Force
     ```
@@ -446,7 +447,7 @@ Windows Server 2016 저장소 공간 다이렉트 클러스터에서 나타날 �
 Azure Vm을 실행 하는 경우에이 이벤트를 무시할 수 있습니다.
 
     Event ID 32: The driver detected that the device \Device\Harddisk5\DR5 has its write cache enabled. Data corruption may occur. 
-    
+
 ## <a name="slow-performance-or-lost-communication-io-error-detached-or-no-redundancy-errors-for-deployments-that-use-intel-p3x00-nvme-devices"></a>성능 저하 또는 "Lost Communication," "IO Error", "분리 된" 또는 "No 중복성" Intel P3x00 NVMe 장치를 사용 하는 배포 오류
 
 "유지 관리 릴리스 8." 이전 펌웨어 버전을 사용 하 여 장치 NVM (NVMe) Express Intel P3x00 제품군을 기반 하드웨어를 사용 하는 일부 저장소 공간 다이렉트의 사용자에 영향을 주는 중요 한 문제를 식별 했습니다. 

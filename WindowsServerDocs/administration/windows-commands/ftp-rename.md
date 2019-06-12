@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f99b3a43192a48e8adffaa60c25b46cfcaa8e3c2
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 80d1a15f038017444c7654a44748bfd22be8e487
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59861864"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66438386"
 ---
 # <a name="ftp-rename"></a>ftp: 이름 바꾸기
 
@@ -30,10 +30,12 @@ ms.locfileid: "59861864"
 rename <FileName> <NewFileName>  
 ```  
 ### <a name="parameters"></a>매개 변수  
-|매개 변수|설명|  
-|-------|--------|  
-|<FileName>|이름을 바꿀 파일을 지정 합니다.|  
-|<NewFileName>|새 파일 이름을 지정합니다.|  
+
+|   매개 변수   |                 설명                 |
+|---------------|---------------------------------------------|
+|  <FileName>   | 이름을 바꿀 파일을 지정 합니다. |
+| <NewFileName> |        새 파일 이름을 지정합니다.         |
+
 ## <a name="BKMK_Examples"></a>예제  
 원격 파일 이름 바꾸기 **example.txt** 에 **example1.txt**  
 ```  

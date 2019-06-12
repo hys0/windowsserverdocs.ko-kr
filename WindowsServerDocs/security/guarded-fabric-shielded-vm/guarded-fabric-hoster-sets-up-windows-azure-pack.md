@@ -8,12 +8,12 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 9ca9f41770c977b6e7c4900b090471dbfe11a450
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 156832087bc7af0c95a92cab9a0c1501264d47a5
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59855724"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447500"
 ---
 # <a name="shielded-vms---hosting-service-provider-sets-up-windows-azure-pack"></a>보호된 VM - 호스팅 서비스 공급자가 Microsoft Azure 팩 설정
 
@@ -52,7 +52,7 @@ ms.locfileid: "59855724"
 
 3.  웹 플랫폼 설치 관리자를 열고 찾습니다 **Windows Azure Pack: 포털 및 API Express** 아래의 합니다 **제품** 탭 합니다. 클릭 **추가**, 한 다음 **설치** 창의 맨 아래에 있습니다.
 
-4.  설치를 계속합니다. 설치가 완료 되 면 구성 사이트 (*https://&lt;wapserver&gt;: 30101 /*) 웹 브라우저에서 열립니다. 이 웹 사이트에서 SQL server에 대 한 정보를 제공 하 고 WAP 구성을 완료 합니다.
+4.  설치를 계속합니다. 설치가 완료 되 면 구성 사이트 (*https://&lt;wapserver&gt;: 30101 /* ) 웹 브라우저에서 열립니다. 이 웹 사이트에서 SQL server에 대 한 정보를 제공 하 고 WAP 구성을 완료 합니다.
 
 Windows Azure pack 도움말 설정을 참조 하세요 [Windows Azure Pack의 express 배포 설치](https://technet.microsoft.com/dn296439.aspx)합니다.
 
@@ -77,37 +77,37 @@ Windows Azure Pack을 사용 하기 전에 이미 있어야 설치 하 고 인�
 
 WAP의 Vm을 만들려면 테 넌 트를 허용 하려면 먼저 테 넌 트가 구독할 수 있는 호스팅 계획을 만들어야 합니다. 테 넌 트에 대 한 허용 된 VM 클라우드, 템플릿, 네트워크 및 청구 엔터티를 정의 하는 계획 합니다.
 
-1.  포털의 아래쪽 창에서 클릭 **+ 새로 만들기** &gt; **계획** &gt; **계획 만들기**합니다.
+1. 포털의 아래쪽 창에서 클릭 **+ 새로 만들기** &gt; **계획** &gt; **계획 만들기**합니다.
 
-2.  마법사의 첫 번째 단계에서 계획의 이름을 선택 합니다. 구독할 때 테 넌 트 표시 이름입니다.
+2. 마법사의 첫 번째 단계에서 계획의 이름을 선택 합니다. 구독할 때 테 넌 트 표시 이름입니다.
 
-3.  두 번째 단계에서 선택 **가상 머신 클라우드** 계획에서 제공 하는 서비스 중 하 나와 있습니다.
+3. 두 번째 단계에서 선택 **가상 머신 클라우드** 계획에서 제공 하는 서비스 중 하 나와 있습니다.
 
-4.  계획에 대 한 모든 추가 기능을 선택 하는 방법에 대 한 단계를 건너뜁니다.
+4. 계획에 대 한 모든 추가 기능을 선택 하는 방법에 대 한 단계를 건너뜁니다.
 
-5.  클릭 **확인** 계획을 만들려면 (확인 표시). 계획을 만들지만이 것 아직 구성 된 상태에서입니다.
+5. 클릭 **확인** 계획을 만들려면 (확인 표시). 계획을 만들지만이 것 아직 구성 된 상태에서입니다.
 
-    ![계획에서 Windows Azure 팩](../media/Guarded-Fabric-Shielded-VM/guarded-host-azure-pack-02-create-plan.png)
+   ![계획에서 Windows Azure 팩](../media/Guarded-Fabric-Shielded-VM/guarded-host-azure-pack-02-create-plan.png)
 
-6.  계획을 구성 하려면 해당 이름을 클릭 합니다.
+6. 계획을 구성 하려면 해당 이름을 클릭 합니다.
 
-7.  다음 페이지에서 아래 **서비스 계획**, 클릭 **가상 머신 클라우드**합니다. 이 계획에 대 한 할당량을 구성할 수 있는 페이지가 열립니다.
+7. 다음 페이지에서 아래 **서비스 계획**, 클릭 **가상 머신 클라우드**합니다. 이 계획에 대 한 할당량을 구성할 수 있는 페이지가 열립니다.
 
-8.  아래 **기본**, VMM 관리 서버 및 테 넌 트에 제공 하려는 가상 컴퓨터 클라우드를 선택 합니다. 사용 하 여 보호 된 Vm을 제공할 수 있는 클라우드가 표시 됩니다 **(지원 되는 실딩)** 해당 이름 옆에 있는 합니다.
+8. 아래 **기본**, VMM 관리 서버 및 테 넌 트에 제공 하려는 가상 컴퓨터 클라우드를 선택 합니다. 사용 하 여 보호 된 Vm을 제공할 수 있는 클라우드가 표시 됩니다 **(지원 되는 실딩)** 해당 이름 옆에 있는 합니다.
 
-9.  이 계획에 적용 하려는 할당량을 선택 합니다. (예를 들어 제한 CPU 코어 및 RAM 사용). 유지 해야 합니다 **허용 Virtual Machines를 보호** 확인란을 선택 합니다.
+9. 이 계획에 적용 하려는 할당량을 선택 합니다. (예를 들어 제한 CPU 코어 및 RAM 사용). 유지 해야 합니다 **허용 Virtual Machines를 보호** 확인란을 선택 합니다.
 
-    ![Windows Azure Pack에서 가상 컴퓨터 클라우드에 대 한 설정](../media/Guarded-Fabric-Shielded-VM/guarded-host-azure-pack-03-virtual-machine-clouds.png)
+   ![Windows Azure Pack에서 가상 컴퓨터 클라우드에 대 한 설정](../media/Guarded-Fabric-Shielded-VM/guarded-host-azure-pack-03-virtual-machine-clouds.png)
     
-10.  섹션까지 아래로 스크롤합니다 **템플릿**를 선택한 다음 하나 이상의 템플릿이 테 넌 트에 제공 합니다. 모두 보호 하 고 테 넌 트 VM 및 해당 암호의 무결성에 대 한 종단 간 보증을 제공 하려면 테 넌 트에 차폐 되지 않은 템플릿은 있지만 보호 된 템플릿을 제공 해야 합니다를 제공할 수 있습니다.
+10. 섹션까지 아래로 스크롤합니다 **템플릿**를 선택한 다음 하나 이상의 템플릿이 테 넌 트에 제공 합니다. 모두 보호 하 고 테 넌 트 VM 및 해당 암호의 무결성에 대 한 종단 간 보증을 제공 하려면 테 넌 트에 차폐 되지 않은 템플릿은 있지만 보호 된 템플릿을 제공 해야 합니다를 제공할 수 있습니다.
 
-11.  에 **네트워크** 섹션, 테 넌 트에 대 한 하나 이상의 네트워크를 추가 합니다.
+11. 에 **네트워크** 섹션, 테 넌 트에 대 한 하나 이상의 네트워크를 추가 합니다.
 
-12.  계획에 대 한 설정 또는 할당량을 설정한 후 클릭 **저장** 맨 아래에 있습니다.
+12. 계획에 대 한 설정 또는 할당량을 설정한 후 클릭 **저장** 맨 아래에 있습니다.
 
-13.  화면 왼쪽 상단을 보면, 다시 이동 하 고 화살표를 클릭 합니다 **계획** 페이지입니다.
+13. 화면 왼쪽 상단을 보면, 다시 이동 하 고 화살표를 클릭 합니다 **계획** 페이지입니다.
 
-14.  화면 아래쪽에서 계획을 변경 **사설** 하 **공용** 테 넌 트가 계획을 구독할 수 있도록 합니다.
+14. 화면 아래쪽에서 계획을 변경 **사설** 하 **공용** 테 넌 트가 계획을 구독할 수 있도록 합니다.
 
     ![Windows Azure Pack의 계획에 대 한 액세스를 변경 합니다.](../media/Guarded-Fabric-Shielded-VM/guarded-host-azure-pack-04-change-access.png)
 
@@ -116,4 +116,4 @@ WAP의 Vm을 만들려면 테 넌 트를 허용 하려면 먼저 테 넌 트가 
 ## <a name="see-also"></a>참조
 
 - [보호 된 호스트 및 차폐 Vm 호스팅 서비스 공급자 구성 단계](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
-- [보호 된 패브릭 및 보호 된 Vm](guarded-fabric-and-shielded-vms-top-node.md)
+- [보호된 패브릭 및 보호된 VM](guarded-fabric-and-shielded-vms-top-node.md)

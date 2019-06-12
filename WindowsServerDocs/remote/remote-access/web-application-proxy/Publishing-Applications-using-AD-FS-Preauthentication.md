@@ -8,12 +8,12 @@ ms.date: 07/13/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: web-app-proxy
-ms.openlocfilehash: c7dab1dbf97d2dcbda1fe0375e61300f2a1cc373
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ca4d8661f8f0252334bdecbde85603d8af5e2d2a
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59862244"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446813"
 ---
 # <a name="publishing-applications-using-ad-fs-preauthentication"></a>AD FS 사전 인증을 사용하는 응용 프로그램 게시
 
@@ -128,7 +128,7 @@ AD FS 사전 인증을 사용 하 여 게시할 수 있는 응용 프로그램�
   
 8.  **결과** 페이지에서 응용 프로그램이 게시되었는지 확인하고 **닫기**를 클릭합니다.  
   
-![](../../media/Publishing-Applications-using-AD-FS-Preauthentication/PowerShellLogoSmall.gif)Windows PowerShell 해당 명령을 * * *  
+![](../../media/Publishing-Applications-using-AD-FS-Preauthentication/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -210,7 +210,7 @@ Add-WebApplicationProxyApplication
   
 8.  **결과** 페이지에서 응용 프로그램이 게시되었는지 확인하고 **닫기**를 클릭합니다.  
   
-![](../../media/Publishing-Applications-using-AD-FS-Preauthentication/PowerShellLogoSmall.gif)Windows PowerShell 해당 명령을 * * *  
+![](../../media/Publishing-Applications-using-AD-FS-Preauthentication/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -310,7 +310,7 @@ HTTP Basic을 사용 하는 클라이언트에 대 한 인증 흐름에는이 �
   
 8.  **결과** 페이지에서 응용 프로그램이 게시되었는지 확인하고 **닫기**를 클릭합니다.  
   
-![](../../media/Publishing-Applications-using-AD-FS-Preauthentication/PowerShellLogoSmall.gif)Windows PowerShell 해당 명령을 * * *  
+![](../../media/Publishing-Applications-using-AD-FS-Preauthentication/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -441,7 +441,7 @@ Add-WebApplicationProxyApplication
   
 ## <a name="BKMK_Links"></a>참고 항목  
   
--   [웹 응용 프로그램 프록시 문제 해결](https://technet.microsoft.com/library/dn770156.aspx)  
+-   [웹 애플리케이션 프록시 문제 해결](https://technet.microsoft.com/library/dn770156.aspx)  
   
 -   [웹 응용 프로그램 프록시를 통한 응용 프로그램 게시](https://technet.microsoft.com/library/dn383659.aspx)  
   

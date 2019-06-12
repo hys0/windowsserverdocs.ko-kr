@@ -9,12 +9,12 @@ manager: dougkim
 ms.author: pashort
 author: shortpatti
 ms.date: 09/14/2018
-ms.openlocfilehash: 7777278f374984f242e44fd8a8fa94388df88a30
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 93d317534af46c87c4b2e874a5a5475687e2efa0
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59836474"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447062"
 ---
 # <a name="converged-nic-configuration-with-a-single-network-adapter"></a>단일 네트워크 어댑터로 수렴 된 NIC 구성
 
@@ -36,12 +36,14 @@ ms.locfileid: "59836474"
    ```PowerShell
    Get-NetAdapter
    ```
-   
-   _**결과:**_  
 
-   |이름|InterfaceDescription|ifIndex|상태|MacAddress|LinkSpeed|
-   |-----|--------------------|-------|-----|----------|---------|
-   |M1|Mellanox connectx-3 Pro...| 4| 위쪽|7C-FE-90-93-8F-A1|40gbps|
+   _**결과:** _  
+
+
+   | 이름 |    InterfaceDescription     | ifIndex | 상태 |    MacAddress     | LinkSpeed |
+   |------|-----------------------------|---------|--------|-------------------|-----------|
+   |  M1  | Mellanox connectx-3 Pro... |    4    |   위쪽   | 7C-FE-90-93-8F-A1 |  40gbps  |
+
    ---
 
 2. IP 주소를 비롯 한 추가 어댑터 속성을 봅니다.
@@ -50,7 +52,7 @@ ms.locfileid: "59836474"
    Get-NetAdapter M1 | fl *
    ```
 
-   _**결과:**_
+   _**결과:** _
 
    ```PowerShell   
     MacAddress   : 7C-FE-90-93-8F-A1
@@ -108,19 +110,21 @@ ms.locfileid: "59836474"
    ```PowerShell
    Test-NetConnection 192.168.1.5
    ```
-   
-   _**결과:**_
 
-   |매개 변수|값|
-   |---------|-----|
-   |ComputerName|192.168.1.5|
-   |RemoteAddress|192.168.1.5|
-   |InterfaceAlias|M1|
-   |SourceAddress|192.168.1.3|
-   |PingSucceeded|True|
-   |PingReplyDetails \(RTT\)|0ms|
+   _**결과:** _
+
+
+   |        매개 변수         |    값    |
+   |--------------------------|-------------|
+   |       ComputerName       | 192.168.1.5 |
+   |      RemoteAddress       | 192.168.1.5 |
+   |      InterfaceAlias      |     M1      |
+   |      SourceAddress       | 192.168.1.3 |
+   |      PingSucceeded       |    True     |
+   | PingReplyDetails \(RTT\) |    0ms     |
+
    ---
-   
+
    일부 경우에 성공적으로이 테스트를 수행 하려면 고급 보안이 포함 된 Windows 방화벽을 사용 하지 않도록 설정 해야 합니다. 방화벽을 해제 하면 보안을 염두 하 고 구성에 조직의 보안 요구 사항을 충족 하는지 확인 합니다.
 
 2. 모든 방화벽 프로필을 사용 하지 않도록 설정 합니다.
@@ -128,23 +132,25 @@ ms.locfileid: "59836474"
    ```PowerShell
    Set-NetFirewallProfile -All -Enabled False
    ```
-    
+
 3. 방화벽 프로필을 비활성화 한 후 다시 연결을 테스트 합니다. 
 
    ```PowerShell
    Test-NetConnection 192.168.1.5
    ```
 
-   _**결과:**_
+   _**결과:** _
 
-   |매개 변수|값|
-   |---------|-----|
-   |ComputerName|192.168.1.5|
-   |RemoteAddress|192.168.1.5|
-   |InterfaceAlias|Test-40G-1|
-   |SourceAddress|192.168.1.3|
-   |PingSucceeded|False|
-   |PingReplyDetails \(RTT\)|0ms|
+
+   |        매개 변수         |    값    |
+   |--------------------------|-------------|
+   |       ComputerName       | 192.168.1.5 |
+   |      RemoteAddress       | 192.168.1.5 |
+   |      InterfaceAlias      | Test-40G-1  |
+   |      SourceAddress       | 192.168.1.3 |
+   |      PingSucceeded       |    False    |
+   | PingReplyDetails \(RTT\) |    0ms     |
+
    ---
 
 
@@ -173,17 +179,19 @@ Nic가 있는이 단계에서는 **액세스** 모드입니다. 그러나 Hyper-
 
    >[!IMPORTANT]
    >이 명령을 실행 하지이이 인터페이스를 통해 원격 호스트에 연결 된 경우 호스트에 액세스 권한이 손실 생성 되므로 합니다.
-    
+
    ```PowerShell
    Set-NetAdapterAdvancedProperty -Name M1 -RegistryKeyword VlanID -RegistryValue "101"
    Get-NetAdapterAdvancedProperty -Name M1 | Where-Object {$_.RegistryKeyword -eq "VlanID"} 
    ```
 
-   _**결과:**_
+   _**결과:** _
 
-   |이름 |DisplayName| DisplayValue| RegistryKeyword |RegistryValue|
-   |----|-----------|------------|---------------|-------------|
-   |M1|VLAN ID|101|VlanID|{101}|
+
+   | 이름 | DisplayName | DisplayValue | RegistryKeyword | RegistryValue |
+   |------|-------------|--------------|-----------------|---------------|
+   |  M1  |   VLAN ID   |     101      |     VlanID      |     {101}     |
+
    ---
 
 2. 네트워크 어댑터에 VLAN ID를 적용 하려면 다시 시작
@@ -197,12 +205,14 @@ Nic가 있는이 단계에서는 **액세스** 모드입니다. 그러나 Hyper-
    ```PowerShell
    Get-NetAdapter -Name "M1"
    ```
-   
-   _**결과:**_
 
-   |이름|InterfaceDescription|ifIndex| 상태|MacAddress|LinkSpeed|
-   |----|--------------------|-------|------|----------| ---------|
-   |M1|Mellanox connectx-3 Pro 이더넷 Ada...|4|위쪽|7C-FE-90-93-8F-A1|40gbps|
+   _**결과:** _
+
+
+   | 이름 |          InterfaceDescription           | ifIndex | 상태 |    MacAddress     | LinkSpeed |
+   |------|-----------------------------------------|---------|--------|-------------------|-----------|
+   |  M1  | Mellanox connectx-3 Pro 이더넷 Ada... |    4    |   위쪽   | 7C-FE-90-93-8F-A1 |  40gbps  |
+
    ---
 
    >[!IMPORTANT]
@@ -213,7 +223,7 @@ Nic가 있는이 단계에서는 **액세스** 모드입니다. 그러나 Hyper-
    ```PowerShell
    Test-NetConnection 192.168.1.5
    ```
-    
+
 ## <a name="step-4-configure-quality-of-service-qos"></a>4단계. 서비스 품질 구성 \(QoS\)
 
 >[!NOTE]
@@ -232,25 +242,27 @@ Nic가 있는이 단계에서는 **액세스** 모드입니다. 그러나 Hyper-
 
    - **선택적** iWarp를 사용 하는 네트워크 구성에 대 한 합니다.
    - **필요한** RoCE를 사용 하는 네트워크 구성에 대 한 합니다.
-   
+
    아래 예제에서는 명령에서 "3" 값은 임의의. QoS 정책을 구성 과정에서 동일한 값을 일관 되 게 사용 하면 1에서 7 사이의 모든 값을 사용할 수 있습니다.
 
    ```PowerShell
    New-NetQosPolicy "SMB" -NetDirectPortMatchCondition 445 -PriorityValue8021Action 3
    ```
 
-   _**결과:**_
+   _**결과:** _
 
-   |매개 변수|값|
-   |---------|-----|
-   |이름 |SMB|
-   |소유자|그룹 정책 \(컴퓨터\)|
-   |NetworkProfile|All|
-   |우선 순위|127|
-   |JobObject|&nbsp;| 
-   |NetDirectPort|445 |
-   |PriorityValue|3 |
- ---
+
+   |   매개 변수    |          값           |
+   |----------------|--------------------------|
+   |      이름      |           SMB            |
+   |     소유자      | 그룹 정책 \(컴퓨터\) |
+   | NetworkProfile |           All            |
+   |   우선 순위   |           127            |
+   |   JobObject    |          &nbsp;          |
+   | NetDirectPort  |           445            |
+   | PriorityValue  |            3             |
+
+   ---
 
 3. 켜기 RoCE 배포용 **우선 순위 흐름 제어** iWarp 필요 없는 SMB 트래픽입니다.
 
@@ -259,18 +271,20 @@ Nic가 있는이 단계에서는 **액세스** 모드입니다. 그러나 Hyper-
    Get-NetQosFlowControl
    ```
 
-   _**결과:**_
+   _**결과:** _
 
-   |우선 순위|Enabled|PolicySet|IfIndex|IfAlias|
-   |---------|-----|--------- |-------| -------|
-   |0 |False |전역|&nbsp;|&nbsp;|
-   |1 |False |전역|&nbsp;|&nbsp;|
-   |2 |False |전역|&nbsp;|&nbsp;|
-   |3 |True  |전역|&nbsp;|&nbsp;|
-   |4 |False |전역|&nbsp;|&nbsp;|
-   |5 |False |전역|&nbsp;|&nbsp;|
-   |6 |False |전역|&nbsp;|&nbsp;|
-   |7 |False |전역|&nbsp;|&nbsp;|
+
+   | Priority | Enabled | PolicySet | IfIndex | IfAlias |
+   |----------|---------|-----------|---------|---------|
+   |    0     |  False  |  전역   | &nbsp;  | &nbsp;  |
+   |    1     |  False  |  전역   | &nbsp;  | &nbsp;  |
+   |    2     |  False  |  전역   | &nbsp;  | &nbsp;  |
+   |    3     |  True   |  전역   | &nbsp;  | &nbsp;  |
+   |    4     |  False  |  전역   | &nbsp;  | &nbsp;  |
+   |    5     |  False  |  전역   | &nbsp;  | &nbsp;  |
+   |    6     |  False  |  전역   | &nbsp;  | &nbsp;  |
+   |    7     |  False  |  전역   | &nbsp;  | &nbsp;  |
+
    ---
 
 4. 로컬 및 대상 네트워크 어댑터에 QoS를 사용 합니다.
@@ -283,38 +297,44 @@ Nic가 있는이 단계에서는 **액세스** 모드입니다. 그러나 Hyper-
    Get-NetAdapterQos -Name "M1"
    ```
 
-   _**결과:**_
+   _**결과:** _
 
    **이름**: M1  
    **Enabled**: True  
 
-   _**기능:**_   
+   _**기능:** _   
 
-   |매개 변수|하드웨어|현재|
-   |---------|--------|-------|
-   |MacSecBypass|NotSupported|NotSupported|
-   |DcbxSupport|없음|없음|
-   |NumTCs(Max/ETS/PFC)|8/8/8|8/8/8|
-   ---
- 
-   _**OperationalTrafficClasses:**_ 
 
-   |TC|TSA|대역폭|우선 순위|
-   |----|-----|--------|-------|
-   |0| ETS|70%|0-2,4-7|
-   |1|ETS|30%|3 |
+   |      매개 변수      |   하드웨어   |   현재    |
+   |---------------------|--------------|--------------|
+   |    MacSecBypass     | NotSupported | NotSupported |
+   |     DcbxSupport     |     없음     |     없음     |
+   | NumTCs(Max/ETS/PFC) |    8/8/8     |    8/8/8     |
+
    ---
 
-   _**OperationalFlowControl:**_  
-   
+   _**OperationalTrafficClasses:** _ 
+
+
+   | TC | TSA | 대역폭 | 우선 순위 |
+   |----|-----|-----------|------------|
+   | 0  | ETS |    70%    |  0-2,4-7   |
+   | 1  | ETS |    30%    |     3      |
+
+   ---
+
+   _**OperationalFlowControl:** _  
+
    우선 순위 3 사용 하도록 설정  
 
-   _**OperationalClassifications:**_  
+   _**OperationalClassifications:** _  
 
-   |프로토콜|포트/유형|우선 순위|
-   |--------|---------|--------|
-   |기본값|&nbsp;|0|
-   |NetDirect| 445|3|
+
+   | Protocol  | 포트/유형 | Priority |
+   |-----------|-----------|----------|
+   |  기본값  |  &nbsp;   |    0     |
+   | NetDirect |    445    |    3     |
+
    ---
 
 5. SMB 다이렉트에 대 한 대역폭의 백분율을 예약 \(RDMA\)합니다.
@@ -325,11 +345,13 @@ Nic가 있는이 단계에서는 **액세스** 모드입니다. 그러나 Hyper-
    New-NetQosTrafficClass "SMB" -Priority 3 -BandwidthPercentage 30 -Algorithm ETS
    ```
 
-   _**결과:**_
+   _**결과:** _
 
-   |이름|알고리즘 |Bandwidth(%)| 우선 순위 |PolicySet |IfIndex |IfAlias |
-   |----|---------| ------------ |--------| ---------|------- |------- |
-   |SMB | ETS     | 30 |3 |전역 |&nbsp;|&nbsp;|
+
+   | 이름 | 알고리즘 | Bandwidth(%) | Priority | PolicySet | IfIndex | IfAlias |
+   |------|-----------|--------------|----------|-----------|---------|---------|
+   | SMB  |    ETS    |      30      |    3     |  전역   | &nbsp;  | &nbsp;  |
+
    ---                                      
 
 6. 대역폭 예약 설정을 봅니다.  
@@ -338,12 +360,14 @@ Nic가 있는이 단계에서는 **액세스** 모드입니다. 그러나 Hyper-
    Get-NetQosTrafficClass
    ```
 
-   _**결과:**_
- 
-   |이름|알고리즘 |Bandwidth(%)| 우선 순위 |PolicySet |IfIndex |IfAlias |
-   |----|---------| ------------ |--------| ---------|------- |------- |
-   |[기본값]|ETS|70 |0-2,4-7| 전역|&nbsp;|&nbsp;| 
-   |SMB      |ETS|30 |3 |전역|&nbsp;|&nbsp;| 
+   _**결과:** _
+
+
+   |   이름    | 알고리즘 | Bandwidth(%) | Priority | PolicySet | IfIndex | IfAlias |
+   |-----------|-----------|--------------|----------|-----------|---------|---------|
+   | [기본값] |    ETS    |      70      | 0-2,4-7  |  전역   | &nbsp;  | &nbsp;  |
+   |    SMB    |    ETS    |      30      |    3     |  전역   | &nbsp;  | &nbsp;  |
+
    ---
 
 ## <a name="step-5-optional-resolve-the-mellanox-adapter-debugger-conflict"></a>5단계. (선택 사항) Mellanox 어댑터 디버거 충돌 해결 
@@ -367,11 +391,13 @@ Nic가 있는이 단계에서는 **액세스** 모드입니다. 그러나 Hyper-
    ```PowerShell
    Get-NetAdapterRdma
    ```
-   _**결과:**_
+   _**결과:** _
 
-   |이름 |InterfaceDescription |Enabled|
-   |----|--------------------|-------|
-   |M1| Mellanox connectx-3 Pro 이더넷 어댑터 |True|
+
+   | 이름 |           InterfaceDescription           | Enabled |
+   |------|------------------------------------------|---------|
+   |  M1  | Mellanox connectx-3 Pro 이더넷 어댑터 |  True   |
+
    ---
 
 2. 확인 합니다 **ifIndex** 대상 어댑터의 값입니다.<p>다운로드 한 스크립트를 실행할 때 이후 단계에서이 값을 사용 합니다.
@@ -380,11 +406,13 @@ Nic가 있는이 단계에서는 **액세스** 모드입니다. 그러나 Hyper-
    Get-NetIPConfiguration -InterfaceAlias "M*" | ft InterfaceAlias,InterfaceIndex,IPv4Address
    ```
 
-   _**결과:**_ 
+   _**결과:** _ 
 
-   |InterfaceAlias |InterfaceIndex |IPv4Address|
-   |-------------- |-------------- |-----------|
-   |M2 |14 |{192.168.1.5}|
+
+   | InterfaceAlias | InterfaceIndex |  IPv4Address  |
+   |----------------|----------------|---------------|
+   |       M2       |       14       | {192.168.1.5} |
+
    ---
 
 3. 다운로드 합니다 [DiskSpd.exe 유틸리티](https://aka.ms/diskspd) C:\TEST를 추출 하 고\.
@@ -392,10 +420,10 @@ Nic가 있는이 단계에서는 **액세스** 모드입니다. 그러나 Hyper-
 4. 다운로드 합니다 [테스트 RDMA powershell 스크립트](https://github.com/Microsoft/SDN/blob/master/Diagnostics/Test-Rdma.ps1) C:\TEST 예를 들어, 로컬 드라이브에서 테스트 폴더\.
 
 5. 실행 합니다 **테스트 Rdma.ps1** PowerShell 스크립트를 스크립트에 동일한 VLAN에 있는 원격 어댑터의 IP 주소와 함께 ifIndex 값을 전달 합니다.<p>이 예제의 스크립트는 다음과 같이 전달 됩니다. 합니다 **ifIndex** 원격 네트워크 어댑터 IP 주소 192.168.1.5 14의 값입니다.
-   
+
    ```PowerShell
     C:\TEST\Test-RDMA.PS1 -IfIndex 14 -IsRoCE $true -RemoteIpAddress 192.168.1.5 -PathToDiskspd C:\TEST\Diskspd-v2.0.17\amd64fre\
-    
+
     VERBOSE: Diskspd.exe found at C:\TEST\Diskspd-v2.0.17\amd64fre\\diskspd.exe
     VERBOSE: The adapter M2 is a physical adapter
     VERBOSE: Underlying adapter is RoCE. Checking if QoS/DCB/PFC is configured on each physical adapter(s)
@@ -423,7 +451,7 @@ Nic가 있는이 단계에서는 **액세스** 모드입니다. 그러나 Hyper-
 스위치는 Hyper-v를 만들기 위한 준비 과정에서 앞서 설치한 VLAN 설정을 제거 해야 합니다.  
 
 1. 잘못 된 VLAN ID를 사용 하 여 송신 트래픽을 자동 태깅에서 NIC를 방지 하기 위해 물리적 NIC에서 ACCESS VLAN 설정을 제거합니다<p>액세스 VLAN ID와 일치 하지 않는 수신 트래픽을 필터링에서 방지도이 설정을 제거
-    
+
    ```PowerShell
    Set-NetAdapterAdvancedProperty -Name M1 -RegistryKeyword VlanID -RegistryValue "0"
    ```    
@@ -447,11 +475,13 @@ Nic가 있는이 단계에서는 **액세스** 모드입니다. 그러나 Hyper-
    ```PowerShell
    New-VMSwitch -Name VMSTEST -NetAdapterName "M1" -AllowManagementOS $true
    ```
-   _**결과:**_
+   _**결과:** _
 
-   |이름 |SwitchType |NetAdapterInterfaceDescription|
-   |---- |---------- |------------------------------|
-   |VMSTEST |외부 |Mellanox connectx-3 Pro 이더넷 어댑터|
+
+   |  이름   | SwitchType |      NetAdapterInterfaceDescription      |
+   |---------|------------|------------------------------------------|
+   | VMSTEST |  외부  | Mellanox connectx-3 Pro 이더넷 어댑터 |
+
    ---
 
 2. 네트워크 어댑터 속성을 봅니다.
@@ -460,11 +490,13 @@ Nic가 있는이 단계에서는 **액세스** 모드입니다. 그러나 Hyper-
    Get-NetAdapter | ft -AutoSize
    ```
 
-   _**결과:**_
+   _**결과:** _
 
-   |이름 |InterfaceDescription | ifIndex |상태 |MacAddress |LinkSpeed|
-   |---- |-------------------- |-------| ------|----------|---------|
-   |vEthernet \(VMSTEST\) |Hyper-v 가상 이더넷 어댑터 #2|27 |위쪽 |E4-1D-2D-07-40-71 |40gbps|
+
+   |         이름          |        InterfaceDescription         | ifIndex | 상태 |    MacAddress     | LinkSpeed |
+   |-----------------------|-------------------------------------|---------|--------|-------------------|-----------|
+   | vEthernet \(VMSTEST\) | Hyper-v 가상 이더넷 어댑터 #2 |   27    |   위쪽   | E4-1D-2D-07-40-71 |  40gbps  |
+
    ---
 
 3. 두 가지 방법 중 하나에서 호스트 vNIC를 관리 합니다. 
@@ -476,12 +508,14 @@ Nic가 있는이 단계에서는 **액세스** 모드입니다. 그러나 Hyper-
    Get-VMNetworkAdapter –ManagementOS | ft -AutoSize
    ```
 
-   _**결과:**_
+   _**결과:** _
 
-   |이름 |IsManagementOs |VMName |SwitchName |MacAddress |상태 |IPAddresses|
-   |----|-------------- |------ |----------|----------|------ |-----------|
-   |CORP 외부 전환 |True |CORP 외부 전환| 001B785768AA |{확인} |&nbsp;|
-   |VMSTEST |True |VMSTEST | E41D2D074071| {확인} | &nbsp;| 
+
+   |         이름         | IsManagementOs |        VMName        |  SwitchName  | MacAddress | 상태 | IPAddresses |
+   |----------------------|----------------|----------------------|--------------|------------|--------|-------------|
+   | CORP 외부 전환 |      True      | CORP 외부 전환 | 001B785768AA |    {확인}    | &nbsp; |             |
+   |       VMSTEST        |      True      |       VMSTEST        | E41D2D074071 |    {확인}    | &nbsp; |             |
+
    ---
 
 4. 연결을 테스트 합니다.
@@ -490,7 +524,7 @@ Nic가 있는이 단계에서는 **액세스** 모드입니다. 그러나 Hyper-
    Test-NetConnection 192.168.1.5
    ```
 
-   _**결과:**_ 
+   _**결과:** _ 
 
    ```
     ComputerName   : 192.168.1.5
@@ -502,27 +536,29 @@ Nic가 있는이 단계에서는 **액세스** 모드입니다. 그러나 Hyper-
    ```
 
 5. 할당 하 고 네트워크 어댑터가 VLAN 설정을 확인 합니다.
-    
+
    ```PowerShell
    Set-VMNetworkAdapterVlan -VMNetworkAdapterName "VMSTEST" -VlanId "101" -Access -ManagementOS
    Get-VMNetworkAdapterVlan -ManagementOS -VMNetworkAdapterName "VMSTEST"
    ```    
 
-   _**결과:**_
+   _**결과:** _
 
-   |VMName |VMNetworkAdapterName |모드 |VlanList|
-   |------ |-------------------- |---- |--------|
-   |&nbsp;|VMSTEST |액세스 권한 |101   |
+
+   | VMName | VMNetworkAdapterName |  모드  | VlanList |
+   |--------|----------------------|--------|----------|
+   | &nbsp; |       VMSTEST        | 액세스 권한 |   101    |
+
    ---  
- 
+
 6. 연결을 테스트 합니다.<p>다른 어댑터를 성공적으로 ping 할 수 전에 완료 하는 데 몇 초 정도 걸립니다.  
 
    ```PowerShell    
    Test-NetConnection 192.168.1.5
    ```
 
-   _**결과:**_
-     
+   _**결과:** _
+
    ```
     ComputerName   : 192.168.1.5
     RemoteAddress  : 192.168.1.5
@@ -545,8 +581,8 @@ Nic가 있는이 단계에서는 **액세스** 모드입니다. 그러나 Hyper-
    Set-VMNetworkAdapter -ManagementOS -Name "VMSTEST" -IeeePriorityTag on
    Get-VMNetworkAdapter -ManagementOS -Name "VMSTEST" | fl Name,IeeePriorityTag
    ```  
-   
-   _**결과:**_
+
+   _**결과:** _
 
     이름: VMSTEST IeeePriorityTag: 켜짐
 
@@ -557,16 +593,18 @@ Nic가 있는이 단계에서는 **액세스** 모드입니다. 그러나 Hyper-
    Get-NetAdapterRdma
    ```   
 
-   _**결과:**_
+   _**결과:** _
 
-   |이름 |InterfaceDescription |Enabled |
-   |---- |-------------------- |-------|
-   |vEthernet \(VMSTEST\)| Hyper-v 가상 이더넷 어댑터 #2|False|
+
+   |         이름          |        InterfaceDescription         | Enabled |
+   |-----------------------|-------------------------------------|---------|
+   | vEthernet \(VMSTEST\) | Hyper-v 가상 이더넷 어댑터 #2 |  False  |
+
    ---
 
    >[!NOTE]
    >경우 매개 변수 **Enabled** 기본값이 **False**, RDMA는 사용 하지 않음을 의미 합니다.
-    
+
 
 3. 네트워크 어댑터 정보를 봅니다.
 
@@ -574,11 +612,13 @@ Nic가 있는이 단계에서는 **액세스** 모드입니다. 그러나 Hyper-
    Get-NetAdapter
    ```
 
-   _**결과:**_   
- 
-   |이름 |InterfaceDescription |ifIndex |상태 |MacAddress |LinkSpeed|
-   |----|--------------------|-------|------|----------|---------|
-   |vEthernet (VMSTEST)|Hyper-v 가상 이더넷 어댑터 #2|27|위쪽|E4-1D-2D-07-40-71|40gbps|
+   _**결과:** _   
+
+
+   |        이름         |        InterfaceDescription         | ifIndex | 상태 |    MacAddress     | LinkSpeed |
+   |---------------------|-------------------------------------|---------|--------|-------------------|-----------|
+   | vEthernet (VMSTEST) | Hyper-v 가상 이더넷 어댑터 #2 |   27    |   위쪽   | E4-1D-2D-07-40-71 |  40gbps  |
+
    ---
 
 
@@ -589,11 +629,13 @@ Nic가 있는이 단계에서는 **액세스** 모드입니다. 그러나 Hyper-
    Get-NetAdapterRdma -Name "vEthernet (VMSTEST)"
    ```
 
-   _**결과:**_
+   _**결과:** _
 
-   |이름 |InterfaceDescription |Enabled |
-   |---- |-------------------- |-------|
-   |vEthernet \(VMSTEST\)| Hyper-v 가상 이더넷 어댑터 #2|True|
+
+   |         이름          |        InterfaceDescription         | Enabled |
+   |-----------------------|-------------------------------------|---------|
+   | vEthernet \(VMSTEST\) | Hyper-v 가상 이더넷 어댑터 #2 |  True   |
+
    ---
 
    >[!NOTE]

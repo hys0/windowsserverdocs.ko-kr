@@ -9,12 +9,12 @@ author: eldenchristensen
 ms.date: 10/25/2017
 description: -예를 들어, Microsoft Azure 가상 컴퓨터 게스트 클러스터의 저장소 공간 다이렉트를 배포 하는 방법입니다.
 ms.localizationpriority: medium
-ms.openlocfilehash: a741475d09ab7f7ab29f158ef55378ca9a37beac
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b99e750b78654df48ad3b412269511d047e3057c
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59841024"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447814"
 ---
 # <a name="using-storage-spaces-direct-in-guest-virtual-machine-clusters"></a>게스트 가상 컴퓨터 클러스터에서 저장소 공간 다이렉트를 사용 하 여
 
@@ -81,4 +81,4 @@ ms.locfileid: "59841024"
 
 [저장소 공간 다이렉트, 비디오 및 단계별 가이드 배포에 대 한 추가 Azure Iaas VM 템플릿](https://blogs.msdn.microsoft.com/clustering/2017/02/14/deploying-an-iaas-vm-guest-clusters-in-microsoft-azure/)합니다.
 
-[추가 저장소 공간 다이렉트 개요] (https://docs.microsoft.com/en-us/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
+[추가 저장소 공간 다이렉트 개요](https://docs.microsoft.com/en-us/windows-server/storage/storage-spaces/storage-spaces-direct-overview)

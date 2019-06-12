@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: 5454f91394dbdc659db85a675d1c8bfac18b2a86
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d56bc89189c3b17367549aeb076633a6ea0e1007
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59853924"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66442746"
 ---
 # <a name="advanced-active-directory-replication-and-topology-management-using-windows-powershell-level-200"></a>Windows PowerShell을 사용한 고급 Active Directory 복제 및 토폴로지 관리(수준 200)
 
@@ -228,7 +228,7 @@ Repadmin.exe는 사이트, 사이트 링크, 사이트 링크 브리지 및 연�
   
 예를 들어 다른 지점의 통합과 함께 새로운 지점의 급속한 확장 후 실제 위치, 네트워크 변경 사항 및 새로운 용량 요구 사항을 기반으로 100여 가지의 사이트 변경 작업을 수행해야 할 수 있습니다. 이 경우 Dssites.msc 및 Adsiedit.msc를 사용하여 변경하는 대신 자동화할 수 있습니다. 이는 네트워크 및 시설 팀에서 제공한 데이터 스프레드시트로 시작하는 경우에 특히 유용합니다.  
   
-**Get Adreplication\*** cmdlet 복제 토폴로지에 대 한 정보를 반환 하 고으로 파이프라인에 대 한 유용한는 **집합 Adreplication\*** cmdlet에 대량 합니다. **가져오기** cmdlet는 데이터를 변경 하지 않으면, 데이터 표시 또는 세션 개체를 만드는 Windows PowerShell에 파이프라인 할 **집합 Adreplication\*** cmdlet입니다. **New** 및 **Remove** cmdlet은 Active Directory 토폴로지 개체를 만들거나 제거하는 데 유용합니다.  
+합니다 **Get Adreplication\\** * cmdlet 복제 토폴로지에 대 한 정보를 반환 하 고으로 파이프라인에 유용 합니다 **집합 Adreplication\\** * cmdlet에 대량 합니다. **가져올** cmdlet는 데이터를 변경 하지 마십시오, 데이터 표시 또는 세션 개체를 만들려면 Windows PowerShell 파이프라인 할 **집합 Adreplication\\** * cmdlet. **New** 및 **Remove** cmdlet은 Active Directory 토폴로지 개체를 만들거나 제거하는 데 유용합니다.  
   
 예를 들어 CSV 파일을 사용하여 새 사이트를 만들 수 있습니다.  
   

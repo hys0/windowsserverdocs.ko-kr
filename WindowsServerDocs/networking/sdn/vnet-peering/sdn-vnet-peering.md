@@ -9,12 +9,12 @@ ms.assetid: ''
 ms.author: pashort
 author: shortpatti
 ms.date: 08/08/2018
-ms.openlocfilehash: 58596387d79f3f212a472f00c2785bacc278e855
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: aab4ec7c69ec5b52eae926cd1065d777415b1124
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59821914"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446213"
 ---
 # <a name="virtual-network-peering"></a>가상 네트워크 피어링
 
@@ -36,20 +36,20 @@ ms.locfileid: "59821914"
 
 가상 네트워크 피어 링에 몇 가지 요구 사항 및 제약 조건이 있습니다.
 
--   피어 링 된 가상 네트워크는 다음 작업을 수행 해야합니다.
+- 피어 링 된 가상 네트워크는 다음 작업을 수행 해야합니다.
 
-    -   겹치지 않는 IP 주소 공간을 가진
+  -   겹치지 않는 IP 주소 공간을 가진
 
-    -   동일한 네트워크 컨트롤러에서 관리
+  -   동일한 네트워크 컨트롤러에서 관리
 
--   다른 가상 네트워크를 사용 하 여 가상 네트워크에 피어 링 되 면 추가 하거나 주소 공간에 주소 범위를 삭제할 수 없습니다.
+- 다른 가상 네트워크를 사용 하 여 가상 네트워크에 피어 링 되 면 추가 하거나 주소 공간에 주소 범위를 삭제할 수 없습니다.
 
-   >[!TIP]
-   >주소 범위를 추가 하는 경우:<ol><li>피어 링을 제거 합니다.</li><li>주소 공간을 추가 합니다.</li><li>피어 링을 다시 추가 합니다.</li></ol>
+  >[!TIP]
+  >주소 범위를 추가 하는 경우:<ol><li>피어 링을 제거 합니다.</li><li>주소 공간을 추가 합니다.</li><li>피어 링을 다시 추가 합니다.</li></ol>
 
--   가상 네트워크 피어 링 하는 것은 두 가상 네트워크 간에, 이므로 파생 된 전이적 관계가 없습니다 피어 링을 통해입니다. 예를 들어 virtualNetworkA virtualNetworkB와 virtualNetworkC와 virtualNetworkB에 피어 링 하는 경우 다음 virtualNetworkA 않습니다 하지 가져오기 virtualNetworkC와 피어 링 합니다.
+- 가상 네트워크 피어 링 하는 것은 두 가상 네트워크 간에, 이므로 파생 된 전이적 관계가 없습니다 피어 링을 통해입니다. 예를 들어 virtualNetworkA virtualNetworkB와 virtualNetworkC와 virtualNetworkB에 피어 링 하는 경우 다음 virtualNetworkA 않습니다 하지 가져오기 virtualNetworkC와 피어 링 합니다.
 
-    [여기에 이미지]
+  [여기에 이미지]
 
 ## <a name="connectivity"></a>연결
 

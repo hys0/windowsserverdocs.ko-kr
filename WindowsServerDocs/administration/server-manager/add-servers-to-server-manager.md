@@ -14,12 +14,12 @@ ms.author: coreyp
 manager: dongill
 ms.localizationpriority: medium
 ms.date: 02/01/2018
-ms.openlocfilehash: a663e7dbb3ee84c09fc14ba23a50e6de16c4c7b5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: a47ecbc0c7359438ed60ed34c94adf0096b14967
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59840694"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66435453"
 ---
 # <a name="add-servers-to-server-manager"></a>Add Servers to Server Manager
 
@@ -31,9 +31,9 @@ Windows Server의 단일 서버 관리자 콘솔을 사용 하 여 여러 원격
 
 > [!NOTE]
 > 테스트에서 Windows Server 2012 및 Windows Server 이후 버전에서 서버 관리자를 사용하여 일반적인 작업을 통해 구성된 최대 100개의 서버를 관리할 수 있습니다. 단일 서버 관리자 콘솔을 사용 하 여 관리할 수 있는 서버 수는 서버 관리자를 실행 하는 컴퓨터에 사용할 수 있는 하드웨어 및 네트워크 리소스 및 관리 되는 서버에서 요청 하는 데이터의 양에 따라 달라질 수 있습니다. 표시 하려는 데이터의 양이 해당 컴퓨터의 리소스 용량에 가까워지면 느린 응답에서 서버 관리자 및 새로 고침 완료 시 지연이 발생할 수 있습니다. 서버 관리자를 사용 하 여 관리할 수 있는 서버 수를 향상 시키기 위해, 서버 관리자의 설정을 사용 하 여 관리 되는 서버에서 가져오는 이벤트 데이터를 제한 권장는 **이벤트 데이터 구성** 대화 상자입니다. 이벤트 데이터 구성은 **이벤트** 타일의 **작업** 메뉴에서 열 수 있습니다. 조직에 있는 서버는 엔터프라이즈 수준의 수를 관리 해야 하는 경우에 제품을 평가 것이 좋습니다는 [Microsoft System Center 제품군](https://go.microsoft.com/fwlink/p/?LinkId=239437)합니다.
->
+> 
 > 서버 관리자는 Windows Server 2003을 실행 하는 서버에서 온라인 또는 오프 라인 상태만을 받을 수 있습니다. 서버 관리자를 사용 하 여 Windows Server 2008 r 2를 실행 하는 서버 또는 Windows Server 2008에서 관리 작업을 수행할 수 있지만 Windows Server 2008 R2, Windows Server 2008 또는 Windows Server 2003을 실행 하는 서버에 역할 및 기능을 추가할 수 없습니다.
-
+> 
 > Windows Server 운영 체제의 최신 릴리스를 관리 하려면 서버 관리자를 사용할 수 없습니다. Windows Server 2012 R2, Windows Server 2012, Windows 8.1 또는 Windows 8에서 실행되는 서버 관리자는 Windows Server 2016을 실행하는 서버를 관리하는 데 사용할 수 없습니다.
 
 이 항목에는 다음 섹션이 수록되어 있습니다.

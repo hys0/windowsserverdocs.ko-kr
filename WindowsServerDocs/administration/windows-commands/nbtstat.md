@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0193152674dc934aa4f2d3be4dec54afc3066951
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4e670b1490f1c4c54b8cf377d48755849faa16f8
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59867704"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66437125"
 ---
 # <a name="nbtstat"></a>nbtstat
 
@@ -34,19 +34,19 @@ nbtstat [/a <remoteName>] [/A <IPaddress>] [/c] [/n] [/r] [/R] [/RR] [/s] [/S] [
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|-------|--------|
-|/a <remoteName>|원격 컴퓨터의 NetBIOS 이름 테이블을 표시 합니다. 여기서 *로그인* 원격 컴퓨터의 NetBIOS 컴퓨터 이름입니다. NetBIOS 이름 테이블에는 해당 컴퓨터에서 실행 되는 NetBIOS 응용 프로그램에 해당 하는 NetBIOS 이름 목록입니다.|
-|/A <IPaddress>|원격 컴퓨터의 점으로 구분 된 10 진수 표기법으로 IP 주소 지정 하는 원격 컴퓨터의 NetBIOS 이름 테이블을 표시 합니다.|
-|/c|캐시, NetBIOS 이름 중 테이블 및 확인 된 IP 주소 이름을 NetBIOS의 내용의 표시 합니다.|
-|/n|로컬 컴퓨터의 NetBIOS 이름 테이블을 표시합니다. 상태의 **등록** 이름을 브로드캐스트 또는 WINS 서버를 등록 했음을 나타냅니다.|
-|/r|NetBIOS 이름 확인 통계가 표시 됩니다. 에 Windows XP 또는 WINS를 사용 하도록 구성 된 Windows Server 2003을 실행 하는 컴퓨터를이 매개 변수 확인 된 이름 수를 반환 및 브로드캐스트 및 WINS 등록 하 고 사용 하 여 합니다.|
-|/R|NetBIOS 이름 캐시의 콘텐츠를 제거 하 고 다음 다시 로드 하는 # 사전에서 항목을 tagged는 **Lmhosts** 파일입니다.|
-|/RR|해제 하 고에 등록 된 WINS 서버는 로컬 컴퓨터에 대 한 NetBIOS 이름을 새로 고칩니다.|
-|/s|대상 IP 주소를 이름으로 변환 하려고 NetBIOS 클라이언트와 서버 세션을 표시 합니다.|
-|/S|대상 IP 주소만으로 원격 컴퓨터 목록을 NetBIOS 클라이언트와 서버 세션을 표시 합니다.|
-|<Interval>|선택한 통계를 다시에 지정 된 초 수를 다시 표시 *간격* 표시 합니다. 통계 표시를 중지 하려면 CTRL + C 키를 누릅니다. 이 매개 변수를 생략 하면 **nbtstat** 현재 구성 정보를 한 번만 출력 합니다.|
-|/?|명령 프롬프트에 도움말을 표시합니다.|
+|    매개 변수    |                                                                                                                         설명                                                                                                                         |
+|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| /a <remoteName> |    원격 컴퓨터의 NetBIOS 이름 테이블을 표시 합니다. 여기서 *로그인* 원격 컴퓨터의 NetBIOS 컴퓨터 이름입니다. NetBIOS 이름 테이블에는 해당 컴퓨터에서 실행 되는 NetBIOS 응용 프로그램에 해당 하는 NetBIOS 이름 목록입니다.     |
+| /A <IPaddress>  |                                                           원격 컴퓨터의 점으로 구분 된 10 진수 표기법으로 IP 주소 지정 하는 원격 컴퓨터의 NetBIOS 이름 테이블을 표시 합니다.                                                            |
+|       /c        |                                                                        캐시, NetBIOS 이름 중 테이블 및 확인 된 IP 주소 이름을 NetBIOS의 내용의 표시 합니다.                                                                         |
+|       /n        |                                            로컬 컴퓨터의 NetBIOS 이름 테이블을 표시합니다. 상태의 **등록** 이름을 브로드캐스트 또는 WINS 서버를 등록 했음을 나타냅니다.                                             |
+|       /r        |      NetBIOS 이름 확인 통계가 표시 됩니다. 에 Windows XP 또는 WINS를 사용 하도록 구성 된 Windows Server 2003을 실행 하는 컴퓨터를이 매개 변수 확인 된 이름 수를 반환 및 브로드캐스트 및 WINS 등록 하 고 사용 하 여 합니다.       |
+|       /R        |                                                                      NetBIOS 이름 캐시의 콘텐츠를 제거 하 고 다음 다시 로드 하는 # 사전에서 항목을 tagged는 **Lmhosts** 파일입니다.                                                                      |
+|       /RR       |                                                                           해제 하 고에 등록 된 WINS 서버는 로컬 컴퓨터에 대 한 NetBIOS 이름을 새로 고칩니다.                                                                            |
+|       /s        |                                                                          대상 IP 주소를 이름으로 변환 하려고 NetBIOS 클라이언트와 서버 세션을 표시 합니다.                                                                           |
+|       /S        |                                                                          대상 IP 주소만으로 원격 컴퓨터 목록을 NetBIOS 클라이언트와 서버 세션을 표시 합니다.                                                                          |
+|   <Interval>    | 선택한 통계를 다시에 지정 된 초 수를 다시 표시 *간격* 표시 합니다. 통계 표시를 중지 하려면 CTRL + C 키를 누릅니다. 이 매개 변수를 생략 하면 **nbtstat** 현재 구성 정보를 한 번만 출력 합니다. |
+|       /?        |                                                                                                            명령 프롬프트에 도움말을 표시합니다.                                                                                                             |
 
 ## <a name="remarks"></a>설명
 

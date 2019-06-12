@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 58a0cedc48e8d4504af8aa873dbb745394ff3940
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3c6591819129fe1a3047982905a041eca974aa53
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59859314"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66438764"
 ---
 # <a name="ftpdebug"></a>ftp:debug
 
@@ -32,12 +32,12 @@ debug
 ### <a name="parameters"></a>매개 변수  
 none  
 ## <a name="remarks"></a>설명  
--   기본적으로 디버깅 꺼져 있습니다.  
--   디버깅을에 있으면 원격 컴퓨터에 전송 된 각 명령 보다 큼 (>) 문자가 앞에 표시 됩니다.  
-## <a name="BKMK_Examples"></a>예제  
-설정/해제 디버그 모드를 켜고입니다.  
-```  
-debug  
-```  
-## <a name="additional-references"></a>추가 참조  
--   [명령줄 구문 키](command-line-syntax-key.md)  
+- 기본적으로 디버깅 꺼져 있습니다.  
+- 디버깅을에 있으면 원격 컴퓨터에 전송 된 각 명령 보다 큼 (>) 문자가 앞에 표시 됩니다.  
+  ## <a name="BKMK_Examples"></a>예제  
+  설정/해제 디버그 모드를 켜고입니다.  
+  ```  
+  debug  
+  ```  
+  ## <a name="additional-references"></a>추가 참조  
+- [명령줄 구문 키](command-line-syntax-key.md)  

@@ -13,12 +13,12 @@ author: justinha
 ms.author: justinha
 manager: brianlic-msft
 ms.date: 05/16/2018
-ms.openlocfilehash: 48dabb5ad83b82f0a93992ad8c24456a8a8e7ef5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b1af556200c9dd497bac835f1480479cca075dab
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59873094"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447279"
 ---
 # <a name="overview-of-tls---ssl-schannel-ssp"></a>TLS-SSL (Schannel SSP) 개요
 
@@ -31,7 +31,7 @@ Schannel은 SSL, TLS 및 DTLS 인터넷 표준 인증 프로토콜을 구현한 
 TLS 및 SSL Schannel SSP에서의 Microsoft 구현에 대 한 자세한 내용은 참조는 [TLS/SSL 기술 참조 (2003)](https://technet.microsoft.com/library/cc784149(v=ws.10).aspx)합니다.
 
 
-##<a name="tlsssl-schannel-ssp-features"></a>TLS/SSL (Schannel SSP) 기능
+## <a name="tlsssl-schannel-ssp-features"></a>TLS/SSL (Schannel SSP) 기능
 다음 Schannel SSP의 TLS의 기능을 설명
 
 ### <a name="tls-session-resumption"></a>TLS 세션 다시 시작

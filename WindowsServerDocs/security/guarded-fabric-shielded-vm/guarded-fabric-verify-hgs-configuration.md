@@ -8,12 +8,12 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 43b2a90eaa987e96b716e10259f75ffaf9f136a4
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 954393126333bf04d2aa46a01089d88bc91151cb
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59832574"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447326"
 ---
 # <a name="verify-the-hgs-configuration"></a>HGS 구성 확인
 
@@ -38,6 +38,6 @@ HGS 클러스터의 각 노드에서 진단 유틸리티를 실행 합니다.
 
 ## <a name="next-step"></a>다음 단계
 
->[!div class="nextstepaction"]
-[보호 된 호스트 배포](guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts.md)
+> [!div class="nextstepaction"]
+> [보호된 호스트 배포](guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts.md)
 

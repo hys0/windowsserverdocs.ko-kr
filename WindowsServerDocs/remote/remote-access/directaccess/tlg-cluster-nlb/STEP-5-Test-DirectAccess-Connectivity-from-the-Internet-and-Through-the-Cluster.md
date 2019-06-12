@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: 8399bdfa-809a-45e4-9963-f9b6a631007f
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 49b3f6f68bf30ff197b51643f9f1b8f36cc76f19
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3077aa54163ed9548ae3f45f8c673c731b8ef73b
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59825974"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446652"
 ---
 # <a name="step-5-test-directaccess-connectivity-from-the-internet-and-through-the-cluster"></a>인터넷에서 클러스터를 통해 5 테스트 DirectAccess 연결 단계
 
@@ -35,27 +35,27 @@ CLIENT1은 DirectAccess 테스트할 준비가 완료 되었습니다.
   
 ## <a name="test-directaccess-connectivity-from-the-internet"></a>인터넷에서 DirectAccess 연결을 테스트  
   
-1.  CLIENT1을 회사 네트워크 스위치에서 분리 하 고 인터넷 스위치에 연결 합니다. 30 초 동안 기다립니다.  
+1. CLIENT1을 회사 네트워크 스위치에서 분리 하 고 인터넷 스위치에 연결 합니다. 30 초 동안 기다립니다.  
   
-2.  관리자 권한 Windows PowerShell 창에서 입력 **ipconfig /flushdns** ENTER 키를 누릅니다. 이 클라이언트 컴퓨터는 회사 네트워크에 연결 된 클라이언트 DNS 캐시에 남아 있을 수 있는 이름 확인 항목이 플러시합니다.  
+2. 관리자 권한 Windows PowerShell 창에서 입력 **ipconfig /flushdns** ENTER 키를 누릅니다. 이 클라이언트 컴퓨터는 회사 네트워크에 연결 된 클라이언트 DNS 캐시에 남아 있을 수 있는 이름 확인 항목이 플러시합니다.  
   
-3.  Windows PowerShell 창에서 입력 **Get-dnsclientnrptpolicy** ENTER 키를 누릅니다.  
+3. Windows PowerShell 창에서 입력 **Get-dnsclientnrptpolicy** ENTER 키를 누릅니다.  
   
-    NRPT(이름 확인 정책 테이블)에 대한 현재 설정이 출력에 표시됩니다. 이러한 설정을 표시 하는 모든 연결에. corp.contoso.com IPv6 주소 2001:db8:1::2 사용 하 여 원격 액세스 DNS 서버를 확인 해야 합니다. 또한 nls.corp.contoso.com이라는 이름에 대한 예외가 있음을 나타내는 NRPT 항목을 확인합니다. 예외 목록에 있는 이름에는 원격 액세스 DNS 서버에서 응답하지 않습니다. 원격 액세스 서버에 대 한 연결을 확인 하려면 원격 액세스 DNS 서버 IP 주소를 ping 할 수 있습니다. 예를 들어 2001:db8:1::2)를 ping 할 수 있습니다.  
+   NRPT(이름 확인 정책 테이블)에 대한 현재 설정이 출력에 표시됩니다. 이러한 설정을 표시 하는 모든 연결에. corp.contoso.com IPv6 주소 2001:db8:1::2 사용 하 여 원격 액세스 DNS 서버를 확인 해야 합니다. 또한 nls.corp.contoso.com이라는 이름에 대한 예외가 있음을 나타내는 NRPT 항목을 확인합니다. 예외 목록에 있는 이름에는 원격 액세스 DNS 서버에서 응답하지 않습니다. 원격 액세스 서버에 대 한 연결을 확인 하려면 원격 액세스 DNS 서버 IP 주소를 ping 할 수 있습니다. 예를 들어 2001:db8:1::2)를 ping 할 수 있습니다.  
   
-4.  Windows PowerShell 창에서 입력 **ping app1** ENTER 키를 누릅니다. 2001:db8:1::3이 경우에 APP1을 IPv6 주소에 대 한 회신을 볼 수 있습니다.  
+4. Windows PowerShell 창에서 입력 **ping app1** ENTER 키를 누릅니다. 2001:db8:1::3이 경우에 APP1을 IPv6 주소에 대 한 회신을 볼 수 있습니다.  
   
-5.  Windows PowerShell 창에서 입력 **ping app2** ENTER 키를 누릅니다. EDGE1에서 APP2에 할당한 NAT64 주소(이 예제의 경우 fdc9:9f4e:eb1b:7777::a00:4)의 응답이 표시됩니다.  
+5. Windows PowerShell 창에서 입력 **ping app2** ENTER 키를 누릅니다. EDGE1에서 APP2에 할당한 NAT64 주소(이 예제의 경우 fdc9:9f4e:eb1b:7777::a00:4)의 응답이 표시됩니다.  
   
-    Ping APP2 수는 성공 APP2 IPv4 전용 리소스를 그대로 NAT64/DNS64를 사용 하 여 연결을 자동으로 연결할 수 있음을 나타내므로 중요 합니다.  
+   Ping APP2 수는 성공 APP2 IPv4 전용 리소스를 그대로 NAT64/DNS64를 사용 하 여 연결을 자동으로 연결할 수 있음을 나타내므로 중요 합니다.  
   
-6.  Windows PowerShell 창을 다음 절차에 대해 열어 둡니다.  
+6. Windows PowerShell 창을 다음 절차에 대해 열어 둡니다.  
   
-7.  Internet Explorer 주소 표시줄에 Internet Explorer를 열고를 입력 **https://app1/** ENTER 키를 누릅니다. APP1의 기본 IIS 웹 사이트가 표시됩니다.  
+7. Internet Explorer 주소 표시줄에 Internet Explorer를 열고를 입력 **https://app1/** ENTER 키를 누릅니다. APP1의 기본 IIS 웹 사이트가 표시됩니다.  
   
-8.  Internet Explorer 주소 표시줄에 입력 **https://app2/** ENTER 키를 누릅니다. APP2의 기본 IIS 웹 사이트가 표시됩니다.  
+8. Internet Explorer 주소 표시줄에 입력 **https://app2/** ENTER 키를 누릅니다. APP2의 기본 IIS 웹 사이트가 표시됩니다.  
   
-9. 에 **시작** 화면에서 입력**\\\App2\Files**, 한 다음 ENTER를 누릅니다. 새 텍스트 문서 파일을 두 번 클릭합니다.  
+9. 에 **시작** 화면에서 입력<strong>\\\App2\Files</strong>, 한 다음 ENTER를 누릅니다. 새 텍스트 문서 파일을 두 번 클릭합니다.  
   
     이 SMB를 사용 하 여 리소스 도메인의 리소스를 가져오는 IPv4 전용 서버에 연결할 수 있음을 보여 줍니다.  
   
@@ -69,20 +69,20 @@ CLIENT1은 DirectAccess 테스트할 준비가 완료 되었습니다.
   
 ## <a name="test-directaccess-client-connectivity-through-the-cluster"></a>클러스터를 통해 DirectAccess 클라이언트 연결 테스트  
   
-1.  EDGE2에서 정상 종료를 수행 합니다.  
+1. EDGE2에서 정상 종료를 수행 합니다.  
   
-    이러한 테스트를 실행할 때 서버의 상태를 확인 하려면 네트워크 부하 분산 관리자를 사용할 수 있습니다.  
+   이러한 테스트를 실행할 때 서버의 상태를 확인 하려면 네트워크 부하 분산 관리자를 사용할 수 있습니다.  
   
-2.  CLIENT1에서 Windows PowerShell 창에서 입력 **ipconfig /flushdns** ENTER 키를 누릅니다. 이 클라이언트 DNS 캐시에에서 남아 있을 수 있는 이름 확인 항목이 플러시합니다.  
+2. CLIENT1에서 Windows PowerShell 창에서 입력 **ipconfig /flushdns** ENTER 키를 누릅니다. 이 클라이언트 DNS 캐시에에서 남아 있을 수 있는 이름 확인 항목이 플러시합니다.  
   
-3.  Windows PowerShell 창에서 APP1 및 APP2를 ping 합니다. 이러한 리소스에서 응답을 받게 됩니다.  
+3. Windows PowerShell 창에서 APP1 및 APP2를 ping 합니다. 이러한 리소스에서 응답을 받게 됩니다.  
   
-4.  에 **시작** 화면에서 입력**\\\app2\files**합니다. APP2 컴퓨터의 공유 폴더에 표시 됩니다. APP2의 파일 공유를 열 수는 사용자에 대 한 Kerberos 인증을 요구 하는 두 번째 터널을 제대로 작동 하는지 나타냅니다.  
+4. 에 **시작** 화면에서 입력<strong>\\\app2\files</strong>합니다. APP2 컴퓨터의 공유 폴더에 표시 됩니다. APP2의 파일 공유를 열 수는 사용자에 대 한 Kerberos 인증을 요구 하는 두 번째 터널을 제대로 작동 하는지 나타냅니다.  
   
-5.  Internet Explorer를 열고 다음 웹 사이트 https://app1/ 고 https://app2/입니다. 첫 번째와 두 번째 터널 구성 되는지 확인 하는 두 웹 사이트를 열 수 있고 작동 합니다. Internet Explorer를 닫습니다.  
+5. Internet Explorer를 열고 다음 웹 사이트 https://app1/ 고 https://app2/입니다. 첫 번째와 두 번째 터널 구성 되는지 확인 하는 두 웹 사이트를 열 수 있고 작동 합니다. Internet Explorer를 닫습니다.  
   
-6.  EDGE2 컴퓨터를 시작 합니다.  
+6. EDGE2 컴퓨터를 시작 합니다.  
   
-7.  EDGE1에서 정상 종료를 수행 합니다.  
+7. EDGE1에서 정상 종료를 수행 합니다.  
   
-8.  5 분 동안 기다린 후 CLIENT1에 반환 합니다. 2 ~ 5 단계를 수행 합니다. CLIENT1를 투명 하 게 장애 조치 EDGE2 EDGE1를 사용할 수 없게 후 수 있음을 확인 합니다.
+8. 5 분 동안 기다린 후 CLIENT1에 반환 합니다. 2 ~ 5 단계를 수행 합니다. CLIENT1를 투명 하 게 장애 조치 EDGE2 EDGE1를 사용할 수 없게 후 수 있음을 확인 합니다.

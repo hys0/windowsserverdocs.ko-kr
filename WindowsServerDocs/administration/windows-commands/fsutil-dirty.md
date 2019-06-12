@@ -9,12 +9,12 @@ ms.technology: storage
 audience: IT Pro
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: c308b0497a5a39a25384b22441b733143df8727b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d8a5c4905991203a051fea360ed91c9b372f6993
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59852134"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66439080"
 ---
 # <a name="fsutil-dirty"></a>Fsutil 커밋되지 않은 데이터
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
@@ -31,11 +31,11 @@ fsutil dirty {query | set} <VolumePath>
 
 ## <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|-------------|---------------|
-|쿼리|지정 된 볼륨의 더티 비트를 쿼리합니다.|
-|집합|지정 된 볼륨의 더티 비트를 설정합니다.|
-|\<VolumePath>|드라이브 이름을 뒤에 콜론 또는 GUID 다음 형식으로 지정 합니다. **볼륨 {***GUID***}** 합니다.|
+|   매개 변수   |                                                 설명                                                  |
+|---------------|--------------------------------------------------------------------------------------------------------------|
+|     쿼리     |                                  지정 된 볼륨의 더티 비트를 쿼리합니다.                                   |
+|      집합      |                                    지정 된 볼륨의 더티 비트를 설정합니다.                                    |
+| \<VolumePath> | 드라이브 이름을 뒤에 콜론 또는 GUID 다음 형식으로 지정 합니다. **볼륨 {** <em>GUID</em> **}** 합니다. |
 
 ## <a name="remarks"></a>설명
 

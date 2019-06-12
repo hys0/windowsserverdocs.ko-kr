@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 78594c0445ae482e49d47b3b67bb867e53866017
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7de5e6dc6d205b7e6749d38ac822e31a78788c6e
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59867954"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66435213"
 ---
 # <a name="auditpol-backup"></a>auditpol 백업
 
@@ -31,10 +31,12 @@ ms.locfileid: "59867954"
 auditpol /backup /file:<filename>
 ```
 ## <a name="parameters"></a>매개 변수
-|매개 변수|설명|
-|-------|--------|
-|/file|에 감사 정책을 백업할 파일의 이름을 지정 합니다.|
-|/?|명령 프롬프트에 도움말을 표시합니다.|
+
+| 매개 변수 |                                 설명                                 |
+|-----------|-----------------------------------------------------------------------------|
+|   /file   | 에 감사 정책을 백업할 파일의 이름을 지정 합니다. |
+|    /?     |                    명령 프롬프트에 도움말을 표시합니다.                     |
+
 ## <a name="remarks"></a>설명
 사용자별 정책 및 시스템 정책에 대 한 백업 작업에 대 한 작성 한 해야 하거나 보안 설명자에 해당 개체에 대 한 모든 권한을 설정 합니다. 소유 하 여 백업 작업을 수행할 수도 있습니다는 **관리 감사 및 보안 로그** (SeSecurityPrivilege) 사용자 권한이 있습니다. 그러나이 오른쪽 목록 작업을 수행할 필요가 없는 추가 액세스를 허용 합니다.
 ## <a name="BKMK_examples"></a>예제
@@ -44,6 +46,6 @@ auditpol /backup /file:C:\auditpolicy.csv
 ```
 > [!NOTE]
 > 드라이브를 지정 하는 경우 현재 디렉터리가 사용 됩니다.
-#### <a name="additional-references"></a>추가 참조
-[명령줄 구문 키](command-line-syntax-key.md)
-[auditpol 복원](auditpol-restore.md)
+> #### <a name="additional-references"></a>추가 참조
+> [명령줄 구문 키](command-line-syntax-key.md)
+> [auditpol 복원](auditpol-restore.md)

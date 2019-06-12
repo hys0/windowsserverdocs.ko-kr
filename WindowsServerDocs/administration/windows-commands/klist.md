@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3b3d0591f9feb12782d0c77b6c786cfe17656ab2
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d0b77aed5970c74181ba03da5e57e9b230313a15
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59831164"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66438116"
 ---
 # <a name="klist"></a>klist
 
@@ -120,52 +120,51 @@ klist [-lh <LogonId.HighPart>] [-li <LogonId.LowPart>] tickets | tgt | purge | s
 
 ## <a name="BKMK_Examples"></a>예제
 
-1.  처리 하는 동안 이벤트 ID 27을 진단 하는 경우 티켓 부여 서비스 (TGS) 요청 대상 서버에 대 한 계정에 Kerberos 티켓을 생성 하는 적합 한 키 없었습니다. Klist Kerberos 티켓 캐시 계정을 확인 하는 대상 서버 오류를 반환 하는 경우 모든 티켓, 누락 된 경우 또는 암호화 유형이 지원 되지 않는 경우를 확인 하려면 쿼리를 사용할 수 있습니다.  
-    ```
-    klist 
-    ```  
-    ```
-    klist –li 0x3e7
-    ```  
-2.  오류를 진단 하는 경우 각 티켓--티켓 로그온 세션에 대 한 컴퓨터에 캐시 되는 세부 사항을 알 하려는 Klist TGT 정보를 표시 하려면 사용할 수 있습니다.  
-    ```
-    klist tgt
-    ```  
-3.  에 연결할 수 없는 경우 진단 너무 오래 걸릴 수 있습니다 Kerberos 티켓 캐시 제거 수, 로그 오프 한 다음 다시 로그온 합니다.  
-    ```
-    klist purge
-    ```  
-    ```
-    klist purge –li 0x3e7
-    ```  
-4.  사용자 또는 서비스에 대 한 로그온 세션을 진단 하려는 경우 다른 Klist 명령에서 사용 되는 로그온 Id를 찾으려면 다음 명령을 사용할 수 있습니다.  
-    ```
-    klist sessions
-    ```  
-5.  Kerberos 제한 위임 실패를 진단 하려는 경우에 발생 한 마지막 오류를 찾으려면 다음 명령을 사용할 수 있습니다.  
-    ```
-    klist kcd_cache
-    ```  
-6.  사용자가 진단 하려는 때나 서비스 서버에 티켓을 가져올 수 특정 SPN에 대 한 티켓을 요청 하려면이 명령을 사용할 수 있습니다.  
-    ```
-    klist get host/%computername%
-    ```  
-7.  도메인 컨트롤러에서 복제 문제를 진단할 때 특정 도메인 컨트롤러를 대상으로 클라이언트 컴퓨터를 일반적으로 필요 합니다. 이러한 경우에는 특정 도메인 컨트롤러에 클라이언트 컴퓨터를 대상으로 다음 명령을 사용할 수 있습니다.  
-    ```
-    klist add_bind CONTOSO KDC.CONTOSO.COM
-    
-    ```  
-    ```
-    klist add_bind CONTOSO.COM KDC.CONTOSO.COM
-    ```  
-8.  어떤 도메인 컨트롤러에 연결할 최근에이 컴퓨터를 쿼리하려면 다음 명령을 사용할 수 있습니다.  
-    ```
-    klist query_bind
-    ```  
-9.  도메인 컨트롤러를 다시 검색 하는 Kerberos를 하려는 경우 다음 명령을 사용할 수 있습니다. 이 명령은 klist add_bind를 사용 하 여 새 도메인 컨트롤러 바인딩을 만들기 전에 캐시를 플러시하려면 데도 사용할 수 있습니다.  
-    ```
-    klist purge_bind
-    ```
+1. 처리 하는 동안 이벤트 ID 27을 진단 하는 경우 티켓 부여 서비스 (TGS) 요청 대상 서버에 대 한 계정에 Kerberos 티켓을 생성 하는 적합 한 키 없었습니다. Klist Kerberos 티켓 캐시 계정을 확인 하는 대상 서버 오류를 반환 하는 경우 모든 티켓, 누락 된 경우 또는 암호화 유형이 지원 되지 않는 경우를 확인 하려면 쿼리를 사용할 수 있습니다.  
+   ```
+   klist 
+   ```  
+   ```
+   klist –li 0x3e7
+   ```  
+2. 오류를 진단 하는 경우 각 티켓--티켓 로그온 세션에 대 한 컴퓨터에 캐시 되는 세부 사항을 알 하려는 Klist TGT 정보를 표시 하려면 사용할 수 있습니다.  
+   ```
+   klist tgt
+   ```  
+3. 에 연결할 수 없는 경우 진단 너무 오래 걸릴 수 있습니다 Kerberos 티켓 캐시 제거 수, 로그 오프 한 다음 다시 로그온 합니다.  
+   ```
+   klist purge
+   ```  
+   ```
+   klist purge –li 0x3e7
+   ```  
+4. 사용자 또는 서비스에 대 한 로그온 세션을 진단 하려는 경우 다른 Klist 명령에서 사용 되는 로그온 Id를 찾으려면 다음 명령을 사용할 수 있습니다.  
+   ```
+   klist sessions
+   ```  
+5. Kerberos 제한 위임 실패를 진단 하려는 경우에 발생 한 마지막 오류를 찾으려면 다음 명령을 사용할 수 있습니다.  
+   ```
+   klist kcd_cache
+   ```  
+6. 사용자가 진단 하려는 때나 서비스 서버에 티켓을 가져올 수 특정 SPN에 대 한 티켓을 요청 하려면이 명령을 사용할 수 있습니다.  
+   ```
+   klist get host/%computername%
+   ```  
+7. 도메인 컨트롤러에서 복제 문제를 진단할 때 특정 도메인 컨트롤러를 대상으로 클라이언트 컴퓨터를 일반적으로 필요 합니다. 이러한 경우에는 특정 도메인 컨트롤러에 클라이언트 컴퓨터를 대상으로 다음 명령을 사용할 수 있습니다.  
+   ```
+   klist add_bind CONTOSO KDC.CONTOSO.COM
+   ```  
+   ```
+   klist add_bind CONTOSO.COM KDC.CONTOSO.COM
+   ```  
+8. 어떤 도메인 컨트롤러에 연결할 최근에이 컴퓨터를 쿼리하려면 다음 명령을 사용할 수 있습니다.  
+   ```
+   klist query_bind
+   ```  
+9. 도메인 컨트롤러를 다시 검색 하는 Kerberos를 하려는 경우 다음 명령을 사용할 수 있습니다. 이 명령은 klist add_bind를 사용 하 여 새 도메인 컨트롤러 바인딩을 만들기 전에 캐시를 플러시하려면 데도 사용할 수 있습니다.  
+   ```
+   klist purge_bind
+   ```
 
 #### <a name="additional-references"></a>추가 참조
 

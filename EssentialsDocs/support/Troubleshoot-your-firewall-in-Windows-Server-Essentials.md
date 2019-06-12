@@ -12,12 +12,12 @@ ms.assetid: 51d94b67-8b9b-4159-80dd-f652d73a43cb
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 3c48d2abb7fd8431f40f76f8eece5c4142be4c75
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 11372589528fcc78e0053bc7002449b53cb3181d
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59846554"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66436045"
 ---
 # <a name="troubleshoot-your-firewall-in-windows-server-essentials"></a>Windows Server Essentials에서 방화벽 문제 해결
  
@@ -27,13 +27,13 @@ ms.locfileid: "59846554"
   
 ### <a name="to-run-the-repair-anywhere-access-wizard"></a>원격 액세스 복구 마법사를 실행하려면  
   
-1.  대시보드를 엽니다.  
+1. 대시보드를 엽니다.  
   
-2.  **설정**, **원격 액세스** 탭, **복구**를 차례로 클릭합니다.  
+2. **설정**, **원격 액세스** 탭, **복구**를 차례로 클릭합니다.  
   
-3.  원격 액세스 복구 마법사의 지침에 따릅니다.  
+3. 원격 액세스 복구 마법사의 지침에 따릅니다.  
   
- 고급 네트워크 설정을 사용하거나 타사 방화벽을 사용하는 경우 방화벽에서 추가 포트를 열어야 할 수도 있습니다. 다음 표의 포트는 IANA(Internet Assigned Numbers Authority)에 등록되어 있습니다.  
+   고급 네트워크 설정을 사용하거나 타사 방화벽을 사용하는 경우 방화벽에서 추가 포트를 열어야 할 수도 있습니다. 다음 표의 포트는 IANA(Internet Assigned Numbers Authority)에 등록되어 있습니다.  
   
 |포트 번호|설명|  
 |-----------------|-----------------|  

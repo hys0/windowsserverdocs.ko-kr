@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.reviewer: anandy
 ms.technology: identity-adfs
-ms.openlocfilehash: c4f9a2880aa91b7a600cdb40238bead7d565e6bc
-ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
+ms.openlocfilehash: 04573aa13689a0e6744b01a0fbf8b11b622b2706
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65976971"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66445474"
 ---
 # <a name="customize-claims-to-be-emitted-in-idtoken-when-using-openid-connect-or-oauth-with-ad-fs-2016-or-later"></a>Ad FS 2016 OpenID Connect 또는 OAuth를 사용 하는 경우 id_token에서 내보낸 이상 이어야 하는 클레임을 사용자 지정
 
@@ -57,29 +57,29 @@ Grant-AdfsApplicationPermission -ClientRoleIdentifier "https://my/privateclient"
 
 2. 응용 프로그램 그룹 마법사에서 이름을 입력 **ADFSSSO** 고 클라이언트-서버에서 응용 프로그램을 선택 합니다 **웹 응용 프로그램에 액세스 하는 네이티브 응용 프로그램** 템플릿. **다음**을 클릭합니다.
 
-  ![클라이언트](media/Custom-Id-Tokens-in-AD-FS/clientsnap1.png)
+   ![클라이언트](media/Custom-Id-Tokens-in-AD-FS/clientsnap1.png)
 
 3. 복사는 **클라이언트 식별자** 값입니다.  그는 나중에 값으로 ida: ClientId 응용 프로그램 web.config 파일에 대 한 합니다.
 
 4. 에 다음과 같이 입력 **리디렉션 URI:**  -  **https://localhost:44320/** 합니다.  **추가**를 클릭합니다. **다음**을 클릭합니다.
 
-  ![클라이언트](media/Custom-Id-Tokens-in-AD-FS/clientsnap2.png)
+   ![클라이언트](media/Custom-Id-Tokens-in-AD-FS/clientsnap2.png)
 
 5. 에 **Web API 구성** 화면에서 입력 한 다음 **식별자** -  **https://contoso.com/WebApp** 합니다.  **추가**를 클릭합니다. **다음**을 클릭합니다.  이 값은 나중에 사용할 **ida: ResourceID** 응용 프로그램 web.config 파일에서입니다.
 
-  ![클라이언트](media/Custom-Id-Tokens-in-AD-FS/clientsnap3.png)
+   ![클라이언트](media/Custom-Id-Tokens-in-AD-FS/clientsnap3.png)
 
 6. 에 **액세스 제어 정책 선택** 화면에서 **모든 사용자 허용** 클릭 **다음**합니다.
 
-  ![클라이언트](media/Custom-Id-Tokens-in-AD-FS/clientsnap4.png)
+   ![클라이언트](media/Custom-Id-Tokens-in-AD-FS/clientsnap4.png)
 
 7. 에 **응용 프로그램 사용 권한 구성** 화면, 반드시 **openid** 하 고 **allatclaims** 선택 하 고 클릭 **다음**합니다.
 
-  ![클라이언트](media/Custom-Id-Tokens-in-AD-FS/clientsnap5.png)
+   ![클라이언트](media/Custom-Id-Tokens-in-AD-FS/clientsnap5.png)
 
 8. 에 **요약** 화면에서 **다음**합니다.  
 
-  ![클라이언트](media/Custom-Id-Tokens-in-AD-FS/clientsnap6.png)
+   ![클라이언트](media/Custom-Id-Tokens-in-AD-FS/clientsnap6.png)
 
 9. 에 **Complete** 화면에서 **닫기**합니다.
 
@@ -89,20 +89,20 @@ Grant-AdfsApplicationPermission -ClientRoleIdentifier "https://my/privateclient"
 
 11. 온 **ADFSSSO-웹 API 속성** 화면에서 **발급 변환 규칙** 탭을 클릭 **규칙 추가...**
 
-  ![클라이언트](media/Custom-Id-Tokens-in-AD-FS/clientsnap8.png)
+    ![클라이언트](media/Custom-Id-Tokens-in-AD-FS/clientsnap8.png)
 
 12. 온 **변환 클레임 규칙 추가 마법사** 화면에서 **사용자 지정 규칙을 사용 하 여 클레임 보내기** 드롭다운 목록에서 클릭 하 고 **다음**
 
-  ![클라이언트](media/Custom-Id-Tokens-in-AD-FS/clientsnap9.png)
+    ![클라이언트](media/Custom-Id-Tokens-in-AD-FS/clientsnap9.png)
 
 13. 온 **변환 클레임 규칙 추가 마법사** 화면에서 입력 **ForCustomIDToken** 에서 **클레임 규칙 이름** 다음 클레임에 대 한 규칙 및 **사용자 지정 규칙**. **마침** 클릭
 
-  ```  
-  x:[]
-  => issue(claim=x);  
-  ```
+    ```  
+    x:[]
+    => issue(claim=x);  
+    ```
 
-  ![클라이언트](media/Custom-Id-Tokens-in-AD-FS/clientsnap10.png)
+    ![클라이언트](media/Custom-Id-Tokens-in-AD-FS/clientsnap10.png)
 
 ```
 

@@ -8,12 +8,12 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: dddf694aaceab93bd102456dbe86df17a001cb01
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9a668a39990b79862b99c2c7d9aeaf6540fa376d
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59879884"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447370"
 ---
 # <a name="review-prerequisites-for-the-host-guardian-service"></a>호스트 보호 서비스에 대 한 필수 구성 요소 검토
 
@@ -40,5 +40,5 @@ HGS를 이미 배포한 하 고 해당 운영 체제를 업그레이드 하려�
 
 ## <a name="next-step"></a>다음 단계
 
->[!div class="nextstepaction"]
-[HGS에 대 한 인증서를 가져오려면](guarded-fabric-obtain-certs.md)
+> [!div class="nextstepaction"]
+> [HGS에 대 한 인증서를 가져오려면](guarded-fabric-obtain-certs.md)

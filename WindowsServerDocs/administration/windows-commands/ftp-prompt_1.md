@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2e3a3cf3baf2a3469560b90bed30c6813284a8bc
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 65f7505dfcb3677fcaace9bd645cca7e7ba70b7d
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59866454"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66438596"
 ---
 # <a name="ftp-prompt1"></a>ftp: prompt_1
 
@@ -32,12 +32,12 @@ prompt
 ### <a name="parameters"></a>매개 변수  
 none  
 ## <a name="remarks"></a>설명  
--   기본적으로 **프롬프트** 켜져 있습니다.  
--   **ftp** 를 선택적으로 검색 하거나 파일을 저장할 수 있도록 여러 파일을 전송 하는 동안 표시 됩니다.  **Mget** 하 고 **mput** 하는 경우 모든 파일을 전송 **프롬프트** 꺼져 있습니다.  
-## <a name="BKMK_Examples"></a>예제  
-프롬프트 모드를 설정 / 해제 합니다.  
-```  
-prompt  
-```  
-## <a name="additional-references"></a>추가 참조  
--   [명령줄 구문 키](command-line-syntax-key.md)  
+- 기본적으로 **프롬프트** 켜져 있습니다.  
+- **ftp** 를 선택적으로 검색 하거나 파일을 저장할 수 있도록 여러 파일을 전송 하는 동안 표시 됩니다.  **Mget** 하 고 **mput** 하는 경우 모든 파일을 전송 **프롬프트** 꺼져 있습니다.  
+  ## <a name="BKMK_Examples"></a>예제  
+  프롬프트 모드를 설정 / 해제 합니다.  
+  ```  
+  prompt  
+  ```  
+  ## <a name="additional-references"></a>추가 참조  
+- [명령줄 구문 키](command-line-syntax-key.md)  

@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: 077a3a64-2fa3-4994-9711-ec1fbdc081ba
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 83d12826bd8128bc38d84c252045d74cf416457e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7f4c7e1418e541e1f913c8a20cbda3456c1c3802
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59882884"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446603"
 ---
 # <a name="monitor-the-operations-status-of-the-remote-access-server-and-its-components"></a>원격 액세스 서버 및 해당 구성 요소의 작동 상태 모니터링
 
@@ -41,7 +41,7 @@ ms.locfileid: "59882884"
   
 4.  클릭 **새로 고침** 아래 **작업** 작동 상태를 다시 로드 하려면 오른쪽 창에 있습니다. 작업 상태는 자동으로 새로 고쳐집니다 5 분 마다 되는 기본 새로 고침 간격. 기본 새로 고침 간격을 변경 하려면 **구성 새로 고침 간격**합니다.  
   
-![Windows PowerShell](../../../media/Monitor-the-operations-status-of-the-Remote-Access-server-and-its-components/PowerShellLogoSmall.gif)Windows PowerShell 해당 명령을 * * *  
+![Windows PowerShell](../../../media/Monitor-the-operations-status-of-the-Remote-Access-server-and-its-components/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   

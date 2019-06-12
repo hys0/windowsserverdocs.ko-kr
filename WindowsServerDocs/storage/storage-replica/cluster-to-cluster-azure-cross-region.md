@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage-replica
 manager: mchad
-ms.openlocfilehash: d9999f786639ff4aa303ed34ade14849cda8feec
-ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
+ms.openlocfilehash: 95f3e9e929d6a28279f526eec6dbdf0427bd74c0
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65475909"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447578"
 ---
 # <a name="cluster-to-cluster-storage-replica-cross-region-in-azure"></a>Azure의 교차 지역 클러스터 간 저장소 복제
 
@@ -25,7 +25,7 @@ Azure에서 응용 프로그램의 지역 간 클러스터 간 저장소 복제�
 프로세스의 전체 연습에 대 한 아래 비디오를 시청 하세요.
 > [!video https://www.microsoft.com/en-us/videoplayer/embed/RE26xeW]
 
-![아키텍처 다이어그램 들 C2C SR Azure 내에서 동일한 지역입니다.](media\Cluster-to-cluster-azure-cross-region\architecture.png)
+![아키텍처 다이어그램 들 C2C SR Azure 내에서 동일한 지역입니다.](media/Cluster-to-cluster-azure-cross-region/architecture.png)
 > [!IMPORTANT]
 > 모든 참조 된 예제는 위 그림와 관련이 있습니다.
 
@@ -68,7 +68,7 @@ Azure에서 응용 프로그램의 지역 간 클러스터 간 저장소 복제�
    도메인 컨트롤러 개인 IP 주소를 가상 네트워크의 DNS 서버를 변경 합니다.
    - 예제에서는 도메인 컨트롤러 **az2azDC** 개인 IP 주소가 (10.3.0.8이). 가상 네트워크에 (**az2az Vnet** 하 고 **azcross VNET**) 10.3.0.8이 DNS 서버를 변경 합니다. 
 
-    예제에서는 "contoso.com"에 모든 노드를 연결 하 고 "contosoadmin"에 대 한 관리자 권한을 제공 합니다.
+     예제에서는 "contoso.com"에 모든 노드를 연결 하 고 "contosoadmin"에 대 한 관리자 권한을 제공 합니다.
    - 모든 노드에서 contosoadmin로 로그인 합니다. 
  
 6. 클러스터를 만들려면 (**SRAZC1**하십시오 **SRAZCross**).
@@ -106,87 +106,87 @@ Azure에서 응용 프로그램의 지역 간 클러스터 간 저장소 복제�
 
 9. 만들 [가상 네트워크 게이트웨이](https://ms.portal.azure.com/#create/Microsoft.VirtualNetworkGateway-ARM) Vnet 대 Vnet 연결 합니다.
 
- - 첫 번째 가상 네트워크 게이트웨이 만듭니다 (**az2az VNetGateway**)의 첫 번째 리소스 그룹 (**SR-AZ2AZ**)
- - 게이트웨이 유형 = VPN 및 VPN 형식 = 경로 기반
+   - 첫 번째 가상 네트워크 게이트웨이 만듭니다 (**az2az VNetGateway**)의 첫 번째 리소스 그룹 (**SR-AZ2AZ**)
+   - 게이트웨이 유형 = VPN 및 VPN 형식 = 경로 기반
 
- - 두 번째 가상 네트워크 게이트웨이 만듭니다 (**azcross VNetGateway**)의 두 번째 리소스 그룹 (**SR-AZCROSS**)
- - 게이트웨이 유형 = VPN 및 VPN 형식 = 경로 기반
+   - 두 번째 가상 네트워크 게이트웨이 만듭니다 (**azcross VNetGateway**)의 두 번째 리소스 그룹 (**SR-AZCROSS**)
+   - 게이트웨이 유형 = VPN 및 VPN 형식 = 경로 기반
 
- - 첫 번째 가상 네트워크 게이트웨이에서 가상 네트워크 게이트웨이 두 번째 Vnet 대 Vnet 연결을 만듭니다. 공유 키를 제공 합니다.
+   - 첫 번째 가상 네트워크 게이트웨이에서 가상 네트워크 게이트웨이 두 번째 Vnet 대 Vnet 연결을 만듭니다. 공유 키를 제공 합니다.
 
- - 첫 번째 가상 네트워크 게이트웨이를 두 번째 가상 네트워크 게이트웨이에서 Vnet 대 Vnet 연결을 만듭니다. 위의 단계에서 제공 된 동일한 공유 키를 제공 합니다. 
+   - 첫 번째 가상 네트워크 게이트웨이를 두 번째 가상 네트워크 게이트웨이에서 Vnet 대 Vnet 연결을 만듭니다. 위의 단계에서 제공 된 동일한 공유 키를 제공 합니다. 
 
 10. 각 클러스터 노드에서 포트 59999 (상태 프로브)을 엽니다.
 
-   각 노드에서 다음 명령을 실행 합니다.
+    각 노드에서 다음 명령을 실행 합니다.
 
-   ```powershell
+    ```powershell
       netsh advfirewall firewall add rule name=PROBEPORT dir=in protocol=tcp action=allow localport=59999 remoteip=any profile=any 
-   ```
+    ```
 
 11. 클러스터 포트 59999에서 상태 프로브 메시지를 수신 하 고 현재이 리소스를 소유 하는 노드에서 응답을 지시 합니다.
 
-   한 번 실행 한 각 클러스터에 대 한 클러스터의 노드에서 합니다. 
+    한 번 실행 한 각 클러스터에 대 한 클러스터의 노드에서 합니다. 
     
-   예제에서는 "ILBIP" 구성 값에 따라 변경 해야 합니다. 다음 명령을 실행 하는 모든 노드에서 **az2az1**/**az2az2**
+    예제에서는 "ILBIP" 구성 값에 따라 변경 해야 합니다. 다음 명령을 실행 하는 모든 노드에서 **az2az1**/**az2az2**
 
-   ```PowerShell
+    ```PowerShell
      $ClusterNetworkName = "Cluster Network 1" # Cluster network name (Use Get-ClusterNetwork on Windows Server 2012 or higher to find the name. And use Get-ClusterResource to find the IPResourceName).
      $IPResourceName = "Cluster IP Address" # IP Address cluster resource name.
      $ILBIP = "10.3.0.100" # IP Address in Internal Load Balancer (ILB) - The static IP address for the load balancer configured in the Azure portal.
      [int]$ProbePort = 59999
      Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";”ProbeFailureThreshold”=5;"EnableDhcp"=0}  
-   ```
+    ```
 
 12. 다음 명령을 실행 하는 모든 노드에서 **azcross1**/**azcross2**
-   ```PowerShell
+    ```PowerShell
      $ClusterNetworkName = "Cluster Network 1" # Cluster network name (Use Get-ClusterNetwork on Windows Server 2012 or higher to find the name. And use Get-ClusterResource to find the IPResourceName).
      $IPResourceName = "Cluster IP Address" # IP Address cluster resource name.
      $ILBIP = "10.0.0.10" # IP Address in Internal Load Balancer (ILB) - The static IP address for the load balancer configured in the Azure portal.
      [int]$ProbePort = 59999
      Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";”ProbeFailureThreshold”=5;"EnableDhcp"=0}  
-   ```
+    ```
 
-   두 클러스터를 연결 / 서로 통신할 수 있는지 확인 합니다.
+    두 클러스터를 연결 / 서로 통신할 수 있는지 확인 합니다.
 
-   하거나 장애 조치 클러스터 관리자에서 "클러스터에 연결" 기능을 사용 하 여 다른 클러스터에 연결 하거나 현재 클러스터의 노드 중 하나에서 다른 클러스터의 응답을 확인 합니다.
+    하거나 장애 조치 클러스터 관리자에서 "클러스터에 연결" 기능을 사용 하 여 다른 클러스터에 연결 하거나 현재 클러스터의 노드 중 하나에서 다른 클러스터의 응답을 확인 합니다.
 
-   예제에서를 사용해 왔습니다.
-   ```powershell
+    예제에서를 사용해 왔습니다.
+    ```powershell
       Get-Cluster -Name SRAZC1 (ran from azcross1)
-   ```
-   ```powershell
+    ```
+    ```powershell
       Get-Cluster -Name SRAZCross (ran from az2az1) 
-   ```
+    ```
 
 13. 두 클러스터 모두에 대 한 클라우드 감시를 만듭니다. 2 개를 만든 [저장소 계정](https://ms.portal.azure.com/#create/Microsoft.StorageAccount-ARM) (**az2azcw**를**azcrosssa**) 각 리소스 그룹의 각 클러스터에 대 한 Azure에서 (**SR AZ2AZ**합니다  **SR-AZCROSS**).
    
-   - "액세스 키"에서 저장소 계정 이름과 키를 복사 합니다.
-   - 클라우드 감시 "장애 조치 클러스터 관리자"를에서 만들고 만들려면 위의 계정 이름과 키를 사용 합니다. 
+    - "액세스 키"에서 저장소 계정 이름과 키를 복사 합니다.
+    - 클라우드 감시 "장애 조치 클러스터 관리자"를에서 만들고 만들려면 위의 계정 이름과 키를 사용 합니다. 
 
 14. 실행할 [클러스터 유효성 검사 테스트](../../failover-clustering/create-failover-cluster.md#validate-the-configuration) 다음 단계로 넘어가기 전에
 
 15. Windows PowerShell을 시작하고 [Test-SRTopology](https://docs.microsoft.com/powershell/module/storagereplica/test-srtopology?view=win10-ps) cmdlet을 사용하여 모든 저장소 복제본 요구 사항을 충족하는지 확인합니다. 장기 실행 성능 평가 모드뿐만 아니라 빠른 테스트를 위해 요구 사항 전용 모드에서 cmdlet을 사용할 수 있습니다.
  
 16. 클러스터 간 저장소 복제본을 구성 합니다.
-양쪽 방향에서 다른 클러스터에 하나의 클러스터에서 액세스를 부여 합니다.
+    양쪽 방향에서 다른 클러스터에 하나의 클러스터에서 액세스를 부여 합니다.
 
-   예:
-   ```powershell
+    예:
+    ```powershell
      Grant-SRAccess -ComputerName az2az1 -Cluster SRAZCross
-   ```
-Windows Server 2016을 사용 하는 경우 다음도이 명령을 실행 합니다.
+    ```
+    Windows Server 2016을 사용 하는 경우 다음도이 명령을 실행 합니다.
 
-   ```powershell
+    ```powershell
      Grant-SRAccess -ComputerName azcross1 -Cluster SRAZC1
-   ```
+    ```
 
 17. 두 클러스터에 대 한 SR-파트너 관계를 만듭니다.</ol>
 
-   - 클러스터에 대 한 **SRAZC1**
+    - 클러스터에 대 한 **SRAZC1**
       - 볼륨 위치:-c:\ClusterStorage\DataDisk1
       - 로그 위치:-g:
-   - 클러스터에 대 한 **SRAZCross**
+    - 클러스터에 대 한 **SRAZCross**
       - 볼륨 위치:-c:\ClusterStorage\DataDiskCross
       - 로그 위치:-g:
 

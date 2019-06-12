@@ -9,12 +9,12 @@ ms.assetid: 834e8542-a67a-4ba0-9841-8a57727ef876
 author: nedpyle
 ms.date: 04/26/2019
 description: 저장소 복제본을 사용 하 여 Windows Server를 실행 하는 다른 클러스터로 클러스터의 볼륨을 복제 하는 방법.
-ms.openlocfilehash: 2e3245320b2ef7035ac600ff783684083f3f929a
-ms.sourcegitcommit: 0099873d69bd23495d275d7bcb464594de09ee3c
+ms.openlocfilehash: 9d4b7eb05576095abd5d8c905211b2a5e88555bd
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65699896"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447637"
 ---
 # <a name="cluster-to-cluster-storage-replication"></a>클러스터 간 저장소 복제
 
@@ -139,8 +139,8 @@ ms.locfileid: "65699896"
 
 2. SR 로그 볼륨은 항상 가장 빠른 플래시 저장소에 있고, 데이터 볼륨은 더 느린 대용량 저장소에 있도록 합니다.
 
-10. Windows PowerShell을 시작하고 `Test-SRTopology` cmdlet을 사용하여 모든 저장소 복제본 요구 사항을 충족하는지 확인합니다. 장기 실행 성능 평가 모드뿐만 아니라 빠른 테스트를 위해 요구 사항 전용 모드에서 cmdlet을 사용할 수 있습니다.  
-예:  
+3. Windows PowerShell을 시작하고 `Test-SRTopology` cmdlet을 사용하여 모든 저장소 복제본 요구 사항을 충족하는지 확인합니다. 장기 실행 성능 평가 모드뿐만 아니라 빠른 테스트를 위해 요구 사항 전용 모드에서 cmdlet을 사용할 수 있습니다.  
+   예:  
 
    ```PowerShell
    MD c:\temp
@@ -148,13 +148,13 @@ ms.locfileid: "65699896"
    Test-SRTopology -SourceComputerName SR-SRV01 -SourceVolumeName f: -SourceLogVolumeName g: -DestinationComputerName SR-SRV03 -DestinationVolumeName f: -DestinationLogVolumeName g: -DurationInMinutes 30 -ResultPath c:\temp        
    ```
 
-      > [!IMPORTANT]
-      > 평가 기간 동안 지정된 원본 볼륨에 쓰기 IO 로드가 없는 테스트 서버를 사용하는 경우 워크로드를 추가하는 것이 좋습니다. 그렇지 않으면 유용한 보고서가 생성되지 않습니다. 실제 숫자와 권장 로그 크기를 확인하기 위해 프로덕션과 유사한 워크로드로 테스트해야 합니다. 또는 테스트하거나 다운로드하는 동안 일부 파일을 원본 볼륨에 복사하고 [DISKSPD](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223)를 실행하여 쓰기 IO를 생성합니다. 예를 들어 쓰기 IO 워크로드가 낮은 샘플로 D: 볼륨을 5분 동안 테스트하려면 다음을 실행합니다.  
-      > `Diskspd.exe -c1g -d300 -W5 -C5 -b8k -t2 -o2 -r -w5 -h d:\test.dat`  
+     > [!IMPORTANT]
+     > 평가 기간 동안 지정된 원본 볼륨에 쓰기 IO 로드가 없는 테스트 서버를 사용하는 경우 워크로드를 추가하는 것이 좋습니다. 그렇지 않으면 유용한 보고서가 생성되지 않습니다. 실제 숫자와 권장 로그 크기를 확인하기 위해 프로덕션과 유사한 워크로드로 테스트해야 합니다. 또는 테스트하거나 다운로드하는 동안 일부 파일을 원본 볼륨에 복사하고 [DISKSPD](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223)를 실행하여 쓰기 IO를 생성합니다. 예를 들어 쓰기 IO 워크로드가 낮은 샘플로 D: 볼륨을 5분 동안 테스트하려면 다음을 실행합니다.  
+     > `Diskspd.exe -c1g -d300 -W5 -C5 -b8k -t2 -o2 -r -w5 -h d:\test.dat`  
 
-11. **TestSrTopologyReport.html** 보고서를 검사하여 저장소 복제본 요구 사항을 충족하는지 확인합니다.  
+4. **TestSrTopologyReport.html** 보고서를 검사하여 저장소 복제본 요구 사항을 충족하는지 확인합니다.  
 
-    ![복제 토폴로지 보고서 결과를 보여 주는 화면](./media/Cluster-to-Cluster-Storage-Replication/SRTestSRTopologyReport.png)      
+   ![복제 토폴로지 보고서 결과를 보여 주는 화면](./media/Cluster-to-Cluster-Storage-Replication/SRTestSRTopologyReport.png)      
 
 ## <a name="step-2-configure-two-scale-out-file-server-failover-clusters"></a>2단계: 스케일 아웃 파일 서버 장애 조치(Failover) 클러스터 구성  
 이제 두 개의 정상적인 장애 조치(failover) 클러스터를 만듭니다. 구성, 유효성 검사 및 테스트 후 저장소 복제본을 사용하여 복제합니다. 클러스터 노드에서 직접 또는 Windows Server 원격 서버 관리 도구를 포함 하는 원격 관리 컴퓨터에서 아래 단계를 모두 수행할 수 있습니다.  
@@ -212,89 +212,89 @@ ms.locfileid: "65699896"
 ## <a name="step-3-set-up-cluster-to-cluster-replication-using-windows-powershell"></a>3단계: Windows PowerShell을 사용 하 여 클러스터 간 복제 설정  
 이제 Windows PowerShell을 사용하여 클러스터 간 복제를 설정합니다. 노드에서 직접 또는 Windows Server 원격 서버 관리 도구를 포함 하는 원격 관리 컴퓨터에서 아래 단계를 모두 수행할 수 있습니다.  
 
-1.  실행 하 여 다른 클러스터에 첫 번째 클러스터 전체 액세스 권한을 부여 합니다 **부여 SRAccess** 첫 번째 클러스터 노드의 cmdlet 또는 원격으로 합니다.  Windows Server 원격 서버 관리 도구
+1. 실행 하 여 다른 클러스터에 첫 번째 클러스터 전체 액세스 권한을 부여 합니다 **부여 SRAccess** 첫 번째 클러스터 노드의 cmdlet 또는 원격으로 합니다.  Windows Server 원격 서버 관리 도구
 
-    ```PowerShell
-    Grant-SRAccess -ComputerName SR-SRV01 -Cluster SR-SRVCLUSB  
-    ```  
+   ```PowerShell
+   Grant-SRAccess -ComputerName SR-SRV01 -Cluster SR-SRVCLUSB  
+   ```  
 
-2.  실행 하 여 다른 클러스터에 두 번째 클러스터 전체 액세스 권한을 부여 합니다 **부여 SRAccess** cmdlet은 두 번째 클러스터의 모든 노드에서 또는 원격으로.  
+2. 실행 하 여 다른 클러스터에 두 번째 클러스터 전체 액세스 권한을 부여 합니다 **부여 SRAccess** cmdlet은 두 번째 클러스터의 모든 노드에서 또는 원격으로.  
 
-    ```PowerShell
-    Grant-SRAccess -ComputerName SR-SRV03 -Cluster SR-SRVCLUSA  
-    ```  
+   ```PowerShell
+   Grant-SRAccess -ComputerName SR-SRV03 -Cluster SR-SRVCLUSA  
+   ```  
 
-3.  원본 및 대상 디스크, 원본 및 대상 로그, 원본 및 대상 클러스터 이름, 로그 크기 등을 지정하여 클러스터 간 복제를 구성합니다. 서버에서 로컬로 이 명령을 수행하거나 원격 관리 컴퓨터를 사용하여 수행할 수 있습니다.  
+3. 원본 및 대상 디스크, 원본 및 대상 로그, 원본 및 대상 클러스터 이름, 로그 크기 등을 지정하여 클러스터 간 복제를 구성합니다. 서버에서 로컬로 이 명령을 수행하거나 원격 관리 컴퓨터를 사용하여 수행할 수 있습니다.  
 
-    ```powershell  
-    New-SRPartnership -SourceComputerName SR-SRVCLUSA -SourceRGName rg01 -SourceVolumeName c:\ClusterStorage\Volume2 -SourceLogVolumeName f: -DestinationComputerName SR-SRVCLUSB -DestinationRGName rg02 -DestinationVolumeName c:\ClusterStorage\Volume2 -DestinationLogVolumeName f:  
-    ```  
+   ```powershell  
+   New-SRPartnership -SourceComputerName SR-SRVCLUSA -SourceRGName rg01 -SourceVolumeName c:\ClusterStorage\Volume2 -SourceLogVolumeName f: -DestinationComputerName SR-SRVCLUSB -DestinationRGName rg02 -DestinationVolumeName c:\ClusterStorage\Volume2 -DestinationLogVolumeName f:  
+   ```  
 
-    > [!WARNING]  
-    > 기본 로그 크기는 8GB입니다. **Test-SRTopology** cmdlet의 결과에 따라 값이 더 높거나 낮은 **-LogSizeInBytes**를 사용할 수도 있습니다.  
+   > [!WARNING]  
+   > 기본 로그 크기는 8GB입니다. **Test-SRTopology** cmdlet의 결과에 따라 값이 더 높거나 낮은 **-LogSizeInBytes**를 사용할 수도 있습니다.  
 
-4.  복제 원본 및 대상 상태를 가져오려면 다음과 같이 **Get-SRGroup** 및 **Get-SRPartnership**을 사용합니다.  
+4. 복제 원본 및 대상 상태를 가져오려면 다음과 같이 **Get-SRGroup** 및 **Get-SRPartnership**을 사용합니다.  
 
-    ```powershell
-    Get-SRGroup  
-    Get-SRPartnership  
-    (Get-SRGroup).replicas  
-    ```  
+   ```powershell
+   Get-SRGroup  
+   Get-SRPartnership  
+   (Get-SRGroup).replicas  
+   ```  
 
-5.  다음과 같이 복제 진행률을 확인합니다.  
+5. 다음과 같이 복제 진행률을 확인합니다.  
 
-    1.  원본 서버에서 다음 명령을 실행하고 5015, 5002, 5004, 1237, 5001 및 2200 이벤트를 확인합니다.
+   1.  원본 서버에서 다음 명령을 실행하고 5015, 5002, 5004, 1237, 5001 및 2200 이벤트를 확인합니다.
         
-        ```PowerShell
-        Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica -max 20
-        ```
-    2.  대상 서버에서 다음 명령을 실행하여 파트너 관계 생성을 표시하는 저장소 복제본 이벤트를 확인합니다. 이 이벤트는 복사한 바이트 수와 걸린 시간을 알려 줍니다. 예:  
-        
-        ```powershell
-        Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica | Where-Object {$_.ID -eq "1215"} | Format-List
-        ```
-        출력 예는 다음과 같습니다.
-        
-        ```
-        TimeCreated  : 4/8/2016 4:12:37 PM  
-        ProviderName : Microsoft-Windows-StorageReplica  
-        Id           : 1215  
-        Message      : Block copy completed for replica.  
-            ReplicationGroupName: rg02  
-            ReplicationGroupId:  
-            {616F1E00-5A68-4447-830F-B0B0EFBD359C}  
-            ReplicaName: f:\  
-            ReplicaId: {00000000-0000-0000-0000-000000000000}  
-            End LSN in bitmap:  
-            LogGeneration: {00000000-0000-0000-0000-000000000000}  
-            LogFileId: 0  
-            CLSFLsn: 0xFFFFFFFF  
-            Number of Bytes Recovered: 68583161856  
-            Elapsed Time (seconds): 117  
-        ```
-    3. 또는 복제본의 대상 서버 그룹은 복사할 남은 바이트 수를 알려 주며 PowerShell을 통해 쿼리할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
-
        ```PowerShell
-       (Get-SRGroup).Replicas | Select-Object numofbytesremaining
+       Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica -max 20
        ```
+   2.  대상 서버에서 다음 명령을 실행하여 파트너 관계 생성을 표시하는 저장소 복제본 이벤트를 확인합니다. 이 이벤트는 복사한 바이트 수와 걸린 시간을 알려 줍니다. 예:  
+        
+       ```powershell
+       Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica | Where-Object {$_.ID -eq "1215"} | Format-List
+       ```
+       출력 예는 다음과 같습니다.
+        
+       ```
+       TimeCreated  : 4/8/2016 4:12:37 PM  
+       ProviderName : Microsoft-Windows-StorageReplica  
+       Id           : 1215  
+       Message      : Block copy completed for replica.  
+           ReplicationGroupName: rg02  
+           ReplicationGroupId:  
+           {616F1E00-5A68-4447-830F-B0B0EFBD359C}  
+           ReplicaName: f:\  
+           ReplicaId: {00000000-0000-0000-0000-000000000000}  
+           End LSN in bitmap:  
+           LogGeneration: {00000000-0000-0000-0000-000000000000}  
+           LogFileId: 0  
+           CLSFLsn: 0xFFFFFFFF  
+           Number of Bytes Recovered: 68583161856  
+           Elapsed Time (seconds): 117  
+       ```
+   3. 또는 복제본의 대상 서버 그룹은 복사할 남은 바이트 수를 알려 주며 PowerShell을 통해 쿼리할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
-       진행률 샘플(종료되지 않음):  
+      ```PowerShell
+      (Get-SRGroup).Replicas | Select-Object numofbytesremaining
+      ```
 
-       ```PowerShell
-         while($true) {  
-         $v = (Get-SRGroup -Name "Replication 2").replicas | Select-Object numofbytesremaining  
-         [System.Console]::Write("Number of bytes remaining: {0}`n", $v.numofbytesremaining)  
-         Start-Sleep -s 5  
-        }
-        ```
+      진행률 샘플(종료되지 않음):  
+
+      ```PowerShell
+        while($true) {  
+        $v = (Get-SRGroup -Name "Replication 2").replicas | Select-Object numofbytesremaining  
+        [System.Console]::Write("Number of bytes remaining: {0}`n", $v.numofbytesremaining)  
+        Start-Sleep -s 5  
+       }
+       ```
 
 6. 대상 클러스터의 대상 서버에서 다음 명령을 실행하고 5009, 1237, 5001, 5015, 5005 및 2200 이벤트를 확인하여 처리 진행률을 이해합니다. 이 시퀀스에서는 오류 경고가 없어야 합니다. 여러 개의 1237 이벤트가 있습니다. 이는 진행률을 나타냅니다.  
     
    ```PowerShell
    Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica | FL  
    ```
-   > [!NOTE]  
-        > 복제된 경우 대상 클러스터 디스크는 항상 **온라인(액세스 없음)** 으로 표시됩니다.  
+   > [!NOTE]
+   > 복제된 경우 대상 클러스터 디스크는 항상 **온라인(액세스 없음)** 으로 표시됩니다.  
 
 ## <a name="step-4-manage-replication"></a>4단계: 복제 관리
 

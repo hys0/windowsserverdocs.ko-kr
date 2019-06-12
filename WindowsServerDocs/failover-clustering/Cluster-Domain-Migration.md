@@ -8,12 +8,12 @@ author: johnmarlin-msft
 ms.date: 01/18/2019
 description: 이 문서에서는 다른 Windows Server 2019 클러스터 도메인 간 이동에 대해 설명 합니다.
 ms.localizationpriority: medium
-ms.openlocfilehash: bcfd458c94d33820f434cde3313dc069fc42ffd9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 1054de942e807f00586903683faeaf695ec2f033
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59875944"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66452934"
 ---
 # <a name="failover-cluster-domain-migration"></a>장애 조치 클러스터 도메인 마이그레이션
 
@@ -46,7 +46,7 @@ Windows Server 2016 및 이전 버전에서는 클러스터 서비스가 다른 
 
 첫 번째 옵션은 클러스터를 제거 하 고 새 도메인에 다시 작성 해야 합니다.
 
-![삭제 및 다시 작성](media\Cross-Domain-Cluster-Migration\Cross-Cluster-Domain-Migration-1.gif)
+![삭제 및 다시 작성](media/Cross-Domain-Cluster-Migration/Cross-Cluster-Domain-Migration-1.gif)
 
 애니메이션에서 알 수 있듯이,이 옵션은 단계에 따라 삭제 중:
 
@@ -56,7 +56,7 @@ Windows Server 2016 및 이전 버전에서는 클러스터 서비스가 다른 
 
 두 번째 옵션 걸리지 이지만 새 클러스터를 새 도메인에 구축 해야 하는 추가 하드웨어가 필요 합니다.  클러스터를 새 도메인의 리소스를 마이그레이션하려는 클러스터 마이그레이션 마법사를 실행 합니다. 이 데이터를 마이그레이션할 하지-데이터를 마이그레이션하려면와 같은 다른 도구를 사용 해야 하는 참고 [저장소 마이그레이션 서비스](../storage/storage-migration-service/overview.md)(후 클러스터 지원이 추가 되었습니다).
 
-![빌드 및 마이그레이션](media\Cross-Domain-Cluster-Migration\Cross-Cluster-Domain-Migration-2.gif)
+![빌드 및 마이그레이션](media/Cross-Domain-Cluster-Migration/Cross-Cluster-Domain-Migration-2.gif)
 
 애니메이션에서 알 수 있듯이,이 옵션 삭제 되지 않지만 다른 하드웨어 또는 기존 클러스터에서 노드 제거 된 것 보다.
 
@@ -76,7 +76,7 @@ Windows Server 2019 간 클러스터 도메인 마이그레이션 기능이 도�
 
 이 작업을 수행 하는 프로세스를 작업 그룹 및 새 도메인으로 도메인 간 클러스터를 변경 하기 위해서입니다.  클러스터를 삭제, 클러스터를 다시 구축, 응용 프로그램 등을 설치 해야 요구 사항은 아닙니다. 예를 들어, 다음과 같이 표시 됩니다.
 
-![마이그레이션](media\Cross-Domain-Cluster-Migration\Cross-Cluster-Domain-Migration-3.gif)
+![마이그레이션](media/Cross-Domain-Cluster-Migration/Cross-Cluster-Domain-Migration-3.gif)
 
 ## <a name="migrating-a-cluster-to-a-new-domain"></a>새 도메인으로 클러스터 마이그레이션
 

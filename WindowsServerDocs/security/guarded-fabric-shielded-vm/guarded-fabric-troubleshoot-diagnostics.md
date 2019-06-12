@@ -7,12 +7,12 @@ ms.assetid: 07691d5b-046c-45ea-8570-a0a85c3f2d22
 manager: dongill
 author: huu
 ms.technology: security-guarded-fabric
-ms.openlocfilehash: c102fa0503e6aac279235e1243b55e0e3cf81e1d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 0fb257f693cc27c0bc6dd18fc89e8dc6328ee638
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59812414"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447344"
 ---
 # <a name="troubleshooting-using-the-guarded-fabric-diagnostic-tool"></a>보호 된 패브릭 진단 도구를 사용 하 여 문제 해결
 
@@ -156,9 +156,9 @@ Get-HgsTrace -Target $hgs01,$hgs02,$gh01,$gh02 -RunDiagnostics
 
 1. 각 호스트 관리자를 실행 하는 요청 `Get-HgsTrace` 알려진 지정 `-Path` 목록과 결과 추적에 대해 실행 하려는 진단 합니다.  예를 들어 다음과 같은 가치를 제공해야 합니다.
 
- ```PowerShell
- Get-HgsTrace -Path C:\Traces -Diagnostic Networking,BestPractices
- ```
+   ```PowerShell
+   Get-HgsTrace -Path C:\Traces -Diagnostic Networking,BestPractices
+   ```
 2. 각 호스트 관리자 결과 traces 폴더를 패키지 하 고 사용자에 게 보낼 요청.  파일 공유 또는 운영 정책 및 조직에서 설정 하는 절차에 따라 다른 메커니즘을 통해 전자 메일을 통해이 프로세스를 구동 될 수 있습니다.
 
 3. 다른 콘텐츠 또는 폴더를 사용 하 여 단일 폴더에 받은 모든 추적을 병합 합니다.
@@ -181,9 +181,9 @@ Get-HgsTrace -Target $hgs01,$hgs02,$gh01,$gh02 -RunDiagnostics
 
 4. 어셈블된 추적 폴더의 경로를 제공 하는 진단 실행 합니다 `-Path` 매개 변수 및 지정 하는 `-RunDiagnostics` 해당 진단 추적을 수집 하려면 관리자에 게 묻는 뿐만 아니라 전환 합니다.  진단 경로 내에서 발견 된 호스트에 액세스할 수 없습니다 하 고 사전 수집 된 추적만을 사용 하려고 하므로 가정 합니다.  모든 추적 누락 되거나 손상 된 경우 진단 영향을 받는 테스트만 실패를 업데이트 하 고 정상적으로 진행 됩니다.  예를 들어 다음과 같은 가치를 제공해야 합니다.
 
- ```PowerShell
- Get-HgsTrace -RunDiagnostics -Diagnostic Networking,BestPractices -Path ".\FabricTraces"
- ```
+   ```PowerShell
+   Get-HgsTrace -RunDiagnostics -Diagnostic Networking,BestPractices -Path ".\FabricTraces"
+   ```
 
 ### <a name="mixing-saved-traces-with-additional-targets"></a>추가 대상을 사용 하 여 추적을 저장 혼합
 

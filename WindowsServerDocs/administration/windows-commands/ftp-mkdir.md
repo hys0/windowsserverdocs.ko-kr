@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 37568998d6d5870d2c97dbd487c5708b1e1e5a51
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a03bb9766ffe62a80e8661bf8ce2a8eea2ce536b
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59830244"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66438563"
 ---
 # <a name="ftp-mkdir"></a>ftp: mkdir
 
@@ -30,9 +30,11 @@ ms.locfileid: "59830244"
 mkdir <directory>  
 ```  
 ### <a name="parameters"></a>매개 변수  
-|매개 변수|설명|  
-|-------|--------|  
-|<directory>|새 원격 디렉터리의 이름을 지정합니다.|  
+
+|  매개 변수  |                   설명                   |
+|-------------|-------------------------------------------------|
+| <directory> | 새 원격 디렉터리의 이름을 지정합니다. |
+
 ## <a name="BKMK_Examples"></a>예제  
 라는 디렉터리를 만듭니다 **dir1** 원격 컴퓨터.  
 ```  

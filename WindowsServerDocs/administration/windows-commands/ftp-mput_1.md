@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 99b938618deb2d1e779fd20c504c01a13a2d3f8a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: dd19a97246aa6155182cb055deceb4b5a5019f6c
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59868164"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66438584"
 ---
 # <a name="ftp-mput1"></a>ftp: mput_1
 
@@ -30,9 +30,11 @@ ms.locfileid: "59868164"
 mput <LocalFile>[ ]  
 ```  
 ### <a name="parameters"></a>매개 변수  
-|매개 변수|설명|  
-|-------|--------|  
-|<LocalFile>|원격 컴퓨터로 복사 하려면 로컬 파일을 지정 합니다.|  
+
+|  매개 변수  |                       설명                        |
+|-------------|----------------------------------------------------------|
+| <LocalFile> | 원격 컴퓨터로 복사 하려면 로컬 파일을 지정 합니다. |
+
 ## <a name="BKMK_Examples"></a>예제  
 복사본 **Program1.exe** 하 고 **Program2.exe** 현재 파일 전송 유형을 사용 하 여 원격 컴퓨터에 있습니다.  
 ```  

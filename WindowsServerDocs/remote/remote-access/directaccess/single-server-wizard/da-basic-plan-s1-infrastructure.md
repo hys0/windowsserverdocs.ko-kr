@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: ''
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: b86726fd6e9ee37dbfd43357d8040b43b8dfb200
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7fb7b5f7ae6e10d1007317949a42c48b4765f35c
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59853344"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446065"
 ---
-#<a name="step-1-plan-the-basic-directaccess-infrastructure"></a>1 단계 기본 DirectAccess 인프라 계획
+# <a name="step-1-plan-the-basic-directaccess-infrastructure"></a>1 단계 기본 DirectAccess 인프라 계획
 단일 서버에 기본 DirectAccess 배포에 대 한 첫 번째 단계는 배포에 필요한 인프라 계획을 수행 하는 것입니다. 이 항목에서는 인프라 계획 단계에 대해 설명합니다.  
   
 |태스크|설명|  

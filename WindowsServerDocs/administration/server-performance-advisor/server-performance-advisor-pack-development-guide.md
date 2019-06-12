@@ -5,12 +5,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c647e8a335aac924067d92dcb41ab4d17e0cceef
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c27dd0602c5993fd84e6956c2f50f6e2bfec8691
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59884864"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66435476"
 ---
 # <a name="server-performance-advisor-pack-development-guide"></a>서버 성능 Advisor 팩 개발 가이드
 
@@ -276,14 +276,15 @@ KeytypeId | NULL이 아닌 Smallint | 내부 유형 Id
 값 | Nvarchar (4000) NULL이 아님 | 모든 값
 
 합니다 **KeytypeID** 열 다음 유형 중 하나일 수 있습니다.
+
 ID | 형식
 --- | ---
 1 | 문자열
 2 | expandString
-3 | 이진
+3 | Binary
 4 | Dword
 5 | DWordBigEndian
-6 | 링크
+6 | Link
 7 | MultipleString
 8 | Resourcelist
 9 | FullResourceDescriptor
@@ -363,7 +364,7 @@ S 성능 카운터를 수집 하는 방법의 예는 다음과 같습니다.
 
 이전 예제에서는 카운터 \\실제 디스크 (\*)\\avg. Disk sec/Transfer는 매 초 마다 쿼리할 수 있습니다.
 
-두 인스턴스가 있을 수 있습니다. **\_총** 고 **0 c: D:**, 출력은 다음과 같이 수 있습니다.
+두 인스턴스가 있을 수 있습니다. **\_총** 고 **0 c: D:** , 출력은 다음과 같이 수 있습니다.
 
 타임 스탬프 | CategoryName | CounterName | _Total 인스턴스 값 | 인스턴스 값의 0 c: D:
 ---- | ---- | ---- | ---- | ----
@@ -424,7 +425,7 @@ querypath | fullpath | Parentpath | FileName | 콘텐츠
 querypath | NULL이 아닌 Nvarchar(300) | 원래 쿼리 문
 fullpath | NULL이 아닌 Nvarchar(300) | 절대 파일 경로 및 파일 이름
 Parentpath | NULL이 아닌 Nvarchar(300) | 파일 경로
-FileName | NULL이 아닌 Nvarchar(300) |  파일 이름 
+FileName | NULL이 아닌 Nvarchar(300) | 파일 이름
 콘텐츠 | Varbinary (max) NULL | 이진에서 파일 콘텐츠
 
 ### <a name="defining-rules"></a>규칙 정의
@@ -449,7 +450,7 @@ S 간단한 규칙의 예는 다음과 같습니다.
 
 ``` syntax
 <advisorPack>
-   
+
   <reportDefinition>
     <thresholds>
       <threshold  />
@@ -589,7 +590,7 @@ advisor 팩 (단일 값 그룹 및 값 테이블 목록)에 많은 테이블이 
 
 단일 값 그룹과 목록 값 테이블에 서로 다른 유형의 문자열, 정수 및 부동 소수점 등의 데이터를 포함 합니다. 이러한 값은 SQL Server 데이터베이스에 저장 되므로, 각 데이터 속성에 대 한 SQL 데이터 형식을 정의할 수 있습니다. 그러나 SQL 데이터 형식을 정의 상당히 복잡 합니다. 길이 또는 변경 되어야 할 수 있는 전체 자릿수를 지정 해야 했습니다.
 
-논리 데이터 종류를 정의 하려면 첫 번째 자식을 사용할 수 있습니다 **&lt;reportDefinition /&gt;**, 즉, SQL 데이터 형식 및 논리 사용자 형식 매핑을 정의할 수 있습니다.
+논리 데이터 종류를 정의 하려면 첫 번째 자식을 사용할 수 있습니다 **&lt;reportDefinition /&gt;** , 즉, SQL 데이터 형식 및 논리 사용자 형식 매핑을 정의할 수 있습니다.
 
 다음 예제에서는 두 가지 데이터 형식을 정의합니다. 하나는 **문자열** 고 다른 하나는 **companyCode**합니다.
 
@@ -610,7 +611,7 @@ advisor 팩 (단일 값 그룹 및 값 테이블 목록)에 많은 테이블이 
 
 * date
 
-* Datetime
+* datetime
 
 * Datetime2
 
@@ -941,7 +942,7 @@ DECLARE @freediskSize FLOat
 exec dbo.GetThreshold N freediskSize , @freediskSize output
 
 if (@freediskSizeInGB < @freediskSize)
- 
+
 ```
 
 ### <a name="set-or-remove-the-single-value"></a>설정 또는 단일 값 제거
@@ -1033,7 +1034,7 @@ INSERT INTO #NetworkAdapterInformation (
   MACaddress
 )
 VALUES (
-   
+
 )
 ```
 
@@ -1091,7 +1092,7 @@ SPA 콘솔 수 실행 하는 두 가지 모드에서 디버그 또는 릴리스 
 
     **참고** 이전 문 및 디버그를 한 단계씩 실행 하려면 f11 키를 누를 수도 있습니다.
 
-     
+
 
 실행 중인 \[dbo\].\[DebugReportScript\] 포함 하 여 여러 결과 집합을 반환 합니다.
 
@@ -1109,9 +1110,9 @@ SPA 콘솔 수 실행 하는 두 가지 모드에서 디버그 또는 릴리스 
 
 ### <a name="naming-convention-and-styles"></a>명명 규칙 및 스타일
 
-파스칼식 대/소문자 구분 | 카멜식 대/소문자 | 대문자
---- | ---- | ---
-<ul><li>ProvisionMetadata.xml에는 이름</li><li>저장 프로시저</li><li>함수</li><li>뷰 이름</li><li>임시 테이블 이름</li></ul> | <ul><li>매개 변수 이름</li><li>지역 변수</li></ul> | 모든 SQL 예약 키워드 사용
+|                                                                 파스칼식 대/소문자 구분                                                                 |                       카멜식 대/소문자                        |             대문자             |
+|-----------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------|-----------------------------------|
+| <ul><li>ProvisionMetadata.xml에는 이름</li><li>저장 프로시저</li><li>함수</li><li>뷰 이름</li><li>임시 테이블 이름</li></ul> | <ul><li>매개 변수 이름</li><li>지역 변수</li></ul> | 모든 SQL 예약 키워드 사용 |
 
 ### <a name="other-recommendations"></a>기타 권장 사항
 
@@ -1143,13 +1144,13 @@ SPA 동시에 실행 되는 여러 advisor 팩을 지원 합니다. 인터넷 �
 
 성능 카운터 및 ETW 데이터 원본에 대해서만 합병 데이터 수집기 집합입니다. 다음 병합 규칙이 적용 됩니다.
 
-1.  SPA는 가장 큰 기간에서 새 기간을 사용합니다.
+1. SPA는 가장 큰 기간에서 새 기간을 사용합니다.
 
-2.  병합 충돌 인 경우에 다음 규칙이 적용 됩니다.
+2. 병합 충돌 인 경우에 다음 규칙이 적용 됩니다.
 
-    1.  새 간격으로 최소 간격을 가져옵니다.
+   1. 새 간격으로 최소 간격을 가져옵니다.
 
-    2.  성능 카운터의 상위 집합을 수행 합니다. 예를 들어 **프로세스 (\*)\\% Processor time** 및 **프로세스 (\*)\\\*하십시오\\프로세스 (\*)\\ \***  더 많은 데이터를 반환 하므로 **프로세스 (\*)\\% Processor time** 고 **프로세스 (\*)\\ \***  병합 된 데이터 수집기 집합에서 제거 됩니다.
+   2. 성능 카운터의 상위 집합을 수행 합니다. 예를 들어 **프로세스 (\*)\\% Processor time** 및 **프로세스 (\*)\\\*하십시오\\프로세스 (\*)\\ \\** * 더 많은 데이터를 반환 하므로 **프로세스 (\*)\\% Processor time** 고 **프로세스 (\*)\\ \\** * 병합 된 데이터 수집기 집합에서 제거 됩니다.
 
 ### <a name="collect-dynamic-data"></a>동적 데이터 수집
 
@@ -1169,7 +1170,7 @@ Get-WmiObject -Namespace Root\Cimv2 -query "select PNPDeviceID FROM Win32_Networ
 ROOT\*ISatAP\0001
 PCI\VEN_8086&DEV_4238&SUBSYS_11118086&REV_35\4&372A6B86&0&00E4
 ROOT\*IPHTTPS\0000
- 
+
 ```
 
 찾으려는 합니다 **FriendlyName** 값, 레지스트리 편집기를 열고 레지스트리 설정을 조합 하 여 **HKEY\_로컬\_MACHINE\\SYSTEM\\ CurrentControlSet\\Enum\\**  이전 샘플의 각 줄. 예를 들어: **HKEY\_로컬\_MACHINE\\SYSTEM\\CurrentControlSet\\Enum\\ 루트\\\*IPHTTPS\\0000**합니다.
@@ -1196,7 +1197,7 @@ SPA 프로 비전 메타 데이터에 이전 단계를 변환 하려면 다음 �
 --- | :---: | :---:
 레지스트리 키 | 예 | 예
 WMI | 예 | 예
-파일 | 예 | 아니오
+파일 | 예 | 아니요
 성능 카운터 | 아니요 | 아니요
 ETW | 아니오 | 아니오
 
@@ -1216,7 +1217,7 @@ S 예제 레지스트리 키에는 다음과 같습니다.
 <path name="wmi">Root\Cimv2:select PNPDeviceID FROM Win32_NetworkAdapter</path>
 ```
 
-종속 데이터 수집기를 정의 하려면 다음 구문을 사용 합니다. $(*{name}*.*{특성}*).
+종속 데이터 수집기를 정의 하려면 다음 구문을 사용 합니다. $( *{name}* . *{특성}* ).
 
 *{name}* 및 *{특성}* 자리 표시 자가 있습니다.
 

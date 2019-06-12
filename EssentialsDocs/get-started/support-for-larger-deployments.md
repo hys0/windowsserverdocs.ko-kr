@@ -12,14 +12,14 @@ ms.assetid: 07d0c4c6-3e92-4969-82b8-105e46ab8d97
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: c60e5f73c88a225fbd1067992894f9d20da745ad
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a99698519524c3b5050dc534d61921560522528c
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59860484"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66433873"
 ---
-#<a name="support-for-larger-deployments"></a>대규모 배포 지원
+# <a name="support-for-larger-deployments"></a>대규모 배포 지원
 
 >적용 대상: Windows Server 2016 Essentials
 
@@ -34,7 +34,7 @@ Windows Server Essentials는 이제 사용 하 여 대규모 배포를 지원합
 - 지정 된 도메인 컨트롤러를 지정 하는 기능
 - 최대 500 명의 사용자와 500 개의 장치에 대 한 지원
 
-##<a name="support-for-multiple-domains"></a>여러 도메인 지원
+## <a name="support-for-multiple-domains"></a>여러 도메인 지원
 
 Windows server 2012 R2 Essentials가 필요한 서버당 하나의 도메인을 지원 하 고 Essentials server 포리스트의 루트 여야 합니다. 도메인 및 포리스트는 여전히 필요, Windows Server 2016 Essentials Experience 역할이 Windows Server 2016 Standard 또는 Datacenter 여러 도메인을 지원 하기 위해 이제 배포할 수 있습니다.
 
@@ -42,7 +42,7 @@ Windows server 2012 R2 Essentials가 필요한 서버당 하나의 도메인을 
 
  Windows Server Essentials 2012 R2 이상의 도메인 컨트롤러를 배포 하는 Office 365와 같은 Azure Active Directory를 활용 하는 모든 서비스를 차단 합니다. 이유는 로컬 도메인 컨트롤러와 Azure Active Directory 계정 및 암호 동기화 계정 자격 증명 동기화는 암호를 사용 하 여 발생할 수 있습니다. Windows Server 2016 Essentials에서이 제한이 제거 되었습니다.
 
-##<a name="ability-to-specify-a-designated-domain-controller"></a>지정 된 도메인 컨트롤러를 지정 하는 기능
+## <a name="ability-to-specify-a-designated-domain-controller"></a>지정 된 도메인 컨트롤러를 지정 하는 기능
 
 이제는 Active Directory 도메인 개체에 대 한 검색 시간을 향상 시킬 뿐만 아니라 도메인에 다른 도메인 컨트롤러에서 계정 변경의 동기화를 조정 하는 지정 된 도메인 컨트롤러를 선택할 수 있습니다.
 
@@ -50,7 +50,7 @@ Windows server 2012 R2 Essentials가 필요한 서버당 하나의 도메인을 
 
 ![설정을 보여 주는 스크린 샷 포그라운드에서 패널 및 백그라운드에서 Windows Server Essentials 대시보드를 제어 합니다. 제어판의 설정의 도메인 컨트롤러 지정 페이지에서 현재 선택 됩니다.](media/larger-deployments-1.PNG)
 
-##<a name="support-for-500-users-and-500-devices"></a>사용자가 500 및 500 개의 장치에 대 한 지원
+## <a name="support-for-500-users-and-500-devices"></a>사용자가 500 및 500 개의 장치에 대 한 지원
 -------------------------------------
 
 Windows Server 2012 R2 Essentials에서 지원 되는 사용자 및 장치 수가 최대 각각 25와 50입니다. Windows Server Essentials Experience 서버 역할의 도입으로 100 명의 사용자와 200 대의 장치가 해당 한도 증가 되었습니다.
@@ -66,4 +66,4 @@ Windows Server Essentials 대시보드 "d5c" 문자열을 검색 하려면 검�
 
 <a name="see-also"></a>참조
 --------
-[Windows Server Essentials를 사용 하 여 시작](get-started.md)
+[Windows Server Essentials 시작](get-started.md)

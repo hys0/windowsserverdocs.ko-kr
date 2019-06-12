@@ -12,12 +12,12 @@ ms.assetid: 6141fa69-5952-4e3c-a868-40ef3f4badd2
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 7bfe1686ac84962cdb4ab1cde8d6ca5226cb9d44
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 999887f09c27c1df481cb5e46579942424a2847b
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59844354"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66433626"
 ---
 # <a name="create-a-server-recovery-dvd-for-remotely-administered-servers"></a>원격 관리 서버에 대한 서버 복구 DVD 만들기
 
@@ -83,11 +83,11 @@ ms.locfileid: "59844354"
 ####  <a name="BKMK_Collecting"></a> 2 단계: 공장 기본 설정 이미지 및 XML 파일 수집  
  서버를 공장 기본값으로 다시 설정하려면 다음 두 이미지를 캡처해야 합니다.  
   
--   시스템 드라이브 이미지  
+- 시스템 드라이브 이미지  
   
--   시스템에서 사용하는 파티션  
+- 시스템에서 사용하는 파티션  
   
- 이러한 이미지 캡처를 위해 GenDiskXML.exe 도구가 제공됩니다. GenDiskXML.exe는 복구 프로세스에서 디스크 구성을 다시 만드는 데 사용되는 disk.xml이라는 파일도 수집합니다.  
+  이러한 이미지 캡처를 위해 GenDiskXML.exe 도구가 제공됩니다. GenDiskXML.exe는 복구 프로세스에서 디스크 구성을 다시 만드는 데 사용되는 disk.xml이라는 파일도 수집합니다.  
   
 1.  Sysprep 후 64비트 버전의 Windows PE를 사용하여 시스템을 다시 부팅합니다.  
   
@@ -117,29 +117,29 @@ ms.locfileid: "59844354"
 > [!NOTE]
 >  나열된 파일 이름은 정확히 일치해야 합니다.  
   
-1.  마법사 페이지에는 추가 도움말에 대한 링크가 포함되어 있습니다. 이 .chm 파일이 있는 경우 웹 도움말에 대한 FWLink가 이 파일로 재정의됩니다. 도움말 파일은 다음 위치에 있습니다.  
+1. 마법사 페이지에는 추가 도움말에 대한 링크가 포함되어 있습니다. 이 .chm 파일이 있는 경우 웹 도움말에 대한 FWLink가 이 파일로 재정의됩니다. 도움말 파일은 다음 위치에 있습니다.  
   
-     < 루트 DVD\>\\$OEM$ \Customization\\< 문화권 이름\>\RestartHelp.chm  
+    < 루트 DVD\>\\$OEM$ \Customization\\< 문화권 이름\>\RestartHelp.chm  
   
-2.  이 파일에는 마법사 페이지에 표시되는 텍스트가 포함되어 있습니다. 이 텍스트는 서버를 복구 모드로 부팅하는 방법을 설명합니다. 컨트롤은 스크롤 가능하므로 추가할 수 있는 텍스트 양을 실용적으로 제한합니다.  
+2. 이 파일에는 마법사 페이지에 표시되는 텍스트가 포함되어 있습니다. 이 텍스트는 서버를 복구 모드로 부팅하는 방법을 설명합니다. 컨트롤은 스크롤 가능하므로 추가할 수 있는 텍스트 양을 실용적으로 제한합니다.  
   
-     다음 파일은 마법사의 샘플 그림을 대체하는 데 사용되며 주로 브랜딩에 관한 것입니다. 이 파일은 .png 파일이며, 파일 크기는 256 x 256 픽셀이어야 합니다. 그렇지 않으면 마법사에 표시될 때 잘립니다.  
+    다음 파일은 마법사의 샘플 그림을 대체하는 데 사용되며 주로 브랜딩에 관한 것입니다. 이 파일은 .png 파일이며, 파일 크기는 256 x 256 픽셀이어야 합니다. 그렇지 않으면 마법사에 표시될 때 잘립니다.  
   
-     < 루트 DVD\>\\$OEM$ \Customization\\< 문화권 이름\>\RestartInstructions.rtf  
+    < 루트 DVD\>\\$OEM$ \Customization\\< 문화권 이름\>\RestartInstructions.rtf  
   
-3.  < 루트 DVD\>\\$OEM$ \Customization\\< 문화권 이름\>\ServerImage.png  
+3. < 루트 DVD\>\\$OEM$ \Customization\\< 문화권 이름\>\ServerImage.png  
   
- 다중 언어를 지원하도록 서버 복구 DVD를 변환하려면 다음을 수행해야 합니다.  
+   다중 언어를 지원하도록 서버 복구 DVD를 변환하려면 다음을 수행해야 합니다.  
   
-1.  항상 en-us 폴더가 있어야 합니다. 서버 복구 응용 프로그램이 실행되고 있는 클라이언트 컴퓨터와 일치하는 문화권별 파일이 없는 경우 en-us로 대체됩니다.  
+4. 항상 en-us 폴더가 있어야 합니다. 서버 복구 응용 프로그램이 실행되고 있는 클라이언트 컴퓨터와 일치하는 문화권별 파일이 없는 경우 en-us로 대체됩니다.  
   
-2.  만드는 각 문화권 폴더에 세 가지 사용자 지정 파일(.png, .chm 및 .rtf)을 추가합니다.  
+5. 만드는 각 문화권 폴더에 세 가지 사용자 지정 파일(.png, .chm 및 .rtf)을 추가합니다.  
   
-3.  언어 팩에서의 두 문화권 폴더를 복사\\< CultureName\>\Server Recovery 서버 복구 DVD의 루트에 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다. 스페인어를 지원하려면 ES 폴더와 ES-ES 폴더를 둘 다 DVD의 루트에 복사합니다.  
+6. 언어 팩에서의 두 문화권 폴더를 복사\\< CultureName\>\Server Recovery 서버 복구 DVD의 루트에 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다. 스페인어를 지원하려면 ES 폴더와 ES-ES 폴더를 둘 다 DVD의 루트에 복사합니다.  
   
-4.  ISO 파일을 마무리합니다.  
+7. ISO 파일을 마무리합니다.  
   
- 지원되는 문화권 이름은 다음과 같습니다.  
+   지원되는 문화권 이름은 다음과 같습니다.  
 
 |-|-|  
 |- cs-CZ<br /><br /> -DE-DE<br /><br /> -영어-미국<br /><br /> -원본: ES-ES<br /><br /> - fr-FR<br /><br /> -HU-HU<br /><br /> -it IT<br /><br /> -JA-JP<br /><br /> - ko-KR<br /><br /> -NL-NL |-PL-PL<br /><br /> -PT-BR<br /><br /> -PT-PT<br /><br /> -RU-RU<br /><br /> -SV-SE<br /><br /> -TR-TR<br /><br /> - zh-CN<br /><br /> - zh-HK<br /><br /> - zh-TW

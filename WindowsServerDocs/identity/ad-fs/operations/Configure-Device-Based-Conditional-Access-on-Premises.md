@@ -9,12 +9,12 @@ ms.date: 08/11/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 0df290248f049b3f8a823e902cefa860fa074091
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: bcb6c415aae33b9742d7a7080ec169ca947098b9
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66189846"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66445004"
 ---
 # <a name="configure-on-premises-conditional-access-using-registered-devices"></a>등록 된 장치를 사용 하 여 구성 온-프레미스 조건부 액세스
 
@@ -92,11 +92,11 @@ Get-ADObject "cn=schema,cn=configuration,dc=domain,dc=local" -Property objectVer
 
 ![장치 등록](media/Configure-Device-Based-Conditional-Access-on-Premises/device2.png)
   
-2.  AD FS 주 서버에서 엔터프라이즈 관리자 (EA) 권한 가진 AD DS 사용자로 로그인 하 고 관리자 권한 powershell 프롬프트를 열고 확인 합니다.  그런 다음 다음 PowerShell 명령을 실행 합니다.  
+2. AD FS 주 서버에서 엔터프라이즈 관리자 (EA) 권한 가진 AD DS 사용자로 로그인 하 고 관리자 권한 powershell 프롬프트를 열고 확인 합니다.  그런 다음 다음 PowerShell 명령을 실행 합니다.  
     
-    `Import-module activedirectory`  
-    `PS C:\> Initialize-ADDeviceRegistration -ServiceAccountName "<your service account>" ` 
-3.  팝업 창에서 예를 누릅니다.
+   `Import-module activedirectory`  
+   `PS C:\> Initialize-ADDeviceRegistration -ServiceAccountName "<your service account>" ` 
+3. 팝업 창에서 예를 누릅니다.
 
 >참고: AD FS 서비스가 GMSA 계정을 사용하도록 구성된 경우 "domain\accountname$" 형식으로 계정 이름을 입력합니다.
 
@@ -111,7 +111,7 @@ Get-ADObject "cn=schema,cn=configuration,dc=domain,dc=local" -Property objectVer
 
 ![장치 등록](media/Configure-Device-Based-Conditional-Access-on-Premises/device4.png)  
 
-4.  이 작업이 완료 되 면 성공적으로 완료 메시지가 표시 됩니다.
+4. 이 작업이 완료 되 면 성공적으로 완료 메시지가 표시 됩니다.
 
 ![장치 등록](media/Configure-Device-Based-Conditional-Access-on-Premises/device5.png) 
 
@@ -131,9 +131,9 @@ Windows 10 도메인 공간 (Azure AD에 자동 등록)를 설명 된 대로 여
 
 ![장치 등록](media/Configure-Device-Based-Conditional-Access-on-Premises/device7.png) 
 
-3.  다음 PowerShell 명령을 실행 합니다. 
+3. 다음 PowerShell 명령을 실행 합니다. 
 
-    `PS C:>Initialize-ADSyncDomainJoinedComputerSync -AdConnectorAccount [AD connector account name] -AzureADCredentials $aadAdminCred ` 
+   `PS C:>Initialize-ADSyncDomainJoinedComputerSync -AdConnectorAccount [AD connector account name] -AzureADCredentials $aadAdminCred ` 
 
 여기서 [AD 커넥터 계정 이름]는 온-프레미스를 추가 하는 경우 Azure AD Connect에서 구성 된 계정의 이름을 AD DS 디렉터리입니다.
   
@@ -180,7 +180,7 @@ Windows 10 도메인 공간 (Azure AD에 자동 등록)를 설명 된 대로 여
 - 개체의 CN에서 형식 serviceConnectionpoint =&lt;guid&gt;, CN = 장치 등록
 
 - Configuration,CN=Services,CN=Configuration,DC=&lt;domain&gt;  
- - 읽기/쓰기 권한으로 새 개체에 지정 된 AD 커넥터 계정 이름으로</br></br> 
+  - 읽기/쓰기 권한으로 새 개체에 지정 된 AD 커넥터 계정 이름으로</br></br> 
 
 
 - 개체의 종류를 DeviceRegistrationServiceContainer CN에서 장치 등록 서비스, CN = 장치 등록 구성, CN = Services, CN = Configuration, DC = = & ltdomain >  

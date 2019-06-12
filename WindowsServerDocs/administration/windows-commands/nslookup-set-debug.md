@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 661afb0f74f72784577aff28f9171b581f616030
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: af0d028e3886e6743f402c2c9aa934d6046abf9b
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59883544"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66436746"
 ---
 # <a name="nslookup-set-debug"></a>nslookup set debug
 
@@ -34,11 +34,11 @@ set [no]debug
 
 ## <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------|-----------|
-|**nodebug**|디버깅 모드를 해제합니다. 기본 구문은 **nodebug**합니다.|
-|**debug**|디버깅 모드를 설정합니다.|
-|* * {도움말 | ?}**|간단한 요약이 표시 되며 **nslookup** 하위 명령입니다.|
+|  매개 변수  |                         설명                          |
+|-------------|--------------------------------------------------------------|
+| **nodebug** | 디버깅 모드를 해제합니다. 기본 구문은 **nodebug**합니다. |
+|  **debug**  |                   디버깅 모드를 설정합니다.                   |
+|  \*\*{help  |                            ?}\*\*                            |
 
 ## <a name="remarks"></a>설명
 

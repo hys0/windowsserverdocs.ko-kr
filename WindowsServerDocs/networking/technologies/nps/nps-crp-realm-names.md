@@ -8,12 +8,12 @@ ms.topic: article
 ms.assetid: d011eaad-f72a-4a83-8099-8589c4ee8994
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 0257c4d15db4fc54e55ef430f6f2eea9cea2ec4d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 65a272873a60d74efcf417a16fdc84670f5878da
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59882824"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447007"
 ---
 # <a name="realm-names"></a>영역 이름
 
@@ -28,7 +28,7 @@ User-name RADIUS 특성에는 일반적으로 사용자 계정 위치 및 사용
 
 - **Example\user1**합니다. 이 예제에서는 영역 이름과 **예제** 는 접두사; 및 Active Directory의 이름 이기도&reg; Domain Services \(AD DS\) 도메인입니다.
 
-- **user1@example.com**. 이 예제에서는 영역 이름과 **example.com** 접미사; 이며 DNS 도메인 이름 또는 AD DS 도메인의 이름입니다.
+- <strong>user1@example.com</strong>. 이 예제에서는 영역 이름과 **example.com** 접미사; 이며 DNS 도메인 이름 또는 AD DS 도메인의 이름입니다.
 
 디자인 및 RADIUS 인프라를 배포 하는 동안 연결 요청 정책에 구성 된 영역 이름을 사용 하 여 라고도 함 수는 RADIUS 서버에 네트워크 액세스 서버를 RADIUS 클라이언트에서 연결 요청은 라우팅되는지 확인 인증 하 고 연결 요청을 인증 합니다.
 

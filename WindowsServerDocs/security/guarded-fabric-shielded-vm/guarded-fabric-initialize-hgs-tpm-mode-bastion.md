@@ -7,12 +7,12 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: ac6407f9f23780dc62ff7d99fe0daf0f81f79f72
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 458642eedbfdc94ef0f3d6f6fe08ed4ead475ab0
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59832144"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447435"
 ---
 # <a name="initialize-the-hgs-cluster-using-tpm-mode-in-an-existing-bastion-forest"></a>TPM 모드를 사용 하 여 기존 배스 천 포리스트의 HGS 클러스터를 초기화 합니다.
 
@@ -43,5 +43,5 @@ Initialize-HgsServer -UseExistingDomain -ServiceAccount 'HGSgMSA' -JeaReviewersG
 
 ## <a name="next-step"></a>다음 단계
 
->[!div class="nextstepaction"]
-[TPM 루트 인증서를 설치 합니다.](guarded-fabric-install-trusted-tpm-root-certificates.md)
+> [!div class="nextstepaction"]
+> [TPM 루트 인증서 설치](guarded-fabric-install-trusted-tpm-root-certificates.md)

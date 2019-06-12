@@ -8,12 +8,12 @@ author: wmgries
 manager: klaasl
 ms.author: wgries
 ms.date: 09/15/2016
-ms.openlocfilehash: 0421faaa910a1d679d809b88c0b4d2c94ba694b3
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2e2e4975c4ab9ebb7ec68834f380255292426393
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59852474"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447219"
 ---
 # <a name="running-data-deduplication"></a>데이터 중복 제거 실행
 
@@ -49,10 +49,10 @@ Start-DedupJob -Type Optimization -Volume <Your-Volume-Here> -Memory 100 -Cores 
 
 [최적화 작업](understand.md#job-info-optimization) 실패의 한 가지 지표는 최적화 속도의 하향 추세입니다. 하향 추세의 최적화 속도는 최적화 작업이 변경률 또는 변동률에 뒤처지고 있다는 것을 의미할 수 있습니다. [`Get-DedupStatus`  ](https://technet.microsoft.com/library/hh848437.aspx) PowerShell cmdlet을 사용하여 최적화 속도를 확인할 수 있습니다.
 
-> [!Important]  
+> [!Important]
 > `Get-DedupStatus` 최적화 속도 관련 된 두 개의 필드가: `OptimizedFilesSavingsRate` 고 `SavingsRate`입니다. 두 필드는 모두 추적에 중요한 값이지만 각각에는 고유한 의미가 있습니다.
-- `OptimizedFilesSavingsRate` '에서 ' 정책 내에 있는 파일에만 적용 됩니다 최적화 (`space used by optimized files after optimization / logical size of optimized files`).
-- `SavingsRate` 전체 볼륨에 적용 됩니다 (`space used by optimized files after optimization / total logical size of the optimization`).
+> - `OptimizedFilesSavingsRate` '에서 ' 정책 내에 있는 파일에만 적용 됩니다 최적화 (`space used by optimized files after optimization / logical size of optimized files`).
+> - `SavingsRate` 전체 볼륨에 적용 됩니다 (`space used by optimized files after optimization / total logical size of the optimization`).
 
 ## <a id="disabling-dedup"></a>데이터 중복 제거를 사용 하지 않도록 설정
 데이터 중복 제거를 사용하지 않으려면 [최적화 해제 작업](understand.md#job-info-unoptimization)을 실행합니다. 볼륨 최적화를 실행 취소하려면 다음 명령을 실행합니다.

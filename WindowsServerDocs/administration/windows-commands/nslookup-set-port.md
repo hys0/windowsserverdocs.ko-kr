@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: aa2ebda6c8fb9670fcf1330376d0171258188b25
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 47eb780631da766f49c0ca2cac8ef90007a95c7e
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59827824"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66436712"
 ---
 # <a name="nslookup-set-port"></a>nslookup set port
 
@@ -34,10 +34,10 @@ set port=<Port>
 
 ## <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------|-----------|
-|\<Port>|기본 TCP/UDP DNS 이름 서버 포트에 대 한 새 값을 지정합니다. 기본 포트는 53입니다.|
-|{도움말 | ?}|간단한 요약이 표시 되며 **nslookup** 하위 명령입니다.|
+| 매개 변수 |                                          설명                                          |
+|-----------|-----------------------------------------------------------------------------------------------|
+|  \<Port>  | 기본 TCP/UDP DNS 이름 서버 포트에 대 한 새 값을 지정합니다. 기본 포트는 53입니다. |
+|   {도움말   |                                              ?}                                               |
 
 #### <a name="additional-references"></a>추가 참조
 

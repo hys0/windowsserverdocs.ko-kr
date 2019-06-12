@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: da7926914e2cbdbb4909093d90c33025ae5cd695
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 45de8b3c210fe0925ac3cc43c41d3e092d5dfe16
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59882474"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66438498"
 ---
 # <a name="ftp-open1"></a>ftp: open_1
 
@@ -30,10 +30,12 @@ ms.locfileid: "59882474"
 open <computer> [<Port>]  
 ```  
 ### <a name="parameters"></a>매개 변수  
-|매개 변수|설명|  
-|-------|--------|  
-|<computer>|연결 하려는 원격 컴퓨터를 지정 합니다.|  
-|[<Port>]|Ftp 서버에 연결 하는 데 TCP 포트 번호를 지정 합니다. 기본적으로 TCP 포트 21이 사용 됩니다.|  
+
+| 매개 변수  |                                           설명                                            |
+|------------|--------------------------------------------------------------------------------------------------|
+| <computer> |                연결 하려는 원격 컴퓨터를 지정 합니다.                 |
+|  [<Port>]  | Ftp 서버에 연결 하는 데 TCP 포트 번호를 지정 합니다. 기본적으로 TCP 포트 21이 사용 됩니다. |
+
 ## <a name="remarks"></a>설명  
 지정 하는 IP 주소 또는 컴퓨터 이름 (이 경우 DNS 서버 또는 호스트 파일을 사용할 수 있어야)을 사용할 수 **컴퓨터**합니다.  
 ## <a name="BKMK_Examples"></a>예제  

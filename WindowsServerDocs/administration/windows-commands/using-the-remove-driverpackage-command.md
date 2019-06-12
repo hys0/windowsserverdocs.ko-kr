@@ -13,19 +13,19 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 002af67ab721d308cfc6421b37a089536ab61862
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 217ff23b8724464670520d0b2d5b196df5a4af47
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59837214"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66440306"
 ---
 # <a name="using-the-remove-driverpackage-command"></a>제거 DriverPackage 명령을 사용 하 여
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
-
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 
+> 
+> 적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 서버에서 드라이버 패키지를 제거합니다.
 ## <a name="syntax"></a>구문
@@ -33,11 +33,13 @@ ms.locfileid: "59837214"
 wdsutil /remove-DriverPackage [/Server:<Server name>] {/DriverPackage:<Package Name> | /PackageId:<ID>}
 ```
 ## <a name="parameters"></a>매개 변수
-|매개 변수|설명|
-|-------|--------|
-|[/ 서버:<Server name>]|서버 이름을 지정합니다. 이 NetBIOS 이름이 나 FQDN 수 있습니다. 서버 이름을 지정 하지 않으면 로컬 서버가 사용 됩니다.|
-|[/ DriverPackage:<Name>]|제거할 드라이버 패키지의 이름을 지정 합니다.|
-|[/ 패키지 Id:<ID>]|제거할 드라이버 패키지의 Windows 배포 서비스 ID를 지정 합니다. 드라이버 패키지 이름으로 고유 하 게 식별할 수 없는 경우에 ID를 지정 해야 합니다.|
+
+|        매개 변수        |                                                                            설명                                                                             |
+|-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [/ 서버:<Server name>] |              서버 이름을 지정합니다. 이 NetBIOS 이름이 나 FQDN 수 있습니다. 서버 이름을 지정 하지 않으면 로컬 서버가 사용 됩니다.              |
+| [/ DriverPackage:<Name>] |                                                        제거할 드라이버 패키지의 이름을 지정 합니다.                                                         |
+|    [/ 패키지 Id:<ID>]    | 제거할 드라이버 패키지의 Windows 배포 서비스 ID를 지정 합니다. 드라이버 패키지 이름으로 고유 하 게 식별할 수 없는 경우에 ID를 지정 해야 합니다. |
+
 ## <a name="BKMK_examples"></a>예제
 이미지에 대 한 정보를 보려면 다음 중 하나를 입력 합니다.
 ```

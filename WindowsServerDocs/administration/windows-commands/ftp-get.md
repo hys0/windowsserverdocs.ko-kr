@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 798317f3921cd0e5ff12b69b972e2ea423fa6b3f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 28961ccf0ae04b52586728f9c68a9b2ca3e69b1d
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59816734"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66438771"
 ---
 # <a name="ftp-get"></a>ftp: 가져오기
 
@@ -30,10 +30,12 @@ ms.locfileid: "59816734"
 get <remoteFile> [<LocalFile>]  
 ```  
 ### <a name="parameters"></a>매개 변수  
-|매개 변수|설명|  
-|-------|--------|  
-|<remoteFile>|원격 파일 복사를 지정 합니다.|  
-|[<LocalFile>]|로컬 컴퓨터에서 사용 하 여 파일의 이름을 지정 합니다. 하는 경우 *LocalFile* 지정 하지 않으면 파일 제공할지는 *remoteFile* 이름입니다.|  
+
+|   매개 변수   |                                                              설명                                                               |
+|---------------|----------------------------------------------------------------------------------------------------------------------------------------|
+| <remoteFile>  |                                                   원격 파일 복사를 지정 합니다.                                                   |
+| [<LocalFile>] | 로컬 컴퓨터에서 사용 하 여 파일의 이름을 지정 합니다. 하는 경우 *LocalFile* 지정 하지 않으면 파일 제공할지는 *remoteFile* 이름입니다. |
+
 ## <a name="remarks"></a>설명  
 **가져옵니다** 명령은 동일 합니다 **recv** 명령입니다.  
 ## <a name="BKMK_Examples"></a>예제  

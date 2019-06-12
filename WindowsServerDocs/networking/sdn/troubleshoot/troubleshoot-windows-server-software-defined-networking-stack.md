@@ -9,12 +9,12 @@ ms.assetid: 9be83ed2-9e62-49e8-88e7-f52d3449aac5
 ms.author: pashort
 author: JMesser81
 ms.date: 08/14/2018
-ms.openlocfilehash: b6d4ff37186e66bec54794f8d6c9fd8a83e23e7d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: eeb0c335e4afd3c6835a04421a15073aeab6cdc6
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59845394"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446246"
 ---
 # <a name="troubleshoot-the-windows-server-software-defined-networking-stack"></a>Windows Server 소프트웨어 정의 네트워킹 스택 문제 해결
 
@@ -34,17 +34,17 @@ Microsoft의 소프트웨어 정의 네트워킹에 대 한 자세한 내용은 
 * **정책 응용 프로그램에 오류가 있습니다.**  
      네트워크 컨트롤러에서 정책 상당히 지연 및/또는 최신 버전이 아닙니다 (예: 실시간 마이그레이션) 후 모든 Hyper-v 호스트에서 Hyper-v 호스트를 배달 하지 못했습니다.  
 * **구성 드리프트 또는 소프트웨어 버그**  
- 삭제 된 패킷의 결과 데이터 경로 문제가 있습니다.  
+  삭제 된 패킷의 결과 데이터 경로 문제가 있습니다.  
 
 * **외부 오류 NIC 하드웨어와 관련 된 / 드라이버 또는 언더레이 네트워크 패브릭**  
- 오동작 작업 오프 로드 (예: VMQ) 또는 언더레이 네트워크 패브릭 MTU) (예: 잘못 구성 되었습니다.   
+  오동작 작업 오프 로드 (예: VMQ) 또는 언더레이 네트워크 패브릭 MTU) (예: 잘못 구성 되었습니다.   
 
- 이 문제 해결 가이드는 이러한 각 오류 범주를 검사 하 고 모범 사례 및 확인 하 고 오류를 해결 하려면 사용할 수 있는 진단 도구를 권장 합니다.  
+  이 문제 해결 가이드는 이러한 각 오류 범주를 검사 하 고 모범 사례 및 확인 하 고 오류를 해결 하려면 사용할 수 있는 진단 도구를 권장 합니다.  
 
 ## <a name="diagnostic-tools"></a>진단 도구  
 
 각 이러한 유형의 오류에 대 한 문제 해결 워크플로 다루기 전에 사용할 수 있는 진단 도구를 검토해 보겠습니다.   
-  
+
 네트워크 컨트롤러 (제어 경로) 진단 도구를 사용 하려면 먼저 RSAT NetworkController 기능을 설치 하 고 가져오기는 ``NetworkControllerDiagnostics`` 모듈:  
 
 ```  
@@ -53,7 +53,7 @@ Import-Module NetworkControllerDiagnostics
 ```  
 
 HNV 진단 (데이터 경로) 진단 도구를 사용 하려면 가져와야는 ``HNVDiagnostics`` 모듈:
-  
+
 ```  
 # Assumes RSAT-NetworkController feature has already been installed
 Import-Module hnvdiagnostics   
@@ -63,12 +63,12 @@ Import-Module hnvdiagnostics
 이러한 cmdlet에는 TechNet에 설명 되어는 [네트워크 컨트롤러 진단 Cmdlet 항목](https://docs.microsoft.com/powershell/module/networkcontrollerdiagnostics/)합니다. 네트워크 정책 일관성은 제어 경로 및 네트워크 컨트롤러와 Hyper-v 호스트에서 실행 되는 NC 호스트 에이전트 네트워크 컨트롤러 노드 사이 문제를 식별 도움이 있습니다.
 
  _디버그 ServiceFabricNodeStatus_ 및 _Get NetworkControllerReplica_ 네트워크 컨트롤러 노드 가상 컴퓨터 중 하나에서 cmdlet을 실행 해야 합니다. 네트워크 컨트롤러에 연결 되어 및 네트워크 컨트롤러 관리 보안 그룹 (Kerberos)에서 되었거나 네트워크 컨트롤러를 관리 하기 위한 X.509 인증서에 대 한 액세스 하는 모든 호스트에서 다른 모든 NC 진단 cmdlet은 실행할 수 있습니다. 
-   
+
 ### <a name="hyper-v-host-diagnostics"></a>Hyper-v 호스트에 대 한 진단 유틸리티  
 이러한 cmdlet에는 TechNet에 설명 되어는 [Hyper-v 네트워크 가상화 (HNV) 진단 Cmdlet 항목](https://docs.microsoft.com/powershell/module/hnvdiagnostics/)합니다. 테 넌 트 가상 컴퓨터 (동/서) 간의 데이터 경로에 문제를 식별 하는 데 도움이 및는 SLB VIP (남/북)를 통해 수신 트래픽을 합니다. 
 
 _디버그 VirtualMachineQueueOperation_, _Get CustomerRoute_, _Get PACAMapping_, _Get ProviderAddress_, _Get VMNetworkAdapterPortId_, _Get VMSwitchExternalPortId_, 및 _테스트 EncapOverheadSettings_ 는 모든 Hyper-v 호스트에서 실행 될 수 있는 모든 로컬 테스트 합니다. 네트워크 컨트롤러를 통해 데이터 경로 테스트를 호출 하 고 따라서 위에서 descried와 네트워크 컨트롤러에 대 한 액세스를 해야 하는 다른 cmdlet.
- 
+
 ### <a name="github"></a>GitHub
 [Microsoft/SDN GitHub 리포지토리](https://github.com/microsoft/sdn) 다양 한 샘플 스크립트와 이러한 기본 cmdlet을 기반으로 구축 하는 워크플로 했습니다. 특히, 진단 스크립트에 있습니다는 [진단](https://github.com/Microsoft/sdn/diagnostics) 폴더입니다. 주시면 끌어오기 요청을 제출 하 여 이러한 스크립트에 기여 합니다.
 
@@ -98,7 +98,6 @@ Fetching ResourceType:     networkInterfaces
 Fetching ResourceType:     virtualGateways
 Fetching ResourceType:     loadbalancerMuxes
 Fetching ResourceType:     Gateways
-
 ```
 
 샘플 구성 상태 메시지는 다음과 같습니다.
@@ -121,7 +120,7 @@ Message:          Host is not Connected.
 
 아래 표에서 오류 코드, 메시지 및 관찰 된 구성 상태에 따라 수행할 작업이의 목록입니다.
 
-  
+
 | **코드**| **메시지**| **동작**|  
 |--------|-----------|----------|  
 | 알 수 없음| 알 수 없는 오류| |  
@@ -215,7 +214,7 @@ ReplicaStatus : Ready
 
 ```
 복제본 상태가 준비 인지 확인 하십시오. 각 서비스에 대 한 합니다.
- 
+
 #### <a name="check-for-corresponding-hostids-and-certificates-between-network-controller-and-each-hyper-v-host"></a>해당 HostIDs 및 네트워크 컨트롤러 및 각 Hyper-v 호스트 간에 인증서 확인 
 HostID 네트워크 컨트롤러에서 서버 리소스의 인스턴스 Id에 해당 하는지 확인 하려면 다음 명령을 실행 하는 Hyper-v 호스트에서
 
@@ -272,7 +271,7 @@ Thumbprint                                Subject
 - 루트 기관에서 신뢰할 수 있는  
 
 *업데이트 관리* 여러 인증서가 동일한 주체 이름을 Hyper-v 호스트에서 네트워크 컨트롤러 호스트 에이전트는 임의로 선택 네트워크 컨트롤러에 게 제공 하는 하나입니다. 네트워크 컨트롤러에 알려진 서버 리소스의 지 문으로 일치 하지 않을 수 있습니다. 이 경우 Hyper-v 호스트에 동일한 주체 이름 가진 인증서 중 하나를 삭제 하 고 네트워크 컨트롤러 호스트 에이전트 서비스를 다시 시작 합니다. 연결을 계속 설정할 수 없습니다, Hyper-v 호스트에 동일한 주체 이름 가진 다른 인증서를 삭제 하 고 VMM에서 해당 하는 서버 리소스를 삭제 합니다. 그런 다음 새 X.509 인증서를 생성 되며 Hyper-v 호스트에 설치 된 VMM에서 서버 리소스를 다시 만듭니다.
-  
+
 
 #### <a name="check-the-slb-configuration-state"></a>SLB 구성 상태를 확인 합니다.
 디버그 NetworkController cmdlet으로 출력의 일부로 SLB 구성 상태를 확인할 수 있습니다. 이 cmdlet은 JSON 파일, 각 Hyper-v 호스트 (서버)에서 모든 IP 구성을 호스트 에이전트 데이터베이스 테이블에서 로컬 네트워크 정책에서 네트워크 컨트롤러 리소스의 현재 집합을 출력도. 
@@ -305,7 +304,7 @@ SLB 구성 상태 정보를 찾을 수는 _진단 slbstateResults.Json_ 이 디�
    * Mux 경로-이 섹션에 대 한 각 SLB 먹 싱 배포 된 모든 해당 특정 mux에 대 한 경로 알림에 포함 된 하나의 값을 나열 됩니다.
  * 테넌트
    * VipConsolidatedState-이 섹션 보급 된 경로 접두사, Hyper-v 호스트 및 DIP 끝점을 포함 하 여 각 테 넌 트 VIP에 대 한 연결 상태를 나열 됩니다.
-    
+
 > [!NOTE]
 > SLB 상태를 사용 하 여 직접 조사할 수 있습니다는 [DumpSlbRestState](https://github.com/Microsoft/SDN/blob/master/Diagnostics/DumpSlbRestState.ps1) 스크립트에서 사용할 수는 [Microsoft SDN GitHub 리포지토리](https://github.com/microsoft/sdn)합니다. 
 
@@ -486,9 +485,8 @@ ComputerName         : SA18N30-2
 IsDeleted            : False
 
 <snip> ...
-
 ```
- 
+
 #### <a name="check-mtu-and-jumbo-frame-support-on-hnv-provider-logical-network"></a>HNV 공급자 논리 네트워크에서 MTU 및 점보 프레임 지원 확인
 
 또 다른 일반적인 문제는 HNV 공급자 논리 네트워크에서 실제 네트워크 포트 및/또는 이더넷 카드에의 VXLAN (또는 NVGRE) 캡슐화 하는 오버 헤드를 처리 하도록 구성 하는 충분히 큰 MTU 없는 경우 
@@ -527,7 +525,6 @@ Physical Nic  <NIC> Ethernet Adapter #2 can support SDN traffic. Encapoverhead v
 Cannot send jumbo packets to the destination. Physical switch ports may not be configured to support jumbo packets.
 
 # TODO: Success Results aftering updating MTU on physical switch ports
-
 ```
 
 *업데이트 관리*
@@ -550,7 +547,6 @@ CA IP Address CA MAC Address    Virtual Subnet ID PA IP Address
 10.254.254.1  40-1D-D8-B7-1C-06              4115 10.10.182.66
 192.168.1.1   40-1D-D8-B7-1C-06              4114 10.10.182.66
 192.168.1.4   00-1D-D8-B7-1C-05              4114 10.10.182.66
-
 ```
 >[!NOTE]
 > 예상 CA-PA 매핑은 지정된 테 넌 트 VM에 대 한 출력 되지는 않습니다, 경우에 사용 하 여 네트워크 컨트롤러 VM NIC 및 IP 구성 리소스를 확인 하십시오는 _Get NetworkControllerNetworkInterface_ cmdlet입니다. 또한 NC 호스트 에이전트 및 네트워크 컨트롤러 노드 간에 설정 된 연결을 확인 합니다.
@@ -600,10 +596,10 @@ PA 라우팅 정보:
 
     Local PA IP: 10.10.182.66
     Remote PA IP: 10.10.182.65
- 
+
  <snip> ...
 
-4.  [Tenant] 가상 서브넷 이나 트래픽을 차단 하는 VM 네트워크 인터페이스에 지정 된 분산된 방화벽 정책이 없습니다 인지 확인 합니다.    
+4. [Tenant] 가상 서브넷 이나 트래픽을 차단 하는 VM 네트워크 인터페이스에 지정 된 분산된 방화벽 정책이 없습니다 인지 확인 합니다.    
 
 Sa18.nttest.microsoft.com 도메인 있는 sa18n30nc 데모 환경에서 네트워크 컨트롤러 REST API를 쿼리 합니다.
 
@@ -624,7 +620,7 @@ Sa18.nttest.microsoft.com 도메인 있는 sa18n30nc 데모 환경에서 네트�
 다음 섹션에서는 고급 진단에서 로깅 및 추적 정보를 제공 합니다.
 
 ### <a name="network-controller-centralized-logging"></a>네트워크 컨트롤러 중앙 집중식으로 로깅 
- 
+
 자동으로 네트워크 컨트롤러 디버거 로그를 수집 하 고 중앙 집중화 된 위치에 저장할 수 있습니다. 처음으로 또는 나중에 모든 시간에 대 한 네트워크 컨트롤러를 배포 하는 경우 로그 수집을 사용할 수 있습니다. 로그의 네트워크 컨트롤러에서 수집 되 고 네트워크 네트워크 컨트롤러가 관리 하는 요소: 컴퓨터, 소프트웨어 부하 분산 장치 (SLB) 및 게이트웨이 컴퓨터를 호스트 합니다. 
 
 이러한 로그 네트워크 컨트롤러 클러스터, 네트워크 컨트롤러 응용 프로그램, 게이트웨이 로그, SLB, 가상 네트워킹 및 분산된 방화벽에 대 한 디버그 로그를 포함 합니다. 새 호스트/SLB/게이트웨이 네트워크 컨트롤러에 추가 되 면 때마다 로깅 해당 컴퓨터에서 시작 됩니다. 마찬가지로, 호스트/SLB/게이트웨이 네트워크 컨트롤러에서 제거 되 면 해당 컴퓨터에서 로깅이 중지 됩니다.

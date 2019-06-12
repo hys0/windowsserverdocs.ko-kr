@@ -9,12 +9,12 @@ ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: f98141745cb5bc8355d1ad3c37e72b4710eb4fc9
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 047f297cfaabff3cbbd45057a4198e2fd2e747de
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66190624"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66445454"
 ---
 # <a name="build-a-multi-tiered-application-using-on-behalf-of-obo-using-oauth-with-ad-fs-2016-or-later"></a>On-Behalf-Of (OBO) OAuth를 사용 하 여 AD fs 2016 이상의 버전을 사용 하 여 다중 계층 응용 프로그램 빌드
 
@@ -229,22 +229,24 @@ ToDoListResourceId 및 ToDoListBaseAddress의 올바른 값을 읽는 코드를 
 * 컨트롤러에서 다음 코드를 추가 합니다.
 
 
-        using System;
-        using System.Collections.Generic;
-        using System.Linq;
-        using System.Net;
-        using System.Net.Http;
-        using System.Web.Http;
-        namespace WebAPIOBO.Controllers
+~~~
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Net;
+    using System.Net.Http;
+    using System.Web.Http;
+    namespace WebAPIOBO.Controllers
+    {
+        public class WebAPIOBOController : ApiController
         {
-            public class WebAPIOBOController : ApiController
+            public IHttpActionResult Get()
             {
-                public IHttpActionResult Get()
-                {
-                    return Ok("WebAPI via OBO");
-                }
+                return Ok("WebAPI via OBO");
             }
         }
+    }
+~~~
 
 이 코드는 WebAPI WebAPIOBO에 대 한 Get 요청을 전환할 누구 든 지 때 문자열 반환 단순히
 
@@ -272,15 +274,14 @@ MySampleGroup 응용 프로그램 그룹을 엽니다. 추가 응용 프로그�
 * Web.config 파일을 열으십시오
 * 다음 키를 수정 합니다.
 
-| Key | 값 |
-|:-----|:-------|
-|ida: 대상| 예를 들어 ToDoListService WebAPI을 구성 하는 동안 AD FS에 지정 된 대로 ToDoListService의 ID https://localhost:44321/|
-|ida: ClientID| 예를 들어 ToDoListService WebAPI을 구성 하는 동안 AD FS에 지정 된 대로 ToDoListService의 ID https://localhost:44321/ </br>**반드시 즉 ida: 대상 및 ida: ClientID 서로 일치**|
-|ida: ClientSecret| 이 AD FS에는 AD FS에서 ToDoListService 클라이언트 구성할 때 생성 되는 암호|
-|ida:AdfsMetadataEndpoint| 이 AD FS 메타 데이터를 URL에 대 한 예: https://fs.anandmsft.com/federationmetadata/2007-06/federationmetadata.xml|
-|ida: OBOWebAPIBase| 예를 들어 백 엔드 API를 호출 하는 데 사용 하는 하는 기본 주소 https://localhost:44300|
-|ida: 기관| 이 url은 AD FS 서비스에 대 한 URL 예 https://fs.anandmsft.com/adfs/|
-
+| Key                      | 값                                                                                                                                                                                                                   |
+|:-------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ida: 대상             | 예를 들어 ToDoListService WebAPI을 구성 하는 동안 AD FS에 지정 된 대로 ToDoListService의 ID https://localhost:44321/                                                                                         |
+| ida: ClientID             | 예를 들어 ToDoListService WebAPI을 구성 하는 동안 AD FS에 지정 된 대로 ToDoListService의 ID <https://localhost:44321/> </br>**반드시 즉 ida: 대상 및 ida: ClientID 서로 일치** |
+| ida: ClientSecret         | 이 AD FS에는 AD FS에서 ToDoListService 클라이언트 구성할 때 생성 되는 암호                                                                                                                   |
+| ida:AdfsMetadataEndpoint | 이 AD FS 메타 데이터를 URL에 대 한 예: https://fs.anandmsft.com/federationmetadata/2007-06/federationmetadata.xml                                                                                             |
+| ida: OBOWebAPIBase        | 예를 들어 백 엔드 API를 호출 하는 데 사용 하는 하는 기본 주소 https://localhost:44300                                                                                                                     |
+| ida: 기관            | 이 url은 AD FS 서비스에 대 한 URL 예 https://fs.anandmsft.com/adfs/                                                                                                                                          |
 
 모든 다른 ida: XXXXXXX에 키의 **appsettings** 노드를 주석으로 처리 하거나 삭제 수
 

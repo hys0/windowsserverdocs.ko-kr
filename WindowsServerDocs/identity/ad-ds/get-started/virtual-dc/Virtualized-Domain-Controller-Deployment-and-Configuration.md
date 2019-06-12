@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: d692e58d616376149e62fbce611fe2a9ac80c743
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 4af0f96b0af3a547ab7d509d031a9e23cce8b654
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59863254"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66443208"
 ---
 # <a name="virtualized-domain-controller-deployment-and-configuration"></a>가상화된 도메인 컨트롤러 배포 및 구성
 
@@ -280,7 +280,7 @@ New-ADDCCloneConfigFile
 ||-PreferredWINSServer|주 WINS 서버의 고정 IPv4 주소를 지정합니다. 문자열 데이터 형식입니다.|  
 ||-AlternateWINSServer|보조 WINS 서버의 고정 IPv4 주소를 지정합니다. 문자열 데이터 형식입니다.|  
 ||-IPv6DNSResolver|복제된 컴퓨터의 고정 IPv6 DNS 항목을 쉼표로 구분된 목록으로 지정합니다. 가상화된 도메인 컨트롤러 복제에서는 고정 Ipv6 정보를 설정할 방법이 없습니다. 배열 데이터 형식입니다.|  
-||-Offline|유효성 검사 테스트를 수행하지 않으며 모든 기존 dccloneconfig.xml을 덮어씁니다. 매개 변수는 없습니다. 자세한 내용은 [오프라인 모드에서 New-ADDCCloneConfigFile 실행](../../../ad-ds/Introduction-to-Active-Directory-Domain-Services-AD-DS-Virtualization-Level-100.md#BKMK_OfflineMode)을 참조하십시오.|  
+||-Offline|유효성 검사 테스트를 수행하지 않으며 모든 기존 dccloneconfig.xml을 덮어씁니다. 매개 변수는 없습니다.|  
 ||*-Static*|고정 IP 인수인 IPv4SubnetMask, IPv4SubnetMask 또는 IPv4DefaultGateway를 지정하는 경우에 필요합니다. 매개 변수는 없습니다.|  
   
 온라인 모드로 실행할 때 수행되는 테스트는 다음과 같습니다.  
@@ -644,11 +644,11 @@ Remove-VMSnapshot
   
 ![가상화 된 DC 배포](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSGetVMSnap.png)  
   
-> [!WARNING]  
+> [!WARNING]
 > 컴퓨터를 가져올 때 정적 MAC 주소가 원본 도메인 컨트롤러에 할당되지 않았는지 확인해야 합니다. 정적 MAC 주소를 사용하는 원본 컴퓨터를 복제한 경우에는 이러한 복사한 컴퓨터에서 네트워크 트래픽을 올바르게 보내거나 받지 못합니다. 이 경우 새로운 고유한 정적 또는 동적 MAC 주소를 설정합니다. 다음 명령을 사용하여 VM에서 정적 MAC 주소를 사용하는지 확인할 수 있습니다.  
->   
+> 
 > **Get-VM -VMName**   
->  ***test-vm* | Get-VMNetworkAdapter | fl \***  
+>  ***test-vm* | Get-VMNetworkAdapter | fl \\** *  
   
 ### <a name="step-9---clone-the-new-virtual-machine"></a>9단계 - 새 가상 컴퓨터 복제  
 필요한 경우 복제를 시작하기 전에 오프라인 복제 원본 도메인 컨트롤러를 다시 시작합니다. 이와 상관없이 PDC 에뮬레이터가 온라인 상태인지 확인합니다.  

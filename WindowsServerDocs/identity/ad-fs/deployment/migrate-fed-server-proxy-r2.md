@@ -8,12 +8,12 @@ ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 18ce084ec7d1b602dfca913372d6a0e279671a6e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a2eb6c670e704564bed49486b8950dab96da8a80
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59867414"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66444574"
 ---
 # <a name="migrate-the-active-directory-federation-services-proxy-server-to-windows-server-2012-r2"></a>Active Directory 페더레이션 서비스 프록시 서버를 Windows Server 2012 R2로 마이그레이션
 
@@ -26,15 +26,15 @@ Active Directory Federation Services (AD FS) Windows Server 2012 r2에서에서 
   
 웹 응용 프로그램 프록시 배포를 계획하려면 다음 항목의 정보를 검토하면 됩니다.  
   
--   [웹 응용 프로그램 프록시 인프라 계획](https://technet.microsoft.com/library/dn383648.aspx)  
+- [웹 응용 프로그램 프록시 인프라 계획](https://technet.microsoft.com/library/dn383648.aspx)  
   
--   [웹 응용 프로그램 프록시 서버 계획](https://technet.microsoft.com/library/dn383647.aspx)  
+- [웹 응용 프로그램 프록시 서버 계획](https://technet.microsoft.com/library/dn383647.aspx)  
   
- 웹 응용 프로그램 프록시를 배포하려면 다음 항목의 절차를 따르면 됩니다.  
+  웹 응용 프로그램 프록시를 배포하려면 다음 항목의 절차를 따르면 됩니다.  
   
--   [웹 응용 프로그램 프록시 인프라 구성](https://technet.microsoft.com/library/dn383644.aspx)  
+- [웹 응용 프로그램 프록시 인프라 구성](https://technet.microsoft.com/library/dn383644.aspx)  
   
--   [웹 응용 프로그램 프록시 서버 설치 및 구성](https://technet.microsoft.com/library/dn383662.aspx)  
+- [웹 응용 프로그램 프록시 서버 설치 및 구성](https://technet.microsoft.com/library/dn383662.aspx)  
   
 ## <a name="next-steps"></a>다음 단계
  [Windows Server 2012 R2로 Active Directory Federation Services 역할 서비스 마이그레이션](migrate-ad-fs-service-role-to-windows-server-r2.md)   

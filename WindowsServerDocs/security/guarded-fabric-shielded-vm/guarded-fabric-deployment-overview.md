@@ -9,12 +9,12 @@ author: justinha
 ms.author: justinha
 ms.technology: security-guarded-fabric
 ms.date: 01/30/2019
-ms.openlocfilehash: d63726e7046896c9ef7aa0c3b3d85237bc3f788d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8e1ef34370b1459cd55705bc0069b49a572de303
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59879064"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447536"
 ---
 # <a name="quick-start-for-guarded-fabric-deployment"></a>보호 된 패브릭 배포에 대 한 빠른 시작
 
@@ -165,5 +165,5 @@ VMM 또는 Windows Azure Pack과 같은 선택적 관리 정보를 추가할 수
 
 ## <a name="next-step"></a>다음 단계
 
->[!div class="nextstepaction"]
-[HGS 필수 구성 요소](guarded-fabric-prepare-for-hgs.md)
+> [!div class="nextstepaction"]
+> [HGS 필수 구성 요소](guarded-fabric-prepare-for-hgs.md)

@@ -8,12 +8,12 @@ ms.date: 06/28/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 945a5f4cf0e6c491479b095671ff5e77416c6fa3
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7cde62cb23c69a425522e40ed65ee2d40ef28268
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59877594"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66445626"
 ---
 # <a name="migrate-the-ad-fs-web-agent"></a>AD FS 웹 에이전트 마이그레이션
 
@@ -21,14 +21,14 @@ ms.locfileid: "59877594"
   
 > [!IMPORTANT]
 >  마이그레이션된 AD FS 1.1 Windows 토큰 기반 에이전트는 Windows Server 2008 R2 또는 Windows Server 2008과 함께 설치된 AD FS 1.1 페더레이션 서비스에서만 작동합니다. 자세한 내용은 [Interoperating with AD FS 1.x](Interoperating-with-AD-FS-1.x.md)를 참조하세요.  
->   
+> 
 >  마이그레이션된 AD FS 1.1 클레임 인식 웹 에이전트는 다음에서 작동합니다.  
->   
->  -   Windows Server 2008 R2 또는 Windows Server 2008과 함께 설치된 AD FS 1.1 페더레이션 서비스  
-> -   Windows Server 2008 R2 또는 Windows Server 2008에 설치된 AD FS 2.0 페더레이션 서비스  
-> -   Windows Server 2012를 사용 하 여 설치 된 AD FS 페더레이션 서비스  
->   
->  자세한 내용은 [Interoperating with AD FS 1.x](Interoperating-with-AD-FS-1.x.md)를 참조하세요.  
+> 
+> - Windows Server 2008 R2 또는 Windows Server 2008과 함께 설치된 AD FS 1.1 페더레이션 서비스  
+>   -   Windows Server 2008 R2 또는 Windows Server 2008에 설치된 AD FS 2.0 페더레이션 서비스  
+>   -   Windows Server 2012를 사용 하 여 설치 된 AD FS 페더레이션 서비스  
+> 
+>   자세한 내용은 [Interoperating with AD FS 1.x](Interoperating-with-AD-FS-1.x.md)를 참조하세요.  
   
   
 ## <a name="next-steps"></a>다음 단계

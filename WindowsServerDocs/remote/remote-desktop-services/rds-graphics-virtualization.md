@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: d6ff5b22-7695-4fee-b1bd-6c9dce5bd0e8
 author: lizap
 manager: scottman
-ms.openlocfilehash: 7cf7fdf3510fcaaa955bd0031fb3564fe4372472
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: af5d5ce89561c89d8468627e20dfdb6f35eca5ef
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59875804"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447114"
 ---
 # <a name="which-graphics-virtualization-technology-is-right-for-you"></a>그래픽 가상화 기술을 적합 한?
 
@@ -43,12 +43,12 @@ DDA에 대 한 자세한 내용은 체크 아웃 [불연속 장치 할당을 배
 ## <a name="remotefx-vgpu"></a>RemoteFX vGPU 
 RemoteFX vGPU는 지식 근로자 시나리오 (위 첫 번째 그림 참조)를 사용 하도록 설정 하려면 게스트 운영 체제를 다양 한 분할 되어야 GPU의 처리 능력을 허용 하는 그래픽 가상화 기술입니다. Windows Server 2016의 향상 된 기능 디자이너 응용 프로그램 및 데이터 시각화에 대 한 예를 들어 GPU 버스트 시나리오에 대 한 향상 된 추가 기능을 허용합니다. 기타 기능 향상은 다음과 같습니다.
 
--   2 세대 게스트 Vm, Windows Server 2016 게스트 Vm 및 Windows 클라이언트 Hyper-v 호스트를 지원 합니다.
-   >[!NOTE] 
-   > Windows Server 2016 게스트 VM;에서 원격 데스크톱 세션 호스트를 사용할 수 없습니다. Windows Server 2016 게스트 VM 당 1 개의 세션을 호스트할 수 있습니다.
+- 2 세대 게스트 Vm, Windows Server 2016 게스트 Vm 및 Windows 클라이언트 Hyper-v 호스트를 지원 합니다.
+  >[!NOTE] 
+  > Windows Server 2016 게스트 VM;에서 원격 데스크톱 세션 호스트를 사용할 수 없습니다. Windows Server 2016 게스트 VM 당 1 개의 세션을 호스트할 수 있습니다.
 
--   향상 된 응용 프로그램 호환성 및 안정성입니다.
--   VM 연결 고급 세션 모드, RemoteFX vGPU에 사용 되는 VM에 VM 연결을 통해 USB 및 클립보드 리디렉션을 허용 합니다.
+- 향상 된 응용 프로그램 호환성 및 안정성입니다.
+- VM 연결 고급 세션 모드, RemoteFX vGPU에 사용 되는 VM에 VM 연결을 통해 USB 및 클립보드 리디렉션을 허용 합니다.
 
 자세한 내용은 체크 아웃 [설정 및 원격 데스크톱 서비스에 대 한 RemoteFX vGPU 구성](rds-remotefx-vgpu.md)합니다.
 

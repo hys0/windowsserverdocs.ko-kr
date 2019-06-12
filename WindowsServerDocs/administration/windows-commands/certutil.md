@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: faaf936e4c23579e908e12543c07d0764a2cdcc1
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
-ms.translationtype: HT
+ms.openlocfilehash: 7a602472d30f19cb2d4a802423635e5788e78a43
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66192617"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66434557"
 ---
 # <a name="certutil"></a>certutil
 
@@ -145,14 +145,15 @@ Certutil 추가 매개 변수 없이 인증 기관에서 실행 되는 현재 �
 
 다음 표에서 명령줄 구문을 나타내는 데 사용 되는 표기법을 설명 합니다.
 
-|Notation|설명|
-|--------|-----------|
-|대괄호 또는 중괄호 사용 하지 않고 텍스트|표시 된 대로 입력 해야 하는 항목|
-|\<꺾쇠 괄호 안의 텍스트 >|자리 표시자 값을 제공 해야|
-|[대괄호 안의 텍스트]|선택적 항목입니다.|
-|{중괄호 안에 text}|필요한 항목에 대 한 설정 하나를 선택합니다|
-|세로 막대 (|)|상호 배타적인 항목에 대 한 구분 기호 하나를 선택합니다|
-|줄임표 (...)|반복 될 수 있는 항목|
+
+|            Notation             |                  설명                  |
+|---------------------------------|-----------------------------------------------|
+| 대괄호 또는 중괄호 사용 하지 않고 텍스트 |         표시 된 대로 입력 해야 하는 항목          |
+|  \<꺾쇠 괄호 안의 텍스트 >  | 자리 표시자 값을 제공 해야 |
+|  [대괄호 안의 텍스트]  |                선택적 항목입니다.                 |
+|      {중괄호 안에 text}       |       필요한 항목에 대 한 설정 하나를 선택합니다       |
+|         세로 막대 (          |                       )                       |
+|          줄임표 (...)           |          반복 될 수 있는 항목           |
 
 으로 돌아가서 [메뉴](#menu)
 

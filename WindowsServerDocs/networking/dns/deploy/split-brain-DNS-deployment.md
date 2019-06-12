@@ -8,12 +8,12 @@ ms.topic: article
 ms.assetid: a255a4a5-c1a0-4edc-b41a-211bae397e3c
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 4ec4bc8e77e8411101b9a2b83a85ad5e1a0765b2
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: c74bb2ee2f1647716c8c38e392434a5b7f01805f
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59873504"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446397"
 ---
 # <a name="use-dns-policy-for-split-brain-dns-deployment"></a>분할에 대 한 DNS 정책을 사용 하 여\-머리 DNS 배포
 
@@ -33,7 +33,7 @@ ms.locfileid: "59873504"
 - [스플릿 브레인 DNS 배포의 예](#bkmk_sbexample)
 - [DNS 선택적 재귀 컨트롤의 예](#bkmk_recursion)
 
-##<a name="bkmk_sbexample"></a>스플릿 브레인 DNS 배포의 예
+## <a name="bkmk_sbexample"></a>스플릿 브레인 DNS 배포의 예
 다음은 정책 DNS를 사용 하 여 스플릿 브레인 DNS의 앞에서 설명한 시나리오를 수행 하는 방법의 예입니다.
 
 이 섹션에서는 다음 항목을 다룹니다.
@@ -57,7 +57,7 @@ DNS 정책을 사용 하 여 이러한 영역을 동일한 DNS 서버에서 호�
 ![스플릿 브레인 DNS 배포](../../media/DNS-Split-Brain/Dns-Split-Brain-01.jpg)  
 
 
-##<a name="bkmk_sbhow"></a>스플릿 브레인 DNS 배포의 작동 원리
+## <a name="bkmk_sbhow"></a>스플릿 브레인 DNS 배포의 작동 원리
 
 DNS 서버를 구성 하 여 필요한 DNS 정책을 사용 하 여, 각 이름 확인 요청 DNS 서버에서 정책에 따라 평가 됩니다.
 
@@ -67,7 +67,7 @@ DNS 서버를 구성 하 여 필요한 DNS 정책을 사용 하 여, 각 이름 
 
 따라서; 내부 IP 주소를 포함 하는 DNS 응답 수신 프라이빗 IP (10.0.0.56)에 수신된 www.career.contoso.com에 대한 DNS 쿼리 예제 및 공용 네트워크 인터페이스에서 수신된 DNS 쿼리 (이것이 일반적인 쿼리 해상도와 동일) 기본 영역 범위에서 공용 IP 주소를 포함하는 DNS 응답을 수신합니다.  
 
-##<a name="bkmk_sbconfigure"></a>스플릿 브레인 DNS 배포를 구성 하는 방법
+## <a name="bkmk_sbconfigure"></a>스플릿 브레인 DNS 배포를 구성 하는 방법
 DNS 정책을 사용 하 여 DNS Split-Brain 배포를 구성 하려면 다음 단계를 사용 해야 합니다.
 
 - [영역 범위 만들기](#bkmk_zscopes)  
@@ -79,12 +79,12 @@ DNS 정책을 사용 하 여 DNS Split-Brain 배포를 구성 하려면 다음 �
 >[!IMPORTANT]
 >다음 섹션에서는 예제 많은 매개 변수 값이 포함 된 예제 Windows PowerShell 명령을 포함 합니다. 이러한 명령에 대 한 예제 값은 다음이 명령을 실행 하기 전에 배포에 적합 한 값으로 바꾸는 것을 확인 합니다. 
 
-###<a name="bkmk_zscopes"></a>영역 범위 만들기
+### <a name="bkmk_zscopes"></a>영역 범위 만들기
 
 영역 범위는 영역의 고유 인스턴스입니다. DNS 영역은 자체 DNS 레코드 집합이 포함 된 각 영역 범위를 갖는 여러 영역 범위를 가질 수 있습니다. 동일한 레코드는 동일한 IP 주소 또는 IP 주소가 다른 여러 범위에 있을 수 있습니다. 
 
->[!NOTE]
->기본적으로 영역 범위 DNS 영역에 있습니다. 영역을 같은 이름의이 영역 범위 및 레거시 DNS 작업은이 범위에서 작동 합니다. 이 기본 영역 범위 www.career.contoso.com의 외부 버전을 호스팅합니다.
+> [!NOTE]
+> 기본적으로 영역 범위 DNS 영역에 있습니다. 영역을 같은 이름의이 영역 범위 및 레거시 DNS 작업은이 범위에서 작동 합니다. 이 기본 영역 범위 www.career.contoso.com의 외부 버전을 호스팅합니다.
 
 다음 예제 명령은 내부 영역 범위를 만들 영역 범위 contoso.com 분할에 사용할 수 있습니다. 내부 영역 범위 www.career.contoso.com의 내부 버전을 유지 하려면 사용 됩니다.
 
@@ -92,11 +92,11 @@ DNS 정책을 사용 하 여 DNS Split-Brain 배포를 구성 하려면 다음 �
 
 자세한 내용은 참조 [DnsServerZoneScope 추가](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps)
 
-###<a name="bkmk_records"></a>영역 범위에 레코드 추가
+### <a name="bkmk_records"></a>영역 범위에 레코드 추가
 
 다음 단계 (외부 클라이언트)에 대 한 두 개의 영역 범위-내부로 웹 서버 호스트와 기본값을 나타내는 레코드를 추가 하는 것입니다. 
 
-레코드는 내부 영역 범위에서 **www.career.contoso.com** 추가됩니다 10.0.0.39 프라이빗 IP; 인 IP 주소와 기본 영역 범위에서 동일한 레코드를 **www.career.contoso.com**, 65.55.39.10 IP 주소와 함께 추가됩니다.
+레코드는 내부 영역 범위에서 <strong>www.career.contoso.com</strong> 추가됩니다 10.0.0.39 프라이빗 IP; 인 IP 주소와 기본 영역 범위에서 동일한 레코드를 <strong>www.career.contoso.com</strong>, 65.55.39.10 IP 주소와 함께 추가됩니다.
 
 더 **– ZoneScope** 기본 영역 범위에 레코드가 추가 되는 경우 다음 예제에서는 명령에서 매개 변수를 제공 합니다. 바닐라 영역에 레코드를 추가 하는 것과 비슷합니다.
 
@@ -109,7 +109,7 @@ Add-DnsServerResourceRecord -ZoneName "contoso.com" -A -Name "www.career" -IPv4A
 
 자세한 내용은 참조 [추가 DnsServerResourceRecord](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps)합니다.
 
-###<a name="bkmk_policies"></a>DNS 정책 만들기
+### <a name="bkmk_policies"></a>DNS 정책 만들기
 
 외부 네트워크와 내부 네트워크에 대 한 서버 인터페이스를 파악 한 후 영역 범위가 만든 내부 및 외부 영역 범위를 연결 하는 DNS 정책을 만들어야 합니다.
 
