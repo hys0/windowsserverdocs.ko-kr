@@ -11,12 +11,12 @@ ms.assetid: 2d34e98c-6134-479b-8000-3eb360b8b8a3
 author: KBDAzure
 ms.author: kathydav
 ms.date: 12/06/2016
-ms.openlocfilehash: df66f308ee7999f97fe7e57a8b52256f2561faa2
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d4d9f2dd3727e196bb6893fd5041fa3f08c30796
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59870234"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66453183"
 ---
 # <a name="remotely-manage-hyper-v-hosts-with-hyper-v-manager"></a>Hyper-v 관리자를 사용 하 여 Hyper-v 호스트를 원격으로 관리
 
@@ -24,7 +24,7 @@ ms.locfileid: "59870234"
 
 이 문서는 Hyper-v 호스트 및 Hyper-v Manager 버전의 지원 되는 조합을 나열 하 고 관리할 수 있도록 원격 및 로컬 Hyper-v 호스트에 연결 하는 방법에 설명 합니다. 
 
-Hyper-v 관리자를 사용 하면 소수의 원격 및 로컬 Hyper-v 호스트를 관리할 수 있습니다. 수행할 수 있는 Hyper-v 관리 도구를 설치할 때 설치 된 전체 통해 Hyper-v 설치 또는 도구만 설치 합니다. 도구 전용 설치 방법을 수행 Hyper-v 호스트의 하드웨어 요구 사항을 충족 하지 않는 컴퓨터에서 도구를 사용할 수 있습니다. Hyper-v 호스트에 대 한 하드웨어에 대 한 자세한 내용은 참조 하세요 [시스템 요구 사항](..\System-requirements-for-Hyper-V-on-Windows.md)합니다.
+Hyper-v 관리자를 사용 하면 소수의 원격 및 로컬 Hyper-v 호스트를 관리할 수 있습니다. 수행할 수 있는 Hyper-v 관리 도구를 설치할 때 설치 된 전체 통해 Hyper-v 설치 또는 도구만 설치 합니다. 도구 전용 설치 방법을 수행 Hyper-v 호스트의 하드웨어 요구 사항을 충족 하지 않는 컴퓨터에서 도구를 사용할 수 있습니다. Hyper-v 호스트에 대 한 하드웨어에 대 한 자세한 내용은 참조 하세요 [시스템 요구 사항](../System-requirements-for-Hyper-V-on-Windows.md)합니다.
 
 Hyper-v 관리자 설치 되지 않은 경우 참조를 [지침](#install-hyper-v-manager) 아래.
 
@@ -59,8 +59,8 @@ Hyper-v 관리자는 로컬 컴퓨터를 포함 하 여 컴퓨터를 추가 하�
 
 연결할 수 없으면:
 
-* Hyper-v 도구만 설치 된 것 같습니다. Hyper-v 플랫폼이 설치 되어 있는지를 확인 하려면 가상 컴퓨터 관리 서비스를 찾아봅니다. \(서비스 데스크톱 응용 프로그램을 엽니다: 클릭 **시작**를 클릭 합니다 **검색 시작** 상자에 입력 **services.msc**, 누릅니다 **Enter**합니다. 가상 머신 관리 서비스가 나열 되지 않은 경우의 지침에 따라 Hyper-v 플랫폼을 설치 [Hyper-v 설치](..\get-started\Install-the-Hyper-V-role-on-Windows-Server.md)합니다.\)
-* 하드웨어 요구 사항을 충족 하는지 확인 합니다. 참조 [시스템 요구 사항](..\System-requirements-for-Hyper-V-on-Windows.md)합니다.
+* Hyper-v 도구만 설치 된 것 같습니다. Hyper-v 플랫폼이 설치 되어 있는지를 확인 하려면 가상 컴퓨터 관리 서비스를 찾아봅니다. / (서비스 데스크톱 응용 프로그램을 엽니다: 클릭 **시작**를 클릭 합니다 **검색 시작** 상자에 입력 **services.msc**를 누릅니다 **Enter**. 가상 머신 관리 서비스가 나열 되지 않은 경우의 지침에 따라 Hyper-v 플랫폼을 설치 [Hyper-v 설치](../get-started/Install-the-Hyper-V-role-on-Windows-Server.md)합니다.
+* 하드웨어 요구 사항을 충족 하는지 확인 합니다. 참조 [시스템 요구 사항](../System-requirements-for-Hyper-V-on-Windows.md)합니다.
 * 사용자 계정이 Administrators 그룹 또는 Hyper-v Administrators 그룹에 속해 있는지 확인 합니다.
 
 ## <a name="manage-hyper-v-hosts-remotely"></a>원격 Hyper-v 호스트 관리  
@@ -171,5 +171,5 @@ add-windowsfeature rsat-hyper-v-tools
 
 ## <a name="see-also"></a>참조  
  
-[Hyper-V 설치](..\get-started\Install-the-Hyper-V-role-on-Windows-Server.md) 
+[Hyper-V 설치](../get-started/Install-the-Hyper-V-role-on-Windows-Server.md) 
 

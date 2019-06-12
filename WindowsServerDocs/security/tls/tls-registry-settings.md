@@ -12,12 +12,12 @@ author: justinha
 ms.author: justinha
 manager: brianlic-msft
 ms.date: 02/28/2019
-ms.openlocfilehash: 0d618d465ee45245e98fbc6aa58b32b974be08e8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 32068319aae7545675e126eed6e1ab4c914bcbcf
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59880884"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812638"
 ---
 # <a name="transport-layer-security-tls-registry-settings"></a>전송 계층 보안 (TLS) 레지스트리 설정
 
@@ -25,9 +25,13 @@ ms.locfileid: "59880884"
 
 Schannel 보안 지원을 통해 Secure Sockets Layer (SSL) 프로토콜 및 전송 계층 보안 (TLS) 프로토콜의 Windows 구현에 대 한 지원 되는 레지스트리 설정 정보를 포함 하는 IT 전문가 위한이 참조 항목 공급자 (SSP)입니다. 레지스트리 하위 키 및 관리 하는 Schannel SSP를 문제 해결이 항목에서는 도움말에 포함 된 항목 특히 TLS 및 SSL 프로토콜입니다. 
 
->[!Caution]
->이 정보는 문제를 해결하거나 필요한 설정이 적용되었는지 확인할 때 사용할 참조로 제공됩니다. 다른 대안이 없는 경우가 아니면 레지스트리를 직접 편집하지 않는 것이 좋습니다.
->레지스트리 수정 내용은 적용되기 전에 레지스트리 편집기 또는 Windows 운영 체제에서 유효성이 검사되지 않습니다. 따라서 잘못된 값이 저장될 수 있으며, 이로 인해 시스템에서 복구할 수 없는 오류가 발생할 수 있습니다. 가능하면 레지스트리를 직접 편집하는 대신 그룹 정책 또는 MMC(Microsoft Management Console)와 같은 다른 Windows 도구를 사용하여 작업을 수행합니다. 레지스트리를 편집해야 하는 경우 각별히 주의하세요. 
+> [!CAUTION]
+> 이 정보는 문제를 해결하거나 필요한 설정이 적용되었는지 확인할 때 사용할 참조로 제공됩니다.
+> 다른 대안이 없는 경우가 아니면 레지스트리를 직접 편집하지 않는 것이 좋습니다.
+> 레지스트리 수정 내용은 적용되기 전에 레지스트리 편집기 또는 Windows 운영 체제에서 유효성이 검사되지 않습니다.
+> 따라서 잘못된 값이 저장될 수 있으며, 이로 인해 시스템에서 복구할 수 없는 오류가 발생할 수 있습니다.
+> 가능하면 레지스트리를 직접 편집하는 대신 그룹 정책 또는 MMC(Microsoft Management Console)와 같은 다른 Windows 도구를 사용하여 작업을 수행합니다.
+> 레지스트리를 편집해야 하는 경우 각별히 주의하세요.
 
 ## <a name="certificatemappingmethods"></a>CertificateMappingMethods 
 
@@ -57,7 +61,7 @@ Schannel 보안 지원을 통해 Secure Sockets Layer (SSL) 프로토콜 및 전
 
 Schannel SSP에서 사용 되는 기본 암호화 제품군 순서에 대 한 정보를 참조 하세요 [TLS/SSL (Schannel SSP)의 암호 그룹](https://msdn.microsoft.com/library/windows/desktop/aa374757.aspx)합니다. 
 
-##<a name="ciphersuites"></a>CipherSuites
+## <a name="ciphersuites"></a>CipherSuites
 
 TLS/SSL 암호 그룹을 구성 해야 그룹 정책, MDM 또는 PowerShell을 사용 하 여 확인할 [TLS 암호화 그룹 순서 구성](manage-tls.md#configuring-tls-cipher-suite-order) 세부 정보에 대 한 합니다.
 
@@ -100,8 +104,8 @@ Http.sys 통해 웹 서비스는 IIS 외에도이 설정을 사용 하면 Active
 
 "EnableOcspStaplingForSni"=dword:00000000
 
->[!NOTE] 
->이 레지스트리 키를 사용 하도록 설정 하면 잠재적인 성능 영향을 미칩니다.
+> [!NOTE] 
+> 이 레지스트리 키를 사용 하도록 설정 하면 잠재적인 성능 영향을 미칩니다.
 
 ## <a name="fipsalgorithmpolicy"></a>FIPSAlgorithmPolicy
 

@@ -8,12 +8,12 @@ ms.author: jeffpatt
 author: JeffPatt24
 ms.date: 4/5/2017
 ms.assetid: 5a43b104-4d02-4d73-a385-da1cfb67e341
-ms.openlocfilehash: 81f30a7a4d50423a68719343fec3032cc6a1602e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d6b21579fb1dedc777733317e7222debd8d944a1
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59854714"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812670"
 ---
 # <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-3-set-up-work-folders"></a>AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 단계 3, 작업 폴더 설정
 
@@ -32,7 +32,7 @@ ms.locfileid: "59854714"
 -   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 5 단계 클라이언트 설정](deploy-work-folders-adfs-step5.md)  
   
 > [!NOTE]
->   이 섹션에서는 Windows Server 2016 환경에 대한 지침을 다룹니다. Windows Server 2012 R2를 사용하는 경우 [Windows Server 2012 R2 instructions(Windows Server 2012 R2 지침)](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx)을 따르세요.
+>   Windows Server 2019 또는 Windows Server 2016 환경에 대 한 지침은이 섹션에서 설명 합니다. Windows Server 2012 R2를 사용하는 경우 [Windows Server 2012 R2 instructions(Windows Server 2012 R2 지침)](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx)을 따르세요.
 
 클라우드 폴더를 설정하려면 다음 절차를 수행합니다.  
   
@@ -250,7 +250,7 @@ AD FS 인증을 사용하도록 클라우드 폴더를 구성하려면 다음 �
   
 4.  **클라우드 폴더 설정** 창에서 **Active Directory Federation Services**를 선택하고 페더레이션 서비스 URL을 입력합니다. **적용**을 클릭합니다.  
   
-    URL은 테스트 예에서 **https://blueadfs.contoso.com**합니다.  
+    URL은 테스트 예에서 **https://blueadfs.contoso.com** 합니다.  
   
 Windows PowerShell을 통해 같은 작업을 수행하는 cmdlet은 다음과 같습니다.  
   

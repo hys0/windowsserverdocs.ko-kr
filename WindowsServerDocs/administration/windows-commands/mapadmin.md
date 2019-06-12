@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 007256fffde11899d930c9197cade6d3bf9be42c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3ad9f55ba130014227326f4abe8540c78755f6c5
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59868784"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66437368"
 ---
 # <a name="mapadmin"></a>mapadmin
 
@@ -52,7 +52,7 @@ mapadmin [<computer>] [-u <user> [-p <password>]] listdomainmaps
 
 &lt;컴퓨터&gt; 관리 하려는 사용자 이름 매핑 서비스를 실행 하는 원격 컴퓨터를 지정 합니다. 인터넷 이름 서비스 WINS (Windows) 이름 또는 도메인 이름 시스템 (DNS) 이름을 사용 하 여 컴퓨터를 지정 하거나 하 여 IP (인터넷 프로토콜) 주소 수 있습니다.
 
--u &lt;사용자&gt; 자격 증명에 사용 하려는 사용자의 사용자 이름을 지정 합니다. 폼의 사용자 이름에 도메인 이름을 추가 하려면 할 수 있습니다 *도메인***\\***사용자 이름*합니다.
+-u &lt;사용자&gt; 자격 증명에 사용 하려는 사용자의 사용자 이름을 지정 합니다. 양식에서 사용자 이름에 도메인 이름을 추가 하려면 할 수 있습니다 <em>도메인</em> **\\** <em>사용자 이름</em>합니다.
 
 -p &lt;암호&gt; 사용자의 암호를 지정 합니다. 지정 하는 경우는 **-u** 옵션은 있 생략 된 **-p** 옵션을 사용자의 암호를 묻는 메시지가 나타납니다.
 특정 작업 하는 **mapadmin** 수행 지정 하는 명령 인수에 따라 달라 집니다.
@@ -114,7 +114,7 @@ mapadmin [<computer>] [-u <user> [-p <password>]] listdomainmaps
 |옵션|정의|
 |-----|-------|
 |-d &lt;WindowsDomain&gt;|매핑할 Windows 도메인을 지정 합니다.|
-|-y &lt;NISdomain&gt;|매핑할 NIS 도메인을 지정 합니다. &lt;b r /&gt;&lt;b r /&gt;**-n** &lt;nisServer&gt; 사용 하 여 지정 된 NIS 도메인에 대 한 NIS 서버를 지정 합니다 **-y**옵션입니다.|
+|-y &lt;NISdomain&gt;|매핑할 NIS 도메인을 지정 합니다. &lt;b r /&gt;&lt;b r /&gt; **-n** &lt;nisServer&gt; 사용 하 여 지정 된 NIS 도메인에 대 한 NIS 서버를 지정 합니다 **-y**옵션입니다.|
 |-f &lt;path&gt;|매핑할 암호 및 그룹 파일을 포함 하는 디렉터리의 정규화 된 경로 지정 합니다. 파일 관리 되는 컴퓨터에 있어야 하 고 사용할 수 없습니다 **mapadmin** 암호 및 그룹 파일을 기반으로 지도를 설정 하는 원격 컴퓨터를 관리 합니다.|
 
 **removedomainmap** -Windows 도메인 / NIS 도메인 간의 간단한 맵을 제거 합니다. 다음 옵션 및 인수에는이 명령 인수에 사용할 수 있습니다.

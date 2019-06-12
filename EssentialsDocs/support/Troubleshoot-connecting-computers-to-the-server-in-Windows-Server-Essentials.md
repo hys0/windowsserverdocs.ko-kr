@@ -12,12 +12,12 @@ ms.assetid: e45b3d89-c057-4c70-a627-86fb06dd22aa
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 9b0d11be08840ecedabab6fd4e96f5d453ea4857
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 52ec9bf1caa4cb4c7ed661eec1448f3f2a4be980
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59848194"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66436053"
 ---
 # <a name="troubleshoot-connecting-computers-to-the-server-in-windows-server-essentials"></a>Windows Server Essentials에서 서버에 컴퓨터 연결 시 발생하는 문제 해결
 
@@ -165,7 +165,7 @@ ms.locfileid: "59848194"
   
  이 문제는 연결된 컴퓨터의 날짜 및 시간이 서버의 날짜 및 시간과 동기화되지 않은 경우에 발생할 수 있습니다.  Windows Server Essentials 및 Windows Server Essentials는 Windows Server Essentials 또는 Windows Server Essentials 네트워크에서 실행 하는 컴퓨터의 시간과 날짜를 동기화 하는 시간 동기화 서비스를 사용 합니다. 기본 인증 프로토콜이 서버 시간을 인증 프로세스의 일부로 사용하므로 동기화된 시간은 중요합니다. 예를 들어, 클라이언트 컴퓨터에 있는 시계가 올바른 날짜 및 시간, Windows Server Essentials에 동기화 되지 않았거나 Windows Server Essentials 인증 잘못 될 수 있습니다 하는 경우 로그온 요청을 침입 시도로 해석 하 고 사용자에 대 한 액세스를 거부 합니다.  
   
- 이 서버 s 사용 가능한 메모리가 5% 미만인 경우에 발생할 수 있습니다.  
+ 이 서버의 사용 가능한 메모리가 5% 미만인 경우에 발생할 수 있습니다.  
   
  이 문제는 Windows Essentials 서버에 대한 VPN 연결이 이미 있고 도메인 주소를 사용하여 오프-프레미스로 커넥터 소프트웨어를 구성하려는 경우에 발생할 수 있습니다.  
   
@@ -179,17 +179,17 @@ ms.locfileid: "59848194"
   
 #### <a name="to-change-the-date-and-time-on-the-client-computer"></a>클라이언트 컴퓨터의 날짜 및 시간을 변경하려면  
   
-1.  클라이언트 컴퓨터의 시작 페이지에서 **제어판**을 엽니다.  
+1. 클라이언트 컴퓨터의 시작 페이지에서 **제어판**을 엽니다.  
   
-2.  제어판에서 **시계, 언어 및 국가별 옵션**을 클릭한 다음 **날짜 및 시간**을 클릭합니다.  
+2. 제어판에서 **시계, 언어 및 국가별 옵션**을 클릭한 다음 **날짜 및 시간**을 클릭합니다.  
   
-3.  **날짜 및 시간 변경**을 클릭하고 날짜 및 시간을 올바른 날짜 및 시간으로 설정한 다음 **확인**을 클릭합니다.  
+3. **날짜 및 시간 변경**을 클릭하고 날짜 및 시간을 올바른 날짜 및 시간으로 설정한 다음 **확인**을 클릭합니다.  
   
-4.  **확인**을 클릭하고 제어판을 닫습니다.  
+4. **확인**을 클릭하고 제어판을 닫습니다.  
   
-5.  클라이언트 컴퓨터를 서버에 다시 연결합니다. 지침은 서버에 컴퓨터 연결을 참조하세요.  
+5. 클라이언트 컴퓨터를 서버에 다시 연결합니다. 지침은 서버에 컴퓨터 연결을 참조하세요.  
   
- 그래도 클라이언트 컴퓨터를 서버에 연결할 수 없는 경우 서버의 날짜 및 시간이 올바른지 확인합니다. 날짜 및 시간이 잘못된 경우 변경합니다.  
+   그래도 클라이언트 컴퓨터를 서버에 연결할 수 없는 경우 서버의 날짜 및 시간이 올바른지 확인합니다. 날짜 및 시간이 잘못된 경우 변경합니다.  
   
 #### <a name="to-change-the-date-and-time-on-the-server"></a>서버의 날짜 및 시간을 변경하려면  
   

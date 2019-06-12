@@ -8,12 +8,12 @@ author: johnmarlin-msft
 ms.date: 02/28/2019
 description: 이 문서는 동일한 하드웨어를 사용 하 여 2 노드 장애 조치 클러스터 업그레이드에 대해 설명 합니다.
 ms.localizationpriority: medium
-ms.openlocfilehash: 0bfeb05c8cbc205745dc16bc7ef04052481668ea
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 77cde9e64fda385facd91d86483f4d7f749f30a1
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59854834"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66453054"
 ---
 # <a name="upgrading-failover-clusters-on-the-same-hardware"></a>동일한 하드웨어에서 장애 조치 클러스터 업그레이드
 
@@ -29,7 +29,7 @@ ms.locfileid: "59854834"
 
 장애 조치 클러스터의 업그레이드를 참조 하십시오 합니다 [Windows 업그레이드 Center](https://www.microsoft.com/upgradecenter)합니다.  위치에서 Windows Server를 업그레이드할 때 이동할 있습니다 기존 운영 체제 버전에서 동일한 하드웨어 사용 하면서 최신 릴리스. Windows Server 업그레이드 원위치에서 하나 이상의 경우에 따라 두 가지 버전 앞으로 수 있습니다. Windows Server 2012 R2 및 Windows Server 2016 업그레이드할 수 있습니다 예를 들어, Windows Server 2019로 해당 위치에서.  또한에 유의 합니다 [클러스터 마이그레이션 마법사](https://blogs.msdn.microsoft.com/clustering/2012/06/25/how-to-move-highly-available-clustered-vms-to-windows-server-2012-with-the-cluster-migration-wizard/) 사용할 수 있지만 두 가지 버전 다시 최대 에서만 지원 됩니다. 다음 그림에는 Windows Server에 대 한 업그레이드 경로 보여 줍니다. 아래쪽 가리키는 화살표는 Windows Server 2019까지 이전 버전에서 이동 하 여 지원 되는 업그레이드 경로 나타냅니다.
 
-![현재 위치 업그레이드 다이어그램](media\In-Place-Upgrade\In-Place-Upgrade-1.png)
+![현재 위치 업그레이드 다이어그램](media/In-Place-Upgrade/In-Place-Upgrade-1.png)
 
 다음 단계는 Windows Server 2012 장애 조치 클러스터 서버에서 동일한 하드웨어를 사용 하 여 Windows Server 2019 것인지의 예입니다.  
 
@@ -41,11 +41,11 @@ ms.locfileid: "59854834"
 
 1. 장애 조치 클러스터 관리자를 마우스 오른쪽 노드를 클릭 하 고 선택 하 여 NODE2로 NODE1에서 모든 리소스를 드레이닝 **일시 중지** 하 고 **역할 드레이닝**합니다.  또는 PowerShell 명령을 사용할 수 있습니다 [SUSPEND-CLUSTERNODE](https://docs.microsoft.com/powershell/module/failoverclusters/suspend-clusternode)합니다.
 
-    ![노드 드레이닝](media\In-Place-Upgrade\In-Place-Upgrade-2.png)
+    ![노드 드레이닝](media/In-Place-Upgrade/In-Place-Upgrade-2.png)
 
 2. 오른쪽 마우스 단추로 노드를 클릭 하 고 선택 하 여 클러스터에서 노드 1을 제거 **기타 작업** 하 고 **제거**합니다.  또는 PowerShell 명령을 사용할 수 있습니다 [제거 노드](https://docs.microsoft.com/powershell/module/failoverclusters/remove-clusternode)합니다.
 
-    ![노드 드레이닝](media\In-Place-Upgrade\In-Place-Upgrade-3.png)
+    ![노드 드레이닝](media/In-Place-Upgrade/In-Place-Upgrade-3.png)
 
 3. 예방 조치로 사용 하는 저장소에서 NODE1를 분리 합니다.  경우에 따라 컴퓨터에서 저장소 케이블을 연결 끊기 만으로도 충분 합니다.  필요한 경우 적절 한 분리 단계에 대 한 저장소 공급 업체에 확인 합니다.  저장소에 따라이 필요한 수 없습니다.
 
@@ -53,11 +53,11 @@ ms.locfileid: "59854834"
 
 5. Node1 CLUSTER1 라는 새 클러스터를 만듭니다.  장애 조치 클러스터 관리자를 열고 및 합니다 **관리** 창 선택 **클러스터 만들기** 마법사의 지침을 따릅니다.
 
-    ![노드 드레이닝](media\In-Place-Upgrade\In-Place-Upgrade-4.png)
+    ![노드 드레이닝](media/In-Place-Upgrade/In-Place-Upgrade-4.png)
 
 6. 클러스터를 만든 후 역할 원본 클러스터에서이 새 클러스터로 마이그레이션할 수 해야 합니다.  새 클러스터에서 마우스 오른쪽 단추로 (CLUSTER1) 클러스터 이름을 클릭 하 고 선택 **기타 작업** 하 고 **클러스터 역할 복사**합니다.  역할 마이그레이션 마법사에서 수행 합니다.
 
-    ![노드 드레이닝](media\In-Place-Upgrade\In-Place-Upgrade-5.png)
+    ![노드 드레이닝](media/In-Place-Upgrade/In-Place-Upgrade-5.png)
 
 7.  모든 리소스를 마이그레이션한 후 NODE2 전원을 (원래 클러스터) 및 간섭을 일으키지 하도록 저장소를 분리 합니다.  NODE1에 저장소를 연결 합니다.  모든 연결 되 면 모든 리소스를 온라인 상태로 전환 후와 마찬가지로 작동 하는지 확인 합니다.
 
@@ -73,9 +73,9 @@ ms.locfileid: "59854834"
    
    b. 에 **일반** 탭에서 클러스터에 클러스터 이름을 바꿉니다.
 
-   다. 확인 또는 적용을 선택 하면 나타납니다는 아래 팝업 대화 상자.
+   c. 확인 또는 적용을 선택 하면 나타납니다는 아래 팝업 대화 상자.
 
-    ![노드 드레이닝](media\In-Place-Upgrade\In-Place-Upgrade-6.png)
+    ![노드 드레이닝](media/In-Place-Upgrade/In-Place-Upgrade-6.png)
 
     d. 클러스터 서비스를 중지 하 고 완료 하려면 이름을 바꾸려면 다시 시작 하는 데 필요한 됩니다.
 

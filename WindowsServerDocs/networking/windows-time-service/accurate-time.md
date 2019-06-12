@@ -8,12 +8,12 @@ ms.date: 05/08/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: networking
-ms.openlocfilehash: ea4d957ee68f14f4568d3cefe664736585e50cce
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b68e6b915d029e53d47c6cffe214ec6e11bba6ea
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59864014"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812388"
 ---
 # <a name="accurate-time-for-windows-server-2016"></a>Windows server 2016 정확한 시간
 
@@ -21,8 +21,8 @@ ms.locfileid: "59864014"
 
 Windows 시간 서비스는 클라이언트 및 서버 시간 동기화 공급자에 대 한 플러그 인 모델을 사용 하는 구성 요소입니다.  Windows에 있는 두 명의 기본 제공 클라이언트 공급자 및 사용할 수 있는 타사 플러그 인과 있습니다. 공급자를 하나 사용 하 여 [NTP (RFC 1305)](https://tools.ietf.org/html/rfc1305) 하거나 [MS NTP](https://msdn.microsoft.com/library/cc246877.aspx) NTP 및/또는 MS NTP 규격 참조 서버에 로컬 시스템 시간을 동기화 합니다. 다른 공급자는 Hyper-v 용 하 고 Hyper-v 호스트에 가상 컴퓨터 (VM)를 동기화 합니다.  여러 공급자 존재 하는 경우 Windows 루트 지연, 루트 경향 뒤 첫째, 계층 수준을 사용 하 여 최상의 공급자를 선택 하 고 마지막 시간을 오프셋 됩니다.
 
->[!NOTE]
->Windows 시간 서비스의 간략 한 개요를 위해이 살펴보겠습니다 [높은 수준의 개요 비디오](https://aka.ms/WS2016TimeVideo)합니다.
+> [!NOTE]
+> Windows 시간 서비스의 간략 한 개요를 위해이 살펴보겠습니다 [높은 수준의 개요 비디오](https://aka.ms/WS2016TimeVideo)합니다.
 
 <!-- Not sure what to do with the following -->
 이 항목에서 설명 하는 중... 이러한 항목에 정확한 시간 관련: 
@@ -31,13 +31,11 @@ Windows 시간 서비스는 클라이언트 및 서버 시간 동기화 공급�
 - 측정
 - 최선의 구현 방법
 
->[!IMPORTANT]
->Windows 2016 정확한 내용 시간 문서에서 참조 하는 추 록을 다운로드할 수 있습니다 [여기](https://windocs.blob.core.windows.net/windocs/WindowsTimeSyncAccuracy_Addendum.pdf)합니다.  이 문서는 테스트와 측정 방법에 대 한 자세한 세부 정보를 제공합니다.
+> [!IMPORTANT]
+> Windows 2016 정확한 내용 시간 문서에서 참조 하는 추 록을 다운로드할 수 있습니다 [여기](https://windocs.blob.core.windows.net/windocs/WindowsTimeSyncAccuracy_Addendum.pdf)합니다.  이 문서는 테스트와 측정 방법에 대 한 자세한 세부 정보를 제공합니다.
 
-
-
->[!NOTE] 
->Windows 시간 공급자 플러그 인 모델은 [technet 문서화](https://msdn.microsoft.com/library/windows/desktop/ms725475%28v=vs.85%29.aspx)합니다.
+> [!NOTE] 
+> Windows 시간 공급자 플러그 인 모델은 [technet 문서화](https://msdn.microsoft.com/library/windows/desktop/ms725475%28v=vs.85%29.aspx)합니다.
 
 ## <a name="domain-hierarchy"></a>도메인 계층 구조
 도메인 및 독립 실행형 구성을 다르게 작동합니다.
@@ -60,7 +58,6 @@ Hyper-v 게스트에서 선택할 수 있는 두 개 이상의 Windows 시간 �
 1. **견고한 소스 클록** -안정적이 고 정확 하 게 되도록 도메인 요구 사항에 소스 시계입니다. 이 문제는 일반적으로 GPS 장치를 설치 하거나 # 3을 고려 하는 계층 1 소스를 가리키는 의미 합니다. 이동, 물에 두 배를 설정한 경우 하나의 다른에 비해 고도 측정 하려고 하는 비유 정확도 원본 재벌은 매우 안정적이 고 하지 이동 하는 경우 가장 좋습니다. 시간에도 마찬가지 다음 하 고 소스 클록 안정적인 없으면 동기화 된 시계의 전체 체인은 영향을 받는 각 단계에서 확대 합니다. 것도 액세스할 수 있어야 연결에서 중단 시간 동기화를 방해할 수 있으므로. 고 마지막으로 보안 이어야 합니다. 를 참조 하는 적절 한 시간 유지 하거나 잠재적으로 악의적인 당사자가 작동 하는 경우에 시간 기반 공격에 도메인을 노출할 수 있습니다.
 2. **안정적인 클라이언트 시계** -안정적인 클라이언트 시계는 오실 레이 터의 자연 스러운 드리프트 containable 임을 보장 합니다.  NTP 조건 및 로컬 컴퓨터 클록 분야를 잠재적으로 여러 NTP 서버에서 여러 샘플을 사용 합니다.  시간이 변경 단계 하지 않습니다 하지만 대신 느려집니다 또는 로컬 시계를 정확한 시간을 신속 하 게 접근 하 고 NTP 요청 간에 정확 하 게 유지 되도록 빨라집니다.  그러나 클라이언트 컴퓨터 시계 오실 레이 터 안정적이 지 않은 경우 다음 조정 사이 더 많은 변동이 발생할 수 있으며 Windows 시계 조건을 사용 하 여 알고리즘을 정확 하 게 작동 하지 않습니다.  일부 경우에 정확한 시간에 대 한 펌웨어 업데이트가 필요할 수 있습니다.
 3. **대칭 NTP 통신** -NTP 통신에 대 한 연결이 대칭 중요 한 것입니다.  NTP은 네트워크 패치는 대칭 가정 하는 시간을 조정 하려면 계산을 사용 합니다.  경로 NTP 패킷은 진행 중인 서버에 서로 다른 시간을 반환 하는 경우 정확도 영향을 받습니다.  예를 들어 경로 네트워크 토폴로지 또는 다른 인터페이스 속도 장치를 통해 라우팅되지 패킷의 변경으로 인해 변경 수 있습니다.
-
 
 배터리 전원 장치, 모바일 및 휴대용, 다양 한 전략 고려해 야 합니다.  권장 사항은 따라 정확한 시간을 1 초 마다, 시계 업데이트 빈도 검증 된 수에 시계가 필요 합니다. 이러한 설정은 배터리 전원 절전 모드를 사용할 수 있는 Windows에서 이러한 장치에 대 한 간섭할 수와 예상 보다 더 많은 사용 합니다. 배터리 전원 장치에는 또한 모든 응용 프로그램이 시계 분야 및 정확한 시간을 유지 관리 하는 W32time의 기능을 방해 하는 실행을 중지 하는 특정 전원 모드 있으며 또한, 모바일 장치에서 시계 수 있습니다 매우 정확 하 게를 시작 합니다.  주변 환경 조건 클록 정확도 영향을 하 고 모바일 장치 시간을 정확 하 게 유지 하는 기능을 방해할 수 있는 다음 한 앰비언트 조건에서 이동할 수 있습니다.  Microsoft는 높은 정확도 설정을 사용 하 여 배터리 전원 휴대용 장치를 설정 하는 좋지 않습니다. 
 

@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: c925c7eb-6880-411f-8e59-bd0f57cc5fc3
 author: lizap
 manager: dongill
-ms.openlocfilehash: 894ea8b134ae5b871a2978e3f72e683c12346fe5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8571c2220f804a27e4e1a6b744e8e15e38bd53a3
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59850204"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66453077"
 ---
 # <a name="supported-configurations-for-remote-desktop-services-in-windows-server-2016"></a>Windows Server 2016에서 원격 데스크톱 서비스에 대 한 지원 되는 구성
 
@@ -56,12 +56,12 @@ Windows Server 2016 세션 호스트 RDSH (원격 데스크톱) 및 원격 데�
 
 |VM 게스트 OS  |Windows Server 2012 R2 또는 Windows Server 2016<br> Hyper-v가 RemoteFX vGPU (Gen 1 VM) |  Windows Server 2016 Hyper-v RemoteFX vGPU (Gen 2 VM) |  Windows Server 2016 Hyper-v 불연속 장치 할당 (Gen 2 VM) |
 |-----------------------------|------------------------------------------------------------|--------------------------------------------------------|---------------------------------------------------------------------|
-| Windows 7 SP1               | 예                                                        | 아니오                                                     | 아니오                                                                  |
+| Windows 7 SP1               | 예                                                        | 아니오                                                     | 아니요                                                                  |
 | Windows 8.1                 | 예                                                        | 아니오                                                     | 아니요                                                                  |
 | Windows 10 1511 업데이트      | 예                                                        | 예                                                    | 예                                                                 |
 | Windows Server 2012 R2      | 예                                                        | 아니요                                                     | 예 (KB 3133690 필요)                                           |
 | Windows Server 2016         | 예                                                        | 예                                                    | 예                                                                 |
-| Windows Server 2012 R2 RDSH | 아니오                                                         | 아니요                                                     | 예 (KB 3133690 필요)                                           |
+| Windows Server 2012 R2 RDSH | 아니요                                                         | 아니요                                                     | 예 (KB 3133690 필요)                                           |
 | Windows Server 2016 RDSH    | 아니요                                                         | 아니요                                                     | 예                                                                 |
 ## <a name="vdi-deployment--supported-guest-oss"></a>VDI 배포-지원 되는 게스트 Os 
 Windows Server 2016 RD 가상화 호스트 서버는 다음 게스트 Os를 지원합니다.
@@ -90,7 +90,7 @@ Windows Server 2016 RDS는 두 가지 주요 SSO 환경을 지원합니다.
  - 앱 (Windows, iOS, Android 및 Mac에서 원격 데스크톱 응용 프로그램)
  - 웹 SSO
  
-원격 데스크톱 응용 프로그램을 사용 수 자격 증명을 저장 하거나 연결 정보의 일부로 ([Mac](clients\remote-desktop-mac.md)) 또는 관리 되는 계정의 일부로 ([iOS](clients\remote-desktop-ios.md#manage-your-user-accounts)하십시오 [Android](clients\remote-desktop-android.md#manage-your-user-accounts), Windows) 각 OS에 고유 메커니즘을 통해 안전 하 게
+원격 데스크톱 응용 프로그램을 사용 수 자격 증명을 저장 하거나 연결 정보의 일부로 ([Mac](clients/remote-desktop-mac.md)) 또는 관리 되는 계정의 일부로 ([iOS](clients/remote-desktop-ios.md#manage-your-user-accounts)하십시오 [Android](clients/remote-desktop-android.md#manage-your-user-accounts), Windows) 각 OS에 고유 메커니즘을 통해 안전 하 게
 
 에 연결 하려면 SSO 사용 하 여 데스크톱과 Windows에서 받은 편지함 원격 데스크톱 연결 클라이언트를 통해 Internet Explorer를 통해 RD 웹 페이지에 연결 해야 합니다. 다음 구성 옵션은 서버 쪽에서 필요 합니다. 웹 SSO에 대 한 다른 구성이 지원 됩니다.
 

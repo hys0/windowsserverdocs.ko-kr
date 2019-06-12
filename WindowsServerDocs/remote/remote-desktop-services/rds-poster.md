@@ -14,12 +14,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a8c6d5fa-399b-4823-8f10-affec1bbfe65
 ms.localizationpriority: medium
-ms.openlocfilehash: 601261780f64a779d0aa43ea8d14f58fdcb5f502
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 571af5a50618db285aecbf26573ba52a6aec1101
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59874144"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66453108"
 ---
 # <a name="remote-desktop-services---planning-poster"></a>원격 데스크톱 서비스 - 계획 포스터
 
@@ -27,7 +27,7 @@ ms.locfileid: "59874144"
 
 원격 데스크톱 서비스 팀은 RDS 환경의 계획, 빌드 및 실행에 도움이 되도록 포스터를 만들었습니다.
 
-![원격 데스크톱 서비스 포스터](.\media\rds-poster-download.png)
+![원격 데스크톱 서비스 포스터](./media/rds-poster-download.png)
 
 해당 이미지를 마우스 오른쪽 버튼으로 클릭하여 로컬 시스템에 저장하는 방법으로 포스터의 복사본을 얻을 수 있습니다.
 

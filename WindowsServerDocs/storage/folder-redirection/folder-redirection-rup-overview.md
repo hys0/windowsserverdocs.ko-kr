@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 04/05/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: ad44ba4bbe0b31f423a4ae4593e349571d838de2
-ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
+ms.openlocfilehash: 89506d0f7445f0df230945f45a31d4f58390c5c1
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65475913"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812413"
 ---
 # <a name="folder-redirection-offline-files-and-roaming-user-profiles-overview"></a>폴더 리디렉션, 오프라인 파일 및 로밍 사용자 프로필 개요
 
@@ -46,11 +46,11 @@ ms.locfileid: "65475913"
 
 다음 표에서는 이번 릴리스에서 변경된 폴더 리디렉션, 오프라인 파일 및 로밍 사용자 프로필의 주요 기능 중 일부를 설명합니다.
 
-|기능|새로운 기능 또는 업데이트된 기능|설명|
-|---|---|---|
-|항상 오프라인 모드|단추를 사용하여 새|고속 네트워크 연결 기능을 통해 연결된 경우라도 항상 오프라인으로 작업해 파일 액세스 속도를 높이고 대역폭 사용량을 줄일 수 있습니다.|
-|비용 인식 동기화|단추를 사용하여 새|사용 한도가 있는 요금제 연결을 사용하거나 다른 공급자의 네트워크에서 로밍하는 동안 동기화로 인해 과도한 데이터를 사용하지 않도록 방지할 수 있습니다.|
-|기본 컴퓨터 지원|단추를 사용하여 새|폴더 리디렉션, 로밍 사용자 프로필 또는 이 두 가지를 모두 사용자의 기본 컴퓨터에 한해 사용하도록 제한할 수 있습니다.|
+| 기능 | 새로운 기능 또는 업데이트된 기능 | 설명 |
+| --- | --- | --- |
+| 항상 오프라인 모드 | 단추를 사용하여 새 | 고속 네트워크 연결 기능을 통해 연결된 경우라도 항상 오프라인으로 작업해 파일 액세스 속도를 높이고 대역폭 사용량을 줄일 수 있습니다. |
+| 비용 인식 동기화 | 단추를 사용하여 새 | 사용 한도가 있는 요금제 연결을 사용하거나 다른 공급자의 네트워크에서 로밍하는 동안 동기화로 인해 과도한 데이터를 사용하지 않도록 방지할 수 있습니다. |
+| 기본 컴퓨터 지원 | 단추를 사용하여 새 | 폴더 리디렉션, 로밍 사용자 프로필 또는 이 두 가지를 모두 사용자의 기본 컴퓨터에 한해 사용하도록 제한할 수 있습니다. |
 
 ## <a name="always-offline-mode"></a>항상 오프라인 모드
 
@@ -75,8 +75,8 @@ Windows 8, Windows Server 2012 이전 사용자는 전환 온라인 및 오프 �
 
 비용 인식 동기화를 통해 Windows는 사용자가 4G 모바일 네트워크 등의 요금제 네트워크 연결을 사용하고 가입자가 자신의 대역폭 한계에 이르렀거나 이를 넘어선 경우 또는 다른 공급자의 네트워크에서 로밍하는 경우 백그라운드 동기화를 사용하지 않도록 설정합니다.
 
->[!NOTE]
->요금제 네트워크 연결은 일반적으로 Windows 8, Windows Server 2019, Windows Server 2016 및 Windows Server에서 오프 라인 (저속 연결) 모드로 전환 하기 위한 35 밀리초 대기 시간의 기본값인 보다 느린 왕복 네트워크 대기에는 2012입니다. 따라서 이러한 연결은 대개 오프라인(저속 연결) 모드로 자동 전환됩니다.
+> [!NOTE]
+> 요금제 네트워크 연결은 일반적으로 Windows 8, Windows Server 2019, Windows Server 2016 및 Windows Server에서 오프 라인 (저속 연결) 모드로 전환 하기 위한 35 밀리초 대기 시간의 기본값인 보다 느린 왕복 네트워크 대기에는 2012입니다. 따라서 이러한 연결은 대개 오프라인(저속 연결) 모드로 자동 전환됩니다.
 
 ### <a name="what-value-does-cost-aware-synchronization-add"></a>비용 인식 동기화에 추가 값은?
 
@@ -129,10 +129,10 @@ Windows 8 및 Windows Server 2012 이전의 요금제 네트워크 연결에서 
 
 자세한 내용은 다음 리소스를 참조하십시오.
 
-|콘텐츠 형식|참조|
-|---|---|
-|제품 평가|[신뢰할 수 있는 파일 서비스 및 저장소를 사용 하 여 정보 근로자 지원](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831495(v%3dws.11)>)<br>[오프 라인 파일의 새로운 기능](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff183315(v=ws.10)>) (Windows 7 및 Windows Server 2008 R2)<br>[Windows Vista에 대 한 오프 라인 파일의 새로운 기능](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-vista/cc749449(v=ws.10)>)<br>[Windows Vista의 오프 라인 파일에 변경 내용을](<https://technet.microsoft.com/library/2007.11.offline.aspx>) (TechNet Magazine)|
-|배포|[폴더 리디렉션, 오프 라인 파일 및 로밍 사용자 프로필 배포](deploy-folder-redirection.md)<br>[최종 사용자 데이터 중앙화 솔루션 구현: 폴더 리디렉션 및 오프 라인 파일 기술 유효성 확인 및 배포](http://download.microsoft.com/download/3/0/1/3019A3DA-2F41-4F2D-BBC9-A6D24C4C68C4/Implementing%20an%20End-User%20Data%20Centralization%20Solution.docx)<br>[로밍 사용자 데이터 배포 관리 가이드](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-vista/cc766489(v=ws.10)>)<br>[Windows 7 컴퓨터에 대한 새로운 오프라인 파일 기능 구성 단계별 가이드](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff633429(v=ws.10)>)<br>[폴더 리디렉션 사용](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753996(v=ws.11)>)<br>[폴더 리디렉션 구현](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc737434(v=ws.10)>) (Windows Server 2003)|
-|도구 및 설정|[MSDN의 오프 라인 파일](https://msdn.microsoft.com/library/cc296092.aspx)<br>[오프 라인 파일 그룹 정책 참조](https://msdn.microsoft.com/library/ms878937.aspx) (Windows 2000)|
-|커뮤니티 리소스|[파일 서비스 및 저장소 포럼](https://social.technet.microsoft.com/forums/windowsserver/home?forum=winserverfiles)<br>[Hey, Scripting Guy! Windows에서 오프 라인 파일 기능을 사용 하는 방법](<https://blogs.technet.microsoft.com/heyscriptingguy/2009/06/02/hey-scripting-guy-how-can-i-enable-and-disable-offline-files/>)<br>[Hey, Scripting Guy! 사용을 오프 라인 파일을 사용 하지 않도록 설정 수 있는 방법은 있나요?](<https://blogs.technet.microsoft.com/heyscriptingguy/2009/06/02/hey-scripting-guy-how-can-i-enable-and-disable-offline-files/>)|
-관련 기술|[Windows Server에서 id 및 액세스](../../identity/identity-and-access.md)<br>[Windows Server에서 저장소](../storage.md)<br>[원격 액세스 및 서버 관리](../../remote/index.md)|
+| 콘텐츠 형식 | 참조 |
+| --- | --- |
+| 제품 평가 | [신뢰할 수 있는 파일 서비스 및 저장소를 사용 하 여 정보 근로자 지원](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831495(v%3dws.11)>)<br>[오프 라인 파일의 새로운 기능](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff183315(v=ws.10)>) (Windows 7 및 Windows Server 2008 R2)<br>[Windows Vista에 대 한 오프 라인 파일의 새로운 기능](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-vista/cc749449(v=ws.10)>)<br>[Windows Vista의 오프 라인 파일에 변경 내용을](<https://technet.microsoft.com/library/2007.11.offline.aspx>) (TechNet Magazine) |
+| 배포 | [폴더 리디렉션, 오프 라인 파일 및 로밍 사용자 프로필 배포](deploy-folder-redirection.md)<br>[최종 사용자 데이터 중앙화 솔루션 구현: 폴더 리디렉션 및 오프 라인 파일 기술 유효성 확인 및 배포](http://download.microsoft.com/download/3/0/1/3019A3DA-2F41-4F2D-BBC9-A6D24C4C68C4/Implementing%20an%20End-User%20Data%20Centralization%20Solution.docx)<br>[로밍 사용자 데이터 배포 관리 가이드](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-vista/cc766489(v=ws.10)>)<br>[Windows 7 컴퓨터에 대한 새로운 오프라인 파일 기능 구성 단계별 가이드](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff633429(v=ws.10)>)<br>[폴더 리디렉션 사용](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753996(v=ws.11)>)<br>[폴더 리디렉션 구현](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc737434(v=ws.10)>) (Windows Server 2003) |
+| 도구 및 설정 | [MSDN의 오프 라인 파일](https://msdn.microsoft.com/library/cc296092.aspx)<br>[오프 라인 파일 그룹 정책 참조](https://msdn.microsoft.com/library/ms878937.aspx) (Windows 2000) |
+| 커뮤니티 리소스 | [파일 서비스 및 저장소 포럼](https://social.technet.microsoft.com/forums/windowsserver/home?forum=winserverfiles)<br>[Hey, Scripting Guy! Windows에서 오프 라인 파일 기능을 사용 하는 방법](<https://blogs.technet.microsoft.com/heyscriptingguy/2009/06/02/hey-scripting-guy-how-can-i-enable-and-disable-offline-files/>)<br>[Hey, Scripting Guy! 사용을 오프 라인 파일을 사용 하지 않도록 설정 수 있는 방법은 있나요?](<https://blogs.technet.microsoft.com/heyscriptingguy/2009/06/02/hey-scripting-guy-how-can-i-enable-and-disable-offline-files/>) |
+| 관련 기술|[Windows Server에서 id 및 액세스](../../identity/identity-and-access.md)<br>[Windows Server에서 저장소](../storage.md)<br>[원격 액세스 및 서버 관리](../../remote/index.md) |

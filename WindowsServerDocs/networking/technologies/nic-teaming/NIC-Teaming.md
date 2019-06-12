@@ -14,12 +14,12 @@ ms.assetid: abded6f3-5708-4e35-9a9e-890e81924fec
 ms.author: pashort
 author: shortpatti
 ms.date: 09/10/2018
-ms.openlocfilehash: 367de10e8c77490ff27be81ddc05239f931ad1f4
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: cf58956ead8e8a47b8ec6d189bf23e5c576d5f15
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59860474"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812189"
 ---
 # <a name="nic-teaming"></a>NIC 팀
 
@@ -27,8 +27,8 @@ ms.locfileid: "59860474"
 
 이 항목에서는 개요를 제공 네트워크 인터페이스 카드 (NIC) 팀의 Windows Server 2016에서. 1과 32 사이 그룹화 할 수 있습니다 NIC 팀 하나 이상의 소프트웨어 기반 가상 네트워크 어댑터에 실제 이더넷 네트워크 어댑터입니다. 이 가상 네트워크 어댑터에는 빠른 성능과 네트워크 어댑터 오류 발생 시 내결함성을 제공합니다.  
   
->[!IMPORTANT]
->NIC 팀 구성원의 네트워크 어댑터가 동일한 물리적 호스트 컴퓨터에 설치 해야 합니다. 
+> [!IMPORTANT]
+> NIC 팀 구성원의 네트워크 어댑터가 동일한 물리적 호스트 컴퓨터에 설치 해야 합니다. 
 
 > [!TIP]  
 > 하나의 네트워크 어댑터를 포함 하는 NIC 팀 부하 분산 및 장애 조치를 제공할 수 없습니다. 그러나 하나의 네트워크 어댑터와 함께 사용할 수 있습니다 NIC 팀 네트워크 트래픽 분리에 대 한 가상 로컬 영역 네트워크 (Vlan)을 사용 중인 경우.  

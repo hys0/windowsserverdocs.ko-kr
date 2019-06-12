@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5a5aef930689e809b9b697e5f428177610ff723b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: df1f999499154366304d59e0573ba921ab1af83d
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59862404"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66434245"
 ---
 # <a name="convert-basic"></a>convert basic
 
@@ -44,7 +44,7 @@ convert basic [noerr]
 
 > [!IMPORTANT]
 > 디스크를 기본 디스크로 변환 하려면 비어 있어야 합니다. 데이터를 백업 하 고 디스크를 변환 하기 전에 모든 파티션 또는 볼륨을 삭제 합니다.
--   이 작업이 성공 하기 위해 동적 디스크를 선택 해야 합니다. 사용 된 **디스크 선택** 동적 디스크를 선택 하 고 포커스를 이동 하는 명령입니다.
+> -   이 작업이 성공 하기 위해 동적 디스크를 선택 해야 합니다. 사용 된 **디스크 선택** 동적 디스크를 선택 하 고 포커스를 이동 하는 명령입니다.
 
 ## <a name="BKMK_examples"></a>예제
 

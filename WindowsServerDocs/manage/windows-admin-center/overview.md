@@ -5,21 +5,21 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 04/12/2019
+ms.date: 06/07/2019
 ms.localizationpriority: high
 ms.prod: windows-server-threshold
-ms.openlocfilehash: ee3c4ba5d6c3dc911ab318ade9a46b279317496f
-ms.sourcegitcommit: 39ab8041d166e6817a95417d6aa30bc7abeeef54
+ms.openlocfilehash: 2314e336cbf9ad44b07f3f94d7a866b48b5e9bff
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66260253"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66811811"
 ---
 # <a name="windows-admin-center"></a>Windows Admin Center
 
->적용 대상: Windows Admin Center, Windows Admin Center 미리 보기
+> 적용 대상: Windows Admin Center, Windows Admin Center 미리 보기
 
-**Windows Admin Center** (코드명 **프로젝트 브라 티**) Windows Server의 기본 관리 도구, 진화 된 것이 로컬 및 원격 서버 관리의 모든 측면을 통합 하는 투명 효과 단일 창이 있습니다. 로컬로 배포되는 브라우저 기반 관리 환경이므로 인터넷 연결과 Azure를 사용할 필요가 없습니다. Windows Admin Center를 통해 인터넷에 연결되지 않은 개인 네트워크를 포함하여 배포의 모든 측면을 완전히 제어할 수 있습니다.
+**Windows Admin Center** (이전 코드명 **프로젝트 브라 티**) Windows Server의 기본 관리 도구, 발전 로컬 및 원격 서버 관리의 모든 측면을 통합 하는 투명 효과 단일 창이 것입니다. 로컬로 배포되는 브라우저 기반 관리 환경이므로 인터넷 연결과 Azure를 사용할 필요가 없습니다. Windows Admin Center를 통해 인터넷에 연결되지 않은 개인 네트워크를 포함하여 배포의 모든 측면을 완전히 제어할 수 있습니다.
 
 ## <a name="introduction"></a>소개
 
@@ -75,6 +75,7 @@ ms.locfileid: "66260253"
             <ul>
             <li><a href="configure/settings.md">Windows Admin Center 설정</a>
             <li><a href="configure/user-access-control.md">사용자 액세스 제어 및 권한</a>
+            <li><a href="configure/shared-connections.md">공유 연결</a>
             <li><a href="configure/using-extensions.md">확장</a>
             </ul>
         </td>

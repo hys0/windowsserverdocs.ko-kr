@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7d9b99dbe7e26190e87c5dfc9de29980b9cb2f43
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 581e9a3bad8323c79839a4487b7da045e9cfec21
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66192592"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66811241"
 ---
 # <a name="cmd"></a>Cmd
 
@@ -76,10 +76,12 @@ cmd [/c|/k] [/s] [/q] [/d] [/a|/u] [/t:{<B><F>|<F>}] [/e:{on|off}] [/f:{on|off}]
 
 -   여러 명령 사용
 
-    에 대 한 여러 명령을 사용 하 여 \<문자열 >, 명령 구분 기호로 구분 **&&** 고 따옴표로 묶습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+    에 대 한 여러 명령을 사용 하 여 \<문자열 >, 명령 구분 기호로 구분 **&&** 고 따옴표로 묶습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+
     ```
     "<Command>&&<Command>&&<Command>"
-    ```  
+    ``` 
+ 
 -   인용 부호를 처리합니다.
 
     지정 하는 경우 **/c** 또는 **/k**에 **cmd** 나머지 처리 *문자열* 따옴표는 모든 경우에 유지 됩니다 중 조건 충족 됩니다.  

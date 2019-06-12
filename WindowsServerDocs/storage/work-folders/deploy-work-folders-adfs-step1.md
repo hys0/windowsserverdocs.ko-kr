@@ -8,12 +8,12 @@ ms.author: jeffpatt
 author: JeffPatt24
 ms.date: 10/18/2018
 ms.assetid: 938cdda2-f17e-4964-9218-f5868fd96735
-ms.openlocfilehash: a26b784c18049ee473a191abc7bfa0a5d253d15e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4f4119e893b215bd9f6d713bc5a17218b751c3d3
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59883034"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812687"
 ---
 # <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-1-set-up-ad-fs"></a>AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. AD FS 설치 1 단계
 
@@ -32,7 +32,7 @@ ms.locfileid: "59883034"
 -   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 5 단계 클라이언트 설정](deploy-work-folders-adfs-step5.md)  
   
 > [!NOTE]
->   이 섹션에서는 Windows Server 2016 환경에 대한 지침을 다룹니다. Windows Server 2012 R2를 사용하는 경우 [Windows Server 2012 R2 instructions(Windows Server 2012 R2 지침)](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx)을 따르세요.
+>   Windows Server 2019 또는 Windows Server 2016 환경에 대 한 지침은이 섹션에서 설명 합니다. Windows Server 2012 R2를 사용하는 경우 [Windows Server 2012 R2 instructions(Windows Server 2012 R2 지침)](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx)을 따르세요.
 
 클라우드 폴더에 사용할 AD FS를 설치하려면 다음 절차를 수행하세요.  
   

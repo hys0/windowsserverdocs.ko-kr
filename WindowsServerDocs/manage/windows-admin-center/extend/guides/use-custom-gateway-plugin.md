@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: c9b2e9201d58472286b42a9c89a36423f40d143d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 348ebf5b99de7f582a3edf57b0a190f87f1c4a5b
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59834514"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66452602"
 ---
 # <a name="use-a-custom-gateway-plugin-in-your-tool-extension"></a>도구 확장에 있는 사용자 지정 게이트웨이 플러그 인 사용
 
@@ -23,7 +23,7 @@ ms.locfileid: "59834514"
 
 ## <a name="prepare-your-environment"></a>사용자 환경 준비 ##
 
-이미 않았다면의 지시를 따릅니다 [개발 도구 확장](..\develop-tool.md) 환경을 준비 하 고 새 빈 도구 확장 합니다.
+이미 않았다면의 지시를 따릅니다 [개발 도구 확장](../develop-tool.md) 환경을 준비 하 고 새 빈 도구 확장 합니다.
 
 ## <a name="add-a-module-to-your-project"></a>프로젝트에 모듈을 추가 합니다. ##
 
@@ -62,6 +62,9 @@ export class PluginService {
 ```
 
 에 대 한 참조를 변경 ```Sample Uno``` 고 ```Sample%20Uno``` 적절 하 게 기능 이름입니다.
+
+[!WARNING]
+> 것이 권장 하는 기본 제공 ```this.appContextService.node``` 사용자 지정 게이트웨이 플러그 인에 정의 된 모든 API 호출에 사용 됩니다. 이렇게 하면 자격 증명이 있는지는 올바르게 처리 됩니다 게이트웨이 플러그 인 내에서 필요한 경우.
 
 ### <a name="modify-modulets"></a>Module.ts 수정
 
@@ -142,4 +145,4 @@ Html 파일에 다음 콘텐츠를 추가 합니다.
 
 ## <a name="build-and-side-load-your-extension"></a>빌드 및 쪽에 확장을 로드합니다.
 
-준비가 이제 [빌드 및 부하 쪽](..\develop-tool.md#build-and-side-load-your-extension) Windows Admin Center 확장 합니다.
+준비가 이제 [빌드 및 부하 쪽](../develop-tool.md#build-and-side-load-your-extension) Windows Admin Center 확장 합니다.

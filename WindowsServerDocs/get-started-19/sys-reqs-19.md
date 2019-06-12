@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: jasgroce
 ms.localizationpriority: medium
-ms.openlocfilehash: 82a42cd219e41330fe4215124c21e799a41e412c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d97ec0efee86165f82bdf99a316d24d9c39ec958
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59853144"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66810720"
 ---
 # <a name="system-requirements"></a>시스템 요구 사항
 
@@ -27,6 +27,7 @@ ms.locfileid: "59853144"
 이 항목에서는 Windows Server를 실행 하려면 최소 시스템 요구 사항에 간략하게 설명&reg; 2019 합니다.
 
 ## <a name="review-system-requirements"></a>시스템 요구 사항 검토  
+
 예상 되는 시스템 요구 사항 Windows Server 2019 다음과 같습니다. 컴퓨터의 사양이 "최소" 요구 사항보다 낮으면 이 제품을 제대로 설치할 수 없습니다. 실제 요구 사항은 사용자가 설치하는 응용 프로그램과 기능 및 시스템 구성에 따라 달라질 수 있습니다.
 
 달리 지정되지 않는 경우 이러한 최소 시스템 요구 사항은 모든 설치 옵션(Server Core, 데스크톱 환경 포함 서버, Nano 서버)과 Standard 및 Datacenter 버전에 적용됩니다.  
@@ -34,8 +35,8 @@ ms.locfileid: "59853144"
 > [!IMPORTANT]  
 > 매우 다양한 잠재적인 배포 범위로 인해 일반적으로 적용되는 "권장" 시스템 요구 사항이 비현실적일 수 있습니다. 특정 서버 역할에 필요한 리소스에 대한 자세한 내용은 배포하려는 각 서버 역할에 대한 설명서를 참조하세요. 최상의 결과를 얻으려면 테스트 배포를 수행하여 특정 배포 시나리오에 적합한 시스템 요구 사항을 확인하세요.  
 
-
 ## <a name="processor"></a>프로세서  
+
 프로세서 성능은 프로세서의 클록 주파수뿐만 아니라 프로세서 코어의 수와 프로세서 캐시의 크기에 따라 달라집니다. 다음은 이 제품을 설치하기 위한 프로세서 요구 사항입니다.  
 
 **최소**:  
@@ -69,13 +70,13 @@ Windows Server 2019를 실행 하는 컴퓨터에는 PCI Express 아키텍처 �
 
 **최소**: 32GB  
 
-   > [!NOTE]  
-    > 32GB는 성공적인 설치의 *최소 절대*값으로 간주됩니다. 이 최소 Windows Server 2019 웹 서비스 (IIS) 서버 역할을 사용 하 여 Server Core 모드에서 설치 하도록 허용 해야 합니다. Server Core 모드의 서버는 GUI 포함 서버 모드의 동일한 서버보다 약 4GB 작습니다. 
-    >   
-    > 시스템 파티션은 다음의 환경에서 추가 공간을 필요로 합니다.  
-    >   
-    > -   네트워크에 시스템을 설치한 경우  
-    > -   RAM이 16GB를 넘는 컴퓨터에서는 페이징, 최대 절전 모드 및 덤프 파일을 위해 더 많은 디스크 공간이 필요합니다.  
+> [!NOTE]
+> 32GB는 성공적인 설치의 *최소 절대*값으로 간주됩니다. 이 최소 Windows Server 2019 웹 서비스 (IIS) 서버 역할을 사용 하 여 Server Core 모드에서 설치 하도록 허용 해야 합니다. Server Core 모드의 서버는 GUI 포함 서버 모드의 동일한 서버보다 약 4GB 작습니다. 
+> 
+> 시스템 파티션은 다음의 환경에서 추가 공간을 필요로 합니다.  
+> 
+> -   네트워크에 시스템을 설치한 경우  
+> -   RAM이 16GB를 넘는 컴퓨터에서는 페이징, 최대 절전 모드 및 덤프 파일을 위해 더 많은 디스크 공간이 필요합니다.  
 
 ## <a name="network-adapter-requirements"></a>네트워크 어댑터 요구 사항  
 
@@ -88,8 +89,6 @@ Windows Server 2019를 실행 하는 컴퓨터에는 PCI Express 아키텍처 �
 네트워크 디버깅을 지원하는 네트워크 어댑터(KDNet)는 유용하지만 최소 요구 사항이 아닙니다.   
 
 네트워크 어댑터 지원 (PXE (pre-boot Execution Environment)는 유용 하지만 최소 요구 사항이 없습니다.
-
-
 
 ## <a name="other-requirements"></a>기타 요구 사항  
 이 릴리스를 실행하는 컴퓨터에는 다음 항목도 있어야 합니다.  
@@ -107,10 +106,10 @@ Windows Server 2019를 실행 하는 컴퓨터에는 PCI Express 아키텍처 �
 
 -   인터넷 액세스(사용 요금 부과 가능)  
 
->[!NOTE]  
+> [!NOTE]  
 > TPM(신뢰할 수 있는 플랫폼 모듈) 칩은 이 릴리스를 설치하는 데 반드시 필요한 것은 아니지만 BitLocker 드라이브 암호화와 같은 특정 기능을 사용하는 데 필요합니다. 컴퓨터에서 TPM을 사용하는 경우 다음 요구 사항을 충족해야 합니다.  
 >  
->- 하드웨어 기반 TPM은 TPM 사양 버전 2.0를 구현해야 합니다.  
->- 버전 2.0를 구현하는 TPM에는 하드웨어 공급 업체에 의해 TPM에 사전 구축된 또는 첫 번째로 부팅하는 동안 장치에 의해 검색할 수 있는 EK 인증서가 있어야 합니다.  
->- 버전 2.0을 구현하는 TPM은 SHA-256 PCR 뱅크와 제공되어야 하며 SHA-256에 대해 PCR 0~23을 구현해야 합니다. SHA-1 및 SHA-256 측정 둘 다에 사용할 수 있는 전환 가능한 단일 PCR 뱅크가 포함된 TPM을 사용할 수 있습니다.  
->- TPM을 해제하는 UEFI 옵션은 요구 사항이 아닙니다.  
+> - 하드웨어 기반 TPM은 TPM 사양 버전 2.0를 구현해야 합니다.  
+> - 버전 2.0를 구현하는 TPM에는 하드웨어 공급 업체에 의해 TPM에 사전 구축된 또는 첫 번째로 부팅하는 동안 장치에 의해 검색할 수 있는 EK 인증서가 있어야 합니다.  
+> - 버전 2.0을 구현하는 TPM은 SHA-256 PCR 뱅크와 제공되어야 하며 SHA-256에 대해 PCR 0~23을 구현해야 합니다. SHA-1 및 SHA-256 측정 둘 다에 사용할 수 있는 전환 가능한 단일 PCR 뱅크가 포함된 TPM을 사용할 수 있습니다.  
+> - TPM을 해제하는 UEFI 옵션은 요구 사항이 아닙니다.  

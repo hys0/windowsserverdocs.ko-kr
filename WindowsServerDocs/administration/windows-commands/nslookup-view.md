@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0712189f9043622ef6d252a88328f01042aad159
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 623064db7a3e89decbfc1fbc27fa0598e398ac34
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59872234"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66436414"
 ---
 # <a name="nslookup-view"></a>nslookup view
 
@@ -30,10 +30,12 @@ ms.locfileid: "59872234"
 view <FileName>  
 ```  
 ## <a name="parameters"></a>매개 변수  
-|매개 변수|설명|  
-|-------|--------|  
-|<FileName>|이전 출력을 포함 하는 파일의 이름을 지정 **ls** 하위 명령 또는 명령입니다.|  
-|{도움말 및 #124;?}|간단한 요약이 표시 되며 **nslookup** 하위 명령입니다.|  
+
+|    매개 변수    |                                            설명                                            |
+|-----------------|---------------------------------------------------------------------------------------------------|
+|   <FileName>    | 이전 출력을 포함 하는 파일의 이름을 지정 **ls** 하위 명령 또는 명령입니다. |
+| {도움말 및 #124;?} |                       간단한 요약이 표시 되며 **nslookup** 하위 명령입니다.                       |
+
 ## <a name="additional-references"></a>추가 참조  
 [명령줄 구문 키](command-line-syntax-key.md)  
 [nslookup ls](nslookup-ls.md)  

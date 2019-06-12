@@ -8,12 +8,12 @@ ms.date: 05/21/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
-ms.openlocfilehash: fd99058036a5b8041e4c65ca120c6a7e68b2df8d
-ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
+ms.openlocfilehash: ce4cbdc291d98a180ee6f5b597d322620fa1b19f
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65976654"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66453174"
 ---
 # <a name="storage-migration-service-overview"></a>저장소 서비스 마이그레이션 개요
 
@@ -32,7 +32,7 @@ ms.locfileid: "65976654"
 - 필요에 따라 사용자 및 앱에 기존 데이터를 액세스 하려면 아무 것도 변경할 필요가 없습니다 있도록 (라고도 통해 cutting) 원본 서버의 id를 인계
 - Windows Admin Center 사용자 인터페이스에서 하나 이상의 마이그레이션 관리
 
-![마이그레이션 파일 저장소 마이그레이션 서비스 및 대상 서버, Azure Vm 또는 Azure File Sync는 원본 서버에서 구성을 보여 주는 다이어그램입니다.](media\overview\storage-migration-service-diagram.png)
+![마이그레이션 파일 저장소 마이그레이션 서비스 및 대상 서버, Azure Vm 또는 Azure File Sync는 원본 서버에서 구성을 보여 주는 다이어그램입니다.](media/overview/storage-migration-service-diagram.png)
 
 **그림 1: 저장소 마이그레이션 서비스 원본 및 대상**
 

@@ -7,12 +7,12 @@ ms.sitesec: library
 author: lizap
 ms.localizationpriority: medium
 ms.date: 10/17/2017
-ms.openlocfilehash: bd22378ec7ce5a1ff4e39546246e6e85ca859c45
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 235df6f681de51a12f82b9fad019dd2db45fd486
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59828844"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66435556"
 ---
 # <a name="configure-memory-dump-files-for-server-core-installation"></a>Server Core 설치에 대 한 메모리 덤프를 구성 합니다.
 
@@ -49,8 +49,8 @@ wmic computersystem set AutomaticManagedPagefile=False
 9. 마우스 오른쪽 단추로 클릭 **DumpFileSize**를 클릭 하 고 **수정**합니다.
 10. **DWORD 값 편집**아래에 있는 **자료**, 클릭 **소수**합니다.
 11. **값 데이터**적절 한 값을 입력 하 고 클릭 **확인**합니다.
-   >[!NOTE]
-   > 덤프 파일의 크기 (mb) 됩니다.
+    >[!NOTE]
+    > 덤프 파일의 크기 (mb) 됩니다.
 12. 레지스트리 편집기를 종료 합니다.
 
 메모리 덤프의 파티션 위치를 확인 한 후 페이지 파일에 대 한 대상 경로 구성 합니다. 페이지 파일에 대 한 현재 대상 경로 보려면 다음 명령을 실행 합니다.

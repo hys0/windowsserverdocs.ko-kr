@@ -6,14 +6,14 @@ ms.author: helohr
 ms.date: 11/01/2017
 ms.topic: article
 author: Heidilohr
-ms.openlocfilehash: c1ef71dbc589cfdeac63b46d720c4bdd0a44dbaa
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8d1aaf8b61142155ea7b2a5391367cc677596ebe
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59815404"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66435604"
 ---
-#<a name="what-is-server-core-2008"></a>Server Core 2008 란?
+# <a name="what-is-server-core-2008"></a>Server Core 2008 란?
 >적용 대상: Windows Server 2008
 
 >[!NOTE]
@@ -24,6 +24,7 @@ Server Core 옵션에는 Windows Server 2008 Standard, Enterprise 또는 Datacen
 본론으로 들어가기 전에 모든, "설치 옵션" 라는 문구를 설명 해야 합니다. 일반적으로 Windows Server 2008의 복사본을 구매 하면 특정 버전 또는 재고 관리 단위 (Sku)를 사용할 라이선스를 구입 합니다. 표 1-1 사용할 수 있는 다양 한 Windows Server 2008 버전을 나열 합니다. 또한 표에서 각 버전에 사용할 수 있는 설치 옵션 (전체, Server Core 또는 둘 다).
 
 **표 1-1** Windows Server 2008 버전 및 설치 옵션에 대 한 지원을
+
 | 버전       | 전체          | Server Core  |
 | ------------- | :-------------: | :------------: |
 | Windows Server 2008 Standard (x86 및 x64)       | X | X        |
@@ -44,14 +45,14 @@ Server Core 옵션에는 Windows Server 2008 Standard, Enterprise 또는 Datacen
 
 그림 1-1, 볼륨 라이선스 (또는 일반 정품 미디어에 대 한 제품 키) 사용 하면 두 가지 설치 옵션 중에서 선택할 수 있습니다: 두 번째 옵션 (을 전체 설치의 Windows Server 2008 Enterprise) 및 다섯 번째 옵션 (한 Server Core 설치의 Windows Server 2008 Enterprise의 경우)이이 예제에서 선택한 후자를 사용 하 여 합니다. 
 
-##<a name="full-vs-server-core"></a>완전 트랜잭션 내구성과 Server Core 
+## <a name="full-vs-server-core"></a>완전 트랜잭션 내구성과 Server Core 
 Microsoft Windows 플랫폼의 초기 시절 Windows 서버 된 기본적으로 "모든" 기능을 일부는 사용할 수 있습니다 실제로 네트워킹 환경에서 모든 종류를 포함 하는 서버입니다. 예를 들어 시스템에서 Windows Server 2003을 설치할 때 라우팅 및 원격 액세스 서비스 (RRAS)에 대 한 이진 파일 설치 된 서버에서이 서비스에 대 한 필요가 없습니다 (하지만 여전히 구성 하 고 작동 하는 전에 RRAS를 사용 하도록 설정 해야) 해야 하는 경우에 합니다. Windows Server 2008 서버에서 해당 역할을 설치 하도록 선택한 경우에 서버 역할에 따라 필요한 이진 파일을 설치 하 여 이전 버전을 개선 합니다. 그러나 Windows Server 2008 전체 설치 옵션을 여러 서비스 및 기타 구성 요소를 특정 사용 시나리오에 필요한 수 없는 경우가 많습니다 계속 설치 합니다. 
 
 Microsoft는 두 번째 설치 옵션을 생성 하는 이유는-Server Core-Windows Server 2008: 일반적으로 사용 되는 서버 역할의 특정 지원이 반드시 필요 하지 않은 다른 기능과 서비스를 제거 하려면. 예를 들어, 도메인 이름 시스템 (DNS) 서버를 실제로 필요 하지 않습니다 보안상의 이유로 DNS 서버에서 웹 사이트를 탐색 하려고 하기 때문에 설치 된 Windows Internet Explorer. DNS 서버를 그래픽 사용자 인터페이스 (GUI)도 필요 하지 않습니다, 그리고 DNS의 거의 모든 측면을 관리할 수 때문에 강력한 Dnscmd.exe 명령을 사용 하거나 DNS Microsoft Management Console (MMC)를 사용 하 여 명령줄에서 스냅인.
 
 이 방지 하려면 Microsoft Active Directory Domain Services (AD DS), DNS, 동적 호스트 구성 프로토콜 (DHCP), 파일 및 인쇄와 같은 핵심 네트워크 서비스를 실행 하는 데 반드시 필요 하지는 Windows Server 2008의 모든 항목을 제거 하기로 및 다른 몇 가지 서버 역할입니다. 결과 새로운 Server Core 설치 옵션을 제한 된 수의 역할 및 기능을 지 원하는 서버를 만드는 데 사용할 수 있습니다. 
 
-##<a name="the-server-core-gui"></a>Server Core GUI
+## <a name="the-server-core-gui"></a>Server Core GUI
 처음에 대 한 시스템 및 로그온에 Server Core 설치를 완료 하면 관심이 다소의 외에 대 한 합니다. 그림 1-2 첫 번째 로그온 후 Server Core 사용자 인터페이스를 보여 줍니다.
 
 ![Server Core 사용자 인터페이스](../media/what-is-server-core-2008/Fig1-2.png)
@@ -69,6 +70,7 @@ Netsh.exe, Dfscmd.exe, 등 Dnscmd.exe 명령줄 도구를 사용 하 여 전문�
 표 1-2는 Server Core 설치에서 사용할 수 있는 해당 실행 개체와 함께 기본 GUI 응용 프로그램을 나열 합니다.
 
 **표 1-2** Server Core 설치에서 사용할 수 있는 GUI 응용 프로그램
+
 | GUI 응용 프로그램 | 경로 사용 하 여 실행 파일 |
 | -------------   | -------------       | 
 | 명령 프롬프트 | %WINDIR%\System32\Cmd.exe |
@@ -93,10 +95,11 @@ Netsh.exe, Dfscmd.exe, 등 Dnscmd.exe 명령줄 도구를 사용 하 여 전문�
 >[!NOTE]
 >Windows PowerShell에서.NET Framework를 필요로 하므로 Server Core에 Windows PowerShell을 설치할 수 없습니다. 그러나으로 PowerShell WMI 명령을 사용 하 여 Windows PowerShell을 사용 하 여 원격으로 Server Core 설치를 관리할 수 있습니다.
 
-##<a name="supported-server-roles"></a>지원 되는 서버 역할 
+## <a name="supported-server-roles"></a>지원 되는 서버 역할 
 Server Core 설치에는 제한 된 수의 Windows Server 2008 전체 설치와 비교 하는 서버 역할의 포함 됩니다. 표 1-3는 Windows Server 2008 Enterprise Edition의 전체 및 Server Core 설치에 사용 가능한 역할을 비교합니다. 
 
 **표 1-3** Windows Server 2008 Enterprise Edition의 전체 및 Server Core 설치에 대 한 서버 역할의 비교
+
 | 서버 역할  | 전체 설치에서 사용 가능  | Server Core에서 사용할 수 있습니다.  |
 | ------------- | :-------------: | :------------: |
 | AD CS(Active Directory 인증서 서비스)  | X |  |
@@ -124,7 +127,7 @@ Server Core에 대 한 사용 가능한 역할은 일반적으로 아키텍처 (
 * Server Core에서 스트리밍 미디어 서비스 역할을 설치할 수 있습니다, 전에 해야 패키지 다운로드 및 설치는 적절 한 Microsoft 업데이트 독립 실행형 (.msu 파일) (x86 또는 x64) 서버의 아키텍처에 대 한 Microsoft 다운로드 센터에서 합니다.
 * 웹 서버 (IIS) 역할에서 ASP.NET을 지원 하지 않습니다. 즉,.NET Framework는 Server Core 웹 서버를 사용 하 여 수행할 수 있는 작업을 제한 하는 Server core에서 지원 되지 않습니다. 
 
-##<a name="supported-optional-features"></a>지원 되는 선택적 기능
+## <a name="supported-optional-features"></a>지원 되는 선택적 기능
 Server Core 설치는 또한 Windows Server 2008 전체 설치에 사용할 수 있는 기능의 제한 된 하위 집합만 지원합니다. 표 1-4는 Windows Server 2008 Enterprise Edition의 전체 및 Server Core 설치에 사용할 수 있는 기능을 비교합니다.
 
 **표 1-4** Windows Server 2008 Enterprise Edition의 전체 및 Server Core 설치에 대 한 기능 비교
@@ -171,7 +174,7 @@ Server Core 설치는 또한 Windows Server 2008 전체 설치에 사용할 수 
 * 일부 기능은 Server Core에 제대로 (또는 모든) 함수를 특수 한 하드웨어가 필요할 수 있습니다. 이러한 기능에는 BitLocker 드라이브 암호화, 장애 조치 클러스터링, 다중 경로 IO, 네트워크 부하 분산 및 이동식 저장소 포함 됩니다. 
 * 장애 조치 클러스터링은 Standard Edition에서 사용할 수 없습니다.
 
-##<a name="server-core-architecture"></a>Server Core 아키텍처
+## <a name="server-core-architecture"></a>Server Core 아키텍처
 자세히 살펴보기 Server Core를 간단히 살펴보겠습니다 Windows Server 2008의 Server Core 설치의 아키텍처는 전체 설치와 비교 하 여 합니다. 먼저 Server Core 설치 옵션을 시스템에 Windows Server 2008을 설치할 때 선택할 수 있는 단순히 Windows Server 2008의 다른 버전이 아닙니다 해야 합니다. 이것은 다음을 의미합니다.
 * Server Core 설치에서 커널 같은 동일한 하드웨어 아키텍처 (예: x86 또는 x64) 및 버전의 전체 설치에서 찾을 수입니다. 
 * 이진 파일을 Server Core 설치에 있는 경우 동일한 하드웨어 아키텍처 (예: x86 또는 x64) 및 버전의 전체 설치에는 특정 이진 파일의 동일한 버전 (뒷부분에서 설명 하는 두 개의 예외) 포함 
@@ -185,7 +188,7 @@ Server Core 설치는 또한 Windows Server 2008 전체 설치에 사용할 수 
 
 **그림 1-3** Server Core 및 전체 설치의 아키텍처
 
-##<a name="driver-support"></a>드라이버 지원
+## <a name="driver-support"></a>드라이버 지원
 그림 1-3에서 표시 하는 Server Core의 아키텍처 다이어그램 분명히 간단 합니다. 표시 되지 않지만 것의 차이점은 장치 드라이버 지원에 Server Core 및 전체 설치 합니다. Windows Server 2008 전체 설치에는 수천 개의 다른 종류의 다양 한 다른 하드웨어 구성에 제품을 설치할 수 있도록 하는 장치에 대 한 기본 드라이버 포함 되어 있습니다. (Windows Vista 클라이언트 운영 체제는 디지털 카메라 및 서버를 사용 하 여 일반적으로 사용 되는 스캐너와 같은 장치를 지원 하기 위해 더 많은 드라이버를 포함 합니다.) 
 
 새 장치에 연결 (인지에 설치 된)의 Windows Server 2008 전체 설치를 플러그 앤 플레이 (PnP) 하위 시스템은 먼저 있는지 여부를 장치에 대 한 기본 드라이버를가 있는지 확인 합니다. 호환 되는 기본 드라이버 있으면 PnP 하위 시스템은 자동으로 장치와 드라이버를 설치한 다음이 작동 합니다. Windows Server 2008 전체 설치에서 풍선 팝업 알림이 표시 될 수 있습니다, 드라이버 설치가 완료 된 후 장치가 사용할 준비가 되 고 나타내는입니다. 
@@ -201,14 +204,14 @@ Server Core 설치에서 드라이버 설치 프로세스 (PnP 하위 시스템�
 
 따라서 어떻게 해야 하나요 Server Core 설치에 인쇄 서비스 역할을 추가 하 고 프린터를 설치 하 시겠습니까? 프린터 드라이버를 수동으로 추가 하면 서버에, Server Core에 상자에서 인쇄 드라이버가 없습니다.
 
-##<a name="service-footprint"></a>서비스 공간
+## <a name="service-footprint"></a>서비스 공간
 Server Core 최소 설치 되므로, 동일한 하드웨어 아키텍처 및 버전을 해당 전체 설치 보다 적은 시스템 서비스 사용을 있습니다. 예를 들어, 약 75 대의 시스템 서비스는 약 50 자동으로 시작 되도록 구성 되는 Windows Server 2008 전체 설치에 기본적으로 설치 됩니다. 반면, Server Core에 자동으로 이러한 시작 40 개 미만의 기본적으로 설치 하는 약 70만 서비스가 있습니다. 
 
 표 1-5의 시작 모드를 사용 하 여 Server Core 설치에서 기본적으로 설치 되는 서비스를 나열 하 고 각 서비스에서 사용 하는 계정 키를 누릅니다.
 
 **표 1-5** 기본적으로 Server Core에 설치 하는 시스템 서비스
 
-| 서비스 이름  | 표시 이름  | 시작 모드  | 계정  |
+| 서비스 이름  | Display name  | 시작 모드  | 계정  |
 | ------------- | ------------- | ------------ | ------------ |
 | AeLookupSvc  | 응용 프로그램 환경  | 자동 | LocalSystem |
 | AppMgmt  | 응용 프로그램 관리  | 수동 | LocalSystem |

@@ -13,12 +13,12 @@ author: brentfor
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 095cd2ad799857b789943b4f477aa9e6a8c3ae50
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 506072251b77362f3dc35faa0c976f396f7f6034
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59815184"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66435487"
 ---
 # <a name="manage-software-inventory-logging"></a>소프트웨어 인벤토리 로깅 관리
 
@@ -97,7 +97,7 @@ SIL 로깅을 시작하려면 몇 가지 계획 및 예측이 필요하지만 �
 소프트웨어 인벤토리 로깅 일별 수집 및 네트워크를 통한 전달 소프트웨어 인벤토리를 기록 하려면 Windows Server 2012 R2를 실행 하는 컴퓨터에서 사용할 수 있어야 합니다.  
   
 > [!NOTE]  
->  **[Get-SilLogging](https://technet.microsoft.com/library/dn283396.aspx)** PowerShell cmdlet을 사용하여 실행 또는 중지 여부 등 소프트웨어 인벤토리 로깅 서비스에 대한 정보를 검색할 수 있습니다.  
+> **[Get-SilLogging](https://technet.microsoft.com/library/dn283396.aspx)** PowerShell cmdlet을 사용하여 실행 또는 중지 여부 등 소프트웨어 인벤토리 로깅 서비스에 대한 정보를 검색할 수 있습니다.  
   
 #### <a name="to-start-software-inventory-logging"></a>소프트웨어 인벤토리 로깅을 시작하려면  
   
@@ -121,7 +121,7 @@ SIL 로깅을 시작하려면 몇 가지 계획 및 예측이 필요하지만 �
 ## <a name="configuring-software-inventory-logging"></a>소프트웨어 인벤토리 로깅 구성  
 시간에 따라 집계 서버로 데이터를 전달하도록 소프트웨어 인벤토리 로깅을 구성하는 단계는 다음과 같이 세 가지입니다.  
   
-1.  사용 하 여 **Set-sillogging – TargetUri** ("https://?로 시작 해야 함) 하 여 집계 서버의 웹 주소를 지정 합니다.  
+1.  사용 하 여 **Set-sillogging – TargetUri** ("https://"로 시작 해야 함) 하 여 집계 서버의 웹 주소를 지정 합니다.  
   
 2.  **Set-SilLogging –CertificateThumbprint** 를 사용하여 집계 서버로의 데이터 전송을 인증하는 데 사용할 유효한 SSL 인증서의 지문 해시를 지정합니다(해시를 허용하도록 집계 서버를 구성해야 함).  
   
@@ -140,17 +140,17 @@ SIL 프레임워크 설정 전반에 대한 포괄적인 가이드는 [Software 
 ## <a name="BKMK_Step3"></a>소프트웨어 인벤토리 로깅 데이터를 표시합니다.  
 이전 섹션에서 설명한 PowerShell cmdlet 외에도 6가지 추가 cmdlet을 사용하여 소프트웨어 인벤토리 로깅 데이터를 수집할 수 있습니다.  
   
--   **[Get-SilComputer](https://technet.microsoft.com/library/dn283392.aspx)**: 사용 가능한 경우 특정 서버와 운영 체제 관련된 데이터뿐만 아니라 FQDN 또는 실제 호스트의 호스트 이름에 대한 특정 시점의 값을 표시합니다.  
+-   **[Get-SilComputer](https://technet.microsoft.com/library/dn283392.aspx)** : 사용 가능한 경우 특정 서버와 운영 체제 관련된 데이터뿐만 아니라 FQDN 또는 실제 호스트의 호스트 이름에 대한 특정 시점의 값을 표시합니다.  
   
--   **[Get-silcomputeridentity (KB 3000850)](https://technet.microsoft.com/library/dn858074.aspx)**: SIL에서 개별 서버에 대해 사용하는 식별자를 표시합니다.  
+-   **[Get-silcomputeridentity (KB 3000850)](https://technet.microsoft.com/library/dn858074.aspx)** : SIL에서 개별 서버에 대해 사용하는 식별자를 표시합니다.  
   
--   **[Get-SilData](https://technet.microsoft.com/library/dn283388.aspx)**: 모든 소프트웨어 인벤토리 로깅 데이터의 특정 시점 컬렉션을 표시합니다.  
+-   **[Get-SilData](https://technet.microsoft.com/library/dn283388.aspx)** : 모든 소프트웨어 인벤토리 로깅 데이터의 특정 시점 컬렉션을 표시합니다.  
   
--   **[Get-SilSoftware](https://technet.microsoft.com/library/dn283397.aspx)**: 컴퓨터에 설치된 모든 소프트웨어의 특정 시점 ID를 표시합니다.  
+-   **[Get-SilSoftware](https://technet.microsoft.com/library/dn283397.aspx)** : 컴퓨터에 설치된 모든 소프트웨어의 특정 시점 ID를 표시합니다.  
   
--   **[Get-SilUalAccess](https://technet.microsoft.com/library/dn283389.aspx)**: 지난 2일 동안 서버의 클라이언트 사용자 요청 및 고유 클라이언트 장치 요청의 총 수를 표시합니다.  
+-   **[Get-SilUalAccess](https://technet.microsoft.com/library/dn283389.aspx)** : 지난 2일 동안 서버의 클라이언트 사용자 요청 및 고유 클라이언트 장치 요청의 총 수를 표시합니다.  
   
--   **[Get-SilWindowsUpdate](https://technet.microsoft.com/library/dn283393.aspx)**: 컴퓨터에 설치된 모든 Windows 업데이트의 특정 시점 목록을 표시합니다.  
+-   **[Get-SilWindowsUpdate](https://technet.microsoft.com/library/dn283393.aspx)** : 컴퓨터에 설치된 모든 Windows 업데이트의 특정 시점 목록을 표시합니다.  
   
 소프트웨어 인벤토리 로깅 cmdlet의 일반적인 사용 사례 시나리오는 관리자가 [Get-SilSoftware](https://technet.microsoft.com/library/dn283397.aspx)를 통해 소프트웨어 인벤토리 로깅을 쿼리하여 모든 소프트웨어 인벤토리 로깅 데이터의 특정 시점 컬렉션을 얻는 것입니다.  
   
@@ -206,13 +206,13 @@ SystemManufacturer        : Microsoft Corporation
   
 #### <a name="to-delete-data-logged-by-software-inventory-logging"></a>소프트웨어 인벤토리 로깅에 의해 기록된 데이터를 삭제하려면  
   
-1.  PowerShell에서 **[Stop-SilLogging](https://technet.microsoft.com/library/dn283394.aspx)** 명령을 사용하여 소프트웨어 인벤토리 로깅을 중지합니다.  
+1. PowerShell에서 **[Stop-SilLogging](https://technet.microsoft.com/library/dn283394.aspx)** 명령을 사용하여 소프트웨어 인벤토리 로깅을 중지합니다.  
   
-2.  Windows 탐색기를 엽니다.  
+2. Windows 탐색기를 엽니다.  
   
-3.  으로 이동 **\Windows\System32\Logfiles\SIL\**  
+3. 로 **\Windows\System32\Logfiles\SIL\\**  
   
-4.  폴더의 모든 파일을 삭제합니다.  
+4. 폴더의 모든 파일을 삭제합니다.  
   
 ## <a name="BKMK_Step5"></a>백업 및 소프트웨어 인벤토리 로깅에 의해 기록 된 데이터를 복원 합니다.  
 네트워크를 통한 전달이 실패한 경우 소프트웨어 인벤토리 로깅은 데이터의 시간별 컬렉션을 일시적으로 저장합니다. 로그 파일은 \Windows\System32\LogFiles\SIL\ 디렉터리에 저장됩니다. 이 소프트웨어 인벤토리 로깅 데이터의 백업은 정기적 서버 백업 일정에 따라 수행할 수 있습니다.  
@@ -237,9 +237,9 @@ Windows Server에 로컬로 저장된 데이터(기능이 시작되었지만 어
   
 -   [Set-SilLogging](https://technet.microsoft.com/library/dn283387.aspx) -TimeOfDay를 사용하여 SIL 로깅이 실행되는 시간을 설정하려면 날짜 및 시간을 지정해야 합니다. 달력 날짜가 설정되고 로컬 시스템 시간으로 해당 날짜가 될 때까지 로깅이 발생하지 않습니다.  
   
--   사용 하는 경우 [Get-silsoftware](https://technet.microsoft.com/library/dn283397.aspx), 또는 [Get-silwindowsupdate](https://technet.microsoft.com/library/dn283393.aspx), "InstallDate? 의미 없는 값인 오전 12시: 00 항상 표시 됩니다.  
+-   사용 하는 경우 [Get-silsoftware](https://technet.microsoft.com/library/dn283397.aspx), 또는 [Get-silwindowsupdate](https://technet.microsoft.com/library/dn283393.aspx), "InstallDate"가 항상 의미 없는 값인 오전 12시: 00 표시 합니다.  
   
--   사용 하는 경우 [Get-silualaccess](https://technet.microsoft.com/library/dn283389.aspx), "SampleDate? 의미 없는 값인 오후 11시 59분: 00 항상 표시 됩니다.  날짜는 이러한 cmdlet 쿼리와 관련된 데이터입니다.  
+-   사용 하는 경우 [Get-silualaccess](https://technet.microsoft.com/library/dn283389.aspx), "SampleDate" 의미 없는 값인 오후 11시 59분: 00 항상 표시 됩니다.  날짜는 이러한 cmdlet 쿼리와 관련된 데이터입니다.  
   
 ## <a name="BKMK_Step10"></a>사용 하도록 설정 하 고 탑재 된 가상 하드 디스크에서 소프트웨어 인벤토리 로깅 구성  
 소프트웨어 인벤토리 로깅은 오프라인 가상 컴퓨터에서의 구성 및 사용도 지원합니다. 실제적으로는 데이터 센터 전체 배포를 위한 '골드 이미지' 설치와, 프레미스에서 클라우드 배포로의 최종 사용자 이미지 구성에 사용하기 위해 만들어졌습니다.  
@@ -256,11 +256,11 @@ Windows Server에 로컬로 저장된 데이터(기능이 시작되었지만 어
   
 오프라인 VHD(실행 중이 아닌 VM OS)에서 이러한 값을 수정하려면 VHD를 먼저 탑재하고 다음 명령을 사용하여 변경해야 합니다.  
   
--   [Reg 부하](https://technet.microsoft.com/library/cc742053.aspx)  
+-   [Reg load](https://technet.microsoft.com/library/cc742053.aspx)  
   
 -   [Reg delete](https://technet.microsoft.com/library/cc742145.aspx)  
   
--   [Reg 추가](https://technet.microsoft.com/library/cc742162.aspx)  
+-   [Reg add](https://technet.microsoft.com/library/cc742162.aspx)  
   
 -   [Reg unload](https://technet.microsoft.com/library/cc742043.aspx)  
   
@@ -297,7 +297,7 @@ SIL 로깅 사용 하 여 VM 시작 콘솔 같습니다 (훨씬 간략) 하나�
   
 ## <a name="see-also"></a>관련 항목  
 [시작 소프트웨어 인벤토리 로깅](get-started-with-software-inventory-logging.md)  
-[Software Inventory Logging Aggregator](software-inventory-logging-aggregator.md)  
+[소프트웨어 인벤토리 로깅 집계](software-inventory-logging-aggregator.md)  
 [Windows PowerShell의 소프트웨어 인벤토리 로깅 Cmdlet](https://technet.microsoft.com/library/dn283390.aspx)  
 [Import-BinaryMiLog](https://technet.microsoft.com/library/dn262592.aspx)  
 [Export-BinaryMiLog](https://technet.microsoft.com/library/dn262591.aspx)  

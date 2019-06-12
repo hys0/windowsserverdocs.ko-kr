@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4aa041c27b1797e7d00476212887a7dc6dbc1880
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b2dd62e34f8205e0b5d395ba759fff4b4937b0ad
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59889064"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66435046"
 ---
 # <a name="bdehdcfg-driveinfo"></a>bdehdcfg: driveinfo
 
@@ -30,9 +30,11 @@ ms.locfileid: "59889064"
 bdehdcfg -driveinfo <DriveLetter>
 ```
 ### <a name="parameters"></a>매개 변수
-|매개 변수|설명|
-|-------|--------|
-|<DriveLetter>|드라이브 문자 뒤에 콜론으로 지정 합니다.|
+
+|   매개 변수   |                  설명                  |
+|---------------|-----------------------------------------------|
+| <DriveLetter> | 드라이브 문자 뒤에 콜론으로 지정 합니다. |
+
 ## <a name="remarks"></a>설명
 이 명령은 정보 제공 용 이므로 이며은 드라이브를 수정 하지 않습니다.
 ## <a name="BKMK_Examples"></a>예제

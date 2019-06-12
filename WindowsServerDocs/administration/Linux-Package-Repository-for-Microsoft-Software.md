@@ -11,12 +11,12 @@ ms.assetid: b5387444-595f-4f38-abb7-163a70ea1895
 author: szarkos
 ms.author: szark
 ms.date: 10/16/2017
-ms.openlocfilehash: dbdbd0f436645f7e19c07e4f3278c5073636a547
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.openlocfilehash: 3b4feb6b8b3dad5c34de92f634eb30d0e952fe76
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59831864"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66435769"
 ---
 # <a name="linux-software-repository-for-microsoft-products"></a>Microsoft 제품용 Linux 소프트웨어 리포지토리에서
 
@@ -29,8 +29,8 @@ Microsoft의 Linux 소프트웨어 리포지토리에서 여러 하위 저장소
 
  - mssql-server-이러한 리포지토리 패키지를 포함 Microsoft SQL Server Linux-참조에 대 한도: [Linux의 SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-vnext-including-Linux)합니다.
 
->[!Note]
-Linux 소프트웨어 리포지토리에서 패키지를 패키지에 있는 사용 조건에 적용 됩니다. 패키지를 사용 하기 전에 사용 약관을 참조 하세요. 설치를 사용 하 여 패키지의 이러한 약관 수락 하는 것입니다. 사용 조건에 동의 하지 않는 경우에 패키지를 사용 하지 마십시오.
+> [!Note]
+> Linux 소프트웨어 리포지토리에서 패키지를 패키지에 있는 사용 조건에 적용 됩니다. 패키지를 사용 하기 전에 사용 약관을 참조 하세요. 설치를 사용 하 여 패키지의 이러한 약관 수락 하는 것입니다. 사용 조건에 동의 하지 않는 경우에 패키지를 사용 하지 마십시오.
 
 
 ## <a name="configuring-the-repositories"></a>리포지토리 구성

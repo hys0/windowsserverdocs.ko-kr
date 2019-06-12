@@ -1,23 +1,23 @@
 ---
 title: MBR(마스터 부트 레코드)을 GPT(GUID 파티션 테이블) 디스크로 변경
 description: MBR(마스터 부트 레코드)을 GPT(GUID 파티션 테이블) 디스크로 변경하는 방법을 설명합니다.
-ms.date: 06/19/2018
+ms.date: 06/07/2019
 ms.prod: windows-server-threshold
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: f6aba72c329ba380f9617f484c4cf754fbcbb363
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 902a845bbe6a7e2a4d811aac0ea2990fb3557832
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66192732"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812458"
 ---
 # <a name="convert-an-mbr-disk-into-a-gpt-disk"></a>MBR 디스크를 GPT 디스크로 변환
 
-> **적용 대상:** Windows 10, Windows 8.1, Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> **적용 대상:** Windows 10, Windows 8.1, Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 MBR(마스터 부트 레코드) 디스크는 표준 BIOS 파티션 테이블을 사용합니다. GPT(GUID 파티션 테이블) 디스크는 UEFI(Unified Extensible Firmware Interface)를 사용합니다. GPT 디스크의 한 가지 장점은 각 디스크에 4개 이상의 파티션을 보유할 수 있다는 점입니다. 2TB(테라바이트)보다 큰 디스크에 대해서는 GPT가 필요합니다.
 
@@ -59,7 +59,7 @@ MBR(마스터 부트 레코드) 디스크는 표준 BIOS 파티션 테이블을 
 7.  **DISKPART** 프롬프트에서 `convert gpt`을 입력합니다.
 
 | 값  | 설명  |
-| ----- | ----|
+| ----- | ---- |
 | **디스크 목록** | 디스크의 목록과 크기, 사용 가능한 공간 크기, 기본 또는 동적 디스크 여부, 디스크의 MBR(마스터 부트 레코드) 또는 GPT(GUID 파티션 테이블) 파티션 스타일 사용 여부 등 정보를 표시합니다. 별표(*)가 표시된 디스크는 포커스가 설정됩니다. |
 | **디스크 선택** *disknumber* | 디스크 번호가 *disknumber*인 지정된 디스크를 선택하고 포커스를 설정합니다. |
 | **clean** | 포커스가 설정된 디스크에서 모든 파티션 또는 볼륨을 삭제합니다.  |
@@ -68,5 +68,3 @@ MBR(마스터 부트 레코드) 디스크는 표준 BIOS 파티션 테이블을 
 ## <a name="see-also"></a>관련 항목
 
 -   [명령줄 구문 표기법](https://technet.microsoft.com/library/cc742449(v=ws.11).aspx)
-
-

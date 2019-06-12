@@ -7,12 +7,12 @@ ms.topic: article
 ms.author: Asmahi; SandySp; JoPoulso
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 2a49fdaba89a01c8daf6483f72dbc88daa91452b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f16ee9cff9c244a8c579e008bced1e90b1a20673
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59843244"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66435594"
 ---
 # <a name="hyper-v-processor-performance"></a>하이퍼-V 프로세서 성능
 
@@ -69,20 +69,20 @@ Microsoft SQL Server는 NUMA 인식 응용 프로그램의 예입니다. 자세�
 
 가상 NUMA에 대 한 자세한 내용은 참조 하세요. [Hyper-v 가상 NUMA 개요](https://technet.microsoft.com/library/dn282282.aspx)합니다.
 
-##<a name="see-also"></a>참조
+## <a name="see-also"></a>참조
 
--   [Hyper-v 용어](terminology.md)
+-   [Hyper-V 용어](terminology.md)
 
--   [Hyper-v 아키텍처](architecture.md)
+-   [Hyper-V 아키텍처](architecture.md)
 
--   [Hyper-v 서버-구성](configuration.md)
+-   [Hyper-V 서버 구성](configuration.md)
 
--   [Hyper-v 메모리 성능](memory-performance.md)
+-   [Hyper-V 메모리 성능](memory-performance.md)
 
--   [Hyper-v 저장소 I/O 성능](storage-io-performance.md)
+-   [Hyper-V 스토리지 I/O 성능](storage-io-performance.md)
 
--   [Hyper-v 네트워크 I/O 성능](network-io-performance.md)
+-   [Hyper-V 네트워크 I/O 성능](network-io-performance.md)
 
--   [가상화 된 환경에서 병목 상태를 검색합니다.](detecting-virtualized-environment-bottlenecks.md)
+-   [가상화된 환경의 병목 상태 탐지](detecting-virtualized-environment-bottlenecks.md)
 
 -   [Linux Virtual Machines](linux-virtual-machine-considerations.md)

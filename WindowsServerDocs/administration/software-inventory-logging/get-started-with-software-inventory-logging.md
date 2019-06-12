@@ -13,12 +13,12 @@ author: brentfor
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5a3e51effa6321c3575e385f1c56bba57318eca5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6944eac179c605db6c7b6f3e08f87c2329fb777f
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59822834"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66435370"
 ---
 # <a name="get-started-with-software-inventory-logging"></a>시작 소프트웨어 인벤토리 로깅
 
@@ -45,8 +45,8 @@ Windows Server의 소프트웨어 인벤토리 로깅은 서버 관리자가 서
 -   각 서버의 소프트웨어 인벤토리 로깅 기능을 사용하도록 설정하고 웹 서버 대상 URI 및 인증을 위한 인증서 지문을 선택하여 광범위한 소프트웨어 자산 관리 시나리오를 위한 소프트웨어 및 서버 인벤토리 정보 집계
 
 ## <a name="see-also"></a>관련 항목
-[Software Inventory Logging Aggregator](https://technet.microsoft.com/library/mt572043.aspx)<br>
-[관리 소프트웨어 인벤토리 로깅](manage-software-inventory-logging.md)<br>
+[소프트웨어 인벤토리 로깅 집계](https://technet.microsoft.com/library/mt572043.aspx)<br>
+[소프트웨어 인벤토리 로깅 관리](manage-software-inventory-logging.md)<br>
 [Windows PowerShell의 소프트웨어 인벤토리 로깅 Cmdlet](https://technet.microsoft.com/library/dn283390.aspx)<br>
 [Microsoft Assessment and Planning Toolkit](https://www.microsoft.com/download/en/details.aspx?id=7826)
 [Volume Activation Management Tool](http://blogs.technet.com/b/volume-licensing/)

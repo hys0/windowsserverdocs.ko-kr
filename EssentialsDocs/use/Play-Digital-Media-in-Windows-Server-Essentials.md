@@ -12,12 +12,12 @@ ms.assetid: 5f570492-ee21-471b-92c1-3fd9bfb84f55
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 8228d0b17a58858ed893181ddceb465715ffdeb5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f38d234768d40903615145954f1215546119344a
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59874104"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66435944"
 ---
 # <a name="play-digital-media-in-windows-server-essentials"></a>Windows Server Essentials에서 디지털 미디어 재생
 
@@ -190,25 +190,25 @@ ms.locfileid: "59874104"
   
 #### <a name="to-play-shared-media-files-when-you-are-away-from-the-network"></a>네트워크에서 멀리 있을 때 공유 미디어 파일을 재생하려면  
   
-1.  인터넷 브라우저를 엽니다.  
+1. 인터넷 브라우저를 엽니다.  
   
-2.  원격 웹 액세스 웹 사이트로 이동합니다. 형식 **https://<YourDomainName\>/원격** 한 다음 Enter 키를 눌러 확인 하 고 인터넷 브라우저의 주소 표시줄에 있습니다.  
+2. 원격 웹 액세스 웹 사이트로 이동합니다. 형식 **https://<YourDomainName\>/원격** 한 다음 Enter 키를 눌러 확인 하 고 인터넷 브라우저의 주소 표시줄에 있습니다.  
   
-    > [!NOTE]
-    >  *< YourDomainName\>*  자리 표시자입니다. 입력할 주소 모양은 이므로 서버에 고유한 이름이 됩니다 **https://contoso.com/remote**합니다. 도메인 이름을 잘 모르면 서버에서 원격 액세스 기능이 설정될 때 도메인 이름을 선택한 관리자에게 문의하세요. 자세한 내용은 [Turn on Remote Web Access](../manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_TurnOnRWA)를 참조하세요.  
+   > [!NOTE]
+   >  *< YourDomainName\>*  자리 표시자입니다. 입력할 주소 모양은 이므로 서버에 고유한 이름이 됩니다 **https://contoso.com/remote** 합니다. 도메인 이름을 잘 모르면 서버에서 원격 액세스 기능이 설정될 때 도메인 이름을 선택한 관리자에게 문의하세요. 자세한 내용은 [Turn on Remote Web Access](../manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_TurnOnRWA)를 참조하세요.  
   
-3.  원격 웹 액세스 로그인 페이지에서 사용자 계정 이름과 암호를 입력하고 화살표를 클릭합니다.  
+3. 원격 웹 액세스 로그인 페이지에서 사용자 계정 이름과 암호를 입력하고 화살표를 클릭합니다.  
   
-4.  원하는 방법으로 재생할 미디어 파일을 검색합니다.  
+4. 원하는 방법으로 재생할 미디어 파일을 검색합니다.  
   
-    > [!NOTE]
+   > [!NOTE]
+   > 
+   >  다양 한에 대 한 정보에 대 한 검색 방법, 참조 [검색 하는 컴퓨터 또는 디지털 media player 네트워크에서의 Windows Server Essentials의 미디어 파일 재생](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_2.1)합니다.  
+   > 
+   >  다양 한에 대 한 정보에 대 한 검색 방법, 참조 [검색 하는 컴퓨터 또는 디지털 media player 네트워크에서의 Windows Server Essentials의 미디어 파일 재생](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_2.1)합니다.  
 
-    >  다양 한에 대 한 정보에 대 한 검색 방법, 참조 [검색 하는 컴퓨터 또는 디지털 media player 네트워크에서의 Windows Server Essentials의 미디어 파일 재생](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_2.1)합니다.  
-
-    >  다양 한에 대 한 정보에 대 한 검색 방법, 참조 [검색 하는 컴퓨터 또는 디지털 media player 네트워크에서의 Windows Server Essentials의 미디어 파일 재생](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_2.1)합니다.  
-
   
-5.  미디어 파일 이름이 나타나면 파일 이름을 클릭하여 미디어를 재생합니다.  
+5. 미디어 파일 이름이 나타나면 파일 이름을 클릭하여 미디어를 재생합니다.  
   
 ##  <a name="BKMK_4"></a> 서버에 디지털 미디어 파일 추가  
 
@@ -241,21 +241,21 @@ ms.locfileid: "59874104"
   
  다운로드 요구 사항에 맞는 다음 옵션을 선택합니다.  
   
--   **압축 된 ZIP 파일 (.zip)**  
+- **압축 된 ZIP 파일 (.zip)**  
   
-     파일을 압축하면 원본 파일보다 더 작은 압축 버전 파일이 생성됩니다. 압축 버전 파일에는 .zip 파일 이름 확장명이 있습니다. 압축으로 크기가 최대한 감소하는 파일 형식은 텍스트 기반 파일 형식(예: .txt, .doc, .xls) 및 압축되지 않은 파일 형식을 사용하는 그래픽 파일(예: .bmp)입니다. 일부 그래픽 파일(예: .jpg 및 .gif 파일)은 이미 압축을 사용하고 압축으로 파일 크기가 거의 감소하지 않습니다. 또한 많은 그래픽이 포함된 Word 문서는 대부분 텍스트인 문서만큼 크기가 많이 감소하지 않습니다.  
+   파일을 압축하면 원본 파일보다 더 작은 압축 버전 파일이 생성됩니다. 압축 버전 파일에는 .zip 파일 이름 확장명이 있습니다. 압축으로 크기가 최대한 감소하는 파일 형식은 텍스트 기반 파일 형식(예: .txt, .doc, .xls) 및 압축되지 않은 파일 형식을 사용하는 그래픽 파일(예: .bmp)입니다. 일부 그래픽 파일(예: .jpg 및 .gif 파일)은 이미 압축을 사용하고 압축으로 파일 크기가 거의 감소하지 않습니다. 또한 많은 그래픽이 포함된 Word 문서는 대부분 텍스트인 문서만큼 크기가 많이 감소하지 않습니다.  
   
-    > [!NOTE]
-    >  이 옵션은 국제 파일 이름에 대한 제한된 지원을 제공합니다.  
+  > [!NOTE]
+  >  이 옵션은 국제 파일 이름에 대한 제한된 지원을 제공합니다.  
   
--   **자동 압축 풀기 실행 파일 (.exe)**  
+- **자동 압축 풀기 실행 파일 (.exe)**  
   
-     자동 압축 풀기 실행 파일은 압축된 파일과 압축 풀기(실행 파일) 프로그램을 결합하는 다운로드할 수 있는 파일입니다. 실행 프로그램을 실행하면 압축된 파일의 압축이 자동으로 풀립니다. 이 방법은 받는 사람에게 적합한 압축 풀기 유틸리티가 있는지에 관계없이 압축된 데이터를 배포하는 일반적인 방법입니다.  
+   자동 압축 풀기 실행 파일은 압축된 파일과 압축 풀기(실행 파일) 프로그램을 결합하는 다운로드할 수 있는 파일입니다. 실행 프로그램을 실행하면 압축된 파일의 압축이 자동으로 풀립니다. 이 방법은 받는 사람에게 적합한 압축 풀기 유틸리티가 있는지에 관계없이 압축된 데이터를 배포하는 일반적인 방법입니다.  
   
-    > [!NOTE]
-    >  이 옵션은 유니코드 문자를 지원합니다.  
+  > [!NOTE]
+  >  이 옵션은 유니코드 문자를 지원합니다.  
   
- 실제 다운로드가 시작되기 전에 exe 또는 zip 파일이 생성됩니다. 다운로드되는 파일 개수 및 총 파일 크기에 따라 몇 분이 걸릴 수 있습니다. 다운로드 파일이 생성되고 나면 파일 다운로드는 백그라운드에서 수행됩니다. 따라서 다운로드 프로세스가 완료되는 동안 작업을 계속할 수 있습니다.  
+  실제 다운로드가 시작되기 전에 exe 또는 zip 파일이 생성됩니다. 다운로드되는 파일 개수 및 총 파일 크기에 따라 몇 분이 걸릴 수 있습니다. 다운로드 파일이 생성되고 나면 파일 다운로드는 백그라운드에서 수행됩니다. 따라서 다운로드 프로세스가 완료되는 동안 작업을 계속할 수 있습니다.  
   
 ##  <a name="BKMK_6"></a> 간편한 파일 업로드 도구  
  간편한 파일 업로드 도구는 Windows Server Essentials 서버의 파일을 업로드 하는 프로세스를 간소화 합니다. 간편한 파일 업로드 도구에 원하는 만큼 단일 일괄 처리는 Windows Server Essentials 서버의 공유 폴더에 업로드할 파일을 추가할 수 있습니다. 자세한 내용은 블로그 게시물 [원격 웹 액세스 파일 공유 이해](http://blogs.technet.com/b/sbs/archive/2012/04/19/understanding-remote-web-access-file-sharing.aspx)(영문)를 참조하세요.  

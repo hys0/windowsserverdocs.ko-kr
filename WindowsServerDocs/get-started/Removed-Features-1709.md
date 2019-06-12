@@ -13,12 +13,12 @@ author: jaimeo
 ms.author: jaimeo
 manager: dougkim
 ms.localizationpriority: medium
-ms.openlocfilehash: 28f6393d57daaa04c15aa7c56dacc2c4d65dc2a3
-ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
+ms.openlocfilehash: 37970f3bee2070cffc77bff855a8f28641196b24
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65976738"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66452862"
 ---
 # <a name="features-removed-or-planned-for-replacement-starting-with-windows-server-version-1709"></a>Windows Server, 버전 1709에서 제거되었거나 교체될 예정인 기능
 
@@ -29,7 +29,7 @@ ms.locfileid: "65976738"
 ## <a name="features-removed-from-windows-server-version-1709"></a>Windows Server, 버전 1709에서 제거된 기능
 Windows Server, 버전 1709에는 Windows Server 2016에 있는 동일한 기능이 포함되어 있습니다. 하지만 이 릴리스는 Windows Server 2016과는 다른 설치 옵션을 제공합니다.
 
-- 반기 채널 릴리스로서 Windows Server, 버전 1709는 Server Core 설치 옵션만을 제공합니다. 자세한 내용은 참조 하세요 [채널 서비스 비교](..\get-started-19\servicing-channels-19.md)합니다.
+- 반기 채널 릴리스로서 Windows Server, 버전 1709는 Server Core 설치 옵션만을 제공합니다. 자세한 내용은 참조 하세요 [채널 서비스 비교](../get-started-19/servicing-channels-19.md)합니다.
 - 이 릴리스부터 Nano 서버를 설치 가능한 호스트 운영 체제로 사용할 수 없습니다. 대신 Nano 서버는 컨테이너 운영 체제로 이용 가능합니다. [Windows Server, 버전 1709의 Nano 서버 변경 사항](nano-in-semi-annual-channel.md)을 참조하세요.
 - 이 릴리스부터 메시지 블록 (SMB (서버) 버전 1 더 이상 기본적으로 설치 됩니다. 자세한 내용은 참조 하세요 [SMBv1 Windows 10 Fall Creators Update 및 Windows Server, 버전 1709 이상 버전에서 기본적으로 설치 되지 않습니다](https://support.microsoft.com/help/4034314/smbv1-is-not-installed-by-default-in-windows)합니다.
 

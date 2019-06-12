@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 7aa09636f8c23678f003bfa5ebf8be164e7fc683
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 53b72459d497ac5d079336c2a00ba65634b2e3a6
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59879524"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66436328"
 ---
 # <a name="pnpunattend"></a>pnpunattend
 
@@ -43,12 +43,12 @@ PnPUnattend.exe auditSystem [/help] [/?] [/h] [/s] [/L]
 
 사전 준비가 필요 합니다. 이 명령을 사용 하기 전에 다음 작업을 완료 해야 합니다.
 
-1.  설치 하려는 드라이버에 대 한 디렉터리를 만듭니다. 예를 들어 있는 폴더를 만듭니다 **C:\Drivers\Video** 비디오 어댑터 드라이버에 대 한 합니다.
-2.  다운로드 하 고 장치에 대 한 드라이버 패키지를 추출 합니다. 운영 체제의 버전에 대 한 INF 파일이 포함 된 하위 폴더 및 하위 폴더의 내용을 사용자가 만든 비디오 폴더로 복사 합니다. 예를 들어 C:\Drivers\Video에 비디오 드라이버 파일을 복사 합니다.
-3.  예를 들어, 1 단계에서에서 만든 폴더를 path 시스템 환경 변수를 추가 **C:\Drivers\Video**합니다.
-4.  다음 레지스트리 키를 만듭니다 한 후는 **DriverPaths** 키를 만드는 설정 합니다 **값 데이터** 에 **1**.
--   에 대 한 Windows® 7 이동 레지스트리 경로: **하기 위해 HKEY_LOCAL_Machine\Software\Microsoft\Windows NT\CurrentVersion\** 를 만든 다음 키 및: **UnattendSettings\PnPUnattend\DriverPaths\**
--   Windows Vista에 대 한 레지스트리 경로 탐색: **HK_LM\Software\Microsoft\Windows 찾습니다\** 를 만든 다음 키 및 = **\UnattendSettings\PnPUnattend\DriverPaths** .
+1. 설치 하려는 드라이버에 대 한 디렉터리를 만듭니다. 예를 들어 있는 폴더를 만듭니다 **C:\Drivers\Video** 비디오 어댑터 드라이버에 대 한 합니다.
+2. 다운로드 하 고 장치에 대 한 드라이버 패키지를 추출 합니다. 운영 체제의 버전에 대 한 INF 파일이 포함 된 하위 폴더 및 하위 폴더의 내용을 사용자가 만든 비디오 폴더로 복사 합니다. 예를 들어 C:\Drivers\Video에 비디오 드라이버 파일을 복사 합니다.
+3. 예를 들어, 1 단계에서에서 만든 폴더를 path 시스템 환경 변수를 추가 **C:\Drivers\Video**합니다.
+4. 다음 레지스트리 키를 만듭니다 한 후는 **DriverPaths** 키를 만드는 설정 합니다 **값 데이터** 에 **1**.
+5. 에 대 한 Windows® 7 레지스트리 경로 이동 합니다. **하기 위해 HKEY_LOCAL_Machine\Software\Microsoft\Windows NT\CurrentVersion\\** , 한 다음 키를 만듭니다. **UnattendSettings\PnPUnattend\DriverPaths\\**
+6. Windows Vista에 대 한 레지스트리 경로 이동 합니다. **HK_LM\Software\Microsoft\Windows 찾습니다\\** 를 만든 다음 키 및 = **\UnattendSettings\PnPUnattend\DriverPaths**합니다.
 
 ## <a name="examples"></a>예
 

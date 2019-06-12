@@ -12,12 +12,12 @@ ms.topic: get-started-article
 ms.assetid: fc239aec-e719-47ea-92fc-d82a7247b3f8
 author: jaimeo
 ms.author: jaimeo
-ms.openlocfilehash: 781ed17fb07d2aecd4bb0b7bc672056096ab8060
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: e94659c62db574dc8779c8246d471ab401414ddb
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59837064"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66435799"
 ---
 # <a name="get-started-with-setup-and-boot-event-collection"></a>설치 및 부팅 이벤트 컬렉션 시작
 
@@ -311,7 +311,7 @@ Nano 서버에 의해 제공 되는 최소 인터페이스 때로는 하기가 �
   
 ||Error|오류 설명|증상|잠재적인 문제|  
 |-|---------|---------------------|-----------|---------------------|  
-|Dism.exe|87|기능 이름 옵션은이 컨텍스트에서 아닙니다.||-이 기능 이름이 잘못 된 경우 발생할 수 있습니다. 올바른 철자 있고 다시 시도 확인 합니다.<br />-이 기능은 사용 중인 운영 체제 버전에서 사용할 수 있는지 확인 합니다. Windows PowerShell에서 실행 **dism /online /get-features &#124;? { $_-"부팅"과 일치}** 합니다. 일치 하는 항목이 반환 되 면이 기능을 지원 하지 않는 버전을 실행 아마도 해야 합니다.|  
+|Dism.exe|87|기능 이름 옵션은이 컨텍스트에서 아닙니다.||-이 기능 이름이 잘못 된 경우 발생할 수 있습니다. 올바른 철자 있고 다시 시도 확인 합니다.<br />-이 기능은 사용 중인 운영 체제 버전에서 사용할 수 있는지 확인 합니다. Windows PowerShell에서 실행 **dism /online /get-features & #124;? { $_-"부팅"과 일치}** 합니다. 일치 하는 항목이 반환 되 면이 기능을 지원 하지 않는 버전을 실행 아마도 해야 합니다.|  
 |Dism.exe|0x800f080c|기능 \<이름 >를 알 수 없습니다.||위와 동일|  
   
 ### <a name="troubleshooting-the-collector"></a>수집기 문제 해결  
@@ -335,23 +335,23 @@ Windows PowerShell 프롬프트에서: `Get-WinEvent -LogName Microsoft-Windows-
       
  **수집기 문제 해결 권장 된 방법:**  
    
- 1. 첫째, 수집기가 받았는지 확인 연결 (만들어집니다 파일 대상에서 메시지를 보내기 시작 하는 경우에) 대상에서 사용   
-```  
-Get-SbecForwarding  
-```  
-이 대상에서 연결 되어 있는 반환 하는 경우에 autologger 설정에는 문제 수 있습니다. Nothing을 반환 하는 경우 문제가 KDNET 연결으로 시작 하 여이 있습니다. KDNET 연결 문제를 진단 하려는 확인하실 양쪽 끝에서 연결 (즉, 대상 및 수집기에서).  
+1. 첫째, 수집기가 받았는지 확인 연결 (만들어집니다 파일 대상에서 메시지를 보내기 시작 하는 경우에) 대상에서 사용   
+   ```  
+   Get-SbecForwarding  
+   ```  
+   이 대상에서 연결 되어 있는 반환 하는 경우에 autologger 설정에는 문제 수 있습니다. Nothing을 반환 하는 경우 문제가 KDNET 연결으로 시작 하 여이 있습니다. KDNET 연결 문제를 진단 하려는 확인하실 양쪽 끝에서 연결 (즉, 대상 및 수집기에서).  
   
 2. 보려면 수집기에서 진단 유틸리티 추가 추가 하려면이 옵션은 \<수집기 > 구성 파일의 요소:  
-\<collector ... minlog="verbose">  
-이렇게 하면 모든 받은 패킷에 대 한 메시지입니다.  
+   \<collector ... minlog="verbose">  
+   이렇게 하면 모든 받은 패킷에 대 한 메시지입니다.  
 3. 모든 패킷이 전혀 수신 되는지 여부를 확인 합니다. 필요에 따라 다음 파일을 대신 ETW를 통해 직접 세부 정보 표시 모드에서 로그를 작성 하는 것이 좋습니다. 이 추가 하려면이 옵션은 \<수집기 > 구성 파일의 요소:  
-\<collector ... minlog="verbose" log="c:\ProgramData\Microsoft\BootEventCollector\Logs\log.txt">  
+   \<collector ... minlog="verbose" log="c:\ProgramData\Microsoft\BootEventCollector\Logs\log.txt">  
       
 4. 받은 패킷에 대 한 메시지에 대 한 이벤트 로그를 확인 합니다. 모든 패킷이 전혀 수신 되는지 여부를 확인 합니다. 패킷을 수신 하는 잘못 된 경우 세부 정보에 대 한 이벤트 메시지를 확인 합니다.  
 5. 대상 쪽에서 KDNET 레지스트리에 일부 진단 정보를 기록 합니다. 찾는 위치   
-**HKLM\SYSTEM\CurrentControlSet\Services\kdnet** 메시지입니다.  
-  (DWORD) KdInitStatus = 성공 시 0 되며 오류 발생 시 오류 코드를 보여 줍니다.  
-  KdInitErrorString 오류 설명은 = (도 포함 됩니다 정보 메시지 없음 오류)  
+   **HKLM\SYSTEM\CurrentControlSet\Services\kdnet** 메시지입니다.  
+   (DWORD) KdInitStatus = 성공 시 0 되며 오류 발생 시 오류 코드를 보여 줍니다.  
+   KdInitErrorString 오류 설명은 = (도 포함 됩니다 정보 메시지 없음 오류)  
   
 6. 대상 및 장치 이름 보고에 대 한 확인에서 Ipconfig.exe를 실행 합니다. KDNET 적절히 로드 된 경우 원래 공급 업체의 카드 이름 대신 "kdnic" 같은 장치 이름 이어야 합니다.  
 7. DHCP는 대상에 대해 구성 되어 있는지 확인 합니다. KDNET DHCP를 절대적으로 필요합니다.  

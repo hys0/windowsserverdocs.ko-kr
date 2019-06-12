@@ -14,18 +14,18 @@ ms.assetid: 52b9e09f-39e0-41a9-9d3b-4d5f4eacf3e0
 author: christianmontoya
 manager: scottman
 ms.localizationpriority: medium
-ms.openlocfilehash: cd00f92254f9e55f83442f5e68e344e0aa7579a2
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3d148c99911be0cebfc29429d93241f24c2b9606
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59855504"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66453012"
 ---
 # <a name="welcome-to-remote-desktop-services"></a>원격 데스크톱 서비스 시작 
 
 원격 데스크톱 서비스 (RDS)는 선택한 개별 가상화 된 응용 프로그램을 제공, 안전한 모바일 및 원격 데스크톱 액세스를 제공 하 고 최종 사용자에 게 제공을 포함 하 여 모든 최종 고객 요구에 대 한 가상화 솔루션을 빌드하기 위한 플랫폼을 클라우드에서 응용 프로그램과 데스크톱을 실행 하는 기능.
 
-![원격 데스크톱 서비스 개요](.\media\rds-overview.png)
+![원격 데스크톱 서비스 개요](./media/rds-overview.png)
 
 RDS 배포 유연성, 비용 효율성 및 확장성을 제공-다양 한 Windows Server 2016을 포함 하 여 온-프레미스 배포를 클라우드 배포에 대 한 Microsoft Azure 및 파트너의 강력한 배열에 대 한 배포 옵션을 통해 모든 배달 솔루션입니다.
 

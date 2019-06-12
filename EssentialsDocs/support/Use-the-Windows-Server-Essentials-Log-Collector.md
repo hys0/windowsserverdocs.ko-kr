@@ -12,12 +12,12 @@ ms.assetid: c6985518-b42d-4cfb-9761-eaa75306b6d7
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: d003c6a45159548f7e34d86ca242f74868659d2f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ba5c0de9d8689c63c95ea3410a74fc9a7289aeab
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59877994"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66435996"
 ---
 # <a name="use-the-windows-server-essentials-log-collector"></a>Windows Server Essentials 로그 수집기 사용
 
@@ -28,9 +28,9 @@ ms.locfileid: "59877994"
  로그 수집기에서는 프로그램 로그, 이벤트 검토자 로그 및 관련된 환경 정보를 지정된 위치의 단일 zip 파일로 복사합니다. 컴퓨터에 대한 원격 연결을 사용하거나 서버 또는 네트워크의 컴퓨터에서 직접 로그 수집기를 실행할 수 있습니다.  
   
 > [!NOTE]
->  -   로그 수집기에서는 네트워크 문제를 분석하거나 서버 또는 네트워크의 컴퓨터를 변경하지 않습니다. 네트워크 문제를 해결하는 방법에 대한 자세한 내용은 서버 제품에 대한 도움말 문서를 참조하세요.  
-> -   이 가이드에서는 서버가 아닌 네트워크에서 컴퓨터에 네트워크 컴퓨터 라고 합니다.  
-> -   [Windows Server Essentials 로그 수집기 설치 패키지 다운로드](https://go.microsoft.com/fwlink/?LinkID=266341)합니다.  
+> - 로그 수집기에서는 네트워크 문제를 분석하거나 서버 또는 네트워크의 컴퓨터를 변경하지 않습니다. 네트워크 문제를 해결하는 방법에 대한 자세한 내용은 서버 제품에 대한 도움말 문서를 참조하세요.  
+>   -   이 가이드에서는 서버가 아닌 네트워크에서 컴퓨터에 네트워크 컴퓨터 라고 합니다.  
+>   -   [Windows Server Essentials 로그 수집기 설치 패키지 다운로드](https://go.microsoft.com/fwlink/?LinkID=266341)합니다.  
   
  로그 수집기를 설치 및 실행하려면 다음 항목의 단계를 수행합니다.  
   

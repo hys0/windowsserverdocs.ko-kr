@@ -6,12 +6,12 @@ ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: 17fa97e28d099806c9280e42dd900e8d6c708641
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: dd381c04b02889a7f2e7b8992ff6050d1b0f078a
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59850244"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66453063"
 ---
 # <a name="dfs-replication-overview"></a>DFS 복제 개요
 
@@ -25,7 +25,7 @@ DFS 복제를 사용 하 여 SYSVOL을 복제 하는 방법에 대 한 자세한
 
 DFS 복제를 사용 하려면 복제 그룹을 만들고 그룹에 복제 된 폴더를 추가 합니다. 복제 그룹, 복제 된 폴더 및 멤버는 다음 그림에 나와 있습니다.
 
-![두 멤버 사이의 연결을 포함 하는 복제 그룹을 개 몇 복제 된 폴더](media\dfsr-overview.gif)
+![두 멤버 사이의 연결을 포함 하는 복제 그룹을 개 몇 복제 된 폴더](media/dfsr-overview.gif)
 
 이 그림 복제 그룹을 하나 이상의 복제 된 폴더의 복제에 참여 하는 서버를 구성원 이라고 집합이 임을 보여 줍니다. 복제 된 폴더는 각 멤버에 동기화 된 상태로 유지 되는 폴더입니다. 그림에서 두 개의 복제 된 폴더: 프로젝트 및 제안 합니다. 각 복제 된 폴더의 데이터가 변경 되 면 복제 그룹의 멤버 간 연결을 통해 변경 내용이 복제 됩니다. 복제 토폴로지를 구성 하는 모든 멤버 간의 연결입니다.
 단일 복제 그룹에 여러 복제 된 폴더를 만들고 각 복제 된 폴더에 적용 되므로 토폴로지, 일정 및 대역폭 복제 그룹에 대 한 제한 된 복제 폴더를 배포 하는 과정을 간소화 합니다. 추가 복제 된 폴더를 배포 하려면 사용할 수 있습니다 Dfsradmin.exe 또는 작업 지침 마법사에서 새 복제 폴더에 대 한 권한을 확인 하 고 로컬 경로 정의 하려면.

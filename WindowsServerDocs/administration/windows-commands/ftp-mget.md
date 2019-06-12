@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1160ec742dde318141da720bd35b7d60ab805bb1
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e43bf8b6e7067a31b3ec51336b0b43845ab88f63
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59888424"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66438607"
 ---
 # <a name="ftp-mget"></a>ftp: mget
 
@@ -30,9 +30,11 @@ ms.locfileid: "59888424"
 mget <remoteFile>[ ]  
 ```  
 ### <a name="parameters"></a>매개 변수  
-|매개 변수|설명|  
-|-------|--------|  
-|<remoteFile>|로컬 컴퓨터에 복사 하려면 원격 파일을 지정 합니다.|  
+
+|  매개 변수   |                        설명                        |
+|--------------|-----------------------------------------------------------|
+| <remoteFile> | 로컬 컴퓨터에 복사 하려면 원격 파일을 지정 합니다. |
+
 ## <a name="BKMK_Examples"></a>예제  
 원격 파일 복사 **a.exe** 하 고 **b.exe** 현재 파일 전송 유형을 사용 하 여 로컬 컴퓨터에 있습니다.  
 ```  

@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: eb5c9650b95703f1316e6f5f179b910d22574f68
-ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
+ms.openlocfilehash: bfe6c936ee5606e286aab076bea08db04b8b6500
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/25/2019
-ms.locfileid: "66222961"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66811169"
 ---
 # <a name="echo"></a>echo
 
@@ -54,10 +54,13 @@ echo [on | off]
 ## <a name="examples"></a>예
 
 현재 표시 하려면 **echo** 설정에 입력 합니다.
+
 ```
 echo
 ```
+
 화면에 빈 줄을 에코를 하려면 다음을 입력 합니다.
+
 ```
 echo.
 ```
@@ -66,6 +69,7 @@ echo.
 > 마침표 앞에 공백을 포함 하지 마십시오. 그렇지 않으면 기간에 빈 줄 대신 표시 됩니다.
 
 방지 하기 위해 명령 프롬프트에서 명령을 에코를 입력 합니다.
+
 ```
 echo off 
 ```
@@ -74,14 +78,19 @@ echo off
 > 때 **echo** 꺼져, 명령 프롬프트 명령 프롬프트 창에 나타나지 않습니다. 명령 프롬프트를 다시 표시 하려면 다음을 입력 **화면 표시**합니다.
 
 배치 파일에서 모든 명령을 방지 하기 위해 (포함 하는 **오프 에코** 명령)에서 일괄 처리 파일 형식의 첫 번째 줄에서 화면에 표시:
+
 ```
 @echo off
 ```
+
 사용할 수는 **echo** 의 일부분으로 명령은 **경우** 문입니다. 예를 들어를 이러한 파일을 찾지 못하면 에코 메시지 및.rpt 파일 이름 확장명과 파일에 대 한 현재 디렉터리를 검색 하려면 다음을 입력 합니다.
+
 ```
 if exist *.rpt echo The report has arrived.
 ```
+
 다음 배치 파일.txt 파일 이름 확장명을 사용 하 여 파일에 대 한 현재 디렉터리를 검색 하 고 검색 결과 나타내는 메시지를 표시 합니다.
+
 ```
 @echo off
 if not exist *.txt (
@@ -92,11 +101,15 @@ echo This directory contains no text files.
    dir /b *.txt
    )
 ```
+
 배치 파일을 실행할 때.txt 파일이 발견 되 면 다음 메시지가 표시 됩니다.
+
 ```
 This directory contains no text files.
 ```
+
 .Txt 파일은 배치 파일을 실행 하는 경우 발견 되 면 다음과 같은 출력이 표시 됩니다 (이 예에서는 File1.txt, File2.txt, 및 존재 File3.txt 파일 가정):
+
 ```
 This directory contains the following text files:
 File1.txt

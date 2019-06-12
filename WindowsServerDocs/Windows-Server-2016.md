@@ -1,11 +1,11 @@
 ---
 redirect_url: /windows-server/windows-server
-ms.openlocfilehash: 6f6e0d21fdf43ce3cf9f713d5731cfea5bb069de
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a852dfdda87aa37b403176483ea85f9bdb059e68
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59812274"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66436006"
 ---
 # <a name="windows-server-2016"></a>Windows Server 2016
 
@@ -19,54 +19,40 @@ ms.locfileid: "59812274"
 <table border="0" width="100%" align='center'>
   <tr style="text-align:center;">
     <td align='center' style="width:25%; border:0;">
-      <a href="/windows-server/get-started/what-s-new-in-windows-server-2016">
-        <img height=145 src="media/whats-new-highlight.png" alt="What's new icon" title="Windows Server 16의 새로운 기능"/></a>
-        <br/>새로운 기능?
+      <a href="/windows-server/get-started/what-s-new-in-windows-server-2016"> &lt;i m g 145 src = =&quot;미디어/새로운 기능-새-highlight.png&quot; alt =&quot;어떤&#39;s 새 아이콘&quot; 제목 =&quot;Windows Server 16의 새로운 기능?&quot;/&gt;</a>
+        <br/>새로운&#39;새로운?
     </td>
     <td align='center' style="width:25%; border:0;">
-      <a href="/windows-server/get-started/server-basics">
-        <img height=145 src="media/1-getstarted.png" alt="get started icon" title="Windows Server 16 시작" /></a>
+      <a href="/windows-server/get-started/server-basics"> &lt;i m g 145 src = =&quot;미디어/1-getstarted.png&quot; alt =&quot;get 시작된 아이콘&quot; 제목 =&quot;Windows Server 16을 사용 하 여 시작&quot; /&gt;</a>
       <br/>시작 </td>
     <td align='center' style="width:25%; border:0;">
-      <a href="/windows-server/administration/index">
-        <img height=145 src="media/8-management.png" alt="administer icon" title="Windows Server 관리" /></a>
+      <a href="/windows-server/administration/index"> &lt;i m g 145 src = =&quot;미디어/8-management.png&quot; alt =&quot;아이콘을 관리할&quot; 제목 =&quot;Windows Server 관리&quot; /&gt;</a>
       <br/>관리 </td>
     <td align='center' style="width:25%; border:0;">
-      <a href="/windows-server/failover-clustering/failover-clustering-overview">
-        <img height=145 src="media/3-failover.png" alt="Failover clustering icon" title="Windows Server 장애 조치(failover) 클러스터링" /></a>
+      <a href="/windows-server/failover-clustering/failover-clustering-overview"> &lt;i m g 145 src = =&quot;미디어/3-failover.png&quot; alt =&quot;장애 조치 클러스터링 아이콘&quot; 제목 =&quot;Windows Server 장애 조치 클러스터링&quot; /&gt;</a>
       <br/>장애 조치(failover) 클러스터링 </td>
   </tr>
   <tr style="text-align:center;">
     <td align='center' style="width:25%; border:0;"><br/>
-      <a href="/windows-server/identity/identity-and-access">
-        <img height=145 src="media/4-identity.png" alt="Identity and access icon" title="Windows Server ID 및 액세스" /></a>
+      <a href="/windows-server/identity/identity-and-access"> &lt;i m g 145 src = =&quot;미디어/4-identity.png&quot; alt =&quot;Id 및 액세스 아이콘&quot; 제목 =&quot;Windows 서버 Id 및 액세스&quot; /&gt;</a>
       <br>ID 및 액세스 </td>
     <td align='center' style="width:25%; border:0;"><br/>
-      <a href="/windows-server/networking/networking">
-        <img height=145 src="media/6-networking.png" alt="Networking icon" title="Windows Server 네트워킹" />
-        </a>
+      <a href="/windows-server/networking/networking"> &lt;i m g 145 src = =&quot;미디어/6-networking.png&quot; alt =&quot;네트워킹 아이콘&quot; 제목 =&quot;Windows Server 네트워킹&quot; /&gt; </a>
       <br/>네트워킹 </td>
     <td align='center' style="width:25%; border:0;"><br/>
-      <a href="/windows-server/remote/index">
-        <img height=145 src="media/remote.png" alt="remote icon" title="원격 액세스 및 서버 관리" />
-        </a>
+      <a href="/windows-server/remote/index"> &lt;i m g 145 src = =&quot;media/remote.png&quot; alt =&quot;원격 아이콘&quot; 제목 =&quot;원격 액세스 및 서버 관리&quot; /&gt; </a>
       <br/>원격 액세스 </td>
     <td align='center' style="width:25%; border:0;"><br/>
-      <a href="/windows-server/security/security-and-assurance">
-        <img height=145 src="media/5-security.png" alt="Security icon" title="Windows Server 보안 및 보증" />
-      </a>
+      <a href="/windows-server/security/security-and-assurance"> &lt;i m g 145 src = =&quot;미디어/5-security.png&quot; alt =&quot;보안 아이콘&quot; 제목 =&quot;Windows Server 보안 및 보증&quot; /&gt; </a>
       <br/>보안 및 보증 </td>
   </tr>
   <tr style="text-align:center;">
     <td align='center' style="width:25%; border:0;">&nbsp;</td>
     <td align='center' style="width:25%; border:0;"><br>
-      <a href="/windows-server/storage/storage">
-        <img height=145 src="media/7-storage.png" alt="Storage icon" title="Windows Server 저장소" />
-      </a>
-      <br/>스토리지 </td>
+      <a href="/windows-server/storage/storage"> &lt;i m g 145 src = =&quot;미디어/7-storage.png&quot; alt =&quot;저장소 아이콘&quot; 제목 =&quot;Windows Server 저장소&quot; /&gt; </a>
+      <br/>저장 공간 </td>
    <td align='center' style="width:25%; border:0;"><br/>
-      <a href="/windows-server/virtualization/virtualization">
-        <img height=145 src="media/virtualization.png" alt="virtualization icon" title="Windows Server 가상화" /></a>
+      <a href="/windows-server/virtualization/virtualization"> &lt;i m g 145 src = =&quot;media/virtualization.png&quot; alt =&quot;가상화 아이콘&quot; 제목 =&quot;Windows Server 가상화&quot; /&gt;</a>
       <br/>가상화 </td>
     <td align='center' style="width:25%; border:0;">&nbsp; </td>
   </tr>
@@ -101,7 +87,7 @@ Standard 및 Datacenter 버전은 세 가지 설치 옵션을 제공합니다.
 
 - **Server Core:** 디스크에 필요한 공간과 잠재적인 공격 노출 영역이 줄어들고, 특히 서비스 요구 사항이 줄어듭니다. 추가 사용자 인터페이스 요소 및 그래픽 관리 도구에 대한 특정 요구가 없는 경우 **권장되는** 옵션입니다.
 - **데스크톱 환경 포함 서버:** Windows Server 2012 R2에 별도 설치해야 하는 클라이언트 환경 기능을 포함하여 표준 사용자 인터페이스 및 모든 도구가 설치됩니다. 서버 역할과 기능은 서버 관리자 또는 다른 메서드를 통해 설치됩니다.
-- **Nano Server:** 사설 클라우드 및 데이터 센터에 최적화된 원격 관리 서버 운영 체제입니다. Server Core 모드의 Windows Server와 유사하지만 훨씬 작고 로컬 로그온 기능이 없으며 64비트 응용 프로그램, 도구 및 에이전트에만 지원합니다. 다른 옵션보다 훨씬 적은 디스크 공간을 차지하고, 훨씬 빠르게 설치되며, 필요한 업데이트 및 다시 시작 횟수도 훨씬 적습니다.
+- **Nano Server:** 프라이빗 클라우드 및 데이터 센터에 최적화된 원격 관리 서버 운영 체제입니다. Server Core 모드의 Windows Server와 유사하지만 훨씬 작고 로컬 로그온 기능이 없으며 64비트 응용 프로그램, 도구 및 에이전트에만 지원합니다. 다른 옵션보다 훨씬 적은 디스크 공간을 차지하고, 훨씬 빠르게 설치되며, 필요한 업데이트 및 다시 시작 횟수도 훨씬 적습니다.
 
 >[!Note]
 > 일부 이전 릴리스의 Windows Server와 달리 설치 후 Server Core와 데스크톱 경험 기능이 설치된 서버 간에 변환할 수 없습니다. 예를 들어 Server Core를 설치하고 나중에 데스크톱 경험이 설치된 서버를 사용하기로 결정하는 경우에는 새로 설치를 수행해야 하고, 그 반대의 경우도 마찬가지입니다.

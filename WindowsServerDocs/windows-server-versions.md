@@ -14,12 +14,12 @@ author: lizap
 ms.author: elizapo
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: 8d14ccf734d5242301030bbb6e3c2489e1a0266a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: f9a4e4e0dde0c2c6178629f0dee744448edc72dd
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59876354"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812594"
 ---
 # <a name="windows-server---it-administrator-content-for-current-and-previous-releases"></a>Windows Server - 현재 및 이전 릴리스에 대한 IT 관리자 콘텐츠
 
@@ -29,7 +29,7 @@ Windows Server는 작업 그룹에서 데이터 센터까지 응용 프로그램
 
 > [!IMPORTANT]
 > PC에서 실행되는 Windows가 실행되고 있습니까? Windows 10, Windows 8 또는 8.1입니까? Windows 7입니까? 문제가 있으십니까? [Microsoft 지원](https://support.microsoft.com)으로 이동하고 검색 창에 문제를 바로 입력하세요. Windows, Office, Skype에 대한 많은 정보가 있습니다. 
-
+> 
 > 아래 정보는 Windows **Server** *전용*입니다.
 
 ## <a name="windows-server-2016"></a>Windows Server 2016
@@ -54,18 +54,14 @@ Windows Server는 작업 그룹에서 데이터 센터까지 응용 프로그램
 
 [MSDN의 Windows Server 2003 개발자 라이브러리](https://msdn.microsoft.com/library/dn792549.aspx)
 
-
 ## <a name="product-evaluations"></a>제품 평가
 
 [Windows Server 2016 평가판 다운로드](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016?i=1) 
 
 [Windows Server 2012 R2 평가판 다운로드](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012-r2) 
 
-
 ## <a name="related-links"></a>관련 링크
 [Windows Server 2016 제품 정보](https://www.microsoft.com/cloud-platform/windows-server) 
-
-<br>
 
 > [!TIP]
 > 현재 어떤 문제가 있습니까? [Microsoft 지원](https://support.microsoft.com)에서 검색 창에 문제를 바로 입력하세요. Windows, Office, Skype 등에 대한 도움말을 얻을 수 있습니다. 

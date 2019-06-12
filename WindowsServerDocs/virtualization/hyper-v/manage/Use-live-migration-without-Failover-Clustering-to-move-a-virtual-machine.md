@@ -11,12 +11,12 @@ ms.assetid: 75c32e42-97f7-48df-aac9-1d82d34825e1
 author: KBDAzure
 ms.author: kathydav
 ms.date: 01/17/2017
-ms.openlocfilehash: a33912e09d664296f6eda964c40177353718d49c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 9be61fbc860e9d8c5cbc020d6dd4082722e32509
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59851544"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812100"
 ---
 # <a name="use-live-migration-without-failover-clustering-to-move-a-virtual-machine"></a>가상 컴퓨터를 이동 하려면 장애 조치 클러스터링이 없는 실시간 마이그레이션 사용
 
@@ -28,11 +28,13 @@ ms.locfileid: "59851544"
 
 - 로컬 Hyper-v Administrators 그룹 또는 소스와 대상 컴퓨터에서 Administrators 그룹의 구성원 인 사용자 계정입니다. 
   
-- Windows Server 2016 또는 Windows Server 2012 R2에서 Hyper-v 역할 원본 및 대상 서버에 설치 하 고 실시간 마이그레이션에 대해 설정 합니다. 가상 컴퓨터 하나 이상 있으면 Windows Server 2016 및 Windows Server 2012 R2를 실행 하는 호스트 간에 실시간 마이그레이션을 할 수 있는 버전 5입니다. <br>버전 업그레이드 지침은 [Windows 10 또는 Windows Server 2016에서 Hyper-v에서 가상 머신을 업그레이드 버전](..\deploy\Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md)합니다. 설치 지침은 [실시간 마이그레이션에 대해 호스트 설정](../deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md)합니다. 
-  
+- Windows Server 2016 또는 Windows Server 2012 R2에서 Hyper-v 역할 원본 및 대상 서버에 설치 하 고 실시간 마이그레이션에 대해 설정 합니다. 가상 컴퓨터 하나 이상 있으면 Windows Server 2016 및 Windows Server 2012 R2를 실행 하는 호스트 간에 실시간 마이그레이션을 할 수 있는 버전 5입니다.
+
+    버전 업그레이드 지침은 [Windows 10 또는 Windows Server 2016에서 Hyper-v에서 가상 머신을 업그레이드 버전](../deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md)합니다. 설치 지침은 [실시간 마이그레이션에 대해 호스트 설정](../deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md)합니다.
+
 - 도구는 원본 또는 대상 서버에 설치 되어 있지 않으면 Windows Server 2016 또는 Windows 10을 실행 하는 컴퓨터에 설치 된 Hyper-v 관리 도구에서에서 실행 합니다.  
    
-## <a name="BKMK_Step3"></a>Hyper-v 관리자를 사용 하 여 실행 중인 가상 컴퓨터 이동  
+## <a name="use-hyper-v-manager-to-move-a-running-virtual-machine"></a>Hyper-v 관리자를 사용 하 여 실행 중인 가상 컴퓨터를 이동 하려면  
   
 1.  Hyper-V 관리자를 엽니다. (서버 관리자에서 클릭 **도구** >>**Hyper-v 관리자**.)  
   
@@ -76,8 +78,8 @@ PS C:\> Move-VM LMTest TestServer02 -IncludeStorage -DestinationStoragePath D:\L
 3. 확인 **다른 프로세서 버전을 사용 하는 컴퓨터로 마이그레이션**합니다.
 4. **확인**을 클릭합니다.
  
- Windows PowerShell을 사용 하려면 사용 된 [Set-vmprocessor](https://technet.microsoft.com/library/hh848533.aspx) cmdlet:
+   Windows PowerShell을 사용 하려면 사용 된 [Set-vmprocessor](https://technet.microsoft.com/library/hh848533.aspx) cmdlet:
  
-  ```
-  PS C:\> Set-VMProcessor TestVM -CompatibilityForMigrationEnabled $true
-  ```
+   ```
+   PS C:\> Set-VMProcessor TestVM -CompatibilityForMigrationEnabled $true
+   ```

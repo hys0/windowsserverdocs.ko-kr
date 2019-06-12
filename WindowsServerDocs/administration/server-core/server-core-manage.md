@@ -7,12 +7,12 @@ ms.sitesec: library
 author: lizap
 ms.localizationpriority: medium
 ms.date: 10/17/2017
-ms.openlocfilehash: 6836e5db36727294d215f7f98e0faeede55a612a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 761bfc681d7e39059884977cd99997ea9996268b
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59869304"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66811360"
 ---
 # <a name="manage-a-server-core-server"></a>Server Core 서버를 관리 합니다.
  
@@ -61,15 +61,17 @@ Server Core 서버를 관리 하려면 원격으로 많은 기능에 대 한 Mic
 Server Core 서버를 관리 하는 MMC 스냅인을 사용 하는 데 *되지* 도메인 구성원: 
 
 1. 원격 컴퓨터의 명령 프롬프트에서 다음 명령을 입력 하 여 Server Core 컴퓨터에 연결 하는 데 대체 자격 증명을 설정 합니다.
+1. 
    ```
    cmdkey /add:<ServerName> /user:<UserName> /pass:<password>
    ```
+
    암호에 대 한 자격 증명을 입력 하려는 경우를 생략 합니다 **통과/** 옵션입니다.
 
 2. 메시지가 표시 되 면 사용자가 지정한 사용자 이름에 대 한 암호를 입력 합니다.
    Server Core 서버의 방화벽이 MMC 스냅인과 연결할 수 있도록 아직 구성 하지는 MMC 스냅인을 허용 하도록 Windows 방화벽을 구성 하려면 아래 단계를 수행 합니다. 다음 단계를 사용 하 여 계속 합니다.
 3. 다른 컴퓨터에 MMC 스냅인 같은 시작할 **컴퓨터 관리**합니다.
-4. 왼쪽된 창에서 스냅인을 마우스 오른쪽 단추로 클릭 하 고 클릭 **다른 컴퓨터에 연결**합니다. (예를 들어, 컴퓨터 관리 예제에는 마우스 오른쪽 단추로 클릭할 **컴퓨터 관리 (로컬)**.)
+4. 왼쪽된 창에서 스냅인을 마우스 오른쪽 단추로 클릭 하 고 클릭 **다른 컴퓨터에 연결**합니다. (예를 들어, 컴퓨터 관리 예제에는 마우스 오른쪽 단추로 클릭할 **컴퓨터 관리 (로컬)** .)
 5. **다른 컴퓨터**Server Core 서버의 컴퓨터 이름을 입력 하 고 클릭 **확인**합니다. 이제 Windows Server 운영 체제를 실행하는 다른 컴퓨터와 마찬가지로 MMC 스냅인을 사용하여 Server Core 서버를 관리할 수 있습니다.
 
 ### <a name="to-configure-windows-firewall-to-allow-mmc-snap-ins-to-connect"></a>MMC 스냅인의 연결을 허용하도록 Windows 방화벽을 구성하려면
@@ -120,14 +122,17 @@ cscript C:\Windows\System32\Scregedit.wsf /ar 0
 하드웨어에 Server Core 서버를 추가 하려면 새 하드웨어를 설치 하는 것에 대 한 하드웨어 공급 업체에서 제공한 지침을 따릅니다. 
 
 플러그 앤 플레이 하드웨어 없는 경우에 드라이버를 수동으로 설치 해야 합니다. 이렇게 하려면 드라이버 파일 서버의 임시 위치로 복사한 다음 명령을 실행:
+
 ```
 pnputil –i –a <driverinf>
 ```
+
 여기서 *driverinf* 는 드라이버용.inf 파일의 파일 이름입니다.
 
 메시지가 표시되면 컴퓨터를 다시 시작합니다.
 
 설치 되는 드라이버를 확인 하려면 다음 명령을 실행 합니다. 
+
 ```
 sc query type= driver
 ```
@@ -135,7 +140,8 @@ sc query type= driver
 > [!NOTE] 
 > 명령이 완료되려면 등호 뒤에 공백을 포함해야 합니다.
 
-장치 드라이버를 사용 하지 않으려면 다음을 실행 합니다. 
+장치 드라이버를 사용 하지 않으려면 다음을 실행 합니다.
+
 ```
 sc delete <service_name>
 ```

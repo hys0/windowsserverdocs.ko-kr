@@ -7,12 +7,12 @@ ms.topic: article
 author: johnmarlin-msft
 ms.date: 02/01/2019
 description: 이 문서에서는 2-노드 파일 서버 클러스터를 만들기에 대해 설명 합니다.
-ms.openlocfilehash: fbfde60f60df64514a6a0f514cbabd005544af84
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 9f50470b379bd0ab05834eb3c5a35be0f5e9e93a
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59846414"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66453006"
 ---
 # <a name="deploying-a-two-node-clustered-file-server"></a>2-노드 클러스터 된 파일 서버 배포
 
@@ -28,11 +28,11 @@ ms.locfileid: "59846414"
 
 장애 조치 클러스터는 한 번에 하나의 서버에서 저장소에 지정 된 모든 볼륨은 에서만 액세스할 않지만 일반적으로 클러스터의 모든 서버에 물리적으로 연결 된 저장소 단위를 포함 합니다. 다음 다이어그램에서는 저장소 단위에 연결 하는 2 노드 장애 조치 클러스터를 보여 줍니다.
 
-![두 노드 클러스터](media\Cluster-File-Server\Cluster-FS-Overview.png)
+![두 노드 클러스터](media/Cluster-File-Server/Cluster-FS-Overview.png)
 
 저장소 볼륨 또는 논리 단위 번호 (Lun)는 클러스터의 노드에 노출 다른 클러스터의 서버를 포함 하는 다른 서버에 노출 되어야 합니다. 다음 다이어그램은이 설명 합니다.
 
-![저장소의 Lun](media\Cluster-File-Server\Cluster-FS-LUNs.png)
+![저장소의 Lun](media/Cluster-File-Server/Cluster-FS-LUNs.png)
 
 최대 가용성을 모든 서버에는 서버 관리를 위한 모범 사례에 따라-예를 들어 소프트웨어 변경 하면 완벽 하 게 구현 하기 전에 테스트 서버의 물리적 환경을 신중 하 게 관리 및 신중 하 게 소프트웨어 업데이트 및 모든 클러스터형된 서버에서 구성 변경의 추적 합니다.
 
@@ -167,7 +167,7 @@ Microsoft에서 공식적으로 지원 되는 솔루션을 고려해 야 하는 
 
 1. 오픈 **서버 관리자** 고 합니다 **관리** 드롭다운을 선택 합니다 **역할 및 기능 추가**합니다.
 
-   ![기능 추가](media\Cluster-File-Server\Cluster-FS-Add-Feature.png)
+   ![기능 추가](media/Cluster-File-Server/Cluster-FS-Add-Feature.png)
 
 2. 경우는 **시작 하기 전에** 창이 열리면 **다음**합니다.
 
@@ -177,11 +177,11 @@ Microsoft에서 공식적으로 지원 되는 솔루션을 고려해 야 하는 
 
 5. 서버 역할의 역할 목록에서 엽니다 **파일 서비스**를 선택 **파일 서버**, 및 **다음**합니다.
 
-   ![역할 추가](media\Cluster-File-Server\Cluster-FS-Add-FS-Role-1.png)
+   ![역할 추가](media/Cluster-File-Server/Cluster-FS-Add-FS-Role-1.png)
 
 6. 기능 목록에서 기능 선택 **장애 조치 클러스터링**합니다.  팝업 대화 상자도 설치 되 고 관리 도구를 나열 하는 표시 됩니다.  모든 선택 된 선택 **기능 추가** 하 고 **다음**합니다.
 
-   ![기능 추가](media\Cluster-File-Server\Cluster-FS-Add-WSFC-1.png)
+   ![기능 추가](media/Cluster-File-Server/Cluster-FS-Add-WSFC-1.png)
 
 7. 확인 페이지에서 설치를 선택 합니다.
 
@@ -315,7 +315,7 @@ Microsoft에서 공식적으로 지원 되는 솔루션을 고려해 야 하는 
 
 7. 파일 서버 유형 선택 **범용 파일 서버** 하 고 **다음**합니다.<br>스케일 아웃 파일 서버에 대 한 자세한 내용은 참조 하십시오 [스케일 아웃 파일 서버 개요](sofs-overview.md)합니다.
 
-   ![파일 서버 유형](media\Cluster-File-Server\Cluster-FS-File-Server-Type.png)
+   ![파일 서버 유형](media/Cluster-File-Server/Cluster-FS-File-Server-Type.png)
 
 8. 에 **클라이언트 액세스 지점** 창에서 사용할 파일 서버의 이름을 입력 합니다.  클러스터의 이름의 아님을 note 하십시오.  파일 공유 연결입니다.  예를 들어에 연결할 \\서버 이름을 입력 하면 서버 것입니다.
 

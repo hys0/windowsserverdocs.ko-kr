@@ -9,13 +9,13 @@ author: jasongerend
 ms.author: jgerend
 manager: jasgroce
 ms.localizationpriority: medium
-ms.date: 05/29/2019
-ms.openlocfilehash: e76b7862549814d5453717c40cec45e341141d7a
-ms.sourcegitcommit: 8eea7aadbe94f5d4635c4ffedc6a831558733cc0
+ms.date: 06/07/2019
+ms.openlocfilehash: 747258601aa05885d209aacde6947eb7b05e8121
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66308598"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66810797"
 ---
 # <a name="server-core-app-compatibility-feature-on-demand-fod"></a>Server Core 앱 호환성 FOD(Feature on Demand)
 
@@ -64,7 +64,7 @@ Server Core 앱 호환성 FOD 부분을 포함 하는 대로 사용할 수 있�
 
         -   장애 조치 클러스터 관리자를 실행 하려면 입력 **cluadmin** 명령 프롬프트에서.
 
-Windows Server를 실행 하는 서버 1903 이상 버전에 다음 구성 요소도 지원 합니다.
+Windows Server를 실행 하는 서버 버전이 1903 이상 기능도 다음 구성 요소 (앱 호환성 FOD의 동일한 버전 사용) 하는 경우:
 
 - Hyper-V Manager (virtmgmt.msc)
 - 작업 스케줄러 (taskschd.msc)
@@ -104,7 +104,7 @@ Windows Server를 실행 하는 서버 1903 이상 버전에 다음 구성 요�
 
 8. 진행률 표시줄이 완료 되 면 운영 체제를 다시 시작 합니다.
 
- DISM 명령에 대 한 자세한 내용은 참조 하세요. [Windows PowerShell에서 DISM 사용](https://docs.microsoft.com/windows-hardware/manufacture/desktop/use-dism-in-windows-powershell-s14)
+   DISM 명령에 대 한 자세한 내용은 참조 하세요. [Windows PowerShell에서 DISM 사용](https://docs.microsoft.com/windows-hardware/manufacture/desktop/use-dism-in-windows-powershell-s14)
 
 ## <a name="to-optionally-add-internet-explorer-11-to-server-core-after-adding-the-server-core-app-compatibility-fod"></a>필요에 따라 (Server Core 앱 호환성 FOD 추가) 후 Server Core에 Internet Explorer 11을 추가 하려면
 
@@ -148,8 +148,8 @@ Windows Server를 실행 하는 서버 1903 이상 버전에 다음 구성 요�
 
 - 으로 일반 지침을 서버에 앱 설치 핵심 (유무와 관계 없이 이러한 선택적 패키지) 해당 하는 경우 지점 자동 설치 옵션 및 지침을 사용 하는 데 필요한 경우가 있습니다. 
     
- - 예를 들어 SQL Server 2016 및 SQL Server 2017에 대 한 SQL Server Management Studio Server Core에 설치할 수 있습니다 및 앱 호환성 FOD 존재 하는 경우에 완벽 하 게 작동 합니다.  하세요 [명령 프롬프트에서 SQL Server 설치](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-from-the-command-prompt?view=sql-server-2017)합니다.
- - SQL Server Management Studio 원하지 않는 경우 다음이 아닌 경우 Server Core 앱 호환성 FOD를 설치 하는 데 필요한  하세요 [Server Core에 SQL Server 설치](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-on-server-core?view=sql-server-2017)합니다.
+  - 예를 들어 SQL Server 2016 및 SQL Server 2017에 대 한 SQL Server Management Studio Server Core에 설치할 수 있습니다 및 앱 호환성 FOD 존재 하는 경우에 완벽 하 게 작동 합니다.  하세요 [명령 프롬프트에서 SQL Server 설치](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-from-the-command-prompt?view=sql-server-2017)합니다.
+  - SQL Server Management Studio 원하지 않는 경우 다음이 아닌 경우 Server Core 앱 호환성 FOD를 설치 하는 데 필요한  하세요 [Server Core에 SQL Server 설치](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-on-server-core?view=sql-server-2017)합니다.
 
 ## <a name="a-idadd-capabilities-adding-capabilities-and-optional-packages-to-an-offline-wim-server-core-image"></a><a id="add-capabilities"> 추가 기능 및 선택적 패키지를 오프 라인 WIM Server Core 이미지
 

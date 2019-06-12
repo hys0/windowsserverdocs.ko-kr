@@ -8,12 +8,12 @@ author: lizap
 ms.author: elizapo
 ms.date: 03/16/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 4faadb811927626c26a5b01e2ce0598d40792b68
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7ae87b12997aa3cb3ae3fe290c9243995b30d6b0
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59846764"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66452823"
 ---
 # <a name="manage-windows-server"></a>Windows Server 관리
 
@@ -118,5 +118,5 @@ Winows PowerShell은 관리 작업을 신속하게 자동화할 수 있도록 �
 Windows 명령줄 도구는 Windows에서 관리 작업을 수행하는 데 사용됩니다. 명령 참조를 사용하면 명령줄 도구를 숙지하고 명령 셸을 자세하게 이해하며 배치 파일이나 스크립트 도구를 사용하여 명령줄 작업을 자동화할 수 있습니다.
 
 ## <a name="windows-server-insider-preview"></a>Windows Server Insider Preview
-### <a name="system-insightsmanagesystem-insightsoverviewmd"></a>[시스템 정보](..\manage\system-insights\overview.md)
+### <a name="system-insightsmanagesystem-insightsoverviewmd"></a>[시스템 인사이트](../manage/system-insights/overview.md)
 시스템 인사이트는 Windows Server에 기본적인 예측 분석을 도입하는 새로운 기능입니다. 이러한 예측 기능은 로컬에서 성능 카운터 또는 ETW 이벤트와 같은 Windows Server 시스템 데이터를 분석하여 IT 관리자가 자체 배포에서 문제가 되는 동작을 사전 예방적으로 감지하고 처리하는 것을 돕습니다. 

@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6b17be8cb1cca5ec32db80851d9f4d893ead5505
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8e1e2ecade2887ef38a1209b49577ea0c851ca8d
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59852954"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66436836"
 ---
 # <a name="nslookup-set-d2"></a>nslookup set d2
 
@@ -34,11 +34,11 @@ set [no]d2
 
 ## <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------|-----------|
-|**nod2**|철저 한 디버깅 모드를 해제합니다. 기본 구문은 **nod2**합니다.|
-|**d2**|철저 한 디버깅 모드를 설정합니다.|
-|{도움말 | ?}|간단한 요약이 표시 되며 **nslookup** 하위 명령입니다.|
+| 매개 변수 |                             설명                              |
+|-----------|----------------------------------------------------------------------|
+| **nod2**  | 철저 한 디버깅 모드를 해제합니다. 기본 구문은 **nod2**합니다. |
+|  **d2**   |                 철저 한 디버깅 모드를 설정합니다.                  |
+|   {도움말   |                                  ?}                                  |
 
 #### <a name="additional-references"></a>추가 참조
 

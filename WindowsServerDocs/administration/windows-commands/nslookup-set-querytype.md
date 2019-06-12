@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5d698e6d4603afb332efeaf1cdc79eeeee37d66d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f0015db716bd8c74bc4366063009bda41d338d19
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59813124"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66436733"
 ---
 # <a name="nslookup-set-querytype"></a>nslookup set querytype
 
@@ -31,30 +31,32 @@ set querytype=<ResourceRecordtype>
 ```
 ## <a name="parameters"></a>매개 변수
 <ResourceRecordtype> DNS 리소스 레코드 종류를 지정합니다. 기본 리소스 레코드 종류는 A입니다. 다음 표에서이 명령에 대 한 유효한 값을 나열합니다.
-|값|설명|
-|-----|--------|
-|변수를 잠그기 위한|컴퓨터의 IP 주소를 지정합니다.|
-|모든|컴퓨터의 IP 주소를 지정합니다.|
-|CNAME|별칭에 대 한 정식 이름을 지정합니다.|
-|GID|그룹 이름의 그룹 식별자를 지정합니다.|
-|HINFO|컴퓨터의 CPU 및 운영 체제의 유형을 지정합니다.|
-|MB|사서함 도메인 이름을 지정합니다.|
-|MG|메일 그룹 구성원을 지정합니다.|
-|MINFO|사서함 또는 메일 목록 정보를 지정합니다.|
-|MR|메일 이름 바꾸기 도메인 이름을 지정합니다.|
-|MX|메일 교환기를 지정합니다.|
-|NS|명명 된 영역에 대 한 DNS 이름 서버를 지정합니다.|
-|PTR|컴퓨터를 지정 합니다. 경우에 쿼리는 IP 주소, 이름 그렇지 않으면 다른 정보에 대 한 포인터를 지정합니다.|
-|SOA|DNS 영역에 대 한 권한-의-시작을 지정합니다.|
-|TXT|텍스트 정보를 지정합니다.|
-|UID|사용자 식별자를 지정합니다.|
-|UINFO|사용자 정보를 지정합니다.|
-|WKS|잘 알려진 서비스를 설명합니다.|
-{도움말 | ?}
-간단한 요약이 표시 되며 **nslookup** 하위 명령
+
+| 값 |                                                   설명                                                   |
+|-------|-----------------------------------------------------------------------------------------------------------------|
+|   변수를 잠그기 위한   |                                      컴퓨터 지정&#39;의 IP 주소                                      |
+|  모든  |                                     컴퓨터 지정&#39;의 IP 주소입니다.                                      |
+| CNAME |                                    별칭에 대 한 정식 이름을 지정합니다.                                     |
+|  GID  |                                  그룹 이름의 그룹 식별자를 지정합니다.                                  |
+| HINFO |                          컴퓨터 지정&#39;CPU 및 운영 체제 유형입니다.                           |
+|  MB   |                                        사서함 도메인 이름을 지정합니다.                                         |
+|  MG   |                                         메일 그룹 구성원을 지정합니다.                                          |
+| MINFO |                                   사서함 또는 메일 목록 정보를 지정합니다.                                   |
+|  MR   |                                     메일 이름 바꾸기 도메인 이름을 지정합니다.                                      |
+|  MX   |                                          메일 교환기를 지정합니다.                                          |
+|  NS   |                                 명명 된 영역에 대 한 DNS 이름 서버를 지정합니다.                                 |
+|  PTR  | 컴퓨터를 지정 합니다. 경우에 쿼리는 IP 주소, 이름 그렇지 않으면 다른 정보에 대 한 포인터를 지정합니다. |
+|  SOA  |                                DNS 영역에 대 한 권한-의-시작을 지정합니다.                                 |
+|  TXT  |                                         텍스트 정보를 지정합니다.                                         |
+|  UID  |                                         사용자 식별자를 지정합니다.                                          |
+| UINFO |                                         사용자 정보를 지정합니다.                                         |
+|  WKS  |                                         잘 알려진 서비스를 설명합니다.                                         |
+| {도움말 |                                                       ?}                                                        |
+
+간단한 요약이 표시 되며 <strong>nslookup</strong> 하위 명령
 ## <a name="remarks"></a>설명
--   **유형을 설정** 와 동일한 기능을 수행 하는 명령에서 **querytype 설정** 명령입니다.
--   리소스 레코드 종류에 대 한 자세한 내용은 주석 Rfc 1035에 대 한 요청을 참조 하세요.
-## <a name="additional-references"></a>추가 참조
-[명령줄 구문 키](command-line-syntax-key.md)
-[nslookup 유형 설정](nslookup-set-type.md)
+- <strong>유형을 설정</strong> 와 동일한 기능을 수행 하는 명령에서 <strong>querytype 설정</strong> 명령입니다.
+- 리소스 레코드 종류에 대 한 자세한 내용은 주석 Rfc 1035에 대 한 요청을 참조 하세요.
+  ## <a name="additional-references"></a>추가 참조
+  <a href="command-line-syntax-key.md" data-raw-source="[Command-Line Syntax Key](command-line-syntax-key.md)">명령줄 구문 키</a>
+  <a href="nslookup-set-type.md" data-raw-source="[nslookup set type](nslookup-set-type.md)">nslookup 유형 설정</a>

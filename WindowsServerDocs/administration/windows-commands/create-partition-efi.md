@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3714cfe52aafd4a602346139552b6712dbbc98c1
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 99970fba41a747a6bb4b1ca6cc4b7f603c547790
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59878224"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66434164"
 ---
 # <a name="create-partition-efi"></a>efi 파티션을 만들합니다
 
@@ -36,11 +36,11 @@ create partition efi [size=<n>] [offset=<n>] [noerr]
   
 ## <a name="parameters"></a>매개 변수  
   
-|매개 변수|설명|  
-|-------|--------|  
-|size\=<n>|메가바이트 단위로 파티션의 크기 \(MB\)합니다. 크기를 지정 하는 경우에 현재 지역에서 사용 가능한 공간이 더 이상 없는 파티션을 계속 합니다.|  
-|offset\=<n>|(킬로바이트)의 오프셋 \(KB\), 파티션을 만들 때에 있습니다. 오프셋이, 파티션은 저장 하는 데 충분히 큰 첫 번째 디스크에에서 배치 됩니다.|  
-|noerr|만 스크립팅 합니다. 오류가 발생 하면 오류가 발생 하지 않은 경우에 따라 명령을 처리 하도록 DiskPart 계속 합니다. 이 매개 변수를 크기는 오류 코드를 수행 합니다.|  
+|  매개 변수  |                                                                                             설명                                                                                              |
+|-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  size\=<n>  |                         메가바이트 단위로 파티션의 크기 \(MB\)합니다. 크기를 지정 하는 경우에 현재 지역에서 사용 가능한 공간이 더 이상 없는 파티션을 계속 합니다.                         |
+| offset\=<n> |             (킬로바이트)의 오프셋 \(KB\), 파티션을 만들 때에 있습니다. 오프셋이, 파티션은 저장 하는 데 충분히 큰 첫 번째 디스크에에서 배치 됩니다.              |
+|    noerr    | 만 스크립팅 합니다. 오류가 발생 하면 오류가 발생 하지 않은 경우에 따라 명령을 처리 하도록 DiskPart 계속 합니다. 이 매개 변수를 크기는 오류 코드를 수행 합니다. |
   
 ## <a name="remarks"></a>설명  
   

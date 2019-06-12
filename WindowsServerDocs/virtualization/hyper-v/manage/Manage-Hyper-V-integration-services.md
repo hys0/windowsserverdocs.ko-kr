@@ -10,12 +10,12 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: na
 ms.assetid: 9cafd6cb-dbbe-4b91-b26c-dee1c18fd8c2
-ms.openlocfilehash: b049efc61d5060791574f20fcdd8b369a26f0507
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e2c14e471abb9af7a9182100969a8dd94a17205a
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59890254"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812198"
 ---
 >적용 대상: Windows 10, Windows Server 2016, Windows Server 2019
 
@@ -25,8 +25,8 @@ Hyper-v 통합 서비스 가상 머신 성능을 향상 하 고 Hyper-v 호스�
 
 각 통합 서비스에 대 한 자세한 내용은 참조 하세요 [Hyper-v Integration Services](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/integration-services)합니다.
 
->[!IMPORTANT]
->작동 하는 데 사용 하려는 각 서비스 호스트와 게스트 모두에서 활성화 되어야 합니다. "Hyper-v 게스트 서비스 인터페이스"를 제외한 모든 통합 서비스는 Windows 게스트 운영 체제에서 기본적으로 켜져 있습니다. 서비스를 설정 하 고 해제 개별적으로 합니다. 다음 섹션에서는 그 방법을 보여줍니다.
+> [!IMPORTANT]
+> 작동 하는 데 사용 하려는 각 서비스 호스트와 게스트 모두에서 활성화 되어야 합니다. "Hyper-v 게스트 서비스 인터페이스"를 제외한 모든 통합 서비스는 Windows 게스트 운영 체제에서 기본적으로 켜져 있습니다. 서비스를 설정 하 고 해제 개별적으로 합니다. 다음 섹션에서는 그 방법을 보여줍니다.
 
 ## <a name="turn-an-integration-service-on-or-off-using-hyper-v-manager"></a>통합 서비스를 켜거나 끄려면 Hyper-v 관리자를 사용 하 여
 
@@ -47,6 +47,7 @@ Integration Services 창에는 Hyper-v 호스트에서 사용할 수 있는 모�
     ``` PowerShell
     Get-VMIntegrationService -VMName "DemoVM"
     ```
+
 1. 출력은 다음과 유사합니다.
 
     ``` PowerShell
@@ -84,12 +85,13 @@ Integration Services 창에는 Hyper-v 호스트에서 사용할 수 있는 모�
 ```
 REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesVersion
 ```
+
 이전 버전의 게스트 운영 체제에서 사용 가능한 모든 서비스를 갖지 않습니다. 예를 들어, Windows Server 2008 R2 게스트 "Hyper-v 게스트 서비스 인터페이스"를 사용할 수 없습니다.
 
 ## <a name="start-and-stop-an-integration-service-from-a-windows-guest"></a>Windows 게스트에서 통합 서비스를 시작 및 중지
 완전 하 게 작동 하는 통합 서비스에 대 한 순서 대로 해당 서비스 호스트에서 사용 하도록 설정 하는 것 외에도 게스트 내에서 실행 되어야 합니다. Windows 게스트에서 각 통합 서비스는 표준 Windows 서비스로 나열 됩니다. 이러한 서비스 중지 및 시작 하려면 제어판 또는 PowerShell에서 서비스 애플릿을 사용할 수 있습니다.
 
->[!IMPORTANT]
+> [!IMPORTANT]
 > 통합 서비스를 중지 합니다. 호스트의 가상 컴퓨터를 관리할 수에 심각한 영향을 미칠 수 있습니다. 올바르게 작동 하려면 사용 하려는 각 통합 서비스 호스트와 게스트 모두에서 사용할 수 있어야 합니다.
 > 모범 사례로 위의 지침을 사용 하 여 Hyper-v 통합 서비스를 제어 해야 합니다. 게스트 운영 체제에서 일치 하는 서비스는 중지 되거나 Hyper-v에서 해당 상태를 변경 하면 자동으로 시작 됩니다.
 > 게스트 운영 체제에서 서비스를 시작 하지만 Hyper-v에서 해제 되어 있는 경우 서비스가 중지 됩니다. Hyper-v에서 사용 되는 게스트 운영 체제에서 서비스를 중지 하는 경우 Hyper-v는 결국 다시 시작 합니다. 게스트 서비스를 비활성화 하면 Hyper-v가 시작할 수 없습니다.
@@ -104,7 +106,6 @@ REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesV
 
 1. 시작 또는 중지 하려는 서비스를 마우스 오른쪽 단추로 클릭 합니다. 원하는 작업을 클릭 합니다.
 
-
 ### <a name="use-windows-powershell-to-start-or-stop-an-integration-service-within-a-windows-guest"></a>Windows PowerShell을 사용 하 여 시작 하거나 Windows 게스트 내에서 통합 서비스를 중지 하려면
 
 1. Integration services의 목록을 가져오려면 다음을 실행 합니다.
@@ -112,6 +113,7 @@ REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesV
     ```
     Get-Service -Name vm*
     ```
+
 1.  출력은 다음과 유사 하 게 같아야 합니다.
 
     ```PowerShell
@@ -137,13 +139,13 @@ REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesV
 
 Linux 통합 서비스는 일반적으로 Linux 커널을 통해 제공됩니다. Linux 통합 서비스 드라이버 라고 **hv_utils**합니다.
 
-1.  확인 하려면 **hv_utils** 로드는이 명령을 사용 하 여:
+1. 확인 하려면 **hv_utils** 로드는이 명령을 사용 하 여:
 
-    ``` BASH
-    lsmod | grep hv_utils
-    ``` 
+   ``` BASH
+   lsmod | grep hv_utils
+   ``` 
   
-1. 출력은 다음과 유사 하 게 같아야 합니다.  
+2. 출력은 다음과 유사 하 게 같아야 합니다.  
   
     ``` BASH
     Module                  Size   Used by
@@ -151,13 +153,13 @@ Linux 통합 서비스는 일반적으로 Linux 커널을 통해 제공됩니다
     hv_vmbus               61440   8 hv_balloon,hyperv_keyboard,hv_netvsc,hid_hyperv,hv_utils,hyperv_fb,hv_storvsc
     ```
 
-1. 필요한 디먼이 실행 하는 경우를 찾으려면이 명령을 사용 합니다.
+3. 필요한 디먼이 실행 하는 경우를 찾으려면이 명령을 사용 합니다.
   
     ``` BASH
     ps -ef | grep hv
     ```
   
-1. 출력은 다음과 유사 하 게 같아야 합니다. 
+4. 출력은 다음과 유사 하 게 같아야 합니다. 
   
     ```BASH
     root       236     2  0 Jul11 ?        00:00:00 [hv_vmbus_con]
@@ -170,13 +172,13 @@ Linux 통합 서비스는 일반적으로 Linux 커널을 통해 제공됩니다
     scooley  43774 43755  0 21:20 pts/0    00:00:00 grep --color=auto hv          
     ```
 
-1. 사용할 수 있는 디먼을 보려면 다음을 실행합니다.
+5. 사용할 수 있는 디먼을 보려면 다음을 실행합니다.
 
     ``` BASH
     compgen -c hv_
     ```
   
-1. 출력은 다음과 유사 하 게 같아야 합니다.
+6. 출력은 다음과 유사 하 게 같아야 합니다.
   
     ``` BASH
     hv_vss_daemon
@@ -187,10 +189,10 @@ Linux 통합 서비스는 일반적으로 Linux 커널을 통해 제공됩니다
     hv_fcopy_daemon     
     ```
   
- 통합 서비스 디먼이 표시 될 수도 있습니다는 다음과 같습니다. 누락 된 경우 시스템에서 지원 되지 않는 또는 설치 되지 않을 수 있습니다. 자세한 내용은 참조 하십시오 [Windows의 Hyper-v에 대 한 지원 되는 Linux 및 FreeBSD 가상 컴퓨터](https://technet.microsoft.com/library/dn531030.aspx)합니다.  
-  - **hv_vss_daemon**: 이 디먼은 라이브 Linux 가상 머신 백업을 만드는 데 필요 합니다.
-  - **hv_kvp_daemon**: 이 디먼 설정 및 내장 및 외장 키 값 쌍을 쿼리할 수 있습니다.
-  - **hv_fcopy_daemon**: 이 디먼은 호스트와 게스트 사이의 서비스를 복사 하는 파일을 구현 합니다.  
+   통합 서비스 디먼이 표시 될 수도 있습니다는 다음과 같습니다. 누락 된 경우 시스템에서 지원 되지 않는 또는 설치 되지 않을 수 있습니다. 자세한 내용은 참조 하십시오 [Windows의 Hyper-v에 대 한 지원 되는 Linux 및 FreeBSD 가상 컴퓨터](https://technet.microsoft.com/library/dn531030.aspx)합니다.  
+   - **hv_vss_daemon**: 이 디먼은 라이브 Linux 가상 머신 백업을 만드는 데 필요 합니다.
+   - **hv_kvp_daemon**: 이 디먼 설정 및 내장 및 외장 키 값 쌍을 쿼리할 수 있습니다.
+   - **hv_fcopy_daemon**: 이 디먼은 호스트와 게스트 사이의 서비스를 복사 하는 파일을 구현 합니다.  
 
 ### <a name="examples"></a>예
 

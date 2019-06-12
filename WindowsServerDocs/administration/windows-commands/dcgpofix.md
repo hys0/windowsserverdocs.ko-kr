@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 91fceb429ca00b1b3d9d36d01f5e97cfd464ccb9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 179d540371870075906bbcbf8ff912e1b883915d
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59825164"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66433928"
 ---
 # <a name="dcgpofix"></a>dcgpofix
 
@@ -34,11 +34,11 @@ DCGPOFix [/ignoreschema] [/target: {Domain | DC | Both}] [/?]
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------|-----------|
-|생성|Active Directory® 스키마 mc의 버전을 무시합니다.</br>이 명령을 실행 하면 됩니다. 그렇지 않으면이 명령은 명령이 배송 된 Windows 버전으로 같은 스키마 버전 에서만 작동 합니다.|
-|/target {domain | DC | 둘 다}|복원 하는 GPO를 지정 합니다. 기본 도메인 정책 GPO, 기본 도메인 컨트롤러 GPO 또는 둘 다를 복원할 수 있습니다.|
-|/?|명령 프롬프트에 도움말을 표시합니다.|
+|    매개 변수    |                                                                                                 설명                                                                                                 |
+|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  생성  | Active Directory® 스키마 mc의 버전을 무시합니다.</br>이 명령을 실행 하면 됩니다. 그렇지 않으면이 명령은 명령이 배송 된 Windows 버전으로 같은 스키마 버전 에서만 작동 합니다. |
+| /target {domain |                                                                                                     DC                                                                                                      |
+|       /?        |                                                                                    명령 프롬프트에 도움말을 표시합니다.                                                                                     |
 
 ## <a name="remarks"></a>설명
 

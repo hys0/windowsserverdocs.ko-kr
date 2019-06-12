@@ -7,16 +7,16 @@ ms.topic: article
 ms.author: TimWi; ChrisRob; HerbertM; KenBrumf;  MLeary; ShawnRab
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 79f95c88c49d384f8a13b8808c63a0dc00de53cb
-ms.sourcegitcommit: d84dc3d037911ad698f5e3e84348b867c5f46ed8
+ms.openlocfilehash: 7ac9453159fe97dc15ecbb2ab858214664a2a197
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66266627"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66811531"
 ---
 # <a name="ldap-considerations-in-adds-performance-tuning"></a>추가 성능 튜닝의 LDAP 고려 사항
 
->[!Important]
+> [!IMPORTANT]
 > 다음은 주요 권장 사항 및 고려 사항에서 더 자세히 설명 하는 Active Directory 워크 로드에 대 한 서버 하드웨어를 최적화 하기 위해 요약이 합니다 [Active Directory Domain Services에 대 한 용량 계획](https://go.microsoft.com/fwlink/?LinkId=324566) 문서. 판독기가 검토 하는 것이 좋습니다 [Active Directory Domain Services에 대 한 용량 계획](https://go.microsoft.com/fwlink/?LinkId=324566) 에 대 한 큰 기술 이해 및 이러한 권장 사항의 영향을 줍니다.
 
 ## <a name="verify-ldap-queries"></a>LDAP 쿼리를 확인 합니다.
@@ -45,14 +45,14 @@ LDAP 쿼리 만들기 효율적인 쿼리 권장 사항을 준수 하는지 확�
 
 -   쿼리는 시간이 오래 걸리고 있으며 인덱스를 다루는 부족으로 인해 클라이언트에 적절 한 시간 내에 완료 되지 않습니다.
 
--   소비와 ATQ LDAP 스레드가 소진 된 많은 양의 높은 기간을 사용 하 여 쿼리 유발 합니다. 다음 성능 카운터를 모니터링 합니다.
+- 소비와 ATQ LDAP 스레드가 소진 된 많은 양의 높은 기간을 사용 하 여 쿼리 유발 합니다. 다음 성능 카운터를 모니터링 합니다.
 
-    -   **NTDS\\요청 대기 시간** – 기간에 따라 요청 하는 데 걸리는 프로세스입니다. 그러나 Active Directory 120 초 (기본값) 한 후 요청 시간이 대부분 훨씬 더 빠르게 실행 해야 하 고 매우 장기 실행 쿼리의 전체 숫자에서 숨겨진 가져오기 해야 합니다. 이 기준 보다는 절대 임계값의 변경 내용을 확인 합니다.
+    - **NTDS\\요청 대기 시간** – 기간에 따라 요청 하는 데 걸리는 프로세스입니다. 그러나 Active Directory 120 초 (기본값) 한 후 요청 시간이 대부분 훨씬 더 빠르게 실행 해야 하 고 매우 장기 실행 쿼리의 전체 숫자에서 숨겨진 가져오기 해야 합니다. 이 기준 보다는 절대 임계값의 변경 내용을 확인 합니다.
 
-        > [!Note]   여기에서 높은 값 표시기 다른 도메인과 CRL 검사에 대 한 "프록시" 요청에 지연 될 수도 있습니다.
+        > [!NOTE]
+        > 여기에서 높은 값 표시기 다른 도메인과 CRL 검사에 대 한 "프록시" 요청에 지연 될 수도 있습니다.
 
-
-    -   **NTDS\\큐 지연 예상** –이 최적의 성능을 위해 0에 가까우면 가능 해야 합니다.이 요청 시간이 없는 서비스를 기다리는 것을 의미 하는 대로 합니다.
+    - **NTDS\\큐 지연 예상** –이 최적의 성능을 위해 0에 가까우면 가능 해야 합니다.이 요청 시간이 없는 서비스를 기다리는 것을 의미 하는 대로 합니다.
 
 다음 방법 중 하나 이상을 사용 하 여 이러한 시나리오를 검색할 수 있습니다.
 
@@ -98,8 +98,8 @@ LDAP 쿼리 만들기 효율적인 쿼리 권장 사항을 준수 하는지 확�
 
 -   [인덱싱된 특성](https://msdn.microsoft.com/library/windows/desktop/ms677112.aspx)
 
-
 ## <a name="see-also"></a>참조
+
 - [Active Directory 서버를 튜닝 하는 성능](index.md)
 - [하드웨어 고려 사항](hardware-considerations.md)
 - [적절한 도메인 컨트롤러 배치 및 사이트 고려 사항](site-definition-considerations.md)

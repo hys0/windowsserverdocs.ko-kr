@@ -9,12 +9,12 @@ ms.date: 03/16/2018
 ms.topic: article
 author: kaushika-msft
 ms.author: elizapo
-ms.openlocfilehash: b283eed38e991886fc72de0e8f8cdbc209972fa7
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 1eb52f28fcd5afe62df33cd56208f2ab506e7194
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59820524"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66453152"
 ---
 # <a name="top-support-solutions-for-windows-server-2016"></a>Windows Server 2016을 위한 상위 지원 솔루션
 
@@ -27,15 +27,15 @@ Windows Server 2016을 사용할 때 경험하는 가장 일반적인 문제에 
 
 ## <a name="solutions-for-installing-or-upgrading-windows-server"></a>Windows Server 설치 또는 업그레이드 솔루션
 
-- [Windows 10 업그레이드 오류를 해결 합니다. IT 전문가 위한 기술 정보](\windows\deployment\upgrade\resolve-windows-10-upgrade-errors)
+- [Windows 10 업그레이드 오류를 해결 합니다. IT 전문가 위한 기술 정보](https://docs.microsoft.com/windows/deployment/upgrade/resolve-windows-10-upgrade-errors)
 - [Windows 10 버전 1607 및 Windows Server 2016 용 서비스 스택 업데이트: 2017 년 8 월 8 일](https://support.microsoft.com/en-US/help/4035631)
 - [Windows 10 버전 1607 및 Windows Server 2016으로 업그레이드 하는 것에 대 한 호환성 업데이트: 2017 년 8 월 3 일](https://support.microsoft.com/en-US/help/4033524)
 - [Windows 기반 Azure Vm에는 시스템 전체 업그레이드가 지원 되지 않습니다.](https://support.microsoft.com/en-US/help/4014997)
-- [Windows Server 2016 용 업그레이드 및 변환 옵션](..\get-started\supported-upgrade-paths.md)
-- [Windows Server 2016에 대 한 서버 역할 업그레이드 및 마이그레이션 매트릭스](..\get-started\server-role-upgradeability-table.md)
-- [Windows Server 설치 및 업그레이드](..\get-started\installation-and-upgrade.md)
-- [릴리스 정보: Windows Server 2016의에서 주요 문제점](..\get-started\windows-server-2016-ga-release-notes.md)
-- [Windows Server 2016으로 전환 하기 위한 권장 사항](..\get-started\recommendations-moving-to-server2016.md)
+- [Windows Server 2016 용 업그레이드 및 변환 옵션](../get-started/supported-upgrade-paths.md)
+- [Windows Server 2016에 대 한 서버 역할 업그레이드 및 마이그레이션 매트릭스](../get-started/server-role-upgradeability-table.md)
+- [Windows Server 설치 및 업그레이드](../get-started/installation-and-upgrade.md)
+- [릴리스 정보: Windows Server 2016의 중요한 이슈](../get-started/windows-server-2016-ga-release-notes.md)
+- [Windows Server 2016으로 전환 시 권장 사항](../get-started/recommendations-moving-to-server2016.md)
 
 ## <a name="solutions-for-volume-activation"></a>볼륨 정품 인증 솔루션
 - [Windows Server 2016 정품 인증](../get-started/server-2016-activation.md)
@@ -58,10 +58,10 @@ Windows Server 2016을 사용할 때 경험하는 가장 일반적인 문제에 
 ## <a name="solutions-for-active-directory-federation-services-ad-fs"></a>AD FS(Active Directory Federation Services)에 대한 해결 방법
 - [Azure Active Directory를 사용 하 여 Windows 도메인 가입 장치의 자동 등록을 구성 하는 방법](/azure/active-directory/active-directory-conditional-access-automatic-device-registration-setup)
 - [클레임 발급 설정](/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup#step-2-setup-issuance-of-claims)
-- [LDAP 디렉터리에 저장 된 사용자를 인증 하도록 AD FS를 구성 합니다.](../identity/ad-fs/operations/configure-ad-fs-to-authenticate-users-stored-in-ldap-directories.md)
-- [AD FS 인증서 인증에 대 한 대체 호스트 이름 바인딩에 대 한 지원](../identity/ad-fs/operations/ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication.md)
+- [LDAP 디렉터리에 저장된 사용자를 인증하도록 AD FS 구성](../identity/ad-fs/operations/configure-ad-fs-to-authenticate-users-stored-in-ldap-directories.md)
+- [인증서 인증의 대체 호스트 이름 바인딩에 대한 AD FS 지원](../identity/ad-fs/operations/ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication.md)
 - [암호 공격 으로부터 보호](https://blogs.technet.microsoft.com/tspring/2017/01/20/federated-to-microsoft-cloud-and-account-lockouts/)
-- [WID 데이터베이스를 사용 하 여 Windows Server 2016에서 AD FS로 업그레이드](../identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server-2016.md)
+- [WID 데이터베이스를 사용하여 Windows Server 2016에서 AD FS로 업그레이드](../identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server-2016.md)
 - [Windows 10 로그온-AD FS 사용 하 여 장치 인증을 사용 하도록 설정](../identity/ad-fs/operations/configure-device-based-conditional-access-on-premises.md)
 - [AD FS 및 Windows Server 2016의에서 WAP에서 SSL 인증서 관리](../identity/ad-fs/operations/manage-ssl-certificates-ad-fs-wap-2016.md)
 - [Windows Server 2016 AD FS에서 액세스 제어 정책](../identity/ad-fs/operations/access-control-policies-in-ad-fs.md)

@@ -1,25 +1,25 @@
 ---
 title: 기본 볼륨 축소
 description: 이 문서에서는 기본 볼륨을 축소하는 방법을 설명합니다.
-ms.date: 10/12/2017
+ms.date: 06/07/2019
 ms.prod: windows-server-threshold
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: e54632b78fd67a65b51147323565130881d8d81b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9073632a656f512bdb49ebe4eeefd4cd5f4eaadf
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59885334"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812523"
 ---
 # <a name="shrink-a-basic-volume"></a>기본 볼륨 축소
 
-> **적용 대상:** Windows 10, Windows 8.1, Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> **적용 대상:** Windows 10, Windows 8.1, Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-주 파티션과 논리 드라이브를 동일한 디스크의 연속된 인접한 공간으로 축소하여 이러한 주 파티션과 논리 드라이브에 사용되는 공간을 줄일 수 있습니다. 예를 들어 추가 파티션이 필요하지만 추가 디스크가 없는 경우 기존 파티션을 볼륨 끝부터 축소하여 할당되지 않은 새 공간을 만든 다음 이 공간을 새 파티션에 사용할 수 있습니다. 축소 작업은 특정 파일 형식의 존재 여부에 따라 차단될 수 있습니다. 자세한 내용은 [추가 고려 사항](#addcon)을 참조하세요. 
+주 파티션과 논리 드라이브를 동일한 디스크의 연속된 인접한 공간으로 축소하여 이러한 주 파티션과 논리 드라이브에 사용되는 공간을 줄일 수 있습니다. 예를 들어 추가 파티션이 필요하지만 추가 디스크가 없는 경우 기존 파티션을 볼륨 끝부터 축소하여 할당되지 않은 새 공간을 만든 다음 이 공간을 새 파티션에 사용할 수 있습니다. 축소 작업은 특정 파일 형식의 존재 여부에 따라 차단될 수 있습니다. 자세한 내용은 참조 하세요. [추가 고려 사항](#additional-considerations) 
 
 파티션을 축소할 때 일반 파일은 디스크에 자동적으로 재배치되고, 디스크에 할당되지 않은 공간이 새로 만들어집니다. 파티션을 축소하기 위해 디스크를 다시 포맷할 필요는 없습니다.
 
@@ -28,13 +28,9 @@ ms.locfileid: "59885334"
 
 ## <a name="shrinking-a-basic-volume"></a>기본 볼륨 축소
 
--   [Windows 인터페이스를 사용 하 여](#BKMK_WINUI)
--   [명령줄을 사용 하 여](#BKMK_CMD)
-
 > [!NOTE]
 > **Backup Operators** 또는 **Administrators** 그룹의 구성원이어야 이 단계를 완료할 수 있습니다.
 
-<a id="BKMK_WINUI"></a>
 #### <a name="to-shrink-a-basic-volume-using-the-windows-interface"></a>Windows 인터페이스를 사용하여 기본 볼륨 축소
 
 1.  디스크 관리자에서 축소하고자 하는 기본 볼륨을 마우스 오른쪽 단추로 클릭합니다.
@@ -43,12 +39,10 @@ ms.locfileid: "59885334"
 
 3.  화면상의 지침을 따릅니다.
 
-<br />
 
 > [!NOTE]
 > 파일 시스템이 없거나 NTFS 파일 시스템을 사용하는 기본 볼륨만을 축소할 수 있습니다.
 
-<a id="BKMK_CMD"></a>
 #### <a name="to-shrink-a-basic-volume-using-a-command-line"></a>명령줄을 사용하여 기본 볼륨 축소
 
 1.  명령 프롬프트를 열고 `diskpart`를 입력합니다.
@@ -59,17 +53,13 @@ ms.locfileid: "59885334"
 
 4.  **DISKPART** 프롬프트에서 `shrink [desired=<desiredsize>] [minimum=<minimumsize>]`을 입력합니다. 선택한 볼륨을 가급적 *desiredsize* 메가바이트(MB)로 축소합니다. 또는 *desiredsize*가 너무 큰 경우 *minimumsize*로 축소합니다.
 
-<br />
-
-| 값 | 설명|
-|---|---|
-| <p>**볼륨 목록**</p> | <p>모든 디스크에 기본 및 동적 볼륨 목록을 표시합니다.</p>|
-| <p>**볼륨 선택**</p> | <p>볼륨 번호가 <em>volumenumber</em>인 지정된 볼륨을 선택하고 포커스를 설정합니다. 지정된 볼륨이 없는 경우 **select** 명령이 포커스가 설정된 현재 볼륨 목록을 표시합니다. 번호, 드라이브 문자 또는 탑재 지점 경로로 볼륨을 지정할 수 있습니다. 기본 디스크에서 볼륨을 선택하면 해당 파티션에도 포커스를 설정합니다.</p> |
-| <p>**shrink**</p> | <p>포커스가 설정된 볼륨을 축소하여 할당되지 않은 공간을 만듭니다. 데이터는 손실되지 않습니다. 파티션에 이동할 수 없는 파일(페이지 파일 또는 섀도 복사본 저장 영역 등)이 포함된 경우 볼륨은 이동할 수 없는 파일이 있는 지점으로 축소됩니다. |
-| <p>**desired=** <em>desiredsize</em></p> | <p>현재 파티션에 복구할 공간 크기(MB, 메가바이트)입니다.</p> |
-| <p>**minimum=** <em>minimumsize</em></p> | <p>현재 파티션에 복구할 최소 공간 크기(MB, 메가바이트)입니다. 원하는 크기 또는 최소 크기를 지정하지 않은 경우 명령은 가능한 최대 공간의 양을 확보합니다.</p> 
-
-<a id="addcon"></a>
+| 값             | 설명 |
+| ---               | ----------- |
+| **볼륨 목록** | 모든 디스크에 기본 및 동적 볼륨 목록을 표시합니다. |
+| **볼륨 선택** | 볼륨 번호가 <em>volumenumber</em>인 지정된 볼륨을 선택하고 포커스를 설정합니다. 지정된 볼륨이 없는 경우 **select** 명령이 포커스가 설정된 현재 볼륨 목록을 표시합니다. 번호, 드라이브 문자 또는 탑재 지점 경로로 볼륨을 지정할 수 있습니다. 기본 디스크에서 볼륨을 선택하면 해당 파티션에도 포커스를 설정합니다. |
+| **shrink** | 포커스가 설정된 볼륨을 축소하여 할당되지 않은 공간을 만듭니다. 데이터는 손실되지 않습니다. 파티션에 이동할 수 없는 파일(페이지 파일 또는 섀도 복사본 저장 영역 등)이 포함된 경우 볼륨은 이동할 수 없는 파일이 있는 지점으로 축소됩니다. |
+| **desired=** <em>desiredsize</em> | 현재 파티션에 복구할 공간 크기(MB, 메가바이트)입니다. |
+| **minimum=** <em>minimumsize</em> | 현재 파티션에 복구할 최소 공간 크기(MB, 메가바이트)입니다. 원하는 크기 또는 최소 크기를 지정하지 않은 경우 명령은 가능한 최대 공간의 양을 확보합니다. |
 
 ## <a name="additional-considerations"></a>추가 고려 사항
 

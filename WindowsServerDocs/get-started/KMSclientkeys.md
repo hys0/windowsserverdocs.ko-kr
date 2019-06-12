@@ -9,12 +9,12 @@ ms.author: jgerend
 ms.localizationpriority: medium
 ms.date: 05/21/2019
 ms.topic: get-started-article
-ms.openlocfilehash: e2aac6db7bb9e118d672190c95f0d73294474f75
-ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
+ms.openlocfilehash: c0d85da8a51a43acd7765957b34220829a43b086
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65976535"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66810709"
 ---
 # <a name="kms-client-setup-keys"></a>KMS 클라이언트 설정 키
 
@@ -22,7 +22,7 @@ ms.locfileid: "65976535"
 
 Windows Server, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 R2, Windows Vista 및 Windows Server 2008의 볼륨 라이선스 버전을 실행하는 컴퓨터는 기본적으로 추가 구성이 필요하지 않은 KMS 클라이언트입니다.
 
->[!NOTE]
+> [!NOTE]
 > 다음 테이블에서 "LTSC"는 "장기 서비스 채널"에 대 한 "LTSB"는 "장기 서비스 분기입니다."를 참조 하는 동안 
 
 **여기에 나열 된 키 (gvlk)를 사용 하 여, 배포에서 실행 되는 KMS 호스트가 있어야 합니다.** KMS 호스트를 아직 구성하지 않은 경우 설정 단계는 [Deploy KMS Activation](https://technet.microsoft.com/library/dn502531(v=ws.11).aspx) 를 참조하세요.

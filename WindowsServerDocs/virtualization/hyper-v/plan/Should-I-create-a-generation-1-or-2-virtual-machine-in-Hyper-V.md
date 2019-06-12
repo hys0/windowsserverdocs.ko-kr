@@ -11,12 +11,12 @@ ms.assetid: 02e31413-6140-4723-a8d6-46c7f667792d
 author: KBDAzure
 ms.author: kathydav
 ms.date: 12/05/2016
-ms.openlocfilehash: e3c88ef5ee700bb3906746402bf6cc8916976800
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 95ececde8a1b8c591ea2baf367a93f63ee55a6e3
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66192771"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66811989"
 ---
 # <a name="should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v"></a>1 또는 2 세대 가상 컴퓨터를 Hyper-v에서 만들어야 하나요?
 
@@ -35,25 +35,25 @@ ms.locfileid: "66192771"
 
 만든 후 가상 컴퓨터의 세대를 변경할 수 없습니다. 따라서는 하면 여기에서 고려 사항을 검토 뿐만 아니라 운영 체제, 부팅 방법 및 기능 생성을 선택 하기 전에 사용 하려는 선택 것이 좋습니다.  
 
-## <a name="BKMK_OS"></a>지원 되는 게스트 운영 체제?
+## <a name="which-guest-operating-systems-are-supported"></a>지원 되는 게스트 운영 체제?
 
 1 세대 가상 컴퓨터는 대부분의 게스트 운영 체제를 지원합니다. 2 세대 가상 컴퓨터는 가장 64 비트 버전의 Windows 및 Linux 및 FreeBSD 운영 체제의 최신 버전을 지원합니다. 다음 섹션에서는 사용 하 여 가상 컴퓨터의 세대 지원 설치 하려면 게스트 운영 체제를 확인 합니다.  
 
-- [Windows 게스트 운영 체제 지원](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md#BKMK_Windows)  
+- [Windows 게스트 운영 체제 지원](#windows-guest-operating-system-support)  
 
-- [CentOS 및 Red Hat Enterprise Linux 게스트 운영 체제 지원](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md#BKMK_CentOS)  
+- [CentOS 및 Red Hat Enterprise Linux 게스트 운영 체제 지원](#centos-and-red-hat-enterprise-linux-guest-operating-system-support)  
 
-- [Debian 게스트 운영 체제 지원](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md#BKMK_Debian)  
+- [Debian 게스트 운영 체제 지원](#debian-guest-operating-system-support)  
 
-- [FreeBSD 게스트 운영 체제 지원](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md#BKMK_FreeBSD)  
+- [FreeBSD 게스트 운영 체제 지원](#freebsd-guest-operating-system-support)  
 
-- [Oracle Linux 게스트 운영 체제 지원](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md#BKMK_Oracle)  
+- [Oracle Linux 게스트 운영 체제 지원](#oracle-linux-guest-operating-system-support)  
 
-- [SUSE 게스트 운영 체제 지원](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md#BKMK_SUSE)  
+- [SUSE 게스트 운영 체제 지원](#suse-guest-operating-system-support)  
 
-- [Ubuntu 게스트 운영 체제 지원](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md#BKMK_Ubuntu)  
+- [Ubuntu 게스트 운영 체제 지원](#ubuntu-guest-operating-system-support)  
 
-### <a name="BKMK_Windows"></a>Windows 게스트 운영 체제 지원
+### <a name="windows-guest-operating-system-support"></a>Windows 게스트 운영 체제 지원
 
 다음 표에서는 Windows 64 비트 버전으로 사용할 수 있습니다 게스트 운영 체제 1 세대 및 2 세대 가상 컴퓨터에 대해 보여 줍니다.  
 
@@ -79,7 +79,7 @@ ms.locfileid: "66192771"
 |Windows 8|&#10004;| &#10006;|  
 |Windows 7|&#10004;| &#10006;|  
 
-### <a name="BKMK_CentOS"></a>CentOS 및 Red Hat Enterprise Linux 게스트 운영 체제 지원
+### <a name="centos-and-red-hat-enterprise-linux-guest-operating-system-support"></a>CentOS 및 Red Hat Enterprise Linux 게스트 운영 체제 지원
 
 다음 표에서 Red Hat Enterprise Linux 버전 \(RHEL\) CentOS 1 세대 및 2 세대 가상 컴퓨터에 게스트 운영 체제로 사용할 수 없다.
 
@@ -91,7 +91,7 @@ ms.locfileid: "66192771"
 
 자세한 내용은 참조 [CentOS 및 Red Hat Enterprise Linux Hyper-v에서 가상 컴퓨터](../Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md)합니다.  
 
-### <a name="BKMK_Debian"></a>Debian 게스트 운영 체제 지원  
+### <a name="debian-guest-operating-system-support"></a>Debian 게스트 운영 체제 지원  
 
 다음 표에서 Debian의 버전 1 세대 및 2 세대 가상 컴퓨터에 대 한 게스트 운영 체제도 사용할 수 없다 보여 줍니다.
 
@@ -102,7 +102,7 @@ ms.locfileid: "66192771"
 
 자세한 내용은 참조 [Hyper-v에서 가상 컴퓨터를 Debian](../Supported-Debian-virtual-machines-on-Hyper-V.md)합니다.  
 
-### <a name="BKMK_FreeBSD"></a>FreeBSD 게스트 운영 체제 지원
+### <a name="freebsd-guest-operating-system-support"></a>FreeBSD 게스트 운영 체제 지원
 
 다음 표에서 FreeBSD 버전 1 세대 및 2 세대 가상 컴퓨터에 대 한 게스트 운영 체제로 사용할 수 없다 보여 줍니다.  
 
@@ -114,7 +114,7 @@ ms.locfileid: "66192771"
 
 자세한 내용은 참조 [Hyper-v에 FreeBSD 가상 컴퓨터](../Supported-FreeBSD-virtual-machines-on-Hyper-V.md)합니다.  
 
-### <a name="BKMK_Oracle"></a>Oracle Linux 게스트 운영 체제 지원  
+### <a name="oracle-linux-guest-operating-system-support"></a>Oracle Linux 게스트 운영 체제 지원  
 
 다음 표에서 어떤 버전 Red Hat 호환 커널 시리즈의 1 세대 및 2 세대 가상 컴퓨터에 대 한 게스트 운영 체제로 사용 수 없다 보여 줍니다.  
 
@@ -133,7 +133,7 @@ ms.locfileid: "66192771"
 
 자세한 내용은 참조 [Oracle Linux 가상 컴퓨터에 Hyper-v](../Supported-Oracle-Linux-virtual-machines-on-Hyper-V.md)합니다.  
 
-### <a name="BKMK_SUSE"></a>SUSE 게스트 운영 체제 지원
+### <a name="suse-guest-operating-system-support"></a>SUSE 게스트 운영 체제 지원
 
 다음 표에서는 SUSE 버전 1 세대 및 2 세대 가상 컴퓨터에 대 한 게스트 운영 체제로 사용할 수 없다 보여 줍니다.
 
@@ -145,7 +145,7 @@ ms.locfileid: "66192771"
 
 자세한 내용은 참조 [Hyper-v에서 가상 컴퓨터 SUSE](../Supported-SUSE-virtual-machines-on-Hyper-V.md)합니다.  
 
-### <a name="BKMK_Ubuntu"></a>Ubuntu 게스트 운영 체제 지원
+### <a name="ubuntu-guest-operating-system-support"></a>Ubuntu 게스트 운영 체제 지원
 
 다음 표에서 Ubuntu 버전으로 사용할 수 있습니다 게스트 운영 체제 1 세대 및 2 세대 가상 컴퓨터에 대해 보여 줍니다.
 
@@ -156,7 +156,7 @@ ms.locfileid: "66192771"
 
 자세한 내용은 참조 [Ubuntu 가상 컴퓨터에 Hyper-v](../Supported-Ubuntu-virtual-machines-on-Hyper-V.md)합니다.  
 
-## <a name="BKMK_Boot"></a>가상 컴퓨터를 부팅할 수는 방법
+## <a name="how-can-i-boot-the-virtual-machine"></a>가상 컴퓨터를 부팅할 수는 방법
 
 다음 표에서 메서드는 1 세대 및 2 세대 가상 컴퓨터에서 지원 되는 부팅을 보여 줍니다.  
 
@@ -168,7 +168,7 @@ ms.locfileid: "66192771"
 |가상 하드 디스크를 IDE 컨트롤러에서 부팅 (합니다. VHD) 또는 가상 DVD (합니다. ISO)|&#10004;| &#10006;|  
 |플로피에서 부팅 (합니다. VFD)|&#10004;| &#10006;|  
 
-## <a name="BKMK_Advantages"></a>2 세대 가상 컴퓨터를 사용 하는 이점은 무엇입니까?
+## <a name="what-are-the-advantages-of-using-generation-2-virtual-machines"></a>2 세대 가상 컴퓨터를 사용 하는 이점은 무엇입니까?
 
 몇 가지 때 2 세대 가상 컴퓨터를 사용 하는 이점은 다음과 같습니다.  
 - **보안 부팅** 부팅 로더는 권한 없는 펌웨어, 운영 체제 또는 UEFI 드라이버가 부팅 시에 실행 하지 않도록 하기 위해 UEFI 데이터베이스의 신뢰할 수 있는 기관에서 서명 확인 하는 기능은이 있습니다. 보안 부팅은 2세대 가상 컴퓨터에서 기본적으로 사용됩니다. 보안 부팅에서 지원 되지 않는 게스트 운영 체제를 실행 해야 할 경우 가상 컴퓨터를 만든 후 비활성화할 수 있습니다.  자세한 내용은 [보안 부팅](https://technet.microsoft.com/library/dn486875.aspx)을 참조하세요.  
@@ -177,9 +177,9 @@ ms.locfileid: "66192771"
 
 - **첫 번째 부팅 볼륨** 2 세대 가상 컴퓨터에 대 한 최대 부팅 볼륨은 64TB입니다. 지 원하는 최대 디스크 크기는 합니다. VHDX 합니다. 1 세대 가상 컴퓨터에 대 한 최대 부팅 볼륨이 2TB를 합니다. VHDX에 대 한 2040GB 하 고는 합니다. VHD입니다. 자세한 내용은 참조 [Hyper-v 가상 하드 디스크 형식 개요](https://technet.microsoft.com/library/hh831446.aspx)합니다.  
 
- 2 세대 가상 컴퓨터와 가상 컴퓨터 부팅 및 설치 시간이 약간 향상을 확인할 수도 있습니다.
+  2 세대 가상 컴퓨터와 가상 컴퓨터 부팅 및 설치 시간이 약간 향상을 확인할 수도 있습니다.
 
-## <a name="BKMK_DeviceCompare"></a> 장치 지원의 차이점은 무엇입니까?
+## <a name="whats-the-difference-in-device-support"></a>장치 지원의 차이점은 무엇입니까?
 
 다음 표에서 1 세대 및 2 세대 가상 컴퓨터 간에 사용 가능한 장치를 비교 합니다.  
 
@@ -200,7 +200,7 @@ ms.locfileid: "66192771"
 |PIT(프로그램 가능 간격 타이머)|더 이상 필요 없음|해당 사항 없음|  
 |Super I/O 장치|더 이상 필요 없음|해당 사항 없음|  
 
-## <a name="BKMK_More"></a> 2 세대 가상 컴퓨터에 대 한 자세한 정보
+## <a name="more-about-generation-2-virtual-machines"></a>2 세대 가상 컴퓨터에 대 한 자세한
 
 다음은 2 세대 virtual machines를 사용 하는 방법에 대 한 몇 가지 추가 팁입니다.
 
@@ -230,7 +230,7 @@ ms.locfileid: "66192771"
 Set-VMFirmware -VMName TestVM -IPProtocolPreference IPv6  
 ```  
 
-## <a name="BKMK_Debug"></a>커널 디버깅에 대 한 COM 포트를 추가 합니다.
+## <a name="add-a-com-port-for-kernel-debugging"></a>커널 디버깅에 대 한 COM 포트를 추가 합니다.
 
 추가할 때까지 COM 포트를 2 세대 가상 컴퓨터에서 사용할 수 없습니다. Windows PowerShell 또는 Windows Management Instrumentation (WMI)를 사용 하 여이 수행할 수 있습니다. 이러한 단계는 Windows PowerShell을 사용 하 여 수행 하는 방법을 보여 줍니다.
 

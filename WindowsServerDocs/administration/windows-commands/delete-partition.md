@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bf9f456ad6ab3010493154da843b2b519754e250
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3b47338b74cf71a4754b7320d6b3842f342d324d
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59816334"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66436146"
 ---
 # <a name="delete-partition"></a>파티션을 삭제합니다
 
@@ -43,8 +43,8 @@ delete partition [noerr] [override]
 
 > [!CAUTION]
 > 동적 디스크의 파티션을 삭제 있으므로 모든 데이터를 삭제 하 고 디스크 손상 된 상태로 두면 디스크의 모든 동적 볼륨을 삭제할 수 있습니다. 동적 볼륨을 삭제 하려면 항상 사용은 **볼륨을 삭제** 명령을 사용 합니다. 동적 디스크에서 파티션을 삭제할 수 있지만 이러한를 만들 수 없습니다. 예를 들어 동적 GPT 디스크에는 인식할 수 없는 GUID 파티션 테이블 (GPT) 파티션 삭제 하는 것이 같습니다. 이러한 파티션을 삭제 하는 경우에 결과 생긴 여유 공간을 사용할 수 있는 발생 하지 않습니다. 이 명령은 reclame 응급 상황에서 손상된 된 오프 라인 동적 디스크 공간을 허용 하면 만들어졌습니다 여기서는 **정리** DiskPart에서 명령을 사용할 수 없습니다.
--   시스템 파티션, 부팅 파티션 또는 활성 페이징 파일이 나 크래시 덤프 정보를 포함 하는 파티션의 삭제할 수 없습니다.
--   이 작업을 수행 하려면 파티션을 선택 해야 합니다. 사용 된 **파티션을 선택** 파티션을 선택 하 고 포커스를 이동 하는 명령입니다.
+> -   시스템 파티션, 부팅 파티션 또는 활성 페이징 파일이 나 크래시 덤프 정보를 포함 하는 파티션의 삭제할 수 없습니다.
+> -   이 작업을 수행 하려면 파티션을 선택 해야 합니다. 사용 된 **파티션을 선택** 파티션을 선택 하 고 포커스를 이동 하는 명령입니다.
 
 ## <a name="BKMK_examples"></a>예제
 

@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: ed5ecddbaef91f127846825e408a9a6ec65ff741
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 268a7d2833f73e9fab006501e9b3dc261d1b1d9e
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59825474"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66452568"
 ---
 # <a name="develop-a-solution-extension"></a>솔루션 확장 개발
 
@@ -71,10 +71,10 @@ npm install
 
 Windows Admin Center CLI를 사용 하 여 확장을 만든 했으므로 콘텐츠를 사용자 지정할 준비가 되었습니다.  수행할 수 있는 예가 다음이 가이드를 참조 하세요.
 
-- 추가 [빈 모듈](guides\add-module.md)
-- 추가 [iFrame](guides\add-iframe.md)
-- 만들기는 [사용자 지정 연결 공급자](guides\create-connection-provider.md)
-- 수정 [루트 탐색 동작](guides\modify-root-navigation.md)
+- 추가 [빈 모듈](guides/add-module.md)
+- 추가 [iFrame](guides/add-iframe.md)
+- 만들기는 [사용자 지정 연결 공급자](guides/create-connection-provider.md)
+- 수정 [루트 탐색 동작](guides/modify-root-navigation.md)
  
 더 많은 예제를 찾을 수 있습니다 우리의 [GitHub SDK 사이트](https://aka.ms/wacsdk):
 -  [개발자 도구](https://github.com/Microsoft/windows-admin-center-sdk/tree/master/windows-admin-center-developer-tools) 는 Windows Admin Center 테스트용으로 로드 될 수 있는 완벽 한 기능의 확장으로, 탐색 하 고 고유한 확장에서 사용할 수 있는 샘플 기능 및 도구 예제가 다양 한 컬렉션을 포함 합니다.

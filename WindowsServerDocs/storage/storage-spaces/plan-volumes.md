@@ -9,16 +9,16 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 01/10/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: e2d9e6828584f4027aa32cec26572c2290098ab6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c68444be5662480293cee630970d5eb76b52268a
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59830104"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66453188"
 ---
 # <a name="planning-volumes-in-storage-spaces-direct"></a>저장소 공간 다이렉트에서 볼륨 계획
 
-> 적용 대상: Windows Server 2016, Windows Server 2019
+> 적용 대상: Windows Server 2019, Windows Server 2016
 
 이 항목에서는 파일 시스템, 복원력 유형 및 크기 선택을 포함하여 작업에 대한 성능 및 용량 요구 사항을 충족하기 위해 저장소 공간 다이렉트에서 볼륨을 계획하는 방법에 대한 지침을 제공합니다.
 
@@ -31,7 +31,7 @@ ms.locfileid: "59830104"
 
 ![볼륨이란?](media/plan-volumes/what-are-volumes.png)
 
-모든 볼륨은 클러스터에 있는 모든 서버에서 동시에 액세스할 수 있습니다. 생성되고 나면 모든 서버의 **C:\ClusterStorage\** 에 표시됩니다.
+모든 볼륨은 클러스터에 있는 모든 서버에서 동시에 액세스할 수 있습니다. 만들어지면 해당 하시면 **C:\ClusterStorage\\**  모든 서버에서.
 
 ![csv-폴더-스크린샷](media/plan-volumes/csv-folder-screenshot.png)
 
@@ -87,9 +87,9 @@ ReFS가 아직 지원하지 않는 기능이 작업에 필요한 경우 대신 N
 
 | **복원 유형**| **용량 효율성**| **속도**| **워크 로드**
 |--------------------|--------------------------------|--------------------------------|--------------------------
-| **미러**         | ![저장소 효율성 보여 주는 33%](media\plan-volumes\3-way-mirror-storage-efficiency.png)<br>3 방향 미러: 33% <br>Two-양방향 미러: 50%     |![성능 보여 주는 100%](media\plan-volumes\three-way-mirror-perf.png)<br> 가장 높은 성능  | 가상화 된 워크 로드<br> 데이터베이스<br>다른 고성능 워크 로드 |
-| **미러 가속 패리티** |![저장소 효율성 약 50% 표시](media\plan-volumes\mirror-accelerated-parity-storage-efficiency.png)<br> 미러 및 패리티 비율에 따라 달라 집니다. | ![약 20%를 보여 주는 성능](media\plan-volumes\mirror-accelerated-parity-perf.png)<br>보다 훨씬 더 느립니다 미러 하지만 최대 두 번 이중 패리티 빨리<br> 대규모 순차적 쓰기 및 읽기에 적합 | 보관 및 백업<br> 가상된 데스크톱 인프라     |
-| **Dual-parity**               | ![저장소 효율성 약 80%를 보여 주는](media\plan-volumes\dual-parity-storage-efficiency.png)<br>4 대의 서버: 50% <br>16 대 서버: 최대 80% | ![약 10%를 보여 주는 성능](media\plan-volumes\dual-parity-perf.png)<br>가장 높은 I/O 대기 시간 및 쓰기 중에 CPU 사용량<br> 대규모 순차적 쓰기 및 읽기에 적합 | 보관 및 백업<br> 가상된 데스크톱 인프라  |
+| **미러**         | ![저장소 효율성 보여 주는 33%](media/plan-volumes/3-way-mirror-storage-efficiency.png)<br>3 방향 미러: 33% <br>Two-양방향 미러: 50%     |![성능 보여 주는 100%](media/plan-volumes/three-way-mirror-perf.png)<br> 가장 높은 성능  | 가상화 된 워크 로드<br> 데이터베이스<br>다른 고성능 워크 로드 |
+| **미러 가속 패리티** |![저장소 효율성 약 50% 표시](media/plan-volumes/mirror-accelerated-parity-storage-efficiency.png)<br> 미러 및 패리티 비율에 따라 달라 집니다. | ![약 20%를 보여 주는 성능](media/plan-volumes/mirror-accelerated-parity-perf.png)<br>보다 훨씬 더 느립니다 미러 하지만 최대 두 번 이중 패리티 빨리<br> 대규모 순차적 쓰기 및 읽기에 적합 | 보관 및 백업<br> 가상된 데스크톱 인프라     |
+| **Dual-parity**               | ![저장소 효율성 약 80%를 보여 주는](media/plan-volumes/dual-parity-storage-efficiency.png)<br>4 대의 서버: 50% <br>16 대 서버: 최대 80% | ![약 10%를 보여 주는 성능](media/plan-volumes/dual-parity-perf.png)<br>가장 높은 I/O 대기 시간 및 쓰기 중에 CPU 사용량<br> 대규모 순차적 쓰기 및 읽기에 적합 | 보관 및 백업<br> 가상된 데스크톱 인프라  |
 
 #### <a name="when-performance-matters-most"></a>성능이 가장 중요한 요소인 경우
 
@@ -199,4 +199,4 @@ ReFS가 아직 지원하지 않는 기능이 작업에 필요한 경우 대신 N
 
 - [저장소 공간 다이렉트 개요](storage-spaces-direct-overview.md)
 - [저장소 공간 다이렉트에 대 한 드라이브 선택](choosing-drives.md)
-- [오류 허용 하 고 저장소 효율성](storage-spaces-fault-tolerance.md)
+- [내결함성 및 스토리지 효율성](storage-spaces-fault-tolerance.md)

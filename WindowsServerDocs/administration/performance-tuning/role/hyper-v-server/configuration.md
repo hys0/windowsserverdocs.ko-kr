@@ -7,12 +7,12 @@ ms.topic: article
 ms.author: Asmahi; SandySp; JoPoulso
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: e5e55ad492439fcb7150469d9a35b639f5ff9a2f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: baea091482818c581414ba1d9c1c01db2a52e3d7
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59830514"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66435658"
 ---
 # <a name="hyper-v-configuration"></a>Hyper-V 구성
 
@@ -76,31 +76,31 @@ Hyper-v는 가상화 서버의 동작 및 리소스 사용량을 보고 하는 �
 
 항상 Hyper-v 하이퍼바이저 논리 프로세서 성능 카운터를 사용 하 여 실제 시스템의 CPU 사용량을 측정 해야 합니다. CPU 사용률 카운터 루트에서 해당 작업 관리자 및 성능 모니터가 보고 하 고 자식 파티션에 실제 물리적 CPU 사용량을 반영 하지 않습니다. 성능을 모니터링 하는 다음 성능 카운터를 사용 합니다.
 
--   **Hyper-v 하이퍼바이저 논리 프로세서 (\*)\\총 실행 시간 %** 논리적 프로세서의 총 비 유휴 시간
+- **Hyper-v 하이퍼바이저 논리 프로세서 (\*)\\총 실행 시간 %** 논리적 프로세서의 총 비 유휴 시간
 
--   **Hyper-v 하이퍼바이저 논리 프로세서 (\*)\\게스트 실행 시간 %** 호스트 또는 게스트 내에서 실행 중인 주기는 데 걸린 시간
+- **Hyper-v 하이퍼바이저 논리 프로세서 (\*)\\게스트 실행 시간 %** 호스트 또는 게스트 내에서 실행 중인 주기는 데 걸린 시간
 
--   **Hyper-v 하이퍼바이저 논리 프로세서 (\*)\\하이퍼바이저 실행 시간 %** 하이퍼바이저 내에서 실행 소요 시간
+- **Hyper-v 하이퍼바이저 논리 프로세서 (\*)\\하이퍼바이저 실행 시간 %** 하이퍼바이저 내에서 실행 소요 시간
 
--   **Hyper-v 하이퍼바이저 가상 프로세서 루트 (\*)\\ \***  루트 파티션의 CPU 사용량 측정
+- **Hyper-v 하이퍼바이저 가상 프로세서 루트 (\*)\\\\** * 루트 파티션의 CPU 사용량 측정
 
--   **Hyper-v 하이퍼바이저 가상 프로세서 (\*)\\ \***  게스트 파티션의 CPU 사용량 측정
+- **Hyper-v 하이퍼바이저 가상 프로세서 (\*)\\\\** * 게스트 파티션의 CPU 사용량 측정
 
 
 ## <a name="see-also"></a>참조
 
--   [Hyper-v 용어](terminology.md)
+-   [Hyper-V 용어](terminology.md)
 
--   [Hyper-v 아키텍처](architecture.md)
+-   [Hyper-V 아키텍처](architecture.md)
 
--   [Hyper-v 프로세서 성능](processor-performance.md)
+-   [Hyper-V 프로세서 성능](processor-performance.md)
 
--   [Hyper-v 메모리 성능](memory-performance.md)
+-   [Hyper-V 메모리 성능](memory-performance.md)
 
--   [Hyper-v 저장소 I/O 성능](storage-io-performance.md)
+-   [Hyper-V 스토리지 I/O 성능](storage-io-performance.md)
 
--   [Hyper-v 네트워크 I/O 성능](network-io-performance.md)
+-   [Hyper-V 네트워크 I/O 성능](network-io-performance.md)
 
--   [가상화 된 환경에서 병목 상태를 검색합니다.](detecting-virtualized-environment-bottlenecks.md)
+-   [가상화된 환경의 병목 상태 탐지](detecting-virtualized-environment-bottlenecks.md)
 
 -   [Linux Virtual Machines](linux-virtual-machine-considerations.md)

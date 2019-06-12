@@ -11,12 +11,12 @@ ms.assetid: 81c1f32d-7814-4992-8a66-dd4b77c939b4
 author: KBDAzure
 ms.author: kathydav
 ms.date: 12/05/2016
-ms.openlocfilehash: 1863c1736d3c8573b3d11c6bef492c6645d28a77
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 5950a75da4569979794a5848bd41ab349dc34676
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59859764"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812658"
 ---
 # <a name="hyper-v-feature-compatibility-by-generation-and-guest"></a>생성 및 게스트에서 Hyper-v 기능 호환성
 
@@ -27,7 +27,7 @@ ms.locfileid: "59859764"
 일부 기능은 하드웨어 또는 기타 인프라를 사용 하는 점을 염두에 두십시오. 하드웨어 정보를 참조 하세요 [Windows Server 2016에서 Hyper-v에 대 한 시스템 요구 사항](System-requirements-for-Hyper-V-on-Windows.md)합니다. 일부 경우에는 기능이 지원 되는 게스트 운영 체제에 사용할 수 있습니다. 운영 체제를 지원 세부 정보를 보려면  
   
 * [지원 되는 Linux 및 FreeBSD 가상 컴퓨터](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)  
-* [지원 되는 Windows 게스트 운영 체제](Supported-Windows-guest-operating-systems-for-Hyper-V-on-Windows.md)  
+* [지원되는 Windows 게스트 운영 체제](Supported-Windows-guest-operating-systems-for-Hyper-V-on-Windows.md)  
   
 ## <a name="availability-and-backup"></a>가용성 및 백업  
   
@@ -49,7 +49,7 @@ ms.locfileid: "59859764"
 ## <a name="development-and-test"></a>개발 및 테스트  
 기능  | 생성 | 게스트 운영 체제  
 ------------- | ------------- | -----------  
-COM/직렬 포트 | 1과 2 <br>**참고:** 2 세대를 구성 하려면 Windows PowerShell을 사용 합니다. 자세한 내용은 참조 하세요 [커널 디버깅에 대 한 COM 포트를 추가](./plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v.md#BKMK_Debug)합니다. | 모든 지원 되는 게스트  
+COM/직렬 포트 | 1과 2 <br>**참고:** 2 세대를 구성 하려면 Windows PowerShell을 사용 합니다. 자세한 내용은 참조 하세요 [커널 디버깅에 대 한 COM 포트를 추가](./plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v.md#add-a-com-port-for-kernel-debugging)합니다. | 모든 지원 되는 게스트  
   
 ## <a name="mobility"></a>이동성  
   
@@ -82,7 +82,7 @@ RemoteFx | 1과 2 | 1 세대 Windows 8로 시작 하는 32 비트 및 64 비트 
 보안 부팅 | 2 | **Linux**: Ubuntu 14.04 이상, SUSE Linux Enterprise Server 12 및 이후, Red Hat Enterprise Linux 7.0 이상 및 CentOS 7.0 이상<br>**Windows**: 2 세대 가상 머신에서 실행할 수 있는 지원 되는 모든 버전  
 실드 된 가상 컴퓨터 | 2 | **Windows**: 2 세대 가상 머신에서 실행할 수 있는 지원 되는 모든 버전  
   
-## <a name="storage"></a>스토리지  
+## <a name="storage"></a>저장 공간  
   
 기능  | 생성 | 게스트 운영 체제  
 ------------- | ------------- | -----------  

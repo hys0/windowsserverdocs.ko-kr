@@ -7,12 +7,12 @@ ms.topic: article
 ms.author: HammadBu; VladmiS
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 0aa359644f5e9bf85f4e013e6571276716ed0218
-ms.sourcegitcommit: d84dc3d037911ad698f5e3e84348b867c5f46ed8
+ms.openlocfilehash: da528a742a7f49513c50b22a25970d65b9e1885f
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66266619"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66811376"
 ---
 # <a name="performance-tuning-remote-desktop-virtualization-hosts"></a>원격 데스크톱 가상화 호스트 조정 성능
 
@@ -23,11 +23,11 @@ Windows Server 2016에는 두 가지 유형의 가상 데스크톱, 개인용 �
 
 **항목 내용**
 
--   [일반적인 고려 사항](#general)
+-   [일반적인 고려 사항](#general-considerations)
 
--   [성능 최적화](#perfopt)
+-   [성능 최적화](#performance-optimizations)
 
-## <a href="" id="general"></a>일반적인 고려 사항
+## <a name="general-considerations"></a>일반적인 고려 사항
 
 
 ### <a name="storage"></a>저장 공간
@@ -46,7 +46,7 @@ Windows Server 2012 R2에 도입 된, 데이터 중복 제거는 열려 있는 �
 Enable-DedupVolume <volume> -UsageType HyperV
 ```
 
-> [!Note]
+> [!NOTE]
 > 열려 있는 파일의 데이터 중복 제거 최적화는 SMB 3.0을 통한 원격 저장소를 사용 하 여 Hyper-v를 사용 하 여 VDI 시나리오에 대해서만 지원 됩니다.
 
 ### <a name="memory"></a>메모리
@@ -175,8 +175,7 @@ GPU 리소스는 리소스 부족, 경우에 일반적으로 읽기 및 쓰기 �
 
 RemoteFX 가상 GPU 성능 카운터 외에도 비디오 메모리 사용량 및 GPU 사용률을 보여 주는 프로세스 탐색기를 사용 하 여 GPU 사용률을 측정할 수 있습니다.
 
-## <a href="" id="perfopt"></a>성능 최적화
-
+## <a name="performance-optimizations"></a>성능 최적화
 
 ### <a name="dynamic-memory"></a>동적 메모리
 
@@ -220,13 +219,11 @@ Windows 기능 및 영구 상태에 종속 된 서비스를 해제 하려면 것
 | 홈 그룹 공급자                          | 소비자 중심 서비스                                                                                                                                                                                  |
 | 인터넷 연결 공유                  | 소비자 중심 서비스                                                                                                                                                                                  |
 | Media Center 서비스를 확장 합니다.               | 소비자 중심 서비스                                                                                                                                                                                  |
+> [!NOTE]
+> 이 목록은 모든 변경에는 의도 한 목표와 시나리오에 영향을 전체 목록이 되도록 적용 되지 않습니다. 자세한 내용은 참조 하세요. [핫 누름, 해제 되도록 이제 Windows 8 VDI 최적화 스크립트 PFE의 우대!](http://blogs.technet.com/b/jeff_stokes/archive/2013/04/09/hot-off-the-presses-get-it-now-the-windows-8-vdi-optimization-script-courtesy-of-pfe.aspx)합니다.
 
- 
+ 
+> [!NOTE]
+> Windows 8에는 superFetch는 기본적으로 사용 됩니다. VDI를 인식 하 고 사용 해야 합니다. SuperFetch는 VDI에 대 한 유용한 인 메모리 페이지 공유를 통해 메모리 소비를 줄일 수 있습니다. 풀링된 가상 데스크톱 Windows 7을 실행, SuperFetch 해야 비활성화할 수는 없지만 Windows 7을 실행 개인용 가상 데스크톱에 대 한 것에 남아 있어야 합니다.
 
-**참고**    이 목록은 아닙니다 전체 목록이 될 내용을 의도 한 목표와 시나리오에 영향 됩니다. 자세한 내용은 참조 하세요. [핫 누름, 해제 되도록 이제 Windows 8 VDI 최적화 스크립트 PFE의 우대!](http://blogs.technet.com/b/jeff_stokes/archive/2013/04/09/hot-off-the-presses-get-it-now-the-windows-8-vdi-optimization-script-courtesy-of-pfe.aspx)합니다.
-
- 
-
-**참고**    SuperFetch Windows 8에서 기본적으로 사용 됩니다. VDI를 인식 하 고 사용 해야 합니다. SuperFetch는 VDI에 대 한 유용한 인 메모리 페이지 공유를 통해 메모리 소비를 줄일 수 있습니다. 풀링된 가상 데스크톱 Windows 7을 실행, SuperFetch 해야 비활성화할 수는 없지만 Windows 7을 실행 개인용 가상 데스크톱에 대 한 것에 남아 있어야 합니다.
-
- 
+ 

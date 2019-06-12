@@ -8,12 +8,12 @@ author: johnmarlin-msft
 ms.date: 01/24/2019
 description: 파일 공유 미러링 모니터 서버를 사용 하면 클러스터 쿼럼의 투표를 하려면 파일 공유를 사용할 수 있습니다. 이 항목에서는 파일 공유 미러링 모니터 서버 및 파일 공유 감시로 라우터에 연결 된 USB 드라이브를 사용 하 여 포함 하는 새로운 기능을 설명 합니다.
 ms.localizationpriority: medium
-ms.openlocfilehash: 1888142f96208800a0417c9caeea89e8a0472e88
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 47371be946c08cac2f271138d701922fc340a89d
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59831754"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66453040"
 ---
 # <a name="deploy-a-file-share-witness"></a>파일 공유 미러링 모니터 서버를 배포 합니다.
 
@@ -61,26 +61,26 @@ ms.locfileid: "59831754"
 
 언제 [Microsoft Ignite 2018](https://azure.microsoft.com/ignite/), [DataOn 저장소](http://www.dataonstorage.com/) 키오스크 영역에 저장소 공간 다이렉트 클러스터를 했습니다.  이 클러스터에 연결 된를 [NetGear](https://www.netgear.com) Nighthawk X4S WiFi 라우터가 USB 포트를 사용 하 여 파일 공유 감시 다음과 유사 하 게 합니다.
 
-![NetGear 미러링 모니터 서버](media\File-Share-Witness\FSW1.png)
+![NetGear 미러링 모니터 서버](media/File-Share-Witness/FSW1.png)
 
 이 특정 라우터에서 USB 장치를 사용 하 여 파일 공유 미러링 모니터 서버를 만드는 단계는 다음과 같습니다.  참고는 다른 라우터 및 NAS 장치에 대 한 단계는 달라 지 며이 공급 업체를 사용 하 여 수행 해야 하는 지침을 제공 합니다.
 
 
 1. USB 장치 연결을 사용 하 여 라우터에 로그인 합니다.
 
-   ![NetGear 인터페이스](media\File-Share-Witness\FSW2.png)
+   ![NetGear 인터페이스](media/File-Share-Witness/FSW2.png)
 
 2. 옵션의 목록에서 공유를 만들 수 있는 상태인 ReadySHARE를 선택 합니다.
 
-   ![NetGear ReadySHARE](media\File-Share-Witness\FSW3.png)
+   ![NetGear ReadySHARE](media/File-Share-Witness/FSW3.png)
 
 3. 파일 공유 감시를 기본 공유는 필요한 모든 것입니다.  편집 단추를 선택 하는 USB 장치에서 공유를 만들 수 있는 대화 상자가 팝업 됩니다.
 
-   ![NetGear 공유 인터페이스](media\File-Share-Witness\FSW4.png)
+   ![NetGear 공유 인터페이스](media/File-Share-Witness/FSW4.png)
 
 4. [적용] 단추를 선택한 후에 공유 생성 되 고 목록에서 볼 수 있습니다.
 
-   ![NetGear 공유](media\File-Share-Witness\FSW5.png)
+   ![NetGear 공유](media/File-Share-Witness/FSW5.png)
 
 5. 공유를 만든 후 클러스터에 대 한 파일 공유 감시를 만드는 PowerShell을 사용 하 여 작업 수행 됩니다.
 

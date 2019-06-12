@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: c87b76224d1ac5dbe3befc837fad8879d0b9a1ef
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: bda071be6668710361205643125fc8ad44246012
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66189401"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66453017"
 ---
 # <a name="create-a-rule-to-send-an-ad-fs-1x-compatible-claim"></a>AD FS 1.x 호환 클레임을 보내도록 규칙 만들기
 
@@ -42,9 +42,6 @@ Active Directory Federation Services을 사용 하는 경우에서 \(AD FS\) AD 
   
 > [!NOTE]  
 > 예상 대로 작동 하도록이 규칙에 대 한 신뢰 당사자 트러스트 또는이 규칙을 만들려는 클레임 공급자 트러스트에 사용 하도록 구성 되었는지 확인 합니다 **AD FS 1.0 및 1.1 프로필**합니다. 
-
-
-
 
 ## <a name="to-create-a-rule-to-issue-an-adfs1x-name-id-claim-using-the-pass-through-or-filter-an-incoming-claim-rule-template-on-a-relying-party-trust-in-windows-server-2016"></a>AD FS 1을 실행 하는 규칙 만들기 *x* 이름 ID 클레임은 통과 사용 하 여 또는 필터링 된 신뢰 당사자 트러스트에 Windows Server 2016에서 들어오는 클레임 규칙 템플릿을 
 
@@ -125,11 +122,10 @@ Active Directory Federation Services을 사용 하는 경우에서 \(AD FS\) AD 
     -   **특정 메일 접미사 값과 일치 하는 클레임 값만 통과**  
   
     -   **특정 값으로 시작 하는 클레임 값만 통과**  
-![규칙 만들기](media/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs3.PNG)   
+![규칙 만들기](media/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs3.PNG)
 
 10. 클릭 **마침**, 클릭 하 고 **확인** 여 규칙을 저장 합니다.  
 
-  
 
 ## <a name="to-create-a-rule-to-transform-an-incoming-claim-on-a-relying-party-trust-in-windows-server-2016"></a>신뢰 당사자 트러스트에 Windows Server 2016에서 들어오는 클레임 변환 규칙을 만들려면 
 
@@ -139,13 +135,13 @@ Active Directory Federation Services을 사용 하는 경우에서 \(AD FS\) AD 
 ![규칙 만들기](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)  
   
 3.  오른쪽\-선택한 트러스트를 클릭 한 다음 클릭 **클레임 발급 정책 편집**합니다.
-![규칙 만들기](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG)   
+![규칙 만들기](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG)
   
 4.  에 **클레임 발급 정책 편집** 대화 상자의 **발급 변환 규칙** 클릭 **규칙 추가** 규칙 마법사를 시작 합니다. 
-![규칙 만들기](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG)    
+![규칙 만들기](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG)
 
 5.  에 **규칙 템플릿 선택** 페이지의 **클레임 규칙 템플릿**, 선택, **들어오는 클레임 변환** 클릭 한 다음 확인 하 고 목록에서 **다음**합니다.  
-![규칙 만들기](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform3.PNG)      
+![규칙 만들기](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform3.PNG)
 
 6.  에 **규칙 구성** 페이지에서 클레임 규칙 이름을 입력 합니다.  
   
@@ -168,7 +164,7 @@ Active Directory Federation Services을 사용 하는 경우에서 \(AD FS\) AD 
     -   **들어오는 클레임 값을 다른 나가는 클레임 값으로 바꿉니다.**  
   
     -   **들어오는 전자 바꾸기\-접미사를 클레임 새 전자 메일\-메일 접미사**  
-![규칙 만들기](media/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs4.PNG)    
+![규칙 만들기](media/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs4.PNG)
 
 11. 클릭 **마침**, 클릭 하 고 **확인** 여 규칙을 저장 합니다.  
 
@@ -273,7 +269,7 @@ Active Directory Federation Services을 사용 하는 경우에서 \(AD FS\) AD 
     -   **특정 메일 접미사 값과 일치 하는 클레임 값만 통과**  
   
     -   **특정 값으로 시작 하는 클레임 값만 통과**  
-![규칙 만들기](media/\Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs1.PNG)   
+![규칙 만들기](media/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs1.PNG)
 
 10. 클릭 **마침**, 클릭 하 고 **확인** 여 규칙을 저장 합니다.  
 

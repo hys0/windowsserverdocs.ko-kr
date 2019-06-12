@@ -8,12 +8,12 @@ author: johnmarlin-msft
 ms.date: 03/29/2018
 description: 이 문서에서는 Microsoft HCI (저장소 공간 다이렉트)의 재해 복구를 위해 현재 제공 되는 시나리오를 설명합니다.
 ms.localizationpriority: medium
-ms.openlocfilehash: 32bbf02ca78d5c6a2147162768c984d0e0b27e36
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c844c56c3a1717658bcdb970e78d45b5cdda861c
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59879594"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66453126"
 ---
 # <a name="disaster-recovery-with-storage-spaces-direct"></a>저장소 공간 다이렉트를 사용 하 여 재해 복구
 
@@ -41,7 +41,7 @@ ms.locfileid: "59879594"
 
 이 시나리오에서는 두 개의 별도 독립적인 클러스터가 있습니다. HCI 간에 저장소 복제본을 구성 하려면의 단계를 따르면 [클러스터와 클러스터 간 저장소 복제](../storage-replica/cluster-to-cluster-storage-replication.md)합니다.
 
-![저장소 복제 다이어그램](media\storage-spaces-direct-disaster-recovery\Disaster-Recovery-Figure1.png)
+![저장소 복제 다이어그램](media/storage-spaces-direct-disaster-recovery/Disaster-Recovery-Figure1.png)
 
 다음 고려 사항에는 저장소 복제본을 배포할 때 적용 됩니다. 
 
@@ -56,7 +56,7 @@ ms.locfileid: "59879594"
 
 [Hyper-v 복제본](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/set-up-hyper-v-replica) 하이퍼 수렴 형 인프라에서 재해 복구를 위한 가상 머신 수준 복제를 제공 합니다. 가상 머신을 가져오고 (복제본) Azure 또는 보조 사이트에 복제 하는 Hyper-v 복제본에서 수행할 수 있는 작업입니다. 그런 다음 보조 사이트에서 Hyper-v 복제본 수 가상 머신을 복제 세 번째 (확장 된 복제본).
 
-![Hyper-v 복제 다이어그램](media\storage-spaces-direct-disaster-recovery\Disaster-Recovery-Figure2.png)
+![Hyper-v 복제 다이어그램](media/storage-spaces-direct-disaster-recovery/Disaster-Recovery-Figure2.png)
 
 Hyper-v 복제본을 사용 하 여 복제를 알아서 Hyper-v에서. 복제에 대 한 가상 컴퓨터를 먼저 사용 하도록 설정한 경우 해당 복제본 클러스터를 전송할 수 있도록 하려는 초기 복사본에 대 한 세 가지 선택 사항이 있습니다.
 

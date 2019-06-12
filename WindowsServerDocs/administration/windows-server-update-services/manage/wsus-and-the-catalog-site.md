@@ -12,12 +12,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7cced9a930b63baa79b4addb429c562c38d6da01
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 298df36b856cba97ec19126f77456785e5eb6f50
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59843884"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66810923"
 ---
 # <a name="wsus-and-the-catalog-site"></a>WSUS 및 카탈로그 사이트
 
@@ -64,7 +64,7 @@ WSUS 관리자가 Microsoft Update 카탈로그 사이트에서 다운로드 한
 
     -   선택 **Windows 인증** 클릭 하 고 **사용** 에 **작업** 오른쪽 창입니다.
 
-2.  핫픽스를 필요로 하는 컴퓨터에 대 한 WSUS 대상 그룹을 만들고 그룹에 추가 합니다. 컴퓨터 및 그룹에 대 한 자세한 내용은 참조 하세요. [WSUS 클라이언트 관리 컴퓨터 및 WSUS 컴퓨터 그룹](managing-wsus-client-computers-and-wsus-computer-groups.md) 이 가이드에서는 및 섹션의 [3.3입니다. WSUS 컴퓨터 그룹 구성](../deploy/2-configure-wsus.md#BKMK_ConfigcomputerGroups) 3 단계: WSUS 배포 가이드에서 WSUS를 구성 합니다.
+2.  핫픽스를 필요로 하는 컴퓨터에 대 한 WSUS 대상 그룹을 만들고 그룹에 추가 합니다. 컴퓨터 및 그룹에 대 한 자세한 내용은 참조 하세요. [WSUS 클라이언트 관리 컴퓨터 및 WSUS 컴퓨터 그룹](managing-wsus-client-computers-and-wsus-computer-groups.md) 이 가이드에서는 및 섹션의 [3.3입니다. WSUS 컴퓨터 그룹 구성](../deploy/2-configure-wsus.md#23-configure-wsus-computer-groups) 3 단계: WSUS 배포 가이드에서 WSUS를 구성 합니다.
 
 3.  핫픽스 파일을 다운로드 합니다.
 

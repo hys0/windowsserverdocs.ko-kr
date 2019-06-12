@@ -9,12 +9,12 @@ ms.date: 05/08/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: networking
-ms.openlocfilehash: 67c3471a726df354e0faa9e3aced491c4084e9e3
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9e4131c28a18a50f3312e5e0201a0ed9529d4555
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59864344"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812400"
 ---
 # <a name="how-the-windows-time-service-works"></a>Windows 시간 서비스 작동 방식
 
@@ -22,13 +22,13 @@ ms.locfileid: "59864344"
 
 **이 섹션에서**  
   
--   [Windows 시간 서비스 아키텍처](#w2k3tr_times_how_rrfo)  
+-   [Windows 시간 서비스 아키텍처](#windows-time-service-architecture)  
   
--   [Windows 시간 서비스 시간 프로토콜](#w2k3tr_times_how_ekoc)  
+-   [Windows 시간 서비스 시간 프로토콜](#windows-time-service-time-protocols)  
   
--   [Windows 시간 서비스 프로세스와 상호 작용](#w2k3tr_times_how_izcr)  
+-   [Windows 시간 서비스 프로세스와 상호 작용](#windows-time-service-processes-and-interactions)  
   
--   [Windows 시간 서비스에서 사용 되는 네트워크 포트](#w2k3tr_times_how_ydum)  
+-   [Windows 시간 서비스에서 사용 되는 네트워크 포트](#network-ports-used-by-windows-time-service)  
   
 > [!NOTE]  
 > 이 항목에서는 Windows 시간 서비스 (W32Time)의 작동 방식을 설명 합니다. Windows 시간 서비스를 구성 하는 방법에 대 한 정보를 참조 하세요 [높은 정확도 대 한 시스템 구성](configuring-systems-for-high-accuracy.md)합니다.
@@ -57,7 +57,7 @@ Windows 시간 서비스를 실행 하는 모든 컴퓨터는 서비스를 사�
   
 W32Time 관리자가 시간 샘플을 수신 하는 경우 사용 특수 알고리즘에서 NTP 시간 예제를 사용 하기 위해 가장 적합 한 결정을 합니다. 시간 서비스는 또한 결정 하는 구성 된 시간 원본 가장 정확한 다른 알고리즘 집합을 사용 합니다. 시간 서비스가 어떤 시간 샘플은 가장 좋은 결정을 때 올바른 시간으로 사라집니다 수 있도록 하는 로컬 클럭 속도 조정 위의 조건에 따라 합니다. 로컬 시간과 (시간 오차)이 선택 된 정확한 시간 샘플 사이의 시간 차이 로컬 클럭 속도 조정 하 여 해결 하려면 너무 크면 시간 서비스는 로컬 시계 올바른 시간으로 설정 합니다. 이러한 조정은 클럭 속도 또는 직접 클록 시간 변경의 클록 분야 라고 합니다.  
   
-## <a name="w2k3tr_times_how_rrfo"></a>Windows 시간 서비스 아키텍처  
+## <a name="windows-time-service-architecture"></a>Windows 시간 서비스 아키텍처  
 Windows 시간 서비스는 다음 구성 요소가 구성 됩니다.  
   
 -   서비스 제어 관리자  
@@ -88,7 +88,7 @@ Windows 시간 서비스는 다음 구성 요소가 구성 됩니다.
   
 시간 서버와 컴퓨터를 지정 하는 경우이 프로세스에 언제 든 지 시간 동기화를 요청 하는 모든 컴퓨터에 로그온 시간을 보낼 수 있습니다.  
   
-## <a name="w2k3tr_times_how_ekoc"></a>Windows 시간 서비스 시간 프로토콜  
+## <a name="windows-time-service-time-protocols"></a>Windows 시간 서비스 시간 프로토콜  
 
 시간 프로토콜 확인 방법을 밀접 하 게 두 컴퓨터의 시계가 동기화 합니다. 시간 프로토콜은 최상의 사용할 수 있는 시간 정보를 확인 하 고 일관 된 시간 별도 시스템에 유지 되도록에 시계 수렴 하는 일을 담당 합니다.  
   
@@ -144,7 +144,7 @@ Windows 시간 서비스는 Windows 2000 또는 Windows Server 2003;를 실행 �
   
 Windows NT 4.0 보다 Windows 시간 서비스에서 사용 하는 시간 동기화를 위한 단순한 메커니즘을 사용합니다. 따라서 네트워크를 통해 정확한 시간 동기화를 위해 Windows 2000 또는 Windows Server 2003에 Windows NT 4.0 도메인 컨트롤러를 업그레이드 하는 것이 좋습니다.  
   
-## <a name="w2k3tr_times_how_izcr"></a>Windows 시간 서비스 프로세스와 상호 작용  
+## <a name="windows-time-service-processes-and-interactions"></a>Windows 시간 서비스 프로세스와 상호 작용  
 
 Windows 시간 서비스는 네트워크에 있는 컴퓨터의 시계가 동기화 하도록 설계 되었습니다. 더 정확 하 게 시간 서버에서이 컴퓨터 액세스 때마다 네트워크를 통해 발생 라고도 시간 수렴 네트워크 시간 동기화 프로세스를 합니다. 시간 수렴은 권한이 있는 서버는 NTP 패킷 형태로 클라이언트 컴퓨터에 현재 시간을 제공 하는 프로세스에 포함 됩니다. 패킷을 내에서 제공 하는 정보 조정 더 정확 하 게 서버와 동기화 되도록 컴퓨터의 현재 시간에 수행 해야 하는지 여부를 나타냅니다.  
   
@@ -203,7 +203,7 @@ Windows Server 2003 네트워크를 사용 하도록 설정한 후에 동기화�
   
 **도메인 컨트롤러 시간 원본을 쿼리**  
   
-|쿼리 수|도메인 컨트롤러|Location|시간 원본과의 안정성|  
+|쿼리 수|도메인 컨트롤러|위치|시간 원본과의 안정성|  
 |----------------|---------------------|------------|------------------------------|  
 |1|부모 도메인 컨트롤러|사이트 간|신뢰할 수 있는 선호 하는 모든 경우 사용할 수 있는 시간 원본과 하지만 신뢰할 수 있는 비 시간 원본과 동기화 수 있습니다.|  
 |2|로컬 도메인 컨트롤러|사이트 간|신뢰할 수 있는 시간 원본과 동기화 합니다.|  
@@ -252,7 +252,7 @@ Windows 시간 서비스는 최상의 점수와 도메인 컨트롤러를 식별
 ### <a name="disabling-the-windows-time-service"></a>Windows 시간 서비스를 사용 하지 않도록 설정  
 Windows 시간 서비스 (W32Time)을 완전히 비활성화할 수 있습니다. NTP를 사용 하는 타사 시간 동기화 제품을 구현 하기로 선택한 경우 Windows 시간 서비스를 해제 해야 합니다. 123, 사용자 데이터 그램 프로토콜 (UDP) 포트에 액세스 해야 하는 모든 NTP 서버 및 포트 123 Windows 시간에 예약 된 유지 Windows 시간 서비스는 Windows Server 2003 운영 체제에서 실행 되는, 때문입니다.  
   
-## <a name="w2k3tr_times_how_ydum"></a>Windows 시간 서비스에서 사용 되는 네트워크 포트  
+## <a name="network-ports-used-by-windows-time-service"></a>Windows 시간 서비스에서 사용 되는 네트워크 포트  
 Windows 시간 서비스는 신뢰할 수 있는 시간 원본을 확인 하 고, 시간 정보를 얻은, 다른 컴퓨터에 대 한 시간 정보를 제공 하는 네트워크에서 통신 합니다. NTP 및 SNTP Rfc에 정의 된 대로이 통신을 수행 합니다.  
   
 **Windows 시간 서비스에 대 한 포트 할당**  

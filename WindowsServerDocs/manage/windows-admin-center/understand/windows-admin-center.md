@@ -5,15 +5,15 @@ ms.technology: manage
 ms.topic: article
 author: haley-rowland
 ms.author: harowl
-ms.date: 04/12/2019
+ms.date: 06/06/2019
 ms.localizationpriority: high
 ms.prod: windows-server-threshold
-ms.openlocfilehash: db69ad3021850552e92c4aa653dfd9bd9110c06d
-ms.sourcegitcommit: 39ab8041d166e6817a95417d6aa30bc7abeeef54
+ms.openlocfilehash: ff08e9544a499eb73d402dcbe6c3baf40633a9d9
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66260281"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66811722"
 ---
 # <a name="hello-windows-admin-center"></a>안녕하세요, Windows Admin Center!
 
@@ -34,25 +34,20 @@ Windows Admin Center는 서버, 클러스터, 하이퍼 컨버지드 인프라 �
 
 수동으로 설치 하거나 Microsoft Update를 사용 하 여 Windows Admin Center 미리 보기가 아닌 버전을 업데이트할 수 있습니다. 다음 미리 보기가 아닌 버전이 출시 되 면 30 일 동안 Windows Admin Center 각 비-preview 버전은 지원 됩니다. 참조 우리의 [지원 정책](../support/index.md) 자세한 정보에 대 한 합니다.
 
-********************
-
 >[!VIDEO https://www.youtube.com/embed/WCWxAp27ERk]
 
-
-|   |   |
-|:-:|:--|
-| [아이콘 나타내는 앱 창](/media/simple-icon.png)| **단순 & 경량** <br/> 친숙한 도구는 관리 작업을 간단히 수행할 수 있도록 간소화됩니다. 환경에서 바로 5분 내에 설치하고 관리하며 대상 구성이 필요하지 않습니다. |
-| [하이브리드 클라우드를 나타내는 아이콘](/media/future-icon.png)| **미래를 위해 빌드된** <br/> Azure 서비스와의 통합으로 하이브리드 세계의 기능을 활용하는데 도움이 됩니다. 단순하면서도 강력한 도구를 사용하여 하이퍼 컨버지드 클러스터를 관리합니다. |
-| [보안 서버를 나타내는 아이콘](/media/secure-icon.png)| **보안 관리** <br/> 서버를 관리하는 사람을 제어하고 사용자 환경에서 관리자가 수행하는 작업에 대한 정보를 얻을 수 있습니다. |
+|     |     |
+| --- | --- |
+| ![](../media/simple-icon.png)| **단순 & 경량** <br/> 친숙한 도구는 관리 작업을 간단히 수행할 수 있도록 간소화됩니다. 환경에서 바로 5분 내에 설치하고 관리하며 대상 구성이 필요하지 않습니다. |
+| ![](../media/future-icon.png)| **미래를 위해 빌드된** <br/> Azure 서비스와의 통합으로 하이브리드 세계의 기능을 활용하는데 도움이 됩니다. 단순하면서도 강력한 도구를 사용하여 하이퍼 컨버지드 클러스터를 관리합니다. |
+| ![](../media/secure-icon.png)| **보안 관리** <br/> 서버를 관리하는 사람을 제어하고 사용자 환경에서 관리자가 수행하는 작업에 대한 정보를 얻을 수 있습니다. |
 
 [Windows Admin Center 서버 환경의 관리를 개선 하는 방법을 알아봅니다.](../overview.md)
 
-********************
-
 ## <a name="see-how-customers-are-benefitting-from-windows-admin-center"></a>Windows Admin Center에서 고객이 혜택을 얻는 방법을 확인하십시오.
 
-|  |
-|--|
+|     |
+| --- |
 | "[Windows Admin Center]를 사용하여 관리 시스템을 관리하는 시간/노력이 75% 이상 줄어들었습니다."<br> *-Rand Morimoto, 사장 Convergent Computing* |
 | "[Windows Admin Center] 덕분에 문제 없이 HTML5 포털에서 고객을 원격으로 관리할 수 있으며 Azure Active Directory와 완벽하게 통합되어 Multi-Factor Authentication 덕분에 보안을 향상 시킬 수 있습니다."<br/> *-Silvio Di Benedetto 설립자 이자 기술 내에서 선임 컨설턴트로,* |
 | "보다 효과적인 방법으로 [Server Core] SKU를 배포하여 자원 효율성, 보안 및 자동화를 개선하는 동시에 여전히 좋은 수준의 생산성을 실현하고 스크립팅에만 의존하는 경우 발생할 수 있는 오류를 줄일 수 있었습니다 ." <br/> *-Guglielmo Mengora, 창립자 겸 CEO, VaiSulWeb* |
@@ -60,18 +55,14 @@ Windows Admin Center는 서버, 클러스터, 하이퍼 컨버지드 인프라 �
 
 [프로덕션 환경에서 Windows Admin Center 사용 하는 회사에 대 한 자세히 알아보세요.](case-studies.md)
 
-********************
-
 ## <a name="related-products"></a>관련 제품
 
-Windows Admin Center는 단일 서버 또는 클러스터를 관리하기 위해 설계되었습니다. 이는 RSAT(원격 서버 관리 도구), System Center, Intune, 또는 Azure Stack 등 기존의 Microsoft 모니터링 및 관리 솔루션을 기능을 보완하지만 대체하지 않습니다. 
+Windows Admin Center는 단일 서버 또는 클러스터를 관리하기 위해 설계되었습니다. 이는 RSAT(원격 서버 관리 도구), System Center, Intune, 또는 Azure Stack 등 기존의 Microsoft 모니터링 및 관리 솔루션을 기능을 보완하지만 대체하지 않습니다.
 
 [Windows Admin Center 다른 Microsoft 관리 솔루션을 보완 하는 방법에 대해 알아봅니다.](related-management.md)
 
-********************
-
 ## <a name="connect-with-us"></a>Microsoft와 연결
 
-![ ](//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR)[Twitter에서 팔 로우](https://twitter.com/servermgmt)
+![](//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR)[Twitter에서 팔 로우](https://twitter.com/servermgmt)
 
-![ ](//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw)[이 블로그 읽기](https://blogs.technet.microsoft.com/servermanagement/)
+![](//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw)[이 블로그 읽기](https://blogs.technet.microsoft.com/servermanagement/)

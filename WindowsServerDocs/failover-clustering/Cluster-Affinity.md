@@ -7,12 +7,12 @@ ms.topic: article
 author: johnmarlin-msft
 ms.date: 03/07/2019
 description: 이 문서에서는 장애 조치 클러스터 선호도 및 antiAffinity 수준 설명
-ms.openlocfilehash: a38d53f6aed1ca634d41822f4486779f6d279ec0
-ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
+ms.openlocfilehash: 67929e6d3399633ebfec0b908463131973aecaf7
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65476062"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66453031"
 ---
 # <a name="cluster-affinity"></a>클러스터 선호도
 
@@ -69,7 +69,7 @@ AntiAffinityClassName "soft" 블록입니다.  즉를 유지 하기 위해 시�
 
 두 가지 모두를 설정 하면 그룹 함께 온라인 상태로 차단 됩니다.  동일한 노드에 해당 하는 경우 표시 되는 것에서 장애 조치 클러스터 관리자입니다.
 
-![클러스터 선호도](media\Cluster-Affinity\Cluster-Affinity-1.png)
+![클러스터 선호도](media/Cluster-Affinity/Cluster-Affinity-1.png)
 
 그룹의 PowerShell 목록에이 볼 수 있습니다.
 

@@ -13,12 +13,12 @@ author: brentfor
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d65a40e229fe4b0a1b27db496523dfe7a9419752
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 03bad9864f81cf75be13b4ca391fdcbc5f9dcb5c
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59886794"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66435354"
 ---
 # <a name="manage-user-access-logging"></a>사용자 액세스 로깅 관리
 
@@ -195,7 +195,7 @@ UAL은 한 해의 첫날에 새 *GUID.mdb*를 만듭니다. 이전 *GUID.mdb* �
   
 2.  Windows 로고 + R을 누른 다음 **cmd**를 입력하여 명령 프롬프트 창을 엽니다.  
   
-3.  다음 레지스트리 값을 추가합니다.  **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\WMI\AutoLogger\Sum\PollingInterval (REG_DWORD)**.  
+3.  다음 레지스트리 값을 추가합니다.  **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\WMI\AutoLogger\Sum\PollingInterval (REG_DWORD)** .  
   
     > [!WARNING]  
     > 레지스트리를 잘못 편집하면 시스템에 심각한 손상을 줄 수 있습니다. 레지스트리를 변경하기 전에 컴퓨터의 중요한 데이터를 반드시 백업해야 합니다.  
@@ -211,13 +211,13 @@ UAL은 업무에 필수적인 구성 요소로 고안된 구성 요소가 아닙
   
 #### <a name="to-delete-data-logged-by-ual"></a>UAL에 의해 기록된 데이터를 삭제하려면  
   
-1.  User Access Logging Service 중지합니다.  
+1. User Access Logging Service 중지합니다.  
   
-2.  Windows 탐색기를 엽니다.  
+2. Windows 탐색기를 엽니다.  
   
-3.  으로 이동 **\Windows\System32\Logfiles\SUM\** 합니다.  
+3. 로 이동 **\Windows\System32\Logfiles\SUM\\** 합니다.  
   
-4.  폴더의 모든 파일을 삭제합니다.  
+4. 폴더의 모든 파일을 삭제합니다.  
   
 ## <a name="managing-ual-in-high-volume-environments"></a>많은 볼륨 환경에서 UAL 관리  
 이 섹션에서는 UAL이, 클라이언트 볼륨이 많은 서버에서 사용된 경우 관리자가 예상할 수 있는 항목에 대해 설명합니다.  

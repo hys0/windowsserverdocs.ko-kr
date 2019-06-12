@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c3bc06f82f557f136850872180a5c430f70da5fd
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 39b28e7d43df2427caae46d323cd30f03b6b484c
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59888484"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66436568"
 ---
 # <a name="nslookup-set-srchlist"></a>nslookup set srchlist
 
@@ -31,18 +31,20 @@ ms.locfileid: "59888484"
 Set srchlist=<DomainName>[/...]
 ```
 ## <a name="parameters"></a>매개 변수
-|매개 변수|설명|
-|-------|--------|
-|<DomainName>|기본 DNS 도메인 및 검색 목록에 대 한 새 이름을 지정합니다. 기본 도메인 이름 값은 호스트 이름을 기반으로 합니다. 최대 6 개의 이름 슬래시 (/) 구분 하 여 지정할 수 있습니다.|
-|{도움말 및 #124;?}|간단한 요약이 표시 되며 **nslookup** 하위 명령입니다.|
+
+|    매개 변수    |                                                                                        설명                                                                                        |
+|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  <DomainName>   | 기본 DNS 도메인 및 검색 목록에 대 한 새 이름을 지정합니다. 기본 도메인 이름 값은 호스트 이름을 기반으로 합니다. 최대 6 개의 이름 슬래시 (/) 구분 하 여 지정할 수 있습니다. |
+| {도움말 및 #124;?} |                                                                   간단한 요약이 표시 되며 **nslookup** 하위 명령입니다.                                                                   |
+
 ## <a name="remarks"></a>설명
--   **srchlist 설정**명령을 사용 하면 재정의 기본 DNS 도메인 이름 및 검색 목록에는 **집합 도메인** 명령입니다. 사용 하는 **모두 설정** 목록을 표시 하는 명령입니다.
-## <a name="BKMK_examples"></a>예제
-다음 예제에서는 mfg.widgets.com, 이름 3 개를 검색 목록에 DNS 도메인을 설정합니다.
-```
-set srchlist=mfg.widgets.com/mrp2.widgets.com/widgets.com
-```
-## <a name="additional-references"></a>추가 참조
-[명령줄 구문 키](command-line-syntax-key.md)
-[nslookup 도메인 설정](nslookup-set-domain.md)
-[nslookup 모두 설정](nslookup-set-all.md)
+- **srchlist 설정**명령을 사용 하면 재정의 기본 DNS 도메인 이름 및 검색 목록에는 **집합 도메인** 명령입니다. 사용 하는 **모두 설정** 목록을 표시 하는 명령입니다.
+  ## <a name="BKMK_examples"></a>예제
+  다음 예제에서는 mfg.widgets.com, 이름 3 개를 검색 목록에 DNS 도메인을 설정합니다.
+  ```
+  set srchlist=mfg.widgets.com/mrp2.widgets.com/widgets.com
+  ```
+  ## <a name="additional-references"></a>추가 참조
+  [명령줄 구문 키](command-line-syntax-key.md)
+  [nslookup 도메인 설정](nslookup-set-domain.md)
+  [nslookup 모두 설정](nslookup-set-all.md)

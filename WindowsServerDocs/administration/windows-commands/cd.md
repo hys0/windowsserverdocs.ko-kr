@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5f907b6162e6767820e23222e287b933397397d8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 53340612d26eaa7c4ae6fd977a0eac573f91881d
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59861104"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66434605"
 ---
 # <a name="cd"></a>cd
 
@@ -53,16 +53,16 @@ chdir [..]
 ## <a name="remarks"></a>설명
 
 다음과 같은 명령 확장을 사용 하는 경우에 적용 된 **cd** 명령:
--   디스크의 이름으로는 대/소문자를 사용 하 여 현재 디렉터리 문자열 변환 됩니다. 예를 들어 `cd C:\TEMP` 되어 디스크의 경우에는 현재 디렉터리를 C:\Temp로 설정 합니다.
--   공백 처리 하지 않을 구분 기호로 하므로 *경로* 인용 부호를 포함 하지 않고 공백을 포함할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
-    ```
-    cd username\programs\start menu
-    ```  
-    와 같습니다.  
-    ```
-    cd "username\programs\start menu"
-    ```  
-    확장을 사용할 수 있는 경우 따옴표, 필요한 경우은 없습니다.
+- 디스크의 이름으로는 대/소문자를 사용 하 여 현재 디렉터리 문자열 변환 됩니다. 예를 들어 `cd C:\TEMP` 되어 디스크의 경우에는 현재 디렉터리를 C:\Temp로 설정 합니다.
+- 공백 처리 하지 않을 구분 기호로 하므로 *경로* 인용 부호를 포함 하지 않고 공백을 포함할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+  ```
+  cd username\programs\start menu
+  ```  
+  와 같습니다.  
+  ```
+  cd "username\programs\start menu"
+  ```  
+  확장을 사용할 수 있는 경우 따옴표, 필요한 경우은 없습니다.
 
 명령 확장을 사용 하지 않으려면 다음을 입력 합니다.
 ```

@@ -8,16 +8,16 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: c42cffec0ddc1ae480ae67982147e9f186f0e50a
-ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
+ms.openlocfilehash: 5cd345230ce5c0fc556bfd8b421d866bd827507b
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/25/2019
-ms.locfileid: "66222859"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812449"
 ---
 # <a name="convert-a-gpt-disk-into-an-mbr-disk"></a>MBR 디스크를 GPT 디스크로 변환
 
-> **적용 대상:** Windows 10, Windows 8.1, Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> **적용 대상:** Windows 10, Windows 8.1, Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 MBR(마스터 부트 레코드) 디스크는 표준 BIOS 파티션 테이블을 사용합니다. GPT(GUID 파티션 테이블) 디스크는 UEFI(Unified Extensible Firmware Interface)를 사용합니다. MBR 디스크는 각 디스크에 4개 이상의 파티션을 지원하지 않습니다. 2TB(테라바이트)보다 큰 디스크에 대해서는 MBR 파티션 메서드를 권장하지 않습니다.
 
@@ -56,16 +56,12 @@ MBR(마스터 부트 레코드) 디스크는 표준 BIOS 파티션 테이블을 
 
 7.  **DISKPART** 프롬프트에서 `convert mbr`을 입력합니다.
 
-<br />
-
-| 값 | 설명 |
-| --- | --- |
-| <p>**디스크 목록**</p> | <p>디스크의 목록과 크기, 사용 가능한 공간 크기, 기본 또는 동적 디스크 여부, 디스크의 MBR(마스터 부트 레코드) 또는 GPT(GUID 파티션 테이블) 파티션 스타일 사용 여부 등 정보를 표시합니다. 별표(*)가 표시된 디스크는 포커스가 설정됩니다.</p> |
-| <p>**디스크를 선택 합니다.**</p> | <p>디스크 번호가 <em>disknumber</em>인 지정된 디스크를 선택하고 포커스를 설정합니다.</p> | <p>**clean**</p> | <p>포커스가 설정된 디스크에서 모든 파티션 또는 볼륨을 삭제합니다.</p> |
-| <p>**Mbr를 변환 합니다.**</p> | <p>GPT(GUID 파티션 테이블) 파티션 스타일의 비어 있는 기본 디스크를 MBR(마스터 부트 레코드) 파티션 스타일의 기본 디스크로 변환합니다.</p>
+|                값                  |      설명   |
+| ------------------------------------- | -----------------  |
+|  <strong>디스크 목록</strong>  | 디스크의 목록과 크기, 사용 가능한 공간 크기, 기본 또는 동적 디스크 여부, 디스크의 MBR(마스터 부트 레코드) 또는 GPT(GUID 파티션 테이블) 파티션 스타일 사용 여부 등 정보를 표시합니다. 별표가 표시 된 디스크 (\*) 포커스가 있습니다. |
+| <strong>디스크를 선택 합니다.</strong> |                                                                                                          디스크 번호가 <em>disknumber</em>인 지정된 디스크를 선택하고 포커스를 설정합니다.                                                                                                           |
+| <strong>Mbr를 변환 합니다.</strong> |                                                                               GPT(GUID 파티션 테이블) 파티션 스타일의 비어 있는 기본 디스크를 MBR(마스터 부트 레코드) 파티션 스타일의 기본 디스크로 변환합니다.                                                                                |
 
 ## <a name="see-also"></a>관련 항목
 
 -   [명령줄 구문 표기법](https://technet.microsoft.com/library/cc742449(v=ws.11).aspx)
-
-

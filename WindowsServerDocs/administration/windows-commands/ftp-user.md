@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ef3b943491a90078dab453aaf3a037bd4ccf1825
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 1c9406af0868421fa54fe757742cf2a120561b9c
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59887494"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66438338"
 ---
 # <a name="ftp-user"></a>ftp: 사용자
 
@@ -30,11 +30,13 @@ ms.locfileid: "59887494"
 user <UserName> [<Password>] [<Account>]  
 ```  
 ### <a name="parameters"></a>매개 변수  
-|매개 변수|설명|  
-|-------|--------|  
-|<UserName>|원격 컴퓨터에 로그온 하는 데 사용할 사용자 이름을 지정 합니다.|  
-|[<Password>]|암호를 지정 *UserName*합니다. 암호는 지정 하지 않고 필요한 경우  **ftp** 암호를 묻는 메시지를 표시 합니다.|  
-|[<Account>]|원격 컴퓨터에 로그온 하는 데 사용할 계정을 지정 합니다. 하는 경우는 *계정* 는 지정 하지 않고 필요 하며,  **ftp** 는 계정에 대 한 메시지를 표시 합니다.|  
+
+|  매개 변수   |                                                                      설명                                                                      |
+|--------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  <UserName>  |                                          원격 컴퓨터에 로그온 하는 데 사용할 사용자 이름을 지정 합니다.                                           |
+| [<Password>] |               암호를 지정 *UserName*합니다. 암호는 지정 하지 않고 필요한 경우  **ftp** 암호를 묻는 메시지를 표시 합니다.               |
+| [<Account>]  | 원격 컴퓨터에 로그온 하는 데 사용할 계정을 지정 합니다. 하는 경우는 *계정* 는 지정 하지 않고 필요 하며,  **ftp** 는 계정에 대 한 메시지를 표시 합니다. |
+
 ## <a name="BKMK_Examples"></a>예제  
 User1 Password1 암호로 지정 합니다.  
 ```  

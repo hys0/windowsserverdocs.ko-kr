@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c59fa78f6485f21a048c6a4f37a00b4a49e9adab
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e3f3abeec3d4ecbe5e80d08a99a00b43a408c4ac
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59831674"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66811289"
 ---
 # <a name="server-manager"></a>서버 관리자
 
@@ -30,23 +30,23 @@ ms.locfileid: "59831674"
 
 이 항목 및 하위 서버 관리자 콘솔의 기능을 사용 하는 방법에 대 한 정보를 제공 합니다. 이 항목에는 다음 섹션이 수록되어 있습니다.
 
--   [초기 고려 사항 및 시스템 요구 사항 검토](#BKMK_1.1)
+-   [초기 고려 사항 및 시스템 요구 사항 검토](#review-initial-considerations-and-system-requirements)
 
--   [서버 관리자에서 수행할 수 있는 작업](#BKMK_tasks)
+-   [서버 관리자에서 수행할 수 있는 작업](#tasks-that-you-can-perform-in-server-manager)
 
--   [서버 관리자를 시작 합니다.](#BKMK_start)
+-   [서버 관리자를 시작 합니다.](#start-server-manager)
 
--   [원격 서버를 다시 시작](#BKMK_restart)
+-   [원격 서버를 다시 시작](#restart-remote-servers)
 
--   [서버 관리자 설정을 다른 컴퓨터로 내보내려면](#BKMK_export)
+-   [서버 관리자 설정을 다른 컴퓨터로 내보내려면](#export-server-manager-settings-to-other-computers)
 
-## <a name="BKMK_1.1"></a>초기 고려 사항 및 시스템 요구 사항 검토
+## <a name="review-initial-considerations-and-system-requirements"></a>초기 고려 사항 및 시스템 요구 사항 검토
 다음 섹션에는 하드웨어 및 소프트웨어 요구 사항에 대 한 서버 관리자 뿐만 아니라 검토 해야 하는 몇 개의 초기 고려 나열 합니다.
 
 ### <a name="hardware-requirements"></a>하드웨어 요구 사항
 서버 관리자는 Windows Server 2016의 모든 버전에는 기본적으로 설치 됩니다. 서버 관리자에 대 한 존재 하는 추가 하드웨어 요구 사항이 없습니다.
 
-### <a name="BKMK_softconfig"></a>소프트웨어 및 구성 요구 사항
+### <a name="software-and-configuration-requirements"></a>소프트웨어 및 구성 요구 사항
 서버 관리자는 Windows Server 2016의 모든 버전에는 기본적으로 설치 됩니다. Windows Server 2016 서버 관리자를 사용 하 여 관리 하는 수 [Server Core 설치 옵션](https://go.microsoft.com/fwlink/p/?LinkID=241573) Windows Server 2016, Windows Server 2012 및 원격 컴퓨터에서 실행 되는 Windows Server 2008 r 2입니다. 서버 관리자는 Windows Server 2016의 Server Core 설치 옵션에서 실행 됩니다.
 
 서버 관리자가 최소 서버 그래픽 인터페이스;에서 실행 즉, 서버 그래픽 셸 기능이 설치 될 때 되지 않습니다. Windows Server 2016에서 기본적으로 서버 그래픽 셸 기능이 설치 되지 않았습니다. 실행 하지 않는 서버 그래픽 셸, 서버 관리자 콘솔이 실행 되지만 일부 응용 프로그램 또는 콘솔에서 사용할 수 있는 도구를 사용할 수 없는. HTML 도움말 (mmc F1 도움말, 예를 들어)를 열 수 없습니다 같은 인터넷 브라우저는 서버 그래픽 셸, 따라서 웹 페이지 및 응용 프로그램 없이 실행할 수 없습니다. 서버 그래픽 셸이 설치 되어 있지 않으면; Windows 자동 업데이트 및 피드백을 구성 하기 위한 대화 상자를 열 수 없습니다. 서버 관리자 콘솔에서 이러한 대화 상자를 열고 명령을 실행 하도록 리디렉션됩니다 **sconfig.cmd**합니다.
@@ -64,9 +64,9 @@ Windows Server 2016 보다 오래 된 Windows Server 릴리스를 실행 하는 
 
 |서버 관리자 원본 운영 체제|대상으로 Windows Server 2016|대상으로 Windows Server 2012 R2 |대상으로 Windows Server 2012 |대상으로 Windows Server 2008 R2 또는 Windows Server 2008 |Windows Server 2003 대상|
 |-------------------------------|--------------------------------------------|---------------------------------------|------------------------------------|-----------------------------------------------------------------------|------------------|
-|Windows 10 또는 Windows Server 2016|전체 지원|전체 지원|전체 지원|[소프트웨어 및 구성 요구 사항](#BKMK_softconfig)이 충족되면 대부분의 관리 작업을 수행할 수 있지만 역할이나 기능을 설치하거나 제거하는 작업은 수행할 수 없습니다.|지원되지 않음|
-|Windows 8.1 또는 Windows Server 2012 R2 |지원되지 않음|전체 지원|전체 지원|[소프트웨어 및 구성 요구 사항](#BKMK_softconfig)이 충족되면 대부분의 관리 작업을 수행할 수 있지만 역할이나 기능을 설치하거나 제거하는 작업은 수행할 수 없습니다.|제한된 지원, 온라인 및 오프라인 상태만 지원|
-|Windows 8 또는 Windows Server 2012 |지원되지 않음|지원되지 않음|전체 지원|[소프트웨어 및 구성 요구 사항](#BKMK_softconfig)이 충족되면 대부분의 관리 작업을 수행할 수 있지만 역할이나 기능을 설치하거나 제거하는 작업은 수행할 수 없습니다.|제한된 지원, 온라인 및 오프라인 상태만 지원|
+|Windows 10 또는 Windows Server 2016|전체 지원|전체 지원|전체 지원|[소프트웨어 및 구성 요구 사항](#software-and-configuration-requirements)이 충족되면 대부분의 관리 작업을 수행할 수 있지만 역할이나 기능을 설치하거나 제거하는 작업은 수행할 수 없습니다.|지원되지 않음|
+|Windows 8.1 또는 Windows Server 2012 R2 |지원되지 않음|전체 지원|전체 지원|[소프트웨어 및 구성 요구 사항](#software-and-configuration-requirements)이 충족되면 대부분의 관리 작업을 수행할 수 있지만 역할이나 기능을 설치하거나 제거하는 작업은 수행할 수 없습니다.|제한된 지원, 온라인 및 오프라인 상태만 지원|
+|Windows 8 또는 Windows Server 2012 |지원되지 않음|지원되지 않음|전체 지원|[소프트웨어 및 구성 요구 사항](#software-and-configuration-requirements)이 충족되면 대부분의 관리 작업을 수행할 수 있지만 역할이나 기능을 설치하거나 제거하는 작업은 수행할 수 없습니다.|제한된 지원, 온라인 및 오프라인 상태만 지원|
 
 ###### <a name="to-start-server-manager-on-a-client-computer"></a>클라이언트 컴퓨터에서 서버 관리자를 시작하려면
 
@@ -85,7 +85,7 @@ Windows Server 2016 보다 오래 된 Windows Server 릴리스를 실행 하는 
 
 관리 작업을 수행할 원격 서버에서 서버 관리자를 사용 하 여, 원격 서버를 관리 하려면 서버 관리자 및 Windows PowerShell을 사용 하 여 원격 관리를 허용 하도록 구성 되어야 합니다. Windows Server 2012 R2 또는 Windows Server 2012에서 원격 관리를 사용 하지 않도록 설정 된 경우 다시 활성화 하려면 다음 단계를 수행 합니다.
 
-##### <a name="BKMK_windows"></a>Windows 인터페이스를 사용 하 여 Windows Server 2012 R2 또는 Windows Server 2012에서 서버 관리자 원격 관리를 구성 하려면
+##### <a name="to-configure-server-manager-remote-management-on--windows-server-2012-r2--or--windows-server-2012--by-using-the-windows-interface"></a>Windows 인터페이스를 사용 하 여 Windows Server 2012 R2 또는 Windows Server 2012에서 서버 관리자 원격 관리를 구성 하려면
 
 1.  > [!NOTE]
     > 제어 하는 설정 합니다 **원격 관리 구성** 대화 상자에 원격 통신에 DCOM을 사용 하는 일부 서버 관리자의 영향을 주지 않습니다.
@@ -104,7 +104,7 @@ Windows Server 2016 보다 오래 된 Windows Server 릴리스를 실행 하는 
 
     -   이 컴퓨터는 서버 관리자 또는 Windows PowerShell을 사용 하 여 원격으로 관리할 수 있도록 선택 **다른 컴퓨터에서이 서버의 원격 관리 사용**합니다.
 
-##### <a name="BKMK_ps"></a>Windows PowerShell을 사용 하 여 Windows Server 2012 R2 또는 Windows Server 2012에서 서버 관리자 원격 관리를 사용 하도록 설정 하려면
+##### <a name="to-enable-server-manager-remote-management-on--windows-server-2012-r2--or--windows-server-2012--by-using-windows-powershell"></a>Windows PowerShell을 사용 하 여 Windows Server 2012 R2 또는 Windows Server 2012에서 서버 관리자 원격 관리를 사용 하도록 설정 하려면
 
 1.  다음 중 하나를 수행합니다.
 
@@ -129,7 +129,7 @@ Windows Server 2016 보다 오래 된 Windows Server 릴리스를 실행 하는 
 
     -   Windows Server 2008을 실행 하는 서버에서 원격 관리를 사용 하려면 [을 사용 하도록 설정 하 고 Windows PowerShell에서 원격 명령을 사용 하 여](https://go.microsoft.com/fwlink/p/?LinkId=242565)입니다.
 
-## <a name="BKMK_tasks"></a>서버 관리자에서 수행할 수 있는 작업
+## <a name="tasks-that-you-can-perform-in-server-manager"></a>서버 관리자에서 수행할 수 있는 작업
 서버 관리자 서버 관리를 더 효율적으로 관리자가 단일 도구를 사용 하 여 다음 표에 작업을 수행할 수 있도록 합니다. Windows Server 2012 R2 및 Windows Server 2012에서 모두 서버 표준 사용자와 Administrators 그룹의 구성원 작업을 수행할 수 관리 서버 관리자에서 하지만 기본적으로 표준 사용자는 못하도록 일부 작업을 수행한 다음 표에 나와 있는 것 처럼.
 
 관리자는 서버 관리자 cmdlet 모듈에서 두 개의 Windows PowerShell cmdlet을 사용할 수 있습니다 [Enable-servermanagerstandarduserremoting](https://technet.microsoft.com/library/jj205470.aspx) 하 고 [사용 안 함 ServerManagerStandardUserremoting](https://technet.microsoft.com/library/jj205468.aspx)를 추가 일부 추가 데이터에 대 한 표준 사용자 액세스를 제어 합니다. 합니다 **Enable-servermanagerstandarduserremoting** cmdlet 이벤트, 서비스, 성능 카운터, 역할 및 기능 인벤토리 데이터를 하나 이상의 관리자가 아닌 표준 사용자 액세스를 제공할 수 있습니다.
@@ -139,23 +139,23 @@ Windows Server 2016 보다 오래 된 Windows Server 릴리스를 실행 하는 
 
 |태스크 설명|Administrators(기본 제공 관리자 계정 포함)|표준 서버 사용자|
 |----------|----------------------------------|-------------|
-|서버 관리자가 될 수 있는 서버 풀에 원격 서버 추가 관리 하는 데 사용 합니다.|예|아니오|
+|서버 관리자가 될 수 있는 서버 풀에 원격 서버 추가 관리 하는 데 사용 합니다.|예|아니요|
 |만들고, 특정 지리적 위치에 있는지 또는 특정 목적으로 사용 하는 서버와 같은 서버의 사용자 지정 그룹을 편집 합니다.|예|예|
-|설치 또는 역할, 역할 서비스 및 로컬 컴퓨터나 Windows Server 2012 r 2를 실행 하는 원격 서버 또는 Windows Server 2012 기능을 제거 합니다. 역할, 역할 서비스 및 기능 정의 참조 하십시오. [역할, 역할 서비스 및 기능](https://go.microsoft.com/fwlink/p/?LinkId=239558)합니다.|예|아니요|
+|설치 또는 역할, 역할 서비스 및 로컬 컴퓨터나 Windows Server 2012 r 2를 실행 하는 원격 서버 또는 Windows Server 2012 기능을 제거 합니다. 역할, 역할 서비스 및 기능 정의 참조 하십시오. [역할, 역할 서비스 및 기능](https://go.microsoft.com/fwlink/p/?LinkId=239558)합니다.|예|아니오|
 |로컬 또는 원격 서버에 설치된 서버 역할 및 기능을 보고 변경합니다. **참고:** 서버 관리자에서 역할 및 기능 데이터는 시스템 기본 GUI 언어 또는 운영 체제의 설치 중에 선택한 언어 라고도 하는 시스템의 기본 언어로 표시 됩니다.|예|표준 사용자는 역할 및 기능을 보고 관리하며 역할 이벤트 보기 등과 같은 작업을 수행할 수 있지만 역할 서비스를 추가하거나 제거할 수는 없습니다.|
 |Windows PowerShell 또는 mmc 스냅인과 같은 관리 도구를 시작 합니다. 서버를 마우스 오른쪽 단추로 클릭 하 여 원격 서버에서 대상으로 Windows PowerShell 세션을 시작할 수는 **서버** 타일을 클릭 한 다음 마우스 **Windows PowerShell**합니다. mmc 스냅인을 시작할 수 있습니다 합니다 **도구** 가리킵니다 mmc 스냅인 후 원격 컴퓨터에 대해 확인 하 고 서버 관리자 콘솔의 메뉴를 엽니다.|예|예|
-|**서버** 타일에서 서버를 마우스 오른쪽 단추로 클릭하고 **다음으로 관리**를 클릭하여 서로 다른 자격 증명을 포함한 원격 서버를 관리합니다. 일반 서버와 File and Storage Services 관리 작업에 대해 **다음으로 관리**를 사용할 수 있습니다.|예|아니요|
+|**서버** 타일에서 서버를 마우스 오른쪽 단추로 클릭하고 **다음으로 관리**를 클릭하여 서로 다른 자격 증명을 포함한 원격 서버를 관리합니다. 일반 서버와 File and Storage Services 관리 작업에 대해 **다음으로 관리**를 사용할 수 있습니다.|예|아니오|
 |서비스, 시작 또는 중지와 같은 서버의 작동 수명 주기와 연관 된 관리 작업 수행 한 서버 네트워크 설정, 사용자 및 그룹 및 원격 데스크톱 연결을 구성할 수 있도록 하는 다른 도구를 시작 합니다.|예|표준 사용자는 서비스를 시작하거나 중지할 수 없습니다. 로컬 서버 이름, 작업 그룹 또는 도메인 구성원 자격 및 원격 데스크톱 설정을 변경할 수 있지만 사용자 계정 컨트롤에서 이러한 작업을 수행 하기 전에 관리자 자격 증명을 제공 하 라는 메시지가 표시 됩니다. 표준 사용자는 원격 관리 설정은 변경할 수 없습니다.|
 |모범 사례 준수를 위한 역할 검사를 포함하여 서버에 설치된 역할의 작동 수명 주기와 관련된 관리 작업을 수행합니다.|예|표준 사용자가 모범 사례 분석기 검사를 실행할 수 없습니다.|
 |서버 상태와 중요 이벤트를 확인하고, 구성 문제 또는 실패를 분석하고 문제를 해결합니다.|예|예|
 |이벤트, 성능 데이터, 서비스 및 모범 사례 분석기 결과 대 한 서버 관리자 대시보드의 경고를 표시 하려면 사용자 지정 합니다.|예|예|
-|서버를 다시 시작합니다.|예|아니오|
+|서버를 다시 시작합니다.|예|아니요|
 |관리 되는 서버에 대 한 서버 관리자 콘솔에 표시 되는 데이터를 새로 고칩니다.|예|아니요|
 
 > [!NOTE]
 > Windows Server 2008 r 2를 실행 하는 서버 또는 Windows Server 2008로 역할 및 기능을 추가 하려면 서버 관리자를 사용할 수 없습니다.
 
-## <a name="BKMK_start"></a>서버 관리자를 시작 합니다.
+## <a name="start-server-manager"></a>서버 관리자를 시작 합니다.
 서버 관리자는 기본적으로 Windows Server 2016 때 서버 관리자 그룹 로그온의 멤버를 실행 하는 서버에서 자동으로 시작 합니다. 서버 관리자를 닫으면 다음 방법 중 하나에서 다시 시작 합니다. 이 섹션에는 기본 동작을 변경 하 고 서버 관리자가 자동으로 시작을 방지 하기 위한 단계도 포함 되어 있습니다.
 
 #### <a name="to-start-server-manager-from-the-start-screen"></a>시작 화면에서 서버 관리자를 시작 하려면
@@ -174,7 +174,7 @@ Windows Server 2016 보다 오래 된 Windows Server 릴리스를 실행 하는 
 
 3.  또는 그룹 정책 설정을 사용 하 여 자동으로 시작 서버 관리자를 방지할 수 **로그온 시 서버 관리자를 자동으로 시작 않는**합니다. 이 정책 설정은 로컬 그룹 정책 편집기 콘솔에서 경로가 컴퓨터 구성 \ 관리 템플릿 \ 시스템 \ 서버 관리자입니다.
 
-## <a name="BKMK_restart"></a>원격 서버를 다시 시작
+## <a name="restart-remote-servers"></a>원격 서버 다시 시작
 원격 서버를 다시 시작할 수는 **서버** 역할이 나 그룹 페이지에서 서버 관리자의 분할 합니다.
 
 > [!IMPORTANT]
@@ -190,7 +190,7 @@ Windows Server 2016 보다 오래 된 Windows Server 릴리스를 실행 하는 
 
 3.  선택한 서버를 마우스 오른쪽 단추로 클릭한 다음 **서버 다시 시작**을 클릭합니다.
 
-## <a name="BKMK_export"></a>서버 관리자 설정을 다른 컴퓨터로 내보내려면
+## <a name="export-server-manager-settings-to-other-computers"></a>다른 컴퓨터로 서버 관리자 설정 내보내기
 서버 관리자에서 관리 되는 서버 목록 변경 하 고 서버 관리자 콘솔 설정 및 사용자 지정 그룹을 만든 다음 두 파일에 저장 됩니다. 서버 관리자 (또는 원격 서버 관리 도구가 설치 된 Windows 10)의 동일한 릴리스를 실행 하는 다른 컴퓨터에서 이러한 설정을 다시 사용할 수 있습니다. 원격 서버 관리 도구는 해당 컴퓨터에 서버 관리자 설정을 내보내려면 Windows 클라이언트 기반 컴퓨터에서 실행 되어야 합니다.
 
 -   %*appdata*%\Microsoft\Windows\ServerManager\Serverlist.xml

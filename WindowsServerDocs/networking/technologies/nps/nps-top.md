@@ -9,12 +9,12 @@ ms.assetid: 9c7a67e0-0953-479c-8736-ccb356230bde
 ms.author: pashort
 author: shortpatti
 ms.date: 06/20/2018
-ms.openlocfilehash: 0439c0f45a604f6b3ef90369f5fe77a59568d9d7
-ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
+ms.openlocfilehash: 515012a21ba6e90abe2c4db2150fd1feaad06677
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/25/2019
-ms.locfileid: "66222583"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812372"
 ---
 # <a name="network-policy-server-nps"></a>NPS(네트워크 정책 서버)
 
@@ -22,8 +22,8 @@ ms.locfileid: "66222583"
 
 이 항목에서는 Windows Server 2016 및 Windows Server 2019에 네트워크 정책 서버에 대 한 개요에 사용할 수 있습니다. NPS는 Windows Server 2016 및 Server 2019에 네트워크 정책 및 액세스 서비스 (NPAS) 기능을 설치할 때 설치 됩니다.
 
->[!NOTE]
->이 항목 외에 다음 NPS 설명서는 사용할 수 있습니다.
+> [!NOTE]
+> 이 항목 외에 다음 NPS 설명서는 사용할 수 있습니다.
 > - [네트워크 정책 서버에 대 한 유용한 정보](nps-best-practices.md)
 > - [네트워크 정책 서버를 사용 하 여 시작](nps-getstart-top.md)
 > - [네트워크 정책 서버 계획](nps-plan-top.md)
@@ -44,8 +44,8 @@ NPS를 사용 하면 중앙에서 구성 하 고 네트워크 액세스 인증, 
     - [연결 요청 정책 구성](nps-crp-configure.md)
 - **RADIUS 계정**합니다. 로컬 로그 파일 또는 Microsoft SQL Server의 로컬 또는 원격 인스턴스에 이벤트를 기록 하는 NPS를 구성할 수 있습니다. 자세한 내용은 [NPS 로깅](#nps-logging)합니다.
 
->[!IMPORTANT]
->네트워크 액세스 보호 \(NAP\), 상태 등록 기관 \(HRA\), 및 호스트 자격 인증 프로토콜 \(HCAP\) Windows Server 2012 R2에서 사용 되지 않는 및를 Windows Server 2016에서 사용할 수 없습니다. Windows Server 2016 이전의 운영 체제를 사용 하 여 NAP 배포를 사용 하는 경우에 Windows Server 2016으로 NAP 배포를 마이그레이션할 수 없습니다.
+> [!IMPORTANT]
+> 네트워크 액세스 보호 \(NAP\), 상태 등록 기관 \(HRA\), 및 호스트 자격 인증 프로토콜 \(HCAP\) Windows Server 2012 R2에서 사용 되지 않는 및를 Windows Server 2016에서 사용할 수 없습니다. Windows Server 2016 이전의 운영 체제를 사용 하 여 NAP 배포를 사용 하는 경우에 Windows Server 2016으로 NAP 배포를 마이그레이션할 수 없습니다.
 
 이러한 기능의 조합을 사용 하 여 NPS를 구성할 수 있습니다. 예를 들어 VPN 연결용 RADIUS 서버와도 일부 연결 요청 인증 및 다른 도메인에서 권한 부여에 대 한 원격 RADIUS 서버 그룹의 구성원에 게 전달 하는 RADIUS 프록시로 NPS를 구성할 수 있습니다.
 
@@ -57,8 +57,8 @@ NPS는 설치 하는 Windows Server 버전에 따라 다른 기능을 제공 합
 
 Windows Server 2016 Standard 또는 Datacenter에 NPS를 사용 하 여 RADIUS 클라이언트와 원격 RADIUS 서버 그룹을 무제한을 구성할 수 있습니다. IP 주소 범위를 지정하여 RADIUS 클라이언트를 구성할 수도 있습니다.
 
->[!NOTE]
->WIndows 네트워크 정책 및 액세스 서비스 기능에는 Server Core 설치 옵션과 함께 설치 되는 시스템에서 사용할 수 없는 경우
+> [!NOTE]
+> WIndows 네트워크 정책 및 액세스 서비스 기능에는 Server Core 설치 옵션과 함께 설치 되는 시스템에서 사용할 수 없는 경우
 
 다음 섹션에서는 RADIUS 서버 및 프록시로 NPS에 대 한 자세한 정보를 제공합니다.
 
@@ -70,15 +70,15 @@ NPS를 RADIUS 서버로, RADIUS 프록시 또는 둘 다로 사용할 수 있습
 
 NPS는 Microsoft에서 구현한 RADIUS 표준 Internet Engineering Task Force에서 지정한 \(IETF\) Rfc 2865 및 2866에에서 있습니다. RADIUS 서버로 NPS에서 중앙 집중식된 연결 인증, 권한 부여 및 계정에 대 한 다양 한 유형의 네트워크 액세스, 무선, 인증 스위치를 포함 하 여 전화 접속 및 가상 사설망 \(VPN\) 원격 액세스 및 라우터 연결 합니다.
 
->[!NOTE]
->NPS를 RADIUS 서버로 배포에 대 한 자세한 내용은 [네트워크 정책 서버 배포](nps-deploy.md)합니다.
+> [!NOTE]
+> NPS를 RADIUS 서버로 배포에 대 한 자세한 내용은 [네트워크 정책 서버 배포](nps-deploy.md)합니다.
 
 NPS는 무선 여러 이기종, 스위치, 원격 액세스 또는 VPN 장치를 사용 하도록 설정 합니다. Windows Server 2016에서 사용할 수 있는 원격 액세스 서비스를 사용 하 여 NPS를 사용할 수 있습니다.
 
 NPS는 Active Directory Domain Services를 사용 하 여 \(AD DS\) 도메인 또는 로컬 보안 계정 관리자 (SAM) 사용자 계정을 데이터베이스 연결 시도 대 한 사용자 자격 증명을 인증 합니다. NPS를 실행 하는 서버는 AD DS 도메인의 멤버인 경우 NPS 디렉터리 서비스를 사용 하 여 해당 사용자 계정 데이터베이스 및 single sign-on 솔루션의 일부입니다. 네트워크 액세스 제어에 대 한 동일한 자격 증명 집합이 되 \(인증 및 네트워크에 대 한 액세스 권한 부여\) 및 AD DS 도메인에 로그온 하 합니다.
 
->[!NOTE]
->NPS 연결 권한을 부여 하려면 사용자 계정 및 네트워크 정책의 전화 접속 속성을 사용 합니다.
+> [!NOTE]
+> NPS 연결 권한을 부여 하려면 사용자 계정 및 네트워크 정책의 전화 접속 속성을 사용 합니다.
 
 인터넷 서비스 공급자 \(Isp\) 네트워크 액세스를 관리 하는 조직 네트워크 액세스 유형에 관계 없이 관리의 단일 지점에서 모든 유형의 네트워크 액세스를 관리 하는 필요성이 증가 했으며 장비를 사용 합니다. RADIUS 표준 같은 유형이 고 다른 유형의 환경에서이 기능을 지원합니다. RADIUS는 클라이언트-서버 프로토콜 (RADIUS 클라이언트로 사용) 하는 네트워크 액세스 장치 인증 및 계정 요청을 RADIUS 서버로 전송할 수 있도록 하는 경우
 
@@ -116,7 +116,6 @@ NPS를 사용 하 여 RADIUS 프록시로 경우:
 다음 그림에서는 RADIUS 클라이언트와 RADIUS 서버 사이의 RADIUS 프록시로 NPS를 보여 줍니다.
 
 ![RADIUS 프록시로 NPS](../../media/Nps-Proxy/Nps-Proxy.jpg)
-
 
 NPS를 사용 하 여 조직도 아웃소싱 할 수는 서비스 공급자에 대 한 원격 액세스 인프라 사용자 인증, 권한 부여 및 계정에 대 한 제어를 유지 하면서 합니다.
 

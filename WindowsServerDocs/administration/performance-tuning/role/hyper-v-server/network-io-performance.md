@@ -7,12 +7,12 @@ ms.topic: article
 ms.author: Asmahi; SandySp; JoPoulso
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 6dd9d03cce71c42e2ecc1388519de049a5e4e8dd
-ms.sourcegitcommit: d84dc3d037911ad698f5e3e84348b867c5f46ed8
+ms.openlocfilehash: 9f576963a93c8c0b9d6c05f406cc3331c407ceb9
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66266721"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66811520"
 ---
 # <a name="hyper-v-network-io-performance"></a>Hyper-v 네트워크 I/O 성능
 
@@ -22,7 +22,7 @@ Server 2016에는 몇 가지 향상 된 기능 및 새로운 기능-Hyper-v에�
 
 실시간 마이그레이션을 사용 하면 투명 하 게 가동 또는 네트워크 연결이 없는 동일한 클러스터의 다른 노드로 장애 조치 클러스터의 한 노드에서 실행 중인 가상 컴퓨터를 이동할 수 있습니다.
 
-> [!Note]
+> [!NOTE]
 > 장애 조치 클러스터링 클러스터 노드에 대 한 공유 저장소가 필요합니다.
 
 실행 중인 가상 컴퓨터를 이동 하는 프로세스는 두 가지 주요 단계로 나눌 수 있습니다. 첫 번째 단계는 새 호스트에 현재 호스트에서 가상 머신의 메모리를 복사합니다. 두 번째 단계는 새 호스트에 현재 호스트에서 가상 머신 상태를 전송합니다. 두 단계의 기간 삽입할 데이터 전송할 수 있습니다 새 호스트에 현재 호스트에서 속도로 크게 결정 됩니다.
