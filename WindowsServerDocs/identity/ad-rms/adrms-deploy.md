@@ -6,12 +6,12 @@ author: msmbaldwin
 ms.author: esaggese
 ms.date: 05/30/2019
 ms.topic: article
-ms.openlocfilehash: ce058a2885315c84d2c1c6701ad2801790d3c590
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
-ms.translationtype: HT
+ms.openlocfilehash: f5d621a0ba06f5b1beb97ccdbffb8376b5503168
+ms.sourcegitcommit: 927adf32faa6052234ad08f21125906362e593dc
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66814076"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67033345"
 ---
 # <a name="upgrading-ad-rms-to-windows-server-2016"></a>AD RMS Windows Server 2016으로 업그레이드
 
@@ -257,7 +257,7 @@ AD RMS 클러스터를 사용 중인 경우 하드웨어 보안 모듈을 중앙
 
 13. 다시 로그온 시 엽니다 **서버 관리자** 선택 **도구** 차례로 **Active Directory Rights Management**합니다. 관리 창 표시 하 고 클러스터에 클러스터의 추가 서버를 지정 해야 합니다.
 
-14. 14. 원래 AD RMS 클러스터에서 AD RMS 모바일 장치 확장 설치 된 경우 업데이트 된 클러스터 노드에서 MDE에도 설치 해야 합니다. MDE AD RMS 클러스터에 추가할 MDE 문서의 지침을 따릅니다. 이 시점에서 모든 기존 노드를 용도 변경 또는 Windows Server 2016으로 업그레이드를 다시 위에서 설명한 동일한 프로세스를 사용 하 여 AD RMS 클러스터에 조인 합니다. 
+14. 원래 AD RMS 클러스터에서 AD RMS 모바일 장치 확장 설치 된 경우 업데이트 된 클러스터 노드에서 MDE에도 설치 해야 합니다. MDE AD RMS 클러스터에 추가할 MDE 문서의 지침을 따릅니다. 이 시점에서 모든 기존 노드를 용도 변경 또는 Windows Server 2016으로 업그레이드를 다시 위에서 설명한 동일한 프로세스를 사용 하 여 AD RMS 클러스터에 조인 합니다. 
 
 ### <a name="configuring-windows-server-2016-web-application-proxy-wap"></a>Windows Server 2016 웹 응용 프로그램 프록시 (WAP) 구성
 
