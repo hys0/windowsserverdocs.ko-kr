@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: a280d540d09c6fdcb7846d1cf545856869be1152
-ms.sourcegitcommit: b190fac4bfa5599751a60d3fc3b4c4a64dd9afd7
+ms.openlocfilehash: e7d2b47c9c14af22cdcf29fb388779e7639e38cb
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66008961"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66442771"
 ---
 # <a name="replication-error-1753-there-are-no-more-endpoints-available-from-the-endpoint-mapper"></a>복제 오류 1753 끝점 매퍼에서 사용할 수 있는 끝점이 더 이상 없음
 
@@ -46,10 +46,10 @@ ms.locfileid: "66008961"
   <section address="BKMK_Symptoms">
     <title>증상</title>
     <content>
-      <para>이 문서에서는 증상, 원인 설명 및 Win32 오류 1753 Active Directory 작업에 대 한 확인 단계: "가지 끝점이 더 이상 끝점 매퍼에서 사용할 수 있습니다."</para>
+      <para>이 문서에서는 증상, 원인 설명 및 Win32 오류 1753 Active Directory 작업에 대 한 확인 단계: &quot;끝점 매퍼에서 사용할 수 있는 끝점이 더 이상 있습니다.&quot;</para>
       <list class="ordered">
         <listItem>
-          <para>1753 오류로 실패 한 연결 테스트, Active Directory 복제 테스트 또는 KnowsOfRoleHolders 테스트 DCDIAG 보고서: "가지 끝점이 더 이상 끝점 매퍼에서 사용할 수 있습니다."</para>
+          <para>1753 오류로 실패 한 연결 테스트, Active Directory 복제 테스트 또는 KnowsOfRoleHolders 테스트 DCDIAG 보고서: &quot;끝점 매퍼에서 사용할 수 있는 끝점이 더 이상 있습니다.&quot;</para>
           <code>Testing server: &lt;site&gt;&lt;DC Name&gt;
 Starting test: Connectivity
 * Active Directory LDAP Services Check
@@ -85,7 +85,7 @@ of starting up or shutting down, and is not available.
 Verify machine is not hung during boot.
 </code>
         </listItem>
-<listItem><para>REPADMIN 합니다. EXE 보고 1753 상태로 복제 시도가 실패 했습니다.</para><para>REPADMIN 1753 상태 포함 되지만 제한 되지는 않습니다 일반적으로 명시 하는 명령:</para><table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11"><tbody><tr><TD><list class="bullet"><listItem><para>REPADMIN /REPLSUM</para></listItem><listItem><para>REPADMIN /SHOWREPL</para></listItem></list></TD><TD><list class="bullet"><listItem><para>REPADMIN /SHOWREPS</para></listItem><listItem><para>REPADMIN /SYNCALL</para></listItem></list></TD></tr></tbody></table><para>"복제 액세스가 거부 되었습니다." 오류와 함께 CONTOSO-DC1 실패를 CONTOSO-d c 2에서 인바운드 복제를 보여 주는 "REPADMIN /SHOWREPS"에서 샘플 출력은 다음과 같습니다.</para><code>Default-First-Site-NameCONTOSO-DC1
+<listItem><para>REPADMIN 합니다. EXE 보고 1753 상태로 복제 시도가 실패 했습니다.</para><para>REPADMIN 1753 상태 포함 되지만 제한 되지는 않습니다 일반적으로 명시 하는 명령:</para><table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11"><tbody><tr><TD><list class="bullet"><listItem><para>REPADMIN /REPLSUM</para></listItem><listItem><para>REPADMIN /SHOWREPL</para></listItem></list></TD><TD><list class="bullet"><listItem><para>REPADMIN /SHOWREPS</para></listItem><listItem><para>REPADMIN /SYNCALL</para></listItem></list></TD></tr></tbody></table><para>샘플 출력에서 &quot;REPADMIN /SHOWREPS&quot; CONTOSO-DC1 실패를 CONTOSO-d c 2에서 인바운드 복제를 보여 주는 합니다 &quot;복제 액세스가 거부 되었습니다&quot; 아래 오류가 표시 됩니다.</para><code>Default-First-Site-NameCONTOSO-DC1
 DSA Options: IS_GC 
 Site Options: (none)
 DSA object GUID: b6dc8589-7e00-4a5d-b688-045aef63ec01
@@ -99,7 +99,7 @@ There are no more endpoints available from the endpoint mapper.</codeFeaturedEle
 &lt;#&gt; consecutive failure(s).
 Last success @ &lt;date&gt; &lt;time&gt;.
 
-</code></listItem><listItem><para>합니다 <ui>복제 토폴로지 확인</ui> Active Directory 사이트 및 서비스에 명령을 "가지 끝점이 더 이상 끝점 매퍼에서 사용할 수 있습니다."을 반환 합니다.</para><para>원본 DC에서에서 연결 개체를 마우스 오른쪽 단추로 클릭 하 고 선택 <ui>복제 토폴로지 확인</ui> "가지 끝점이 더 이상 끝점 매퍼에서 사용할 수 있습니다."와 함께 실패 화면에 나타나는 오류 메시지는 다음과 같습니다.</para><para>대화 상자 제목 텍스트: 복제 토폴로지를 확인 합니다.</para><para>대화 메시지 텍스트: </para><para>도메인 컨트롤러에 연결 하는 동안 다음 오류가 발생 했습니다. 끝점 매퍼에서 사용할 수 있는 끝점이 더 이상 있습니다.</para></listItem><listItem><para>합니다 <ui>지금 복제</ui> Active Directory 사이트 및 서비스에 명령을 "가지 끝점이 더 이상 끝점 매퍼에서 사용할 수 있습니다."을 반환 합니다.</para><para>원본 DC에서에서 연결 개체를 마우스 오른쪽 단추로 클릭 하 고 선택 <ui>지금 복제</ui> "가지 끝점이 더 이상 끝점 매퍼에서 사용할 수 있습니다."와 함께 실패 화면에 나타나는 오류 메시지는 다음과 같습니다.</para><para>대화 상자 제목 텍스트: 이제 복제</para><para>대화 메시지 텍스트: 명명 컨텍스트를 동기화 하려고 하는 동안 다음 오류가 발생 했습니다 &lt;% 디렉터리 파티션 이름&gt; 도메인 컨트롤러 로부터 &lt;원본 DC&gt; 도메인 컨트롤러에 &lt;대상 DC&gt;:</para><para>
+</code></listItem><listItem><para>합니다 <ui>복제 토폴로지 확인</ui> Active Directory 사이트 및 서비스에서 명령이 반환 &quot;가지 끝점이 더 이상 끝점 매퍼에서 사용할 수 있습니다.&quot;</para><para>원본 DC에서에서 연결 개체를 마우스 오른쪽 단추로 클릭 하 고 선택 <ui>복제 토폴로지 확인</ui> 되면서 &quot;가지 끝점이 더 이상 끝점 매퍼에서 사용할 수 있습니다.&quot; 화면에 나타나는 오류 메시지는 다음과 같습니다.</para><para>대화 상자 제목 텍스트: 복제 토폴로지를 확인 합니다.</para><para>대화 메시지 텍스트: </para><para>도메인 컨트롤러에 연결 하는 동안 다음 오류가 발생 했습니다. 끝점 매퍼에서 사용할 수 있는 끝점이 더 이상 있습니다.</para></listItem><listItem><para>합니다 <ui>지금 복제</ui> Active Directory 사이트 및 서비스에서 명령이 반환 &quot;가지 끝점이 더 이상 끝점 매퍼에서 사용할 수 있습니다.&quot;</para><para>원본 DC에서에서 연결 개체를 마우스 오른쪽 단추로 클릭 하 고 선택 <ui>지금 복제</ui> 되면서 &quot;가지 끝점이 더 이상 끝점 매퍼에서 사용할 수 있습니다.&quot; 화면에 나타나는 오류 메시지는 다음과 같습니다.</para><para>대화 상자 제목 텍스트: 이제 복제</para><para>대화 메시지 텍스트: 명명 컨텍스트를 동기화 하려고 하는 동안 다음 오류가 발생 했습니다 &lt;% 디렉터리 파티션 이름&gt; 도메인 컨트롤러 로부터 &lt;원본 DC&gt; 도메인 컨트롤러에 &lt;대상 DC&gt;:</para><para>
 
 끝점 매퍼에서 사용할 수 있는 끝점이 더 이상 있습니다.</para><para>작업을 진행할 수 없습니다.</para></listItem><listItem><para>-2146893022 상태와 함께 NTDS KCC, NTDS 일반 또는 Microsoft-Windows-ActiveDirectory_DomainService 이벤트는 이벤트 뷰어에서 디렉터리 서비스 로그에 기록 됩니다.</para><para>일반적으로-2146893022 상태를 명시 하는 active Directory 이벤트를 포함 하지만에 제한 되지 않습니다.</para><table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11"><thead><tr><TD><para>이벤트 ID</para></TD><TD><para>이벤트 원본</para></TD><TD><para>이벤트 문자열</para></TD></tr></thead><tbody><tr><TD><para>1655</para></TD><TD><para>NTDS 일반</para></TD><TD><para>Active Directory가 다음 글로벌 카탈로그와 통신 하려고 하 고는 시도 되지 않았습니다.</para></TD></tr><tr><TD><para>1925</para></TD><TD><para>NTDS KCC</para></TD><TD><para>다음 쓰기 가능한 디렉터리 파티션의 복제 링크를 설정 하려고 했으나 실패 했습니다.</para></TD></tr><tr><TD><para>1265</para></TD><TD><para>NTDS KCC</para></TD><TD><para>지식 일관성 검사기 (KCC)에서 다음 디렉터리 파티션과 원본 도메인 컨트롤러에 대 한 복제 계약을 추가 하지 못했습니다.</para></TD></tr></tbody></table></listItem>
 </list>
@@ -122,7 +122,7 @@ Last success @ &lt;date&gt; &lt;time&gt;.
           <para>클라이언트 쪽 RPC EPM 대상 컴퓨터에 연결 하 고 클라이언트 호출을 완료 하려면 끝점에 대 한 요청 </para>
         </listItem>
         <listItem>
-          <para>끝점을 사용 하 여 서버 컴퓨터의 EPM 응답 </para>
+          <para>서버 컴퓨터&#39;s EPM 끝점을 사용 하 여 응답 </para>
         </listItem>
         <listItem>
           <para>서버 앱을 연결 하는 클라이언트 쪽 RPC </para>
@@ -138,13 +138,13 @@ Last success @ &lt;date&gt; &lt;time&gt;.
       <para>1753 오류에 대 한 특정 근본 원인은 다음과 같습니다. </para>
       <list class="ordered">
         <listItem>
-          <para>서버 앱 적이 없습니다 (즉, 위에 "추가 정보" 다이어그램에서는 단계 # 1를 시도 하지 않음).</para>
+          <para>적이 서버 앱 (예: #1 단계는 &quot;자세한 내용은&quot; 다이어그램 위에 시도한 되지).</para>
         </listItem>
         <listItem>
-          <para>서버 앱을 시작 했지만 RPC 끝점 매퍼 (예: #1 단계 위의 "자세한 정보" 다이어그램 하려고 했지만 실패 했습니다)를 사용 하 여 등록을 방해 하는 초기화 하는 동안 일부 오류가 발생 했습니다.</para>
+          <para>서버 앱을 시작 했지만 RPC 끝점 매퍼를 사용 하 여 등록을 방해 하는 초기화 하는 동안 일부 오류가 발생 했습니다 (예: #1 단계는 &quot;자세한 내용은&quot; 위의 다이어그램 하려고 했지만 실패 했습니다).</para>
         </listItem>
         <listItem>
-          <para>서버 앱을 시작 했지만 이후에 종료 합니다. (예: #1 단계 위의 "자세한 정보" 다이어그램 성공적으로 완료 했지만 완료 나중에 서버 종료 때문에).</para>
+          <para>서버 앱을 시작 했지만 이후에 종료 합니다. (예: #1 단계는 &quot;자세한 내용은&quot; 위의 다이어그램 성공적으로 완료 했지만 완료 나중에 서버를 종료 하기 때문에).</para>
         </listItem>
         <listItem>
           <para>서버 앱을 수동으로 (의도적 이지만 3 비슷합니다 해당 끝점을 등록 취소. 희박 하지만 완전성을 위해 포함 됩니다.)</para>
@@ -193,17 +193,17 @@ Windows Server 2008 또는 Windows Server 2008 R2에 대 한: 원본 DC의 콘�
           <para>대상 DC에서 원본 Dc 정규화 된 DC CNAME 레코드에 대해 NSLOOKUP을 실행 합니다.</para>
           <code>c:&gt;nslookup -type=cname &lt;fully qualified cname of source DC&gt; &lt;destination DCs primary DNS Server IP &gt;
 c:&gt;nslookup -type=cname &lt;fully qualified cname of source DC&gt; &lt;destination DCs secondary DNS Server IP&gt;</code>
-          <para>NSLOOKUP에서 반환 된 IP 주소 "을 소유 하는지 확인" 호스트 이름 / 원본 DC의 보안 id:</para>
+          <para>NSLOOKUP 반환한 IP 주소를 확인 &quot;소유&quot; 호스트 이름 / 원본 DC의 보안 id:</para>
           <code>C:&gt;NBTSTAT -A &lt;IP address returned by NSLOOKUP in the step above&gt;</code>
           <para>로 구분하거나 여러</para>
-          <para>원본 DC의 콘솔을 로그온, CMD 프롬프트에서 "IPCONFIG"를 실행 하 고, 원본 DC 위의 NSLOOKUP 명령에서 반환 된 IP 주소를 소유 하는지 확인</para>
+          <para>원본 DC로 실행의 콘솔에 로그온 &quot;IPCONFIG&quot; CMD에서 메시지를 표시 하 고 원본 DC 위의 NSLOOKUP 명령에서 반환 된 IP 주소를 소유 하는지 확인</para>
           <para>오래 된 / 중복 IP 매핑 DNS에서 호스트에 대 한 확인</para>
           <code>NSLOOKUP -type=hostname &lt;single label hostname of source DC&gt; &lt;primary DNS Server IP on destination DC&gt;
 NSLOOKUP -type=hostname &lt;single label hostname of source DC&gt; &lt;secondary DNS Server IP on destination DC&gt;
 
 NSLOOKUP -type=hostname &lt;fully qualified computer name of source DC&gt; &lt;primary DNS Server IP on destination DC&gt;
 NSLOOKUP -type=hostname &lt;fully qualified computer name of source DC&gt; &lt;secondary DNS Server IP on dest. DC&gt;</code>
-<para>잘못 된 IP 주소가 호스트 레코드에 있는 경우 조사 여부를 DNS 청소 기능을 활성화 하 고 올바르게 구성 합니다. </para><para>네트워크 추적 또는 위에 테스트는 잘못 된 IP 주소를 반환 하 여 이름 쿼리 표시 되지 않으면, 호스트 파일, LMHOSTS 파일 및 WINS 서버에서 부실 항목을 고려 합니다. 참고 WINS 대체 (fallback) 이름 확인을 수행 하려면 DNS 서버를 구성할 수도 있습니다.</para>
+<para>잘못 된 IP 주소가 호스트 레코드에 있는 경우 조사 여부를 DNS 청소 기능을 활성화 하 고 올바르게 구성 합니다. </para><para>위의 테스트 또는 네트워크 추적 하지 않습니다 하는 경우&#39;표시 안 잘못 된 IP 주소를 반환 하 여 이름 쿼리는 호스트 파일, LMHOSTS 파일 및 WINS 서버에서 부실 항목 것이 좋습니다. 참고 WINS 대체 (fallback) 이름 확인을 수행 하려면 DNS 서버를 구성할 수도 있습니다.</para>
 </listItem>
         <listItem>
           <para>
@@ -329,11 +329,11 @@ NSLOOKUP -type=hostname &lt;fully qualified computer name of source DC&gt; &lt;s
             </tbody>
           </table>
           <para>잘 알려진 포트 끝점 매퍼를 사용 하 여 등록 되지 않습니다. </para>
-          <para>Active Directory 및 기타 응용 프로그램 RPC 사용 후 삭제 포트 범위에서 동적으로 할당 된 포트를 수신 하는 서비스를 등록할 수도 있습니다. 이러한 RPC 서버 응용 프로그램은 1024-5000 Windows 2000 및 Windows Server 2003 컴퓨터에서 TCP 포트 및 Windows Server 2008 및 Windows Server 2008 R2 컴퓨터에서 49152와 65535 범위의 포트에 동적으로 할당 됩니다. 복제에서 사용 되는 RPC 포트 수 하드 코드 된에서 설명 하는 단계를 사용 하 여 레지스트리에 <externalLink> <linkText>기술 자료 문서 224196</linkText><linkUri>https://support.microsoft.com/kb/224196</linkUri></externalLink>합니다. Active Directory 하드 코드 된 포트를 사용 하도록 구성 된 경우 EPM을 사용 하 여 등록을 계속 합니다. </para>
+          <para>Active Directory 및 기타 응용 프로그램 RPC 사용 후 삭제 포트 범위에서 동적으로 할당 된 포트를 수신 하는 서비스를 등록할 수도 있습니다. 이러한 RPC 서버 응용 프로그램은 1024-5000 Windows 2000 및 Windows Server 2003 컴퓨터에서 TCP 포트 및 Windows Server 2008 및 Windows Server 2008 R2 컴퓨터에서 49152와 65535 범위의 포트에 동적으로 할당 됩니다. 복제에서 사용 되는 RPC 포트 수 하드 코드 된에서 설명 하는 단계를 사용 하 여 레지스트리에 <externalLink> <linkText>기술 자료 문서 224196</linkText> <linkUri> <a href="https://support.microsoft.com/kb/224196" data-raw-source="https://support.microsoft.com/kb/224196"> https://support.microsoft.com/kb/224196 </a> </linkUri> </externalLink>. Active Directory 하드 코드 된 포트를 사용 하도록 구성 된 경우 EPM을 사용 하 여 등록을 계속 합니다. </para>
           <para>관심 RPC 서버 응용 프로그램이 등록 된 RPC 서버 (원본 DC AD 복제의 경우)의 RPC 끝점 매퍼를 확인 합니다. </para>
           <para>이 작업을 수행 하는 방법의 수는 있지만 하나 설치 하 고 원본 DC의 구문을 사용 하 여 콘솔에서 관리자 권한 CMD 프롬프트에서 PORTQRY를 실행 하는 것: </para>
-          <code>c:\&gt;portquery -n &lt;source DC&gt; -e 135 &gt;file.txt</code>
-          <para>Portqry 출력에서 "MS NT Directory DRS 인터페이스"에 의해 동적으로 등록 된 포트 번호를 기록해 둡니다 (UUID =... 351)에 대 한 합니다 <embeddedLabel>ncacn_ip_tcp 프로토콜</embeddedLabel>. 아래 코드 조각은 Windows Server 2008 R2 DC를 UUID portquery 출력 예제를 보여 줍니다. / Active Directory에서 특별히 사용 되는 프로토콜 쌍으로 강조 표시 <embeddedLabel>굵게</embeddedLabel>: </para>
+          <code>c:&amp;gt;portquery -n &lt;source DC&gt; -e 135 &gt;file.txt</code>
+          <para>Portqry 출력에 의해 동적으로 등록 된 포트 번호를 확인 합니다 &quot;MS NT 디렉터리 DRS 인터페이스&quot; (UUID 351... =)에 대 한 합니다 <embeddedLabel>ncacn_ip_tcp 프로토콜</embeddedLabel>합니다. 아래 코드 조각은 Windows Server 2008 R2 DC를 UUID portquery 출력 예제를 보여 줍니다. / Active Directory에서 특별히 사용 되는 프로토콜 쌍으로 강조 표시 <embeddedLabel>굵게</embeddedLabel>: </para>
           <code>UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
 ncacn_np:CONTOSO-DC01[\pipe\lsass] 
 UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
@@ -407,7 +407,7 @@ ncacn_http:CONTOSO-DC01[6004]</code>
             </listItem>
             <listItem>
               <para>원본 Dc OS 버전에 대해 동적 포트 범위 내에 하드 코드 된 포트 정의 KB 224196에 정의 된가 속한 확인 합니다.</para>
-              <para>검토 <externalLink> <linkText>기술 자료 문서 224196</linkText> <linkUri> https://support.microsoft.com/kb/224196 </linkUri> </externalLink> 는 하드 코드 된 포트 범위에 속하는 사용 후 삭제 포트 원본 DC의 운영 체제 버전을 확인 합니다.</para>
+              <para>검토 <externalLink> <linkText>기술 자료 문서 224196</linkText> <linkUri> <a href="https://support.microsoft.com/kb/224196" data-raw-source="https://support.microsoft.com/kb/224196"> https://support.microsoft.com/kb/224196 </a> </linkUri> </externalLink> 하드 코드 된 포트에 대 한 임시 포트 범위에 속하는지 확인 합니다. 원본 DC&#39;s 운영 체제 버전입니다.</para>
             </listItem>
             <listItem>
               <para>ClientProtocols 키 HKLM\Software\Microsoft\Rpc 아래 있고 다음 5 개 기본 값이 들어 있는지 확인 합니다.</para>
@@ -428,7 +428,7 @@ ncacn_ip_udp REG_SZ rpcrt4.dll</code>
       <para>
         <embeddedLabel>매핑-2146893022 및 발생 시키는 RPC 오류 1753 IP에 잘못 된 이름의 예: 대상 사용자 이름이 올바르지 않습니다.</embeddedLabel>
       </para>
-      <para>IP 주소 x.x.1.1와 x.x.1.2 DC1과 DC2의 contoso.com 도메인 구성 됩니다. "A" 호스트 / DC2에 대 한 "AAAA" 레코드가 모든 DC1에 대해 구성 된 DNS 서버에 올바르게 등록 되어 있습니다. 또한 DC1에서 호스트 파일 DC2s 정규화 된 호스트 이름 IP 주소 x.x.1.2 매핑 항목을 포함 합니다. 나중에 X.X.1.3 및 구성원 컴퓨터는 새 DC2의 IP 주소가 변경 X.X.1.2에서 IP 주소 x.x.1.2 사용 하 여 도메인에 조인 됩니다. AD 복제 시도 의해 트리거되는 <ui>지금 복제</ui> 추적 아래에 표시 된 것과 같이 Active Directory 사이트 및 서비스 스냅인에서 명령을 1753 오류로 인해 실패 합니다.</para>
+      <para>IP 주소 x.x.1.1와 x.x.1.2 DC1과 DC2의 contoso.com 도메인 구성 됩니다. 호스트 &quot;A&quot; / &quot;AAAA&quot; DC2에 대 한 레코드는 모든 DC1에 대해 구성 된 DNS 서버에 올바르게 등록 합니다. 또한 DC1에서 호스트 파일 DC2s 정규화 된 호스트 이름 IP 주소 x.x.1.2 매핑 항목을 포함 합니다. 나중에, DC2&#39;의 IP 주소에서 X.X.1.2 X.X.1.3 바뀌고 구성원 컴퓨터는 새 IP 주소 x.x.1.2 사용 하 여 도메인에 가입 되어 있습니다. AD 복제 시도 의해 트리거되는 <ui>지금 복제</ui> 추적 아래에 표시 된 것과 같이 Active Directory 사이트 및 서비스 스냅인에서 명령을 1753 오류로 인해 실패 합니다.</para>
       <code>F# SRC    DEST    Operation 
 1 x.x.1.1 x.x.1.2 ARP:Request, x.x.1.1 asks for x.x.1.2
 2 x.x.1.2 x.x.1.1 ARP:Response, x.x.1.2 at 00-13-72-28-C8-5E
@@ -443,22 +443,22 @@ ncacn_ip_udp REG_SZ rpcrt4.dll</code>
 <codeFeaturedElement>11</codeFeaturedElement> x.x.1.2 x.x.1.1 EPM:Response: ept_map: 0x16C9A0D6 - EP_S_NOT_REGISTERED
 </code>
       <para>프레임 <embeddedLabel>10</embeddedLabel>, 대상 DC UUID E351 Active Directory 복제 서비스 클래스에 대 한 포트 135 통해 원본 Dc 종점 매퍼를 쿼리 하는 중... </para>
-      <para>프레임에서 <embeddedLabel>11</embeddedLabel>, 원본 DC,이 경우 DC 역할을 아직 호스트 하지 않습니다는 E351 등록 되지 않았습니다 하는 구성원 컴퓨터 중... 해당 로컬 EPM 사용 하 여 복제 서비스에 대 한 UUID "가 끝점이 더 이상 끝점 매퍼에서 사용할 수 있는" 기호화 된 10 진수 오류 1753, 16 진수 오류 0x6d9 및 친숙 한 오류에 매핑되는 EP_S_NOT_REGISTERED 오류로 응답 합니다.</para>
-      <para>나중에 IP 주소 x.x.1.2 멤버 컴퓨터 "MayberryDC" contoso.com 도메인의 복제본으로 승격을 가져옵니다. 마찬가지로 합니다 <ui>지금 복제</ui> 복제를 트리거하려면 명령을 사용 하지만이 이번와 함께 실패를 화면에 나타나는 오류 "대상 사용자 이름이 잘못 되었습니다." 해당 네트워크 어댑터 IP 할당은 한 컴퓨터 주소 x.x.1.2 <placeholder>는</placeholder> 도메인 컨트롤러를 현재 표준 모드로 부팅 되 고 E351를 등록 하는 중... 복제 서비스 해당 로컬 EPM 것 같지만 UUID DC2의 이름 또는 보안 id를 소유 하지 않는 한 요청이 이제 실패 오류를 사용 하 여 "대상 사용자 이름이 올바르지 않습니다." DC1에서 Kerberos 요청을 암호 해독할 수 없습니다. 오류 10 진수 오류-2146893022 매핑됩니다 오류 0x80090322 hex /입니다. </para>
+      <para>프레임에서 <embeddedLabel>11</embeddedLabel>, 원본 DC,이 경우 DC 역할을 아직 호스트 하지 않습니다는 E351 등록 되지 않았습니다 하는 구성원 컴퓨터 중... UUID 기호화 된 10 진수 오류 1753 년에 매핑되는 EP_S_NOT_REGISTERED 오류로 응답 하는 해당 로컬 EPM 사용 하 여 복제 서비스에 대 한 16 진수 오류 0x6d9 및 친숙 한 오류 &quot;끝점 매퍼에서 사용할 수 있는 끝점이 더 이상 가지&quot; .</para>
+      <para>IP 주소 x.x.1.2 멤버 컴퓨터 복제본으로 승격 될 나중 &quot;MayberryDC&quot; contoso.com 도메인의 합니다. 다시 합니다 <ui>지금 복제</ui> 복제를 트리거하려면 명령을 사용 하지만이 이번와 함께 실패는 화면의 오류 &quot;대상 사용자 이름이 올바르지 않습니다.&quot; 해당 네트워크 어댑터 IP 할당은 한 컴퓨터 주소 x.x.1.2 <placeholder>는</placeholder> 도메인 컨트롤러를 현재 표준 모드로 부팅 되 고 E351를 등록 하는 중... 복제 서비스는 로컬 EPM 것 같지만 UUID DC2의 이름 또는 보안 id를 소유 하지 않는 한 요청은 이제 오류로 실패 DC1에서 Kerberos 요청을 암호 해독할 수 없습니다 &quot;대상 사용자 이름이 올바르지 않습니다.&quot; 오류 10 진수 오류-2146893022 매핑됩니다 오류 0x80090322 hex /입니다. </para>
       <para>이러한 잘못 된 호스트 IP 매핑 호스트에서 부실 항목으로 발생할 수 있습니다 / lmhost 파일인 호스트 A / AAAA DNS 또는 WINS 등록 합니다. </para>
-      <para>요약: 이 예제에서는 (이 경우 호스트 파일)에 잘못 된 호스트 IP 매핑이 해결 하려면 "원본" 서비스가 실행 되 고 (또는 해당 문제에 대 한 설치도) Active Directory Domain Services에는 DC에 따라서 복제 대상 DC 발생 하기 때문에 실패 했습니다. SPN 아직 등록 되지 않았습니다 하 고 원본 DC 1753 오류를 반환 합니다. 후자의 경우 (호스트 파일)에 다시는 잘못 된 호스트 IP 매핑 대상 DC를 E351이 등록 하는 DC에 연결할 발생 하는 중... SPN 복제 하지만 해당 원본에 오류-2146893022 사용 하 여 실패 한 시도 하므로 다른 호스트 이름 및 보안 id를 원하는 원본 DC 보다 있었습니다. 대상 사용자 이름이 올바르지 않습니다.</para>
+      <para>요약: (이 경우 호스트 파일)에 잘못 된 호스트 IP 매핑이 발생 대상 DC를 해결 하려면 없으므로이 예제는 &quot;원본&quot; Active Directory Domain Services 서비스를 실행 하지 않은 (또는 설치 하는 DC 해당 부분의) SPN 아직 등록 되지 않은 복제 하 고 원본 DC 1753 오류를 반환 합니다. 후자의 경우 (호스트 파일)에 다시는 잘못 된 호스트 IP 매핑 대상 DC를 E351이 등록 하는 DC에 연결할 발생 하는 중... SPN 복제 하지만 해당 원본에 오류-2146893022 사용 하 여 실패 한 시도 하므로 다른 호스트 이름 및 보안 id를 원하는 원본 DC 보다 있었습니다. 대상 사용자 이름이 올바르지 않습니다.</para>
     </content>
   </section>
   <relatedTopics>
     <externalLink>
       <linkText>1753 오류로 실패 하는 Active Directory 작업 문제 해결: 끝점 매퍼에서 사용할 수 있는 끝점이 더 이상 있습니다. </linkText> 
-      <linkUri> https://support.microsoft.com/kb/2089874 </linkUri> 
+      <linkUri> <a href="https://support.microsoft.com/kb/2089874" data-raw-source="https://support.microsoft.com/kb/2089874"> https://support.microsoft.com/kb/2089874 </a> </linkUri> 
     </externalLink> 
-<externalLink> <linkText>KB 문서제품CD에서WindowsServer2003지원도구를사용하여839880문제해결RPC끝점매퍼오류</linkText> <linkUri> https://support.microsoft.com/kb/839880 </linkUri> </externalLink> 
-<externalLink> <linkText>KB 문서 832017 서비스 개요 및 네트워크 포트 요구 사항 Windows Server system</linkText> <linkUri> https://support.microsoft.com/kb/832017/ </linkUri> </externalLink> 
-<externalLink> <linkText>KB 문서 224196 제한 Active Directory 복제 트래픽 및 클라이언트 RPC 트래픽을 특정 포트로</linkText> <linkUri> https://support.microsoft.com/kb/224196/ </linkUri> </externalLink> 
-<externalLink> <linkText>기술 자료 문서 154596 방화벽을 사용 하 여 작동 하려면 RPC 동적 포트 할당을 구성 하는 방법</linkText> <linkUri> https://support.microsoft.com/kb/154596 </linkUri> </externalLink> <externalLink> <linkText>RPC의 작동 원리</linkText><linkUri>https://msdn.microsoft.com/library/aa373935(VS.85).aspx</linkUri></externalLink><externalLink><linkText>연결에 대 한 서버 준비 하는 방법을</linkText> <linkUri> https://msdn.microsoft.com/library/aa373938(VS.85).aspx </linkUri> </externalLink> 
-<externalLink> <linkText>클라이언트에서 연결을 설정 하는 방법을</linkText> <linkUri> https://msdn.microsoft.com/library/aa373937(VS.85).aspx </linkUri> </externalLink> <externalLink> <linkText>인터페이스를 등록할</linkText><linkUri>https://msdn.microsoft.com/library/aa375357(VS.85).aspx</linkUri></externalLink><externalLink><linkText>서버 네트워크에서 사용할</linkText><linkUri>https://msdn.microsoft.com/library/aa373974(VS.85).aspx</linkUri></externalLink><externalLink><linkText>끝점 등록</linkText> <linkUri> https://msdn.microsoft.com/library/aa375255(VS.85).aspx </linkUri> </externalLink> <externalLink> <linkText>클라이언트 호출을 수신 대기</linkText> <linkUri> https://msdn.microsoft.com/library/aa373966(VS.85).aspx </linkUri> </externalLink> <externalLink> <linkText>클라이언트에서 연결을 설정 하는 방법</linkText><linkUri>https://msdn.microsoft.com/library/aa373937(VS.85).aspx</linkUri></externalLink><externalLink><linkText>제한 Active Directory 복제 트래픽 및 클라이언트 RPC 트래픽을 특정 포트로</linkText><linkUri>https://support.microsoft.com/kb/224196</linkUri></externalLink><externalLink><linkText>대상 DC에 대 한 SPN AD DS</linkText><linkUri>https://msdn.microsoft.com/library/dd207688(PROT.13).aspx</linkUri></externalLink></relatedTopics>
+<externalLink> <linkText>KB 문서는 Windows Server 2003 지원을 사용 하 여 839880 문제 해결 RPC 끝점 매퍼 오류 제품 CD에서 도구</linkText><linkUri><a href="https://support.microsoft.com/kb/839880" data-raw-source="https://support.microsoft.com/kb/839880">https://support.microsoft.com/kb/839880</a></linkUri></externalLink>
+<externalLink><linkText>KB 문서 832017 서비스 개요 및 네트워크 포트 Windows Server 시스템 요구 사항</linkText><linkUri><a href="https://support.microsoft.com/kb/832017/" data-raw-source="https://support.microsoft.com/kb/832017/">https://support.microsoft.com/kb/832017/</a></linkUri></externalLink>
+<externalLink><linkText>KB 문서 224196 Active 제한 디렉터리 복제 트래픽 및 클라이언트 RPC 트래픽을 특정 포트로</linkText><linkUri><a href="https://support.microsoft.com/kb/224196/" data-raw-source="https://support.microsoft.com/kb/224196/">https://support.microsoft.com/kb/224196/</a></linkUri></externalLink>
+<externalLink><linkText>기술 자료 문서 154596 RPC 동적 포트 할당 방화벽을 사용 하 여 작업을 구성 하는 방법을</linkText><linkUri><a href="https://support.microsoft.com/kb/154596" data-raw-source="https://support.microsoft.com/kb/154596">https://support.microsoft.com/kb/154596</a></linkUri></externalLink><externalLink><linkText>RPC 하는 방법 Works</linkText><linkUri><a href="https://msdn.microsoft.com/library/aa373935(VS.85).aspx" data-raw-source="https://msdn.microsoft.com/library/aa373935(VS.85).aspx">https://msdn.microsoft.com/library/aa373935(VS.85).aspx</a></linkUri></externalLink><externalLink><linkText>연결에 대 한 서버 준비 하는 방법을</linkText> <linkUri> <a href="https://msdn.microsoft.com/library/aa373938(VS.85).aspx" data-raw-source="https://msdn.microsoft.com/library/aa373938(VS.85).aspx"> https://msdn.microsoft.com/library/aa373938(VS.85).aspx </a> </linkUri> </externalLink> 
+<externalLink> <linkText>클라이언트에서 연결을 설정 하는 방법을</linkText> <linkUri> <a href="https://msdn.microsoft.com/library/aa373937(VS.85).aspx" data-raw-source="https://msdn.microsoft.com/library/aa373937(VS.85).aspx"> https://msdn.microsoft.com/library/aa373937(VS.85).aspx </a> </linkUri> </externalLink> <externalLink> <linkText>인터페이스를 등록</linkText> <linkUri> <a href="https://msdn.microsoft.com/library/aa375357(VS.85).aspx" data-raw-source="https://msdn.microsoft.com/library/aa375357(VS.85).aspx"> https://msdn.microsoft.com/library/aa375357(VS.85).aspx </a> </linkUri> </externalLink> <externalLink> <linkText>네트워크에서 서버를 사용할 수 있도록</linkText> <linkUri> <a href="https://msdn.microsoft.com/library/aa373974(VS.85).aspx" data-raw-source="https://msdn.microsoft.com/library/aa373974(VS.85).aspx"> https://msdn.microsoft.com/library/aa373974(VS.85).aspx </a> </linkUri> </externalLink> <externalLink> <linkText>끝점 등록</linkText> <linkUri> <a href="https://msdn.microsoft.com/library/aa375255(VS.85).aspx" data-raw-source="https://msdn.microsoft.com/library/aa375255(VS.85).aspx"> https://msdn.microsoft.com/library/aa375255(VS.85).aspx </a> </linkUri> </externalLink> <externalLink> <linkText>클라이언트 호출을 수신 대기</linkText> <linkUri> <a href="https://msdn.microsoft.com/library/aa373966(VS.85).aspx" data-raw-source="https://msdn.microsoft.com/library/aa373966(VS.85).aspx"> https://msdn.microsoft.com/library/aa373966(VS.85).aspx </a> </linkUri> </externalLink> <externalLink> <linkText>클라이언트 연결을 설정 하는 방법</linkText><linkUri><a href="https://msdn.microsoft.com/library/aa373937(VS.85).aspx" data-raw-source="https://msdn.microsoft.com/library/aa373937(VS.85).aspx">https://msdn.microsoft.com/library/aa373937(VS.85).aspx</a></linkUri></externalLink><span class=" class=""></span class="></linkText><linkUri><a href="https://msdn.microsoft.com/library/dd207688(PROT.13).aspx" data-raw-source="https://msdn.microsoft.com/library/dd207688(PROT.13).aspx">https://msdn.microsoft.com/library/dd207688(PROT.13).aspx</a></linkUri></externalLink></relatedTopics>
 </developerConceptualDocument>
 
 

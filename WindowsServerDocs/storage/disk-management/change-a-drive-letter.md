@@ -8,16 +8,16 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 93da32a204c42b3f4fb503349ff732c9c050db31
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: b972ab05c192dca9a9a0a2bda4f083d2906acadb
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66192632"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812474"
 ---
 # <a name="change-a-drive-letter"></a>드라이브 문자 변경
 
-> **적용 대상:** Windows 10, Windows 8.1, Windows 7, Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> **적용 대상:** Windows 10, Windows 8.1, Windows 7, Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 드라이브에 할당 된 드라이브 문자 마음에 들지 않는 경우 드라이브 문자 아직 없는 드라이브 있다면 변경 하려면 디스크 관리를 사용할 수 있습니다.
 
@@ -32,7 +32,7 @@ ms.locfileid: "66192632"
 
     ![드라이브를 표시 하는 디스크 관리](media/change-drive-letter.png)
     > [!TIP]
-    > 표시 되지 않는 경우는 **드라이브 문자 및 경로 변경** 옵션 또는 회색으로 가능한 볼륨에는 해당 되는 경우 드라이브 할당 되지 해야 하는 경우 드라이브 문자를 받을 준비가 되지 않았습니다. [를초기화합니다](initialize-new-disks.md). 또는 아마도 것은 아닙니다 액세스 하 여 EFI 시스템 파티션과 복구 파티션을의 경우. 액세스할 수 있는 드라이브 문자를 사용 하 여 서식이 지정 된 볼륨이 있는 여전히 변경할 수 없습니다를 확인 하는 경우 안타깝게도이 항목에서는 아마도 도와 드릴 수 없습니다, 것이 좋습니다 [Microsoft에 연락](https://support.microsoft.com/contactus/) 또는 제조업체에 PC에 대 한 자세한 도움말입니다.
+    > 표시 되지 않는 경우는 **드라이브 문자 및 경로 변경** 옵션 또는 회색으로 가능한 볼륨에는 해당 되는 경우 드라이브 할당 되지 해야 하는 경우 드라이브 문자를 받을 준비가 되지 않았습니다. [를초기화합니다.](initialize-new-disks.md). 또는 아마도 것은 아닙니다 액세스 하 여 EFI 시스템 파티션과 복구 파티션을의 경우. 액세스할 수 있는 드라이브 문자를 사용 하 여 서식이 지정 된 볼륨이 있는 여전히 변경할 수 없습니다를 확인 하는 경우 안타깝게도이 항목에서는 아마도 도와 드릴 수 없습니다, 것이 좋습니다 [Microsoft에 연락](https://support.microsoft.com/contactus/) 또는 제조업체에 PC에 대 한 자세한 도움말입니다.
 
 1. 드라이브 문자를 변경 하려면 **변경**합니다. 드라이브 문자로 드라이브 아직 없을 경우 하나를 선택 추가할 **추가**합니다.
 

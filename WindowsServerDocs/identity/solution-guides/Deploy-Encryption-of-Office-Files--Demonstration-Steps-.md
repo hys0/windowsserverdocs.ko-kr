@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: 529000c60a80ee33fc2aa7d09370d8ac1e06311c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8e454a9b1a7375be5cfdbc1e76316ad62ff40067
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59850234"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66445798"
 ---
 # <a name="deploy-encryption-of-office-files-demonstration-steps"></a>Deploy Encryption of Office Files (Demonstration Steps)
 
@@ -37,21 +37,21 @@ Contoso 재무 부서는 여러 문서를 저장 하는 파일 서버에 있습�
   
 #### <a name="to-enable-resource-properties"></a>리소스 속성을 사용하려면  
   
-1.  Hyper-V 관리자에서 ID_AD_DC1 서버에 연결합니다. Contoso\Administrator 암호로 사용 하 여 서버에 로그인 **pass@word1**합니다.  
+1. Hyper-V 관리자에서 ID_AD_DC1 서버에 연결합니다. Contoso\Administrator 암호로 사용 하 여 서버에 로그인 <strong>pass@word1</strong>합니다.  
   
-2.  Active Directory 관리 센터를 열고 **트리 보기**를 클릭합니다.  
+2. Active Directory 관리 센터를 열고 **트리 보기**를 클릭합니다.  
   
-3.  **동적 액세스 제어**를 확장하고 **리소스 속성**을 선택합니다.  
+3. **동적 액세스 제어**를 확장하고 **리소스 속성**을 선택합니다.  
   
-4.  **표시 이름** 열에서 아래의 **영향** 속성으로 스크롤합니다. **영향**을 마우스 오른쪽 단추로 클릭한 다음 **사용**을 클릭합니다.  
+4. **표시 이름** 열에서 아래의 **영향** 속성으로 스크롤합니다. **영향**을 마우스 오른쪽 단추로 클릭한 다음 **사용**을 클릭합니다.  
   
-5.  **표시 이름** 열에서 아래의 **개인 식별이 가능한 정보** 속성으로 스크롤합니다. **개인 식별이 가능한 정보**를 마우스 오른쪽 단추로 클릭한 다음 **사용**을 클릭합니다.  
+5. **표시 이름** 열에서 아래의 **개인 식별이 가능한 정보** 속성으로 스크롤합니다. **개인 식별이 가능한 정보**를 마우스 오른쪽 단추로 클릭한 다음 **사용**을 클릭합니다.  
   
-6.  리소스 속성을 **전역 리소스 목록**에 게시하려면 왼쪽 창에서 **리소스 속성 목록**을 클릭한 다음 **전역 리소스 속성 목록**을 두 번 클릭합니다.  
+6. 리소스 속성을 **전역 리소스 목록**에 게시하려면 왼쪽 창에서 **리소스 속성 목록**을 클릭한 다음 **전역 리소스 속성 목록**을 두 번 클릭합니다.  
   
-7.  **추가**를 클릭하고 아래로 스크롤한 다음 **영향**을 클릭하여 목록에 추가합니다. **개인 식별이 가능한 정보**에 대해서도 동일한 단계를 수행합니다. **확인** 을 두 번 클릭하여 작업을 마칩니다.  
+7. **추가**를 클릭하고 아래로 스크롤한 다음 **영향**을 클릭하여 목록에 추가합니다. **개인 식별이 가능한 정보**에 대해서도 동일한 단계를 수행합니다. **확인** 을 두 번 클릭하여 작업을 마칩니다.  
   
-![솔루션 가이드](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif)Windows PowerShell 해당 명령을 * * *  
+![솔루션 가이드](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -67,21 +67,21 @@ Set-ADResourceProperty -Enabled:$true -Identity:"CN=PII_MS,CN=Resource Propertie
   
 #### <a name="to-create-the-high-impact-classification-rule"></a>높은 영향 분류 규칙을 만들려면  
   
-1.  Hyper-V 관리자에서 ID_AD_FILE1에 연결합니다. Contoso\Administrator 암호로 사용 하 여 서버에 로그인 **pass@word1**합니다.  
+1. Hyper-V 관리자에서 ID_AD_FILE1에 연결합니다. Contoso\Administrator 암호로 사용 하 여 서버에 로그인 <strong>pass@word1</strong>합니다.  
   
-2.  Active Directory에서 전역 리소스 속성을 새로 고쳐야 합니다. Windows PowerShell을 엽니다. `Update-FSRMClassificationPropertyDefinition`을 입력한 다음 Enter 키를 누릅니다. Windows PowerShell을 닫습니다.  
+2. Active Directory에서 전역 리소스 속성을 새로 고쳐야 합니다. Windows PowerShell을 엽니다. `Update-FSRMClassificationPropertyDefinition`을 입력한 다음 Enter 키를 누릅니다. Windows PowerShell을 닫습니다.  
   
-3.  파일 서버 리소스 관리자를 엽니다. 파일 서버 리소스 관리자를 열려면 **시작**을 클릭하고 **파일 서버 리소스 관리자**를 입력한 다음 **파일 서버 리소스 관리자**를 클릭합니다.  
+3. 파일 서버 리소스 관리자를 엽니다. 파일 서버 리소스 관리자를 열려면 **시작**을 클릭하고 **파일 서버 리소스 관리자**를 입력한 다음 **파일 서버 리소스 관리자**를 클릭합니다.  
   
-4.  파일 서버 리소스 관리자의 왼쪽 창에서 **분류 관리**를 확장하고 **분류 규칙**을 선택합니다.  
+4. 파일 서버 리소스 관리자의 왼쪽 창에서 **분류 관리**를 확장하고 **분류 규칙**을 선택합니다.  
   
-5.  **작업** 창에서 **분류 일정 구성**을 클릭합니다. **자동 분류** 탭에서 **고정된 일정 사용**과 **요일**을 차례로 선택한 다음 **새 파일에 대해 분류 계속 허용** 확인란을 선택합니다. **확인**을 클릭합니다.  
+5. **작업** 창에서 **분류 일정 구성**을 클릭합니다. **자동 분류** 탭에서 **고정된 일정 사용**과 **요일**을 차례로 선택한 다음 **새 파일에 대해 분류 계속 허용** 확인란을 선택합니다. **확인**을 클릭합니다.  
   
-6.  **작업** 창에서 **분류 규칙 만들기**를 클릭합니다. 이렇게 하면 **분류 규칙 만들기** 대화 상자가 열립니다.  
+6. **작업** 창에서 **분류 규칙 만들기**를 클릭합니다. 이렇게 하면 **분류 규칙 만들기** 대화 상자가 열립니다.  
   
-7.  **규칙 이름** 상자에 **High Business Impact**를 입력합니다.  
+7. **규칙 이름** 상자에 **High Business Impact**를 입력합니다.  
   
-8.  에 **설명** 상자에 입력 합니다 **문서 "Contoso Confidential" 문자열의 유무에 따라 높은 비즈니스 영향을 인지 여부를 결정**  
+8. 에 **설명** 상자에 입력 합니다 **문서 "Contoso Confidential" 문자열의 유무에 따라 높은 비즈니스 영향을 인지 여부를 결정**  
   
 9. **범위** 탭에서 **폴더 관리 속성 설정**을 클릭하고 **폴더 사용량**을 선택한 다음 **추가**를 클릭합니다. 그런 다음 **찾아보기**를 클릭하고 D:\Finance Documents 경로로 이동하여 **확인**을 클릭한 다음 **그룹 파일** 이라는 속성 값을 선택하고 **닫기**를 클릭합니다. 관리 속성이 설정되면 **규칙 범위** 탭에서 **그룹 파일**을 선택합니다.  
   
@@ -95,7 +95,7 @@ Set-ADResourceProperty -Enabled:$true -Identity:"CN=PII_MS,CN=Resource Propertie
   
 14. **평가 유형** 탭을 클릭합니다.  기존 속성 값 다시 평가, **기존 값 덮어쓰기**, **확인** 을 차례로 클릭하여 작업을 마칩니다.  
   
-![솔루션 가이드](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif)Windows PowerShell 해당 명령을 * * *  
+![솔루션 가이드](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -109,21 +109,21 @@ New-FSRMClassificationRule -Name "High Business Impact" -Property "Impact_MS" -D
   
 #### <a name="to-create-the-high-pii-classification-rule"></a>높은 PII 분류 규칙을 만들려면  
   
-1.  Hyper-V 관리자에서 ID_AD_FILE1에 연결합니다. Contoso\Administrator 암호로 사용 하 여 서버에 로그인 **pass@word1**합니다.  
+1. Hyper-V 관리자에서 ID_AD_FILE1에 연결합니다. Contoso\Administrator 암호로 사용 하 여 서버에 로그인 <strong>pass@word1</strong>합니다.  
   
-2.  바탕 화면에서 **Regular Expressions**라는 폴더를 열고 **RegEx-SSN**이라는 문서를 엽니다. 강조 표시 하 고 다음 정규식 문자열 복사: **^ (?! 000) ([0-7] \d{2}| 7([0-7]\d|7[012 ([-]?) (?! 00) \d\d\3 (?! 0000) \d{4}$** 합니다. 이 문자열은 이 단계의 뒷부분에서 사용되므로 클립보드에 그대로 두어야 합니다.  
+2. 바탕 화면에서 **Regular Expressions**라는 폴더를 열고 **RegEx-SSN**이라는 문서를 엽니다. 강조 표시 하 고 다음 정규식 문자열 복사: **^ (?! 000) ([0-7] \d{2}| 7([0-7]\d|7[012 ([-]?) (?! 00) \d\d\3 (?! 0000) \d{4}$** 합니다. 이 문자열은 이 단계의 뒷부분에서 사용되므로 클립보드에 그대로 두어야 합니다.  
   
-3.  파일 서버 리소스 관리자를 엽니다. 파일 서버 리소스 관리자를 열려면 **시작**을 클릭하고 **파일 서버 리소스 관리자**를 입력한 다음 **파일 서버 리소스 관리자**를 클릭합니다.  
+3. 파일 서버 리소스 관리자를 엽니다. 파일 서버 리소스 관리자를 열려면 **시작**을 클릭하고 **파일 서버 리소스 관리자**를 입력한 다음 **파일 서버 리소스 관리자**를 클릭합니다.  
   
-4.  파일 서버 리소스 관리자의 왼쪽 창에서 **분류 관리**를 확장하고 **분류 규칙**을 선택합니다.  
+4. 파일 서버 리소스 관리자의 왼쪽 창에서 **분류 관리**를 확장하고 **분류 규칙**을 선택합니다.  
   
-5.  **작업** 창에서 **분류 일정 구성**을 클릭합니다. **자동 분류** 탭에서 **고정된 일정 사용**과 **요일**을 차례로 선택한 다음 **새 파일에 대해 분류 계속 허용** 확인란을 선택합니다. 확인을 클릭합니다.  
+5. **작업** 창에서 **분류 일정 구성**을 클릭합니다. **자동 분류** 탭에서 **고정된 일정 사용**과 **요일**을 차례로 선택한 다음 **새 파일에 대해 분류 계속 허용** 확인란을 선택합니다. 확인을 클릭합니다.  
   
-6.  **규칙 이름** 상자에 **High PII**를 입력합니다. **설명** 상자에 **Determines if the document has a high PII based on the presence of a Social Security Number**을 입력합니다.  
+6. **규칙 이름** 상자에 **High PII**를 입력합니다. **설명** 상자에 **Determines if the document has a high PII based on the presence of a Social Security Number**을 입력합니다.  
   
-7.  **범위** 탭을 클릭하고 **그룹 파일** 확인란을 선택합니다.  
+7. **범위** 탭을 클릭하고 **그룹 파일** 확인란을 선택합니다.  
   
-8.  **분류** 탭을 클릭합니다.  파일에 속성 값을 할당할 방법 선택아래의 드롭다운 목록에서 **콘텐츠 분류자** 를 선택합니다.  
+8. **분류** 탭을 클릭합니다.  파일에 속성 값을 할당할 방법 선택아래의 드롭다운 목록에서 **콘텐츠 분류자** 를 선택합니다.  
   
 9. **파일에 할당할 속성 선택** 아래의 드롭다운 목록에서 **개인 식별이 가능한 정보**를 선택합니다.  
   
@@ -137,7 +137,7 @@ New-FSRMClassificationRule -Name "High Business Impact" -Property "Impact_MS" -D
   
 12. **평가 유형** 탭을 클릭합니다.  기존 속성 값 다시 평가, **기존 값 덮어쓰기**를 차례로 선택하고 **확인** 을 클릭하여 작업을 마칩니다.  
   
-![솔루션 가이드](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif)Windows PowerShell 해당 명령을 * * *  
+![솔루션 가이드](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -156,25 +156,25 @@ New-FSRMClassificationRule -Name "High PII" -Description "Determines if the docu
   
 #### <a name="to-protect-documents-with-ad-rms"></a>AD RMS로 문서를 보호하려면  
   
-1.  Hyper-V 관리자에서 ID_AD_FILE1에 연결합니다. Contoso\Administrator 암호로 사용 하 여 서버에 로그인 **pass@word1**합니다.  
+1. Hyper-V 관리자에서 ID_AD_FILE1에 연결합니다. Contoso\Administrator 암호로 사용 하 여 서버에 로그인 <strong>pass@word1</strong>합니다.  
   
-2.  파일 서버 리소스 관리자를 엽니다. 파일 서버 리소스 관리자를 열려면 **시작**을 클릭하고 **파일 서버 리소스 관리자**를 입력한 다음 **파일 서버 리소스 관리자**를 클릭합니다.  
+2. 파일 서버 리소스 관리자를 엽니다. 파일 서버 리소스 관리자를 열려면 **시작**을 클릭하고 **파일 서버 리소스 관리자**를 입력한 다음 **파일 서버 리소스 관리자**를 클릭합니다.  
   
-3.  왼쪽 창에서 **파일 관리 작업**을 선택합니다. **작업** 창에서 **파일 관리 작업 만들기**를 선택합니다.  
+3. 왼쪽 창에서 **파일 관리 작업**을 선택합니다. **작업** 창에서 **파일 관리 작업 만들기**를 선택합니다.  
   
-4.  **작업 이름:** 필드에 **High PII**를 입력합니다. **설명** 필드에 **Automatic RMS protection for high PII documents**를 입력합니다.  
+4. **작업 이름:** 필드에 **High PII**를 입력합니다. **설명** 필드에 **Automatic RMS protection for high PII documents**를 입력합니다.  
   
-5.  **범위** 탭을 클릭하고 **그룹 파일** 확인란을 선택합니다.  
+5. **범위** 탭을 클릭하고 **그룹 파일** 확인란을 선택합니다.  
   
-6.  **동작** 탭을 클릭합니다. 유형에서 **RMS 암호화**를 선택합니다. **찾아보기**를 클릭하여 템플릿을 선택한 다음 **Contoso Finance Admin Only**를 선택합니다.  
+6. **동작** 탭을 클릭합니다. 유형에서 **RMS 암호화**를 선택합니다. **찾아보기**를 클릭하여 템플릿을 선택한 다음 **Contoso Finance Admin Only**를 선택합니다.  
   
-7.  **조건** 탭을 클릭한 다음 **추가**를 클릭합니다. **속성** 아래에서 **개인 식별이 가능한 정보**를 선택합니다. **연산자** 아래에서 **같음**을 선택합니다. **값** 아래에서 **높음**을 선택합니다. **확인**을 클릭합니다.  
+7. **조건** 탭을 클릭한 다음 **추가**를 클릭합니다. **속성** 아래에서 **개인 식별이 가능한 정보**를 선택합니다. **연산자** 아래에서 **같음**을 선택합니다. **값** 아래에서 **높음**을 선택합니다. **확인**을 클릭합니다.  
   
-8.  **일정** 탭을 클릭합니다. 일정 섹션에서 **매주**를 클릭한 다음 **일요일**을 선택합니다. 매주 한 번 작업을 실행하면 서비스 중단 또는 기타 중단 이벤트로 인해 누락되었을 수 있는 문서를 발견할 수 있습니다.  
+8. **일정** 탭을 클릭합니다. 일정 섹션에서 **매주**를 클릭한 다음 **일요일**을 선택합니다. 매주 한 번 작업을 실행하면 서비스 중단 또는 기타 중단 이벤트로 인해 누락되었을 수 있는 문서를 발견할 수 있습니다.  
   
 9. **연속 작업** 섹션에서 **새 파일에서 계속 실행**을 선택하고 **확인**을 클릭합니다. 이제 High PII라는 파일 관리 작업이 만들어졌습니다.  
   
-![솔루션 가이드](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif)Windows PowerShell 해당 명령을 * * *  
+![솔루션 가이드](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -191,21 +191,21 @@ $fmj1=New-FSRMFileManagementJob -Name "High PII" -Description "Automatic RMS pro
   
 #### <a name="to-view-the-results"></a>결과를 보려면  
   
-1.  Hyper-V 관리자에서 ID_AD_FILE1에 연결합니다. Contoso\Administrator 암호로 사용 하 여 서버에 로그인 **pass@word1**합니다.  
+1. Hyper-V 관리자에서 ID_AD_FILE1에 연결합니다. Contoso\Administrator 암호로 사용 하 여 서버에 로그인 <strong>pass@word1</strong>합니다.  
   
-2.  Windows 탐색기에서 D:\Finance Documents로 이동합니다.  
+2. Windows 탐색기에서 D:\Finance Documents로 이동합니다.  
   
-3.  Finance Memo 문서를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭한 다음 **분류** 탭을 클릭하여 현재 영향 속성에 값이 없는지 확인합니다. 클릭 **취소**합니다.  
+3. Finance Memo 문서를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭한 다음 **분류** 탭을 클릭하여 현재 영향 속성에 값이 없는지 확인합니다. 클릭 **취소**합니다.  
   
-4.  **Request for Approval to Hire**문서를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
+4. **Request for Approval to Hire**문서를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
   
-5.  **분류** 탭을 클릭하고 현재 **개인 식별이 가능한 정보** 속성에 값이 없는지 확인합니다. 클릭 **취소**합니다.  
+5. **분류** 탭을 클릭하고 현재 **개인 식별이 가능한 정보** 속성에 값이 없는지 확인합니다. 클릭 **취소**합니다.  
   
-6.  CLIENT1로 전환합니다. 사용자가 로그인 및 다음 암호를 사용 하 여 Contoso\MReid로 로그인 **pass@word1**합니다.  
+6. CLIENT1로 전환합니다. 사용자가 로그인 및 다음 암호를 사용 하 여 Contoso\MReid로 로그인 <strong>pass@word1</strong>합니다.  
   
-7.  바탕 화면에서 **Finance Documents** 공유 폴더를 엽니다.  
+7. 바탕 화면에서 **Finance Documents** 공유 폴더를 엽니다.  
   
-8.  **Finance Memo** 문서를 엽니다. 문서 아래쪽에 **Confidential**이 표시되어 있습니다. 이 문자열을 **Contoso Confidential**로 수정합니다. 문서를 저장하고 닫습니다.  
+8. **Finance Memo** 문서를 엽니다. 문서 아래쪽에 **Confidential**이 표시되어 있습니다. 이 문자열을 **Contoso Confidential**로 수정합니다. 문서를 저장하고 닫습니다.  
   
 9. **Request for Approval to Hire** 문서를 엽니다. **Social Security#:** 섹션에 777-77-7777을 입력합니다. 문서를 저장하고 닫습니다.  
   
