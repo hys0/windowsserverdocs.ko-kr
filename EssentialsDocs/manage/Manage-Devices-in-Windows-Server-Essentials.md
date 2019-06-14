@@ -12,12 +12,12 @@ ms.assetid: f5fe1088-ebe7-4799-a47d-075b0048dea1
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: d740b71a2c3b9ed8ddb0ecfae6da2cf7d4f689a5
-ms.sourcegitcommit: 2977c707a299929c6ab0d1e0adab2e1c644b8306
+ms.openlocfilehash: a66f98b0896e706f520aa057b91cce2fe662d22d
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63720409"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66433326"
 ---
 # <a name="manage-devices-in-windows-server-essentials"></a>Windows Server Essentials에서 장치 관리
 
@@ -64,13 +64,13 @@ ms.locfileid: "63720409"
   
 #### <a name="to-view-the-status-of-network-computers"></a>네트워크 컴퓨터의 상태를 보려면  
   
-1.  Windows Server Essentials 대시보드를 엽니다.  
+1. Windows Server Essentials 대시보드를 엽니다.  
   
-2.  탐색 모음에서 **장치**를 클릭합니다.  
+2. 탐색 모음에서 **장치**를 클릭합니다.  
   
-3.  목록 창에서 네트워크에 있는 모든 컴퓨터의 상태를 확인합니다.  
+3. 목록 창에서 네트워크에 있는 모든 컴퓨터의 상태를 확인합니다.  
   
- 다음 표에서는 Windows Server Essentials 대시보드에서 사용할 수 있는 다양한 컴퓨터 및 백업 작업에 대해 설명합니다. 일부 작업은 컴퓨터 관련 작업이고 목록에서 컴퓨터를 선택할 때만 표시됩니다.  
+   다음 표에서는 Windows Server Essentials 대시보드에서 사용할 수 있는 다양한 컴퓨터 및 백업 작업에 대해 설명합니다. 일부 작업은 컴퓨터 관련 작업이고 목록에서 컴퓨터를 선택할 때만 표시됩니다.  
   
 ### <a name="computer-tasks-in-the-dashboard"></a>대시보드의 컴퓨터 작업  
   

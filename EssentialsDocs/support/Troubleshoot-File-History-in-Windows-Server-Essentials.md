@@ -12,12 +12,12 @@ ms.assetid: ed062945-27e9-4572-b1bb-6c8cf1b9c2f4
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 12a9ba285757a37a8fc32a73e52ac3003db80a6d
-ms.sourcegitcommit: 2977c707a299929c6ab0d1e0adab2e1c644b8306
+ms.openlocfilehash: f080bed5714ae4426cc6d0ca8edb5fab2d3c65b2
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63721020"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66432475"
 ---
 # <a name="troubleshoot-file-history-in-windows-server-essentials"></a>Windows Server Essentials의 파일 히스토리 문제 해결
 
@@ -29,11 +29,11 @@ ms.locfileid: "63721020"
 ### <a name="file-history-data-is-not-automatically-deleted"></a>파일 히스토리 데이터가 자동으로 삭제되지 않음  
  다음과 같은 경우 파일 히스토리 데이터가 자동으로 삭제되지 않을 수 있습니다.  
   
--   사용자 계정을 삭제 하는 경우 사용자 계정은 파일 히스토리 데이터를 삭제 하지 않도록 선택 하 고 데이터를 수동으로 삭제 하도록 선택 합니다.  
+- 사용자 계정을 삭제 하는 경우 사용자 계정은 파일 히스토리 데이터를 삭제 하지 않도록 선택 하 고 데이터를 수동으로 삭제 하도록 선택 합니다.  
   
--   파일 히스토리 데이터를 삭제하려고 할 때 파일 히스토리 데이터가 다른 프로세스에서 사용 중입니다.  
+- 파일 히스토리 데이터를 삭제하려고 할 때 파일 히스토리 데이터가 다른 프로세스에서 사용 중입니다.  
   
- 이 문제를 해결하려면 다음 절차에 따라 파일 히스토리를 수동으로 삭제해야 합니다.  
+  이 문제를 해결하려면 다음 절차에 따라 파일 히스토리를 수동으로 삭제해야 합니다.  
   
 ####  <a name="BKMK_manuallyDelete"></a> 사용자 또는 컴퓨터에 대 한 파일 히스토리 백업을 수동으로 삭제 하려면  
   
@@ -78,7 +78,7 @@ ms.locfileid: "63721020"
 ### <a name="a-user-account-was-removed-but-the-users-file-history-remains"></a>사용자 계정을 제거했는데 사용자의 파일 히스토리가 남아 있음  
  네트워크 관리자가 서버에서 사용자 또는 컴퓨터를 제거하지만 나중에 사용할 수 있도록 파일 히스토리 백업을 유지하기로 선택하는 경우도 있습니다. 파일 히스토리가 더 이상 필요하지 않은 경우 서버의 공유 폴더에서 사용자 또는 컴퓨터에 대한 File History Backups 폴더를 제거합니다. 이렇게 하려면 [To manually delete File History backups for a user or a computer](Troubleshoot-File-History-in-Windows-Server-Essentials.md#BKMK_manuallyDelete)을 참조하세요.  
 
-5.  이제 새 사용자를 추가할 수 있습니다. 자세한 내용은 사용자 계정 추가? [사용자 계정 관리](../manage/Manage-User-Accounts-in-Windows-Server-Essentials.md)합니다.  
+5. 이제 새 사용자를 추가할 수 있습니다. 자세한 내용은 사용자 계정 추가? [사용자 계정 관리](../manage/Manage-User-Accounts-in-Windows-Server-Essentials.md)합니다.  
   
 ### <a name="a-user-account-was-removed-but-the-users-file-history-remains"></a>사용자 계정을 제거했는데 사용자의 파일 히스토리가 남아 있음  
  네트워크 관리자가 서버에서 사용자 또는 컴퓨터를 제거하지만 나중에 사용할 수 있도록 파일 히스토리 백업을 유지하기로 선택하는 경우도 있습니다. 파일 히스토리가 더 이상 필요하지 않은 경우 서버의 공유 폴더에서 사용자 또는 컴퓨터에 대한 File History Backups 폴더를 제거합니다. 이렇게 하려면 [To manually delete File History backups for a user or a computer](../support/Troubleshoot-File-History-in-Windows-Server-Essentials.md#BKMK_manuallyDelete)을 참조하세요.  

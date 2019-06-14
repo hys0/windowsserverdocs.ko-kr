@@ -12,12 +12,12 @@ ms.assetid: d09dd82f-f7d2-47ce-862d-fd9869f2021c
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 413c1d5d3bec7f002b73e9861aa119d495c5cfb2
-ms.sourcegitcommit: 2977c707a299929c6ab0d1e0adab2e1c644b8306
+ms.openlocfilehash: 502e54cf719895dd11030cf163159f6cdda47164
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63717120"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66433734"
 ---
 # <a name="add-windows-server-essentials-as-a-member-server"></a>Windows Server Essentials를 구성원 서버로 추가
 
@@ -49,23 +49,23 @@ ms.locfileid: "63717120"
   
 #### <a name="to-join-windows-server-essentials-to-a-workgroup-or-domain"></a>Windows Server Essentials를 작업 그룹 또는 도메인에 가입시키려면  
   
-1.  두 번째 서버에서 Windows Server Essentials 설치를 완료한 후 Windows Server Essentials 구성 마법사를 닫습니다.  
+1. 두 번째 서버에서 Windows Server Essentials 설치를 완료한 후 Windows Server Essentials 구성 마법사를 닫습니다.  
   
-2.  **검색** 상자에 **System Settings**를 입력한 후 검색 결과에서 **고급 시스템 설정 보기**를 클릭합니다.  
+2. **검색** 상자에 **System Settings**를 입력한 후 검색 결과에서 **고급 시스템 설정 보기**를 클릭합니다.  
   
-3.  **시스템 속성**에서 **컴퓨터 이름** 탭을 클릭합니다.  
+3. **시스템 속성**에서 **컴퓨터 이름** 탭을 클릭합니다.  
   
-4.  **컴퓨터 이름**의 **도메인** 섹션에서 **변경**을 클릭합니다.  
+4. **컴퓨터 이름**의 **도메인** 섹션에서 **변경**을 클릭합니다.  
   
-5.  **컴퓨터 이름/도메인 변경**를 **멤버** 섹션에서 Windows Server Essentials를 실행 하는 서버를 가입 하려는 경우를 **작업 그룹** 또는 **도메인**합니다.  
+5. **컴퓨터 이름/도메인 변경**를 **멤버** 섹션에서 Windows Server Essentials를 실행 하는 서버를 가입 하려는 경우를 **작업 그룹** 또는 **도메인**합니다.  
   
-    -   서버를 작업 그룹에 추가하려면 **workgroup**을 입력한 후 **확인**을 클릭합니다.  
+   -   서버를 작업 그룹에 추가하려면 **workgroup**을 입력한 후 **확인**을 클릭합니다.  
   
-    -   이 서버를 기존 Active Directory 도메인에 가입시키려면 도메인의 이름을 입력한 후 **확인**을 클릭합니다.  
+   -   이 서버를 기존 Active Directory 도메인에 가입시키려면 도메인의 이름을 입력한 후 **확인**을 클릭합니다.  
   
-6.  서버를 다시 시작하여 변경 내용을 적용합니다.  
+6. 서버를 다시 시작하여 변경 내용을 적용합니다.  
   
- 서버를 주 서버의 도메인에 가입 후 서버 관리자에서 Windows Server Essentials 구성 마법사를 실행 하 여 Windows Server Essentials를 구성 하려면 계속할 수 있습니다.  
+   서버를 주 서버의 도메인에 가입 후 서버 관리자에서 Windows Server Essentials 구성 마법사를 실행 하 여 Windows Server Essentials를 구성 하려면 계속할 수 있습니다.  
   
 #### <a name="to-configure-windows-server-essentials-experience-on-a-member-server"></a>구성원 서버에서 Windows Server 필수 패키지 환경을 구성하려면  
   

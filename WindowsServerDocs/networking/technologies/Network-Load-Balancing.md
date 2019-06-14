@@ -9,12 +9,12 @@ ms.assetid: 244a4b48-06e5-4796-8750-a50e4f88ac72
 ms.author: pashort
 author: shortpatti
 ms.date: 09/13/2018
-ms.openlocfilehash: d0cf1e1d6b1681a0f18908b08cd17572159e0462
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 0ea129fe2230332c0099d735f064768bce9fc50c
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59881754"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812282"
 ---
 # <a name="network-load-balancing"></a>네트워크 부하 분산
 
@@ -22,8 +22,8 @@ ms.locfileid: "59881754"
 
 이 항목에서는 제공 네트워크 부하 분산의 개요 \(NLB\) Windows Server 2016의 기능입니다. 단일 가상 클러스터로 두 개 이상의 서버를 관리 하려면 NLB를 사용할 수 있습니다. NLB 가용성과 같은 웹, FTP에 사용 되는 인터넷 서버 애플리케이션의 확장성을 향상 시킵니다, 방화벽, 프록시, 가상 사설망 \(VPN\) 및 기타 업무상\-중요한 서버입니다.  
 
->[!NOTE]
->새 Azure 영감을 얻은 소프트웨어 부하 분산 장치를 포함 하는 Windows Server 2016 \(SLB\) 소프트웨어 정의 네트워킹의 구성 요소로 \(SDN\) 인프라입니다. 사용 하는 대신 NLB SLB SDN을 사용 하는 경우 사용 하는 Windows가 아닌 작업 부하, 아웃 바운드 네트워크 주소 변환 해야 \(NAT\), 계층 3 필요 또는 \(L3\) 또는 비 TCP 기반 부하 분산 합니다. Windows Server 2016 SDN 아닌 배포에 대 한 NLB를 사용 하 여 계속 수 있습니다. SLB에 대 한 자세한 내용은 참조 [소프트웨어 부하 분산 (SLB) SDN에 대 한](../sdn/technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md)합니다.
+> [!NOTE]
+> 새 Azure 영감을 얻은 소프트웨어 부하 분산 장치를 포함 하는 Windows Server 2016 \(SLB\) 소프트웨어 정의 네트워킹의 구성 요소로 \(SDN\) 인프라입니다. 사용 하는 대신 NLB SLB SDN을 사용 하는 경우 사용 하는 Windows가 아닌 작업 부하, 아웃 바운드 네트워크 주소 변환 해야 \(NAT\), 계층 3 필요 또는 \(L3\) 또는 비 TCP 기반 부하 분산 합니다. Windows Server 2016 SDN 아닌 배포에 대 한 NLB를 사용 하 여 계속 수 있습니다. SLB에 대 한 자세한 내용은 참조 [소프트웨어 부하 분산 (SLB) SDN에 대 한](../sdn/technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md)합니다.
 
 네트워크 로드 균형 조정 \(NLB\) 기능 TCP를 사용 하 여 여러 서버 간에 트래픽을 분산\/IP 네트워킹 프로토콜입니다. 단일 가상 클러스터로 응용 프로그램을 실행 하는 두 개 이상의 컴퓨터를 결합 하 여 NLB는 안정성과 성능을 웹 서버와 다른 업무 수행에 대 한\-중요 한 서버입니다.  
   

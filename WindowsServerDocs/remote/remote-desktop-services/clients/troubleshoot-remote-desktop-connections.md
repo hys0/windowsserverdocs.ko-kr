@@ -12,12 +12,12 @@ manager: ''
 ms.author: kaushika; rklemen; josh.bender; v-tea
 ms.date: 02/22/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 4bbdd17f5e6e2b161e0dda0e172ea862a9107841
-ms.sourcegitcommit: 564158d760f902ced7f18e6d63a9daafa2a92bd4
+ms.openlocfilehash: 43e40f8442600dfc66dafd6b8b210274908b4595
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64988333"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446723"
 ---
 # <a name="troubleshooting-remote-desktop-connections"></a>원격 데스크톱 연결 문제 해결
 원격 데스크톱 서비스 (RDS) 문제의 가장 일반적인 몇 가지 간략 한 설명을 참조 하세요 [원격 데스크톱 클라이언트에 대 한 질문과 대답](https://review.docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-client-faq)합니다. 이 문서에서는 연결 문제를 해결 하려면 몇 가지 고급 방법을 설명 합니다. 이러한 절차의 여러 다른 물리적 컴퓨터 또는 더 복잡 한 구성에 연결 하는 하나의 물리적 컴퓨터와 같은 간단한 구성을 통해 문제를 해결할 지 여부를 적용 합니다. 일부 절차는 보다 복잡 한 다중 사용자 시나리오에만 발생 하는 문제를 해결 합니다. 원격 데스크톱 구성 요소와 함께 작동 하는 방법에 대 한 자세한 내용은 참조 하세요. [원격 데스크톱 서비스 아키텍처](https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/desktop-hosting-logical-architecture)합니다.
@@ -68,7 +68,7 @@ ms.locfileid: "64988333"
 2. 레지스트리 편집기에서 선택 **파일**를 선택한 후 **네트워크 레지스트리 연결**합니다.
 3. 에 **컴퓨터 선택** 대화 상자, 원격 컴퓨터의 이름을 입력 한 다음 선택 **이름 확인**를 선택한 후 **확인**합니다.
 4. 이동할 **HKEY\_로컬\_MACHINE\\SYSTEM\\CurrentControlSet\\컨트롤\\터미널 서버**합니다.  
-   ![레지스트리 편집기를 fDenyTSConnections 항목 표시](..\media\troubleshoot-remote-desktop-connections\RegEntry_fDenyTSConnections.png)
+   ![레지스트리 편집기를 fDenyTSConnections 항목 표시](../media/troubleshoot-remote-desktop-connections/RegEntry_fDenyTSConnections.png)
    - 하는 경우의 값을 **fDenyTSConnections** 키는 **0**, RDP 사용 됩니다
    - 하는 경우의 값을 **fDenyTSConnections** 키는 **1**, RDP를 사용 하지 않도록 설정 하는 다음
 5. RDP를 사용 하려면 값을 변경 **fDenyTSConnections** 에서 **1** 하 **0**합니다.
@@ -85,9 +85,9 @@ gpresult /H c:\gpresult.html
 
 - 이 정책에 대 한 설정이 **사용**, 그룹 정책 RDP 연결을 차단 하지.
 - 이 정책에 대 한 설정이 **사용 안 함**, 체크 **최우선 GPO**합니다. RDP 연결을 차단 하는 GPO입니다.
-![예제 세그먼트를 나타나는 gpresult.html 도메인 수준 GPO * * 블록 RDP * *은 RDP를 비활성화 합니다.](..\media\troubleshoot-remote-desktop-connections\GPResult_RDSH_Connections_GP.png)
+  ![예제 세그먼트를 나타나는 gpresult.html 도메인 수준 GPO * * 블록 RDP * *은 RDP를 비활성화 합니다.](../media/troubleshoot-remote-desktop-connections/GPResult_RDSH_Connections_GP.png)
    
-  ![gpresult.html의 예에서는 세그먼트를 * * 로컬 그룹 정책 * *은 RDP를 비활성화 합니다.](..\media\troubleshoot-remote-desktop-connections\GPResult_RDSH_Connections_LGP.png)
+  ![gpresult.html의 예에서는 세그먼트를 * * 로컬 그룹 정책 * *은 RDP를 비활성화 합니다.](../media/troubleshoot-remote-desktop-connections/GPResult_RDSH_Connections_LGP.png)
 
 #### <a name="check-whether-a-gpo-is-blocking-rdp-on-a-remote-computer"></a>GPO는 원격 컴퓨터에서 RDP를 차단 여부를 확인 합니다.
 
@@ -117,7 +117,7 @@ gpresult /S <computer name> /H c:\gpresult-<computer name>.html
 
 로컬 또는 원격으로 서비스를 관리 하려면 서비스 MMC 스냅인을 사용할 수 있습니다. 로컬 또는 원격으로 PowerShell 사용할 수도 있습니다 (경우 원격 컴퓨터 허용 하도록 구성 된 원격 PowerShell 명령).
 
-![서비스 MMC 스냅인에서 원격 데스크톱 서비스. 기본 서비스 설정을 수정 하지 마십시오.](..\media\troubleshoot-remote-desktop-connections\RDSServiceStatus.png)
+![서비스 MMC 스냅인에서 원격 데스크톱 서비스. 기본 서비스 설정을 수정 하지 마십시오.](../media/troubleshoot-remote-desktop-connections/RDSServiceStatus.png)
 
 어느 쪽 컴퓨터 든, 하나 또는 두 서비스를 실행 하지 않는 경우 해당 시작 합니다.
 
@@ -135,7 +135,7 @@ gpresult /S <computer name> /H c:\gpresult-<computer name>.html
 
 1. PowerShell 창을 엽니다. 원격 컴퓨터에 연결 하려면 입력 **Enter-pssession-ComputerName \<컴퓨터 이름\>** 합니다.
 2. 입력 **qwinsta**합니다. 
-    ![Qwinsta 명령은 컴퓨터의 포트에서 수신 하는 프로세스를 나열 합니다.](..\media\troubleshoot-remote-desktop-connections\WPS_qwinsta.png)
+    ![Qwinsta 명령은 컴퓨터의 포트에서 수신 하는 프로세스를 나열 합니다.](../media/troubleshoot-remote-desktop-connections/WPS_qwinsta.png)
 3. 목록에 포함 된 경우 **: rdp-tcp** 상태의 **수신**, RDP 수신기가 작동 합니다. 진행 [RDP 수신기 포트 확인](#check-the-rdp-listener-port)합니다. 그렇지 않은 경우 4 단계에서 계속 합니다.
 4. 작동 중인 컴퓨터에서 RDP 수신기 구성을 내보냅니다.
     1. 영향을 받는 컴퓨터에 동일한 운영 체제 버전에 있는 컴퓨터에 로그인 하 고 (예를 들어 레지스트리 편집기를 사용)가 해당 컴퓨터의 레지스트리에 액세스 합니다.
@@ -171,7 +171,7 @@ gpresult /S <computer name> /H c:\gpresult-<computer name>.html
 
 1. 여전히 연결할 수 없는 경우에 인증서 MMC 스냅인을 엽니다. 경우 관리를 인증서 저장소를 선택 하 라는 메시지가 표시 **컴퓨터 계정**, 영향을 받는 컴퓨터를 선택 합니다.
 2. 에 **인증서** 아래에 폴더 **원격 데스크톱**, RDP 자체 서명 된 인증서를 삭제 합니다. 
-    ![MMC 인증서 스냅인에서 원격 데스크톱 인증서입니다.](..\media\troubleshoot-remote-desktop-connections\MMCCert_Delete.png)
+    ![MMC 인증서 스냅인에서 원격 데스크톱 인증서입니다.](../media/troubleshoot-remote-desktop-connections/MMCCert_Delete.png)
 3. 영향을 받는 컴퓨터에서 원격 데스크톱 서비스를 다시 시작 합니다.
 4. 인증서 스냅인을 새로 고칩니다.
 5. RDP 자체 서명 된 인증서를 다시 생성 되지 않았으면 [MachineKeys 폴더의 사용 권한을 확인](#check-the-permissions-of-the-machinekeys-folder)합니다.
@@ -197,7 +197,7 @@ gpresult /S <computer name> /H c:\gpresult-<computer name>.html
       - 원격 컴퓨터에 연결 하려면 선택 **파일**를 선택한 후 **네트워크 레지스트리 연결**합니다.
       - 에 **컴퓨터 선택** 대화 상자, 원격 컴퓨터의 이름을 입력 한 다음 선택 **이름 확인**를 선택한 후 **확인**합니다.
 2. 레지스트리를 열고 이동할 **HKEY\_로컬\_MACHINE\\SYSTEM\\CurrentControlSet\\컨트롤\\터미널 서버\\WinStations\\ \<수신기\>** 합니다. 
-    ![PortNumber 하위 키를 RDP 프로토콜에 대 한 합니다.](..\media\troubleshoot-remote-desktop-connections\RegEntry_PortNumber.png)
+    ![PortNumber 하위 키를 RDP 프로토콜에 대 한 합니다.](../media/troubleshoot-remote-desktop-connections/RegEntry_PortNumber.png)
 3. 하는 경우 **PortNumber** 이외의 값이 **3389**을로 변경 **3389**합니다. 
    > [!IMPORTANT]  
     > 다른 포트를 사용 하 여 원격 데스크톱 서비스를 작동할 수 있습니다. 그러나이 수행 하지 않는 것이 좋습니다. 이러한 구성 문제 해결이 문서의 범위를 벗어납니다.
@@ -214,19 +214,19 @@ gpresult /S <computer name> /H c:\gpresult-<computer name>.html
     cmd /c 'netstat -ano | find "3389"'  
     ```
   
-    ![Netstat 명령에는 포트 및 수신 대기 하는 서비스의 목록을 생성 합니다.](..\media\troubleshoot-remote-desktop-connections\WPS_netstat.png)
-1. 상태가 **Listening**인 TCP 포트 3389 또는 할당된 RDP 포트의 항목을 찾습니다. 
+    ![Netstat 명령에는 포트 및 수신 대기 하는 서비스의 목록을 생성 합니다.](../media/troubleshoot-remote-desktop-connections/WPS_netstat.png)
+3. 상태가 **Listening**인 TCP 포트 3389 또는 할당된 RDP 포트의 항목을 찾습니다. 
     > [!NOTE]  
    > 해당 포트를 사용하는 서비스나 프로세스의 PID(프로세스 식별자)가 PID 열 아래에 나타납니다.
-1. 포트 3389 (또는 할당 된 RDP 포트)는 응용 프로그램 사용을 확인 하려면 다음 명령을 입력 합니다.  
+4. 포트 3389 (또는 할당 된 RDP 포트)는 응용 프로그램 사용을 확인 하려면 다음 명령을 입력 합니다.  
    
      ```powershell  
     cmd /c 'tasklist /svc | find "<pid listening on 3389>"'  
     ```  
   
-    ![Tasklist 명령을 특정 프로세스의 세부 정보를 보고합니다.](..\media\troubleshoot-remote-desktop-connections\WPS_tasklist.png)
-1. 포트와 연결 된 PID 번호에 대 한 항목을 찾습니다 (에서 합니다 **netstat** 출력). 서비스 또는 해당 PID와 연결 된 프로세스를 오른쪽에 표시 됩니다.
-1. 응용 프로그램 또는 서비스 원격 데스크톱 서비스 (TermServ.exe) 이외의 포트를 사용 중인 경우에 다음 방법 중 하나를 사용 하 여 충돌을 해결할 수 있습니다.
+    ![Tasklist 명령을 특정 프로세스의 세부 정보를 보고합니다.](../media/troubleshoot-remote-desktop-connections/WPS_tasklist.png)
+5. 포트와 연결 된 PID 번호에 대 한 항목을 찾습니다 (에서 합니다 **netstat** 출력). 서비스 또는 해당 PID와 연결 된 프로세스를 오른쪽에 표시 됩니다.
+6. 응용 프로그램 또는 서비스 원격 데스크톱 서비스 (TermServ.exe) 이외의 포트를 사용 중인 경우에 다음 방법 중 하나를 사용 하 여 충돌을 해결할 수 있습니다.
       - 다른 응용 프로그램 또는 서비스 (권장) 다른 포트를 사용 하도록 구성 합니다.
       - 다른 응용 프로그램 또는 서비스를 제거 합니다.
       - 다른 포트를 사용 하는 RDP를 구성 하 고 (권장 하지 않음) 원격 데스크톱 서비스 서비스를 다시 시작 합니다.
@@ -295,7 +295,7 @@ RD 라이선스 진단 도구 "RDP 프로토콜 X.224 구성 요소에서 프로
 3. 선택 **RD 라이선싱**를 선택한 다음 배포에 대 한 적절 한 라이선스 모드 (**장치별** 또는 **사용자별**).
 4. RD 라이선스 서버의 정규화 된 도메인 이름 (FQDN)을 입력 하 고 선택한 **추가**합니다.
 5. RD 라이선스 서버가 둘 이상인 경우 각 서버에 대해 4 단계를 반복 합니다. 
-    ![RD 라이선스 서버 구성 옵션의 서버 관리자입니다.](..\media\troubleshoot-remote-desktop-connections\RDLicensing_Configure.png)
+    ![RD 라이선스 서버 구성 옵션의 서버 관리자입니다.](../media/troubleshoot-remote-desktop-connections/RDLicensing_Configure.png)
 
 ### <a name="refresh-the-x509-certificate-registry-keys"></a>새로 고침 X509 인증서 레지스트리 키
 
@@ -440,12 +440,12 @@ RODC를 사용 하는 분기 사이트에 RDSH 서버를 포함 하는 배포에
 
 업데이트가 완료 될 때까지이 문제를 해결 하려면 연결의 허용 되는 형식에 대 한 KB 4093492를 확인 합니다. 가능한 대안이 없습니다 경우에 다음 방법 중 하나를 고려해볼 수 있습니다.
 
-  - 영향을 받는 클라이언트 컴퓨터에 대 한 설정 합니다 **암호화 Oracle 재구성** 정책을 다시 **Vulnerable**합니다.
-  - 다음 정책을 수정 합니다 **컴퓨터 구성\\관리 템플릿\\Windows 구성 요소\\Remote Desktop Services\\원격 데스크톱 세션 호스트\\ 보안** 그룹 정책 폴더:  
-      - **원격 (RDP) 연결에 대 한 특정 보안 계층의 사용을 필요로**:로 **Enabled** 선택한 **RDP**합니다.
-      - **네트워크 수준 인증을 사용 하 여 원격 연결에 대 한 사용자 인증을 요구**:로 **비활성**합니다.
-      > [!IMPORTANT]  
-      > 배포의 보안이 약화 하는 이러한 수정 합니다. 만 전혀 사용 하는 경우에 임시 여야 합니다.
+- 영향을 받는 클라이언트 컴퓨터에 대 한 설정 합니다 **암호화 Oracle 재구성** 정책을 다시 **Vulnerable**합니다.
+- 다음 정책을 수정 합니다 **컴퓨터 구성\\관리 템플릿\\Windows 구성 요소\\Remote Desktop Services\\원격 데스크톱 세션 호스트\\ 보안** 그룹 정책 폴더:  
+  - **원격 (RDP) 연결에 대 한 특정 보안 계층의 사용을 필요로**:로 **Enabled** 선택한 **RDP**합니다.
+  - **네트워크 수준 인증을 사용 하 여 원격 연결에 대 한 사용자 인증을 요구**:로 **비활성**합니다.
+    > [!IMPORTANT]  
+    > 배포의 보안이 약화 하는 이러한 수정 합니다. 만 전혀 사용 하는 경우에 임시 여야 합니다.
 
 그룹 정책 사용 하 여 작업에 대 한 자세한 내용은 참조 하세요. [차단 GPO 수정](#modifying-a-blocking-gpo)합니다.
 
@@ -493,7 +493,7 @@ Windows Defender 원격 Credential Guard 사용 하는 경우 두 개 이상의 
 
 이 문제를 해결 하기 위해 RDSH 서버 다시 시작 합니다.
 
-이 문제를 해결 하려면 KB 4093114 적용 [2018 년 4 월 10 일-KB4093114 (월별 롤업)] (file:// /c\\사용자\\v jesits\\AppData\\현지\\Microsoft\\Windows\\INetCache\\Content.Outlook\\FUB8OO45\\%202018 2010 년 4 월 %-KB4093114 %20\(월간 %20Rollup\)), RDSH 서버.
+이 문제를 해결 하려면 KB 4093114 적용 [2018 년 4 월 10 일-KB4093114 (월간 Rollup)](file:///C:/Users/v-jesits/AppData/Local/Microsoft/Windows/INetCache/Content.Outlook/FUB8OO45/April%2010,%202018—KB4093114%20(Monthly%20Rollup))에는 RDSH 서버입니다.
 
 ### <a name="rd-listener-issue"></a>RD 수신기 문제
 

@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 09f3f738d5a7ba7f7c40cb4eb2ce043856b378cc
-ms.sourcegitcommit: 2977c707a299929c6ab0d1e0adab2e1c644b8306
+ms.openlocfilehash: ba411cf73026afe9990e5c32824e3dc277507891
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63718265"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66437235"
 ---
 # <a name="msdt"></a>msdt
 
@@ -36,10 +36,12 @@ msdt </id <name> | /path <name> | /cab < name>> <</parameter> [options] … <par
 
 다음 표에서 매개 변수 및 msdt.exe에서 지 원하는 옵션을 포함 합니다.
 
-|매개 변수|설명|
-|---------|-----------|
-|/id \<패키지 이름 >|실행 하는 진단 패키지를 지정 합니다. 사용 가능한 패키지 목록을 문제 해결 팩 ID를 "문제 해결 팩 사용 가능을 참조 하세요? 이 항목 뒷부분의 섹션입니다.|
-|/path \<directory | .diagpkg 파일 | .diagcfg file>|진단 패키지의 전체 경로 지정합니다. 디렉터리를 지정 하는 경우 진단 패키지 디렉터리에 포함 해야 합니다. 와 함께에서 /path 매개 변수를 사용할 수 없습니다는 */id*를 */dci*, 또는 *cab/* 매개 변수입니다.|
-|/dci \<passkey>|Msdt 암호 필드를 미리 채우면 됩니다. 이 매개 변수 지원 공급자가 암호를 제공 하는 경우에 사용 됩니다.|
-|/dt \<directory>|지정된 된 디렉터리에서 문제 해결 기록이 표시 됩니다. 사용자에 저장 된 진단 결과 **%LOCALAPPDATA%\Diagnostics** 하거나 **%LOCALAPPDATA%\ElevatedDiagnostics** 디렉터리입니다.|
-|/af \<answer file>|하나 이상의 진단 상호 작용에 대 한 응답을 포함 하는 XML 형식으로 응답 파일을 지정 합니다.|
+
+|      매개 변수      |                                                                                            설명                                                                                             |
+|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| /id \<패키지 이름 > |        실행 하는 진단 패키지를 지정 합니다. 사용 가능한 패키지 목록을 문제 해결 팩 ID를 "문제 해결 팩 사용 가능을 참조 하세요? 이 항목 뒷부분의 섹션입니다.         |
+|  /path \<directory  |                                                                                           .diagpkg 파일                                                                                            |
+|   /dci \<passkey>   |                                        Msdt 암호 필드를 미리 채우면 됩니다. 이 매개 변수 지원 공급자가 암호를 제공 하는 경우에 사용 됩니다.                                         |
+|  /dt \<directory>   | 지정된 된 디렉터리에서 문제 해결 기록이 표시 됩니다. 사용자에 저장 된 진단 결과 **%LOCALAPPDATA%\Diagnostics** 하거나 **%LOCALAPPDATA%\ElevatedDiagnostics** 디렉터리입니다. |
+| /af \<answer file>  |                                               하나 이상의 진단 상호 작용에 대 한 응답을 포함 하는 XML 형식으로 응답 파일을 지정 합니다.                                               |
+
