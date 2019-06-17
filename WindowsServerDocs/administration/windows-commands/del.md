@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a1c2756e53d9f047160ddd037b3868e47d6e3181
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: b10da1a6035155d525a516f35f83a25209e90075
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59822994"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66433893"
 ---
 # <a name="del"></a>del
 
@@ -51,29 +51,29 @@ erase [/p] [/f] [/s] [/q] [/a[:]<Attributes>] <Names>
 
 > [!CAUTION]
 > 사용 하는 경우 **del** 디스크에서 파일을 삭제 하려면 사용자는 복구할 수 없습니다.
--   사용 하는 경우 **/p**하십시오 **del** 파일의 이름을 표시 하 고 다음 메시지를 전송 합니다.
+> -   사용 하는 경우 **/p**하십시오 **del** 파일의 이름을 표시 하 고 다음 메시지를 전송 합니다.
 
     `FileName, Delete (Y/N)?`
 
-    삭제를 확인 하려면 Y를 누릅니다. 취소 하려면 다음 파일 이름 지정 (즉, 지정한 경우 파일 그룹), 삭제 및 표시를 누릅니다 명사. 중지 하는 **del** 명령, CTRL + C를 누릅니다.
--   명령 확장을 사용 하지 않도록 설정 하는 경우 **/s** 삭제 되는 파일의 이름을 표시 하는 대신 발견 되지 않은 모든 파일의 이름이 표시 됩니다 (즉, 동작은 역순입니다).
--   폴더를 지정 하는 경우 *이름*, 폴더에 파일을 모두 삭제 됩니다. 예를 들어, 다음 명령을 모든 \Work 폴더의 파일을 삭제합니다.  
-    ```
-    del \work
-    ```  
--   와일드 카드를 사용할 수 있습니다 (**&#42;** 하 고 **?**)를 한 번에 둘 이상의 파일을 삭제 합니다. 그러나 파일을 실수로 삭제를 방지 하려면 사용할지 신중 하 게 된 와일드 카드는 **del** 명령입니다. 예를 들어, 다음 명령을 입력 합니다.  
-    ```
-    del *.*
-    ```  
-    합니다 **del** 명령에 다음과 같은 메시지가 표시 됩니다.
+    To confirm the deletion, press Y. To cancel the deletion and display the next file name (that is, if you specified a group of files), press N. To stop the **del** command, press CTRL+C.
+- 명령 확장을 사용 하지 않도록 설정 하는 경우 **/s** 삭제 되는 파일의 이름을 표시 하는 대신 발견 되지 않은 모든 파일의 이름이 표시 됩니다 (즉, 동작은 역순입니다).
+- 폴더를 지정 하는 경우 *이름*, 폴더에 파일을 모두 삭제 됩니다. 예를 들어, 다음 명령을 모든 \Work 폴더의 파일을 삭제합니다.  
+  ```
+  del \work
+  ```  
+- 와일드 카드를 사용할 수 있습니다 ( **&#42;** 하 고 **?** )를 한 번에 둘 이상의 파일을 삭제 합니다. 그러나 파일을 실수로 삭제를 방지 하려면 사용할지 신중 하 게 된 와일드 카드는 **del** 명령입니다. 예를 들어, 다음 명령을 입력 합니다.  
+  ```
+  del *.*
+  ```  
+  합니다 **del** 명령에 다음과 같은 메시지가 표시 됩니다.
 
-    `Are you sure (Y/N)?`
+  `Are you sure (Y/N)?`
 
-    모든 현재 디렉터리에 파일을 삭제 하려면 Y를 누릅니다 하 고 ENTER를 누릅니다. 삭제를 취소 하려면 N 키를 눌러 다음 ENTER 키를 누릅니다.
+  모든 현재 디렉터리에 파일을 삭제 하려면 Y를 누릅니다 하 고 ENTER를 누릅니다. 삭제를 취소 하려면 N 키를 눌러 다음 ENTER 키를 누릅니다.
 
 > [!NOTE]
 > 와일드 카드 문자를 사용 하기 전에 **del** 명령와 같은 와일드 카드 문자를 사용 하 여는 **dir** 명령을 삭제 하 여 모든 파일을 나열 합니다.
--   **del** 다른 매개 변수와 함께 명령을 복구 콘솔에서 사용할 수 있습니다.
+> -   **del** 다른 매개 변수와 함께 명령을 복구 콘솔에서 사용할 수 있습니다.
 
 ## <a name="BKMK_examples"></a>예제
 
@@ -84,7 +84,7 @@ del c:\test\*.*
 ```
 현재 디렉터리에서.bat 파일 이름 확장명을 사용 하 여 모든 파일을 삭제 하려면 다음을 입력 합니다.
 ```
-del *.bak
+del *.bat
 ```
 현재 디렉터리의 모든 읽기 전용 파일을 삭제 하려면 다음을 입력 합니다.
 ```

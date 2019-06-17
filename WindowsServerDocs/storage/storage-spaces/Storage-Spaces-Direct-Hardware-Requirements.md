@@ -7,14 +7,14 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
-ms.date: 06/04/2019
+ms.date: 06/13/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: f2031afada302c0f73621a75f572c8547620db16
-ms.sourcegitcommit: cd12ace92e7251daaa4e9fabf1d8418632879d38
+ms.openlocfilehash: f6b93b55d8685180de8eafff5e8a3d5ca33e5fb5
+ms.sourcegitcommit: 3fe551f99c58ac232a9df72aaca55187118eac3b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66501655"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67132930"
 ---
 # <a name="storage-spaces-direct-hardware-requirements"></a>저장소 공간 다이렉트 하드웨어 요구 사항
 
@@ -23,8 +23,6 @@ ms.locfileid: "66501655"
 이 항목에서는 저장소 공간 다이렉트에 대 한 최소 하드웨어 요구 사항을 설명 합니다.
 
 프로덕션 환경에서는 파트너에서 유효성이 검사 된 하드웨어/소프트웨어 솔루션을 구매 권장 배포 도구 및 절차 포함는 합니다. 이러한 솔루션 설계, 조립 및 호환성 및 안정성 얻게 되므로 신속 하 게 실행 하기 위한이 참조 아키텍처에 대해 유효성이 검사 됩니다. Windows Server 2019 솔루션에 대 한 참조를 [Azure Stack HCI solutions 웹 사이트](https://azure.microsoft.com/overview/azure-stack/hci)합니다. Windows Server 2016 솔루션에 대 한 자세한 내용은 [Windows Server 소프트웨어 정의](https://microsoft.com/wssd)합니다.
-
-![Windows Server 소프트웨어 정의 파트너 로고](media/hardware-requirements/wssd-partners.png)
 
    > [!TIP]
    > 저장소 공간 다이렉트를 평가 하 고 싶지만 하드웨어 없습니다? 에 설명 된 대로 Hyper-v 또는 Azure virtual machines를 사용 하 여 [를 사용 하 여 저장소 공간 다이렉트 게스트 가상 컴퓨터 클러스터에서](storage-spaces-direct-in-vm.md)합니다.
