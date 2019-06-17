@@ -11,19 +11,18 @@
 ## 계획
 ### [나에게 적합한 설치 유형은 무엇인가요?](plan/installation-options.md)
 ### [사용자 액세스 옵션](plan/user-access-options.md)
-### [Azure 통합 옵션](plan/azure-integration-options.md)
 
 ## 배포
 ### [환경 준비](deploy/prepare-environment.md)
 ### [Windows Admin Center 설치](deploy/install.md)
 ### [고가용성](deploy/high-availability.md)
 
+
 ## 구성
 ### [Windows Admin Center 설정](configure/settings.md)
 ### [사용자 액세스 제어 및 사용 권한](configure/user-access-control.md)
 ### [확장 사용](configure/using-extensions.md)
-### [Azure 통합 구성](configure/azure-integration.md)
-### [Windows Admin Center를 사용하여 Azure VM 관리](configure/manage-azure-vms.md)
+### [공유 연결](configure/shared-connections.md)
 
 ## Windows Server Update Services와 함께
 ### [시작](use/get-started.md)
@@ -31,12 +30,25 @@
 ### [하이퍼 컨버지드 인프라 관리](use/manage-hyper-converged.md)
 ### [장애 조치(failover) 클러스터 관리](use/manage-failover-clusters.md)
 ### [Hyper-V 가상 머신 관리](use/manage-virtual-machines.md)
-### [Azure 서비스 구성](use/azure-services.md)
-#### [Azure Site Recovery로 Hyper-V VM 보호](use/azure-site-recovery.md)
-#### [Azure 업데이트 관리로 서버 업데이트](use/azure-update-management.md)
 ### [로깅](use/logging.md)
-### [일반적인 문제 해결 단계](use/troubleshooting.md)
-### [알려진 문제](use/known-issues.md)
+
+
+## Azure 연결
+### [Azure 하이브리드 서비스](azure/index.md)
+#### [Azure Backup](azure/azure-backup.md)
+#### [Azure Site Recovery](azure/azure-site-recovery.md)
+#### [Azure 파일 동기화](azure/azure-file-sync.md)
+#### [Azure Monitor](azure/azure-monitor.md)
+#### [Azure 업데이트 관리](azure/azure-update-management.md)
+### [Azure에 Windows Admin Center 연결](azure/azure-integration.md)
+### [Azure에서 Windows Admin Center 배포](azure/deploy-wac-in-azure.md)
+### [Windows Admin Center를 사용하여 Azure VM 관리](azure/manage-azure-vms.md)
+
+## 지원
+### [지원 정책](support/index.md)
+### [일반적인 문제 해결 단계](support/troubleshooting.md)
+### [알려진 문제](support/known-issues.md)
+
 
 ## 확장
 ### [확장 개요](extend/extensibility-overview.md)
@@ -59,10 +71,14 @@
 #### [확장에 PowerShell 사용](extend/guides/powershell.md)
 #### [CSS 아이콘 가이드](extend/guides/cssicons.md)
 #### [최신 SDK로 마이그레이션](extend/guides/migration-guide-0_1-1_0.md)
+#### [확장 검색 배너 사용](extend/guides/extension-discovery-banner.md)
 ### [확장 게시](extend/publish-extensions.md)
 ### 사례 연구
 #### [DataON](extend/case-studies/dataon.md)
 #### [Fujitsu](extend/case-studies/fujitsu.md)
 #### [Lenovo](extend/case-studies/lenovo.md)
+#### [NEC](extend/case-studies/nec.md)
 #### [Pure Storage](extend/case-studies/purestorage.md)
 #### [Squared Up](extend/case-studies/squared-up.md)
+
+

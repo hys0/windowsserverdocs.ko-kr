@@ -84,6 +84,7 @@
 ### [도메인 가입 디바이스 공개 키 인증](kerberos/domain-joined-device-public-key-authentication.md)
 ### [Kerberos 제한 위임](kerberos/kerberos-constrained-delegation-overview.md)
 ### [Kerberos가 RC4 비밀 키를 사용하는 암호를 변경하지 못하도록 설정](kerberos/preventing-kerberos-change-password-that-uses-rc4-secret-keys.md)
+### [IP 주소에 대한 Kerberos 구성](kerberos/configuring-kerberos-over-ip.md)
 ## [NTLM](kerberos/ntlm-overview.md)
 ## [암호](kerberos/passwords-overview.md)
 ## [TLS - SSL(Schannel SSP)](tls/tls-ssl-schannel-ssp-overview.md)

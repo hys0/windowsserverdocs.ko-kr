@@ -3,4 +3,7 @@
 ## [스토리지 공간 다이렉트](../storage/storage-spaces/storage-spaces-direct-overview.md)
 ## [장애 조치(failover) 클러스터링](../failover-clustering/failover-clustering-overview.md)
 ## [소프트웨어 정의 네트워킹](https://docs.microsoft.com/windows-server/networking/sdn/)
+## [Windows Admin Center](../manage/windows-admin-center/overview.md)
+## [Azure 연결](../azure-hybrid-services/index.md)
+## [Azure Stack HCI](https://docs.microsoft.com/azure-stack/operator/azure-stack-hci-overview)
 ## [WSSD(Windows Server 소프트웨어 정의)](https://www.microsoft.com/en-us/cloud-platform/software-defined-datacenter)

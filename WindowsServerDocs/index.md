@@ -1,17 +1,17 @@
 ---
 layout: HubPage
 hide_bc: true
-author: coreyp
+author: jasongerend
 ms.author: apexprodleads
 ms.topic: hub-page
 title: Windows Server 설명서
 description: Windows Server 설명서는 IT 전문가들이 Windows Server를 평가, 계획, 배포, 보호 및 관리하는 방법을 설명합니다.
-ms.openlocfilehash: 29ea8c17f41edbbaab275a61b6f96c0b348f9760
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 65e514d25e3e94841f7f1db0be2590b57a6b6455
+ms.sourcegitcommit: 9dc457ac1d64962e67aaf1d3924bc9361df8488d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59891444"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462163"
 ---
 <div id="main" class="v2">
 <div class="container">
@@ -20,34 +20,33 @@ ms.locfileid: "59891444"
 <p> </p>
 
 <ul class="pivots">
-<li>
-<a href="#main"></a>
-
-   <ul id="main">
     <li>
-    <a href="#mainPanel"></a>
-        <ul id="mainPanel" class="cardsF">
+    <a href="#main"></a>
+        <ul id="main">
             <li>
-                <a href="get-started-19/whats-new-19.md">
-                    <div class="cardSize">
-                        <div class="cardPadding">
-                            <div class="card">
-                                <div class="cardImageOuter">
-                                    <div class="cardImage">
-                                        <img src="media/i-whats-new.svg" alt="" />
+                <a href="#mainPanel"></a>
+                <ul id="mainPanel" class="cardsF">
+                    <li>
+                        <a href="get-started-19/whats-new-19.md">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/i-whats-new.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h2>새로운 기능</h2>
+                                            <p>Windows Server의 새로운 기능을 알아보세요.</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="cardText">
-                                    <h2>새로운 기능은 무엇입니까?</h2>
-                                    <p>Windows Server의 새로운 기능을 알아보세요.</p>
-                                </div>
                             </div>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="get-started-19/get-started-19.md">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="get-started-19/get-started-19.md">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -57,15 +56,15 @@ ms.locfileid: "59891444"
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h2>Windows Server 2019<br>시작</h2>
+                                            <h2>Windows Server 2016<br>시작</h2>
                                             <p>여기서 Windows Server 2019를 시작하세요.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             </a>
-            </li>
-            <li>
+                    </li>
+                    <li>
                             <a href="http://aka.ms/upgradecenter">
                             <div class="cardSize">
                                 <div class="cardPadding">
@@ -83,12 +82,12 @@ ms.locfileid: "59891444"
                                 </div>
                             </div>
                             </a>
-            </li>
-            <li class="fullSpan">
-            <HR WIDTH="60%">
-            </li>
-            <li>
-                            <a href="https://docs.microsoft.com/windows-server/manage/windows-admin-center/overview">
+                    </li>
+                    <li class="fullSpan">
+                        <HR WIDTH="60%">
+                    </li>
+                    <li>
+                         <a href="https://docs.microsoft.com/windows-server/manage/windows-admin-center/overview">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -107,7 +106,7 @@ ms.locfileid: "59891444"
                             </a>
             </li>
             <li>
-                            <a href="https://docs.microsoft.com/windows-server/hyperconverged">
+                            <a href="hyperconverged/index.yml">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -126,19 +125,19 @@ ms.locfileid: "59891444"
                             </a>
             </li>
             <li>
-                            <a href="https://docs.microsoft.com/windows-insider/at-work">
+                            <a href="azure-hybrid-services/index.md">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
                                         <div class="cardImageOuter">
                                             <div class="cardImage">
-                                                <img src="media/i-insider.svg" alt="" />
+                                                <img src="media/i-microsoft-azure.svg" alt="" />
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h2>서버용 Windows 참가자 프로그램</h2>
-                                            <p>Windows Server 2019용 미리 보기 빌드 테스트</p>
-            <li>
+                                            <h2>Azure 하이브리드 서비스에 연결</h2>
+                                            <p>서버 또는 클러스터를 Azure 하이브리드 서비스에 연결하여 온-프레미스와 클라우드의 가장 유용한 기능을 결합하세요.</p>
+            </li>
                     <li class="fullSpan">
                     <HR COLOR="purple" SIZE="6" WIDTH="60%">
                     </li>
@@ -180,12 +179,25 @@ ms.locfileid: "59891444"
                             </div>
                             </a>
             </li>
+            <li>
+                            <a href="https://docs.microsoft.com/windows-insider/at-work">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/i-insider.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h2>서버용 Windows 참가자 프로그램</h2>
+                                            <p>Windows Server 2019용 미리 보기 빌드 테스트</p>
+            </li>
         </ul>
     </li>
     </ul>
     </li>
 </ul>
-
 <h1>Windows Server 2019 및 Windows Server 2016에 대한 지침</h1>
     <h3>Windows Server 설명서는 IT 전문가들이 Windows Server를 평가, 계획, 배포, 보호 및 관리하는 방법을 설명합니다.</h3>
     <ul class="pivots">
@@ -212,8 +224,7 @@ ms.locfileid: "59891444"
         <td style="vertical-align: top;">
             <h4><u>최고 등급</u></h4>
             <ol>
-            <li>1. <a href="https://docs.microsoft.com/windows-server/identity/software-restriction-policies/software-restriction-policies">소프트웨어 제한 정책</a></li>              
-       <hr width="80%">
+            <li>1. <a href="https://docs.microsoft.com/windows-server/identity/software-restriction-policies/software-restriction-policies">소프트웨어 제한 정책</a></li><br/>       <hr width="80%">
             <li>2. <a href="https://docs.microsoft.com/windows-server/identity/solution-guides/deploy-a-central-access-policy--demonstration-steps-">중앙 액세스 정책 배포(시연 단계)</a></li>
        <hr width="80%">
             <li>3. <a href="https://docs.microsoft.com/windows-server/identity/solution-guides/scenario--file-access-auditing">시나리오: 파일 액세스 감사</a></li>
@@ -256,13 +267,9 @@ ms.locfileid: "59891444"
             <h4><u>최고 등급</u></h4>
             <ol>
             <li>1. <a href="https://docs.microsoft.com/windows-server/networking/what-s-new-in-networking">클러스터 인식 업데이트의 요구 사항 및 모범 사례</a></li>
-              
        <hr width="80%">
-
             <li>2. <a href="https://docs.microsoft.com/windows-server/failover-clustering/vm-load-balancing-overview">가상 머신 부하 분산 개요</a></li>
-                 
        <hr width="80%">
-
             <li>3. <a href="https://docs.microsoft.com/windows-server/failover-clustering/troubleshooting-using-wer-reports">Windows 오류 보고를 사용하여 장애 조치(failover) 클러스터 문제 해결</a></li>
             </ol>
         </td>
@@ -270,13 +277,9 @@ ms.locfileid: "59891444"
             <h4><u>최고 조회수</u></h4>
             <ol>
             <li>1. <a href="https://docs.microsoft.com/windows-server/failover-clustering/manage-cluster-quorum">쿼럼 구성 및 관리</a></li>
-                   
        <hr width="80%">
-
             <li>2. <a href="https://docs.microsoft.com/windows-server/failover-clustering/failover-cluster-csvs">장애 조치(failover) 클러스터의 클러스터 공유 볼륨 사용</a></li>
-                 
        <hr width="80%">
-
             <li>3. <a href="https://docs.microsoft.com/windows-server/failover-clustering/whats-new-in-failover-clustering">장애 조치(Failover) 클러스터링의 새로운 기능</a></li>
             </ol>
         </td>
@@ -307,13 +310,9 @@ ms.locfileid: "59891444"
             <h4><u>최고 등급</u></h4>
             <ol>
             <li>1. <a href="https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-radius-clients-configure">RADIUS 클라이언트 구성</a></li>
-              
        <hr width="80%">
-
             <li>2. <a href="https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-np-configure">네트워크 정책 구성</a></li>
-                 
        <hr width="80%">
-
             <li>3. <a href="https://docs.microsoft.com/windows-server/networking/sdn/software-defined-networking">SDN(소프트웨어 정의 네트워킹)</a></li>
             </ol>
         </td>
@@ -321,13 +320,9 @@ ms.locfileid: "59891444"
             <h4><u>최고 조회수</u></h4>
             <ol>
             <li>1. <a href="https://docs.microsoft.com/windows-server/administration/windows-commands/robocopy">robocopy</a></li>
-                   
        <hr width="80%">
-
             <li>2. <a href="https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/windows-admin-center">안녕하세요, Windows Admin Center입니다!</a></li>
-                 
        <hr width="80%">
-
             <li>3. <a href="https://docs.microsoft.com/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus">WSUS(Windows Server Update Services)</a></li>
             </ol>
         </td>
@@ -358,13 +353,9 @@ ms.locfileid: "59891444"
             <h4><u>최고 등급</u></h4>
             <ol>
             <li>1. <a href="https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-radius-clients-configure">RADIUS 클라이언트 구성</a></li>
-              
        <hr width="80%">
-
             <li>2. <a href="https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-np-configure">네트워크 정책 구성</a></li>
-                 
        <hr width="80%">
-
             <li>3. <a href="https://docs.microsoft.com/windows-server/networking/sdn/software-defined-networking">SDN(소프트웨어 정의 네트워킹)</a></li>
             </ol>
         </td>
@@ -372,13 +363,9 @@ ms.locfileid: "59891444"
             <h4><u>최고 조회수</u></h4>
             <ol>
             <li>1. <a href="https://docs.microsoft.com/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings">Windows 시간 서비스 도구 및 설정</a></li>
-                   
        <hr width="80%">
-
             <li>2. <a href="https://docs.microsoft.com/windows-server/networking/technologies/netsh/netsh-contexts">Netsh 명령 구문, 컨텍스트 및 서식 지정</a></li>
-                 
        <hr width="80%">
-
             <li>3. <a href="https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-top">NPS(네트워크 정책 서버)</a></li>
             </ol>
         </td>
@@ -410,13 +397,9 @@ ms.locfileid: "59891444"
             <h4><u>최고 등급</u></h4>
             <ol>
             <li>1. <a href="https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections">6단계. Windows 10 클라이언트 Always On VPN 연결 구성</a></li>
-              
        <hr width="80%">
-
             <li>2. <a href="https://docs.microsoft.com/windows-server/remote/remote-desktop-services/rds-in-azure">ARM 및 Azure Marketplace를 통해 원활하게 RDS 배포</a></li>
-                 
        <hr width="80%">
-
             <li>3. <a href="https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure">2단계. 서버 인프라 구성</a></li>
             </ol>
         </td>
@@ -424,13 +407,9 @@ ms.locfileid: "59891444"
             <h4><u>최고 조회수</u></h4>
             <ol>
             <li>1. <a href="https://docs.microsoft.com/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients">원격 데스크톱 클라이언트</a></li>
-                   
        <hr width="80%">
-
             <li>2. <a href="https://docs.microsoft.com/windows-server/remote/remote-desktop-services/clients/remote-desktop-allow-access">원격 데스크톱 - PC 액세스 허용</a></li>
-                 
        <hr width="80%">
-
             <li>3. <a href="https://docs.microsoft.com/windows-server/remote/remote-desktop-services/clients/remote-desktop-mac">원격 데스크톱 클라이언트</a></li>
             </ol>
         </td>
@@ -461,13 +440,9 @@ ms.locfileid: "59891444"
             <h4><u>최고 등급</u></h4>
             <ol>
             <li>1. <a href="https://docs.microsoft.com/windows-server/security/windows-authentication/windows-authentication-overview">Windows 인증 개요</a></li>
-              
        <hr width="80%">
-
             <li>2. <a href="https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts">그룹 관리 서비스 계정 시작</a></li>
-                 
        <hr width="80%">
-
             <li>3. <a href="https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview">Kerberos 제한 위임 개요</a></li>
             </ol>
         </td>
@@ -475,15 +450,10 @@ ms.locfileid: "59891444"
             <h4><u>최고 조회수</u></h4>
             <ol>
             <li>1. <a href="https://docs.microsoft.com/windows-server/security/tls/tls-registry-settings">TLS(전송 계층 보안) 레지스트리 설정</a></li>
-                   
        <hr width="80%">
-
-            <li>2. <a href="https://docs.microsoft.com/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server">Guidance on disabling system services on Windows Server 2016 with Desktop Experience
-</a></li>
-                 
+            <li>2. <a href="https://docs.microsoft.com/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server">데스크톱 환경을 사용하여 Windows Server 2016에서 시스템 서비스 비활성화에 관한 지침 </a></li>
        <hr width="80%">
-
-            <li>3. <a href="https://docs.microsoft.com/windows-server/security/windows-authentication/credentials-processes-in-windows-authentication">Credentials Processes in Windows Authentication</a></li>
+            <li>3. <a href="https://docs.microsoft.com/windows-server/security/windows-authentication/credentials-processes-in-windows-authentication">Windows 인증의 자격 증명 프로세스</a></li>
             </ol>
         </td>
     </tr>
@@ -513,13 +483,9 @@ ms.locfileid: "59891444"
             <h4><u>최고 등급</u></h4>
             <ol>
             <li>1. <a href="https://docs.microsoft.com/windows-server/storage/storage-replica/storage-replica-overview">스토리지 복제본 개요</a></li>
-              
        <hr width="80%">
-
             <li>2. <a href="https://docs.microsoft.com/windows-server/storage/storage-spaces/understand-quorum">클러스터 및 풀 쿼럼의 이해</a></li>
-                 
        <hr width="80%">
-
             <li>3. <a href="https://docs.microsoft.com/windows-server/storage/data-deduplication/understand">데이터 중복 제거의 이해</a></li>
             </ol>
         </td>
@@ -527,13 +493,9 @@ ms.locfileid: "59891444"
             <h4><u>최고 조회수</u></h4>
             <ol>
             <li>1. <a href="https://docs.microsoft.com/windows-server/storage/disk-management/initialize-new-disks">새 디스크 초기화</a></li>
-                   
        <hr width="80%">
-
             <li>2. <a href="https://docs.microsoft.com/windows-server/storage/disk-management/change-an-mbr-disk-into-a-gpt-disk">MBR 디스크를 GPT 디스크로 변환</a></li>
-                 
        <hr width="80%">
-
             <li>3. <a href="https://docs.microsoft.com/windows-server/storage/disk-management/extend-a-basic-volume">기본 볼륨 확장</a></li>
             </ol>
         </td>
@@ -564,13 +526,9 @@ ms.locfileid: "59891444"
             <h4><u>최고 등급</u></h4>
             <ol>
             <li>1. <a href="https://docs.microsoft.com/windows-server/failover-clustering/troubleshooting-using-wer-reports">Windows 오류 보고를 사용하여 장애 조치(failover) 클러스터 문제 해결</a></li>
-              
        <hr width="80%">
-
             <li>2. <a href="https://docs.microsoft.com/windows-server/networking/sdn/troubleshoot/troubleshoot-windows-server-software-defined-networking-stack">Windows Server 소프트웨어 정의 네트워킹 스택 문제 해결</a></li>
-                 
        <hr width="80%">
-
             <li>3. <a href="https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/troubleshoot-windows-defender-antivirus">이벤트 로그 및 오류 코드를 검토하여 Windows Defender AV 이슈 해결</a></li>
             </ol>
         </td>
@@ -578,13 +536,9 @@ ms.locfileid: "59891444"
             <h4><u>최고 조회수</u></h4>
             <ol>
             <li>1. <a href="https://docs.microsoft.com/windows-server/storage/disk-management/troubleshooting-disk-management">디스크 관리 문제 해결</a></li>
-                   
        <hr width="80%">
-
             <li>2. <a href="https://docs.microsoft.com/windows-server/administration/windows-server-update-services/manage/wsus-messages-and-troubleshooting-tips">WSUS 메시지 및 문제 해결 팁</a></li>
-                 
        <hr width="80%">
-
             <li>3. <a href="https://docs.microsoft.com/windows-server/manage/windows-admin-center/use/troubleshooting">Windows Admin Center 문제 해결</a></li>
             </ol>
         </td>
@@ -615,13 +569,9 @@ ms.locfileid: "59891444"
             <h4><u>최고 등급</u></h4>
             <ol>
             <li>1. <a href="https://docs.microsoft.com/windows-server/virtualization/hyper-v/get-started/create-a-virtual-machine-in-hyper-v">Hyper-V에서 가상 머신 만들기</a></li>
-              
        <hr width="80%">
-
             <li>2. <a href="https://docs.microsoft.com/windows-server/virtualization/hyper-v/supported-debian-virtual-machines-on-hyper-v">Hyper-V에서 지원되는 Debian 가상 머신</a></li>
-                 
        <hr width="80%">
-
             <li>3. <a href="https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms">보호된 패브릭 및 보호된 VM 개요</a></li>
             </ol>
         </td>
@@ -629,13 +579,9 @@ ms.locfileid: "59891444"
             <h4><u>최고 조회수</u></h4>
             <ol>
             <li>1. <a href="https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/remotely-manage-hyper-v-hosts">Hyper-V 관리자를 사용하여 원격으로 Hyper-V 호스트 관리</a></li>
-                   
        <hr width="80%">
-
             <li>2. <a href="https://docs.microsoft.com/windows-server/virtualization/hyper-v/get-started/create-a-virtual-switch-for-hyper-v-virtual-machines">Hyper-V 가상 머신에 사용되는 가상 스위치 만들기</a></li>
-                 
        <hr width="80%">
-
             <li>3. <a href="https://docs.microsoft.com/windows-server/virtualization/hyper-v/learn-more/hyper-v-virtual-machine-connect">Hyper-V 가상 머신 연결</a></li>
             </ol>
         </td>
@@ -652,9 +598,7 @@ ms.locfileid: "59891444"
             </ul>
         </li>
     </ul>
-                  
        <hr />
-
   <h1>Windows Server 이전 버전</h1>
     <h3>이전 버전의 Windows Server를 관리하는 IT 전문가를 위한 기술 콘텐츠<h3>
     <p> </p>
@@ -663,7 +607,6 @@ ms.locfileid: "59891444"
             <a href="#main"></a>
             <ul id="main">
                 <li>
-                    
                     <ul id="mainPanel" class="cardsF">
                         <li>
                             <a href="https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh801901(v=ws.11)">
@@ -676,7 +619,7 @@ ms.locfileid: "59891444"
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3>Windows Server 2012 and<br> Windows Server 2012 R2</h3>
+                                            <h3>Windows Server 2012 및<br> Windows Server 2012 R2</h3>
                                             <p></p>
                                         </div>
                                     </div>

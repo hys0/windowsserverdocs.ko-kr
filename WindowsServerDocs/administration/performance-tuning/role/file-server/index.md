@@ -7,19 +7,18 @@ ms.topic: article
 author: phstee
 ms.author: NedPyle; Danlo; DKruse
 ms.date: 4/14/2017
-ms.openlocfilehash: ed9e9c6e2280aa69408455a111eddb3af7f88750
-ms.sourcegitcommit: d84dc3d037911ad698f5e3e84348b867c5f46ed8
+ms.openlocfilehash: dc8a845a6d352fa03517e2a092c44b6d1c1def4b
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66266692"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66811472"
 ---
 # <a name="performance-tuning-for-file-servers"></a>파일 서버의 성능 조정
 
 평균 부하, 최대 부하, 용량, 확장 계획 및 응답 시간을 고려하여 예상 파일 서버 부하를 충족하는 적절한 하드웨어를 선택해야 합니다. 하드웨어 병목 현상은 소프트웨어 튜닝의 효과를 제한합니다.
 
 ## <a name="general-tuning-parameters-for-clients"></a>클라이언트의 일반 튜닝 매개 변수
-
 
 다음 REG\_DWORD 레지스트리 설정은 SMB 파일 서버와 상호 작용하는 클라이언트 컴퓨터의 성능에 영향을 줄 수 있습니다.
 
@@ -94,9 +93,9 @@ ms.locfileid: "66266692"
 
     기본값은 10초입니다. 디렉터리 캐시 시간 제한입니다.
 
-    > [!Note]   이 매개 변수는 디렉터리 임대가 없을 때 디렉터리 메타데이터의 캐싱을 제어합니다.
-
-     
+    > [!NOTE]
+    > 이 매개 변수는 디렉터리 임대가 없을 때 디렉터리 메타데이터의 캐싱을 제어합니다.
+     
 
 -   **DirectoryCacheEntrySizeMax**
 
@@ -214,7 +213,7 @@ ms.locfileid: "66266692"
 
 클라이언트 컴퓨터의 일반 튜닝 매개 변수는 컴퓨터를 원격 파일 공유 액세스, 특히 대기 시간이 긴 일부 네트워크를 통한 액세스(예: 지사, 데이터 센터 간 통신, 홈 오피스, 모바일 광대역)에 적합하도록 최적화합니다. 이 설정이 모든 컴퓨터에서 최적이거나 적합한 것은 아닙니다. 이 설정을 적용하기 전에 개별 설정이 미치게 될 영향을 먼저 평가해야 합니다.
 
-| 매개 변수                   | Value | Default |
+| 매개 변수                   | 값 | 기본값 |
 |-----------------------------|-------|---------|
 | DisableBandwidthThrottling  | 1     | 0       |
 | FileInfoCacheEntriesMax     | 32768 | 64      |
@@ -222,7 +221,7 @@ ms.locfileid: "66266692"
 | FileNotFoundCacheEntriesMax | 32768 | 128     |
 | MaxCmds                     | 32768 | 15      |
 
- 
+ 
 
 Windows 8부터 **Set-SmbClientConfiguration** 및 **Set-SmbServerConfiguration** Windows PowerShell cmdlet을 사용하여 이러한 여러 SMB 설정을 구성할 수 있습니다. 레지스트리 전용 설정은 Windows PowerShell을 사용하여 구성할 수도 있습니다.
 
