@@ -8,12 +8,12 @@ ms.date: 02/13/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
-ms.openlocfilehash: 856eb7c2c2dfe0e0e3300fcf826e75b56258dc1b
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 879a87d4383d07e37227ecf6fffa5d002a77bbc0
+ms.sourcegitcommit: 214e827934e7b3e8987e9e0ab2cf00047d332c89
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66447652"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67153321"
 ---
 # <a name="use-storage-migration-service-to-migrate-a-server"></a>저장소 마이그레이션 서비스를 사용 하 여 서버 마이그레이션
 
@@ -35,7 +35,7 @@ ms.locfileid: "66447652"
     - WMI(Windows Management Instrumentation)(WMI-In)
 
    > [!NOTE]
-   > 타사 방화벽을 사용 하는 경우 열려는 인바운드 포트 범위는 TCP/445 (SMB), TCP/135 (RPC/DCOM endpoint mapper) 및 TCP 1025-65535 (RPC/DCOM 사용 후 삭제 포트).
+   > 타사 방화벽을 사용 하는 경우 열려는 인바운드 포트 범위는 TCP/445 (SMB), TCP/135 (RPC/DCOM endpoint mapper) 및 TCP 1025-65535 (RPC/DCOM 사용 후 삭제 포트). 저장소 마이그레이션 서비스 포트는 TCP/28940 (오 케 스트레이 터) 및 TCP/28941 (프록시)입니다.
 
 1. Orchestrator 서버를 사용 하 여 마이그레이션을 관리 하 고 이벤트 또는 로그를 전송할 데이터를 다운로드 하려는 경우 해당 서버의 파일 및 프린터 공유 (Smb-in) 방화벽 규칙 활성화 되어 있는지 확인 합니다.
 
