@@ -6,18 +6,18 @@ ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 ms.technology: storage
-ms.date: 09/06/2018
+ms.date: 06/17/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: f85e321381adcf607c3504005a0a3448ab0f098a
-ms.sourcegitcommit: 2977c707a299929c6ab0d1e0adab2e1c644b8306
+ms.openlocfilehash: 2e45fd1eb13044fdf0ba0f66a6e909a3f2d39bc3
+ms.sourcegitcommit: 6fec3ca19ddaecbc936320d98cca0736dd8505d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63738441"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67196163"
 ---
 # <a name="ntfs-overview"></a>NTFS 개요
 
->적용 대상: Windows 10, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+>적용 대상: Windows 10, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 NTFS-Windows 및 Windows Server의 최신 버전에 대 한 기본 파일 시스템, 보안 설명자, 암호화, 디스크 할당량 및 다양 한 메타 데이터를 포함 하는 기능의 전체 집합을 제공 하 고 사용할 수 있는 클러스터 공유 볼륨 (CSV) 지속적으로 제공 장애 조치 클러스터의 여러 노드에서 동시에 액세스할 수 있는 사용 가능한 볼륨입니다.
 
@@ -93,8 +93,11 @@ NTFS는 긴 파일 이름 및 최대 값을 갖는 확장 길이의 경로 지�
 
 ## <a name="additional-information"></a>추가 정보
 
-|콘텐츠 형식|참조|
-|---|---|
-|Evaluation|- [NTFS의 새로운 기능](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn466520(v%3dws.11)) (Windows Server 2012 R2)<br>- [NTFS의 새로운 기능](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff383236(v=ws.10)) (Windows Server 2008 R2, Windows 7)<br>- [NTFS 상태 및 Chkdsk](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831536(v%3dws.11))<br>- [자동 NTFS 복구](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771388(v=ws.10)) (Windows Server 2008에 도입 됨)<br>- [트랜잭션 NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc730726(v%3dws.10)) (Windows Server 2008에 도입 됨)|
-|커뮤니티 리소스|- [Windows Storage 팀 블로그](https://blogs.msdn.microsoft.com/san/)|
-|관련 기술|- [Windows Server에서 저장소](../storage.md)<br>- [장애 조치 클러스터의 사용 하 여 클러스터 공유 볼륨](../../failover-clustering/failover-cluster-csvs.md)<br>- [클러스터 공유 볼륨](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831630(v%3dws.11)#cluster-shared-volumes>) 하 고 [저장소 디자인](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831630(v%3dws.11)#storage-design>) 부분 [클라우드 인프라 디자인](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831630(v%3dws.11)) <br>- [저장소 공간](../storage-spaces/overview.md)<br>- [Resilient File System (ReFS) 개요](../refs/refs-overview.md)
+- [NTFS 및 ReFS에 대 한 클러스터 크기 권장 사항](https://techcommunity.microsoft.com/t5/Storage-at-Microsoft/Cluster-size-recommendations-for-ReFS-and-NTFS/ba-p/425960)
+- [Resilient File System (ReFS) 개요](../refs/refs-overview.md)
+- [NTFS의 새로운 기능](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn466520(v%3dws.11)) (Windows Server 2012 R2)
+- [NTFS의 새로운 기능](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff383236(v=ws.10)) (Windows Server 2008 R2, Windows 7)
+- [NTFS 상태 및 Chkdsk](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831536(v%3dws.11))
+- [자동 NTFS 복구](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771388(v=ws.10)) (Windows Server 2008에 도입 됨)
+- [트랜잭션 NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc730726(v%3dws.10)) (Windows Server 2008에 도입 됨)
+- [Windows Server에서 저장소](../storage.md)

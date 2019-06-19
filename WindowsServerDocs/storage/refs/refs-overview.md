@@ -6,13 +6,13 @@ ms.manager: mchad
 ms.technology: storage-file-systems
 ms.topic: article
 author: gawatu
-ms.date: 06/07/2019
-ms.openlocfilehash: fed23c999c67ba81b3bbb821170a748ed5eaa7b8
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.date: 06/17/2019
+ms.openlocfilehash: 133358e959e24abc506be13259d750753d3727f7
+ms.sourcegitcommit: 6fec3ca19ddaecbc936320d98cca0736dd8505d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66812020"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67196178"
 ---
 # <a name="resilient-file-system-refs-overview"></a>ReFS(복원 파일 시스템) 개요
 
@@ -168,6 +168,7 @@ ReFS를 적합 한 백업 대상으로 배포 응용 프로그램 및 직접 복
 
 ## <a name="see-also"></a>참조
 
--   [저장소 공간 다이렉트 개요](../storage-spaces/storage-spaces-direct-overview.md)
--   [ReFS 블록 복제](block-cloning.md)
--   [ReFS의 무결성 스트림](integrity-streams.md)
+- [NTFS 및 ReFS에 대 한 클러스터 크기 권장 사항](https://techcommunity.microsoft.com/t5/Storage-at-Microsoft/Cluster-size-recommendations-for-ReFS-and-NTFS/ba-p/425960)
+- [저장소 공간 다이렉트 개요](../storage-spaces/storage-spaces-direct-overview.md)
+- [ReFS 블록 복제](block-cloning.md)
+- [ReFS의 무결성 스트림](integrity-streams.md)
