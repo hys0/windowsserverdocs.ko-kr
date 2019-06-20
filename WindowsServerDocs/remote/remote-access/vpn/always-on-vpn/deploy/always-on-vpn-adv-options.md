@@ -10,12 +10,12 @@ ms.author: pashort
 author: shortpatti
 ms.localizationpriority: medium
 ms.reviewer: deverette
-ms.openlocfilehash: 7534f631cf0ac3f8230ea12e790dcd946da0ffbd
-ms.sourcegitcommit: 0948a1abff1c1be506216eeb51ffc6f752a9fe7e
+ms.openlocfilehash: 5f43d64dc7642ef67da03fec989909bc4f2f14ae
+ms.sourcegitcommit: a3c9a7718502de723e8c156288017de465daaf6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66749515"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263029"
 ---
 # <a name="advanced-features-of-always-on-vpn"></a>Always On VPN의 고급 기능
 
@@ -54,6 +54,88 @@ ms.locfileid: "66749515"
 |앱 트리거 VPN     |특정 응용 프로그램 또는 응용 프로그램의 종류를 시작 하는 경우 자동으로 연결 하려면 VPN 프로필을 구성할 수 있습니다.<p>이 및 다른 트리거 옵션에 대 한 자세한 내용은 참조 하세요. [VPN 프로필 자동 트리거 옵션](https://docs.microsoft.com/windows/access-protection/vpn/vpn-auto-trigger-profile)합니다.         |
 |VPN 조건부 액세스   |조건부 액세스 및 장치 규정 준수 표준에 맞도록 VPN에 연결 하기 전에 관리 되는 장치를 요구할 수 있습니다. 조건부 액세스를 위한 고급 기능 중 하나를 통해 클라이언트 인증 인증서는 'AAD 조건부 액세스 ' OID ' 1.3.6.1.4.1.311.87의 '를 포함 하는 위치만 VPN 연결을 제한할 수 있습니다.<p>VPN 연결을 제한 해야 합니다.<ol><li>NPS 서버에서 엽니다는 **네트워크 정책 서버** 스냅인입니다.</li><li>확장 **정책을** > **네트워크 정책을**합니다.</li><li>마우스 오른쪽 단추로 클릭 합니다 **가상 개인 네트워크 (VPN) 연결** 네트워크 정책 및 선택 **속성**합니다.</li><li>선택 된 **설정을** 탭 합니다.</li><li>선택 **공급 업체 특정** 선택한 **추가**합니다.</li><li>선택 된 **허용-인증서-OID** 옵션을 선택 합니다 **추가**합니다.</li><li>AAD 조건부 액세스의 OID를 붙여 넣습니다 **1.3.6.1.4.1.311.87** 한 다음 선택한 특성 값으로 **확인** 두 번입니다.</li><li>선택 **닫습니다** 차례로 **적용**합니다.<p>이제 VPN 클라이언트는 수명이 짧은 클라우드 인증서 이외의 인증서를 사용 하 여 연결할 때 연결이 실패 합니다.</li></ol>조건부 액세스에 대 한 자세한 내용은 참조 하세요. [VPN 및 조건부 액세스](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access)합니다.   |
 
+
+---
+## <a name="blocking-vpn-clients-that-use-revoked-certificates"></a>해지 된 인증서를 사용 하는 VPN 클라이언트를 차단 합니다.
+  
+업데이트를 설치한 후 RRAS 서버 IKEv2를 사용 하는 Vpn에 대 한 인증서 해지를 적용할 수 및 컴퓨터 인증서 인증, 예: 장치에 대 한 Always on Vpn 터널링 합니다. 이 이러한 Vpn에 대 한 RRAS 서버 수 연결을 거부 VPN 클라이언트 해지 된 인증서를 사용 하는 것을 의미 합니다.
+
+**가용성**
+
+다음 표에서 Windows의 각 버전에 대 한 수정 프로그램이 대략적인 출시 날짜를 나열합니다.
+
+|운영 체제 버전 |릴리스 날짜 * |
+|---------|---------|
+|Windows Server 버전 1903  |Q2, 2019  |
+|Windows Server 2019<br />Windows Server 버전 1809  |Q3, 2019  |
+|Windows Server, 버전 1803  |Q3, 2019  |
+|Windows Server, 버전 1709  |Q3, 2019  |
+|Windows Server 2016 버전 1607  |Q2, 2019  |
+  
+\* 모든 릴리스 날짜는 분기에 나열 됩니다. 날짜는 대략적인 되며 예 고 없이 변경 될 수 있습니다.
+
+**필수 구성 요소를 구성 하는 방법** 
+
+1. 사용 가능 해지면 Windows 업데이트를 설치 합니다.
+1. CDP 항목을 모든 VPN 클라이언트 및 사용 하는 RRAS 서버 인증서가 있는 RRAS 서버가 각 Crl를 연결할 수 있는지 확인 합니다.
+1. RRAS 서버를 사용 하 여는 **집합 VpnAuthProtocol** PowerShell cmdlet을 구성 합니다 **RootCertificateNameToAccept** 매개 변수입니다.<br /><br />
+   다음 예제에서는이 작업을 수행 하는 명령을 나열 합니다. 예에서 **CN = Contoso 루트 인증 기관** 루트 인증 기관의 고유 이름을 나타냅니다. 
+   ``` powershell
+   $cert1 = ( Get-ChildItem -Path cert:LocalMachine\root | Where-Object -FilterScript { $_.Subject -Like "*CN=Contoso Root Certification Authority,*" } )
+   Set-VpnAuthProtocol -RootCertificateNameToAccept $cert1 -PassThru
+   ```
+**IKEv2 컴퓨터 인증서를 기반으로 하는 VPN 연결에 대 한 인증서 해지를 적용할 RRAS 서버를 구성 하는 방법**
+
+1. 명령 프롬프트 창에서 다음 명령을 실행 합니다. 
+   ```
+   reg add HKLM\SYSTEM\CurrentControlSet\Services\RemoteAccess\Parameters\Ikev2 /f /v CertAuthFlags /t REG_DWORD /d "4"
+   ```
+
+1. 다시 시작 합니다 **라우팅 및 원격 액세스** 서비스입니다.
+  
+이러한 VPN 연결에 대 한 인증서 해지를 비활성화 하려면 설정 **CertAuthFlags = 2** 하거나 제거 합니다 **CertAuthFlags** 값을 다시는 **라우팅 및 원격 액세스**서비스입니다. 
+
+**IKEv2 컴퓨터 인증서를 기반으로 하는 VPN 연결용 VPN 클라이언트 인증서를 해지 하는 방법**
+1. 인증 기관에서 VPN 클라이언트 인증서를 해지 합니다.
+1. 인증 기관에서 새 CRL을 게시 합니다.
+1. RRAS 서버에서 관리 명령 프롬프트 창을 열고 하 고 다음 명령을 실행 합니다.
+   ```
+   certutil -urlcache * delete
+   certutil -setreg chain\ChainCacheResyncFiletime @now
+   ```
+
+**작동은 IKEv2 컴퓨터 인증서 기반 VPN 연결에 대 한 해당 인증서 해지를 확인 하는 방법**  
+>[!Note]  
+> 이 절차를 사용 하기 전에 CAPI2 operational 이벤트 로그를 사용할 수 있는지 확인 합니다.
+1. VPN 클라이언트 인증서를 해지 하려면 이전 단계를 수행 합니다.
+1. 해지 된 인증서가 있는 클라이언트를 사용 하 여 VPN에 연결 하려고 합니다. RRAS 서버 연결을 거부 하며 "IKE 인증 자격 증명 허용 되지 않습니다."와 같은 메시지를 표시 합니다.
+1. RRAS 서버의 이벤트 뷰어를 열고 이동할 **응용 프로그램 및 서비스 로그/Microsoft/Windows/CAPI2**합니다. 
+1. 다음 정보는 이벤트를 검색 합니다.
+   * 로그 이름: **Microsoft-Windows-CAPI2/Operational Microsoft-Windows-CAPI2/Operational**
+   * 이벤트ID: **41** 
+   * 다음 텍스트를 포함 하는 이벤트: **제목 = "*클라이언트 FQDN*"** (*클라이언트 FQDN* 는 해지 된 클라이언트의 정규화 된 도메인 이름을 나타내는 인증서입니다.) 
+
+   합니다 **<Result>** 이벤트 데이터 필드를 포함 해야 **인증서가 해지**합니다. 예를 들어, 이벤트에서 발췌 한 다음 내용 참조:
+   ```xml
+   Log Name:      Microsoft-Windows-CAPI2/Operational Microsoft-Windows-CAPI2/Operational  
+   Source:        Microsoft-Windows-CAPI2  
+   Date:          5/20/2019 1:33:24 PM  
+   Event ID:      41  
+   ...  
+   Event Xml:
+   <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <UserData>  
+     <CertVerifyRevocation>  
+      <Certificate fileRef="C97AE73E9823E8179903E81107E089497C77A720.cer" subjectName="client01.corp.contoso.com" />  
+      <IssuerCertificate fileRef="34B1AE2BD868FE4F8BFDCA96E47C87C12BC01E3A.cer" subjectName="Contoso Root Certification Authority" />
+      ...
+      <Result value="80092010">The certificate is revoked.</Result>
+     </CertVerifyRevocation>
+    </UserData>
+   </Event>
+   ```
+
+---
 ## <a name="additional-protection"></a>추가 보호
 
 ### <a name="trusted-platform-module-tpm-key-attestation"></a>신뢰할 수 있는 플랫폼 모듈 (TPM) 키 증명

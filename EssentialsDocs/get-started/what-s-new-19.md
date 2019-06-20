@@ -11,12 +11,12 @@ ms.assetid: affff774-5fa6-4944-887a-9bfde05f6a3f
 author: coreyp-at-msft
 ms.author: coreyp
 manager: jasgroce
-ms.openlocfilehash: d6204bc0b6e00980a56356d999f567e2f583027a
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 2692869ac4ff1302a4f36533ba8788148db7b73f
+ms.sourcegitcommit: a3c9a7718502de723e8c156288017de465daaf6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66433775"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263019"
 ---
 # <a name="whats-new-in-windows-server-2019-essentials"></a>Windows Server 2019 Essentials의 새로운 기능
 
@@ -36,12 +36,6 @@ Server Essentials Experience 역할이 사용 중단을 사용 하 여 다음 �
 년 동안 Windows Server 2016 Essentials 릴리스된 이후 작업 하였습니다 하드 대규모 및 소규모 기업 모두에 대 한 다음 솔루션: Microsoft 365. 좋습니다 Microsoft 365 소규모 비즈니스 고객에 대 한 모든 버전의 Windows Server Essentials에 대 한 대체 합니다. Microsoft 365는 파일 공유 및 공동 작업에 대 한 최신 솔루션 및 Office 365, Windows 10 및 Enterprise Mobility + Security를 포함 합니다. 
 
 로 비즈니스를 더욱 발전 [Microsoft 365 Business](https://www.microsoft.com/microsoft-365/business)전자 메일 같은 더 많은 Office 기능을 포함 하는, 및 일정, 파일 저장소에서 클라우드, 데이터 보호 및 더 합니다. Microsoft 365 비즈니스에는 새로운 수준의 생산성을 달성 하 여 small business 데 도움이 됩니다.
-
-## <a name="aad-connect-can-now-be-installed-on-windows-server-2019-essentials"></a>AAD Connect 설치 될 수 있습니다 Windows Server 2019 essentials
-
-<a name="windows-server-2019-essentials-includes-new-support-for-azure-active-directory-via-aad-connecthttpsdocsmicrosoftcomazureactive-directoryconnectactive-directory-aadconnect-prerequisites"></a>Windows Server 2019 Essentials 포함을 통해 Azure Active Directory에 대 한 새 지원을 [AAD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-prerequisites)합니다. 
-=======
-로 비즈니스를 더욱 발전 [Microsoft 365 Business](https://www.microsoft.com/en-us/microsoft-365/business)전자 메일 같은 더 많은 Office 기능을 포함 하는, 및 일정, 파일 저장소에서 클라우드, 데이터 보호 및 더 합니다. Microsoft 365 비즈니스에는 새로운 수준의 생산성을 달성 하 여 small business 데 도움이 됩니다.
 
 ## <a name="aad-connect-can-now-be-installed-on-windows-server-2019-essentials"></a>AAD Connect 설치 될 수 있습니다 Windows Server 2019 essentials
 

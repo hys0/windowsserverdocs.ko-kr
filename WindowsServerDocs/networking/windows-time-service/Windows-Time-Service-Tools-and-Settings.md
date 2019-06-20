@@ -9,12 +9,12 @@ ms.date: 10/16/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: networking
-ms.openlocfilehash: 6722d537c85ce913080224f229f2889e47f41274
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.openlocfilehash: 721816c650adc21109cbfd065f29b694fb6c830f
+ms.sourcegitcommit: a3c9a7718502de723e8c156288017de465daaf6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66812348"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263035"
 ---
 # <a name="windows-time-service-tools-and-settings"></a>Windows 시간 서비스 도구 및 설정
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10 이상
@@ -199,25 +199,30 @@ W32Time 로깅을 사용 하도록 설정 하려면 다음 레지스트리 항�
 #### <a name="maxallowedphaseoffset-information"></a>MaxAllowedPhaseOffset 정보
 컴퓨터 시계를 점진적으로 설정 하는 W32Time에서 오프셋 되어야 합니다 보다 작은 **MaxAllowedPhaseOffset** 값 및 동시에 다음 수식을 충족 합니다.  
 
-```  
-|CurrentTimeOffset| / (PhaseCorrectRate*UpdateInterval) < SystemClockRate / 2  
-``` 
-CurrentTimeOffset 여기서 1ms = 10, 000 클록 틱 Windows 시스템 클록 틱을 단위로 측정 됩니다.  
+* Windows Server 2016 및 이후 버전:
+   ```  
+    |CurrentTimeOffset| / (16*PhaseCorrectRate*pollIntervalInSeconds) <= SystemClockRate / 2  
+   ``` 
+* Windows Server 2012 R2 및 이전 버전:
+   ```  
+   |CurrentTimeOffset| / (PhaseCorrectRate*UpdateInterval) <= SystemClockRate / 2  
+   ``` 
+합니다 **CurrentTimeOffset** 값 여기서 1ms = 10, 000 클록 틱 Windows 시스템 클록 틱을 단위로 측정 됩니다.  
 
-SystemClockRate 및 PhaseCorrectRate 또한 클록 틱 단위로 측정 됩니다. SystemClockRate를 가져오려면 다음 명령을 사용 하 여를 클록 틱의 시간 (초) 수식을 사용 하 여 초에서 변환 * 1000\*10000:  
+**SystemClockRate** 하 고 **PhaseCorrectRate** 는 또한 클록 틱 단위로 측정 됩니다. 가져오려는 합니다 **SystemClockRate** 값, 클록 틱의 시간 (초) 수식을 사용 하 여 초에서 변환에 고 다음 명령을 사용할 수 있습니다 * 1000\*10000:  
 
 ```  
 W32tm /query /status /verbose  
 ClockRate: 0.0156000s  
 ```  
 
-SystemclockRate는 시스템 클록의 속도. 156000 시간 (초)을 사용 하 여 예를 들어,는 SystemclockRate는 수 = 0.0156000 \* 1000 \* 10000 = 156000 클록 틱입니다.  
+**SystemclockRate** 시스템 클록의 속도입니다. 예를 들어 156000 시간 (초)을 사용 하 여는 **SystemclockRate** 값은 0.0156000 = 수 \* 1000 \* 10000 = 156000 클록 틱입니다.  
 
-MaxAllowedPhaseOffset 초 이기도합니다. 변환할 클록 틱, MaxAllowedPhaseOffset 곱하기 * 1000\*10000입니다.  
+**MaxAllowedPhaseOffset** 초에서 이기도 합니다. 변환할 클록 틱에 곱할 **MaxAllowedPhaseOffset**\*1000\*10000입니다.  
 
-다음 두 예제에 적용 하는 방법을 보여 줍니다.  
+다음 예제에서는 Windows Server 2012 R2 또는 이전 버전을 사용 하는 경우 이러한 계산을 적용 하는 방법을 보여 줍니다.
 
-**예 1**: 4 분 시간 다릅니다 (예를 들어 시간은 오전 11시 05분 및 시간 샘플 피어 로부터 수신 하 고 오전 11시 09분은 올바른 것으로 알려져).
+**예 1**: 4 분 시간 다릅니다 (예를 들어 시간 11시 05분 이며 피어 로부터 수신 하 고 올바른 것으로 생각 하는 시간 예제 11시 09분).
   
 ```
 phasecorrectRate = 1  
@@ -230,19 +235,19 @@ MaxAllowedPhaseOffset = 10min = 600 seconds = 600*1000\*10000=6000000000 clock t
 
 |currentTimeOffset| = 4mins = 4*60\*1000\*10000 = 2400000000 ticks  
 
-Is CurrentTimeOffset < MaxAllowedPhaseOffset?  
+Is CurrentTimeOffset <= MaxAllowedPhaseOffset?  
 
-2400000000 < 6000000000 = TRUE  
+2400000000 <= 6000000000 = TRUE  
 ```
 
 위의 수식을 충족 하는 고? 
 
 ```
-(|CurrentTimeOffset| / (PhaseCorrectRate*UpdateInterval) < SystemClockRate / 2)  
+(|CurrentTimeOffset| / (PhaseCorrectRate*UpdateInterval) <= SystemClockRate / 2)  
 
-Is 2,400,000,000 / (30000*1) < 156000/2  
+Is 2,400,000,000 / (30000*1) <= 156000/2  
 
-Is 80,000 < 78,000  
+Is 80,000 <= 78,000  
 
 NO/FALSE  
 ```  
@@ -250,7 +255,7 @@ NO/FALSE
 따라서 W32tm 설정 클록 다시 즉시 합니다.  
 
 > [!NOTE]  
-> 이 경우 느린 시계를 다시 설정 하려는 경우에 PhaseCorrectRate 또는 레지스트리에서 updateInterval도 true에서 수식 결과를 얻으려면의 값을 조정 해야 합니다.  
+> 이 경우 느린 시계를 다시 설정 하려는 경우 또한 해야의 값을 조정 **PhaseCorrectRate** 하거나 **updateInterval** 수식 결과 인지확인하려면레지스트리에서**TRUE**합니다.  
 
 **예 2**: 3 분 시간이 다릅니다. 
  
@@ -265,19 +270,19 @@ MaxAllowedPhaseOffset = 10min = 600 seconds = 600*1000\*10000=6000000000 clock t
 
 currentTimeOffset = 3mins = 3*60\*1000\*10000 = 1800000000 clock ticks  
 
-Is CurrentTimeOffset < MaxAllowedPhaseOffset?  
+Is CurrentTimeOffset <= MaxAllowedPhaseOffset?  
 
-1800000000 < 6000000000 = TRUE  
+1800000000 <= 6000000000 = TRUE  
 ```  
 
 위의 수식을 충족 하는 고?
 
 ```
-(|CurrentTimeOffset| / (PhaseCorrectRate*UpdateInterval) < SystemClockRate / 2)  
+(|CurrentTimeOffset| / (PhaseCorrectRate*UpdateInterval) <= SystemClockRate / 2)  
 
-Is 3 mins (1,800,000,000) / (30000*1) < 156000/2  
+Is 3 mins (1,800,000,000) / (30000*1) <= 156000/2  
 
-Is 60,000 < 78,000  
+Is 60,000 <= 78,000  
 
 YES/TRUE  
 ```  
