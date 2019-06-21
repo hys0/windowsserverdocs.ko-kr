@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 958bf8455d03ddc04395fafe83e70a49c7659c96
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: a7f4f29b37793b45a614bd592feddb339dd05c3d
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66192436"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280609"
 ---
 ## <a name="best-practices-for-securing-active-directory-federation-services"></a>Active Directory Federation Services 보안에 대 한 모범 사례
 
@@ -109,7 +109,7 @@ Azure AD에 대해서만 AD FS 및 WAP를 배포 하는 조직 및 Office 365 �
 3.  해당 기본값에서 정체 제어 설정을 변경 '<congestionControl latencyThresholdInMSec="8000" minCongestionWindowSize="64" enabled="true" />'.
 4.  파일을 저장하고 닫습니다.
 5.  'Net stop adfssrv' 및 'net start adfssrv'를 실행 하 여 AD FS 서비스를 다시 시작 합니다.
-참조용으로이 기능에 대 한 지침을 찾을 수 있습니다 [여기](https://msdn.microsoft.com/en-us/library/azure/dn528859.aspx )합니다.
+참조용으로이 기능에 대 한 지침을 찾을 수 있습니다 [여기](https://msdn.microsoft.com/library/azure/dn528859.aspx )합니다.
 
 ### <a name="standard-http-request-checks-at-the-proxy"></a>표준 HTTP 요청을 프록시 확인
 프록시는 또한 모든 트래픽에 대해 다음 표준 검사를 수행합니다.

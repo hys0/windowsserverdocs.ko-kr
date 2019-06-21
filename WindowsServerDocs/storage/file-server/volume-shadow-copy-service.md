@@ -6,12 +6,12 @@ ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: d67f15d65feb28fb05fc056fd3c34c04cee80d09
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 0a4af25723c6d1e796cd3255875c15faf21fb8be
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66447759"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284381"
 ---
 # <a name="volume-shadow-copy-service"></a>볼륨 섀도 복사본 서비스
 
@@ -380,7 +380,7 @@ VSS는 전체 볼륨의 섀도 복사본을 만들도록 설계 되었습니다.
 > <UL>
 > <LI>이전 버전 기능을 사용 하 여 Windows 서버에 만들어진 섀도 복사본에서 파일을 삭제할 수 없습니다 것입니다.<BR><BR>
 > <LI>공유 폴더의 섀도 복사본에서 파일을 삭제할 수 없습니다 것입니다.<BR><BR>
-> <LI>사용 하 여 생성 된 섀도 복사본에서 파일을 삭제할 수 있습니다 합니다 <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/diskshadow" data-raw-source="[Diskshadow](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/diskshadow)">Diskshadow</a> 유틸리티를 하지만 사용 하 여 생성 된 섀도 복사본에서 파일을 삭제할 수 없습니다는 <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/vssadmin" data-raw-source="[Vssadmin](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/vssadmin)">Vssadmin</a> 유틸리티입니다.<BR><BR>
+> <LI>사용 하 여 생성 된 섀도 복사본에서 파일을 삭제할 수 있습니다 합니다 <a href="https://docs.microsoft.com/windows-server/administration/windows-commands/diskshadow" data-raw-source="[Diskshadow](https://docs.microsoft.com/windows-server/administration/windows-commands/diskshadow)">Diskshadow</a> 유틸리티를 하지만 사용 하 여 생성 된 섀도 복사본에서 파일을 삭제할 수 없습니다는 <a href="https://docs.microsoft.com/windows-server/administration/windows-commands/vssadmin" data-raw-source="[Vssadmin](https://docs.microsoft.com/windows-server/administration/windows-commands/vssadmin)">Vssadmin</a> 유틸리티입니다.<BR><BR>
 > <LI>최상의 노력을 기준으로 섀도 복사본에서 파일이 삭제 됩니다. 이 삭제 되지 않습니다 보장 되는 것을 의미 합니다.<BR><BR></LI></UL>
 
 

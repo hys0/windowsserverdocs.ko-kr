@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.technology: storage-failover-clustering
 ms.date: 06/07/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 85b75d0039fec1b2ad9982d6ae9bf83fa8da2fdf
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.openlocfilehash: bf854418e9efb7dbb5bd07ba86f29d84ba54d68a
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66810989"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280385"
 ---
 # <a name="configure-and-manage-quorum"></a>쿼럼 구성 및 관리
 
@@ -67,7 +67,7 @@ Windows Server의 쿼럼 모델은 유연 합니다. 클러스터의 쿼럼 구�
 
 특정 재해 복구 구성의 경우 노드에서 응답을 제거할 수도 있습니다. 예를 들어 다중 사이트 클러스터의 경우 백업 사이트의 노드가 쿼럼 계산에 영향을 주지 않도록 이러한 노드에서 응답을 제거할 수 있습니다. 이 구성은 사이트 간의 수동 장애 조치(failover)에만 권장됩니다. 자세한 내용은 이 항목의 뒷부분에 있는 [재해 복구 구성에 대한 쿼럼 고려 사항](#quorum-considerations-for-disaster-recovery-configurations)을 참조하세요.
 
-조회 하 여 노드의 구성 된 응답을 확인할 수 있습니다 합니다 **NodeWeight** 공통 속성을 사용 하 여 클러스터 노드를 [Get-clusternode](http://technet.microsoft.com/library/hh847268.aspx)Windows PowerShell cmdlet. 0 값은 노드에 구성된 쿼럼 응답이 없음을 나타내며, 1 값은 노드의 쿼럼 응답이 할당되고 클러스터에서 관리됨을 나타냅니다. 노드 응답 관리에 대한 자세한 내용은 이 항목의 뒷부분에 있는 [동적 쿼럼 관리](#dynamic-quorum-management)를 참조하세요.
+조회 하 여 노드의 구성 된 응답을 확인할 수 있습니다 합니다 **NodeWeight** 공통 속성을 사용 하 여 클러스터 노드를 [Get-clusternode](https://technet.microsoft.com/library/hh847268.aspx)Windows PowerShell cmdlet. 0 값은 노드에 구성된 쿼럼 응답이 없음을 나타내며, 1 값은 노드의 쿼럼 응답이 할당되고 클러스터에서 관리됨을 나타냅니다. 노드 응답 관리에 대한 자세한 내용은 이 항목의 뒷부분에 있는 [동적 쿼럼 관리](#dynamic-quorum-management)를 참조하세요.
 
 **클러스터 쿼럼 유효성 검사** 유효성 테스트를 사용하여 모든 클러스터 노드에 대한 응답 할당을 확인할 수 있습니다.
 

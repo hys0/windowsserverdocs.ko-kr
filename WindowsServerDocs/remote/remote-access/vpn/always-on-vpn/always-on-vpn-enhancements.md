@@ -9,12 +9,12 @@ ms.author: pashort
 author: shortpatti
 ms.date: 11/05/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b4dd78e0e88678d4570d408b3dcd472bddc88ba
-ms.sourcegitcommit: 0948a1abff1c1be506216eeb51ffc6f752a9fe7e
+ms.openlocfilehash: e7cbe64609e30b042df70020896aebd85b7d22b9
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66749671"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280782"
 ---
 # <a name="always-on-vpn-enhancements"></a>Always On VPN 기능 향상
 
@@ -27,7 +27,7 @@ Always On VPN 과거의 Windows VPN 솔루션을 통해 많은 장점이 있습�
 
 - **플랫폼 통합:** Always On VPN에 향상 된 통합 Windows 운영 체제와 타사 솔루션 수많은 고급 연결 시나리오에 대해 강력한 플랫폼을 제공할 수 있습니다.
 
-- **보안:** Always On VPN에서 새로운 고급 보안 기능이 있는 응용 프로그램 VPN 연결을 사용할 수, 트래픽 유형을 제한할는 인증 방법 수를 사용 하 여 연결을 시작 합니다. 연결이 활성 상태인 대부분의 경우에 연결을 보호 하는 것이 특히 유용 합니다. 자세한 내용은 참조 하세요. [VPN 인증 옵션](https://docs.microsoft.com/en-us/windows/security/identity-protection/vpn/vpn-authentication)합니다.
+- **보안:** Always On VPN에서 새로운 고급 보안 기능이 있는 응용 프로그램 VPN 연결을 사용할 수, 트래픽 유형을 제한할는 인증 방법 수를 사용 하 여 연결을 시작 합니다. 연결이 활성 상태인 대부분의 경우에 연결을 보호 하는 것이 특히 유용 합니다. 자세한 내용은 참조 하세요. [VPN 인증 옵션](https://docs.microsoft.com/windows/security/identity-protection/vpn/vpn-authentication)합니다.
 
 - **VPN 연결:** Always On VPN, 장치 터널 없이 자동 트리거 기능도 제공합니다. Always On VPN을 하기 전에 사용자 또는 장치 인증을 통해 자동 연결을 실행 하는 기능 수 없었습니다.  
 

@@ -7,12 +7,12 @@ author: jwwool
 ms.author: jeffrew
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: a0062230dd3d9e9c52aa317f87e06b0e84507dc4
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ad8e2a8eade1ea9d3faaba8f387b1f489854e589
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59861064"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280627"
 ---
 # <a name="deploy-windows-admin-center-with-high-availability"></a>고가용성을 사용 하 여 Windows Admin Center 배포
 
@@ -74,7 +74,7 @@ Windows Admin Center 새 버전이 출시 되 면 실행 하기만 하면 됩니
 
 ### <a name="update-the-certificate-used-by-windows-admin-center"></a>Windows Admin Center 사용 하는 인증서 업데이트
 
-새 인증서의.pfx 파일을 제공 하 여 언제 든 지 Windows Admin Center HA 배포에서 사용 된 인증서를 업데이트할 수 있습니다 및 및 암호입니다.
+새 인증서의.pfx 파일 및 암호를 제공 하 여 언제 든 지 Windows Admin Center HA 배포에서 사용 된 인증서를 업데이트할 수 있습니다.
 
 ```powershell
 $certPassword = Read-Host -AsSecureString

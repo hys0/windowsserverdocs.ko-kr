@@ -6,19 +6,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- networking-da
+ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 70357156-fcb0-4346-a61e-4ea963e3ffb0
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: e7f907c3bf463e3a90d413e5b167a70051057f06
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 108e517923c75f685d817cdf9fad9b14132e3bb0
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59876774"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67281440"
 ---
 # <a name="step-5-configure-dc1"></a>5 단계는 DC1 구성
 
@@ -44,7 +43,7 @@ DC1은 도메인 컨트롤러, DNS 서버 및 corp.contoso.com 도메인에 대 
   
 4.  **기본 게이트웨이**, 형식 **10.0.0.254**, 및 **대체 DNS 서버**, 형식 **10.2.0.1**를 클릭 하 고 **확인** .  
   
-5.  **인터넷 프로토콜 버전 6(TCP/IPv6)**, **속성**을 차례로 클릭합니다.  
+5.  **인터넷 프로토콜 버전 6(TCP/IPv6)** , **속성**을 차례로 클릭합니다.  
   
 6.  **기본 게이트웨이**, 형식 **2001:db8:1::fe**, 및 **대체 DNS 서버**, 형식 **2001:db8:2::1**를 클릭및**확인**합니다.  
   

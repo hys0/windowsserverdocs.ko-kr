@@ -9,12 +9,12 @@ ms.date: 05/20/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 7a4ad8c0199f0f62d7cd69a43897cb4608ddb365
-ms.sourcegitcommit: ccc802338b163abdad2e53b55f39addcfea04603
+ms.openlocfilehash: eb31a76dbd7ccdff3ea3ee0d6bb26f9ee16ae93f
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66687364"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280701"
 ---
 # <a name="ad-fs-extranet-lockout-and-extranet-smart-lockout"></a>AD FS 엑스트라넷 잠금 및 엑스트라넷 잠금
 
@@ -237,7 +237,7 @@ AD FS 계정 활동 데이터를 관리 하기 위한 세 가지 cmdlet을 제�
 ## <a name="event-logging--user-activity-information-for-ad-fs-extranet-lockout"></a>이벤트 로깅 및 AD FS 엑스트라넷 잠금에 대 한 사용자 작업 정보
 
 ### <a name="connect-health"></a>Connect Health
-Connect Health를 통해 사용자 계정 작업을 모니터링 하는 방법이 권장된 됩니다. 연결 상태 위험한 Ip에 대 한 다운로드 가능한 보고를 생성 하 고 잘못 된 암호 시도 합니다. 위험한 IP 보고서의 각 항목에는 실패 한 AD FS 로그인 활동이 지정 된 임계값을 초과 하는 방법에 대 한 집계 정보가 표시 됩니다. 전자 메일 알림은 사용자 지정 가능한 이메일 설정을 사용 하 여 발생 하는 즉시 관리자에 게 경고를 설정할 수 있습니다. 추가 정보 및 설치 지침을 방문 합니다 [Connect Health 설명서](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-health-adfs)합니다.
+Connect Health를 통해 사용자 계정 작업을 모니터링 하는 방법이 권장된 됩니다. 연결 상태 위험한 Ip에 대 한 다운로드 가능한 보고를 생성 하 고 잘못 된 암호 시도 합니다. 위험한 IP 보고서의 각 항목에는 실패 한 AD FS 로그인 활동이 지정 된 임계값을 초과 하는 방법에 대 한 집계 정보가 표시 됩니다. 전자 메일 알림은 사용자 지정 가능한 이메일 설정을 사용 하 여 발생 하는 즉시 관리자에 게 경고를 설정할 수 있습니다. 추가 정보 및 설치 지침을 방문 합니다 [Connect Health 설명서](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-health-adfs)합니다.
 
 ### <a name="ad-fs-extranet-smart-lockout-events"></a>AD FS 엑스트라넷 잠금 이벤트입니다.
 기록할 엑스트라넷 잠금 이벤트에 대 한 ESL '적용' 또는 ' 로그 전용 ' 모드에서 활성화 해야 하며 ADFS 보안 감사를 사용할 수 있습니다.

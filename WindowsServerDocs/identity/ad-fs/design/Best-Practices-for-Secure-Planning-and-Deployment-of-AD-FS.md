@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 4a2fb188bd0a46ebd54ae068e8e4eeb63788aaa0
-ms.sourcegitcommit: cd12ace92e7251daaa4e9fabf1d8418632879d38
+ms.openlocfilehash: 95f9fd468df39525a2fe7d18647f399214486bbb
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66501576"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280593"
 ---
 # <a name="best-practices-for-secure-planning-and-deployment-of-ad-fs"></a>AD FS 보안 계획 및 배포 모범 사례
 
@@ -26,7 +26,7 @@ ms.locfileid: "66501576"
 
 -   **"계층 0" 시스템으로 AD FS 보안 유지** 
 
-    AD FS는 근본적으로 인증 시스템입니다.  따라서 네트워크에서 다른 id 시스템 같은 "계층 0" 시스템으로 처리 되어야 합니다.  [Microsoft Docs](https://docs.microsoft.com/en-us/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material) Active Directory 관리 계층 모델에 대 한 자세한 내용은 합니다. 
+    AD FS는 근본적으로 인증 시스템입니다.  따라서 네트워크에서 다른 id 시스템 같은 "계층 0" 시스템으로 처리 되어야 합니다.  [Microsoft Docs](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material) Active Directory 관리 계층 모델에 대 한 자세한 내용은 합니다. 
 
 
 -   **보안 구성 마법사를 사용 하 여 페더레이션 서버 및 페더레이션 서버 프록시 컴퓨터에 AD FS 관련 보안 모범 사례 적용**  
@@ -117,11 +117,11 @@ ms.locfileid: "66501576"
 다음 보안 모범 사례를 이러한 데이터베이스 기술이 사용 하 여 AD FS 디자인 및 배포에서 데이터를 관리할 때 Microsoft SQL Server® 또는 Windows 내부 데이터베이스 WID ()를 사용 하 여와 관련이 있습니다.  
   
 > [!NOTE]  
-> 이러한 권장 사항은 SQL Server 제품 보안 지침을 대체하는 것이 아니라 확장하는 것입니다. 보안 SQL Server 설치 계획에 대 한 자세한 내용은 참조 하세요. [보안 SQL 설치를 위한 보안 고려 사항](https://go.microsoft.com/fwlink/?LinkID=139831) (https://go.microsoft.com/fwlink/?LinkID=139831)합니다.  
+> 이러한 권장 사항은 SQL Server 제품 보안 지침을 대체하는 것이 아니라 확장하는 것입니다. 보안 SQL Server 설치 계획에 대 한 자세한 내용은 참조 하세요. [보안 SQL 설치를 위한 보안 고려 사항](https://go.microsoft.com/fwlink/?LinkID=139831) (https://go.microsoft.com/fwlink/?LinkID=139831) 합니다.  
   
 -   **항상 물리적으로 안전한 네트워크 환경에서 방화벽 뒤에 SQL Server를 배포 합니다.**  
   
-    SQL Server 설치를 인터넷에 직접 노출해서는 안 됩니다. 데이터 센터 내에 있는 컴퓨터만 AD FS를 지 원하는 SQL server 설치에 연결할 수 있어야 합니다. 자세한 내용은 [보안 모범 사례 검사 목록](https://go.microsoft.com/fwlink/?LinkID=189229) (https://go.microsoft.com/fwlink/?LinkID=189229)합니다.  
+    SQL Server 설치를 인터넷에 직접 노출해서는 안 됩니다. 데이터 센터 내에 있는 컴퓨터만 AD FS를 지 원하는 SQL server 설치에 연결할 수 있어야 합니다. 자세한 내용은 [보안 모범 사례 검사 목록](https://go.microsoft.com/fwlink/?LinkID=189229) (https://go.microsoft.com/fwlink/?LinkID=189229) 합니다.  
   
 -   **기본 제공 시스템 서비스 계정을 사용 하는 대신 서비스 계정으로 SQL Server를 실행 합니다.**  
   
@@ -129,11 +129,11 @@ ms.locfileid: "66501576"
   
 -   **SQL Server의 노출 영역을 최소화 합니다.**  
   
-    필요한 SQL Server 끝점만 사용합니다. 기본적으로 SQL Server는 제거할 수 없는 단일 기본 제공 TCP 끝점을 제공합니다. AD FS에 대 한 Kerberos 인증에이 TCP 끝점을 사용 해야 합니다. 현재 TCP 끝점을 검토하여 추가 사용자 정의 TCP 포트가 SQL 설치에 추가되었는지 알아보려면 Transact-SQL(T-SQL) 세션에서 "SELECT * FROM sys.tcp_endpoints" 쿼리 문을 사용하면 됩니다. SQL Server 끝점 구성에 대 한 자세한 내용은 참조 하세요. [방법: 여러 TCP 포트에서 수신 하도록 데이터베이스 엔진 구성](https://go.microsoft.com/fwlink/?LinkID=189231) (https://go.microsoft.com/fwlink/?LinkID=189231)합니다.  
+    필요한 SQL Server 끝점만 사용합니다. 기본적으로 SQL Server는 제거할 수 없는 단일 기본 제공 TCP 끝점을 제공합니다. AD FS에 대 한 Kerberos 인증에이 TCP 끝점을 사용 해야 합니다. 현재 TCP 끝점을 검토하여 추가 사용자 정의 TCP 포트가 SQL 설치에 추가되었는지 알아보려면 Transact-SQL(T-SQL) 세션에서 "SELECT * FROM sys.tcp_endpoints" 쿼리 문을 사용하면 됩니다. SQL Server 끝점 구성에 대 한 자세한 내용은 참조 하세요. [방법: 여러 TCP 포트에서 수신 하도록 데이터베이스 엔진 구성](https://go.microsoft.com/fwlink/?LinkID=189231) (https://go.microsoft.com/fwlink/?LinkID=189231) 합니다.  
   
 -   **SQL 기반 인증을 사용 하지 마십시오.**  
   
-    암호가 네트워크를 통해 일반 텍스트로 전송되거나 구성 설정에 저장되는 것을 방지하려면 SQL Server 설치에서 Windows 인증만 사용합니다. SQL Server 인증은 레거시 인증 모드입니다. SQL Server 인증을 사용할 때는 SQL(Structured Query Language) 로그인 자격 증명(SQL 사용자 이름 및 암호)을 저장하지 않는 것이 좋습니다. 자세한 내용은 [인증 모드](https://go.microsoft.com/fwlink/?LinkID=189232) (https://go.microsoft.com/fwlink/?LinkID=189232)합니다.  
+    암호가 네트워크를 통해 일반 텍스트로 전송되거나 구성 설정에 저장되는 것을 방지하려면 SQL Server 설치에서 Windows 인증만 사용합니다. SQL Server 인증은 레거시 인증 모드입니다. SQL Server 인증을 사용할 때는 SQL(Structured Query Language) 로그인 자격 증명(SQL 사용자 이름 및 암호)을 저장하지 않는 것이 좋습니다. 자세한 내용은 [인증 모드](https://go.microsoft.com/fwlink/?LinkID=189232) (https://go.microsoft.com/fwlink/?LinkID=189232) 합니다.  
   
 -   **SQL 설치에서 추가 채널 보안의 필요성을 신중 하 게 평가 합니다.**  
   

@@ -8,16 +8,16 @@ ms.date: 05/23/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: f28458ed9e781df6eca2478b02fb667d9240ca48
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: a638ec25be4fc99b4eccd1d9fa541e640ef9e15c
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66445306"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280649"
 ---
 # <a name="build-a-custom-authentication-method-for-ad-fs-in-windows-server"></a>Windows server에서 AD FS에 대 한 사용자 지정 인증 방법 구축
 
-이 연습에서는 Windows Server 2012 R2에서 AD FS에 대 한 사용자 지정 인증 메서드를 구현 하는 것에 대 한 지침을 제공 합니다. 자세한 내용은 [추가 인증 방법](https://msdn.microsoft.com/en-us/library/dn758113\(v=msdn.10\))합니다.
+이 연습에서는 Windows Server 2012 R2에서 AD FS에 대 한 사용자 지정 인증 메서드를 구현 하는 것에 대 한 지침을 제공 합니다. 자세한 내용은 [추가 인증 방법](https://msdn.microsoft.com/library/dn758113\(v=msdn.10\))합니다.
 
 
 > [!WARNING]
@@ -224,7 +224,7 @@ ms.locfileid: "66445306"
          }
          }
 
-         /// Returns an array indicating the type of claim that that the adapter uses to identify the user being authenticated.
+         /// Returns an array indicating the type of claim that the adapter uses to identify the user being authenticated.
          /// Note that although the property is an array, only the first element is currently used.
          /// MUST BE ONE OF THE FOLLOWING
          /// "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname"
@@ -377,7 +377,7 @@ AD FS에서 외부 공급자를 호출할 수 있습니다, 전에 시스템에 
 
 2.  AD FS 역할 서비스를 설치 하 고 하나 이상의 노드를 사용 하 여 팜을 구성 합니다.
 
-    랩 환경에서 페더레이션 서버를 설치 하는 자세한 단계에 대해서는 [Windows Server 2012 R2 AD FS 배포 가이드](https://msdn.microsoft.com/en-us/library/dn486820\(v=msdn.10\))합니다.
+    랩 환경에서 페더레이션 서버를 설치 하는 자세한 단계에 대해서는 [Windows Server 2012 R2 AD FS 배포 가이드](https://msdn.microsoft.com/library/dn486820\(v=msdn.10\))합니다.
 
 3.  서버에 Gacutil.exe 도구를 복사 합니다.
 
@@ -641,6 +641,6 @@ MFA 인증 페이지에서 "adfabric"를 입력 하는 경우 성공적인 로�
 
 #### <a name="other-resources"></a>관련 자료
 
-[추가 인증 방법](https://msdn.microsoft.com/en-us/library/dn758113\(v=msdn.10\))  
-[추가 Multi-factor Authentication for Sensitive Applications 사용 하 여 위험 관리](https://msdn.microsoft.com/en-us/library/dn280949\(v=msdn.10\))
+[추가 인증 방법](https://msdn.microsoft.com/library/dn758113\(v=msdn.10\))  
+[추가 Multi-factor Authentication for Sensitive Applications 사용 하 여 위험 관리](https://msdn.microsoft.com/library/dn280949\(v=msdn.10\))
 

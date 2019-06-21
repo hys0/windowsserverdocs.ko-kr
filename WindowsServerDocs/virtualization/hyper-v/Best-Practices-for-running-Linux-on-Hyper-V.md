@@ -11,12 +11,12 @@ ms.assetid: a08648eb-eea0-4e2b-87fb-52bfe8953491
 author: shirgall
 ms.author: kathydav
 ms.date: 3/1/2019
-ms.openlocfilehash: 190a5e5d32140d6fa688bb9de98d05ec2f9783c3
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a24e2b1a1d79d52c1cc16f9e7c1b253d9b477aae
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59838684"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284447"
 ---
 # <a name="best-practices-for-running-linux-on-hyper-v"></a>Hyper-v에서 Linux를 실행 하기 위한 모범 사례
 
@@ -82,7 +82,7 @@ Linux 커널에는 서로 다른 알고리즘을 사용 하 여 요청을 다시
 
 ## <a name="numa"></a>NUMA
 
-Linux 커널 버전 이전 2.6.37 보다 지원 하지 않습니다 NUMA Hyper-v에서 더 큰 VM 크기를 사용 하 여. 이 문제에 주로 영향을 줍니다 이전 배포는 업스트림을 사용 하 여 Red Hat 2.6.32 커널을에서 Red Hat Enterprise Linux (RHEL) 6.6 (커널-2.6.32-504)를 수정 했습니다. 2.6.32-504 부트 매개 변수를 설정 해야 하는 보다 2.6.37 보다 오래 된 사용자 지정 커널 또는 오래 된 RHEL 기반 커널을 실행 하는 시스템 `numa=off` 의 경우 grub.conf의 커널 명령줄에 있습니다. 자세한 내용은 [Red Hat KB 436883](https://access.redhat.com/solutions/436883)합니다.
+Linux 커널 버전 이전 2.6.37 보다 지원 하지 않습니다 NUMA Hyper-v에서 더 큰 VM 크기를 사용 하 여. 이 문제에 주로 영향을 줍니다 이전 배포는 업스트림을 사용 하 여 Red Hat 2.6.32 커널을에서 Red Hat Enterprise Linux (RHEL) 6.6 (커널-2.6.32-504)를 수정 했습니다. 2\.6.32-504 부트 매개 변수를 설정 해야 하는 보다 2.6.37 보다 오래 된 사용자 지정 커널 또는 오래 된 RHEL 기반 커널을 실행 하는 시스템 `numa=off` 의 경우 grub.conf의 커널 명령줄에 있습니다. 자세한 내용은 [Red Hat KB 436883](https://access.redhat.com/solutions/436883)합니다.
 
 ## <a name="reserve-more-memory-for-kdump"></a>Kdump에 대 한 더 많은 메모리를 예약 합니다.
 
@@ -102,6 +102,6 @@ VHD 또는 VHDX 크기를 조정한 후 관리자 fdisk와 같은 유틸리티�
 
 * [Hyper-v 클러스터 배포](https://technet.microsoft.com/library/jj863389.aspx)
 
-* [Azure 용 Linux 이미지 만들기](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/create-upload-generic)
+* [Azure 용 Linux 이미지 만들기](https://docs.microsoft.com/azure/virtual-machines/linux/create-upload-generic)
 
-* [Azure에서 Linux VM 최적화](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/optimization)
+* [Azure에서 Linux VM 최적화](https://docs.microsoft.com/azure/virtual-machines/linux/optimization)

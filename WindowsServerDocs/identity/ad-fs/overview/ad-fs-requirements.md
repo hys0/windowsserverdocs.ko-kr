@@ -9,12 +9,12 @@ ms.date: 03/06/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: e62032533b15ec3d93896d242273612faafdca58
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 1e72556f9a630e188b59722e09650f9e48fb6852
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66444106"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280476"
 ---
 # <a name="ad-fs-requirements"></a>AD FS 요구 사항
 
@@ -22,7 +22,7 @@ ms.locfileid: "66444106"
 
 다음은 AD FS를 배포 하기 위한 요구 사항:  
   
--   5. 인증서가 RD 게이트웨이에 대한 요구 사항을 충족하면 [설치](ad-fs-requirements.md#BKMK_1)를 클릭합니다.  
+-   5\. 인증서가 RD 게이트웨이에 대한 요구 사항을 충족하면 [설치](ad-fs-requirements.md#BKMK_1)를 클릭합니다.  
   
 -   [하드웨어 요구 사항](ad-fs-requirements.md#BKMK_2)  
   
@@ -110,7 +110,7 @@ SQL Server AD FS 구성 데이터베이스를 사용 하는 가장 기본적인 
   
 -   엑스트라넷 액세스에 대 한 웹 응용 프로그램 프록시 역할 서비스를 배포 해야 \- 원격 액세스 서버 역할의 일부입니다. 
 
--   제 3 자 프록시를 지원 해야는 [MS ADFSPIP 프로토콜](https://msdn.microsoft.com/en-us/library/dn392811.aspx) AD FS 프록시도 지원 됩니다.  공급 업체 목록을 제 3 자에 대 한 참조를 [FAQ](AD-FS-FAQ.md#what-third-party-proxies-are-available-for-ad-fs-that-support-ms-adfspip)합니다.
+-   제 3 자 프록시를 지원 해야는 [MS ADFSPIP 프로토콜](https://msdn.microsoft.com/library/dn392811.aspx) AD FS 프록시도 지원 됩니다.  공급 업체 목록을 제 3 자에 대 한 참조를 [FAQ](AD-FS-FAQ.md#what-third-party-proxies-are-available-for-ad-fs-that-support-ms-adfspip)합니다.
 
 -   AD FS 2016에는 Windows Server 2016에서 웹 응용 프로그램 프록시 서버가 필요합니다.  2016 팜 동작 수준에서 실행 하는 AD FS 2016 팜을 대 한 하위 프록시를 구성할 수 없습니다.
   

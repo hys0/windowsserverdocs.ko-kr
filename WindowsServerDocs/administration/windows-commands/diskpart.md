@@ -5,12 +5,12 @@ ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: 3cc0667b54dba75d892795f6520664ce7a7a62a5
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: e04af7b6425e208013277d1aaa6f28af62871bcc
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66192653"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280076"
 ---
 # <a name="diskpart-commands"></a>DiskPart 명령
 
@@ -116,4 +116,4 @@ Diskpart 명령 인터프리터에 다음 명령을 실행할 수 있습니다.
 
 [명령줄 구문 키](command-line-syntax-key.md)
 
-[Windows PowerShell의 저장소 Cmdlet](https://docs.microsoft.com/en-us/powershell/module/storage/)
+[Windows PowerShell의 저장소 Cmdlet](https://docs.microsoft.com/powershell/module/storage/)

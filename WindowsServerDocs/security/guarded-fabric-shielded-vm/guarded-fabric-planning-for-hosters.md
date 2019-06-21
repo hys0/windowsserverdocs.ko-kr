@@ -8,12 +8,12 @@ manager: dongill
 author: nirb-ms
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: f280fbe682ebf706ce6ea5b53ea8af5e6f39d75d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 320723f7a0a25784180b232ce05d42c2ced933c8
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59857814"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284182"
 ---
 # <a name="guarded-fabric-and-shielded-vm-planning-guide-for-hosters"></a>보호 된 패브릭 및 차폐 VM 호스팅 서비스 공급자에 대 한 계획
 
@@ -64,7 +64,7 @@ ms.locfileid: "59857814"
 | 크기 조정 | 각 중간 크기 (8 코어/4 GB) HGS 서버 노드에서 1,000 Hyper-v 호스트를 처리할 수 있습니다. |
 | 관리 | HGS를 관리 하는 특정 사용자를 지정 합니다. 패브릭 관리자가 별개 여야 합니다. 비교를 위해 HGS 클러스터 동일한 방식으로 인증 기관 (CA) 관리 격리, 실제 배포 및 보안 민감도가의 전반적인 수준 측면에서 생각할 수 있습니다. |
 | Host Guardian Service Active Directory | 기본적으로 HGS 관리에 대 한 내부 Active Directory 자체를 설치합니다. 이 자체 관리 되는 자체 포함 포리스트 및 패브릭에에서 HGS를 분리 하도록 하기 위해 권장 되는 구성입니다.<br><br>격리에 사용 하는 높은 권한 있는 Active Directory 포리스트를 이미 있는 경우 해당 포리스트의 HGS 기본 포리스트 대신 사용할 수 있습니다. HGS에서 Hyper-v 호스트 또는 패브릭 관리 도구와 동일한 포리스트에 도메인에 가입 되어 있지는 반드시 합니다. 이렇게 HGS를 제어할 수 패브릭 관리자를 허용할 수 있습니다. |
-| 재해 복구 | 다음의 세 가지 옵션 중에서 선택할 수 있습니다.<br><ol><li>각 데이터 센터에서 별도 HGS 클러스터를 설치 하 고 보호 된 Vm의 기본 및 백업 데이터 센터에서 실행 되도록 권한을 부여 합니다. 이 WAN을 통해 클러스터를 확장 하지 않아도 되 고 지정된 된 사이트에만 실행 되도록 가상 컴퓨터를 격리할 수 있습니다.</li><li>두 개 이상의 데이터 센터 간에 확장 클러스터에서 HGS를 설치 합니다. WAN 다운 푸시 제한 장애 조치 클러스터링의 경우 복원 력을 제공 합니다. 한 사이트;에 대 한 워크 로드를 격리할 수 없습니다. 다른 하나의 사이트에 실행 권한이 부여 된 VM을 실행할 수 있습니다.</li><li>다른 HGS를 사용 하 여 장애 조치를 Hyper-v 호스트를 등록 합니다.</li></ol>또한 로컬로 항상 복구할 수 있도록 해당 구성을 내보내 모든 HGS를 백업 해야 합니다. 자세한 내용은 [내보내기 HgsServerState](https://technet.microsoft.com/library/mt652164.aspx) 하 고 [가져오기 HgsServerState](https://technet.microsoft.com/library/mt652168.aspx)합니다. |
+| 재해 복구 | 다음의 세 가지 옵션 중에서 선택할 수 있습니다.<br><ol><li>각 데이터 센터에서 별도 HGS 클러스터를 설치 하 고 보호 된 Vm의 기본 및 백업 데이터 센터에서 실행 되도록 권한을 부여 합니다. 이 WAN을 통해 클러스터를 확장 하지 않아도 되 고 지정된 된 사이트에만 실행 되도록 가상 컴퓨터를 격리할 수 있습니다.</li><li>두 개 이상의 데이터 센터 간에 확장 클러스터에서 HGS를 설치 합니다. WAN 다운 푸시 제한 장애 조치 클러스터링의 경우 복원 력을 제공 합니다. 한 사이트;에 대 한 워크 로드를 격리할 수 없습니다. 다른 하나의 사이트에 실행 권한이 부여 된 VM을 실행할 수 있습니다.</li><li>다른 HGS를 사용 하 여 장애 조치를 Hyper-v 호스트를 등록 합니다.</li></ol>또한 로컬로 항상 복구할 수 있도록 해당 구성을 내보내 모든 HGS를 백업 해야 합니다. 자세한 내용은 [내보내기 HgsServerState](https://docs.microsoft.com/powershell/module/hgsserver/export-hgsserverstate) 하 고 [가져오기 HgsServerState](https://docs.microsoft.com/powershell/module/hgsserver/import-hgsserverstate)합니다. |
 | 호스트 보호자 서비스 키 | 두 비대칭 키 쌍을 사용 하는 호스트 보호자 서비스-암호화 키 및 서명 키-SSL 인증서에 의해 각각 표시 합니다. 이러한 키를 생성 하는 방법은 두 가지가 있습니다.<br><ol><li>내부 인증 기관 – 내부 PKI 인프라를 사용 하 여 이러한 키를 생성할 수 있습니다. 데이터 센터 환경에 적합합니다.</li><li>공개적으로 신뢰할 수 있는 인증서 기관 – 공개적으로 신뢰할 수 있는 인증 기관에서 얻은 키 집합을 사용 합니다. 호스팅 서비스 공급자를 사용 해야 하는 옵션입니다.</li></ol>자체 서명 된 인증서를 사용할 수 있지만, 좋지 않습니다 개념 증명 labs 이외의 배포 시나리오에 대 한 note 합니다.<br><br>HGS 키를 가져야 하는 것 외에도 호스팅 서비스 공급자는 "bring your own key" 테 넌 트 일부 또는 모든 테 넌 트 특정 HGS 키 자체를 유지할 수 있도록 자신의 키를 제공할 수를 사용할 수 있습니다. 이 옵션은 해당 키를 업로드 하려면 테 넌 트에 대 한 대역의 프로세스를 제공할 수 있는 호스팅 서비스 공급자에 적합 합니다. |
 | 호스트 보호 서비스에 대 한 키 저장소 | 가능한 가장 강력한 보안을 위해 HGS 키 생성 되 고 단독으로에서 보안 모듈 (HSM (하드웨어)를 저장 하는 것이 좋습니다. Hsm을 사용 하지 않는 경우 HGS 서버에 BitLocker 적용 것이 좋습니다. |
 

@@ -13,19 +13,19 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0d41c846034ad421d0da81bda57acbcd419c1ae1
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: bc3cfa583866335d214282be08366854dec77d0f
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66437397"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280004"
 ---
 # <a name="manage-bde-tpm"></a>관리 bde: tpm
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 > 
 > [!IMPORTANT]
-> Windows 8, Windows Server 2012 또는 이후 운영 체제를 실행 하는 컴퓨터에서 사용 하기 위해이 명령은 지원 되지 않습니다. 해당 컴퓨터에 대해 사용할 수는 [Windows PowerShell에 대 한 TPM 관리 cmdlet](https://docs.microsoft.com/en-us/powershell/module/trustedplatformmodule/)합니다.
+> Windows 8, Windows Server 2012 또는 이후 운영 체제를 실행 하는 컴퓨터에서 사용 하기 위해이 명령은 지원 되지 않습니다. 해당 컴퓨터에 대해 사용할 수는 [Windows PowerShell에 대 한 TPM 관리 cmdlet](https://docs.microsoft.com/powershell/module/trustedplatformmodule/)합니다.
 > 이 명령은 Windows 7 또는 Windows Server 2008을 실행 하는 컴퓨터를 사용 하는 경우 컴퓨터의 신뢰할 수 있는 TPM (플랫폼 모듈)이이 명령을 사용 하 여 구성할 수 있습니다. 이 명령을 사용할 수 있는 방법을의 예 참조 [예제](#BKMK_Examples)합니다.
 > ## <a name="syntax"></a>구문
 > ```

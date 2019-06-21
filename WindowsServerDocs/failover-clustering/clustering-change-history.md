@@ -9,16 +9,16 @@ manager: daveba
 ms.author: jgerend
 ms.date: 03/08/2019
 description: Windows Server 2016에 대 한 장애 조치 클러스터링 설명서의 새로운 기능과 업데이트 된 항목
-ms.openlocfilehash: 4044475995175ea527a1ecc487bc0e1cc6f75003
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d6dd5c98b14134d42901fad79a375298ad0e7e23
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59861224"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280176"
 ---
 # <a name="change-history-for-failover-clustering-topics"></a>장애 조치(failover) 클러스터링 항목에 대한 변경 기록
 
->적용 대상: Windows Server 2019, Windows Server 2016, Windows Server (반기 채널)
+>적용 대상: Windows Server 2019, Windows Server 2016
 
 이 항목에서는의 새로운 기능과 업데이트 된 항목을 나열 합니다 [장애 조치 클러스터링](failover-clustering-overview.md) Windows Server에 대 한 설명서입니다.
 
@@ -35,20 +35,20 @@ ms.locfileid: "59861224"
 |신규 항목 또는 변경된 항목                                    |설명 |
 |--------------------------------------------------------|------------|
 | [동일한 하드웨어에서 장애 조치 클러스터 업그레이드](upgrade-option-same-hardware.md)| 단추를 사용하여 새 |
-|[2-노드 파일 서버 배포](deploy-two-node-clustered-file-server.md)| 단추를 사용하여 새 |
+|[2노드 파일 서버 배포](deploy-two-node-clustered-file-server.md)| 단추를 사용하여 새 |
 
 ## <a name="january-2019"></a>2019 년 1 월
 
 |신규 항목 또는 변경된 항목                                    |설명 |
 |--------------------------------------------------------|------------|
-|[파일 공유 미러링 모니터 서버를 배포 합니다.](file-share-witness.md)    | 단추를 사용하여 새        |
+|[파일 공유 감시 배포](file-share-witness.md)    | 단추를 사용하여 새        |
 |[클러스터 도메인 마이그레이션](cluster-domain-migration.md) | 단추를 사용하여 새        |
 
 ## <a name="november-2018"></a>2018년 11월
 
 |신규 항목 또는 변경된 항목|설명|
 |---|---|
-|[Active Directory에서 클러스터 계정 구성](configure-ad-accounts.md)|마이그레이션된 합니다 [이전 버전](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) 라이브러리|
+|[Active Directory에서 클러스터 계정 구성](configure-ad-accounts.md)|마이그레이션된 합니다 [이전 버전](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) 라이브러리|
 
 ## <a name="october-2018"></a>2018년 10월
 
@@ -60,24 +60,24 @@ ms.locfileid: "59861224"
 
 |신규 항목 또는 변경된 항목|설명|
 |---|---|
-|[클러스터 설정](../storage/storage-spaces/cluster-sets.md)| 신규 항목|
+|[클러스터 세트](../storage/storage-spaces/cluster-sets.md)| 신규 항목|
 
 ## <a name="may-2018"></a>2018년 5월
 
 |신규 항목 또는 변경된 항목|설명|
 |---|---|
-|[구성 및 쿼럼 관리](manage-cluster-quorum.md) | 마이그레이션된 합니다 [이전 버전](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) 라이브러리입니다. |
+|[쿼럼 구성 및 관리](manage-cluster-quorum.md) | 마이그레이션된 합니다 [이전 버전](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) 라이브러리입니다. |
 
 ## <a name="april-2018"></a>2018년 4월
 
 |신규 항목 또는 변경된 항목|설명|
 |---|---|
-|[Windows 오류 보고를 사용 하 여 장애 조치 클러스터 문제 해결](troubleshooting-using-WER-reports.md)| 신규 항목입니다. |
-|[응용 프로그램 데이터용 스케일 아웃 파일 서버](sofs-overview.md)|마이그레이션된 합니다 [이전 버전](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) 라이브러리입니다.|
+|[Windows 오류 보고를 사용하여 장애 조치(failover) 클러스터 문제 해결](troubleshooting-using-WER-reports.md)| 신규 항목입니다. |
+|[애플리케이션 데이터용 스케일 아웃 파일 서버](sofs-overview.md)|마이그레이션된 합니다 [이전 버전](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) 라이브러리입니다.|
 |[하드웨어 요구 사항](clustering-requirements.md)|마이그레이션된 합니다 [이전 버전](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) 라이브러리입니다.|
-|[클러스터 공유 볼륨 (Csv) 사용](failover-cluster-csvs.md)|마이그레이션된 합니다 [이전 버전](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) 라이브러리입니다.|
+|[CSV(클러스터 공유 볼륨) 사용](failover-cluster-csvs.md)|마이그레이션된 합니다 [이전 버전](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) 라이브러리입니다.|
 |[장애 조치 클러스터 만들기](create-failover-cluster.md)|마이그레이션된 합니다 [이전 버전](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) 라이브러리입니다.|
-|[AD DS에 클러스터를 사전 준비](prestage-cluster-adds.md)|마이그레이션된 합니다 [이전 버전](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) 라이브러리입니다.|
+|[AD DS에서 클러스터 미리 준비](prestage-cluster-adds.md)|마이그레이션된 합니다 [이전 버전](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) 라이브러리입니다.|
 |[장애 조치 클러스터에 대 한 클라우드 감시 배포](deploy-cloud-witness.md)|마이그레이션된 합니다 [이전 버전](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) 라이브러리입니다.|
 
 ## <a name="june-2017"></a>2017년 6월
@@ -91,7 +91,7 @@ ms.locfileid: "59861224"
 |신규 항목 또는 변경된 항목|설명|
 |---|---|
 |[클러스터 인식 업데이트 개요](cluster-aware-updating.md)|신규 항목입니다.|
-|[클러스터 인식 업데이트 요구 사항 및 모범 사례](cluster-aware-updating-requirements.md)|신규 항목입니다.|
+|[클러스터 인식 업데이트의 요구 사항 및 모범 사례](cluster-aware-updating-requirements.md)|신규 항목입니다.|
 |[클러스터 인식 업데이트 고급 옵션](cluster-aware-updating-options.md)|신규 항목입니다.|
 |[클러스터 인식 업데이트 FAQ](cluster-aware-updating-faq.md)|신규 항목입니다.|
 |[클러스터 인식 업데이트 플러그 인](cluster-aware-updating-plug-ins.md)|신규 항목입니다.|

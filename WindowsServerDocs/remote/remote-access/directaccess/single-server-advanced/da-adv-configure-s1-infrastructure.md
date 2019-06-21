@@ -6,19 +6,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- networking-da
+ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 43abc30a-300d-4752-b845-10a6b9f32244
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 9d19ac813280981341019330470cc5d53ee00778
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 42cec0d2e6ded443d24d787191bcb72a17a92306
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66446114"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67283532"
 ---
 # <a name="step-1-configure-advanced-directaccess-infrastructure"></a>1 단계 고급 DirectAccess 인프라 구성
 
@@ -176,7 +175,7 @@ DirectAccess 서버와 IPsec 인증을 사용하는 모든 DirectAccess 클라�
   
 프라이빗 인증서를 사용하는 경우 다음 사항이 필요합니다(이미 존재하지 않는 경우).  
   
--   IP-HTTPS 인증에 사용되는 웹 사이트 인증서. 인증서 주체는 인터넷에서 연결할 수 있으며 외부에서 확인 가능한 FQDN이어야 합니다. 1.5.2의 지침에 따라 만든 인증서 템플릿을 기반으로 하는 인증서는 인증서 템플릿을 구성 합니다.  
+-   IP-HTTPS 인증에 사용되는 웹 사이트 인증서. 인증서 주체는 인터넷에서 연결할 수 있으며 외부에서 확인 가능한 FQDN이어야 합니다. 1\.5.2의 지침에 따라 만든 인증서 템플릿을 기반으로 하는 인증서는 인증서 템플릿을 구성 합니다.  
   
 -   공개적으로 확인 가능한 FQDN에서 연결할 수 있는 CRL(인증서 해지 목록) 배포 지점  
   

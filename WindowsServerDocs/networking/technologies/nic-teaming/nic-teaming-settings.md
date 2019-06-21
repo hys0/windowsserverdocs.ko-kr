@@ -6,20 +6,19 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- networking-nict
+ms.technology: networking-nict
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a4caaa86-5799-4580-8775-03ee213784a3
 ms.author: pashort
 author: shortpatti
 ms.date: 09/13/2018
-ms.openlocfilehash: 57957e88ff4c398be23355534d5cc0ad7f920bb1
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: dd222cdbcd8b4eee19da6b79e12bd11f6bdd8629
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59877934"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67283732"
 ---
 # <a name="nic-teaming-settings"></a>NIC 팀 설정
 이 항목에서는 팀 같은 NIC 팀 속성의 개요를 제공 하 고 부하 분산 모드. 또한 제공 대기 어댑터 설정 및 기본 팀 인터페이스 속성에 대 한 세부 정보입니다. NIC 팀을 두 개 이상의 네트워크 어댑터가 있는 경우 내결함성을 위해 대기 어댑터를 지정할 필요가 없습니다.

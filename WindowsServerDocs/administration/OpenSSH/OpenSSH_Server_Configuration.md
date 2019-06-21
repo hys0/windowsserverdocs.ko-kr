@@ -6,12 +6,12 @@ contributor: maertendMSFT
 ms.product: w10
 author: maertendMSFT
 title: Windows 용 OpenSSH 서버 구성
-ms.openlocfilehash: 8e6476e4005bd5bbc2d40c8a59d39510ca1beb70
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7eff3d3e1af67c9daf7a68c67c3609c0ee89fc93
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59827284"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280032"
 ---
 # <a name="openssh-server-configuration-for-windows-10-1809-and-server-2019"></a>Windows 10 1809 및 Server 2019 # OpenSSH 서버 구성
 
@@ -27,8 +27,8 @@ OpenSSH 구성 옵션 온라인에 대 한 자세한 설명서를 유지 관리 
 
 명령 셸 | 명령 사용
 ------------- | -------------- 
-Command | path
-PowerShell | $env:\path
+명령 | path
+PowerShell | $env:path
 
 기본 ssh shell은 구성할 Windows 레지스트리에서 셸에 문자열 값 DefaultShell Computer\HKEY_LOCAL_MACHINE\SOFTWARE\OpenSSH 실행 파일의 전체 경로 추가 하 여. 
 
@@ -53,7 +53,7 @@ Windows에서 sshd %programdata%\ssh\sshd_config에서 기본적으로 구성 �
 도메인 사용자 또는 그룹을 사용 하 여 규칙을 기반 사용자/그룹을 구성 하는 경우 다음 형식을 사용 합니다. ``` user?domain* ```합니다.
 Windows 형식의 여러 도메인 보안 주체를 지정 허용 되지만 여러 표준 Linux 패턴을 사용 하 여 충돌 합니다. 이런 이유로 * Fqdn을 처리 하기 위해 추가 됩니다. 또한이 방법을 사용 하 여 "?", 대신 @를 사용 하 여 충돌을 방지 하는 username@host 형식입니다. 
 
-작업 그룹 사용자/그룹 및 계정을 인터넷에 연결 된 해당 로컬 계정 이름 (없는 도메인 부분을 표준 Unix 이름을 비슷합니다)를 항상 확인 됩니다. 도메인 사용자 및 그룹은 엄격 하 게 확인 [NameSamCompatible](https://docs.microsoft.com/en-us/windows/desktop/api/secext/ne-secext-extended_name_format) domain_short_name\user_name 형식입니다. 모든 사용자/그룹 기준 구성 규칙에서이 형식을 준수 해야 합니다.
+작업 그룹 사용자/그룹 및 계정을 인터넷에 연결 된 해당 로컬 계정 이름 (없는 도메인 부분을 표준 Unix 이름을 비슷합니다)를 항상 확인 됩니다. 도메인 사용자 및 그룹은 엄격 하 게 확인 [NameSamCompatible](https://docs.microsoft.com/windows/desktop/api/secext/ne-secext-extended_name_format) domain_short_name\user_name 형식입니다. 모든 사용자/그룹 기준 구성 규칙에서이 형식을 준수 해야 합니다.
 
 도메인 사용자 및 그룹에 대 한 예제 
 

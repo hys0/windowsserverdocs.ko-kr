@@ -8,12 +8,12 @@ author: johnmarlin-msft
 ms.date: 01/18/2019
 description: 이 문서에서는 다른 Windows Server 2019 클러스터 도메인 간 이동에 대해 설명 합니다.
 ms.localizationpriority: medium
-ms.openlocfilehash: 1054de942e807f00586903683faeaf695ec2f033
-ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
+ms.openlocfilehash: 5d5aaa333d2e20fa25e4738e343f326d63f75c6b
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66452934"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280218"
 ---
 # <a name="failover-cluster-domain-migration"></a>장애 조치 클러스터 도메인 마이그레이션
 
@@ -61,7 +61,7 @@ Windows Server 2016 및 이전 버전에서는 클러스터 서비스가 다른 
 애니메이션에서 알 수 있듯이,이 옵션 삭제 되지 않지만 다른 하드웨어 또는 기존 클러스터에서 노드 제거 된 것 보다.
 
 1. 사용 가능한 이전 클러스터를 계속 하면서 새 clusterin 새 도메인을 만듭니다.
-2. 사용 된 [클러스터 마이그레이션 마법사](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754481(v=ws.10)) 모든 리소스를 새 클러스터로 마이그레이션하려 합니다. 말하지만이 복사 하지 않습니다 데이터를 셰이핑하거나 별도로 수행 해야 합니다.
+2. 사용 된 [클러스터 마이그레이션 마법사](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754481(v=ws.10)) 모든 리소스를 새 클러스터로 마이그레이션하려 합니다. 말하지만이 복사 하지 않습니다 데이터를 셰이핑하거나 별도로 수행 해야 합니다.
 3. 서비스 해제 하거나 이전 클러스터를 삭제 합니다.
 
 두 옵션 모두에 새 클러스터를 모두 포함 해야 [클러스터 인식 응용 프로그램](https://technet.microsoft.com/aa369082(v=vs.90)) 모든 최신 드라이버를 설치 하 고 모두를 확인 하는 테스트 가능한 제대로 실행 됩니다.  데이터 이동 해야 하는 경우 시간이 많이 걸리는 프로세스입니다.

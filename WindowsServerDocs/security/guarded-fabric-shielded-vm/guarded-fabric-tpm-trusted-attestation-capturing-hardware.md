@@ -8,12 +8,12 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 04/01/2019
-ms.openlocfilehash: 61f56eea59d11264047a9c7b8b6734617ad1802f
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 24d81e3d2c31b3493563f3f3e2ab3f92afff2c06
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66447334"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284135"
 ---
 # <a name="authorize-guarded-hosts-using-tpm-based-attestation"></a>TPM 기반 증명을 사용 하 여 보호 된 호스트를 권한 부여
 
@@ -99,7 +99,7 @@ Windows Server 버전 1709부터 샘플 코드 무결성 정책을 Windows C:\Wi
 
 3.  CI 정책을 참조 호스트에 적용 됩니다.
 
-    1.  CI 정책을 사용 하 여 컴퓨터를 구성 하려면 다음 명령을 실행 합니다. 사용 하 여 CI 정책을 배포할 수도 있습니다 [그룹 정책](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy) 하거나 [System Center Virtual Machine Manager](https://docs.microsoft.com/en-us/system-center/vmm/guarded-deploy-host?view=sc-vmm-2019#manage-and-deploy-code-integrity-policies-with-vmm)합니다.
+    1.  CI 정책을 사용 하 여 컴퓨터를 구성 하려면 다음 명령을 실행 합니다. 사용 하 여 CI 정책을 배포할 수도 있습니다 [그룹 정책](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy) 하거나 [System Center Virtual Machine Manager](https://docs.microsoft.com/system-center/vmm/guarded-deploy-host?view=sc-vmm-2019#manage-and-deploy-code-integrity-policies-with-vmm)합니다.
 
         ```powershell
         Invoke-CimMethod -Namespace root/Microsoft/Windows/CI -ClassName PS_UpdateAndCompareCIPolicy -MethodName Update -Arguments @{ FilePath = "C:\temp\HW1CodeIntegrity.p7b" }

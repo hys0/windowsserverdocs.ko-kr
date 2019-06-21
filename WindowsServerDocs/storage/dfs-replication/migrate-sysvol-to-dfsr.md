@@ -6,12 +6,12 @@ ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: da581ee0c5ee05d5e169496908e1cf3bd1a7f5dc
-ms.sourcegitcommit: 2977c707a299929c6ab0d1e0adab2e1c644b8306
+ms.openlocfilehash: 30b3c5925971a2709ba422a017a73f47e72813a7
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63738547"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284429"
 ---
 # <a name="migrate-sysvol-replication-to-dfs-replication"></a>SYSVOL 복제를 DFS 복제로 마이그레이션
 
@@ -34,38 +34,38 @@ DFS 복제에 SYSVOL 폴더를 복제 하는 데 사용 하려면 Windows Server
 
 ## <a name="in-this-guide"></a>이 가이드의 내용
 
-[SYSVOL 마이그레이션에 대 한 개념 정보](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd640170(v=ws.10))
+[SYSVOL 마이그레이션에 대 한 개념 정보](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd640170(v=ws.10))
 
-  - [SYSVOL 마이그레이션 상태](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd641052(v=ws.10))  
+  - [SYSVOL 마이그레이션 상태](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd641052(v=ws.10))  
       
-  - [SYSVOL 마이그레이션 절차의 개요](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd639809(v=ws.10))  
-      
-
-[SYSVOL 마이그레이션 절차](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd639860(v=ws.10))
-
-  - [준비 된 상태 마이그레이션](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd641193(v=ws.10))  
-      
-  - [리디렉션된 상태로 마이그레이션](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd641340(v=ws.10))  
-      
-  - [제거 상태로 마이그레이션](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd640254(v=ws.10))  
+  - [SYSVOL 마이그레이션 절차의 개요](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd639809(v=ws.10))  
       
 
-[SYSVOL 마이그레이션 문제 해결](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd640395(v=ws.10))
+[SYSVOL 마이그레이션 절차](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd639860(v=ws.10))
 
-  - [SYSVOL 마이그레이션 문제 해결](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd639976(v=ws.10))  
+  - [준비 된 상태 마이그레이션](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd641193(v=ws.10))  
       
-  - [이전 안정적인 상태로 SYSVOL 마이그레이션 롤백](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd640509(v=ws.10))  
+  - [리디렉션된 상태로 마이그레이션](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd641340(v=ws.10))  
+      
+  - [제거 상태로 마이그레이션](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd640254(v=ws.10))  
       
 
-[SYSVOL 마이그레이션 참조 정보](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd640293(v=ws.10))
+[SYSVOL 마이그레이션 문제 해결](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd640395(v=ws.10))
 
-  - [지원 되는 SYSVOL 마이그레이션 시나리오](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd639854(v=ws.10))  
+  - [SYSVOL 마이그레이션 문제 해결](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd639976(v=ws.10))  
       
-  - [SYSVOL 마이그레이션 상태 확인](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd639789(v=ws.10))  
+  - [이전 안정적인 상태로 SYSVOL 마이그레이션 롤백](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd640509(v=ws.10))  
       
-  - [Dfsrmig](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd641227(v=ws.10))  
+
+[SYSVOL 마이그레이션 참조 정보](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd640293(v=ws.10))
+
+  - [지원 되는 SYSVOL 마이그레이션 시나리오](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd639854(v=ws.10))  
       
-  - [SYSVOL 마이그레이션 도구 작업](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd639712(v=ws.10))  
+  - [SYSVOL 마이그레이션 상태 확인](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd639789(v=ws.10))  
+      
+  - [Dfsrmig](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd641227(v=ws.10))  
+      
+  - [SYSVOL 마이그레이션 도구 작업](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd639712(v=ws.10))  
       
 
 ## <a name="additional-references"></a>추가 참조

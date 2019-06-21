@@ -6,19 +6,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- networking-ras
+ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1459819a-b1b6-4800-8770-4a85d02c7a2b
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: b992f302378c103b242537c97e5d4b41e382b9cd
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3b2c251f99be455ec11e3ea3ef25ca14c8399de2
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59876234"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67282974"
 ---
 # <a name="manage-remote-access"></a>원격 액세스 관리
 
@@ -32,7 +31,7 @@ Windows Server 2016 및 Windows Server 2012 DirectAccess 및 라우팅 및 원�
 > 이 항목 외에도 다음과 같은 원격 액세스 관리 항목을 사용할 수 있습니다.  
 >   
 > -   [원격 액세스 모니터링 및 계정 사용](monitoring-and-accounting/Use-Remote-Access-Monitoring-and-Accounting.md)  
-> -   [DirectAccess 클라이언트를 원격으로 관리](manage-remote-clients/Manage-DirectAccess-Clients-Remotely.md)  
+> -   [DirectAccess 클라이언트 원격 관리](manage-remote-clients/Manage-DirectAccess-Clients-Remotely.md)  
   
 ## <a name="BKMK_OVER"></a>시나리오 설명  
 DirectAccess 클라이언트 컴퓨터는 사용자가 컴퓨터에 로그인했는지 여부에 관계없이 인터넷에 연결될 때마다 인트라넷에 연결됩니다. 따라서 인트라넷 리소스로 관리할 수 있으며 그룹 정책 변경, 운영 체제 업데이트, 맬웨어 방지 업데이트 및 기타 조직 구성 변경을 통해 최신 상태로 유지할 수 있습니다.  

@@ -8,12 +8,12 @@ ms.date: 06/04/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
-ms.openlocfilehash: 258f25a7e1ec5c796c15450625397e96db25d693
-ms.sourcegitcommit: cd12ace92e7251daaa4e9fabf1d8418632879d38
+ms.openlocfilehash: 8f0f16f14ccf9099af8ff8bb8b27209c75c87cfc
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66501516"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284464"
 ---
 # <a name="storage-migration-service-frequently-asked-questions-faq"></a>저장소 마이그레이션 서비스 질문과 대답 (FAQ)
 
@@ -131,7 +131,7 @@ Windows Server 2019에 제공 하는 저장소 마이그레이션 서비스 버�
 
 - **고성능 처리를 사용 하도록 설정 합니다.** 서버의 BIOS/UEFI 설정이 고성능을 지원하는지 확인합니다(예: C-상태 사용 안 함, QPI 속도 설정, NUMA 사용, 가장 높은 메모리 주파수 설정 등). Windows Server의 전원 관리 고성능으로 설정 되었는지 확인 합니다. 필요에 따라 다시 시작합니다. 마이그레이션을 완료 한 후이 적절 한 상태를 반환할 것을 잊지 마세요. 
 
-- **하드웨어 튜닝** 검토 합니다 [성능 튜닝 지침에 대 한 Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/administration/performance-tuning/) 튜닝 오 케 스트레이 터 및 Windows Server 2019를 실행 하는 대상 컴퓨터 및 Windows Server 2016에 대 한 합니다. 합니다 [네트워크 하위 시스템 성능 튜닝](https://docs.microsoft.com/en-us/windows-server/networking/technologies/network-subsystem/net-sub-performance-tuning-nics) 섹션에 특히 중요 한 정보가 포함 되어 있습니다.
+- **하드웨어 튜닝** 검토 합니다 [성능 튜닝 지침에 대 한 Windows Server 2016](https://docs.microsoft.com/windows-server/administration/performance-tuning/) 튜닝 오 케 스트레이 터 및 Windows Server 2019를 실행 하는 대상 컴퓨터 및 Windows Server 2016에 대 한 합니다. 합니다 [네트워크 하위 시스템 성능 튜닝](https://docs.microsoft.com/windows-server/networking/technologies/network-subsystem/net-sub-performance-tuning-nics) 섹션에 특히 중요 한 정보가 포함 되어 있습니다.
 
 - **더 빠른 저장소를 사용 합니다.** 원본 컴퓨터 저장소 속도 업그레이드 하기 어려울 수 있지만, 대상 저장소는 쓰기 IO 성능 속도 만큼 빠르게 전송에서 없는 불필요 한 병목 상태가 있는지 확인 하기 위해 원본이 읽기 IO 성능으로 이상 확인 해야 합니다. 대상 VM 인 경우, 적어도 마이그레이션에서는 실행 되도록 하이퍼바이저 호스트에서 가장 빠른 저장소 계층의 같은 플래시 계층 또는 미러된 전체 플래시 또는 하이브리드 공간을 활용 하 여 저장소 공간 다이렉트 HCI 클러스터를 사용 하 여 합니다. SMS 마이그레이션이 완료 되었을 때 VM 실시간으로 마이그레이션할 수 있습니다 느린 계층 또는 호스트 합니다.
 

@@ -10,12 +10,12 @@ ms.topic: article
 author: adagashe
 ms.date: 3/26/2019
 ms.localizationpriority: ''
-ms.openlocfilehash: 908e4a7a75606905caebfa4b79168b3976982e6d
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 6b229696e796f176fe89ab250ab48f1d9f0d5666
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66447589"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280199"
 ---
 ---
 # <a name="use-azure-monitor-to-send-emails-for-health-service-faults"></a>Azure 모니터를 사용 하 여 상태 서비스 오류에 대 한 전자 메일 보내기
@@ -31,11 +31,11 @@ Azure Monitor를 수집, 분석 및 클라우드 로부터 원격 분석 데이�
 
 두 가지 기본 유형 중 하나에 적합 한 Azure Monitor에서 수집한 모든 데이터: 메트릭 및 로그 합니다.
 
-1. [메트릭](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/data-collection#metrics) 시간에서 특정 지점에서 시스템의 일부 측면을 설명 하는 숫자 값입니다. 이들은 간단 하 고 거의 실시간 시나리오를 지원할 수입니다. Azure portal에서 해당 개요 페이지에서 Azure Monitor에서 수집 된 데이터 표시 됩니다.
+1. [메트릭](https://docs.microsoft.com/azure/azure-monitor/platform/data-collection#metrics) 시간에서 특정 지점에서 시스템의 일부 측면을 설명 하는 숫자 값입니다. 이들은 간단 하 고 거의 실시간 시나리오를 지원할 수입니다. Azure portal에서 해당 개요 페이지에서 Azure Monitor에서 수집 된 데이터 표시 됩니다.
 
 ![메트릭 탐색기에서 메트릭 수집의 이미지](media/configure-azure-monitor/metrics.png)
 
-2. [로그](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/data-collection#logs) 여러 종류의 다른 각 형식에 대 한 속성 집합을 사용 하 여 레코드를 구성 하는 데이터를 포함 합니다. 이벤트 및 추적과 같은 원격 분석으로 저장 됩니다 로그 또한 성능 데이터를 모두 결합 되는 분석 되도록 합니다. Azure Monitor에서 수집한 로그 데이터를 사용 하 여 분석할 수 있습니다 [쿼리](https://docs.microsoft.com/en-us/azure/azure-monitor/log-query/log-query-overview) 를 신속 하 게 검색 하 고, 통합 및, 수집 된 데이터를 분석 합니다. 만들고 사용 하 여 쿼리를 테스트할 수 있습니다 [Log Analytics](https://docs.microsoft.com/en-us/azure/azure-monitor/log-query/portals) Azure portal 및 다음에서 직접 이러한 도구를 사용 하 여 데이터를 분석 또는 사용에 대 한 쿼리를 저장할 [시각화](https://docs.microsoft.com/en-us/azure/azure-monitor/visualizations) 또는 [경고 규칙](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/alerts-overview)합니다.
+2. [로그](https://docs.microsoft.com/azure/azure-monitor/platform/data-collection#logs) 여러 종류의 다른 각 형식에 대 한 속성 집합을 사용 하 여 레코드를 구성 하는 데이터를 포함 합니다. 이벤트 및 추적과 같은 원격 분석으로 저장 됩니다 로그 또한 성능 데이터를 모두 결합 되는 분석 되도록 합니다. Azure Monitor에서 수집한 로그 데이터를 사용 하 여 분석할 수 있습니다 [쿼리](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview) 를 신속 하 게 검색 하 고, 통합 및, 수집 된 데이터를 분석 합니다. 만들고 사용 하 여 쿼리를 테스트할 수 있습니다 [Log Analytics](https://docs.microsoft.com/azure/azure-monitor/log-query/portals) Azure portal 및 다음에서 직접 이러한 도구를 사용 하 여 데이터를 분석 또는 사용에 대 한 쿼리를 저장할 [시각화](https://docs.microsoft.com/azure/azure-monitor/visualizations) 또는 [경고 규칙](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-overview)합니다.
 
 ![log analytics에서 수집 된 로그의 이미지](media/configure-azure-monitor/logs.png)
 
@@ -64,9 +64,9 @@ get-storagesubsystem clus* | Set-StorageHealthSetting -Name "Platform.ETW.MasTyp
 
 이제가 있는 경우 설치 클러스터에 적절 한 로깅을 올바르게 log analytics를 구성 하려면 다음 단계가입니다.
 
-개요를 제공 [Azure Log Analytics](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/agent-windows) 상세한 분석 및 상관 관계를 단일 저장소로 데이터 센터 또는 다른 클라우드 환경의 실제 또는 가상 Windows 컴퓨터에서 직접 데이터를 수집할 수 있습니다.
+개요를 제공 [Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/agent-windows) 상세한 분석 및 상관 관계를 단일 저장소로 데이터 센터 또는 다른 클라우드 환경의 실제 또는 가상 Windows 컴퓨터에서 직접 데이터를 수집할 수 있습니다.
 
-를 지원 되는 구성을 이해 하려면 검토 [지원 되는 Windows 운영 체제](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/log-analytics-agent#supported-windows-operating-systems) 하 고 [네트워크 방화벽 구성](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/log-analytics-agent#network-firewall-requirements)합니다.
+를 지원 되는 구성을 이해 하려면 검토 [지원 되는 Windows 운영 체제](https://docs.microsoft.com/azure/azure-monitor/platform/log-analytics-agent#supported-windows-operating-systems) 하 고 [네트워크 방화벽 구성](https://docs.microsoft.com/azure/azure-monitor/platform/log-analytics-agent#network-firewall-requirements)합니다.
 
 Azure 구독이 없으면 만듭니다는 [무료 계정](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) 시작 하기 전에 합니다.
 
@@ -76,7 +76,7 @@ Azure portal에 로그인 [ https://portal.azure.com ](https://azure.microsoft.c
 
 ### <a name="create-a-workspace"></a>작업 영역 만들기
 
-아래에 나열 된 단계에 대 한 자세한 내용은 참조는 [Azure Monitor 설명서](https://docs.microsoft.com/en-us/azure/azure-monitor/learn/quick-collect-windows-computer)합니다.
+아래에 나열 된 단계에 대 한 자세한 내용은 참조는 [Azure Monitor 설명서](https://docs.microsoft.com/azure/azure-monitor/learn/quick-collect-windows-computer)합니다.
 
 1. Azure 포털에서 클릭 **모든 서비스**합니다. 리소스 목록에서 입력 **Log Analytics**합니다. 사용자의 입력에 따라 입력을 시작 하면 목록이 필터링 됩니다. 선택 **Log Analytics**합니다.<br><br> 
 
@@ -123,7 +123,7 @@ Azure portal에 로그인 [ https://portal.azure.com ](https://azure.microsoft.c
 
 ![Log Analytics에 대 한 MMA 연결 상태](media/configure-azure-monitor/log-analytics-mma-laworkspace-status.png)
 
-를 지원 되는 구성을 이해 하려면 검토 [지원 되는 Windows 운영 체제](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/log-analytics-agent#supported-windows-operating-systems) 하 고 [네트워크 방화벽 구성](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/log-analytics-agent#network-firewall-requirements)합니다.
+를 지원 되는 구성을 이해 하려면 검토 [지원 되는 Windows 운영 체제](https://docs.microsoft.com/azure/azure-monitor/platform/log-analytics-agent#supported-windows-operating-systems) 하 고 [네트워크 방화벽 구성](https://docs.microsoft.com/azure/azure-monitor/platform/log-analytics-agent#network-firewall-requirements)합니다.
 
 ## <a name="collecting-event-and-performance-data"></a>이벤트 및 성능 데이터 수집
 
@@ -212,4 +212,4 @@ Event | where (EventLevelName == "Error")
 ## <a name="see-also"></a>참조
 
 - [저장소 공간 다이렉트 개요](storage-spaces-direct-overview.md)
-- 자세한 내용은 읽기를 [Azure Monitor 설명서](https://docs.microsoft.com/en-us/azure/azure-monitor/learn/tutorial-viewdata)합니다.
+- 자세한 내용은 읽기를 [Azure Monitor 설명서](https://docs.microsoft.com/azure/azure-monitor/learn/tutorial-viewdata)합니다.

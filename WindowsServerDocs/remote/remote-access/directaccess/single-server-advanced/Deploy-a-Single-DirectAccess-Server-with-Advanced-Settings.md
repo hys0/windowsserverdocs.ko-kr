@@ -6,19 +6,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- networking-da
+ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b211a9ca-1208-4e1f-a0fe-26a610936c30
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 260926e4818ef95db85d00af02a4fa87665ad709
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: f17e1c9dd1a4e2d064a4e5980904c524dc62fb72
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59864654"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67283606"
 ---
 # <a name="deploy-a-single-directaccess-server-with-advanced-settings"></a>고급 설정을 사용하여 단일 DirectAccess 서버 배포
 
@@ -29,9 +28,9 @@ ms.locfileid: "59864654"
 ## <a name="before-you-begin-deploying-see-the-list-of-unsupported-configurations-known-issues-and-prerequisites"></a>배포를 시작하기 전에 지원되지 않는 구성, 알려진 문제 및 사전 요구 사항 목록을 참조하세요.  
 DirectAccess를 배포 하기 전에 필수 구성 요소 및 기타 정보를 검토 하려면 다음 항목을 사용할 수 있습니다.  
   
--   [DirectAccess 지원 되지 않는 구성](../../../remote-access/directaccess/DirectAccess-Unsupported-Configurations.md)  
+-   [DirectAccess에서 지원되지 않는 구성](../../../remote-access/directaccess/DirectAccess-Unsupported-Configurations.md)  
   
--   [DirectAccess를 배포 하기 위한 필수 구성 요소](../../../remote-access/directaccess/Prerequisites-for-Deploying-DirectAccess.md)  
+-   [DirectAccess를 배포하기 위한 필수 조건](../../../remote-access/directaccess/Prerequisites-for-Deploying-DirectAccess.md)  
   
 ## <a name="BKMK_OVER"></a>시나리오 설명  
 이 시나리오에서는 Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012를 실행 하는 단일 컴퓨터는 고급 설정 사용 하 여 DirectAccess 서버로 구성 됩니다.  

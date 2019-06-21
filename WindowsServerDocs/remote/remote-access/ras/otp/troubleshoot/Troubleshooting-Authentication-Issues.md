@@ -6,19 +6,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- networking-ras
+ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 71307757-f8f4-4f82-b8b3-ffd4fd8c5d6d
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: ff1dd94db3e433235a87fd6809459283fc439d0d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 08dd6822cc30135506d82041cfbeab0bc1a058ab
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59855744"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67282361"
 ---
 # <a name="troubleshooting-authentication-issues"></a>인증 문제 해결
 
@@ -77,7 +76,7 @@ DirectAccess 서버에서 다음 Windows PowerShell 명령을 실행 합니다.
   
 **해결 방법**  
   
-DirectAccess OTP 사용자에 게 권한을 DirectAccess OTP 로그온 인증서를 등록 하 고 적절 한 "응용 프로그램 정책" 서명 템플릿 DA OTP 등록 기관에 포함 되어 있는지 확인 합니다. 또한 원격 액세스 서버에서 DirectAccess 등록 기관 인증서가 유효한 지 확인 합니다. 3.2 계획 OTP 인증서 템플릿 및 3.3 계획 등록 기관 인증서를 참조 하세요.  
+DirectAccess OTP 사용자에 게 권한을 DirectAccess OTP 로그온 인증서를 등록 하 고 적절 한 "응용 프로그램 정책" 서명 템플릿 DA OTP 등록 기관에 포함 되어 있는지 확인 합니다. 또한 원격 액세스 서버에서 DirectAccess 등록 기관 인증서가 유효한 지 확인 합니다. 3\.2 계획 OTP 인증서 템플릿 및 3.3 계획 등록 기관 인증서를 참조 하세요.  
   
 ## <a name="missing-or-invalid-computer-account-certificate"></a>컴퓨터 계정 인증서가 없거나 잘못 되었습니다  
 **시나리오**합니다. 사용자는 OTP를 사용 하 여 오류를 사용 하 여 인증에 실패 합니다. "내부 오류로 인해 인증에 실패 했습니다"  
@@ -153,7 +152,7 @@ DirectAccess 서버의 주소를 제대로 구성 되지 않았습니다.
   
 -   OTP 로그온 서식 파일에 설정 권한을 검토 하 고는 DirectAccess otp 프로 비전 된 모든 사용자에 게 '읽기' 권한이 있는지 확인 합니다.  
   
--   도메인 컨트롤러를 관리 서버로 구성 되어 있는지 및 인프라 터널을 통해 클라이언트 컴퓨터는 도메인 컨트롤러에 연결할 수 있는지에 있는지 확인 합니다. 3.2 계획 OTP 인증서 템플릿을 참조 하세요.  
+-   도메인 컨트롤러를 관리 서버로 구성 되어 있는지 및 인프라 터널을 통해 클라이언트 컴퓨터는 도메인 컨트롤러에 연결할 수 있는지에 있는지 확인 합니다. 3\.2 계획 OTP 인증서 템플릿을 참조 하세요.  
   
 ## <a name="no-connection-to-the-domain-controller"></a>도메인 컨트롤러에 연결 하지 않고  
 **시나리오**합니다. 사용자는 OTP를 사용 하 여 오류를 사용 하 여 인증에 실패 합니다. "내부 오류로 인해 인증에 실패 했습니다"  

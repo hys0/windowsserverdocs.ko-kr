@@ -6,19 +6,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- networking-da
+ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3d66901a-c40b-474c-9948-f989f399cfea
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 4f31c0e1d36ff458fb4807ab6856a56498f449ab
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8c3e12f9d64619ce00e578c7a8096c764e68ff7d
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59838184"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67283163"
 ---
 # <a name="step-6-install-and-configure-2-dc1"></a>6 설치 단계 및 2-DC1 구성
 
@@ -74,7 +73,7 @@ ms.locfileid: "59838184"
   
 6.  **이 연결에 대 한 DNS 접미사**, 형식 **corp2.corp.contoso.com**를 클릭 하 고 **확인** 두 번입니다.  
   
-7.  **인터넷 프로토콜 버전 6(TCP/IPv6)**, **속성**을 차례로 클릭합니다.  
+7.  **인터넷 프로토콜 버전 6(TCP/IPv6)** , **속성**을 차례로 클릭합니다.  
   
 8.  클릭 **다음 IPv6 주소를 사용 하 여**입니다. **IPv6 주소**, 형식 **2001:db8:2::1**합니다. **서브넷 접두사 길이**, 형식 **64**합니다. **기본 게이트웨이**, 형식 **2001:db8:2::fe**합니다. 클릭 **다음 DNS 서버 주소를 사용 하 여**의 **기본 설정 DNS 서버**, 유형 **2001:db8:2::1**, 및 **대체 DNS 서버**, 형식 **2001:db8:1::1**합니다.  
   
@@ -182,9 +181,9 @@ CORP2 도메인에서 컴퓨터 APP1의 인증 기관에서 컴퓨터 인증서�
   
 6.  **선택할 개체 이름을 입력 하십시오**, 형식 **Domain Admins; 도메인 컴퓨터** 을 클릭 한 다음 **확인**합니다.  
   
-7.  에 **Client-server Authentication 속성** 대화 상자의 **그룹 또는 사용자 이름**, 클릭 **Domain Admins (CORP2\Domain Admins)**, 및  **Domain Admins의 권한**를 **허용** 열을 선택 **작성** 하 고 **등록**.  
+7.  에 **Client-server Authentication 속성** 대화 상자의 **그룹 또는 사용자 이름**, 클릭 **Domain Admins (CORP2\Domain Admins)** , 및  **Domain Admins의 권한**를 **허용** 열을 선택 **작성** 하 고 **등록**.  
   
-8.  **그룹 또는 사용자 이름**, 클릭 **도메인 컴퓨터 (CORP2\Domain 컴퓨터)**, 및 **도메인 컴퓨터에 대 한 권한을**를 **허용**열을 선택 **등록** 하 고 **자동 등록**를 클릭 하 고 **확인**합니다.  
+8.  **그룹 또는 사용자 이름**, 클릭 **도메인 컴퓨터 (CORP2\Domain 컴퓨터)** , 및 **도메인 컴퓨터에 대 한 권한을**를 **허용**열을 선택 **등록** 하 고 **자동 등록**를 클릭 하 고 **확인**합니다.  
   
 9. 인증서 템플릿 콘솔을 닫습니다.  
   
@@ -201,7 +200,7 @@ CORP2 도메인에서 컴퓨터 APP1의 인증 기관에서 컴퓨터 인증서�
   
 4.  에 **DEFAULTIPSITELINK 속성** 대화 상자의 **비용**, 형식 **1**의 **복제 마다**, 형식 **15**를 클릭 하 고 **확인**합니다. 15 분 동안 복제가 완료 될 때까지 기다립니다.  
   
-5.  콘솔 트리에서 이제 복제를 강제 적용 하려면 확장 **Sites\Default-첫 번째-사이트-name\Servers\DC1\NTDS 설정을**, 세부 정보 창에서 마우스 오른쪽 단추로 클릭 **<automatically generated>**, 클릭  **지금 복제**, 한 후 합니다 **지금 복제** 대화 상자, 클릭 **확인**합니다.  
+5.  콘솔 트리에서 이제 복제를 강제 적용 하려면 확장 **Sites\Default-첫 번째-사이트-name\Servers\DC1\NTDS 설정을**, 세부 정보 창에서 마우스 오른쪽 단추로 클릭 **<automatically generated>** , 클릭  **지금 복제**, 한 후 합니다 **지금 복제** 대화 상자, 클릭 **확인**합니다.  
   
 6.  복제를 성공적으로 완료 되었는지 확인 하려면 다음을 수행 합니다.  
   

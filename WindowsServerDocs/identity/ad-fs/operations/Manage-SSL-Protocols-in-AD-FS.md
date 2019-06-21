@@ -8,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: e834c50965c3af569dbe3756d677ec4cb2372542
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c1153cd81185dcfe83d291161a85481e5a7d0700
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59883924"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280544"
 ---
 # <a name="managing-ssltls-protocols-and-cipher-suites-for-ad-fs"></a>AD FS에 대 한 SSL/TLS 프로토콜 및 암호 그룹 관리
 다음 문서 특정 TLS/SSL 프로토콜을 사용 하도록 설정 및 AD FS에서 사용 되는 암호 그룹 사용 하지 않도록 설정 하는 방법에 정보를 제공 합니다.
@@ -256,7 +256,7 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Cryptography\Configuration\L
 
 암호 그룹을 사용 하려면 문자열 값 함수 다중 문자열 값 키에 추가 합니다.  예를 들어 TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521를 사용 하도록 설정 하려는 경우 다음는 추가 문자열입니다.
 
-지원 되는 암호의 전체 목록은 도구 모음 참조 [TLS/SSL (Schannel SSP)의 암호 그룹](https://msdn.microsoft.com/en-us/library/windows/desktop/aa374757.aspx)합니다.  이 문서는 테이블 및 지원 되지만 기본적으로 사용 되지 않은 기본적으로 사용할 수 있는 도구 모음을 제공 합니다.  우선 순위를 지정 하는 암호 그룹 참조 [우선 순위 지정 Schannel 암호 그룹](https://msdn.microsoft.com/en-us/library/windows/desktop/bb870930.aspx)합니다.
+지원 되는 암호의 전체 목록은 도구 모음 참조 [TLS/SSL (Schannel SSP)의 암호 그룹](https://msdn.microsoft.com/library/windows/desktop/aa374757.aspx)합니다.  이 문서는 테이블 및 지원 되지만 기본적으로 사용 되지 않은 기본적으로 사용할 수 있는 도구 모음을 제공 합니다.  우선 순위를 지정 하는 암호 그룹 참조 [우선 순위 지정 Schannel 암호 그룹](https://msdn.microsoft.com/library/windows/desktop/bb870930.aspx)합니다.
 
 ## <a name="enabling-strong-authentication-for-net-applications"></a>.NET 응용 프로그램에 대 한 강력한 인증을 사용 하도록 설정
 .NET Framework 3.5/4.0/4.5.x 응용 프로그램 TLS 1.2를 기본 프로토콜로 SchUseStrongCrypto 레지스트리 키를 사용 하 여 전환할 수 있습니다.  이 레지스트리 키는 TLS 1.2를 사용 하도록.NET 응용 프로그램을 강제로 됩니다.
@@ -280,7 +280,7 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Cryptography\Configuration\L
 
 ## <a name="additional-information"></a>추가 정보
 
-- [TLS/SSL (Schannel SSP)의 암호 그룹](https://msdn.microsoft.com/en-us/library/windows/desktop/aa374757.aspx)
-- [Windows 8.1에서 TLS 암호 도구 모음](https://msdn.microsoft.com/en-us/library/windows/desktop/mt767781.aspx)
-- [Schannel 암호 그룹을 우선 순위 지정](https://msdn.microsoft.com/en-us/library/windows/desktop/bb870930.aspx)
+- [TLS/SSL (Schannel SSP)의 암호 그룹](https://msdn.microsoft.com/library/windows/desktop/aa374757.aspx)
+- [Windows 8.1에서 TLS 암호 도구 모음](https://msdn.microsoft.com/library/windows/desktop/mt767781.aspx)
+- [Schannel 암호 그룹을 우선 순위 지정](https://msdn.microsoft.com/library/windows/desktop/bb870930.aspx)
 - [암호화 및 기타 기술을 적군 말하기](https://blogs.technet.microsoft.com/askds/2015/12/08/speaking-in-ciphers-and-other-enigmatic-tonguesupdate/)

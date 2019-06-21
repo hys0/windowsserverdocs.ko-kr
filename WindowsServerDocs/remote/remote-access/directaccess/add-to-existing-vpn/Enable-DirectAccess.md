@@ -6,19 +6,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- networking-da
+ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bf9aaf36-fc3c-4007-bba9-c0b752774601
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: b34048131e9b5467be08fe34b51090088b0b82a6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 1d6cc9db9bdc0eb2a753e3cffb8c698727357009
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59851194"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67281853"
 ---
 # <a name="enable-directaccess"></a>DirectAccess 사용
 
@@ -30,7 +29,7 @@ ms.locfileid: "59851194"
   
 -   [2단계: DirectAccess VPN 서버 구성](step-2-configure-server-davpn.md)합니다. 이 단계에서는 DirectAccess 클라이언트 컴퓨터, 서버 설정을 구성 합니다.  
   
--   [3 단계: 배포 확인](step-3-verify-davpn.md)합니다. 이 단계에는 배포를 확인하는 단계가 포함됩니다.  
+-   [3단계: 배포 확인](step-3-verify-davpn.md)합니다. 이 단계에는 배포를 확인하는 단계가 포함됩니다.  
   
 배포를 시작 하기 전에 설명 된 계획 단계를 확인 [DirectAccess 사용 계획](Plan-to-Enable-DirectAccess.md)합니다.  
   

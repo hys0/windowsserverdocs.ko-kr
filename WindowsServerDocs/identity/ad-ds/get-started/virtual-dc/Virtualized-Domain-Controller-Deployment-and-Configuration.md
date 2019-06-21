@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: 4af0f96b0af3a547ab7d509d031a9e23cce8b654
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 059bb3c1b15afdc579ba048b8bbb02ed185f3d42
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66443208"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280951"
 ---
 # <a name="virtualized-domain-controller-deployment-and-configuration"></a>가상화된 도메인 컨트롤러 배포 및 구성
 
@@ -153,7 +153,7 @@ DC를 복제하기 전에 주 도메인 컨트롤러 에뮬레이터 FSMO를 호
     >   
     > 이 RPC 메서드는 새로운 기능이므로 네트워크 분석 소프트웨어에 새 Opnum 28 필드를 기존 UUID E3514235-4B06-11D1-AB04-00C04FC2DCD2에 포함하도록 업데이트된 파서가 필요합니다. 그렇지 않으면 이 트래픽의 구문을 분석할 수 없습니다.  
     >   
-    > 자세한 내용은 [4.1.29 IDL_DRSAddCloneDC(Opnum 28)](https://msdn.microsoft.com/en-us/library/hh554213(v=prot.13).aspx)를 참조하세요.  
+    > 자세한 내용은 [4.1.29 IDL_DRSAddCloneDC(Opnum 28)](https://msdn.microsoft.com/library/hh554213(v=prot.13).aspx)를 참조하세요.  
   
 ***즉, 완전히 라우팅되지 않은 네트워크를 사용 하는 경우에 PDCE 액세스 권한이 있는 네트워크 세그먼트가 필요 가상화 된 도메인 컨트롤러 복제***합니다. AD DS 논리 사이트 정보를 업데이트하는 데 주의하기만 한다면 실제 도메인 컨트롤러와 마찬가지로 복제 후 복제된 도메인 컨트롤러를 다른 네트워크로 이동할 수 있습니다.  
   

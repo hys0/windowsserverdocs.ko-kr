@@ -6,19 +6,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- networking-da
+ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8399bdfa-809a-45e4-9963-f9b6a631007f
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 3077aa54163ed9548ae3f45f8c673c731b8ef73b
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 23aed915edb827fd0cd61e6778167108647269ea
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66446652"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67283339"
 ---
 # <a name="step-5-test-directaccess-connectivity-from-the-internet-and-through-the-cluster"></a>인터넷에서 클러스터를 통해 5 테스트 DirectAccess 연결 단계
 
@@ -79,7 +78,7 @@ CLIENT1은 DirectAccess 테스트할 준비가 완료 되었습니다.
   
 4. 에 **시작** 화면에서 입력<strong>\\\app2\files</strong>합니다. APP2 컴퓨터의 공유 폴더에 표시 됩니다. APP2의 파일 공유를 열 수는 사용자에 대 한 Kerberos 인증을 요구 하는 두 번째 터널을 제대로 작동 하는지 나타냅니다.  
   
-5. Internet Explorer를 열고 다음 웹 사이트 https://app1/ 고 https://app2/입니다. 첫 번째와 두 번째 터널 구성 되는지 확인 하는 두 웹 사이트를 열 수 있고 작동 합니다. Internet Explorer를 닫습니다.  
+5. Internet Explorer를 열고 다음 웹 사이트 https://app1/ 고 https://app2/ 입니다. 첫 번째와 두 번째 터널 구성 되는지 확인 하는 두 웹 사이트를 열 수 있고 작동 합니다. Internet Explorer를 닫습니다.  
   
 6. EDGE2 컴퓨터를 시작 합니다.  
   

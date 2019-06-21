@@ -6,19 +6,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- networking-ras
+ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: eca02eeb-d92d-463e-aae0-1f7038ba26fe
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: bb6be03ed5319a56f9507859e753c88e020ceea9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4102fc4f7eacf0b407446717caa83e4e5f70ae57
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59813874"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67282365"
 ---
 # <a name="step-3-plan-otp-certificate-deployment"></a>3 단계 계획 OTP 인증서 배포
 
@@ -76,7 +75,7 @@ DirectAccess 클라이언트는 OTP 인증서를 요청 하는 경우 원격 액
   
 ## <a name="BKMK_Links"></a>참고 항목  
   
--   [4 단계: 원격 액세스 서버의 OTP 계획](Step-4-Plan-for-OTP-on-the-Remote-Access-Server.md)  
+-   [4단계: 원격 액세스 서버의 OTP 계획](Step-4-Plan-for-OTP-on-the-Remote-Access-Server.md)  
   
 
 

@@ -8,12 +8,12 @@ ms.author: jol
 ms.date: 03/01/2019
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: fe00072932d9c7f283ebd887a5292ac9a9d0e37f
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 4d156820781d2a9defc989fa1acf35d4289fb24f
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66446034"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284088"
 ---
 # <a name="manage-hyper-converged-infrastructure-with-windows-admin-center"></a>Windows Admin Center 사용 하 여 하이퍼 수렴 형 인프라 관리
 
@@ -21,7 +21,7 @@ ms.locfileid: "66446034"
 
 ## <a name="what-is-hyper-converged-infrastructure"></a>Hyper-Converged 인프라란
 
-하이퍼 수렴 형 인프라는 소프트웨어 정의 계산, 저장소 및 네트워킹 고성능, 경제적이 고 제공 하기 위해 하나의 클러스터를 쉽게 확장할 수 있는 가상화를 통합 합니다. 이 기능은 Windows Server 2016에서 도입 되었습니다 [저장소 공간 다이렉트](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-overview)를 [소프트웨어 정의 네트워킹](https://docs.microsoft.com/en-us/windows-server/networking/sdn/software-defined-networking) 하 고 [하이퍼-V](https://docs.microsoft.com/windows-server/virtualization/hyper-v/hyper-v-on-windows-server)합니다.
+하이퍼 수렴 형 인프라는 소프트웨어 정의 계산, 저장소 및 네트워킹 고성능, 경제적이 고 제공 하기 위해 하나의 클러스터를 쉽게 확장할 수 있는 가상화를 통합 합니다. 이 기능은 Windows Server 2016에서 도입 되었습니다 [저장소 공간 다이렉트](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-overview)를 [소프트웨어 정의 네트워킹](https://docs.microsoft.com/windows-server/networking/sdn/software-defined-networking) 하 고 [하이퍼-V](https://docs.microsoft.com/windows-server/virtualization/hyper-v/hyper-v-on-windows-server)합니다.
 
 > [!Tip]
 > Hyper-Converged 인프라를 획득 하려고 하나요? 이러한 것이 좋습니다 [Windows Server 소프트웨어 정의](https://microsoft.com/wssd) 파트너의 솔루션입니다. 이러한 설계, 조립 및 호환성 및 안정성 얻게 되므로 신속 하 게 실행 하기 위한이 참조 아키텍처에 대해 유효성을 검사 합니다.

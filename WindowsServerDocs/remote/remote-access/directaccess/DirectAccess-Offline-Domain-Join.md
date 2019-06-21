@@ -6,19 +6,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- networking-da
+ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 55528736-6c19-40bd-99e8-5668169ef3c7
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: a9cd811c680f15d53ecbd28d9201f28d9cb8af2f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 59b5933a81c7021e58ea14e6ea4c4da374ce35cb
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59853064"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67283658"
 ---
 # <a name="directaccess-offline-domain-join"></a>DirectAccess 오프라인 도메인 가입
 
@@ -77,7 +76,7 @@ Windows Server 2016, Windows Server 2012 또는 Windows 8을 실행 하는 컴�
 #### <a name="granting-user-rights-to-join-workstations-to-the-domain"></a>도메인에 워크스테이션을 조인할 사용자 권한 부여  
 그룹 정책 관리 콘솔 (GPMC)를 사용 하 여 도메인 정책을 수정 하거나 사용자에 게 도메인에 워크스테이션 추가 권한을 부여 하는 설정이 포함 된 새 정책 만들기를 수 있습니다.  
   
-멤버 자격이 **Domain Admins**, 또는 이와 동등한 사용자 권한을 부여 하는 데 필요한 최소값입니다.  적절 한 계정을 사용 하는 방법에 대 한 세부 정보를 검토 하 고 그룹 구성원 자격 [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477) (https://go.microsoft.com/fwlink/?LinkId=83477)합니다.   
+멤버 자격이 **Domain Admins**, 또는 이와 동등한 사용자 권한을 부여 하는 데 필요한 최소값입니다.  적절 한 계정을 사용 하는 방법에 대 한 세부 정보를 검토 하 고 그룹 구성원 자격 [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477) (https://go.microsoft.com/fwlink/?LinkId=83477) 합니다.   
   
 ###### <a name="to-grant-rights-to-join-workstations-to-a-domain"></a>도메인에 워크스테이션을 조인 하는 권한을 부여 하려면  
   
@@ -96,7 +95,7 @@ Windows Server 2016, Windows Server 2012 또는 Windows 8을 실행 하는 컴�
 ## <a name="BKMK_ODKSxS"></a>오프 라인 도메인 가입 프로세스  
 컴퓨터 계정 메타 데이터를 프로 비전 하려면 관리자 권한 명령 프롬프트에서 Djoin.exe를 실행 합니다. 프로 비전 하는 명령을 실행 하는 경우 컴퓨터 계정 메타 데이터 명령의 일부로 지정 하는 이진 파일에 만들어집니다.  
   
-오프 라인 도메인 가입을 하는 동안 컴퓨터 계정을 프로 비전 하는 데 사용 되는 NetProvisionComputerAccount 함수에 대 한 자세한 내용은 참조 하세요. [NetProvisionComputerAccount 함수](https://go.microsoft.com/fwlink/?LinkId=162426) (https://go.microsoft.com/fwlink/?LinkId=162426)합니다. 대상 컴퓨터에서 로컬로 실행 되는 NetRequestOfflineDomainJoin 함수에 대 한 자세한 내용은 참조 하세요. [NetRequestOfflineDomainJoin 함수](https://go.microsoft.com/fwlink/?LinkId=162427) (https://go.microsoft.com/fwlink/?LinkId=162427)합니다.  
+오프 라인 도메인 가입을 하는 동안 컴퓨터 계정을 프로 비전 하는 데 사용 되는 NetProvisionComputerAccount 함수에 대 한 자세한 내용은 참조 하세요. [NetProvisionComputerAccount 함수](https://go.microsoft.com/fwlink/?LinkId=162426) (https://go.microsoft.com/fwlink/?LinkId=162426) 합니다. 대상 컴퓨터에서 로컬로 실행 되는 NetRequestOfflineDomainJoin 함수에 대 한 자세한 내용은 참조 하세요. [NetRequestOfflineDomainJoin 함수](https://go.microsoft.com/fwlink/?LinkId=162427) (https://go.microsoft.com/fwlink/?LinkId=162427) 합니다.  
   
 ## <a name="BKMK_ODJSteps"></a>DirectAccess 오프 라인 도메인 가입을 수행 하기 위한 단계  
 오프 라인 도메인 가입 프로세스에는 다음 단계가 포함 됩니다.  

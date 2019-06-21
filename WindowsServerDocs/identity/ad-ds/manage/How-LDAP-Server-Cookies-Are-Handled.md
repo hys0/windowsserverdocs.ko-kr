@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: e9c293d04f1fd1b8091b768e49db554a23e7ce95
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 873953155d22bafef5b042887b22e953ff580b5c
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59846564"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280575"
 ---
 # <a name="how-ldap-server-cookies-are-handled"></a>LDAP 서버 쿠키를 처리하는 방법
 
@@ -128,7 +128,7 @@ DC/LDAP 서버에 2898 이벤트가 표시되는 경우 MaxResultSetsPerConn을 
   
 250MB 이상의 풀에서도 이벤트 2899가 계속 표시되면 많은 클라이언트에서 매우 자주 쿼리되어 매우 많은 개체가 반환되는 것일 수 있습니다. [Active Directory 데이터 수집기 집합](http://blogs.technet.com/b/askds/archive/2010/06/08/son-of-spa-ad-data-collector-sets-in-win2008-and-beyond.aspx) 을 사용하여 수집할 수 있는 데이터를 사용하면 LDAP 서버를 사용 중 상태로 유지하는 반복적인 페이징된 쿼리를 찾을 수 있습니다. 이러한 쿼리 모두 사용 하는 페이지의 크기와 일치 하는 "항목이 반환" 수로 표시 됩니다.  
   
-가능한 경우 응용 프로그램 디자인을 검토 하 고 더 낮은 빈도, 데이터 볼륨 및/또는 더 적은 클라이언트 인스턴스로이 데이터를 쿼리 하는 다른 방법을 구현 해야 합니다. 이 가이드를 소스 코드 액세스 권한이 있는 응용 프로그램의 경우 [효율적인 AD-Enabled 응용 프로그램을 만드는](https://msdn.microsoft.com/en-us/library/ms808539.aspx) 액세스 AD 응용 프로그램에 대 한 최적의 방법을 이해할 수 있습니다.  
+가능한 경우 응용 프로그램 디자인을 검토 하 고 더 낮은 빈도, 데이터 볼륨 및/또는 더 적은 클라이언트 인스턴스로이 데이터를 쿼리 하는 다른 방법을 구현 해야 합니다. 이 가이드를 소스 코드 액세스 권한이 있는 응용 프로그램의 경우 [효율적인 AD-Enabled 응용 프로그램을 만드는](https://msdn.microsoft.com/library/ms808539.aspx) 액세스 AD 응용 프로그램에 대 한 최적의 방법을 이해할 수 있습니다.  
   
 쿼리 동작을 변경할 수 없는 경우 한 가지 방법은 필요한 명명 컨텍스트의 및 클라이언트를 재배포 하 고 최종적으로 개별 LDAP 서버에 부하를 줄이거나에 복제 된 인스턴스를 더 추가 됩니다.  
   

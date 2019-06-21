@@ -6,19 +6,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- networking-da
+ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 72b5b2af-6925-41e0-a3f9-b8809ed711d1
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 7b4e0e8647fa2011eae73efa8bcbd696c422f12c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6fd33926f4c3d86d5947bffdd5b212db0ae91f47
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59859684"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67283597"
 ---
 # <a name="step-2-plan-the-directaccess-deployment"></a>2 단계 DirectAccess 배포 계획
 
@@ -57,7 +56,7 @@ ms.locfileid: "59859684"
   
 -   **IP-HTTPS 인증서**-경우 SSTP VPN이 구성, DirectAccess 사용 마법사 SSTP에서 사용 하 여 IP-HTTPS 용 인증서를 선택 합니다. SSTP VPN이 구성되어 있지 않은 경우 마법사는 IP-HTTPS용 인증서가 구성되어 있는지 확인합니다. 구성되어 있지 않으면 자체 서명된 IP-HTTPS용 인증서를 자동으로 프로비전하고 Kerberos 인증을 자동으로 사용합니다. 또한 마법사는 IPv4 전용 환경에서의 프로토콜 변환에 NAT64 및 DNS64를 사용하도록 설정합니다.  
   
--   **IPv6 접두사**-마법사에서 네트워크 어댑터에 배포 된 IPv6를 감지 하면 자동으로 만듭니다 내부 네트워크 IPv6 접두사, DirectAccess 클라이언트 컴퓨터에 할당할 IPv6 접두사 및 VPN에 할당할 IPv6 접두사 클라이언트 컴퓨터입니다. 자동으로 생성된 접두사가 기본 IPv6 또는 ISATAP 인프라에 올바르지 않은 경우 수동으로 변경해야 합니다. 1.1 계획 네트워크 및 서버 토폴로지 및 설정을 참조 하세요.  
+-   **IPv6 접두사**-마법사에서 네트워크 어댑터에 배포 된 IPv6를 감지 하면 자동으로 만듭니다 내부 네트워크 IPv6 접두사, DirectAccess 클라이언트 컴퓨터에 할당할 IPv6 접두사 및 VPN에 할당할 IPv6 접두사 클라이언트 컴퓨터입니다. 자동으로 생성된 접두사가 기본 IPv6 또는 ISATAP 인프라에 올바르지 않은 경우 수동으로 변경해야 합니다. 1\.1 계획 네트워크 및 서버 토폴로지 및 설정을 참조 하세요.  
   
 -   **Windows 7 클라이언트**-기본적으로 Windows 7 클라이언트 컴퓨터는 Windows Server 2012 원격 액세스 배포에 연결할 수 없습니다. 내부 리소스에 대 한 원격 액세스를 필요로 하는 조직에서 Windows 7 클라이언트 컴퓨터에 있으면 연결 하도록 허용할 수 있습니다. 내부 리소스에 대한 액세스를 허용할 클라이언트 컴퓨터는 DirectAccess 사용 마법사에서 지정한 보안 그룹의 구성원이어야 합니다.  
   

@@ -8,12 +8,12 @@ ms.topic: article
 author: jasongerend
 ms.date: 06/07/2019
 description: 이 항목에서는 다른 서버에 있는 여러 공유 폴더를 하나 이상의 논리적으로 구성된 네임스페이스로 그룹화할 수 있도록 하는 Windows Server의 역할 서비스인 DFS 네임스페이스에 대해 설명합니다.
-ms.openlocfilehash: b16d8145d766cbb9b12feaaa2e5e9443813a69f2
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.openlocfilehash: 2d91cb7197d2deecd96ebb29a951ef96ceefd9aa
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66812573"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284280"
 ---
 # <a name="dfs-namespaces-overview"></a>DFS 네임스페이스 개요
 
@@ -126,6 +126,6 @@ Azure 가상 컴퓨터를 시작하는 방법에 대해 자세히 알아보려�
 | **배포**    | [DFS Namespace 확장성 고려 사항](http://blogs.technet.com/b/filecab/archive/2012/08/26/dfs-namespace-scalability-considerations.aspx) |
 | **작업**    | [DFS 네임 스페이스: 질문과 대답](https://technet.microsoft.com/library/ee404780.aspx) |
 | **커뮤니티 리소스** | [파일 서비스 및 저장소 TechNet 포럼](https://social.technet.microsoft.com/forums/winserverfiles/threads/) |
-| **프로토콜**        | [파일 서비스 Windows Server의 프로토콜](https://msdn.microsoft.com/en-us/library/cc239318.aspx) (사용 되지 않음) |
+| **프로토콜**        | [파일 서비스 Windows Server의 프로토콜](https://msdn.microsoft.com/library/cc239318.aspx) (사용 되지 않음) |
 | **관련 기술** | [장애 조치(failover) 클러스터링](../../failover-clustering/failover-clustering-overview.md)|
 | **지원** | [Windows IT Pro 지원](https://www.microsoft.com/itpro/windows/support)|

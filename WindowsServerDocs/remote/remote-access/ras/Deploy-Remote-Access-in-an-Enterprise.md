@@ -6,19 +6,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- networking-ras
+ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4781df0a-158b-4562-b8f5-32b27615a4f8
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: f110ad945139da3b07b33bbb0adb3e8084743fdb
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7cbcc844c356978f5bb5f34b66aa36dec9b163c1
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59812244"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67283010"
 ---
 # <a name="deploy-remote-access-in-an-enterprise"></a>엔터프라이즈에 원격 액세스 배포
 
@@ -32,7 +31,7 @@ ms.locfileid: "59812244"
   
 ## <a name="before-you-begin-deploying-see-the-list-of-unsupported-configurations-known-issues-and-prerequisites"></a>배포를 시작하기 전에 지원되지 않는 구성, 알려진 문제 및 사전 요구 사항 목록을 참조하세요.  
   
--   [DirectAccess 지원 되지 않는 구성](https://technet.microsoft.com/windows-server-docs/networking/remote-access/directaccess/directaccess-unsupported-configurations)  
+-   [DirectAccess에서 지원되지 않는 구성](https://technet.microsoft.com/windows-server-docs/networking/remote-access/directaccess/directaccess-unsupported-configurations)  
   
 -   [DirectAccess 알려진 문제](https://technet.microsoft.com/windows-server-docs/networking/remote-access/directaccess/directaccess-known-issues)  
   
@@ -48,7 +47,7 @@ ms.locfileid: "59812244"
   
 -   [멀티 사이트 배포에서 여러 원격 액세스 서버 배포](multisite/Deploy-Multiple-Remote-Access-Servers-in-a-Multisite-Deployment.md)  
   
--   [OTP 인증을 사용 하 여 원격 액세스 배포](otp/Deploy-RA-OTP.md)  
+-   [OTP 인증을 통한 원격 액세스 배포](otp/Deploy-RA-OTP.md)  
   
 -   [다중 포리스트 환경에서 원격 액세스 배포](multi-forest/Deploy-Remote-Access-in-a-Multi-Forest-Environment.md)  
   

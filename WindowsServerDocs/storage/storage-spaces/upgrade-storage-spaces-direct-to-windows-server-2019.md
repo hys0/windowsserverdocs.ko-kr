@@ -8,12 +8,12 @@ ms.date: 03/06/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage-spaces
-ms.openlocfilehash: 9db92aa33cde9b2beed11149dae06bb3af2b5a03
-ms.sourcegitcommit: fe621b72d45d0259bac1d5b9031deed3dcbed29d
+ms.openlocfilehash: 54be649cc1753fe07c94105a31a0b738fb030ee0
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66455414"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284358"
 ---
 # <a name="upgrade-a-storage-spaces-direct-cluster-to-windows-server-2019"></a>Windows Server 2019에 저장소 공간 다이렉트 클러스터 업그레이드
 
@@ -84,7 +84,7 @@ ms.locfileid: "66455414"
        Enable-StorageMaintenanceMode
        ```
 
-   4. 있는지 여부를 확인 하려면 다음 cmdlet을 실행 하는 **OperationalStatus** 값이 **유지 관리 모드**:
+   4. 있는지 여부를 확인 하려면 다음 cmdlet을 실행 합니다 **OperationalStatus** 가치가 **유지 관리 모드**:
 
        ```PowerShell
        Get-PhysicalDisk
@@ -176,7 +176,7 @@ ms.locfileid: "66455414"
        Enable-StorageMaintenanceMode
        ```
 
-   4. 있는지 여부를 확인 하려면 다음 cmdlet을 실행 하는 **OperationalStatus** 값이 **유지 관리 모드**:
+   4. 있는지 여부를 확인 하려면 다음 cmdlet을 실행 합니다 **OperationalStatus** 가치가 **유지 관리 모드**:
 
        ```PowerShell
        Get-PhysicalDisk
@@ -271,7 +271,7 @@ ms.locfileid: "66455414"
        Enable-StorageMaintenanceMode
        ```
 
-   3. 있는지 여부를 확인 하려면 다음 cmdlet을 실행 하는 **OperationalStatus** 값이 **유지 관리 모드**:
+   3. 있는지 여부를 확인 하려면 다음 cmdlet을 실행 합니다 **OperationalStatus** 가치가 **유지 관리 모드**:
 
        ```PowerShell
        Get-PhysicalDisk
@@ -359,7 +359,7 @@ ms.locfileid: "66455414"
       Enable-StorageMaintenanceMode
       ```
 
-   4. 있는지 여부를 확인 하려면 다음 cmdlet을 실행 하는 **OperationalStatus** 값이 **유지 관리 모드**:
+   4. 있는지 여부를 확인 하려면 다음 cmdlet을 실행 합니다 **OperationalStatus** 가치가 **유지 관리 모드**:
 
       ```PowerShell
       Get-PhysicalDisk

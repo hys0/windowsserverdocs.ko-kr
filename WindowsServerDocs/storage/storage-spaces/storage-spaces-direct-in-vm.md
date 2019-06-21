@@ -9,12 +9,12 @@ author: eldenchristensen
 ms.date: 10/25/2017
 description: -예를 들어, Microsoft Azure 가상 컴퓨터 게스트 클러스터의 저장소 공간 다이렉트를 배포 하는 방법입니다.
 ms.localizationpriority: medium
-ms.openlocfilehash: b99e750b78654df48ad3b412269511d047e3057c
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: d05afb5ee564b866dcd15ec6aa473cee608dbd8f
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66447814"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284411"
 ---
 # <a name="using-storage-spaces-direct-in-guest-virtual-machine-clusters"></a>게스트 가상 컴퓨터 클러스터에서 저장소 공간 다이렉트를 사용 하 여
 
@@ -49,7 +49,7 @@ ms.locfileid: "66447814"
 
     -   하이퍼-V-노드 간에 Vm을 별도 Vm에 구성 AntiAffinityClassNames
 
-    -   VMware – 형식의 DRS 규칙을 만들어 구성 VM 선호도 방지 규칙 ' 별도 Virtual Machines "ESX 호스트에 걸쳐 Vm을 구분 합니다. 저장소 공간 다이렉트를 사용 하 여 사용 하도록 제공 된 디스크 Pvscsi (PARAVIRTUAL SCSI) 어댑터를 사용 해야 합니다. Windows Server를 사용 하 여 PVSCSI 지원에 대 한 참조 https://kb.vmware.com/s/article/1010398합니다.
+    -   VMware – 형식의 DRS 규칙을 만들어 구성 VM 선호도 방지 규칙 ' 별도 Virtual Machines "ESX 호스트에 걸쳐 Vm을 구분 합니다. 저장소 공간 다이렉트를 사용 하 여 사용 하도록 제공 된 디스크 Pvscsi (PARAVIRTUAL SCSI) 어댑터를 사용 해야 합니다. Windows Server를 사용 하 여 PVSCSI 지원에 대 한 참조 https://kb.vmware.com/s/article/1010398 합니다.
 
 -   활용 대기 시간이 짧은 고성능 저장소-Azure Premium Storage를 관리 / 디스크가 필요 하다는
 
@@ -79,6 +79,6 @@ ms.locfileid: "66447814"
 
 ## <a name="see-also"></a>참조
 
-[저장소 공간 다이렉트, 비디오 및 단계별 가이드 배포에 대 한 추가 Azure Iaas VM 템플릿](https://blogs.msdn.microsoft.com/clustering/2017/02/14/deploying-an-iaas-vm-guest-clusters-in-microsoft-azure/)합니다.
+[저장소 공간 다이렉트, 비디오 및 단계별 가이드 배포에 대 한 추가 Azure Iaas VM 템플릿](https://techcommunity.microsoft.com/t5/Failover-Clustering/Deploying-IaaS-VM-Guest-Clusters-in-Microsoft-Azure/ba-p/372126)합니다.
 
-[추가 저장소 공간 다이렉트 개요](https://docs.microsoft.com/en-us/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
+[추가 저장소 공간 다이렉트 개요](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-overview)

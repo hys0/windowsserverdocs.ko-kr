@@ -6,19 +6,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- networking-da
+ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d98d6f7a-a2e6-45b1-9c63-08e2986a5c03
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 1640dbae52a1a7c93355b34822d72faa5351bcda
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9810d7294a2651d4811bc5969eaf6a118db8ed56
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59860314"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67283263"
 ---
 # <a name="step-10-install-and-configure-2-edge1"></a>10 설치 단계 및 2 EDGE1 구성
 
@@ -70,7 +69,7 @@ ms.locfileid: "59860314"
   
 8.  **이 연결에 대 한 DNS 접미사**, 형식 **corp2.corp.contoso.com**를 클릭 하 고 **확인** 두 번입니다.  
   
-9. **인터넷 프로토콜 버전 6(TCP/IPv6)**, **속성**을 차례로 클릭합니다.  
+9. **인터넷 프로토콜 버전 6(TCP/IPv6)** , **속성**을 차례로 클릭합니다.  
   
 10. 클릭 **다음 IPv6 주소를 사용 하 여**입니다. **IPv6 주소**, 형식 **2001:db8:2::20**의 **서브넷 접두사 길이**, 형식 **64**합니다. 클릭 **다음 DNS 서버 주소를 사용 하 여**, 및 **기본 설정 DNS 서버**, 유형 **2001:db8:2::1**의 **대체 DNS 서버**, 형식 **2001:db8:1::1**합니다.  
   

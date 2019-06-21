@@ -13,12 +13,12 @@ author: justinha
 ms.author: justinha
 manager: brianlic-msft
 ms.date: 05/16/2018
-ms.openlocfilehash: 77e3ee9d89bff7ab6e95ea47ffa141e6e1004ba4
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 0a3b241fe0d2a61361d551b7f515507ad55d71cd
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59853024"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284234"
 ---
 # <a name="transport-layer-security-protocol"></a>전송 계층 보안 프로토콜
 
@@ -41,7 +41,7 @@ TLS 및 SSL 프로토콜은 두 레이어로 나눌 수 있습니다. 첫 번째
 **TLS 및 SSL 프로토콜 계층**
 
 
-Schannel SSP는 수정 없이 TLS 및 SSL 프로토콜을 구현합니다. SSL 프로토콜을 소유, 이지만 Internet Engineering Task Force 공용 TLS 사양을 생성 합니다. 버전 Windows 버전에서 지원 되는 TLS 또는 SSL에 대 한 내용은 [TLS/SSL (Schannel SSP)의 프로토콜](https://msdn.microsoft.com/en-us/library/windows/desktop/mt808159(v=vs.85).aspx)합니다. 다음 표에서 각 TLS 버전에 대 한 사양을 나열합니다. 각 사양에 대 한 정보가 들어 있습니다.
+Schannel SSP는 수정 없이 TLS 및 SSL 프로토콜을 구현합니다. SSL 프로토콜을 소유, 이지만 Internet Engineering Task Force 공용 TLS 사양을 생성 합니다. 버전 Windows 버전에서 지원 되는 TLS 또는 SSL에 대 한 내용은 [TLS/SSL (Schannel SSP)의 프로토콜](https://msdn.microsoft.com/library/windows/desktop/mt808159(v=vs.85).aspx)합니다. 다음 표에서 각 TLS 버전에 대 한 사양을 나열합니다. 각 사양에 대 한 정보가 들어 있습니다.
 
 -   TLS 레코드 프로토콜
 

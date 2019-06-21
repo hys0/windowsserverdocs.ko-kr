@@ -6,19 +6,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- networking-da
+ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: dc20b1a0-540d-4531-a176-50b87c071600
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 6a771b5eb8587d23bc67a7e7769264251afdb5bf
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7d215ca234d63e7e393fbbce4d65e0803f023487
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59838514"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67283209"
 ---
 # <a name="step-2-install-and-configure-router1"></a>2 설치 단계 및 ROUTER1 구성
 
@@ -62,7 +61,7 @@ ms.locfileid: "59838514"
   
 5.  **다음 IP 주소 사용**을 클릭합니다. **IP 주소**, 형식 **10.0.0.254**합니다. **서브넷 마스크**, 형식 **255.255.255.0**를 클릭 하 고 **확인**합니다.  
   
-6.  **인터넷 프로토콜 버전 6(TCP/IPv6)**, **속성**을 차례로 클릭합니다.  
+6.  **인터넷 프로토콜 버전 6(TCP/IPv6)** , **속성**을 차례로 클릭합니다.  
   
 7.  클릭 **다음 IPv6 주소를 사용 하 여**입니다. **IPv6 주소**, 형식 **2001:db8:1::fe**합니다. **서브넷 접두사 길이**, 형식 **64**를 클릭 하 고 **확인**합니다.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "59838514"
   
 12. **다음 IP 주소 사용**을 클릭합니다. **IP 주소**, 형식 **10.2.0.254**합니다. **서브넷 마스크**, 형식 **255.255.255.0**를 클릭 하 고 **확인**합니다.  
   
-13. **인터넷 프로토콜 버전 6(TCP/IPv6)**, **속성**을 차례로 클릭합니다.  
+13. **인터넷 프로토콜 버전 6(TCP/IPv6)** , **속성**을 차례로 클릭합니다.  
   
 14. 클릭 **다음 IPv6 주소를 사용 하 여**입니다. **IPv6 주소**, 형식 **2001:db8:2::fe**합니다. **서브넷 접두사 길이**, 형식 **64**를 클릭 하 고 **확인**합니다.  
   

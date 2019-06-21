@@ -8,15 +8,15 @@ ms.topic: article
 ms.assetid: ''
 author: cosmosdarwin
 ms.date: 10/05/2017
-ms.openlocfilehash: 31a38eacea3af3c0a288d61a77a24b4fa45a1932
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 72b1593503db75aa275b9eb45c8342cee6724001
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59843374"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280394"
 ---
 # <a name="health-service-faults"></a>상태 서비스 오류
-> 적용 대상: Windows Server 2016
+> 적용 대상: Windows Server 2019, Windows Server 2016
 
 ## <a name="what-are-faults"></a>오류는 무엇 인가요
 
@@ -136,7 +136,7 @@ public void DiscoverObjects(CimSession Session)
 
 이 동일한 개체와 같은 cmdlet을 사용 하 여 PowerShell에서 얻게 **Get-storagesubsystem**, **Get-storagenode**, 및 **Get-volume**합니다.
 
-에 설명 된 속성 모두 동일한 액세스할 수 있습니다 [저장소 관리 API 클래스](https://msdn.microsoft.com/en-us/library/windows/desktop/hh830612(v=vs.85).aspx)합니다.
+에 설명 된 속성 모두 동일한 액세스할 수 있습니다 [저장소 관리 API 클래스](https://msdn.microsoft.com/library/windows/desktop/hh830612(v=vs.85).aspx)합니다.
 
 ```
 ...
@@ -291,7 +291,7 @@ class FaultsObserver : IObserver
 |---------------------------|-----------------------------------------------------------------|
 | FaultId                   | {12345-12345-12345-12345-12345}                                 |
 | FaultType                 | Microsoft.Health.FaultType.Volume.Capacity                      |
-| 이유                    | "볼륨은 사용 가능한 공간이 부족 합니다."                 |
+| Reason                    | "볼륨은 사용 가능한 공간이 부족 합니다."                 |
 | PerceivedSeverity         | 5                                                               |
 | FaultingObjectDescription | Contoso XYZ9000 S.N. 123456789                                  |
 | FaultingObjectLocation    | 슬롯 11 A06, RU 25 랙                                        |
@@ -318,7 +318,7 @@ class FaultsObserver : IObserver
 | ChangeType                | 0                                                               |
 | FaultId                   | {12345-12345-12345-12345-12345}                                 |
 | FaultType                 | Microsoft.Health.FaultType.Volume.Capacity                      |
-| 이유                    | "볼륨은 사용 가능한 공간이 부족 합니다."                 |
+| Reason                    | "볼륨은 사용 가능한 공간이 부족 합니다."                 |
 | PerceivedSeverity         | 5                                                               |
 | FaultingObjectDescription | Contoso XYZ9000 S.N. 123456789                                  |
 | FaultingObjectLocation    | 슬롯 11 A06, RU 25 랙                                        |
@@ -498,7 +498,7 @@ Windows Server 2016에서 상태 관리 서비스는 다음 오류 검사를 제
 * 이유: *"펌웨어 롤아웃은 펌웨어 업데이트 시도 실패 한 실제 디스크가 너무 많으면 인해 취소 되었습니다."*
 * RecommendedAction: *"다시 시작 펌웨어 롤아웃 면 펌웨어 문제가 해결 되었습니다."*
 
-### <a name="storage-qos-3sup2sup"></a>**저장소 QoS (3)**<sup>2</sup>
+### <a name="storage-qos-3sup2sup"></a>**저장소 QoS (3)** <sup>2</sup>
 
 #### <a name="faulttype-microsofthealthfaulttypestorqosinsufficientthroughput"></a>FaultType: Microsoft.Health.FaultType.StorQos.InsufficientThroughput
 * 심각도: 경고

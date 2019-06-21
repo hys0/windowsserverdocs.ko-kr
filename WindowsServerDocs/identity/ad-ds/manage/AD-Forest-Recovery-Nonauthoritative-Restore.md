@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.assetid: e4ce1d18-d346-492a-8bca-f85513aa3ac1
 ms.technology: identity-adds
-ms.openlocfilehash: eae4cab2bd709097fe0efd0745baeb0ec685abc7
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 65e33e6507d2affc4d07cc0780a7baf91a170a09
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59829614"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280584"
 ---
 # <a name="performing-a-nonauthoritative-restore-of-active-directory-domain-services"></a>Active Directory Domain Services의 권한 없는 복원 수행 
 
@@ -24,7 +24,7 @@ ms.locfileid: "59829614"
   
 다음 절차는 Active Directory 또는 Active Directory Domain Services (AD DS)의 신뢰할 수 없는 복원을 수행 하는 Wbadmin.exe를 사용 합니다. 다른 백업 솔루션을 사용 하는 경우, 전체 포리스트 복구 프로세스의 뒷부분에 나오는 SYSVOL의 신뢰할 수 있는 복원 하려는 경우에 이러한 대체 방법을 사용 하 여 SYSVOL의 신뢰할 수 있는 복원 하는 경우를 수행할 수 있습니다.  
   
-- 를 사용 하 SYSVOL을 복제 하려면 복제 서비스 FRS (파일)를 사용 하는 경우의 단계에 따라 [290762 문서](https://go.microsoft.com/fwlink/?LinkId=148443) Microsoft 기술 자료에서 사용 하는 **BurFlags** FRS 복제를 다시 초기화 하려면 레지스트리 키 설정 하거나 필요한 경우 문서 315457 [315457](https://support.microsoft.com/kb/315457)SYSVOL 트리를 다시 작성 해야 합니다. FRS가 SYSVOL은 복제 하는 경우를 확인 하려면 참조 [DFSR 또는 FRS 확인 여부는 도메인 컨트롤러의 SYSVOL 폴더를 복제](https://msdn.microsoft.com/en-us/library/windows/desktop/cc507518.aspx#determining_whether_a_domain_controller_s_sysvol_folder_is_replicated_by_dfsr_or_frs)합니다.  
+- 를 사용 하 SYSVOL을 복제 하려면 복제 서비스 FRS (파일)를 사용 하는 경우의 단계에 따라 [290762 문서](https://go.microsoft.com/fwlink/?LinkId=148443) Microsoft 기술 자료에서 사용 하는 **BurFlags** FRS 복제를 다시 초기화 하려면 레지스트리 키 설정 하거나 필요한 경우 문서 315457 [315457](https://support.microsoft.com/kb/315457)SYSVOL 트리를 다시 작성 해야 합니다. FRS가 SYSVOL은 복제 하는 경우를 확인 하려면 참조 [DFSR 또는 FRS 확인 여부는 도메인 컨트롤러의 SYSVOL 폴더를 복제](https://msdn.microsoft.com/library/windows/desktop/cc507518.aspx#determining_whether_a_domain_controller_s_sysvol_folder_is_replicated_by_dfsr_or_frs)합니다.  
 - 분산 파일 시스템 (DFS) 복제 SYSVOL을 복제 하려면를 사용 하는 경우 참조 [DFSR 복제 SYSVOL의 신뢰할 수 있는 동기화가 수행](AD-Forest-Recovery-Authoritative-Recovery-SYSVOL.md)합니다.  
 
 ## <a name="performing-a-nonauthoritative-restore"></a>신뢰할 수 없는 복원을 수행합니다.
@@ -50,4 +50,4 @@ Windows Server 2012, Windows Server 2008 R2 또는 Windows Server 2008을 실행
 ## <a name="next-steps"></a>다음 단계
 
 - [AD 포리스트 복구 가이드](AD-Forest-Recovery-Guide.md)
-- [AD 포리스트 복구 절차](AD-Forest-Recovery-Procedures.md)
+- [AD 포리스트 복구 - 절차](AD-Forest-Recovery-Procedures.md)

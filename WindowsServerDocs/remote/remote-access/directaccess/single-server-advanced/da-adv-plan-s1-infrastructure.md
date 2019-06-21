@@ -6,19 +6,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- networking-da
+ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aa3174f3-42af-4511-ac2d-d8968b66da87
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: c3b7751ca6d0b62ee078d5da7084cbc007edc155
-ms.sourcegitcommit: d888e35f71801c1935620f38699dda11db7f7aad
+ms.openlocfilehash: 339189928d3ce5403d0fca4a06efc36b867e2a50
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66805172"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67281777"
 ---
 # <a name="step-1-plan-the-advanced-directaccess-infrastructure"></a>1 단계 고급 DirectAccess 인프라 계획
 
@@ -205,7 +204,7 @@ DirectAccess 서버가 IP-HTTPS 수신기 역할을 하므로 서버에 HTTPS �
   
 비표준 포트에서 IP-HTTPS를 사용하려면 DirectAccess 서버에서 다음 단계를 수행합니다.  
   
-1.  0.0.0.0:443에 대한 기존 인증서 바인딩을 제거하고 선택한 포트에 대한 인증서 바인딩으로 대체합니다. 이 예제에서는 포트 44500이 사용되었습니다. 인증서를 삭제 하기 전에 표시 하 고 복사는 **appid**합니다.  
+1.  0\.0.0.0:443에 대한 기존 인증서 바인딩을 제거하고 선택한 포트에 대한 인증서 바인딩으로 대체합니다. 이 예제에서는 포트 44500이 사용되었습니다. 인증서를 삭제 하기 전에 표시 하 고 복사는 **appid**합니다.  
   
     1.  인증서 바인딩을 삭제하려면 다음을 입력합니다.  
   

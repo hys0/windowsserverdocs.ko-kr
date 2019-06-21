@@ -6,19 +6,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- networking-da
+ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1cc0abc6-be4d-4cbe-bd0c-cc448bf294f6
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 8b0f91b4d2b876cb7b22dc8614e7ea5dcce6da2d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4746ff5118814506d20983d3570881366297322f
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59833564"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67283177"
 ---
 # <a name="step-7-install-and-configure-2-app1"></a>7 설치 단계 및 2-APP1 구성
 
@@ -66,7 +65,7 @@ ms.locfileid: "59833564"
   
 6.  **고급**을 클릭하고 **DNS** 탭을 클릭합니다. **이 연결에 대 한 DNS 접미사**, 형식 **corp2.corp.contoso.com**를 클릭 하 고 **확인** 두 번입니다.  
   
-7.  **인터넷 프로토콜 버전 6(TCP/IPv6)**, **속성**을 차례로 클릭합니다.  
+7.  **인터넷 프로토콜 버전 6(TCP/IPv6)** , **속성**을 차례로 클릭합니다.  
   
 8.  클릭 **다음 IPv6 주소를 사용 하 여**입니다. **IPv6 주소**, 형식 **2001:db8:2::3**합니다. **서브넷 접두사 길이**, 형식 **64**합니다. **기본 게이트웨이**, 형식 **2001:db8:2::fe**합니다. 클릭 **다음 DNS 서버 주소를 사용 하 여**, 및 **기본 설정 DNS 서버**, 유형 **2001:db8:2::1**합니다.  
   

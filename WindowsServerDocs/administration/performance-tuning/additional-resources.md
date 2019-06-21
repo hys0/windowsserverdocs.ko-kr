@@ -7,12 +7,12 @@ ms.topic: article
 ms.author: phstee
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: c7ac20da7e8508b824fdd000f6a9dde6e807cdf2
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e09363eae005114b73bedac084f5ab0745c237ee
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59835834"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280066"
 ---
 # <a name="additional-performance-tuning-resources"></a>추가 성능 튜닝 리소스
 
@@ -29,7 +29,7 @@ ms.locfileid: "59835834"
 
 ## <a name="power-management-tuning-resources"></a>전원 관리 튜닝 리소스
 
--   [Windows의 전원 정책 구성 및 배포](https://msdn.microsoft.com/en-us/library/windows/hardware/mt422910.aspx)
+-   [Windows의 전원 정책 구성 및 배포](https://msdn.microsoft.com/library/windows/hardware/mt422910.aspx)
 
 -   [PowerCfg를 사용 하 여 시스템 에너지 효율 평가](https://technet.microsoft.com/library/cc748940.aspx)
 
@@ -56,7 +56,7 @@ ms.locfileid: "59835834"
 -   [TCP 자동 조정 진단 도구를 사용 하지 않도록 설정 하는 방법](https://support.microsoft.com/kb/967475)
 
 ## <a name="active-directory-server-tuning-resources"></a>Active Directory 서버 리소스 튜닝
--   [Active Directory 성능](https://msdn.microsoft.com/en-us/library/windows/hardware/dn567654(v=vs.85).aspx)
+-   [Active Directory 성능](https://msdn.microsoft.com/library/windows/hardware/dn567654(v=vs.85).aspx)
 -   [Windows Server 2003 및 Windows 2000 Server Active Directory 진단 이벤트 로깅을 구성 하는 방법](https://support.microsoft.com/kb/314980)
 
 ## <a name="virtualization-server-tuning-resources"></a>가상화 서버 리소스 튜닝
@@ -83,19 +83,19 @@ ms.locfileid: "59835834"
 
 ## <a name="server-workload-tuning-resources"></a>서버 작업 부하 튜닝 리소스
 
--   [NTttcp를 위한 성능 튜닝](https://msdn.microsoft.com/en-us/library/windows/hardware/dn567663(v=vs.85).aspx)
+-   [NTttcp를 위한 성능 튜닝](https://msdn.microsoft.com/library/windows/hardware/dn567663(v=vs.85).aspx)
 
 -   [Ttcp](http://en.wikipedia.org/wiki/Ttcp)
 
 -   [테스트 네트워크 성능에 NTttcp를 사용 하는 방법](https://msdn.microsoft.com/windows/hardware/gg463264.aspx)
 
--   [파일 서버 Capactiy 도구를 사용 하 여](https://msdn.microsoft.com/en-us/library/windows/hardware/dn567658(v=vs.85).aspx)
+-   [파일 서버 Capactiy 도구를 사용 하 여](https://msdn.microsoft.com/library/windows/hardware/dn567658(v=vs.85).aspx)
 
--   [SPECsfs2008 파일 서버를 사용 하 여](https://msdn.microsoft.com/en-us/library/windows/hardware/dn567653(v=vs.85).aspx)
+-   [SPECsfs2008 파일 서버를 사용 하 여](https://msdn.microsoft.com/library/windows/hardware/dn567653(v=vs.85).aspx)
 
--   [영업 및 워크 로드 배포를 위한 성능 튜닝](https://msdn.microsoft.com/en-us/library/windows/hardware/dn567646(v=vs.85).aspx)
+-   [영업 및 워크 로드 배포를 위한 성능 튜닝](https://msdn.microsoft.com/library/windows/hardware/dn567646(v=vs.85).aspx)
 
--   [온라인 트랜잭션 처리 (OLTP)를 위한 성능 튜닝](https://msdn.microsoft.com/en-us/library/windows/hardware/dn567642(v=vs.85).aspx)
+-   [온라인 트랜잭션 처리 (OLTP)를 위한 성능 튜닝](https://msdn.microsoft.com/library/windows/hardware/dn567642(v=vs.85).aspx)
 
 -   [방법: 소프트 NUMA를 사용 하도록 SQL Server 구성](https://go.microsoft.com/fwlink/?LinkId=98292)
 
@@ -106,7 +106,7 @@ ms.locfileid: "59835834"
 
 ## <a name="server-tuning-tools"></a>서버 튜닝 도구
 
--   [Microsoft Server Performance Advisor](https://msdn.microsoft.com/en-us/library/windows/hardware/dn481522(v=vs.85).aspx)
+-   [Microsoft Server Performance Advisor](https://msdn.microsoft.com/library/windows/hardware/dn481522(v=vs.85).aspx)
 
 ## <a name="performance-tuning-guidelines-for-previous-versions-of-windows-server"></a>이전 버전의 Windows Server에 대 한 성능 조정 지침
 

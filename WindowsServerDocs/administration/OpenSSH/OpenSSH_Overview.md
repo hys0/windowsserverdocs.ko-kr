@@ -5,12 +5,12 @@ author: maertendMSFT
 keywords: OpenSSH SSH, Win32-OpenSSH
 title: Windows에서 OpenSSH
 ms.product: w10
-ms.openlocfilehash: 68ced1ff133495d7658e486e7e72321e18857b21
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c6563fbe4fe69acad4d295a3f7fe166e92d38444
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59843364"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280056"
 ---
 # <a name="openssh-in-windows"></a>Windows에서 OpenSSH
 
@@ -32,5 +32,5 @@ SSH는 여기서은 클라이언트 시스템에서 사용자가 작업 하 고 
 
 OpenSSH의 일반적인 기능에 대 한 자세한 추가 설명서는 온라인으로 제공 [OpenSSH.com](https://www.openssh.com/manual.html)합니다. 
 
-마스터 [OpenSSH 오픈 소스 프로젝트](https://www.openssh.com) OpenBSD 프로젝트는 개발자에 의해 관리 됩니다. 에이 프로젝트의 Microsoft 포크 [Github](https://github.com/PowerShell/openssh-portable)합니다.
-Windows OpenSSH에 대 한 피드백 반가운 일 이며에서 Github 문제를 생성 하 여 제공할 수 있습니다 우리의 [OpenSSH Github 리포지토리](https://github.com/PowerShell/openssh-portable)합니다. 
+마스터 [OpenSSH 오픈 소스 프로젝트](https://www.openssh.com) OpenBSD 프로젝트는 개발자에 의해 관리 됩니다. 에이 프로젝트의 Microsoft 포크 [GitHub](https://github.com/PowerShell/openssh-portable)합니다.
+Windows OpenSSH에 대 한 피드백 반가운 일 이며에서 GitHub 문제를 생성 하 여 제공할 수 있습니다 우리의 [OpenSSH GitHub 리포지토리](https://github.com/PowerShell/openssh-portable)합니다. 

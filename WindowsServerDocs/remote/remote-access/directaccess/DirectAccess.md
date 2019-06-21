@@ -6,19 +6,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- networking-da
+ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6b71d18e-1939-4fc0-bb42-29e0e5ffc8da
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 608d6b4dd3d5e894b28e767164b9370de9cb59ec
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 11c5aa093ddd5aa4777e88c536195bb70bd846db
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59869574"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67281929"
 ---
 # <a name="directaccess"></a>DirectAccess
 
@@ -30,16 +29,16 @@ ms.locfileid: "59869574"
 > 이 항목 외에 다음 DirectAccess 설명서는 사용할 수 있습니다.  
 >   
 > -   [Windows Server의 DirectAccess 배포 경로](DirectAccess-Deployment-Paths-in-Windows-Server.md)  
-> -   [DirectAccess를 배포 하기 위한 필수 구성 요소](Prerequisites-for-Deploying-DirectAccess.md)  
-> -   [DirectAccess 지원 되지 않는 구성](DirectAccess-Unsupported-Configurations.md)  
+> -   [DirectAccess를 배포하기 위한 필수 조건](Prerequisites-for-Deploying-DirectAccess.md)  
+> -   [DirectAccess에서 지원되지 않는 구성](DirectAccess-Unsupported-Configurations.md)  
 > -   [DirectAccess 테스트 랩 가이드](DirectAccess-Test-Lab-Guides.md)  
 > -   [DirectAccess 알려진 문제](DirectAccess-Known-Issues.md)  
 > -   [DirectAccess 용량 계획](DirectAccess-Capacity-Planning.md) 
 > -   [DirectAccess 오프 라인 도메인 가입](DirectAccess-Offline-Domain-Join.md)  
 > -   [DirectAccess 문제 해결](Troubleshooting-DirectAccess.md)  
 > -   [시작된 마법사를 사용 하 여 단일 DirectAccess 서버 배포](single-server-wizard/Deploy-a-Single-DirectAccess-Server-Using-the-Getting-Started-Wizard.md)  
-> -   [고급 설정 사용 하 여 단일 DirectAccess 서버 배포](single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md)  
-> -   [기존 원격 액세스 (VPN) 배포에 DirectAccess 추가](add-to-existing-vpn/Add-DirectAccess-to-an-Existing-Remote-Access-VPN-Deployment.md)  
+> -   [고급 설정을 사용하여 단일 DirectAccess 서버 배포](single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md)  
+> -   [기존 원격 액세스(VPN) 배포에 DirectAccess 추가](add-to-existing-vpn/Add-DirectAccess-to-an-Existing-Remote-Access-VPN-Deployment.md)  
   
 DirectAccess는 기존의 가상 개인 네트워크 (VPN)을 연결할 필요 없이 조직 네트워크 리소스에 원격 사용자에 대 한 연결을 허용 합니다. DirectAccess 연결을 사용 하 여 원격 클라이언트 컴퓨터가 조직에 항상 연결 되어-원격 사용자가 시작 하 고 연결을 VPN 연결을 사용 하 여 필요한 대로 중지할 필요가 없습니다. 또한 IT 관리자에 게 때마다 실행 되는 인터넷 연결 및 DirectAccess 클라이언트 컴퓨터를 관리할 수 있습니다.
 

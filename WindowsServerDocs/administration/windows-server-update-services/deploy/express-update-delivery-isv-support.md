@@ -11,12 +11,12 @@ author: sakitong
 ms.author: coreyp
 manager: lizapo
 ms.date: 10/16/2017
-ms.openlocfilehash: 7331418c1926958da07c94bca9ff9f871134f3fa
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 5f2a99bb69fd41c05013788187838f8fceb5f69a
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66439874"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280445"
 ---
 # <a name="express-update-delivery-isv-support"></a>Express 업데이트 배달 ISV 지원
 
@@ -66,7 +66,7 @@ WSUS는 Windows Update로 인터페이스 역할을 하 고 다운로드 해야 
 
 #### <a name="specify-the-isv-file-cache"></a>ISV 파일 캐시를 지정 합니다.
 
-에 자세히 설명 된 새 클라이언트 쪽 그룹 정책 및 모바일 장치 관리 (MDM) 설정 합니다 [ **구성 서비스 공급자 참조** ](https://msdn.microsoft.com/en-us/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference) ISV 파일 캐시의 위치를 정의 합니다.
+에 자세히 설명 된 새 클라이언트 쪽 그룹 정책 및 모바일 장치 관리 (MDM) 설정 합니다 [ **구성 서비스 공급자 참조** ](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference) ISV 파일 캐시의 위치를 정의 합니다.
 
 | **이름**                                              | **설명**                                                                                                                                                      |
 |-------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -93,7 +93,7 @@ ISV 파일 캐시에 대 한 대체 다운로드 위치를 설정 하는 데 가
 
 **ISV 파일 캐시를 채우는:**
 
-1. 사용 하 여 [WSUS Api](https://msdn.microsoft.com/en-us/library/windows/desktop/microsoft.updateservices.administration.updatefile(v=vs.85).aspx) 업데이트의 파일 경로 및 파일 이름을 MU 서비스에 대 한 액세스.
+1. 사용 하 여 [WSUS Api](https://msdn.microsoft.com/library/windows/desktop/microsoft.updateservices.administration.updatefile(v=vs.85).aspx) 업데이트의 파일 경로 및 파일 이름을 MU 서비스에 대 한 액세스.
 
     WSUS 서버에서 각 업데이트에 대 한 메타 데이터 업데이트의 파일 경로 및 Microsoft 업데이트에서 파일 이름 포함 같이 (Microsoft Update 호스트 이름에 굵게, 뒤에 파일 경로 및 파일 이름): **<http://download.windowsupdate.com>** /c msdownload/업데이트 / software/updt/2016/09/windows10.0-kb3195781-x64_0c06079bccc35cba35a48bd2b1ec46f818bd2e74.msu
 
@@ -119,7 +119,7 @@ ISV 클라이언트 에이전트 다운로드 및 다음 권장된 워크플로 
 
 5.  업데이트를 다운로드 한 후 ISV 클라이언트 에이전트 승인 된 업데이트를 설치 하는 WU 클라이언트를 호출 하는
 
-참조 [검색, 다운로드, 및 Installing Updates](https://msdn.microsoft.com/en-us/library/windows/desktop/aa387102(v=vs.85).aspx) WU 클라이언트를 사용 하 여 검색 하는 방법에 대 한 추가 정보에 대 한 업데이트 다운로드 및 설치 합니다.
+참조 [검색, 다운로드, 및 Installing Updates](https://msdn.microsoft.com/library/windows/desktop/aa387102(v=vs.85).aspx) WU 클라이언트를 사용 하 여 검색 하는 방법에 대 한 추가 정보에 대 한 업데이트 다운로드 및 설치 합니다.
 
 ### <a name="download-workflow-options"></a>워크플로 옵션 다운로드
 

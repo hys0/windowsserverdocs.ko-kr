@@ -6,19 +6,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- networking-da
+ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 65ac1c23-3a47-4e58-888d-9dde7fba1586
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 4e45f0c3c988c86a2428c3beb8bafc29b7b16bc0
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 9c87f1823140fd6c92cf7df1f9d807545b50504e
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66446929"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67281542"
 ---
 # <a name="step-12-test-directaccess-connectivity"></a>단계 DirectAccess 연결 12 테스트
 
@@ -91,7 +90,7 @@ Corpnet 네트워크에 두 클라이언트 컴퓨터를 연결한 다음 두 �
   
 7. EDGE1를 통해 연결 되어 있어야 합니다. 형식 **인터페이스를 표시 하는 netsh 인터페이스 httpstunnel** ENTER 키를 누릅니다.  
   
-   출력 URL을 포함 해야 합니다. https://edge1.contoso.com:443/IPHTTPS합니다.  
+   출력 URL을 포함 해야 합니다. https://edge1.contoso.com:443/IPHTTPS 합니다.  
   
    > [!TIP]  
    > CLIENT1에서 다음 Windows PowerShell 명령을 실행할 수도 있습니다. **Get-NetIPHTTPSConfiguration**. 출력에는 사용 가능한 서버 URL 연결 및 현재 사용 중인 프로필 보여 줍니다.  
@@ -164,7 +163,7 @@ Corpnet 네트워크에 두 클라이언트 컴퓨터를 연결한 다음 두 �
   
 5. 2-EDGE1를 통해 연결 되어 있어야 합니다. 형식 **인터페이스를 표시 하는 netsh 인터페이스 httpstunnel** ENTER 키를 누릅니다.  
   
-   출력 URL을 포함 해야 합니다. https://2-edge1.contoso.com:443/IPHTTPS합니다.  
+   출력 URL을 포함 해야 합니다. https://2-edge1.contoso.com:443/IPHTTPS 합니다.  
   
    > [!TIP]  
    > CLIENT1에서 명령을 실행할 수도 있습니다. **Get-NetIPHTTPSConfiguration**. 출력에는 사용 가능한 서버 URL 연결 및 현재 사용 중인 프로필 보여 줍니다.  

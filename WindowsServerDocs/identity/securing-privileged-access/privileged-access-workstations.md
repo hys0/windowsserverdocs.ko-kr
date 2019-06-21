@@ -9,12 +9,12 @@ ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: daveba
 ms.reviewer: mas
-ms.openlocfilehash: 846307e19324ab18f8bbfd84971108871b677aeb
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 9ac591d65fb84f3c0a8bbd33ca71c93daf892ced
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66445882"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280734"
 ---
 # <a name="privileged-access-workstations"></a>Privileged Access Workstation
 
@@ -96,7 +96,7 @@ Windows 10에서 Hyper-v를 사용 하 여 게스트 가상 컴퓨터 (Windows 1
 
 이렇게 구성하려면 PAW 호스트에 대한 이 지침의 설명에 따라 클라이언트 Hyper-V 기능을 추가하고 사용자 VM을 만든 다음 사용자 VM에 Windows 10 회사 이미지를 설치합니다.
 
-이 기능에 대한 자세한 내용은 [클라이언트 Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/index) 문서를 참조하세요. 게스트 가상 컴퓨터의 운영 체제는 [여기](https://download.microsoft.com/download/9/8/D/98D6A56C-4D79-40F4-8462-DA3ECBA2DC2C/Licensing_Windows_Desktop_OS_for_Virtual_Machines.pdf)에 설명된 대로 [Microsoft 제품 라이선스](https://www.microsoft.com/en-us/Licensing/product-licensing/products.aspx)에 따라 라이선스를 받아야 합니다.
+이 기능에 대한 자세한 내용은 [클라이언트 Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/index) 문서를 참조하세요. 게스트 가상 컴퓨터의 운영 체제는 [여기](https://download.microsoft.com/download/9/8/D/98D6A56C-4D79-40F4-8462-DA3ECBA2DC2C/Licensing_Windows_Desktop_OS_for_Virtual_Machines.pdf)에 설명된 대로 [Microsoft 제품 라이선스](https://www.microsoft.com/en-us/Licensing/product-licensing/products.aspx)에 따라 라이선스를 받아야 합니다.
 
 #### <a name="simultaneous-use---adding-remoteapp-rdp-or-a-vdi"></a>동시 사용-추가 RemoteApp, RDP 또는 VDI
 
@@ -138,7 +138,7 @@ ESAE 관리 포리스트에 대 한 자세한 내용은 참조 하세요. 합니
 * **민감도가 높은 정보 근로자** -PAW에 사용 되는 접근 방식은 매우 민감한 정보 근로자 작업 및 사전 공지 인수 합병 활동, 시험판와 관련 된 직원에 대 한 보호를 제공할 수도 있습니다 재무 보고서, 조직의 소셜 미디어 상태, 경영진 커뮤니케이션, 특허 받지 않은 영업 비밀, 중요 한 연구 또는 기타 독점적 이거나 중요 한 데이터입니다. 이 지침에서는 이러한 정보 근로자의 구성에 대해 자세히 다루지 않으며 이 시나리오가 기술 지침에 포함되어 있지도 않습니다.
 
     > [!NOTE]
-    > Microsoft IT에서는 PAW(내부적으로 "보안 관리 워크스테이션" 또는 SAW라고 함)를 사용하여 Microsoft 내의 내부 중요 시스템에 대한 보안 액세스를 관리합니다. 이 지침에는 "Microsoft에서 관리 워크스테이션을 사용하는 방법" 섹션에 나와 있는 Microsoft에서의 PAW 사용에 대한 추가 정보가 포함되어 있습니다. 이 중요 자산 환경 접근 방식에 대한 자세한 내용은 [보안 관리 워크스테이션을 사용하여 중요 자산 보호](https://msdn.microsoft.com/en-us/library/mt186538.aspx) 문서를 참조하세요.
+    > Microsoft IT에서는 PAW(내부적으로 "보안 관리 워크스테이션" 또는 SAW라고 함)를 사용하여 Microsoft 내의 내부 중요 시스템에 대한 보안 액세스를 관리합니다. 이 지침에는 "Microsoft에서 관리 워크스테이션을 사용하는 방법" 섹션에 나와 있는 Microsoft에서의 PAW 사용에 대한 추가 정보가 포함되어 있습니다. 이 중요 자산 환경 접근 방식에 대한 자세한 내용은 [보안 관리 워크스테이션을 사용하여 중요 자산 보호](https://msdn.microsoft.com/library/mt186538.aspx) 문서를 참조하세요.
 
 이 문서에서는 매우 중요한 권한 있는 계정을 보호하는 데 이 방식이 권장되는 이유, 이러한 PAW 솔루션의 관리자 권한 보호 방식, 도메인 및 클라우드 서비스 관리용 PAW 솔루션을 신속하게 배포하는 방법 등을 설명합니다.
 
@@ -727,7 +727,7 @@ Domain Admin, Enterprise Admin 또는 이와 동등한 계층 0 그룹(중첩 �
                > 값 이름 왼쪽에 있는 **기본값** 상자를 선택하지 마세요.
 
             5. 값 종류: REG_SZ
-            6. 값 데이터: 전체 URL을 입력 합니다 *proxy.pac* 파일을 http://와 파일 이름을 포함 하 여 예를 들어 http://proxy.fabrikam.com/proxy.pac합니다.  URL 수도 있습니다는 단일 레이블 URL-예를 들어, http://proxy/proxy.pac
+            6. 값 데이터: 전체 URL을 입력 합니다 *proxy.pac* 파일을 http://와 파일 이름을 포함 하 여 예를 들어 http://proxy.fabrikam.com/proxy.pac 합니다.  URL 수도 있습니다는 단일 레이블 URL-예를 들어, http://proxy/proxy.pac
 
                > [!NOTE]
                > file://server.fabrikan.com/share/proxy.pac 구문을 사용하여 파일 공유에서 PAC 파일을 호스트할 수도 있지만 그러려면 file:// 프로토콜을 허용해야 합니다. 참조 된 "참고: File://-based 프록시 스크립트 사용 되지 않음"섹션 [웹 프록시 구성 이해](http://blogs.msdn.com/b/ieinternals/archive/2013/10/11/web-proxy-configuration-and-ie11-changes.aspx) 필요한 레지스트리 값 구성에 추가 세부 정보에 대 한 블로그.
@@ -857,7 +857,7 @@ Domain Admin, Enterprise Admin 또는 이와 동등한 계층 0 그룹(중첩 �
 2. **Windows Defender 응용 프로그램 제어 및/또는 AppLocker를 사용 하 여 응용 프로그램을 신뢰할 수 있는 허용 목록**합니다.  신뢰할 수 없거나 서명되지 않은 코드를 PAW에서 실행할 수 있는 권한을 제한하면 악의적인 활동 및 손상의 가능성을 더욱 줄일 수 있습니다.  Windows에서는 응용 프로그램 제어에 대한 두 가지 기본 옵션을 제공합니다.
 
    * **AppLocker**:  AppLocker는 응용 프로그램은 지정된 된 시스템에서 실행할 수 있는 관리자가 제어 합니다.  AppLocker는 그룹 정책을 통해 중앙에서 제어하고 특정 사용자 또는 그룹(PAW 사용자를 대상으로 하는 응용 프로그램의 경우)에 적용할 수 있습니다.  AppLocker에 대한 자세한 내용은 [AppLocker 개요](https://technet.microsoft.com/library/hh831440.aspx) TechNet 문서를 참조하세요.
-   * **Windows Defender 응용 프로그램 제어**: 영향을 받는 장치에서 AppLocker와 달리 재정의할 수 있는 향상 된 하드웨어 기반 응용 프로그램 제어를 제공 하는 새로운 Windows Defender 응용 프로그램 제어 기능입니다.  AppLocker와 마찬가지로 Windows Defender 응용 프로그램 제어 그룹 정책을 통해 제어 되 고 특정 사용자를 대상으로 사용할 수 있습니다.  Windows Defender 응용 프로그램 제어를 사용 하 여 응용 프로그램 사용을 제한 하는 방법 대 한 자세한 내용은 참조 하십시오 [Windows Defender 응용 프로그램 제어 배포 가이드](https://docs.microsoft.com/en-gb/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)합니다.
+   * **Windows Defender 응용 프로그램 제어**: 영향을 받는 장치에서 AppLocker와 달리 재정의할 수 있는 향상 된 하드웨어 기반 응용 프로그램 제어를 제공 하는 새로운 Windows Defender 응용 프로그램 제어 기능입니다.  AppLocker와 마찬가지로 Windows Defender 응용 프로그램 제어 그룹 정책을 통해 제어 되 고 특정 사용자를 대상으로 사용할 수 있습니다.  Windows Defender 응용 프로그램 제어를 사용 하 여 응용 프로그램 사용을 제한 하는 방법 대 한 자세한 내용은 참조 하십시오 [Windows Defender 응용 프로그램 제어 배포 가이드](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)합니다.
 
 3. **보호된 사용자, 인증 정책 및 인증 사일로를 사용하여 권한 있는 계정을 추가로 보호합니다**.  보호된 사용자의 구성원에게는 LSA(로컬 보안 에이전트)에 저장된 자격 증명을 보호하고 자격 증명 도난 및 재사용의 위험을 최소화하는 추가적인 보안 정책이 적용됩니다.  인증 정책 및 사일로는 권한 있는 사용자가 도메인의 리소스에 액세스할 수 있는 방법을 제어합니다.  종합적으로 이러한 보호는 권한 있는 사용자의 계정 보안을 크게 강화합니다.  이러한 기능에 대한 자세한 내용은 [보호된 계정을 구성하는 방법](https://technet.microsoft.com/library/dn518179.aspx) 웹 문서를 참조하세요.
 
@@ -912,7 +912,7 @@ A [패브릭에 보호 된](https://aka.ms/shieldedvms) 실드 된 가상 컴퓨
 ### <a name="set-up-the-host-guardian-service"></a>호스트 보호 서비스 설정
 
 호스트 보호 서비스는 id 및 실제 PAW 장치 상태 증명 하는 일을 담당 합니다.
-HGS 잘 알려진 컴퓨터만 신뢰할 수 있는 쉽고 [코드 무결성 정책](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) 보호 된 vm을 시작 하도록 허용 합니다.
+HGS 잘 알려진 컴퓨터만 신뢰할 수 있는 쉽고 [코드 무결성 정책](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) 보호 된 vm을 시작 하도록 허용 합니다.
 이 사용자 데스크톱 환경 위협 으로부터 계층화 된 리소스를 관리 하는 신뢰할 수 있는 워크 로드를 실행 하는 보호 된 Vm을 보호 합니다.
 
 HGS는 장치는 PAW Vm을 실행할 수를 결정할 책임이 이므로 계층 0 리소스를 간주 됩니다.
@@ -1010,7 +1010,7 @@ New-ShieldingDataFile -Policy Shielded -BindToHostTpm [...]
 
 [Device Guard 개요](https://technet.microsoft.com/library/dn986865(v=vs.85).aspx)
 
-[보안 관리 워크스테이션을 사용 하 여 중요 자산 보호](https://msdn.microsoft.com/en-us/library/mt186538.aspx)
+[보안 관리 워크스테이션을 사용 하 여 중요 자산 보호](https://msdn.microsoft.com/library/mt186538.aspx)
 
 [Dave probert (Channel 9) Windows 10의에서 격리 된 사용자 모드](https://channel9.msdn.com/Blogs/Seth-Juarez/Isolated-User-Mode-in-Windows-10-with-Dave-Probert)
 

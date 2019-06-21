@@ -8,12 +8,12 @@ author: johnmarlin-msft
 ms.date: 02/28/2019
 description: 이 문서는 동일한 하드웨어를 사용 하 여 2 노드 장애 조치 클러스터 업그레이드에 대해 설명 합니다.
 ms.localizationpriority: medium
-ms.openlocfilehash: 77cde9e64fda385facd91d86483f4d7f749f30a1
-ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
+ms.openlocfilehash: 6787d852cc5075e306373a163814135190f27fd6
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66453054"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280239"
 ---
 # <a name="upgrading-failover-clusters-on-the-same-hardware"></a>동일한 하드웨어에서 장애 조치 클러스터 업그레이드
 
@@ -25,7 +25,7 @@ ms.locfileid: "66453054"
 
 ## <a name="overview"></a>개요
 
-클러스터는 기존 장애 조치 시 운영 체제를 업그레이드 경우 Windows Server 2016에서 Windows 2019 에서만 있습니다.  장애 조치 클러스터는 이전 버전을 실행 하는 경우 등 Windows Server 2012 R2와 같은 및 이전 버전에서는 클러스터 서비스가 실행 되는 동안 업그레이드에서는 노드를 함께 조인 합니다.  동일한 하드웨어를 사용 하는 경우 최신 버전에 단계를 수행할 수 있습니다.  
+클러스터는 기존 장애 조치 시 운영 체제를 업그레이드 경우 Windows Server 2016에서 Windows 2019 에서만 있습니다.  장애 조치 클러스터 및 이전 버전에서는 Windows Server 2012 R2와 같은 이전 버전을 실행 하는 경우 클러스터 서비스에서 실행 되는 동안 업그레이드에서는 노드를 함께 조인 합니다.  동일한 하드웨어를 사용 하는 경우 최신 버전에 단계를 수행할 수 있습니다.  
 
 장애 조치 클러스터의 업그레이드를 참조 하십시오 합니다 [Windows 업그레이드 Center](https://www.microsoft.com/upgradecenter)합니다.  위치에서 Windows Server를 업그레이드할 때 이동할 있습니다 기존 운영 체제 버전에서 동일한 하드웨어 사용 하면서 최신 릴리스. Windows Server 업그레이드 원위치에서 하나 이상의 경우에 따라 두 가지 버전 앞으로 수 있습니다. Windows Server 2012 R2 및 Windows Server 2016 업그레이드할 수 있습니다 예를 들어, Windows Server 2019로 해당 위치에서.  또한에 유의 합니다 [클러스터 마이그레이션 마법사](https://blogs.msdn.microsoft.com/clustering/2012/06/25/how-to-move-highly-available-clustered-vms-to-windows-server-2012-with-the-cluster-migration-wizard/) 사용할 수 있지만 두 가지 버전 다시 최대 에서만 지원 됩니다. 다음 그림에는 Windows Server에 대 한 업그레이드 경로 보여 줍니다. 아래쪽 가리키는 화살표는 Windows Server 2019까지 이전 버전에서 이동 하 여 지원 되는 업그레이드 경로 나타냅니다.
 

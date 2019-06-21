@@ -11,12 +11,12 @@ ms.assetid: 1a65a98e-54b6-4c41-9732-1e3d32fe3a5f
 author: KBDAzure
 ms.author: kathydav
 ms.date: 09/21/2017
-ms.openlocfilehash: 8b7d9233b105f710d620b5142205fb2eadd0248a
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 6ec5db82ecae2fb74731f3c52b9113325837a2fb
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67141365"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280012"
 ---
 # <a name="whats-new-in-hyper-v-on-windows-server"></a>Windows Server에서 Hyper-v의 새로운 기능
 
@@ -212,7 +212,7 @@ Windows Server 2012 R2를 실행 하는 노드를 사용 하 여 Windows Server 
   
 ### <a name="virtual-machine-configuration-version-updated"></a>가상 머신 구성 버전 \(업데이트\)
 
-버전의 Hyper-v 버전과 상태 및 스냅샷 파일을 저장 하는 가상 컴퓨터의 구성의 호환성을 나타냅니다. 버전 5 사용 하 여 가상 머신을 Windows Server 2012 R2와 호환 되며 Windows Server 2012 R2 및 Windows Server 2016에서 실행할 수 있습니다. Windows Server 2016에 도입 된 버전을 사용 하 여 가상 컴퓨터 및 Windows Server 2019 Windows Server 2012 R2에서 Hyper-v에서 실행 되지 않습니다.   
+버전의 Hyper-v 버전과 상태 및 스냅샷 파일을 저장 하는 가상 컴퓨터의 구성의 호환성을 나타냅니다. 버전 5 사용 하 여 가상 머신을 Windows Server 2012 R2와 호환 되며 Windows Server 2012 R2 및 Windows Server 2016에서 실행할 수 있습니다. Windows Server 2016 및 Windows Server 2019에 도입 된 버전을 사용 하 여 가상 컴퓨터는 Windows Server 2012 R2의 Hyper-v에서 실행 되지 않습니다.   
   
 을 이동 하거나 Windows Server 2012 R2에서 Windows Server 2016에서 Hyper-v를 실행 하는 서버 또는 Windows Server 2019에 가상 컴퓨터를 가져오는 경우 가상 머신의 구성이 자동으로 업데이트 되지 않습니다. 즉, Windows Server 2012 r 2를 실행 하는 서버에 다시 가상 컴퓨터를 이동할 수 있습니다. 그러나 즉, 가상 컴퓨터 구성의 버전을 수동으로 업데이트 될 때까지 새 가상 컴퓨터 기능을 사용할 수 없습니다.  
   

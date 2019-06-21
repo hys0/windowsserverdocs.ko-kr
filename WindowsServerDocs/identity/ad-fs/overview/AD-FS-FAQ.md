@@ -10,12 +10,12 @@ ms.topic: article
 ms.custom: it-pro
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: f3f84a5c18589d38606825ee064cfb729003a05d
-ms.sourcegitcommit: a3958dba4c2318eaf2e89c7532e36c78b1a76644
+ms.openlocfilehash: fc92e8b30d6b4c0c765333d3e22311e551d3365d
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66719688"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280490"
 ---
 # <a name="ad-fs-frequently-asked-questions-faq"></a>AD FS에는 질문과 대답 (FAQ)
 
@@ -138,9 +138,9 @@ Apple에 앱 전송 보안 ATS () 호출에서 AD FS에 인증 하는 iOS 앱에
 AD FS 서버 2019에는 지원 Proof Key 코드 Exchange (PKCE)에 대 한 OAuth 인증 코드 부여 흐름에 대 한
 
 ### <a name="what-permitted-scopes-are-supported-by-ad-fs"></a>AD FS는 허용 된 범위를 지원 하나요?
-- aza-사용 하는 경우 [Broker 클라이언트에 대 한 OAuth 2.0 프로토콜 확장](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-oapxbc/2f7d8875-0383-4058-956d-2fb216b44706) 서버 범위 매개 변수 "aza" 범위에 있으면 새 기본 새로 고침 토큰을 발급 하 고 설정 뿐만 아니라 응답 refresh_token 필드에 설정 없으면 새 기본 새로 고침 토큰의 수명과 refresh_token_expires_in 필드 적용 됩니다.
+- aza-사용 하는 경우 [Broker 클라이언트에 대 한 OAuth 2.0 프로토콜 확장](https://docs.microsoft.com/openspecs/windows_protocols/ms-oapxbc/2f7d8875-0383-4058-956d-2fb216b44706) 서버 범위 매개 변수 "aza" 범위에 있으면 새 기본 새로 고침 토큰을 발급 하 고 설정 뿐만 아니라 응답 refresh_token 필드에 설정 없으면 새 기본 새로 고침 토큰의 수명과 refresh_token_expires_in 필드 적용 됩니다.
 - openid-응용 프로그램의 OpenID Connect 인증 프로토콜을 사용 하 여 요청을 허용 합니다.
-- logon_cert-logon_cert 범위를 통해 응용 프로그램을 대화형으로 인증 된 사용자를 로그온에 사용할 수 있는 로그온 인증서를 요청 합니다. AD FS 서버는 응답의 access_token 매개 변수를 생략 하 고 대신 base64로 인코딩된 CMS 인증서 체인 또는 CMC 전체 PKI 응답을 제공 합니다. 자세한 내용은 사용 가능한 [여기](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-oapx/32ce8878-7d33-4c02-818b-6c9164cc731e)합니다. 
+- logon_cert-logon_cert 범위를 통해 응용 프로그램을 대화형으로 인증 된 사용자를 로그온에 사용할 수 있는 로그온 인증서를 요청 합니다. AD FS 서버는 응답의 access_token 매개 변수를 생략 하 고 대신 base64로 인코딩된 CMS 인증서 체인 또는 CMC 전체 PKI 응답을 제공 합니다. 자세한 내용은 사용 가능한 [여기](https://docs.microsoft.com/openspecs/windows_protocols/ms-oapx/32ce8878-7d33-4c02-818b-6c9164cc731e)합니다. 
 - user_impersonation-user_impersonation 범위가 성공적으로 AD FS에서-대신-의 액세스 토큰을 요청 하는 데 필요한입니다. 이 범위를 사용 하는 방법에 대 한 세부 정보 참조 [On-Behalf-Of (OBO) OAuth를 사용 하 여 ad FS 2016을 사용 하 여 다중 계층 응용 프로그램 빌드](../../ad-fs/development/ad-fs-on-behalf-of-authentication-in-windows-server.md)합니다.
 - vpn_cert-vpn_cert 범위 EAP-TLS 인증을 사용 하 여 VPN 연결을 사용할 수 있는 VPN 인증서를 요청 하는 응용 프로그램을 허용 합니다. 이 더 이상 지원 되지 않습니다.
 - 전자 메일-응용 프로그램이 로그인된 한 사용자에 대 한 전자 메일 클레임을 요청할 수 있게 합니다. 이 더 이상 지원 되지 않습니다. 

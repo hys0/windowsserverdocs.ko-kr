@@ -6,19 +6,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- networking-ras
+ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 78cc2ce3-a48e-45db-b402-e480b493fab1
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 65af14e3adfacd96334e2326f8dd0b346e27034a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 655a7b02468db4246b85b495289806a3f9735a95
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59850184"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67281999"
 ---
 # <a name="border-gateway-protocol-bgp"></a>BGP(경계 게이트웨이 프로토콜)
 
@@ -150,7 +149,7 @@ RAS 게이트웨이 BGP 라우터의 기능은 다음과가 같습니다.
   
 **원격 액세스 역할 서비스와 BGP 라우팅**합니다. 이제 설치할 수는 **라우팅** 설치 하지 않고 원격 액세스 서버 역할의 역할 서비스는 **원격 액세스 서비스 (RAS)** BGP LAN 라우터 원격 액세스를 사용 하려는 경우 역할 서비스.  BGP 라우터 메모리 사용 공간이 줄어들고만 BGP 동적 라우팅에 필요한 구성 요소를 설치 합니다. 라우팅 역할 서비스는 BGP 라우터 VM이 필요한 경우에 DirectAccess 또는 VPN을 사용 하 여 필요 하지 않을 때 유용 합니다. 또한 원격 액세스를 사용 하 여 BGP 사용 하 여 LAN 라우터를 사용 하면 BGP의 내부 네트워크에서 동적 라우팅 장점은 있습니다.  
   
-**BGP 통계(메시지 카운터, 경로 카운터)**. BGP 라우터는 필요한 경우 **Get BgpStatistics** Windows PowerShell 명령을 사용하여 메시지 및 경로 통계 표시를 지원합니다.  
+**BGP 통계(메시지 카운터, 경로 카운터)** . BGP 라우터는 필요한 경우 **Get BgpStatistics** Windows PowerShell 명령을 사용하여 메시지 및 경로 통계 표시를 지원합니다.  
   
 **ECMP(Equal Cost Multi Path Routing) 지원**. BGP 라우터는 ECMP를 지원하므로 BGP 라우팅 테이블 및 스택으로 배관된 둘 이상의 같은 비용 경로를 가질 수 있습니다. ECMP를 사용하도록 설정된 상태에서 데이터 패킷 전송을 위한 BGP 라우터의 경로 선택은 임의적입니다.  
   
@@ -162,7 +161,7 @@ RAS 게이트웨이 BGP 라우터의 기능은 다음과가 같습니다.
   
 **IPv4 및 IPv6 전송 피어링 지원**. BGP 라우터는 IPv4 및 IPv6 피어링 둘 다 지원합니다. 그러나 BGP 라우터의 IPv4 주소로 BGP 식별자를 구성해야 합니다. 모든 BGP 라우터 배포 토폴로지에 대해 두 피어링 형식(IPV4/IPv6) 중 하나를 사용할 수 있습니다.  
   
-**IPv4 및 IPv6 유니캐스트 경로 학습 및 알림 기능(멀티 프로토콜 네트워크 계층 연결 가능성 정보 [NLRI])**. 어떤 전송을 사용하든지 세션을 설정하는 동안 다른 BGP 라우터에서 적절한 기능이 알려지면 BGP 라우터는 IPv4 및 IPv6 경로를 교환할 수 있습니다. IPv6 라우팅을 구성하려면 매개 변수 IPv6Routing을 사용하도록 설정해야 하고 로컬 전역 IPv6 주소를 라우터 수준에서 구성해야 합니다.  
+**IPv4 및 IPv6 유니캐스트 경로 학습 및 알림 기능(멀티 프로토콜 네트워크 계층 연결 가능성 정보 [NLRI])** . 어떤 전송을 사용하든지 세션을 설정하는 동안 다른 BGP 라우터에서 적절한 기능이 알려지면 BGP 라우터는 IPv4 및 IPv6 경로를 교환할 수 있습니다. IPv6 라우팅을 구성하려면 매개 변수 IPv6Routing을 사용하도록 설정해야 하고 로컬 전역 IPv6 주소를 라우터 수준에서 구성해야 합니다.  
   
 **혼합 모드 및 수동 모드 피어링**. 들어오는 요청에 응답 하지만 여기서 BGP 라우터 및 역할을 초기자 응답자--두 혼합된 모드 또는 passive 모드, 여기서 BGP 라우터는 피어 링을 시작 하지 않고에서 BGP 피어 링 세션을 구성할 수 있습니다. 혼합 모드가 기본값이며 BGP 피어링에 권장됩니다. 디버깅 또는 진단 목적으로 수동 모드를 사용하려 하지 않는다면 혼합 모드를 사용하는 것이 좋습니다. 모든 BGP 라우터 배포 토폴로지에서 오류 이벤트가 발생하는 경우 자동으로 다시 시작하게 하려면 혼합 모드 피어링이 필요합니다.  
   

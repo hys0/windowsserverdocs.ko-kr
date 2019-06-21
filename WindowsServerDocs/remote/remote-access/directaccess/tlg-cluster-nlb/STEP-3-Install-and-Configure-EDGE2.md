@@ -6,19 +6,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- networking-da
+ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f04eb11e-ed5f-42a1-a77b-57a248ba2d10
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 0692d47d50d84a66b5c3cc41d2ba2fca1004cafe
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 708a2a71f798b842e38510a2c5ea8ed10ae7656e
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59870884"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67283365"
 ---
 # <a name="step-3-install-and-configure-edge2"></a>3 설치 단계 및 EDGE2를 구성 합니다.
 
@@ -58,7 +57,7 @@ EDGE2를 구성 하려면 다음 단계를 수행 합니다.
   
 9. **이 연결에 대 한 DNS 접미사**, 형식 **corp.contoso.com**, 클릭 **확인** 두 번입니다.  
   
-10. **인터넷 프로토콜 버전 6(TCP/IPv6)**, **속성**을 차례로 클릭합니다.  
+10. **인터넷 프로토콜 버전 6(TCP/IPv6)** , **속성**을 차례로 클릭합니다.  
   
 11. 클릭 **다음 IPv6 주소를 사용 하 여**입니다. **IPv6 주소**, 형식 **2001:db8:1::8**합니다. **서브넷 접두사 길이**, 형식 **64**합니다.  
   

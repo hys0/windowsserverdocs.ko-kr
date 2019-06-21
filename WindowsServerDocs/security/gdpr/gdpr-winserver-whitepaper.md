@@ -5,18 +5,17 @@ keywords: 개인 정보 보호, GDPR
 ms.custom: na
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- techgroup-security
+ms.technology: techgroup-security
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.date: 09/25/2017
 ms.author: nirb
-ms.openlocfilehash: be9509de0291924bb95733f995b447230bb75214
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 1c374c00573e87594eeeab620face9ea9acaa531
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59870134"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284200"
 ---
 # <a name="beginning-your-general-data-protection-regulation-gdpr-journey-for-windows-server"></a>Windows Server에 대 한 일반 데이터 보호 규정 (GDPR) 경험을 시작 
 
@@ -362,7 +361,7 @@ ATA는 공격자가 권한 있는 id 손상 하려고 시도 감지 하는 데 �
 
 - **Windows Defender Credential Guard:** https://www.youtube.com/watch?v=F-pTkesjkhI 및 https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard
 
-- **제어 흐름 보호:** https://msdn.microsoft.com/en-us/library/windows/desktop/mt637065(v=vs.85).aspx
+- **제어 흐름 보호:** https://msdn.microsoft.com/library/windows/desktop/mt637065(v=vs.85).aspx
 
 - **보안 및 보증 합니다.** https://docs.microsoft.com/windows-server/security/security-and-assurance
 

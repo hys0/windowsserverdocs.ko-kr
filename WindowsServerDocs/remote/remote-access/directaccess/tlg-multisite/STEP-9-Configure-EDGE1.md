@@ -6,19 +6,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- networking-da
+ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f6e8d85b-de65-43b3-bf3e-ec84471a1fcc
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: f5d216934f0d09cdef97ce4405161862b112d632
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b0a47a436bbd11c795caa8b402054ae0d2c3282f
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59864874"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67281372"
 ---
 # <a name="step-9-configure-edge1"></a>9 단계 EDGE1 구성
 
@@ -40,7 +39,7 @@ ms.locfileid: "59864874"
   
 4.  **대체 DNS 서버**, 형식 **10.2.0.1**합니다. **확인**을 클릭합니다.  
   
-5.  **인터넷 프로토콜 버전 6(TCP/IPv6)**, **속성**을 차례로 클릭합니다.  
+5.  **인터넷 프로토콜 버전 6(TCP/IPv6)** , **속성**을 차례로 클릭합니다.  
   
 6.  **대체 DNS 서버**, 형식 **2001:db8:2::1** 을 클릭 한 다음 **확인**합니다.  
   

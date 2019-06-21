@@ -8,12 +8,12 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 01/30/2019
-ms.openlocfilehash: 25ed17d964f12c2f497ccde443dad9f8bc253b20
-ms.sourcegitcommit: 21165734a0f37c4cd702c275e85c9e7c42d6b3cb
+ms.openlocfilehash: 3c36eff8aabd1fa1c6456dce1d08ebe504102e8c
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2019
-ms.locfileid: "65034679"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284163"
 ---
 # <a name="shielded-vms-for-tenants---creating-shielding-data-to-define-a-shielded-vm"></a>테 넌 트-보호 된 VM을 정의 하려면 실딩 데이터 만들기에 대 한 보호 된 Vm
 
@@ -199,7 +199,7 @@ VMM에서 서명 된 템플릿 디스크는 일반화 되므로 테 넌 트는 �
 실딩 데이터 파일 마법사 대신 실행할 수 있습니다 [새로 만들기-ShieldingDataFile](https://docs.microsoft.com/powershell/module/shieldedvmdatafile/new-shieldingdatafile?view=win10-ps) 실딩 데이터 파일을 만들려면.
 
 모든 보호 데이터 파일에서 보호 된 패브릭에서 실행 되도록 보호 된 Vm에 권한을 부여 하는 올바른 소유자 및 보호 인증서를 사용 하 여 구성 해야 합니다.
-모든 보호자를 실행 하 여 로컬로 설치 되어 있는지 확인할 수 있습니다 [Get HgsGuardian](https://docs.microsoft.com/en-us/powershell/module/hgsclient/get-hgsguardian?view=win10-ps)합니다. 소유자의 보호자에 개인 키가 포함 하지만 데이터 센터에 대 한 보호자는 일반적으로 그렇지 않습니다.
+모든 보호자를 실행 하 여 로컬로 설치 되어 있는지 확인할 수 있습니다 [Get HgsGuardian](https://docs.microsoft.com/powershell/module/hgsclient/get-hgsguardian?view=win10-ps)합니다. 소유자의 보호자에 개인 키가 포함 하지만 데이터 센터에 대 한 보호자는 일반적으로 그렇지 않습니다.
 
 소유자 보호자를 만들려는 경우 다음 명령을 실행 합니다.
 
@@ -238,7 +238,7 @@ New-ShieldingDataFile -ShieldingDataFilePath "C:\temp\Marketing-LBI.pdk" -Policy
 볼륨의 쉼표로 구분 된 목록 ID 한정자를 제공 하 여 둘 이상의 템플릿 디스크를 신뢰할 수 있는 여 `-VolumeIDQualifier` 매개 변수입니다.
 마지막으로, 다른 경우 사용 하 여 VM 사용 하 여 응답 파일을와 함께 제공 해야 하는 파일의 `-OtherFile` 매개 변수 파일 경로 쉼표로 구분 된 목록에 제공 합니다.
 
-Cmdlet 설명서를 참조 하십시오 [새로 만들기-ShieldingDataFile](https://docs.microsoft.com/en-us/powershell/module/shieldedvmdatafile/New-ShieldingDataFile?view=win10-ps) 및 [새로 만들기-VolumeIDQualifier](https://docs.microsoft.com/en-us/powershell/module/shieldedvmdatafile/New-VolumeIDQualifier?view=win10-ps) 실딩 데이터 파일을 구성 하는 다른 방법에 대해 자세히 알아보려면 합니다.
+Cmdlet 설명서를 참조 하십시오 [새로 만들기-ShieldingDataFile](https://docs.microsoft.com/powershell/module/shieldedvmdatafile/New-ShieldingDataFile?view=win10-ps) 및 [새로 만들기-VolumeIDQualifier](https://docs.microsoft.com/powershell/module/shieldedvmdatafile/New-VolumeIDQualifier?view=win10-ps) 실딩 데이터 파일을 구성 하는 다른 방법에 대해 자세히 알아보려면 합니다.
 
 ## <a name="see-also"></a>참조
 

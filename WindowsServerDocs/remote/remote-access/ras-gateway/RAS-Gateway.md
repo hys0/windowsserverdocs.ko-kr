@@ -9,12 +9,12 @@ ms.assetid: acaa46b7-09b1-4707-9562-116df8db17eb
 ms.author: pashort
 author: shortpatti
 ms.date: 05/23/2018
-ms.openlocfilehash: 8fc1c97d7c2a8694e56cc36b5501a82081b3db23
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d61dcdbb61449bd2af57b8e2c99ced6235c4deca
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59812344"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67281259"
 ---
 # <a name="ras-gateway"></a>RAS 게이트웨이
 
@@ -124,9 +124,9 @@ RAS 게이트웨이 다음과 같은 기능이 포함 됩니다.
 ## <a name="bkmk_manage"></a>RAS 게이트웨이 관리 도구  
 다음은 RAS 게이트웨이에 대 한 관리 도구입니다.  
   
--   RAS 게이트웨이 라우터를 배포 하려면 Windows Server 2016에서 Windows PowerShell 명령을 사용 해야 있습니다. 자세한 내용은 [원격 액세스 Cmdlet](https://technet.microsoft.com/library/hh918399.aspx) Windows Server 2016 및 Windows 10에 대 한 합니다.  
+-   RAS 게이트웨이 라우터를 배포 하려면 Windows Server 2016에서 Windows PowerShell 명령을 사용 해야 있습니다. 자세한 내용은 [원격 액세스 Cmdlet](https://docs.microsoft.com/powershell/module/remoteaccess) Windows Server 2016 및 Windows 10에 대 한 합니다.  
   
--   System Center 2012 R2 Virtual Machine Manager (VMM)에서 RAS 게이트웨이 Windows Server 게이트웨이 이름은입니다. VMM 소프트웨어 인터페이스에서 프로토콜 BGP (경계 게이트웨이) 구성 옵션의 제한 된 집합을 사용할 포함 **로컬 BGP IP 주소** 하 고 **번호 ASN (Autonomous System)**,  **BGP 피어 IP 주소의 목록**, 및 **ASN 값**합니다. 그러나 원격 액세스 Windows PowerShell BGP 명령을 사용하여 Windows Server 게이트웨이의 다른 모든 기능을 구성할 수 있습니다. 자세한 내용은 [Virtual Machine Manager (VMM)](https://technet.microsoft.com/system-center-docs/vmm/vmm) 하 고 [원격 액세스 Cmdlet](https://technet.microsoft.com/library/hh918399.aspx) Windows Server 2016 및 Windows 10에 대 한 합니다.  
+-   System Center 2012 R2 Virtual Machine Manager (VMM)에서 RAS 게이트웨이 Windows Server 게이트웨이 이름은입니다. VMM 소프트웨어 인터페이스에서 프로토콜 BGP (경계 게이트웨이) 구성 옵션의 제한 된 집합을 사용할 포함 **로컬 BGP IP 주소** 하 고 **번호 ASN (Autonomous System)** ,  **BGP 피어 IP 주소의 목록**, 및 **ASN 값**합니다. 그러나 원격 액세스 Windows PowerShell BGP 명령을 사용하여 Windows Server 게이트웨이의 다른 모든 기능을 구성할 수 있습니다. 자세한 내용은 [Virtual Machine Manager (VMM)](https://technet.microsoft.com/system-center-docs/vmm/vmm) 하 고 [원격 액세스 Cmdlet](https://technet.microsoft.com/library/hh918399.aspx) Windows Server 2016 및 Windows 10에 대 한 합니다.  
   
 ## <a name="related-topics"></a>관련 항목
 - [RAS 게이트웨이 고가용성](../../../networking/sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md)  

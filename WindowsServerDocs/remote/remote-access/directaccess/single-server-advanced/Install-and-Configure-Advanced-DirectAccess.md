@@ -6,19 +6,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- networking-da
+ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f45e5b6f-fc66-4deb-bed4-a1baa3cc6dae
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: d6179210c873db1bf09cb61272ad1abbb927e401
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2ff1e776dfb40f08f5dde1369eea1518bca5a772
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59847024"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67281764"
 ---
 # <a name="install-and-configure-advanced-directaccess"></a>고급 DirectAccess 설치 및 구성
 
@@ -34,7 +33,7 @@ ms.locfileid: "59847024"
   
     이 단계에서는 DirectAccess 클라이언트 컴퓨터, 서버 설정, 인프라 서버 및 응용 프로그램 서버를 구성합니다.  
   
--   [3 단계: 고급 DirectAccess 배포를 확인](da-adv-configure-s3-verify.md)합니다.  
+-   [3단계: 고급 DirectAccess 배포를 확인](da-adv-configure-s3-verify.md)합니다.  
   
     이 단계에서는 배포 확인 단계를 설명합니다.  
   

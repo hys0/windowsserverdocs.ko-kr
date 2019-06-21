@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 140e8e4204148dd8862385054554d7b8336856ec
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 7253502390db004747d3732cf3d288a51afdaaf1
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66192015"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280695"
 ---
 # <a name="set-a-service-communications-certificate"></a>서비스 통신 인증서 설정
 
@@ -22,7 +22,7 @@ ms.locfileid: "66192015"
 Active Directory Federation Services에서 페더레이션 서버 \(AD FS\) 서비스 통신 인증서를 사용 하 여 Secure Sockets Layer에 대 한 웹 서비스 트래픽의 보안을 유지 \(SSL\) 웹와의 통신 클라이언트 또는 페더레이션 서버 프록시를 사용 하 여 합니다.
 
 > [!NOTE]  
-> 서비스 통신 인증서는 SSL 인증서와 동일 합니다. AD FS SSL 인증서를 변경 하려면 Powershell을 사용 해야 합니다. 이 지침을 따릅니다 [문서](https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/operations/manage-ssl-certificates-ad-fs-wap)합니다.
+> 서비스 통신 인증서는 SSL 인증서와 동일 합니다. AD FS SSL 인증서를 변경 하려면 Powershell을 사용 해야 합니다. 이 지침을 따릅니다 [문서](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/manage-ssl-certificates-ad-fs-wap)합니다.
 
 
 다음 절차를 사용 하 여 AD FS 관리 스냅인을 사용 하 여 서비스 통신 인증서를 변경 하려면\-에서 합니다.  

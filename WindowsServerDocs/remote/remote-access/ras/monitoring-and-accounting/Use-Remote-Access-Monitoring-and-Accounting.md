@@ -6,19 +6,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- networking-ras
+ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 92519b49-0df4-43c1-9717-f13570644212
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 454bc8dc5a9cbf8dc4e759196a13e7920de2eaf7
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c794d4b8169c81c63162f119467f5f03d10ce756
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59823524"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67282649"
 ---
 # <a name="use-remote-access-monitoring-and-accounting"></a>원격 액세스 모니터링 및 계정 사용
 
@@ -32,11 +31,11 @@ ms.locfileid: "59823524"
 > 이 항목 외에도 원격 액세스 모니터링에 대한 다음 항목을 사용할 수 있습니다.  
 >   
 > -   [원격 액세스 서버에서 기존 부하 모니터링](Monitor-the-existing-load-on-the-Remote-Access-server.md)  
-> -   [원격 액세스 서버의 구성 배포 상태를 모니터링 합니다.](Monitor-the-configuration-distribution-status-of-the-Remote-Access-server.md)  
+> -   [원격 액세스 서버의 구성 배포 상태 모니터링](Monitor-the-configuration-distribution-status-of-the-Remote-Access-server.md)  
 > -   [원격 액세스 서버 및 해당 구성 요소의 작업 상태를 모니터링 합니다.](Monitor-the-operations-status-of-the-Remote-Access-server-and-its-components.md)  
 > -   [원격 액세스 서버 작업 문제 식별 및 해결](Identify-and-resolve-Remote-Access-server-operations-problems.md)  
-> -   [연결 된 원격 클라이언트 활동 및 상태 모니터링](Monitor-connected-remote-clients-for-activity-and-status.md)  
-> -   [기록 데이터를 사용 하 여 원격 클라이언트에 대 한 사용 현황 보고서 생성](Generate-a-usage-report-for-remote-clients-using-historical-data.md)  
+> -   [연결된 원격 클라이언트에서 활동 및 상태 모니터링](Monitor-connected-remote-clients-for-activity-and-status.md)  
+> -   [기록 데이터를 사용하여 원격 클라이언트에 대한 사용 보고서 생성](Generate-a-usage-report-for-remote-clients-using-historical-data.md)  
 
 ## <a name="in-this-guide"></a>이 가이드의 내용  
 이 문서에는 DirectAccess 관리 콘솔 및 원격 액세스 서버 역할의 일부로 제공되는 해당 Windows PowerShell cmdlet을 사용하여 원격 액세스의 모니터링 기능을 활용하는 방법에 대한 지침이 수록되어 있습니다.  

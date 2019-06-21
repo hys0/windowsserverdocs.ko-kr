@@ -6,19 +6,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- networking-ras
+ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7540c17b-81de-47de-a04f-3247afa26f70
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 12485ddb9cbb70766c018e8f99caa91cfa6ee9da
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8efeb29bf07b572d5e2faef677349690d4282b4d
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59861334"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67281176"
 ---
 # <a name="step-3-plan-a-load-balanced-cluster-deployment"></a>3 단계 부하 분산 된 클러스터 배포 계획
 
@@ -40,7 +39,7 @@ ms.locfileid: "59861334"
   
 -   **외부 부하 분산 장치**-원격 액세스 클러스터 서버 간에 트래픽 부하를 관리 하는 외부 하드웨어 필요 외부 부하 분산 장치를 사용 합니다. 또한 외부 부하 분산 장치를 사용 하는 클러스터의 최대 32 대 한 원격 액세스 서버를 지원 합니다. 외부 부하 분산을 구성할 때 염두에 몇 가지 점은 다음과 같습니다.  
   
-    -   관리자가 가상 Ip 부하 분산 원격 액세스 마법사를 통해 구성에 외부 부하 분산 장치 (예: F5 Big-ip 로컬 트래픽 관리자 시스템)에 사용 되도록 해야 합니다. 외부 부하 분산 기능을 사용 외부 및 내부 인터페이스에 IP 주소는 가상 IP 주소를 하 고 부하 분산 장치에 연결 될 필요가 있습니다. 이 관리자는 클러스터 배포의 공개 이름에 대 한 DNS 항목을 변경 하지 않아도 되도록이 수행 됩니다. 또한 IPsec 터널 끝점 Ip 서버에서 파생 됩니다. 관리자가 별도 가상 Ip를 제공 하는 경우 다음 클라이언트가 됩니다 서버에 연결할 수 있습니다. 3.1.1에서 외부 부하 분산 DirectAccess를 구성 하는 것에 대 한 예제를 참조 하십시오. 외부 부하 분산 장치 구성의 예입니다.  
+    -   관리자가 가상 Ip 부하 분산 원격 액세스 마법사를 통해 구성에 외부 부하 분산 장치 (예: F5 Big-ip 로컬 트래픽 관리자 시스템)에 사용 되도록 해야 합니다. 외부 부하 분산 기능을 사용 외부 및 내부 인터페이스에 IP 주소는 가상 IP 주소를 하 고 부하 분산 장치에 연결 될 필요가 있습니다. 이 관리자는 클러스터 배포의 공개 이름에 대 한 DNS 항목을 변경 하지 않아도 되도록이 수행 됩니다. 또한 IPsec 터널 끝점 Ip 서버에서 파생 됩니다. 관리자가 별도 가상 Ip를 제공 하는 경우 다음 클라이언트가 됩니다 서버에 연결할 수 있습니다. 3\.1.1에서 외부 부하 분산 DirectAccess를 구성 하는 것에 대 한 예제를 참조 하십시오. 외부 부하 분산 장치 구성의 예입니다.  
   
     -   (F5) 하는 많은 외부 부하 분산 장치는 6to4 및 ISATAP의 부하 분산을 지원 하지 않습니다. 원격 액세스 서버를 ISATAP 라우터를 ISATAP 함수를 다른 컴퓨터로 옮겨야 합니다. 또한 다른 컴퓨터에서 ISATAP 함수 이면 DirectAccess 서버에 ISATAP 라우터에 기본 IPv6 연결이 있어야 합니다. 참고가이 연결 DirectAccess를 구성 하기 전에 있어야 합니다.  
   

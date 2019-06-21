@@ -8,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: 6f3907426fd1124c5ed0a411a155490a2a537239
-ms.sourcegitcommit: a3958dba4c2318eaf2e89c7532e36c78b1a76644
+ms.openlocfilehash: 572f923c33739b854808372a826e9c9bbc6aaca3
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66719673"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280850"
 ---
 # <a name="upgrade-domain-controllers-to-windows-server-2016"></a>Windows Server 2016으로 도메인 컨트롤러 업그레이드
 
@@ -27,7 +27,7 @@ ms.locfileid: "66719673"
 1. 대상 서버가 시스템 요구 사항을 충족하는지 확인합니다. 
 2. 응용 프로그램 호환성을 확인 합니다. 
 3. Windows Server 2016으로 전환 하는 것에 대 한 권장 사항 검토 
-4. 보안 설정을 확인합니다. 자세한 내용은 [사용 되지 않는 기능 및 동작 변경 내용은 Windows Server 2016에서 AD DS 관련](https://docs.microsoft.com/en-us/windows-server/get-started/deprecated-features)합니다. 
+4. 보안 설정을 확인합니다. 자세한 내용은 [사용 되지 않는 기능 및 동작 변경 내용은 Windows Server 2016에서 AD DS 관련](https://docs.microsoft.com/windows-server/get-started/deprecated-features)합니다. 
 5. 설치하려고 계획 중인 컴퓨터에서 대상 서버로 연결된 상태를 확인합니다. 
 6. 필요한 작업 마스터 역할의 가용성을 확인합니다. 
    - 설치를 실행 하는 컴퓨터에서 기존 도메인 및 포리스트를 Windows Server 2016을 실행 하는 첫 번째 DC를 설치 하려면에 대 한 연결을 해야 합니다 **스키마 마스터** 인프라 마스터와 adprep /forestprep을 실행 하려면 하려면 adprep /domainprep을 실행 합니다. 

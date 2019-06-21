@@ -8,15 +8,15 @@ ms.topic: article
 ms.assetid: ''
 author: cosmosdarwin
 ms.date: 10/05/2017
-ms.openlocfilehash: bc21b9fdec5700fec23dc6af7ca15873ded34bea
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e018c0270a0bf410dada9c05d2c25e51fdfac1d8
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59821964"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280160"
 ---
 # <a name="health-service-reports"></a>Health Service가 보고
-> 적용 대상: Windows Server 2016
+> 적용 대상: Windows Server 2019, Windows Server 2016
 
 ## <a name="what-are-reports"></a>보고서 란  
 
@@ -110,7 +110,7 @@ public void DiscoverObjects(CimSession Session)
 
 이 동일한 개체와 같은 cmdlet을 사용 하 여 PowerShell에서 얻게 **Get-storagesubsystem**, **Get-storagenode**, 및 **Get-volume**합니다.
 
-에 설명 된 속성 모두 동일한 액세스할 수 있습니다 [저장소 관리 API 클래스](https://msdn.microsoft.com/en-us/library/windows/desktop/hh830612(v=vs.85).aspx)합니다.
+에 설명 된 속성 모두 동일한 액세스할 수 있습니다 [저장소 관리 API 클래스](https://msdn.microsoft.com/library/windows/desktop/hh830612(v=vs.85).aspx)합니다.
 
 ```
 ...
@@ -131,7 +131,7 @@ Windows Server 2016의 각 범위에 사용할 수 있는 메트릭 전체 목�
 
 ### <a name="iobserveronnext"></a>IObserver.OnNext()
 
-이 샘플 코드를 사용 하는 [관찰자 디자인 패턴](https://msdn.microsoft.com/en-us/library/ee850490(v=vs.110).aspx) 관찰자 구현에입니다 **OnNext()** 메트릭의 각 새 샘플 도착할 때 메서드가 호출 됩니다. 해당 **OnCompleted()** 메서드가 호출 됩니다/종료를 스트리밍하는 경우. 예를 들어 사용할 수 있습니다이 스트리밍의 경우, 다시 시작 하려면 무기한 계속 됩니다.
+이 샘플 코드를 사용 하는 [관찰자 디자인 패턴](https://msdn.microsoft.com/library/ee850490(v=vs.110).aspx) 관찰자 구현에입니다 **OnNext()** 메트릭의 각 새 샘플 도착할 때 메서드가 호출 됩니다. 해당 **OnCompleted()** 메서드가 호출 됩니다/종료를 스트리밍하는 경우. 예를 들어 사용할 수 있습니다이 스트리밍의 경우, 다시 시작 하려면 무기한 계속 됩니다.
 
 ```
 class MetricsObserver<T> : IObserver<T>
@@ -227,7 +227,7 @@ public void BeginStreamingMetrics(CimSession Session, CimInstance HealthService,
 
 ### <a name="msftstoragesubsystem"></a>MSFT_StorageSubSystem
 
-| **이름**                        | **Units** |
+| **이름**                        | **단위** |
 |---------------------------------|-----------|
 | CPUUsage                        | 4         |
 | CapacityPhysicalPooledAvailable | 0         |
@@ -251,7 +251,7 @@ public void BeginStreamingMetrics(CimSession Session, CimInstance HealthService,
 
 ### <a name="msftstoragenode"></a>MSFT_StorageNode
 
-| **이름**            | **Units** |
+| **이름**            | **단위** |
 |---------------------|-----------|
 | CPUUsage            | 4         |
 | IOLatencyAverage    | 3         |
@@ -268,7 +268,7 @@ public void BeginStreamingMetrics(CimSession Session, CimInstance HealthService,
 
 ### <a name="msftvolume"></a>MSFT_Volume
 
-| **이름**            | **Units** |
+| **이름**            | **단위** |
 |---------------------|-----------|
 | CapacityAvailable   | 0         |
 | CapacityTotal       | 0         |

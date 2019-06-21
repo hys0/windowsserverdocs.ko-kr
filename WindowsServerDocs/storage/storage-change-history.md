@@ -9,16 +9,16 @@ manager: brianlic
 ms.author: jgerend
 ms.date: 06/04/2019
 description: IT 전문가 위한 Windows Server에 대 한 온-프레미스 저장소 설명서의 새로운 기능과 업데이트 된 항목입니다.
-ms.openlocfilehash: 3245e6bc5320cc0ffae01817a8f7b9caeaa6c685
-ms.sourcegitcommit: cd12ace92e7251daaa4e9fabf1d8418632879d38
+ms.openlocfilehash: 442d640809d3ae9cf4a11feb646fbbd566e6e3fa
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66501494"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284454"
 ---
 # <a name="change-history-for-storage-topics-in-windows-server"></a>Windows Server의 저장소 변경 기록 항목
 
-> 적용 대상: Windows Server 2019, Windows Server 2016, Windows Server (반기 채널)
+> 적용 대상: Windows Server 2019, Windows Server 2016, Windows Server(반기 채널)
 
 이 항목에서는의 새로운 기능과 업데이트 된 항목을 나열 합니다 [저장소](storage.md) Windows Server에 대 한 설명서입니다.
 
@@ -73,10 +73,10 @@ ms.locfileid: "66501494"
 |---                                                         |---           |
 |[중첩된 복원력](storage-spaces/nested-resiliency.md)    | 신규 항목    |
 |[Storage Migration Service의 알려진 문제](storage-migration-service/known-issues.md)   | 신규 항목    |
-|[DFS 복제: FAQ(질문과 대답)](dfs-replication/dfsr-faq.md)|마이그레이션된 합니다 [이전 버전](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/) 라이브러리|
-|[SYSVOL 복제를 DFS 복제로 마이그레이션](dfs-replication/migrate-sysvol-to-dfsr.md)|마이그레이션된 합니다 [이전 버전](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) 라이브러리|
-|[SMB: 파일 및 프린터 공유 포트가 열려 있어야 함](file-server/best-practices-analyzer/smb-open-file-sharing-ports.md)|마이그레이션된 합니다 [이전 버전](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) 라이브러리|
-|[볼륨 섀도 복사본 서비스](file-server/volume-shadow-copy-service.md)|마이그레이션된 합니다 [이전 버전](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) 라이브러리|
+|[DFS 복제: FAQ(질문과 대답)](dfs-replication/dfsr-faq.md)|마이그레이션된 합니다 [이전 버전](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/) 라이브러리|
+|[SYSVOL 복제를 DFS 복제로 마이그레이션](dfs-replication/migrate-sysvol-to-dfsr.md)|마이그레이션된 합니다 [이전 버전](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) 라이브러리|
+|[SMB: 파일 및 프린터 공유 포트가 열려 있어야 함](file-server/best-practices-analyzer/smb-open-file-sharing-ports.md)|마이그레이션된 합니다 [이전 버전](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) 라이브러리|
+|[볼륨 섀도 복사본 서비스](file-server/volume-shadow-copy-service.md)|마이그레이션된 합니다 [이전 버전](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) 라이브러리|
 
 ## <a name="october-2018"></a>2018년 10월
 
