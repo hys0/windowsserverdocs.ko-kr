@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 72266dcedcda080ee98dd7bc90da8db1a27255b4
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: aa7fae25f68030702aecd378d797301d5cb83186
+ms.sourcegitcommit: 6b6c3601fb7493ab145ccff02db26d7123df9a3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66192528"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67316349"
 ---
 # <a name="ad-fs-operations"></a>AD FS 작업
 
@@ -53,13 +53,13 @@ ms.locfileid: "66192528"
 - [AD FS 2019를 사용 하 여 HTTP 보안 응답 헤더를 사용자 지정](../ad-fs/operations/customize-http-security-headers-ad-fs.md)
 - [관리자가 아닌 사용자에게 AD FS Powershell Commandlet 액세스 위임](../ad-fs/operations/delegate-ad-fs-pshell-access.md)
 - [AD FS의 디바이스 인증 컨트롤](../ad-fs/operations/device-authentication-controls-in-AD-FS.md) 
-
 - [SAML 2.0과의 상호 운용성 향상](../ad-fs/operations/Improved-interoperability-with-SAML-2.0.md)
 - [SSO 및 원활한 두 번째 위한 모든 장치의 작업 공간 연결 단계 회사 응용 프로그램에서 인증](../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)
 - [추가 Multi-factor Authentication for Sensitive Applications 사용 하 여 위험 관리](../ad-fs/operations/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 - [조건부 액세스 제어를 사용하여 위험 관리](../ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md)
 - [AD FS 및 WAP 2016의 SSL 인증서 관리](../ad-fs/operations/Manage-SSL-Certificates-AD-FS-WAP-2016.md)
 - [AD FS 실습 환경 설정](../ad-fs/operations/Set-up-an-AD-FS-lab-environment.md)
+- [SQL 미세 조정 하 고 대기 시간을 주소 지정](../ad-fs/operations/adfs-sql-latency.md) 
 - [연습 가이드: 추가 Multi-factor Authentication for Sensitive Applications 사용 하 여 위험 관리](../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 - [연습 가이드: 조건부 액세스 제어를 사용하여 위험 관리](../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
 - [연습: Windows 디바이스를 사용하여 작업 공간 연결](../ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
