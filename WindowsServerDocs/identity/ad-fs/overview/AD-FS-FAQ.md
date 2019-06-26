@@ -10,12 +10,12 @@ ms.topic: article
 ms.custom: it-pro
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: fc92e8b30d6b4c0c765333d3e22311e551d3365d
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 1fe73df2ce209fc47c7414d33cb1e0a83d31dcd7
+ms.sourcegitcommit: 9bece8049b1766bd9bb0d5eb5921413a2de2ca61
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67280490"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351292"
 ---
 # <a name="ad-fs-frequently-asked-questions-faq"></a>AD FS에는 질문과 대답 (FAQ)
 
@@ -300,3 +300,6 @@ ADFS 및 웹 응용 프로그램 서버 끝점에서 SSL 종료를 수행 하지
 Ad FS 2016에서 여러 알려진된 문제가 발생 프록시 및 페더레이션 시나리오와 함께 결과 오류가 및 토큰 바인딩 자동으로 활성화 됩니다. 이 해결 하려면 다음 Powershell 명령을 실행 하 고 토큰 바인딩 지원을 제거 합니다.
 
 `Set-AdfsProperties -IgnoreTokenBinding $true`
+
+### <a name="i-have-upgraded-my-farm-from-ad-fs-in-windows-server-2016-to-ad-fs-in-windows-server-2019-the-farm-behavior-level-for-the-ad-fs-farm-has-been-successfully-raised-to-2019-but-the-web-application-proxy-configuration-is-still-displayed-as-windows-server-2016"></a>AD fs Windows Server 2019에 Windows Server 2016에서 AD FS에서 필자의 팜에 있는 업그레이드 합니다. AD FS 팜에 대 한 팜 동작 수준 2019로 성공적으로 증가 했습니다 하지만 웹 응용 프로그램 프록시 구성이 Windows Server 2016으로 계속 표시 됩니다?
+Windows Server 2019를 업그레이드 하는 웹 응용 프로그램 프록시의 구성 버전 Windows Server 2016으로 표시할 계속 됩니다. 웹 응용 프로그램 프록시를 새 버전의 특정 기능 Windows Server 2019에 없고 팜 동작 수준 AD FS에서 성공적으로 발생 된 경우 웹 응용 프로그램 프록시를 계속 디자인 하 여 Windows Server 2016으로 표시 합니다. 

@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: a7f4f29b37793b45a614bd592feddb339dd05c3d
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 3cc4194b562dad17d0c2021f4aaf061114e2c94b
+ms.sourcegitcommit: 9bece8049b1766bd9bb0d5eb5921413a2de2ca61
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67280609"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351295"
 ---
 ## <a name="best-practices-for-securing-active-directory-federation-services"></a>Active Directory Federation Services 보안에 대 한 모범 사례
 
@@ -34,6 +34,9 @@ ms.locfileid: "67280609"
 >포트 49443만는 필요한 경우 사용자 인증서 인증이 사용 되는 Azure AD에 대 한 선택 사항인 및 Office 365입니다.
 
 ![AD FS 표준 토폴로지](media/Best-Practices-Securing-AD-FS/adfssec2.png)
+
+>[!NOTE]
+> 포트 808 (Windows Server 2012R2) 또는 포트 1501 (Windows Server 2016 이상) Net.TCP port AD FS 로컬 WCF 끝점을 사용 하 여 서비스 프로세스를 Powershell 구성 데이터를 전송 됩니다. Get-adfsproperties를 실행 하 여이 포트를 확인할 수 있습니다 | NetTcpPort를 선택 합니다. 이 로컬 포트를 방화벽에서 열려야 필요는 없지만 포트 검색에 표시 됩니다. 
 
 ### <a name="azure-ad-connect-and-federation-serverswap"></a>Azure AD Connect 및 페더레이션 서버/w a P
 이 테이블에는 포트 및 Azure AD Connect 서버와 페더레이션/WAP 서버 간의 통신에 필요한 프로토콜을 설명 합니다.  
