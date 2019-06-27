@@ -8,12 +8,12 @@ ms.author: jgerend
 manager: daveba
 ms.technology: storage-spaces
 ms.date: 06/20/2019
-ms.openlocfilehash: b479697366239144e5ca9d3486b84191eb51dc4d
-ms.sourcegitcommit: 078304c4b92bb57eb85ba29634afc92cc028c644
+ms.openlocfilehash: fbec7cd2b8312f03998cfb27b739d0866d3a47c5
+ms.sourcegitcommit: 545dcfc23a81943e129565d0ad188263092d85f6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67301619"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67407663"
 ---
 # <a name="using-disk-cleanup-on-windows-server"></a>디스크 정리를 사용 하 여 Windows server
 
@@ -23,7 +23,7 @@ ms.locfileid: "67301619"
 
 디스크 정리 도구를 시작 하려면 Cleanmgr.exe 명령을 실행 하거나 선택 **시작**를 선택 **Windows 관리 도구**를 선택한 후 **디스크 정리**합니다.
 
-사용 하 여 디스크 정리를 실행할 수도 있습니다는 [cleanmgr Windows 명령](../../administration/windows-commands/clean-mgr.md) 명령줄 옵션을 사용 하 여 특정 파일 정리 디스크 정리를 지정 합니다.
+사용 하 여 디스크 정리를 실행할 수도 있습니다는 [cleanmgr Windows 명령](../../administration/windows-commands/cleanmgr.md) 명령줄 옵션을 사용 하 여 특정 파일 정리 디스크 정리를 지정 합니다.
 
 ## <a name="enable-disk-cleanup-on-an-earlier-version-of-windows-server-by-installing-the-desktop-experience"></a>데스크톱 경험을 설치 하 여 이전 버전의 Windows Server에서 디스크 정리를 사용 하도록 설정
 
@@ -78,4 +78,4 @@ Cleanmgr.exe.mui 찾아 파일을 이동할 **%systemroot%\System32\en-US**합�
 
 [Windows 10의 드라이브 공간을 확보 하기](https://support.microsoft.com/en-us/help/12425/windows-10-free-up-drive-space)
 
-[cleanmgr](../../administration/windows-commands/clean-mgr.md)
+[cleanmgr](../../administration/windows-commands/cleanmgr.md)

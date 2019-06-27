@@ -6,13 +6,13 @@ ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 09/11/2018
-ms.openlocfilehash: 65c5eb25f7a98e4db6a44e705a2968f185f3f962
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.date: 06/21/2019
+ms.openlocfilehash: 211d2f24b01d1e308f012df681f9e16a2190449f
+ms.sourcegitcommit: 260b1d78cb28b88b876579e1ac9a41a74e8752fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66447384"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398807"
 ---
 # <a name="install-trusted-tpm-root-certificates"></a>신뢰할 수 있는 TPM 루트 인증서를 설치 합니다.
 
@@ -35,7 +35,7 @@ TPM 인증서 아래 패키지에 포함 되지 않은, 경우에 TPM 공급 업
 
 다음 단계를 반복 **모든 HGS 서버**:
 
-1.  최신 패키지를 다운로드 [ https://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab ](https://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab)합니다.
+1.  최신 패키지를 다운로드 [ https://tpmsec.microsoft.com/TPMCerts/TrustedTPM.cab ](https://tpmsec.microsoft.com/TPMCerts/TrustedTPM.cab)합니다.
 
 2.  Cab 파일을 확장 합니다.
 

@@ -7,14 +7,14 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 06/04/2019
+ms.date: 06/25/2019
 description: IT 전문가 위한 Windows Server에 대 한 온-프레미스 저장소 설명서의 새로운 기능과 업데이트 된 항목입니다.
-ms.openlocfilehash: 442d640809d3ae9cf4a11feb646fbbd566e6e3fa
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 52e1de646a3acb56b764ee1b781d852d8bf93225
+ms.sourcegitcommit: 545dcfc23a81943e129565d0ad188263092d85f6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67284454"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67407613"
 ---
 # <a name="change-history-for-storage-topics-in-windows-server"></a>Windows Server의 저장소 변경 기록 항목
 
@@ -26,8 +26,9 @@ ms.locfileid: "67284454"
 
 ## <a name="june-2019"></a>2019 년 6 월
 
-| 신규 항목 또는 변경된 항목                                        | 설명|
+| 신규 항목 또는 변경된 항목                                        | 설명 |
 | ---                                                         | ---           |
+| [디스크 정리](file-server/disk-cleanup.md)                                              | 새 (에서 마이그레이션된 합니다 [이전 버전](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770278(v%3dws.11)))
 | [저장소 마이그레이션 서비스 FAQ](storage-migration-service/faq.md#consolidate-servers) | 성능 최적화 정보를 추가 합니다. |
 
 ## <a name="may-2019"></a>2019년 5월
@@ -42,9 +43,10 @@ ms.locfileid: "67284454"
 
 |신규 항목 또는 변경된 항목                                        |설명|
 |---                                                         |---           |
-|[Azure Monitor를 사용하여 모니터](storage-spaces/configure-azure-monitor.md)| 단추를 사용하여 새|
-|[스토리지 공간 다이렉트 클러스터를 Windows Server 2019로 업그레이드](storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md)| 단추를 사용하여 새        |
-|[DFS 복제](dfs-replication/dfsr-overview.md)        | 마이그레이션된 합니다 [이전 버전](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770278(v%3dws.11)) 라이브러리|
+| [Azure Monitor를 사용하여 모니터](storage-spaces/configure-azure-monitor.md) | 단추를 사용하여 새 |
+| [이해 하 고 영구 메모리 배포](storage-spaces/deploy-pmem.md) | 단추를 사용하여 새 |
+| [스토리지 공간 다이렉트 클러스터를 Windows Server 2019로 업그레이드](storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md)| 단추를 사용하여 새        |
+| [DFS 복제](dfs-replication/dfsr-overview.md)        | 마이그레이션된 합니다 [이전 버전](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770278(v%3dws.11)) 라이브러리|
 
 ## <a name="february-2019"></a>2019년 2월
 

@@ -6,16 +6,16 @@ ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 06/07/2019
+ms.date: 06/26/2019
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 description: 저장소 공간 다이렉트를 사용 하면 내부 저장소를 사용 하 여 클러스터 서버에는 소프트웨어 정의 저장소 솔루션에는 Windows Server의 기능 개요.
 ms.localizationpriority: medium
-ms.openlocfilehash: 1ff63794de25565a9ade7eb4e8b66cf1e394c14a
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.openlocfilehash: 98801af7f753e071e27f100f20ed149110c90f66
+ms.sourcegitcommit: 545dcfc23a81943e129565d0ad188263092d85f6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66812693"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67407680"
 ---
 # <a name="storage-spaces-direct-overview"></a>저장소 공간 다이렉트 개요
 
@@ -30,8 +30,8 @@ Windows Server 2019 Datacenter, Windows Server 2016 데이터 센터에에서 �
 |       |       |
 |   -   |   -   |
 | **이해**<br><ul><li>개요(현재 위치)</li><li>[캐시 이해](understand-the-cache.md)</li><li>[내결함성 및 스토리지 효율성](storage-spaces-fault-tolerance.md)<li>[드라이브 대칭 고려 사항](drive-symmetry-considerations.md)</li><li>[스토리지 다시 동기화 이해 및 모니터링](understand-storage-resync.md)</li><li>[클러스터 및 풀 쿼럼의 이해](understand-quorum.md)</li><li>[클러스터 세트](cluster-sets.md)</li> | **계획**<br><ul><li>[하드웨어 요구 사항](storage-spaces-direct-hardware-requirements.md)</li><li>[CSV 메모리 내 읽기 캐시 사용](csv-cache.md)</li><li>[드라이브 선택](choosing-drives.md)</li><li>[볼륨 계획](plan-volumes.md)</li><li>[게스트 VM 클러스터 사용](storage-spaces-direct-in-vm.md)</li><li>[재해 복구](storage-spaces-direct-disaster-recovery.md)</li> |
-| **배포**<br><ul><li>[스토리지 공간 다이렉트 배포](deploy-storage-spaces-direct.md)</li><li>[볼륨 만들기](create-volumes.md)</li><li>[중첩된 복원력](nested-resiliency.md)</li><li>[쿼럼 구성](../../failover-clustering/manage-cluster-quorum.md)</li><li>[스토리지 공간 다이렉트 클러스터를 Windows Server 2019로 업그레이드](upgrade-storage-spaces-direct-to-windows-server-2019.md)</li> | **관리**<br><ul><li>[Windows Admin Center를 통해 관리](../../manage/windows-admin-center/use/manage-hyper-converged.md)</li><li>[서버 또는 드라이브 추가](add-nodes.md)</li><li>[유지 관리를 위해 서버를 오프라인으로 전환](maintain-servers.md)</li><li>[서버 제거](remove-servers.md)</li><li>[볼륨 확장](resize-volumes.md)</li><li>[볼륨 삭제](delete-volumes.md)</li><li>[드라이브 펌웨어 업데이트](../update-firmware.md)</li><li>[성능 기록](performance-history.md)</li><li>[볼륨 할당 구분](delimit-volume-allocation.md)</li><li>[Azure Monitor를 사용 하 여 하이퍼 수렴 형 클러스터](configure-azure-monitor.md)</li> |
-| **문제 해결**<br><ul><li>[상태 및 작동 상태 문제 해결](storage-spaces-states.md)</li><li>[저장소 공간 다이렉트를 사용 하 여 진단 데이터 수집](data-collection.md)</li> | **최근 블로그 게시물**<br><ul><li>[저장소 공간 다이렉트를 사용 하 여 13.7 백만 IOPS: 하이퍼 수렴 형 인프라에 대 한 새 업계 레코드](https://blogs.technet.microsoft.com/filecab/2018/10/30/windows-server-2019-and-intel-optane-dc-persistent-memory/)</li><li>[Windows Server 2019-에서 하이퍼 수렴 형 인프라 대신 카운트다운 시계가 나타납니다 시작할 수 있습니다.](https://blogs.technet.microsoft.com/filecab/2018/10/02/hci-the-countdown-clock-starts-now/)</li><li>[Windows Server Summit의 빅 공지를 5 개](https://blogs.technet.microsoft.com/filecab/2018/06/27/windows-server-summit-recap)</li><li>[10,000 저장소 공간 다이렉트 클러스터 및 계산 하는 중...](https://blogs.technet.microsoft.com/filecab/2018/03/27/storage-spaces-direct-momentum/)</li> |
+| **배포**<br><ul><li>[스토리지 공간 다이렉트 배포](deploy-storage-spaces-direct.md)</li><li>[볼륨 만들기](create-volumes.md)</li><li>[중첩된 복원력](nested-resiliency.md)</li><li>[쿼럼 구성](../../failover-clustering/manage-cluster-quorum.md)</li><li>[스토리지 공간 다이렉트 클러스터를 Windows Server 2019로 업그레이드](upgrade-storage-spaces-direct-to-windows-server-2019.md)</li><li>[이해 하 고 영구 메모리 배포](deploy-pmem.md)</li> | **관리**<br><ul><li>[Windows Admin Center를 통해 관리](../../manage/windows-admin-center/use/manage-hyper-converged.md)</li><li>[서버 또는 드라이브 추가](add-nodes.md)</li><li>[유지 관리를 위해 서버를 오프라인으로 전환](maintain-servers.md)</li><li>[서버 제거](remove-servers.md)</li><li>[볼륨 확장](resize-volumes.md)</li><li>[볼륨 삭제](delete-volumes.md)</li><li>[드라이브 펌웨어 업데이트](../update-firmware.md)</li><li>[성능 기록](performance-history.md)</li><li>[볼륨 할당 구분](delimit-volume-allocation.md)</li><li>[Azure Monitor를 사용 하 여 하이퍼 수렴 형 클러스터](configure-azure-monitor.md)</li> |
+| **문제 해결**<br><ul><li>[문제 해결 시나리오](troubleshooting-storage-spaces.md)</li><li>[상태 및 작동 상태 문제 해결](storage-spaces-states.md)</li><li>[저장소 공간 다이렉트를 사용 하 여 진단 데이터 수집](data-collection.md)</li><li>[스토리지 클래스 메모리 상태 관리](Storage-class-memory-health.md)</li> | **최근 블로그 게시물**<br><ul><li>[저장소 공간 다이렉트를 사용 하 여 13.7 백만 IOPS: 하이퍼 수렴 형 인프라에 대 한 새 업계 레코드](https://blogs.technet.microsoft.com/filecab/2018/10/30/windows-server-2019-and-intel-optane-dc-persistent-memory/)</li><li>[Windows Server 2019-에서 하이퍼 수렴 형 인프라 대신 카운트다운 시계가 나타납니다 시작할 수 있습니다.](https://blogs.technet.microsoft.com/filecab/2018/10/02/hci-the-countdown-clock-starts-now/)</li><li>[Windows Server Summit의 빅 공지를 5 개](https://blogs.technet.microsoft.com/filecab/2018/06/27/windows-server-summit-recap)</li><li>[10,000 저장소 공간 다이렉트 클러스터 및 계산 하는 중...](https://blogs.technet.microsoft.com/filecab/2018/03/27/storage-spaces-direct-momentum/)</li> |
 
 ## <a name="videos"></a>비디오
 

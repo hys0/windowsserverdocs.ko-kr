@@ -1,24 +1,20 @@
 ---
 title: Windows 명령
 description: Windows 명령
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c703d07c-8227-4e86-94a6-8ef390f94cdc
-author: coreyp-at-msft
-ms.author: coreyp
+author: jasongerend
+ms.author: jgerend
 manager: dongill
-ms.date: 05/22/2018
+ms.date: 06/26/2019
 ms.prod: windows-server-threshold
-ms.openlocfilehash: 861c8f35cf57fc7c8d03914dba2d971d50b66fc5
-ms.sourcegitcommit: 078304c4b92bb57eb85ba29634afc92cc028c644
+ms.openlocfilehash: d0cf58ea8d37efccf80ce262b64e604218bd8d0b
+ms.sourcegitcommit: 545dcfc23a81943e129565d0ad188263092d85f6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67298171"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67407655"
 ---
 # <a name="windows-commands"></a>Windows 명령
 
@@ -54,7 +50,8 @@ Windows (서버 및 클라이언트)의 모든 지원 되는 버전에는 기본
 [X](#x) | Y | Z
 
 ## <a name="prerequisites"></a>사전 요구 사항
-이 PDF에 포함 된 정보에 적용 됩니다.
+
+이 항목에서는에 포함 된 정보에 적용 됩니다.
 
 -   Windows Server 2019
 -   Windows Server(반기 채널)
@@ -67,6 +64,7 @@ Windows (서버 및 클라이언트)의 모든 지원 되는 버전에는 기본
 -   Windows 8.1
 
 ### <a name="command-shell-overview"></a>명령 셸 개요
+
 명령 셸에서 배치 (.bat) 파일을 사용 하 여 사용자 계정 관리 또는 야간 백업 같은 일상적인 작업을 자동화 하는 Windows에 기본 제공 되는 첫 번째 셸이 이었습니다. Windows 스크립트 호스트를 사용 하 여 명령 셸에서 보다 정교한 스크립트를 실행할 수 있습니다. 자세한 내용은 [cscript](cscript.md) 하거나 [wscript](wscript.md)합니다. 사용자 인터페이스를 사용 하 여 수 있는 것 보다 스크립트를 사용 하 여 작업을 보다 효율적으로 수행할 수 있습니다. 스크립트는 명령줄에서 사용할 수 있는 모든 명령에 동의 합니다.
 
 Windows 명령 셸에서 두에 있습니다. 명령 셸 및 [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting?view=powershell-6)합니다. 각 shell은 하 고 운영 체제 또는 IT 작업을 자동화 하는 환경을 제공 하는 응용 프로그램 간의 직접 통신을 제공 하는 소프트웨어 프로그램입니다.
@@ -88,6 +86,7 @@ Automation에 대 한 가장 강력 하 고 최신 Windows, Windows 명령 또�
 > 설정 하는 **reg_DWOrd** 값을 특정 함수에 대 한 제어 문자의 16 진수 값을 사용 (예를 들어 **0 9** 은 탭 및 **0 08** 백스페이스). 사용자 지정 설정이 컴퓨터 설정 보다 우선 하며 명령줄 옵션 레지스트리 설정 보다 우선 합니다.
 
 ## <a name="command-line-reference-a-z"></a>명령줄 참조 ㄱ-ㅎ
+
 다음 ㄱ-ㅎ 메뉴에서 특정 Windows 명령에 대 한 정보를 찾기 위해 명령을 첫 글자를 클릭 하 고 명령 이름을 클릭 합니다.
 
 [A](#a) |
@@ -225,7 +224,7 @@ Automation에 대 한 가장 강력 하 고 최신 Windows, Windows 명령 또�
 - [chkntfs](chkntfs.md)
 - [choice](choice.md)
 - [cipher](cipher.md)
-- [cleanmgr](clean-mgr.md)
+- [cleanmgr](cleanmgr.md)
 - [clip](clip.md)
 - [cls](cls.md)
 - [Cmd](Cmd.md)

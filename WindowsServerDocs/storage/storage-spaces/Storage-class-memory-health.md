@@ -7,17 +7,18 @@ ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: JasonGerend
-ms.date: 08/24/2016
+ms.date: 06/25/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 0c39d704056c4ae6935f3be9c521c12ca1014820
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4ebec8618c79c43816680387ae5e495f125b3c54
+ms.sourcegitcommit: 545dcfc23a81943e129565d0ad188263092d85f6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59870554"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67407559"
 ---
 # <a name="storage-class-memory-nvdimm-n-health-management-in-windows"></a>Windows의 저장소 클래스 메모리(NVDIMM-N) 상태 관리
-> 적용 대상: Windows Server 2016, Windows 10 (버전 1607)
+
+> 적용 대상: Windows Server 2019, Windows Server 2016, Windows Server (반기 채널), Windows 10
 
 이 문서에서는 시스템 관리자 및 IT 전문가에게 저장소 클래스 메모리와 기존 저장 장치 간의 차이점을 중심으로 Windows의 저장소 클래스 메모리(NVDIMM-N) 장치에 특정한 오류 처리 및 상태 관리에 대한 정보를 제공합니다.
 
@@ -25,6 +26,8 @@ Windows의 저장소 클래스 메모리 장치 지원에 익숙하지 않은 �
 - [Windows Server 2016에서에서 블록 저장소로 비휘발성 메모리 (Nvdimm-n) 사용](https://channel9.msdn.com/Events/Build/2016/P466)
 - [Windows Server 2016에서에서 바이트 주소 지정 가능 저장소로 비휘발성 메모리 (Nvdimm-n) 사용](https://channel9.msdn.com/Events/Build/2016/P470)
 - [Windows Server 2016에서 영구 메모리로 SQL Server 2016 성능 가속화](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-Windows-Server-2016-SCM--FAST)
+
+도 참조 하세요 [이해 하 고 영구 메모리 저장소 공간 다이렉트 배포](deploy-pmem.md)합니다.
 
 JEDEC 규격 NVDIMM-N 저장소 클래스 메모리 장치는 Windows Server 2016 및 Windows 10(버전 1607)부터 기본 드라이버를 통해 Windows에서 지원됩니다. 이러한 장치는 다른 디스크(HDD 및 SSD)와 유사하게 동작하지만 몇 가지 차이점이 있습니다.
 
@@ -48,10 +51,10 @@ PS C:\> Get-PhysicalDisk | where BusType -eq "SCM" | select SerialNumber, Health
 
 그러면 다음 예와 같은 출력이 생성됩니다.
 
-|SerialNumber|HealthStatus|OperationalStatus|OperationalDetails|
-|---|---|---|---|
-|802c-01-1602-117cb5fc|정상|확인||
-|802c-01-1602-117cb64f|경고|자동 완성 오류|{Threshold Exceeded,NVDIMM\_N Error}|
+| SerialNumber | HealthStatus | OperationalStatus | OperationalDetails |
+| --- | --- | --- | --- |
+| 802c-01-1602-117cb5fc | 정상 | 확인 | |
+| 802c-01-1602-117cb64f | 경고 | 자동 완성 오류 | {Threshold Exceeded,NVDIMM\_N Error} |
 
 > [!NOTE]
 > 이벤트에서 지정된 NVDIMM-N 장치의 물리적 위치를 찾으려면 이벤트 뷰어의 이벤트에 있는 **세부 정보** 탭에서 **EventData** > **위치**로 이동합니다. Windows Server 2016은 NVDIMM-N 장치의 잘못된 위치를 나열하지만 이는 Windows Server, 버전 1709에서 수정되었습니다.
@@ -62,36 +65,36 @@ PS C:\> Get-PhysicalDisk | where BusType -eq "SCM" | select SerialNumber, Health
 
 이 조건은 저장소 클래스 메모리 장치의 상태를 확인할 때 다음 출력 예와 같이 상태가 **Warning**으로 나열되는 경우에 해당합니다.
 
-|SerialNumber|HealthStatus|OperationalStatus|OperationalDetails|
-|---|---|---|---|
-|802c-01-1602-117cb5fc|정상|확인||
-|802c-01-1602-117cb64f|경고|자동 완성 오류|{Threshold Exceeded,NVDIMM\_N Error}|
+| SerialNumber | HealthStatus | OperationalStatus | OperationalDetails |
+| --- | --- | --- | --- |
+| 802c-01-1602-117cb5fc | 정상 | 확인 | |
+| 802c-01-1602-117cb64f | 경고 | 자동 완성 오류 | {Threshold Exceeded,NVDIMM\_N Error} |
 
 다음 표에 이 조건에 대한 몇 가지 정보가 나와 있습니다.
 
-||설명|
-|---|---|
-|가능한 조건|NVDIMM-N 경고 임계값 위반|
-|근본 원인|NVDIMM-N 장치는 온도, NVM 수명 및/또는 에너지원 수명과 같은 여러 임계값을 추적합니다. 이러한 임계값 중 하나가 초과되면 운영 체제에 알림이 제공됩니다.|
-|일반적인 동작|장치가 정상적으로 작동합니다. 이는 오류가 아니라 경고입니다.|
-|저장소 공간 동작|장치가 정상적으로 작동합니다. 이는 오류가 아니라 경고입니다.|
-|추가 정보|PhysicalDisk 개체의 OperationalStatus 필드. EventLog – Microsoft-Windows-ScmDisk0101/Operational|
-|수행할 작업|위반한 경고 임계값에 따라 NVDIMM-N의 특정 부분 또는 전체를 교체하는 것이 현명할 수 있습니다. 예를 들어 NVM 수명 임계값을 위반한 경우 NVDIMM-N을 교체하는 것이 좋습니다.|
+| | 설명 |
+| --- | --- |
+| 가능한 조건 | NVDIMM-N 경고 임계값 위반 |
+| 근본 원인 | NVDIMM-N 장치는 온도, NVM 수명 및/또는 에너지원 수명과 같은 여러 임계값을 추적합니다. 이러한 임계값 중 하나가 초과되면 운영 체제에 알림이 제공됩니다. |
+| 일반적인 동작 | 장치가 정상적으로 작동합니다. 이는 오류가 아니라 경고입니다. |
+| 저장소 공간 동작 | 장치가 정상적으로 작동합니다. 이는 오류가 아니라 경고입니다. |
+| 추가 정보 | PhysicalDisk 개체의 OperationalStatus 필드. EventLog – Microsoft-Windows-ScmDisk0101/Operational |
+| 수행할 작업 | 위반한 경고 임계값에 따라 NVDIMM-N의 특정 부분 또는 전체를 교체하는 것이 현명할 수 있습니다. 예를 들어 NVM 수명 임계값을 위반한 경우 NVDIMM-N을 교체하는 것이 좋습니다. |
 
 ## <a name="writes-to-an-nvdimm-n-fail"></a>NVDIMM-N에 쓰기 실패
 
 이 조건은 저장소 클래스 메모리 장치의 상태를 확인할 때 다음 출력 예와 같이 상태가 **Unhealthy**로 나열되고 작동 상태에 **IO Error**가 표시되는 경우에 해당합니다.
 
-|SerialNumber|HealthStatus|OperationalStatus|OperationalDetails|
-|---|---|---|---|
-|802c-01-1602-117cb5fc|정상|확인||
-|802c-01-1602-117cb64f|Unhealthy|{Stale Metadata, IO Error, Transient Error}|{Lost Data Persistence, Lost Data, NV...}|
+| SerialNumber | HealthStatus | OperationalStatus | OperationalDetails |
+| --- | --- | --- | --- |
+| 802c-01-1602-117cb5fc | 정상 | 확인 | |
+| 802c-01-1602-117cb64f | Unhealthy | {Stale Metadata, IO Error, Transient Error} | {Lost Data Persistence, Lost Data, NV...} |
 
 다음 표에 이 조건에 대한 몇 가지 정보가 나와 있습니다.
 
-||설명|
-|---|---|
-|가능한 조건|지속성 손실/백업 전원|
+| | 설명 |
+| --- | --- |
+| 가능한 조건 | 지속성 손실/백업 전원 |
 |근본 원인|NVDIMM-N 장치는 지속성을 위해 백업 전원(일반적으로 배터리 또는 수퍼 커패시터)에 의존합니다. 이 백업 전원을 사용할 수 없거나 장치에서 어떤 이유로든(컨트롤러/플래시 오류) 백업을 수행할 수 없는 경우 데이터가 위험에 노출되고 Windows에서 영향을 받는 장치에 대한 추가적인 쓰기를 방지합니다. 읽기는 여전히 가능하므로 데이터를 이동할 수는 있습니다.|
 |일반적인 동작|NTFS 볼륨이 분리됩니다.<br>PhysicalDisk Health Status 필드에 영향을 받는 모든 NVDIMM-N 장치의 상태가 “Unhealthy”로 표시됩니다.|
 |저장소 공간 동작|하나의 NVDIMM-N만 영향을 받는 경우 저장소 공간은 계속 작동합니다. 여러 장치가 영향을 받는 경우 저장소 공간에 대한 쓰기가 실패합니다. <br>PhysicalDisk Health Status 필드에 영향을 받는 모든 NVDIMM-N 장치의 상태가 “Unhealthy”로 표시됩니다.|
@@ -102,8 +105,8 @@ PS C:\> Get-PhysicalDisk | where BusType -eq "SCM" | select SerialNumber, Health
 
 이 조건은 저장소 클래스 메모리 장치가 0바이트 용량으로 표시되어 초기화할 수 없거나, 다음 출력 예와 같이 작동 상태가 **Lost Communication**인 "Generic Physical Disk" 개체로 노출되는 경우에 해당합니다.
 
-|SerialNumber|HealthStatus|OperationalStatus|OperationalDetails|
-|---|---|---|---|
+| SerialNumber | HealthStatus | OperationalStatus | OperationalDetails |
+| --- | --- | --- | --- |
 |802c-01-1602-117cb5fc|정상|확인||
 ||경고|Lost Communication||
 
@@ -122,8 +125,8 @@ PS C:\> Get-PhysicalDisk | where BusType -eq "SCM" | select SerialNumber, Health
 
 이 조건은 저장소 클래스 메모리 장치의 상태를 확인할 때 다음 출력 예와 같이 상태가 **Unhealthy**로 표시되고 작동 상태에 **Unrecognized Metadata**가 표시되는 경우에 해당합니다.
 
-|SerialNumber|HealthStatus|OperationalStatus|OperationalDetails|
-|---|---|---|---|
+| SerialNumber | HealthStatus | OperationalStatus | OperationalDetails |
+| --- | --- | --- | --- |
 |802c-01-1602-117cb5fc|정상|확인|{Unknown}|
 |802c-01-1602-117cb64f|Unhealthy|{Unrecognized Metadata, Stale Metadata}|{Unknown}|
 
