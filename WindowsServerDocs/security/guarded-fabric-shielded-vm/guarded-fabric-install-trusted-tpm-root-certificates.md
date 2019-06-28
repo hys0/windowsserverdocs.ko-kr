@@ -6,13 +6,13 @@ ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 06/21/2019
-ms.openlocfilehash: 211d2f24b01d1e308f012df681f9e16a2190449f
-ms.sourcegitcommit: 260b1d78cb28b88b876579e1ac9a41a74e8752fd
+ms.date: 06/27/2019
+ms.openlocfilehash: 0d42befcfacfffd302cfcb27f9f3c2c973534398
+ms.sourcegitcommit: 2c2c37170c65434179bcf2989d557f97dcbe1b9f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398807"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419225"
 ---
 # <a name="install-trusted-tpm-root-certificates"></a>신뢰할 수 있는 TPM 루트 인증서를 설치 합니다.
 
@@ -35,7 +35,23 @@ TPM 인증서 아래 패키지에 포함 되지 않은, 경우에 TPM 공급 업
 
 다음 단계를 반복 **모든 HGS 서버**:
 
-1.  최신 패키지를 다운로드 [ https://tpmsec.microsoft.com/TPMCerts/TrustedTPM.cab ](https://tpmsec.microsoft.com/TPMCerts/TrustedTPM.cab)합니다.
+1.  최신 패키지를 다운로드 [ https://go.microsoft.com/fwlink/?linkid=2097925 ](https://go.microsoft.com/fwlink/?linkid=2097925)합니다.
+
+2.  신뢰성을 확인 하는 cab 파일의 서명을 확인 합니다. 서명이 유효 하지 않은 경우 진행 하지 마십시오.
+
+    ```powershell
+    Get-AuthenticodeSignature .\TrustedTpm.cab
+    ```
+    
+    다음은 몇 가지 출력 예제입니다.
+    
+    ```
+    Directory: C:\Users\Administrator\Downloads
+        
+    SignerCertificate                         Status                                 Path
+    -----------------                         ------                                 ----
+    0DD6D4D4F46C0C7C2671962C4D361D607E370940  Valid                                  TrustedTpm.cab
+    ```
 
 2.  Cab 파일을 확장 합니다.
 

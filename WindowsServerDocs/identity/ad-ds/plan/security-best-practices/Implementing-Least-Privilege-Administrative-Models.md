@@ -9,12 +9,12 @@ ms.date: 08/09/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: 609ea0bd796a4d3696e14c7499be047ebdd83183
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 01113b957c6b0be4e18955b5ddc78be3f463abe4
+ms.sourcegitcommit: 236a8ae1da12cea1acfff3f306246db0f022354d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59868854"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412205"
 ---
 # <a name="implementing-least-privilege-administrative-models"></a>최소 권한 관리 모델 구현
 
@@ -37,7 +37,7 @@ ms.locfileid: "59868854"
 
 아쉽게도 많은 환경에서 최소 저항 경로 광범위 하 고 전체 권한 가진 계정 과도 하 게 사용 될 것으로 입증 합니다. 광범위 한 권한은 큰 망라 환경-간 예를 들어 특정 작업을 수행 하는 계정이 허용 된 권한 및 사용, 지원 센터 담당자 수 있습니다 권한은 부여할 수 많은 사용자 계정에 암호를 다시 설정 하도록 허용 하는.  
 
-권한은 전체 모집단의 좁은 세그먼트에 적용 되는 강력한 권한이, 복구 이러한 엔지니어 관리자 대 한 권한을 부여 하는 서버에서 수행할 수 있도록 합니다. 광범위 한 권한 아니고 심층 권한 반드시 위험한 이지만 도메인의 여러 계정은 광범위 하 고 전체 권한 부여 영구적으로 손상 되는 계정 중 하나의 경우에 사용할 수 있습니다 신속 하 게 공격자의 용도로 환경 다시 구성 또는 인프라의 큰 세그먼트를 삭제 합니다.  
+심층 권한은 엔지니어 관리자 권한을 부여 하는 서버에서 복구를 수행할 수 있도록 같은 모집단의 좁은 세그먼트에 적용 되는 강력한 권한입니다. 광범위 한 권한 아니고 심층 권한 반드시 위험한 이지만 도메인의 여러 계정은 광범위 하 고 전체 권한 부여 영구적으로 손상 되는 계정 중 하나의 경우에 사용할 수 있습니다 신속 하 게 공격자의 용도로 환경 다시 구성 또는 인프라의 큰 세그먼트를 삭제 합니다.  
 
 자격 증명 도난 공격 유형의 해시를 전달 공격 되며 어디에서 나을 수행 하는 도구는 무료로 사용 가능 하 고 사용 하기 쉬운-, 때문에 많은 환경에서 공격에 취약 때문에 있습니다. 그러나 해시를 전달 공격에서 실제 문제는. 문제의 핵심은 다음 두 가지입니다.  
 
@@ -276,7 +276,7 @@ Id 관리 (PIM) 권한을 가진, 라고도를 권한 있는 계정으로 PAM (�
 
 권한 있는 계정 관리의 과제 중 하나는, 기본적으로 권한 있는 및 보호 된 계정을 관리할 수 있는 계정 및 그룹은 권한이 있는 계정을 보호 합니다. Active Directory 설치에 대 한 적절 한 RBAC 및 PIM 솔루션을 구현 하는 경우 솔루션 일시적 으로만 및 필요한 경우 그룹을 채우는 디렉터리에 가장 권한이 있는 그룹의 구성원을 효과적으로 내용을 수 있도록 하는 방법을 포함 될 수 있습니다.  
 
-하지만 네이티브 RBAC 및 PIM을 구현 하면 필요할 때 Active Directory에 권한이 없는 유일한 함수 채우기 및 권한이 해체에 그룹화 하는 계정을 만드는 고려해 야 합니다. [부록 i: 보호 된 계정 및 Active Directory에서 그룹에 대 한 관리 계정을 만드는](../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory.md) 이 목적을 위해 계정을 만드는 데 사용할 수 있는 단계별 지침을 제공 합니다.  
+하지만 네이티브 RBAC 및 PIM을 구현 하면 필요할 때 Active Directory에 권한이 없는 유일한 함수 채우기 및 권한이 해체에 그룹화 하는 계정을 만드는 고려해 야 합니다. [부록 I: 보호 된 계정 및 Active Directory에서 그룹에 대 한 관리 계정을 만드는](../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory.md) 이 목적을 위해 계정을 만드는 데 사용할 수 있는 단계별 지침을 제공 합니다.  
 
 ### <a name="implementing-robust-authentication-controls"></a>강력한 인증 제어 구현
 
