@@ -71,13 +71,3 @@
 ## Windows Server 관리 자동화
 ### [Windows PowerShell 스크립팅](/powershell/scripting/powershell-scripting?view=powershell-5.1)
 ### [Windows 명령](windows-commands/windows-commands.md)
-
-
-<!--
-#### [A-Z list](windows-commands/a-z-list.md)
-#### [Command-Line Syntax Key](windows-commands/command-line-syntax-key.md)
-#### [Commands by Server Role](windows-commands/commands-by-server-role.md)
-##### [Print Command Reference](windows-commands/print-command-reference.md)
-##### [Services for Network File System Command Reference](windows-commands/services-for-network-file-system-command-reference.md)
-##### [Remote Desktop Services (Terminal Services) Command Reference](windows-commands/remote-desktop-services-terminal-services-command-reference.md)
-##### [Windows Server Backup Command Reference](windows-commands/windows-server-backup-command-reference.md) -->

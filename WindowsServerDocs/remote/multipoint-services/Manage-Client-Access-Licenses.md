@@ -13,19 +13,19 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: f5f78d3d2387d3b95177a6a8a40fb9b16d8ed8e2
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 42b943ed5e0066f1f810efaba9e65a529ac25f00
+ms.sourcegitcommit: 63926404009f9e1330a4a0aa8cb9821a2dd7187e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66446124"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469352"
 ---
 # <a name="manage-client-access-licenses"></a>클라이언트 액세스 라이선스 관리
 MultiPoint Service를 스테이션으로 사용 되는 실행 중인 컴퓨터를 포함 하 여 MultiPoint 서비스 시스템에 연결 하는 모든 스테이션에 유효한 사용자 원격 데스크톱 있어야 *클라이언트 액세스 라이선스 (CAL)* 합니다.
 
 스테이션 가상 데스크톱 스테이션 실제 대신를 사용 하는 경우 각 스테이션 가상 데스크톱에 대 한 CAL을 설치 해야 합니다.  
   
-1.  MultiPoint 서비스 컴퓨터 또는 서버에 연결 된 각 스테이션에 대 한 클라이언트 라이선스를 구입 합니다. Cal을 구입 하는 방법에 대 한 자세한 내용은 원격 데스크톱 라이선스에 대 한 설명서를 참조 하세요. <!--@Liza: add link to RDS licensing here-->
+1.  MultiPoint 서비스 컴퓨터 또는 서버에 연결 된 각 스테이션에 대 한 클라이언트 라이선스를 구입 합니다. Cal을 구입 하는 방법에 대 한 자세한 내용은 원격 데스크톱 라이선스에 대 한 설명서를 참조 하세요. 
 
 2.  **시작** 화면이 열리면서 **다중 포인트 관리자**합니다.  
   

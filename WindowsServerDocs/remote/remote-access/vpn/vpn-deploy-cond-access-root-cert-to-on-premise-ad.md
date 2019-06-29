@@ -4,25 +4,21 @@ description: ''
 services: active-directory
 ms.prod: windows-server-threshold
 ms.technology: networking-ras
-documentationcenter: ''
-ms.assetid: ''
 ms.workload: identity
-ms.tgt_pltfrm: na
-ms.devlang: na
 ms.topic: article
-ms.date: 05/25/2018
+ms.date: 06/28/2019
 ms.author: pashort
 author: shortpatti
 ms.localizationpriority: medium
 ms.reviewer: deverette
-ms.openlocfilehash: 4aaad98cd04c9b07bdea848294e10d9bcb602064
-ms.sourcegitcommit: 0948a1abff1c1be506216eeb51ffc6f752a9fe7e
+ms.openlocfilehash: 200d3b96ee24b5e1264b4bf2e42d636f9e07fbef
+ms.sourcegitcommit: 63926404009f9e1330a4a0aa8cb9821a2dd7187e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66749544"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469677"
 ---
-# <a name="step-74-deploy-conditional-access-root-certificates-to-on-premises-ad"></a>7.4단계. 온-프레미스에 조건부 액세스 루트 인증서를 배포할 AD
+# <a name="step-74-deploy-conditional-access-root-certificates-to-on-premises-ad"></a>7\.4단계. 온-프레미스에 조건부 액세스 루트 인증서를 배포할 AD
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
@@ -31,38 +27,32 @@ ms.locfileid: "66749544"
 - [**이전:** 7.3단계. 조건부 액세스 정책 구성](vpn-config-conditional-access-policy.md)
 - [**다음:** 7.5단계. Windows 10 디바이스에 대한 OMA-DM 기반 VPNv2 프로필 만들기](vpn-create-oma-dm-based-vpnv2-profiles.md)
 
-1. 에 **VPN 연결** 페이지에서 **인증서 다운로드**합니다. 
-   
-    ![조건부 액세스에 대 한 인증서를 다운로드 합니다.](../../media/Always-On-Vpn/06.png)
+1. 에 **VPN 연결** 페이지에서 **인증서 다운로드**합니다.
 
-    >[!NOTE]
-    >합니다 **base64 인증서 다운로드** 옵션은 배포에 대 한 base64 인증서를 필요로 하는 몇 가지 구성을 사용할 수 있습니다. 
+   >[!NOTE]
+   >합니다 **base64 인증서 다운로드** 옵션은 배포에 대 한 base64 인증서를 필요로 하는 몇 가지 구성을 사용할 수 있습니다.
 
 2. 엔터프라이즈 관리자 권한 및 클라우드를 추가 하려면 다음이 명령을 관리자 권한 명령 프롬프트에서 루트 인증서에는 실행을 사용 하 여 도메인에 가입 된 컴퓨터에 로그온 합니다 *Enterprise NTauth* 저장 합니다.
 
-    >[!NOTE]
-    >VPN 서버는 Active Directory 도메인에 가입 되지는 환경에 대 한 클라우드 루트 인증서에 추가 해야 합니다 _신뢰할 수 있는 루트 인증 기관_ 수동으로 저장 합니다.
+   >[!NOTE]
+   >VPN 서버는 Active Directory 도메인에 가입 되지는 환경에 대 한 클라우드 루트 인증서에 추가 해야 합니다 _신뢰할 수 있는 루트 인증 기관_ 수동으로 저장 합니다.
 
-    |명령  |설명  |  
-    |---------|-------------| 
-    |`certutil -dspublish -f VpnCert.cer RootCA`     |두 개 만듭니다 **Microsoft VPN 루트 CA gen 1** 에서 컨테이너를 **CN = AIA** 및 **CN = 인증 기관** 컨테이너에서 값으로 각 루트 인증서를 게시 하 고 합니다 _cACertificate_ 특성을 둘 다 **Microsoft VPN 루트 CA gen 1** 컨테이너입니다.|  
-    |`certutil -dspublish -f VpnCert.cer NTAuthCA`   |하나 만듭니다 **CN = NTAuthCertificates** 컨테이너를 **CN = AIA** 및 **CN = 인증 기관** 컨테이너에서 값으로 각 루트 인증서를 게시 하 고 합니다 _cACertificate_ 특성을 **CN = NTAuthCertificates** 컨테이너입니다. |  
-    |`gpupdate /force`     |Windows 서버 및 클라이언트 컴퓨터에 루트 인증서 추가 속도 높여 줍니다.  |
+   | 명령 | 설명 |
+   | --- | --- |
+   | `certutil -dspublish -f VpnCert.cer RootCA` | 두 개 만듭니다 **Microsoft VPN 루트 CA gen 1** 에서 컨테이너를 **CN = AIA** 및 **CN = 인증 기관** 컨테이너에서 값으로 각 루트 인증서를 게시 하 고 합니다 _cACertificate_ 특성을 둘 다 **Microsoft VPN 루트 CA gen 1** 컨테이너입니다. |
+   | `certutil -dspublish -f VpnCert.cer NTAuthCA` | 하나 만듭니다 **CN = NTAuthCertificates** 컨테이너를 **CN = AIA** 및 **CN = 인증 기관** 컨테이너에서 값으로 각 루트 인증서를 게시 하 고 합니다 _cACertificate_ 특성을 **CN = NTAuthCertificates** 컨테이너입니다. |
+   | `gpupdate /force` | Windows 서버 및 클라이언트 컴퓨터에 루트 인증서 추가 속도 높여 줍니다. |
 
-3.  엔터프라이즈 NTauth 저장소에 신뢰할 수 있는 상태로 표시 된 루트 인증서 있는지 확인 합니다.
+3. 엔터프라이즈 NTauth 저장소에 신뢰할 수 있는 상태로 표시 된 루트 인증서 있는지 확인 합니다.
+   1. 있는 엔터프라이즈 관리자 권한으로 서버에 로그온 합니다 **인증서 기관 관리 도구** 설치 합니다.
 
-    a.  있는 엔터프라이즈 관리자 권한으로 서버에 로그온 합니다 **인증서 기관 관리 도구** 설치 합니다.
+   >[!NOTE]
+   >기본적으로는 **인증서 기관 관리 도구** 인증 기관 서버를 설치 합니다. 일부로 다른 멤버 서버에 설치 합니다 **역할 관리 도구** 서버 관리자에서.
 
-    >[!NOTE]
-    >기본적으로는 **인증서 기관 관리 도구** 인증 기관 서버를 설치 합니다. 일부로 다른 멤버 서버에 설치 합니다 **역할 관리 도구** 서버 관리자에서.
-
-    b.  시작 메뉴에서 VPN 서버에서 입력 **pkiview.msc** 엔터프라이즈 PKI 대화 상자를 엽니다.
-
-    c.  시작 메뉴에서 입력 **pkiview.msc** 엔터프라이즈 PKI 대화 상자를 엽니다.
-
-    d.  마우스 오른쪽 단추로 클릭 **엔터프라이즈 PKI** 선택한 **AD 관리 컨테이너**합니다.
-
-    d.  아래에 있는 각 Microsoft VPN 루트 CA gen 1 인증서 있는지 확인 합니다.
+   1. 시작 메뉴에서 VPN 서버에서 입력 **pkiview.msc** 엔터프라이즈 PKI 대화 상자를 엽니다.
+   1. 시작 메뉴에서 입력 **pkiview.msc** 엔터프라이즈 PKI 대화 상자를 엽니다.
+   1. 마우스 오른쪽 단추로 클릭 **엔터프라이즈 PKI** 선택한 **AD 관리 컨테이너**합니다.
+   1. 아래에 있는 각 Microsoft VPN 루트 CA gen 1 인증서 있는지 확인 합니다.
       - NTAuthCertificates
       - AIA 컨테이너
       - 인증서 기관 컨테이너

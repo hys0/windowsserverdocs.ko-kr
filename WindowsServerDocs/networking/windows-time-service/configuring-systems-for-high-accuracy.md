@@ -8,12 +8,12 @@ ms.date: 05/08/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: networking
-ms.openlocfilehash: 2a5a7a6bd6313f7a4eadd827e3d754c1e467c3bc
-ms.sourcegitcommit: 2977c707a299929c6ab0d1e0adab2e1c644b8306
+ms.openlocfilehash: 9bfa4e7d4f8777f8fef299cf3991238e31564ace
+ms.sourcegitcommit: 63926404009f9e1330a4a0aa8cb9821a2dd7187e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63745438"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469601"
 ---
 # <a name="configuring-systems-for-high-accuracy"></a>높은 정확도 대 한 시스템 구성
 >적용 대상: Windows Server 2016 및 Windows 10 버전 1607 이상
@@ -91,7 +91,6 @@ Windows 시간 서비스 (w32time))는 지속적으로 실행 해야 합니다. 
 - 시간 서버 A와 원본
 
 받은 편지함 w32tm.exe 도구를 사용 하 여이 측정을 얻을 수 있습니다.  가상 하드 디스크 파일에 대한 중요 정보를 제공하려면
-<!-- Use PowerShell to import the CSV then average the RTT Column -->
 
 1. 대상 및 시간 서버 B에서에서 계산을 수행 합니다.
     

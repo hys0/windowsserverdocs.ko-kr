@@ -16,12 +16,12 @@ ms.date: 10/28/2018
 ms.subservice: hybrid
 ms.author: billmath
 ms.custom: H1Hack27Feb2017
-ms.openlocfilehash: 588bc3f87c78feccac47d18d31d37be3b1a02d2f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f075f91e97f806555507bfc0e0c5f3d1589a71e6
+ms.sourcegitcommit: 63926404009f9e1330a4a0aa8cb9821a2dd7187e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59835104"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469646"
 ---
 # <a name="deploying-active-directory-federation-services-in-azure"></a>Azure에서 Active Directory Federation Services 배포
 AD FS는 간편 하 고 안전한 id 페더레이션 및 웹에서 single sign-on (SSO) 기능을 제공 합니다. Azure AD와 페더레이션 하거나 O365 온-프레미스 자격 증명을 사용 하 여 인증 하 고 클라우드에서 모든 리소스에에서 액세스 하는 사용자를 사용 하도록 설정 합니다. 결과적으로, 온-프레미스 리소스에 액세스 하려면 항상 사용 가능한 AD FS 인프라를 마련해 야 됩니다 및 클라우드에서 합니다. Azure에서 AD FS 배포 필요한 최소한의 노력으로 고가용성을 달성 하는 데 도움이 됩니다.
@@ -63,7 +63,7 @@ Azure portal에서 가상 네트워크를 선택 하 고이 가상 네트워크�
 * 서브넷에 패널 추가 단추 클릭
 * 서브넷을 만들려는 서브넷 이름 및 주소 공간 정보를 제공 합니다.
 
-![서브넷](./media/how-to-connect-fed-azure-adfs/deploynetwork2.png)
+![Subnet](./media/how-to-connect-fed-azure-adfs/deploynetwork2.png)
 
 ![DMZ 서브넷](./media/how-to-connect-fed-azure-adfs/deploynetwork3.png)
 
@@ -123,7 +123,7 @@ ExpressRoute를 사용 하는 것이 좋습니다, 조직에 가장 적합 한 �
 ### <a name="4-deploy-virtual-machines"></a>4. 가상 컴퓨터 배포
 다음 단계 인프라의 다양 한 역할을 호스트 하는 가상 컴퓨터를 배포 하는 것입니다. 각 가용성 집합에 최소 두 개의 컴퓨터를 사용 하는 것이 좋습니다. 기본 배포를 위해 4 개의 가상 머신을 만듭니다.
 
-| 컴퓨터 | 역할 | 서브넷 | 가용성 집합 | Storage 계정 | IP 주소 |
+| Machine | 역할 | Subnet | 가용성 집합 | Storage 계정 | IP 주소 |
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | contosodc1 |DC/ADFS |INT |contosodcset |contososac1 |정적 |
 | contosodc2 |DC/ADFS |INT |contosodcset |contososac2 |정적 |
@@ -193,7 +193,7 @@ ILB 설정 패널에서 상태 프로브를 선택 합니다.
 
 ![ILB 프로브 구성](./media/how-to-connect-fed-azure-adfs/ilbdeployment4.png)
 
-사용 하 여 AD FS 환경에서 상태 검사에 대 한 명시적으로 만든 /adfs/probe 끝점 전체 HTTPS 경로 확인 상황이 발생할 수 없습니다.  이것이 최신 AD FS 배포의 상태를 정확 하 게 반영 하지 않습니다는 기본 포트 443 검사를 보다 훨씬 더 잘입니다.  이 대 한 자세한 내용은에서 찾을 수 있습니다 https://blogs.technet.microsoft.com/applicationproxyblog/2014/10/17/hardware-load-balancer-health-checks-and-web-application-proxy-ad-fs-2012-r2/합니다.
+사용 하 여 AD FS 환경에서 상태 검사에 대 한 명시적으로 만든 /adfs/probe 끝점 전체 HTTPS 경로 확인 상황이 발생할 수 없습니다.  이것이 최신 AD FS 배포의 상태를 정확 하 게 반영 하지 않습니다는 기본 포트 443 검사를 보다 훨씬 더 잘입니다.  이 대 한 자세한 내용은에서 찾을 수 있습니다 https://blogs.technet.microsoft.com/applicationproxyblog/2014/10/17/hardware-load-balancer-health-checks-and-web-application-proxy-ad-fs-2012-r2/ 합니다.
 
 **6.4. 부하 분산 규칙 만들기**
 
@@ -277,11 +277,6 @@ ILB는 부하 분산 규칙 TCP 443에 대 한 구성에 동일한 단계를 따
 
 ![INT 액세스 규칙 (인바운드)](./media/how-to-connect-fed-azure-adfs/nsg_int.png)
 
-<!--
-[comment]: <> (![INT access rules (inbound)](./media/how-to-connect-fed-azure-adfs/nsgintinbound.png))
-[comment]: <> (![INT access rules (outbound)](./media/how-to-connect-fed-azure-adfs/nsgintoutbound.png))
--->
-
 **9.2. DMZ 서브넷 보안**
 
 | 규칙 | 설명 | 흐름 |
@@ -290,11 +285,6 @@ ILB는 부하 분산 규칙 TCP 443에 대 한 구성에 동일한 단계를 따
 | DenyInternetOutbound |차단 된 인터넷에 HTTPS 외 |아웃바운드 |
 
 ![EXT 액세스 규칙 (인바운드)](./media/how-to-connect-fed-azure-adfs/nsg_dmz.png)
-
-<!--
-[comment]: <> (![EXT access rules (inbound)](./media/how-to-connect-fed-azure-adfs/nsgdmzinbound.png))
-[comment]: <> (![EXT access rules (outbound)](./media/how-to-connect-fed-azure-adfs/nsgdmzoutbound.png))
--->
 
 > [!NOTE]
 > 클라이언트 사용자 인증서 인증 하는 경우 (clientTLS 인증 X509를 사용 하 여 사용자 인증서)이 필요한 경우 AD FS 필요한 TCP 포트 49443 인바운드 액세스를 위해 사용 하도록 설정 합니다.
@@ -324,7 +314,7 @@ ILB는 부하 분산 규칙 TCP 443에 대 한 구성에 동일한 단계를 따
 
 | 매개 변수 | 설명 |
 |:--- |:--- |
-| Location |영역 리소스를 배포, 예: 동부 미국입니다. |
+| 위치 |영역 리소스를 배포, 예: 동부 미국입니다. |
 | StorageAccountType |만든 저장소 계정 유형 |
 | VirtualNetworkUsage |새 가상 네트워크를 만들지 아니면 기존 계정을 사용할 경우를 나타냅니다. |
 | VirtualNetworkName |기존 또는 새 가상 네트워크 사용에서 필수인 만들 Virtual Network의 이름 |

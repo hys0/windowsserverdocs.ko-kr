@@ -9,12 +9,12 @@ ms.date: 05/08/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: networking
-ms.openlocfilehash: a86c2bdde9c65878b228f153009734da8f03960d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3233434403594ef9e2555c0329c4791d1fb99709
+ms.sourcegitcommit: 63926404009f9e1330a4a0aa8cb9821a2dd7187e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59856834"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469585"
 ---
 # <a name="windows-time-service-w32time"></a>Windows 시간 서비스 (w32time))
 
@@ -40,17 +40,3 @@ Windows 시간 공급자 플러그 인 모델은 [technet 문서화](https://msd
 Windows 2016 정확한 내용 시간 문서에서 참조 하는 추 록을 다운로드할 수 있습니다 [여기](https://windocs.blob.core.windows.net/windocs/WindowsTimeSyncAccuracy_Addendum.pdf)
 
 Windows 시간 서비스의 간략 한 개요를 위해이 살펴보겠습니다 [높은 수준의 개요 비디오](https://aka.ms/WS2016TimeVideo)합니다.
-
-<!-- In this guide
-In this guide:
-Windows Accurate Time
-High Accuracy
-Support Boundary
-Configuration for High Accuracy
-Traceability for Compliance
-Best Practices
-Technical Reference
-How the Windows Time Service Works
-Windows Time Service Tools and Settings
--->
-

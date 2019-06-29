@@ -9,21 +9,16 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: dd9b89f34a3b4af8bb98d2399a524790aa65de0e
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 9601145048b8798cfb102757384da49bed16a538
+ms.sourcegitcommit: 63926404009f9e1330a4a0aa8cb9821a2dd7187e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66447479"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469633"
 ---
 # <a name="shielded-vms-for-tenants---creating-a-new-shielded-vm-on-premises-and-moving-it-to-a-guarded-fabric"></a>온-프레미스 VM 및 보호 된 패브릭 이동 테 넌 트-새 보호 된 Vm 보호
 
 >적용 대상: Windows Server, Windows Server 2016, Windows Server (반기 채널) 2019
-
-
-<!-- NOTE THAT THIS FILE HAS A "redirect_url" LINE IN THE METADATA. EVENTUALLY WE WILL PROBABLY STRIP OUT THE DETAILED METADATA AND THE CONTENT BELOW, SO IT'S PURELY A REDIRECTED TOPIC. However, as of mid-November 2016, we're still deciding. -->
-
-
 
 이 항목에서는 Hyper-v만;를 사용 하 여 보호 된 VM을 만드는 단계를 설명 합니다. 즉, Virtual Machine Manager, 템플릿 디스크 또는 보호 데이터 파일 없이 합니다. 대부분의 공용 클라우드 호스팅 환경에 대 한 일반적인 시나리오는 이지만 보호 된 패브릭을 테스트할 때 유용할 수 있습니다 또는 엔터프라이즈의 시나리오는 부서별 패브릭에서 VM을 이동 하는 위치 IT 인프라를 공유 하 고 마이그레이션 전에 암호화 해야 합니다.
 
@@ -102,7 +97,7 @@ ms.locfileid: "66447479"
 
        $KP = New-HgsKeyProtector -Owner $Owner -Guardian $Guardian -AllowUntrustedRoot
 
-   하려는 경우 둘 이상의 데이터 센터에 대 한 보호 된 VM (예: 재해 복구 사이트 및 공용 클라우드 공급자)를 실행할 수 있도록에 대 한 보호자의 목록을 제공할 수 있습니다 합니다 **-보호** 매개 변수입니다. 자세한 내용은 [새로 만들기-HgsKeyProtector]을 참조 하세요. (https://docs.microsoft.com/powershell/module/hgsclient/new-hgskeyprotector?view=win10-ps합니다.
+   하려는 경우 둘 이상의 데이터 센터에 대 한 보호 된 VM (예: 재해 복구 사이트 및 공용 클라우드 공급자)를 실행할 수 있도록에 대 한 보호자의 목록을 제공할 수 있습니다 합니다 **-보호** 매개 변수입니다. 자세한 내용은 [새로 만들기-HgsKeyProtector]을 참조 하세요. (https://docs.microsoft.com/powershell/module/hgsclient/new-hgskeyprotector?view=win10-ps 합니다.
 
 5. 키 보호기를 사용 하 여 vTPM을 사용 하도록 설정 하려면 다음 명령을 실행 합니다. 에 대 한 &lt;ShieldedVMname&gt;, 이전 단계에서 사용한 동일한 VM 이름을 사용 합니다.
 

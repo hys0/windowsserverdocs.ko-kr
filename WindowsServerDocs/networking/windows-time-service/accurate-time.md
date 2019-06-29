@@ -8,12 +8,12 @@ ms.date: 05/08/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: networking
-ms.openlocfilehash: b68e6b915d029e53d47c6cffe214ec6e11bba6ea
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.openlocfilehash: 75465aad45fc1b5e360fa1153a6530a771731f66
+ms.sourcegitcommit: 63926404009f9e1330a4a0aa8cb9821a2dd7187e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66812388"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469443"
 ---
 # <a name="accurate-time-for-windows-server-2016"></a>Windows server 2016 정확한 시간
 
@@ -24,7 +24,6 @@ Windows 시간 서비스는 클라이언트 및 서버 시간 동기화 공급�
 > [!NOTE]
 > Windows 시간 서비스의 간략 한 개요를 위해이 살펴보겠습니다 [높은 수준의 개요 비디오](https://aka.ms/WS2016TimeVideo)합니다.
 
-<!-- Not sure what to do with the following -->
 이 항목에서 설명 하는 중... 이러한 항목에 정확한 시간 관련: 
 
 - 향상 된 기능

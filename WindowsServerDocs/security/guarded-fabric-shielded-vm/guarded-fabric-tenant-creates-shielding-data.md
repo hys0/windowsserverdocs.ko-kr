@@ -8,12 +8,12 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 01/30/2019
-ms.openlocfilehash: 3c36eff8aabd1fa1c6456dce1d08ebe504102e8c
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: d1d269ecdbfd4803c51da4817b62caf01d2091ae
+ms.sourcegitcommit: 63926404009f9e1330a4a0aa8cb9821a2dd7187e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67284163"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469620"
 ---
 # <a name="shielded-vms-for-tenants---creating-shielding-data-to-define-a-shielded-vm"></a>테 넌 트-보호 된 VM을 정의 하려면 실딩 데이터 만들기에 대 한 보호 된 Vm
 
@@ -43,8 +43,6 @@ ms.locfileid: "67284163"
 올바른 끝점으로 연결 하는 테 넌 트 확인할 수 있도록 중요 한 것 이므로 테 넌 트, 원격 데스크톱 연결 또는 기타 원격 관리 도구를 사용 하 여 보호 된 Vm에 연결할 수만 (즉, 없는 "man-in-the-middle" 연결 차단).
 
 원하는 서버에 연결 하는 확인 하는 하나 방법은 설치 및 연결을 초기화할 때를 표시 하도록 원격 데스크톱 서비스에 대 한 인증서를 구성 하는 것입니다. 서버에 연결할 클라이언트 컴퓨터는 지 여부를 신뢰 인증서 및 경고를 표시 하지 않는 경우를 확인 합니다. 일반적으로 연결 하는 클라이언트가 인증서를 신뢰 하도록 RDP 인증서는 테 넌 트의 PKI에서 발급 됩니다. 자세한 내용은 [원격 데스크톱 서비스의 인증서를 사용 하 여](https://technet.microsoft.com/library/dn781533.aspx) TechNet에서 확인할 수 있습니다.
-
-<!-- The previous link comes from Windows 2012 R2 content, but as of Sept 2016, there isn't a more recent link that covers the same information. -->
 
 > [!NOTE]
 > 실딩 데이터 파일에 포함을 위한 RDP 인증서를 선택 하는 경우에 와일드 카드 인증서를 사용 해야 합니다. 실딩 데이터 파일을 하나 만드는 Vm 개수에 제한 없이 사용할 수 있습니다. 각 VM은 동일한 인증서를 공유 하기 때문에 와일드 카드 인증서를 하면 인증서를 VM의 호스트 이름에 관계 없이 유효한 됩니다.
@@ -142,8 +140,6 @@ VMM에서 서명 된 템플릿 디스크는 일반화 되므로 테 넌 트는 �
         $relecloudmetadata = Get-SCGuardianConfiguration
 
         $relecloudmetadata.InnerXml | Out-File .\RelecloudGuardian.xml -Encoding UTF8
-
-<!-- Note that the VMM PowerShell cmdlets aren't Windows PowerShell, so "VMM PowerShell" is the correct terminology for them. -->
 
 보호 된 Vm을 계속 하기 전에 실행 권한을 부여 하려는 각 보호 된 패브릭에 대해 가디언 메타 데이터 파일을 가져옵니다.
 

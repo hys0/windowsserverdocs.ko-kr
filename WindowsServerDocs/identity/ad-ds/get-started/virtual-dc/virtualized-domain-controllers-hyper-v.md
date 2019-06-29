@@ -6,12 +6,12 @@ ms.author: joflore
 ms.date: 04/19/2018
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.openlocfilehash: 8a1775a40761e4a489cc39535514d75174edffa5
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 297c2a26f10503cb68ae241576a72e08aa4e55a0
+ms.sourcegitcommit: 63926404009f9e1330a4a0aa8cb9821a2dd7187e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66442992"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469566"
 ---
 # <a name="virtualizing-domain-controllers-using-hyper-v"></a>Hyper-v를 사용 하 여 도메인 컨트롤러 가상화
 
@@ -82,7 +82,6 @@ Rodc에 대 한 자세한 내용은 [읽기 전용 도메인 컨트롤러 계획
 ## <a name="rodcs"></a>Rodc
 
 Rodc의 이점 중 하나는 없는 물리적 보안을 보장할 수 없는 같은 지점에서 위치에 배치 하는 기능입니다. Windows BitLocker 드라이브 암호화를 사용 하 여 VHD 파일 자체를 보호할 수 있습니다 (파일 시스템이 아닌 여기) 실제 디스크의 도용을 통해 호스트에서 손상 되지 않도록 합니다. 
-<!-- Removed link to Windows Server 2008 Hyper-V and BitLocker Drive Encryption (http://go.microsoft.com/fwlink/?linkid=123534). Link is dead. -->
 
 ## <a name="performance"></a>성능
 
@@ -176,10 +175,8 @@ Lightweight Directory Access Protocol (LDAP) 테스트는 실제 도메인 컨�
 가상 컴퓨터의 성능 안정성 및 성능 관리자 (Perfmon.msc)를 모니터링 하면 가상 머신 내에서 CPU 정보가 됩니다 가상 CPU 실제 프로세서에서 예약 된 방식으로 인해 완전히 정확 하 게 합니다. Hyper-v 서버에서 실행 되는 가상 컴퓨터의 CPU 정보를 가져오려는 경우는 호스트 파티션에 Hyper-v 하이퍼바이저 논리 프로세서 카운터를 사용 합니다.
 
 성능에 대 한 자세한 내용은 참조 AD DS와 Hyper-v의 튜닝 [성능 튜닝 지침에 대 한 Windows Server 2016](../../../../administration/performance-tuning/index.md)합니다.
-<!-- Updated to 2016 perf guidance -->
 
 또한 않으려는 VHD 차이점 보관용 디스크 성능이 저하 될 수 있으므로 도메인 컨트롤러로 구성 된 가상 머신에서 VHD 차이점 보관용 디스크를 사용 합니다. Hyper-v 디스크 유형, 차이점 보관용 디스크를 포함 하는 방법에 대 한 자세한 내용은 [새 가상 하드 디스크 마법사](http://go.microsoft.com/fwlink/?linkid=137279)합니다.
-<!-- Couldn't find an equivalent WS 2016 Hyper-V article. -->
 
 가상 호스팅 환경에서 AD DS에 대 한 자세한 내용은 참조 하세요. [Active Directory 도메인 컨트롤러 가상 호스팅 환경에서 호스트 될 때 고려해 야 할 사항](https://go.microsoft.com/fwlink/?linkid=141292) Microsoft 기술 자료에서 합니다.
 
@@ -384,8 +381,6 @@ Rodc에 대해은 복원 프로세스 및 의사 결정은 간단 합니다.
 ## <a name="usn-and-usn-rollback"></a>USN 및 USN 롤백
 
 이 섹션에서는 가상 컴퓨터의 이전 버전을 사용 하 여를 사용 하는 잘못 된 복원 Active Directory 데이터베이스의 결과로 발생할 수 있는 복제 문제를 설명 합니다. Active Directory 복제 프로세스에 대 한 자세한 내용은 참조 하세요. [Active Directory 복제 개념](../replication/active-directory-replication-concepts.md)
-
-<!-- Replaced this link with 2016 article: [How the Active Directory Replication Model Works](http://go.microsoft.com/fwlink/?linkid=27636) (http://go.microsoft.com/fwlink/?LinkID=27636). -->
 
 ## <a name="usns"></a>Usn
 

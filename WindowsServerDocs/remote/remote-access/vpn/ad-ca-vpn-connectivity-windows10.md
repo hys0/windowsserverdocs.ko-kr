@@ -4,33 +4,34 @@ description: 이 선택적 단계에서는 어떻게 권한이 부여 된 VPN �
 ms.prod: windows-server-threshold
 ms.technology: networking-ras
 ms.topic: article
-ms.assetid: ''
 ms.localizationpriority: medium
 ms.author: pashort
 author: shortpatti
-ms.date: 07/13/2018
+ms.date: 06/28/2019
 ms.reviewer: deverette
-ms.openlocfilehash: c87d0075696bf8ab5794667d42c40829c3eb61bd
-ms.sourcegitcommit: 0948a1abff1c1be506216eeb51ffc6f752a9fe7e
+ms.openlocfilehash: f6383030f70dd7c0487edd534bcc0ad42010f409
+ms.sourcegitcommit: 63926404009f9e1330a4a0aa8cb9821a2dd7187e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66749524"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469306"
 ---
 # <a name="step-7-optional-conditional-access-for-vpn-connectivity-using-azure-ad"></a>7단계. (선택 사항) Azure AD를 사용 하 여 VPN 연결에 대 한 조건부 액세스
 
 - [**이전:** 6단계. Windows 10 클라이언트 Always On VPN 연결 구성](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)
 - [**다음:** 7.1단계. EAP-TLS를 사용하여 CRL(인증서 해지 목록) 확인 무시](vpn-config-eap-tls-to-ignore-crl-checking.md)
 
-이 선택적 단계에서는 미세 조정할 수 있습니다 VPN 사용자가 사용 하 여 리소스를 액세스 하는 방식을 [Azure Active Directory (Azure AD) 조건부 액세스](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)합니다. 가상 사설망 (VPN) 연결에 대 한 Azure AD 조건부 액세스를 사용 하 여 VPN 연결을 보호할 수 있습니다. 조건부 액세스는 Azure AD(Azure Active Directory)에 연결된 응용 프로그램에 대한 액세스 규칙을 만드는 데 사용되는 정책 기반 평가 엔진입니다. 
+이 선택적 단계에서는 미세 조정할 수 있습니다 VPN 사용자가 사용 하 여 리소스를 액세스 하는 방식을 [Azure Active Directory (Azure AD) 조건부 액세스](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)합니다. 가상 사설망 (VPN) 연결에 대 한 Azure AD 조건부 액세스를 사용 하 여 VPN 연결을 보호할 수 있습니다. 조건부 액세스는 Azure AD(Azure Active Directory)에 연결된 응용 프로그램에 대한 액세스 규칙을 만드는 데 사용되는 정책 기반 평가 엔진입니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
 다음 항목에 잘 알고 있다면:
+
 - [Azure Active Directory의 조건부 액세스](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
 - [VPN 및 조건부 액세스](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access)
 
 VPN 연결에 대 한 Azure Active Directory 조건부 액세스를 구성 하려면 다음을 구성 했으며 해야 합니다.
+
 - [서버 인프라](always-on-vpn/deploy/vpn-deploy-server-infrastructure.md)
 - [VPN Always On에 대 한 원격 액세스 서버](always-on-vpn/deploy/vpn-deploy-ras.md)
 - [네트워크 정책 서버](always-on-vpn/deploy/vpn-deploy-nps.md)
@@ -48,9 +49,13 @@ NPS 서버 (루트 인증서 포함)의 인증서 체인의 해지 확인을 완
 이 단계에서는 자동으로 테 넌 트에서 VPN 서버 클라우드 앱을 만드는 Azure AD와 VPN 인증에 대 한 루트 인증서를 구성 합니다.  
 
 VPN 연결에 대 한 조건부 액세스를 구성 하려면:
-1. (둘 이상의 인증서를 만들 수)는 Azure 포털에서 VPN 인증서를 만듭니다.
+
+1. Azure portal에서 VPN 인증서를 만듭니다.
 2. VPN 인증서를 다운로드 합니다.
 3. VPN 서버에 인증서를 배포 합니다.
+
+> [!IMPORTANT]
+> VPN 인증서를이 만들어지면 Azure portal에서 Azure AD는 VPN 클라이언트에 수명이 짧은 인증서를 발급 하는 데 즉시 사용 시작 됩니다. 반드시 VPN 인증서를 VPN 클라이언트의 자격 증명 유효성 검사를 사용 하 여 문제를 방지 하려면 VPN 서버에 즉시 배포 되어야 합니다.
 
 ## <a name="step-73-configure-the-conditional-access-policyvpn-config-conditional-access-policymd"></a>[7.3단계. 조건부 액세스 정책 구성](vpn-config-conditional-access-policy.md)
 
@@ -67,13 +72,14 @@ VPN 연결에 대 한 조건부 액세스를 구성 하려면:
 이 단계에서는 온-프레미스 VPN 인증에 대 한 신뢰할 수 있는 루트 인증서를 배포할 AD입니다.
 
 신뢰할 수 있는 루트 인증서를 배포 하려면를 지정 해야 합니다.
+
 1. 다운로드 한 인증서로 추가 *VPN 인증에 대 한 신뢰할 수 있는 루트 CA*합니다.
 2. VPN 서버 및 VPN 클라이언트 루트 인증서를 가져옵니다.
 3. 인증서 표시 되며 표시를 확인 합니다. 신뢰할 수 있는 합니다.
 
 ## <a name="step-75-create-oma-dm-based-vpnv2-profiles-to-windows-10-devicesvpn-create-oma-dm-based-vpnv2-profilesmd"></a>[7.5단계. Windows 10 디바이스에 대한 OMA-DM 기반 VPNv2 프로필 만들기](vpn-create-oma-dm-based-vpnv2-profiles.md)
 
-이 단계에서는 OMA-DM를 만들 수 있습니다 기반 VPN 장치 구성 정책을 배포 하려면 Intune을 사용 하 여 VPNv2 프로 파일입니다. SCCM 또는 PowerShell 스크립트를 사용 하 여 VPNv2 프로필 만들기를 참조 하려는 경우 [VPNv2 CSP 설정이](https://docs.microsoft.com/windows/client-management/mdm/vpnv2-csp) 대 한 자세한 내용은 합니다. 
+이 단계에서는 OMA-DM를 만들 수 있습니다 기반 VPN 장치 구성 정책을 배포 하려면 Intune을 사용 하 여 VPNv2 프로 파일입니다. SCCM 또는 PowerShell 스크립트를 사용 하 여 VPNv2 프로필 만들기를 참조 하려는 경우 [VPNv2 CSP 설정이](https://docs.microsoft.com/windows/client-management/mdm/vpnv2-csp) 대 한 자세한 내용은 합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
@@ -81,7 +87,7 @@ VPN 연결에 대 한 조건부 액세스를 구성 하려면:
 
 ## <a name="related-topics"></a>관련 항목
 
-- [VPNv2 프로필 구성](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access): 이제 VPN 클라이언트를 클라우드 기반 조건부 액세스 플랫폼과 통합하여 원격 클라이언트에 대한 디바이스 준수 옵션을 제공할 수 있습니다. 이 단계에서는 사용 하 여 VPNv2 프로필 구성한  **\<DeviceCompliance > \<사용 > true\</활성화 >** 합니다. 
+- [VPNv2 프로필 구성](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access): 이제 VPN 클라이언트를 클라우드 기반 조건부 액세스 플랫폼과 통합하여 원격 클라이언트에 대한 디바이스 준수 옵션을 제공할 수 있습니다. 이 단계에서는 사용 하 여 VPNv2 프로필 구성한  **\<DeviceCompliance > \<사용 > true\</활성화 >** 합니다.
 
 - [자동 VPN 프로필을 사용 하 여 Windows 10에서 원격 액세스 향상](https://www.microsoft.com/itshowcase/Article/Content/894/Enhancing-remote-access-in-Windows-10-with-an-automatic-VPN-profile): Microsoft에서 VPN 연결에 대 한 조건부 액세스를 구현 하는 방법에 대해 알아봅니다. VPN 프로필에 장치를 지원 되는 인증 방법 및 장치에 연결 해야 하는 VPN 서버를 포함 하 여 회사 네트워크에 연결 하는 데 필요한 모든 정보가 포함 됩니다. 조건부 액세스 및 single sign-on을 포함 하 여 Windows 10 1 주년 업데이트의 변경 내용을를 Always-On VPN 연결 프로필을 만들 수 있게 되었습니다. 에 대 한 연결 프로필을 만들었습니다 도메인에 가입 된 장치와 Microsoft Intune에서 관리 하는 System Center Configuration Manager 콘솔을 사용 합니다.
 

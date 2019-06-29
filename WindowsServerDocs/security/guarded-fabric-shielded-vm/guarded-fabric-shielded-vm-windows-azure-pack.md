@@ -8,12 +8,12 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 600ccd74c379daa281f438b1200179dcae210817
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 4cb5ed3433e04b7a5fe7004e517eb4cc38c7eb53
+ms.sourcegitcommit: 63926404009f9e1330a4a0aa8cb9821a2dd7187e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66447356"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469656"
 ---
 # <a name="shielded-vms--for-tenants---deploying-a-shielded-vm-by-using-windows-azure-pack"></a>테 넌 트-Windows Azure Pack을 사용 하 여 보호 된 VM을 배포에 대 한 보호 된 Vm
 
@@ -22,8 +22,6 @@ ms.locfileid: "66447356"
 호스팅 서비스 공급자에서 지원할 경우에 보호 된 VM을 배포 하려면 Windows Azure 팩을 사용할 수 있습니다.
 
 다음 단계를 수행 합니다.
-
-<!-- When we have a link to the topic about how tenants subscribe, add that link as an indented item just under step 1 below. -->
 
 1. Windows Azure 팩에서 제공 하는 하나 이상의 계획을 구독 합니다.
 

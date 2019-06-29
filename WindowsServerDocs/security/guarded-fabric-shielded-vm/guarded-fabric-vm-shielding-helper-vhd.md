@@ -8,18 +8,16 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 8e14cdeed435f23f28ca514e232fbcfa6220fc74
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 81e6ed7950fe13c5bed4a3f8850d64e7185b8ddd
+ms.sourcegitcommit: 63926404009f9e1330a4a0aa8cb9821a2dd7187e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59887724"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469637"
 ---
 # <a name="shielded-vms---preparing-a-vm-shielding-helper-vhd"></a>보호 된 Vm-VM 실딩 도우미 VHD 준비
 
 >적용 대상: Windows Server, Windows Server 2016, Windows Server (반기 채널) 2019
-
-<!-- This comment creates a break between the Applies To above and the Important note below. -->
 
 > [!IMPORTANT]
 > 이러한 절차를 시작 하기 전에 Windows Server 2016에 대 한 최신 누적 업데이트를 설치 하거나 최신 Windows 10을 사용 하는 확인 [원격 서버 관리 도구](https://www.microsoft.com/en-us/download/details.aspx?id=45520)합니다. 그렇지 않으면 절차에서는 작동 하지 않습니다. 
@@ -64,4 +62,4 @@ VMM 콘솔에서 설정 창을 열고 차례로 **호스트 보호 서비스 설
 ## <a name="see-also"></a>참조
 
 - [보호 된 호스트 및 차폐 Vm 호스팅 서비스 공급자 구성 단계](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
-- [보호 된 패브릭 및 보호 된 Vm](guarded-fabric-and-shielded-vms-top-node.md)
+- [보호된 패브릭 및 보호된 VM](guarded-fabric-and-shielded-vms-top-node.md)

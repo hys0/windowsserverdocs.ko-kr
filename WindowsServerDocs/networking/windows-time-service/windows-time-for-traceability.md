@@ -9,12 +9,12 @@ ms.date: 10/17/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: networking
-ms.openlocfilehash: e25217feba45516cd0e9a3aa2bf1a2581d2087f5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3256ff55ec8f293cd37acbea6122584a63847284
+ms.sourcegitcommit: 63926404009f9e1330a4a0aa8cb9821a2dd7187e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59838044"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469583"
 ---
 # <a name="windows-time-for-traceability"></a>추적 기능에 대 한 Windows 시간
 >적용 대상: Windows Server 2016 버전 1709 이상 및 Windows 10 버전 1703 이상이
@@ -41,7 +41,6 @@ ms.locfileid: "59838044"
 
 다음 섹션에서는 추적 가능성 시나리오에서 사용 하 여 기록 된 이벤트를 설명 합니다.
 
-<!-- use tabs like the group policies -->
 # <a name="257tab257"></a>[257](#tab/257)
 이 이벤트는 Windows 시간 서비스 (w32time)) 시작 되 고 현재 시간, 현재 틱 수, 런타임 구성, 시간 공급자 및 현재 클럭 속도 대 한 정보를 기록 하는 경우 기록 됩니다.
 
@@ -82,7 +81,7 @@ w32tm.exe /query /status /verbose
 |기록 된 데이터 |<ul><li>현재 UTC 시간</li><li>현재 틱 수입니다.</li></ul> |
 |제한 메커니즘  |없음 이 이벤트는 서비스가 중지 될 때마다 발생 합니다. |
 
-**예제에서는 텍스트:**
+**예제에서는 텍스트:** 
 `W32time service is stopping at 2018-03-01T05:42:13.944Z (UTC), System Tick Count 6370250.`
 
 # <a name="259tab259"></a>[259](#tab/259)
@@ -103,7 +102,7 @@ server1.fabrikam.com, 0x8 (ntp.m|0x8|[::]:123-> [IPAddress]:123)server2.fabrikam
 
 **명령** 다음 명령을 사용 하 여이 정보를 쿼리할 수 있습니다
 
-*피어를 식별 합니다.*
+*피어를 식별 합니다.* 
 `w32tm.exe /query /peers`
 
 # <a name="260tab260"></a>[260](#tab/260)
@@ -144,7 +143,7 @@ server1.fabrikam.com, 0x8 (ntp.m|0x8|[::]:123-> [IPAddress]:123)server2.fabrikam
 |||
 |---|---|
 |이벤트 설명 |NTP 클라이언트에서 사용 하는 시간 원본에서 변경 |
-|설명 |NTP 클라이언트 시간 서버/피어 상태가 변경 될 때 시간 서버/피어가 현재 상태와 이벤트를 기록 합니다 (**-> 동기화 보류 중**를 **동기화-> 접근할 수 없는**, 또는 기타 전환) |
+|설명 |NTP 클라이언트 시간 서버/피어 상태가 변경 될 때 시간 서버/피어가 현재 상태와 이벤트를 기록 합니다 ( **-> 동기화 보류 중**를 **동기화-> 접근할 수 없는**, 또는 기타 전환) |
 |제한 메커니즘  |최대 빈도 – 한 번만 5 분 마다 일시적인 문제 및 잘못 된 공급자 구현에서 로그를 보호 합니다. |
 
 # <a name="265tab265"></a>[265](#tab/265)
