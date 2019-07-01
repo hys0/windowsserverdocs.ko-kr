@@ -40,6 +40,7 @@
 ### [네트워크 파일 시스템 배포](nfs/deploy-nfs.md)
 ### [NTFS 개요](file-server/ntfs-overview.md)
 ### [볼륨 섀도 복사본 서비스](file-server/volume-shadow-copy-service.md)
+### [디스크 정리 사용](file-server/disk-cleanup.md)
 ## [파일 서버 리소스 관리자](fsrm/fsrm-overview.md)
 ### [검사 목록: 볼륨 또는 폴더에 할당량 적용](fsrm/checklist-apply-quota-to-volume-or-folder.md)
 ### [검사 목록: 볼륨 또는 폴더에 파일 차단 적용](fsrm/checklist-apply-file-screen-to-volume-or-folder.md)
@@ -123,12 +124,14 @@
 #### [볼륨 계획](storage-spaces/plan-volumes.md)
 #### [게스트 VM 클러스터](storage-spaces/storage-spaces-direct-in-vm.md)
 #### [재해 복구](storage-spaces/storage-spaces-direct-disaster-recovery.md)
-### 배포 게스트 클러스터에
+### 배포
 #### [스토리지 공간 다이렉트 배포](storage-spaces/deploy-storage-spaces-direct.md)
 #### [볼륨 만들기](storage-spaces/create-volumes.md)
 #### [중첩된 복원력](storage-spaces/nested-resiliency.md)
 #### [쿼럼 구성](../failover-clustering/manage-cluster-quorum.md)
-#### [스토리지 공간 다이렉트 클러스터를 Windows Server 2019로 업그레이드](storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md)
+#### [스토리지 공간 다이렉트 클러스터 업그레이드](storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md)
+#### [영구 메모리 이해 및 배포](storage-spaces/deploy-pmem.md)
+
 ### 관리
 #### [Windows Admin Center를 통해 관리](../manage/windows-admin-center/use/manage-hyper-converged.md)
 #### [서버 또는 드라이브 추가](storage-spaces/add-nodes.md)
@@ -148,11 +151,14 @@
 ##### [스크립팅 샘플](storage-spaces/performance-history-scripting.md)
 #### [볼륨 할당 구분](storage-spaces/delimit-volume-allocation.md)
 #### [Azure Monitor를 사용하여 모니터](storage-spaces/configure-azure-monitor.md)
+
 ### 문제 해결
 #### [문제 해결 시나리오](storage-spaces/troubleshooting-storage-spaces.md)
 #### [성능 상태 및 작동 상태](storage-spaces/storage-spaces-states.md)
 #### [데이터 수집](storage-spaces/data-collection.md)
 #### [질문과 대답](storage-spaces/storage-spaces-direct-faq.md)
+#### [스토리지 클래스 메모리 상태 관리](storage-spaces/Storage-class-memory-health.md)
+
 ## [클라우드 폴더](work-folders/work-folders-overview.md)
 ### [클라우드 폴더 구현 디자인](work-folders/plan-work-folders.md)
 ### [클라우드 폴더 배포](work-folders/deploy-work-folders.md)
@@ -163,6 +169,5 @@
 #### [4단계, WAP 설정](work-folders/deploy-work-folders-adfs-step4.md)
 #### [5단계, 클라이언트 설정](work-folders/deploy-work-folders-adfs-step5.md)
 ## [스토리지 QoS](storage-qos/storage-qos-overview.md)
-## [스토리지 클래스 메모리 상태 관리](storage-spaces/Storage-class-memory-health.md)
 ## [스토리지 항목에 대한 변경 기록](storage-change-history.md)
 

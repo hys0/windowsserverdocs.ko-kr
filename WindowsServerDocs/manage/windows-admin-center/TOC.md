@@ -48,7 +48,7 @@
 ### [지원 정책](support/index.md)
 ### [일반적인 문제 해결 단계](support/troubleshooting.md)
 ### [알려진 문제](support/known-issues.md)
-
+### [Windows Admin Center 사용 조건](../../windows-server-licensing/windows-admin-center-licensing.md)
 
 ## 확장
 ### [확장 개요](extend/extensibility-overview.md)
@@ -74,6 +74,7 @@
 #### [확장 검색 배너 사용](extend/guides/extension-discovery-banner.md)
 ### [확장 게시](extend/publish-extensions.md)
 ### 사례 연구
+#### [BiitOps](extend/case-studies/biitops.md)
 #### [DataON](extend/case-studies/dataon.md)
 #### [Fujitsu](extend/case-studies/fujitsu.md)
 #### [Lenovo](extend/case-studies/lenovo.md)
@@ -81,5 +82,6 @@
 #### [Pure Storage](extend/case-studies/purestorage.md)
 #### [QCT](extend/case-studies/qct.md)
 #### [Squared Up](extend/case-studies/squared-up.md)
+#### [Thomas-Krenn](extend/case-studies/thomas-krenn.md)
 
 

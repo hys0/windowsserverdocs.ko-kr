@@ -13,3 +13,4 @@
 ## [Windows Server 2019부터 제거되었거나 교체 예정인 기능](removed-features-19.md)
 ## [Windows Server 버전 1903부터 제거되었거나 교체 예정인 기능](removed-features-1903.md)
 ## [Windows Server 릴리스 정보](../get-started/windows-server-release-info.md)
+## [Windows Server 사용 조건](../windows-server-licensing/windows-server-licensing.md)
