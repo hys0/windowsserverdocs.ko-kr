@@ -8,12 +8,12 @@ ms.author: jeffrew
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ms.date: 06/07/2019
-ms.openlocfilehash: 8e718eda7859c5e0b6949829c225b28e882525ad
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.openlocfilehash: 4d108161dd4f6b57d4a86cbcaa5852aff53f0ac3
+ms.sourcegitcommit: 63926404009f9e1330a4a0aa8cb9821a2dd7187e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66811711"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469517"
 ---
 # <a name="troubleshooting-windows-admin-center"></a>Windows Admin Center 문제 해결
 
@@ -98,7 +98,6 @@ ms.locfileid: "66811711"
 
 ## <a name="i-get-the-message-cant-connect-securely-to-this-page-this-might-be-because-the-site-uses-outdated-or-unsafe-tls-security-settings"></a>메시지가 표시: "둘이이 페이지에 안전 하 게 연결 합니다. 사이트에 오래 된 레코드나 안전 하지 않은 TLS 보안 설정을 사용 하 여 때문일 수 있습니다.
 
-<!--REF: https://docs.microsoft.com/iis/get-started/whats-new-in-iis-10/http2-on-iis#when-is-http2-not-supported -->
 컴퓨터에 HTTP/2 연결으로 제한 됩니다. Windows Admin Center는 HTTP/2에서 지원 되지 않는 통합된 Windows 인증을 사용 합니다. 아래에 다음 두 레지스트리 값을 추가 합니다 ```HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Http\Parameters``` 키 **브라우저를 실행 하는 컴퓨터** HTTP/2 제한을 제거 하려면:
 
 ```
@@ -198,14 +197,14 @@ netsh http delete urlacl url=https://+:443/
 
 ## <a name="azure-features-dont-work-properly-in-edge"></a>Edge의 azure 기능 제대로 작동 하지 않습니다.
 
-가장자리에 [알려진 문제](https://github.com/AzureAD/azure-activedirectory-library-for-js/wiki/Known-issues-on-Edge) Windows Admin Center Azure 로그인에 영향을 주는 보안 영역에 관련 됩니다. Edge를 사용 하는 경우 Azure 기능을 사용 하는 데 문제가 있는 경우 추가 해 보세요 https://login.microsoftonline.com, https://login.live.com 으로 게이트웨이의 URL을 신뢰할 수 있는 사이트 및 클라이언트 쪽 브라우저에서 팝업 차단 설정을 지에 대 한 허용 된 사이트에 한 합니다. 
+가장자리에 [알려진 문제](https://github.com/AzureAD/azure-activedirectory-library-for-js/wiki/Known-issues-on-Edge) Windows Admin Center Azure 로그인에 영향을 주는 보안 영역에 관련 됩니다. Edge를 사용 하는 경우 Azure 기능을 사용 하는 데 문제가 있는 경우 추가 해 보세요 https://login.microsoftonline.com , https://login.live.com 으로 게이트웨이의 URL을 신뢰할 수 있는 사이트 및 클라이언트 쪽 브라우저에서 팝업 차단 설정을 지에 대 한 허용 된 사이트에 한 합니다. 
 
 가상 하드 디스크 파일에 대한 중요 정보를 제공하려면
 1. 검색할 **인터넷 옵션** 를 Windows 시작 메뉴
 2. 로 이동 합니다 **보안** 탭
-3. 아래는 **신뢰할 수 있는 사이트** 옵션을 클릭 합니다 **사이트** 단추 및 열리는 대화 상자에서 Url을 추가 합니다. 게이트웨이 URL을 추가 해야 뿐만 https://login.microsoftonline.com 고 https://login.live.com입니다.
+3. 아래는 **신뢰할 수 있는 사이트** 옵션을 클릭 합니다 **사이트** 단추 및 열리는 대화 상자에서 Url을 추가 합니다. 게이트웨이 URL을 추가 해야 뿐만 https://login.microsoftonline.com 고 https://login.live.com 입니다.
 4. 로 이동 합니다 **개인 정보 보호** 탭
-5. 아래는 **팝업 차단을** 섹션을 클릭 합니다 **설정** 단추 및 열리는 대화 상자에서 Url을 추가 합니다. 게이트웨이 URL을 추가 해야 뿐만 https://login.microsoftonline.com 고 https://login.live.com입니다.
+5. 아래는 **팝업 차단을** 섹션을 클릭 합니다 **설정** 단추 및 열리는 대화 상자에서 Url을 추가 합니다. 게이트웨이 URL을 추가 해야 뿐만 https://login.microsoftonline.com 고 https://login.live.com 입니다.
 
 ## <a name="having-an-issue-with-an-azure-related-feature"></a>Azure 관련 기능을 사용 하 여 문제가 발생 하나요?
 

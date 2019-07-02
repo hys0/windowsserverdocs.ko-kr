@@ -421,6 +421,7 @@
 #### [온-프레미스 디바이스 기반 조건부 액세스 계획](ad-fs/deployment/Plan-Device-based-Conditional-Access-on-Premises.md)
 
 #### [AD FS 실습 환경 설정](ad-fs/operations/Set-up-an-AD-FS-lab-environment.md)
+#### [SQL 미세 조정 및 대기 시간 해결](ad-fs/operations/adfs-sql-latency.md)
 #### [연습 가이드: 추가 Multi-Factor Authentication을 사용하여 중요한 애플리케이션에 대한 위험 관리](ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 #### [연습 가이드: 조건부 액세스 제어를 사용하여 위험 관리](ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
 #### [연습: Windows 디바이스를 사용하여 작업 공간 연결](ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
