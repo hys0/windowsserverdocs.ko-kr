@@ -5,16 +5,16 @@ description: ''
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 04/01/2019
+ms.date: 07/02/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: a831154a8b1e84f5ed879375980882e208c33d73
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 525ba403473a9de522d9ab30662adc868b17b88d
+ms.sourcegitcommit: c02756b7f5c92bf5018e17192f6fffb4754b0f06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66190354"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67533503"
 ---
 # <a name="ad-fs-rapid-restore-tool"></a>AD FS 신속 복원 도구
 
@@ -213,6 +213,13 @@ RngCryptoServiceProvider는 AES 및 Rfc2898DeriveBytes 클래스에서 사용 �
 > 특성 저장소 추가 인증 공급자의 개요를 포함 하는 PostRestore_Instructions 파일을 만들 수 있습니다 복원을 수행할 시간과 로컬 클레임 공급자 트러스트를 AD FS 서비스를 시작 하기 전에 수동으로 설치 해야 합니다.
 
 ## <a name="version-release-history"></a>버전 릴리스 기록
+
+### <a name="version-10820"></a>1\.0.82.0 버전
+릴리스: 2019 년 7 월
+
+**수정 된 문제:**
+- AD FS에 대 한 버그 수정 서비스 LDAP 이스케이프 문자를 포함 하는 계정 이름
+
 
 ### <a name="version-10810"></a>버전: 1.0.81.0
 릴리스: 2019년 4월
