@@ -12,12 +12,12 @@ ms.assetid: 599d6438-a506-4d57-a0ea-1eb7ec19f46e
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: cc535934705878c7f2b7fdc4e655ab5c853e4f96
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
-ms.translationtype: MT
+ms.openlocfilehash: 165b7e7aea7a7d0bb56d21f350f6ee646d5fa973
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66443535"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280405"
 ---
 # <a name="manage-nano-server"></a>Nano 서버 관리
 
@@ -34,13 +34,13 @@ Nano 서버는 원격으로 관리됩니다. 로컬 로그온 기능이 전혀 �
   
 -   컴퓨터에 직렬 케이블을 연결하고 EMS를 사용합니다.  
   
--   Nano 서버를 구성할 때 할당한 컴퓨터 이름을 사용하면 ping으로 IP 주소를 가져올 수 있습니다. `ping NanoServer-PC /4`) 을 입력합니다.  
+-   Nano 서버를 구성할 때 할당한 컴퓨터 이름을 사용하면 ping으로 IP 주소를 가져올 수 있습니다. 정의합니다(예: `ping NanoServer-PC /4`).  
   
 ## <a name="using-windows-powershell-remoting"></a>Windows PowerShell 원격 기능 사용  
 Windows PowerShell 원격 기능으로 Nano 서버를 관리하려면 관리 컴퓨터의 신뢰할 수 있는 호스트 목록에 Nano 서버의 IP 주소를 추가하고, 사용하는 계정을 Nano 서버의 관리자에 추가하고, 해당 기능을 사용할 생각이라면 CredSSP를 사용하도록 설정해야 합니다.  
 
 > [!NOTE]
-> Nano Server를 추가 해서는 안 경우 대상 Nano 서버와 관리 컴퓨터가 동일한 AD DS 포리스트 (또는 트러스트 관계가 있는 포리스트)-신뢰할 수 있는 호스트 목록에 수 연결한 Nano 서버에 정규화 된 도메인 이름을 사용 하 여 예를 들어: PS C:\> Enter-pssession-ComputerName nanoserver.contoso.com-Credential (Get-credential)
+> 대상 Nano 서버와 관리 컴퓨터가 동일한 AD DS 포리스트(또는 트러스트 관계의 포리스트)에 있는 경우 Nano 서버를 신뢰할 수 있는 호스트 목록에 추가하면 안 됩니다. 그 대신 정규화된 도메인 이름을 사용하여 Nano 서버에 연결할 수 있습니다. 예: PS C:\> Enter-PSSession -ComputerName nanoserver.contoso.com -Credential (Get-Credential)
   
   
 신뢰할 수 있는 호스트 목록에 Nano 서버를 추가하려면 관리자 권한 Windows PowerShell 명령 프롬프트에서 이 명령을 실행 합니다.  
@@ -60,9 +60,9 @@ Enter-PSSession -ComputerName $ip -Credential $user
 이제 정상적으로 Nano 서버에서 Windows PowerShell 명령을 실행할 수 있습니다.  
   
 > [!NOTE]  
-> 이 Nano 서버 릴리스에서 사용할 수 없는 Windows PowerShell 명령도 있습니다. 사용할 수 있는 확인 하려면 실행 `Get-Command -CommandType Cmdlet`  
+> 이 Nano 서버 릴리스에서 사용할 수 없는 Windows PowerShell 명령도 있습니다. 사용할 수 있는 명령을 보려면 `Get-Command -CommandType Cmdlet` 실행  
   
-명령 사용 하 여 원격 세션 중지 `Exit-PSSession`  
+`Exit-PSSession` 명령으로 원격 세션 중지  
   
 ## <a name="using-windows-powershell-cim-sessions-over-winrm"></a>WinRM을 통해 Windows PowerShell CIM 세션 사용  
 WinRM(Windows Remote Management)을 통해 Windows PowerShell에서 CIM 세션 및 인스턴스를 사용하여 WMI 명령을 실행할 수 있습니다.  
@@ -124,9 +124,9 @@ Stop-NetEventSession [-Name]
   
 서비스 패키지 또는 핫픽스는 종종 .cab 파일이 포함된 KB 항목으로 다운로드됩니다. 다음 단계에 따라 .cab file 파일을 추출합니다. 그런 다음 -ServicingPackagePath 매개 변수를 사용하여 이 파일을 설치할 수 있습니다.  
   
-1.  서비스 패키지를 다운로드합니다(관련 기술 자료 문서에서 또는 [Microsoft 업데이트 카탈로그](https://catalog.update.microsoft.com/v7/site/home.aspx)에서). 예를 들어 로컬 디렉터리 또는 네트워크 공유에 저장 합니다. C:\ServicingPackages  
+1.  서비스 패키지를 다운로드합니다(관련 기술 자료 문서에서 또는 [Microsoft 업데이트 카탈로그](https://catalog.update.microsoft.com/v7/site/home.aspx)에서). 로컬 디렉터리 또는 네트워크 공유에 저장합니다(예: C:\ServicingPackages).  
 2.  추출된 서비스 패키지를 저장할 폴더를 만듭니다.  예: c:\KB3157663_expanded  
-3.  Windows PowerShell 콘솔을 열고 `Expand` 명령을 사용하여 `-f:*` 매개 변수 및 서비스 패키지를 추출할 경로가 포함된 서비스 패키지의 .msu 파일 경로를 지정합니다.  예를 들어  `Expand "C:\ServicingPackages\Windows10.0-KB3157663-x64.msu" -f:* "C:\KB3157663_expanded"`  
+3.  Windows PowerShell 콘솔을 열고 `Expand` 명령을 사용하여 `-f:*` 매개 변수 및 서비스 패키지를 추출할 경로가 포함된 서비스 패키지의 .msu 파일 경로를 지정합니다.  예: `Expand "C:\ServicingPackages\Windows10.0-KB3157663-x64.msu" -f:* "C:\KB3157663_expanded"`  
   
     확장된 파일은 다음과 비슷하게 표시됩니다.  
 C:>dir C:\KB3157663_expanded   
@@ -143,7 +143,7 @@ C 드라이브의 볼륨은 OS
 2016/04/17  오전 12:36           185,818 WSUSSCAN.cab  
                4개 파일     94,073,136바이트  
                2개 디렉터리  328,559,427,584바이트 여유 공간  
-4.  실행 `New-NanoServerImage` 예를 들어이 디렉터리의.cab 파일을 가리키는-ServicingPackagePath 매개 변수를 사용 하 여: `New-NanoServerImage -DeploymentType Guest -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -ServicingPackagePath C:\KB3157663_expanded\Windows10.0-KB3157663-x64.cab`  
+4.  -ServicingPackagePath 매개 변수를 사용하여 `New-NanoServerImage` 명령을 실행하고 이 디렉터리의 .cab 파일을 지정합니다(예: `New-NanoServerImage -DeploymentType Guest -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -ServicingPackagePath C:\KB3157663_expanded\Windows10.0-KB3157663-x64.cab`).  
 
 ## <a name="managing-updates-in-nano-server"></a>Nano Server에서 업데이트 관리
 
@@ -180,7 +180,7 @@ At line:1 char:16
    CimCmdlets.InvokeCimMethodCommand  
 ```  
 
-### <a name="install-all-available-updates"></a>사용 가능한 모든 업데이트 설치  
+### <a name="install-all-available-updates"></a>사용 가능한 업데이트 모두 설치  
 ---  
 다음 명령을 사용하여 사용 가능한 **모든** 업데이트를 한 번에 검색하여 다운로드 및 설치할 수 있습니다.  
 
@@ -237,7 +237,7 @@ Nano 서버는 [ETW(Windows 용 이벤트 추적)](https://aka.ms/u2pa0i) 프레
 다음 섹션에는 가장 일반적인 성능 데이터 수집 활동과 함께 Nano 서버에서 이러한 활동 수행을 위해 지원하는 방법이 나열되어 있습니다.
 
 ### <a name="query-available-event-providers"></a>사용 가능한 이벤트 공급자 쿼리
-[Windows Performance Recorder](https://msdn.microsoft.com/en-us/library/hh448229.aspx)는 다음과 같이 사용 가능한 이벤트 공급자를 쿼리하는 도구입니다.
+[Windows Performance Recorder](https://msdn.microsoft.com/library/hh448229.aspx)는 다음과 같이 사용 가능한 이벤트 공급자를 쿼리하는 도구입니다.
 ```
 wpr.exe -providers
 ```

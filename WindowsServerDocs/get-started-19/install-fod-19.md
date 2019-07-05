@@ -1,6 +1,6 @@
 ---
 title: Server Core 앱 호환성 FOD(Feature on Demand)
-description: 필요에 따라 Windows Server 기능을 설치 하는 방법
+description: Windows Server 주문형 기능을 설치하는 방법
 ms.prod: windows-server-threshold
 ms.technology: server-general
 ms.topic: article
@@ -10,87 +10,87 @@ ms.author: jgerend
 manager: jasgroce
 ms.localizationpriority: medium
 ms.date: 06/07/2019
-ms.openlocfilehash: 747258601aa05885d209aacde6947eb7b05e8121
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
-ms.translationtype: MT
+ms.openlocfilehash: 441cd9593371cb7e5018a61c3d7a6af991ce8fed
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66810797"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280165"
 ---
 # <a name="server-core-app-compatibility-feature-on-demand-fod"></a>Server Core 앱 호환성 FOD(Feature on Demand)
 
-> 적용 대상: Windows Server 2019, Windows Server Semi-Annual Channel
+> 적용 대상: Windows Server 2019, Windows Server 반기 채널
 
-**필요에 따라 Server Core 앱 호환성 기능** 은 언제 든 지 Windows Server 2019 Server Core 설치 또는 Windows Server 반기 채널에 추가할 수 있는 선택적 기능 패키지입니다.
+**Server Core 앱 호환성 FOD(Feature on Demand)** 는 Windows Server 2019 Server Core 설치 또는 Windows Server 반기 채널에 언제든지 추가할 수 있는 선택적 기능 패키지입니다.
 
-기능에서 FOD (주문형)에 대 한 자세한 내용은 참조 하세요. [주문형 기능](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities)합니다.
+FOD(Feature on Demand)에 대한 자세한 내용은 [주문형 기능](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities)을 참조하세요.
 
-## <a name="why-install-the-app-compatibility-fod"></a>앱 호환성 FOD 설치 하는 이유?
+## <a name="why-install-the-app-compatibility-fod"></a>앱 호환성 FOD를 설치하는 이유
 
-응용 프로그램 호환성, Server Core에 대 한 주문형 기능을 추가 하지 않고 이진 파일 및 데스크톱 환경 포함 Windows Server에서 패키지의 하위 집합을 포함 하 여 Windows Server Core 설치 옵션의 응용 프로그램 호환성을 크게 개선 합니다 Windows Server Desktop Experience 그래픽 환경입니다. 이 선택적 패키지를 별도 ISO 또는 Windows Update에서 사용할 수 있지만 Windows Server Core 설치와 이미지에만 추가할 수 있습니다.
+Server Core의 주문형 기능인 앱 호환성은 Windows Server Desktop Experience 그래픽 환경을 추가하지 않고 Windows Server의 바이너리 및 패키지 하위 세트를 데스크톱 환경에 포함하여 Windows Server Core 설치 옵션의 앱 호환성을 크게 향상시킵니다. 이 선택적 패키지는 별도의 ISO 또는 Windows 업데이트에서 사용할 수 있지만 Windows Server Core 설치 및 이미지에만 추가할 수 있습니다.
 
-앱 호환성 FOD 제공 두 기본 값은:
+앱 호환성 FOD가 제공하는 두 가지 주요 가치는 다음과 같습니다.
 
-- 이미 시장에 또는 이미 조직에서 개발 되어 배포는 서버 응용 프로그램에 대 한 Server Core의 호환성을 증가 합니다.
-- OS 구성 요소 및 향상 된 응용 프로그램 호환성 문제 해결 및 디버깅 시나리오 예에 사용 되는 소프트웨어 도구를 제공 하는 데 유용 합니다.
+- 이미 시장에 있거나 조직에서 이미 개발하여 배포한 서버 애플리케이션에 대한 Server Core 호환성을 향상시킵니다.
+- 심각한 문제 해결 및 디버깅 시나리오에 사용되는 소프트웨어 도구의 앱 호환성을 향상시키고 OS 구성 요소를 제공하는 데 도움을 줍니다.
 
-Server Core 앱 호환성 FOD 부분을 포함 하는 대로 사용할 수 있는 운영 체제 구성 요소:
+Server Core 앱 호환성 FOD의 일부로 제공되는 운영 체제 구성 요소는 다음과 같습니다.
 
--   Microsoft Management Console (mmc.exe)
+-   Microsoft Management Console(mmc.exe)
 
--   이벤트 뷰어 (Eventvwr.msc)
+-   이벤트 뷰어(Eventvwr.msc)
 
--   성능 모니터 (PerfMon.exe)
+-   성능 모니터(PerfMon.exe)
 
--   리소스 모니터 (Resmon.exe)
+-   리소스 모니터(Resmon.exe)
 
--   장치 관리자 (Devmgmt.msc)
+-   디바이스 관리자(Devmgmt.msc)
 
--   파일 탐색기 (Explorer.exe)
+-   파일 탐색기(Explorer.exe)
 
--   Windows PowerShell (Powershell_ISE.exe)
+-   Windows PowerShell(Powershell_ISE.exe)
 
--   디스크 관리 (Diskmgmt.msc)
+-   디스크 관리(Diskmgmt.msc)
 
--   장애 조치 클러스터 관리자 (CluAdmin.msc)
+-   장애 조치(failover) 클러스터 관리자(CluAdmin.msc)
 
-    -   먼저 Windows Server를 클러스터링 하는 장애 조치 기능이 필요합니다.
+    -   장애 조치(failover) 클러스터링 Windows Server 기능을 먼저 추가해야 합니다.
 
-        -   관리자 권한 PowerShell 세션의 경우: 
+        -   관리자 권한으로 PowerShell 세션에서 다음을 수행합니다. 
 
             ```PowerShell
             Install-WindowsFeature -NameFailover-Clustering -IncludeManagementTools
             ```
 
-        -   장애 조치 클러스터 관리자를 실행 하려면 입력 **cluadmin** 명령 프롬프트에서.
+        -   장애 조치(failover) 클러스터 관리자를 실행하려면 명령 프롬프트에 **cluadmin**을 입력합니다.
 
-Windows Server를 실행 하는 서버 버전이 1903 이상 기능도 다음 구성 요소 (앱 호환성 FOD의 동일한 버전 사용) 하는 경우:
+Windows Server, 버전 1903 이상을 실행하는 서버는 다음 구성 요소도 지원합니다(동일한 버전의 앱 호환성 FOD를 사용하는 경우).
 
-- Hyper-V Manager (virtmgmt.msc)
-- 작업 스케줄러 (taskschd.msc)
+- Hyper-V 관리자(virtmgmt.msc)
+- 작업 스케줄러(taskschd.msc)
 
-## <a name="installing-the-app-compatibility-fod"></a>응용 프로그램 호환성 FOD 설치
+## <a name="installing-the-app-compatibility-fod"></a>앱 호환성 FOD 설치
 
-앱 호환성 FOD Server Core에만 설치할 수 있습니다. Server Core 앱 호환성 FOD 데스크톱 환경 포함 Windows Server의 Windows Server 설치에 추가 하려고 하지 마세요. Windows Server 2019 Server Core 설치 또는 Windows Server 반기 채널 설치에 대 한 동일한 FOD 선택적 패키지 ISO를 사용할 수 있습니다.
+앱 호환성 FOD는 Server Core에만 설치할 수 있습니다. 데스크톱 환경 포함 Windows Server의 Windows Server 설치에 Server Core 앱 호환성 FOD를 추가하려고 하지 마십시오. Windows Server 2019 Server Core 설치 또는 Windows Server 반기 채널 설치에 동일한 FOD 옵션 패키지 ISO를 사용할 수 있습니다.
 
-1. 서버를 Windows 업데이트에 연결할 수 하면 모든 관리자 권한 PowerShell 세션에서 다음 명령을 실행 하 고 명령이 완료 된 후 실행 중인 Windows Server를 다시는:
+1. 서버가 Windows 업데이트에 연결할 수 있으면, 관리자 권한으로 PowerShell 세션에서 다음 명령을 실행한 다음, 명령 실행이 완료되면 Windows Server를 다시 시작하기만 하면 됩니다.
 
     ```PowerShell
     Add-WindowsCapability -Online -Name ServerCore.AppCompatibility~~~~0.0.1.0
     ```
 
-2. 서버를 Windows 업데이트에 연결할 수 없는 경우 대신 서버 FOD 선택적 패키지 ISO를 다운로드 하 고 ISO 로컬 네트워크의 공유 폴더에 복사:
+2. 서버가 Windows 업데이트에 연결할 수 없으면, Server FOD 선택적 패키지인 ISO를 다운로드하고 ISO를 로컬 네트워크의 공유 폴더에 복사합니다.
 
-   - 볼륨 라이선스가 있는 경우에 OS ISO 이미지 파일을 가져온 위치 하 고 같은 포털에서 서버 FOD ISO 이미지 파일을 다운로드할 수 있습니다. [볼륨 라이선스 서비스 센터](https://www.microsoft.com/Licensing/servicecenter/default.aspx)합니다.
-   - Server FOD ISO 이미지 파일에서 제공 됩니다. 합니다 [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server) 또는 합니다 [Visual Studio 포털](https://visualstudio.microsoft.com) 구독자에 대 한 합니다.
+   - 볼륨 라이선스가 있는 경우 OS ISO 이미지 파일을 가져온 포털에서 Server FOD ISO 이미지 파일을 다운로드할 수 있습니다. [볼륨 라이선스 서비스 센터](https://www.microsoft.com/Licensing/servicecenter/default.aspx).
+   - Server FOD ISO 이미지 파일은 구독자를 위한 [Visual Studio 포털](https://visualstudio.microsoft.com) 또는 [Microsoft 평가 센터](https://www.microsoft.com/evalcenter/evaluate-windows-server)에서도 사용할 수 있습니다.
 
-3. 및에 해당 FOD 추가 하려는 로컬 네트워크에 연결 된 Server Core 컴퓨터에서 관리자 계정으로 로그인 합니다.
+3. 로컬 네트워크에 연결되어 있고 FOD를 추가하려는 Server Core 컴퓨터의 관리자 계정으로 로그인합니다.
 
-4. 사용 하 여 **사용 하 여 net**, 또는 해당 FOD ISO의 위치에 연결할 다른 방법입니다.
+4. **net use** 또는 다른 메서드를 사용하여 FOD ISO의 위치에 연결합니다.
 
-5. 선택한 로컬 폴더에는 해당 FOD ISO를 복사 합니다.
+5. FOD ISO를 원하는 로컬 폴더에 복사합니다.
 
-6. 관리자 권한 PowerShell 세션에서 다음 명령을 사용 하 여 해당 FOD ISO를 탑재 합니다.
+6. 관리자 권한으로 PowerShell 세션에서 다음 명령을 사용하여 FOD ISO를 탑재합니다.
 
     ```PowerShell
     Mount-DiskImage -ImagePath drive_letter:\folder_where_ISO_is_saved\ISO_filename.iso
@@ -102,26 +102,26 @@ Windows Server를 실행 하는 서버 버전이 1903 이상 기능도 다음 �
     Add-WindowsCapability -Online -Name ServerCore.AppCompatibility~~~~0.0.1.0 -Source <Mounted_Server_FOD_Drive> -LimitAccess
      ```
 
-8. 진행률 표시줄이 완료 되 면 운영 체제를 다시 시작 합니다.
+8. 진행률 표시줄이 완료되 면 운영 체제를 다시 시작합니다.
 
-   DISM 명령에 대 한 자세한 내용은 참조 하세요. [Windows PowerShell에서 DISM 사용](https://docs.microsoft.com/windows-hardware/manufacture/desktop/use-dism-in-windows-powershell-s14)
+   DISM 명령에 대한 자세한 내용은 [Windows PowerShell에서 DISM 사용](https://docs.microsoft.com/windows-hardware/manufacture/desktop/use-dism-in-windows-powershell-s14)을 참조하세요.
 
-## <a name="to-optionally-add-internet-explorer-11-to-server-core-after-adding-the-server-core-app-compatibility-fod"></a>필요에 따라 (Server Core 앱 호환성 FOD 추가) 후 Server Core에 Internet Explorer 11을 추가 하려면
+## <a name="to-optionally-add-internet-explorer-11-to-server-core-after-adding-the-server-core-app-compatibility-fod"></a>Server Core에 Internet Explorer 11을 선택적으로 추가하려면(Server Core 앱 호환성 FOD를 추가한 후)
 
  >[!NOTE]  
-   > Server Core 앱 호환성 FOD Internet Explorer 11을 추가 하기 위해 필요 하지만 Internet Explorer 11 Server Core 앱 호환성 FOD 추가 하지 않아도 됩니다.
+   > Server Core 앱 호환성 FOD는 Internet Explorer 11을 추가하는 데 필요하지만 Internet Explorer 11에는 Server Core 앱 호환성 FOD를 추가할 필요가 없습니다.
 
-1. 이미 추가 앱 호환성 FOD 있는 Server Core 컴퓨터에 ISO 로컬로 복사 Server FOD 선택적 패키지 관리자 권한으로 로그인 합니다.
+1. 앱 호환성 FOD가 이미 추가되고 서버 FOD 선택적 패키지 ISO가 로컬로 복사된 Server Core 컴퓨터에 관리자로 로그인합니다.
 
-2. 입력 하 여 PowerShell 시작 **powershell.exe** 명령 프롬프트에서.
+2. 명령 프롬프트에 **powershell.exe**를 입력하여 PowerShell을 시작합니다.
 
-3. 다음 명령을 사용 하 여 해당 FOD ISO를 탑재 합니다.
+3. 다음 명령을 사용하여 FOD ISO를 탑재합니다.
 
     ```PowerShell
     Mount-DiskImage -ImagePath drive_letter:\folder_where_ISO_is_saved\ISO_filename.iso
     ```
 
-4. 다음 실행 명령을 사용 하는 `$package_path` Internet Explorer cab 파일의 경로 입력 하는 변수:
+4. `$package_path` 변수를 사용하여 Internet Explorer cab 파일의 경로를 입력하여 다음 명령을 실행합니다.
 
     ```PowerShell
     $package_path = "D:\Microsoft-Windows-InternetExplorer-Optional-Package~31bf3856ad364e35~amd64~~.cab"
@@ -129,46 +129,46 @@ Windows Server를 실행 하는 서버 버전이 1903 이상 기능도 다음 �
     Add-WindowsPackage -Online -PackagePath $package_path
     ```
 
-5. 진행률 표시줄이 완료 되 면 운영 체제를 다시 시작 합니다.
+5. 진행률 표시줄이 완료되 면 운영 체제를 다시 시작합니다.
 
-## <a name="release-notes-and-suggestions-for-the-server-core-app-compatibility-fod-and-internet-explorer-11-optional-package"></a>릴리스 정보 및 Server Core 앱 호환성 FOD 및 Internet Explorer 11 선택적 패키지에 대 한 제안
+## <a name="release-notes-and-suggestions-for-the-server-core-app-compatibility-fod-and-internet-explorer-11-optional-package"></a>Server Core 앱 호환성 FOD 및 Internet Explorer 11 선택적 패키지에 대한 제안 및 릴리스 정보
 
 > [!IMPORTANT]
-> FODs Windows 서버에 설치, 버전 1809 없습니다 상태로 유지 버전이 1903, Windows Server로 현재 위치 업그레이드 후에 업그레이드 후에 다시 설치 해야 합니다. 또는 업그레이드 하기 전에 새 Windows Server 설치 원본 FODs를 추가할 수 있습니다. 이렇게 하면 새 버전의 모든 FODs 있는지 업그레이드 완료 후 합니다. 자세한 내용은 참조는 [오프 라인 WIM Server Core 이미지에 기능 및 선택적 패키지를 추가](install-fod-19.md#add-capabilities)합니다.
+> Windows Server, 버전 1809에 설치된 FOD는 Windows Server, 버전 1903으로 전체 업그레이드된 후에 그대로 유지되지 않기 때문에, 업그레이드 후에 다시 설치해야 합니다. 또는 업그레이드 전에 FOD를 새 Windows Server 설치 원본에 추가할 수 있습니다. 이렇게 하면 업그레이드가 완료된 후 FOD의 새 버전이 존재합니다. 자세한 내용은 [오프라인 WIM Server Core 이미지에 기능 및 선택적 패키지 추가](install-fod-19.md#add-capabilities)를 참조하세요.
 
-- **중요:** 모든 문제, 고려 사항 또는 Server Core 앱 호환성 FOD 및 Internet Explorer 11 선택적 패키지의 설치 및 사용을 진행 하기 전에 지침에 대 한 Windows Server 2019 릴리스 정보를 읽습니다.
+- **중요:** Server Core 앱 호환성 FOD 및 Internet Explorer 11 선택적 패키지의 설치를 진행하고 사용하기 전에 Windows Server 2019 릴리스 정보에서 문제점, 고려 사항 또는 지침을 읽어보세요.
 
-- 누적 업데이트를 설치 하려면 Windows Update를 사용 하 여 앱 호환성 FOD를 추가할 때 Server Core의 콘솔 환경을 사용 하 여 깜박임 발생 하는 것이 가능 합니다.  2018 년 12 월을 사용 하 여이 문제를 해결 하는 업데이트 합니다.  자세한 정보 및 해결 단계를 참조 하세요. [4481610 기술 자료 문서: Windows Server 2019 Server Core에서 Server Core 앱 호환성 FOD를 설치한 후 화면이 깜박인다](https://support.microsoft.com/help/4481610/screen-flickers-after-fod-installation-windows2019-server-core)합니다.
+- Windows 업데이트를 사용하여 누적 업데이트를 설치한 후, 앱 호환성 FOD를 추가할 때 Server Core 콘솔 환경이 깜박일 수 있습니다.  이 문제는 2018년 12월 업데이트로 해결됩니다.  자세한 정보 및 해결 단계는 [기술 자료 문서 4481610: Windows Server 2019 Server Core에 Server Core 앱 호환성 FOD를 설치한 후 화면 깜박임](https://support.microsoft.com/help/4481610/screen-flickers-after-fod-installation-windows2019-server-core)을 참조하세요.
 
-- 앱 호환성 FOD 및 서버를 재부팅을 설치한 후 콘솔 창 프레임 색상 명령을 다른 파란색 음영으로 변경 됩니다.
+- 앱 호환성 FOD를 설치하고 서버를 재부팅하면 명령 콘솔 창 프레임 색상이 다른 파란색 음영으로 변경됩니다.
 
-- 또한 Internet Explorer 11 선택적 패키지를 설치, 두 번 클릭 하 여 로컬로.htm 파일을 저장 하려는 경우 지원 되지 않습니다. 그러나 수 있습니다 **마우스 오른쪽 단추로 클릭** 선택한 **IE를 사용 하 여 엽니다**, 또는 Internet Explorer에서 직접 열 수 있습니다 **파일** -> **열기**.
+- Internet Explorer 11 선택적 패키지도 설치하는 경우, 로컬에 저장된 .htm 파일을 두 번 클릭하여 여는 것이 지원되지 않습니다. 하지만 **마우스 오른쪽 단추를 클릭**하고 **Internet Explorer에서 열기**를 선택하거나 Internet Explorer **파일** -> **열기**에서 직접 열 수 있습니다.
 
-- 향상을 위해 앱 호환성 FOD를 사용 하 여 Server Core의 응용 프로그램 호환성, IIS 관리 콘솔에 Server Core에 선택적 구성 요소로 추가 되었습니다.  그러나 먼저 IIS 관리 콘솔을 사용 하는 앱 호환성 FOD를 추가 하는 데 반드시 필요한 것입니다. IIS 관리 콘솔 앱 호환성 FOD 추가 하 여 Server Core에 사용할 수만 있는 Microsoft Management Console (mmc.exe)에 의존 합니다.  Powershell을 사용 하 여 [ **Install-windowsfeature** ](https://docs.microsoft.com/powershell/module/microsoft.windows.servermanager.migration/install-windowsfeature?view=win10-ps) IIS 관리 콘솔을 추가 합니다.
+- 앱 호환성 FOD와 Server Core의 앱 호환성을 향상시키기 위해, IIS 관리 콘솔이 Server Core에 선택적 구성 요소로 추가되었습니다.  단, IIS 관리 콘솔을 사용하려면 먼저 앱 호환성 FOD를 추가해야 합니다. IIS 관리 콘솔은 Microsoft Management Console(mmc.exe)을 사용하며, 이것은 앱 호환성 FOD가 추가된 Server Core에서만 사용할 수 있습니다.  Powershell [**Install-WindowsFeature**](https://docs.microsoft.com/powershell/module/microsoft.windows.servermanager.migration/install-windowsfeature?view=win10-ps)를 사용하면 IIS 관리 콘솔을 추가할 수 있습니다.
 
-- 으로 일반 지침을 서버에 앱 설치 핵심 (유무와 관계 없이 이러한 선택적 패키지) 해당 하는 경우 지점 자동 설치 옵션 및 지침을 사용 하는 데 필요한 경우가 있습니다. 
+- 일반적인 지침의 일환으로, Server Core에 앱을 설치할 때(이 선택적 패키지의 유무에 관계 없이) 자동 설치 옵션과 지침을 사용해야 하는 경우가 있습니다. 
     
-  - 예를 들어 SQL Server 2016 및 SQL Server 2017에 대 한 SQL Server Management Studio Server Core에 설치할 수 있습니다 및 앱 호환성 FOD 존재 하는 경우에 완벽 하 게 작동 합니다.  하세요 [명령 프롬프트에서 SQL Server 설치](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-from-the-command-prompt?view=sql-server-2017)합니다.
-  - SQL Server Management Studio 원하지 않는 경우 다음이 아닌 경우 Server Core 앱 호환성 FOD를 설치 하는 데 필요한  하세요 [Server Core에 SQL Server 설치](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-on-server-core?view=sql-server-2017)합니다.
+  - 예를 들어 SQL Server 2016 및 SQL Server 2017용 SQL Server Management Studio는 Server Core에 설치될 수 있으며 앱 호환성 FOD가 있을 때 완전하게 작동합니다.  [명령 프롬프트에서 SQL Server 설치](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-from-the-command-prompt?view=sql-server-2017)를 참조하세요.
+  - SQL Server Management Studio를 사용하지 않으려면 Server Core 앱 호환성 FOD를 설치할 필요가 없습니다.  [Server Core에 SQL Server 설치](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-on-server-core?view=sql-server-2017)를 참조하세요.
 
-## <a name="a-idadd-capabilities-adding-capabilities-and-optional-packages-to-an-offline-wim-server-core-image"></a><a id="add-capabilities"> 추가 기능 및 선택적 패키지를 오프 라인 WIM Server Core 이미지
+## <a name="a-idadd-capabilities-adding-capabilities-and-optional-packages-to-an-offline-wim-server-core-image"></a><a id="add-capabilities"> 오프라인 WIM Server Core 이미지에 기능 및 선택적 패키지 추가
 
-1. Windows Server 및 Server FOD ISO 이미지 파일을 Windows 컴퓨터에서 로컬 폴더로 다운로드 합니다.
+1. Windows Server 및 Server FOD ISO 이미지 파일을 Windows 컴퓨터의 로컬 폴더로 다운로드합니다.
 
-   - 볼륨 라이선스가 있는 경우에서 Windows Server 및 Server FOD ISO 이미지 파일을 다운로드할 수 있습니다 합니다 [볼륨 라이선스 서비스 센터](https://www.microsoft.com/Licensing/servicecenter/default.aspx)합니다.
-   - 장기 서비스 채널에서 릴리스를 서버 FOD ISO 이미지 파일을 사용할 수 있는 이기도 합니다 [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server) 또는 [Visual Studio 포털](https://visualstudio.microsoft.com) 구독자에 대 한 합니다.
+   - 볼륨 라이선스가 있으면 [볼륨 라이선스 서비스 센터](https://www.microsoft.com/Licensing/servicecenter/default.aspx)에서 Windows Server와 Server FOD ISO 이미지 파일을 다운로드할 수 있습니다.
+   - Server FOD ISO 이미지 파일은 구독자를 위한 [Visual Studio 포털](https://visualstudio.microsoft.com) 또는 [Microsoft 평가 센터](https://www.microsoft.com/evalcenter/evaluate-windows-server)의 장기 서비스 채널 릴리스에서도 사용할 수 있습니다.
 
-2. 관리자 권한으로 PowerShell 세션을 열고 드라이브로 이미지 파일을 탑재 하려면 다음 명령을 사용 합니다.
+2. PowerShell 세션을 관리자로 연 다음, 다음 명령을 사용하여 이미지 파일을 드라이브로 탑재합니다.
 
    ```PowerShell
    Mount-DiskImage -ImagePath Path_To_ServerFOD_ISO
    Mount-DiskImage -ImagePath Path_To_Windows_Server_ISO
    ```
 
-3. 복사는 Windows Server ISO 파일을 로컬 폴더의 콘텐츠 (예를 들어 *C:\SetupFiles\WindowsServer*).
+3. Windows Server ISO 파일의 내용을 로컬 폴더(예: *C:\SetupFiles\WindowsServer*)에 복사합니다.
 
-4. 다음 명령을 사용 하 여 Install.wim 파일 내에서 수정 하려는 이미지 이름을 가져옵니다.<br>
-사용 된 `$install_wim_path` ISO 파일의 \Sources 폴더 내에 있는 Install.wim 파일에 경로 입력 하는 변수입니다.
+4. 다음 명령을 사용하여 Install.wim 파일에서 수정할 이미지 이름을 가져옵니다.<br>
+`$install_wim_path` 변수를 사용하여 ISO 파일의 \Sources 폴더에 있는 Install.wim 파일의 경로를 입력합니다.
 
    ```PowerShell
    $install_wim_path = "C:\SetupFiles\WindowsServer\sources\install.wim"
@@ -176,10 +176,10 @@ Windows Server를 실행 하는 서버 버전이 1903 이상 기능도 다음 �
    Get-WindowsImage -ImagePath $install_wim_path
    ```
 
-5. 다음을 사용 하 여 새 폴더에 있는 Install.wim 파일을 탑재 명령을 사용 하 여 직접 샘플 변수 값을 대체 하 고 다시 사용 된 `$install_wim_path` 이전 명령에서 변수입니다.<br>
+5. 다음 명령을 사용하여 샘플 변수 값을 실제 값으로 바꾸고 이전 명령의 `$install_wim_path` 변수를 다시 사용하여 Install.wim 파일을 새 폴더에 탑재합니다.<br>
 
-   - `$image_name` -탑재 하려는 이미지의 이름을 입력 합니다.
-   - `$mount_folder variable` -Install.wim 파일의 내용에 액세스 하는 경우 사용할 폴더를 지정 합니다.
+   - `$image_name` - 탑재할 이미지의 이름을 입력합니다.
+   - `$mount_folder variable` - Install.wim 파일의 내용에 액세스할 때 사용할 폴더를 지정합니다.
 
    ```PowerShell
    $image_name = "Windows Server Datacenter"
@@ -188,11 +188,11 @@ Windows Server를 실행 하는 서버 버전이 1903 이상 기능도 다음 �
    Mount-WindowsImage -ImagePath $install_wim_path -Name $image_name -path $mount_folder
    ```
 
-6. 다음 명령을 사용 하 여 사용자 고유의 샘플 변수 값 대체를 사용 하 여 탑재 된 Install.wim 이미지에 기능 및 패키지를 추가 합니다.<br>
+6. 다음 명령을 사용하고 샘플 변수 값을 실제 값으로 바꿔서 탑재된 Install.wim 이미지에 원하는 기능과 패키지를 추가합니다.<br>
 
-   - `$capability_name` -이름을 지정 합니다 (이 예제의 경우 AppCompatibility 기능)에 설치 하는 기능입니다.
-   - `$package_path` -(이 예제의 경우 Internet Explorer)에 설치 패키지의 경로를 지정 합니다.
-   - `$fod_drive` -탑재 된 Server FOD 이미지의 드라이브 문자를 지정 합니다.
+   - `$capability_name` - 설치할 기능의 이름을 지정합니다(이 예제의 경우 AppCompatibility 기능).
+   - `$package_path` - 설치할 패키지의 경로를 지정합니다(이 예제의 경우 Internet Explorer).
+   - `$fod_drive` - 탑재된 서버 FOD 이미지의 드라이브 문자를 지정합니다.
 
    ```PowerShell
    $capability_name = "ServerCore.AppCompatibility~~~~0.0.1.0"
@@ -203,10 +203,10 @@ Windows Server를 실행 하는 서버 버전이 1903 이상 기능도 다음 �
    Add-WindowsPackage -Path $mount_folder -PackagePath $package_path
    ```
 
-7. 분리 및 사용 하는 다음 명령을 사용 하 여 Install.wim 파일에 변경 내용을 커밋하는 `$mount_folder` 이전 명령에서 변수:
+7. 이전 명령의 `$mount_folder` 변수를 사용하는 다음 명령을 사용하여 Install.wim 파일의 변경 사항을 분리하고 커밋합니다.
 
    ```PowerShell
    Dismount-WindowsImage -Path $mount_folder -Save
    ```
 
-이제 Windows Server 설치 파일에 대 한 사용자가 만든 폴더에서 setup.exe를 실행 하 여 서버를 업그레이드할 수 있습니다 (이 예제에서: *C:\SetupFiles\WindowsServer*). 이 폴더는 이제 추가 기능 및 포함 된 선택적 패키지를 사용 하 여 Windows Server 설치 파일을 포함 합니다.
+이제 Windows Server 설치 파일용으로 만든 폴더에서 setup.exe를 실행하여 서버를 업그레이드할 수 있습니다(이 예제의 경우: *C:\SetupFiles\WindowsServer*). 이제 이 폴더에 추가 기능 및 선택적 패키지가 포함된 Windows Server 설치 파일이 들어 있습니다.

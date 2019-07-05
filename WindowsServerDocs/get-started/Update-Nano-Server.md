@@ -11,12 +11,12 @@ ms.topic: get-started-article
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: 7f74b35e93d4ddbe39b955daf7f78c4ef693aa9a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.openlocfilehash: 0fd21f5c38968a303169b99186effd3d66f1e69b
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59835184"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280304"
 ---
 # <a name="updating-nano-server"></a>Nano 서버 업데이트
 
@@ -25,12 +25,12 @@ ms.locfileid: "59835184"
 
 Nano 서버는 최신 상태로 유지할 수 있는 다양한 방법을 제공합니다. Windows Server의 다른 설치 옵션에 비해 Nano 서버는 Windows 10과 비슷한 더 능동적인 서비스 모델을 따릅니다. 이러한 주기적 릴리스를 **CBB(비즈니스용 현재 분기)** 릴리스라고 합니다. 이 방법은 더 빠르게 혁신하고 빠른 개발 수명 주기의 클라우드 빈도로 이동하려는 고객을 지원합니다. CBB에 대한 자세한 내용은 [Windows Server 블로그](https://blogs.technet.microsoft.com/windowsserver/2016/07/12/windows-server-2016-new-current-branch-for-business-servicing-option/)를 참조하세요.
 
-**이러한 CBB 릴리스 사이에는** Nano 서버는 일련의 *누적 업데이트*를 통해 최신 상태를 유지합니다. Nano Server에 대 한 첫 번째 누적 업데이트를 사용 하 여 2016 년 9 월 26 일에 발표 된 예를 들어 [KB4093120](https://support.microsoft.com/help/4093120/windows-10-update-kb4093120)합니다. 이 누적 업데이트 및 이후의 누적 업데이트에서는 Nano 서버에서 이러한 업데이트를 설치하는 다양한 옵션을 제공합니다. 이 문서에서는 Nano 서버의 누적 업데이트를 받고 적용하는 방법을 설명하기 위한 예제로 KB3192366 업데이트를 사용합니다. 누적 업데이트 모델에 대한 자세한 내용은 [Microsoft 업데이트 블로그](https://blogs.technet.microsoft.com/mu/2016/10/25/patching-with-windows-server-2016/)를 참조하세요.
+**이러한 CBB 릴리스 사이에는** Nano 서버는 일련의 *누적 업데이트*를 통해 최신 상태를 유지합니다. 예를 들어 Nano 서버의 첫 번째 누적 업데이트는 2016년 9월 26일 [KB4093120](https://support.microsoft.com/help/4093120/windows-10-update-kb4093120)으로 릴리스되었습니다. 이 누적 업데이트 및 이후의 누적 업데이트에서는 Nano 서버에서 이러한 업데이트를 설치하는 다양한 옵션을 제공합니다. 이 문서에서는 Nano 서버의 누적 업데이트를 받고 적용하는 방법을 설명하기 위한 예제로 KB3192366 업데이트를 사용합니다. 누적 업데이트 모델에 대한 자세한 내용은 [Microsoft 업데이트 블로그](https://blogs.technet.microsoft.com/mu/2016/10/25/patching-with-windows-server-2016/)를 참조하세요.
 
 > [!NOTE]
 > 미디어 또는 온라인 저장소에서 선택적 Nano 서버 패키지를 설치하는 경우에는 최근 보안 픽스가 포함되지 않습니다. 옵션 패키지와 기본 운영 체제 간의 버전 불일치를 방지하기 위해 옵션 패키지를 설치하는 즉시 최신 누적 업데이트를 설치한 **후** 서버를 다시 시작해야 합니다.
 
-누적 업데이트에 대 한 Windows Server 2016의 경우: 2016 년 9 월 26 일 ([KB3192366](https://support.microsoft.com/en-us/kb/3192366))는 최신 서비스 스택 업데이트에 대 한 Windows 10 버전 1607을 먼저 설치 해야 합니다. 필수 조건으로 2016 년 8 월 23 일 ([KB3176936](https://support.microsoft.com/en-us/kb/3176936)). 아래의 옵션 중 대부분에는 .cab 업데이트 패키지가 포함된 .msu 파일이 필요합니다. 이러한 각 업데이트 패키지를 다운로드하려면 Microsoft 업데이트 카탈로그를 방문하세요.
+Windows Server 2016용 누적 업데이트의 경우: 2016년 9월 26일([KB3192366](https://support.microsoft.com/en-us/kb/3192366)), 먼저 Windows 10 버전 1607에 대한 최신 서비스 스택 업데이트를 설치해야 합니다. 필수 구성 요소로 2016년 8월 23일([KB3176936](https://support.microsoft.com/en-us/kb/3176936)) 아래의 옵션 중 대부분에는 .cab 업데이트 패키지가 포함된 .msu 파일이 필요합니다. 이러한 각 업데이트 패키지를 다운로드하려면 Microsoft 업데이트 카탈로그를 방문하세요.
 - [https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB3192366](https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB3192366)
 - [https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB3176936](https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB3176936)
 
@@ -52,7 +52,7 @@ Microsoft 업데이트 카탈로그에서.msu 파일을 다운로드한 후 네�
 > [!NOTE]
 > DISM 도구를 사용하여 Nano 서버를 서비스하는 경우 서비스 중인 Nano 서버의 버전과 동일하거나 최신 버전의 DISM을 사용해야 합니다. 이렇게 하려면 일치하는 버전의 Windows에서 DISM을 실행하거나 일치하는 버전의 [Windows ADK(Asssessment and Deployment Kit)](https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit)를 설치하거나 Nano 서버 자체에서 DISM을 실행하세요.
 
-## <a name="option-1-integrate-a-cumulative-update-into-a-new-image"></a>옵션 1: 새 이미지를 누적 업데이트 통합
+## <a name="option-1-integrate-a-cumulative-update-into-a-new-image"></a>옵션 1: 새 이미지에 누적 업데이트 통합
 새 Nano 서버 이미지를 만드는 경우 첫 번째 부팅에서 완전히 패치되도록 최신 누적 업데이트를 이미지에 직접 통합할 수 있습니다.
 
 ```powershell
@@ -66,7 +66,7 @@ New-NanoServerImage -ServicingPackagePath 'C:\ServicingPackages_cabs\Windows10.0
 Edit-NanoServerImage -ServicingPackagePath 'C:\ServicingPackages_cabs\Windows10.0-KB3176936-x64.cab', 'C:\ServicingPackages_cabs\Windows10.0-KB3192366-x64.cab' -TargetPath .\NanoServer.wim
 ```
 
-## <a name="option-3-apply-the-cumulative-update-to-an-existing-offline-vhd-or-vhdx"></a>옵션 3: 기존 오프 라인 VHD 또는 VHDX를 누적 업데이트를 적용 합니다.
+## <a name="option-3-apply-the-cumulative-update-to-an-existing-offline-vhd-or-vhdx"></a>옵션 3: 기존 오프라인 VHD 또는 VHDX에 누적 업데이트 적용
 기존 가상 하드 디스크(VHD 또는 VHDX)가 있는 경우 DISM 도구를 사용하여 가상 하드 디스크에 업데이트를 적용할 수 있습니다. 디스크를 사용 중인 모든 VM을 종료하거나 가상 하드 디스크 파일을 분리하여 사용 중인 디스크가 없도록 해야 합니다.
 
 - PowerShell 사용
@@ -85,7 +85,7 @@ Edit-NanoServerImage -ServicingPackagePath 'C:\ServicingPackages_cabs\Windows10.
    dism.exe /Unmount-Image /MountDir:C:\MountDir /Commit
    ```
 
-## <a name="option-4-apply-the-cumulative-update-to-a-running-nano-server"></a>옵션 4: 실행 중인 Nano 서버에 누적 업데이트를 적용 합니다.
+## <a name="option-4-apply-the-cumulative-update-to-a-running-nano-server"></a>옵션 4: 실행 중인 Nano 서버에 누적 업데이트 적용
 실행 중인 Nano 서버 VM 또는 물리적 호스트가 있을 때 업데이트를 위한 .cab 파일을 다운로드한 경우 DISM 도구를 사용하여 운영 체제가 온라인 상태일 때 업데이트를 적용할 수 있습니다. .cab 파일을 Nano 서버에서 로컬로 또는 액세스 가능한 네트워크 위치로 복사해야 합니다. 서비스 스택 업데이트를 적용하는 경우 추가 업데이트를 적용하기 전에 서비스 스택 업데이트를 적용하고 서버를 다시 시작해야 합니다.
 
 > [!NOTE]
@@ -125,7 +125,7 @@ Enter-PSSession $s
    Restart-Computer; exit
    ```
 
-## <a name="option-5-download-and-install-the-cumulative-update-to-a-running-nano-server"></a>옵션 5: 다운로드 및 실행 중인 Nano 서버에 누적 업데이트를 설치 합니다.
+## <a name="option-5-download-and-install-the-cumulative-update-to-a-running-nano-server"></a>옵션 5: 실행 중인 Nano 서버에 누적 업데이트를 다운로드하고 설치
 
 실행 중인 Nano 서버 VM 또는 물리적 호스트가 있는 경우 Windows 업데이트 WMI 공급자를 사용하면 운영 체제가 온라인 상태일 때 업데이트를 다운로드하고 설치할 수 있습니다. 이 방법을 사용하면 .msu 파일을 Microsoft 업데이트 카탈로그와 별도로 다운로드할 필요가 없습니다. WMI 공급자가 사용 가능한 모든 업데이트를 한 번에 검색하고 다운로드하고 설치합니다.
 
@@ -156,10 +156,10 @@ Enter-PSSession -ComputerName (Read-Host "Enter Nano Server IP address") -Creden
    
 ## <a name="additional-options"></a>추가 옵션
 Nano 서버를 업데이트하는 다른 방법은 위의 옵션과 겹치거나 위의 옵션을 보완할 수 있습니다. 이러한 옵션에는 WSUS(Windows Server Update Services), System Center VMM(Virtual Machine Manager), 작업 스케줄러 또는 타사 솔루션을 사용하는 방법이 포함됩니다.
-- 다음 레지스트리 키를 설정하여 [WSUS를 사용하도록 Windows 업데이트 구성](https://msdn.microsoft.com/en-us/library/dd939844(v=ws.10).aspx):
+- 다음 레지스트리 키를 설정하여 [WSUS를 사용하도록 Windows 업데이트 구성](https://msdn.microsoft.com/library/dd939844(v=ws.10).aspx):
   - WUServer
   - WUStatusServer(일반적으로 WUServer와 동일한 값 사용)
   - UseWUServer
   - AUOptions
 - [VMM에서 패브릭 업데이트 관리](https://technet.microsoft.com/library/gg675084(v=sc.12).aspx)
-- [예약된 된 작업 등록](https://technet.microsoft.com/library/jj649811.aspx)
+- [예약된 작업 등록](https://technet.microsoft.com/library/jj649811.aspx)
