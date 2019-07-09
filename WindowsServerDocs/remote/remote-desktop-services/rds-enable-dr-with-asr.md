@@ -1,6 +1,6 @@
 ---
-title: Azure Site Recovery를 사용 하 여 RDS의 재해 복구를 사용 하도록 설정
-description: Azure Site Recovery를 사용 하 여 RDS의 재해 복구를 사용 하는 방법에 알아봅니다.
+title: Azure Site Recovery를 사용하여 RDS의 재해 복구를 사용하도록 설정
+description: Azure Site Recovery를 사용하여 RDS의 재해 복구를 사용하도록 설정하는 방법을 알아봅니다.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,17 +13,17 @@ ms.topic: article
 author: lizap
 manager: dongill
 ms.openlocfilehash: 7aa25602c71e5d114be7ae59c5e3ce168844d700
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
-ms.translationtype: MT
+ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
+ms.lasthandoff: 06/17/2019
 ms.locfileid: "66446553"
 ---
-# <a name="enable-disaster-recovery-of-rds-using-azure-site-recovery"></a>Azure Site Recovery를 사용 하 여 RDS의 재해 복구를 사용 하도록 설정
+# <a name="enable-disaster-recovery-of-rds-using-azure-site-recovery"></a>Azure Site Recovery를 사용하여 RDS의 재해 복구를 사용하도록 설정
 
->적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2019, Windows Server 2016
 
-재해 복구를 위해 RDS 배포에 적절 하 게 구성 되어 있는지을 보장 하려면 모든 RDS 배포를 구성 하는 구성 요소를 보호 해야 합니다.
+RDS 배포가 재해 복구를 위해 적절하게 구성되었는지 확인하려면 RDS 배포를 구성하는 모든 구성 요소를 보호해야 합니다.
 
 - Active Directory
 - SQL Server 계층
@@ -32,25 +32,25 @@ ms.locfileid: "66446553"
 
 ## <a name="configure-active-directory-and-dns-replication"></a>Active Directory 및 DNS 복제 구성
 
-RDS 배포에 대 한 재해 복구 사이트에서 Active Directory 작동에 필요 합니다. 얼마나 복잡 RDS 배포에 따라 두 가지 선택 해야 합니다.
+RDS 배포가 작동하려면 재해 복구 사이트에 Active Directory가 필요합니다. RDS 배포가 얼마나 복잡한지에 따라 두 가지 선택이 가능합니다.
 
-- 옵션 1-응용 프로그램의 작은 수 있고 단일 도메인 컨트롤러에 전체 온-프레미스 사이트를 함께 전체 사이트에 대해 실패 한 됩니다에 대 한 ASR 복제를 사용 (true 둘 다에 대 한 보조 사이트로 도메인 컨트롤러에 복제 하는 경우 사이트 간 및 사이트-Azure 시나리오).
-- 옵션 2-응용 프로그램의 많은 및 Active Directory 포리스트를 실행 하는 것 장애 조치는 몇 가지 응용 프로그램 번 재해 복구 사이트에서 추가 도메인 컨트롤러를 설정 하는 경우 (보조 사이트 또는 Azure).
+- 옵션 1 - 전체 온-프레미스 사이트에 대해 적은 수의 애플리케이션과 단일 도메인 컨트롤러가 있고 전체 사이트에서 함께 장애가 발생할 경우 ASR-복제를 사용하여 도메인 컨트롤러를 보조 사이트에 복제합니다(사이트 간 및 사이트-Azure 시나리오 모두에 해당).
+- 옵션 2 - 많은 수의 애플리케이션이 있고 Active Directory 포리스트를 실행 중이며 한 번에 몇 개의 애플리케이션을 장애 조치(failover)할 경우 재해 복구 사이트(보조 사이트 또는 Azure)에 추가 도메인 컨트롤러를 설정합니다.
 
-참조 [Active Directory 보호 및 Azure Site Recovery를 사용 하 여 DNS](/azure/site-recovery/site-recovery-active-directory) 재해 복구 사이트에서 도메인 컨트롤러를 사용할 수 있도록 대 한 자세한 내용은 합니다. 이 지침의 나머지 부분에서 이러한 단계를 수행 했다면 사용할 수 있는 도메인 컨트롤러를 가정 합니다.
+재해 복구 사이트에서 도메인 컨트롤러를 사용할 수 있도록 설정하는 자세한 내용은 [Azure Site Recovery를 사용하여 Active Directory 및 DNS 보호](/azure/site-recovery/site-recovery-active-directory)를 참조하세요. 이 지침의 나머지 부분에 대해서는 해당 단계를 따랐으며 도메인 컨트롤러를 사용할 수 있다고 가정합니다.
 
 ## <a name="set-up-sql-server-replication"></a>SQL Server 복제 설정
 
-참조 [SQL Server 재해 복구 및 Azure Site Recovery를 사용 하 여 SQL Server 보호](/azure/site-recovery/site-recovery-sql) SQL Server 복제를 설정 하는 단계입니다.
+SQL Server 복제를 설정하는 단계는 [SQL Server 재해 복구 및 Azure Site Recovery를 사용한 SQL Server 보호](/azure/site-recovery/site-recovery-sql)를 참조하세요.
 
-## <a name="enable-protection-for-the-rds-application-components"></a>RDS 응용 프로그램 구성 요소에 대 한 보호를 사용 하도록 설정
+## <a name="enable-protection-for-the-rds-application-components"></a>RDS 애플리케이션 구성 요소에 대한 보호를 사용하도록 설정
 
-RDS 배포 유형에 따라 다양 한 구성 요소 Vm (아래 표에 나열 된)으로 Azure Site Recovery에 대 한 보호를 사용할 수 있습니다. Hyper-v 또는 VMWare Vm에 배포 되는 여부에 따라 Azure Site Recovery 관련 요소를 구성 합니다.
+RDS 배포 유형에 따라 Azure Site Recovery의 여러 구성 요소 VM(아래 표 참조)에 대해 보호를 사용하도록 설정할 수 있습니다. VM이 Hyper-V에 배포되었는지, 또는 VMWare에 배포되었는지에 따라 관련 Azure Site Recovery 요소를 구성합니다.
 
 
 |               배포 유형                |                                                                                                     보호 단계                                                                                                     |
 |----------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     개인용 가상 데스크톱 (관리 되지 않는)     | 1. 모든 가상화 호스트 RDVH 역할이 설치 된 준비 되는지 확인 합니다.    </br>2. 연결 브로커입니다.  </br>3. 개인 데스크톱입니다. </br>4. 골드 템플릿 Vm입니다. </br>5. 웹 액세스, 라이선스 서버와 게이트웨이 서버 |
-| 풀링된 가상 데스크톱 (없습니다 UPD를 사용 하 여 관리 됨) |                    1. 모든 가상화 호스트 RDVH 역할이 설치 된 준비가 되었습니다.  </br>2. 연결 브로커입니다.  </br>3. 골드 템플릿 Vm입니다. </br>4. 웹 액세스, 라이선스 서버와 게이트웨이 서버입니다.                    |
-|   Remoteapp 및 데스크톱 세션 (UPD 없음)   |                                                          1. 세션 호스트입니다.  </br>2. 연결 브로커입니다. </br>3. 웹 액세스, 라이선스 서버와 게이트웨이 서버입니다.                                                           |
+|     개인용 가상 데스크톱(비관리형)     | 1. RDVH 역할이 설치된 상태에서 모든 가상화 호스트가 준비되었는지 확인합니다.    </br>2. 연결 브로커  </br>3. 개인 데스크톱 </br>4. 골드 템플릿 VM </br>5. 웹 액세스, 라이선스 서버 및 게이트웨이 서버 |
+| 풀링된 가상 데스크톱(관리형, UPD 없음) |                    1. RDVH 역할이 설치된 상태에서 모든 가상화 호스트가 준비됩니다.  </br>2. 연결 브로커  </br>3. 골드 템플릿 VM </br>4. 웹 액세스, 라이선스 서버 및 게이트웨이 서버.                    |
+|   RemoteApp 및 데스크톱 세션(UPD 없음)   |                                                          1. 세션 호스트  </br>2. 연결 브로커 </br>3. 웹 액세스, 라이선스 서버 및 게이트웨이 서버.                                                           |
 
