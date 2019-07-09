@@ -1,6 +1,6 @@
 ---
-title: 원격 데스크톱 서비스-Multi-factor Authentication
-description: Rds.를 사용 하 여 MFA를 사용 하는 것에 대 한 계획 정보
+title: 원격 데스크톱 서비스 - Multi-Factor Authentication
+description: RDS에서 MFA를 사용하기 위한 계획 정보
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,21 +14,21 @@ ms.author: elizapo
 ms.date: 09/07/2016
 manager: dongill
 ms.openlocfilehash: 5ca2a29b0287dbd940afeb4404a85f1d978447f9
-ms.sourcegitcommit: d888e35f71801c1935620f38699dda11db7f7aad
-ms.translationtype: MT
+ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/17/2019
 ms.locfileid: "66805115"
 ---
-# <a name="remote-desktop-services---multi-factor-authentication"></a>원격 데스크톱 서비스-Multi-factor Authentication
+# <a name="remote-desktop-services---multi-factor-authentication"></a>원격 데스크톱 서비스 - Multi-Factor Authentication
 
->적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2019, Windows Server 2016
 
-비즈니스 리소스의 높은 수준의 보안 보호를 적용 하려면 Multi-factor Authentication을 사용 하 여 Active Directory의 기능을 활용 합니다.
+Azure Directory에서 Multi-Factor Authentication을 사용하여 비즈니스 리소스에 대해 보안을 강화할 수 있습니다.
 
-데스크톱 및 응용 프로그램에 연결 하면 최종 사용자에 대 한 환경은 어떤 이미 과연 원하는 리소스에 연결할 두 번째 인증 측정값을 수행할 때와 비슷합니다.
-- 데스크톱 또는 원격 데스크톱 클라이언트 응용 프로그램을 통해 또는 RDP 파일에서 RemoteApp 시작
-- 안전한 원격 액세스에 대 한 RD 게이트웨이 연결할 때는 SMS 또는 모바일 응용 프로그램 MFA 챌린지를 수신
-- 올바르게 인증 하 고 해당 리소스에 연결 하기!
+데스크톱 및 애플리케이션에 연결되는 최종 사용자의 경우 두 번째 인증 조치를 수행하여 원하는 리소스에 연결하므로 이미 사용 중인 환경과 비슷한 환경이 제공됩니다.
+- RDP 파일에서 또는 원격 데스크톱 클라이언트 애플리케이션을 통해 데스크톱 또는 RemoteApp을 시작합니다.
+- 안전한 원격 액세스를 위해 RD 게이트웨이에 연결할 경우 SMS 또는 모바일 애플리케이션 MFA 문제가 발생합니다.
+- 올바르게 인증을 받고 해당 리소스에 연결합니다.
 
-구성 프로세스에 대 한 자세한 내용은 체크 아웃 [네트워크 정책 (NPS 서버) 확장 및 Azure AD를 사용 하 여 원격 데스크톱 게이트웨이 인프라 통합](https://docs.microsoft.com/azure/multi-factor-authentication/nps-extension-remote-desktop-gateway)합니다.
+구성 프로세스에 대한 자세한 내용은 [NPS(네트워크 정책 서버) 확장 및 Azure AD를 사용하여 원격 데스크톱 게이트웨이 인프라 통합](https://docs.microsoft.com/azure/multi-factor-authentication/nps-extension-remote-desktop-gateway)을 참조하세요.

@@ -1,6 +1,6 @@
 ---
 title: 새 디스크 초기화
-description: 디스크 관리를 사용 하도록 준비 하는 새 디스크를 초기화 하는 방법입니다. 또한 문제를 해결 하는 링크를 포함 합니다.
+description: 디스크 관리를 통해 새 디스크를 초기화하여 사용하도록 준비하는 방법입니다. 또한 문제 해결에 대한 링크도 포함되어 있습니다.
 ms.date: 06/07/2019
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -9,45 +9,45 @@ author: JasonGerend
 manager: brianlic
 ms.author: jgerend
 ms.openlocfilehash: 7a275c372e1486b26821f797a7663eecbc3e8784
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
-ms.translationtype: MT
+ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/17/2019
 ms.locfileid: "66812431"
 ---
 # <a name="initialize-new-disks"></a>새 디스크 초기화
 
-> **적용 대상:** Windows 10, Windows 8.1, Windows 7, Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> **적용 대상:** Windows 10, Windows 8.1, Windows 7, Windows Server(반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-사용자 PC에 새 디스크를 추가 하 고 파일 탐색기에 표시 되지 않지만, 해야 [드라이브 문자를 추가](change-a-drive-letter.md), 또는 사용 하기 전에 초기화 합니다. 아직 포맷 된 드라이브를 초기화할 수 있습니다. 디스크 초기화를 모두 지웁니다 및 지나면 서식을 지정 하 고 파일을 저장할 수 있습니다 Windows 사용 하도록 준비 합니다.
+PC에 새 디스크를 추가했으나 파일 탐색기에 표시되지 않으면 사용하기 위해 [드라이브 문자를 추가](change-a-drive-letter.md)하거나 먼저 초기화해야 할 수 있습니다. 아직 포맷되지 않은 드라이브만 초기화할 수 있습니다. 디스크를 초기화하면 모든 내용이 Windows에서 사용할 준비가 됩니다. 그러면 디스크를 포맷한 후 파일을 저장할 수 있습니다.
 
 > [!WARNING]
-> 디스크에 이미 파일에서 관심 있는 경우 초기화 하지-모든 파일을 잃게 됩니다. 디스크 문제 해결 권장 대신 파일-을 읽을 수 있으면 참조 [디스크의 상태가 초기화 되지 않았습니다 또는 디스크가 누락 되었는지 완전히](troubleshooting-disk-management.md#a-disks-status-is-not-initialized-or-the-disk-is-missing)합니다.
+> 디스크에 관심이 있는 파일이 이미 있으면 초기화하지 않도록 합니다. 초기화하면 모든 파일을 잃게 됩니다. 대신, 디스크 문제를 해결하여 파일을 읽을 수 있는지 확인하는 것이 좋습니다. [디스크의 상태가 초기화되지 않음 또는 디스크가 완전히 누락됨](troubleshooting-disk-management.md#a-disks-status-is-not-initialized-or-the-disk-is-missing)을 참조하세요.
 
 ## <a name="to-initialize-new-disks"></a>새 디스크 초기화
 
-디스크 관리를 사용 하 여 새 디스크를 초기화 하는 방법을 다음과 같습니다. PowerShell을 사용 하 여 원할 경우 사용 합니다 [디스크 초기화](https://docs.microsoft.com/powershell/module/storage/initialize-disk) cmdlet 대신 합니다.
+디스크 관리를 사용하여 새 디스크를 초기화하는 방법은 다음과 같습니다. PowerShell을 사용하려는 경우 [initialize-disk](https://docs.microsoft.com/powershell/module/storage/initialize-disk) cmdlet을 대신 사용합니다.
 
 1. 디스크 관리를 관리자 권한으로 엽니다. 
  
-    이렇게 하려면 작업 표시줄에서 검색 상자에를 입력 **디스크 관리**, 선택 및 저장 (또는 마우스 오른쪽 단추로 클릭) **디스크 관리**을 선택한 후 **관리자 권한으로 실행**  >  **예**합니다. 열 수 없으면이 관리자로 서, 입력 **컴퓨터 관리** 대신으로 이동한 다음 **저장소** > **디스크 관리**합니다.
-1. 디스크 관리에서 초기화 하 고 클릭 하려는 디스크를 마우스 오른쪽 단추로 **디스크 초기화** (그림 참조). 으로 표시 되는 디스크 *오프 라인*, 먼저이 마우스 오른쪽 단추로 **Online**합니다.
+    이렇게 하려면 작업 표시줄의 검색 상자에 **디스크 관리**를 입력하고 **디스크 관리**를 길게 선택(또는 마우스 오른쪽 단추로 클릭)한 후 **관리자 권한으로 실행** > **예**를 선택합니다. 관리자 권한으로 열 수 없으면 대신, **컴퓨터 관리**를 입력하고 **스토리지** > **디스크 관리**로 이동합니다.
+1. 디스크 관리에서 초기화하고자 하는 디스크를 마우스 오른쪽 단추로 클릭하고 **디스크 초기화**를 클릭합니다(그림 참조). 디스크가 *오프라인*으로 표시되면 먼저 마우스 오른쪽 단추로 클릭하고 **온라인**을 선택합니다.
 
-     일부 USB 드라이브를 초기화할 수 없는 이므로 이러한 방금 서식이 설정으로 [드라이브 문자](change-a-drive-letter.md)합니다.
+     일부 USB 드라이브에는 초기화할 수 있는 옵션이 없으며 포맷된 후 [드라이브 문자](change-a-drive-letter.md)가 지정됩니다.
 
-    ![표시 되는 디스크 초기화 바로 가기 메뉴를 사용 하 여 형식이 지정 되지 않은 디스크를 표시 하는 디스크 관리](media/uninitialized-disk.PNG)
-2. 에 **디스크 초기화** (그림 참조) 대화 상자에서 올바른 디스크 선택 되어 있는지 확인 한 다음 클릭 확인 **확인** 기본 파티션 스타일을 적용할 합니다. 파티션 스타일 (MBR 또는 GPT) 참조를 변경 해야 할 경우 [GPT 및 MBR 파티션 스타일-에 대 한](#about-partition-styles---gpt-and-mbr)합니다.
+    ![디스크 초기화 바로 가기 메뉴와 포맷되지 않은 디스크를 보여 주는 디스크 관리 기능](media/uninitialized-disk.PNG)
+2. **디스크 초기화** 대화 상자(그림 참조)에서 올바른 디스크를 선택했는지 확인한 후 **확인**을 클릭하여 기본 파티션 스타일을 적용합니다. 파티션 스타일(MBR 또는 GPT)을 변경해야 할 경우 [파티션 스타일 정보 - GPT 및 MBR](#about-partition-styles---gpt-and-mbr)를 참조하세요.
 
-     디스크 상태를 간단 하 게 변경 **Initializing** 하 고는 **Online** 상태입니다. 어떤 이유로 실패를 초기화 하는 경우 참조 [디스크의 상태가 초기화 되지 않았습니다 또는 디스크가 누락 되었는지 완전히](troubleshooting-disk-management.md#a-disks-status-is-not-initialized-or-the-disk-is-missing)합니다.
+     디스크 상태가 **초기화**에서 **온라인** 상태로 바로 변경됩니다. 어떤 이유로든 초기화가 실패하는 경우 [디스크의 상태가 초기화되지 않음 또는 디스크가 완전히 누락됨](troubleshooting-disk-management.md#a-disks-status-is-not-initialized-or-the-disk-is-missing)을 참조하세요.
 
-    ![선택한 GPT 파티션 스타일을 사용 하 여 디스크 초기화 대화 상자](media/initialize-disk.PNG)
+    ![GPT 파티션 스타일이 선택된 디스크 초기화 대화 상자](media/initialize-disk.PNG)
 
-## <a name="about-partition-styles---gpt-and-mbr"></a>GPT 및 MBR 파티션 스타일-정보
+## <a name="about-partition-styles---gpt-and-mbr"></a>파티션 스타일 정보 - GPT 및 MBR
 
-디스크는 파티션 이라는 여러 청크로 나눌 수 있습니다. 각 파티션은-하나만-있는 경우에 파티션 스타일이-MBR 또는 GPT를 갖습니다. Windows는 디스크의 데이터에 액세스 하는 방법을 이해 하려면 파티션 스타일을 사용 합니다.
+디스크는 파티션이라는 여러 청크로 나눌 수 있습니다. 파티션이 하나만 있는 경우를 비롯하여 각 파티션의 파티션 스타일은 GTP 또는 MBR이어야 합니다. Windows는 디스크의 데이터에 액세스하는 방법을 이해하기 위해 파티션 스타일을 사용합니다.
 
-아마도 이것이 대로으로 썼으며, 결론은이 오늘날 일반적으로 파티션 스타일에 걱정할 필요가-Windows에 자동으로 적절 한 디스크 유형을 사용 하는 합니다.
+별로 흥미로운 내용은 아니지만 결론적으로 오늘날에는 일반적으로 파티션 스타일을 걱정할 필요가 없습니다. Windows에서 적절한 디스크 유형을 자동으로 사용하기 때문입니다.
 
-대부분의 Pc 하드 드라이브와 Ssd에 대 한 GUID 파티션 테이블 (GPT) 디스크 유형을 사용합니다. GPT 더 강력한 이며 2TB 보다 큰 볼륨에 대 한 허용 합니다. 이전 마스터 부트 레코드 (MBR) 디스크 형식의 32 비트 Pc, 오래 된 Pc 및 메모리 카드와 같은 이동식 드라이브에서 사용 됩니다.
+대부분의 PC는 하드 드라이브 및 SSD에 대해 GPT(GUID 파티션 테이블) 디스크 유형을 사용합니다. GPT가 좀 더 강력하며 2TB보다 큰 볼륨을 허용합니다. 이전의 MBR(마스터 부트 레코드) 디스크 유형은 32비트 PC, 오래된 PC 및 메모리 카드와 같은 이동식 드라이브에서 사용됩니다.
 
-디스크를 MBR GPT로 또는 그 반대로 변환할 먼저 경우 디스크에서 모든 볼륨을 삭제 하려면 디스크에 있는 모든 항목 지우기 자세한 내용은 참조 하세요. [MBR 디스크를 GPT 디스크로 변환](change-an-mbr-disk-into-a-gpt-disk.md), 또는 [MBR 디스크를 GPT 디스크로 변환](change-a-gpt-disk-into-an-mbr-disk.md)합니다.
+디스크를 MBR에서 GPT로 또는 그 반대로 변환하려면 먼저 디스크에서 모든 볼륨을 삭제하고 디스크에 있는 모든 항목을 지워야 합니다. 자세한 내용은 [MBR 디스크를 GPT 디스크로 변환](change-an-mbr-disk-into-a-gpt-disk.md) 또는 [MBR 디스크를 GPT 디스크로 변환](change-a-gpt-disk-into-an-mbr-disk.md)을 참조하세요.

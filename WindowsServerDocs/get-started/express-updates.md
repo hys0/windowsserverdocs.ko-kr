@@ -1,6 +1,6 @@
 ---
-title: 2018 년 11 월에 대 한 다시 사용 하도록 설정 하는 Windows Server 2016에 대 한 업데이트를 express 업데이트
-description: Windows Server 2016에서 Express 업데이트에 대 한 정보를 제공합니다.
+title: 2018년 11월 업데이트를 위한 Windows Server 2016용 Express 업데이트
+description: Windows Server 2016의 Express 업데이트에 대한 정보를 제공합니다.
 ms.prod: windows-server-threshold
 ms.technology: server-general
 ms.topic: article
@@ -8,20 +8,20 @@ author: lizap
 ms.author: elizapo
 ms.localizationpriority: medium
 ms.openlocfilehash: 1644a61c87953e465895e23c3c8454bae7f3a056
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
-ms.translationtype: MT
+ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
+ms.lasthandoff: 06/17/2019
 ms.locfileid: "66443380"
 ---
-# <a name="express-updates-for-windows-server-2016-re-enabled-for-november-2018-update"></a>2018 년 11 월에 대 한 다시 사용 하도록 설정 하는 Windows Server 2016에 대 한 업데이트를 express 업데이트
+# <a name="express-updates-for-windows-server-2016-re-enabled-for-november-2018-update"></a>2018년 11월 업데이트를 위한 Windows Server 2016용 Express 업데이트
 
-> Joel Frauenheim 여
+> 작성자: Joel Frauenheim
 > 
 > 적용 대상: Windows Server 2016
 
-시작 2018 년 11 월 13 일 화요일의 업데이트, Windows를 다시 게시할 Express 업데이트 Windows Server 2016에 대 한 합니다. Windows Server 2016에 대 한 빠른 업데이트를 올바르게 설치할 업데이트를 유지 하는 중요 한 문제를 찾을 수 후 2017 년 중반부터에서 중지 되었습니다. 업데이트 팀 보수적인 접근 방법은 대부분의 고객은 2017 년 11 월 14 일 업데이트 해야 하도록 Express 패키지를 게시 하는 데 걸린 2017 년 11 월에에서는 문제가 수정 되어 있지만 ([KB 4048953](https://support.microsoft.com/help/4048953/windows-10-update-kb4048953)) 해당 서버에 설치 환경 및 되지 문제가 영향을 받을 수 있습니다.
+2018년 11월 13일 화요일 업데이트부터 Windows는 Windows Server 2016용 Express 업데이트를 다시 게시할 예정입니다. Windows Server 2016용 Express 업데이트는 업데이트가 제대로 설치되지 못하도록 하는 심각한 문제가 발생한 2017년 중반 이후부터 중지되었습니다. 2017년 11월에 이 문제가 해결되었지만 업데이트 팀은 대부분의 고객이 서버 환경에 2017년 11월 14일 업데이트([KB 4048953](https://support.microsoft.com/help/4048953/windows-10-update-kb4048953))를 설치하지만 이 문제의 영향을 받지 않도록 하기 위해 Express 패키지를 조심스럽게 게시하는 방안을 채택했습니다.
 
-WSUS 및 System Center Configuration Manager (SCCM)에 대 한 시스템 관리자가 2018 년 11 월에에서 다시 한 번 표시 될 Windows Server 2016 업데이트에 대 한 두 개의 패키지 유의 해야 합니다: 전체 업데이트 및 Express 업데이트 합니다. 오프 되었는지 확인 하려면 장치는 2017 년 11 월 14 일 이후 전체 업데이트 해야 해당 서버 환경에 대 한 Express를 사용 하려면 시스템 관리자 ([KB 4048953](https://support.microsoft.com/help/4048953/windows-10-update-kb4048953)) Express 업데이트를 올바르게 설치 되도록 합니다. 2017 년 11 월 14 일 업데이트 이후에 업데이트 되지 않은 모든 장치 ([KB 4048953](https://support.microsoft.com/help/4048953/windows-10-update-kb4048953)) Express 업데이트 하려고 하는 경우 대역폭과 CPU 리소스가 무한 루프를 사용 하는 반복 된 오류가 표시 됩니다.  해당 상태에 대 한 업데이트 관리 Express 업데이트 푸시를 중지 하 고 오류 루프를 중지 하려면 최근 전체 업데이트를 푸시 하려면 시스템 관리자에 대 한 것입니다.
+WSUS 및 SCCM(System Center Configuration Manager)의 시스템 관리자는 2018년 11월에 Windows Server 2016 업데이트의 패키지 2개, 즉 전체 업데이트와 Express 업데이트가 다시 제공될 것임을 알고 있어야 합니다. 서버 환경을 위해 Express를 사용하려는 시스템 관리자는 디바이스에 2017년 11월 14일 이후 전체 업데이트([KB 4048953](https://support.microsoft.com/help/4048953/windows-10-update-kb4048953))를 받아 Express 업데이트가 올바르게 설치되도록 해야 합니다. 2017년 11월 14일 업데이트([KB 4048953](https://support.microsoft.com/help/4048953/windows-10-update-kb4048953)) 이후로 업데이트되지 않은 디바이스에서 Express 업데이트를 시도하는 경우 대역폭 및 CPU 리소스를 소비하면서 반복되는 오류가 무한 루프로 표시됩니다.  이러한 상태에 대한 수정 방법은 시스템 관리자가 Express 업데이트의 푸시를 중지하고 최신 전체 업데이트를 푸시하여 실패 루프를 중지하도록 하는 것입니다.
 
-2018 년 11 월 13 일을 사용 하 여 Express 업데이트 고객 관리 시스템 및 Windows Server 2016 끝점 간의 패키지 크기를 즉시 감소를 표시 됩니다.  
+2018년 11월 13일 Express 업데이트를 사용하는 경우 관리 시스템과 Windows Server 2016 엔드포인트 사이에서 패키지 크기가 즉시 감소합니다.  

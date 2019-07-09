@@ -13,10 +13,10 @@ author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
 ms.openlocfilehash: 54c8d05c028cbca364b6a46052d12cdcb12c01b0
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
-ms.translationtype: MT
+ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
+ms.lasthandoff: 06/17/2019
 ms.locfileid: "66443608"
 ---
 # <a name="iis-on-nano-server"></a>Nano Server의 IIS
@@ -32,7 +32,7 @@ Microsoft-NanoServer-IIS-Package와 함께 -Package 매개 변수를 사용하�
 
 |기능|기본적으로 사용하도록 설정됨|  
 |-----------|----------------------|  
-|**일반 HTTP 기능**||  
+|**일반적인 HTTP 기능**||  
 |기본 문서|x|  
 |디렉터리 검색|x|  
 |HTTP 오류|x|  
@@ -55,7 +55,7 @@ Microsoft-NanoServer-IIS-Package와 함께 -Package 매개 변수를 사용하�
 |IP 및 도메인 제한||  
 |URL 권한 부여||  
 |Windows 인증||  
-|**응용 프로그램 개발**||  
+|**애플리케이션 개발**||  
 |응용 프로그램 초기화||  
 |CGI||  
 |ISAPI 확장||  
@@ -65,7 +65,7 @@ Microsoft-NanoServer-IIS-Package와 함께 -Package 매개 변수를 사용하�
 |**관리 도구**||  
 |Windows PowerShell용 IIS 관리 모듈|x|  
 
-다른 구성 (예: ASP.NET, PHP 및 Java 사용), IIS와 다른 문서 시리즈의 관련 콘텐츠에 게시 되어 [ http://iis.net/learn ](http://iis.net/learn)합니다.  
+IIS의 다른 구성(예: ASP.NET, PHP 및 Java 사용)과 기타 관련 콘텐츠에 대한 문서는 [http://iis.net/learn](http://iis.net/learn)에 게시되어 있습니다.  
 
 ## <a name="installing-iis-on-nano-server"></a>Nano 서버에 IIS 설치  
 이 서버 역할을 오프라인으로(Nano 서버를 끄고) 설치할 수도 있고 온라인으로(Nano 서버가 실행 중인 상태로) 설치할 수도 있지만 오프라인 설치를 권장합니다.  
@@ -90,7 +90,7 @@ Microsoft-NanoServer-IIS-Package와 함께 -Package 매개 변수를 사용하�
 이제 IIS를 사용하여 Nano 서버를 시작할 수 있습니다.  
 
 ### <a name="installing-iis-on-nano-server-online"></a>온라인으로 Nano 서버에 IIS 설치  
-서버 역할은 오프라인으로 설치하는 것이 좋지만, 컨테이너 시나리오에서 온라인으로(Nano 서버가 실행 중인 상태로) 설치해야 할 수도 있습니다. 이렇게 하려면 다음 단계를 수행합니다.  
+서버 역할은 오프라인으로 설치하는 것이 좋지만, 컨테이너 시나리오에서 온라인으로(Nano 서버가 실행 중인 상태로) 설치해야 할 수도 있습니다. 이렇게 하려면 다음 단계를 따르십시오.  
 
 1.  설치 미디어의 패키지 폴더를 실행 중인 Nano 서버에(예: C:\packages) 로컬로 복사합니다.  
 
@@ -129,12 +129,12 @@ Microsoft-NanoServer-IIS-Package와 함께 -Package 매개 변수를 사용하�
 
    **dism /online /get-packages**  
 
-   표시 "Package Identity: Microsoft NanoServer-IIS 패키지 ~ 31bf3856ad364e35 ~ amd64 ~ ~ 10.0.14393.1000 "을 두 번 한 번에 대해 나열 된 릴리스 종류: 언어 팩에 대해 한 번씩 릴리스 종류: 기능 팩입니다.  
+   "패키지 ID: Microsoft-NanoServer-IIS-Package~31bf3856ad364e35~amd64~~10.0.14393.1000"이 두 번 나열되고, 릴리스 유형: 언어 팩이 한 번 나열되고, 릴리스 유형: 기능 팩이 한 번 나열되어야 합니다.  
 
 6. **net start w3svc**를 사용하여 또는 Nano 서버를 다시 시작하여 W3SVC 서비스를 시작합니다.  
 
 ## <a name="starting-iis"></a>IIS 시작  
-IIS가 설치되어 실행되면 웹 요청을 처리할 준비가 완료된 것입니다. http://\<Nano 서버 IP 주소>에서 기본 IIS 웹 페이지를 검색하여 IIS가 실행 중인지 확인합니다. 물리적 컴퓨터에서 복구 콘솔을 사용하여 IP 주소를 확인할 수 있습니다. 가상 컴퓨터에서 Windows PowerShell 프롬프트를 사용하고 다음 명령을 실행하여 IP 주소를 얻을 수 있습니다.  
+IIS가 설치되어 실행되면 웹 요청을 처리할 준비가 완료된 것입니다. http://\<Nano 서버 IP 주소>에서 기본 IIS 웹 페이지를 검색하여 IIS가 실행 중인지 확인합니다. 물리적 컴퓨터에서 복구 콘솔을 사용하여 IP 주소를 확인할 수 있습니다. 가상 머신에서 Windows PowerShell 프롬프트를 사용하고 다음 명령을 실행하여 IP 주소를 얻을 수 있습니다.  
 
 `Get-VM -name <VM name> | Select -ExpandProperty networkadapters | select IPAddresses`  
 
@@ -177,7 +177,7 @@ IIS 하위 기능 전체 집합은 이 토픽의 부록 1에 포함되어 있고
     ```
 
 ## <a name="other-common-iis-configuration-tasks"></a>기타 일반적인 IIS 구성 작업  
-**Websites 만들기**  
+**웹 사이트 만들기**  
 
 이 cmdlet을 사용합니다.  
 
@@ -185,13 +185,13 @@ IIS 하위 기능 전체 집합은 이 토픽의 부록 1에 포함되어 있고
 
 그런 다음 `Get-IISSite`를 실행하여 사이트 상태를 확인할 수 있습니다(웹 사이트 이름, ID, 상태, 실제 경로 및 바인딩을 반환).  
 
-**웹 사이트를 삭제합니다.**  
+**웹 사이트 삭제**  
 
 `Remove-IISSite -Name TestSite -Confirm:$false`을 실행합니다.  
 
 **가상 디렉터리 만들기**  
 
-Get-IISServerManager 매개 변수가 반환하는 IISServerManager 개체를 사용하여 가상 디렉터리를 만들 수 있습니다. 이 개체는 .NET Microsoft.Web.Administration.ServerManager API를 노출합니다. 이 예제에서, 다음 명령은 사이트 컬렉션의 "기본 웹 사이트" 요소 및 응용 프로그램 섹션의 루트 응용 프로그램 요소("/")에 액세스합니다. 그런 다음 해당 응용 프로그램 요소에 대한 VirtualDirectories 컬렉션의 Add() 메서드를 호출하여 새 디렉터리를 만듭니다.  
+Get-IISServerManager 매개 변수가 반환하는 IISServerManager 개체를 사용하여 가상 디렉터리를 만들 수 있습니다. 이 개체는 .NET Microsoft.Web.Administration.ServerManager API를 노출합니다. 이 예제에서, 다음 명령은 사이트 컬렉션의 "기본 웹 사이트" 요소 및 애플리케이션 섹션의 루트 애플리케이션 요소("/")에 액세스합니다. 그런 다음 해당 응용 프로그램 요소에 대한 VirtualDirectories 컬렉션의 Add() 메서드를 호출하여 새 디렉터리를 만듭니다.  
 
 ```  
 PS C:\> $sm = Get-IISServerManager  
@@ -200,7 +200,7 @@ PS C:\> $sm.Sites["Default Web Site"].Applications["/"].VirtualDirectories.Add("
 PS C:\> $sm.CommitChanges()  
 ```  
 
-**응용 프로그램 풀 만들기**  
+**애플리케이션 풀 만들기**  
 
 마찬가지로 Get-IISServerManager를 사용하여 응용 프로그램 풀을 만들 수 있습니다.  
 
@@ -242,7 +242,7 @@ Nano 서버에서 웹 사이트에 대한 HTTPS를 구성하는 방법을 보여
     $sm.CommitChanges()  
     ```  
 
-    또한이 구문 사용 하 여 특정 호스트 이름으로 서버 이름 표시 (SNI)를 사용할 수 있습니다. `$sm.Sites["Default Web Site"].Bindings.Add("*:443:www.foo.bar.com", $hash, "My", "Sni".`  
+    또한 다음 구문을 통해 특정 호스트 이름으로 SNI(서버 이름 표시)를 사용할 수 있습니다. `$sm.Sites["Default Web Site"].Bindings.Add("*:443:www.foo.bar.com", $hash, "My", "Sni".`  
 
 ## <a name="appendix-1-list-of-iis-sub-features"></a>부록 1: IIS 하위 기능 목록
 
@@ -446,7 +446,7 @@ IIS의 각 기능은 구성 요소 집합으로 존재합니다. 이 부록에�
 |`<windowsAuthentication>`|`<windowsAuthentication enabled="false" authPersistNonNTLM\="true"><br />    <providers><br />        <add value="Negotiate" /><br />        <add value="NTLM" /><br />    <\providers><br /><\windowsAuthentication><windowsAuthentication enabled="false" authPersistNonNTLM\="true"><br />    <providers><br />        <add value="Negotiate" /><br />        <add value="NTLM" /><br />    <\/providers><br /><\/windowsAuthentication>`|  
 
 ### <a name="application-development"></a>응용 프로그램 개발  
-**응용 프로그램 초기화**  
+**애플리케이션 초기화**  
 
 |섹션|구성 요소|  
 |----------------|--------------------------|  
@@ -476,7 +476,7 @@ IIS의 각 기능은 구성 요소 집합으로 존재합니다. 이 부록에�
 |`<globalModules>`|`<add name="IsapiFilterModule" image="%windir%\System32\inetsrv\filter.dll" />`|  
 |`<modules>`|`<add name="IsapiFilterModule" lockItem="true" />`|  
 
-**서버 쪽 포함**  
+**SSI(Server Side Include)**  
 
 |섹션|구성 요소|  
 |----------------|--------------------------|  

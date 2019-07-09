@@ -1,6 +1,6 @@
 ---
 title: Windows Server 2019 시스템 요구 사항
-description: 저장소, CPU, 네트워크, 메모리 및 RAM이 Windows Server 2019 새로 설치에 대 한 최소 요구 사항입니다.
+description: Windows Server 2019의 새로 설치 시 스토리지, CPU, 네트워크, 메모리 및 RAM에 대한 최소 요구 사항입니다.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,21 +14,21 @@ ms.author: coreyp
 manager: jasgroce
 ms.localizationpriority: medium
 ms.openlocfilehash: d97ec0efee86165f82bdf99a316d24d9c39ec958
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
-ms.translationtype: MT
+ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/17/2019
 ms.locfileid: "66810720"
 ---
 # <a name="system-requirements"></a>시스템 요구 사항
 
->적용 대상: Windows Server 2019 
+>적용 대상: 시작 
 
-이 항목에서는 Windows Server를 실행 하려면 최소 시스템 요구 사항에 간략하게 설명&reg; 2019 합니다.
+이 항목에서는 Windows Server&reg; 2019를 실행하기 위한 최소 시스템 요구 사항을 설명합니다.
 
 ## <a name="review-system-requirements"></a>시스템 요구 사항 검토  
 
-예상 되는 시스템 요구 사항 Windows Server 2019 다음과 같습니다. 컴퓨터의 사양이 "최소" 요구 사항보다 낮으면 이 제품을 제대로 설치할 수 없습니다. 실제 요구 사항은 사용자가 설치하는 응용 프로그램과 기능 및 시스템 구성에 따라 달라질 수 있습니다.
+다음은 Windows Server 2019 설치를 위한 예상되는 시스템 요구 사항입니다. 컴퓨터의 사양이 "최소" 요구 사항보다 낮으면 이 제품을 제대로 설치할 수 없습니다. 실제 요구 사항은 사용자가 설치하는 응용 프로그램과 기능 및 시스템 구성에 따라 달라질 수 있습니다.
 
 달리 지정되지 않는 경우 이러한 최소 시스템 요구 사항은 모든 설치 옵션(Server Core, 데스크톱 환경 포함 서버, Nano 서버)과 Standard 및 Datacenter 버전에 적용됩니다.  
 
@@ -46,32 +46,32 @@ ms.locfileid: "66810720"
 - CMPXCHG16b, LAHF/SAHF 및 PrefetchW 지원  
 - 두 번째 수준 주소 변환(EPT 또는 NPT) 지원  
 
-[Coreinfo](https://technet.microsoft.com/sysinternals/cc835722.aspx) 는 도구는 CPU가 이러한 기능을 확인 하는 데 사용할 수 있습니다.
+[Coreinfo](https://technet.microsoft.com/sysinternals/cc835722.aspx)는 CPU가 가진 이러한 기능을 확인하는데 사용할 수 있는 도구입니다.
 
 ## <a name="ram"></a>RAM  
 다음은 이 제품 설치를 위해 예상되는 RAM 관련 요구 사항입니다.  
 
 **최소**:  
 - 512MB(데스크톱 환경 포함 서버 설치 옵션인 경우 2GB)
-- ECC (오류 수정 코드) 형식 또는 실제 호스트 배포에 대 한 유사한 기술
+- 물리적 호스트 배포를 위한 ECC(오류 수정 코드) 형식 또는 유사한 기술
 
 > [!IMPORTANT]  
 > 지원되는 최소 하드웨어 매개 변수(프로세서 코어 1개, 512MB RAM)를 사용하여 가상 컴퓨터를 만든 다음 가상 컴퓨터에서 이 릴리스를 설치하려고 하면 설치가 실패합니다.  
 >   
 > 이 문제를 방지하려면 다음 중 하나를 수행합니다.  
 >   
-> -   이 릴리스를 설치하려는 가상 컴퓨터에 800MB를 초과하는 RAM을 할당합니다. 설치가 완료되면 실제 서버 구성에 따라 할당 크기를 512MB RAM 정도로 변경할 수 있습니다.  
-> -   Shift+F10을 사용하여 가상 컴퓨터에서 이 릴리스의 부팅 프로세스를 중단합니다. 명령 프롬프트가 열리면 Diskpart.exe를 사용하여 설치 파티션을 만들고 포맷합니다. **Wpeutil createpagefile /path=C:\pf.sys** 를 실행합니다(만든 설치 파티션이 C:인 경우 예제). 명령 프롬프트를 닫고 설치를 계속 진행합니다.  
+> -   이 릴리스를 설치하려는 가상 머신에 800MB를 초과하는 RAM을 할당합니다. 설치가 완료되면 실제 서버 구성에 따라 할당 크기를 512MB RAM 정도로 변경할 수 있습니다.  
+> -   Shift+F10을 사용하여 가상 머신에서 이 릴리스의 부팅 프로세스를 중단합니다. 명령 프롬프트가 열리면 Diskpart.exe를 사용하여 설치 파티션을 만들고 포맷합니다. **Wpeutil createpagefile /path=C:\pf.sys** 를 실행합니다(만든 설치 파티션이 C:인 경우 예제). 명령 프롬프트를 닫고 설치를 계속 진행합니다.  
 
 ## <a name="storage-controller-and-disk-space-requirements"></a>저장소 컨트롤러 및 디스크 공간 요구 사항  
-Windows Server 2019를 실행 하는 컴퓨터에는 PCI Express 아키텍처 사양과 호환 되는 저장소 어댑터가 포함 해야 합니다. 서버에서 하드 디스크 드라이브로 분류된 영구 저장 장치는 PATA가 아니어야 합니다. Windows Server 2019 부팅, 페이지 또는 데이터 드라이브에 대 한 ATA/PATA/IDE/EIDE를 허용 하지 않습니다.  
+Windows Server 2019를 실행하는 컴퓨터에는 PCI Express 아키텍처 사양과 호환되는 저장소 어댑터가 포함되어 있어야 합니다. 서버에서 하드 디스크 드라이브로 분류된 영구 저장 장치는 PATA가 아니어야 합니다. Windows Server 2019에서는 부팅, 페이지 또는 데이터 드라이브에 ATA/PATA/IDE/EIDE를 사용할 수 없습니다.  
 
 다음은 시스템 파티션을 위한 **최소** 예상 디스크 공간 요구 사항입니다.  
 
 **최소**: 32GB  
 
 > [!NOTE]
-> 32GB는 성공적인 설치의 *최소 절대*값으로 간주됩니다. 이 최소 Windows Server 2019 웹 서비스 (IIS) 서버 역할을 사용 하 여 Server Core 모드에서 설치 하도록 허용 해야 합니다. Server Core 모드의 서버는 GUI 포함 서버 모드의 동일한 서버보다 약 4GB 작습니다. 
+> 32GB는 성공적인 설치의 *최소 절대*값으로 간주됩니다. 이 최소 설치를 사용하여 웹 서비스(IIS) 서버 역할을 포함하는 Server Core 모드에서 Windows Server 2019를 설치할 수 있습니다. Server Core 모드의 서버는 GUI 포함 서버 모드의 동일한 서버보다 약 4GB 작습니다. 
 > 
 > 시스템 파티션은 다음의 환경에서 추가 공간을 필요로 합니다.  
 > 
@@ -82,13 +82,13 @@ Windows Server 2019를 실행 하는 컴퓨터에는 PCI Express 아키텍처 �
 
 이 릴리스에서 사용되는 네트워크 어댑터는 다음 기능을 포함해야 합니다.  
 
-**최소**:  
+**최소 요구 사항**:  
 - 최소 기가비트 처리량을 지원하는 이더넷 어댑터  
 - PCI Express 아키텍처 사양 준수  
 
 네트워크 디버깅을 지원하는 네트워크 어댑터(KDNet)는 유용하지만 최소 요구 사항이 아닙니다.   
 
-네트워크 어댑터 지원 (PXE (pre-boot Execution Environment)는 유용 하지만 최소 요구 사항이 없습니다.
+PXE(Pre-boot Execution Environment)를 지원하는 네트워크 어댑터는 유용하지만 최소 요구 사항은 아닙니다.
 
 ## <a name="other-requirements"></a>기타 요구 사항  
 이 릴리스를 실행하는 컴퓨터에는 다음 항목도 있어야 합니다.  
@@ -100,9 +100,9 @@ Windows Server 2019를 실행 하는 컴퓨터에는 PCI Express 아키텍처 �
 - 보안 부팅을 지원하는 UEFI 2.3.1c 기반 시스템 및 펌웨어  
 - 신뢰할 수 있는 플랫폼 모듈  
 
--   Super VGA(1024 x 768) 이상의 해상도를 지원하는 그래픽 장치 및 모니터  
+-   Super VGA(1024 x 768) 이상의 해상도를 지원하는 그래픽 디바이스 및 모니터  
 
--   키보드 및 Microsoft&reg; 마우스(또는 기타 호환 가능 포인팅 장치)  
+-   키보드 및 Microsoft&reg; 마우스(또는 기타 호환 가능 포인팅 디바이스)  
 
 -   인터넷 액세스(사용 요금 부과 가능)  
 
@@ -110,6 +110,6 @@ Windows Server 2019를 실행 하는 컴퓨터에는 PCI Express 아키텍처 �
 > TPM(신뢰할 수 있는 플랫폼 모듈) 칩은 이 릴리스를 설치하는 데 반드시 필요한 것은 아니지만 BitLocker 드라이브 암호화와 같은 특정 기능을 사용하는 데 필요합니다. 컴퓨터에서 TPM을 사용하는 경우 다음 요구 사항을 충족해야 합니다.  
 >  
 > - 하드웨어 기반 TPM은 TPM 사양 버전 2.0를 구현해야 합니다.  
-> - 버전 2.0를 구현하는 TPM에는 하드웨어 공급 업체에 의해 TPM에 사전 구축된 또는 첫 번째로 부팅하는 동안 장치에 의해 검색할 수 있는 EK 인증서가 있어야 합니다.  
-> - 버전 2.0을 구현하는 TPM은 SHA-256 PCR 뱅크와 제공되어야 하며 SHA-256에 대해 PCR 0~23을 구현해야 합니다. SHA-1 및 SHA-256 측정 둘 다에 사용할 수 있는 전환 가능한 단일 PCR 뱅크가 포함된 TPM을 사용할 수 있습니다.  
+> - 버전 2.0을 구현하는 TPM에는 하드웨어 공급업체에서 TPM에 미리 프로비전했거나 처음 부팅하는 동안 디바이스에서 검색할 수 있는 EK 인증서가 있어야 합니다.  
+> - 버전 2.0을 구현하는 TPM은 SHA-256 PCR 뱅크와 함께 제공되고 SHA-256용 PCR 0~23을 구현해야 합니다. SHA-1 및 SHA-256 측정 둘 다에 사용할 수 있는 전환 가능한 단일 PCR 뱅크가 포함된 TPM을 사용할 수 있습니다.  
 > - TPM을 해제하는 UEFI 옵션은 요구 사항이 아닙니다.  

@@ -1,6 +1,6 @@
 ---
 title: 원격 데스크톱 클라이언트-지원 되는 구성
-description: 원격 데스크톱 클라이언트를 사용 하 여 액세스할 수 있는 Pc에 알아봅니다.
+description: 원격 데스크톱 클라이언트를 사용하여 액세스할 수 있는 PC에 대해 알아보기
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -15,11 +15,11 @@ ms.author: elizapo
 ms.date: 06/05/2018
 ms.localizationpriority: medium
 ms.openlocfilehash: d38008b6387385917ad21ce7e169b8ff3f4d18ba
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59884694"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "63748968"
 ---
 # <a name="remote-desktop-client---supported-configuration"></a>원격 데스크톱 클라이언트-지원 되는 구성
 
@@ -36,7 +36,7 @@ ms.locfileid: "59884694"
 - Windows Server 2008
 - Windows Server 2008 R2
 - Windows Server 2012
-- Windows Server 2012 R2
+- Windows Server 2012 R2
 - Windows Server 2016
 - Windows Multipoint Server 2011
 - Windows Multipoint Server 2012
@@ -48,14 +48,14 @@ ms.locfileid: "59884694"
 - Windows Server 2008
 - Windows Server 2008 R2
 - Windows Server 2012
-- Windows Server 2012 R2
+- Windows Server 2012 R2
 - Windows Server 2016
 - Windows Small Business Server 2011
 
 다음 운영 체제 RD 웹 액세스 또는 RemoteApp 서버 역할도 할 수 있습니다.
 - Windows Server 2008 R2
 - Windows Server 2012
-- Windows Server 2012 R2
+- Windows Server 2012 R2
 - Windows Server 2016
 
 ## <a name="unsupported-windows-versions-and-editions"></a>지원 되지 않는 Windows 버전 및 에디션

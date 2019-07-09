@@ -1,6 +1,6 @@
 ---
-title: 릴리스 정보-Windows Server 2019의 중요 한 문제
-description: 충돌, 중단, 설치 오류 및 데이터 손실을 방지 하려면 해결 방법이 필요한 중요 한 문제 요약
+title: 릴리스 정보 - Windows Server 2019의 주요 문제점
+description: 충돌, 중단, 설치 실패 및 데이터 손실 등을 방지하기 위한 해결책이 필요한 중요한 문제를 요약합니다.
 ms.prod: windows-server-threshold
 ms.technology: server-general
 ms.topic: article
@@ -11,34 +11,34 @@ manager: jasgroce
 ms.localizationpriority: medium
 ms.date: 06/07/2019
 ms.openlocfilehash: 515255c301d343aa1b83bcfb506f2e3baa6ca969
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
-ms.translationtype: MT
+ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/17/2019
 ms.locfileid: "66810734"
 ---
-# <a name="release-notes---important-issues-in-windows-server-2019"></a>릴리스 정보-Windows Server 2019의 중요 한 문제
+# <a name="release-notes---important-issues-in-windows-server-2019"></a>릴리스 정보 - Windows Server 2019의 주요 문제점
 
->적용 대상: Windows Server 2019
+>적용 대상: 시작
 
-이러한 릴리스 정보는 Windows Server 2019을 비롯해 운영 체제 방지 하거나 문제를 해결 하는 방법을 알고 있는 경우에 가장 중요 한 문제를 요약 합니다. 디자인별 변경 내용, 새 기능 및이 릴리스에서 수정 하는 방법에 대 한 내용은 [What's New in Windows Server 2019](whats-new-19.md) 및 특정 기능 팀의에서 공지 합니다. 달리 지정 하지 않으면 보고 된 각 문제는 모든 버전 및 Windows Server 2019의 설치 옵션에 적용 됩니다.  
+이러한 릴리스 정보에서는 문제를 방지하거나 해결하는 방법(알려진 경우)을 포함하여 Windows Server 2019 운영 체제의 가장 중요한 문제를 요약합니다. 이 릴리스의 계획된 변경 사항, 새로운 기능 및 해결 방법에 대한 자세한 내용은 [Windows Server 2019의 새로운 기능](whats-new-19.md) 및 해당하는 기능 팀의 공지를 참조하세요. 별도로 지정하지 않는 이상, 보고된 각 문제는 Windows Server 2019의 모든 버전 및 설치 옵션에 적용됩니다.  
 
 이 문서는 계속해서 업데이트됩니다. 해결 방법이 필요한 중요한 문제가 발견되면 그 내용이 추가되고 새로운 해결 방법 및 수정 사항이 제공됩니다.  
 
 ## <a name="release-notes"></a>릴리스 정보
 
-Windows Server 2019에 다음과 같은 알려진된 문제가 있습니다.
+Windows Server 2019에는 다음과 같은 알려진 문제가 있습니다.
 
-| Title         | 설명                            |
+| 제목         | 설명                            |
 | -----         | -----------                            |
-| 서버 설치 중 설치 옵션 메뉴 독일어 텍스트가 잘렸습니다 합니다. | 데스크톱 환경 설치 옵션에 대 한 설명을 누락 및 잘못 된 문자를 맨 끝에는 "를 설치 하려는 운영 체제 선택" 이라는 운영 체제 선택 창에 독일어 server 미디어에서 설치 프로그램을 실행 하는 경우 문장입니다. 표시 될 전체 독일어 텍스트가 다음과 같습니다.<br/>      <br/>`Durch diese Option wird die vollständige grafische Umgebung von Windows installiert, wodurch zusätzlicher Speicherplatz verbraucht wird. Sie kann hilfreich sein, wenn Sie den Windows-Desktop verwenden möchten oder über eine App verfügen, die die grafische Umgebung benötigt.` <br><br>이 공용 가용성의 Windows Server 2019, Windows Server, 1809, 버전 및 Microsoft Hyper-v Server 2019 때 해제 독일어 미디어에만 영향을 줍니다.|
-| Windows Server 버전 1809 설치 하는 동안 잘못 된 Windows Server 브랜드 이미지 | Windows Server 버전 1809에 대 한 설치 환경을 중 몇 가지 초기에 배경 이미지 화면 표시 &quot;Windows Server 2019&quot;합니다.  Windows Server 버전 1709 및 1803를 사용 하 여이 단순히 나타나야 하는 대로 &quot;Windows Server&quot;합니다.  어디서 나 다른 제품에서 다른 영향은 없습니다 되며 Windows Server 2019 제품에 영향을 주지 않습니다.  문제는 설치 Windows Server 버전 1809, 볼륨 라이선스 서비스 센터에 액세스 하는 볼륨 라이선스 고객 에게만 제공 하는 동안이 이미지 제한 됩니다.<br/> |
+| 서버 설치 중 설치 옵션 메뉴에서 독일어 텍스트가 잘림 | 독일어 서버 미디어에서 설치 프로그램을 실행하는 경우 “설치할 운영 체제 선택”이라고 표시되는 운영 체제 선택 창의 데스크톱 환경 설치 옵션에 대한 설명에서 문장 맨 끝의 문자가 누락되거나 올바르지 않게 표시됩니다. 표시되어야 하는 전체 독일어 텍스트는 다음과 같습니다.<br/>      <br/>`Durch diese Option wird die vollständige grafische Umgebung von Windows installiert, wodurch zusätzlicher Speicherplatz verbraucht wird. Sie kann hilfreich sein, wenn Sie den Windows-Desktop verwenden möchten oder über eine App verfügen, die die grafische Umgebung benötigt.` <br><br>이러한 문제는 Windows Server 2019, Windows Server, 버전 1809 및 Microsoft Hyper-V Server 2019의 일반 공급에서 출시된 독일어 미디어에만 영향을 줍니다.|
+| Windows Server, 버전 1809를 설치하는 동안 Windows Server 브랜드 이미지가 올바르지 않음 | Windows Server, 버전 1809에 대한 설치 환경 동안, 일부 초기 화면의 배경 이미지에 &quot;Windows Server 2019&quot;가 표시됩니다.  Windows Server, 버전 1709 및 1803을 사용할 때처럼 단순히 &quot;Windows Server&quot;로 표시되어야 합니다.  제품의 다른 부분에는 영향을 미치지 않으며, Windows Server 2019 제품에도 영향을 주지 않습니다.  이 이슈는 Windows Server, 버전 1809의 설치 동안, 볼륨 라이선스 서비스 센터에 액세스하는 볼륨 라이선스 고객에게만 제공되는 이 단일 이미지로 제한됩니다.<br/> |
 
 ### <a name="copyright"></a>저작권
 
-이 문서는 "있는 그대로" 제공됩니다. URL 및 기타 인터넷 웹 사이트 참조를 포함하여 이 설명서의 내용 및 의견은 예고 없이 변경될 수 있습니다.  
+이 문서는 "있는 그대로" 제공됩니다. URL 및 다른 인터넷 웹 사이트 참조를 포함한 이 문서의 내용과 관점은 예고 없이 변경될 수 있습니다.  
 
-이 설명서는 Microsoft 제품의 지적 재산에 대한 법적 권한을 제공하지 않습니다. 이 설명서는 내부 참조용으로만 복사 및 사용할 수 있습니다.
+이 문서는 귀하에게 Microsoft 제품의 지적 재산에 대한 어떠한 법적 권리도 제공하지 않습니다. 개인적인 목적과 참조용으로만 이 문서를 복사하고 사용할 수 있습니다.
 
 &copy; 2019 Microsoft Corporation. All rights reserved.  
 

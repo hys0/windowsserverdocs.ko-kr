@@ -13,10 +13,10 @@ author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
 ms.openlocfilehash: e832d35f1ae3bbdba256b3531a22f93b69cadbb3
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
-ms.translationtype: MT
+ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
+ms.lasthandoff: 06/17/2019
 ms.locfileid: "66443396"
 ---
 # <a name="troubleshooting-nano-server"></a>Nano 서버 문제 해결
@@ -32,7 +32,7 @@ ms.locfileid: "66443396"
  
 Nano 서버에는 네트워크가 잘못 구성되어 Nano 서버로의 연결을 방해해도 Nano 서버에 액세스할 수 있도록 해주는 복구 콘솔이 포함됩니다. 복구 콘솔을 사용하여 네트워크를 수정한 후 일반적인 원격 관리 도구를 사용할 수 있습니다.  
   
-모니터와 키보드가 연결된 가상 컴퓨터 또는 물리적 컴퓨터에서 Nano 서버를 부팅하면 전체 화면으로 텍스트 모드 프롬프트가 표시됩니다. 관리자 계정으로 이 프롬프트에 로그인하면 Nano 서버의 컴퓨터 이름 및 IP 주소가 표시됩니다. 이러한 명령을 사용하여 이 콘솔에서 탐색할 수 있습니다.  
+모니터와 키보드가 연결된 가상 머신 또는 물리적 컴퓨터에서 Nano 서버를 부팅하면 전체 화면으로 텍스트 모드 로그온 프롬프트가 표시됩니다. 관리자 계정으로 이 프롬프트에 로그인하면 Nano 서버의 컴퓨터 이름 및 IP 주소가 표시됩니다. 이러한 명령을 사용하여 이 콘솔에서 탐색할 수 있습니다.  
   
 -   화살표 키를 사용하여 스크롤  
   

@@ -1,6 +1,6 @@
 ---
 title: 시작
-description: '서버에 대한 기본 사항: 시스템 요구 사항, 릴리스 정보, 업그레이드 옵션'
+description: 'Server에 대한 기본 사항: 시스템 요구 사항, 릴리스 정보, 업그레이드 옵션'
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill
@@ -11,10 +11,10 @@ author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
 ms.openlocfilehash: e7ff669b1a1ca3bed5d7c827c40bc46e81ea3f02
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
-ms.translationtype: MT
+ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/17/2019
 ms.locfileid: "66810595"
 ---
 # <a name="get-started-with-windows-server-2016"></a>Windows Server 2016 시작
@@ -22,9 +22,9 @@ ms.locfileid: "66810595"
 >적용 대상: Windows Server 2016
 
 > [!TIP]
-> 이전 버전의 Windows Server에 대한 자세한 내용이 궁금하십니까? docs.microsoft.com에서 다른 [Windows Server 라이브러리](/previous-versions/windows/)를 확인할 수 있습니다. 또한 특정 정보에 대해 [이 사이트를 검색](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions)할 수 있습니다.
+> 이전 버전의 Windows Server에 대한 정보를 찾으시나요? docs.microsoft.com에서 다른 [Windows Server 라이브러리](/previous-versions/windows/)를 확인하세요. [이 사이트에서 특정 정보를 검색](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions)할 수도 있습니다.
 
-![확인 표시가 있는 상자를 보여 주는 아이콘](../media/landing-icons/getstarted.png) 이 이곳에서 Windows Server 2016으로 전환할 준비가 경우를 결정할 수 있도록 자세한 정보를 포함 합니다. 시스템 요구 사항, 업그레이드 옵션 및 Windows Server 2016으로 전환에 대한 기타 정보를 확인했으면 기본 [Windows Server 2016](Windows-Server-2016.md) 허브로 돌아가 요구 사항에 가장 적합한 버전 및 설치 옵션을 설치하는 과정을 시작할 수 있습니다. 
+![확인 표시가 있는 상자를 표시하는 아이콘](../media/landing-icons/getstarted.png) 이 컬렉션에는 Windows Server 2016으로 이동할 준비가 되면 확인할 수 있는 자세한 정보가 포함되어 있습니다. 시스템 요구 사항, 업그레이드 옵션 및 Windows Server 2016으로 전환에 대한 기타 정보를 확인했으면 기본 [Windows Server 2016](Windows-Server-2016.md) 허브로 돌아가 요구 사항에 가장 적합한 버전 및 설치 옵션을 설치하는 과정을 시작할 수 있습니다. 
 
 > [!Note]
 > Windows Server 2016을 다운로드 하려면 참조 [Windows Server 평가판](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016)합니다.
@@ -39,7 +39,7 @@ Windows Server 2016을 설치 및 실행하기 위한 최소 하드웨어 요�
 ## <a name="recommendations-for-moving-to-windows-server-2016recommendations-moving-to-server2016md"></a>[Windows Server 2016으로 전환 시 권장 사항](Recommendations-moving-to-Server2016.md)
 다양한 시나리오에서 Windows Server 2016으로 전환하기 위해 사용할 수 있는 방법을 제공하는 포괄적인 표입니다.
 
-## <a name="features-removed-or-deprecated-in--windows-server-2016deprecated-featuresmd"></a>[기능 제거 또는 Windows Server 2016에서에서 사용 되지 않음](deprecated-features.md)
+## <a name="features-removed-or-deprecated-in--windows-server-2016deprecated-featuresmd"></a>[Windows Server 2016에서 제거되었거나 사용되지 않는 기능](deprecated-features.md)
 이미 Windows Server 2016에서 제거되었거나 향후 제거되도록 지정된 기능
 
 ## <a name="upgrade-and-conversion-optionssupported-upgrade-pathsmd"></a>[업그레이드 및 변환 옵션](Supported-Upgrade-Paths.md)
@@ -48,7 +48,7 @@ Windows Server 2016을 설치 및 실행하기 위한 최소 하드웨어 요�
 ## <a name="server-role-upgrade-and-migration-matrixserver-role-upgradeability-tablemd"></a>[서버 역할 업그레이드 및 마이그레이션 매트릭스](Server-Role-Upgradeability-Table.md)
 Windows Server 2016으로 특정 서버 역할을 가져오기 위해 필요한 추가 단계에 대한 정보
 
-## <a name="server-application-compatibility-tableserver-application-compatibilitymd"></a>[서버 응용 프로그램 호환성 표](Server-Application-Compatibility.md)
+## <a name="server-application-compatibility-tableserver-application-compatibilitymd"></a>[서버 애플리케이션 호환성 표](Server-Application-Compatibility.md)
 Windows Server 2016에서 SQL이 작동하나요? Exchange를 실행하는 데 필요한 단계는 어떻게 되나요? 이 항목에서는 수행해야 할 작업을 설명합니다.
 
 ## <a name="server-activation-guideserver-2016-activationmd"></a>[서버 정품 인증 가이드](Server-2016-activation.md)

@@ -1,6 +1,6 @@
 ---
-title: RDS-실행 및 조정
-description: RD 배포를 설계할 수 있도록 계획 정보입니다.
+title: RDS - 실행 및 조정
+description: RD 배포를 용이하게 설계하기 위한 계획 정보입니다.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,27 +14,27 @@ ms.assetid: 047b08be-7f91-4194-a641-5b6941b92515
 author: spatnaik
 manager: scottman
 ms.openlocfilehash: 534fbef473c2627f65189c6f3dfcc9a89200f289
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59815734"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "63743497"
 ---
-# <a name="plan-and-design-your-remote-desktop-services-environment"></a>계획 및 원격 데스크톱 서비스 환경 디자인
+# <a name="plan-and-design-your-remote-desktop-services-environment"></a>원격 데스크톱 서비스 환경 계획 및 디자인
 
-특정 패턴 및 사례를 사용을 해야 하는 뛰어난 원격 데스크톱 배포 합니다.
-최적의 성능 및 확장에 대 한 디자인에는 키입니다. 아래 시나리오를 계획, 설계를 하 고 지속적으로 배포를 구체화 하는 데 사용 합니다.
+확장성이 뛰어난 원격 데스크톱 배포를 구현하려면 특정 패턴 및 사례를 사용해야 합니다.
+최적의 성능 및 스케일 아웃을 위해 디자인하는 것이 중요합니다. 아래 시나리오를 참조하여 배포를 구상 및 계획하고 계속해서 세부적으로 저장하세요.
 
-계획 및 배포를 디자인 하는 다음 정보를 사용 합니다.
+다음 정보를 사용하여 배포를 계획 및 디자인합니다.
 
-- [어디에서 나 빌드](rds-plan-build-anywhere.md)
-- [다양 한 종류의 사용자 제공](rds-plan-cater-to-users.md)
-- [어디에서 나 액세스](rds-plan-access-from-anywhere.md)
+- [어디서나 빌드](rds-plan-build-anywhere.md)
+- [다양한 종류의 사용자에게 제공](rds-plan-cater-to-users.md)
+- [어디서나 액세스](rds-plan-access-from-anywhere.md)
 - [고가용성](rds-plan-high-availability.md)
-- [다단계 인증](rds-plan-mfa.md)
-- [보안 데이터 저장소](rds-plan-secure-data-storage.md)
-- [고급 그래픽 렌더링을 사용 하도록 설정](rds-graphics-virtualization.md)
-- [모든 장치에서 연결](rds-plan-connect-from-any-device.md)
+- [MultiFactor Authentication](rds-plan-mfa.md)
+- [데이터 스토리지 보안](rds-plan-secure-data-storage.md)
+- [고사양 그래픽 렌더링 사용](rds-graphics-virtualization.md)
+- [모든 디바이스에서 연결](rds-plan-connect-from-any-device.md)
 - [지불 방법 선택](rds-plan-choose-how-you-pay.md)
 
-도 검토 해야 합니다 [데스크톱 호스팅 참조 아키텍처](desktop-hosting-reference-architecture.md), 원격 데스크톱 아키텍처의 개요를 제공 하며 Azure 인프라를 포함 하는 하이브리드 RDS 환경을 계획 하는 데 도움이 됩니다.
+원격 데스크톱 아키텍처의 개요를 제공하고, Azure 인프라를 포함하는 하이브리드 RDS 환경을 보다 유용하게 계획하도록 하는 [데스크톱 호스팅 참조 아키텍처](desktop-hosting-reference-architecture.md)도 검토하세요.
