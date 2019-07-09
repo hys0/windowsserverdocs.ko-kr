@@ -1,6 +1,6 @@
 ---
-title: 원격 데스크톱 서비스-보안 데이터 저장소
-description: 안전 하 게 rds.의 사용자 프로필 디스크 (Upd)를 사용 하 여 데이터를 저장 하기 위한 계획 정보
+title: 원격 데스크톱 서비스 - 데이터 스토리지 보안
+description: RDS에서 UPD(사용자 프로파일 디스크)를 사용하여 데이터를 안전하게 저장하기 위한 계획 정보
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,22 +14,22 @@ ms.author: elizapo
 ms.date: 11/21/2016
 manager: dongill
 ms.openlocfilehash: c3c7be624e3b093347807a5ee131270d3c802f1a
-ms.sourcegitcommit: d888e35f71801c1935620f38699dda11db7f7aad
-ms.translationtype: MT
+ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/17/2019
 ms.locfileid: "66805166"
 ---
-# <a name="remote-desktop-services---secure-data-storage-with-upds"></a>원격 데스크톱 서비스-Upd 사용 하 여 보안 데이터 저장소
+# <a name="remote-desktop-services---secure-data-storage-with-upds"></a>원격 데스크톱 서비스 - UPD를 사용한 데이터 스토리지 보안
 
->적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2019, Windows Server 2016
 
-Store 비즈니스 리소스, 사용자 개인 설정 데이터 및 설정을 안전 하 게 온-프레미스 또는 Azure입니다. RD 세션 호스트 AD 인증을 사용 및 개인 설정 된 환경에서 안전 하 게 필요한 리소스를 사용 하 여 사용자 역량을 강화 합니다. 
+온-프레미스 또는 Azure에서 비즈니스 리소스, 사용자 개인 설정 데이터 및 설정을 안전하게 저장합니다. RD 세션 호스트는 AD 인증을 사용하며 사용자에게 개인 설정된 환경에서 필요한 리소스를 안전하게 사용할 수 있는 권한을 부여합니다. 
 
-보장 사용자는 자신의 원격 리소스에 액세스, RDS 배포를 관리 하는 중요 한 측면은 끝점에 관계 없이 일관 된 환경이 있습니다. 사용자 프로필 디스크 (Upd)에 사용자 데이터, 사용자 지정 및 단일 컬렉션 내에서 사용자에 따라 응용 프로그램 설정을 허용 합니다. UPD는 사용자별, 경우에 로그인 할-UPD는 해당 세션의 기간에 대 한 로컬 드라이브 취급 사용자의 세션에 탑재 된 공유를 중앙에 저장 하는 컬렉션 별 VHD 파일입니다. 
+사용자가 원격 리소스에 액세스하는 엔드포인트에 관계없이 사용자가 일관된 경험을 갖도록 하는 것은 RDS 배포 관리에서 중요한 측면입니다. UPD(사용자 프로파일 디스크)를 사용하면 사용자 데이터, 사용자 지정 및 애플리케이션 설정이 단일 컬렉션 내에서 사용자를 팔로우할 수 있습니다. UPD는 사용자당 컬렉션당 VHD 파일로, 로그인 시 사용자 세션에 탑재된 중앙 공유에 저장됩니다. UPD는 해당 세션 동안 로컬 드라이브로 처리됩니다. 
 
-사용자의 관점에서 UPD famililar 경험이-해당 문서를 저장할 폴더 (대가 로컬 드라이브)를 변경 하는 문서는 앱 설정, 일반적인 방법으로 하며 Windows 환경에 사용자 지정 합니다. 레지스트리 하이브를 포함 하 여이 모든 데이터는 UPD에 저장 하 고 중앙 네트워크 공유에 유지 합니다. 사용자가 적극적으로 데스크톱 또는 RemoteApp에 연결 하는 경우에 Upd 사용자에 게 제공 됩니다. 사용자의 전체 때문에 컬렉션 내에서 Upd만 로밍할 수 `C:\Users\<username\>` AppData\Local 등 디렉터리 UPD에 저장 됩니다.
+사용자의 관점에서 UPD는 문서를 문서 폴더(로컬 드라이브로 보이는 것)에 저장하고, 평소처럼 앱 설정을 변경하며, Windows 환경을 사용자 지정하는 등 유사한 경험을 제공합니다. 레지스트리 하이브를 포함한 이 모든 데이터는 UPD에 저장되며 중앙 네트워크 공유로 유지됩니다. UPD는 사용자가 데스크톱 또는 RemoteApp에 연결되어 있을 때만 사용할 수 있습니다. 사용자의 전체 `C:\Users\<username\>` 디렉터리(AppData\Local 포함)가 UPD에 저장되어 있으므로 UPD는 컬렉션 내에서만 로밍할 수 있습니다.
 
-사용할 수 있습니다 [PowerShell cmdlet](https://technet.microsoft.com/library/jj215443.aspx) 중앙 공유, 각 UPD의 크기와 폴더를 포함 하거나 UPD에 저장 된 사용자 프로필에서 제외 해야 경로를 지정 합니다. 으로 이동 하 여 서버 관리자를 통해 Upd를 설정할 수 있습니다. 또는 **원격 데스크톱 서비스** > **컬렉션** > **데스크톱 컬렉션**  >  **데스크톱 컬렉션 속성** > **사용자 프로필 디스크**합니다. 사용 하도록 설정 하거나 해당 컬렉션의 특정 사용자가 아닌에 전체 컬렉션의 모든 사용자에 대 한 Upd를 비활성화할 있습니다 note 합니다. Upd 서버 컬렉션에 있는 전체 제어 권한이 있는 중앙 식 파일 공유에 저장 되어야 합니다. 
+[PowerShell cmdlet](https://technet.microsoft.com/library/jj215443.aspx)을 사용하여 중앙 공유에 대한 경로, 각 UPD의 크기 및 UPD에 저장된 사용자 프로필에서 포함하거나 제외할 폴더를 지정할 수 있습니다. 또는 **원격 데스크톱 서비스** > **컬렉션** > **데스크톱 컬렉션** > **데스크톱 컬렉션 속성** > **사용자 프로필 디스크**로 이동하여 서버 관리자를 통해 UPD를 사용하도록 설정할 수 있습니다. 해당 컬렉션의 특정 사용자가 아닌 전체 컬렉션의 모든 사용자에 대해 UPD를 사용하거나 사용하지 않도록 설정합니다. UPD는 컬렉션의 서버가 전체 제어 권한을 갖는 중앙 파일 공유에 저장되어야 합니다. 
 
-사용 하 여 Azure에 저장 하 여 Upd에 대 한 고가용성을 얻을 수 있습니다 [저장소 공간 다이렉트](rds-storage-spaces-direct-deployment.md)합니다. 
+[스토리지 공간 다이렉트](rds-storage-spaces-direct-deployment.md)를 사용하여 Azure에 저장하면 UPD에 대한 고가용성을 달성할 수 있습니다. 

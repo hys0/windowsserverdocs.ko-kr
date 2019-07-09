@@ -15,11 +15,11 @@ ms.author: jaimeo
 manager: dongill
 ms.localizationpriority: medium
 ms.openlocfilehash: 2c26d6d0c4c4465b5f9073dbcac951fc0adce1d5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59882054"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "63688539"
 ---
 # <a name="comparison-of-standard-and-datacenter-editions-of-windows-server-2016"></a>Windows Server 2016 Standard Edition과 Datacenter Edition의 비교
 
@@ -38,7 +38,7 @@ ms.locfileid: "59882054"
 |최대 RAM|24TB|24TB|
 |가상화 게스트로 이용 가능 여부|예(두 대의 가상 컴퓨터 및 라이선스당 하나의 Hyper-V 호스트)|예(가상 컴퓨터 무제한 허용 및 라이선스당 하나의 Hyper-V 호스트)|
 |서버의 도메인 가입 가능 여부|예|예|
-|경계 네트워크 보호/방화벽|no|no|
+|경계 네트워크 보호/방화벽|아니요|아니요|
 |DirectAccess|예|예|
 |DLNA 코덱 및 웹 미디어 스트리밍|예(데스크톱 환경 포함 서버로 설치된 경우)|예(데스크톱 환경 포함 서버로 설치된 경우)|
 
@@ -124,7 +124,7 @@ ms.locfileid: "59882054"
 |SMTP 서버|예|예|
 |SNMP 서비스|예|예|
 |소프트웨어 부하 분산 장치|예|예|
-|저장소 복제본|아니요|예|
+|저장소 복제본|아니오|예|
 |텔넷 클라이언트|예|예|
 |TFTP 클라이언트|예(데스크톱 환경 포함 서버로 설치된 경우)|예(데스크톱 환경 포함 서버로 설치된 경우)|
 |패브릭 관리를 위한 VM 보호 도구|예|예|
@@ -160,10 +160,10 @@ ms.locfileid: "59882054"
 |Nano Server 설치 옵션|예|예|
 |서버 관리자|예|예|
 |SMB 다이렉트 및 SMB over RDMA|예|예|
-|소프트웨어 정의 네트워킹|아니요|예|
+|소프트웨어 정의 네트워킹|아니오|예|
 |저장소 관리 서비스|예|예|
 |저장소 공간|예|예|
-|저장소 공간 다이렉트|아니요|예|
+|저장소 공간 다이렉트|아니오|예|
 |볼륨 정품 인증 서비스|예|예|
 |VSS (Volume Shadow Copy Service) integration|예|예|
 |Windows Server Update Services|예|예|

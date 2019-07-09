@@ -13,11 +13,11 @@ author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
 ms.openlocfilehash: 15d9ebfe72744ed26239587ef297b06361233425
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59874044"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "63687686"
 ---
 # <a name="mpio-on-nano-server"></a>Nano Server의 MPIO
 
@@ -28,7 +28,7 @@ ms.locfileid: "59874044"
 
 이 항목에서는 Windows Server 2016의 Nano 서버 설치에서 MPIO의 사용에 대해 소개합니다. Windows Server에서 MPIO에 대한 일반 정보는 [다중 경로 I/O 개요](https://technet.microsoft.com/library/cc725907.aspx)를 참조하세요.  
 
-## <a name="using-mpio-on-nano-server"></a>Nano Server에서 MPIO 사용  
+## <a name="using-mpio-on-nano-server"></a>Nano 서버에서 MPIO 사용  
 Nano 서버에서 MPIO를 사용할 수 있으나 다음과 같은 차이점이 있습니다.  
   
 -   MSDSM만 지원됩니다.  
@@ -43,7 +43,7 @@ Nano 서버에서 MPIO를 사용할 수 있으나 다음과 같은 차이점이 
   
 -   ALUA 배열에 대한 경로 상태(활성/수동)가 대상 배열에서 선택됩니다.  
   
--   저장소 장치는 버스 유형(예: FC, iSCSI, SAS)별로 요청됩니다. Nano 서버에 MPIO가 설치되면 MPIO가 특정 디스크를 요청 및 관리하도록 구성될 때까지 디스크가 중복(경로당 하나 사용 가능)된 것으로 계속 노출됩니다. 이 항목의 예제 스크립트는 MPIO에 대한 디스크를 요청 및 요청 취소합니다.
+-   저장소 디바이스는 버스 유형(예: FC, iSCSI, SAS)별로 요청됩니다. Nano 서버에 MPIO가 설치되면 MPIO가 특정 디스크를 요청 및 관리하도록 구성될 때까지 디스크가 중복(경로당 하나 사용 가능)된 것으로 계속 노출됩니다. 이 항목의 예제 스크립트는 MPIO에 대한 디스크를 요청 및 요청 취소합니다.
 
 - iSCSI 부팅은 지원되지 않습니다.
   
@@ -51,7 +51,7 @@ Nano 서버에서 MPIO를 사용할 수 있으나 다음과 같은 차이점이 
   
 `Enable-WindowsOptionalFeature -Online -FeatureName MultiPathIO`  
   
-이 예제 스크립트를 통해 호출자는 특정 레지스트리 키를 변경하여 MPIO에 대한 디스크를 요청 및 요청 취소할 수 있습니다. 이러한 키에 장치를 추가하여 다른 저장 장치를 요청할 수 있지만 키를 직접 조작하지 않는 것이 좋습니다.  
+이 예제 스크립트를 통해 호출자는 특정 레지스트리 키를 변경하여 MPIO에 대한 디스크를 요청 및 요청 취소할 수 있습니다. 이러한 키에 디바이스를 추가하여 다른 저장 디바이스를 요청할 수 있지만 키를 직접 조작하지 않는 것이 좋습니다.  
   
 ```  
 #  

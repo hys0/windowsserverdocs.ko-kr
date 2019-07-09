@@ -12,21 +12,21 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: a270334d-42a7-46ff-8eed-d8656a276544
 ms.openlocfilehash: c12ca84826a92fa045eb84b55e7406392161280b
-ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
-ms.translationtype: MT
+ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
+ms.lasthandoff: 06/17/2019
 ms.locfileid: "66452797"
 ---
 # <a name="changes-to-nano-server-in-windows-server-semi-annual-channel"></a>Windows Server 반기 채널의 Nano 서버 변경 사항
 
->적용 대상: Windows Server 반기 채널
+>적용 대상: Windows Server, 반기 채널
 
-이미 Nano Server를 실행 하는 경우는 [창의 서버 반기 채널](../get-started-19/servicing-channels-19.md) 서비스 모델도 곧 익숙해질, 이전의 CBB (비즈니스용) 모델에 대 한 현재 분기에서 처리 된 것 이므로 합니다. Windows 서버 반기 채널은 동일한 모델에 대 한 새 이름만입니다. 이 모델에서는 Nano 서버의 기능 업데이트 릴리스가 1년에 2~3회로 예상됩니다.
+이미 Nano 서버, [Window Server 반기 채널](../get-started-19/servicing-channels-19.md)을 실행 중인 경우 CBB(비즈니스용 현재 분기) 모델에서 이전에 서비스되었으므로 이 서비스 모델은 친숙할 것입니다. Windows Server 반기 채널은 같은 모델의 새 이름일 뿐입니다. 이 모델에서는 Nano 서버의 기능 업데이트 릴리스가 1년에 2~3회로 예상됩니다.
 
-그러나부터 Windows Server, 버전 1803에서 Nano Server는 보기로 사용할 수는 **컨테이너 기본 OS 이미지가**합니다. Windows Server의 Server Core 설치와 같은 컨테이너 호스트의 컨테이너로만 Nano 서버를 실행해야 합니다. 이 릴리스에서 Nano 서버를 기반으로 컨테이너를 실행하는 작업은 다음과 같은 방법으로 이전 버전과 다릅니다.
+그러나 Windows Server, 버전 1803부터 **컨테이너 기본 OS 이미지**로만 Nano 서버를 사용할 수 있습니다. Windows Server의 Server Core 설치와 같은 컨테이너 호스트의 컨테이너로만 Nano 서버를 실행해야 합니다. 이 릴리스에서 Nano 서버를 기반으로 컨테이너를 실행하는 작업은 다음과 같은 방법으로 이전 버전과 다릅니다.
 
-- Nano 서버가 .NET Core 응용 프로그램을 위해 최적화되었습니다.
+- Nano 서버가 .NET Core 애플리케이션을 위해 최적화되었습니다.
 - Nano 서버가 Windows Server 2016 버전보다도 더 작습니다.
 - PowerShell Core, .NET Core 및 WMI가 이제는 기본적으로 포함되지 않지만, 컨테이너를 빌드할 때 [PowerShell Core](https://hub.docker.com/r/microsoft/powershell/) 및 [.NET Core](https://hub.docker.com/r/microsoft/dotnet/) 컨테이너 패키지를 포함할 수 있습니다.
 - 이제 Nano 서버에 서비스 스택이 포함되지 않습니다. Microsoft는 업데이트된 Nano 컨테이너를 다시 배포할 Docker 허브에 게시합니다.
@@ -36,4 +36,4 @@ ms.locfileid: "66452797"
 ## <a name="related-topics"></a>관련 항목
 
 - [Windows 컨테이너 설명서](http://aka.ms/windowscontainers)
-- [창 서버 반기 채널 개요](../get-started-19/servicing-channels-19.md)
+- [Windows Server 반기 채널 개요](../get-started-19/servicing-channels-19.md)

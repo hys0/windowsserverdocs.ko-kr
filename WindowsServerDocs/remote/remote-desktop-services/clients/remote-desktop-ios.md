@@ -1,6 +1,6 @@
 ---
 title: IOS에서 원격 데스크톱 시작
-description: IOS에 대 한 원격 데스크톱 클라이언트를 설정 하는 방법 알아보기
+description: iOS용 원격 데스크톱 클라이언트 설정 방법 알아보기
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -15,60 +15,60 @@ ms.author: elizapo
 date: 01/13/2017
 ms.localizationpriority: medium
 ms.openlocfilehash: 71fe969de4d21f7fa3c134b0f80fc7f69e5b2da8
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
-ms.translationtype: MT
+ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
+ms.lasthandoff: 06/17/2019
 ms.locfileid: "66446698"
 ---
 # <a name="get-started-with-remote-desktop-on-ios"></a>IOS에서 원격 데스크톱 시작
 
 >적용 대상: Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
-Windows 앱, 리소스 및 데스크톱을 사용 하 여 iOS 장치 (Iphone 및 Ipad)에서 작동 하도록 iOS 용 원격 데스크톱 클라이언트를 사용할 수 있습니다.
+iOS용 원격 데스크톱 클라이언트를 사용하면 iOS 디바이스(iPhone 및 iPad)에서 Windows 앱, 리소스 및 데스크톱으로 작업할 수 있습니다.
 
-다음 정보를 사용 하 여 시작 합니다. 체크 아웃 해야 합니다 [FAQ](remote-desktop-client-faq.md) 질문이 있는 경우.
+시작하려면 다음 정보를 사용합니다. 질문이 있는 경우 [FAQ](remote-desktop-client-faq.md)를 확인해야 합니다.
 
 > [!NOTE]
-> - IOS 클라이언트에 대 한 새 릴리스에 대 한 주는지 궁금 하세요? 체크 아웃 [iOS에서 원격 데스크톱에 대 한 새 란?](ios-whatsnew.md)
-> - IOS 클라이언트 지원 iOS를 실행 하는 장치 6.x 이상.
+> - iOS 클라이언트의 새 릴리스가 궁금하신가요? [iOS의 원격 데스크톱에 대한 새로운 기능](ios-whatsnew.md)을 확인하세요.
+> - iOS 클라이언트는 iOS 6.x 이상을 실행하는 디바이스를 지원합니다.
 
-## <a name="get-the-remote-desktop-client-and-start-using-it"></a>원격 데스크톱 클라이언트를 가져오고 사용 하 여 시작
+## <a name="get-the-remote-desktop-client-and-start-using-it"></a>원격 데스크톱 클라이언트 가져오기 및 사용 시작
 
-### <a name="download-the-remote-desktop-client-from-the-ios-store"></a>IOS 스토어에서 원격 데스크톱 클라이언트 다운로드
+### <a name="download-the-remote-desktop-client-from-the-ios-store"></a>원격 데스크톱 클라이언트를 iOS 스토어에서 다운로드
 IOS 장치에서 원격 데스크톱에 등록 하려면 다음이 단계를 수행 합니다.
 
 1. Microsoft 원격 데스크톱 클라이언트 다운로드 [iTunes](https://itunes.apple.com/us/app/microsoft-remote-desktop/id714464092?mt=8)합니다.
-2. [원격 연결을 허용 하도록 PC 설정](remote-desktop-client-faq.md#how-do-i-set-up-a-pc-for-remote-desktop)합니다.
-3. 추가 된 [원격 데스크톱 연결](#add-a-remote-desktop-connection) 또는 [원격 리소스](#add-a-remote-resource)합니다. 연결을 사용 하 여 연결할를 직접 RemoteApp 프로그램을 사용 하는 Windows PC 및 원격 리소스, 세션 기반 데스크톱 또는 가상 데스크톱을 게시 하려면 온-프레미스 RemoteApp 및 데스크톱 연결을 사용 합니다. 이 기능은 일반적으로 기업 환경에서 사용할 수 있습니다.
+2. [원격 연결을 허용하도록 PC를 설정합니다](remote-desktop-client-faq.md#how-do-i-set-up-a-pc-for-remote-desktop).
+3. [원격 데스크톱 연결](#add-a-remote-desktop-connection) 또는 [원격 리소스](#add-a-remote-resource)를 추가합니다. Windows PC 및 원격 리소스에 직접 연결하는 연결을 사용하여 RemoteApp 프로그램, 세션 기반 데스크톱 또는 RemoteApp 프로그램 및 데스크톱 연결을 통해 온-프레미스에 게시된 가상 데스크톱을 사용합니다. 이 기능은 일반적으로 기업 환경에서 사용할 수 있습니다.
 
 ### <a name="download-the-remote-desktop-ios-beta-client"></a>원격 데스크톱 iOS 베타 클라이언트 다운로드
-IOS 장치에 따라 [이러한 지침](https://aka.ms/rdiosbeta) iOS 원격 데스크톱 베타 클라이언트를 다운로드 합니다.
+iOS 디바이스에서 [이러한 지침](https://aka.ms/rdiosbeta)에 따라 원격 데스크톱 iOS 베타 클라이언트를 다운로드합니다.
 
-### <a name="add-a-remote-desktop-connection"></a>원격 데스크톱 연결을 추가 합니다.
+### <a name="add-a-remote-desktop-connection"></a>원격 데스크톱 연결 추가
 
-원격 데스크톱 연결을 만들려면: 
+원격 데스크톱 연결을 만들려면 다음을 수행합니다. 
 1. 연결 센터 tap에서 **+** , 를 누른 다음 **추가 PC 또는 서버**합니다.
 2. 원격 데스크톱 연결에 대 한 다음 정보를 입력 합니다.
    - **PC 이름을** – 컴퓨터의 이름입니다. 이 Windows 컴퓨터 이름, 인터넷 도메인 이름으로 또는 IP 주소일 수 있습니다. 또한 PC 이름에 포트 정보를 추가할 수 있습니다 (예를 들어 **MyDesktop:3389** 또는 **10.0.0.1:3389**).
-   - **사용자 이름** – 원격 PC에 액세스를 사용 하 여 사용자 이름입니다. 다음 형식을 사용할 수 있습니다: *user_name*를 *domain\user_name*, 또는 <em>user_name@domain.com</em>합니다. 사용자 이름 및 암호를 묻는 메시지를 여부를 지정할 수 있습니다.
+   - **사용자 이름** – 원격 PC에 액세스를 사용 하 여 사용자 이름입니다. *user_name*, *domain\user_name* 또는 <em>user_name@domain.com</em> 형식을 사용할 수 있습니다. 사용자 이름 및 암호를 묻는 메시지를 여부를 지정할 수 있습니다.
 3. 또한 다음과 같은 추가 옵션을 설정할 수 있습니다.
    - **친숙 한 이름 (선택 사항)** –에 연결 하는 PC에 대 한 기억 하기 쉬운 이름. 모든 문자열을 사용할 수 있지만 이름을 지정 하지 않는 경우 PC 이름이 표시 됩니다.
    - **(선택 사항) 게이트웨이** – 가상 데스크톱, RemoteApp 프로그램 및 세션 기반 데스크톱에 회사 내부 네트워크에 연결 하는 데 사용할 원격 데스크톱 게이트웨이. 시스템 관리자 로부터 게이트웨이에 대 한 정보를 가져옵니다.
-   - **소리** -오디오에 대 한 원격 세션 중 사용 하 여 장치를 선택 합니다. 로컬 장치, 원격 장치에서 또는 전혀 사용 하지 않을 소리를 재생할 수도 있습니다.
+   - **소리** -오디오에 대 한 원격 세션 중 사용 하 여 디바이스를 선택 합니다. 로컬 장치, 원격 장치에서 또는 전혀 사용 하지 않을 소리를 재생할 수도 있습니다.
    - **마우스 단추 스왑** 마우스 제스처와 마우스 왼쪽된 단추와 명령을 보낼 때마다 – 대신 마우스 오른쪽 단추를 사용 하 여 동일한 명령을 보냅니다. 이 원격 PC 왼쪽 마우스 모드로 구성 된 경우 필요 합니다.
    - **관리자 모드** -Windows Server 2003 이상을 실행 하는 서버의 관리 세션에 연결 합니다.
 4. 누르기 **저장**합니다.
 
 이러한 설정을 편집 하려면 필요 하십니까? 편집 하려는 데스크톱 누른 상태 다음 설정 아이콘을 누릅니다. 
 
-### <a name="add-a-remote-resource"></a>원격 리소스를 추가 합니다.
+### <a name="add-a-remote-resource"></a>원격 리소스 추가
 원격 리소스는 RemoteApp 프로그램, 세션 기반 데스크톱 및 RemoteApp 및 데스크톱 연결을 사용 하 여 게시 하는 가상 데스크톱.
 
-- RemoteApp 및 데스크톱 연결에 액세스할 수는 RD 웹 액세스 서버에 링크를 표시 하는 URL입니다.
+- URL은 RemoteApp 및 데스크톱 연결에 대한 액세스를 제공하는 RD 웹 액세스 서버에 대한 링크를 표시합니다.
 - 구성 된 RemoteApp 및 데스크톱 연결 나열 됩니다.
 
-원격 리소스를 추가 합니다.
+원격 리소스를 추가하려면 다음을 수행합니다.
 
 1. 연결 센터 화면에서 누릅니다 **+** , 누른 **원격 리소스 추가**합니다. 
 2. 원격 리소스에 대 한 정보를 입력 합니다.
@@ -80,16 +80,16 @@ IOS 장치에 따라 [이러한 지침](https://aka.ms/rdiosbeta) iOS 원격 데
 원격 리소스 연결 센터에서 표시 됩니다.
 
 
-## <a name="connect-to-an-rd-gateway-to-access-internal-assets"></a>내부 자산에 액세스 하는 RD 게이트웨이 연결
+## <a name="connect-to-an-rd-gateway-to-access-internal-assets"></a>RD 게이트웨이에 연결하여 내부 자산에 액세스
 
-원격 데스크톱 게이트웨이 (RD 게이트웨이) 어디에서 회사 네트워크의 원격 컴퓨터에 연결 하면 인터넷에서. 수 만들고 원격 데스크톱 클라이언트를 사용 하 여 게이트웨이 관리 합니다.
+원격 데스크톱 게이트웨이(RD 게이트웨이)를 사용하면 인터넷 상에서 어디에서든 회사 네트워크의 원격 컴퓨터에 연결할 수 있습니다. 수 만들고 원격 데스크톱 클라이언트를 사용 하 여 게이트웨이 관리 합니다.
 
 새 게이트웨이를 설정 하려면:
 
 1. 연결 센터에서 누릅니다 **설정 > 게이트웨이**합니다. 
 2. 누르기 **추가 원격 데스크톱 게이트웨이**합니다.
 3. 다음 정보를 입력 합니다.
-   - **서버 이름** –를 게이트웨이로 사용 하려면 컴퓨터의 이름입니다. 이 Windows 컴퓨터 이름, 인터넷 도메인 이름으로 또는 IP 주소일 수 있습니다. 서버 이름에 포트 정보를 추가할 수도 있습니다 (예: **RDGateway:443** 나 **10.0.0.1: 443**).
+   - **서버 이름** –를 게이트웨이로 사용 하려면 컴퓨터의 이름입니다. 이 Windows 컴퓨터 이름, 인터넷 도메인 이름으로 또는 IP 주소일 수 있습니다. 서버 이름에 포트 정보를 추가할 수도 있습니다(예: **RDGateway:443** 또는 **10.0.0.1:443**).
    - **사용자 이름** -사용자 이름 및 암호를 연결 하는 원격 데스크톱 게이트웨이를 사용 해야 합니다. 선택할 수도 있습니다 **연결 자격 증명을 사용 하 여** 원격 데스크톱 연결에 사용 되는 동일한 사용자 이름 및 암호를 사용 하도록 합니다.
 
 
@@ -102,7 +102,7 @@ IOS 장치에 따라 [이러한 지침](https://aka.ms/rdiosbeta) iOS 원격 데
 1. 연결 센터에서 누릅니다 **설정을**, 를 누른 다음 **사용자 이름**합니다.
 2. 누르기 **사용자 계정을 추가**합니다.
 3. 다음 정보를 입력 합니다.
-   - **사용자 이름** -원격 연결을 사용 하도록 저장 하는 사용자의 이름입니다. 다음 형식 중 하나에서 사용자 이름을 입력할 수 있습니다: domain\user_name, user_name 또는 user_name@domain.com합니다.
+   - **사용자 이름** -원격 연결을 사용 하도록 저장 하는 사용자의 이름입니다. user_name, domain\user_name, 또는 user_name@domain.com 형식으로 사용자 이름을 입력할 수 있습니다.
    - **암호** -지정한 사용자의 암호입니다. 원격 연결에 사용 하 여 저장 하려는 모든 사용자 계정이 연결 된 암호가 있어야 합니다.
 4. 누르기 **저장**, 를 누른 다음 **설정을**합니다.
 5. 누르기 **수행** 새 구성을 저장 합니다.
@@ -116,7 +116,7 @@ IOS 장치에 따라 [이러한 지침](https://aka.ms/rdiosbeta) iOS 원격 데
 
 
 ## <a name="navigate-the-remote-desktop-session"></a>원격 데스크톱 세션 탐색
-원격 데스크톱 세션을 시작 하는 경우 세션 탐색에 사용할 수 있는 도구가 있습니다.
+원격 데스크톱 세션을 시작할 때 세션을 탐색하는 데 사용할 수 있는 도구가 있습니다.
 
 ### <a name="start-a-remote-desktop-connection"></a>원격 데스크톱 연결을 시작 합니다.
 
@@ -127,23 +127,23 @@ IOS 장치에 따라 [이러한 지침](https://aka.ms/rdiosbeta) iOS 원격 데
 
 추가 탐색 컨트롤에 액세스할 수는 연결 표시줄 있습니다. 
 
-- **팬 컨트롤**: 팬 컨트롤을 사용 하면 화면을 확대를 이동 합니다. 참고 팬 제어는만 직접 터치를 사용 하 여 사용할 수 있습니다.
-   - 팬 제어 사용 안 함/사용: 팬 컨트롤을 표시 하 고 화면을 확대/축소 하려면 연결 표시줄에서 팬 아이콘을 탭 합니다. 컨트롤을 숨기 거 나 화면 원래 해상도로 반환 하려면 다시 연결 표시줄에서 팬 아이콘을 누르세요.
-   - 팬 제어를 사용 합니다. 탭 하 고 팬 컨트롤이 화면을 이동 하려는 방향으로 놓습니다.
-   - 팬 컨트롤을 이동 합니다. 두 번 누르고 팬 컨트롤이 화면에 컨트롤을 이동 합니다.
-- **연결 이름**: 현재 연결 이름이 표시 됩니다. 세션 선택 막대를 표시 하려면 연결 이름을 누릅니다.
-- **키보드**: 키보드 아이콘을 표시 하거나 숨기려면 키보드를 누릅니다. 팬 컨트롤이 키보드 표시 될 때 자동으로 표시 됩니다.
-- **연결 표시줄 이동**: 탭 연결 표시줄을 보유 하 고 끌어서 놓습니다 화면 맨 위에 있는 새 위치로 합니다.
+- **팬 컨트롤**: 팬 컨트롤을 사용하면 화면을 확대하거나 이동할 수 있습니다. 참고 팬 제어는만 직접 터치를 사용 하 여 사용할 수 있습니다.
+   - 팬 컨트롤 사용/사용 안 함: 연결 표시줄에서 팬 아이콘을 탭하여 팬 컨트롤을 표시하고 화면을 확대/축소합니다. 컨트롤을 숨기 거 나 화면 원래 해상도로 반환 하려면 다시 연결 표시줄에서 팬 아이콘을 누르세요.
+   - 팬 컨트롤 사용: 팬 컨트롤을 길게 누른 다음, 화면을 이동하려는 방향으로 끕니다.
+   - 팬 컨트롤 이동: 팬 컨트롤을 두 번 탭하여 길게 누른 상태로 컨트롤을 화면에서 이동합니다.
+- **연결 이름**: 현재 연결 이름이 표시됩니다. 세션 선택 막대를 표시 하려면 연결 이름을 누릅니다.
+- **키보드**: 키보드를 탭하여 키보드 아이콘을 표시하거나 숨깁니다. 팬 컨트롤이 키보드 표시 될 때 자동으로 표시 됩니다.
+- **연결 표시줄 이동**: 연결 표시줄을 길게 누른 다음, 화면 맨 위에 있는 새 위치에 끌어서 놓습니다.
 
 ### <a name="session-selection"></a>세션 선택
 여러 개의 연결이 동시에 다른 Pc에 열려 있을 수 있습니다. 화면 왼쪽에 세션 선택 막대를 표시 하려면 연결 표시줄을 누릅니다. 세션 선택 막대 사이 이동 하 여 열린 연결을 볼 수 있습니다. 
 
 - 원격 리소스를 열린 세션에서 앱 간에 전환 합니다.
 
-    원격 리소스에 연결 되어 있으면 확장 메뉴 사용 가능한 항목의 목록에서 선택 하 여 해당 세션 내에서 열려 있는 응용 프로그램 간에 전환할 수 있습니다.
+    원격 리소스에 연결 되어 있으면 확장 메뉴 사용 가능한 항목의 목록에서 선택 하 여 해당 세션 내에서 열려 있는 애플리케이션 간에 전환할 수 있습니다.
 - 새 세션을 시작
 
-  현재 연결에 내에서 새 응용 프로그램 또는 데스크톱 세션을 시작할 수 있습니다: 누르기 **새 시작**, 사용 가능한 항목의 목록에서 선택 합니다.
+  현재 연결에 내에서 새 애플리케이션 또는 데스크톱 세션을 시작할 수 있습니다: 누르기 **새 시작**, 사용 가능한 항목의 목록에서 선택 합니다.
 
 - 세션 연결 끊기
 
@@ -153,12 +153,12 @@ IOS 장치에 따라 [이러한 지침](https://aka.ms/rdiosbeta) iOS 원격 데
 
 명령 모음 8.0.1 버전부터 막대 유틸리티를 교체 했습니다. 마우스 모드를 전환할 수 있으며 명령 모음에서 연결 센터로 돌아갑니다.
 
-## <a name="use-touch-gestures-and-mouse-modes-in-a-remote-session"></a>터치 제스처 및 마우스 모드를 사용 하 여 원격 세션에서
+## <a name="use-touch-gestures-and-mouse-modes-in-a-remote-session"></a>원격 세션에서 터치 제스처 및 마우스 모드 사용
 
 클라이언트는 표준 터치 제스처를 사용합니다. 또한 원격 데스크톱에서 마우스 동작을 복제 하려면 터치 제스처를 사용할 수 있습니다. 사용할 수 있는 마우스 모드는 아래 테이블에 정의 됩니다.
 
 > [!NOTE]
-> Windows 8과 상호 작용 또는 최신 네이티브 터치 제스처 직접 터치 모드에서 지원 됩니다. 제스처 참조 Windows 8에 대 한 자세한 내용은 [터치 합니다. 살짝, 탭, 이상이](https://windows.microsoft.com/en-US/windows-8/touch-swipe-tap-beyond)합니다.
+> Windows 8과 상호 작용 또는 최신 네이티브 터치 제스처 직접 터치 모드에서 지원 됩니다. Windows 8 제스처에 대한 자세한 내용은 [터치: 살짝 밀기, 탭 등](https://windows.microsoft.com/en-US/windows-8/touch-swipe-tap-beyond)을 참조하세요.
 
 | 마우스 모드    | 마우스 작업      | 제스처                                                    |
 |---------------|----------------------|------------------------------------------------------------|
@@ -171,34 +171,34 @@ IOS 장치에 따라 [이러한 지침](https://aka.ms/rdiosbeta) iOS 원격 데
 | 마우스 포인터 | 마우스 휠          | 2 손가락 및 적용 되는 누르고 위로 또는 아래로 끌어 옵니다.                |
 | 마우스 포인터 | Zoom                 | 2 손가락을 확대 하거나 축소 하려면 2 손가락 확산 축소 |
 
-## <a name="supported-input-devices"></a>지원 되는 입력된 장치
+## <a name="supported-input-devices"></a>지원되는 입력 디바이스
 
-합니다 [원격 데스크톱 iOS 베타 클라이언트](https://aka.ms/rdiosbeta) Swiftpoint GT 및 ProPoint 실제 mice를 지원 합니다. Swiftpoint는 제공 되는 [독점 할인 혜택](https://www.swiftpoint.com/microsoft/) iOS 베타 클라이언트 사용자를 위한 GT에 있습니다.
+[원격 데스크톱 iOS 베타 클라이언트](https://aka.ms/rdiosbeta)는 Swiftpoint GT 및 ProPoint 실제 마우스를 지원합니다. Swiftpoint는 iOS 베타 클라이언트 사용자를 위한 GT에 [독점 할인 혜택](https://www.swiftpoint.com/microsoft/)을 제공합니다.
 
-IOS 클라이언트는 현재 지원 Swiftpoint mice. 참조 된 [iOS 클라이언트의 새로운 기능](ios-whatsnew.md) 페이지 및 [iOS 앱 스토어](https://aka.ms/rdios) 나중에 다른 장치에 대 한 지원에 대 한 뉴스에 대 한 합니다.
+iOS 클라이언트는 현재 Swiftpoint 마우스를 지원합니다. [iOS 클라이언트의 새로운 기능](ios-whatsnew.md) 페이지 및 [iOS 앱 스토어](https://aka.ms/rdios)에서 향후 다른 디바이스를 위한 지원 소식을 참조하세요.
 
 ## <a name="use-a-keyboard-in-a-remote-session"></a>원격 세션에서 키보드 사용
 
-사용할 수 있습니다는 화상 키보드 또는 실제 키보드 원격 세션에서.
+화상 키보드 또는 실제 키보드를 원격 세션에서 사용할 수 있습니다.
 
-화상 키보드를 사용 하 여 단추 키보드 위쪽 막대의 오른쪽 가장자리에 추가 하 고 표준 키보드를 전환 합니다.
+화상 키보드의 경우 표준 키보드와 추가 키보드 사이를 전환하려면 키보드 위쪽 막대의 오른쪽 가장자리에 있는 단추를 사용합니다.
 
-IOS 장치의 Bluetooth가 사용 하도록 설정 하는 경우 클라이언트 Bluetooth 키보드를 자동으로 검색 합니다.
+iOS 디바이스에서 Bluetooth가 사용하도록 설정되어 있는 경우 클라이언트가 Bluetooth 키보드를 자동으로 검색합니다.
 
-os 제한으로 인해 Ctrl, 옵션 및 함수 등의 특수 키가 예상 대로 작동 하지 Bluetooth 키보드를 사용 하 여 주의 합니다. 다음 키가 작동 합니다.
+OS의 제한으로 인해 Ctrl, Option 및 Function과 같은 특수 키가 Bluetooth 키보드에서 예상대로 작동하지 않는다는 점에 유의하세요. 다음 키가 작동합니다.
 
 - 영숫자 키
 - 커서 키
-- 탭: 탭 작동 하지만 Shift + Tab 작동 하지 않습니다
-- 홈 / Pos1: Alt+Left = Home
+- Tab: Tab은 작동하지만, Shift + Tab은 작동하지 않습니다.
+- Home / Pos1: Alt+Left = Home
 - 끝: Alt+Right = End
-- Page Up: Alt+Up = Page Up
-- Page down 키: Alt+Down = Page Down
-- 모두 선택 합니다. 명령 + A = Ctrl + A (대부분의 프로그램에서 모두 선택)
-- 잘라내기의 경우: 명령 + X = Ctrl + X (대부분의 프로그램에서 가기)
-- 복사: 명령 + C = Ctrl + C (대부분의 프로그램에서 복사)
-- 붙여 넣습니다. 명령 + V = Ctrl + V (대부분의 프로그램에서 붙여넣기)
-- 기호: Alt + 영숫자 키 구성 된 언어에 따라 서로 다른 기호 생성
+- 한 페이지 위로: Alt+Up = 한 페이지 위로
+- 한 페이지 아래로: Alt+Down = 한 페이지 아래로
+- 모두 선택: 명령 + A = Ctrl + A(대부분의 프로그램에서 모두 선택)
+- 잘라내기: 명령 + X = Ctrl + X(대부분의 프로그램에서 잘라내기)
+- 복사: 명령 + C = Ctrl + C(대부분의 프로그램에서 복사)
+- 붙여넣기: 명령 + V = Ctrl + V(대부분의 프로그램에서 붙여넣기)
+- 기호: Alt + 영숫자 키가 구성된 언어에 따라 다양한 기호를 생성합니다.
 
 > [!TIP]
 > 질문이 나 의견은 언제나 환영 합니다. 그러나 게시 하지 마십시오이 문서의 끝에서 주석 기능을 사용 하 여 문제 해결 도움말에 대 한 요청입니다. 대신, 이동 하려면는 [원격 데스크톱 클라이언트 포럼](https://social.technet.microsoft.com/forums/windowsserver/en-us/home?forum=winrdc) 하 고 새 스레드를 시작 합니다. 기능 제안할 사항이 있으시면 알려 고 [클라이언트 사용자 의견 포럼](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android)합니다.
