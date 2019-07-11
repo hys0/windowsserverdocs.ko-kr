@@ -36,7 +36,7 @@ DirectAccess를 배포 하기 전에 필수 구성 요소 및 기타 정보를 �
 이 시나리오에서는 Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012를 실행 하는 단일 컴퓨터는 고급 설정 사용 하 여 DirectAccess 서버로 구성 됩니다.  
   
 > [!NOTE]  
-> 간단한 설정만으로 기본 배포를 구성하려면 [Deploy a Single DirectAccess Server Using the Getting Started Wizard](../../../remote-access/directaccess/single-server-wizard/Deploy-a-Single-DirectAccess-Server-Using-the-Getting-Started-Wizard.md)를 참조하세요. 간단한 시나리오에서는 DirectAccess가 CA(인증 기관) 또는 Active Directory 보안 그룹과 같은 인프라 설정 구성 없이 마법사를 사용하여 기본 설정으로 설치됩니다.  
+> 간단한 설정 만으로 기본 배포를 구성 하려는 경우 참조 [시작 마법사를 사용 하 여 단일 DirectAccess 서버 배포](../../../remote-access/directaccess/single-server-wizard/Deploy-a-Single-DirectAccess-Server-Using-the-Getting-Started-Wizard.md)합니다. 간단한 시나리오에서는 DirectAccess가 CA(인증 기관) 또는 Active Directory 보안 그룹과 같은 인프라 설정 구성 없이 마법사를 사용하여 기본 설정으로 설치됩니다.  
   
 ## <a name="in-this-scenario"></a>이 시나리오의 내용  
 고급 설정을 사용하여 단일 DirectAccess 서버를 설정하려면 몇 가지 계획 및 배포 단계를 완료해야 합니다.  

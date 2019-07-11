@@ -45,7 +45,7 @@ Active Directory Federation Services에서이 규칙을 사용할 수 있습니�
   
 이 템플릿을 사용하면 단일 규칙에서 여러 클레임으로 보내는 여러 특성을 추가할 수 있습니다. 예를 들어 이 규칙 템플릿을 사용하여 **company** 및 **department** Active Directory 특성에서 인증된 사용자에 대한 특성 값을 조회하는 규칙을 만든 다음 두 개의 서로 다른 나가는 클레임으로 이 규칙을 보냅니다.  
   
-또한 이 규칙을 사용하여 모든 사용자 그룹의 구성원을 보낼 수도 있습니다. 개별 그룹 구성원만 보내려는 경우 그룹 구성원을 클레임으로 보내기 규칙 템플릿을 사용합니다. 자세한 내용은 [When to Use a Send Group Membership as a Claim Rule](When-to-Use-a-Send-Group-Membership-as-a-Claim-Rule.md)를 참조하세요.  
+또한 이 규칙을 사용하여 모든 사용자 그룹의 구성원을 보낼 수도 있습니다. 개별 그룹 구성원만 보내려는 경우 그룹 구성원을 클레임으로 보내기 규칙 템플릿을 사용합니다. 자세한 내용은 [클레임 규칙으로 보내기 그룹 멤버 자격을 사용 하는 경우](When-to-Use-a-Send-Group-Membership-as-a-Claim-Rule.md)합니다.  
   
 ## <a name="how-to-create-this-rule"></a>이 규칙을 만드는 방법  
 클레임 규칙 언어 중 하나를 사용 하 여이 규칙을 만들 수도 있고 AD FS 관리에서 클레임 규칙 템플릿으로 보내기 LDAP 특성을 사용 하 여 맞춤\-에서 합니다. 이 규칙 템플릿은 다음과 같은 구성 옵션을 제공합니다.  
@@ -119,7 +119,7 @@ c:[Type == "http://test/name"]
   
 -   특성 사양-쿼리의이 두 번째 부분에서 특성을 지정 하면 \(는 쉼표\-구분 된 여러 특성 값을 사용 하는 경우\) 필터링된 된 개체에서 원하는 합니다. 지정하는 특성 수는 쿼리에서 정의하는 클레임 유형 수와 일치해야 합니다.  
   
--   Active Directory 도메인 - 특성 저장소가 Active Directory인 경우에만 쿼리의 마지막 부분을 지정합니다(다른  \(특성 저장소를 쿼리할 경우 필요 하지 않습니다.\) 쿼리의이 부분은 양식 도메인 사용자 계정을 지정 하는\\이름입니다. Active Directory 특성 저장소는 도메인 부분을 사용하여 적절한 도메인 컨트롤러를 결정하고 쿼리를 연결하고 실행하며 특성을 요청합니다.  
+-   Active Directory 도메인 - 특성 저장소가 Active Directory인 경우에만 쿼리의 마지막 부분을 지정합니다(다른 \(특성 저장소를 쿼리할 경우 필요 하지 않습니다.\) 쿼리의이 부분은 양식 도메인 사용자 계정을 지정 하는\\이름입니다. Active Directory 특성 저장소는 도메인 부분을 사용하여 적절한 도메인 컨트롤러를 결정하고 쿼리를 연결하고 실행하며 특성을 요청합니다.  
   
 ### <a name="example-how-to-use-two-custom-rules-to-extract-the-manager-e-mail-from-an-attribute-in-activedirectory"></a>예: 두 개의 사용자 지정 규칙을 사용 하 여 e 관리자를 추출 하는 방법을\-Active Directory의 특성에서 메일  
 다음 두 가지 사용자 지정 규칙은 아래에 나와 있는 순서 대로 함께 사용 하는 경우에 대 한 Active Directory를 쿼리 합니다 **manager** 사용자 계정의 특성 \(Rule 1\) 다음 해당 특성을 사용 하 여 사용자를 쿼리하려면 에 대 한 관리자의 계정 합니다 **메일** 특성 \(Rule 2\)합니다. 마지막으로 **mail** 특성이 "ManagerEmail" 클레임으로 발급됩니다. 요약 하면 규칙 1을 Active Directory 쿼리 및 다음 e 관리자를 추출 하는 규칙 2에 쿼리의 결과 전달\-메일 값입니다.  

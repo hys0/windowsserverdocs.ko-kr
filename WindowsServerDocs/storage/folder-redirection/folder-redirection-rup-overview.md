@@ -69,7 +69,7 @@ Windows 8, Windows Server 2012 이전 사용자는 전환 온라인 및 오프 �
 
 항상 오프 라인 모드를 사용 하 여 컴퓨터 모드로 전환 되지 않습니다 온라인 때 합니다 **느린 링크 모드 구성** 그룹 정책 설정이 구성 되어 및 **대기 시간** 임계값 매개 변수가 1 밀리초로 설정 됩니다. 변경 내용은 기본적으로 120분마다 백그라운드에서 동기화됩니다. 동기화는 **Configure Background Sync** 그룹 정책 설정을 사용하여 구성할 수 있습니다.
 
-자세한 내용은 [Enable the Always Offline Mode to Provide Faster Access to Files](enable-always-offline.md)를 참조하세요.
+자세한 내용은 [파일에 더 빠르게 액세스할 수 있도록 항상 오프라인 모드 사용](enable-always-offline.md)을 참조하십시오.
 
 ## <a name="cost-aware-synchronization"></a>비용 인식 동기화
 
@@ -112,7 +112,7 @@ Windows 8 및 Windows Server 2012 이전의 요금제 네트워크 연결에서 
     1. 이 컴퓨터가 사용자의 기본 컴퓨터인 경우 Windows는 로밍 사용자 프로필과 폴더 리디렉션 설정을 적용합니다.
     2. 이 컴퓨터가 사용자의 기본 컴퓨터가 아닌 경우에는 사용자의 캐시된 로컬 프로필(있는 경우)을 로드하거나 새로운 로컬 프로필을 만듭니다. 또한 Windows는 로컬 폴더 리디렉션 구성에 그대로 남아 있는 경우 이전에 적용한 그룹 정책 설정에서 지정된 제거 작업에 따라 리디렉션된 기존 폴더를 모두 제거합니다.
 
-자세한 내용은 [Deploy Primary Computers for Folder Redirection and Roaming User Profiles](deploy-primary-computers.md)를 참조하세요.
+자세한 내용은 참조 하세요. [폴더 리디렉션 및 로밍 사용자 프로필에 대 한 기본 컴퓨터 배포](deploy-primary-computers.md)
 
 ## <a name="hardware-requirements"></a>하드웨어 요구 사항
 

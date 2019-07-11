@@ -57,7 +57,7 @@ Adfs에서 MFA 및 인증 메커니즘에 대 한 자세한 내용은 참조 [�
 ## <a name="BKMK_2"></a>2 단계: 기본 AD FS 인증 메커니즘 확인
 이 단계에서는 사용자가 AD FS 로그인 페이지로 리디렉션된 후 유효한 자격 증명을 제공하면 응용 프로그램에 대한 액세스 권한이 부여되는 기본 AD FS 액세스 제어 메커니즘(엑스트라넷의 경우**폼 인증** 및 인트라넷의 경우 **Windows 인증** )을 확인합니다. 사용할 수는 **Robert Hatley** AD 계정 및 **claimapp** 샘플 응용 프로그램에서 구성한 [Windows Server 2012 r 2에서 AD FS에 대 한 랩 환경 설정](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)합니다.
 
-1.  클라이언트 컴퓨터에서 브라우저 창을 열고 샘플 응용 프로그램으로 이동 합니다. **https://webserv1.contoso.com/claimapp**합니다.
+1.  클라이언트 컴퓨터에서 브라우저 창을 열고 샘플 응용 프로그램으로 이동 합니다. **https://webserv1.contoso.com/claimapp** 합니다.
 
     이 작업을 수행하면 요청이 자동으로 페더레이션 서버로 리디렉션되고 사용자 이름과 암호를 사용하여 로그인하라는 메시지가 표시됩니다.
 
@@ -235,7 +235,7 @@ AD FS 관리 콘솔 또는 Windows PowerShell을 사용하여 MFA 정책을 설�
 ## <a name="BKMK_4"></a>4 단계: MFA 메커니즘 확인
 이 단계에서는 이전 단계에서 설정한 MFA 기능을 확인합니다. 다음 절차를 사용하여 **Robert Hatley** AD 사용자가 응용 프로그램 예제에 액세스할 수 있는지 확인할 수 있습니다. 이번에는 이 사용자가 **금융** 그룹에 속해 있으므로 MFA를 진행해야 합니다.
 
-1.  클라이언트 컴퓨터에서 브라우저 창을 열고 샘플 응용 프로그램으로 이동 합니다. **https://webserv1.contoso.com/claimapp**합니다.
+1.  클라이언트 컴퓨터에서 브라우저 창을 열고 샘플 응용 프로그램으로 이동 합니다. **https://webserv1.contoso.com/claimapp** 합니다.
 
     이 작업을 수행하면 요청이 자동으로 페더레이션 서버로 리디렉션되고 사용자 이름과 암호를 사용하여 로그인하라는 메시지가 표시됩니다.
 
