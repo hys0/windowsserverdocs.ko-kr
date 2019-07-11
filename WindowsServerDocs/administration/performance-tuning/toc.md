@@ -7,8 +7,10 @@
 #### [권장하는 분산 전원 관리 옵션 매개 변수](hardware/power/recommended-balanced-plan-parameters.md)
 ## 서버 역할 튜닝
 ### [Active Directory 서버](role/active-directory-server/index.md)
+#### [AD DS 용량 계획](role/active-directory-server/capacity-planning-for-active-directory-domain-services.md)
 #### [사이트 정의 고려 사항](role/active-directory-server/site-definition-considerations.md)
 #### [하드웨어 고려 사항](role/active-directory-server/hardware-considerations.md)
+#### [메모리 사용량 고려 사항](role/active-directory-server/memory-usage-considerations.md)
 #### [LDAP 고려 사항](role/active-directory-server/ldap-considerations.md)
 #### [ADDS 성능 문제 해결](role/active-directory-server/troubleshoot.md)
 ### [파일 서버](role/file-server/index.md)
