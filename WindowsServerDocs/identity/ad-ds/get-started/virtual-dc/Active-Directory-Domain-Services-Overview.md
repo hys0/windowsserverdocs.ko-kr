@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: 069cdb493cd0ad442e8922ec67c2b9cc6b2ec5fc
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ed8a22881cd20633e6fcd61b146f3b0aad7a757b
+ms.sourcegitcommit: be243a92f09048ca80f85d71555ea6ee3751d712
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59858174"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792276"
 ---
 # <a name="active-directory-domain-services-overview"></a>Active Directory 도메인 서비스 개요
 
@@ -46,11 +46,11 @@ Active Directory에 포함 됩니다.
  
 * [Active Directory 구조와 저장소 기술](https://technet.microsoft.com/library/cc759186(v=ws.10).aspx)
 * [도메인 컨트롤러 역할](https://technet.microsoft.com/library/cc786438(v=ws.10).aspx) 
-* Active Directory 스키마 
-* [트러스트 이해](https://technet.microsoft.com/library/cc771294(v=ws.10).aspx) 
+* [Active Directory 스키마](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771796(v=ws.10))
+* [트러스트 이해](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771568(v=ws.10)) 
 * [Active Directory 복제 토폴로지](https://technet.microsoft.com/library/cc786438(v=ws.10).aspx) 
 * [Active Directory 검색 및 게시 기술](https://technet.microsoft.com/library/cc775686(v=ws.10).aspx) 
-* 그룹 정책 및 DNS를 사용 하 여 상호 운용 
+* [그룹 정책 및 DNS를 사용 하 여 상호 운용](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197486(v=ws.10))
 * [스키마 이해](https://technet.microsoft.com/library/cc759402(v=ws.10).aspx) 
 
 Active Directory 개념의 자세한 목록은 참조 하세요 [이해 Active Directory](https://technet.microsoft.com/library/cc781408(v=ws.10).aspx)합니다. 

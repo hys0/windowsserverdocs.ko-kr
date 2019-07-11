@@ -12,16 +12,16 @@ ms.topic: article
 ms.assetid: a1ce7af5-f3fe-4fc9-82e8-926800e37bc1
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 9a3ee39736fb4ee2eb41162db27fed2299c204e5
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: f3b1837145dee5767741052c548a4b44da56659b
+ms.sourcegitcommit: be243a92f09048ca80f85d71555ea6ee3751d712
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67281192"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792328"
 ---
 # <a name="step-1-plan-the-remote-access-infrastructure"></a>1 단계 원격 액세스 인프라 계획
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 > [!NOTE]
 > Windows Server 2016 DirectAccess 및 라우팅 및 원격 액세스 서비스 (RRAS)를 단일 원격 액세스 역할로 결합합니다.  
@@ -270,7 +270,7 @@ HTTP 또는 PING을 통해 다른 웹 주소를 사용 하 여 추가 연결 검
   
 스플릿 브레인 DNS 배포에 대 한 인터넷 및 인트라넷에 중복 된 리소스를 결정 하는 Fqdn을 나열 해야 도달률은 인트라넷 또는 인터넷 버전 DirectAccess 클라이언트 해야 합니다. DirectAccess 클라이언트가 인터넷 버전에 연결할 때, 각 리소스에 대 한 nrpt 예외 규칙으로 해당 FQDN를 추가 해야 합니다.  
   
-스플릿 브레인 DNS 환경에서 리소스를 사용할 수의 두 버전 모두를 하려는 경우 인터넷에서 사용 되는 이름과 중복 되지 않는 이름의 인트라넷 리소스에 구성 합니다. 그런 다음 대체 이름을 사용 하 여 인트라넷의 리소스에 액세스할 때 사용자가 지시 합니다. 예를 들어 내부 이름 www.contoso.com에 대 한 www.internal.contoso.com를 구성 합니다.  
+스플릿 브레인 DNS 환경에서 리소스를 사용할 수의 두 버전 모두를 하려는 경우 인터넷에서 사용 되는 이름과 중복 되지 않는 이름의 인트라넷 리소스에 구성 합니다. 그런 다음 대체 이름을 사용 하 여 인트라넷의 리소스에 액세스할 때 사용자가 지시 합니다. 예를 들어 www를 구성할\.www의 내부 이름을 internal.contoso.com\.contoso.com입니다.  
   
 스플릿 브레인이 아닌 DNS 환경에서는 인터넷 네임스페이스가 인트라넷 네임스페이스와 다릅니다. 예를 들어 인터넷의 네임스페이스는 Contoso Corporation uses contoso.com이고 인트라넷의 네임스페이스는 corp.contoso.com인 경우를 살펴보겠습니다. 모든 인트라넷 리소스는 corp.contoso.com DNS 접미사를 사용하므로 corp.contoso.com에 대한 NRPT 규칙에 따라 인트라넷 리소스에 대한 모든 DNS 이름 쿼리가 인트라넷 DNS 서버로 라우팅됩니다. 접미사가 contoso.com 인 이름에 대 한 DNS 쿼리가 NRPT의 corp.contoso.com intranet 네임 스페이스 규칙과 일치 하지 않습니다 하 고 인터넷 DNS 서버에 전송 합니다. 스플릿 브레인이 아닌 DNS 환경에서는 인트라넷 리소스와 인터넷 리소스의 FQDN이 중복되지 않으므로 NRPT에 대한 추가 구성이 필요 없습니다. DirectAccess 클라이언트는 조직에 대해 인터넷 및 인트라넷 리소스에 액세스할 수 있습니다.  
   

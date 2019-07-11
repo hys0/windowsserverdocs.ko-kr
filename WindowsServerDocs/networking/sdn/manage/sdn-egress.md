@@ -9,12 +9,12 @@ ms.assetid: ''
 ms.author: pashort
 author: shortpatti
 ms.date: 10/02/2018
-ms.openlocfilehash: 50aee16b0b5797f28ebcdf61494b09669699873f
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: bdfb2b7321d5a4d119c9710e9ad93fc2e91ea536
+ms.sourcegitcommit: be243a92f09048ca80f85d71555ea6ee3751d712
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66446324"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792286"
 ---
 # <a name="egress-metering-in-a-virtual-network"></a>가상 네트워크의 송신 계량
 
@@ -72,33 +72,31 @@ Windows Server 2019에서 SDN 네트워크 트래픽에 대 한 송신 계량 �
     ```
 
     출력은 다음과 유사 하 게 표시 됩니다.
-    ```
-    Confirm
-    Performing the operation 'New-NetworkControllerVirtualNetwork' on entities of type
-    'Microsoft.Windows.NetworkController.VirtualNetwork' via
-    'https://sdn.contoso.com/networking/v3/virtualNetworks/VNet1'. Are you sure you want to continue?
-    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): y
+      ```
+         Confirm
+         Performing the operation 'New-NetworkControllerVirtualNetwork' on entities of type
+         'Microsoft.Windows.NetworkController.VirtualNetwork' via
+         'https://sdn.contoso.com/networking/v3/virtualNetworks/VNet1'. Are you sure you want to continue?
+         [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): y
 
 
-~~~
-Tags             :
-ResourceRef      : /virtualNetworks/VNet1
-InstanceId       : 29654b0b-9091-4bed-ab01-e172225dc02d
-Etag             : W/"6970d0a3-3444-41d7-bbe4-36327968d853"
-ResourceMetadata :
-ResourceId       : VNet1
-Properties       : Microsoft.Windows.NetworkController.VirtualNetworkProperties
-```
-~~~
+         Tags             :
+         ResourceRef      : /virtualNetworks/VNet1
+         InstanceId       : 29654b0b-9091-4bed-ab01-e172225dc02d
+         Etag             : W/"6970d0a3-3444-41d7-bbe4-36327968d853"
+         ResourceMetadata :
+         ResourceId       : VNet1
+         Properties       : Microsoft.Windows.NetworkController.VirtualNetworkProperties
+      ```
 
 
-3. Check the Virtual Network to see the configured **UnbilledAddressRanges**.
+3. 가상 네트워크 구성 된 참조를 확인할 **UnbilledAddressRanges**합니다.
 
    ```PowerShell
    (Get-NetworkControllerVirtualNetwork -ConnectionUri $uri -ResourceID "VNet1").properties
    ```
 
-   Your output will now look similar to this:
+   출력은 이제 다음과 유사 하 게 표시 됩니다.
    ```
    AddressSpace           : Microsoft.Windows.NetworkController.AddressSpace
    DhcpOptions            :
@@ -112,23 +110,23 @@ Properties       : Microsoft.Windows.NetworkController.VirtualNetworkProperties
    LogicalNetwork         : Microsoft.Windows.NetworkController.LogicalNetwork
    ```
 
-## Check the billed the unbilled egress usage of a virtual network
+## <a name="check-the-billed-the-unbilled-egress-usage-of-a-virtual-network"></a>청구는 확인 가상 네트워크의 미 청구 송신 사용
 
-After you configure the **UnbilledAddressRanges** property, you can check the billed and unbilled egress usage of each subnet within a virtual network. Egress traffic updates every four minutes with the total bytes of the billed and unbilled ranges.
+구성 하 고 나면 합니다 **UnbilledAddressRanges** 속성, 가상 네트워크 내의 각 서브넷의 청구 및 미 청구 송신 사용량을 확인할 수 있습니다. 송신 트래픽에 청구 및 미 청구 범위의 총 바이트 수를 4 분 마다 업데이트합니다.
 
-The following properties are available for each virtual subnet:
+다음 속성을 각 가상 서브넷에 대해 사용할 수 있습니다.
 
--   **UnbilledEgressBytes** shows the number of unbilled bytes sent by network interfaces connected to this virtual subnet. Unbilled bytes are bytes sent to address ranges that are part of the **UnbilledAddressRanges** property of the parent virtual network.
+-   **UnbilledEgressBytes** 이 가상 서브넷에 연결 된 네트워크 인터페이스에서 보낸 미 청구 바이트 수를 보여 줍니다. 미 청구 바이트가 포함 된 주소 범위에 전송 된 바이트는 **UnbilledAddressRanges** 부모 가상 네트워크의 속성입니다.
 
--   **BilledEgressBytes** shows Number of billed bytes sent by network interfaces connected to this virtual subnet. Billed bytes are bytes sent to address ranges that are not part of the **UnbilledAddressRanges** property of the parent virtual network.
+-   **BilledEgressBytes** 이 가상 서브넷에 연결 된 네트워크 인터페이스에서 보낸 청구 바이트 수를 보여 줍니다. 청구 바이트가 전송 되지 않는 주소 범위 (바이트)의 일부를 **UnbilledAddressRanges** 부모 가상 네트워크의 속성입니다.
 
-Use the following example to query egress usage:
+다음 예제 쿼리 송신 사용을 사용 합니다.
 
 ```PowerShell
 (Get-NetworkControllerVirtualNetwork -ConnectionURI $URI -ResourceId "VNet1").properties.subnets.properties | ft AddressPrefix,BilledEgressBytes,UnbilledEgressBytes
 ```
 
-Your output will look similar to this:
+출력은 다음과 유사 하 게 표시 됩니다.
 ```
 AddressPrefix BilledEgressBytes UnbilledEgressBytes
 ------------- ----------------- -------------------

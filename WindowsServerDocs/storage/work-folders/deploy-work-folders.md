@@ -9,12 +9,12 @@ manager: dongill
 ms.author: jgerend
 ms.date: 6/24/2017
 description: 서버 역할을 설치하고 동기화 공유를 만들고 DNS 레코드를 만드는 방법을 포함하여 클라우드 폴더를 배포하는 방법을 설명합니다.
-ms.openlocfilehash: 1ed26c9949fa3f4b53b9f650ca5a3649d5261d65
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: d2ba117a021cfc7361c0f7c8df2ed9f3c4bc9d94
+ms.sourcegitcommit: be243a92f09048ca80f85d71555ea6ee3751d712
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66447854"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792336"
 ---
 # <a name="deploying-work-folders"></a>클라우드 폴더 배포
 
@@ -51,7 +51,7 @@ ms.locfileid: "66447854"
 ## <a name="step-2-create-dns-records"></a>2단계: DNS 레코드 만들기  
  사용자가 인터넷을 통해 동기화하도록 허용하려면 인터넷 클라이언트에서 클라우드 폴더 URL을 확인할 수 있도록 공용 DNS에 호스트(A) 레코드를 만들어야 합니다. 이 DNS 레코드는 역방향 프록시 서버의 외부 인터페이스로 확인되어야 합니다.  
   
- 내부 네트워크에서, DNS에 클라우드 폴더 서버의 FDQN을 확인하는 workfolders라는 이름의 CNAME 레코드를 만듭니다 작업 폴더 클라이언트가 자동 검색을 사용 하면 클라우드 폴더 서버를 검색 하는 데 URL은 https://workfolders.domain.com합니다. 자동 검색을 사용하려면 DNS에 workfolders CNAME 레코드가 있어야 합니다.  
+ 내부 네트워크에서, DNS에 클라우드 폴더 서버의 FDQN을 확인하는 workfolders라는 이름의 CNAME 레코드를 만듭니다 작업 폴더 클라이언트가 자동 검색을 사용 하는 경우 클라우드 폴더 서버를 검색 하는 데 사용 하는 URL은 https:\//workfolders.domain.com 합니다. 자동 검색을 사용하려면 DNS에 workfolders CNAME 레코드가 있어야 합니다.  
   
 ## <a name="step-3-install-work-folders-on-file-servers"></a>3단계: 파일 서버에 클라우드 폴더 설치  
  서버 관리자를 사용하거나 로컬 또는 네트워크에서 원격으로 Windows PowerShell을 사용하여 도메인에 가입된 서버에 클라우드 폴더를 설치할 수 있습니다. 이는 네트워크에서 여러 동기화 서버를 구성하는 경우에 유용합니다.  
@@ -251,7 +251,7 @@ New-SyncShare "HR Sync Share" K:\Share-1 –User "HR Sync Share Users"
 6.  **추가할 값** 상자에 이 사용자를 동기화할 동기화 서버의 URL을 입력하고 **추가**, **확인**을 차례로 클릭한 다음 **확인**을 다시 클릭합니다.  
   
     > [!NOTE]
-    >  동기화 서버 URL은 `https://` 또는 `http://`(보안 연결이 필요한지 여부에 따라 결정됨) 뒤에 동기화 서버의 정규화된 도메인 이름이 오는 예: **https://sync1.contoso.com** .
+    >  동기화 서버 URL은 `https://` 또는 `http://`(보안 연결이 필요한지 여부에 따라 결정됨) 뒤에 동기화 서버의 정규화된 도메인 이름이 오는 예를 들어 **https:\//sync1.contoso.com**합니다.
 
 여러 사용자에 대한 특성을 채우려면 Active Directory PowerShell을 사용합니다. 다음은 5단계에서 설명한 *HR Sync Share Users* 그룹의 모든 구성원에 대한 특성을 채우는 예입니다.
   

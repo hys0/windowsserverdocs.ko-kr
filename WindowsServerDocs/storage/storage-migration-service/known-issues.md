@@ -4,16 +4,16 @@ description: 알려진된 문제 및 Microsoft 지원에 대 한 로그를 수�
 author: nedpyle
 ms.author: nedpyle
 manager: siroy
-ms.date: 05/14/2019
+ms.date: 07/09/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
-ms.openlocfilehash: e1cfd2b0ea3bc4d7802cb4a6d2a8c1493d5511a1
-ms.sourcegitcommit: 0099873d69bd23495d275d7bcb464594de09ee3c
+ms.openlocfilehash: 08156a09491d66016b5fcfe6056ed318d682b987
+ms.sourcegitcommit: 514d659c3bcbdd60d1e66d3964ede87b85d79ca9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65699693"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735163"
 ---
 # <a name="storage-migration-service-known-issues"></a>Storage Migration Service의 알려진 문제
 
@@ -173,12 +173,39 @@ DFSR 디버그 로그:
 
 ## <a name="error-couldnt-transfer-storage-on-any-of-the-endpoints-when-transfering-from-windows-server-2008-r2"></a>오류 "수 없습니다 저장소에서 전송 끝점" 때 Windows Server 2008 R2에서 전송
 
-Windows Server 2008 R2 원본 컴퓨터에서 데이터를 전송 하는 동안, 데이터 trasnfers 없습니다 하며 오류가 발생 합니다.  
+Windows Server 2008 R2 원본 컴퓨터에서 데이터를 전송할 때는 없는 데이터 전송 하 고 오류가 발생 합니다.  
 
   끝점 중 하나에서 저장소를 전송할 수 없습니다.
 0x9044
 
 Windows Server 2008 R2 컴퓨터 되지 않습니다 Windows Update에서 모든 필수 및 중요 업데이트를 사용 하 여 완전히 패치 된 경우이 오류가 예상 됩니다. 저장소 마이그레이션 서비스에 관계 없이 항상 좋습니다 보안상의 이유로 Windows Server 2008 R2 컴퓨터를 패치 해당 운영 체제는 최신 버전의 Windows Server의 향상 된 보안 기능을 포함 하지 않습니다.
+
+## <a name="error-couldnt-transfer-storage-on-any-of-the-endpoints-and-check-if-the-source-device-is-online---we-couldnt-access-it"></a>오류 "수 없습니다 저장소에서 전송 끝점" 및 "원본 장치-온라인 상태 이면 액세스할 수 없습니다 것을 확인 합니다."
+
+원본 컴퓨터에서 데이터를 전송 하려고 시도할 때, 일부 또는 모든 공유 함께 전송 되지 않습니다에 요약 오류:
+
+   끝점 중 하나에서 저장소를 전송할 수 없습니다.
+0x9044
+
+SMB 전송 정보를 검사 오류를 보여 줍니다.
+
+   원본 장치-온라인 상태 이면 액세스할 수 없습니다 것을 확인 합니다.
+
+StorageMigrationService/관리 이벤트 로그를 검사를 보여 줍니다.
+
+   저장소를 전송할 수 없습니다.
+
+   작업: Job1 ID:  
+   상태: 실패 한 오류: 36931 오류 메시지: 
+
+   지침: 오류 세부 정보를 확인 하 고 전송 요구 사항을 충족 하는지 확인 합니다. 전송 작업을 모든 원본 및 대상 컴퓨터를 전송할 수 없습니다. 오 케 스트레이 터 컴퓨터를 연결할 수 없습니다. 모든 원본 또는 대상 컴퓨터에 방화벽 규칙을 때문일 때문일 수 있습니다 또는 권한이 없습니다.
+
+StorageMigrationService-프록시/디버그 로그 표시를 검사 합니다.
+
+   [오류] 07/02/2019-13:35:57.231 전송 유효성 검사에 실패 했습니다. ErrorCode: 40961, 원본 끝점에 연결할 수 없거나 존재 하지 않는 원본 자격 증명이 유효 하지 않음 또는 인증 된 사용자에 액세스할 수 있는 권한이 없습니다.
+Microsoft.StorageMigration.Proxy.Service.Transfer.TransferOperation.Validate() Microsoft.StorageMigration.Proxy.Service.Transfer.TransferRequestHandler.ProcessRequest (FileTransferRequest fileTransferRequest, Guid operationId)에 있는    [d:\os\src\base\dms\proxy\transfer\transferproxy\TransferRequestHandler.cs::
+
+이 오류는 마이그레이션 계정에 없는 경우 적어도 될 SMB 공유에 대 한 읽기 액세스 권한. 문제를 해결 하려면이 오류를 원본 컴퓨터의 SMB 공유를 원본 마이그레이션 계정이 포함 된 보안 그룹을 추가 하 고 읽기, 변경 또는 전체 제어 권한을 부여 합니다. 마이그레이션이 완료 된 후에이 그룹을 제거할 수 있습니다. Windows Server의 향후 릴리스에서 더 이상 원본 공유에 명시적 권한을 요구 하도록이 동작을 변경할 수 없습니다.
 
 ## <a name="see-also"></a>참조
 

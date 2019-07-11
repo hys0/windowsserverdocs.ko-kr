@@ -9,12 +9,12 @@ ms.date: 3/29/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 071017d05b288a70592af9203fedc72f699d18e0
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 2336847825cfb3f232674a1e39d3bab7953a32c0
+ms.sourcegitcommit: be243a92f09048ca80f85d71555ea6ee3751d712
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66191943"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792304"
 ---
 # <a name="required-updates-for-active-directory-federation-services-ad-fs-and-web-application-proxy-wap"></a>Active Directory Federation Services (AD FS) 및 웹 응용 프로그램 프록시 (WAP)에 대 한 필수 업데이트
 
@@ -29,6 +29,7 @@ Windows Server 2016에 대 한 업데이트 Windows Update를 통해 매월 배�
 
 |KB # |설명|출시 날짜
 |----- | ----- |-----
+|[CVE-2019-1126](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1126) | 이 보안 업데이트는 Active Directory Federation Services (AD FS) 공격자가 엑스트라넷 잠금 정책을 무시 하는 취약점을 해결 합니다. |2019 년 7 월|
 |[4489889 (OS 빌드 14393.2879)](https://support.microsoft.com/help/4489889/windows-10-update-kb4489889) | Active Directory Federation Services (AD FS) 신뢰 당사자 트러스트에 AD FS 관리 콘솔에 표시를 중복 시키는 문제를 해결 합니다. 이런 만들거나 볼 때 AD FS 관리 콘솔을 사용 하 여 신뢰 당사자 트러스트 합니다. |2019 년 3 월|
 |[4487006 (OS 빌드 14393.2828)](https://support.microsoft.com/help/4487006/windows-10-update-kb4487006) | PowerShell 또는 Active Directory Federation Services (AD FS) 관리 콘솔을 사용 하는 경우 실패 하도록 신뢰 당사자 트러스트를 업데이트 하는 문제를 해결 합니다. 이 문제는 둘 이상의 PassiveRequestorEndpoint를 게시 하는 온라인 메타 데이터 URL을 사용 하는 신뢰 당사자 트러스트를 구성 하는 경우에 발생 합니다. 오류는 "MSIS7615: 신뢰 당사자 트러스트에 지정 된 신뢰할 수 있는 끝점에 대해 고유 해야 해당 신뢰 당사자 트러스트 합니다. "  </br></br>Azure 암호 보호 정책으로 인해 복잡성 외부 암호 변경에 대 한 특정 오류 메시지를 표시 하는 문제를 해결 합니다. |2019년 2월|
 |[4462928 (OS 빌드 14393.2580)](https://support.microsoft.com/help/4462928/windows-10-update-kb4462928)|Active Directory Federation Services (ADFS) 엑스트라넷 스마트 잠금 (ESL)와 대체 로그인 ID 간에 상호 운용성 문제를 해결 대체 로그인 ID를 사용 하는 경우 AD FS Powershell cmdlet, Get AdfsAccountActivity 및 재설정 AdfsAccountLockout, 반환 "계정 찾을 수 없음" 오류를 호출 합니다. 집합 AdfsAccountActivity 호출 되 면 기존 항목을 편집 하는 대신 새 항목이 추가 됩니다.|2018년 10월|
@@ -50,11 +51,12 @@ Windows Server 2012 R2에서 Active Directory Federation Services (AD FS)에 대
 
 |KB # |설명|출시 날짜
 |----- | ----- |-----
-|[4041685](https://support.microsoft.com/kb/4041685)|여기서 MSISConext 쿠키 요청 헤더에 수 결국 헤더 크기 제한에 오버플로 및 HTTP 상태 코드 400 사용 하 여 인증 하는 오류를 발생 시킬 AD FS 문제 해결 "잘못 된 요청-헤더 너무 깁니다"입니다.</br></br>한 문제를 해결 하 고 있는 ADFS 더 이상 무시할 수 "prompt = login" 인증 하는 동안 키를 누릅니다. "사용 안 함된" 옵션을 복원 시나리오-암호 인증을 사용 하는 위치에 추가 되었습니다.|2017 년 10 월 업데이트 롤업 미리 보기|
-|[4019217](https://support.microsoft.com/kb/4019217)|작업 폴더 토큰 broker를 사용 하 여 클라이언트에는 Server 2012 R2 AD FS 서버를 사용 하는 경우 작동 하지 않습니다|2017 년 5 월 미리 보기 업데이트 롤업|
-|[4015550](https://support.microsoft.com/kb/4015550)|외부 사용자와 AD FS WAP 임의로 요청 전달 실패를 인증 하지 않는 AD FS를 사용 하 여 문제를 해결 했습니다.|2017 년 4 월 업데이트 롤업|
-|[4015547](https://support.microsoft.com/kb/4015547)|외부 사용자와 AD FS WAP 임의로 요청 전달 실패를 인증 하지 않는 AD FS를 사용 하 여 문제를 해결 했습니다.|2017 년 4 월 보안 업데이트|
-|[4012216](https://support.microsoft.com/kb/4009970)|MS17 019이 보안 업데이트에서 ADFS Active Directory Federation Services () 취약점을 확인합니다. 취약점으로 인해 공격자는 요청을 보냅니다 특별히 구성 된 AD FS 서버에 공격자가 대상 시스템에 대 한 중요 정보를 읽을 수 있도록 하는 경우 정보 공개가 발생할 수 있습니다.|2017 년 3 월 업데이트 롤업|
+|[4507448](https://support.microsoft.com/help/4507448/windows-8-1-update-kb4507448)| 이 보안 업데이트는 Active Directory Federation Services (AD FS) 공격자가 엑스트라넷 잠금 정책을 무시 하는 취약점을 해결 합니다. |2019 년 7 월
+|[4041685](https://support.microsoft.com/kb/4041685)|여기서 MSISConext 쿠키 요청 헤더에 수 결국 헤더 크기 제한에 오버플로 및 HTTP 상태 코드 400 사용 하 여 인증 하는 오류를 발생 시킬 AD FS 문제 해결 "잘못 된 요청-헤더 너무 깁니다"입니다.</br></br>한 문제를 해결 하 고 있는 ADFS 더 이상 무시할 수 "prompt = login" 인증 하는 동안 키를 누릅니다. "사용 안 함된" 옵션을 복원 시나리오-암호 인증을 사용 하는 위치에 추가 되었습니다.|2017 년 10 월 업데이트 롤업 미리 보기
+|[4019217](https://support.microsoft.com/kb/4019217)|작업 폴더 토큰 broker를 사용 하 여 클라이언트에는 Server 2012 R2 AD FS 서버를 사용 하는 경우 작동 하지 않습니다|2017 년 5 월 미리 보기 업데이트 롤업
+|[4015550](https://support.microsoft.com/kb/4015550)|외부 사용자와 AD FS WAP 임의로 요청 전달 실패를 인증 하지 않는 AD FS를 사용 하 여 문제를 해결 했습니다.|2017 년 4 월 업데이트 롤업
+|[4015547](https://support.microsoft.com/kb/4015547)|외부 사용자와 AD FS WAP 임의로 요청 전달 실패를 인증 하지 않는 AD FS를 사용 하 여 문제를 해결 했습니다.|2017 년 4 월 보안 업데이트
+|[4012216](https://support.microsoft.com/kb/4009970)|MS17 019이 보안 업데이트에서 ADFS Active Directory Federation Services () 취약점을 확인합니다. 취약점으로 인해 공격자는 요청을 보냅니다 특별히 구성 된 AD FS 서버에 공격자가 대상 시스템에 대 한 중요 정보를 읽을 수 있도록 하는 경우 정보 공개가 발생할 수 있습니다.|2017 년 3 월 업데이트 롤업
 |[3179574](https://support.microsoft.com/kb/3179574)|AD FS 엑스트라넷 암호 업데이트를 사용 하 여 문제를 해결 했습니다. |2016 년 8 월 업데이트 롤업
 |[3172614](https://support.microsoft.com/kb/3172614)|도입 된 프롬프트 = login [지원](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/overview/ad-fs-faq#BKMK_7), AlwaysRequireAuthentication 설정을 확인 하 고 AD FS 관리 콘솔을 사용 하 여 문제를 해결 합니다. |2016 년 7 월 업데이트 롤업
 |[3163306](https://support.microsoft.com/kb/3163306)|Active Directory Federation Services (AD FS) 3.0 Secure Sockets Layer (SSL) 포트 636 또는 연결 문자열에 3269 사용 하도록 구성 된 LDAP Lightweight Directory Access Protocol () 특성 저장소에 연결할 수 없습니다. |2016 년 6 월 업데이트 롤업

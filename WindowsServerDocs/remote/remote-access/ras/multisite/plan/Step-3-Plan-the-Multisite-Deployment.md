@@ -12,16 +12,16 @@ ms.topic: article
 ms.assetid: e5ea9d22-a503-4ed4-96b3-0ee2ccf4fd17
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 16a2dcdc573fac2631b5a9890ee04f2efb08d90a
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 973ef70614f056adac1463918cc425d82b21ac62
+ms.sourcegitcommit: be243a92f09048ca80f85d71555ea6ee3751d712
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67282536"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792309"
 ---
 # <a name="step-3-plan-the-multisite-deployment"></a>3 단계 계획 멀티 사이트 배포
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 멀티 사이트 인프라를 계획 한 후 추가 인증서 요구 사항을 계획 클라이언트 컴퓨터 항목 지점 및 배포에 할당 된 IPv6 주소를 선택 하는 방법입니다.  
 
@@ -162,11 +162,11 @@ VPN 단일 원격 액세스 서버에 배포한 경우 다음 note:
   
    3. Teredo 접두사 (선택 사항)입니다. 이 접두사는 원격 액세스 서버는 두 개의 연속 된 공용 IPv4 주소가 외부 어댑터에 구성 된 경우에 적합 합니다. 접두사 주소 쌍의 첫 번째 공용 IPv4 주소를 기반으로 합니다. 예를 들어 외부 주소:  
   
-      1. www.xxx.yyy.zzz  
+      1. www\.xxx.yyy.zzz  
   
-      2. www.xxx.yyy.zzz+1  
+      2. www\.xxx.yyy.zzz+1  
   
-      구성 하려면 Teredo prefix 2001:0:WWXX:YYZZ 됩니다:: / 64 WWXX:YYZZ IPv4 주소 www.xxx.yyy.zzz의 16 진수 표현입니다.  
+      구성 하려면 Teredo prefix 2001:0:WWXX:YYZZ 됩니다:: / 64 WWXX:YYZZ IPv4 주소 www의 16 진수 표현 인\.xxx.yyy.zzz 합니다.  
   
       Teredo prefix를 계산 하려면 다음 스크립트를 사용할 수 있는 note:  
   

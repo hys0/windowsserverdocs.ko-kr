@@ -8,12 +8,12 @@ ms.author: harowl
 ms.date: 06/07/2019
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: 96d09b25ddb2f473fb4fe22c0cf716bfcf8becaa
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.openlocfilehash: ef87a3bcc5bd0b924a938f055307a0a87cb60d0b
+ms.sourcegitcommit: be243a92f09048ca80f85d71555ea6ee3751d712
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66811931"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792324"
 ---
 # <a name="configure-user-access-control-and-permissions"></a>사용자 Access Control 및 권한 구성
 
@@ -111,7 +111,7 @@ Azure AD에 저장 한 후의 액세스 제어를 **변경 액세스 제어** �
 
 Windows 10에서 Windows Admin Center 설치할 때 single sign-on을 사용할 준비가 됩니다. 하지만 Windows Server에서 Windows Admin Center 사용 하려는 경우에 single sign on 사용 하기 전에 특정 형태의 사용자 환경에서 Kerberos 위임 설정 해야 합니다. 위임으로 대상 노드에 대 한 대리자로 신뢰를 게이트웨이 컴퓨터를 구성 합니다. 
 
-구성 하려면 [리소스 기반의 제한 위임](http://windowsitpro.com/security/how-windows-server-2012-eases-pain-kerberos-constrained-delegation-part-1) 사용자 환경에서 다음 PowerShell cmdlet을 실행 합니다. (이 Windows Server 2012를 실행 하는 도메인 컨트롤러를 위해서는 인식 이상을 수).
+구성 하려면 [리소스 기반의 제한 위임](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) 사용자 환경에서 다음 PowerShell cmdlet을 실행 합니다. (이 Windows Server 2012를 실행 하는 도메인 컨트롤러를 위해서는 인식 이상을 수).
 
 ```powershell
      $gateway = "WindowsAdminCenterGW" # Machine where Windows Admin Center is installed
