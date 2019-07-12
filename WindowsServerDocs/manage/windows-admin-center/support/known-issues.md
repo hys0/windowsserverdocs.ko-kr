@@ -83,7 +83,7 @@ ms.locfileid: "66811774"
 
 - Azure Active Directory를 ID 공급자로 사용하고 Windows Admin Center가 자체 서명되었거나 신뢰할 수 없는 인증서로 구성된 경우 Microsoft Edge에서 AAD 인증을 완료할 수 없습니다.  [15968377]
 
-- 서비스로 배포 하는 Windows Admin Center 있고 Microsoft Edge 브라우저를 사용 하는 경우 새 브라우저 창을 생성 한 후 실패할 수 있습니다 azure 게이트웨이 연결 합니다. 추가 하 여이 문제를 해결 하려고 https://login.microsoftonline.com, https://login.live.com,으로 게이트웨이의 URL을 신뢰할 수 있는 사이트 및 클라이언트 쪽 브라우저에서 팝업 차단 설정에 대 한 허용 된 사이트 및 합니다. 에 대 한 자세한 지침은이 해결 합니다 [문제 해결 가이드](troubleshooting.md#azure-features-dont-work-properly-in-edge)합니다. [17990376]
+- 서비스로 배포 하는 Windows Admin Center 있고 Microsoft Edge 브라우저를 사용 하는 경우 새 브라우저 창을 생성 한 후 실패할 수 있습니다 azure 게이트웨이 연결 합니다. 추가 하 여이 문제를 해결 하려고 https://login.microsoftonline.com , https://login.live.com ,으로 게이트웨이의 URL을 신뢰할 수 있는 사이트 및 클라이언트 쪽 브라우저에서 팝업 차단 설정에 대 한 허용 된 사이트 및 합니다. 에 대 한 자세한 지침은이 해결 합니다 [문제 해결 가이드](troubleshooting.md#azure-features-dont-work-properly-in-edge)합니다. [17990376]
 
 - Windows Admin Center 데스크톱 모드로 설치 된 경우는 favicon Microsoft Edge 브라우저 탭에 표시 되지 않습니다. [17665801]
 
