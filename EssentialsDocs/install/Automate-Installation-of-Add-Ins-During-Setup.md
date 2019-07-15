@@ -24,7 +24,7 @@ ms.locfileid: "66433647"
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 ##  <a name="BKMK_AddIns"></a> 설치 중 추가 기능 설치 자동화  
- 설치 중 추가 기능을 설치하려면 이 문서의 [Create the PostIC.cmd File for Running Post Initial Configuration Tasks](Create-the-PostIC.cmd-File-for-Running-Post-Initial-Configuration-Tasks.md) 섹션에 설명되어 있는 PostIC.cmd 메서드를 사용합니다.  
+ 설치 중 추가 기능을 설치하려면 이 문서의 [초기 구성 후 작업 실행을 위해 PostIC.cmd 파일 만들기](Create-the-PostIC.cmd-File-for-Running-Post-Initial-Configuration-Tasks.md) 섹션에 설명되어 있는 PostIC.cmd 메서드를 사용합니다.  
   
  PostIC.cmd에 다음 항목을 추가합니다.  
   
