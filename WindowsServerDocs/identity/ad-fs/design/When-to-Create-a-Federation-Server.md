@@ -31,7 +31,7 @@ ms.locfileid: "66190593"
   
 페더레이션 서버를 계정 파트너의 회사 네트워크에 배치 하면 해당 역할 브라우저, 웹 서비스 또는 id 선택기 클라이언트의 사용자 자격 증명을 인증 하 고 클라이언트에 보안 토큰을 전송 방법은입니다. 자세한 내용은 참조 [검토 하는 계정 파트너의 페더레이션 서버 역할을](Review-the-Role-of-the-Federation-Server-in-the-Account-Partner.md)합니다.  
   
-페더레이션 서버는 리소스 파트너의 회사 네트워크에 배치 하는 경우 그 역할은 사용자, 리소스 파트너 조직의 페더레이션 서버에서 발급 한 보안 토큰 기반 인증 또는 해당 역할의 토큰 요청을 리디렉션하는 것이 웹 응용 프로그램 또는 클라이언트가 속한 계정 파트너 조직에 웹 서비스를 구성 합니다. 자세한 내용은 [Review the Role of the Federation Server in the Resource Partner](Review-the-Role-of-the-Federation-Server-in-the-Resource-Partner.md)를 참조하세요.  
+페더레이션 서버는 리소스 파트너의 회사 네트워크에 배치 하는 경우 그 역할은 사용자, 리소스 파트너 조직의 페더레이션 서버에서 발급 한 보안 토큰 기반 인증 또는 해당 역할의 토큰 요청을 리디렉션하는 것이 웹 응용 프로그램 또는 클라이언트가 속한 계정 파트너 조직에 웹 서비스를 구성 합니다. 자세한 내용은 [리소스 파트너에 페더레이션 서버의 역할 검토](Review-the-Role-of-the-Federation-Server-in-the-Resource-Partner.md)합니다.  
   
 ## <a name="determine-which-ad-fs-design-to-deploy"></a>배포할 AD FS 디자인 확인  
 다음 AD FS 디자인 배포 하려고 할 때마다 조직에서 페더레이션 서버를 만듭니다.  
@@ -66,13 +66,13 @@ AD FS 페더레이션 서버 구성 마법사 또는 Fsconfig.exe 명령을 사�
   
 -   페더레이션 서버 팜의 첫 번째 페더레이션 서버 만들기  
   
-    첫 번째 페더레이션 서버를 설정 또는 페더레이션 서버를 팜에 추가하는 방법에 대한 자세한 내용은 [Create the First Federation Server in a Federation Server Farm](../../ad-fs/deployment/Create-the-First-Federation-Server-in-a-Federation-Server-Farm.md)를 참조하세요.  
+    첫 번째 페더레이션 서버를 설정 또는 페더레이션 서버 팜에 추가 하는 방법에 대 한 자세한 내용은 참조 하세요. [페더레이션 서버 팜의 첫 번째 페더레이션 서버 만들기](../../ad-fs/deployment/Create-the-First-Federation-Server-in-a-Federation-Server-Farm.md)합니다.  
   
 -   페더레이션 서버 팜에 페더레이션 서버 추가  
   
-    페더레이션 서버를 팜에 추가하는 방법에 대한 자세한 내용은 [Add a Federation Server to a Federation Server Farm](../../ad-fs/deployment/Add-a-Federation-Server-to-a-Federation-Server-Farm.md)를 참조하세요.  
+    팜에 페더레이션 서버를 추가 하는 방법에 대 한 자세한 내용은 참조 하세요. [페더레이션 서버 팜에 페더레이션 서버 추가](../../ad-fs/deployment/Add-a-Federation-Server-to-a-Federation-Server-Farm.md)합니다.  
   
-이러한 각 옵션 작업에 대한 자세한 내용은 [The Role of the AD FS Configuration Database](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)를 참조하세요.  
+이러한 각 옵션 작업에 대 한 정보를 자세한 [The Role of the AD FS Configuration Database](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)합니다.  
   
 페더레이션 서버를 배포 하는 데 필요한 모든 필수 구성 요소를 설정 하는 방법에 대 한 자세한 내용은 참조 하세요. [검사 목록: 페더레이션 서버를 설정할](../../ad-fs/deployment/Checklist--Setting-Up-a-Federation-Server.md)합니다.  
   
