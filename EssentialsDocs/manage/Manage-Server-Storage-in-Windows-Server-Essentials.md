@@ -234,7 +234,7 @@ ms.locfileid: "66433231"
   
 3. 지시에 따라 마법사를 완료합니다.  
   
-   저장소 풀 용량을 늘리는 방법에 대한 자세한 내용은 [Use the new hard drive to increase storage pool capacity](Manage-Server-Storage-in-Windows-Server-Essentials.md#BKMK_4c)를 참조하세요.  
+   저장소 풀 용량을 늘리는 방법에 대 한 자세한 내용은 [새 하드 드라이브를 사용 하 여 저장소 풀 용량 늘리기](Manage-Server-Storage-in-Windows-Server-Essentials.md#BKMK_4c)합니다.  
   
 ## <a name="see-also"></a>참조  
   
