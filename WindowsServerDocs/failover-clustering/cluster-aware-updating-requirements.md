@@ -94,7 +94,7 @@ CAU를 사용하려면 장애 조치(failover) 클러스터링 기능 및 장애
 > [!NOTE]  
 > Windows 방화벽에 대해 구성된 그룹 정책 설정과 충돌하는 경우에는 **Remote Shutdown** Windows 방화벽 규칙 그룹을 사용할 수 없습니다.    
 
-**Remote Shutdown** 지정 하 여 방화벽 규칙 그룹도 사용 합니다 **– EnableFirewallRules** 다음 CAU cmdlet을 실행 하는 경우 매개 변수: Add-CauClusterRole, [Invoke-CauRun](https://docs.microsoft.com/powershell/module/clusterawareupdating/Invoke-CauRun?view=win10-ps) 및 [SetCauClusterRole](https://docs.microsoft.com/powershell/module/clusterawareupdating/Set-CauClusterRole?view=win10-ps).  
+**Remote Shutdown** 지정 하 여 방화벽 규칙 그룹도 사용 합니다 **– EnableFirewallRules** 다음 CAU cmdlet을 실행 하는 경우 매개 변수: [Add-CauClusterRole](https://docs.microsoft.com/powershell/module/clusterawareupdating/Add-CauClusterRole?view=win10-ps), [Invoke-CauRun](https://docs.microsoft.com/powershell/module/clusterawareupdating/Invoke-CauRun?view=win10-ps) 및 [SetCauClusterRole](https://docs.microsoft.com/powershell/module/clusterawareupdating/Set-CauClusterRole?view=win10-ps).  
 
 다음 PowerShell 예제에서는 클러스터 노드에서 자동 다시 시작을 사용 하도록 설정 하는 추가 메서드를 보여 줍니다.  
 
