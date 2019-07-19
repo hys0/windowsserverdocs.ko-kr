@@ -1,6 +1,6 @@
 ---
 title: tsecimp
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a5ed2ef8b1d0238a3608dabdd165a255855a304d
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 85fea84ed9dcb0f85bfa80e56f0c2c04d2c8e85b
+ms.sourcegitcommit: 1bc3c229e9688ac741838005ec4b88e8f9533e8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66440877"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68314309"
 ---
 # <a name="tsecimp"></a>tsecimp
 
@@ -37,7 +37,7 @@ tsecimp /d
 
 |매개 변수|설명|
 |---------|-----------|
-|/f \<Filename>|필수. 가져올 할당 정보를 포함 하는 XML 파일의 이름을 지정 합니다.|
+|/f \<파일 이름 >|필수. 가져올 할당 정보를 포함 하는 XML 파일의 이름을 지정 합니다.|
 |/v|Tsec.ini 파일에 정보를 가져오지 않고 XML 파일의 구조를 확인 합니다.|
 |/u|각 사용자는 XML 파일에 지정 된 도메인의 구성원 인지 확인 합니다. 이 매개 변수를 사용 하는 컴퓨터는 네트워크에 연결 되어야 합니다. 이 매개 변수는 많은 양의 사용자 할당 정보를 처리 하는 경우 성능이 크게 저하 될 수 있습니다.|
 |/d|설치 된 전화 통신 공급자의 목록이 표시 됩니다. 각 전화 통신 공급자에 대 한 관련된 된 회선 장치가 주소와 각 줄 장치와 연결 된 사용자가 나열 됩니다.|
@@ -138,12 +138,9 @@ tsecimp /d
         </LineList>
       </User>
     </UserList>
+    ```
 
-
-~~~
-    ```  
-~~~
--   The following sample output appears after the **/d** command-line option is specified to display the current TAPI configuration. For each telephony provider, the associated line devices are listed, as well as the addresses and users associated with each line device.  
+-   뒤에 다음 예제 출력 표시는 **/d** 현재 TAPI 구성을 표시 하려면 명령줄 옵션을 지정 합니다. 각 전화 통신 공급자에 대 한 관련된 된 회선 장치가 주소와 각 줄 장치와 연결 된 사용자가 나열 됩니다.  
     ```
     NDIS Proxy TAPI Service Provider
             Line: "WAN Miniport (L2TP)"
@@ -161,8 +158,8 @@ tsecimp /d
 
     ```
 
-#### Additional references
+#### <a name="additional-references"></a>추가 참조
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+[명령줄 구문 키](command-line-syntax-key.md)
 
-[Command shell overview](https://technet.microsoft.com/library/cc737438(v=ws.10).aspx)
+[명령 셸 개요](https://technet.microsoft.com/library/cc737438(v=ws.10).aspx)

@@ -1,6 +1,6 @@
 ---
 title: Windows에서 Hyper-v에 대 한 지원 되는 Linux 및 FreeBSD 가상 컴퓨터
-description: Linux integration services 및 각 버전에 포함 된 기능을 나열 합니다.
+description: 각 버전에 포함 된 Linux 통합 서비스 및 기능을 나열 합니다.
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill
@@ -11,16 +11,16 @@ ms.assetid: 990ff94a-30fb-434b-b4a2-3804a5245ba6
 author: shirgall
 ms.author: kathydav
 ms.date: 10/03/2016
-ms.openlocfilehash: 9df495bdc67b06a675fec050fb4c2960337ce8ca
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 593068f4fc2015c7f8f94bfe49c5a11c23cb6599
+ms.sourcegitcommit: 1bc3c229e9688ac741838005ec4b88e8f9533e8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59832904"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68314979"
 ---
 # <a name="supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows"></a>Windows에서 Hyper-v에 대 한 지원 되는 Linux 및 FreeBSD 가상 컴퓨터
 
->적용 대상: Windows Server 2016에서 Hyper-v Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012 Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
+>적용 대상: Windows Server 2019, Windows Server 2016, Hyper-v Server 2016, Windows Server 2012 R2, Hyper-v Server 2012 R2, Windows Server 2012, Hyper-v 서버 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
 
 Hyper-v는 Linux 및 FreeBSD 가상 컴퓨터에 대 한 에뮬레이트된 및 하이퍼-V-특정 장치를 지원합니다. 에뮬레이트된 장치를 실행할 때 추가 소프트웨어는 설치 해야 합니다. 그러나 에뮬레이트된 장치 고성능을 제공 하지 않으면 및 Hyper-v 기술에서 제공 하는 풍부한 가상 컴퓨터 관리 인프라를 활용할 수 없습니다. 이 Hyper-v에서 제공 하는 모든 혜택을 완전 하 게 활용 하기 위해 Linux 및 FreeBSD 하이퍼-V-특정 장치를 사용 하 여 가장 좋습니다. 하이퍼-V-특정 장치를 실행 하는 데 필요한 드라이버의 컬렉션을 Integration Services LIS (Linux) 또는 FreeBSD Integration Services (BIS) 라고 합니다.
 
@@ -31,8 +31,7 @@ LIS는 Linux 커널에 추가한 하 고 새 릴리스를 위한 업데이트 �
 이전 FreeBSD 릴리스 (10.0) 앞에 대 한 Microsoft는 설치 가능한 BIS 드라이버 및 FreeBSD 가상 컴퓨터에 대 한 해당 디먼을 포함 하는 포트를 제공 합니다. 그 이상의 FreeBSD 버전에 대 한 BIS에 기본 제공 FreeBSD 운영 체제 이며 별도 다운로드 나 설치 없이 필수 FreeBSD 10.0에 필요한 KVP 포트 다운로드를 제외 하 고 있습니다.
 
 > [!TIP]
-> - 다운로드 [Windows Server 2016](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016) Evaluation Center에서.
-> - 다운로드 [Microsoft Hyper-v Server 2016](https://www.microsoft.com/evalcenter/evaluate-hyper-v-server-2016) Evaluation Center에서.
+> - 평가 센터에서 [Windows Server 2019](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2019) 를 다운로드 합니다.
 
 이 콘텐츠의 목표 사용 하면 Hyper-v에서 Linux 또는 FreeBSD 배포 용이 하 게 하는 정보를 제공 하는 것입니다. 특정 세부 정보는 다음과 같습니다.
 
@@ -46,24 +45,24 @@ LIS는 Linux 커널에 추가한 하 고 새 릴리스를 위한 업데이트 �
 
 * 기능 각 LIS 또는 BIS 기능에 대해 설명 합니다.
 
-**특징과 기능에 대 한 제안 하 시겠습니까?** 가 더 잘 우리가 수 있나요? 사용할 수는 [Windows Server 사용자 의견](https://windowsserver.uservoice.com/forums/295062-linux-support) 사이트 Linux 및 Hyper-v에 FreeBSD 가상 컴퓨터에 대 한 새로운 기능을 제안 하는 데 다른 사용자의 의견을 참조 하세요.
+**기능 및 기능에 대해 제안 하 시겠습니까?** 가 더 잘 우리가 수 있나요? [Windows Server 사용자 의견](https://windowsserver.uservoice.com/forums/295062-linux-support) 사이트를 사용 하 여 Hyper-v에서 Linux 및 FreeBSD Virtual Machines에 대 한 새로운 기능과 기능을 제안 하 고 다른 사용자에 게 제공 되는 내용을 확인할 수 있습니다.
 
 ## <a name="in-this-section"></a>단원 내용
 
-* [CentOS 지원 및 Hyper-v Red Hat Enterprise Linux 가상 컴퓨터](Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md)
+* [Hyper-v에서 지원 되는 CentOS 및 Red Hat Enterprise Linux 가상 컴퓨터](Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md)
 
-* [Hyper-v의 Debian 가상 컴퓨터를 지원](Supported-Debian-virtual-machines-on-Hyper-V.md)
+* [Hyper-V에서 지원되는 Debian 가상 머신](Supported-Debian-virtual-machines-on-Hyper-V.md)
 
 * [Hyper-v에서 지원 되는 Oracle Linux 가상 컴퓨터](Supported-Oracle-Linux-virtual-machines-on-Hyper-V.md)
 
-* [Hyper-v에서 지원 되는 SUSE 가상 머신](Supported-SUSE-virtual-machines-on-Hyper-V.md)
+* [Hyper-v에서 지원 되는 SUSE 가상 컴퓨터](Supported-SUSE-virtual-machines-on-Hyper-V.md)
 
-* [Hyper-v에서 지원 되는 Ubuntu 가상 컴퓨터](Supported-Ubuntu-virtual-machines-on-Hyper-V.md)
+* [Hyper-v에서 지원 되는 Ubuntu 가상 머신](Supported-Ubuntu-virtual-machines-on-Hyper-V.md)
 
 * [Hyper-v에서 지원 되는 FreeBSD 가상 컴퓨터](Supported-FreeBSD-virtual-machines-on-Hyper-V.md)
 
-* [Hyper-v의 Linux 및 FreeBSD 가상 컴퓨터에 대 한 설명이](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md)
+* [Hyper-v의 Linux 및 FreeBSD 가상 머신에 대 한 기능 설명](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md)
 
-* [Hyper-v에서 Linux를 실행 하는 것에 대 한 모범 사례](Best-Practices-for-running-Linux-on-Hyper-V.md)
+* [Hyper-v에서 Linux를 실행 하기 위한 모범 사례](Best-Practices-for-running-Linux-on-Hyper-V.md)
 
-* [Hyper-v에 FreeBSD를 실행 하는 것에 대 한 모범 사례](Best-practices-for-running-FreeBSD-on-Hyper-V.md)
+* [Hyper-v에서 FreeBSD 실행에 대 한 모범 사례](Best-practices-for-running-FreeBSD-on-Hyper-V.md)

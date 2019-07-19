@@ -9,12 +9,12 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 10/08/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 8bdce646c631b56309f86292f0895fe80b0adf31
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: eb19e7ecf89f02200d3393dc1a4a9e5cd85cf598
+ms.sourcegitcommit: 1bc3c229e9688ac741838005ec4b88e8f9533e8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67284505"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68314990"
 ---
 # <a name="choosing-drives-for-storage-spaces-direct"></a>저장소 공간 다이렉트용 드라이브 선택
 
@@ -67,11 +67,11 @@ ms.locfileid: "67284505"
 
 ![플래시 전용 배포 시나리오](media/choosing-drives-and-resiliency-types/All-Flash-Deployment-Possibilities.png)
 
-1. **모든 NVMe 합니다.** NVMe 전용을 사용하는 옵션은 가장 예측 가능성이 높은 짧은 대기 시간을 비롯한 최고의 성능을 제공합니다. 드라이브가 모두 같은 모델일 경우 캐시가 없습니다. 내구성이 높은 NVMe 모델과 낮은 MVMe 모델을 혼용할 수도 있고, 내구성이 높은 모델이 낮은 모델에 대한 쓰기를 캐싱하도록 구성할 수도 있습니다([설정 필요](understand-the-cache.md#manual)).
+1. **모든 NVMe.** NVMe 전용을 사용하는 옵션은 가장 예측 가능성이 높은 짧은 대기 시간을 비롯한 최고의 성능을 제공합니다. 드라이브가 모두 같은 모델일 경우 캐시가 없습니다. 내구성이 높은 NVMe 모델과 낮은 MVMe 모델을 혼용할 수도 있고, 내구성이 높은 모델이 낮은 모델에 대한 쓰기를 캐싱하도록 구성할 수도 있습니다([설정 필요](understand-the-cache.md#manual-configuration)).
 
 2. **NVMe + SSD.** NVMe를 SSD와 함께 사용할 경우 NVMe는 SSD로의 쓰기를 자동 캐시합니다. 따라서 쓰기가 캐시에서 병합되고 필요한 경우에 한해 전환되어 SSD의 마모가 감소합니다. 이는 NVMe와 유사한 쓰기 특성을 제공하는 동시에, 마찬가지로 빠른 SSD로부터 읽기가 직접 실행됩니다.
 
-3. **All SSD.** NVMe 전용과 마찬가지로 드라이브가 모두 같은 모델일 경우 캐시가 없습니다. 내구성이 높은 NVMe 모델과 낮은 MVMe 모델을 혼용할 경우, 내구성이 높은 모델이 낮은 모델에 대한 쓰기를 캐싱하도록 구성할 수도 있습니다([설정 필요](understand-the-cache.md#manual)).
+3. **모든 SSD.** NVMe 전용과 마찬가지로 드라이브가 모두 같은 모델일 경우 캐시가 없습니다. 내구성이 높은 NVMe 모델과 낮은 MVMe 모델을 혼용할 경우, 내구성이 높은 모델이 낮은 모델에 대한 쓰기를 캐싱하도록 구성할 수도 있습니다([설정 필요](understand-the-cache.md#manual-configuration)).
 
    >[!NOTE]
    > 캐시 없이 NVMe 전용 또는 SSD 전용을 사용할 경우 모든 드라이브에서 사용 가능한 저장소 용량을 확보할 수 있다는 이점이 있습니다. 캐싱에 "소모"되는 용량이 없으므로 규모가 작은 경우에 적합합니다.
@@ -102,7 +102,7 @@ ms.locfileid: "67284505"
 1. **SSD + HDD**. SSD는 읽기와 쓰기를 캐싱하고, 버스트를 흡수하고 SSD와 같은 쓰기 성능을 제공하며, 나중에 HDD로의 최적화된 전환을 수행합니다.
 
 >[!IMPORTANT]
->Hdd 사용 하 여 구성만 지원 되지 않습니다. 낮은 지속 시간과 Ssd 캐싱 높은 지속 시간과 Ssd은 권장 되지 않습니다.
+>Hdd만 포함 된 구성은 지원 되지 않습니다. High endurance Ssd 캐싱은 낮은 endurance Ssd에 권장 되지 않습니다.
 
 ## <a name="sizing-considerations"></a>크기 조정 고려 사항
 
@@ -110,18 +110,18 @@ ms.locfileid: "67284505"
 
 모든 서버는 최소 2개의 캐시 드라이브가 있어야 합니다(중복성에 필요한 최소 조건). 용량 드라이브의 수를 캐시 드라이브 수의 배수가 되도록 하는 것이 좋습니다. 예를 들어 캐시 드라이브가 4개인 경우 7개나 9개보다는 8개의 용량 드라이브(1:2 비율)를 사용하는 것이 더 일관적인 성능을 보일 것입니다.
 
-캐시의 응용 프로그램 및 워크 로드, 즉, 모든 데이터 읽기 및 쓰기 언제 든 지 적극적으로 작업 집합에 맞게 조정 합니다. 캐시 크기가 이보다 더 클 필요는 없습니다. Hdd 사용 하 여 배포의 경우 상당한 시작 지점 경우 용량의 – 10% 예를 들어, 각 서버에는 4 x 4TB HDD 다음 2 800GB SSD 용량 16TB = = 1.6TB 서버당 캐시 합니다. 에 대 한 모든 플래시 배포의 경우 특히 매우 [높은 지속 시간과](https://blogs.technet.microsoft.com/filecab/2017/08/11/understanding-dwpd-tbw/) Ssd가는 것이 시작 용량 – 예를 들어, 5%에 가까운 양호 각 서버에 24 x 1.2 TB SSD 28.8 TB의 용량을 2 번 750 GB NVMe x = = 1.5TB 서버당 캐시 합니다. 캐시 드라이브는 추후 언제든지 추가하거나 제거해서 조정할 수 있습니다.
+응용 프로그램 및 워크 로드의 작업 집합을 수용 하기 위해 캐시 크기를 조정 해야 합니다. 즉, 지정 된 시간에 적극적으로 읽고 쓰는 모든 데이터입니다. 캐시 크기가 이보다 더 클 필요는 없습니다. Hdd를 사용 하 여 배포 하는 경우에는 각 서버에 4 x 4 TB HDD = 16tb의 1.6 800 용량이 있는 경우와 같이 공평 하 게 시작할 수 있습니다. 특히 매우 [높은 endurance](https://blogs.technet.microsoft.com/filecab/2017/08/11/understanding-dwpd-tbw/) ssd를 사용 하는 모든 플래시 배포의 경우 5%의 용량에 더 가까운 수준으로 시작 하는 것이 양호 합니다. 예를 들어 각 서버에 24 x 1.2 tb SSD = 28.8 tb의 용량이 있는 경우 2 x 750 GB NVMe = 1.5 tb의 서버 당 캐시가 포함 됩니다. 캐시 드라이브는 추후 언제든지 추가하거나 제거해서 조정할 수 있습니다.
 
 ### <a name="general"></a>일반
 
 서버당 전체 저장소 용량은 약 100TB로 제한하는 것이 좋습니다. 서버당 저장소 용량이 클수록 소프트웨어 업데이트를 적용하는 경우 등에 가동 중지 시간이나 다시 부팅 후 데이터를 다시 동기화하는 데 필요한 시간이 더 길어집니다.
 
-저장소 풀 당 최대 크기를 현재 Windows Server 2019에 대 한 4 페타바이트 (PB) (4,000 TB) 또는 Windows Server 2016에 대 한 1 페타바이트 됩니다.
+저장소 풀 당 현재 최대 크기는 Windows Server 2019의 경우 4 페타바이트 (PB) (4000 TB)이 고 Windows Server 2016의 경우 1 페타바이트입니다.
 
 ## <a name="see-also"></a>참조
 
-- [저장소 공간 다이렉트 개요](storage-spaces-direct-overview.md)
-- [저장소 공간 다이렉트 캐시 이해](understand-the-cache.md)
-- [저장소 공간 다이렉트 하드웨어 요구 사항](storage-spaces-direct-hardware-requirements.md)
-- [저장소 공간 다이렉트 볼륨 계획](plan-volumes.md)
+- [스토리지 공간 다이렉트 개요](storage-spaces-direct-overview.md)
+- [스토리지 공간 다이렉트 캐시 이해](understand-the-cache.md)
+- [하드웨어 요구 사항 스토리지 공간 다이렉트](storage-spaces-direct-hardware-requirements.md)
+- [스토리지 공간 다이렉트에서 볼륨 계획](plan-volumes.md)
 - [내결함성 및 스토리지 효율성](storage-spaces-fault-tolerance.md)

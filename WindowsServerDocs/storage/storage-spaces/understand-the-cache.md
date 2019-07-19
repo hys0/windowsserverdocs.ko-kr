@@ -7,14 +7,14 @@ ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 07/18/2017
+ms.date: 07/17/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 62fa33d08af25c424c786c10191fe6ae2b3d02bc
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 0050a8931162e37408895ef664293be2349d1bde
+ms.sourcegitcommit: 1bc3c229e9688ac741838005ec4b88e8f9533e8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59855514"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68315005"
 ---
 # <a name="understanding-the-cache-in-storage-spaces-direct"></a>저장소 공간 다이렉트에서 캐시 이해
 
@@ -25,7 +25,7 @@ ms.locfileid: "59855514"
 
 다음 동영상은 캐시가 저장소 공간 다이렉트에서 어떻게 작동하는지, 다른 디자인 고려 사항은 무엇인지 자세히 설명합니다.
 
-<strong>저장소 공간 다이렉트 디자인 고려 사항</strong><br>(20분)<br>
+<strong>스토리지 공간 다이렉트 설계 고려 사항</strong><br>(20분)<br>
 <iframe src="https://channel9.msdn.com/Blogs/windowsserver/Design-Considerations-for-Storage-Spaces-Direct/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
 
 ## <a name="drive-types-and-deployment-options"></a>드라이브 유형 및 배포 옵션
@@ -88,7 +88,7 @@ SSD와 HDD가 있는 경우 SSD가 HDD의 캐시를 수행합니다.
    >[!NOTE]
    > 캐시 드라이브는 사용할 수 있는 저장소 용량을 제공하지 않습니다. 또한 캐시에 저장된 모든 데이터는 다른 위치에 저장되거나 디스테이징됩니다. 다시 말해 배포의 총 원시 저장소 용량은 용량 드라이브들만 합계를 낸 것입니다.
 
-모든 드라이브가 동일한 유형일 경우 캐시가 자동으로 구성되지 않습니다. 내구성이 높은 드라이브를 수동으로 구성하는 옵션을 통해 동일한 유형이면서 내구성이 낮은 드라이브의 캐시를 수행하도록 할 수 있습니다. 자세한 내용은 [수동 구성](#manual) 섹션을 참조하세요.
+모든 드라이브가 동일한 유형일 경우 캐시가 자동으로 구성되지 않습니다. 내구성이 높은 드라이브를 수동으로 구성하는 옵션을 통해 동일한 유형이면서 내구성이 낮은 드라이브의 캐시를 수행하도록 할 수 있습니다. 자세한 내용은 [수동 구성](#manual-configuration) 섹션을 참조하세요.
 
    >[!TIP]
    > 모든 NVMe 또는 모든 SSD 배치에서 특히 규모가 아주 작을 경우, 캐시에 "소모된" 드라이브가 없으면 저장소 효율성을 크게 개선할 수 있습니다.
@@ -109,7 +109,7 @@ NVMe 또는 SSD와 같은 솔리드 스테이트 드라이브 캐싱의 경우�
 
 ### <a name="readwrite-caching-for-hybrid-deployments"></a>하이브리드 배포에 대한 읽기/쓰기 캐싱
 
-HDD(하드 디스크 드라이브) 캐싱의 경우 읽기 *및* 쓰기의 캐시가 모두 수행되어 양쪽 모두 대기 시간이 짧습니다(보통 10배까지 향상). 읽기 캐시는 최근에 사용되었으며 사용 빈도가 높은 읽기 데이터를 저장하여 액세스를 빠르게 하고 HDD에 대한 임의 트래픽을 최소화합니다. (검색 및 회전 지연으로 인해 대기 시간 및 손실된 시간 HDD에 대 한 임의 액세스에서 발생 한 유효 합니다.) 급증을 흡수 하 캐시 되며, 이전 처럼 기록 하 여 기록 다시 작성 하 고 용량 드라이브를 누적 한 트래픽을 최소화 합니다.
+HDD(하드 디스크 드라이브) 캐싱의 경우 읽기 *및* 쓰기의 캐시가 모두 수행되어 양쪽 모두 대기 시간이 짧습니다(보통 10배까지 향상). 읽기 캐시는 최근에 사용되었으며 사용 빈도가 높은 읽기 데이터를 저장하여 액세스를 빠르게 하고 HDD에 대한 임의 트래픽을 최소화합니다. (검색 및 회전 지연으로 인해 HDD에 대 한 임의 액세스로 인해 발생 하는 대기 시간 및 손실 된 시간은 매우 큽니다.) 쓰기는 대량을 흡수 하 여 이전 처럼 쓰기를 병합 하 고, 다시 쓰고, 용량 드라이브에 대 한 누적 트래픽을 최소화 하기 위해 캐시 됩니다.
 
 가상 컴퓨터와 같은 작업에서 오는 IO가 실제로는 임의적이어도 순차적으로 보이는 디스크에 IO 패턴을 에뮬레이트하기 위해, 저장소 공간 다이렉트는 디스테이징 전에 쓰기에 대한 임의 지정을 해제하는 알고리즘을 구현합니다. 이로 인해 IOPS는 물론 HDD 처리량이 극대화됩니다.
 
@@ -121,13 +121,13 @@ HDD(하드 디스크 드라이브) 캐싱의 경우 읽기 *및* 쓰기의 캐�
 
 이 표는 캐싱에 사용되는 드라이브, 용량에 사용되는 드라이브, 각 배포 시나리오에 대한 캐싱 동작이 요약되어 있습니다.
 
-| 배포       | 캐시 드라이브                        | 용량 드라이브 | 캐시 동작(기본값)                  |
-|------------------|-------------------------------------|-----------------|-------------------------------------------|
-| 모두 NVMe         | 없음(선택 사항: 수동으로 구성) | NVMe            | 쓰기 전용(구성된 경우)                |
-| 모두 SSD          | 없음(선택 사항: 수동으로 구성) | SSD             | 쓰기 전용(구성된 경우)                |
-| NVMe + SSD       | NVMe                                | SSD             | 쓰기 전용                                |
-| NVMe + HDD       | NVMe                                | HDD             | 읽기 + 쓰기                              |
-| SSD + HDD        | SSD                                 | HDD             | 읽기 + 쓰기                              |
+| 배포     | 캐시 드라이브                        | 용량 드라이브 | 캐시 동작(기본값)  |
+| -------------- | ----------------------------------- | --------------- | ------------------------- |
+| 모두 NVMe         | 없음(선택 사항: 수동으로 구성) | NVMe            | 쓰기 전용(구성된 경우)  |
+| 모두 SSD          | 없음(선택 사항: 수동으로 구성) | SSD             | 쓰기 전용(구성된 경우)  |
+| NVMe + SSD       | NVMe                                | SSD             | 쓰기 전용                  |
+| NVMe + HDD       | NVMe                                | HDD             | 읽기 + 쓰기                |
+| SSD + HDD        | SSD                                 | HDD             | 읽기 + 쓰기                |
 | NVMe + SSD + HDD | NVMe                                | SSD + HDD       | HDD(읽기 + 쓰기), SSD(쓰기 전용)  |
 
 ## <a name="server-side-architecture"></a>서버 쪽 아키텍처
@@ -171,11 +171,13 @@ Windows 소프트웨어 정의 저장소 스택에는 관련 없는 다른 캐�
 
 저장소 공간 다이렉트를 사용하면 저장소 공간 나중 쓰기 캐시를 기본 동작에서 수정하면 안 됩니다. 예를 들어 **New-Volume** cmdlet에서 **-WriteCacheSize**와 같은 매개 변수는 사용하지 않도록 해야 합니다.
 
-CSV 캐시의 사용 여부는 사용자의 결정에 달려 있습니다. 저장소 공간 다이렉트에서는 사용하지 않는 것이 기본값으로 되어 있지만 어떤 방식으로든 이 항목에서 언급한 새로운 캐시와 충돌하지 않습니다. 특정 시나리오에서는 가치 있는 성능 향상이 제공되기도 합니다. 자세한 내용은 [CSV 캐시를 사용하도록 설정하는 방법](https://blogs.msdn.microsoft.com/clustering/2013/07/19/how-to-enable-csv-cache/)을 참조하십시오.
+CSV 캐시의 사용 여부는 사용자의 결정에 달려 있습니다. 저장소 공간 다이렉트에서는 사용하지 않는 것이 기본값으로 되어 있지만 어떤 방식으로든 이 항목에서 언급한 새로운 캐시와 충돌하지 않습니다. 특정 시나리오에서는 가치 있는 성능 향상이 제공되기도 합니다. 자세한 내용은 [CSV 캐시를 사용하도록 설정하는 방법](../../failover-clustering/failover-cluster-csvs.md#enable-the-csv-cache-for-read-intensive-workloads-optional)을 참조하십시오.
 
-## <a name="manual"></a> 수동 구성
+## <a name="manual-configuration"></a>수동 구성
 
-대부분의 배포에서는 수동 구성이 필요하지 않습니다. 그러나 필요한 경우 다음을 참고하세요.
+대부분의 배포에서는 수동 구성이 필요하지 않습니다. 필요한 경우 다음 섹션을 참조 하세요. 
+
+설치 후 캐시 장치 모델을 변경 해야 하는 경우 [상태 관리 서비스 개요](../../failover-clustering/health-service-overview.md#supported-components-document)에 설명 된 대로 상태 관리 서비스의 지원 구성 요소 문서를 편집 합니다.
 
 ### <a name="specify-cache-drive-model"></a>캐시 드라이브 모델 지정
 
@@ -188,15 +190,25 @@ CSV 캐시의 사용 여부는 사용자의 결정에 달려 있습니다. 저�
 
 ####  <a name="example"></a>예제
 
-```
-PS C:\> Get-PhysicalDisk | Group Model -NoElement
+먼저 실제 디스크의 목록을 가져옵니다.
 
+```PowerShell
+Get-PhysicalDisk | Group Model -NoElement
+```
+
+다음은 몇 가지 출력 예제입니다.
+
+```
 Count Name
 ----- ----
     8 FABRIKAM NVME-1710
    16 CONTOSO NVME-1520
+```
 
-PS C:\> Enable-ClusterS2D -CacheDeviceModel "FABRIKAM NVME-1710"
+그런 다음 캐시 장치 모델을 지정 하 여 다음 명령을 입력 합니다.
+
+```PowerShell
+Enable-ClusterS2D -CacheDeviceModel "FABRIKAM NVME-1710"
 ```
 
 PowerShell에서 **Get-PhysicalDisk**를 실행하고 **사용** 속성에 **"저널"** 이 표시되는지 확인하는 방법으로 사용자가 의도한 드라이브가 캐싱에 사용되고 있는지 확인할 수 있습니다.
@@ -211,26 +223,38 @@ PowerShell에서 **Get-PhysicalDisk**를 실행하고 **사용** 속성에 **"�
 
 캐시의 기본 동작은 재정의가 가능합니다. 예를 들어 심지어 플래시 전용 배포에서도 읽기 캐시가 수행되도록 설정할 수 있습니다. 기본값이 확실하게 사용자의 작업에 맞지 않는 경우를 제외하고는 동작 수정을 권장하지 않습니다.
 
-동작을 재정의하려면 **Set-ClusterS2D** cmdlet과 **-CacheModeSSD**, **-CacheModeHDD** 매개 변수를 사용하면 됩니다. **CacheModeSSD** 매개 변수는 솔리드 스테이트 드라이브에 대한 캐싱의 경우 캐시 동작을 설정할 수 있습니다. **CacheModeHDD** 매개 변수는 하드 디스크 드라이브에 대한 캐싱의 경우 캐시 동작을 설정합니다. 이 작업은 저장소 공간 다이렉트 사용이 가능해진 후 언제든지 수행할 수 있습니다.
+동작을 재정의 하려면 **ClusterStorageSpacesDirect** cmdlet 및 해당 **-cachemodessd** 및 **-cachemodessd** 매개 변수를 사용 합니다. **CacheModeSSD** 매개 변수는 솔리드 스테이트 드라이브에 대한 캐싱의 경우 캐시 동작을 설정할 수 있습니다. **CacheModeHDD** 매개 변수는 하드 디스크 드라이브에 대한 캐싱의 경우 캐시 동작을 설정합니다. 이 작업은 저장소 공간 다이렉트 사용이 가능해진 후 언제든지 수행할 수 있습니다.
 
-동작이 설정되었는지 확인하려면 **Get-ClusterS2D**를 사용합니다.
+**ClusterStorageSpacesDirect** 를 사용 하 여 동작이 설정 되었는지 확인할 수 있습니다.
 
 #### <a name="example"></a>예제
 
-```
-PS C:\> Get-ClusterS2D
+먼저 스토리지 공간 다이렉트 설정을 가져옵니다.
 
+```PowerShell
+Get-ClusterStorageSpacesDirect
+```
+
+다음은 몇 가지 출력 예제입니다.
+
+```
 CacheModeHDD : ReadWrite
 CacheModeSSD : WriteOnly
-...
+```
 
-PS C:\> Set-ClusterS2D -CacheModeSSD ReadWrite
+그런 후에 다음을 수행 합니다.
 
-PS C:\> Get-ClusterS2D
+```PowerShell
+Set-ClusterStorageSpacesDirect -CacheModeSSD ReadWrite
 
+Get-ClusterS2D
+```
+
+다음은 몇 가지 출력 예제입니다.
+
+```
 CacheModeHDD : ReadWrite
 CacheModeSSD : ReadWrite
-...
 ```
 
 ## <a name="sizing-the-cache"></a>캐시 크기 조정
@@ -249,6 +273,6 @@ Windows의 기본 제공 성능 모니터(PerfMon.exe) 유틸리티를 사용하
 
 ## <a name="see-also"></a>참조
 
-- [드라이브 및 복원 력 유형을 선택합니다.](choosing-drives.md)
-- [오류 허용 하 고 저장소 효율성](storage-spaces-fault-tolerance.md)
-- [저장소 공간 다이렉트 하드웨어 요구 사항](storage-spaces-direct-hardware-requirements.md)
+- [드라이브 및 복원 력 유형 선택](choosing-drives.md)
+- [내결함성 및 스토리지 효율성](storage-spaces-fault-tolerance.md)
+- [하드웨어 요구 사항 스토리지 공간 다이렉트](storage-spaces-direct-hardware-requirements.md)

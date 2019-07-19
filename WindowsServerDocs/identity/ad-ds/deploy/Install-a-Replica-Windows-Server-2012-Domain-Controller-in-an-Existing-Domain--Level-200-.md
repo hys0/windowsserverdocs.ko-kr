@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: cb4432084386cb3296163f24c801be1c74b379df
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: a7fec85301e2b70fb64f35f0b6e345adde29eed0
+ms.sourcegitcommit: 67833e36b8b2c6194a1426a974c5ad9c859fa4c9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59883044"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329650"
 ---
 # <a name="install-a-replica-windows-server-2012-domain-controller-in-an-existing-domain-level-200"></a>기존 도메인에 복제 Windows Server 2012 도메인 컨트롤러 설치(수준 200)
 
@@ -43,7 +43,7 @@ ms.locfileid: "59883044"
 > [!NOTE]  
 > **-credential** 인수는 현재 Enterprise Admins 및 Schema Admins 그룹의 구성원(포리스트를 업그레이드하는 경우) 또는 Domain Admins 그룹의 구성원(기존 도메인에 새 DC를 추가하는 경우)으로 로그인되어 있지 않은 경우에만 필요합니다.  
   
-## <a name="BKMK_Dep"></a>배포  
+## <a name="BKMK_Dep"></a>배포가  
   
 ### <a name="deployment-configuration"></a>배포 구성  
 ![복제 데이터베이스를 설치 합니다.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradeDeployConfig.png)  
@@ -122,7 +122,7 @@ Install-AddsDomainController
   
 ```  
   
-마지막으로 난독 처리된 암호를 파일에 저장한 다음 일반 텍스트 암호를 표시하지 않고 나중에 다시 사용할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+마지막으로 난독 처리된 암호를 파일에 저장한 다음 일반 텍스트 암호를 표시하지 않고 나중에 다시 사용할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 $file = "c:\pw.txt"  
@@ -221,7 +221,7 @@ Active Directory 경로 ADDSDeployment cmdlet 인수는 다음과 같습니다.
   
 서버 관리자의 **옵션 검토** 페이지는 현재 ADDSDeployment 구성을 단일 Windows PowerShell 스크립트로 포함하는 유니코드 텍스트 파일을 만들 수 있도록 **스크립트 보기** 단추(선택 사항)도 제공합니다. 이 단추를 통해 서버 관리자 그래픽 인터페이스를 Windows PowerShell 배포 스튜디오로 사용할 수 있습니다. Active Directory 도메인 서비스 구성 마법사를 사용하여 옵션을 구성하고 구성을 내보낸 다음 마법사를 취소합니다.  이 프로세스를 통해 향후 수정을 위해 사용하거나 직접 사용하기 위한 유효하고 구문상으로 정확한 샘플이 만들어집니다.  
   
-예를 들어 다음과 같은 가치를 제공해야 합니다.  
+이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 #  
@@ -306,13 +306,13 @@ Install-addsdomaincontroller
   
 ![복제 데이터베이스를 설치 합니다.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_PSUpgradeProgress.png)  
   
-Windows PowerShell을 사용하여 도메인 컨트롤러를 원격으로 구성하려면 **invoke-command** cmdlet *안에* **install-adddomaincontroller** cmdlet을 래핑합니다. 이 경우 중괄호를 사용해야 합니다.  
+Windows PowerShell을 사용 하 여 도메인 컨트롤러를 원격으로 구성 하려면 **install-addsdomaincontroller** *cmdlet을* **호출** 하는 cmdlet을 래핑합니다. 이 경우 중괄호를 사용해야 합니다.  
   
 ```  
 invoke-command {install-addsdomaincontroller "domainname <domain> -credential (get-credential)} -computername <dc name>  
 ```  
   
-예를 들어 다음과 같은 가치를 제공해야 합니다.  
+이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ![복제 데이터베이스를 설치 합니다.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_PSUpgradeExample.gif)  
   
