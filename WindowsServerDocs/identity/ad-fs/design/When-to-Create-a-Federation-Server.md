@@ -72,7 +72,7 @@ AD FS 페더레이션 서버 구성 마법사 또는 Fsconfig.exe 명령을 사�
   
     팜에 페더레이션 서버를 추가 하는 방법에 대 한 자세한 내용은 참조 하세요. [페더레이션 서버 팜에 페더레이션 서버 추가](../../ad-fs/deployment/Add-a-Federation-Server-to-a-Federation-Server-Farm.md)합니다.  
   
-이러한 각 옵션 작업에 대 한 정보를 자세한 [The Role of the AD FS Configuration Database](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)합니다.  
+이러한 각 옵션 작업에 대 한 정보를 자세한 [AD FS 구성 데이터베이스의 역할](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)합니다.  
   
 페더레이션 서버를 배포 하는 데 필요한 모든 필수 구성 요소를 설정 하는 방법에 대 한 자세한 내용은 참조 하세요. [검사 목록: 페더레이션 서버를 설정할](../../ad-fs/deployment/Checklist--Setting-Up-a-Federation-Server.md)합니다.  
   
