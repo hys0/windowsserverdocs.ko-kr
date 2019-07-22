@@ -8,12 +8,12 @@ ms.date: 11/2/2018
 ms.topic: article
 author: Heidilohr
 ms.localizationpriority: medium
-ms.openlocfilehash: 45164e9eca0873c82148aa3b7baa179a3f626dd7
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 02c7098c8e3f93ce315e7d9a881613a03924e78b
+ms.sourcegitcommit: 286e3181ebd2cb9d7dc7fe651858a4e0d61d153f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66804968"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68300693"
 ---
 # <a name="set-up-the-remote-desktop-web-client-for-your-users"></a>사용자에 대한 원격 데스크톱 웹 클라이언트 설정
 
@@ -259,7 +259,7 @@ RD 세션 호스트 서버가 RD 브로커 서버와 다른 경우 다음 단계
 관리자는 다음 PowerShell cmdlet을 사용하여 배포에 대한 원격 분석 수집을 표시하지 않도록 선택할 수 있습니다.
 
    ```PowerShell
-    Set-RDWebClientDeploymentSetting -SuppressTelemetry $true
+    Set-RDWebClientDeploymentSetting -Name "SuppressTelemetry" $true
    ```
 
 기본적으로 사용자는 원격 분석을 사용하거나 사용하지 않도록 선택할 수 있습니다. **$false** 부울 값은 기본 클라이언트 동작과 일치합니다. **$true** 부울 값은 원격 분석을 사용하지 않도록 설정하고 사용자가 원격 분석 사용을 설정하도록 제한합니다.
@@ -268,15 +268,15 @@ RD 세션 호스트 서버가 RD 브로커 서버와 다른 경우 다음 단계
 기본적으로 사용자는 (1) 브라우저에서 원격 리소스를 시작하거나 (2) 머신에 설치된 다른 클라이언트에서 처리할 .rdp 파일을 다운로드하여 원격 리소스를 시작하도록 선택할 수 있습니다. 관리자는 다음 Powershell 명령을 사용하여 배포에 대한 원격 리소스 시작 방법을 제한하도록 선택할 수 있습니다.
 
    ```PowerShell
-    Set-RDWebClientDeploymentSetting -LaunchResourceInBrowser ($true|$false)
+    Set-RDWebClientDeploymentSetting -Name "LaunchResourceInBrowser" ($true|$false)
    ```
  기본적으로 사용자는 두 가지 시작 방법 중 하나를 선택할 수 있습니다. **$true** 부울 값은 사용자가 브라우저에서 리소스를 시작하도록 합니다. **$false** 부울 값은 사용자가 로컬로 설치된 RDP 클라이언트에서 처리할 .rdp 파일을 다운로드하여 리소스를 시작하도록 강제 적용합니다.
 
 ### <a name="reset-rdwebclientdeploymentsetting-configurations-to-default"></a>RDWebClientDeploymentSetting 구성을 기본값으로 다시 설정
-모든 배포 수준 웹 클라이언트 설정을 기본 구성으로 다시 설정하려면 다음 PowerShell cmdlet을 실행합니다.
-
+배포 수준 웹 클라이언트 설정을 기본 구성으로 다시 설정하려면 다음 PowerShell cmdlet을 실행하고, --Name 매개 변수를 사용하여 재설정할 설정을 지정합니다.
    ```PowerShell
-    Reset-RDWebClientDeploymentSetting 
+    Reset-RDWebClientDeploymentSetting -Name "LaunchResourceInBrowser"
+    Reset-RDWebClientDeploymentSetting -Name "SuppressTelemetry"
    ```
 
 ## <a name="troubleshooting"></a>문제 해결

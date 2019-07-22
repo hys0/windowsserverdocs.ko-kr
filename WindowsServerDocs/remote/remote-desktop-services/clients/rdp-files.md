@@ -13,16 +13,18 @@ manager: dongill
 ms.author: helohr
 ms.date: 05/20/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: fbec5c27b7cb3ef0ef750a5ebd7d7ea2654c47b3
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 37ba3ca343eadf1bde5f75993ac2dbbb0ec05bad
+ms.sourcegitcommit: 286e3181ebd2cb9d7dc7fe651858a4e0d61d153f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "65983463"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68300700"
 ---
 # <a name="supported-remote-desktop-rdp-file-settings"></a>지원되는 원격 데스크톱 RDP 파일 설정
 
 다음 표에는 Windows 및 HTML 클라이언트에서 사용할 수 있는 지원되는 RDP 파일 설정 목록이 나와 있습니다. 플랫폼 열의 "x"는 설정이 지원된다는 것을 나타냅니다. 하지만 이 목록은 Windows 및 HTML5 클라이언트에 지원되는 설정의 전체 목록은 아닙니다. 이 표는 Windows 및 HTML5 클라이언트는 물론 macOS, iOS 및 Android 클라이언트에 지원되는 RDP 설정을 더 많이 포함하도록 계속 업데이트될 예정입니다.
+
+PowerShell을 사용하여 RDP 속성을 사용자 지정하는 방법에 대한 자세한 내용은 [호스트 풀에 대한 원격 데스크톱 프로토콜 속성 사용자 지정](https://docs.microsoft.com/azure/virtual-desktop/customize-rdp-properties)을 참조하세요.
 
 | RDP 설정                        | 설명            | 값                 | 기본값          | Windows 가상 데스크톱 | Windows | HTML5   |
 |------------------------------------|------------------------|------------------------|:----------------------:|:-----------------------:|:-------:|:-------:|
