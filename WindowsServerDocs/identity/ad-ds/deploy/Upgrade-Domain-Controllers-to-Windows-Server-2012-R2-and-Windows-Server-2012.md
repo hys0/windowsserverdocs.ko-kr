@@ -26,7 +26,7 @@ ms.locfileid: "66443057"
 도메인을 업그레이드하기 위해 권장되는 방법은 최신 Windows Server 버전을 실행하는 도메인 컨트롤러의 수준을 올리고 필요에 따라 이전 도메인 컨트롤러의 수준을 내리는 것입니다. 기존 도메인 컨트롤러의 운영 체제를 업그레이드할 때 이 방법이 선호됩니다. 이 목록에서는 최신 버전의 Windows Server를 실행 하는 도메인 컨트롤러의 수준을 올리기 전에 수행 하려면 일반 단계를 다룹니다.  
   
 1. 대상 서버가 [시스템 요구 사항](https://technet.microsoft.com/library/dn303418.aspx)을 충족하는지 확인합니다.  
-2. [Application compatibility](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_AppCompat)을 확인합니다.  
+2. 확인할 [응용 프로그램 호환성](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_AppCompat)합니다.  
 3. 보안 설정을 확인합니다. 자세한 내용은 [Windows Server 2012의 AD DS에 관련 된 사용 되지 않는 기능 및 동작 변경 내용](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_DeprecatedFeatures) 및 [Windows Server 2008 및 Windows Server 2008 R2의 기본 설정 보안](https://technet.microsoft.com/library/upgrade-domain-controllers-to-windows-server-2008-r2(WS.10).aspx#BKMK_SecureDefault).  
 4. 설치하려고 계획 중인 컴퓨터에서 대상 서버로 연결된 상태를 확인합니다.  
 5. 필요한 작업 마스터 역할의 가용성을 확인합니다.  
@@ -158,9 +158,9 @@ Windows Server 2008부터 도메인 컨트롤러도 포함 되어 Windows Server
 |||||  
 |-|-|-|-|  
 |암호화 유형 또는 정책|Windows Server 2008 기본값|Windows Server 2012 및 Windows Server 2008 R2 기본값|설명|  
-|AllowNT4Crypto|사용 안 함|사용 안 함|타사 SMB(서버 메시지 블록) 클라이언트는 도메인 컨트롤러에서 안전한 기본 설정과 호환되지 않을 수 있습니다. 어떠한 경우든 이러한 설정을 완화하여 호환되도록 할 수는 있지만 보안이 취약해질 수 있습니다. 자세한 내용은 [문서 942564](https://go.microsoft.com/fwlink/?LinkId=164558) Microsoft 기술 자료 (https://go.microsoft.com/fwlink/?LinkId=164558)합니다.|  
+|AllowNT4Crypto|사용 안 함|사용 안 함|타사 SMB(서버 메시지 블록) 클라이언트는 도메인 컨트롤러에서 안전한 기본 설정과 호환되지 않을 수 있습니다. 어떠한 경우든 이러한 설정을 완화하여 호환되도록 할 수는 있지만 보안이 취약해질 수 있습니다. 자세한 내용은 [문서 942564](https://go.microsoft.com/fwlink/?LinkId=164558) Microsoft 기술 자료 (https://go.microsoft.com/fwlink/?LinkId=164558) 합니다.|  
 |DES|Enabled|사용 안 함|[문서 977321](https://go.microsoft.com/fwlink/?LinkId=177717) Microsoft 기술 자료 (https://go.microsoft.com/fwlink/?LinkId=177717)|  
-|통합 인증에 대한 CBT/확장된 보호|해당 사항 없음|Enabled|참조 [Microsoft 보안 공지 (937811)](https://go.microsoft.com/fwlink/?LinkId=164559) (https://go.microsoft.com/fwlink/?LinkId=164559) 하 고 [문서 976918](https://go.microsoft.com/fwlink/?LinkId=178251) Microsoft 기술 자료 (https://go.microsoft.com/fwlink/?LinkId=178251)합니다.<br /><br />검토 하 고 핫픽스를 설치 [문서 977073](https://go.microsoft.com/fwlink/?LinkId=186394) (https://go.microsoft.com/fwlink/?LinkId=186394) 필요에 따라 Microsoft 기술 자료에서 합니다.|  
+|통합 인증에 대한 CBT/확장된 보호|해당 사항 없음|Enabled|참조 [Microsoft 보안 공지 (937811)](https://go.microsoft.com/fwlink/?LinkId=164559) (https://go.microsoft.com/fwlink/?LinkId=164559) 하 고 [문서 976918](https://go.microsoft.com/fwlink/?LinkId=178251) Microsoft 기술 자료 (https://go.microsoft.com/fwlink/?LinkId=178251) 합니다.<br /><br />검토 하 고 핫픽스를 설치 [문서 977073](https://go.microsoft.com/fwlink/?LinkId=186394) (https://go.microsoft.com/fwlink/?LinkId=186394) 필요에 따라 Microsoft 기술 자료에서 합니다.|  
 |LMv2|Enabled|사용 안 함|[문서 976918](https://go.microsoft.com/fwlink/?LinkId=178251) Microsoft 기술 자료 (https://go.microsoft.com/fwlink/?LinkId=178251)|  
 
 ## <a name="BKMK_SysReqs"></a>운영 체제 요구 사항

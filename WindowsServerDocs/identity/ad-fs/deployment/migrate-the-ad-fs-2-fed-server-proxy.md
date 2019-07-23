@@ -31,7 +31,7 @@ Windows Server 2012로 AD FS 2.0 페더레이션 서버 프록시를 마이그�
 > [!IMPORTANT]
 >  운영 체제 업그레이드로 인해 이 서버의 AD FS 프록시 구성이 손실되고 AD FS 2.0 서버 역할이 제거됩니다. Windows Server 2012 AD FS 서버 역할 대신 설치 되지만 구성 되지는 않습니다. 수동으로 원래 AD FS 프록시 구성을 만들고 나머지 AD FS 프록시 설정을 복원하여 페더레이션 서버 프록시 마이그레이션을 완료해야 합니다.  
   
-4. **AD FS 페더레이션 서버 프록시 구성 마법사**를 사용하여 원래 AD FS 프록시 구성을 만듭니다. 자세한 내용은 [Configure a Computer for the Federation Server Proxy Role](configure-a-computer-for-the-federation-server-proxy-role.md)를 참조하세요. 다음과 같이 마법사를 실행하면서 AD FS 2.0 페더레이션 서버 프록시 마이그레이션 준비에서 수집한 정보를 사용합니다.  
+4. **AD FS 페더레이션 서버 프록시 구성 마법사**를 사용하여 원래 AD FS 프록시 구성을 만듭니다. 자세한 내용은 [컴퓨터 페더레이션 서버 프록시 역할에 대 한 구성](configure-a-computer-for-the-federation-server-proxy-role.md)합니다. 다음과 같이 마법사를 실행하면서 AD FS 2.0 페더레이션 서버 프록시 마이그레이션 준비에서 수집한 정보를 사용합니다.  
   
  
 |**페더레이션 서버 프록시 마법사 입력 옵션**|**다음 값을 사용 하 여**|

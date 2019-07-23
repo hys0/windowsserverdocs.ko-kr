@@ -43,7 +43,7 @@ SSL 인증서를 찾으려면 IIS(인터넷 정보 서비스) 관리 콘솔을 �
 페더레이션 서비스에서 사용되는 SSL 인증서와 해당 프라이빗 키를 .pfx 파일로 내보내야 합니다. 자세한 내용은 [서버 인증 인증서의 프라이빗 키 부분 내보내기](export-the-private-key-portion-of-a-server-authentication-certificate.md)를 참조하세요.  
   
 > [!NOTE]
->  Windows Server 2012 R2에서 AD FS를 실행 하는 일부로 장치 등록 서비스를 배포 하려는 경우에 새 SSL 인증서를 가져와야 합니다. 자세한 내용은 [Enroll an SSL Certificate for AD FS](enroll-an-ssl-certificate-for-ad-fs.md) 및 [Configure a federation server with Device Registration Service](configure-a-federation-server-with-device-registration-service.md)을 참조하세요.  
+>  Windows Server 2012 R2에서 AD FS를 실행 하는 일부로 장치 등록 서비스를 배포 하려는 경우에 새 SSL 인증서를 가져와야 합니다. 자세한 내용은 [AD FS에 대 한 SSL 인증서를 등록](enroll-an-ssl-certificate-for-ad-fs.md) 하 고 [Device Registration Service를 사용 하 여 페더레이션 서버 구성](configure-a-federation-server-with-device-registration-service.md)합니다.  
   
 토큰 서명, 토큰 암호 해독 및 사용되는 서비스 통신 인증서를 보려면 다음 Windows PowerShell 명령을 실행하여 사용 중인 모든 인증서 목록을 파일로 만듭니다.  
   

@@ -24,7 +24,7 @@ ms.locfileid: "66190993"
   
 -   계정 페더레이션 서버를 신뢰 하려면 각 클라이언트 컴퓨터에 Internet Explorer를 구성 합니다.  
   
-    자세한 내용은 [Configure Client Computers to Trust the Account Federation Server](../../ad-fs/deployment/Configure-Client-Computers-to-Trust-the-Account-Federation-Server.md)를 참조하세요.  
+    자세한 내용은 [계정 페더레이션 서버를 신뢰 하도록 클라이언트 컴퓨터를 구성 합니다](../../ad-fs/deployment/Configure-Client-Computers-to-Trust-the-Account-Federation-Server.md)를 참조하세요.  
   
 -   적절 한 계정 페더레이션 서버, 리소스 페더레이션 서버 및 웹 서버 설치 Secure Sockets Layer \(SSL\) 인증서 \(해당 하는 연결 된 신뢰할 수 있는 루트 인증서 또는\) 각 클라이언트 컴퓨터입니다.  
   
