@@ -35,9 +35,9 @@ WID 팜 Windows Server 2012로 마이그레이션하려면 다음 절차를 수�
 **AD FS 페더레이션 서버 구성 마법사** 를 사용하여 원래 AD FS 구성을 만들어 페더레이션 서버를 WID 팜에 추가할 수 있습니다. 자세한 내용은 [페더레이션 서버 팜에 페더레이션 서버 추가](add-a-federation-server-to-a-federation-server-farm.md)를 참조하세요.  
   
 > [!NOTE]
-> **AD FS 페더레이션 서버 구성 마법사** 의 **기본 페더레이션 서버 및 서비스 계정 지정**페이지가 나타나면 WID 팜의 기본 페더레이션 서버 이름을 입력하고, AD FS 마이그레이션을 준비하는 동안 기록한 서비스 계정 정보를 입력해야 합니다. 자세한 내용은 [Prepare to Migrate the AD FS 2.0 Federation Server](prepare-to-migrate-a-wid-farm.md)합니다. 
+> **AD FS 페더레이션 서버 구성 마법사** 의 **기본 페더레이션 서버 및 서비스 계정 지정**페이지가 나타나면 WID 팜의 기본 페더레이션 서버 이름을 입력하고, AD FS 마이그레이션을 준비하는 동안 기록한 서비스 계정 정보를 입력해야 합니다. 자세한 내용은 [AD FS 2.0 WID 팜 마이그레이션 준비](prepare-to-migrate-a-wid-farm.md)합니다. 
 >  
-> 도달 하면 합니다 **페더레이션 서비스 이름 지정** 페이지에 "준비" WID 팜 마이그레이션에 기록한 SSL 인증서를 선택 해야 합니다 [Prepare to Migrate the AD FS 2.0 Federation Server](prepare-to-migrate-a-wid-farm.md).  
+> 도달 하면 합니다 **페더레이션 서비스 이름 지정** 페이지에 "준비" WID 팜 마이그레이션에 기록한 SSL 인증서를 선택 해야 합니다 [AD FS 2.0 WID 팜 마이그레이션 준비](prepare-to-migrate-a-wid-farm.md).  
   
 5. 이 서버에서 AD FS 웹 페이지를 업데이트합니다. 마이그레이션을 준비 하는 동안 사용자 지정된 AD FS 웹 페이지를 백업한 경우 덮어쓰려면 기본 AD FS 웹 페이지에서 기본적으로 생성 된 백업 데이터를 사용 하도록 해야 합니다 **%systemdrive%\inetpub\adfs\ls** 으로 디렉터리 Windows Server 2012에서 AD FS 구성의 결과입니다.  
   
@@ -61,9 +61,9 @@ WID 팜 Windows Server 2012로 마이그레이션하려면 다음 절차를 수�
 **AD FS 페더레이션 서버 구성 마법사** 를 사용하여 원래 AD FS 구성을 만들어 페더레이션 서버를 WID 팜에 추가할 수 있습니다. 자세한 내용은 [페더레이션 서버 팜에 페더레이션 서버 추가](add-a-federation-server-to-a-federation-server-farm.md)를 참조하세요.  
   
 > [!NOTE]
-> **AD FS 페더레이션 서버 구성 마법사** 의 **기본 페더레이션 서버 및 서비스 계정 지정**페이지가 나타나면 AD FS 마이그레이션을 준비하는 동안 기록한 서비스 계정 정보를 입력합니다. 자세한 내용은 [Prepare to Migrate the AD FS 2.0 Federation Server](prepare-to-migrate-a-wid-farm.md)합니다. 
+> **AD FS 페더레이션 서버 구성 마법사** 의 **기본 페더레이션 서버 및 서비스 계정 지정**페이지가 나타나면 AD FS 마이그레이션을 준비하는 동안 기록한 서비스 계정 정보를 입력합니다. 자세한 내용은 [AD FS 2.0 WID 팜 마이그레이션 준비](prepare-to-migrate-a-wid-farm.md)합니다. 
 >  
-> 도달 하면 합니다 **페더레이션 서비스 이름 지정** 페이지에서 기록한 SSL 인증서를 선택 해야 합니다 [Prepare to Migrate the AD FS 2.0 Federation Server](prepare-to-migrate-a-wid-farm.md)합니다.  
+> 도달 하면 합니다 **페더레이션 서비스 이름 지정** 페이지에서 기록한 SSL 인증서를 선택 해야 합니다 [AD FS 2.0 WID 팜 마이그레이션 준비](prepare-to-migrate-a-wid-farm.md)합니다.  
   
 13. WID 팜의 이 마지막 서버에서 AD FS 웹 페이지를 업데이트합니다. 마이그레이션을 준비 하는 동안 사용자 지정된 AD FS 웹 페이지를 백업한 경우 덮어쓰려면 기본 AD FS 웹 페이지에서 기본적으로 생성 된 백업 데이터를 사용 합니다 **%systemdrive%\inetpub\adfs\ls** 의 결과로 디렉터리 Windows Server 2012에서 AD FS 구성 합니다.  
   
