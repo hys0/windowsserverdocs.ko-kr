@@ -5,17 +5,17 @@ ms.assetid: 51a1ee61-3ffe-4f65-b8de-ff21903e1e74
 ms.prod: windows-server-threshold
 ms.technology: networking-ras
 ms.topic: article
-ms.date: 11/05/2018
-ms.author: pashort
+ms.date: 07/24/19
+ms.author: pashort, v-tea
 author: shortpatti
 ms.localizationpriority: medium
 ms.reviewer: deverette
-ms.openlocfilehash: c238e44b538a31be7b21d2e75f41ebbf7ec7a1c8
-ms.sourcegitcommit: 1bc3c229e9688ac741838005ec4b88e8f9533e8a
+ms.openlocfilehash: ae3c088122a0100f94b4d9bca41078d901487237
+ms.sourcegitcommit: 9f955be34c641b58ae8b3000768caa46ad535d43
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68314329"
+ms.lasthandoff: 07/27/2019
+ms.locfileid: "68590405"
 ---
 # <a name="advanced-features-of-always-on-vpn"></a>Always On VPN의 고급 기능
 
@@ -24,7 +24,7 @@ ms.locfileid: "68314329"
 - [**선행** Always On VPN 기술에 대해 알아보기](../always-on-vpn-technology-overview.md)
 - [**그런** Always On VPN 배포 계획 시작](always-on-vpn-deploy-planning.md)
 
-제공 된 배포 시나리오 외에도 다른 고급 VPN 기능을 추가 하 여 VPN 연결의 보안 및 가용성을 향상 시킬 수 있습니다. 예를 들어 이러한 구성 요소는 연결을 허용 하기 전에 연결 하는 클라이언트가 정상 상태 인지 확인 하는 데 도움이 될 수 있습니다.
+제공 되는 배포 시나리오 외에도 다른 고급 VPN 기능을 추가 하 여 VPN 연결의 보안 및 가용성을 향상 시킬 수 있습니다. 예를 들어 VPN 서버는 이러한 기능을 사용 하 여 연결 하는 클라이언트가 연결을 허용 하기 전에 정상 상태 인지 확인할 수 있습니다.
 
 ## <a name="high-availability"></a>고가용성
 
@@ -32,7 +32,7 @@ ms.locfileid: "68314329"
 
 |옵션  |설명  |
 |---------|---------|
-|서버 복원 력 및 부하 분산     |고가용성을 요구 하거나 많은 수의 요청을 지 원하는 환경에서는 NPS (네트워크 정책 서버)를 실행 하 고 원격을 사용 하도록 설정 하는 여러 서버 간의 부하 분산을 사용 하 여 원격 액세스의 성능 및 복원 력을 높일 수 있습니다. 서버 클러스터링에 액세스 합니다.<p>관련 문서:<ul><li>[NPS 프록시 서버 부하 분산](../../../../../networking/technologies/nps/nps-manage-proxy-lb.md)</li><li>[클러스터에 원격 액세스 배포](https://docs.microsoft.com/windows-server/remote/remote-access/ras/cluster/deploy-remote-access-in-cluster)</li></ul>        |
+|서버 복원 력 및 부하 분산     |고가용성이 필요 하거나 많은 수의 요청을 지 원하는 환경에서 NPS (네트워크 정책 서버)를 실행 하는 여러 서버 간에 부하 분산을 사용 하 고를 사용 하 여 원격 액세스의 성능 및 복원 력을 향상 시킬 수 있습니다. 원격 액세스 서버 클러스터링.<p>관련 문서:<ul><li>[NPS 프록시 서버 부하 분산](../../../../../networking/technologies/nps/nps-manage-proxy-lb.md)</li><li>[클러스터에 원격 액세스 배포](https://docs.microsoft.com/windows-server/remote/remote-access/ras/cluster/deploy-remote-access-in-cluster)</li></ul>        |
 |지리적 사이트 복원 력     |IP 기반 지리적 위치에 대해 Windows Server 2016에서 DNS와 함께 글로벌 Traffic Manager를 사용할 수 있습니다. 보다 강력한 지리적 부하 분산을 위해 Microsoft Azure Traffic Manager와 같은 글로벌 서버 부하 분산 솔루션을 사용할 수 있습니다.<p>관련 문서:<ul><li>[Traffic Manager 개요](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview)</li><li>[Microsoft Azure Traffic Manager](https://azure.microsoft.com/services/traffic-manager)</li></ul>         |
 
 ## <a name="advanced-authentication"></a>고급 인증
@@ -41,7 +41,7 @@ ms.locfileid: "68314329"
 
 |옵션  |설명  |
 |---------|---------|
-|비즈니스용 Windows Hello     |Windows 10에서는 비즈니스용 Windows Hello가 PC 및 모바일 디바이스에서 암호를 강력한 2단계 인증으로 바꿉니다. 이 인증은 장치에 연결 되 고 생체 인식 또는 PIN (개인 식별 번호)을 사용 하는 새로운 유형의 사용자 자격 증명으로 구성 됩니다.<p>Windows 10 VPN 클라이언트는 비즈니스용 Windows Hello와 호환 됩니다. 사용자가 제스처를 사용 하 여 로그인 한 후 VPN 연결은 인증서 기반 인증에 비즈니스용 Windows Hello 인증서를 사용 합니다.<p>관련 문서:<ul><li>[비즈니스용 Windows Hello](https://docs.microsoft.com/windows/access-protection/hello-for-business/hello-identity-verification)</li><li>기술 사례 연구: [Windows 10에서 비즈니스용 Windows Hello를 사용 하 여 원격 액세스를 사용 하도록 설정](https://msdn.microsoft.com/library/mt728163.aspx)</li></ul>         |
+|비즈니스용 Windows Hello     |Windows 10에서 비즈니스용 Windows Hello는 Pc 및 모바일 장치에서 강력한 2 단계 인증을 제공 하 여 암호를 바꿉니다. 이 인증은 장치에 연결 되 고 생체 인식 또는 PIN (개인 식별 번호)을 사용 하는 새로운 유형의 사용자 자격 증명으로 구성 됩니다.<p>Windows 10 VPN 클라이언트는 비즈니스용 Windows Hello와 호환 됩니다. 사용자가 제스처를 사용 하 여 로그인 한 후 VPN 연결은 인증서 기반 인증에 비즈니스용 Windows Hello 인증서를 사용 합니다.<p>관련 문서:<ul><li>[비즈니스용 Windows Hello](https://docs.microsoft.com/windows/access-protection/hello-for-business/hello-identity-verification)</li><li>기술 사례 연구: [Windows 10에서 비즈니스용 Windows Hello를 사용 하 여 원격 액세스를 사용 하도록 설정](https://msdn.microsoft.com/library/mt728163.aspx)</li></ul>         |
 |Azure MFA (다단계 인증)     |Azure MFA에는 Windows VPN 인증 메커니즘과 통합할 수 있는 클라우드 및 온-프레미스 버전이 있습니다.<p>이 메커니즘의 작동 방식에 대 한 자세한 내용은 [Azure Multi-factor Authentication 서버와 RADIUS 인증 통합](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-server-radius)을 참조 하세요.         |
 
 ## <a name="advanced-vpn-features"></a>고급 VPN 기능
@@ -50,9 +50,9 @@ ms.locfileid: "68314329"
 
 |옵션  |설명  |
 |---------|---------|
-|트래픽 필터링     |VPN 클라이언트가 액세스할 수 있는 응용 프로그램을 적용 해야 하는 경우 VPN 트래픽 필터를 사용 하도록 설정할 수 있습니다.<p>자세한 내용은 [VPN 보안 기능](https://docs.microsoft.com/windows/access-protection/vpn/vpn-security-features)을 참조 하세요.         |
+|트래픽 필터링     |VPN 클라이언트가 액세스할 수 있는 응용 프로그램 선택을 적용 해야 하는 경우 VPN 트래픽 필터를 사용 하도록 설정할 수 있습니다.<p>자세한 내용은 [VPN 보안 기능](https://docs.microsoft.com/windows/access-protection/vpn/vpn-security-features)을 참조 하세요.         |
 |앱 트리거 VPN     |특정 응용 프로그램이 나 응용 프로그램 유형을 시작할 때 자동으로 연결 되도록 VPN 프로필을 구성할 수 있습니다.<p>이 및 기타 트리거 옵션에 대 한 자세한 내용은 [VPN 자동 트리거 프로필 옵션](https://docs.microsoft.com/windows/access-protection/vpn/vpn-auto-trigger-profile)을 참조 하세요.         |
-|VPN 조건부 액세스   |조건부 액세스 및 장치 규정 준수는 VPN에 연결 하기 전에 관리 장치가 표준을 충족 하도록 요구할 수 있습니다. VPN 조건부 액세스에 대 한 고급 기능 중 하나를 사용 하면 클라이언트 인증 인증서가 ' 1.3.6.1.4.1.311.87 '의 ' AAD 조건부 액세스 ' OID를 포함 하는 경우에만 VPN 연결을 제한할 수 있습니다.<p>VPN 연결을 제한 하려면 다음을 수행 해야 합니다.<ol><li>NPS 서버에서 **네트워크 정책 서버** 스냅인을 엽니다.</li><li>**정책** > **네트워크 정책**을 확장 합니다.</li><li>**VPN (가상 사설망) 연결** 네트워크 정책을 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.</li><li>**설정** 탭을 선택 합니다.</li><li>**공급 업체 관련** 을 선택 하 고 **추가**를 선택 합니다.</li><li>**허용-인증서-OID** 옵션을 선택한 다음 **추가**를 선택 합니다.</li><li>**1.3.6.1.4.1.311.87** 의 AAD 조건부 액세스 OID를 특성 값으로 붙여넣은 다음 **확인** 을 두 번 선택 합니다.</li><li>**닫기** 및 **적용**을 차례로 선택 합니다.<p>이제 VPN 클라이언트가 단기 클라우드 인증서 이외의 다른 인증서를 사용 하 여 연결 하려고 하면 연결이 실패 합니다.</li></ol>조건부 액세스에 대 한 자세한 내용은 [VPN 및 조건부 액세스](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access)를 참조 하세요.   |
+|VPN 조건부 액세스   |조건부 액세스 및 장치 규정 준수는 VPN에 연결 하기 전에 관리 장치가 표준을 충족 하도록 요구할 수 있습니다. VPN 조건부 액세스에 대 한 고급 기능 중 하나를 사용 하 여 클라이언트 인증 인증서가 **1.3.6.1.4.1.311.87**의 "AAD 조건부 액세스" OID를 포함 하는 경우에만 vpn 연결을 제한할 수 있습니다.<p>VPN 연결을 제한 하려면 다음을 수행 해야 합니다.<ol><li>NPS 서버에서 **네트워크 정책 서버** 스냅인을 엽니다.</li><li>**정책** > **네트워크 정책**을 확장 합니다.</li><li>**VPN (가상 사설망) 연결** 네트워크 정책을 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.</li><li>**설정** 탭을 선택 합니다.</li><li>**공급 업체별**을 선택 하 고 **추가**를 선택 합니다.</li><li>**허용-인증서-OID** 옵션을 선택한 다음 **추가**를 선택 합니다.</li><li>**1.3.6.1.4.1.311.87** 의 AAD 조건부 액세스 OID를 특성 값으로 붙여넣은 다음 **확인** 을 두 번 선택 합니다.</li><li>**닫기**를 선택 하 고 **적용**을 선택 합니다.<p>이러한 단계를 수행한 후 VPN 클라이언트가 단기 클라우드 인증서 이외의 다른 인증서를 사용 하 여 연결 하려고 하면 연결이 실패 합니다.</li></ol>조건부 액세스에 대 한 자세한 내용은 [VPN 및 조건부 액세스](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access)를 참조 하세요.   |
 
 
 ---
@@ -66,11 +66,11 @@ ms.locfileid: "68314329"
 
 |운영 체제 버전 |릴리스 또는 릴리스 날짜 * |
 |---------|---------|
-|Windows Server, 버전 1903  |[KB4501375](https://support.microsoft.com/help/4501375/windows-10-update-kb4501375)  |
+|Windows Server, 버전 1903  |[KB4501375](https://support.microsoft.com/help/4501375/windows-10-update-kb4501375) |
 |Windows Server 2019<br />Windows Server, 버전 1809  |Q3, 2019  |
 |Windows Server, 버전 1803  |Q3, 2019  |
 |Windows Server, 버전 1709  |Q3, 2019  |
-|Windows Server 2016, 버전 1607  |[KB4503294](https://support.microsoft.com/help/4503294/windows-10-update-kb4503294)  |
+|Windows Server 2016, 버전 1607  |[KB4503294](https://support.microsoft.com/help/4503294/windows-10-update-kb4503294) |
   
 \*모든 릴리스 날짜는 일정 분기에 나열 됩니다. 날짜는 근사치 이며 예 고 없이 변경 될 수 있습니다. 업데이트를 릴리스할 때 릴리스에 대 한 링크가 릴리스 날짜를 대체 합니다.
 
@@ -140,13 +140,13 @@ ms.locfileid: "68314329"
 
 ### <a name="trusted-platform-module-tpm-key-attestation"></a>TPM (신뢰할 수 있는 플랫폼 모듈) 키 증명
 
-TPM-증명 된 키를 사용 하는 사용자 인증서는 내보내기, 공세 및 TPM에서 제공 하는 키 격리에 의해 백업 되는 더 높은 보안 보증을 제공 합니다.
+TPM-증명 된 키가 있는 사용자 인증서는 내보내기, 공세 및 TPM에서 제공 하는 키의 격리에 의해 백업 되는 더 높은 보안 보증을 제공 합니다.
 
 Windows 10의 TPM 키 증명에 대 한 자세한 내용은 [Tpm 키 증명](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/component-updates/tpm-key-attestation)을 참조 하세요.
 
 ## <a name="next-step"></a>다음 단계
 
-[ALWAYS ON VPN 배포 계획을 시작 합니다](always-on-vpn-deploy-planning.md). 를 VPN 서버로 사용 하려는 컴퓨터에 원격 액세스 서버 역할을 설치 하기 전에 다음 작업을 수행 합니다. 적절 한 계획 후에 Always On VPN을 배포 하 고, 선택적으로 Azure AD를 사용 하 여 VPN 연결에 대 한 조건부 액세스를 구성할 수 있습니다.  
+[ALWAYS ON VPN 배포 계획을 시작 합니다](always-on-vpn-deploy-planning.md). VPN 서버로 사용할 컴퓨터에 원격 액세스 서버 역할을 설치 하기 전에 다음 작업을 수행 합니다. 적절 한 계획 후에 Always On VPN을 배포 하 고, 선택적으로 Azure AD를 사용 하 여 VPN 연결에 대 한 조건부 액세스를 구성할 수 있습니다.  
 
 ## <a name="related-topics"></a>관련 항목
 - [NPS 프록시 서버 부하 분산](../../../../../networking/technologies/nps/nps-manage-proxy-lb.md): VPN (가상 사설망) 서버 및 무선 액세스 지점과 같은 네트워크 액세스 서버인 RADIUS (원격 인증 전화 접속 사용자 서비스) 클라이언트는 연결 요청을 만들고 NPS와 같은 RADIUS 서버에 보냅니다. 경우에 따라 NPS 서버에서 한 번에 너무 많은 연결 요청을 수신 하 여 성능이 저하 되거나 오버 로드 될 수 있습니다.

@@ -10,12 +10,12 @@ ms.topic: article
 ms.assetid: 8e7b77a4-1c6a-4c21-8844-0df89b63f68d
 author: brianlic-msft
 ms.date: 10/12/2016
-ms.openlocfilehash: 4ee77fba1e82179f6998959b494628e97ac23390
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 888992366f8a722c4834f23e08a393c829b47a26
+ms.sourcegitcommit: 6f968368c12b9dd699c197afb3a3d13c2211f85b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67284222"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68544625"
 ---
 # <a name="device-health-attestation"></a>디바이스 상태 증명
 
@@ -98,7 +98,7 @@ DHA가 EKCert 유효성 검사 모드로 실행되는 경우에는 종종(대략
 
 Microsoft는 승인된 TPM 제조업체에 대한 신뢰할 수 있는 루트 및 중간 CA의 집계된 패키지를 공개적으로 액세스할 수 있는 .cab 보관 파일에 게시합니다. 피드를 다운로드하고 유효성을 검사한 후 장치 상태 증명을 실행하는 서버에 설치해야 합니다.
 
-보관 파일의 예 [ https://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab ](https://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab)합니다.
+아카이브 예는 [https://go.microsoft.com/fwlink/?linkid=2097925](https://go.microsoft.com/fwlink/?linkid=2097925)입니다.
 
 #### <a name="aikcert-validation-mode"></a>AIKCert 유효성 검사 모드
 
@@ -147,7 +147,7 @@ Windows Server 2016을 설치하면 장치가 다시 시작되고 서버 관리�
 
 ### <a name="install-the-signing-and-encryption-certificates"></a>서명 및 암호화 인증서 설치
 
-다음 Windows PowerShell 스크립트를 사용하여 서명 및 암호화 인증서를 설치합니다. 지문에 대 한 자세한 내용은 참조 하세요. [방법: 인증서의 지문 검색](https://msdn.microsoft.com/library/ms734695.aspx)합니다.
+다음 Windows PowerShell 스크립트를 사용하여 서명 및 암호화 인증서를 설치합니다. 지문에 대 한 자세한 내용은 [방법: 인증서](https://msdn.microsoft.com/library/ms734695.aspx)의 지문을 검색 합니다.
 
 ```
 $key = Get-ChildItem Cert:\LocalMachine\My | Where-Object {$_.Thumbprint -like "<thumbprint>"}
@@ -165,9 +165,9 @@ icacls $keypath /grant <username>`:R
 
 #### <a name="download-the-trusted-tpm-roots-certificate-package"></a>신뢰할 수 있는 TPM 루트 인증서 패키지 다운로드
 
-인증서 패키지를 설치 하기 전에에서 신뢰할 수 있는 TPM 루트의 최신 목록을 다운로드할 수 있습니다 [ https://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab ](https://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab)합니다.
+인증서 패키지를 설치 하기 전에에서 [https://go.microsoft.com/fwlink/?linkid=2097925](https://go.microsoft.com/fwlink/?linkid=2097925)신뢰할 수 있는 TPM 루트의 최신 목록을 다운로드할 수 있습니다.
 
-> **중요:** 패키지를 설치 하기 전에 Microsoft에서 디지털 서명 되었는지 확인 합니다.
+> **중요:** 패키지를 설치 하기 전에 Microsoft에서 디지털 서명 했는지 확인 합니다.
 
 #### <a name="extract-the-trusted-certificate-package"></a>신뢰할 수 있는 인증서 패키지를 추출합니다.
 다음 명령을 실행하여 신뢰할 수 있는 인증서 패키지를 추출합니다.
@@ -180,7 +180,7 @@ expand -F:* .\TrustedTpm.cab .\TrustedTpm
 
 조직에서 신뢰하지 않는 TPM 공급업체 신뢰 체인에 대한 폴더를 삭제합니다.
 
-> **참고:** AIK 인증서 모드를 사용 하는 경우 Microsoft 발행 한 AIK 인증서의 유효성을 검사 하려면 Microsoft 폴더가 필요 합니다.
+> **참고:** AIK 인증서 모드를 사용 하는 경우 microsoft 발급 된 AIK 인증서의 유효성을 검사 하려면 Microsoft 폴더가 필요 합니다.
 
 #### <a name="install-the-trusted-certificate-package"></a>신뢰할 수 있는 인증서 패키지 설치
 .cab 파일에서 설치 스크립트를 실행하여 신뢰할 수 있는 인증서 패키지를 설치합니다.
@@ -238,7 +238,7 @@ Get-DHASActiveSigningCertificate
 Set-DHASActiveSigningCertificate -Thumbprint "<hex>" -Force
 ```
 
-> **참고:** 이 인증서 DHA 서비스를 실행 하는 서버에 배포 되어 있어야 합니다 **LocalMachine\My** 인증서 저장소입니다. 활성 서명 인증서가 설정되면 기존 활성 서명 인증서가 비활성 서명 인증서 목록으로 이동합니다.
+> **참고:** 이 인증서는 **LocalMachine\My** 인증서 저장소에서 dha 서비스를 실행 하는 서버에 배포 해야 합니다. 활성 서명 인증서가 설정되면 기존 활성 서명 인증서가 비활성 서명 인증서 목록으로 이동합니다.
 
 ### <a name="list-the-inactive-signing-certificates"></a>비활성 서명 인증서 나열
 ```
@@ -251,7 +251,7 @@ Remove-DHASInactiveSigningCertificates -Force
 Remove-DHASInactiveSigningCertificates  -Thumbprint "<hex>" -Force
 ```
 
-> **참고:** 만 *하나의* 비활성 인증서 (모든 유형)에 언제 든 지 서비스에 존재할 수 있습니다. 더 이상 필요 없는 경우 비활성 인증서 목록에서 인증서를 제거해야 합니다.
+> **참고:** 언제 든 지 특정 *유형의 비활성 인증서* 하나만 서비스에 존재할 수 있습니다. 더 이상 필요 없는 경우 비활성 인증서 목록에서 인증서를 제거해야 합니다.
 
 ### <a name="get-the-active-encryption-certificate"></a>활성 암호화 인증서 가져오기
 

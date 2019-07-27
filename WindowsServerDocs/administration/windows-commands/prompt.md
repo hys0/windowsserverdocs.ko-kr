@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 5ef487ce9799c1f09660cdfcd6fba71336fc4d9a
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 8371a67ba1b8dc7d5f02272c809f916aae3df584
+ms.sourcegitcommit: 6f968368c12b9dd699c197afb3a3d13c2211f85b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66442141"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68544553"
 ---
 # <a name="prompt"></a>prompt
 
@@ -58,7 +58,7 @@ prompt [<Text>]
 |    $n     |                                현재 드라이브                                |
 |    $g     |                            > (보다 큼 기호)                            |
 |    $l     |                             < (보다 작음 부호)                              |
-|    $b     |                                                                             |
+|    $b     |                              \|(파이프 기호)                               |
 |    $_     |                               입력 줄 바꿈                                |
 |    $e     |                         ANSI 이스케이프 코드 (27)                          |
 |    $h     | 백스페이스 (명령줄에 작성 된 문자) |
@@ -76,7 +76,7 @@ prompt [<Text>]
 
 포함 하는 경우는 **$p** 문자 텍스트 매개 변수에서 디스크를 각 명령 (현재 드라이브와 경로 결정)를 입력 한 후 읽습니다. 이 특히 플로피 디스크 드라이브에 대 한 시간이 걸릴 수 있습니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 첫 번째 줄 및 보다 큼 다음 줄에서 기호에 현재 날짜 및 시간으로 두 줄 명령 프롬프트를 설정 하려면 다음을 입력 합니다.
 ```

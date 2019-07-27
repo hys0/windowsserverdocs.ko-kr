@@ -1,6 +1,6 @@
 ---
 title: Hyper-v에서 지원 되는 Ubuntu 가상 컴퓨터
-description: Linux integration services 및 각 버전에 포함 된 기능을 나열 합니다.
+description: 각 버전에 포함 된 Linux 통합 서비스 및 기능을 나열 합니다.
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill
@@ -11,16 +11,16 @@ ms.assetid: 95ea5f7c-25c6-494b-8ffd-2a77f631ee94
 author: shirgall
 ms.author: shirgall
 ms.date: 11/19/2018
-ms.openlocfilehash: 662541658fe6e7b99e66fe31344450e0a1cbd201
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 8dad054e79a155e6aa3ba123aba4566f0f675a9d
+ms.sourcegitcommit: 6f968368c12b9dd699c197afb3a3d13c2211f85b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66447834"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68544696"
 ---
 # <a name="supported-ubuntu-virtual-machines-on-hyper-v"></a>Hyper-v에서 지원 되는 Ubuntu 가상 컴퓨터
 
->적용 대상: Windows Server 2019, 2016, Hyper-v Server 2019, 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012 Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
+>적용 대상: Windows Server 2019, 2016, Hyper-v 서버 2019, 2016, Windows Server 2012 R2, Hyper-v Server 2012 R2, Windows Server 2012, Hyper-v Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
 
 Ubuntu 12.04 부터는 게스트 가상 컴퓨터로 사용 하기에 적합 한 커널을 설치 하는 "linux 가상" 패키지를 로드 합니다. 이 패키지는 항상 최신 최소한의 일반 커널 이미지와 가상 컴퓨터에 사용 되는 헤더에 따라 달라 집니다. 사용은 선택 사항, linux 가상 커널 적은 드라이버 로드 및 수 더 빠르게 부팅를 일반 이미지 보다 메모리 오버 헤드를 줄일 합니다.
 
@@ -36,43 +36,44 @@ Ubuntu 12.04 부터는 게스트 가상 컴퓨터로 사용 하기에 적합 한
 
 * (*빈*)-기능을 사용할 수 없음
 
-|**기능**|**Windows Server 운영 체제 버전**|**18.10**|**18.04 LTS**|**16.04 LTS**|**14.04 LTS**|**12.04 LTS**|
-|-|-|-|-|-|-|-|
-|**가용성**||기본 제공|기본 제공|기본 제공|기본 제공|기본 제공|
-|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Windows Server 2016 정확한 시간|2019, 2016|&#10004;|&#10004;|&#10004;|||
-|**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**|||||||
-|Jumbo 프레임|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|VLAN 태깅, 트렁킹|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|실시간 마이그레이션|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|정적 IP 주입|2019, 2016, 2012 R2, 2012|&#10004; 참고 1|&#10004; 참고 1|&#10004; 참고 1|&#10004; 참고 1|&#10004; 참고 1|
-|vRSS|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;||
-|TCP 조각화와 체크섬 오프 로드|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;||
-|SR-IOV|2019, 2016|&#10004;|&#10004;|&#10004;|||
-|**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**||||||
-|VHDX 크기 조정|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;||
-|가상 파이버 채널|2019, 2016, 2012 R2|&#10004; 참고 2|&#10004; 참고 2|&#10004; 참고 2|&#10004; 참고 2||
-|가상 머신 백업|2019, 2016, 2012 R2|&#10004;3, 4, 6 note|&#10004; Note 3, 4, 5|&#10004; Note 3, 4, 5|&#10004; Note 3, 4, 5||
-|TRIM 지원|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|SCSI WWN|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;||
-|**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)**||||||
-|PAE 커널 지원|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|MMIO 간격 구성|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|동적 메모리-즉석 추가|2019, 2016, 2012 R2, 2012|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9||
-|동적 메모리-Ballooning|2019, 2016, 2012 R2, 2012|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9||
-|런타임 메모리 크기 조정|2019, 2016|&#10004;|&#10004;|&#10004;|&#10004;||
-|**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**|||||||
-|Hyper-v 특정 비디오 장치|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;||
-|**[기타](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)**||||||
-|키/값 쌍|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;Note 6, 10|&#10004; 참고 5, 10|&#10004; 참고 5, 10|&#10004; 참고 5, 10|&#10004; 참고 5, 10|
-|마스크 불가능 인터럽트|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|호스트에서 게스트로 파일 복사|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;||
-|lsvmbus 명령|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;||
-|Hyper-v 소켓|2019, 2016||||||
-|PCI 통과/DDA|2019, 2016|&#10004;|&#10004;|&#10004;|&#10004;||
-|**[2 세대 가상 컴퓨터](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines)**||||||
-|UEFI를 사용 하 여 부팅|2019, 2016, 2012 R2|&#10004; 참고 11, 12|&#10004; 참고 11, 12|&#10004; 참고 11, 12|&#10004; 참고 11, 12||
-|보안 부팅|2019, 2016|&#10004;|&#10004;|&#10004;|&#10004;||
+| **기능**                                                                                                                                  | **Windows Server 운영 체제 버전** | **19.04**             | **18.10**             | **18.04 LTS**         | **16.04 LTS**         | **14.04 LTS**         | **12.04 LTS**       |
+|----------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|-----------------------|-----------------------|-----------------------|-----------------------|-----------------------|---------------------|
+| **가용성**                                                                                                                             |                                             | 기본 제공              | 기본 제공              | 기본 제공              | 기본 제공              | 기본 제공              | 기본 제공            |
+| **[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**                                                   | 2019, 2016, 2012 R2, 2012, 2008 R2          | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;            |
+| Windows Server 2016 정확한 시간                                                                                                            | 2019, 2016                                  | &#10004;              | &#10004;              | &#10004;              | &#10004;              |                       |                     |
+| **[Lan](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**                                       |                                             |                       |                       |                       |                       |                       |                     |
+| Jumbo 프레임                                                                                                                                 | 2019, 2016, 2012 R2, 2012, 2008 R2          | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;            |
+| VLAN 태깅 및 트렁킹                                                                                                                    | 2019, 2016, 2012 R2, 2012, 2008 R2          | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;            |
+| 실시간 마이그레이션                                                                                                                               | 2019, 2016, 2012 R2, 2012, 2008 R2          | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;            |
+| 고정 IP 삽입                                                                                                                          | 2019, 2016, 2012 R2, 2012                   | &#10004; 참고 1       | & #10004; 참고 1       | & #10004; 참고 1       | & #10004; 참고 1       | & #10004; 참고 1       | &#10004; 참고 1     |
+| vRSS                                                                                                                                         | 2019, 2016, 2012 R2                         | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              |                     |
+| TCP 조각화 및 체크섬 오프 로드                                                                                                       | 2019, 2016, 2012 R2, 2012, 2008 R2          | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              |                     |
+| SR-IOV                                                                                                                                       | 2019, 2016                                  | &#10004;              | &#10004;              | &#10004;              | &#10004;              |                       |                     |
+| **[저장할](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**                                             |                                             |                       |                       |                       |                       |                       |                     |
+| VHDX 크기 조정                                                                                                                                  | 2019, 2016, 2012 R2                         | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              |                     |
+| 가상 파이버 채널                                                                                                                        | 2019, 2016, 2012 R2                         | &#10004; 참고 2       | &#10004; 참고 2       | &#10004; 참고 2       | &#10004; 참고 2       | & #10004; 참고 2       |                     |
+| 라이브 가상 머신 백업                                                                                                                  | 2019, 2016, 2012 R2                         | &#10004;참고 3, 4, 6 | &#10004;참고 3, 4, 6 | &#10004; Note 3, 4, 5 | &#10004; Note 3, 4, 5 | &#10004; Note 3, 4, 5 |                     |
+| TRIM 지원                                                                                                                                 | 2019, 2016, 2012 R2                         | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;            |
+| SCSI WWN                                                                                                                                     | 2019, 2016, 2012 R2                         | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              |                     |
+| **[Ram](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)**                                               |                                             |                       |                       |                       |                       |                       |                     |
+| PAE 커널 지원                                                                                                                           | 2019, 2016, 2012 R2, 2012, 2008 R2          | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;            |
+| MMIO 간격 구성                                                                                                                    | 2019, 2016, 2012 R2                         | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;            |
+| 동적 메모리-즉석 추가                                                                                                                     | 2019, 2016, 2012 R2, 2012                   | &#10004; Note 7, 8, 9 | &#10004; Note 7, 8, 9 | &#10004; Note 7, 8, 9 | &#10004; Note 7, 8, 9 | &#10004; Note 7, 8, 9 |                     |
+| 동적 메모리-Ballooning                                                                                                                  | 2019, 2016, 2012 R2, 2012                   | &#10004; Note 7, 8, 9 | &#10004; Note 7, 8, 9 | &#10004; Note 7, 8, 9 | &#10004; Note 7, 8, 9 | &#10004; Note 7, 8, 9 |                     |
+| 런타임 메모리 크기 조정                                                                                                                        | 2019, 2016                                  | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              |                     |
+| **[화면이](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**                                                 |                                             |                       |                       |                       |                       |                       |                     |
+| Hyper-v 특정 비디오 장치                                                                                                                | 2019, 2016, 2012 R2, 2012, 2008 R2          | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              |                     |
+| **[기타](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)**                                 |                                             |                       |                       |                       |                       |                       |                     |
+| 키/값 쌍                                                                                                                               | 2019, 2016, 2012 R2, 2012, 2008 R2          | &#10004;참고 6, 10   | &#10004;참고 6, 10   | &#10004; 참고 5, 10   | &#10004; 참고 5, 10   | &#10004; 참고 5, 10   | &#10004; 참고 5, 10 |
+| 마스크 불가능 인터럽트                                                                                                                       | 2019, 2016, 2012 R2                         | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;            |
+| 호스트에서 게스트로 파일 복사                                                                                                                 | 2019, 2016, 2012 R2                         | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              |                     |
+| lsvmbus 명령                                                                                                                              | 2019, 2016, 2012 R2, 2012, 2008 R2          | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              |                     |
+| Hyper-v 소켓                                                                                                                              | 2019, 2016                                  |                       |                       |                       |                       |                       |                     |
+| PCI 통과/DDA                                                                                                                          | 2019, 2016                                  | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              |                     |
+| **[2 세대 가상 컴퓨터](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines)** |                                             |                       |                       |                       |                       |                       |                     |
+| UEFI를 사용 하 여 부팅                                                                                                                              | 2019, 2016, 2012 R2                         | &#10004; 참고 11, 12  | &#10004; 참고 11, 12  | &#10004; 참고 11, 12  | &#10004; 참고 11, 12  | &#10004; 참고 11, 12  |                     |
+| 보안 부팅                                                                                                                                  | 2019, 2016                                  | &#10004;              | &#10004;              | &#10004;              | &#10004;              | &#10004;              |                     |
+
 
 ## <a name="notes"></a>참고
 
@@ -86,27 +87,27 @@ Ubuntu 12.04 부터는 게스트 가상 컴퓨터로 사용 하기에 적합 한
 
 5. 장기 지원 (LTS) 릴리스에서 최신 Linux 통합 서비스에 대 한 최신 가상 하드웨어 사용 (HWE) 커널을 사용합니다.
 
-   Azure 조정 커널 14.04, 16.04 및 18.04를 설치 하려면 루트 (또는 sudo)로 다음 명령을 실행 합니다.
+   14.04, 16.04 및 18.04에 Azure 튜닝 커널을 설치 하려면 루트 (또는 sudo)로 다음 명령을 실행 합니다.
 
    ```bash
    # apt-get update
    # apt-get install linux-azure
    ```
 
-   별도 가상 커널 12.04에는 없습니다. 제네릭 HWE 커널 12.04에을 설치 하려면 루트 (또는 sudo)로 다음 명령을 실행 합니다.
+   12.04에 별도의 가상 커널이 없습니다. 12.04에 일반 HWE kernel를 설치 하려면 루트 (또는 sudo)로 다음 명령을 실행 합니다.
 
    ```bash
    # apt-get update
    # apt-get install linux-generic-lts-trusty
    ```
 
-   Ubuntu 12.04에 다음과 같은 Hyper-v 데몬 별도로 설치 된 패키지에서:
+   Ubuntu 12.04에서 다음 Hyper-v 디먼는 별도로 설치 된 패키지에 있습니다.
 
    * **VSS 스냅숏을 데몬** -이 디먼 라이브 Linux 가상 컴퓨터 백업을 만드는 데 필요 합니다.
    * **KVP 데몬** -이 디먼 설정 및 내부 형식과 외부 키/값 쌍을 쿼리할 수 있습니다.
    * **fcopy 데몬** -이 데몬 호스트와 게스트 사이 서비스를 복사 하는 파일을 구현 합니다.
 
-   KVP 데몬 12.04에을 설치 하려면 루트 (또는 sudo)로 다음 명령을 실행 합니다.
+   12.04에 KVP 디먼을 설치 하려면 루트 (또는 sudo)로 다음 명령을 실행 합니다.
 
    ```bash
    # apt-get install hv-kvp-daemon-init linux-tools-lts-trusty linux-cloud-tools-generic-lts-trusty
@@ -114,9 +115,9 @@ Ubuntu 12.04 부터는 게스트 가상 컴퓨터로 사용 하기에 적합 한
 
    커널 업데이트 될 때마다 사용 하도록 가상 컴퓨터를 다시 부팅 해야 합니다.
 
-6. Ubuntu 18.10에서 최신 가상 커널을 사용 하 여 최신 Hyper-v 기능을 제공 하도록 합니다.
+6. Ubuntu 18.10 또는 19.04에서 최신 가상 커널을 사용 하 여 최신 Hyper-v 기능을 제공 합니다.
 
-   가상 커널 18.10에 설치 하려면 루트 (또는 sudo)로 다음 명령을 실행 합니다.
+   18.10 또는 19.04에서 가상 커널을 설치 하려면 루트 (또는 sudo)로 다음 명령을 실행 합니다.
 
    ```bash
    # apt-get update
@@ -133,9 +134,9 @@ Ubuntu 12.04 부터는 게스트 가상 컴퓨터로 사용 하기에 적합 한
 
    * 시스템에서 전체 사용 가능한 메모리를 사용 하는 응용 프로그램은 사용 가능한 RAM의 80%까지 사용 하는 데 제한 됩니다.
 
-9. 동적 메모리를 Windows Server 2019, Windows Server 2016 또는 Windows Server 2012/2012 R2 운영 체제에서 사용 하는 경우 지정할 **시작 메모리**를 **최소 메모리**, 및 **최대 메모리** 128 메가바이트 (MB)의 배수로 매개 변수입니다. 이렇게 하지 않으면 Hot-add 오류가 발생할 수 있으므로 및 게스트 운영 체제에 증가 하는 메모리를 확인할 수 있습니다.
+9. Windows Server 2019, Windows Server 2016 또는 Windows Server 2012/2012 R2 운영 체제에서 동적 메모리를 사용 하는 경우 **시작 메모리**, **최소 메모리**및 **최대 메모리** 매개 변수를 128 메가바이트 (mb)의 배수로 지정 합니다. 이렇게 하지 않으면 Hot-add 오류가 발생할 수 있으므로 및 게스트 운영 체제에 증가 하는 메모리를 확인할 수 있습니다.
 
-10. Windows Server 2019, Windows Server 2016 또는 Windows Server 2012 R2에서 키/값 쌍 인프라 수 Linux 소프트웨어 업데이트가 없으면 제대로 작동 하지. 이 기능으로는 문제를 참조 하는 경우 소프트웨어 업데이트를 다운로드 하려면 공급 업체에 문의 합니다.
+10. Windows Server 2019, Windows Server 2016 또는 Windows Server 2012 r 2에서는 키/값 쌍 인프라가 Linux 소프트웨어 업데이트가 없으면 제대로 작동 하지 않을 수 있습니다. 이 기능으로는 문제를 참조 하는 경우 소프트웨어 업데이트를 다운로드 하려면 공급 업체에 문의 합니다.
 
 11. Windows Server 2012 r 2에서 2 세대 가상 컴퓨터 수 있으며 일부 Linux 가상 컴퓨터는 보안 부팅 옵션을 해제 하지 않는 한 부팅 하 고 기본적으로 사용 하도록 설정 하는 보안 부팅 보안 부팅을 사용 하지 않도록 설정할 수는 **펌웨어** 섹션에 있는 가상 컴퓨터에 대 한 설정의 **Hyper-v 관리자** Powershell을 사용 하 여 비활성화할 수 있습니다.
 
@@ -173,18 +174,18 @@ Ubuntu 12.04 부터는 게스트 가상 컴퓨터로 사용 하기에 적합 한
 
 ## <a name="see-also"></a>관련 항목
 
-* [CentOS 지원 및 Hyper-v Red Hat Enterprise Linux 가상 컴퓨터](Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md)
+* [Hyper-v에서 지원 되는 CentOS 및 Red Hat Enterprise Linux 가상 컴퓨터](Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md)
 
 * [Hyper-V에서 지원되는 Debian 가상 머신](Supported-Debian-virtual-machines-on-Hyper-V.md)
 
 * [Hyper-v에서 지원 되는 Oracle Linux 가상 컴퓨터](Supported-Oracle-Linux-virtual-machines-on-Hyper-V.md)
 
-* [Hyper-v에서 지원 되는 SUSE 가상 머신](Supported-SUSE-virtual-machines-on-Hyper-V.md)
+* [Hyper-v에서 지원 되는 SUSE 가상 컴퓨터](Supported-SUSE-virtual-machines-on-Hyper-V.md)
 
-* [Hyper-v의 Linux 및 FreeBSD 가상 컴퓨터에 대 한 설명이](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md)
+* [Hyper-v의 Linux 및 FreeBSD 가상 머신에 대 한 기능 설명](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md)
 
-* [Hyper-v에서 Linux를 실행 하는 것에 대 한 모범 사례](Best-Practices-for-running-Linux-on-Hyper-V.md)
+* [Hyper-v에서 Linux를 실행 하기 위한 모범 사례](Best-Practices-for-running-Linux-on-Hyper-V.md)
 
-* [Set-VMFirmware](https://technet.microsoft.com/library/dn464287.aspx)
+* [Set-vmfirmware](https://technet.microsoft.com/library/dn464287.aspx)
 
-* [2 세대에 Ubuntu 14.04 VM-Ben Armstrong의 가상화 블로그](https://blogs.msdn.com/b/virtual_pc_guy/archive/2014/06/09/ubuntu-14-04-in-a-generation-2-vm.aspx)
+* [2 세대 VM의 Ubuntu 14.04-이혜준 Armstrong의 가상화 블로그](https://blogs.msdn.com/b/virtual_pc_guy/archive/2014/06/09/ubuntu-14-04-in-a-generation-2-vm.aspx)

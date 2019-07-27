@@ -8,18 +8,18 @@ ms.topic: get-started-article
 author: nedpyle
 ms.date: 06/25/2019
 ms.assetid: ceddb0fa-e800-42b6-b4c6-c06eb1d4bc55
-ms.openlocfilehash: 7659446f57aaad3827cc722c735a31a5194f30e2
-ms.sourcegitcommit: 545dcfc23a81943e129565d0ad188263092d85f6
+ms.openlocfilehash: ad08d8716819773484fc1d1fbe3cc79dd203c498
+ms.sourcegitcommit: 9f955be34c641b58ae8b3000768caa46ad535d43
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67407625"
+ms.lasthandoff: 07/27/2019
+ms.locfileid: "68590567"
 ---
 # <a name="known-issues-with-storage-replica"></a>저장소 복제본의 알려진 문제
 
 >적용 대상: Windows Server 2019, Windows Server 2016, Windows Server(반기 채널)
 
-이 항목에서는 Windows Server에서 저장소 복제본의 알려진된 문제를 설명합니다.
+이 항목에서는 Windows Server에서 저장소 복제본의 알려진 문제에 대해 설명 합니다.
 
 ## <a name="after-removing-replication-disks-are-offline-and-you-cannot-configure-replication-again"></a>복제를 제거한 후 디스크가 오프라인 상태가 되어 복제를 다시 구성할 수 없음
 
@@ -146,7 +146,7 @@ SC config storqosflt start= disabled
 
 `Set-SRGroup -Name rg01 -AllowVolumeResize $TRUE`를 사용하여 원본 서버에서 볼륨 크기 조정을 제대로 설정해도 이 오류가 발생합니다. 
 
-이 문제는 누적 업데이트에 대 한 Windows 10 버전 1607 (1 주년 업데이트) 및 Windows Server 2016에서 수정 되었습니다. 2016 년 12 월 9, (KB3201845)입니다. 
+이 문제는 Windows 10 버전 1607 (기념일 업데이트) 및 Windows Server 2016의 누적 업데이트에서 해결 되었습니다. 2016 년 12 월 9 일 (KB3201845). 
 
 ## <a name="attempting-to-grow-a-replicated-volume-fails-due-to-missing-step"></a>단계 누락으로 인해 복제된 볼륨을 확장할 수 없음
 
@@ -155,13 +155,14 @@ SC config storqosflt start= disabled
     PS C:\> Resize-Partition -DriveLetter I -Size 8GB
     Resize-Partition : Failed
 
-활동 ID: {0} 87aebbd6-4f47-4621-8aa4-5328dfa6c3be} 줄: 1 문자: 1
-    + 크기를 조정 DriveLetter I-8 GB 크기
+    Activity ID: {87aebbd6-4f47-4621-8aa4-5328dfa6c3be}
+    At line:1 char:1
+    + Resize-Partition -DriveLetter I -Size 8GB
     + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         + CategoryInfo          : NotSpecified: (StorageWMI:ROOT/Microsoft/.../MSFT_Partition) [Resize-Partition], CimException
         + FullyQualifiedErrorId : StorageWMI 4,Resize-Partition
 
-Storage Replica Event log error 10307:
+    Storage Replica Event log error 10307:
 
     Attempted to resize a partition that is protected by Storage Replica .
 
@@ -175,17 +176,17 @@ Storage Replica Event log error 10307:
 
     Before you grow the source data partition, ensure that the destination data partition has enough space to grow to an equal size. Shrinking of data partition protected by Storage Replica is blocked.
 
-Disk Management Snap-in Error: 
+디스크 관리 스냅인 오류: 
 
     An unexpected error has occurred 
 
-After resizing the volume, remember to disable resizing with `Set-SRGroup -Name rg01 -AllowVolumeResize $FALSE`. This parameter prevents admins from attempting to resize volumes prior to ensuring that there is sufficient space on the destination volume, typically because they were unaware of Storage Replica's presence. 
+볼륨의 크기를 조정한 후 `Set-SRGroup -Name rg01 -AllowVolumeResize $FALSE`를 통해 크기 조정을 비활성화해야 합니다. 이 매개 변수는 대상 볼륨에 충분한 공간이 있는지 확인하기 전에 관리자가 볼륨의 크기를 조정하지 못하게 방지합니다. 일반적으로 저장소 복제본의 존재를 인식하지 못했기 때문입니다. 
 
-## Attempting to move a PDR resource between sites on an asynchronous stretch cluster fails
+## <a name="attempting-to-move-a-pdr-resource-between-sites-on-an-asynchronous-stretch-cluster-fails"></a>비동기 확장 클러스터에서 사이트 간에 PDR 리소스를 이동하려고 하면 실패합니다.
 
-When attempting to move a physical disk resource-attached role - such as a file server for general use - in order to move the associated storage in an asynchronous stretch cluster, you receive an error.
+비동기 확장 클러스터에서 연결된 저장소를 이동하기 위해 일반 용도의 파일 서버와 같은 실제 디스크 리소스 연결 역할을 이동하려고 하면 오류가 발생합니다.
 
-If using the Failover Cluster Manager snap-in:
+장애 조치 클러스터 관리자 스냅인을 사용하는 경우:
 
     Error
     The operation has failed.
@@ -193,7 +194,7 @@ If using the Failover Cluster Manager snap-in:
     Error Code: 0x80071398
     The operation failed because either the specified cluster node is not the owner of the group, or the node is not a possible owner of the group
 
-If using the Cluster powershell cmdlet:
+클러스터 powershell cmdlet을 사용하는 경우:
 
     PS C:\> Move-ClusterGroup -Name sr-fs-006 -Node sr-srv07
     Move-ClusterGroup : An error occurred while moving the clustered role 'sr-fs-006'.
@@ -205,35 +206,35 @@ If using the Cluster powershell cmdlet:
     + CategoryInfo          : NotSpecified: (:) [Move-ClusterGroup], ClusterCmdletException
     + FullyQualifiedErrorId : Move-ClusterGroup,Microsoft.FailoverClusters.PowerShell.MoveClusterGroupCommand
 
-This occurs due to a by-design behavior in Windows Server 2016. Use `Set-SRPartnership` to move these PDR disks in an asynchronous stretched cluster.  
+이는 Windows Server 2016의 기본 동작으로 인해 발생합니다. `Set-SRPartnership`을 사용하여 비동기 확장 클러스터에서 이러한 PDR 디스크를 이동합니다.  
 
-This behavior has been changed in Windows Server, version 1709 to allow manual and automated failovers with asynchronous replication, based on customer feedback.
+이 동작은 사용자 의견에 따라 비동기 복제를 사용 하 여 수동 및 자동 장애 조치 (failover)를 수행할 수 있도록 Windows Server, 버전 1709에서 변경 되었습니다.
 
-## Attempting to add disks to a two-node asymmetric cluster returns "No disks suitable for cluster disks found"
+## <a name="attempting-to-add-disks-to-a-two-node-asymmetric-cluster-returns-no-disks-suitable-for-cluster-disks-found"></a>2-노드 비대칭 클러스터에 디스크를 추가하려고 하면 "클러스터 디스크에 적합한 디스크가 없음" 오류가 반환됩니다.
 
-When attempting to provision a cluster with only two nodes, prior to adding Storage Replica stretch replication, you attempt to add the disks in the second site to the Available Disks. You receive the following error:
+저장소 복제본을 확장 복제를 추가하기 전에 노드가 2개만 있는 클러스터를 프로비전하려고 할 경우 두 번째 사이트에 있는 디스크를 사용 가능한 디스크에 추가하려고 합니다. 다음과 같은 오류가 표시 됩니다.
 
     "No disks suitable for cluster disks found. For diagnostic information about disks available to the cluster, use the Validate a Configuration Wizard to run Storage tests." 
 
-This does not occur if you have at least three nodes in the cluster. This issue occurs because of a by-design code change in Windows Server 2016 for asymmetric storage clustering behaviors. 
+클러스터에 노드가 3개 이상 있는 경우 이러한 문제는 발생하지 않습니다. 이 문제는 Windows Server 2016에서 기본적으로 비대칭 저장소 클러스터링 동작이 변경되었기 때문에 발생합니다. 
 
-To add the storage, you can run the following command on the node in the second site:
+저장소를 추가하려면 두 번째 사이트의 노드에서 다음 명령을 실행할 수 있습니다.
 
 `Get-ClusterAvailableDisk -All | Add-ClusterDisk`
 
-This will not work with node local storage. You can use Storage Replica to replicate a stretch cluster between two total nodes, **each one using its own set of shared storage.** 
+노드 로컬 저장소에서는 이 명령이 작동하지 않습니다. 저장소 복제본을 사용하여 총 두 개의 노드 간에 확장 클러스터를 복제할 수 있습니다. **노드마다 고유의 공유 저장소 집합이 있습니다.** 
 
-## The SMB Bandwidth limiter fails to throttle Storage Replica bandwidth
+## <a name="the-smb-bandwidth-limiter-fails-to-throttle-storage-replica-bandwidth"></a>SMB 대역폭 제한이 저장소 복제본 대역폭 조절에 실패
 
-When specifying a bandwidth limit to Storage Replica, the limit is ignored and full bandwidth used. For example:
+저장소 복제본의 대역폭 제한을 지정할 때 제한이 무시되고 전체 대역폭이 사용됩니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
 
 `Set-SmbBandwidthLimit  -Category StorageReplication -BytesPerSecond 32MB`
 
-This issue occurs because of an interoperability issue between Storage Replica and SMB. This issue was first fixed in the July 2017 Cumulative Update of Windows Server 2016 and in Windows Server, version 1709.
+이 문제는 저장소 복제본과 SMB 간의 상호 운용성 문제 때문에 발생합니다. 이 문제는 Windows Server 2016 및 Windows Server 버전 1709의 7 월 2017 누적 업데이트에서 처음으로 수정 되었습니다.
 
-## Event 1241 warning repeated during initial sync
+## <a name="event-1241-warning-repeated-during-initial-sync"></a>초기 동기화 중에 이벤트 1241 경고가 반복됨
 
-When specifying a replication partnership is asynchronous, the source computer repeatedly logs warning event 1241 in the Storage Replica Admin channel. For example:
+복제 파트너 관계를 비동기로 지정할 때 원본 컴퓨터가 저장소 복제본 관리자 채널에서 경고 이벤트 1241을 반복적으로 기록합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
 
     Log Name:      Microsoft-Windows-StorageReplica/Admin
     Source:        Microsoft-Windows-StorageReplica
@@ -258,15 +259,15 @@ When specifying a replication partnership is asynchronous, the source computer r
 
     Guidance: This is typically due to one of the following reasons: 
 
-The asynchronous destination is currently disconnected. The RPO may become available after the connection is restored.
+현재 비동기 대상의 연결이 끊어졌습니다. 연결이 복원되면 RPO를 다시 사용할 수 있습니다.
 
     The asynchronous destination is unable to keep pace with the source such that the most recent destination log record is no longer present in the source log. The destination will start block copying. The RPO should become available after block copying completes.
 
-This is expected behavior during initial sync and can safely be ignored. This behavior may change in a later release. If you see this behavior during ongoing asynchronous replication, investigate the partnership to determine why replication is delayed beyond your configured RPO (30 seconds, by default).
+이는 초기 동기화에서 예상된 동작이며 무시해도 됩니다. 이 동작은 이후 릴리스에서 변경될 수 있습니다. 비동기 복제가 진행되는 동안 이 동작이 발견되면 파트너 관계를 조사하여 구성된 RPO(기본적으로 30초)보다 더 오랫동안 복제가 지연되는 이유를 확인하세요.
 
-## Event 4004 warning repeated after rebooting a replicated node
+## <a name="event-4004-warning-repeated-after-rebooting-a-replicated-node"></a>복제된 노드를 다시 부팅한 후 이벤트 4004 경고가 반복됨
 
-Under rare and usually unreproducable circumstances, rebooting a server that is in a partnership leads to replication failing and the rebooted node logging warning event 4004 with an access denied error.
+파트너 관계에 있는 서버를 다시 부팅하면 복제가 실패하고 다시 부팅된 노드가 액세스 거부 오류와 함께 경고 이벤트 4004를 기록하는 현상이 매우 드물게 발생하기도 하며 대부분은 이 현상을 재현할 수도 없습니다.
 
     Log Name:      Microsoft-Windows-StorageReplica/Admin
     Source:        Microsoft-Windows-StorageReplica
@@ -292,11 +293,11 @@ Under rare and usually unreproducable circumstances, rebooting a server that is 
 
     Guidance: Possible causes include network failures, share creation failures for the remote replication group, or firewall settings. Make sure SMB traffic is allowed and there are no connectivity issues between the local computer and the remote computer. You should expect this event when suspending replication or removing a replication partnership.
 
-Note the `Status: "{Access Denied}"` and the message `A process has requested access to an object, but has not been granted those access rights.` This is a known issue within Storage Replica and was fixed in Quality Update September 12, 2017—KB4038782 (OS Build 14393.1715) https://support.microsoft.com/help/4038782/windows-10-update-kb4038782 
+`Status: "{Access Denied}"` 및 메시지`A process has requested access to an object, but has not been granted those access rights.` 는 저장소 복제본의 알려진 문제 이며 2017 년 9 월 12 일 (KB4038782) (OS 빌드 14393.1715)에서 수정 되었습니다. https://support.microsoft.com/help/4038782/windows-10-update-kb4038782 
 
-## Error "Failed to bring the resource 'Cluster Disk x' online." with a stretch cluster
+## <a name="error-failed-to-bring-the-resource-cluster-disk-x-online-with-a-stretch-cluster"></a>확장 클러스터에서 "'클러스터 디스크 x' 리소스를 온라인 상태로 전환하지 못했습니다." 오류 발생
 
-When attempting to bring a cluster disk online after a successful failover, where you are attempting to make the original source site primary again, you receive an error in Failover Cluster Manager. For example:
+장애 조치(failover) 후 클러스터 디스크를 온라인으로 전환하고 원래 소스 사이트를 다시 기본 사이트로 만들려고 시도하면 장애 조치(failover) 클러스터 관리자에서 오류가 발생합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
 
     Error
     The operation has failed.
@@ -305,7 +306,7 @@ When attempting to bring a cluster disk online after a successful failover, wher
     Error Code: 0x80071397
     The operation failed because either the specified cluster node is not the owner of the resource, or the node is not a possible owner of the resource.
 
-If you attempt to move the disk or CSV manually, you receive an additional error. For example:
+디스크나 CSV를 수동으로 이동하려고 하면 추가 오류가 발생합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
 
     Error
     The operation has failed.
@@ -314,13 +315,13 @@ If you attempt to move the disk or CSV manually, you receive an additional error
     Error Code: 0x8007138d
     A cluster node is not available for this operation
 
-This issue is caused by one or more uninitialized disks being attached to one or more cluster nodes. To resolve the issue, initialize all attached storage using DiskMgmt.msc, DISKPART.EXE, or the Initialize-Disk PowerShell cmdlet.
+하나 이상의 클러스터 노드에 초기화 되지 않은 디스크가 하나 이상 연결 되어 있기 때문에이 문제가 발생 합니다. 이 문제를 해결하려면 DiskMgmt.msc, DISKPART.EXE 또는 Initialize-Disk PowerShell cmdlet을 사용하여 모든 연결된 저장소를 초기화해야 합니다.
 
-We are working on providing an update that permanently resolves this issue. If you are interested in assisting us and you have a Microsoft Premier Support agreement, please email SRFEED@microsoft.com so that we can work with you on filing a backport request.
+이 문제를 영구적으로 해결하는 업데이트를 제공하기 위해 현재 작업 중입니다. Microsoft 프리미어 지원 계약을 맺은 분들 중에서 문제 해결을 도와주실 생각이 있는 분들은 저희와 함께 협력하여 백포트 요청을 제출할 수 있도록 SRFEED@microsoft.com으로 이메일을 보내주세요.
 
-## GPT error when attempting to create a new SR partnership
+## <a name="gpt-error-when-attempting-to-create-a-new-sr-partnership"></a>새 SR 파트너 관계를 만들려고 시도하면 GPT 오류 발생
 
-When running New-SRPartnership, it fails with error:
+New-SRPartnership을 실행하면 다음 오류와 함께 작업이 실패합니다.
 
     Disk layout type for volume \\?\Volume{GUID}\ is not a valid GPT style layout.
     New-SRPartnership : Unable to create replication group SRG01, detailed reason: Disk layout type for volume
@@ -332,9 +333,9 @@ When running New-SRPartnership, it fails with error:
     , CimException
     + FullyQualifiedErrorId : Windows System Error 5078,New-SRPartnership
 
-In the Failover Cluster Manager GUI, there is no option to setup Replication for the disk.
+장애 조치(failover) 클러스터 관리자 GUI에는 디스크에 복제를 설정하는 옵션이 없습니다.
 
-When running Test-SRTopology, it fails with: 
+Test-SRTopology를 실행하면 다음 오류와 함께 작업이 실패합니다. 
 
     WARNING: Object reference not set to an instance of an object.
     WARNING: System.NullReferenceException
@@ -348,46 +349,46 @@ When running Test-SRTopology, it fails with:
     + CategoryInfo : InvalidArgument: (:) [Test-SRTopology], NullReferenceException
     + FullyQualifiedErrorId : TestSRTopologyFailure,Microsoft.FileServices.SR.Powershell.TestSRTopologyCommand 
 
-This is caused by the cluster functional level still being set to Windows Server 2012 R2 (i.e. FL 8). Storage Replica is supposed to return a specific error here but instead returns an incorrect error mapping.
+클러스터 기능 수준이 여전히 Windows Server 2012 R2(예: FL 8)로 설정되어 있기 때문에 발생하는 문제입니다. 저장소 복제본은 여기서 특정 오류 반환을 지원하지만 그 대신 잘못된 오류 매핑을 반환합니다.
 
-Run Get-Cluster | fl * on each node.
+각 노드에서 Get-Cluster | fl *를 실행합니다.
 
-If ClusterFunctionalLevel = 9, that is the Windows 2016 ClusterFunctionalLevel version needed to implement Storage Replica on this node.
-If ClusterFunctionalLevel is not 9, the ClusterFunctionalLevel will need to be updated in order to implement Storage Replica on this node.
+ClusterFunctionalLevel이 9이면 이 노드에 저장소 복제본을 구현하는 데 필요한 것은 Windows 2016 ClusterFunctionalLevel 버전입니다.
+ClusterFunctionalLevel이 9가 아닌 경우 이 노드에 저장소 복제본을 구현하려면 ClusterFunctionalLevel을 업데이트해야 합니다.
 
-To resolve the issue, raise the cluster functional level by running the PowerShell cmdlet: [Update-ClusterFunctionalLevel](https://docs.microsoft.com/powershell/module/failoverclusters/update-clusterfunctionallevel)
+이 문제를 해결 하려면 PowerShell cmdlet을 실행 하 여 클러스터 기능 수준을 올립니다. [업데이트-ClusterFunctionalLevel](https://docs.microsoft.com/powershell/module/failoverclusters/update-clusterfunctionallevel)
 
-## Small unknown partition listed in DISKMGMT for each replicated volume
+## <a name="small-unknown-partition-listed-in-diskmgmt-for-each-replicated-volume"></a>복제된 각 볼륨마다 알 수 없는 작은 파티션이 DISKMGMT에 나열됨
 
-When running the Disk Management snap-in (DISKMGMT.MSC), you notice one or more volumes listed with no label or drive letter and 1MB in size. You may be able to delete the unknown volume or you may receive:
+디스크 관리 스냅인(DISKMGMT.MSC)을 실행하면 레이블이나 드라이브 문자가 없는 1MB 크기의 볼륨이 하나 이상 나열됩니다. 이 알 수 없는 볼륨을 삭제할 수 있는 경우도 있으나, 삭제되지 않고 다음과 같은 메시지가 나타나는 경우가 있습니다.
 
     "An Unexpected Error has Occurred"  
 
-This behavior is by design. This not a volume, but a partition. Storage Replica creates a 512KB partition as a database slot for replication operations (the legacy DiskMgmt.msc tool rounds to the nearest MB). Having a partition like this for each replicated volume is normal and desirable. When no longer in use, you are free to delete this 512KB partition; in-use ones cannot be deleted. The partition will never grow or shrink. If you are recreating replication we recommend leaving the partition as Storage Replica will claim unused ones.
+이 동작은 의도된 것입니다. 이것은 볼륨이 아니라 파티션입니다. 저장소 복제는 복제 작업을 위한 데이터베이스 슬롯으로 사용하기 위해 512KB 파티션을 하나 만듭니다(레거시 DiskMgmt.msc 도구는 근사치 MB로 반올림). 복제된 각 볼륨에 대해 이와 같은 파티션을 두는 것은 정상적이며 바람직합니다. 더 이상 사용되지 않는 경우에는 이 512KB 파티션을 삭제할 수 있으나 사용 중인 경우에는 삭제할 수 없습니다. 이 파티션은 절대 커지거나 줄어들지 않습니다. 사용되지 않는 파티션은 저장소 복제가 관리할 것이므로 복제를 재생성하는 경우 해당 파티션은 그대로 두는 것이 좋습니다.
 
-To view details, use the DISKPART tool or Get-Partition cmdlet. These partitions will have a GPT Type of `558d43c5-a1ac-43c0-aac8-d1472b2923d1`.
+세부 정보를 보려면 DISKPART 도구 또는 Get-Partition cmdlet을 사용합니다. 이러한 파티션은 GPT 유형의 `558d43c5-a1ac-43c0-aac8-d1472b2923d1`(을)를 갖습니다.
 
-## A Storage Replica node hangs when creating snapshots
+## <a name="a-storage-replica-node-hangs-when-creating-snapshots"></a>스냅숏을 만들 때 저장소 복제본 노드가 중단 됨
 
-When creating a VSS snapshot (through backup, VSSADMIN, etc) a Storage Replica node hangs, and you must force a restart of the node to recover. There is no error, just a hard hang of the server.
+백업, VSSADMIN 등을 통해 VSS 스냅숏을 만들 때 저장소 복제본 노드가 중단 되며, 강제로 복구 하려면 노드를 강제로 다시 시작 해야 합니다. 오류가 없으며 서버의 하드 중단이 발생 합니다.
 
-This issue occurs when you create a VSS snapshot of the log volume. The underlying cause is a legacy design aspect of VSS, not Storage Replica. The resulting behavior when you snapshot the Storage Replica log volume is a VSS I/O queing mechanism deadlocks the server.
+이 문제는 로그 볼륨의 VSS 스냅숏을 만들 때 발생 합니다. 기본적인 원인은 저장소 복제본이 아닌 VSS의 레거시 디자인 측면입니다. 저장소 복제본 로그 볼륨을 스냅숏을 만들면 생성 되는 동작은 VSS i/o queing 메커니즘이 서버의 교착 상태를 발생 하는 것입니다.
 
-To prevent this behavior, do not snapshot Storage Replica log volumes. There is no need to snapshot Storage Replica log volumes, as these logs cannot be restored. Furthermore, the log volume should never contain any other workloads, so no snapshot is needed in general.
+이 동작을 방지 하려면 저장소 복제본 로그 볼륨을 스냅숏 하지 마십시오. 이러한 로그는 복원할 수 없으므로 저장소 복제본 로그 볼륨을 스냅숏 할 필요는 없습니다. 또한 로그 볼륨은 다른 워크 로드를 포함 하지 않아야 하므로 일반적으로 스냅숏이 필요 하지 않습니다.
 
-## High IO latency increase when using Storage Spaces Direct with Storage Replica
+## <a name="high-io-latency-increase-when-using-storage-spaces-direct-with-storage-replica"></a>저장소 복제본과 함께 스토리지 공간 다이렉트를 사용 하는 경우 IO 대기 시간이 증가 합니다.
 
-When using Storage Spaces Direct with an NVME or SSD cache, you see a greater than expected increase in latency when configuring Storage Replica replication between Storage Spaces Direct clusters. The change in latency is proportionally much higher than you see when using NVME and SSD in a performance + capacity configuration and no HDD tier nor capacity tier.
+NVME 또는 SSD 캐시를 사용 하 여 스토리지 공간 다이렉트를 사용 하는 경우 스토리지 공간 다이렉트 클러스터 간에 저장소 복제본 복제를 구성 하는 동안 예상 되는 대기 시간이 증가 하는 것을 볼 수 있습니다. 대기 시간의 변화는 성능 + 용량 구성에서 NVME 및 SSD를 사용 하 고 HDD 계층 또는 용량 계층은 사용 하지 않는 것 보다 훨씬 더 높습니다.
 
-This issue occurs due to architectural limitations within Storage Replica's log mechanism combined with the extremely low latency of NVME when compared to slower media. When using the Storage Spaces Direct cache, all I/O of Storage Replica logs, along with all recent read/write IO of applications, will occur in the cache and never on the performance or capacity tiers. This means that all Storage Replica activity happens on the same speed media - this configuration is supported but not recommended (see https://aka.ms/srfaq for log recommendations). 
+이 문제는 느린 미디어와 비교할 때 저장소 복제본의 로그 메커니즘 내에서 NVME의 대기 시간이 매우 짧은 경우의 아키텍처 제한 때문에 발생 합니다. 스토리지 공간 다이렉트 캐시를 사용 하는 경우 모든 최근 읽기/쓰기 응용 프로그램 IO와 함께 저장소 복제본 로그의 모든 i/o가 캐시에서 발생 하 고 성능 또는 용량 계층에는 사용 되지 않습니다. 즉, 모든 저장소 복제본 작업이 동일한 속도 미디어에서 발생 합니다 .이 구성은 지원 되지만 권장 되지 않습니다 (로그 권장 https://aka.ms/srfaq 사항 참조). 
 
-When using Storage Spaces Direct with HDDs, you cannot disable or avoid the cache. As a workaround, if using just SSD and NVME, you can configure just performance and capacity tiers. If using that configuration, and by placing the SR logs on the performance tier only with the data volumes they service being on the capacity tier only, you will avoid the high latency issue described above. The same could be done with a mix of faster and slower SSDs and no NVME.
+Hdd와 함께 스토리지 공간 다이렉트를 사용 하는 경우 캐시를 사용 하지 않도록 설정 하거나 방지할 수 없습니다. 해결 방법으로, SSD 및 NVME만 사용 하는 경우 성능 및 용량 계층만 구성할 수 있습니다. 해당 구성을 사용 하는 경우 성능 계층에 SR 로그를 서비스를 수행 하는 데이터 볼륨만 용량 계층에 배치 하면 위에서 설명한 대기 시간이 긴 문제를 피할 수 있습니다. 더 빠르고 느린 Ssd와 NVME를 혼합 하 여 동일한 작업을 수행할 수 있습니다.
 
-This workaround is of course not ideal and some customers may not be able to make use of it. The Storage Replica team is working on optimizations and an updated log mechanism for the future to reduce these artificial bottlenecks. This v1.1 log first became available in Windows Server 2019 and its improved performance is described in on the [Server Storage Blog](https://blogs.technet.microsoft.com/filecab/2018/12/13/chelsio-rdma-and-storage-replica-perf-on-windows-server-2019-are-💯/).
+이 해결 방법은 유용 하지 않으며 일부 고객이 사용 하지 못할 수도 있습니다. 저장소 복제본 팀은 나중에 이러한 인공 병목 현상을 줄이기 위해 최적화 및 업데이트 된 로그 메커니즘에 대해 작업 하 고 있습니다. 이 v2.0 로그는 먼저 Windows Server 2019에서 사용할 수 있게 되었으며, 향상 된 성능은 [서버 저장소 블로그의](https://blogs.technet.microsoft.com/filecab/2018/12/13/chelsio-rdma-and-storage-replica-perf-on-windows-server-2019-are-💯/)에 설명 되어 있습니다.
 
-## Error "Could not find file" when running Test-SRTopology between two clusters
+## <a name="error-could-not-find-file-when-running-test-srtopology-between-two-clusters"></a>두 클러스터 간에 Test-srtopology를 실행 하는 동안 "파일을 찾을 수 없습니다" 오류 발생
 
-When running Test-SRTopology between two clusters and their CSV paths, it fails with error: 
+두 클러스터와 해당 CSV 경로 간에 Test-srtopology를 실행 하는 경우 오류와 함께 실패 합니다. 
 
     PS C:\Windows\system32> Test-SRTopology -SourceComputerName NedClusterA -SourceVolumeName C:\ClusterStorage\Volume1 -SourceLogVolumeName L: -DestinationComputerName NedClusterB -DestinationVolumeName C:\ClusterStorage\Volume1 -DestinationLogVolumeName L: -DurationInMinutes 1 -ResultPath C:\Temp
 
@@ -410,11 +411,11 @@ When running Test-SRTopology between two clusters and their CSV paths, it fails 
     + CategoryInfo          : ObjectNotFound: (:) [Test-SRTopology], FileNotFoundException
     + FullyQualifiedErrorId : TestSRTopologyFailure,Microsoft.FileServices.SR.Powershell.TestSRTopologyCommand 
 
-This is caused by a known code defect in Windows Server 2016. This issue was first fixed in Windows Server, version 1709 and the associated RSAT tools. For a downlevel resolution, please contact Microsoft Support and request a backport update. There is no workaround.
+이 문제는 Windows Server 2016의 알려진 코드 오류로 인해 발생 합니다. 이 문제는 Windows Server, 버전 1709 및 연결 된 RSAT 도구에서 처음으로 수정 되었습니다. 하위 수준 확인의 경우 Microsoft 지원에 문의 하 여 백 포트 업데이트를 요청 하세요. 해결 방법이 없습니다.
 
-## Error "specified volume could not be found" when running Test-SRTopology between two clusters
+## <a name="error-specified-volume-could-not-be-found-when-running-test-srtopology-between-two-clusters"></a>두 클러스터 간에 Test-srtopology를 실행 하는 경우 "지정한 볼륨을 찾을 수 없습니다." 오류
 
-When running Test-SRTopology between two clusters and their CSV paths, it fails with error:
+두 클러스터와 해당 CSV 경로 간에 Test-srtopology를 실행 하는 경우 오류와 함께 실패 합니다.
 
     PS C:\> Test-SRTopology -SourceComputerName RRN44-14-09 -SourceVolumeName C:\ClusterStorage\Volume1 -SourceLogVolumeName L: -DestinationComputerName RRN44-14-13 -DestinationVolumeName C:\ClusterStorage\Volume1 -DestinationLogVolumeName L: -DurationInMinutes 30 -ResultPath c:\report
 
@@ -425,23 +426,23 @@ When running Test-SRTopology between two clusters and their CSV paths, it fails 
         + CategoryInfo          : ObjectNotFound: (:) [Test-SRTopology], Exception
         + FullyQualifiedErrorId : TestSRTopologyFailure,Microsoft.FileServices.SR.Powershell.TestSRTopologyCommand
 
-When specifying the source node CSV as the source volume, you must select the node that owns the CSV. You can either move the CSV to the specified node or change the node name you specified in `-SourceComputerName`. This error received an improved message in Windows Server 2019.
+원본 볼륨으로 원본 노드 CSV를 지정 하는 경우 CSV를 소유 하는 노드를 선택 해야 합니다. CSV를 지정 된 노드로 이동 하거나에서 `-SourceComputerName`지정한 노드 이름을 변경할 수 있습니다. 이 오류는 Windows Server 2019에서 향상 된 메시지를 받았습니다.
 
-## Unable to access the data drive in Storage Replica after unexpected reboot when BitLocker is enabled
+## <a name="unable-to-access-the-data-drive-in-storage-replica-after-unexpected-reboot-when-bitlocker-is-enabled"></a>BitLocker를 사용 하는 경우 예기치 않은 다시 부팅 후 저장소 복제본의 데이터 드라이브에 액세스할 수 없음
 
-If BitLocker is enabled on both drives (Log Drive and Data Drive) and in both Storage replica drives, if the Primary Server reboots then you are unable to access the Primary Drive even after unlocking the Log Drive from BitLocker.
+두 드라이브 (로그 드라이브 및 데이터 드라이브)에서 BitLocker를 사용 하도록 설정 하 고 두 저장소 복제본 드라이브 모두에서 주 서버를 다시 부팅 하는 경우 BitLocker에서 로그 드라이브의 잠금을 해제 한 후에도 기본 드라이브에 액세스할 수 없습니다.
 
-This is an expected behavior. To recover the data or access the drive, you need to unlock the log drive first and then open Diskmgmt.msc to locate the data drive. Turn the data drive offline and online again. Locate the BitLocker icon on the drive and unlock the drive.
+이것은 예상 된 동작입니다. 데이터를 복구 하거나 드라이브에 액세스 하려면 먼저 로그 드라이브의 잠금을 해제 한 다음 Diskmgmt.msc를 열어 데이터 드라이브를 찾아야 합니다. 데이터 드라이브를 오프 라인으로 전환 하 고 다시 온라인으로 전환 합니다. 드라이브의 BitLocker 아이콘을 찾아 드라이브의 잠금을 해제 합니다.
 
-## Issue unlocking the Data drive on secondary server after breaking the Storage Replica partnership
+## <a name="issue-unlocking-the-data-drive-on-secondary-server-after-breaking-the-storage-replica-partnership"></a>저장소 복제본 파트너 관계를 중단 한 후 보조 서버에서 데이터 드라이브의 잠금을 해제 하는 문제
 
-After Disabling the SR Partnership and removing the Storage Replica, it is expected if you are unable to unlock the Secondary Server’s Data drive with its respective password or key. 
+SR 파트너 관계를 사용 하지 않도록 설정 하 고 저장소 복제본을 제거한 후에는 해당 암호 또는 키를 사용 하 여 보조 서버의 데이터 드라이브를 잠금 해제할 수 없는 경우 예상 됩니다. 
 
-You need to use Key or Password of Primary Server’s Data drive to unlock the Secondary Server’s data drive.
+보조 서버의 데이터 드라이브를 잠금 해제 하려면 주 서버 데이터 드라이브의 키 또는 암호를 사용 해야 합니다.
 
-## Test Failover doesn't mount when using asynchronous replication
+## <a name="test-failover-doesnt-mount-when-using-asynchronous-replication"></a>비동기 복제를 사용 하는 경우 테스트 장애 조치가 탑재 되지 않음
 
-When running Mount-SRDestination to bring a destination volume online as part of the Test Failover feature, it fails with error:
+Mount-SRDestination을 실행 하 여 테스트 장애 조치 (Failover) 기능의 일부로 대상 볼륨을 온라인 상태로 전환 하면 오류가 발생 하 여 실패 합니다.
 
     Mount-SRDestination: Unable to mount SR group <TEST>, detailed reason: The group or resource is not in the correct state to perform the supported operation.
     At line:1 char:1
@@ -450,15 +451,15 @@ When running Mount-SRDestination to bring a destination volume online as part of
         + CategoryInfo          : NotSpecified: (MSFT WvrAdminTasks : root/Microsoft/...(MSFT WvrAdminTasks : root/Microsoft/. T_WvrAdminTasks) (Mount-SRDestination], CimException
         + FullyQua1ifiedErrorId : Windows System Error 5823, Mount-SRDestination.  
 
-If using a synchronous partnership type, test failover works normally.
+동기 파트너 관계 유형을 사용 하는 경우 테스트 장애 조치 (failover)가 정상적으로 작동 합니다.
 
-This is caused by a known code defect in Windows Server, version 1709. To resolve this issue, install the [October 18, 2018 update](https://support.microsoft.com/help/4462932/windows-10-update-kb4462932). This issue isn't present in Windows Server 2019 and Windows Server, version 1809 and newer.
+이 문제는 Windows Server 버전 1709의 알려진 코드 오류로 인해 발생 합니다. 이 문제를 해결 하려면 [2018 년 10 월 18 일 업데이트](https://support.microsoft.com/help/4462932/windows-10-update-kb4462932)를 설치 합니다. 이 문제는 Windows Server 2019 및 Windows Server 버전 1809 이상에는 제공 되지 않습니다.
 
-## See also
+## <a name="see-also"></a>참조
 
-- [Storage Replica](storage-replica-overview.md)  
-- [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  
-- [Server to Server Storage Replication](server-to-server-storage-replication.md)  
-- [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)  
-- [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.md)  
-- [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md)  
+- [스토리지 복제본](storage-replica-overview.md)  
+- [공유 저장소를 사용 하 여 확장 클러스터 복제](stretch-cluster-replication-using-shared-storage.md)  
+- [서버 간 저장소 복제](server-to-server-storage-replication.md)  
+- [클러스터 간 저장소 복제](cluster-to-cluster-storage-replication.md)  
+- [스토리지 복제본: 질문과 대답](storage-replica-frequently-asked-questions.md)  
+- [스토리지 공간 다이렉트](../storage-spaces/storage-spaces-direct-overview.md)  
