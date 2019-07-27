@@ -10,14 +10,14 @@ author: jasongerend
 ms.author: jgerend
 manager: dougkim
 ms.localizationpriority: medium
-ms.openlocfilehash: 83855cf7e4fa86a932298dd15735dc5bf7277dfb
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: a58b7d1fe7124eb26b29c13ca53031ded8ed3d62
+ms.sourcegitcommit: 6f968368c12b9dd699c197afb3a3d13c2211f85b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "65976601"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68544548"
 ---
-# <a name="features-removed-or-deprecated-in--windows-server-2016"></a>Windows Server 2016에서 제거되었거나 사용되지 않는 기능
+# <a name="features-removed-or-deprecated-in--windows-server-2016"></a>Windows Server 2016에서 제거되었거나 사용되지 않는 기능
 
 >적용 대상: Windows Server 2016
 
@@ -56,8 +56,8 @@ Journal.dll은 Windows Server 2016에서 제거되었습니다. 대체 항목은
 
 - 다음과 같은 PowerShell 명령을 실행합니다.
     ````powershell
-    $AutoUpdates = New-Object -ComObject "Microsoft.Update.AutoUpdate"`
-    $AutoUpdates.DetectNow()` 
+    $AutoUpdates = New-Object -ComObject "Microsoft.Update.AutoUpdate"
+    $AutoUpdates.DetectNow()
     ````
 
 - 아니면 다음의 VBScript를 사용합니다.
@@ -67,7 +67,7 @@ Journal.dll은 Windows Server 2016에서 제거되었습니다. 대체 항목은
     ````
 
 ## <a name="features-deprecated-starting-with-windows-server-2016"></a>Windows Server 2016부터 사용되지 않는 기능 
-다음 기능은 이번 릴리스부터 사용되지 않습니다. 결국 제품에서 완전히 제거될 예정이지만 일단 이 버전에서는 계속 제공됩니다. 그러나 경우에 따라 일부 기능이 제거될 수 있습니다. 이러한 기능에 종속된 응용 프로그램, 코드, 사용법을 계속 사용하기 위한 다른 방법을 생각해야 합니다.  
+다음 기능은 이번 릴리스부터 사용되지 않습니다. 결국 제품에서 완전히 제거될 예정이지만 일단 이 버전에서는 계속 제공됩니다. 그러나 경우에 따라 일부 기능이 제거될 수 있습니다. 이러한 기능에 종속된 애플리케이션, 코드, 사용법을 계속 사용하기 위한 다른 방법을 생각해야 합니다.  
 
 ### <a name="configuration-tools"></a>구성 도구  
 
