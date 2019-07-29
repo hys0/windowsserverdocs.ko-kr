@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.date: 06/20/2019
 ms.localizationpriority: high
 ms.prod: windows-server-threshold
-ms.openlocfilehash: d00051f59eb39c6a7c668d00034f72879b0b097f
-ms.sourcegitcommit: 078304c4b92bb57eb85ba29634afc92cc028c644
+ms.openlocfilehash: 0612f4ff102d6b5d1fd24372ac20a98c3ec02edb
+ms.sourcegitcommit: 216d97ad843d59f12bf0b563b4192b75f66c7742
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67298136"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476565"
 ---
 # <a name="windows-admin-center"></a>Windows Admin Center
 
@@ -63,7 +63,7 @@ ms.locfileid: "67298136"
     </tr>
     <tr>
         <td style="vertical-align: top;">
-            <h3>배포</h3>
+            <h3>배포 게스트 클러스터에</h3>
             <ul>
             <li><a href="deploy/prepare-environment.md">사용자 환경 준비</a>
             <li><a href="deploy/install.md">Windows Admin Center 설치</a>
@@ -104,7 +104,7 @@ ms.locfileid: "67298136"
     </tr>
     <tr>
             <td style="vertical-align: top;">
-            <h3>지원</h3>
+            <h3>Support(지원)</h3>
             <ul>
             <li><a href="support/index.md">지원 정책</a>
             <li><a href="support/troubleshooting.md">일반적인 문제 해결 단계</a>
@@ -129,6 +129,7 @@ ms.locfileid: "67298136"
 
 최신 출시된 기능에 대해 자세히 알아보세요.
 
+- 버전 [1907](https://aka.ms/wac1907) - Azure 비용 추정 링크를 추가하고 가상 머신의 가져오기/내보내기 및 태그 지정을 개선했습니다.
 - 버전 [1906](https://aka.ms/wac1906) - VM 가져오기/내보내기, Azure 계정 전환, Azure에서 연결 추가, 연결 설정 실험, 성능 개선 및 성능 프로파일링 도구가 추가되었습니다.
 - 버전 1904.1은 가장 최근의 GA 릴리스로, 게이트웨이 플러그인 안정성 개선을 위한 유지 관리 업데이트입니다.
 - 버전 [1904](https://aka.ms/wac1904)는 Azure Hybrid Services 도구를 도입하고, 이전에 미리 보기에 있던 기능을 GA 채널에 가져온 GA 릴리스였습니다.

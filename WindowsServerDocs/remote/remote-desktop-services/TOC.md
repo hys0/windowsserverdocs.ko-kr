@@ -66,13 +66,21 @@
 
 ## [추가 원격 데스크톱 지원](rds-get-support.md)
 ## [원격 데스크톱 클라이언트](clients/remote-desktop-clients.md)
+### 원격 데스크톱의 알려진 문제
+#### [일반 원격 데스크톱 연결 문제 해결](troubleshoot/rdp-error-general-troubleshooting.md)
+#### [클라이언트가 연결하여 "클래스가 등록되지 않음" 오류를 가져올 수 없습니다](troubleshoot/rdp-error-class-not-registered.md).
+#### [클라이언트가 연결할 수 없고 "사용 가능한 라이선스 없음" 오류가 표시됨](troubleshoot/rdp-error-no-licenses-available.md)
+#### [사용자가 인증할 수 없거나 두 번 인증해야 함](troubleshoot/cannot-authenticate-or-must-authenticate-twice.md)
+#### [연결 시 "원격 데스크톱 서비스가 현재 사용 중입니다" 오류](troubleshoot/remote-desktop-service-currently-busy.md)
+#### [원격 데스크톱 클라이언트의 연결이 끊어지고 동일한 세션에 다시 연결할 수 없음](troubleshoot/rdp-client-disconnects-cannot-reconnect-same-session.md)
+#### [무선 네트워크에서 원격 랩톱 연결 끊김](troubleshoot/remote-laptop-disconnects-wireless-network.md)
+#### [원격 데스크톱 연결 중 성능 저하 또는 애플리케이션 문제 발생](troubleshoot/poor-performance-or-application-problems.md)
 ### 일반 정보
 #### [가장 적합한 클라이언트는?](clients/remote-desktop-app-compare.md)
 #### [원격 데스크톱 RDP 파일 설정](clients/rdp-files.md)
 #### [원격 데스크톱 URI 체계](clients/remote-desktop-uri.md)
 #### [원격 데스크톱 클라이언트 FAQ](clients/remote-desktop-client-faq.md)
 #### [관리형 앱 및 데스크톱에 대한 개인 정보 설정](clients/remote-privacy-settings.md)
-#### [원격 데스크톱 연결 문제 해결](clients/troubleshoot-remote-desktop-connections.md)
 ### Windows에 대 한 원격 데스크톱 클라이언트
 #### [시작](clients/windows.md)
 #### [Windows 클라이언트의 새로운 기능](clients/windows-whatsnew.md)
