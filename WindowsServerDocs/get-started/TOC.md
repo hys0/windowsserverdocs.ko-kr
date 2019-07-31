@@ -22,6 +22,7 @@
 ## [Windows Server 2016 정품 인증 가이드](Server-2016-activation.md)
 ### [KMS 클라이언트 설정 키](KMSclientkeys.md)
 ### [정품 인증 오류 코드 문제 해결](activation-error-codes.md)
+####[KMS 및 DNS 문제에 대한 일반적인 문제 해결 절차](common-troubleshooting-procedures-kms-dns.md)
 ## [Nano 서버 설치](Getting-started-with-Nano-Server.md)
 ### [Windows Server 다음 릴리스의 Nano 서버 변경 사항](nano-in-semi-annual-channel.md)
 ### [Nano 서버 빠른 시작](Nano-Server-Quick-start.md)
