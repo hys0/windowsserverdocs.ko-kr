@@ -8,12 +8,12 @@ ms.author: jeffrew
 ms.date: 07/17/2019
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: 994e2324042dd441abbb114da2b8806574ce0352
-ms.sourcegitcommit: e5553285d509f15c20ba98ad9e8bf69b09531560
+ms.openlocfilehash: e67102d1fa8b35d90e97df64cb8bd2991b205ad5
+ms.sourcegitcommit: af80963a1d16c0b836da31efd9c5caaaf6708133
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68307483"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68658874"
 ---
 # <a name="install-windows-admin-center"></a>Windows Admin Center 설치
 
@@ -27,7 +27,7 @@ ms.locfileid: "68307483"
 
 ## <a name="determine-your-installation-type"></a>설치 유형 결정
 
-[지원 되는 운영 체제](../plan/installation-options.md#supported-operating-systems-installation)를 포함 하는 [설치 옵션](../plan/installation-options.md) 을 검토 합니다. Azure의 VM에 Windows 관리 센터를 설치 하려면 [azure에서 Windows 관리 센터 배포](../azure/deploy-wac-in-azure.md)를 참조 하세요.
+[지원 되는 운영 체제](https://docs.microsoft.com/windows-server/manage/windows-admin-center/plan/installation-options#installation-supported-operating-systems)를 포함 하는 [설치 옵션](../plan/installation-options.md) 을 검토 합니다. Azure의 VM에 Windows 관리 센터를 설치 하려면 [azure에서 Windows 관리 센터 배포](../azure/deploy-wac-in-azure.md)를 참조 하세요.
 
 ## <a name="install-on-windows-10"></a>Windows 10에 설치
 
