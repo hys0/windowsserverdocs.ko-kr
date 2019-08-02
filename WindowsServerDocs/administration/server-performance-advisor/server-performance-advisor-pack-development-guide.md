@@ -6,10 +6,10 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ms.openlocfilehash: c27dd0602c5993fd84e6956c2f50f6e2bfec8691
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.sourcegitcommit: af80963a1d16c0b836da31efd9c5caaaf6708133
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
+ms.lasthandoff: 07/31/2019
 ms.locfileid: "66435476"
 ---
 # <a name="server-performance-advisor-pack-development-guide"></a>서버 성능 Advisor 팩 개발 가이드
@@ -51,7 +51,7 @@ Advisor 팩에는 다음 요소가 포함 됩니다.
 
     * 저장된 프로시저 및 사용자 정의 함수 같은 SQL 개체
 
-* **ETW 스키마 파일** 선택 사항입니다 (Schema.man)
+* **ETW 스키마 파일** (Schema. man) 선택 사항입니다.
 
 ### <a name="advisor-pack-workflow"></a>Advisor 팩 워크플로
 
@@ -63,11 +63,11 @@ Advisor 팩에는 다음 요소가 포함 됩니다.
 
 Advisor 팩은 큐에 대기 되는 특정 서버용 SPA를 사용 하 여 데이터 수집 모듈 advisor 팩에서 데이터 수집기 집합 XML을 쿼리하고 대상 서버에서 데이터를 수집 합니다. 원시 데이터는 사용자가 지정한 파일 공유에 저장 됩니다. SPA를 실행 하는 사용자가 지정 하는 기간을 초과할 때까지 데이터 수집 중지 되지 않습니다.
 
-### <a name="import-data-into-the-database"></a>데이터베이스에 데이터 가져오기
+### <a name="import-data-into-the-database"></a>데이터베이스로 데이터 가져오기
 
-데이터 컬렉션이 완료 되 면 각 데이터 형식에는 SQL Server 데이터베이스에 해당 하는 테이블으로 가져옵니다. 예를 들어 레지스트리 설정을 라는 테이블에 가져올 \#설정값입니다.
+데이터 컬렉션이 완료 되 면 각 데이터 형식에는 SQL Server 데이터베이스에 해당 하는 테이블으로 가져옵니다. 예를 들어 레지스트리 설정은 registryKeys 이라는 \#테이블로 가져옵니다.
 
-파일을 가져오는 ETW는 ETW 스키마 파일 디코딩.etl 파일에 대 한 필요 합니다. ETW 스키마 파일은 XML 파일입니다. Windows에 포함 되어 있는 tracerpt.exe를 사용 하 여 생성할 수 있습니다. ETW 스키마 파일은만 advisor 팩 필요한 ETW 데이터를 가져올 때 필요 합니다.
+ETW 파일을 가져오려면 .etl 파일을 디코딩하는 데 필요한 ETW 스키마 파일이 필요 합니다. ETW 스키마 파일은 XML 파일입니다. Windows에 포함 되어 있는 tracerpt.exe를 사용 하 여 생성할 수 있습니다. ETW 스키마 파일은만 advisor 팩 필요한 ETW 데이터를 가져올 때 필요 합니다.
 
 ### <a name="switch-to-low-user-rights"></a>낮은 사용자 권한으로 전환
 
@@ -149,13 +149,13 @@ Advisor 팩 개발자는 advisor 팩에 대 한 주 버전과 부 버전을 정�
 
 * 데이터 비 호환성 문제가 없는 사소한 변경만 있으면 SPA 부 버전 업그레이드를 수 있습니다.
 
-버전 관리에 대 한 자세한 내용은 참조 하세요. [고급 항목](#bkmk-advancedtopics)합니다.
+버전 관리에 대 한 자세한 내용은 [고급 항목](#bkmk-advancedtopics)을 참조 하세요.
 
 ### <a name="script-entry-point"></a>따라서 스크립트 진입점
 
-특성 이름: **reportScript**
+특성 이름: **Reportscript**
 
-SPA 프레임 워크 기본 저장 된 프로시저 이름에 대 한 스크립트 진입점에서 찾아 보안 방식으로 실행 합니다.
+SPA 프레임 워크는 스크립트 진입점에서 주 저장 프로시저 이름을 찾고 안전한 방식으로 실행 합니다.
 
 ### <a name="other-attributes"></a>다른 특성
 
@@ -167,13 +167,13 @@ SPA 프레임 워크 기본 저장 된 프로시저 이름에 대 한 스크립�
 
 * 작성자: **작성자**
 
-* 프레임 워크 버전: **frameworkversion** (기본값: 3.0)
+* 프레임 워크 버전: **frameworkversion** (기본값은 3.0)
 
-* 최소 운영 체제 버전: **minOSversion** (향후 확장성을 위해 예약 됩니다).
+* 최소 운영 체제 버전: **Minosversion** (향후 확장성을 위해 예약 됨)
 
 * 이벤트 알림이 손실: **showEventLostWarning**
 
-### <a href="" id="bkmk-definedatacollector"></a>데이터 수집기 집합을 정의합니다.
+### <a href="" id="bkmk-definedatacollector"></a>데이터 수집기 집합 정의
 
 데이터 수집기 집합 SPA 프레임 워크를 대상 서버에서 수집 해야 하는 성능 데이터를 정의 합니다. ETW 고 대상 서버에서 파일, 레지스트리 설정, WMI, 성능 카운터를 지원 합니다.
 
@@ -211,19 +211,19 @@ SPA 프레임 워크 기본 저장 된 프로시저 이름에 대 한 스크립�
 
 * HKEY\_현재\_구성
 
-* HKEY\_CURrenT\_USER
+* \_현재\_사용자 HKEY
 
 * HKEY\_로컬\_컴퓨터
 
 * HKEY\_사용자
 
-레지스트리 설정을 수집 하려면 값 이름에 전체 경로 지정 합니다. HKEY\_LOCAL\_MACHINE\\MyKey\\MyValue
+레지스트리 설정을 수집 하려면 값 이름에 대 한 전체 경로를 지정 합니다. HKEY\_로컬\_컴퓨터MyKey\\MyValue\\
 
-레지스트리 키 설정을 모두를 수집 하려면 레지스트리 키의 전체 경로 지정 합니다. HKEY\_LOCAL\_MACHINE\\MyKey\\
+레지스트리 키 아래의 모든 설정을 수집 하려면 레지스트리 키의 전체 경로를 지정 합니다. HKEY\_로컬\_컴퓨터MyKey\\\\
 
-레지스트리 키 및 해당 하위 키 (PLA 재귀적으로 레지스트리 데이터를 수집 하는 데 사용)에서 모든 값을 수집 하려면 마지막 경로 구분 기호에 대 한 두 개의 백슬래시를 사용 합니다. HKEY\_LOCAL\_MACHINE\\MyKey\\\\
+레지스트리 키 및 해당 하위 키 아래에 있는 모든 값을 수집 하려면 (PLA에서 레지스트리 데이터를 재귀적으로 수집) 마지막 경로 구분 기호에 대해 두 개의 백슬래시를 사용 합니다. HKEY\_로컬\_컴퓨터MyKey\\\\\\
 
-원격 컴퓨터에서 레지스트리 정보를 수집 하려면 레지스트리 경로의 시작 부분에 있는 컴퓨터 이름을 포함 합니다. HKEY\_LOCAL\_MACHINE\\MyKey\\MyValue
+원격 컴퓨터에서 레지스트리 정보를 수집 하려면 레지스트리 경로 시작 부분에 컴퓨터 이름을 포함 합니다. HKEY\_로컬\_컴퓨터MyKey\\MyValue\\
 
 예를 들어 다음과 같이 표시 되는 레지스트리 키를 할 수 있습니다.
 
@@ -242,13 +242,13 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\db31
 "DCSettingIndex"=dword:0000001e
 ```
 
-예 1: 활성 PowerSchemes만 및 해당 값을 반환 합니다.
+예제 1: 활성 PowerSchemes와 해당 값만 반환 합니다.
 
 ``` syntax
 <registryKey>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes</registryKey>
 ```
 
-예 2: 이 경로 아래의 모든 키 값 쌍을 반환합니다.
+예제 2: 이 경로 아래에 있는 모든 키 값 쌍을 반환 합니다.
 
 > [!NOTE]
 > PLA는 사용자 자격 증명으로 실행 됩니다. 일부 레지스트리 키에는 관리자 자격 증명이 필요 합니다. 열거형에는 하위 키에 액세스 하는 데 실패할 경우 중지 합니다.
@@ -257,34 +257,34 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\db31
 <registryKey>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\\</registryKey>
 ```
 
-라는 임시 테이블에 모든 수집 된 데이터를 가져올  **\#설정값** SQL 보고서 하기 전에 스크립트가 실행 됩니다. 다음 표에서 예를 들어 2 결과 보여 줍니다.
+수집 된 모든 데이터는 SQL 보고서 스크립트를 실행 하기 전에  **\#registryKeys** 이라는 임시 테이블로 가져오게 됩니다. 다음 표에서 예를 들어 2 결과 보여 줍니다.
 
 키 이름 | KeytypeId | 값
 ------ | ----- | -------
-HKEY_LOCAL_MACHINE...\PowerSchemes | 1 | db310065-829b-4671-9647-2261c00e86ef
+..\PowerSchemes | 1 | db310065-829b-4671-9647-2261c00e86ef
 \db310065-829b-4671-9647-2261c00e86ef\Description | 2 | |
 \db310065-829b-4671-9647-2261c00e86ef\FriendlyName | 2 | 전원 최적화
 ...\6738e2c4-e8a5-4a42-b16a-e040e769756e\ACSettingIndex | 4 | 180
 ...\6738e2c4-e8a5-4a42-b16a-e040e769756e\DCSettingIndex | 4 | 30
 
-에 대 한 스키마를 **#registryKeys** a를 테이블은 다음과 같습니다.
+**#RegistryKeys** 테이블에 대 한 스키마는 다음과 같습니다.
 
 열 이름 | SQL 데이터 형식 | 설명
 -------- | -------- | --------
 키 이름 | NULL이 아닌 Nvarchar(300) | 레지스트리 키의 전체 경로 이름
-KeytypeId | NULL이 아닌 Smallint | 내부 유형 Id
+KeytypeId | NULL이 아닌 Smallint | 내부 형식 Id
 값 | Nvarchar (4000) NULL이 아님 | 모든 값
 
-합니다 **KeytypeID** 열 다음 유형 중 하나일 수 있습니다.
+**Keytypeid** 열에는 다음 형식 중 하나를 사용할 수 있습니다.
 
-ID | 형식
+id | type
 --- | ---
 1 | 문자열
 2 | expandString
 3 | Binary
 4 | Dword
 5 | DWordBigEndian
-6 | Link
+6 | 링크
 7 | MultipleString
 8 | Resourcelist
 9 | FullResourceDescriptor
@@ -315,15 +315,15 @@ SequenceID | Namespace | 응용 프로그램 이름 | Relativepath | WmiqueryID
 
 **\#WmiObjectsProperties 테이블**
 
-ID | 쿼리
+id | query
 --- | ---
-1 | Root\Cimv2:select * FROM Win32_PageFileUsage
+1 | Root\Cimv2: select * FROM Win32_PageFileUsage
 
 **\#WmiQueries 테이블**
 
-ID | 쿼리
+id | query
 --- | ---
-1 | Root\Cimv2:select * FROM Win32_PageFileUsage
+1 | Root\Cimv2: select * FROM Win32_PageFileUsage
 
 **\#WmiObjects 테이블 스키마**
 
@@ -348,11 +348,11 @@ SequenceId | NULL이 아닌 Int | 행 및 해당 속성을 상호 연결
 열 이름 | SQL 데이터 형식 | 설명
 --- | --- | ---
 Id | NULL이 아닌 Int | > 고유 쿼리 ID
-쿼리 | Nvarchar (4000) NULL이 아님 | 프로 비전 메타 데이터에 원래 쿼리 문자열
+query | Nvarchar (4000) NULL이 아님 | 프로 비전 메타 데이터에 원래 쿼리 문자열
 
 ### <a name="collect-performance-counters"></a>성능 카운터를 수집 합니다.
 
-S 성능 카운터를 수집 하는 방법의 예는 다음과 같습니다.
+다음은 성능 카운터를 수집 하는 방법에 대 한 예입니다.
 
 ``` syntax
 <performanceCounters interval="1">
@@ -364,9 +364,9 @@ S 성능 카운터를 수집 하는 방법의 예는 다음과 같습니다.
 
 이전 예제에서는 카운터 \\실제 디스크 (\*)\\avg. Disk sec/Transfer는 매 초 마다 쿼리할 수 있습니다.
 
-두 인스턴스가 있을 수 있습니다. **\_총** 고 **0 c: D:** , 출력은 다음과 같이 수 있습니다.
+다음과 같은 두 개의 인스턴스가 있을 수 있습니다. 합계 및 0**C:  **\_** D:** 및 출력은 다음과 같을 수 있습니다.
 
-타임 스탬프 | CategoryName | CounterName | _Total 인스턴스 값 | 인스턴스 값의 0 c: D:
+없으면 | CategoryName | CounterName | _Total 인스턴스 값 | 인스턴스 값 0 C: D:
 ---- | ---- | ---- | ---- | ----
 13:45:52.630 | PhysicalDisk | Avg. Disk sec/Transfer | 0.00100008362473995 |0.00100008362473995
 13:45:53.629 | PhysicalDisk | Avg. Disk sec/Transfer | 0.00280023414927187 | 0.00280023414927187
@@ -386,14 +386,14 @@ PhysicalDisk | 0 C: D: | Avg. Disk sec/Transfer | 0.00385999853230048
 PhysicalDisk | _Total | Avg. Disk sec/Transfer | 0.000933297607934224
 PhysicalDisk | 0 C: D: | Avg. Disk sec/Transfer | 0.000933297607934224
 
-**참고** 는 지역화 된 이름와 같은 **CategoryDisplayName** 및 **CounterdisplayName**, 대상 서버에서 사용 되는 표시 언어에 따라 달라 집니다. 언어 중립 advisor 팩을 만들려는 경우 해당 필드를 사용 하지 마십시오.
+**참고** **Categorydisplayname** 및 **counterdisplayname**과 같은 지역화 된 이름은 대상 서버에서 사용 되는 표시 언어에 따라 달라 집니다. 언어 중립 advisor 팩을 만들려는 경우 해당 필드를 사용 하지 마십시오.
 
-**\#PerformanceCounters** 테이블 스키마
+PerformanceCounters 테이블 스키마  **\#**
 
 열 이름 | SQL 데이터 형식 | 설명
 ---- | ---- | ---- | ----
-타임 스탬프 | datetime2(3) NOT NULL | UNC에서 수집 된 날짜 시간
-CategoryName | NULL이 아닌 nvarchar (200) | 범주 이름
+없으면 | datetime2 (3) NOT NULL | UNC에서 수집 된 날짜 시간
+CategoryName | NULL이 아닌 nvarchar (200) | 범주의 이름입니다.
 CategoryDisplayName | NULL이 아닌 nvarchar (200) | 지역화 된 범주 이름
 InstanceName | NULL nvarchar (200) | 인스턴스 이름
 CounterName | NULL이 아닌 nvarchar (200) | 카운터 이름
@@ -402,11 +402,11 @@ CounterdisplayName | NULL이 아닌 nvarchar (200) | 지역화 된 카운터 이
 
 ### <a name="collect-files"></a>파일 수집
 
-절대 또는 상대 경로 수 있습니다. 파일 이름이 와일드 카드 문자를 포함할 수 있습니다 (\*) 및 물음표 (?). 예를 들어 임시 폴더에 있는 모든 파일을 수집 하도록 지정할 수 있습니다: c:\\temp\\\*합니다. 와일드 카드 문자는 지정된 된 폴더의 파일에 적용 됩니다.
+절대 또는 상대 경로 수 있습니다. 파일 이름이 와일드 카드 문자를 포함할 수 있습니다 (\*) 및 물음표 (?). 예를 들어 임시 폴더의 모든 파일을 수집 하려면 c:\\temp\\\*를 지정 하면 됩니다. 와일드 카드 문자는 지정된 된 폴더의 파일에 적용 됩니다.
 
-또한 지정된 된 폴더의 하위 폴더에서 파일을 수집 하려는 경우 예를 들어 c: 마지막 폴더 구분에 대 한 두 개의 백슬래시를 사용\\temp\\\\\*합니다.
+지정 된 폴더의 하위 폴더에서 파일을 수집 하려는 경우 마지막 폴더 구분 기호에 대해 두 개의 백슬래시를 사용 합니다 (예: c:\\temp\\\\\*).
 
-다음 쿼리 하는 예제는 **applicationHost.config** 파일:
+다음은 **applicationhost.config** 파일을 쿼리 하는 예제입니다.
 
 ``` syntax
 <path>%windir%\System32\inetsrv\config\applicationHost.config</path>
@@ -414,16 +414,16 @@ CounterdisplayName | NULL이 아닌 nvarchar (200) | 지역화 된 카운터 이
 
 라는 테이블에 결과 찾을 수 **\#파일**, 예:
 
-querypath | fullpath | Parentpath | FileName | 콘텐츠
+querypath | Fullpath | Parentpath | FileName | 콘텐츠
 ----- | ----- | ----- | ----- | -----
-%windir%\.... \applicationHost.config |C:\Windows<br>\...\applicationHost.config | C:\Windows<br>\...\config | applicationHost.confi | 0x3C3F78
+%windir%\.... \applicationHost.config |C:\Windows<br>\... \applicationHost.config | C:\Windows<br>\... \config | 구성 ( | 0x3C3F78
 
 **\#파일 테이블 스키마**
 
 열 이름 | SQL 데이터 형식 | 설명
 ---- | ---- | ----
 querypath | NULL이 아닌 Nvarchar(300) | 원래 쿼리 문
-fullpath | NULL이 아닌 Nvarchar(300) | 절대 파일 경로 및 파일 이름
+Fullpath | NULL이 아닌 Nvarchar(300) | 절대 파일 경로 및 파일 이름
 Parentpath | NULL이 아닌 Nvarchar(300) | 파일 경로
 FileName | NULL이 아닌 Nvarchar(300) | 파일 이름
 콘텐츠 | Varbinary (max) NULL | 이진에서 파일 콘텐츠
@@ -432,7 +432,7 @@ FileName | NULL이 아닌 Nvarchar(300) | 파일 이름
 
 충분 한 데이터를 수집한 후 PLA 대상 서버에서 사용 하 여, advisor 팩 유효성 검사를 위해이 데이터를 사용 하 고 시스템 관리자에 게 빠른 요약을 표시할 수 있습니다.
 
-규칙의 성능을 서버에 대 한 간략 한 개요를 제공합니다. 이러한 문제를 강조 표시 하 고 권장 사항을 제공 합니다. Advisor 팩에 대 한 유효성을 검사 하려고 하는 모든 규칙을 나열할 수 있습니다. 예를 들어, 핵심 운영 체제 관리자 팩을 개발 하려는 경우 가능한 규칙 포함할 수 있습니다.
+규칙은 서버 성능에 대 한 간략 한 개요를 제공 합니다. 이러한 문제를 강조 표시 하 고 권장 사항을 제공 합니다. Advisor 팩에 대 한 유효성을 검사 하려고 하는 모든 규칙을 나열할 수 있습니다. 예를 들어, 핵심 운영 체제 관리자 팩을 개발 하려는 경우 가능한 규칙 포함할 수 있습니다.
 
 * CPU 전원 모드 여부는 절전
 
@@ -446,7 +446,7 @@ FileName | NULL이 아닌 Nvarchar(300) | 파일 이름
 
 * 규칙 정의 (경고 및 권장 사항)
 
-S 간단한 규칙의 예는 다음과 같습니다.
+간단한 규칙의 예는 다음과 같습니다.
 
 ``` syntax
 <advisorPack>
@@ -508,7 +508,7 @@ Install OS on larger disk.</advice>
 
 원하는 만큼 많은 임계값에 연결할 수 있습니다. 현재 규칙에 관련 되지 않은 임계값도 연결할 수 있습니다. 연결 SPA 콘솔 임계값을 쉽게 관리할 수 있습니다.
 
-규칙 이름 및 권장 사항을, 키 및 하는 고유한 범위에 속합니다. 두 개의 규칙이 없습니다 수 동일한 이름을 있으며 하나의 규칙 내에서 두 개의 제시 하지는 않습니다 동일한 이름을 가질 수 있습니다. 이러한 이름은 SQL 스크립트 보고서를 작성할 때 매우 중요 됩니다. 호출할 수는 \[dbo\].\[SetNotification\] 규칙 상태를 설정 하는 API입니다.
+규칙 이름 및 권장 사항을, 키 및 하는 고유한 범위에 속합니다. 두 개의 규칙이 없습니다 수 동일한 이름을 있으며 하나의 규칙 내에서 두 개의 제시 하지는 않습니다 동일한 이름을 가질 수 있습니다. 이러한 이름은 SQL 스크립트 보고서를 작성할 때 매우 중요 합니다. 호출할 수는 \[dbo\].\[SetNotification\] 규칙 상태를 설정 하는 API입니다.
 
 ### <a name="defining-ui-display-elements"></a>UI 표시 요소를 정의합니다.
 
@@ -521,7 +521,7 @@ Install OS on larger disk.</advice>
 시스템 드라이브 (GB)에 사용 가능한 디스크 크기 | 100
 설치 된 총 디스크 크기 (GB) | 500 
 
-사용자가 서버 및 해당 디스크 크기에 설치 된 모든 하드 드라이브의 목록을 보려면, 다음 그림과 같이 3 개의 열과 여러 행에 있는 목록 값을 호출할 수 있습니다.
+사용자가 서버에 설치 된 모든 하드 드라이브의 목록과 해당 디스크 크기를 확인 하려는 경우 다음과 같이 세 개의 열과 여러 행이 포함 된 목록 값을 호출할 수 있습니다.
 
 Disk | 사용 가능한 디스크 크기 (GB) | 총 크기 (GB)
 ---- | ---- | ----
@@ -532,13 +532,13 @@ advisor 팩 (단일 값 그룹 및 값 테이블 목록)에 많은 테이블이 
 
 요약 하자면,는 세 가지 유형의 UI 요소
 
-* [섹션](#bkmk-ui-section)
+* [섹션이](#bkmk-ui-section)
 
 * [단일 값 그룹](#bkmk-ui-svg)
 
-* [목록 값 테이블](#bkmk-ui-lvt)
+* [값 테이블 나열](#bkmk-ui-lvt)
 
-여기서는 예제는 UI 요소를 보여:
+UI 요소를 보여 주는 예제는 다음과 같습니다.
 
 ``` syntax
 <advisorPack>
@@ -562,7 +562,7 @@ advisor 팩 (단일 값 그룹 및 값 테이블 목록)에 많은 테이블이 
 </advisorPack>
 ```
 
-### <a href="" id="bkmk-ui-section"></a>섹션
+### <a href="" id="bkmk-ui-section"></a>섹션이
 
 섹션은 단지 UI 레이아웃입니다. 논리 계산에는 참여 하지 않습니다. 각 단일 보고서에 부모 섹션 없는 최상위 섹션 집합이 포함 되어 있습니다. 최상위 섹션 보고서 탭으로 표시 됩니다. 섹션에는 최대 수준 10의 하위 섹션 가질 수 있습니다. 최상위 섹션 아래의 모든 하위 섹션은 확장 가능한 영역에 표시 됩니다. 여러 하위 섹션, 단일 값 그룹 및 값 테이블 목록 섹션을 포함할 수 있습니다. 단일 값 그룹 및 값 테이블 목록 테이블로 표시 됩니다.
 
@@ -599,7 +599,7 @@ advisor 팩 (단일 값 그룹 및 값 테이블 목록)에 많은 테이블이 
 <datatype name="companyCode" sqltype="nvarchar(100)" />
 ```
 
-데이터 형식 이름에는 유효한 모든 문자열일 수 있습니다. 허용 된 SQL 데이터 형식의 목록은 다음과 같습니다.
+데이터 형식 이름에는 유효한 모든 문자열일 수 있습니다. 다음은 허용 되는 SQL 데이터 형식 목록입니다.
 
 * BIGINT
 
@@ -639,7 +639,7 @@ advisor 팩 (단일 값 그룹 및 값 테이블 목록)에 많은 테이블이 
 
 * smallmoney
 
-* time
+* Time
 
 * TINYINT
 
@@ -649,7 +649,7 @@ advisor 팩 (단일 값 그룹 및 값 테이블 목록)에 많은 테이블이 
 
 * varchar
 
-이러한 SQL 데이터 형식에 대 한 자세한 내용은 참조 하세요. [데이터 형식 (Transact SQL)](https://msdn.microsoft.com/library/ms187752.aspx)합니다.
+이러한 SQL 데이터 형식에 대 한 자세한 내용은 [데이터 형식 (transact-sql)](https://msdn.microsoft.com/library/ms187752.aspx)을 참조 하세요.
 
 ### <a href="" id="bkmk-ui-svg"></a>단일 값 그룹
 
@@ -663,25 +663,25 @@ advisor 팩 (단일 값 그룹 및 값 테이블 목록)에 많은 테이블이 
 </singleValue>
 ```
 
-앞의 예제는 단일 값 그룹을 정의 했습니다. 섹션의 자식 노드인 **SystemoverviewSection**합니다. 이 그룹에는 단일 값을 **OsName**하십시오 **Osversion**, 및 **OsLocation**합니다.
+앞의 예제는 단일 값 그룹을 정의 했습니다. **System개요 섹션**의 자식 노드입니다. 이 그룹에는 **Osname**, **Osversion**및 **osname**의 단일 값이 있습니다.
 
-단일 값에는 전역 고유 이름 특성이 있어야 합니다. 이 예제에서는 전역 고유 이름 특성은 **Systemoverview**합니다. 사용자 지정 보고서에 대 한 해당 뷰를 생성 하는 고유 이름 사용 됩니다. 접두사를 포함 하는 각 뷰에 **vw**, vwsystemoverview 합니다.
+단일 값에는 전역 고유 이름 특성이 있어야 합니다. 이 예제에서 전역 고유 이름 특성은 **Systemoverview**입니다. 사용자 지정 보고서에 대 한 해당 뷰를 생성 하는 고유 이름 사용 됩니다. 각 보기에는 **vw**접두사 (예: vwSystemoverview)가 포함 됩니다.
 
 여러 개의 단일 값 그룹을 정의할 수 있지만 두 개의 단일 값 이름이 수 동일한 경우에 서로 다른 그룹에. 단일 값 이름 값을 적절 하 게 설정 하는 SQL 스크립트 보고서에 사용 됩니다.
 
-각 단일 값에 대 한 데이터 형식을 정의할 수 있습니다. 허용 되는 입력에 대 한 **형식** 에 정의 된  **&lt;datatype /&gt;** 합니다. 최종 보고서는 다음과 같습니다.
+각 단일 값에 대 한 데이터 형식을 정의할 수 있습니다. **형식** 에 허용 되는 입력은  **&lt;데이터 형식/&gt;** 에 정의 되어 있습니다. 최종 보고서는 다음과 같습니다.
 
-**Facts**
+**따르면**
 
 이름 | 값
 --- | ---
-운영 체제 | &lt;_보고서 스크립트에서 값을 설정_&gt;
-OS 버전 | &lt;_보고서 스크립트에서 값을 설정_&gt;
-운영 체제 위치 | &lt;_보고서 스크립트에서 값을 설정_&gt;
+운영 체제 | &lt;_값은 보고서 스크립트에 의해 설정 됩니다._ &gt;
+OS 버전 | &lt;_값은 보고서 스크립트에 의해 설정 됩니다._ &gt;
+운영 체제 위치 | &lt;_값은 보고서 스크립트에 의해 설정 됩니다._ &gt;
 
 **캡션** 특성 **&lt;값 /&gt;** 첫 번째 열에 표시 됩니다. 값 열에는 값을 통해 스크립트 보고서에 의해 나중에 설정 된 \[dbo\].\[SetSingleValue\]합니다. **설명** 특성 **&lt;값 /&gt;** 도구 설명에 표시 됩니다. 일반적으로 도구 설명에 표시할 데이터의 원본을 사용자를 표시합니다. 도구 설명에 대 한 자세한 내용은 참조 하십시오. [도구 설명](#bkmk-tooltips)합니다.
 
-### <a href="" id="bkmk-ui-lvt"></a>목록 값 테이블
+### <a href="" id="bkmk-ui-lvt"></a>값 테이블 나열
 
 테이블 정의와 같은 것으로 목록 값을 정의 합니다.
 
@@ -697,13 +697,13 @@ OS 버전 | &lt;_보고서 스크립트에서 값을 설정_&gt;
 
 목록 값 이름은 전역적으로 고유 해야 합니다. 이 이름은 임시 테이블의 이름이 됩니다. 이전 예제에서는 테이블 명명 \#NetworkAdapterInformation 설명 하는 모든 열을 포함 하는 실행 환경 초기화 단계에서 생성 됩니다. 단일 값 이름을 마찬가지로, 목록 값 이름은 사용 됩니다 vwNetworkAdapterInformation 예를 들어, 사용자 지정 뷰 이름의 일부로.
 
-@type &lt;열 /&gt; 정의한 &lt;datatype /&gt;
+@type열/&gt; 은 datatype/로 &lt;정의 됩니다. &lt;&gt;
 
 최종 보고서의 모의 UI 다음과 같이 표시 될 수 있습니다.
 
 **실제 네트워크 어댑터 정보**
 
-ID | 이름 | 형식 | 속도 (Mbps) | MAC 주소
+id | 이름 | type | 속도 (Mbps) | MAC 주소
 --- | --- | --- | --- | ---
  | <br> | | |
  | | | |
@@ -741,7 +741,7 @@ SPA 정적 통계 및 동적 통계를 지원 하기 위해 목록 값 테이블
 
 가능한 값의 수를 알 되지 않으므로 디자인 타임에 동적 통계 키 알려져 있지 않습니다. 그러나 목록 값에 여러 행에 저장 되므로 쉽도록 동적 통계를 저장 하는 목록 값 테이블을 사용 하도록 합니다.
 
-예를 들어, 다른 코어의 평균 CPU 사용량에 대 한 차트를 표시 하려고 하는 경우 열이 포함 된 테이블 정의 수 **CpuId** 하 고 **AverageCpuUsage**:
+예를 들어 다른 코어의 평균 CPU 사용량에 대 한 차트를 표시 해야 하는 경우에는 **CpuId** 및 **AverageCpuUsage**에 대 한 열이 있는 테이블을 정의할 수 있습니다.
 
 ``` syntax
 <listValue name="CpuPerformance">
@@ -750,7 +750,7 @@ SPA 정적 통계 및 동적 통계를 지원 하기 위해 목록 값 테이블
 </listValue>
 ```
 
-다른 특성 **columntype**, 될 수 있습니다 **키**를 **값**, 또는 **Informational**합니다. 데이터 형식이 **키** 열 double 이어야 합니다. 또는 double 변환 가능 합니다. 에 **키** 열을 테이블에 동일한 키를 삽입할 수 없습니다. **값** 또는 **정보** 열이이 제한 사항이 없습니다.
+다른 특성인 **columntype**는 **키**, **값**또는 **정보**를 사용할 수 있습니다. 데이터 형식이 **키** 열 double 이어야 합니다. 또는 double 변환 가능 합니다. 에 **키** 열을 테이블에 동일한 키를 삽입할 수 없습니다. **값** 또는 **정보** 열이이 제한 사항이 없습니다.
 
 통계 값에 저장 됩니다 **값** 열입니다.
 
@@ -767,26 +767,26 @@ CpuId | AverageCpuUsage
 
 다음 예제에서는 여러 나타나듯이 **값** 여러 개의 열 **키** 열이 지원 됩니다.
 
-CounterName | InstanceName | 평균 | 합계
+CounterName | InstanceName | Average | 합계
 --- | :---: | :---: | :---:
 프로세서 시간 비율 | _Total | 10 | 20
 프로세서 시간 비율 | CPU0 | 20 | 30 
 
 이 예제에서는 두 개 있는 **키** 열과 두 **값** 열입니다. SPA는 Average 열에 대 한 두 개의 통계 키 및 합계 열에 대 한 다른 두 개의 키를 생성합니다. 통계 키는 있습니다.
 
-* CounterName (% 프로세서 시간) / InstanceName (\_총) / 평균
+* CounterName (% 프로세서 시간)/InstanceName (\_합계)/평균
 
-* CounterName (% 프로세서 시간) / InstanceName (CPU0) / 평균
+* CounterName (% 프로세서 시간)/InstanceName (CPU0)/평균
 
-* CounterName (% 프로세서 시간) / InstanceName (\_총) / 합계 계산
+* CounterName (% 프로세서 시간)/InstanceName (\_합계)/합계
 
-* CounterName (% 프로세서 시간) / InstanceName (CPU0) / 합계 계산
+* CounterName (% Processor time)/InstanceName (CPU0)/Sum
 
 CounterName 및 InstanceName는 하나의 키로 결합 됩니다. 결합 된 키에 중복을 가질 수 없습니다.
 
 SPA 많은 통계 키를 생성합니다. 그 중 일부 필요 하지 않을 수, 있으며 UI에서 아이콘을 숨기려면 수 있습니다. SPA는 개발자가 유용한 통계 키만을 표시 하는 필터를 만들 수 있습니다.
 
-이전 예를 들어 시스템 관리자만 관심이 있을 수는 InstanceName 인 키 \_합계 또는 CPU1 합니다. 필터는 다음과 같이 정의할 수 있습니다.
+이전 예의 경우 시스템 관리자는 InstanceName이 \_Total 또는 CPU1 인 키에만 관심이 있을 수 있습니다. 필터는 다음과 같이 정의할 수 있습니다.
 
 ``` syntax
 <listValue name="CpuPerformance">
@@ -802,7 +802,7 @@ SPA 많은 통계 키를 생성합니다. 그 중 일부 필요 하지 않을 �
 </listValue>
 ```
 
-**&lt;trendableKeyValues /&gt;**  키 열을 정의할 수 있습니다. 둘 이상의 하나의 키 열에 필터를 구성 하 고 논리 적용 됩니다.
+**trendableKeyValues/는&gt; 모든 키 열 아래에서 정의할 수 있습니다. &lt;** 둘 이상의 하나의 키 열에 필터를 구성 하 고 논리 적용 됩니다.
 
 ### <a name="developing-report-scripts"></a>보고서 스크립트 개발
 
@@ -866,7 +866,7 @@ SQL Server 데이터베이스의 기본 스키마 이름을 **dbo**합니다. �
 
 * 파일
 
-    * \#파일
+    * \#파일만
 
 * ETW
 
@@ -878,9 +878,9 @@ SQL Server 데이터베이스의 기본 스키마 이름을 **dbo**합니다. �
 
 \[dbo\].\[SetNotification\] 볼 수 있도록 규칙 상태를 설정 하는 API는 **성공** 또는 **경고** UI의 아이콘입니다.
 
-* @ruleName nvarchar(50)
+* @ruleNamenvarchar (50)
 
-* @adviceName nvarchar(50)
+* @adviceNamenvarchar (50)
 
 경고 및 권장 사항 메시지 프로 비전 메타 데이터 XML 파일에 저장 됩니다. 이렇게 하면 보고서 스크립트를 쉽게 관리할 수 있습니다.
 
@@ -912,9 +912,9 @@ END
 
 \[dbo\].\[GetThreshold\] API의 임계값을 가져옵니다.
 
-* @key nvarchar(50)
+* @keynvarchar (50)
 
-* @value float 출력
+* @valuefloat 출력
 
 > [!NOTE]
 > 임계값 이름-값 쌍 이며 모든 규칙에서 참조할 수 있습니다. 시스템 관리자가 임계값을 조정 하려면 SPA 콘솔을 사용할 수 있습니다.
@@ -949,9 +949,9 @@ if (@freediskSizeInGB < @freediskSize)
 
 \[dbo\].\[SetSingleValue\] API 단일 값을 설정 합니다.
 
-* @key nvarchar(50)
+* @keynvarchar (50)
 
-* @value sql\_variant
+* @valuesql\_변형
 
 이 값 같은 단일 값 키에 대 한 여러 번 실행할 수 있습니다. 마지막 값이 저장 됩니다.
 
@@ -973,9 +973,9 @@ exec dbo.SetSingleValue N Osversion ,  6.1.7601
 exec dbo.SetSingleValue N OsLocation ,  c:\ 
 ```
 
-드문 경우를 사용 하 여 이전에 설정한 결과 제거 하려는 합니다 \[dbo\].\[ removeSingleValue\] API.
+드문 경우 지만 \[dbo\]를 사용 하 여 이전에 설정한 결과를 제거 하는 것이 좋습니다\[ . removeSingleValue\] API.
 
-* @key nvarchar(50)
+* @keynvarchar (50)
 
 다음 스크립트를 사용 하 여 이전에 설정한 제거할 값입니다.
 
@@ -987,9 +987,9 @@ exec dbo.removeSingleValue N Osversion
 
 \[dbo\].\[GetDuration\] API 사용자가 지정 기간 (초)에 데이터 컬렉션을 가져옵니다.
 
-* @duration int 출력
+* @durationint 출력
 
-여기서는 예제 스크립트를 보고 합니다.
+예제 보고서 스크립트는 다음과 같습니다.
 
 ``` syntax
 DECLARE @duration int
@@ -998,9 +998,9 @@ exec dbo.GetDuration @duration output
 
 \[dbo\].\[GetInternal\] API 성능 카운터의 간격을 가져옵니다. 현재 보고서에 성능 카운터 정보가 없는 경우 NULL을 반환할 수 것입니다.
 
-* @interval int 출력
+* @intervalint 출력
 
-여기서는 예제 스크립트를 보고 합니다.
+예제 보고서 스크립트는 다음과 같습니다.
 
 ``` syntax
 DECLARE @interval int
@@ -1009,7 +1009,7 @@ exec dbo.GetInterval @interval output
 
 ### <a name="set-a-list-value-table"></a>목록 값 테이블 설정
 
-목록 값 테이블을 업데이트 하기 위한 API는 없습니다. 그러나 목록 값 테이블을 직접 액세스할 수 있습니다. 초기화 단계에서 해당 하는 임시 테이블을 각 목록 값에 대해 만들어집니다.
+목록 값 테이블을 업데이트 하기 위한 API는 없습니다. 그러나 목록 값 테이블을 직접 액세스할 수 있습니다. 초기화 단계에서는 각 목록 값에 대해 해당 임시 테이블이 생성 됩니다.
 
 다음 예제에서는 목록 값 테이블을 보여 줍니다.
 
@@ -1043,7 +1043,7 @@ VALUES (
 
 ### <a name="writing-logs"></a>로그를 작성합니다.
 
-추가 정보를 시스템 관리자에 게 전달 하려면 모두 있으면 로그를 작성할 수 있습니다. 특정 보고서에 대 한 모든 로그 이면 노란색 배너의 보고서 머리글에 표시 됩니다. 다음 예제에서는 로그를 작성 하는 방법을 보여 줍니다.
+시스템 관리자와 통신 하려는 추가 정보가 있는 경우 로그를 작성할 수 있습니다. 특정 보고서에 대 한 모든 로그 이면 노란색 배너의 보고서 머리글에 표시 됩니다. 다음 예제에서는 로그를 작성 하는 방법을 보여 줍니다.
 
 ``` syntax
 exec dbo.WriteSystemLog N'Any information you want to show to the system administrators , N Warning 
@@ -1059,7 +1059,7 @@ SPA 콘솔 수 실행 하는 두 가지 모드에서 디버그 또는 릴리스 
 
 1.  Microsoft SQL Server Management Studio (SSMS)를 설치 합니다.
 
-2.  Localhost에 연결 하는 SSMS를 시작한 후\\SQLExpress입니다. 대신 localhost를 사용 해야 함을 알아야 합니다. . 그렇지 않으면 SQL Server에서 디버거를 시작할 수 없습니다.
+2.  Localhost에 연결 하는 SSMS를 시작한 후\\SQLExpress입니다. 대신 localhost를 사용 해야 합니다. 을 선택합니다. 그렇지 않으면 SQL Server에서 디버거를 시작할 수 없습니다.
 
 3.  디버그 모드를 사용 하도록 설정 하려면 다음 스크립트를 실행 합니다.
 
@@ -1090,7 +1090,7 @@ SPA 콘솔 수 실행 하는 두 가지 모드에서 디버그 또는 릴리스 
     exec dbo.DebugReportScript 12
     ```
 
-    **참고** 이전 문 및 디버그를 한 단계씩 실행 하려면 f11 키를 누를 수도 있습니다.
+    **참고** F11 키를 눌러 이전 문을 한 단계씩 실행 하 고 디버그할 수도 있습니다.
 
 
 
@@ -1110,9 +1110,9 @@ SPA 콘솔 수 실행 하는 두 가지 모드에서 디버그 또는 릴리스 
 
 ### <a name="naming-convention-and-styles"></a>명명 규칙 및 스타일
 
-|                                                                 파스칼식 대/소문자 구분                                                                 |                       카멜식 대/소문자                        |             대문자             |
+|                                                                 파스칼식 대/소문자 구분                                                                 |                       카멜식 대/소문자 구분                        |             대문자             |
 |-----------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------|-----------------------------------|
-| <ul><li>ProvisionMetadata.xml에는 이름</li><li>저장 프로시저</li><li>함수</li><li>뷰 이름</li><li>임시 테이블 이름</li></ul> | <ul><li>매개 변수 이름</li><li>지역 변수</li></ul> | 모든 SQL 예약 키워드 사용 |
+| <ul><li>Provisionmetadata.xml의 이름</li><li>저장 프로시저</li><li>함수</li><li>이름 보기</li><li>임시 테이블 이름</li></ul> | <ul><li>매개 변수 이름</li><li>지역 변수</li></ul> | 모든 SQL 예약 키워드에 사용 |
 
 ### <a name="other-recommendations"></a>기타 권장 사항
 
@@ -1150,13 +1150,13 @@ SPA 동시에 실행 되는 여러 advisor 팩을 지원 합니다. 인터넷 �
 
    1. 새 간격으로 최소 간격을 가져옵니다.
 
-   2. 성능 카운터의 상위 집합을 수행 합니다. 예를 들어 **프로세스 (\*)\\% Processor time** 및 **프로세스 (\*)\\\*하십시오\\프로세스 (\*)\\ \\** * 더 많은 데이터를 반환 하므로 **프로세스 (\*)\\% Processor time** 고 **프로세스 (\*)\\ \\** * 병합 된 데이터 수집기 집합에서 제거 됩니다.
+   2. 성능 카운터의 상위 집합을 수행 합니다. 예를 들어 with **process (\*)\\% Processor time** and **process (\*)\\\*,\\process (\*)\\\\** * 더 많은 데이터를 반환 하므로 병합 된 데이터 수집기 집합에서 **process\*()\\% Processor time** 및 **\*process ()\\\\** *가 제거 됩니다.
 
 ### <a name="collect-dynamic-data"></a>동적 데이터 수집
 
 SPA 요구는 정의 된 데이터 수집기 집합에서 디자인 타임. 항상 수 없으면 동적 데이터 및 쿼리 경로 알 수 없으므로 해당 종속 데이터가 있을 때까지 보고서 생성을 위해 필요한 데이터를 알아야 합니다.
 
-예를 들어 네트워크 어댑터의 모든 친숙 한 이름을 나열 하려는 경우 모든 네트워크 어댑터를 열거 하는 WMI 쿼리 먼저 해야 합니다. 반환 된 각 WMI 개체에 레지스트리 키 경로 이름을 저장 한 위치입니다. 레지스트리 키 경로 디자인 타임에 알려진 아닙니다. 이 경우 동적 데이터 필요를 지원 합니다.
+예를 들어 네트워크 어댑터의 모든 이름을 나열 하려는 경우 먼저 WMI를 쿼리하여 모든 네트워크 어댑터를 열거 해야 합니다. 반환 된 각 WMI 개체에 레지스트리 키 경로 이름을 저장 한 위치입니다. 디자인 타임에 알 수 없는 레지스트리 키 경로입니다. 이 경우 동적 데이터 필요를 지원 합니다.
 
 모든 네트워크 어댑터를 열거 하려면 Windows PowerShell을 사용 하 여 다음 WMI 쿼리를 사용할 수 있습니다.
 
@@ -1164,7 +1164,7 @@ SPA 요구는 정의 된 데이터 수집기 집합에서 디자인 타임. 항�
 Get-WmiObject -Namespace Root\Cimv2 -query "select PNPDeviceID FROM Win32_NetworkAdapter" | forEach-Object { Write-Output $_.PNPDeviceID }
 ```
 
-네트워크 어댑터 개체의 목록을 반환합니다. 각 개체에 라는 속성이 **PNPDeviceID**, 상대 레지스트리 키 경로 유지 하 합니다. 여기가 서 이전 쿼리로부터 샘플 출력:
+네트워크 어댑터 개체의 목록을 반환합니다. 각 개체에 라는 속성이 **PNPDeviceID**, 상대 레지스트리 키 경로 유지 하 합니다. 다음은 이전 쿼리의 샘플 출력입니다.
 
 ``` syntax
 ROOT\*ISatAP\0001
@@ -1173,7 +1173,7 @@ ROOT\*IPHTTPS\0000
 
 ```
 
-찾으려는 합니다 **FriendlyName** 값, 레지스트리 편집기를 열고 레지스트리 설정을 조합 하 여 **HKEY\_로컬\_MACHINE\\SYSTEM\\ CurrentControlSet\\Enum\\**  이전 샘플의 각 줄. 예를 들어: **HKEY\_로컬\_MACHINE\\SYSTEM\\CurrentControlSet\\Enum\\ 루트\\\*IPHTTPS\\0000**합니다.
+**FriendlyName** 값을 찾으려면 레지스트리 편집기를 열고 **HKEY\_로컬\\\_컴퓨터 시스템\\CurrentControlSet\\Enum\\을결합하여레지스트리설정으로이동합니다.** 이전 샘플의 각 줄을 사용 합니다. 예를 들어: **HKEY\_LOCALMACHINE\_SYSTEM\\CurrentControlSetEnum\\ ROOTIPHTTPS0000\\.\\\\\\\***
 
 SPA 프로 비전 메타 데이터에 이전 단계를 변환 하려면 다음 코드 샘플에는 스크립트를 추가 합니다.
 
@@ -1189,7 +1189,7 @@ SPA 프로 비전 메타 데이터에 이전 단계를 변환 하려면 다음 �
 </managementpaths>
 ```
 
-이 예제에서는 먼저 추가 managementpaths에서 WMI 쿼리 하는 키 이름을 정의 **NetworkAdapter**합니다. 레지스트리 키를 추가 하 고 참조 **네트워크 어댑터** 구문을 사용 하 여 **$(NetworkAdapter.PNPDeviceID)** 합니다.
+이 예제에서는 먼저 managementpaths 아래에 WMI 쿼리를 추가 하 고 키 이름 **네트워크 어댑터**을 정의 합니다. 레지스트리 키를 추가 하 고 참조 **네트워크 어댑터** 구문을 사용 하 여 **$(NetworkAdapter.PNPDeviceID)** 합니다.
 
 다음 표에서 동적 데이터와 다른 데이터 수집기에서 참조할 수 있는지 여부는 데이터 수집기 SPA에서 지 원하는 경우를 정의 합니다.
 
@@ -1199,13 +1199,13 @@ SPA 프로 비전 메타 데이터에 이전 단계를 변환 하려면 다음 �
 WMI | 예 | 예
 파일 | 예 | 아니요
 성능 카운터 | 아니요 | 아니요
-ETW | 아니오 | 아니오
+ETW | 아니요 | 아니요
 
-WMI 데이터 수집기에 대 한 각 WMI 개체에는 연결 된 특성이 있습니다. 모든 종류의 WMI 개체는 항상 세 가지 특성을 가집니다. \_\_네임 스페이스 \_ \_클래스와 \_ \_RELpath 합니다.
+WMI 데이터 수집기에 대 한 각 WMI 개체에는 연결 된 특성이 있습니다. 모든 유형의 WMI 개체에는 항상 다음과 같은 세 가지 특성이 있습니다. \_\_네임 스페이스 \_, \_클래스 및 \_RELpath입니다 \_.
 
 다른 데이터 수집기에서 참조 되는 데이터 수집기를 정의 하려면 할당 된 **이름** 는 ProvisionMetadata.xml에서 고유 키를 사용 하 여 특성입니다. 이 키는 동적 데이터를 생성 하려면 종속 데이터 수집기에서 사용 됩니다.
 
-S 예제 레지스트리 키에는 다음과 같습니다.
+레지스트리 키에 대 한 예제는 다음과 같습니다.
 
 ``` syntax
 <registryKey  name="registry">HKEY_LOCAL_MACHINE </registryKey>
@@ -1230,37 +1230,37 @@ S 예제 레지스트리 키에는 다음과 같습니다.
 <file>$(wmi.FileName)</file>
 ```
 
-**참고** SPA 참조의 무제한 깊이 지원 하지만 수준이 너무 많은 성능 오버 헤드가 알 수 있습니다. 순환 참조가 없으면 또는 자체 참조가 지원 되지 않는 있는지 확인 합니다.
+**참고** SPA는 무제한 수준의 참조를 지원 하지만 수준이 너무 많은 경우에는 성능 오버 헤드를 인식 합니다. 순환 참조가 없으면 또는 자체 참조가 지원 되지 않는 있는지 확인 합니다.
 
 ### <a name="versioning-limitations"></a>버전 관리 제한 사항
 
-SPA 재설정 및 부 버전 업데이트를 지원합니다. 이러한 프로세스는 동일한 알고리즘을 사용 합니다. 프로세스는 기존 데이터를 유지 하면서 모든 데이터베이스 개체 및 임계값 설정 새로 고침 하는 것입니다. 이 더 높은 버전으로 업그레이드 하거나 수 낮은 버전으로 다운 그레이드 합니다. advisor 팩을 선택한 다음 클릭 **재설정** 에 **Advisor 팩 구성** 대화 상자를 다시 설정 하거나 적용 SPA 또는 업데이트 합니다.
+SPA 재설정 및 부 버전 업데이트를 지원합니다. 이러한 프로세스는 동일한 알고리즘을 사용 합니다. 프로세스는 기존 데이터를 유지 하면서 모든 데이터베이스 개체 및 임계값 설정 새로 고침 하는 것입니다. 이 더 높은 버전으로 업그레이드 하거나 수 낮은 버전으로 다운 그레이드 합니다. advisor 팩을 선택 하 고 SPA의 **Advisor 팩 구성** 대화 상자에서 **다시 설정** 을 클릭 하 여 다시 설정 하거나 업데이트를 적용 합니다.
 
 이 기능은 주로 부 업데이트입니다. UI 표시 요소를 크게 변경할 수 없습니다. 중요 한 변경 하려는 경우 다른 관리자 팩을 만드는 해야 합니다. Advisor 팩 이름에는 주 버전을 포함 해야 합니다.
 
-부 버전 수정 제한은 있는 있습니다 **없습니다** 다음 중 하나를 수행 합니다.
+사소한 버전 수정의 제한 사항은 다음 작업을 수행할 **수** 없다는 것입니다.
 
 * 스키마 이름 변경
 
-* 단일 값 그룹의 데이터 형식이 나 목록 값 테이블의 열 변경
+* 단일 값 그룹 또는 목록 값 테이블 열의 데이터 형식 변경
 
-* 추가 또는 제거 임계값
+* 임계값 추가 또는 제거
 
-* 추가 또는 제거 규칙
+* 규칙 추가 또는 제거
 
-* 추가 하거나 advice를 제거
+* 통지 추가 또는 제거
 
 * 단일 값 추가 또는 제거
 
 * 목록 값 추가 또는 제거
 
-* 추가 하거나 목록 값의 열을 제거
+* 목록 값의 열 추가 또는 제거
 
-### <a href="" id="bkmk-tooltips"></a>도구 설명
+### <a href="" id="bkmk-tooltips"></a>설명은
 
 거의 모든 **설명** 특성 SPA 콘솔의 도구 설명으로 표시 됩니다.
 
-목록 값 테이블에 대해 행을 기준으로 도구 설명에 다음 특성을 추가 하 여 수행할 수 있습니다.
+목록 값 테이블의 경우 다음 특성을 추가 하 여 행 기반 도구 설명을 구현할 수 있습니다.
 
 ``` syntax
 <listValue descriptionColumn="Description">
@@ -1275,11 +1275,11 @@ SPA 재설정 및 부 버전 업데이트를 지원합니다. 이러한 프로�
 
 데이터 원본 | 형식 | 예제
 --- | --- | ---
-WMI | : WMI &lt;wmiclass&gt;/&lt;필드&gt; | WMI: Win32_OperatingSystem/Caption
-성능 카운터 | 성능 카운터: &lt;CategoryName&gt;/&lt;InstanceName&gt; | 성능 카운터: Process/% 프로세서 시간
-registry | registry: &lt;registerKey&gt; | 레지스트리: HKLM\SOFTWARE\Microsoft<br>\\ASP.NET\\Rootver
-구성 파일 | ConfigFile: &lt;Filepath&gt;\[; Xpath: &lt;Xpath&gt;\]<br>**참고**<br>Xpath는 선택 사항 고 파일은 xml 파일이 있는 경우에 유효 합니다. | ConfigFile: windir %\\System32\\inetsrv\config\\applicationHost.config<br>Xpath: 구성&frasl;system.webServer<br>&frasl;httpProtocol&frasl;@allowKeepAlive
-ETW | ETW: &lt;공급자 /&gt;(키워드) | ETW: Windows 커널 추적 (프로세스, net)
+WMI | WMI: &lt;wmiclass&gt;필드/&lt;&gt; | WIM Win32_OperatingSystem/캡션
+성능 카운터 | Perfcounter &lt;범주&gt;InstanceName/&lt;&gt; | Perfcounter 프로세스/% 프로세서 시간
+registry | 레지스트리: &lt;registerkey&gt; | 레지스트리 HKLM\SOFTWARE\Microsoft<br>\\ASP.NET\\rootver
+구성 파일 | Read-configfile &lt;Filepath&gt;;\[ Xpath &lt;Xpath&gt;\]<br>**참고**<br>Xpath는 선택 사항 고 파일은 xml 파일이 있는 경우에 유효 합니다. | Applicationhost.config: windir%\\System32\\inetsrv\config\\applicationhost.config<br>Xpath: 구성&frasl;system.webserver<br>&frasl;httpProtocol&frasl;@allowKeepAlive
+ETW | ETW &lt;공급자/&gt;(키워드) | ETW Windows 커널 추적 (프로세스, 네트워크)
 
 ### <a name="table-collation"></a>테이블 데이터 정렬
 
@@ -1287,7 +1287,7 @@ Advisor 팩 더 복잡 해지면 고유한 변수 테이블 또는 보고서 스
 
 문자열 열 데이터 정렬를 만들면 테이블 데이터 정렬을 SPA 프레임 워크에 의해 만들어진 것과 다른 될 수 있으므로 문제가 될 수 있습니다. 서로 다른 테이블에 두 개의 문자열 열 상관 관계를 지정 하는 경우 데이터 정렬 오류가 표시 될 수 있습니다. 이 문제를 방지 하려면 항상로 열 데이터 정렬에 대 한 문자열을 정의 해야 **SQL\_Latin1\_일반\_CP1\_CI\_AS** 테이블을 정의 합니다.
 
-다음 변수 테이블을 정의 하는 방법.
+변수 테이블을 정의 하는 방법은 다음과 같습니다.
 
 ``` syntax
 DECLARE @filesIO TABLE (
@@ -1300,7 +1300,7 @@ DECLARE @filesIO TABLE (
 
 ### <a name="collect-etw"></a>ETW를 수집 합니다.
 
-다음 ETW ProvisionMetadata.xml 파일에서 정의 하는 방법.
+Provisionmetadata.xml 파일에서 ETW를 정의 하는 방법은 다음과 같습니다.
 
 ``` syntax
 <dataSourceDefinition>
@@ -1312,7 +1312,7 @@ DECLARE @filesIO TABLE (
 
 다음 공급자 특성은 ETW 수집에 사용할 수 있습니다.
 
-attribute | 형식 | 설명
+attribute | type | 설명
 --- | --- | ---
 guid | GUID | 공급자 GUID
 세션 | string | ETW 세션 이름 (선택 사항, 커널 이벤트에만)
@@ -1327,15 +1327,15 @@ minBuffer | Int | 최소 버퍼 (선택 사항)
 
 다음과 같이 두 개의 출력 테이블을 있습니다.
 
-**\#이벤트 테이블 스키마**
+**\#Events 테이블 스키마**
 
 열 이름 | SQL 데이터 형식 | 설명
 --- | --- | ---
 SequenceID | NULL이 아닌 Int | 상관 관계 시퀀스 ID
-EventtypeId | NULL이 아닌 Int | 이벤트 유형 ID (참조 [dbo]. [ Eventtypes])
+EventtypeId | NULL이 아닌 Int | 이벤트 유형 ID ([dbo]를 참조 하십시오. Eventtypes])
 ProcessId | NULL이 아닌 BigInt | 프로세스 ID
 스레드 Id | NULL이 아닌 BigInt | 스레드 ID
-타임 스탬프 | datetime2 NULL이 아님 | 타임 스탬프
+없으면 | datetime2 NULL이 아닙니다. | 없으면
 Kerneltime | NULL이 아닌 BigInt | 커널 시간
 Usertime | NULL이 아닌 BigInt | 사용자 시간
 
@@ -1388,7 +1388,7 @@ SPA 프로젝트는 대상 서버, advisor 팩 및 advisor 팩에 대 한 대상
 
 데이터 분석 세션은 특정 대상 서버에 대 한 성능 분석. 데이터 분석 세션 advisor 팩을 여러 개 포함할 수 있습니다. 이러한 advisor 팩에서 데이터 수집기 집합은 단일 데이터 수집기 집합으로 병합 됩니다. 단일 데이터 분석 세션에 대 한 모든 성능 로그는 동일한 시간 동안 수집 됩니다. 동일한 데이터 분석 세션에서 실행 되는 advisor 팩에 의해 생성 된 보고서를 분석 사용자가 전체 성능 상황을 이해 하 고 성능 문제에 대 한 근본 원인을 식별 하는 데 도움이 됩니다.
 
-**Windows 용 이벤트 추적**
+**ETW(Windows용 이벤트 추적)**
 
 [이벤트 추적](https://msdn.microsoft.com/library/windows/desktop/bb968803.aspx) ETW (Windows)는 Windows 운영 체제에서 제공 하는 고성능, 오버 헤드가 낮은, 확장 가능한 추적 시스템에 대 한 합니다. 프로 파일링 및 디버깅 다양 한 시나리오의 문제를 해결 하는 데 사용할 수 있는 기능을 제공 합니다. SPA 성능 보고서를 생성 하기 위한 데이터 원본으로 ETW 이벤트를 사용 합니다. ETW에 대 한 일반 정보를 참조 하십시오. [디버깅 및 ETW를 사용한 성능 조정 개선](https://msdn.microsoft.com/magazine/cc163437.aspx)합니다.
 
@@ -1408,7 +1408,7 @@ Windows Management Instrumentation (WMI)는 관리 데이터와 Windows 운영 �
 
 단일 보고서는 단일 대상 서버에서 advisor 팩 하나에 대 한 하나의 데이터 분석 세션을 기반으로 생성 되는 SPA 보고서입니다. 알림 및 다양 한 데이터 섹션을 포함할 수 있습니다.
 
-**Side-by-side-보고서**
+**Side-by-side 보고서**
 
 Side-by-side-보고서에는 동일한 advisor 팩에 대 한 두 개의 단일 보고서를 비교 하는 SPA 보고서가입니다. 동일한 대상 서버에 별도 성능 분석 실행 또는 다른 대상 서버에서 두 개의 보고서를 생성할 수 있습니다. Side-by-side-보고서 비정상적인 동작이 나 보고서 중 하나에서 설정을 식별할 수 있도록 하는 두 개의 보고서를 비교 하는 기능을 만듭니다. 알림 및 다양 한 데이터 섹션 side-by-side-보고서에 포함 되어 있습니다. 각 섹션에서 두 보고서 데이터를에서 나열된 하 여 함께 합니다.
 
@@ -1416,7 +1416,7 @@ Side-by-side-보고서에는 동일한 advisor 팩에 대 한 두 개의 단일 
 
 추세 차트에는 성능 문제의 반복적인 패턴을 조사 하는 데 사용 되는 SPA 보고서입니다. 매주 또는 매일 발생할 수 있는 클라이언트 컴퓨터 또는 서버에서 예약 된 서버 부하 변경 많은 반복적인 성능 문제 발생 됩니다. SPA는 24 시간 추세 차트 및 이러한 문제를 식별 하는 7 일 추세 차트를 제공 합니다.
 
-사용자와 같은 단일 보고서 내에서 숫자 값은 한 번에 하나 이상의 데이터 계열을 선택할 수 **평균 총 CPU 사용량**합니다. 구체적으로 말하면, 숫자 값에는에서 주어진된 된 시간 인스턴스 단일 AP에서 생성 되는 단일 서버에서 스칼라 값이입니다. SPA (각 요일에 대 한 일 보고서의 경우 7)은 하루 중 각 시간에 대해 하나씩 24 그룹으로 해당 값을 그룹화합니다. SPA 평균, 최소값, 최대값 및 각 그룹에 대 한 표준 편차를 계산합니다.
+사용자와 같은 단일 보고서 내에서 숫자 값은 한 번에 하나 이상의 데이터 계열을 선택할 수 **평균 총 CPU 사용량**합니다. 구체적으로 말하면, 숫자 값은 지정 된 시간 인스턴스에서 단일 AP에 의해 생성 된 단일 서버의 스칼라 값입니다. SPA (각 요일에 대 한 일 보고서의 경우 7)은 하루 중 각 시간에 대해 하나씩 24 그룹으로 해당 값을 그룹화합니다. SPA 평균, 최소값, 최대값 및 각 그룹에 대 한 표준 편차를 계산합니다.
 
 **기록 차트**
 
@@ -1426,7 +1426,7 @@ Side-by-side-보고서에는 동일한 advisor 팩에 대 한 두 개의 단일 
 
 데이터 계열에는 시간 동안 동일한 데이터 소스에서 수집 되는 숫자 데이터입니다. 동일한 소스에서 데이터에는 하나의 서버에서 IIS에 대 한 평균 요청 큐 길이 같은 동일한 대상 서버에서 온 것으로 의미 합니다.
 
-**규칙**
+**역할**
 
 규칙은 논리, 임계값 및 설명의 조합입니다. 잠재적인 성능 문제를 나타냅니다. 각 advisor 팩 규칙을 여러 개 포함 되어 있습니다. 각 규칙은 보고서 생성 프로세스에 의해 트리거됩니다. 규칙에 단일 보고서의 데이터에는 논리 및 임계값이 적용 됩니다. 조건에 해당 하는 경우에 경고 알림이 발생 합니다. 알림을로 설정 된 그렇지 않은 경우는 **확인** 상태입니다. 해당 사항 없음로 알림이 설정 되어 규칙이 적용 되지 않는 경우 (**NA**) 상태입니다.
 
