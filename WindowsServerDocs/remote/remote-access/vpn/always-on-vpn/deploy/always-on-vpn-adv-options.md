@@ -10,12 +10,12 @@ ms.author: pashort, v-tea
 author: shortpatti
 ms.localizationpriority: medium
 ms.reviewer: deverette
-ms.openlocfilehash: ae3c088122a0100f94b4d9bca41078d901487237
-ms.sourcegitcommit: 9f955be34c641b58ae8b3000768caa46ad535d43
+ms.openlocfilehash: e09a23b6f1c14c4c14b00fd19d84d0abb71d0163
+ms.sourcegitcommit: e40fce7b8b4bc0bef278e676435306f14078cf00
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2019
-ms.locfileid: "68590405"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68787212"
 ---
 # <a name="advanced-features-of-always-on-vpn"></a>Always On VPN의 고급 기능
 
@@ -62,17 +62,15 @@ ms.locfileid: "68590405"
 
 **가용성**
 
-다음 표에는 각 버전의 Windows에 대 한 수정 사항의 대략적인 릴리스 날짜가 나와 있습니다.
+다음 표에서는 각 버전의 Windows에 대 한 수정 프로그램이 포함 된 릴리스를 나열 합니다.
 
-|운영 체제 버전 |릴리스 또는 릴리스 날짜 * |
+|운영 체제 버전 |릴리스  |
 |---------|---------|
 |Windows Server, 버전 1903  |[KB4501375](https://support.microsoft.com/help/4501375/windows-10-update-kb4501375) |
-|Windows Server 2019<br />Windows Server, 버전 1809  |Q3, 2019  |
-|Windows Server, 버전 1803  |Q3, 2019  |
-|Windows Server, 버전 1709  |Q3, 2019  |
+|Windows Server 2019<br />Windows Server, 버전 1809  |[KB4505658](https://support.microsoft.com/help/4505658/windows-10-update-kb4505658)  |
+|Windows Server, 버전 1803  |[KB4507466](https://support.microsoft.com/help/4507466/windows-10-update-kb4507466)  |
+|Windows Server, 버전 1709  |[KB4507465](https://support.microsoft.com/help/4507465/windows-10-update-kb4507465)  |
 |Windows Server 2016, 버전 1607  |[KB4503294](https://support.microsoft.com/help/4503294/windows-10-update-kb4503294) |
-  
-\*모든 릴리스 날짜는 일정 분기에 나열 됩니다. 날짜는 근사치 이며 예 고 없이 변경 될 수 있습니다. 업데이트를 릴리스할 때 릴리스에 대 한 링크가 릴리스 날짜를 대체 합니다.
 
 **필수 구성 요소를 구성 하는 방법** 
 
@@ -81,7 +79,7 @@ ms.locfileid: "68590405"
 1. RRAS 서버에서 **VpnAuthProtocol** PowerShell cmdlet을 사용 하 여 **RootCertificateNameToAccept** 매개 변수를 구성 합니다.<br /><br />
    다음 예에서는이 작업을 수행 하는 명령을 나열 합니다. 예제에서 **CN = Contoso Root 인증 기관** 은 루트 인증 기관의 고유 이름을 나타냅니다. 
    ``` powershell
-   $cert1 = ( Get-ChildItem -Path cert:LocalMachine\root | Where-Object -FilterScript { $_.Subject -Like "*CN=Contoso Root Certification Authority,*" } )
+   $cert1 = ( Get-ChildItem -Path cert:LocalMachine\root | Where-Object -FilterScript { $_.Subject -Like "*CN=Contoso Root Certification Authority*" } )
    Set-VpnAuthProtocol -RootCertificateNameToAccept $cert1 -PassThru
    ```
 **IKEv2 컴퓨터 인증서를 기반으로 하는 VPN 연결에 대 한 인증서 해지를 적용 하도록 RRAS 서버를 구성 하는 방법**

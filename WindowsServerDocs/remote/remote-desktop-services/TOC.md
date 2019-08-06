@@ -68,7 +68,7 @@
 ## [원격 데스크톱 클라이언트](clients/remote-desktop-clients.md)
 ### 원격 데스크톱의 알려진 문제
 #### [일반 원격 데스크톱 연결 문제 해결](troubleshoot/rdp-error-general-troubleshooting.md)
-#### [클라이언트가 연결하여 "클래스가 등록되지 않음" 오류를 가져올 수 없습니다](troubleshoot/rdp-error-class-not-registered.md).
+#### [클라이언트가 연결할 수 없고 "클래스가 등록되지 않음" 오류가 발생함](troubleshoot/rdp-error-class-not-registered.md)
 #### [클라이언트가 연결할 수 없고 "사용 가능한 라이선스 없음" 오류가 표시됨](troubleshoot/rdp-error-no-licenses-available.md)
 #### [사용자가 인증할 수 없거나 두 번 인증해야 함](troubleshoot/cannot-authenticate-or-must-authenticate-twice.md)
 #### [연결 시 "원격 데스크톱 서비스가 현재 사용 중입니다" 오류](troubleshoot/remote-desktop-service-currently-busy.md)
