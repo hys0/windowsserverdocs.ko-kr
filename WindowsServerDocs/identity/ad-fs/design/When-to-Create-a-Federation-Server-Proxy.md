@@ -28,10 +28,10 @@ Active Directory Federation Services에 추가 보안 계층이 추가 조직에
   
 조직에서 페더레이션 서버 프록시를 수행 하는 역할 계정 파트너 조직 또는 리소스 파트너 조직의 페더레이션 서버 프록시 배치 여부에 따라 달라 집니다. 예를 들어, 페더레이션 서버 프록시 계정 파트너의 경계 네트워크에 위치한, 해당 역할 때 브라우저 클라이언트에서 사용자 자격 증명 정보를 수집 합니다. 리소스 페더레이션 서버에 요청 하 고에서 제공 하는 보안 토큰에 대 한 응답으로 조직 보안 토큰을 생성 하는 보안 토큰 릴레이 리소스 파트너의 경계 네트워크에 페더레이션 서버 프록시를 배치 하면 해당 계정 파트너입니다.  
   
-자세한 내용은 [Review the Role of the Federation Server Proxy in the Account Partner](Review-the-Role-of-the-Federation-Server-Proxy-in-the-Account-Partner.md) 및 [Review the Role of the Federation Server Proxy in the Resource Partner](Review-the-Role-of-the-Federation-Server-Proxy-in-the-Resource-Partner.md)를 참조하세요.  
+자세한 내용은 [계정 파트너에서 페더레이션 서버 프록시의 역할 검토](Review-the-Role-of-the-Federation-Server-Proxy-in-the-Account-Partner.md) 고 [리소스 파트너에서 페더레이션 서버 프록시의 역할 검토](Review-the-Role-of-the-Federation-Server-Proxy-in-the-Resource-Partner.md)  
   
 ## <a name="how-to-create-a-federation-server-proxy"></a>페더레이션 서버 프록시를 만드는 방법  
-AD FS 페더레이션 서버 프록시 구성 마법사 또는 Fsconfig.exe 명령을 사용 하 여 페더레이션 서버 프록시를 만들 수 있습니다\-명령줄 도구입니다. 이 작업을 수행하는 방법에 대한 지침은 [Configure a Computer for the Federation Server Proxy Role](../../ad-fs/deployment/Configure-a-Computer-for-the-Federation-Server-Proxy-Role.md)을 참조하세요.  
+AD FS 페더레이션 서버 프록시 구성 마법사 또는 Fsconfig.exe 명령을 사용 하 여 페더레이션 서버 프록시를 만들 수 있습니다\-명령줄 도구입니다. AD FS 페더레이션 서버 프록시 구성 마법사 또는 Fsconfig.exe 명령을 사용 하 여 페더레이션 서버 프록시를 만들 수 있습니다[명령줄 도구입니다.  
   
 페더레이션 서버 프록시를 배포 하는 데 필요한 모든 필수 구성 요소를 설정 하는 방법에 대 한 일반 정보를 참조 하세요. [검사 목록: 페더레이션 서버 프록시 설정](../../ad-fs/deployment/Checklist--Setting-Up-a-Federation-Server-Proxy.md)합니다.  
   

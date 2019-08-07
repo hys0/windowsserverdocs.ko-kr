@@ -8,12 +8,12 @@ ms.date: 11/2/2018
 ms.topic: article
 author: Heidilohr
 ms.localizationpriority: medium
-ms.openlocfilehash: 02c7098c8e3f93ce315e7d9a881613a03924e78b
-ms.sourcegitcommit: 286e3181ebd2cb9d7dc7fe651858a4e0d61d153f
+ms.openlocfilehash: d6761c43eefe04430603a1a16e9e8d256176a736
+ms.sourcegitcommit: 25376e261ebd5e85355c298cfd0bbd6b578a6a0c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68300693"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68729535"
 ---
 # <a name="set-up-the-remote-desktop-web-client-for-your-users"></a>사용자에 대한 원격 데스크톱 웹 클라이언트 설정
 
@@ -251,7 +251,7 @@ RD 세션 호스트 서버가 RD 브로커 서버와 다른 경우 다음 단계
 * 각 인증서에 대한 **SAN(주체 대체 이름)** 은 머신의 **FQDN(정규화된 도메인 이름)** 으로 설정해야 합니다. **CN(일반 이름)** 은 각 인증서의 SAN과 일치해야 합니다.
 
 ## <a name="how-to-pre-configure-settings-for-remote-desktop-web-client-users"></a>원격 데스크톱 웹 클라이언트 사용자에 대한 설정을 미리 구성하는 방법
-이 섹션에서는 PowerShell을 사용하여 원격 데스크톱 웹 클라이언트 배포에 대한 설정을 구성하는 방법에 대해 설명합니다. 이러한 PowerShell cmdlet은 조직의 보안 고려 사항 또는 의도된 워크플로에 따라 설정을 변경하는 사용자의 기능을 제어합니다. 웹 클라이언트의 **설정** 사이드 패널에 있는 모든 설정은 다음과 같습니다. 
+이 섹션에서는 PowerShell을 사용하여 원격 데스크톱 웹 클라이언트 배포에 대한 설정을 구성하는 방법에 대해 설명합니다. 이러한 PowerShell cmdlet은 조직의 보안 고려 사항 또는 의도된 워크플로에 따라 설정을 변경하는 사용자의 기능을 제어합니다. 웹 클라이언트의 **설정** 사이드 패널에 있는 모든 설정은 다음과 같습니다.
 
 ### <a name="suppress-telemetry"></a>원격 분석 표시 안 함
 기본적으로 사용자는 Microsoft에 보내는 원격 분석 데이터 수집을 사용하거나 사용하지 않도록 선택할 수 있습니다. Microsoft에서 수집하는 원격 분석 데이터에 대한 자세한 내용은 **정보** 사이드 패널의 링크를 통해 개인정보처리방침을 참조하세요.
@@ -274,7 +274,8 @@ RD 세션 호스트 서버가 RD 브로커 서버와 다른 경우 다음 단계
 
 ### <a name="reset-rdwebclientdeploymentsetting-configurations-to-default"></a>RDWebClientDeploymentSetting 구성을 기본값으로 다시 설정
 배포 수준 웹 클라이언트 설정을 기본 구성으로 다시 설정하려면 다음 PowerShell cmdlet을 실행하고, --Name 매개 변수를 사용하여 재설정할 설정을 지정합니다.
-   ```PowerShell
+  
+  ```PowerShell
     Reset-RDWebClientDeploymentSetting -Name "LaunchResourceInBrowser"
     Reset-RDWebClientDeploymentSetting -Name "SuppressTelemetry"
    ```
@@ -316,4 +317,4 @@ Import-RDWebClientBrokerCert <certificate file path>
 
 ## <a name="get-help-with-the-web-client"></a>웹 클라이언트에 대한 도움 받기
 
-이 문서의 정보로 해결할 수 없는 문제가 발생하면 [이메일](mailto:rdwbclnt@microsoft.com)을 통해 보고할 수 있습니다. 또한 [제안 상자](https://aka.ms/rdwebfbk)에서 새로운 기능을 요청하거나 투표할 수 있습니다.
+이 문서의 정보로 해결할 수 없는 이슈가 발생하면 [기술 커뮤니티](https://aka.ms/wvdtc)에서 이슈를 보고할 수 있습니다. 또한 [제안 상자](https://remotedesktop.uservoice.com/forums/911494-remote-desktop-web-client)에서 새로운 기능을 요청하거나 투표할 수 있습니다.
