@@ -98,7 +98,7 @@ Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "AzureZoneScope
 ### <a name="add-records-to-the-zone-scopes"></a>영역 범위에 레코드를 추가 합니다.
 다음 단계 영역 범위에는 웹 서버 호스트를 나타내는 레코드를 추가 하는 것입니다. 
 
-AzureZoneScope, 레코드 www.contosogiftservices.com Azure 공용 클라우드에 있는 IP 주소, 192.68.31.44와 함께 추가 됩니다. 
+AzureZoneScope, 레코드 www.contosogiftservices.com Azure 퍼블릭 클라우드에 있는 IP 주소, 192.68.31.44와 함께 추가 됩니다. 
 
 기본 영역 범위에 마찬가지로 \(contosogiftservices.com\), 레코드 \(www.contosogiftservices.com\) 시애틀 온-프레미스에서 실행 중인 웹 서버의 IP 주소 192.68.30.2와 함께 추가 됩니다 데이터 센터입니다.
 

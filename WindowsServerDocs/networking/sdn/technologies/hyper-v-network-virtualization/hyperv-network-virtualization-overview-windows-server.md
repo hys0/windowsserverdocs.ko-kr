@@ -35,7 +35,7 @@ Windows Server 2016 및 Virtual Machine Manager Microsoft는 종단 간 네트�
 
 -   **Hyper-v 네트워크 가상화 게이트웨이** 가상 및 실제 네트워크 간의 연결을 제공 합니다.  
 
-이 항목에서는 개념을 소개 하 고 Windows Server 2016에서 Hyper-v 네트워크 가상화 (전체 네트워크 가상화 솔루션의 일부분)의 기능과 장점에 설명 합니다. 또한 네트워크 가상화가 어떻게 엔터프라이즈 작업 통합을 위한 프라이빗 클라우드와 IaaS(Infrastructure as a Service)의 공용 클라우드 서비스 공급자 둘 다로부터 이점을 얻는지에 대해 설명합니다.  
+이 항목에서는 개념을 소개 하 고 Windows Server 2016에서 Hyper-v 네트워크 가상화 (전체 네트워크 가상화 솔루션의 일부분)의 기능과 장점에 설명 합니다. 또한 네트워크 가상화가 어떻게 엔터프라이즈 작업 통합을 위한 프라이빗 클라우드와 IaaS(Infrastructure as a Service)의 퍼블릭 클라우드 서비스 공급자 둘 다로부터 이점을 얻는지에 대해 설명합니다.  
 
 Windows Server 2016에서 네트워킹 가상화에 대 한 자세한 기술 정보를 참조 하세요. [Hyper-v 네트워크 가상화 기술 세부 정보 Windows Server 2016에서](../../../sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-technical-details-windows-server.md)합니다.  
 

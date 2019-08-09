@@ -124,7 +124,7 @@ RAS 게이트웨이 이제 사이트 간 연결 및 게이트웨이 M + N 중복
 자세한 내용은 [Windows Server 2016에서 GRE 터널링](../remote/remote-access/ras-gateway/gre-tunneling-windows-server.md)합니다.  
   
 ## <a name="HNV"></a>Hyper-v 네트워크 가상화  
-Windows Server 2012에 도입 된, Hyper-v 네트워크 가상화 (HNV) 고객 네트워크 공유의 실제 네트워크 인프라의 가상화를 수 있습니다. 실제 네트워크 패브릭에서 필요한 최소한의 변화를 통해 HNV를 통해 서비스 공급자 배포 하 고 세 개의 클라우드에 걸쳐 아무 곳 이나 테 넌 트 작업을 마이그레이션하는 민첩성과: 서비스 공급자 클라우드, 프라이빗 클라우드 또는 Microsoft Azure 공용 클라우드입니다.  
+Windows Server 2012에 도입 된, Hyper-v 네트워크 가상화 (HNV) 고객 네트워크 공유의 실제 네트워크 인프라의 가상화를 수 있습니다. 실제 네트워크 패브릭에서 필요한 최소한의 변화를 통해 HNV를 통해 서비스 공급자 배포 하 고 세 개의 클라우드에 걸쳐 아무 곳 이나 테 넌 트 작업을 마이그레이션하는 민첩성과: 서비스 공급자 클라우드, 프라이빗 클라우드 또는 Microsoft Azure 퍼블릭 클라우드입니다.  
   
 자세한 내용은 참조 하세요. [What's New in Windows Server 2016에서 Hyper-v 네트워크 가상화](sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md)  
   
