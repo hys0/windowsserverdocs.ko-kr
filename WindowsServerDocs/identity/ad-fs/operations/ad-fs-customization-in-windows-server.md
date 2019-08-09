@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 7f990c3412707e38a00110ac4d3cb3787fa18ee3
-ms.sourcegitcommit: 216d97ad843d59f12bf0b563b4192b75f66c7742
+ms.openlocfilehash: b8832e7e53e94761a489e850726bbd206b8be62b
+ms.sourcegitcommit: 02f1e11ba37a83e12d8ffa3372e3b64b20d90d00
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476538"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68863427"
 ---
 # <a name="ad-fs-customization-in-windows-server-2016"></a>Windows Server 2016에서에서 AD FS 사용자 지정 합니다.
 
@@ -69,9 +69,14 @@ PS C:\>Set-AdfsRelyingPartyWebTheme
 RP 당 사용자 지정 테마를 할당 하려면 다음 절차를 사용 합니다.  
   
 1. AD FS의 기본 전역 테마에 대 한 복사본으로 새 테마를 만듭니다.  
-<code>New-AdfsWebTheme -Name AppSpecificTheme -SourceName default</code>2. 사용자 지정할 테마 내보내기<code>Export-AdfsWebTheme -Name AppSpecificTheme -DirectoryPath c:\appspecifictheme</code>  
-3.선호 하는 편집기에서 테마 파일 (이미지, css, onload)을 사용자 지정 하거나 파일을 파일 4. 시스템에서 AD FS로 가져오기 (새 테마를 대상으로 지정) 파일을 바꿉니다.<code>Set-AdfsWebTheme -TargetName AppSpecificTheme -AdditionalFileResource @{Uri='/adfs/portal/script/onload.js';Path="c:\appspecifictheme\script\onload.js"}</code>  
-5.사용자 지정 된 새 테마를 특정 RP (또는 RP)에 적용 합니다.<code>Set-AdfsRelyingPartyWebTheme -TargetRelyingPartyName urn:app1 -SourceWebThemeName AppSpecificTheme</code>  
+`New-AdfsWebTheme -Name AppSpecificTheme -SourceName default`  
+2. 사용자 지정할 테마 내보내기  
+`Export-AdfsWebTheme -Name AppSpecificTheme -DirectoryPath c:\appspecifictheme`  
+3. 선호 하는 편집기에서 테마 파일 (이미지, css, onload)을 사용자 지정 하거나 파일을 바꿉니다.  
+4. 새 테마를 대상으로 하는 AD FS 파일 시스템에서 사용자 지정 된 파일을 가져옵니다.  
+`Set-AdfsWebTheme -TargetName AppSpecificTheme -AdditionalFileResource @{Uri='/adfs/portal/script/onload.js';Path="c:\appspecifictheme\script\onload.js"}`  
+5. 사용자 지정 된 새 테마를 특정 RP (또는 RP)에 적용 합니다.  
+`Set-AdfsRelyingPartyWebTheme -TargetRelyingPartyName urn:app1 -SourceWebThemeName AppSpecificTheme`  
   
 ## <a name="home-realm-discovery"></a>홈 영역 검색  
 홈 영역 검색 사용자 지정에 대해서 [는 AD FS 로그인 페이지 사용자 지정](https://technet.microsoft.com/library/dn280950.aspx)을 참조 하세요.  

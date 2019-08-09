@@ -12,12 +12,12 @@ ms.assetid: b56a21e2-c9e3-4ba9-97d9-719ea6a0854b
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 4759d33dc89c0ce458b2143cff94f78ea2d9a5cc
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: ef57ac325465d7b7a5cf65a2931df824c351c6a2
+ms.sourcegitcommit: 02f1e11ba37a83e12d8ffa3372e3b64b20d90d00
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66433391"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68863435"
 ---
 # <a name="integrate-an-on-premises-exchange-server-with-windows-server-essentials"></a>온-프레미스 Exchange Server와 Windows Server Essentials 통합
 
@@ -35,22 +35,22 @@ ms.locfileid: "66433391"
 
 -   [Windows Server Essentials를 실행 하는 서버 설정](Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials.md#BKMK_SetUpSBS8)  
 
--   [Exchange Server를 설치 하는 두 번째 서버 준비](Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials.md#BKMK_SecondServer)  
+-   [Exchange Server를 설치할 두 번째 서버 준비](Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials.md#BKMK_SecondServer)  
 
 -   [인터넷 도메인 이름 구성](Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials.md#BKMK_DomainNames)  
 
-###  <a name="BKMK_SetUpSBS8"></a> Windows Server Essentials를 실행 하는 서버 설정  
+###  <a name="BKMK_SetUpSBS8"></a>Windows Server Essentials를 실행 하는 서버 설정  
  Windows Server Essentials를 실행하는 서버가 이미 설치되어 있어야 합니다. 이 서버는 Exchange Server를 실행하는 서버의 도메인 컨트롤러 역할을 합니다. Windows Server Essentials를 설치하는 방법에 대한 자세한 내용은 [Install Windows Server Essentials](../install/Install-Windows-Server-Essentials.md)를 참조하세요.  
 
-###  <a name="BKMK_SecondServer"></a> Exchange Server를 설치 하는 두 번째 서버 준비  
+###  <a name="BKMK_SecondServer"></a>Exchange Server를 설치할 두 번째 서버 준비  
  Exchange Server 2010 또는 Exchange Server 2013 실행을 정식으로 지원하는 버전의 Windows Server 운영 체제를 실행 중인 두 번째 서버에 Exchange Server를 설치해야 합니다. 그런 다음 두 번째 서버를 Windows Server Essentials 도메인에 가입시켜야 합니다.  
 
- 두 번째 서버를 Windows Server Essentials 도메인에 가입 하는 방법에 대 한 정보를 참조 하세요. 네트워크에 두 번째 서버 가입 [연결성](../use/Get-Connected-in-Windows-Server-Essentials.md)합니다.  
+ 두 번째 서버를 Windows Server Essentials 도메인에 가입 하는 방법에 대 한 자세한 내용은 [연결 된 Get](../use/Get-Connected-in-Windows-Server-Essentials.md)에서 두 번째 서버를 네트워크에 가입을 참조 하세요.  
 
 > [!NOTE]
 >  Microsoft에서는 Windows Server Essentials를 실행하는 서버에 Exchange Server 설치를 지원하지 않습니다.  
 
-###  <a name="BKMK_DomainNames"></a> 인터넷 도메인 이름 구성  
+###  <a name="BKMK_DomainNames"></a>인터넷 도메인 이름 구성  
  Exchange Server를 실행하는 온-프레미스 서버를 Windows Server Essentials와 통합하려면 회사의 올바른 인터넷 도메인 이름(예: *contoso.com*)을 등록해야 합니다. 또한 도메인 이름 공급자와 함께 Exchange Server에 필요한 DNS 리소스 레코드를 만들어야 합니다.  
 
  예를 들어 회사의 인터넷 도메인 이름이 contoso.com인 경우 *mail.contoso.com* 의 FQDN(정규화된 도메인 이름)을 사용하여 Exchange Server를 실행하는 온-프레미스 서버를 참조하려면 도메인 이름 공급자와 함께 다음 표의 DNS 리소스 레코드를 만들어야 합니다.  
@@ -59,9 +59,9 @@ ms.locfileid: "66433391"
 | 리소스 레코드 이름 |     레코드 유형     |                                                                         레코드 설정                                                                          |                                                                                                                                                                                                                                                              설명                                                                                                                                                                                                                                                              |
 |----------------------|---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |         메일         |      호스트(A)       |                                                        Address=*ISP가 할당한 공용 IP 주소*                                                         |                                                                                                                                                                                                   Exchange Server에서 mail.contoso.com으로 주소가 지정된 메일을 받습니다.<br /><br /> 원하는 다른 이름을 사용할 수 있습니다.                                                                                                                                                                                                    |
-|          MX          | MX(메일 교환기) |                                            Hostname=@<br /><br /> Address=mail.contoso.com<br /><br /> Preference=0                                             |                                                                                                                                                                                                      에 대 한 전자 메일 메시지 라우팅을 제공 email@contoso.com Exchange Server를 실행 하는 온-프레미스 서버에 도착 합니다.                                                                                                                                                                                                       |
+|          MX          | MX(메일 교환기) |                                            Hostname=@<br /><br /> Address=mail.contoso.com<br /><br /> Preference=0                                             |                                                                                                                                                                                                      는 Exchange server를 실행 email@contoso.com 하는 온-프레미스 서버에 도착할 메일 메시지 라우팅을 제공 합니다.                                                                                                                                                                                                       |
 |         SPF          |     텍스트(TXT)      |                                                                        v=spf1 a mx ~all                                                                         |                                                                                                                                                                                                                      서버에서 보낸 메일이 스팸으로 식별되지 않도록 도와주는 리소스 레코드입니다.                                                                                                                                                                                                                      |
-|  autodiscover._tcp   |    서비스(SRV)    | 서비스: _autodiscover<br /><br /> Protocol: _tcp<br /><br /> 우선 순위: 0<br /><br /> 가중치: 0<br /><br /> 포트: 443<br /><br /> Target host: mail.contoso.com | Microsoft Office Outlook 및 모바일 장치에서 Exchange Server를 실행하는 온-프레미스 서버를 자동으로 검색하도록 해줍니다.<br /><br /> **참고:** Autodiscover 호스트 (A) 리소스 레코드를 구성 하 고 Exchange Server를 실행 하는 온-프레미스 서버의 공용 IP 주소 레코드를 가리키도록 수도 있습니다. 그러나 이 옵션을 구현하려면 mail.contoso.com 및 autodiscover.contoso.com 도메인 이름을 둘 다 지원하는 SAN(주체 대체 이름) SSL 인증서도 제공해야 합니다. |
+|  autodiscover._tcp   |    서비스(SRV)    | 서비스: _autodiscover<br /><br /> Protocol: _tcp<br /><br /> 우선 순위: 0<br /><br /> 가중치: 0<br /><br /> 포트: 443<br /><br /> Target host: mail.contoso.com | Microsoft Office Outlook 및 모바일 장치에서 Exchange Server를 실행하는 온-프레미스 서버를 자동으로 검색하도록 해줍니다.<br /><br /> **참고:** 또한 자동 검색 호스트 (A) 리소스 레코드를 구성 하 고 Exchange Server를 실행 하는 온-프레미스 서버의 공용 IP 주소에 대 한 레코드를 가리킬 수 있습니다. 그러나 이 옵션을 구현하려면 mail.contoso.com 및 autodiscover.contoso.com 도메인 이름을 둘 다 지원하는 SAN(주체 대체 이름) SSL 인증서도 제공해야 합니다. |
 
 > [!NOTE]
 >  -   이 예의 *contoso.com* 인스턴스를 등록한 인터넷 도메인 이름으로 바꾸세요.  
@@ -83,7 +83,7 @@ ms.locfileid: "66433391"
 
 2.  관리자 권한으로 Windows PowerShell을 실행합니다.  
 
-3.  Windows PowerShell 명령 프롬프트에서 입력 **Add-adgroupmember "Enterprise Admins" $env: username**, 한 다음 Enter를 누릅니다.  
+3.  Windows PowerShell 명령 프롬프트에서 **Add-ADGroupMember "Enterprise Admins" $env: username**을 입력 한 다음 enter 키를 누릅니다.  
 
 #### <a name="to-install-exchange-server"></a>Exchange Server를 설치하려면  
 
@@ -242,7 +242,7 @@ New-SendConnector -Name "WSE Internet SendConnector" -Usage "Internet" -AddressS
 15. 서버를 다시 시작합니다.  
 
 > [!NOTE]
->  자체 발급 된 인증서 대신 공개적으로 신뢰할 수 있는 SSL 인증서를 사용 하려는 경우에 인증서 요청을 만들고 선택한 인증 기관에 보낼 설치 가이드의 지침에 따라 수 있습니다. 또한 Exchange PowerShell cmdlet을 사용하여 인증서 요청을 만들 수도 있습니다. 예를 들면 다음과 같습니다.  
+>  자체 발급 된 인증서 대신 공개적으로 신뢰할 수 있는 SSL 인증서를 사용 하려는 경우 설치 가이드의 지침에 따라 인증서 요청을 만들어 선택한 인증 기관에 보낼 수 있습니다. 또한 Exchange PowerShell cmdlet을 사용하여 인증서 요청을 만들 수도 있습니다. 예를 들면 다음과 같습니다.  
 >   
 >  `New-ExchangeCertificate -GenerateRequest -SubjectName "C=US, S=Washington, L=Redmond, O=contoso, OU=contoso, CN=mail.contoso.com" -DomainName mail.contoso.com -PrivateKeyExportable $true | Set-Content -path "c:\Docs\MyCertRequest.req"`  
 >   
@@ -356,26 +356,26 @@ New-SendConnector -Name "WSE Internet SendConnector" -Usage "Internet" -AddressS
 
 7. 실행 중인 Windows Server Essentials 버전에 따라 다음 중 하나를 수행합니다.  
 
-   -   Windows Server essentials: 관리자 권한으로 명령 창을 열고 %ProgramFiles%\Windows Server\Bin 디렉터리를 엽니다.  
+   -   Windows Server Essentials에서: 관리자 권한으로 명령 창을 열고 %ProgramFiles%\Windows Server\Bin 디렉터리를 엽니다.  
 
-   -   Windows Server essentials: 관리자 권한으로 명령 창을 열고 %Windir%\System32\Essentials 디렉터리를 엽니다.  
+   -   Windows Server Essentials에서: 관리자 권한으로 명령 창을 열고 %Windir%\System32\Essentials 디렉터리를 엽니다.  
 
 8. 설치 시나리오에 따라 다음 단계 중 하나를 수행하여 ARR을 구성합니다.  
 
    - 새로 설치를 수행하는 경우 다음 명령을 실행합니다.  
 
-      **ARRConfig config-cert** *인증서 파일 경로* **-호스트** *Exchange Server의 호스트 이름* ****  
+      **Arrconfig 구성-cert** *인증서 파일의 경로입니다* . **-호스트 이름** *Exchange Server의 호스트 이름*  
 
      > [!NOTE]
-     >  예를 들어, * * ARRConfig config-cert ***c:\temp\certificate.pfx*** -호스트 ***mail.contoso.com***  
+     >  예를 들면 **Arrconfig 구성-cert** *c:\temp\certificate.pfx* **-호스트 이름** *mail.contoso.com*  
      > 
      >  *mail.contoso.com* 을 인증서로 보호되는 도메인 이름으로 바꿉니다.  
 
    - Windows Small Business Server에서 마이그레이션하는 경우 다음 명령을 실행합니다.  
 
-      **ARRConfig config-cert** *인증서 파일 경로* **-호스트** *Exchange Server의 호스트 이름* **-targetserver** *Exchange 서버의 서버 이름* ****  
+      **Arrconfig 구성-cert** *인증서 파일의 경로입니다* . **-호스트 이름** *Exchange Server의 호스트 이름* **-targetserver** *Exchange server의 서버 이름*  
 
-      예를 들어, * * ARRConfig config-cert ***c:\temp\certificate.pfx*** -호스트 이름 ***mail.contoso.com*** -targetserver * * * ExchangeSvr * * *  
+      예를 들면 **Arrconfig 구성-cert** *c:\temp\certificate.pfx* **-호스트 이름** *mail.contoso.com* * *-targetserver * * *ExchangeSvr*  
 
       *mail.contoso.com*을 도메인 이름으로 바꾸고, *ExchangeSvr*를 Exchange Server를 실행하는 서버 이름으로 바꿉니다.  
 
@@ -385,7 +385,7 @@ New-SendConnector -Name "WSE Internet SendConnector" -Usage "Internet" -AddressS
 > - 제공한 호스트 이름은 Exchange Server용으로 구입한 SSL 인증서에 포함되어 있어야 합니다.  
 >   -   호스트 이름이 여러 개인 경우 쉼표(,)를 사용하여 구분합니다.  
 
- 구성이 작동 하는지 확인 하려면 Exchange Server를 실행 하는 서버의 OWA 웹 사이트에 액세스 시도 (https://mail합니다. *yourdomainname*.com/owa)에 액세스해 봅니다. 연결 문제를 해결하기 위해 온라인 [Microsoft 원격 연결 분석기](https://go.microsoft.com/fwlink/p/?LinkId=249455) 도구를 사용할 수도 있습니다.  
+ 구성이 작동 하는지 확인 하려면 Exchange Server를 실행 하는 서버의 OWA 웹 사이트 ()https://mail 에 액세스 해 봅니다. *yourdomainname*.com/owa)에 액세스해 봅니다. 연결 문제를 해결하기 위해 온라인 [Microsoft 원격 연결 분석기](https://go.microsoft.com/fwlink/p/?LinkId=249455) 도구를 사용할 수도 있습니다.  
 
 ### <a name="configure-split-dns-for-exchange-server"></a>Exchange Server에 대해 분할 DNS 구성  
 
@@ -431,18 +431,18 @@ New-SendConnector -Name "WSE Internet SendConnector" -Usage "Internet" -AddressS
  온-프레미스 Exchange Server와의 통합을 사용하지 않도록 설정하면 더 이상 Windows Server Essentials Dashboard를 사용하여 Exchange Server 사서함을 보고 만들거나 관리할 수 없습니다.  
 
 ### <a name="what-do-i-need-to-know-about-email-accounts"></a>메일 계정에 대해 알아야 할 내용은 무엇인가요?  
- 호스트된 전자 메일 솔루션은 서버에서 구성됩니다. Microsoft Office 365와 같은 호스트 된 메일 공급자에서 솔루션을 네트워크 사용자에 게 개별 메일 계정을 제공할 수 있습니다. Windows Server Essentials에서 사용자 계정 추가 마법사를 실행하여 사용자 계정을 만들면 마법사는 사용자 계정을 사용 가능한 호스트된 메일 솔루션에 추가하려고 합니다. 동시에 마법사는 사용자에게 메일 이름(별칭)을 할당하고 사서함의 최대 크기(할당량)를 설정합니다. 사서함의 최대 크기는 사용하는 메일 공급자에 따라 다릅니다. 사용자 계정을 추가한 후 계속해서 사용자의 속성 페이지에서 사서함 별칭 및 할당량 정보를 관리할 수 있습니다. 사용자 계정 및 호스트된 메일 공급자의 전체 관리를 위해서는 호스트된 공급자의 관리 콘솔을 사용합니다. 공급자에 따라 웹 기반 포털 또는 서버 대시보드의 탭에서 해당 관리 콘솔에 액세스할 수 있습니다.  
+ 호스트된 전자 메일 솔루션은 서버에서 구성됩니다. 호스트 된 전자 메일 공급자의 솔루션 (예: Microsoft Office 365)은 네트워크 사용자에 게 개별 메일 계정을 제공할 수 있습니다. Windows Server Essentials에서 사용자 계정 추가 마법사를 실행하여 사용자 계정을 만들면 마법사는 사용자 계정을 사용 가능한 호스트된 메일 솔루션에 추가하려고 합니다. 동시에 마법사는 사용자에게 메일 이름(별칭)을 할당하고 사서함의 최대 크기(할당량)를 설정합니다. 사서함의 최대 크기는 사용하는 메일 공급자에 따라 다릅니다. 사용자 계정을 추가한 후 계속해서 사용자의 속성 페이지에서 사서함 별칭 및 할당량 정보를 관리할 수 있습니다. 사용자 계정 및 호스트된 메일 공급자의 전체 관리를 위해서는 호스트된 공급자의 관리 콘솔을 사용합니다. 공급자에 따라 웹 기반 포털 또는 서버 대시보드의 탭에서 해당 관리 콘솔에 액세스할 수 있습니다.  
 
- 사용자 계정 추가 마법사를 실행할 때 입력한 별칭은 사용자 별칭에 대한 제안된 이름으로 호스트된 메일 공급자에게 전송됩니다. 예를 들어 사용자 별칭이 *FrankM*, 사용자의 전자 메일 주소가 <em>FrankM@Contoso.com</em>합니다.  
+ 사용자 계정 추가 마법사를 실행할 때 입력한 별칭은 사용자 별칭에 대한 제안된 이름으로 호스트된 메일 공급자에게 전송됩니다. 예를 들어 사용자 별칭이 *FrankM*인 경우 사용자의 전자 메일 주소는 일 <em>FrankM@Contoso.com</em>수 있습니다.  
 
  또한 사용자 계정 추가 마법사에서 사용자에 대해 설정한 암호는 호스트된 메일 솔루션에서 사용자의 초기 암호가 됩니다.  
 
- 마지막으로, 서버에서 사용자 계정 삭제 마법사를 사용하여 사용자를 삭제하는 경우 마법사는 호스트된 메일 공급자에게 해당 시스템에서 사용자를 삭제하라는 요청도 보냅니다. 공급자는 사용자의 계정 및 계정과 연결 된 메일을 모두 삭제할 수 있습니다.  
+ 마지막으로, 서버에서 사용자 계정 삭제 마법사를 사용하여 사용자를 삭제하는 경우 마법사는 호스트된 메일 공급자에게 해당 시스템에서 사용자를 삭제하라는 요청도 보냅니다. 공급자는 사용자 계정 및 계정과 연결 된 전자 메일을 모두 삭제할 수 있습니다.  
 
  필요한 전자 메일 클라이언트 소프트웨어를 설치하는 방법 또는 전자 메일 계정에 액세스하는 방법에 대한 사용자 정보는 해당 호스트된 전자 메일 공급자가 제공한 도움말 설명서를 참조하세요.  
 
 ### <a name="what-is-a-mailbox-quota"></a>사서함 할당량이란 무엇인가요?  
- 네트워크 사용자의 Exchange 사서함 데이터에 대 한 할당 되는 저장소 공간의 사서함 할당량 라고 합니다.  
+ 네트워크 사용자의 Exchange 사서함 데이터에 할당 된 저장소 공간의 크기를 사서함 할당량 이라고 합니다.  
 
  대시보드에서 **Exchange Server 통합 설정** 작업을 실행하면 마법사가 사서함 할당량을 적용하고 할당량 크기를 지정할지 여부를 선택할 수 있는 페이지를 사용자 계정 추가 마법사에 추가합니다. 기본적으로 **사서함 할당량 적용** 옵션은 선택(설정)되어 있고 사용자 사서함에는 2GB의 저장소 공간이 할당됩니다. Exchange 관리자는 비즈니스 요구에 맞게 사서함 할당량 설정을 사용자 지정할 수 있습니다.  
 

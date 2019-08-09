@@ -12,12 +12,12 @@ ms.assetid: 4950469d-d800-430d-8d10-53bafc4a9932
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 2e393f184f1abfa79647432bd592975cae3fdc6c
-ms.sourcegitcommit: 9a4ab3a0d00b06ff16173aed616624c857589459
+ms.openlocfilehash: 82a7a5b3ce3662574260379bc893da484baf1caa
+ms.sourcegitcommit: 02f1e11ba37a83e12d8ffa3372e3b64b20d90d00
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66828537"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68863407"
 ---
 # <a name="move-windows-sbs-2008-settings-and-data-to-the-destination-server-for-windows-server-essentials-migration"></a>Windows Server Essentials 마이그레이션을 위해 대상 서버에 Windows SBS 2008 설정 및 데이터 이동
 
@@ -27,15 +27,15 @@ ms.locfileid: "66828537"
 
 1. [대상 서버에 데이터 복사](#copy-data-to-the-destination-server)
 
-2. [(선택 사항) Windows Server Essentials 대시보드에 Active Directory 사용자 계정 가져오기](#import-active-directory-user-accounts-to-the-windows-server-essentials-dashboard)
+2. [사용자 계정 Active Directory Windows Server Essentials 대시보드로 가져오기 (선택 사항)](#import-active-directory-user-accounts-to-the-windows-server-essentials-dashboard)
 
-3. [원본 서버에서 DHCP 서버 역할을 라우터로 이동](#move-the-dhcp-server-role-from-the-source-server-to-the-router)
+3. [원본 서버에서 라우터로 DHCP 서버 역할 이동](#move-the-dhcp-server-role-from-the-source-server-to-the-router)
 
 4. [네트워크 구성](#configure-the-network)
 
-5. [(선택 사항) 레거시 Active Directory 그룹 정책 개체 제거](#remove-legacy-active-directory-group-policy-objects)
+5. [레거시 Active Directory 그룹 정책 개체 제거 (선택 사항)](#remove-legacy-active-directory-group-policy-objects)
 
-6. [사용자 계정에 허용 되는 컴퓨터 매핑](#map-permitted-computers-to-user-accounts)
+6. [허용 된 컴퓨터를 사용자 계정에 매핑](#map-permitted-computers-to-user-accounts)
 
 ## <a name="copy-data-to-the-destination-server"></a>대상 서버에 데이터 복사
 원본 서버에서 대상 서버로 데이터를 복사하기 전에 다음 작업을 수행합니다.
@@ -55,17 +55,17 @@ ms.locfileid: "66828537"
     `robocopy \\<SourceServerName> \<SharedSourceFolderName> \\<DestinationServerName> \<SharedDestinationFolderName> /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt` 
 
  각 항목이 나타내는 의미는 다음과 같습니다.
- - \<SourceServerName\> 원본 서버의 이름
- - \<SharedSourceFolderName\> 원본 서버의 공유 폴더의 이름
- - \<DestinationServerName\> 대상 서버의 이름
- - \<SharedDestinationFolderName\> 데이터를 복사할 대상 서버의 공유 폴더입니다. 
+ - \<SourceServerName\> 은 원본 서버의 이름입니다.
+ - \<Sharedsourcefoldername\> 은 원본 서버에 있는 공유 폴더의 이름입니다.
+ - \<Destinationservername\> 은 대상 서버의 이름입니다.
+ - \<Shareddestinationfoldername\> 은 데이터가 복사 될 대상 서버의 공유 폴더입니다. 
 
 3. 원본 서버에서 마이그레이션할 각 공유 폴더에 대해 이전 단계를 반복합니다. 
 
-## <a name="import-active-directory-user-accounts-to-the-windows-server-essentials-dashboard"></a>Windows Server Essentials 대시보드에 Active Directory 사용자 계정 가져오기
+## <a name="import-active-directory-user-accounts-to-the-windows-server-essentials-dashboard"></a>Windows Server Essentials 대시보드로 사용자 계정 Active Directory 가져오기
  기본적으로 원본 서버에서 만든 모든 사용자 계정은 Windows Server Essentials의 대시보드로 자동으로 마이그레이션됩니다. 그러나 일부 속성이 마이그레이션 요구 사항을 충족하지 않으면 Active Directory 사용자 계정의 자동 마이그레이션이 실패합니다. 다음 Windows PowerShell cmdlet을 사용하여 Active Directory 사용자를 가져올 수 있습니다. 
 
-#### <a name="to-import-an-active-directory-user-account-to-the-windows-server-essentials-dashboard"></a>Active Directory 사용자 계정을 Windows Server Essentials 대시보드를 가져오려면 
+#### <a name="to-import-an-active-directory-user-account-to-the-windows-server-essentials-dashboard"></a>Windows Server Essentials 대시보드에 Active Directory 사용자 계정을 가져오려면 
  
 1. 도메인 관리자로 대상 서버에 로그온합니다. 
  
@@ -120,7 +120,7 @@ ms.locfileid: "66828537"
 > 두 번째 서버에서 온-프레미스 Exchange Server를 설정한 경우 포트 25(SMTP)가 열려 있고 온-프레미스 Exchange Server의 IP 주소로 리디렉션되는지 확인해야 합니다.
  
 ## <a name="remove-legacy-active-directory-group-policy-objects"></a>레거시 Active Directory 그룹 정책 개체 제거
-그룹 정책 개체 (Gpo)를 Windows Server Essentials에 대 한 업데이트 됩니다. 이 GPO는 Windows SBS 2008 GPO의 하위 집합입니다. Windows Server Essentials에 대 한 여러 Windows SBS 2008 Gpo 및 Windows Management Instrumentation (WMI) 필터는 Windows Server Essentials Gpo 및 WMI 필터를 사용 하 여 충돌을 방지 하려면 수동으로 삭제 해야 합니다. 
+Windows Server Essentials에 대 한 Gpo (그룹 정책 개체)가 업데이트 됩니다. 이 GPO는 Windows SBS 2008 GPO의 하위 집합입니다. Windows Server Essentials의 경우 windows Server Essentials Gpo 및 WMI 필터와의 충돌을 방지 하려면 여러 Windows SBS 2008 Gpo 및 WMI(Windows Management Instrumentation) (WMI) 필터를 수동으로 삭제 해야 합니다. 
  
 > [!NOTE]
 > 원래 Windows SBS 2008 그룹 정책 개체를 수정한 경우 복사본을 다른 위치에 저장하고 Windows SBS 2008에서 삭제해야 합니다. 
@@ -131,9 +131,9 @@ ms.locfileid: "66828537"
  
 2. **시작**을 클릭한 다음 **서버 관리**를 클릭합니다. 
  
-3. 탐색 창에서 클릭 **Advanced Management**, 클릭 **그룹 정책 관리**를 클릭 하 고 **포리스트: * * * < YourDomainName\>* 합니다. 
+3. 탐색 창에서 **고급 관리**를 클릭 하 고 **그룹 정책 관리**를 클릭 한 다음 **포리스트:** _< 해당 domainname\>_ 을 클릭 합니다. 
  
-4. 클릭 **도메인**, 클릭 *< YourDomainName\>* 를 클릭 하 고 **그룹 정책 개체**합니다. 
+4. **도메인**을 클릭 하 고 < 도메인 *\>이름*을 클릭 한 다음 **그룹 정책 개체**를 클릭 합니다. 
  
 5. **Small Business Server 감사 정책**을 마우스 오른쪽 단추로 클릭하고 **삭제**, **확인**을 차례로 클릭합니다. 
  
@@ -143,7 +143,7 @@ ms.locfileid: "66828537"
  
  - Small Business Server 도메인 암호 정책 
  
-강력한 암호를 적용 하도록 Windows Server Essentials에서 암호 정책을 구성 하는 것이 좋습니다. 암호 정책을 구성하려면 대시보드를 사용하여 기본 도메인 정책에 구성을 씁니다. Windows SBS 2008에서와 마찬가지로 암호 정책 구성은 Small Business Server 도메인 암호 정책 개체에 기록되지 않습니다. 
+강력한 암호를 적용 하려면 Windows Server Essentials에서 암호 정책을 구성 하는 것이 좋습니다. 암호 정책을 구성하려면 대시보드를 사용하여 기본 도메인 정책에 구성을 씁니다. Windows SBS 2008에서와 마찬가지로 암호 정책 구성은 Small Business Server 도메인 암호 정책 개체에 기록되지 않습니다. 
  
  - Small Business Server 인터넷 연결 방화벽 
  
@@ -173,9 +173,9 @@ ms.locfileid: "66828537"
  
 2. **시작**을 클릭한 다음 **서버 관리**를 클릭합니다. 
  
-3. 탐색 창에서 클릭 **Advanced Management**, 클릭 **그룹 정책 관리**를 클릭 하 고 **포리스트: * * * < YourNetworkDomainName\>* 
+3. 탐색 창에서 **고급 관리**, **그룹 정책 관리**를 차례로 클릭 한 다음 **포리스트:** _< 해당 networkdomainname\>_  을 클릭 합니다. 
  
-4. 클릭 **도메인**, 클릭 *< YourNetworkDomainName\>* 를 클릭 하 고 **WMI 필터**합니다. 
+4. **도메인**을 클릭 하 고 *< networkdomainname\>* 을 클릭 한 다음 **WMI 필터**를 클릭 합니다. 
  
 5. **PostSP2**를 마우스 오른쪽 단추로 클릭하고 **삭제**, **예**를 차례로 클릭합니다. 
  
@@ -184,7 +184,7 @@ ms.locfileid: "66828537"
 7. 이러한 세 가지 WMI 필터가 삭제되었는지 확인합니다. 
  
 ## <a name="map-permitted-computers-to-user-accounts"></a>허용되는 컴퓨터를 사용자 계정에 매핑
-Windows SBS 2008에서는 사용자가 원격 웹 액세스에 연결하면 네트워크에 있는 모든 컴퓨터가 표시됩니다. 여기에는 사용자에게 액세스 권한이 없는 컴퓨터가 포함될 수 있습니다. Windows Server Essentials에서 사용자 원격 웹 액세스에 표시할 컴퓨터를 명시적으로 할당 되어야 합니다. Windows SBS 2008에서 마이그레이션된 각 사용자 계정을 하나 이상의 컴퓨터에 매핑해야 합니다. 
+Windows SBS 2008에서는 사용자가 원격 웹 액세스에 연결하면 네트워크에 있는 모든 컴퓨터가 표시됩니다. 여기에는 사용자에게 액세스 권한이 없는 컴퓨터가 포함될 수 있습니다. Windows Server Essentials에서는 사용자가 원격 웹 액세스에 표시 되기 위해 컴퓨터에 명시적으로 할당 되어야 합니다. Windows SBS 2008에서 마이그레이션된 각 사용자 계정을 하나 이상의 컴퓨터에 매핑해야 합니다. 
  
 #### <a name="to-map-user-accounts-to-computers"></a>사용자 계정을 컴퓨터에 매핑하려면 
  

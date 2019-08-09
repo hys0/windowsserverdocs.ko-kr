@@ -1,6 +1,6 @@
 ---
 title: MultiPoint 스테이션
-description: 사용자에 대 한 다양 한 옵션을 포함 하 여 MultiPoint 서비스 스테이션에 알아봅니다
+description: 사용자를 위한 다양 한 옵션을 포함 하 여 MultiPoint 서비스의 스테이션에 대해 알아보기
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold
@@ -13,15 +13,15 @@ ms.assetid: f9f9d618-ccfe-41ea-a52c-00c3c7adb51a
 author: evaseydl
 manager: scottman
 ms.author: evas
-ms.openlocfilehash: e747826a7cd84521bc62e48abedf3092bf6d844c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 43386f0f4d4020d5e127e7b7cbd918e4c48cec6e
+ms.sourcegitcommit: 02f1e11ba37a83e12d8ffa3372e3b64b20d90d00
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59855654"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68863464"
 ---
 # <a name="multipoint--stations"></a>MultiPoint 스테이션
-MultiPoint 서비스 시스템 환경에서는 *스테이션* MultiPoint Service를 실행 하는 컴퓨터에 연결 하기 위한 사용자 끝점입니다. 각 스테이션 독립적인 Windows 10 환경 사용 하 여 사용자를 제공합니다. 다음 스테이션 유형이 지원 됩니다.  
+MultiPoint 서비스 시스템 환경에서는 *스테이션* MultiPoint Service를 실행 하는 컴퓨터에 연결 하기 위한 사용자 끝점입니다. 각 스테이션은 사용자에 게 독립적인 Windows 10 환경을 제공 합니다. 다음 스테이션 유형이 지원 됩니다.  
   
 -   직접 비디오 연결 스테이션  
   
@@ -46,9 +46,9 @@ MultiPoint Service를 실행 하는 컴퓨터는 각각 하나 이상의 비디�
   
 ![MultiPoint 서비스 USB 기반 시스템 레이아웃 이미지](./media/WMSMultiPointServerUSBSystemLayout.gif)  
   
-**그림 1** MultiPoint 서비스 시스템과 4 개의 직접 비디오 연결 스테이션  
+**그림 1** 직접 비디오 연결 스테이션 4 개를 포함 하는 MultiPoint 서비스 시스템  
   
-### <a name="BKMK_PS2stations"></a>Ps/2 스테이션  
+### <a name="BKMK_PS2stations"></a>PS/2 개 스테이션  
 MultiPoint 서비스와 함께 PS/2 키보드 및 마우스 마더보드에 PS/2 스테이션을 만들려면 직접 비디오 연결된 모니터에 매핑할 수 있습니다. 고품질 아날로그 오디오 마더보드에 스테이션의이 형식과 연결 된 오디오가입니다. 이 컴퓨터에 적용 되지 않는 마더보드에 PS/2 잭 없는 경우가 있습니다.  
   
 ## <a name="usb-zero-client-connected-stations"></a>USB-0-클라이언트 연결 스테이션  
@@ -58,7 +58,7 @@ USB-0-클라이언트 연결 스테이션 활용 한 *USB 제로 클라이언트
   
 ![USB 0 클라이언트 연결 스테이션](./media/WMS11_diagram7.gif)  
   
-**그림 2** 기본 스테이션 및 두 개의 USB 0 클라이언트 연결 스테이션 MultiPoint 서비스 시스템  
+**그림 2** 기본 스테이션을 사용 하는 MultiPoint 서비스 시스템 및 두 개의 USB 0 클라이언트 연결 스테이션  
   
 ### <a name="usb-over-ethernet-zero-clients"></a>USB 이더넷 0 클라이언트  
 USB 이더넷 0 클라이언트는 MultiPoint 서비스 시스템에 USB LAN을 통해 전송 하는 USB 제로 클라이언트의 변형입니다. 이러한 종류의 USB 제로 클라이언트 0 클라이언트 다른 usb 비슷하게 작동 하지만 USB 케이블 길이가 최대값에 따라 제한 되지 않습니다. USB 이더넷 0 클라이언트는 기존의 씬 클라이언트 및 MultiPoint 서비스 시스템의 USB 장치를 가상으로 나타납니다. 이러한 장치를 사용할 때 특정 성능 및 사이트 계획 권장 사항에 대 한 장치 제조업체에 문의 하십시오. 대부분의 장치에 연결 하 고 장치 MultiPoint 서비스 시스템에 연결할 수 있도록 다중 포인트 관리자에 대 한 타사 플러그 인 경우  
@@ -68,7 +68,7 @@ USB 이더넷 0 클라이언트는 MultiPoint 서비스 시스템에 USB LAN을 
   
 클라이언트 및 장치의 Microsoft RemoteFX를 실행 하는 프로세서 및 비디오 하드웨어 기능 씬 클라이언트를 로컬 또는 컴퓨터의 네트워크를 통해 고화질 비디오를 제공 하기를 활용 함으로써 풍부한 멀티미디어 경험을 제공할 수 있습니다.  
   
-기존 LAN 클라이언트가 있는 경우 MultiPoint 서비스를 동시에 Windows 10 환경으로 업그레이드 하는 모든 사용자는 신속 하 고 비용 효율적인 방법을 제공할 수 있습니다.  
+기존 LAN 클라이언트가 있는 경우 MultiPoint 서비스는 모든 사용자를 Windows 10 환경으로 동시에 업그레이드 하는 빠르고 비용 효율적인 방법을 제공할 수 있습니다.  
   
 배포 및 관리 측면에서 보면 다음과 같은 차이점이 RDP-조치-LAN으로 연결 된 스테이션을 사용 하는 경우 존재 합니다.  
   
@@ -82,17 +82,17 @@ USB 이더넷 0 클라이언트는 MultiPoint 서비스 시스템에 USB LAN을 
   
 -   화면 분할 기능이 없습니다.  
   
-    자세한 내용은 참조 [화면 분할 스테이션](#a-namebkmksplitscreenstationsasplit-screen-stations) 이 항목의 뒷부분에 나오는  
+    자세한 내용은 참조 [화면 분할 스테이션](#split-screen-stations) 이 항목의 뒷부분에 나오는  
   
 -   다중 포인트 관리자 콘솔을 통해 구성 자동 로그온 없거나 스테이션 이름 바꾸기  
   
 ![USB 제로 클라이언트 연결 스테이션](./media/Diagram1.gif)  
   
-**그림 3** MultiPoint Service 시스템과 RDP-조치-LAN으로 연결 된 스테이션  
+**그림 3** RDP over LAN에 연결 된 스테이션이 있는 MultiPoint 서비스 시스템  
   
 ## <a name="additional-configuration-options"></a>추가 구성 옵션  
   
-### <a name="BKMK_SplitscreenStations"></a>화면 분할 스테이션  
+### <a name="split-screen-stations"></a>분할 화면 스테이션  
 MultiPoint 서비스 스테이션 직접 비디오를 연결 하거나 USB-0-클라이언트 연결 스테이션을 사용 하 여 컴퓨터에 대 한 분할 화면 옵션을 제공합니다. 화면 분할 per 모니터 추가 스테이션을 만들 수를 제공 합니다. 두 대의 모니터를 사용 하는 대신 한 모니터를 사용 하 여 두 개의 스테이션을 만들려면 두 개의 스테이션 허브 설치 프로그램이와 모니터를 사용할 수 있습니다. 추가 모니터, USB 0 클라이언트 또는 비디오 카드를 구입 하지 않고도 신속 하 게 사용할 수 있는 스테이션의 수를 늘릴 수 있습니다.  
   
 화면 분할 스테이션 사용의 이점 포함할 수 있습니다.  
@@ -111,18 +111,18 @@ MultiPoint 서비스 스테이션 직접 비디오를 연결 하거나 USB-0-클
   
 ![분할 화면 스테이션](./media/WMS_diagram3.gif)  
   
-**그림 4** MultiPoint Service 시스템과 분할 화면 스테이션  
+**그림 4** 화면 분할 스테이션을 사용 하는 MultiPoint 서비스 시스템  
   
-## <a name="BKMK_StationTypeComparison"></a>스테이션 형식 비교  
+## <a name="BKMK_StationTypeComparison"></a>스테이션 유형 비교  
   
 ||직접 비디오 연결|USB 제로 클라이언트 연결|RDP-조치-LAN 연결|  
 |-|--------------------------|-----------------------------|----------------------------|  
 |비디오 성능|비디오 최상의 성능을 위해 권장||RemoteFX를 지 원하는 향상 된 비디오 품질이 낮은 네트워크 대역폭에 대 한 씬 클라이언트를 사용 하 여|  
-|물리적 제한|비디오 케이블 길이 및 USB 허브 및 길이 (권장 15 측정기 최대 길이)에 의해 제한 됨|USB 허브 및 길이 (권장 15 측정기 최대 길이)에 의해 제한 됨|LAN 배포로 제한|  
+|물리적 제한|비디오 케이블 길이 및 USB 허브 및 케이블 길이로 제한 (권장 15 미터 최대 길이)|USB 허브 및 케이블 길이에 의해 제한 됩니다 (권장 15 미터 최대 길이).|LAN 배포로 제한|  
 |허용 되는 스테이션의 수 |비디오 카드 당 비디오 포트 시간 마더보드에 사용 가능한 PCIe 슬롯의 수로 제한|USB 제로 클라이언트 제조업체에서 총 수를 제한 될 수도 있습니다 (자세한 내용은이 테이블 다음에 나오는 참고 참조).|사용 가능한 네트워크 스위치 포트에 의해 제한 됨|  
 |화면 분할|예|예|아니요|  
-|다중 포인트 관리자 스테이션 주변 장치 상태, 자동 로그온 구성을 워크스테이션 이름 바꾸기|예|예|아니오|  
-|서버 시작 메뉴에 액세스|예|아니오|아니오|  
+|다중 포인트 관리자 스테이션 주변 장치 상태, 자동 로그온 구성을 워크스테이션 이름 바꾸기|예|예|아니요|  
+|서버 시작 메뉴에 액세스|예|아니오|아니요|  
   
 > [!NOTE]  
 > 서버에 연결 된 USB 제로 클라이언트의 총 수는 제조업체 또는 MultiPoint Service를 실행 하는 컴퓨터의 하드웨어 기능 제한 될 수도 있습니다.
