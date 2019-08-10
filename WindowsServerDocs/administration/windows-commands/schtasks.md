@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7f898c67755fb8e7874932ea06a7cdf461d1e4bd
-ms.sourcegitcommit: e40fce7b8b4bc0bef278e676435306f14078cf00
+ms.openlocfilehash: fdda956a5da9ec50e44002cd8ab38373396d5713
+ms.sourcegitcommit: 0e3c2473a54f915d35687d30d1b4b1ac2bae4068
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68787189"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68914648"
 ---
 # <a name="schtasks"></a>schtasks
 
@@ -479,7 +479,7 @@ schtasks /create /tn <TaskName> /tr <TaskRun> /sc monthly /mo {FIRST | SECOND | 
 
 #### <a name="remarks"></a>설명
 
-이 일정 유형에 **/sc monthly** 매개 변수는 **/mo** (한정자) 매개 변수 및 **/d** (일) 매개 변수는 필요 합니다. **/mo** (한정자) 매개 변수는 작업이 실행 되는 주를 지정 합니다. **/d** 매개 변수는 요일을 지정 합니다. (이 일정 유형에 대 한 주 1 일에만 지정할 수 있습니다.) 이 일정에는 선택적 **/m** (월) 매개 변수를 사용 하면 특정 월 또는 매월 실행 하는 것에 대 한 작업을 예약 (<em>). **/M</em>* 매개 변수의 기본값은 매월 (* )입니다.
+이 일정 유형에 **/sc monthly** 매개 변수는 **/mo** (한정자) 매개 변수 및 **/d** (일) 매개 변수는 필요 합니다. **/mo** (한정자) 매개 변수는 작업이 실행 되는 주를 지정 합니다. **/d** 매개 변수는 요일을 지정 합니다. (이 일정 유형에 대 한 주 1 일에만 지정할 수 있습니다.) 이 일정에는 선택적 **/m** (월) 매개 변수를 사용 하면 특정 월 또는 매월 실행 하는 것에 대 한 작업을 예약 (\*). **/M** 매개 변수의 기본값은 매월 (\*)입니다.
 
 #### <a name="examples"></a>예
 

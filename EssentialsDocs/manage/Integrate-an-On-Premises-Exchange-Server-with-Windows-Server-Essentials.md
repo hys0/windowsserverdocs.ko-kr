@@ -12,12 +12,12 @@ ms.assetid: b56a21e2-c9e3-4ba9-97d9-719ea6a0854b
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: ef57ac325465d7b7a5cf65a2931df824c351c6a2
-ms.sourcegitcommit: 02f1e11ba37a83e12d8ffa3372e3b64b20d90d00
+ms.openlocfilehash: 142ae8514a6a480f8181ce193c2f437e2f286e2d
+ms.sourcegitcommit: 0e3c2473a54f915d35687d30d1b4b1ac2bae4068
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/09/2019
-ms.locfileid: "68863435"
+ms.locfileid: "68914603"
 ---
 # <a name="integrate-an-on-premises-exchange-server-with-windows-server-essentials"></a>온-프레미스 Exchange Server와 Windows Server Essentials 통합
 
@@ -364,18 +364,18 @@ New-SendConnector -Name "WSE Internet SendConnector" -Usage "Internet" -AddressS
 
    - 새로 설치를 수행하는 경우 다음 명령을 실행합니다.  
 
-      **Arrconfig 구성-cert** *인증서 파일의 경로입니다* . **-호스트 이름** *Exchange Server의 호스트 이름*  
+      **Arrconfig 구성-cert** _인증서 파일의 경로입니다_ . **-호스트 이름** _Exchange Server의 호스트 이름_  
 
      > [!NOTE]
-     >  예를 들면 **Arrconfig 구성-cert** *c:\temp\certificate.pfx* **-호스트 이름** *mail.contoso.com*  
+     >  예를 들면 **Arrconfig 구성-cert** _c:\temp\certificate.pfx_ **-호스트 이름** _mail.contoso.com_  
      > 
      >  *mail.contoso.com* 을 인증서로 보호되는 도메인 이름으로 바꿉니다.  
 
    - Windows Small Business Server에서 마이그레이션하는 경우 다음 명령을 실행합니다.  
 
-      **Arrconfig 구성-cert** *인증서 파일의 경로입니다* . **-호스트 이름** *Exchange Server의 호스트 이름* **-targetserver** *Exchange server의 서버 이름*  
+      **Arrconfig 구성-cert** _인증서 파일의 경로입니다_ . **-호스트 이름** _Exchange Server의 호스트 이름_ **-targetserver** _Exchange server의 서버 이름_  
 
-      예를 들면 **Arrconfig 구성-cert** *c:\temp\certificate.pfx* **-호스트 이름** *mail.contoso.com* * *-targetserver * * *ExchangeSvr*  
+      예를 들면 **Arrconfig 구성-cert** _c:\temp\certificate.pfx_ **-호스트 이름** _mail.contoso.com_ * *-targetserver * * _ExchangeSvr_  
 
       *mail.contoso.com*을 도메인 이름으로 바꾸고, *ExchangeSvr*를 Exchange Server를 실행하는 서버 이름으로 바꿉니다.  
 

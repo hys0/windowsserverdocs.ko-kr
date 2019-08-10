@@ -10,12 +10,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 386ef1d8683b75bdc94fc1aa4ac7cb8acf6cd6fa
-ms.sourcegitcommit: 6f968368c12b9dd699c197afb3a3d13c2211f85b
+ms.openlocfilehash: c5c4ac470d1187aa6186f6f05cab3df185a642fd
+ms.sourcegitcommit: 0e3c2473a54f915d35687d30d1b4b1ac2bae4068
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68544490"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68914566"
 ---
 # <a name="step-2-configure-wsus"></a>2단계: WSUS 구성
 
@@ -389,11 +389,11 @@ WSUS에는 SSL을 위해 두 개의 포트가 필요합니다. 한 포트는 HTT
 
 2.  **시작**으로 이동 하 여 **CMD**를 입력 하 고 **명령 프롬프트**를 마우스 오른쪽 단추로 클릭 한 다음 **관리자 권한으로 실행**을 클릭 합니다.
 
-3.  *% ProgramFiles% * * *\\\update Services\Tools** 폴더로 이동 합니다.
+3.  탐색 하는 _% ProgramFiles %_ **\Update Services\Tools\\** 폴더입니다.
 
 4.  명령 프롬프트 창에서 다음 명령을 입력 합니다.
 
-    **Wsusutil.exe configuressl * * * certificateName*
+    **Wsusutil configuressl** _
 
     각 항목이 나타내는 의미는 다음과 같습니다.
 

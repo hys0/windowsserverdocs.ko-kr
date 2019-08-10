@@ -9,12 +9,12 @@ ms.technology: storage
 audience: IT Pro
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: 38b0947171b7fd8afc44a95b2244a3fd2a0c9e73
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: d4d2782a1d0ce4329feee03d6c3cb2e6b6a6dc55
+ms.sourcegitcommit: 0e3c2473a54f915d35687d30d1b4b1ac2bae4068
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66439042"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68914661"
 ---
 # <a name="fsutil-resource"></a>Fsutil 리소스
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows 2008, Windows Vista
@@ -56,25 +56,25 @@ fsutil resource [stop] <RmRootPathname>
 |      setavailable       |                                                                                                                                                                                                 트랜잭션 리소스 관리자를 일관성 보다 가용성을 선호를 지정 합니다.                                                                                                                                                                                                 |
 |      setconsistent      |                                                                                                                                                                                                 트랜잭션 리소스 관리자 일관성 가용성 보다를 선호를 지정 합니다.                                                                                                                                                                                                 |
 |         setlog          |                                                                                                                                                                                                  트랜잭션 리소스 관리자를 이미 실행 되 고 특성을 변경 합니다.                                                                                                                                                                                                  |
-|         증가          |                                                                                                  트랜잭션 리소스 관리자 로그가 증가할 수 있는 크기를 지정 합니다.<br /><br />증가 매개 변수는 다음과 같이 지정할 수 있습니다.<br /><br />-형식을 사용 하 여 컨테이너의 수: *컨테이너***컨테이너**<br />-   형식을 사용 하 여 백분율: *Percent***percent**                                                                                                   |
+|         증가          |                                                                                                  트랜잭션 리소스 관리자 로그가 증가할 수 있는 크기를 지정 합니다.<br /><br />증가 매개 변수는 다음과 같이 지정할 수 있습니다.<br /><br />-형식을 사용 하는 컨테이너 수: _컨테이너_ **컨테이너**<br />-형식을 사용 하는 백분율: _백분율_ **백분율**                                                                                                   |
 |      <containers>       |                                                                                                                                                                                                      트랜잭션 리소스 관리자에서 사용 되는 데이터 개체를 지정 합니다.                                                                                                                                                                                                       |
 |        maxextent        |                                                                                                                                                                                                컨테이너의 최대 수에 대 한 지정된 된 트랜잭션 리소스 관리자를 지정합니다.                                                                                                                                                                                                |
 |        minextent        |                                                                                                                                                                                                컨테이너의 최소 수에 대 한 지정된 된 트랜잭션 리소스 관리자를 지정합니다.                                                                                                                                                                                                |
-|  {전체 &#124; 실행 취소} 모드  |                                                                                                                                                                                        모든 트랜잭션을 기록할지 여부를 지정 합니다 ( **전체**) 또는 롤백 이벤트가 기록 됩니다 (**실행 취소**).                                                                                                                                                                                         |
+|  {전체 &#124; 실행 취소} 모드  |                                                                                                                                                                                        모든 트랜잭션을 기록할지 ( **full**) 아니면 롤백 이벤트만 기록할지 (**실행 취소**) 지정 합니다.                                                                                                                                                                                         |
 |         이름 바꾸기          |                                                                                                                                                                                                                  트랜잭션 리소스 관리자에 대 한 GUID를 변경합니다.                                                                                                                                                                                                                  |
 |         축소          |                                                                                                                                                                                              트랜잭션 리소스 관리자 로그 자동으로 줄일 수 있는 백분율을 지정 합니다.                                                                                                                                                                                              |
 |          크기           |                                                                                                                                                                                              트랜잭션 리소스 관리자의 크기를 지정된 된 수로 지정 *컨테이너*합니다.                                                                                                                                                                                               |
 |          start          |                                                                                                                                                                                                                    지정된 된 트랜잭션 리소스 관리자를 시작합니다.                                                                                                                                                                                                                    |
 |          stop           |                                                                                                                                                                                                                    지정된 된 트랜잭션 리소스 관리자를 중지합니다.                                                                                                                                                                                                                     |
 
-### <a name="BKMK_examples"></a>예제
-에 대 한 트랜잭션 리소스 관리자의 다섯 가지 컨테이너 자동 증가 하도록 c:\test에 지정 된 로그를 설정 하려면 다음을 입력 합니다.
+### <a name="BKMK_examples"></a>예와
+C:\test에서 지정 하는 트랜잭션 리소스 관리자의 로그를 설정 하려면 5 개의 컨테이너를 자동으로 증가 시키려면 다음을 입력 합니다.
 
 ```
 fsutil resource setlog growth 5 containers c:test
 ```
 
-에 대 한 트랜잭션 리소스 관리자의 2 %의 자동 증가 하도록 c:\test에 지정 된 로그를 설정 하려면 다음을 입력 합니다.
+C:\test에 지정 된 트랜잭션 리소스 관리자에 대 한 로그를 설정 하려면 2%의 자동 증가를 수행 하려면 다음을 입력 합니다.
 
 ```
 fsutil resource setlog growth 2 percent c:test
