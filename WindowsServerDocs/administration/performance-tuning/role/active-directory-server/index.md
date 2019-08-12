@@ -7,12 +7,12 @@ ms.topic: landing-page
 ms.author: TimWi; ChrisRob; HerbertM; KenBrumf;  MLeary; ShawnRab; v-tea
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: b06875f0fa175c1fcf4f60cbba9de3dbd10d06b1
-ms.sourcegitcommit: be243a92f09048ca80f85d71555ea6ee3751d712
+ms.openlocfilehash: b8ab1eed003294e3396bcea21b31b7c084180b9c
+ms.sourcegitcommit: 02f1e11ba37a83e12d8ffa3372e3b64b20d90d00
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792159"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68863453"
 ---
 # <a name="performance-tuning-active-directory-servers"></a>Active Directory 서버 성능 조정
 
@@ -26,7 +26,8 @@ Active Directory 성능 조정은 두 가지 목표에 초점을 맞추었습니
 - Active Directory 클라이언트/애플리케이션 조정 – 클라이언트 및 애플리케이션에서 최적화된 방식으로 Active Directory를 사용하는지 확인합니다.
 
 ## <a name="start-with-capacity-planning"></a>용량 계획으로 시작
-정확한 시간에 클라이언트 요청을 처리하려면 올바른 도메인과 올바른 로캘에 충분한 수의 도메인 컨트롤러를 적절히 배포해야 하고 중복 배치도 중요합니다. 이 부분은 심도 있는 주제이며 가이드의 범위를 벗어납니다. 독자. 독자는 [Active Directory Domain Services에 대한 용량 계획](capacity-planning-for-active-directory-domain-services.md)에 있는 권장 사항 및 지침을 읽고 이해한 후 Active Directory 성능 조정을 시작하는 것이 좋습니다.
+
+정확한 시간에 클라이언트 요청을 처리하려면 올바른 도메인과 올바른 로캘에 충분한 수의 도메인 컨트롤러를 적절히 배포해야 하고 중복 배치도 중요합니다. 이 부분은 심도 있는 주제이며 가이드의 범위를 벗어납니다. 독자는 [Active Directory Domain Services에 대한 용량 계획](capacity-planning-for-active-directory-domain-services.md)에 있는 권장 사항 및 지침을 읽고 이해한 후 Active Directory 성능 조정을 시작하는 것이 좋습니다.
 
 >[!Important]
 > 적절한 구성 및 Active Directory 크기 조정은 전체 시스템 및 워크로드 성능에 커다란 영향을 줄 수 있습니다. 독자는 [Active Directory Domain Services에 대한 용량 계획](capacity-planning-for-active-directory-domain-services.md)을 읽은 후 작업을 시작하는 것이 좋습니다.

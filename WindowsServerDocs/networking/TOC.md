@@ -83,6 +83,10 @@
 #### [DNS 쿼리에 필터를 적용하는 데 DNS 정책 사용](dns/deploy/apply-filters-on-dns-queries.md)
 #### [앱 부하 분산에 DNS 정책 사용](dns/deploy/app-lb.md)
 #### [지리적 위치 인식을 통한 앱 부하 분산에 DNS 정책 사용](dns/deploy/app-lb-geo.md)
+### [DNS 문제 해결](dns/troubleshoot/troubleshoot-dns-data-collection.md)
+#### [DNS 클라이언트 문제 해결](dns/troubleshoot/troubleshoot-dns-client.md)
+##### [DNS 클라이언트에서 DNS 클라이언트 쪽 캐싱 비활성화](dns/troubleshoot/disable-dns-client-side-caching.md)
+#### [DNS 서버 문제 해결](dns/troubleshoot/troubleshoot-dns-server.md)
 
 ## [DHCP(Dynamic Host Configuration Protocol)](technologies/dhcp/dhcp-top.md)
 ### [DHCP의 새로운 기능](technologies/dhcp/What-s-New-in-DHCP.md)
