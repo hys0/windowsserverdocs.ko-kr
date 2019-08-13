@@ -10,12 +10,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c5c4ac470d1187aa6186f6f05cab3df185a642fd
-ms.sourcegitcommit: 0e3c2473a54f915d35687d30d1b4b1ac2bae4068
+ms.openlocfilehash: 660cb0412abdf1ecb1afcba53a4aeb79ac407e56
+ms.sourcegitcommit: a9625758fbfb066494fe62e0da5f9570ccb738a3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68914566"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68952464"
 ---
 # <a name="step-2-configure-wsus"></a>2단계: WSUS 구성
 
@@ -56,33 +56,33 @@ WSUS 서버 역할을 서버에 설치한 후에는 이를 올바르게 구성�
 ### <a name="211-connection-from-the-wsus-server-to-the-internet"></a>2.1.1. WSUS 서버에서 인터넷 연결
 WSUS와 인터넷 사이에 회사 방화벽이 있는 경우 WSUS가 업데이트를 가져올 수 있도록 방화벽을 구성해야 할 수 있습니다. Microsoft 업데이트에서 업데이트를 가져오기 위해 WSUS 서버는 HTTPS 프로토콜에 포트 443을 사용합니다. 이 유형의 트래픽 허용 하는 대다수 회사 방화벽, 있지만 회사 보안 정책 때문에 서버에서 인터넷 액세스를 제한 하는 일부 회사에서는 있습니다. 회사에서 액세스를 제한 하는 경우 WSUS에서 다음 Url 목록에 대 한 인터넷 액세스를 허용 하는 권한 부여를 받아야 합니다.
 
-- http://windowsupdate.microsoft.com
+- http\://windowsupdate.microsoft.com
 
-- http://*.windowsupdate.microsoft.com
+- \:windowsupdate.microsoft.com//\*
 
-- https://*.windowsupdate.microsoft.com
+- \:windowsupdate.microsoft.com//\*
 
-- http://*.update.microsoft.com
+- \:update.microsoft.com//\*
 
-- https://*.update.microsoft.com
+- \:update.microsoft.com//\*
 
-- http://*.windowsupdate.com
+- \:windowsupdate.com//\*
 
-- http://download.windowsupdate.com
+- http\://download.windowsupdate.com
 
-- https://download.microsoft.com
+- https\://download.microsoft.com
 
-- http://*.download.windowsupdate.com
+- \:download.windowsupdate.com//\*
 
-- http://wustat.windows.com
+- http\://wustat.windows.com
 
-- http://ntservicepack.microsoft.com
+- http\://ntservicepack.microsoft.com
 
-- http://go.microsoft.com
+- http\://go.microsoft.com
 
-- http://dl.delivery.mp.microsoft.com
+- http\://dl.delivery.mp.microsoft.com
 
-- https://dl.delivery.mp.microsoft.com
+- https\://dl.delivery.mp.microsoft.com
 
 > [!IMPORTANT]
 > 방화벽 구성으로 인해 업데이트를 가져오려면 WSUS을 실패 하는 시나리오에 대 한 참조 [문서 885819](https://support.microsoft.com/kb/885819) Microsoft 기술 자료에서 합니다.
@@ -389,11 +389,11 @@ WSUS에는 SSL을 위해 두 개의 포트가 필요합니다. 한 포트는 HTT
 
 2.  **시작**으로 이동 하 여 **CMD**를 입력 하 고 **명령 프롬프트**를 마우스 오른쪽 단추로 클릭 한 다음 **관리자 권한으로 실행**을 클릭 합니다.
 
-3.  탐색 하는 _% ProgramFiles %_ **\Update Services\Tools\\** 폴더입니다.
+3.  _% ProgramFiles%_ **\\Update\\Services Tools\\**  폴더로 이동 합니다.
 
 4.  명령 프롬프트 창에서 다음 명령을 입력 합니다.
 
-    **Wsusutil configuressl** _
+    **Wsusutil configuressl**_certificateName_
 
     각 항목이 나타내는 의미는 다음과 같습니다.
 
