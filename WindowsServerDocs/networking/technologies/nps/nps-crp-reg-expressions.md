@@ -8,12 +8,12 @@ ms.topic: article
 ms.assetid: bc22d29c-678c-462d-88b3-1c737dceca75
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 3182ce1d0e856b06b143719c488864e9a58fbc0a
-ms.sourcegitcommit: 216d97ad843d59f12bf0b563b4192b75f66c7742
+ms.openlocfilehash: 34488a7f1a9d8ccd04de0aae35cbe98ec162c93f
+ms.sourcegitcommit: 107b801af9603be9268a8f459478e212319f7f06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476570"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68995260"
 ---
 # <a name="use-regular-expressions-in-nps"></a>NPS에서 정규식 사용
 
@@ -82,7 +82,7 @@ ms.locfileid: "68476570"
 
 - 바꿀 대상:
 
-**바꾸려는 <em>user@example.microsoft.com</em> *경우 example.***
+**바꾸려는 <em>user@example.microsoft.com</em> _경우 example._**
 
 - 찾아낼`(.*)@(.*)`
 
@@ -90,7 +90,7 @@ ms.locfileid: "68476570"
 
 
 
-***Domain\user* 를 *specific_domain\user* 로 바꾸려면**
+***Domain\user* 를 _specific_domain\user_ 로 바꾸려면**
 
 - 찾아낼`(.*)\\(.*)`
 
