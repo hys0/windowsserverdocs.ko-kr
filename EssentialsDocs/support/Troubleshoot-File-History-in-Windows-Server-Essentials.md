@@ -76,12 +76,12 @@ ms.locfileid: "68807872"
 5.  이제 새 사용자를 추가할 수 있습니다. 자세한 내용은 사용자 계정 추가를 참조 하세요. 에서 [사용자 계정 관리](../manage/Manage-User-Accounts-in-Windows-Server-Essentials.md)를 사용 합니다.  
   
 ### <a name="a-user-account-was-removed-but-the-users-file-history-remains"></a>사용자 계정을 제거했는데 사용자의 파일 히스토리가 남아 있음  
- 네트워크 관리자가 서버에서 사용자 또는 컴퓨터를 제거하지만 나중에 사용할 수 있도록 파일 히스토리 백업을 유지하기로 선택하는 경우도 있습니다. 파일 히스토리가 더 이상 필요하지 않은 경우 서버의 공유 폴더에서 사용자 또는 컴퓨터에 대한 File History Backups 폴더를 제거합니다. 이렇게 하려면 [To manually delete File History backups for a user or a computer](Troubleshoot-File-History-in-Windows-Server-Essentials.md#BKMK_manuallyDelete)을 참조하세요.  
+ 네트워크 관리자가 서버에서 사용자 또는 컴퓨터를 제거하지만 나중에 사용할 수 있도록 파일 히스토리 백업을 유지하기로 선택하는 경우도 있습니다. 파일 히스토리가 더 이상 필요하지 않은 경우 서버의 공유 폴더에서 사용자 또는 컴퓨터에 대한 File History Backups 폴더를 제거합니다. 이렇게 하려면 [사용자 또는 컴퓨터에 대 한 파일 히스토리 백업을 수동으로 삭제 하려면](Troubleshoot-File-History-in-Windows-Server-Essentials.md#BKMK_manuallyDelete)을 참조하세요.  
 
 5. 이제 새 사용자를 추가할 수 있습니다. 자세한 내용은 사용자 계정 추가를 참조 하세요. 에서 [사용자 계정 관리](../manage/Manage-User-Accounts-in-Windows-Server-Essentials.md)를 사용 합니다.  
   
 ### <a name="a-user-account-was-removed-but-the-users-file-history-remains"></a>사용자 계정을 제거했는데 사용자의 파일 히스토리가 남아 있음  
- 네트워크 관리자가 서버에서 사용자 또는 컴퓨터를 제거하지만 나중에 사용할 수 있도록 파일 히스토리 백업을 유지하기로 선택하는 경우도 있습니다. 파일 히스토리가 더 이상 필요하지 않은 경우 서버의 공유 폴더에서 사용자 또는 컴퓨터에 대한 File History Backups 폴더를 제거합니다. 이렇게 하려면 [To manually delete File History backups for a user or a computer](../support/Troubleshoot-File-History-in-Windows-Server-Essentials.md#BKMK_manuallyDelete)을 참조하세요.  
+ 네트워크 관리자가 서버에서 사용자 또는 컴퓨터를 제거하지만 나중에 사용할 수 있도록 파일 히스토리 백업을 유지하기로 선택하는 경우도 있습니다. 파일 히스토리가 더 이상 필요하지 않은 경우 서버의 공유 폴더에서 사용자 또는 컴퓨터에 대한 File History Backups 폴더를 제거합니다. 이렇게 하려면 [사용자 또는 컴퓨터에 대 한 파일 히스토리 백업을 수동으로 삭제 하려면](../support/Troubleshoot-File-History-in-Windows-Server-Essentials.md#BKMK_manuallyDelete)을 참조하세요.  
 
   
 ## <a name="see-also"></a>참조  
