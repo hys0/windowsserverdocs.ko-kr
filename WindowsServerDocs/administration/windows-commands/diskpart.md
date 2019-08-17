@@ -1,73 +1,73 @@
 ---
-Title: DiskPart 명령
+title: DiskPart 명령
 ms.prod: windows-server-threshold
 ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: e04af7b6425e208013277d1aaa6f28af62871bcc
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 7155dbf34f9986b3ebdd8b549b6a861cf7fcfe3a
+ms.sourcegitcommit: 23a6e83b688119c9357262b6815c9402c2965472
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67280076"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69560439"
 ---
 # <a name="diskpart-commands"></a>DiskPart 명령
 
-적용 대상: Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 및 Windows Server 2008 R2, Windows Server 2008
+적용 대상: Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2019, windows server 2016, Windows Server 2012 R2, Windows Server 2012 및 Windows Server 2008 R2, Windows Server 2008
 
-DiskPart 명령에는 PC의 드라이브 (디스크, 파티션, 볼륨 또는 가상 하드 디스크)를 관리할 수 있습니다. DiskPart 명령을 사용할 수 있습니다, 전에 먼저 나열 하 고 포커스를 제공 하는 개체를 선택 해야 합니다. 개체에 포커스가 있는 경우 입력 하는 DiskPart 명령을 모든 해당 개체에 대해 작동 합니다.
+DiskPart 명령은 PC의 드라이브 (디스크, 파티션, 볼륨 또는 가상 하드 디스크)를 관리 하는 데 도움이 됩니다. DiskPart 명령을 사용 하려면 먼저을 나열 하 고 개체를 선택 하 여 포커스를 제공 해야 합니다. 개체에 포커스가 있으면 사용자가 입력 하는 모든 DiskPart 명령이 해당 개체에 대해 작동 합니다.
 
-사용 가능한 개체를 나열 하 고 사용 하 여 개체의 숫자 또는 드라이브 문자를 확인할 수는 **목록 디스크, 볼륨 목록, 목록 파티션**, 및 **vdisk 목록** 명령입니다. 합니다 **디스크 목록, 목록 vdisk** 하 고 **볼륨 목록** 명령은 컴퓨터의 모든 디스크 및 볼륨을 표시 합니다. 그러나 합니다 **파티션 목록이** 명령 포커스가 있는 디스크에 파티션을 표시 합니다. 사용 하는 경우는 **목록을** 명령, 별표 (\*) 포커스가 있는 개체 옆에 나타납니다.
+사용 가능한 개체를 나열 하 고 **list disk, list volume, list partition**및 **list vdisk** 명령을 사용 하 여 개체의 번호 또는 드라이브 문자를 결정할 수 있습니다. **디스크 목록, vdisk 목록** 및 **볼륨 나열** 명령이 컴퓨터의 모든 디스크 및 볼륨을 표시 합니다. 그러나 **파티션 나열** 명령은 포커스가 있는 디스크의 파티션만 표시 합니다. **목록** 명령을 사용 하면 포커스가 있는 개체 옆에 별표\*()가 나타납니다.
 
-개체를 선택 하면 포커스를 다른 개체를 선택할 때까지 해당 개체에 남아 있습니다. 예를 들어 디스크 0의 포커스를 설정 하는 디스크 2의 8 볼륨을 선택 하 고 포커스는 디스크 0에서에서 2, 8 볼륨 디스크를 이동 합니다. 일부 명령은 자동으로 포커스를 변경합니다. 예를 들어 새 파티션을 만들면 포커스를 자동으로 전환 새 파티션으로 합니다.
+개체를 선택 하면 다른 개체를 선택할 때까지 해당 개체에 포커스가 남아 있습니다. 예를 들어 포커스가 디스크 0에 설정 되어 있고 디스크 2에서 볼륨 8을 선택 하는 경우 포커스는 디스크 0에서 디스크 2, 볼륨 8로 이동 합니다. 일부 명령은 자동으로 포커스를 변경 합니다. 예를 들어 새 파티션을 만들 때 포커스는 자동으로 새 파티션으로 전환 됩니다.
 
-선택된 된 된 디스크에 있는 파티션에 포커스를 제공할 수 있습니다. 파티션의 포커스가 관련된 볼륨 (있는 경우)에 게 포커스가 있습니다. 볼륨에 포커스, 관련 된 디스크 및 파티션 볼륨 단일 특정 파티션에 매핑되는 경우 포커스를 가질 수도 있습니다. 이 경우 디스크에 포커스 없고 파티션 손실 됩니다.
+선택한 디스크의 파티션에만 포커스를 제공할 수 있습니다. 파티션에 포커스가 있으면 관련 볼륨 (있는 경우)도 포커스를 가집니다. 볼륨에 포커스가 있을 때 볼륨이 단일 특정 파티션에 매핑되는 경우에도 관련 디스크와 파티션이 포커스를 가집니다. 그렇지 않은 경우에는 디스크에 집중 하 고 파티션이 손실 됩니다.
 
 ## <a name="diskpart-commands"></a>DiskPart 명령
 
-명령 프롬프트에서 입력 DiskPart 명령 인터프리터를 시작 합니다.
+DiskPart 명령 인터프리터를 시작 하려면 명령 프롬프트에서 다음을 입력 합니다.
 
 `diskpart`
 
 > [!IMPORTANT]
-> 로컬의 멤버 자격이 **관리자** 그룹 또는 그에 해당 하는 DiskPart를 실행 하는 데 필요한 최소입니다. 
+> DiskPart를 실행 하려면 최소한 로컬 **Administrators** 그룹의 구성원 이거나 이와 동등한 자격이 필요 합니다. 
 
-Diskpart 명령 인터프리터에 다음 명령을 실행할 수 있습니다.
+Diskpart 명령 인터프리터에서 다음 명령을 실행할 수 있습니다.
 
   - [활성](active.md)  
       
   - [추가](add.md)  
       
-  - [Assign](assign.md)  
+  - [할당](assign.md)  
       
-  - [vdisk를 연결 합니다.](attach-vdisk.md)  
+  - [연결 vdisk](attach-vdisk.md)  
       
   - [특성](attributes.md)  
       
-  - [Automount](automount.md)  
+  - [자동 탑재](automount.md)  
       
-  - [나누기](break.md)  
+  - [Break](break.md)  
       
-  - [정리](clean.md)  
+  - [청소할](clean.md)  
       
-  - [vdisk를 압축 합니다.](compact-vdisk.md)  
+  - [Compact vdisk](compact-vdisk.md)  
       
-  - [변환](convert.md)  
+  - [변환할지](convert.md)  
       
   - [만들기](create.md)  
       
   - [Delete](delete.md)  
       
-  - [Vdisk를 분리 합니다.](detach-vdisk.md)  
+  - [분리 vdisk](detach-vdisk.md)  
       
   - [Detail](detail.md)  
       
-  - [종료](exit.md)  
+  - [끝내기](exit.md)  
       
-  - [vdisk를 확장 합니다.](expand-vdisk.md)  
+  - [Vdisk 확장](expand-vdisk.md)  
       
-  - [확장](extend.md)  
+  - [넘으면](extend.md)  
       
   - [파일 시스템](filesystems.md)  
       
@@ -79,37 +79,37 @@ Diskpart 명령 인터프리터에 다음 명령을 실행할 수 있습니다.
       
   - [가져오기](import.md)  
       
-  - [비활성](inactive.md)  
+  - [라](inactive.md)  
       
   - [목록](list.md)  
       
-  - [Vdisk를 병합 합니다.](merge-vdisk.md)  
+  - [Merge vdisk](merge-vdisk.md)  
       
-  - [오프 라인](offline.md)  
+  - [라인인](offline.md)  
       
   - [온라인](online.md)  
       
-  - [Recover](recover.md)  
+  - [확보](recover.md)  
       
-  - [Rem](rem.md)  
+  - [남은](rem.md)  
       
   - [제거](remove.md)  
       
-  - [복구](repair.md)  
+  - [복구한](repair.md)  
       
-  - [다시 검사](rescan.md)  
+  - [검사](rescan.md)  
       
-  - [유지](retain.md)  
+  - [그대로](retain.md)  
       
-  - [San](san.md)  
+  - [산마리노](san.md)  
       
   - [Select](select.md)  
       
   - [집합 id](set-id.md)  
       
-  - [축소](shrink.md)  
+  - [축소할](shrink.md)  
       
-  - [uniqueid](uniqueid.md)  
+  - [Uniqueid](uniqueid.md)  
       
 
 ## <a name="additional-references"></a>추가 참조

@@ -8,12 +8,12 @@ ms.topic: article
 ms.assetid: bc22d29c-678c-462d-88b3-1c737dceca75
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: fec546e0608c36f9b3d907e486a0a3a24e7d1728
-ms.sourcegitcommit: e04565e4a1fb7aaed04addd2bc87cc6ec4c82e81
+ms.openlocfilehash: 2a47403d4f88d5487fb4ffb0e35c46438aadcd8a
+ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529903"
+ms.locfileid: "69546529"
 ---
 # <a name="use-regular-expressions-in-nps"></a>NPS에서 정규식 사용
 
@@ -28,7 +28,7 @@ ms.locfileid: "69529903"
 
 |  문자  |                                                                                 설명                                                                                  |                                                                 예제                                                                 |
 |-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-|     `\`|                                                              다음 문자를 일치 하는 문자로 표시 합니다.                                                               |                      `/n/ matches the character "n". The sequence /\n/ matches a line feed or newline character.`                       |
+|     `\ `     |                                                              다음 문자를 일치 하는 문자로 표시 합니다.                                                               |                      `/n/ matches the character "n". The sequence /\n/ matches a line feed or newline character.`                       |
 |     `^`     |                                                                 입력 또는 줄의 시작 부분을 찾습니다.                                                                  |                                                                 &nbsp;                                                                  |
 |     `$`     |                                                                    입력 또는 줄의 끝을 찾습니다.                                                                     |                                                                 &nbsp;                                                                  |
 |     `*`     |                                                             이전 문자를 0 번 이상 찾습니다.                                                              |                                                  `/zo*/ matches either "z" or "zoo."`                                                   |

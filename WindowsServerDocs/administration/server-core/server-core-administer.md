@@ -8,12 +8,12 @@ author: lizap
 ms.author: elizapo
 ms.localizationpriority: medium
 ms.date: 12/18/2018
-ms.openlocfilehash: b144127de2ceea99e36549974101d190154aaeaf
-ms.sourcegitcommit: 216d97ad843d59f12bf0b563b4192b75f66c7742
+ms.openlocfilehash: 78006dbbd2bdc569c15ac9967d8c5c542664312c
+ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476520"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69546284"
 ---
 # <a name="administer-a-server-core-server"></a>Server Core 서버 관리
 
@@ -34,7 +34,7 @@ Server Core 서버를 설치 하는 경우 기본적으로 DHCP 주소가 포함
 고정 IP 주소를 설정 하려면 다음을 수행 합니다. 
 
 1. **Get-netipinterface**를 실행 합니다. 
-2. IP 인터페이스 또는 IfIndex **description** 문자열에 대 한  열의 숫자를 확인 합니다. 네트워크 어댑터가 둘 이상인 경우에는 고정 IP 주소를 설정 하려는 인터페이스에 해당 하는 숫자 또는 문자열을 확인 합니다.
+2. IP 인터페이스 또는 IfIndex **description** 문자열에 대 한 열의 숫자를 확인 합니다. 네트워크 어댑터가 둘 이상인 경우에는 고정 IP 주소를 설정 하려는 인터페이스에 해당 하는 숫자 또는 문자열을 확인 합니다.
 3. 다음 cmdlet을 실행 하 여 고정 IP 주소를 설정 합니다.
 
    ```powershell
@@ -90,8 +90,8 @@ DHCP를 사용 하도록 전환 해야 하는 경우 **Set DnsClientServerAddres
 > [!NOTE]
 > 전화, [KMS (키 관리 서비스) 서버](../../get-started/server-2016-activation.md)를 사용 하 여 또는 원격으로 서버를 정품 인증할 수도 있습니다. 원격으로 정품 인증 하려면 원격 컴퓨터에서 다음 cmdlet을 실행 합니다. 
 > 
-> ```powershell
-> **cscript windows\system32\slmgr.vbs <ServerName> <UserName> <password>:-ato**
+> ```
+> cscript windows\system32\slmgr.vbs <ServerName> <UserName> <password>:-ato
 > ```
  
 ### <a name="configure-windows-firewall"></a>Windows 방화벽 구성
@@ -109,7 +109,7 @@ Windows PowerShell cmdlet 및 스크립트를 사용하여 Server Core 컴퓨터
 
 ### <a name="configuration-and-installation"></a>구성 및 설치
 
-|                             태스크                              |                                                                                                                                                                                                                 Command                                                                                                                                                                                                                 |
+|                             태스크                              |                                                                                                                                                                                                                 명령                                                                                                                                                                                                                 |
 |---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |             로컬 관리자 암호 설정             |                                                                                                                                                                                                      **net 사용자 관리자**\*                                                                                                                                                                                                      |
 |                  도메인에 컴퓨터 가입                  |                                                                                                                                                       **netdom join% computername%** **/domain:\<domain\> /userd:\<domain\\username/passwordd:\>** \* <br> 컴퓨터를 다시 시작합니다.                                                                                                                                                        |
@@ -133,10 +133,10 @@ Windows PowerShell cmdlet 및 스크립트를 사용하여 Server Core 컴퓨터
 
 ### <a name="networking-and-firewall"></a>네트워킹 및 방화벽
 
-|태스크|Command| 
+|태스크|명령| 
 |----|-------|
 |프록시 서버를 사용 하도록 서버 구성|**netsh Winhttp set proxy \<servername\>:\<포트 번호\>** <br>**참고:** Server Core 설치는 연결을 허용 하기 위해 암호가 필요한 프록시를 통해 인터넷에 액세스할 수 없습니다.|
-|인터넷 주소에 프록시를 사용 하지 않도록 서버 구성|**netsh winttp set proxy \<servername\>:\<port number\> bypass = "\<local\>"**| 
+|인터넷 주소에 프록시를 사용 하지 않도록 서버 구성|**netsh winhttp set proxy \<servername\>:\<포트 번호\> 바이패스 목록 = "\<local\>"**| 
 |IPSEC 구성 표시 또는 수정|**netsh ipsec**| 
 |NAP 구성 표시 또는 수정|**netsh nap**| 
 |IP를 실제 주소 변환에 표시 하거나 수정 합니다.|**arp**| 
@@ -147,12 +147,12 @@ Windows PowerShell cmdlet 및 스크립트를 사용하여 Server Core 컴퓨터
 |네트워크 연결에 대 한 홉 표시|**pathping**| 
 |네트워크 연결에 대 한 추적 홉|**tracert**| 
 |멀티캐스트 라우터 구성 표시|**mrinfo**| 
-|방화벽의 원격 관리 사용|**netsh advfirewall firewall set rule group = "Windows 방화벽 원격 관리" new enable = yes**| 
+|방화벽의 원격 관리 사용|**netsh advfirewall firewall set rule group = "Windows Defender Firewall Remote Management" new enable = yes**| 
  
 
 ### <a name="updates-error-reporting-and-feedback"></a>업데이트, 오류 보고 및 피드백
 
-|                               태스크                                |                                                                                                                               Command                                                                                                                                |
+|                               태스크                                |                                                                                                                               명령                                                                                                                                |
 |-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |                         업데이트 설치                         |                                                                                                                    **wusa \<업데이트\>.msu/quiet**                                                                                                                    |
 |                      설치된 업데이트 나열                       |                                                                                                                            **systeminfo**                                                                                                                            |
@@ -163,7 +163,7 @@ Windows PowerShell cmdlet 및 스크립트를 사용하여 Server Core 컴퓨터
 
 ### <a name="services-processes-and-performance"></a>서비스, 프로세스 및 성능
 
-|                               태스크                               |                                                                                                                                                                                                             Command                                                                                                                                                                                                              |
+|                               태스크                               |                                                                                                                                                                                                             명령                                                                                                                                                                                                              |
 |------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |                    실행 중인 서비스 나열                     |                                                                                                                                                                                                  **sc 쿼리** 또는 **net start**                                                                                                                                                                                                   |
 |                         서비스 시작                          |                                                                                                                                                                                 **sc 시작 \<서비스 이름\>**  또는 **net start \<서비스 이름\>**                                                                                                                                                                                  |
@@ -174,7 +174,7 @@ Windows PowerShell cmdlet 및 스크립트를 사용하여 Server Core 컴퓨터
 
 ### <a name="event-logs"></a>이벤트 로그
 
-|태스크|Command| 
+|태스크|명령| 
 |----|-------|
 |이벤트 로그 나열|**wevtutil el**| 
 |지정 된 로그의 쿼리 이벤트|**wevtutil qe/f: 텍스트 \<로그 이름\>**| 
@@ -184,7 +184,7 @@ Windows PowerShell cmdlet 및 스크립트를 사용하여 Server Core 컴퓨터
 
 ### <a name="disk-and-file-system"></a>디스크 및 파일 시스템
 
-|                   태스크                   |                        Command                        |
+|                   태스크                   |                        명령                        |
 |------------------------------------------|-------------------------------------------------------|
 |          디스크 파티션 관리          | 전체 명령 목록을 보려면 **diskpart/?** 를 실행 하십시오.  |
 |           소프트웨어 RAID 관리           | 명령의 전체 목록을 보려면 **diskraid/?** 를 실행 하십시오.  |
@@ -199,7 +199,7 @@ Windows PowerShell cmdlet 및 스크립트를 사용하여 Server Core 컴퓨터
  
 ### <a name="hardware"></a>하드웨어
 
-|태스크|Command| 
+|태스크|명령| 
 |----|-------|
 |새 하드웨어 장치의 드라이버 추가|% Homedrive%\\\<driver 폴더\>에 있는 폴더에 드라이버를 복사 합니다. **Pnputil-\\i-a% homedrive%\<driver folder\<\>\\driver\>.inf를 실행 합니다.**|
 |하드웨어 장치의 드라이버 제거|로드 된 드라이버 목록을 보려면 **sc query type = driver**를 실행 합니다. 그런 다음 **sc delete \<service_name\>**  를 실행 합니다.|

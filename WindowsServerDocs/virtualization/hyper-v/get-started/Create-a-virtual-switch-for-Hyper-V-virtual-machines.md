@@ -1,6 +1,6 @@
 ---
 title: Hyper-v 가상 컴퓨터에 대 한 가상 스위치 만들기
-description: Hyper-v 관리자 또는 Windows PowerShell을 사용 하 여 가상 스위치를 만들기에 대 한 지침을 제공 합니다.
+description: Hyper-v 관리자 또는 Windows PowerShell을 사용 하 여 가상 스위치를 만드는 방법에 대 한 지침을 제공 합니다.
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill
@@ -11,18 +11,18 @@ ms.assetid: fdc8063c-47ce-4448-b445-d7ff9894dc17
 author: KBDAzure
 ms.author: kathydav
 ms.date: 10/04/2016
-ms.openlocfilehash: 2668f9fa21c8efbad455d82c7e110ff89b729187
-ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
+ms.openlocfilehash: 3c0ba19183dd68a86d995293f663accf10e91df9
+ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/25/2019
-ms.locfileid: "66222873"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69546382"
 ---
 # <a name="create-a-virtual-switch-for-hyper-v-virtual-machines"></a>Hyper-v 가상 컴퓨터에 대 한 가상 스위치 만들기
 
->적용 대상: Windows 10, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
+>적용 대상: Windows 10, Windows Server 2016, Microsoft Hyper-v Server 2016, Windows Server 2019, Microsoft Hyper-v Server 2019
   
-가상 스위치에 가상 컴퓨터를 다른 컴퓨터와 통신 하는 Hyper-v 호스트에 만들어진 있습니다. 먼저 Windows 서버에 Hyper-v 역할을 설치 하는 경우 가상 스위치를 만들 수 있습니다. 추가 가상 스위치를 만들려면 Hyper-v 관리자 또는 Windows PowerShell을 사용 합니다. 가상 스위치에 대 한 자세한 참조 [Hyper-v 가상 스위치](../../hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md)합니다.  
+가상 스위치에 가상 컴퓨터를 다른 컴퓨터와 통신 하는 Hyper-v 호스트에 만들어진 있습니다. Windows Server에 Hyper-v 역할을 처음 설치할 때 가상 스위치를 만들 수 있습니다. 추가 가상 스위치를 만들려면 Hyper-v 관리자 또는 Windows PowerShell을 사용 합니다. 가상 스위치에 대 한 자세한 참조 [Hyper-v 가상 스위치](../../hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md)합니다.  
   
 가상 컴퓨터 네트워킹 복잡 한 주제를 수 있습니다. 처럼 사용할 수 있는 몇 가지 새로운 가상 스위치 기능 되며 [포함 된 팀 전환 (SET)](../../hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md#switch-embedded-teaming-set)합니다. 하지만 기본 네트워킹은 매우 쉽습니다. 이 항목에서는 Hyper-v에서 네트워크로 연결 된 가상 컴퓨터를 만들 수 있도록 데 필요한 만큼만 다룹니다. 네트워킹 인프라를 설정 하는 방법을 하는 방법에 대 한 자세한 내용은 검토는 [네트워킹](../../../networking/Networking.md) 설명서입니다.   
   
@@ -53,9 +53,9 @@ ms.locfileid: "66222873"
     |설정 이름|설명|  
     |----------------|---------------|  
     |이 네트워크 어댑터를 공유하는 관리 운영 체제 허용|Hyper-v 호스트가 가상 스위치의 사용을 공유할 수 있도록 하 고 가상 컴퓨터와 nic 팀이 옵션을 선택 합니다. 이 옵션을 사용 호스트 사용할 수 설정을 구성 하는 가상 스위치와 같은 서비스 품질 (QoS) 설정, 보안 설정 또는 Hyper-v 가상 스위치의 다른 기능.|  
-    |단일 루트 I/O 가상화 (SR-IOV) 사용|가상 컴퓨터 스위치를 무시 하 고 실제 NIC에 직접 이동에 대 한 가상 컴퓨터 트래픽을 허용 하려는 경우에이 옵션을 선택 합니다. 자세한 내용은 [단일 루트 I/O 가상화](https://technet.microsoft.com/library/dn641211.aspx#Sec4) 포스터 도우미 참조에서: Hyper-v 네트워킹입니다.|  
+    |단일 루트 I/O 가상화 (SR-IOV) 사용|가상 컴퓨터 스위치를 무시 하 고 실제 NIC에 직접 이동에 대 한 가상 컴퓨터 트래픽을 허용 하려는 경우에이 옵션을 선택 합니다. 자세한 내용은 포스터 도우미 참조에서 [단일 루트 I/o 가상화](https://technet.microsoft.com/library/dn641211.aspx#Sec4) 를 참조 하세요. Hyper-v 네트워킹.|  
   
-7.  관리 Hyper-v 호스트 운영 체제 또는 동일한 가상 스위치를 공유 하는 다른 가상 컴퓨터에서 네트워크 트래픽을 격리 하려는 경우 선택 **관리 운영 체제의 가상 LAN id를 사용 하도록 설정**합니다. 원하는 수의 VLAN ID를 변경 하거나 기본값을 그대로 적용 수 있습니다. 이 관리 운영 체제에서이 가상 스위치를 통해 모든 네트워크 통신에 사용할 가상 LAN id입니다.  
+7.  관리 Hyper-v 호스트 운영 체제 또는 동일한 가상 스위치를 공유 하는 다른 가상 컴퓨터에서 네트워크 트래픽을 격리 하려면 **관리 운영 체제에 대 한 가상 LAN Id 사용**을 선택 합니다. 원하는 수의 VLAN ID를 변경 하거나 기본값을 그대로 적용 수 있습니다. 이 관리 운영 체제에서이 가상 스위치를 통해 모든 네트워크 통신에 사용할 가상 LAN id입니다.  
   
     ![VLAN ID 옵션을 보여 주는 스크린 샷](../media/Hyper-V-NewSwitch-VLAN.png)  
   

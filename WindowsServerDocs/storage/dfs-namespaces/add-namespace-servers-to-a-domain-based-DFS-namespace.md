@@ -8,12 +8,12 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: bb3b98e1ea687b68bbb87d0da413f9624d336370
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 03b6920e75ba3c51f1d181cfd41887fef39b7412
+ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59853334"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69546330"
 ---
 # <a name="add-namespace-servers-to-a-domain-based-dfs-namespace"></a>도메인 기반 DFS 네임스페이스에 네임스페이스 서버 추가
 
@@ -36,12 +36,12 @@ DFS 관리를 사용하여 도메인 기반 네임스페이스에 네임스페�
 
 
 > [!TIP]
-> Windows PowerShell을 사용하여 네임스페이스 서버를 추가하려면 [New-DfsnRootTarget cmdlet](https://docs.microsoft.com/powershell/module/dfsn/set-dfsnroottarget)을 사용합니다. DFSN Windows PowerShell 모듈은 Windows Server 2012에서 도입되었습니다.
+> Windows PowerShell을 사용하여 네임스페이스 서버를 추가하려면 [New-DfsnRootTarget cmdlet](https://docs.microsoft.com/powershell/module/dfsn/new-dfsnroottarget)을 사용합니다. DFSN Windows PowerShell 모듈은 Windows Server 2012에서 도입되었습니다.
 
 ## <a name="see-also"></a>참조
 
--   [DFS 네임 스페이스를 배포합니다.](deploying-dfs-namespaces.md)
+-   [DFS 네임스페이스 배포](deploying-dfs-namespaces.md)
 -   [DFS 네임 스페이스 서버 요구 사항 검토](https://technet.microsoft.com/library/cc753448(v=ws.11).aspx)
--   [DFS Namespace 만들기](create-a-dfs-namespace.md)
--   [DFS 네임 스페이스에 대 한 관리 권한 위임](delegate-management-permissions-for-dfs-namespaces.md)
+-   [DFS 네임스페이스 만들기](create-a-dfs-namespace.md)
+-   [DFS 네임스페이스에 대한 관리 권한 위임](delegate-management-permissions-for-dfs-namespaces.md)
 

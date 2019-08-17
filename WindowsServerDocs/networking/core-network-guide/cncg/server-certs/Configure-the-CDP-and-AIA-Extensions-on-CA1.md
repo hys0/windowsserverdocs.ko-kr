@@ -9,16 +9,16 @@ ms.technology: networking
 ms.author: pashort
 author: shortpatti
 ms.date: 07/26/2018
-ms.openlocfilehash: 2bdd03636d1cbbcf5b0355358cbedeb63f97af1b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 74d77347e0ca1dffbca4e2cf6f17b9faa25d55bf
+ms.sourcegitcommit: 23a6e83b688119c9357262b6815c9402c2965472
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59834224"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69560501"
 ---
 # <a name="configure-the-cdp-and-aia-extensions-on-ca1"></a>C a 1에서 CDP 및 AIA 확장 구성
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 C a 1에서 인증서 CRL (해지 목록) 배포 지점 (CDP) 및 액세스 AIA (기관 정보) 설정을 구성 하려면이 절차를 사용할 수 있습니다.  
   
@@ -33,21 +33,21 @@ C a 1에서 인증서 CRL (해지 목록) 배포 지점 (CDP) 및 액세스 AIA 
     > [!NOTE]  
     > CA1 컴퓨터 이름을 하지 않은 도메인 이름은이 예에서 것과 다른 경우 CA 이름은 다릅니다. CA 이름은 형식에서 *도메인*-*CAComputerName*-CA입니다.  
   
-3.  **확장** 탭을 클릭합니다. 있는지 확인 확장을 선택 로 설정 된 **지점 CDP (CRL 배포)**, 및는 **사용자가 인증서 해지 목록 (CRL)을 얻을 수 있는 위치를 지정**, 에서 다음을 수행 합니다.  
+3.  **확장** 탭을 클릭합니다. 있는지 확인 확장을 선택 로 설정 된 **지점 CDP (CRL 배포)** , 및는 **사용자가 인증서 해지 목록 (CRL)을 얻을 수 있는 위치를 지정**, 에서 다음을 수행 합니다.  
   
     1.  항목을 선택 `file://\\<ServerDNSName>\CertEnroll\<CaName><CRLNameSuffix><DeltaCRLAllowed>.crl`, 를 클릭 하 고 **제거**합니다. **제거 확인**, 클릭 **예**합니다.  
   
-    2.  항목을 선택 `https://<ServerDNSName>/CertEnroll/<CaName><CRLNameSuffix><DeltaCRLAllowed>.crl`, 를 클릭 하 고 **제거**합니다. **제거 확인**, 클릭 **예**합니다.  
+    2.  항목을 선택 `http://<ServerDNSName>/CertEnroll/<CaName><CRLNameSuffix><DeltaCRLAllowed>.crl`, 를 클릭 하 고 **제거**합니다. **제거 확인**, 클릭 **예**합니다.  
   
     3.  경로로 시작 하는 항목을 선택 `ldap:///CN=<CATruncatedName><CRLNameSuffix>,CN=<ServerShortName>`, 를 클릭 하 고 **제거**합니다. **제거 확인**, 클릭 **예**합니다.  
   
 4.  **사용자가 인증서 해지 목록 (CRL)을 얻을 수 있는 위치를 지정**, 를 클릭 하 여 **추가**합니다. **위치 추가** 대화 상자가 열립니다.  
   
-5.  **위치 추가**,  **위치**, 형식 `https://pki.corp.contoso.com/pki/<CaName><CRLNameSuffix><DeltaCRLAllowed>.crl`, 를 클릭 하 고 **확인**합니다. CA 속성 대화 상자로 돌아갑니다.  
+5.  **위치 추가**,  **위치**, 형식 `http://pki.corp.contoso.com/pki/<CaName><CRLNameSuffix><DeltaCRLAllowed>.crl`, 를 클릭 하 고 **확인**합니다. CA 속성 대화 상자로 돌아갑니다.  
   
 6.  에 **확장** 탭에서 다음 확인란을 선택 합니다.  
   
-    -   **Crl에 포함 합니다. 클라이언트를 사용 하 여이 델타 CRL 위치 찾기**  
+    -   **Crl에 포함. 클라이언트는이를 사용 하 여 델타 CRL 위치를 찾습니다.**  
   
     -   **발급 된 인증서의 CDP 확장에 포함**  
   
@@ -57,21 +57,21 @@ C a 1에서 인증서 CRL (해지 목록) 배포 지점 (CDP) 및 액세스 AIA 
   
 9. 에 **확장** 탭에서 다음 확인란을 선택 합니다.  
   
-    -   **이 위치로 Crl을 게시**  
+    -   **이 위치에 Crl 게시**  
   
-    -   **이 위치로 델타 Crl 게시**  
+    -   **이 위치에 델타 Crl을 게시 합니다.**  
   
-10. 변경 **확장을 선택** 에 **액세스 AIA (기관 정보)**, 및는 **사용자가 인증서 해지 목록 (CRL)을 얻을 수 있는 위치를 지정**, 다음을 수행 합니다.  
+10. 변경 **확장을 선택** 에 **액세스 AIA (기관 정보)** , 및는 **사용자가 인증서 해지 목록 (CRL)을 얻을 수 있는 위치를 지정**, 다음을 수행 합니다.  
   
     1.  경로로 시작 하는 항목을 선택 `ldap:///CN=<CATruncatedName>,CN=AIA,CN=Public Key Services`, 를 클릭 하 고 **제거**합니다. **제거 확인**, 클릭 **예**합니다.  
   
-    2.  항목을 선택 `https://<ServerDNSName>/CertEnroll/<ServerDNSName>_<CaName><CertificateName>.crt`, 를 클릭 하 고 **제거**합니다. **제거 확인**, 클릭 **예**합니다.  
+    2.  항목을 선택 `http://<ServerDNSName>/CertEnroll/<ServerDNSName>_<CaName><CertificateName>.crt`, 를 클릭 하 고 **제거**합니다. **제거 확인**, 클릭 **예**합니다.  
   
     3.  항목을 선택 `file://\\<ServerDNSName>\CertEnroll\<ServerDNSName><CaName><CertificateName>.crt`, 를 클릭 하 고 **제거**합니다. **제거 확인**, 클릭 **예**합니다.  
   
-11. **사용자가 얻을 수 있는 인증서가이 CA에 대 한 위치를 지정할**, 클릭 **추가**합니다. **위치 추가** 대화 상자가 열립니다.  
+11. **사용자가이 CA에 대 한 인증서를 얻을 수 있는 위치 지정**에서 **추가**를 클릭 합니다. **위치 추가** 대화 상자가 열립니다.  
   
-12. **위치 추가**,  **위치**, 형식 `https://pki.corp.contoso.com/pki/<ServerDNSName>_<CaName><CertificateName>.crt`, 를 클릭 하 고 **확인**합니다. CA 속성 대화 상자로 돌아갑니다.  
+12. **위치 추가**,  **위치**, 형식 `http://pki.corp.contoso.com/pki/<ServerDNSName>_<CaName><CertificateName>.crt`, 를 클릭 하 고 **확인**합니다. CA 속성 대화 상자로 돌아갑니다.  
   
 13. 에 **확장** 탭을 **에 발급 된 인증서의 AIA 포함**합니다.  
   

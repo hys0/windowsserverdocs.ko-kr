@@ -13,21 +13,21 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: 6da212185eb47d3f30f81ca6f1eb322bc232e229
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3d07f137aa40b26b4f4fd69c050415b82608ed7e
+ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59881454"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69546361"
 ---
 # <a name="getting-started-with-group-managed-service-accounts"></a>관리 서비스 계정 그룹 시작하기
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 
-이 가이드에서는 설정 및 Windows Server 2012에서 그룹 관리 서비스 계정 사용에 대 한 단계별 지침 및 배경 정보를 제공 합니다.
+이 가이드에서는 Windows Server 2012에서 그룹 관리 서비스 계정을 사용 하도록 설정 하 고 사용 하는 방법에 대 한 단계별 지침 및 배경 정보를 제공 합니다.
 
-**이 문서에서는**
+**이 문서의**
 
 -   [필수 구성 요소](#BKMK_Prereqs)
 
@@ -39,13 +39,13 @@ ms.locfileid: "59881454"
 
 -   [그룹 관리 서비스 계정 속성 업데이트](#BKMK_Update_gMSA)
 
--   [기존 서버 팜에 구성원 호스트 서비스 해제](#BKMK_DecommMemberHosts)
+-   [기존 서버 팜에서 구성원 호스트 서비스 해제](#BKMK_DecommMemberHosts)
 
 
 > [!NOTE]
 > 이 항목에는 설명한 절차의 일부를 자동화하는 데 사용할 수 있는 샘플 Windows PowerShell cmdlet이 포함되어 있습니다. 자세한 내용은 참조 [Cmdlet를 사용 하 여](https://go.microsoft.com/fwlink/p/?linkid=230693)합니다.
 
-## <a name="BKMK_Prereqs"></a>필수 구성 요소
+## <a name="BKMK_Prereqs"></a>사전
 이 항목에서 [그룹 관리 서비스 계정에 대한 요구 사항](#BKMK_gMSA_Req)섹션을 참조하세요.
 
 ## <a name="BKMK_Intro"></a>소개
@@ -56,18 +56,18 @@ ms.locfileid: "59881454"
 
 서비스에서 선택할 수 있는 보안 주체는 다음과 같으며, 각각 특정 제한 사항이 있습니다.
 
-|보안 주체|범위|지원되는 서비스|암호 관리|
+|보안 주체|Scope|지원되는 서비스|암호 관리|
 |-------|-----|-----------|------------|
-|Windows 시스템의 컴퓨터 계정|도메인|도메인 가입 서버 하나로 제한|컴퓨터에서 관리|
-|Windows 시스템이 없는 컴퓨터 계정|도메인|모든 도메인 가입 서버|없음|
+|Windows 시스템의 컴퓨터 계정|Domain|도메인 가입 서버 하나로 제한|컴퓨터에서 관리|
+|Windows 시스템이 없는 컴퓨터 계정|Domain|모든 도메인 가입 서버|없음|
 |가상 계정|로컬|서버 하나로 제한|컴퓨터에서 관리|
-|Windows 7 독립 실행형 관리 서비스 계정|도메인|도메인 가입 서버 하나로 제한|컴퓨터에서 관리|
-|사용자 계정|도메인|모든 도메인 가입 서버|없음|
-|그룹 관리 서비스 계정|도메인|모든 Windows Server 2012 도메인에 가입 된 서버|도메인 컨트롤러에서 관리하고 호스트에서 검색|
+|Windows 7 독립 실행형 관리 서비스 계정|Domain|도메인 가입 서버 하나로 제한|컴퓨터에서 관리|
+|사용자 계정|Domain|모든 도메인 가입 서버|없음|
+|그룹 관리 서비스 계정|Domain|모든 Windows Server 2012 도메인 가입 서버|도메인 컨트롤러에서 관리하고 호스트에서 검색|
 
 Windows 컴퓨터 계정이나 Windows 7 sMSA(독립 실행형 관리 서비스 계정) 또는 가상 계정은 여러 시스템에서 공유할 수 없습니다. 서버 팜의 서비스에서 공유할 계정 하나를 구성하려면 Windows 시스템과 별개인 사용자 계정 또는 컴퓨터 계정을 선택해야 합니다. 그러나 이러한 계정에는 단일 제어 지점 암호 관리 기능이 없습니다. 따라서 각 조직에서 Active Directory의 서비스에 대한 키를 업데이트하는 고가의 솔루션을 만든 다음 이러한 서비스의 모든 인스턴스에 배포해야 하는 문제가 있습니다.
 
-Windows Server 2012를 사용 하 여 서비스 또는 서비스 관리자가 필요가 없습니다 gMSA (그룹 관리 서비스 계정)를 사용 하는 경우 서비스 인스턴스 간의 암호 동기화를 관리 합니다. AD에서 gMSA를 프로비전한 다음 관리 서비스 계정을 지원하는 서비스를 구성하면 됩니다. Active Directory 모듈의 일부인 *-ADServiceAccount cmdlet을 사용하여 gMSA를 프로비전할 수 있습니다. 호스트의 서비스 ID 구성은 다음에서 지원됩니다.
+Windows Server 2012에서는 서비스 또는 서비스 관리자가 gMSA (그룹 관리 서비스 계정)를 사용할 때 서비스 인스턴스 간의 암호 동기화를 관리할 필요가 없습니다. AD에서 gMSA를 프로비전한 다음 관리 서비스 계정을 지원하는 서비스를 구성하면 됩니다. Active Directory 모듈의 일부인 *-ADServiceAccount cmdlet을 사용하여 gMSA를 프로비전할 수 있습니다. 호스트의 서비스 ID 구성은 다음에서 지원됩니다.
 
 -   sMSA와 동일한 API(따라서 sMSA를 지원하는 제품은 gMSA를 지원함)
 
@@ -90,16 +90,16 @@ Windows Server 2012를 사용 하 여 서비스 또는 서비스 관리자가 �
 |사용자 계정의 도메인 Dc|RFC 호환 KDC|Windows Server 2003 이상|
 |공유 서비스 구성원 호스트|| Windows Server 2012 |
 |구성원 호스트의 도메인 Dc|RFC 호환 KDC|Windows Server 2003 이상|
-|gMSA 계정의 도메인 Dc| Windows Server 2012 Dc 호스트에서 암호를 검색 하는 데 사용할 수 있습니다.|Windows Server 2012 이전 버전 시스템을 사용할 수 있는 Windows Server 2012를 사용 하 여 도메인 |
+|gMSA 계정의 도메인 Dc| 호스트에서 암호를 검색 하는 데 사용할 수 있는 Windows Server 2012 Dc|Windows server 2012 이전 버전의 시스템을 가질 수 있는 Windows Server 2012 도메인 |
 |백 엔드 서비스 호스트|RFC 호환 Kerberos 응용 프로그램 서버|Windows Server 2003 이상|
 |백 엔드 서비스 계정의 도메인 Dc|RFC 호환 KDC|Windows Server 2003 이상|
 |Active Directory용 Windows PowerShell|원격 관리 컴퓨터에서 64비트 아키텍처를 지원(예: 원격 서버 관리 도구 키트 사용)하는 컴퓨터에 로컬로 설치된 Active Directory용 Windows PowerShell| Windows Server 2012 |
 
 **Active Directory 도메인 서비스 요구 사항**
 
--   GMSA 도메인 포리스트의 Active Directory 스키마를 gMSA를 만들려면 Windows Server 2012로 업데이트 해야 합니다.
+-   GMSA를 만들려면 gMSA 도메인 포리스트의 Active Directory 스키마를 Windows Server 2012로 업데이트 해야 합니다.
 
-    Windows Server 2012를 실행 하는 도메인 컨트롤러를 설치 하거나 Windows Server 2012를 실행 하는 컴퓨터에서 버전의 adprep.exe 실행 하 여 스키마를 업데이트할 수 있습니다. CN=Schema,CN=Configuration,DC=Contoso,DC=Com 개체의 object-version 특성 값은 52여야 합니다.
+    Windows server 2012를 실행 하는 도메인 컨트롤러를 설치 하거나 Windows Server 2012를 실행 하는 컴퓨터에서 버전의 adprep.exe를 실행 하 여 스키마를 업데이트할 수 있습니다. CN=Schema,CN=Configuration,DC=Contoso,DC=Com 개체의 object-version 특성 값은 52여야 합니다.
 
 -   프로비전된 새 gMSA 계정
 
@@ -109,9 +109,9 @@ Windows Server 2012를 사용 하 여 서비스 또는 서비스 관리자가 �
 
 -   Active Directory의 첫 번째 마스터 루트 키가 도메인에 배포되지 않았거나 생성되지 않은 경우 이 키를 만듭니다. 만들기 결과는 KdsSvc 작업 로그에서 이벤트 ID 4004를 통해 확인할 수 있습니다.
 
-지침에 대 한 키에서 참조를 만드는 방법 [키 배포 서비스 KDS 루트 키 만들기](create-the-key-distribution-services-kds-root-key.md)합니다. Microsoft 키 배포 서비스(kdssvc.dll)는 AD용 루트 키입니다.
+키를 만드는 방법에 대 한 지침은 [키 배포 서비스 KDS 루트 키 만들기](create-the-key-distribution-services-kds-root-key.md)를 참조 하세요. Microsoft 키 배포 서비스(kdssvc.dll)는 AD용 루트 키입니다.
 
-**Lifecycle**
+**주기**
 
 gMSA 기능을 사용하는 서버 팜의 수명 주기에는 일반적으로 다음 작업이 포함됩니다.
 
@@ -143,19 +143,19 @@ gMSA 기능을 사용하는 서버 팜의 수명 주기에는 일반적으로 �
 -   암호 변경 간격(기본값은 30일)
 
 ### <a name="BKMK_Step1"></a>1 단계: 그룹 관리 서비스 계정 프로비전
-Windows Server 2012 포리스트 스키마가 업데이트, Active Directory 용 마스터 루트 키 배포 되었는지, 그리고 gMSA를 만들 수는 도메인에 하나 이상의 Windows Server 2012 DC 하는 경우에 gMSA를 만들 수 있습니다.
+포리스트 스키마가 Windows Server 2012로 업데이트 되 고 Active Directory의 마스터 루트 키가 배포 된 경우에만 gMSA를 만들 수 있으며, gMSA를 만들 도메인에 Windows Server 2012 DC가 하나 이상 있는 경우에만 만들 수 있습니다.
 
 다음 절차를 완료하려면 최소한 **Domain Admins** 또는 **Account Operators**의 구성원이거나 msDS-GroupManagedServiceAccount 개체를 만들 수 있는 권한이 있어야 합니다.
 
-#### <a name="BKMK_CreateGMSA"></a>New-adserviceaccount cmdlet을 사용 하 여 gMSA를 만들려면
+#### <a name="BKMK_CreateGMSA"></a>Uninstall-adserviceaccount cmdlet을 사용 하 여 gMSA를 만들려면
 
-1.  Windows Server 2012 도메인 컨트롤러에서 작업 표시줄에서 Windows PowerShell을 실행 합니다.
+1.  Windows Server 2012 도메인 컨트롤러의 작업 표시줄에서 Windows PowerShell을 실행 합니다.
 
 2.  Windows PowerShell에 대한 명령 프롬프트에서 다음 명령을 입력하고 Enter 키를 누릅니다. Active Directory 모듈이 자동으로 로드됩니다.
 
-    **새 ADServiceAccount [-Name] <string> -DNSHostName <string> [-KerberosEncryptionType <ADKerberosEncryptionType>] [-ManagedPasswordIntervalInDays < Nullable [Int32] >] [-PrincipalsAllowedToRetrieveManagedPassword < ADPrincipal] >]-SamAccountName <string> -ServicePrincipalNames < 문자열 >**
+    **Uninstall-adserviceaccount [-Name] <string> -DNSHostName <string> [-KerberosEncryptionType <ADKerberosEncryptionType>] [-managedpasswordintervalindays < Nullable [Int32] >] [-PrincipalsAllowedToRetrieveManagedPassword < adprincipal [] >]-SamAccountName <string> -ServicePrincipalNames < string [] >**
 
-    |매개 변수|문자열|예제|
+    |매개 변수|String|예제|
     |-------|-----|------|
     |이름|계정 이름|ITFarm1|
     |DNSHostName|서비스의 DNS 호스트 이름|ITFarm1.contoso.com|
@@ -181,13 +181,13 @@ Windows Server 2012 포리스트 스키마가 업데이트, Active Directory 용
 
 ##### <a name="to-create-a-gmsa-for-outbound-authentication-only-using-the-new-adserviceaccount-cmdlet"></a>New-ADServiceAccount cmdlet을 사용하여 아웃바운드 인증용으로만 gMSA를 만들려면
 
-1.  Windows Server 2012 도메인 컨트롤러에서 작업 표시줄에서 Windows PowerShell을 실행 합니다.
+1.  Windows Server 2012 도메인 컨트롤러의 작업 표시줄에서 Windows PowerShell을 실행 합니다.
 
 2.  Windows PowerShell Active Directory 모듈에 대한 명령 프롬프트에서 다음 명령을 입력하고 Enter 키를 누릅니다.
 
-    **New-ADServiceAccount [-Name] <string> -RestrictToOutboundAuthenticationOnly [-ManagedPasswordIntervalInDays <Nullable[Int32]>] [-PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal[]>]**
+    **Uninstall-adserviceaccount [-Name] <string> -RestrictToOutboundAuthenticationOnly [-managedpasswordintervalindays < Nullable [Int32] >] [-PrincipalsAllowedToRetrieveManagedPassword < adprincipal [] >]**
 
-    |매개 변수|문자열|예제|
+    |매개 변수|String|예제|
     |-------|-----|------|
     |이름|계정 이름|ITFarm1|
     |ManagedPasswordIntervalInDays|암호 변경 간격(지정하지 않을 경우 기본값은 30일)|75|
@@ -204,9 +204,9 @@ New-ADServiceAccount ITFarm1 -RestrictToOutboundAuthenticationOnly - PrincipalsA
 ```
 
 ### <a name="BKMK_ConfigureServiceIdentity"></a>2 단계: 서비스 ID 응용 프로그램 서비스 구성
-를 Windows Server 2012에서 서비스를 구성 하려면 다음 기능 설명서를 참조 하세요.
+Windows Server 2012에서 서비스를 구성 하려면 다음 기능 설명서를 참조 하세요.
 
--   IIS 응용 프로그램 풀
+-   IIS 애플리케이션 풀
 
     자세한 내용은 [응용 프로그램 풀의 ID 지정(IIS 7)](https://technet.microsoft.com/library/cc771170(WS.10).aspx)을 참조하세요.
 
@@ -221,7 +221,7 @@ New-ADServiceAccount ITFarm1 -RestrictToOutboundAuthenticationOnly - PrincipalsA
 다른 서비스에서도 gMSA를 지원할 수 있습니다. 이러한 서비스를 구성하는 방법에 대한 자세한 내용은 해당 제품 설명서를 참조하세요.
 
 ## <a name="BKMK_AddMemberHosts"></a>기존 서버 팜에 구성원 호스트 추가
-구성원 호스트를 관리 하는 것에 대 한 보안 그룹을 사용 하는 경우 컴퓨터 계정 (gMSA의 구성원 호스트가 속해 있는의) 보안 그룹에 새 구성원 호스트 추가 다음 방법 중 하나를 사용 합니다.
+보안 그룹을 사용 하 여 구성원 호스트를 관리 하는 경우 다음 방법 중 하나를 사용 하 여 보안 그룹 (gMSA의 구성원 호스트가 속해 있는)에 새 구성원 호스트의 컴퓨터 계정을 추가 합니다.
 
 다음 절차를 완료하려면 최소한 **Domain Admins**의 구성원이거나 보안 그룹 개체에 구성원을 추가할 수 있는 권한이 있어야 합니다.
 
@@ -243,17 +243,17 @@ New-ADServiceAccount ITFarm1 -RestrictToOutboundAuthenticationOnly - PrincipalsA
 
 #### <a name="to-add-member-hosts-using-the-set-adserviceaccount-cmdlet"></a>Set-ADServiceAccount cmdlet을 사용하여 구성원 호스트를 추가하려면
 
-1.  Windows Server 2012 도메인 컨트롤러에서 작업 표시줄에서 Windows PowerShell을 실행 합니다.
+1.  Windows Server 2012 도메인 컨트롤러의 작업 표시줄에서 Windows PowerShell을 실행 합니다.
 
 2.  Windows PowerShell Active Directory 모듈에 대한 명령 프롬프트에서 다음 명령을 입력하고 Enter 키를 누릅니다.
 
-    **Get-ADServiceAccount [-Name] <string> -PrincipalsAllowedToRetrieveManagedPassword**
+    **Uninstall-adserviceaccount [-Name] <string> -PrincipalsAllowedToRetrieveManagedPassword**
 
 3.  Windows PowerShell Active Directory 모듈에 대한 명령 프롬프트에서 다음 명령을 입력하고 Enter 키를 누릅니다.
 
-    **Set-ADServiceAccount [-Name] <string> -PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal[]>**
+    **Uninstall-adserviceaccount [-Name] <string> -PrincipalsAllowedToRetrieveManagedPassword < adprincipal [] >**
 
-|매개 변수|문자열|예제|
+|매개 변수|String|예제|
 |-------|-----|------|
 |이름|계정 이름|ITFarm1|
 |PrincipalsAllowedToRetrieveManagedPassword|구성원 호스트 또는 구성원 호스트가 속해 있는 보안 그룹의 컴퓨터 계정|Host1, Host2, Host3|
@@ -268,7 +268,7 @@ Get-ADServiceAccount [-Name] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword
 ```
 
 ```
-Set-ADServiceAccount [-Name] ITFarm1-PrincipalsAllowedToRetrieveManagedPassword Host1,Host2,Host3
+Set-ADServiceAccount [-Name] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword Host1,Host2,Host3
 
 ```
 
@@ -279,11 +279,11 @@ Windows PowerShell Active Directory 모듈을 열고 Set-ADServiceAccount cmdlet
 
 이러한 속성을 설정하는 방법에 대한 자세한 내용은 TechNet 라이브러리에서 [Set-ADServiceAccount](https://technet.microsoft.com/library/ee617252.aspx) 를 참조하세요. Windows PowerShell Active Directory 모듈 명령 프롬프트에서 **Get-Help Set-ADServiceAccount** 를 입력하고 Enter 키를 눌러 참조할 수도 있습니다.
 
-## <a name="BKMK_DecommMemberHosts"></a>기존 서버 팜에 구성원 호스트 서비스 해제
+## <a name="BKMK_DecommMemberHosts"></a>기존 서버 팜에서 구성원 호스트 서비스 해제
 다음 절차를 완료하려면 최소한 **Domain Admins**의 구성원이거나 보안 그룹 개체에서 구성원을 제거할 수 있는 권한이 있어야 합니다.
 
 ### <a name="step-1-remove-member-host-from-gmsa"></a>1단계: gMSA에서 구성원 호스트 제거
-구성원 호스트를 관리 하는 것에 대 한 보안 그룹을 사용 하는 경우 다음 방법 중 하나를 사용 하 여 gMSA의 구성원 호스트는 보안 그룹에서 서비스 해제 된 구성원 호스트의 컴퓨터 계정을 제거 합니다.
+보안 그룹을 사용 하 여 구성원 호스트를 관리 하는 경우 다음 방법 중 하나를 사용 하 여 gMSA의 구성원 호스트가 속해 있는 보안 그룹에서 서비스 해제 된 구성원 호스트의 컴퓨터 계정을 제거 합니다.
 
 -   방법 1: Active Directory 사용자 및 컴퓨터
 
@@ -303,17 +303,17 @@ Windows PowerShell Active Directory 모듈을 열고 Set-ADServiceAccount cmdlet
 
 ##### <a name="to-remove-member-hosts-using-the-set-adserviceaccount-cmdlet"></a>Set-ADServiceAccount cmdlet을 사용하여 구성원 호스트를 제거하려면
 
-1.  Windows Server 2012 도메인 컨트롤러에서 작업 표시줄에서 Windows PowerShell을 실행 합니다.
+1.  Windows Server 2012 도메인 컨트롤러의 작업 표시줄에서 Windows PowerShell을 실행 합니다.
 
 2.  Windows PowerShell Active Directory 모듈에 대한 명령 프롬프트에서 다음 명령을 입력하고 Enter 키를 누릅니다.
 
-    **Get-ADServiceAccount [-Name] <string> -PrincipalsAllowedToRetrieveManagedPassword**
+    **Uninstall-adserviceaccount [-Name] <string> -PrincipalsAllowedToRetrieveManagedPassword**
 
 3.  Windows PowerShell Active Directory 모듈에 대한 명령 프롬프트에서 다음 명령을 입력하고 Enter 키를 누릅니다.
 
-    **Set-ADServiceAccount [-Name] <string> -PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal[]>**
+    **Uninstall-adserviceaccount [-Name] <string> -PrincipalsAllowedToRetrieveManagedPassword < adprincipal [] >**
 
-|매개 변수|문자열|예제|
+|매개 변수|String|예제|
 |-------|-----|------|
 |이름|계정 이름|ITFarm1|
 |PrincipalsAllowedToRetrieveManagedPassword|구성원 호스트 또는 구성원 호스트가 속해 있는 보안 그룹의 컴퓨터 계정|Host1, Host3|
@@ -339,11 +339,11 @@ Set-ADServiceAccount [-Name] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword
 
 ##### <a name="to-remove-a-gmsa-using-the-uninstall-adserviceaccount-cmdlet"></a>Uninstall-ADServiceAccount cmdlet을 사용하여 gMSA를 제거하려면
 
-1.  Windows Server 2012 도메인 컨트롤러에서 작업 표시줄에서 Windows PowerShell을 실행 합니다.
+1.  Windows Server 2012 도메인 컨트롤러의 작업 표시줄에서 Windows PowerShell을 실행 합니다.
 
 2.  Windows PowerShell Active Directory 모듈에 대한 명령 프롬프트에서 다음 명령을 입력하고 Enter 키를 누릅니다.
 
-    **Uninstall-ADServiceAccount < ADServiceAccount>**
+    **Uninstall-adserviceaccount < Uninstall-adserviceaccount >**
 
     **예제**
 

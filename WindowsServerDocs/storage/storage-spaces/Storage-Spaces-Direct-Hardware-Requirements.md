@@ -9,12 +9,12 @@ ms.topic: article
 author: eldenchristensen
 ms.date: 08/05/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 59c04a858ceae44ee51c1de10fc40b27dc22ef90
-ms.sourcegitcommit: e04565e4a1fb7aaed04addd2bc87cc6ec4c82e81
+ms.openlocfilehash: 2f3f8bff39550108b0417b9513bee4a248dca432
+ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529888"
+ms.locfileid: "69546376"
 ---
 # <a name="storage-spaces-direct-hardware-requirements"></a>저장소 공간 다이렉트 하드웨어 요구 사항
 
@@ -86,7 +86,7 @@ ms.locfileid: "69529888"
 - 모든 서버에서 드라이브의 수와 유형이 동일 합니다. [드라이브 대칭 고려 사항을](drive-symmetry-considerations.md) 참조 하세요.
 - 캐시 장치는 32 GB 이상 이어야 합니다.
 - 영구적 메모리 장치를 캐시 장치로 사용할 경우에는 NVMe 또는 SSD 용량 장치 (Hdd를 사용할 수 없음)를 사용 해야 합니다.
-- NVMe 드라이버는 Microsoft의 기본 또는 업데이트 된 NVMe 드라이버입니다.
+- NVMe 드라이버는 Microsoft에서 제공 하는 Windows에 포함 되어 있습니다. (stornvme. sys)
 - 권장: 용량 드라이브 수는 캐시 드라이브 수의 전체 배수입니다.
 - 권장: 캐시 드라이브에는 높은 쓰기 endurance 있어야 합니다. 즉, 하루에 3 개 이상의 드라이브 쓰기 (DWPD) 또는 최소 4tb 쓰기 (TBW)를 수행 해야 합니다. [에 대 스토리지 공간 다이렉트 한 드라이브 쓰기 (DWPD), 테라바이트 기록 (TBW) 및 최소 권장 사항 이해를 참조 하세요. ](https://blogs.technet.microsoft.com/filecab/2017/08/11/understanding-dwpd-tbw/)
 

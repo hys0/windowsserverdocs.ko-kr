@@ -1,5 +1,5 @@
 ---
-Title: 로밍 사용자 프로필 배포
+title: 로밍 사용자 프로필 배포
 TOCTitle: Deploying Roaming User Profiles
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -8,12 +8,12 @@ author: JasonGerend
 manager: brianlic
 ms.date: 06/07/2019
 ms.author: jgerend
-ms.openlocfilehash: e6e2e32ff9aeb1b3bcfc8fed9027c7e92e13b118
-ms.sourcegitcommit: af80963a1d16c0b836da31efd9c5caaaf6708133
+ms.openlocfilehash: 1fcabf890c0c54e12c1650c31a072d17a33e292f
+ms.sourcegitcommit: 23a6e83b688119c9357262b6815c9402c2965472
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "66812489"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69560546"
 ---
 # <a name="deploying-roaming-user-profiles"></a>로밍 사용자 프로필 배포
 
@@ -181,7 +181,7 @@ Windows Server에서 파일 공유를 만드는 방법은 다음과 같습니다
 
 1. Active Directory 관리 센터에서 적절한 도메인의 **사용자** 컨테이너(또는 OU)로 이동합니다.
 2. 로밍 사용자 프로필을 할당할 모든 사용자를 선택 하 고 마우스 오른쪽 단추로 사용자를 클릭 한 다음 **속성**을 선택 합니다.
-3. **프로필** 섹션에서 **프로필 경로:** 확인란을 선택 하 고 사용자의 로밍 사용자 프로필 `%username%` 을 저장할 파일 공유의 경로를 입력 합니다. 그 다음에 (첫 번째 사용자 이름으로 자동으로 대체 됩니다. 사용자가 로그인 하는 시간입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
+3. **프로필** 섹션에서 **프로필 경로:** 확인란을 선택 하 고 사용자의 로밍 사용자 프로필 `%username%` 을 저장할 파일 공유의 경로를 입력 합니다. 그 다음에 (첫 번째 사용자 이름으로 자동으로 대체 됩니다. 사용자가 로그인 하는 시간입니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
     
     `\\fs1.corp.contoso.com\User Profiles$\%username%`
     
@@ -212,7 +212,7 @@ Windows Server에서 파일 공유를 만드는 방법은 다음과 같습니다
     > [!TIP]
     > 사용자의 홈 폴더(구성된 경우)는 Windows PowerShell과 같은 일부 프로그램에서 사용하는 기본 폴더입니다. AD DS에서 사용자 계정 속성의 **홈 폴더** 섹션을 사용하여 사용자별 대체 로컬 또는 네트워크 위치를 구성할 수 있습니다. 가상 데스크톱 환경에서 Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012을 실행 하는 컴퓨터의 모든 사용자에 대해 홈 폴더 위치를 구성 하려면 **사용자 홈 폴더 설정** 을 사용 하도록 설정 합니다. 정책 설정을 클릭 한 다음 매핑할 파일 공유 및 드라이브 문자를 지정 하거나 로컬 폴더를 지정 합니다. 환경 변수나 줄임표를 사용하지 마세요. 사용자가 로그온한 동안 지정한 경로 끝에 사용자의 별칭이 추가됩니다.
 6. **속성** 대화 상자에서 **사용** 을 선택 합니다.
-7. **이 컴퓨터에 로그온 하는 사용자는이 로밍 프로필 경로를 사용 해야 합니다** . 상자에 사용자의 로밍 사용자 프로필을 저장할 파일 공유의 경로를 입력 합니다. 그 다음 `%username%` 에 (이 (가) 자동으로 사용자 이름으로 바뀝니다. 사용자가 처음으로 로그인 할 때) 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
+7. **이 컴퓨터에 로그온 하는 사용자는이 로밍 프로필 경로를 사용 해야 합니다** . 상자에 사용자의 로밍 사용자 프로필을 저장할 파일 공유의 경로를 입력 합니다. 그 다음 `%username%` 에 (이 (가) 자동으로 사용자 이름으로 바뀝니다. 사용자가 처음으로 로그인 할 때) 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
     `\\fs1.corp.contoso.com\User Profiles$\%username%`
 
@@ -287,7 +287,7 @@ Windows Server에서 파일 공유를 만드는 방법은 다음과 같습니다
 
 ## <a name="appendix-a-checklist-for-deploying-roaming-user-profiles"></a>부록 A: 로밍 사용자 프로필 배포 검사 목록
 
-| 상태                     | Action                                                |
+| 상태                     | 작업                                                |
 | ---                        | ------                                                |
 | ☐<br>☐<br>☐<br>☐<br>☐   | 1. 도메인 준비<br>-도메인에 컴퓨터 가입<br>-별도의 프로필 버전을 사용 하도록 설정<br>-사용자 계정 만들기<br>-(선택 사항) 폴더 리디렉션 배포 |
 | ☐<br><br><br>             | 2. 로밍 사용자 프로필에 대한 보안 그룹 만들기<br>-그룹 이름:<br>멤버 |

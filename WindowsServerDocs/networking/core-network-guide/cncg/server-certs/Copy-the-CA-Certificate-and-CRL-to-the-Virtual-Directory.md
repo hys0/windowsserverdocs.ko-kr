@@ -9,16 +9,16 @@ ms.technology: networking
 ms.author: pashort
 author: shortpatti
 ms.date: 07/19/2018
-ms.openlocfilehash: 15cc807db805e1be0349ea51119663e515c7e551
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9dbe14bec1c39ab5b967276c4faf3e9fc5a9aae3
+ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59874034"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69546540"
 ---
 # <a name="copy-the-ca-certificate-and-crl-to-the-virtual-directory"></a>가상 디렉터리에 CA 인증서 및 CRL 복사
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 웹 서버의 가상 디렉터리에 인증 기관에서 인증서 해지 목록 및 엔터프라이즈 루트 CA 인증서를 복사 하 고 AD CS 올바르게 구성 되었는지 확인 하려면이 절차를 사용할 수 있습니다. 아래 명령을 실행 하기 전에 관련 된 배포에 적절 한 디렉터리 및 서버 이름을 바꾸는 확인 합니다.  
   
@@ -30,13 +30,15 @@ ms.locfileid: "59874034"
   
     - `certutil -crl`를 입력하고 Enter 키를 누릅니다.  
 
+    - C a 1 인증서를 웹 서버의 파일 공유에 복사 하려면를 입력 `copy C:\Windows\system32\certsrv\certenroll\*.crt \\WEB1\pki`한 다음 enter 키를 누릅니다.  
+    
     - 인증서 해지 목록 웹 서버에서 파일 공유로 복사 하려면 다음을 입력 `copy C:\Windows\system32\certsrv\certenroll\*.crl \\WEB1\pki`, 한 다음 ENTER를 누릅니다.  
   
 2.  CDP 및 AIA 확장 위치 제대로 구성 되어 있는지를 확인 하려면 다음을 입력 `pkiview.msc`, 한 다음 ENTER를 누릅니다. pkiview 엔터프라이즈 PKI MMC가 열립니다.  
   
-3.  왼쪽된 창에서 CA 이름을 클릭 합니다.<p>예를 들어 CA 이름은 corp-c a 1-CA 인 경우 클릭 하 여 **corp-c a 1-CA**합니다. 
+3.  왼쪽 창에서 CA 이름을 클릭 합니다.<p>예를 들어 CA 이름은 corp-c a 1-CA 인 경우 클릭 하 여 **corp-c a 1-CA**합니다. 
 
-4. 결과 창의 상태 열에서 다음 값을 올바르게 표시 되는지 확인 **확인**:
+4. 결과 창의 상태 열에서 다음 값에 **OK**가 표시 되는지 확인 합니다.
 
     - **CA 인증서**
     - **AIA 위치 #1**

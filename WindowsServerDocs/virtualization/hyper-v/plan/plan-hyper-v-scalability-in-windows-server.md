@@ -10,12 +10,12 @@ ms.topic: article
 author: KBDAzure
 ms.author: kathydav
 ms.date: 09/28/2016
-ms.openlocfilehash: 534de49e50d7b415c9d64c32927418a4395f6f4f
-ms.sourcegitcommit: 6f968368c12b9dd699c197afb3a3d13c2211f85b
+ms.openlocfilehash: b54d3e655d10d2dbb015d57f2b1be86a803d9911
+ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68544747"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69546639"
 ---
 # <a name="plan-for-hyper-v-scalability-in-windows-server-2016"></a>Windows Server 2016의 Hyper-v 확장성에 대 한 계획
 
@@ -31,7 +31,7 @@ ms.locfileid: "68544747"
 ## <a name="maximums-for-virtual-machines"></a>가상 컴퓨터의 최대값  
 이러한 최대값은 각 가상 컴퓨터에 적용 됩니다. 모든 구성 요소를 두 세대의 가상 컴퓨터에서 사용할 수 있는 것은 아닙니다. 세대를 비교 하려면 [hyper-v에서 1 세대 또는 2 세대 가상 머신을 만들어야 하나요?](should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v.md) 를 참조 하세요. 
   
-|구성 요소|최대값|참고|  
+|구성 요소|최대값|메모|  
 |-------------|-----------|---------|  
 |검사점|50|사용 가능한 저장소에 따라 실제 수가 이보다 적을 수 있습니다. 각 검사점은 실제 저장소를 사용 하는 .avhd 파일로 저장 됩니다.|  
 |메모리|2 세대의 경우 12tb <br>1tb (1 세대)|특정 운영 체제의 요구 사항을 검토하여 최소 및 권장 용량을 확인할 수 있습니다.|  
@@ -44,12 +44,12 @@ ms.locfileid: "68544747"
 |가상 프로세서|2 세대의 경우 240;<br>64 세대의 경우 1;<br>320 호스트 OS에서 사용할 수 있음 (루트 파티션)|게스트 운영 체제에서 지원되는 가상 프로세서 수는 이보다 적을 수 있습니다. 자세한 내용은 특정 운영 체제에 대해 게시 된 정보를 참조 하십시오.|
 |가상 SCSI 컨트롤러|4|가상 SCSI 장치를 사용 하려면 지원 되는 게스트 운영 체제에 사용할 수 있는 integration services가 필요 합니다. 지원 되는 운영 체제에 대 한 자세한 내용은 [지원 되는 Linux 및 FreeBSD 가상 컴퓨터](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md) 및 [지원 되는 Windows 게스트 운영 체제](../supported-windows-guest-operating-systems-for-hyper-v-on-windows.md)를 참조 하세요.|  
 |가상 SCSI 디스크|256|SCSI 컨트롤러마다 최대 64개의 디스크를 지원합니다. 즉, 각 가상 컴퓨터에 최대 256개의 가상 SCSI 디스크를 구성할 수 있습니다 (4개의 컨트롤러 x 컨트롤러당 64개의 디스크).|  
-|가상 네트워크 어댑터|Windows Server 2016은 총 12 개를 지원 합니다.<br> -8 hyper-v 특정 네트워크 어댑터<br>-4 레거시 네트워크 어댑터 <br> Windows Server 2019은 72 합계를 지원 합니다. <br> -64 hyper-v 관련 네트워크 어댑터<br>-4 레거시 네트워크 어댑터  |Hyper-v 특정 네트워크 어댑터는 더 나은 성능을 제공 하며 integration services에 포함 된 드라이버가 필요 합니다. 자세한 내용은 [Windows Server에서 hyper-v 네트워킹 계획](plan-hyper-v-networking-in-windows-server.md)을 참조 하세요.|  
+|가상 네트워크 어댑터|Windows Server 2016은 총 12 개를 지원 합니다.<br> -8 hyper-v 특정 네트워크 어댑터<br>-4 레거시 네트워크 어댑터 <br> Windows Server 2019은 68 합계를 지원 합니다. <br> -64 hyper-v 관련 네트워크 어댑터<br>-4 레거시 네트워크 어댑터  |Hyper-v 특정 네트워크 어댑터는 더 나은 성능을 제공 하며 integration services에 포함 된 드라이버가 필요 합니다. 자세한 내용은 [Windows Server에서 hyper-v 네트워킹 계획](plan-hyper-v-networking-in-windows-server.md)을 참조 하세요.|  
   
 ## <a name="maximums-for-hyper-v-hosts"></a>Hyper-v 호스트의 최대값  
 이러한 최대값은 각 Hyper-v 호스트에 적용 됩니다.  
   
-|구성 요소|최대값|참고|  
+|구성 요소|최대값|메모|  
 |-------------|-----------|---------|  
 |논리 프로세서|512|이러한 두 가지 모두 펌웨어에서 사용 하도록 설정 해야 합니다.<br /><br />-하드웨어 지원 가상화<br />-하드웨어 적용 DEP (데이터 실행 방지)<br /><br />호스트 OS (루트 파티션)에는 최대 320 논리 프로세서만 표시 됩니다.|  
 |메모리|24TB|없음|  
@@ -68,7 +68,7 @@ ms.locfileid: "68544747"
 
 가상 컴퓨터에 대 한 새로운 기능을 비롯 한 장애 조치 (Failover) 클러스터링 업데이트에 대 한 자세한 내용은 [Windows Server 2016 장애 조치 (Failover) 클러스터링의 새로운](../../../failover-clustering/whats-new-in-failover-clustering.md)기능을 참조 하세요.
 
-|구성 요소|최대값|참고|  
+|구성 요소|최대값|메모|  
 |-------------|-----------|---------|  
 |클러스터당 노드|64|업데이트 적용 같은 유지 보수 작업과 장애 조치를 위해 예약할 노드의 수를 고려해 봅니다. 노드 하나를 장애 조치용으로 예약함으로써 다른 노드로 장애 조치하기까지 유휴 상태로 대기시킬 수 있도록 충분한 리소스 계획을 수립하는 것이 좋습니다. 이러한 노드를 종종 패시브 노드라고도 합니다. 노드를 더 예약하려면 이 수를 늘릴 수 있습니다. 활성 노드에 대 한 예약 된 노드의 비율 또는 승수는 권장 되지 않습니다. 유일한 요구 사항은 클러스터의 총 노드 수가 최대 64을 초과 하지 않아야 한다는 것입니다.|  
 |클러스터 및 노드당 실행 가상 컴퓨터|클러스터당 8,000개|다음과 같이 한 노드에서 동시에 실행할 수 있는 가상 컴퓨터의 실제 수에 영향을 줄 수 있는 몇 가지 요인이 있습니다.<br />-각 가상 컴퓨터에 사용 되는 실제 메모리의 양입니다.<br />-네트워킹 및 저장소 대역폭.<br />-디스크 i/o 성능에 영향을 주는 디스크 스핀 들 수입니다.|  
