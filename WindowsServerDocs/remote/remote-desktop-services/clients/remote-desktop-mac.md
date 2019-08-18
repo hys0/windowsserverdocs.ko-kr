@@ -14,12 +14,12 @@ manager: dongill
 ms.author: elizapo
 ms.date: 10/09/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: a54ffd3d5596ba8c71deab668e4952da445ca12e
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 17df3ca3b88404a2775790d7a4a8206b7aa5befa
+ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66804946"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69546347"
 ---
 # <a name="get-started-with-remote-desktop-on-mac"></a>Mac에서 원격 데스크톱 시작
 
@@ -35,7 +35,7 @@ Mac용 원격 데스크톱 클라이언트를 사용하면 Mac 컴퓨터에서 W
 ## <a name="get-the-remote-desktop-client"></a>원격 데스크톱 클라이언트 받기
 Mac에서 원격 데스크톱에 등록하려면 다음 단계를 수행하세요.
 
-1. Microsoft 원격 데스크톱 클라이언트 다운로드는 [Mac 앱 스토어](https://itunes.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12)합니다.
+1. Microsoft 원격 데스크톱 클라이언트 다운로드는 [Mac 앱 스토어](https://itunes.apple.com/app/microsoft-remote-desktop/id1295203466?mt=12)합니다.
 2. [원격 연결을 허용하도록 PC를 설정합니다](remote-desktop-client-faq.md#how-do-i-set-up-a-pc-for-remote-desktop). (이 단계를 건너뛰면 PC에 연결할 수 없습니다.)
 3. 원격 데스크톱 연결 또는 원격 리소스를 추가합니다. Windows PC 및 원격 리소스에 직접 연결하는 연결을 사용하여 RemoteApp 프로그램, 세션 기반 데스크톱 또는 RemoteApp 프로그램 및 데스크톱 연결을 통해 온-프레미스에 게시된 가상 데스크톱을 사용합니다. 이 기능은 일반적으로 기업 환경에서 사용할 수 있습니다.
 

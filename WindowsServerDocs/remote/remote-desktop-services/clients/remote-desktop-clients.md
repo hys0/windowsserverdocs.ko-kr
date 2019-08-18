@@ -14,12 +14,12 @@ manager: dougkim
 ms.author: helohr
 ms.date: 05/07/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 341262243b5bbe8ed046382d7490a6e5c39b8965
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: b7810d0b8b7cbd8d886b99a07d1419cb5e8197ed
+ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66188128"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69546414"
 ---
 # <a name="remote-desktop-clients"></a>원격 데스크톱 클라이언트
 
@@ -35,8 +35,8 @@ Microsoft 원격 데스크톱 클라이언트를 사용하여 어떤 디바이�
 |----------|-----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
 | Windows  | [Microsoft Store의 Windows 10 클라이언트](https://go.microsoft.com/fwlink/?LinkID=616709)                      | [Windows에서 원격 데스크톱 클라이언트 시작](windows.md)                |
 | Android  | [Google Play의 Android 클라이언트](https://play.google.com/store/apps/details?id=com.microsoft.rdc.android)        | [Android에서 원격 데스크톱 클라이언트 시작](remote-desktop-android.md) |
-| iOS      | [iTunes 스토어의 iOS 클라이언트](https://itunes.apple.com/us/app/microsoft-remote-desktop/id714464092?mt=8)     | [iOS에서 원격 데스크톱 클라이언트 시작](remote-desktop-ios.md)         |
-| macOS    | [iTunes 스토어의 macOS 클라이언트](https://itunes.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12) | [Mac에서 원격 데스크톱 클라이언트 시작](remote-desktop-mac.md)         |
+| iOS      | [iTunes 스토어의 iOS 클라이언트](https://itunes.apple.com/app/microsoft-remote-desktop/id714464092?mt=8)     | [iOS에서 원격 데스크톱 클라이언트 시작](remote-desktop-ios.md)         |
+| macOS    | [iTunes 스토어의 macOS 클라이언트](https://itunes.apple.com/app/microsoft-remote-desktop/id1295203466?mt=12) | [Mac에서 원격 데스크톱 클라이언트 시작](remote-desktop-mac.md)         |
 
 ## <a name="configuring-the-remote-pc"></a>원격 PC 구성
 

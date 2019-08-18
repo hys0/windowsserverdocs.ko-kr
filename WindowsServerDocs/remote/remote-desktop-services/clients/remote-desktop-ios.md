@@ -14,12 +14,12 @@ manager: dongill
 ms.author: elizapo
 date: 01/13/2017
 ms.localizationpriority: medium
-ms.openlocfilehash: 71fe969de4d21f7fa3c134b0f80fc7f69e5b2da8
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: ebb169ee3b733bd5e7aade6636e078d54a6f09b3
+ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66446698"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69546403"
 ---
 # <a name="get-started-with-remote-desktop-on-ios"></a>IOS에서 원격 데스크톱 시작
 
@@ -38,7 +38,7 @@ iOS용 원격 데스크톱 클라이언트를 사용하면 iOS 디바이스(iPho
 ### <a name="download-the-remote-desktop-client-from-the-ios-store"></a>원격 데스크톱 클라이언트를 iOS 스토어에서 다운로드
 IOS 장치에서 원격 데스크톱에 등록 하려면 다음이 단계를 수행 합니다.
 
-1. Microsoft 원격 데스크톱 클라이언트 다운로드 [iTunes](https://itunes.apple.com/us/app/microsoft-remote-desktop/id714464092?mt=8)합니다.
+1. Microsoft 원격 데스크톱 클라이언트 다운로드 [iTunes](https://itunes.apple.com/app/microsoft-remote-desktop/id714464092?mt=8)합니다.
 2. [원격 연결을 허용하도록 PC를 설정합니다](remote-desktop-client-faq.md#how-do-i-set-up-a-pc-for-remote-desktop).
 3. [원격 데스크톱 연결](#add-a-remote-desktop-connection) 또는 [원격 리소스](#add-a-remote-resource)를 추가합니다. Windows PC 및 원격 리소스에 직접 연결하는 연결을 사용하여 RemoteApp 프로그램, 세션 기반 데스크톱 또는 RemoteApp 프로그램 및 데스크톱 연결을 통해 온-프레미스에 게시된 가상 데스크톱을 사용합니다. 이 기능은 일반적으로 기업 환경에서 사용할 수 있습니다.
 
