@@ -1,19 +1,19 @@
 ---
-Title: Storage Migration Service 개요
+title: Storage Migration Service 개요
 description: 스토리지 마이그레이션 서비스를 사용하면 서버를 Windows Server의 최신 버전으로 쉽게 마이그레이션할 수 있습니다. 서버의 데이터를 조사한 다음, 데이터 및 구성을 새로운 서버로 전송하는 그래픽 도구가 제공됩니다. 앱이나 사용자가 아무것도 변경할 필요가 없습니다.
 author: jasongerend
 ms.author: jgerend
 manager: elizapo
-ms.date: 05/21/2019
+ms.date: 08/16/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
-ms.openlocfilehash: 8118b58268e88a173a6219631e109ed1c436fea0
-ms.sourcegitcommit: 23a6e83b688119c9357262b6815c9402c2965472
+ms.openlocfilehash: dae64b81c48b9ae6bf84c3558066ebbdf9c06ace
+ms.sourcegitcommit: e2b565ce85a97c0c51f6dfe7041f875a265b35dd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69560560"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69584829"
 ---
 # <a name="storage-migration-service-overview"></a>Storage Migration Service 개요
 
@@ -58,7 +58,7 @@ ms.locfileid: "69560560"
 
 Orchestrator와 대상 컴퓨터에는 2 개 이상의 코어 또는 두 개의 vCPUs와 최소 2gb의 메모리가 있는 것이 좋습니다. 인벤토리 및 전송 작업은 프로세서 및 메모리를 더 많이 사용 하 여 훨씬 더 빠릅니다.
 
-### <a name="security-requirements"></a>보안 요구 사항
+### <a name="security-requirements-the-storage-migration-service-proxy-service-and-firewall-ports"></a>보안 요구 사항, 저장소 마이그레이션 서비스 프록시 서비스 및 방화벽 포트
 
 - 원본 컴퓨터와 orchestrator 컴퓨터의 관리자 인 마이그레이션 계정
 - 대상 컴퓨터와 orchestrator 컴퓨터의 관리자 인 마이그레이션 계정
@@ -70,7 +70,9 @@ Orchestrator와 대상 컴퓨터에는 2 개 이상의 코어 또는 두 개의 
   - WMI(Windows Management Instrumentation)(WMI-In)
   
   > [!TIP]
-  > Windows Server 2019 컴퓨터에 Storage Migration Service 프록시 서비스를 설치 하면 해당 컴퓨터에 필요한 방화벽 포트가 자동으로 열립니다.
+  > Windows Server 2019 컴퓨터에 Storage Migration Service 프록시 서비스를 설치 하면 해당 컴퓨터에 필요한 방화벽 포트가 자동으로 열립니다. 이렇게 하려면 Windows 관리 센터에서 대상 서버에 연결한 다음 **서버 관리자** (Windows 관리 센터) > **역할 및 기능**으로 이동 하 고 **저장소 마이그레이션 서비스 프록시**를 선택한 다음 **설치**를 선택 합니다.
+
+
 - 컴퓨터가 Active Directory Domain Services 도메인에 속하는 경우 모두 동일한 포리스트에 속해 있어야 합니다. 또한 대상 서버는 원본 서버와 동일한 도메인에 있어야 합니다. 잘라낼 때 원본 도메인 이름을 대상으로 전송 하려는 경우에는 원본 서버와 동일한 도메인에 있어야 합니다. 는 기술적으로는 도메인 전체에서 작동 하지만 대상의 정규화 된 도메인 이름은 원본과 다릅니다.
 
 ### <a name="requirements-for-source-servers"></a>원본 서버에 대 한 요구 사항

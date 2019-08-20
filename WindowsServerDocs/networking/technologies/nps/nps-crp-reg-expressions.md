@@ -1,34 +1,34 @@
 ---
 title: NPS에서 정규식 사용
-description: 이 항목에서는 Windows Server 2016에서 NPS의 패턴 일치에 정규식을 사용 하는 방법을 설명 합니다. 이 구문을 사용 하 여 네트워크 정책 특성 및 RADIUS 영역 조건을 지정할 수 있습니다.
+description: 이 항목에서는 Windows Server에서 NPS의 패턴 일치에 정규식을 사용 하는 방법을 설명 합니다. 이 구문을 사용 하 여 네트워크 정책 특성 및 RADIUS 영역 조건을 지정할 수 있습니다.
 manager: brianlic
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: bc22d29c-678c-462d-88b3-1c737dceca75
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 2a47403d4f88d5487fb4ffb0e35c46438aadcd8a
-ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
+ms.author: jgerend
+author: jasongerend
+msdate: 08/16/2019
+ms.openlocfilehash: 76615fcccfe06333a76f872b52d2e88182fd60e5
+ms.sourcegitcommit: e2b565ce85a97c0c51f6dfe7041f875a265b35dd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69546529"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69584793"
 ---
 # <a name="use-regular-expressions-in-nps"></a>NPS에서 정규식 사용
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016
+> 적용 대상:  Windows Server 2019, Windows Server 2016, Windows Server(반기 채널)
 
-이 항목에서는 Windows Server 2016에서 NPS의 패턴 일치에 정규식을 사용 하는 방법을 설명 합니다. 이 구문을 사용 하 여 네트워크 정책 특성 및 RADIUS 영역 조건을 지정할 수 있습니다.
+이 항목에서는 Windows Server에서 NPS의 패턴 일치에 정규식을 사용 하는 방법을 설명 합니다. 이 구문을 사용 하 여 네트워크 정책 특성 및 RADIUS 영역 조건을 지정할 수 있습니다.
 
 ## <a name="pattern-matching-reference"></a>패턴 일치 참조
 
-패턴 일치 구문을 사용 하 여 정규식을 만들 때 다음 표를 참조 소스로 사용할 수 있습니다.
+패턴 일치 구문을 사용 하 여 정규식을 만들 때 다음 표를 참조 소스로 사용할 수 있습니다. 정규식 패턴은 종종 슬래시 (/)로 둘러싸여 있습니다.
 
-
-|  문자  |                                                                                 설명                                                                                  |                                                                 예제                                                                 |
-|-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-|     `\ `     |                                                              다음 문자를 일치 하는 문자로 표시 합니다.                                                               |                      `/n/ matches the character "n". The sequence /\n/ matches a line feed or newline character.`                       |
+|  문자  |  설명  |   예제                                                                 |
+| ----------- | ------------- | ------------------------------------------------------------------------  |
+|     `\ `     | 뒤에 오는 문자가 특수 문자 이거나 리터럴로 해석 되어야 함을 나타냅니다.  | `/n/ matches the character "n" while the sequence /\n/ matches a line feed or newline character.`  |
 |     `^`     |                                                                 입력 또는 줄의 시작 부분을 찾습니다.                                                                  |                                                                 &nbsp;                                                                  |
 |     `$`     |                                                                    입력 또는 줄의 끝을 찾습니다.                                                                     |                                                                 &nbsp;                                                                  |
 |     `*`     |                                                             이전 문자를 0 번 이상 찾습니다.                                                              |                                                  `/zo*/ matches either "z" or "zoo."`                                                   |
