@@ -204,7 +204,7 @@
 
 ### [AD FS 개요](ad-fs/AD-FS-Overview.md)
 #### [Active Directory Federation Services의 새로운 기능](ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md)
-#### [개발자를 위한 AD FS 시나리오](ad-fs/overview/AD-FS-Scenarios-for-Developers.md)
+
 #### [AD FS 2016 요구 사항](ad-fs/overview/AD-FS-Requirements.md)
 
 ### [AD FS 디자인](ad-fs/AD-FS-Design.md)
@@ -365,18 +365,25 @@
 
 
 
-### [AD FS 개발](ad-fs/AD-FS-Development.md)
+### AD FS 개발
+#### [AD FS 최신 인증 개념](ad-fs/development/ad-fs-openid-connect-oauth-concepts.md)
+#### [AD FS 최신 인증 흐름 및 앱 시나리오 ](ad-fs/overview/ad-fs-openid-connect-oauth-flows-scenarios.md)
 
 #### [AD FS용 사용자 지정 인증 방법 빌드](ad-fs/development/ad-fs-build-custom-auth-method.md)
 #### [AD FS 2019 위험 평가 모델을 사용하여 플러그 인 빌드](ad-fs/development/ad-fs-risk-assessment-model.md)
-#### [AD FS의 사용자 지정 Id 토큰](ad-fs/development/Custom-Id-Tokens-in-AD-FS.md)
-#### [Windows Server 2016의 AD FS 대리 인증](ad-fs/development/AD-FS-On-behalf-of-Authentication-in-Windows-Server.md)
-#### [AD FS 2016에서 OpenId Connect 사용](ad-fs/development/Enabling-OpenId-Connect-with-AD-FS.md)
-#### [AD FS 2016에서 Oauth 비밀 클라이언트 사용](ad-fs/development/Enabling-Oauth-Confidential-Clients-with-AD-FS.md)
 #### [AD FS를 사용한 OpenID Connect 단일 로그아웃](ad-fs/development/ad-fs-logout-openid-connect.md)
-#### [AD FS를 사용하는 단일 페이지 애플리케이션](ad-fs/development/Single-Page-Application-with-AD-FS.md)
-#### [AD FS를 통해 OAuth 공용 클라이언트를 사용하여 기본 클라이언트 애플리케이션 빌드](ad-fs/development/native-client-with-ad-fs.md)
+#### ADAL
 
+##### [AD FS의 사용자 지정 Id 토큰](ad-fs/development/Custom-Id-Tokens-in-AD-FS.md)
+##### [Windows Server 2016의 AD FS 대리 인증](ad-fs/development/AD-FS-On-behalf-of-Authentication-in-Windows-Server.md)
+##### [AD FS 2016에서 OpenId Connect 사용](ad-fs/development/Enabling-OpenId-Connect-with-AD-FS.md)
+##### [AD FS 2016에서 Oauth 비밀 클라이언트 사용](ad-fs/development/Enabling-Oauth-Confidential-Clients-with-AD-FS.md)
+##### [AD FS를 사용하는 단일 페이지 애플리케이션](ad-fs/development/Single-Page-Application-with-AD-FS.md)
+##### [AD FS를 통해 OAuth 공용 클라이언트를 사용하여 기본 클라이언트 애플리케이션 빌드](ad-fs/development/native-client-with-ad-fs.md)
+#### MSAL
+##### [Web API를 호출하는 네이티브 앱](ad-fs/development/msal/adfs-msal-native-app-web-api.md) 
+##### [Web API를 호출하는 Web API(시나리오 역할)](ad-fs/development/msal/adfs-msal-web-api-web-api.md) 
+##### [웹 API를 호출하는 웹앱(서버 앱)](ad-fs/development/msal/adfs-msal-web-app-web-api.md) 
 
 ### [AD FS 작업](ad-fs/AD-FS-Operations.md)
 #### [AD FS 액세스 제어 정책](ad-fs/operations/AD-FS-Client-Access-Policies.md)
