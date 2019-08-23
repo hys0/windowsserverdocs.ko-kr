@@ -9,67 +9,70 @@ ms.topic: article
 ms.custom: it-pro
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 6a4b6cfe98064181824e210be9031a0f67cb4b75
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: f4f284d4d970af8f8a672bd88be53f65ba70893f
+ms.sourcegitcommit: 6f968368c12b9dd699c197afb3a3d13c2211f85b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59824634"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68544633"
 ---
 # <a name="active-directory-federation-services-promptlogin-parameter-support"></a>Active Directory Federation Services 프롬프트 = 로그인 매개 변수 지원
-다음 문서에는 AD FS에서 사용할 수 있는 prompt = login 매개 변수에 대 한 네이티브 지원을 설명 합니다.
 
-## <a name="what-is-promptlogin"></a>이란 prompt = login?  
+다음 문서에서는 AD FS에서 사용할 수 있는 prompt = login 매개 변수에 대 한 기본 지원을 설명 합니다.
 
-일부 Office 365 응용 프로그램 (최신 인증 사용) 각 인증 요청의 일부로 Azure AD에 prompt = login 매개 변수를 보냅니다.  기본적으로 Azure AD로 변환 두 개의 매개 변수: <code> <b> wauth </b> =urn:oasis:names:tc:SAML:1.0:am:password </code>, 및 <code> <b> wfresh </b> =0 </code> .
+## <a name="what-is-promptlogin"></a>프롬프트 = 로그인 이란?
 
-이 인해 회사 인트라넷 및 사용자 이름 및 암호 이외의 인증 유형이 필요한 multi-factor authentication 시나리오를 사용 하 여 문제가 발생할 수 있습니다.  
+응용 프로그램이 azure ad에서 새로운 인증을 요청 해야 하는 경우 사용자가 이미 인증 된 경우라도 사용자를 다시 인증 하는 데 azure ad가 필요한 경우 인증의 일부로 azure `prompt=login` ad에 매개 변수를 보낼 수 있습니다. 요구.
 
-2016 년 7 월 업데이트 롤업 사용 하 여 Windows Server 2012 R2에서 AD FS에는 prompt = login 매개 변수에 대 한 네이티브 지원이 추가 되었습니다.  즉, 이제 Azure AD를 구성 하는 옵션으로이 매개 변수를 보낼-AD FS 서비스에는 Azure AD의 일부로 및 Office 365 인증 요청 합니다.
+페더레이션된 사용자에 대 한 요청인 경우 Azure AD는 IdP (예: AD FS)에 게 새 인증에 대 한 요청을 알려 주어 야 합니다.
 
-### <a name="ad-fs-versions-that-support-promptlogin"></a>프롬프트를 지 원하는 AD FS 버전 = 로그인
-다음은 prompt = login 매개 변수를 지 원하는 AD FS 버전의 목록입니다.
+기본적으로 Azure AD는이 `prompt=login` 유형의 인증 `wauth=http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password` 요청을 페더레이션된 IdP로 전송 하는 경우 및로 `wfresh=0` 변환 합니다.
 
-- 2016 년 7 월을 사용 하 여 Windows Server 2012 R2에서 AD FS 업데이트 롤업
+이러한 매개 변수는 다음과 같습니다.
 
-- Windows Server 2016에서에서 AD FS
+- `wfresh=0`: 새 인증을 수행 합니다.
+- `wauth=http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password`: 새 인증 요청에 대 한 사용자 이름/암호를 사용 합니다.
 
-## <a name="how-do-to-configure-your-azure-ad-tenant-to-send-promptlogin-to-ad-fs"></a>프롬프트를 보내도록 Azure AD 테 넌를 구성 하는 방법 = AD FS에 로그인
+이 경우 `wauth` 매개 변수에 의해 요청 된 대로 사용자 이름 및 암호 이외의 인증 유형이 필요한 회사 인트라넷 및 multi-factor authentication 시나리오에서 문제가 발생할 수 있습니다.  
 
-설정을 구성 하려면 Azure AD PowerShell 모듈을 사용 합니다.
+2012 년 7 월 2016 업데이트 롤업으로 Windows Server 2012 r 2의 AD FS에는 `prompt=login` 매개 변수에 대 한 기본 지원이 도입 되었습니다. 즉, 이제 azure AD는 Azure AD 및 Office 365 인증 요청의 일부로 서비스를 AD FS 하는 그대로이 매개 변수를 보낼 수 있습니다.
+
+## <a name="ad-fs-versions-that-support-promptlogin"></a>프롬프트를 지 원하는 AD FS 버전 = 로그인
+
+다음은 매개 변수를 `prompt=login` 지 원하는 AD FS 버전의 목록입니다.
+
+- 2012 년 7 월 2016 업데이트 롤업이 포함 된 Windows Server R2의 AD FS
+- Windows Server 2016의 AD FS
+
+## <a name="how-to-configure-a-federated-domain-to-send-promptlogin-to-ad-fs"></a>프롬프트를 보내도록 페더레이션된 도메인을 구성 하는 방법 AD FS에 로그인 합니다.
+
+Azure AD PowerShell 모듈을 사용 하 여 설정을 구성 합니다.
 
 > [!NOTE]
-> (PromptLoginBehavior 속성으로 사용) prompt = login 기능은 현재에 사용할 수는 [' 버전 1.0' Azure AD Powershell 모듈](https://connect.microsoft.com/site1164/Downloads/DownloadDetails.aspx?DownloadID=59185)를 cmdlet에 같은 "Msol"를 포함 하는 이름 Set-msoldomainfederationsettings 합니다.  통해 현재 사용할 수 없는 ' 버전 2.0' Azure AD PowerShell 모듈, 해당 cmdlet의 이름이 같은 "집합 AzureAD\*"입니다.
+> `PromptLoginBehavior` 속성에서 사용 하는 기능은 현재 AzureADPowershell 모듈의 [버전1.0에서만 `prompt=login`사용할수있습니다. ](https://connect.microsoft.com/site1164/Downloads/DownloadDetails.aspx?DownloadID=59185)이모듈의cmdlet에는get-msoldomainfederationsettings와같이"msol"이포함된 이름이 있습니다.  현재 cmdlet에 이름이 "AzureAD\*" 인 Azure AD PowerShell 모듈의 ' 버전 2.0 '을 통해 사용할 수 없습니다.
 
-프롬프트 구성 = 로그인 동작을 아래 cmdlet 구문:
+1. 먼저 다음 PowerShell 명령을 실행 하 `PreferredAuthenticationProtocol`여 `SupportsMfa`페더레이션된 도메인 `PromptLoginBehavior` 에 대해, 및의 현재 값을 가져옵니다.
 
-예 1:
 ```powershell
-    Set-MsolDomainFederationSettings –DomainName <your domain name> -PreferredAuthenticationProtocol <your current protocol setting> 
+    Get-MsolDomainFederationSettings -DomainName <your_domain_name> | Format-List *
 ```
 
-예 2:
-```powershell
-    Set-MsolDomainFederationSettings –DomainName <your domain name> -SupportsMfa <$True|$False>
-```
-
-예제 3:
-```powershell
-    Set-MsolDomainFederationSettings –DomainName <your domain name> -PromptLoginBehavior <TranslateToFreshPasswordAuth|NativeSupport|Disabled>
-```
-
- 
- Cmdlet의 출력을 확인 하 여 PreferredAuthenticationProtocol, SupportsMfa, 및 PromptLoginBehavior 속성 값을 찾을 수 있습니다. ![Get-MsolDomainFederationSettings](media/AD-FS-Prompt-Login/GetMsol.png)
-```powershell
-    Get-MsolDomainFederationSettings -DomainName <your_domain_name> | fl *
- ```
 > [!NOTE]
-> 기본적으로 Get-msoldomainfederationsettings를 실행 하는 경우, 특정 속성이 콘솔에 표시 되지 않습니다.  사용 하는 것이 좋습니다. 이러한 매개 변수를 보려면를 | fl *의 모든 개체의 속성이 출력 하도록 합니다.
+> 기본적 `Get-MsolDomainFederationSettings` 으로 출력은 콘솔에 특정 속성을 표시 하지 않습니다. 모든 속성을 보려면 출력을로`|` `Format-List *` 파이프 () 하 여 개체의 모든 속성을 강제로 출력 해야 합니다.
 
+![Get-MsolDomainFederationSettings](media/AD-FS-Prompt-Login/GetMsol.png)
 
-다음은 PromptLoginBehavior 매개 변수 및 해당 설정에 대 한 자세한 정보입니다.
-   
-   - <b>TranslateToFreshPasswordAuth</b> 전송의 기본 Azure AD 동작을 의미 <b>wauth</b> 하 고 <b>wfresh</b> 프롬프트 대신 AD FS 로그인 =
-   - <b>NativeSupport</b> prompt = login 매개 변수는 AD FS에 전송 되는 방법
-   - <b>사용 안 함</b> AD FS에 전송할 수는 아무 것도 의미 합니다.
+> [!NOTE]
+> 속성이 비어 있으면 (`$null`)이 고의 `TranslateToFreshPasswordAuth`기본 동작을 의미 합니다. `PreferredAuthenticationMethod`
 
+2. 다음 명령을 실행 하 여 `PromptLoginBehavior` 의 원하는 값을 구성 합니다.
+
+```powershell
+    Set-MsolDomainFederationSettings –DomainName <your_domain_name> -PreferredAuthenticationProtocol <current_value_from_step1> -SupportsMfa <current_value_from_step1> -PromptLoginBehavior <TranslateToFreshPasswordAuth|NativeSupport|Disabled>
+```
+
+`PromptLoginBehavior` 매개 변수의 가능한 값과 해당 의미는 다음과 같습니다.
+
+- **TranslateToFreshPasswordAuth**: 및 `prompt=login` 로`wfresh=0`변환 하는 기본 Azure AD 동작을 의미 합니다. `wauth=http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password`
+- **NativeSupport**: `prompt=login` 매개 변수가 AD FS 하는 것으로 전송 됨을 의미 합니다. 이 값은 AD FS Windows Server 2012 r 2에서 7 월 2016 업데이트 롤업 이상이 있는 경우 권장 되는 값입니다.
+- **Disabled**:만 `wfresh=0` AD FS로 전송 됨을 의미 합니다.
