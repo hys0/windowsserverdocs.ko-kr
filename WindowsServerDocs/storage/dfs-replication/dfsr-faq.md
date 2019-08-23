@@ -53,7 +53,7 @@ DFS 복제를 사용 하 여 sysvol을 복제 하는 [방법에 대 한 자세�
 
 예. FRS에서 DFS 복제로 복제를 마이그레이션하려면 다음 문서를 참조 하세요.
 
-  - SYSVOL 폴더가 [아닌 폴더의 복제를 마이그레이션하려면 DFS 작업 가이드: Frs에서 DFS 복제](http://go.microsoft.com/fwlink/?linkid=192776) 및 [FRS2DFSR – frs에서 DFSR 마이그레이션 유틸리티](http://go.microsoft.com/fwlink/?linkid=195437) ()http://go.microsoft.com/fwlink/?LinkID=195437) 로 마이그레이션  
+  - SYSVOL 폴더가 [아닌 폴더의 복제를 마이그레이션하려면 DFS 작업 가이드: Frs에서 DFS 복제](http://go.microsoft.com/fwlink/?linkid=192776) 및 [FRS2DFSR – frs에서 DFSR 마이그레이션 유틸리티](http://go.microsoft.com/fwlink/?linkid=195437) (http://go.microsoft.com/fwlink/?LinkID=195437) 로 마이그레이션  
       
   - Sysvol 폴더의 복제를 DFS 복제로 마이그레이션하려면 sysvol 복제 마이그레이션 [가이드를 참조 하세요. FRS를 DFS 복제](https://technet.microsoft.com/library/dd640019)합니다.  
       
