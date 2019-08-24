@@ -10,12 +10,12 @@ ms.topic: article
 ms.custom: it-pro
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 7bc98a8c9a57b2b7f63523f0411d648ca82137aa
-ms.sourcegitcommit: 2082335e1260826fcbc3dccc208870d2d9be9306
+ms.openlocfilehash: 46e8548e24f0d0991f69427741b0e04da6398334
+ms.sourcegitcommit: 4fa147d552481d8279a5390f458a9f7788061977
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69980339"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009102"
 ---
 # <a name="ad-fs-frequently-asked-questions-faq"></a>AD FS FAQ (질문과 대답)
 
@@ -76,9 +76,9 @@ AD FS는 다중 포리스트 구성을 여러 개 지원 하며, 신뢰할 수 �
 ## <a name="design"></a>디자인
 
 ### <a name="what-third-party-multi-factor-authentication-providers-are-available-for-ad-fs"></a>AD FS에 대해 사용할 수 있는 타사 multi-factor authentication 공급자는 무엇입니까?
-AD FS는 타사 MFA 공급자를 통합할 수 있는 확장성 메커니즘을 제공 합니다. 이에 대 한 인증 프로그램은 설정 되지 않습니다. 공급 업체는 릴리스 전에 필요한 유효성 검사를 수행 했다고 가정 합니다. 
+AD FS는 타사 MFA 공급자를 통합 하는 데 사용할 수 있는 확장 가능한 메커니즘을 제공 합니다. 이에 대 한 인증 프로그램은 설정 되지 않습니다. 공급 업체는 릴리스 전에 필요한 유효성 검사를 수행 했다고 가정 합니다. 
 
-Microsoft에 알림이 제공 된 공급 업체 목록에는 [AD FS에 대 한 MFA 공급자](..\operations\Configure-Additional-Authentication-Methods-for-AD-FS.md)가 게시 됩니다.  언제 든 지 알 수 없는 공급자가 있을 수 있으며,이에 대해 알아볼 때 목록을 업데이트 합니다.
+Microsoft에 알림이 제공 된 공급 업체 목록에는 [AD FS에 대 한 MFA 공급자](../operations/Configure-Additional-Authentication-Methods-for-AD-FS.md)가 게시 됩니다.  언제 든 지 알 수 없는 공급자가 있을 수 있으며,이에 대해 알아볼 때 목록을 업데이트 합니다.
 
 ### <a name="are-third-party-proxies-supported-with-ad-fs"></a>타사 프록시가 AD FS 지원 되나요?
 예, 타사 프록시를 웹 응용 프로그램 프록시 앞에 배치할 수 있지만 타사 프록시는 웹 응용 프로그램 프록시 대신 사용할 [MS ADFSPIP 프로토콜](https://msdn.microsoft.com/library/dn392811.aspx) 을 지원 해야 합니다.

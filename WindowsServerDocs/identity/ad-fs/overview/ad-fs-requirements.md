@@ -1,7 +1,7 @@
 ---
 ms.assetid: 28f4a518-1341-4a10-8a4e-5f84625b314b
 title: AD FS 2016 요구 사항
-description: Active Directory Federation Services를 설치 하기 위한 요구 사항입니다.
+description: Active Directory Federation Services를 설치 하기 위한 요구 사항
 author: billmath
 ms.author: billmath
 manager: mtillman
@@ -9,12 +9,12 @@ ms.date: 03/06/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 1e72556f9a630e188b59722e09650f9e48fb6852
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: c330b5f65b2862628fd23e288c95e81653da5c5b
+ms.sourcegitcommit: 4fa147d552481d8279a5390f458a9f7788061977
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67280476"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009076"
 ---
 # <a name="ad-fs-requirements"></a>AD FS 요구 사항
 
@@ -36,7 +36,7 @@ ms.locfileid: "67280476"
 
 -   [네트워크 요구 사항](ad-fs-requirements.md#BKMK_7)  
   
--   [사용 권한 요구 사항](ad-fs-requirements.md#BKMK_13)  
+-   [권한 요구 사항](ad-fs-requirements.md#BKMK_13)  
   
 ## <a name="BKMK_1"></a>인증서 요구 사항  
   
@@ -44,13 +44,13 @@ ms.locfileid: "67280476"
 
 각 AD FS 및 웹 응용 프로그램 프록시 서버는 페더레이션 서비스에 HTTPS 요청을 서비스에 SSL 인증서를 있습니다.  웹 응용 프로그램 프록시 게시 된 응용 프로그램에 대 한 서비스 요청에 추가 SSL 인증서를 가질 수 있습니다.
 
-**권장 사항:** 모든 AD FS 페더레이션 서버 및 웹 응용 프로그램 프록시에 대 한 동일한 SSL 인증서를 사용 합니다. 
+**권유** 모든 AD FS 페더레이션 서버 및 웹 응용 프로그램 프록시에 대해 동일한 SSL 인증서를 사용 합니다. 
 
 **요구 사항:**
 
 페더레이션 서버에서 SSL 인증서에는 다음 요구 사항을 충족 해야 합니다.
 - 인증서 (예: 프로덕션 배포의 경우) 공개적으로 신뢰할 수 있는
-- 서버 인증 EKU 향상 키 사용 () 값을 포함 하는 인증서
+- 인증서에는 서버 인증 EKU (확장 된 키 사용) 값이 포함 되어 있습니다.
 - 인증서 주체 또는 주체 대체 이름 (SAN)에서 "fs.contoso.com"와 같은 페더레이션 서비스 이름, 포함
 - 인증서가 들어 있는 포트 443에서 사용자 인증서 인증을 "certauth.\<페더레이션 서비스 이름\>","certauth.fs.contoso.com"SAN의 예:
 - 장치 등록 또는 온-프레미스 리소스 10 이전 windows 클라이언트를 사용 하 여 최신 인증에 대 한 SAN을 포함 해야 "enterpriseregistration.\<upn 접미사\>"에 대해 조직에서 사용 중인 각 UPN 접미사입니다.
@@ -63,13 +63,13 @@ ms.locfileid: "67280476"
 ### <a name="service-communication-certificate"></a>서비스 통신 인증서
 이 인증서를 Azure AD를 포함 하 여 대부분의 AD FS 시나리오에 필요 없는 및 Office 365입니다. 기본적으로 AD FS 서비스 통신 인증서로 초기 구성 시 제공 된 SSL 인증서를 구성 합니다.
 
-**권장 사항:**
+**권유**
 - SSL에 대 한 사용과 같은 인증서를 사용 합니다.  
 
 ### <a name="token-signing-certificate"></a>토큰 서명 인증서
-이 인증서는 신뢰 당사자 응용 프로그램 인증서를 인식 해야 하 고 키로 알려져 있고 신뢰할 수 있는 연결 된 신뢰 당사자에 발급 된 토큰을 로그인에 사용 됩니다. 토큰 서명 인증서 변경 내용을 만료 될 때 및 사용자와 같은 새 인증서를 구성 하는 경우 모든 신뢰 당사자를 업데이트 해야 합니다.
+이 인증서는 발급 된 토큰을 신뢰 당사자에 게 서명 하는 데 사용 됩니다. 따라서 신뢰 당사자 응용 프로그램은 인증서를 인식 하 고 해당 인증서와 관련 키가 알려져 있고 신뢰할 수 있습니다. 토큰 서명 인증서 변경 내용을 만료 될 때 및 사용자와 같은 새 인증서를 구성 하는 경우 모든 신뢰 당사자를 업데이트 해야 합니다.
 
-**권장 사항:** AD FS 기본적으로 내부적으로 생성 된 자체 서명 된 토큰 서명 인증서를 사용 합니다.  
+**권유** AD FS 기본, 내부적으로 생성 된 자체 서명 된 토큰 서명 인증서를 사용 합니다.  
 
 **요구 사항:**
 - 조직에서 엔터프라이즈 PKI 인증서를 토큰 서명에 사용할 수는 경우, 이렇게 설치 AdfsFarm cmdlet의 SigningCertificateThumbprint 매개 변수를 사용 합니다.
@@ -78,7 +78,7 @@ ms.locfileid: "67280476"
 ### <a name="token-encryptingdecrypting-certificate"></a>토큰 암호화/암호 해독 인증서
 이 인증서는 AD FS에 발급 된 토큰을 암호화 하는 클레임 공급자가 사용 됩니다.
 
-**권장 사항:** AD FS 기본적으로 인증서를 암호 해독 내부적으로 생성 된 자체 서명 된 토큰을 사용 합니다.  
+**권유** AD FS 기본, 내부적으로 생성 된 자체 서명 된 토큰 암호 해독 인증서를 사용 합니다.  
 
 **요구 사항:**
 - 조직에서 엔터프라이즈 PKI 인증서를 토큰 서명에 사용할 수는 경우, 이렇게 설치 AdfsFarm cmdlet의 DecryptingCertificateThumbprint 매개 변수를 사용 합니다.
@@ -97,12 +97,12 @@ AD FS 및 웹 응용 프로그램 프록시 하드웨어 요구 사항 (실제 �
 AD FS에 대 한 메모리 및 디스크 요구 사항은 상당히 정적인 하 고 아래 표를 참조 하십시오.
 
 
-|**하드웨어 요구 사항**|**최소 요구 사항**|**권장된 요구 사항**|
+|**하드웨어 요구 사항**|**최소 요구 사항**|**권장 요구 사항**|
 |----- | ----- |-----|
 |RAM|2GB|4GB |
-|디스크 공간|32GB|100GB |
+|디스크 공간|32GB|100 GB |
 
-**SQL Server에 대 한 하드웨어 요구 사항**
+**하드웨어 요구 사항 SQL Server**
 
 SQL Server AD FS 구성 데이터베이스를 사용 하는 가장 기본적인 SQL Server 권장 사항에 따라 SQL Server의 크기 조정 합니다.  AD FS 데이터베이스 크기는 매우 작은 및 AD FS 데이터베이스 인스턴스에 대 한 중요 한 처리 부하를 넣지 않습니다.  그러나 AD FS, 연결할 데이터베이스 여러 번을 인증 하는 동안 네트워크 연결이 정도로 강력해 야 합니다.  그러나 SQL Azure AD FS 구성 데이터베이스에 대해 지원 되지 않습니다.
   
@@ -110,7 +110,7 @@ SQL Server AD FS 구성 데이터베이스를 사용 하는 가장 기본적인 
   
 -   엑스트라넷 액세스에 대 한 웹 응용 프로그램 프록시 역할 서비스를 배포 해야 \- 원격 액세스 서버 역할의 일부입니다. 
 
--   제 3 자 프록시를 지원 해야는 [MS ADFSPIP 프로토콜](https://msdn.microsoft.com/library/dn392811.aspx) AD FS 프록시도 지원 됩니다.  공급 업체 목록을 제 3 자에 대 한 참조를 [FAQ](AD-FS-FAQ.md#what-third-party-proxies-are-available-for-ad-fs-that-support-ms-adfspip)합니다.
+-   제 3 자 프록시를 지원 해야는 [MS ADFSPIP 프로토콜](https://msdn.microsoft.com/library/dn392811.aspx) AD FS 프록시도 지원 됩니다.  타사 공급 업체 목록은 [FAQ](AD-FS-FAQ.md)를 참조 하십시오.
 
 -   AD FS 2016에는 Windows Server 2016에서 웹 응용 프로그램 프록시 서버가 필요합니다.  2016 팜 동작 수준에서 실행 하는 AD FS 2016 팜을 대 한 하위 프록시를 구성할 수 없습니다.
   
@@ -143,13 +143,13 @@ SQL Server AD FS 구성 데이터베이스를 사용 하는 가장 기본적인 
   
 -   모든 표준 도메인 계정이 AD FS에 대 한 서비스 계정으로 사용할 수 있습니다. 그룹 관리 서비스 계정은 지원 됩니다. AD FS를 구성 하는 경우 런타임에 필요한 사용 권한은 자동으로 추가 됩니다.
 
--   AD 서비스 계정에 필요한 사용자 권한 할당 '서비스로 로그온'입니다.
+-   AD 서비스 계정에 필요한 사용자 권한 할당은 ' 서비스로 로그온 '입니다.
 
--   ' NT Service\adfssrv' 및 ' NT Service\drs'에 필요한 사용자 권한 할당은 보안 감사 생성 ' 및 '서비스로 로그온'입니다.
+-   ' NT Service\adfssrv ' 및 ' NT Service\drs '에 필요한 사용자 권한 할당은 ' 보안 감사 생성 ' 및 ' 서비스로 로그온 '입니다.
 
--   그룹 관리 서비스 계정에는 Windows Server 2012 이상을 실행 하는 도메인 컨트롤러가 하나 이상 필요 합니다.  기본 GMSA 있어야 ' CN = 관리 되는 서비스 계정의 컨테이너입니다.  
+-   그룹 관리 서비스 계정에는 Windows Server 2012 이상을 실행 하는 도메인 컨트롤러가 하나 이상 필요 합니다.  GMSA는 기본 ' CN = 관리 서비스 계정 ' 컨테이너에 있어야 합니다.  
 
--   Kerberos 인증의 경우 서비스 사용자 이름 '`HOST/<adfs\_service\_name>`' AD FS 서비스 계정에 등록 해야 합니다. 기본적으로 AD FS 구성 합니다이 새 AD FS 팜을 만들 때.  와 같은 실패 하면 충돌 또는 사용 권한이 있는 경우 경고가 나타납니다 및 수동으로 추가 해야 합니다.  
+-   Kerberos 인증의 경우 서비스 사용자 이름 ' '`HOST/<adfs\_service\_name>`이 (가) AD FS 서비스 계정에 등록 되어 있어야 합니다. 기본적으로 AD FS 구성 합니다이 새 AD FS 팜을 만들 때.  와 같은 실패 하면 충돌 또는 사용 권한이 있는 경우 경고가 나타납니다 및 수동으로 추가 해야 합니다.  
    
 **도메인 요구 사항**  
   
@@ -161,7 +161,7 @@ SQL Server AD FS 구성 데이터베이스를 사용 하는 가장 기본적인 
   
 -   모든 도메인 이나 포리스트의 AD FS 서비스에 인증 하는 사용자가 포함 된 AD FS 서버 가입 된 도메인 신뢰 해야 합니다.  
 
--   포리스트의 AD FS 서비스 계정으로 구성원 인 모든 사용자 로그인 포리스트를 신뢰 해야 합니다. 
+-   AD FS 서비스 계정이 구성원 인 포리스트는 모든 사용자 로그인 포리스트를 신뢰 해야 합니다. 
   
 -   AD FS 서비스 계정이 AD FS 서비스를 인증 하는 사용자를 포함 하는 모든 도메인 사용자 특성을 읽을 권한이 있어야 합니다.  
   
@@ -177,10 +177,10 @@ SQL Server AD FS 구성 데이터베이스를 사용 하는 가장 기본적인 
 다음 표에서 AD FS 서버 수에 대 한 요약 제공 WID vs에서 SQL Server 팜을 지원 합니다.    
   
   
-|| 1-100 신뢰 당사자 (RP) 트러스트에서 AD FS 구성 | 100 개가 넘는 RP 트러스트 구성  |
+|| 1-100 AD FS에서 구성 된 RP (신뢰 당사자) 트러스트 | 100 개가 넘는 RP 트러스트 구성  |
 | --- |--- | --- |
-|1-30 AD FS 서버|WID 지원|WID-필요한 SQL Server를 사용 하 여 지원 되지 않습니다. |
-|개 이상의 30 AD FS 서버|WID-필요한 SQL Server를 사용 하 여 지원 되지 않습니다.|WID-필요한 SQL Server를 사용 하 여 지원 되지 않습니다.  
+|1-30 AD FS 서버|WID 지원|WID를 사용 하 여 지원 되지 않음-SQL Server 필요 |
+|개 이상의 30 AD FS 서버|WID를 사용 하 여 지원 되지 않음-SQL Server 필요|WID를 사용 하 여 지원 되지 않음-SQL Server 필요  
   
 **SQL Server**  
   
@@ -199,7 +199,7 @@ SQL Server AD FS 구성 데이터베이스를 사용 하는 가장 기본적인 
   
 - 브라우저는 사용자 인증서 및 장치 인증서 인증을 위해 SSL 클라이언트 인증서 인증을 지원 해야 합니다.  
 
-- Windows 통합 인증을 페더레이션 서비스 이름을 사용 하 여 원활한 로그인 (예: https:\/\/fs.contoso.com) 로컬 인트라넷 영역 또는 신뢰할 수 있는 사이트 영역에서 구성 해야 합니다.
+- Windows 통합 인증을 사용 하 여 원활 하 게 로그인 하려면 로컬 인트라넷 영역 또는 신뢰할 수\/있는 사이트 영역에 페더레이션 서비스 이름 (예: https:\/fs.contoso.com)을 구성 해야 합니다.
   ## <a name="BKMK_7"></a>네트워크 요구 사항  
  
 **방화벽 요구 사항**  
@@ -208,9 +208,9 @@ SQL Server AD FS 구성 데이터베이스를 사용 하는 가장 기본적인 
   
 또한 클라이언트 사용자 인증서 인증 하는 경우 \(clientTLS 인증 X509를 사용 하 여 사용자 인증서\) 필요 certauth 끝점 포트 443에서 사용 가능 하지, AD FS 2016 TCP 포트 49443을 설정 하는 것이 필요 하 고 클라이언트와 웹 응용 프로그램 프록시 간의 방화벽에 인바운드 합니다. 이 웹 응용 프로그램 프록시와 페더레이션 서버 간의 방화벽에 필요 하지 않습니다\)합니다. 
 
-하이브리드 포트에 대 한 자세한 요구 사항을 참조 하세요 [하이브리드 Identity 포트 및 프로토콜](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-ports)합니다. 
+하이브리드 포트 요구 사항에 대 한 자세한 내용은 [하이브리드 Id 포트 및 프로토콜](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-ports)을 참조 하세요. 
 
-추가 정보를 참조 하세요. [Active Directory Federation Services 보안 모범 사례입니다](../deployment/Best-Practices-Securing-AD-FS.md)
+자세한 내용은 [Active Directory Federation Services 보안 설정 모범 사례](../deployment/Best-Practices-Securing-AD-FS.md) 를 참조 하세요.
   
 **DNS 요구 사항**  
   
@@ -226,18 +226,18 @@ SQL Server AD FS 구성 데이터베이스를 사용 하는 가장 기본적인 
 
 -   장치 등록 또는 온-프레미스 리소스 10 이전 windows 클라이언트를 사용 하 여 최신 인증을 "enterpriseregistration.\<upn 접미사\>", 페더레이션 서버 또는 웹 응용 프로그램 프록시를 확인 하기 위해 조직에서 사용 중인 각 UPN 접미사를 구성 해야 합니다.
 
-**부하 분산 장치 요구 사항**
-- 부하 분산 장치를 안 SSL 종료 합니다. AD FS SSL 종료 발생할 때 중단 하는 인증서 인증을 사용 하 여 여러 사용 사례를 지원 합니다. 부하 분산 장치 SSL 종료 사용 사례에 대 한 지원 되지 않습니다. 
-- SNI를 지 원하는 부하 분산 장치를 사용 하는 것이 좋습니다. 이벤트 하지 않는 AD FS에 대 한 바인딩 대체 (fallback) 0.0.0.0을 사용 하 여 웹 응용 프로그램 프록시 서버에는 해결 방법을 제공 해야 합니다.
-- 트래픽 라우팅에 대 한 부하 분산 장치 상태 검사를 수행 하려면 HTTP (HTTPS 아님) 상태 프로브 끝점을 사용 하는 것이 좋습니다. 이렇게 하면 SNI와 관련 된 문제가 없습니다. 이러한 프로브 끝점에 대 한 응답에 HTTP 200 OK 이며 백 엔드 서비스에 종속 되지 않음를 사용 하 여 로컬로 제공 됩니다. HTTP 프로브는 '/ adf/프로브' 경로 사용 하 여 HTTP를 통해 액세스할 수 있습니다.
-    - http://&lt;웹 응용 프로그램 프록시 이름 &gt; /adf/프로브
-    - http://&lt;ADFS 서버 이름을 &gt; /adf/프로브
-    - http://&lt;웹 응용 프로그램 프록시 IP 주소 &gt; /adf/프로브
-    - http://&lt;ADFS ip &gt; /adf/프로브
-- DNS를 사용 하는 것은 권장 되지 부하를 분산 하는 방법으로 라운드 로빈입니다. 이 유형의 부하 분산을 사용 하 여 상태 프로브를 사용 하 여 부하 분산 장치에서 노드를 제거 하는 자동화 된 방법을 제공 하지 않습니다. 
-- 하지 인증 트래픽 부하 분산 장치 내에서 AD fs에 대 한 IP 기반 세션 선호도 또는 고정 세션을 사용 하는 것이 좋습니다. 메일 클라이언트에 대 한 레거시 인증 프로토콜을 사용 하 여 Office 365 메일 서비스 (Exchange Online)에 연결할 때 특정 노드가 오버 로드를 발생할 수 있습니다이 있습니다. 
+**Load Balancer 요구 사항**
+- 부하 분산 장치는 SSL을 종료 해서는 안 됩니다. AD FS는 SSL을 종료할 때 중단 되는 인증서 인증을 사용 하는 여러 사용 사례를 지원 합니다. 모든 사용 사례에 대해 부하 분산 장치에서 SSL을 종료 하는 것은 지원 되지 않습니다. 
+- SNI를 지 원하는 부하 분산 장치를 사용 하는 것이 좋습니다. 그렇지 않은 경우에는 AD FS/웹 응용 프로그램 프록시 서버에서 0.0.0.0 대체 (fallback) 바인딩을 사용 하 여 해결 방법을 제공 해야 합니다.
+- HTTP (HTTPS 아님) 상태 프로브 끝점을 사용 하 여 트래픽 라우팅에 대 한 부하 분산 장치 상태 검사를 수행 하는 것이 좋습니다. SNI와 관련 된 문제를 방지 합니다. 이러한 프로브 끝점에 대 한 응답은 HTTP 200 OK 이며 백 엔드 서비스에 대 한 종속성 없이 로컬로 제공 됩니다. Http 프로브는 '/adfs/probe ' 경로를 사용 하 여 HTTP를 통해 액세스할 수 있습니다.
+    - http://&lt;웹 응용 프로그램 프록시&gt;이름/adfs/probe
+    - http://&lt;ADFS 서버 이름&gt;/adfs/probe
+    - http://&lt;웹 응용 프로그램 프록시 IP&gt;주소/adfs/probe
+    - http://&lt;ADFS IP 주소&gt;/adfs/probe
+- 부하를 분산 하는 방법으로 DNS 라운드 로빈을 사용 하지 않는 것이 좋습니다. 이 유형의 부하 분산을 사용 하는 경우 상태 프로브를 사용 하 여 부하 분산 장치에서 노드를 제거 하는 자동화 된 방법을 제공 하지 않습니다. 
+- 부하 분산 장치 내에서 AD FS 하기 위해 인증 트래픽에 대해 IP 기반 세션 선호도 또는 고정 세션을 사용 하지 않는 것이 좋습니다. 이로 인해 메일 클라이언트에서 Office 365 메일 서비스 (Exchange Online)에 연결 하는 데 레거시 인증 프로토콜을 사용 하는 경우 특정 노드의 오버 로드가 발생할 수 있습니다. 
 
-## <a name="BKMK_13"></a>사용 권한 요구 사항  
+## <a name="BKMK_13"></a>권한 요구 사항  
 설치 및 AD FS의 초기 구성을 수행 하는 관리자에는 AD FS 서버에서 로컬 관리자 권한이 있어야 합니다.  먼저 도메인 관리자는 로컬 관리자는 Active Directory에 개체를 만들 권한이 없는 경우 있어야 필요한 AD 개체를 만든 다음 AdminConfiguration 매개 변수를 사용 하 여 AD FS 팜을 구성 합니다.  
   
   

@@ -11,12 +11,12 @@ ms.assetid: b886b2fd-3567-4f0a-8aa3-4ba7923d2d21
 author: coreyp-at-msft
 ms.author: coreyp
 ms.localizationpriority: high
-ms.openlocfilehash: bd9df9cc9836b15ec22c11b3413aa778192307f9
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: b788aa85bcc2df7c96baaf591b224788e6e6f487
+ms.sourcegitcommit: 6f8993e2180c4d3c177e3e1934d378959396b935
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "63752189"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000740"
 ---
 # <a name="security--assurance"></a>보안 | 보증
 
@@ -251,7 +251,7 @@ Windows Server 보안은 운영 체제에 기본 제공되는 보호 계층을 �
 <HR />
                         <p><h3><a href="https://www.youtube.com/watch?v=_SaDw1dRy2k">Microsoft Operations Management Suite(OMS)</a></h3>Microsoft Operations Management Suite(OMS) 보안 및 감사 솔루션은 온-프레미스 및 클라우드 환경의 보안 로그 및 방화벽 이벤트를 처리하여 악의적인 동작을 분석하고 감지합니다.</p>
 <HR />
-                        <p><h3><a href="https://www.youtube.com/watch?v=_SaDw1dRy2k">OMS 및 Windows Server</a></h3>이 3분짜리 비디오는 OMS를 통해 Windows Server에서 차단되는 잠재적인 악성 동작을 어떻게 감지할 수 있는지 보여 줍니다. 지원</p>
+                        <p><h3><a href="https://www.youtube.com/watch?v=_SaDw1dRy2k">OMS 및 Windows Server</a></h3>이 3분짜리 비디오는 OMS를 통해 Windows Server에서 차단되는 잠재적인 악성 동작을 어떻게 감지할 수 있는지 보여 줍니다.</p>
 <HR />
                         <p><h3><a href="http://blogs.technet.com/b/ad/archive/2015/07/22/microsoft-advanced-threat-analytics-coming-next-month.aspx">Microsoft Advanced Threat Analytics</a></h3>이 블로그 게시물에서는 Active Directory 네트워크 트래픽 및 SIEM 데이터를 사용하여 잠재적 위협을 검색하고 경고하는 온-프레미스 제품인 Microsoft Advanced Threat Analytics를 소개합니다.</p>
                     </div>
