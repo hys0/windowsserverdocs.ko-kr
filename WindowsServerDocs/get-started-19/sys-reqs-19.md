@@ -64,7 +64,7 @@ ms.locfileid: "66810720"
 > -   Shift+F10을 사용하여 가상 머신에서 이 릴리스의 부팅 프로세스를 중단합니다. 명령 프롬프트가 열리면 Diskpart.exe를 사용하여 설치 파티션을 만들고 포맷합니다. **Wpeutil createpagefile /path=C:\pf.sys** 를 실행합니다(만든 설치 파티션이 C:인 경우 예제). 명령 프롬프트를 닫고 설치를 계속 진행합니다.  
 
 ## <a name="storage-controller-and-disk-space-requirements"></a>저장소 컨트롤러 및 디스크 공간 요구 사항  
-Windows Server 2019를 실행하는 컴퓨터에는 PCI Express 아키텍처 사양과 호환되는 저장소 어댑터가 포함되어 있어야 합니다. 서버에서 하드 디스크 드라이브로 분류된 영구 저장 장치는 PATA가 아니어야 합니다. Windows Server 2019에서는 부팅, 페이지 또는 데이터 드라이브에 ATA/PATA/IDE/EIDE를 사용할 수 없습니다.  
+Windows Server 2019를 실행하는 컴퓨터에는 PCI Express 아키텍처 사양과 호환되는 스토리지 어댑터가 포함되어 있어야 합니다. 서버에서 하드 디스크 드라이브로 분류된 영구 저장 장치는 PATA가 아니어야 합니다. Windows Server 2019에서는 부팅, 페이지 또는 데이터 드라이브에 ATA/PATA/IDE/EIDE를 사용할 수 없습니다.  
 
 다음은 시스템 파티션을 위한 **최소** 예상 디스크 공간 요구 사항입니다.  
 

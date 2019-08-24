@@ -32,7 +32,7 @@ ms.locfileid: "63747885"
 
 ## <a name="ava6"></a>Ava6
 
-[Ava6](http://www.avassys.com/)는 IT 인프라, 특히 가상화, 네트워킹, 저장소, 백업 및 클라우드 컴퓨팅의 디자인, 평가, 통합을 전문으로 하는 IT 컨설팅 회사입니다.
+[Ava6](http://www.avassys.com/)는 IT 인프라, 특히 가상화, 네트워킹, 스토리지, 백업 및 클라우드 컴퓨팅의 디자인, 평가, 통합을 전문으로 하는 IT 컨설팅 회사입니다.
 
 Ava6는 Windows Server 2016 Core, Hyper-V, 장애 조치 클러스터링, S2D를 사용합니다. 
 
@@ -52,7 +52,7 @@ Ava6의 고객은 Windows Admin Center에 감동해왔으며 다른 옵션에 �
 
 [Comparex](https://www.comparex-group.com)는 관리를 지원하고, 소프트웨어 제품을 활용하고, 생산성 최적화를 지원하기 위한 서비스를 개발하는 IT 서비스 공급자이며 소프트웨어 라이선스 관리 회사입니다.
 
-Comparex는 HTML, Azure AD 및 애플리케이션 프록시, 파일 서버, Azure Site Recovery를 통해 Windows Server 2012R2, Windows Server 2016, Windows 10, Hyper-V, 장애 조치 클러스터, 저장소 공간 다이렉트, PowerShell, RDP를 사용합니다.
+Comparex는 HTML, Azure AD 및 애플리케이션 프록시, 파일 서버, Azure Site Recovery를 통해 Windows Server 2012R2, Windows Server 2016, Windows 10, Hyper-V, 장애 조치 클러스터, 스토리지 공간 다이렉트, PowerShell, RDP를 사용합니다.
 
 ### <a name="the-challenge"></a>**해결 과제**
 
@@ -64,7 +64,7 @@ Comparex는 중소 기업을 위한 사용하기 쉽고 원격으로 액세스�
 
 Comparex는 자체 데모 랩에 대한 액세스와 이의 관리를 위해 서버 기반 Windows Admin Center 설치를 실행 중이며, 이는 추가 VPN 및 RDP 단계를 축소하는 데 도움을 주었습니다.  또한 Comparex의 컨설턴트는 RDP에 대한 명시적 액세스가 필요 없이 자신의 환경에서 고객을 위해 자체 노트북에서 Windows Admin Center를 실행합니다.
 
-Windows Admin Center를 통해 Comparex는 일상 업무에 시간을 절약할 수 있었으며, 더 많은 작업을 수행하고 더 큰 성과를 거두었습니다.  Windows Admin Center는 Hyper-V 및 저장소 공간 다이렉트와 같은 고객의 일반적인 관리 과제를 해결했습니다.
+Windows Admin Center를 통해 Comparex는 일상 업무에 시간을 절약할 수 있었으며, 더 많은 작업을 수행하고 더 큰 성과를 거두었습니다.  Windows Admin Center는 Hyper-V 및 스토리지 공간 다이렉트와 같은 고객의 일반적인 관리 과제를 해결했습니다.
 
 ## <a name="convergent-computing"></a>Convergent Computing
 
@@ -88,7 +88,7 @@ Windows Admin Center 이전에 Convergent Computing은 System Center 및 사용�
 
 [FZI 정보 기술 연구 센터](https://www.fzi.de)는 정보 기술 및 기술 이전에 대한 응용 연구 전문 비영리 기관입니다.
 
-FZI는 Windows Server 2016, Windows 10, Hyper-V, 저장소 공간 다이렉트, 장애 조치 클러스터를 사용합니다.
+FZI는 Windows Server 2016, Windows 10, Hyper-V, 스토리지 공간 다이렉트, 장애 조치 클러스터를 사용합니다.
 
 ### <a name="the-challenge"></a>**해결 과제**
 
@@ -124,7 +124,7 @@ GVC Group은 관리자의 관리 부담을 덜어 생산성이 향상되었습�
 
 [Inside Technologies](http://www.insidetechnologies.eu)는 애플리케이션 개발, 엔터프라이즈 솔루션 및 인프라 서비스를 제공하는 전 세계를 중심으로 하는 IT 컨설팅 회사입니다.  고객의 요구를 충족하기 위해 Microsoft 솔루션으로 새롭고 고유한 접근 방식을 적용하는 것을 전문으로 합니다.
 
-Inside Technologies는 Hyper-V 및 저장소를 포함하여 다양한 Windows Server 기술을 사용합니다.
+Inside Technologies는 Hyper-V 및 스토리지를 포함하여 다양한 Windows Server 기술을 사용합니다.
 
 ### <a name="the-challenge"></a>**해결 과제**
 
@@ -160,7 +160,7 @@ Windows Admin Center를 통해 COPA-DATA는 내부 인프라를 관리하는 사
 
 [VaiSulWeb](http://www.vaisulweb.com/)은 웹 호스팅 및 IaaS/PaaS 서비스 공급자이며 개발 및 통합 서비스도 제공하고 있습니다.
 
-VaiSulWeb은 Windows Server 2016 및 2012 R2를 Hyper-V, 장애 조치 클러스터링, 저장소 공간 다이렉트, 파일 서버, SQL Server, IIS, WSL과 함께 사용합니다.
+VaiSulWeb은 Windows Server 2016 및 2012 R2를 Hyper-V, 장애 조치 클러스터링, 스토리지 공간 다이렉트, 파일 서버, SQL Server, IIS, WSL과 함께 사용합니다.
 
 ### <a name="the-challenge"></a>**해결 과제**
 

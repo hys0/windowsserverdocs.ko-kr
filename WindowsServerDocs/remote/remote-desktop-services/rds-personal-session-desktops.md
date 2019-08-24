@@ -102,4 +102,4 @@ New-RDSessionCollection cmdlet을 사용하여 개인 세션 데스크톱 컬렉
 모든 새 cmdlet은 -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer, -OutVariable 등의 일반 매개 변수를 지원합니다. 자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216)를 참조하세요.
 
 ## <a name="hardware-accelerated-graphics"></a>하드웨어 가속 그래픽
-Windows Server 2016은 RemoteFX 3D vGPU(그래픽 어댑터) 기술을 확장하여 OpenGL을 지원하고 단일 사용자 Windows Server 2016 게스트 VM을 지원합니다. 개인 세션 데스크톱을 새 vGPU 기능과 결합하여 가속된 그래픽을 필요로 하는 호스티드 애플리케이션을 지원할 수 있습니다. 또는 개인 세션 데스크톱을 새 DDA(개별 장치 할당) 기능과 결합하여 가속된 그래픽을 필요로 하는 호스티드 애플리케이션도 지원할 수 있습니다.
+Windows Server 2016은 RemoteFX 3D vGPU(그래픽 어댑터) 기술을 확장하여 OpenGL을 지원하고 단일 사용자 Windows Server 2016 게스트 VM을 지원합니다. 개인 세션 데스크톱을 새 vGPU 기능과 결합하여 가속된 그래픽을 필요로 하는 호스티드 애플리케이션을 지원할 수 있습니다. 또는 개인 세션 데스크톱을 새 DDA(개별 디바이스 할당) 기능과 결합하여 가속된 그래픽을 필요로 하는 호스티드 애플리케이션도 지원할 수 있습니다.

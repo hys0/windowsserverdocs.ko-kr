@@ -61,7 +61,7 @@ Windows Admin Center에는 Azure Active Directory, Azure Backup, Azure Site Reco
 
 ### <a name="manage-hyper-converged-clusters"></a>**하이퍼 컨버지드 클러스터 관리**
 
-Windows Admin Center는 가상화된 컴퓨팅, 저장소 및 네트워킹 구성 요소를 포함하여 [하이퍼 컨버지드 클러스터 관리](../use/manage-hyper-converged.md)를 위한 최상의 환경을 제공합니다.
+Windows Admin Center는 가상화된 컴퓨팅, 스토리지 및 네트워킹 구성 요소를 포함하여 [하이퍼 컨버지드 클러스터 관리](../use/manage-hyper-converged.md)를 위한 최상의 환경을 제공합니다.
 
 ### <a name="extensibility"></a>**확장성**
 
