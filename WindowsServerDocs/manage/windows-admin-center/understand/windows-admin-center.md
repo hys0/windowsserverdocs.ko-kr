@@ -5,15 +5,15 @@ ms.technology: manage
 ms.topic: article
 author: haley-rowland
 ms.author: harowl
-ms.date: 06/20/2019
+ms.date: 08/22/2019
 ms.localizationpriority: high
 ms.prod: windows-server-threshold
-ms.openlocfilehash: 59668e548f2e61cc7497e807dd93aae5c16798ca
-ms.sourcegitcommit: bd5f82f1e534dbb01b8e19e83a23759ebc92b81a
+ms.openlocfilehash: 47dc8e86fd29f4011c205f296439fda4155b27f3
+ms.sourcegitcommit: 4fa147d552481d8279a5390f458a9f7788061977
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68757460"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009056"
 ---
 # <a name="hello-windows-admin-center"></a>안녕하세요, Windows Admin Center입니다!
 
@@ -25,7 +25,7 @@ Windows Admin Center는 서버, 클러스터, 하이퍼 컨버지드 인프라 �
 
 [나는 어떤 버전이 맞을까?](faq.md#what-is-windows-admin-center-preview-which-version-is-right-for-me)
 
-[Windows Admin Center **미리 보기** 1907](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver) - 최신 기능 업데이트가 포함되어 있습니다.
+[Windows Admin Center **미리 보기** 1908](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver) - 최신 기능 업데이트가 포함되어 있습니다.
 
 [Windows Admin Center(버전 1904.1)](https://aka.ms/WACDownload) - 광범위하게 검증되고 일반적으로 이용 가능합니다.
 

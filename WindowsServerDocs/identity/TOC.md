@@ -367,7 +367,7 @@
 
 ### AD FS 개발
 #### [AD FS 최신 인증 개념](ad-fs/development/ad-fs-openid-connect-oauth-concepts.md)
-#### [AD FS 최신 인증 흐름 및 앱 시나리오 ](ad-fs/overview/ad-fs-openid-connect-oauth-flows-scenarios.md)
+#### [AD FS OpenID Connect/OAuth 흐름 및 애플리케이션 시나리오](ad-fs/overview/ad-fs-openid-connect-oauth-flows-scenarios.md)
 
 #### [AD FS용 사용자 지정 인증 방법 빌드](ad-fs/development/ad-fs-build-custom-auth-method.md)
 #### [AD FS 2019 위험 평가 모델을 사용하여 플러그 인 빌드](ad-fs/development/ad-fs-risk-assessment-model.md)

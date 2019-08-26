@@ -16,6 +16,7 @@
 ## [Windows Server 2016의 업그레이드 및 변환 옵션](Supported-Upgrade-paths.md)
 ## [Windows Server 2016 역할 업그레이드 및 마이그레이션](Server-Role-Upgradeability-Table.md)
 ## [Windows Server 2016 애플리케이션 호환성 표](Server-Application-compatibility.md)
+## [Windows Server에서 제거되었거나 교체 예정인 기능](../get-started-19/removed-features.md)
 ## [Windows Server 2016에서 제거되었거나 사용되지 않는 기능](Deprecated-Features.md)
 ## [Windows Server 2016 버전 비교](2016-Edition-Comparison.md)
 ## [Windows Server의 Azure 하이브리드 혜택](azure-hybrid-benefit.md)

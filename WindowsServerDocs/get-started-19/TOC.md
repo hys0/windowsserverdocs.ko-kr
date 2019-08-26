@@ -11,7 +11,9 @@
 ## [Windows Server 2019 및 Microsoft Server Application 호환성](app-compat-19.md)
 ## [Server Core 앱 호환성 FOD(Feature on Demand)](install-fod-19.md)
 ## [표준 | 데이터 센터 버전 비교](editions-comparison-19.md)
-## [Windows Server 2019부터 제거되었거나 교체 예정인 기능](removed-features-19.md)
-## [Windows Server 버전 1903부터 제거되었거나 교체 예정인 기능](removed-features-1903.md)
+## 제거된 기능
+### [Windows Server에서 제거되었거나 교체 예정인 기능](removed-features.md)
+### [Windows Server 2019부터 제거되었거나 교체 예정인 기능](removed-features-19.md)
+### [Windows Server 버전 1903부터 제거되었거나 교체 예정인 기능](removed-features-1903.md)
 ## [Windows Server 릴리스 정보](../get-started/windows-server-release-info.md)
 ## [Windows Server 사용 조건](../windows-server-licensing/windows-server-licensing.md)
