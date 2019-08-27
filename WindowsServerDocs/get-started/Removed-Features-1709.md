@@ -1,24 +1,20 @@
 ---
 title: Windows Server부터 제거되었거나 교체 예정인 기능(버전 1709)
 description: 릴리스에서 제거되었거나 제거될 예정인 기능
-ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
 ms.technology: server-general
-ms.tgt_pltfrm: na
 ms.topic: article
-ms.date: 06/05/2018
-author: jaimeo
-ms.author: jaimeo
+ms.date: 08/22/2019
+author: jasongerend
+ms.author: jgerend
 manager: dougkim
 ms.localizationpriority: medium
-ms.openlocfilehash: 37970f3bee2070cffc77bff855a8f28641196b24
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: b4303d05a87fe06e84df0cc55e2c1af8b34047e6
+ms.sourcegitcommit: 6f8993e2180c4d3c177e3e1934d378959396b935
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66452862"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000629"
 ---
 # <a name="features-removed-or-planned-for-replacement-starting-with-windows-server-version-1709"></a>Windows Server, 버전 1709부터 제거되었거나 교체 예정인 기능
 
@@ -26,7 +22,12 @@ ms.locfileid: "66452862"
 
 다음은 이 릴리스에서 제거되었거나 다음 릴리스에서 교체될 가능성이 고려되기 시작한 Windows Server, 버전 1709 기능의 목록입니다. 상용 환경에서 운영 체제를 업데이트하는 IT 전문가가 참조하시면 유용합니다. **후속 릴리스의 변경 사항에 따라 달라질 수 있으며 일부 영향을 받는 기능이 생략되었을 수 있습니다.** 
 
+> [!TIP]
+> - [Windows 참가자 프로그램](https://insider.windows.com)에 가입하여 Windows Server 빌드에 대한 초기 액세스를 얻을 수 있습니다. 이는 변경된 기능을 테스트하는 좋은 방법입니다.
+> - 다른 릴리스에 대한 질문이 있습니까? [Windows Server에서 제거되었거나 교체 예정인 기능](../get-started-19/removed-features.md)을 확인하세요.
+
 ## <a name="features-removed-from-windows-server-version-1709"></a>Windows Server, 버전 1709에서 제거된 기능
+
 Windows Server, 버전 1709에는 Windows Server 2016에 있는 동일한 기능이 포함되어 있습니다. 하지만 이 릴리스는 Windows Server 2016과는 다른 설치 옵션을 제공합니다.
 
 - 반기 채널 릴리스로서 Windows Server, 버전 1709는 Server Core 설치 옵션만을 제공합니다. 자세한 내용은 [서비스 채널 비교](../get-started-19/servicing-channels-19.md)를 참조하세요.

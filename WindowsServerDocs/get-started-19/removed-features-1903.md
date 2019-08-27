@@ -4,16 +4,16 @@ description: 다음은 이 릴리스에서 제거되었거나 다음 릴리스�
 ms.prod: windows-server-threshold
 ms.technology: server-general
 ms.topic: article
-ms.date: 06/11/2019
+ms.date: 08/22/2019
 author: jasongerend
 ms.author: jgerend
 manager: daveba
-ms.openlocfilehash: 9c79b6da3f9aace55b9464f252f97f19e50cc584
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 079f1a6544aac606358a741ecb3fffae791a4985
+ms.sourcegitcommit: 6f8993e2180c4d3c177e3e1934d378959396b935
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67280188"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000667"
 ---
 # <a name="features-removed-or-planned-for-replacement-starting-with-windows-server-version-1903"></a>Windows Server, 버전 1903부터 제거되었거나 교체 예정인 기능
 
@@ -21,7 +21,7 @@ ms.locfileid: "67280188"
 
 다음은 이 릴리스에서 제거되었거나 다음 릴리스에서 교체될 가능성이 고려되기 시작한 Windows Server, 버전 1903 기능의 목록입니다. 상용 환경에서 운영 체제를 업데이트하는 IT 전문가가 참조하시면 유용합니다. **후속 릴리스의 변경 사항에 따라 달라질 수 있으며 일부 영향을 받는 기능이 생략되었을 수 있습니다.**
 
-또한 [Windows Server 2019부터 제거되었거나 교체 예정인 기능](removed-features-19.md)을 참조하세요.
+또한 [Windows Server에서 제거되었거나 교체 예정인 기능](removed-features.md)을 참조하세요.
 
 ## <a name="features-were-no-longer-developing"></a>더 이상 개발하지 않는 기능
 

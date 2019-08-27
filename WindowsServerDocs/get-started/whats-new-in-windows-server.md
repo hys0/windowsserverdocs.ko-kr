@@ -2,22 +2,22 @@
 title: Windows Server의 새로운 기능
 description: 계산, ID, 관리, 자동화, 네트워킹, 보안, 저장소의 새로운 기능입니다.
 ms.prod: windows-server
-ms.date: 06/03/2019
+ms.date: 08/22/2019
 ms.technology: server-general
 ms.topic: article
 author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e19c7a51ef1f50f974dc380e00315f9980da560
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: a6a093f873ee925a2763ba5243f868204bd077f3
+ms.sourcegitcommit: 6f8993e2180c4d3c177e3e1934d378959396b935
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66501360"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000650"
 ---
 # <a name="whats-new-in-windows-server"></a>Windows Server의 새로운 기능
 
->적용 대상: Windows Server 2019, Windows Server 2016, Windows Server(반기 채널)
+> 적용 대상: Windows Server 2019, Windows Server 2016, Windows Server(반기 채널)
 
 이러한 각 Windows Server 릴리스에 대한 새로운 기능을 찾을 수 있습니다.  
 
@@ -39,3 +39,4 @@ Windows 서버 반기 채널 릴리스는 더 빠른 속도로 새로운 운영 
 
 - [릴리스 정보: Windows Server 2019의 중요한 이슈](../get-started-19/rel-notes-19.md)
 - [릴리스 정보: Windows Server 2016의 중요한 이슈](Windows-Server-2016-GA-Release-Notes.md)
+- [Windows Server에서 제거되었거나 교체 예정인 기능](../get-started-19/removed-features.md)
