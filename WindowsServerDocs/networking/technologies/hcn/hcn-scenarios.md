@@ -1,26 +1,26 @@
 ---
-title: 호스트 네트워크 계산 (HCN) 시나리오
+title: HCN (호스트 계산 네트워크) 시나리오
 description: ''
 ms.author: jmesser
 author: jmesser81
 ms.date: 11/05/2018
-ms.openlocfilehash: 2a81b09c41c3b665d6a026da4b63a6119fbe202d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 91cdafa9699cd213156d872090034dd4ea67108e
+ms.sourcegitcommit: 213989f29cc0c30a39a78573bd4396128a59e729
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59816304"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70031529"
 ---
 # <a name="common-scenarios"></a>일반적인 시나리오
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server (반기 채널), Windows Server 2019
 
 ## <a name="scenario-hcn"></a>시나리오: HCN 
 
 
 ### <a name="create-an-hcn"></a>HCN 만들기
 
-이 샘플에는 네트워크를 만드는 호스트 계산 가상 머신 또는 컨테이너에 가상 NIC를 연결할 수 있는 호스트의 호스트 계산 네트워크 서비스 API를 사용 하는 방법을 보여 줍니다.
+이 샘플에서는 호스트 계산 네트워크 서비스 API를 사용 하 여 호스트에 가상 NIC를 Virtual Machines 또는 컨테이너에 연결 하는 데 사용할 수 있는 호스트 계산 네트워크를 만드는 방법을 보여 줍니다.
 
 ```C++
 using unique_hcn_network = wil::unique_any< 
@@ -119,7 +119,7 @@ void CreateHcnNetwork()
 
 ### <a name="delete-an-hcn"></a>HCN 삭제
 
-이 샘플에서는 호스트 계산 네트워크 서비스 API를 사용 하 여 열 및 계산 호스트 네트워크를 삭제 하는 방법을 보여 줍니다. 
+이 샘플에서는 호스트 계산 네트워크 서비스 API를 사용 하 여 호스트 계산 네트워크를 열고 & 삭제 하는 방법을 보여 줍니다. 
 
 ```C++
     wil::unique_cotaskmem_string errorRecord;
@@ -136,7 +136,7 @@ void CreateHcnNetwork()
 
 ### <a name="enumerate-all-networks"></a>모든 네트워크 열거
 
-이 샘플에는 호스트 계산 네트워크 서비스 API를 사용 하 여 모든 호스트 계산 네트워크를 열거 하는 방법을 보여 줍니다.
+이 샘플에서는 호스트 계산 네트워크 서비스 API를 사용 하 여 모든 호스트 계산 네트워크를 열거 하는 방법을 보여 줍니다.
 
 ```C++
      wil::unique_cotaskmem_string resultNetworks;
@@ -157,9 +157,9 @@ void CreateHcnNetwork()
 ```
 
 
-### <a name="query-network-properties"></a>쿼리 네트워크 속성
+### <a name="query-network-properties"></a>네트워크 속성 쿼리
 
-이 샘플에는 속성을 쿼리하지 네트워크 호스트 계산 네트워크 서비스 API를 사용 하는 방법을 보여 줍니다.
+이 샘플에서는 호스트 계산 네트워크 서비스 API를 사용 하 여 네트워크 속성을 쿼리 하는 방법을 보여 줍니다.
 
 ```C++
     unique_hcn_network hcnnetwork;
@@ -193,7 +193,7 @@ void CreateHcnNetwork()
 
 ### <a name="create-an-hcn-endpoint"></a>HCN 끝점 만들기
 
-이 샘플에는 호스트 계산 네트워크 서비스 API를 사용 하 여 호스트 계산 네트워크 끝점을 만들고 가상 머신 또는 컨테이너 핫 추가 하는 방법을 보여 줍니다.
+이 샘플에서는 호스트 계산 네트워크 서비스 API를 사용 하 여 호스트 계산 네트워크 끝점을 만든 다음 가상 컴퓨터 또는 컨테이너에 핫으로 추가 하는 방법을 보여 줍니다.
 
 ```C++
 using unique_hcn_endpoint = wil::unique_any< 
@@ -268,7 +268,7 @@ void CreateAndHotAddEndpoint()
 
 ### <a name="delete-an-endpoint"></a>끝점 삭제
 
-이 샘플에는 호스트 계산 네트워크 끝점을 삭제 하려면 호스트 계산 네트워크 서비스 API를 사용 하는 방법을 보여 줍니다.
+이 샘플에서는 호스트 계산 네트워크 서비스 API를 사용 하 여 호스트 계산 네트워크 끝점을 삭제 하는 방법을 보여 줍니다.
 
 ```C++
     wil::unique_cotaskmem_string errorRecord;
@@ -283,9 +283,9 @@ void CreateAndHotAddEndpoint()
 ```
 
 
-### <a name="modify-and-endpoint"></a>수정 및 끝점
+### <a name="modify-and-endpoint"></a>및 끝점 수정
 
-이 샘플에는 호스트 계산 네트워크 서비스 API를 사용 하 여 호스트 계산 네트워크 끝점을 수정 하는 방법을 보여 줍니다.
+이 샘플에서는 호스트 계산 네트워크 서비스 API를 사용 하 여 호스트 계산 네트워크 끝점을 수정 하는 방법을 보여 줍니다.
 
 ```C++
     unique_hcn_endpoint hcnendpoint;
@@ -325,7 +325,7 @@ void CreateAndHotAddEndpoint()
 
 ### <a name="enumerate-all-enpoints"></a>모든 enpoints 열거
 
-이 샘플에는 호스트 계산 네트워크 서비스 API를 사용 하 여 모든 호스트의 계산 네트워크 끝점을 열거 하는 방법을 보여 줍니다.
+이 샘플에서는 호스트 계산 네트워크 서비스 API를 사용 하 여 모든 호스트 계산 네트워크 끝점을 열거 하는 방법을 보여 줍니다.
 
 ```C++
     wil::unique_cotaskmem_string errorRecord;
@@ -385,7 +385,7 @@ void CreateAndHotAddEndpoint()
 
 ### <a name="create-an-hcn-namespace"></a>HCN 네임 스페이스 만들기
 
-이 샘플에는 끝점 및 컨테이너 연결을 사용할 수 있는 호스트의 호스트 계산 네트워크 Namespace를 만들려면 호스트 계산 네트워크 서비스 API를 사용 하는 방법을 보여 줍니다.
+이 샘플에서는 호스트 계산 네트워크 서비스 API를 사용 하 여 끝점 및 컨테이너를 연결 하는 데 사용할 수 있는 호스트에서 호스트 계산 네트워크 네임 스페이스를 만드는 방법을 보여 줍니다.
 
 ```C++
 using unique_hcn_namespace = wil::unique_any< 
@@ -447,7 +447,7 @@ void CreateHcnNamespace()
 
 ### <a name="delete-an-hcn-namespace"></a>HCN 네임 스페이스 삭제
 
-이 샘플에는 호스트 네트워크 서비스 API가 계산 호스트 계산 네트워크 Namespace 삭제를 사용 하는 방법을 보여 줍니다.
+이 샘플에서는 호스트 계산 네트워크 서비스 API를 사용 하 여 호스트 계산 네트워크 네임 스페이스를 삭제 하는 방법을 보여 줍니다.
 
 ```C++
     wil::unique_cotaskmem_string errorRecord;
@@ -463,9 +463,9 @@ void CreateHcnNamespace()
 ```
 
 
-### <a name="modify-an-hcn-namespace"></a>HCN 네임 스페이스를 수정
+### <a name="modify-an-hcn-namespace"></a>HCN 네임 스페이스 수정
 
-이 샘플에는 호스트 계산 네트워크 서비스 API를 사용 하 여 호스트 계산 네트워크 Namespace를 수정 하는 방법을 보여 줍니다.
+이 샘플에서는 호스트 계산 네트워크 서비스 API를 사용 하 여 호스트 계산 네트워크 네임 스페이스를 수정 하는 방법을 보여 줍니다.
 
 ```C++
     unique_hcn_namespace handle;
@@ -510,7 +510,7 @@ void CreateHcnNamespace()
 
 ### <a name="enumerate-all-namespaces"></a>모든 네임 스페이스 열거
 
-이 샘플에는 호스트 계산 네트워크 서비스 API를 사용 하 여 모든 호스트 계산 네트워크 네임 스페이스를 열거 하는 방법을 보여 줍니다.
+이 샘플에서는 호스트 계산 네트워크 서비스 API를 사용 하 여 모든 호스트 계산 네트워크 네임 스페이스를 열거 하는 방법을 보여 줍니다.
 
 ```C++
     wil::unique_cotaskmem_string resultNamespaces;
@@ -532,7 +532,7 @@ void CreateHcnNamespace()
 
 ### <a name="query-namespace-properties"></a>쿼리 네임 스페이스 속성
 
-이 샘플에서는 쿼리 네트워크 Namespace을 계산 하는 호스트 속성에 호스트 계산 네트워크 서비스 API를 사용 하는 방법을 보여 줍니다.
+이 샘플에서는 호스트 계산 네트워크 서비스 API를 사용 하 여 호스트 계산 네트워크 네임 스페이스 속성을 쿼리 하는 방법을 보여 줍니다.
 
 ```C++
     unique_hcn_namespace handle;
@@ -568,7 +568,7 @@ void CreateHcnNamespace()
 
 ### <a name="create-an-hcn-load-balancer"></a>HCN 부하 분산 장치 만들기
 
-이 샘플에는 부하 분산 끝점에서 계산을 위해 사용할 수 있는 호스트의 호스트 계산 네트워크 부하 분산 장치를 만들려면 호스트 계산 네트워크 서비스 API를 사용 하는 방법을 보여 줍니다.
+이 샘플에서는 호스트 계산 네트워크 서비스 API를 사용 하 여 계산에서 끝점을 부하 분산 하는 데 사용할 수 있는 호스트에서 호스트 계산 네트워크 Load Balancer을 만드는 방법을 보여 줍니다.
 
 ```C++
 using unique_hcn_loadbalancer = wil::unique_any< 
@@ -641,9 +641,9 @@ void CreateHcnLoadBalancer()
 ```
 
 
-### <a name="delete-an-hcn-load-balancer"></a>HCN 부하 분산 장치를 삭제 합니다.
+### <a name="delete-an-hcn-load-balancer"></a>HCN 부하 분산 장치 삭제
 
-이 샘플에는 호스트 계산 네트워크 부하 분산 장치를 삭제 하려면 호스트 계산 네트워크 서비스 API를 사용 하는 방법을 보여 줍니다.
+이 샘플에서는 호스트 계산 네트워크 서비스 API를 사용 하 여 호스트 계산 네트워크 LoadBalancer를 삭제 하는 방법을 보여 줍니다.
 
 ```C++
     wil::unique_cotaskmem_string errorRecord;
@@ -658,9 +658,9 @@ void CreateHcnLoadBalancer()
 ```
 
 
-### <a name="modify-an-hcn-load-balancer"></a>HCN 부하 분산 장치를 수정 합니다.
+### <a name="modify-an-hcn-load-balancer"></a>HCN 부하 분산 장치 수정
 
-이 샘플에는 호스트 계산 네트워크 서비스 API를 사용 하 여 호스트 계산 네트워크 Namespace를 수정 하는 방법을 보여 줍니다.
+이 샘플에서는 호스트 계산 네트워크 서비스 API를 사용 하 여 호스트 계산 네트워크 네임 스페이스를 수정 하는 방법을 보여 줍니다.
 
 ```C++
     unique_hcn_loadbalancer handle;
@@ -703,9 +703,9 @@ void CreateHcnLoadBalancer()
 ```
 
 
-### <a name="enumerate-all-load-balancers"></a>모든 부하 분산 장치를 열거 합니다.
+### <a name="enumerate-all-load-balancers"></a>모든 부하 분산 장치 열거
 
-이 샘플에는 호스트 계산 네트워크 서비스 API를 사용 하 여 모든 호스트 계산 네트워크 부하 분산 장치를 열거 하는 방법을 보여 줍니다.
+이 샘플에서는 호스트 계산 네트워크 서비스 API를 사용 하 여 모든 호스트 계산 네트워크 Load Balancer를 열거 하는 방법을 보여 줍니다.
 
 ```C++
     wil::unique_cotaskmem_string resultLoadBalancers;
@@ -726,9 +726,9 @@ void CreateHcnLoadBalancer()
 ```
 
 
-### <a name="query-load-balancer-properties"></a>쿼리 부하 분산 장치 속성
+### <a name="query-load-balancer-properties"></a>부하 분산 장치 속성 쿼리
 
-이 샘플에는 속성을 쿼리하지 호스트 계산 네트워크 부하 분산 장치 호스트 계산 네트워크 서비스 API를 사용 하는 방법을 보여 줍니다.
+이 샘플에서는 호스트 계산 네트워크 서비스 API를 사용 하 여 호스트 계산 네트워크 LoadBalancer 속성을 쿼리 하는 방법을 보여 줍니다.
 
 ```C++
     unique_hcn_loadbalancer handle;
@@ -763,9 +763,9 @@ void CreateHcnLoadBalancer()
 
 ## <a name="scenario-hcn-notifications"></a>시나리오: HCN 알림
 
-### <a name="register-and-unregister-service-wide-notifications"></a>등록 및 서비스 전반에 걸친 알림을 등록 취소
+### <a name="register-and-unregister-service-wide-notifications"></a>서비스 전체 알림 등록 및 등록 취소
 
-이 샘플에는 호스트 계산 네트워크 서비스 API를 사용 하 여 등록 및 서비스 전반에 걸친 알림에 등록 하는 방법을 보여 줍니다. 이렇게 하면 호출자 (등록 중에 지정 하는 콜백 함수)를 통해 알림을 받을 수 있습니다. 새 네트워크 만들기 이벤트와 같은 서비스 전반에 걸친 작업을 때마다 발생 합니다.
+이 샘플에서는 호스트 계산 네트워크 서비스 API를 사용 하 여 서비스 전체 알림에 대해 등록 하 고 등록을 취소 하는 방법을 보여 줍니다. 이렇게 하면 새 네트워크 생성 이벤트와 같은 서비스 차원의 작업이 발생할 때마다 호출자가 등록 중에 지정한 콜백 함수를 통해 알림을 받을 수 있습니다.
 
 ```C++
 using unique_hcn_callback = wil::unique_any< 
@@ -834,6 +834,6 @@ void UnregisterForServiceNotifications()
 
 ## <a name="next-steps"></a>다음 단계
 
-- 에 대 한 자세한 정보는 [RPC 컨텍스트 HCN에 대 한 처리](hcn-declaration-handles.md)합니다.
+- [HCN의 RPC 컨텍스트 핸들](hcn-declaration-handles.md)에 대해 자세히 알아보세요.
 
-- 에 대 한 자세한 정보는 [HCN JSON 문서 스키마](hcn-json-document-schemas.md)합니다.
+- [Hcn JSON 문서 스키마](hcn-json-document-schemas.md)에 대해 자세히 알아보세요.

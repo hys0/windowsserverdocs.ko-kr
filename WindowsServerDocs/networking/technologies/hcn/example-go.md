@@ -1,19 +1,19 @@
 ---
-title: 최상위 수준 IPAM & 서브넷 개체에 대 한 생성 된 Go 코드의 예
+title: 최상위 IPAM & 서브넷 개체에 대해 생성 된 이동 코드의 예
 description: ''
 ms.author: jmesser
 author: jmesser81
 ms.date: 11/05/2018
-ms.openlocfilehash: 428566411920e55d444890898d0f02a1e6cc81ca
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2c823a9994e96b3f22acd15ca639f773f4d6ab63
+ms.sourcegitcommit: 213989f29cc0c30a39a78573bd4396128a59e729
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59870944"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70031557"
 ---
 # <a name="example-of-go-generated-code"></a>생성된 Go 코드의 예 
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server (반기 채널), Windows Server 2019
 
 ```Go
 /*

@@ -4,16 +4,16 @@ description: ''
 ms.author: jmesser
 author: jmesser81
 ms.date: 11/05/2018
-ms.openlocfilehash: 9466afed380d20160cad461c766de469e1f6a7cf
-ms.sourcegitcommit: e2b565ce85a97c0c51f6dfe7041f875a265b35dd
+ms.openlocfilehash: b8676fbab1776144cbbe68604f56d1230a04a145
+ms.sourcegitcommit: 213989f29cc0c30a39a78573bd4396128a59e729
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69584779"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70031538"
 ---
 # <a name="hcn-json-document-schemas"></a>HCN JSON 문서 스키마
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016
+>적용 대상: Windows Server (반기 채널), Windows Server 2019
 
 ## <a name="hcn-schema"></a>HCN 스키마
 

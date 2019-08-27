@@ -4,23 +4,23 @@ description: ''
 ms.author: jmesser
 author: jmesser81
 ms.date: 11/05/2018
-ms.openlocfilehash: 48e4626f52ef7af19da6d3e0bb28799665498fe5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 0eb620fe52de5ee98a247e17ed73304b2325c7c8
+ms.sourcegitcommit: 213989f29cc0c30a39a78573bd4396128a59e729
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59884854"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70031490"
 ---
 # <a name="rpc-context-handles-for-hcn"></a>HCN에 대한 RPC 컨텍스트 핸들
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server (반기 채널), Windows Server 2019
 
 
-## <a name="hcnnetwork"></a>HCN_Network
+## <a name="hcn_network"></a>HCN_Network
 
-HCN 네트워크를은 호스트를 나타내는 데 사용 되는 엔터티의 네트워크와 연결 된 시스템 리소스 및 정책을 계산 합니다. 예를 들어 HCN 네트워크 일반적으로 구성 됩니다 (예:: id, 이름, 형식), 메타 데이터 집합의 가상 스위치, 호스트 가상 네트워크 어댑터 (역할을 하는 네트워크에 대 한 기본 게이트웨이), NAT 인스턴스 (네트워크 형식에 필요) 하는 경우, 서브넷 및 MAC 풀 집합을 되도록 모든 전체 네트워크 정책 (예: Acl)를 적용 합니다.
+HCN 네트워크는 호스트 계산 네트워크 및 연결 된 시스템 리소스와 정책을 나타내는 데 사용 되는 엔터티입니다. 예를 들어 HCN 네트워크는 일반적으로 메타 데이터 집합 (예: id, 이름, 유형), 가상 스위치, 호스트 가상 네트워크 어댑터 (네트워크에 대 한 기본 게이트웨이 역할을 함), NAT 인스턴스 (네트워크 유형에 서 필요한 경우), 서브넷 및 MAC 풀 집합으로 구성 됩니다. 및 적용 되는 모든 네트워크 수준 정책 (예: Acl)
 
-HCN 네트워크 엔터티 HCN_NETWORK RPC 컨텍스트 핸들을 사용 하 여 표시 됩니다.
+HCN 네트워크 엔터티는 HCN_NETWORK RPC 컨텍스트 핸들을 사용 하 여 표시 됩니다.
 
 ```
 
@@ -149,10 +149,10 @@ HcnCloseNetwork(
     ); 
 ```
 
-## <a name="hcnendpoint"></a>HCN_Endpoint
+## <a name="hcn_endpoint"></a>HCN_Endpoint
 
-HCN 끝점은 HCN 네트워크 및 연결 된 시스템 리소스 및 정책에 IP 끝점을 나타내는 데 사용 되는 엔터티입니다. 예를 들어 HCN 끝점을 일반적으로 구성 됩니다 (예:: id, 이름, 부모 네트워크 id), 메타 데이터 집합의 해당 네트워크 id (예: IP 주소, MAC 주소) 및 되도록 모든 endpoint 특정 정책 (예: Acl 경로)를 적용 합니다.
-HCN 끝점 엔터티 HCN_ENDPOINT RPC 컨텍스트 핸들을 사용 하 여 표시 됩니다.
+HCN 끝점은 HCN 네트워크의 IP 끝점과 연결 된 시스템 리소스 및 정책을 나타내는 데 사용 되는 엔터티입니다. 예를 들어 HCN 끝점은 일반적으로 메타 데이터 집합 (예: id, 이름, 부모 네트워크 id), 네트워크 id (예: IP 주소, MAC 주소) 및 적용 될 끝점 특정 정책 (예: Acl, 경로)으로 구성 됩니다.
+HCN 끝점 엔터티는 HCN_ENDPOINT RPC 컨텍스트 핸들을 사용 하 여 표시 됩니다.
 
 ```
 
@@ -283,11 +283,11 @@ HcnCloseEndpoint(
  
 ```
 
-## <a name="hcnnamespace"></a>HCN_Namespace
+## <a name="hcn_namespace"></a>HCN_Namespace
 
-HCN Namespace는 호스트 계산 네트워크 네임 스페이스를 나타내는 데 사용 되는 엔터티입니다. 다른 네임 스페이스에서 네임 스페이스에 있는 각 네임 스페이스에는 자체 네트워크 인터페이스 및 라우팅 테이블을 단일 호스트에서 네트워크 환경 격리 된 제공 하면 구분 됩니다.
+HCN 네임 스페이스는 호스트 계산 네트워크 네임 스페이스를 나타내는 데 사용 되는 엔터티입니다. 네임 스페이스를 사용 하면 단일 호스트에 격리 된 네트워크 환경을 사용할 수 있습니다 .이 경우 각 네임 스페이스에는 다른 네임 스페이스와 구분 된 고유한 네트워크 인터페이스와 라우팅 테이블이 있습니다.
 
-HCN Namespace 엔터티 HCN_NAMESPACE RPC 컨텍스트 핸들을 사용 하 여 표시 됩니다.
+HCN 네임 스페이스 엔터티는 HCN_NAMESPACE RPC 컨텍스트 핸들을 사용 하 여 표시 됩니다.
 
 ```
 /// Handle to an operation
@@ -419,10 +419,10 @@ HcnCloseNamespace(
 
 ```
 
-## <a name="hcnloadbalancer"></a>HCN_LoadBalancer
+## <a name="hcn_loadbalancer"></a>HCN_LoadBalancer
 
-HCN LoadBalancer는 호스트 계산 네트워크 부하 분산 장치를 나타내는 데 사용 되는 엔터티입니다. 부하 분산 장치를 사용 하면 네트워크 끝점을 계산 하는 부하 분산 된 호스트를 할 수 있습니다.
-HCN LoadBalancer 엔터티 HCN_LOADBALANCER RPC 컨텍스트 핸들을 사용 하 여 표시 됩니다.
+HCN LoadBalancer는 호스트 계산 네트워크 loadbalancer를 나타내는 데 사용 되는 엔터티입니다. LoadBalancers 조정기를 사용 하면 부하가 분산 된 호스트 계산 네트워크 끝점을 사용할 수 있습니다.
+HCN LoadBalancer 엔터티는 HCN_LOADBALANCER RPC 컨텍스트 핸들을 사용 하 여 표시 됩니다.
 
 ```
 /// Handle to an operation
@@ -558,9 +558,9 @@ HcnCloseLoadBalancer(
 
 ```
 
-## <a name="hcnnotificationcallback"></a>HCN_Notification_Callback
+## <a name="hcn_notification_callback"></a>HCN_Notification_Callback
 
-있습니다 함수 알림 (예: 새 네트워크 만들기를의 수신 알림)와 같은 서비스 전반적인 작업에 대 한 액세스를 제공합니다.
+알림 (예: 새 네트워크 생성에 대 한 알림 수신)과 같은 서비스 전체 작업에 대 한 액세스를 제공 하는 함수가 있습니다.
 
 ```
 /// Registers a callback function to receive notifications of service-wide events such as network
