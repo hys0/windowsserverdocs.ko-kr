@@ -330,7 +330,7 @@
 ###### [컴퓨터를 도메인에 가입](ad-fs/deployment/Join-a-computer-to-a-Domain.md)
 ###### [경계 네트워크에서만 작동하는 DNS 영역에 페더레이션 서버 프록시에 대한 이름 확인 구성](ad-fs/deployment/Configure-Name-Resolution-for-a-Federation-Server-Proxy-in-a-DNS-Zone-That-Serves-Only-the-Perimeter-Network.md)
 ###### [경계 네트워크 및 인터넷 클라이언트 모두에서 작동하는 DNS 영역에 페더레이션 서버 프록시에 대한 이름 확인 구성](ad-fs/deployment/Configure-Name-Resolution-for-a-Federation-Server-Proxy-in-a-DNS-Zone-That-Serves-Both-the-Perimeter-Network-and-Internet-Clients.md)
-###### [서버 인증 인증서의 개인 키 부분 내보내기](ad-fs/deployment/Export-the-Private-Key-Portion-of-a-Server-Authentication-Certificate.md)
+###### [서버 인증 인증서의 프라이빗 키 부분 내보내기](ad-fs/deployment/Export-the-Private-Key-Portion-of-a-Server-Authentication-Certificate.md)
 ###### [기본 웹 사이트로 서버 인증 인증서 가져오기](ad-fs/deployment/import-a-Server-Authentication-Certificate-to-the-Default-Web-Site.md)
 ###### [페더레이션 서비스 프록시 역할 서비스 설치](ad-fs/deployment/Install-the-Federation-Service-Proxy-Role-Service.md)
 ###### [페더레이션 서버 프록시 역할에 대해 컴퓨터 구성](ad-fs/deployment/Configure-a-computer-for-the-Federation-Server-Proxy-Role.md)
