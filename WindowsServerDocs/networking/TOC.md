@@ -184,7 +184,7 @@
 #### [원격 RADIUS 서버 그룹 구성](technologies/nps/nps-crp-rrsg-configure.md)
 #### [NPS와 함께 사용되는 인증서 관리](technologies/nps/nps-manage-certificates.md)
 ##### [PEAP 및 EAP 요구 사항에 대한 인증서 템플릿 구성](technologies/nps/nps-manage-cert-requirements.md)
-#### [NPS 관리](technologies/nps/nps-manage-servers.md)
+#### [NPS를 관리](technologies/nps/nps-manage-servers.md)
 ##### [멀티홈 컴퓨터에서 NPS 구성](technologies/nps/nps-multihomed-configure.md)
 ##### [NPS UDP 포트 정보 구성](technologies/nps/nps-udp-ports-configure.md)
 ##### [NAS 알림 전달 사용 안 함](technologies/nps/nps-disable-nas-notifications.md)
