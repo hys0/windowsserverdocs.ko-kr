@@ -64,9 +64,35 @@
 ### [Windows Server에서 PowerShell을 사용하여 "작업 리소스" RDS 제목 사용자 지정](rds-work-resources.md)
 ### [성능 카운터를 사용하여 앱 성능 문제 진단](rds-rdsh-performance-counters.md)
 
-## [추가 원격 데스크톱 지원](rds-get-support.md)
-## [원격 데스크톱 클라이언트](clients/remote-desktop-clients.md)
-### 원격 데스크톱의 알려진 문제
+## 원격 데스크톱 리소스에 액세스
+### [사용 가능한 원격 데스크톱 클라이언트](clients/remote-desktop-clients.md)
+### Windows 스토어 클라이언트
+#### [Windows 스토어 클라이언트 시작](clients/windows.md)
+#### [Windows 스토어 클라이언트의 새로운 기능](clients/windows-whatsnew.md)
+### Android 클라이언트
+#### [Android 클라이언트 시작](clients/remote-desktop-android.md)
+#### [Android 클라이언트의 새로운 기능](clients/android-whatsnew.md)
+### iOS 클라이언트
+#### [iOS 클라이언트 시작](clients/remote-desktop-ios.md)
+#### [iOS 클라이언트의 새로운 기능](clients/ios-whatsnew.md)
+### macOS 클라이언트
+#### [macOS 클라이언트 시작](clients/remote-desktop-mac.md)
+#### [macOS 클라이언트의 새로운 기능](clients/mac-whatsnew.md)
+### 웹 클라이언트
+#### [웹 클라이언트 시작](clients/remote-desktop-web-client.md)
+#### [웹 클라이언트의 새로운 기능](clients/web-client-whatsnew.md)
+### 원격 데스크톱에 대한 PC 설정
+#### [지원되는 PC](clients/remote-desktop-supported-config.md)
+#### [PC에 원격 데스크톱 액세스 허용](clients/remote-desktop-allow-access.md)
+#### [네트워크 외부에서 PC에 대한 액세스 허용](clients/remote-desktop-allow-outside-access.md)
+#### [PC에서 RD 수신 대기 포트 변경](clients/change-listening-port.md)
+### 고급 정보
+#### [가장 적합한 클라이언트는?](clients/remote-desktop-app-compare.md)
+#### [원격 데스크톱 RDP 파일 설정](clients/rdp-files.md)
+#### [원격 데스크톱 URI 체계](clients/remote-desktop-uri.md)
+#### [원격 데스크톱 클라이언트 FAQ](clients/remote-desktop-client-faq.md)
+#### [관리형 앱 및 데스크톱에 대한 개인 정보 설정](clients/remote-privacy-settings.md)
+### 알려진 문제
 #### [일반 원격 데스크톱 연결 문제 해결](troubleshoot/rdp-error-general-troubleshooting.md)
 #### [클라이언트가 연결할 수 없고 "클래스가 등록되지 않음" 오류가 발생함](troubleshoot/rdp-error-class-not-registered.md)
 #### [클라이언트가 연결할 수 없고 "사용 가능한 라이선스 없음" 오류가 표시됨](troubleshoot/rdp-error-no-licenses-available.md)
@@ -75,29 +101,5 @@
 #### [원격 데스크톱 클라이언트의 연결이 끊어지고 동일한 세션에 다시 연결할 수 없음](troubleshoot/rdp-client-disconnects-cannot-reconnect-same-session.md)
 #### [무선 네트워크에서 원격 랩톱 연결 끊김](troubleshoot/remote-laptop-disconnects-wireless-network.md)
 #### [원격 데스크톱 연결 중 성능 저하 또는 애플리케이션 문제 발생](troubleshoot/poor-performance-or-application-problems.md)
-### 일반 정보
-#### [가장 적합한 클라이언트는?](clients/remote-desktop-app-compare.md)
-#### [원격 데스크톱 RDP 파일 설정](clients/rdp-files.md)
-#### [원격 데스크톱 URI 체계](clients/remote-desktop-uri.md)
-#### [원격 데스크톱 클라이언트 FAQ](clients/remote-desktop-client-faq.md)
-#### [관리형 앱 및 데스크톱에 대한 개인 정보 설정](clients/remote-privacy-settings.md)
-### Windows에 대 한 원격 데스크톱 클라이언트
-#### [시작](clients/windows.md)
-#### [Windows 클라이언트의 새로운 기능](clients/windows-whatsnew.md)
-### Android에 대 한 원격 데스크톱 클라이언트
-#### [시작](clients/remote-desktop-android.md)
-#### [Android 클라이언트의 새로운 기능](clients/android-whatsnew.md)
-### IOS에 대 한 원격 데스크톱 클라이언트
-#### [시작](clients/remote-desktop-ios.md)
-#### [iOS 클라이언트의 새로운 기능](clients/ios-whatsnew.md)
-### Mac 용 원격 데스크톱 클라이언트
-#### [시작](clients/remote-desktop-mac.md)
-#### [MacOS 클라이언트의 새로운 기능](clients/mac-whatsnew.md)
-### 원격 데스크톱 웹 클라이언트
-#### [원격 데스크톱 웹 클라이언트에 액세스](clients/remote-desktop-web-client.md)
-#### [웹 클라이언트의 새로운 기능](clients/web-client-whatsnew.md)
-### 원격 데스크톱에 대한 PC 설정
-#### [지원되는 PC](clients/remote-desktop-supported-config.md)
-#### [PC에 원격 데스크톱 액세스 허용](clients/remote-desktop-allow-access.md)
-#### [네트워크 외부에서 PC에 대한 액세스 허용](clients/remote-desktop-allow-outside-access.md)
-#### [PC에서 RD 수신 대기 포트 변경](clients/change-listening-port.md)
+
+## [추가 리소스](rds-get-support.md)
