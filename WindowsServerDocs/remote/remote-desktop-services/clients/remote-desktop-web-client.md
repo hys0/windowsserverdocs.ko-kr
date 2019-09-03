@@ -1,21 +1,21 @@
 ---
-title: 원격 데스크톱 웹 클라이언트에 액세스
+title: 웹 클라이언트 시작
 description: 원격 데스크톱 웹 클라이언트에 로그인하는 방법을 설명합니다.
 ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.author: helohr
-ms.date: 07/20/2018
+ms.date: 08/27/2019
 ms.topic: article
 author: Heidilohr
 ms.localizationpriority: medium
-ms.openlocfilehash: f4433ad592219d6ed15b28fd0514790b078525fd
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 11e68821fb095617cea19ee83c057d247a909604
+ms.sourcegitcommit: 51eaab0f860312d97293fd90f3e632e7caee3df1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "63743835"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70150969"
 ---
-# <a name="access-the-remote-desktop-web-client"></a>원격 데스크톱 웹 클라이언트에 액세스
+# <a name="get-started-with-the-web-client"></a>웹 클라이언트 시작
 
 원격 데스크톱 웹 클라이언트에서는 호환 웹 브라우저를 사용하여 관리자가 사용자에게 게시한 조직의 원격 리소스(앱 및 데스크톱)에 액세스할 수 있습니다. 어디에서 작업하는지 관계없이, 다른 데스크톱 PC로 전환하지 않고도 로컬 PC를 사용할 때처럼 원격 앱 및 데스크톱과 상호 작용할 수 있습니다. 관리자가 원격 리소스를 설정하면, 도메인, 사용자 이름, 암호 및 관리자가 보낸 URL과 지원되는 웹 브라우저만 있으면 계속 진행할 수 있습니다.
 

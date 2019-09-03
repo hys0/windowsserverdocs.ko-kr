@@ -13,12 +13,12 @@ manager: dongill
 ms.author: helohr
 ms.date: 05/20/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: ecc3236d44146015564fa593aaf8a20d3bfa42ff
-ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
+ms.openlocfilehash: b30aae3f745f7ed9d40a9f4884205d9ca01f0eef
+ms.sourcegitcommit: f62a17bf72a772ee46fe807a5a482923e67ae7e7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69546471"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70060302"
 ---
 # <a name="supported-remote-desktop-rdp-file-settings"></a>지원되는 원격 데스크톱 RDP 파일 설정
 
@@ -40,10 +40,9 @@ PowerShell을 사용하여 호스트 풀의 RDP 속성을 사용자 지정하는
 | desktop size id:i:value | 미리 정의된 옵션 세트 중에서 원격 세션 데스크톱의 크기를 지정합니다. 이 설정은 desktopheight 또는 desktopwidth가 지정된 경우 무시됩니다.| -0: 640×480<br>- 1: 800×600<br>- 2: 1024×768<br>- 3: 1280×1024<br>- 4: 1600×1200 | 0 | x | x | x |
 | desktopheight:i:value | 원격 데스크톱 연결을 사용하여 연결할 때 원격 컴퓨터의 해상도 높이(픽셀 단위)를 결정합니다. 이 설정은 RDC의 옵션 아래 디스플레이 탭에 있는 디스플레이 구성 슬라이더의 선택 항목에 해당합니다. | 200에서 2048 사이의 숫자 값 | 기본값은 로컬 컴퓨터의 해상도로 설정됨 | x | x | x |
 | desktopwidth:i:value | 원격 데스크톱 연결을 사용하여 연결할 때 원격 컴퓨터의 해상도 너비(픽셀 단위)를 결정합니다. 이 설정은 RDC의 옵션 아래 디스플레이 탭에 있는 디스플레이 구성 슬라이더의 선택 항목에 해당합니다. | 200과 4096 사이의 숫자 값 | 기본값은 로컬 컴퓨터의 해상도로 설정됨 | x | x | x |
-| disableclipboardredirection:i:value | 원격 컴퓨터에 연결할 때 클립보드 리디렉션을 사용하도록 설정할지 여부를 결정합니다. | - 0: 클립보드 리디렉션을 사용하도록 설정<br>- 1: 클립보드 리디렉션을 사용하지 않도록 설정 | x | x | x |
 | disableconnectionsharing:i:value | RemoteApp 또는 데스크톱이 시작될 때 원격 데스크톱 클라이언트가 열려 있는 기존 연결에 다시 연결할지 아니면 새 연결을 시작할지 결정합니다. | - 0: 기존 세션에 다시 연결<br>- 1: 새 연결 시작 | 0 | x | x | x |
 | domain:s:value | 원격 컴퓨터에 로그인할 때 사용할 사용자 계정이 있는 도메인의 이름을 지정합니다. | 유효한 도메인 이름(예: "CONTOSO") | 기본값 없음 | x | x | x |
-| drivestoredirect:s:value | 클라이언트 컴퓨터의 로컬 디스크 드라이브 중 어떤 드라이브를 리디렉션하고 원격 세션에서 사용할 수 있을지를 결정합니다. | 지정된 값 없음 : 드라이브를 리디렉션하지 않음<br>* : 모든 디스크 드라이브를 리디렉션(나중에 연결되는 드라이브 포함)<br> DynamicDrives: 나중에 연결된 드라이브를 리디렉션<br>하나 이상의 드라이브에 대한 드라이브 및 레이블: 지정된 드라이브를 리디렉션| 지정된 값 없음 : 드라이브를 리디렉션하지 않음 | x | x    | |
+| drivestoredirect:s:value | 클라이언트 컴퓨터의 로컬 디스크 드라이브 중 어떤 드라이브를 리디렉션하고 원격 세션에서 사용할 수 있을지를 결정합니다. | - 지정된 값 없음: 드라이브를 리디렉션하지 않음<br>- * : 모든 디스크 드라이브를 리디렉션(나중에 연결되는 드라이브 포함)<br>- DynamicDrives: 나중에 연결된 모든 드라이브 리디렉션<br>- 드라이브 및 하나 이상의 드라이브에 대한 레이블(예: "drivestoredirect:s:C:;E:;"): 지정된 드라이브 리디렉션| 지정된 값 없음 : 드라이브를 리디렉션하지 않음 | x | x    | |
 | enablecredsspsupport:i:value | 사용 가능한 경우 RDP가 CredSSP(Credential Security Support Provider)를 인증에 사용할지 여부를 결정합니다. | - 0: 운영 체제가 CredSSP를 지원하더라도 RDP가 CredSSP를 사용하지 않음<br>- 1: 운영 체제가 CredSSP를 지원하는 경우 RDP가 CredSSP를 사용 | 1 | x | x | |
 | 리디렉션된 비디오 인코딩 capture:i:value | 리디렉션된 비디오의 인코딩을 사용하거나 사용하지 않도록 설정합니다. | - 0: 리디렉션된 비디오를 인코딩하지 않도록 설정<br>- 1: 리디렉션된 비디오를 인코딩하도록 설정 | 1 | x | x | x |
 | full address:s:value | 이 설정은 연결할 원격 컴퓨터의 이름이나 IP 주소를 지정합니다. | 유효한 컴퓨터 이름, IPv4 주소 또는 IPv6 주소입니다. | | x | x | x |
@@ -53,7 +52,7 @@ PowerShell을 사용하여 호스트 풀의 RDP 속성을 사용자 지정하는
 | gatewayusagemethod:i:value | RD 게이트웨이 서버를 사용하는 경우를 지정 | - 0: RD 게이트웨이 서버를 사용하지 않음<br>- 1: RD 게이트웨이 서버를 항상 사용<br>- 2: RD 세션 호스트에 직접 연결할 수 없는 경우 RD 게이트웨이 서버 사용<br>- 3: 기본 RD 게이트웨이 서버 설정 사용<br>- 4: RD 게이트웨이를 사용하지 않음, 로컬 주소에 대해 서버 무시<br>이 속성 값을 0이나 4로 설정하면 효과가 동일하지만 이 속성을 4로 설정하면 옵션이 로컬 주소를 바이패스할 수 있습니다. | | x | x | x |
 | networkautodetect:i:value | 자동 네트워크 대역폭 감지를 사용할지 여부를 결정합니다. bandwidthautodetect 옵션을 설정해야 하며 연결 유형 7과 상관 관계를 지정합니다. | - 0: 자동 네트워크 대역폭 감지를 사용하지 않습니다.<br> - 1: 자동 네트워크 대역폭 감지를 사용합니다. | 1 | x ||x|
 | promptcredentialonce:i:value | 사용자 자격 증명을 저장하고 RD 게이트웨이와 원격 컴퓨터 둘 다에 사용할지 여부를 결정합니다.|- 0: 원격 세션에서 동일한 자격 증명을 사용하지 않음<br>- 1: 원격 세션에서 동일한 자격 증명을 사용|1|x|x||
-| redirectclipboard:i:value | 로컬 컴퓨터의 클립보드가 리디렉션되고 원격 세션에서 사용할 수 있는지 여부를 결정합니다. | - 0: 로컬 컴퓨터의 클립보드를 원격 세션에서 사용할 수 없음<br>- 1: 로컬 컴퓨터의 클립보드를 원격 세션에서 사용할 수 있음|1|x|x|x|
+| redirectclipboard:i:value | 클립보드 리디렉션이 사용되는지 여부를 결정합니다. | - 0: 로컬 컴퓨터의 클립보드를 원격 세션에서 사용할 수 없음<br>- 1: 로컬 컴퓨터의 클립보드를 원격 세션에서 사용할 수 있음|1|x|x|x|
 | 리디렉션된 비디오 캡처 인코딩 quality:i:value | 인코딩된 비디오의 품질을 제어합니다. | - 0: 고압축 비디오. 동작이 많으면 품질이 떨어질 수 있습니다. <br>- 1: 중간 압축<br>- 2: 그림 품질이 높은 저압축 비디오 | 0 | x | x | x |
 | redirectprinters:i:value | 원격 데스크톱 연결을 사용하여 원격 컴퓨터에 연결할 때 클라이언트 컴퓨터에 구성된 프린터가 리디렉션되고 원격 세션에서 사용할 수 있는지 여부를 결정합니다. | - 0: 로컬 컴퓨터의 프린터를 원격 세션에서 사용할 수 없음<br>- 1: 로컬 컴퓨터의 프린터를 원격 세션에서 사용할 수 있음|1|x|x|x|
 | redirectsmartcards:i:value | 원격 컴퓨터에 연결할 때 클라이언트 컴퓨터의 스마트 카드 디바이스가 리디렉션되고 원격 세션에서 사용할 수 있는지 여부를 결정합니다. |- 0: 로컬 컴퓨터의 스마트 카드 디바이스를 원격 세션에서 사용할 수 없음<br>- 1: 로컬 컴퓨터의 스마트 카드 디바이스를 원격 세션에서 사용할 수 있음|1|x|x||

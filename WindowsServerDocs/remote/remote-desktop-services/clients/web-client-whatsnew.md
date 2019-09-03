@@ -1,5 +1,5 @@
 ---
-title: 원격 데스크톱 웹 클라이언트의 새로운 기능
+title: 웹 클라이언트의 새로운 기능
 description: 원격 데스크톱 웹 클라이언트의 최근 변경 내용 알아보기
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -11,16 +11,16 @@ ms.topic: article
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 05/20/2019
+ms.date: 08/27/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 5be9b05da1e78cc54e12254f43d0f44f7ff65c5d
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 4eaa9a187b4a8f7879cabf15724bfcfe3f625939
+ms.sourcegitcommit: 51eaab0f860312d97293fd90f3e632e7caee3df1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66804879"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70150956"
 ---
-# <a name="whats-new-for-the-remote-desktop-web-client"></a>원격 데스크톱 웹 클라이언트의 새로운 기능
+# <a name="whats-new-in-the-web-client"></a>웹 클라이언트의 새로운 기능
 
 [원격 데스크톱 웹 클라이언트](remote-desktop-web-client.md)를 정기적으로 업데이트하여 새로운 기능을 추가하고 문제를 수정합니다. 아래 최신 업데이트를 확인하세요.
 
