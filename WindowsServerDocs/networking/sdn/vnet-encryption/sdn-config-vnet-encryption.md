@@ -1,6 +1,6 @@
 ---
-title: 가상 네트워크에 대 한 암호화 구성
-description: "' 암호화 사용 합니다.'로 표시 하는 서브넷 내에서 서로 통신 하는 가상 컴퓨터 간에 가상 네트워크 트래픽의 암호화를 허용 하는 가상 네트워크 암호화"
+title: Virtual Network에 대 한 암호화 구성
+description: 가상 네트워크 암호화를 사용 하면 ' 암호화 사용 '으로 표시 된 서브넷 내에서 서로 통신 하는 가상 컴퓨터 간의 가상 네트워크 트래픽 암호화가 가능 합니다.
 manager: brianlic
 ms.prod: windows-server-threshold
 ms.technology: networking-hv-switch
@@ -9,37 +9,37 @@ ms.assetid: 378213f5-2d59-4c9b-9607-1fc83f8072f1
 ms.author: pashort
 author: shortpatti
 ms.date: 08/08/2018
-ms.openlocfilehash: d2c09c83a227c5a75ff5b1b39b2ef6d1286bbfc8
-ms.sourcegitcommit: cd12ace92e7251daaa4e9fabf1d8418632879d38
+ms.openlocfilehash: 1d61748e4cc5eac2d656e61c1f1ecc30dfe8672c
+ms.sourcegitcommit: f3b61dcd8aa0aa744db4ea938aac633c19217b0a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66501558"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70746327"
 ---
 # <a name="configure-encryption-for-a-virtual-subnet"></a>가상 서브넷에 대 한 암호화 구성
 
 >적용 대상: Windows Server
 
-' 암호화 사용 합니다.'로 표시 하는 서브넷 내에서 서로 통신 하는 Vm 간에 가상 네트워크 트래픽의 암호화에 대 한 가상 네트워크 암호화 허용 또한 가상 서브넷의 DTLS(데이터그램 전송 계층 보안)를 활용하여 패킷을 암호화합니다. DTLS는 실제 네트워크에 액세스하는 누군가에 의한 도청, 변조 및 위조를 방지합니다.
+Virtual network 암호화를 사용 하면 ' 암호화 사용 '으로 표시 된 서브넷 내에서 서로 통신 하는 Vm 간의 가상 네트워크 트래픽 암호화가 허용 됩니다. 또한 가상 서브넷의 DTLS(데이터그램 전송 계층 보안)를 활용하여 패킷을 암호화합니다. DTLS는 실제 네트워크에 액세스하는 누군가에 의한 도청, 변조 및 위조를 방지합니다.
 
-가상 네트워크 암호화가 필요합니다.
-- 암호화 인증서를 각 SDN 사용이 가능한 Hyper-v 호스트에 설치 합니다.
-- 해당 인증서의 지문이 참조 네트워크 컨트롤러에서 사용 되는 자격 증명 개체입니다.
-- 가상 네트워크 각각에서 구성 암호화를 요구 하는 서브넷을 포함 합니다.
+가상 네트워크 암호화에는 다음이 필요 합니다.
+- 각 SDN 사용 Hyper-v 호스트에 암호화 인증서가 설치 되어 있어야 합니다.
+- 네트워크 컨트롤러에서 해당 인증서의 지문을 참조 하는 자격 증명 개체입니다.
+- 각 가상 네트워크에 대 한 구성에는 암호화를 요구 하는 서브넷이 포함 됩니다.
 
-서브넷에서 암호화를 사용 하도록 설정 하면 해당 서브넷 내의 모든 네트워크 트래픽은 일어날 수도 수 있습니다 하는 모든 응용 프로그램 수준 암호화 하는 것 외에도 자동으로 암호화 됩니다.  암호화 된 것으로 표시 하는 경우에, 서브넷 교차 하는 트래픽은 자동으로 암호화 되지 않은 전송 됩니다. 가상 네트워크 경계를 교차 하는 모든 트래픽은 전송 암호화 되지 않은 합니다.
+서브넷에서 암호화를 사용 하도록 설정 하면 해당 서브넷 내의 모든 네트워크 트래픽이 자동으로 암호화 되며, 응용 프로그램 수준 암호화도 함께 수행 될 수 있습니다.  암호화 된 것으로 표시 된 경우에도 서브넷 간에 교차 하는 트래픽은 암호화 되지 않은 상태로 자동 전송 됩니다. 가상 네트워크 경계를 교차 하는 모든 트래픽은 암호화 되지 않은 상태로 전송 됩니다.
 
 >[!NOTE]
->현재 연결 또는 연결 된 나중에 트래픽 자동으로 암호화 가져옵니다 하는지 여부를 동일한 서브넷에 다른 VM과 통신 합니다.
+>동일한 서브넷에 있는 다른 VM과 통신 하는 경우 현재 연결 되어 있거나 나중에 연결 되어 있는지 여부에 따라 트래픽은 자동으로 암호화 됩니다.
 
 >[!TIP]
->암호화 된 서브넷에만 통신 하도록 응용 프로그램을 제한 해야 하는 경우 액세스 제어 목록 (Acl)만 하 여 현재 서브넷 내의 통신을 허용 합니다. 자세한 내용은 [사용 하 여 액세스 제어 목록 (Acl) 데이터 센터 네트워크 트래픽 흐름을 관리 하려면](https://docs.microsoft.com/windows-server/networking/sdn/manage/use-acls-for-traffic-flow)합니다.
+>암호화 된 서브넷 에서만 통신 하도록 응용 프로그램을 제한 해야 하는 경우에는 현재 서브넷 내에서 통신을 허용 하는 데만 Access Control 목록 (Acl)을 사용할 수 있습니다. 자세한 내용은 [데이터 센터 네트워크 트래픽 흐름을 관리 하기 위해 acl (Access Control 목록) 사용](https://docs.microsoft.com/windows-server/networking/sdn/manage/use-acls-for-traffic-flow)을 참조 하세요.
 
 
 ## <a name="step-1-create-the-encryption-certificate"></a>1단계. 암호화 인증서 만들기
-각 호스트에는 암호화 인증서가 설치 되어 있어야 합니다. 모든 테 넌 트에 동일한 인증서를 사용 하거나 각 테 넌 트에 대 한 고유한 단일을 생성할 수 있습니다. 
+각 호스트에는 암호화 인증서가 설치 되어 있어야 합니다. 모든 테 넌 트에 대해 동일한 인증서를 사용 하거나 각 테 넌 트에 대해 고유한 인증서를 생성할 수 있습니다. 
 
-1.  인증서를 생성 합니다.  
+1.  인증서 생성  
 
 ```
     $subjectName = "EncryptedVirtualNetworks"
@@ -95,7 +95,7 @@ ms.locfileid: "66501558"
     $enrollment.InstallResponse(2, $certdata, 0, "")
 ```
 
-스크립트를 실행 한 후 새 인증서에 표시를 내 저장소:
+스크립트를 실행 한 후 내 저장소에 새 인증서가 표시 됩니다.
 
     PS D:\> dir cert:\\localmachine\my
 
@@ -107,7 +107,7 @@ ms.locfileid: "66501558"
     84857CBBE7A1C851A80AE22391EB2C39BF820CE7  CN=MyNetwork
     5EFF2CE51EACA82408572A56AE1A9BCC7E0843C6  CN=EncryptedVirtualNetworks
 
-2. 파일에 인증서를 내보냅니다.<p>인증서, 개인 키를 사용 하 여 하나 및 없는의 사본을 두 개 필요합니다.
+2. 인증서를 파일로 내보냅니다.<p>인증서의 복사본이 두 개 필요 합니다. 하나는 개인 키를 포함 하 고 다른 하나는 포함 하지 않습니다.
 
 ```
    $subjectName = "EncryptedVirtualNetworks"
@@ -116,9 +116,9 @@ ms.locfileid: "66501558"
    Export-Certificate -Type CERT -FilePath "c:\$subjectName.cer" -cert $cert
 ```
 
-3. 각 hyper-v 호스트에 인증서 설치 
+3. 각 hyper-v 호스트에 인증서를 설치 합니다. 
 
-   PS c:\> dir c:\$subjectname.*
+   PS c:\> dir C:\$subjectname. *
 
 
 ~~~
@@ -131,7 +131,7 @@ Mode                LastWriteTime         Length Name
 -a----        9/22/2017   4:54 PM           1706 EncryptedVirtualNetworks.pfx
 ~~~
 
-4. Hyper-v 호스트에서 설치
+4. Hyper-v 호스트에 설치
 
 ```
    $server = "Server01"
@@ -171,11 +171,11 @@ Mode                LastWriteTime         Length Name
    }
 ```
 
-5. 환경의 각 서버에 대해 반복 합니다.<p>각 서버에 대 한 반복을 한 후 루트 및 각 Hyper-v 호스트의 내 저장소에 설치 된 인증서를 사용 해야 합니다. 
+5. 사용자 환경의 각 서버에 대해 반복 합니다.<p>각 서버에 대해 반복 된 후 각 Hyper-v 호스트의 루트 및 내 저장소에 인증서가 설치 되어 있어야 합니다. 
 
-6. 인증서의 설치를 확인 합니다.<p>내용을 확인 하 여 인증서를 확인 합니다 내 및 루트 인증서 저장소:
+6. 인증서 설치를 확인 합니다.<p>내 및 루트 인증서 저장소의 콘텐츠를 확인 하 여 인증서를 확인 합니다.
 
-   PS c:\> 입력 pssession Server1
+   PS C:\> enter-pssession Server1
 
 ~~~
 [Server1]: PS C:\> get-childitem cert://localmachine/my,cert://localmachine/root | ? {$_.Subject -eq "CN=EncryptedVirtualNetworks"}
@@ -194,13 +194,13 @@ Thumbprint                                Subject
 5EFF2CE51EACA82408572A56AE1A9BCC7E0843C6  CN=EncryptedVirtualNetworks
 ~~~
 
-7. 지문을 기록해 둡니다.<p>네트워크 컨트롤러에서 인증서 자격 증명 개체를 만들려면 필요 하기 때문에 지문 참고를 해야 합니다.
+7. 지문을 기록해 둡니다.<p>네트워크 컨트롤러에서 인증서 자격 증명 개체를 만드는 데 필요 하므로 지문을 적어 두어야 합니다.
 
 ## <a name="step-2-create-the-certificate-credential"></a>2단계. 인증서 자격 증명 만들기
 
-각 네트워크 컨트롤러에 연결 된 Hyper-v 호스트에 인증서를 설치한 후에 이제 사용 하 여 네트워크 컨트롤러를 구성 해야 합니다.  이 위해 네트워크 컨트롤러 PowerShell 모듈이 설치 된 컴퓨터에서 인증서 지문을 포함 하는 자격 증명 개체를 만들어야 합니다. 
+네트워크 컨트롤러에 연결 된 각 Hyper-v 호스트에 인증서를 설치한 후에는 해당 인증서를 사용 하도록 네트워크 컨트롤러를 구성 해야 합니다.  이렇게 하려면 네트워크 컨트롤러 PowerShell 모듈이 설치 된 컴퓨터에서 인증서 지문을 포함 하는 자격 증명 개체를 만들어야 합니다. 
 
-
+```
     # Replace with thumbprint from your certificate
     $thumbprint = "5EFF2CE51EACA82408572A56AE1A9BCC7E0843C6"  
 
@@ -213,36 +213,37 @@ Thumbprint                                Subject
     $credproperties.Type = "X509Certificate"
     $credproperties.Value = $thumbprint
     New-networkcontrollercredential -connectionuri $uri -resourceid "EncryptedNetworkCertificate" -properties $credproperties -force
-
+```
 >[!TIP]
->암호화 된 각 가상 네트워크에 대해이 자격 증명을 다시 사용할 수 있습니다 하거나 배포 하 고 각 테 넌 트에 대 한 고유한 인증서를 사용할 수 있습니다.
+>암호화 된 각 가상 네트워크에 대해이 자격 증명을 다시 사용 하거나, 각 테 넌 트에 대해 고유한 인증서를 배포 하 고 사용할 수 있습니다.
 
 
 ## <a name="step-3-configuring-a-virtual-network-for-encryption"></a>3단계. 암호화에 대 한 Virtual Network 구성
 
-이 단계를 이미 만든 가상 네트워크 이름 "My 네트워크" 하나 이상의 가상 서브넷 포함 가정 합니다.  가상 네트워크를 만드는 방법에 대 한 정보를 참조 하세요 [만들기, 삭제 또는 업데이트 테 넌 트 가상 네트워크](../Manage/Create,-Delete,-or-Update-Tenant-Virtual-Networks.md)합니다.
+이 단계에서는 가상 네트워크 이름 "내 네트워크"를 이미 만들었으며 하나 이상의 가상 서브넷을 포함 하 고 있다고 가정 합니다.  가상 네트워크를 만드는 방법에 대 한 자세한 내용은 [테 넌 트 가상 네트워크 만들기, 삭제 또는 업데이트](../Manage/Create,-Delete,-or-Update-Tenant-Virtual-Networks.md)를 참조 하세요.
 
 >[!NOTE]
->현재 연결 또는 연결 된 나중에 트래픽 자동으로 암호화 가져옵니다 하는지 여부를 동일한 서브넷에 다른 VM과 통신 합니다.
+>동일한 서브넷에 있는 다른 VM과 통신 하는 경우 현재 연결 되어 있거나 나중에 연결 되어 있는지 여부에 따라 트래픽은 자동으로 암호화 됩니다.
 
-1.  네트워크 컨트롤러에서 가상 네트워크 및 자격 증명 개체를 검색 합니다.
-
-    $vnet = Get-NetworkControllerVirtualNetwork -ConnectionUri $uri -ResourceId "MyNetwork" $certcred = Get-NetworkControllerCredential -ConnectionUri $uri -ResourceId "EncryptedNetworkCertificate"
-
+1.  네트워크 컨트롤러에서 Virtual Network 및 자격 증명 개체를 검색 합니다.
+```
+    $vnet = Get-NetworkControllerVirtualNetwork -ConnectionUri $uri -ResourceId "MyNetwork"
+    $certcred = Get-NetworkControllerCredential -ConnectionUri $uri -ResourceId "EncryptedNetworkCertificate"
+```
 2.  인증서 자격 증명에 대 한 참조를 추가 하 고 개별 서브넷에서 암호화 사용
-
+```
     $vnet.properties.EncryptionCredential = $certcred
 
-    # <a name="replace-the-subnets-index-with-the-value-corresponding-to-the-subnet-you-want-encrypted"></a>서브넷 인덱스를 암호화 하려는 서브넷에 해당 하는 값을 바꿉니다.  
-    # <a name="repeat-for-each-subnet-where-encryption-is-needed"></a>암호화가 필요한 각 서브넷에 대 한 반복
+    # Replace the Subnets index with the value corresponding to the subnet you want encrypted.  
+    # Repeat for each subnet where encryption is needed
     $vnet.properties.Subnets[0].properties.EncryptionEnabled = $true
-
-3.  네트워크 컨트롤러에 업데이트 된 가상 네트워크 개체를 넣어야 합니다.
-
+```
+3.  업데이트 된 Virtual Network 개체를 네트워크 컨트롤러에 배치
+```
     New-NetworkControllerVirtualNetwork -ConnectionUri $uri -ResourceId $vnet.ResourceId -Properties $vnet.Properties -force
+```
 
-
-_**축 하!** _ 다음이 단계를 완료 하면 완료 했습니다. 
+_**집들이!**_ 이러한 단계를 완료 하면 작업이 완료 됩니다. 
 
 
 ## <a name="next-steps"></a>다음 단계

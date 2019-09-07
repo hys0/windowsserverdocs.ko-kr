@@ -1,6 +1,6 @@
 ---
 title: nslookup set querytype
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f0015db716bd8c74bc4366063009bda41d338d19
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 496eededd8b0b5eb79cdc1b4a7e35bc017157768
+ms.sourcegitcommit: f3b61dcd8aa0aa744db4ea938aac633c19217b0a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66436733"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70746306"
 ---
 # <a name="nslookup-set-querytype"></a>nslookup set querytype
 
@@ -30,15 +30,15 @@ ms.locfileid: "66436733"
 set querytype=<ResourceRecordtype>
 ```
 ## <a name="parameters"></a>매개 변수
-<ResourceRecordtype> DNS 리소스 레코드 종류를 지정합니다. 기본 리소스 레코드 종류는 A입니다. 다음 표에서이 명령에 대 한 유효한 값을 나열합니다.
+<ResourceRecordtype>DNS 리소스 레코드 종류를 지정 합니다. 기본 리소스 레코드 종류는 A입니다. 다음 표에서이 명령에 대 한 유효한 값을 나열합니다.
 
 | 값 |                                                   설명                                                   |
 |-------|-----------------------------------------------------------------------------------------------------------------|
-|   변수를 잠그기 위한   |                                      컴퓨터 지정&#39;의 IP 주소                                      |
-|  모든  |                                     컴퓨터 지정&#39;의 IP 주소입니다.                                      |
+|   변수를 잠그기 위한   |                                      컴퓨터&#39;의 IP 주소를 지정 합니다.                                      |
+|  모든  |                                     컴퓨터&#39;의 IP 주소를 지정 합니다.                                      |
 | CNAME |                                    별칭에 대 한 정식 이름을 지정합니다.                                     |
 |  GID  |                                  그룹 이름의 그룹 식별자를 지정합니다.                                  |
-| HINFO |                          컴퓨터 지정&#39;CPU 및 운영 체제 유형입니다.                           |
+| HINFO |                          컴퓨터&#39;의 CPU 및 운영 체제 유형을 지정 합니다.                           |
 |  MB   |                                        사서함 도메인 이름을 지정합니다.                                         |
 |  MG   |                                         메일 그룹 구성원을 지정합니다.                                          |
 | MINFO |                                   사서함 또는 메일 목록 정보를 지정합니다.                                   |
@@ -56,7 +56,7 @@ set querytype=<ResourceRecordtype>
 간단한 요약이 표시 되며 <strong>nslookup</strong> 하위 명령
 ## <a name="remarks"></a>설명
 - <strong>유형을 설정</strong> 와 동일한 기능을 수행 하는 명령에서 <strong>querytype 설정</strong> 명령입니다.
-- 리소스 레코드 종류에 대 한 자세한 내용은 주석 Rfc 1035에 대 한 요청을 참조 하세요.
+- 리소스 레코드 종류에 대 한 자세한 내용은 요청 설명 (Rfc) 1035을 참조 하세요.
   ## <a name="additional-references"></a>추가 참조
   <a href="command-line-syntax-key.md" data-raw-source="[Command-Line Syntax Key](command-line-syntax-key.md)">명령줄 구문 키</a>
-  <a href="nslookup-set-type.md" data-raw-source="[nslookup set type](nslookup-set-type.md)">nslookup 유형 설정</a>
+  <a href="nslookup-set-type.md" data-raw-source="[nslookup set type](nslookup-set-type.md)">nslookup 집합 형식</a>
