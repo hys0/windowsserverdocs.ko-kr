@@ -12,12 +12,12 @@ ms.assetid: 9153ac90-bb0c-4b8d-93b2-e2121ed13636
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 7dc66c8a439552c2087d0348b0115adba04027ee
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: bbff22c03b7bf4310b86048848ded276547b911f
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66433504"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70865195"
 ---
 # <a name="preconfiguring-a-router"></a>라우터 사전 구성
 
@@ -32,8 +32,8 @@ ms.locfileid: "66433504"
 |구성 설정|설명|  
 |---------------------------|-------------|  
 |DHCP|켜짐|  
-|포트 전달|다음 포트를 서버 주소로 전달해야 합니다.<br /><br /> -80 (호스팅된 구성의 경우 443만 사용)<br />-   443|  
-|UPnP 지원|고객에 게 최상의 고객 환경을 간편한 라우터 구성과 설치 중에 제공 UPnP™ 지원을 사용 해야 합니다.<br /><br /> **경고:** UPnP 아키텍처는 사용하도록 설정된 상태로 유지되면 보안 위험에 노출될 수 있습니다.|  
+|포트 전달|다음 포트를 서버 주소로 전달해야 합니다.<br /><br /> -80 (hosted 구성의 경우 443만 사용)<br />-443|  
+|UPnP 지원|설치 하는 동안 고객에 게 가장 쉬운 라우터 구성과 최상의 고객 환경을 제공 하려면 UPnP 지원을 사용 하도록 설정 해야 합니다.<br /><br /> **경고:** UPnP 아키텍처는 사용하도록 설정된 상태로 유지되면 보안 위험에 노출될 수 있습니다.|  
   
  기본 라우터 사전 구성 설정 외에도 다음 작업을 수행하여 라우터 관리를 위해 좀 더 통합된 사용자 환경을 제공할 수 있습니다.  
   
@@ -43,14 +43,14 @@ ms.locfileid: "66433504"
   
 -   라우터가 여러 서브넷을 지원하면 서버의 IP 주소는 DHCP를 통해 한 개의 DNS 서버로 보냅니다.  
   
--   라우터에 Active DirectoryÂ® Domain Services에 대 한 통합 된 액세스 제어 기능을 있으면 서버의 초기 구성 중 Active Directory 통합을 자동화할 수 있습니다. 또한 대시보드에서 라우터 관리 추가 기능을 통해 이 기능을 제공해야 합니다.  
+-   라우터에 Active Directory® 도메인 서비스에 대해 통합 된 액세스 제어 기능이 있는 경우 서버의 초기 구성 중에 Active Directory 통합을 자동화할 수 있습니다. 또한 대시보드에서 라우터 관리 추가 기능을 통해 이 기능을 제공해야 합니다.  
   
 > [!NOTE]
 >  무선 연결을 구성하는 방법에 대한 자세한 내용은 [Configure Support for a Wireless Network](Configure-Support-for-a-Wireless-Network.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [Windows Server Essentials ADK 시작 하기](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
- [만들기 및 이미지를 사용자 지정](Creating-and-Customizing-the-Image.md)   
+ [이미지 만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)   
  [추가 사용자 지정](Additional-Customizations.md)   
- [배포용 이미지 준비](Preparing-the-Image-for-Deployment.md)   
+ [배포를 위한 이미지 준비](Preparing-the-Image-for-Deployment.md)   
  [사용자 환경 테스트](Testing-the-Customer-Experience.md)

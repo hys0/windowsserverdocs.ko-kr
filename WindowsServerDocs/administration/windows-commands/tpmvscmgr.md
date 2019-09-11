@@ -1,6 +1,6 @@
 ---
 title: tpmvscmgr
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f6cfc15b7c089c9b6ad4d9a267b951373e63a63a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9b1d9b049615322bffc39b5b372ce145579b57b2
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59888594"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70868774"
 ---
 # <a name="tpmvscmgr"></a>tpmvscmgr
 
@@ -37,7 +37,7 @@ Tpmvscmgr destroy [/instance <instance ID>] [/?]
 
 ### <a name="parameters-for-create-command"></a>만들기 명령에 대 한 매개 변수
 
-만들기 명령은 사용자의 시스템에 새로운 가상 스마트 카드를 설정합니다. 삭제 해야 하는 경우 나중에 참조할 수는 새로 만든된 카드의 인스턴스 ID를 반환 합니다. ID가 형식에서 인스턴스 **ROOT\SMARTCARDREADER\000n** 여기서 **n** 0에서 시작 하 고 새로운 가상 스마트 카드를 만들 때마다 1 씩 증가 됩니다.
+만들기 명령은 사용자의 시스템에 새 가상 스마트 카드를 설정 합니다. 삭제 해야 하는 경우 나중에 참조할 수는 새로 만든된 카드의 인스턴스 ID를 반환 합니다. ID가 형식에서 인스턴스 **ROOT\SMARTCARDREADER\000n** 여기서 **n** 0에서 시작 하 고 새로운 가상 스마트 카드를 만들 때마다 1 씩 증가 됩니다.
 
 |매개 변수|설명|
 |---------|-----------|
@@ -51,7 +51,7 @@ Tpmvscmgr destroy [/instance <instance ID>] [/?]
 
 ### <a name="parameters-for-destroy-command"></a>Destroy 명령에 대 한 매개 변수
 
-Destroy 명령은 안전 하 게 사용자의 컴퓨터에서 가상 스마트 카드를 삭제합니다.
+제거 명령은 사용자의 컴퓨터에서 가상 스마트 카드를 안전 하 게 삭제 합니다.
 
 > [!WARNING]
 > 가상 스마트 카드를 삭제 하면 복구할 수 없습니다.
@@ -67,7 +67,7 @@ Destroy 명령은 안전 하 게 사용자의 컴퓨터에서 가상 스마트 �
 
 영숫자 입력에 대 한 전체 127 문자 ASCII 집합 허용 됩니다.
 
-## <a name="BKMK_Examples"></a>예제
+## <a name="BKMK_Examples"></a>예와
 
 다음 명령은 나중에 다른 컴퓨터에서 시작 된 스마트 카드 관리 도구에 의해 관리 될 수 있는 가상 스마트 카드를 만드는 방법을 보여 줍니다.
 ```
@@ -85,7 +85,7 @@ tpmvscmgr.exe create /name "VirtualSmartCardForCorpAccess" /AdminKey RANDOM /PIN
 ```
 tpmvscmgr.exe destroy /instance <instance ID> 
 ```
-여기서 \<인스턴스 ID > 값 인쇄 화면에 사용자는 카드를 만들 때. 특히, 만든 첫 번째 카드, 인스턴스 ID가 ROOT\SMARTCARDREADER\0000입니다.
+여기서 \<instance ID >은 사용자가 카드를 만들 때 화면에 인쇄 되는 값입니다. 특히, 만든 첫 번째 카드, 인스턴스 ID가 ROOT\SMARTCARDREADER\0000입니다.
 
 #### <a name="additional-references"></a>추가 참조
 

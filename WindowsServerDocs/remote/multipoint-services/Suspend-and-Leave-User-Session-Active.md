@@ -1,6 +1,6 @@
 ---
 title: 사용자 세션 일시 중단 및 활성 상태 유지
-description: 이러한 연결을 끊지 않고 MultiPoint 세션에서 사용자를 일시 중단 하는 방법 알아보기
+description: 연결을 끊지 않고 MultiPoint 세션에서 사용자를 일시 중단 하는 방법을 알아봅니다.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.technology: multipoint-services
@@ -13,15 +13,15 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: cc4310e6f7609464cf037b750bec6e5e805e0b26
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a7c94b9d1edd36efc8651e35dfabbc95239335cb
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59815224"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70871533"
 ---
 # <a name="suspend-and-leave-user-session-active"></a>사용자 세션 일시 중단 및 활성 상태 유지
-연결을 끊을 수도 있고 사용자의 세션을 종료 하지 않을 때 MultiPoint 서비스 시스템에서 사용자 일시 중단 수도 있습니다. 또한 관리자가 사용자 세션의 연결을 끊는 대신 사용자가 세션의 연결을 직접 끊을 수도 있습니다. 사용자 세션이 일시 중단되는 동안 세션은 MultiPoint 서비스 시스템의 컴퓨터가 종료되거나 다시 시작될 때까지 해당 컴퓨터의 메모리에 활성 상태로 유지됩니다. 컴퓨터가 종료되거나 다시 시작되면 일시 중단된 모든 세션이 종료되고 저장되지 않은 작업은 손실됩니다.  
+사용자의 세션을 종료 하지 않으려는 경우 MultiPoint 서비스 시스템에서 사용자의 연결을 끊거나 일시 중단할 수 있습니다. 또한 관리자가 사용자 세션의 연결을 끊는 대신 사용자가 세션의 연결을 직접 끊을 수도 있습니다. 사용자 세션이 일시 중단 된 동안에는 컴퓨터가 종료 되거나 다시 시작 될 때까지 MultiPoint 서비스 시스템의 컴퓨터 메모리에서 세션이 활성 상태로 유지 됩니다. 컴퓨터가 종료되거나 다시 시작되면 일시 중단된 모든 세션이 종료되고 저장되지 않은 작업은 손실됩니다.  
   
 1.  스테이션 모드의 다중 포인트 관리자를 열고 클릭는 **스테이션** 탭 합니다.  
   
@@ -33,4 +33,4 @@ ms.locfileid: "59815224"
   
 ## <a name="see-also"></a>관련 항목  
 [사용자 데스크톱 관리](manage-user-desktops-using-multipoint-dashboard.md)  
-[로그 오프 또는 연결 끊기 사용자 세션](Log-off-or-Disconnect-User-Sessions.md)
+[사용자 세션 로그오프 또는 연결 끊기](Log-off-or-Disconnect-User-Sessions.md)

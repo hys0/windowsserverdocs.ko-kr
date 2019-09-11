@@ -9,20 +9,20 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: f0f3d8c70a41d512e7cd33282524bc401ce84600
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 2298ba360bb59c950a78514d137c0b4d5fbdd1af
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66191435"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70867819"
 ---
 # <a name="federation-server-farm-using-wid"></a>WID를 사용하는 페더레이션 서버 팜
 
-Active Directory Federation Services의 기본 토폴로지 \(AD FS\) Windows 내부 데이터베이스를 사용 하 여 페더레이션 서버 팜 \(WID\), 최대 5 대 페더레이션 서버 호스트의 구성 된 사용자 조직의 페더레이션 서비스입니다. 이 토폴로지에서 AD FS를 해당 팜에 가입 된 모든 페더레이션 서버에 대 한 AD FS 구성 데이터베이스에 대 한 저장소로 WID를 사용 합니다. 팜에서는 각 서버의 페더레이션 데이터를 구성 데이터베이스에 복제하고 유지 관리합니다.  
+Active Directory Federation Services \(AD FS\) 의 기본 토폴로지는 Windows 내부 데이터베이스 \(WID\)를 사용 하는 페더레이션 서버 팜이 며,이는를 호스트 하는 최대 5 개의 페더레이션 서버로 구성 됩니다. 조직의 페더레이션 서비스입니다. 이 토폴로지에서 AD FS는 WID를 해당 팜에 가입 된 모든 페더레이션 서버에 대 한 AD FS 구성 데이터베이스의 저장소로 사용 합니다. 팜에서는 각 서버의 페더레이션 데이터를 구성 데이터베이스에 복제하고 유지 관리합니다.  
   
-또한 팜의 첫 번째 페더레이션 서버를 만드는 작업에서는 새 페러데이션 서비스도 만듭니다. AD FS 구성 데이터베이스에 대 한 WID를 사용 하는 경우 팜에에서 만드는 첫 번째 페더레이션 서버 라고 합니다 *기본 페더레이션 서버*합니다. 즉,이 컴퓨터가 읽기로 구성 되어 있다고\/AD FS 구성 데이터베이스의 복사본을 작성 합니다.  
+또한 팜의 첫 번째 페더레이션 서버를 만드는 작업에서는 새 페러데이션 서비스도 만듭니다. AD FS 구성 데이터베이스에 대해 WID를 사용 하는 경우 팜에서 만드는 첫 번째 페더레이션 서버를 *기본 페더레이션 서버*라고 합니다. 즉,이 컴퓨터는 AD FS 구성 데이터베이스의 읽기\/쓰기 복사본으로 구성 됩니다.  
   
-이 팜에 대해 구성 하는 다른 모든 페더레이션 서버 라고 *보조 페더레이션 서버* 읽기 기본 페더레이션 서버에 적용 된 변경 내용을 복제 해야 하기 때문\-만 로컬로 저장 하는 AD FS 구성 데이터베이스의 복사본입니다.  
+이 팜에 대해 구성 하는 다른 모든 페더레이션 서버는 기본 페더레이션 서버에 적용 된 모든 변경 내용을 AD FS의 읽기\-전용 복사본에 복제 해야 하므로 *보조 페더레이션 서버* 라고 합니다. 로컬로 저장 되는 구성 데이터베이스입니다.  
   
 > [!NOTE]  
 > 부하가에 두 개 이상의 페더레이션 서버를 사용 하는 것이 좋습니다\-균형 잡힌된 구성 합니다.  
@@ -34,7 +34,7 @@ Active Directory Federation Services의 기본 토폴로지 \(AD FS\) Windows �
   
 -   내부 사용자에 게 제공 해야 하는 100 개 이하인 구성 된 트러스트 관계가 있는 조직에서는 \(물리적으로 회사 네트워크에 연결 된 컴퓨터에 로그온 한\) 단일 기호로\-에 \(SSO\) 페더레이션된 응용 프로그램 또는 서비스에 대 한 액세스  
   
--   Microsoft Online Services 또는 Microsoft Office 365에 대 한 SSO 액세스를 사용 하 여 내부 사용자에 게 제공 하려는 조직에  
+-   Microsoft Online Services 또는 Microsoft Office 365에 대 한 SSO 액세스를 내부 사용자에 게 제공 하려는 조직  
   
 -   중복이 고 확장 가능한 서비스를 필요로 하는 소규모 조직  
   
@@ -45,11 +45,11 @@ Active Directory Federation Services의 기본 토폴로지 \(AD FS\) Windows �
   
 -   내부 사용자에 게 SSO 액세스를 제공합니다.  
   
--   데이터 및 페더레이션 서비스 중복성 \(각 페더레이션 서버는 동일한 팜의 다른 페더레이션 서버에 변경 내용을 복제\)  
+-   데이터 및 페더레이션 서비스 중복성 \(각 페더레이션 서버는 동일한 팜의 다른 페더레이션 서버에 변경 내용을 복제 합니다.\)  
   
 -   팜의 최대 5 대 페더레이션 서버를 추가 하 여 확장할 수 있습니다.  
   
--   WID는 Windows;에 포함 따라서 구입할 필요가 없습니다 SQL Server  
+-   WID는 Windows에 포함 되어 있습니다. 따라서 SQL Server 구매할 필요가 없습니다.  
   
 ### <a name="what-are-the-limitations-of-using-this-topology"></a>이 토폴로지를 사용 하 여의 제한 사항은 무엇입니까?  
   

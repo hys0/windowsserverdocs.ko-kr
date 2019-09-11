@@ -9,24 +9,24 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: d2af0950e52d800202235bf674545f6c47e9cd88
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: ba7ed6baa30d15eea5ae08326847187ac85605d5
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66190785"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70867592"
 ---
 # <a name="using-ad-ds-claims-with-ad-fs"></a>AD FS와 함께 AD DS 클레임 사용
   
   
-Active Directory Domain Services를 사용 하 여 페더레이션된 응용 프로그램에 대 한 다양 한 액세스 제어를 설정할 수 있습니다 \(AD DS\)\-Active Directory Federation Services와 함께 사용자 및 장치 클레임을 발급 한 \(AD FS \).  
+Active Directory Domain Services \(AD DS\)발급 된 사용자 및 장치 클레임을 Active Directory Federation Services \(와 함께 사용 하 여 페더레이션 응용 프로그램에 대 한 보다 다양 한 액세스 제어를 사용할 수 있습니다 AD FS\- \).  
   
 ## <a name="about-dynamic-access-control"></a>동적 액세스 제어에 대 한  
 Windows Server® 2012 동적 액세스 제어 기능 사용 하면 사용자 클레임을 기반으로 하는 파일에 대 한 액세스 권한을 부여 하는 조직이 \(사용자 계정 특성에 의해 발생 되는\) 및 장치 클레임 \(컴퓨터 계정 특성에 의해 발생 하\) Active Directory 도메인 서비스에서 발급 하는 \(AD DS\)합니다. AD DS 클레임을 발급 한 Kerberos 인증 프로토콜을 통해 Windows 통합된 인증에 통합 됩니다.  
   
 동적 액세스 제어에 대 한 자세한 내용은 참조 [동적 액세스 제어 콘텐츠 로드맵](../../solution-guides/Dynamic-Access-Control--Scenario-Overview.md#BKMK_APP)합니다.  
   
-### <a name="whats-new-in-ad-fs"></a>AD FS의 새로운 기능은 무엇입니까?  
+### <a name="whats-new-in-ad-fs"></a>AD FS의 새로운 기능  
 동적 액세스 제어 시나리오에 대 한 확장,으로 Windows Server 2012의 AD FS 이제 수행할 수 있습니다.  
   
 -   AD DS에서 사용자 계정 속성 외에도 액세스 컴퓨터 계정 특성입니다. AD FS의 이전 버전에서 페더레이션 서비스 액세스 하지 못했습니다 컴퓨터 계정 특성에 AD DS에서.  
@@ -42,9 +42,9 @@ Windows Server® 2012 동적 액세스 제어 기능 사용 하면 사용자 클
   
     -   응용 프로그램 및 Windows 통합 인증을 통해 액세스할 수 있는 리소스에 대 한 액세스를 제어 하기 위한 사용 되는 AD DS 보안 그룹  
   
-    -   포리스트 트러스트 비즈니스에 대 한 액세스를 제어 하기 위한 사용 되는\-하\-비즈니스 \(B2B\) \/ 인터넷 액세스 가능한 응용 프로그램 및 리소스입니다.  
+    -   비즈니스\- b2b\(\-인터넷에\) 액세스할 수 있는 응용 프로그램 및 리소스에 대 한 액세스를 제어 하는 데 사용 되는 포리스트 트러스트 \/  
   
--   조직에서는 이제 액세스를 방지할 수 무단 네트워크 리소스에 특정 컴퓨터 계정이 AD DS에 저장 된 값을 특성 여부에 따라 클라이언트 컴퓨터에서 \(예를 들어 컴퓨터의 DNS 이름을\) 일치 하는 리소스의 액세스 제어 정책 \(클레임 ACLd 된 파일 서버 예를 들어\) 또는 신뢰 당사자 정책 \(클레임 예를 들어\-인식 웹 응용 프로그램\)합니다. 이 리소스 또는 응용 프로그램을 실행 하는 것에 대 한 세부적인 액세스 제어 정책을 설정 하려면 관리자가 도움이 됩니다.  
+-   조직에서는 AD DS \(에 저장 된 특정 컴퓨터 계정 특성 값이 있는지 여부에 따라 클라이언트 컴퓨터에서 네트워크 리소스에 대 한 무단 액세스를 방지할 수 있습니다. 예\) 를 들어 컴퓨터의 DNS 이름이 access control과 일치 하는지 여부에 따라 다릅니다. 예를 들어 클레임 \(을\-인식 하는 웹 응용 프로그램\)예를 들어 클레임\) 또는 신뢰 당사자 정책이 \(있는 acld 인 파일 서버와 같은 리소스의 정책입니다. 이 리소스 또는 응용 프로그램을 실행 하는 것에 대 한 세부적인 액세스 제어 정책을 설정 하려면 관리자가 도움이 됩니다.  
   
     -   Windows 통합 인증을 통해 액세스할 수 있습니다.  
   
@@ -58,7 +58,7 @@ AD DS vs에서 발행 한 클레임에 대해 이해 하는 중요 한 차별화
 -   AD FS SAML 토큰, Kerberos 티켓 하지에 캡슐화 되는 클레임을 발급할 수 있습니다. AD FS 클레임을 발급 하는 방법에 대 한 자세한 내용은 참조 [클레임 엔진의 역할](../../ad-fs/technical-reference/The-Role-of-the-Claims-Engine.md)합니다.  
   
 ## <a name="how-ad-ds-issued-claims-work-with-ad-fs"></a>AD DS에서 발급한 클레임이 AD FS와 작동하는 방식  
-AD DS 클레임을 발급 한 클레임을 사용자와 장치 모두에서 직접 액세스 하려면 사용자의 인증 컨텍스트를 만드는 대신 별도 LDAP 호출을 Active Directory에 AD FS와 함께 사용할 수 있습니다. 다음 그림 및 해당 단계에 설명 자세히 클레임을 사용 하도록 설정 하려면이 프로세스가 작동 하는 방법을\-기반 동적 액세스 제어 시나리오에 대 한 액세스를 제어 합니다.  
+AD DS 발급 된 클레임은 AD FS와 함께 사용 하 여 Active Directory에 대 한 별도의 LDAP 호출을 수행 하지 않고 사용자의 인증 컨텍스트에서 직접 사용자 및 장치 클레임에 액세스할 수 있습니다. 다음 그림 및 해당 단계에 설명 자세히 클레임을 사용 하도록 설정 하려면이 프로세스가 작동 하는 방법을\-기반 동적 액세스 제어 시나리오에 대 한 액세스를 제어 합니다.  
   
 ![클레임 사용](media/UsingADDSClaimswithADFS.gif)  
   

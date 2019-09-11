@@ -1,6 +1,6 @@
 ---
 title: 솔루션 확장에 대 한 연결 공급자 만들기
-description: 솔루션 확장 Windows Admin Center SDK (프로젝트 브라 티) 개발-연결 공급자 만들기
+description: 솔루션 확장 개발 Windows 관리 센터 SDK (Project Honolulu)-연결 공급자 만들기
 ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
@@ -8,41 +8,41 @@ ms.author: niwashbu
 ms.date: 06/06/2019
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: b79e832ee45990d18baf4c211ab68b907134ceb7
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.openlocfilehash: c1f3a7f7004b573fece71cdaf2f43661c13ad496
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66811838"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70869626"
 ---
 # <a name="create-a-connection-provider-for-a-solution-extension"></a>솔루션 확장에 대 한 연결 공급자 만들기
 
 >적용 대상: Windows Admin Center, Windows Admin Center 미리 보기
 
-연결 공급자 Windows Admin Center 정의 하 고 연결 가능 개체를 하나 이상의 대상을 사용 하 여 통신 하는 방법에서 중요 한 역할을 수행 합니다. 기본적으로, 연결 공급자 중에 연결, 온라인 상태이 고, 사용 가능한 대상은 또한 연결 하는 사용자를 대상에 액세스 권한이 있는지를 확인 등 작업을 수행 합니다.
+연결 공급자는 Windows 관리 센터에서 연결 가능한 개체 또는 대상을 정의 하 고 통신 하는 방법에 중요 한 역할을 합니다. 기본적으로 연결 공급자는 대상이 온라인 상태이 고 사용 가능한 지 확인 하 고 연결 하는 사용자에 게 대상에 대 한 액세스 권한이 있는지 확인 하는 등의 작업을 수행 하는 동안 작업을 수행 합니다.
 
-기본적으로 Windows Admin Center 다음 연결 공급자를 사용 하 여 제공 됩니다.
+기본적으로 Windows 관리 센터에는 다음 연결 공급자가 제공 됩니다.
 
 * 서버
 * Windows 클라이언트
 * 장애 조치(failover) 클러스터
 * HCI 클러스터
 
-사용자 고유의 사용자 지정 연결 공급자를 만들려면 다음이 단계를 수행 합니다.
+사용자 고유의 사용자 지정 연결 공급자를 만들려면 다음 단계를 수행 합니다.
 
-* 연결 공급자 세부 정보를 추가 합니다. ```manifest.json```
-* 연결 상태 공급자를 정의 합니다.
-* 응용 프로그램 계층에서 연결 공급자를 구현 합니다.
+* 연결 공급자 세부 정보 추가```manifest.json```
+* 연결 상태 공급자 정의
+* 응용 프로그램 계층에서 연결 공급자 구현
 
-## <a name="add-connection-provider-details-to-manifestjson"></a>manifest.json에 연결 공급자 세부 정보 추가
+## <a name="add-connection-provider-details-to-manifestjson"></a>매니페스트에 연결 공급자 세부 정보를 추가 합니다. json
 
-이제 프로젝트의 연결 공급자를 정의 하려면 알아야 할 내용을 살펴보겠습니다 ```manifest.json``` 파일입니다.
+이제 프로젝트의 ```manifest.json``` 파일에 연결 공급자를 정의 하기 위해 알아야 하는 내용을 살펴보겠습니다.
 
-### <a name="create-entry-in-manifestjson"></a>manifest.json에 항목 만들기
+### <a name="create-entry-in-manifestjson"></a>매니페스트에서 항목 만들기. json
 
-```manifest.json``` \src 폴더에 있는 파일과 무엇 보다도, 프로젝트에 진입점의 정의가 포함 되어 있습니다. 진입점 유형의 도구, 솔루션 및 연결 공급자를 포함 합니다. 연결 공급자를 정의 했습니다.
+이 ```manifest.json``` 파일은 \src 폴더에 있으며, 프로젝트에 대 한 진입점의 정의를 포함 합니다. 진입점 유형에는 도구, 솔루션 및 연결 공급자가 있습니다. 연결 공급자를 정의 합니다.
 
-연결 공급자 항목은 manifest.json에 샘플은 다음과 같습니다.
+다음은 매니페스트에서 연결 공급자 항목의 샘플입니다. json은 다음과 같습니다.
 
 ``` json
     {
@@ -71,33 +71,33 @@ ms.locfileid: "66811838"
     },
 ```
 
-진입점 "connnectionProvider" 형식의 구성 항목 유효성을 검사할 연결 상태를 솔루션에서 사용할 공급자는 Windows Admin Center 셸에 나타냅니다. 연결 공급자 진입점에는 다양 한 중요 한 속성을 아래에 정의 된 포함 됩니다.
+"ConnnectionProvider" 형식의 진입점은 구성 중인 항목이 솔루션에서 연결 상태를 확인 하는 데 사용 되는 공급자 임을 Windows 관리 센터 셸에 나타냅니다. 연결 공급자 진입점에는 아래 정의 된 여러 가지 중요 한 속성이 포함 되어 있습니다.
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| entryPointType | 이것은 필수 속성입니다. 세 가지 유효한 값: "도구", "솔루션" 및 "connectionProvider"입니다. | 
-| name | 솔루션의 범위 내에서 연결 공급자를 식별합니다. 이 값은 전체 Windows Admin Center 인스턴스 (뿐 아니라 솔루션) 내에서 고유 해야 합니다. |
-| path | 솔루션에서 구성 하는 경우 연결에 대해"추가" UI URL 경로를 나타냅니다. 이 값은 앱 routing.module.ts 파일에서 구성 하는 경로 매핑해야 합니다. 솔루션 진입점 연결 rootNavigationBehavior를 사용 하도록 구성 됩니다, 경우에이 경로 추가 연결 UI를 표시 하는 셸에서 사용 되는 모듈을 로드 됩니다. 자세한 정보가 단원의 rootNavigationBehavior에서. |
-| displayName | 여기에 입력 한 값은 검은색 Windows Admin Center 표시줄 사용자 로드 솔루션의 연결 페이지 아래쪽의 셸의 오른쪽에 표시 됩니다. |
-| 아이콘 | 솔루션을 나타내는 데 솔루션에 대 한 드롭다운 메뉴에서에서 아이콘을 나타냅니다. |
+| Entrypointtype 않으면 | 이것은 필수 속성입니다. "Tool", "solution" 및 "connectionProvider"의 세 가지 유효한 값이 있습니다. | 
+| name | 솔루션의 범위 내에서 연결 공급자를 식별 합니다. 이 값은 솔루션 뿐만 아니라 전체 Windows 관리 센터 인스턴스 내에서 고유 해야 합니다. |
+| path | 솔루션에 의해 구성 되는 경우 "연결 추가" UI에 대 한 URL 경로를 나타냅니다. 이 값은 app.config 파일에 구성 된 경로에 매핑되어야 합니다. 솔루션 진입점이 연결 rootNavigationBehavior를 사용 하도록 구성 된 경우이 경로는 셸에서 추가 연결 UI를 표시 하는 데 사용 되는 모듈을 로드 합니다. RootNavigationBehavior 섹션에서 사용할 수 있는 자세한 내용입니다. |
+| displayName | 여기에 입력 한 값은 사용자가 솔루션의 연결 페이지를 로드 하는 경우 검은색 Windows 관리 센터 표시줄 아래에 있는 셸의 오른쪽에 표시 됩니다. |
+| 아이콘 | 솔루션을 나타내기 위해 솔루션 드롭다운 메뉴에 사용 되는 아이콘을 나타냅니다. |
 | description | 진입점에 대 한 간단한 설명을 입력 합니다. |
-| connectionType | 공급자가 로드 되는 연결 유형을 나타냅니다. 여기에 입력 한 값도 사용할 솔루션 진입점에서 솔루션 이러한 연결을 로드할 수 있는지를 지정 합니다. 여기에 입력 한 값도 사용할 도구 항목 요소에서이 형식을 사용 하 여 호환 가능한 도구 임을 합니다. 여기에 입력이 값도 RPC에 제출 된 연결 개체에 사용할 "추가 창에서" 응용 프로그램 계층 구현 단계에서 호출 합니다. |
-| connectionTypeName | 연결 테이블에서 연결 공급자를 사용 하는 연결을 나타내는 데 사용 합니다. 이 복수형 이름 형식의 해야 합니다. |
-| connectionTypeUrlName | 인스턴스에 Windows Admin Center 연결 된 후 로드 된 솔루션을 나타내는 URL을 만드는 데. 이 항목이 대상 전과 후 연결에 사용 됩니다. 이 예제에서 "connectionexample" URL에서이 값의 위치는: `http://localhost:6516/solutionexample/connections/connectionexample/con-fake1.corp.contoso.com` |
-| connectionTypeDefaultSolution | 연결 공급자가 로드 해야 하는 기본 구성 요소를 나타냅니다. 이 값은 조합입니다. <br>[a]; 매니페스트의 맨 위에 있는 정의 된 확장 패키지의 이름 <br>[b] 느낌표 (!). <br>[c] 솔루션 항목 지점 이름입니다.    <br>이 값은 "msft.sme.mySample-확장명"를 사용 하 여 프로젝트 및 솔루션 진입점을 이름 "예"를 사용 하 여 "msft.sme.solutionExample 확장! 예제에서는". |
-| connectionTypeDefaultTool | 기본을 연결을 성공적으로 로드 해야 하는 도구를 나타냅니다. 이 속성 값을 connectionTypeDefaultSolution 비슷합니다 두 부분으로 구성 됩니다. 이 값은 조합입니다. <br>[a]; 매니페스트의 맨 위에 있는 정의 된 확장 패키지의 이름 <br>[b] 느낌표 (!). <br>[처음에 로드 해야 하는 도구에 대 한 c]에서 도구 항목 지점 이름입니다. <br>이 값은 "msft.sme.solutionExample-확장명"를 사용 하 여 프로젝트 및 솔루션 진입점을 이름 "예"를 사용 하 여 "msft.sme.solutionExample 확장! 예제에서는". |
-| connectionStatusProvider | "연결 상태 공급자 정의" 섹션을 참조 하세요 |
+| connectionType | 공급자가 로드할 연결 형식을 나타냅니다. 여기에 입력 한 값은 솔루션 진입점에서 솔루션을 사용 하 여 해당 연결을 로드할 수 있도록 지정 하는 데도 사용 됩니다. 여기에 입력 된 값은 도구가이 유형과 호환 됨을 나타내기 위해 도구 진입점에도 사용 됩니다. 여기에 입력 한이 값은 응용 프로그램 계층 구현 단계의 "창 추가"에서 RPC 호출에 전송 된 연결 개체에도 사용 됩니다. |
+| connectionTypeName | 연결 테이블에서 연결 공급자를 사용 하는 연결을 나타내는 데 사용 됩니다. 이는 형식의 복수 이름이 될 것으로 예상 됩니다. |
+| connectionTypeUrlName | Windows 관리 센터에서 인스턴스에 연결한 후 로드 된 솔루션을 나타내는 URL을 만드는 데 사용 됩니다. 이 항목은 연결 후, 대상 앞에 사용 됩니다. 이 예제에서 "connectionexample"은 URL에이 값이 표시 되는 위치입니다.`http://localhost:6516/solutionexample/connections/connectionexample/con-fake1.corp.contoso.com` |
+| connectionTypeDefaultSolution | 연결 공급자에서 로드 해야 하는 기본 구성 요소를 나타냅니다. 이 값은 다음과 같은 조합입니다. <br>[a] 매니페스트 맨 위에 정의 된 확장 패키지의 이름입니다. <br>[b] 느낌표 (!); <br>[c] 솔루션 진입점 이름입니다.    <br>이름이 "sme"이 고 이름이 "example" 인 솔루션 진입점을 포함 하는 프로젝트의 경우이 값은 "msft. sme (예: 확장! example")입니다. |
+| connectionTypeDefaultTool | 성공적으로 연결 되 면 로드 되어야 하는 기본 도구를 나타냅니다. 이 속성 값은 connectionTypeDefaultSolution 비슷한 두 부분으로 구성 됩니다. 이 값은 다음과 같은 조합입니다. <br>[a] 매니페스트 맨 위에 정의 된 확장 패키지의 이름입니다. <br>[b] 느낌표 (!); <br>[c] 초기에 로드 해야 하는 도구의 진입점 이름입니다. <br>이름이 "sme"이 고 이름이 "example" 인 솔루션 진입점을 포함 하는 프로젝트의 경우이 값은 "msft. sme 예제-확장! example"이 됩니다. |
+| connectionStatusProvider | "연결 상태 공급자 정의" 섹션을 참조 하세요. |
 
-## <a name="define-connection-status-provider"></a>연결 상태 공급자를 정의 합니다.
+## <a name="define-connection-status-provider"></a>연결 상태 공급자 정의
 
-연결 상태 공급자도 연결 하는 사용자를 대상에 액세스 권한이 있는지를 확인 하는 온라인으로 사용 가능한 대상 검사할지 메커니즘입니다. 현재 두 가지 유형의 연결 상태 공급자  PowerShell 및 RelativeGatewayUrl 합니다.
+연결 상태 공급자는 대상이 온라인 상태이 고 사용 가능한 상태 인지 확인 하 여 연결 하는 사용자에 게 대상에 대 한 액세스 권한이 있는지 확인 하는 메커니즘입니다. 현재 연결 상태 공급자에는 다음과 같은 두 가지 유형이 있습니다.  PowerShell 및 RelativeGatewayUrl.
 
-*   <strong>PowerShell 연결 상태 공급자</strong> -온라인 상태이 고 PowerShell 스크립트를 통해 액세스할 수 있는 대상 인지 여부를 확인 합니다. 아래에 정의 된 단일 속성 "상태"를 사용 하 여 개체에 결과 반환 합니다.
-*   <strong>연결 상태 공급자 RelativeGatewayUrl</strong> -온라인 상태이 고 rest 호출을 통해 액세스할 수 있는 대상 인지 여부를 확인 합니다. 아래에 정의 된 단일 속성 "상태"를 사용 하 여 개체에 결과 반환 합니다.
+*   <strong>Powershell 연결 상태 공급자</strong> -대상이 온라인 상태이 고 PowerShell 스크립트를 사용 하 여 액세스할 수 있는지 여부를 확인 합니다. 결과는 아래에 정의 된 단일 속성 "status"가 있는 개체에서 반환 되어야 합니다.
+*   <strong>RelativeGatewayUrl 연결 상태 제공자</strong> -대상이 온라인 상태이 고 rest 호출로 액세스할 수 있는지 여부를 확인 합니다. 결과는 아래에 정의 된 단일 속성 "status"가 있는 개체에서 반환 되어야 합니다.
 
-### <a name="define-status"></a>상태를 정의 합니다.
+### <a name="define-status"></a>상태 정의
 
-연결 상태 공급자는 단일 속성을 사용 하 여 개체를 반환 하는 데 필요한 ```status``` 다음 형식을 준수 합니다.
+연결 상태 공급자는 다음 형식을 따르는 단일 속성 ```status``` 을 가진 개체를 반환 해야 합니다.
 
 ``` json
 {
@@ -111,28 +111,28 @@ ms.locfileid: "66811838"
 
 상태 속성:
 
-* <strong>레이블</strong> -상태 반환 형식을 설명 하는 레이블. Note 런타임에서 레이블에 대 한 값을 매핑할 수 있습니다. 런타임에서 매핑 값에 대 한 아래 항목을 참조 하세요.
+* <strong>레이블</strong> -상태 반환 형식을 설명 하는 레이블입니다. 레이블에 대 한 값은 런타임에 매핑될 수 있습니다. 런타임에 값 매핑에 대해서는 아래 항목을 참조 하세요.
 
-* <strong>형식</strong> -상태 형식을 반환 합니다. 형식에는 다음 열거형 값입니다. 임의의 값이 2 이상인 플랫폼 연결 된 개체를 탐색 하지 않습니다 하 고 UI에 오류가 표시 됩니다.
+* <strong>유형</strong> -상태 반환 유형입니다. 형식에는 다음과 같은 열거형 값이 있습니다. 값 2 이상에서 플랫폼은 연결 된 개체를 탐색 하지 않으며 UI에 오류가 표시 됩니다.
 
-   형식:
+   종류
 
-  | 값 | Description |
+  | 값 | 설명 |
   | ----- | ----------- |
   | 0 | 온라인 |
   | 1 | 경고 |
   | 2 | 권한 없음 |
-  | 3 | Error |
+  | 3 | 오류 |
   | 4 | 심각한 |
   | 5 | 알 수 없음 |
 
-* <strong>세부 정보</strong> -상태 반환 형식을 설명 하는 추가 세부 정보입니다.
+* <strong>Details</strong> -상태 반환 형식에 대 한 추가 세부 정보입니다.
 
-### <a name="powershell-connection-status-provider-script"></a>연결 상태 공급자 PowerShell 스크립트
+### <a name="powershell-connection-status-provider-script"></a>PowerShell 연결 상태 공급자 스크립트
 
-연결 상태 공급자 PowerShell 스크립트를 온라인 상태이 고 PowerShell 스크립트를 통해 액세스할 수 있는 대상 인지 여부를 확인 합니다. 결과 단일 속성 "상태"를 사용 하 여 개체에 반환 되어야 합니다. 예제 스크립트는 다음과 같습니다.
+연결 상태 제공자 PowerShell 스크립트는 대상이 온라인 상태이 고 PowerShell 스크립트를 사용 하 여 액세스할 수 있는지 여부를 확인 합니다. 단일 속성 "status"를 사용 하는 개체에서 결과를 반환 해야 합니다. 예제 스크립트는 다음과 같습니다.
 
-PowerShell 스크립트 예제:
+PowerShell 스크립트 예:
 
 ```PowerShell
 ## Get-My-Status ##
@@ -160,9 +160,9 @@ function Get-Status()
 Get-Status
 ```
 
-### <a name="define-relativegatewayurl-connection-status-provider-method"></a>RelativeGatewayUrl 연결 상태 공급자 메서드를 정의 합니다.
+### <a name="define-relativegatewayurl-connection-status-provider-method"></a>RelativeGatewayUrl 연결 상태 공급자 메서드 정의
 
-연결 상태 공급자 ```RelativeGatewayUrl``` rest 온라인 상태이 고 액세스할 수 있는 대상 인지 확인 하는 API를 호출 합니다. 결과 단일 속성 "상태"를 사용 하 여 개체에 반환 되어야 합니다. RelativeGatewayUrl의 예에서는 연결 공급자 항목은 manifest.json에는 다음과 같습니다.
+연결 상태 공급자 ```RelativeGatewayUrl``` 메서드는 rest API를 호출 하 여 대상이 온라인 상태이 고 액세스 가능한 지 확인 합니다. 단일 속성 "status"를 사용 하는 개체에서 결과를 반환 해야 합니다. RelativeGatewayUrl의 예제 연결 공급자 항목은 다음과 같습니다.
 
 ``` json
     {
@@ -191,33 +191,33 @@ Get-Status
 
 RelativeGatewayUrl 사용에 대 한 참고 사항:
 
-* "relativeGatewayUrl" 게이트웨이 URL에서 연결 상태를 가져올 수 있는 위치를 지정 합니다. 이 URI는 / a p i를 기준으로 합니다. $ConnectionName URL에는 연결의 이름으로 바뀝니다.
-* 게이트웨이 확장 프로그램을 만들어 수행할 수 있는 호스트 게이트웨이에 대 한 모든 relativeGatewayUrl 속성을 실행 해야 합니다.
+* "relativeGatewayUrl"은 게이트웨이 URL에서 연결 상태를 가져올 위치를 지정 합니다. 이 URI는/api. 상대 경로입니다. URL에 $connectionName 있는 경우 연결의 이름으로 대체 됩니다.
+* 모든 relativeGatewayUrl 속성은 게이트웨이 확장을 만들어 수행할 수 있는 호스트 게이트웨이에 대해 실행 해야 합니다.
 
 ### <a name="map-values-in-runtime"></a>런타임에 값 매핑
 
-반환 개체에 서식을 지정할 수는 상태에서 레이블 및 세부 정보 값 공급자의 "defaultValueMap" 속성에 키와 값을 포함 하 여 시간을 조정 합니다.
+상태 반환 개체의 레이블 및 세부 정보 값은 튜닝할 때 공급자의 "defaultValueMap" 속성에 키 및 값을 포함 하 여 형식을 지정할 수 있습니다.
 
-예를 들어, 아래 값을 추가 하는 경우 언제 든 지 해당 "defaultConnection_test" 나타난 레이블 또는 정보에 대 한 값으로 구성 된 리소스 문자열 값을 사용 하 여 Windows Admin Center 키를 자동으로 바꿀 됩니다.
+예를 들어 아래 값을 추가 하는 경우 "defaultConnection_test"가 레이블 또는 세부 정보에 대 한 값으로 표시 되 면 Windows 관리 센터는 키를 구성 된 리소스 문자열 값으로 자동으로 바꿉니다.
 
 ``` json
     "defaultConnection_test": "resources:strings:addServer_status_defaultConnection_label"
 ```
 
-## <a name="implement-connection-provider-in-application-layer"></a>응용 프로그램 계층에서 연결 공급자를 구현 합니다.
+## <a name="implement-connection-provider-in-application-layer"></a>응용 프로그램 계층에서 연결 공급자 구현
 
-이제 OnInit를 구현 하는 TypeScript 클래스를 만들어 응용 프로그램 계층에서 연결 공급자를 구현 하려고 합니다. 클래스에 다음 기능이 있습니다.
+이제 OnInit을 구현 하는 TypeScript 클래스를 만들어 응용 프로그램 계층에서 연결 공급자를 구현할 예정입니다. 클래스에는 다음과 같은 함수가 있습니다.
 
 | 함수 | 설명 |
 | -------- | ----------- |
-| constructor(private appContextService: AppContextService 개인 경로: ActivatedRoute) |  |
-| public ngOnInit() |  |
-| public onSubmit() | 추가 연결 하려고 하는 경우 셸을 업데이트 하기 위한 논리가 포함 |
-| 공용 onCancel() | 추가 연결 시도가 취소 될 때 셸을 업데이트 하기 위한 논리가 포함 |
+| 생성자 (개인 appContextService: AppContextService, 개인 경로: ActivatedRoute) |  |
+| public ngOnInit () |  |
+| public onSubmit () | 연결 추가 시도가 수행 될 때 셸을 업데이트 하는 논리를 포함 합니다. |
+| public onCancel () | 연결 추가 시도가 취소 될 때 셸을 업데이트 하는 논리를 포함 합니다. |
 
 ### <a name="define-onsubmit"></a>OnSubmit 정의
 
-```onSubmit``` 문제는 RPC "추가 연결"의 셸 알림 앱 컨텍스트에 다시 호출 합니다. 기본 호출을 다음과 같이 "updateData"를 사용합니다.
+```onSubmit```앱 컨텍스트에 대 한 RPC 호출을 실행 하 여 "연결 추가"를 셸에 알립니다. 기본 호출은 다음과 같이 "updateData"를 사용 합니다.
 
 ``` ts
 this.appContextService.rpc.updateData(
@@ -232,7 +232,7 @@ this.appContextService.rpc.updateData(
 );
 ```
 
-결과 다음과 같은 구조를 준수 하는 개체의 배열에는 연결 속성:
+결과는 다음 구조를 준수 하는 개체의 배열인 연결 속성입니다.
 
 ``` ts
 
@@ -303,15 +303,15 @@ export const connectionTypeConstants = {
 
 ### <a name="define-oncancel"></a>OnCancel 정의
 
-```onCancel``` 빈 연결 배열을 전달 하 여 "연결 추가" 시도가 취소:
+```onCancel```빈 연결 배열을 전달 하 여 "연결 추가" 시도를 취소 합니다.
 
 ``` ts
 this.appContextService.rpc.updateData(EnvironmentModule.nameOfShell, '##', <RpcUpdateData>{ results: { connections: [] } });
 ```
 
-## <a name="connection-provider-example"></a>연결 공급자 예제
+## <a name="connection-provider-example"></a>연결 공급자 예
 
-연결 공급자를 구현 하는 것에 대 한 전체 TypeScript 클래스는 다음과 같습니다. "ConnectionType" 문자열을 "connectionType은 manifest.json에 있는 연결 공급자에 정의 된 대로 일치 하는지 참고.
+연결 공급자를 구현 하기 위한 전체 TypeScript 클래스는 아래와 같습니다. "ConnectionType" 문자열은 매니페스트에서 연결 공급자에 정의 된 대로 "connectionType과 일치 합니다.
 
 ``` ts
 import { Component, OnInit } from '@angular/core';

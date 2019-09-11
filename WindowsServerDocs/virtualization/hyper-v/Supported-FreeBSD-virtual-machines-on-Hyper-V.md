@@ -11,12 +11,12 @@ ms.assetid: 930e758f-bd50-46b4-a3a4-9857110f17b4
 author: shirgall
 ms.author: kathydav
 ms.date: 08/30/2017
-ms.openlocfilehash: a6e9c6e3bec2001c73254ffd813954f04a37a714
-ms.sourcegitcommit: 6f968368c12b9dd699c197afb3a3d13c2211f85b
+ms.openlocfilehash: 3ca1de87469c30a8cadbf047e77aff441145a499
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68544717"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70869476"
 ---
 # <a name="supported-freebsd-virtual-machines-on-hyper-v"></a>Hyper-v에서 지원 되는 FreeBSD 가상 컴퓨터
 
@@ -77,7 +77,7 @@ ms.locfileid: "68544717"
 
 2. 다음 명령을 통해 레거시 ATA 드라이버를 사용 하도록 설정 하지 않으면 BIS 드라이버가 FreeBSD 및 4.x에 로드 되 면 가상 DVD 드라이브가 인식 되지 않을 수 있습니다.
     ```sh
-    # echo ‘hw.ata.disk_enable=1’ >> /boot/loader.conf
+    # echo ‘hw.ata.disk_enable=1' >> /boot/loader.conf
     # shutdown -r now
     ```
 

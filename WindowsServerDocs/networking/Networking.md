@@ -10,12 +10,12 @@ manager: dougkim
 ms.author: pashort
 author: shortpatti
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b2b42c0a1878a2d9f5f9002dd36e0124e2101cc
-ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
+ms.openlocfilehash: fb36f0ff804b139149922596a05d1ff649884bdd
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69546559"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70868967"
 ---
 # <a name="networking"></a>네트워킹
 
@@ -26,7 +26,7 @@ ms.locfileid: "69546559"
 
 네트워킹은 소프트웨어 정의 데이터 \(센터 SDDC\) 플랫폼의 기본 부분으로, Windows Server 2016은로 이동 하는 데 도움이 되는\) 새롭고 향상 된 소프트웨어 정의 네트워킹 \(SDN 기술을 제공 합니다. 조직에 대해 완전히 실현 된 SDDC 솔루션.
 
-네트워크를 정의 하는 소프트웨어 리소스로 관리 하는 경우 한 번, 응용 프로그램의 인프라 요구 사항에 설명 하 고 다음 선택할 수 있는 응용 프로그램 실행-온-프레미스 또는 클라우드에서 합니다. 
+네트워크를 소프트웨어 정의 리소스로 관리 하는 경우 한 번에 응용 프로그램의 인프라 요구 사항을 설명 하 고 응용 프로그램이 실행 되는 위치 (온-프레미스 또는 클라우드에서)를 선택할 수 있습니다. 
 
 이러한 일관성 덕분에 이제는 응용 프로그램을 보다 손쉽게 확장할 수 있게 되었습니다. 또한 보안, 성능, 서비스 품질 및 가용성에 대해 안심하면서 어디서나 원활하게 응용 프로그램을 실행할 수 있습니다.
 
@@ -514,6 +514,7 @@ DirectAccess 및 VPN (가상 사설망)과 같은 원격 액세스 기술을 사
                                         <h3><a href="https://docs.microsoft.com/virtualization/windowscontainers/container-networking/architecture">Windows 컨테이너 네트워킹</a><hr /></h3>
                                         <p>
 Windows 컨테이너 네트워킹을 사용하면 업계 표준 도구 및 워크플로를 통해 Windows 10 및 Windows Server 호스트에서 컨테이너 끝점을 연결하도록 네트워크를 생성 및 관리할 수 있습니다. Windows 컨테이너 네트워크는 사설 플랫 L2와 라우팅된 L3를 포함하여 여러 토폴로지를 지원합니다.</p>
+
                                         <p>또한 Windows 호스트 네트워킹 서비스 (HNS)와 통신 하는 플러그 인을 통해 Docker, Kubernetes 또는 Windows PowerShell을 사용 하 여 호스트에서 로컬로 만들 수 있는 오버레이도 지원 됩니다. 로컬 에이전트를 통해 각 노드의 HNS와 통신 하 여 더 높은 수준의 오케스트레이션 시스템을 통해 다중 노드 클러스터 네트워크를 만들고 관리할 수 있습니다.</p>
                     </div>
                 </div>

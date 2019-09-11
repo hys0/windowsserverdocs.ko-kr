@@ -8,12 +8,12 @@ ms.author: jeffrew
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ms.date: 06/07/2019
-ms.openlocfilehash: e7cf6fc6a4fae2eee76409bd6af4ef2ff6ed35a3
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.openlocfilehash: b222cd4b97beecd25c14b9f8f39627bf46cb7716
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66811774"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70869541"
 ---
 # <a name="windows-admin-center-known-issues"></a>Windows Admin Center 알려진 문제
 
@@ -23,23 +23,23 @@ ms.locfileid: "66811774"
 
 ## <a name="lenovo-xclarity-integrator"></a>Lenovo XClarity 통합자
 
-이전에 공개 된 호환성 문제 Lenovo XClarity 통합자 확장과 Windows Admin Center 1904 버전의 Windows Admin Center 1904.1 버전을 사용 하 여 해결 되었습니다. Windows Admin Center 지원 되는 최신 버전으로 업데이트 하는 것이 좋습니다.
+Lenovo XClarity 통합자 확장 및 Windows 관리 센터 버전 1904의 이전에 공개 된 비 호환성 문제가 이제 Windows 관리 센터 버전 1904.1에서 해결 되었습니다. Windows 관리 센터의 지원 되는 최신 버전으로 업데이트 하는 것이 좋습니다.
 
-- Lenovo XClarity 통합자 확장 버전 1.1은 Windows Admin Center 1904.1 완벽 하 게 호환 됩니다. Windows Admin Center 및 Lenovo 확장의 최신 버전으로 업데이트 하는 것이 좋습니다.
-- 어떤 이유로 든, 시간에 대 한 Windows Admin Center 1809.5를 사용 하 여 계속 해야 할 경우 사용할 수 없습니다 XClarity 통합자 1.0.4를 기반으로 Windows Admin Center 1809.5 더 이상 지원 될 때까지 Windows Admin Center 확장 피드에서 제공 될 예정입니다. 우리의 [지원 정책](../support/index.md)합니다.
+- Lenovo XClarity 통합자 확장 버전 1.1은 Windows 관리 센터 1904.1과 완전히 호환 됩니다. 최신 버전의 Windows 관리 센터 및 Lenovo 확장으로 업데이트 하는 것이 좋습니다.
+- 어떤 이유로 든 Windows 관리 센터 1809.5을 계속 사용 해야 하는 경우 windows 관리 센터 1809.5이 windows 관리 센터에서 더 이상 지원 되지 않는 경우에도 windows 관리 센터 확장 피드에서 사용할 수 있는 XClarity 통합자 1.0.4를 사용할 수 있습니다. [지원 정책](../support/index.md).
 
 ## <a name="installer"></a>설치 관리자
 
 - 직접 인증서를 사용하여 Windows Admin Center를 설치하는 경우 인증서 관리자 MMC 도구에서 지문을 복사하면 [시작 부분에 잘못된 문자가 포함됩니다](https://support.microsoft.com/help/2023835/certificate-thumbprint-displayed-in-mmc-certificate-snap-in-has-extra). 해결 방법으로 지문의 첫 문자를 입력하고 나머지를 복사/붙여넣습니다.
 
-- 1024 아래의 포트를 사용 하는 것은 지원 되지 않습니다. 서비스 모드에서 필요에 따라 지정 된 포트를 리디렉션하려면 80 포트를 구성할 수 있습니다.
+- 1024 미만의 포트 사용은 지원 되지 않습니다. 서비스 모드에서는 지정 된 포트로 리디렉션하도록 포트 80을 선택적으로 구성할 수 있습니다.
 
-- Windows 업데이트 서비스 (wuauserv)가 중지 하 고 사용 하지 않도록 설정 하는 경우 설치 관리자가 실패 합니다. [19100629]
+- Wuauserv (Windows 업데이트 서비스)가 중지 되 고 사용 하지 않도록 설정 된 경우 설치 관리자가 실패 합니다. [19100629]
 
 ### <a name="upgrade"></a>업그레이드
 
-- 자동 모드에서 msiexec를 사용 하는 경우 Windows Admin Center 서비스 모드에서 이전 버전에서 업그레이드 하는 경우 Windows Admin Center 포트에 대 한 인바운드 방화벽 규칙을 삭제 하는 문제가 발생할 수 있습니다.
-  - 규칙 다시 승격된 된 PowerShell 콘솔에서 다음 명령을 수행을 대체 \<포트 > Windows Admin Center (기본값 443입니다.)에 대해 구성 된 포트를 사용 하 여
+- 서비스 모드에서 Windows 관리 센터를 이전 버전에서 업그레이드 하는 경우 자동 모드에서 msiexec를 사용 하는 경우 Windows 관리 센터 포트의 인바운드 방화벽 규칙이 삭제 되는 문제가 발생할 수 있습니다.
+  - 규칙을 다시 만들려면 관리자 권한 PowerShell 콘솔에서 다음 명령을 실행 하 여 포트 > \<를 Windows 관리 센터에 대해 구성 된 포트 (기본값 443)로 바꿉니다.
 
     ```powershell
     New-NetFirewallRule -DisplayName "SmeInboundOpenException" -Description "Windows Admin Center inbound port exception" -LocalPort <port> -RemoteAddress Any -Protocol TCP
@@ -47,18 +47,18 @@ ms.locfileid: "66811774"
 
 ## <a name="general"></a>일반
 
-- 게이트웨이 설치 하는 Windows Admin Center 있다면 **Windows Server 2016** 많이 사용에서 서비스를 포함 하는 이벤트 로그에 오류와 함께 충돌이 발생할 수 있습니다 ```Faulting application name: sme.exe``` 고 ```Faulting module name: WsmSvc.dll```합니다. Windows Server 2019에 수정 된 버그 때문입니다. 포함 된 Windows Server 2016에 대 한 패치를는 2019 년 2 월 누적 업데이트 [KB4480977](https://www.catalog.update.microsoft.com/Search.aspx?q=4480977)합니다.
+- Windows 관리 센터를 사용 중인 **windows Server 2016** 에 게이트웨이로 설치한 경우 서비스는 및 ```Faulting application name: sme.exe``` ```Faulting module name: WsmSvc.dll```를 포함 하는 이벤트 로그에서 오류로 인해 중단 될 수 있습니다. 이 문제는 Windows Server 2019에서 수정 된 버그로 인해 발생 합니다. Windows Server 2016에 대 한 패치는 2 월 2019 누적 업데이트 [KB4480977](https://www.catalog.update.microsoft.com/Search.aspx?q=4480977)에 포함 되었습니다.
 
-- 게이트웨이로 설치 하는 Windows Admin Center 있고 손상 된 것으로 표시 되는 연결 목록에서 다음 단계를 수행 합니다.
+- Windows 관리 센터를 게이트웨이로 설치 하 고 연결 목록이 손상 된 것으로 나타나는 경우 다음 단계를 수행 합니다.
 
    > [!WARNING]
-   >이 게이트웨이의 모든 Windows Admin Center 사용자에 대 한 설정을 확인 하 고 연결 목록에 삭제 됩니다.
+   >그러면 게이트웨이에서 모든 Windows 관리 센터 사용자에 대 한 연결 목록과 설정이 삭제 됩니다.
 
   1. Windows Admin Center 제거
   2. **C:\Windows\ServiceProfiles\NetworkService\AppData\Roaming\Microsoft** 아래에 있는 **Server Management Experience** 폴더를 삭제합니다.
   3. Windows Admin Center 다시 설치
 
-- 이 도구를 열어 있습니다 및 긴 시간 동안 유휴 상태인 경우 발생할 수 있습니다 여러 경우 **오류: 이 작업에 대 한 runspace 상태가 올바르지** 오류입니다. 이 문제가 발생하는 경우 브라우저를 새로 고칩니다. 이 발생 하는 경우 [피드백 보내기](http://aka.ms/WACfeedback)합니다.
+- 도구를 열어 둔 상태에서 오랜 시간 동안 유휴 상태를 유지 하면 다음과 같은 몇 가지 **오류가 발생할 수 있습니다. Runspace 상태가이 작업** 오류에 적합 하지 않습니다. 이 문제가 발생하는 경우 브라우저를 새로 고칩니다. 이 문제가 발생 하면 [사용자 의견을 보내 주시기](http://aka.ms/WACfeedback)바랍니다.
 
 - 매우 긴 URL을 사용하여 페이지를 새로 고칠 때 **500 오류**가 발생할 수 있습니다. [12443710]
 
@@ -66,14 +66,14 @@ ms.locfileid: "66811774"
 
 - 일부 도구에서 명령 단추를 클릭해도 즉시 상태 변경 내용이 반영되지 않을 수 있으며 UI 도구가 특정 속성의 변경 내용을 자동으로 반영하지 않을 수 있습니다. **새로 고침**을 클릭하여 대상 서버에서 최신 상태를 검색할 수 있습니다. [11445790]
 
-- 태그를 다중 선택 확인란을 사용 하 여 연결을 선택한에서 연결 목록을 필터링 하는 경우 태그 연결 목록을-필터링을 수행할 원래 선택 유지 선택 하면 모든 작업 이전에 선택한 모든 컴퓨터에 적용 됩니다. [18099259]
+- 연결 목록에 대 한 태그 필터링-다중 선택 확인란을 사용 하 여 연결을 선택한 다음 태그를 사용 하 여 연결 목록을 필터링 하는 경우 선택한 작업은 이전에 선택한 모든 컴퓨터에 적용 되도록 원래 선택이 유지 됩니다. [18099259]
 
-- 타사 타사 소프트웨어 통지 내에 나열 된 Windows Admin Center 모듈에서 실행 되는 OS의 버전 번호 간의 사소한 차이 있을 수 있습니다.
+- Windows 관리 센터 모듈에서 실행 되는 OSS 버전 번호 사이에는 약간의 차이가 있을 수 있으며 타사 소프트웨어 공지에 나열 됩니다.
 
 ### <a name="extension-manager"></a>확장 관리자
 
-- Windows Admin Center 업데이트 하면 확장을 다시 설치 해야 합니다.
-- 피드에 액세스할 수 없는 확장을 추가 하는 경우 경고가 있습니다. [14412861]
+- Windows 관리 센터를 업데이트할 때 확장을 다시 설치 해야 합니다.
+- 액세스할 수 없는 확장 피드를 추가 하는 경우에는 경고가 발생 하지 않습니다. [14412861]
 
 ## <a name="browser-specific-issues"></a>특정 브라우저 문제
 
@@ -83,38 +83,38 @@ ms.locfileid: "66811774"
 
 - Azure Active Directory를 ID 공급자로 사용하고 Windows Admin Center가 자체 서명되었거나 신뢰할 수 없는 인증서로 구성된 경우 Microsoft Edge에서 AAD 인증을 완료할 수 없습니다.  [15968377]
 
-- 서비스로 배포 하는 Windows Admin Center 있고 Microsoft Edge 브라우저를 사용 하는 경우 새 브라우저 창을 생성 한 후 실패할 수 있습니다 azure 게이트웨이 연결 합니다. 추가 하 여이 문제를 해결 하려고 https://login.microsoftonline.com , https://login.live.com ,으로 게이트웨이의 URL을 신뢰할 수 있는 사이트 및 클라이언트 쪽 브라우저에서 팝업 차단 설정에 대 한 허용 된 사이트 및 합니다. 에 대 한 자세한 지침은이 해결 합니다 [문제 해결 가이드](troubleshooting.md#azure-features-dont-work-properly-in-edge)합니다. [17990376]
+- Windows 관리 센터를 서비스로 배포 하 고 Microsoft Edge를 브라우저로 사용 하는 경우 새 브라우저 창을 생성 한 후 게이트웨이를 Azure에 연결 하지 못할 수 있습니다. 추가 하 여이 문제를 해결 하려고 https://login.microsoftonline.com , https://login.live.com ,으로 게이트웨이의 URL을 신뢰할 수 있는 사이트 및 클라이언트 쪽 브라우저에서 팝업 차단 설정에 대 한 허용 된 사이트 및 합니다. 이 문제를 해결 하는 방법에 대 한 자세한 내용은 [문제 해결 가이드를 참조](troubleshooting.md#azure-features-dont-work-properly-in-edge)하세요. [17990376]
 
-- Windows Admin Center 데스크톱 모드로 설치 된 경우는 favicon Microsoft Edge 브라우저 탭에 표시 되지 않습니다. [17665801]
+- 바탕 화면 모드로 Windows 관리 센터를 설치한 경우 Microsoft Edge의 브라우저 탭에 favicon 표시 되지 않습니다. [17665801]
 
 ### <a name="google-chrome"></a>Google Chrome
 
-- 이전 버전 70 (10 월, 2018 년 말에 출시) Chrome 했습니다를 [버그](https://bugs.chromium.org/p/chromium/issues/detail?id=423609) websocket 프로토콜 및 NTLM 인증에 대 한 합니다. 이 효과 다음과 같은 도구: 이벤트, PowerShell, 원격 데스크톱 연결 합니다.
+- 버전 70 (2018 년 10 월 출시) Chrome 이전에는 websocket 프로토콜 및 NTLM 인증에 대 한 [버그가](https://bugs.chromium.org/p/chromium/issues/detail?id=423609) 있었습니다. 이는 다음 도구에 영향을 주는 것입니다. 이벤트, PowerShell, 원격 데스크톱.
 
 - Chrome에서 특히 **작업 그룹**(비도메인) 환경에서 연결 환경을 추가하는 동안 여러 자격 증명 메시지를 표시할 수 있습니다.
 
-- Windows Admin Center 서비스로 배포 된 경우 게이트웨이 URL의 팝업 작동 하려면 Azure 통합 기능을 위한 사용 하도록 설정 해야 합니다. 이러한 서비스는 Azure 네트워크 어댑터, Azure 업데이트 관리 및 Azure Site Recovery를 포함 합니다.
+- Windows 관리 센터를 서비스로 배포한 경우 Azure 통합 기능이 작동 하려면 게이트웨이 URL에서 팝업을 사용 하도록 설정 해야 합니다. 이러한 서비스에는 Azure 네트워크 어댑터, Azure 업데이트 관리 및 Azure Site Recovery가 포함 됩니다.
 
 ### <a name="mozilla-firefox"></a>Mozilla Firefox
 
 Windows Admin Center는 Mozilla Firefox에 대해 테스트되지 않지만 대부분의 기능이 작동해야 합니다.
 
-- Windows 10 설치: Mozilla Firefox 저장소가 자체 인증서를 가져와야 하므로 ```Windows Admin Center Client``` Windows 10에서 Windows Admin Center 사용 하는 Firefox에는 인증서입니다.
+- Windows 10 설치: Mozilla Firefox에는 자체 인증서 저장소가 있으므로 windows 10에서 windows 관리 센터 ```Windows Admin Center Client``` 를 사용 하려면 firefox로 인증서를 가져와야 합니다.
 
 ## <a name="websocket-compatibility-when-using-a-proxy-service"></a>프록시 서비스를 사용 하는 경우 WebSocket 호환성
 
 Windows Admin Center에서 원격 데스크톱, PowerShell 및 이벤트 모듈은 프록시 서비스를 사용할 때 종종 지원되지 않는 WebSocket 프로토콜을 활용합니다. Azure AD 응용 프로그램 프록시 호환성에서 WebSocket 지원은 [미리 보기](https://blogs.technet.microsoft.com/applicationproxyblog/2018/03/28/limited-websocket-support-now-in-public-preview/)이며 호환성에 대한 피드백을 받고 있습니다.
 
-## <a name="support-for-windows-server-versions-before-2016-2012-r2-2012-2008-r2"></a>Windows Server 버전 (2012 R2, 2012, 2008 R2) 2016 이전에 대 한 지원
+## <a name="support-for-windows-server-versions-before-2016-2012-r2-2012-2008-r2"></a>2016 이전의 Windows Server 버전에 대 한 지원 (2012 R2, 2012, 2008 R2)
 
 > [!NOTE]
-> Windows Admin Center는 Windows Server 2012 R2, 2012 또는 2008 R2에에서 포함 되지 않은 PowerShell 기능이 필요 합니다. Windows Server를 Windows Admin Center 사용 하 여 이러한 관리 됩니다을 하는 경우 해당 서버에서 WMF 5.1 이상 버전을 설치 해야 합니다.
+> Windows 관리 센터에는 Windows Server 2012 R2, 2012 또는 2008 r 2에 포함 되지 않은 PowerShell 기능이 필요 합니다. Windows 관리 센터에서 Windows Server를 관리 하려면 해당 서버에 WMF 버전 5.1 이상을 설치 해야 합니다.
 
 WMF가 설치되어 있는지, 그리고 버전이 5.1 이상인지 확인하려면 PowerShell에 `$PSVersiontable`을 입력합니다.
 
 설치되어있지 않은 경우 [WMF 5.1을 다운로드하여 설치할](https://www.microsoft.com/en-us/download/details.aspx?id=54616)수 있습니다.
 
-## <a name="role-based-access-control-rbac"></a>역할 기반 Access Control (RBAC)
+## <a name="role-based-access-control-rbac"></a>RBAC (역할 기반 Access Control)
 
 - RBAC 배포가 Windows Defender Application Control(WDAC, 이전의 코드 무결성)을 사용하기 위해 구성된 컴퓨터에서 성공하지 않습니다. [16568455]
 
@@ -126,7 +126,7 @@ WMF가 설치되어 있는지, 그리고 버전이 5.1 이상인지 확인하려
 
 ### <a name="server-settings"></a>서버 설정
 
-- 설정을 수정 하면 저장 하지 않고 다른 위치로 이동 하려고 하는 경우 페이지에 저장 되지 않은 변경 사항에 대해 경고할 않지만 계속 이동 하려면 사용 합니다. 선택한 설정 탭 페이지의 내용에 맞지 않습니다 상태의 끝날 수도 있습니다. [19905798] [19905787]
+- 설정을 수정 하는 경우에는 저장 하지 않고 다른 곳으로 이동 하면 페이지에서 저장 되지 않은 변경 내용에 대해 경고를 표시 하지만 계속 해 서 탐색을 수행 합니다. 선택한 설정 탭이 페이지의 내용과 일치 하지 않는 상태로 종료 될 수 있습니다. [19905798] [19905787]
 
 ### <a name="certificates"></a>인증서
 
@@ -134,7 +134,7 @@ WMF가 설치되어 있는지, 그리고 버전이 5.1 이상인지 확인하려
 
 ### <a name="devices"></a>장치
 
-- 키보드를 사용 하 여 테이블을 탐색 하는 경우 선택 테이블 그룹의 맨 위에 이동할 수 있습니다. [16646059]
+- 키보드를 사용 하 여 테이블을 탐색할 때 선택 항목은 테이블 그룹의 맨 위로 이동할 수 있습니다. [16646059]
 
 ### <a name="events"></a>이벤트
 
@@ -142,11 +142,11 @@ WMF가 설치되어 있는지, 그리고 버전이 5.1 이상인지 확인하려
 
 - 큰 로그 파일을 내보낼 때 "패킷 크기"를 참조하는 오류 메시지가 표시될 수 있습니다. [16630279]
 
-  - 이 해결 하려면 게이트웨이 컴퓨터에서 관리자 권한 명령 프롬프트에서 다음 명령을 사용 합니다. ```winrm set winrm/config @{MaxEnvelopeSizekb="8192"}```
+  - 이 문제를 해결 하려면 게이트웨이 컴퓨터의 관리자 권한 명령 프롬프트에서 다음 명령을 사용 합니다.```winrm set winrm/config @{MaxEnvelopeSizekb="8192"}```
 
 ### <a name="files"></a>파일
 
-- 대용량 파일 업로드 또는 다운로드는 아직 지원하지 않습니다. (\~100mb) [12524234]
+- 대용량 파일 업로드 또는 다운로드는 아직 지원하지 않습니다. (\~100mb 제한) [12524234]
 
 ### <a name="powershell"></a>PowerShell
 
@@ -164,13 +164,13 @@ WMF가 설치되어 있는지, 그리고 버전이 5.1 이상인지 확인하려
 
 ### <a name="remote-desktop"></a>원격 데스크톱
 
-- 원격 데스크톱 도구는 Windows Server 2012를 관리 하는 경우 연결에 실패할 수 있습니다. [20258278]
+- Windows Server 2012을 관리 하는 경우 원격 데스크톱 도구가 연결 되지 않을 수 있습니다. [20258278]
 
-- 도메인에 가입 되지 않은 컴퓨터에 연결 하려면 원격 데스크톱 사용 하는 경우에 계정에을 입력 해야 합니다 ```MACHINENAME\USERNAME``` 형식입니다.
+- 원격 데스크톱을 사용 하 여 도메인에 가입 되지 않은 컴퓨터에 연결 하는 경우 ```MACHINENAME\USERNAME``` 형식으로 계정을 입력 해야 합니다.
 
-- 일부 구성은 그룹 정책 사용 하 여 Windows Admin Center 원격 데스크톱 클라이언트를 차단할 수 있습니다. 사용이 발생 한 경우 ```Allow users to connect remotely by using Remote Desktop Services``` 아래 ```Computer Configuration/Policies/Administrative Templates/Windows Components/Remote Desktop Services/Remote Desktop Session Host/Connections```
+- 일부 구성에서는 그룹 정책을 사용 하 여 Windows 관리 센터의 원격 데스크톱 클라이언트를 차단할 수 있습니다. 이 문제가 발생 하는 경우 ```Allow users to connect remotely by using Remote Desktop Services``` 다음을 사용 하도록 설정 합니다.```Computer Configuration/Policies/Administrative Templates/Windows Components/Remote Desktop Services/Remote Desktop Session Host/Connections```
 
-- 원격 데스크톱은 영향을 받지 [websocket 호환성.](#websocket-compatibility-when-using-a-proxy-service)
+- 원격 데스크톱은 [websocket 호환성](#websocket-compatibility-when-using-a-proxy-service) 의 영향을 받지 않습니다.
 
 - 원격 데스크톱 도구는 현재 로컬 데스크톱 및 원격 세션 간에 모든 텍스트, 이미지 또는 파일 복사/붙여넣기를 지원하지 않습니다.
 
@@ -182,7 +182,7 @@ WMF가 설치되어 있는지, 그리고 버전이 5.1 이상인지 확인하려
   - Windows 키
   - PrtScn
 
-- 원격 앱 – 원격 데스크톱 설정에서 원격 앱 도구를 사용 하도록 설정한 후 도구 나타나지 않을 수 있습니다 도구 목록에서 데스크톱 환경 포함 서버를 관리 하는 경우. [18906904]
+- 원격 앱 – 원격 데스크톱 설정에서 원격 앱 도구를 사용 하도록 설정 하면 데스크톱 환경에서 서버를 관리할 때 도구 목록에 도구가 표시 되지 않을 수 있습니다. [18906904]
 
 ### <a name="roles-and-features"></a>역할 및 기능
 
@@ -192,44 +192,44 @@ WMF가 설치되어 있는지, 그리고 버전이 5.1 이상인지 확인하려
 
 - 자동으로 다시 부팅을 선택하는 경우 상태가 100%로 업데이트되기 전에 다시 부팅됩니다. [13098852]
 
-### <a name="storage"></a>저장 공간
+### <a name="storage"></a>스토리지
 
-- 할당량 정보를 페치하는 오류 알림 없이 실패할 수 있습니다 (것이 오류는 브라우저의 콘솔에서) [18962274]
+- 오류 알림 없이 할당량 정보를 인출 하지 못할 수 있습니다 (브라우저 콘솔에 오류가 있음). [18962274]
 
-- 하위 수준: DVD/CD/플로피 드라이브에서 하위 수준 볼륨으로 표시 되지 않습니다.
+- 하위 수준: DVD/CD/플로피 드라이브는 하위 수준에서 볼륨으로 표시 되지 않습니다.
 
-- 하위 수준: 볼륨 및 디스크에서 일부 속성은 알 수 없거나 빈 세부 정보 패널에 나타나도록 하위 수준으로 사용할 수 없습니다.
+- 하위 수준: 볼륨 및 디스크의 일부 속성은 하위 수준에서 사용할 수 없으므로 세부 정보 패널에서 알 수 없거나 비어 있는 상태로 표시 됩니다.
 
-- 하위 수준: 새 볼륨을 만들면, ReFS 64k 할당 단위 크기는 Windows 2012 및 2012 R2 컴퓨터에만 지원 합니다. ReFS 볼륨이 하위 수준 대상에서 더 작은 할당 단위 크기로 만들어지면 파일 시스템 포맷이 실패합니다. 새 볼륨을 사용할 수 없습니다. 해결책은 볼륨을 삭제하고 64K 할당 단위 크기를 사용하는 것입니다.
+- 하위 수준: 새 볼륨을 만들 때 ReFS는 Windows 2012 및 2012 R2 컴퓨터에서 할당 단위 크기인 64K만 지원 합니다. ReFS 볼륨이 하위 수준 대상에서 더 작은 할당 단위 크기로 만들어지면 파일 시스템 포맷이 실패합니다. 새 볼륨을 사용할 수 없습니다. 해결책은 볼륨을 삭제하고 64K 할당 단위 크기를 사용하는 것입니다.
 
 ### <a name="updates"></a>업데이트
 
-- 설치 상태 업데이트를 설치한 후 브라우저를 새로 고쳐야 하 고 캐시 될 수 있습니다.
+- 업데이트를 설치한 후 설치 상태가 캐시 되어 브라우저 새로 고침이 필요할 수 있습니다.
 
-- 다음과 같은 오류가 발생할 수 있습니다. "키 집합 존재 하지 않습니다." Azure 업데이트 관리를 설정 하려고 할 때입니다. 이 경우 관리 되는 노드-다음 수정 단계를 보세요.
+- 오류가 발생할 수 있습니다. Azure 업데이트 관리를 설정 하려고 할 때 "키 집합이 존재 하지 않습니다." 이 경우 관리 되는 노드에서 다음 재구성 단계를 시도 하세요.
     1. ' 암호화 서비스 ' 서비스를 중지 합니다.
-    2. 표시할 변경 폴더 옵션 숨김 파일 (필요한 경우).
-    3. "%Allusersprofile%\Microsoft\Crypto\RSA\S-1-5-18" 폴더에 있고 모든 내용을 삭제 합니다.
+    2. 숨겨진 파일 (필요한 경우)을 표시 하도록 폴더 옵션을 변경 합니다.
+    3. "%Allusersprofile%\Microsoft\Crypto\RSA\S-1-5-18" 폴더를 가져오고 해당 내용을 모두 삭제 합니다.
     4. ' 암호화 서비스 ' 서비스를 다시 시작 합니다.
-    5. 반복 Windows Admin Center 사용 하 여 업데이트 관리 설정
+    5. Windows 관리 센터를 사용 하 여 업데이트 관리 설정 반복
 
 ### <a name="virtual-machines"></a>가상 머신
 
-- Windows Server 2012 호스트에 가상 컴퓨터를 관리 하는 경우 브라우저에서 VM 연결 도구는 VM에 연결 하지 못합니다. VM에 연결할.rdp 파일을 다운로드 해야 계속 작동 합니다. [20258278]
+- Windows Server 2012 호스트에서 가상 컴퓨터를 관리 하는 경우 브라우저 내 VM 연결 도구는 VM에 연결 되지 않습니다. VM에 연결 하기 위한 .rdp 파일 다운로드는 계속 작동 해야 합니다. [20258278]
 
-- Azure Site Recovery – ASR WAC, 외부에서 호스트에 설정 되어 있으면 표시 됩니다 WAC [18972276] 내에서 VM을 보호할 수 있습니다.
+- Azure Site Recovery – WAC 외부의 호스트에서 ASR를 설정 하는 경우 WAC [18972276] 내에서 VM을 보호할 수 없습니다.
 
 - 가상 SAN 관리자, VM 이동, VM 내보내기, VM 복제 등 Hyper-V 관리자에서 사용할 수 있는 고급 기능은 현재 지원되지 않습니다.
 
 ### <a name="virtual-switches"></a>가상 스위치
 
-- 포함 된 팀 (SET) 전환 합니다. Nic 팀에 추가할 때 동일한 서브넷에 있어야 합니다.
+- 포함 된 팀 전환 (SET): 팀에 Nic를 추가 하는 경우 동일한 서브넷에 있어야 합니다.
 
 ## <a name="computer-management-solution"></a>컴퓨터 관리 솔루션
 
 컴퓨터 관리 솔루션은 서버 관리자 솔루션의 도구 하위 집합을 포함하므로 동일한 알려진 문제가 적용되며 다음 특정 컴퓨터 관리 솔루션의 문제가 포함됩니다.
 
-- Microsoft 계정을 사용 하는 경우 ([MSA](https://account.microsoft.com/account/)) 지정 해야 하면 Windows 10 컴퓨터에 로그온 할 때 Azure Active Directory (AAD)를 사용 하는 경우 또는 "관리-으로" [16568455] 로컬 컴퓨터를 관리 하려면 자격 증명
+- Microsoft 계정 ([MSA](https://account.microsoft.com/account/))을 사용 하거나, AAD (Azure Active Directory)를 사용 하 여 Windows 10 컴퓨터에 로그온 하는 경우 "관리" 자격 증명을 지정 하 여 로컬 컴퓨터를 관리 해야 합니다. [16568455]
 
 - 로컬 호스트를 관리하려고 할 때 게이트웨이 프로세스의 권한을 상승하라는 메시지가 나타납니다. 이 다음에 표시되는 사용자 계정 컨트롤 팝업에서 **아니요**를 클릭하면 Windows Admin Center는 이 메시지를 다시 표시하지 않습니다. 이 경우 시스템 트레이에서 Windows Admin Center 아이콘을 마우스 오른쪽 단추로 클릭하고 종료를 선택하여 게이트웨이 프로세스를 종료하고 시작 메뉴에서 Windows Admin Center를 다시 실행합니다.
 

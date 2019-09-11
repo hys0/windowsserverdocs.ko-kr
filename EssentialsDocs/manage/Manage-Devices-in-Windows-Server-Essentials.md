@@ -12,12 +12,12 @@ ms.assetid: f5fe1088-ebe7-4799-a47d-075b0048dea1
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: a66f98b0896e706f520aa057b91cce2fe662d22d
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 48eb7009215e484fb00e704c7b328340240321d2
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66433326"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70865161"
 ---
 # <a name="manage-devices-in-windows-server-essentials"></a>Windows Server Essentials에서 장치 관리
 
@@ -25,19 +25,19 @@ ms.locfileid: "66433326"
  
  다음 섹션에서는 서버의 장치 관리 기능에 대해 설명하고 네트워크에서 장치를 설정 및 사용하는 방법을 설명합니다.  
   
--   [대시보드를 사용 하 여 장치를 관리](Manage-Devices-in-Windows-Server-Essentials.md#BKMK_1)  
+-   [대시보드를 사용 하 여 장치 관리](Manage-Devices-in-Windows-Server-Essentials.md#BKMK_1)  
   
--   [사용자 계정에 특정 네트워크 컴퓨터 로그온 권한 할당](Manage-Devices-in-Windows-Server-Essentials.md#BKMK_2)  
+-   [사용자 계정에 특정 네트워크 컴퓨터에 로그온 할 수 있는 권한 할당](Manage-Devices-in-Windows-Server-Essentials.md#BKMK_2)  
   
 -   [서버에서 컴퓨터 제거](Manage-Devices-in-Windows-Server-Essentials.md#BKMK_3)  
   
--   [폴더 리디렉션 및 보안에 대 한 그룹 정책 설정을 구성 합니다.](Manage-Devices-in-Windows-Server-Essentials.md#BKMK_5)  
+-   [폴더 리디렉션 및 보안에 대 한 그룹 정책 설정 구성](Manage-Devices-in-Windows-Server-Essentials.md#BKMK_5)  
   
 -   [원격 데스크톱 세션을 사용 하 여 네트워크 컴퓨터에 연결](Manage-Devices-in-Windows-Server-Essentials.md#BKMK_7)  
   
 -   [컴퓨터 속성 보기](Manage-Devices-in-Windows-Server-Essentials.md#BKMK_8)  
   
-##  <a name="BKMK_1"></a> 대시보드를 사용 하 여 장치를 관리  
+##  <a name="BKMK_1"></a>대시보드를 사용 하 여 장치 관리  
  Windows Server Essentials에서는 Windows Server Essentials 대시보드를 사용하여 일반적인 관리 작업을 수행할 수 있습니다. 대시보드의 **장치** 페이지에서는 다음을 제공합니다.  
   
 -   다음을 표시하는 네트워크 컴퓨터 목록:  
@@ -89,7 +89,7 @@ ms.locfileid: "66433326"
 |서버에 컴퓨터를 연결하는 방법|컴퓨터를 네트워크에 연결하려고 수행하는 단계에 대해 설명하는 도움말 항목을 엽니다.|  
 |그룹 정책 구현|도메인에 가입된 Windows 8 및 Windows 7 컴퓨터에 정책 설정을 적용합니다.|  
   
-##  <a name="BKMK_2"></a> 사용자 계정에 특정 네트워크 컴퓨터 로그온 권한 할당  
+##  <a name="BKMK_2"></a>사용자 계정에 특정 네트워크 컴퓨터에 로그온 할 수 있는 권한 할당  
  사용자가 원격 위치에서 Windows Server Essentials 네트워크에 액세스할 때 특정 네트워크 컴퓨터에만 로그온할 수 있도록 사용자 계정에 사용 권한을 할당할 수 있습니다.  
   
 #### <a name="to-change-the-computer-access-for-a-user-account"></a>사용자 계정에 대한 컴퓨터 액세스 권한을 변경하려면  
@@ -100,15 +100,15 @@ ms.locfileid: "66433326"
   
 3.  사용자 계정 목록에서 변경하려는 사용자 계정을 선택합니다.  
   
-4.  에 **< 사용자 계정\> 태스크** 창 클릭 **계정 속성 보기**합니다. 사용자 계정에 대한 **속성** 페이지가 나타납니다.  
+4.  **< 사용자 계정\> 작업** 창에서 **계정 속성 보기**를 클릭 합니다. 사용자 계정에 대한 **속성** 페이지가 나타납니다.  
   
 5.  **컴퓨터 액세스** 탭에서 사용자가 원격으로 액세스할 수 있는 컴퓨터를 선택하고 **확인**을 클릭합니다.  
   
-##  <a name="BKMK_3"></a> 서버에서 컴퓨터 제거  
+##  <a name="BKMK_3"></a>서버에서 컴퓨터 제거  
  대시보드를 사용하여 Windows Server Essentials를 실행 중인 서버에서 컴퓨터를 제거하면 컴퓨터가 더 이상 서버에서 관리되지 않습니다. 따라서 서버에서는 컴퓨터 백업 만들기를 중지하거나 컴퓨터가 네트워크에서 제거되고 난 후의 상태를 모니터링합니다.  
   
 > [!NOTE]
->  서버에서 컴퓨터를 제거해도 네트워크에서 컴퓨터의 연결이 끊어지지 않습니다. 컴퓨터에서는 서버에 연결되기 전과 같은 방식으로 네트워크의 리소스에 계속 액세스할 수 있습니다. 컴퓨터에서 서버 리소스에 액세스하지 못하게 하고 서버에서 컴퓨터 연결을 끊으려면 도메인에서 컴퓨터를 제거해야 합니다. 또한 서버에서 컴퓨터를 제거해도 제거 중인 컴퓨터에서 Connector 소프트웨어 또는 실행 패드가 자동으로 제거되지 않습니다. 컴퓨터에서 Connector 소프트웨어를 수동으로 제거해야 합니다. 자세한 내용은 섹션을 참조 하세요에서 커넥터 소프트웨어를 제거 [연결성](../use/Get-Connected-in-Windows-Server-Essentials.md)합니다.  
+>  서버에서 컴퓨터를 제거해도 네트워크에서 컴퓨터의 연결이 끊어지지 않습니다. 컴퓨터에서는 서버에 연결되기 전과 같은 방식으로 네트워크의 리소스에 계속 액세스할 수 있습니다. 컴퓨터에서 서버 리소스에 액세스하지 못하게 하고 서버에서 컴퓨터 연결을 끊으려면 도메인에서 컴퓨터를 제거해야 합니다. 또한 서버에서 컴퓨터를 제거해도 제거 중인 컴퓨터에서 Connector 소프트웨어 또는 실행 패드가 자동으로 제거되지 않습니다. 컴퓨터에서 Connector 소프트웨어를 수동으로 제거해야 합니다. 자세한 내용은 [Get Connected](../use/Get-Connected-in-Windows-Server-Essentials.md)에서 Connector 소프트웨어 제거 섹션을 참조 하세요.  
   
 #### <a name="to-remove-a-computer-from-the-network-by-using-the-dashboard"></a>대시보드를 사용하여 네트워크에서 컴퓨터를 제거하려면  
   
@@ -118,7 +118,7 @@ ms.locfileid: "66433326"
   
 3.  컴퓨터 목록에서, 네트워크에서 제거할 컴퓨터를 마우스 오른쪽 단추로 클릭하고 **컴퓨터 제거**를 클릭합니다.  
   
-##  <a name="BKMK_5"></a> 폴더 리디렉션 및 보안에 대 한 그룹 정책 설정을 구성 합니다.  
+##  <a name="BKMK_5"></a>폴더 리디렉션 및 보안에 대 한 그룹 정책 설정 구성  
  Windows Server Essentials 대시보드를 사용하여 그룹 정책을 구성하고 Windows Server Essentials 네트워크의 컴퓨터에 배포할 수 있습니다. Windows Server Essentials의 그룹 정책에는 Windows 업데이트, Windows Defender 및 네트워크 방화벽에 영향을 미치는 폴더 리디렉션 및 보안에 대한 설정이 포함됩니다.  
   
 #### <a name="to-configure-group-policy-in-windows-server-essentials"></a>Windows Server Essentials에서 그룹 정책을 구성하려면  
@@ -127,9 +127,9 @@ ms.locfileid: "66433326"
   
 2.  탐색 모음에서 **장치**를 클릭합니다.  
   
-3.  Windows Server essentials의 경우: 전역 **사용자 작업** 창에서 **그룹 정책 구현**을 참조하세요.  
+3.  Windows Server Essentials의 경우: 전역 **사용자 작업** 창에서 **그룹 정책 구현**을 참조하세요.  
   
-     Windows Server essentials의 경우: 전역 **장치 작업** 창에서 **그룹 정책 구현**을 참조하세요.  
+     Windows Server Essentials의 경우: 전역 **장치 작업** 창에서 **그룹 정책 구현**을 참조하세요.  
   
 4.  그룹 정책 구현 마법사가 열립니다.  
   
@@ -139,8 +139,8 @@ ms.locfileid: "66433326"
   
 7.  **마침** 을 클릭하여 그룹 정책 설정을 구현합니다.  
   
-##  <a name="BKMK_7"></a> 원격 데스크톱 세션을 사용 하 여 네트워크 컴퓨터에 연결  
- 조직 s 원격 웹 액세스 웹 사이트에 로그온 하 고 사무실을 비울 때 Windows Server Essentials 네트워크 컴퓨터에 원격으로 액세스를 하려면 웹 브라우저를 사용 합니다 **컴퓨터** 탭에서 이름을 클릭 합니다 컴퓨터입니다.  
+##  <a name="BKMK_7"></a>원격 데스크톱 세션을 사용 하 여 네트워크 컴퓨터에 연결  
+ 사무실을 비울 때 Windows Server Essentials 네트워크 컴퓨터에 원격으로 액세스 하려면 웹 브라우저를 사용 하 여 조직의 원격 웹 액세스 웹 사이트에 로그온 하 고 컴퓨터 탭에서 컴퓨터 이름을 클릭 **합니다.**  
   
  **상태** 열에는 네트워크의 컴퓨터에 연결할 수 있는지가 표시되고 다음 값이 포함될 수 있습니다.  
   
@@ -156,11 +156,11 @@ ms.locfileid: "66433326"
   
      컴퓨터의 운영 체제에서 원격 데스크톱을 지원하지 않습니다. 변경 사항이 있으면 서버에서 이 상태가 업데이트되는 데 최대 6시간이 걸릴 수 있습니다.  
   
--   **연결 되지 않음**  
+-   **연결 사용 안 함**  
   
      컴퓨터 연결이 방화벽으로 차단되거나 원격 데스크톱이 컴퓨터 또는 그룹 정책에서 사용 안 함으로 설정되었습니다. 변경 사항이 있으면 서버에서 이 상태가 업데이트되는 데 최대 6시간이 걸릴 수 있습니다.  
   
-##  <a name="BKMK_8"></a> 컴퓨터 속성 보기  
+##  <a name="BKMK_8"></a>컴퓨터 속성 보기  
  Windows Server Essentials 대시보드의 **장치** 섹션에는 네트워크 컴퓨터 목록이 표시됩니다. 목록에서는 각 컴퓨터에 대한 추가 정보도 제공합니다.  
   
 #### <a name="to-view-a-list-of-computers"></a>컴퓨터 목록을 보려면  
@@ -175,7 +175,7 @@ ms.locfileid: "66433326"
   
 1.  컴퓨터 목록에서 속성을 보거나 변경할 계정을 선택합니다.  
   
-2.  에 **< 컴퓨터 이름\> 태스크** 창 클릭 **컴퓨터 속성 보기**. 컴퓨터에 대한 **속성** 페이지가 나타납니다.  
+2.  **Computername\> < 작업** 창에서 **컴퓨터 속성 보기**를 클릭 합니다. 컴퓨터에 대한 **속성** 페이지가 나타납니다.  
   
 3.  탭을 클릭하여 해당 컴퓨터에 대한 속성을 표시합니다.  
   

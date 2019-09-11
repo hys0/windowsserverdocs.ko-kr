@@ -13,12 +13,12 @@ ms.assetid: 044f2fd5-5b87-42bb-ba0d-c06516ac48c8
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.openlocfilehash: cb91914608110d26ff2db8eff1cd28d26d04669b
-ms.sourcegitcommit: 9f955be34c641b58ae8b3000768caa46ad535d43
+ms.openlocfilehash: 97d9e671823dade9e488922561c4c6a925719830
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2019
-ms.locfileid: "68590344"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70871665"
 ---
 # <a name="limit-web-access"></a>웹 액세스 제한
 개별 데스크톱에서 사용자 활동을 모니터링 하는 것 외에도, 관리자는 사용자를 제한할 수 있습니다 지정 된 웹 사이트에 대 한 사용자 액세스 허용 가능한 웹 사이트 및 사용자 액세스를 차단 하려는 웹 사이트를 지정 하 여.  
@@ -46,7 +46,7 @@ ms.locfileid: "68590344"
   
 2. 허용된 사이트를 추가하려면 **Allow only these sites(이러한 사이트만 허용)** 를 클릭하고 허용되는 웹 주소를 입력한 다음 **추가**를 클릭합니다.  
   
-   사용자가 방문하지 못하게 할 사이트를 추가하려면 **Disallow only these sites(이러한 사이트만 허용 안 함)** 를 클릭하고 사용자가 방문하지 못하게 할 웹 주소를 입력한 다음 **추가**를 클릭합니다.  
+   사용자가 방문 하지 않으려는 사이트를 추가 하려면 **이러한 사이트만 허용**안 함을 클릭 하 고 사용자가 방문 하지 않을 웹 주소를 입력 한 다음 **추가**를 클릭 합니다.  
   
    > [!NOTE]
    > 예를 들어 "Contoso.com"을 입력 허용 하거나 (예를 들어 www.newpage.contoso.com) www.contoso.com 기준으로 하는 사이트를 차단 합니다. "Contoso"를 입력 합니다 허용 하거나 모든 Contoso 관련 사이트 (contoso.com, contoso.uk, 등 포함)를 제한 합니다.  

@@ -13,19 +13,19 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: febd5c4a5d5fdcf5ad2a27eec13bb7439ea0ee4f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a11f2f2bbafe4d21e1cd5d56d66a97e08cf35b11
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59875494"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70871472"
 ---
 # <a name="view-options-for-session-thumbnails-in-multipoint-dashboard"></a>MultiPoint 대시보드에서 세션 미리 보기에 대한 옵션 보기
 개별 데스크톱에서의 사용자 작업을 모니터링하는 손쉬운 방법은 MultiPoint 서비스 시스템에서 활성 데스크톱 각각의 미리 보기 이미지를 확인하는 것입니다. 기본적으로, 데스크톱의 이미지에 표시 됩니다 MultiPoint 대시보드에 **홈** 탭 합니다.  
   
 다중 포인트 대시보드를 사용 하 여, 있습니다 다음을 수행할 수 있습니다.  
   
-- 대시보드에서 해당 보기를 확대하여 사용자의 데스크톱을 더욱 크게 볼 수 있습니다.  
+- 대시보드에서 보기를 확대 하 여 사용자의 데스크톱을 더욱 긴밀 하 게 확인 합니다.  
 - 대시보드에 표시되는 미리 보기 이미지의 크기를 변경할 수 있습니다. 작은, 보통 또는 큰 크기의 세 가지 크기로 볼 수 있습니다. 보통이 기본 설정입니다.  
 - MultiPoint 서비스 시스템의 모든 데스크톱을 보거나 필터링된 보기를 선택하여 활성 데스크톱을 표시할 수 있습니다.  
   
@@ -57,4 +57,4 @@ ms.locfileid: "59875494"
 > 하나 이상의 미리 보기를 마우스 오른쪽 단추로 클릭하여 활성 또는 비화성 세션에서 수행할 수 있는 **선택한 사용자 로그오프**와 같은 추가 작업을 사용할 수 있습니다. 자세한 내용은 [사용자 세션 로그 오프](Log-Off-User-Sessions.md)를 참조하세요.
 
 ## <a name="see-also"></a>관련 항목  
-[다중 포인트 대시보드를 사용 하 여 사용자 데스크톱 관리](Manage-User-Desktops-Using-MultiPoint-Dashboard.md)
+[MultiPoint 대시보드를 사용하여 사용자 데스크톱 관리](Manage-User-Desktops-Using-MultiPoint-Dashboard.md)

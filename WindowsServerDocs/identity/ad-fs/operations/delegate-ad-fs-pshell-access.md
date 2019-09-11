@@ -9,12 +9,12 @@ ms.date: 01/31/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 86bbb562e223fdf61dac3ce5646d97a57b2eba4c
-ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
+ms.openlocfilehash: f4b8f09e5c75f3b9086847a47d33bd76775f3cd1
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69546310"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70865503"
 ---
 # <a name="delegate-ad-fs-powershell-commandlet-access-to-non-admin-users"></a>관리자가 아닌 사용자에 게 AD FS Powershell 기능을 위임 합니다. 
 기본적으로 PowerShell을 통한 AD FS 관리는 AD FS 관리자만 수행할 수 있습니다. 많은 대기업의 경우 지원 센터 담당자와 같은 다른 가상 사용자를 처리할 때 실행 가능한 운영 모델이 아닐 수 있습니다.  

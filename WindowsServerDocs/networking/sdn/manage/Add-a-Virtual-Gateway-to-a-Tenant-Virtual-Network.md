@@ -1,6 +1,6 @@
 ---
 title: 테넌트 가상 네트워크에 가상 게이트웨이 추가
-description: 테 넌 트의 가상 네트워크에 대 한 사이트 간 연결을 제공 하려면 Windows PowerShell cmdlet 및 스크립트를 사용 하는 방법에 알아봅니다.
+description: Windows PowerShell cmdlet 및 스크립트를 사용 하 여 테 넌 트의 가상 네트워크에 대 한 사이트 간 연결을 제공 하는 방법을 알아봅니다.
 manager: dougkim
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -13,37 +13,37 @@ ms.assetid: b9552054-4eb9-48db-a6ce-f36ae55addcd
 ms.author: pashort
 author: shortpatti
 ms.date: 08/23/2018
-ms.openlocfilehash: 768a25c8c452a8c4bc85b38736b4241fa2570b32
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 39199a96b1f3cd5a62e60f676e8ab47ad4acb4a8
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66446367"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70869953"
 ---
 # <a name="add-a-virtual-gateway-to-a-tenant-virtual-network"></a>테넌트 가상 네트워크에 가상 게이트웨이 추가 
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016 
+>적용 대상: Windows Server(반기 채널), Windows Server 2016 
 
-테 넌 트의 가상 네트워크에 대 한 사이트 간 연결을 제공 하려면 Windows PowerShell cmdlet 및 스크립트를 사용 하는 방법에 알아봅니다. 이 항목에서는 테 넌 트 가상 게이트웨이 네트워크 컨트롤러를 사용 하 여 게이트웨이 풀의 구성원 인 RAS 게이트웨이 인스턴스를 추가 합니다. RAS 게이트웨이 각 테 넌 트에 사용 된 대역폭에 따라 최대 1 백 테 넌 트를 지원 합니다. 네트워크 컨트롤러는 자동으로 테 넌 트에 대 한 새 가상 게이트웨이 배포할 때 사용 하는 최상의 RAS 게이트웨이 결정 합니다.  
+Windows PowerShell cmdlet 및 스크립트를 사용 하 여 테 넌 트의 가상 네트워크에 대 한 사이트 간 연결을 제공 하는 방법을 알아봅니다. 이 항목에서는 네트워크 컨트롤러를 사용 하 여 게이트웨이 풀의 구성원 인 RAS 게이트웨이의 인스턴스에 테 넌 트 가상 게이트웨이를 추가 합니다. RAS 게이트웨이는 각 테 넌 트에서 사용 하는 대역폭에 따라 최대 100 개의 테 넌 트를 지원 합니다. 네트워크 컨트롤러는 테 넌 트에 대해 새 가상 게이트웨이를 배포할 때 사용할 최적의 RAS 게이트웨이를 자동으로 결정 합니다.  
 
-각 가상 게이트웨이 특정 테 넌 트에 해당 하며 하나 이상의 네트워크 연결 (사이트 간 VPN 터널) 하 고, 필요에 따라 프로토콜 BGP (경계 게이트웨이) 연결 구성 됩니다. 사이트 간 연결을 제공 하는 경우 고객에 게 인터넷, 테 넌 트 엔터프라이즈 네트워크 및 서비스 공급자 네트워크를 사용 하는 등 외부 네트워크에 해당 테 넌 트 가상 네트워크를 연결할 수 있습니다.
+각 가상 게이트웨이는 특정 테 넌 트에 해당 하 고 하나 이상의 네트워크 연결 (사이트 간 VPN 터널) 및 필요에 따라 BGP (Border Gateway Protocol) 연결로 구성 됩니다. 사이트 간 연결을 제공 하는 경우 고객은 테 넌 트 엔터프라이즈 네트워크, 서비스 공급자 네트워크, 인터넷 등의 외부 네트워크에 테 넌 트 가상 네트워크를 연결할 수 있습니다.
 
-**테 넌 트 가상 게이트웨이 배포 하는 경우 다음 구성 옵션을 수 있습니다.**  
+**테 넌 트 가상 게이트웨이를 배포 하는 경우 다음과 같은 구성 옵션을 사용할 수 있습니다.**  
 
 
 |                                                        네트워크 연결 옵션                                                         |                                              BGP 구성 옵션                                               |
 |-------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
-| <ul><li>IPSec 사이트 간 가상 사설망 (VPN)</li><li>Generic Routing Encapsulation GRE)</li><li>계층 3 전달</li></ul> | <ul><li>BGP 라우터 구성</li><li>BGP 피어 구성</li><li>BGP 라우팅 정책 구성</li></ul> |
+| <ul><li>IPSec 사이트 간 VPN (가상 사설망)</li><li>GRE (Generic Routing 캡슐화)</li><li>계층 3 전달</li></ul> | <ul><li>BGP 라우터 구성</li><li>BGP 피어 구성</li><li>BGP 라우팅 정책 구성</li></ul> |
 
 ---
 
-Windows PowerShell 예제 스크립트 및 명령에서이 항목에서는 이러한 각 옵션을 사용 하 여 RAS 게이트웨이에서 테 넌 트 가상 게이트웨이 배포 하는 방법을 보여 줍니다.  
+이 항목의 Windows PowerShell 예제 스크립트 및 명령은 이러한 각 옵션을 사용 하 여 RAS 게이트웨이에서 테 넌 트 가상 게이트웨이를 배포 하는 방법을 보여 줍니다.  
 
 
 >[!IMPORTANT]  
->예제에서는 Windows PowerShell 명령 및 제공 하는 스크립트를 실행 하기 전에 값 배포에 대 한 적절 한 되도록 모든 변수 값 변경 해야 합니다.  
+>제공 된 예제 Windows PowerShell 명령 및 스크립트를 실행 하기 전에 모든 변수 값을 변경 하 여 배포에 적절 한 값을 지정 해야 합니다.  
 
-1.  네트워크 컨트롤러에 게이트웨이 풀 개체가 있는지 확인 합니다. 
+1.  게이트웨이 풀 개체가 네트워크 컨트롤러에 있는지 확인 하십시오. 
 
     ```PowerShell
     $uri = "https://ncrest.contoso.com"   
@@ -56,7 +56,7 @@ Windows PowerShell 예제 스크립트 및 명령에서이 항목에서는 이�
 
     ```  
 
-2.  네트워크 컨트롤러에서 사용 하는 테 넌 트의 가상 네트워크에서 패킷을 라우팅하려면 서브넷이 있는지 확인 합니다. 테 넌 트 게이트웨이 및 가상 네트워크 간의 라우팅에 사용 하는 가상 서브넷을 검색할 수도 있습니다.  
+2.  테 넌 트의 가상 네트워크에서 패킷을 라우팅하는 데 사용 된 서브넷이 네트워크 컨트롤러에 있는지 확인 하세요. 또한 테 넌 트 게이트웨이와 가상 네트워크 간의 라우팅에 사용 되는 가상 서브넷을 검색 합니다.  
 
     ```PowerShell 
     $uri = "https://ncrest.contoso.com"   
@@ -75,7 +75,7 @@ Windows PowerShell 예제 스크립트 및 명령에서이 항목에서는 이�
 
     ```  
 
-3.  테 넌 트 가상 게이트웨이에 대 한 새 개체를 만들고 게이트웨이 풀 참조를 업데이트 합니다.  게이트웨이 및 가상 네트워크 간의 라우팅에 사용 하는 가상 서브넷을 지정할 수도 있습니다.  가상 서브넷을 지정한 후 가상 게이트웨이 개체 속성의 나머지 부분을 업데이트 하 고 테 넌 트에 대 한 새로운 가상 게이트웨이 추가 합니다.
+3.  테 넌 트 가상 게이트웨이에 대 한 새 개체를 만든 다음 게이트웨이 풀 참조를 업데이트 합니다.  또한 게이트웨이와 가상 네트워크 간의 라우팅에 사용 되는 가상 서브넷을 지정 합니다.  가상 서브넷을 지정한 후 나머지 가상 게이트웨이 개체 속성을 업데이트 하 고 테 넌 트에 대 한 새 가상 게이트웨이를 추가 합니다.
 
     ```PowerShell  
     # Create a new object for Tenant Virtual Gateway  
@@ -99,10 +99,10 @@ Windows PowerShell 예제 스크립트 및 명령에서이 항목에서는 이�
 
     ```  
 
-4. GRE, IPsec을 사용 하 여 사이트 간 VPN 연결을 만들거나 계층 3 (L3) 전달 합니다.  
+4. IPsec, GRE 또는 L3 (계층 3) 전달을 사용 하 여 사이트 간 VPN 연결을 만듭니다.  
 
    >[!TIP]
-   >필요에 따라 위의 모든 단계를 결합 하 고 모든 세 가지 연결 옵션을 사용 하 여 테 넌 트 가상 게이트웨이 구성할 수 있습니다.  자세한 내용은 참조 하세요. [모든 세 가지 연결 형식 (IPsec, GRE L3)를 사용 하 여 게이트웨이 구성 및 BGP](#optional-step-configure-a-gateway-with-all-three-connection-types-ipsec-gre-l3-and-bgp)합니다.
+   >필요에 따라 모든 이전 단계를 결합 하 고 세 개의 연결 옵션을 모두 사용 하 여 테 넌 트 가상 게이트웨이를 구성할 수 있습니다.  자세한 내용은 [세 가지 연결 유형 (IPsec, GRE, L3) 및 BGP를 모두 사용 하 여 게이트웨이 구성](#optional-step-configure-a-gateway-with-all-three-connection-types-ipsec-gre-l3-and-bgp)을 참조 하세요.
 
    **IPsec VPN 사이트 간 네트워크 연결**
 
@@ -190,9 +190,9 @@ Windows PowerShell 예제 스크립트 및 명령에서이 항목에서는 이�
    ```  
 
    **L3 전달 네트워크 연결**<p>
-   L3는에 대 한 네트워크 연결이 제대로 작동 하기를 전달, 해당 논리 네트워크를 구성 해야 합니다.   
+   L3 전달 네트워크 연결이 제대로 작동 하려면 해당 논리 네트워크를 구성 해야 합니다.   
 
-   1. 논리 네트워크를 L3 전달 네트워크 연결을 구성 합니다.  <br>
+   1. L3 전달 네트워크 연결에 대 한 논리 네트워크를 구성 합니다.  <br>
 
       ```PowerShell  
       # Create a new object for the Logical Network to be used for L3 Forwarding  
@@ -216,7 +216,7 @@ Windows PowerShell 예제 스크립트 및 명령에서이 항목에서는 이�
 
       ```  
 
-   2. 네트워크 연결 JSON 개체를 만들고 네트워크 컨트롤러에 추가 합니다.  
+   2. 네트워크 연결 JSON 개체를 만들어 네트워크 컨트롤러에 추가 합니다.  
 
       ```PowerShell 
       # Create a new object for the Tenant Network Connection  
@@ -254,9 +254,9 @@ Windows PowerShell 예제 스크립트 및 명령에서이 항목에서는 이�
 
       ```  
 
-5. 게이트웨이 BGP 라우터로 구성 하 고 네트워크 컨트롤러에 추가 합니다. 
+5. 게이트웨이를 BGP 라우터로 구성 하 고 네트워크 컨트롤러에 추가 합니다. 
 
-   1. 테 넌 트 BGP 라우터를 추가 합니다.  
+   1. 테 넌 트에 대해 BGP 라우터를 추가 합니다.  
 
       ```PowerShell  
       # Create a new object for the Tenant BGP Router  
@@ -272,7 +272,7 @@ Windows PowerShell 예제 스크립트 및 명령에서이 항목에서는 이�
 
       ```  
 
-   2. 이 테 넌 트를 위에서 추가한 사이트 간 VPN 네트워크 연결에 해당 하는 BGP 피어를 추가 합니다.  
+   2. 위에 추가 된 사이트 간 VPN 네트워크 연결에 해당 하는이 테 넌 트에 대해 BGP 피어를 추가 합니다.  
 
       ```PowerShell
       # Create a new object for Tenant BGP Peer  
@@ -288,8 +288,8 @@ Windows PowerShell 예제 스크립트 및 명령에서이 항목에서는 이�
 
       ```  
 
-## <a name="optional-step-configure-a-gateway-with-all-three-connection-types-ipsec-gre-l3-and-bgp"></a>(선택적 단계) 모든 세 가지 연결 형식 (IPsec, GRE L3)를 사용 하 여 게이트웨이 구성 및 BGP  
-필요에 따라 위의 모든 단계를 결합 하 고 모든 세 가지 연결 옵션을 사용 하 여 테 넌 트 가상 게이트웨이 구성할 수 있습니다.   
+## <a name="optional-step-configure-a-gateway-with-all-three-connection-types-ipsec-gre-l3-and-bgp"></a>(선택적 단계) 세 가지 연결 유형 (IPsec, GRE, L3) 및 BGP를 모두 사용 하 여 게이트웨이 구성  
+필요에 따라 모든 이전 단계를 결합 하 고 세 가지 연결 옵션을 모두 사용 하 여 테 넌 트 가상 게이트웨이를 구성할 수 있습니다.   
 
 ```PowerShell  
 # Create a new Virtual Gateway Properties type object  
@@ -458,42 +458,42 @@ New-NetworkControllerVirtualGateway -ConnectionUri $uri  -ResourceId "Contoso_Vi
 
 ```  
 
-## <a name="modify-a-gateway-for-a-virtual-network"></a>가상 네트워크 게이트웨이 수정 합니다.  
+## <a name="modify-a-gateway-for-a-virtual-network"></a>가상 네트워크에 대 한 게이트웨이 수정  
 
 
-**구성 요소에 대 한 구성을 검색 하 고 변수에 저장**
+**구성 요소에 대 한 구성을 검색 하 고 변수에 저장 합니다.**
 
 ```PowerShell  
 $nwConnection = Get-NetworkControllerVirtualGatewayNetworkConnection -ConnectionUri $uri -VirtualGatewayId "Contoso_VirtualGW" -ResourceId "Contoso_IPSecGW"  
 ```  
 
-**필수 속성을 연결 하 고 업데이트 값으로 설정 하려면 변수 구조 탐색**
+**변수 구조를 탐색 하 여 필수 속성에 도달 하 고 업데이트 값으로 설정 합니다.**
 
 ```PowerShell  
 $nwConnection.properties.IpSecConfiguration.SharedSecret = "C0mplexP@ssW0rd"  
 ```  
 
-**네트워크 컨트롤러에서 이전 구성이 대체 하도록 수정 된 구성을 추가 합니다.**
+**네트워크 컨트롤러에서 이전 구성을 대체 하는 수정 된 구성을 추가 합니다.**
 
 ```PowerShell  
 New-NetworkControllerVirtualGatewayNetworkConnection -ConnectionUri $uri -VirtualGatewayId "Contoso_VirtualGW" -ResourceId $nwConnection.ResourceId -Properties $nwConnection.Properties -Force  
 ```  
 
 
-## <a name="remove-a-gateway-from-a-virtual-network"></a>가상 네트워크에서 게이트웨이 제거 합니다. 
-개별 게이트웨이 기능 또는 전체 게이트웨이 제거 하려면 다음 Windows PowerShell 명령을 사용할 수 있습니다.  
+## <a name="remove-a-gateway-from-a-virtual-network"></a>가상 네트워크에서 게이트웨이 제거 
+다음 Windows PowerShell 명령을 사용 하 여 개별 게이트웨이 기능 또는 전체 게이트웨이를 제거할 수 있습니다.  
 
-**네트워크 연결을 제거 합니다.**  
+**네트워크 연결 제거**  
 ```PowerShell  
 Remove-NetworkControllerVirtualGatewayNetworkConnection -ConnectionUri $uri -VirtualGatewayId "Contoso_VirtualGW" -ResourceId "Contoso_IPSecGW" -Force  
 ```  
 
-**BGP 피어를 제거 합니다.** 
+**BGP 피어 제거** 
 ```PowerShell  
 Remove-NetworkControllerVirtualGatewayBgpPeer -ConnectionUri $uri -VirtualGatewayId "Contoso_VirtualGW" -BgpRouterName "Contoso_BgpRouter1" -ResourceId "Contoso_IPSec_Peer" -Force  
 ```  
 
-**BGP 라우터를 제거 합니다.**
+**BGP 라우터 제거**
 ```PowerShell  
 Remove-NetworkControllerVirtualGatewayBgpRouter -ConnectionUri $uri -VirtualGatewayId "Contoso_VirtualGW" -ResourceId "Contoso_BgpRouter1" -Force  
 ```

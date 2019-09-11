@@ -9,12 +9,12 @@ ms.date: 01/18/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 058433f98d986c0daa720dd19f283135763cfe30
-ms.sourcegitcommit: c307886e96622e9595700c94128103b84f5722ce
+ms.openlocfilehash: 1616a1fe2e28534cc30c8955b0309c233555fa14
+ms.sourcegitcommit: ee8e0b217be6f6b2532ee7265fb4be00c106e124
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70108762"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70878147"
 ---
 # <a name="configuring-ad-fs-for-user-certificate-authentication"></a>사용자 인증서 인증을 위한 AD FS 구성
 
@@ -54,7 +54,7 @@ Chrome에 대해이를 구성 하는 방법에 대 한 자세한 내용은이 [�
 이 문서에서는 AD FS 사용자에 대 한 인증서 인증을 구성할 때 발생 하는 일반적인 문제를 해결 하는 데 중점을 설명 합니다. 
 
 ### <a name="check-if-certificate-trusted-issuers-is-configured-properly-in-all-the-ad-fswap-servers"></a>모든 AD FS/WAP 서버에서 인증서 신뢰 발급자가 올바르게 구성 되어 있는지 확인 합니다.
-*일반적인 증상: HTTP 204 "의 https://certuath.adfs.contoso.com 콘텐츠 없음"*
+*일반적인 증상: HTTP 204 "https\:의 콘텐츠 없음//certuath.adfs.contoso.com"*
 
 AD FS는 기본 windows 운영 체제를 사용 하 여 사용자 인증서의 소유를 증명 하 고 인증서 신뢰 체인 유효성 검사를 수행 하 여 신뢰할 수 있는 발급자와 일치 하는지 확인 합니다. 신뢰할 수 있는 발급자와 일치 시키려면 모든 루트 및 중간 기관이 로컬 컴퓨터 인증 기관 저장소에서 신뢰할 수 있는 발급자로 구성 되었는지 확인 해야 합니다. 자동으로 유효성을 검사 하려면 [AD FS 진단 분석기 도구](https://adfshelp.microsoft.com/DiagnosticsAnalyzer/Analyze)를 사용 하세요. 이 도구는 모든 서버를 쿼리하고 올바른 인증서가 올바르게 프로 비전 되는지 확인 합니다. 
 1)  위의 링크에 제공 된 지침에 따라 도구를 다운로드 하 여 실행 합니다.
@@ -76,7 +76,7 @@ CRL (인증서 해지 목록)은 런타임 해지 검사를 수행 하기 위해
 2)  각 AD FS/WAP 서버에서 사용 되는 프로토콜 (일반적으로 HTTPS 또는 HTTP)을 통해 CRL 끝점에 연결할 수 있는지 확인 합니다.
 3)  고급 유효성 검사의 경우 각 AD FS/WAP 서버에서 [CAPI2 이벤트 로깅을 사용 하도록 설정](https://blogs.msdn.microsoft.com/benjaminperkins/2013/09/30/enable-capi2-event-logging-to-troubleshoot-pki-and-ssl-certificate-issues/) 합니다.
 4) CAPI2 작업 로그에서 이벤트 ID 41 (해지 확인)를 확인 합니다.
-5) 확인`‘\<Result value="80092013"\>The revocation function was unable to check revocation because the revocation server was offline.\</Result\>’`
+5) 확인`‘\<Result value="80092013"\>The revocation function was unable to check revocation because the revocation server was offline.\</Result\>'`
 
 ***팁***: 특정 서버를 가리키도록 DNS 확인 (Windows에서 호스트 파일)을 구성 하 여 쉽게 문제를 해결 하기 위해 단일 AD FS 또는 WAP 서버를 대상으로 지정할 수 있습니다. 이렇게 하면 서버를 대상으로 하는 추적을 사용 하도록 설정할 수 있습니다. 
 

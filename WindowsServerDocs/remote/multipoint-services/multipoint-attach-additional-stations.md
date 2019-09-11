@@ -1,6 +1,6 @@
 ---
 title: 추가 스테이션 MultiPoint 서버에 연결
-description: 더 많은 스테이션 MultiPoint 서비스 배포에 추가
+description: MultiPoint 서비스 배포에 더 많은 스테이션 추가
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.technology: multipoint-services
@@ -13,12 +13,12 @@ author: evaseydl
 manager: scottman
 ms.author: evas
 ms.date: 08/04/2016
-ms.openlocfilehash: 57fc8ed6774c3266298ecd98e8f609ec01f63ef6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 70609d491f5eb60daf89df219c06c8b9d4c3cd3e
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59889264"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70871407"
 ---
 # <a name="attach-additional-stations-to-multipoint-services"></a>추가 스테이션을 MultiPoint 서비스에 연결 합니다.
 MultiPoint 서비스 환경에서 사용자가 스테이션을 사용 하 여 MultiPoint 서비스에 연결 하 여 해당 작업을 수행 합니다. 참여 하는 스테이션은 Multipoint Service를 실행 하는 컴퓨터에 연결 하기 위한 사용자 끝점입니다.  
@@ -31,15 +31,15 @@ MultiPoint 서비스는 세 가지 유형의 스테이션을 지원 합니다.
   
 -   RDP-over LAN으로 연결 된 스테이션  
   
-분류는 스테이션의 하드웨어 및 사용 하 여 연결 유형을 기반으로 합니다. 혼합할 수 있으며 프로그램 스테이션에 대 한 연결 형식과 일치 하는 수 있습니다. 하기만 하면 됩니다 (이전에 설치한)는 기본 스테이션 직접 비디오 연결 스테이션을 이어야 합니다. 스테이션 설정에 대 한 자세한 내용은 참조 [MultiPoint 스테이션](MultiPoint-services-Stations.md)합니다.  
+분류는 스테이션의 하드웨어와 사용 하는 연결 유형을 기반으로 합니다. 혼합할 수 있으며 프로그램 스테이션에 대 한 연결 형식과 일치 하는 수 있습니다. 하기만 하면 됩니다 (이전에 설치한)는 기본 스테이션 직접 비디오 연결 스테이션을 이어야 합니다. 스테이션 설정에 대 한 자세한 내용은 참조 [MultiPoint 스테이션](MultiPoint-services-Stations.md)합니다.  
   
 각 유형의 스테이션을 설정 하는 방법을 설명 하는 내용은 다음을 참조 합니다.  
   
 -   [직접 비디오 연결 스테이션 설정](Set-up-a-direct-video-connected-station-in-MultiPoint-services.md)  
   
--   [USB 클라이언트 연결 스테이션 0 설정](Set-up-a-USB-zero-client-connected-station-in-MultiPoint-services.md)  
+-   [USB 제로 클라이언트 연결 스테이션 설정](Set-up-a-USB-zero-client-connected-station-in-MultiPoint-services.md)  
   
--   [RDP-조치-LAN 연결 된 스테이션을 설정 합니다.](Set-up-an-RDP-over-LAN-connected-station-in-MultiPoint-services.md)  
+-   [RDP-over-LAN 연결 스테이션 설정](Set-up-an-RDP-over-LAN-connected-station-in-MultiPoint-services.md)  
   
 스테이션 형식의 자세한 비교 내용은 참조 하십시오. [스테이션 형식 비교](multipoint-services-stations.md#BKMK_StationTypeComparison)합니다.  
   

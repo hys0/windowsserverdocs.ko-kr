@@ -1,6 +1,6 @@
 ---
-title: AD FS를 사용 하 여 Windows 통합 인증 WIA ()를 사용 하는 브라우저 구성
-description: 이 문서에서는 브라우저 WIA AD FS를 사용 하 여 사용 하도록 구성 하는 방법 설명
+title: AD FS에서 WIA (Windows 통합 인증)를 사용 하도록 브라우저 구성
+description: 이 문서에서는 AD FS에서 WIA를 사용 하도록 브라우저를 구성 하는 방법을 설명 합니다.
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,34 +9,34 @@ ms.topic: article
 ms.custom: it-pro
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: f71680bb721635bd37197dca9d3ae4726099525f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: c1413e4fa9d86b3c2204b9ed7337389437b93952
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59845484"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70865881"
 ---
-# <a name="configure-browsers-to-use-windows-integrated-authentication-wia-with-ad-fs"></a>AD FS를 사용 하 여 Windows 통합 인증 WIA ()를 사용 하는 브라우저 구성
+# <a name="configure-browsers-to-use-windows-integrated-authentication-wia-with-ad-fs"></a>AD FS에서 WIA (Windows 통합 인증)를 사용 하도록 브라우저 구성
 
-기본적으로, 통합 인증 WIA (Windows)는 사용 Active Directory Federation Services (AD FS)에서 Windows Server 2012 r 2에서의 인증에 대 한 브라우저를 사용 하는 모든 응용 프로그램에 대 한 조직의 내부 네트워크 (인트라넷) 내에서 발생 하는 인증 요청에 대 한 합니다.
+기본적으로 WIA (Windows 통합 인증)는 Windows Server 2012 r 2의 Active Directory Federation Services (AD FS)에서를 사용 하는 응용 프로그램에 대해 조직의 내부 네트워크 (인트라넷) 내에서 발생 하는 인증 요청에 대해 사용 하도록 설정 됩니다. 브라우저의 인증입니다.
 
-이제 AD FS 2016 하지도 (잘못) catch 하면 Windows Phone도 동안 WIA를 수행 하려면 Microsoft Edge 브라우저를 사용 하도록 설정 하는 향상 된 기본 설정에 있습니다.
+이제 AD FS 2016에는 향상 된 기본 설정이 포함 되어 있습니다 .이 설정을 통해 Edge 브라우저에서 WIA를 수행할 뿐만 아니라 (잘못 된) Windows Phone를 catch 할 수 있습니다.
 
     =~Windows\s*NT.*Edge
 
-위의 하는 방법을 더 이상 경우가 매우 자주 업데이트 하는 경우에 일반적인 Edge 시나리오를 지원 하기 위해 개별 사용자 에이전트 문자열을 구성 해야 합니다.
+위의 경우에는 자주 업데이트 되더라도 일반적인 Edge 시나리오를 지원 하기 위해 개별 사용자 에이전트 문자열을 더 이상 구성할 필요가 없습니다.
 
-다른 브라우저에 대 한 AD FS 속성을 구성할 **WiaSupportedUserAgents** 사용 중인 브라우저에 따라 필요한 값을 추가 합니다.  다음 절차를 사용할 수 있습니다.
+다른 브라우저의 경우 사용 중인 브라우저에 따라 필요한 값을 추가 하도록 **Wiasupporteduseragents** AD FS 속성을 구성 합니다.  아래 절차를 사용할 수 있습니다.
 
 
 
 ### <a name="view-wiasupporteduseragent-settings"></a>WIASupportedUserAgent 설정 보기
-합니다 **WIASupportedUserAgents** WIA를 지원 하는 사용자 에이전트를 정의 합니다. AD FS는 브라우저 컨트롤 또는 브라우저에서 로그인을 수행할 때 사용자 에이전트 문자열을 분석 합니다.
+**Wiasupporteduseragents** 는 WIA를 지 원하는 사용자 에이전트를 정의 합니다. AD FS는 브라우저 컨트롤 또는 브라우저에서 로그인을 수행할 때 사용자 에이전트 문자열을 분석 합니다.
 
 다음 PowerShell 예제를 사용 하 여 현재 설정을 볼 수 있습니다.
 
 ```powershell
-    $strings = Get-AdfsProperties | select -ExpandProperty WiaSupportedUserAgents
+    Get-AdfsProperties | select -ExpandProperty WiaSupportedUserAgents
 ```
 
 ![WIA 지원](../operations/media/Configure-AD-FS-Browser-WIA/wiasupport.png)
@@ -53,12 +53,12 @@ ms.locfileid: "59845484"
 사용자 에이전트|사용 사례|
 -----|-----|
 MSIE 6.0|IE 6.0|
-7.0; MSIE Windows NT|IE 7, IE 인트라넷 영역에 있습니다. "Windows NT" 조각 데스크톱 운영 체제에서 전송 됩니다.|
+7\.0; MSIE Windows NT|IE 7, IE 인트라넷 영역에 있습니다. "Windows NT" 조각 데스크톱 운영 체제에서 전송 됩니다.|
 MSIE 8.0|IE 8.0 (장치가 없으면이 전송, 보다 구체적인 해야 하므로)|
 MSIE 9.0|IE 9.0 (장치가 보내기이 더 해야이 더 구체적인)|
-10.0; MSIE Windows NT 6|Windows XP 및 데스크톱 운영 체제의 최신 버전 IE 10.0</br></br>Windows Phone 8.0 장치 (기본 설정에서 모바일 설정)를 전송 하기 때문에 제외 됩니다.</br></br>사용자 에이전트: Mozilla/5.0 (호환; 10.0; MSIE Windows Phone 8.0; Trident/6.0; Iemobile/10.0; ARM; 터치; NOKIA; Lumia 920)|
-Windows NT 6.3; Trident/7.0</br></br>Windows NT 6.3; Win64; x64; Trident/7.0</br></br>Windows NT 6.3; W O W 64입니다. Trident/7.0| Windows 8.1 데스크톱 운영 체제를 서로 다른 플랫폼|
+10.0; MSIE Windows NT 6|Windows XP 및 데스크톱 운영 체제의 최신 버전 IE 10.0</br></br>Windows Phone 8.0 장치 (기본 설정에서 모바일 설정)를 전송 하기 때문에 제외 됩니다.</br></br>사용자 에이전트: Mozilla/5.0 (호환 가능; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; 암 누릅니다 NOKIA Lumia 920)|
+Windows NT 6.3; Trident/7.0</br></br>Windows NT 6.3; Win64; x64; Trident/7.0</br></br>Windows NT 6.3; W O W 64입니다. Trident/7.0| Windows 8.1 데스크톱 운영 체제, 다른 플랫폼|
 Windows NT 6.2; Trident/7.0</br></br>Windows NT 6.2; Win64; x64; Trident/7.0</br></br>Windows NT 6.2; W O W 64입니다. Trident/7.0|Windows 8 데스크톱 운영 체제를 서로 다른 플랫폼|
-Windows NT 6.1; Trident/7.0</br></br>Windows NT 6.1; Win64; x64; Trident/7.0</br></br>Windows NT 6.1; W O W 64입니다. Trident/7.0|Windows 7 데스크톱 운영 체제를 서로 다른 플랫폼|
+Windows NT 6.1; Trident/7.0</br></br>Windows NT 6.1; Win64; x64; Trident/7.0</br></br>Windows NT 6.1; W O W 64입니다. Trident/7.0|Windows 7 데스크톱 운영 체제, 다른 플랫폼|
 MSIPC| Microsoft 정보 보호 및 제어 클라이언트|
 Windows Rights Management 클라이언트|Windows Rights Management 클라이언트|

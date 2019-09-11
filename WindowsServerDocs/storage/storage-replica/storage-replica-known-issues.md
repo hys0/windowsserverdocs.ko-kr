@@ -8,12 +8,12 @@ ms.topic: get-started-article
 author: nedpyle
 ms.date: 06/25/2019
 ms.assetid: ceddb0fa-e800-42b6-b4c6-c06eb1d4bc55
-ms.openlocfilehash: ad08d8716819773484fc1d1fbe3cc79dd203c498
-ms.sourcegitcommit: 9f955be34c641b58ae8b3000768caa46ad535d43
+ms.openlocfilehash: 681e07b85af603d11295bf1ca2a08f0eb7181725
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2019
-ms.locfileid: "68590567"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70865244"
 ---
 # <a name="known-issues-with-storage-replica"></a>저장소 복제본의 알려진 문제
 
@@ -226,7 +226,7 @@ SC config storqosflt start= disabled
 
 ## <a name="the-smb-bandwidth-limiter-fails-to-throttle-storage-replica-bandwidth"></a>SMB 대역폭 제한이 저장소 복제본 대역폭 조절에 실패
 
-저장소 복제본의 대역폭 제한을 지정할 때 제한이 무시되고 전체 대역폭이 사용됩니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
+저장소 복제본의 대역폭 제한을 지정할 때 제한이 무시되고 전체 대역폭이 사용됩니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
 `Set-SmbBandwidthLimit  -Category StorageReplication -BytesPerSecond 32MB`
 
@@ -234,7 +234,7 @@ SC config storqosflt start= disabled
 
 ## <a name="event-1241-warning-repeated-during-initial-sync"></a>초기 동기화 중에 이벤트 1241 경고가 반복됨
 
-복제 파트너 관계를 비동기로 지정할 때 원본 컴퓨터가 저장소 복제본 관리자 채널에서 경고 이벤트 1241을 반복적으로 기록합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
+복제 파트너 관계를 비동기로 지정할 때 원본 컴퓨터가 저장소 복제본 관리자 채널에서 경고 이벤트 1241을 반복적으로 기록합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
     Log Name:      Microsoft-Windows-StorageReplica/Admin
     Source:        Microsoft-Windows-StorageReplica
@@ -297,7 +297,7 @@ SC config storqosflt start= disabled
 
 ## <a name="error-failed-to-bring-the-resource-cluster-disk-x-online-with-a-stretch-cluster"></a>확장 클러스터에서 "'클러스터 디스크 x' 리소스를 온라인 상태로 전환하지 못했습니다." 오류 발생
 
-장애 조치(failover) 후 클러스터 디스크를 온라인으로 전환하고 원래 소스 사이트를 다시 기본 사이트로 만들려고 시도하면 장애 조치(failover) 클러스터 관리자에서 오류가 발생합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
+장애 조치(failover) 후 클러스터 디스크를 온라인으로 전환하고 원래 소스 사이트를 다시 기본 사이트로 만들려고 시도하면 장애 조치(failover) 클러스터 관리자에서 오류가 발생합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
     Error
     The operation has failed.
@@ -306,7 +306,7 @@ SC config storqosflt start= disabled
     Error Code: 0x80071397
     The operation failed because either the specified cluster node is not the owner of the resource, or the node is not a possible owner of the resource.
 
-디스크나 CSV를 수동으로 이동하려고 하면 추가 오류가 발생합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
+디스크나 CSV를 수동으로 이동하려고 하면 추가 오류가 발생합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
     Error
     The operation has failed.

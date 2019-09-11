@@ -1,5 +1,5 @@
 ---
-title: Windows Server 하이브리드 클라우드 인쇄를 배포 합니다.
+title: Windows Server 하이브리드 클라우드 인쇄 배포
 description: Microsoft 하이브리드 클라우드 인쇄를 설정 하는 방법
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -12,93 +12,93 @@ author: msjimwu
 ms.author: coreyp
 manager: dongill
 ms.date: 3/15/2018
-ms.openlocfilehash: 6e7bb2138afa159f945125d3fc20e4fa365340d5
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 552695626c98ee0fc01148536b50d4466d1b96e4
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66435734"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70866807"
 ---
 # <a name="deploy-windows-server-hybrid-cloud-print-with-pre-authentication"></a>사전 인증을 사용한 Windows Server 하이브리드 클라우드 인쇄 배포
 
 >적용 대상: Windows Server 2016
 
-이 항목에서는 IT 관리자에 게 Microsoft 하이브리드 클라우드 인쇄 솔루션의 종단 간 배포를 설명 합니다. 인쇄 서버와 Azure Active Directory에 가입 하 고 MDM 관리 수 있도록 실행 하는 기존 Windows 서버 기반으로이 솔루션 계층을 검색 하 고 조직에 인쇄 장치 프린터를 관리 합니다.
+IT 관리자를 위한이 항목에서는 Microsoft 하이브리드 클라우드 인쇄 솔루션의 종단 간 배포에 대해 설명 합니다. 이 솔루션은 인쇄 서버로 실행 되는 기존 Windows Server를 기반으로 하며, 연결 된 Azure Active Directory 및 MDM 관리 장치에서 조직 관리 프린터를 검색 하 고 인쇄할 수 있도록 합니다.
 
 ## <a name="pre-requisites"></a>필수 구성 요소
 
-구독, 서비스 및이 설치를 시작 하기 전에 확보 해야 하는 컴퓨터의 여러 가지가 있습니다. 이러한 속성은 다음과 같습니다.
+이 설치를 시작 하기 전에 획득 해야 하는 여러 구독, 서비스 및 컴퓨터가 있습니다. 이러한 속성은 다음과 같습니다.
 
 -   Azure AD premium 구독
     
-    참조 [Azure 구독 시작](https://azure.microsoft.com/trial/get-started-active-directory/), 평가판 Azure 구독에 대 한 합니다. 
+    Azure에 대 한 평가판 구독을 보려면 [azure 구독 시작](https://azure.microsoft.com/trial/get-started-active-directory/)을 참조 하세요. 
 
--   Intune과 같은 MDM 서비스
+-   MDM 서비스 (예: Intune)
     
-    참조 [Microsoft Intune](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune), Intune에 대 한 평가판 구독에 대 한 합니다.
+    Intune에 대 한 평가판 구독은 [Microsoft Intune](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune)를 참조 하세요.
 
--   Windows Server Active Directory 실행
+-   Active Directory으로 실행 되는 Windows Server
 
-    참조 [단계별: Windows Server 2016의 Active Directory 설정](https://blogs.technet.microsoft.com/canitpro/2017/02/22/step-by-step-setting-up-active-directory-in-windows-server-2016/), Active Directory 설정 도움말에 대 한 합니다.
+    단계별 [참고: Active Directory 설정에 대 한 도움말을](https://blogs.technet.microsoft.com/canitpro/2017/02/22/step-by-step-setting-up-active-directory-in-windows-server-2016/)보려면 Windows Server 2016에서 Active Directory를 설정 합니다.
 
--   도메인 가입 인쇄 서버로 실행 중인 Windows Server 2016
+-   인쇄 서버로 실행 되는 도메인에 가입 된 Windows Server 2016
     
-    참조 [추가 역할 및 기능 마법사를 사용 하 여 역할, 역할 서비스 및 기능 설치](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#BKMK_installarfw), Windows Server에서 역할 및 역할 서비스를 설치 하는 방법에 대 한 정보에 대 한 합니다.
+    Windows Server에서 역할 및 역할 서비스를 설치 하는 방법에 대 한 자세한 내용은 역할 [및 기능 추가 마법사를 사용 하 여 역할, 역할 서비스 및 기능 설치](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#BKMK_installarfw)를 참조 하세요.
 
 -   Azure AD 연결
     
-    참조 [Azure AD Connect의 사용자 지정 설치](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-get-started-custom), Azure AD Connect를 설정 하는 도움말에 대 한 합니다.
+    Azure AD Connect 설정에 대 한 도움말은 [Azure AD Connect의 사용자 지정 설치](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-get-started-custom)를 참조 하세요.
 
--   Azure 응용 프로그램 프록시 커넥터는 별도 도메인에 가입 된 Windows Server 컴퓨터
+-   별도의 도메인에 가입 된 Windows Server 컴퓨터에서 프록시 커넥터 Azure 애플리케이션
     
-    참조 [커넥터를 설치 하 고 응용 프로그램 프록시를 사용 하 여 시작](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-enable), Azure 응용 프로그램 프록시 커넥터를 설정 하는 도움말에 대 한 합니다.
+    Azure 애플리케이션 프록시 커넥터 설정에 대 한 도움말은 [응용 프로그램 프록시 시작 및 커넥터 설치](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-enable)를 참조 하세요.
 
--   연결 하는 공용 도메인 이름
+-   공용 도메인 이름
     
-    Azure에서 생성 된 도메인 이름을 사용 하거나 고유한 도메인 이름을 구입 수 있습니다.
+    Azure에서 만든 도메인 이름을 사용 하거나 고유한 도메인 이름을 구입할 수 있습니다.
 
 ## <a name="deployment-steps"></a>배포 단계
 
-이 가이드는 다섯 (5) 설치 단계를 설명합니다.
+이 가이드에서는 5 개 (5) 설치 단계에 대해 설명 합니다.
 
-- 1단계: Azure AD 간의 동기화 할 Azure AD Connect를 설치 하 고 온-프레미스 AD
+- 1단계: Azure AD와 온-프레미스 AD 간에 동기화 Azure AD Connect 설치
 - 2단계: 인쇄 서버에 하이브리드 클라우드 인쇄 패키지 설치
-- 3단계: Install Azure 응용 프로그램 프록시 (AAP) kerberos 제한 위임 (KCD)
-- 4단계: 필요한 MDM 정책을 구성 합니다.
-- 5단계: 공유 프린터를 게시 합니다.
+- 3단계: KCD (Kerberos 제한 위임)를 사용 하 여 AAP (Azure 애플리케이션 프록시 설치)
+- 4단계: 필요한 MDM 정책 구성
+- 5단계: 공유 프린터 게시
 
-### <a name="step-1---install-azure-ad-connect-to-sync-between-azure-ad-and-on-premises-ad"></a>1 단계-Azure AD Connect 설치를 Azure AD 간의 동기화 및 온-프레미스 AD
+### <a name="step-1---install-azure-ad-connect-to-sync-between-azure-ad-and-on-premises-ad"></a>1 단계-Azure AD와 온-프레미스 AD 간 동기화를 위한 Azure AD Connect 설치
 1. Windows Server Active Directory 컴퓨터에서 Azure AD Connect 소프트웨어를 다운로드 합니다.
-2. Azure AD Connect 설치 패키지를 실행 하 고 선택 **기본 설정 사용**
-3. 설치 프로세스에서 요청 된 정보를 입력 하 고 클릭 **설치**
+2. Azure AD Connect 설치 패키지를 시작 하 고 **빠른 설정 사용** 을 선택 합니다.
+3. 설치 과정에서 요청 된 정보를 입력 하 고 **설치** 를 클릭 합니다.
 
-### <a name="step-2---install-hybrid-cloud-print-package-on-the-print-server"></a>2 단계-인쇄 서버에서 패키지 설치 하이브리드 클라우드 인쇄
+### <a name="step-2---install-hybrid-cloud-print-package-on-the-print-server"></a>2 단계-인쇄 서버에 하이브리드 클라우드 인쇄 패키지 설치
 
 1. 하이브리드 클라우드 인쇄 PowerShell 모듈 설치
-   - 관리자 권한 PowerShell 명령 프롬프트에서 다음 명령을 실행합니다
-      - `find-module -Name "PublishCloudPrinter"` PowerShell 갤러리 (PSGallery) 컴퓨터에 연결할 수 있는지 확인 하려면
+   - 관리자 권한 PowerShell 명령 프롬프트에서 다음 명령을 실행 합니다.
+      - `find-module -Name "PublishCloudPrinter"`컴퓨터가 PowerShell 갤러리에 연결할 수 있는지 확인 하려면 (PSGallery)
       - `install-module -Name "PublishCloudPrinter"`
 
-     > 참고: 메시징 표시 될 수 있습니다는 신뢰할 수 없는 리포지토리의 'PSGallery' 않다는 합니다.  설치를 계속 하려면 ' y'를 입력 합니다.
+     > 참고: ' PSGallery '는 신뢰할 수 없는 리포지토리입니다. 라는 메시지가 표시 될 수 있습니다.  ' Y '를 입력 하 여 설치를 계속 합니다.
 
 2. 하이브리드 클라우드 인쇄 솔루션 설치
-    - 동일한 관리자 권한 PowerShell 명령 프롬프트에서 디렉터리를 변경 `C:\Program Files\WindowsPowerShell\Modules\PublishCloudPrinter\1.0.0.0`
+    - 동일한 승격 PowerShell 명령 프롬프트에서 디렉터리를로 변경 합니다.`C:\Program Files\WindowsPowerShell\Modules\PublishCloudPrinter\1.0.0.0`
     - 실행 <br>
         `CloudPrintDeploy.ps1 -AzureTenant <Domain name used by Azure AD Connect> -AzureTenantGuid <Azure AD Directory ID>`
-3. SSL을 지원 하도록 IIS 끝점 2 개를 구성 합니다.
-   -   자체 서명 된 인증서 또는 일부 신뢰할 수 있는 인증 기관 (CA)에서 발급 한 SSL 인증서 일 수 있습니다.
-   -  자체 서명 된 인증서를 사용 하는 경우 클라이언트 컴퓨터에 인증서를 가져올 있는지 확인
+3. SSL을 지원 하도록 2 개의 IIS 끝점 구성
+   -   SSL 인증서는 자체 서명 된 인증서 이거나 일부 신뢰할 수 있는 CA (인증 기관)에서 발급 한 인증서 일 수 있습니다.
+   -  자체 서명 된 인증서를 사용 하는 경우 클라이언트 컴퓨터로 인증서를 가져왔는지 확인 합니다.
 4. SQLite 패키지 설치
-   - 관리자 권한 PowerShell 명령 프롬프트를 열으십시오
-   - System.Data.SQLite nuget 패키지를 다운로드 하려면 다음 명령을 실행 합니다. <br>
+   - 관리자 권한 PowerShell 명령 프롬프트를 엽니다.
+   - 다음 명령을 실행 하 여 시스템. SQLite nuget 패키지를 다운로드 합니다. <br>
        `Register-PackageSource -Name nuget.org -ProviderName NuGet -Location https://www.nuget.org/api/v2/ -Trusted -Force`
-   - 패키지를 설치 하려면 다음 명령을 실행 합니다.<br>
+   - 다음 명령을 실행 하 여 패키지를 설치 합니다.<br>
    `Install-Package system.data.sqlite [-requiredversion x.x.x.x] -providername nuget`
 
-   > 참고: 다운로드 되지 않도록 최신 버전을 설치 하는 것이 좋습니다.는 "-requiredversion" 옵션입니다.
+   > 참고: "-Requiredversion" 옵션을 종료 하 여 최신 버전을 다운로드 하 고 설치 하는 것이 좋습니다.
 
-5. SQLite dll MopriaCloudService Webapp 복사할 \<bin\> 폴더 (**c:\\inetpub\\wwwroot\\MopriaCloudService\\bin**): <br>
-   - SQLite 바이너리에 있어야 합니다. "\\Program Files\\PackageManagement\\NuGet\\패키지"
+5. SQLite dll을 \<MopriaCloudService Webapp bin\> 폴더 (**C:\\inetpub\\\\wwwroot\\MopriaCloudService bin**)에 복사 합니다. <br>
+   - SQLite 이진\\파일은 "Program Files\\PackageManagement\\NuGet\\패키지"에 있어야 합니다.
 
            \\System.Data.SQLite.**Core**.x.x.x.x\\lib\\net46\\System.Data.SQLite.dll
            --\> \<bin\>\\System.Data.SQLite.dll  
@@ -111,9 +111,9 @@ ms.locfileid: "66435734"
            \\System.Data.SQLite.**EF6**.x.x.x.x\\lib\\net46\\System.Data.SQLite.EF6.dll
            --\> \<bin\>\\System.Data.SQLite.EF6.dll
 
-   > 참고: x.x.x.x는 SQLite 버전 이상에서는 설치 된.
+   > 참고: x. x. x. x는 위에 설치 된 SQLite 버전입니다.
 
-6. 업데이트를 `c:\inetpub\wwwroot\MopriaCloudService\web.config` SQLite 버전 x.x.x.x 다음에 포함할 파일 \<런타임\>/\<assemblyBinding\> 섹션:
+6. `c:\inetpub\wwwroot\MopriaCloudService\web.config` 다음 \<런타임assemblybinding\<섹션에서 SQLite 버전 x. x. x를 포함 하도록 파일을 업데이트 합니다.\> \>/
 
        <dependentAssembly>
        assemblyIdentity name="System.Data.SQLite" culture="neutral" publicKeyToken="db937bc2d44ff139" /
@@ -133,173 +133,173 @@ ms.locfileid: "66435734"
        </dependentAssembly>
 
 7. SQLite 데이터베이스를 만듭니다.
-    -  다운로드 및 설치에서 SQLite 도구 이진 파일 <https://www.sqlite.org/>
-    -  로 이동 **c:\\inetpub\\wwwroot\\MopriaCloudService\\데이터베이스** 디렉터리
-    -  이 디렉터리에 데이터베이스를 만들려면 다음 명령을 실행 합니다.  `sqlite3.exe MopriaDeviceDb.db ".read MopriaSQLiteDb.sql"`
-    -  파일 탐색기에서 보안 탭에서 Mopria 데이터베이스에 게시할 수 있는 사용자/그룹에 추가할 MopriaDeviceDb.db 파일 속성을 엽니다.
-        - 만 필요한 관리자 사용자 그룹을 추가 하는 것이 좋습니다.
-8. OAuth2 인증을 지원 하도록 Azure AD를 사용 하 여 2 개의 웹 앱을 등록 합니다.
-   - Azure AD 테 넌 트 관리 포털에 전역 관리자로 로그인
-     1. 인쇄 끝점을 추가 하려면 "앱 등록" 탭 이동
-        - 응용 프로그램을 추가, "새 응용 프로그램 등록" 선택
-        - 적절 한 이름을 제공 하 고 선택 "웹 앱 / API"
-        - Sign-on URL = "<http://MicrosoftEnterpriseCloudPrint/CloudPrint>"
-     2. 검색 끝점에 대 한 반복
-        - Sign-on URL = "<http://MopriaDiscoveryService/CloudPrint>"
-     3. 네이티브 클라이언트 응용 프로그램에 대 한 반복
-        -   앱 이름을 제공 하는 경우 "네이티브 클라이언트 응용 프로그램"을 "응용 프로그램 종류로"를 선택 했는지 확인
-        -   리디렉션 URI = "https://\<services machine 끝점\>/RedirectUrl"
-     4. 네이티브 클라이언트 앱 "설정"으로 이동
-        -   이후 설치 단계에 사용 되는 "응용 프로그램 ID" 값을 복사 합니다.
+    -  에서 SQLite Tools 바이너리를 다운로드 하 여 설치 합니다.<https://www.sqlite.org/>
+    -  **\\C: inetpub\\wwwroot\\MopriaCloudService데이터베이스디렉터리로이동합니다.\\**
+    -  다음 명령을 실행 하 여이 디렉터리에 데이터베이스를 만듭니다.`sqlite3.exe MopriaDeviceDb.db ".read MopriaSQLiteDb.sql"`
+    -  파일 탐색기에서 MopriaDeviceDb. db 파일 속성을 열어 보안 탭에서 데이터베이스에 게시할 수 있는 사용자/그룹을 추가 합니다.
+        - 필요한 관리 사용자 그룹을 추가 하는 것이 좋습니다.
+8. OAuth2 인증을 지원 하기 위해 Azure AD에 2 개의 웹 앱 등록
+   - Azure AD 테 넌 트 관리 포털에 전역 관리자로 로그인 합니다.
+     1. "앱 등록" 탭으로 이동 하 여 인쇄 끝점 추가
+        - 응용 프로그램 추가를 선택 하 고 "새 응용 프로그램 등록"을 선택 합니다.
+        - 적절 한 이름을 입력 하 고 "웹 앱/a p i"를 선택 합니다.
+        - 로그온 URL = "<http://MicrosoftEnterpriseCloudPrint/CloudPrint>"
+     2. 검색 끝점에 대해 반복
+        - 로그온 URL = "<http://MopriaDiscoveryService/CloudPrint>"
+     3. Native client 응용 프로그램에 대해 반복
+        -   앱 이름을 제공 하는 경우 "네이티브 클라이언트 응용 프로그램"을 "응용 프로그램 유형"으로 선택 해야 합니다.
+        -   리디렉션 URI = "https://\<\>/RedirectUrl"
+     4. Native Client 앱 "설정"으로 이동
+        -   이후 설치 단계에 사용할 "응용 프로그램 ID" 값을 복사 합니다.
         -   "필요한 권한"을 선택 합니다.
-            1.  "추가" 클릭
-            2.  "API 선택" 클릭
-            3.  앱 끝점을 만들 때 정의한 이름으로 인쇄 끝점과 검색 끝점에 대 한 검색
-            4.  끝점 2 개를 추가 합니다.
-            5.  각 응용 프로그램 끝점에 대 한 "위임 된 권한" 옵션이 설정 되어 있는지 확인
-            6.  맨 아래에 "완료" 단추를 클릭 하 고 있는지 확인
-            7.  두 끝점을 추가한 후 "권한 부여"를 클릭 합니다.  요청을 승인 하 라는 메시지가 나타나면 "예"를 선택 합니다.
-        -   "리디렉션 URI"로 이동한 후 목록에 다음 리디렉션 Uri를 추가 합니다. `ms-appx-web://Microsoft.AAD.BrokerPlugin/\<NativeClientAppID\>`
+            1.  "추가"를 클릭 합니다.
+            2.  "API 선택"을 클릭 합니다.
+            3.  앱 끝점을 만들 때 정의한 이름으로 인쇄 끝점 및 검색 끝점을 검색 합니다.
+            4.  끝점 2 개 추가
+            5.  각 앱 끝점에 대 한 "위임 된 권한" 옵션이 설정 되어 있는지 확인 합니다.
+            6.  맨 아래에 있는 "완료" 단추를 클릭 했는지 확인 합니다.
+            7.  두 끝점을 모두 추가한 후에는 "권한 부여"를 클릭 합니다.  요청을 승인 하 라는 메시지가 표시 되 면 "예"를 선택 합니다.
+        -   "리디렉션 URI"로 이동 하 여 목록에 다음 리디렉션 Uri를 추가 합니다.`ms-appx-web://Microsoft.AAD.BrokerPlugin/\<NativeClientAppID\>`
             `ms-appx-web://Microsoft.AAD.BrokerPlugin/S-1-15-2-3784861210-599250757-1266852909-3189164077-45880155-1246692841-283550366`
 
-### <a name="step-3---install-azure-application-proxy-aap-with-kerberos-constrained-delegation-kcd"></a>3 단계-Kerberos를 사용 하 여 Azure 응용 프로그램 프록시 (AAP) 설치 제한 위임 (KCD)
-1. Azure AD (AAD) 테 넌 트 관리 포털에 로그인
+### <a name="step-3---install-azure-application-proxy-aap-with-kerberos-constrained-delegation-kcd"></a>3 단계-KCD (Kerberos 제한 위임)를 사용 하 여 AAP (Azure 애플리케이션 프록시 설치)
+1. AAD (Azure AD) 테 넌 트 관리 포털에 로그인 합니다.
     - AAD 메뉴 목록에서 "응용 프로그램 프록시"를 선택 합니다.
-    - 화면 맨 위에 있는 "응용 프로그램 프록시 사용"을 클릭
-    - 웹 응용 프로그램 프록시 (WAP)으로 작동 하는 도메인에 가입 된 Windows Server 컴퓨터에 "응용 프로그램 프록시 커넥터"를 다운로드 합니다.
-2. WAP 컴퓨터에 설치 "응용 프로그램 프록시 커넥터"를 관리자 권한으로 로그인
-    - 설치 중에 게 응용 프로그램 프록시 커넥터를 자격 증명 AAP에서 사용 하도록 설정 하려는 Azure 프로그램 개념
-    - WAP 컴퓨터가 도메인에 온-프레미스 Active Directory에 가입 되어 있는지 확인
-3. Active Directory 컴퓨터에서로 이동 **사용자 및 컴퓨터 도구->**
+    - 화면 위쪽에서 "응용 프로그램 프록시 사용"을 클릭 합니다.
+    - WAP (웹 응용 프로그램 프록시) 역할을 하는 도메인에 가입 된 Windows Server 컴퓨터에 "응용 프로그램 프록시 커넥터"를 다운로드 합니다.
+2. WAP 컴퓨터에서 관리자로 로그인 하 고 "응용 프로그램 프록시 커넥터"를 설치 합니다.
+    - 설치 하는 동안 응용 프로그램 프록시 커넥터에서 AAP를 사용 하도록 설정 하려는 Azure 개념에 자격 증명을 제공 합니다.
+    - WAP 컴퓨터가 온-프레미스 Active Directory 도메인에 가입 되어 있는지 확인 합니다.
+3. Active Directory 컴퓨터에서 **도구-> 사용자 및 컴퓨터** 로 이동 합니다.
     - 응용 프로그램 프록시 커넥터를 실행 하는 컴퓨터를 선택 합니다.
-    - 마우스 오른쪽 단추로 클릭 **속성-위임 >** 탭
-    - 선택 **만 지정한 서비스에 대 한 위임용으로이 컴퓨터 트러스트 합니다.**
-    - 선택 **모든 인증 프로토콜을 사용 합니다.**
-    - 아래 **이 계정이 위임 된 자격 증명을 표시할 수 있는 서비스**
-        - 서비스 (MopriaDiscoveryService 및 MicrosoftEnterpriseCloudPrint 서비스)를 실행 하는 컴퓨터의 SPN id 값을 추가
-            - SPN에 대 한 자체 컴퓨터의 SPN을 즉, 입력 "HOST/\<MachineName\>.\<Domain\>"<br>
+    - 마우스 오른쪽 단추를 클릭 하 고 **속성-> 위임** 탭을 선택 합니다.
+    - **지정한 서비스에 대 한 위임용 으로만이 컴퓨터 트러스트를 선택 합니다.**
+    - **모든 인증 프로토콜 사용을 선택 합니다.**
+    - **이 계정이 위임 된 자격 증명을 제공할 수 있는 서비스**
+        - 서비스를 실행 하는 컴퓨터의 SPN id 값을 추가 합니다 (MopriaDiscoveryService 및 MicrosoftEnterpriseCloudPrint service).
+            - SPN의 경우 컴퓨터 자체의 SPN을 입력 합니다. 즉, "HOST/\<MachineName\>.\< 도메인\>"<br>
                 `HOST/appServer.Contoso.com`
 4. AAD 테 넌 트 관리 포털로 돌아가서 응용 프로그램 프록시를 추가 합니다.
-   - 로 이동 합니다 **엔터프라이즈 응용 프로그램** 탭
-   - 클릭 **새 응용 프로그램**
-   - 선택 **온-프레미스 응용 프로그램** 필드를 입력 하 고
-       - 이름: 원하는 이름
-       - 내부 URL: 이 url은 WAP 컴퓨터에 액세스할 수 있는 Mopria 검색 클라우드 서비스에 내부 URL
-       - 외부 URL: 조직에 적합 한 구성
+   - **엔터프라이즈 응용 프로그램** 탭으로 이동 합니다.
+   - **새 응용 프로그램** 을 클릭 합니다.
+   - **온-프레미스 응용 프로그램** 을 선택 하 고 필드를 입력 합니다.
+       - 이름: 원하는 모든 이름
+       - 내부 URL: WAP 컴퓨터가 액세스할 수 있는 Momachine.config a 검색 클라우드 서비스에 대 한 내부 URL입니다.
+       - 외부 URL: 조직에 맞게 구성
        - 사전 인증 방법: Azure Active Directory
 
-     >   참고: 위의 모든 설정을 찾을 수 없는, 하는 경우 사용 가능한 설정 사용 하 여 프록시 추가 다음 방금 만든 응용 프로그램 프록시를 선택 및 이동 합니다 **응용 프로그램 프록시** 탭 및 위의 모든 정보를 추가 합니다.
+     >   참고: 위의 설정을 모두 찾지 못한 경우 사용 가능한 설정이 포함 된 프록시를 추가한 다음 방금 만든 응용 프로그램 프록시를 선택 하 고 **응용 프로그램 프록시** 탭으로 이동 하 여 위의 정보를 모두 추가 합니다.
 
-   - 만들어지면 돌아갑니다 **엔터프라이즈 응용 프로그램** -> **모든 응용 프로그램**, 방금 만든 새 응용 프로그램 선택
-   - 로 이동 **Single sign on**, "Single sign-on 모드"는 "통합 Windows 인증"으로 설정 되어 있는지 확인
-   - "내부 응용 프로그램 SPN" 위의 3.3 단계에서에서 지정한 spn 설정
-   - "위임 된 로그인 Id"는 "사용자 계정 이름"으로 설정 되어 있는지 확인
+   - 만든 후에는 **엔터프라이즈 응용 프로그램** -> **모든 응용 프로그램**으로 돌아가서 방금 만든 새 응용 프로그램을 선택 합니다.
+   - **Single sign-on**으로 이동 하 여 "Single sign-on 모드"가 "Windows 통합 인증"으로 설정 되어 있는지 확인 합니다.
+   - 위의 3.3 단계에서 지정한 SPN으로 "내부 응용 프로그램 SPN"을 설정 합니다.
+   - "위임 된 로그인 Id"가 "사용자 계정 이름"으로 설정 되어 있는지 확인 합니다.
 
-5. 엔터프라이즈 클라우드 인쇄 서비스에 대 한 위의 4를 반복 하 고 엔터프라이즈 클라우드 인쇄 서비스에 내부 URL을 제공 합니다.
-6. Azure AD 테 넌 트 관리 포털로 돌아가서 이동할 **앱 등록** 네이티브 클라이언트 앱 선택-> "설정" 및
-    - 선택 **필요한 권한**
-        - 방금 만든 2 개의 새로운 프록시 기능 추가
-        - 두 응용 프로그램에 대 한 위임 된 권한 부여
-        - 프록시 응용 프로그램을 모두 추가한 후 "권한 부여"를 클릭 합니다.  요청을 승인 하 라는 메시지가 나타나면 "예"를 선택 합니다.
+5. 엔터프라이즈 클라우드 인쇄 서비스에 대해 위의 4 단계를 반복 하 고 엔터프라이즈 클라우드 인쇄 서비스에 대 한 내부 URL을 제공 합니다.
+6. Azure AD 테 넌 트 관리 포털로 돌아가서 **앱 등록** 로 이동 하 여 네이티브 클라이언트 앱-> "설정"을 선택 합니다.
+    - **필요한 권한** 선택
+        - 방금 만든 2 개의 새 프록시 응용 프로그램을 추가 합니다.
+        - 이러한 두 응용 프로그램에 대해 위임 된 권한 부여
+        - 두 프록시 응용 프로그램이 모두 추가 되 면 "권한 부여"를 클릭 합니다.  요청을 승인 하 라는 메시지가 표시 되 면 "예"를 선택 합니다.
 
-7. Mopria 클라우드 서비스 및 엔터프라이즈 클라우드 인쇄 서비스 컴퓨터에 대해 IIS에서 Windows 인증을 사용 하도록 설정
+7. IIS에서 클라우드 서비스 및 엔터프라이즈 클라우드 인쇄 서비스 컴퓨터에 대해 Windows 인증을 사용 하도록 설정
     - Windows 인증 기능이 설치 되어 있는지 확인 합니다.
         1. 서버 관리자 열기
-        2. 클릭 **관리**
-        3. 클릭 **역할 및 기능 추가**
-        4. 선택 **역할 기반 또는 기능 기반 설치**
+        2. **관리** 클릭
+        3. **역할 및 기능 추가를** 클릭 합니다.
+        4. **역할 기반 또는 기능 기반 설치를** 선택 합니다.
         5. 서버 선택
-        6. 웹 서버 (IIS)에서 웹 서버-> 보안->를 선택 **Windows 인증**
-        7. 설치를 완료할 때까지 다음을 클릭합니다
+        6. 웹 서버 (IIS)-> 웹 서버-> 보안에서 **Windows 인증** 을 선택 합니다.
+        7. 설치가 완료 될 때까지 다음을 클릭 합니다.
     - IIS에서 Windows 인증을 사용 하도록 설정 합니다.
-        1. 인터넷 정보 서비스 (IIS) 관리자를 열려면
-        2. 각 서비스/사이트:
-            1.  서비스/사이트를 선택 합니다.
+        1. 인터넷 정보 서비스 (IIS) 관리자 열기
+        2. 각 서비스/사이트에 대해 다음을 수행 합니다.
+            1.  서비스/사이트 선택
             2.  두 번 클릭 **인증**
-            3.  클릭 **Windows 인증** 클릭 **활성화** 아래의 **작업**
+            3.  **Windows 인증** 을 클릭 하 고 **작업** 아래에서 **사용** 을 클릭 합니다.
 
-### <a name="step-4---configure-the-required-mdm-policies"></a>4 단계-필요한 MDM 정책을 구성 합니다.
-- MDM 공급자에 로그인
-- 엔터프라이즈 클라우드 인쇄 정책 그룹을 찾아 아래 지침에 따라 정책을 구성 합니다.
-  - CloudPrintOAuthAuthority = https://login.microsoftonline.com/\<Azure AD Directory ID\>
-  - CloudPrintOAuthClientId Azure AD 관리 포털에 등록 하는 기본 웹 앱의 "응용 프로그램 ID" 값 =
-  - CloudPrinterDiscoveryEndPoint = Mopria 검색 서비스 Azure 응용 프로그램 프록시의 3.3 단계에서에서 만든 외부 URL (후행 없이 동일 하지만 정확히 있어야 /)
-  - MopriaDiscoveryResourceId = Mopria 검색 서비스 Azure 응용 프로그램 프록시의 3.4 단계에서에서 만든 외부 URL (해야 똑같이 포함 후행 /)
-  - CloudPrintResourceId = 엔터프라이즈 클라우드 인쇄 서비스 Azure 응용 프로그램 프록시의 3.5 단계에서에서 만든 외부 URL (해야 똑같이 포함 후행 /)
-  - DiscoveryMaxPrinterLimit = \<양의 정수\>
+### <a name="step-4---configure-the-required-mdm-policies"></a>4 단계-필요한 MDM 정책 구성
+- MDM 공급자에 로그인 합니다.
+- 엔터프라이즈 클라우드 인쇄 정책 그룹을 찾고 아래 지침에 따라 정책을 구성 합니다.
+  - Cloudprintoauthauthority = https://login.microsoftonline.com/\<Azure AD 디렉터리 ID\>
+  - CloudPrintOAuthClientId = "응용 프로그램 ID"는 Azure AD 관리 포털에 등록 한 네이티브 웹 앱의 값입니다.
+  - Cloud프린터 검색 끝점 = 3.3 단계에서 만든 검색 서비스 Azure 애플리케이션 프록시의 외부 URL (반드시 정확히 동일 하지만 뒤에는 포함 되지 않음)
+  - MopriaDiscoveryResourceId = 3.4 단계에서 만든 검색 서비스 Azure 애플리케이션 프록시의 외부 URL (후행/를 포함 하 여 정확히 동일 해야 함)
+  - CloudPrintResourceId = 3.5 단계에서 만든 Enterprise Cloud Print Service Azure 애플리케이션 프록시의 외부 URL (뒤에 오는/를 포함 하 여 정확히 동일 해야 함)
+  - Discoverymax프린터 limit = \<양의 정수\>
 
->   참고: Microsoft Intune 서비스를 사용 하는 경우에 "클라우드 프린터" 범주 아래에서 이러한 설정을 찾을 수 있습니다.
+>   참고: Microsoft Intune 서비스를 사용 하는 경우 "클라우드 프린터" 범주에서 이러한 설정을 찾을 수 있습니다.
 
 |Intune 표시 이름                     |정책                         |
 |----------------------------------------|-------------------------------|
-|프린터 검색 URL                   |CloudPrinterDiscoveryEndpoint  |
-|프린터 액세스 인증 기관 URL            |CloudPrintOAuthAuthority       |
-|Azure 네이티브 클라이언트 앱 GUID            |CloudPrintOAuthClientId        |
+|프린터 검색 URL                   |Cloud프린터 검색 끝점  |
+|프린터 액세스 기관 URL            |CloudPrintOAuthAuthority       |
+|Azure native client 앱 GUID            |CloudPrintOAuthClientId        |
 |인쇄 서비스 리소스 URI              |CloudPrintResourceId           |
-|(모바일 전용) 쿼리할 최대 프린터 수  |DiscoveryMaxPrinterLimit       |
+|쿼리할 최대 프린터 수 (모바일 전용)  |Discoverymax프린터 제한       |
 |프린터 검색 서비스 리소스 URI  |MopriaDiscoveryResourceId      |
 
->   참고: 클라우드 인쇄 정책 그룹을 사용할 수 없는 MDM 공급자가 지 원하는 OMA URI 설정 하지만 동일한 정책을 설정할 수 있습니다.  이를 참조 하십시오 <a href="https://docs.microsoft.com/windows/client-management/mdm/policy-csp-enterprisecloudprint#enterprisecloudprint-cloudprintoauthauthority">문서</a> 대 한 자세한 내용은 합니다.
+>   참고: 클라우드 인쇄 정책 그룹을 사용할 수 없지만 MDM 공급자가 OMA-URI 설정을 지 원하는 경우 동일한 정책을 설정할 수 있습니다.  추가 정보는이 <a href="https://docs.microsoft.com/windows/client-management/mdm/policy-csp-enterprisecloudprint#enterprisecloudprint-cloudprintoauthauthority">문서</a> 를 참조 하세요.
 
 - OMA-URI
     - `CloudPrintOAuthAuthority = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintOAuthAuthority`
-        - Value = `https://login.microsoftonline.com/`\<Azure AD Directory ID\>
+        - 값 = `https://login.microsoftonline.com/` \<Azure AD 디렉터리 ID\>
     - `CloudPrintOAuthClientId = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintOAuthClientId`
         - 값 = \<Azure AD 네이티브 앱의 응용 프로그램 ID\>
     - `CloudPrinterDiscoveryEndPoint = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrinterDiscoveryEndPoint`
-        - 값 = Mopria 검색 서비스 Azure 응용 프로그램 프록시의 3.3 단계에서에서 만든 외부 URL (후행 없이 동일 하지만 정확히 있어야 /)
+        - Value = 3.3 단계에서 생성 된 검색 서비스 Azure 애플리케이션 프록시의 외부 URL (반드시 정확히 동일 하지만 후행/는 제외)
     - `MopriaDiscoveryResourceId = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/MopriaDiscoveryResourceId`
-        - 값 = Mopria 검색 서비스 Azure 응용 프로그램 프록시의 3.4 단계에서에서 만든 외부 URL (해야 똑같이 포함 후행 /)
+        - Value = 3.4 단계에서 만든 검색 서비스 Azure 애플리케이션 프록시의 외부 URL (후행/를 포함 하 여 정확히 동일 해야 함)
     - `CloudPrintResourceId = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintResourceId`
-        - 값 = 엔터프라이즈 클라우드 인쇄 서비스 Azure 응용 프로그램 프록시의 3.5 단계에서에서 만든 외부 URL (해야 똑같이 포함 후행 /)
+        - 값 = 3.5 단계에서 만든 엔터프라이즈 클라우드 인쇄 서비스 Azure 애플리케이션 프록시의 외부 URL (뒤에 오는/를 포함 하 여 정확히 동일 해야 함)
     - `DiscoveryMaxPrinterLimit = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/DiscoveryMaxPrinterLimit`
         - 값 = \<양의 정수\>
 
-### <a name="step-5---publish-desired-shared-printers"></a>5 단계-원하는 공유 프린터를 게시 합니다.
-1. 인쇄 서버에 원하는 프린터를 설치 합니다.
-2. 프린터 속성 UI를 통해 프린터를 공유 합니다.
-3. 원하는 액세스 권한을 부여할 사용자 선택
-4. 변경 내용을 저장 하 고 프린터 속성 창을 닫습니다
-5. Windows 10 Fall Creator Update 컴퓨터에서 관리자 권한 Windows PowerShell 명령 프롬프트를 열으십시오
+### <a name="step-5---publish-desired-shared-printers"></a>5 단계-원하는 공유 프린터 게시
+1. 인쇄 서버에 원하는 프린터 설치
+2. 프린터 속성 UI를 통해 프린터 공유
+3. 액세스 권한을 부여 하려면 원하는 사용자 집합을 선택 하십시오.
+4. 변경 내용을 저장 하 고 프린터 속성 창을 닫습니다.
+5. Windows 10의 컴퓨터 작성자 업데이트 컴퓨터에서 관리자 권한 Windows PowerShell 명령 프롬프트를 엽니다.
    1. 다음 명령을 실행 합니다.
-      - `find-module -Name "PublishCloudPrinter"` PowerShell 갤러리 (PSGallery) 컴퓨터에 연결할 수 있는지 확인 하려면
+      - `find-module -Name "PublishCloudPrinter"`컴퓨터가 PowerShell 갤러리에 연결할 수 있는지 확인 하려면 (PSGallery)
       - `install-module -Name "PublishCloudPrinter"`
 
-        >   참고: 메시징 표시 될 수 있습니다는 신뢰할 수 없는 리포지토리의 'PSGallery' 않다는 합니다.  설치를 계속 하려면 ' y'를 입력 합니다.
+        >   참고: ' PSGallery '는 신뢰할 수 없는 리포지토리입니다. 라는 메시지가 표시 될 수 있습니다.  ' Y '를 입력 하 여 설치를 계속 합니다.
 
-      - Publish-CloudPrinter
-        - 프린터 = 정의 된 공유 프린터 이름
-        - 제조업체는 프린터 제조업체 =
+      - 게시-CloudPrinter
+        - Printer = 정의 된 공유 프린터 이름
+        - 제조업체 = 프린터 제조업체
         - 모델 = 프린터 모델
-        - OrgLocation = 예: 프린터 위치를 지정 하는 JSON 문자열.   `{"attrs": [{"category":"country", "vs":"USA", "depth":0}, {"category":"organization", "vs":"Microsoft", "depth":1}, {"category":"site", "vs":"Redmond, WA", "depth":2}, {"category":"building", "vs":"Building 1", "depth":3}, {"category":"floor\_number", "vn":1, "depth":4}, {"category":"room\_name", "vs":"1111", "depth":5}]}`
-        - Sddl = 프린터에 대 한 권한을 나타내는 SDDL 문자열입니다. 이 프린터 속성 보안 탭을 적절 하 게 수정 하 고 다음 명령 프롬프트에서 다음 명령을 실행 하 여 얻을 수 있습니다. `(Get-Printer PrinterName -full).PermissionSDDL`
-            예: "G:DUD:(A;OICI;FA;;;WD)"
+        - OrgLocation = 프린터 위치를 지정 하는 JSON 문자열입니다 (예:).`{"attrs": [{"category":"country", "vs":"USA", "depth":0}, {"category":"organization", "vs":"Microsoft", "depth":1}, {"category":"site", "vs":"Redmond, WA", "depth":2}, {"category":"building", "vs":"Building 1", "depth":3}, {"category":"floor\_number", "vn":1, "depth":4}, {"category":"room\_name", "vs":"1111", "depth":5}]}`
+        - Sddl = 프린터에 대 한 권한을 나타내는 SDDL 문자열입니다. 프린터 속성 보안 탭을 적절 하 게 수정한 다음 명령 프롬프트에서 다음 명령을 실행 하 여이를 가져올 수 있습니다.`(Get-Printer PrinterName -full).PermissionSDDL`
+            (. "G:DUD: (A; OICI; FA;;; WD) "
 
-          > 참고: 추가 해야 합니다 **`O:BA`** 접두사로 결과에 위 명령 프롬프트 명령을에서 SDDL 설정으로 값을 설정 하기 전에 합니다.  예: SDDL = `O:BAG:DUD:(A;OICI;FA;;;WD)`
+          > 참고: 값을 SDDL 설정으로 **`O:BA`** 설정 하기 전에 위의 명령 프롬프트 명령에서 결과에 접두사를 추가 해야 합니다.  예: SDDL =`O:BAG:DUD:(A;OICI;FA;;;WD)`
 
-        - DiscoveryEndpoint = Mopria 검색 서비스 Azure 응용 프로그램 프록시의 3.4 단계에서에서 만든 외부 URL
-        - PrintServerEndpoint = 엔터프라이즈 클라우드 인쇄 서비스 Azure 응용 프로그램 프록시의 3.5 단계에서에서 만든 외부 URL
-        - AzureClientId 위에서 등록 된 웹 앱을 네이티브 값의 응용 프로그램 ID =
-        - AzureTenantGuid Azure AD 테 넌 트의 디렉터리 ID =
-        - DiscoveryResourceId 프록시 Mopria 검색 클라우드 서비스의 [옵션] 응용 프로그램 ID =
+        - DiscoveryEndpoint = 3.4 단계에서 만든 검색 서비스 Azure 애플리케이션 프록시의 외부 URL
+        - PrintServerEndpoint = 3.5 단계에서 만든 엔터프라이즈 클라우드 인쇄 서비스의 외부 URL Azure 애플리케이션 프록시
+        - AzureClientId = 위에서 등록 된 네이티브 웹 앱 값의 응용 프로그램 ID
+        - AzureTenantGuid = Azure AD 테 넌 트의 디렉터리 ID
+        - DiscoveryResourceId = [선택 사항] 프록시 된 모바일 서비스의 응용 프로그램 ID 검색 클라우드 서비스
 
-        > 참고: 모든 필수 매개 변수 값도 명령줄에서 입력할 수 있습니다.<br>
-        **게시 CloudPrinter** PowerShell 명령 구문: <br>
-        게시 CloudPrinter-프린터 \<문자열\> -제조업체 \<문자열\> -모델 \<문자열\> -OrgLocation \<문자열\> -Sddl \<문자열\> -DiscoveryEndpoint \<문자열\> -PrintServerEndpoint \<문자열\> -AzureClientId \<문자열\> -AzureTenantGuid \<문자열\> [-DiscoveryResourceId \<문자열\>] <br>
-        예제 명령: `publish-cloudprinter -Printer EcpPrintTest -Manufacturer Microsoft -Model FilePrinterEcp -OrgLocation '{"attrs": [{"category":"country", "vs":"USA", "depth":0}, {"category":"organization", "vs":"MyCompany", "depth":1}, {"category":"site", "vs":"MyCity, State", "depth":2}, {"category":"building", "vs":"Building 1", "depth":3}, {"category":"floor\_number", "vn":1, "depth":4}, {"category":"room\_name", "vs":"1111", "depth":5}]}' -Sddl "O:BAG:DUD:(A;OICI;FA;;;WD)" -DiscoveryEndpoint https://<services-machine-endpoint>/mcs -PrintServerEndpoint https://<services-machine-endpoint>/ecp -AzureClientId <Native Web App ID> -AzureTenantGuid <Azure AD Directory ID> -DiscoveryResourceId <Proxied Mopria Discovery Cloud Service App ID>`
+        > 참고: 모든 필수 매개 변수 값은 명령줄에도 입력할 수 있습니다.<br>
+        **게시-CloudPrinter** PowerShell 명령 구문: <br>
+        Publish-cloudprinter-프린터 \<문자열\> -제조업체 \<\> 문자열-모델 \<문자열\> -OrgLocation \<string\> -Sddl \<문자열 \<\> \<\> -discoveryendpoint \<문자열\> -printserverendpoint 문자열-azureclientid string-AzureTenantGuid\> \<string \<[-discoveryresourceid문자열\>]\> <br>
+        샘플 명령:`publish-cloudprinter -Printer EcpPrintTest -Manufacturer Microsoft -Model FilePrinterEcp -OrgLocation '{"attrs": [{"category":"country", "vs":"USA", "depth":0}, {"category":"organization", "vs":"MyCompany", "depth":1}, {"category":"site", "vs":"MyCity, State", "depth":2}, {"category":"building", "vs":"Building 1", "depth":3}, {"category":"floor\_number", "vn":1, "depth":4}, {"category":"room\_name", "vs":"1111", "depth":5}]}' -Sddl "O:BAG:DUD:(A;OICI;FA;;;WD)" -DiscoveryEndpoint https://<services-machine-endpoint>/mcs -PrintServerEndpoint https://<services-machine-endpoint>/ecp -AzureClientId <Native Web App ID> -AzureTenantGuid <Azure AD Directory ID> -DiscoveryResourceId <Proxied Mopria Discovery Cloud Service App ID>`
 
 
 ## <a name="verifying-the-deployment"></a>배포 확인
-Azure ad 가입 장치 구성 MDM 정책이 포함 된:
-- 웹 브라우저를 열고 https:// 이동할&lt;services machine 끝점 &gt; /mcs / (검색 끝점에 대 한 외부 URL)을 서비스 합니다.
-- 이 끝점의 기능 집합을 설명 하는 JSON 텍스트를 표시
-- 로 이동 "OS 설정-\> 장치-\> 프린터 및 스캐너"
-    - "클라우드 프린터 검색" 링크를 확인 해야
-    - 링크를 클릭
-    - "검색 위치를 선택 하십시오" 링크를 클릭 합니다.
-        - 장치 위치 계층 구조 표시
-    - 위치를 선택 하 고 클릭 **확인** 을 클릭 한 다음 **검색** 프린터 찾기를 단추
-    - 프린터를 선택 하 고 클릭 **장치 추가** 단추
-    - 성공적인 프린터 설치 후 프린터로 인쇄할 즐겨 찾는 앱에서
+MDM 정책이 구성 된 Azure AD 조인 장치에서 다음을 수행 합니다.
+- 웹 브라우저를 열고 https://&lt;&gt;/mcs/services (검색 끝점의 외부 URL)로 이동 합니다.
+- 이 끝점의 기능 집합을 설명 하는 JSON 텍스트가 표시 되어야 합니다.
+- "OS 설정-\> 장치-\> 프린터 & 스캐너"로 이동 합니다.
+    - "클라우드 프린터 검색" 링크가 표시 됩니다.
+    - 링크를 클릭 합니다.
+    - "검색 위치를 선택 하세요." 링크를 클릭 합니다.
+        - 장치 위치 계층이 표시 됩니다.
+    - 위치를 선택 하 고 **확인** 을 클릭 한 다음 **검색** 단추를 클릭 하 여 프린터를 찾습니다.
+    - 프린터를 선택 하 고 **장치 추가** 단추를 클릭 합니다.
+    - 프린터를 성공적으로 설치한 후 즐겨 찾는 앱에서 프린터로 인쇄 합니다.
 
->   참고: "EcpPrintTest" 프린터를 사용 하는 경우 아래에 있는 인쇄 서버 컴퓨터에서 출력 파일을 찾을 수 있습니다 "c:\\ECPTestOutput\\EcpTestPrint.xps" 위치 합니다.
+>   참고: "Ecpprinttest" 프린터를 사용 하는 경우 "C:\\ecpprinttest\\ecpprinttest .xps" 위치의 인쇄 서버 컴퓨터에서 출력 파일을 찾을 수 있습니다.

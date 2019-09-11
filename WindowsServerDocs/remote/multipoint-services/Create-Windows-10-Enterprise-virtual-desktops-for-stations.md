@@ -1,6 +1,6 @@
 ---
 title: 스테이션용 Windows 10 Enterprise 가상 데스크톱 만들기
-description: Windows Server 2016 데스크톱 스테이션을 만드는 방법 알아보기
+description: 스테이션에 대해 Windows Server 2016 데스크톱을 만드는 방법 알아보기
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold
@@ -13,12 +13,12 @@ ms.assetid: 63f08b5b-c735-41f4-b6c8-411eff85a4ab
 author: evaseydl
 ms.author: evas
 manager: scottman
-ms.openlocfilehash: 0aa81ef3633adf27a25b45b3b7c00082d83bf0bb
-ms.sourcegitcommit: 21165734a0f37c4cd702c275e85c9e7c42d6b3cb
+ms.openlocfilehash: e68412808e037b788d5b25c1c2c7b14253e40ea6
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2019
-ms.locfileid: "65034628"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70871735"
 ---
 # <a name="create-windows-10-enterprise-virtual-desktops-for-stations"></a>스테이션용 Windows 10 Enterprise 가상 데스크톱 만들기
 MultiPoint 서비스에서이 옵션 구성은 필수 응용 프로그램가 각 사용자에 대 한 클라이언트 운영 체제의 자체 인스턴스를 필요로 하는 경우에 주로 사용 됩니다. Windows 서버에 설치할 수 없는 응용 프로그램 및 여러 인스턴스를 동일한 호스트 컴퓨터에서 실행 되지 않는 응용 프로그램을 예로 들 수 있습니다.  
@@ -44,7 +44,7 @@ MultiPoint 서비스에서이 옵션 구성은 필수 응용 프로그램가 각
 ## <a name="procedures"></a>절차  
 다음 절차에 따라 수행할 수 있는 작업:  
   
--   [가상 데스크톱 템플릿 만들기](#create-a-template-for-virtual-desktops)  
+-   [가상 데스크톱에 대 한 템플릿 만들기](#create-a-template-for-virtual-desktops)  
   
 -   [템플릿에서 가상 데스크톱 만들기](#create-virtual-machine-desktops-from-the-template)  
   
@@ -102,14 +102,14 @@ MultiPoint 서비스에서이 옵션 구성은 필수 응용 프로그램가 각
   
     Hyper-v에서 템플릿이 열립니다 **VM 연결** 창 및 자동 로그온 내장 된 Administrator 계정을 사용 하 여 수행 됩니다.  
   
-5.  이 시점에서 응용 프로그램 및 소프트웨어 업데이트를 설치 하 고, 설정을 변경 하 고, 관리자 프로필을 업데이트할 수 있습니다. 모든 변경 내용에 서식 파일의 기본 제공 관리자 프로필 템플릿에서 만든 가상 데스크톱 스테이션의 기본 사용자 프로필에 복사 됩니다.  
+5.  이 시점에서 응용 프로그램 및 소프트웨어 업데이트를 설치 하 고, 설정을 변경 하 고, 관리자 프로필을 업데이트할 수 있습니다. 템플릿의 기본 제공 관리자 프로필에 대 한 모든 변경 내용은 템플릿에서 만든 가상 데스크톱 스테이션의 기본 사용자 프로필로 복사 됩니다.  
   
     도메인에 대 여 스테이션을 연결 하는 경우 로컬 사용자 계정을 만들고 사용자 지정 하는 동안 로컬 관리자 그룹에 추가 하는 것이 좋습니다.  
   
     > [!NOTE]  
     > 템플릿을 사용자 지정 하는 동안 시스템을 다시 시작 되 면 시스템이 다시 시작 후 자동 로그온 내장 된 Administrator 계정을 사용 하 여 실패할 수 있습니다. 사용자가 만든 로컬 관리자 계정을 사용 하 여 로그온 수동으로이 문제를 해결 하려면 기본 제공 관리자 계정의 암호를 변경, 로그 오프 한 다음 다시 로그온 기본 제공 관리자 계정 및 새 암호를 사용 하 여 합니다. (할 사용자가 로컬 관리자 계정을 사용 하 여 로그온 할 때 생성 된 프로필을 삭제 합니다.)  
   
-6.  시스템 구성에서는 완료 된 후 두 번 클릭 하 고 **CompleteCustomization** Sysprep를 실행 한 다음 템플릿을를 종료 하는 관리자가 바탕 화면에 바로 가기. 사용자 지정 하는 동안 Sysprep 도구는 이미지를 만들기 위해 Windows 설치를 준비 하려면 모든 고유한 시스템 정보를 제거 합니다.  
+6.  시스템 구성을 마친 후에는 관리자의 바탕 화면에서 **CompleteCustomization** 바로 가기를 두 번 클릭 하 여 Sysprep을 실행 한 다음 템플릿을 종료 합니다. 사용자 지정 하는 동안 Sysprep 도구는 이미지를 만들기 위해 Windows 설치를 준비 하려면 모든 고유한 시스템 정보를 제거 합니다.  
   
 ### <a name="create-virtual-machine-desktops-from-the-template"></a>템플릿에서 가상 컴퓨터 데스크톱 만들기  
 가상 데스크톱 템플릿으로 수, 가상 데스크톱 만들기를 시작할 준비가 되었습니다. 데스크톱을 원하는 대로 구성 합니다. MultiPoint Server 컴퓨터에 연결 된 각 장치에 대 한 가상 데스크톱 만들어질 수 있습니다. 다음에 사용자를 스테이션에 로그온 하기 전에 표시 된 세션 기반 데스크톱 대신 가상 데스크톱이 표시 됩니다.  

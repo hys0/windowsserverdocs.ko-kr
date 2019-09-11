@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 9db69cfb2eb42af90b392433a6e05eaab9978160
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: d31b7d60021e72f80c762df5b4e1a4199ea3909c
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66190811"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70867692"
 ---
 # <a name="token-signing-certificates"></a>토큰 서명 인증서
 
@@ -25,7 +25,7 @@ ms.locfileid: "66190811"
   
 -   토큰에 대 한\-서명 인증서를 성공적으로 보안 토큰에 토큰을 서명\-서명 인증서 프라이빗 키가 포함 되어야 합니다.  
   
--   AD FS 서비스 계정에는 토큰에 액세스할 수 있어야\-로컬 컴퓨터의 저장소에 인증서의 프라이빗 키를 서명합니다. 이 알아서 설치 합니다. AD FS 관리 스냅인을 사용할 수도 있습니다\-토큰 변경 해도이 액세스할 수 있도록에\-서명 인증서.  
+-   AD FS 서비스 계정에는 로컬 컴퓨터의 개인 저장소\-에 있는 토큰 서명 인증서의 개인 키에 대 한 액세스 권한이 있어야 합니다. 이 알아서 설치 합니다. AD FS 관리 스냅인을 사용할 수도 있습니다\-토큰 변경 해도이 액세스할 수 있도록에\-서명 인증서.  
   
 > [!NOTE]  
 > 공개 키 인프라는 \(PKI\) 여러 가지 용도 대 한 프라이빗 키를 공유 하지 모범 사례입니다. 따라서 토큰으로 페더레이션 서버에 설치 하는 서비스 통신 인증서를 사용 하지 않는\-서명 인증서.  
@@ -33,7 +33,7 @@ ms.locfileid: "66190811"
 ## <a name="how-token-signing-certificates-are-used-across-partners"></a>어떻게 토큰\-서명 인증서를 사용 하 여 파트너 간에  
 모든 토큰\-암호화 프라이빗 키와 디지털 서명하는 데 사용되는 공개 키 포함 서명 인증서 \(프라이빗 키를 사용하여\) 보안 토큰입니다. 나중에 파트너 페더레이션 서버에서 수신 된 후 이러한 키 인증 유효성 검사 \(공개 키를 사용 하 여\) 암호화 된 보안 토큰입니다.  
   
-각 보안 토큰의 디지털 서명을 하는 계정 파트너, 때문에 리소스 파트너는 계정 파트너에서 실제로 보안 토큰을 발행 하 고 수정 되지 않았는지 확인할 수 있습니다. 디지털 서명을 확인 하는 파트너의 토큰의 공개 키 부분\-서명 인증서. 서명을 확인 하 고 해당 조직에 대 한 자체 보안 토큰을 생성 하는 리소스 페더레이션 서버 자체 토큰으로 보안 토큰에 서명 후\-서명 인증서.  
+각 보안 토큰의 디지털 서명을 하는 계정 파트너, 때문에 리소스 파트너는 계정 파트너에서 실제로 보안 토큰을 발행 하 고 수정 되지 않았는지 확인할 수 있습니다. 디지털 서명은 파트너의 토큰\-서명 인증서의 공개 키 부분으로 확인 됩니다. 서명을 확인 하 고 해당 조직에 대 한 자체 보안 토큰을 생성 하는 리소스 페더레이션 서버 자체 토큰으로 보안 토큰에 서명 후\-서명 인증서.  
   
 페더레이션 파트너 환경에 대 한 때 토큰\-CA에서 서명 인증서를 발급 되어 있는지 확인 합니다.  
   
@@ -66,11 +66,11 @@ AD FS 팜을 배포 하는 경우 토큰\-서명 인증서가 서버 팜을 만�
   
 ![토큰 서명](media/adfs2_fedserver_certstory_4.gif)  
   
-Microsoft 인증서 서비스를 사용 하 여 엔터프라이즈 CA로 인증서를 설치 하는 방법에 대 한 내용은 [IIS 7.0: IIS 7.0에서에서 도메인 서버 인증서 만들기](https://go.microsoft.com/fwlink/?LinkId=108548)합니다.  
+Microsoft 인증서 서비스를 엔터프라이즈 CA로 사용 하는 경우 인증서를 설치 하 [는 방법에 대 한 자세한 내용은 IIS 7.0: IIS 7.0](https://go.microsoft.com/fwlink/?LinkId=108548)에서 도메인 서버 인증서를 만듭니다.  
   
 공용 CA의 인증서를 설치하는 방법에 대한 자세한 내용은 [IIS 7.0: 인터넷 서버 인증서 요청](https://go.microsoft.com/fwlink/?LinkId=108549)을 참조하십시오.  
   
-자체를 설치 하는 방법은\-서명 된 인증서를 참조 하십시오 [IIS 7.0: 자동 만들기\-IIS 7.0에서에서 서버 인증서를 서명](https://go.microsoft.com/fwlink/?LinkID=108271)합니다.  
+자체\-서명 된 인증서를 설치 [하는 방법에 대 한 자세한 내용은 IIS 7.0: IIS 7.0\-](https://go.microsoft.com/fwlink/?LinkID=108271)에서 자체 서명 된 서버 인증서를 만듭니다.  
   
 ## <a name="see-also"></a>관련 항목
 [Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)

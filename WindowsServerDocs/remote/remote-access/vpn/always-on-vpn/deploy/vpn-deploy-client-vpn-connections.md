@@ -10,12 +10,12 @@ ms.localizationpriority: medium
 ms.author: pashort
 author: shortpatti
 ms.reviewer: deverette
-ms.openlocfilehash: eab81443ba91b229495a124aae642570608c6bba
-ms.sourcegitcommit: af80963a1d16c0b836da31efd9c5caaaf6708133
+ms.openlocfilehash: c3ac8295d048c599a1cb6d1ed141cd63a7a73f47
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68658884"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70871342"
 ---
 # <a name="step-6-configure-windows-10-client-always-on-vpn-connections"></a>6단계. Windows 10 클라이언트 Always On VPN 연결 구성
 

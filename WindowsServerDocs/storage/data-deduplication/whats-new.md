@@ -8,36 +8,36 @@ author: wmgries
 manager: klaasl
 ms.author: wgries
 ms.date: 04/17/2019
-ms.openlocfilehash: 44a08443312d4e48b8fa518755e2a9b7aa50643c
-ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
+ms.openlocfilehash: ab32f6bec44b69b70c9e8cca2dadb4dff752cf88
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65476088"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70870242"
 ---
 # <a name="whats-new-in-data-deduplication"></a>데이터 중복 제거의 새로운 기능
 
-> 적용 대상: Windows Server 2019, Windows Server 2016, Windows Server (반기 채널)
+> 적용 대상: Windows Server 2019, Windows Server 2016, Windows Server(반기 채널)
 
-[데이터 중복 제거](overview.md) 매우 뛰어난 성능 제공을 유연 하 고 사설 클라우드 규모에서 관리 하도록 Windows Server에 최적화 되었습니다. Windows Server의 소프트웨어 정의 저장소 스택에 대 한 자세한 내용은 참조 하십시오 [What's New in Windows Server에서 저장소](../whats-new-in-storage.md)합니다.
+Windows Server의 [데이터 중복 제거](overview.md) 는 사설 클라우드 규모에서 매우 유연 하 고 유연 하며 관리할 수 있도록 최적화 되었습니다. Windows Server의 소프트웨어 정의 저장소 스택에 대 한 자세한 내용은 [Windows server에서 제공 되는 저장소의 새로운 기능](../whats-new-in-storage.md)을 참조 하세요.
 
-데이터 중복 제거는 Windows Server 2019에서 다음과 같은 향상 된 기능을 가집니다.
-
-| 기능 | 새로운 기능 또는 업데이트된 기능 | 설명 |
-|---------------|----------------|-------------|
-| ReFS 지원  | 단추를 사용하여 새            | 최대 10 배 이상의 데이터 중복 제거 및 ReFS 파일 시스템에 대 한 압축을 사용 하 여 동일한 볼륨에 저장 합니다. (있기 [하나만 클릭](https://www.youtube.com/watch?v=PRibTacyKko&feature=youtu.be) 를 Windows Admin Center 사용 하 여 켭니다.) 다중 스레드 사후 처리 아키텍처 유지 성능에 미치는 영향을 최소화 하는 동안 절감 비율이 최대화 하는 선택적 압축을 사용 하 여 가변 크기 청크 저장소입니다. 볼륨을 지 원하는 최대 64TB 및 각 파일의 첫 번째 4TB 중복 제거 됩니다.|
-
-데이터 중복 제거에 Windows Server 2016부터 다음과 같은 향상 기능이 있습니다.
+데이터 중복 제거는 Windows Server 2019에서 다음과 같은 향상 된 기능을 포함 합니다.
 
 | 기능 | 새로운 기능 또는 업데이트된 기능 | 설명 |
 |---------------|----------------|-------------|
-| [대규모 볼륨 지원](whats-new.md#large-volume-support) | 업데이트됨 | Windows Server 2016 이전에는 특별히 예상되는 변동에 대비해 볼륨의 크기를 조정해야 했으며, 10TB가 넘는 볼륨은 중복 제거에 적합하지 않았습니다. Windows Server 2016에서는 데이터 중복 제거에서 최대 64TB의 볼륨 크기를 지원합니다. |
-| [대용량 파일 지원](whats-new.md#large-file-support) | 업데이트됨 | Windows Server 2016 이전에는 크기가 1TB에 가까운 파일은 중복 제거에 적합하지 않았습니다. Windows Server 2016에서는 최대 1TB의 파일이 완전히 지원됩니다. |
+| ReFS 지원  | 단추를 사용하여 새            | ReFS 파일 시스템에 대 한 중복 제거 및 압축을 사용 하 여 동일한 볼륨에 더 많은 데이터를 10 배. (Windows 관리 센터를 사용 하 여 설정 하는 [한 번만 클릭 하면](https://www.youtube.com/watch?v=PRibTacyKko&feature=youtu.be) 됩니다.) 선택적인 압축을 사용 하는 가변 크기 청크 저장소는 절약 률을 최대화 하 고, 다중 스레드 후 처리 아키텍처는 성능 영향을 최소화 합니다. 는 최대 64 TB의 볼륨을 지원 하 고 각 파일의 첫 4 TB를 중복 제거 합니다.|
+
+데이터 중복 제거는 Windows Server 2016부터 다음과 같은 향상 된 기능을 포함 합니다.
+
+| 기능 | 새로운 기능 또는 업데이트된 기능 | 설명 |
+|---------------|----------------|-------------|
+| [대용량 볼륨에 대 한 지원](whats-new.md#large-volume-support) | 업데이트됨 | Windows Server 2016 이전에는 특별히 예상되는 변동에 대비해 볼륨의 크기를 조정해야 했으며, 10TB가 넘는 볼륨은 중복 제거에 적합하지 않았습니다. Windows Server 2016에서는 데이터 중복 제거에서 최대 64TB의 볼륨 크기를 지원합니다. |
+| [대량 파일 지원](whats-new.md#large-file-support) | 업데이트됨 | Windows Server 2016 이전에는 크기가 1TB에 가까운 파일은 중복 제거에 적합하지 않았습니다. Windows Server 2016에서는 최대 1TB의 파일이 완전히 지원됩니다. |
 | [Nano Server에 대 한 지원](whats-new.md#nano-server-support) | 단추를 사용하여 새 | 데이터 중복 제거는 Windows Server 2016의 새로운 Nano Server 배포 옵션에서 사용할 수 있으며 완전히 지원됩니다. |
 | [간소화 된 백업 지원](whats-new.md#simple-backup-support) | 단추를 사용하여 새 | Windows Server 2012 R2에서는 일련의 수동 구성 단계를 통해 Microsoft의 [Data Protection Manager](https://technet.microsoft.com/library/hh758173.aspx)와 같은 가상화된 백업 응용 프로그램을 지원했습니다. Windows Server 2016에서는 가상화된 백업 응용 프로그램에 대한 데이터 중복 제거의 원활한 배포를 위해 새로운 기본 사용 유형(백업)이 추가되었습니다.|
 | [클러스터 OS 롤링 업그레이드 지원](whats-new.md#cluster-upgrade-support) | 단추를 사용하여 새 | 데이터 중복 제거는 Windows Server 2016의 [클러스터 OS 롤링 업그레이드](../..//failover-clustering/cluster-operating-system-rolling-upgrade.md) 기능을 완전히 지원합니다. |
 
-## <a name="large-volume-support"></a>대규모 볼륨 지원
+## <a name="large-volume-support"></a>대용량 볼륨에 대 한 지원
 
 **이와 같은 변경을 통해 더해지는 가치**  
 Windows Server 2012 R2에서 데이터 중복 제거를 통해 최상의 성능을 얻기 위해서는 최적화 작업이 데이터 변경 또는 "변동" 속도에 맞출 수 있도록 볼륨 크기를 적절히 조정해야 합니다. 일반적으로 이는 데이터 중복 제거가 워크로드의 쓰기 패턴에 따라 10TB 이하의 볼륨에서만 효과가 있음을 의미합니다.
@@ -53,7 +53,7 @@ Windows Server 2016에서는 데이터 중복 제거 작업 파이프라인이 �
 
 이러한 최적화는 최적화 작업뿐만 아니라 [모든 데이터 중복 제거 작업](understand.md#job-info)에 적용됩니다.
 
-## <a name="large-file-support"></a>대용량 파일 지원
+## <a name="large-file-support"></a>대량 파일 지원
 **이와 같은 변경을 통해 더해지는 가치**  
 Windows Server 2012 R2에서 대용량 파일은 데이터 중복 제거 처리 파이프라인의 성능 저하로 인해 데이터 중복 제거에 적합하지 합니다. Windows Server 2016에서는 최대 1TB 파일의 중복 제거가 매우 효율적이므로 관리자는 보다 광범위한 워크로드에 중복 제거 절감 효과를 적용할 수 있습니다. 예를 들어 일반적으로 백업 워크로드와 관련된 대용량 파일의 중복 제거를 수행할 수 있습니다.
 

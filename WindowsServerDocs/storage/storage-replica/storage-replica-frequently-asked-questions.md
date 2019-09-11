@@ -8,12 +8,12 @@ ms.topic: get-started-article
 author: nedpyle
 ms.date: 04/26/2019
 ms.assetid: 12bc8e11-d63c-4aef-8129-f92324b2bf1b
-ms.openlocfilehash: d4eb2ad65f436db28264650b8c8d7b0cf69b2cee
-ms.sourcegitcommit: 6f968368c12b9dd699c197afb3a3d13c2211f85b
+ms.openlocfilehash: 89676ba821b99d44865bc6f45c34c05edb771d9d
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68544675"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70865260"
 ---
 # <a name="frequently-asked-questions-about-storage-replica"></a>저장소 복제본에 대한 질문과 대답
 
@@ -188,8 +188,8 @@ Windows Server 백업, Microsoft Azure 백업, Microsoft DPM 또는 다른 스�
 ## <a name="FAQ15.5"></a>로그 볼륨 모범 사례는 무엇 인가요?
 최적의 로그 크기는 환경 및 워크 로드 마다 다르며, 워크 로드에서 수행 하는 쓰기 IO의 양에 따라 결정 됩니다. 
 
-1.  로그가 더 크거나 작다고 해서 속도가 빨라지거나 느려지지 않습니다.
-2.  예를 들어 더 큰 로그와 더 작은 로그는 10GB의 데이터 볼륨 대 10TB 데이터 볼륨에 미치는 영향이 다르지 않습니다.
+1.  로그 용량이 크거나 작으면 더 빠르거나 더 느리게 작동 하지 않습니다.
+2.  예를 들어 더 크거나 작은 로그는 10GB 데이터 볼륨과 10TB의 데이터 볼륨에 대 한 베어링은 없습니다.
 
 로그가 더 크다는 것은 간단하게 없어지기 전에 더 많은 쓰기 IO를 수집하고 유지하는 것입니다. 이를 통해 네트워크 중단이나 대상이 오프라인되는 것과 같은 원본과 대상 컴퓨터 사이의 서비스 중단이 길어져도 그 피해가 줄어듭니다. 로그가 10시간의 쓰기를 보유하고 있고 네트워크가 2시간 동안 중단된 경우, 네트워크가 원본을 복구할 때 동기화되지 않은 차이점만 대상으로 매우 빠르게 복사하므로 매우 신속하게 다시 보호 상태를 유지할 수 있습니다. 로그가 10시간의 쓰기를 보유하고 있고 중단이 2일인 경우, 원본은 비트맵이라고 하는 다른 로그에서 복원되며 동기화 상태로 돌아가는 데 더 느립니다. 동기화되면 로그 사용으로 돌아갑니다.
 

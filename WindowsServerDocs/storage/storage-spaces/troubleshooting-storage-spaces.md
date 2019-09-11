@@ -9,12 +9,12 @@ ms.topic: article
 author: kaushika-msft
 ms.date: 10/24/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 7cc5709723b300f46ce108b36501e7ace272cd45
-ms.sourcegitcommit: 6f968368c12b9dd699c197afb3a3d13c2211f85b
+ms.openlocfilehash: 30fdda5ada01510027100efce1e95f310f69c6a1
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68544571"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70865101"
 ---
 # <a name="troubleshoot-storage-spaces-direct"></a>문제 해결 스토리지 공간 다이렉트
 
@@ -203,7 +203,7 @@ Volume Name:
 
 자세한 내용은 [상태 및 작동 상태 스토리지 공간 다이렉트 문제 해결](storage-spaces-states.md)을 참조 하세요.
 
-## <a name="event-5120-with-statusiotimeout-c00000b5"></a>STATUS_IO_TIMEOUT c00000b5를 사용 하는 이벤트 5120 
+## <a name="event-5120-with-status_io_timeout-c00000b5"></a>STATUS_IO_TIMEOUT c00000b5를 사용 하는 이벤트 5120 
 
 > [!Important]
 > **Windows Server 2016:** 픽스를 사용 하 여 업데이트를 적용 하는 동안 이러한 증상이 발생할 가능성을 줄이려면 아래 저장소 유지 관리 모드 절차를 사용 하 여 [10 월 18 일 2018, Windows Server 2016 이상 버전에 대 한 누적 업데이트](https://support.microsoft.com/help/4462928) 를 설치 하는 것이 좋습니다. 현재 노드가 2016 년 5 월 [8 일 2018](https://support.microsoft.com/help/4103723) ~ [10 월 9 2018 일](https://support.microsoft.com/help/KB4462917)에 출시 된 Windows Server 누적 업데이트를 설치 했습니다.
@@ -217,7 +217,7 @@ Event Source: Microsoft-Windows-FailoverClustering
 Event ID: 5120
 Description:    Cluster Shared Volume 'CSVName' ('Cluster Virtual Disk (CSVName)') has entered a paused state because of 'STATUS_IO_TIMEOUT(c00000b5)'. All I/O will temporarily be queued until a path to the volume is reestablished. 
 
-Cluster Shared Volume ‘CSVName’ ('Cluster Virtual Disk (CSVName)') has entered a paused state because of 'STATUS_CONNECTION_DISCONNECTED(c000020c)'. All I/O will temporarily be queued until a path to the volume is reestablished.    
+Cluster Shared Volume ‘CSVName' ('Cluster Virtual Disk (CSVName)') has entered a paused state because of 'STATUS_CONNECTION_DISCONNECTED(c000020c)'. All I/O will temporarily be queued until a path to the volume is reestablished.    
 ```
 
 이벤트 5120이 기록 되 면 추가 증상이 발생 하거나 성능에 영향을 미칠 수 있는 디버깅 정보를 수집 하기 위해 라이브 덤프가 생성 됩니다. 라이브 덤프를 생성 하면 덤프 파일을 쓰기 위해 메모리의 스냅숏을 만들 수 있는 잠깐 일시 중지 됩니다. 많은 메모리가 있고 스트레스 상태에 있는 시스템은 노드가 클러스터 멤버 자격에서 삭제 될 수 있으며 다음 이벤트 1135이 기록 될 수도 있습니다.
@@ -424,7 +424,7 @@ Windows Server 2016 스토리지 공간 다이렉트 클러스터에는 하나 �
 
 스크립트를 실행 하는 방법을 보여 주는 몇 가지 예는 다음과 같습니다.
 
-- 대상 매개 **변수** 를 사용 하 여 정상으로 설정 해야 하는 디스크를 지정 합니다. **WMI MSFT_PhysicalDisk** 또는 **PhysicalDisk**에서 일련 번호를 가져올 수 있습니다. (아래 일련 번호에 0을 사용 하는 것입니다.)
+- 대상 매개 **변수를 사용** 하 여 정상으로 설정 해야 하는 디스크를 지정 합니다. **WMI MSFT_PhysicalDisk** 또는 **PhysicalDisk**에서 일련 번호를 가져올 수 있습니다. (아래 일련 번호에 0을 사용 하는 것입니다.)
 
    ```powershell
    Clear-PhysicalDiskHealthData -Intent -Policy -SerialNumber 000000000000000 -Verbose -Force

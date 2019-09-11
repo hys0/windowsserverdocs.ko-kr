@@ -9,12 +9,12 @@ manager: dongill
 ms.author: jgerend
 ms.date: 6/24/2017
 description: 서버 역할을 설치하고 동기화 공유를 만들고 DNS 레코드를 만드는 방법을 포함하여 클라우드 폴더를 배포하는 방법을 설명합니다.
-ms.openlocfilehash: d2ba117a021cfc7361c0f7c8df2ed9f3c4bc9d94
-ms.sourcegitcommit: be243a92f09048ca80f85d71555ea6ee3751d712
+ms.openlocfilehash: 45b25befcde328e38f694b64fa7536a2b5c7f232
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792336"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70867032"
 ---
 # <a name="deploying-work-folders"></a>클라우드 폴더 배포
 
@@ -51,7 +51,7 @@ ms.locfileid: "67792336"
 ## <a name="step-2-create-dns-records"></a>2단계: DNS 레코드 만들기  
  사용자가 인터넷을 통해 동기화하도록 허용하려면 인터넷 클라이언트에서 클라우드 폴더 URL을 확인할 수 있도록 공용 DNS에 호스트(A) 레코드를 만들어야 합니다. 이 DNS 레코드는 역방향 프록시 서버의 외부 인터페이스로 확인되어야 합니다.  
   
- 내부 네트워크에서, DNS에 클라우드 폴더 서버의 FDQN을 확인하는 workfolders라는 이름의 CNAME 레코드를 만듭니다 작업 폴더 클라이언트가 자동 검색을 사용 하는 경우 클라우드 폴더 서버를 검색 하는 데 사용 하는 URL은 https:\//workfolders.domain.com 합니다. 자동 검색을 사용하려면 DNS에 workfolders CNAME 레코드가 있어야 합니다.  
+ 내부 네트워크에서, DNS에 클라우드 폴더 서버의 FDQN을 확인하는 workfolders라는 이름의 CNAME 레코드를 만듭니다 클라우드 폴더 클라이언트에서 자동 검색을 사용 하는 경우 클라우드 폴더 서버를 검색 하는 데 사용\/되는 URL은 https:/workfolders.domain.com입니다. 자동 검색을 사용하려면 DNS에 workfolders CNAME 레코드가 있어야 합니다.  
   
 ## <a name="step-3-install-work-folders-on-file-servers"></a>3단계: 파일 서버에 클라우드 폴더 설치  
  서버 관리자를 사용하거나 로컬 또는 네트워크에서 원격으로 Windows PowerShell을 사용하여 도메인에 가입된 서버에 클라우드 폴더를 설치할 수 있습니다. 이는 네트워크에서 여러 동기화 서버를 구성하는 경우에 유용합니다.  
@@ -212,7 +212,7 @@ New-SyncShare "HR Sync Share" K:\Share-1 –User "HR Sync Share Users"
 > [!TIP]
 >  동기화 공유를 만든 후에는 파일 서버 리소스 관리자 기능을 사용하여 공유의 데이터를 관리할 수 있습니다. 예를 들어 서버 관리자의 클라우드 폴더 페이지에 있는 **할당량** 타일을 사용하여 사용자 폴더에 대한 할당량을 설정할 수 있습니다. 또한 [파일 차단 관리](https://technet.microsoft.com/library/cc732074.aspx)를 사용하여 클라우드 폴더에서 동기화할 파일 형식을 제어하거나, [동적 액세스 제어](https://technet.microsoft.com/windows-server-docs/identity/solution-guides/dynamic-access-control--scenario-overview)에 설명된 시나리오를 사용하여 보다 정교한 파일 분류 작업을 수행할 수 있습니다.  
   
-## <a name="step-8-optionally-specify-a-tech-support-email-address"></a>8단계: 필요에 따라 기술 지원 메일 주소를 지정   
+## <a name="step-8-optionally-specify-a-tech-support-email-address"></a>8단계: 필요에 따라 기술 지원 전자 메일 주소를 지정 합니다.   
  파일 서버에 클라우드 폴더를 설치한 후, 서버에 대한 관리 담당자 전자 메일 주소를 지정하고 싶을 것입니다. 전자 메일 주소를 추가하려면 다음 절차를 수행합니다.  
   
 #### <a name="specifying-an-administrative-contact-email"></a>관리 담당자 전자 메일 지정 
@@ -229,7 +229,7 @@ New-SyncShare "HR Sync Share" K:\Share-1 –User "HR Sync Share Users"
  환경에서 여러 동기화 서버를 호스팅하는 경우 AD DS에서 사용자 계정에 대한 **msDS-SyncServerURL** 속성을 채워 서버 자동 검색을 구성해야 합니다.  
   
 >[!NOTE]
->Active Directory의 msDS-SyncServerURL 속성은 웹 응용 프로그램 프록시 또는 Azure AD 응용 프로그램 프록시와 같은 역방향 프록시 솔루션을 통해 클라우드 폴더에 액세스하는 원격 사용자에 대해서는 정의되어서는 안 됩니다. msDS-SyncServerURL 속성이 정의되면, 클라우드 폴더 클라이언트는 역방향 프록시 솔루션을 통해서는 액세스할 수 없는 내부 URL에 액세스하려 시도합니다. 웹 응용 프로그램 프록시 또는 Azure AD 응용 프로그램 프록시를 사용하는 경우, 각 클라우드 폴더 서버에 대한 고유 프록시 응용 프로그램을 만들어야 합니다. 자세한 내용은 참조 하세요. [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 개요](deploy-work-folders-adfs-overview.md) 나 [Azure AD 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포](https://blogs.technet.microsoft.com/filecab/2017/05/31/enable-remote-access-to-work-folders-using-azure-active-directory-application-proxy/)합니다.
+>Active Directory의 msDS-SyncServerURL 속성은 웹 응용 프로그램 프록시 또는 Azure AD 응용 프로그램 프록시와 같은 역방향 프록시 솔루션을 통해 클라우드 폴더에 액세스하는 원격 사용자에 대해서는 정의되어서는 안 됩니다. 의 msds-primary-computer-SyncServerURL 속성이 정의 된 경우 클라우드 폴더 클라이언트는 역방향 프록시 솔루션을 통해 액세스할 수 없는 내부 URL에 액세스 하려고 시도 합니다. 웹 응용 프로그램 프록시 또는 Azure AD 응용 프로그램 프록시를 사용하는 경우, 각 클라우드 폴더 서버에 대한 고유 프록시 응용 프로그램을 만들어야 합니다. 자세한 내용은 AD FS 및 웹 [응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포를 참조 하세요. ](deploy-work-folders-adfs-overview.md) [Azure AD 응용 프로그램 프록시을 사용 하 여 클라우드 폴더](https://blogs.technet.microsoft.com/filecab/2017/05/31/enable-remote-access-to-work-folders-using-azure-active-directory-application-proxy/)개요 또는 배포
 
 
  이렇게 하려면 먼저 Windows Server 2012 R2 도메인 컨트롤러를 설치하거나 `Adprep /forestprep` 및 `Adprep /domainprep` 명령을 사용하여 포리스트 및 도메인 스키마를 업데이트해야 합니다. 이러한 명령을 안전하게 실행하는 방법에 대한 자세한 내용은 [Adprep 실행](https://technet.microsoft.com/library/dd464018.aspx)을 참조하세요.  
@@ -251,7 +251,7 @@ New-SyncShare "HR Sync Share" K:\Share-1 –User "HR Sync Share Users"
 6.  **추가할 값** 상자에 이 사용자를 동기화할 동기화 서버의 URL을 입력하고 **추가**, **확인**을 차례로 클릭한 다음 **확인**을 다시 클릭합니다.  
   
     > [!NOTE]
-    >  동기화 서버 URL은 `https://` 또는 `http://`(보안 연결이 필요한지 여부에 따라 결정됨) 뒤에 동기화 서버의 정규화된 도메인 이름이 오는 예를 들어 **https:\//sync1.contoso.com**합니다.
+    >  동기화 서버 URL은 `https://` 또는 `http://`(보안 연결이 필요한지 여부에 따라 결정됨) 뒤에 동기화 서버의 정규화된 도메인 이름이 오는 예 **: https:\//sync1.contoso.com**.
 
 여러 사용자에 대한 특성을 채우려면 Active Directory PowerShell을 사용합니다. 다음은 5단계에서 설명한 *HR Sync Share Users* 그룹의 모든 구성원에 대한 특성을 채우는 예입니다.
   
@@ -289,12 +289,12 @@ Azure Active Directory 응용 프로그램 프록시를 사용하여 클라우�
 > [!NOTE]
 >  이러한 정책 설정은 Windows 8.1 또는 Windows Server 2012 R2 이상의 그룹 정책 관리를 실행하는 컴퓨터에서 그룹 정책을 편집할 때만 사용할 수 있습니다. 이전 운영 체제의 그룹 정책 관리 버전에서는 이 설정을 사용할 수 없습니다. 이러한 정책 설정은 [Windows 7용 클라우드 폴더](http://blogs.technet.com/b/filecab/archive/2014/04/24/work-folders-for-windows-7.aspx) 앱이 설치된 Windows 7 PC에 적용됩니다.  
   
-##  <a name="BKMK_LINKS"></a> 참고 항목  
+##  <a name="BKMK_LINKS"></a>참고 항목  
  자세한 내용은 다음 리소스를 참조하십시오.  
   
 |콘텐츠 형식|참조|  
 |------------------|----------------|  
-|**이해**|-   [작업 폴더](work-folders-overview.md)|  
+|**명확**|-   [작업 폴더](work-folders-overview.md)|  
 |**계획**|-   [클라우드 폴더 구현 디자인](plan-work-folders.md)|
 |**배포**|-   [AD FS 및 WAP (웹 응용 프로그램 프록시)를 사용 하 여 클라우드 폴더 배포](deploy-work-folders-adfs-overview.md)<br />-   [클라우드 폴더 테스트 랩 배포](http://blogs.technet.com/b/filecab/archive/2013/07/10/work-folders-test-lab-deployment.aspx) (블로그 게시물)<br />-   [클라우드 폴더 서버 Url에 대 한 새 사용자 특성](http://blogs.technet.com/b/filecab/archive/2013/10/09/a-new-user-attribute-for-work-folders-server-url.aspx) (블로그 게시물)|  
 |**기술 참조**|-   [대화형 로그온: 컴퓨터 계정 잠금 임계값](https://technet.microsoft.com/library/jj966264(v=ws.11).aspx)<br />-   [동기화 공유 Cmdlet](https://docs.microsoft.com/powershell/module/syncshare/?view=win10-ps)|

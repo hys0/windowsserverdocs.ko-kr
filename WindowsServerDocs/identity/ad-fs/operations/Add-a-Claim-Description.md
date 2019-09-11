@@ -9,17 +9,17 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 1023ca7da02d2a1f6af42f68892dc4c5c8f1a2bf
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 00ae720a933289e3cd4bde5fe9d20610e38ae726
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66444373"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70866040"
 ---
 # <a name="add-a-claim-description"></a>클레임 설명 추가
 
 
-계정 파트너 조직의 관리자가 그룹 또는 역할에서 사용자의 등록을 나타내는 또는 직원 id 번호를 사용자의 예를 들어 사용자에 대 한 일부 데이터를 나타내는 클레임을 만듭니다.
+계정 파트너 조직에서 관리자는 사용자의 그룹 또는 역할에 대 한 사용자의 멤버 자격을 나타내는 클레임을 만들거나 사용자의 직원 id 번호와 같은 사용자에 대 한 일부 데이터를 나타냅니다.
 
 리소스 파트너 조직에서 관리자 그룹 및 리소스 사용자로 인식 될 수 있는 사용자를 나타내는 해당 클레임을 만듭니다. 나가는 클레임을 계정 파트너 조직 지도 들어오는 클레임 리소스 파트너 조직의 리소스 파트너 때문에 자격 증명을 제공 하는 계정 파트너를 받아들일 수 있습니다. 
 

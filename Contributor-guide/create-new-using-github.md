@@ -4,12 +4,12 @@ description: GitHub 및 Visual Studio Code를 사용 하 여 Microsoft 직원으
 author: eross-msft
 ms.author: lizross
 ms.date: 05/02/2019
-ms.openlocfilehash: f5e7e3d0cd17c64175fddaaac73c12daa2c2a32c
-ms.sourcegitcommit: ffd9c42374c7448deb5f53f7a865cb427b5e4e9e
+ms.openlocfilehash: 3f09c36c1e3960728ff016f5801deb854e3d3c96
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887955"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70865071"
 ---
 # <a name="create-new-windows-server-articles-using-github-and-visual-studio-code"></a>GitHub 및 Visual Studio Code를 사용 하 여 새 Windows Server 문서 만들기
 
@@ -199,7 +199,7 @@ GitHub 계정과 도구를 만들고 설정한 후에는 리포지토리의 개�
 
 3. 검토자가 검토 및 게시를 모두 처리 하는 것을 알 수 있도록 주석에 **#sign 기능** 을 입력 합니다. **#Sign** 설명:
 
-    - 끌어오기 요청에 대 한 레이블을 업데이트 하지 않음에서 병합으로 업데이트 합니다.
+    - 끌어오기 요청에 대 한 레이블을 **업데이트 하지 않음에서 병합** **으로 업데이트 합니다.**
 
     - 별칭 및 작성자가 콘텐츠를 검토할 준비가 되었음을 알 수 있습니다.
 

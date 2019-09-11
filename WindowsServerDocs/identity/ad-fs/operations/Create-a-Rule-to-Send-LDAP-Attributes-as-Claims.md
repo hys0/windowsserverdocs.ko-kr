@@ -9,19 +9,19 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 00ea4f9f868b9c82c2a0859be971db26394251a3
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: d391c77ba309c84e2f8f8d0676b71b7c198fc241
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66189355"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70865934"
 ---
 # <a name="create-a-rule-to-send-ldap-attributes-as-claims"></a>LDAP 특성을 클레임으로 전송 하는 규칙 만들기
 
 
-Active Directory Federation Services에 대 한 클레임 규칙 템플릿으로 보내기 LDAP 특성을 사용 하 여 \(AD FS\), Lightweight Directory Access Protocol에서 특성을 선택 하는 규칙을 만들 수 있습니다 \(LDAP\)신뢰 당사자에 대 한 클레임으로 보내기을 Active Directory와 같은 특성 저장소입니다. 클레임 규칙에서 인증 된 사용자에 대 한 특성 값을 추출 하는 보내기 LDAP 특성을 만들려면이 규칙 서식 파일을 사용할 수는 예를 들어 합니다 **displayName** 하 고 **telephoneNumber** Active 디렉터리 특성 및 두 개의 서로 다른 나가는 클레임으로 이러한 값을 보낼 수 있습니다.  
+Active Directory Federation Services \( \(AD FS\)에서 ldap 특성을 클레임으로 보내기 규칙 템플릿을 사용 하 여 Lightweight directory Access 프로토콜 LDAP\)에서특성을선택하는규칙을만들수있습니다.신뢰 당사자에 게 클레임으로 보낼 Active Directory와 같은 특성 저장소입니다. 예를 들어이 규칙 템플릿을 사용 하 여 **displayName** 및 **telephoneNumber** Active Directory 특성에서 인증 된 사용자에 대 한 특성 값을 추출 하 여 전송 하는 클레임 규칙으로 LDAP 특성을 보내도록 클레임 규칙을 만들 수 있습니다. 두 개의 서로 다른 나가는 클레임으로 값  
   
-또한 이 규칙을 사용하여 모든 사용자 그룹의 구성원을 보낼 수도 있습니다. 개별 그룹 구성원만 보내려는 경우 그룹 구성원을 클레임으로 보내기 규칙 템플릿을 사용합니다. 다음 절차를 사용 하 여 AD FS 관리 스냅인을 사용 하 여 클레임 규칙을 만들려면\-에 있습니다.  
+이 규칙을 사용 하 여 모든 사용자의 그룹 멤버 자격을 보낼 수도 있습니다. 개별 그룹 구성원만 보내려는 경우 그룹 구성원을 클레임으로 보내기 규칙 템플릿을 사용합니다. 다음 절차를 사용 하 여 AD FS 관리 스냅인을 사용 하 여 클레임 규칙을 만들려면\-에 있습니다.  
   
 로컬 컴퓨터에서 이 절차를 완료하기 위해서는 최소한 **관리자** 또는 이와 동등한 자격이 있어야 합니다.  적절 한 계정을 사용 하는 방법에 대 한 세부 정보를 검토 하 고 그룹 구성원 자격 [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477)합니다.  
 
@@ -84,7 +84,7 @@ Active Directory Federation Services에 대 한 클레임 규칙 템플릿으로
   
 4.  에 **클레임 규칙 편집** 대화 상자는 다음과 같은 탭 하나를 선택, 편집 하는 하는 규칙 집합을 신뢰에 따라,이 규칙을 만들려고 할 및 클릭 한 다음 **규칙 추가** 해당 규칙 집합에 연관 된 규칙 마법사를 시작 합니다.  
   
-    -   **수용 변환 규칙**  
+    -   **수락 변환 규칙**  
   
     -   **발급 변환 규칙**  
   
@@ -98,7 +98,7 @@ Active Directory Federation Services에 대 한 클레임 규칙 템플릿으로
   
 6.  에 **규칙 구성** 페이지 **클레임 규칙 이름** 아래에서이 규칙에 대 한 표시 이름을 입력 **특성 저장소** 선택 **Active Directory**, 아래에서 **LDAP의 매핑 특성을 보내는 클레임 유형** 원하는 **LDAP 특성** 및 해당 **나가는 클레임 유형** 드롭다운에서 형식\-목록 아래쪽 합니다.  
   
-    새 LDAP 특성 및이 규칙의 일부로 클레임을 발급 하려는 각 Active Directory 특성에 대 한 다른 행에 대해 나가는 클레임 형식 쌍을 선택 해야 합니다.  
+    이 규칙의 일부로 클레임을 발급 하려는 각 Active Directory 특성에 대해 새 LDAP 특성 및 나가는 클레임 유형 쌍을 다른 행에서 선택 해야 합니다.  
 ![규칙 만들기](media/Create-a-Rule-to-Send-LDAP-Attributes-as-Claims/ldap4.PNG)    
 7.  클릭 하 고 **마침** 단추입니다.  
   

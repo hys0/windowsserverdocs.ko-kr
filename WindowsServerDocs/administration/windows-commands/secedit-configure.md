@@ -1,6 +1,6 @@
 ---
-title: secedit:configure
-description: '에 대 한 Windows 명령을 항목 * * *- '
+title: 'secedit: 구성'
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9420945dca9b72de1937258201e7072d2bb115b2
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 9844ed9ac1c53d0a3b9f8bb28ab085a20a48509d
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66441518"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70868818"
 ---
-# <a name="seceditconfigure"></a>secedit:configure
+# <a name="seceditconfigure"></a>secedit: 구성
 
 
 
@@ -45,23 +45,23 @@ Secedit /configure /db <database file name> [/cfg <configuration file name>] [/o
 
 ## <a name="remarks"></a>설명
 
-로그 파일의 경로를 제공 하지 않으면, 기본 로그 파일 (*systemroot*\Users \*UserAccount<em>\My Documents\Security\Logs\*DatabaseName</em>.log) 사용 됩니다.
+로그 파일의 경로를 지정 하지 않으면 기본 로그 파일 (*systemroot*\Users \*UserAccount<em>\My Documents\Security\Logs\*DatabaseName</em>)이 사용 됩니다.
 
 Windows Server 2008 부터는 `Secedit /refreshpolicy` 바뀌었습니다 `gpupdate`합니다. 보안 설정을 새로 고치는 방법에 대 한 자세한 내용은 [Gpupdate](gpupdate.md)합니다.
 
-## <a name="BKMK_Examples"></a>예제
+## <a name="BKMK_Examples"></a>예와
 
 보안 구성 및 분석 스냅인을 사용 하 여 만든 SecDbContoso.sdb 보안 데이터베이스에 보안 매개 변수에 대 한 분석을 수행 합니다. 직접 명령을 확인할 수 있도록 메시지를 표시 하는 SecAnalysisContosoFY11 올바르게 실행 파일에 출력 합니다.
 ```
 Secedit /analyze /db C:\Security\FY11\SecDbContoso.sdb /log C:\Security\FY11\SecAnalysisContosoFY11.log
 ```
-분석을 보 였음을 몇 가지 자질 하므로 SecContoso.inf, 보안 템플릿을 수정한 경우를 가정해 봅니다. 출력 메시지를 표시 하지 SecAnalysisContosoFY11 기존 파일을 전송 변경 내용을 통합을 다시 명령을 실행 합니다.
+분석에서 일부 자질를 표시 하 여 보안 템플릿 SecContoso. i n s. 출력 메시지를 표시 하지 SecAnalysisContosoFY11 기존 파일을 전송 변경 내용을 통합을 다시 명령을 실행 합니다.
 ```
 Secedit /configure /db C:\Security\FY11\SecDbContoso.sdb /cfg SecContoso.inf /overwrite /log C:\Security\FY11\SecAnalysisContosoFY11.xml /quiet
 ```
 
 #### <a name="additional-references"></a>추가 참조
 
--   [secedit](secedit.md)
+-   [Secedit](secedit.md)
 -   [Secedit:analyze](secedit-analyze.md)
 -   [명령줄 구문 키](command-line-syntax-key.md)

@@ -1,6 +1,6 @@
 ---
 title: 가상 네트워크 피어링 구성
-description: 가상 네트워크 피어 링 구성 가져오기 피어 링 하는 두 가상 네트워크를 만드는 것입니다.
+description: 가상 네트워크 피어 링을 구성 하려면 피어 링를 가져오는 두 개의 가상 네트워크를 만들어야 합니다.
 manager: dougkim
 ms.prod: windows-server-threshold
 ms.technology: networking-hv-switch
@@ -9,26 +9,26 @@ ms.assetid: ''
 ms.author: pashort
 author: shortpatti
 ms.date: 08/08/2018
-ms.openlocfilehash: 3ef3db879080e3372e7b287dcc55ae052c1fe109
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 417585ffbe1e8374be1560073d5636659eaf4332
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59816394"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70869882"
 ---
 # <a name="configure-virtual-network-peering"></a>가상 네트워크 피어링 구성
 
 >적용 대상: Windows Server
 
-이 절차에서는 Windows PowerShell를 사용 하 여 하나의 서브넷이 있는 각 두 가상 네트워크를 만들 수 있습니다. 그런 다음 간의 연결을 사용 하도록 설정 하려면 두 가상 네트워크 간에 피어 링 구성 합니다.
+이 절차에서는 Windows PowerShell을 사용 하 여 각각 하나의 서브넷이 있는 두 개의 가상 네트워크를 만듭니다. 그런 다음 두 가상 네트워크 간에 피어 링을 구성 하 여 두 가상 네트워크 간의 연결을 설정 합니다.
 
-- [1 단계입니다. 첫 번째 가상 네트워크 만들기](#step-1-create-the-first-virtual-network)
+- [1단계. 첫 번째 가상 네트워크 만들기](#step-1-create-the-first-virtual-network)
 
-- [2 단계입니다. 두 번째 가상 네트워크 만들기](#step-2-create-the-second-virtual-network)
+- [2단계. 두 번째 가상 네트워크 만들기](#step-2-create-the-second-virtual-network)
 
-- [3 단계: 첫 번째 가상 네트워크에서 두 번째 가상 네트워크로 피어 링 구성](#step-3-configure-peering-from-the-first-virtual-network-to-the-second-virtual-network)
+- [3 단계: 첫 번째 가상 네트워크에서 두 번째 가상 네트워크로의 피어 링 구성](#step-3-configure-peering-from-the-first-virtual-network-to-the-second-virtual-network)
 
-- [4 단계입니다. 두 번째 가상 네트워크에서 첫 번째 가상 네트워크로 피어 링 구성](#step-4-configure-peering-from-the-second-virtual-network-to-the-first-virtual-network)
+- [4단계. 두 번째 가상 네트워크에서 첫 번째 가상 네트워크로의 피어 링 구성](#step-4-configure-peering-from-the-second-virtual-network-to-the-first-virtual-network)
 
 
 >[!IMPORTANT]
@@ -36,7 +36,7 @@ ms.locfileid: "59816394"
 
 ## <a name="step-1-create-the-first-virtual-network"></a>1단계. 첫 번째 가상 네트워크 만들기
 
-이 단계를 사용 하 여 Windows PowerShell 찾기는 HNV 공급자 논리 네트워크 서브넷 1 개를 사용 하 여 첫 번째 가상 네트워크를 만듭니다. 다음 예제 스크립트는 하나의 서브넷이 있는 Contoso의 가상 네트워크를 만듭니다.
+이 단계에서는 Windows PowerShell을 사용 하 여 HNV 공급자 논리 네트워크를 찾아 하나의 서브넷이 있는 첫 번째 가상 네트워크를 만듭니다. 다음 예제 스크립트는 하나의 서브넷이 있는 Contoso의 가상 네트워크를 만듭니다.
 
 ``` PowerShell
 #Find the HNV Provider Logical Network  
@@ -68,7 +68,7 @@ New-NetworkControllerVirtualNetwork -ResourceId "Contoso_VNet1" -ConnectionUri $
 
 ## <a name="step-2-create-the-second-virtual-network"></a>2단계. 두 번째 가상 네트워크 만들기
 
-이 단계에서는 하나의 서브넷이 있는 두 번째 가상 네트워크를 만듭니다. 다음 예제 스크립트는 하나의 서브넷이 있는 Woodgrove의 가상 네트워크를 만듭니다.
+이 단계에서는 하나의 서브넷을 사용 하 여 두 번째 가상 네트워크를 만듭니다. 다음 예제 스크립트는 하나의 서브넷을 사용 하 여 Woodgrove의 가상 네트워크를 만듭니다.
 
 ``` PowerShell
 
@@ -90,9 +90,9 @@ $vnetproperties.Subnets = @($vsubnet)
 New-NetworkControllerVirtualNetwork -ResourceId "Woodgrove_VNet1" -ConnectionUri $uri -Properties $vnetproperties
 ```
 
-## <a name="step-3-configure-peering-from-the-first-virtual-network-to-the-second-virtual-network"></a>3단계. 첫 번째 가상 네트워크에서 두 번째 가상 네트워크로 피어 링 구성
+## <a name="step-3-configure-peering-from-the-first-virtual-network-to-the-second-virtual-network"></a>3단계. 첫 번째 가상 네트워크에서 두 번째 가상 네트워크로의 피어 링 구성
 
-이 단계에서는 첫 번째 가상 네트워크와 앞의 두 단계에서 만든 두 번째 가상 네트워크 간에 피어 링을 구성 합니다. 다음 예제 스크립트에서 가상 네트워크 피어 링 설정 **Contoso_vnet1** 하 **Woodgrove_vnet1**합니다.
+이 단계에서는 앞의 두 단계에서 만든 첫 번째 가상 네트워크와 두 번째 가상 네트워크 간의 피어 링을 구성 합니다. 다음 예제 스크립트는 **Contoso_vnet1** 에서 **Woodgrove_vnet1**로의 가상 네트워크 피어 링을 설정 합니다.
 
 ```PowerShell
 $peeringProperties = New-Object Microsoft.Windows.NetworkController.VirtualNetworkPeeringProperties
@@ -116,11 +116,11 @@ New-NetworkControllerVirtualNetworkPeering -ConnectionUri $uri -VirtualNetworkId
 ```
 
 >[!IMPORTANT]
->이 피어 링을 만든 후 vnet 상태를 보여 줍니다 **Initiated**합니다.
+>이 피어 링을 만들면 vnet 상태가 **시작**됨으로 표시 됩니다.
 
-## <a name="step-4-configure-peering-from-the-second-virtual-network-to-the-first-virtual-network"></a>4단계. 두 번째 가상 네트워크에서 첫 번째 가상 네트워크로 피어 링 구성
+## <a name="step-4-configure-peering-from-the-second-virtual-network-to-the-first-virtual-network"></a>4단계. 두 번째 가상 네트워크에서 첫 번째 가상 네트워크로의 피어 링 구성
 
-이 단계에서는 두 번째 가상 네트워크와 위의 1, 2 단계에서 만든 첫 번째 가상 네트워크 간에 피어 링을 구성 합니다. 다음 예제 스크립트에서 가상 네트워크 피어 링 설정 **Woodgrove_vnet1** 하 **Contoso_vnet1**합니다.
+이 단계에서는 두 번째 가상 네트워크와 위의 1 단계와 2 단계에서 만든 첫 번째 가상 네트워크 간의 피어 링을 구성 합니다. 다음 예제 스크립트는 **Woodgrove_vnet1** 에서 **Contoso_vnet1**로의 가상 네트워크 피어 링을 설정 합니다.
 
 ```PowerShell
 $peeringProperties = New-Object Microsoft.Windows.NetworkController.VirtualNetworkPeeringProperties 
@@ -133,16 +133,16 @@ $peeringProperties.allowVirtualnetworkAccess = $true
 # Indicates whether forwarded traffic will be allowed across the vnets
 $peeringProperties.allowForwardedTraffic = $true 
 
-# Indicates whether the peer virtual network can access this virtual network’s gateway
+# Indicates whether the peer virtual network can access this virtual network's gateway
 $peeringProperties.allowGatewayTransit = $false 
 
-# Indicates whether this virtual network will use peer virtual network’s gateway
+# Indicates whether this virtual network will use peer virtual network's gateway
 $peeringProperties.useRemoteGateways =$false 
 
 New-NetworkControllerVirtualNetworkPeering -ConnectionUri $uri -VirtualNetworkId “Woodgrove_vnet1” -ResourceId “WoodgrovetoContoso” -Properties $peeringProperties 
 
 ```
 
-상태를 피어 링 vnet이 피어 링을 만든 후 보여 줍니다 **Connected** 두 피어에 대 한 합니다. 이제 가상 컴퓨터에 하나의 가상 네트워크 피어 링된 된 가상 네트워크에서 가상 머신과 통신할 수 있습니다.
+이 피어 링을 만든 후에는 vnet 피어 링 상태가 두 피어에 대해 모두 **연결 됨** 으로 표시 됩니다. 이제 하나의 가상 네트워크에 있는 가상 머신이 피어 링 가상 네트워크의 가상 머신과 통신할 수 있습니다.
 
 ---

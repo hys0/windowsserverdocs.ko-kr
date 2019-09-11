@@ -13,20 +13,20 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: bd5863a46f77fd4ac53c8559ff17279271dc5c46
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 90efc49b0d7ff6edd8367cece42bf7f2950de952
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59849694"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70870564"
 ---
 # <a name="configuring-additional-lsa-protection"></a>추가 LSA 보호 구성
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 IT 전문가를 위한 이 항목에서는 LSA(로컬 보안 기관) 프로세스에 대한 추가 보호를 구성하여 자격 증명을 손상시킬 수 있는 코드 삽입을 방지하는 방법에 대해 설명합니다.
 
-LSASS(로컬 보안 기관 서버 서비스) 프로세스를 포함하는 LSA는 사용자의 로컬 및 원격 로그인에 대한 유효성을 검사하고 로컬 보안 정책을 적용합니다. Windows 8.1 운영 체제 메모리 읽기를 방지 하 고 보호 되지 않은 프로세스에 의해 코드 삽입을 위해 LSA에 대 한 추가 보호를 제공 합니다. 이로 인해 LSA에서 저장 및 관리하는 자격 증명에 대한 보안이 강화됩니다. LSA에 대 한 보호 된 프로세스 설정은 Windows 8.1 구성할 수 있습니다 하지만 Windows RT 8.1에서 구성할 수 없습니다. 이 설정을 보안 부팅과 함께 사용하면 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa 레지스트리 키를 사용 안 함으로 설정해도 적용되지 않으므로 추가 보호가 실현됩니다.
+LSASS(로컬 보안 기관 서버 서비스) 프로세스를 포함하는 LSA는 사용자의 로컬 및 원격 로그인에 대한 유효성을 검사하고 로컬 보안 정책을 적용합니다. Windows 8.1 운영 체제에서는 보호 되지 않은 프로세스에의 한 메모리 및 코드 삽입을 방지 하기 위해 LSA에 대 한 추가 보호 기능을 제공 합니다. 이로 인해 LSA에서 저장 및 관리하는 자격 증명에 대한 보안이 강화됩니다. LSA에 대 한 보호 된 프로세스 설정은 Windows 8.1에서 구성할 수 있지만 Windows RT 8.1에서는 구성할 수 없습니다. 이 설정을 보안 부팅과 함께 사용하면 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa 레지스트리 키를 사용 안 함으로 설정해도 적용되지 않으므로 추가 보호가 실현됩니다.
 
 ### <a name="protected-process-requirements-for-plug-ins-or-drivers"></a>플러그 인 또는 드라이버에 대한 보호된 프로세스 요구 사항
 LSA 플러그 인 또는 드라이버에서 보호된 프로세스를 로드하려면 다음 조건을 충족해야 합니다.
@@ -35,7 +35,7 @@ LSA 플러그 인 또는 드라이버에서 보호된 프로세스를 로드하�
 
     보호 모드에서는 LSA로 로드되는 모든 플러그 인이 Microsoft 서명으로 디지털 서명되어야 합니다. 따라서 서명되지 않거나 Microsoft 서명이 아닌 다른 방식으로 서명된 플러그 인은 LSA로 로드되지 않습니다. 이러한 플러그 인에는 스마트 카드 드라이버, 암호화 플러그인, 암호 필터 등이 있습니다.
 
-    스마트 카드 드라이버와 같은 드라이버인 LSA 플러그 인은 WHQL 인증을 사용하여 서명해야 합니다. 자세한 내용은 [WHQL 릴리스 서명](https://msdn.microsoft.com/library/windows/hardware/ff553976%28v=vs.85%29.aspx)합니다.
+    스마트 카드 드라이버와 같은 드라이버인 LSA 플러그 인은 WHQL 인증을 사용하여 서명해야 합니다. 자세한 내용은 [WHQL 릴리스 서명](https://msdn.microsoft.com/library/windows/hardware/ff553976%28v=vs.85%29.aspx)을 참조 하세요.
 
     WHQL 인증 프로세스가 없는 LSA 플러그 인은 [LSA에 대한 파일 서명 서비스](https://go.microsoft.com/fwlink/?LinkId=392590)를 사용하여 서명해야 합니다.
 
@@ -57,11 +57,11 @@ LSA 플러그 인 또는 드라이버에서 보호된 프로세스를 로드하�
 
 -   감사 로그를 사용하여 보호된 프로세스로 실행되지 않은 LSA 플러그 인 및 드라이버를 확인합니다.
 
-#### <a name="limitations-introduced-with-enabled-lsa-protection"></a>설정 된 LSA 보호를 사용 하 여 도입 된 제한 사항
+#### <a name="limitations-introduced-with-enabled-lsa-protection"></a>LSA 보호 설정에 도입 된 제한 사항
 
-LSA 보호를 사용 하는 경우 LSA 플러그 인을 사용자 지정을 디버깅할 수 없습니다.
-보호 된 프로세스 경우 LSASS에 디버거를 연결할 수 없습니다.
-일반적으로 실행 중인 보호 된 프로세스를 디버깅 하려면 없는 지원 되는 방법이 있습니다.
+LSA 보호를 사용 하는 경우 사용자 지정 LSA 플러그 인을 디버그할 수 없습니다.
+보호 된 프로세스의 경우에는 디버거를 LSASS에 연결할 수 없습니다.
+일반적으로 실행 중인 보호 된 프로세스를 디버깅 하는 데 지원 되는 방법은 없습니다.
 
 ## <a name="how-to-identify-lsa-plug-ins-and-drivers-that-fail-to-run-as-a-protected-process"></a>보호된 프로세스로 실행되지 않은 LSA 플러그 인 및 드라이버를 확인하는 방법
 이 섹션에 설명된 이벤트는 응용 프로그램 및 서비스 로그\Microsoft\Windows\CodeIntegrity 아래의 작업 로그에 있습니다. 이러한 이벤트를 통해 서명 때문에 로드되지 않은 LSA 플러그 인 및 드라이버를 확인할 수 있습니다. 이러한 이벤트를 관리하려면 **wevtutil** 명령줄 도구를 사용하면 됩니다. 이 도구에 대한 자세한 내용은 [Wevtutil](../../administration/windows-commands/Wevtutil.md)을 참조하십시오.
@@ -79,7 +79,7 @@ LSA 보호를 사용 하는 경우 LSA 플러그 인을 사용자 지정을 디�
 
 이벤트 3065 및 이벤트 3066의 결과를 분석합니다.
 
-그런 다음 이벤트 뷰어에서이 이벤트를 볼 수 있습니다. Microsoft Windows-Codeintegrity/작동 합니다.
+그러면 이벤트 뷰어에서 다음 이벤트가 표시 될 수 있습니다. Microsoft-Codeintegrity/Operational:
 
 -   **이벤트 3065**: 이 이벤트는 코드 무결성 확인에서 공유 섹션에 대한 보안 요구 사항을 충족하지 않는 특정 드라이버로 프로세스(일반적으로 lsass.exe)를 로드하려는 시도가 발견되었음을 기록합니다. 그러나 설정된 시스템 정책으로 인해 이미지는 로드가 허용됩니다.
 
@@ -112,7 +112,7 @@ LSA 보호를 사용 하는 경우 LSA 플러그 인을 사용자 지정을 디�
 
 9. **값 종류** 상자에서 **REG_DWORD**를 클릭하여 선택합니다.
 
-10. 에 **값 데이터** 상자에 입력 **00000008**합니다.
+10. **값 데이터** 상자에 **00000008**를 입력 합니다.
 
 11. **확인**을 클릭합니다.
 
@@ -126,7 +126,7 @@ LSA 보호를 사용 하는 경우 LSA 플러그 인을 사용자 지정을 디�
 
 이벤트 3033 및 이벤트 3063의 결과를 분석합니다.
 
-그런 다음 이벤트 뷰어에서이 이벤트를 볼 수 있습니다. Microsoft Windows-Codeintegrity/작동 합니다.
+그러면 이벤트 뷰어에서 다음 이벤트가 표시 될 수 있습니다. Microsoft-Codeintegrity/Operational:
 
 -   **이벤트 3033**: 이 이벤트는 코드 무결성 확인에서 Microsoft 서명 수준 요구 사항을 충족하지 않는 드라이버로 프로세스(일반적으로 lsass.exe)를 로드하려는 시도가 발견되었음을 기록합니다.
 
@@ -134,8 +134,8 @@ LSA 보호를 사용 하는 경우 LSA 플러그 인을 사용자 지정을 디�
 
 공유 섹션은 일반적으로 인스턴스 데이터가 같은 보안 컨텍스트를 사용하는 다른 프로세스와 상호 작용하도록 허용하는 프로그래밍 방법으로 인해 생성됩니다. 이로 인해 보안 취약점이 발생할 수 있습니다.
 
-## <a name="BKMK_HowToConfigure"></a>자격 증명 추가 LSA 보호를 구성 하는 방법
-(보안 부팅 또는 UEFI 없이 또는) Windows 8.1 실행 하는 장치에서 구성이 불가능이 섹션에 설명 된 절차를 수행 하 여 합니다. Windows RT 8.1을 실행 하는 장치의 경우 lsass.exe 보호가 항상 사용 하도록 설정 및 해제할 수 없습니다.
+## <a name="BKMK_HowToConfigure"></a>자격 증명의 추가 LSA 보호를 구성 하는 방법
+Windows 8.1를 실행 하는 장치 (보안 부팅 또는 UEFI 사용 여부에 상관 없음)에서는이 섹션에 설명 된 절차를 수행 하 여 구성할 수 있습니다. Windows RT 8.1를 실행 하는 장치의 경우 lsass.exe 보호가 항상 사용 되며 해제할 수 없습니다.
 
 ### <a name="on-x86-based-or-x64-based-devices-using-secure-boot-and-uefi-or-not"></a>보안 부팅 및 UEFI를 사용하거나 사용하지 않는 x86 기반 또는 x64 기반 장치
 보안 부팅 및 UEFI를 사용하는 x86 기반 또는 x64 기반 장치에서는 LSA 보호가 레지스트리 키를 사용하여 설정될 때 UEFI 변수가 UEFI 펌웨어에 설정됩니다. 이 설정이 펌웨어에 저장되면 레지스트리 키에서 UEFI 변수를 삭제하거나 변경할 수 없습니다. UEFI 변수를 다시 설정해야 합니다.
@@ -199,6 +199,6 @@ Windows를 시작할 때 LSA가 보호 모드로 시작되었는지 확인하려
 ## <a name="additional-resources"></a>추가 자료
 [자격 증명 보호 및 관리](credentials-protection-and-management.md)
 
-[파일 서명 LSA에 대 한 서비스](https://go.microsoft.com/fwlink/?LinkId=392590)
+[LSA에 대 한 파일 서명 서비스](https://go.microsoft.com/fwlink/?LinkId=392590)
 
 

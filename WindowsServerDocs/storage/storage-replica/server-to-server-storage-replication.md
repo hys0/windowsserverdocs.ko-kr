@@ -9,12 +9,12 @@ ms.topic: get-started-article
 author: nedpyle
 ms.date: 04/26/2019
 ms.assetid: 61881b52-ee6a-4c8e-85d3-702ab8a2bd8c
-ms.openlocfilehash: 6b6af6d7b3f0c9a40f7e287097a0c102e637fbb0
-ms.sourcegitcommit: 2db58119d6ada38cc1b6b4bbf2950571d914dcab
+ms.openlocfilehash: fccdb8547ff27083ce943892842c2e2d05e5ace8
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69626847"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70865292"
 ---
 # <a name="server-to-server-storage-replication-with-storage-replica"></a>저장소 복제본을 사용 하 여 서버 간 저장소 복제
 
@@ -199,7 +199,7 @@ Windows 관리 센터를 사용 하 여 저장소 복제본을 관리 하는 경
     3. 서버 이름을 입력 한 다음 **제출**을 선택 합니다.
 2. **모든 연결** 페이지에서 원본 서버를 선택 합니다.
 3. 도구 패널에서 **저장소 복제본** 을 선택 합니다.
-4. 새로 만들기를 선택 하 여 새 파트너 관계를 만듭니다.
+4. 새로 **만들기를 선택 하** 여 새 파트너 관계를 만듭니다.
 5. 파트너 관계의 세부 정보를 입력 한 다음 **만들기**를 선택 합니다. <br>
    ![8gb 로그 크기와 같은 파트너 관계 세부 정보를 보여 주는 새 파트너 관계 화면입니다.](media/Storage-Replica-UI/Honolulu_SR_Create_Partnership.png)
 

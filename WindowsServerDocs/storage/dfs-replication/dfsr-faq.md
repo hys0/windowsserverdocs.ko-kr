@@ -6,12 +6,12 @@ ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: ee4dfe223635b176f10691c186144ed5360e3af7
-ms.sourcegitcommit: 23a6e83b688119c9357262b6815c9402c2965472
+ms.openlocfilehash: 5bf85938f242ec29d75b32cdcb8b03c5f34bd1bb
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69560526"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70871966"
 ---
 # <a name="dfs-replication-frequently-asked-questions-faq"></a>DFS 복제: FAQ(질문과 대답)
 

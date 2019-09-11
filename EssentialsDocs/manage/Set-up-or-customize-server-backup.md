@@ -12,12 +12,12 @@ ms.assetid: 441c2d6c-435a-42cb-90f2-6d680d279d34
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 5bd36db4f61b990c3864828370607158df4803a3
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 820474934ef1f164d24d4893c42b10c5043f7707
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66433044"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70865204"
 ---
 # <a name="set-up-or-customize-server-backup"></a>서버 백업 설정 및 사용자 지정
 
@@ -27,15 +27,15 @@ ms.locfileid: "66433044"
   
  다음 섹션을 참조하여 서버 백업을 설정하거나 사용자 지정하세요.  
   
--   [설정 하거나 변경할 서버 백업 설정](Set-up-or-customize-server-backup.md#BKMK_1)  
+-   [서버 백업 설정 변경 또는 변경](Set-up-or-customize-server-backup.md#BKMK_1)  
   
 -   [서버 백업 일정](Set-up-or-customize-server-backup.md#BKMK_2)  
   
--   [백업 대상 드라이브](Set-up-or-customize-server-backup.md#BKMK_Target)  
+-   [대상 드라이브 백업](Set-up-or-customize-server-backup.md#BKMK_Target)  
   
 -   [백업할 항목](Set-up-or-customize-server-backup.md#BKMK_4)  
   
-##  <a name="BKMK_1"></a> 설정 하거나 변경할 서버 백업 설정  
+##  <a name="BKMK_1"></a>서버 백업 설정 변경 또는 변경  
   
 #### <a name="to-set-up-or-change-server-backup-settings"></a>서버 백업 설정을 지정 또는 변경하려면  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66433044"
     >  외부 하드 드라이브를 서버에 연결하기 전에 마법사를 시작하는 경우 하드 드라이브를 연결한 후 **백업 대상을 선택합니다.** 페이지에서 **목록 새로 고침** 을 클릭합니다.  
   
 > [!NOTE]
->  Windows Server Essentials의 기본 설치에서 서버는 일주일에 한 번 조각 모음을 자동으로 수행 하도록 구성 됩니다. 따라서 타사 이미징 소프트웨어를 사용할 경우 기본 백업보다 큰 백업이 만들어질 수 있습니다. 서버에서 정기적으로 조각 모음을 수행할 필요가 없으면 다음 단계에 따라 조각 모음 일정을 끌 수 있습니다.  
+>  Windows Server Essentials의 기본 설치에서 서버는 매주 한 번 조각 모음을 자동으로 수행 하도록 구성 됩니다. 따라서 타사 이미징 소프트웨어를 사용할 경우 기본 백업보다 큰 백업이 만들어질 수 있습니다. 서버에서 정기적으로 조각 모음을 수행할 필요가 없으면 다음 단계에 따라 조각 모음 일정을 끌 수 있습니다.  
 > 
 > 1. Windows 키 +W를 눌러 **검색**을 엽니다.  
 >    2. 검색 텍스트 상자에 **Defragment**를 입력합니다.  
@@ -62,10 +62,10 @@ ms.locfileid: "66433044"
 >    4. **드라이브 최적화** 페이지에서 드라이브를 선택하고 **설정 변경**을 클릭합니다.  
 >    5. **최적화 일정** 창에서 **예약 실행(권장)** 확인란을 선택 취소한 후 **확인** 을 클릭하여 변경 내용을 저장합니다.  
   
-##  <a name="BKMK_2"></a> 서버 백업 일정  
+##  <a name="BKMK_2"></a>서버 백업 일정  
  서버 백업 설정 마법사 또는 서버 백업 사용자 지정 마법사를 사용할 경우 하루 중에 여러 번 서버 데이터를 백업하도록 선택할 수 있습니다. 마법사는 증분 기반 백업을 예약하기 때문에 백업이 신속하게 실행되고 서버 성능이 크게 영향을 받지 않습니다. 기본적으로 마법사는 매일 오후 12:00 및 오후 11:00에 실행되도록 백업을 예약합니다. 그러나 조직의 요구에 따라 백업 일정을 조정할 수 있습니다. 때때로 백업 계획의 유효성을 평가하고 필요에 따라 계획을 변경해야 합니다.  
   
-##  <a name="BKMK_Target"></a> 백업 대상 드라이브  
+##  <a name="BKMK_Target"></a>대상 드라이브 백업  
  백업에 여러 외부 저장소 드라이브를 사용하고 온사이트 및 오프사이트 저장소 위치 사이에서 드라이브를 순환할 수 있습니다. 이렇게 하면 하드웨어 온사이트에 물리적 손상이 발생할 경우 데이터를 복구하는 데 도움이 되므로 재해 대비 계획을 향상할 수 있습니다.  
   
  서버 백업을 위한 저장소 드라이브를 선택할 때 다음을 고려하세요.  
@@ -81,9 +81,9 @@ ms.locfileid: "66433044"
   
 -   백업 대상으로 이전 백업을 포함하는 드라이브를 선택하는 경우 이전 백업을 유지할지 여부를 선택할 수 있습니다. 백업을 유지하면 드라이브가 포맷되지 않습니다.  
   
--   Windows Server Essentials를 실행 하는 컴퓨터에서 하 여 백업 드라이브가 지원 되는지 확인 하 여 외부 저장소 드라이브 제조업체 웹 사이트를 방문 해야 합니다.  
+-   외부 저장소 드라이브 제조업체의 웹 사이트를 방문 하 여 Windows Server Essentials를 실행 하는 컴퓨터에서 백업 드라이브가 지원 되는지 확인 해야 합니다.  
   
--   드라이브는 EFI(Extensible Firmware Interface) 시스템 파티션을 포함할 수 없습니다. USB 드라이브에 EFI 파티션이 있는 경우 디스크가 시동 디스크라고 가정합니다. 인 경우 t 필요한 디스크의 데이터가 하지는 특정 디스크를 다시 포맷 하 고 백업에 사용할 수 있습니다.  
+-   드라이브는 EFI(Extensible Firmware Interface) 시스템 파티션을 포함할 수 없습니다. USB 드라이브에 EFI 파티션이 있는 경우 디스크가 시동 디스크라고 가정합니다. 디스크의 데이터가 필요 하지 않은 경우 디스크를 다시 포맷 하 여 백업에 사용할 수 있습니다.  
   
     > [!CAUTION]
     >  디스크를 다시 포맷할 경우 모든 데이터가 삭제됩니다.  
@@ -105,7 +105,7 @@ ms.locfileid: "66433044"
     2.  공유를 중지하려는 폴더를 선택한 후 작업 창에서 **중지**를 클릭합니다.  
   
 > [!NOTE]
->  백업 드라이브에 공간이 부족 하기 때문에 백업 성공 하지 못하면 하는 경우에 백업 대상 드라이브의 드라이브 문자를, Windows Server Essentials 데이터베이스에서 제거 되 고 대시보드에 드라이브가 표시 되지 않습니다. 이후 백업에서 이 드라이브를 사용하려는 경우에는 네이티브 도구를 사용하여 드라이브 문자를 다시 할당해야 합니다.  
+>  백업 드라이브에 공간이 부족 하 여 백업에 실패 한 경우 백업 대상 드라이브의 드라이브 문자가 Windows Server Essentials 데이터베이스에서 제거 되 고 대시보드에 드라이브가 표시 되지 않습니다. 이후 백업에서 이 드라이브를 사용하려는 경우에는 네이티브 도구를 사용하여 드라이브 문자를 다시 할당해야 합니다.  
 > 
 >  **기존 볼륨의 드라이브 문자를 다시 할당 하려면**  
 > 
@@ -117,7 +117,7 @@ ms.locfileid: "66433044"
 > 
 >    드라이브가 즉시 대시보드에 나타납니다.  
   
-##  <a name="BKMK_4"></a> 백업할 항목  
+##  <a name="BKMK_4"></a>백업할 항목  
  서버에 있는 모든 드라이브, 파일 및 폴더를 백업하도록 선택하거나, 백업할 개별 드라이브, 파일 또는 폴더 백업을 선택할 수 있습니다.  
   
  드라이브를 추가 또는 제거하거나, 공유 파일 및 폴더를 추가 또는 제거할 때 서버 백업 구성을 다시 방문하여 이러한 항목이 백업 구성에 추가되었거나 백업 구성에서 제거되었는지 확인해야 합니다. 백업을 위해 항목을 추가하거나 제거하려면 다음의 하나를 수행합니다.  
@@ -137,7 +137,7 @@ ms.locfileid: "66433044"
   
 -   [서버 백업 관리](Manage-Server-Backup-in-Windows-Server-Essentials.md)  
   
--   [백업 관리 및 복원](Manage-Backup-and-Restore-in-Windows-Server-Essentials.md)  
+-   [백업 및 복원 관리](Manage-Backup-and-Restore-in-Windows-Server-Essentials.md)  
   
 -   [Windows Server Essentials 관리](Manage-Windows-Server-Essentials.md)  
   

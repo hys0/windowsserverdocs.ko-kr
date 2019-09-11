@@ -1,6 +1,6 @@
 ---
 title: 서버 설정 편집
-description: MultiPoint 서비스 설정에 대해 알아봅니다
+description: MultiPoint 서비스 설정에 대해 알아보기
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.technology: multipoint-services
@@ -12,12 +12,12 @@ ms.assetid: afb64b94-9055-4703-b8ce-a8839b2718da
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.openlocfilehash: 105b10428835d11a0ea0661fe2fa7d57f80a1aba
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8a6a9d8e6a76a8fb3c0da59c8fb487d0311f04d7
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59885184"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70871713"
 ---
 # <a name="edit-server-settings"></a>서버 설정 편집
 MultiPoint 서비스를 설치할 때 특정 프로그램 선택을 비롯하여 시스템에 대한 설정을 구성했습니다. 이 항목에서는 MultiPoint 서비스 시스템에 지정할 수 있는 설정을 설명하고 이러한 설정을 편집하는 방법을 보여 줍니다.  
@@ -41,10 +41,10 @@ MultiPoint 서비스를 설치할 때 특정 프로그램 선택을 비롯하여
   
 1.  다중 포인트 관리자를 열고 [스테이션 모드](Switch-Between-Modes.md), 를 클릭 하 고는 **홈** 탭 합니다.  
   
-2.  에 **컴퓨터** 열을 컴퓨터 이름을 클릭 차례로 *컴퓨터 이름* **작업**, 클릭 **컴퓨터 설정을 편집**합니다.  
+2.  **컴퓨터 열에서** 컴퓨터 이름을 클릭 한 후 컴퓨터 *이름* **작업**에서 **컴퓨터 설정 편집**을 클릭 합니다.  
   
 3.  선택 하거나 변경 하 고 클릭 하려는 항목을 선택 취소 **확인**합니다.  
   
 ## <a name="see-also"></a>관련 항목  
-[다중 포인트 관리자를 사용 하 여 시스템 작업 관리](Manage-System-Tasks-Using-MultiPoint-Manager.md)  
+[MultiPoint 관리자를 사용하여 시스템 작업 관리](Manage-System-Tasks-Using-MultiPoint-Manager.md)  
   

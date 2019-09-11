@@ -1,6 +1,6 @@
 ---
-title: 업그레이드, 백업 및 복원 SDN 인프라
-description: 이 항목에서는 업데이트, 백업, SDN 인프라를 복원 하는 방법을 알아봅니다.
+title: SDN 인프라 업그레이드, 백업 및 복원
+description: 이 항목에서는 SDN 인프라를 업데이트, 백업 및 복원 하는 방법에 대해 알아봅니다.
 manager: dougkim
 ms.prod: windows-server-threshold
 ms.technology: networking-sdn
@@ -9,78 +9,78 @@ ms.assetid: e9a8f2fd-48fe-4a90-9250-f6b32488b7a4
 ms.author: grcusanz
 author: shortpatti
 ms.date: 08/27/2018
-ms.openlocfilehash: 7916377f58261d0ccaa3fa24f135fccca3d5e79b
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 1bee4ef9023a1fab49bf796907780662a0297a7c
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66446336"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70869965"
 ---
-# <a name="upgrade-backup-and-restore-sdn-infrastructure"></a>업그레이드, 백업 및 복원 SDN 인프라
+# <a name="upgrade-backup-and-restore-sdn-infrastructure"></a>SDN 인프라 업그레이드, 백업 및 복원
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-이 항목에서는 업데이트, 백업, SDN 인프라를 복원 하는 방법을 알아봅니다. 
+이 항목에서는 SDN 인프라를 업데이트, 백업 및 복원 하는 방법에 대해 알아봅니다. 
 
-## <a name="upgrade-the-sdn-infrastructure"></a>SDN 인프라를 업그레이드 합니다.
-Windows Server 2019에 Windows Server 2016에서 SDN 인프라를 업그레이드할 수 있습니다. 업그레이드 순서에 대 한 "SDN 인프라 업데이트" 섹션에서 설명한 것 처럼 동일한 일련의 단계를 따릅니다. 업그레이드 하기 전에 네트워크 컨트롤러 데이터베이스의 백업을 수행 하는 것이 좋습니다.
+## <a name="upgrade-the-sdn-infrastructure"></a>SDN 인프라 업그레이드
+SDN 인프라는 Windows Server 2016에서 Windows Server 2019로 업그레이드할 수 있습니다. 업그레이드 순서를 지정 하려면 "SDN 인프라 업데이트" 섹션에서 설명한 것과 동일한 단계를 수행 합니다. 업그레이드 하기 전에 네트워크 컨트롤러 데이터베이스의 백업을 수행 하는 것이 좋습니다.
 
-네트워크 컨트롤러 컴퓨터에 대 한 업그레이드가 완료 된 후 노드의 상태를 확인 하려면 Get NetworkControllerNode cmdlet을 사용 합니다. 노드 상태를 다른 노드를 업그레이드 하기 전에 "위쪽"으로 다시 가져온 개체를 확인 합니다. 모든 네트워크 컨트롤러 노드를 업그레이드 한 후 네트워크 컨트롤러 1 시간 이내에 네트워크 컨트롤러 클러스터 내에서 실행 되는 마이크로 서비스를 업데이트 합니다. 업데이트 networkcontroller cmdlet을 사용 하는 즉시 업데이트를 트리거할 수 있습니다. 
+네트워크 컨트롤러 컴퓨터의 경우에는 NetworkControllerNode cmdlet을 사용 하 여 업그레이드가 완료 된 후 노드의 상태를 확인 합니다. 다른 노드를 업그레이드 하기 전에 노드가 "위로" 상태를 반환 하는지 확인 합니다. 모든 네트워크 컨트롤러 노드를 업그레이드 한 후 네트워크 컨트롤러는 1 시간 내에 네트워크 컨트롤러 클러스터 내에서 실행 되는 마이크로 서비스를 업데이트 합니다. Networkcontroller cmdlet을 사용 하 여 즉시 업데이트를 트리거할 수 있습니다. 
 
-포함 하는 소프트웨어 정의 네트워킹 (SDN) 시스템의 운영 체제 구성 요소를 모두에 동일한 Windows 업데이트를 설치 합니다.
+다음을 포함 하는 SDN (소프트웨어 정의 네트워킹) 시스템의 모든 운영 체제 구성 요소에 동일한 Windows 업데이트를 설치 합니다.
 
-- SDN은 Hyper-v 호스트를 사용 하도록 설정
+- SDN 사용 Hyper-v 호스트
 - 네트워크 컨트롤러 Vm
-- 소프트웨어 부하 분산 장치 Mux Vm
+- 소프트웨어 Load Balancer Mux Vm
 - RAS 게이트웨이 Vm 
 
 >[!IMPORTANT]
->System Center Virtual Manager를 사용 하는 경우 최신 업데이트 롤업을 사용 하 여 업데이트 해야 합니다.
+>System Center Virtual Manager를 사용 하는 경우 최신 업데이트 롤업으로 업데이트 해야 합니다.
 
-각 구성 요소를 업데이트 하는 경우 Windows 업데이트를 설치 하기 위한 표준 방법 중 하나를 사용할 수 있습니다. 그러나 워크 로드 및 네트워크 컨트롤러 데이터베이스의 무결성에 대 한 최소 가동 중지 시간을 보장 하려면 다음이 단계를 수행 합니다.
+각 구성 요소를 업데이트할 때 Windows 업데이트를 설치 하는 표준 방법 중 하나를 사용할 수 있습니다. 그러나 워크 로드 및 네트워크 컨트롤러 데이터베이스의 무결성에 대 한 최소 가동 중지 시간을 보장 하려면 다음 단계를 수행 합니다.
 
-1. 관리 콘솔을 업데이트 합니다.<p>각 네트워크 컨트롤러 Powershell 모듈을 사용할 컴퓨터에 업데이트를 설치 합니다.  RSAT NetworkController 역할을 단독으로 설치할 수 있다고 어디를 포함 합니다. 네트워크 컨트롤러 Vm 자체; 제외 다음 단계에서는 해당를 업데이트 합니다.
+1. 관리 콘솔을 업데이트 합니다.<p>네트워크 컨트롤러 Powershell 모듈을 사용 하는 각 컴퓨터에 업데이트를 설치 합니다.  NetworkController 역할이 설치 된 모든 위치를 포함 합니다. 네트워크 컨트롤러 Vm 자체 제외 다음 단계에서 업데이트 합니다.
 
 2. 첫 번째 네트워크 컨트롤러 VM에서 모든 업데이트를 설치 하 고 다시 시작 합니다.
 
-3. 다음 네트워크 컨트롤러 VM을 계속 하기 전에 `get-networkcontrollernode` cmdlet을 업데이트 하 고 다시 시작 된 노드의 상태를 확인 합니다.
+3. 다음 네트워크 컨트롤러 VM으로 진행 하기 전에 `get-networkcontrollernode` cmdlet을 사용 하 여 업데이트 하 고 다시 시작한 노드의 상태를 확인 합니다.
 
-4. 다시 부팅 주기 동안 네트워크 컨트롤러 노드를 중단 한 다음 돌아와야 다시 될 때까지 기다립니다.<p>VM 다시 부팅 한 후에 다시 이동 하기 전에 몇 분 정도 걸릴 수 있습니다 합니다 **_위로_** 상태입니다. 출력의 예제를 참조 하세요. 
+4. 다시 부팅 하는 동안 네트워크 컨트롤러 노드가 종료 될 때까지 기다린 다음 다시 다시 이동 합니다.<p>VM을 다시 부팅 한 후 **_에는이 상태를_** 다시 시작 하는 데 몇 분 정도 걸릴 수 있습니다. 출력의 예는를 참조 하십시오. 
 
-5. Load balancer 인프라의 지속적인 가용성을 보장 하려면 한 번에 한 각 SLB Mux VM에 업데이트를 설치 합니다.
+5. 부하 분산 장치 인프라의 지속적인 가용성을 보장 하기 위해 한 번에 하나씩 각 SLB Mux VM에 업데이트를 설치 합니다.
 
-6. Hyper-v 호스트 및 RAS 게이트웨이에 있는 RAS 게이트웨이 포함 하는 호스트부터 업데이트 **대기** 모드입니다.<p>RAS 게이트웨이 Vm은 테 넌 트 연결 손실 없이 실시간 마이그레이션할 수 없습니다. 업데이트 주기 동안 횟수를 최소화 하기 위해 주의 해야 새 RAS 게이트웨이 연결 장애 조치를 테 넌 트입니다. 호스트 및 RAS 게이트웨이 업데이트를 조정 하 여 각 테 넌 트 장애 조치 한 번에 많아야 합니다.
+6. **대기** 모드인 ras 게이트웨이가 포함 된 호스트에서 시작 하 여 hyper-v 호스트 및 RAS 게이트웨이를 업데이트 합니다.<p>테 넌 트 연결을 잃지 않으면 RAS 게이트웨이 Vm을 실시간으로 마이그레이션할 수 없습니다. 업데이트 주기 동안 테 넌 트 연결이 새 RAS 게이트웨이로 장애 조치 (failover) 되는 횟수를 최소화 해야 합니다. 호스트 및 RAS 게이트웨이의 업데이트를 조정 하 여 각 테 넌 트가 한 번 이상 장애 조치 (failover) 됩니다.
 
-    a. 실시간 마이그레이션 수 있는 Vm의 호스트를 끄려고 합니다.<p>RAS 게이트웨이 Vm 호스트에서 유지 되어야 합니다.
+    a. 이동할는 실시간 마이그레이션에 사용할 수 있는 Vm의 호스트입니다.<p>RAS 게이트웨이 Vm은 호스트에 남아 있어야 합니다.
 
-    b. 이 호스트에서 각 게이트웨이 VM에 업데이트를 설치 합니다.
+    b. 이 호스트의 각 게이트웨이 VM에 업데이트를 설치 합니다.
 
-    c. 업데이트에는 게이트웨이 VM을 재부팅 해야 하는 경우에 다음 VM 다시 부팅 합니다.  
+    c. 업데이트를 위해 게이트웨이 VM을 다시 부팅 해야 하는 경우 VM을 다시 부팅 합니다.  
 
-    d. 게이트웨이 업데이트 된 VM을 포함 하는 호스트에 업데이트를 설치 합니다.
+    d. 방금 업데이트 된 게이트웨이 VM을 포함 하는 호스트에 업데이트를 설치 합니다.
 
     e. 업데이트에 필요한 경우 호스트를 다시 부팅 합니다.
 
-    f. 대기 게이트웨이 포함 하는 각 추가 호스트에 대해 반복 합니다.<p>대기 게이트웨이가 없습니다. 계속 하는 경우 다음 나머지 모든 호스트에 대해 동일한 단계를 수행 합니다.
+    f. 대기 게이트웨이를 포함 하는 각 추가 호스트에 대해 반복 합니다.<p>대기 게이트웨이가 남아 있지 않으면 나머지 모든 호스트에 대해 이와 동일한 단계를 수행 합니다.
 
 
-### <a name="example-use-the-get-networkcontrollernode-cmdlet"></a>예: Get-networkcontrollernode cmdlet 사용 
+### <a name="example-use-the-get-networkcontrollernode-cmdlet"></a>예: Networkcontrollernode cmdlet 사용 
 
-이 예제에서는 출력을 표시 합니다 `get-networkcontrollernode` 네트워크 컨트롤러 Vm 중 하나 내에서 cmdlet을 실행 합니다.  
+이 예제에서는 네트워크 컨트롤러 vm 중 하나에서 `get-networkcontrollernode` cmdlet 실행에 대 한 출력을 볼 수 있습니다.  
 
-이 예제의 출력에 표시 되는 노드의 상태가입니다.
+예제 출력에 표시 되는 노드의 상태는 다음과 같습니다.
 
 - NCNode1.contoso.com = Down
-- NCNode2.contoso.com =
-- NCNode3.contoso.com =
+- NCNode2.contoso.com = Up
+- NCNode3.contoso.com = Up
 
 >[!IMPORTANT]
->노드 변경에 대 한 상태가 될 때까지 몇 분 정도 기다려야 _**위로**_ 한 번에 하나씩 추가 노드를 업데이트 하기 전에 합니다.
+>노드 상태를 한 번에 하나씩 더 업데이트 _**하기 전에 노드**_ 상태가 변경 될 때까지 몇 분 정도 기다려야 합니다.
 
-모든 네트워크 컨트롤러 노드를 업데이트 한 후 네트워크 컨트롤러 1 시간 이내에 네트워크 컨트롤러 클러스터 내에서 실행 되는 마이크로 서비스를 업데이트 합니다. 
+모든 네트워크 컨트롤러 노드를 업데이트 한 후 네트워크 컨트롤러는 1 시간 내에 네트워크 컨트롤러 클러스터 내에서 실행 되는 마이크로 서비스를 업데이트 합니다. 
 
 >[!TIP]
->사용 하 여 즉시 업데이트를 트리거할 수 있습니다는 `update-networkcontroller` cmdlet.
+>Cmdlet을 `update-networkcontroller` 사용 하 여 즉시 업데이트를 트리거할 수 있습니다.
 
 
 ```Powershell
@@ -107,11 +107,11 @@ NodeCertificate :
 Status          : Up
 ```
 
-### <a name="example-use-the-update-networkcontroller-cmdlet"></a>예: 업데이트 networkcontroller cmdlet 사용
-이 예제에서는 출력을 표시 합니다 `update-networkcontroller` 업데이트 네트워크 컨트롤러 cmdlet. 
+### <a name="example-use-the-update-networkcontroller-cmdlet"></a>예: Networkcontroller cmdlet 사용
+이 예에서는 `update-networkcontroller` cmdlet에 대 한 출력을 확인 하 여 네트워크 컨트롤러를 강제로 업데이트 합니다. 
 
 >[!IMPORTANT]
->설치에 자세한 업데이트가 없을 때이 cmdlet을 실행 합니다.
+>설치할 업데이트가 더 이상 없을 때이 cmdlet을 실행 합니다.
 
 
 ```Powershell
@@ -123,24 +123,24 @@ NetworkControllerClusterVersion NetworkControllerVersion
 
 ## <a name="backup-the-sdn-infrastructure"></a>SDN 인프라 백업
 
-네트워크 컨트롤러 데이터베이스의 정기 백업을 재해 또는 데이터 손실이 발생할 경우 비즈니스 연속성을 보장 합니다.  네트워크 컨트롤러 Vm을 백업 하도록 보장 하지는 않습니다 세션 여러 네트워크 컨트롤러 노드에서 계속 되도록 하기 때문에 충분 하지 않습니다.
+네트워크 컨트롤러 데이터베이스의 정기 백업은 재해 또는 데이터 손실이 발생할 경우 비즈니스 연속성을 보장 합니다.  네트워크 컨트롤러 Vm을 백업 하는 데는 세션이 여러 네트워크 컨트롤러 노드에서 계속 되는 것을 보장 하지 않기 때문에 충분 하지 않습니다.
 
 **요구 사항:**
-* SMB 공유 및 공유 및 파일 시스템에 대 한 읽기/쓰기 권한이 있는 자격 증명입니다.
-* 필요에 따라 네트워크 컨트롤러 에서도 GMSA를 사용 하 여 설치 된 경우 그룹 관리 서비스 계정 (GMSA)를 사용할 수 있습니다.
+* 공유 및 파일 시스템에 대 한 읽기/쓰기 권한이 있는 SMB 공유 및 자격 증명
+* 네트워크 컨트롤러가 GMSA를 사용 하 여 설치 된 경우 필요에 따라 GMSA (그룹 관리 서비스 계정)를 사용할 수 있습니다.
 
-**절차:**
+**여기서**
 
-1. 선택한 VM 백업 메서드를 사용 하거나 Hyper-v를 사용 하 여 각 네트워크 컨트롤러 VM의 복사본을 내보냅니다.<p>네트워크 컨트롤러 VM을 백업 데이터베이스를 암호 해독에 필요한 인증서를 있는지 확인 합니다.  
+1. 원하는 VM 백업 방법을 사용 하거나 Hyper-v를 사용 하 여 각 네트워크 컨트롤러 VM의 복사본을 내보냅니다.<p>네트워크 컨트롤러 VM을 백업 하면 데이터베이스의 암호를 해독 하는 데 필요한 인증서가 제공 됩니다.  
 
-2. System Center Virtual Machine Manager (SCVMM)를 사용 하는 경우 SCVMM 서비스를 중지 하 고 SQL Server를 통해 백업 합니다.<p>여기서 목표는 네트워크 컨트롤러 백업 및 SCVMM 간의 불일치를 만들 수는이 시간 동안 SCVMM에 업데이트가 없는 가져올 수 있도록 합니다.  
+2. SCVMM (System Center Virtual Machine Manager)을 사용 하는 경우 SCVMM 서비스를 중지 하 고 SQL Server를 통해 백업 합니다.<p>여기서의 목표는이 시간 동안 SCVMM에 업데이트가 이루어지지 않도록 하 여 네트워크 컨트롤러 백업 및 SCVMM 간에 불일치를 발생 시킬 수 있도록 하는 것입니다.  
 
    >[!IMPORTANT]
-   >네트워크 컨트롤러 백업 완료 될 때까지 SCVMM 서비스를 다시 시작 하지 않습니다.
+   >네트워크 컨트롤러 백업이 완료 될 때까지 SCVMM 서비스를 다시 시작 하지 마십시오.
 
-3. 사용 하 여 네트워크 컨트롤러 데이터베이스를 백업 합니다 `new-networkcontrollerbackup` cmdlet.
+3. `new-networkcontrollerbackup` Cmdlet을 사용 하 여 네트워크 컨트롤러 데이터베이스를 백업 합니다.
 
-4. 완료 및 사용 하 여 백업 성공 여부를 확인 합니다 `get-networkcontrollerbackup` cmdlet.
+4. `get-networkcontrollerbackup` Cmdlet을 사용 하 여 백업 완료 및 성공 여부를 확인 합니다.
 
 5. SCVMM을 사용 하는 경우 SCVMM 서비스를 시작 합니다.
 
@@ -262,19 +262,19 @@ PS C:\ > Get-NetworkControllerBackup -ConnectionUri $URI -Credential $Credential
 }
 ```
 
-## <a name="restore-the-sdn-infrastructure-from-a-backup"></a>SDN 인프라 백업에서 복원
+## <a name="restore-the-sdn-infrastructure-from-a-backup"></a>백업에서 SDN 인프라 복원
 
-필요한 모든 구성 요소를 백업에서 복원 하면 SDN 환경을 작동 상태로 돌아갑니다.  
+백업에서 필요한 모든 구성 요소를 복원 하면 SDN 환경에서 작동 상태로 돌아갑니다.  
 
 >[!IMPORTANT]
->단계를 복원 하는 구성 요소 수에 따라 달라 집니다.
+>단계는 복원 된 구성 요소 수에 따라 달라 집니다.
 
 
-1. 필요한 경우에 Hyper-v 호스트 및 필요한 저장소 다시 배포 합니다.
+1. 필요한 경우 Hyper-v 호스트와 필요한 저장소를 다시 배포 합니다.
 
-2. 필요한 경우 네트워크 컨트롤러 Vm, RAS 게이트웨이 Vm 및 Mux Vm 백업에서 복원 합니다. 
+2. 필요한 경우 백업에서 네트워크 컨트롤러 Vm, RAS 게이트웨이 Vm 및 Mux Vm을 복원 합니다. 
 
-3. 중지 NC 호스트 에이전트 및 모든 Hyper-v 호스트에서 SLB 호스트 에이전트.
+3. 모든 Hyper-v 호스트에서 NC 호스트 에이전트 및 SLB 호스트 에이전트를 중지 합니다.
 
     ```
     stop-service slbhostagent
@@ -286,15 +286,15 @@ PS C:\ > Get-NetworkControllerBackup -ConnectionUri $URI -Credential $Credential
 
 5. SLB Mux Vm을 중지 합니다.
 
-6. 사용 하 여 네트워크 컨트롤러를 복원 합니다 `new-networkcontrollerrestore` cmdlet.
+6. `new-networkcontrollerrestore` Cmdlet을 사용 하 여 네트워크 컨트롤러를 복원 합니다.
 
-7. 복원 확인 **ProvisioningState** 복원이 성공적으로 완료 했습니다 때 알고 있어야 합니다.
+7. 복원이 성공적으로 완료 되 면 restore **ProvisioningState** 를 확인 합니다.
 
-8. SCVMM을 사용 하는 경우에 네트워크 컨트롤러 백업으로 동시에 생성 된 백업을 사용 하 여 SCVMM 데이터베이스를 복원 합니다.
+8. SCVMM을 사용 하는 경우 네트워크 컨트롤러 백업과 동시에 생성 된 백업을 사용 하 여 SCVMM 데이터베이스를 복원 합니다.
 
-9. 워크 로드 Vm 백업에서 복원 하려는 경우 지금 수행 합니다.
+9. 백업에서 작업 Vm을 복원 하려면 지금 수행 합니다.
 
-10. 디버그 networkcontrollerconfigurationstate cmdlet 사용 하 여 시스템의 상태를 확인 합니다.
+10. Networkcontrollerconfigurationstate cmdlet을 사용 하 여 시스템의 상태를 확인 합니다.
 
 ```Powershell
 $cred = Get-Credential
@@ -326,7 +326,7 @@ $RestoreTime = (Get-Date).ToString("s").Replace(":", "_")
 New-NetworkControllerRestore -ConnectionURI $URI -Credential $Credential -Properties $RestoreProperties -ResourceId $RestoreTime -Force
 ```
 
-### <a name="example-checking-the-status-of-a-network-controller-database-restore"></a>예: 네트워크 컨트롤러 데이터베이스 복원 상태를 확인 하는 중
+### <a name="example-checking-the-status-of-a-network-controller-database-restore"></a>예: 네트워크 컨트롤러 데이터베이스 복원의 상태를 확인 하는 중
 
 ```PowerShell
 PS C:\ > get-networkcontrollerrestore -connectionuri $uri -credential $cred -ResourceId $restoreTime | convertto-json -depth 10
@@ -349,4 +349,4 @@ PS C:\ > get-networkcontrollerrestore -connectionuri $uri -credential $cred -Res
 ```
 
 
-나타날 수 있는 구성 상태 메시지에 대 한 자세한 내용은 [Windows Server 2016 소프트웨어 정의 네트워킹 스택 문제 해결](https://docs.microsoft.com/windows-server/networking/sdn/troubleshoot/troubleshoot-windows-server-software-defined-networking-stack)합니다.
+나타날 수 있는 구성 상태 메시지에 대 한 자세한 내용은 [Windows Server 2016 소프트웨어 정의 네트워킹 스택 문제 해결](https://docs.microsoft.com/windows-server/networking/sdn/troubleshoot/troubleshoot-windows-server-software-defined-networking-stack)을 참조 하세요.

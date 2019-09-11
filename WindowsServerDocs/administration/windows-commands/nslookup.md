@@ -1,6 +1,6 @@
 ---
 title: nslookup
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 194cb96846e42b175978a2f6fc7268a93875d315
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.openlocfilehash: 84e3e9ee920f458ca775dd7b76d892f10ba2f992
+ms.sourcegitcommit: ee8e0b217be6f6b2532ee7265fb4be00c106e124
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66811098"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70878111"
 ---
 # <a name="nslookup"></a>nslookup
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-도메인 이름 시스템 (DNS) 인프라를 진단 하는 데 사용할 수 있는 정보를 표시 합니다. 이 도구를 사용 하기 전에 DNS의 작동 원리에 대해 잘 알고 있어야 합니다. Nslookup 명령줄 도구는 TCP/IP 프로토콜을 설치한 경우에 사용할 수 있습니다.
+도메인 이름 시스템 (DNS) 인프라를 진단 하는 데 사용할 수 있는 정보를 표시 합니다. 이 도구를 사용 하기 전에 DNS의 작동 원리에 대해 잘 알고 있어야 합니다. Nslookup 명령줄 도구는 TCP/IP 프로토콜을 설치한 경우에만 사용할 수 있습니다.
 ## <a name="syntax"></a>구문
 
 ```
@@ -65,17 +65,17 @@ nslookup /view <FileName>
 | [nslookup finger Command](nslookup-finger-command.md) |                                                                                  현재 컴퓨터에서 손가락 서버와 연결합니다.                                                                                   |
 |           [nslookup help](nslookup-help.md)           |                                                                                    간단한 요약이 표시 되며 **nslookup** 하위 명령입니다.                                                                                    |
 |             [nslookup ls](nslookup-ls.md)             |                                                                                             DNS 도메인에 대 한 정보를 나열합니다.                                                                                             |
-|        [nslookup lserver](nslookup-lserver.md)        |                                                                                   지정된 된 DNS 도메인에 기본 서버를 변경합니다.                                                                                   |
+|        [nslookup lserver](nslookup-lserver.md)        |                                                                                   지정 된 DNS 도메인의 기본 서버를 변경합니다.                                                                                   |
 |           [nslookup root](nslookup-root.md)           |                                                                     DNS 도메인 네임 스페이스의 루트에 대 한 서버에 기본 서버를 변경합니다.                                                                     |
-|         [nslookup server](nslookup-server.md)         |                                                                                   지정된 된 DNS 도메인에 기본 서버를 변경합니다.                                                                                   |
+|         [nslookup server](nslookup-server.md)         |                                                                                   지정 된 DNS 도메인의 기본 서버를 변경합니다.                                                                                   |
 |            [nslookup set](nslookup-set.md)            |                                                                              구성 설정에 영향을 주는 변경 방법을 조회 함수입니다.                                                                               |
 |        [nslookup set all](nslookup-set-all.md)        |                                                                                  구성 설정의 현재 값을 인쇄합니다.                                                                                   |
 |      [nslookup set class](nslookup-set-class.md)      |                                                                     쿼리 클래스를 변경 합니다. 클래스는 프로토콜 그룹 정보를 지정합니다.                                                                     |
-|         [nslookup set d2](nslookup-set-d2.md)         |                                                                     철저 한 디버깅 모드를 켜거나 끕니다. 모든 패킷이 모든 필드를 표시 합니다.                                                                      |
-|      [nslookup set debug](nslookup-set-debug.md)      |                                                                                               디버깅 모드를 켜거나 끕니다.                                                                                               |
-|                 nslookup /set defname                 |                                            단일 구성 요소 조회 요청에 기본 DNS 도메인 이름을 추가합니다. 단일 구성 요소에는 마침표가 없는 구성 요소가입니다.                                            |
+|         [nslookup set d2](nslookup-set-d2.md)         |                                                                     철저 한 디버깅 모드를 설정 하거나 해제 합니다. 모든 패킷이 모든 필드를 표시 합니다.                                                                      |
+|      [nslookup set debug](nslookup-set-debug.md)      |                                                                                               디버깅 모드를 설정 하거나 해제 합니다.                                                                                               |
+|                 nslookup/set defname                 |                                            단일 구성 요소 조회 요청에 기본 DNS 도메인 이름을 추가합니다. 단일 구성 요소에는 마침표가 없는 구성 요소가입니다.                                            |
 |     [nslookup set domain](nslookup-set-domain.md)     |                                                                                 지정 된 이름과 기본 DNS 도메인 이름을 변경 합니다.                                                                                  |
-|                 nslookup /set ignore                  |                                                                                              패킷 잘림 오류를 무시합니다.                                                                                              |
+|                 nslookup/set 무시                  |                                                                                              패킷 잘림 오류를 무시합니다.                                                                                              |
 |       [nslookup set port](nslookup-set-port.md)       |                                                                          지정 된 값으로 기본 TCP/UDP DNS 이름 서버 포트를 변경 합니다.                                                                           |
 |  [nslookup set querytype](nslookup-set-querytype.md)  |                                                                                       쿼리에 대 한 리소스 레코드 종류를 변경합니다.                                                                                       |
 |    [nslookup set recurse](nslookup-set-recurse.md)    |                                                                    정보가 없는 경우 다른 서버를 쿼리 하는 DNS 이름 서버를 알려 줍니다.                                                                    |
@@ -86,15 +86,15 @@ nslookup /view <FileName>
 |    [nslookup set timeout](nslookup-set-timeout.md)    |                                                                           초기 요청에 회신을 기다릴 시간 (초) 수를 변경 합니다.                                                                           |
 |       [nslookup set type](nslookup-set-type.md)       |                                                                                       쿼리에 대 한 리소스 레코드 종류를 변경합니다.                                                                                       |
 |         [nslookup set vc](nslookup-set-vc.md)         |                                                                     가상 회로 보낼 때 서버에 요청을 사용 하지 않는 또는 사용 하도록 지정 합니다.                                                                      |
-|           [nslookup view](nslookup-view.md)           |                                                                          정렬 하 고 이전 출력 나열 **ls** 하위 명령 또는 명령입니다.                                                                          |
+|           [nslookup view](nslookup-view.md)           |                                                                          정렬 하 고는 이전 출력 나열 **ls** 하위 명령 또는 명령입니다.                                                                          |
 
 ## <a name="remarks"></a>설명
-- 하는 경우 *computerTofind* 는 IP 주소 및 A에 대 한 쿼리는 또는 PTR 리소스 레코드 종류, 컴퓨터의 이름을 반환 됩니다. 하는 경우 *computerTofind* 이름인 없고 후행 기간, 기본 이름에 DNS 도메인 이름이 추가 됩니다. 이 동작은 다음의 상태에 따라 **설정** 하위 명령: **도메인**, **srchlist**, **defname**, 및 **검색**합니다.
-- 대신 하이픈 (-)를 입력 하는 경우 *computerTofind*, 명령 프롬프트가 변경 되어 **nslookup** 대화형 모드.
+- *Computertofind* 가 IP 주소이 고 쿼리가 A 또는 PTR 리소스 레코드 종류에 대 한 것 이면 컴퓨터 이름이 반환 됩니다. *Computertofind* 가 이름이 고 마침표가 없으면 기본 DNS 도메인 이름이 이름에 추가 됩니다. 이 동작은 다음의 상태에 따라 **설정** 하위 명령: **도메인**, **srchlist**, **defname**, 및 **검색**합니다.
+- *Computertofind*대신 하이픈 (-)을 입력 하면 명령 프롬프트가 **nslookup** 대화형 모드로 변경 됩니다.
 - 명령줄 길이 256 자 미만 이어야 합니다.
-- **nslookup** 는 두 가지 모드: 대화식 모드와 대화형입니다.
-  데이터의 일부만 조회 해야 할 경우 비 대화형 모드를 사용 합니다. 첫 번째 매개 변수 이름 또는 조회 하려고 하는 컴퓨터의 IP 주소를 입력 합니다. 두 번째 매개 변수 이름 또는 DNS 이름 서버의 IP 주소를 입력 합니다. 두 번째 인수를 생략 하면 **nslookup** 기본 DNS 이름 서버를 사용 합니다.
-  둘 이상의 데이터 부분을 조회 해야 할 경우에 대화형 모드를 사용할 수 있습니다. 첫 번째 매개 변수 이름 또는 두 번째 매개 변수에 대 한 DNS 이름 서버의 IP 주소를 하이픈 (-)을 입력 합니다. 또는 매개 변수 모두 생략 하 고 **nslookup** 기본 DNS 이름 서버를 사용 합니다. 다음은 대화형 모드에서 작업 하는 방법에 대 한 몇 가지 팁입니다.
+- **nslookup** 에는 대화형 및 비 대화형 모드의 두 가지 모드가 있습니다.
+  데이터의 단일 부분을 조회 해야 하는 경우에는 비 대화형 모드를 사용 합니다. 첫 번째 매개 변수 이름 또는 조회 하려고 하는 컴퓨터의 IP 주소를 입력 합니다. 두 번째 매개 변수 이름 또는 DNS 이름 서버의 IP 주소를 입력 합니다. 두 번째 인수를 생략 하면 **nslookup** 기본 DNS 이름 서버를 사용 합니다.
+  둘 이상의 데이터를 조회 해야 하는 경우 대화형 모드를 사용할 수 있습니다. 첫 번째 매개 변수에 하이픈 (-)을 입력 하 고 두 번째 매개 변수에 대해 DNS 이름 서버의 이름 또는 IP 주소를 입력 합니다. 또는 매개 변수 모두 생략 하 고 **nslookup** 기본 DNS 이름 서버를 사용 합니다. 다음은 대화형 모드에서 작업 하는 방법에 대 한 몇 가지 팁입니다.
   -   대화형 명령을 언제 든 지를 중단 하려면 CTRL + B를 누릅니다.
   -   를 종료 하려면 다음을 입력 **종료**합니다.
   -   컴퓨터 이름으로 기본 제공 명령으로 처리 하려면 앞에 이스케이프 문자 (\\).
@@ -110,10 +110,10 @@ nslookup /view <FileName>
   |`Server failure`|DNS 이름 서버 데이터베이스의 내부 불일치를 발견 하 고 유효한 응답을 반환할 수 없습니다.|
   |`Refused`|DNS 이름 서버 요청을 거부 했습니다.|
   |`format error`|DNS 이름 서버 요청 패킷의 형식이 없음을 발견 합니다. 에 오류가 있다는 의미일 수 있습니다 **nslookup**합니다.|
-- 에 대 한 자세한 내용은 합니다 **nslookup** 명령 및 DNS를 다음 리소스를 참조 하세요.
-  - Lee, T., Davies, j. 2000. *Microsoft Windows 2000 TCP/IP 프로토콜 및 서비스 기술 참조*합니다. Redmond, Washington: Microsoft Press.
-  - Albitz, P., Loukides, M. 및 C. Liu입니다. 2001. *DNS 및 바인딩, Fourth edition*합니다. Sebastopol, 캘리포니아: O'Reilly 및 associates, i n c.
-  - Larson, M. 및 C. Liu입니다. 2001. *Windows 2000에서 DNS*합니다. Sebastopol, 캘리포니아: O'Reilly 및 associates, i n c.
+- 에 대 한 자세한 내용은 **nslookup** 명령 및 DNS를 다음 리소스를 참조 합니다.
+  - Lee, T., Davies, j. 2000. *Microsoft Windows 2000 TCP/IP 프로토콜 및 서비스 기술 참조*합니다. Redmond, 워싱턴: Microsoft를 누릅니다.
+  - Albitz, P., Loukides, M. 및 C. Liu입니다. 2001. *DNS 및 바인드, 4 번째 버전* Sebastopol, 캘리포니아: O'Reilly 및 연결, i n c.
+  - Larson, M. 및 C. Liu입니다. 2001. *Windows 2000에서 DNS*합니다. Sebastopol, 캘리포니아: O'Reilly 및 연결, i n c.
     #### <a name="examples"></a>예
     각 명령줄 옵션은 명령 이름으로, 일부 경우, 등호 (=) 및 값에 바로 뒤에 오는 하이픈 (-)으로 구성 됩니다. 예를 들어, 기본 쿼리 형식을 호스트 (컴퓨터) 정보 및 초기 제한 시간을 10 초를 변경 하려면 입력: **nslookup-querytype = hinfo-timeout = 10**
     ## <a name="see-also"></a>관련 항목

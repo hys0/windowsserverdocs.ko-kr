@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 19f0bd019fcfc683de2c554ceadeb0bed3896a71
-ms.sourcegitcommit: 0e3c2473a54f915d35687d30d1b4b1ac2bae4068
+ms.openlocfilehash: 82added5018d83aeb9fe7d8033204a0d19bd047a
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68914633"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70868095"
 ---
 # <a name="configure-performance-monitoring"></a>성능 모니터링 구성
   
@@ -41,7 +41,7 @@ AD FS에는 페더레이션 서버와 페더레이션 서버 프록시 컴퓨터
   
 7. 모니터링할 레지스트리 키를 추가 하 라는 메시지가 표시 되 면 **다음**을 클릭 합니다.  
   
-8. 성능 데이터를 저장할 위치를 지정 하 라는 메시지가 표시 되 면 \(기본 위치인 **\\% PerfLogs\\Admin\\** _< 데이터\_수집기를 사용할 수 있습니다. >\_설정_ 하 고 **다음**을 클릭 합니다.  
+8. 성능 데이터를 저장할 위치를 지정 하 라는 메시지가 표시 되 면 \(기본 위치인 **\\% PerfLogs\\Admin\\** _< 데이터\_수집기를 사용할 수 있습니다. >\_설정_하 고 **다음**을 클릭 합니다.  
   
 9. 데이터 수집기 집합을 만들지 묻는 메시지가 표시 되 면 **저장 후 닫기**를 선택 하 고 **마침**을 클릭 합니다.  
   

@@ -8,12 +8,12 @@ ms.date: 08/09/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: f1de6229d5360a4ea95d285f34ad32532762edca
-ms.sourcegitcommit: 2082335e1260826fcbc3dccc208870d2d9be9306
+ms.openlocfilehash: 588d717b8f03987b86af7dc0576d537ebd88c4ba
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69983561"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70867623"
 ---
 # <a name="scenario-native-app-calling-web-api"></a>시나리오: Web API를 호출 하는 네이티브 앱 
 >적용 대상: AD FS 2019 이상 
@@ -85,7 +85,7 @@ ms.locfileid: "69983561"
   
       ![앱 Reg](media/adfs-msal-native-app-web-api/native10.png) 
 
-  13. **클레임 규칙 이름:** 필드에 **NameID** 를 입력 합니다. **들어오는 클레임 유형:** , **보내는 클레임 유형에** 대 한 **이름 id** 및 **나가는 이름 id 형식**에 대 한 **일반 이름** 을 선택 합니다. **마침**을 클릭 합니다.
+  13. **클레임 규칙 이름:** 필드에 **NameID** 를 입력 합니다. **들어오는 클레임 유형:** , **보내는 클레임 유형에** 대 한 **이름 id** 및 **나가는 이름 id 형식**에 대 한 **일반 이름** **을 선택 합니다** . **마침**을 클릭 합니다.
   
       ![앱 Reg](media/adfs-msal-native-app-web-api/native11.png) 
 
@@ -146,5 +146,5 @@ ms.locfileid: "69983561"
        ![앱 테스트](media/adfs-msal-native-app-web-api/native19.png)
  
 ## <a name="next-steps"></a>다음 단계
-[AD FS Openid connect Connect/OAuth 흐름 및 응용 프로그램 시나리오](../../overview/ad-fs-openid-connect-oauth-flows-scenarios.md)
+[AD FS OpenID Connect/OAuth 흐름 및 애플리케이션 시나리오](../../overview/ad-fs-openid-connect-oauth-flows-scenarios.md)
  

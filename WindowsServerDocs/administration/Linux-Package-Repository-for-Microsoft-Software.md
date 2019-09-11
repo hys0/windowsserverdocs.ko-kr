@@ -1,6 +1,6 @@
 ---
-title: Microsoft 제품용 Linux 소프트웨어 리포지토리에서
-description: 이 문서에 사용 하 여 Microsoft 제품에 대 한 Linux 소프트웨어 패키지를 설치 하는 방법을 설명 합니다.
+title: Microsoft 제품에 대 한 Linux 소프트웨어 리포지토리
+description: 이 문서에서는 Microsoft 제품에 대 한 Linux 소프트웨어 패키지를 사용 하 고 설치 하는 방법을 설명 합니다.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.service: na
@@ -11,34 +11,34 @@ ms.assetid: b5387444-595f-4f38-abb7-163a70ea1895
 author: szarkos
 ms.author: szark
 ms.date: 10/16/2017
-ms.openlocfilehash: 77b309739125a2114ef4ada4adb305f4dd169b06
-ms.sourcegitcommit: 927adf32faa6052234ad08f21125906362e593dc
+ms.openlocfilehash: bade9fff306272188ac8d2b91a3d9921c80fe036
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67033329"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70866885"
 ---
-# <a name="linux-software-repository-for-microsoft-products"></a>Microsoft 제품용 Linux 소프트웨어 리포지토리에서
+# <a name="linux-software-repository-for-microsoft-products"></a>Microsoft 제품에 대 한 Linux 소프트웨어 리포지토리
 
 ## <a name="overview"></a>개요
-Microsoft은 소프트웨어 제품의 다양 한 Linux 시스템에 대 한 지원 및 표준 APT 및 YUM 패키지 리포지토리를 통해 사용할 수 있도록 작성 합니다. 이 문서는 있습니다 수 다음 설치/업그레이드 배포의 표준 패키지 관리 도구를 사용 하 여 Microsoft의 Linux 소프트웨어 있도록 Linux 시스템에 리포지토리를 구성 하는 방법을 설명 합니다.
+Microsoft는 Linux 시스템용으로 다양 한 소프트웨어 제품을 빌드 및 지원 하 고 표준 APT 및 YUM 패키지 리포지토리를 통해 사용할 수 있도록 합니다. 이 문서에서는 Linux 시스템에서 리포지토리를 구성 하는 방법에 대해 설명 합니다. 그러면 배포의 표준 패키지 관리 도구를 사용 하 여 Microsoft의 Linux 소프트웨어를 설치/업그레이드할 수 있습니다.
 
-Microsoft의 Linux 소프트웨어 리포지토리에서 여러 하위 저장소의 구성 됩니다.
+Microsoft의 Linux 소프트웨어 리포지토리는 여러 하위 리포지토리로 구성 되어 있습니다.
 
- - prod-프로덕션 용도로 프로덕션 환경에서 사용 하는 패키지에 대 한 지정 된 하위 저장소입니다. 이러한 패키지는 해당 지원 계약 또는 Microsoft에 포함 된 프로그램의 조건에 따라 Microsoft에서 상업적으로 지원 됩니다.
+ - prod – 프로덕션 하위 리포지토리가 프로덕션에서 사용 하기 위한 패키지에 대해 지정 됩니다. Microsoft에서 제공 하는 해당 지원 계약 또는 프로그램의 조건에 따라 Microsoft에서 이러한 패키지를 상업적으로 지원 합니다.
 
- - mssql-server-이러한 리포지토리 패키지를 포함 Microsoft SQL Server Linux-참조에 대 한도: [Linux의 SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-vnext-including-Linux)합니다.
+ - mssql-server-Microsoft SQL Server on Linux에 대 한 패키지가 포함 되어 있습니다. 참고 항목: [SQL Server on Linux](https://www.microsoft.com/en-us/sql-server/sql-server-vnext-including-Linux).
 
 > [!Note]
-> Linux 소프트웨어 리포지토리에서 패키지를 패키지에 있는 사용 조건에 적용 됩니다. 패키지를 사용 하기 전에 사용 약관을 참조 하세요. 설치를 사용 하 여 패키지의 이러한 약관 수락 하는 것입니다. 사용 조건에 동의 하지 않는 경우에 패키지를 사용 하지 마십시오.
+> Linux 소프트웨어 리포지토리의 패키지에는 패키지에 있는 사용 조건이 적용 됩니다. 패키지를 사용 하기 전에 사용 조건을 읽어 보십시오. 패키지를 설치 하 고 사용 하면 이러한 조건에 동의 하는 것입니다. 사용 조건에 동의 하지 않는 경우 패키지를 사용 하지 마십시오.
 
 
 ## <a name="configuring-the-repositories"></a>리포지토리 구성
-리포지토리는 Linux 배포판 및 버전에 적용 되는 Linux 패키지를 설치 하 여 자동으로 구성할 수 있습니다. 패키지는 리포지토리 구성 하는 데 apt/yum/zypper와 같은 도구에서 서명 된 패키지 및/또는 저장소 메타 데이터의 유효성을 검사 GPG 공개 키와 함께 설치 합니다.
+Linux 배포 및 버전에 적용 되는 Linux 패키지를 설치 하 여 리포지토리를 자동으로 구성할 수 있습니다. 패키지는 서명 된 패키지 및/또는 리포지토리 메타 데이터의 유효성을 검사 하기 위해 apt/yum/zypper와 같은 도구에서 사용 하는 GPG 공개 키와 함께 리포지토리 구성을 설치 합니다.
 
 ### <a name="enterprise-linux-rhel-and-variants"></a>Enterprise Linux (RHEL 및 변형)
 
- - Enterprise Linux 6 (EL6)
+ - Enterprise Linux 6 (64.RPM)
 
         sudo rpm -Uvh https://packages.microsoft.com/config/rhel/6/packages-microsoft-prod.rpm
 
@@ -49,7 +49,7 @@ Microsoft의 Linux 소프트웨어 리포지토리에서 여러 하위 저장소
 
 ### <a name="ubuntu"></a>Ubuntu
 
- - Ubuntu 14.04 (신뢰할 수 있는)
+ - Ubuntu 14.04 (t)
 
         curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
         sudo apt-add-repository https://packages.microsoft.com/ubuntu/14.04/prod
@@ -85,15 +85,15 @@ Microsoft의 Linux 소프트웨어 리포지토리에서 여러 하위 저장소
 
 
 ## <a name="manual-configuration"></a>수동 구성
-리포지토리 구성 파일에서 사용할 [packages.microsoft.com/config](https://packages.microsoft.com/config/)합니다. 이러한 파일의 위치와 이름을 다음 URI 명명 규칙을 사용 하 여 찾을 수 있습니다.
+리포지토리 구성 파일은 [packages.microsoft.com/config](https://packages.microsoft.com/config/)에서 사용할 수 있습니다. 다음 URI 명명 규칙을 사용 하 여 이러한 파일의 이름과 위치를 찾을 수 있습니다.
 
         https://packages.microsoft.com/config/<Distribution>/<Version>/prod.(repo|list)
 
 **패키지 및 리포지토리 서명 키**
 
- - 여기 Microsoft GPG 공개 키를 다운로드할 수 있습니다. [https://packages.microsoft.com/keys/microsoft.asc](https://packages.microsoft.com/keys/microsoft.asc)
- - 공용 키 ID: Microsoft (릴리스 서명) <gpgsecurity@microsoft.com>
- - 공개 키 지문: `BC52 8686 B50D 79E3 39D3 721C EB3E 94AD BE12 29CF`
+ - Microsoft의 GPG 공개 키를 여기에서 다운로드할 수 있습니다.[https://packages.microsoft.com/keys/microsoft.asc](https://packages.microsoft.com/keys/microsoft.asc)
+ - 공개 키 ID: Microsoft (릴리스 서명)<gpgsecurity@microsoft.com>
+ - 공개 키 지문:`BC52 8686 B50D 79E3 39D3 721C EB3E 94AD BE12 29CF`
 
 ### <a name="examples"></a>예를 들면 다음과 같습니다.
 

@@ -7,12 +7,12 @@ ms.topic: article
 ms.author: v-tea; kenbrunf
 author: Teresa-Motiv
 ms.date: 7/3/2019
-ms.openlocfilehash: 5a9e2d39d4eedd1e8fdb4bfeaf267ad4cb4c596a
-ms.sourcegitcommit: af80963a1d16c0b836da31efd9c5caaaf6708133
+ms.openlocfilehash: dac13ac94e38cf671239d35507e07d7ac3a0c1ab
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "67799835"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70866733"
 ---
 # <a name="capacity-planning-for-active-directory-domain-services"></a>Active Directory Domain Services에 대 한 용량 계획
 
@@ -794,7 +794,7 @@ AD DS 부하를 지 원하는 데 필요한 CPU 수량을 분석 하 고 계산 
 
 이제 간단한 구성을 분석 한 후 다음 표에서는 저장소 하위 시스템의 구성 요소가 변경 되거나 추가 될 때 병목 현상이 발생 하는 위치를 보여 줍니다.
 
-|참고|병목 상태 분석|Disk|버스|어댑터|PCI 버스|
+|메모|병목 상태 분석|Disk|버스|어댑터|PCI 버스|
 |-|-|-|-|-|-|
 |이는 두 번째 디스크를 추가한 후의 도메인 컨트롤러 구성입니다. 디스크 구성은 800 k b/초에서 병목 상태를 나타냅니다.|1 개 디스크 추가 (합계 = 2)<br /><br />I/o가 임의적입니다.<br /><br />4kb 블록 크기<br /><br />1만 RPM HD|200 I/Os 합계<br />800 KB/s 합계입니다.| | | |
 |7 개의 디스크를 추가한 후 디스크 구성은 여전히 3200 k b/s에서 병목 상태를 나타냅니다.|**7 개 디스크 추가 (합계 = 8)**  <br /><br />I/o가 임의적입니다.<br /><br />4kb 블록 크기<br /><br />1만 RPM HD|800 I/Os 합계입니다.<br />3200 총 k b/초| | | |
@@ -820,15 +820,15 @@ RAID 1에서는 중복성을 위해 한 쌍의 스핀 들에서 데이터가 미
 
 쓰기에 대 한 읽기 비율 및 스핀 들 수를 알고 있는 경우 위의 수식에서 다음 수식을 파생 하 여 배열에서 지원할 수 있는 최대 i/o를 식별할 수 있습니다.  
 
-> *스핀 들 당 최대 IOPS* &times; &divide; &times; +   2 개의 스핀 들 [(% 읽기% 쓰기) (% 읽기 + 2% 쓰기)] = 총 IOPS &times;
+> *스핀 들 당 최대 IOPS* &times; &divide; &times; + 2 개의 스핀 들 [(% 읽기% 쓰기) (% 읽기 + 2% 쓰기)] = 총 IOPS &times;
 
 RAID 1 + 0은 읽기 및 쓰기 비용과 관련 하 여 RAID 1과 정확히 동일 하 게 동작 합니다. 그러나 i/o는 이제 각 미러된 집합에서 스트라이프 됩니다. If  
 
-> *스핀 들 당 최대 IOPS* &times; &divide; &times; +    2 개의 스핀 들 [(% 읽기% 쓰기) (% 읽기 + 2% 쓰기)] = 총 i/o &times;  
+> *스핀 들 당 최대 IOPS* &times; &divide; &times; +  2 개의 스핀 들 [(% 읽기% 쓰기) (% 읽기 + 2% 쓰기)] = 총 i/o &times;  
 
 raid 1 집합에서, raid 1 집합의 복합성 (*n*)이 스트라이프 되 면, 처리할 수 있는 총 i/o가 raid 1 집합 당 n &times; i/o가 됩니다.  
 
-> *N* &times;  +  &times; &divide;    {스핀 들&times; 당 최대 IOPS 2 스핀 들 [(% reads% writes) (% reads + 2% writes)]} = &times;  *총 IOPS*
+> *N* &times;  +  &times; &divide; {스핀 들&times; 당 최대 IOPS 2 스핀 들 [(% reads% writes) (% reads + 2% writes)]} = &times;  *총 IOPS*
 
 RAID 5에서 때때로 *n* + 1 raid 라고도 하는 데이터는 *n* 개의 스핀 들 간에 스트라이프 되며 패리티 정보는 "+ 1" 스핀 들에 기록 됩니다. 그러나 raid 1 또는 1 + 0 보다는 쓰기 i/o를 수행할 때 RAID 5가 훨씬 더 비쌉니다. RAID 5는 쓰기 i/o가 배열에 제출 될 때마다 다음 프로세스를 수행 합니다.
 
@@ -843,7 +843,7 @@ RAID 5에서 때때로 *n* + 1 raid 라고도 하는 데이터는 *n* 개의 스
 
 RAID 1 집합에서 쓰기에 대 한 읽기 비율 및 스핀 들 수를 알고 있는 경우 위의 수식에서 다음 수식을 파생 하 여 배열에서 지원할 수 있는 최대 i/o를 식별할 수 있습니다 (총 스핀 들 수는 포함 되지 않음). e "드라이브"가 패리티에 유실 됨):  
 
-> *스핀 들 당 IOPS* &times;  +  &divide; &times;   (스핀 들 – 1) [(% 읽기% 쓰기) (% 읽기 + 4% 쓰기)] = 총 IOPS &times;
+> *스핀 들 당 IOPS* &times;  +  &divide; &times; (스핀 들 – 1) [(% 읽기% 쓰기) (% 읽기 + 4% 쓰기)] = 총 IOPS &times;
 
 ### <a name="introducing-sans"></a>San 소개
 

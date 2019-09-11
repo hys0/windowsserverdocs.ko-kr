@@ -1,6 +1,6 @@
 ---
 title: VRSS 문제 해결
-description: VRSS 트래픽 부하 분산 VM LPs에 표시 되지 않으면 vRSS 문제를 해결 합니다.
+description: VM LPs에 대 한 vRSS 부하 분산 트래픽이 표시 되지 않는 경우 vRSS 문제를 해결 합니다.
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
@@ -10,72 +10,72 @@ manager: dougkim
 ms.author: pashort
 author: shortpatti
 ms.date: 09/04/2018
-ms.openlocfilehash: a2d6eb43149361b4270565b63fc99f483f364f74
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 412f24e25f75b390ac6315609705b463548c4345
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59824034"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70871806"
 ---
 ## <a name="resolve-vrss-issues"></a>VRSS 문제 해결
 
-모든 준비 단계를 완료 하는 경우 여전히 vRSS 트래픽 부하 분산 VM LPs에 표시 되지 않으면 다른 가능한 문제가 있습니다.
+모든 준비 단계를 완료 했 고 여전히 VM LPs에 대 한 vRSS 부하 분산 트래픽이 표시 되지 않는 경우 가능한 여러 가지 문제가 있습니다.
 
-1. 준비 단계를 수행 하기 전에 vRSS-비활성화 되 고 이제 사용할 수 있어야 합니다. 실행할 수 있습니다 **Set-vmnetworkadapter** VM에 대 한 vRSS를 사용 하도록 설정 합니다.
+1. 준비 단계를 수행 하기 전에 vRSS를 사용 하지 않도록 설정 하 고 이제를 사용 하도록 설정 해야 합니다. **VMNetworkAdapter** 를 실행 하 여 VM에 대해 vRSS를 사용 하도록 설정할 수 있습니다.
 
    ```PowerShell
    Set-VMNetworkAdapter <VMname> -VrssEnabled $TRUE
    Set-VMNetworkAdapter -ManagementOS -VrssEnabled $TRUE
    ```
 
-2. RSS는 VM 또는 호스트 vNIC에 비활성화 되었습니다. Windows Server 2016 RSS 기본적으로 사용 하도록 설정 사용자가 될 수 있습니다 사용 하지 않도록 설정한 것입니다. 
+2. RSS가 VM 또는 호스트 vNIC에서 사용 하지 않도록 설정 되었습니다. Windows Server 2016에서는 기본적으로 RSS를 사용 하도록 설정 합니다. 누군가가 사용 하지 않도록 설정 했을 수 있습니다. 
 
-   - 사용 하도록 설정 = **True**
+   - Enabled = **True**
 
-   **현재 설정을 보려면:** 
+   **현재 설정 보기:** 
 
-   VM에서 다음 PowerShell cmdlet을 실행\(vRSS vm에서에 대 한\) 컴퓨터나 호스트 \(호스트 vNIC vRSS를\)입니다.
+   Vm\(의 vRSS\) 용 vm 또는 호스트 vNIC vrss\)의 호스트 \(에서 다음 PowerShell cmdlet을 실행 합니다.
 
    ```PowerShell
    Get-NetAdapterRss
    ```
 
-   **기능을 사용 합니다.** 
+   **기능을 사용 하도록 설정 합니다.** 
 
-   값을 False에서 True를으로 변경 하려면 다음 PowerShell cmdlet을 실행 합니다.
+   값을 False에서 True로 변경 하려면 다음 PowerShell cmdlet을 실행 합니다.
 
    ```PowerShell
    Enable-NetAdapterRss *
    ```
    
-   RSS를 구성 하는 다른 시스템 차원의 방법은 netsh를 사용 합니다. 이후 
+   RSS를 구성 하는 다른 시스템 차원의 방법은 netsh를 사용 하는 것입니다. 이후 
    
     ```cmd
    netsh int tcp show global
    ```
    
-   되도록 해당 RSS는 전역적으로 비활성화 되지 않습니다. 및 필요한 경우 사용 하도록 설정 합니다. 이 설정 되지 않습니다 접한 *-NetAdapterRSS 합니다.
+   RSS가 전역적으로 사용 하지 않도록 설정 되어 있는지 확인 합니다. 필요한 경우 사용 하도록 설정 합니다. 이 설정은 *-Set-netadapterrss에서 처리 되지 않습니다.
 
-3. VRSS를 구성한 후 VMMQ 해제 되어 있다면 가상 스위치에 연결 된 각 어댑터에서 다음 설정을 확인 합니다.
+3. VRSS를 구성한 후 VMMQ를 사용할 수 없는 경우 가상 스위치에 연결 된 각 어댑터에서 다음 설정을 확인 합니다.
 
    - VmmqEnabled = **False**
    - VmmqEnabledRequested = **True**
 
-   ![vmmq-enabled](../../media/vmmq-enabled.png)
+   ![vmmq-사용](../../media/vmmq-enabled.png)
 
-   **현재 설정을 보려면:** 
+   **현재 설정 보기:** 
 
    ```PowerShell
    Get-NetAdapterAdvancedProperty -Name NICName -DisplayName 'Virtual Switch RSS'
    ```
 
-   **기능을 사용 합니다.** 
+   **기능을 사용 하도록 설정 합니다.** 
 
    ```PowerShell
    Set-NetAdapterAdvancedProperty -Name NICName -DisplayName 'Virtual Switch RSS' -DisplayValue Enabled”
    ```
  
-4. _(Windows Server 2019)_  VMMQ을 사용할 수 없습니다 (VmmqEnabled = False) 설정 하는 동안 **VrssQueueSchedulingMode** 하려면 **동적**합니다. VrssQueueSchedulingMode VMMQ 활성화 되 면 동적으로 변경 되지 않습니다.<p>합니다 **VrssQueueSchedulingMode** 의 **동적** VMMQ을 사용 하는 경우 드라이버 지원이 필요 합니다.  VMMQ 논리적 프로세서 패킷 배치를 오프 로드 되며 따라서 동적 알고리즘을 활용 하 여 드라이버 지원에 필요 합니다.  NIC 공급 업체의 드라이버 및 지 원하는 동적 VMMQ 펌웨어를 설치 하세요.
+4. _(Windows Server 2019)_ **VrssQueueSchedulingMode** 를 **동적**으로 설정 하는 동안에는 VMMQ (VmmqEnabled = False)를 사용 하도록 설정할 수 없습니다. VMMQ를 사용 하도록 설정 하면 VrssQueueSchedulingMode는 동적으로 변경 되지 않습니다.<p>VMMQ를 사용 하는 경우 **동적** **VrssQueueSchedulingMode** 드라이버 지원이 필요 합니다.  VMMQ는 논리적 프로세서에서 패킷 배치를 오프 로드 하는 것으로, 동적 알고리즘을 활용 하려면 드라이버를 지원 해야 합니다.  동적 VMMQ을 지 원하는 NIC 공급 업체의 드라이버 및 펌웨어를 설치 하세요.
 
 
 

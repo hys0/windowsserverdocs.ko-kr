@@ -9,12 +9,12 @@ ms.date: 02/19/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 3c497cbafb8f9313f988a1b892d2b8fef68115eb
-ms.sourcegitcommit: f6503e503d8f08ba8000db9c5eda890551d4db37
+ms.openlocfilehash: 4fd1e62e67f66a217a1d4f3a26933723a4645a31
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68523909"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70865568"
 ---
 # <a name="customize-http-security-response-headers-with-ad-fs-2019"></a>AD FS 2019를 사용 하 여 HTTP 보안 응답 헤더 사용자 지정 
  
@@ -34,7 +34,7 @@ ms.locfileid: "68523909"
 ## <a name="scenarios"></a>시나리오 
 1. 관리자는 [**Http Strict (Transport-Transport) (HSTS)** ](#http-strict-transport-security-hsts) 를 사용 하도록 설정 (HTTPS 암호화를 통해 모든 연결 강제 적용) 하 여 해킹을 받을 수 있는 공용 wifi 액세스 지점에서 http를 사용 하 여 웹 앱에 액세스할 수 있는 사용자를 보호 합니다. 하위 도메인에 대 한 HSTS를 사용 하도록 설정 하 여 보안을 강화 하고자 합니다.  
 2. 관리자가 [**X 프레임 옵션**](#x-frame-options) 응답 헤더를 구성 하 여 (iFrame의 웹 페이지 렌더링 방지) 웹 페이지가 clickjacked 않도록 보호 합니다. 그러나 다른 원본 (도메인)을 사용 하는 응용 프로그램에서 데이터 (iFrame)를 표시 하려면 새 비즈니스 요구 사항으로 인해 헤더 값을 사용자 지정 해야 합니다.
-3. 관리자가 크로스 스크립팅 공격을 감지 하는 경우 페이지를 삭제 하 고 차단 하기 [**위해 (크로스**](#x-xss-protection) 스크립팅 공격 방지)를 사용 하도록 설정 했습니다. 그러나 페이지를 삭제 한 후에 로드할 수 있도록 헤더를 사용자 지정 해야 합니다.  
+3. 관리자가 크로스 스크립팅 공격을 감지 하는 경우 페이지를 삭제 하 고 차단 하기 [**위해 (크로스 스크립팅 공격 방지)** ](#x-xss-protection) 를 사용 하도록 설정 했습니다. 그러나 페이지를 삭제 한 후에 로드할 수 있도록 헤더를 사용자 지정 해야 합니다.  
 4. 관리자는 CORS ( [**원본 간 리소스 공유)** ](#cross-origin-resource-sharing-cors-headers) 를 사용 하도록 설정 하 고 AD FS의 원본 (도메인)을 설정 하 여 단일 페이지 응용 프로그램이 다른 도메인을 사용 하 여 web API에 액세스할 수 있도록 해야 합니다.  
 5. 관리자는 도메인 간 요청을 허용 하지 않기 때문에 사이트 간 스크립팅 및 데이터 삽입 공격을 방지 하기 위해 [**CSP (콘텐츠 보안 정책)** ](#content-security-policy-csp) 헤더를 사용 하도록 설정 했습니다. 그러나 새로운 비즈니스 요구 사항으로 인해 웹 페이지에서 원본의 이미지를 로드 하 고 미디어를 신뢰할 수 있는 공급자로 제한할 수 있도록 헤더를 사용자 지정 해야 합니다.  
 
@@ -179,7 +179,7 @@ Set-AdfsResponseHeaders -CORSTrustedOrigins https://example1.com,https://example
 #### <a name="csp-customization"></a>CSP 사용자 지정 
 CSP 헤더의 사용자 지정에는 웹 페이지에 대 한 리소스 브라우저 로드를 정의 하는 보안 정책을 수정 하는 작업이 포함 됩니다. 기본 보안 정책은입니다.  
  
-`Content-Security-Policy: default-src ‘self’ ‘unsafe-inline’ ‘’unsafe-eval’; img-src ‘self’ data:;` 
+`Content-Security-Policy: default-src ‘self' ‘unsafe-inline' ‘'unsafe-eval'; img-src ‘self' data:;` 
  
 **기본-src** 지시문은 각 지시문을 명시적으로 나열 하지 않고 [-src 지시문](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/default-src) 을 수정 하는 데 사용 됩니다. 예를 들어 아래 예제에서 정책 1은 정책 2와 같습니다.  
 
@@ -190,14 +190,14 @@ Set-AdfsResponseHeaders -SetHeaderName "Content-Security-Policy" -SetHeaderValue
  
 정책 2
 ```PowerShell 
-Set-AdfsResponseHeaders -SetHeaderName "Content-Security-Policy" -SetHeaderValue "script-src ‘self’; img-src ‘self’; font-src 'self';  
+Set-AdfsResponseHeaders -SetHeaderName "Content-Security-Policy" -SetHeaderValue "script-src ‘self'; img-src ‘self'; font-src 'self';  
 frame-src 'self'; manifest-src 'self'; media-src 'self';" 
 ```
 
 지시문이 명시적으로 나열 되는 경우 지정 된 값은 기본-src에 지정 된 값을 재정의 합니다. 아래 예제에서 img-src는 값을 ' * '로 사용 하 고 (모든 원본에서 이미지를 로드 하도록 허용) 다른-src 지시문은 값을 ' self ' (웹 페이지와 같은 원본으로 제한)로 사용 합니다.  
 
 ```PowerShell
-Set-AdfsResponseHeaders -SetHeaderName "Content-Security-Policy" -SetHeaderValue "default-src ‘self’; img-src *" 
+Set-AdfsResponseHeaders -SetHeaderName "Content-Security-Policy" -SetHeaderValue "default-src ‘self'; img-src *" 
 ```
 다음 소스는 기본-src 정책에 대해 정의할 수 있습니다. 
  

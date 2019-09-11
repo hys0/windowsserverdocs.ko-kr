@@ -1,6 +1,6 @@
 ---
-title: 관리 데이터 센터 브리징 (DCB)
-description: 이 항목에서는 Windows PowerShell 명령을 사용 하 여 Windows Server 2016의 데이터 센터 브리징를 관리 하는 방법에 대 한 지침을 제공 합니다.
+title: 데이터 센터 브리징 관리 (DCB)
+description: 이 항목에서는 windows PowerShell 명령을 사용 하 여 Windows Server 2016에서 데이터 센터 브리징을 관리 하는 방법에 대 한 지침을 제공 합니다.
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
@@ -8,51 +8,51 @@ ms.assetid: 1575cc7c-62a7-4add-8f78-e5d93effe93f
 manager: brianlic
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: daed746fe798ae253956d0977827d0e205bb8b3e
-ms.sourcegitcommit: 21165734a0f37c4cd702c275e85c9e7c42d6b3cb
+ms.openlocfilehash: fd6e8e5dd0bb4103011269473c3e1091739c775e
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2019
-ms.locfileid: "65034570"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70869803"
 ---
-# <a name="manage-data-center-bridging-dcb"></a>관리 데이터 센터 브리징 (DCB)
+# <a name="manage-data-center-bridging-dcb"></a>데이터 센터 브리징 관리 (DCB)
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-이 항목에서는 Windows PowerShell 명령을 사용 하 여 데이터 센터 브리징을 구성 하는 방법에 대 한 지침을 제공 \(DCB\) DCB에서\-호환 되는 네트워크 어댑터 중 하나를 실행 하는 컴퓨터에 설치 된 Windows Server 2016 또는 Windows 10입니다.
+이 항목에서는 Windows PowerShell 명령을 사용 하 여 데이터 센터 브리징 \(DCB\) 를 구성 하는 방법에 대 한 지침\-을 제공 합니다. DCB 호환 네트워크 어댑터에서 Windows Server 2016 또는 Windows 10
 
-## <a name="install-dcb-in-windows-server-2016-or-windows-10"></a>Windows Server 2016 또는 Windows 10에서 DCB를 설치 합니다.
+## <a name="install-dcb-in-windows-server-2016-or-windows-10"></a>Windows Server 2016 또는 Windows 10에서 DCB 설치
 
-사용 하 여 및 DCB를 설치 하는 방법에 대 한 필수 구성 요소에 대 한 내용은 참조 하세요 [설치 센터 브리징 (DCB (데이터) Windows Server 2016 또는 Windows 10에서](dcb-install.md)합니다.
+를 사용 하기 위한 필수 구성 요소 및 DCB 설치 방법에 대 한 자세한 내용은 [Windows Server 2016 또는 windows 10에서 데이터 센터 브리징 설치 (DCB)](dcb-install.md)를 참조 하세요.
 
 
 ## <a name="dcb-configurations"></a>DCB 구성 
 
-Windows Server 2016 이전의 모든 DCB 구성 DCB를 지 원하는 모든 네트워크 어댑터에 보편적으로 적용 되었습니다. 
+Windows Server 2016 이전에는 모든 DCB 구성이 DCB을 지 원하는 모든 네트워크 어댑터에 전체적으로 적용 되었습니다. 
 
-Windows Server 2016에서 구성을 적용할 수 있습니다 DCB 전역 정책 저장소 또는 개별 정책 저장소\(s\)입니다. 개별 정책이 적용 된 경우 모든 전역 정책 설정을 재정의 됩니다.
+Windows Server 2016에서는 전역 정책 저장소 또는 개별 정책 저장소\(\)에 DCB 구성을 적용할 수 있습니다. 개별 정책을 적용 하면 모든 전역 정책 설정이 재정의 됩니다.
 
-다음을 수행 될 때까지 시스템 수준에서 트래픽 클래스, PFC 및 응용 프로그램 우선 순위 할당의 구성은 네트워크 어댑터에 적용 되지 않습니다.
+시스템 수준의 트래픽 클래스, PFC 및 응용 프로그램 우선 순위 할당 구성은 다음 작업을 수행할 때까지 네트워크 어댑터에 적용 되지 않습니다.
 
-1. False로 DCBX 감수 비트를 설정 합니다.
+1. DCBX의 비트를 false로 설정
 
-2. 네트워크 어댑터에 DCB를 사용 하도록 설정 합니다. 참조 [을 사용 하도록 설정 하 고 네트워크 어댑터에 DCB 설정을 표시](#bkmk_enabledcb)합니다.
-
->[!NOTE]
->DCBX 통해 스위치에서 DCB를 구성 하려는 경우 참조 [DCBX 설정](#dcb-configuration-on-network-adapters)합니다.
-
-DCBX 감수 비트 DCB 사양에 설명 되어 있습니다. 경우는 기꺼이 장치의 비트가 true 이면 장치를 통해 DCBX 원격 장치에서 구성을 적용 하려고 합니다. 장치의 감수 비트가 false로 설정 된 경우 장치가 원격 장치에서 모든 구성 시도 거부 하 고 로컬 구성에만 적용 됩니다.
-
-Windows Server 2016에서 DCB를 설치 하지 않은 경우 감수 비트 값 관련해 서 운영 체제는 운영 체제 설정이 없는 로컬 네트워크 어댑터에 적용 하기 때문에 관련 아닙니다. DCB를 설치한 후 감수 비트의 기본값은 true입니다. 이 디자인을 사용 하면 네트워크 어댑터는 원격 피어 로부터 받았을 수 있습니다 하는 모든 구성 되도록 합니다.
-
-네트워크 어댑터를 DCBX을 지원 하지 않으면 원격 장치에서 구성 되지 수신지 않습니다. 운영 체제에서 구성에서 수신 하지만 DCBX 해야만 감수 비트가 false로 설정 합니다.
-
-## <a name="set-the-willing-bit"></a>감수 비트 설정
-
-트래픽 클래스와 PFC, 네트워크 어댑터에서 응용 프로그램 우선 순위 할당의 운영 체제 구성을 적용할 또는 원격 장치에서 구성을 재정의 하기만 \-있는 경우 \-다음 명령을 실행할 수 있습니다.
+2. 네트워크 어댑터에서 DCB를 사용 하도록 설정 합니다. [네트워크 어댑터에서 DCB 설정 사용 및 표시](#bkmk_enabledcb)를 참조 하세요.
 
 >[!NOTE]
->DCB Windows PowerShell 명령 이름 이름 문자열에 "DCB" 대신 "QoS"를 포함 합니다. QoS 및 DCB를 원활 하 게 QoS 관리 환경을 제공 하기 위해 Windows Server 2016에 통합 되어 때문입니다.
+>DCBX을 통해 스위치에서 DCB을 구성 하려면 [dcbx 설정](#dcb-configuration-on-network-adapters)을 참조 하세요.
+
+DCBX은 DCB 사양에 설명 되어 있습니다. 장치에서 할 일 비트가 true로 설정 된 경우 장치는 DCBX을 통해 원격 장치에서 구성을 허용 합니다. 장치에서 할 일 비트가 false로 설정 된 경우 장치는 원격 장치의 모든 구성 시도를 거부 하 고 로컬 구성만 적용 합니다.
+
+DCB가 Windows Server 2016에 설치 되어 있지 않은 경우 운영 체제에 네트워크 어댑터에 적용 되는 로컬 설정이 없으므로 운영 체제에서 문제가 발생 하는 것과 같은 문제가 발생 합니다. DCB를 설치한 후에는 기본 비트의 기본값은 true입니다. 이 설계를 통해 네트워크 어댑터는 원격 피어에서 받은 모든 구성을 유지할 수 있습니다.
+
+네트워크 어댑터가 DCBX을 지원 하지 않는 경우 원격 장치에서 구성을 수신 하지 않습니다. 운영 체제에서 구성을 수신 하지만 DCBX을 위한 비트가 false로 설정 된 후에만 구성 됩니다.
+
+## <a name="set-the-willing-bit"></a>의사 비트 설정
+
+네트워크 어댑터에 대 한 트래픽 클래스, PFC 및 응용 프로그램 우선 순위 할당의 운영 체제 구성을 적용 하거나 단순히 원격 장치에서 구성을 재정의 하는 경우 (\) 다음 명령을 실행할 수 있습니다.
+
+>[!NOTE]
+>DCB Windows PowerShell 명령 이름에는 이름 문자열에 "DCB" 대신 "QoS"가 포함 됩니다. 이는 QoS 및 DCB이 Windows Server 2016에 통합 되어 원활한 QoS 관리 환경을 제공 하기 때문입니다.
 
     
     Set-NetQosDcbxSetting -Willing $FALSE
@@ -63,7 +63,7 @@ Windows Server 2016에서 DCB를 설치 하지 않은 경우 감수 비트 값 �
     [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
     
 
-설정 하려는 비트의 상태를 표시 하려면 다음 명령을 사용할 수 있습니다.
+사용자의 비트 설정 상태를 표시 하려면 다음 명령을 사용할 수 있습니다.
 
     
     Get-NetQosDcbxSetting
@@ -73,33 +73,33 @@ Windows Server 2016에서 DCB를 설치 하지 않은 경우 감수 비트 값 �
     False   Global  
     
 
-## <a name="dcb-configuration-on-network-adapters"></a>네트워크 어댑터에 DCB 구성
+## <a name="dcb-configuration-on-network-adapters"></a>네트워크 어댑터의 DCB 구성
 
-네트워크 어댑터에서 DCB를 사용 하도록 설정 스위치에서 네트워크 어댑터에 전파 구성을 볼 수 있습니다.
+네트워크 어댑터에서 DCB를 사용 하도록 설정 하면 스위치에서 네트워크 어댑터로 전파 되는 구성을 확인할 수 있습니다.
 
-DCB 구성에는 다음 단계를 포함합니다.
+DCB 구성에는 다음 단계가 포함 됩니다.
 
-1.  DCB 설정을 포함 하는 시스템 수준에서 구성 합니다.
+1.  다음을 포함 하는 시스템 수준에서 DCB 설정을 구성 합니다.
 
     a. 트래픽 클래스 관리
     
-    b. 우선 순위 흐름 제어 (PFC) 설정
+    b. PFC (우선 순위 흐름 제어) 설정
     
     c. 응용 프로그램 우선 순위 할당
     
     d. DCBX 설정
 
-2. 네트워크 어댑터에 대해 DCB를 구성 합니다.
+2. 네트워크 어댑터에서 DCB를 구성 합니다.
 
 
 
-##  <a name="dcb-traffic-class-management"></a>DCB 트래픽 클래스 관리
+##  <a name="dcb-traffic-class-management"></a>DCB Traffic 클래스 관리
 
-다음은 트래픽 클래스 관리용 Windows PowerShell 명령 예제입니다.
+트래픽 클래스 관리를 위한 Windows PowerShell 명령의 예는 다음과 같습니다.
 
 ### <a name="create-a-traffic-class"></a>트래픽 클래스 만들기
 
-사용할 수는 **새로 만들기-NetQosTrafficClass** 트래픽 클래스를 만드는 명령입니다.
+**Get-netqostrafficclass** 명령을 사용 하 여 traffic 클래스를 만들 수 있습니다.
 
     
     New-NetQosTrafficClass -Name SMB -Priority 4 -BandwidthPercentage 30 -Algorithm ETS
@@ -109,15 +109,15 @@ DCB 구성에는 다음 단계를 포함합니다.
     SMB  ETS   30   4Global
       
 
-기본적으로 모든 802.1p 값에는 물리적 링크의 대역폭의 100%를 기본 트래픽 클래스에 매핑됩니다. 합니다 **새로 만들기-NetQosTrafficClass** 매핑되는 모든 패킷 802.1p 우선 순위 태그가 지정 되는 값 4, 명령은 새 트래픽 클래스를 만듭니다. 전송 선택 알고리즘 \(TSA\) ETS 있고 대역폭의 30%입니다.
+기본적으로 모든 802.1 p 값은 실제 링크 대역폭의 100%를 포함 하는 기본 트래픽 클래스에 매핑됩니다. **Get-netqostrafficclass** 명령은 802.1 p 우선 순위 값 4로 태그가 지정 된 패킷이 매핑되는 새 트래픽 클래스를 만듭니다. 전송 선택 알고리즘 \(tsa\) 는 하이 고 대역폭의 30%가 있습니다.
 
-최대 7 새 트래픽 클래스를 만들 수 있습니다. 기본 트래픽 클래스를 포함 하 여에 있을 수 있습니다 최대 8 트래픽 클래스 시스템입니다. 그러나 DCB 가능 네트워크 어댑터를은 하드웨어에서 클래스를 트래픽 대부분을 지원 하지 않습니다. 네트워크 어댑터에서 수용할 수 보다 더 많은 트래픽 클래스를 만들고 해당 네트워크 어댑터에서 DCB를 사용 하도록 설정한을 미니 포트 드라이버의 운영 체제 오류를 보고 합니다. 이 오류는 이벤트 로그에 기록 됩니다.
+최대 7 개의 새 트래픽 클래스를 만들 수 있습니다. 기본 트래픽 클래스를 포함 하 여 시스템에는 최대 8 개의 트래픽 클래스가 있을 수 있습니다. 그러나 DCB 가능 네트워크 어댑터는 하드웨어에서 많은 트래픽 클래스를 지원 하지 않을 수 있습니다. 네트워크 어댑터에서 수용할 수 있는 것 보다 더 많은 트래픽 클래스를 만들 때 해당 네트워크 어댑터에서 DCB를 사용 하도록 설정 하면 미니 포트 드라이버가 운영 체제에 오류를 보고 합니다. 오류는 이벤트 로그에 기록 됩니다.
 
-모든 생성된 된 트래픽 클래스에 대 한 대역폭 예약 총 대역폭의 99%를 초과할 수 없습니다. 기본 트래픽 클래스에는 항상 자체에 대 한 예약 된 대역폭의 1% 이상에 있습니다.
+만들어진 모든 트래픽 클래스에 대 한 대역폭 예약의 합계는 대역폭의 99%를 초과할 수 없습니다. 기본 트래픽 클래스에는 항상 1% 이상의 대역폭이 예약 되어 있습니다.
 
-### <a name="display-traffic-classes"></a>트래픽 클래스를 표시 합니다.
+### <a name="display-traffic-classes"></a>트래픽 클래스 표시
 
-사용할 수는 **Get-netqostrafficclass** 트래픽 클래스를 보려면 명령입니다.
+**Get-netqostrafficclass** 명령을 사용 하 여 트래픽 클래스를 볼 수 있습니다.
 
     Get-NetQosTrafficClass
     
@@ -126,13 +126,13 @@ DCB 구성에는 다음 단계를 포함합니다.
     [Default]   ETS   70   0-3,5-7  Global
     SMB ETS   30   4Global  
     
-### <a name="modify-a-traffic-class"></a>트래픽 클래스를 수정 합니다.
+### <a name="modify-a-traffic-class"></a>트래픽 클래스 수정
 
-사용할 수는 **집합 NetQosTrafficClass** 트래픽 클래스를 만드는 명령입니다. 
+**Get-netqostrafficclass** 명령을 사용 하 여 traffic 클래스를 만들 수 있습니다. 
 
     Set-NetQosTrafficClass -Name SMB -BandwidthPercentage 50
 
-사용할 수는 **Get-netqostrafficclass** 설정을 확인 하는 명령입니다.
+그런 다음 **get-netqostrafficclass** 명령을 사용 하 여 설정을 볼 수 있습니다.
 
     Get-NetQosTrafficClass
     
@@ -142,17 +142,17 @@ DCB 구성에는 다음 단계를 포함합니다.
     SMB ETS   50   4Global   
     
 
-트래픽 클래스를 만든 후 해당 설정을 변경할 수 있습니다 독립적으로 유지 합니다. 변경할 수 있습니다 설정에는 다음이 포함 됩니다.
+트래픽 클래스를 만든 후에는 해당 설정을 독립적으로 변경할 수 있습니다. 변경할 수 있는 설정은 다음과 같습니다.
 
 1. 대역폭 할당 \(-BandwidthPercentage\)
 
-2. TSA (\-알고리즘\)
+2. Tsa (\-알고리즘\)
 
-3. 우선 순위 매핑 \(-우선 순위\)
+3. 우선 순위 \(매핑-우선 순위\)
 
-### <a name="remove-a-traffic-class"></a>트래픽 클래스를 제거 합니다.
+### <a name="remove-a-traffic-class"></a>트래픽 클래스 제거
 
-사용할 수는 **제거 NetQosTrafficClass** 트래픽 클래스를 삭제 하는 명령입니다.
+**Get-netqostrafficclass** 명령을 사용 하 여 traffic 클래스를 삭제할 수 있습니다.
 
 >[!IMPORTANT]
 >기본 트래픽 클래스를 제거할 수 없습니다.
@@ -160,7 +160,7 @@ DCB 구성에는 다음 단계를 포함합니다.
 
     Remove-NetQosTrafficClass -Name SMB
 
-사용할 수는 **Get-netqostrafficclass** 설정을 확인 하는 명령입니다.
+그런 다음 **get-netqostrafficclass** 명령을 사용 하 여 설정을 볼 수 있습니다.
     
     Get-NetQosTrafficClass
     
@@ -169,13 +169,13 @@ DCB 구성에는 다음 단계를 포함합니다.
     [Default]   ETS   100  0-7  Global
     
 
-트래픽 클래스를 제거한 후 802.1p 값에 매핑된 기본 트래픽 클래스를 트래픽 클래스는 다시 매핑됩니다. 트래픽 클래스에 대 한 예약 된 모든 대역폭 트래픽 클래스를 제거할 때 기본 트래픽 클래스 할당에 반환 됩니다.
+트래픽 클래스를 제거 하면 해당 traffic 클래스에 매핑된 802.1 p 값이 기본 트래픽 클래스에 다시 매핑됩니다. 트래픽 클래스에 대해 예약 된 모든 대역폭은 트래픽 클래스가 제거 될 때 기본 트래픽 클래스 할당으로 반환 됩니다.
 
-## <a name="per-network-interface-policies"></a>각 네트워크 인터페이스 정책
+## <a name="per-network-interface-policies"></a>네트워크 별 인터페이스 정책
 
-위의 예에서는 모든 전역 정책을 설정합니다. 다음은 설정 NIC 당 정책 가져오기 하는 방법의 예입니다. 
+위의 모든 예제에서는 전역 정책을 설정 합니다. 다음은 NIC 별 정책을 설정 하 고 가져오는 방법에 대 한 예입니다. 
 
-"PolicySet" 필드가 AdapterSpecific 전역에서 변경 됩니다. 경우 AdapterSpecific 정책이 표시 됩니다. 이러한 인터페이스 색인 \(ifIndex\) 이름과 인터페이스 \(ifAlias\) 도 표시 됩니다.
+"PolicySet" 필드가 전역에서 AdapterSpecific으로 변경 됩니다. Adapterspecific 정책이 표시 되 면 인터페이스 \(인덱스 ifIndex\) 및 인터페이스 이름 \(ifalias\) 도 표시 됩니다.
 
 ```
 PS C:\> Get-NetQosTrafficClass
@@ -227,9 +227,9 @@ SMBforM1    ETS       30           4                AdapterSpecific  4       M1
 
 ## <a name="priority-flow-control-settings"></a>우선 순위 흐름 제어 설정:
 
-다음은 우선 순위 흐름 제어 설정에 대 한 명령 예제입니다. 개별 어댑터에 대 한 이러한 설정은 지정할 수도 있습니다.
+우선 순위 흐름 제어 설정에 대 한 명령 예제는 다음과 같습니다. 이러한 설정은 개별 어댑터에도 지정할 수 있습니다.
 
-### <a name="enable-and-display-priority-flow-control-for-global-and-interface-specific-use-cases"></a>설정 및 전역 및 특정 인터페이스에 대 한 표시 우선 순위 흐름 제어 사용 사례
+### <a name="enable-and-display-priority-flow-control-for-global-and-interface-specific-use-cases"></a>전역 및 인터페이스 특정 사용 사례에 대 한 우선 순위 흐름 제어를 설정 하 고 표시 합니다.
 
 ```
 PS C:\> Enable-NetQosFlowControl -Priority 4
@@ -263,7 +263,7 @@ Priority   Enabled    PolicySet        IfIndex IfAlias
 ```
 
 
-### <a name="disable-priority-flow-control-global-and-interface-specific"></a>우선 순위 흐름 제어를 사용 하지 않도록 설정 (전역 및 특정 인터페이스)
+### <a name="disable-priority-flow-control-global-and-interface-specific"></a>우선 순위 흐름 제어 사용 안 함 (전역 및 인터페이스 특정)
 
 ```
 PS C:\> Disable-NetQosFlowControl -Priority 4
@@ -299,7 +299,7 @@ Priority   Enabled    PolicySet        IfIndex IfAlias
 
 ##  <a name="application-priority-assignment"></a>응용 프로그램 우선 순위 할당
 
-다음은 우선 순위 할당의 예입니다.
+우선 순위 할당의 예는 다음과 같습니다.
 
 ### <a name="create-qos-policy"></a>QoS 정책 만들기
 
@@ -315,15 +315,15 @@ PriorityValue  : 4
 
 ```
 
-이전 명령은 SMB에 대 한 새 정책을 만듭니다. – SMB는 TCP 포트 445 (SMB에 대 한 예약 됨된)와 일치 하는 수신함 필터. 하면 패킷이 네트워크 미니 포트 드라이버에 패킷을 전달 되기 전에 802.1p 값 4 사용 하 여 운영 체제에서 태그 되도록 445 TCP 포트에 전송 됩니다.
+이전 명령은 SMB에 대 한 새 정책을 만듭니다. – SMB는 TCP 포트 445 (SMB 용으로 예약 됨)와 일치 하는 수신함 필터입니다. 패킷이 TCP 포트 445로 전송 되 면 패킷이 네트워크 미니 포트 드라이버로 전달 되기 전에 운영 체제에서 802.1 p 값 4로 태그를 지정 합니다.
 
-– SMB 외에도 다른 기본 필터 – iSCSI (일치 하는 TCP 포트 3260) ","-NFS (일치 하는 TCP 포트 2049) ","-LiveMigration (일치 하는 TCP 포트 6600) ","-FCOE (EtherType 0x8906 일치) "및" – NetworkDirect를 포함 합니다.
+– SMB 외에도 기타 기본 필터는 – iSCSI (일치 하는 tcp 포트 3260),-NFS (tcp 포트 2049 일치),-LiveMigration (TCP 포트 6600 일치),-FCOE (일치 하는 EtherType 0x8906) 및 – NetworkDirect를 포함 합니다.
 
-NetworkDirect는 추상 계층 네트워크 어댑터에서 RDMA 구현을 기반으로 만듭니다. Network Direct 포트를 통해 – NetworkDirect은 따라야 합니다.
+NetworkDirect는 네트워크 어댑터의 RDMA 구현 위에 만드는 추상 계층입니다. – NetworkDirect 뒤에는 네트워크 Direct 포트가와 야 합니다.
 
-기본 필터 외에도 (첫 번째 예와 아래), 응용 프로그램의 실행 파일 이름이 나 IP 주소, 포트 또는 프로토콜 (에서처럼 두 번째 예제) 트래픽을 분류할 수 있습니다.
+기본 필터 외에도, 응용 프로그램의 실행 파일 이름 (아래의 첫 번째 예제에서와 같이) 또는 IP 주소, 포트 또는 프로토콜 (두 번째 예제에 표시 된 대로)을 기준으로 트래픽을 분류할 수 있습니다.
 
-**실행 파일 이름으로**
+**실행 파일 이름별**
 
 ```
 PS C:\> New-NetQosPolicy -Name background -AppPathNameMatchCondition "C:\Program files (x86)\backup.exe" -PriorityValue8021Action 1
@@ -339,7 +339,7 @@ PriorityValue  : 1
 ```
 
 
-**IP 주소 포트 또는 프로토콜**
+**IP 주소 포트 또는 프로토콜 별**
 
 ```
 PS C:\> New-NetQosPolicy -Name "Network Management" -IPDstPrefixMatchCondition 10.240.1.0/24 -IPProtocolMatchCondition both -NetworkProfile all -PriorityValue8021Action 7
@@ -386,9 +386,9 @@ PriorityValue  : 4
 
 ```
 
-### <a name="modify-qos-policy"></a>QoS 정책을 수정합니다
+### <a name="modify-qos-policy"></a>QoS 정책 수정
 
-아래와 같이 QoS 정책을 수정할 수 있습니다.
+다음과 같이 QoS 정책을 수정할 수 있습니다.
 
 
 ```
@@ -420,15 +420,15 @@ Remove-NetQosPolicy -Name "Network Management" -Store GPO:localhost
 
 ```
 
-## <a name="dcb-configuration-on-network-adapters"></a>네트워크 어댑터에 DCB 구성
+## <a name="dcb-configuration-on-network-adapters"></a>네트워크 어댑터의 DCB 구성
 
-네트워크 어댑터에 DCB 구성은 위에서 설명한 시스템 수준에서 DCB 구성에 무관 합니다. 
+네트워크 어댑터에 대 한 DCB 구성은 위에 설명 된 시스템 수준의 DCB 구성과 독립적입니다. 
 
-DCB는 Windows Server 2016의 설치 여부에 관계 없이 다음 명령을 항상 실행할 수 있습니다. 
+DCB가 Windows Server 2016에 설치 되었는지 여부에 관계 없이 항상 다음 명령을 실행할 수 있습니다. 
 
-스위치에서 DCB를 구성 하 고 네트워크 어댑터에 구성을 전파 하는 데 DCBX 의존 하는 경우에 어떤 구성을 수신 하 고 네트워크 어댑터에 DCB를 사용 하도록 설정 하면 운영 체제 측면에서 네트워크 어댑터에 적용을 검사할 수 있습니다.
+스위치에서 DCB을 구성 하 고 DCBX을 사용 하 여 구성을 네트워크 어댑터에 전파 하는 경우 네트워크 어댑터에서 DCB을 사용 하도록 설정 하면 운영 체제 쪽에서 네트워크 어댑터에 대해 받아서 적용 되는 구성을 확인할 수 있습니다.
 
-###  <a name="bkmk_enabledcb"></a>사용 하도록 설정 하 고 네트워크 어댑터에 DCB 설정 표시
+###  <a name="bkmk_enabledcb"></a>네트워크 어댑터에서 DCB 설정 사용 및 표시
 
 ```
 PS C:\> Enable-NetAdapterQos M1
@@ -455,7 +455,7 @@ OperationalClassifications : Protocol  Port/Type Priority
 
 ```
 
-### <a name="disable-dcb-on-network-adapters"></a>네트워크 어댑터에서 DCB를 사용 하지 않도록 설정
+### <a name="disable-dcb-on-network-adapters"></a>네트워크 어댑터에서 DCB 사용 안 함
 
 ```
 PS C:\> Disable-NetAdapterQos M1
@@ -470,18 +470,18 @@ Capabilities :                       Hardware     Current
                NumTCs(Max/ETS/PFC) : 8/8/8        0/0/0  
 
 ```
-## <a name="bkmk_wps"></a>DCB에 대 한 Windows PowerShell 명령
+## <a name="bkmk_wps"></a>DCB 용 Windows PowerShell 명령
 
-Windows Server 2016 및 Windows Server 2012 R2에 대 한 DCB Windows PowerShell 명령이 있습니다. Windows Server 2016에서 Windows Server 2012 R2에 대 한 모든 명령을 사용할 수 있습니다.
+Windows Server 2016 및 Windows Server 2012 r 2에 대 한 Windows PowerShell 명령 DCB 있습니다. Windows server 2016에서 Windows Server 2012 r 2에 대 한 모든 명령을 사용할 수 있습니다.
 
-### <a name="windows-server-2016-windows-powershell-commands-for-dcb"></a>DCB에 대 한 Windows Server 2016 Windows PowerShell 명령
+### <a name="windows-server-2016-windows-powershell-commands-for-dcb"></a>DCB 용 windows Server 2016 Windows PowerShell 명령
 
-다음 항목에서는 Windows Server 2016에 대 한 모든 데이터 센터 브리징에 대 한 Windows PowerShell cmdlet 설명과 구문을 제공 \(DCB\) 서비스 품질 \(QoS\)\-관련 cmdlet. cmdlet은 cmdlet의 시작 부분에 있는 동사에 따라 사전순으로 나열됩니다.
+Windows Server 2016에 대 한 다음 항목에서는 모든 데이터 센터 브리징 \(DCB\) \(QoS\)\-특정 cmdlet에 대 한 windows PowerShell cmdlet 설명 및 구문을 제공 합니다. cmdlet은 cmdlet의 시작 부분에 있는 동사에 따라 사전순으로 나열됩니다.
 
-- [DcbQoS Module](https://technet.microsoft.com/itpro/powershell/windows/dcbqos/dcbqos)
+- [DcbQoS 모듈](https://technet.microsoft.com/itpro/powershell/windows/dcbqos/dcbqos)
 
-### <a name="windows-server-2012-r2-windows-powershell-commands-for-dcb"></a>DCB에 대 한 Windows Server 2012 R2 Windows PowerShell 명령
+### <a name="windows-server-2012-r2-windows-powershell-commands-for-dcb"></a>DCB 용 windows Server 2012 R2 Windows PowerShell 명령
 
-다음 항목에서는 Windows Server 2012 R2에 대 한 모든 데이터 센터 브리징에 대 한 Windows PowerShell cmdlet 설명과 구문을 제공 \(DCB\) 서비스 품질 \(QoS\)\-관련 cmdlet. cmdlet은 cmdlet의 시작 부분에 있는 동사에 따라 사전순으로 나열됩니다.
+Windows Server 2012 r 2에 대 한 다음 항목에서는 모든 데이터 센터 브리징 \(DCB\) \(QoS\)\-특정 cmdlet에 대 한 windows PowerShell cmdlet 설명 및 구문을 제공 합니다. cmdlet은 cmdlet의 시작 부분에 있는 동사에 따라 사전순으로 나열됩니다.
 
-- [데이터 센터 브리징 (DCB) 품질의 Windows PowerShell의 QoS (서비스) Cmdlet](https://technet.microsoft.com/library/hh967440.aspx)
+- [Windows PowerShell의 DCB (데이터 센터 브리징) QoS (서비스 품질) Cmdlet](https://technet.microsoft.com/library/hh967440.aspx)

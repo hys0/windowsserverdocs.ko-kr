@@ -9,15 +9,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 06f2f0d1fb48c6b9dea89762a30fdf77643d0e53
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: af0fce04fcb48e9c93076ca8d0f261c5170dc9fc
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66188572"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70865491"
 ---
 # <a name="the-role-of-claim-rules"></a>클레임 규칙의 역할
-Active Directory Federation Services에서 페더레이션 서비스의 전반적인 기능은 \(AD FS\) 클레임 집합을 포함 하는 토큰을 발급 하는 것입니다. AD FS 수락 하 고 실행 한 다음 클레임에 대 한 결정은 클레임 규칙에 따라 적용 됩니다.  
+Active Directory Federation Services \(ADFS\) 페더레이션 서비스의 전체 기능은 클레임 집합이 포함 된 토큰을 발급 하는 것입니다. AD FS 수락 하 고 실행 한 다음 클레임에 대 한 결정은 클레임 규칙에 따라 적용 됩니다.  
   
 ## <a name="what-are-claim-rules"></a>클레임 규칙이란?  
 클레임 규칙 들어오는 클레임을 하나 이상 수행 되 면에 조건을 적용 하는 비즈니스 논리의 인스턴스를 나타냅니다. \(다음 y x if\) 조건 매개 변수를 기반으로 하나 이상의 나가는 클레임을 생성 합니다. 들어오고 나가는 클레임에 대 한 자세한 내용은 참조 [The 역할 클레임](The-Role-of-Claims.md)합니다.  
@@ -37,7 +37,7 @@ Active Directory Federation Services에서 페더레이션 서비스의 전반�
 ### <a name="how-claim-rules-are-processed"></a>클레임 규칙을 처리하는 방법  
 클레임 규칙은 *클레임 엔진*을 사용하여 클레임 파이프라인을 통해 처리됩니다. 클레임 엔진은 사용자로부터의 들어오는 클레임 집합을 검사하고 각 규칙의 논리를 기준으로 클레임의 출력 집합을 생성하는 페더레이션 서비스의 논리적 구성 요소입니다.  
   
-지정된 페더레이션 트러스트와 관련된 클레임 규칙 집합과 클레임 규칙 엔진은 페더레이션 서비스에 의해 나가는 클레임으로 발급되기 전에 들어오는 클레임을 그대로 통과시킬지, 특정 조건의 기준에 맞도록 필터링할지, 아니면 완전히 새로운 클레임 집합으로 변환할지 결정합니다.  
+클레임 규칙 엔진과 지정 된 페더레이션 트러스트와 관련 된 클레임 규칙 집합은 들어오는 클레임을 있는 그대로 전달할지 여부를 결정 하 고, 특정 조건의 조건을 충족 하거나 완전히 새로운 집합으로 변환 하도록 필터링 합니다. 페더레이션 서비스에서 나가는 클레임으로 발급 되기 전의 클레임입니다.  
   
 이 프로세스에 대 한 자세한 내용은 참조 [클레임 엔진의 역할](The-Role-of-the-Claims-Engine.md)합니다.  
   
@@ -84,7 +84,7 @@ AD FS 관리 스냅인에서\-규칙만 만들 수 클레임 규칙 템플릿을
 표준 클레임 규칙 템플릿의 범위를 벗어나는 비즈니스 규칙의 경우 사용자 지정 규칙 템플릿을 사용하여 클레임 규칙 언어를 사용하는 복잡한 논리 조건 집합을 표현할 수 있습니다. 사용자 지정 규칙을 사용 하는 방법에 대 한 자세한 내용은 참조 [사용자 지정 클레임 규칙을 사용 하는 경우](When-to-Use-a-Custom-Claim-Rule.md)합니다.  
   
 #### <a name="using-windowspowershell"></a>Windows PowerShell 사용  
-만들거나 AD FS에서 규칙을 관리 하려면 Windows PowerShell을 사용한 ADFSClaimRuleSet cmdlet 개체를 사용할 수 있습니다. Windows PowerShell을 이 cmdlet과 함께 사용하는 방법에 대한 자세한 내용은 [Windows PowerShell을 사용하여 AD FS 관리](https://go.microsoft.com/fwlink/?LinkID=179634)를 참조하세요.  
+ADFSClaimRuleSet cmdlet 개체를 Windows PowerShell과 함께 사용 하 여 AD FS에서 규칙을 만들거나 관리할 수도 있습니다. Windows PowerShell을 이 cmdlet과 함께 사용하는 방법에 대한 자세한 내용은 [Windows PowerShell을 사용하여 AD FS 관리](https://go.microsoft.com/fwlink/?LinkID=179634)를 참조하세요.  
   
 ## <a name="what-is-a-claim-rule-set"></a>클레임 규칙 집합이란?  
 다음 그림에 표시된 것처럼 클레임 규칙 집합은 클레임 규칙 엔진에 의해 클레임이 처리되는 방법을 정의하는 특정 페더레이션 트러스터에 대한 하나 이상의 규칙 그룹입니다. 페더레이션 서비스에서 들어오는 클레임을 수신하면 클레임 규칙 엔진이 적절한 클레임 규칙 집합에서 지정한 논리를 적용합니다. 이 논리는 집합에서 클레임이 지정된 트러스트에 대해 발급되는 방법을 결정하는 각 규칙 논리의 최종 합계입니다.  

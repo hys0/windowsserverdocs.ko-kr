@@ -8,12 +8,12 @@ ms.date: 08/09/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 08892fe771928fa4b68ce50bfef2b6a041c2d210
-ms.sourcegitcommit: 2082335e1260826fcbc3dccc208870d2d9be9306
+ms.openlocfilehash: 2ab6141b84d03102c5dedd1ede0ba99e5adf3e4a
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69983541"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70867750"
 ---
 # <a name="scenario-web-api-calling-web-api-on-behalf-of-scenario"></a>시나리오: 웹 api를 호출 하는 web api (시나리오 대신) 
 > 적용 대상: AD FS 2019 이상 
@@ -176,7 +176,7 @@ ADFS의 인증 시나리오를 대신 하 여를 구성 하는 방법을 더 잘
   4. ToDoListService 아래에서 web.config 파일을 엽니다. 다음을 수정 합니다. 
        - ida: 대상-위의 AD FS 섹션에서 앱 등록 #12의 클라이언트 식별자 값을 입력 합니다.
        - ida: ClientId-위의 AD FS 섹션에서 앱 등록 #12의 클라이언트 식별자 값을 입력 합니다. 
-       - Ida ClientSecret-위의 AD FS 섹션에서 앱 등록의 #13에서 복사한 공유 비밀을 입력 합니다.
+       - ida ClientSecret-위의 AD FS 섹션에서 앱 등록의 #13에서 복사한 공유 비밀을 입력 합니다.
        - ida: RedirectUri-위의 AD FS 섹션에서 앱 등록의 #12에서 RedirectUri 값을 입력 합니다. 
        - ida AdfsMetadataEndpoint- https://[your AD FS hostname]/federationmetadata/2007-06/federationmetadata.xml를 입력 합니다. 
        - ida: OBOWebAPIBase-위의 AD FS 섹션에서 앱 등록의 #19에서 식별자 값을 입력 합니다. 
@@ -223,6 +223,6 @@ ADFS의 인증 시나리오를 대신 하 여를 구성 하는 방법을 더 잘
       ![앱 Reg](media/adfs-msal-web-api-web-api/webapi33.png)
  
  ## <a name="next-steps"></a>다음 단계
-[AD FS Openid connect Connect/OAuth 흐름 및 응용 프로그램 시나리오](../../overview/ad-fs-openid-connect-oauth-flows-scenarios.md)
+[AD FS OpenID Connect/OAuth 흐름 및 애플리케이션 시나리오](../../overview/ad-fs-openid-connect-oauth-flows-scenarios.md)
  
  

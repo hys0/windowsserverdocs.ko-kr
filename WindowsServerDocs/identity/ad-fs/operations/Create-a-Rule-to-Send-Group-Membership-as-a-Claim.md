@@ -9,16 +9,16 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: c9c4cdb881d77fe902776551b4e99061e67660ea
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 86111f8f7da7be1d33bd6ce07385805a9a3b3df8
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66189377"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70865931"
 ---
 # <a name="create-a-rule-to-send-group-membership-as-a-claim"></a>클레임으로 그룹 멤버 자격을 보내는 규칙 만들기
 
-Active Directory Federation Services에서 클레임 규칙 템플릿으로 보내기 그룹 멤버 자격을 사용 하 여 \(AD FS\)을 클레임으로 보내기을 Active Directory 보안 그룹을 선택할 수 있도록 하는 규칙을 만들 수 있습니다. 하나의 클레임을 선택 하는 그룹에 따라이 규칙에서 발생 합니다. 예를 들어 사용자가 Domain Admins 보안 그룹의 멤버인 경우이 값이 Admin 그룹 클레임을 전송할 규칙을 만들려면이 규칙 서식 파일을 사용할 수 있습니다. 이 규칙을 로컬 Active Directory 도메인의 사용자에 대해서만 사용 해야 합니다.  
+Active Directory Federation Services \(ADFS\)에서 그룹 구성원을 클레임으로 보내기 규칙 템플릿을 사용 하 여 클레임으로 보낼 Active Directory 보안 그룹을 선택할 수 있도록 하는 규칙을 만들 수 있습니다. 하나의 클레임을 선택 하는 그룹에 따라이 규칙에서 발생 합니다. 예를 들어 사용자가 Domain Admins 보안 그룹의 멤버인 경우이 값이 Admin 그룹 클레임을 전송할 규칙을 만들려면이 규칙 서식 파일을 사용할 수 있습니다. 이 규칙은 로컬 Active Directory 도메인의 사용자에 대해서만 사용 해야 합니다.  
   
 다음 절차를 사용 하 여 AD FS 관리 스냅인을 사용 하 여 클레임 규칙을 만들려면\-에 있습니다.  
   
@@ -40,14 +40,14 @@ Active Directory Federation Services에서 클레임 규칙 템플릿으로 보�
 5.  에 **규칙 템플릿 선택** 페이지의 **클레임 규칙 템플릿**, 선택, **그룹 구성원 클레임으로 보내기** 클릭 한 다음 확인 하 고 목록에서 **다음**합니다.  
 ![규칙 만들기](media/Create-a-Rule-to-Send-Group-Membership-as-a-Claim/group3.PNG)      
 
-6.   에 **규칙 구성** 페이지 **클레임 규칙 이름** 에이 규칙에 대 한 표시 이름을 입력 **사용자의 그룹** 클릭 **찾아보기** 아래에서 그룹을 선택 하 고 **보내는 클레임 유형** 원하는 클레임 유형을 선택 한 다음 **나가는 클레임 유형** 값을 입력 합니다.
+6.   **규칙 구성** 페이지의 **클레임 규칙 이름** 에이 규칙에 대 한 표시 이름을 입력 합니다. **사용자의 그룹** 에서 **찾아보기** 를 클릭 하 고 그룹을 선택 하 고 **나가는 클레임 유형** 에서 원하는 클레임 유형을 선택한 후 다음 **을 클릭 합니다. 나가는 클레임 유형** 값을 입력 합니다.
 ![규칙 만들기](media/Create-a-Rule-to-Send-Group-Membership-as-a-Claim/group4.PNG)   
 
 7.  클릭 하 고 **마침** 단추입니다.  
   
 8.  에 **클레임 규칙 편집** 대화 상자를 클릭 **확인** 여 규칙을 저장 합니다.
   
-## <a name="to-create-a-rule-to-send-group-membership-as-a-claim-on-a-claims-provider-trust-in-windows-server-2016"></a>Windows Server 2016에서 클레임 공급자 트러스트에 클레임으로 그룹 멤버 자격을 보내도록 규칙을 만들려면 
+## <a name="to-create-a-rule-to-send-group-membership-as-a-claim-on-a-claims-provider-trust-in-windows-server-2016"></a>Windows Server 2016의 클레임 공급자 트러스트에 대 한 클레임으로 그룹 멤버 자격을 보내도록 규칙을 만들려면 
   
 1.  서버 관리자에서 클릭 **도구**, 를 선택한 다음 **AD FS 관리**합니다.  
   
@@ -63,7 +63,7 @@ Active Directory Federation Services에서 클레임 규칙 템플릿으로 보�
 5.  에 **규칙 템플릿 선택** 페이지의 **클레임 규칙 템플릿**, 선택, **그룹 구성원 클레임으로 보내기** 클릭 한 다음 확인 하 고 목록에서 **다음**합니다.  
 ![규칙 만들기](media/Create-a-Rule-to-Send-Group-Membership-as-a-Claim/group3.PNG)     
 
-6.   에 **규칙 구성** 페이지 **클레임 규칙 이름** 에이 규칙에 대 한 표시 이름을 입력 **사용자의 그룹** 클릭 **찾아보기** 아래에서 그룹을 선택 하 고 **보내는 클레임 유형** 원하는 클레임 유형을 선택 한 다음 **나가는 클레임 유형** 값을 입력 합니다. 
+6.   **규칙 구성** 페이지의 **클레임 규칙 이름** 에이 규칙에 대 한 표시 이름을 입력 합니다. **사용자의 그룹** 에서 **찾아보기** 를 클릭 하 고 그룹을 선택 하 고 **나가는 클레임 유형** 에서 원하는 클레임 유형을 선택한 후 다음 **을 클릭 합니다. 나가는 클레임 유형** 값을 입력 합니다. 
 ![규칙 만들기](media/Create-a-Rule-to-Send-Group-Membership-as-a-Claim/group4.PNG)      
 
 7.  클릭 하 고 **마침** 단추입니다.  
@@ -85,7 +85,7 @@ Active Directory Federation Services에서 클레임 규칙 템플릿으로 보�
   
 4.  에 **클레임 규칙 편집** 대화 상자는 다음과 같은 탭 하나를 선택, 편집 하는 하는 규칙 집합을 신뢰에 따라,이 규칙을 만들려고 할 및 클릭 한 다음 **규칙 추가** 해당 규칙 집합에 연관 된 규칙 마법사를 시작 합니다.  
   
-    -   **수용 변환 규칙**  
+    -   **수락 변환 규칙**  
   
     -   **발급 변환 규칙**  
   
@@ -97,7 +97,7 @@ Active Directory Federation Services에서 클레임 규칙 템플릿으로 보�
 5.  에 **규칙 템플릿 선택** 페이지의 **클레임 규칙 템플릿**, 선택, **그룹 구성원을 클레임으로 보내기** 클릭 한 다음 확인 하 고 목록에서 **다음**합니다.  
 ![규칙 만들기](media/Create-a-Rule-to-Send-Group-Membership-as-a-Claim/group1.PNG)
 
-6.  에 **규칙 구성** 페이지 **클레임 규칙 이름** 에이 규칙에 대 한 표시 이름을 입력 **사용자의 그룹** 클릭 **찾아보기** 아래에서 그룹을 선택 하 고 **보내는 클레임 유형** 원하는 클레임 유형을 선택 한 다음 **나가는 클레임 유형** 값을 입력 합니다.  
+6.  **규칙 구성** 페이지의 **클레임 규칙 이름** 에이 규칙에 대 한 표시 이름을 입력 합니다. **사용자의 그룹** 에서 **찾아보기** 를 클릭 하 고 그룹을 선택 하 고 **나가는 클레임 유형** 에서 원하는 클레임 유형을 선택한 후 다음 **을 클릭 합니다. 나가는 클레임 유형** 값을 입력 합니다.  
 ![규칙 만들기](media/Create-a-Rule-to-Send-Group-Membership-as-a-Claim/group2.PNG)  
 
 7.  **마침**을 클릭합니다.  

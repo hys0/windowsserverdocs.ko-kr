@@ -8,12 +8,12 @@ author: JasonGerend
 manager: brianlic
 ms.date: 06/07/2019
 ms.author: jgerend
-ms.openlocfilehash: 1fcabf890c0c54e12c1650c31a072d17a33e292f
-ms.sourcegitcommit: 23a6e83b688119c9357262b6815c9402c2965472
+ms.openlocfilehash: 3442ad46590add695fb3fed607c6f728e2bc5ee1
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69560546"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70867285"
 ---
 # <a name="deploying-roaming-user-profiles"></a>로밍 사용자 프로필 배포
 
@@ -64,7 +64,7 @@ ms.locfileid: "69560546"
 - 폴더 리디렉션을 사용하여 문서 및 사진과 같은 사용자 파일을 사용자 프로필 외부에 저장합니다. 이렇게 하면 동일한 파일을 여러 운영 체제 버전에서 사용할 수 있습니다. 또한 프로필이 작은 크기로 유지되고 로그인 속도가 빨라집니다.
 - 로밍 사용자 프로필에 대한 충분한 저장소를 할당합니다. 두 운영 체제 버전을 지원하는 경우 각 운영 체제 버전에 대해 별도의 프로필이 유지되므로 프로필 수가 두 배로 증가하며, 따라서 사용된 총 공간도 두 배로 증가합니다.
 - Windows Vista/Windows Server 2008 및 Windows 7/Windows Server 2008 r 2를 실행 하는 컴퓨터에서 로밍 사용자 프로필을 사용 하지 마세요. 이러한 운영 체제 버전 간의 로밍은 프로필 버전의 비 호환성으로 인해 지원 되지 않습니다.
-- 하나의 운영 체제 버전에서 적용된 변경 내용이 다른 운영 체제 버전으로 로밍되지 않는다는 점을 사용자에게 알려 줍니다.
+- 한 운영 체제 버전에서 변경한 내용이 다른 운영 체제 버전으로 로밍되지 않는다는 사실을 사용자에 게 알립니다.
 - 다른 프로필 버전을 사용 하는 windows 버전으로 환경을 이동할 때 (예: windows 10에서 windows 10, 버전 1607) [부록 B: 프로필 버전 참조 정보](#appendix-b-profile-version-reference-information) -사용자는 비어 있는 새 로밍 사용자 프로필을 받게 됩니다. 폴더 리디렉션을 사용 하 여 공통 폴더를 리디렉션하여 새 프로필을 가져오는 경우의 영향을 최소화할 수 있습니다. 로밍 사용자 프로필을 프로필 버전 간에 마이그레이션하는 데 지원 되는 방법은 없습니다.
 
 ## <a name="step-1-enable-the-use-of-separate-profile-versions"></a>1단계: 별도 프로필 버전 사용
@@ -73,7 +73,7 @@ Windows 8.1, Windows 8, Windows Server 2012 R2 또는 Windows Server 2012를 실
 
 이러한 변경 내용을 적용하려면 다음 절차를 사용합니다.
 
-1. 로밍, 필수, 상위 필수 또는 도메인 기본 프로필을 사용하려는 모든 컴퓨터에 적절한 소프트웨어 업데이트를 다운로드하여 설치합니다.
+1. 로밍, 필수, 상위 필수 또는 도메인 기본 프로필을 사용 하려는 모든 컴퓨터에 적절 한 소프트웨어 업데이트를 다운로드 하 여 설치 합니다.
 
     - Windows 8.1 또는 Windows Server 2012 R2: Microsoft 기술 자료 문서 [2887595](http://support.microsoft.com/kb/2887595) (릴리스된 경우)에 설명 된 소프트웨어 업데이트를 설치 합니다.
     - Windows 8 또는 Windows Server 2012: Microsoft 기술 자료 문서 [2887239](http://support.microsoft.com/kb/2887239) 에 설명된 소프트웨어 업데이트를 설치합니다.
@@ -210,7 +210,7 @@ Windows Server에서 파일 공유를 만드는 방법은 다음과 같습니다
 4. 그룹 정책 관리 편집기 창에서 **컴퓨터 구성**, **정책**, **관리 템플릿**, **시스템**, **사용자 프로필**로 차례로 이동합니다.
 5. **이 컴퓨터에 로그온 하는 모든 사용자에 대 한 로밍 프로필 경로 설정** 을 마우스 오른쪽 단추로 클릭 한 다음 **편집**을 선택 합니다.
     > [!TIP]
-    > 사용자의 홈 폴더(구성된 경우)는 Windows PowerShell과 같은 일부 프로그램에서 사용하는 기본 폴더입니다. AD DS에서 사용자 계정 속성의 **홈 폴더** 섹션을 사용하여 사용자별 대체 로컬 또는 네트워크 위치를 구성할 수 있습니다. 가상 데스크톱 환경에서 Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012을 실행 하는 컴퓨터의 모든 사용자에 대해 홈 폴더 위치를 구성 하려면 **사용자 홈 폴더 설정** 을 사용 하도록 설정 합니다. 정책 설정을 클릭 한 다음 매핑할 파일 공유 및 드라이브 문자를 지정 하거나 로컬 폴더를 지정 합니다. 환경 변수나 줄임표를 사용하지 마세요. 사용자가 로그온한 동안 지정한 경로 끝에 사용자의 별칭이 추가됩니다.
+    > 사용자의 홈 폴더(구성된 경우)는 Windows PowerShell과 같은 일부 프로그램에서 사용하는 기본 폴더입니다. AD DS에서 사용자 계정 속성의 **홈 폴더** 섹션을 사용하여 사용자별 대체 로컬 또는 네트워크 위치를 구성할 수 있습니다. 가상 데스크톱 환경에서 Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012을 실행 하는 컴퓨터의 모든 사용자에 대해 홈 폴더 위치를 구성 하려면 **사용자 홈 폴더 설정** 을 사용 하도록 설정 합니다. 정책 설정을 클릭 한 다음 매핑할 파일 공유 및 드라이브 문자를 지정 하거나 로컬 폴더를 지정 합니다. 환경 변수나 줄임표를 사용하지 마세요. 사용자 로그인 중에 지정 된 경로의 끝에 사용자의 별칭이 추가 됩니다.
 6. **속성** 대화 상자에서 **사용** 을 선택 합니다.
 7. **이 컴퓨터에 로그온 하는 사용자는이 로밍 프로필 경로를 사용 해야 합니다** . 상자에 사용자의 로밍 사용자 프로필을 저장할 파일 공유의 경로를 입력 합니다. 그 다음 `%username%` 에 (이 (가) 자동으로 사용자 이름으로 바뀝니다. 사용자가 처음으로 로그인 할 때) 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
@@ -231,7 +231,7 @@ Windows Server에서 파일 공유를 만드는 방법은 다음과 같습니다
 3. 그룹 정책를 사용 하 여 로밍 사용자 프로필에 대해 만든 GPO에 사용자 지정 된 시작 레이아웃을 적용할 수 있습니다. 이렇게 하려면 [그룹 정책를 사용 하 여 도메인에서 사용자 지정 된 시작 레이아웃 적용](https://docs.microsoft.com/windows/configuration/customize-windows-10-start-screens-by-using-group-policy#bkmk-domaingpodeployment)을 참조 하세요.
 4. 그룹 정책를 사용 하 여 Windows 10 Pc에서 다음 레지스트리 값을 설정 합니다. 이렇게 하려면 [레지스트리 항목 구성](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753092(v=ws.11)>)을 참조 하세요.
 
-| **동작**   | **Update 함수**                  |
+| **작업**   | **Update 함수**                  |
 | ------------ | ------------                |
 | 하이브의         | **HKEY_LOCAL_MACHINE**      |
 | 키 경로     | **Software\Microsoft\Windows\CurrentVersion\Explorer** |

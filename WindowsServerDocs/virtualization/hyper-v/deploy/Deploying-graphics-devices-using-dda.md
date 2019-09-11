@@ -9,16 +9,16 @@ ms.topic: article
 author: chrishuybregts
 ms.author: chrihu
 ms.assetid: 67a01889-fa36-4bc6-841d-363d76df6a66
-ms.openlocfilehash: 2f9d283f5f80d6bb0851b2abd93be0f4c10899c8
-ms.sourcegitcommit: 216d97ad843d59f12bf0b563b4192b75f66c7742
+ms.openlocfilehash: 94ba561f35ea257a897f51cb3522196f7988eb71
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476584"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70872102"
 ---
 # <a name="deploy-graphics-devices-using-discrete-device-assignment"></a>불연속 장치 할당을 사용 하 여 그래픽 장치 배포
 
->적용 대상: Microsoft Hyper-v Server 2016, Windows Server 2016, Windows Server 2019, Microsoft Hyper-v Server 2019  
+>적용 대상: Microsoft Hyper-V Server 2016, Windows Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019  
 
 Windows Server 2016 부터는 불연속 장치 할당 또는 DDA를 사용 하 여 전체 PCIe 장치를 VM에 전달할 수 있습니다.  이렇게 하면 장치 기본 드라이버를 활용할 수 있는 동안 VM 내에서 [NVMe 저장소](./Deploying-storage-devices-using-dda.md) 또는 그래픽 카드와 같은 장치에 고성능 액세스할 수 있습니다.  작동 하는 장치에 대 한 자세한 내용은 [개별 장치 할당을 사용 하 여 장치 배포 계획](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md) (영문)을 참조 하세요.
 
@@ -86,7 +86,7 @@ Device Manager 또는 PowerShell을 사용 하 여 장치가 "사용 안 함" �
 Add-VMAssignableDevice -LocationPath $locationPath -VMName VMName
 ```
 
-## <a name="whats-next"></a>다음 단계
+## <a name="whats-next"></a>새로운 기능
 장치가 VM에 성공적으로 탑재 되 면 이제 운영 체제 미 설치 시스템에서 실행 되는 경우와 마찬가지로 해당 VM을 시작 하 고 장치와 상호 작용할 수 있습니다.  즉, 이제 VM에 하드웨어 공급 업체의 드라이버를 설치할 수 있으며 응용 프로그램은 해당 하드웨어를 볼 수 있습니다.  게스트 VM에서 장치 관리자를 열고 하드웨어가 표시 되는 것을 확인 하 여이를 확인할 수 있습니다.
 
 ## <a name="removing-a-device-and-returning-it-to-the-host"></a>장치를 제거 하 고 호스트에 반환

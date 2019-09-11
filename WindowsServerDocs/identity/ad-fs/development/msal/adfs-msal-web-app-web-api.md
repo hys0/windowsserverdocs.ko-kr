@@ -8,12 +8,12 @@ ms.date: 08/09/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: d2ac36180992d44f837ce74ace40cf95533309c9
-ms.sourcegitcommit: 2082335e1260826fcbc3dccc208870d2d9be9306
+ms.openlocfilehash: 03328ff8c94d96fcf34dcef29ac1a1daefc9d14a
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69983431"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70867493"
 ---
 # <a name="scenario-web-app-server-app-calling-web-api"></a>시나리오: 웹 앱 (서버 앱) 웹 API 호출 
 >적용 대상: AD FS 2019 이상 
@@ -121,5 +121,5 @@ ADFS에서 웹 앱을 등록 하 고 웹 API를 호출 하는 토큰을 획득 �
       ![응용 프로그램 그룹 추가](media/adfs-msal-web-app-web-api/webapp13.png)
  
  ## <a name="next-steps"></a>다음 단계
-[AD FS Openid connect Connect/OAuth 흐름 및 응용 프로그램 시나리오](../../overview/ad-fs-openid-connect-oauth-flows-scenarios.md)
+[AD FS OpenID Connect/OAuth 흐름 및 애플리케이션 시나리오](../../overview/ad-fs-openid-connect-oauth-flows-scenarios.md)
  

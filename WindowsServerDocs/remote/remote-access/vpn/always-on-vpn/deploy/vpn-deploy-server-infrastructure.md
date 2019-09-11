@@ -10,12 +10,12 @@ ms.author: pashort
 author: shortpatti
 ms.date: 08/30/2018
 ms.reviewer: deverette
-ms.openlocfilehash: b954419904f97102cef14fbd4a7a68496e8730af
-ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
+ms.openlocfilehash: 260d5c6273d877386dc1cd8833b2f226533127c3
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69546518"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70871299"
 ---
 # <a name="step-2-configure-the-server-infrastructure"></a>2단계. 서버 인프라 구성
 
@@ -118,7 +118,7 @@ RRAS 서버가 도메인에 가입 되어 있지 않으므로 VPN 게이트웨�
 
     - **인증서 템플릿:** [_고객_] VPN 서버
 
-#### <a name="example-vpngatewayinf-script"></a>예제: VPNGateway 스크립트
+#### <a name="example-vpngatewayinf-script"></a>예: VPNGateway 스크립트
 
 여기에서 대역 외 프로세스를 사용 하 여 VPN gateway 인증서를 요청 하는 데 사용 되는 인증서 요청 정책의 예제 스크립트를 볼 수 있습니다.
 
@@ -426,7 +426,7 @@ Net Start "certsvc"
 
     1. **주체** 탭을 선택 하 고 **유형**에서 **주체 이름**아래에 **일반 이름** 을 선택 합니다.
 
-    2. **주체 이름**아래에서 VPN에 연결 하는 데 사용 되는 외부 도메인 클라이언트의 이름 (예: vpn.contoso.com)을 입력 하 고 **추가**를 선택 합니다.
+    2. **주체 이름**아래에서 VPN에 연결 하는 데 사용 되는 외부 도메인 클라이언트의 이름 (예: vpn.contoso.com **)을 입력**하 고 **추가**를 선택 합니다.
 
     3. **대체 이름**아래의 **유형**에서 **DNS**를 선택 합니다.
 

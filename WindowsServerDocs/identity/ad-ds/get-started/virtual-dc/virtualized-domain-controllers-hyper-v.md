@@ -6,12 +6,12 @@ ms.author: joflore
 ms.date: 04/19/2018
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.openlocfilehash: 491f4f2e2526e7cff024779ee3ecf9f771e64af4
-ms.sourcegitcommit: 23a6e83b688119c9357262b6815c9402c2965472
+ms.openlocfilehash: 287d7ef0b8645d8e808b8b8d9f195d05ffed1cc0
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69560573"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70868331"
 ---
 # <a name="virtualizing-domain-controllers-using-hyper-v"></a>Hyper-v를 사용 하 여 도메인 컨트롤러 가상화
 
@@ -106,7 +106,7 @@ LDAP (Lightweight Directory Access Protocol) 테스트가 ADTest를 사용 하�
 <th>측정</th>
 <th>테스트</th>
 <th>물리적</th>
-<th>Virtual</th>
+<th>virtual</th>
 <th>삼각</th>
 </tr>
 </thead>

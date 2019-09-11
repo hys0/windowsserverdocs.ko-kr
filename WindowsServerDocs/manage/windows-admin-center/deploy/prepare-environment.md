@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.date: 06/07/2019
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: 5924a6a2304bd8e883c43628e3c6c05b69cbd46c
-ms.sourcegitcommit: 2082335e1260826fcbc3dccc208870d2d9be9306
+ms.openlocfilehash: 96aced2c062717aee0d2957b751bc2c25ac8e0da
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69980324"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70869101"
 ---
 # <a name="prepare-your-environment-for-windows-admin-center"></a>Windows Admin Center에 대한 환경 준비
 
@@ -24,7 +24,7 @@ Windows Admin Center를 사용하여 관리할 준비가 되기 전에 추가 �
 - [Windows Server 2012 및 2012 R2](#prepare-windows-server-2012-and-2012-r2)
 - [Windows Server 2008 R2](#prepare-windows-server-2008-r2)
 - [Microsoft Hyper-V Server 2016](#prepare-microsoft-hyper-v-server-2016)
-- [Microsoft Hyper-v Server 2012 R2](#prepare-microsoft-hyper-v-server-2012-r2)
+- [Microsoft Hyper-V Server 2012 R2](#prepare-microsoft-hyper-v-server-2012-r2)
 
 Windows 관리 센터를 사용 하 여 관리 하기 전에 [대상 서버의 포트 구성을](#port-configuration-on-the-target-server) 수정 해야 하는 시나리오도 있습니다.
 

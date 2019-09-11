@@ -13,12 +13,12 @@ ms.assetid: f9f9d618-ccfe-41ea-a52c-00c3c7adb51a
 author: evaseydl
 manager: scottman
 ms.author: evas
-ms.openlocfilehash: 43386f0f4d4020d5e127e7b7cbd918e4c48cec6e
-ms.sourcegitcommit: 02f1e11ba37a83e12d8ffa3372e3b64b20d90d00
+ms.openlocfilehash: 4aa08f58f8fdf6d6fce816ee090275b0bf46a844
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68863464"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70871632"
 ---
 # <a name="multipoint--stations"></a>MultiPoint 스테이션
 MultiPoint 서비스 시스템 환경에서는 *스테이션* MultiPoint Service를 실행 하는 컴퓨터에 연결 하기 위한 사용자 끝점입니다. 각 스테이션은 사용자에 게 독립적인 Windows 10 환경을 제공 합니다. 다음 스테이션 유형이 지원 됩니다.  
@@ -31,7 +31,7 @@ MultiPoint 서비스 시스템 환경에서는 *스테이션* MultiPoint Service
   
 MultiPoint 커넥터가 설치 되어 있는 전체 Pc 모니터링할 수도 있습니다 및 다중 포인트 대시보드를 사용 하 여 제어 합니다. Windows 10에서 MultiPoint 커넥터는 Windows 기능에 대 한 제어판을 통해 사용할 수 있습니다. 
 
-Multipoint 서비스는 이러한 스테이션 유형의 모든 조합을 지원 하지만 한 기본 스테이션으로 사용할 수 있는 직접 비디오 연결 스테이션 된다는 것이 좋습니다. 이 권장 사항에 대 한 이유 지원 시나리오를 예상할 수 하기 위해서입니다. 예를 들어 시스템과 상호 작용의 BIOS MultiPoint Service를 실행 하기 전 합니다.  
+Multipoint 서비스는 이러한 스테이션 유형의 모든 조합을 지원 하지만 한 기본 스테이션으로 사용할 수 있는 직접 비디오 연결 스테이션 된다는 것이 좋습니다. 이 권장 사항에 대 한 이유 지원 시나리오를 예상할 수 하기 위해서입니다. 예를 들어 MultiPoint 서비스를 실행 하기 전에 시스템의 BIOS와 상호 작용 합니다.  
   
 ## <a name="primary-stations-and-standard-stations"></a>기본 스테이션 및 표준 스테이션  
 직접 비디오를 연결 하는 하나의 스테이션으로 정의 되어는 *기본 스테이션*합니다. 나머지 스테이션 라고 *표준 스테이션*합니다.  
@@ -64,7 +64,7 @@ USB-0-클라이언트 연결 스테이션 활용 한 *USB 제로 클라이언트
 USB 이더넷 0 클라이언트는 MultiPoint 서비스 시스템에 USB LAN을 통해 전송 하는 USB 제로 클라이언트의 변형입니다. 이러한 종류의 USB 제로 클라이언트 0 클라이언트 다른 usb 비슷하게 작동 하지만 USB 케이블 길이가 최대값에 따라 제한 되지 않습니다. USB 이더넷 0 클라이언트는 기존의 씬 클라이언트 및 MultiPoint 서비스 시스템의 USB 장치를 가상으로 나타납니다. 이러한 장치를 사용할 때 특정 성능 및 사이트 계획 권장 사항에 대 한 장치 제조업체에 문의 하십시오. 대부분의 장치에 연결 하 고 장치 MultiPoint 서비스 시스템에 연결할 수 있도록 다중 포인트 관리자에 대 한 타사 플러그 인 경우  
   
 ## <a name="rdp-over-lan-connected-stations"></a>RDP-over LAN으로 연결 된 스테이션  
-씬 클라이언트 및 기존의 데스크톱, 랩톱 또는 태블릿 컴퓨터, 원격 데스크톱 프로토콜 (RDP) 또는 소유 프로토콜 및 원격 데스크톱 프로토콜 공급자를 사용 하 여 로컬 영역 네트워크 (LAN)를 통해 다중 서비스를 실행 하는 컴퓨터를 연결할 수 있습니다. RDP 연결에는 매우 비슷한 다른 MultiPoint 스테이션에 최종 사용자 환경을 제공 하지만에서는 로컬 클라이언트 컴퓨터의 하드웨어를 활용 합니다. 원격 데스크톱 응용 프로그램 사용 가능한 iOS, android에 대 한 자세한 Mac 및 Windows에서 [원격 데스크톱 클라이언트](../remote-desktop-services/clients/remote-desktop-clients.md)합니다. 
+씬 클라이언트 및 기존의 데스크톱, 랩톱 또는 태블릿 컴퓨터, 원격 데스크톱 프로토콜 (RDP) 또는 소유 프로토콜 및 원격 데스크톱 프로토콜 공급자를 사용 하 여 로컬 영역 네트워크 (LAN)를 통해 다중 서비스를 실행 하는 컴퓨터를 연결할 수 있습니다. RDP 연결은 다른 MultiPoint 스테이션과 매우 유사한 최종 사용자 환경을 제공 하지만 로컬 클라이언트 컴퓨터의 하드웨어를 사용 합니다. 원격 데스크톱 응용 프로그램 사용 가능한 iOS, android에 대 한 자세한 Mac 및 Windows에서 [원격 데스크톱 클라이언트](../remote-desktop-services/clients/remote-desktop-clients.md)합니다. 
   
 클라이언트 및 장치의 Microsoft RemoteFX를 실행 하는 프로세서 및 비디오 하드웨어 기능 씬 클라이언트를 로컬 또는 컴퓨터의 네트워크를 통해 고화질 비디오를 제공 하기를 활용 함으로써 풍부한 멀티미디어 경험을 제공할 수 있습니다.  
   

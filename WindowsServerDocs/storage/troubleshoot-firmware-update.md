@@ -8,12 +8,12 @@ ms.technology: storage
 ms.topic: article
 author: toklima
 ms.date: 04/18/2017
-ms.openlocfilehash: 7ee5c57839f32d71053e983fc14f76c481236779
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8283b87e9505b1d3f47ddc823016fbcc7c0c29e6
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59884164"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70867053"
 ---
 # <a name="troubleshooting-drive-firmware-updates"></a>드라이브 펌웨어 업데이트 문제 해결
 
@@ -23,8 +23,8 @@ Windows 10, 버전 1703 이후 버전 및 Windows Server(반기 채널)에는 Po
 
 다음 웹 사이트에서 이 기능에 대한 자세한 정보를 확인할 수 있습니다.
 
-- [Windows Server 2016에서 드라이브 펌웨어를 업데이트 하는 중](update-firmware.md)
-- [직접 저장소 공간에서 가동 중지 시간 없이 드라이브 펌웨어 업데이트](https://channel9.msdn.com/Blogs/windowsserver/Update-Drive-Firmware-Without-Downtime-in-Storage-Spaces-Direct)
+- [Windows Server 2016에서 드라이브 펌웨어 업데이트](update-firmware.md)
+- [스토리지 공간 다이렉트에서 가동 중지 시간 없이 드라이브 펌웨어 업데이트](https://channel9.msdn.com/Blogs/windowsserver/Update-Drive-Firmware-Without-Downtime-in-Storage-Spaces-Direct)
 
 펌웨어 업데이트가 잘못되는 이유는 매우 다양합니다. 이 글은 고급 단계 문제 해결에 도움을 드리기 위해 작성되었습니다.
 
@@ -62,9 +62,9 @@ SupportsUpdate 필드는 최소한 SATA 및 NVMe 장치에 대해서는 자체 �
 
 산업 표준 명령으로는 적절한 명령 지원에 대한 쿼리가 불가능하기 때문에 SupportsUpdate 필드는 SAS 연결 장치에 대해 항상 “True” 값을 보고할 것입니다.
 
-필요한 명령 집합을 SAS 장치가 지원하는지 확인하는 데는 두 가지 옵션이 있습니다. 
+필요한 명령 집합을 SAS 장치가 지원하는지 확인하는 데는 두 가지 옵션이 있습니다.
 1.  적절한 펌웨어 이미지와 함께 Update-StorageFirmware cmdlet을 통해 시험해 보는 방법, 또는
-2.  Windows Server 카탈로그를 식별 하는 SAS 장치는 성공적으로 FW 업데이트 AQ (작업해왔으며를 참조 하세요. https://www.windowsservercatalog.com/)
+2.  Windows Server 카탈로그를 참조 하 여 FW 업데이트 AQ을 성공적으로 획득 한 SAS 장치를 확인 합니다 (https://www.windowsservercatalog.com/)
 
 ### <a name="remediation-options"></a>재구성 옵션
 테스트 중인 장치가 적절한 명령 집합을 지원하지 않을 경우, 판매업체에 문의해서 필요한 명령 집합을 제공하는 업데이트된 펌웨어가 있는지 확인하거나 Windows Server 카탈로그를 조회해서 적절한 명령 집합을 구현한 소싱 대상 장치가 있는지 확인합니다.
@@ -119,7 +119,7 @@ CdbBytes    3B0E0000000001000000
 NumberOfRetriesDone 0
 ```
 
-이 채널의 ETW 이벤트 507은 SCSI SRB 요청이 실패했음을 보여주며 SenseKey가 ‘5’(잘못된 요청)였고 AdditionalSense 정보는 ‘36’(CDB의 잘못된 필드)이었다는 추가 정보를 제공합니다.
+채널의 ETW 이벤트 507는 SCSI SRB 요청이 실패 한 것을 보여 주고,이에 대 한 추가 정보를 제공 합니다 .이 정보는 ' 5 ' (잘못 된 요청)이 고, AdditionalSense 정보는 ' 36 ' (CDB의 잘못 된 필드)입니다.
 
    > [!Note]
    > 이 정보는 문제의 미니포트에서 직접 제공되며 그 정확성은 해당 미니포트가 제대로 정교하게 구현되었는가에 달려 있습니다.
@@ -134,7 +134,7 @@ NumberOfRetriesDone 0
 ## <a name="additional-troubleshooting-with-microsoft-drivers-satanvme"></a>Microsoft 드라이버(SATA/NVMe) 관련 추가적 문제 해결 방법
 StorAHCI.sys 또는 StorNVMe.sys 등과 같은 Windows 기본 드라이버를 사용해서 저장소 장치를 구동하는 경우에는 펌웨어 업데이트 작업 중 발생할 수 있는 오류 사례에 관한 추가 정보를 구할 수 있습니다.
 
-ClassPnP Operational 채널 외에도, StorAHCI 및 StorNVMe는 장치의 프로토콜 고유 반환 코드를 다음의 ETW 채널에 기록하게 됩니다.
+ClassPnP 작동 채널 외에도 StorAHCI 및 Storahci는 다음 ETW 채널에서 장치의 프로토콜 특정 반환 코드를 기록 합니다.
 
 이벤트 뷰어 - 응용 프로그램 및 서비스 로그 - Microsoft - Windows - StorDiag - **Microsoft-Windows-Storage-StorPort/Diagnose**
 
@@ -142,7 +142,7 @@ ClassPnP Operational 채널 외에도, StorAHCI 및 StorNVMe는 장치의 프로
 
 이러한 고급 로그 항목을 수집하려면 로그를 사용 설정하고 해당 펌웨어 업데이트 오류를 재현한 다음, 진단 로그를 저장합니다.
 
-다음은 예제 SATA 장치 실패에서 펌웨어 업데이트의 이미지를 다운로드 올바르지 않아 (이벤트 ID: 258):
+다음은 다운로드할 이미지가 잘못 되었기 때문에 실패 한 SATA 장치의 펌웨어 업데이트 예입니다 (이벤트 ID: 258):
 
 ``` 
 EventData
@@ -174,11 +174,11 @@ Parameter8Value 0
 ```
 
 위 이벤트는 매개 변수 2~6에 상세한 장치 정보를 담고 있습니다. 여기서는 다양한 ATA 레지스터 값이 보입니다. ATA ACS 명세서는 마이크로코드 다운로드 명령의 실패에 대한 아래의 값을 디코딩하는 데 사용될 수 있습니다.
-- 반환 코드: 0 (0000 0000) (해당 없음-의미가 없는 페이로드 전송 된 이후)
-- 기능: 15 (0000 1111) (비트 1 '1'로 설정 되 고 "중단" 나타냅니다)
+- 반환 코드: 0 (0000 0000) (페이로드가 전송 되지 않았기 때문에 의미가 없음)
+- 기능: 15 (0000 1111) (비트 1은 ' 1 '로 설정 되 고 "abort"를 나타냄)
 - SectorCount: 0 (0000 0000) (해당 없음)
-- DriveHead: 160 (1010 0000) (해당 없음 – 사용 되지 않는 비트만 설정 됨)
-- 명령: 146 (1001 0010) (비트 1 감지 데이터의 가용성을 나타내는 '1'로 설정 됨)
+- 드라이브 헤드: 160 (1010 0000) (해당 없음-사용 되지 않는 비트만 설정 됨)
+- 명령 146 (1001 0010) (비트 1은 sense 데이터의 가용성을 나타내는 ' 1 '로 설정 됨)
 
 이를 통해 펌웨어 업데이트 작업이 해당 장치에 의해 중단되었음을 알 수 있습니다.
 

@@ -1,6 +1,6 @@
 ---
 title: SPN(서비스 사용자 이름) Kerberos
-description: 네트워크 컨트롤러 관리 클라이언트와의 통신에 대 한 여러 인증 방법을 지원합니다. 사용할 수 Kerberos 기반 인증을 X509 인증서 기반 인증 합니다. 테스트 배포에 대 한 인증 안 함을 사용 하는 옵션이 있습니다.
+description: 네트워크 컨트롤러는 관리 클라이언트와의 통신을 위한 여러 인증 방법을 지원 합니다. Kerberos 기반 인증, X509 인증서 기반 인증을 사용할 수 있습니다. 또한 테스트 배포에 대해 인증을 사용 하지 않는 옵션도 있습니다.
 manager: dougkim
 ms.prod: windows-server-threshold
 ms.technology: networking-sdn
@@ -9,42 +9,42 @@ ms.assetid: bc625de9-ee31-40a4-9ad2-7448bfbfb6e6
 ms.author: pashort
 author: shortpatti
 ms.date: 08/23/2018
-ms.openlocfilehash: 2459cfa8dfec3de4aa23da7aba192d6eeed7f8ec
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8c8c5367eeda576f87ac5de20b7885a1a29aeb4d
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59828974"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70869906"
 ---
 # <a name="kerberos-with-service-principal-name-spn"></a>SPN(서비스 사용자 이름) Kerberos
 
->적용 대상: Windows Server 2019
+>적용 대상: Windows Server 2019
 
-네트워크 컨트롤러 관리 클라이언트와의 통신에 대 한 여러 인증 방법을 지원합니다. 사용할 수 Kerberos 기반 인증을 X509 인증서 기반 인증 합니다. 테스트 배포에 대 한 인증 안 함을 사용 하는 옵션이 있습니다.
+네트워크 컨트롤러는 관리 클라이언트와의 통신을 위한 여러 인증 방법을 지원 합니다. Kerberos 기반 인증, X509 인증서 기반 인증을 사용할 수 있습니다. 또한 테스트 배포에 대해 인증을 사용 하지 않는 옵션도 있습니다.
 
-System Center Virtual Machine Manager Kerberos 기반 인증을 사용 합니다. Kerberos 기반 인증을 사용 하는 경우에 Active Directory에서 네트워크 컨트롤러에 대 한를 이름 SPN (서비스 사용자)를 구성 해야 합니다. SPN은 Kerberos 인증 서비스 로그인 계정을 사용 하 여 서비스 인스턴스 연결에 사용 되는 네트워크 컨트롤러 서비스 인스턴스에 대해 고유 식별자입니다. 자세한 내용은 참조 하세요. [서비스 사용자 이름](https://docs.microsoft.com/windows/desktop/ad/service-principal-names)합니다.
+System Center Virtual Machine Manager Kerberos 기반 인증을 사용 합니다. Kerberos 기반 인증을 사용 하는 경우 Active Directory에서 네트워크 컨트롤러에 대 한 SPN (서비스 사용자 이름)을 구성 해야 합니다. SPN은 Kerberos 인증에서 서비스 인스턴스를 서비스 로그인 계정과 연결 하는 데 사용 하는 네트워크 컨트롤러 서비스 인스턴스에 대 한 고유 식별자입니다. 자세한 내용은 [서비스 사용자 이름](https://docs.microsoft.com/windows/desktop/ad/service-principal-names)을 참조 하세요.
 
-## <a name="configure-service-principal-names-spn"></a>서비스 주체 이름 (SPN) 구성
+## <a name="configure-service-principal-names-spn"></a>SPN (서비스 사용자 이름) 구성
 
-네트워크 컨트롤러는 자동으로 SPN을 구성합니다. 하기만 하면 등록 하 고 SPN을 수정 하는 네트워크 컨트롤러 컴퓨터에 대 한 권한을 제공 하는 것입니다.
+네트워크 컨트롤러에서 SPN을 자동으로 구성 합니다. 네트워크 컨트롤러 컴퓨터에서 SPN을 등록 하 고 수정할 수 있는 권한을 제공 하기만 하면 됩니다.
 
-1.  도메인 컨트롤러 컴퓨터에서 시작 **Active Directory Users and Computers**합니다.
+1.  도메인 컨트롤러 컴퓨터에서 **사용자 및 컴퓨터 Active Directory**를 시작 합니다.
 
-2.  선택 **뷰 \> 고급**합니다.
+2.  **고급 보기 \>** 를 선택 합니다.
 
-3.  아래 **컴퓨터**, 네트워크 컨트롤러 컴퓨터 계정 중 하나를 찾아 마우스 오른쪽 단추로 클릭을 선택한 다음 **속성**합니다.
+3.  **컴퓨터**에서 네트워크 컨트롤러 컴퓨터 계정 중 하나를 찾은 다음 마우스 오른쪽 단추를 클릭 하 고 **속성**을 선택 합니다.
 
-4.  선택 된 **Security** 탭을 클릭 **고급**합니다.
+4.  **보안** 탭을 선택 하 고 **고급**을 클릭 합니다.
 
-5.  목록에서 모든 네트워크 컨트롤러 컴퓨터 계정 또는 보안에는 모든 네트워크 컨트롤러 컴퓨터 계정을 나타나지 것 그룹, 클릭 **추가** 추가 합니다.
+5.  목록에서 모든 네트워크 컨트롤러 컴퓨터 계정 또는 모든 네트워크 컨트롤러 컴퓨터 계정을 포함 하는 보안 그룹이 나열 되지 않은 경우 **추가** 를 클릭 하 여 추가 합니다.
 
-6.  각 네트워크 컨트롤러 컴퓨터 계정 또는 네트워크 컨트롤러 컴퓨터 계정을 포함 하는 하나의 보안 그룹의 경우:
+6.  각 네트워크 컨트롤러 컴퓨터 계정 또는 네트워크 컨트롤러 컴퓨터 계정을 포함 하는 단일 보안 그룹:
 
-    a.  계정 또는 그룹을 선택 하 고 클릭 **편집**합니다.
+    a.  계정 또는 그룹을 선택 하 고 **편집**을 클릭 합니다.
 
-    b.  사용 권한 선택 **servicePrincipalName 쓰기의 유효성을 검사**합니다.
+    b.  사용 권한 아래에서 **Write ServicePrincipalName 유효성 검사**를 선택 합니다.
 
-    d.  아래에서 아래로 스크롤하여 **속성** 선택:
+    d.  아래로 스크롤하고 **속성** 아래에서 다음을 선택 합니다.
 
        -  **ServicePrincipalName 읽기**
 
@@ -52,22 +52,22 @@ System Center Virtual Machine Manager Kerberos 기반 인증을 사용 합니다
 
     e.  **확인** 을 두 번 클릭합니다.
 
-7.  각 네트워크 컨트롤러 컴퓨터에 대 한 3 ~ 6 단계를 반복 합니다.
+7.  각 네트워크 컨트롤러 컴퓨터에 대해 3-6 단계를 반복 합니다.
 
 8.  **Active Directory 사용자 및 컴퓨터**를 닫습니다.
 
-## <a name="failure-to-provide-permissions-for-spn-registrationmodification"></a>SPN 등록/수정에 대 한 사용 권한을 제공 하지 못함
+## <a name="failure-to-provide-permissions-for-spn-registrationmodification"></a>SPN 등록/수정에 대 한 사용 권한을 제공 하지 못했습니다.
 
-에 **새로 만들기** REST 클라이언트 인증에 Kerberos를 선택 하 고 네트워크 컨트롤러 노드를 등록 하거나 SPN 수정에 대 한 권한을 부여 하지 하는 경우 Windows Server 2019 배포, 네트워크 컨트롤러에 대 한 REST 작업 실패 SDN 관리에서 사용자를 방지 합니다.
+**새** Windows Server 2019 배포에서 rest 클라이언트 인증에 Kerberos를 선택 하 고 네트워크 컨트롤러 노드에 SPN을 등록 하거나 수정할 수 있는 권한을 부여 하지 않은 경우 네트워크 컨트롤러의 REST 작업이 실패 하 여 관리 하지 못하게 됩니다. SDN입니다.
 
-REST 클라이언트 인증에 대 한 Kerberos를 선택 하는 Windows Server 2016에서 Windows Server 2019를로 업그레이드에 대 한 REST 작업 수행 차단 되지, 기존 프로덕션 배포에 대 한 투명성을 보장 합니다. 
+Windows Server 2016에서 Windows Server 2019로 업그레이드 하는 경우 REST 클라이언트 인증을 위해 Kerberos를 선택 하면 REST 작업이 차단 되지 않고 기존 프로덕션 배포에 대 한 투명도를 보장 합니다. 
 
-SPN 등록 되어 있지 않으면 REST 클라이언트 인증 인 NTLM을 사용는 안전성이 떨어집니다. 관리 채널에 중요 한 이벤트를 가져올 수도 **NetworkController Framework** SPN을 등록 하려면 네트워크 컨트롤러 노드에 사용 권한을 제공 하 라는 메시지가 이벤트 채널입니다. 권한을 제공한 후 네트워크 컨트롤러의 SPN을 자동으로 등록 하 고 모든 클라이언트 작업 Kerberos를 사용 합니다.
+SPN이 등록 되어 있지 않으면 REST 클라이언트 인증에서 NTLM을 사용 합니다 .이는 보안 수준이 낮습니다. 또한 SPN을 등록 하기 위해 네트워크 컨트롤러 노드에 대 한 권한을 제공 하 라는 **NetworkController 프레임 워크** 이벤트 채널의 관리 채널에서 중요 한 이벤트를 받게 됩니다. 권한을 제공 하면 네트워크 컨트롤러에서 SPN을 자동으로 등록 하 고 모든 클라이언트 작업에서 Kerberos를 사용 합니다.
 
 
 >[!TIP]
->일반적으로 IP 주소 또는 REST 기반 작업에 대 한 DNS 이름을 사용 하 여 네트워크 컨트롤러를 구성할 수 있습니다. 그러나 Kerberos를 구성한 경우 IP 주소를 네트워크 컨트롤러 REST 쿼리를 사용할 수 없습니다. 예를 들어 사용할 수 있습니다 \< https://networkcontroller.consotso.com\>를 사용할 수 없습니다 있지만 \< https://192.34.21.3\>합니다. 서비스 주체 이름 IP 주소가 사용 되는 경우 작동 하지 못합니다.
+>일반적으로는 REST 기반 작업에 IP 주소 또는 DNS 이름을 사용 하도록 네트워크 컨트롤러를 구성할 수 있습니다. 그러나 Kerberos를 구성 하는 경우 네트워크 컨트롤러에 대 한 REST 쿼리의 IP 주소를 사용할 수 없습니다. 예 \<를 들어를 사용할 https://networkcontroller.consotso.com\> 수는 있지만를 사용할 \< https://192.34.21.3\> 수는 없습니다. IP 주소가 사용 되는 경우 서비스 사용자 이름은 작동할 수 없습니다.
 >
->Windows Server 2016에서 Kerberos 인증와 함께 REST 작업에 대 한 IP 주소를 사용한, NTLM 인증을 통해 실제 통신 것입니다. 이러한 배포에서는 Windows Server 2019로 업그레이드 하면 NTLM 기반 인증을 사용 하 여 계속 합니다. Kerberos 기반 인증을 이동 하려면 REST 작업에 대 한 네트워크 컨트롤러 DNS 이름을 사용 하며 네트워크 컨트롤러 노드 SPN 등록에 대 한 사용 권한을 제공 합니다.
+>Windows Server 2016에서 Kerberos 인증과 함께 REST 작업에 IP 주소를 사용 하는 경우 실제 통신은 NTLM 인증을 통해 수행 된 것입니다. 이러한 배포에서 Windows Server 2019로 업그레이드 한 후에는 NTLM 기반 인증을 계속 사용 합니다. Kerberos 기반 인증으로 이동 하려면 REST 작업에 네트워크 컨트롤러 DNS 이름을 사용 하 고 SPN을 등록할 네트워크 컨트롤러 노드에 대 한 권한을 제공 해야 합니다.
 
 ---

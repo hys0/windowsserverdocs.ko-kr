@@ -1,6 +1,6 @@
 ---
 title: 스테이션의 응용 프로그램 시작 또는 닫기
-description: MultiPoint 서비스에서 응용 프로그램을 사용 하는 방법에 알아봅니다.
+description: MultiPoint 서비스에서 응용 프로그램을 사용 하는 방법 알아보기
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.technology: multipoint-services
@@ -13,15 +13,15 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: 4b11d71f5a34fa4b5127b62544945655b6703f15
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 14c0c6ad7605453bdf97b52c59a1299b1aed533f
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59845184"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70871667"
 ---
 # <a name="launch-or-close-applications-on-a-station"></a>스테이션의 응용 프로그램 시작 또는 닫기
-MultiPoint 대시보드 사용자로 열 수도 있고 사용자의 바탕 화면, 선택한 데스크톱 또는 모든 데스크톱에 응용 프로그램을 닫을 수 있습니다.  
+MultiPoint 대시보드 사용자는 사용자의 데스크톱, 선택한 데스크톱 또는 모든 데스크톱에서 응용 프로그램을 열거나 닫을 수 있습니다.  
   
 ## <a name="launch-an-application-on-a-user-station"></a>사용자 스테이션에서 응용 프로그램 실행  
   

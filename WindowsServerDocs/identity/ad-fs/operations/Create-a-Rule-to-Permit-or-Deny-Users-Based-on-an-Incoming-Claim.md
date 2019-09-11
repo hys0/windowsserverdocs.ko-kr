@@ -9,17 +9,17 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 72fe425b040f83a217a144976265c7754830c91b
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: d057c943b9c14b74b44472d446625b60f5ad9d22
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66189497"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70865956"
 ---
 # <a name="create-a-rule-to-permit-or-deny-users-based-on-an-incoming-claim"></a>들어오는 클레임에 따라 사용자를 허용 또는 거부하는 규칙 만들기 
 
 
-Windows Server 2016에서 사용할 수 있습니다는 **액세스 제어 정책** 됩니다 사용자 허용 또는 거부 들어오는 클레임을 기반으로 하는 규칙을 만들려고 합니다.  Windows Server 2012 R2에서 사용 하는 **허용 또는 거부 들어오는 클레임에 따라 사용자가** Active Directory Federation Services에서 규칙 템플릿을 \(AD FS\), 부여 됩니다.이 권한 부여 규칙을 만들 수 있습니다 또는 유형 및 들어오는 클레임의 값에 따라 신뢰 당사자에 대 한 사용자 액세스를 거부 합니다. 
+Windows Server 2016에서는 **Access Control 정책을** 사용 하 여 들어오는 클레임을 기준으로 사용자를 허용 하거나 거부 하는 규칙을 만들 수 있습니다.  Windows Server 2012 r 2에서 Active Directory Federation Services \(AD FS\)에서 **들어오는 클레임에 따라 사용자 허용 또는 거부** 규칙 템플릿을 사용 하 여에 대 한 사용자 액세스 권한을 부여 하거나 거부 하는 권한 부여 규칙을 만들 수 있습니다. 들어오는 클레임의 유형 및 값을 기반으로 하는 신뢰 당사자입니다. 
 
 예를 들어, 클레임 값이 신뢰 당사자에 액세스 하려면 Domain Admins 그룹에 있는 사용자만 있도록 규칙을 만들려면이 사용할 수 있습니다. 모든 사용자가 신뢰 당사자에 액세스를 사용 하도록 허용 하려는 경우는 **Everyone 허용** 액세스 제어 정책 또는 **모든 사용자 허용** 의 Windows Server 버전에 따라 규칙 템플릿. 페더레이션 서비스에서 신뢰 당사자에 대한 액세스가 허용된 사용자도 신뢰 당사자에 의해 서비스가 거부될 수 있습니다.  
   
@@ -105,9 +105,9 @@ Windows Server 2016에서 사용할 수 있습니다는 **액세스 제어 정�
 
 6.  에 **규칙 구성** 페이지의 **클레임 규칙 이름** 에이 규칙에 대 한 표시 이름을 입력 **들어오는 클레임 유형** 아래 목록에서 클레임 유형을 선택 **들어오는 클레임 값** 값을 입력 하거나 찾아보기를 클릭 \(가능 하다 면\) 값을 선택 하 고 조직의 요구에 따라 다음 옵션 중 하나를 선택 합니다.  
   
-    -   **이 들어오는 클레임을 사용 하 여 사용자에 게 액세스를 허용 합니다.**  
+    -   **이 들어오는 클레임을 가진 사용자에 대 한 액세스 허용**  
   
-    -   **이 들어오는 클레임을 사용 하 여 사용자에 게 액세스를 거부 합니다.**  
+    -   **이 들어오는 클레임을 가진 사용자에 대 한 액세스 거부**  
 ![규칙 만들기](media/Create-a-Rule-to-Permit-or-Deny-Users-Based-on-an-Incoming-Claim/permitdeny2.PNG)  
 7.  **마침**을 클릭합니다.  
   

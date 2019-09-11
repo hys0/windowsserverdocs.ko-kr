@@ -8,18 +8,18 @@ ms.author: jol
 ms.date: 06/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: b00ee847088d038e59266154bcbbe9499bfe47fa
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4e54101e90005a1845820ecf0bb99df527ac7051
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59850114"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70869767"
 ---
 # <a name="understanding-windows-admin-center-extensions"></a>Windows Admin Center 확장 이해
 
 >적용 대상: Windows Admin Center, Windows Admin Center 미리 보기
 
-아직 Windows Admin Center가 작동하는 방식에 익숙하지 않은 경우 개략적인 아키텍처로 시작해 봅니다. Windows Admin Center는 다음의 두 주요 구성 요소로 이루어져있습니다.
+Windows 관리 센터의 작동 원리에 대해 잘 모르는 경우에는 높은 수준의 아키텍처로 시작 하겠습니다. Windows Admin Center는 다음의 두 주요 구성 요소로 이루어져있습니다.
 
 - 웹 브라우저 요청에 대해 Windows Admin Center UI 웹 페이지 역할을 하는 경량 **웹 서비스**.
 - 웹 페이지의 REST API 요청 수신을 대기하고 대상 서버 또는 클러스터에서 실행할 WMI 호출 또는 PowerShell 스크립트를 릴레이하는 **게이트웨이 구성 요소**.
@@ -52,4 +52,4 @@ Windows Admin Center 홈 화면에서 연결을 클릭하면 선택한 연결 �
 
 ## <a name="next-steps"></a>다음 단계
 
-Windows Admin Center에서 빌드하려는 기능에 따라 기존 서버 또는 클러스터 솔루션에 대해 [도구 확장을 만드는 것](develop-tool.md)만으로 충분할 수 있으며, 확장을 빌드하는 가장 쉬운 첫 번째 단계입니다. 그러나 기능이 서버 또는 클러스터가 아니라 장치, 서비스, 또는 완전히 새로운 것을 관리하기 위한 것이라면 하나 이상의 도구로 [솔루션 확장을 만드는](develop-solution.md) 것을 고려해야 합니다. 마지막으로, WMI 또는 PowerShell이 아닌 프로토콜을 통해 대상과 통신해야 하는 경우 [게이트웨이 플러그 인을 빌드](develop-gateway-plugin.md)해야 할 수 있습니다. 개발 환경 설정 및 첫 번째 확장을 작성하는 방법을 알아보려면 [계속 읽으십시오](developing-extensions.md).
+Windows Admin Center에서 빌드하려는 기능에 따라 기존 서버 또는 클러스터 솔루션에 대해 [도구 확장을 만드는 것](develop-tool.md)만으로 충분할 수 있으며, 확장을 빌드하는 가장 쉬운 첫 번째 단계입니다. 그러나 기능이 서버 또는 클러스터가 아니라 장치, 서비스, 또는 완전히 새로운 것을 관리하기 위한 것이라면 하나 이상의 도구로 [솔루션 확장을 만드는](develop-solution.md) 것을 고려해야 합니다. 마지막으로, WMI 또는 PowerShell 이외의 프로토콜을 통해 대상과 통신 해야 하는 경우 [게이트웨이 플러그 인을 빌드해야](develop-gateway-plugin.md)합니다. 개발 환경 설정 및 첫 번째 확장을 작성하는 방법을 알아보려면 [계속 읽으십시오](developing-extensions.md).
