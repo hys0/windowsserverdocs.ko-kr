@@ -7,12 +7,12 @@ ms.topic: landing-page
 ms.author: DavSo; Ericam; YaShi
 author: akino
 ms.date: 10/16/2017
-ms.openlocfilehash: 072d71a7825907ada7d4bc02eb5390722692e81d
-ms.sourcegitcommit: 02f1e11ba37a83e12d8ffa3372e3b64b20d90d00
+ms.openlocfilehash: 1318a023d827b9e7ade2c6f420ba1aa532dfffe3
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68863418"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70866431"
 ---
 # <a name="performance-tuning-windows-server-containers"></a>Windows 서버 컨테이너에 대한 성능 튜닝
 
@@ -45,7 +45,7 @@ Nano 서버는 프라이빗 클라우드 및 데이터 센터에 최적화된 �
 Microsoft는 Nano Server와 Server Core에 대한 기본 이미지를 모두 제공합니다. Server Core용으로 제공되는 기본 이미지는 첫 번째 로그온(OOBE)과 관련된 시작 시간 오버헤드를 제거하여 최적화했습니다. Nano Server 기본 이미지에서는 그렇지 않습니다. 그러나 이 비용은 하나 이상의 계층을 컨테이너 이미지에 적용하여 Nano Server 기반 이미지에서 제거할 수 있습니다. 이미지에서 후속 컨테이너가 시작되면 첫 번째 로그온 비용이 발생하지 않습니다.
 ### <a name="scratch-space-location"></a>스크래치 공간 위치
 
-컨테이너는 기본적으로 실행 중인 컨테이너의 수명 동안 스토리지하기 위해 컨테이너 호스트의 시스템 드라이브 미디어에 임시 스크래치 공간을 사용합니다. 이 공간은 컨테이너의 시스템 드라이브 역할을 하며, 컨테이너 작업에서 수행되는 많은 쓰기 및 읽기 작업은 이 경로를 따릅니다. 회전하는 디스크 자기 미디어(HDD)에 시스템 드라이브가 있지만 더 빠른 스토리지 미디어(더 빠른 HDD 또는 SSD)를 사용할 수 있는 호스트 시스템의 경우 컨테이너 스크래치 공간은 다른 드라이브로 이동할 수 있습니다. 이 작업은 dockerd –g 명령을 사용하여 수행됩니다. 이 명령은 글로벌이며 시스템에서 실행되는 모든 컨테이너에 영향을 줍니다.
+컨테이너는 기본적으로 실행 중인 컨테이너의 수명 동안 컨테이너 호스트의 시스템 드라이브 미디어에 있는 임시 스크래치 공간을 스토리지에 사용합니다. 이 공간은 컨테이너의 시스템 드라이브 역할을 하며, 컨테이너 작업에서 수행되는 많은 쓰기 및 읽기 작업은 이 경로를 따릅니다. 회전하는 디스크 자기 미디어(HDD)에 시스템 드라이브가 있지만 더 빠른 스토리지 미디어(더 빠른 HDD 또는 SSD)를 사용할 수 있는 호스트 시스템의 경우 컨테이너 스크래치 공간은 다른 드라이브로 이동할 수 있습니다. 이 작업은 dockerd –g 명령을 사용하여 수행됩니다. 이 명령은 글로벌이며 시스템에서 실행되는 모든 컨테이너에 영향을 줍니다.
 
 ### <a name="nested-hyper-v-containers"></a>중첩된 Hyper-V 컨테이너
 Windows Server 2016용 Hyper-V는 중첩된 하이퍼바이저 지원을 도입했습니다. 즉, 이제는 가상 머신 내에서 가상 머신을 실행할 수 있습니다. 이렇게 하면 여러 가지 유용한 시나리오가 열리지만, 실제 호스트에서 실행되는 두 가지 수준의 하이퍼바이저가 있으므로 하이퍼바이저로 인해 영향을 받는 일부 성능이 과장됩니다.

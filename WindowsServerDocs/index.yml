@@ -1,0 +1,184 @@
+### YamlMime:Hub
+title: Windows Server 설명서
+summary: Windows Server는 작업 그룹에서 데이터 센터까지 응용 프로그램, 네트워크 및 웹 서비스가 연결된 인프라를 구축하기 위한 플랫폼입니다.
+metadata:
+  title: Windows Server 설명서 | Microsoft Docs
+  description: Windows Server는 작업 그룹에서 데이터 센터까지 응용 프로그램, 네트워크 및 웹 서비스가 연결된 인프라를 구축하기 위한 플랫폼입니다.
+  author: eross-msft
+  manager: daveba
+  ms.service: windows-server-threshold
+  ms.topic: hub-page
+  ms.date: 06/06/2019
+  ms.author: lizross
+  ms.openlocfilehash: 9af5ed848f824699d3ddf1830ff61f38a9475ac8
+  ms.sourcegitcommit: c7c743acada0ddf574d169a5c67b32d153fe77e7
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70876258"
+highlightedContent:
+  items:
+  - title: Windows Server 2019의 새로운 기능
+    itemType: whats-new
+    url: /windows-server/get-started-19/whats-new-19
+  - title: Windows Server 2019 시작
+    itemType: overview
+    url: /windows-server/get-started-19/get-started-19
+  - title: Windows Admin Center
+    itemType: how-to-guide
+    url: /windows-server/manage/windows-admin-center/overview
+  - title: 하이퍼 컨버지드 인프라
+    itemType: overview
+    url: /windows-server/hyperconverged/index
+  - title: Azure 하이브리드 서비스에 연결
+    itemType: how-to-guide
+    url: /windows-server/azure-hybrid-services/index
+  - title: Windows Server 2016 시작
+    itemType: how-to-guide
+    url: /windows-server/get-started/server-basics
+  - title: Windows Server 2008 R2 및 Windows Server 2008 서비스 종료
+    itemType: overview
+    url: /windows-server/get-started/modernize-windows-server-2008
+  - title: 서버용 Windows 참가자 프로그램
+    itemType: overview
+    url: /windows-insider/at-work/
+conceptualContent:
+  items:
+  - title: ID 및 액세스
+    links:
+    - url: /windows-server/identity/ad-ds/ad-ds-getting-started
+      itemType: overview
+      text: AD DS(Active Directory Domain Services) 시작
+    - url: /windows-server/identity/active-directory-federation-services
+      itemType: overview
+      text: AD FS(Active Directory Federation Services)
+    - url: /windows-server/identity/securing-privileged-access/securing-privileged-access
+      itemType: concept
+      text: 권한 있는 액세스 보안
+    footerLink:
+      url: /windows-server/identity/identity-and-access
+      text: 자세한 내용
+  - title: 장애 조치(failover) 클러스터링
+    links:
+    - url: /windows-server/failover-clustering/whats-new-in-failover-clustering
+      itemType: whats-new
+      text: 장애 조치(failover) 클러스터링의 새로운 기능
+    - url: /windows-server/failover-clustering/create-failover-cluster
+      itemType: how-to-guide
+      text: 장애 조치(failover) 클러스터 만들기
+    - url: /windows-server/failover-clustering/cluster-aware-updating
+      itemType: overview
+      text: 클러스터 인식 업데이트 개요
+    footerLink:
+      url: /windows-server/failover-clustering/failover-clustering-overview
+      text: 자세한 내용
+  - title: Management
+    links:
+    - url: /windows-server/manage/windows-admin-center/overview
+      itemType: overview
+      text: Windows Admin Center를 사용하여 환경 관리
+    - url: /windows-server/manage/system-insights/overview
+      itemType: overview
+      text: 시스템 인사이트 개요
+    - url: /windows-server/administration/performance-tuning/
+      itemType: overview
+      text: Windows Server 2016에 대한 서버 성능 조정 지침
+    footerLink:
+      url: /windows-server/administration/manage-windows-server
+      text: 자세한 내용
+  - title: 네트워킹
+    links:
+    - url: /windows-server/networking/what-s-new-in-networking
+      itemType: whats-new
+      text: 네트워킹의 새로운 기능
+    - url: /windows-server/networking/sdn/
+      itemType: overview
+      text: SDN(소프트웨어 정의 네트워킹) 개요
+    - url: /windows-server/networking/sdn/technologies/network-controller/network-controller
+      itemType: overview
+      text: 네트워크 컨트롤러
+    footerLink:
+      url: /windows-server/networking/networking
+      text: 자세한 내용
+  - title: 리모컨
+    links:
+    - url: /windows-server/remote/remote-desktop-services/welcome-to-rds
+      itemType: overview
+      text: 원격 데스크톱 서비스 개요
+    - url: /windows-server/remote/remote-desktop-services/clients/remote-desktop-clients
+      itemType: overview
+      text: 원격 데스크톱 클라이언트
+    - url: /windows-server/remote/remote-desktop-services/clients/remote-desktop-allow-access
+      itemType: how-to-guide
+      text: 원격 데스크톱 - PC 액세스 허용
+    footerLink:
+      url: /windows-server/remote/index
+      text: 자세한 내용
+  - title: 보안 및 보증
+    links:
+    - url: /windows-server/security/windows-authentication/windows-authentication-overview
+      itemType: overview
+      text: Windows 인증 개요
+    - url: /windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts
+      itemType: how-to-guide
+      text: 그룹 관리형 서비스 계정 시작
+    - url: /windows-server/security/windows-authentication/credentials-processes-in-windows-authentication
+      itemType: overview
+      text: Windows 인증의 자격 증명 프로세스
+    footerLink:
+      url: /windows-server/security/security-and-assurance
+      text: 자세한 내용
+  - title: 저장 공간
+    links:
+    - url: /windows-server/storage/whats-new-in-storage
+      itemType: whats-new
+      text: 저장소의 새로운 기능
+    - url: /windows-server/storage/disk-management/overview-of-disk-management
+      itemType: overview
+      text: 디스크 관리 개요
+    - url: /windows-server/storage/storage-spaces/understand-quorum
+      itemType: overview
+      text: 클러스터 및 풀 쿼럼의 이해
+    footerLink:
+      url: /windows-server/storage/storage
+      text: 자세한 내용
+  - title: 문제 해결
+    links:
+    - url: /windows-server/manage/windows-admin-center/support/troubleshooting
+      itemType: how-to-guide
+      text: Windows Admin Center 문제 해결
+    - url: /windows-server/failover-clustering/troubleshooting-using-wer-reports
+      itemType: how-to-guide
+      text: Windows 오류 보고를 사용하여 장애 조치(failover) 클러스터링 문제 해결
+    - url: /windows-server/storage/disk-management/troubleshooting-disk-management
+      itemType: how-to-guide
+      text: 디스크 관리 문제 해결
+    footerLink:
+      url: /windows-server/troubleshoot/windows-server-support-solutions
+      text: 자세한 내용
+  - title: 가상화
+    links:
+    - url: /virtualization/windowscontainers/
+      itemType: overview
+      text: Windows의 컨테이너 개요
+    - url: /windows-server/virtualization/hyper-v/hyper-v-on-windows-server
+      itemType: overview
+      text: Windows Server의 Hyper-V
+    - url: /windows-server/virtualization/hyper-v-virtual-switch/hyper-v-virtual-switch
+      itemType: overview
+      text: Hyper-V 가상 스위치 개요
+    footerLink:
+      url: /windows-server/virtualization/virtualization
+      text: 자세한 내용
+additionalContent:
+  sections:
+  - items:
+    - title: Windows Server 2012 R2 및 Windows Server 2012
+      summary: Windows Server 2012 R2 및 Windows Server 2012를 관리하는 IT 전문가를 위한 기술 콘텐츠
+      url: https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh801901(v=ws.11)
+    - title: Windows Server 2008 R2 및 Windows Server 2008
+      summary: Windows Server 2008 R2 및 Windows Server 2008을 관리하는 IT 전문가를 위한 기술 콘텐츠
+      url: https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349801(v=ws.10)
+    - title: Windows Server 2008 개발자 스토리
+      summary: Windows Server 2008의 새로운 기능과 확장된 기능에 관심이 있는 개발자 및 기타 기술 전문가를 위한 콘텐츠입니다.
+      url: https://docs.microsoft.com/previous-versions/windows/server-2008/bb852234(v=msdn.10)
