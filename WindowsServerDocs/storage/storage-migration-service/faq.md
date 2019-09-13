@@ -8,12 +8,12 @@ ms.date: 08/19/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
-ms.openlocfilehash: f086143ae2e02a2d049189ff248e02fc44fe3cb2
-ms.sourcegitcommit: e2b565ce85a97c0c51f6dfe7041f875a265b35dd
+ms.openlocfilehash: a1e195ab755dfd0b61cc4201f43373421ce51aa2
+ms.sourcegitcommit: 86350de764b89ebcac2a78ebf32631b7b5ce409a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69584805"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70923554"
 ---
 # <a name="storage-migration-service-frequently-asked-questions-faq"></a>Storage Migration Service 질문과 대답 (FAQ)
 
@@ -89,11 +89,13 @@ Storage Migration Service는 저장소 마이그레이션 서비스 프록시 �
 
 - **대상 운영 체제에 Windows Server 2019를 사용 합니다.** Windows Server 2019에는 저장소 마이그레이션 서비스 프록시 서비스가 포함 되어 있습니다. 이 기능을 설치 하 고 Windows Server 2019 대상으로 마이그레이션하는 경우 모든 전송은 원본 및 대상 간의 직접적인 시야로 작동 합니다. 대상 컴퓨터가 Windows Server 2012 R2 또는 Windows Server 2016 인 경우이 서비스는 전송 하는 동안 orchestrator에서 실행 되며,이는 이중 홉을 전송 하 고 훨씬 더 느립니다. Windows Server 2012 R2 또는 Windows Server 2016 대상으로 실행 되는 여러 작업이 있는 경우 오 케 스트레이 터가 병목 상태가 됩니다. 
 
-- **기본 전송 스레드를 변경 합니다.** 저장소 마이그레이션 서비스 프록시 서비스는 지정 된 작업에서 동시에 8 개의 파일을 복사 합니다. SMS 프록시를 실행 하는 모든 노드에서 다음 레지스트리 REG_DWORD 값 이름을 decimal로 조정 하 여 동시 복사 스레드 수를 늘릴 수 있습니다.
+- **기본 전송 스레드를 변경 합니다.** 저장소 마이그레이션 서비스 프록시 서비스는 지정 된 작업에서 동시에 8 개의 파일을 복사 합니다. 저장소 마이그레이션 서비스 프록시를 실행 하는 모든 노드에서 다음 레지스트리 REG_DWORD 값 이름을 decimal로 조정 하 여 동시 복사 스레드 수를 늘릴 수 있습니다.
 
-    HKEY_Local_Machine\Software\Microsoft\SMSProxy FileTransferThreadCount
+    HKEY_Local_Machine\Software\Microsoft\SMSProxy
+    
+    FileTransferThreadCount
 
-   Windows Server 2019에서 유효한 범위는 1 ~ 128입니다. 변경한 후에는 마이그레이션에 참여 하는 모든 컴퓨터에서 Storage Migration Service 프록시 서비스를 다시 시작 해야 합니다. 이 설정에서는 주의를 기울여야 합니다. 더 높게 설정 하려면 추가 코어, 저장소 성능 및 네트워크 대역폭이 필요할 수 있습니다. 너무 높게 설정 하면 기본 설정에 비해 성능이 저하 될 수 있습니다. CPU, 메모리, 네트워크 및 저장소를 기반으로 스레드 설정을 변경 하는 기능은 이후 버전의 SMS에 대해 계획 발견적.
+   Windows Server 2019에서 유효한 범위는 1 ~ 128입니다. 변경한 후에는 마이그레이션에 참여 하는 모든 컴퓨터에서 Storage Migration Service 프록시 서비스를 다시 시작 해야 합니다. 이 설정에서는 주의를 기울여야 합니다. 더 높게 설정 하려면 추가 코어, 저장소 성능 및 네트워크 대역폭이 필요할 수 있습니다. 너무 높게 설정 하면 기본 설정에 비해 성능이 저하 될 수 있습니다.
 
 - **코어 및 메모리를 추가 합니다.**  원본, orchestrator 및 대상 컴퓨터에 두 개 이상의 프로세서 코어가 있거나 두 개의 vCPUs가 있는 것이 좋습니다. 특히 FileTransferThreadCount (위)와 함께 사용 하는 경우 인벤토리 및 전송 성능을 크게 지원할 수 있습니다. 일반적인 사무실 형식 (기가바이트 이상) 보다 큰 파일을 전송 하는 경우 전송 성능은 기본 2GB 최소값 보다 많은 메모리를 활용 합니다.
 

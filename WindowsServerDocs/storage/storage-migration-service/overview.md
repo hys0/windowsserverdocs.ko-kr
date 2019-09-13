@@ -8,12 +8,12 @@ ms.date: 08/16/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
-ms.openlocfilehash: dae64b81c48b9ae6bf84c3558066ebbdf9c06ace
-ms.sourcegitcommit: e2b565ce85a97c0c51f6dfe7041f875a265b35dd
+ms.openlocfilehash: 50165f5e5dcb5e3fd83da8e6156869c61aeb68ca
+ms.sourcegitcommit: 825c2c17d227fec75335254edaa4efbb89ebcba2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69584829"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70905067"
 ---
 # <a name="storage-migration-service-overview"></a>Storage Migration Service 개요
 
@@ -51,8 +51,8 @@ ms.locfileid: "69584829"
 
 저장소 마이그레이션 서비스를 사용 하려면 다음이 필요 합니다.
 
-- 파일 및 데이터를 마이그레이션할 **원본 서버**
-- Windows server 2019를 실행 하는 **대상 서버** (windows server 2016 및 windows Server 2012 R2도 작동 하지만 속도는 약 50%)
+- **원본 서버** 또는 파일 및 데이터를 마이그레이션할 **장애 조치 (failover) 클러스터**
+- 로 마이그레이션할 Windows Server 2019 (클러스터 또는 독립 실행형)을 실행 하는 **대상 서버** 입니다. Windows Server 2016 및 Windows Server 2012 R2도 작동 하지만 50% 저하 됨
 - 마이그레이션을 관리 하기 위해 Windows Server 2019를 실행 하는 **orchestrator 서버**  <br>서버를 몇 대만 마이그레이션하고 서버 중 하나가 Windows Server 2019를 실행 하는 경우이를 orchestrator로 사용할 수 있습니다. 더 많은 서버를 마이그레이션하는 경우 별도의 orchestrator 서버를 사용 하는 것이 좋습니다.
 - PowerShell을 사용 하 여 마이그레이션을 관리 하지 않는 한,  **[Windows 관리 센터](../../manage/windows-admin-center/understand/windows-admin-center.md) 를 실행 하는 PC 또는 서버** 에서 Storage migration Service 사용자 인터페이스를 실행 합니다. Windows 관리 센터와 Windows Server 2019 버전은 모두 버전 1809 이상 이어야 합니다.
 
@@ -80,7 +80,7 @@ Orchestrator와 대상 컴퓨터에는 2 개 이상의 코어 또는 두 개의 
 원본 서버는 다음 운영 체제 중 하나를 실행 해야 합니다.
 
 - Windows Server, 반기 채널
-- Windows Server 2019
+- Windows Server 2019
 - Windows Server 2016
 - Windows Server 2012 R2
 - Windows Server 2012
@@ -98,7 +98,7 @@ Orchestrator와 대상 컴퓨터에는 2 개 이상의 코어 또는 두 개의 
 
 참고: Windows Small Business Server 및 Windows Server Essentials는 도메인 컨트롤러입니다. Storage Migration Service는 아직 도메인 컨트롤러에서 이동할 수 없지만 파일의 인벤토리 및 전송에는 사용할 수 있습니다.   
 
-Orchestrator에서 Windows Server 버전 1903 이상을 실행 하는 경우 다음과 같은 추가 원본 유형을 마이그레이션할 수 있습니다.
+Orchestrator가 Windows Server, 버전 1903 이상을 실행 하거나 orchestrator가 [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) 가 설치 된 이전 버전의 windows server를 실행 하는 경우 다음과 같은 추가 원본 유형을 마이그레이션할 수 있습니다.
 
 - 장애 조치(failover) 클러스터
 - Samba를 사용 하는 Linux 서버. 다음 사항을 테스트 했습니다.
@@ -110,19 +110,19 @@ Orchestrator에서 Windows Server 버전 1903 이상을 실행 하는 경우 다
 대상 서버는 다음 운영 체제 중 하나를 실행 해야 합니다.
 
 - Windows Server, 반기 채널
-- Windows Server 2019
+- Windows Server 2019
 - Windows Server 2016
 - Windows Server 2012 R2
 
 > [!TIP]
-> Windows server 2019 또는 Windows server를 실행 하는 대상 서버, 반기 채널 버전 1809 이상에는 이전 버전의 Windows Server에 대 한 전송 성능이 두 배 이상 있습니다. 이러한 성능 향상은 기본 제공 저장소 마이그레이션 서비스 프록시 서비스를 포함 하기 때문에 발생 합니다 .이 서비스는 아직 열려 있지 않은 경우에도 필요한 방화벽 포트를 엽니다.
+> Windows server 2019 또는 Windows Server, 반기 채널 이상을 실행 하는 대상 서버는 이전 버전의 Windows Server의 전송 성능을 두 배로 향상 합니다. 이러한 성능 향상은 기본 제공 저장소 마이그레이션 서비스 프록시 서비스를 포함 하기 때문에 발생 합니다 .이 서비스는 아직 열려 있지 않은 경우에도 필요한 방화벽 포트를 엽니다.
 
 ## <a name="whats-new-in-storage-migration-service"></a>저장소 마이그레이션 서비스의 새로운 기능
 
-Windows Server, 버전 1903은 orchestrator 서버에서 실행 될 때 다음과 같은 새 기능을 추가 합니다.
+Windows Server, 버전 1903 이상 또는 [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) 가 설치 된 이전 버전의 windows Server에서 Storage Migration Server orchestrator를 실행 하는 경우 다음과 같은 새로운 기능을 사용할 수 있습니다.
 
 - 새 서버로 로컬 사용자 및 그룹 마이그레이션
-- 장애 조치 (failover) 클러스터에서 스토리지 마이그레이션
+- 장애 조치 (failover) 클러스터에서 저장소 마이그레이션, 장애 조치 클러스터로 마이그레이션 및 독립 실행형 서버와 장애 조치 (failover) 클러스터 간 마이그레이션
 - 삼바를 사용하는 Linux 서버에서 스토리지 마이그레이션
 - Azure 파일 동기화를 사용하여 마이그레이션된 공유를 Azure에 쉽게 동기화
 - Azure와 같은 신규 네트워크로 마이그레이션
