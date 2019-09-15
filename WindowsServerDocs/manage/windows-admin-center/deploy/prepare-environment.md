@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.date: 06/07/2019
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: 96aced2c062717aee0d2957b751bc2c25ac8e0da
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 19013c3f132b7486647ade2c9c4950b65c21b8e7
+ms.sourcegitcommit: feec5cbe983c8c5800ccd4fc214914084fcceaba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70869101"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70975322"
 ---
 # <a name="prepare-your-environment-for-windows-admin-center"></a>Windows Admin Center에 대한 환경 준비
 
@@ -36,7 +36,7 @@ Windows Admin Center에는 기본적으로 Windows Server 2012 및 2012 R2에 �
 
 WMF가 설치되어 있는지, 그리고 버전이 5.1 이상인지 확인하려면 PowerShell에 `$PSVersiontable`을 입력합니다.
 
-설치되어있지 않은 경우 [WMF 5.1을 다운로드하여 설치할](https://docs.microsoft.com/powershell/wmf/5.1/install-configure)수 있습니다.
+설치되어있지 않은 경우 [WMF 5.1을 다운로드하여 설치할](https://docs.microsoft.com/powershell/wmf/setup/install-configure)수 있습니다.
 
 ## <a name="prepare-windows-server-2008-r2"></a>Windows Server 2008 R2 준비
 
@@ -48,7 +48,7 @@ Windows Admin Center에는 기본적으로 Windows Server 2008 R2에 포함되�
 
 WMF가 설치되어 있는지, 그리고 버전이 5.1 이상인지 확인하려면 PowerShell에 `$PSVersiontable`을 입력합니다.
 
-설치되어있지 않은 경우 [WMF 5.1을 다운로드하여 설치할](https://docs.microsoft.com/powershell/wmf/5.1/install-configure)수 있습니다.
+설치되어있지 않은 경우 [WMF 5.1을 다운로드하여 설치할](https://docs.microsoft.com/powershell/wmf/setup/install-configure)수 있습니다.
 
 PowerShell 원격 연결을 사용하도록 설정하려면 PowerShell 콘솔에서 `Enable-PSRemoting –force`를 실행합니다. 
 
@@ -114,7 +114,7 @@ Windows Admin Center에는 기본적으로 Microsoft Hyper-V Server 2012 R2에 �
 
 WMF가 설치되어 있는지, 그리고 버전이 5.1 이상인지 확인하려면 PowerShell에 `$PSVersiontable`을 입력합니다. 
 
-설치가 되어 있지 않는 경우에 [WMF 5.1을 다운로드](https://docs.microsoft.com/powershell/wmf/5.1/install-configure)할 수 있습니다.
+설치가 되어 있지 않는 경우에 [WMF 5.1을 다운로드](https://docs.microsoft.com/powershell/wmf/setup/install-configure)할 수 있습니다.
 
 ### <a name="step-2-enable-remote-management"></a>2단계: 원격 관리를 사용하도록 설정
 

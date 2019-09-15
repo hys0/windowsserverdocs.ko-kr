@@ -1,6 +1,6 @@
 ---
 title: tracerpt
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7c105fe714e30866297e4f6c3c83a670ff7966a6
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 25014d23c797f37dcc488b5fea20c73907eb6f4c
+ms.sourcegitcommit: feec5cbe983c8c5800ccd4fc214914084fcceaba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66440976"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70975300"
 ---
 # <a name="tracerpt"></a>tracerpt
 
@@ -39,28 +39,28 @@ tracerpt <[-l] <value [value [...]]>|-rt <session_name [session_name [...]]>> [o
 |              옵션 플래그               |                                                                    설명                                                                    |
 |----------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 |                   -?                   |                                                         도움말 상황에 맞는 표시 합니다.                                                          |
-|          -config \<filename>           |                                                 명령 옵션을 포함 하는 설정 파일을 로드 합니다.                                                  |
+|          -config \<파일 이름 >           |                                                 명령 옵션을 포함 하는 설정 파일을 로드 합니다.                                                  |
 |                   -y                   |                                                  메시지를 표시 하지 않고 모든 질문에 예로 답변 합니다.                                                   |
-|                -f \<XML                |                                                                       HTML>                                                                       |
-|               -of \<CSV                |                                                                       EVTX                                                                        |
-|            -df \<filename>             |                                            Microsoft 전용 만들 스키마 파일 수를 계산/보고 합니다.                                            |
-|            -int \<filename>            |                                            지정된 된 파일에 해석 된 이벤트 구조를 덤프 합니다.                                            |
+|            -f \<XML\|HTML >             |                                                                  보고서 형식입니다.                                                                   |
+|         \<-CSV\|.evtxXML>\|          |                                                         덤프 형식입니다. 기본값은 XML입니다.                                                          |
+|            -df \<파일 이름 >             |                                            Microsoft 전용 만들 스키마 파일 수를 계산/보고 합니다.                                            |
+|            -int \<파일 이름 >            |                                            지정된 된 파일에 해석 된 이벤트 구조를 덤프 합니다.                                            |
 |                  -rts                  |                        보고서는 이벤트 추적 헤더에서 원시 타임 스탬프입니다. -O,-보고서 말거나-요약와만 사용할 수 있습니다.                         |
-|            -tmf \<filename>            |                                                  추적 메시지 형식 정의 파일을 지정 합니다.                                                  |
-|              -tp \<value>              |                            TMF 파일 검색 경로 지정 합니다. 세미콜론 (;)으로 구분 된 여러 경로 사용할 수 있습니다.                            |
-|              -i \<value>               | 공급자 이미지 경로 지정 합니다. 일치 하는 PDB 기호 서버에 배치 됩니다. 세미콜론 (;)으로 구분 된 여러 경로 사용할 수 있습니다. |
-|             -pdb \<value>              |                             기호 서버 경로 지정 합니다. 세미콜론 (;)으로 구분 된 여러 경로 사용할 수 있습니다.                             |
+|            -tmf \<파일 이름 >            |                                                  추적 메시지 형식 정의 파일을 지정 합니다.                                                  |
+|              -tp \<값 >              |                            TMF 파일 검색 경로 지정 합니다. 세미콜론 (;)으로 구분 된 여러 경로 사용할 수 있습니다.                            |
+|              -i \<값 >               | 공급자 이미지 경로 지정 합니다. 일치 하는 PDB 기호 서버에 배치 됩니다. 세미콜론 (;)으로 구분 된 여러 경로 사용할 수 있습니다. |
+|             -pdb \<값 >              |                             기호 서버 경로 지정 합니다. 세미콜론 (;)으로 구분 된 여러 경로 사용할 수 있습니다.                             |
 |                  -gmt                  |                                              그리니치 표준시 WPP 페이로드 타임 스탬프를 변환 합니다.                                               |
-|              -rl \<value>              |                                               시스템 보고서 수준 1에서 5로 정의 합니다. 기본값은 1입니다.                                               |
+|              -rl \<값 >              |                                               시스템 보고서 수준 1에서 5로 정의 합니다. 기본값은 1입니다.                                               |
 |          -요약 [filename]           |                                  요약 보고서 텍스트 파일을 생성 합니다. 지정 하지 않으면 파일에는 summary.txt입니다.                                   |
 |             -o [filename]              |                                      텍스트 출력 파일을 생성 합니다. 지정 하지 않으면 파일에는 dumpfile.xml입니다.                                      |
 |           -보고서 [filename]           |                                  텍스트 출력 보고서 파일을 생성 합니다. 지정 하지 않으면 파일에는 workload.xml입니다.                                   |
 |                  -lr                   |                        지정 "덜 제한적입니다." 이 이벤트 스키마와 일치 하지 않는 이벤트에 대 한 최선의 노력을 사용 합니다.                         |
 |           -[filename] 내보내기           |                                  이벤트 스키마 내보내기 파일을 생성 합니다. 지정 하지 않으면 파일에는 schema.man입니다.                                   |
-|       [-l] \<value [value […]]>        |                                                   처리 이벤트 추적 로그 파일을 지정 합니다.                                                    |
+|       [-l] \<값 [값 [...]] >        |                                                   처리 이벤트 추적 로그 파일을 지정 합니다.                                                    |
 | -rt \<session_name [session_name [...]] > |                                                실시간 이벤트 추적 세션 데이터 소스를 지정 합니다.                                                |
 
-## <a name="BKMK_EXAMPLES"></a>예제
+## <a name="BKMK_EXAMPLES"></a>예와
 
 - 이 예제에서는 두 개의 이벤트 로그를 기반으로 보고서를 만듭니다 **logfile1.etl** 및 **logfile2.etl** 덤프 파일을 만들고 **logdump.xml** XML 형식에서입니다.  
   ```

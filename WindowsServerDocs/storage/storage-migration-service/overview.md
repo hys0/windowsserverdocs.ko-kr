@@ -8,12 +8,12 @@ ms.date: 08/16/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
-ms.openlocfilehash: 50165f5e5dcb5e3fd83da8e6156869c61aeb68ca
-ms.sourcegitcommit: 825c2c17d227fec75335254edaa4efbb89ebcba2
+ms.openlocfilehash: 0dab57bffe8b0963bb91d0f9c2752014c6746c87
+ms.sourcegitcommit: 61767c405da44507bd3433967543644e760b20aa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70905067"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70987397"
 ---
 # <a name="storage-migration-service-overview"></a>Storage Migration Service 개요
 
@@ -102,8 +102,12 @@ Orchestrator가 Windows Server, 버전 1903 이상을 실행 하거나 orchestra
 
 - 장애 조치(failover) 클러스터
 - Samba를 사용 하는 Linux 서버. 다음 사항을 테스트 했습니다.
-    - RedHat Enterprise Linux 7.6, CentOS 7, Debian 8, Ubuntu 16.04 and 12.04.5, SUSE Linux Enterprise Server (SLES) 11 SP4
-    - Samba 4.x, 3.6 x
+    - CentOS 7
+    - Debian GNU/Linux 8
+    - RedHat Enterprise Linux 7.6
+    - SUSE Linux Enterprise Server (SLES) 11 SP4
+    - Ubuntu 16.04 LTS 및 12.04.5 LTS
+    - Samba 4.8, 4.7, 4.3, 4.2 및 3.6
 
 ### <a name="requirements-for-destination-servers"></a>대상 서버에 대 한 요구 사항
 
