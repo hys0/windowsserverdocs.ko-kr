@@ -8,12 +8,12 @@ ms.date: 3/27/2018
 ms.localizationpriority: medium
 ms.topic: article
 author: christianmontoya
-ms.openlocfilehash: 5b3f162b8eee70fbc452b7400b737454c3fffb59
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: ca9484cc8abffcc21b4ed11756fb009b55046a0c
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "63712649"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70870967"
 ---
 # <a name="set-up-email-discovery-to-subscribe-to-your-rds-feed"></a>RDS 피드를 구독하도록 이메일 검색 설정
 
@@ -38,4 +38,4 @@ ms.locfileid: "63712649"
 
    DNS 레코드 필드의 이름은 도메인 이름 등록자에 따라 다르지만 이 프로세스를 통해 전체 RD 웹 피드 값이 있는 _msradc.\<domain_name\>(예: _msradc.contoso.com)이라는 TXT 레코드가 생성됩니다.
 
-이것이 전부입니다! 이제 디바이스에서 원격 데스크톱 애플리케이션을 시작하고 직접 구독하세요!
+간단하죠. 이제 디바이스에서 원격 데스크톱 애플리케이션을 시작하고 직접 구독하세요!
