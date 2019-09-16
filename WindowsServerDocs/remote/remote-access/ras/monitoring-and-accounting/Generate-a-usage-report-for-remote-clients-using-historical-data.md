@@ -1,5 +1,5 @@
 ---
-title: 기록 데이터를 사용하여 원격 클라이언트에 대한 사용 보고서 생성
+title: 기록 데이터를 사용 하 여 원격 클라이언트에 대 한 사용 현황 보고서를 생성 합니다.
 description: 이 항목은 원격 액세스 모니터링 및 계정 관리에 Windows Server 2016에 대 한 가이드의 일부입니다.
 manager: brianlic
 ms.custom: na
@@ -19,7 +19,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 06/20/2019
 ms.locfileid: "67281128"
 ---
-# <a name="generate-a-usage-report-for-remote-clients-using-historical-data"></a>기록 데이터를 사용하여 원격 클라이언트에 대한 사용 보고서 생성
+# <a name="generate-a-usage-report-for-remote-clients-using-historical-data"></a>기록 데이터를 사용 하 여 원격 클라이언트에 대 한 사용 현황 보고서를 생성 합니다.
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016
 

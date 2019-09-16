@@ -26,7 +26,7 @@ ms.locfileid: "59885474"
 또한 이동식 스토리지 디바이스를 사용하여 **문서** 라이브러리의 **내 문서** 폴더와 같은 Windows 탐색기의 프라이빗 폴더에 프라이빗 문서를 저장하고 보관할 수도 있습니다.  
   
  > [!NOTE]  
- > 대시보드 사용자는 USB 저장소 사용을 차단할 수 있습니다. 자세한 내용은 [USB 저장소 차단 또는 차단 해제](Block-or-Unblock-USB-Storage.md)를 참조하세요.  
+ > 대시보드 사용자는 USB 스토리지 사용을 차단할 수 있습니다. 자세한 내용은 [USB 저장소 차단 또는 차단 해제](Block-or-Unblock-USB-Storage.md)를 참조하세요.  
   
 ## <a name="to-share-content-that-is-stored-directly-on-a-removable-storage-device"></a>이동식 저장 장치에 직접 저장된 콘텐츠를 공유하려면  
   

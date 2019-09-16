@@ -15,7 +15,7 @@ manager: dongill
 ms.date: 10/12/2016
 ms.openlocfilehash: 523fb71304ae55d17203cab4d1c5a17551bf8fdf
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59890644"
@@ -36,7 +36,7 @@ NTLM 인증은 Windows Msv1에 포함 된 인증 프로토콜 제품군\_0.dll �
 ## <a name="BKMK_APP"></a>현재 응용 프로그램
 NTLM 인증은 계속 지원되며, 이는 작업 그룹 구성원으로 구성된 시스템에서 Windows 인증 시 사용되어야 합니다. 또한 로컬 로그온 인증 되지 않은에 NTLM 인증이 사용 됩니다\-도메인 컨트롤러입니다. Kerberos 버전 5 인증은 Active Directory 환경 하지만 비에 대 한 기본 인증 방법을\-Microsoft 또는 Microsoft 응용 프로그램에서 NTLM을 사용할 수 있습니다.
 
-IT 환경에서 NTLM 프로토콜 사용을 줄이려면 NTLM을 기반으로 배포된 응용 프로그램 요구 사항에 대한 지식과 기타 프로토콜을 사용하도록 컴퓨팅 환경을 구성하는 데 필요한 전략 및 단계가 필요합니다. 선택적으로 NTLM 트래픽을 제한하기 위해 NTLM 사용 방법을 검색하도록 도와주는 새로운 도구 및 설정이 추가되었습니다. 환경에서 NTLM 사용을 분석 및 제한하는 방법에 대한 자세한 내용은 [NTLM 인증 제한 사항 소개](https://technet.microsoft.com/library/dd560653(v=ws.10).aspx) 를 참조하여 NTLM 사용 감사 및 제한 가이드에 액세스하세요.
+IT 환경에서 NTLM 프로토콜 사용을 줄이려면 NTLM을 기반으로 배포된 애플리케이션 요구 사항에 대한 지식과 기타 프로토콜을 사용하도록 컴퓨팅 환경을 구성하는 데 필요한 전략 및 단계가 필요합니다. 선택적으로 NTLM 트래픽을 제한하기 위해 NTLM 사용 방법을 검색하도록 도와주는 새로운 도구 및 설정이 추가되었습니다. 환경에서 NTLM 사용을 분석 및 제한하는 방법에 대한 자세한 내용은 [NTLM 인증 제한 사항 소개](https://technet.microsoft.com/library/dd560653(v=ws.10).aspx) 를 참조하여 NTLM 사용 감사 및 제한 가이드에 액세스하세요.
 
 ## <a name="BKMK_NEW"></a>새로운 기능과 변경 된 기능
 Windows Server 2012에 대 한 NTLM의 기능에서 변경 하지 않고 있습니다.
