@@ -8,12 +8,12 @@ author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: high
 ms.date: 05/21/2019
-ms.openlocfilehash: cdb831eb772114b86e6260063dff6ad881f2f37b
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 639623b4ebb21a4f6a0025a71721204cbfc4f496
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67280339"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70868602"
 ---
 # <a name="windows-server-servicing-channels-ltsc-and-sac"></a>Windows Server 서비스 채널: LTSC 및 SAC
 
@@ -102,9 +102,9 @@ Windows Server 2019 이전에 출시된 반기 채널 릴리스는 Windows Serve
 
 ## <a name="why-do-semi-annual-channel-releases-offer-only-the-server-core-installation-option"></a>반기 채널 릴리스가 Server Core 설치 옵션만 제공하는 이유는 무엇입니까?
 
-Windows Server의 각 릴리스를 계획할 때 중요한 단계 중 하나는 고객의 피드백을 듣는 것입니다. Windows Server를 어떻게 사용하고 계신가요? Windows Server 배포, 그리고 더 나아가 일상적인 비즈니스에 가장 큰 영향을 미치는 새 기능은 무엇인가요? 고객 피드백에 따르면 새로운 혁신 기술을 가급적 빠르고 효율적으로 제공하는 것이 최우선 과제입니다. 동시에 가장 빠르게 혁신을 수행하는 고객의 경우 주로 PowerShell을 통한 명령줄 스크립팅을 사용하여 데이터 센터를 관리하고, 데스크톱 환경 포함 Windows Server 설치 시 이용 가능한 데스크톱 GUI를 강력하게 요구하지 않습니다(특히 [Windows Admin Center](../manage/windows-admin-center/overview.md)를 사용하여 서버를 원격으로 관리할 수 있게 된 후로는 더더욱).
+Windows Server의 각 릴리스를 계획할 때 중요한 단계 중 하나는 고객의 피드백을 듣는 것입니다. Windows Server를 어떻게 사용하고 계신가요? Windows Server 배포, 그리고 더 나아가 일상적인 비즈니스에 가장 큰 영향을 미치는 새 기능은 무엇인가요? 고객 피드백에 따르면 새로운 혁신 기술을 가급적 빠르고 효율적으로 제공하는 것이 최우선 과제입니다. 동시에 혁신 속도가 두드러지는 고객은 주로 PowerShell 명령줄 스크립팅을 사용하여 데이터 센터를 관리하므로, 데스크톱 환경 포함 Windows Server 설치 시 이용 가능한 데스크톱 GUI를 강하게 요구하진 않습니다. 특히 [Windows Admin Center](../manage/windows-admin-center/overview.md)를 이용해 서버를 원격으로 관리하게 된 후로는 더더욱 그러합니다.
 
-Server Core 설치 옵션에 집중함으로써 기존 Windows Server 플랫폼 기능 및 애플리케이션 호환성을 유지하면서 더 많은 리소스를 새로운 혁신에 쏟을 수 있습니다. 이에 관한 문제 또는 Windows Server 및 향후 릴리스에 관한 다른 피드백이 있는 경우 [피드백 허브](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app)를 통해 의견이나 제안 사항을 보낼 수 있습니다.
+Server Core 설치 옵션에 집중함으로써 기존 Windows Server 플랫폼 기능 및 애플리케이션 호환성을 유지하면서 더 많은 리소스를 새로운 혁신에 제공할 수 있습니다. 이에 관한 문제 또는 Windows Server 및 향후 릴리스에 관한 다른 피드백이 있는 경우 [피드백 허브](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app)를 통해 의견이나 제안 사항을 보낼 수 있습니다.
 
 ## <a name="what-about-nano-server"></a>Nano 서버는 어떤가요?
 

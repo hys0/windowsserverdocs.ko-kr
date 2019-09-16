@@ -10,12 +10,12 @@ ms.date: 07/11/2018
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.localizationpriority: high
-ms.openlocfilehash: 425197d3462762c60a7371fc6ca529ad1b70e7ef
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 9bd2b17296872d4b94de5a7468178fbb2ba39709
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66443375"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70868400"
 ---
 # <a name="upload-a-windows-server-20082008-r2-specialized-image-to-azure"></a>Windows Server 2008/2008 R2 특수 이미지를 Azure에 업로드 
 
@@ -104,7 +104,7 @@ Login-AzureRmAccount
      c. 크기와 VM에 대한 SKU 요금제를 선택합니다.   
      d. 설정 페이지에서 네트워크 인터페이스를 선택합니다. 네트워크 인터페이스에 다음과 같은 규칙이 지정되었는지 확인합니다.
  
-        PORT:3389 Protocol: TCP Action: Allow Priority: 1000 Name: ‘RDP-Rule’.   
+        PORT:3389 Protocol: TCP Action: Allow Priority: 1000 Name: ‘RDP-Rule'.   
      e. **만들기**를 클릭합니다.
 
 

@@ -8,16 +8,16 @@ author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: high
 ms.date: 06/04/2019
-ms.openlocfilehash: 7110fe78982fec616174a93514d86fb2e1cf9fa5
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 665363c17cf5cb8d8ad52872128f2f63c07ea683
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66810767"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70868546"
 ---
 # <a name="whats-new-in-windows-server-2019"></a>Windows Server 2019의 새로운 기능
 
-> 적용 대상: 시작
+> 적용 대상: Windows Server 2019
 
 이 항목에서는 Windows Server 2019의 새로운 기능 몇 가지를 설명합니다. Windows Server 2019는 Windows Server 2016의 강력한 파운데이션을 기반으로 빌드되고 다음 네 가지 주요 테마를 여러 방면으로 혁신합니다. 하이브리드 클라우드, 보안, 애플리케이션 플랫폼 및 하이퍼 컨버지드 인프라(HCI)
 
@@ -214,7 +214,7 @@ Windows Server 2019의 [고성능 SDN 게이트웨이](https://docs.microsoft.co
 
 ### <a name="new-deployment-ui-and-windows-admin-center-extension-for-sdn"></a>SDN에 대한 새 배포 UI 및 Windows Admin Center 확장
 
-이제 Windows Server 2019를 사용하여 새 배포 UI 및 Windows Admin Center 확장을 통한 쉬운 배포 및 관리가 가능합니다. 누구나 SDN의 성능을 활용할 수 있습니다. 
+Windows Server 2019의 새 배포 UI 및 Windows Admin Center 확장을 이용하면 어느 사용자든 SDN의 성능을 활용하여 손쉽게 배포, 관리 작업을 수행할 수 있습니다. 
 
 ### <a name="persistent-memory-support-for-hyper-v-vms"></a>Hyper-V VM에 대한 영구 메모리 지원
 
