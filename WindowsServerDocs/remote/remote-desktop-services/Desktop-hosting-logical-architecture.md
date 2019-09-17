@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: 7f73bb0a-ce98-48a4-9d9f-cf7438936ca1
 author: lizap
 manager: dongill
-ms.openlocfilehash: 14c32831445b12b314c71e538320c2ce5a9b7ee4
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: f70cfbf7d65ee0a8fb4439ea51a995e6428ede5e
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "63749432"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70871363"
 ---
 # <a name="remote-desktop-services-architecture"></a>원격 데스크톱 서비스 아키텍처
 
@@ -49,7 +49,7 @@ ms.locfileid: "63749432"
 
 ### <a name="rds-deployment-with-azure-ad-domain-services"></a>Azure AD Domain Services를 사용한 RDS 배포
 
-위의 두 표준 아키텍처 다이어그램은 Windows Server VM에 배포된 기존 AD(Active Directory)를 기반으로 합니다. 그러나 기존 AD가 없고 Office365와 같은 서비스를 통한 Azure AD 테넌트만 있지만, 여전히 RDS를 활용하려는 경우 [Azure AD Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-overview)를 사용하여 Azure AD 테넌트에 존재하는 것과 동일한 사용자를 사용하는 Azure IaaS 환경에서 완전히 관리형 도메인을 만들 수 있습니다. 그러면 수동으로 사용자를 동기화하고 더 많은 가상 머신을 관리하는 복잡성이 제거됩니다. Azure AD Domain Services는 기본 배포 또는 고가용성 배포 중 하나로 작동할 수 있습니다.
+위의 두 표준 아키텍처 다이어그램은 Windows Server VM에 배포된 기존 AD(Active Directory)를 기반으로 합니다. 그러나 기존 AD가 없고 Office365와 같은 서비스를 통한 Azure AD 테넌트만 있지만, 여전히 RDS를 활용하려는 경우 [Azure AD Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-overview)를 사용하여 Azure AD 테넌트에 존재하는 것과 동일한 사용자를 사용하는 Azure IaaS 환경에서 완전 관리형 도메인을 만들 수 있습니다. 그러면 수동으로 사용자를 동기화하고 더 많은 가상 머신을 관리하는 복잡성이 제거됩니다. Azure AD Domain Services는 기본 배포 또는 고가용성 배포 중 하나로 작동할 수 있습니다.
 
 ![Azure AD 및 RDS 배포](./media/aadds-rds.png)
 

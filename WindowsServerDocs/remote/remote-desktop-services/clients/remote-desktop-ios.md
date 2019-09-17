@@ -14,12 +14,12 @@ manager: dongill
 ms.author: elizapo
 date: 08/27/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: f5a0808148068282c218343a923b357267e724e5
-ms.sourcegitcommit: 51eaab0f860312d97293fd90f3e632e7caee3df1
+ms.openlocfilehash: 97f7c3e26a54b9170ebc65e0c48acd964d9e2429
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70150948"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70871162"
 ---
 # <a name="get-started-with-the-ios-client"></a>iOS 클라이언트 시작
 
@@ -163,7 +163,7 @@ IOS 장치에서 원격 데스크톱에 등록 하려면 다음이 단계를 수
 ### <a name="start-a-remote-desktop-connection"></a>원격 데스크톱 연결을 시작 합니다.
 
 1. 원격 데스크톱 세션을 시작 하려면 원격 데스크톱 연결을 누릅니다.
-2. 원격 데스크톱에 대 한 인증서를 확인 하는 메시지가 누릅니다 **Accept**합니다. 이동 하 여 항상 적용 하도록 선택할 수 있습니다는  **다시 묻지 않음이 컴퓨터에 대 한 연결** 전환할 **ON**합니다.
+2. 원격 데스크톱에 대 한 인증서를 확인 하는 메시지가 누릅니다 **Accept**합니다. **이 컴퓨터에 대한 연결을 다시 묻지 않음** 토글을 **ON**으로 슬라이드하여 항상 수락하도록 선택할 수 있습니다.
 
 ### <a name="connection-bar"></a>연결 표시줄
 

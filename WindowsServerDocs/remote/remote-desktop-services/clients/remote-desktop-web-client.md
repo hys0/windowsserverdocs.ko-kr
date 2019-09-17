@@ -8,12 +8,12 @@ ms.date: 08/27/2019
 ms.topic: article
 author: Heidilohr
 ms.localizationpriority: medium
-ms.openlocfilehash: 11e68821fb095617cea19ee83c057d247a909604
-ms.sourcegitcommit: 51eaab0f860312d97293fd90f3e632e7caee3df1
+ms.openlocfilehash: 4185454c6351b752a6397109b3a333d3eab107cd
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70150969"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70871154"
 ---
 # <a name="get-started-with-the-web-client"></a>웹 클라이언트 시작
 
@@ -59,6 +59,6 @@ ms.locfileid: "70150969"
 
 웹 클라이언트는 현재 텍스트만 복사 및 붙여넣을 수 있도록 지원합니다. 파일은 웹 클라이언트에서 복사 또는 붙여넣을 수 없습니다. 또한 텍스트를 복사하고 붙여넣을 때는 **Ctrl+C** 및 **Ctrl+V**만 사용할 수 있습니다.
 
-## <a name="get-help-with-the-web-client"></a>웹 클라이언트에 대한 도움 얻기
+## <a name="get-help-with-the-web-client"></a>웹 클라이언트에 대한 도움 받기
 
-이 문서의 정보로 해결할 수 없는 문제가 발생한 경우 웹 클라이언트의 정보 페이지에 있는 주소로 메일을 보내 웹 클라이언트에 대한 도움을 얻을 수 있습니다.
+이 문서의 정보로 해결할 수 없는 문제가 발생한 경우 웹 클라이언트의 정보 페이지에 있는 주소로 이메일을 보내 웹 클라이언트에 대한 도움을 얻을 수 있습니다.

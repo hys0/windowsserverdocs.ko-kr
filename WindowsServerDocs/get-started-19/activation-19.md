@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: jasgroce
 ms.localizationpriority: medium
-ms.openlocfilehash: 4cc669fee4fbd31edc8813f16761ecb9f90532df
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 536d3265e6a29c2d5321d3d8a8ea3ecfa7b2cdcb
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66810914"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70868693"
 ---
 # <a name="windows-server-2019-activation"></a>Windows Server 2019 정품 인증
 
@@ -39,7 +39,7 @@ Windows 10 또는 Windows 8.1에서 실행되는 KMS 호스트는 클라이언�
 
 |제품 키 그룹|KMS가 호스트될 수 있는 Windows 버전|이 KMS 호스트에 의해 정품 인증되는 Windows 버전|  
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------|  
-|Windows Server 2019용 볼륨 라이선스|Windows Server 2012 R2<br /><br />Windows Server 2016<br /><br />시작<br /><br />|Windows Server 반기 채널<br /><br />Windows Server 2019(모든 버전)<br /><br />Windows Server 2016(모든 버전)<br /><br />Windows 10 Enterprise LTSC 2019 <br /><br />Windows 10 Enterprise LTSC N 2019<br /><br />Windows 10 LTSB(2015 및 2016)<br /><br />Windows 10 Professional<br /><br />Windows 10 Enterprise<br /><br />Windows 10 Pro for Workstations<br /><br />Windows 10 Education<br /><br />Windows Server 2012 R2(모든 버전)<br /><br />Windows 8.1 Professional<br /><br />Windows 8.1 Enterprise<br /><br />Windows Server 2012(모든 버전)<br /><br />Windows Server 2008 R2(모든 버전)<br /><br />Windows Server 2008(모든 버전)<br /><br />Windows 7 Professional<br /><br />Windows 7 Enterprise<br />| 
+|Windows Server 2019용 볼륨 라이선스|Windows Server 2012 R2<br /><br />Windows Server 2016<br /><br />Windows Server 2019<br /><br />|Windows Server 반기 채널<br /><br />Windows Server 2019(모든 버전)<br /><br />Windows Server 2016(모든 버전)<br /><br />Windows 10 Enterprise LTSC 2019 <br /><br />Windows 10 Enterprise LTSC N 2019<br /><br />Windows 10 LTSB(2015 및 2016)<br /><br />Windows 10 Professional<br /><br />Windows 10 Enterprise<br /><br />Windows 10 Pro for Workstations<br /><br />Windows 10 Education<br /><br />Windows Server 2012 R2(모든 버전)<br /><br />Windows 8.1 Professional<br /><br />Windows 8.1 Enterprise<br /><br />Windows Server 2012(모든 버전)<br /><br />Windows Server 2008 R2(모든 버전)<br /><br />Windows Server 2008(모든 버전)<br /><br />Windows 7 Professional<br /><br />Windows 7 Enterprise<br />| 
 |Windows Server 2016용 볼륨 라이선스|Windows Server 2012<br /><br />Windows Server 2012 R2<br /><br />Windows Server 2016<br /><br />|Windows Server 반기 채널 <br><br>Windows Server 2016(모든 버전)<br /><br />Windows 10 LTSB(2015 및 2016)<br /><br />Windows 10 Professional<br /><br />Windows 10 Enterprise<br /><br />Windows 10 Pro for Workstations<br><br>Windows 10 Education<br><br>Windows Server 2012 R2(모든 버전)<br /><br />Windows 8.1 Professional<br /><br />Windows 8.1 Enterprise<br /><br />Windows Server 2012(모든 버전)<br /><br />Windows Server 2008 R2(모든 버전)<br /><br />Windows Server 2008(모든 버전)<br /><br />Windows 7 Professional<br /><br />Windows 7 Enterprise<br /><br />| 
 |Windows 10용 볼륨 라이선스|Windows 7<br /><br /> Windows 8.1<br /><br /> Windows 10|Windows 10 Professional<br /><br /> Windows 10 Professional KN<br /><br /> Windows 10 Enterprise<br /><br /> Windows 10 Enterprise KN<br /><br /> Windows 10 Education<br /><br /> Windows 10 Education KN<br /><br /> Windows 10 Enterprise LTSB(2015)<br /><br /> Windows 10 Enterprise LTSB N(2015)<br /><br /> Windows 10 Pro for Workstations<br><br>Windows 8.1 Professional<br /><br /> Windows 8.1 Enterprise<br /><br /> Windows 7 Professional<br /><br /> Windows 7 Enterprise<br /><br />|  
 |"Windows 10용 Windows Server 2012 R2"에 대한 볼륨 라이선스|Windows Server 2008 R2<br /><br /> Windows Server2012 Standard<br /><br /> Windows Server2012 Datacenter<br /><br /> Windows Server 2012 R2 Standard<br /><br />Windows Server 2012 R2 Datacenter|Windows 10 Professional<br /><br /> Windows 10 Enterprise<br /><br />Windows 10 Enterprise LTSB(2015)<br><br>Windows 10 Pro for Workstations<br><br>Windows 10 Education<br><br> Windows Server 2012 R2(모든 버전)<br /><br /> Windows 8.1 Professional<br /><br /> Windows 8.1 Enterprise<br /><br /> Windows Server 2012(모든 버전)<br /><br /> Windows Server 2008 R2(모든 버전)<br /><br /> Windows Server 2008(모든 버전)<br /><br />Windows 7 Professional<br /><br /> Windows 7 Enterprise|

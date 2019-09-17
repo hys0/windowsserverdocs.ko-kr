@@ -8,25 +8,25 @@ ms.suite: na
 ms.technology: remote-desktop-services
 ms.tgt_pltfrm: na
 ms.topic: article
-author: lizap
-manager: dongill
-ms.author: elizapo
-ms.date: 08/27/2019
+author: heidilohr
+manager: daveba
+ms.author: helohr
+ms.date: 09/11/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 6ee224cd5bf7ccdeb3b0d55d091a5d322583c101
-ms.sourcegitcommit: 51eaab0f860312d97293fd90f3e632e7caee3df1
+ms.openlocfilehash: 7a2061878cdbc7a5ace923835a334736e976e248
+ms.sourcegitcommit: 61767c405da44507bd3433967543644e760b20aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70150990"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70987336"
 ---
 # <a name="whats-new-in-the-android-client"></a>Android 클라이언트의 새로운 기능
 
-[Android용 원격 데스크톱 클라이언트](remote-desktop-android.md)를 정기적으로 업데이트하여 새로운 기능을 추가하고 문제를 해결합니다. 아래 최신 업데이트를 확인하세요.
+[Android용 원격 데스크톱 클라이언트](remote-desktop-android.md)를 정기적으로 업데이트하여 새로운 기능을 추가하고 문제를 해결합니다. 여기서 최신 업데이트를 찾을 수 있습니다.
 
 ## <a name="updates-for-version-8171"></a>8\.1.71 버전에 대한 업데이트
 
-*게시 날짜: 2019/06/05*
+*게시된 날짜: 2019/06/05*
 
 - Android 버전 4.0.3 및 4.0.4에 대한 지원을 제거했습니다.
 - 동일한 이름의 원격 리소스가 올바르게 표시되지 않았던 문제를 해결했습니다.
@@ -35,7 +35,7 @@ ms.locfileid: "70150990"
 
 ## <a name="updates-for-version-8170"></a>8\.1.70 버전에 대한 업데이트
 
-*게시 날짜: 2019/05/06*
+*게시된 날짜: 2019/05/06*
 
 - 눈금 표시가 있는 디바이스에 세션 콘텐츠의 크기가 제대로 표시되지 않았던 문제를 해결했습니다.
 - Enter 키가 일부 Chromebook 디바이스에서 작동하지 않았던 문제를 해결했습니다.
@@ -43,13 +43,13 @@ ms.locfileid: "70150990"
 
 ## <a name="updates-for-version-8169"></a>8\.1.69 버전에 대한 업데이트
 
-*게시 날짜: 2019/04/22*
+*게시된 날짜: 2019/04/22*
 
 - 사소한 버그 수정 사항 및 개선 사항
 
 ## <a name="updates-for-version-8168"></a>8\.1.68 버전에 대한 업데이트
 
-*게시 날짜: 2019/04/15*
+*게시된 날짜: 2019/04/15*
 
 - 원격 리소스 피드 URL이 로드되지 않았던 문제를 해결했습니다.
 - Android 9.0을 실행하는 Samsung DeX에서 앱이 처음 시작할 때 휴대폰 크기로 시작되었던 문제가 해결되었습니다.
@@ -58,13 +58,13 @@ ms.locfileid: "70150990"
 
 ## <a name="updates-for-version-8167"></a>8\.1.67 버전에 대한 업데이트
 
-*게시 날짜: 2019/03/28*
+*게시된 날짜: 2019/03/28*
 
 - 키 누름이 원격 세션에서 입력하는 동안 반복되었던 문제가 해결되었습니다.
 
 ## <a name="updates-for-version-8166"></a>8\.1.66 버전에 대한 업데이트
 
-*게시 날짜: 2019/03/19*
+*게시된 날짜: 2019/03/19*
 
 - [Windows 가상 데스크톱](https://aka.ms/wvd)에 대한 초기 지원이 추가되었습니다.
 - 일부 Chromebook 디바이스 및 DeX 시나리오에서 화면의 맨 아래에 검은색 영역이 표시되었던 문제가 해결되었습니다.
@@ -75,13 +75,13 @@ ms.locfileid: "70150990"
 
 ## <a name="updates-for-version-8161"></a>8\.1.61 버전에 대한 업데이트
 
-*게시 날짜: 2018/07/05*
+*게시된 날짜: 2018/07/05*
 
 - Samsung DeX에 대한 초기 지원이 추가되었습니다(Android 8.0 이상).
 
 ## <a name="updates-for-version-8160"></a>8\.1.60 버전에 대한 업데이트
 
-*게시 날짜: 2018/04/30*
+*게시된 날짜: 2018/04/30*
 
 - CVE-2018-0886에 설명된 CredSSP 암호화 오라클 수정을 해결하기 위해 업데이트됩니다.
 - 이전 버전에서 이어지는 연결을 시작할 때 충돌을 해결했습니다.

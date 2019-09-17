@@ -7,12 +7,12 @@ ms.topic: article
 author: jasongerend
 ms.author: jgerend
 ms.date: 05/21/2019
-ms.openlocfilehash: 0ec6a7ec624818b92fb306089f3dea3c786c0827
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: cde394cd4e626466f17a27a68660e85f9fe55553
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67280312"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70868526"
 ---
 # <a name="whats-new-in-windows-server-version-1903"></a>Windows Server 버전 1903의 새로운 기능
 
@@ -38,7 +38,7 @@ Azure 컨테이너 서비스 및 타사 컨테이너 서비스를 지원하도�
 
 ## <a name="directx-hardware-acceleration-in-containers"></a>컨테이너에서 DirectX 하드웨어 가속
 
-로컬 GPU(그래픽 처리 장치) 하드웨어를 사용하는 ML(기계 학습) 추론과 같은 Windows 컨테이너 tp 지원 시나리오에서 DirectX API의 하드웨어 가속을 지원할 수 있습니다. 자세한 내용은 [Bringing GPU acceleration to Windows containers](https://techcommunity.microsoft.com/t5/Containers/Bringing-GPU-acceleration-to-Windows-containers/ba-p/393939)(Windows 컨테이너에서 GPU 가속화)를 참조하세요.
+로컬 GPU(그래픽 처리 장치) 하드웨어를 사용하는 ML(Machine Learning) 추론과 같은 Windows 컨테이너 tp 지원 시나리오에서 DirectX API의 하드웨어 가속을 지원할 수 있습니다. 자세한 내용은 [Bringing GPU acceleration to Windows containers](https://techcommunity.microsoft.com/t5/Containers/Bringing-GPU-acceleration-to-Windows-containers/ba-p/393939)(Windows 컨테이너에서 GPU 가속화)를 참조하세요.
 
 ## <a name="updated-container-identity-and-group-managed-service-account-documentation"></a>컨테이너 ID 및 그룹 관리 서비스 계정 설명서 업데이트
 

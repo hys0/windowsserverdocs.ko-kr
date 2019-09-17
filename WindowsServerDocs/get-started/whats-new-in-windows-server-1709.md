@@ -8,12 +8,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 ms.localizationpriority: medium
 ms.date: 06/03/2019
-ms.openlocfilehash: e17a636c5bf06d194abd1bfe9b6d20970773e993
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: b5391677397660e3beacb9a71189bf3ffe2aeaab
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66501399"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70868336"
 ---
 # <a name="whats-new-in-windows-server-version-1709"></a>Windows Server 버전 1709의 새로운 기능
 
@@ -44,7 +44,7 @@ ms.locfileid: "66501399"
 
 ## <a name="application-containers-and-micro-services"></a>애플리케이션 컨테이너 및 마이크로서비스
 
-- Server Core 컨테이너 이미지가 기존 코드 베이스 또는 애플리케이션을 최소한으로 변경되었고 60% 더 작은 컨테이너로 마이그레이션할 수 있는 리프트 앤 시프트 시나리오에 더욱 최적화되었습니다. 
+- Server Core 컨테이너 이미지가 기존 코드 베이스 또는 애플리케이션을 최소한의 변경으로 60% 더 작은 컨테이너로 마이그레이션할 수 있는 리프트 앤 시프트 시나리오에 더욱 최적화되었습니다. 
 - Nano 서버 컨테이너 이미지는 약 80% 더 작습니다.
     - Windows Server 반기 채널에서 컨테이너 기본 OS 이미지로서의 Nano 서버가 390MB에서 80MB로 줄었습니다.
 - Hyper-V 격리가 포함된 Linux 컨테이너 
@@ -112,7 +112,7 @@ Project Honolulu에는 PC, Windows 서버, 장애 조치 클러스터는 물론 
 
 ## <a name="networking"></a>네트워킹
 
-**Docker의 라우팅 메시**가 지원됩니다. 라우팅 메시 수신은 Docker의 컨테이너용 기본 제공 오케스트레이션 솔루션인 [Swarm 모드](https://docs.docker.com/engine/swarm/)의 일부입니다. 자세한 내용은 [Windows Server, 버전 1709에서 Docker의 라우팅 메시 이용 가능](https://blogs.technet.microsoft.com/virtualization/2017/09/26/dockers-ingress-routing-mesh-available-with-windows-server-version-1709/)을 참조하세요.
+**Docker의 라우팅 메시**가 지원됩니다. 수신 라우팅 메시는 Docker의 컨테이너용 기본 제공 오케스트레이션 솔루션인 [Swarm 모드](https://docs.docker.com/engine/swarm/)의 일부입니다. 자세한 내용은 [Windows Server, 버전 1709에서 Docker의 라우팅 메시 이용 가능](https://blogs.technet.microsoft.com/virtualization/2017/09/26/dockers-ingress-routing-mesh-available-with-windows-server-version-1709/)을 참조하세요.
 
 **Docker에 대한 새 기능**이 이용 가능합니다. 자세한 내용은 [Windows Server, 버전 1709의 Docker에 대한 흥미로운 새 기능](https://blog.docker.com/2017/09/docker-windows-server-1709/)을 참조하세요.
 

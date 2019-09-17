@@ -8,12 +8,12 @@ ms.date: 11/2/2018
 ms.topic: article
 author: Heidilohr
 ms.localizationpriority: medium
-ms.openlocfilehash: d167fb5dfdfbb2a302c2b0fca9286dc034b730e3
-ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
+ms.openlocfilehash: 7de392b049fbe910688a4b950e1ca870b6ba3f46
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69546338"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70871171"
 ---
 # <a name="set-up-the-remote-desktop-web-client-for-your-users"></a>사용자에 대한 원격 데스크톱 웹 클라이언트 설정
 
@@ -318,4 +318,4 @@ Import-RDWebClientBrokerCert <certificate file path>
 
 ## <a name="get-help-with-the-web-client"></a>웹 클라이언트에 대한 도움 받기
 
-이 문서의 정보로 해결할 수 없는 이슈가 발생하면 [기술 커뮤니티](https://aka.ms/wvdtc)에서 이슈를 보고할 수 있습니다. 또한 [제안 상자](https://remotedesktop.uservoice.com/forums/911494-remote-desktop-web-client)에서 새로운 기능을 요청하거나 투표할 수 있습니다.
+이 문서의 정보로 해결할 수 없는 문제가 발생하면 [기술 커뮤니티](https://aka.ms/wvdtc)에 보고할 수 있습니다. 또한 [제안 상자](https://remotedesktop.uservoice.com/forums/911494-remote-desktop-web-client)에서 새로운 기능을 요청하거나 투표할 수 있습니다.

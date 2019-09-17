@@ -12,12 +12,12 @@ ms.topic: article
 author: lizap
 ms.author: elizapo
 ms.localizationpriority: medium
-ms.openlocfilehash: 18e20433050371dc02782fb8630a885e53ae31ad
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 4d1cdcfe8325a246e2752e1d1f2a3ad536598658
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "63688701"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70868572"
 ---
 # <a name="automatic-virtual-machine-activation"></a>자동 가상 머신 정품 인증
 
@@ -41,7 +41,7 @@ AVMA를 사용하면 연결이 끊어진 환경에서도 개별 가상 머신의
 
 서버에서 읽을 스티커 및 관리할 제품 키가 없습니다. 가상 컴퓨터가 일련의 가상화 서버에서 마이그레이션된 경우에도 정품 인증되고 계속 작동합니다.
 
-SPLA(Service Provider License Agreement) 파트너 및 기타 호스팅 공급자는 테넌트와 제품 키를 공유하거나 테넌트의 가상 머신에 액세스하지 않고도 가상 머신의 정품 인증을 수행할 수 있습니다. AVMA를 사용하면 테넌트의 작업에 영향을 주지 않고 가상 머신 정품 인증이 수행됩니다. 호스팅 공급자는 서버 로그를 사용하여 라이선스 준수를 확인하고 클라이언트 사용 기록을 추적할 수 있습니다.
+SPLA(Service Provider License Agreement) 파트너 및 기타 호스팅 공급자는 테넌트와 제품 키를 공유하거나 테넌트의 머신에 액세스하여 활성화할 필요가 없습니다. AVMA를 사용하면 테넌트의 작업에 영향을 주지 않고 가상 컴퓨터 정품 인증이 수행됩니다. 호스팅 공급자는 서버 로그를 사용하여 라이선스 준수를 확인하고 클라이언트 사용 기록을 추적할 수 있습니다.
 
 ## <a name="system-requirements"></a>시스템 요구 사항
 
@@ -49,9 +49,9 @@ AVMA에는 Windows Server 2019 Datacenter, Windows Server 2016 Datacenter 또는
 
 다른 버전 호스트에서 활성화할 수 있는 게스트는 다음과 같습니다.
 
-|서버 호스트 버전|시작|Windows Server 2016|Windows Server 2012 R2|
+|서버 호스트 버전|Windows Server 2019|Windows Server 2016|Windows Server 2012 R2|
 |-|-|-|-|
-|시작|X|X|X|
+|Windows Server 2019|X|X|X|
 |Windows Server 2016| |X|X|
 |Windows Server 2012 R2| ||X|
 

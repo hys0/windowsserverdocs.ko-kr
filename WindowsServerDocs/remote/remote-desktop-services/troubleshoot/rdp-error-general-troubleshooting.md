@@ -13,12 +13,12 @@ manager: ''
 ms.author: delhan
 ms.date: 07/24/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: a1a2e325f3860f0b06353a59c5d37f6b5b2a1d11
-ms.sourcegitcommit: f6503e503d8f08ba8000db9c5eda890551d4db37
+ms.openlocfilehash: 39b11dac044c38f1ae80d4401fbb66af0317ab56
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68529933"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70870699"
 ---
 # <a name="general-remote-desktop-connection-troubleshooting"></a>일반 원격 데스크톱 연결 문제 해결
 
@@ -123,7 +123,7 @@ GPE(그룹 정책 개체 편집기) 및 GPM(그룹 정책 관리 콘솔)에서 �
     ![qwinsta 명령은 컴퓨터의 포트에서 수신 대기하는 프로세스를 나열합니다.](../media/troubleshoot-remote-desktop-connections/WPS_qwinsta.png)
 3. 목록에 상태가 **수신 대기**인 **rdp-tcp**가 포함된 경우 RDP 수신기가 작동합니다. [RDP 수신기 포트 확인](#check-the-rdp-listener-port)을 진행합니다. 그렇지 않으면 4단계를 진행합니다.
 4. 작동 중인 컴퓨터에서 RDP 수신기 구성을 내보냅니다.
-    1. 영향을 받는 컴퓨터와 동일한 운영 체제 버전을 용하는 컴퓨터에 로그인하고, 해당 컴퓨터의 레지스트리에 액세스합니다(예를 들어 레지스트리 편집기를 사용하여).
+    1. 영향을 받는 컴퓨터와 동일한 운영 체제 버전을 사용하는 컴퓨터에 로그인하고, 해당 컴퓨터의 레지스트리에 액세스합니다(예를 들어 레지스트리 편집기를 사용하여).
     2. 다음 레지스트리 항목으로 이동합니다.  
         **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\\WinStations\\RDP-Tcp**
     3. 이 항목을 .reg 파일로 내보냅니다. 예를 들어 레지스트리 편집기에서 항목을 마우스 오른쪽 단추로 클릭하고 **내보내기**를 선택한 다음, 내보낸 설정의 파일 이름을 입력합니다.

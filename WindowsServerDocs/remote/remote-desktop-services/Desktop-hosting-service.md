@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 author: heidilohr
 manager: dougkim
-ms.openlocfilehash: 597016ecf10da0febb7ba1bb099da0c1dddf96ce
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 025b5d8791d0b847a38798d36ffa4bfa86e0b00c
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "63749229"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70871287"
 ---
 # <a name="desktop-hosting-service"></a>데스크톱 호스팅 서비스
 
@@ -33,13 +33,13 @@ ms.locfileid: "63749229"
 
 ## <a name="active-directory-domain-services"></a>Active Directory 도메인 서비스
 
-Active Directory Domain Services(AD DS)는 테넌트의 사용자가 데스크톱 및 애플리케이션에 로그인하여 워크로드를 수행할 수 있도록 도메인과 포리스트 정보를 제공합니다. 따라서 Windows 애플리케이션에 필요한 파일 공유 및 데이터베이스를 설정하거나 연결할 수도 있습니다.
+AD DS(Active Directory Domain Services)는 테넌트의 사용자가 데스크톱 및 애플리케이션에 로그인하여 워크로드를 수행할 수 있도록 도메인과 포리스트 정보를 제공합니다. 따라서 Windows 애플리케이션에 필요한 파일 공유 및 데이터베이스를 설정하거나 연결할 수도 있습니다.
 
 테넌트의 포리스트는 서비스 공급자의 관리 포리스트와의 트러스트 관계가 필요하지 않습니다. 테넌트의 도메인에 도메인 관리자 계정을 설정하면 서비스 공급자의 기술 담당자가 테넌트 환경에서 관리 작업(예: 시스템 상태 모니터링 및 소프트웨어 업데이트 적용)을 수행할 수 있고, 문제 해결 및 구성에 도움이 될 수 있습니다.
 
 AD DS를 배포하는 방법은 여러 가지가 있습니다.
 
-1. 테넌트의 가상 네트워킹 환경에서 Enable Azure Active Directory Domain Services를 사용하도록 설정합니다. 그러면 Azure AD에 존재하는 사용자와 그룹에 따라 테넌트의 관리형 AD DS 인스턴스가 생성됩니다.
+1. 테넌트의 가상 네트워킹 환경에서 Azure Active Directory Domain Services를 사용하도록 설정합니다. 그러면 Azure AD에 존재하는 사용자와 그룹에 따라 테넌트의 관리형 AD DS 인스턴스가 생성됩니다.
 2. 테넌트의 가상 네트워킹 환경에 독립 실행형 AD DS 서버를 설정합니다. 이렇게 하면 가상 머신에서 실행 중인 모든 AD DS 인스턴스를 완벽하게 제어할 수 있습니다.
 3. 테넌트의 프레미스에 있는 AD DS 서버에 대한 사이트 간 VPN 연결을 만듭니다. 이렇게 하면 테넌트가 기존 AD DS 인스턴스에 연결하고, 사용자, 그룹, 조직 단위 등의 중복을 줄일 수 있습니다.
 

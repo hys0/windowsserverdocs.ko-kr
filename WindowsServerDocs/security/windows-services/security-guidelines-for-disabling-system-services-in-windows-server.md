@@ -10,12 +10,12 @@ ms.date: 11/26/2018
 ms.assetid: b886b2fd-3567-4f0a-8aa3-4ba7923d2d21
 author: nirb
 ms.author: nirb
-ms.openlocfilehash: 1a9496a121fc45df0b788ea56d50db922fd24536
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: fe2f82c373b0014a3f385dcfad77ec11a0b1e6c0
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66749446"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70870215"
 ---
 ## <a name="guidance-on-disabling-system-services-on-windows-server-2016-with-desktop-experience"></a>데스크톱 경험이 있는 Windows Server 2016에서 시스템 서비스를 사용하지 않도록 설정하기 위한 지침
 
@@ -1399,7 +1399,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 
 | | |           
 |---|---|       
-|   **서비스 설명** |   이동식 대용량 저장 디바이스의 그룹 정책을 강제 적용합니다. Windows Media Player 및 이미지 가져오기 마법사 같은 애플리케이션이 이동식 대용량 저장 디바이스를 사용하여 콘텐츠를 전송하고 동기화할 수 있도록 합니다.
+|   **서비스 설명** |   이동식 대용량 스토리지 디바이스의 그룹 정책을 강제 적용합니다. Windows Media Player 및 이미지 가져오기 마법사 같은 애플리케이션이 이동식 대용량 스토리지 디바이스를 사용하여 콘텐츠를 전송하고 동기화할 수 있도록 합니다.
 |   **서비스 이름**    |   WPDBusEnum
 |   **설치**    |   데스크톱 경험이 있는 경우에만
 |   **시작 유형**   |   수동

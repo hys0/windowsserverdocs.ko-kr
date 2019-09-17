@@ -13,12 +13,12 @@ manager: ''
 ms.author: delhan
 ms.date: 07/24/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 85e332f5f66b59676ddd3b5383b1e5844c2b4c83
-ms.sourcegitcommit: f6503e503d8f08ba8000db9c5eda890551d4db37
+ms.openlocfilehash: 8af2b1a171a77def2bbb74cc7301e0562cb5b92c
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68529923"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70870602"
 ---
 # <a name="user-cant-authenticate-or-must-authenticate-twice"></a>사용자가 인증할 수 없거나 두 번 인증해야 함
 
@@ -35,11 +35,11 @@ RDP 연결에 NLA(네트워크 수준 인증)가 필요하고 사용자가 **원
 
 이 문제를 해결하려면 다음 작업 중 하나를 수행합니다.
 
-  - [사용자의 그룹 구성원 또는 사용자 권한 할당을 수정](#modify-the-users-group-membership-or-user-rights-assignment)합니다.
+  - [사용자의 그룹 멤버 자격 또는 사용자 권한 할당을 수정합니다](#modify-the-users-group-membership-or-user-rights-assignment).
   - NLA를 끕니다(권장하지 않음).
   - Windows 10이 아닌 다른 원격 데스크톱 클라이언트를 사용합니다. 예를 들어 Windows 7 클라이언트에서는 이 이슈가 발생하지 않습니다.
 
-### <a name="modify-the-users-group-membership-or-user-rights-assignment"></a>사용자의 그룹 구성원 또는 사용자 권한 할당 수정
+### <a name="modify-the-users-group-membership-or-user-rights-assignment"></a>사용자의 그룹 멤버 자격 또는 사용자 권한 할당 수정
 
 이 이슈가 사용자 한 명에게만 영향을 주는 경우 가장 간단한 해결 방법은 **원격 데스크톱 사용자** 그룹에 해당 사용자를 추가하는 것입니다.
 

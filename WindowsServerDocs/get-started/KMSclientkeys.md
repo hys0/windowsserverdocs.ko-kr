@@ -9,12 +9,12 @@ ms.author: jgerend
 ms.localizationpriority: medium
 ms.date: 05/21/2019
 ms.topic: get-started-article
-ms.openlocfilehash: c0d85da8a51a43acd7765957b34220829a43b086
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 964139ac5fdaee4d580d29ab0f7543c7d5f15d0b
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66810709"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70868462"
 ---
 # <a name="kms-client-setup-keys"></a>KMS 클라이언트 설정 키
 
@@ -25,13 +25,13 @@ Windows Server, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows 8, Wind
 > [!NOTE]
 > 다음 표에서 "LTSC"는 "장기 서비스 채널"을 의미하지만 "LTSB"는 "장기 서비스 분기"를 의미합니다. 
 
-**여기에 나열된 키(GVLK)를 사용하려면 먼저 배포에서 실행되는 KMS 호스트가 있어야 합니다.** KMS 호스트를 아직 구성하지 않은 경우 설정 단계는 [Deploy KMS Activation](https://technet.microsoft.com/library/dn502531(v=ws.11).aspx) 를 참조하세요.
+**여기에 나열된 키(GVLK)를 사용하려면 먼저 배포에서 실행되는 KMS 호스트가 있어야 합니다.** KMS 호스트를 아직 구성하지 않은 경우 설정 단계는 [KMS 정품 인증 배포](https://technet.microsoft.com/library/dn502531(v=ws.11).aspx)를 참조하세요.
 
 컴퓨터를 KMS 호스트, MAK 또는 Windows 정품 버전에서 KMS 클라이언트로 변환하는 경우 다음 표에서 해당하는 설정 키(GVLK)를 설치합니다. 클라이언트 설정 키를 설치하려면 클라이언트에서 관리 명령 프롬프트를 열고 **slmgr /ipk \<setup key\>** 를 입력한 다음, **Enter** 키를 누릅니다.
 
 | 수행할 작업…    | …사용할 리소스   |
 |--------------------|------------------------|
-| 볼륨 활성화 시나리오 외부에서 Windows를 활성화하면(Windows 일반 정품 버전을 활성화하려고 시도) **이들 키가 작동하지 않습니다**. | Windows 일반 정품 버전에 다음 링크를 사용합니다. |
+| 볼륨 활성화 시나리오 외부에서 Windows를 활성화하면(Windows 일반 정품 버전을 활성화하려고 시도) **이러한 키가 작동하지 않습니다**. | Windows 일반 정품 버전에 다음 링크를 사용합니다. |
 | Windows 8.1, Windows Server 2012 R2 또는 최신 시스템을 정품 인증할 때 표시되는 다음 오류를 해결합니다. "오류: 0xC004F050 소프트웨어 라이선스 서비스에서 제품 키가 잘못되었다고 보고했습니다."… | Windows 8.1, Windows Server 2012 R2, Windows 8 또는 Windows Server 2012를 실행하고 있으면 KMS 호스트에[이 업데이트를 설치합니다](https://support.microsoft.com/en-us/help/3172614/july-2016-update-rollup-for-windows-8-1-and-windows-server-2012-r2) . |
 
 -   [Windows 10 다운로드](https://www.microsoft.com/en-us/windows/get-windows-10)
@@ -68,7 +68,7 @@ Windows Server, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows 8, Wind
 
 ## <a name="windows-server-ltscltsb-versions"></a>Windows Server LTSC/LTSB 버전
 
-### <a name="windows-server-2019"></a>시작
+### <a name="windows-server-2019"></a>Windows Server 2019
 | 운영 체제 버전       | KMS 클라이언트 설정 키          |
 |--------------------------------|-------------------------------|
 | Windows Server 2019 Datacenter | WMDGN-G9PQG-XVVXX-R3X43-63DFG  | 

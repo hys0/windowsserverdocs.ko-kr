@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: d6ff5b22-7695-4fee-b1bd-6c9dce5bd0e8
 author: lizap
 manager: scottman
-ms.openlocfilehash: af5d5ce89561c89d8468627e20dfdb6f35eca5ef
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: ce10575d38bccc0b22dadf55bd89156c6ce5ea7b
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66447114"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70871051"
 ---
 # <a name="which-graphics-virtualization-technology-is-right-for-you"></a>나에게 적합한 그래픽 가상화 기술은 무엇일까요?
 
@@ -36,7 +36,7 @@ Windows Server 2016에서 GPU 하드웨어를 활용할 수 있도록 Hyper-V를
 ![RDS를 사용하는 Windows Server 2016의 그래픽 가상화 옵션 - 사용 가능한 세 가지 기술과 규모 및 성능에 따른 차이점을 보여줌](media/rds-graphics-virtualization.png)
 
 ## <a name="discrete-device-assignment"></a>개별 디바이스 할당
-개별 디바이스 할당(DDA)은 VM이 네이티브 드라이버를 사용하여 GPU에 완전히 액세스할 수 있다는 점에서 최고의 성능을 제공하는 하드웨어 통과 솔루션입니다. VM 사용자는 디바이스의 네이티브 드라이버와 마찬가지로 디바이스의 전체 기능에 액세스할 수 있습니다. 즉, 베어 메탈에서 동일한 디바이스를 실행하는 VM 미러에서 디바이스를 실행하는 기능을 의미합니다.
+개별 디바이스 할당(DDA)은 VM이 네이티브 드라이버를 사용하여 GPU에 완전히 액세스할 수 있다는 점에서 최고의 성능을 제공하는 하드웨어 통과 솔루션입니다. VM 사용자는 디바이스의 네이티브 드라이버와 마찬가지로 해당 디바이스의 전체 기능에 액세스할 수 있습니다. 즉, 베어 메탈에서 동일한 디바이스를 실행하는 VM 미러에서 디바이스를 실행하는 기능을 의미합니다.
 
 DDA에 대한 자세한 내용은 [개별 디바이스 할당 배포를 위한 계획](../../virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md)을 확인하세요.
 

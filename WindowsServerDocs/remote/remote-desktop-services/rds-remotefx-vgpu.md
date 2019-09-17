@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: 0263fa6b-2185-4cc3-99ef-3588e2f4ada5
 author: lizap
 manager: scottman
-ms.openlocfilehash: 3e7da1a70826dc720a96ceb3fe5d04868943f163
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 3e189d9ac059136b40d8ee5d93a4eea5b788cdd1
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "63712130"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70870854"
 ---
 # <a name="set-up-and-configure-remotefx-vgpu-for-remote-desktop-services"></a>원격 데스크톱 서비스에 대한 RemoteFX vGPU 설치 및 구성
 
@@ -68,7 +68,7 @@ RemoteFX vGPU는 사용 가능한 GPU가 여러 개 있을 경우 모두 사용�
 
    1. Hyper-V 관리자에서 Hyper-V 설정으로 이동합니다.
    2. Hyper-V 설정에서 **실제 GPU**를 클릭합니다.
-   3. 사용하지 않으려는 GPU를 선택한 후 **RemoteFX에서 이 GPU 사용**의 선택을 취소합니다.
+   3. 사용하지 않으려는 GPU를 선택한 다음, **RemoteFX에서 이 GPU 사용**의 선택을 취소합니다.
 
 
 ### <a name="configure-the-remotefx-vgpu-3d-adapter"></a>RemoteFX vGPU 3D 어댑터 구성

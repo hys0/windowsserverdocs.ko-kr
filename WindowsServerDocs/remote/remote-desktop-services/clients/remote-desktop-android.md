@@ -14,12 +14,12 @@ manager: dongill
 ms.author: elizapo
 ms.date: 08/27/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: ccc96013efb71a2403f9be2df03461eba5ff1fc1
-ms.sourcegitcommit: 51eaab0f860312d97293fd90f3e632e7caee3df1
+ms.openlocfilehash: 1099f1c8bb635ee1b4bb33c6483f128ee0ecdfb9
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70151015"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70871243"
 ---
 # <a name="get-started-with-the-android-client"></a>Android 클라이언트 시작
 
@@ -100,7 +100,7 @@ Android 디바이스에서 원격 데스크톱을 시작하려면 다음 단계�
 2. 누르기 **위젯**합니다.
 3. 위젯을 살짝 밀어서 “Pin 원격 데스크톱” 설명이 포함된 원격 데스크톱 아이콘을 찾습니다.
 4. 해당 원격 데스크톱 위젯 길게 누르고 홈 화면으로 이동 합니다.
-5. 아이콘을 놓으면 저장 된 원격 데스크톱 표시 됩니다. 홈 화면에 저장 하려는 연결을 선택 합니다.
+5. 아이콘을 놓으면 저장된 원격 데스크톱이 표시됩니다. 홈 화면에 저장 하려는 연결을 선택 합니다.
 
 이제 눌러 홈 화면에서 직접 원격 데스크톱 연결을 시작할 수 있습니다.
 
@@ -143,7 +143,7 @@ Android 디바이스에서 원격 데스크톱을 시작하려면 다음 단계�
 ### <a name="start-a-remote-desktop-connection"></a>원격 데스크톱 연결 시작
 
 1. 원격 데스크톱 세션을 탭하여 세션을 시작합니다. 
-2. 원격 데스크톱에 대 한 인증서를 확인 하는 메시지가 누릅니다 **연결**합니다. 선택할 수도 있습니다 **다시 묻지 않음이 컴퓨터에 대 한 연결** 항상 인증서를 수락 하도록 합니다.
+2. 원격 데스크톱에 대 한 인증서를 확인 하는 메시지가 누릅니다 **연결**합니다. 항상 인증서를 수락하도록 **이 컴퓨터에 대한 연결을 다시 묻지 않음**을 선택할 수도 있습니다.
 
 ### <a name="manage-global-app-settings"></a>글로벌 앱 설정 관리
 

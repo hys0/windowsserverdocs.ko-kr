@@ -8,27 +8,27 @@ ms.suite: na
 ms.technology: remote-desktop-services
 ms.tgt_pltfrm: na
 ms.topic: article
-author: lizap
-manager: dongill
-ms.author: elizapo
-ms.date: 08/27/2019
+author: heidilohr
+manager: daveba
+ms.author: helohr
+ms.date: 09/11/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 4eaa9a187b4a8f7879cabf15724bfcfe3f625939
-ms.sourcegitcommit: 51eaab0f860312d97293fd90f3e632e7caee3df1
+ms.openlocfilehash: 14d5eab00271ea825bb84a2d8189a44c38fa5388
+ms.sourcegitcommit: 61767c405da44507bd3433967543644e760b20aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70150956"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70987372"
 ---
 # <a name="whats-new-in-the-web-client"></a>웹 클라이언트의 새로운 기능
 
-[원격 데스크톱 웹 클라이언트](remote-desktop-web-client.md)를 정기적으로 업데이트하여 새로운 기능을 추가하고 문제를 수정합니다. 아래 최신 업데이트를 확인하세요.
+[원격 데스크톱 웹 클라이언트](remote-desktop-web-client.md)를 정기적으로 업데이트하여 새로운 기능을 추가하고 문제를 수정합니다. 여기서 최신 업데이트를 찾을 수 있습니다.
 
 > [!NOTE]
 > 웹 클라이언트에 대한 시스템 버전 관리를 변경했습니다. 1\.0.18.0 버전부터 모든 웹 클라이언트 릴리스 버전에는 숫자가 포함됩니다(“W.X.Y.Z” 형식의). 원격 데스크톱 웹 클라이언트에 대한 릴리스 번호는 항상 0으로 끝납니다(예: W.X.Y.0). 각 Windows Virtual Desktop 웹 클라이언트 릴리스는 다음 원격 데스크톱 웹 클라이언트가 릴리스될 때까지 마지막 숫자를 변경합니다(예: 1.0.18.1).
 
 ## <a name="updates-for-version-10180"></a>1\.0.18.0 버전에 대한 업데이트
-*게시 날짜: 2019/5/14*
+*게시된 날짜: 2019/5/14*
 
 - 설정 탭에 리소스 시작 방법 구성이 추가되어 사용자가 브라우저에서 리소스를 열거나 다른 클라이언트에서 처리하는 .rdp 파일을 다운로드할 수 있습니다. 이 설정은 관리자가 구성할 수 있습니다. 이 기능의 관리 구성에 대한 세부 정보는 [웹 클라이언트 설치 설명서](remote-desktop-web-client-admin.md)에서 확인할 수 있습니다.
 - 색상 렌더링 문제가 해결되어 원격 세션에서 더 선명한 색상을 사용하도록 설정할 수 있습니다.
@@ -41,7 +41,7 @@ ms.locfileid: "70150956"
 - 리소스 작업 표시줄의 원격 리소스 아이콘 크기 조정이 수정되었습니다.
 
 ## <a name="updates-for-version-1011"></a>버전 1.0.11 업데이트
-*게시 날짜: 2019/2/22*
+*게시된 날짜: 2019/2/22*
 
 - Windows Server 2019에 RD 게이트웨이 없이 RD Broker에 연결을 사용할 수 있습니다.
 - 피드를 사전순으로 정렬합니다(즉, RemoteApps을 먼저, Desktops를 두 번째로).
@@ -50,7 +50,7 @@ ms.locfileid: "70150956"
 - 다양한 버그가 수정되었습니다.
 
 ## <a name="updates-for-version-107"></a>1\.0.7 버전에 대한 업데이트
-*게시 날짜: 2019/1/24*
+*게시된 날짜: 2019/1/24*
 
 - 이제 내부 네트워크에서 오프라인 사용이 지원됩니다.
 - 비-Microsoft Edge 브라우저에서 렌더링이 개선되었습니다.
@@ -63,7 +63,7 @@ ms.locfileid: "70150956"
 - 다양한 버그가 수정되었습니다.
 
 ## <a name="updates-for-version-101"></a>버전 1.0.1에 대한 업데이트
-*게시 날짜: 2018/10/29*
+*게시된 날짜: 2018/10/29*
 
 - 문제를 진단하기 위해 정보 페이지에서 **지원 정보 캡처**에 옵션이 추가되었습니다.
 - 이제 InPrivate 모드가 지원됩니다.
@@ -75,14 +75,14 @@ ms.locfileid: "70150956"
 - 다양한 버그가 수정되었습니다.
 
 ## <a name="updates-for-version-100"></a>1\.0.0 버전에 대한 업데이트
-*게시 날짜: 2018/07/16*
+*게시된 날짜: 2018/07/16*
 
 - 이제 원격 데스크톱 웹 클라이언트가 일반 공급됩니다.
 - 관리자가 전역적으로 웹 클라이언트에 대한 원격 분석을 해제할 수 있습니다.
 - 다양한 버그가 수정되었습니다.
 
 ## <a name="updates-for-version-090"></a>0\.9.0 버전에 대한 업데이트
-*게시 날짜: 2018/07/05*
+*게시된 날짜: 2018/07/05*
 
 - 웹 클라이언트 내에서 환경에 새로 로그인합니다.
 - 데스크톱 또는 앱 연결(Single Sign-On)을 시작할 때 자격 증명에 대한 메시지가 더 이상 표시되지 않습니다.
@@ -91,7 +91,7 @@ ms.locfileid: "70150956"
 - 다양한 버그가 수정되었습니다.
 
 ## <a name="updates-for-version-081"></a>0\.8.1 버전에 대한 업데이트
-*게시 날짜: 2018/05/17*
+*게시된 날짜: 2018/05/17*
 
 - CVE-2018-0886에 설명된 CredSSP 암호화 오라클 수정을 해결하기 위해 업데이트됩니다.
 - 인쇄를 사용하는 경우 일부 언어의 연결 실패가 해결되었습니다.
@@ -99,7 +99,7 @@ ms.locfileid: "70150956"
 - **도움말** 및 **피드백** 옵션이 추가되었습니다.
 
 ## <a name="updates-for-version-080"></a>버전 0.8.0에 대한 업데이트
-*게시 날짜: 2018/03/28*
+*게시된 날짜: 03/28/2018*
 
 - 웹 클라이언트의 초기 공개 미리 보기 릴리스입니다.
 - **CTRL+C** 및 **CTRL+V**를 사용하여 클립보드를 통해 텍스트를 복사/붙여넣습니다.

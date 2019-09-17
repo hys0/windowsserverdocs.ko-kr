@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
 manager: dongill
-ms.openlocfilehash: 24b5fdaa815b6d2e84606cd8e681634eb3d0f4e9
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 79e0364bcb9d2ed899568a6699c61b43d84044e5
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "63713085"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70871014"
 ---
 # <a name="set-up-disaster-recovery-for-rds-using-azure-site-recovery"></a>Azure Site Recovery를 사용하여 RDS에 대해 재해 복구 설정
 
@@ -25,7 +25,7 @@ ms.locfileid: "63713085"
 
 Azure Site Recovery를 사용하여 원격 데스크톱 서비스 배포를 위한 재해 복구 솔루션을 만들 수 있습니다. 
 
-[Azure Site Recovery](/azure/site-recovery/site-recovery-overview)는 가상 머신의 복제, 장애 조치(failover) 및 복구를 오케스트레이션하여 재해 복구 기능을 제공하는 Azure 기반 서비스입니다. Azure Site Recovery는 다양한 가상 머신 및 애플리케이션을 개인/공개 또는 호스터 클라우드로 일관되게 복제하고, 보호하며, 원활하게 장애 조치(failover)하기 위한 다양한 복제 기술을 지원합니다. 
+[Azure Site Recovery](/azure/site-recovery/site-recovery-overview)는 가상 머신의 복제, 장애 조치(failover) 및 복구를 오케스트레이션하여 재해 복구 기능을 제공하는 Azure 기반 서비스입니다. Azure Site Recovery는 다양한 가상 머신 및 애플리케이션을 프라이빗/퍼블릭 또는 호스터 클라우드로 일관되게 복제하고, 보호하며, 원활하게 장애 조치(failover)하기 위한 다양한 복제 기술을 지원합니다. 
 
 다음 정보를 사용하여 재해 복구 솔루션을 만들고 유효한지 검사합니다.
 

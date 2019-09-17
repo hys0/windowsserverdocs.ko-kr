@@ -13,18 +13,18 @@ author: haley-rowland
 ms.author: harowl
 ms.date: 07/17/2018
 manager: scottman
-ms.openlocfilehash: 792c9320f6976a4fc7f2ccd235f66daa0cb19b19
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 30f2d97c93c3df72eaf21896d596a4a10666013c
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66805191"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70870747"
 ---
 # <a name="deploy-a-two-node-storage-spaces-direct-scale-out-file-server-for-upd-storage-in-azure"></a>Azure에서 UPD 스토리지용 2-노드 직접 스토리지 공간 스케일 아웃 파일 서버 배포
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2019, Windows Server 2016
 
-원격 데스크톱 서비스 (RDS) 사용자 프로필 디스크 (Upd)에 대 한 도메인에 가입 된 파일 서버가 필요합니다. Azure에서 고가용성 도메인에 가입된 SOFS(스케일 아웃 파일 서버)를 배포하려면 Windows Server 2016 직접 스토리지 공간을 사용합니다. Upd 또는 원격 데스크톱 서비스에 잘 알고 아닐 경우 체크 아웃 [원격 데스크톱 서비스를 시작](welcome-to-rds.md)합니다.
+원격 데스크톱 서비스 (RDS) 사용자 프로필 디스크 (Upd)에 대 한 도메인에 가입 된 파일 서버가 필요합니다. Azure에서 고가용성 도메인에 가입된 SOFS(스케일 아웃 파일 서버)를 배포하려면 Windows Server 2016 직접 스토리지 공간을 사용합니다. UPD 또는 원격 데스크톱 서비스에 익숙하지 않은 경우 [원격 데스크톱 서비스 시작](welcome-to-rds.md)을 확인합니다.
 
 > [!NOTE] 
 > Microsoft는 최근에 [직접 스토리지 공간 스케일 아웃 파일 서버를 배포하기 위한 Azure 템플릿](https://azure.microsoft.com/documentation/templates/301-storage-spaces-direct/)을 게시했습니다. 이 템플릿을 사용하여 배포를 만들거나, 이 문서의 단계를 사용할 수 있습니다. 

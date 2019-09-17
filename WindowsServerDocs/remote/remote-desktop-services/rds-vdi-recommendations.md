@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: 2a44dc9f-c221-4bf7-89c3-fb4c86a90f8c
 author: jaimeo
 manager: dougkim
-ms.openlocfilehash: 4f6e68ba1025e23e052d3c40535483ee90cb9b4b
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: ef13369fa325d136f9e3847db9872a80b650ca37
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "63712260"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70870626"
 ---
 # <a name="recommended-settings-for-vdi-desktops"></a>VDI 데스크톱에 추천되는 설정
 
@@ -398,7 +398,7 @@ Windows 단추를 누르고 *제어판*을 입력합니다. 반환되는 결과�
 ||가장자리 살짝 밀기 허용|     사용 안 함|
 ||도움말 설명 사용 안 함|        Enabled|
 |파일 탐색기|||
-||Do not show the 'new application installed' notification('새 애플리케이션이 설치됨' 알림 표시 안 함)|     Enabled|
+||'새 애플리케이션이 설치됨' 알림 표시 안 함|     Enabled|
 |게임 탐색기|||
 ||게임 정보 다운로드 사용 안 함|     Enabled|
 ||게임 업데이트 사용 안 함|        Enabled|

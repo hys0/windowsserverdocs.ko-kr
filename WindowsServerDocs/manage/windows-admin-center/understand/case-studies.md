@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.date: 06/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: 61f447f68ec6c85ed1554e176c78c4caec5dfde4
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 4707a6b54ad7a216f18c22367985e55d07e7a2eb
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "63747885"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70869513"
 ---
 # <a name="windows-admin-center-case-studies"></a>Windows Admin Center 사례 연구
 
@@ -38,7 +38,7 @@ Ava6는 Windows Server 2016 Core, Hyper-V, 장애 조치 클러스터링, S2D를
 
 ### <a name="the-challenge"></a>**해결 과제**
 
-Windows Admin Center에 대한 Ava6의 첫 번째 사용 사례는 Hyper-V 및 장애 조치 클러스터링과 하이퍼 컨버지드 클러스터 평가입니다.
+Windows Admin Center에 대한 Ava6의 첫 번째 사용 사례는 Hyper-V 및 장애 조치(Failover) 클러스터링이며, 하이퍼 컨버지드 클러스터를 평가하고 있습니다.
 
 Windows Admin Center는 Ava6가 특히 드라이버 관리에 대해 Core 에디션으로 배포된 Windows Server를 관리하는 데 도움이 됩니다.  Windows Admin Center는 고객에게, 특히 VM을 관리하기 위해, Hyper-V 및 장애 조치 클러스터에 대한 더 나은 경험을 제공하고, 고객에게 GUI가 하이퍼 컨버지드 솔루션에 대해 지원됨을 보여 줍니다.
 
@@ -46,7 +46,7 @@ Windows Admin Center는 Ava6가 특히 드라이버 관리에 대해 Core 에디
 
 Ava6는 VM 관리를 위한 단일 인스턴스로 Windows Admin Center를 배포했습니다.
 
-Ava6의 고객은 Windows Admin Center에 감동해왔으며 다른 옵션에 비해 Hyper-V 및 장애 조치 클러스터링에 대한 관리 기능을 선호합니다.  Windows Admin Center 이전에 드라이버 관리는 Core 서버에서 과도하게 복잡했습니다.  Windows Admin Center는 S2D Ava6 고객에게 Nutanix 및 VMware와 같은 경쟁사와 유사한 제품을 소개하는 것에 도움이 되었습니다.
+Ava6의 고객은 Windows Admin Center에 만족해왔으며 다른 옵션에 비해 Hyper-V 및 장애 조치(Failover) 클러스터링에 대한 관리 기능을 선호합니다.  Windows Admin Center 이전에 드라이버 관리는 Core 서버에서 과도하게 복잡했습니다.  Windows Admin Center는 S2D Ava6 고객에게 Nutanix 및 VMWare와 같은 경쟁사와 유사한 제품을 소개하는 것에 도움이 되었습니다.
 
 ## <a name="comparex"></a>Comparex
 
@@ -62,7 +62,7 @@ Comparex는 중소 기업을 위한 사용하기 쉽고 원격으로 액세스�
 
 ### <a name="the-solution"></a>**해결 방법**
 
-Comparex는 자체 데모 랩에 대한 액세스와 이의 관리를 위해 서버 기반 Windows Admin Center 설치를 실행 중이며, 이는 추가 VPN 및 RDP 단계를 축소하는 데 도움을 주었습니다.  또한 Comparex의 컨설턴트는 RDP에 대한 명시적 액세스가 필요 없이 자신의 환경에서 고객을 위해 자체 노트북에서 Windows Admin Center를 실행합니다.
+Comparex는 자체 데모 랩에 대한 액세스와 이의 관리를 위해 서버 기반 Windows Admin Center 설치를 실행 중이며, 이는 추가 VPN 및 RDP 단계를 축소하는 데 도움을 주었습니다.  또한 Comparex의 컨설턴트는 RDP에 대한 명시적 액세스가 필요 없이 해당 환경에서 고객을 위해 자체 Notebooks에서 Windows Admin Center를 실행합니다.
 
 Windows Admin Center를 통해 Comparex는 일상 업무에 시간을 절약할 수 있었으며, 더 많은 작업을 수행하고 더 큰 성과를 거두었습니다.  Windows Admin Center는 Hyper-V 및 스토리지 공간 다이렉트와 같은 고객의 일반적인 관리 과제를 해결했습니다.
 

@@ -13,12 +13,12 @@ manager: dongill
 ms.author: helohr
 ms.date: 05/20/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: b30aae3f745f7ed9d40a9f4884205d9ca01f0eef
-ms.sourcegitcommit: f62a17bf72a772ee46fe807a5a482923e67ae7e7
+ms.openlocfilehash: 546f992a21576795383497c0fac7fb98761d0da5
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70060302"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70871251"
 ---
 # <a name="supported-remote-desktop-rdp-file-settings"></a>지원되는 원격 데스크톱 RDP 파일 설정
 
@@ -32,7 +32,7 @@ PowerShell을 사용하여 호스트 풀의 RDP 속성을 사용자 지정하는
 | alternate shell:s:value        | RDP로 연결할 때 프로그램이 자동으로 시작되는지 여부를 결정합니다. 대체 셸을 지정하려면, 값의 실행 파일에 대한 유효한 경로(예: "C:\ProgramFiles\Office\word.exe")를 입력합니다. 이 설정은 RemoteApplicationMode가 사용되는 경우, 연결 시 시작될 원격 애플리케이션의 경로나 별칭도 결정합니다. | "C:\ProgramFiles\Office\word.exe" || x | x | x |
 | audiocapturemode:i:value | 오디오 입출력 리디렉션이 사용되는지 여부를 나타냅니다. | - 0: 로컬 디바이스에서 오디오 캡처를 사용하지 않도록 설정<br>- 1: 로컬 디바이스에서 오디오 캡처를 사용하도록 설정하고 원격 세션에서 오디오 애플리케이션으로 리디렉션 | 0 | x | x | |
 | audiomode:i:value | 로컬 또는 원격 머신에서 오디오 재생 여부를 결정합니다. | - 0: 로컬 컴퓨터에서 소리 재생(이 컴퓨터에서 재생)<br>- 1: 원격 컴퓨터에서 소리 재생(원격 컴퓨터에서 재생)<br>- 2: 소리 재생 안 함(재생 안 함) | 0 | x | x | x |
-| authentication level:i:value | 서버 인증 수준 설정을 정의합니다. | - 0: 서버 인증에 실패하면 경고 없이 컴퓨터에 연결(연결하고 메시지를 표시 안 함)<br>- 1: 서버 인증에 실패하면 연결을 설정하지 않음(연결 안 함)<br>- 2: 서버 인증에 실패하면 경고를 표시하고 연결하거나 연결을 거부하도록 허용(메시지 표시)<br>- 3: 인증 요구 사항이 지정되지 않음 | 3 | x | x ||
+| authentication level:i:value | 서버 인증 수준 설정을 정의합니다. | - 0: 서버 인증에 실패하면 경고 없이 컴퓨터에 연결(연결하고 경고를 표시 안 함)<br>- 1: 서버 인증에 실패하면 연결을 설정하지 않음(연결 안 함)<br>- 2: 서버 인증에 실패하면 경고를 표시하고 연결하거나 연결을 거부하도록 허용(메시지 표시)<br>- 3: 인증 요구 사항이 지정되지 않음 | 3 | x | x ||
 | autoreconnection enabled:i:value | 연결이 끊어지면(예: 네트워크 연결이 끊어지는 경우) 클라이언트 컴퓨터가 원격 컴퓨터에 자동으로 다시 연결을 시도할지 여부를 결정합니다. | - 0: 클라이언트 컴퓨터가 자동으로 다시 연결을 시도하지 않음<br>- 1: 클라이언트 컴퓨터가 자동으로 다시 연결을 시도| 1 | x | x | x |
 | bandwidthautodetect:i:value | 자동 네트워크 유형 검색을 사용할지 여부를 결정합니다. | - 0: 자동 네트워크 유형 검색을 사용하지 않도록 설정<br>- 1: 자동 네트워크 유형 검색을 사용하도록 설정 | 1 | x | x | x |
 | camerastoredirect:s:value | 리디렉션할 카메라를 구성합니다. 이 설정은 리디렉션에 사용하도록 설정된 카메라의 KSCATEGORY_VIDEO_CAMERA 인터페이스 목록을 사용합니다. | - * : 모든 카메라를 리디렉션합니다.<br> - camerastoredirect:s:\\?\usb#vid_0bda&pid_58b0&mi처럼 기호 링크 문자열 앞에 "-"를 추가하여 특정 카메라를 제외할 수 있습니다. | | x | x | |
