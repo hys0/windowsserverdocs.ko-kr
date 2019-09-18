@@ -68,6 +68,7 @@
 ### [사용 가능한 원격 데스크톱 클라이언트](clients/remote-desktop-clients.md)
 ### Windows 데스크톱 클라이언트
 #### [Windows 데스크톱 클라이언트 시작](clients/windowsdesktop.md)
+#### [관리자용 Windows 데스크톱 클라이언트](clients/windowsdesktop-admin.md)
 #### [Windows 데스크톱 클라이언트의 새로운 기능](clients/windowsdesktop-whatsnew.md)
 ### Windows 스토어 클라이언트
 #### [Windows 스토어 클라이언트 시작](clients/windows.md)
