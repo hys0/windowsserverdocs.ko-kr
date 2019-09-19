@@ -1,6 +1,6 @@
 ---
 title: nslookup server
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ba58e223d0aa35b4157b813b10bf1d274313a1c1
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: e24e55026d12a0d8afc5b6f1bef926ece9087bd0
+ms.sourcegitcommit: 6423dfa9cecb3b06bdd563cae113c3e80a4ec330
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66436976"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71105017"
 ---
 # <a name="nslookup-server"></a>nslookup server
 
