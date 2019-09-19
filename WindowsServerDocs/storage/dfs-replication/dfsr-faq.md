@@ -197,7 +197,7 @@ Microsoft Outlook 개인 폴더 파일 (.pst) 및 Microsoft Access 파일은 보
 
 아니요. DFS 복제는 로컬 시스템 계정으로 실행 되는 서비스 이므로 복제할 관리자 권한으로 로그인 할 필요가 없습니다. 그러나 DFS 복제 구성을 변경 하려면 영향을 받는 파일 서버의 도메인 관리자 또는 로컬 관리자 여야 합니다.
 
-자세한 내용은 [DFS 복제를 관리할 수 있는 기능 위임](http://go.microsoft.com/fwlink/?linkid=182294) ()http://go.microsoft.com/fwlink/?LinkId=182294) 의 "DFS 복제 보안 요구 사항 및 위임"을 참조 하십시오.
+자세한 내용은 [DFS 복제를 관리할 수 있는 기능 위임](http://go.microsoft.com/fwlink/?linkid=182294) (http://go.microsoft.com/fwlink/?LinkId=182294) 의 "DFS 복제 보안 요구 사항 및 위임"을 참조 하십시오.
 
 ### <a name="how-can-i-upgrade-or-replace-a-dfs-replication-member"></a>DFS 복제 구성원을 업그레이드 하거나 교체 하려면 어떻게 해야 하나요?
 
@@ -247,7 +247,7 @@ Windows 및 DFS 복제는 최대 32000 자까지 폴더 경로를 지원 합니�
 <br>
 
 
-Microsoft에서 Windows Server 2003 r 2 용으로 테스트 한 확장성 지침 목록은 [DFS 복제 확장성 지침](http://go.microsoft.com/fwlink/?linkid=75043) ()http://go.microsoft.com/fwlink/?LinkId=75043) 을 참조 하세요.
+Microsoft에서 Windows Server 2003 r 2 용으로 테스트 한 확장성 지침 목록은 [DFS 복제 확장성 지침](http://go.microsoft.com/fwlink/?linkid=75043) (http://go.microsoft.com/fwlink/?LinkId=75043) 을 참조 하세요.
 
 ### <a name="when-should-i-not-use-dfs-replication"></a>DFS 복제를 사용 하지 않아야 하는 경우
 
@@ -274,7 +274,7 @@ DFS 복제은 Active Directory Domain Services의 도메인 명명 컨텍스트�
 
 ### <a name="can-i-use-microsoft-system-center-operations-manager-to-monitor-dfs-replication"></a>Microsoft System Center Operations Manager를 사용 하 여 DFS 복제를 모니터링할 수 있나요?
 
-예. 자세한 내용은 Microsoft 다운로드 센터 ()http://go.microsoft.com/fwlink/?LinkId=182265) 에서 [System Center Operations Manager 2007에 대 한 DFS 복제 관리 팩](http://go.microsoft.com/fwlink/?linkid=182265) 을 참조 하세요.
+예. 자세한 내용은 Microsoft 다운로드 센터 (http://go.microsoft.com/fwlink/?LinkId=182265) 에서 [System Center Operations Manager 2007에 대 한 DFS 복제 관리 팩](http://go.microsoft.com/fwlink/?linkid=182265) 을 참조 하세요.
 
 ### <a name="does-dfs-replication-support-remote-management"></a>원격 관리를 지원할 DFS 복제 있나요?
 
@@ -476,7 +476,7 @@ RDC (원격 차등 압축)는 제한 된 대역폭 네트워크를 통해 효율
 
 특성 값 및 해당 설명의 목록은 MSDN의 [파일 특성](http://go.microsoft.com/fwlink/?linkid=182268) (http://go.microsoft.com/fwlink/?LinkId=182268) 을 참조 하세요.
 
-다음 특성 값은 `SetFileAttributes dwFileAttributes` 함수를 사용 하 여 설정 되며 DFS 복제에 의해 복제 됩니다. 이러한 특성 값을 변경 하면 특성 복제가 트리거됩니다. 내용이 변경 되는 경우를 제외 하 고 파일의 내용은 복제 되지 않습니다. 자세한 내용은 MSDN 라이브러리 ()http://go.microsoft.com/fwlink/?LinkId=182269) 의 [setfileattributes 함수](http://go.microsoft.com/fwlink/?linkid=182269) 를 참조 하세요.
+다음 특성 값은 `SetFileAttributes dwFileAttributes` 함수를 사용 하 여 설정 되며 DFS 복제에 의해 복제 됩니다. 이러한 특성 값을 변경 하면 특성 복제가 트리거됩니다. 내용이 변경 되는 경우를 제외 하 고 파일의 내용은 복제 되지 않습니다. 자세한 내용은 MSDN 라이브러리 (http://go.microsoft.com/fwlink/?LinkId=182269) 의 [setfileattributes 함수](http://go.microsoft.com/fwlink/?linkid=182269) 를 참조 하세요.
 
   - 파일\_특성\_숨김  
       
@@ -529,7 +529,7 @@ DFS 복제 파일\_특성\_임시 값을 복제 하지 않습니다.
 
 예. DFS 복제는 초기 복제 전에 복제 그룹 구성원에 파일을 복사 하는 것을 지원 합니다. 이 "사전 준비"는 초기 복제 중에 복제 되는 데이터의 양을 크게 줄일 수 있습니다.
 
-파일이 실제 특성 또는 타임 스탬프에 의해서만 다를 경우 초기 복제는 콘텐츠를 복제할 필요가 없습니다. 실제 특성은 Win32 함수 `SetFileAttributes`에서 설정할 수 있는 특성입니다. 자세한 내용은 MSDN 라이브러리 ()http://go.microsoft.com/fwlink/?LinkId=182269) 의 [setfileattributes 함수](http://go.microsoft.com/fwlink/?linkid=182269) 를 참조 하세요. 두 파일이 압축과 같은 다른 특성에 따라 다르면 파일의 내용이 복제 됩니다.
+파일이 실제 특성 또는 타임 스탬프에 의해서만 다를 경우 초기 복제는 콘텐츠를 복제할 필요가 없습니다. 실제 특성은 Win32 함수 `SetFileAttributes`에서 설정할 수 있는 특성입니다. 자세한 내용은 MSDN 라이브러리 (http://go.microsoft.com/fwlink/?LinkId=182269) 의 [setfileattributes 함수](http://go.microsoft.com/fwlink/?linkid=182269) 를 참조 하세요. 두 파일이 압축과 같은 다른 특성에 따라 다르면 파일의 내용이 복제 됩니다.
 
 복제 그룹 구성원을 사전 준비 하려면 대상 서버의 해당 폴더에 파일을 복사 하 고 복제 그룹을 만든 다음 주 구성원을 선택 합니다. 주 구성원의 내용이 "신뢰할 수 있는" 것으로 간주 되기 때문에 복제 하려는 최신 파일이 있는 구성원을 선택 합니다. 즉, 초기 복제 중에 주 구성원의 파일은 항상 복제 그룹의 다른 멤버에 있는 다른 버전의 파일을 덮어씁니다.
 
