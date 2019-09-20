@@ -13,12 +13,12 @@ ms.assetid: 044f2fd5-5b87-42bb-ba0d-c06516ac48c8
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.openlocfilehash: 97d9e671823dade9e488922561c4c6a925719830
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 9f3524261e8e93439ff48a3e6666fa7680a76a29
+ms.sourcegitcommit: ccec91c1d32a978159f9b8bb5e39ead5805c26c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871665"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71143741"
 ---
 # <a name="limit-web-access"></a>웹 액세스 제한
 개별 데스크톱에서 사용자 활동을 모니터링 하는 것 외에도, 관리자는 사용자를 제한할 수 있습니다 지정 된 웹 사이트에 대 한 사용자 액세스 허용 가능한 웹 사이트 및 사용자 액세스를 차단 하려는 웹 사이트를 지정 하 여.  
@@ -42,14 +42,14 @@ ms.locfileid: "70871665"
   
 1. 다중 포인트 대시보드에서에 **웹 제한** 탭을 클릭 하 여 시작\-메뉴 아래쪽 한 다음 클릭 **' 모든 데스크톱 '에 대 한 웹 액세스 제한**합니다.  
   
-   **Configure Web Limiting(웹 제한 구성)** 페이지가 열립니다. 사용자가 액세스할 수 있는 사이트가 나열됩니다. 다음 작업 중 하나를 수행합니다.  
+   **Configure Web Limiting(웹 제한 구성)** 페이지가 열립니다. 사용자가 액세스할 수 있는 사이트가 나열됩니다. 다음 중 하나를 수행합니다.  
   
 2. 허용된 사이트를 추가하려면 **Allow only these sites(이러한 사이트만 허용)** 를 클릭하고 허용되는 웹 주소를 입력한 다음 **추가**를 클릭합니다.  
   
    사용자가 방문 하지 않으려는 사이트를 추가 하려면 **이러한 사이트만 허용**안 함을 클릭 하 고 사용자가 방문 하지 않을 웹 주소를 입력 한 다음 **추가**를 클릭 합니다.  
   
    > [!NOTE]
-   > 예를 들어 "Contoso.com"을 입력 허용 하거나 (예를 들어 www.newpage.contoso.com) www.contoso.com 기준으로 하는 사이트를 차단 합니다. "Contoso"를 입력 합니다 허용 하거나 모든 Contoso 관련 사이트 (contoso.com, contoso.uk, 등 포함)를 제한 합니다.  
+   > 예를 들어 "Contoso.com"를 입력 하면 www.contoso.com에 상대적인 사이트 (예: www\.newpage.contoso.com)를 허용 하거나 차단 합니다. "Contoso"를 입력 합니다 허용 하거나 모든 Contoso 관련 사이트 (contoso.com, contoso.uk, 등 포함)를 제한 합니다.  
   
 3. 웹 주소를 허용되는 사이트 및 허용되지 않는 사이트 목록에서 제거하려면 웹 주소를 선택한 다음 **제거**를 클릭합니다.  
   

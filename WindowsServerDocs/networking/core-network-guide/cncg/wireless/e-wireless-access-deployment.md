@@ -8,12 +8,12 @@ ms.topic: article
 ms.assetid: 4b66f517-b17d-408c-828f-a3793086bc1f
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: bd951f221f1cf1c5715e26830b7da644d685634a
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 64098a152d9ba485cfed80e0d0541f0e5ea72bf2
+ms.sourcegitcommit: 47a9514a68e42ac236065fd6b641204b769223d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70868981"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127674"
 ---
 # <a name="wireless-access-deployment"></a>무선 액세스 배포
 
@@ -113,7 +113,7 @@ ms.locfileid: "70868981"
 
     - **도메인 로컬**
 
-    - **Global**
+    - **전역적**
 
     - **세계**
 
@@ -121,7 +121,7 @@ ms.locfileid: "70868981"
 
 6. **확인**을 클릭합니다.
 
-무선 사용자에 대 한 개 이상의 보안 그룹을 필요한 경우 추가 무선 사용자 그룹을 만들려면 다음이 단계를 반복 합니다. 나중에 서로 다른 액세스 권한 및 연결 규칙을 제공 하는 각 그룹에 서로 다른 조건 및 제약 조건 적용 하려면 NPS에서 개별 네트워크 정책을 만들 수 있습니다.
+무선 사용자에 대 한 개 이상의 보안 그룹을 필요한 경우 추가 무선 사용자 그룹을 만들려면 다음이 단계를 반복 합니다. 나중에 NPS에서 개별 네트워크 정책을 만들어 각 그룹에 서로 다른 조건과 제약 조건을 적용 하 여 서로 다른 액세스 권한 및 연결 규칙을 제공할 수 있습니다.
 
 ### <a name="bkmk_addusers"></a>무선 사용자 보안 그룹에 사용자 추가
 
@@ -179,7 +179,7 @@ ms.locfileid: "70868981"
 
 3. 왼쪽된 창에서 두 번\-클릭 **도메인**, 다음 두 배로 늘려야\-그룹 정책 개체를 관리 하려는 도메인을 클릭 합니다. 예를 들어, 두 번\-클릭 **example.com**합니다.  
 
-4. 다음 작업 중 하나를 수행합니다.
+4. 다음 중 하나를 수행합니다.
 
     -   **기존 도메인을 열려면\-편집할 GPO 수준**, 관리, 권한 있는 그룹 정책 개체를 포함 하는 도메인을 두 번 클릭\-기본 도메인 정책 등을 관리 하 고 클릭 한 다음 도메인 정책을 클릭 **편집**합니다. **그룹 정책 관리 편집기** 열립니다.
 
