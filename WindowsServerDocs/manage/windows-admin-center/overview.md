@@ -5,15 +5,15 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 08/22/2019
+ms.date: 09/18/2019
 ms.localizationpriority: high
 ms.prod: windows-server-threshold
-ms.openlocfilehash: cdd7986486fd3cad07f5e4577aaf0ab404bfb5d3
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 943026c04055919fefd7002c50144d28413de1a7
+ms.sourcegitcommit: 27f0caf74e88781054250455c3c1adf06deb6234
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70869590"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71124346"
 ---
 # <a name="windows-admin-center"></a>Windows Admin Center
 
@@ -129,9 +129,10 @@ ms.locfileid: "70869590"
 
 최신 출시된 기능에 대해 자세히 알아보세요.
 
-- 버전 [1908](https://aka.ms/wac1908) - 시각적 업데이트, Packetmon, FlowLog Audit, 클러스터용 Azure Monitor 온보딩 및 HTTPS를 통한 WinRM 지원(포트 5986)이 포함됩니다.
-- 버전 [1907](https://aka.ms/wac1907) - Azure 비용 추정 링크를 추가하고 가상 머신의 가져오기/내보내기 및 태그 지정을 개선했습니다.
-- 버전 [1906](https://aka.ms/wac1906) - VM 가져오기/내보내기, Azure 계정 전환, Azure에서 연결 추가, 연결 설정 실험, 성능 개선 및 성능 프로파일링 도구가 추가되었습니다.
+- 버전 [1909](https://aka.ms/wac1909)에서는 Azure VM 관련 연결 유형을 소개하고 기존 장애 조치(failover) 클러스터 및 HCI 클러스터에 대한 연결 유형을 통합합니다.
+- 버전 [1908](https://aka.ms/wac1908)에는 시각적 업데이트, Packetmon, FlowLog Audit, 클러스터용 Azure Monitor 온보딩 및 HTTPS를 통한 WinRM 지원(포트 5986)이 추가되었습니다.
+- 버전 [1907](https://aka.ms/wac1907)은 Azure 비용 추정 링크를 추가하고 가상 머신의 가져오기/내보내기 및 태그 지정을 개선했습니다.
+- 버전 [1906](https://aka.ms/wac1906)에는 VM 가져오기/내보내기, Azure 계정 전환, Azure에서 연결 추가, 연결 설정 실험, 성능 개선 및 성능 프로파일링 도구가 추가되었습니다.
 - 버전 1904.1은 가장 최근의 GA 릴리스로, 게이트웨이 플러그인 안정성 개선을 위한 유지 관리 업데이트입니다.
 - 버전 [1904](https://aka.ms/wac1904)는 Azure Hybrid Services 도구를 도입하고, 이전에 미리 보기에 있던 기능을 GA 채널에 가져온 GA 릴리스였습니다.
 - 버전 [1903](https://aka.ms/wac1903)에는 Azure Monitor의 이메일 알림, Active Directory에서 서버 또는 PC 연결을 추가하는 기능, Active Directory, DHCP, DNS를 관리하는 새로운 도구가 추가되었습니다.
