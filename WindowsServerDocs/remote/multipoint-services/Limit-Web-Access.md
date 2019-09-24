@@ -49,7 +49,7 @@ ms.locfileid: "71143741"
    사용자가 방문 하지 않으려는 사이트를 추가 하려면 **이러한 사이트만 허용**안 함을 클릭 하 고 사용자가 방문 하지 않을 웹 주소를 입력 한 다음 **추가**를 클릭 합니다.  
   
    > [!NOTE]
-   > 예를 들어 "Contoso.com"를 입력 하면 www.contoso.com에 상대적인 사이트 (예: www\.newpage.contoso.com)를 허용 하거나 차단 합니다. "Contoso"를 입력 합니다 허용 하거나 모든 Contoso 관련 사이트 (contoso.com, contoso.uk, 등 포함)를 제한 합니다.  
+   > 예를 들어 "Contoso.com"를 입력 하면 www.contoso.com 에 상대적인 사이트 (예: www\.newpage.contoso.com)를 허용 하거나 차단 합니다. "Contoso"를 입력 합니다 허용 하거나 모든 Contoso 관련 사이트 (contoso.com, contoso.uk, 등 포함)를 제한 합니다.  
   
 3. 웹 주소를 허용되는 사이트 및 허용되지 않는 사이트 목록에서 제거하려면 웹 주소를 선택한 다음 **제거**를 클릭합니다.  
   
