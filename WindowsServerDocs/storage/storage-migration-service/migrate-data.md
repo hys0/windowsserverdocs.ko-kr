@@ -8,12 +8,12 @@ ms.date: 02/13/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
-ms.openlocfilehash: c5a3012b989a16c8416a17460b87e197f7f6fc6a
-ms.sourcegitcommit: 61767c405da44507bd3433967543644e760b20aa
+ms.openlocfilehash: 4b90f8c5713fbcefc1740b932e9a6f210901a974
+ms.sourcegitcommit: 45415ba58907d650cfda45f4c57f6ddf1255dcbf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70987408"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71206909"
 ---
 # <a name="use-storage-migration-service-to-migrate-a-server"></a>Storage Migration Service를 사용 하 여 서버 마이그레이션
 
@@ -23,7 +23,7 @@ ms.locfileid: "70987408"
 
 시작 하기 전에 저장소 마이그레이션 서비스를 설치 하 고 필요한 방화벽 포트가 열려 있는지 확인 합니다.
 
-1. [저장소 마이그레이션 서비스 요구 사항을](overview.md#requirements) 확인 하 고 PC 또는 관리 서버에 [Windows 관리 센터](../../manage/windows-admin-center/understand/windows-admin-center.md) 를 설치 합니다 (아직 설치 하지 않은 경우).
+1. [저장소 마이그레이션 서비스 요구 사항을](overview.md#requirements) 확인 하 고 PC 또는 관리 서버에 [Windows 관리 센터](../../manage/windows-admin-center/understand/windows-admin-center.md) 를 설치 합니다 (아직 설치 하지 않은 경우). 도메인에 가입 된 원본 컴퓨터를 마이그레이션하는 경우 원본 컴퓨터와 동일한 도메인 또는 포리스트에 가입 된 서버에서 저장소 마이그레이션 서비스를 설치 하 고 실행 해야 합니다.
 2. Windows 관리 센터에서 Windows Server 2019를 실행 하는 orchestrator 서버에 연결 합니다. <br>저장소 마이그레이션 서비스를 설치 하 고 마이그레이션을 관리 하는 데 사용 하는 서버입니다. 서버를 하나만 마이그레이션하는 경우에는 Windows Server 2019를 실행 하는 동안 대상 서버를 사용할 수 있습니다. 다중 서버 마이그레이션에는 별도의 오케스트레이션 서버를 사용 하는 것이 좋습니다.
 1. **서버 관리자** (Windows 관리 센터) > **storage migration service** 로 이동 하 고 **설치** 를 선택 하 여 저장소 마이그레이션 서비스와 필수 구성 요소 (그림 1에 표시 됨)를 설치 합니다.
     ![설치 단추](media/migrate/install.png) **를 표시 하는 Storage Migration Service 페이지의 스크린샷 그림 1: 저장소 마이그레이션 서비스 설치 중**
@@ -57,7 +57,7 @@ ms.locfileid: "70987408"
 이 단계에서는 대상 서버에서 데이터를 보관할 위치를 지정한 후 데이터를 전송 합니다.
 
 1. **데이터** > 전송**자격 증명을 입력** 하십시오. 페이지에서 마이그레이션하려는 대상 서버에서 작동 하는 관리자 자격 증명을 입력 하 고 다음을 선택 합니다.
-2. **대상 장치 및 매핑 추가** 페이지에서 첫 번째 원본 서버가 나열 됩니다. 마이그레이션할 서버 또는 클러스터 된 파일 서버의 이름을 입력 하 고 **장치 검색**을 선택 합니다.
+2. **대상 장치 및 매핑 추가** 페이지에서 첫 번째 원본 서버가 나열 됩니다. 마이그레이션할 서버 또는 클러스터 된 파일 서버의 이름을 입력 하 고 **장치 검색**을 선택 합니다. 도메인에 가입 된 원본 컴퓨터에서 마이그레이션하는 경우 대상 서버는 동일한 도메인에 가입 되어 있어야 합니다.
 3. 원본 볼륨을 대상 볼륨에 매핑하고, 전송 하지 않으려는 모든 공유에 대 한 **포함** 확인란의 선택을 취소 하 고 (Windows 시스템 폴더에 있는 모든 관리 공유 포함) **다음**을 선택 합니다.
    ![원본 서버 및 해당 볼륨 및 공유와 대상](media/migrate/transfer.png) **그림 3의 위치로 전송 되는 위치를 보여 주는 스크린샷 원본 서버 및 해당 저장소가 전송 되는 위치**
 4. 모든 원본 서버에 대 한 대상 서버 및 매핑을 추가 하 고 **다음**을 선택 합니다.

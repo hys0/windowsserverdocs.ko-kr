@@ -8,12 +8,12 @@ ms.date: 07/09/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
-ms.openlocfilehash: 16e62d9232d0ec1b01333d73bc5b4a1555ffbad0
-ms.sourcegitcommit: 61767c405da44507bd3433967543644e760b20aa
+ms.openlocfilehash: d8437e0e33a370ab698d25f25b43fbbcbae97792
+ms.sourcegitcommit: 45415ba58907d650cfda45f4c57f6ddf1255dcbf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70987400"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71206916"
 ---
 # <a name="storage-migration-service-known-issues"></a>저장소 마이그레이션 서비스의 알려진 문제
 
@@ -248,6 +248,15 @@ StorageMigration ()에서 StorageMigration ()을 (를) 확인 합니다. Transfe
    ```PowerShell
    Register-SMSProxy -ComputerName *destination server* -Force
    ```
+## <a name="error-dll-was-not-found-when-running-inventory-from-a-cluster-node"></a>클러스터 노드에서 인벤토리를 실행 하는 동안 "Dll을 찾을 수 없습니다" 오류가 발생 함
+
+Windows Server 2019 장애 조치 (failover) 클러스터 노드에 설치 된 Storage Migration Service orchestrator를 사용 하 여 인벤토리를 실행 하 고 Windows Server 장애 조치 (failover) 클러스터를 대상으로 하는 경우 파일 서버 원본을 일반적으로 사용 합니다.
+
+    DLL not found
+    [Error] Failed device discovery stage VolumeInfo with error: (0x80131524) Unable to load DLL 'Microsoft.FailoverClusters.FrameworkSupport.dll': The specified module could not be found. (Exception from HRESULT: 0x8007007E)   
+
+이 문제를 해결 하려면 Storage Migration Service orchestrator를 실행 하는 서버에 "장애 조치 (Failover) 클러스터 관리 도구" (RSAT-클러스터링-Mgmt)를 설치 합니다. 
+
 
 ## <a name="see-also"></a>참조
 
