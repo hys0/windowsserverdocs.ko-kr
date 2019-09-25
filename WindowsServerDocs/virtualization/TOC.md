@@ -34,6 +34,7 @@
 #### [가상 머신 버전 업그레이드](hyper-v/deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md)
 #### [DDA를 사용하여 그래픽 디바이스 배포](hyper-v/deploy/deploying-graphics-devices-using-dda.md)
 #### [DDA를 사용하여 스토리지 디바이스 배포](hyper-v/deploy/deploying-storage-devices-using-dda.md)
+
 ### [관리](hyper-v/manage/Manage-Hyper-V-on-Windows-Server.md)
 #### [Hyper-V VM용 영구 메모리 디바이스 구성](hyper-v/manage/persistent-memory-cmdlets.md)
 #### [표준 또는 프로덕션 검사점 중에서 선택](hyper-v/manage/Choose-between-standard-or-production-checkpoints-in-Hyper-V.md)
@@ -46,11 +47,14 @@
 #### [Hyper-V 스케줄러 유형 선택 관련 정보](hyper-v/manage/about-hyper-v-scheduler-type-selection.md)
 #### [통합 서비스 관리](hyper-v/manage/Manage-Hyper-V-integration-services.md)
 #### [PowerShell Direct를 사용하여 Windows VM 관리](hyper-v/manage/Manage-Windows-virtual-machines-with-powershell-direct.md)
-#### [Hyper-V 복제본 설정](hyper-v/manage/Set-up-Hyper-V-Replica.md) 
-#### [실시간 마이그레이션으로 VM 이동](hyper-v/manage/Live-migration-overview.md) 
-##### [실시간 마이그레이션 개요](hyper-v/manage/Live-migration-overview.md) 
+#### [Hyper-V 복제본 설정](hyper-v/manage/Set-up-Hyper-V-Replica.md)
+#### [Intel 성능 모니터링 하드웨어 사용](hyper-v/manage/Performance-Monitoring-Hardware.md)
+#### [실시간 마이그레이션으로 VM 이동](hyper-v/manage/Live-migration-overview.md)
+##### [실시간 마이그레이션 개요](hyper-v/manage/Live-migration-overview.md)
 ##### [실시간 마이그레이션을 위한 호스트 설정](hyper-v/deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md) 
-##### [장애 조치 클러스터링을 사용하지 않고 실시간 마이그레이션](hyper-v/manage/Use-live-migration-without-Failover-Clustering-to-move-a-virtual-machine.md) 
+##### [장애 조치 클러스터링을 사용하지 않고 실시간 마이그레이션](hyper-v/manage/Use-live-migration-without-Failover-Clustering-to-move-a-virtual-machine.md)
+
+
 ### [Hyper-V 성능 튜닝](../administration/performance-tuning/role/hyper-v-server/index.md)
 ## [Hyper-V 가상 스위치](hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md)
 ### [RDMA(원격 직접 메모리 액세스) 및 SET(Switch Embedded Teaming)](hyper-v-virtual-switch/rdMA-and-Switch-Embedded-Teaming.md)
