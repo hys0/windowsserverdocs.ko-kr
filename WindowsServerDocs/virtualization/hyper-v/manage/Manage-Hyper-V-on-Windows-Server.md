@@ -1,37 +1,38 @@
 ---
-title: Windows Server 2016의 Hyper-v 관리
-description: Hyper-v 관리에 대 한 문서에 대 한 링크 제공
+title: Windows Server에서 Hyper-v 관리
+description: Hyper-v 관리 문서에 대 한 링크를 제공 합니다.
 ms.prod: windows-server-threshold
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5c06b632-dd19-46ca-9f51-130c321963d8
-author: KBDAzure
-ms.author: kathydav
+author: jasongerend
+ms.author: jgerend
 ms.date: 01/08/2018
-ms.openlocfilehash: 0f5f7600dd47a97e6f49669426d32054e4ab847d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e8a9d4a894990c793c3725f93a51f04c93be41e3
+ms.sourcegitcommit: d12d9e6afd71d23e8a24682ad80d2cf3bc486588
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59867424"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71226018"
 ---
 # <a name="manage-hyper-v-on-windows-server"></a>Windows Server에서 Hyper-v 관리
 
 >적용 대상: Windows Server 2016, Windows Server 2019
 
-이 섹션에서는 리소스를 사용 하 여 Windows Server 2016에 Hyper-v를 관리할 수 있도록 합니다.
+이 섹션의 리소스를 사용 하 여 Windows Server에서 Hyper-v를 관리할 수 있습니다.
 
-- [표준 또는 프로덕션 검사점 간의 선택](Choose-between-standard-or-production-checkpoints-in-Hyper-V.md)  
-- [검사점을 사용할지 설정 합니다.](Enable-or-disable-checkpoints-in-Hyper-V.md) 
-- [Hyper-v 관리자를 사용 하 여 호스트를 관리 합니다.](Remotely-manage-Hyper-V-hosts.md)
-- [호스트 CPU 리소스 제어를 관리 합니다.](manage-hyper-v-minroot-2016.md)
-- [VM CPU 그룹을 사용 하 여](manage-hyper-v-cpugroups.md)
-- [PowerShell Direct를 사용 하 여 Windows virtual machines 관리](Manage-Windows-virtual-machines-with-PowerShell-Direct.md)  
-- [Hyper-v 복제본 설정](Set-up-Hyper-V-Replica.md)
-- [가상 머신을 이동 하려면 장애 조치 클러스터링이 없는 실시간 마이그레이션 사용](Use-live-migration-without-Failover-Clustering-to-move-a-virtual-machine.md)
-  
-
-
+- [Hyper-V VM용 영구 메모리 디바이스 구성](persistent-memory-cmdlets.md)
+- [표준 또는 프로덕션 검사점 중에서 선택](Choose-between-standard-or-production-checkpoints-in-Hyper-V.md)
+- [VHD 세트 만들기](Create-VHDSet-file.md)
+- [검사점 사용 또는 사용 안 함](Enable-or-disable-checkpoints-in-Hyper-V.md)
+- [Hyper-V 관리자를 사용하여 호스트 관리](Remotely-manage-Hyper-V-hosts.md)
+- [호스트 CPU 리소스 제어 관리](manage-hyper-v-minroot-2016.md)
+- [VM CPU 그룹 사용](manage-hyper-v-cpugroups.md)
+- [하이퍼바이저 스케줄러 유형 관리](manage-hyper-v-scheduler-types.md)
+- [Hyper-V 스케줄러 유형 선택 관련 정보](about-hyper-v-scheduler-type-selection.md)
+- [통합 서비스 관리](Manage-Hyper-V-integration-services.md)
+- [PowerShell Direct를 사용하여 Windows VM 관리](Manage-Windows-virtual-machines-with-powershell-direct.md)
+- [Hyper-V 복제본 설정](Set-up-Hyper-V-Replica.md) 
+- [Intel 성능 모니터링 하드웨어 사용](Performance-Monitoring-Hardware.md)
+- [실시간 마이그레이션으로 VM 이동](Live-migration-overview.md)
