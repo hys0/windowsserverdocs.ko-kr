@@ -1,28 +1,24 @@
 ---
 title: Windows Server 2019 시스템 요구 사항
 description: Windows Server 2019의 새로 설치 시 스토리지, CPU, 네트워크, 메모리 및 RAM에 대한 최소 요구 사항입니다.
-ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
 ms.technology: server-general
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4a8b42d7-9fe5-4efe-9ea1-ace2131f860e
-author: coreyp-at-msft
-ms.author: coreyp
+author: jasongerend
+ms.author: jgerend
 manager: jasgroce
 ms.localizationpriority: medium
-ms.openlocfilehash: d97ec0efee86165f82bdf99a316d24d9c39ec958
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 70ebf445515fd227d0f35b0c267f4fe34b2b83a9
+ms.sourcegitcommit: 081661f50d6dafb77180149956a02e679270c710
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66810720"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71037576"
 ---
 # <a name="system-requirements"></a>시스템 요구 사항
 
->적용 대상: 시작 
+> 적용 대상: Windows Server 2019
 
 이 항목에서는 Windows Server&reg; 2019를 실행하기 위한 최소 시스템 요구 사항을 설명합니다.
 
@@ -48,7 +44,8 @@ ms.locfileid: "66810720"
 
 [Coreinfo](https://technet.microsoft.com/sysinternals/cc835722.aspx)는 CPU가 가진 이러한 기능을 확인하는데 사용할 수 있는 도구입니다.
 
-## <a name="ram"></a>RAM  
+## <a name="ram"></a>RAM
+
 다음은 이 제품 설치를 위해 예상되는 RAM 관련 요구 사항입니다.  
 
 **최소**:  
@@ -60,8 +57,8 @@ ms.locfileid: "66810720"
 >   
 > 이 문제를 방지하려면 다음 중 하나를 수행합니다.  
 >   
-> -   이 릴리스를 설치하려는 가상 머신에 800MB를 초과하는 RAM을 할당합니다. 설치가 완료되면 실제 서버 구성에 따라 할당 크기를 512MB RAM 정도로 변경할 수 있습니다.  
-> -   Shift+F10을 사용하여 가상 머신에서 이 릴리스의 부팅 프로세스를 중단합니다. 명령 프롬프트가 열리면 Diskpart.exe를 사용하여 설치 파티션을 만들고 포맷합니다. **Wpeutil createpagefile /path=C:\pf.sys** 를 실행합니다(만든 설치 파티션이 C:인 경우 예제). 명령 프롬프트를 닫고 설치를 계속 진행합니다.  
+> -   이 릴리스를 설치하려는 가상 머신에 800MB를 초과하는 RAM을 할당합니다. 설치가 완료되면 실제 서버 구성에 따라 할당 크기를 512MB RAM 정도로 변경할 수 있습니다. 추가 언어 및 업데이트를 사용하여 설치용 부팅 이미지를 수정한 경우 설치를 완료하려면 800MB가 넘는 RAM을 할당해야 할 수 있습니다.  
+> -   Shift+F10을 사용하여 가상 컴퓨터에서 이 릴리스의 부팅 프로세스를 중단합니다. 명령 프롬프트가 열리면 Diskpart.exe를 사용하여 설치 파티션을 만들고 포맷합니다. **Wpeutil createpagefile /path=C:\pf.sys** 를 실행합니다(만든 설치 파티션이 C:인 경우 예제). 명령 프롬프트를 닫고 설치를 계속 진행합니다.  
 
 ## <a name="storage-controller-and-disk-space-requirements"></a>저장소 컨트롤러 및 디스크 공간 요구 사항  
 Windows Server 2019를 실행하는 컴퓨터에는 PCI Express 아키텍처 사양과 호환되는 스토리지 어댑터가 포함되어 있어야 합니다. 서버에서 하드 디스크 드라이브로 분류된 영구 저장 장치는 PATA가 아니어야 합니다. Windows Server 2019에서는 부팅, 페이지 또는 데이터 드라이브에 ATA/PATA/IDE/EIDE를 사용할 수 없습니다.  

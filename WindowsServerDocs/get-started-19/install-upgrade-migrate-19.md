@@ -9,12 +9,12 @@ author: jasongerend
 ms.author: jgerend
 manager: jasgroce
 ms.localizationpriority: medium
-ms.openlocfilehash: 7e90738a157f620124bfca3d5f1f4c12789d3bf2
-ms.sourcegitcommit: b17ccf7f81e58e8f4dd844be8acf784debbb20ae
+ms.openlocfilehash: 1c0c6ca10e7ebac16d81fe1393e471a7878fd0ca
+ms.sourcegitcommit: ccec91c1d32a978159f9b8bb5e39ead5805c26c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69023922"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71143754"
 ---
 # <a name="install-upgrade-or-migrate-to-windows-server"></a>Windows Server 설치, 업그레이드 또는 마이그레이션
 
@@ -33,9 +33,7 @@ Windows Server를 설치하는 가장 간단한 방법은 빈 서버에 설치�
 
 서버를 평면화하지 않으면서 설정한 동일한 하드웨어 및 모든 서버 역할을 유지하려면 **현재 위치 업그레이드**를 수행하여 설정, 서버 역할 및 데이터는 그대로 두면서 이전 운영 체제에서 새 버전으로 전환합니다. 예를 들어, 서버에서 Windows Server 2012 R2를 실행하는 경우 Windows Server 2016 또는 Windows Server 2019로 업그레이드할 수 있습니다. 그러나 모든 기존 운영 체제가 모든 새 운영 체제로 업그레이드될 수 있는 것은 아닙니다. 
 
-업그레이드에 대한 단계별 지침을 보려면 [Windows Server Upgrade Center](http://aka.ms/upgradecenter)를 방문하세요.
-
-[![Windows Server Upgrade Center 스크린샷](media/upgrade-center.png)](http://aka.ms/upgradecenter)
+업그레이드에 대한 단계별 지침은 [Windows Server 업그레이드 콘텐츠](../upgrade/upgrade-overview.md)를 검토하세요.
 
 ## <a name="cluster-os-rolling-upgrade"></a>클러스터 OS 롤링 업그레이드
 

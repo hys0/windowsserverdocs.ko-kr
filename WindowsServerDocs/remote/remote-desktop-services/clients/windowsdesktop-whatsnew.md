@@ -11,27 +11,34 @@ ms.topic: article
 author: heidilohr
 manager: daveba
 ms.author: helohr
-ms.date: 09/13/2019
+ms.date: 09/17/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b51370a83fe6a49c29cc2557abd54e339c3b213
-ms.sourcegitcommit: 61767c405da44507bd3433967543644e760b20aa
+ms.openlocfilehash: 587ad44509451497b253689238c3aef233a37153
+ms.sourcegitcommit: e210fce039452a9855353520c7f8698acd76ffce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988251"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71071290"
 ---
 # <a name="whats-new-in-the-windows-desktop-client"></a>Windows 데스크톱 클라이언트의 새로운 기능
 
-[Windows 데스크톱 클라이언트](windowsdesktop.md)를 정기적으로 업데이트하여 새로운 기능을 추가하고 문제를 해결합니다. 최신 업데이트를 찾을 수 있는 위치는 다음과 같습니다.
+Windows 데스크톱 클라이언트에 대한 자세한 내용은 [Windows 데스크톱 클라이언트 시작](windowsdesktop.md)에서 확인할 수 있습니다. 여기서는 클라이언트에 대한 최신 업데이트를 확인할 수 있습니다.
 
-## <a name="client-versions"></a>클라이언트 버전
+## <a name="latest-client-versions"></a>최신 클라이언트 버전
 
-클라이언트는 릴리스 또는 참가자 고객에 대해 서로 다른 버전을 사용하도록 구성할 수 있습니다. 릴리스 버전은 기본 구성입니다.
+클라이언트는 서로 다른 [ 사용자 그룹](windowsdesktop-admin.md#configure-user-groups)에 대해 구성할 수 있습니다. 다음 표에는 각 사용자 그룹에 사용할 수 있는 현재 버전이 나와 있습니다.
 
-|고객 |버전  |
-|---------|---------|
-|릴리스  |1.2.246  |
-|Windows 참가자 프로그램  |1.2.246  |
+|사용자 그룹 |버전  |
+|-----------|---------|
+|Public     |1.2.246  |
+|Windows 참가자 프로그램    |1.2.247  |
+
+## <a name="updates-for-version-12247"></a>1\.2.247 버전에 대한 업데이트
+
+*게시 날짜: 2019년 9월 17일*
+
+- 연결 중에 인증할 때 발생하는 충돌이 해결되었습니다.
+- 클라이언트를 닫을 때 발생하는 충돌이 해결되었습니다.
 
 ## <a name="updates-for-version-12246"></a>1\.2.246 버전에 대한 업데이트
 

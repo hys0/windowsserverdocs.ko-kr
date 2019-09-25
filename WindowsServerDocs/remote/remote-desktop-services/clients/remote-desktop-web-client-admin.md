@@ -4,16 +4,16 @@ description: 관리자가 원격 데스크톱 웹 클라이언트를 설정하�
 ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.author: helohr
-ms.date: 11/2/2018
+ms.date: 09/19/2019
 ms.topic: article
 author: Heidilohr
 ms.localizationpriority: medium
-ms.openlocfilehash: 7de392b049fbe910688a4b950e1ca870b6ba3f46
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 86667c744acfd340c2608609323b95c159e1279d
+ms.sourcegitcommit: ccec91c1d32a978159f9b8bb5e39ead5805c26c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871171"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71143747"
 ---
 # <a name="set-up-the-remote-desktop-web-client-for-your-users"></a>사용자에 대한 원격 데스크톱 웹 클라이언트 설정
 
@@ -265,6 +265,10 @@ RD 세션 호스트 서버가 RD 브로커 서버와 다른 경우 다음 단계
 기본적으로 사용자는 원격 분석을 사용하거나 사용하지 않도록 선택할 수 있습니다. **$false** 부울 값은 기본 클라이언트 동작과 일치합니다. **$true** 부울 값은 원격 분석을 사용하지 않도록 설정하고 사용자가 원격 분석 사용을 설정하도록 제한합니다.
 
 ### <a name="remote-resource-launch-method"></a>원격 리소스 시작 방법
+
+>[!NOTE]
+>이 설정은 현재 Windows Virtual Desktop 웹 클라이언트가 아니라 RDS 웹 클라이언트에서만 작동합니다.
+
 기본적으로 사용자는 (1) 브라우저에서 원격 리소스를 시작하거나 (2) 머신에 설치된 다른 클라이언트에서 처리할 .rdp 파일을 다운로드하여 원격 리소스를 시작하도록 선택할 수 있습니다. 관리자는 다음 Powershell 명령을 사용하여 배포에 대한 원격 리소스 시작 방법을 제한하도록 선택할 수 있습니다.
 
    ```PowerShell

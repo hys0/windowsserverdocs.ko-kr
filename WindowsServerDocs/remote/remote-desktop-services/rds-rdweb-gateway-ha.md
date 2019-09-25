@@ -12,12 +12,12 @@ author: lizap
 ms.author: elizapo
 ms.date: 11/08/2016
 manager: dongill
-ms.openlocfilehash: 4e185e51b09d2e2f8ac4527f9de339de27e02f24
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 869d47be73a39114ecc05080f8da16f460fb8198
+ms.sourcegitcommit: 6423dfa9cecb3b06bdd563cae113c3e80a4ec330
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66805142"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71105044"
 ---
 # <a name="add-high-availability-to-the-rd-web-and-gateway-web-front"></a>RD 웹 및 게이트웨이 웹 프런트에 고가용성 추가
 
@@ -96,12 +96,13 @@ Azure 인프라를 사용하는 경우 외부 Azure Load Balancer를 만들 수 
 1.  다음과 같이 Azure Load Balancer를 만듭니다.  
     1.  Azure Portal에서 **찾아보기 > 부하 분산 장치 > 추가**를 클릭합니다.  
     2.  이름(예: **WebGwLB**)을 입력합니다.  
-    3.  **체계**, **공용 IP 주소** 및 **공용 IP 주소**에 대해 **공용**을 선택합니다. 기존 공용 IP 주소를 선택하거나 새로 만들 수 있습니다. 
-    4.  해당 **구독**, **리소스 그룹** 및 **위치**를 선택합니다.
-    5.  **만들기**를 클릭합니다.  
+    3.  **구성표**에 대해 **퍼블릭**을 선택합니다.
+    4.  **공용 IP 주소** 아래에서 **공용 IP 주소 선택**을 선택한 다음, 기존 공용 IP 주소를 선택하거나 새 공용 IP 주소를 만듭니다.
+    5.  해당 **구독**, **리소스 그룹** 및 **위치**를 선택합니다.
+    6.  **만들기**를 클릭합니다.  
 2. 다음과 같이 [프로브](https://azure.microsoft.com/documentation/articles/load-balancer-custom-probe-overview/)를 만들어 활성 상태인 서버를 모니터링합니다.  
-    1.  Azure Portal에서 **찾아보기 > Load Balancer**를 클릭하고 방금 만든 부하 분산 장치(예: WebGwLB)를 클릭한 후 설정을 클릭합니다.  
-    2.  **프로브 > 추가**를 클릭합니다.  
+    1.  Azure Portal에서 **찾아보기** > **부하 분산 장치**를 차례로 선택한 다음, 이전 단계에서 만든 부하 분산 장치를 선택합니다.
+    2.  **모든 설정** > **프로브** > **추가**를 차례로 선택합니다.  
     3.  프로브의 이름(예: **HTTPS**)을 입력합니다. **프로토콜**로 **TCP**를 선택하고 **포트**에 대해 **443**을 입력한 후 **확인**을 클릭합니다.   
 3.  다음과 같이 HTTPS 및 UDP 부하를 분산 규칙을 만듭니다.  
     1.  **설정**에서 **부하 분산 규칙**을 클릭합니다.  
