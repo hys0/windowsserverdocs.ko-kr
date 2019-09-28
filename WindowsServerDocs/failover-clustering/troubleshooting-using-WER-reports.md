@@ -1,39 +1,39 @@
 ---
-title: Windows 오류 보고를 사용 하 여 장애 조치 클러스터 문제 해결
-description: WER 보고서를 사용 하 여 보고서를 수집 하 고 일반적인 문제를 진단 하는 방법에는 특정 세부 정보를 사용 하 여 장애 조치 클러스터 문제를 해결 합니다.
-keywords: 장애 조치 클러스터 "," WER 보고서 "," 진단 "," 클러스터 "," Windows 오류 보고
-ms.prod: windows-server-threshold
+title: Windows 오류 보고를 사용 하 여 장애 조치 (Failover) 클러스터 문제 해결
+description: 보고서를 수집 하 고 일반적인 문제를 진단 하는 방법에 대 한 자세한 정보와 함께 WER 보고서를 사용 하 여 장애 조치 (Failover) 클러스터 문제
+keywords: 장애 조치 (Failover) 클러스터, WER 보고서, 진단, 클러스터, Windows 오류 보고
+ms.prod: windows-server
 ms.technology: storage-failover-clustering
 ms.author: vpetter
 ms.topic: article
 author: vpetter
 ms.date: 03/27/2018
 ms.localizationpriority: ''
-ms.openlocfilehash: 0b0c75f8e2d09a1fc17374428c48fb856465bb5a
-ms.sourcegitcommit: 63926404009f9e1330a4a0aa8cb9821a2dd7187e
+ms.openlocfilehash: 46c633af8cf82ac43d2a787a7193685d88ad0ecc
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469542"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71361013"
 ---
-# <a name="troubleshooting-a-failover-cluster-using-windows-error-reporting"></a>Windows 오류 보고를 사용 하 여 장애 조치 클러스터 문제 해결 
+# <a name="troubleshooting-a-failover-cluster-using-windows-error-reporting"></a>Windows 오류 보고를 사용 하 여 장애 조치 (Failover) 클러스터 문제 해결 
 
 > 적용 대상: Windows Server 2019, Windows Server 2016, Windows Server
 
-Windows 오류 보고 (WER)는 고급 관리자 또는 계층 3 지원 Windows 검색할 수 있는 하드웨어 및 소프트웨어 문제에 대 한 정보를 수집할 수 있도록 유연한 이벤트 기반 피드백 인프라를 Microsoft에 정보를 보고 및 모든 사용 가능한 솔루션을 사용 하 여 사용자에 게 제공 합니다. 이렇게 [참조](https://docs.microsoft.com/powershell/module/windowserrorreporting/) 모든 WindowsErrorReporting cmdlet에 대 한 설명 및 구문을 제공 합니다.
+WER (Windows 오류 보고)는 고급 관리자 또는 계층 3 지원을 통해 Windows에서 검색할 수 있는 하드웨어 및 소프트웨어 문제에 대 한 정보를 수집 하 고 Microsoft에 정보를 보고할 수 있도록 설계 된 유연한 이벤트 기반 피드백 인프라입니다. 그리고 사용자에 게 사용 가능한 솔루션을 제공 합니다. 이 [참조](https://docs.microsoft.com/powershell/module/windowserrorreporting/) 는 모든 WindowsErrorReporting cmdlet에 대 한 설명 및 구문을 제공 합니다.
 
-아래 제시 된 문제 해결 정보는 에스컬레이션 된 및 분류에 대 한 Microsoft로 보낼 데이터를 해야 하는 고급 문제를 해결 하는 데 도움이 됩니다.
+아래에 표시 된 문제 해결에 대 한 정보는 에스컬레이션 된 고급 문제를 해결 하는 데 유용 하며, 심사를 위해 데이터를 Microsoft로 전송 해야 할 수도 있습니다.
 
-## <a name="enabling-event-channels"></a>이벤트 채널을 사용 하도록 설정
+## <a name="enabling-event-channels"></a>이벤트 채널 사용
 
-Windows Server를 설치 하는 경우 다양 한 이벤트 채널은 기본적으로 활성화 됩니다. 했지만 문제를 진단할 때 심사 및 시스템 문제를 진단 하도록 도와줍니다 하므로 이러한 이벤트 채널의 일부를 사용 하도록 설정할 수 있습니다.
+Windows Server가 설치 되 면 기본적으로 많은 이벤트 채널이 사용 됩니다. 그러나 문제를 진단 하는 경우 시스템 문제를 심사 하 고 진단 하는 데 도움이 되기 때문에 이러한 이벤트 채널 중 일부를 사용 하도록 설정할 수 있습니다.
 
-필요에 따라 클러스터의 각 서버 노드에 추가 이벤트 채널을 활성화할 수 있습니다. 그러나이 방법은 두 가지 문제를 제공합니다.
+필요에 따라 클러스터의 각 서버 노드에서 추가 이벤트 채널을 사용 하도록 설정할 수 있습니다. 그러나이 방법은 두 가지 문제를 제공 합니다.
 
 1. 클러스터에 추가 하는 모든 새 서버 노드에서 동일한 이벤트 채널을 사용 하도록 설정 해야 합니다.
-2. 진단 하는 경우와 특정 이벤트 채널을 사용 하 고, 오류를 재현 하 고,이 과정을 반복 하면 근본 원인 수도 있습니다.
+2. 진단할 때 특정 이벤트 채널을 사용 하도록 설정 하 고 오류를 재현 하 고 근본 원인이 될 때까지이 프로세스를 반복 하는 것이 번거로울 수 있습니다.
 
-이러한 문제를 방지 하려면 클러스터 시작 시 이벤트 채널을 사용할 수 있습니다. 클러스터에서 설정 된 이벤트 채널 목록에는 공용 속성을 사용 하 여 구성할 수 있습니다 **EnabledEventLogs**합니다. 다음 이벤트 채널은 기본적으로 활성화 됩니다.
+이러한 문제를 방지 하기 위해 클러스터 시작 시 이벤트 채널을 사용 하도록 설정할 수 있습니다. 클러스터에서 사용 하도록 설정 된 이벤트 채널 목록은 공용 속성 **EnabledEventLogs**을 사용 하 여 구성할 수 있습니다. 기본적으로 다음 이벤트 채널이 사용 됩니다.
 
 ```powershell
 PS C:\Windows\system32> (get-cluster).EnabledEventLogs
@@ -47,26 +47,26 @@ Microsoft-Windows-SMBServer/Analytic
 Microsoft-Windows-Kernel-LiveDump/Analytic
 ```
 
-합니다 **EnabledEventLogs** 속성은 multistring, 여기서 각 문자열은 형식에서: **채널 이름, 로그 수준, 키워드 마스크**합니다. 합니다 **키워드 마스크** 16 진수 수 (0x 접두사), 8 진수 (0), 접두사나 10 진수 (접두사 없음) 수입니다. 예를 들어 목록에 새 이벤트 채널을 추가 하 고 둘 다 구성 **로그 수준** 하 고 **키워드 마스크** 실행할 수 있습니다.
+**EnabledEventLogs** 속성은 다중 문자열입니다. 여기서 각 문자열은 **채널 이름, 로그 수준, 키워드 마스크**형식입니다. **키워드-마스크** 는 16 진수 (접두사 0x), 8 진수 (접두사 0) 또는 10 진수 번호 (접두사 없음) 일 수 있습니다. 예를 들어 새 이벤트 채널을 목록에 추가 하 고 **로그 수준** 및 **키워드 마스크** 를 모두 구성 하려면 다음을 실행 하면 됩니다.
 
 ```powershell
 (get-cluster).EnabledEventLogs += "Microsoft-Windows-WinINet/Analytic,2,321"
 ```
 
-설정 하려는 경우는 **로그 수준** 하지만 합니다 **키워드 마스크** 기본값을 사용할 수 있습니다 다음 명령 중 하나:
+**로그 수준을** 설정 하지만 **키워드 마스크** 를 기본값으로 유지 하려면 다음 명령 중 하나를 사용할 수 있습니다.
 
 ```powershell
 (get-cluster).EnabledEventLogs += "Microsoft-Windows-WinINet/Analytic,2"
 (get-cluster).EnabledEventLogs += "Microsoft-Windows-WinINet/Analytic,2,"
 ```
 
-유지 하려는 경우는 **로그 수준** 기본값으로 설정 하지만 **키워드 마스크** 명령을 실행할 수 있습니다.
+**로그 수준을** 기본값으로 유지 하 되, **키워드 마스크** 를 설정 하려는 경우 다음 명령을 실행할 수 있습니다.
 
 ```powershell
 (get-cluster).EnabledEventLogs += "Microsoft-Windows-WinINet/Analytic,,0xf1"
 ```
 
-모두 유지 하려는 경우는 **로그 수준** 하며 **키워드 마스크** 기본값으로, 다음 명령을 실행할 수 있습니다.
+**로그 수준** 및 **키워드 마스크** 를 모두 기본값으로 유지 하려면 다음 명령 중 하나를 실행 하면 됩니다.
 
 ```powershell
 (get-cluster).EnabledEventLogs += "Microsoft-Windows-WinINet/Analytic"
@@ -74,36 +74,36 @@ Microsoft-Windows-Kernel-LiveDump/Analytic
 (get-cluster).EnabledEventLogs += "Microsoft-Windows-WinINet/Analytic,,"
 ```
 
-클러스터 서비스가 시작 될 때마다 이러한 이벤트 채널 모든 클러스터 노드에 대해 사용 됩니다 합니다 **EnabledEventLogs** 속성이 변경 됩니다.
+이러한 이벤트 채널은 클러스터 서비스가 시작 되거나 **EnabledEventLogs** 속성이 변경 될 때마다 모든 클러스터 노드에서 사용 하도록 설정 됩니다.
 
-## <a name="gathering-logs"></a>로그 수집
+## <a name="gathering-logs"></a>로그 수집 중
 
-이벤트 채널을 설정한 후 사용할 수 있습니다 합니다 **DumpLogQuery** 로그를 수집 합니다. 공용 리소스 형식 속성 **DumpLogQuery** mutistring 값입니다. 각 문자열은는 [XPATH 쿼리가 여기에 설명 된 대로](https://msdn.microsoft.com/library/windows/desktop/dd996910(v=vs.85).aspx)입니다.
+이벤트 채널을 사용 하도록 설정한 후 **DumpLogQuery** 를 사용 하 여 로그를 수집할 수 있습니다. Public 리소스 종류 속성 **DumpLogQuery** 는 mutistring 값입니다. 각 문자열은 [여기서 설명 하는 XPATH 쿼리입니다](https://msdn.microsoft.com/library/windows/desktop/dd996910(v=vs.85).aspx).
 
-수정 하면 문제를 해결 하려면 추가 이벤트 채널 수집 해야 하는 경우에 **DumpLogQuery** 추가 쿼리를 추가 하거나 목록 수정 하 여 속성입니다.
+문제를 해결할 때 추가 이벤트 채널을 수집 해야 하는 경우 쿼리를 추가 하거나 목록을 수정 하 여 **DumpLogQuery** 속성을 수정할 수 있습니다.
 
-이렇게 하려면 먼저 테스트 사용 하 여 XPATH 쿼리를 [Get-winevent](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Diagnostics/Get-WinEvent?view=powershell-5.1) PowerShell cmdlet:
+이렇게 하려면 먼저 [Get WinEvent](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Diagnostics/Get-WinEvent?view=powershell-5.1) PowerShell cmdlet을 사용 하 여 XPATH 쿼리를 테스트 합니다.
 
 ```powershell
 get-WinEvent -FilterXML "<QueryList><Query><Select Path='Microsoft-Windows-GroupPolicy/Operational'>*[System[TimeCreated[timediff(@SystemTime) &gt;= 600000]]]</Select></Query></QueryList>"
 ```
 
-그런 다음 쿼리를 추가 합니다 **DumpLogQuery** 리소스의 속성:
+다음으로 리소스의 **DumpLogQuery** 속성에 쿼리를 추가 합니다.
 
 ```powershell
 (Get-ClusterResourceType -Name "Physical Disk".DumpLogQuery += "<QueryList><Query><Select Path='Microsoft-Windows-GroupPolicy/Operational'>*[System[TimeCreated[timediff(@SystemTime) &gt;= 600000]]]</Select></Query></QueryList>"
 ```
 
-를 사용 하려면 쿼리의 목록을 가져오려면 원하는 경우 다음을 실행 합니다.
+사용할 쿼리 목록을 가져오려면 다음을 실행 합니다.
 ```powershell
 (Get-ClusterResourceType -Name "Physical Disk").DumpLogQuery
 ```
 
-## <a name="gathering-windows-error-reporting-reports"></a>Windows 오류 보고 보고서 모으고 있습니다.
+## <a name="gathering-windows-error-reporting-reports"></a>Windows 오류 보고 보고서 수집
 
-Windows 오류 보고 보고서에 저장 되며 **%ProgramData%\Microsoft\Windows\WER**
+Windows 오류 보고 보고서는 **%ProgramData%\Microsoft\Windows\WER** 에 저장 됩니다.
 
-내부를 **WER** 폴더를 **ReportsQueue** 폴더 Watson에 업로드할 기다리고 있는 보고서를 포함 합니다.
+**WER** 폴더 내에서 **ReportsQueue** 폴더에는 Watson에 업로드 되기를 기다리고 있는 보고서가 포함 됩니다.
 
 ```powershell
 PS C:\Windows\system32> dir c:\ProgramData\Microsoft\Windows\WER\ReportQueue
@@ -140,7 +140,7 @@ Directory of C:\ProgramData\Microsoft\Windows\WER\ReportQueue
               20 Dir(s)  23,291,658,240 bytes free
 ```
 
-내부를 **WER** 폴더를 **ReportsArchive** Watson을 이미 업로드 된 보고서를 포함 하는 폴더입니다. 이러한 보고서의 데이터는 삭제 되지만 **Report.wer** 파일 유지 합니다.
+**WER** 폴더 내에서 **ReportsArchive** 폴더에는 이미 Watson에 업로드 된 보고서가 포함 됩니다. 이러한 보고서의 데이터는 삭제 되지만 **보고서 wer** 파일은 유지 됩니다.
 
 ```powershell
 PS C:\Windows\system32> dir C:\ProgramData\Microsoft\Windows\WER\ReportArchive
@@ -161,12 +161,12 @@ Directory of c:\ProgramData\Microsoft\Windows\WER\ReportArchive
 
 ```
 
-Windows 오류 보고 문제 보고 환경을 사용자 지정 하는 많은 설정을 제공 합니다. 자세한 내용은 Windows 오류 보고를 참조 하십시오 [설명서](https://msdn.microsoft.com/library/windows/desktop/bb513638(v=vs.85).aspx)합니다.
+Windows 오류 보고는 문제 보고 환경을 사용자 지정 하는 다양 한 설정을 제공 합니다. 자세한 내용은 Windows 오류 보고 [설명서](https://msdn.microsoft.com/library/windows/desktop/bb513638(v=vs.85).aspx)를 참조 하세요.
 
 
 ## <a name="troubleshooting-using-windows-error-reporting-reports"></a>Windows 오류 보고 보고서를 사용 하 여 문제 해결
 
-### <a name="physical-disk-failed-to-come-online"></a>실제 디스크를 온라인 상태로 만들지 못했습니다
+### <a name="physical-disk-failed-to-come-online"></a>실제 디스크를 온라인 상태로 만들지 못했습니다.
 
 이 문제를 진단 하려면 WER 보고서 폴더로 이동 합니다.
 
@@ -228,7 +228,7 @@ Volume Serial Number is 4031-E397
 <date>  <time>            13,340 WERC38D.tmp.txt
 ```
 
-다음으로에서 분류를 시작 합니다 **Report.wer** 파일-이 알려 오류.
+그런 다음, **보고서** 의 오류를 알려 줍니다.
 
 ```
 EventType=Failover_clustering_resource_error 
@@ -255,7 +255,7 @@ DynamicSig[29].Name=FailureTime
 DynamicSig[29].Value=2017//12//12-22:38:05.485
 ```
 
-리소스를 온라인 상태로 만들지 못했으므로 없습니다 덤프를 수집 하지만 Windows 오류 보고 보고서 로그를 수집 하지 못했습니다. 모든 열면 **.evtx** Microsoft Message Analyzer를 사용 하 여 파일을 보면 모든 장애 조치 클러스터에 대 한 진단 채널 시스템 채널, 응용 프로그램 채널을 통해 다음 쿼리를 사용 하 여 수집 된 정보 및 다른 몇 가지 일반 채널입니다.
+리소스를 온라인 상태로 만들지 못했기 때문에 덤프가 수집 되지 않았지만 Windows 오류 보고 보고서에서 로그를 수집 했습니다. Microsoft Message Analyzer를 사용 하 여 모든 **.evtx** 파일을 여는 경우 시스템 채널, 응용 프로그램 채널, 장애 조치 (failover) 클러스터 진단 채널 등을 통해 다음 쿼리를 사용 하 여 수집 된 모든 정보를 볼 수 있습니다. 일반 채널.
 
 ```powershell
 PS C:\Windows\system32> (Get-ClusterResourceType -Name "Physical Disk").DumpLogQuery
@@ -294,22 +294,22 @@ PS C:\Windows\system32> (Get-ClusterResourceType -Name "Physical Disk").DumpLogQ
 <QueryList><Query Id="0"><Select Path="Microsoft-Windows-Hyper-V-VmSwitch-Diagnostic">*[System[TimeCreated[timediff(@SystemTime) &lt;= 600000]]]</Select></Query></QueryList>
 ```
 
-Message Analyzer를 사용 하면 캡처, 표시 및 트래픽 메시징 프로토콜을 분석할 수 있습니다. 또한 추적 및 시스템 이벤트와 Windows 구성 요소에서 다른 메시지를 평가할 수 있습니다. 다운로드할 수 있습니다 [여기에서 Microsoft Message Analyzer](https://www.microsoft.com/download/details.aspx?id=44226)합니다. Message Analyzer로 로그를 로드할 때 다음 공급자 및 로그 채널에서 메시지 표시
+메시지 분석기를 사용 하면 프로토콜 메시징 트래픽을 캡처, 표시 및 분석할 수 있습니다. 또한 Windows 구성 요소에서 시스템 이벤트 및 기타 메시지를 추적 하 고 평가할 수 있습니다. [여기에서 Microsoft Message Analyzer를](https://www.microsoft.com/download/details.aspx?id=44226)다운로드할 수 있습니다. 로그를 메시지 분석기로 로드 하면 로그 채널에서 다음 공급자 및 메시지가 표시 됩니다.
 
-![Message Analyzer로 로그를 로드합니다.](media/troubleshooting-using-WER-reports/loading-logs-into-message-analyzer.png)
+![메시지 분석기로 로그 로드](media/troubleshooting-using-WER-reports/loading-logs-into-message-analyzer.png)
 
-다음 뷰를 가져오려면 공급자에 의해 그룹화 할 수도 있습니다.
+공급자 별로 그룹화 하 여 다음 뷰를 가져올 수도 있습니다.
 
-![로그 공급자에 의해 그룹화](media/troubleshooting-using-WER-reports/logs-grouped-by-providers.png)
+![공급자 별로 그룹화 된 로그](media/troubleshooting-using-WER-reports/logs-grouped-by-providers.png)
 
-디스크 실패 한 이유를 식별 하려면 아래에 있는 이벤트로 이동 **FailoverClustering/진단** 하 고 **FailoverClustering/DiagnosticVerbose**합니다. 다음 쿼리를 실행 합니다. **"클러스터 디스크에 10"을 포함 하는 EventLog.EventData["LogString"]** 합니다.  이렇게 하면 다음 출력이 제공 있습니다.
+디스크가 실패 한 이유를 확인 하려면 **FailoverClustering/진단** 및 **FailoverClustering/DiagnosticVerbose**아래의 이벤트로 이동 합니다. 다음 쿼리를 실행 합니다. **EventData ["LogString"]에는 "Cluster Disk 10"이 포함 되어**있습니다.  그러면 다음과 같은 출력을 제공 합니다.
 
-![실행 중인 로그 쿼리의 출력](media/troubleshooting-using-WER-reports/output-of-running-log-query.png)
+![실행 중인 로그 쿼리 출력](media/troubleshooting-using-WER-reports/output-of-running-log-query.png)
 
 
 ### <a name="physical-disk-timed-out"></a>실제 디스크 시간이 초과 되었습니다.
 
-이 문제를 진단 하려면 WER 보고서 폴더로 이동 합니다. 폴더에 대 한 덤프 파일과 로그 파일 포함 **RHS**, **clussvc.exe**, 및 호스트 하는 프로세스는 "**smphost**" 아래와 같이 서비스:
+이 문제를 진단 하려면 WER 보고서 폴더로 이동 합니다. 폴더에는 아래와 같이 **RHS**, **clussvc**및 "**smphost**" 서비스를 호스팅하는 프로세스에 대 한 로그 파일 및 덤프 파일이 포함 되어 있습니다.
 
 ```powershell
 PS C:\Windows\system32> dir C:\ProgramData\Microsoft\Windows\WER\ReportArchive\Critical_PhysicalDisk_64acaf7e4590828ae8a3ac3c8b31da9a789586d4_00000000_cab_1d94712e
@@ -373,7 +373,7 @@ Volume Serial Number is 4031-E397
 <date>  <time>            13,340 WER7100.tmp.txt
 ```
 
-다음으로에서 분류를 시작 합니다 **Report.wer** 파일-이 알려 어떤 통화 또는 리소스에서 중단 하는 합니다.
+다음으로, **보고서. wer** 파일에서 심사를 시작 합니다. 그러면 어떤 호출이 나 리소스가 부족 한 것을 알 수 있습니다.
 
 ```
 EventType=Failover_clustering_resource_timeout_2
@@ -398,13 +398,13 @@ DynamicSig[29].Name=HangThreadId
 DynamicSig[29].Value=10008
 ```
 
-서비스 및 프로세스의 덤프를 수집 하는 목록 다음 속성에 의해 제어 됩니다. **PS C:\Windows\system32> (Get-ClusterResourceType -Name "Physical Disk").DumpServicesSmphost**
+덤프에서 수집 하는 서비스 및 프로세스 목록은 다음 속성에 의해 제어 됩니다. **PS C:\system32 > (Get-ClusterResourceType-Name "실제 디스크"). 로 호스트**
 
-중지는 발생 한 이유를 식별 하려면 dum 파일을 엽니다. 다음 쿼리를 실행 합니다. **EventLog.EventData["LogString"] "클러스터 디스크 10"을 포함** 이렇게 하면 다음과 같은 출력이 제공 있습니다.
+중단이 발생 한 이유를 확인 하려면 dum 파일을 엽니다. 다음 쿼리를 실행 합니다. **EventData ["LogString"]에 "Cluster Disk 10"이 포함 되어 있습니다.**  그러면 다음과 같은 출력을 제공 합니다.
 
 ![실행 중인 로그 쿼리 2의 출력](media/troubleshooting-using-WER-reports/output-of-running-log-query-2.png)
 
-스레드를 사용 하 여 cross-examine 수 것은 **memory.hdmp** 파일:
+**.Hdmp** 파일의 스레드를 사용 하 여이를 상호 검사할 수 있습니다.
 
 ```
 # 21  Id: 1d98.2718 Suspend: 0 Teb: 0000000b`f1f7b000 Unfrozen

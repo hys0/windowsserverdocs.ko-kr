@@ -1,8 +1,8 @@
 ---
 title: Get ImageGroup 명령을 사용 하 여
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9dcb76155dc1044730673ed46a53cad57441a246
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d6531a3b69840a0a4910b2effdd3e349b76edf2c
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59862604"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71363122"
 ---
 # <a name="using-the-get-imagegroup-command"></a>Get ImageGroup 명령을 사용 하 여
 
@@ -32,10 +32,10 @@ wdsutil [Options] /Get-ImageGroumediaGroup:<Image group name> [/Server:<Server n
 ## <a name="parameters"></a>매개 변수
 |매개 변수|설명|
 |-------|--------|
-mediaGroup:<Image group name>|이미지 그룹의 이름을 지정합니다.|
+mediaGroup: <Image group name>|이미지 그룹의 이름을 지정합니다.|
 |[/ 서버:<Server name>]|서버 이름을 지정합니다. 이 NetBIOS 이름 또는 정규화 된 도메인 이름 (FQDN) 수 있습니다. 서버 이름이 없는 지정 하는 경우 로컬 서버 사용 됩니다.|
-|[/detailed]|각 이미지에 대 한 이미지 메타 데이터를 반환합니다. 이 매개 변수 사용 없는 경우 기본 동작은 이미지 이름, 설명 및 파일 이름을 반환할 합니다.|
-## <a name="BKMK_examples"></a>예제
+|자세한/|각 이미지에 대 한 이미지 메타 데이터를 반환합니다. 이 매개 변수 사용 없는 경우 기본 동작은 이미지 이름, 설명 및 파일 이름을 반환할 합니다.|
+## <a name="BKMK_examples"></a>예와
 이미지 그룹에 대 한 정보를 보려면 다음을 입력 합니다.
 ```
 wdsutil /Get-ImageGroumediaGroup:ImageGroup1

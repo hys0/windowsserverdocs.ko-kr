@@ -1,9 +1,9 @@
 ---
 title: 네트워크 기능 가상화
-description: 데이터 센터 방화벽, 다중 테 넌 트 RAS 게이트웨이 및 소프트웨어 부하 분산 (SLB) Windows Server 2016에서와 같은 가상 네트워킹 기기를 배포할 수 있는 네트워크 기능 가상화에 대해 자세히 알아보려면이 항목에서는 사용할 수 있습니다.
+description: 이 항목을 사용 하 여 Windows Server 2016의 데이터 센터 방화벽, 다중 테 넌 트 RAS 게이트웨이 및 SLB (소프트웨어 부하 분산)와 같은 가상 네트워킹 어플라이언스를 배포할 수 있도록 하는 네트워크 기능 가상화에 대해 알아볼 수 있습니다.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-sdn
@@ -12,24 +12,24 @@ ms.topic: article
 ms.assetid: 79df3bbe-48fd-4eff-8df6-35f6317566f3
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 59474a13d1cbce6a607f025caf3f6c1b839c7eed
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 338d5a285f2524932a91a66db186554cd0f50e2a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59884554"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71355654"
 ---
 # <a name="network-function-virtualization"></a>네트워크 기능 가상화
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-이 항목에서는 사용 하 여 데이터 센터 방화벽, 다중 테 넌 트 RAS 게이트웨이 및 소프트웨어 부하 분산 등 가상 네트워킹 기기를 배포할 수 있는 네트워크 기능 가상화에 대해 자세히 알아보려면 \(SLB\) 멀티플렉서 \(MUX\)합니다.
+이 항목을 사용 하 여 네트워크 기능 가상화에 대해 자세히 알아볼 수 있습니다 .이를 통해 데이터 센터 방화벽, 다중 테 넌 트 RAS 게이트웨이, 소프트웨어 부하 분산 \(SLB @ no__t-1 멀티플렉서 \(MUX @ no_와 같은 가상 네트워킹 어플라이언스를 배포할 수 있습니다. _t-3.
   
 >[!NOTE]  
 >이 항목 외에 다음과 같은 네트워크 기능 가상화 설명서를 사용할 수 있습니다.  
 > - [데이터 센터 방화벽 개요](../../../sdn/technologies/network-function-virtualization/../../../sdn/technologies/network-function-virtualization/Datacenter-Firewall-Overview.md)  
-> - [SDN 용 RAS 게이트웨이](../../../sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md)  
-> - [소프트웨어 부하 분산 (SLB) SDN에](../../../sdn/technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md)  
+> - [SDN용 RAS 게이트웨이](../../../sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md)  
+> - [SDN에 대한 SLB(소프트웨어 부하 분산)](../../../sdn/technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md)  
   
 오늘날의 소프트웨어에서 점점 더 가상 어플라이언스로 대 정의 된 데이터 센터, 하드웨어 장비 (예: 부하 분산 장치, 방화벽, 라우터, 스위치 및 등)에서 수행 되는 네트워크 기능 가상화 되 고 됩니다. 이 "네트워크 기능 가상화" 서버 가상화 및 네트워크 가상화의 자연 스러운 진행 됩니다. 가상 어플라이언스는 신속 하 게 새로운 및 새로운 시장 있습니다. 관심을 생성 하 고 업계 동향 가상화 플랫폼 모두에 대 한 권한을 얻는 및 클라우드 서비스를 계속 합니다.  
   
@@ -69,9 +69,9 @@ Microsoft SDN에 대 한 자세한 내용은 참조 [소프트웨어 정의 네�
   
     -   IP/ID (침입 방지 시스템/침입 감지 시스템)  
   
--   **응용 프로그램/WAN 최적화 도구**  
+-   **Application/WAN 최적화 도구**  
   
--   **Edge**  
+-   **테두리**  
   
     -   사이트 간 게이트웨이  
   
@@ -90,7 +90,7 @@ Microsoft SDN에 대 한 자세한 내용은 참조 [소프트웨어 정의 네�
 ## <a name="why-microsoft-is-a-great-platform-for-virtual-appliances"></a>왜 Microsoft는 가상 장비에 대 한 훌륭한 플랫폼  
 ![가상 네트워크 스택](../../../media/Network-Function-Virtualization/Microsoft-Network-Function-Virtualization.png)  
   
-Microsoft 플랫폼이를 가상 장비 빌드하여 배포 훌륭한 플랫폼으로 설계 되었다는 점입니다. 그 이유는 다음과 같습니다.  
+Microsoft 플랫폼이를 가상 장비 빌드하여 배포 훌륭한 플랫폼으로 설계 되었다는 점입니다. 이유는 다음과 같습니다.  
   
 -   Microsoft은 Windows Server 2016 키 가상화 된 네트워크 기능을 제공합니다.  
   
@@ -123,11 +123,11 @@ Windows Server 2016은 다음 가상 어플라이언스 제공 됩니다.
   
     GRE 기반의 터널을 사용하면 테넌트 가상 네트워크와 외부 네트워크를 연결할 수 있습니다. GRE 대부분의 네트워크 장치에서 사용할 수 없으면 GRE 프로토콜은 간단 하며 지원, 데이터 암호화 필요 하지 않은 터널링에 이상적인 선택 됩니다. S2S(Site to Site) 터널의 GRE 지원은 다중 테넌트 게이트웨이를 사용하는 테넌트 가상 네트워크와 테넌트 외부 네트워크 간의 전달 문제를 해결합니다. GRE 터널에 대 한 자세한 내용은 참조 [Windows Server 2016에서 GRE 터널링](https://technet.microsoft.com/library/dn765485.aspx)합니다.  
   
-**BGP 제어 평면 라우팅**  
+**BGP를 사용 하 여 제어 평면 라우팅**  
   
 Hyper-v 네트워크 가상화 (HNV) 라우팅을 제어는 모든 고객 주소 평면 경로 전달 하 고 동적으로 학습 하 고, 그런 다음 가상 네트워크에 분산된 RAS 게이트웨이 라우터를 업데이트 하 여 제어 평면에 논리, 중앙 집중화 된 엔터티입니다. 자세한 내용은 참조 [RAS 게이트웨이 고가용성](https://technet.microsoft.com/library/mt631692.aspx) 및 [RAS 게이트웨이](https://technet.microsoft.com/library/mt626650.aspx)합니다.  
   
-**분산된 된 다중 테 넌 트 방화벽**  
+**분산 다중 테 넌 트 방화벽**  
   
 방화벽은 가상 네트워크의 네트워크 계층을 보호합니다. 각 테 넌 트 VM의 SDN vSwitch 포트에 정책이 적용 됩니다. 모든 트래픽 흐름 보호: 동-서 및 북-남 합니다. 테 넌 트 포털을 통해 전달 되는 정책 및 네트워크 컨트롤러 적용 가능한 모든 호스트에 배포 합니다. 분산 된 다중 테 넌 트 방화벽에 대 한 자세한 내용은 참조 [데이터 센터 방화벽 개요](../../../sdn/technologies/network-function-virtualization/../../../sdn/technologies/network-function-virtualization/Datacenter-Firewall-Overview.md)합니다.  
   

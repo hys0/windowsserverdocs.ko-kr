@@ -1,8 +1,8 @@
 ---
-title: wbadmin 시작 복구
-description: '에 대 한 Windows 명령을 항목 * * *- '
+title: wbadmin 복구 시작
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9f24c9dfeb0ce87474e58d3bd2bce8b68e31cb63
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: edb287573dc76619502faf58018f48c464140629
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59823284"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71362350"
 ---
-# <a name="wbadmin-start-recovery"></a>wbadmin 시작 복구
+# <a name="wbadmin-start-recovery"></a>wbadmin 복구 시작
 
 
 
@@ -59,9 +59,9 @@ wbadmin start recovery
 |-컴퓨터|복구에 대 한 백업 하려는 컴퓨터의 이름을 지정 합니다. 이 매개 변수 같은 위치에 여러 대의 컴퓨터 백업 된 경우에 유용 합니다. 것이 때 사용 되는 **-backupTarget** 매개 변수를 지정 합니다.|
 |-recoveryTarget|복원 하려면 위치를 지정 합니다. 이 매개 변수는이 위치에 백업 했던 위치와 다른 경우에 유용 합니다. 볼륨, 파일 또는 응용 프로그램의 복원 데도 수 있습니다. 볼륨을 복원 하는 경우에 대체 볼륨의 볼륨 드라이브 문자를 지정할 수 있습니다. 파일 또는 응용 프로그램을 복원 하는 경우 대체 복구 위치를 지정할 수 있습니다.|
 |재귀적|파일을 복구 하는 경우에 유효 합니다. 지정된 된 폴더에 종속 된 모든 파일 및 폴더의 파일을 복구합니다. 기본적으로 지정된 된 폴더에 직접 상주 하는 파일에만 복구 됩니다.|
-|-덮어쓰기|파일을 복구 하는 경우에 유효 합니다. 이미 복구 중인 파일이 동일한 위치에 있는 경우 수행할 동작을 지정 합니다.</br>-   **Skip** 하면 Windows Server Backup을 기존 파일을 건너뛰고 다음 파일의 복구를 사용 하 여 계속 합니다.</br>-   **CreateCopy** 기존 파일을 수정 되지 않습니다 있도록 기존 파일의 복사본을 만들려면 Windows Server 백업을 사용 하면 됩니다.</br>-   **덮어쓰기** 파일을 덮어쓰려면 기존 백업에서 파일을 사용 하 여 Windows Server Backup 발생 합니다.|
+|-덮어쓰기|파일을 복구 하는 경우에 유효 합니다. 이미 복구 중인 파일이 동일한 위치에 있는 경우 수행할 동작을 지정 합니다.</br>-   **생략** 하면 Windows Server 백업에서 기존 파일을 건너뛰고 다음 파일의 복구를 계속 합니다.</br>-   **CreateCopy** 를 설정 하면 기존 파일이 수정 되지 않도록 Windows Server 백업에서 기존 파일의 복사본을 만듭니다.</br>-   **Overwrite** 를 사용 하면 기존 파일을 백업에서 파일로 덮어쓸 Windows Server 백업.|
 |-notRestoreAcl|파일을 복구 하는 경우에 유효 합니다. 백업에서 복구 되 고 파일의 보안 액세스 제어 목록 (Acl)을 복원 하지 하도록 지정 합니다. 기본적으로 보안 Acl이 복원 됩니다 (기본값은 **true)** 합니다. 이 매개 변수를 사용 하는 경우 파일을 복원한 위치에서 복원된 된 파일에 대 한 Acl은 상속 됩니다.|
-|-skipBadClusterCheck|볼륨을 복구 하는 경우에 유효 합니다. 잘못 된 클러스터 정보에 대 한 복구 하는 디스크 검사를 생략 합니다. 하드웨어 또는 대체 서버 복구 하는 경우에이 매개 변수를 사용 하지 않는 것이 좋습니다. 명령을 수동으로 실행 **chkdsk/b** 언제 든 지 잘못 된 클러스터에 대 한이 확인 한 다음 파일 시스템 정보를 적절 하 게 업데이트를이 디스크에 있습니다.</br>중요: 실행할 때 까지는 **chkdsk** 설명 했 듯이, 잘못 된 클러스터 복구 된 시스템에 보고 되지 않을 수 있습니다 정확 하 게 합니다.|
+|-skipBadClusterCheck|볼륨을 복구 하는 경우에 유효 합니다. 잘못 된 클러스터 정보에 대 한 복구 하는 디스크 검사를 생략 합니다. 하드웨어 또는 대체 서버 복구 하는 경우에이 매개 변수를 사용 하지 않는 것이 좋습니다. 명령을 수동으로 실행 **chkdsk/b** 언제 든 지 잘못 된 클러스터에 대 한이 확인 한 다음 파일 시스템 정보를 적절 하 게 업데이트를이 디스크에 있습니다.</br>중요: 설명 된 대로 **chkdsk** 를 실행할 때까지 복구 된 시스템에 보고 된 잘못 된 클러스터는 정확 하지 않을 수 있습니다.|
 |-noRollForward|응용 프로그램을 복구 하는 경우에 유효 합니다. 백업에서 최신 버전을 선택한 경우 응용 프로그램의 이전 지정 시간 복구를 허용 합니다. 최신, 이전 지정 시간 복구 되지 않는 응용 프로그램의 다른 버전에 대 한 기본 작업 수행 됩니다.|
 |-quiet|사용자에 게 하위 명령 프롬프트 없이 실행 됩니다.|
 
@@ -73,7 +73,7 @@ wbadmin start recovery
 >     [!NOTE]
 >     Before using **wbadmin** to perform an install from media operation, you should consider using the **ntdsutil** command because **ntdsutil** only copies the minimum amount of data needed, and it uses a more secure data transport method.
 
-## <a name="BKMK_Examples"></a>예제
+## <a name="BKMK_Examples"></a>예와
 
 2013 년 3 월 31, 오전 9시, d: 볼륨의 사용에서 백업 복구를 실행 하려면 다음을 입력 합니다.
 ```
@@ -87,12 +87,12 @@ wbadmin start recovery -version:03/31/2013-09:00 -itemType:App -items:Registry -
 ```
 wbadmin start recovery -version:03/31/2013-09:00 -itemType:File -items:d:\folder -recursive
 ```
-오전 9 시, 볼륨의 수행 2013 년 3 월 31 일에서 백업 복구를 실행 하려면 \\ \\? \Volume{cc566d14-44a0-11d9-9d93-806e6f6e6963}\, 형식:
+2013 년 3 월 31 일 오전 9:00에 가져온 백업 복구를 실행 하려면 \\ @ no__t? \Volume{cc566d14-44a0-11d9-9d93-806e6f6e6963} \, type:
 ```
 wbadmin start recovery -version:03/31/2013-09:00 -itemType:Volume 
 -items:\\?\Volume{cc566d14-44a0-11d9-9d93-806e6f6e6963}\
 ```
-오전 9 시, 공유 폴더의 수행 2013 년 4 월 30에서 백업 복구를 실행 하려면 \\ \\servername\share에서 server01, 유형:
+2013 년 4 월 30 일 오전 9:00에 발생 한 년 4 월 30 일에서 백업 복구를 실행 하려면 no__t-1servername\share의 공유 폴더 \\ @에서 다음을 입력 합니다.
 ```
 wbadmin start recovery -version:04/30/2013-09:00 -backupTarget:\\servername\share -machine:server01
 ```

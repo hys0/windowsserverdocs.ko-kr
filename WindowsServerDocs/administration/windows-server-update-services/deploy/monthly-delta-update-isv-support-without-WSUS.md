@@ -1,7 +1,7 @@
 ---
 title: WSUS를 사용 하지 않는 월간 델타 업데이트 ISV 지원
 description: WSUS (Windows Server Update Service) 토픽-ISV (독립 소프트웨어 공급 업체)에서 WSUS Express 업데이트 배달 대신 매월 델타 업데이트를 일시적으로 사용 하 여 패키지 크기를 줄일 수 있는 방법
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-wsus
@@ -11,12 +11,12 @@ author: sakitong
 ms.author: coreyp
 manager: dougkim
 ms.date: 10/16/2017
-ms.openlocfilehash: 9077cb87d1d0f6d59ad037c93f5608d3b698feaa
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 4607827d73c34f50f721a2774fa498eb95f9dbb8
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70868716"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71361734"
 ---
 # <a name="monthly-delta-update-isv-support-without-wsus"></a>WSUS를 사용 하지 않는 월간 델타 업데이트 ISV 지원
 

@@ -1,7 +1,7 @@
 ---
 title: Express 업데이트 배달 ISV 지원
 description: WSUS (Windows Server Update Service) 토픽-ISV (독립 소프트웨어 공급 업체)에서 WSUS를 사용 하 여 빠른 업데이트 배달을 구성할 수 있는 방법
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-wsus
@@ -11,12 +11,12 @@ author: sakitong
 ms.author: coreyp
 manager: lizapo
 ms.date: 10/16/2017
-ms.openlocfilehash: 0f5893d47219e9263ed7f35bee472848a47c6164
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: a4880a1a66d9c722cfda9e194c4eff38c5058674
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70868742"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71361717"
 ---
 # <a name="express-update-delivery-isv-support"></a>Express 업데이트 배달 ISV 지원
 
@@ -95,7 +95,7 @@ ISV 파일 캐시는 관리 되는 클라이언트에 설치할 업데이트와 
 
 1. [WSUS api](https://msdn.microsoft.com/library/windows/desktop/microsoft.updateservices.administration.updatefile(v=vs.85).aspx) 를 사용 하 여 MU 서비스의 업데이트 파일 경로 및 파일 이름에 액세스 합니다.
 
-    WSUS 서버의 각 업데이트에 대 한 메타 데이터에는 다음과 같이 Microsoft 업데이트에 대 한 업데이트의 파일 경로와 파일 이름이 포함 되어 있습니다. **<http://download.windowsupdate.com>** Microsoft 업데이트 hostname은 굵게 표시 되 고 파일 경로와 파일 이름에는/c/msdownload/update/software/updt/2016/09/ windows 10.0-kb3195781-x64_0c06079bccc35cba35a48bd2b1ec46f818bd2e74
+    WSUS 서버의 각 업데이트에 대 한 메타 데이터에는 다음과 같이 Microsoft 업데이트에 대 한 업데이트의 파일 경로와 파일 이름이 포함 되어 있습니다 (Microsoft 업데이트 hostname은 굵게, 파일 경로 및 파일 이름). **<http://download.windowsupdate.com>** /c/msdownload/update/software/updt/2016/09/ windows 10.0-kb3195781-x64_0c06079bccc35cba35a48bd2b1ec46f818bd2e74
 
 2. Microsoft 업데이트에서 파일을 다운로드 하 여 다음 두 가지 방법 중 하나를 사용 하 여 ISV 파일 캐시에 저장 합니다. 
 

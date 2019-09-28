@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: b15bb55741ed6cde2e1884896d58fb2d361cd014
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 094ad9e2de21e1f89c35c914a1b327727c2b1439
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66192511"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71360117"
 ---
 # <a name="ad-fs-2016-deployment-guide"></a>AD FS 2016 배포 가이드
 
@@ -22,7 +22,7 @@ ms.locfileid: "66192511"
 AD FS 배포 가이드는 AD FS 배포를 위한 포괄적인 살펴보도록 하겠습니다.  이 가이드의 다음 구성 됩니다.
 
   
-* [Windows Server 2016에서에서 AD FS로 업그레이드](Upgrading-to-AD-FS-in-Windows-Server-2016.md)  
+* [Windows Server 2016에서 AD FS로 업그레이드](Upgrading-to-AD-FS-in-Windows-Server-2016.md)  
 
 * [Windows Server 2016 및 2012 R2 배포 가이드](Windows-Server-2012-R2-AD-FS-Deployment-Guide.md)
 

@@ -7,22 +7,22 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: acdecd4afd9c55bdbd71cea9e01f3b3024870ced
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 55291293349ce77337c5b35585dd3ea8e0d8c9e2
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66191521"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71359174"
 ---
 # <a name="deploying-ad-fs-in-the-resource-partner-organization"></a>리소스 파트너 조직에 AD FS 배포
 
-Active Directory Federation Services에서 리소스 파트너 조직 \(AD FS\) 웹 서버가 속한 리소스를 보호 하는 조직을 나타냅니다\-쪽 페더레이션 서버입니다. 리소스 파트너 페더레이션 서버는 리소스 파트너에 있는 웹 서버에 대 한 클레임을 제공 하는 계정 파트너에서 생성 되는 보안 토큰을 사용 합니다.  
+Active Directory Federation Services \(AD FS @ no__t-1의 리소스 파트너 조직은 해당 웹 서버가 리소스 @ no__t-2side 페더레이션 서버에 의해 보호 될 수 있는 조직을 나타냅니다. 리소스 파트너의 페더레이션 서버는 계정 파트너에 의해 생성 된 보안 토큰을 사용 하 여 리소스 파트너에 있는 웹 서버에 클레임을 제공 합니다.  
   
-페더레이션된 서비스에 대 한 액세스 또는 많은 다른 사용자에 게 응용 프로그램을 제공 해야 하는 시나리오에서-일부 사용자에 게 서로 다른 조직에 상주 하는 경우 등 여러 계정 파트너를 배포할 수 있도록 리소스 페더레이션 서버를 구성할 수 있습니다.  
+여러 사용자에 게 페더레이션된 서비스 또는 응용 프로그램에 대 한 액세스를 제공 해야 하는 시나리오에서 일부 사용자가 다른 조직에 있는 경우 여러 계정 파트너를 배포할 수 있도록 리소스 페더레이션 서버를 구성할 수 있습니다.  
   
-설정 하 고 리소스 파트너 조직 구성 하는 방법에 대 한 자세한 내용은 참조 하세요. [검사 목록: Configuring the Resource Partner Organization](../../ad-fs/deployment/Checklist--Configuring-the-Resource-Partner-Organization.md)합니다.  
+리소스 파트너 조직을 설정 하 고 구성 하는 방법에 대 한 자세한 내용은 [Checklist 목록을 참조 하세요. 리소스 파트너 조직 @ no__t-0을 구성 하 고 있습니다.  
   
 ## <a name="in-this-section"></a>단원 내용  
   

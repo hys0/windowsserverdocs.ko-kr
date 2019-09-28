@@ -1,8 +1,8 @@
 ---
 title: Windows Server Update Services로 업데이트 관리
-description: Windows Server Update Service (WSUS) 항목-관련된 항목에 대 한 링크를 사용 하 여 업데이트 관리 개요
+description: WSUS (Windows Server Update Service) 항목-관련 항목에 대 한 링크가 포함 된 업데이트 관리 개요
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-wsus
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5675d74411407930022281f92717237115f7cecd
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e80f6763d7b1aa11603cbd2bb8756a426d685092
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59814864"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71361505"
 ---
 # <a name="update-management-with-windows-server-update-services"></a>Windows Server Update Services로 업데이트 관리
 

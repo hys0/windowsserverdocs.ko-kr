@@ -1,8 +1,8 @@
 ---
 title: winnt
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 984a99357c5626675a7a7194c70ec570fd299878
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: fc4e50b6fbf8598bf14bbe281f53830dd10d4c5b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59857114"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71362040"
 ---
 # <a name="winnt"></a>winnt
 
@@ -26,4 +26,4 @@ ms.locfileid: "59857114"
 
 Winnt, 않으며 Windows의 이후 릴리스에서 지원 되지 않을 수도 있습니다.
 
-이 도구는 Windows Server 2003에 포함 됩니다. 자세한 내용은 참조 [Winnt](https://technet.microsoft.com/library/cc755763(v=ws.10).aspx)합니다.
+이 도구는 Windows Server 2003에 포함 됩니다. 자세한 내용은 [Winnt](https://technet.microsoft.com/library/cc755763(v=ws.10).aspx)를 참조 하세요.

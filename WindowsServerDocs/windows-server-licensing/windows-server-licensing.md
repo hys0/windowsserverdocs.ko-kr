@@ -1,21 +1,21 @@
 ---
 title: Windows Server에 대 한 라이선스 콘텐츠
-description: Windows Server 라이선싱 계약에 알아봅니다.
+description: Windows Server 사용권 계약에 대해 알아봅니다.
 ms.topic: reference
 author: eross-msft
 ms.author: lizross
 ms.date: 06/11/2019
-ms.prod: windows-server-threshold
-ms.openlocfilehash: 2965d56c1fe968a1ccb7d0e191e9028f7831ceb8
-ms.sourcegitcommit: 9109f35563471ec0f7165bf3d1e1b448fe6e1924
+ms.prod: windows-server
+ms.openlocfilehash: d1aa268b3f5c944496791718c4b396e1313bb13d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67346520"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71363983"
 ---
 # <a name="windows-server---license-terms"></a>Windows Server-사용 조건
 
-Windows Server 관련 라이선스 약관을 검토 합니다.
+Windows Server 관련 사용 조건을 검토 합니다.
 
 - [Windows Server 2016에 대 한 추가 소프트웨어](https://docs.microsoft.com/legal/windows-server/Additional-Software)
 
@@ -23,8 +23,8 @@ Windows Server 관련 라이선스 약관을 검토 합니다.
 
 - [Windows Server 2016 Technical Preview 사용 조건](https://docs.microsoft.com/legal/windows-server/WinServer2016licenseterms)
 
-- [Microsoft 소프트웨어 사용 조건-MICROSOFT WINDOWSSERVER 합니다. SYSTEMINSIGHTS](https://docs.microsoft.com/legal/windows-server/system-insights-eula)
+- [Microsoft 소프트웨어 사용 조건-MICROSOFT. WINDOWSSERVER. SYSTEMINSIGHTS](https://docs.microsoft.com/legal/windows-server/system-insights-eula)
 
-- [Microsoft 소프트웨어 사용 조건-MICROSOFT WINDOWSSERVER 합니다. SYSTEMINSIGHTS 합니다. 기능](https://docs.microsoft.com/legal/windows-server/system-insights-capabilities-eula)
+- [Microsoft 소프트웨어 사용 조건-MICROSOFT. WINDOWSSERVER. SYSTEMINSIGHTS. 역량](https://docs.microsoft.com/legal/windows-server/system-insights-capabilities-eula)
 
-- [Windows Admin Center-사용 조건](https://docs.microsoft.com/legal/windows-server/windows-admin-center/windows-admin-center-licensing)
+- [Windows 관리 센터-사용 조건](https://docs.microsoft.com/legal/windows-server/windows-admin-center/windows-admin-center-licensing)

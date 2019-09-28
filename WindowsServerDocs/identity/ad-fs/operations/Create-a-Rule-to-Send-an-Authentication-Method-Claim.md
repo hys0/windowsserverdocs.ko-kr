@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 1109965d3a0045f9ebfa080380b9d7303209fce8
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 4efcae02b96904c9f869a5ed9e14eba161892b74
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66444988"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71358163"
 ---
 # <a name="create-a-rule-to-send-an-authentication-method-claim"></a>인증 방법 클레임을 보내도록 규칙 만들기
 
@@ -206,7 +206,7 @@ ms.locfileid: "66444988"
 
 4.  에 **클레임 규칙 편집** 대화 상자는 다음과 같은 탭 하나를 선택, 편집 하는 하는 규칙 집합을 신뢰에 따라,이 규칙을 만들려고 할 및 클릭 한 다음 **규칙 추가** 해당 규칙 집합에 연관 된 규칙 마법사를 시작 합니다.  
 
-    -   **수용 변환 규칙**  
+    -   **수락 변환 규칙**  
 
     -   **발급 변환 규칙**  
 
@@ -251,7 +251,7 @@ ms.locfileid: "66444988"
 
 4.  에 **클레임 규칙 편집** 대화 상자에서 하나를 선택 했는지에 따라 편집 하는 규칙 수를 설정 하는 신뢰 하는 다음과 같은 탭이이 규칙을 만들고 연결할 클릭 **규칙 추가** 해당 규칙 집합에 연관 된 규칙 마법사를 시작 합니다.  
 
-    -   **수용 변환 규칙**  
+    -   **수락 변환 규칙**  
 
     -   **발급 변환 규칙**  
 

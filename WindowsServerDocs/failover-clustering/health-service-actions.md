@@ -1,6 +1,6 @@
 ---
-title: 상태 서비스 작업
-ms.prod: windows-server-threshold
+title: 작업 상태 관리 서비스
+ms.prod: windows-server
 manager: eldenc
 ms.author: cosdar
 ms.technology: storage-health-service
@@ -8,18 +8,18 @@ ms.topic: article
 ms.assetid: ''
 author: cosmosdarwin
 ms.date: 08/14/2017
-ms.openlocfilehash: efdf8f04e68fcbdc7051e78d6725cb919e740ffa
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 519f0321f36fb7afc86962950aeab729d7a38adb
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59843024"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71361104"
 ---
-# <a name="health-service-actions"></a>상태 서비스 작업
+# <a name="health-service-actions"></a>작업 상태 관리 서비스
 
-> 적용 대상: Windows Server 2016
+> 적용 대상: Windows Server 2019, Windows Server 2016
 
-상태 관리 서비스는 저장소 공간 다이렉트를 실행 하는 클러스터에 대 한 작업 경험과 일상적인 모니터링을 향상 시키는 Windows Server 2016의 새로운 기능입니다.
+상태 관리 서비스는 스토리지 공간 다이렉트를 실행 하는 클러스터에 대 한 일상적인 모니터링 및 운영 환경을 개선 하는 Windows Server 2016의 새로운 기능입니다.
 
 ## <a name="actions"></a>동작  
 
@@ -35,7 +35,7 @@ Get-StorageHealthAction
 
 ### <a name="coverage"></a>적용 범위  
 
-Windows Server 2016에는 **Get-storagehealthaction** cmdlet에 다음 정보를 반환할 수 있습니다.  
+Windows Server 2016에서 **StorageHealthAction** cmdlet은 다음 정보를 반환할 수 있습니다.  
 
 -   실패했거나 연결이 끊어졌거나 응답하지 않는 실제 디스크를 사용 중지하는 중  
 
@@ -47,5 +47,5 @@ Windows Server 2016에는 **Get-storagehealthaction** cmdlet에 다음 정보를
 
 ## <a name="see-also"></a>참조
 
-- [Windows Server 2016의에서 상태 관리 서비스](health-service-overview.md)
-- [개발자 설명서, 샘플 코드 및 API 참조](https://msdn.microsoft.com/windowshealthservice)
+- [Windows Server 2016의 상태 관리 서비스](health-service-overview.md)
+- [MSDN의 개발자 설명서, 샘플 코드 및 API 참조](https://msdn.microsoft.com/windowshealthservice)

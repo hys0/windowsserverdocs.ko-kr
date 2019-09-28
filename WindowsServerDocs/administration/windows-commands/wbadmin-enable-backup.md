@@ -2,7 +2,7 @@
 title: wbadmin 백업 사용
 description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c46a77f905960150c10048bc872aa1ea35e3f335
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: d30136f7eb3ea48b8d9b0a740eb5a77e981ae3f0
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70868782"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71362383"
 ---
 # <a name="wbadmin-enable-backup"></a>wbadmin 백업 사용
 
@@ -93,7 +93,7 @@ wbadmin enable backup
 |-systemState|Windows ° 7 및 Windows Server 2008 R2 이상에서는 **-include** 매개 변수를 사용 하 여 지정한 다른 항목과 함께 시스템 상태를 포함 하는 백업을 만듭니다. 시스템 상태는 부팅 파일 (Boot.ini, NDTLDR, NTDetect.com), COM 설정을 포함 하는 Windows 레지스트리, SYSVOL (그룹 정책 및 로그온 스크립트), Active Directory 및 NTDS를 포함 합니다. 도메인 컨트롤러의 DIT 및 인증서 서비스가 설치 된 경우 인증서 저장소입니다. 서버에 설치 된 웹 서버 역할을 하는 경우 IIS 메타 디렉터리 포함 됩니다. 서버가 클러스터의 일부인 경우에도 클러스터 서비스 정보가 포함 됩니다.|
 |-allCritical|모든 중요 한 볼륨 (운영 체제의 상태를 포함 하는 볼륨)는 백업에 포함 되도록 지정 합니다. 이 매개 변수는 전체 시스템 또는 시스템 상태 복구에 대 한 백업을 만드는 경우에 유용 합니다. -BackupTarget이 지정 된 경우에만 사용 해야 합니다. 그렇지 않으면 명령이 실패 합니다. 와 함께 사용할 수는 **-포함** 옵션입니다.</br>팁: 중요 한 볼륨 백업에 대 한 대상 볼륨은 로컬 드라이브 일 수 있지만 백업에 포함 된 볼륨이 될 수는 없습니다.|
 |-vssFull|Windows Server 2008 R2 이상에서는 VSS (볼륨 섀도 복사본 서비스)를 사용 하 여 전체 백업을 수행 합니다. 모든 파일이 백업, 각 파일의 기록 백업 된 것을 이전 백업의 로그 문자열이 잘릴 수를 반영 하도록 업데이트 됩니다. 이 매개 변수를 사용 하지 않는 경우 wbadmin start backup은 복사 백업을 만들지만 백업 중인 파일의 기록은 업데이트 되지 않습니다.</br>주의: Windows Server 백업 이외의 제품을 사용 하 여 현재 백업에 포함 된 볼륨에 있는 응용 프로그램을 백업 하는 경우에는이 매개 변수를 사용 하지 마십시오. 이렇게 하면 백업할 데이터의 크기를 결정 하는 데 의존 하 고 있는 기록 및 전체 백업을 수행할 수 있으므로 다른 백업 제품에서 만드는 증분, 차등 또는 다른 유형의 백업이 손상 될 수 있습니다. 시간이.|
-|-vssCopy|Windows Server 2008 R2 이상에서는 VSS를 사용 하 여 복사 백업을 수행 합니다. 모든 파일을 백업할 수 있지만 응용 프로그램 로그 파일 뿐 아니라는 대 한 모든 정보는 파일 변경, 삭제 및 온 위치를 유지할 백업 되는 파일의 기록을 업데이트 되지 않습니다. 이 백업 유형을 사용 해도이 복사 백업에 독립적으로 발생할 수 있는 증분 및 차등 백업의 시퀀스에는 영향을 주지 않습니다. 이것은 기본값입니다.</br>경고: 증분 또는 차등 백업 또는 복원에는 복사 백업을 사용할 수 없습니다.|
+|-vssCopy|Windows Server 2008 R2 이상에서는 VSS를 사용 하 여 복사 백업을 수행 합니다. 모든 파일을 백업할 수 있지만 응용 프로그램 로그 파일 뿐 아니라는 대 한 모든 정보는 파일 변경, 삭제 및 온 위치를 유지할 백업 되는 파일의 기록을 업데이트 되지 않습니다. 이 백업 유형을 사용 해도이 복사 백업에 독립적으로 발생할 수 있는 증분 및 차등 백업의 시퀀스에는 영향을 주지 않습니다. 기본값입니다.</br>경고: 증분 또는 차등 백업 또는 복원에는 복사 백업을 사용할 수 없습니다.|
 |-사용자|Windows Server 2008 R2 이상에서는 백업 저장소 대상에 대 한 쓰기 권한이 있는 사용자 (원격 공유 폴더인 경우)를 지정 합니다. 사용자는 백업 하는 컴퓨터에서 Administrators 그룹 또는 Backup Operators 그룹의 구성원 이어야 합니다.|
 |-암호|Windows Server 2008 R2 이상에서는-user 매개 변수에서 제공 하는 사용자 이름에 대 한 암호를 지정 합니다.|
 |-quiet|사용자에 게 하위 명령 프롬프트 없이 실행 됩니다.|

@@ -1,8 +1,8 @@
 ---
 title: 확인
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e5e99237c2bac93625dedec0254c274e4f8dbc9f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 840fd3609ed3aded1c9cfebd4e395ddcc6d5588b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59827254"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71363105"
 ---
 # <a name="verify"></a>확인
 
@@ -38,10 +38,10 @@ verify [on | off]
 
 |매개 변수|설명|
 |---------|-----------|
-|[에서 \| off]|스위치는 **확인** 설정 하거나 해제 합니다.|
+|[on \| 해제]|스위치는 **확인** 설정 하거나 해제 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 현재 표시 하려면 **확인** 설정에 입력 합니다.
 ```

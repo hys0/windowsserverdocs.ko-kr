@@ -1,8 +1,8 @@
 ---
 title: wmic
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6c68866fbe0c8f5b16dae77e2121331f06cdc726
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e9840bc20ddf6193241fe36055698e2bd3222496
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59885844"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71361882"
 ---
 # <a name="wmic"></a>wmic
 
@@ -49,11 +49,11 @@ command </parameter>
 
 |매개 변수|설명|
 |---------|-----------|
-|</parameter>|\<간결한 설명, 시작 동사. >|
-|</param2>|\<다른 간결한 설명, 시작 동사. >|
+|</parameter>|\<Concise 설명, 동사로 시작 >|
+|</param2>|\<은 동사를 사용 하 여 시작 하는 간단한 설명입니다. >|
 
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 모든 전역 스위치의 현재 값을 표시 하려면 다음을 입력 합니다.
 ```

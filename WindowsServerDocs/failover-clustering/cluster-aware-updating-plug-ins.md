@@ -2,164 +2,164 @@
 ms.assetid: d44d4430-41e2-483a-9685-92610cdef32a
 title: 클러스터 인식 업데이트 플러그 인 작동 방식
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: dongill
 ms.author: jgerend
 author: JasonGerend
 ms.date: 04/28/2017
 ms.technology: storage-failover-clustering
 description: Windows Server에서 클러스터 인식 업데이트를 사용 하 여 클러스터에 업데이트를 설치 하는 경우 플러그 인을 사용 하 여 업데이트를 조정 하는 방법입니다.
-ms.openlocfilehash: bd31a6056376b04fcb5a4a941b81a363548a2209
-ms.sourcegitcommit: 6f968368c12b9dd699c197afb3a3d13c2211f85b
+ms.openlocfilehash: f6c572a397530704dd91d9c67c5c1758ccc085c4
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68544503"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71361293"
 ---
 # <a name="how-cluster-aware-updating-plug-ins-work"></a>클러스터 인식 업데이트 플러그 인 작동 방식
 
 >적용 대상: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-[클러스터 인식 업데이트](cluster-aware-updating.md) CAU ()는 플러그 인을 사용 하 여 장애 조치 (failover) 클러스터의 노드 간에 업데이트 설치를 조정 합니다. 이 항목에서는 기본 제공\-cau 플러그 인\-또는 cau 용으로 설치 하는\-다른 플러그 인을 사용 하는 방법에 대 한 정보를 제공 합니다.
+CAU ( [클러스터 인식 업데이트](cluster-aware-updating.md) )는 플러그 인을 사용 하 여 장애 조치 (failover) 클러스터의 노드 간에 업데이트 설치를 조정 합니다. 이 항목에서는 cau 플러그 인 @ no__t-1의 기본 @ no__t-0 또는 CAU 용으로 설치 하는 다른 플러그 인 no__t 기능을 사용 하는 방법에 대 한 정보를 제공 합니다.
 
-## <a name="BKMK_INSTALL"></a>플러그 인\-설치  
-**Microsoft.windowsupdateplugin** 및\- **microsoft.hotfixplugin** \-와 함께 \(설치 되는 기본 플러그 인 이외의 플러그 인은 개별적으로 설치 해야 합니다.\) CAU를 자동\-업데이트 모드에서 사용 하는 경우 모든\-클러스터 노드에 플러그 인을 설치 해야 합니다. CAU를 원격\-업데이트 모드에서 사용 하는 경우 원격\-업데이트 코디네이터 컴퓨터에 플러그 인을 설치 해야 합니다. 설치 하\-는 플러그 인에는 각 노드에 대 한 추가 설치 요구 사항이 있을 수 있습니다.  
+## <a name="BKMK_INSTALL"></a>플러그 인 @ no__t-1in을 설치 합니다.  
+CAU \(**microsoft.windowsupdateplugin** 및 **microsoft.hotfixplugin**\)와 함께 설치 되는 기본 플러그 @ no__t 기능 외의 플러그 @ no__t-0은 개별적으로 설치 해야 합니다. CAU를 self @ no__t-0updating 모드에서 사용 하는 경우 모든 클러스터 노드에 플러그 인 @ no__t-1in를 설치 해야 합니다. CAU를 remote @ no__t-0updating 모드에서 사용 하는 경우에는 원격 업데이트 코디네이터 컴퓨터에 플러그 @ no__t-1in를 설치 해야 합니다. 설치 하는 플러그 @ no__t-0에는 각 노드에 대 한 추가 설치 요구 사항이 있을 수 있습니다.  
   
-플러그\-인을 설치 하려면 플러그 인\-게시자의 지시를 따릅니다. 플러그\-인을 CAU에 수동으로 등록 하려면 플러그\-인이 설치 된 각 컴퓨터에서 [register-cauplugin](https://technet.microsoft.com/itpro/powershell/windows/cluster-aware-updating/register-cauplugin) cmdlet을 실행 합니다.  
+플러그 인 @ no__t-0in을 설치 하려면 플러그 @ no__t-1in 게시자의 지침을 따르세요. CAU를 사용 하 여 플러그 인 @ no__t-0in 수동으로 등록 하려면 플러그 인 @ no__t-2가 설치 된 각 컴퓨터에서 [register-cauplugin](https://technet.microsoft.com/itpro/powershell/windows/cluster-aware-updating/register-cauplugin) cmdlet을 실행 합니다.  
   
-## <a name="specify-a-plug-in-and-plug-in-arguments"></a>플러그\-인 및 플러그\-인 인수 지정  
+## <a name="specify-a-plug-in-and-plug-in-arguments"></a>플러그 인 @ no__t-0in 및 플러그 @ no__t-1in 인수를 지정 합니다.  
   
-### <a name="specify-a-cau-plug-in"></a>CAU 플러그 인\-지정
+### <a name="specify-a-cau-plug-in"></a>CAU 플러그 인 @ no__t-0in 지정
 
-Cau UI에서는 cau를 사용 하 여 다음\-작업을 수행할 때\-사용 가능한 플러그 인의\-드롭다운 목록에서 플러그 인을 선택 합니다.  
+Cau UI에서는 CAU를 사용 하 여 다음 작업을 수행할 때 사용 가능한 플러그 @ no__t-2의 drop @ no__t-1down 목록에서 플러그 @ no__t-0in을 선택 합니다.  
   
 -   클러스터에 업데이트 적용  
   
 -   클러스터의 업데이트 미리 보기  
   
--   클러스터 자동\-업데이트 옵션 구성  
+-   Cluster self @ no__t-0updating 옵션 구성  
   
-기본적으로 CAU는 **microsoft.windowsupdateplugin**에서 플러그\-를 선택 합니다. 그러나 설치 되 고 CAU에 등록\-된 플러그 인을 지정할 수 있습니다.
+기본적으로 CAU는 **microsoft.windowsupdateplugin**에서 플러그 @ no__t-0을 선택 합니다. 그러나 설치 되 고 CAU에 등록 된 모든 플러그 인 @ no__t-0을 지정할 수 있습니다.
 
 > [!TIP]  
-> Cau UI에서는 업데이트 실행 중에 업데이트를 미리 보거나 적용\-하기 위해 사용할 cau의 단일 플러그 인만 지정할 수 있습니다. CAU PowerShell cmdlet을 사용 하 여 하나 이상의 플러그 인\-을 지정할 수 있습니다. 클러스터에 여러 유형의 업데이트를 설치 해야 하는 경우 일반적으로 각 플러그 인\-\-에 별도의 업데이트 실행을 사용 하는 대신 하나의 업데이트 실행에서 여러 플러그 인을 지정 하는 것이 더 효율적입니다. 예를 들어 대개 노드가 다시 시작되는 횟수가 줄어듭니다.
+> CAU UI에서는 업데이트 실행 중에 업데이트를 미리 보거나 적용 하기 위해 CAU에 단일 플러그 @ no__t-0in만 지정할 수 있습니다. CAU PowerShell cmdlet을 사용 하 여 하나 이상의 플러그 인 @ no__t-0ins를 지정할 수 있습니다. 클러스터에 여러 유형의 업데이트를 설치 해야 하는 경우에는 일반적으로 각 플러그 인 @ no__t-1in에 별도의 업데이트 실행을 사용 하는 대신 하나의 업데이트 실행에서 여러 플러그 인 @ no__t-0을 지정 하는 것이 더 효율적입니다. 예를 들어 대개 노드가 다시 시작되는 횟수가 줄어듭니다.
 
-다음 표에 나열 된 CAU PowerShell cmdlet을 사용 하 여 **– CauPluginName** 매개 변수를 전달 하 여 업데이트 실행\-또는 검사에 대 한 플러그 인을 하나 이상 지정할 수 있습니다. 이름을 쉼표로 구분 하 여\-여러 플러그 인을 지정할 수 있습니다. 여러 플러그\-인을 지정 하는 경우  **\-RunPluginsSerially**,  **\-stoponpluginfailure**를 지정 하 여 업데이트 실행 중에 플러그\-인이 서로에 게 미치는 영향을 제어할 수도 있습니다. 및 **– SeparateReboots** 매개 변수 여러 플러그 인\-을 사용 하는 방법에 대 한 자세한 내용은 다음 표의 cmdlet 설명서에 제공 된 링크를 사용 하십시오.  
+다음 표에 나열 된 CAU PowerShell cmdlet을 사용 하 여 **– CauPluginName** 매개 변수를 전달 하 여 업데이트 실행 또는 검사에 대해 플러그 @ no__t-0ins을 하나 이상 지정할 수 있습니다. 이름을 쉼표로 구분 하 여 여러 개의 플러그 인 @ no__t-0을 지정할 수 있습니다. 여러 개의 플러그 인 @ no__t-0을 지정 하는 경우 **\-RunPluginsSerially**, **\-StopOnPluginFailure**및 **– SeparateReboots를 지정 하 여 업데이트 실행 중에 플러그 @ no__t-1의 영향을 제어할 수도 있습니다.** 매개 변수. 여러 플러그 인 @ no__t-0ins을 사용 하는 방법에 대 한 자세한 내용은 다음 표의 cmdlet 설명서에 제공 된 링크를 사용 하십시오.  
   
 |Cmdlet|설명|  
 |----------|---------------|  
-|[Add-cauclusterrole](https://docs.microsoft.com/en-us/powershell/module/clusterawareupdating/add-cauclusterrole)|지정 된 클러스터에 자동\-업데이트 기능을 제공 하는 CAU 클러스터 된 역할을 추가 합니다.|  
+|[Add-cauclusterrole](https://docs.microsoft.com/en-us/powershell/module/clusterawareupdating/add-cauclusterrole)|지정 된 클러스터에 자체 @ no__t-0updating 기능을 제공 하는 CAU 클러스터 된 역할을 추가 합니다.|  
 |[Invoke-caurun](https://docs.microsoft.com/en-us/powershell/module/clusterawareupdating/invoke-caurun)|적용 가능한 업데이트에 대해 클러스터 노드 검사를 수행하고, 지정된 클러스터에서 업데이트 실행을 통해 해당 업데이트를 설치합니다.|  
 |[Invoke-causcan](https://docs.microsoft.com/en-us/powershell/module/clusterawareupdating/invoke-causcan)|적용 가능한 업데이트에 대해 클러스터 노드 검사를 수행하고, 지정된 클러스터의 각 노드에 적용되는 초기 업데이트 집합의 목록을 반환합니다.|  
 |[Add-cauclusterrole](https://docs.microsoft.com/en-us/powershell/module/clusterawareupdating/set-cauclusterrole)|지정된 클러스터에서 CAU 클러스터된 역할의 구성 속성을 설정합니다.|  
   
-이러한 cmdlet을 사용 하 여 CAU 플러그\-인 매개 변수를 지정 하지 않으면 기본값은 **microsoft.windowsupdateplugin**의 플러그\-인입니다.  
+이러한 cmdlet을 사용 하 여 CAU 플러그 인 @ no__t-0in 매개 변수를 지정 하지 않으면 기본값은 플러그 @ no__t-1in **microsoft.windowsupdateplugin**입니다.  
   
-### <a name="specify-cau-plug-in-arguments"></a>CAU 플러그 인\-인수 지정  
-업데이트 실행 옵션을 구성할 때 선택한 플러그 인\-에서 사용할 하나 이상의 *이름\=값* 쌍 \(인수\) 를 지정할 수 있습니다. 예를 들어 CAU UI에서 다음과 같은 여러 인수를 지정할 수 있습니다.  
+### <a name="specify-cau-plug-in-arguments"></a>인수의 in CAU 플러그 @ no__t-0 지정  
+업데이트 실행 옵션을 구성 하는 경우 사용할 선택 된 플러그 @ no__t-4에 대해 하나 이상의 *name @ no__t-1value* 쌍 \(arguments @ no__t-3을 지정할 수 있습니다. 예를 들어 CAU UI에서 다음과 같은 여러 인수를 지정할 수 있습니다.  
   
-**Name1\=Value1; Name2\=Value2; Name3\=Value3**  
+**Name1 @ no__t-1Value1; Name2 @ no__t-2Value2; Name3 @ no__t-3Value3**  
   
-이러한 *이름\=값* 쌍은 지정한 플러그 인\-에 의미가 있어야 합니다. 일부 플러그 인의\-경우 인수는 선택 사항입니다.  
+이러한 *name @ no__t-1value* 쌍은 지정 하는 플러그 인 @ no__t에 의미가 있어야 합니다. 일부 플러그 인 @ no__t-0의 경우 인수는 선택 사항입니다.  
   
-CAU 플러그 인\-인수의 구문은 다음과 같은 일반 규칙을 따릅니다.  
+인수 in 인수의 구문은 다음과 같은 일반 규칙을 따릅니다.  
   
--   여러 *이름\=값* 쌍은 세미콜론으로 구분 됩니다.  
+-   여러 *name @ no__t-1value* 쌍은 세미콜론으로 구분 됩니다.  
   
--   공백이 포함된 값은 따옴표로 묶습니다(예: **Name1\="Value with Spaces"** .  
+-   공백이 포함된 값은 따옴표로 묶습니다(예: **Name1 @ no__t-1 "Value With Spaces"**  
   
--   *값* 의 정확한 구문은 플러그 인\-에 따라 다릅니다.  
+-   *값* 의 정확한 구문은 플러그 @ no__t-1in에 따라 달라 집니다.  
   
-**– CauPluginParameters** 매개\-변수를 지 원하는 CAU PowerShell cmdlet을 사용 하 여 플러그 인 인수를 지정 하려면 다음 형식의 매개 변수를 전달 합니다.  
+**– CauPluginParameters** 매개 변수를 지 원하는 CAU PowerShell cmdlet을 사용 하 여 인수에 플러그 @ no__t-0을 지정 하려면 다음 형식의 매개 변수를 전달 합니다.  
   
-**\-CauPluginArguments @ {Name1\=Value1; Name2\=Value2; Name3\=Value3}**  
+**\-CauPluginArguments @ {Name1 @ no__t-2Value1; Name2 @ no__t-3Value2; Name3 @ no__t-4Value3}**  
   
-미리 정의 된 PowerShell 해시 테이블을 사용할 수도 있습니다. 하나 이상의 플러그\-\-인에 대 한 플러그 인 인수를 지정 하려면 인수의 여러 해시 테이블을 쉼표로 구분 하 여 전달 합니다. 플러그\-인\-인수를 **CauPluginName**에 지정 된 순서로 전달 합니다.  
+미리 정의 된 PowerShell 해시 테이블을 사용할 수도 있습니다. 둘 이상의 플러그 인 @ no__t에 대 한 인수 in 인수를 지정 하려면 쉼표로 구분 된 인수의 여러 해시 테이블을 전달 합니다. **CauPluginName**에 지정 된 플러그 @ no__t-1in order의 인수에 @ no__t-0을 전달 합니다.  
   
-### <a name="specify-optional-plug-in-arguments"></a>선택적 플러그\-인 인수 지정  
-CAU에서\- **microsoft.windowsupdateplugin** 및 **microsoft.hotfixplugin** \(를설치하는플러그인은선택할수있는추가옵션을제공합니다.\) CAU UI에서는 플러그 인\-에 대 한 업데이트 실행 옵션을 구성한 후 **추가 옵션** 페이지에 이러한 옵션이 표시 됩니다. CAU PowerShell cmdlet을 사용 하는 경우 이러한 옵션은 선택적 플러그\-인 인수로 구성 됩니다. 자세한 내용은 이 항목의 뒷부분에 있는 [Microsoft.WindowsUpdatePlugin 사용](#BKMK_WUP) 및 [Microsoft.HotfixPlugin 사용](#BKMK_HFP) 을 참조하세요.  
+### <a name="specify-optional-plug-in-arguments"></a>인수에 선택적 플러그 @ no__t-0in 인수를 지정 합니다.  
+CAU에서 설치 @no__t**microsoft.windowsupdateplugin** 및 **microsoft.hotfixplugin**\)는 선택할 수 있는 추가 옵션을 제공 합니다. CAU UI에서이 옵션은 플러그 인 @ no__t-1in에 대 한 업데이트 실행 옵션을 구성한 후 **추가 옵션** 페이지에 표시 됩니다. CAU PowerShell cmdlet을 사용 하는 경우 이러한 옵션은 선택적 플러그 인 @ no__t-0in 인수로 구성 됩니다. 자세한 내용은 이 항목의 뒷부분에 있는 [Microsoft.WindowsUpdatePlugin 사용](#BKMK_WUP) 및 [Microsoft.HotfixPlugin 사용](#BKMK_HFP) 을 참조하세요.  
   
-## <a name="manage-plug-ins-using-windows-powershell-cmdlets"></a>Windows PowerShell\-cmdlet을 사용 하 여 플러그 인 관리  
+## <a name="manage-plug-ins-using-windows-powershell-cmdlets"></a>Windows PowerShell cmdlet을 사용 하 여 플러그 @ no__t-0ins 관리  
   
 |Cmdlet|설명|  
 |----------|---------------|  
-|[Register-cauplugin](https://docs.microsoft.com/en-us/powershell/module/clusterawareupdating/get-cauplugin)|로컬 컴퓨터에 등록 된 하나 이상의 소프트웨어 업데이트\-플러그 인에 대 한 정보를 검색 합니다.|  
-|[Register-cauplugin]((https://docs.microsoft.com/en-us/powershell/module/clusterawareupdating/register-cauplugin))|CAU 소프트웨어 업데이트 플러그 인\-을 로컬 컴퓨터에 등록 합니다.|  
-|[Register-cauplugin](https://docs.microsoft.com/en-us/powershell/module/clusterawareupdating/unregister-cauplugin)|CAU에서 사용할 수 있는\-플러그\-인 목록에서 소프트웨어 업데이트 플러그 인을 제거 합니다. **참고:** **Microsoft.windowsupdateplugin** 및\- \(microsoft.hotfixplugin를\) 사용 하 여 설치 된 플러그 인을 등록  취소할 수 없습니다.|  
+|[Register-cauplugin](https://docs.microsoft.com/en-us/powershell/module/clusterawareupdating/get-cauplugin)|로컬 컴퓨터에 등록 된 하나 이상의 소프트웨어 업데이트 플러그 @ no__t-0에 대 한 정보를 검색 합니다.|  
+|[Register-cauplugin]((https://docs.microsoft.com/en-us/powershell/module/clusterawareupdating/register-cauplugin))|CAU 소프트웨어 업데이트 플러그 @ no__t-0in을 로컬 컴퓨터에 등록 합니다.|  
+|[Register-cauplugin](https://docs.microsoft.com/en-us/powershell/module/clusterawareupdating/unregister-cauplugin)|CAU에서 사용할 수 있는 플러그 @ no__t-1의 목록에서 소프트웨어 업데이트 플러그 인 @ no__t-0in을 제거 합니다. **참고:** CAU \(**microsoft.windowsupdateplugin** 및 **microsoft.hotfixplugin**\)를 사용 하 여 설치 된 플러그 @ no__t-0 인을 등록 취소할 수 없습니다.|  
   
 ## <a name="BKMK_WUP"></a>Microsoft.windowsupdateplugin 사용  
 
-CAU의 기본\-플러그 인 **microsoft.windowsupdateplugin**는 다음 작업을 수행 합니다.
+CAU의 기본 플러그 @ no__t-0 인 **microsoft.windowsupdateplugin**은 다음 작업을 수행 합니다.
 - 각 장애 조치 클러스터 노드에서 실행 중인 Microsoft 제품에 필요한 업데이트를 적용하기 위해 각 노드에서 Windows 업데이트 에이전트와 통신합니다.
-- Windows 업데이트 또는 Microsoft 업데이트 또는\-온-프레미스 Windows Server Update Services \(WSUS\) 서버에서 직접 클러스터 업데이트를 설치 합니다.
-- 선택한 일반 배포 릴리스 \(GDR\) 업데이트만 설치 합니다. 기본적으로 플러그\-인은 중요 한 소프트웨어 업데이트만 적용 합니다. 구성이 필요하지 않습니다. 기본 구성에서 중요한 GDR 업데이트를 다운로드하여 각 노드에 설치합니다. 
+- Windows 업데이트 또는 Microsoft 업데이트에서 또는 @ no__t-0premises Windows Server Update Services \(WSUS @ no__t 서버에서 직접 클러스터 업데이트를 설치 합니다.
+- 선택한 일반 배포 릴리스 \(GDR @ no__t 업데이트만 설치 합니다. 기본적으로의 플러그 @ no__t-0in 중요 한 소프트웨어 업데이트만 적용 합니다. 구성이 필요하지 않습니다. 기본 구성에서 중요한 GDR 업데이트를 다운로드하여 각 노드에 설치합니다. 
 
 > [!NOTE]
-> 드라이버 업데이트 \(\)와 같이 기본적으로 선택 된 중요 소프트웨어 업데이트 이외의 업데이트를 적용 하기 위해 선택적 플러그\-인 매개 변수를 구성할 수 있습니다. 자세한 내용은 [Windows 업데이트 에이전트 쿼리 문자열 구성](#BKMK_QUERY)을 참조하세요.
+> @No__t 기본적으로 선택 된 중요 소프트웨어 업데이트 이외의 업데이트를 적용 하기 위해 (예: 드라이버 업데이트 @ no__t-1) 선택적으로 플러그 @ no__t-2in 매개 변수를 구성할 수 있습니다. 자세한 내용은 [Windows 업데이트 에이전트 쿼리 문자열 구성](#BKMK_QUERY)을 참조하세요.
 
 ### <a name="requirements"></a>요구 사항
 
-- 장애 조치 (failover) 클러스터와 원격 \(업데이트 코디네이터\) 컴퓨터를 사용 하는 경우 cau에 대 한 요구 사항 [및 모범 사례](cluster-aware-updating-requirements.md)에 나열 된 원격 관리에 필요한 구성 및 cau에 대 한 요구 사항을 충족 해야 합니다.
+- 장애 조치 (failover) 클러스터와 원격 업데이트 코디네이터 @no__t 컴퓨터 (사용 되는 경우)는 no__t에 대 한 요구 사항 [및 cau에 대 한 모범 사례](cluster-aware-updating-requirements.md)에 나열 된 원격 관리에 필요한 구성 및 cau에 대 한 요구 사항을 충족 해야 합니다.
 - [Microsoft 업데이트 적용에 대한 권장 사항](cluster-aware-updating-requirements.md#BKMK_BP_WUA)을 검토한 다음 필요에 따라 장애 조치(failover) 클러스터 노드에 대한 Microsoft 업데이트 구성을 변경합니다.
-- 최상의 결과를 위해서는 cau 모범 사례 분석기 \(BPA\) 를 실행 하 여 클러스터 및 업데이트 환경이 cau를 사용 하 여 업데이트를 적용 하도록 올바르게 구성 되어 있는지 확인 하는 것이 좋습니다. 자세한 내용은 [CAU 업데이트 준비 테스트](cluster-aware-updating-requirements.md#BKMK_BPA)를 참조하세요.
+- 최상의 결과를 위해서는 CAU를 사용 하 여 업데이트를 적용 하도록 클러스터 및 업데이트 환경이 올바르게 구성 되어 있는지 확인 하기 위해 CAU 모범 사례 분석기 \(BPA @ no__t-1을 실행 하는 것이 좋습니다. 자세한 내용은 [CAU 업데이트 준비 테스트](cluster-aware-updating-requirements.md#BKMK_BPA)를 참조하세요.
 
 > [!NOTE]
 > Microsoft 사용 조건에 대한 동의가 필요하거나 사용자의 개입이 필요한 업데이트는 제외되며, 이는 수동으로 설치해야 합니다.
 
 ### <a name="additional-options"></a>추가 옵션
 
-필요에 따라 다음 플러그\-인 인수를 지정 하 여 플러그\-인에서 적용 하는 업데이트 집합을 확장 하거나 제한할 수 있습니다.
-- 각 노드의 중요 업데이트\-뿐만 아니라 권장 업데이트를 적용 하도록 플러그 인을 구성 하려면 CAU UI의 **추가 옵션** 페이지에서 **중요 업데이트를 수신 하는 것과 동일한 방식으로 권장 업데이트 제공** 을 선택 합니다. 확인란을 선택 합니다.
-<br>또는 **' IncludeRecommendedUpdates '\=' True '** 플러그\-인 인수를 구성 합니다.
-- 플러그\-인을 구성 하 여 각 클러스터 노드에 적용 되는 GDR 업데이트 유형을 필터링 하려면 **QueryString** 플러그\-인 인수를 사용 하 여 Windows 업데이트 에이전트 쿼리 문자열을 지정 합니다. 자세한 내용은 [Windows 업데이트 에이전트 쿼리 문자열 구성](#BKMK_QUERY)을 참조하세요.
+필요한 경우 다음 플러그 인 @ no__t-0in 인수를 지정 하 여 플러그 인 @ no__t에서 적용 하는 업데이트 집합을 확대 하거나 제한할 수 있습니다.
+- 각 노드의 중요 한 업데이트 뿐만 아니라 권장 업데이트를 적용 하도록 플러그 인 @ no__t-0in을 구성 하려면 CAU UI의 **추가 옵션** 페이지에서 **중요 업데이트를 수신 하는 것과 같은 방법으로 권장 업데이트를 제공** 합니다. 확인란을 선택 합니다. box.
+<br>또는 **' IncludeRecommendedUpdates ' \= ' True** ' 플러그 @ no__t-2in 인수를 구성 합니다.
+- 각 클러스터 노드에 적용 되는 GDR 업데이트 종류를 필터링 하도록 플러그 인 @ no__t-0in을 구성 하려면 **QueryString** 플러그 @ no__t-2in 인수를 사용 하 여 Windows 업데이트 에이전트 쿼리 문자열을 지정 합니다. 자세한 내용은 [Windows 업데이트 에이전트 쿼리 문자열 구성](#BKMK_QUERY)을 참조하세요.
 
 ### <a name="BKMK_QUERY"></a>Windows 업데이트 에이전트 쿼리 문자열 구성  
-Windows 업데이트 Agent\-\-WUA\)쿼리 문자열로 구성 된 기본 플러그인 (microsoft.windowsupdateplugin)에 대 한 플러그 인 인수를 구성할 수 있습니다.  \( 이 명령은 WUA API를 사용하여 특정 선택 조건에 따라 각 노드에 적용할 하나 이상의 Microsoft 업데이트 그룹을 식별합니다. 논리 AND 또는 논리 OR을 사용하여 여러 조건을 조합할 수 있습니다. WUA 쿼리 문자열은 플러그\-인 인수에 다음과 같이 지정 됩니다.  
+Windows 업데이트 Agent \(WUA @ no__t-4 쿼리 문자열로 구성 된 기본 플러그 @ no__t-1in, **microsoft.windowsupdateplugin**에 대해 plug-ins @ no__t-0in 인수를 구성할 수 있습니다. 이 명령은 WUA API를 사용하여 특정 선택 조건에 따라 각 노드에 적용할 하나 이상의 Microsoft 업데이트 그룹을 식별합니다. 논리 AND 또는 논리 OR을 사용하여 여러 조건을 조합할 수 있습니다. WUA 쿼리 문자열은 다음과 같이 플러그 @ no__t-0in 인수에 지정 됩니다.  
   
-**QueryString\="Criterion1\=Value1 and\/or Criterion2\=Value2 and\/or ..."**  
+**QueryString @ no__t-1 "Criterion1 @ no__t-2Value1 and @ no__t-3or Criterion2 @ no__t-4Value2 and @ no__t-5or ..."**  
   
 예를 들어 **Microsoft.WindowsUpdatePlugin**은 **IsInstalled**, **Type**, **IsHidden**, 및 **IsAssigned** 조건을 통해 생성된 기본 **QueryString** 인수를 사용하여 중요 업데이트를 자동으로 선택합니다.  
   
-**QueryString\="isinstalled\=0 and Type\=' Software ' 및 IsHidden\=0 및 isinstalled\=1"**  
+**QueryString @ no__t-1 "IsInstalled @ no__t-20 and Type @ no__t-3'Software r e ' and IsHidden @ no__t-40 및 Isinstalled @ no__t-51"**  
   
-**QueryString** 인수를 지정 하면 플러그 인\-에 대해 구성 된 기본 **querystring** 대신이 인수가 사용 됩니다.  
+**QueryString** 인수를 지정 하는 경우이 인수는의 플러그 @ no__t-2에 대해 구성 된 기본 **querystring** 대신 사용 됩니다.  
   
 #### <a name="example-1"></a>예제 1
   
-ID *f6ce46c1\-971c\-43f9\-a2aa\-783df125f003*으로 식별 되는 특정 업데이트를 설치 하는 **QueryString** 인수를 구성 하려면:  
+ID f6ce46c1 @ no__t로 식별 되는 특정 업데이트를 설치 하는 **QueryString** 인수를 구성 하려면 @ *-2971c @ no__t-343f9 @ no__t-4a2aa @ no__t-5783df125f003*:  
   
-**QueryString\="updateid\=' f6ce46c1\-971c\-43f9\-a2aa\-783df125f003 ' 및 isinstalled\=0"**  
+**QueryString @ no__t-1 "UpdateID @ no__t-2'f6ce46c1 @ no__t-3971c @ no__t-443f9 @ no__t-5a2aa @ no__t-6783df125f003 ' 및 IsInstalled @ no__t-70"**  
   
 > [!NOTE]  
-> 위의 예제는 클러스터\-인식 업데이트 마법사를 사용 하 여 업데이트를 적용 하는 데 유효 합니다. CAU UI를 사용 하 여 자체\-업데이트 옵션을 구성 하거나 **Add\-add-cauclusterrole** 또는 **Set\-add-cauclusterrole**PowerShell cmdlet을 사용 하 여 특정 업데이트를 설치 하려면 다음을 지정 해야 합니다. 두 개의\-작은따옴표 문자를 포함 하는 updateid 값:  
+> 위의 예제는 클러스터 @ no__t-0Aware 업데이트 마법사를 사용 하 여 업데이트를 적용 하는 데 유효 합니다. CAU UI를 사용 하 여 자체 @ no__t-0updating 옵션을 구성 하거나 **Add @ no__t-2CauClusterRole** 또는 **Set @ no__t-4CauClusterRole**PowerShell cmdlet을 사용 하 여 특정 업데이트를 설치 하려는 경우 updateid 값을 두 개의 형식으로 지정 해야 합니다. 단일 @ no__t-5 인용 문자:  
 >   
-> **QueryString\="updateid\=' ' f6ce46c1\-971c\-43f9\-a2aa\-783df125f003 ' ' 및 isinstalled\=0"**  
+> **QueryString @ no__t-1 "UpdateID @ no__t-2'f6ce46c1 @ no__t-3971c @ no__t-443f9 @ no__t-5a2aa @ no__t-6783df125f003 ' ' 및 IsInstalled @ no__t-70"**  
   
 #### <a name="example-2"></a>예제 2
   
 드라이버만 설치하는 **QueryString** 인수를 구성하려면  
   
-**QueryString\="isinstalled\=0 and Type\=' Driver ' and IsHidden\=0"**  
+**QueryString @ no__t-1 "IsInstalled @ no__t-20 and Type @ no__t-3'Driver ' and IsHidden @ no__t-40"**  
   
-기본 플러그\-인, **microsoft.windowsupdateplugin**의 쿼리 문자열에 대 한 자세한 내용, **isinstalled**\)와 같은 검색 \(조건 및 쿼리에 포함할 수 있는 구문에 대 한 자세한 내용은 문자열, [WUA (Windows 업데이트 에이전트) API 참조](https://go.microsoft.com/fwlink/p/?LinkId=223304)에서 검색 기준에 대 한 섹션을 참조 하세요.  
+기본 플러그 인 @ no__t-0in, @no__t **microsoft.windowsupdateplugin**의 쿼리 문자열에 대 한 자세한 내용 및 쿼리 문자열에 포함할 수 있는 구문 (예: **isinstalled**\)) 및 쿼리 문자열에 포함할 수 있는 구문에 대 한 자세한 내용은 섹션을 참조 하세요. [WUA (Windows 업데이트 에이전트) API 참조](https://go.microsoft.com/fwlink/p/?LinkId=223304)에서 검색 조건에 대해 알아봅니다.  
   
 ## <a name="BKMK_HFP"></a>Microsoft.hotfixplugin 사용  
-Microsoft.hotfixplugin 플러그\-인  을 사용 하 여 핫픽스 라는 microsoft 제한 된 배포 릴리스 \(LDR\) 업데이트 \(를 적용할 수 있으며, 이전\) 에는 특정 Microsoft 소프트웨어 문제를 해결 하기 위해 독립적으로 다운로드 합니다. 플러그 인은 SMB 파일 공유의 루트 폴더에서 업데이트를 설치 하 고 타사 드라이버, 펌웨어 및 BIOS 업데이트를\-적용 하도록 사용자 지정할 수도 있습니다.
+Microsoft.hotfixplugin의 플러그 @ no__t-0은 Microsoft 제한 된 배포 릴리스 \(LDR @ no__t @no__t 업데이트를 적용 하는 데 사용할 수 있습니다 **.** (핫픽스 라고도 함), 주소에 독립적으로 다운로드 하는 이전 버전의 qfe @ no__t-5 특정 Microsoft 소프트웨어 문제 플러그 인은 SMB 파일 공유의 루트 폴더에서 업데이트를 설치 하 고, 비 @ no__t-0Microsoft 드라이버, 펌웨어 및 BIOS 업데이트를 적용 하도록 사용자 지정할 수도 있습니다.
 
 > [!NOTE]
-> 핫픽스는 기술 자료 문서의 Microsoft에서 다운로드할 수도 있지만\-필요에 따라 고객에 게 제공 됩니다.
+> 핫픽스는 기술 자료 문서의 Microsoft에서 다운로드할 수 있는 경우도 있지만 고객에 게 @ no__t-0needed 기준으로 제공 됩니다.
 
 ### <a name="requirements"></a>요구 사항
 
-- 장애 조치 (failover) 클러스터와 원격 \(업데이트 코디네이터\) 컴퓨터를 사용 하는 경우 cau에 대 한 요구 사항 [및 모범 사례](cluster-aware-updating-requirements.md)에 나열 된 원격 관리에 필요한 구성 및 cau에 대 한 요구 사항을 충족 해야 합니다.
+- 장애 조치 (failover) 클러스터와 원격 업데이트 코디네이터 @no__t 컴퓨터 (사용 되는 경우)는 no__t에 대 한 요구 사항 [및 cau에 대 한 모범 사례](cluster-aware-updating-requirements.md)에 나열 된 원격 관리에 필요한 구성 및 cau에 대 한 요구 사항을 충족 해야 합니다.
 - [Microsoft.HotfixPlugin 사용에 대한 권장 사항](cluster-aware-updating-requirements.md#BKMK_BP_HF)을 검토하세요.
-- 최상의 결과를 위해서는 cau 모범 사례 분석기 \(BPA\) 모델을 실행 하 여 클러스터 및 업데이트 환경이 cau를 사용 하 여 업데이트를 적용 하도록 올바르게 구성 되어 있는지 확인 하는 것이 좋습니다. 자세한 내용은 [CAU 업데이트 준비 테스트](cluster-aware-updating-requirements.md#BKMK_BPA)를 참조하세요.
-- 게시자에서 업데이트를 가져와 복사 하거나 서버 메시지 \(블록 smb\) 파일 공유 \(핫픽스 루트 폴더\) (smb 2.0 이상, 모든 클러스터에서 액세스할 수 있음)로 압축을 풉니다. CAU를 원격 \(\-업데이트 모드로\)사용 하는 경우에는 노드 및 원격 업데이트 코디네이터 컴퓨터를 사용 합니다. 자세한 내용은 이 항목의 뒷부분에 있는 [핫픽스 루트 폴더 구조 구성](#BKMK_HF_ROOT)을 참조하세요. 
+- 최상의 결과를 위해서는 CAU를 사용 하 여 업데이트를 적용 하도록 클러스터 및 업데이트 환경이 올바르게 구성 되어 있는지 확인 하기 위해 CAU 모범 사례 분석기 \(BPA @ no__t 모델을 실행 하는 것이 좋습니다. 자세한 내용은 [CAU 업데이트 준비 테스트](cluster-aware-updating-requirements.md#BKMK_BPA)를 참조하세요.
+- 게시자에서 업데이트를 가져와 복사 하거나 서버 메시지 블록 \(SMB @ no__t-1 파일 공유 \(hotfix 루트 폴더 @ no__t-3 (SMB 2.0 이상 지원 하 고 모든 클러스터 노드 및 원격 업데이트에서 액세스할 수 있음)로 압축을 풉니다. 코디네이터 컴퓨터 \(, 원격 @ no__t-5updating 모드 @ no__t-6에서 CAU를 사용 합니다. 자세한 내용은 이 항목의 뒷부분에 있는 [핫픽스 루트 폴더 구조 구성](#BKMK_HF_ROOT)을 참조하세요. 
 
     > [!NOTE]
-    > 기본적으로이 플러그\-인은 파일 이름 확장명이 .msu, .msi 및 .msp 인 핫픽스를 설치 합니다.
+    > 기본적으로이 플러그 @ no__t-0은 파일 이름 확장명이 .msu, .msi 및 .msp 인 핫픽스를 설치 합니다.
 
-- \( **% Systemroot%\\System32WindowsPowerShell\\v1.0모듈clusterawareupdating.dll\\폴더에 제공 된 defaulthotfixconfig 파일을 복사 합니다.\\\\** CAU 도구가 설치 되어 있고 핫픽스를 추출한 핫픽스\) 루트 폴더에 설치 된 컴퓨터에서 예를 들어 구성 파일을  *\\MyFileServer\\핫픽스\\루트 \\\\* 에 복사 합니다. 
+- CAU 도구가 있는 컴퓨터의 **% systemroot% \\System32 @ no__t-3WindowsPowerShell @ no__t-4v 1.0 @ no__t-5Modules @ no__t-6ClusterAwareUpdating** 폴더에 제공 된 defaul @no__t 파일을 복사 합니다. 사용자가 만들고 핫픽스를 추출한 핫픽스 루트 폴더에 @ no__t-7을 설치 했습니다. 예를 들어 구성 파일을 *\\ @ no__t-2MyFileServer @ No__t 핫픽스 @ no__t-4Root @ no__t-5*로 복사 합니다. 
 
     > [!NOTE]
     > Microsoft 및 기타 업데이트에서 제공하는 대부분의 핫픽스를 설치하려면 기본 핫픽스 구성 파일을 수정하지 않고 사용하면 됩니다. 시나리오에 필요한 경우 고급 작업으로 구성 파일을 사용자 지정할 수 있습니다. 예를 들어 특정 확장명이 있는 핫픽스 파일을 처리하거나 특정 종료 조건에 대한 동작을 정의하려면 이 구성 파일을 사용자 지정 규칙에 포함할 수 있습니다. 자세한 내용은 이 항목의 뒷부분에 있는 [핫픽스 구성 파일 사용자 지정](#BKMK_CONFIG_FILE)을 참조하세요.
@@ -167,28 +167,28 @@ Microsoft.hotfixplugin 플러그\-인  을 사용 하 여 핫픽스 라는 micro
 ### <a name="configuration"></a>Configuration
 
 다음 설정을 구성합니다. 자세한 내용은 이 항목의 뒷부분에 있는 섹션의 링크를 참조하세요.
-- 적용할 업데이트 및 핫픽스 구성 파일이 포함된 공유 핫픽스 루트 폴더의 경로. CAU UI에서이 경로를 입력 하거나 **\=HotfixRootFolderPath\<path >** PowerShell 플러그\-인 인수를 구성할 수 있습니다. 
+- 적용할 업데이트 및 핫픽스 구성 파일이 포함된 공유 핫픽스 루트 폴더의 경로. CAU UI에서이 경로를 입력 하거나 **HotfixRootFolderPath @ no__t @ No__t path >** PowerShell 플러그 @ no__t-3in 인수를 구성할 수 있습니다. 
 
    > [!NOTE]
-   > 핫픽스 루트 폴더를 로컬 폴더 경로로 지정 하거나  *\\ServerName\\Share \\\\rootfoldername*형식의 UNC 경로로 지정할 수 있습니다. 도메인\-기반 또는 독립 실행형 DFS 네임 스페이스 경로를 사용할 수 있습니다. 그러나 핫픽스 구성 파일\-에서 액세스 권한을 확인 하는 플러그 인 기능은 DFS 네임 스페이스 경로와 호환 되지 않으므로이를 구성 하는 경우 CAU UI를 사용 하거나를 구성 하 여 액세스 권한 확인을 사용 하지 않도록 설정 해야 합니다. **Disableaclchecks\=True '** 플러그\-인 인수를 확인 합니다.
-- 핫픽스 루트 폴더를 호스트 하는 서버에서 해당 폴더에 액세스할 수 있는 권한이 있는지 확인 하 고 smb 공유 폴더 \(smb 서명 또는 smb 암호화\)에서 액세스 되는 데이터의 무결성을 확인 하기 위한 설정입니다. 자세한 내용은 [핫픽스 루트 폴더에 대한 액세스 제한](#BKMK_ACL)를 참조하세요.
+   > 핫픽스 루트 폴더를 로컬 폴더 경로로 지정 하거나 *\\ @ no__t-2ServerName @ no__t-3Share @ no__t-4RootFolderName*형식의 UNC 경로로 지정할 수 있습니다. 도메인 @ no__t-0based 또는 독립 실행형 DFS 네임 스페이스 경로를 사용할 수 있습니다. 그러나 핫픽스 구성 파일에서 액세스 권한을 확인 하는 기능에서 플러그 @ no__t-0은 DFS 네임 스페이스 경로와 호환 되지 않으므로이를 구성 하는 경우 CAU UI를 사용 하거나를 **구성 하 여 액세스 권한 확인을 사용 하지 않도록 설정 해야 합니다. DisableAclChecks @ no__t-2'True ' l** @ no__t-3in 인수를 확인 합니다.
+- 핫픽스 루트 폴더를 호스트 하는 서버의 설정으로, 폴더에 액세스할 수 있는 적절 한 권한이 있는지 확인 하 고 SMB 공유 폴더 \(SMB 서명 또는 SMB 암호화 @ no__t-1에서 액세스 되는 데이터의 무결성을 확인 합니다. 자세한 내용은 [핫픽스 루트 폴더에 대한 액세스 제한](#BKMK_ACL)를 참조하세요.
 
 ### <a name="additional-options"></a>추가 옵션
 
-- 필요한 경우 핫픽스 파일 공유\-에서 데이터에 액세스할 때 SMB 암호화가 적용 되도록 플러그 인을 구성 합니다. CAU UI의 **추가 옵션** 페이지에서 **핫픽스 루트 폴더에 액세스할 때 SMB 암호화 필요** 옵션을 선택 하거나 **RequireSMBEncryption\=' True '** PowerShell 플러그\-인 인수를 구성 합니다. 
+- 필요한 경우 핫픽스 파일 공유에서 데이터에 액세스할 때 SMB 암호화가 적용 되도록 플러그 인 @ no__t-0in 구성 합니다. CAU UI의 **추가 옵션** 페이지에서 **핫픽스 루트 폴더에 액세스 하는 데 SMB 암호화 필요** 옵션을 선택 하거나 **RequireSMBEncryption @ no__t-3'f's '** PowerShell plug-ins in 인수를 구성 합니다. 
   > [!IMPORTANT]
   > SMB 서명 또는 SMB 암호화를 통해 SMB 데이터 무결성을 보장하려면 SMB 서버에서 추가 구성 단계를 수행해야 합니다. 자세한 내용은 [핫픽스 루트 폴더에 대한 액세스 제한](#BKMK_ACL)의 4단계를 참조하세요. SMB 암호화 사용을 적용하는 옵션을 선택했는데 핫픽스 루트 폴더가 SMB 암호화를 사용해 액세스하도록 구성되어 있지 않으면 업데이트 실행이 실패하게 됩니다.
-- 필요한 경우 핫픽스 루트 폴더 및 핫픽스 구성 파일에 대한 기본 권한 확인을 사용하지 않도록 설정합니다. CAU UI에서 **핫픽스 루트 폴더 및 구성 파일에 대 한 관리자 액세스를 사용 하지 않도록 설정**을 선택 하거나 **\=disableaclchecks ' True '** 플러그\-인 인수를 구성 합니다.
-- 필요에 따라 **필요한 경우 hotfixinstallertimeoutminutes\= <Integer>**  인수를 구성 하 여 핫픽스 플러그 인\-에서 핫픽스 설치 관리자 프로세스가 반환 될 때까지 대기 하는 기간을 지정 합니다. \(기본값은 30 분입니다.\) 예를 들어 시간 제한 기간을 2 시간으로 지정 하려면 **필요한 경우 hotfixinstallertimeoutminutes\=120**을 설정 합니다.
-- 필요에 따라 **필요한 경우 hotfixconfigfilename \= <name>**  플러그\-인 인수를 구성 하 여 핫픽스 루트 폴더에 있는 핫픽스 구성 파일의 이름을 지정 합니다. 이름을 지정하지 않으면 기본 이름인 DefaultHotfixConfig.xml이 사용됩니다.
+- 필요한 경우 핫픽스 루트 폴더 및 핫픽스 구성 파일에 대한 기본 권한 확인을 사용하지 않도록 설정합니다. CAU UI에서 **핫픽스 루트 폴더 및 구성 파일에 대 한 관리자 액세스를 사용 하지 않도록 설정**을 선택 하거나 **disableaclchecks @ No__t-2'true '** 플러그 @ no__t-3in 인수를 구성 합니다.
+- 필요에 따라 **필요한 경우 hotfixinstallertimeoutminutes @ no__t @ no__t** 인수를 구성 하 여 핫픽스 플러그 인 @ no__t에서 핫픽스 설치 관리자 프로세스가 반환 될 때까지 대기 하는 기간을 지정 합니다. @no__t-기본값은 30 분입니다. \) 예를 들어 시간 제한 기간을 2 시간으로 지정 하려면 **필요한 경우 hotfixinstallertimeoutminutes @ no__t-1120**를 설정 합니다.
+- 필요에 따라 핫픽스 루트 폴더에 있는 핫픽스 구성 파일의 이름을 지정 하도록 **필요한 경우 hotfixconfigfilename \= @no__t** 플러그 @ no__t-3in 인수를 구성 합니다. 이름을 지정하지 않으면 기본 이름인 DefaultHotfixConfig.xml이 사용됩니다.
   
 ### <a name="BKMK_HF_ROOT"></a>핫픽스 루트 폴더 구조 구성
 
-핫픽스\-플러그 인이 작동 하려면 핫픽스가 SMB 파일 공유 \(핫픽스 루트 폴더\)의 잘\-정의 된 구조로 저장 되어야 하며, 다음에 대 한 경로를 사용 하 여 핫픽스 플러그\-인을 구성 해야 합니다. CAU UI 또는 CAU PowerShell cmdlet을 사용 하는 핫픽스 루트 폴더입니다. 이 경로는 **HotfixRootFolderPath** 인수로 플러그 인\-에 전달 됩니다. 다음 예제에 표시된 대로 업데이트 필요에 따라 핫픽스 루트 폴더에 대한 몇 가지 구조 중 하나를 선택할 수 있습니다. 구조를 준수하지 않는 파일이나 폴더는 무시됩니다.  
+핫픽스 플러그 @ no__t-0in의 경우 핫픽스는 SMB 파일 공유 \(hotfix 루트 폴더 @ no__t-3의 잘 된 @ no__t-1 구조에 저장 되어야 하며, CAU UI를 사용 하 여 핫픽스 루트 폴더의 경로로 핫픽스 플러그 인 @ no__t-4를 구성 해야 합니다. CAU PowerShell cmdlet입니다. 이 경로는 **HotfixRootFolderPath** 인수로 플러그 @ no__t-0in에 전달 됩니다. 다음 예제에 표시된 대로 업데이트 필요에 따라 핫픽스 루트 폴더에 대한 몇 가지 구조 중 하나를 선택할 수 있습니다. 구조를 준수하지 않는 파일이나 폴더는 무시됩니다.  
   
 #### <a name="example-1---folder-structure-used-to-apply-hotfixes-to-all-cluster-nodes"></a>예 1-모든 클러스터 노드에 핫픽스를 적용 하는 데 사용 되는 폴더 구조
   
-모든 클러스터 노드에 핫픽스를 적용 하도록 지정 하려면 핫픽스 루트 폴더 아래에 있는 **CAUHotfix\_all** 이라는 폴더에 핫픽스를 복사 합니다. 이 예제에서 **HotfixRootFolderPath** 플러그\-인 인수는  *\\MyFileServer\\핫픽스 \\\\Root로설정됩니다.\\* **CAUHotfix\_all** 폴더에는 모든 클러스터 노드에 적용 되는 확장명이 .msu, .msi 및 .msp 인 세 개의 업데이트가 포함 되어 있습니다. 업데이트 파일 이름은 설명을 위한 용도로만 제공됩니다.  
+모든 클러스터 노드에 핫픽스를 적용 하도록 지정 하려면 핫픽스 루트 폴더 아래에 있는 **CAUHotfix @ no__t-1all** 이라는 폴더에 핫픽스를 복사 합니다. 이 예제에서 **HotfixRootFolderPath** 플러그 @ no__t-1in 인수는 *\\ @ no__t-4MyFileServer @ No__t-5hotfixes @ No__t-6root @ no__t-7*로 설정 됩니다. **CAUHotfix @ no__t-1all** 폴더에는 모든 클러스터 노드에 적용 되는 확장명이 .msu, .msi 및 .msp 인 세 개의 업데이트가 포함 되어 있습니다. 업데이트 파일 이름은 설명을 위한 용도로만 제공됩니다.  
   
 > [!NOTE]  
 > 이 예제와 다음 예제에서 기본 이름이 DefaultHotfixConfig.xml인 핫픽스 구성 파일은 핫픽스 루트 폴더의 필요한 위치에 표시됩니다.  
@@ -205,7 +205,7 @@ Microsoft.hotfixplugin 플러그\-인  을 사용 하 여 핫픽스 라는 micro
   
 #### <a name="example-2---folder-structure-used-to-apply-certain-updates-only-to-a-specific-node"></a>예제 2-특정 업데이트를 특정 노드에만 적용 하는 데 사용 되는 폴더 구조
   
-특정 노드에만 적용되는 핫픽스를 지정하려면 노드 이름에 핫픽스 루트 폴더 아래의 하위 폴더를 사용합니다. 예를 들어 클러스터 노드의 NetBIOS 이름인 *ContosoNode1*을 사용합니다. 그런 다음 이 노드에만 적용되는 업데이트를 이 하위 폴더로 이동합니다. 다음 예제에서 **HotfixRootFolderPath** 플러그\-인 인수는  *\\MyFileServer\\핫픽스 \\\\Root로설정됩니다.\\* **CAUHotfix\_all** 폴더의 업데이트는 모든 클러스터 노드에 적용 되 고 *Node1\_\_특정 업데이트* 는 *ContosoNode1*에만 적용 됩니다.  
+특정 노드에만 적용되는 핫픽스를 지정하려면 노드 이름에 핫픽스 루트 폴더 아래의 하위 폴더를 사용합니다. 예를 들어 클러스터 노드의 NetBIOS 이름인 *ContosoNode1*을 사용합니다. 그런 다음 이 노드에만 적용되는 업데이트를 이 하위 폴더로 이동합니다. 다음 예제에서 **HotfixRootFolderPath** 플러그 @ no__t-1in 인수는 *\\ @ no__t-4MyFileServer @ No__t-5hotfixes @ No__t-6root @ no__t-7*로 설정 됩니다. **CAUHotfix @ no__t-1all** 폴더의 업데이트는 모든 클러스터 노드에 적용 되 고 *Node1 @ no__t-3Specific\_Update.msu* 는 *ContosoNode1*에만 적용 됩니다.  
   
 ```
 \\MyFileServer\Hotfixes\Root\   
@@ -222,9 +222,9 @@ Microsoft.hotfixplugin 플러그\-인  을 사용 하 여 핫픽스 라는 micro
   
 #### <a name="example-3---folder-structure-used-to-apply-updates-other-than-msu-msi-and-msp-files"></a>예제 3-.msu, .msi 및 .msp 파일 이외의 업데이트를 적용 하는 데 사용 되는 폴더 구조
   
-기본적으로 **Microsoft.HotfixPlugin**은 확장명이 .msu, .msi 또는 .msp인 업데이트만 적용합니다. 그러나 특정 업데이트는 확장명이 다르며, 다른 설치 명령이 필요할 수 있습니다. 예를 들어 확장명이 .exe인 펌웨어 업데이트를 클러스터의 노드에 적용해야 할 수 있습니다. 기본이 아닌\-특정 업데이트 유형을 설치 해야 함을 나타내는 하위 폴더로 핫픽스 루트 폴더를 구성할 수 있습니다. 또한 핫픽스 구성 XML 파일의 `<FolderRules>` 요소에 설치 명령을 지정하는 해당 폴더 설치 규칙을 구성해야 합니다.  
+기본적으로 **Microsoft.HotfixPlugin**은 확장명이 .msu, .msi 또는 .msp인 업데이트만 적용합니다. 그러나 특정 업데이트는 확장명이 다르며, 다른 설치 명령이 필요할 수 있습니다. 예를 들어 확장명이 .exe인 펌웨어 업데이트를 클러스터의 노드에 적용해야 할 수 있습니다. 핫픽스 루트 폴더를 구성할 수 있습니다 .이 폴더에는 특정 @ no__t-0default 업데이트 유형을 설치 해야 함을 나타내는 하위 폴더가 있습니다. 또한 핫픽스 구성 XML 파일의 `<FolderRules>` 요소에 설치 명령을 지정하는 해당 폴더 설치 규칙을 구성해야 합니다.  
   
-다음 예제에서 **HotfixRootFolderPath** 플러그\-인 인수는  *\\MyFileServer\\핫픽스 \\\\Root로설정됩니다.\\* 여러 업데이트가 모든 클러스터 노드에 적용되며, 펌웨어 업데이트 *SpecialHotfix1.exe*는 *FolderRule1*을 사용하여 *ContosoNode1*에 적용됩니다. 핫픽스 구성 파일에서 *ContosoNode1* 을 구성하는 방법에 대한 자세한 내용은 이 항목의 뒷부분에 있는 [핫픽스 구성 파일 사용자 지정](#BKMK_CONFIG_FILE) 을 참조하세요.  
+다음 예제에서 **HotfixRootFolderPath** 플러그 @ no__t-1in 인수는 *\\ @ no__t-4MyFileServer @ No__t-5hotfixes @ No__t-6root @ no__t-7*로 설정 됩니다. 여러 업데이트가 모든 클러스터 노드에 적용되며, 펌웨어 업데이트 *SpecialHotfix1.exe*는 *FolderRule1*을 사용하여 *ContosoNode1*에 적용됩니다. 핫픽스 구성 파일에서 *ContosoNode1* 을 구성하는 방법에 대한 자세한 내용은 이 항목의 뒷부분에 있는 [핫픽스 구성 파일 사용자 지정](#BKMK_CONFIG_FILE) 을 참조하세요.  
   
 ```
 \\MyFileServer\Hotfixes\Root\   
@@ -244,7 +244,7 @@ Microsoft.hotfixplugin 플러그\-인  을 사용 하 여 핫픽스 라는 micro
 ### <a name="BKMK_CONFIG_FILE"></a>핫픽스 구성 파일 사용자 지정  
 핫픽스 구성 파일은 **Microsoft.HotfixPlugin** 이 장애 조치(failover) 클러스터에 특정 핫픽스 파일 형식을 설치하는 방식을 제어합니다. 구성 파일의 XML 스키마는 HotfixConfigSchema.xsd에 정의되며, 이 파일은 CAU 도구가 설치되어 있는 컴퓨터의 다음 폴더에 있습니다.  
   
-**% systemroot%\\System32\\WindowsPowerShell\\v 1.0\\모듈\\clusterawareupdating.dll 폴더**  
+**% systemroot% \\System32 @ no__t-2WindowsPowerShell @ no__t-3v 1.0 @ no__t-4Modules @ no__t-5ClusterAwareUpdating 폴더**  
   
 핫픽스 구성 파일을 사용자 지정하려면 이 위치에서 핫픽스 루트 폴더로 예제 구성 파일 DefaultHotfixConfig.xml을 복사한 다음 시나리오에 맞게 적절히 수정합니다.  
   
@@ -253,7 +253,7 @@ Microsoft.hotfixplugin 플러그\-인  을 사용 하 여 핫픽스 라는 micro
   
 기본적으로 핫픽스 구성 XML 파일은 다음 두 가지 범주의 핫픽스에 대한 설치 규칙 및 종료 조건을 정의합니다.  
   
--   플러그\-인에서 기본적 \(으로 .msu, .msi 및 .msp 파일\)을 사용 하 여 설치할 수 있는 확장명이 있는 핫픽스 파일.  
+-   -1, .msi 및 .msp 파일 @ no__t-2에는 no__t의 플러그 @-0in 확장이 @no__t 기본적으로 설치 될 수 있는 핫픽스 파일이 있습니다.  
   
     `<ExtensionRules>` 요소의 `<DefaultRules>` 요소로 정의되며, 지원되는 기본 파일 형식마다 하나의 `<Extension>` 요소가 있습니다. 일반적인 XML 구조는 다음과 같습니다.  
   
@@ -279,9 +279,9 @@ Microsoft.hotfixplugin 플러그\-인  을 사용 하 여 핫픽스 라는 micro
   
     사용자 환경의 모든 클러스터 노드에 특정 업데이트 유형을 적용해야 하는 경우 추가 `<Extension>` 요소를 정의할 수 있습니다.  
   
--   .Msi, .msu 또는 .msp 파일이 아닌 핫픽스 또는 기타 업데이트 파일 (예:\-타사 드라이버, 펌웨어 및 BIOS 업데이트).  
+-   .Msi, .msu 또는 .msp 파일이 아닌 핫픽스 또는 기타 업데이트 파일 (예: @ no__t-0Microsoft 드라이버, 펌웨어 및 BIOS 업데이트).  
   
-    기본이\-아닌 각 파일 형식은 `<FolderRules>` 요소의 `<Folder>` 요소로 구성 됩니다. `<Folder>` 요소의 이름 특성은 핫픽스 루트 폴더에서 해당 유형의 업데이트가 포함되는 폴더의 이름과 동일해야 합니다. 폴더는 **CAUHotfix\_All** 폴더 또는 노드\-별 폴더에 있을 수 있습니다. 예를 들어 *FolderRule1* 이 핫픽스 루트 폴더에 구성된 경우 XML 파일에서 해당 폴더의 업데이트에 대한 설치 템플릿 및 종료 조건을 정의하는 다음 요소를 구성합니다.  
+    @ No__t-0이 아닌 각 기본 파일 형식은 @no__t 요소에서 `<Folder>` 요소로 구성 됩니다. `<Folder>` 요소의 이름 특성은 핫픽스 루트 폴더에서 해당 유형의 업데이트가 포함되는 폴더의 이름과 동일해야 합니다. 폴더는 **CAUHotfix @ no__t-1All** 폴더 또는 node @ no__t-2aa 폴더에 있을 수 있습니다. 예를 들어 *FolderRule1* 이 핫픽스 루트 폴더에 구성된 경우 XML 파일에서 해당 폴더의 업데이트에 대한 설치 템플릿 및 종료 조건을 정의하는 다음 요소를 구성합니다.  
   
     ```xml  
     <FolderRules>  
@@ -316,7 +316,7 @@ Microsoft.hotfixplugin 플러그\-인  을 사용 하 여 핫픽스 라는 micro
   
 일반적인 단계는 다음과 같습니다.  
   
-1.  플러그\-인을 사용 하 여 업데이트 실행에 사용 되는 사용자 계정을 식별 합니다.  
+1.  플러그 인 @ no__t-0in을 사용 하 여 업데이트 실행에 사용 되는 사용자 계정을 식별 합니다.  
   
 2.  SMB 파일 서버의 필요한 그룹에서 이 사용자 계정 구성  
   
@@ -326,13 +326,13 @@ Microsoft.hotfixplugin 플러그\-인  을 사용 하 여 핫픽스 라는 micro
   
 5.  SMB 서버에서 Windows 방화벽 규칙 사용  
   
-#### <a name="step-1-identify-the-user-account-that-is-used-for-updating-runs-by-using-the-hotfix-plug-in"></a>1단계. 핫픽스 플러그\-인을 사용 하 여 업데이트 실행에 사용 되는 사용자 계정을 식별 합니다.
+#### <a name="step-1-identify-the-user-account-that-is-used-for-updating-runs-by-using-the-hotfix-plug-in"></a>1단계. 핫픽스 플러그 인 @ no__t-0in을 사용 하 여 업데이트 실행에 사용 되는 사용자 계정을 식별 합니다.
   
-**Microsoft.hotfixplugin** 를 사용 하 여 업데이트 실행을 수행 하는 동안 cau에서 보안 설정을 확인 하는 데 사용 되는 계정은 다음과 같이 cau가\-원격 업데이트 모드에서\-사용 되는지 아니면 자동 업데이트 모드에서 사용 되는지에 따라 달라 집니다.  
+**Microsoft.hotfixplugin** 를 사용 하 여 업데이트 실행을 수행 하는 동안 cau에서 보안 설정을 확인 하는 데 사용 되는 계정은 다음과 같이 cau가 remote @ no__t-1updating 모드에서 사용 되는지 아니면 자체 @ no__t 업데이트 모드에서 사용 되는지에 따라 달라 집니다.  
   
--   **원격\-업데이트 모드** 업데이트를 미리 보고 적용 하려면 클러스터에 대 한 관리 권한이 있는 계정입니다.  
+-   **원격 @ no__t-1 업데이트 모드** 업데이트를 미리 보고 적용 하기 위해 클러스터에 대 한 관리 권한이 있는 계정입니다.  
   
--   **자동\-업데이트 모드** CAU 클러스터 된 역할에 대 한 Active Directory에서 구성 된 가상 컴퓨터 개체의 이름입니다. CAU 클러스터된 역할에 대해 Active Directory에서 사전 준비된 가상 컴퓨터 개체 이름이거나, 클러스터된 역할에 대해 CAU에서 생성되는 이름입니다. Cau에서 생성 되는 경우 이름을 가져오려면 **Get\-add-cauclusterrole** CAU PowerShell cmdlet을 실행 합니다. 출력에서 **ResourceGroupName**이 생성된 가상 컴퓨터 개체 계정의 이름입니다.  
+-   **Self @ no__t-1 업데이트 모드** CAU 클러스터 된 역할에 대 한 Active Directory에서 구성 된 가상 컴퓨터 개체의 이름입니다. CAU 클러스터된 역할에 대해 Active Directory에서 사전 준비된 가상 컴퓨터 개체 이름이거나, 클러스터된 역할에 대해 CAU에서 생성되는 이름입니다. CAU에서 생성 되는 경우 이름을 가져오려면 **Get @ no__t-1CauClusterRole** CAU PowerShell cmdlet을 실행 합니다. 출력에서 **ResourceGroupName**이 생성된 가상 컴퓨터 개체 계정의 이름입니다.  
   
 #### <a name="step-2-configure-this-user-account-in-the-necessary-groups-on-an-smb-file-server"></a>2단계. SMB 파일 서버의 필요한 그룹에서 이 사용자 계정 구성
   
@@ -349,7 +349,7 @@ Microsoft.hotfixplugin 플러그\-인  을 사용 하 여 핫픽스 라는 micro
     wmimgmt.msc  
     ```  
   
-3.  콘솔 트리에서\- **WMI 컨트롤 \(로컬\)** 을 마우스 오른쪽 단추로 클릭 한 다음 **속성**을 클릭 합니다.  
+3.  콘솔 트리에서 no__t을 마우스 오른쪽 단추로 클릭 하 고 **WMI 컨트롤 \(Local @ no__t-3**을 클릭 한 다음 **속성**을 클릭 합니다.  
   
 4.  **보안**을 클릭하고 **루트**를 확장합니다.  
   
@@ -361,19 +361,19 @@ Microsoft.hotfixplugin 플러그\-인  을 사용 하 여 핫픽스 라는 micro
   
 #### <a name="step-3-configure-permissions-to-access-the-hotfix-root-folder"></a>3단계. 핫픽스 루트 폴더 액세스 권한 구성
   
-기본적으로 업데이트를 적용 하려고 하면 핫픽스 플러그\-인에서 핫픽스 루트 폴더에 액세스할 수 있는 NTFS 파일 시스템 권한의 구성을 확인 합니다. 폴더 액세스 권한이 제대로 구성 되어 있지 않으면 핫픽스 플러그 인\-을 사용한 업데이트 실행이 실패할 수 있습니다.  
+기본적으로 업데이트를 적용 하려고 하면의 핫픽스 플러그 @ no__t-0은 핫픽스 루트 폴더에 대 한 액세스에 대 한 NTFS 파일 시스템 권한의 구성을 확인 합니다. 폴더 액세스 권한이 제대로 구성 되지 않은 경우에서 핫픽스 플러그 @ no__t-0in를 사용 하는 업데이트 실행이 실패할 수 있습니다.  
   
-핫픽스 플러그 인의\-기본 구성을 사용 하는 경우 폴더 액세스 권한이 다음 요구 사항을 충족 하는지 확인 합니다.  
+에서 핫픽스 플러그 인 @ no__t-0in 기본 구성을 사용 하는 경우 폴더 액세스 권한이 다음 요구 사항을 충족 하는지 확인 합니다.  
   
 -   Users 그룹에 읽기 권한이 있어야 합니다.  
   
--   플러그\-인에서 확장명이 .exe 인 업데이트를 적용 하는 경우 Users 그룹에 실행 권한이 있어야 합니다.  
+-   플러그 @ no__t-0in이 .exe 확장명의 업데이트를 적용 하는 경우 Users 그룹에 실행 권한이 있어야 합니다.  
   
--   특정 보안 주체만 허용 \(되지만 쓰기 또는 수정 권한이 반드시 필요한\) 것은 아닙니다. 허용되는 주체는 로컬 Administrators 그룹, SYSTEM, CREATOR OWNER 및 TrustedInstaller입니다. 다른 계정 또는 그룹에는 핫픽스 루트 폴더에 대한 쓰기 또는 수정 권한이 허용되지 않습니다.  
+-   -0but는 특정 보안 주체에만 허용 되지만 쓰기 또는 수정 권한이 필요 하지는 않습니다. 허용되는 주체는 로컬 Administrators 그룹, SYSTEM, CREATOR OWNER 및 TrustedInstaller입니다. 다른 계정 또는 그룹에는 핫픽스 루트 폴더에 대한 쓰기 또는 수정 권한이 허용되지 않습니다.  
   
-필요에 따라 플러그 인\-에서 기본적으로 수행 하는 이전 검사를 사용 하지 않도록 설정할 수 있습니다. 다음 두 가지 방법 중 하나로 이 작업을 수행할 수 있습니다.  
+필요에 따라 이전 검사를 사용 하지 않도록 설정할 수 있습니다. 이때 플러그 @ no__t-0in이 기본적으로 수행 됩니다. 다음 두 가지 방법 중 하나로 이 작업을 수행할 수 있습니다.  
   
--   CAU PowerShell cmdlet을 사용 하는 경우 핫픽스 플러그\-인에 대 한 **CauPluginArguments** 매개 변수에서 **disableaclchecks\=' True '** 인수를 구성 합니다.  
+-   CAU PowerShell cmdlet을 사용 하는 경우의 **CauPluginArguments** 매개 변수에서 **disableaclchecks @ No__t-1'true o l e s '** 인수를 구성 합니다.  
   
 -   CAU UI를 사용하는 경우 업데이트 실행 옵션을 구성하는 데 사용되는 마법사의 **추가 업데이트 옵션** 페이지에서 **핫픽스 루트 폴더 및 구성 파일에 대한 관리자 권한 확인 안 함** 옵션을 선택합니다.  
   
@@ -381,7 +381,7 @@ Microsoft.hotfixplugin 플러그\-인  을 사용 하 여 핫픽스 라는 micro
   
 #### <a name="step-4-configure-settings-for-smb-data-integrity"></a>4단계. SMB 데이터 무결성에 대한 설정 구성
   
-클러스터 노드와 smb 파일 공유\-간의 연결에서 데이터 무결성을 확인 하려면 smb 파일 공유에서 smb 서명 또는 smb 암호화를 위한 설정을 사용 하도록 설정 해야 합니다. 많은 환경에서 향상 된 보안 및 더 나은 성능을 제공 하는 SMB 암호화는 Windows Server 2012부터 지원 됩니다. 이러한 설정 중 하나 또는 모두를 다음과 같이 설정할 수 있습니다.  
+클러스터 노드와 SMB 파일 공유 간의 연결에서 데이터 무결성을 확인 하려면 smb 파일 공유에서 smb 서명 또는 SMB 암호화에 대 한 설정을 사용 하도록 설정 해야 합니다. 많은 환경에서 향상 된 보안 및 더 나은 성능을 제공 하는 SMB 암호화는 Windows Server 2012부터 지원 됩니다. 이러한 설정 중 하나 또는 모두를 다음과 같이 설정할 수 있습니다.  
   
 -   SMB 서명을 사용하려면 Microsoft 기술 자료 [문서 887429](https://support.microsoft.com/kb/887429) 의 절차를 참조하세요.  
   
@@ -393,14 +393,14 @@ Microsoft.hotfixplugin 플러그\-인  을 사용 하 여 핫픽스 라는 micro
   
     여기서 <*ShareName*>은 SMB 공유 폴더의 이름입니다.  
   
-필요에 따라 smb 서버 연결에서 smb 암호화 사용을 적용 하려면 CAU UI에서 **핫픽스 루트 폴더에 액세스할 때 smb 암호화 필요** 옵션을 선택 하거나 **RequireSMBEncryption\=' True '** 플러그를 구성 합니다. \-in 인수는 CAU PowerShell cmdlet을 사용 합니다.  
+필요에 따라 SMB 서버 연결에서 smb 암호화 사용을 적용 하려면 CAU UI에서 **핫픽스 루트 폴더에 액세스할 때 Smb 암호화 필요** 옵션을 선택 하거나 **RequireSMBEncryption @ no__t** 를 구성 합니다. CAU PowerShell cmdlet을 사용 하 여의 t-3in 인수입니다.  
   
 > [!IMPORTANT]  
 > SMB 암호화 사용을 적용하는 옵션을 선택했는데 핫픽스 루트 폴더가 SMB 암호화를 사용해 연결하도록 구성되어 있지 않으면 업데이트 실행이 실패하게 됩니다.  
   
 #### <a name="step-5-enable-a-windows-firewall-rule-on-the-smb-server"></a>5단계. SMB 서버에서 Windows 방화벽 규칙 사용
   
-Smb 파일 서버의 Windows 방화벽 규칙 **에서\) 파일 \(서버\-원격 관리 SMB** 를 사용 하도록 설정 해야 합니다. 이는 Windows Server 2016, Windows Server 2012 R2 및 Windows Server 2012에서 기본적으로 사용 하도록 설정 되어 있습니다.  
+SMB 파일 서버의 Windows 방화벽에서 **파일 서버 원격 관리 \(SMB @ no__t-2in @ no__t-3** 규칙을 사용 하도록 설정 해야 합니다. 이는 Windows Server 2016, Windows Server 2012 R2 및 Windows Server 2012에서 기본적으로 사용 하도록 설정 되어 있습니다.  
   
 ## <a name="see-also"></a>참조  
   

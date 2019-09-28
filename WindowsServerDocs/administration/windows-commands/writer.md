@@ -1,8 +1,8 @@
 ---
-title: 기록기
-description: '에 대 한 Windows 명령을 항목 * * *- '
+title: 저자
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8aee4ecca85c7d5f46ee79f3ad928b746c02e7bb
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 6c00f6067cd5f6cf741cddbd6d62c5bcbb1f37a9
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66439978"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71361862"
 ---
-# <a name="writer"></a>기록기
+# <a name="writer"></a>저자
 
 
 
@@ -38,16 +38,16 @@ writer exclude [<Writer> | <Component>]
 | 매개 변수  |                                                                                      설명                                                                                      |
 |------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |   확인   | 백업 또는 복원 프로시저에는 지정 된 작성기 나 구성 요소가 포함 되어 있는지 확인 합니다. 백업 또는 복원 프로시저는 작성기 나 구성 요소가 포함 되어 있지 않으면 실패 합니다. |
-|  exclude   |                                                   백업 또는 복원 프로시저에서 지정 된 작성기 또는 구성 요소를 제외합니다.                                                    |
-| [\<Writer> |                                                                                     <Component>]                                                                                      |
+|  Exclude   |                                                   백업 또는 복원 프로시저에서 지정 된 작성기 또는 구성 요소를 제외합니다.                                                    |
+| [\<Writer > |                                                                                     <Component>]                                                                                      |
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
-(예를 들어 4dc3bdd4-ab48-4d07-adb0-3bee2926fd7f) 해당 GUID를 지정 하 여 작성기를 확인 하려면 다음을 입력 합니다.
+해당 GUID (이 예에서는 4dc3bdd4-ab48-4d07-adb0-3bee2926fd7f)를 지정 하 여 작성기를 확인 하려면 다음을 입력 합니다.
 ```
 writer verify {4dc3bdd4-ab48-4d07-adb0-3bee2926fd7f}
 ```
-이름 "시스템 Writer"를 사용 하 여 작성기를 제외 하려면 다음을 입력 합니다.
+"시스템 기록기" 라는 이름의 기록기를 제외 하려면 다음을 입력 합니다.
 ```
 writer exclude "System Writer"
 ```

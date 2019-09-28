@@ -6,14 +6,14 @@ ms.author: billmath
 manager: femila
 ms.date: 10/24/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 25ba9505f3f93fb236d6e60e49efc4206482f977
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: f4dd1d45646475be3788cd6b615b1743976eedae
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70866009"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71358407"
 ---
 # <a name="using-an-azure-ad-ux-web-theme-in-active-directory-federation-services"></a>Active Directory Federation Services에서 Azure AD UX 웹 테마 사용
 AD FS forms 로그인은 현재 Azure/O365 로그인 환경을 반영 하지 않습니다.  최종 사용자에 게 보다 균일 하 고 원활한 환경을 제공 하기 위해 AD FS 서버에 적용할 수 있는 css 스타일 시트 팔 로우 웹 테마를 출시 했습니다.  현재 Windows Server 2016의 AD FS에 대 한 양식 로그인은 다음과 같습니다.

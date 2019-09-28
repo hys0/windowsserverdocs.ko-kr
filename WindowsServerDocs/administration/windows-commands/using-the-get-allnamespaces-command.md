@@ -1,8 +1,8 @@
 ---
 title: Get AllNamespaces 명령을 사용 하 여
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8b77bb80238ee63cc0d71d88592d75850720e33b
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 0cd90fc650271c863459dd809e47ca6309132de5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66440526"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71363291"
 ---
 # <a name="using-the-get-allnamespaces-command"></a>Get AllNamespaces 명령을 사용 하 여
 
@@ -41,10 +41,10 @@ wdsutil /Get-AllNamespaces [/Server:<Server name>] [/ContentProvider:<name>] [/d
 |  [/ 서버:<Server name>]  | 서버 이름을 지정합니다. 이 NetBIOS 이름 또는 정규화 된 도메인 이름 (FQDN) 수 있습니다. 서버 이름이 없는 지정 하는 경우 로컬 서버 사용 됩니다. |                        |
 | [/ ContentProvider:<name>] |                                                        만 지정 된 콘텐츠 공급자에 대 한 네임 스페이스를 표시합니다.                                                         |                        |
 |      [/ 쇼: 클라이언트]      |                            Windows Server 2008 에서만 지원 됩니다. 네임 스페이스에 연결 된 클라이언트 컴퓨터에 대 한 정보를 표시 합니다.                             |                        |
-|    [/details:Clients]     |                           Windows Server 2008 r 2 에서만 지원 됩니다. 네임 스페이스에 연결 된 클라이언트 컴퓨터에 대 한 정보를 표시 합니다.                           |                        |
+|    [/세부 정보: 클라이언트]     |                           Windows Server 2008 r 2 에서만 지원 됩니다. 네임 스페이스에 연결 된 클라이언트 컴퓨터에 대 한 정보를 표시 합니다.                           |                        |
 |  [/ExcludedeletePending]  |                                                              비활성화 된 모든 전송 목록에서 제외 됩니다.                                                              |                        |
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 모든 네임 스페이스를 보려면 다음을 입력 합니다.
 ```
 wdsutil /Get-AllNamespaces

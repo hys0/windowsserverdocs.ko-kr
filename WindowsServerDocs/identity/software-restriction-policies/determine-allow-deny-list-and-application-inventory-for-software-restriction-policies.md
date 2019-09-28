@@ -2,7 +2,7 @@
 title: 소프트웨어 제한 정책에 대한 허용-거부 목록 및 응용 프로그램 인벤토리 확인
 description: Windows Server 보안
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: security-software-restriction-policies
@@ -13,65 +13,65 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: 60e78912284715649938567d66ffb90b9890b1b9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4ddea6daeb2150bd9fd3131a8457a6a4b408cfc3
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59847294"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71357663"
 ---
 # <a name="determine-allow-deny-list-and-application-inventory-for-software-restriction-policies"></a>소프트웨어 제한 정책에 대한 허용-거부 목록 및 응용 프로그램 인벤토리 확인
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-IT 전문가 위한이 항목에서는 허용을 만들고 거부 목록 소프트웨어 제한 정책 (SRP)부터 Windows Server 2008 및 Windows Vista로 관리 되는 응용 프로그램에 대 한 방법 지침을 제공 합니다.
+IT 전문가를 위한이 항목에서는 Windows Server 2008 및 Windows Vista부터 응용 프로그램에 대 한 허용 및 거부 목록을 SRP (소프트웨어 제한 정책)로 관리 하는 방법에 대 한 지침을 제공 합니다.
 
 ## <a name="introduction"></a>소개
-SRP(소프트웨어 제한 정책)는 도메인의 컴퓨터에서 실행 중인 소프트웨어 프로그램을 식별하고, 실행할 해당 프로그램의 기능을 제어하는 그룹 정책 기반 기능입니다. 소프트웨어 제한 정책을 사용하면 명확하게 식별된 응용 프로그램만 실행할 수 있도록 고도로 제한된 컴퓨터 구성을 만들 수 있습니다. 이러한 Microsoft Active Directory Domain Services 및 그룹 정책과 통합 되어 있지만 독립 실행형 컴퓨터 에서도 구성할 수 있습니다. SRP에 대 한 시작 지점에 대 한 참조를 [소프트웨어 제한 정책](software-restriction-policies.md)합니다.
+SRP(소프트웨어 제한 정책)는 도메인의 컴퓨터에서 실행 중인 소프트웨어 프로그램을 식별하고, 실행할 해당 프로그램의 기능을 제어하는 그룹 정책 기반 기능입니다. 소프트웨어 제한 정책을 사용하면 명확하게 식별된 응용 프로그램만 실행할 수 있도록 고도로 제한된 컴퓨터 구성을 만들 수 있습니다. 이러한 기능은 Microsoft Active Directory Domain Services 및 그룹 정책와 통합 되어 있지만 독립 실행형 컴퓨터 에서도 구성할 수 있습니다. SRP에 대 한 시작 지점은 [소프트웨어 제한 정책](software-restriction-policies.md)을 참조 하세요.
 
-Windows Server 2008 R2 및 Windows 7 부터는 Windows AppLocker 용도로 사용할 수 있습니다 또는 SRP 함께 대신 응용 프로그램 제어 전략의 일부입니다.
+Windows Server 2008 R2 및 Windows 7 부터는 응용 프로그램 제어 전략의 일부에 대 한 SRP를 사용 하거나 사용 하지 않고 Windows AppLocker를 사용할 수 있습니다.
 
-SRP를 사용 하 여 특정 작업을 수행 하는 방법에 대 한 내용은 다음을 참조 합니다.
+SRP를 사용 하 여 특정 작업을 수행 하는 방법에 대 한 자세한 내용은 다음을 참조 하세요.
 
--   [소프트웨어 제한 정책 규칙을 사용 하 여 작동 합니다.](work-with-software-restriction-policies-rules.md)
+-   [소프트웨어 제한 정책 규칙 사용](work-with-software-restriction-policies-rules.md)
 
--   [전자 메일 바이러스 로부터 컴퓨터를 보호 하기 위해 소프트웨어 제한 정책 사용](use-software-restriction-policies-to-help-protect-your-computer-against-an-email-virus.md)
+-   [소프트웨어 제한 정책을 사용 하 여 전자 메일 바이러스 로부터 컴퓨터를 보호 합니다.](use-software-restriction-policies-to-help-protect-your-computer-against-an-email-virus.md)
 
-### <a name="what-default-rule-to-choose-allow-or-deny"></a>선택할 수 있는 기본 규칙: 허용 또는 거부
-소프트웨어 제한 정책에서 기본 규칙을 기반으로 하는 두 가지 모드 중 하나에 배포할 수 있습니다. 허용 목록 또는 거부 목록입니다. 사용자 환경에서 실행 되는 모든 응용 프로그램을 식별 하는 정책을 만들 수 있습니다. 제한 및 정책 내에서 기본 규칙은 모든 응용 프로그램 실행을 명시적으로 허용 하지 않는 것을 차단 합니다. 실행 되지 않습니다;는 모든 응용 프로그램을 식별 하는 정책을 만들 수 있습니다. 기본 규칙은 Unrestricted 하 고 명시적으로 나열 되어 있는 응용 프로그램만 제한 합니다.
+### <a name="what-default-rule-to-choose-allow-or-deny"></a>선택할 기본 규칙: 허용 또는 거부
+소프트웨어 제한 정책은 기본 규칙을 기반으로 하는 두 가지 모드 중 하나로 배포할 수 있습니다. 허용 목록 또는 거부 목록입니다. 사용자 환경에서 실행할 수 있는 모든 응용 프로그램을 식별 하는 정책을 만들 수 있습니다. 정책 내의 기본 규칙은 제한 되며 명시적으로 실행을 허용 하지 않는 모든 응용 프로그램을 차단 합니다. 또는 실행할 수 없는 모든 응용 프로그램을 식별 하는 정책을 만들 수 있습니다. 기본 규칙은 무제한 이며 명시적으로 나열 된 응용 프로그램만 제한 합니다.
 
 > [!IMPORTANT]
-> 거부 목록 모드 응용 프로그램 제어에 대 한 조직에 대 한 높은 유지 관리 전략을 수 있습니다. 만들기 및 모든 맬웨어 및 기타 문제가 있는 응용 프로그램 금지 하는 진화 하는 목록을 유지 관리에 시간이 오래 걸리고 실수에 취약 것입니다.
+> 거부 목록 모드는 응용 프로그램 제어와 관련 하 여 조직에 대 한 높은 유지 관리 전략 일 수 있습니다. 모든 맬웨어 및 기타 문제가 있는 응용 프로그램을 차단 하는 진화 하는 목록을 만들고 유지 관리 하는 데는 시간이 많이 걸리고 실수에 취약 합니다.
 
-### <a name="create-an-inventory-of-your-applications-for-the-allow-list"></a>허용 목록에 대 한 응용 프로그램의 인벤토리 생성
-허용 기본 규칙을 효과적으로 사용 하려면 조직에서 응용 프로그램은 필요한 정확 하 게 결정 해야 합니다. Microsoft Application Compatibility Toolkit의 인벤토리 수집기와 같은 응용 프로그램 인벤토리를 생성 하도록 설계 하는 도구가 있습니다. 하지만 SRP 고급 로깅 기능을 정확 하 게 새로운 응용 프로그램을 실행 환경에서 이해할 수 있도록 합니다.
+### <a name="create-an-inventory-of-your-applications-for-the-allow-list"></a>허용 목록에 사용할 응용 프로그램의 인벤토리를 만듭니다.
+기본 허용 규칙을 효과적으로 사용 하려면 조직에 필요한 응용 프로그램을 정확 하 게 결정 해야 합니다. Microsoft 응용 프로그램 호환성 도구 키트의 인벤토리 수집기와 같은 응용 프로그램 인벤토리를 생성 하도록 설계 된 도구가 있습니다. 그러나 SRP에는 사용자 환경에서 실행 중인 응용 프로그램을 정확 하 게 이해 하는 데 도움이 되는 고급 로깅 기능이 있습니다.
 
-##### <a name="to-discover-which-applications-to-allow"></a>검색할 수 있도록 응용 프로그램
+##### <a name="to-discover-which-applications-to-allow"></a>허용할 응용 프로그램을 검색 하려면
 
-1.  테스트 환경에서 소프트웨어 제한 정책을 Unrestricted로 기본 규칙 집합을 사용 하 여 배포 하 고 모든 추가 규칙을 제거 합니다. 모든 응용 프로그램을 제한 하도록 하지 않고도 SRP를 사용 하도록 설정 하면 SPR 새로운 응용 프로그램 되는 실행을 모니터링할 수 됩니다.
+1.  테스트 환경에서 기본 규칙이 무제한으로 설정 된 소프트웨어 제한 정책을 배포 하 고 추가 규칙을 제거 합니다. 응용 프로그램을 제한 하지 않고 SRP를 사용 하도록 설정 하는 경우 SPR는 실행 중인 응용 프로그램을 모니터링할 수 있습니다.
 
-2.  고급 로깅 기능을 활성화 하 고 로그 파일을 써야 하는 경로 설정 하기 위해 다음 레지스트리 값을 만듭니다.
+2.  고급 로깅 기능을 사용 하도록 설정 하 고 로그 파일을 쓸 경로를 설정 하려면 다음 레지스트리 값을 만듭니다.
 
     **"HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Safer\ CodeIdentifiers"**
 
-    문자열 값입니다. *NameLogFile NameLogFile 경로*
+    문자열 값: *NameLogFile의 경로 이름 로그 파일*
 
-    로그 파일에 항목이 기록 됩니다 SRP는 모든 응용 프로그램을 실행할 때를 평가 하므로 *NameLogFile* 응용 프로그램이 실행 될 때마다 합니다.
+    SRP는 실행 될 때 모든 응용 프로그램을 평가 하므로 응용 프로그램이 실행 될 때마다 로그 파일 *Namelogfile* 에 항목이 기록 됩니다.
 
-3.  로그 파일을 평가 합니다.
+3.  로그 파일 평가
 
-    각 로그 항목 상태:
+    각 로그 항목의 상태는 다음과 같습니다.
 
-    -   소프트웨어 제한 정책 및 프로세스는 호출 프로세스의 ID (PID)의 호출자에 게
+    -   소프트웨어 제한 정책의 호출자와 호출 프로세스의 PID (프로세스 ID)
 
-    -   확인할 대상
+    -   평가할 대상입니다.
 
-    -   해당 응용 프로그램이 실행 하는 동안 발생 하는 SRP 규칙
+    -   해당 응용 프로그램이 실행 될 때 발생 한 SRP 규칙입니다.
 
-    -   SRP 규칙에 대 한 식별자입니다.
+    -   SRP 규칙의 식별자입니다.
 
-    로그 파일에 작성 한 출력의 예:
+    로그 파일에 기록 되는 출력의 예는 다음과 같습니다.
 
-**explorer.exe (PID = 4728) identifiedC:\Windows\system32\onenote.exe 규칙에 따라 무제한 usingpath, Guid = {320bd852-aa7c-4674-82c5-9a80321670a3}** 모든 응용 프로그램 및 관련된 코드 SRP 확인 하 고 차단 하도록 설정 하는 로그에 기록 됩니다 그런 다음 허용 목록에 대해 고려해 야 하는 실행 파일 확인에 사용할 수 있는 파일입니다.
+**explorer.exe (PID = 4728) identifiedC: \ Windows\system32\onenote.exe As 무제한 usingpath rule, Guid = {320bd852-aa7c-4674-82c5-9a80321670a3}**    SRP를 확인 하 고 차단 하도록 설정 하는 모든 응용 프로그램 및 관련 코드는 로그 파일에 기록 되며,이 파일을 사용 하 여 허용 된 목록에 대해 고려해 야 하는 실행 파일을 확인할 수 있습니다.
 
 
