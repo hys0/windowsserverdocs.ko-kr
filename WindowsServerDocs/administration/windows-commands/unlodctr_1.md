@@ -1,8 +1,8 @@
 ---
 title: unlodctr
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e1a662da10acc65b4ad2fd0d055cf9d46de603be
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 85a66b521f404358705962078f33af4bec1ebae5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59886654"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71363904"
 ---
 # <a name="unlodctr"></a>unlodctr
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-시스템 레지스트리에서 성능 카운터 이름 및 서비스 또는 장치 드라이버에 대 한 설명 텍스트를 제거합니다.   
+시스템 레지스트리에서 서비스 또는 장치 드라이버에 대 한 성능 카운터 이름 및 설명 텍스트를 제거 합니다.   
 
 ## <a name="syntax"></a>구문  
 ```  
@@ -33,7 +33,7 @@ Unlodctr <DriverName>
 ### <a name="parameters"></a>매개 변수  
 |매개 변수|설명|  
 |-------|--------|  
-|\<DriverName>|제거는 성능 카운터 이름 설정 및 드라이버 또는 서비스에 대 한 텍스트 설명 <DriverName> Windows Server 2003 레지스트리에서 합니다.|  
+|@no__t 0DriverName >|Windows Server 2003 레지스트리에서 성능 카운터 이름 설정 및 드라이버 또는 서비스 <DriverName>에 대 한 설명 텍스트를 제거 합니다.|  
 |/?|명령 프롬프트에 도움말을 표시합니다.|  
 
 ## <a name="remarks"></a>설명  
@@ -42,8 +42,8 @@ Unlodctr <DriverName>
 
 텍스트가 주위에 따옴표를 사용 하 여 사용자가 제공 하는 정보에 공백이 포함 되 면 (예를 들어 "<DriverName>").  
 
-## <a name="BKMK_Examples"></a>예제  
-현재 성능 레지스트리 설정을 제거한 SMTP Simple Mail Transfer Protocol () 서비스에 대 한 설명 텍스트를 카운터:  
+## <a name="BKMK_Examples"></a>예와  
+SMTP (Simple Mail Transfer Protocol) 서비스에 대 한 현재 성능 레지스트리 설정 및 카운터 설명 텍스트를 제거 하려면 다음을 수행 합니다.  
 ```  
 unlodctr SMTPSVC  
 ```  

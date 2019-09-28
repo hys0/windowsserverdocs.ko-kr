@@ -1,8 +1,8 @@
 ---
 title: Get AllServers 명령을 사용 하 여
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: dbccb834f9058f2c3cca097cdf998455f2a6892e
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 8dd7f9917a54a80b3c570b07fe1a87bd3bcbe4d6
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66440488"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71363261"
 ---
 # <a name="using-the-get-allservers-command"></a>Get AllServers 명령을 사용 하 여
 
@@ -39,11 +39,11 @@ WDSUTIL [Options] /Get-AllServers /Show:{Config | Images | All} [/Detailed] [/Fo
 
 |   매개 변수   |                                                                                                                 설명                                                                                                                  |
 |---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| / 표시: {0} 구성 |                                                                                                                    이미지                                                                                                                    |
+| /Show: {Config |                                                                                                                    이미지                                                                                                                    |
 |  [/ 자세한]  | 와 함께에서 사용 하는 경우는 **/Show:Images** 또는 **/Show:All**, 모든 이미지 각 이미지의 메타 데이터를 반환 합니다. 하는 경우는 **자세한/** 옵션이 지정 되지 않은, 이미지 이름, 설명 및 파일 이름을 반환 하는 기본 동작입니다. |
-| [포리스트 /: {예 |                                                                                                                     No}]                                                                                                                     |
+| [포리스트/: {예 |                                                                                                                     아니요}]                                                                                                                     |
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 모든 서버에 대 한 정보를 보려면 다음을 입력 합니다.
 ```

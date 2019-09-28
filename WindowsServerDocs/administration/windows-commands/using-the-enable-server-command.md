@@ -1,8 +1,8 @@
 ---
 title: Enable 서버 명령 사용
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: fdf03a778a6c646aa79c2f844212b1728c5c73eb
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 0b90621ec14c6cf451d7a05eace79f2e0679b2f4
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59852724"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71363446"
 ---
 # <a name="using-the-enable-server-command"></a>Enable 서버 명령 사용
 
@@ -33,7 +33,7 @@ wdsutil [Options] /Enable-Server [/Server:<Server name>]
 |매개 변수|설명|
 |-------|--------|
 |[/ 서버:<Server name>]|서버 이름을 지정합니다. 이 NetBIOS 이름 또는 정규화 된 도메인 이름 (FQDN) 수 있습니다. 서버 이름이 없는 지정 하는 경우 로컬 서버 사용 됩니다.|
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 서버에서 서비스를 사용 하려면 다음 중 하나를 실행 합니다.
 ```
 wdsutil /Enable-Server

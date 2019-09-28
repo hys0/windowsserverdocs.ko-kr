@@ -1,8 +1,8 @@
 ---
-title: wbadmin 가져오기 항목
-description: '에 대 한 Windows 명령을 항목 * * *- '
+title: wbadmin get 항목
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: eeb7c29ff552f968b4785612f626a86baf154ad7
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6c3cc532381321655bbd3d5549b3c9b1896b9280
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59842884"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71362408"
 ---
-# <a name="wbadmin-get-items"></a>wbadmin 가져오기 항목
+# <a name="wbadmin-get-items"></a>wbadmin get 항목
 
 
 
@@ -47,13 +47,13 @@ wbadmin get items
 |-backupTarget|세부 정보 하려는 백업을 포함 하는 저장소 위치를 지정 합니다. 해당 대상 위치에 저장 된 백업 목록에 사용 됩니다. 백업 대상 위치는 로컬로 연결 된 디스크 드라이브 또는 원격 공유 폴더 될 수 있습니다. 경우 **wbadmin 항목을 가져와**실행 백업을 만든 동일한 컴퓨터에서이 매개 변수가 필요 하지 않습니다. 그러나 다른 컴퓨터에서 만든 백업에 대 한 정보를 가져오려면이 매개 변수가 필요 합니다.|
 |-컴퓨터|에 대 한 정보를 백업 하는 컴퓨터의 이름을 지정 합니다. 여러 대의 컴퓨터는 같은 위치에 백업 하는 경우 유용 합니다. 경우에 사용 해야 **-backupTarget** 지정 됩니다.|
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 항목을 나열 하려면 형식 오전 9 시에 2013 년 3 월 31 일에 실행 된 백업에서:
 ```
 wbadmin get items -version:03/31/2013-09:00
 ```
-항목을 나열 하려면 백업에서 오전 9시 2013 년 4 월 30 일에 실행 된 server01의 에 저장 하 고 \\ \\servername\share, 유형:
+항목을 나열 하려면 백업에서 오전 9시 2013 년 4 월 30 일에 실행 된 server01의 \\ @ no__t-1servername\share에 저장 되 고 다음을 입력 합니다.
 ```
 wbadmin get items -version:04/30/2013-09:00 -backupTarget:\\servername\share -machine:server01
 ```
