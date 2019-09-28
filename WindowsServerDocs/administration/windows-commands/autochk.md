@@ -1,8 +1,8 @@
 ---
 title: autochk
-description: Windows 명령 항목에 대 한 **않은** -컴퓨터를 시작할 때 실행 되 고 이전 Windows Server를 시작 하는 파일 시스템의 논리적 무결성을 확인 합니다.
+description: '**Autochk** 용 Windows 명령 항목-컴퓨터를 시작할 때와 Windows Server 이전 버전에서 파일 시스템의 논리적 무결성을 확인 하기 시작 하기 전에 실행 됩니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,20 +13,20 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e6c26d42410e5466950ede4f9aa059e315030588
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 76e54d14879cefd4661a1ca7f1c3b8ee7ec58de2
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66435034"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71382346"
 ---
 # <a name="autochk"></a>autochk
 
 
 
-컴퓨터를 시작할 때 실행 하 고 파일 시스템의 논리적 무결성을 확인 하기 전에 Windows Server® 2008 R2.
+컴퓨터를 시작 하 고 Windows Server® 2008 R2 이전 버전에서 파일 시스템의 논리적 무결성을 확인 하기 시작 하기 전에 실행 됩니다.
 
-**Autochk.exe** 버전이 **Chkdsk** NTFS 디스크에만 및 Windows Server 2008 R2 시작 하기 전에 실행 되는 합니다. **않은** 명령줄에서 직접 실행할 수 없습니다. 대신, **않은** 다음과 같은 상황에서 실행 합니다.
+**Autochk** 는 NTFS 디스크 에서만 실행 되 고 Windows Server 2008 r 2가 시작 되기 전에 실행 되는 버전의 **Chkdsk** 입니다. **않은** 명령줄에서 직접 실행할 수 없습니다. 대신, **않은** 다음과 같은 상황에서 실행 합니다.
 -   실행 하려고 하면 **Chkdsk** 부팅 볼륨에
 -   경우 **Chkdsk** 볼륨의 단독 사용을 얻을 수 없으므로
 -   변경 된 볼륨으로 플래그가 지정 되어 있는 경우
@@ -42,7 +42,7 @@ ms.locfileid: "66435034"
 
 [명령줄 구문 키](command-line-syntax-key.md)
 
-[Chkdsk](chkdsk.md)
+[손상](chkdsk.md)
 
 [Chkntfs](chkntfs.md)
 

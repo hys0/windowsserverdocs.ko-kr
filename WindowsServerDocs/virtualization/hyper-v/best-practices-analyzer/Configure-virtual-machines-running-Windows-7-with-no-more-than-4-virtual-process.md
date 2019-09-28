@@ -1,7 +1,7 @@
 ---
 title: 4 개 이하의 가상 프로세서와 함께 Windows 7을 실행 하는 가상 컴퓨터 구성
 description: 이 모범 사례 분석기 규칙에 대 한 텍스트의 온라인 버전입니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -10,12 +10,12 @@ ms.topic: article
 ms.assetid: 8fcf0868-b543-4f94-aee7-35324346da55
 author: KBDAzure
 ms.date: 8/16/2016
-ms.openlocfilehash: ee450f3510e6dcc1d0a32ed5d5a0be549ac8809e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 14b5e0637ad2e6462e13f0e1f18af651bbcc5fc3
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59848044"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71366273"
 ---
 # <a name="configure-virtual-machines-running-windows-7-with-no-more-than-4-virtual-processors"></a>4 개 이하의 가상 프로세서와 함께 Windows 7을 실행 하는 가상 컴퓨터 구성
 
@@ -33,12 +33,12 @@ ms.locfileid: "59848044"
 다음 섹션에서는 기울임꼴이이 문제에 대 한 모범 사례 분석기 도구에 표시 되는 UI 텍스트를 나타냅니다.  
   
 ## <a name="issue"></a>**문제점**  
-*Windows 7을 실행 하는 가상 머신 4 대 이상의 가상 프로세서를 사용 하 여 구성 됩니다.*  
+*Windows 7을 실행 하는 가상 머신은 4 개 이상의 가상 프로세서로 구성 됩니다.*  
   
-## <a name="impact"></a>**Impact**  
-*Microsoft는 다음 가상 컴퓨터의 구성을 지원 하지 않습니다.*  
+## <a name="impact"></a>**식**  
+*Microsoft는 다음과 같은 가상 컴퓨터의 구성을 지원 하지 않습니다.*  
   
-\<가상 머신의 목록 >  
+@no__t-가상 머신 목록 >  
   
 ## <a name="resolution"></a>**해결 방법**  
 *가상 컴퓨터를 종료 하 고 하나 이상의 가상 프로세서를 제거 합니다.*  

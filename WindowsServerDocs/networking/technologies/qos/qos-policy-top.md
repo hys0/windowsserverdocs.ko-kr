@@ -1,19 +1,19 @@
 ---
 title: 서비스 품질(QoS) 정책
 description: 이 항목에서는 그룹 정책를 사용 하 여 Windows Server 2016의 특정 응용 프로그램 및 서비스에 대 한 네트워크 트래픽 대역폭의 우선 순위를 지정할 수 있는 QoS (서비스 품질) 정책의 개요를 제공 합니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 16918506-102c-482e-89d3-004ad8d6aabe
 manager: brianlic
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 8f139f047218c4c8da3a462206d4541c1fc255ec
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 429c38d93c2c5c0053153d538304767c8261229c
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871865"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71395861"
 ---
 # <a name="quality-of-service-qos-policy"></a>서비스 \(품질 QoS\) 정책
 

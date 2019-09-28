@@ -2,18 +2,18 @@
 title: 저장소 보고서 구성
 description: 이 문서에서는 저장소 보고서에 대한 기본 매개 변수를 구성하는 방법을 설명합니다.
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: f62109a8d3ea3e4e6386956789d276f9aa911e80
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d3500f4ea4fc264f3cb663f17c3a50439b9cb454
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59885234"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71394255"
 ---
 # <a name="configure-storage-reports"></a>저장소 보고서 구성
 
@@ -42,5 +42,5 @@ ms.locfileid: "59885234"
 
 ## <a name="see-also"></a>참조
 
--   [설정 파일 서버 리소스 관리자 옵션](setting-file-server-resource-manager-options.md)
--   [저장소 보고서 관리](storage-reports-management.md)
+-   [파일 서버 리소스 관리자 옵션 설정](setting-file-server-resource-manager-options.md)
+-   [스토리지 보고서 관리](storage-reports-management.md)

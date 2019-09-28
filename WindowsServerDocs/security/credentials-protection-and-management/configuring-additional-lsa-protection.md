@@ -2,7 +2,7 @@
 title: 추가 LSA 보호 구성
 description: Windows Server 보안
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: security-credential-protection
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: 90efc49b0d7ff6edd8367cece42bf7f2950de952
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: eaebac19119525b659c09b5506c497afdbd9a263
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70870564"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71386993"
 ---
 # <a name="configuring-additional-lsa-protection"></a>추가 LSA 보호 구성
 

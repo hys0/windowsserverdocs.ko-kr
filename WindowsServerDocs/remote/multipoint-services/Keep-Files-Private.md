@@ -1,8 +1,8 @@
 ---
 title: 파일을 프라이빗으로 유지
-description: 사용자가 MultiPoint 서비스 내에서 특정 파일을 보호 하는 방법 알아보기
+description: MultiPoint 서비스 내의 사용자 로부터 특정 파일을 보호 하는 방법 알아보기
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: f254b07c1f6f8ffdc83a1fe506bee7e6d5aa89ce
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: b9ff84678787e53ef5def822e33139b9839411a6
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59879654"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71395339"
 ---
 # <a name="keep-files-private"></a>파일을 프라이빗으로 유지
 이 항목은 사용자\(*관리자*\) 및 *표준 사용자*가 MultiPoint 서비스 시스템의 다른 사용자와 공유하지 않으려는 문서와 같은 콘텐츠에 적용됩니다.  

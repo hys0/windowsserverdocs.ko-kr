@@ -1,39 +1,39 @@
 ---
-title: Hyper-v 네트워크 I/O 성능
-description: 네트워크 Hyper-v 성능 튜닝의 i/o 성능 고려 사항
-ms.prod: windows-server-threshold
+title: Hyper-v 네트워크 i/o 성능
+description: Hyper-v 성능 조정의 네트워크 i/o 성능 고려 사항
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: Asmahi; SandySp; JoPoulso
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 9f576963a93c8c0b9d6c05f406cc3331c407ceb9
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.openlocfilehash: e8f4261c11a63786c2d170105fb0fa65dc6966a3
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66811520"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71385123"
 ---
-# <a name="hyper-v-network-io-performance"></a>Hyper-v 네트워크 I/O 성능
+# <a name="hyper-v-network-io-performance"></a>Hyper-v 네트워크 i/o 성능
 
-Server 2016에는 몇 가지 향상 된 기능 및 새로운 기능-Hyper-v에서 네트워크 성능을 최적화 하기 위해 포함 되어 있습니다.  이 문서의 이후 버전에서 네트워크 성능을 최적화 하는 방법에 대 한 문서가 포함 됩니다.
+서버 2016에는 Hyper-v에서 네트워크 성능을 최적화 하기 위한 몇 가지 향상 된 기능과 새로운 기능이 포함 되어 있습니다.  네트워크 성능을 최적화 하는 방법에 대 한 설명서는이 문서의 이후 버전에 포함 될 예정입니다.
 
 ## <a name="live-migration"></a>실시간 마이그레이션
 
-실시간 마이그레이션을 사용 하면 투명 하 게 가동 또는 네트워크 연결이 없는 동일한 클러스터의 다른 노드로 장애 조치 클러스터의 한 노드에서 실행 중인 가상 컴퓨터를 이동할 수 있습니다.
+실시간 마이그레이션를 사용 하면 네트워크 연결을 중단 하거나 가동 중지 시간 없이 장애 조치 (failover) 클러스터의 한 노드에서 실행 중인 가상 컴퓨터를 동일한 클러스터의 다른 노드로 투명 하 게 이동할 수 있습니다.
 
 > [!NOTE]
-> 장애 조치 클러스터링 클러스터 노드에 대 한 공유 저장소가 필요합니다.
+> 장애 조치 (Failover) 클러스터링에는 클러스터 노드에 대 한 공유 저장소가 필요 합니다.
 
-실행 중인 가상 컴퓨터를 이동 하는 프로세스는 두 가지 주요 단계로 나눌 수 있습니다. 첫 번째 단계는 새 호스트에 현재 호스트에서 가상 머신의 메모리를 복사합니다. 두 번째 단계는 새 호스트에 현재 호스트에서 가상 머신 상태를 전송합니다. 두 단계의 기간 삽입할 데이터 전송할 수 있습니다 새 호스트에 현재 호스트에서 속도로 크게 결정 됩니다.
+실행 중인 가상 컴퓨터를 이동 하는 프로세스는 두 가지 주요 단계로 나눌 수 있습니다. 첫 번째 단계는 가상 머신의 메모리를 현재 호스트에서 새 호스트로 복사 합니다. 두 번째 단계는 현재 호스트에서 새 호스트로 가상 컴퓨터 상태를 전송 합니다. 두 단계의 기간은 데이터를 현재 호스트에서 새 호스트로 전송할 수 있는 속도에 따라 크게 결정 됩니다.
 
-전용된 네트워크를 제공 합니다. 실시간 마이그레이션에 대 한 트래픽을 실시간 마이그레이션을 완료 하는 데 필요한 시간을 최소화 주며 일관 된 마이그레이션 시간을 보장 합니다.
+실시간 마이그레이션 트래픽에 대 한 전용 네트워크를 제공 하면 실시간 마이그레이션을 완료 하는 데 필요한 시간을 최소화 하 고 마이그레이션 시간을 일관성 있게 유지할 수 있습니다.
 
-![hyper-v 실시간 마이그레이션 구성 예](../../media/perftune-guide-live-migration.png)
+![hyper-v 실시간 마이그레이션 구성 예제](../../media/perftune-guide-live-migration.png)
 
-또한 늘리면 송신 및 수신 버퍼에서 각 네트워크 어댑터 마이그레이션에 관련 된 마이그레이션 성능을 개선할 수 있습니다.
+또한 마이그레이션과 관련 된 각 네트워크 어댑터에서 송신 및 수신 버퍼 수를 늘려도 마이그레이션 성능을 향상 시킬 수 있습니다.
 
-Windows Server 2012 R2 하드웨어가 지 원하는 경우 네트워크를 통해 전송 하기 전에 메모리를 압축 하 여 실시간 마이그레이션 속도 또는 원격 직접 메모리 액세스 (RDMA)를 사용 하는 옵션을 도입 했습니다.
+Windows Server 2012 r 2에서는 네트워크를 통해 전송 하기 전에 메모리를 압축 하거나, 하드웨어에서 지 원하는 경우 RDMA (원격 직접 메모리 액세스)를 사용 하 여 실시간 마이그레이션를 가속화 하는 옵션을 도입 했습니다.
 
 ## <a name="see-also"></a>참조
 

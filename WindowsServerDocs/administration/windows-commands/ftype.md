@@ -1,8 +1,8 @@
 ---
 title: ftype
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c29ca0aa027d11fa8f981134e5367021227d3096
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ce3f4c360269eb9cabd2cbef8abb89935923a595
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59881684"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71375820"
 ---
 # <a name="ftype"></a>ftype
 
 
 
-표시 하거나 파일 이름 확장명 연결에 사용 되는 파일 형식을 수정 합니다. 대입 연산자 없이 사용 되는 경우 (**=**), **ftype** 지정된 된 파일 형식에 대 한 현재 열려 있는 명령 문자열을 표시 합니다. 매개 변수 없이 사용 하는 경우 **ftype** 열려 있는 명령 문자열을 정의 하는 파일 형식이 표시 됩니다.
+표시 하거나 파일 이름 확장명 연결에 사용 되는 파일 형식을 수정 합니다. 대입 연산자 없이 사용 되는 경우 ( **=** ), **ftype** 지정된 된 파일 형식에 대 한 현재 열려 있는 명령 문자열을 표시 합니다. 매개 변수 없이 사용 하는 경우 **ftype** 열려 있는 명령 문자열을 정의 하는 파일 형식이 표시 됩니다.
 
 이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
 
@@ -38,8 +38,8 @@ ftype [<FileType>[=[<OpenCommandString>]]]
 
 |매개 변수|설명|
 |---------|-----------|
-|\<FileType>|표시 하거나 변경 하려면 파일 형식을 지정 합니다.|
-|\<OpenCommandString>|지정 된 파일 형식의 파일을 열 때 사용 하 여 열려 있는 명령 문자열을 지정 합니다.|
+|\<FileType >|표시 하거나 변경 하려면 파일 형식을 지정 합니다.|
+|\<OpenCommandString >|지정 된 파일 형식의 파일을 열 때 사용 하 여 열려 있는 명령 문자열을 지정 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
 ## <a name="remarks"></a>설명
@@ -50,10 +50,10 @@ ftype [<FileType>[=[<OpenCommandString>]]]
 |--------|-----------------|
 |0 또는 %1|연결을 통해 실행 되 고 파일 이름으로 대체 하 게 합니다.|
 |%*|모든 매개 변수를 가져옵니다.|
-|%2, %3, ...|첫 번째 매개 변수 (%2), 두 번째 매개 변수 (%3) 등에 가져옵니다.|
-|%~\<N>|부터 나머지 매개 변수를 모두 가져옵니다는 *N*번째 매개 변수가 있는 *N* 2에서 9 사이의 숫자가 될 수 있습니다.|
+|% 2,% 3, ...|첫 번째 매개 변수 (%2), 두 번째 매개 변수 (%3) 등에 가져옵니다.|
+|%~ @ NO__T-1N >|부터 나머지 매개 변수를 모두 가져옵니다는 *N*번째 매개 변수가 있는 *N* 2에서 9 사이의 숫자가 될 수 있습니다.|
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 열려 있는 명령 문자열을 정의 하는 현재 파일 종류를 표시 하려면 다음을 입력 합니다.
 ```

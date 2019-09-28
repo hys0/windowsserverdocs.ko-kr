@@ -1,7 +1,7 @@
 ---
 title: Hyper-v 가상 컴퓨터에 대 한 가상 스위치 만들기
 description: Hyper-v 관리자 또는 Windows PowerShell을 사용 하 여 가상 스위치를 만드는 방법에 대 한 지침을 제공 합니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -11,16 +11,16 @@ ms.assetid: fdc8063c-47ce-4448-b445-d7ff9894dc17
 author: KBDAzure
 ms.author: kathydav
 ms.date: 10/04/2016
-ms.openlocfilehash: 3c0ba19183dd68a86d995293f663accf10e91df9
-ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
+ms.openlocfilehash: f1a814060e763545411b5c4345367638a5161ac2
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69546382"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392929"
 ---
 # <a name="create-a-virtual-switch-for-hyper-v-virtual-machines"></a>Hyper-v 가상 컴퓨터에 대 한 가상 스위치 만들기
 
->적용 대상: Windows 10, Windows Server 2016, Microsoft Hyper-v Server 2016, Windows Server 2019, Microsoft Hyper-v Server 2019
+>적용 대상: Windows 10, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
   
 가상 스위치에 가상 컴퓨터를 다른 컴퓨터와 통신 하는 Hyper-v 호스트에 만들어진 있습니다. Windows Server에 Hyper-v 역할을 처음 설치할 때 가상 스위치를 만들 수 있습니다. 추가 가상 스위치를 만들려면 Hyper-v 관리자 또는 Windows PowerShell을 사용 합니다. 가상 스위치에 대 한 자세한 참조 [Hyper-v 가상 스위치](../../hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md)합니다.  
   

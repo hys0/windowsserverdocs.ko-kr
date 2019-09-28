@@ -1,9 +1,9 @@
 ---
 title: 마이그레이션 MultiPoint 서비스에 대 한 단계
-description: Windows Server 2016에서 MultiPoint Service로 마이그레이션하는 단계를 안내
+description: Windows Server 2016에서 MultiPoint 서비스로 마이그레이션하는 단계를 안내 합니다.
 ms.custom: na
 ms.date: 07/29/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ ms.assetid: 3ee77efa-7cc5-4ddf-aaff-b5634a717014
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.openlocfilehash: b63ef4bf63ce990aa0b0ba7624905ba8f14dde98
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 862e9b70cfafa9de0928a4789c5d23dfa0fbb530
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59854814"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71389034"
 ---
 # <a name="migrate-to--multipoint-services-in-windows-server-2016"></a>Windows Server 2016에서에서 MultiPoint Service로 마이그레이션
 

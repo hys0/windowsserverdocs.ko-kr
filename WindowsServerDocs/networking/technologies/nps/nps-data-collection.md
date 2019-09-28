@@ -6,17 +6,17 @@ manager: mtillman
 ms.author: joflore
 ms.reviewer: richagi
 ms.custom: it-pro
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: ''
 ms.date: 05/01/2018
-ms.openlocfilehash: cd145402ed70aa52da7188dee9dd64ce17fea155
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: d393ad4af81ee1c24fa5f28b8a3b05217e7b34dd
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871881"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71396293"
 ---
 # <a name="network-policy-server-user-data-collection"></a>네트워크 정책 서버 사용자 데이터 수집
 
@@ -27,21 +27,21 @@ ms.locfileid: "70871881"
 
 ## <a name="information-collected-by-nps"></a>NPS에서 수집한 정보
 
-- 타임 스탬프
+- timestamp
 - 이벤트 타임 스탬프
 - Username
 - 정규화 된 사용자 이름
 - 클라이언트 IP 주소
 - 클라이언트 공급 업체
 - 클라이언트 이름
-- 인증 형식
+- 인증 유형
 - RADIUS 프로토콜에 관련 된 기타 여러 필드
 
 ## <a name="gather-data-from-nps"></a>NPS에서 데이터 수집
 
 계정 데이터를 사용 하도록 설정 하 고 구성 하는 경우 구성에 따라 SQL Server 또는 로그 파일에서 사용자의 NPS 인증 시도 기록을 가져올 수 있습니다. 
 
-SQL Server에 대 한 회계 데이터가 구성 된 경우 User_Name = `'<username>'`인 모든 레코드를 쿼리 합니다.
+SQL Server에 대 한 회계 데이터가 구성 된 경우 User_Name = `'<username>'` 인 모든 레코드를 쿼리 합니다.
 
 로그 파일에 대해 계정 데이터가 구성 된 경우 로그 파일 `<username>` 을 검색 하 여 모든 로그 항목을 찾습니다.
 

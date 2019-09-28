@@ -1,8 +1,8 @@
 ---
 title: 추가
-description: Windows 명령 항목에 대 한 **add_1** -볼륨 섀도 복사 되는 볼륨의 집합에 추가 하거나 별칭 환경에 별칭을 추가 합니다.
+description: '**Add_1** 에 대 한 Windows 명령 항목-섀도 복사 될 볼륨 집합에 볼륨을 추가 하거나 별칭 환경에 별칭을 추가 합니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 549c8560774f004a60926ce568c850fd1b71c7f9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d1aaa211938d14a0019d29e64867f4df2475a877
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59889954"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71382777"
 ---
 # <a name="add"></a>추가
 
@@ -46,7 +46,7 @@ add alias <AliasName> <AliasValue>
 |alias|별칭 환경에 지정 된 이름과 값을 추가합니다. 참조 [추가 별칭](add-alias.md) 구문 및 매개 변수입니다.|
 |/?|명령줄에서 도움말을 표시 합니다.|
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 추가 볼륨 및 현재 환경에 있는 별칭을 표시 하려면 다음을 입력 합니다.
 ```

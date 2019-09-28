@@ -1,8 +1,8 @@
 ---
 title: rundll32
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5b1f288d21a1dcac25ecc00f685ea179d8a6542f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 29a87f9f07c25a0c671e47550e0a054d8308f747
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59835034"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71384423"
 ---
 # <a name="rundll32"></a>rundll32
 
@@ -38,11 +38,11 @@ Rundll32 <DLLname>
 
 |매개 변수|설명|
 |---------|-----------|
-|[rundll32](rundll32-printui.md)|프린터 사용자 인터페이스를 표시합니다.|
+|[Rundll32.exe printui.dll, PrintUIEntry](rundll32-printui.md)|프린터 사용자 인터페이스를 표시합니다.|
 
 ## <a name="remarks"></a>설명
 
-만 Rundll32 Rundll32 호출 하도록 명시적으로 작성 된 DLL에서 함수를 호출할 수 있습니다. 요구 사항 참조 Rundll32에 대 한 자세한 내용은 [164787](https://go.microsoft.com/fwlink/?LinkID=165773) Microsoft 기술 자료 (https://go.microsoft.com/fwlink/?LinkID=165773)합니다.
+만 Rundll32 Rundll32 호출 하도록 명시적으로 작성 된 DLL에서 함수를 호출할 수 있습니다. Rundll32.exe 요구 사항에 대 한 자세한 내용은 Microsoft 기술 자료 [문서 164787](https://go.microsoft.com/fwlink/?LinkID=165773) (https://go.microsoft.com/fwlink/?LinkID=165773) 을 참조 하세요.
 
 #### <a name="additional-references"></a>추가 참조
 

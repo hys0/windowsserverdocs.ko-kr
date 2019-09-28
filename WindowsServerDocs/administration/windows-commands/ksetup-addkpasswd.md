@@ -1,8 +1,8 @@
 ---
-title: ksetup:addkpasswd
-description: '에 대 한 Windows 명령을 항목 * * *- '
+title: 'ksetup: addkpasswd'
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2a85eb6dfe30c33126504744a7659fe2cc573087
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 72c27cb6b068dc46cd58e753b4b08d68b39bfb20
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59856824"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71375188"
 ---
-# <a name="ksetupaddkpasswd"></a>ksetup:addkpasswd
+# <a name="ksetupaddkpasswd"></a>ksetup: addkpasswd
 
 
 
@@ -38,8 +38,8 @@ ksetup /addkpasswd <RealmName> [<KpasswdName>]
 
 |매개 변수|설명|
 |---------|-----------|
-|\<RealmName>|영역 이름은 CORP. 같은 대문자는 DNS 이름으로 명시 CONTOSO.COM, 기본적으로 나열 하 고 영역 또는 영역 = **ksetup** 실행 됩니다.|
-|\<KpasswdName>|Kerberos 암호 서버도 사용할 수 있는 KDC 이름이 mitkdc.microsoft.com 같은 대/소문자 정규화 된 도메인 이름으로 명시 됩니다. KDC 이름이 생략 된 경우 Kdc 찾을 DNS는 사용할 수 있습니다.|
+|@no__t 0RealmName >|영역 이름은 CORP. 같은 대문자는 DNS 이름으로 명시 CONTOSO.COM, 기본적으로 나열 하 고 영역 또는 영역 = **ksetup** 실행 됩니다.|
+|@no__t 0KpasswdName >|Kerberos 암호 서버도 사용할 수 있는 KDC 이름이 mitkdc.microsoft.com 같은 대/소문자 정규화 된 도메인 이름으로 명시 됩니다. KDC 이름이 생략 된 경우 Kdc 찾을 DNS는 사용할 수 있습니다.|
 
 ## <a name="remarks"></a>설명
 
@@ -49,7 +49,7 @@ ksetup /addkpasswd <RealmName> [<KpasswdName>]
 
 한 번에 하나씩 추가 KDC 이름에 추가할 수 있습니다.
 
-## <a name="BKMK_Examples"></a>예제
+## <a name="BKMK_Examples"></a>예와
 
 영역, CORP. 구성 CONTOSO.COM mitkdc.contoso.com, 비 Windows KDC 서버 암호 서버로 사용 하도록 합니다.
 ```

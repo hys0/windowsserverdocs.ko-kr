@@ -2,18 +2,18 @@
 title: 파일 만료 작업 만들기
 description: 이 문서에서는 만료되는 파일에 대한 파일 관리 작업을 만드는 과정을 설명합니다.
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: b816dbe759d94980b2cc27284fd2e0ec7787d0b0
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 0901c17203252414a37ccc5205a0946b8bef0d41
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66446006"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71394232"
 ---
 # <a name="create-a-file-expiration-task"></a>파일 만료 작업 만들기
 
@@ -61,7 +61,7 @@ ms.locfileid: "66446006"
 
      - 소유한 파일이 곧 만료되는 사람에게 전자 메일을 보내려면 **만료될 파일의 사용자에게 전자 메일 보내기** 확인란을 선택합니다.
 
-     - 메시지를 구성하려면 기본 제목 줄과 메시지 본문을 편집합니다. 괄호에 있는 텍스트는 알림을 발생시킨 할당량 이벤트에 대한 변수 정보를 삽입합니다. 예를 들어 합니다 **\[원본 파일 소유자\]** 변수 파일이 만료 되려고 하는 사용자의 이름을 삽입 합니다. 텍스트에 추가 변수를 삽입하려면 **변수 삽입**을 클릭합니다.
+     - 메시지를 구성하려면 기본 제목 줄과 메시지 본문을 편집합니다. 괄호에 있는 텍스트는 알림을 발생시킨 할당량 이벤트에 대한 변수 정보를 삽입합니다. 예를 들어 **\[Source 파일 Owner @ no__t** 변수는 파일이 곧 만료 될 사용자의 이름을 삽입 합니다. 텍스트에 추가 변수를 삽입하려면 **변수 삽입**을 클릭합니다.
 
      - 곧 만료될 파일의 목록을 첨부하려면 **동작이 수행되는 파일의 전자 메일 목록에 첨부**를 클릭하고 **목록의 최대 파일 수**에 대한 값을 입력하거나 선택합니다.
 

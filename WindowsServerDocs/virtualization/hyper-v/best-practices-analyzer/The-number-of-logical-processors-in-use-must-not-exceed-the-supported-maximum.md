@@ -1,7 +1,7 @@
 ---
 title: 지원 되는 최대 사용의 논리적 프로세서 수가 초과할 수 없습니다.
-description: 이 모범 사례 분석기 규칙에 의해 보고 된 문제를 해결 하려면 지침을 제공 합니다.
-ms.prod: windows-server-threshold
+description: 이 모범 사례 분석기 규칙에서 보고 한 문제를 해결 하는 지침을 제공 합니다.
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -10,12 +10,12 @@ ms.topic: article
 ms.assetid: 66df8b02-91d1-424b-8934-a39c214d530e
 author: KBDAzure
 ms.date: 8/16/2016
-ms.openlocfilehash: d1275a17cc04494708f5ecfe9b708834b4233641
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 380daf333c041c8702228a60c26ab6e76e4cf3e1
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59847074"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71393401"
 ---
 # <a name="the-number-of-logical-processors-in-use-must-not-exceed-the-supported-maximum"></a>지원 되는 최대 사용의 논리적 프로세서 수가 초과할 수 없습니다.
 
@@ -34,15 +34,15 @@ ms.locfileid: "59847074"
   
 ## <a name="issue"></a>문제점  
   
-*서버는 너무 많은 논리 프로세서를 사용 하 여 구성 됩니다.*  
+*서버가 너무 많은 논리적 프로세서로 구성 되었습니다.*  
   
 ## <a name="impact"></a>영향  
   
-*Microsoft이이 컴퓨터에서 Hyper-v를 실행 하는 것을 지원 하지 않습니다.*  
+*Microsoft는이 컴퓨터에서 Hyper-v 실행을 지원 하지 않습니다.*  
   
 ## <a name="resolution"></a>해결 방법  
   
-*이 컴퓨터에서 일부 프로세서를 제거 하거나 msconfig를 사용 하 여 사용 가능한 프로세서의 수를 제한 합니다.*  
+*이 컴퓨터에서 일부 프로세서를 제거 하거나 msconfig를 사용 하 여 사용 가능한 프로세서 수를 제한 하십시오.*  
   
 Msconfig를 사용 하려면 다음 지침을 참조 하십시오. 프로세서를 제거 하는 방법에 대 한 자세한 컴퓨터와 함께 제공 된 지침을 참조 하거나 하드웨어 제조업체에 문의 합니다. Hyper-v에 대 한 지원 되는 최대 구성에 대 한 자세한 참조 [Windows Server 2016의 Hyper-v 확장성에 대 한 계획](../plan/Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md)합니다.  
   

@@ -1,8 +1,8 @@
 ---
 title: 관리자 계정 만들기
-description: MultiPoint 서비스에서 관리 권한이 있는 계정 만들기
+description: MultiPoint 서비스에서 관리자 권한으로 계정 만들기
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: bf460107e57de5e19f8eaa311e497e9d984680e7
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6737f7b96396a13aa18485095e0687425cf8b93e
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59879764"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71389705"
 ---
 # <a name="create-an-administrative-user-account"></a>관리자 계정 만들기
 MultiPoint 서비스 시스템을 관리할 개별 사용자에 대해 *관리자 계정*을 만들 수 있습니다. 다중 포인트 관리자에서 관리 액세스 권한이 있는 사용자를 보려면 클릭는 **사용자** 탭 합니다. 관리자 계정은 계정 유형 열에 **관리자**로 표시됩니다. *관리자에 게* 같은 데스크톱 및 시스템 설정을 변경 하는 모든 다중 포인트 관리자 작업에 액세스할 수 있습니다.  

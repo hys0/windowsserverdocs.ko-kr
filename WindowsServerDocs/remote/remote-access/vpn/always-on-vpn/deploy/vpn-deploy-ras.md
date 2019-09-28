@@ -1,7 +1,7 @@
 ---
 title: Always On VPN에 대한 원격 액세스 서버 구성
 description: RRAS는 라우터 및 원격 액세스 서버 모두에서 잘 작동 하도록 설계 되었습니다. 따라서 다양 한 기능의 배열을 지원 합니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: ''
@@ -10,12 +10,12 @@ ms.author: pashort
 author: shortpatti
 ms.date: 08/30/2018
 ms.reviewer: deverette
-ms.openlocfilehash: 8ed7dd9b8b02ab58cfb6dacf031576004c8d0290
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: c04074338cf4ba0189eb1e9bc45a80b948fdbfbf
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871312"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71388038"
 ---
 # <a name="step-3-configure-the-remote-access-server-for-always-on-vpn"></a>3단계. Always On VPN에 대한 원격 액세스 서버 구성
 

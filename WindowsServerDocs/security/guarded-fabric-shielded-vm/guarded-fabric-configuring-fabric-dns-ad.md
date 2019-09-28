@@ -1,19 +1,19 @@
 ---
 title: 보호 된 호스트 (AD)에 대 한 패브릭 DNS 구성
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 074b6d09-f16e-49bf-b88a-377139d35067
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 9d302dcd06b7a3a40afbb6f613c39caaabbeba91
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 411b845d57c36916dcbc73d51675f5d9f92bfa0e
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66443723"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71386760"
 ---
 # <a name="configure-the-fabric-dns-for-guarded-hosts"></a>보호 된 호스트에 대 한 패브릭 DNS 구성
 
@@ -21,9 +21,9 @@ ms.locfileid: "66443723"
 
 
 >[!IMPORTANT]
->AD 모드는 Windows Server 2019로 시작 하는 사용 되지 않습니다. TPM 증명 수 없는 환경에 대 한 구성 [호스트 키 증명](guarded-fabric-initialize-hgs-key-mode.md)합니다. 호스트 키 증명 AD 모드에 유사한 보증을 제공 하며 간단 하 게 설정 합니다. 
+>AD 모드는 Windows Server 2019부터 사용 되지 않습니다. TPM 증명을 사용할 수 없는 환경의 경우 [호스트 키 증명](guarded-fabric-initialize-hgs-key-mode.md)을 구성 합니다. 호스트 키 증명은 AD 모드와 비슷한 보증을 제공 하 고 설정 하는 것이 더 간단 합니다. 
 
-패브릭 관리자는 보호 된 호스트는 HGS 클러스터를 확인할 수 있도록 DNS는 패브릭을 구성 해야 합니다. HGS 클러스터 있어야 [HGS 관리자가 설정한](/WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-setting-up-the-host-guardian-service-hgs.md)합니다.
+패브릭 관리자는 보호 된 호스트가 HGS 클러스터를 확인할 수 있도록 패브릭 DNS를 구성 해야 합니다. Hgs 클러스터가 이미 hgs 관리자에 [의해 설정](/WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-setting-up-the-host-guardian-service-hgs.md)되어 있어야 합니다.
 
 
 

@@ -3,7 +3,7 @@ title: MultiPoint 서비스 시스템에 소프트웨어를 설치 합니다.
 descrption: Learn how to install software for users in MultiPoint Services
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ ms.assetid: d4fb5b8b-2d57-40bb-afc7-7cfefc2ae232
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.openlocfilehash: e68f8ac8b608bbff062c65cbee1566e7da855516
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 12da3044e1801b61c4ee11cdbbc6887afff2e653
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59824184"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71389102"
 ---
 # <a name="install-software-on-your-multipoint-services-system"></a>MultiPoint 서비스 시스템에 소프트웨어를 설치 합니다.
 관리 사용자로 로그온 하는 경우 콘솔 모드에서 또는 스테이션 모드에 있는 스테이션에서 새 프로그램을 설치할 수 있습니다. 그러나 콘솔 모드에서 프로그램을 설치 하는 것이 좋습니다.  

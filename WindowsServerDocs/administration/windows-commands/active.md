@@ -1,8 +1,8 @@
 ---
 title: active
-description: Windows 명령 항목에 대 한 **활성** -기본 디스크에 활성으로 포커스가 있는 파티션을 표시 합니다.
+description: Windows 명령 항목 **활성** 기본 디스크에 대 한 항목은 활성으로 포커스가 있는 파티션을 표시 합니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3a039e0200fb84d446739ac7017556b6c302f4af
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c926bf9b7a583cf7eaa23166e09e6f0a1599e625
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59868764"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71382853"
 ---
 # <a name="active"></a>active
 
@@ -41,7 +41,7 @@ active
 -   파티션만 활성으로 표시할 수 있습니다.
 -   이 작업을 수행 하려면 파티션을 선택 해야 합니다. 사용 된 **파티션을 선택** 파티션을 선택 하 고 포커스를 이동 하는 명령입니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 파티션을 활성 파티션으로 포커스가 있는 상태를 표시 하려면 다음을 입력 합니다.
 ```

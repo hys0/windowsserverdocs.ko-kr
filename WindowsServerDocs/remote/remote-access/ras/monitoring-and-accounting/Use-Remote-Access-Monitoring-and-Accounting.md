@@ -1,9 +1,9 @@
 ---
 title: 원격 액세스 모니터링 및 계정 사용
-description: 이 항목은 원격 액세스 모니터링 및 계정 관리에 Windows Server 2016에 대 한 가이드의 일부입니다.
+description: 이 항목은 Windows Server 2016의 원격 액세스 모니터링 및 계정에 대 한 가이드의 일부입니다.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-ras
@@ -12,16 +12,16 @@ ms.topic: article
 ms.assetid: 92519b49-0df4-43c1-9717-f13570644212
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: c794d4b8169c81c63162f119467f5f03d10ce756
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: eb7c052358bc50f9b466b7ac862e77be7b044685
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67282649"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71367152"
 ---
 # <a name="use-remote-access-monitoring-and-accounting"></a>원격 액세스 모니터링 및 계정 사용
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 원격 액세스 모니터링은 DirectAccess 및 VPN 연결에 대한 원격 사용자 활동 및 상태를 보고합니다. 특히, 클라이언트 연결 수 및 기간을 추적하며, 서버의 작업 상태를 모니터링합니다. 사용하기 쉬운 모니터링 콘솔에서 전체 원격 액세스 인프라 보기를 제공합니다. 모니터링 보기는 단일 서버, 클러스터 및 멀티 사이트 구성에 사용할 수 있습니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "67282649"
   
 -   **모니터링**은 지정된 시점에 연결되어 있는 활성 사용자를 보여 줍니다.  
   
--   **계정**은 회사 네트워크에 연결한 사용자의 기록 및 해당 사용 정보(규정 준수 및 감사용)를 유지합니다.  
+-   **계정** 은 회사 네트워크에 연결한 사용자의 기록 및 해당 사용 정보(규정 준수 및 감사용)를 유지합니다.  
   
 원격 클라이언트 모니터링은 연결을 기반으로 합니다. DirectAccess 클라이언트에서 설정되는 터널 연결에는 다음 두 가지 유형이 있습니다.  
   

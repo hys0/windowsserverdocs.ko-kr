@@ -1,8 +1,8 @@
 ---
-title: bdehdcfg 자동
-description: Windows 명령 항목 bdehdcfg quiet-에 대 한 모든 동작 및 오류를 표시 하지 않으려면 bdehdcfg을 지시 합니다.
+title: bdehdcfg quiet
+description: Bdehdcfg quiet에 대 한 Windows 명령 항목-bdehdcfg에 게 모든 작업 및 오류를 표시 하지 않도록 지시 합니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0f0d98f6ae76e9bf6357689c97e091766b9645c2
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d59a14e34200e3fa8e18e36e166ef62ceca1afe7
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59865754"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71382224"
 ---
 # <a name="bdehdcfg-quiet"></a>bdehdcfg: quiet
 
@@ -40,7 +40,7 @@ bdehdcfg -target {default|unallocated|<DriveLetter> shrink|<DriveLetter> merge} 
 
 하는 경우 모든 Yes / (Y/N) 프롬프트 없이 드라이브를 준비 하는 동안 표시 된 것을 "예" 답을 가정 합니다. 드라이브 준비 중에 발생 한 오류를 보려면 아래에서 시스템 이벤트 로그를 검토는 **Windows BitLocker DrivePreparationTool Microsoft** 이벤트 공급자.
 
-## <a name="BKMK_Examples"></a>예제
+## <a name="BKMK_Examples"></a>예와
 
 다음 예제를 사용 하는 **quiet** 명령입니다.
 ```

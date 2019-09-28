@@ -2,7 +2,7 @@
 title: Add Servers to Server Manager
 description: 서버 관리자
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-server-manager
@@ -14,12 +14,12 @@ ms.author: coreyp
 manager: dongill
 ms.localizationpriority: medium
 ms.date: 02/01/2018
-ms.openlocfilehash: a47ecbc0c7359438ed60ed34c94adf0096b14967
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: ad30a8f1c4c1e0aa317512eb68fffbd76413175b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66435453"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71383265"
 ---
 # <a name="add-servers-to-server-manager"></a>Add Servers to Server Manager
 
@@ -40,9 +40,9 @@ Windows Server의 단일 서버 관리자 콘솔을 사용 하 여 여러 원격
 
 -   [관리할 서버 추가](#BKMK_add)
 
--   [으로 관리 명령을 사용 하 여 자격 증명을 제공 합니다.](#BKMK_creds)
+-   [다음으로 관리 명령을 사용 하 여 자격 증명 제공](#BKMK_creds)
 
-## <a name="BKMK_creds"></a>으로 관리 명령을 사용 하 여 자격 증명을 제공 합니다.
+## <a name="BKMK_creds"></a>다음으로 관리 명령을 사용 하 여 자격 증명 제공
 서버 관리자를 원격 서버를 추가 하면 일부 추가 하는 서버에 액세스 하거나 관리할 다른 사용자 계정 자격 증명을 해야 합니다. 서버 관리자를 실행 하는 컴퓨터에 로그온 하는 데 사용할 다른 관리 되는 서버에 대 한 자격 증명을 지정 하려면 사용는 **으로 관리** 에 서버 관리자에서 관리 되는 서버에 대 한 항목을 마우스 오른쪽 단추로 클릭 하 여 액세스할 수 있는 서버를 추가한 후 명령는 **서버** 역할이 나 그룹 홈 페이지의 분할 합니다. **다음으로 관리** 를 클릭하면 관리되는 서버에 대한 액세스 권한이 있는 사용자 이름을 다음 형식 중 하나로 제공할 수 있는 **Windows 보안** 대화 상자가 열립니다.
 
 -   *사용자 이름*
