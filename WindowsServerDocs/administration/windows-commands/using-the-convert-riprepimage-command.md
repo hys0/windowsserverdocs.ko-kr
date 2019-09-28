@@ -1,8 +1,8 @@
 ---
-title: Convert RiprepImage 명령을 사용 하 여
-description: '에 대 한 Windows 명령을 항목 * * *- '
+title: RiprepImage 명령 사용
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9b41b6dcc52c3e6700d1d18c61eceea8b990ecdf
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: b0b5e75a4148359db5088e7ff60d29b8d157309d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66440584"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71363653"
 ---
-# <a name="using-the-convert-riprepimage-command"></a>Convert RiprepImage 명령을 사용 하 여
+# <a name="using-the-convert-riprepimage-command"></a>RiprepImage 명령 사용
 
 
 
@@ -42,10 +42,10 @@ WDSUTIL [Options] /Convert-RIPrepImage /FilePath:<File path and name>
 
 |            매개 변수            |                                                                                                                                                                                                                                                                                                               설명                                                                                                                                                                                                                                                                                                                |
 |---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| / FilePath:\<파일 경로 및 이름 > |                                                                                                                                                                                                       RIPrep 이미지에 해당 하는.sif 파일의 전체 경로 파일 이름을 지정 합니다. 이 일반적으로 Riprep.sif 호출 파일과 RIPrep 이미지를 포함 하는 폴더의 \Templates 하위 폴더에서 찾을 수 있습니다.                                                                                                                                                                                                       |
-|        / DestinationImage        | 다음 옵션을 사용 하 여 대상 이미지에 대 한 설정을 지정 합니다.</br>-/FilePath:\<파일 경로 및 이름 >-새 파일에 대 한 전체 파일 경로 설정 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다. **C:\Temp\convert.wim**</br>-[/Name:\<이름 >]-이미지의 표시 이름을 가져오거나 설정 합니다. 표시 이름이 없는 지정 하는 경우 원본 이미지의 표시 이름을 사용 됩니다.</br>-   [/Description: \<설명 >]-이미지의 설명을 설정 합니다.</br>-[/InPlace]-변환이 발생할 기본 동작인 원본 이미지의 사본을 아닌 원래 RIPrep 이미지에는 지정 해야 합니다.</br>-[/Overwrite: {예 |
+| /Sfilefiles: \< 파일 경로 및 이름 > |                                                                                                                                                                                                       RIPrep 이미지에 해당 하는.sif 파일의 전체 경로 파일 이름을 지정 합니다. 이 일반적으로 Riprep.sif 호출 파일과 RIPrep 이미지를 포함 하는 폴더의 \Templates 하위 폴더에서 찾을 수 있습니다.                                                                                                                                                                                                       |
+|        / DestinationImage        | 다음 옵션을 사용 하 여 대상 이미지에 대 한 설정을 지정 합니다.</br>-/Sfilefiles: \<File path 및 name >-새 파일의 전체 파일 경로를 설정 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다. **C:\Temp\convert.wim**</br>-[/Name: \<Name >]-이미지의 표시 이름을 설정 합니다. 표시 이름을 지정 하지 않으면 원본 이미지의 표시 이름이 사용 됩니다.</br>-[/설명: \<Description >]-이미지에 대 한 설명을 설정 합니다.</br>-[/InPlace]-변환이 발생할 기본 동작인 원본 이미지의 사본을 아닌 원래 RIPrep 이미지에는 지정 해야 합니다.</br>-[/Overwrite: {예 |
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 지정된 된 RIPrep.sif 이미지 RIPREP.wim을 변환 하려면 다음을 입력 합니다.
 ```

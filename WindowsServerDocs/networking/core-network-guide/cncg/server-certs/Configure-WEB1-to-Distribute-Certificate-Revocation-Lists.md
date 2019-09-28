@@ -4,24 +4,24 @@ description: 이 항목은 서버 배포 인증서 802.1 X 유선 및 무선 배
 manager: brianlic
 ms.topic: article
 ms.assetid: fa4a8c41-8c2a-425c-8511-736fe5d196ac
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 57fa45eff87a1f0cdaae8b780d7f605e54ff6871
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 5d53cbba37699346db110f0748a9c3e0c834c18e
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59839194"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71356290"
 ---
 # <a name="configure-web1-to-distribute-certificate-revocation-lists-crls"></a>인증서 해지 목록 (Crl)를 배포 하도록 WEB1 구성
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 W e b 1 Crl을 배포 하려면 웹 서버를 구성 하려면이 절차를 사용할 수 있습니다.  
   
-루트 CA의 확장을 한다고 설명 했습니다 루트 CA에서에서 CRL을 통해 사용할 수는 https://pki.corp.contoso.com/pki합니다. 현재 있는 아니므로 PKI 가상 디렉터리에 w e b 1을 만들어야 합니다.  
+루트 CA의 확장에서는 루트 CA의 CRL을 https://pki.corp.contoso.com/pki 을 통해 사용할 수 있음을 언급 했습니다. 현재 있는 아니므로 PKI 가상 디렉터리에 w e b 1을 만들어야 합니다.  
   
 이 절차를 수행 하려면의 구성원 이어야 **Domain Admins**합니다.  
   

@@ -1,23 +1,23 @@
 ---
 title: 네트워크 컨트롤러
-description: 이 항목에서는 Windows Server 2016에서 네트워크 컨트롤러의 개요를 제공합니다.
+description: 이 항목에서는 Windows Server 2016의 네트워크 컨트롤러에 대 한 개요를 제공 합니다.
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: 31f3fa4e-cd25-4bf3-89e9-a01a6cec7893
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 7ace628c6ae9802c0c65d360aedfac8c80ac5537
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 13f535b9a91f26b30600b637b46817cfa33ccd7b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59875684"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71355652"
 ---
 # <a name="network-controller"></a>네트워크 컨트롤러
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 새로운 네트워크 컨트롤러에서 Windows Server 2016 관리, 구성, 모니터링 및 데이터 센터의 가상 및 실제 네트워크 인프라의 문제를 해결 하는 자동화의 프로그래밍 가능한 중앙된 위치를 제공 합니다. 
 
@@ -25,32 +25,32 @@ ms.locfileid: "59875684"
 
 > [!NOTE]
 > 이 항목 외에 다음과 같은 네트워크 컨트롤러 설명서를 사용할 수 있습니다.
-> - [네트워크 컨트롤러에 대 한 고가용성 정보](network-controller-high-availability.md)
-> - [설치 및 네트워크 컨트롤러를 배포 하는 것에 대 한 준비 요구 사항](../../plan/Installation-and-Preparation-Requirements-for-Deploying-Network-Controller.md)  
-> - [Windows PowerShell을 사용 하 여 네트워크 컨트롤러 배포](../../deploy/Deploy-Network-Controller-using-Windows-PowerShell.md)  
-> - [서버 관리자를 사용 하 여 네트워크 컨트롤러 서버 역할 설치](Install-the-Network-Controller-server-role-using-Server-Manager.md)
+> - [네트워크 컨트롤러 고가용성](network-controller-high-availability.md)
+> - [네트워크 컨트롤러 배포를 위한 설치 및 준비 요구 사항](../../plan/Installation-and-Preparation-Requirements-for-Deploying-Network-Controller.md)  
+> - [Windows PowerShell을 사용하여 네트워크 컨트롤러 배포](../../deploy/Deploy-Network-Controller-using-Windows-PowerShell.md)  
+> - [서버 관리자를 사용하여 네트워크 컨트롤러 서버 역할 설치](Install-the-Network-Controller-server-role-using-Server-Manager.md)
 > - [네트워크 컨트롤러에 대 한 배포 후 단계](post-deploy-steps-nc.md)
 > - [네트워크 컨트롤러 Cmdlet](https://technet.microsoft.com/library/mt576401.aspx) 
 
 ## <a name="bkmk_overview"></a>네트워크 컨트롤러 개요
 
-네트워크 컨트롤러는 가용성과 확장성이 높은 서버 역할을 하 고 하나의 응용 프로그램 프로그래밍 인터페이스를 제공 \(API\) 네트워크 컨트롤러가 네트워크와 통신할 수 있도록 할 수 있는 두 번째 API 네트워크 컨트롤러와 통신 합니다.
+네트워크 컨트롤러는 항상 사용 가능 하 고 확장 가능한 서버 역할이 며, 네트워크 컨트롤러에서 네트워크와 통신할 수 있도록 하는 \(API @ no__t-1과 통신할 수 있도록 하는 두 번째 API를 제공 하는 하나의 응용 프로그램 프로그래밍 인터페이스를 제공 합니다. 네트워크 컨트롤러.
 
 도메인 및 비도메인 환경 모두에서 네트워크 컨트롤러를 배포할 수 있습니다. 도메인 환경에서 네트워크 컨트롤러 및 네트워크 장치에 사용자가 사용 하 여 인증 Kerberos; 도메인이 아닌 환경에서 인증에 인증서를 배포 해야 합니다.
 
 >[!IMPORTANT]
->실제 호스트에서 네트워크 컨트롤러 서버 역할을 배포 하지 않습니다. 네트워크 컨트롤러를 배포 하려면 Hyper-v 가상 컴퓨터에서 네트워크 컨트롤러 서버 역할을 설치 해야 \(VM\) Hyper-v 호스트에 설치 된. 세 가지 다른 하이퍼의 Vm에서 네트워크 컨트롤러를 설치한 후\-V 호스트 Hyper을 사용 하도록 설정 해야\-소프트웨어 정의 네트워킹에 대 한 호스트 \(SDN\) 호스트를 사용 하 여 네트워크 컨트롤러를 추가 하 여 Windows PowerShell 명령 **새로 만들기-NetworkControllerServer**합니다. 이렇게 하면 함수에 SDN 소프트웨어 부하 분산 장치를 사용 하는 합니다. 자세한 내용은 [새로 만들기-NetworkControllerServer](https://technet.microsoft.com/itpro/powershell/windows/network-controller/new-networkcontrollerserver)합니다.
+>실제 호스트에 네트워크 컨트롤러 서버 역할을 배포 하지 마십시오. 네트워크 컨트롤러를 배포 하려면 hyper-v 호스트에 설치 된 Hyper-v 가상 컴퓨터에 네트워크 컨트롤러 서버 역할을 설치 해야 합니다 \(VM @ no__t-1. 3 개의 서로 다른 Hyper-v 호스트의 Vm에 네트워크 컨트롤러를 설치한 후 Windows PowerShell을 사용 하 여 네트워크 컨트롤러에 호스트를 추가 하 여 소프트웨어 정의 네트워킹 \(SDN @ no__t-3에 대 한 하이퍼 @ no__t-1V 호스트를 사용 하도록 설정 해야 합니다. **NetworkControllerServer**명령입니다. 이렇게 하면 SDN 소프트웨어 Load Balancer 기능을 사용할 수 있습니다. 자세한 내용은 [NetworkControllerServer](https://technet.microsoft.com/itpro/powershell/windows/network-controller/new-networkcontrollerserver)를 참조 하세요.
 
 네트워크 컨트롤러는 Southbound API를 사용하여 네트워크 장치, 서비스 및 구성 요소와 통신합니다. Southbound API를 사용하여 네트워크 컨트롤러는 네트워크 장치를 검색하고, 서비스 구성을 검색하고, 네트워크에 대해 필요한 모든 정보를 수집할 수 있습니다. 또한 Southbound API는 네트워크 컨트롤러가 구성 변경 사항 등의 정보를 네트워크 인프라에 전송할 수 있는 경로도 제공합니다.
 
 네트워크 컨트롤러 Northbound API는 네트워크 컨트롤러에서 네트워크 정보를 수집하여 이 정보를 사용하여 네트워크를 모니터링하고 구성할 수 있는 기능을 제공합니다.
 
-네트워크 컨트롤러 Northbound API를 사용 하면 구성, 모니터링, 문제 해결 및 Representational State Transfer Windows PowerShell을 사용 하 여 네트워크에서 새 장치를 배포할 수 있습니다 \(REST\) API 또는 관리 응용 프로그램 그래픽 사용자 인터페이스를 통해 System Center Virtual Machine Manager 등.
+네트워크 컨트롤러 Northbound API를 사용 하 여 네트워크에서 새 장치를 구성, 모니터링, 문제 해결 및 배포 하거나, Windows PowerShell, Representational State Transfer \(REST @ no__t-1 API 또는 그래픽을 사용 하는 관리 응용 프로그램을 사용할 수 있습니다. System Center Virtual Machine Manager와 같은 사용자 인터페이스입니다.
 
 >[!NOTE]
 >네트워크 컨트롤러 Northbound API는 REST 인터페이스로 구현됩니다.
 
-System Center Virtual Machine Manager 같은 관리 응용 프로그램을 사용 하 여 네트워크 컨트롤러를 사용 하 여 데이터 센터 네트워크를 관리할 수 있습니다 \(SCVMM\), 및 System Center Operations Manager \(SCOM\), 네트워크 컨트롤러를 구성할 수 있으므로 프로그램을 모니터링 하 고 제어 하는 네트워크 인프라 문제를 해결 합니다.
+네트워크 컨트롤러는 System Center Virtual Machine Manager \(SCVMM @ no__t-@no__t System Center Operations Manager 1과 같은 관리 응용 프로그램을 사용 하 여 네트워크 컨트롤러에서 데이터 센터 네트워크를 관리할 수 있습니다. 에서 제어 하는 네트워크 인프라를 구성, 모니터링, 프로그래밍 및 문제 해결할 수 있습니다.
 
 Windows PowerShell, REST API 또는 관리 응용 프로그램을 사용하여 네트워크 컨트롤러에서 다음과 같은 물리 및 가상 네트워크 인프라를 관리할 수 있습니다.
 
@@ -58,7 +58,7 @@ Windows PowerShell, REST API 또는 관리 응용 프로그램을 사용하여 �
 
 - 데이터 센터 방화벽
 
-- 원격 액세스 서비스 \(RAS\) 다중 테 넌 트 게이트웨이, 가상 게이트웨이 및 게이트웨이 풀
+- 원격 액세스 서비스 \(RAS @ no__t-1 개의 다중 테 넌 트 게이트웨이, 가상 게이트웨이 및 게이트웨이 풀
 
 - 소프트웨어 부하 분산 장치
 
@@ -66,9 +66,9 @@ Windows PowerShell, REST API 또는 관리 응용 프로그램을 사용하여 �
 
 ![네트워크 컨트롤러 개요](../../../media/Network-Controller/NetController_overview.png)  
 
-테스트 랩 환경에서 네트워크 컨트롤러를 배포 하는 경우 Hyper-v 가상 컴퓨터에서 네트워크 컨트롤러 서버 역할을 실행할 수 있습니다 \(VM\) Hyper-v 호스트에 설치 된.
+테스트 랩 환경에서 네트워크 컨트롤러를 배포 하는 경우 hyper-v 호스트에 설치 된 Hyper-v 가상 컴퓨터 \(VM @ no__t-1에서 네트워크 컨트롤러 서버 역할을 실행할 수 있습니다.
 
-더 큰 데이터 센터에서 고가용성을 위해 3 개 이상의 Hyper-v 호스트에 설치 된 3 개의 Vm을 사용 하 여 클러스터를 배포할 수 있습니다. 자세한 내용은 [네트워크 컨트롤러에 대 한 고가용성 정보](network-controller-high-availability.md)합니다.
+대규모 데이터 센터에서 고가용성을 위해 세 개 이상의 Hyper-v 호스트에 설치 된 세 개의 Vm을 사용 하 여 클러스터를 배포할 수 있습니다. 자세한 내용은 [네트워크 컨트롤러 고가용성](network-controller-high-availability.md)을 참조 하세요.
 
 ## <a name="bkmk_features"></a>네트워크 컨트롤러 기능
 
@@ -76,9 +76,9 @@ Windows PowerShell, REST API 또는 관리 응용 프로그램을 사용하여 �
   
 -   [방화벽 관리](#bkmk_firewall)  
   
--   [소프트웨어 부하 분산 장치 관리](#bkmk_slb)  
+-   [소프트웨어 Load Balancer 관리](#bkmk_slb)  
   
--   [가상 네트워크 관리](#bkmk_virtual)  
+-   [Virtual Network 관리](#bkmk_virtual)  
   
 -   [RAS 게이트웨이 관리](#bkmk_gateway)
 
@@ -91,13 +91,13 @@ Windows PowerShell, REST API 또는 관리 응용 프로그램을 사용하여 �
 
 자세한 내용은 참조 [데이터 센터 방화벽 개요](../../../sdn/technologies/network-function-virtualization/Datacenter-Firewall-Overview.md)합니다.
 
-### <a name="bkmk_slb"></a>소프트웨어 부하 분산 장치 관리
+### <a name="bkmk_slb"></a>소프트웨어 Load Balancer 관리
 
 이 네트워크 컨트롤러 기능을 사용하면 여러 서버에서 동일 작업 부하를 호스트하여 고가용성과 확장성을 제공하도록 만들 수 있습니다.  
   
 자세한 내용은 참조 [소프트웨어 부하 분산 및 #40; SLB & #41; SDN에 대 한](../../../sdn/technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md)합니다.  
   
-### <a name="bkmk_virtual"></a>가상 네트워크 관리
+### <a name="bkmk_virtual"></a>Virtual Network 관리
 
 이 네트워크 컨트롤러 기능을 사용하면 개별 VM에서 Hyper-V 가상 스위치 및 가상 네트워크 어댑터를 포함하여 Hyper-V 네트워크 가상화를 배포 및 구성하며 가상 네트워크 정책을 저장 및 배포할 수 있습니다.
 
@@ -105,7 +105,7 @@ Windows PowerShell, REST API 또는 관리 응용 프로그램을 사용하여 �
 
 ### <a name="bkmk_gateway"></a>RAS 게이트웨이 관리
 
-이 네트워크 컨트롤러 기능을 사용 하면 배포, 구성 및 테 넌 트에 게이트웨이 서비스를 제공 하는 RAS 게이트웨이 풀의 구성원 인 가상 컴퓨터 (Vm)를 관리할 수 있습니다. 네트워크 컨트롤러를 사용 하면 자동으로 다음 게이트웨이 기능을 통해 RAS 게이트웨이 실행 하는 Vm을 배포할 수 있습니다.
+이 네트워크 컨트롤러 기능을 사용 하면 RAS 게이트웨이 풀의 구성원 인 Vm (가상 컴퓨터)을 배포, 구성 및 관리 하 여 테 넌 트에 게이트웨이 서비스를 제공할 수 있습니다. 네트워크 컨트롤러를 사용 하면 자동으로 다음 게이트웨이 기능을 통해 RAS 게이트웨이 실행 하는 Vm을 배포할 수 있습니다.
 
 > [!NOTE]
 > System Center Virtual Machine Manager에서 RAS 게이트웨이 Windows Server 게이트웨이 이름은입니다.
@@ -120,7 +120,7 @@ Windows PowerShell, REST API 또는 관리 응용 프로그램을 사용하여 �
 
 - 프로토콜 BGP (Border Gateway) 라우팅, 테 넌 트의 VM 네트워크와 해당 원격 사이트 간의 네트워크 트래픽 라우팅을 관리할 수 있습니다.
 
-네트워크 컨트롤러는 별도 게이트웨이에서 테 넌 트의 다양 한 연결을 배치할 수 있습니다. 모든 게이트웨이 연결에 대 한 단일 공용 IP를 사용할 수도 있고 연결의 하위 집합에 대 한 다른 공용 Ip가 있습니다. 네트워크 컨트롤러는 모든 게이트웨이 구성 및 감사 및 문제 해결을 위해 사용할 수 있는 상태 변경 내용을 기록 합니다.
+네트워크 컨트롤러는 테 넌 트의 서로 다른 연결을 별도의 게이트웨이에 놓을 수 있습니다. 모든 게이트웨이 연결에 단일 공용 IP를 사용 하거나, 연결의 하위 집합에 대 한 공용 IP가 서로 다를 수 있습니다. 네트워크 컨트롤러는 감사 및 문제 해결을 위해 사용할 수 있는 모든 게이트웨이 구성 및 상태 변경 내용을 기록 합니다.
 
 BGP에 대 한 자세한 내용은 참조 하십시오. [경계 게이트웨이 프로토콜 & #40; BGP (& a) #41;](../../../../remote/remote-access/bgp/Border-Gateway-Protocol-BGP.md)합니다.
 
@@ -128,8 +128,8 @@ RAS 게이트웨이에 대 한 자세한 내용은 참조 하십시오. [SDN RAS
 
 ## <a name="network-controller-deployment-options"></a>네트워크 컨트롤러 배포 옵션
 
-System Center Virtual Machine Manager 사용 하 여 네트워크 컨트롤러 배포 \(VMM\)를 참조 하십시오 [VMM 패브릭에서 SDN 네트워크 컨트롤러 설정](https://technet.microsoft.com/system-center-docs/vmm/scenario/sdn-network-controller)합니다.
+System Center Virtual Machine Manager \(VMM @ no__t-1을 사용 하 여 네트워크 컨트롤러를 배포 하려면 [vmm 패브릭에서 SDN 네트워크 컨트롤러 설정](https://technet.microsoft.com/system-center-docs/vmm/scenario/sdn-network-controller)을 참조 하세요.
 
-스크립트를 사용 하 여 네트워크 컨트롤러를 배포 하려면 참조 [소프트웨어 정의 네트워크 인프라를 사용 하 여 스크립트를 배포](../../deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md)합니다.
+스크립트를 사용 하 여 네트워크 컨트롤러를 배포 하려면 [스크립트를 사용 하 여 소프트웨어 정의 네트워크 인프라 배포](../../deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md)를 참조 하세요.
 
-Windows PowerShell을 사용 하 여 네트워크 컨트롤러를 배포 하려면 참조 [Windows PowerShell을 사용 하 여 네트워크 컨트롤러 배포](../../deploy/Deploy-Network-Controller-using-Windows-PowerShell.md)
+Windows PowerShell을 사용 하 여 네트워크 컨트롤러를 배포 하려면 [Windows powershell을 사용 하 여 네트워크 컨트롤러 배포](../../deploy/Deploy-Network-Controller-using-Windows-PowerShell.md) 를 참조 하세요.

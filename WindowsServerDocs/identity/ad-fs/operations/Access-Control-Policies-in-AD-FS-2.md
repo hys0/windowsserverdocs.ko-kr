@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: b73baacc1115359b1d3d8b494cc285b5edd7c5fc
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: b0d6133a6fb43b8624dc1329db632fb5dd4aa070
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70866033"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71358446"
 ---
 # <a name="client-access-control-policies-in-ad-fs-20"></a>AD FS 2.0의 클라이언트 Access Control 정책
 Active Directory Federation Services 2.0의 클라이언트 액세스 정책을 사용 하 여 리소스에 대 한 액세스를 제한 하거나 사용자에 게 부여할 수 있습니다.  이 문서에서는 AD FS 2.0에서 클라이언트 액세스 정책을 사용 하도록 설정 하는 방법 및 가장 일반적인 시나리오를 구성 하는 방법을 설명 합니다.
@@ -167,10 +167,10 @@ Active Directory 된 클레임 공급자 트러스트에서 새로운 각 요청
 |              모든 사용자에 대 한 액세스를 허용 하는 기본 AD FS 규칙입니다. 이 규칙은 Microsoft Office 365 Id 플랫폼 신뢰 당사자 트러스트 발급 권한 부여 규칙 목록에 이미 있어야 합니다.              |                                  = > issue (Type = "<https://schemas.microsoft.com/authorization/claims/permit>", Value = "true");                                   |
 |                               이 절을 새로운 사용자 지정 규칙에 추가 하면 요청이 페더레이션 서버 프록시에서 온 것으로 지정 됩니다. 즉, x-m 프록시 헤더를 포함 합니다.                                |                                                                                                                                                                    |
 |                                                                                 모든 규칙에이를 포함 하는 것이 좋습니다.                                                                                  |                                    exists ([Type = = "<https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy>"])                                    |
-|                                                         지정 된 허용 범위 내에 IP가 있는 클라이언트에서 요청을 하는 것을 설정 하는 데 사용 됩니다.                                                         | 존재 하지 않음 ([Type = =<https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip>"", 값 = ~ "고객이 제공한 공용 ip 주소 regex"]) |
-|                                    이 절을 사용 하 여 액세스 하는 응용 프로그램이 Microsoft. Exchange.                                     |       존재 하지 않음 ([Type = =<https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application>"", Value = = "Microsoft. Exchange. ActiveSync"])        |
-|                                                      이 규칙을 사용 하면 호출이 웹 브라우저를 통해 발생 했는지 여부를 확인할 수 있으며,이는 거부 되지 않습니다.                                                      |              존재 하지 않음 ([Type = =<https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path>"", Value = = "/adfs/ls/"])               |
-| 이 규칙은 특정 Active Directory 그룹 (SID 값 기반)의 유일한 사용자를 거부 해야 함을 설명 합니다. 이 문에 NOT을 추가 하면 위치에 관계 없이 사용자 그룹이 허용 됩니다. |             exists ([유형 = = "<https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid>", 값 = ~ "{그룹 SID 값 허용 된 AD 그룹}"])              |
+|                                                         지정 된 허용 범위 내에 IP가 있는 클라이언트에서 요청을 하는 것을 설정 하는 데 사용 됩니다.                                                         | 존재 하지 않음 ([Type = = "<https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip>", 값 = ~ "고객이 제공한 공용 ip 주소 regex"]) |
+|                                    이 절을 사용 하 여 액세스 하는 응용 프로그램이 Microsoft. Exchange.                                     |       존재 하지 않음 ([Type = = "<https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application>", 값 = = "Microsoft. Exchange. ActiveSync"])        |
+|                                                      이 규칙을 사용 하면 호출이 웹 브라우저를 통해 발생 했는지 여부를 확인할 수 있으며,이는 거부 되지 않습니다.                                                      |              존재 하지 않음 ([Type = = "<https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path>", 값 = = "/adfs/ls/"])               |
+| 이 규칙은 특정 Active Directory 그룹 (SID 값 기반)의 유일한 사용자를 거부 해야 함을 설명 합니다. 이 문에 NOT을 추가 하면 위치에 관계 없이 사용자 그룹이 허용 됩니다. |             exists ([Type = = "<https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid>", 값 = ~ "{그룹 SID 값 허용 된 AD 그룹}"])              |
 |                                                                위의 조건이 모두 충족 될 때 거부를 발급 하는 필수 절입니다.                                                                 |                                   = > issue (Type = "<https://schemas.microsoft.com/authorization/claims/deny>", Value = "true");                                    |
 
 ### <a name="building-the-ip-address-range-expression"></a>IP 주소 범위 식 작성
@@ -209,7 +209,7 @@ IP 주소 범위와 일치 해야 하는 경우 비교를 수행 하는 정규�
 
 따라서 두 개의 주소 (예: 192.168.1.1 또는 10.0.0.1)만 일치 시키는 예는\.\b192 168\.1\.1 \ b | \b10\.0\.0 0\.1 \ b입니다.
 
-이렇게 하면 원하는 수의 주소를 입력할 수 있는 방법이 제공 됩니다. 주소 범위를 허용 해야 하는 경우 (예: 192.168.1.1 – 192.168.1.25) 일치 항목은 \b192\.168\.1\.([1-9] | 1 [0-9] | 2 [0-5]) \b로 입력 해야 합니다.
+이렇게 하면 원하는 수의 주소를 입력할 수 있는 방법이 제공 됩니다. 주소 범위를 허용 해야 하는 경우 (예: 192.168.1.1 – 192.168.1.25) 일치 하는 문자: \b192 @ no__t-0168 @ no__t-11 @ no__t-2 ([1-9] | 1 [0-9] | 2 [0-5]) \b
 
 >[!Note] 
 >IP 주소는 숫자가 아니라 문자열로 처리 됩니다.
@@ -229,9 +229,9 @@ IP 주소 범위와 일치 해야 하는 경우 비교를 수행 하는 정규�
 >[!Note]
 >IP 주소의 다른 부분과 일치 하지 않도록 괄호를 올바르게 배치 해야 합니다.
 
-192 블록 일치를 사용 하 여 10 개의 블록에 대 한 유사한 식을 작성할 수 있습니다.\.\b10\.0\.0 ([1-9] | 1 [0-4]) \b
+192 블록 일치를 사용 하 여 10 개의 블록에 대 한 유사한 식을 작성할 수 있습니다. \b10 @ no__t-00 @ no__t-10 @ no__t ([1-9] | 1 [0-4]) \b
 
-그리고 다음 식은 "192.168.1.1 ~ 25" 및 "10.0.0.1 ~ 14"의 모든 주소와 일치 해야 합니다.\.\b192 168\.1\.([1-9] | 1 [0-9] | 2 [0-5]) \b | \b10\.0\.0\. ([1-9] | 1 [0-4]) \b
+다음 식은 "192.168.1.1 ~ 25" 및 "10.0.0.1 ~ 14"의 모든 주소와 일치 해야 합니다. \b192 @ no__t-0168 @ no__t ([1-9] | 1 [0-9] | 2 [0-5]) \b | \b10 @ no__t-30 @ no__t-40 @ no__t-5 ([1-9] | 1 [0-4]) \b
 
 #### <a name="testing-the-expression"></a>식 테스트
 

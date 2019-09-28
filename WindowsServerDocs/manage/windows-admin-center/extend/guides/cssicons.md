@@ -1,21 +1,21 @@
 ---
-title: 현재 Windows Admin Center는 아이콘 목록
-description: 현재 Windows Admin Center (프로젝트 브라 티) SDK에는 아이콘 목록
+title: Windows 관리 센터의 현재 아이콘 목록
+description: Windows 관리 센터 SDK (Project Honolulu)의 아이콘에 대 한 현재 목록입니다.
 ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 06/18/2018
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
-ms.openlocfilehash: e908e088cd92127a785004e22d51934c13afc1ff
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.prod: windows-server
+ms.openlocfilehash: 4b9ffe55b97bac93ab983b25e0971e2c07eeb520
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59844564"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71357086"
 ---
-# <a name="current-list-of-icons-in-windows-admin-center"></a>현재 Windows Admin Center는 아이콘 목록
+# <a name="current-list-of-icons-in-windows-admin-center"></a>Windows 관리 센터의 현재 아이콘 목록
 
 >적용 대상: Windows Admin Center, Windows Admin Center 미리 보기
 

@@ -1,9 +1,9 @@
 ---
 title: DNS 영역 만들기
-description: 이 항목은 Windows Server 2016에서 관리 IPAM (IP 주소) 관리 가이드의 일부입니다.
+description: 이 항목은 Windows Server 2016의 IPAM (IP 주소 관리) 관리 가이드의 일부입니다.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-ipam
@@ -12,18 +12,18 @@ ms.topic: article
 ms.assetid: a030ff51-a815-4fc4-b26d-aae41c3e4ce5
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 83e3865308fd45e88b800753b20ab298f9a14c96
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: dbd46ad129a4b3e5bbbe55f584f1bae43bd077c3
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67282249"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71355420"
 ---
 # <a name="create-a-dns-zone"></a>DNS 영역 만들기
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-IPAM 클라이언트 콘솔을 사용 하 여 DNS 영역을 만들려면이 항목에서는 사용할 수 있습니다.  
+이 항목을 사용 하 여 IPAM 클라이언트 콘솔을 사용 하 여 DNS 영역을 만들 수 있습니다.  
   
 이 절차를 수행하려면 최소한 **Administrators** 그룹의 구성원이거나 이와 동등한 자격이 있어야 합니다.  
   
@@ -31,13 +31,13 @@ IPAM 클라이언트 콘솔을 사용 하 여 DNS 영역을 만들려면이 항�
   
 1.  서버 관리자에서 클릭  **IPAM**합니다. IPAM 클라이언트 콘솔에 나타납니다.  
   
-2.  탐색 창에서의 **모니터링 및 관리**, 클릭 **DNS 및 DHCP 서버**합니다. 디스플레이 창에서 클릭 **서버 유형**를 클릭 하 고 **DNS**합니다. IPAM에서 관리 되는 모든 DNS 서버는 검색 결과에 나열 됩니다.  
+2.  탐색 창의 **모니터 및 관리**에서 **DNS 및 DHCP 서버**를 클릭 합니다. 디스플레이 창에서 **서버 유형**을 클릭 한 다음 **DNS**를 클릭 합니다. IPAM에서 관리 하는 모든 DNS 서버가 검색 결과에 나열 됩니다.  
   
-3.  영역을 추가 하려는 서버를 찾아 서버를 마우스 오른쪽 단추로 클릭 합니다.  클릭 **DNS 영역 만들기**합니다.  
+3.  영역을 추가 하려는 서버를 찾고 서버를 마우스 오른쪽 단추로 클릭 합니다.  **DNS 영역 만들기**를 클릭 합니다.  
   
     ![DNS 영역 만들기](../../media/Create-a-DNS-Zone/ipam_CreateDNSZone_01a.jpg)  
   
-4.  합니다 **DNS 영역 만들기** 대화 상자가 열립니다. **일반 속성**영역 형식에 영역 범주를 선택 하 고에 이름을 입력 **영역 이름**합니다. 배포에 대해 적절 한 값을 선택할 수도 **고급 속성**를 클릭 하 고 **확인**합니다.  
+4.  **DNS 영역 만들기** 대화 상자가 열립니다. **일반 속성**에서 영역 범주를 선택 하 고 영역 **이름**에 이름을 입력 합니다. 또한 **고급 속성**에서 배포에 적합 한 값을 선택 하 고 **확인**을 클릭 합니다.  
   
     ![고급 속성](../../media/Create-a-DNS-Zone/ipam_CreateDNSZone_02a.jpg)  
   

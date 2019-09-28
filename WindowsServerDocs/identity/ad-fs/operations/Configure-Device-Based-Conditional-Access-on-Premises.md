@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 08/11/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: bcb6c415aae33b9742d7a7080ec169ca947098b9
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: a7646144b591fd7327f881cb54489201140e9287
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66445004"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71358154"
 ---
 # <a name="configure-on-premises-conditional-access-using-registered-devices"></a>등록 된 장치를 사용 하 여 구성 온-프레미스 조건부 액세스
 
@@ -32,31 +32,31 @@ ms.locfileid: "66445004"
 |Intune 구독|장치 규정 준수 시나리오-에 대 한 MDM 통합에만 필요[무료 평가판을 세밀 하 게 됩니다.](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0)
 |Azure AD 연결|2015 년 11 월 QFE 이상.  최신 버전 가져오기 [여기](https://www.microsoft.com/en-us/download/details.aspx?id=47594)합니다.  
 |Windows Server 2016|10586 또는 AD FS에 대 한 최신 빌드  
-|Windows Server 2016 Active Directory 스키마|스키마 수준 85 이상 필요합니다.
-|Windows Server 2016 도메인 컨트롤러|만 Hello For Business 키 신뢰 배포에 필요 합니다.  추가 정보를 찾을 수 있습니다 [여기](https://aka.ms/whfbdocs)합니다.  
+|Windows Server 2016 Active Directory 스키마|스키마 수준 85 이상이 필요 합니다.
+|Windows Server 2016 도메인 컨트롤러|이는 비즈니스 키 신뢰 배포의 Hello에만 필요 합니다.  추가 정보는 [여기](https://aka.ms/whfbdocs)에서 찾을 수 있습니다.  
 |Windows 10 클라이언트|10586 빌드 또는 최신, 위 도메인에 가입 된 Windows 10 도메인 가입 및 Microsoft Passport에 대 한 작업 시나리오에 필요  
 |Azure AD Premium 라이선스가 할당 된 azure AD 사용자 계정|장치 등록에 대 한  
 
 
  
-## <a name="upgrade-your-active-directory-schema"></a>Active Directory 스키마를 업그레이드 합니다.
-등록 된 장치를 사용 하 여 온-프레미스 조건부 액세스를 사용 하려면 먼저 AD 스키마를 업그레이드 해야 합니다.  다음 조건이 충족 되어야 합니다.
-    - 스키마 버전 85 이상 이어야 합니다.
-    - 이러한 현상은 AD FS에 가입 된 포리스트의 필요
+## <a name="upgrade-your-active-directory-schema"></a>Active Directory 스키마 업그레이드
+등록 된 장치에서 온-프레미스 조건부 액세스를 사용 하려면 먼저 AD 스키마를 업그레이드 해야 합니다.  다음 조건이 충족 되어야 합니다.
+    - 스키마는 버전 85 이상 이어야 합니다.
+    - 이는 AD FS 가입 된 포리스트에만 필요 합니다.
 
 > [!NOTE]
-> Azure AD Connect 설치를 다시 실행 하 여 온-프레미스 새로 고침 해야 Windows Server 2016의 스키마 버전 (수준 85 이상)로 업그레이드 하기 전에 Azure AD Connect를 설치한 경우 AD 스키마에 대 한 동기화 규칙을 확인 하려면 Msds-keycredentiallink 구성 됩니다.
+> Windows Server 2016에서 스키마 버전 (수준 85 이상)으로 업그레이드 하기 전에 Azure AD Connect을 설치한 경우 Azure AD Connect 설치를 다시 실행 하 고 온-프레미스 AD 스키마를 새로 고쳐의 동기화 규칙을 확인 해야 합니다. 의 msds-primary-computer-KeyCredentialLink가 구성 되었습니다.
 
-### <a name="verify-your-schema-level"></a>에 스키마 수준 확인
-스키마 수준에 사용자를 확인 하려면 다음을 수행 합니다.
+### <a name="verify-your-schema-level"></a>스키마 수준 확인
+스키마 수준을 확인 하려면 다음을 수행 합니다.
 
-1.  ADSIEdit 또는 LDP를 사용 하 고 스키마 명명 컨텍스트를 연결할 수 있습니다.  
-2.  ADSIEdit를 사용 하 여 마우스 오른쪽 단추로 클릭 "CN = Schema, CN = Configuration, DC =<domain>, DC =<com> 속성을 선택 합니다.  Relpace 도메인 및 포리스트 정보가 포함 된 com 부분입니다.
-3.  특성 편집기에서 objectVersion 특성 찾아 알 수 버전입니다.  
+1.  ADSIEdit 또는 LDP를 사용 하 여 스키마 명명 컨텍스트에 연결할 수 있습니다.  
+2.  ADSIEdit를 사용 하 여 "CN = Schema, CN = Configuration, DC = <domain>, DC = <com>을 마우스 오른쪽 단추로 클릭 하 고 속성을 선택 합니다.  포리스트 정보를 사용 하 여 도메인 및 com 부분을 사용 합니다.
+3.  특성 편집기에서 objectVersion 특성을 찾아 사용자의 버전을 알려 줍니다.  
 
 ![ADSI 편집](media/Configure-Device-Based-Conditional-Access-on-Premises/adsiedit.png)  
 
-또한 다음 PowerShell cmdlet (대체 스키마 명명 컨텍스트 정보를 사용 하 여 개체)를 사용할 수 있습니다.
+다음 PowerShell cmdlet을 사용할 수도 있습니다. 개체를 스키마 명명 컨텍스트 정보로 바꿉니다.
 
 ``` powershell
 Get-ADObject "cn=schema,cn=configuration,dc=domain,dc=local" -Property objectVersion
@@ -65,7 +65,7 @@ Get-ADObject "cn=schema,cn=configuration,dc=domain,dc=local" -Property objectVer
 
 ![PowerShell](media/Configure-Device-Based-Conditional-Access-on-Premises/pshell1.png) 
 
-업그레이드에 대 한 자세한 내용은 참조 하세요. [도메인 컨트롤러를 Windows Server 2016으로 업그레이드](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2016.md)합니다. 
+업그레이드에 대 한 자세한 내용은 [Windows Server 2016로 도메인 컨트롤러 업그레이드](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2016.md)를 참조 하세요. 
 
 ## <a name="enable-azure-ad-device-registration"></a>Azure AD 장치 등록 사용  
 이 시나리오를 구성 하려면 Azure ad에서 장치 등록 기능을 구성 해야 합니다.  
@@ -79,7 +79,7 @@ Get-ADObject "cn=schema,cn=configuration,dc=domain,dc=local" -Property objectVer
 
 ## <a name="configure-device-write-back-and-device-authentication"></a>장치 쓰기 되돌림 및 장치 인증 구성  
 > [!NOTE]
-> Express 설정을 사용 하 여 Azure AD Connect를 실행 하는 경우에 올바른 AD 개체를 만들었습니다.  그러나 대부분의 AD FS 시나리오에서 Azure AD Connect를 실행할 때 AD FS를 구성 하는 사용자 지정 설정 하므로 다음 단계는 필요 합니다.  
+> Express 설정을 사용 하 여 Azure AD Connect 실행 한 경우 올바른 AD 개체가 생성 됩니다.  그러나 대부분의 AD FS 시나리오에서 Azure AD Connect를 실행할 때 AD FS를 구성 하는 사용자 지정 설정 하므로 다음 단계는 필요 합니다.  
 
 ### <a name="create-ad-objects-for-ad-fs-device-authentication"></a>AD FS 장치 인증에 대 한 AD 개체 만들기  
 장치 인증에 대 한 AD FS 팜을 아직 구성 되지 않은 경우 (표시 서비스에서 AD FS 관리 콘솔에서이 장치 등록->)는 올바른 AD DS 개체를 만들고 구성 하려면 다음 단계를 사용 합니다.  
@@ -222,7 +222,7 @@ Windows 10이 작업에 대 한 Microsoft Passport 설정에 대 한 자세한 �
     4. 장치 등록 또는 등록을 다시 시도  
 
 ### <a name="related-articles"></a>관련 문서  
-* [Azure Active Directory에 연결 된 Office 365 및 기타 앱에 대 한 액세스를 보호 합니다.](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access/)  
+* [Azure Active Directory에 연결 된 Office 365 및 기타 앱에 대 한 액세스 보호](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access/)  
 * [Office 365 서비스에 대 한 조건부 액세스 장치 정책](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-device-policies/)  
-* [Azure Active Directory Device Registration을 사용 하 여 온-프레미스 조건부 액세스 설정](https://docs.microsoft.com/azure/active-directory/active-directory-device-registration-on-premises-setup)  
-* [Windows 10 환경용 Azure AD에 도메인 가입 장치에 연결](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-devices-group-policy/)  
+* [Azure Active Directory Device Registration를 사용 하 여 온-프레미스 조건부 액세스 설정](https://docs.microsoft.com/azure/active-directory/active-directory-device-registration-on-premises-setup)  
+* [도메인에 가입 된 장치를 Windows 10 용 Azure AD 환경에 연결](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-devices-group-policy/)  

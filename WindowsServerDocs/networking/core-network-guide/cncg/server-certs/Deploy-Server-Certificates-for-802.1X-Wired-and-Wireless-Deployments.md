@@ -4,26 +4,26 @@ description: 이 항목은 서버 배포 인증서 802.1 X 유선 및 무선 배
 manager: brianlic
 ms.topic: article
 ms.assetid: 0a39ecae-39cc-4f26-bd6f-b71ed02fc4ad
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 2d4cdcd11e0eb334064ddefec0eda775ffccff2c
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 0dce886555167ad651704045120fb92eff0dcea1
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66446474"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71356181"
 ---
 # <a name="deploy-server-certificates-for-8021x-wired-and-wireless-deployments"></a>802.1 X 유선 및 무선 배포용 서버 인증서 배포
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 원격 액세스 및 네트워크 정책 (NPS 서버) 인프라 서버에 서버 인증서를 배포 하려면이 가이드를 사용할 수 있습니다.   
 
 이 가이드에는 다음 섹션이 수록되어 있습니다.  
 
--   [이 가이드를 사용 하기 위한 필수 구성 요소](#bkmk_pre)  
+-   [이 가이드를 사용 하기 위한 필수 조건](#bkmk_pre)  
 
 -   [이 가이드에서 설명하지 않는 정보](#bkmk_not)  
 
@@ -49,7 +49,7 @@ ms.locfileid: "66446474"
 - 서버 원격 액세스 서비스를 실행 하는 DirectAccess 또는 표준 VPN(가상 사설망) 서버 및 멤버는 **RAS 및 IAS Servers** 그룹입니다.  
 - 네트워크 정책 (NPS 서버) 서비스를 실행 하는 서버는의 멤버는 **RAS and IAS Servers** 그룹입니다.  
 
-### <a name="advantages-of-certificate-autoenrollment"></a>**인증서 자동 등록의 장점**  
+### <a name="advantages-of-certificate-autoenrollment"></a>**인증서 자동 등록의 이점**  
 자동 등록을 라고도 하는 서버 인증서의 자동 등록은 다음과 같은 이점을 제공 합니다.  
 
 - AD CS 인증 기관 (CA)에 모든 NPS 및 원격 액세스 서버에 서버 인증서를 자동으로 등록 됩니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "66446474"
 - 단순성입니다. Active Directory 그룹 계정 및 그룹 멤버 자격을 사용 하 여 서버 인증서를 등록 하는 서버를 지정 합니다.   
 - 서버 인증서를 배포할 때 인증서는이 가이드의 지침을 구성 하는 서식 파일을 기반으로 합니다. 즉, 특정 서버 유형에 대 한 다른 인증서 템플릿을 사용자 지정할 수 있습니다 하거나 발급 하고자 하는 모든 서버 인증서에 대 한 같은 서식 파일을 사용할 수 있습니다.  
 
-## <a name="bkmk_pre"></a>이 가이드를 사용 하기 위한 필수 구성 요소  
+## <a name="bkmk_pre"></a>이 가이드를 사용 하기 위한 필수 조건  
 
 이 가이드에서는 Windows Server 2016의 AD CS 및 웹 서버 (IIS) 서버 역할을 사용 하 여 서버 인증서를 배포 하는 방법을 설명 합니다. 이 가이드의 절차를 수행 하기 위한 필수 구성 요소는 다음과가 같습니다.  
 
@@ -76,7 +76,7 @@ ms.locfileid: "66446474"
 >[!NOTE]  
 >이 가이드에도 사용자 조직 명명 규칙에 따라 컴퓨터 이름에 대 한 배포 하는 웹 및 AD CS 서버에 고정 IP 주소를 할당할 준비가 됩니다. 또한 사용자의 도메인에 컴퓨터를 조인 해야 합니다.  
 
-## <a name="bkmk_not"></a>새로운이 가이드에서는  
+## <a name="bkmk_not"></a>이 가이드에서 제공 하지 않는 내용  
 이 가이드는 설계 및 AD CS를 사용 하 여 공개 키 인프라 (PKI)를 배포 하기 위한 포괄적인 지침을 제공 하지 않습니다. AD CS 및 PKI 디자인 설명서가이 가이드에 포함 된 기술을 배포 하기 전에 검토 하는 것이 좋습니다.   
 
 ## <a name="bkmk_tech"></a>기술 개요  

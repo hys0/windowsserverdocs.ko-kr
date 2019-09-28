@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 03/08/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: fe5c138466ea288b5dfb8c7c284603150ab9d874
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: b22c969e0113081e1ca8a662ae81a2ee24829835
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66190033"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71358298"
 ---
 # <a name="changing-the-company-logo-on-the-ad-fs-sign-in-page"></a>AD FS 로그인 페이지에 회사 로고 변경
 
@@ -34,4 +34,4 @@ ms.locfileid: "66190033"
 > `TargetName` 매개 변수는 필수입니다. AD FS와 함께 출시 되는 기본 테마 라고 *기본*합니다.  
 
 ## <a name="additional-references"></a>추가 참조 
-[AD FS 사용자 로그인 사용자 지정](AD-FS-user-sign-in-customization.md)  
+[사용자 로그인 사용자 지정 AD FS](AD-FS-user-sign-in-customization.md)  

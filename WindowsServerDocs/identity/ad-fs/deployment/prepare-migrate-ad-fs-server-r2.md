@@ -6,14 +6,14 @@ ms.author: billmath
 manager: femila
 ms.date: 07/10/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 73ac72abbf6f69beb202531c15257d75d08cce1b
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 149e3d3fc4d4eee22fa9330475f0eed9d945f8b9
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70867920"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71359313"
 ---
 # <a name="prepare-to-migrate-the-ad-fs-20-federation-server-to-ad-fs-on-windows-server-2012-r2"></a>AD FS 2.0 페더레이션 서버를 Windows Server 2012 r 2의 AD FS로 마이그레이션 준비
 

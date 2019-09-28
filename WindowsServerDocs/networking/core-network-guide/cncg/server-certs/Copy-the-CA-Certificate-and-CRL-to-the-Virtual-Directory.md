@@ -4,17 +4,17 @@ description: 이 항목은 서버 배포 인증서 802.1 X 유선 및 무선 배
 manager: dougkim
 ms.topic: article
 ms.assetid: a1b5fa23-9cb1-4c32-916f-2d75f48b42c7
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.author: pashort
 author: shortpatti
 ms.date: 07/19/2018
-ms.openlocfilehash: 9dbe14bec1c39ab5b967276c4faf3e9fc5a9aae3
-ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
+ms.openlocfilehash: 335efc4fae1f12f2af8443e91c67ff6ba936edb0
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69546540"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71356204"
 ---
 # <a name="copy-the-ca-certificate-and-crl-to-the-virtual-directory"></a>가상 디렉터리에 CA 인증서 및 CRL 복사
 
@@ -30,7 +30,7 @@ ms.locfileid: "69546540"
   
     - `certutil -crl`를 입력하고 Enter 키를 누릅니다.  
 
-    - C a 1 인증서를 웹 서버의 파일 공유에 복사 하려면를 입력 `copy C:\Windows\system32\certsrv\certenroll\*.crt \\WEB1\pki`한 다음 enter 키를 누릅니다.  
+    - C A 1 인증서를 웹 서버의 파일 공유에 복사 하려면 `copy C:\Windows\system32\certsrv\certenroll\*.crt \\WEB1\pki`을 입력 한 다음 ENTER 키를 누릅니다.  
     
     - 인증서 해지 목록 웹 서버에서 파일 공유로 복사 하려면 다음을 입력 `copy C:\Windows\system32\certsrv\certenroll\*.crl \\WEB1\pki`, 한 다음 ENTER를 누릅니다.  
   

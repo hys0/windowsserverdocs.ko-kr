@@ -4,20 +4,20 @@ description: 이 항목은 서버 배포 인증서 802.1 X 유선 및 무선 배
 manager: brianlic
 ms.topic: article
 ms.assetid: 8ff610e2-43ca-407f-a828-06d9366e02f0
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 238579c945821d19e45dad7e623450d598830596
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 35d5875c78dcd92f3b40b919568dabcf0d45d673
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59886124"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71356763"
 ---
 # <a name="configure-the-server-certificate-template"></a>서버 인증서 템플릿 구성
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 Active Directory 인증서 템플릿을 구성 하려면이 절차를 사용할 수 있습니다&reg; 네트워크에서 서버에 등록 된 서버 인증서의 기반으로 인증서 서비스 (AD CS)에서 사용 합니다.  
   

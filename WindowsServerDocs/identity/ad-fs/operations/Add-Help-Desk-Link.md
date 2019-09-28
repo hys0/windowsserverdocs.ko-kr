@@ -7,20 +7,20 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: fb186c3ba5cfb3acb9bfd0c3139b09b992fb8863
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 1673e6ee6357a9d59e8ac5891625d453bb434088
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66190212"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71358459"
 ---
 # <a name="add-help-desk-link"></a>지원 센터 링크 추가 
 
 
 ## <a name="to-add-a-help-desk-link"></a>지원 센터 링크를 추가 하려면  
-로그인에 표시 되는 지원 센터 링크를 추가할\-페이지에서 다음 Windows PowerShell cmdlet 및 구문을 사용 합니다.  
+Sign @ no__t-0in 페이지에 표시 되는 지원 센터 링크를 추가 하려면 다음 Windows PowerShell cmdlet 및 구문을 사용 합니다.  
 
 ![기술 지원 서비스를 추가 합니다.](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom2.png)
   
@@ -33,4 +33,4 @@ ms.locfileid: "66190212"
 
 
 ## <a name="additional-references"></a>추가 참조 
-[AD FS 사용자 로그인 사용자 지정](AD-FS-user-sign-in-customization.md)  
+[사용자 로그인 사용자 지정 AD FS](AD-FS-user-sign-in-customization.md)  

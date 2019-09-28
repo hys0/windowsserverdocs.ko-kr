@@ -7,20 +7,20 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 330214e83b6da5bf711c36995306f8f1a098fa24
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 34d2a15d5ad4f2563beffbce6ae5e729cf72c3ab
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66192206"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71359679"
 ---
 # <a name="deploying-federation-server-proxies"></a>페더레이션 서버 프록시 배포
 
-Active Directory Federation services에서 \(AD FS\) 웹 응용 프로그램 프록시 라는 새 원격 액세스 역할 서비스에서 Windows Server 2012 R2에서 페더레이션 서버 프록시 역할이 처리 됩니다. 레거시 버전의 AD FS 2.0 및 Windows Server 2012에서 AD FS와 같은 AD FS 페더레이션 서버 프록시 배포의 용도 회사 네트워크 외부에서 내게 필요한 옵션에 대 한 AD FS를 사용 하도록 설정 하려면 A에 대 한 하나 이상의 웹 응용 프로그램 프록시를 배포할 수 있습니다. Windows Server 2012 R2의 D FS 합니다.  
+Windows Server 2012 r 2의 Active Directory Federation Services \(AD FS @ no__t-1에서 페더레이션 서버 프록시의 역할은 웹 응용 프로그램 프록시 라는 새 원격 액세스 역할 서비스에 의해 처리 됩니다. 회사 네트워크 외부에서의 접근성에 대 한 AD FS를 사용 하도록 설정 하려면 Windows Server 2012의 AD FS 2.0 및 AD FS와 같이 AD FS의 레거시 버전에서 페더레이션 서버 프록시를 배포 하기 위한 것입니다. D FS in Windows Server 2012 R2.  
   
-AD FS의 컨텍스트에서 웹 응용 프로그램 프록시는 AD FS 페더레이션 서버 프록시로 작동합니다. 이 외에도 웹 응용 프로그램 프록시는 회사 네트워크 내부의 웹 응용 프로그램에 대해 역방향 프록시 기능을 제공하여 모든 장치의 사용자가 회사 네트워크 권역을 벗어나서도 해당 네트워크에 접근할 수 있습니다. 웹 응용 프로그램 프록시 역할 서비스에 대한 자세한 내용은 웹 응용 프로그램 프록시 개요를 참조하세요.  
+AD FS 컨텍스트에서 웹 응용 프로그램 프록시는 AD FS 페더레이션 서버 프록시로 작동 합니다. 이 외에도 웹 응용 프로그램 프록시는 회사 네트워크 내부의 웹 응용 프로그램에 대해 역방향 프록시 기능을 제공하여 모든 장치의 사용자가 회사 네트워크 권역을 벗어나서도 해당 네트워크에 접근할 수 있습니다. 웹 응용 프로그램 프록시 역할 서비스에 대한 자세한 내용은 웹 응용 프로그램 프록시 개요를 참조하세요.  
   
 웹 응용 프로그램 프록시 배포를 계획하려면 다음 항목의 정보를 검토하면 됩니다.  
   

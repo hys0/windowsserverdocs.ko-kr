@@ -7,23 +7,23 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: d49ae34d83d4a0b912bd92dbb9de16e18cc5b7ff
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 6a123afaebba002b8ee4fb98d5cee5aded286a96
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66191343"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71359127"
 ---
 # <a name="federation-server-farm-using-wid-and-proxies"></a>WID와 프록시를 사용하는 페더레이션 서버 팜
 
-Active Directory Federation Services에 대 한이 배포 토폴로지 \(AD FS\) 는 Windows 내부 데이터베이스를 사용 하 여 페더레이션 서버 팜에 동일 \(WID\) 토폴로지를 만들었지만 프록시 컴퓨터를 추가 합니다 외부 사용자를 지원 하도록 경계 네트워크입니다. 이러한 프록시는 페더레이션 서버 팜에 회사 네트워크 외부에서 제공 하는 클라이언트 인증 요청을 리디렉션합니다. AD FS의 이전 버전에서는 이러한 프록시는 페더레이션 서버 프록시를 이라고 했습니다.  
+Active Directory Federation Services \(AD FS @ no__t-1에 대 한이 배포 토폴로지는 Windows 내부 데이터베이스 \(WID @ no__t 토폴로지를 사용 하는 페더레이션 서버 팜과 동일 하지만, 지원 하기 위해 경계 네트워크에 프록시 컴퓨터를 추가 합니다. 외부 사용자. 이러한 프록시는 회사 네트워크 외부에서 가져온 클라이언트 인증 요청을 페더레이션 서버 팜으로 리디렉션합니다. 이전 버전의 AD FS에서는 이러한 프록시를 페더레이션 서버 프록시 라고 했습니다.  
   
 > [!IMPORTANT]  
-> Active Directory Federation services에서 \(AD FS\) 웹 응용 프로그램 프록시 라는 새 원격 액세스 역할 서비스에서 Windows Server 2012 R2에서 페더레이션 서버 프록시 역할이 처리 됩니다. 레거시 버전의 AD FS 2.0 및 Windows Server 2012에서 AD FS와 같은 AD FS 페더레이션 서버 프록시 배포의 용도 회사 네트워크 외부에서 내게 필요한 옵션에 대 한 AD FS를 사용 하도록 설정 하려면 A에 대 한 하나 이상의 웹 응용 프로그램 프록시를 배포할 수 있습니다. Windows Server 2012 R2의 D FS 합니다.  
+> Windows Server 2012 r 2의 Active Directory Federation Services \(AD FS @ no__t-1에서 페더레이션 서버 프록시의 역할은 웹 응용 프로그램 프록시 라는 새 원격 액세스 역할 서비스에 의해 처리 됩니다. 회사 네트워크 외부에서의 접근성에 대 한 AD FS를 사용 하도록 설정 하려면 Windows Server 2012의 AD FS 2.0 및 AD FS와 같이 AD FS의 레거시 버전에서 페더레이션 서버 프록시를 배포 하기 위한 것입니다. D FS in Windows Server 2012 R2.  
 >   
-> AD FS의 컨텍스트에서 웹 응용 프로그램 프록시는 AD FS 페더레이션 서버 프록시로 작동합니다. 이 외에도 웹 응용 프로그램 프록시는 회사 네트워크 내부의 웹 응용 프로그램에 대해 역방향 프록시 기능을 제공하여 모든 장치의 사용자가 회사 네트워크 권역을 벗어나서도 해당 네트워크에 접근할 수 있습니다. 웹 응용 프로그램 프록시 역할 서비스에 대한 자세한 내용은 웹 응용 프로그램 프록시 개요를 참조하세요.  
+> AD FS 컨텍스트에서 웹 응용 프로그램 프록시는 AD FS 페더레이션 서버 프록시로 작동 합니다. 이 외에도 웹 응용 프로그램 프록시는 회사 네트워크 내부의 웹 응용 프로그램에 대해 역방향 프록시 기능을 제공하여 모든 장치의 사용자가 회사 네트워크 권역을 벗어나서도 해당 네트워크에 접근할 수 있습니다. 웹 응용 프로그램 프록시 역할 서비스에 대한 자세한 내용은 웹 응용 프로그램 프록시 개요를 참조하세요.  
 >   
 > 웹 응용 프로그램 프록시 배포를 계획하려면 다음 항목의 정보를 검토하면 됩니다.  
 >   
@@ -55,9 +55,9 @@ Active Directory Federation Services에 대 한이 배포 토폴로지 \(AD FS\)
 |개 이상의 30 AD FS 노드|WID를 사용 하 여 지원 되지 않는 \- 필요한 SQL|WID를 사용 하 여 지원 되지 않는 \- 필요한 SQL  
   
 ## <a name="server-placement-and-network-layout-recommendations"></a>서버 배치와 네트워크 레이아웃 권장 사항  
-두 개의 웹 응용 프로그램 프록시를 추가 하는 것 외에도이 토폴로지를 배포 해야 경계 네트워크 도메인 이름 시스템에 대 한 액세스를 제공할 수도 있습니다 \(DNS\) 서버 및 두 번째 네트워크 부하 분산에 \( NLB\) 호스트 합니다. 두 번째 NLB 호스트는 인터넷을 사용 하는 NLB 클러스터에 구성 해야\-하며 액세스 가능 클러스터 IP 주소를 회사 네트워크에 대해 구성한 이전 NLB 클러스터와 동일한 클러스터 DNS 이름 설정 사용 해야 \(fs.fabrikam.com\)합니다. 인터넷을 사용 하 여 웹 응용 프로그램 프록시 구성도 해야\-액세스할 수 있는 IP 주소입니다.  
+이 토폴로지를 배포 하기 위해 두 개의 웹 응용 프로그램 프록시를 추가 하는 것 외에도 경계 네트워크가 도메인 이름 시스템 \(DNS @ no__t 서버 및 두 번째 네트워크 부하 분산 \(NLB @ no__t 호스트에 대 한 액세스를 제공할 수 있는지 확인 해야 합니다. 두 번째 NLB 호스트는 인터넷을 사용 하는 NLB 클러스터에 구성 해야\-하며 액세스 가능 클러스터 IP 주소를 회사 네트워크에 대해 구성한 이전 NLB 클러스터와 동일한 클러스터 DNS 이름 설정 사용 해야 \(fs.fabrikam.com\)합니다. 또한 웹 응용 프로그램 프록시는 Internet @ no__t-0으로 액세스 가능한 IP 주소를 사용 하 여 구성 해야 합니다.  
   
-두 번째 NLB 호스트를 동일한 클러스터 DNS 이름 추가하는다음그림에서는이전에설명한WID토폴로지및가상의Fabrikam,Inc.,회사경계DNS서버에대한액세스를제공하는방법을사용하여기존페더레이션서버팜에보여줍니다.\(fs.fabrikam.com\), 두 개의 웹 응용 프로그램 프록시를 추가 하 고 \(wap1 및 wap2\) 경계 네트워크에 있습니다.  
+다음 그림은 이전에 설명한 WID 토폴로지를 사용 하는 기존 페더레이션 서버 팜과 가상의 Fabrikam을 보여 줍니다. Inc. 회사는 경계 DNS 서버에 대 한 액세스를 제공 하 고, 동일한 클러스터 DNS 이름 @no__t wap2 @ no__t를 사용 하 여 두 번째 NLB 호스트를 추가 하 고, 경계 네트워크에 두 개의 웹 응용 프로그램 프록시 \(wap1 및 @ no__t-3을 추가 합니다.  
   
 ![WID 팜 및 프록시](media/WIDFarmADFSBlue.gif)  
   

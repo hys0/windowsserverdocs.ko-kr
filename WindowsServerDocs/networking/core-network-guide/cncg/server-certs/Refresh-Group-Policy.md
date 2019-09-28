@@ -4,20 +4,20 @@ description: 이 항목은 서버 배포 인증서 802.1 X 유선 및 무선 배
 manager: brianlic
 ms.topic: article
 ms.assetid: 65b36794-bb09-4c1b-a2e7-8fc780893d97
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 83dd48297535aafe30e48fe37010d81b279f4c91
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 88d39f41f61ae7c7f6a1fb84aa99806c4796c8cf
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59863454"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71356190"
 ---
 # <a name="refresh-group-policy"></a>그룹 새로 고침 정책
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 이 절차는 수동으로 로컬 컴퓨터에서 그룹 정책을 새로 사용할 수 있습니다. 그룹 정책은 새로 고칠 때, 인증서 자동 등록 구성 되어 있고 제대로 작동 로컬 컴퓨터가 인증 기관 (CA)에서 인증서 자동 등록 된 경우.  
   

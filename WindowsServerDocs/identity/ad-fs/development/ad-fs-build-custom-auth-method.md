@@ -6,14 +6,14 @@ ms.author: billmath
 manager: daveba
 ms.date: 05/23/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: fc71ca2b8d130ab00014f850ccae25e9138d501b
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 2ef16ddeb241d55b61b484805ff91cb247985d8d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70867566"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71358877"
 ---
 # <a name="build-a-custom-authentication-method-for-ad-fs-in-windows-server"></a>Windows Server에서 AD FS에 대 한 사용자 지정 인증 방법 빌드
 
@@ -62,7 +62,7 @@ ms.locfileid: "70867566"
 
     ![공급자 만들기](media/ad-fs-build-custom-auth-method/Dn783423.71a57ae1-d53d-462b-a846-5b3c02c7d3f2(MSDN.10).jpg "공급자 만들기")
 
-3.  AD FS 설치 된 Windows server 2012 R2 서버에서% windir%\\ADFS의 IdentityServer 복사본을 만들어 개발 컴퓨터의 프로젝트 폴더에 붙여 넣습니다.
+3.  AD FS 설치 된 Windows Server 2012 R2 서버에서% windir% \\ADFS의 **IdentityServer** 복사본을 만들어 개발 컴퓨터의 프로젝트 폴더에 붙여 넣습니다.
 
 4.  **솔루션 탐색기**에서 **참조** 를 마우스 오른쪽 단추로 클릭 하 고 **참조 추가** ...를 클릭 합니다.
 
@@ -325,9 +325,7 @@ ms.locfileid: "70867566"
         <input id="context" type="hidden" name="Context" value="%Context%"/>
         <!-- End inputs are required by the presentation framework. -->
         <p id="pageIntroductionText">이 콘텐츠는 MFA 샘플 어댑터에서 제공 됩니다. 챌린지 입력은 아래에 표시 되어야 합니다.</p>
-        <label for="challengeQuestionInput" class="block">질문 텍스트</label>
-        <input id="challengeQuestionInput" name="ChallengeQuestionAnswer" type="text" value="" class="text" placeholder="Answer placeholder" />
-        <div id="submissionArea" class="submitMargin">
+        <label for="challengeQuestionInput" class="block"> 질문 텍스트 @ no__t-1 @ no__t-2 @ no__t-3<div id="submissionArea" class="submitMargin">
         <input id="submitButton" type="submit" name="Submit" value="Submit" onclick="return AuthPage.submitAnswer()"/>
         </div>
         </form>
@@ -381,7 +379,7 @@ AD FS에서 외부 공급자를 호출 하려면 먼저 시스템에 등록 되�
 
 3.  Gacutil.exe 도구를 서버에 복사 합니다.
 
-    Gacutil.exe는 windows 8 컴퓨터의 **\\% homedrive% Program Files (x86)\\Microsoft sdk\\Windows\\v 8.0 a\\bin\\NETFX 4.0 도구\\**  에서 찾을 수 있습니다.  **NETFX 4.0 Tools** 위치 아래의 **1033**, **en-us**및 기타 지역화 된 리소스 폴더 뿐만 아니라 **gacutil.exe** 파일 자체가 필요 합니다.
+    Gacutil.exe는 Windows 8 컴퓨터의 **% homedrive% \\Program Files (x86) \\Microsoft sdk @ no__t-3Windows @ no__t-4v 8.0 a @ no__t-5bin @ no__t-6NETFX 4.0 Tools @ no__t-7** 에서 찾을 수 있습니다.  **NETFX 4.0 Tools** 위치 아래의 **1033**, **en-us**및 기타 지역화 된 리소스 폴더 뿐만 아니라 **gacutil.exe** 파일 자체가 필요 합니다.
 
 4.  공급자 파일 (하나 이상의 강력한 이름의 서명 된 .dll 파일)을 gacutil.exe와 동일한 폴더 위치에 복사 **합니다.** 위치는 편의를 위한 것입니다.
 
@@ -639,7 +637,7 @@ MFA 인증 페이지에서 "adfabric"을 입력 하면 성공적인 로그인이
 
 ## <a name="see-also"></a>관련 항목
 
-#### <a name="other-resources"></a>기타 리소스
+#### <a name="other-resources"></a>관련 자료
 
 [추가 인증 방법](https://msdn.microsoft.com/library/dn758113\(v=msdn.10\))  
 [중요 애플리케이션에 추가 Multi-Factor Authentication을 사용하여 위험 관리](https://msdn.microsoft.com/library/dn280949\(v=msdn.10\))

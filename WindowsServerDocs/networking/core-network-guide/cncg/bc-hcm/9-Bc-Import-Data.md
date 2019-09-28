@@ -2,20 +2,20 @@
 title: 호스트 캐시 서버에서 데이터 패키지 가져오기(선택 사항)
 description: 이 가이드에서는 Windows Server 2016 및 Windows 10을 실행 하는 컴퓨터에서 호스트 캐시 모드로 BranchCache를 배포 하는 방법 지침을 제공
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: article
 ms.assetid: d6159e91-f77c-42ec-9180-14bbb230ad17
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 440ef1e04143cba09213ffea634aa9d4fea51dab
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 61a6b1ac1dede4caf8d5633ce6a75e2005e190df
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59888004"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71356195"
 ---
-# <a name="import-data-packages-on-the-hosted-cache-server-optional"></a>호스트 캐시 서버에서 데이터 패키지 가져오기 \(옵션\)
+# <a name="import-data-packages-on-the-hosted-cache-server-optional"></a>호스트 캐시 서버에서 데이터 패키지 가져오기 \(Optional @ no__t-1
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

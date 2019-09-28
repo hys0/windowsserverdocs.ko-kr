@@ -7,20 +7,20 @@ ms.author: billmath
 manager: femila
 ms.date: 12/05/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: e9d6161666be89673cff6ef1a975d3205fa4b5c9
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 05a8b8bb5685c31ece29ed8eb38d37a424e478b8
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66189090"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71357941"
 ---
 # <a name="join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications"></a>회사 응용 프로그램 전반에 SSO 및 연속된 두 번째 단계 인증을 위한 모든 장치의 작업 공간 연결
 
 
 
-소비자 장치와 유비쿼터스 정보 액세스의 급증으로 사용자가 기술을 인식하는 방식이 바뀌고 있습니다. 정보 기술의 지속적인 사용은 정보의 간편한 액세스와 함께 업무와 개인 생활 간의 기존 경계를 무너뜨리고 있습니다. 믿음이 수반 됩니다 변화 하는 경계 이러한 기술을 선택 하 고 사용자의 개성, 활동 및 일정에 맞게 사용자 지정 하는 개인-작업 공간으로 확장 되어야 합니다. 엔터프라이즈 네트워크에 연결해야 하는 개인 소비자 장치의 증가하는 요구 사항을 수용하기 위해 다음과 같은 가치 제안을 도입했습니다.
+소비자 장치와 유비쿼터스 정보 액세스의 급증으로 사용자가 기술을 인식하는 방식이 바뀌고 있습니다. 정보 기술의 지속적인 사용은 정보의 간편한 액세스와 함께 업무와 개인 생활 간의 기존 경계를 무너뜨리고 있습니다. 이러한 변화 하는 경계는 사용자의 개성, 활동 및 일정에 맞게 개인 기술이 선택 하 고 사용자 지정 하는 하다 신념으로와 함께 작업 공간으로 확장 되어야 합니다. 엔터프라이즈 네트워크에 연결해야 하는 개인 소비자 장치의 증가하는 요구 사항을 수용하기 위해 다음과 같은 가치 제안을 도입했습니다.
 
 -   관리자는 응용 프로그램, 사용자, 장치 및 위치를 기반으로 하는 회사 리소스에 액세스할 수 있는 사람을 제어할 수 있습니다.
 
@@ -34,7 +34,7 @@ ms.locfileid: "66189090"
 ### <a name="BKMK_DRS"></a>Azure Active Directory Device Registration 서비스
 작업 공간 연결은 Azure Active Directory 장치 등록 서비스에서 가능합니다. 작업 공간 연결을 통해 장치가 연결되면 서비스에서 Azure Active Directory에 장치 개체를 프로비전하고 장치 ID를 나타내는 데 사용되는 키를 로컬 장치에 설정합니다. 그러면 클라우드 및 온-프레미스에서 호스트되는 응용 프로그램에 대한 액세스 제어 규칙에서 이 장치 ID를 사용할 수 있습니다.
 
-자세한 내용은 참조 하세요. [Azure Active Directory의 장치 관리 소개](https://docs.microsoft.com/azure/active-directory/device-management-introduction)합니다.
+자세한 내용은 [Azure Active Directory의 장치 관리 소개](https://docs.microsoft.com/azure/active-directory/device-management-introduction)를 참조 하세요.
 
 ### <a name="workplace-join-as-a-seamless-second-factor-authentication"></a>연속된 두 번째 단계 인증으로서의 작업 공간 연결
 회사에서는 소비자 장치에 회사 리소스에 대한 액세스 권한을 부여하는 동시에 정보 액세스와 관련된 위험을 관리하고 관리 방식 및 규정 준수를 유도할 수 있습니다. 장치의 작업 공간 연결을 통해 관리자는 다음을 할 수 있습니다.
@@ -61,7 +61,7 @@ ms.locfileid: "66189090"
 3.  [연습: Android 디바이스를 사용하여 작업 공간 연결](../../ad-fs/operations/walkthrough--workplace-join-to-an-android-device.md)
 
 ## <a name="see-also"></a>관련 항목
-[Device Registration Service를 사용 하 여 페더레이션 서버 구성](../deployment/configure-a-federation-server-with-device-registration-service.md)
+[장치 등록 서비스를 사용 하 여 페더레이션 서버 구성](../deployment/configure-a-federation-server-with-device-registration-service.md)
 
 
 

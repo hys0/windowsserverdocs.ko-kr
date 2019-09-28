@@ -1,49 +1,49 @@
 ---
 title: 데이터 센터 및 클라우드 네트워킹 팀에 문의
-description: 이 페이지는 다양 한 컨텍스트에서 SDN 팀에 연결 하기 위한 최상의 방법을 알려주기 위해 설계 되었습니다.
+description: 이 페이지는 다양 한 컨텍스트에서 SDN 팀에 도달 하는 데 가장 적합 한 방법을 고객에 게 알리기 위한 것입니다.
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: f9945c55-c2d0-448f-86dd-8c734e1b2987
 ms.author: pashort
 author: kallie-b
-ms.openlocfilehash: dd67fe27c048a15903d18dca43cf331a025933b3
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: a62a661fc9bb665f71f0e16cb3298ff52f3137db
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66446384"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71355990"
 ---
 # <a name="contact-the-datacenter-and-cloud-networking-team"></a>데이터 센터 및 클라우드 네트워킹 팀에 문의
 
 > 적용 대상: Windows Server 2016
 
-Microsoft의 **소프트웨어 정의 네트워킹 \(SDN\)**  하 고 **컨테이너 네트워킹** 솔루션의 데이터 센터 및 클라우드 네트워킹 팀에 의해 만들어집니다. 보고 질문, 피드백을 제공 하는 팀에 문의 수 버그 또는 기능을 요청 하려면이 페이지를 사용 하십시오.
+Microsoft의 **소프트웨어 정의 네트워킹 \(SDN @ no__t-2** 및 **컨테이너 네트워킹** 솔루션은 데이터 센터 및 클라우드 네트워킹 팀에서 만듭니다. 이 페이지를 사용 하 여 팀과 연락 하 여 질문 하거나 피드백을 제공 하거나 버그를 보고 하거나 기능을 요청 하세요.
 
-다음은 가장 활동적인 경향이 있는 포럼 목록 최선을 모든 커뮤니티에서 사용 하는 경로 따라 SDN 팀을 하는 동안와 Microsoft teams에 연결 하기 위해 여러 환경이 있습니다. *사용자에 게에 대 한 주요 리소스 이며 우리가 가장 가까운 시청 하는 환경이 서로 같이 합니다.*
+Microsoft 팀에 연락할 수 있는 여러 가지 방법이 있으며, SDN 팀에서 커뮤니티에서 사용 하는 모든 방법을 따르는 것이 가장 좋습니다. 여기에는 가장 활발 한 포럼 목록이 있습니다. *이러한 리소스는 사용자를 위한 주요 리소스 이며, 사용자가 가장 가까운 것을 볼 수 있는 수단입니다.*
 
-## <a name="twitterhttpstwittercommicrosoftsdn"></a>[Twitter](https://twitter.com/Microsoft_SDN)
+## <a name="twitterhttpstwittercommicrosoft_sdn"></a>[Twitter](https://twitter.com/Microsoft_SDN)
 
-최근으로 twitter는 현재 상태를 출시 했습니다 [ @Microsoft_SDN ](https://twitter.com/Microsoft_SDN)합니다. 질문, 의견 또는 기능/설명서 요청 하는 Twitter 핸들을 사용 하 여 자유롭게 있습니다.
-> 요청 피드백/질문/교류할 수는 있는 장소, 외에도 "피드에서"를 가져오려고 하면 Twitter SDN 및 Windows 컨테이너 네트워킹 관련-Twitter에서는 첫 번째 위치는 모든 것이 좋습니다 **뉴스 게시**, 발표 **새로운 기능** 커뮤니티의 모든 지점 및 우리의 **최신 블로그 및 리소스**합니다.
+최근 Twitter에 대 한 현재 상태를 [@Microsoft_SDN](https://twitter.com/Microsoft_SDN)로 시작 했습니다. Twitter 핸들을 사용 하 여 질문 하거나 피드백을 제공 하거나 기능/설명서 요청을 수행할 수 있습니다.
+> 질문/피드백/요청을 확인할 수 있는 위치 외에도, 모든 SDN 및 Windows 컨테이너 네트워킹 관련 항목에서 "피드"를 얻을 수 있는 위치를 사용 하는 것이 좋습니다.-Twitter는 뉴스를 **게시할**첫 번째 위치입니다.커뮤니티에서 **최신 블로그 및 리소스**를 모두 제공 하는 기능을 제공 합니다.
 
 ## <a name="github-microsoftsdn-repohttpsgithubcommicrosoftsdnissues"></a>GitHub ([Microsoft/SDN 리포지토리](https://github.com/Microsoft/SDN/issues))
-이동 [여기](https://github.com/Microsoft/SDN/issues) SDN GitHub 리포지토리를 통해 팀에 문제를 제출 합니다. 이 좋은 방법은 **도움말 문제 해결을 위한** 하거나 **버그를 보고**합니다.
+GitHub 리포지토리를 통해 SDN 팀에 문제를 제출 하려면 [여기](https://github.com/Microsoft/SDN/issues) 로 이동 하세요. 이는 문제를 해결 하거나 **버그를 보고**하는 **데** 가장 적합 한 장소입니다.
 
-> GitHub는 트 윗에 쉽게 맞출 수 있습니다 작업 들 보다 더 자세한 정보를 포함 하는 항목에 대해 문의 하는 것이 좋습니다. *SDN 배포를 사용 하 여 도움이 필요 하세요? 알 수 없는 기능 조직의 고유한 요구 사항에 맞게 수는 어떻게? 잠재적인 버그에 의해 보류 중인?* GitHub 문제를 제출 하 여 저희 하는 모든 좋은 이유입니다.
+> GitHub는 트 윗에 쉽게 맞출 수 있는 것 보다 더 자세한 정보를 포함 하는 토픽에 대 한 정보를 알려 주는 가장 좋은 장소입니다. *SDN 배포에 대 한 도움이 필요 한가요? 기능이 조직의 고유한 요구 사항에 어떻게 부합 하나요? 잠재적 버그로 인해 유지 되나요?* GitHub 문제를 제출 하 여 연락 하는 데 도움이 되는 모든 좋은 이유입니다.
 
 ## <a name="microsoft-docshttpsdocsmicrosoftcom"></a>[Microsoft Docs](https://docs.microsoft.com/)
-우리의 [컨테이너 네트워킹 설명서](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/container-networking) 에서 확인할 수 있습니다 [(docs.microsoft.com) Microsoft Docs](https://docs.microsoft.com/)에 있는 **주석 기능을 기본적으로**합니다. 유지 또는 주석에 회신 하려면 Microsoft Docs에서 참조 하려는 Microsoft Docs 페이지의 맨 아래로 스크롤에 로그인 하 고 수 있는 의견을 제출 합니다.
+[컨테이너 네트워킹 설명서](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/container-networking) 는 **기본 제공 주석 기능**을 포함 하는 [Microsoft Docs (docs.microsoft.com)](https://docs.microsoft.com/)에서 찾을 수 있습니다. 로그인 할 Microsoft Docs에 대 한 의견을 남겨 두거나 회신 하려면 참조 하려는 Microsoft Docs 페이지의 아래쪽으로 스크롤한 다음 주석을 만들어 제출 합니다.
 
-> [Microsoft Docs](https://docs.microsoft.com/) 는 Microsoft의 새로운 통합된 설명서 사이트입니다. 팀의 대부분 [SDN 설명서](https://technet.microsoft.com/windows-server-docs/networking/sdn/software-defined-networking) TechNet에 남아 우리의 [컨테이너 네트워킹 설명서](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/container-networking) Microsoft Docs에서 되었습니다.
+> [Microsoft Docs](https://docs.microsoft.com/) 는 Microsoft의 새로운 통합 문서 사이트입니다. 대부분의 팀의 [SDN 설명서](https://technet.microsoft.com/windows-server-docs/networking/sdn/software-defined-networking) 는 TechNet에 그대로 남아 있지만 [컨테이너 네트워킹 설명서](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/container-networking) 는 현재 Microsoft Docs에 있습니다.
 > 
-> *일반적으로 질문 불꽃 모드로 들어가거나 자세한 하고자 하는 Microsoft Docs에서 항목을 실행 하는 경우 의견을 남겨 하도록 도와주는 Microsoft 팀과 의견을 공유 하는 페이지입니다.*
+> *일반적으로 질문을 spark 하는 Microsoft Docs에 대 한 항목을 실행 하는 경우에는이 페이지에 의견을 남겨 두면 도움이 되는 Microsoft 팀과 의견을 공유할 수 있습니다.*
 
-## <a name="container-specific-forums"></a>컨테이너 관련 포럼
-자유롭게가이 페이지에서 모든 통로 사용 하 여 컨테이너 및 컨테이너 네트워킹에 관련 된 피드백을 제공 합니다. 그러나 찾으려는 Microsoft의 기본 포럼에 대 한 컨테이너 커뮤니티 특히, 다음을 참조 합니다.
-- [사용자 음성](https://windowsserver.uservoice.com/forums/304624-containers) 에 가장 적합 한- *기능 요청*
-- [Github (가상화 repo)](https://github.com/Microsoft/Virtualization-Documentation) -검색에 대 한 최상의 *문제 해결 도움말* 및 *버그를 보고 합니다.*
+## <a name="container-specific-forums"></a>컨테이너 특정 포럼
+이 페이지의 모든 통로를 사용 하 여 컨테이너 및 컨테이너 네트워킹과 관련 된 피드백을 제공할 수 있습니다. 그러나 특히 컨테이너 커뮤니티에 대 한 Microsoft의 기본 포럼을 찾고 있다면 다음을 참조 하세요.
+- [사용자 의견](https://windowsserver.uservoice.com/forums/304624-containers) - *기능 요청* 에 적합
+- [Github (가상화 리포지토리)](https://github.com/Microsoft/Virtualization-Documentation) - *문제 해결 도움말* 및 *보고 버그* 를 검색 하는 데 가장 적합
 
-### <a name="not-seeing-the-forum-for-you"></a>포럼 표시 되지 않나요? 
-가능한 경우 것이 좋습니다 공개 포럼을 사용 하 여를 질문 하는 방식으로 제공 되는 주석 액세스 로부터 광범위 한 커뮤니티 도움이 되도록 합니다. 그러나 것도 인식 전자 메일 문의를 기본 방법일 뿐 인 경우가 있습니다. 인 경우 이러한 상황 중 하나에서 보내 주십시오 이메일을 sdn_feedback@microsoft.com 및 의견을 주시면 됩니다.
+### <a name="not-seeing-the-forum-for-you"></a>포럼을 볼 수 없나요? 
+가능 하면, 광범위 한 커뮤니티에서 질문과 의견에 대 한 액세스를 활용할 수 있도록 공용 포럼을 사용 하는 것이 좋습니다. 그러나 전자 메일을 사용 하 여 자신에 게 연락 하는 것이 좋은 경우도 있습니다. 이러한 상황 중 하나에 해당 하는 경우 sdn_feedback@microsoft.com에서 전자 메일을 보내 주시기 바랍니다.

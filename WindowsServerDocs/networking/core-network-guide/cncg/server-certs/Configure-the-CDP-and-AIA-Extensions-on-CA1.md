@@ -4,17 +4,17 @@ description: 이 항목은 서버 배포 인증서 802.1 X 유선 및 무선 배
 manager: dougkim
 ms.topic: article
 ms.assetid: f77a3989-9f92-41ef-92a8-031651dd73a8
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.author: pashort
 author: shortpatti
 ms.date: 07/26/2018
-ms.openlocfilehash: 74d77347e0ca1dffbca4e2cf6f17b9faa25d55bf
-ms.sourcegitcommit: 23a6e83b688119c9357262b6815c9402c2965472
+ms.openlocfilehash: 94304f6ae2604dad9f1d21be62d19e4a57a7a1ae
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69560501"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71356172"
 ---
 # <a name="configure-the-cdp-and-aia-extensions-on-ca1"></a>C a 1에서 CDP 및 AIA 확장 구성
 
@@ -47,7 +47,7 @@ C a 1에서 인증서 CRL (해지 목록) 배포 지점 (CDP) 및 액세스 AIA 
   
 6.  에 **확장** 탭에서 다음 확인란을 선택 합니다.  
   
-    -   **Crl에 포함. 클라이언트는이를 사용 하 여 델타 CRL 위치를 찾습니다.**  
+    -   **은 Crl에 포함 됩니다. 클라이언트는이를 사용 하 여 델타 CRL 위치 @ no__t를 찾습니다.  
   
     -   **발급 된 인증서의 CDP 확장에 포함**  
   

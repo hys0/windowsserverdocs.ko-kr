@@ -6,14 +6,14 @@ ms.author: billmath
 manager: daveba
 ms.date: 08/09/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 6a0a1da3dd5c92dff885478c1669bbda5ae07fe5
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 0e680e07ce1ee27a73791e310a71b85ad76d6318
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70867481"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71358764"
 ---
 # <a name="ad-fs-openid-connectoauth-concepts"></a>AD FS Openid connect Connect/OAuth 개념
 AD FS 2016 이상에 적용 됩니다.
@@ -55,7 +55,7 @@ AD FS로 구성 된 모든 OAuth 클라이언트 (네이티브 또는 웹 앱) �
  
 AD FS에서 리소스를 등록 하는 동안 AD FS 특정 작업을 수행할 수 있도록 범위를 구성할 수 있습니다. 범위를 구성 하는 것 외에도 작업을 수행 하는 AD FS에 대 한 요청에 범위 값을 전송 해야 합니다. 예를 들어, 관리자는 리소스 등록 중에 openid connect로 범위를 구성 해야 하 고, 응용 프로그램 (클라이언트)이 AD FS에 대 한 인증 요청에서 범위 = openid connect를 발급 ID 토큰으로 보내야 합니다. AD FS에서 사용할 수 있는 범위에 대 한 자세한 내용은 아래에 나와 있습니다. 
  
-- aza-  [Broker 클라이언트에 OAuth 2.0 프로토콜 확장](https://docs.microsoft.com/openspecs/windows_protocols/ms-oapxbc/2f7d8875-0383-4058-956d-2fb216b44706)을 사용 하는 경우 범위 매개 변수에 "aza" 범위가 포함 되어 있으면 서버가 새 주 새로 고침 토큰을 발급 하 고 응답의 refresh_token 필드에 해당 토큰을 설정 하 고 refresh_token_expires_in이 적용 되는 경우 새 주 새로 고침 토큰의 수명으로 필드를 유지 합니다. 
+- aza- [Broker 클라이언트에 대해 OAuth 2.0 프로토콜 확장](https://docs.microsoft.com/openspecs/windows_protocols/ms-oapxbc/2f7d8875-0383-4058-956d-2fb216b44706)을 사용 하는 경우  입니다. 범위 매개 변수에 "aza" 범위가 포함 되어 있으면 서버가 새 주 새로 고침 토큰을 발급 하 고 응답의 refresh_token 필드에 해당 토큰을 설정 하 고 refresh_를 설정 합니다. token_expires_in이 적용 되는 경우 새 주 새로 고침 토큰의 수명으로 필드를 유지 합니다. 
 - openid connect-응용 프로그램에서 Openid connect Connect 권한 부여 프로토콜의 사용을 요청할 수 있습니다. 
 - logon_cert-logon_cert 범위를 통해 응용 프로그램은 인증 된 사용자를 대화형으로 로그온 하는 데 사용할 수 있는 로그온 인증서를 요청할 수 있습니다. AD FS 서버는 응답에서 access_token 매개 변수를 생략 하 고 대신 b a s e 64로 인코딩된 CMS 인증서 체인 또는 CMC 전체 PKI 응답을 제공 합니다. 자세한 내용은 [여기](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-oapx/32ce8878-7d33-4c02-818b-6c9164cc731e)에 있습니다.
 - user_impersonation-AD FS에서 온-액세스 토큰을 성공적으로 요청 하려면 user_impersonation 범위가 필요 합니다. 이 범위를 사용 하는 방법에 대 한 자세한 내용은 AD FS 2016를 사용 하 여 OAuth를 사용 하 여 [(OBO)를 사용 하는 다중 계층 응용 프로그램 빌드](ad-fs-on-behalf-of-authentication-in-windows-server.md)를 참조 하세요. 

@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 0acfa6eec1d83c246c43ad32f7548ea771eb3c11
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 994eadfa205b62c5a512ab130c71fa6c22d1cff6
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66445762"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71357536"
 ---
 # <a name="deploy-implementing-retention-of-information-on-file-servers-demonstration-steps"></a>Deploy Implementing Retention of Information on File Servers (Demonstration Steps)
 
@@ -22,17 +22,17 @@ ms.locfileid: "66445762"
 
 파일 분류 인프라 및 파일 서버 리소스 관리자를 사용하여 폴더에 대한 보존 기간을 설정하고 파일에 법적 보존을 적용할 수 있습니다.  
   
-**이 문서에서는**  
+**이 문서의**  
   
 -   [필수 구성 요소](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_Prereqs)  
   
--   [1단계: 리소스 속성 정의 만들기](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_Step1)  
+-   [1단계: 리소스 속성 정의 만들기 @ no__t-0  
   
--   [2단계: 알림 구성](Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-.md#BKMK_Step2)  
+-   [2단계: 알림 구성 @ no__t-0  
   
--   [3단계: 파일 관리 작업 만들기](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_Step3)  
+-   [3단계: 파일 관리 작업 만들기 @ no__t-0  
   
--   [4단계: 수동으로 파일 분류](Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-.md#BKMK_Step4)  
+-   [4단계: 수동으로 파일 분류 @ no__t-0  
   
 > [!NOTE]  
 > 이 항목에는 설명한 절차의 일부를 자동화하는 데 사용할 수 있는 샘플 Windows PowerShell cmdlet이 포함되어 있습니다. 자세한 내용은 참조 [Cmdlet를 사용 하 여](https://go.microsoft.com/fwlink/p/?linkid=230693)합니다.  
@@ -41,9 +41,9 @@ ms.locfileid: "66445762"
 이 항목의 단계에서는 SMTP 서버에서 파일 만료 알림을 구성한 것으로 가정합니다.  
   
 ## <a name="BKMK_Step1"></a>1 단계: 리소스 속성 정의 만들기  
-이 단계에서는 파일 분류 인프라가 네트워크 공유 폴더에서 검사 된 파일에 태그를 이러한 리소스 속성을 사용할 수 있도록 보존 기간 및 검색 기능 리소스 속성을 설정 합니다.  
+이 단계에서는 파일 분류 인프라에서 이러한 리소스 속성을 사용 하 여 네트워크 공유 폴더에서 검사 된 파일에 태그를 지정할 수 있도록 보존 기간 및 검색 기능 리소스 속성을 사용 하도록 설정 합니다.  
   
-[Windows PowerShell을 사용 하 여이 단계를 수행 합니다.](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep1)  
+[Windows PowerShell을 사용 하 여이 단계 수행](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep1)  
   
 #### <a name="to-create-resource-property-definitions"></a>리소스 속성 정의를 만들려면  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66445762"
   
 5.  **검색 기능**을 마우스 오른쪽 단추로 클릭한 다음 **사용**을 클릭합니다.  
   
-![솔루션 가이드](media/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![solution guide](media/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -69,7 +69,7 @@ Set-ADResourceProperty -Enabled:$true -Identity:'CN=Discoverability_MS,CN=Resour
 ## <a name="BKMK_Step2"></a>2 단계: 알림 구성  
 이 단계에서는 파일 서버 리소스 관리자 콘솔을 사용하여 SMTP 서버, 기본 관리자 메일 주소 및 보고서를 보낼 기본 메일 주소를 구성합니다.  
   
-[Windows PowerShell을 사용 하 여이 단계를 수행 합니다.](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep2)  
+[Windows PowerShell을 사용 하 여이 단계 수행](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep2)  
   
 #### <a name="to-configure-notifications"></a>알림을 구성하려면  
   
@@ -91,7 +91,7 @@ Set-ADResourceProperty -Enabled:$true -Identity:'CN=Discoverability_MS,CN=Resour
   
 6.  **확인**을 클릭합니다.  
   
-![솔루션 가이드](media/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![solution guide](media/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -108,7 +108,7 @@ Set-FsrmSetting -SmtpServer IP address of SMTP server -FromEmailAddress "FromEma
   
 -   지난 10일 동안 수정되지 않은 파일  
   
-[Windows PowerShell을 사용 하 여이 단계를 수행 합니다.](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep3)  
+[Windows PowerShell을 사용 하 여이 단계 수행](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep3)  
   
 #### <a name="to-create-a-file-management-task"></a>파일 관리 작업을 만들려면  
   
@@ -142,7 +142,7 @@ Set-FsrmSetting -SmtpServer IP address of SMTP server -FromEmailAddress "FromEma
   
 11. **확인**을 클릭합니다.  
   
-![솔루션 가이드](media/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![solution guide](media/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -187,7 +187,7 @@ $fmj1=New-FSRMFileManagementJob -Name "Retention Task" -Namespace @('D:\Finance 
   
 -   [시나리오: 파일 서버에 정보 보존 구현](Scenario--Implement-Retention-of-Information-on-File-Servers.md)  
   
--   [파일 서버의 정보 보존 계획](assetId:///edf13190-7077-455a-ac01-f534064a9e0c)  
+-   [파일 서버에 대 한 정보 보존 계획](assetId:///edf13190-7077-455a-ac01-f534064a9e0c)  
   
 -   [동적 액세스 제어: 시나리오 개요](Dynamic-Access-Control--Scenario-Overview.md)  
   

@@ -2,18 +2,18 @@
 title: BranchCache 추가 리소스
 description: 이 가이드에서는 Windows Server 2016 및 Windows 10을 실행 하는 컴퓨터에서 호스트 캐시 모드로 BranchCache를 배포 하는 방법 지침을 제공
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: article
 ms.assetid: c7326f5b-87fb-4e57-9b77-72a5d0ab0444
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 610e1a256ef5eeafa4b7dd25e03fc760ab7d224e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 66fb104fd6f72f3eca4fe26adfcdc41f3fd52c5a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59842264"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71356360"
 ---
 # <a name="branchcache-additional-resources"></a>BranchCache 추가 리소스
 

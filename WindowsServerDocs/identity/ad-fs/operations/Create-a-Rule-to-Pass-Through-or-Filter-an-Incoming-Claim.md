@@ -7,18 +7,18 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: be20996d1df3898b8ff23422759e810a4b333b3d
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 145558e620188c4311d79d2a9ba4ed7aaf7b13a8
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66189542"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71358143"
 ---
 # <a name="create-a-rule-to-pass-through-or-filter-an-incoming-claim"></a>통과 또는 들어오는 클레임을 필터링 하는 규칙 만들기
 
-통과 또는 필터링 Active Directory Federation Services에서 들어오는 클레임 규칙 템플릿을 \(AD FS\), 선택한 클레임 형식을 사용 하 여 모든 들어오는 클레임을 통해 전달할 수 있습니다. 또한 선택한 클레임 형식을 사용 하 여 들어오는 클레임의 값을 필터링 할 수 있습니다. 예를 들어이 규칙 서식 파일을 보낼 모든 들어오는 클레임 규칙을 만들려면 사용할 수 있습니다. 사용자 계정 이름만 보내도록이 규칙을 사용할 수도 있습니다 \(UPN\) 으로 끝나는 클레임 @fabrikam합니다.  
+Active Directory Federation Services에서 들어오는 클레임 통과 또는 필터링 규칙 템플릿을 사용 하 여 \(AD FS @ no__t-1을 사용 하 여 선택한 클레임 유형으로 들어오는 모든 클레임을 통과할 수 있습니다. 또한 선택한 클레임 형식을 사용 하 여 들어오는 클레임의 값을 필터링 할 수 있습니다. 예를 들어이 규칙 서식 파일을 보낼 모든 들어오는 클레임 규칙을 만들려면 사용할 수 있습니다. 또한이 규칙을 사용 하 여 @fabrikam로 끝나는 사용자 계정 이름 \(UPN @ no__t-1 클레임만 보낼 수 있습니다.  
   
 다음 절차를 사용 하 여 AD FS 관리 스냅인을 사용 하 여 클레임 규칙을 만들려면\-에 있습니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66189542"
   
     -   **특정 클레임 값만 통과**  
   
-    -   **특정 메일 접미사 값과 일치 하는 클레임 값만 통과**  
+    -   **특정 전자 메일 접미사 값과 일치 하는 클레임 값만 통과**  
   
     -   **특정 값으로 시작 하는 클레임 값만 통과**  
 ![규칙 만들기](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule5.PNG)    
@@ -77,7 +77,7 @@ ms.locfileid: "66189542"
   
     -   **특정 클레임 값만 통과**  
   
-    -   **특정 메일 접미사 값과 일치 하는 클레임 값만 통과**  
+    -   **특정 전자 메일 접미사 값과 일치 하는 클레임 값만 통과**  
   
     -   **특정 값으로 시작 하는 클레임 값만 통과**  
 ![규칙 만들기](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule5.PNG)    
@@ -97,7 +97,7 @@ ms.locfileid: "66189542"
   
 4.  에 **클레임 규칙 편집** 대화 상자는 다음과 같은 탭 하나를 선택, 편집 하 고 규칙 집합을 신뢰에 따라,이 규칙을 만들려고 할 및 클릭 **규칙 추가** 해당 규칙 집합에 연관 된 규칙 마법사를 시작 합니다.  
   
-    -   **수용 변환 규칙**  
+    -   **수락 변환 규칙**  
   
     -   **발급 변환 규칙**  
   
@@ -115,7 +115,7 @@ ms.locfileid: "66189542"
   
     -   **특정 클레임 값만 통과**  
   
-    -   **특정 메일 접미사 값과 일치 하는 클레임 값만 통과**  
+    -   **특정 전자 메일 접미사 값과 일치 하는 클레임 값만 통과**  
   
     -   **특정 값으로 시작 하는 클레임 값만 통과**  
 ![규칙 만들기](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule8.PNG)    
@@ -130,7 +130,7 @@ ms.locfileid: "66189542"
 ## <a name="additional-references"></a>추가 참조  
 [클레임 규칙 구성](Configure-Claim-Rules.md)  
   
-[통과 사용 하는 경우 또는 필터 클레임 규칙](../../ad-fs/technical-reference/When-to-Use-a-Pass-Through-or-Filter-Claim-Rule.md)  
+[통과 또는 필터 클레임 규칙을 사용 하는 경우](../../ad-fs/technical-reference/When-to-Use-a-Pass-Through-or-Filter-Claim-Rule.md)  
   
 [클레임의 역할](../../ad-fs/technical-reference/The-Role-of-Claims.md)  
   

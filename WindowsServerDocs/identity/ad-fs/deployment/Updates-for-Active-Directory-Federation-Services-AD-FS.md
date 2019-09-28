@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 3/29/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: e11865050e6dcf419ed52eaf8ec6b6aaf897bf60
-ms.sourcegitcommit: a4c15b8d255e4934ffb125d9a0deb661539412ee
+ms.openlocfilehash: 58460bdd86c56b2195cc36aa030c9e3acc5c40f0
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701570"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71359481"
 ---
 # <a name="required-updates-for-active-directory-federation-services-ad-fs-and-web-application-proxy-wap"></a>Active Directory Federation Services (AD FS) 및 웹 응용 프로그램 프록시 (WAP)에 필요한 업데이트
 
@@ -30,10 +30,10 @@ Windows Server 2016에 대 한 업데이트는 Windows 업데이트를 통해 �
 |50 # |설명|출시 날짜
 |----- | ----- |-----
 |[CVE-2019-1126](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1126) | 이 보안 업데이트는 공격자가 엑스트라넷 잠금 정책을 우회 하는 데 사용할 수 있는 Active Directory Federation Services (AD FS)의 취약성을 해결 합니다. |7 월 2019|
-|[4489889 (OS 빌드 14393.2879)](https://support.microsoft.com/help/4489889/windows-10-update-kb4489889) | Active Directory Federation Services (AD FS)에서 중복 된 신뢰 당사자 트러스트를 AD FS 관리 콘솔에 표시 하는 문제를 해결 합니다. 이는 AD FS 관리 콘솔을 사용 하 여 신뢰 당사자 트러스트를 만들거나 볼 때 발생 합니다.</br></br> 2016 AD FS에서 엑스트라넷 스마트 잠금 (ESL)을 사용 하는 동안 발생 하는 높은 Active Directory Federation Services (ADFS) 웹 응용 프로그램 프록시 (WAP) 대기 시간 문제 (10, 000ms 이상)를 해결 합니다. 이 보안 업데이트는 [CVE-2018-16794](https://nvd.nist.gov/vuln/detail/CVE-2018-16794)에 설명 된 취약성을 해결 합니다. |3 월 2019|
+|[4489889 (OS 빌드 14393.2879)](https://support.microsoft.com/help/4489889/windows-10-update-kb4489889) | Active Directory Federation Services (AD FS)에서 중복 된 신뢰 당사자 트러스트를 AD FS 관리 콘솔에 표시 하는 문제를 해결 합니다. 이는 AD FS 관리 콘솔을 사용 하 여 신뢰 당사자 트러스트를 만들거나 볼 때 발생 합니다.</br></br> 2016 AD FS에서 엑스트라넷 스마트 잠금 (ESL)을 사용 하는 동안 발생 하는 높은 Active Directory Federation Services (ADFS) 웹 응용 프로그램 프록시 (WAP) 대기 시간 문제 (10, 000ms 이상)를 해결 합니다. 이 보안 업데이트는 [CVE-2018-16794](https://nvd.nist.gov/vuln/detail/CVE-2018-16794)에 설명 된 취약성을 해결 합니다. |2019년 3월|
 |[4487006 (OS 빌드 14393.2828)](https://support.microsoft.com/help/4487006/windows-10-update-kb4487006) | PowerShell 또는 AD FS (Active Directory Federation Services) 관리 콘솔을 사용 하는 경우 신뢰 당사자 트러스트에 대 한 업데이트가 실패 하는 문제를 해결 합니다. 이 문제는 둘 이상의 PassiveRequestorEndpoint을 게시 하는 온라인 메타 데이터 URL을 사용 하도록 신뢰 당사자 트러스트를 구성 하는 경우에 발생 합니다. 오류는 "MSIS7615: 신뢰 당사자 트러스트에 지정 된 신뢰할 수 있는 끝점은 신뢰 당사자 트러스트에 대해 고유 해야 합니다. "  </br></br>Azure 암호 보호 정책으로 인해 외부 복잡성 암호 변경에 대 한 특정 오류 메시지를 표시 하는 문제를 해결 합니다. |2019년 2월|
 |[4462928 (OS 빌드 14393.2580)](https://support.microsoft.com/help/4462928/windows-10-update-kb4462928)|Active Directory Federation Services (ADFS) 엑스트라넷 스마트 잠금 (ESL)과 대체 로그인 ID 간의 상호 운용 문제를 해결 합니다. 대체 로그인 ID를 사용 하도록 설정 하면 AD FS Powershell cmdlet AdfsAccountActivity 및 AdfsAccountLockout를 호출 하 여 "계정을 찾을 수 없음" 오류가 반환 됩니다. AdfsAccountActivity가 호출 되 면 기존 항목을 편집 하는 대신 새 항목이 추가 됩니다.|2018년 10월|
-|[4343884 (OS 빌드 14393.2457)](https://support.microsoft.com/en-us/help/4343884/windows-10-update-kb4343884)|사용자 지정 문화권 정의를 사용 하는 모바일 장치에서 Multi-factor Authentication이 제대로 작동 하지 않는 Active Directory Federation Services (AD FS) 문제를 해결 합니다. </br></br>새 사용자 등록에서 상당한 지연 (15 초)이 발생 하는 비즈니스용 Windows Hello의 문제를 해결 합니다. 이 문제는 RA (ADFS 등록 기관) 인증서를 저장 하는 데 하드웨어 보안 모듈을 사용 하는 경우에 발생 합니다.|2018년 8월|
+|[4343884 (OS 빌드 14393.2457)](https://support.microsoft.com/en-us/help/4343884/windows-10-update-kb4343884)|사용자 지정 문화권 정의를 사용 하는 모바일 장치에서 Multi-Factor Authentication 제대로 작동 하지 않는 Active Directory Federation Services (AD FS) 문제를 해결 합니다. </br></br>새 사용자 등록에서 상당한 지연 (15 초)이 발생 하는 비즈니스용 Windows Hello의 문제를 해결 합니다. 이 문제는 RA (ADFS 등록 기관) 인증서를 저장 하는 데 하드웨어 보안 모듈을 사용 하는 경우에 발생 합니다.|2018년 8월|
 |[4338822 (OS 빌드 14393.2395)](https://support.microsoft.com/help/4338822/windows-10-update-kb4338822)|콘솔에서 신뢰 당사자 트러스트를 만들거나 볼 때 AD FS 관리 콘솔에서 중복 신뢰 당사자 트러스트를 표시 하는 AD FS 문제를 해결 합니다.</br></br>에서는 비즈니스용 Windows Hello가 실패 하 게 하는 ADFS의 문제를 해결 합니다. 두 클레임 공급자가 있는 경우이 문제가 발생 합니다. PIN 등록은 실패 하 고, "400 내부 서버 오류: 장치 식별자를 가져올 수 없습니다. "</br></br> 종료 되지 않는 비활성 연결과 관련 된 WAP 문제를 해결 합니다. 이로 인해 시스템 리소스 누수 (예: 메모리 누수) 및 더 이상 응답 하지 않는 WAP 서비스가 발생 합니다. 사용자가 다른 로그인 옵션을 선택할 수 없도록 하는 AD FS 문제를 해결 합니다. 이는 사용자가 인증서 기반 인증을 사용 하 여 로그인 하도록 선택 했지만 구성 되지 않은 경우에 발생 합니다. 사용자가 인증서 기반 인증을 선택한 다음 다른 로그인 옵션을 선택 하는 경우에도이 오류가 발생 합니다. 이런 경우 사용자는 브라우저를 닫을 때까지 인증서 기반 인증 페이지로 리디렉션됩니다.|2018 년 7 월|
 |[4103720 (OS 빌드 14393.2273)](https://support.microsoft.com/help/4103720/windows-10-update-kb4103720)|PreventTokenReplays를 사용 하는 경우 SAML 신뢰 당사자에 대 한 IdP 시작 로그인이 실패 하 게 하는 ADFS와 관련 된 문제를 해결 합니다. </br></br>OAUTH가 장치 또는 브라우저 응용 프로그램에서 인증 될 때 발생 하는 ADFS 문제를 해결 합니다. 사용자 암호 변경으로 인해 오류가 발생 하 고 사용자가 응용 프로그램 또는 브라우저를 종료 하 여 로그인 해야 합니다. </br></br>UTC + 1 이상 (유럽 및 아시아)에서 엑스트라넷 스마트 잠금을 사용 하도록 설정 하지 못한 문제를 해결 합니다. 또한 다음과 같은 오류로 인해 일반적인 엑스트라넷 잠금이 실패 합니다. AdfsAccountActivity: UTC로 변환 될 때 Int32.maxvalue 보다 크고 datetime. MinValue 보다 작은 DateTime 값은 JSON으로 serialize 할 수 없습니다.</br></br>새 사용자가 자신의 PIN을 프로 비전 할 수 없는 ADFS Windows Hello for business 문제를 해결 합니다. 이는 MFA 공급자가 구성 되지 않은 경우에 발생 합니다.|2018년 5월|
 |[4093120 (OS 빌드 14393.2214)](https://support.microsoft.com/help/4093120/windows-10-update-kb4093120)| 처리 되지 않은 새로 고침 토큰 유효성 검사 문제를 해결 합니다. 다음 오류를 생성 합니다. "IdentityServer. OAuthInvalidRefreshTokenException: MSIS9312: 잘못 된 OAuth 새로 고침 토큰을 받았습니다. 토큰에 허용 된 시간 보다 빨리 새로 고침 토큰이 수신 되었습니다. " |2018년 4월|

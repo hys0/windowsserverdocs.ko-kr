@@ -2,22 +2,22 @@
 title: 파일 서비스 콘텐츠 서버 설치
 description: 이 항목은 일부는 BranchCache 배포 가이드에 대 한 Windows Server 2016, 지사에 WAN 대역폭 사용량을 최적화 하기 위해 분산 및 호스트 캐시 모드로 BranchCache를 배포 하는 방법을 보여 주는
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 74b0a5ed-dc20-4974-9d4b-2426987a01a1
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 496c0c1408c64216f29a31d5b22d3d9b48d4f44c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c55f8df57ed98d13d6d0d6d2a281edfb55883bea
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59855064"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71356560"
 ---
 # <a name="install-file-services-content-servers"></a>파일 서비스 콘텐츠 서버 설치
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 파일 서비스 서버 역할을 실행 하는 콘텐츠 서버를 배포 하려면 파일 서비스 서버 역할의 네트워크 파일 역할 서비스용 BranchCache를 설치 해야 합니다. 또한 요구 사항에 따라 파일 공유에서 BranchCache를 활성화 해야 합니다.  
   
@@ -32,9 +32,9 @@ ms.locfileid: "59855064"
   
 -   [파일 서비스 서버 역할 구성](../../branchcache/deploy/Configure-the-File-Services-server-role.md)  
   
--   [파일 서버에 대 한 해시 게시를 사용 하도록 설정](../../branchcache/deploy/Enable-Hash-Publication-for-File-Servers.md)  
+-   [파일 서버에 대 한 해시 게시 사용](../../branchcache/deploy/Enable-Hash-Publication-for-File-Servers.md)  
   
--   [파일 공유에서 BranchCache를 사용 하도록 설정 &#40;선택 사항&#41;](../../branchcache/deploy/enable-bc-on-file-share.md)  
+-   [파일 공유 &#40;에 BranchCache 사용 (선택 사항)&#41;](../../branchcache/deploy/enable-bc-on-file-share.md)  
   
 
 

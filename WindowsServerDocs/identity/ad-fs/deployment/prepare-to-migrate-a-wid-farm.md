@@ -1,37 +1,37 @@
 ---
 title: AD FS 2.0 WID 팜 마이그레이션 준비
-description: Windows Server 2012로 AD FS 2.0 서버 WID 팜 마이그레이션 준비에 정보를 제공 합니다.
+description: AD FS 2.0 서버 WID 팜을 Windows Server 2012로 마이그레이션하도록 준비 하는 방법에 대 한 정보를 제공 합니다.
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 06/28/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: a0e4bb77003ab24e0e31268509fb8667a671bea6
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: e6612856a2e00c47e9cc87c75c802ff86697b781
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66445529"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71359258"
 ---
 # <a name="prepare-to-migrate-an-ad-fs-20-wid-farm"></a>AD FS 2.0 WID 팜 마이그레이션 준비  
- Windows Server 2012는 Windows 내부 데이터베이스 (WID) 팜에 속해 있는 AD FS 2.0 페더레이션 서버 마이그레이션 준비를 하려면 내보내기 하 고 이러한 서버에서 AD FS 구성 데이터를 백업 해야 합니다.  
+ WID (Windows 내부 데이터베이스) 팜에 속한 AD FS 2.0 페더레이션 서버를 Windows Server 2012로 마이그레이션하기 위해 준비 하려면 이러한 서버에서 AD FS 구성 데이터를 내보내고 백업 해야 합니다.  
   
  AD FS 구성 데이터를 내보내려면 다음 작업을 수행합니다.  
   
--   [1 단계-서비스 설정 내보내기](#step-1-export-service-settings)  
+-   [1 단계: 서비스 설정 내보내기](#step-1-export-service-settings)  
   
--   [2단계: 사용자 지정 특성 저장소 백업](#step-2-back-up-custom-attribute-stores)  
+-   [2단계: 사용자 지정 특성 저장소 백업 @ no__t-0  
   
--   [3단계: 웹 페이지 사용자 지정 백업](#step-3-back-up-webpage-customizations)  
+-   [3단계: 웹 페이지 사용자 지정 백업 @ no__t-0  
   
 ## <a name="step-1-export-service-settings"></a>1단계: 서비스 설정 내보내기  
  서비스 설정을 내보내려면 다음 절차를 수행합니다.  
   
 ### <a name="to-export-service-settings"></a>서비스 설정을 내보내려면  
   
-1.  페더레이션 서비스에서 사용하는 SSL 인증서의 인증서 주체 이름 및 지문 값을 기록합니다. To find the SSL certificate, open the Internet Information Services (IIS) management console, select **기본 웹 사이트** 를 선택합니다. 그런 다음 **동작** 에 **동작** 찾기 및 선택 https 바인딩, 창 클릭 **편집**, 클릭 **보기**합니다.  
+1.  페더레이션 서비스에서 사용하는 SSL 인증서의 인증서 주체 이름 및 지문 값을 기록합니다. To find the SSL certificate, open the Internet Information Services (IIS) management console, select **기본 웹 사이트** 를 선택합니다. 그런 다음 **동작** **작업** 창에서 https 바인딩을 찾아서 선택 하 고 **편집**을 클릭 한 다음 **보기**를 클릭 합니다.  
   
 > [!NOTE]
 >  필요한 경우 SSL 인증서와 해당 프라이빗 키를 .pfx 파일로 내보낼 수도 있습니다. 자세한 내용은 [서버 인증 인증서의 프라이빗 키 부분 내보내기](Export-the-Private-Key-Portion-of-a-Server-Authentication-Certificate.md)를 참조하세요.  
@@ -57,7 +57,7 @@ ID 값을 찾으려면 **Services(서비스)** 콘솔에서 **AD FS 2.0 Windows 
 
 ## <a name="next-steps"></a>다음 단계
  [AD FS 2.0 페더레이션 서버 마이그레이션 준비](prepare-to-migrate-ad-fs-fed-server.md)   
- [AD FS 2.0 페더레이션 서버 프록시 마이그레이션 준비](prepare-to-migrate-ad-fs-fed-proxy.md)   
+ [AD FS 2.0 페더레이션 서버 프록시 @no__t 마이그레이션 준비](prepare-to-migrate-ad-fs-fed-proxy.md)-1  
  [AD FS 2.0 페더레이션 서버 마이그레이션](migrate-the-ad-fs-fed-server.md)   
- [AD FS 2.0 페더레이션 서버 프록시 마이그레이션](migrate-the-ad-fs-2-fed-server-proxy.md)   
+ [AD FS 2.0 페더레이션 서버 프록시](migrate-the-ad-fs-2-fed-server-proxy.md) 을 마이그레이션합니다.  
  [AD FS 1.1 웹 에이전트 마이그레이션](migrate-the-ad-fs-web-agent.md)

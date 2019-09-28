@@ -1,5 +1,5 @@
 ---
-title: Azure Site Recovery 및 Windows Admin Center 사용 하 여 Hyper-v 가상 머신 보호
+title: Azure Site Recovery 및 Windows 관리 센터를 사용 하 여 Hyper-v Virtual Machines 보호
 description: Windows Admin Center(Project Honolulu)를 사용하여 Azure Site Recovery로 Hyper-V VM을 보호합니다.
 ms.technology: manage
 ms.topic: article
@@ -7,19 +7,19 @@ author: haley-rowland
 ms.author: harowl
 ms.date: 07/17/2018
 ms.localizationpriority: low
-ms.prod: windows-server-threshold
-ms.openlocfilehash: 66e9b2e23a60d1e4725321e88fc1ac262b9c31fa
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.prod: windows-server
+ms.openlocfilehash: 4995ed433d34fddfa91548fa42d67eea3a319c1f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66445917"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71357348"
 ---
-# <a name="protect-your-hyper-v-virtual-machines-with-azure-site-recovery-and-windows-admin-center"></a>Azure Site Recovery 및 Windows Admin Center 사용 하 여 Hyper-v 가상 머신 보호
+# <a name="protect-your-hyper-v-virtual-machines-with-azure-site-recovery-and-windows-admin-center"></a>Azure Site Recovery 및 Windows 관리 센터를 사용 하 여 Hyper-v Virtual Machines 보호
 
->적용 대상: Windows Admin Center Windows Admin Center 미리 보기
+>적용 대상: Windows 관리 센터 미리 보기, Windows 관리 센터
 
-[Azure Windows Admin Center 통합에 대해 알아봅니다.](../plan/azure-integration-options.md)
+[Windows 관리 센터와 Azure의 통합에 대해 자세히 알아보세요.](../plan/azure-integration-options.md)
 
 Windows Admin Center는 Hyper-V 서버 또는 클러스터에 가상 컴퓨터를 복제하는 프로세스를 간소화하여 자체 데이터 센터에서 Azure의 기능을 보다 쉽게 활용할 수 있도록 만듭니다. 설치를 자동화하기 위해 Windows Admin Center 게이트웨이를 Azure에 연결할 수 있습니다.
 
@@ -52,20 +52,20 @@ Azure Site Recovery는 **복제** 및 **장애 조치**의 두 구성 요소로 
 5. Azure 계정에 로그인합니다.
 6. 필요한 정보를 입력합니다.
 
-   - **구독:** 이 호스트에서 Vm의 복제에 사용 하려는 Azure 구독입니다.
-   - **위치:** Azure 지역 ASR 리소스를 만들어야 합니다.
-   - **저장소 계정:** 이 호스트에서 복제 된 VM 워크 로드를 저장할 저장소 계정입니다.
-   - **Vault:** 이 호스트에서 보호 된 Vm에 대 한 Azure Site Recovery 자격 증명 모음의 이름을 선택 합니다.
+   - **가입은** 이 호스트의 Vm 복제에 사용할 Azure 구독입니다.
+   - **위치:** ASR 리소스를 만들어야 하는 Azure 지역입니다.
+   - **스토리지 계정:** 이 호스트에서 복제 된 VM 작업을 저장할 저장소 계정입니다.
+   - **자격 증명 모음** 이 호스트의 보호 된 Vm에 대 한 Azure Site Recovery 자격 증명 모음 이름을 선택 하십시오.
 
 7. **ASR 설정**을 선택합니다.
-8. 알림이 표시 될 때까지 기다립니다. **Site Recovery 설정 완료**합니다.
+8. 알림이 표시 될 때까지 기다립니다. **Site Recovery 설정이 완료**되었습니다.
  
 최대 10분이 걸릴 수 있습니다. **알림**(오른쪽 맨 위쪽 종 아이콘)으로 이동하여 진행 상황을 볼 수 있습니다.
 
 >[!NOTE]
 > (클러스터에서 구성하는 경우)이 단계는 자동으로 대상 서버 또는 노드에 ASR 에이전트를 설치하고, 지정된 **위치**에 **저장소 계정** 및 **서버 클러스터**이 지정된 **리소스 그룹**을 만듭니다. 또한 ASR 서비스로 대상 호스트를 등록하고 기본 복제 정책을 구성합니다.
 
-## <a name="step-2-select-virtual-machines-to-protect"></a>2단계: 보호할 가상 컴퓨터를 선택 합니다.
+## <a name="step-2-select-virtual-machines-to-protect"></a>2단계: 보호할 가상 컴퓨터 선택
 
 1. 위의 2단계에서 구성한 서버 또는 클러스터로 다시 돌아가 **가상 컴퓨터 > 인벤토리**로 이동합니다.
 2. 보호하려는 VM을 선택합니다.
@@ -78,7 +78,7 @@ Azure Site Recovery는 **복제** 및 **장애 조치**의 두 구성 요소로 
 
 6. ASR에서 복제를 시작합니다. 복제가 완료되고 **가상 컴퓨터 인벤토리** 표에서 **보호됨** 열의 값을 **예**로 변경하는 경우 VM이 보호됩니다. 이 작업은 몇 분 정도 걸릴 수 있습니다.  
 
-## <a name="step-3-configure-and-run-a-test-failover-in-the-azure-portal"></a>3단계: 구성 및 Azure portal에서 테스트 장애 조치 실행
+## <a name="step-3-configure-and-run-a-test-failover-in-the-azure-portal"></a>3단계: Azure Portal에서 테스트 장애 조치 (failover) 구성 및 실행
 
  VM 복제를 시작할 때 이 단계를 완료하지 않아도 되지만(VM은 이미 방금의 복제로 인해 보호될 것임) Azure Site Recovery를 설정할 때 장애 조치 설정을 구성하는 것이 좋습니다. Azure VM에 대한 장애 조치를 준비하려는 경우 다음 단계를 완료합니다.
 

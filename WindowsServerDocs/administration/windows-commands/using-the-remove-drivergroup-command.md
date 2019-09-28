@@ -1,8 +1,8 @@
 ---
 title: 제거 DriverGroup 명령을 사용 하 여
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b56f162861caf4493550f9e063065e9544e52eae
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d22ae4e191c2110a0b8d4cc50c24c2f3ec4a7e60
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59885754"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71362928"
 ---
 # <a name="using-the-remove-drivergroup-command"></a>제거 DriverGroup 명령을 사용 하 여
 
@@ -36,10 +36,10 @@ WDSUTIL /Remove-DriverGroup /DriverGroup:<Group Name> [/Server:<Server name>]
 
 |매개 변수|설명|
 |---------|-----------|
-|/ DriverGroup:\<그룹 이름 >|제거할 드라이버 그룹의 이름을 지정 합니다.|
-|[/ 서버:\<서버 이름 >]|서버 이름을 지정합니다. 이 NetBIOS 이름이 나 FQDN 수 있습니다. 서버 이름을 지정 하지 않으면 로컬 서버가 사용 됩니다.|
+|/DriverGroup: \< 그룹 이름 >|제거할 드라이버 그룹의 이름을 지정 합니다.|
+|[/Server: \<Server name >]|서버 이름을 지정합니다. 이 NetBIOS 이름이 나 FQDN 수 있습니다. 서버 이름을 지정 하지 않으면 로컬 서버가 사용 됩니다.|
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 드라이버 그룹을 제거 하려면 다음 중 하나를 입력 합니다.
 ```

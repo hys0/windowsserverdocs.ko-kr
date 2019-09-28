@@ -7,19 +7,19 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 6ea73506bbd67dd44fa23b4b87d4744ebbbd71cb
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 264a7d3399757e903e794dc4ec554e7ea63dd0e5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66192573"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71360146"
 ---
 # <a name="ad-fs-deployment"></a>AD FS 배포
 
 
-이 문서에는 모든 Windows Server 2016 용 AD FS를 배포 하는 것에 대 한 설명서의 목록을 포함 합니다. 여기에는 다음이 포함됩니다.
+이 문서에는 Windows Server 2016에 대 한 AD FS를 배포 하기 위한 모든 설명서 목록이 포함 되어 있습니다. 여기에는 다음이 포함됩니다.
   
 * [AD FS 보안을 위한 모범 사례](deployment/Best-Practices-Securing-AD-FS.md)
 
@@ -27,7 +27,7 @@ ms.locfileid: "66192573"
 
 * [온-프레미스 디바이스 기반 조건부 액세스 계획](deployment/Plan-Device-based-Conditional-Access-on-Premises.md)
 
-* [AD FS 및 WAP에 대 한 필수 업데이트](deployment/updates-for-active-directory-federation-services-ad-fs.md)
+* [AD FS 및 WAP에 필요한 업데이트](deployment/updates-for-active-directory-federation-services-ad-fs.md)
 
 * [SQL Server 복제로 지리적 중복성 설정](deployment/Set-up-Geographic-Redundancy-with-SQL-Server-Replication.md)
 

@@ -7,19 +7,19 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 8d3027c419e85d1aec4b3b0308926a86bb37620d
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 0f5c9d3b0f856ab72a16930ddb5c50686d747ecc
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66445094"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71358391"
 ---
 # <a name="add-an-attribute-store"></a>특성 저장소 추가
 
 
-사용자 계정 및 Active Directory Federation Services로 보호 되는 리소스에 액세스 해야 하는 컴퓨터 계정의 \(AD FS\) Active Directory Domain Services와 같은 특성 저장소에 저장 된 \(AD DS \). 클레임 발급 엔진 특성 저장소를 사용 하 여 클레임을 발급 하는 데 필요한 데이터를 수집 합니다. 그런 다음 특성 저장소의 데이터는 클레임으로 투영 됩니다.  
+Active Directory Federation Services \(AD FS @ no__t-1로 보호 되는 리소스에 액세스 해야 하는 사용자 계정 및 컴퓨터 계정은 특성 저장소에 저장 됩니다 (예: Active Directory Domain Services \(AD DS @ no__t-3). 클레임 발급 엔진 특성 저장소를 사용 하 여 클레임을 발급 하는 데 필요한 데이터를 수집 합니다. 그런 다음 특성 저장소의 데이터는 클레임으로 투영 됩니다.  
   
 다음 절차를 사용 하 여 페더레이션 서비스에 특성 저장소를 추가할 수 있습니다.  
   

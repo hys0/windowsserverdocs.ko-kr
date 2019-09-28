@@ -2,31 +2,31 @@
 title: Windows Server에 대한 핵심 네트워크 지침
 description: 이 항목에서는 계획 하 고는 완벽 하 게 작동 하는 네트워크와 Windows Server 2016 새 포리스트의 새 Active Directory 도메인에 필요한 핵심 구성 요소를 배포할 수 있는 핵심 네트워크 가이드의 개요
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.date: ''
 ms.assetid: 9b3ef3eb-4246-4e0e-8bf1-53224ca5f2f9
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: a905fd0c11237edd3a408998f8f71aa25a054328
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 52f8b9e1446b5b3f3b1e7060cc737204771d1eae
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59847904"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71356070"
 ---
 # <a name="core-network-guidance-for-windows-server"></a>Windows Server에 대한 핵심 네트워크 지침
 
 >적용 대상: Windows Server, Windows Server 2016
 
-이 항목에서는 Windows Server 용 핵심 네트워크 가이드의 개요를 제공 합니다.&reg; 2016의 경우 다음 섹션이 포함 되어 있습니다.  
+이 항목에서는 Windows Server @ no__t-0 2016에 대 한 핵심 네트워크 지침의 개요를 제공 하며 다음 섹션을 포함 합니다.  
   
--   [Windows Server 핵심 네트워크 소개](#bkmk_intro)  
+-   [Windows Server Core 네트워크 소개](#bkmk_intro)  
   
--   [Windows Server 용 핵심 네트워크 가이드](#bkmk_core)  
+-   [Windows Server에 대 한 핵심 네트워크 가이드](#bkmk_core)  
   
-## <a name="bkmk_intro"></a>Windows Server 핵심 네트워크 소개
+## <a name="bkmk_intro"></a>Windows Server Core 네트워크 소개
 
 핵심 네트워크는 조직의 IT(정보 기술) 요구 사항에 맞는 기반 서비스를 제공하는 네트워크 하드웨어, 장치 및 소프트웨어의 모음입니다.
 
@@ -46,7 +46,7 @@ Windows Server 핵심 네트워크는 다음을 포함한 다양한 이점을 �
 
 또한 핵심 네트워크를 사용하면 조직의 규모가 커지고 IT 요구 사항이 변함에 따라 네트워크를 조정할 수 있습니다. 예를 들어 핵심 네트워크와 도메인, IP 서브넷, 원격 액세스 서비스, 무선 서비스 및 기타 기능 및 Windows Server 2016에서 제공 하는 서버 역할을 추가할 수 있습니다.
 
-## <a name="bkmk_core"></a>Windows Server 용 핵심 네트워크 가이드
+## <a name="bkmk_core"></a>Windows Server에 대 한 핵심 네트워크 가이드
 
 계획 하 고는 완벽 하 게 작동 하는 네트워크와 새로운 Active Directory에 필요한 핵심 구성 요소를 배포 하는 방법에 지침을 제공 하는 Windows Server 2016 핵심 네트워크 가이드&reg; 새 포리스트에 있는 도메인입니다. 이 가이드를 사용하여 다음 Windows Server 구성 요소로 구성된 컴퓨터를 배포할 수 있습니다.
 

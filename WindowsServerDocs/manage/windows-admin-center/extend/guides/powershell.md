@@ -7,13 +7,13 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 05/09/2019
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
-ms.openlocfilehash: c30f8a9b856db8250a16210931e6f8dd73c07aa7
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.prod: windows-server
+ms.openlocfilehash: 6e99fc43d4acb7a70dfd3a8ba19dae6492c41b2b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70869613"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71357046"
 ---
 # <a name="using-powershell-in-your-extension"></a>확장에 PowerShell 사용하기 #
 
@@ -92,7 +92,7 @@ CreateSession 메서드에 노드 이름을 제공 하면 새 PowerShell 세션�
 ### <a name="key-options"></a>키 옵션 ###
 PowerShell API를 호출할 때 몇 가지 옵션을 사용할 수 있습니다. 세션을 만들 때마다 키를 사용 하거나 사용 하지 않고 만들 수 있습니다. 
 
-**키인지** 이렇게 하면 구성 요소 간에 조회 하 여 다시 사용할 수 있는 키가 지정 된 세션이 생성 됩니다. 즉, Component1에서 키가 "SME-암석 지 어" 인 세션을 만들고 Component2는 동일한 세션을 사용할 수 있습니다. 키를 제공 하는 경우 위의 예제에서와 같이 dispose ()를 호출 하 여 생성 된 세션을 삭제 해야 합니다. 5 분 넘게 세션을 삭제 하지 않고 세션을 유지 하면 안 됩니다. 
+**키:** 이렇게 하면 구성 요소 간에 조회 하 여 다시 사용할 수 있는 키가 지정 된 세션이 생성 됩니다. 즉, Component1에서 키가 "SME-암석 지 어" 인 세션을 만들고 Component2는 동일한 세션을 사용할 수 있습니다. 키를 제공 하는 경우 위의 예제에서와 같이 dispose ()를 호출 하 여 생성 된 세션을 삭제 해야 합니다. 5 분 넘게 세션을 삭제 하지 않고 세션을 유지 하면 안 됩니다. 
 ```ts
   const session = this.appContextService.powerShell.createSession('{!TargetNode}', '{!Key}');
 ```
@@ -192,4 +192,4 @@ const batchSession = this.appContextService.powerShell.createBatchSession(
 | ----- | ----------- |
 | runSingleCommand | 배열의 모든 노드에 대해 단일 명령을 실행 합니다. 
 | 실행할지 | 쌍을 이루는 노드에서 해당 명령을 실행 합니다.
-| cancel | 배열의 모든 노드에 대해 명령을 취소 합니다.
+| 취소 | 배열의 모든 노드에 대해 명령을 취소 합니다.

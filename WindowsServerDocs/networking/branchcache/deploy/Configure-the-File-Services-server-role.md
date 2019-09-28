@@ -2,22 +2,22 @@
 title: 파일 서비스 서버 역할 구성
 description: 이 항목은 일부는 BranchCache 배포 가이드에 대 한 Windows Server 2016, 지사에 WAN 대역폭 사용량을 최적화 하기 위해 분산 및 호스트 캐시 모드로 BranchCache를 배포 하는 방법을 보여 주는
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 68b0f5a0-1ae8-489e-b8f8-1190267a0e1d
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 9674f125adad7d278954dcd07534dfb8e3d78026
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9c28f23a79b80e4d7a1917c424ad5a9817c698e3
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59855584"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71356721"
 ---
 # <a name="configure-the-file-services-server-role"></a>파일 서비스 서버 역할 구성
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 BranchCache 파일 서버 기반 콘텐츠 서버와 파일 서비스 서버 역할 및 Windows Server 2016 실행 중인 컴퓨터에 배포할 수는 **네트워크 파일용 BranchCache** 역할 서비스가 설치 되어 있습니다.  
   

@@ -2,22 +2,22 @@
 title: 웹 서버 WEB1 설치
 description: 이 항목은 서버 배포 인증서 802.1 X 유선 및 무선 배포 가이드의 일부
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: f51c9e38-98bb-49c1-9d39-427d07021499
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 15da16094a47a2492dc9054e0671c3709fe23362
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 6ad8106c9c8330dd1b8632b3672d6413c1a1faaf
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66446448"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71356223"
 ---
 # <a name="install-the-web-server-web1"></a>웹 서버 WEB1 설치
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 Windows Server 2016에서 웹 서버 (IIS) 역할 웹 사이트, 서비스 및 응용 프로그램을 안정적으로 호스팅하기 위한 안전, 관리 하기 쉬운, 모듈식 하 고 확장 가능한 플랫폼을 제공 합니다. Iis에서 인터넷, 인트라넷 또는 엑스트라넷 사용자와 정보를 공유할 수 있습니다. IIS는 IIS, ASP.NET, FTP 서비스, PHP 및 Windows Communication Foundation (WCF)를 통합 하는 통합형된 웹 플랫폼.  
 

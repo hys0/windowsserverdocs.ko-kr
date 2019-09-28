@@ -1,9 +1,9 @@
 ---
 title: SDN에 대한 SLB(소프트웨어 부하 분산)
-description: Windows Server 2016의 소프트웨어 정의 네트워킹에 대 한 소프트웨어 부하 분산에 대해 자세히 알아보려면이 항목에서는 사용할 수 있습니다.
+description: 이 항목을 사용 하 여 Windows Server 2016의 소프트웨어 정의 네트워킹에 대 한 소프트웨어 부하 분산에 대해 알아볼 수 있습니다.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-sdn
@@ -12,18 +12,18 @@ ms.topic: article
 ms.assetid: 97abf182-4725-4026-801c-122db96964ed
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 26fb4aa21e80618c4c63bd9edbf8731bf886db62
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 35743d9e1a25c71a35eed018a4a3882a3d094d76
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59853764"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71355570"
 ---
-# <a name="software-load-balancing-slb-for-sdn"></a>소프트웨어 부하 분산 \(SLB\) SDN에 대 한
+# <a name="software-load-balancing-slb-for-sdn"></a>소프트웨어 부하 분산 \(SLB @ no__t-SDN 용-1
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-Windows Server 2016의 소프트웨어 정의 네트워킹에 대 한 소프트웨어 부하 분산에 대해 자세히 알아보려면이 항목에서는 사용할 수 있습니다.  
+이 항목을 사용 하 여 Windows Server 2016의 소프트웨어 정의 네트워킹에 대 한 소프트웨어 부하 분산에 대해 알아볼 수 있습니다.  
 
 클라우드 서비스 공급자 (Csp) 및 엔터프라이즈 네트워킹 SDN (소프트웨어)에서 Windows Server 2016에 배포 하는 테 넌 트 및 테 넌 트 고객 네트워크 트래픽 가상 네트워크 리소스 간에 고르게 배포할 소프트웨어 부하 분산 (SLB)를 사용할 수 있습니다. Windows Server SLB 높은 가용성과 확장성이 같은 작업을 호스트 하는 여러 서버를 수 있습니다.
   
@@ -46,7 +46,7 @@ Windows Server SLB는 다음과 같은 기능이 포함 되어 있습니다.
   
 Windows Server SLB를 사용 하 여 부하 분산 기능을 다른 VM 작업에 사용 되는 동일한 Hyper-v 계산 서버에서 SLB Vm을 사용 하 여 확장할 수 있습니다. 이 인해 SLB 신속 하 게 생성 및 CSP 작업에 필요한 부하 분산 끝점의 삭제를 지원 합니다. 또한 Windows Server SLB 수십 기가바이트 클러스터당 지원 간단한 프로 비전 모델을 제공 하며 규모 확장 및 감축 하기 쉽습니다.  
   
-**SLB의 작동 원리**  
+**SLB 작동 방법**  
   
 데이터 센터에 있는 리소스의 클라우드 서비스 집합의 일부인 동적 IP 주소 (Dip)를 가상 IP 주소 (Vip)에 매핑하여 SLB 작동 합니다.  
   
@@ -76,7 +76,7 @@ Vip에는 SLB 멀티플렉서 (MUX)에 있습니다.  하나 이상의 가상 �
   
 및 인바운드 네트워크 트래픽을 구현이 SLB MUX 초기 네트워크 트래픽 흐름이 설정 되 면 완전히 무시 합니다.  
   
-다음 그림에서는 클라이언트 컴퓨터는 사이트의 IP 주소는 회사 SharePoint-이 경우 Contoso 라는 가상의 회사에 대 한 DNS 쿼리를 수행 합니다. 다음 프로세스가 수행 됩니다.  
+다음 그림에서 클라이언트 컴퓨터는 회사 SharePoint 사이트의 IP 주소에 대 한 DNS 쿼리를 수행 합니다 .이 경우에는 가상 회사인 Contoso가 지정 됩니다. 다음 프로세스가 수행 됩니다.  
   
 -   DNS 서버는 클라이언트에 107.105.47.60 VIP를 반환합니다.  
   
@@ -90,7 +90,7 @@ Vip에는 SLB 멀티플렉서 (MUX)에 있습니다.  하나 이상의 가상 �
   
 -   호스트는 캡슐화 된 패킷을 수신 하 고 검사 합니다.  캡슐화를 제거 하 고 대상 VIP 대신 10.10.10.5 DIP는 이제 고 DIP VM에 트래픽을 보내는 패킷을 다시 작성 합니다.  
   
--   이제 요청에는 서버 팜 2에서 Contoso SharePoint 사이트에 도달 했습니다. 서버 응답을 생성 하 고 원본으로는 자체 IP 주소를 사용 하 여 클라이언트에 보냅니다.  
+-   이제 요청이 서버 팜 2의 Contoso SharePoint 사이트에 도달 했습니다. 서버 응답을 생성 하 고 원본으로는 자체 IP 주소를 사용 하 여 클라이언트에 보냅니다.  
   
 -   호스트는 클라이언트에서 대상 이제 VIP에 원래 요청을 만든 기억 하는 가상 스위치에서 나가는 패킷을 차단 합니다.  호스트 되도록 VIP DIP 주소가 표시 되지 않는 클라이언트에는 패킷 소스를 다시 작성 합니다.  
   
@@ -98,7 +98,7 @@ Vip에는 SLB 멀티플렉서 (MUX)에 있습니다.  하나 이상의 가상 �
   
 ![소프트웨어 부하 분산 프로세스](../../../media/Software-Load-Balancing--SLB--for-SDN/slb_process.jpg)  
   
-**분산 데이터 센터 내부 트래픽의 부하를**  
+**내부 데이터 센터 트래픽 부하 분산**  
   
 동일한 가상 네트워크의 구성원 인 다른 서버에서 실행 하는 테 넌 트 리소스 간의 Vm 연결 되어 있는 Hyper-v 가상 스위치는 NAT. 수행과 같은 경우 부하 분산 네트워크 트래픽을 데이터 센터의 내부  
   
@@ -198,11 +198,11 @@ BGP 라우터 SLB에 대 한 다음 작업을 수행 합니다.
   
 -   인터넷 프로토콜 버전 4 (IPv4)를 포함 하는 SLB 지원  
   
--   사이트 간 게이트웨이 시나리오에 대 한 SLB는 단일 공용 IP를 활용 하도록 모든 사이트 간 연결을 사용 하도록 NAT 기능 제공  
+-   사이트 간 게이트웨이 시나리오의 경우 SLB는 모든 사이트 간 연결에서 단일 공용 IP를 활용할 수 있도록 NAT 기능을 제공 합니다.  
   
 -   전체 호스트 에이전트 및 Windows Server 2016에서 MUX를 포함 하 여 SLB, 핵심 및 Nano 설치를 설치할 수 있습니다.  
   
-**규모 및 성능**  
+**크기 조정 및 성능**  
   
 -   이제 확장 기능을 포함 하 여 클라우드 규모와 MUXes 및 호스트 에이전트에 대 한 기능을 강화 합니다.  
   
@@ -219,7 +219,7 @@ BGP 라우터 SLB에 대 한 다음 작업을 수행 합니다.
   
 -   상태 모니터링 데이터를 관리 엔터티를 사용할 수  
   
-**맞춤**  
+**할당**  
   
 -   배포 하 고 SCVMM과 SLB를 구성할 수 있습니다.  
   

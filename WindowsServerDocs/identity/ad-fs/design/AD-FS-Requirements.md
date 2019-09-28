@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 247381b35a038627b5d8c91ac4dda0cc4fab6195
-ms.sourcegitcommit: ccec91c1d32a978159f9b8bb5e39ead5805c26c4
+ms.openlocfilehash: 720c20437f7e6da875b809b2816f0d4df5d210d6
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71143774"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71359191"
 ---
 # <a name="ad-fs-requirements"></a>AD FS 요구 사항
 
@@ -185,7 +185,7 @@ AD FS 세션을 만듭니다\-기호를 제공 하는 클라이언트 컴퓨터�
 ## <a name="BKMK_extranet"></a>엑스트라넷 요구 사항  
 AD FS 서비스에 대 한 엑스트라넷 액세스를 제공 하려면 배포한 웹 응용 프로그램 프록시 역할 서비스 엑스트라넷 연결 역할을 프록시 인증 요청을 사용 하는 AD FS 서비스를 안전한 방식. 에서는 AD FS 서비스 끝점의 격리와 모든 보안 키의 격리 \(토큰 서명 인증서와 같은\) 인터넷에서 발생 하는 요청에서. 또한 엑스트라넷 소프트 계정 잠금 등의 기능에는 웹 응용 프로그램 프록시의 사용을 해야합니다. 웹 응용 프로그램 프록시에 대 한 자세한 내용은 참조 [웹 응용 프로그램 프록시](https://technet.microsoft.com/library/dn584107.aspx)합니다.  
   
-\-엑스트라넷 액세스에 타사 프록시를 사용 하려는 경우\-이 타사 프록시는 [http: download.microsoft.com\/\/download\/\/ 에 정의 된 프로토콜을 지원 해야 합니다. 9\/5E\/95ef66af\-9026\-\-4bb0A41D\-A4F81802D92C%\/5bms adfspip% 5 d .pdf.\-\/](https://download.microsoft.com/download/9/5/E/95EF66AF-9026-4BB0-A41D-A4F81802D92C/%5bMS-ADFSPIP%5d.pdf)  
+엑스트라넷 액세스에 세 번째 @ no__t-0party 프록시를 사용 하려는 경우이 세 번째 @ no__t-1party 프록시는 [http: @no__t -3\/download.microsoft.com @ no__t-5download @ no__t-69 @ no__t-75 @ no__t-8E @ no__t-995EF66AF @ no__t-109026 @ no__t-114BB0 @ no__t-12A41D @ no__t-13A4F81802D92C @ no__t-14%5bMS\-5ADFSPIP%5d.pdf](https://download.microsoft.com/download/9/5/E/95EF66AF-9026-4BB0-A41D-A4F81802D92C/%5bMS-ADFSPIP%5d.pdf)에 정의 된 프로토콜을 지원 해야 합니다.  
   
 ## <a name="BKMK_7"></a>네트워크 요구 사항  
 다음 네트워크 서비스를 적절 하 게 구성 하는 것이 조직에서 AD FS의 성공적인 배포에 대 한 중요 합니다.  

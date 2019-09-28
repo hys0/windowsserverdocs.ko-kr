@@ -1,7 +1,7 @@
 ---
 title: 권한 있는 액세스 보안
 description: 권한 있는 액세스를 보호 하는 단계별 방법
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: conceptual
 ms.assetid: f5dec0c2-06fe-4c91-9bdc-67cc6a3ede60
 ms.date: 02/25/2019
@@ -9,12 +9,12 @@ ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: daveba
 ms.reviewer: mas
-ms.openlocfilehash: 9080f7209660b225d795219127a71ece479855d1
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: e6ff22d0563fa11aa633004966b2cd2648ba5877
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70869227"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71357697"
 ---
 # <a name="securing-privileged-access"></a>권한 있는 액세스 보안
 

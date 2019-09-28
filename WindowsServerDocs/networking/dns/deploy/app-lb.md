@@ -1,23 +1,23 @@
 ---
 title: 응용 프로그램 부하 분산에 대 한 DNS 정책을 사용 하 여
-description: 이 항목은 DNS 정책 시나리오 가이드에 대 한 Windows Server 2016의 일부
+description: 이 항목은 Windows Server 2016에 대 한 DNS 정책 시나리오 가이드의 일부입니다.
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: f9c313ac-bb86-4e48-b9b9-de5004393e06
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: dca60fc0e216b1b873bd4f94dd1b01174d80fc14
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 356c61c2cc5b60f43a69f17966c97f3c69d05cda
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66446445"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71356043"
 ---
 # <a name="use-dns-policy-for-application-load-balancing"></a>응용 프로그램 부하 분산에 대 한 DNS 정책을 사용 하 여
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 응용 프로그램 부하 분산을 수행 하는 DNS 정책을 구성 하는 방법에 알아보려면이 항목을 사용할 수 있습니다.
 
@@ -33,7 +33,7 @@ ms.locfileid: "66446445"
 
 Contosogiftservices.com 웹 사이트는 각각 서로 다른 IP 주소를 갖고 있는 여러 데이터 센터에서 호스팅됩니다.
 
-Contoso 선물 서비스에 대 한 기본 시장 북미 지역에 웹 사이트 세 개의 데이터 센터에서 호스팅됩니다. 일리노이 주 시카고, 달라스, TX 및 미국 워싱턴주 시애틀 합니다.
+Contoso 선물 서비스의 기본 시장의 북아메리카에서 웹 사이트는 다음 세 가지 데이터 센터에서 호스팅됩니다. 시카고, IL, 달라스, TX 및 시애틀, WA.
 
 시애틀 웹 서버에 가장 적합 한 하드웨어 구성을 두 개의 다른 사이트와 두 배 많은 부하를 처리할 수 있습니다. Contoso 선물 서비스는 다음과 같은 방식에서 보낸 응용 프로그램 소통량을 하려고 합니다.
 

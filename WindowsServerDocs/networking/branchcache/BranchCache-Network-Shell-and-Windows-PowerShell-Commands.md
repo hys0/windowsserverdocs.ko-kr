@@ -3,7 +3,7 @@ title: BranchCache 네트워크 셸 및 Windows PowerShell 명령
 description: 이 항목에서는 Windows Server 2016의 BranchCache 용 네트워크 셸 및 Windows PowerShell 명령 참조 리소스에 대 한 링크를 제공
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-bc
@@ -12,16 +12,16 @@ ms.topic: article
 ms.assetid: a0726752-0a78-472b-9667-2f91636c1b3b
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 13bb41937e50599727352339b69e8a20f9ed3524
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 4673fcf369bdb95d3aa20028ee57f78ffbcaf9c9
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67284024"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71356701"
 ---
 # <a name="branchcache-network-shell-and-windows-powershell-commands"></a>BranchCache 네트워크 셸 및 Windows PowerShell 명령
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 Windows Server 2016에서 구성 하 고 BranchCache에 대 한 Windows PowerShell 또는 네트워크 셸 (Netsh) 명령 중 하나를 사용 하 여 BranchCache를 관리할 수 있습니다.  
   
@@ -29,7 +29,7 @@ Microsoft는 앞으로 출시될 Windows 버전에서는 BranchCache용 netsh �
   
 Windows PowerShell 및 netsh 명령에 대한 참조 자료는 다음 위치에서 확인할 수 있습니다. 명령 참조가 모두 Windows Server 2016 보다 이전 운영 체제에 대 한 게시 된 있지만 이러한 참조는이 운영 체제에 대해 정확 합니다.  
   
--   [Windows Server 2008 R2의 BranchCache 용 Netsh 명령](https://technet.microsoft.com/library/dd979561(v=ws.10))  
+-   [Windows Server 2008 r 2의 BranchCache에 대 한 Netsh 명령](https://technet.microsoft.com/library/dd979561(v=ws.10))  
   
 -   [Windows PowerShell의 BranchCache Cmdlet](https://technet.microsoft.com/library/hh848392.aspx) Windows server 2012.  
   

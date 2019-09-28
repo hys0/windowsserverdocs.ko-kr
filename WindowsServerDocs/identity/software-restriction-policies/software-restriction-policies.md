@@ -2,7 +2,7 @@
 title: 소프트웨어 제한 정책
 description: Windows Server 보안
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: security-software-restriction-policies
@@ -13,20 +13,20 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: ab44013b947d33adc12c54b527415bf16c46a4c6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b06d038e919e2f4904d60b88ad223493c4f818eb
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59875824"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71357666"
 ---
 # <a name="software-restriction-policies"></a>소프트웨어 제한 정책
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-IT 전문가 위한이 항목에서는 Windows Server 2012 및 Windows 8, 소프트웨어 제한 정책 (SRP)에 대해 설명 하 고 Windows Server 2003을 사용 하 여 시작 된 SRP에 대 한 기술 정보에 대 한 링크를 제공 합니다.
+IT 전문가를 위한이 항목에서는 Windows Server 2012 및 Windows 8의 SRP (소프트웨어 제한 정책)에 대해 설명 하 고 Windows Server 2003부터 SRP에 대 한 기술 정보 링크를 제공 합니다.
 
-절차와 문제 해결 팁을 참조 하세요 [소프트웨어 제한 정책 관리](administer-software-restriction-policies.md) 하 고 [소프트웨어 제한 정책 문제 해결](troubleshoot-software-restriction-policies.md)합니다.
+절차 및 문제 해결 팁은 [소프트웨어 제한 정책 관리](administer-software-restriction-policies.md) 및 [소프트웨어 제한 정책 문제 해결](troubleshoot-software-restriction-policies.md)을 참조 하세요.
 
 ## <a name="BKMK_OVER"></a>소프트웨어 제한 정책 설명
 SRP(소프트웨어 제한 정책)는 도메인의 컴퓨터에서 실행 중인 소프트웨어 프로그램을 식별하고, 실행할 해당 프로그램의 기능을 제어하는 그룹 정책 기반 기능입니다. 소프트웨어 제한 정책은 Microsoft 보안 및 관리 전략의 일환으로, 기업이 자사 컴퓨터에 대한 안정성과 무결성, 관리 효율성을 향상시킬 수 있도록 지원합니다.
@@ -37,7 +37,7 @@ SRP(소프트웨어 제한 정책)는 도메인의 컴퓨터에서 실행 중인
 
 SRP에 대한 자세한 내용은 [Software Restriction Policies Technical Overview](software-restriction-policies-technical-overview.md)를 참조하세요.
 
-## <a name="BKMK_APP"></a>실제 응용 프로그램
+## <a name="BKMK_APP"></a>실용적인 응용 프로그램
 관리자는 소프트웨어 제한 정책을 사용하여 다음과 같은 작업을 수행할 수 있습니다.
 
 -   신뢰할 수 있는 코드 정의
@@ -58,10 +58,10 @@ SRP에 대한 자세한 내용은 [Software Restriction Policies Technical Overv
 
 -   실행 파일이 로컬 컴퓨터, OU(조직 구성 단위), 사이트 또는 도메인에서 실행될 수 없도록 방지합니다. 이는 악성 사용자의 잠재적인 문제점을 해결하는 데 소프트웨어 제한 정책을 사용하지 않는 경우에 적절합니다.
 
-## <a name="BKMK_NEW"></a>새로운 기능과 변경 된 기능
+## <a name="BKMK_NEW"></a>새로운 기능 및 변경 된 기능
 소프트웨어 제한 정책에는 변경된 기능이 없습니다.
 
-## <a name="BKMK_DEP"></a>제거 되었거나 사용 되지 않는 기능
+## <a name="BKMK_DEP"></a>제거 되었거나 더 이상 사용 되지 않는 기능
 소프트웨어 제한 정책에는 제거되었거나 더 이상 사용되지 않는 기능이 없습니다.
 
 ## <a name="BKMK_SOFT"></a>소프트웨어 요구 사항
@@ -89,14 +89,14 @@ MMC를 통해 로컬 그룹 정책 편집기의 소프트웨어 제한 정책 �
 
 |콘텐츠 형식|참조|
 |--------|-------|
-|**제품 평가**|[소프트웨어 제한 정책 사용 하 여 응용 프로그램 잠금](https://technet.microsoft.com/magazine/2008.06.srp.aspx?pr=blog)|
+|**제품 평가**|[소프트웨어 제한 정책을 사용 하는 응용 프로그램 잠금](https://technet.microsoft.com/magazine/2008.06.srp.aspx?pr=blog)|
 |**계획**|[소프트웨어 제한 정책 기술 개요](software-restriction-policies-technical-overview.md) (Windows Server 2012)<br /><br />[소프트웨어 제한 정책 기술 참조](https://technet.microsoft.com/library/cc728085(v=WS.10).aspx) (Windows Server 2003)|
 |**배포**|사용 가능한 리소스 없음|
 |**작업**|[소프트웨어 제한 정책 관리](administer-software-restriction-policies.md) (Windows Server 2012)<br /><br />[소프트웨어 제한 정책 제품 도움말](https://technet.microsoft.com/library/cc779607(v=WS.10).aspx) (Windows Server 2003)|
 |**문제 해결**|[소프트웨어 제한 정책 문제 해결](troubleshoot-software-restriction-policies.md) (Windows Server 2012)<br /><br />[소프트웨어 제한 정책 문제 해결](https://technet.microsoft.com/library/cc737011(v=WS.10).aspx) (Windows Server 2003)|
 |**보안**|[소프트웨어 제한 정책에 대한 위협 및 대책](https://technet.microsoft.com/library/dd349795(v=WS.10).aspx) (Windows Server 2008)<br /><br />[소프트웨어 제한 정책에 대한 위협 및 대책](https://technet.microsoft.com/library/hh125926(v=WS.10).aspx) (Windows Server 2008 R2)|
 |**도구 및 설정**|[소프트웨어 제한 정책 도구 및 설정](https://technet.microsoft.com/library/cc782454(v=WS.10).aspx) (Windows Server 2003)|
-|**커뮤니티 리소스**|[소프트웨어 제한 정책 사용 하 여 응용 프로그램 잠금](https://technet.microsoft.com/magazine/2008.06.srp.aspx?pr=blog)|
+|**커뮤니티 리소스**|[소프트웨어 제한 정책을 사용 하는 응용 프로그램 잠금](https://technet.microsoft.com/magazine/2008.06.srp.aspx?pr=blog)|
 
 
 

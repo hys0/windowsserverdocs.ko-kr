@@ -7,21 +7,21 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 13d8ae8b8f3e4c8160f61284e5fb97e21b6a51b6
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: ca10f8e784fea3b99a60b2117f65ba1ccaf6501e
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66191253"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71359091"
 ---
 # <a name="mapping-your-deployment-goals-to-an-ad-fs-design"></a>AD FS 디자인에 배포 목표 매핑
 
 
-기존 Active Directory Federation Services 검토를 완료 한 후 \(AD FS\) 배포 목표 확인 배포에 관련 된 목표, 특정 AD FS 디자인에 이러한 목표를 매핑할 수 있습니다. 자세한 내용은 AD FS 배포 목표 미리 정의 참조 [AD FS 배포 목표 식별](Identifying-Your-AD-FS-Deployment-Goals.md)합니다.  
+기존 Active Directory Federation Services \(AD FS @ no__t 배포 목표 검토를 완료 하 고 배포에 관련 된 목표를 확인 한 후 이러한 목표를 특정 AD FS 디자인에 매핑할 수 있습니다. AD FS 미리 정의 된 배포 목표에 대 한 자세한 내용은 [AD FS 배포 목표 파악](Identifying-Your-AD-FS-Deployment-Goals.md)을 참조 하세요.  
   
-다음 표를 사용 하 여 AD FS의 적절 한 조합에 매핑되는 AD FS 디자인 조직의 배포 목표를 결정 합니다. 이 테이블은이 가이드에 설명 된 대로 두 개의 기본 AD FS 디자인에만 참조 합니다. 그러나 조직의 요구를 충족 하도록 AD FS 배포 목표의 조합을 사용 하 여 하이브리드 또는 사용자 지정 AD FS 디자인을 만들 수 있습니다.  
+다음 표를 사용 하 여 조직에 대 한 AD FS 배포 목표의 적절 한 조합에 매핑할 AD FS 디자인을 결정 합니다. 이 표에서는이 가이드에 설명 된 대로 두 가지 기본 AD FS 설계만 참조 합니다. 그러나 조직의 요구를 충족 하기 위해 AD FS 배포 목표 조합을 사용 하 여 하이브리드 또는 사용자 지정 AD FS 디자인을 만들 수 있습니다.  
   
 |AD FS 배포 목표|[웹 SSO 디자인](Web-SSO-Design.md)|[페더레이션된 웹 SSO 디자인](Federated-Web-SSO-Design.md)|  
 |---------------------------------------------------------------------------|----------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|  
