@@ -1,8 +1,8 @@
 ---
-title: ksetup:setrealm
-description: '에 대 한 Windows 명령을 항목 * * *- '
+title: 'ksetup: setrealm'
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: aa6b2a21904ec4dae1e60def5bd36647291b1af6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 1bbe5c000b7e84066c19511639fe3d92d7e4b558
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59877404"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71374904"
 ---
-# <a name="ksetupsetrealm"></a>ksetup:setrealm
+# <a name="ksetupsetrealm"></a>ksetup: setrealm
 
 
 
@@ -36,7 +36,7 @@ ksetup /setrealm <DNSDomainName>
 
 |매개 변수|설명|
 |---------|-----------|
-|\<DNSDomainName>|DNS 도메인 이름을 간단한 도메인 이름 또는 정규화 된 도메인 이름 형식일 수 있습니다.|
+|\<DNSDomainName >|DNS 도메인 이름을 간단한 도메인 이름 또는 정규화 된 도메인 이름 형식일 수 있습니다.|
 
 ## <a name="remarks"></a>설명
 
@@ -44,7 +44,7 @@ DNS 도메인 이름 매개 변수가 대문자로 입력 해야 합니다. 그�
 
 도메인 컨트롤러에서 Kerberos 영역을 설정 하는 것은 지원 되지 않습니다. 그렇게 하려고 하면 경고 및 명령 실패 합니다.
 
-## <a name="BKMK_Examples"></a>예제
+## <a name="BKMK_Examples"></a>예와
 
 비-도메인 컨트롤러에서 CONTOSO Kerberos 영역에만 액세스를 제한 하는 특정 도메인 이름에이 컴퓨터에 대 한 영역을 설정 합니다.
 ```

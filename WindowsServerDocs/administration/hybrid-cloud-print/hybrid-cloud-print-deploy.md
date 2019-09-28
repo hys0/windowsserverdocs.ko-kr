@@ -1,7 +1,7 @@
 ---
 title: Windows Server 하이브리드 클라우드 인쇄 배포
 description: Microsoft 하이브리드 클라우드 인쇄를 설정 하는 방법
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: Windows Server 2016
@@ -12,12 +12,12 @@ author: msjimwu
 ms.author: coreyp
 manager: dongill
 ms.date: 3/15/2018
-ms.openlocfilehash: 552695626c98ee0fc01148536b50d4466d1b96e4
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: af5cd5f83633df7e704f4b768baf8dc6d78546aa
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70866807"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71370443"
 ---
 # <a name="deploy-windows-server-hybrid-cloud-print-with-pre-authentication"></a>사전 인증을 사용한 Windows Server 하이브리드 클라우드 인쇄 배포
 
@@ -285,7 +285,7 @@ IT 관리자를 위한이 항목에서는 Microsoft 하이브리드 클라우드
 
         > 참고: 모든 필수 매개 변수 값은 명령줄에도 입력할 수 있습니다.<br>
         **게시-CloudPrinter** PowerShell 명령 구문: <br>
-        Publish-cloudprinter-프린터 \<문자열\> -제조업체 \<\> 문자열-모델 \<문자열\> -OrgLocation \<string\> -Sddl \<문자열 \<\> \<\> -discoveryendpoint \<문자열\> -printserverendpoint 문자열-azureclientid string-AzureTenantGuid\> \<string \<[-discoveryresourceid문자열\>]\> <br>
+        Publish-CloudPrinter-프린터 @no__t-hstring @ no__t-1-Manufacturer \<string @ @no__t no__t-4string @ no__t-OrgLocation \<string @ no__t-7-no__t \<string @ no__t-9-DiscoveryEndpoint \>0string @-11- PrintServerEndpoint 2 문자열 @ no__t-13-AzureClientId 4string @ no__t-15-AzureTenantGuid 6string @ no__t-17 [-DiscoveryResourceId 8string @ no__t-19] <br>
         샘플 명령:`publish-cloudprinter -Printer EcpPrintTest -Manufacturer Microsoft -Model FilePrinterEcp -OrgLocation '{"attrs": [{"category":"country", "vs":"USA", "depth":0}, {"category":"organization", "vs":"MyCompany", "depth":1}, {"category":"site", "vs":"MyCity, State", "depth":2}, {"category":"building", "vs":"Building 1", "depth":3}, {"category":"floor\_number", "vn":1, "depth":4}, {"category":"room\_name", "vs":"1111", "depth":5}]}' -Sddl "O:BAG:DUD:(A;OICI;FA;;;WD)" -DiscoveryEndpoint https://<services-machine-endpoint>/mcs -PrintServerEndpoint https://<services-machine-endpoint>/ecp -AzureClientId <Native Web App ID> -AzureTenantGuid <Azure AD Directory ID> -DiscoveryResourceId <Proxied Mopria Discovery Cloud Service App ID>`
 
 

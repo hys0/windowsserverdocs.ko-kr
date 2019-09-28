@@ -2,7 +2,7 @@
 title: 사용자 액세스 로깅 시작
 desctription: Describes the User Access Logging feature and how to start using it.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: manage-user-access-logging
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ author: brentfor
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a1706756b52777f5dd3bf1db59fb2ed087ca8648
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 15906e8cc1e5e85a471f1b8725435eb60852f6f5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70866263"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71382871"
 ---
 # <a name="get-started-with-user-access-logging"></a>사용자 액세스 로깅 시작
 
@@ -99,7 +99,7 @@ UAL에서 지원할 수 있는 서버 역할 및 서비스는 다음과 같습�
 |-----------------|---------|  
 |클라이언트 요청 이벤트 데이터를 거의 실시간으로 수집 및 집계합니다.|최대 3년 동안의 데이터를 저장할 수 있습니다. **중요:** 관리자는 조직의 개인 정보 취급 방침 및 현지 규정에 의해 수집 된 데이터 및 데이터 보존 기간을 준수 하도록 적용 해야 합니다.|  
 |WMI 또는 Windows PowerShell 인터페이스를 사용하여 UAL을 쿼리하여 로컬 또는 원격 서버에서 클라이언트 요청 데이터를 검색합니다.|UAL에서는 시간의 경과에 따른 사용량 현황 데이터를 하나의 보기에서 확인할 수 있습니다. 서버 및 엔터프라이즈 관리자는 이 데이터를 검색한 다음 비즈니스 관리자와 협력하여 볼륨 소프트웨어 라이선스 사용을 최적화할 수 있습니다.|  
-|기본적으로 활성화되어 있습니다.|서버 관리자가 이 기능을 구성하거나 별도로 설정하지 않아도 모든 핵심 기능이 사용 가능하고 작동합니다.|  
+|기본적으로 사용하도록 설정되어 있습니다.|서버 관리자가 이 기능을 구성하거나 별도로 설정하지 않아도 모든 핵심 기능이 사용 가능하고 작동합니다.|  
   
 ## <a name="data-logged-with-ual"></a>UAL을 통해 기록되는 데이터  
 다음과 같은 사용자 관련 데이터가 UAL에서 기록됩니다.  

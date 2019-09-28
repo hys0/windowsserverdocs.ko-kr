@@ -1,19 +1,19 @@
 ---
 title: 응용 프로그램 데이터를 위한 스케일 아웃 파일 서버 개요
 description: Windows Server 201 R2 및 Windows Server 2012의 스케일 아웃 파일 서버 기능에 대 한 개요입니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 ms.technology: storage-failover-clustering
 ms.date: 04/26/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 80bf85caac6f84e0d6da0c6139e39f3823b3a961
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: da7c90bdb1c4a2fbdb2e518f34abe9cbfef2fc29
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70868713"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392039"
 ---
 # <a name="scale-out-file-server-for-application-data-overview"></a>응용 프로그램 데이터를 위한 스케일 아웃 파일 서버 개요
 

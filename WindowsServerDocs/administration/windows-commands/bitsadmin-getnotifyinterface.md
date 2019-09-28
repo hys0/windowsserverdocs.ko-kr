@@ -1,8 +1,8 @@
 ---
 title: bitsadmin getnotifyinterface
-description: Windows 명령 항목에 대 한 **bitsadmin getnotifyinterface** -다른 프로그램에 지정된 된 된 작업에 대 한 COM 콜백 인터페이스를 등록 하는 경우 결정 합니다.
+description: '**Bitsadmin getnotifyinterface** 에 대 한 Windows 명령 항목-다른 프로그램에서 지정 된 작업에 대해 COM 콜백 인터페이스를 등록 했는지 여부를 확인 합니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,16 +13,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8316721a20cc477f9e8e15fc57b5d1c861da3ff4
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 826e13cf8a3e54935ceb5a72ff82647cacfc3be5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59868044"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381470"
 ---
 # <a name="bitsadmin-getnotifyinterface"></a>bitsadmin getnotifyinterface
 
-다른 프로그램이 지정된 된 된 작업에 대 한 COM 콜백 인터페이스 (알림 인터페이스)를 등록에 있는지 여부를 결정 합니다.
+다른 프로그램에서 지정 된 작업에 대 한 COM 콜백 인터페이스 (알림 인터페이스)를 등록 했는지 여부를 확인 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -38,14 +38,14 @@ bitsadmin /GetNotifyInterface <Job>
 
 ## <a name="remarks"></a>설명
 
-등록 또는 미등록 표시합니다.
+등록 또는 등록 취소를 표시 합니다.
 
 > [!NOTE]
-> 콜백 인터페이스를 등록 하는 프로그램을 확인 하는 것이 불가능 합니다.
+> 콜백 인터페이스를 등록 한 프로그램은 확인할 수 없습니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
-다음 예제에서는 검색 이라는 작업에 대 한 알림 인터페이스 *myDownloadJob*합니다.
+다음 예제에서는 명명 된 작업에 대 한 알림 인터페이스를 검색 *Mydownloadjob*합니다.
 ```
 C:\>bitsadmin /GetNotifyInterface myDownloadJob
 ```

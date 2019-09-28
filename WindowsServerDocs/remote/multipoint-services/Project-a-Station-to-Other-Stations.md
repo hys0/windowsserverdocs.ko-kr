@@ -2,7 +2,7 @@
 title: 다른 스테이션에 스테이션 표시
 description: MultiPoint 서비스에서 한 시스템에서 다른 시스템으로 데스크톱을 공유 하는 방법을 알아봅니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: db2b718154a7c41646ab25b16420eb0ee46a17cd
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 242214ba69fc3265c9984e218110a16242b1cff3
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871582"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71395135"
 ---
 # <a name="project-a-station-to-other-stations"></a>다른 스테이션에 스테이션 표시
 MultiPoint 대시보드 사용자는 단일 사용자의 스테이션 또는 모든 사용자 (비관리자) 스테이션에 데스크톱을 프로젝션 할 수 있습니다. 이 기능은 한 명 이상의 사용자에게 작업을 설명하려는 경우에 유용합니다.  

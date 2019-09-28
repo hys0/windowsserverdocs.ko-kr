@@ -1,8 +1,8 @@
 ---
-title: 만들기
-description: '에 대 한 Windows 명령을 항목 * * *- '
+title: create
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 70a8f53d9cb90fc36a76b11de2f93da71874617a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2245efb6c3bce8aecf8edf730694804ffbdc3d80
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59881274"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71378776"
 ---
-# <a name="create"></a>만들기
+# <a name="create"></a>create
 
 
 

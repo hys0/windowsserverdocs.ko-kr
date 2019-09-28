@@ -1,8 +1,8 @@
 ---
 title: 도움말
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 793034c32897d8f4a7d7810016eecbad6a982064
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 1d759c85c07d76811053ba0a4a938e07220c2648
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59883384"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71375589"
 ---
 # <a name="help"></a>도움말
 
 
 
-시스템 명령 (즉, 비 네트워크 명령)에 대 한 온라인 정보를 제공 합니다. 매개 변수 없이 사용 하는 경우 **도움말** 나열 하 고 모든 시스템 명령에 간략하게 설명 합니다.
+시스템 명령 (즉, 네트워크 명령이 아님)에 대 한 온라인 정보를 제공 합니다. 매개 변수 없이 사용 하는 경우 **도움말** 을 나열 하 고 모든 시스템 명령을 간략하게 설명 합니다.
 
 이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
 
@@ -39,11 +39,11 @@ help [<Command>]
 
 |매개 변수|설명|
 |---------|-----------|
-|\<명령 >|에 대 한 정보를 원하는 명령의 이름을 지정 합니다.|
+|\<Command >|정보를 보려는 명령의 이름을 지정 합니다.|
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
-정보를 확인 합니다 **robocopy** 명령에 다음 중 하나를 입력 합니다.
+**Robocopy** 명령에 대 한 정보를 보려면 다음 중 하나를 입력 합니다.
 ```
 help robocopy
 robocopy /? 

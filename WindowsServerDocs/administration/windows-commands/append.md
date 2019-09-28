@@ -1,8 +1,8 @@
 ---
 title: append
-description: '에 대 한 Windows 명령을 항목 '
+description: '에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: fe641e1336c163b5e98421a5fc32f8dbe64023b0
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: fdc4243bee8055888b023a56921cef757dda6b7e
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66435318"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71382748"
 ---
 # <a name="append"></a>append
 
@@ -43,7 +43,7 @@ append ;
 
 |     매개 변수     |                                                                                 설명                                                                                 |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [\<Drive>:]<Path> |                                                                 드라이브와 추가할 디렉터리를 지정 합니다.                                                                  |
+| [\<Drive >:] <Path> |                                                                 드라이브와 추가할 디렉터리를 지정 합니다.                                                                  |
 |       / x:에       |                                                  파일 검색 및 시작 응용 프로그램에 추가 된 디렉터리를 적용합니다.                                                  |
 |      /x: 해제       |                                     추가 된 디렉터리 요청 파일을 열에 적용 됩니다.</br>**/x: off** 기본 설정입니다.                                     |
 |     /path:에      |                               이미 경로 지정 하는 파일 요청에 추가 된 디렉터리를 적용 합니다. **/path:에** 기본 설정입니다.                               |
@@ -52,7 +52,7 @@ append ;
 |         ;         |                                                                     추가 디렉터리 목록을 지웁니다.                                                                     |
 |        /?         |                                                                    명령 프롬프트에 도움말을 표시합니다.                                                                     |
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 추가 디렉터리 목록을 지우려면 다음을 입력 합니다.
 ```

@@ -1,8 +1,8 @@
 ---
 title: 볼륨 추가
-description: Windows 명령 항목에 대 한 **볼륨 추가** -볼륨 섀도 되는 볼륨의 집합은 집합을 복사 하는 섀도 복사본에 추가 합니다.
+description: '**볼륨 추가** 에 대 한 Windows 명령 항목-섀도 복사본 집합에 볼륨을 추가 합니다. 섀도 복사본 집합은 섀도 복사 될 볼륨의 집합입니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8960ffafdf49d4512e1df2dfcc046bdfbe56e224
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c534bcc5a264fbb51d12cfd2a6fc93b4e6fbd857
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59819474"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71382786"
 ---
 # <a name="add-volume"></a>볼륨 추가
 
@@ -38,7 +38,7 @@ add volume <Volume> [provider <ProviderID>]
 
 |매개 변수|설명|
 |---------|-----------|
-|\<볼륨 >|섀도 복사 설정에 추가할 볼륨을 지정 합니다. 하나 이상의 볼륨 섀도 복사본 만들기 필요 합니다.|
+|\<Volume >|섀도 복사 설정에 추가할 볼륨을 지정 합니다. 하나 이상의 볼륨 섀도 복사본 만들기 필요 합니다.|
 |[공급자 \<ProviderID >]|섀도 복사본 만들기를 사용 하 여 등록 된 공급자의 공급자 ID를 지정 합니다. 경우 **공급자** 를 지정 하지 않으면 기본 공급자가 사용 됩니다.|
 
 ## <a name="remarks"></a>설명
@@ -47,7 +47,7 @@ add volume <Volume> [provider <ProviderID>]
 -   볼륨 추가 될 때마다 VSS에 해당 볼륨의 섀도 복사본 만들기를 지원 하는지 확인 하십시오 확인 됩니다. 그러나이 기본 검사 수에서 무효화 될,의 나중에 사용 된 **컨텍스트 설정** 명령입니다.
 -   섀도 복사본을 만들 때 다음 스크립트에 대 한 별칭을 사용할 수 있도록 환경 변수 별칭을 섀도 ID에 연결 합니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 에 현재 등록 된 공급자 목록을 볼 수는 `DISKSHADOW>` 프롬프트에 입력 합니다.
 ```

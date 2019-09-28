@@ -1,8 +1,8 @@
 ---
 title: bitsadmin monitor
-description: Windows 명령 항목에 대 한 **bitsadmin 모니터** -현재 사용자가 소유 하는 전송 큐에서 작업을 모니터링 합니다.
+description: '**Bitsadmin monitor** 에 대 한 Windows 명령 항목-현재 사용자가 소유 하는 전송 큐의 작업을 모니터링 합니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2c4620d5c8e46cb8bfcb6b9c83261d57781abea5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: fe4963349c7e17fc77500b5adfceafc48a20ac5f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59814594"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381223"
 ---
 # <a name="bitsadmin-monitor"></a>bitsadmin monitor
 
@@ -36,7 +36,7 @@ bitsadmin /Monitor [/allusers] [/refresh <Seconds>]
 
 |매개 변수|설명|
 |---------|-----------|
-|Allusers|선택적-모든 사용자에 대 한 작업을 모니터링 합니다.|
+|Allusers|선택 사항-모든 사용자에 대 한 작업을 모니터링 합니다.|
 |새로 고침|선택적-지정 된 간격으로 데이터를 새로 고칩니다 *초*합니다. 기본 새로 고침 간격은 5 초입니다.|
 
 ## <a name="remarks"></a>설명
@@ -45,7 +45,7 @@ bitsadmin /Monitor [/allusers] [/refresh <Seconds>]
 
 새로 고침을 중지 하려면 CTRL + C를 사용 합니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 다음 예제에서는 현재 사용자가 소유한 작업에 대 한 전송 큐를 모니터링 하 고 60 초 마다 정보를 새로 고칩니다.
 ```

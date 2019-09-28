@@ -1,7 +1,7 @@
 ---
 title: Hyper-v에서 표준 또는 프로덕션 검사점 중에서 선택
-description: 표준 또는 프로덕션 검사점을 사용 하도록 가상 컴퓨터를 구성 하기 위한 지침을 제공 합니다.
-ms.prod: windows-server-threshold
+description: 표준 또는 프로덕션 검사점을 사용 하도록 가상 컴퓨터를 구성 하는 방법에 대 한 지침을 제공 합니다.
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -11,12 +11,12 @@ ms.assetid: 92bb573b-03b7-470e-b72e-e35edf52b349
 author: KBDAzure
 ms.author: kathydav
 ms.date: 10/04/2016
-ms.openlocfilehash: cf1144886ec5ae723b7747bb7dd72f235944d06c
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 29c7b8be5b1e9d392cead304ab35c3d5dd5ee86a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67141345"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71364213"
 ---
 # <a name="choose-between-standard-or-production-checkpoints-in-hyper-v"></a>Hyper-v에서 표준 또는 프로덕션 검사점 중에서 선택
 
@@ -44,7 +44,7 @@ Windows Server 2016 및 Windows 10 이상에서는 각 가상 컴퓨터에 대 �
 5.  클릭 **적용** 변경 내용을 저장 합니다. 완료 되 면 클릭 **확인** 대화 상자를 닫습니다.  
   
 > [!NOTE]
-> 만 **프로덕션 검사점** Active Directory Domain Services 역할 (도메인 컨트롤러) 또는 Active Directory Lightweight Directory Services 역할을 실행 하는 게스트에서 지원 됩니다.
+> **프로덕션 검사점** 만 Active Directory Domain Services 역할 (도메인 컨트롤러) 또는 Active Directory LDS(Lightweight Directory Services) 역할을 실행 하는 게스트에서 지원 됩니다.
 
 ## <a name="see-also"></a>참조  
   

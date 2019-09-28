@@ -1,8 +1,8 @@
 ---
 title: ftp mdir
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c4ec445c3e367a46dc40d10a37c0b3b8e53a10e3
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 08aa5bb216a3d0155c100c761e476bb963e59311
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66438334"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71375852"
 ---
 # <a name="ftp-mdir"></a>ftp: mdir
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-원격 디렉터리에서 파일 및 하위 디렉터리의 디렉터리 목록을 표시합니다.   
+원격 디렉터리에서 파일 및 하위 디렉터리의 디렉터리 목록을 표시 합니다.   
 ## <a name="syntax"></a>구문  
 ```  
 mdir <remoteFile>[ ] <LocalFile>  
@@ -33,21 +33,21 @@ mdir <remoteFile>[ ] <LocalFile>
 
 |  매개 변수   |                               설명                                |
 |--------------|--------------------------------------------------------------------------|
-| <remoteFile> |   목록이 표시 하려는 디렉터리 또는 파일을 지정 합니다.   |
+| <remoteFile> |   목록을 보려는 디렉터리 또는 파일을 지정 합니다.   |
 | <LocalFile>  | 목록을 저장할 로컬 파일을 지정 합니다. 이 매개 변수는 필수적 요소입니다. |
 
 ## <a name="remarks"></a>설명  
-- 사용할 수 있습니다 **mdir** 여러 파일을 지정 합니다.  
-- 지정 *remoteFile*  
-  하이픈을 입력 ( **-** ) 원격 컴퓨터의 현재 작업 디렉터리를 사용 하도록 합니다.  
-- 지정 된 *LocalFile*  
-  하이픈을 입력 ( **-** ) 화면에 목록을 표시 합니다.  
-  ## <a name="BKMK_Examples"></a>예제  
-  디렉터리 목록을 표시할 **dir1** 하 고 **dir2** 화면에서  
+- **Mdir** 를 사용 하 여 여러 파일을 지정할 수 있습니다.  
+- *Remotefile* 지정  
+  원격 컴퓨터에서 현재 작업 디렉터리를 사용 하려면 하이픈 ( **-** )을 입력 합니다.  
+- *Localfile* 지정  
+  화면에 목록을 표시 하려면 하이픈 ( **-** )을 입력 합니다.  
+  ## <a name="BKMK_Examples"></a>예와  
+  화면에 **dir1** 및 **dir2** 의 디렉터리 목록을 표시 합니다.  
   ```  
   mdir dir1 dir2 -  
   ```  
-  결합 된 디렉터리 목록을 저장할 **dir1** 하 고 **dir2** 라는 로컬 파일에서 **dirlist.txt**  
+  **Dir1** 및 **dir2** 의 결합 된 디렉터리 목록을 파일 이름 .txt 라는 로컬 파일에 저장 합니다 **.**  
   ```  
   mdir dir1 dir2 dirlist.txt  
   ```  

@@ -1,8 +1,8 @@
 ---
 title: convert
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6a77e1fca9605c7e5cc4ff059db08ffbfcc81f81
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d78f7adbc26acf9787ad39019e1450542a6acda2
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59859284"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71379032"
 ---
 # <a name="convert"></a>convert
 
@@ -40,9 +40,9 @@ convert mbr
 |매개 변수|설명|
 |---------|-----------|
 |[기본 변환](convert-basic.md)|빈 동적 디스크를 기본 디스크로 변환합니다.|
-|[동적으로 변환](convert-dynamic.md)|기본 디스크를 동적 디스크로 변환합니다.|
-|[gpt를 변환 합니다.](convert-gpt.md)|마스터 부트 레코드 (MBR) 파티션 스타일을 사용 하 여 빈 기본 디스크 GUID 파티션 테이블 (GPT) 파티션 스타일을 사용 하 여 기본 디스크 변환 합니다.|
-|[Mbr를 변환 합니다.](convert-mbr.md)|GUID 파티션 테이블 (GPT) 파티션 스타일을 사용 하 여 빈 기본 디스크 마스터 부트 레코드 (MBR) 파티션 스타일을 사용 하 여 기본 디스크 변환 합니다.|
+|[동적 변환](convert-dynamic.md)|기본 디스크를 동적 디스크로 변환합니다.|
+|[Gpt 변환](convert-gpt.md)|MBR (마스터 부트 레코드) 파티션 스타일을 사용 하는 빈 기본 디스크를 GPT (GUID 파티션 테이블) 파티션 스타일을 사용 하는 기본 디스크로 변환 합니다.|
+|[Mbr 변환](convert-mbr.md)|MBR (마스터 부트 레코드) 파티션 스타일을 사용 하 여 GPT (GUID 파티션 테이블) 파티션 스타일을 포함 하는 빈 기본 디스크를 기본 디스크로 변환 합니다.|
 
 #### <a name="additional-references"></a>추가 참조
 

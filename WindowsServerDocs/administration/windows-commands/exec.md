@@ -1,8 +1,8 @@
 ---
-title: exec
-description: '에 대 한 Windows 명령을 항목 * * *- '
+title: 재시도
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ecdfd05b8abefb35946b783daaa3220a6713a38d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 514503e4920e16ba6778185af32f925541805223
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59882924"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71377427"
 ---
-# <a name="exec"></a>exec
+# <a name="exec"></a>재시도
 
 
 
@@ -36,7 +36,7 @@ exec <ScriptFile.cmd>
 
 |매개 변수|설명|
 |---------|-----------|
-|\<ScriptFile.cmd>|실행할 스크립트 파일을 지정 합니다.|
+|-0ScriptFile > @no__t|실행할 스크립트 파일을 지정 합니다.|
 
 ## <a name="remarks"></a>설명
 

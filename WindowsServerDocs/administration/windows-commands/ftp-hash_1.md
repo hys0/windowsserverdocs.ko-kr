@@ -1,8 +1,8 @@
 ---
 title: ftp hash_1
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,29 +13,29 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 87c4466ba1bf89f9eb548d7d7ed134246c810811
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 495306902bf68b451158d89794b47c273ae8a7e7
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66438694"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71376348"
 ---
-# <a name="ftp-hash1"></a>ftp: hash_1
+# <a name="ftp-hash_1"></a>ftp: hash_1
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-설정/해제 숫자 기호 (#) 전송 되는 각 데이터 블록에 대 한 인쇄 합니다.   
+전송 되는 각 데이터 블록의 숫자 기호 (#) 인쇄를 설정/해제 합니다.   
 ## <a name="syntax"></a>구문  
 ```  
 hash  
 ```  
 ### <a name="parameters"></a>매개 변수  
-none  
+없음  
 ## <a name="remarks"></a>설명  
 - 데이터 블록의 크기는 2048 바이트입니다.  
-- 기본적으로 **해시** 꺼져 있습니다.  
-  ## <a name="BKMK_Examples"></a>예제  
-  숫자 기호 (#) 전송 되는 각 데이터 블록에 대 한 인쇄 설정/해제 합니다.  
+- 기본적으로 **해시** 는 해제 되어 있습니다.  
+  ## <a name="BKMK_Examples"></a>예와  
+  전송 되는 각 데이터 블록의 숫자 기호 (#) 인쇄를 설정/해제 합니다.  
   ```  
   hash  
   ```  

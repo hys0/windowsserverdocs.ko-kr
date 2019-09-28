@@ -1,8 +1,8 @@
 ---
 title: bcdedit
-description: Windows 명령 항목에 대 한 **bcdedit** -새 저장소를 만들고, 기존 저장소를 수정 하 고 부팅 메뉴 매개 변수를 추가 합니다.
+description: '**Bcdedit** 의 Windows 명령 항목-새 저장소를 만들고, 기존 저장소를 수정 하 고, 부팅 메뉴 매개 변수를 추가 합니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 03/27/2018
-ms.openlocfilehash: c1ac016b299cbd72a406121c54762f4457b24286
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9448f4461a089a93382ef8cd9e804b382fca27e4
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59872444"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71382250"
 ---
 # <a name="bcdedit"></a>bcdedit
 
@@ -49,7 +49,7 @@ BCDEdit /Command [<Argument1>] [<Argument2>] ...
 
 |옵션|Description|
 |------|-----------|
-|/?|BCDEdit 명령 목록이 표시 됩니다. 사용 가능한 명령에 대 한 요약을 표시 인수 없이이 명령을 실행 합니다. 특정 명령에 대 한 자세한 도움말을 표시 하려면 실행 **bcdedit /?** \<명령 > 여기서 <command> 이름에 대 한 자세한 내용은 검색 중인 명령입니다. 예를 들어 **bcdedit /? createstore** Createstore 명령에 대 한 자세한 도움말을 표시 합니다.|
+|/?|BCDEdit 명령 목록이 표시 됩니다. 사용 가능한 명령에 대 한 요약을 표시 인수 없이이 명령을 실행 합니다. 특정 명령에 대 한 자세한 도움말을 표시 하려면 실행 **bcdedit /?** \<command >. 여기서 <command>은 검색 하는 명령 이름에 대 한 자세한 정보를 검색 합니다. 예를 들어 **bcdedit /? createstore** Createstore 명령에 대 한 자세한 도움말을 표시 합니다.|
 
 ### <a name="parameters-that-operate-on-a-store"></a>저장소에서 작동 하는 매개 변수
 
@@ -65,7 +65,7 @@ BCDEdit /Command [<Argument1>] [<Argument2>] ...
 |매개 변수|설명|
 |---------|-----------|
 |/copy|동일한 시스템 저장소에 지정 된 부팅 항목의 복사본을 만듭니다.|
-|만들기 /|부팅 구성 데이터 저장소에 새 항목을 만듭니다. 잘 알려진 식별자를 지정 하면 **/응용 프로그램**, **상속 /**, 및 **/device** 매개 변수를 지정할 수 없습니다. 식별자가 지정 된 열 또는 하지 잘 알려져 있는 경우는 **/응용 프로그램**, **상속 /**, 또는 **/device** 옵션을 지정 해야 합니다.|
+|만들기 /|부팅 구성 데이터 저장소에 새 항목을 만듭니다. 잘 알려진 식별자를 지정 하면 **/응용 프로그램**, **상속 /** , 및 **/device** 매개 변수를 지정할 수 없습니다. 식별자가 지정 된 열 또는 하지 잘 알려져 있는 경우는 **/응용 프로그램**, **상속 /** , 또는 **/device** 옵션을 지정 해야 합니다.|
 |/delete|지정된 된 항목에서 요소를 삭제합니다.|
 
 ### <a name="parameters-that-operate-on-entry-options"></a>항목 옵션에서 작동 하는 매개 변수
@@ -105,9 +105,9 @@ BCDEdit /Command [<Argument1>] [<Argument2>] ...
 |매개 변수|설명|
 |---------|-----------|
 |/bootdebug|사용 하거나 지정 된 부팅 항목에 대 한 부팅 디버거를 사용 하지 않도록 설정 합니다. 이 명령은 모든 부팅 항목에 대해 제대로 작동 해도 부팅 응용 프로그램에만 효과적입니다.|
-|/dbgsettings|지정 하거나 시스템에 대 한 전역 디버거 설정을 표시 합니다. 이 명령은 사용 하도록 설정 하지 않거나; 커널 디버거를 사용 하지 않도록 설정 사용 하는 **디버그** 해당 용도 위한 옵션입니다. 개별 전역 디버거 설정을 설정 하려면 사용 합니다 **bcdedit /set** \<dbgsettings > <type> <value> 명령을 통해 Visual Studio의 대화형 창에 직접 통합됩니다.|
+|/dbgsettings|지정 하거나 시스템에 대 한 전역 디버거 설정을 표시 합니다. 이 명령은 사용 하도록 설정 하지 않거나; 커널 디버거를 사용 하지 않도록 설정 사용 하는 **디버그** 해당 용도 위한 옵션입니다. 개별 전역 디버거 설정을 설정 하려면 **bcdedit/set** \<dbgsettings > <type>를 사용 합니다. <value> 명령을 통해 Visual Studio의 대화형 창에 직접 통합됩니다.|
 |/debug|사용 하거나 지정 된 부팅 항목에 대 한 커널 디버거를 사용 하지 않도록 설정 합니다.|
 
 ## <a name="examples"></a>예
 
-BCDEdit의 예 참조는 [BCDEdit 옵션 참조](https://docs.microsoft.com/windows-hardware/drivers/devtest/bcd-boot-options-reference)합니다.
+BCDEdit의 예제는 [Bcdedit Options 참조](https://docs.microsoft.com/windows-hardware/drivers/devtest/bcd-boot-options-reference)를 참조 하세요.

@@ -1,6 +1,6 @@
 ---
 title: DFS 네임스페이스 개요
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: jgerend
 ms.manager: daveba
 ms.technology: storage
@@ -8,12 +8,12 @@ ms.topic: article
 author: jasongerend
 ms.date: 06/07/2019
 description: 이 항목에서는 다른 서버에 있는 여러 공유 폴더를 하나 이상의 논리적으로 구성된 네임스페이스로 그룹화할 수 있도록 하는 Windows Server의 역할 서비스인 DFS 네임스페이스에 대해 설명합니다.
-ms.openlocfilehash: 8507961749bee6d01541029e33c8095470792b8a
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 33fe25d2298d210ee37f9193a50fa77ed39bd2b4
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70870224"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402226"
 ---
 # <a name="dfs-namespaces-overview"></a>DFS 네임스페이스 개요
 

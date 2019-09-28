@@ -1,9 +1,9 @@
 ---
 title: 멀티 사이트 사용 관련 문제 해결
-description: 이 가이드의 일부인이 항목에서는 여러 원격 액세스 서버 배포 Windows Server 2016에서 멀티 사이트 배포에서 합니다.
+description: 이 항목은 Windows Server 2016에서 멀티 사이트 배포에서 여러 원격 액세스 서버 배포 가이드의 일부입니다.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-ras
@@ -12,16 +12,16 @@ ms.topic: article
 ms.assetid: 570c81d6-c4f4-464c-bee9-0acbd4993584
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 7fafc2e95f30a3956a1e2fdfcdf2f368a1798d28
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: fc42040d68b8a22dcfc46aa30db3a2a3c3bc060a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67280967"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71367065"
 ---
 # <a name="troubleshooting-enabling-multisite"></a>멀티 사이트 사용 관련 문제 해결
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 이 항목에는 `Enable-DAMultisite` 명령에 관련한 문제 해결 정보가 포함되어 있습니다. 수신된 오류가 멀티 사이트 사용과 관련된 오류인지 확인하려면 Windows 이벤트 로그에서 이벤트 ID 10051을 확인하십시오.  
   
@@ -30,16 +30,16 @@ ms.locfileid: "67280967"
   
 **가능한 원인**  
   
-멀티 사이트 배포에서는 Windows 10 및 Windows 8 클라이언트 컴퓨터는 다른 진입점 간 로밍할 수 있습니다.  Windows 7 클라이언트 컴퓨터에서 멀티 사이트 배포에서 특정 진입점과 연결 되어야 합니다. 클라이언트 컴퓨터가 올바른 보안 그룹에 없는 경우 잘못된 그룹 정책 설정이 수신될 수 있습니다.  
+멀티 사이트 배포에서 Windows 10 및 Windows 8 클라이언트 컴퓨터는 서로 다른 진입점 간에 로밍할 수 있습니다.  Windows 7 클라이언트 컴퓨터는 멀티 사이트 배포의 특정 진입점에 연결 되어야 합니다. 클라이언트 컴퓨터가 올바른 보안 그룹에 없는 경우 잘못된 그룹 정책 설정이 수신될 수 있습니다.  
   
 **해결 방법**  
   
-DirectAccess는 모든 Windows 10 및 Windows 8 클라이언트 컴퓨터에 대 한 보안 그룹을 하나 이상 필요 모든 Windows 10 및 Windows 8 컴퓨터 도메인당 하나의 보안 그룹을 사용 하는 것이 좋습니다. DirectAccess는 각 진입점에 대 한 Windows 7 클라이언트 컴퓨터에 대 한 보안 그룹도 필요합니다. 각 클라이언트 컴퓨터는 하나의 보안 그룹에만 포함되어야 합니다. 따라서 Windows 10에 대 한 보안 그룹을 Windows 8 클라이언트를 Windows 10 또는 Windows 8을 실행 하는 컴퓨터만 포함 해야 하 고 관련 진입점에 대 한 하나의 전용된 보안 그룹에 속하는 각 Windows 7 클라이언트 컴퓨터 및 Windows 10 또는 Windows 8 속한 클라이언트가 Windows 7 보안 그룹에 있습니다.  
+DirectAccess에는 모든 Windows 10 및 Windows 8 클라이언트 컴퓨터에 대 한 보안 그룹이 하나 이상 필요 합니다. 도메인 당 모든 Windows 10 및 Windows 8 컴퓨터에 대해 하나의 보안 그룹을 사용 하는 것이 좋습니다. DirectAccess에는 각 진입점에 대 한 Windows 7 클라이언트 컴퓨터에 대 한 보안 그룹도 필요 합니다. 각 클라이언트 컴퓨터는 하나의 보안 그룹에만 포함되어야 합니다. 따라서 windows 10 및 Windows 8 클라이언트의 보안 그룹에 Windows 10 또는 Windows 8을 실행 하는 컴퓨터만 포함 되 고 각 Windows 7 클라이언트 컴퓨터가 관련 진입점의 단일 전용 보안 그룹에 속해 있는지 확인 해야 합니다. windows 7 보안 그룹에 속한 Windows 10 또는 Windows 8 클라이언트는 없습니다.  
   
-Windows 8 보안 그룹을 구성 합니다 **그룹 선택** 페이지의 **DirectAccess 클라이언트 설정** 마법사. Windows 7 보안 그룹을 구성 합니다 **클라이언트 지원** 페이지를 **멀티 사이트 배포 사용** 마법사를 또는 **클라이언트 지원** 페이지는  **진입점 추가** 마법사.  
+**DirectAccess 클라이언트 설정** 마법사의 **그룹 선택** 페이지에서 Windows 8 보안 그룹을 구성 합니다. **멀티 사이트 배포 사용** 마법사의 **클라이언트 지원** 페이지 또는 **진입점 추가** 마법사의 **클라이언트 지원** 페이지에서 Windows 7 보안 그룹을 구성 합니다.  
   
 ## <a name="kerberos-proxy-authentication"></a>Kerberos 프록시 인증  
-**수신 된 오류**합니다. 멀티 사이트 배포에서는 Kerberos 프록시 인증이 지원 되지 않습니다. IPsec 사용자 인증 시 컴퓨터 인증서를 사용하도록 설정해야 합니다.  
+**오류가 수신**되었습니다. 멀티 사이트 배포에서는 Kerberos 프록시 인증이 지원 되지 않습니다. IPsec 사용자 인증 시 컴퓨터 인증서를 사용하도록 설정해야 합니다.  
   
 **가능한 원인**  
   
@@ -53,10 +53,10 @@ Windows 8 보안 그룹을 구성 합니다 **그룹 선택** 페이지의 **Dir
   
 2.  **원격 액세스 서버 설정** 마법사의 **인증** 페이지에서 **컴퓨터 인증서 사용** 확인란을 선택하고 배포에 인증서를 발급하는 루트 인증 기관 또는 중간 인증 기관을 선택합니다.  
   
-Windows PowerShell을 사용 하는 컴퓨터 인증서 인증을 사용 하려면 사용 하 여를 `Set-DAServer` cmdlet을 지정 합니다 *IPsecRootCertificate* 매개 변수.  
+Windows PowerShell을 사용 하 여 컴퓨터 인증서 인증을 사용 하도록 설정 하려면 `Set-DAServer` cmdlet을 사용 하 고 Azure *인증서 매개 변수를 지정 합니다.*  
   
 ## <a name="ip-https-certificates"></a>IP-HTTPS 인증서  
-**수신 된 오류**합니다. DirectAccess 서버는 자체 서명 된 IP-HTTPS 인증서를 사용합니다. 알려진 CA로부터 서명된 인증서를 사용하도록 IP-HTTPS를 구성하십시오.  
+**오류가 수신**되었습니다. DirectAccess 서버는 자체 서명 된 ip-https 인증서를 사용 합니다. 알려진 CA로부터 서명된 인증서를 사용하도록 IP-HTTPS를 구성하십시오.  
   
 **가능한 원인**  
   
@@ -74,7 +74,7 @@ IP-HTTPS 인증서를 선택하려면:
   
 -   **문제 1**  
   
-    **수신 된 오류**합니다. DirectAccess는 네트워크 위치 서버에 자체 서명 된 인증서를 사용 하도록 구성 됩니다. 네트워크 위치 서버가 CA로부터 서명된 인증서를 사용하도록 구성하십시오.  
+    **오류가 수신**되었습니다. DirectAccess는 네트워크 위치 서버에 자체 서명 된 인증서를 사용 하도록 구성 됩니다. 네트워크 위치 서버가 CA로부터 서명된 인증서를 사용하도록 구성하십시오.  
   
     **가능한 원인**  
   
@@ -88,9 +88,9 @@ IP-HTTPS 인증서를 선택하려면:
   
     2.  **인프라 서버 설정** 마법사의 **네트워크 위치 서버** 페이지에 있는 **원격 액세스 서버에 네트워크 위치 서버 배포**에서 **자체 서명된 인증서 사용**이 선택 취소되어 있는지 확인하고 **찾아보기**를 클릭하여 엔터프라이즈 CA가 발급한 인증서를 선택합니다.  
   
--   **문제점 2**  
+-   **문제 2**  
   
-    **수신 된 오류**합니다. 네트워크 부하를 배포 하려면 분산 클러스터 나 멀티 사이트 배포, 원격 액세스 서버의 내부 이름과 다른 주체 이름 가진 네트워크 위치 서버용 인증서를 가져옵니다.  
+    **오류가 수신**되었습니다. 네트워크 부하 분산 된 클러스터 또는 멀티 사이트 배포를 배포 하려면 주체 이름이 원격 액세스 서버의 내부 이름과 다른 네트워크 위치 서버에 대 한 인증서를 가져옵니다.  
   
     **가능한 원인**  
   
@@ -107,18 +107,18 @@ IP-HTTPS 인증서를 선택하려면:
     2.  **인프라 서버 설정** 마법사의 **네트워크 위치 서버** 페이지에 있는 **원격 액세스 서버에 네트워크 위치 서버 배포**에서 **찾아보기**를 클릭하여 이전에 가져온 인증서를 선택합니다. 인증서 주체 이름은 원격 액세스 서버의 내부 이름과 달라야 합니다.  
   
 ## <a name="windows-7-client-computers"></a>Windows 7 클라이언트 컴퓨터  
-**수신 된 경고**합니다. 멀티 사이트를 사용 하는 경우 DirectAccess 클라이언트에 대해 구성 된 보안 그룹을 Windows 7 컴퓨터를 포함 해서는 안됩니다. 멀티 사이트 배포에서 Windows 7 클라이언트 컴퓨터를 지원하려면 진입점마다 이 클라이언트를 포함하는 보안 그룹을 선택하십시오.  
+**경고가 수신**되었습니다. 멀티 사이트를 사용 하도록 설정 하는 경우 DirectAccess 클라이언트에 대해 구성 된 보안 그룹은 Windows 7 컴퓨터를 포함 하지 않아야 합니다. 멀티 사이트 배포에서 Windows 7 클라이언트 컴퓨터를 지원하려면 진입점마다 이 클라이언트를 포함하는 보안 그룹을 선택하십시오.  
   
 **가능한 원인**  
   
-기존 DirectAccess 배포에서 Windows 7 클라이언트 지원이 활성화 되었습니다.  
+기존 DirectAccess 배포에서는 Windows 7 클라이언트 지원이 사용 하도록 설정 되었습니다.  
   
 **해결 방법**  
   
-DirectAccess는 각 진입점에 대 한 Windows 7 클라이언트 컴퓨터에 대 한 모든 Windows 8 클라이언트 컴퓨터에 대 한 하나 이상의 보안 그룹 및 보안 그룹이 필요합니다. 각 클라이언트 컴퓨터는 하나의 보안 그룹에만 포함되어야 합니다. 따라서 Windows 8 클라이언트 보안 그룹 Windows 8을 실행 하는 컴퓨터만 포함 하 고 각 Windows 7 클라이언트 컴퓨터가 관련 진입점에 대 한 하나의 전용된 보안 그룹에 속해 있는지 확인 해야 없는 Windows 8 클라이언트 Windows 7 보안 그룹에 속해야 합니다.  
+DirectAccess에는 모든 Windows 8 클라이언트 컴퓨터에 대 한 보안 그룹이 하나 이상 필요 하 고 각 진입점에 대 한 Windows 7 클라이언트 컴퓨터의 보안 그룹이 필요 합니다. 각 클라이언트 컴퓨터는 하나의 보안 그룹에만 포함되어야 합니다. 따라서 windows 8 클라이언트의 보안 그룹에 Windows 8을 실행 하는 컴퓨터만 포함 되어 있으며, 각 Windows 7 클라이언트 컴퓨터가 관련 진입점에 대 한 단일 전용 보안 그룹에 속하고 Windows 8 클라이언트는 포함 하지 않는지 확인 해야 합니다. Windows 7 보안 그룹에 속합니다.  
   
 ## <a name="active-directory-site"></a>Active Directory 사이트  
-**수신 된 오류**합니다. < 서버 _ 이름 > 서버에서 Active Directory 사이트를 사용 하 여 연결 되지 않습니다.  
+**오류가 수신**되었습니다. 서버 < 서버 없음 >이 Active Directory 사이트와 연결 되어 있지 않습니다.  
   
 **가능한 원인**  
   
@@ -128,19 +128,19 @@ DirectAccess에서 Active Directory 사이트를 확인할 수 없습니다. Act
   
 원격 액세스 서버에서 `nltest /dsgetsite` 명령을 실행하여 이 문제인지 확인합니다. 이 문제가 맞으면 명령에서 ERROR_NO_SITENAME이(가) 반환됩니다. 이 문제를 해결하려면 도메인 컨트롤러에서 내부 서버 IP 주소를 포함하는 서브넷이 있는지 그리고 이 서브넷이 Active Directory 사이트에서 정의되었는지 확인하십시오.  
   
-## <a name="SaveGPOSettings"></a>서버 GPO 설정 저장  
-**수신 된 오류**합니다. 원격 액세스 설정을 GPO < GPO_name >에 저장 하는 동안 오류가 발생 했습니다.  
+## <a name="SaveGPOSettings"></a>서버 GPO 설정 저장 중  
+**오류가 수신**되었습니다. 원격 액세스 설정을 GPO < GPO_name >에 저장 하는 동안 오류가 발생 했습니다.  
   
 **가능한 원인**  
   
-서버 GPO 변경 내용을 저장할 수 없습니다 연결 문제로 인해 또는 registry.pol 파일에 공유 위반이 있으면 예를 들어, 다른 사용자가 잠근 파일.  
+연결에 문제가 있거나 다른 사용자가 파일을 registry.pol 파일에 대 한 공유 위반이 발생 하 여 서버 GPO에 대 한 변경 내용을 저장할 수 없습니다.  
   
 **해결 방법**  
   
 원격 액세스 서버와 도메인 컨트롤러 간 연결이 설정되어 있는지 확인하십시오. 연결이 설정되어 있으면 도메인 컨트롤러에서 다른 사용자가 registry.pol 파일을 잠갔는지 그리고 필요한 경우 파일 잠금을 해제할 수 있도록 해당 사용자 세션이 종료되었는지 확인하십시오.  
   
 ## <a name="InternalServerError"></a>내부 오류가 발생 했습니다.  
-**수신 된 오류**합니다. 내부 오류가 발생했습니다.  
+**오류가 수신**되었습니다. 내부 오류가 발생했습니다.  
   
 **가능한 원인**  
   

@@ -1,8 +1,8 @@
 ---
 title: bitsadmin 캐시 및 setexpirationtime
-description: Windows 명령 항목에 대 한 **bitsadmin 캐시 및 setexpirationtime** -캐시 만료 시간을 설정 합니다.
+description: '**Bitsadmin cache 및 setexpirationtime** 에 대 한 Windows 명령 항목-캐시 만료 시간을 설정 합니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8e896df0a88c0cfc4eec07aba4807f184e7abe32
-ms.sourcegitcommit: b190fac4bfa5599751a60d3fc3b4c4a64dd9afd7
+ms.openlocfilehash: 386c6659e4410b41669ade39d8af97829d81a1cb
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66008933"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381925"
 ---
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -32,7 +32,7 @@ bitsadmin /Cache /SetExpirationtime secs
 |매개 변수|설명|
 |-------|--------|
 |초|캐시 만료 될 때까지 시간 (초) 수입니다.|
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 다음 예제에서는 캐시에 60 초 내에 만료 됩니다.
 ```
 C:\>bitsadmin /Cache / SetExpirationtime 60

@@ -1,19 +1,19 @@
 ---
 title: 폴더 대상 추가
 description: 이 항목에서는 폴더 대상(UNC 경로)을 추가하는 방법을 설명합니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: jgerend
 ms.manager: brianlic
 ms.technology: storage
 ms.topic: article
 author: jasongerend
 ms-date: 06/05/2017
-ms.openlocfilehash: 8cc61189076669d5c24244294b2f0eee2b783517
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b0685ea795d53b36fad92d54f817f67de57e3a82
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59831004"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71403187"
 ---
 # <a name="add-folder-targets"></a>폴더 대상 추가
 
@@ -41,6 +41,6 @@ DFS 관리를 사용하여 폴더 대상을 추가하려면 다음 절차를 따
 
 ## <a name="see-also"></a>참조
 
--   [DFS 네임 스페이스를 배포합니다.](deploying-dfs-namespaces.md)
--   [DFS 네임 스페이스에 대 한 관리 권한 위임](delegate-management-permissions-for-dfs-namespaces.md)
--   [DFS 복제를 사용 하 여 폴더 대상에 복제](replicate-folder-targets-using-dfs-replication.md)
+-   [DFS 네임스페이스 배포](deploying-dfs-namespaces.md)
+-   [DFS 네임스페이스에 대한 관리 권한 위임](delegate-management-permissions-for-dfs-namespaces.md)
+-   [DFS 복제를 사용 하 여 폴더 대상 복제](replicate-folder-targets-using-dfs-replication.md)

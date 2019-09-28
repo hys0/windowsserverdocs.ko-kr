@@ -1,7 +1,7 @@
 ---
 title: Hyper-v에서 검사점을 사용 하지 않도록 설정 하거나 사용
-description: 검사점 기능 설정 또는 해제 하는 것에 대 한 지침을 제공 합니다.
-ms.prod: windows-server-threshold
+description: 검사점 기능을 설정 하거나 해제 하는 방법에 대 한 지침을 제공 합니다.
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -11,12 +11,12 @@ ms.assetid: 92e1d0d0-f2c1-4ba2-8510-c8eb091cf5d6
 author: KBDAzure
 ms.author: kathydav
 ms.date: 10/04/2016
-ms.openlocfilehash: 082013429c4f516de86ee8ba6bb07ffcfca8b58c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 645af307b26b56fc3863a47d6bb05d224ccb5710
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59838754"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71364156"
 ---
 # <a name="enable-or-disable-checkpoints-in-hyper-v"></a>Hyper-v에서 검사점을 사용 하지 않도록 설정 하거나 사용
 
@@ -34,6 +34,6 @@ ms.locfileid: "59838754"
   
 ## <a name="see-also"></a>참조  
   
-[Hyper-v에서 표준 또는 프로덕션 검사점 간의 선택](Choose-between-standard-or-production-checkpoints-in-Hyper-V.md)  
+[Hyper-v에서 표준 또는 프로덕션 검사점 중에서 선택](Choose-between-standard-or-production-checkpoints-in-Hyper-V.md)  
 
 

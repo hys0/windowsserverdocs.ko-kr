@@ -1,7 +1,7 @@
 ---
 title: 2 단계-WSUS 구성
 description: Wsus (Windows Server Update Service) 항목-wsus 구성은 WSUS를 배포 하는 4 단계 프로세스의 2 단계입니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.technology: manage-wsus
 ms.topic: article
@@ -10,12 +10,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 660cb0412abdf1ecb1afcba53a4aeb79ac407e56
-ms.sourcegitcommit: a9625758fbfb066494fe62e0da5f9570ccb738a3
+ms.openlocfilehash: d1a78d2006a45bb2af8f87a91d7bb888964ddbcb
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68952464"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71361667"
 ---
 # <a name="step-2-configure-wsus"></a>2단계: WSUS 구성
 
@@ -25,11 +25,11 @@ WSUS 서버 역할을 서버에 설치한 후에는 이를 올바르게 구성�
 
 |태스크|설명|
 |----|--------|
-|[2.1. 네트워크 연결 구성](#21-configure-network-connections)|네트워크 구성 마법사를 사용하여 클러스터 네트워크를 구성합니다.|
-|[2.2. WSUS 구성 마법사를 사용 하 여 WSUS 구성](#22-configure-wsus-by-using-the-wsus-configuration-wizard)|WSUS 구성 마법사를 사용하여 기본 WSUS 구성 작업을 수행합니다.|
-|[2.3. WSUS 컴퓨터 그룹 구성](#23-configure-wsus-computer-groups)|WSUS 관리 콘솔에서 컴퓨터 그룹을 만들어 조직에서 업데이트를 관리합니다.|
-|[2.4. 클라이언트 업데이트 구성](#24-configure-client-updates)|클라이언트 컴퓨터에 자동 업데이트를 적용하는 방법과 시기를 지정합니다.|
-|[2.5. SSL(Secure Sockets Layer) 프로토콜을 사용 하 여 WSUS 보호](#25-secure-wsus-with-the-secure-sockets-layer-protocol)|WSUS(Windows Server Update Services)를 보호하기 위한 SSL(Secure Sockets Layer) 프로토콜을 구성합니다.|
+|[2.1. 네트워크 연결 구성 @ no__t-0|네트워크 구성 마법사를 사용하여 클러스터 네트워크를 구성합니다.|
+|[2.2. WSUS 구성 마법사를 사용 하 여 WSUS 구성 @ no__t-0|WSUS 구성 마법사를 사용하여 기본 WSUS 구성 작업을 수행합니다.|
+|[2.3. WSUS 컴퓨터 그룹 구성 @ no__t-0|WSUS 관리 콘솔에서 컴퓨터 그룹을 만들어 조직에서 업데이트를 관리합니다.|
+|[2.4. 클라이언트 업데이트 구성 @ no__t-0|클라이언트 컴퓨터에 자동 업데이트를 적용하는 방법과 시기를 지정합니다.|
+|[2.5. SSL(Secure Sockets Layer) 프로토콜을 사용 하 여 WSUS 보안 @ no__t-0|WSUS(Windows Server Update Services)를 보호하기 위한 SSL(Secure Sockets Layer) 프로토콜을 구성합니다.|
 
 ## <a name="21-configure-network-connections"></a>2.1. 네트워크 연결 구성
 구성 과정을 시작하기 전에 다음 질문에 대한 답변을 알고 있어야 합니다.
@@ -56,33 +56,33 @@ WSUS 서버 역할을 서버에 설치한 후에는 이를 올바르게 구성�
 ### <a name="211-connection-from-the-wsus-server-to-the-internet"></a>2.1.1. WSUS 서버에서 인터넷 연결
 WSUS와 인터넷 사이에 회사 방화벽이 있는 경우 WSUS가 업데이트를 가져올 수 있도록 방화벽을 구성해야 할 수 있습니다. Microsoft 업데이트에서 업데이트를 가져오기 위해 WSUS 서버는 HTTPS 프로토콜에 포트 443을 사용합니다. 이 유형의 트래픽 허용 하는 대다수 회사 방화벽, 있지만 회사 보안 정책 때문에 서버에서 인터넷 액세스를 제한 하는 일부 회사에서는 있습니다. 회사에서 액세스를 제한 하는 경우 WSUS에서 다음 Url 목록에 대 한 인터넷 액세스를 허용 하는 권한 부여를 받아야 합니다.
 
-- http\://windowsupdate.microsoft.com
+- http @ no__t-0//windowsupdate.log
 
-- \:windowsupdate.microsoft.com//\*
+- http @ no__t-0 @ no__t-1\*.windowsupdate.microsoft.com
 
-- \:windowsupdate.microsoft.com//\*
+- https @ no__t-0 @ no__t-1\*.windowsupdate.microsoft.com
 
-- \:update.microsoft.com//\*
+- http @ no__t-0 @ no__t-1\*.update.microsoft.com
 
-- \:update.microsoft.com//\*
+- https @ no__t-0 @ no__t-1\*.update.microsoft.com
 
-- \:windowsupdate.com//\*
+- http @ no__t-0 @ no__t-1\*.windowsupdate.com
 
-- http\://download.windowsupdate.com
+- http @ no__t-0//windowsupdate.log
 
-- https\://download.microsoft.com
+- https @ no__t-0//download
 
-- \:download.windowsupdate.com//\*
+- http @ no__t-0 @ no__t-1\*.download.windowsupdate.com
 
-- http\://wustat.windows.com
+- http @ no__t-0//wustat
 
-- http\://ntservicepack.microsoft.com
+- http @ no__t-0//ntservicepack
 
-- http\://go.microsoft.com
+- http @ no__t-0//go. microsoft .com
 
-- http\://dl.delivery.mp.microsoft.com
+- http @ no__t-0//dl. .mp.
 
-- https\://dl.delivery.mp.microsoft.com
+- https @ no__t-0//dl. .mp.
 
 > [!IMPORTANT]
 > 방화벽 구성으로 인해 업데이트를 가져오려면 WSUS을 실패 하는 시나리오에 대 한 참조 [문서 885819](https://support.microsoft.com/kb/885819) Microsoft 기술 자료에서 합니다.
@@ -301,10 +301,10 @@ WSUS 설치 프로그램은 WSUS 서버에 접속하는 각 클라이언트 컴�
 
 8.  **Windows 업데이트** 세부 정보 창에서 **인트라넷 Microsoft 업데이트 서비스 위치 지정**을 두 번 클릭합니다.
 
-9. **사용**을 클릭한 다음, **인트라넷 업데이트 서비스에서 업데이트를 검색하도록 설정** 및 **인트라넷 통계 서버 설정** 텍스트 상자에 동일한 WSUS 서버의 URL을 입력합니다. 예를 들어 두 *http://servername* 상자에를 입력 합니다. 여기서 *servername* 은 WSUS 서버의 이름입니다.
+9. **사용**을 클릭한 다음, **인트라넷 업데이트 서비스에서 업데이트를 검색하도록 설정** 및 **인트라넷 통계 서버 설정** 텍스트 상자에 동일한 WSUS 서버의 URL을 입력합니다. 예를 들어 두 상자 모두에 *http://servername* 을 입력 합니다. 여기서 *servername* 은 WSUS 서버의 이름입니다.
 
     > [!WARNING]
-    > WSUS 서버의 인트라넷 주소를 입력할 때는 사용할 포트를 지정해야 합니다. 기본적으로 WSUS는 HTTP용으로 포트 8530을, HTTPS용으로 포트 8531을 사용합니다. 예를 들어 HTTP를 사용 하는 경우를 입력 **http://servername:8530** 해야 합니다.
+    > WSUS 서버의 인트라넷 주소를 입력할 때는 사용할 포트를 지정해야 합니다. 기본적으로 WSUS는 HTTP용으로 포트 8530을, HTTPS용으로 포트 8531을 사용합니다. 예를 들어 HTTP를 사용 하는 경우 **http://servername:8530** 을 입력 해야 합니다.
 
 10. **확인**을 클릭합니다.
 
@@ -389,7 +389,7 @@ WSUS에는 SSL을 위해 두 개의 포트가 필요합니다. 한 포트는 HTT
 
 2.  **시작**으로 이동 하 여 **CMD**를 입력 하 고 **명령 프롬프트**를 마우스 오른쪽 단추로 클릭 한 다음 **관리자 권한으로 실행**을 클릭 합니다.
 
-3.  _% ProgramFiles%_ **\\Update\\Services Tools\\**  폴더로 이동 합니다.
+3.  _% ProgramFiles%_ **\\update Services @ No__t-3tools @ no__t-4** 폴더로 이동 합니다.
 
 4.  명령 프롬프트 창에서 다음 명령을 입력 합니다.
 

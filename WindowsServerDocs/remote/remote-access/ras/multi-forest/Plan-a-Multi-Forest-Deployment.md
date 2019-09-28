@@ -1,9 +1,9 @@
 ---
 title: 다중 포리스트 배포 계획
-description: 이 항목은 Windows Server 2016에서 다중 포리스트 환경에서 원격 액세스 배포 가이드의 일부입니다.
+description: 이 항목은 Windows Server 2016의 다중 포리스트 환경에 원격 액세스 배포 가이드의 일부입니다.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-ras
@@ -12,16 +12,16 @@ ms.topic: article
 ms.assetid: 8acc260f-d6d1-4d32-9e3a-1fd0b2a71586
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: a2f14fdb2fd3ab6f0a89c8d8c1a8853041dcba94
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 2a0f04a3ff7797d18f7647416dc99319860c7030
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67281008"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71404518"
 ---
 # <a name="plan-a-multi-forest-deployment"></a>다중 포리스트 배포 계획
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 이 항목에서는 다중 포리스트 배포에서 원격 액세스를 구성할 때 필요한 계획 단계에 대해 설명합니다.  
   
@@ -42,15 +42,15 @@ ms.locfileid: "67281008"
 새 포리스트에서 DirectAccess 클라이언트 컴퓨터에 대해 하나 이상의 보안 그룹을 구성해야 합니다. 단일 보안 그룹은 여러 포리스트의 계정을 포함할 수 없기 때문입니다.  
   
 > [!NOTE]  
-> -   DirectAccess를 사용 하려면 하나 이상의 Windows 10&reg; 또는 Windows&reg; 각 포리스트에 대 한 8 클라이언트 보안 그룹입니다. 그러나 다음 Windows 10 또는 Windows 10 또는 Windows 8 클라이언트를 포함 하는 각 도메인에 대 한 Windows 8 클라이언트 보안 그룹 하나는 것이 좋습니다.  
-> -   하나 이상의 Windows 7 DirectAccess를 사용 하려면 멀티 사이트를 사용 하는 경우&reg; 는 Windows 7 클라이언트 컴퓨터가 지원 되는 각 DirectAccess 진입점의 포리스트마다 클라이언트 보안 그룹입니다. 그러나 다음 Windows 7 클라이언트를 포함 하는 각 도메인에 대 한 각 진입점에 대 한 별도 Windows 7 클라이언트 보안 그룹 포함 하는 것이 좋습니다.  
+> -   DirectAccess에는 각 포리스트에 대해 하나 이상의 Windows 10 @ no__t-0 또는 Windows @ no__t-1 8 클라이언트 보안 그룹이 필요 합니다. 그러나 Windows 10 또는 Windows 8 클라이언트를 포함 하는 각 도메인에 대해 Windows 10 또는 Windows 8 클라이언트 보안 그룹을 하나 포함 하는 것이 좋습니다.  
+> -   멀티 사이트가 사용 하도록 설정 된 경우 DirectAccess를 사용 하려면 Windows 7 클라이언트 컴퓨터가 지원 되는 각 DirectAccess 진입점에 대해 포리스트 당 Windows 7 @ no__t-0 클라이언트 보안 그룹이 하나 이상 있어야 합니다. 그러나 Windows 7 클라이언트를 포함 하는 각 도메인의 진입점 마다 별도의 Windows 7 클라이언트 보안 그룹을 지정 하는 것이 좋습니다.  
 >   
 > DirectAccess가 추가 도메인의 클라이언트 컴퓨터에 적용되도록 하려면 해당 도메인에서 클라이언트 GPO가 만들어져야 합니다. 보안 그룹을 추가하면 새 도메인에 해당하는 새 클라이언트 GPO가 작성됩니다. 따라서 새 도메인의 새 보안 그룹을 DirectAccess 클라이언트 보안 그룹 목록에 추가하면 새 도메인에서 클라이언트 GPO가 자동으로 만들어지고 이 클라이언트 GPO를 통해 새 도메인의 클라이언트 컴퓨터가 DirectAccess 보안 설정을 가져오게 됩니다.  
 >   
 > 이미 DirectAccess 클라이언트 보안 그룹으로 구성된 기존의 보안 그룹에 새 도메인의 클라이언트를 추가할 경우에는 DirectAccess에 의해 새 도메인에서 클라이언트 GPO가 자동으로 만들어지지 않습니다. 이 경우 새 도메인의 클라이언트는 DirectAccess 설정을 수신하지 않으므로 DirectAccess를 사용하여 연결할 수 없습니다.  
   
 ## <a name="plan-certification-authorities"></a>인증 기관 계획  
-OTP(일회용 암호) 인증을 사용하도록 DirectAccess 배포가 구성된 경우 각 포리스트에는 동일한 서명 인증 템플릿이 포함되지만 Oid 값은 다릅니다. 이 때문에 포리스트를 단일 구성 단위로 구성할 수 없습니다. 이 문제를 해결 하 고 다중 포리스트 환경의 OTP를 구성, 참조 항목의 "다중 포리스트 배포에서 OTP 구성" 섹션 [다중 포리스트 배포 구성](Configure-a-Multi-Forest-Deployment.md)합니다.  
+OTP(일회용 암호) 인증을 사용하도록 DirectAccess 배포가 구성된 경우 각 포리스트에는 동일한 서명 인증 템플릿이 포함되지만 Oid 값은 다릅니다. 이 때문에 포리스트를 단일 구성 단위로 구성할 수 없습니다. 이 문제를 해결 하 고 다중 포리스트 환경에서 OTP를 구성 하려면 [다중 포리스트 배포 구성](Configure-a-Multi-Forest-Deployment.md)항목의 "다중 포리스트 배포에서 otp 구성" 섹션을 참조 하세요.  
   
 IPsec 컴퓨터 인증서 인증을 사용할 경우에는 모든 클라이언트 컴퓨터 및 서버 컴퓨터가 속한 포리스트에 관계없이 이러한 컴퓨터에 동일한 루트 또는 중간 인증 기관에서 발급한 컴퓨터 인증서가 있어야 합니다.  
   

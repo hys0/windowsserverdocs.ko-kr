@@ -1,8 +1,8 @@
 ---
 title: select disk
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2da74afda7c15145327b4d64f5c0e97e4f9b10cc
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 6d9078242264b01ee4bc24dc590df24b1e53e548
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66441438"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71371085"
 ---
 # <a name="select-disk"></a>select disk
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-지정된 된 된 디스크를 선택 하 고 포커스를 이동 합니다.  
+지정 된 디스크를 선택 하 고 포커스를 이동 합니다.  
   
   
   
@@ -35,18 +35,18 @@ select disk={ <n> | <disk path> | system | next }
 ```  
   
 > [!NOTE]  
-> 합니다 **<disk path>** , **system**, 및 **다음** 매개 변수는 Windows 7 및 Windows Server 2008 R2에서 사용할 수 있는 전용입니다.  
+> **@No__t-1**, **시스템**및 **다음** 매개 변수는 windows 7 및 windows Server 2008 r 2 에서만 사용할 수 있습니다.  
   
 ## <a name="parameters"></a>매개 변수  
   
 |  매개 변수  |                                                                                                                                                                                                            설명                                                                                                                                                                                                            |
 |-------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     <n>     | 포커스를 받을 디스크의 번호를 지정 합니다. 사용 하 여 컴퓨터에 모든 디스크에 대 한 숫자를 볼 수는 **목록 디스크** DiskPart 명령을 합니다. **참고:** 여러 디스크를 사용 하 여 시스템을 구성할 때 사용 하지 마세요 **디스크 선택\=0** 시스템 디스크를 지정 합니다. 컴퓨터를 다시 부팅 하 고 동일한 디스크 구성으로 서로 다른 컴퓨터에서 다른 디스크 번호를 가질 수 있습니다 디스크 번호를 다시 할당할 수 있습니다. |
-| <disk path> |                                                                                                                 예를 들어, 포커스를 받을 디스크의 위치를 지정 **PCIROOT\(0\)\#PCI\(0F02\)\#atA\(C00T00L00\)** . 디스크의 위치 경로 보려면 선택 하 고 입력 한 다음 **세부 디스크**합니다.                                                                                                                  |
-|   시스템    |                                 BIOS 컴퓨터에 포커스를 받을 해당 디스크 0을 지정 합니다. EFI 컴퓨터의 경우 EFI 시스템 파티션을 포함 하는 디스크에 \(ESP\) 사용 되는 현재 부팅 포커스를 받을 있습니다. EFI 컴퓨터에 없는 ESP 경우 둘 이상의 ESP 없거나 컴퓨터가 Windows 사전 설치 환경에서 부팅 되는 경우 명령이 실패 합니다 \(Windows PE\)합니다.                                  |
+|     <n>     | 포커스를 받을 디스크의 번호를 지정 합니다. 사용 하 여 컴퓨터에 모든 디스크에 대 한 숫자를 볼 수는 **목록 디스크** DiskPart 명령을 합니다. **참고:** 여러 디스크를 사용 하 여 시스템을 구성 하는 경우 **디스크 선택 @ no__t-10** 을 사용 하 여 시스템 디스크를 지정 하지 마십시오. 컴퓨터를 다시 부팅 하 고 동일한 디스크 구성으로 서로 다른 컴퓨터에서 다른 디스크 번호를 가질 수 있습니다 디스크 번호를 다시 할당할 수 있습니다. |
+| <disk path> |                                                                                                                 포커스를 받을 디스크의 위치를 지정 합니다 (예: **PCIROOT @ no__t-10 @ no__t @ no__t-3PCI @ no__t-40F02 @ no__t-5 @ no__t-6atA @ no__t-7C00T00L00 @ no__t-8)** . 디스크의 위치 경로 보려면 선택 하 고 입력 한 다음 **세부 디스크**합니다.                                                                                                                  |
+|   시스템    |                                 BIOS 컴퓨터에 포커스를 받을 해당 디스크 0을 지정 합니다. EFI 컴퓨터의 경우 EFI 시스템 파티션을 포함 하는 디스크에 \(ESP\) 사용 되는 현재 부팅 포커스를 받을 있습니다. EFI 컴퓨터에서 ESP가 없거나, ESP가 두 개 이상 있거나, Windows 사전 설치 환경 \(Windows PE @ no__t-1에서 부팅 되는 경우 명령이 실패 합니다.                                  |
 |    다음     |                                                                                                                                     디스크를 선택 하면이 명령은 디스크 목록에 있는 모든 디스크를 반복 합니다. 이 명령을 실행 하는 경우 다음 디스크 목록에 포커스를 받게 됩니다.                                                                                                                                      |
   
-## <a name="BKMK_examples"></a>예제  
+## <a name="BKMK_examples"></a>예와  
 1 디스크에 포커스를 이동, 다음을 입력 합니다.  
   
 ```  

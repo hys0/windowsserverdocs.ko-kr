@@ -2,7 +2,7 @@
 title: 소프트웨어 인벤토리 로깅 관리
 description: 소프트웨어 인벤토리 로깅을 관리 하는 방법을 설명 합니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: manage-software-inventory-logging
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ author: brentfor
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 686bb61426e49f00597c423bcf4f52d949a358ab
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: bd8a26d158f53121074881ac8ff204287f9a19ad
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70866381"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71382970"
 ---
 # <a name="manage-software-inventory-logging"></a>소프트웨어 인벤토리 로깅 관리
 
@@ -221,7 +221,7 @@ SystemManufacturer        : Microsoft Corporation
 > 어떤 이유로든 설치 복구 또는 운영 체제의 업그레이드가 필요한 경우 로컬에 저장된 로그 파일이 모두 손실됩니다.  이 데이터가 운영에 중요한 경우 새 운영 체제를 설치하기 전에 백업하는 것이 좋습니다. 복구하거나 업그레이드한 후 동일한 위치에 복원합니다.  
   
 > [!NOTE]  
-> SIL에 의해 로컬로 기록 되는 데이터의 보존 기간을 관리 하는 이유가 중요할 경우에는 다음 레지스트리 값을 변경 하 여 구성할 수\\있습니다. \HKEY_LOCAL_MACHINE SOFTWARE\Microsoft\Windows\SoftwareInventoryLogging. 기본값은 30 일 동안 ' 30 '입니다.  
+> SIL에 의해 로컬로 기록 되는 데이터의 보존 기간을 관리 하는 이유가 중요할 경우에는 다음 레지스트리 값을 변경 하 여 구성할 수 있습니다. \HKEY_LOCAL_MACHINE @ no__t-0SOFTWARE\Microsoft\Windows\SoftwareInventoryLogging. 기본값은 30 일 동안 ' 30 '입니다.  
   
 ## <a name="BKMK_Step6"></a>소프트웨어 인벤토리 로깅에 의해 기록 및 게시 된 데이터 읽기  
 SIL에 의해 기록 되었지만 로컬에 저장 되거나 (대상 URI로의 전달이 실패 한 경우) 대상 집계 서버로 성공적으로 전달 된 데이터는 이진 파일 (각 날짜의 데이터)에 저장 됩니다. PowerShell에서 이 데이터를 표시하려면 [Import-BinaryMiLog](https://technet.microsoft.com/library/dn262592.aspx) cmdlet을 사용합니다.  
@@ -244,7 +244,7 @@ Windows Server에 로컬로 저장된 데이터(기능이 시작되었지만 어
 ## <a name="BKMK_Step10"></a>탑재 된 가상 하드 디스크에서 소프트웨어 인벤토리 로깅 사용 및 구성  
 소프트웨어 인벤토리 로깅은 오프라인 가상 컴퓨터에서의 구성 및 사용도 지원합니다. 이에 대 한 실용적인 용도는 데이터 센터 전체 배포를 위한 ' 골드 이미지 ' 설치 뿐만 아니라 온-프레미스에서 클라우드 배포로의 최종 사용자 이미지 구성에 사용 하기 위한 것입니다.  
   
-이러한 용도를 지원하기 위해 소프트웨어 인벤토리 로깅에는 구성 가능한 각 옵션과 관련된 레지스트리 항목이 있습니다.  이러한 레지스트리 값은 \HKEY_LOCAL_MACHINE\\SOFTWARE\Microsoft\Windows\SoftwareInventoryLogging.에서 찾을 수 있습니다.  
+이러한 용도를 지원하기 위해 소프트웨어 인벤토리 로깅에는 구성 가능한 각 옵션과 관련된 레지스트리 항목이 있습니다.  이러한 레지스트리 값은 \HKEY_LOCAL_MACHINE @ no__t-0SOFTWARE\Microsoft\Windows\SoftwareInventoryLogging.에서 찾을 수 있습니다.  
   
 |||||  
 |-|-|-|-|  

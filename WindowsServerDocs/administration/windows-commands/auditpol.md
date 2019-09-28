@@ -1,8 +1,8 @@
 ---
 title: auditpol
-description: Windows 명령 항목에 대 한 **auditpol** -에 대 한 정보를 표시 하 고 감사 정책을 조작 하는 기능을 수행 합니다.
+description: Windows 명령 항목 ( **auditpol** )-에 대 한 정보를 표시 하 고 감사 정책을 조작 하는 기능을 수행 합니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d7e8364be977e868ac161704e67c37ec5c400e49
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 5e249a9e2a07505f052b774208c514b4d16879b8
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59849224"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71382383"
 ---
 # <a name="auditpol"></a>auditpol
 
@@ -45,7 +45,7 @@ Auditpol command [<sub-command><options>]
 |/restore|감사 정책을 auditpol /backup을 사용 하 여 이전에 만든 파일에서 복원 합니다.</br>참조 [Auditpol 복원](auditpol-restore.md) 구문 및 옵션에 대 한 합니다.|
 |/ 지우기|감사 정책을 지웁니다.</br>참조 [Auditpol 지우기](auditpol-clear.md) 구문 및 옵션에 대 한 합니다.|
 |/remove|사용자 단위 감사 정책 설정을 모두 제거 하 고 모든 시스템 감사 정책 설정을 사용 하지 않도록 설정 합니다.</br>참조 [Auditpol 제거](auditpol-remove.md) 구문 및 옵션에 대 한 합니다.|
-|/resourceSACL|전역 리소스 시스템 액세스 제어 목록 (Sacl)를 구성합니다.</br>참고: 7 및 Windows Server 2008 R2 Windows에만 적용 됩니다.</br>참조 [Auditpol resourceSACL](auditpol-resourcesacl.md)합니다.|
+|/resourceSACL|전역 리소스 시스템 액세스 제어 목록 (Sacl)를 구성합니다.</br>참고: Windows 7 및 Windows Server 2008 r 2에만 적용 됩니다.</br>참조 [Auditpol resourceSACL](auditpol-resourcesacl.md)합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
 ## <a name="remarks"></a>설명

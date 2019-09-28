@@ -1,8 +1,8 @@
 ---
 title: bootcfg timeout
-description: Windows 명령 항목에 대 한 **bootcfg 제한 시간** -운영 체제 제한 시간 값을 변경 합니다.
+description: '**Bootcfg timeout** 에 대 한 Windows 명령 항목-운영 체제의 시간 제한 값을 변경 합니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1fc33d2d20d6d2532c5ed1f33e27a768935d1e85
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 94bc2de43dd179117c7a44747961213d12741a09
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66434644"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71379872"
 ---
 # <a name="bootcfg-timeout"></a>bootcfg timeout
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-운영 체제 제한 시간 값을 변경합니다.
+운영 체제의 시간 제한 값을 변경 합니다.
 
 ## <a name="syntax"></a>구문
 ```
@@ -40,7 +40,7 @@ bootcfg /timeout <timeOutValue> [/s <computer> [/u <Domain\User>/p <Password>]]
 |      /p <Password>      |                                                                                                                                            지정 된 <Password> 에 지정 된 사용자 계정의 **/u** 매개 변수입니다.                                                                                                                                             |
 |           /?            |                                                                                                                                                                      명령 프롬프트에 도움말을 표시합니다.                                                                                                                                                                      |
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 다음 예제에서는 사용 하는 방법을 보여는 **bootcfg /timeout** 명령:
 ```
 bootcfg /timeout 30

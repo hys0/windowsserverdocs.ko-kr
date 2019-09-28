@@ -2,7 +2,7 @@
 title: Always On VPN 고급 기능
 description: 이 배포에 제공 된 배포 시나리오 외에도 다른 고급 VPN 기능을 추가 하 여 VPN 연결의 보안 및 가용성을 향상 시킬 수 있습니다.
 ms.assetid: 51a1ee61-3ffe-4f65-b8de-ff21903e1e74
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.date: 07/24/19
@@ -10,12 +10,12 @@ ms.author: pashort, v-tea
 author: shortpatti
 ms.localizationpriority: medium
 ms.reviewer: deverette
-ms.openlocfilehash: e09a23b6f1c14c4c14b00fd19d84d0abb71d0163
-ms.sourcegitcommit: e40fce7b8b4bc0bef278e676435306f14078cf00
+ms.openlocfilehash: aee2f14d0d99fd453fa6fb1f3147a515ca57abb1
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68787212"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71366907"
 ---
 # <a name="advanced-features-of-always-on-vpn"></a>Always On VPN의 고급 기능
 
@@ -60,14 +60,14 @@ ms.locfileid: "68787212"
   
 업데이트를 설치한 후 RRAS 서버는 인증을 위해 IKEv2 및 컴퓨터 인증서를 사용 하는 Vpn (예: 장치 터널 항상 사용 Vpn)에 대해 인증서 해지를 적용할 수 있습니다. 즉, 이러한 Vpn의 경우 RRAS 서버가 해지 된 인증서를 사용 하려고 하는 클라이언트에 대 한 VPN 연결을 거부할 수 있습니다.
 
-**가용성**
+**Availability**
 
 다음 표에서는 각 버전의 Windows에 대 한 수정 프로그램이 포함 된 릴리스를 나열 합니다.
 
 |운영 체제 버전 |릴리스  |
 |---------|---------|
 |Windows Server, 버전 1903  |[KB4501375](https://support.microsoft.com/help/4501375/windows-10-update-kb4501375) |
-|Windows Server 2019<br />Windows Server, 버전 1809  |[KB4505658](https://support.microsoft.com/help/4505658/windows-10-update-kb4505658)  |
+|Windows Server 2019<br />Windows Server, 버전 1809  |[KB4505658](https://support.microsoft.com/help/4505658/windows-10-update-kb4505658)  |
 |Windows Server, 버전 1803  |[KB4507466](https://support.microsoft.com/help/4507466/windows-10-update-kb4507466)  |
 |Windows Server, 버전 1709  |[KB4507465](https://support.microsoft.com/help/4507465/windows-10-update-kb4507465)  |
 |Windows Server 2016, 버전 1607  |[KB4503294](https://support.microsoft.com/help/4503294/windows-10-update-kb4503294) |

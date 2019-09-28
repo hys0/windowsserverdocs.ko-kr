@@ -1,8 +1,8 @@
 ---
 title: date
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e774f7bfabb9b574255691dd97d2cfff36f034e7
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d7328b2b5d3c78fdfd741918d76e26195f0af4a1
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59877954"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71378820"
 ---
 # <a name="date"></a>date
 
@@ -38,7 +38,7 @@ date [/t | <Month-Day-Year>]
 
 |매개 변수|설명|
 |---------|-----------|
-|\<Month-Day-Year>|위치, 날짜를 설정 *월* 은 월 (하나 또는 두 개의 자리) *일* 일인지 (하나 또는 두 개의 자리) 및 *년* 은 연도 (2 대 또는 4 자리).|
+|@no__t-월-일-연도 >|위치, 날짜를 설정 *월* 은 월 (하나 또는 두 개의 자리) *일* 일인지 (하나 또는 두 개의 자리) 및 *년* 은 연도 (2 대 또는 4 자리).|
 |/t|입력 하 라는 새로운 날짜 없이 현재 날짜를 표시 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
@@ -50,7 +50,7 @@ date [/t | <Month-Day-Year>]
 -   유효한 *일* 값은 1부터 31입니다.
 -   유효한 *년* 값은 00부터 99 또는 1980에서 2099입니다. 두 자리 숫자를 사용 하면 80부터 99 까지의 값 1980 년에서 1999 년에 해당 합니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 명령 확장을 사용 하는 경우 현재 시스템 날짜를 표시 하려면 입력 합니다.
 ```

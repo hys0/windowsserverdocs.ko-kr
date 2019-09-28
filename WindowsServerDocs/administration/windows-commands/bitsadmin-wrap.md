@@ -1,8 +1,8 @@
 ---
 title: bitsadmin wrap
-description: Windows 명령 항목에 대 한 **bitsadmin 래핑** -출력 다음 줄을 명령 창 맨 오른쪽 가장자리로 벗어난 텍스트의 줄을 래핑합니다.
+description: '**Bitsadmin 줄 바꿈** 에 대 한 Windows 명령 항목-명령 창의 가장 오른쪽 가장자리를 벗어나 확장 되는 출력 텍스트 줄을 다음 줄로 줄 바꿈 합니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4834a8a17c72394b6ee8f051ec76919af9880124
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 5609fb6f38716795a545e0c7fe3939f893a8c8d5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59881674"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71380682"
 ---
 # <a name="bitsadmin-wrap"></a>bitsadmin wrap
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-명령 창에 맞게 출력을 래핑.
+출력을 명령 창에 맞게 래핑합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -40,11 +40,11 @@ bitsadmin /Wrap Job
 
 ## <a name="remarks"></a>설명
 
-전에 기타 스위치를 지정 합니다. 기본적으로 모든 스위치를 제외 합니다 [bitsadmin 모니터](bitsadmin-monitor.md) 전환, 출력을 래핑합니다.
+다른 스위치 앞에를 지정 합니다. 기본적으로 [bitsadmin 모니터](bitsadmin-monitor.md) 스위치를 제외한 모든 스위치는 출력을 래핑합니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
-다음 예제에서는 명명 된 작업에 대 한 정보를 검색 합니다. *myDownloadJob* 출력을 래핑합니다.
+다음 예제에서는 이름이 *Mydownloadjob* 인 작업에 대 한 정보를 검색 하 고 출력을 래핑합니다.
 
 ```
 C:\>bitsadmin /Wrap /Info myDownloadJob /verbose

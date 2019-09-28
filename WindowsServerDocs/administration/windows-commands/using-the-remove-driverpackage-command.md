@@ -1,8 +1,8 @@
 ---
 title: 제거 DriverPackage 명령을 사용 하 여
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 217ff23b8724464670520d0b2d5b196df5a4af47
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 923a86805134c4162b36cdade98c2122b3cb7ccd
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66440306"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71362812"
 ---
 # <a name="using-the-remove-driverpackage-command"></a>제거 DriverPackage 명령을 사용 하 여
 
@@ -27,7 +27,7 @@ ms.locfileid: "66440306"
 > 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-서버에서 드라이버 패키지를 제거합니다.
+서버에서 드라이버 패키지를 제거 합니다.
 ## <a name="syntax"></a>구문
 ```
 wdsutil /remove-DriverPackage [/Server:<Server name>] {/DriverPackage:<Package Name> | /PackageId:<ID>}
@@ -40,7 +40,7 @@ wdsutil /remove-DriverPackage [/Server:<Server name>] {/DriverPackage:<Package N
 | [/ DriverPackage:<Name>] |                                                        제거할 드라이버 패키지의 이름을 지정 합니다.                                                         |
 |    [/ 패키지 Id:<ID>]    | 제거할 드라이버 패키지의 Windows 배포 서비스 ID를 지정 합니다. 드라이버 패키지 이름으로 고유 하 게 식별할 수 없는 경우에 ID를 지정 해야 합니다. |
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 이미지에 대 한 정보를 보려면 다음 중 하나를 입력 합니다.
 ```
 wdsutil /remove-DriverPackage /PackageId:{4D36E972-E325-11CE-Bfc1-08002BE10318}

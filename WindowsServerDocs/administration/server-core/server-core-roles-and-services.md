@@ -1,18 +1,18 @@
 ---
 title: Windows Server-Server Core에 포함 된 역할, 역할 서비스 및 기능
 description: Windows Server의 Server Core 설치 옵션에 포함 된 역할 및 기능은 무엇입니까?
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: lizap
 ms.localizationpriority: medium
 ms.date: 02/23/2018
-ms.openlocfilehash: 2f6aed56083bd606ae2ec06b72152ef4a0461420
-ms.sourcegitcommit: 216d97ad843d59f12bf0b563b4192b75f66c7742
+ms.openlocfilehash: 7b5d5d5ad38b1b03e409c26485860f43799f1322
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476503"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71383335"
 ---
 # <a name="roles-role-services-and-features-included-in-windows-server---server-core"></a>Windows Server-Server Core에 포함 된 역할, 역할 서비스 및 기능
 
@@ -27,7 +27,7 @@ ms.locfileid: "68476503"
 ## <a name="roles-included-in-server-core"></a>Server Core에 포함 된 역할
 Server Core 설치 옵션에는 다음과 같은 서버 역할이 포함 되어 있습니다.
 
-| Role                                            | 이름                           | 기본적으로 설치 되어 있습니까? |
+| 역할                                            | 이름                           | 기본적으로 설치 되어 있습니까? |
 |-------------------------------------------------|--------------------------------|-----------------------|
 | Active Directory 인증서 서비스           | 광고-인증서                 | N                     |
 | Active Directory 도메인 서비스                | AD-도메인 서비스             | N                     |
@@ -51,7 +51,7 @@ Server Core 설치 옵션에는 다음과 같은 서버 역할이 포함 되어 
 ## <a name="role-services-included-in-server-core"></a>Server Core에 포함 된 역할 서비스
 Server Core 설치 옵션에는 다음과 같은 역할 서비스가 포함 되어 있습니다.
 
-| Role                                  | 역할 서비스                                                   | 이름                    | 기본적으로 설치 되어 있습니까? |
+| 역할                                  | 역할 서비스                                                   | 이름                    | 기본적으로 설치 되어 있습니까? |
 |---------------------------------------|----------------------------------------------------------------|-------------------------|-----------------------|
 | Active Directory 인증서 서비스 | 인증 기관                                        | ADCS     | N                     |
 |                                       | 인증서 등록 정책 웹 서비스                      | ADCS-Registry.pol     | N                     |
@@ -146,7 +146,7 @@ Server Core 설치 옵션에는 다음과 같은 기능이 포함 되어 있습�
 | HTTP 활성화                                        | NET-HTTP-활성화                | N                     |
 | 비 HTTP 활성화                                    | NET-비-의 활성                 | N                     |
 | .NET Framework 4.6 기능                            | .NET Framework-45-기능          | Y                     |
-| .NET Framework 4.6                                     | NET.PIPE-45-Core              | Y                     |
+| .NET framework 4.6                                     | NET.PIPE-45-Core              | Y                     |
 | ASP.NET 4.6                                            | .NET-프레임 워크-45-ASPNET            | N                     |
 | WCF Services                                           | Services45                 | Y                     |
 | HTTP 활성화                                        | NET-Activation45          | N                     |

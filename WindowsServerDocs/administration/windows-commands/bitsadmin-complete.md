@@ -1,8 +1,8 @@
 ---
 title: bitsadmin complete
-description: Windows 명령 항목에 대 한 **bitsadmin 완료** -작업을 완료 합니다. 이 스위치를 사용 하기 전에 다운로드 한 파일을 사용할 수 없는 경우
+description: '**Bitsadmin 완료** 에 대 한 Windows 명령 항목-작업을 완료 합니다. 이 스위치를 사용 하기 전에 다운로드 한 파일을 사용할 수 없는 경우'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 561585da370f7e69aa3b83b3ddd7579bfc658a21
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d5a1dc5dbbf2d5b3207b5423f338e0caf4412599
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59817324"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381821"
 ---
 # <a name="bitsadmin-complete"></a>bitsadmin complete
 
@@ -36,7 +36,7 @@ bitsadmin /complete <Job>
 |---------|-----------|
 |작업|작업의 표시 이름 또는 GUID|
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 작업의 상태를 전송 하는 경우 BITS가 작업의 모든 파일을 전송 했습니다. 그러나 파일이 사용할 수 없는 사용 하기 전에 **완료 /** 전환 합니다. 여러 작업을 사용 하는 경우 *myDownloadJob* 해당 이름으로 바꿔야 *myDownloadJob* 작업을 고유 하 게 식별 하는 작업의 GUID를 가진 합니다.
 ```

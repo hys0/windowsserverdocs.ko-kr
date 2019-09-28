@@ -1,8 +1,8 @@
 ---
 title: 오프 라인 디스크
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 617371583a3f0cb3d0cb739845208e4216573d9c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f28d473cdb557d6adb3aaf235bebdfbc4e78b24a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59834624"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71372605"
 ---
 # <a name="offline-disk"></a>오프 라인 디스크
 
@@ -39,7 +39,7 @@ offline disk [noerr]
 
 |매개 변수|설명|
 |---------|-----------|
-|noerr|만 스크립팅 합니다. 오류가 발생 하면 오류가 발생 하지 않은 경우에 따라 명령을 처리 하도록 DiskPart 계속 합니다. 이 매개 변수를 크기는 오류 코드를 수행 합니다.|
+|noerr|스크립팅 전용입니다. 오류가 발생 하면 오류가 발생 하지 않은 경우에 따라 명령을 처리 하도록 DiskPart 계속 합니다. 이 매개 변수를 크기는 오류 코드를 수행 합니다.|
 
 ## <a name="remarks"></a>설명
 
@@ -47,7 +47,7 @@ offline disk [noerr]
 -   디스크의 상태가으로 변경 된 동적 디스크의 디스크 그룹을 오프 라인 상태인 경우 **누락** 그룹은 오프 라인 상태인 디스크를 보여 줍니다. 손실 된 디스크는 잘못 된 그룹으로 이동 됩니다. 동적 디스크 그룹의 마지막 디스크 이면 디스크의 상태가으로 변경 됩니다 **오프 라인**, 빈 그룹을 제거 됩니다.
 -   디스크를 선택 해야는 **오프 라인 디스크** 명령을 성공적으로 합니다. 사용 된 **디스크 선택** 디스크를 선택 하 고 포커스를 이동 하는 명령입니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 포커스가 있는 디스크를 오프 라인으로 다음을 입력 합니다.
 ```

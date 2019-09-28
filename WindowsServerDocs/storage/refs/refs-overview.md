@@ -1,18 +1,18 @@
 ---
 title: ReFS(복원 파일 시스템) 개요
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: gawatu
 ms.manager: mchad
 ms.technology: storage-file-systems
 ms.topic: article
 author: gawatu
 ms.date: 06/17/2019
-ms.openlocfilehash: 133358e959e24abc506be13259d750753d3727f7
-ms.sourcegitcommit: 6fec3ca19ddaecbc936320d98cca0736dd8505d1
+ms.openlocfilehash: 91fdd5aa696c170cacc8903a65e996beb71c4b8f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67196178"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71403017"
 ---
 # <a name="resilient-file-system-refs-overview"></a>ReFS(복원 파일 시스템) 개요
 
@@ -35,7 +35,7 @@ ReFS는 온라인 상태에서 손상을 정확하게 탐지하여 수정함으�
 
 ReFS는 향상된 복원력을 제공할 뿐만 아니라 성능에 민감한 가상화된 워크로드를 위한 새 기능을 도입했습니다. 실시간 계층 최적화, 블록 복제 및 스파스 VDL은 진화하는 ReFS 기능의 좋은 예로써, 동적이고 다양한 워크로드를 지원하도록 설계되었습니다.
 
-- **[패리티 미러 가속](./mirror-accelerated-parity.md)**  -미러 가속 패리티 고성능와도 데이터에 대 한 효율적인 저장소 용량을 제공 합니다. 
+- **[미러 가속](./mirror-accelerated-parity.md)** 패리티-미러 가속 패리티는 데이터에 대 한 고성능 및 용량 효율적인 저장소를 모두 제공 합니다. 
 
     - 고성능 및 용량 효율적 저장소를 제공하기 위해 ReFS는 볼륨을 계층이라고 하는 2개의 논리 저장소 그룹으로 나눕니다. 이러한 계층은 자체 드라이브와 복원 유형을 지원하므로 성능 또는 용량을 위해 각 계층을 최적화할 수 있습니다. 일부 구성 예제는 다음과 같습니다. 
     
@@ -47,10 +47,10 @@ ReFS는 향상된 복원력을 제공할 뿐만 아니라 성능에 민감한 �
             
     - 이러한 계층이 구성되면 ReFS는 이러한 계층을 사용하여 핫 데이터에는 빠른 저장소를, 콜드 데이터에는 용량 효율적인 저장소를 제공합니다.
         - 모든 쓰기 작업이 성능 계층에서 수행되며, 성능 계층에 남아 있는 큰 데이터 청크는 실시간으로 용량 계층으로 효율적으로 이동됩니다.
-        - 하이브리드 배포 (혼합 flash 및 HDD 드라이브)를 사용 하는 경우 [저장소 공간 다이렉트 캐시](../storage-spaces/understand-the-cache.md) 조각화 특성 가상화 데이터의 영향을 줄일 워크 로드, 읽기를 가속화 하는 데 도움이 됩니다. 그렇지 않으면 모든 플래시 배포를 사용 하는 경우 읽기 에서도 발생할 성능 계층.
+        - 하이브리드 배포 (플래시 및 HDD 드라이브 혼합)를 사용 하는 경우 [스토리지 공간 다이렉트 캐시](../storage-spaces/understand-the-cache.md) 를 사용 하 여 읽기를 가속화 하 고 가상화 된 작업의 데이터 조각화 특성의 영향을 줄일 수 있습니다. 그렇지 않고 모든 플래시 배포를 사용 하는 경우 성능 계층 에서도 읽기가 수행 됩니다.
 
 > [!NOTE]
-> 서버 배포의 경우 미러-가속 패리티는 [저장소 공간 다이렉트](../storage-spaces/storage-spaces-direct-overview.md)에서만 지원됩니다. 보관 및 백업 워크 로드를 사용 하 여 미러 가속 패리티를 사용 하는 것이 좋습니다. 가상화 및 기타 고성능 임의 워크 로드에 대 한 성능 향상을 위해 3 방향 미러를 사용 하는 것이 좋습니다.
+> 서버 배포의 경우 미러-가속 패리티는 [저장소 공간 다이렉트](../storage-spaces/storage-spaces-direct-overview.md)에서만 지원됩니다. 보관 및 백업 워크 로드에만 미러 가속 패리티를 사용 하는 것이 좋습니다. 가상화 된 기타 고성능 임의 워크 로드의 경우 성능을 향상 시키려면 3 방향 미러를 사용 하는 것이 좋습니다.
 
 - **VM 작업 가속화** - ReFS는 특히 가상화된 워크로드의 성능을 개선하기 위한 새로운 기능을 도입했습니다.
     - [블록 복제](./block-cloning.md) - 블록 복제는 복사 작업을 가속화하여 빠르고 더 적은 영향을 미치는 VM 검사점 병합 작업을 가능하게 합니다.
@@ -64,43 +64,43 @@ ReFS는 수백만 테라바이트에 이르는 매우 큰 데이터 집합을 �
 
 ## <a name="supported-deployments"></a>지원되는 배포
 
-하지만 Microsoft는 NTFS 사용 하도록 특별히 개발 범용 다양 한 구성 및 워크 로드를 사용 하 여 고객의 가용성, 복원 력 및/또는 ReFS는 확장을 특별히 필요한 경우 Microsoft에서 사용 ReFS를 지원 다음 구성 및 시나리오 
+Microsoft는 광범위 한 구성 및 워크 로드와 함께 일반적인 용도의 NTFS를 개발 했지만, 특히 ReFS에서 제공 하는 가용성, 복원 력 및/또는 규모를 요구 하는 고객을 위해 Microsoft에서 사용할 ReFS를 지원 합니다. 구성 및 시나리오는 다음과 같습니다. 
 
 > [!NOTE]
-> 모든 지원 되는 ReFS 구성을 사용 해야 합니다 [Windows Server 카탈로그](https://www.WindowsServerCatalog.com) 응용 프로그램 요구 사항 충족 및 하드웨어를 인증 합니다.
+> 모든 ReFS 지원 구성은 [Windows Server 카탈로그](https://www.WindowsServerCatalog.com) 인증 된 하드웨어를 사용 하 고 응용 프로그램 요구 사항을 충족 해야 합니다.
 
 ### <a name="storage-spaces-direct"></a>저장소 공간 다이렉트
 
 저장소 공간 다이렉트에 ReFS를 배포하는 것은 가상화된 워크로드 또는 네트워크 연결 저장소에 권장됩니다. 
 - 미러-가속 패리티와 [저장소 공간 다이렉트의 캐시](../storage-spaces/understand-the-cache.md)는 고성능과 용량 효율적 저장소를 제공합니다. 
 - 새롭게 도입된 블록 복제 및 스파스 VDL은 생성, 병합 및 확장과 같은 .vhdx 파일 작업의 속도를 크게 높여줍니다.
-- 무결성 스트림이, 온라인 복구 및 대체 데이터 복사본 ReFS를 사용 하도록 설정 하 고 저장소 공간 다이렉트를 공동으로 검색 하 고 저장소 컨트롤러 및 메타 데이터와 데이터 내에서 저장소 미디어 손상을 수정 합니다. 
+- 무결성 스트림, 온라인 복구 및 대체 데이터 복사본을 사용 하면 ReFS 및 스토리지 공간 다이렉트가 공동으로 메타 데이터와 데이터 내에서 저장소 컨트롤러 및 저장소 미디어 손상을 감지 하 고 수정할 수 있습니다. 
 - ReFS는 대량의 데이터 집합을 확장 및 지원할 수 있는 기능을 제공합니다. 
 
 ### <a name="storage-spaces"></a>저장소 공간
 
-- 무결성 스트림을, 온라인 복구 및 대체 데이터 복사본 ReFS를 사용 하도록 설정 하 고 [저장소 공간](../storage-spaces/overview.md) 를 공동으로 감지 하 고 저장소 컨트롤러 및 메타 데이터와 데이터 내에서 저장소 미디어 손상을 수정 합니다.
+- 무결성 스트림, 온라인 복구 및 대체 데이터 복사본을 사용 하면 ReFS 및 [저장소 공간](../storage-spaces/overview.md) 에서 메타 데이터와 데이터 모두 내에서 저장소 컨트롤러 및 저장소 미디어 손상을 감지 하 고 수정할 수 있습니다.
 - 저장소 공간 배포는 또한 ReFS에 제공되는 블록 복제와 확장성도 사용할 수 있습니다.
-- 공유 SAS 엔클로저를 사용 하 여 저장소 공간에서 ReFS를 배포 하는 것은 사용자 문서를 저장 및 보관 데이터를 호스트 하는 데 적합 합니다.
+- 공유 SAS 인클로저를 사용 하 여 저장소 공간에 ReFS를 배포 하면 보관 데이터를 호스팅하고 사용자 문서를 저장 하는 데 적합 합니다.
 
 > [!NOTE]
-> 비-이동식 저장소 공간에서는 로컬 BusTypes SATA, SAS, NVME를 통해 직접 연결 하거나 HBA (즉, 통과 모드 RAID 컨트롤러)를 통해 연결 합니다.
+> 저장소 공간은 BusTypes SATA, SAS, NVME를 통해 이동식이 아닌 로컬 직접 연결을 지원 하거나, HBA (즉, RAID controller in 통과 모드)를 통해 연결 된 로컬에서 연결을 지원 합니다.
 
 ### <a name="basic-disks"></a>기본 디스크
 
-기본 디스크에 ReFS를 배포 하는 것은 자신의 소프트웨어 복원 력 및 가용성 솔루션을 구현 하는 응용 프로그램에 가장 적합 합니다. 
+기본 디스크에 ReFS를 배포 하는 것은 자체 소프트웨어 복원 력 및 가용성 솔루션을 구현 하는 응용 프로그램에 가장 적합 합니다. 
 - 자체 복원력 및 가용성 소프트웨어 솔루션을 도입하는 응용 프로그램은 무결성 스트림, 블록 복제 및 대량의 데이터 집합을 확장하고 지원하는 능력을 활용할 수 있습니다. 
 
 > [!NOTE]
-> 기본 디스크 로컬 비-이동식 BusTypes SATA, SAS, NVME, 또는 RAID를 통해 직접 연결을 포함 합니다. 
+> 기본 디스크는 BusTypes SATA, SAS, NVME 또는 RAID를 통해 이동식이 아닌 로컬 직접 연결을 포함 합니다. 
 
 ### <a name="backup-target"></a>백업 대상
 
-ReFS를 적합 한 백업 대상으로 배포 응용 프로그램 및 직접 복원 력 및 가용성 솔루션을 구현 하는 하드웨어에 적합 합니다.
+ReFS를 백업 대상으로 배포 하는 것은 자체 복원 력 및 가용성 솔루션을 구현 하는 응용 프로그램 및 하드웨어에 가장 적합 합니다.
 - 자체 복원력 및 가용성 소프트웨어 솔루션을 도입하는 응용 프로그램은 무결성 스트림, 블록 복제 및 대량의 데이터 집합을 확장하고 지원하는 능력을 활용할 수 있습니다.
 
 > [!NOTE]
-> 백업 대상에는 위의 지원 되는 구성을 포함합니다. 파이버 채널, iSCSI San에 지원 세부 정보에 대 한 응용 프로그램 및 저장소 배열 공급 업체에 문의 하세요. San을 씬 프로 비전, TRIM/UNMAP 또는 오프 로드 데이터 전송 (ODX)와 같은 기능이 필요한 경우 NTFS 사용 해야 합니다.   
+> 백업 대상에는 위의 지원 되는 구성이 포함 됩니다. 파이버 채널 및 iSCSI San에 대 한 지원 세부 정보는 응용 프로그램 및 저장소 배열 공급 업체에 문의 하세요. San의 경우 씬 프로비저닝, 트리밍/매핑 해제 또는 ODX (오프 로드 데이터 전송)와 같은 기능이 필요한 경우 NTFS를 사용 해야 합니다.   
 
 ## <a name="feature-comparison"></a>특징 비교
 
@@ -136,10 +136,10 @@ ReFS를 적합 한 백업 대상으로 배포 응용 프로그램 및 직접 복
 | 스파스 파일 | 예 | 예 |
 | 명명된 스트림 | 예 | 예 |
 | 씬 프로비저닝 | 예<sup>3</sup> | 예 |
-| Trim/매핑 해제 | 예<sup>3</sup> | 예 |
-1. Windows Server 버전 1709 이상에서 사용할 수 있습니다.
-2. Windows Server 2012 R2 이상 사용할 수 있습니다.
-3. 저장소 공간에만
+| 트리밍/매핑 해제 | 예<sup>3</sup> | 예 |
+1. Windows Server, 버전 1709 이상에서 사용할 수 있습니다.
+2. Windows Server 2012 R2 이상에서 사용할 수 있습니다.
+3. 저장소 공간만
 
 #### <a name="the-following-features-are-only-available-on-refs"></a>ReFS에서는 다음과 같은 기능만 사용할 수 있습니다.
 
@@ -158,9 +158,9 @@ ReFS를 적합 한 백업 대상으로 배포 응용 프로그램 및 직접 복
 | 의 | 아니요 | 예 |
 | 하드 링크 | 아니요 | 예 |
 | 개체 ID | 아니요 | 예 |
-| 오프 로드 데이터 전송 (ODX) | 아니요 | 예 |
+| ODX (오프 로드 된 데이터 전송) | 아니요 | 예 |
 | 짧은 이름 | 아니오 | 예 |
-| 확장 된 특성 | 아니오 | 예 |
+| 확장 특성 | 아니오 | 예 |
 | 디스크 할당량 | 아니오 | 예 |
 | 부팅 가능 | 아니요 | 예 |
 | 페이지 파일 지원 | 아니오 | 예 |
@@ -168,7 +168,7 @@ ReFS를 적합 한 백업 대상으로 배포 응용 프로그램 및 직접 복
 
 ## <a name="see-also"></a>참조
 
-- [NTFS 및 ReFS에 대 한 클러스터 크기 권장 사항](https://techcommunity.microsoft.com/t5/Storage-at-Microsoft/Cluster-size-recommendations-for-ReFS-and-NTFS/ba-p/425960)
-- [저장소 공간 다이렉트 개요](../storage-spaces/storage-spaces-direct-overview.md)
+- [ReFS 및 NTFS에 대 한 클러스터 크기 권장 사항](https://techcommunity.microsoft.com/t5/Storage-at-Microsoft/Cluster-size-recommendations-for-ReFS-and-NTFS/ba-p/425960)
+- [스토리지 공간 다이렉트 개요](../storage-spaces/storage-spaces-direct-overview.md)
 - [ReFS 블록 복제](block-cloning.md)
-- [ReFS의 무결성 스트림](integrity-streams.md)
+- [ReFS 무결성 스트림](integrity-streams.md)

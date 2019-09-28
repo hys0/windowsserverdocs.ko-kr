@@ -2,7 +2,7 @@
 title: diskraid
 description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f2dfda058a7ca266adedbacf8860137c5d1782c7
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: f72e91f856da3b24e7450381b293f4b365d914f3
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70867075"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71377802"
 ---
 # <a name="diskraid"></a>diskraid
 
@@ -561,7 +561,7 @@ LUN을 확장할 크기 (mb)를 지정 합니다. **Size =** 매개 변수가 �
 
 **드라이브 =**
 
-LUN을 \<만들 때 사용할 드라이브의 drive_number >를 지정 합니다. **Size =** 매개 변수가 지정 되지 않은 경우 생성 된 LUN은 지정 된 모든 드라이브에서 허용 되는 최대 크기입니다. 공급자는 가능 하면 지정 된 순서로 드라이브를 사용 합니다.
+LUN을 만들 때 사용할 드라이브의 \<drive_number >를 지정 합니다. **Size =** 매개 변수가 지정 되지 않은 경우 생성 된 LUN은 지정 된 모든 드라이브에서 허용 되는 최대 크기입니다. 공급자는 가능 하면 지정 된 순서로 드라이브를 사용 합니다.
 
 **noerr**
 
@@ -944,7 +944,7 @@ replace drive=<drive_number>
 
 **드라이브 =**
 
-교체할 드라이브 \<의 drive_number >를 지정 합니다.
+교체할 드라이브의 \<drive_number >를 지정 합니다.
 
 #### <a name="remarks"></a>설명
 
@@ -1014,7 +1014,7 @@ Select {hbaport | iadapter | iportal | provider | subsystem | controller | port 
 
 현재 선택한 컨트롤러 내의 지정 된 컨트롤러 포트에 포커스를 설정 합니다. 포트를 지정 하지 않으면 명령은 현재 선택 된 포트 (있는 경우)를 표시 합니다. 잘못 된 포트 인덱스를 지정 하면 선택한 포트가 생성 되지 않습니다.
 
-**드라이브** [\<n >]
+**drive** [\<n >]
 
 현재 선택한 하위 시스템 내의 지정 된 드라이브 또는 실제 스핀 들에 포커스를 설정 합니다. 드라이브가 지정 되지 않은 경우이 명령은 현재 선택 된 드라이브 (있는 경우)를 표시 합니다. 잘못 된 드라이브 인덱스를 지정 하면 포커스가 없는 드라이브가 생성 되지 않습니다. 드라이브를 선택 하면 선택한 컨트롤러, 컨트롤러 포트, Lun, 대상 포털, 대상 및 대상 포털 그룹의 선택이 취소 됩니다.
 

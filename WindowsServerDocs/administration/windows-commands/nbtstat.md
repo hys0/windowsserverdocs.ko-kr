@@ -1,8 +1,8 @@
 ---
 title: nbtstat
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4e670b1490f1c4c54b8cf377d48755849faa16f8
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: bd9148c922ac97e83b3b21bcb8b6585775505bf2
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66437125"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71373323"
 ---
 # <a name="nbtstat"></a>nbtstat
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-TCP/IP (NetBT) 프로토콜 통계, 로컬 컴퓨터와 원격 컴퓨터에 대 한 NetBIOS 이름 테이블에서 NetBIOS를 표시 및 NetBIOS 이름을 캐시 합니다. **nbtstat** 등록 된 Windows 인터넷 이름 서비스 WINS () 이름과 NetBIOS 이름 캐시를 새로 고칠 수 있습니다. 매개 변수 없이 사용 **nbtstat** 도움말을 표시 합니다. 
+TCP/IP (NetBT) 프로토콜 통계, 로컬 컴퓨터와 원격 컴퓨터에 대 한 NetBIOS 이름 테이블에서 NetBIOS를 표시 및 NetBIOS 이름을 캐시 합니다. **nbtstat** 를 사용 하면 WINS (Windows Internet name Service)에 등록 된 이름 및 NetBIOS 이름 캐시를 새로 고칠 수 있습니다. 매개 변수 없이 사용 **nbtstat** 도움말을 표시 합니다. 
 
 ## <a name="syntax"></a>구문
 
@@ -36,10 +36,10 @@ nbtstat [/a <remoteName>] [/A <IPaddress>] [/c] [/n] [/r] [/R] [/RR] [/s] [/S] [
 
 |    매개 변수    |                                                                                                                         설명                                                                                                                         |
 |-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| /a <remoteName> |    원격 컴퓨터의 NetBIOS 이름 테이블을 표시 합니다. 여기서 *로그인* 원격 컴퓨터의 NetBIOS 컴퓨터 이름입니다. NetBIOS 이름 테이블에는 해당 컴퓨터에서 실행 되는 NetBIOS 응용 프로그램에 해당 하는 NetBIOS 이름 목록입니다.     |
+| /a <remoteName> |    원격 컴퓨터의 netbios 이름 테이블을 표시 합니다. 여기서 *로그인 이름* 은 원격 컴퓨터의 netbios 컴퓨터 이름입니다. NetBIOS 이름 테이블에는 해당 컴퓨터에서 실행 되는 NetBIOS 응용 프로그램에 해당 하는 NetBIOS 이름 목록입니다.     |
 | /A <IPaddress>  |                                                           원격 컴퓨터의 점으로 구분 된 10 진수 표기법으로 IP 주소 지정 하는 원격 컴퓨터의 NetBIOS 이름 테이블을 표시 합니다.                                                            |
 |       /c        |                                                                        캐시, NetBIOS 이름 중 테이블 및 확인 된 IP 주소 이름을 NetBIOS의 내용의 표시 합니다.                                                                         |
-|       /n        |                                            로컬 컴퓨터의 NetBIOS 이름 테이블을 표시합니다. 상태의 **등록** 이름을 브로드캐스트 또는 WINS 서버를 등록 했음을 나타냅니다.                                             |
+|       /n        |                                            로컬 컴퓨터의 NetBIOS 이름 테이블을 표시합니다. **등록** 상태는 이름이 브로드캐스트 또는 WINS 서버에 등록 되었음을 나타냅니다.                                             |
 |       /r        |      NetBIOS 이름 확인 통계가 표시 됩니다. 에 Windows XP 또는 WINS를 사용 하도록 구성 된 Windows Server 2003을 실행 하는 컴퓨터를이 매개 변수 확인 된 이름 수를 반환 및 브로드캐스트 및 WINS 등록 하 고 사용 하 여 합니다.       |
 |       /R        |                                                                      NetBIOS 이름 캐시의 콘텐츠를 제거 하 고 다음 다시 로드 하는 # 사전에서 항목을 tagged는 **Lmhosts** 파일입니다.                                                                      |
 |       /RR       |                                                                           해제 하 고에 등록 된 WINS 서버는 로컬 컴퓨터에 대 한 NetBIOS 이름을 새로 고칩니다.                                                                            |
@@ -50,7 +50,7 @@ nbtstat [/a <remoteName>] [/A <IPaddress>] [/c] [/n] [/r] [/R] [/RR] [/s] [/S] [
 
 ## <a name="remarks"></a>설명
 
--   **nbtstat** 명령줄 매개 변수는 대/소문자 구분 합니다.
+-   **nbtstat** 명령줄 매개 변수는 대/소문자를 구분 합니다.
 
 -   다음 표에서 설명 하 여 생성 되는 열 머리글 **nbtstat**:
 
@@ -62,9 +62,9 @@ nbtstat [/a <remoteName>] [/A <IPaddress>] [/c] [/n] [/r] [/R] [/RR] [/s] [/S] [
     |수명|제거 되는 이름 테이블 캐시 항목을 지우기 전까지 남은 시간입니다.|
     |로컬 이름|연결과 관련 된 로컬 NetBIOS 이름입니다.|
     |원격 호스트|이름 또는 원격 컴퓨터와 연결 된 IP 주소.|
-    |<03>|NetBIOS 이름이의 마지막 바이트를 16 진수로 변환 합니다. 각 NetBIOS 이름에는 16 자입니다. 이 마지막 바이트는 특별 한 의미 하므로 이름이 같은 여러 번 마지막 바이트만 다르고 동일한 컴퓨터에 있을 수 있습니다. 예를 들어, < 20 > ASCII 텍스트에 공백이 있습니다.|
+    |< 03 >|NetBIOS 이름이의 마지막 바이트를 16 진수로 변환 합니다. 각 NetBIOS 이름에는 16 자입니다. 이 마지막 바이트는 특별 한 의미 하므로 이름이 같은 여러 번 마지막 바이트만 다르고 동일한 컴퓨터에 있을 수 있습니다. 예를 들어, < 20 > ASCII 텍스트에 공백이 있습니다.|
     |type|형식 이름입니다. 이름을 고유한 이름 또는 그룹 이름 수 있습니다.|
-    |상태|여부를 원격 컴퓨터의 NetBIOS 서비스 실행 (등록 된) 또는 중복 된 컴퓨터 이름과 같은 서비스 (충돌)가 등록 합니다.|
+    |Status|원격 컴퓨터의 NetBIOS 서비스가 실행 중인지 (등록 됨) 아니면 중복 된 컴퓨터 이름이 동일한 서비스 (충돌)를 등록 했는지 여부입니다.|
     |State|NetBIOS 연결의 상태입니다.|
 
 -   다음 표에서 가능한 NetBIOS 연결 상태를 설명 합니다.
@@ -72,8 +72,8 @@ nbtstat [/a <remoteName>] [/A <IPaddress>] [/c] [/n] [/r] [/R] [/RR] [/s] [/S] [
     |State|설명|
     |-----|--------|
     |연결됨|세션 설정 되었습니다.|
-    |연결 된|연결 끝점을 만들어야 IP 주소와 연결 합니다.|
-    |수신 대기|이 끝점은 인바운드 연결에 사용할 수 있습니다.|
+    |연결할|연결 끝점을 만들어야 IP 주소와 연결 합니다.|
+    |준비|이 끝점은 인바운드 연결에 사용할 수 있습니다.|
     |Idle|이 끝점 열려 있지만 연결을 수신할 수 없습니다.|
     |Connecting|세션이 연결 단계에 있으며 대상의 이름-IP 주소 매핑을 확인 하 고 있습니다.|
     |수락|인바운드 세션이 현재 허용 되 고 곧 연결 됩니다.|
@@ -85,7 +85,7 @@ nbtstat [/a <remoteName>] [/A <IPaddress>] [/c] [/n] [/r] [/R] [/RR] [/s] [/S] [
 
 -   이 명령은 네트워크 연결에서 네트워크 어댑터의 속성에 구성 요소로 인터넷 프로토콜 (TCP/IP) 프로토콜을 설치 하는 경우에 사용할 수입니다.
 
-## <a name="BKMK_Examples"></a>예제
+## <a name="BKMK_Examples"></a>예와
 CORP07의 NetBIOS 컴퓨터 이름 사용 하는 원격 컴퓨터의 NetBIOS 이름 테이블을 표시 하려면 다음을 입력 합니다.
 
 ```

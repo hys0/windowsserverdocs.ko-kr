@@ -1,7 +1,7 @@
 ---
 title: CentOS 지원 및 hyper-v Red Hat Enterprise Linux 가상 컴퓨터
 description: 지원 되는 CentOS 및 Red Hat Enterprise 배포에 대 한 Linux 통합 서비스의 버전을 나열 합니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
@@ -10,12 +10,12 @@ ms.assetid: 4bf8783d-dee5-4b3e-8cce-2b11b117c189
 author: danihalfin
 ms.author: jopoulso
 ms.date: 06/13/2019
-ms.openlocfilehash: 80273bc0e99a3e70c8c783deae4a3ee42b5a11f0
-ms.sourcegitcommit: 6f968368c12b9dd699c197afb3a3d13c2211f85b
+ms.openlocfilehash: 19e22df7ed5e49cdf4047204f1b13b9c4f3450ef
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68544725"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71365555"
 ---
 # <a name="supported-centos-and-red-hat-enterprise-linux-virtual-machines-on-hyper-v"></a>CentOS 지원 및 hyper-v Red Hat Enterprise Linux 가상 컴퓨터
 
@@ -56,7 +56,7 @@ Hyper-v에 대 한 기본 제공 Red Hat Enterprise Linux Integration Services �
 
 |                                                                 **기능**                                                                  |     **Windows Server 버전**     |                             **8.0**                                 |
 |----------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------|---------------------------------------------------------------------|
-|                                                               **가용성**                                                               |                                    |                                                                     |
+|                                                               **Availability**                                                               |                                    |                                                                     |
 |                          **[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**                          | 2019, 2016, 2012 R2, 2012, 2008 R2 |                              &#10004;                               |
 |                                                      Windows Server 2016 정확한 시간                                                       |             2019, 2016             |                              &#10004;                               |
 |                    **[Lan](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**                    |                                    |                                                                     |
@@ -101,7 +101,7 @@ Hyper-v에 대 한 기본 제공 Red Hat Enterprise Linux Integration Services �
 
 |                                                                 **기능**                                                                  |     **Windows Server 버전**     |                             **7.5-7.6**                             |                             **7.3-7.4**                             |                             **7.0-7.2**                             |     **7.5-7.6**     |       **7.4**       |       **7.3**       |       **7.2**       |       **7.1**       |        **7.0**         |
 |----------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------|---------------------------------------------------------------------|---------------------------------------------------------------------|---------------------------------------------------------------------|---------------------|---------------------|---------------------|---------------------|---------------------|------------------------|
-|                                                               **가용성**                                                               |                                    | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) |      기본 제공       |      기본 제공       |      기본 제공       |      기본 제공       |      기본 제공       |        기본 제공        |
+|                                                               **Availability**                                                               |                                    | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) |      기본 제공       |      기본 제공       |      기본 제공       |      기본 제공       |      기본 제공       |        기본 제공        |
 |                          **[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**                          | 2019, 2016, 2012 R2, 2012, 2008 R2 |                              &#10004;                               |                              &#10004;                               |                              &#10004;                               |      &#10004;       |      &#10004;       |      &#10004;       |      &#10004;       |      &#10004;       |        &#10004;        |
 |                                                      Windows Server 2016 정확한 시간                                                       |             2019, 2016             |                              &#10004;                               |                              &#10004;                               |                                                                     |                     |                     |                     |                     |                     |                        |
 |                    **[Lan](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**                    |                                    |                                                                     |                                                                     |                                                                     |                     |                     |                     |                     |                     |                        |
@@ -144,7 +144,7 @@ Hyper-v에 대 한 기본 제공 Red Hat Enterprise Linux Integration Services �
 
 |                                                                 **기능**                                                                  |     **Windows Server 버전**     |                            **6.7-6.10**                             |                            **6.4-6.6**                              |                             **6.0-6.3**                             |   **6.10, 6.9, 6.8**   |       **6.6, 6.7**        |          **6.5**          |          **6.4**           |
 |----------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------|---------------------------------------------------------------------|---------------------------------------------------------------------|------------------------|---------------------------|---------------------------|----------------------------|
-|                                                               **가용성**                                                               |                                    | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) |        기본 제공        |         기본 제공          |         기본 제공          |          기본 제공          |
+|                                                               **Availability**                                                               |                                    | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) |        기본 제공        |         기본 제공          |         기본 제공          |          기본 제공          |
 |                          **[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**                          | 2019, 2016, 2012 R2, 2012, 2008 R2 |                              &#10004;                               |                              &#10004;                               |                              &#10004;                               |        &#10004;        |         &#10004;          |         &#10004;          |          &#10004;          |
 |                                                      Windows Server 2016 정확한 시간                                                       |             2019, 2016             |                                                                     |                                                                     |                                                                     |                        |                           |                           |                            |
 |                    **[Lan](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**                    |                                    |                                                                     |                                                                     |                                                                     |                        |                           |                           |                            |
@@ -188,7 +188,7 @@ Hyper-v에 대 한 기본 제공 Red Hat Enterprise Linux Integration Services �
 
 |                                                                 **기능**                                                                  |     **Windows Server 버전**     |                              5.2-5.11                              |                            **5.2-5.11**                             |    **5.9-5.11**     |
 |----------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------|---------------------------------------------------------------------|---------------------------------------------------------------------|-----------------------|
-|                                                               **가용성**                                                               |                                    | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | [LIS 4.1](https://www.microsoft.com/download/details.aspx?id=51612) |       기본 제공        |
+|                                                               **Availability**                                                               |                                    | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | [LIS 4.1](https://www.microsoft.com/download/details.aspx?id=51612) |       기본 제공        |
 |                          **[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**                          | 2019, 2016, 2012 R2, 2012, 2008 R2 |                              &#10004;                               |                              &#10004;                               |       &#10004;        |
 |                                                      Windows Server 2016 정확한 시간                                                       |             2019, 2016             |                                                                     |                                                                     |                       |
 |                    **[Lan](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**                    |                                    |                                                                     |                                                                     |                       |
@@ -244,7 +244,7 @@ Hyper-v에 대 한 기본 제공 Red Hat Enterprise Linux Integration Services �
 
    1. 파일을 만듭니다 **/etc/udev/rules.d/100-balloon.rules**합니다. 파일에 대해 원하는 다른 이름을 사용할 수 있습니다.
 
-   2. 파일에 다음 콘텐츠를 추가 합니다.`SUBSYSTEM=="memory", ACTION=="add", ATTR{state}="online"`
+   2. 파일에 다음 콘텐츠를 추가 합니다. `SUBSYSTEM=="memory", ACTION=="add", ATTR{state}="online"`
 
    3. Hot Add 지원을 사용 하도록 시스템을 재부팅 합니다.
 

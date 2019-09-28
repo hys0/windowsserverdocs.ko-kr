@@ -1,7 +1,7 @@
 ---
 title: 오류 수정 제공 하는 RAM을 사용 하 여
 description: 이 모범 사례 분석기 규칙에 대 한 텍스트의 온라인 버전입니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -10,12 +10,12 @@ ms.topic: article
 ms.assetid: 67eb6cef-b045-4748-90e1-406af5345d6a
 author: KBDAzure
 ms.date: 8/16/2016
-ms.openlocfilehash: b220465aed0cf9c634eb35424709195ced0d6df9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c6f232ba44631e35190688d6c48a3bc53224bc17
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59871124"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71393447"
 ---
 # <a name="use-ram-that-provides-error-correction"></a>오류 수정 제공 하는 RAM을 사용 하 여
 
@@ -34,15 +34,15 @@ ms.locfileid: "59871124"
   
 ## <a name="issue"></a>문제점  
   
-*이 컴퓨터에서 사용 중인 RAM은 하지 오류-수정 (ECC) RAM.*  
+*이 컴퓨터에서 사용 중인 RAM이 ECC (오류 수정) RAM이 아닙니다.*  
   
 ## <a name="impact"></a>영향  
   
-*Microsoft은 컴퓨터에서 Windows Server 2016 오류 RAM을 수정 하지 않고 지원 하지 않습니다.*  
+*Microsoft는 RAM을 수정 하지 않고 컴퓨터에서 Windows Server 2016를 지원 하지 않습니다.*  
   
 ## <a name="resolution"></a>해결 방법  
   
-*Windows Server 카탈로그에 나열 되며 Hyper-v에 대 한 정규화 된 서버를 확인 합니다.*  
+*서버가 Windows Server 카탈로그에 나열 되 고 Hyper-v에 대해 한정 되는지 확인 합니다.*  
   
 서버 목록에 있는지를 확인 하려면 참조는 [Windows Server 카탈로그](https://www.windowsservercatalog.com/)합니다.  
   

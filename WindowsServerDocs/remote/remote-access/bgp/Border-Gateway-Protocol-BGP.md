@@ -1,9 +1,9 @@
 ---
 title: BGP(경계 게이트웨이 프로토콜)
-description: 프로토콜 BGP (경계 게이트웨이)에서 Windows Server 2016을 통해 지원 배포 토폴로지와 BGP 기능 및 기능을 포함 하 여 이해를 갖추기 위해이 항목에서는 사용할 수 있습니다.
+description: 이 항목을 사용 하 여 BGP 지원 배포 토폴로지 및 BGP 기능 및 기능을 포함 하 여 Windows Server 2016의 BGP (Border Gateway Protocol)를 이해할 수 있습니다.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-ras
@@ -12,16 +12,16 @@ ms.topic: article
 ms.assetid: 78cc2ce3-a48e-45db-b402-e480b493fab1
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 655a7b02468db4246b85b495289806a3f9735a95
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: ae6fddce1564e44ad72a5630c6abb16cdb6735d1
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67281999"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71388984"
 ---
 # <a name="border-gateway-protocol-bgp"></a>BGP(경계 게이트웨이 프로토콜)
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 이 항목을 통해 지원 배포 토폴로지와 BGP 기능 및 특성을 포함하여 BGP(경계 게이트웨이 프로토콜)에 대해 이해할 수 있습니다.  
   
@@ -70,17 +70,17 @@ Enable-RemoteAccessRoutingDomain -Name $Fabrikam_RoutingDomain -Type All -PassTh
   
 다음 배포 토폴로지를 지원합니다.  
   
--   [엔터프라이즈 사이트에 지에서 BGP와 RAS VPN 사이트 간 게이트웨이](#bkmk_top1)  
+-   [엔터프라이즈 사이트에 지에서 BGP를 사용 하는 RAS VPN 사이트 간 게이트웨이](#bkmk_top1)  
   
--   [엔터프라이즈 사이트에 지에서 BGP 사용 하 여 타사 게이트웨이](#bkmk_top2)  
+-   [엔터프라이즈 사이트에 지에서 BGP를 사용 하는 타사 게이트웨이](#bkmk_top2)  
   
--   [타사 게이트웨이 사용 하 여 여러 개의 엔터프라이즈 사이트](#bkmk_top3)  
+-   [타사 게이트웨이를 사용 하는 여러 엔터프라이즈 사이트](#bkmk_top3)  
   
--   [BGP 및 VPN에 대 한 별도 종료 지점](#bkmk_top4)  
+-   [BGP 및 VPN에 대 한 별도의 종료 위치](#bkmk_top4)  
   
 다음 섹션에는 각 BGP 지원 토폴로지에 대한 추가 정보가 포함되어 있습니다.  
   
-### <a name="bkmk_top1"></a>엔터프라이즈 사이트에 지에서 BGP와 RAS VPN 사이트 간 게이트웨이  
+### <a name="bkmk_top1"></a>엔터프라이즈 사이트에 지에서 BGP를 사용 하는 RAS VPN 사이트 간 게이트웨이  
 이 토폴로지는 CSP에 연결된 엔터프라이즈 사이트를 보여 줍니다. Windows Server 2016 RAS 게이트웨이 CSP와에 지 방화벽 장치 VPN 사이트 간 연결에 대해 구성, 엔터프라이즈 라우팅 토폴로지는 내부 라우터를 포함 됩니다. RAS 게이트웨이 S2S VPN 및 BGP 연결을 종료합니다.  
   
 ![RAS VPN 사이트 간 게이트웨이](../../media/Border-Gateway-Protocol-BGP/bgp_01.jpg)  
@@ -97,7 +97,7 @@ Enable-RemoteAccessRoutingDomain -Name $Fabrikam_RoutingDomain -Type All -PassTh
   
     -   에지 장치는 BGP를 사용하여 알림 경로를 선택하도록 고정 경로 또는 인터페이스로 구성될 수 있습니다. 또한 에지 장치는 IGP를 사용하여 외부 경로를 다른 온-프레미스 라우터에 배포합니다.  
   
-### <a name="bkmk_top2"></a>엔터프라이즈 사이트에 지에서 BGP 사용 하 여 타사 게이트웨이  
+### <a name="bkmk_top2"></a>엔터프라이즈 사이트에 지에서 BGP를 사용 하는 타사 게이트웨이  
 이 토폴로지는 타사 에지 라우터를 사용하여 CSP에 연결하는 엔터프라이즈 사이트를 보여 줍니다. 에지 라우터는 사이트 간 VPN 게이트웨이 역할도 합니다.  
   
 ![엔터프라이즈 사이트 에지에서 BGP를 사용하는 타사 게이트웨이](../../media/Border-Gateway-Protocol-BGP/bgp_02.jpg)  
@@ -108,7 +108,7 @@ Enable-RemoteAccessRoutingDomain -Name $Fabrikam_RoutingDomain -Type All -PassTh
   
 -   에지 장치가 IGP(내부 게이트웨이 프로토콜)를 구현하고 내부 라우팅에 직접 참여합니다.  
   
-### <a name="bkmk_top3"></a>CSP를 연결 하는 다중 엔터프라이즈 사이트 데이터 센터를 클라우드  
+### <a name="bkmk_top3"></a>CSP 클라우드 데이터 센터에 연결 하는 여러 엔터프라이즈 사이트  
 이 토폴로지는 타사 게이트웨이를 사용하여 CSP에 연결하는 다중 엔터프라이즈 사이트를 보여 줍니다. 타사 에지 장치는 사이트 간 VPN 게이트웨이 및 BGP 라우터 역할을 합니다.  
   
 ![CSP를 연결 하는 여러 개의 엔터프라이즈 사이트 데이터 센터를 클라우드](../../media/Border-Gateway-Protocol-BGP/bgp_03.jpg)  
@@ -125,7 +125,7 @@ Enable-RemoteAccessRoutingDomain -Name $Fabrikam_RoutingDomain -Type All -PassTh
   
 엔터프라이즈 사이트 1의 BGP 라우터 수 없는 경우 엔터프라이즈 사이트 2 BGP 라우터 연결에 실패 했기 때문에, 사이트 1 BGP 라우터는 동적으로 CSP BGP 라우터에서 사이트 2 엔터프라이즈 네트워크에 경로 알아보려면 시작 하 고 트래픽을 CSP의 Windows Server BGP 라우터를 통해 사이트 2로 변경 사이트 1에서 원활 하 게 됩니다.  
   
-### <a name="bkmk_top4"></a>BGP 및 VPN에 대 한 별도 종료 지점  
+### <a name="bkmk_top4"></a>BGP 및 VPN에 대 한 별도의 종료 위치  
 이 토폴로지는 두 개의 서로 다른 라우터를 BGP 및 사이트 간 VPN 끝점으로 사용하는 엔터프라이즈를 보여 줍니다. BGP는 내부 라우터에서 종료 되는 동안 Windows Server 2016 RAS 게이트웨이에서 사이트 간 VPN은 종료 됩니다. 연결 CSP 측면에 CSP RAS 게이트웨이에 BGP와 VPN 연결을 종료합니다. 이 구성에서 내부 타사 라우터 하드웨어는 IGP 경로를 BGP에 재배포하는 것뿐만 아니라 BGP 경로를 IGP에 재배포하는 것도 지원해야 합니다.  
   
 ![BGP 및 VPN에 대한 별도의 종료 지점](../../media/Border-Gateway-Protocol-BGP/bgp_04.jpg)  

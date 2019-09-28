@@ -1,8 +1,8 @@
 ---
 title: bitsadmin Transfer
-description: Windows 명령 항목에 대 한 **bitsadmin 전송** -하나 이상의 파일을 전송 합니다.
+description: '**Bitsadmin Transfer** 에 대 한 Windows 명령 항목에서 하나 이상의 파일을 전송 합니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2ef29a242a834fae42d1de3994a82aedcf87ec2d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2a12e6e2023c979d5b0c095c1eddd77eb5155d1e
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59852464"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71380347"
 ---
 # <a name="bitsadmin-transfer"></a>bitsadmin Transfer
 
@@ -34,12 +34,12 @@ bitsadmin /Transfer <Name> [<Type>] [/Priority <Job_Priority>] [/ACLFlags <Flags
 
 |매개 변수|설명|
 |---------|-----------|
-|이름|작업의 이름입니다. 대부분의 명령과 달리 **이름을** 이름과 GUID가 아닌 수만 있습니다.|
-|형식|선택 사항-작업의 유형을 지정 합니다. 사용 하 여 **다운로드/** (기본값) 다운로드 작업을 위해 또는 **업로드/** 업로드 작업에 대 한 합니다.|
-|우선 순위|선택적-job_priority는 다음 값 중 하나로 설정 합니다.</br>-전경</br>-높음</br>-표준</br>-낮음|
-|ACLFlags|선택적-다운로드할 파일의 소유자 및 ACL 정보를 유지 하려는 나타냅니다. 예를 들어, 소유자 및 그룹 파일을 유지 하려면 플래그를 설정할 `OG`합니다. 다음 플래그 중 하나 이상 지정 합니다.</br>-   O: 파일 소유자 정보를 복사 합니다.</br>-   G: 파일 그룹 정보를 복사 합니다.</br>-   D: 파일과 함께 DACL 정보를 복사 합니다.</br>-   S: 파일을 사용 하 여 SACL 정보를 복사 합니다.|
-|\/DYNAMIC|사용 하 여 작업 구성 [ **BITS_JOB_PROPERTY_DYNAMIC_CONTENT**](/windows/desktop/api/bits5_0/ne-bits5_0-bits_job_property_id), 서버 쪽 요구 사항을 완화 하는 합니다.|
-|RemoteFileName|서버에 전송 하는 경우에 파일의 이름입니다.|
+|이름|작업의 이름입니다. 대부분의 명령과 달리 **name** 은 GUID가 아닌 이름만 될 수 있습니다.|
+|형식|선택 사항-작업의 유형을 지정 합니다. 다운로드 작업의 경우에는 **/prodownload** (기본값)를 사용 하 고 업로드 작업에는 **/UPLOAD** 를 사용 합니다.|
+|우선 순위|선택 사항-job_priority을 다음 값 중 하나로 설정 합니다.</br>-전경</br>-높음</br>-표준</br>-낮음|
+|ACLFlags|선택 사항-다운로드 하는 파일을 사용 하 여 소유자 및 ACL 정보를 유지 하려고 함을 나타냅니다. 예를 들어 파일을 사용 하 여 소유자와 그룹을 유지 하려면 플래그를 `OG`으로 설정 합니다. 다음 플래그 중 하나 이상 지정 합니다.</br>I/O 파일을 사용 하 여 소유자 정보를 복사 합니다.</br>EXPRESS-G 파일을 사용 하 여 그룹 정보를 복사 합니다.</br>2 파일을 사용 하 여 DACL 정보를 복사 합니다.</br>삭제 파일을 사용 하 여 SACL 정보를 복사 합니다.|
+|\/DYNAMIC|[**BITS_JOB_PROPERTY_DYNAMIC_CONTENT**](/windows/desktop/api/bits5_0/ne-bits5_0-bits_job_property_id)를 사용 하 여 작업을 구성 합니다 .이 작업은 서버 쪽 요구 사항을 완화 합니다.|
+|RemoteFileName|서버에 전송 되는 파일의 이름입니다.|
 |LocalFileName|로컬로 상주 하는 파일의 이름입니다.|
 
 ## <a name="remarks"></a>설명
@@ -49,7 +49,7 @@ bitsadmin /Transfer <Name> [<Type>] [/Priority <Job_Priority>] [/ACLFlags <Flags
 > [!NOTE]
 > BITSAdmin 명령 일시적인 오류가 발생 하는 경우 실행을 계속 합니다. 이 명령은 종료 하려면 CTRL + C를 누릅니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 전송 작업으로 다음 예제에서는 시작 이라는 *myDownloadJob*합니다.
 ```

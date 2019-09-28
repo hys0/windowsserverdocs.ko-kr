@@ -1,9 +1,9 @@
 ---
 title: 클러스터 서버를 준비 하는 2 단계
-description: 이 항목은 Windows Server 2016에서 클러스터에 원격 액세스 배포 가이드의 일부입니다.
+description: 이 항목은 Windows Server 2016의 클러스터에 원격 액세스 배포 가이드의 일부입니다.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-ras
@@ -12,16 +12,16 @@ ms.topic: article
 ms.assetid: 35d68abb-6914-42e0-91e8-803933cf785e
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 10a40b30acbf022ed34f454d753884cb8c5c97d4
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 87983076ee8a7d5546a5ac491ed4ca88153798f0
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67281202"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71367413"
 ---
 # <a name="step-2-prepare-cluster-servers"></a>클러스터 서버를 준비 하는 2 단계
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 클러스터 배포를 구성 하려면 먼저 클러스터에 추가 하려면 추가 서버를 준비 합니다.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "67281202"
 |----|--------|  
 |[2.1 원격 액세스 인프라 구성](#BKMK_config)|클러스터에 추가 하려는 각 서버에서 서버 토폴로지, IP 주소 지정, 라우팅 및 전달을 구성 합니다. 가상 컴퓨터의 부하 분산 된 클러스터를 구성 하는 경우에 MAC 주소 스푸핑을 사용 하도록 가상 컴퓨터를 구성 해야 합니다.<br /><br />또한 각 서버를 동일한 도메인에 가입 하 고 모든 서버를 동일한 서브넷에 연결 합니다.|  
 |[2.2 원격 액세스 역할 설치](#BKMK_Install)|클러스터에 추가 하려는 각 추가 서버에서 원격 액세스 역할 설치|  
-|[2.3 NLB를 설치 합니다.](#BKMK_NLB)|배포 된 원격 액세스 서버와 클러스터에 추가 하려는 각 추가 서버에서 NLB 기능을 설치 합니다. 이 단계는는 외부 부하 분산 장치를 사용 하는 경우에 필요 합니다.|  
+|[2.3 NLB 설치](#BKMK_NLB)|배포 된 원격 액세스 서버와 클러스터에 추가 하려는 각 추가 서버에서 NLB 기능을 설치 합니다. 이 단계는는 외부 부하 분산 장치를 사용 하는 경우에 필요 합니다.|  
   
 ## <a name="BKMK_config"></a>2.1 원격 액세스 인프라 구성  
 원격 액세스 클러스터를 구성 하려면 서버 토폴로지, IP 주소 지정, 라우팅 및 전달을 구성 해야 클러스터의 일부를 구성 하는 모든 서버에 있습니다.  
@@ -38,14 +38,14 @@ ms.locfileid: "67281202"
   
 1.  각각의 첫 번째 원격 액세스 서버와 동일한 토폴로지를 사용 하 여 클러스터에 있는 서버를 구성 합니다.  
   
-2.  각 클러스터에 적절 한 IP 주소 지정, 라우팅 및 첫 번째 원격 액세스 서버 구성에 따라 전달 될 서버를 구성 합니다. 클러스터의 모든 서버가 동일한 서브넷에 연결 해야 하는 참고 합니다.  
+2.  각 클러스터에 적절 한 IP 주소 지정, 라우팅 및 첫 번째 원격 액세스 서버 구성에 따라 전달 될 서버를 구성 합니다. 클러스터의 모든 서버는 동일한 서브넷에 연결 되어야 합니다.  
   
 3.  각 클러스터의 첫 번째 원격 액세스 서버와 동일한 도메인에 있는 서버를 가입 시킵니다.  
   
 ## <a name="BKMK_Install"></a>2.2 원격 액세스 역할 설치  
 원격 액세스 클러스터를 구성 하려면 클러스터의 일부를 구성 하는 모든 서버에 대 한 원격 액세스 역할을 설치 해야 합니다.  
   
-### <a name="to-install-the-remote-access-role-on-always-on-vpn-servers"></a>Always On VPN 서버에서 원격 액세스 역할을 설치 하려면  
+### <a name="to-install-the-remote-access-role-on-always-on-vpn-servers"></a>Always On VPN 서버에 원격 액세스 역할을 설치 하려면  
   
 1.  DirectAccess 서버의 서버 관리자 콘솔에는 **대시보드**, 클릭 **역할 및 기능 추가**합니다.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "67281202"
   
 9.  클러스터 구성원으로 만들 수 있는 모든 서버에서이 절차를 반복 합니다.  
   
-## <a name="BKMK_NLB"></a>2.3 NLB를 설치 합니다.  
+## <a name="BKMK_NLB"></a>2.3 NLB 설치  
 원격 액세스 클러스터를 구성 하려면 클러스터의 일부를 구성 하는 모든 서버에서 네트워크 부하 분산 기능을 설치 해야 합니다.  
   
 > [!NOTE]  
@@ -85,7 +85,7 @@ ms.locfileid: "67281202"
   
 ## <a name="BKMK_Links"></a>참고 항목  
   
--   [3단계: 부하 분산 된 클러스터 구성](Step-3-Configure-a-Load-Balanced-Cluster.md)  
+-   [3단계: 부하 분산 된 클러스터 구성 @ no__t-0  
   
 
 

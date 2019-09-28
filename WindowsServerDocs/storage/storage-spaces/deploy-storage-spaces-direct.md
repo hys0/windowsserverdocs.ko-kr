@@ -1,6 +1,6 @@
 ---
 title: 저장소 공간 다이렉트 배포
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: eldenc
 ms.author: stevenek
 ms.technology: storage-spaces
@@ -10,12 +10,12 @@ author: stevenek
 ms.date: 06/07/2019
 description: Windows Server의 스토리지 공간 다이렉트를 사용 하 여 하이퍼 수렴 형 인프라 또는 수렴 형 (세분화 된) 인프라가 있는 소프트웨어 정의 저장소를 배포 하는 단계별 지침을 참조 하세요.
 ms.localizationpriority: medium
-ms.openlocfilehash: 69cd27cba09bd9d23a461978416217a20b2979ec
-ms.sourcegitcommit: b68ff64ecd87959cd2acde4a47506a01035b542a
+ms.openlocfilehash: 0ab96f737f7700e202c9d0382c06859c4ea84118
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68830907"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402820"
 ---
 # <a name="deploy-storage-spaces-direct"></a>저장소 공간 다이렉트 배포
 
@@ -51,7 +51,7 @@ ms.locfileid: "68830907"
 
 첫 번째 단계는 클러스터에 있는 모든 서버에 Windows Server를 설치 하는 것입니다. 스토리지 공간 다이렉트 Windows Server 2016 Datacenter Edition이 필요 합니다. Server Core 설치 옵션을 사용 하거나 데스크톱 환경에서 서버를 사용할 수 있습니다.
 
-설치 마법사를 사용 하 여 Windows Server를 설치 하는 경우 *전체* 설치 옵션에 해당 하는 windows Server (server Core 참조)와 *Windows Server (데스크톱 환경 포함 서버)* 중에서 선택할 수 있습니다. Windows Server 2012 r 2에서 사용할 수 있습니다. 선택 하지 않으면 Server Core 설치 옵션을 사용할 수 있습니다. 자세한 내용은 [Windows Server 2016에 대 한 설치 옵션](../../get-started/Windows-Server-2016.md)을 참조 하세요.
+설치 마법사를 사용 하 여 Windows Server를 설치 하는 경우 *전체* 설치 옵션에 해당 하는 *Windows Server (* server Core 참조)와 *windows Server (데스크톱 환경 포함 서버)* 중에서 선택할 수 있습니다. Windows Server 2012 r 2에서 사용할 수 있습니다. 선택 하지 않으면 Server Core 설치 옵션을 사용할 수 있습니다. 자세한 내용은 [Windows Server 2016에 대 한 설치 옵션](../../get-started/Windows-Server-2016.md)을 참조 하세요.
 
 ### <a name="step-12-connect-to-the-servers"></a>1\.2 단계: 서버에 연결
 
@@ -84,19 +84,19 @@ PS 세션을 입력하고 서버 이름 또는 연결하려는 노드의 IP 주�
 >   
 > `Set-Item WSMAN:\Localhost\Client\TrustedHosts -Value Server01 -Force`
 >  
-> 참고: 신뢰할 수 있는 호스트 목록에는와 `Server*`같은 와일드 카드가 지원 됩니다.
+> 참고: 신뢰할 수 있는 호스트 목록은 `Server*`과 같은 와일드 카드를 지원 합니다.
 >
-> 신뢰할 수 있는 호스트 목록을 보려면을 입력 `Get-Item WSMAN:\Localhost\Client\TrustedHosts`합니다.  
+> 신뢰할 수 있는 호스트 목록을 보려면 `Get-Item WSMAN:\Localhost\Client\TrustedHosts`을 입력 합니다.  
 >   
-> 목록을 비우려면를 입력 `Clear-Item WSMAN:\Localhost\Client\TrustedHost`합니다.  
+> 목록을 비우려면 `Clear-Item WSMAN:\Localhost\Client\TrustedHost`을 입력 합니다.  
 
 ### <a name="step-13-join-the-domain-and-add-domain-accounts"></a>1\.3 단계: 도메인에 가입 하 고 도메인 계정 추가
 
-지금까지 로컬 관리자 계정인를 사용 하 여 개별 서버를 `<ComputerName>\Administrator`구성 했습니다.
+지금까지 로컬 관리자 계정으로 개별 서버를 구성 했습니다 (`<ComputerName>\Administrator`).
 
 스토리지 공간 다이렉트를 관리 하려면 서버를 도메인에 가입 시키고 모든 서버에서 Administrators 그룹에 속한 Active Directory Domain Services 도메인 계정을 사용 해야 합니다.
 
-관리 시스템에서 관리자 권한으로 PowerShell 콘솔을 엽니다. 를 `Enter-PSSession` 사용 하 여 각 서버에 연결 하 고 사용자 컴퓨터 이름, 도메인 이름 및 도메인 자격 증명을 대체 하 여 다음 cmdlet을 실행 합니다.
+관리 시스템에서 관리자 권한으로 PowerShell 콘솔을 엽니다. @No__t-0을 사용 하 여 각 서버에 연결 하 고 사용자 컴퓨터 이름, 도메인 이름 및 도메인 자격 증명을 대체 하 여 다음 cmdlet을 실행 합니다.
 
 ```PowerShell  
 Add-Computer -NewName "Server01" -DomainName "contoso.com" -Credential "CONTOSO\User" -Restart -Force  
@@ -204,7 +204,7 @@ Count Name                          PSComputerName
 
 ### <a name="step-32-validate-the-cluster"></a>3\.2 단계: 클러스터 유효성 검사
 
-이 단계에서는 클러스터 유효성 검사 도구를 실행 하 여 스토리지 공간 다이렉트를 사용 하 여 클러스터를 만들도록 서버 노드가 올바르게 구성 되어 있는지 확인 합니다. 클러스터가 만들어지기 전에 클러스터`Test-Cluster`유효성 검사 ()가 실행 되 면 해당 구성이 장애 조치 (failover) 클러스터로 정상적으로 작동 하는 데 적합 한 것으로 표시 되는지 확인 하는 테스트를 실행 합니다. 아래 예제에서는 `-Include` 매개 변수를 사용한 다음 테스트의 특정 범주를 지정 합니다. 이렇게 하면 저장소 공간 다이렉트 관련 테스트가 유효성 검사에 포함됩니다.
+이 단계에서는 클러스터 유효성 검사 도구를 실행 하 여 스토리지 공간 다이렉트를 사용 하 여 클러스터를 만들도록 서버 노드가 올바르게 구성 되어 있는지 확인 합니다. 클러스터가 만들어지기 전에 클러스터 유효성 검사 (`Test-Cluster`)가 실행 되 면 구성이 장애 조치 (failover) 클러스터로 정상적으로 작동 하는 데 적합 한 것으로 표시 되는지 확인 하는 테스트를 실행 합니다. 아래 예제에서는 `-Include` 매개 변수를 사용한 다음 테스트의 특정 범주를 지정 합니다. 이렇게 하면 저장소 공간 다이렉트 관련 테스트가 유효성 검사에 포함됩니다.
 
 다음 PowerShell 명령을 사용하여 저장소 공간 다이렉트 클러스터로 사용할 서버 집합의 유효성을 검사할 수 있습니다.
 
@@ -258,7 +258,7 @@ Enable-ClusterStorageSpacesDirect –CimSession <ClusterName>
 
 ### <a name="step-36-create-volumes"></a>3\.6 단계: 볼륨 만들기
 
-가장 빠르고 간단한 환경을 `New-Volume` 제공 하기 위해 cmdlet을 사용 하는 것이 좋습니다. 이 단일 cmdlet은 가상 디스크를 자동으로 만들어서 분할 및 포맷하고, 이와 일치하는 이름으로 볼륨을 만들어 클러스터 공유 볼륨에 추가합니다. 이 모든 과정이 하나의 간편한 단계만으로 진행됩니다.
+@No__t-0 cmdlet은 가장 빠르고 간단한 환경을 제공 하므로 사용 하는 것이 좋습니다. 이 단일 cmdlet은 가상 디스크를 자동으로 만들어서 분할 및 포맷하고, 이와 일치하는 이름으로 볼륨을 만들어 클러스터 공유 볼륨에 추가합니다. 이 모든 과정이 하나의 간편한 단계만으로 진행됩니다.
 
 자세한 내용은 [저장소 공간 다이렉트에서 볼륨 만들기](create-volumes.md)를 참조하세요.
 
@@ -268,7 +268,7 @@ Enable-ClusterStorageSpacesDirect –CimSession <ClusterName>
 
 CSV 캐시를 사용 하도록 설정 하면 하이퍼 수렴 형 클러스터에서 Vm을 실행 하는 데 사용할 수 있는 메모리의 양이 줄어들기 때문에 Vhd에서 사용할 수 있는 메모리와 저장소 성능의 균형을 유지 해야 합니다.
 
-CSV 캐시의 크기를 설정 하려면 저장소 클러스터에 대 한 관리자 권한이 있는 계정을 사용 하 여 관리 시스템에서 PowerShell 세션을 열고 다음 스크립트를 사용 하 여 `$ClusterName` 및 `$CSVCacheSize` 변수를 적절 하 게 변경 합니다. 예제에서는 서버당 2gb CSV 캐시를 설정 합니다.
+CSV 캐시의 크기를 설정 하려면 저장소 클러스터에 대 한 관리자 권한이 있는 계정을 사용 하 여 관리 시스템에서 PowerShell 세션을 연 다음이 스크립트를 사용 하 여 `$ClusterName` 및 `$CSVCacheSize` 변수를 적절 하 게 변경 합니다 (이 예제에서는 2를 설정 합니다. 서버당 GB CSV 캐시 수):
 
 ```PowerShell
 $ClusterName = "StorageSpacesDirect1"
@@ -287,17 +287,17 @@ Write-Output "$ClusterName CSV cache size: $CSVCurrentCacheSize MB"
 
 하이퍼 수렴 형 클러스터를 배포 하는 경우 마지막 단계는 스토리지 공간 다이렉트 클러스터에서 가상 컴퓨터를 프로 비전 하는 것입니다.
 
-가상 컴퓨터의 파일은 장애 조치 (failover) 클러스터의 클러스터형 vm과 마찬가지로 시스템 CSV\\네임 스페이스\\(예: c: clusterstorage Volume1)에 저장 되어야 합니다.
+가상 컴퓨터의 파일은 장애 조치 (failover) 클러스터의 클러스터형 Vm과 마찬가지로 시스템 CSV 네임 스페이스 (예: c: \\ClusterStorage @ no__t-1Volume1)에 저장 되어야 합니다.
 
 기본 도구 또는 다른 도구를 사용 하 여 System Center Virtual Machine Manager와 같은 저장소 및 가상 컴퓨터를 관리할 수 있습니다.
 
-## <a name="step-4-deploy-scale-out-file-server-for-converged-solutions"></a>4단계: 수렴 형 솔루션을 위한 스케일 아웃 파일 서버 배포
+## <a name="step-4-deploy-scale-out-file-server-for-converged-solutions"></a>4단계: 수렴 형 솔루션에 대 한 스케일 아웃 파일 서버 배포
 
 수렴 형 솔루션을 배포 하는 경우 다음 단계는 스케일 아웃 파일 서버 인스턴스를 만들고 일부 파일 공유를 설정 하는 것입니다. 하이퍼 수렴 형 클러스터를 배포 하는 경우 완료 되며이 섹션이 필요 하지 않습니다.
 
 ### <a name="step-41-create-the-scale-out-file-server-role"></a>4\.1 단계: 스케일 아웃 파일 서버 역할 만들기
 
-파일 서버에 대 한 클러스터 서비스를 설정 하는 다음 단계는 클러스터 된 파일 서버 역할을 만드는 것입니다 .이 역할은 지속적으로 사용 가능한 파일 공유가 호스트 되는 스케일 아웃 파일 서버 인스턴스를 만들 때 사용 됩니다.
+파일 서버에 대 한 클러스터 서비스를 설정 하는 다음 단계에서는 클러스터 된 파일 서버 역할을 만듭니다 .이 역할은 지속적으로 사용 가능한 파일 공유가 호스트 되는 스케일 아웃 파일 서버 인스턴스를 만들 때 사용 됩니다.
 
 #### <a name="to-create-a-scale-out-file-server-role-by-using-server-manager"></a>서버 관리자를 사용 하 여 스케일 아웃 파일 서버 역할을 만들려면
 
@@ -305,11 +305,11 @@ Write-Output "$ClusterName CSV cache size: $CSVCurrentCacheSize MB"
 2. **역할 선택** 페이지에서 **파일 서버**를 클릭 합니다.
 3. **파일 서버 유형** 페이지에서 **응용 프로그램 데이터에 대 한 스케일 아웃 파일 서버**를 클릭 합니다.
 4. **클라이언트 액세스 지점** 페이지에서 스케일 아웃 파일 서버의 이름을 입력 합니다.
-5. 그림 1에 나와 있는 것 처럼 역할로 이동 하 고 **상태** 열이 만든 클러스터 된 파일 서버 역할 옆의 **실행 중** 으로 표시 되는지 확인 하 여 역할이 성공적으로 설정 되었는지 확인 합니다.
+5. 그림 1에 나와 있는 것 **처럼 역할로 이동 하 고** **상태** 열이 만든 클러스터 된 파일 서버 역할 옆의 **실행 중** 으로 표시 되는지 확인 하 여 역할이 성공적으로 설정 되었는지 확인 합니다.
 
-   ![스케일 아웃 파일 서버를 보여 주는 장애 조치(Failover) 클러스터 관리자의 스크린샷](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/SOFS_in_FCM.png "스케일 아웃 파일 서버를 표시 하 장애 조치(Failover) 클러스터 관리자")
+   (media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/SOFS_in_FCM.png "스케일 아웃 파일 서버를 표시 하 장애 조치(Failover) 클러스터 관리자") ![스케일 아웃 파일 서버를 보여 주는 장애 조치(Failover) 클러스터 관리자의 스크린샷]
 
-    **그림 1** 실행 상태를 사용 하 여 스케일 아웃 파일 서버를 표시 하는 장애 조치(Failover) 클러스터 관리자
+    **그림 1** 실행 상태가 스케일 아웃 파일 서버를 표시 하 장애 조치(Failover) 클러스터 관리자
 
 > [!NOTE]
 >  클러스터 된 역할을 만든 후 몇 분 또는 그 이상에 대 한 파일 공유를 만들 수 없게 하는 네트워크 전파 지연이 발생할 수 있습니다.  

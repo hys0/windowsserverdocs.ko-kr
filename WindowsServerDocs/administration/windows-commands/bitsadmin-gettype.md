@@ -1,8 +1,8 @@
 ---
 title: bitsadmin gettype
-description: Windows 명령 항목에 대 한 **bitsadmin gettype** -지정된 된 된 작업의 작업 유형을 검색 합니다.
+description: '**Bitsadmin gettype** 에 대 한 Windows 명령 항목-지정 된 작업의 작업 유형을 검색 합니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ff0118f14acbf4e9f37c02e660bd9c7f6e8d0f70
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ca46cb813809621f4fa79b3265198206729a392c
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59879434"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381343"
 ---
 # <a name="bitsadmin-gettype"></a>bitsadmin gettype
 
@@ -42,7 +42,7 @@ bitsadmin /GetType <Job>
 
 형식을 다운로드를 사용할 수 업로드-회신 또는 알 수 없는 업로드 합니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 다음 예제에서는 명명 된 작업에 대 한 작업 유형을 검색 *myDownloadJob*합니다.
 ```

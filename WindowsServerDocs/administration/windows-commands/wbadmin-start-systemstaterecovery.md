@@ -1,8 +1,8 @@
 ---
 title: wbadmin 시작 systemstaterecovery
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,29 +13,29 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4282da2011c39daec0315a7f3836d5517f29debb
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 6ae534eed26629be264b698869edc57232e2b571
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66440198"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71362217"
 ---
 # <a name="wbadmin-start-systemstaterecovery"></a>wbadmin 시작 systemstaterecovery
 
 
 
-위치를 지정 하는 백업에서 시스템 상태 복구를 수행 합니다.
+지정한 백업에서 특정 위치로 시스템 상태 복구를 수행 합니다.
 
 > [!NOTE]
 > Windows Server 백업 않습니다 백업이 나 시스템 상태 백업 또는 시스템 상태 복구의 일부로 레지스트리 사용자 하이브 (HKEY_CURRENT_USER)를 복구 합니다.
 
-이 하위 명령으로 시스템 상태 복구를 수행 하려면의 구성원 이어야 합니다 **Backup Operators** 그룹 또는 **관리자** 그룹 또는 사용자 받아야 적절 한 권한을 위임 합니다. 또한 실행 해야 **wbadmin** 상승된 된 명령 프롬프트에서. (관리자 권한 명령 프롬프트 마우스를 열려면 **Command Prompt**, 를 클릭 하 고 **관리자 권한으로 실행**.)
+이 하위 명령으로 시스템 상태 복구를 수행 하려면 **Backup Operators** 그룹 또는 **Administrators** 그룹의 구성원 이거나 적절 한 권한을 위임 받아야 합니다. 또한 실행 해야 **wbadmin** 상승된 된 명령 프롬프트에서. (관리자 권한 명령 프롬프트 마우스를 열려면 **Command Prompt**, 를 클릭 하 고 **관리자 권한으로 실행**.)
 
 이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
 
 ## <a name="syntax"></a>구문
 
-Windows Server 2008 용 구문:
+Windows Server 2008 구문:
 ```
 wbadmin start systemstaterecovery
 -version:<VersionIdentifier>
@@ -46,7 +46,7 @@ wbadmin start systemstaterecovery
 [-authsysvol]
 [-quiet]
 ```
-Windows Server 2008 R2 이상용 구문:
+Windows Server 2008 R2 이상에 대 한 구문:
 ```
 wbadmin start systemstaterecovery
 -version:<VersionIdentifier>
@@ -63,22 +63,22 @@ wbadmin start systemstaterecovery
 
 |매개 변수|설명|
 |---------|-----------|
-|-버전|MM/DD/YYYY에서 복구 하려면 백업에 대 한 버전 식별자를 지정 합니다-hh: mm 형식입니다. 버전 식별자를 모르는 경우 입력 **wbadmin 버전 가져오기**합니다.|
-|-showsummary|(작업을 완료 하는 데 필요한 다시 시작) 후 마지막 시스템 상태 복구의 요약을 보고 합니다. 이 매개 변수 기타 매개 변수 표시 될 수 없습니다.|
-|-backupTarget|복구 하려는 백업을 포함 하는 저장소 위치를 지정 합니다. 이 매개 변수는 저장소 위치는이 컴퓨터의 백업을 일반적으로 저장 된 위치에서 다른 경우에 유용 합니다.|
+|-버전|복원할 백업에 대 한 버전 식별자를 MM/DD/YYYY-HH: MM 형식으로 지정 합니다. 버전 식별자를 모르는 경우 입력 **wbadmin 버전 가져오기**합니다.|
+|-showsummary|작업을 완료 하기 위해 다시 시작 해야 하는 마지막 시스템 상태 복구의 요약 정보를 보고 합니다. 이 매개 변수는 다른 매개 변수와 함께 사용할 수 없습니다.|
+|-backupTarget|복구 하려는 백업이 포함 된 저장소 위치를 지정 합니다. 이 매개 변수는 저장소 위치가이 컴퓨터의 백업이 일반적으로 저장 되는 위치와 다른 경우에 유용 합니다.|
 |-컴퓨터|복구 하려는 컴퓨터의 이름을 지정 합니다. 이 매개 변수 같은 위치에 여러 대의 컴퓨터 백업 된 경우에 유용 합니다. 경우에 사용 해야는 **-backupTarget** 매개 변수를 지정 합니다.|
-|-recoveryTarget|복원 하려면 디렉터리를 지정 합니다. 이 매개 변수는 대체 위치에 백업을 복원 하는 경우에 유용 합니다.|
-|-authsysvol|를 사용 하는 경우에 SYSVOL (시스템 볼륨이 공유 디렉터리)의 정식 복원을 수행 합니다.|
-|-autoReboot|시스템 상태 복구 작업을 끝에 시스템을 다시 시작 하도록 지정 합니다. 이 매개 변수는 원래 위치로 복구에 대해서만 유효 합니다. 복구 작업 후 단계를 수행 해야 할 경우이 매개 변수를 사용 하는 것은 좋지 않습니다.|
+|-recoveryTarget|복원할 디렉터리를 지정 합니다. 이 매개 변수는 백업이 대체 위치로 복원 되는 경우에 유용 합니다.|
+|-authsysvol|사용 되는 경우 SYSVOL (시스템 볼륨 공유 디렉터리)의 정식 복원을 수행 합니다.|
+|-autoReboot|시스템 상태 복구 작업이 끝날 때 시스템을 다시 시작 하도록 지정 합니다. 이 매개 변수는 원래 위치로 복구 하는 경우에만 유효 합니다. 복구 작업 후에 단계를 수행 해야 하는 경우에는이 매개 변수를 사용 하지 않는 것이 좋습니다.|
 |-quiet|사용자에 게 하위 명령 프롬프트 없이 실행 됩니다.|
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
-- 백업의 시스템 상태 복구를 03/31/2013에서 오전 9 시를 수행 하려면 다음을 입력 합니다.  
+- 03/31/2013에서 오전 9:00에 백업 시스템 상태 복구를 수행 하려면 다음을 입력 합니다.  
   ```
   wbadmin start systemstaterecovery -version:03/31/2013-09:00
   ```  
-- 04/30/2013에서 오전 9 시 백업의 시스템 상태 복구를 수행 하려면 공유 리소스에 대해 저장 된 \\ \\servername\share server01, 유형:  
+- 04/30/2013에서 오전 9:00에 백업 시스템 상태 복구를 수행 하려면 server01에 대 한 공유 리소스 \\ @ no__t-1servername\share에 저장 됩니다.  
   ```
   wbadmin start systemstaterecovery -version:04/30/2013-09:00 -backupTarget:\\servername\share -machine:server01
   ```

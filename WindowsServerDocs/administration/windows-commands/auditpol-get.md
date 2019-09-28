@@ -1,8 +1,8 @@
 ---
-title: auditpol get
-description: Windows 명령 항목에 대 한 **auditpol get** -시스템 정책, 사용자별 정책, 감사 옵션 및 감사 보안 설명자 개체를 검색 합니다.
+title: auditpol 가져오기
+description: Windows 명령 항목 **auditpol get** -시스템 정책, 사용자별 정책, 감사 옵션 및 감사 보안 설명자 개체를 검색 합니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 03ba59b19af42ab2d3fdd1dd52d976d381779640
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 296fc5afb540411d76b563faca42fc045b8df3b3
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66435138"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71382492"
 ---
-# <a name="auditpol-get"></a>auditpol get
+# <a name="auditpol-get"></a>auditpol 가져오기
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -41,19 +41,19 @@ auditpol /get
 |  매개 변수   |                                                                                                                                         설명                                                                                                                                          |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    /user     | 사용자 단위 감사 정책을 쿼리할 때 사용자에 대 한 보안 주체를 표시 합니다. /Category 또는 /subcategory 매개 변수를 지정 합니다. 사용자는 SID (보안 식별자) 또는 이름으로 지정할 수 있습니다. 사용자 계정을 지정 하지 않으면, 시스템 감사 정책 쿼리 됩니다. |
-|  /category   |                                                          전역 고유 식별자 (GUID) 또는 이름으로 지정 된 하나 이상의 감사 범주입니다. 별표 (\*) 모든 감사 범주를 쿼리할 수를 나타내는 데 사용할 수 있습니다.                                                          |
+|  /category   |                                                          전역 고유 식별자 (GUID) 또는 이름으로 지정 된 하나 이상의 감사 범주입니다. 별표 (\*)는 모든 감사 범주를 쿼리해야 함을 나타내는 데 사용할 수 있습니다.                                                          |
 | /subcategory |                                                                                                                  하나 이상의 감사 하위 범주 GUID 또는 이름을 지정 합니다.                                                                                                                  |
 |     /sd      |                                                                                                        감사 정책에 대 한 액세스 권한을 위임 하는 데 사용 되는 보안 설명자를 검색 합니다.                                                                                                        |
-|   /option    |                                                                              CrashOnAuditFail, 트래버스, AuditBaseObjects, 또는 AuditBasedirectories 옵션에 대 한 기존 정책을 검색합니다.                                                                               |
+|   /option    |                                                                              CrashOnAuditFail, 트래버스, AuditBaseObjects 또는 Auditbaseobjects 옵션에 대 한 기존 정책을 검색 합니다.                                                                               |
 |      /r      |                                                                                                              보고서 형식으로 쉼표로 구분 된 값 (CSV) 출력을 표시합니다.                                                                                                              |
 |      /?      |                                                                                                                             명령 프롬프트에 도움말을 표시합니다.                                                                                                                             |
 
 ## <a name="remarks"></a>설명
 모든 범주 및 하위 GUID 또는 따옴표로 묶인 이름으로 지정할 수 있습니다. 사용자는 SID 또는 이름으로 지정할 수 있습니다.
-사용자별 정책 및 시스템 정책에 대 한 모든 get 연산에 대 한 보안 설명자에 설정 된 해당 개체에 대 한 권한이 읽기 있어야 합니다. 처리 하는 개체로 get 작업을 수행할 수도 있습니다는 **관리 감사 및 보안 로그** (SeSecurityPrivilege) 사용자 권한이 있습니다. 그러나이 권한은 가져오기 작업을 수행할 필요가 없는 추가 액세스를 허용 합니다.
-## <a name="BKMK_examples"></a>예제
+사용자 정책 및 시스템 정책에 대 한 모든 가져오기 작업의 경우 보안 설명자에 설정 된 해당 개체에 대 한 읽기 권한이 있어야 합니다. 처리 하는 개체로 get 작업을 수행할 수도 있습니다는 **관리 감사 및 보안 로그** (SeSecurityPrivilege) 사용자 권한이 있습니다. 그러나이 권한은 가져오기 작업을 수행할 필요가 없는 추가 액세스를 허용 합니다.
+## <a name="BKMK_examples"></a>예와
 ### <a name="examples-for-the-per-user-audit-policy"></a>사용자 단위 감사 정책에 대 한 예제
-추적 세부 게스트 계정에 대 한 사용자 단위 감사 정책을 검색 하 고 시스템에 대 한 출력을 표시 하 고 개체 액세스 범주를 입력 합니다.
+게스트 계정에 대 한 사용자 단위 감사 정책을 검색 하 고 시스템, 자세한 추적 및 개체 액세스 범주에 대 한 출력을 표시 하려면 다음을 입력 합니다.
 ```
 auditpol /get /user:{S-1-5-21-1443922412-3030960370-963420232-51} /category:"System","detailed Tracking","Object Access"
 ```
@@ -72,7 +72,7 @@ auditpol /get /user:{S-1-5-21-1443922412-3030960370-963420232-51} /category:"Sys
 > ```
 > auditpol /get /category:"System" /subcategory:{0ccee921a-69ae-11d9-bed3-505054503030}
 > ```
-> 자세한 추적 범주 및 하위 보고서 형식에서에 대 한 정책 검색 및 컴퓨터 이름, 정책 대상, 하위 범주, 하위 범주 GUID, 설정 포함 및 제외 설정 형식 포함:
+> 세부 추적 범주 및 하위 범주에 대 한 정책을 보고서 형식으로 검색 하 고 컴퓨터 이름, 정책 대상, 하위 범주, 하위 범주 GUID, 포함 설정 및 제외 설정을 포함 하려면 다음을 입력 합니다.
 > ```
 > auditpol /get /category:"detailed Tracking" /r
 > ```
@@ -86,8 +86,8 @@ auditpol /get /user:{S-1-5-21-1443922412-3030960370-963420232-51} /category:"Sys
 > auditpol /get /option:AuditBaseObjects
 > ```
 > [!NOTE]
-> 사용 가능한 옵션은 AuditBaseObjects, AuditBaseOperations, 및 트래버스 됩니다.
-> 사용 상태를 검색 하려면 사용 안 함, 또는 2-crashonauditfail 옵션 2 입력 합니다.
+> 사용할 수 있는 옵션은 AuditBaseObjects, Auditbaseobjects 및 트래버스입니다.
+> 사용, 사용 안 함 또는 CrashOnAuditFail 옵션의 2 상태를 검색 하려면 다음을 입력 합니다.
 > ```
 > auditpol /get /option:CrashOnAuditFail /r
 > ```

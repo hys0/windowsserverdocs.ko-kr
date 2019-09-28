@@ -1,8 +1,8 @@
 ---
 title: 가져오기
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ddef3958bc431519e3cb89b658a58d1f4dba6938
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 50a095c323806dd523994c36c5b427d4ecedf8ef
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59835264"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71375497"
 ---
 # <a name="import"></a>가져오기
 
@@ -39,7 +39,7 @@ import
 -   전송 가능한 섀도 복사본 즉시 시스템에 저장 되지 않습니다. 세부 정보는 DiskShadow에서 자동으로 요청 하 고 작업 디렉터리에.cab 메타 데이터 파일에 저장 된 백업 구성 요소 문서 XML 파일을에 저장 됩니다. 사용 하 여이 파일의 이름과 경로 변경할 수는 **메타 데이터 설정** 명령입니다.
 -   사용 하려면 먼저 **가져오기**, 를 사용 하 여 DiskShadow 메타 데이터 파일을 로드 해야는 **메타 데이터를 로드** 명령입니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 다음은의 사용을 보여 주는 샘플 DiskShadow 스크립트는 **가져올** 명령:
 ```

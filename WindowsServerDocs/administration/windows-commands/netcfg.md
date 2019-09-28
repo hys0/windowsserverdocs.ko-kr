@@ -1,8 +1,8 @@
 ---
 title: netcfg
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: aed535f843da6d735526ea97c07f94564dc00dc6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8f8368aaff16592a55cc9def84d593cf323f28ee
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59871324"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71373294"
 ---
 # <a name="netcfg"></a>netcfg
 
@@ -40,7 +40,7 @@ netcfg [/v] [/e] [/winpe] [/l ] /c /i
 |/i|구성 요소 ID를 제공합니다.|  
 |/s|구성 요소를 표시 유형을 제공합니다<br /><br />\ta 어댑터, n = = net 구성 요소|  
 |/?|명령 프롬프트에 도움말을 표시합니다.|  
-## <a name="BKMK_Examples"></a>예제  
+## <a name="BKMK_Examples"></a>예와  
 프로토콜을 설치 하려면 *예제* c:\oemdir\example.inf를 사용 하 여:  
 ```  
 netcfg /l c:\oemdir\example.inf /c p /i example  

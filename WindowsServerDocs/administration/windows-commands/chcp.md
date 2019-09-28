@@ -1,8 +1,8 @@
 ---
 title: chcp
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 622d4b64128c7e39cc761e4f5e9d69cf54383760
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d5784b052ff1d7084d68cca0589caf518b8e44a8
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59819204"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71379531"
 ---
 # <a name="chcp"></a>chcp
 
@@ -38,7 +38,7 @@ chcp [<NNN>]
 
 |매개 변수|설명|
 |---------|-----------|
-|\<NNN>|코드 페이지를 지정합니다.|
+|\<NNN >|코드 페이지를 지정합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
 다음 표에서 각 지원 되는 코드 페이지와 국가/지역 또는 언어를 나열합니다.
@@ -64,17 +64,17 @@ chcp [<NNN>]
 -   코드 페이지 (MS-DOS)에서 같이 준비 필요가 없습니다.
 -   한 후 시작 되는 프로그램 새 코드 페이지 사용 하는 새 코드 페이지를 할당 합니다. 그러나 (Cmd.exe) 제외 하기 전에 시작 하는 프로그램 원본 코드 페이지는 새 코드 페이지 사용을 할당 합니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 현재 코드 페이지 설정을 보려면 다음을 입력 합니다.
 ```
 chcp
 ```
-다음과 유사한 메시지가 표시 됩니다.
+다음과 비슷한 메시지가 표시 됩니다.
 
 `Active code page: 437`
 
-현재 코드 페이지 850 (다국어)을 변경 하려면 다음을 입력 합니다.
+활성 코드 페이지를 850 (다국어)로 변경 하려면 다음을 입력 합니다.
 ```
 chcp 850
 ```

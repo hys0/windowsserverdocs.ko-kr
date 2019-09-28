@@ -1,8 +1,8 @@
 ---
 title: bitsadmin getvalidationstate
-description: 'Windows 명령 항목에 대 한 **bitsadmin getvalidationstate** -작업 내에서 지정된 된 파일의 콘텐츠 유효성 검사 상태를 보고 합니다. '
+description: '**Bitsadmin getvalidationstate** 에 대 한 Windows 명령 항목-작업 내에서 지정 된 파일의 콘텐츠 유효성 검사 상태를 보고 합니다. '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8abff3fc9fddb9cff1758739fdc540a9c945efe2
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ca4269a596010258edd0479f5a7e9844bc9c98df
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59879164"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381263"
 ---
 # <a name="bitsadmin-getvalidationstate"></a>bitsadmin getvalidationstate
 
@@ -39,7 +39,7 @@ bitsadmin /GetValidationState <Job> <file index>
 |작업|작업의 표시 이름 또는 GUID|
 |파일 인덱스|0부터 시작|
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 다음 예제에서는 명명 된 작업 내에서 2 파일의 콘텐츠 유효성 검사 상태를 가져옵니다 *myJob*합니다.
 ```

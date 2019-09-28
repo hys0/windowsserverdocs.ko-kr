@@ -1,9 +1,9 @@
 ---
 title: MultiPoint 서비스에 마이그레이션 준비
-description: Windows Server 2016에서 MultiPoint 서비스를 마이그레이션하기 전에 수집 하는 정보를 설명 합니다.
+description: Windows Server 2016에서 MultiPoint 서비스로 마이그레이션하기 전에 수집할 정보에 대해 설명 합니다.
 ms.custom: na
 ms.date: 07/29/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ ms.assetid: 3060c531-98a2-4957-a02c-be273f25f493
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.openlocfilehash: 9650ebcae7e6207a226617d401d892049405901f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d0f1fd22b00bdb2e5e3684a541dd14532fd885e6
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59824384"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71394650"
 ---
 # <a name="prepare-to-migrate-to-multipoint-services-in-windows-server-2016"></a>Windows Server 2016에서 MultiPoint 서비스에 마이그레이션 준비
 

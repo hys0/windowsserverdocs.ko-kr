@@ -1,8 +1,8 @@
 ---
 title: Sc delete
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 68af5f118b2cc9d7941abddccd2a1bc7fde4c6d0
-ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
+ms.openlocfilehash: ad64d0f7c772b8d29a191b5f3e690d74c8765717
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/25/2019
-ms.locfileid: "66222932"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71371283"
 ---
 # <a name="sc-delete"></a>Sc delete
 
@@ -38,8 +38,8 @@ sc [<ServerName>] delete [<ServiceName>]
 
 |매개 변수|설명|
 |---------|-----------|
-|\<ServerName>|서비스 위치는 원격 서버의 이름을 지정 합니다. 이름에는 범용 명명 규칙 (UNC) 형식을 사용 해야 합니다 (예를 들어 \\ \\myserver). SC.exe를 로컬로 실행 하려면이 매개 변수를 생략 합니다.|
-|\<ServiceName>|반환 된 서비스 이름을 지정는 **getkeyname** 작업 합니다.|
+|\<ServerName >|서비스 위치는 원격 서버의 이름을 지정 합니다. 이름에는 UNC (범용 명명 규칙) 형식을 사용 해야 합니다 (예: \\ @ no__t-1myserver). SC.exe를 로컬로 실행 하려면이 매개 변수를 생략 합니다.|
+|\<ServiceName >|반환 된 서비스 이름을 지정는 **getkeyname** 작업 합니다.|
 |?|명령 프롬프트에 도움말을 표시합니다.|
 
 ## <a name="remarks"></a>설명

@@ -2,7 +2,7 @@
 title: prompt
 description: 명령 프롬프트를 사용자 지정 하는 방법을 알아봅니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 8371a67ba1b8dc7d5f02272c809f916aae3df584
-ms.sourcegitcommit: 6f968368c12b9dd699c197afb3a3d13c2211f85b
+ms.openlocfilehash: 2df80d3af6344644a68b1b2d01ba48fbf41f1581
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68544553"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71372025"
 ---
 # <a name="prompt"></a>prompt
 
@@ -38,7 +38,7 @@ prompt [<Text>]
 
 |매개 변수|설명|
 |---------|-----------|
-|\<텍스트 >|텍스트 및 명령 프롬프트에 포함 하려는 정보를 지정 합니다.|
+|\< 텍스트 >|텍스트 및 명령 프롬프트에 포함 하려는 정보를 지정 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
 ## <a name="remarks"></a>설명
@@ -58,7 +58,7 @@ prompt [<Text>]
 |    $n     |                                현재 드라이브                                |
 |    $g     |                            > (보다 큼 기호)                            |
 |    $l     |                             < (보다 작음 부호)                              |
-|    $b     |                              \|(파이프 기호)                               |
+|    $b     |                              \| (파이프 기호)                               |
 |    $_     |                               입력 줄 바꿈                                |
 |    $e     |                         ANSI 이스케이프 코드 (27)                          |
 |    $h     | 백스페이스 (명령줄에 작성 된 문자) |

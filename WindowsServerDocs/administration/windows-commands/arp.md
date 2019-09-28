@@ -2,7 +2,7 @@
 title: arp
 description: '**Arp** 의 Windows 명령 항목-IP 주소 및 확인 된 실제 주소를 저장 하는 데 사용 되는 arp (주소 확인 프로토콜) 캐시에 있는 항목을 표시 하 고 수정 합니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8354df3f52790840e0cb0c5c9834da2722d27d43
-ms.sourcegitcommit: 0e3c2473a54f915d35687d30d1b4b1ac2bae4068
+ms.openlocfilehash: 1e6d34ceaa56ed40a1083b710e0db01b106f49e2
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68914691"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71382656"
 ---
 # <a name="arp"></a>arp
 
@@ -33,10 +33,10 @@ arp [/a [<Inetaddr>] [/n <ifaceaddr>]] [/g [<Inetaddr>] [-n <ifaceaddr>]] [/d <I
 
 |                매개 변수                |                                                                                                                                                                                                                                                               설명                                                                                                                                                                                                                                                               |
 |-----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    /a [<Inetaddr>] [/n <ifaceaddr>]     | 모든 인터페이스에 대 한 현재 arp 캐시 테이블을 표시 합니다. /N 매개 변수는 대 소문자를 구분 합니다.<br /><br />특정 IP 주소에 대 한 arp 캐시 항목을 표시 하려면 *Inetaddr* 매개 변수와 함께 **arp/a** 를 사용 합니다. 여기서 *Inetaddr* 는 IP 주소입니다. *Inetaddr* 를 지정 하지 않으면 첫 번째 적용 가능한 인터페이스가 사용 됩니다.<br /><br />특정 인터페이스에 대 한 arp 캐시 테이블을 표시 하려면 **/n** _ 매개 변수를 **/a** 매개 변수와 함께 사용 합니다. 여기서 *ifaceaddr* 는 인터페이스에 할당 된 IP 주소입니다. |
+|    /a [<Inetaddr>] [/n <ifaceaddr>]     | 모든 인터페이스에 대 한 현재 arp 캐시 테이블을 표시 합니다. /N 매개 변수는 대 소문자를 구분 합니다.<br /><br />특정 IP 주소에 대 한 arp 캐시 항목을 표시 하려면 *Inetaddr* 매개 변수와 함께 **arp/a** 를 사용 합니다. 여기서 *Inetaddr* 는 IP 주소입니다. *Inetaddr* 를 지정 하지 않으면 첫 번째 적용 가능한 인터페이스가 사용 됩니다.<br /><br />특정 인터페이스에 대 한 arp 캐시 테이블을 표시 하려면 **/n**_ifaceaddr_ 매개 변수를 **/a** 매개 변수와 함께 사용 합니다. 여기서 *ifaceaddr* 는 인터페이스에 할당 된 IP 주소입니다. |
 |    /g [<Inetaddr>] [/n <ifaceaddr>]     |                                                                                                                                                                                                                                                          동일 **/a**합니다.                                                                                                                                                                                                                                                           |
 |      [/d <Inetaddr> [<ifaceaddr>]       |                                                                                           특정 IP 주소를 사용 하 여 항목을 삭제 합니다. 여기서 *Inetaddr* 는 ip 주소입니다.<br /><br />특정 인터페이스에 대 한 테이블에서 항목을 삭제 하려면 *ifaceaddr* 매개 변수를 사용 합니다. 여기서 *ifaceaddr* 는 인터페이스에 할당 된 IP 주소입니다.<br /><br />모든 항목을 삭제 하려면 *Inetaddr*대신 별표 (\*) 와일드 카드 문자를 사용 합니다.                                                                                           |
-| /s <Inetaddr> [<Etheraddr> ]<ifaceaddr> |                                                                                                                     IP 주소 *Inetaddr* 를 확인 하는 arp 캐시에 정적 항목을 추가 합니다. *Etheraddr*.<br /><br />정적 arp 캐시 항목을 특정 인터페이스에 대 한 테이블에 추가 하려면 *ifaceaddr* 매개 변수를 사용 합니다. 여기서 *ifaceaddr* 는 인터페이스에 할당 된 IP 주소입니다.                                                                                                                     |
+| /s <Inetaddr> <Etheraddr> [<ifaceaddr>] |                                                                                                                     IP 주소 *Inetaddr* 를 확인 하는 arp 캐시에 정적 항목을 추가 합니다. *Etheraddr*.<br /><br />정적 arp 캐시 항목을 특정 인터페이스에 대 한 테이블에 추가 하려면 *ifaceaddr* 매개 변수를 사용 합니다. 여기서 *ifaceaddr* 는 인터페이스에 할당 된 IP 주소입니다.                                                                                                                     |
 |                   /?                    |                                                                                                                                                                                                                                                  명령 프롬프트에 도움말을 표시합니다.                                                                                                                                                                                                                                                   |
 
 ## <a name="remarks"></a>설명

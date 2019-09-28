@@ -2,18 +2,18 @@
 title: 알림 제한 구성
 description: 이 문서에서는 다양한 알림 유형에 시간 제한을 추가하는 방법을 설명합니다.
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: dba5b3b3c8b651935ec3c69695583d04087b7f2d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4a33b7f125479da1e7b701f5427a0f15903caf66
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59826314"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71401947"
 ---
 # <a name="configure-notification-limits"></a>알림 제한 구성
 
@@ -23,7 +23,7 @@ ms.locfileid: "59826314"
 
 -   전자 메일
 -   이벤트 로그
--   Command
+-   명령
 -   보고서
 
 각 제한은 동일한 문제에 대한 같은 유형의 구성된 알림이 생성되기 전의 기간을 지정합니다.
@@ -43,5 +43,5 @@ ms.locfileid: "59826314"
 
 ## <a name="see-also"></a>참조
 
--   [설정 파일 서버 리소스 관리자 옵션](setting-file-server-resource-manager-options.md)
+-   [파일 서버 리소스 관리자 옵션 설정](setting-file-server-resource-manager-options.md)
 -   [명령줄 도구](command-line-tools.md)

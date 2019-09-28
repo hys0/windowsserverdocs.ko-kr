@@ -1,8 +1,8 @@
 ---
 title: bitsadmin 피어 및 도움말
-description: Windows 명령 항목에 대 한 **bitsadmin 피어 및 도움말** -에 대 한 명령줄 사용법을 표시 합니다 **피어** 스위치입니다.
+description: '**Bitsadmin 피어 및 도움말** 에 대 한 Windows 명령 항목- **피어** 스위치에 대 한 명령줄 사용법을 표시 합니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 90231e6bbc467b0798548e098491aae2de9616ca
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 0a61c16c9fb390409697b11586ac05384b56f07e
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59856314"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71380936"
 ---
 # <a name="bitsadmin-peers-and-help"></a>bitsadmin 피어 및 도움말
 
 
 
-에 대 한 명령줄 사용법을 표시 합니다 **피어** 스위치입니다.
+**피어** 스위치에 대 한 명령줄 사용법을 표시 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -32,9 +32,9 @@ ms.locfileid: "59856314"
 Bitsadmin /Peers /Help 
 ```
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
-다음 명령은 표시에 대 한 명령줄 도움말은 **피어** 스위치입니다.
+다음 명령은 **피어** 스위치에 대 한 명령줄 도움말을 표시 합니다.
 ```
 Bitsadmin /Peers /Help
 ```

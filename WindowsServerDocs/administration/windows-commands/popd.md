@@ -1,8 +1,8 @@
 ---
 title: popd
-description: Pushd 명령에 의해 가장 최근에 저장 된 디렉터리에 디렉터리를 변경 하는 방법에 알아봅니다.
+description: 디렉터리를 pushd 명령으로 가장 최근에 저장 한 디렉터리로 변경 하는 방법에 대해 알아봅니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,19 +13,19 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 6da6dc9d1fc2d8965f8a081831cb1150375209a4
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8a9e0a301a5f8b46e1907a4f43c5ed9247b85f77
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59827464"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71372234"
 ---
 # <a name="popd"></a>popd
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-가장 최근에 저장 한 디렉터리로 현재 디렉터리를 변경 합니다 **pushd** 명령입니다.
-이 명령을 사용 하는 방법의 예제를 참조 하세요 [예제](#BKMK_examples)합니다.
+현재 디렉터리를 **pushd** 명령으로 가장 최근에 저장 한 디렉터리로 변경 합니다.
+이 명령을 사용 하는 방법에 대 한 예는 [예제](#BKMK_examples)를 참조 하세요.
 
 ## <a name="syntax"></a>구문
 ```
@@ -38,13 +38,13 @@ popd
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
 ## <a name="remarks"></a>설명
--   사용할 때마다 합니다 **pushd** 명령 사용에 대 한 단일 디렉터리에 저장 됩니다. 그러나 사용 하 여 여러 디렉터리를 저장할 수 있습니다 합니다 **pushd** 여러 번 명령입니다.
-    디렉터리 가상 스택에 순차적으로 저장 됩니다. 사용 하는 경우는 **pushd** 명령을 사용 하는 디렉터리는 스택의 맨 아래에 배치 되 면 명령입니다. 명령을 다시 사용 하는 경우 두 번째 디렉터리는 첫 번째 위에 배치 됩니다. 프로세스를 사용할 때마다 반복 합니다 **pushd** 명령입니다.
-    사용할 수는 **popd** 하 여 가장 최근에 저장 된 디렉터리를 현재 디렉터리를 변경 하는 명령 합니다 **pushd** 명령입니다. 사용 하는 경우는 **popd** 명령, 스택의 맨 위에 디렉터리 스택에서 제거 되 고 현재 디렉터리에는 해당 디렉터리로 변경 됩니다. 사용 하는 경우는 **popd** 명령을 다시, 스택에서 다음 디렉터리에서 제거 됩니다.
--   명령 확장을 사용 하는 경우는 **popd** 명령을 사용 하 여 만든 모든 드라이브 문자 할당 제거 **pushd**합니다.
+-   **Pushd** 명령을 사용할 때마다 단일 디렉터리를 사용할 수 있도록 저장 됩니다. 그러나 **pushd** 명령을 여러 번 사용 하 여 여러 디렉터리를 저장할 수 있습니다.
+    디렉터리는 가상 스택에 순차적으로 저장 됩니다. **Pushd** 명령을 한 번 사용 하는 경우 명령을 사용 하는 디렉터리가 스택의 맨 아래에 배치 됩니다. 명령을 다시 사용 하는 경우 첫 번째 디렉터리가 첫 번째 디렉터리 위에 배치 됩니다. **Pushd** 명령을 사용할 때마다 프로세스가 반복 됩니다.
+    **Popd** 명령을 사용 하 여 현재 디렉터리를 **pushd** 명령으로 가장 최근에 저장 한 디렉터리로 변경할 수 있습니다. **Popd** 명령을 사용 하면 스택의 맨 위에 있는 디렉터리가 스택에서 제거 되 고 현재 디렉터리가 해당 디렉터리로 변경 됩니다. 사용 하는 경우는 **popd** 명령을 다시, 스택에서 다음 디렉터리에서 제거 됩니다.
+-   명령 확장을 사용 하도록 설정 하면 **popd** 명령은 **pushd**에서 만든 드라이브 문자 assignations 제거 합니다.
 
-## <a name="BKMK_examples"></a>예제
-다음 예제에서는 사용 하는 방법을 보여 줍니다는 **pushd** 명령 및 **popd** 일괄 프로그램 실행 되 고 다음 다시 변경 하는 것에서 현재 디렉터리를 변경 하려면 일괄 프로그램에서 명령을 합니다.
+## <a name="BKMK_examples"></a>예와
+다음 예에서는 배치 프로그램에서 **pushd** 명령과 **popd** 명령을 사용 하 여 batch 프로그램이 실행 된 디렉터리에서 현재 디렉터리를 변경한 다음 다시 변경 하는 방법을 보여 줍니다.
 
 ```
 @echo off

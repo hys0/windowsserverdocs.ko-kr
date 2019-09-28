@@ -1,8 +1,8 @@
 ---
 title: bdehdcfg 다시 시작
-description: Windows 명령 항목 지시 bdehdcfg bdehdcfg 다시 시작-는 컴퓨터를 다시 시작 해야 드라이브 준비 완료 된 후입니다.
+description: Bdehdcfg 다시 시작에 대 한 Windows 명령 항목-드라이브 준비가 완료 된 후 컴퓨터를 다시 시작 해야 함을 bdehdcfg에 게 알립니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0f361db8fdf33bd414556575de75241f7dbd9327
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e6c4e48b051f567c98ea679feaa22f995982a899
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59879464"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71382207"
 ---
 # <a name="bdehdcfg-restart"></a>bdehdcfg: 다시 시작
 
@@ -40,7 +40,7 @@ bdehdcfg -target {default|unallocated|<DriveLetter> shrink|<DriveLetter> merge} 
 
 다른 사용자가 컴퓨터에 로그온 하는 경우와 **quiet** 명령을 지정 하지 않으면, 컴퓨터를 다시 시작 해야 있는지 확인 하는 메시지가 표시 됩니다.
 
-## <a name="BKMK_Examples"></a>예제
+## <a name="BKMK_Examples"></a>예와
 
 다음 예제를 사용 하는 **다시 시작** 명령입니다.
 ```

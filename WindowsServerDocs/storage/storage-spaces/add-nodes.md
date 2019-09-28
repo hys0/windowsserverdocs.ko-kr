@@ -1,21 +1,21 @@
 ---
 ms.assetid: 898d72f1-01e7-4b87-8eb3-a8e0e2e6e6da
 title: 저장소 공간 다이렉트에 서버 또는 드라이브 추가
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: cosdar
 ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 11/06/2017
-description: 저장소 공간 다이렉트 클러스터에 서버 또는 드라이브를 추가 하는 방법
+description: 스토리지 공간 다이렉트 클러스터에 서버 또는 드라이브를 추가 하는 방법
 ms.localizationpriority: medium
-ms.openlocfilehash: ae639b920788911dbc16952d7b61aab85b0a391b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3d5949b8fce7253371ee7ecea5118596f713f037
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59833454"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71393776"
 ---
 # <a name="adding-servers-or-drives-to-storage-spaces-direct"></a>저장소 공간 다이렉트에 서버 또는 드라이브 추가
 
@@ -23,7 +23,7 @@ ms.locfileid: "59833454"
 
 이 항목에서는 저장소 공간 다이렉트에 서버 또는 드라이브를 추가하는 방법에 대해 설명합니다.
 
-## <a name="adding-servers"></a> 서버 추가
+## <a name="adding-servers"></a>서버 추가
 
 규모 확장이라고도 하는 서버 추가는 저장소 용량을 추가하고, 저장소 성능을 개선하고, 저장소 효율성을 더욱 높입니다. 하이퍼 수렴형 배포인 경우 서버를 추가하면 워크로드에 더 많은 계산 리소스가 제공됩니다.
 
@@ -53,7 +53,7 @@ Add-ClusterNode -Name NewNode
 
 ### <a name="from-2-to-3-servers-unlocking-three-way-mirroring"></a>서버 2개에서 3개로: 3방향 미러링 잠금 해제
 
-![2-노드 클러스터에 세 번째 서버를 추가합니다.](media/add-nodes/Scaling-2-to-3.png)
+![2 개 노드 클러스터에 세 번째 서버 추가](media/add-nodes/Scaling-2-to-3.png)
 
 서버가 두 개인 경우 양방향 미러 볼륨만 만들 수 있습니다(분산형 RAID-1과 비교). 서버가 세 개이면 더 높은 내결함성을 위해 3방향 미러 볼륨을 만들 수 있습니다. 가능하면 3방향 미러링을 사용하는 것이 좋습니다.
 
@@ -91,7 +91,7 @@ New-Volume -FriendlyName <Name> -FileSystem CSVFS_ReFS -StoragePoolFriendlyName 
 
 ### <a name="from-3-to-4-servers-unlocking-dual-parity"></a>서버 3개에서 4개로: 이중 패리티 잠금 해제
 
-![네 번째 서버 3 개 노드 클러스터에 추가](media/add-nodes/Scaling-3-to-4.png)
+![3 개 노드 클러스터에 네 번째 서버 추가](media/add-nodes/Scaling-3-to-4.png)
 
 서버가 네 개인 경우 삭제 코딩(erasure coding)이라고도 하는 이중 패리티를 사용할 수 있습니다(분산형 RAID-6과 비교). 이 경우 3방향 미러링과 동일한 내결함성이 제공되지만 저장소 효율성은 더 높습니다. 자세한 내용은 [내결함성 및 저장소 효율성](storage-spaces-fault-tolerance.md)을 참조하세요.
 
@@ -166,14 +166,14 @@ New-Volume -FriendlyName "Sir-Mix-A-Lot" -FileSystem CSVFS_ReFS -StoragePoolFrie
 
 3. [서버 추가](#adding-servers)에 설명된 대로 클러스터에 서버를 추가합니다. 새 서버를 클러스터에 추가하면 자동으로 자리 표시자 장애 도메인과 연결됩니다(자체 이름 사용).
 
-## <a name="adding-drives"></a> 드라이브 추가
+## <a name="adding-drives"></a>드라이브 추가
 
 드라이브 추가(강화라고도 함)는 저장소 용량을 추가하고 성능도 향상할 수 있습니다. 사용 가능한 슬롯이 있는 경우 서버를 추가하지 않고 각 서버에 드라이브를 추가하여 저장소 용량을 확장할 수 있습니다. 캐시 드라이브 또는 용량 드라이브를 언제든지 독립적으로 추가할 수 있습니다.
 
    >[!IMPORTANT]
    > 모든 서버를 동일한 저장소 구성으로 구성하는 것이 좋습니다.
 
-![애니메이션 추가 보여주는 시스템 드라이브](media/add-nodes/Scale-Up.gif)
+![디스크를 시스템과 함께 추가 하는 애니메이션](media/add-nodes/Scale-Up.gif)
 
 확장하려면 드라이브를 연결하고 Windows에서 이를 검색하는지 확인합니다. 드라이버가 PowerShell의 **Get-PhysicalDisk** cmdlet의 출력에 표시되어야 하고 **CanPool** 속성이 **True**로 설정되어야 합니다. 속성이 **CanPool = False**로 표시되면 **CannotPoolReason** 속성을 확인하여 그 이유를 알아볼 수 있습니다.
 
@@ -190,17 +190,17 @@ Get-PhysicalDisk | Select SerialNumber, CanPool, CannotPoolReason
 
 ## <a name="optimizing-drive-usage-after-adding-drives-or-servers"></a>드라이브 또는 서버를 추가한 후 드라이브 사용 최적화
 
-시간이 지남에 따라 드라이브 추가 또는 제거 하 고, 풀의 드라이브 간에 데이터 분포 수 균일 하지 않게 합니다. 경우에 따라이 가득 찬 풀에서 다른 드라이브에 훨씬 더 낮은 소비 하는 동안 특정 드라이브에서 발생할 수 있습니다.
+시간이 지남에 따라 드라이브를 추가 하거나 제거 하면 풀의 드라이브 간에 데이터를 분산 하는 것은 불균형 해질 수 있습니다. 일부 경우에는 특정 드라이브가 가득 차서 풀의 다른 드라이브가 훨씬 낮은 사용량을 초래할 수 있습니다.
 
-풀 에서도 드라이브 할당을 유지 하려면 저장소 공간 다이렉트 자동으로 드라이브 사용을 최적화 드라이브 또는 서버 (이 공유 SAS 엔클로저를 사용 하는 저장소 공간 시스템에 대 한 수동 프로세스) 풀에 추가한 후 합니다. 최적화 된 풀에 새 드라이브를 추가한 후 15 분을 시작 합니다. 풀 최적화 하므로 큰 하드 드라이브를 사용 하는 경우에 특히 시간 또는 완료 하는 일이 걸릴 수 있습니다를 우선 순위가 낮은 백그라운드 작업으로 실행 됩니다.
+풀에 대 한 드라이브 할당을 유지 하기 위해 스토리지 공간 다이렉트는 풀에 드라이브나 서버를 추가한 후 드라이브 사용을 자동으로 최적화 합니다 (공유 SAS 인클로저를 사용 하는 저장소 공간 시스템의 수동 프로세스). 최적화는 풀에 새 드라이브를 추가한 후 15 분이 지나면 시작 됩니다. 풀 최적화는 우선 순위가 낮은 백그라운드 작업으로 실행 되므로 특히 용량이 많은 하드 드라이브를 사용 하는 경우 완료 하는 데 몇 시간이 나 며칠 정도 걸릴 수 있습니다.
 
-라는 두 개의 작업-을 사용 하 여 최적화 *최적화* 라는 하나 *균형 다시 맞추기* -다음 명령 사용 하 여 진행률을 모니터링할 수 있습니다.
+최적화는 두 개의 작업 ( *최적화* 라고 함)과 *리 밸런스* 하나를 사용 합니다. 즉, 다음 명령을 사용 하 여 진행률을 모니터링할 수 있습니다.
 
 ```powershell
 Get-StorageJob
 ```
 
-수동으로 저장소 풀을 최적화할 수 있습니다 합니다 [Optimize-storagepool](https://docs.microsoft.com/powershell/module/storage/optimize-storagepool?view=win10-ps) cmdlet. 예를 들면 다음과 같습니다.
+[최적화-storagepool](https://docs.microsoft.com/powershell/module/storage/optimize-storagepool?view=win10-ps) cmdlet을 사용 하 여 저장소 풀을 수동으로 최적화할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```powershell
 Get-StoragePool <PoolName> | Optimize-StoragePool

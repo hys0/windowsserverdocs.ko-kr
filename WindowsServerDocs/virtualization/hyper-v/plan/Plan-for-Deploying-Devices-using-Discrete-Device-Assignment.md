@@ -1,7 +1,7 @@
 ---
 title: 불연속 장치 할당을 사용 하 여 장치 배포 계획
 description: Windows Server에서 DDA가 작동 하는 방식에 대해 알아봅니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 ms.technology: hyper-v
 ms.tgt_pltfrm: na
@@ -9,15 +9,15 @@ ms.topic: article
 author: chrishuybregts
 ms.author: chrihu
 ms.date: 02/06/2018
-ms.openlocfilehash: 7df7dbd1e7252f5bab451ed9272f9cbede63d223
-ms.sourcegitcommit: 216d97ad843d59f12bf0b563b4192b75f66c7742
+ms.openlocfilehash: 7084f4951ebe1d1203f4c9e45bc5f73cc6487a84
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476492"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71364186"
 ---
 # <a name="plan-for-deploying-devices-using-discrete-device-assignment"></a>불연속 장치 할당을 사용 하 여 장치 배포 계획
->적용 대상: Microsoft Hyper-v Server 2016, Windows Server 2016, Microsoft Hyper-v Server 2019, Windows Server 2019
+>적용 대상: Microsoft Hyper-V Server 2016, Windows Server 2016, Microsoft Hyper-V Server 2019, Windows Server 2019
 
 불연속 장치 할당을 통해 가상 머신 내에서 물리적 PCIe 하드웨어를 직접 액세스할 수 있습니다.  이 가이드에서는 불연속 장치 할당을 사용할 수 있는 장치 유형, 호스트 시스템 요구 사항, 가상 머신에 적용 되는 제한 사항 및 불연속 장치 할당의 보안 영향에 대해 설명 합니다.
 

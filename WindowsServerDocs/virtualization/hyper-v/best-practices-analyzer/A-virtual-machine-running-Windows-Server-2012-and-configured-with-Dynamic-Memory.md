@@ -1,7 +1,7 @@
 ---
 title: Windows Server 2012를 실행 하 고 동적 메모리를 사용 하 여 구성 하는 가상 컴퓨터 메모리 설정에 대 한 권장된 값을 사용 해야
-description: 이 모범 사례 분석기 규칙에 의해 보고 된 문제를 해결 하려면 지침을 제공 합니다.
-ms.prod: windows-server-threshold
+description: 이 모범 사례 분석기 규칙에서 보고 한 문제를 해결 하는 지침을 제공 합니다.
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -10,12 +10,12 @@ ms.topic: article
 ms.assetid: 0aa35e36-8e3b-498b-b71d-003a0a0947be
 author: KBDAzure
 ms.date: 8/16/2016
-ms.openlocfilehash: d4a0f4a2700f87a24db812f046cb19cec0e7a4d5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4eb223fa2638e453bae14bdbae5029ae5835207e
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59885104"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71365346"
 ---
 # <a name="a-virtual-machine-running-windows-server-2012-and-configured-with-dynamic-memory-should-use-recommended-values-for-memory-settings"></a>Windows Server 2012를 실행 하 고 동적 메모리를 사용 하 여 구성 하는 가상 컴퓨터 메모리 설정에 대 한 권장된 값을 사용 해야
 
@@ -33,15 +33,15 @@ ms.locfileid: "59885104"
 다음 섹션에서는 기울임꼴이이 문제에 대 한 모범 사례 분석기 도구에 표시 되는 UI 텍스트를 나타냅니다.  
   
 ## <a name="issue"></a>**문제점**  
-*하나 이상의 가상 컴퓨터는 Windows Server 2012에 대 한 권장 하는 메모리 용량 보다 더 적은 노력으로 동적 메모리를 사용 하도록 구성 됩니다.*  
+*하나 이상의 가상 컴퓨터가 Windows Server 2012에 권장 되는 메모리 용량 보다 더 작은 동적 메모리를 사용 하도록 구성 되어 있습니다.*  
   
-## <a name="impact"></a>**Impact**  
-*다음 가상 머신에서 게스트 운영 체제 실행 되지 않거나 불안정 실행 될 수 있습니다.*  
+## <a name="impact"></a>**식**  
+*다음 가상 컴퓨터의 게스트 운영 체제가 실행 되지 않거나 불안정을 실행할 수 있습니다.*  
   
-\<가상 머신의 목록 >  
+@no__t-가상 머신 목록 >  
   
 ## <a name="resolution"></a>**해결 방법**  
-*Hyper-v 관리자를 사용 하 여 적어도 256MB, 시작 메모리에 최소 512 MB 이상 및 최소 2GB이 가상 머신에 대 한 최대 메모리 증가 합니다.*  
+*Hyper-v 관리자를 사용 하 여 최소 256, 시작 메모리를 최소 512 MB 이상,이 가상 컴퓨터의 최대 메모리를 2gb 이상으로 늘립니다.*  
   
 #### <a name="increase-memory-using-hyper-v-manager"></a>Hyper-v 관리자를 사용 하 여 메모리 확보  
   

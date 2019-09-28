@@ -3,7 +3,7 @@ title: 하드웨어 요구 사항 및 성능 권장 사항
 description: MultiPoint 서비스에 대 한 하드웨어 및 성능 요구 사항 및 권장 사항을 제공 합니다.
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ ms.assetid: 99a5c9c2-270f-4753-a28c-434882c03125
 author: evaseydl
 manager: scottman
 ms.author: evas
-ms.openlocfilehash: afabab738527e7a0994c917b0065baa4f8c53fda
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 284131028b308ee86389f25102d934390ba2f16d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871444"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71389106"
 ---
 # <a name="hardware-requirements-and-performance-recommendations"></a>하드웨어 요구 사항 및 성능 권장 사항
 이 항목에서는 MultiPoint 서비스 시스템을 실행 하 고 사용자 응용 프로그램 시나리오를 지 원하는 데 필요한 하드웨어에 대해 설명 합니다. 사용자 시나리오는 CPU, RAM 및 네트워크 대역폭 요구 사항에 직접적인 영향을 줍니다.  

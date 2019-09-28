@@ -2,18 +2,18 @@
 title: 도메인 기반 DFS 네임스페이스에 네임스페이스 서버 추가
 description: 이 문서에서는 DFS 관리를 사용하여 네임스페이스 호스팅을 위한 추가 네임스페이스 서버를 지정하는 방법을 설명합니다.
 ms.date: 6/5/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 03b6920e75ba3c51f1d181cfd41887fef39b7412
-ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
+ms.openlocfilehash: fa28ec06448b67724ce8e3f29894fc70f6a6dae9
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69546330"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71386250"
 ---
 # <a name="add-namespace-servers-to-a-domain-based-dfs-namespace"></a>도메인 기반 DFS 네임스페이스에 네임스페이스 서버 추가
 

@@ -1,8 +1,8 @@
 ---
-title: 삭제
-description: '에 대 한 Windows 명령을 항목 * * *- '
+title: delete
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7cfa1c125d9ad1859550ae746839600283d07f44
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c2dd1edc8404ef89ae087e49b9e1d4b302d1c8ad
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59813074"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71378602"
 ---
-# <a name="delete"></a>삭제
+# <a name="delete"></a>delete
 
 
 
@@ -39,7 +39,7 @@ delete volume
 |매개 변수|설명|
 |---------|-----------|
 |[디스크 삭제](delete-disk.md)|디스크 목록에서 찾을 수 없는 동적 디스크를 삭제합니다.|
-|[파티션을 삭제합니다](delete-partition.md)|파티션을 삭제합니다.|
+|[파티션 삭제](delete-partition.md)|파티션을 삭제합니다.|
 |[볼륨 삭제](delete-volume.md)|볼륨을 삭제합니다.|
 
 #### <a name="additional-references"></a>추가 참조

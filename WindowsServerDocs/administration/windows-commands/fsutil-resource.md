@@ -1,7 +1,7 @@
 ---
 ms.assetid: b198d8ca-a5b7-430f-8911-5cbb9f50484c
 title: Fsutil 리소스
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
 author: toklima
@@ -9,12 +9,12 @@ ms.technology: storage
 audience: IT Pro
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: ea97f7f71d1b484c7ac63c7c429f291fba607bba
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 10f2847fd05658a481a10dfb5a1920a998559962
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70867071"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71376823"
 ---
 # <a name="fsutil-resource"></a>Fsutil 리소스
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows 2008, Windows Vista
@@ -50,7 +50,7 @@ fsutil resource [stop] <RmRootPathname>
 |-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |         만들기          |                                                                                                                                                                                                                    보조 트랜잭션 리소스 관리자를 만듭니다.                                                                                                                                                                                                                     |
 |    <RmRootPathname>     |                                                                                                                                                                                                        트랜잭션 리소스 관리자 루트 디렉터리 전체 경로 지정합니다.                                                                                                                                                                                                         |
-|          정보           |                                                                                                                                                                                                            지정 된 트랜잭션 리소스 관리자 정보를 표시 합니다.                                                                                                                                                                                                            |
+|          info           |                                                                                                                                                                                                            지정 된 트랜잭션 리소스 관리자 정보를 표시 합니다.                                                                                                                                                                                                            |
 |      setautoreset       | 기본 트랜잭션 리소스 관리자의 다음 탑재 트랜잭션 메타 데이터를 정리 합니다 있는지 여부를 지정 합니다.<br /><br />-설정 된 **setautoreset** 매개 변수를 **true** 지정할 트랜잭션 리소스 관리자가 기본적으로 다음 탑재 트랜잭션 메타 데이터를 정리 합니다.<br />-설정 된 **setautoreset** 매개 변수를 **false** 지정 기본적으로 트랜잭션 리소스 관리자의 다음 탑재 트랜잭션 메타 데이터 정리 되지 것입니다. |
 | <DefaultRmRootPathname> |                                                                                                                                                                                                                       드라이브 이름 뒤에 콜론을 지정 합니다.                                                                                                                                                                                                                        |
 |      setavailable       |                                                                                                                                                                                                 트랜잭션 리소스 관리자를 일관성 보다 가용성을 선호를 지정 합니다.                                                                                                                                                                                                 |

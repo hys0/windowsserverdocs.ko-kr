@@ -1,8 +1,8 @@
 ---
 title: 특성
-description: Windows 명령 항목에 대 한 **특성** -표시, 집합 또는 디스크 또는 볼륨의 특성을 지웁니다.
+description: '**특성** 에 대 한 Windows 명령 항목-디스크 또는 볼륨의 특성을 표시, 설정 또는 지웁니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b60599180808354fd27c2faa58655734ef79d777
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d0cdfbc5bcc60596c7e42d2668d4c2b8a9b4450b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59883724"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71382594"
 ---
 # <a name="attributes"></a>특성
 
@@ -38,7 +38,7 @@ Attributes volume
 |매개 변수|설명|
 |---------|-----------|
 |[특성 디스크](attributes-disk.md)|표시 설정 하거나 디스크의 특성을 지웁니다.|
-|[볼륨 특성](attributes-volume.md)|표시 설정 하거나 볼륨의 특성을 지웁니다.|
+|[특성 볼륨](attributes-volume.md)|표시 설정 하거나 볼륨의 특성을 지웁니다.|
 
 #### <a name="additional-references"></a>추가 참조
 

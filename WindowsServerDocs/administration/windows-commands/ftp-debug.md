@@ -1,8 +1,8 @@
 ---
-title: ftp:debug
-description: '에 대 한 Windows 명령을 항목 * * *- '
+title: 'ftp: 디버그'
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,28 +13,28 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3c6591819129fe1a3047982905a041eca974aa53
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: e088c7989b2caa78efbb3240f806d6dc41b68b7a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66438764"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71376473"
 ---
-# <a name="ftpdebug"></a>ftp:debug
+# <a name="ftpdebug"></a>ftp: 디버그
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-디버깅 모드를 전환 합니다.   
+디버깅 모드를 설정/해제 합니다.   
 ## <a name="syntax"></a>구문  
 ```  
 debug  
 ```  
 ### <a name="parameters"></a>매개 변수  
-none  
+없음  
 ## <a name="remarks"></a>설명  
 - 기본적으로 디버깅 꺼져 있습니다.  
 - 디버깅을에 있으면 원격 컴퓨터에 전송 된 각 명령 보다 큼 (>) 문자가 앞에 표시 됩니다.  
-  ## <a name="BKMK_Examples"></a>예제  
+  ## <a name="BKMK_Examples"></a>예와  
   설정/해제 디버그 모드를 켜고입니다.  
   ```  
   debug  

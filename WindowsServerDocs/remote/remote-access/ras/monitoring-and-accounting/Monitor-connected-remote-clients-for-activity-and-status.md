@@ -1,9 +1,9 @@
 ---
 title: 연결된 원격 클라이언트에서 활동 및 상태 모니터링
-description: 이 항목은 원격 액세스 모니터링 및 계정 관리에 Windows Server 2016에 대 한 가이드의 일부입니다.
+description: 이 항목은 Windows Server 2016의 원격 액세스 모니터링 및 계정에 대 한 가이드의 일부입니다.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-ras
@@ -12,18 +12,18 @@ ms.topic: article
 ms.assetid: beb94475-b21f-46a9-ac51-bf2bb28ca94e
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: bf7aed239eb56eae599078a6088cbb2971c45821
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 03d87fb086a9f2797af8399be3d833b11bed79a5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67282745"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71367263"
 ---
 # <a name="monitor-connected-remote-clients-for-activity-and-status"></a>연결된 원격 클라이언트에서 활동 및 상태 모니터링
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-**참고:** Windows Server 2012 DirectAccess 및 원격 액세스 서비스 (RAS)를 단일 원격 액세스 역할로 결합합니다.  
+**참고:** Windows Server 2012에서는 DirectAccess 및 원격 액세스 서비스 (RAS)를 단일 원격 액세스 역할로 결합 합니다.  
   
 원격 액세스 서버에서 원격 클라이언트의 작업 및 상태를 모니터링 하는 관리 콘솔을 사용할 수 있습니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "67282745"
   
 4.  원격 액세스 서버에 연결 되 고 자세한 사용자의 목록을 표시에 대 한 통계입니다. 클라이언트에 해당 하는 목록에서 첫 번째 행을 클릭 합니다. 행을 선택 하면 원격 사용자 활동은 미리 보기 창에 표시 됩니다.  
   
-![Windows PowerShell](../../../media/Monitor-connected-remote-clients-for-activity-and-status/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![Windows PowerShell](../../../media/Monitor-connected-remote-clients-for-activity-and-status/PowerShellLogoSmall.gif)***<em>windows powershell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -54,7 +54,7 @@ PS> Get-RemoteAccessConnectionStatistics
 |-------|-----|  
 |Username|원격 사용자의 사용자 이름 또는 별칭입니다. 예: contoso 사용자 그룹을 선택 하는 와일드 카드 문자를 사용할 수 있습니다\\* 또는 \*\administrator 합니다.|  
 |Hostname|원격 사용자의 컴퓨터 계정 이름입니다. 또한 IPv4 또는 IPv6 주소 지정할 수 있습니다.|  
-|형식|DirectAccess 또는 VPN입니다. DirectAccess를 선택 하는 경우 DirectAccess를 사용 하 여 연결 된 모든 원격 사용자가 나열 됩니다. VPN을 선택 하면 VPN을 사용 하 여 연결 된 모든 원격 사용자가 나열 됩니다.|  
+|type|DirectAccess 또는 VPN입니다. DirectAccess를 선택 하는 경우 DirectAccess를 사용 하 여 연결 된 모든 원격 사용자가 나열 됩니다. VPN을 선택 하면 VPN을 사용 하 여 연결 된 모든 원격 사용자가 나열 됩니다.|  
 |ISP 주소|원격 사용자의 IPv4 또는 IPv6 주소입니다.|  
 |IPv4 주소|원격 사용자는 회사 네트워크에 연결 하는 터널의 내부 IPv4 주소입니다.|  
 |IPv6 주소|원격 사용자를 회사 네트워크에 연결하는 터널의 내부 IPv6 주소입니다.|  

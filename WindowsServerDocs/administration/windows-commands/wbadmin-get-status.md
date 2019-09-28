@@ -1,8 +1,8 @@
 ---
-title: wbadmin 상태 가져오기
-description: '에 대 한 Windows 명령을 항목 * * *- '
+title: wbadmin 가져오기 상태
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 35fd640aa56bca7c5f5d6f3901fe095d0b8a73cc
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 0270a29e557ec135301753dd66c1f5f2404a8acc
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59863414"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71362392"
 ---
-# <a name="wbadmin-get-status"></a>wbadmin 상태 가져오기
+# <a name="wbadmin-get-status"></a>wbadmin 가져오기 상태
 
 
 
@@ -40,11 +40,11 @@ wbadmin get status
 
 ## <a name="remarks"></a>설명
 
--   이 하위 명령을 현재 백업 될 때까지 중지 되지 것입니다 또는 복구 작업이 완료 될-하위 계속 명령 창을 닫은 경우에 실행 됩니다.
--   현재 백업 또는 복구 작업을 중지 하려는 경우 사용 합니다 **wbadmin 중지 작업** 하위 명령.
+-   현재 백업 또는 복구 작업이 완료 될 때까지이 하위 명령이 중지 되지 않습니다. 명령 창을 닫은 경우에도 하위 명령이 계속 실행 됩니다.
+-   현재 백업 또는 복구 작업을 중지 하려면 **wbadmin stop job** 하위 명령을 사용 합니다.
 
 #### <a name="additional-references"></a>추가 참조
 
 -   [명령줄 구문 키](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
--   [Get-WBJob](https://technet.microsoft.com/library/jj902426.aspx) cmdlet
+-   [WBJob](https://technet.microsoft.com/library/jj902426.aspx) cmdlet

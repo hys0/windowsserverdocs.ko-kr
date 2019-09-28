@@ -1,7 +1,7 @@
 ---
 title: Windows 8 해야 적어도 최소 메모리 양을 사용 하 여 구성
-description: 이 모범 사례 분석기 규칙에 의해 보고 된 문제를 해결 하려면 지침을 제공 합니다.
-ms.prod: windows-server-threshold
+description: 이 모범 사례 분석기 규칙에서 보고 한 문제를 해결 하는 지침을 제공 합니다.
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -10,12 +10,12 @@ ms.topic: article
 ms.assetid: 519d1091-fa4d-44d7-83ca-83f6aa71fb7d
 author: KBDAzure
 ms.date: 8/16/2016
-ms.openlocfilehash: b109dc747410dfc2868b00a1a0b95620ed314a56
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 830dc05556f78734341fc86c377e5f34805b44dd
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59864444"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71393212"
 ---
 # <a name="windows-8-should-be-configured-with-at-least-the-minimum-amount-of-memory"></a>Windows 8 해야 적어도 최소 메모리 양을 사용 하 여 구성
 
@@ -33,15 +33,15 @@ ms.locfileid: "59864444"
 다음 섹션에서는 특정 문제에 대 한 세부 정보를 제공합니다. 기울임꼴로 표시 된 특정 문제에 대 한 모범 사례 분석기 도구에 표시 되는 UI 텍스트를 나타냅니다.  
   
 ## <a name="issue"></a>**문제점**  
-*Windows 8을 실행 하는 가상 머신 512mb RAM의 최소 크기 보다 더 적은 노력으로 구성 됩니다.*  
+*Windows 8을 실행 하는 가상 머신은 512 RAM의 최소 크기 보다 더 작은 수준으로 구성 됩니다.*  
   
-## <a name="impact"></a>**Impact**  
-*다음 가상 머신에서 게스트 운영 체제 실행 되지 않거나 불안정 실행 될 수 있습니다.*  
+## <a name="impact"></a>**식**  
+*다음 가상 컴퓨터의 게스트 운영 체제가 실행 되지 않거나 불안정을 실행할 수 있습니다.*  
 ```  
 <list of virtual machines>  
 ```  
 ## <a name="resolution"></a>**해결 방법**  
-*Hyper-v 관리자를 사용 하 여이 가상 머신에 최소 512 MB 이상에 할당 된 메모리를 늘리세요.*  
+*Hyper-v 관리자를 사용 하 여이 가상 컴퓨터에 할당 된 메모리를 512 이상으로 늘립니다.*  
   
 #### <a name="increase-the-memory-using-hyper-v-manager"></a>Hyper-v 관리자를 사용 하 여 메모리 확보  
   
@@ -68,7 +68,7 @@ Set-VMMemory <MyVM> -StartupBytes 512MB
 ```  
   
 ## <a name="see-also"></a>관련 항목  
-[Set-VMMemory](https://technet.microsoft.com/library/hh848572.aspx)  
+[설정-VMMemory](https://technet.microsoft.com/library/hh848572.aspx)  
   
 
 

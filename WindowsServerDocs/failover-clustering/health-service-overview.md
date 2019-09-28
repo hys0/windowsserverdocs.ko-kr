@@ -1,6 +1,6 @@
 ---
 title: Windows Server의 상태 관리 서비스
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: eldenc
 ms.author: cosdar
 ms.technology: storage-health-service
@@ -8,34 +8,34 @@ ms.topic: article
 ms.assetid: 5bc71e71-920e-454f-8195-afebd2a23725
 author: cosmosdarwin
 ms.date: 02/09/2018
-ms.openlocfilehash: 5afb64dcf0c59697ed55d7cf51ef1bc36e7e0e36
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: df455dfb0d2936192a3c2d7825e2d6d031cfe892
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59863814"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71361072"
 ---
 # <a name="health-service-in-windows-server"></a>Windows Server의 상태 관리 서비스
 
-> 적용 대상: Windows Server 2016
+> 적용 대상: Windows Server 2019, Windows Server 2016
 
-상태 관리 서비스는 저장소 공간 다이렉트를 실행 하는 클러스터에 대 한 작업 경험과 일상적인 모니터링을 향상 시키는 Windows Server 2016의 새로운 기능입니다.
+상태 관리 서비스는 스토리지 공간 다이렉트를 실행 하는 클러스터에 대 한 일상적인 모니터링 및 운영 환경을 개선 하는 Windows Server 2016의 새로운 기능입니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항  
 
-상태 관리 서비스는 저장소 공간 다이렉트에서 기본적으로 사용됩니다. 설정하거나 시작하기 위해 필요한 추가 작업이 없습니다. 저장소 공간 다이렉트에 대 한 자세한 내용은 참조 하세요 [Windows Server 2016에서 저장소 공간 다이렉트](../storage/storage-spaces/storage-spaces-direct-overview.md)합니다.  
+상태 관리 서비스는 저장소 공간 다이렉트에서 기본적으로 사용됩니다. 설정하거나 시작하기 위해 필요한 추가 작업이 없습니다. 스토리지 공간 다이렉트에 대 한 자세한 내용은 [Windows Server 2016의 스토리지 공간 다이렉트](../storage/storage-spaces/storage-spaces-direct-overview.md)를 참조 하세요.  
 
 ## <a name="reports"></a>보고서
 
-참조 [Health Service가 보고](health-service-reports.md)합니다.
+[상태 관리 서비스 보고서](health-service-reports.md)를 참조 하세요.
 
 ## <a name="faults"></a>오류
 
-참조 [상태 관리 서비스 오류](health-service-faults.md)합니다.
+[상태 관리 서비스 오류](health-service-faults.md)를 참조 하세요.
 
 ## <a name="actions"></a>동작
 
-참조 [상태 관리 서비스 작업](health-service-actions.md)합니다.
+[상태 관리 서비스 작업](health-service-actions.md)을 참조 하세요.
 
 ## <a name="automation"></a>자동화  
 
@@ -76,11 +76,11 @@ ms.locfileid: "59863814"
 
 #### <a name="physical-replacement"></a>물리적 교체  
 
-가능한 경우 사용 중지된 실제 디스크를 교체해야 합니다. 대부분의 경우이 핫 스왑 이루어져-즉, 전원 노드 또는 저장소 엔클로저의 끄기 필요 하지 않습니다. 유용한 위치 및 부품 정보는 오류를 참조하세요.  
+가능한 경우 사용 중지된 실제 디스크를 교체해야 합니다. 대부분의 경우이는 핫 스왑로 구성 됩니다. 즉, 노드 또는 저장소 인클로저를 끄는 것은 필요 하지 않습니다. 유용한 위치 및 부품 정보는 오류를 참조하세요.  
 
 #### <a name="verification"></a>확인
 
-지원 되는 구성 요소 문서에 대해 확인할 수는 대체 디스크가 삽입 되 면 (다음 섹션 참조).
+교체 디스크가 삽입 되 면 지원 되는 구성 요소 문서에 대해 확인 됩니다 (다음 섹션 참조).
 
 #### <a name="pooling"></a>Pooling  
 
@@ -88,22 +88,22 @@ ms.locfileid: "59863814"
 
 ## <a name="supported-components-document"></a>지원 되는 구성 요소 문서  
 
-상태 관리 서비스 저장소 공간 다이렉트에서 관리자 또는 솔루션 공급 업체에서 제공 되는 지원 되는 구성 요소 문서를 사용 하는 구성 요소를 제한 하는 적용 메커니즘을 제공 합니다. 이를 통해 사용자 또는 다른 사람이 실수로 지원되지 않는 하드웨어를 사용하는 것을 방지할 수 있으며, 이는 보증 또는 지원 계약을 준수하는 데 도움이 될 수 있습니다. 이 기능은 Ssd, Hdd 등의 물리적 디스크 장치에 현재 제한 및 NVMe 드라이브입니다. 모델, 제조업체 (선택 사항) 및 펌웨어 버전 (선택 사항)에서 지원 되는 구성 요소 문서를 제한할 수 있습니다.
+상태 관리 서비스는 관리자 또는 솔루션 공급 업체에서 제공 하는 지원 되는 구성 요소 문서에 스토리지 공간 다이렉트에 사용 되는 구성 요소를 제한 하는 적용 메커니즘을 제공 합니다. 이를 통해 사용자 또는 다른 사람이 실수로 지원되지 않는 하드웨어를 사용하는 것을 방지할 수 있으며, 이는 보증 또는 지원 계약을 준수하는 데 도움이 될 수 있습니다. 이 기능은 현재 Ssd, Hdd 및 NVMe 드라이브를 비롯 한 실제 디스크 장치로 제한 됩니다. 지원 되는 구성 요소 문서는 모델, 제조업체 (선택 사항) 및 펌웨어 버전 (선택 사항)을 제한할 수 있습니다.
 
 ### <a name="usage"></a>사용법  
 
-지원 되는 구성 요소 문서에는 XML 기반 구문을 사용합니다. 예: 무료에 원하는 텍스트 편집기를 사용 하는 것이 좋습니다 [Visual Studio Code](http://code.visualstudio.com/) 또는 메모장 저장 하 고 다시 사용할 수 있는 XML 문서를 만듭니다.
+지원 되는 구성 요소 문서에서는 XML로 구성 된 구문을 사용 합니다. 사용 가능한 [Visual Studio Code](http://code.visualstudio.com/) 또는 메모장과 같은 원하는 텍스트 편집기를 사용 하 여 저장 하 고 다시 사용할 수 있는 XML 문서를 만드는 것이 좋습니다.
 
 #### <a name="sections"></a>Section
 
-문서에는 두 개의 독립적인 섹션이 있습니다: `Disks` 및 `Cache`합니다.
+문서에는 두 개의 독립적인 섹션인 `Disks`과 `Cache`이 있습니다.
 
-경우는 `Disks` 섹션을 제공 하면 드라이브만 나열 (으로 `Disk`) 풀에 가입할 수 있습니다. 목록에 없는 모든 드라이브는 풀에 효과적으로 인덱스나 관계는 프로덕션에서 사용 되는 차단 됩니다. 이 섹션은 비어 있으면 모든 드라이브 풀에 조인할 수 있습니다.
+@No__t-0 섹션이 제공 된 경우에는 (`Disk`로) 나열 된 드라이브만 풀에 가입할 수 있습니다. 나열 되지 않은 모든 드라이브가 풀을 조인 하는 것을 방지 하므로 프로덕션에서 효과적으로 사용 되지 않습니다. 이 섹션을 비워 두면 모든 드라이브가 풀에 가입할 수 있습니다.
 
-경우는 `Cache` 섹션을 제공 하면 드라이브만 나열 (으로 `CacheDisk`) 캐싱에 사용 됩니다. 이 섹션에서는 비워 두면, 저장소 공간 다이렉트 하려고 [추측 미디어 유형 및 버스 형식에 따라](../storage/storage-spaces/understand-the-cache.md#cache-drives-are-selected-automatically)합니다. 여기에 나열 된 드라이브에도 나열 해야 `Disks`합니다.
+@No__t-0 섹션이 제공 된 경우에는 (`CacheDisk`로) 나열 된 드라이브만 캐싱에 사용 됩니다. 이 섹션을 비워 두면 [미디어 유형 및 버스 유형을 기반으로 추측](../storage/storage-spaces/understand-the-cache.md#cache-drives-are-selected-automatically)을 스토리지 공간 다이렉트 시도 합니다. 여기에 나열 된 드라이브는 `Disks`에도 나열 되어야 합니다.
 
 >[!IMPORTANT]
-> 이미 풀 드라이브 및 사용 하 여 지원 되는 구성 요소 문서를 소급 적용 되지 않습니다.  
+> 지원 되는 구성 요소 문서는 이미 풀링 되어 사용 중인 드라이브에 소급 적용 되지 않습니다.  
 
 #### <a name="example"></a>예제
 
@@ -141,16 +141,16 @@ ms.locfileid: "59863814"
 
 ```
 
-여러 드라이브 목록에 추가 하기만 하면 됩니다 `<Disk>` 또는 `<CacheDisk>` 태그입니다.
+여러 드라이브를 나열 하려면 `<Disk>` 또는 `<CacheDisk>` 태그를 추가 하기만 하면 됩니다.
 
-저장소 공간 다이렉트를 배포할 때이 XML을 넣기, 사용 된 `-XML` 매개 변수:
+스토리지 공간 다이렉트를 배포할 때이 XML을 삽입 하려면 `-XML` 매개 변수를 사용 합니다.
 
 ```PowerShell
 $MyXML = Get-Content <Filepath> | Out-String  
 Enable-ClusterS2D -XML $MyXML
 ```
 
-설정 하거나 저장소 공간 다이렉트에 배포 되 면 지원 구성 문서를 수정 합니다.
+스토리지 공간 다이렉트 배포 되 면 지원 되는 구성 요소 문서를 설정 하거나 수정 하려면 다음을 수행 합니다.
 
 ```PowerShell
 $MyXML = Get-Content <Filepath> | Out-String  
@@ -168,12 +168,12 @@ Get-PhysicalDisk | Select Model, Manufacturer, FirmwareVersion
 
 ## <a name="settings"></a>설정
 
-참조 [상태 관리 서비스 설정](health-service-settings.md)합니다.
+[상태 관리 서비스 설정](health-service-settings.md)을 참조 하세요.
 
 ## <a name="see-also"></a>참조
 
-- [Health Service가 보고](health-service-reports.md)
-- [상태 서비스 오류](health-service-faults.md)
-- [상태 서비스 작업](health-service-actions.md)
-- [상태 서비스 설정](health-service-settings.md)
-- [Windows Server 2016의에서 저장소 공간 다이렉트](../storage/storage-spaces/storage-spaces-direct-overview.md)
+- [상태 관리 서비스 보고서](health-service-reports.md)
+- [상태 관리 서비스 오류](health-service-faults.md)
+- [작업 상태 관리 서비스](health-service-actions.md)
+- [상태 관리 서비스 설정](health-service-settings.md)
+- [Windows Server 2016의 스토리지 공간 다이렉트](../storage/storage-spaces/storage-spaces-direct-overview.md)

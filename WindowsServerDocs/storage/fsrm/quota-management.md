@@ -2,18 +2,18 @@
 title: 할당량 관리
 description: 이 문서에서는 할당량을 만들고 관리하는 방법을 설명합니다.
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 6effaf7c2d197c08b4930e09c3ada96462b17d6f
-ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
+ms.openlocfilehash: 5a655e28020d08bb1c10fa862c007f914a8cf566
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65476189"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71403080"
 ---
 # <a name="quota-management"></a>할당량 관리
 
@@ -27,8 +27,8 @@ ms.locfileid: "65476189"
 
 예를 들어 다음 작업을 할 수 있습니다.
 
--   저장소의 180 MB 초과 했을 때 하 고 사용자에 게 보낼 전자 메일 알림을 사용 하 여 사용자의 개인 서버 폴더에 200 mb (메가바이트) 한계를 설정 합니다.
--   그룹의 공유 폴더에서 유연성 있는 500MB 할당량을 설정 합니다. 이 저장소 용량 한도 도달 하면 모든 사용자 그룹에 저장소 할당량이 일시적으로 확장 된 520mb 불필요 한 파일을 삭제 하 고 미리 설정 된 500MB 할당량 정책을 준수할 수 있도록 전자 메일로 알림이 표시 됩니다.
+-   사용자에 게 전자 메일 알림이 전송 되 고 180 MB의 저장소가 초과 될 때 사용자에 게 전자 메일 알림이 전송 되는 200 메가바이트 (MB) 제한을 설정 합니다.
+-   그룹의 공유 폴더에 유연한 500 MB 할당량을 설정 합니다. 이 저장소 제한에 도달 하면 사용자가 불필요 한 파일을 삭제 하 고 미리 설정 된 500 MB 할당량 정책을 준수할 수 있도록 저장소 할당량이 일시적으로 520 MB로 확장 되었다는 전자 메일로 그룹의 모든 사용자에 게 알립니다.
 -   임시 폴더가 2기가바이트(GB) 사용량에 도달하면 알림을 받지만, 서버의 서비스 실행에 필요하므로 폴더의 할당량을 제한하지는 않습니다.
 
 이 섹션에서는 다음 항목을 다룹니다.

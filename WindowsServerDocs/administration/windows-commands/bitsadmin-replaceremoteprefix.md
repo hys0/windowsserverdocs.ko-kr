@@ -1,8 +1,8 @@
 ---
 title: bitsadmin replaceremoteprefix
-description: Windows 명령 항목에 대 한 **bitsadmin replaceremoteprefix** -해당 원격 URL로 시작 작업의 모든 파일 *OldPrefix* 사용 하도록 변경 *NewPrefix*합니다.
+description: '**Bitsadmin replaceremoteprefix** 에 대 한 Windows 명령 항목-원격 URL이 *oldprefix* 로 시작 하는 작업의 모든 파일은 *newprefix*를 사용 하도록 변경 됩니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 25c0f997ea0b9f97051baa291bdf87c84b6b1cbb
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.openlocfilehash: ee896a337b571487797967d3ce0bf1f1b17e7507
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66811293"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71380803"
 ---
 # <a name="bitsadmin-replaceremoteprefix"></a>bitsadmin replaceremoteprefix
 
@@ -40,7 +40,7 @@ bitsadmin /ReplaceRemotePrefix <Job> <OldPrefix> <NewPrefix
 
 ## <a name="examples"></a>예
 
-다음 예제에서는 명명 된 작업의 모든 파일을 변경 *myDownloadJob* 원격 URL로 시작 갖는 *http://stageserver* 에 *http://prodserver* 합니다.
+다음 예에서는 원격 URL이- *2 http://stageserver* *@no__t*로 시작 하는 *mydownloadjob* 이라는 작업의 모든 파일을 변경 합니다.
 
 ```
 C:\>bitsadmin /ReplaceRemotePrefix myDownloadJob http://stageserver http://prodserver

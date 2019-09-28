@@ -1,8 +1,8 @@
 ---
 title: bitsadmin suspend
-description: Windows 명령 항목에 대 한 **bitsadmin 일시 중단** -지정된 된 된 작업을 일시 중단 합니다.
+description: '**Bitsadmin 일시 중단** 에 대 한 Windows 명령 항목-지정 된 작업을 일시 중단 합니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 87e1bbd1b068d68fb60655043735c6c1aeb07707
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7a3a484df2b50cdc8893512020b835f913793d2c
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59825924"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71380374"
 ---
 # <a name="bitsadmin-suspend"></a>bitsadmin suspend
 
@@ -40,9 +40,9 @@ bitsadmin /Suspend <Job>
 
 ## <a name="remarks"></a>설명
 
-작업을 다시 시작 하려면 사용 합니다 [bitsadmin resume](bitsadmin-resume.md) 전환 합니다.
+작업을 다시 시작 하려면 [bitsadmin resume](bitsadmin-resume.md) 스위치를 사용 합니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 다음 예제에서는 명명 된 작업을 일시 중단 *myDownloadJob*합니다.
 

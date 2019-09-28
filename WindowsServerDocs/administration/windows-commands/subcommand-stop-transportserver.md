@@ -1,8 +1,8 @@
 ---
-title: 중지-TransportServer 하위 명령
-description: Windows 명령 항목 TransportServer 중지
+title: 하위 명령 중지-서버
+description: Stop-서버에 대 한 Windows 명령 항목
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8f7410a8720337e509325b99863446bd8d19eb26
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2a2444328a426429c2dce5ceee3272cf1dc814cc
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59853454"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71370720"
 ---
 # <a name="subcommand-stop-transportserver"></a>중지-TransportServer 하위 명령:
 
@@ -33,7 +33,7 @@ wdsutil [Options] /Stop-TransportServer [/Server:<Server name>]
 |매개 변수|설명|
 |-------|--------|
 |[/ 서버:<Server name>]|전송 서버 이름을 지정합니다. 이 NetBIOS 이름 또는 정규화 된 도메인 이름 (FQDN) 수 있습니다. 없는 전송 서버를 지정 하는 경우 로컬 서버 사용 됩니다.|
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 서비스를 중지 하려면 다음 중 하나를 입력 합니다.
 ```
 wdsutil /Stop-TransportServer

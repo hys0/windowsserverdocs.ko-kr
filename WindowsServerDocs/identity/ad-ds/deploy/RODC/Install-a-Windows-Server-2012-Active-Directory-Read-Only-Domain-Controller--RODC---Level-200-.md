@@ -7,14 +7,14 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: c8d34d7b35f3cd5209fd6096f69b16162229bc3a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 82b0035075c981d123ab3b90d56768940f65558e
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59863084"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71391115"
 ---
 # <a name="install-a-windows-server-2012-active-directory-read-only-domain-controller-rodc-level-200"></a>Windows Server 2012 Active Directory RODC(읽기 전용 도메인 컨트롤러) 설치(수준 200)
 
@@ -48,7 +48,7 @@ ms.locfileid: "59863084"
   
 ![RODC 설치](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/adds_stageddeploy_beta1.png)  
   
-## <a name="BKMK_AttachPS"></a>RODC Windows PowerShell 연결  
+## <a name="BKMK_AttachPS"></a>RODC 연결 Windows PowerShell  
   
 |||  
 |-|-|  
@@ -63,7 +63,7 @@ ms.locfileid: "59863084"
   
 Active Directory 관리 센터(**Dsac.exe**)를 열어 읽기 전용 도메인 컨트롤러 컴퓨터 계정의 준비 작업을 수행합니다. 탐색 창에서 도메인의 이름을 클릭합니다. 관리 목록에서 **도메인 컨트롤러**를 두 번 클릭합니다. 작업 창에서 **읽기 전용 도메인 컨트롤러 계정 미리 만들기**를 클릭합니다.  
   
-Active Directory 관리 센터에 대 한 자세한 내용은 참조 하세요. [고급 AD DS 관리를 사용 하 여 Active Directory 관리 센터 &#40;200 수준&#41; ](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md) 살펴보고 [Active Directory 관리 센터: Getting Started](https://technet.microsoft.com/library/dd560651(WS.10).aspx)합니다.  
+Active Directory 관리 센터에 대 한 자세한 내용은 [Active Directory 관리 센터 &#40;수준 200&#41; 을 사용한 고급 AD DS 관리](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md) 및 검토 [active Directory 관리 센터를 참조 하세요. 시작 하기 @ no__t-0.  
   
 읽기 전용 도메인 컨트롤러를 만들어 본 경험이 있다면 설치 마법사에 Windows Server 2008의 이전 Active Directory 사용자 및 컴퓨터 스냅인을 사용할 때 표시되는 것과 동일한 그래픽 인터페이스가 있으며, 오래된 dcpromo에서 사용하는 무인 파일 형식의 구성 내보내기가 포함된 동일한 코드를 사용하는 것을 알 수 있을 것입니다.  
   
@@ -101,7 +101,7 @@ Add-addsreadonlydomaincontrolleraccount
 ### <a name="specify-the-computer-name"></a>컴퓨터 이름 지정  
 ![RODC 설치](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_Stage1CompName.png)  
   
-**컴퓨터 이름을 지정** 대화 상자에는 존재하지 않는 도메인 컨트롤러의 단일 레이블 **컴퓨터 이름**을 입력해야 합니다. 프로 모션 작업을 준비 된 계정을 감지 하지 또는 구성 하 고 나중에이 계정에 연결 하는 도메인 컨트롤러에는 이름이 같은 있어야 합니다.  
+**컴퓨터 이름을 지정** 대화 상자에는 존재하지 않는 도메인 컨트롤러의 단일 레이블 **컴퓨터 이름**을 입력해야 합니다. 나중에 구성 하 고이 계정에 연결 하는 도메인 컨트롤러의 이름이 동일 해야 합니다. 그렇지 않으면 수준 올리기 작업에서 준비 된 계정을 검색 하지 않습니다.  
   
 상응하는 ADDSDeployment Windows PowerShell 인수는 다음과 같습니다.  
   
@@ -232,7 +232,7 @@ Install-AddsDomainController
 **도메인 컨트롤러 옵션** 페이지에 도메인 컨트롤러 옵션은 새로운 도메인 컨트롤러에 대 한 표시 합니다. 이 페이지가 로드되면 Active Directory Domain Services 구성 마법사에서 기존 도메인 컨트롤러로 LDAP 쿼리를 보내 비어 있는 계정을 확인합니다. 현재 컴퓨터와 동일한 이름을 공유 하는 컴퓨터 계정의 비어 있는 도메인 컨트롤러를 찾을 경우 페이지 맨 위에 있는 마법사에 정보 메시지가 표시 됩니다. "**대상 서버의 이름과 일치 하는 미리 만든된 RODC 계정이 디렉터리에 있습니다. 이 기존 RODC 계정을 사용 하거나이 도메인 컨트롤러를 다시 설치 하도록 선택할**. " 마법사에서는 **기존 RODC 계정 사용**을 기본 구성으로 사용합니다.  
   
 > [!IMPORTANT]  
-> 도메인 컨트롤러에 물리적인 문제가 발생하여 정상적인 작동 상태로 되돌릴 수 없는 경우 **이 도메인 컨트롤러 다시 설치** 옵션을 사용할 수 있습니다. 이 저장 도메인 컨트롤러 컴퓨터 계정에 맡기고 대체 도메인 컨트롤러를 구성 하는 경우 시간 및 Active Directory에서 메타 데이터 개체입니다. *같은 이름*으로 새 컴퓨터를 설치하고 도메인의 도메인 컨트롤러로 수준을 올립니다. **이 도메인 컨트롤러를 다시 설치** 옵션은 Active Directory (메타 데이터 정리)에서 도메인 컨트롤러 개체의 메타 데이터를 제거 하는 경우에 사용할 수 없습니다.  
+> 도메인 컨트롤러에 물리적인 문제가 발생하여 정상적인 작동 상태로 되돌릴 수 없는 경우 **이 도메인 컨트롤러 다시 설치** 옵션을 사용할 수 있습니다. 그러면 도메인 컨트롤러 컴퓨터 계정 및 개체 메타 데이터를 Active Directory에 남겨 두어 대체 도메인 컨트롤러를 구성할 때 시간이 절약 됩니다. *같은 이름*으로 새 컴퓨터를 설치하고 도메인의 도메인 컨트롤러로 수준을 올립니다. **이 도메인 컨트롤러를 다시 설치** 옵션은 Active Directory (메타 데이터 정리)에서 도메인 컨트롤러 개체의 메타 데이터를 제거 하는 경우에 사용할 수 없습니다.  
   
 RODC 컴퓨터 계정에 서버를 연결할 때는 도메인 컨트롤러 옵션을 구성할 수 없습니다. 도메인 컨트롤러 옵션은 준비된 RODC 컴퓨터 계정을 만들 때 구성합니다.  
   
@@ -297,7 +297,12 @@ $pw | ConvertFrom-SecureString | Set-Content $file
   
 **추가 옵션** 페이지에서는 도메인 컨트롤러 이름을 복제 원본으로 지정하는 구성 옵션을 제공하거나 원하는 도메인 컨트롤러를 복제 원본으로 사용할 수 있습니다.  
   
-또한 IFM(미디어에서 설치) 옵션을 통해 백업된 미디어를 사용하여 도메인 컨트롤러를 설치하도록 선택할 수도 있습니다. **미디어에서 설치** 확인란을 선택하면 찾아보기 옵션이 제공되며 **확인** 을 클릭하여 제공된 경로가 유효한 미디어임을 확인해야 합니다. IFM 옵션에서 사용된 미디어는 기존의 다른 Windows Server 2012 컴퓨터의 Ntdsutil.exe나 Windows Server 백업으로만 만들어야 합니다. Windows Server 2008 R2나 이전 운영 체제를 사용하여 Windows Server 2012 도메인 컨트롤러용 미디어를 만들 수 없습니다. IFM의 변경 내용에 대한 자세한 내용은 [Ntdsutil.exe 미디어에서 설치 변경 내용](../../../ad-ds/deploy/Simplified-Administration-Appendix.md#BKMK_IFM)을 참조하세요. SYSKEY로 보호된 미디어를 사용하는 경우 검증하는 동안 서버 관리자에는 이미지 암호를 제공하라는 메시지가 표시됩니다.  
+또한 IFM(미디어에서 설치) 옵션을 통해 백업된 미디어를 사용하여 도메인 컨트롤러를 설치하도록 선택할 수도 있습니다. **미디어에서 설치** 확인란을 선택하면 찾아보기 옵션이 제공되며 **확인** 을 클릭하여 제공된 경로가 유효한 미디어임을 확인해야 합니다.
+
+IFM 원본에 대 한 지침: • IFM 옵션에 사용 되는 미디어는 운영 체제 버전이 동일한 다른 기존 Windows Server 도메인 컨트롤러에서 Windows Server 백업 또는 Ntdsutil.exe를 사용 하 여 만들어집니다. 예를 들어 windows server 2008 R2 또는 이전 운영 체제를 사용 하 여 Windows Server 2012 도메인 컨트롤러용 미디어를 만들 수 없습니다.
+• IFM 원본 데이터는 쓰기 가능한 도메인 컨트롤러에서 가져온 것 이어야 합니다. RODC의 원본은 기술적으로 새 RODC를 만들기 위해 작동 하지만, IFM 원본 RODC가 복제 하지 않는 거짓 긍정 복제 경고가 발생 합니다.
+
+IFM의 변경 내용에 대한 자세한 내용은 [Ntdsutil.exe 미디어에서 설치 변경 내용](../../../ad-ds/deploy/Simplified-Administration-Appendix.md#BKMK_IFM)을 참조하세요. SYSKEY로 보호된 미디어를 사용하는 경우 검증하는 동안 서버 관리자에는 이미지 암호를 제공하라는 메시지가 표시됩니다. 
   
 ![RODC 설치](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_StagedIFM.png)  
   
@@ -549,7 +554,12 @@ RODC에서 암호를 캐시할 수 없으며 쓰기 가능한 도메인 컨트�
   
 **추가 옵션** 페이지에서는 도메인 컨트롤러 이름을 복제 원본으로 지정하는 구성 옵션을 제공하거나 원하는 도메인 컨트롤러를 복제 원본으로 사용할 수 있습니다.  
   
-또한 IFM(미디어에서 설치) 옵션을 통해 백업된 미디어를 사용하여 도메인 컨트롤러를 설치하도록 선택할 수도 있습니다. **미디어에서 설치** 확인란을 선택하면 찾아보기 옵션이 제공되며 **확인** 을 클릭하여 제공된 경로가 유효한 미디어임을 확인해야 합니다. IFM 옵션에서 사용된 미디어는 기존의 다른 Windows Server 2012 컴퓨터의 Ntdsutil.exe나 Windows Server 백업으로만 만들어야 합니다. Windows Server 2008 R2나 이전 운영 체제를 사용하여 Windows Server 2012 도메인 컨트롤러용 미디어를 만들 수 없습니다.  부록에서는 IFM의 변경 내용에 자세한 정보를 제공합니다. SYSKEY로 보호된 미디어를 사용하는 경우 검증하는 동안 서버 관리자에는 이미지 암호를 제공하라는 메시지가 표시됩니다.  
+또한 IFM(미디어에서 설치) 옵션을 통해 백업된 미디어를 사용하여 도메인 컨트롤러를 설치하도록 선택할 수도 있습니다. **미디어에서 설치** 확인란을 선택하면 찾아보기 옵션이 제공되며 **확인** 을 클릭하여 제공된 경로가 유효한 미디어임을 확인해야 합니다.
+
+IFM 원본에 대 한 지침: • IFM 옵션에 사용 되는 미디어는 운영 체제 버전이 동일한 다른 기존 Windows Server 도메인 컨트롤러에서 Windows Server 백업 또는 Ntdsutil.exe를 사용 하 여 만들어집니다. 예를 들어 windows server 2008 R2 또는 이전 운영 체제를 사용 하 여 Windows Server 2012 도메인 컨트롤러용 미디어를 만들 수 없습니다.
+• IFM 원본 데이터는 쓰기 가능한 도메인 컨트롤러에서 가져온 것 이어야 합니다. RODC의 원본은 기술적으로 새 RODC를 만들기 위해 작동 하지만, IFM 원본 RODC가 복제 하지 않는 거짓 긍정 복제 경고가 발생 합니다.
+
+IFM의 변경 내용에 대한 자세한 내용은 [Ntdsutil.exe 미디어에서 설치 변경 내용](../../../ad-ds/deploy/Simplified-Administration-Appendix.md#BKMK_IFM)을 참조하세요. SYSKEY로 보호된 미디어를 사용하는 경우 검증하는 동안 서버 관리자에는 이미지 암호를 제공하라는 메시지가 표시됩니다.
   
 ![RODC 설치](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_PSIFM.png)  
   

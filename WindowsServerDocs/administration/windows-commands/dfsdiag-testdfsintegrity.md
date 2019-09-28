@@ -1,8 +1,8 @@
 ---
-title: dfsdiag TestDFSIntegrity
-description: '에 대 한 Windows 명령을 항목 * * *- '
+title: dfsdiag Testdfs 무결성
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9a79e034f7c60be89266eb29dcd69e8f73b2aafe
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7f344e2d1fecc542efc39688f20165fd3e39a04a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59837094"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71378434"
 ---
-# <a name="dfsdiag-testdfsintegrity"></a>dfsdiag TestDFSIntegrity
+# <a name="dfsdiag-testdfsintegrity"></a>dfsdiag Testdfs 무결성
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -44,11 +44,11 @@ dfsdiag /TestDFSIntegrity /DFSRoot:<DFS root path> [/Recurse] [/Full]
   
 |매개 변수|설명|  
 |-------|--------|  
-|\/DFSRoot:<DFS root path>|DFS 네임 스페이스를 진단 합니다.|  
-|\/Recurse|네임 스페이스 interlinks 테스트 등을 수행 합니다.|  
-|\/전체|공유 및 폴더의 모든 대상에서 NTFS Acl 및 클라이언트 쪽 구성의 일관성을 확인합니다. 또한 온라인 속성이 설정 되어 있는지 확인 합니다.|  
+|@no__t 0DFSRoot: <DFS root path>|DFS 네임 스페이스를 진단 합니다.|  
+|\/ 재귀|네임 스페이스 interlinks 테스트 등을 수행 합니다.|  
+|\/Full|모든 폴더 대상에 대 한 공유 및 NTFS Acl 및 클라이언트 쪽 구성의 일관성을 확인 합니다. 또한 online 속성이 설정 되었는지 확인 합니다.|  
   
-## <a name="BKMK_Examples"></a>예제  
+## <a name="BKMK_Examples"></a>예와  
 TBD를 입력 합니다.  
   
 ```  

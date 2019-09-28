@@ -1,8 +1,8 @@
 ---
 title: pushd
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 548f39921c1f6aa3837e6443e396922396eb84f7
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 634dd6dee471751cc62b6899a3963e02e8e783a2
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59887464"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71371984"
 ---
 # <a name="pushd"></a>pushd
 
@@ -38,22 +38,22 @@ pushd [<Path>]
 
 |매개 변수|설명|
 |---------|-----------|
-|\<Path>|현재 디렉터리에 디렉터리를 지정 합니다. 이 명령은 상대 경로 지원 합니다.|
+|\< 경로 >|현재 디렉터리에 디렉터리를 지정 합니다. 이 명령은 상대 경로 지원 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
 ## <a name="remarks"></a>설명
 
--   사용할 때마다 합니다 **pushd** 명령 사용에 대 한 단일 디렉터리에 저장 됩니다. 그러나 사용 하 여 여러 디렉터리를 저장할 수 있습니다 합니다 **pushd** 여러 번 명령입니다.
+-   **Pushd** 명령을 사용할 때마다 단일 디렉터리를 사용할 수 있도록 저장 됩니다. 그러나 **pushd** 명령을 여러 번 사용 하 여 여러 디렉터리를 저장할 수 있습니다.
 
-    디렉터리 가상 스택에 순차적으로 저장 됩니다. 사용 하는 경우는 **pushd** 명령을 사용 하는 디렉터리는 스택의 맨 아래에 배치 되 면 명령입니다. 명령을 다시 사용 하는 경우 두 번째 디렉터리는 첫 번째 위에 배치 됩니다. 프로세스를 사용할 때마다 반복 합니다 **pushd** 명령입니다.
+    디렉터리는 가상 스택에 순차적으로 저장 됩니다. **Pushd** 명령을 한 번 사용 하는 경우 명령을 사용 하는 디렉터리가 스택의 맨 아래에 배치 됩니다. 명령을 다시 사용 하는 경우 첫 번째 디렉터리가 첫 번째 디렉터리 위에 배치 됩니다. **Pushd** 명령을 사용할 때마다 프로세스가 반복 됩니다.
 
-    사용할 수는 **popd** 하 여 가장 최근에 저장 된 디렉터리를 현재 디렉터리를 변경 하는 명령 합니다 **pushd** 명령입니다. 사용 하는 경우는 **popd** 명령, 스택의 맨 위에 디렉터리 스택에서 제거 되 고 현재 디렉터리에는 해당 디렉터리로 변경 됩니다. 사용 하는 경우는 **popd** 명령을 다시, 스택에서 다음 디렉터리에서 제거 됩니다.
+    **Popd** 명령을 사용 하 여 현재 디렉터리를 **pushd** 명령으로 가장 최근에 저장 한 디렉터리로 변경할 수 있습니다. **Popd** 명령을 사용 하면 스택의 맨 위에 있는 디렉터리가 스택에서 제거 되 고 현재 디렉터리가 해당 디렉터리로 변경 됩니다. 사용 하는 경우는 **popd** 명령을 다시, 스택에서 다음 디렉터리에서 제거 됩니다.
 -   명령 확장을 사용 하는 경우는 **pushd** 명령에는 네트워크 경로 로컬 드라이브 문자 및 경로입니다.
 -   네트워크 경로 지정 하는 경우는 **pushd** 명령은 지정 된 네트워크 리소스를 일시적으로 가장 높은 사용 하지 않는 드라이브 문자 (z:부터 시작)를 할당 합니다. 다음 명령은 새로 할당 된 드라이브에 지정된 된 디렉터리에 현재 드라이브 및 디렉터리를 변경합니다. 사용 하는 경우는 **popd** 명령을 명령 확장을 사용 하도록 설정 된 **popd** 명령을 제거 하 여 만든 드라이브 문자 할당 **pushd**합니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
-다음 예제에서는 사용 하는 방법을 보여 줍니다는 **pushd** 명령 및 **popd** 일괄 프로그램 실행 되 고 다음 다시 변경 하는 것에서 현재 디렉터리를 변경 하려면 일괄 프로그램에서 명령을 합니다.
+다음 예에서는 배치 프로그램에서 **pushd** 명령과 **popd** 명령을 사용 하 여 batch 프로그램이 실행 된 디렉터리에서 현재 디렉터리를 변경한 다음 다시 변경 하는 방법을 보여 줍니다.
 ```
 @echo off
 rem This batch file deletes all .txt files in a specified directory
@@ -68,4 +68,4 @@ echo All text files deleted in the %1 directory
 
 [명령줄 구문 키](command-line-syntax-key.md)
 
-[popd](popd.md)
+[Popd](popd.md)

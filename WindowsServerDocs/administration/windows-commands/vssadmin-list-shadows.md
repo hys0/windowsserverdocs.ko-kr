@@ -1,25 +1,25 @@
 ---
-title: List shadows
-description: Vssadmin 목록에 대 한 설명을 명령 섀도 처리합니다.
-ms.prod: windows-server-threshold
+title: Vssadmin list 그림자
+description: Vssadmin list shadows 명령에 대 한 설명입니다.
+ms.prod: windows-server
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 ms.technology: storage
 ms.date: 05/18/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 3601986a51e8c5b362a28c686ed132eda8e4b640
-ms.sourcegitcommit: 2977c707a299929c6ab0d1e0adab2e1c644b8306
+ms.openlocfilehash: 49bee3deac463b68fda94097bb183bcbf1c89810
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63706558"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71362586"
 ---
-# <a name="vssadmin-list-shadows"></a>List shadows
+# <a name="vssadmin-list-shadows"></a>Vssadmin list 그림자
 
->적용 대상: Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+>적용 대상: Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2, windows server 2012, windows server 2008 R2, Windows Server 2008
 
-지정된 된 볼륨의 모든 기존 섀도 복사본을 나열합니다. 매개 변수 없이이 명령을 사용 하는 경우 표시 순서에 따라 컴퓨터의 모든 볼륨 섀도 복사본 **섀도 복사본 집합**합니다.
+지정 된 볼륨의 모든 기존 섀도 복사본을 나열 합니다. 이 명령을 매개 변수 없이 사용 하면 컴퓨터의 모든 볼륨 섀도 복사본이 **섀도 복사본 집합**에 따라 결정 된 순서 대로 표시 됩니다.
 
 ## <a name="syntax"></a>구문
 
@@ -31,10 +31,10 @@ vssadmin list shadows [/for=<ForVolumeSpec>] [/shadow=<ShadowID>]
 
 |매개 변수|설명|
 |---|---|
-|/for=\<ForVolumeSpec>|볼륨 섀도 복사본에 대 한 나열 됩니다 지정 합니다.|
-|/shadow=\<ShadowID>|ShadowID로 지정 된 섀도 복사본을 나열 합니다. 섀도 복사본 ID을 사용 합니다 **list shadows** 명령입니다. 다음 형식으로 사용 하는 섀도 복사본 ID를 입력 하는 경우 여기서 각 *X* 16 진수 문자를 나타냅니다.<br><br>XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX|
+|/for = \<ForVolumeSpec >|섀도 복사본이 나열 될 볼륨을 지정 합니다.|
+|/shadow = \<ShadowID >|ShadowID에 지정 된 섀도 복사본을 나열 합니다. 섀도 복사본 ID를 가져오려면 **vssadmin list shadows** 명령을 사용 합니다. 섀도 복사본 ID를 입력할 때 다음 형식을 사용 합니다. 여기서 각 *X* 는 16 진수 문자를 나타냅니다.<br><br>XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX-XXXX-XXXX|
 
 ## <a name="additional-references"></a>추가 참조
 
 * [명령줄 구문 키](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc771080(v%3dws.11))
-* [Vssadmin](vssadmin.md)
+* [List](vssadmin.md)

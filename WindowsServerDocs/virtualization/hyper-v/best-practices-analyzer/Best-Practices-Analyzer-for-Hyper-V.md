@@ -1,7 +1,7 @@
 ---
 title: Hyper-v에 대 한 모범 사례 분석기
 description: 이 모범 사례 분석기 규칙에 대 한 텍스트의 온라인 버전입니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -10,12 +10,12 @@ ms.topic: article
 ms.assetid: 3747faa5-6e9f-499e-8a79-3fb9d73b6b92
 author: KBDAzure
 ms.date: 8/16/2016
-ms.openlocfilehash: 22c61b56467bec25baea73604f59b74efe86a8b7
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 671e1de78b390e1b595bb218ece375e88a47155b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59845004"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71365152"
 ---
 # <a name="best-practices-analyzer-for-hyper-v"></a>Hyper-v에 대 한 모범 사례 분석기
 

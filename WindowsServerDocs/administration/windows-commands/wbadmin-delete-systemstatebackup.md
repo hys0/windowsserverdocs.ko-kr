@@ -1,8 +1,8 @@
 ---
 title: wbadmin delete systemstatebackup
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6801ca5985af626ccb7f6170fbcd6f8fc8305ba1
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 1f324cba3fcdae8639009395c4df734a2db6b814
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59813154"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71362516"
 ---
 # <a name="wbadmin-delete-systemstatebackup"></a>wbadmin delete systemstatebackup
 
@@ -57,7 +57,7 @@ wbadmin delete systemstatebackup
 |-컴퓨터|해당 시스템 상태 백업을 삭제 하려면 컴퓨터를 지정 합니다. 여러 컴퓨터에 동일한 위치에 백업 된 경우 유용 합니다. 경우에 사용 해야는 **-backupTarget** 매개 변수를 지정 합니다.|
 |-quiet|사용자에 게 하위 명령 프롬프트 없이 실행 됩니다.|
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 2013 년 3 월 31 일 오전 10시 생성 하 여 시스템 상태 백업을 삭제 하려면 다음을 입력 합니다.
 ```

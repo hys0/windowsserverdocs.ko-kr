@@ -3,7 +3,7 @@ title: MultiPoint 서비스 시스템 성능에 영향을 주는 변수
 description: MultiPoint 서비스에 대 한 성능 정보
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ ms.assetid: 0f3e8875-1b5e-4789-b16c-d06d6e31f38e
 author: evaseydl
 manager: scottman
 ms.author: evas
-ms.openlocfilehash: 23bde4a65e3bf41d8968d55bf9641ca6a44b7d96
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: cba973e3b0a89c26f886a67154c27831adb2c8cc
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871494"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71394833"
 ---
 # <a name="variables-affecting-multipoint-services-system-performance"></a>MultiPoint 서비스 시스템 성능에 영향을 주는 변수
 많은 변수가 MultiPoint 서비스 시스템의 전반적인 성능에 영향을 줄 수 있습니다. 이러한 시스템을 설계할 때 고려해 야 할 수 있습니다.  

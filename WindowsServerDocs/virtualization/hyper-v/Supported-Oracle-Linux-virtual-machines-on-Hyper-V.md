@@ -1,7 +1,7 @@
 ---
 title: Hyper-v에서 지원 되는 Oracle Linux 가상 컴퓨터
 description: 각 버전에 포함 된 Linux 통합 서비스 및 기능을 나열 합니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -11,12 +11,12 @@ ms.assetid: c02fdb5b-62f3-43cb-a190-ab74b3ebcf77
 author: shirgall
 ms.author: kathydav
 ms.date: 06/01/2017
-ms.openlocfilehash: 3005907a085d1769716105f570f47f0114eae68d
-ms.sourcegitcommit: 6f968368c12b9dd699c197afb3a3d13c2211f85b
+ms.openlocfilehash: 4b09b8e760ce716da7f5aa6abecbead52293e77b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68544709"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71365486"
 ---
 # <a name="supported-oracle-linux-virtual-machines-on-hyper-v"></a>Hyper-v에서 지원 되는 Oracle Linux 가상 컴퓨터
 
@@ -145,7 +145,7 @@ Oracle Linux Unbreakable Enterprise Kernel (UEK)는 64 비트 전용 되었으�
 
    1. 파일을 만듭니다 **/etc/udev/rules.d/100-balloon.rules**합니다. 파일에 대해 원하는 다른 이름을 사용할 수 있습니다.
 
-   2. 파일에 다음 콘텐츠를 추가 합니다.`SUBSYSTEM=="memory", ACTION=="add", ATTR{state}="online"`
+   2. 파일에 다음 콘텐츠를 추가 합니다. `SUBSYSTEM=="memory", ACTION=="add", ATTR{state}="online"`
 
    3. Hot Add 지원을 사용 하도록 시스템을 재부팅 합니다.
 

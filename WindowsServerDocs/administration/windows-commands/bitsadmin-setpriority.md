@@ -1,8 +1,8 @@
 ---
 title: bitsadmin setpriority
-description: Windows 명령 항목에 대 한 **bitsadmin setpriority** -지정된 된 작업의 우선 순위를 설정 합니다.
+description: '**Bitsadmin setpriority** 의 Windows 명령 항목-지정 된 작업의 우선 순위를 설정 합니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 072f22ae8c928d427104062b8cbf0f8f42ac4416
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 60564350928f917ca1861684e042304d5d380426
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59882214"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71380441"
 ---
 # <a name="bitsadmin-setpriority"></a>bitsadmin setpriority
 
@@ -39,7 +39,7 @@ bitsadmin /SetPriority <Job> <Priority>
 |작업|작업의 표시 이름 또는 GUID|
 |우선 순위|다음 값 중 하나입니다.</br>-전경</br>-높음</br>-표준</br>-낮음|
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 다음 예제에서는 명명 된 작업에 대 한 우선 순위 설정 *myDownloadJob* 정상입니다.
 ```

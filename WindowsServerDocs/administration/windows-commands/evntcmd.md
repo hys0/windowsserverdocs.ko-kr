@@ -1,8 +1,8 @@
 ---
 title: Evntcmd
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e2a4a7f9e6bdf6f200b86e028617cae924571455
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: b4496df6df1a40b383505627d58389c098493f59
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66439456"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71377442"
 ---
 # <a name="evntcmd"></a>Evntcmd
 
@@ -40,32 +40,32 @@ evntcmd [/s <computerName>] [/v <verbosityLevel>] [/n] <FileName>
 |         /?          |                                                                                                                                                명령 프롬프트에 도움말을 표시합니다.                                                                                                                                                |
 
 ## <a name="remarks"></a>설명  
-- 트랩을 구성 하지만 대상을 트래핑 하지 않으면 하려는 경우 그래픽 유틸리티인 트랩 변환기에 대 한 이벤트를 사용 하 여 유효한 구성 파일을 만들 수 있습니다. SNMP 서비스가 설치 되어 있으면 입력 하 여 트랩 변환기에 대 한 이벤트를 시작할 수 있습니다 **evntwin** 명령 프롬프트입니다. 원하는 트랩을 정의한 후에 파일을 만들려면 사용에 적합 한 내보내기를 클릭 **evntcmd**합니다. 트랩 변환기에 대 한 이벤트를 사용 하 여 쉽게 구성 파일을 만든 다음 사용 하 여 구성 파일을 사용 하 여 **evntcmd** 신속 하 게 구성 트랩 여러 컴퓨터에서 명령 프롬프트입니다.  
+- 트랩을 구성 하지만 트랩 대상은 구성 하지 않으려는 경우 그래픽 유틸리티인 번역기에 이벤트를 사용 하 여 유효한 구성 파일을 만들 수 있습니다. SNMP 서비스가 설치 되어 있으면 입력 하 여 트랩 변환기에 대 한 이벤트를 시작할 수 있습니다 **evntwin** 명령 프롬프트입니다. 원하는 트랩을 정의한 후에 파일을 만들려면 사용에 적합 한 내보내기를 클릭 **evntcmd**합니다. 트랩 변환기에 대 한 이벤트를 사용 하 여 쉽게 구성 파일을 만든 다음 사용 하 여 구성 파일을 사용 하 여 **evntcmd** 신속 하 게 구성 트랩 여러 컴퓨터에서 명령 프롬프트입니다.  
 - 트랩을 구성 하기 위한 구문은 다음과 같습니다.  
-  **#pragma add**<em><EventLogFile> <EventSource> <EventID> [<Count> [<Period>]]</em>  
+  **#pragma 추가**<em> @ no__t <EventSource> <EventID> [<Count> [@no__t]] </em>  
   -   텍스트 **#pragma** 는 파일의 모든 항목의 시작 부분에 표시 되어야 합니다.  
-  -   매개 변수 **추가** 트랩 구성에 이벤트를 추가할 것임을 지정 합니다.  
-  -   매개 변수 *EventLogFile*, *EventSource*, 및 *EventID* 필요 합니다. 매개 변수 *EventLogFile* 이벤트가 기록 되는 파일을 지정 합니다. 매개 변수 *EventSource* 이벤트를 생성 하는 응용 프로그램을 지정 합니다. *EventID* 매개 변수는 각 이벤트를 식별 하는 고유 번호를 지정 합니다. 특정 이벤트에 해당 하는 값을 알아보려면 이벤트 트랩 번역기를 입력 하 여 시작 **evntwin** 명령 프롬프트입니다. 클릭 **사용자 지정**를 클릭 하 고 **편집**합니다. 아래 **이벤트 원본**, 구성를 클릭 한 다음 클릭 하려는 이벤트를 찾을 때까지 폴더를 찾습니다 **추가**합니다. 이벤트 원본, 이벤트 로그 파일 및 이벤트 ID에 대 한 내용은 아래에 표시 **로그, 소스**, 및 **특정 ID를 트래핑**, 각각.  
+  -   **Add** 매개 변수는 트랩 구성에 이벤트를 추가 하도록 지정 합니다.  
+  -   매개 변수 *EventLogFile*, *EventSource*, 및 *EventID* 필요 합니다. 매개 변수 *EventLogFile* 이벤트가 기록 되는 파일을 지정 합니다. 매개 변수 *EventSource* 이벤트를 생성 하는 응용 프로그램을 지정 합니다. *EventID* 매개 변수는 각 이벤트를 식별 하는 고유 번호를 지정 합니다. 특정 이벤트에 해당 하는 값을 알아보려면 이벤트 트랩 번역기를 입력 하 여 시작 **evntwin** 명령 프롬프트입니다. **사용자 지정**을 클릭 한 다음 **편집**을 클릭 합니다. **이벤트 원본**에서 구성할 이벤트를 찾을 때까지 폴더를 검색 하 고 클릭 한 다음 **추가**를 클릭 합니다. 이벤트 원본, 이벤트 로그 파일 및 이벤트 ID에 대 한 내용은 아래에 표시 **로그, 소스**, 및 **특정 ID를 트래핑**, 각각.  
   -   *Count* 매개 변수는 선택적 이며 트랩 메시지를 보내기 전에 발생 하는 이벤트 횟수를 지정 합니다. 사용 하지 않는 경우는 *Count* 매개 변수를 이벤트는 한 번 발생 한 후 트랩 메시지가 전송 됩니다.  
   -   *기간* 매개 변수는 선택 사항 이지만 사용 하 여 필요는 *Count* 매개 변수입니다. *기간* 매개 변수는 시간 (초) 동안 발생 하는 이벤트 트랩 메시지를 보내기 전에 Count 매개 변수를 사용 하 여 지정 된 횟수 만큼의 길이 지정 합니다. 사용 하지 않는 경우는 *기간* 매개 변수, 트랩 메시지를 보내는 이벤트와 지정 된 횟수 만큼 발생 한 후는 *Count* 일치 항목 사이 경과 시간 없이 매개 변수입니다.  
 - 트랩을 제거 하기 위한 구문은 다음과 같습니다.  
-  **#pragma delete**<em><EventLogFile> <EventSource> <EventID></em>  
+  **#pragma delete**<em> @ no__t <EventSource> <EventID> @ no__t-5  
   -   텍스트 **#pragma** 는 파일의 모든 항목의 시작 부분에 표시 되어야 합니다.  
-  -   매개 변수 *삭제* 트랩 구성에 이벤트를 제거할 것임을 지정 합니다.  
+  -   매개 변수 *삭제* 는 이벤트를 트랩 구성으로 제거 하도록 지정 합니다.  
   -   매개 변수 *EventLogFile*,  *EventSource*, 및 *EventID* 필요 합니다. 매개 변수 *EventLogFile* 로그를 지정에 해당 이벤트가 기록 됩니다. 매개 변수 *EventSource* 이벤트를 생성 하는 응용 프로그램을 지정 합니다. *EventID* 매개 변수는 각 이벤트를 식별 하는 고유 번호를 지정 합니다.  
 - 트랩 대상을 구성 하는 것에 대 한 구문은 다음과 같습니다.  
-  **#pragma add_TRAP_DEST**<em><CommunityName> <HostID></em>  
+  **#pragma add_TRAP_DEST**<em> @ no__t-2 <HostID> @ no__t-4  
   -   텍스트 **#pragma** 는 파일의 모든 항목의 시작 부분에 표시 되어야 합니다.  
-  -   매개 변수 **add_TRAP_DEST** 트랩 메시지를 커뮤니티 내에서 지정된 된 호스트에 보낼 것임을 지정 합니다.  
+  -   **Add_TRAP_DEST** 매개 변수는 커뮤니티 내에서 지정 된 호스트로 트랩 메시지를 보내도록 지정 합니다.  
   -   매개 변수 *CommunityName* 는 트랩 메시지가 전송 되는 커뮤니티 이름으로 지정 합니다.  
   -   매개 변수 *HostID* 트랩 메시지를 보낼 수 있도록 호스트 이름이 나 IP 주소를 지정 합니다.  
 - 트랩 대상을 제거에 대 한 구문은 다음과 같습니다.  
-  **#pragma delete_TRAP_DEST**<em><CommunityName> <HostID></em>  
+  **#pragma delete_TRAP_DEST**<em> @ no__t-2 <HostID> @ no__t-4  
   - 텍스트 **#pragma** 는 파일의 모든 항목의 시작 부분에 표시 되어야 합니다.  
-  - 매개 변수 *delete_TRAP_DEST* 트랩 메시지를 커뮤니티 내에서 지정된 된 호스트에 보낼 것임을 지정 합니다.  
+  - *Delete_TRAP_DEST* 매개 변수는 커뮤니티 내에서 지정 된 호스트로 트랩 메시지를 보내지 않도록 지정 합니다.  
   - 매개 변수 *CommunityName* 는 트랩 메시지가 전송 되는 커뮤니티 이름으로 지정 합니다.  
   - 매개 변수 *HostID* 이름 또는 IP 주소를 원하지 않는 트랩 메시지를 보낼 수 있도록 호스트를 지정 합니다.  
-    ## <a name="BKMK_Examples"></a>예제  
+    ## <a name="BKMK_Examples"></a>예와  
     다음 예제에 대 한 구성 파일 항목에에서 설명 된 **evntcmd** 명령입니다. 명령 프롬프트에서 입력 하도록 설계 되지 않은 것입니다.  
     트랩 메시지가 이벤트 로그 서비스를 다시 시작할 경우 입력 보내려고 합니다.  
     ```  

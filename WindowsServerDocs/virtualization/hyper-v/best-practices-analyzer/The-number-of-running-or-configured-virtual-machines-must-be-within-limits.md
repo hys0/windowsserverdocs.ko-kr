@@ -1,7 +1,7 @@
 ---
 title: 실행 수 또는 구성 된 가상 컴퓨터는 지원 되는 제한 내에 있어야 합니다.
-description: 이 모범 사례 분석기 규칙에 의해 보고 된 문제를 해결 하려면 지침을 제공 합니다.
-ms.prod: windows-server-threshold
+description: 이 모범 사례 분석기 규칙에서 보고 한 문제를 해결 하는 지침을 제공 합니다.
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -10,12 +10,12 @@ ms.topic: article
 ms.assetid: 9d3c4aa3-8416-46ec-a253-26dc98088d7b
 author: KBDAzure
 ms.date: 8/16/2016
-ms.openlocfilehash: 8a971a48b2d8199a6c279f1bd3f1715039fa6e0d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 56d7fd528d7fda20dbdbb16a6262bb072f053ef0
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59855354"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71364635"
 ---
 # <a name="the-number-of-running-or-configured-virtual-machines-must-be-within-supported-limits"></a>실행 수 또는 구성 된 가상 컴퓨터는 지원 되는 제한 내에 있어야 합니다.
 
@@ -33,13 +33,13 @@ ms.locfileid: "59855354"
 다음 섹션에서는 기울임꼴이이 문제에 대 한 모범 사례 분석기 도구에 나타나는 텍스트를 나타냅니다.  
   
 ## <a name="issue"></a>문제점  
-*더 많은 가상 컴퓨터 실행 중이거나 지 원하는 것 보다 구성 합니다.*  
+*지원 되는 것 보다 더 많은 가상 컴퓨터가 실행 중이거나 구성 되어 있습니다.*  
   
 ## <a name="impact"></a>영향  
-*Microsoft는이 서버에 구성 되어 있거나 실행 중인 가상 컴퓨터의 현재 수를 지원 하지 않습니다.*  
+*Microsoft는이 서버에서 실행 중이거나 구성 된 현재 수의 가상 컴퓨터를 지원 하지 않습니다.*  
   
 ## <a name="resolution"></a>해결 방법  
-*하나 이상의 가상 머신을 다른 서버로 이동 합니다.*  
+*하나 이상의 가상 컴퓨터를 다른 서버로 이동 합니다.*  
   
 Hyper-v를 실행 중인 가상 컴퓨터의 수와 같은 지원 되는 최대 구성에 대 한 자세한 참조 [Windows Server 2016의 Hyper-v 확장성에 대 한 계획](../plan/Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md)합니다.  
   
@@ -82,7 +82,7 @@ Hyper-v를 실행 중인 가상 컴퓨터의 수와 같은 지원 되는 최대 
 1.  Active Directory 도메인 서비스 도구 기능이 설치 된 컴퓨터에서 **관리 도구**, 개방형 **Active Directory 사용자 및 컴퓨터**, Hyper-v를 실행 하는 컴퓨터에 대 한 컴퓨터 계정으로 이동 합니다.  
   
     > [!NOTE]  
-    > **Active Directory 사용자 및 컴퓨터**가 나열되지 않는 경우 Active Directory 도메인 서비스 도구 기능을 설치합니다. 자세한 내용은 [AD DS 용 원격 서버 관리 도구 설치](https://go.microsoft.com/fwlink/?LinkId=140463) (https://go.microsoft.com/fwlink/?LinkId=140463)합니다.  
+    > **Active Directory 사용자 및 컴퓨터**가 나열되지 않는 경우 Active Directory 도메인 서비스 도구 기능을 설치합니다. 자세한 내용은 [AD DS에 대 한 원격 서버 관리 도구 설치](https://go.microsoft.com/fwlink/?LinkId=140463) (https://go.microsoft.com/fwlink/?LinkId=140463) 을 참조 하십시오.  
   
 2.  Hyper-v를 실행 하는 컴퓨터에 대 한 컴퓨터 계정을 마우스 오른쪽 단추로 클릭 하 고 클릭 한 다음 **속성**합니다.  
   

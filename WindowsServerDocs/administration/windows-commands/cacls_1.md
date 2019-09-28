@@ -2,7 +2,7 @@
 title: cacls
 description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d3c2ba6dca1797cda3851b3c270938d47828ed7a
-ms.sourcegitcommit: 9f955be34c641b58ae8b3000768caa46ad535d43
+ms.openlocfilehash: 04b60bd852abdb55059efb96aec4c290361d6a74
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2019
-ms.locfileid: "68590396"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71379950"
 ---
 # <a name="cacls"></a>cacls
 
@@ -40,9 +40,9 @@ cacls <filename> [/t] [/m] [/l] [/s[:sddl]] [/e] [/c] [/g user:<perm>] [/r user 
 |         /s:sddl         |                                       Acl을 SDDL 문자열에 지정 된 대로 바꿉니다 ( **/e**, **/g**, **/r**, **/p**또는 **/d**와는 유효 하지 않음).                                        |
 |           /e            |                                                                                 ACL을 바꾸지 않고 편집 합니다.                                                                                  |
 |           /c            |                                                                                 액세스 거부 오류에서 계속 합니다.                                                                                  |
-|    /g 사용자:\<perm\>     |   사용자 액세스 권한을 지정 하는 권한 부여.<br /><br />권한에 대 한 유효한 값:<br /><br />-n-없음<br />-r-읽기<br />-w-쓰기<br />-c-변경 (쓰기)<br />-f-모든 권한   |
+|    /g 사용자: \<perm @ no__t-1     |   사용자 액세스 권한을 지정 하는 권한 부여.<br /><br />권한에 대 한 유효한 값:<br /><br />-n-없음<br />-r-읽기<br />-w-쓰기<br />-c-변경 (쓰기)<br />-f-모든 권한   |
 |      /r 사용자 [...]      |                                                                  지정 된 사용자의 액세스 권한을 취소할 (만 함께 사용할 **/e**).                                                                   |
-| [/p 사용자:\<perm\> [...] | 지정 된 사용자의 액세스 권한을 바꿉니다.<br /><br />권한에 대 한 유효한 값:<br /><br />-n-없음<br />-r-읽기<br />-w-쓰기<br />-c-변경 (쓰기)<br />-f-모든 권한 |
+| [/p 사용자: \<perm @ no__t-1 [...] | 지정 된 사용자의 액세스 권한을 바꿉니다.<br /><br />권한에 대 한 유효한 값:<br /><br />-n-없음<br />-r-읽기<br />-w-쓰기<br />-c-변경 (쓰기)<br />-f-모든 권한 |
 |     [/p 사용자 [...]      |                                                                                    지정 된 사용자 액세스를 거부 합니다.                                                                                     |
 |           /?            |                                                                                명령 프롬프트에 도움말을 표시합니다.                                                                                |
 
@@ -51,7 +51,7 @@ cacls <filename> [/t] [/m] [/l] [/s[:sddl]] [/e] [/c] [/g user:<perm>] [/r user 
 - 다음 표를 사용 하 여 결과 해석 하 합니다.  
 
 
-  |      Output       |                액세스 제어 항목 (ACE)에 적용 됩니다.                |
+  |      출력       |                액세스 제어 항목 (ACE)에 적용 됩니다.                |
   |-------------------|---------------------------------------------------------------------|
   |        OI         |               개체 상속 합니다. 이 폴더 및 파일입니다.                |
   |        CI         |           컨테이너 상속 합니다. 이 폴더 및 하위 폴더입니다.            |
@@ -63,7 +63,7 @@ cacls <filename> [/t] [/m] [/l] [/s[:sddl]] [/e] [/c] [/g user:<perm>] [/r user 
   |     (OI) IO)      |                             파일에만 해당 합니다.                             |
 
 
-- 와일드 카드를 사용할 수 있습니다 ( **?** **및\\) 를통해여러파일을지정할수있습니다.\***  
+- 와일드 카드를 사용할 수 있습니다 ( **?** 및 **\\ @ no__t-2**)를 지정 하 여 여러 파일을 지정 합니다.  
 - 둘 이상의 사용자를 지정할 수 있습니다.  
 
 #### <a name="additional-references"></a>추가 참조  

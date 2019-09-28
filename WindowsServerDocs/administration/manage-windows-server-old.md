@@ -1,19 +1,19 @@
 ---
 title: Windows Server 관리
 description: Windows Server 관리를 위한 도구, 권장 사항 및 지침에 대해 알아보기
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: manage
 ms.topic: article
 author: lizap
 ms.author: elizapo
 ms.date: 03/16/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 7ae87b12997aa3cb3ae3fe290c9243995b30d6b0
-ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
+ms.openlocfilehash: 880f8da5bfb872fba6fe4886198d932c91f4bf86
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66452823"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71370469"
 ---
 # <a name="manage-windows-server"></a>Windows Server 관리
 
@@ -66,7 +66,7 @@ Windows Server 인스턴스를 관리하는 데 사용하는 도구는 배포한
 >Windows Admin Center는 이전에 "Project Honolulu"였던 공식 이름입니다.
 
 ### <a name="manage-on-premises-systems-with-server-manager"></a>서버 관리자를 사용한 온-프레미스 시스템 관리
-[서버 관리자](server-manager/server-manager.md)는 Windows Server의 전체 설치 옵션에 포함되어 있는 관리 콘솔입니다 (UI 없는 설치에 사용할 수 없는-Server Core 서버 관리자를 포함 하지 않습니다.) 설치 및 서버 역할을 제거 하려면 서버 관리자를 사용 하 여 추가 하 고 원격 서버, 시작 및 중지 서비스 및 사용자 환경에 대해 수집 된 데이터 보기를 제거 합니다.
+[서버 관리자](server-manager/server-manager.md)는 Windows Server의 전체 설치 옵션에 포함되어 있는 관리 콘솔입니다 (UI를 설치하지 않는 경우 사용할 수 없습니다. Server Core는 서버 관리자를 포함하지 않습니다.) 서버 관리자를 사용하여 서버 역할을 설치 및 제거하고, 원격 서버를 추가 및 제거하고, 서비스를 시작 및 중지하고 사용자 환경에 대해 수집된 데이터를 봅니다.
 
 ### <a name="manage-remote-systems-and-systems-without-ui-with-remote-server-administration-tools-rsat"></a>RSAT(원격 서버 관리 도구)를 사용하여 원격 시스템과 UI가 포함되지 않은 시스템을 관리
 환경에 Server Core나 원격 서버(온-프레미스 또는 VM)가 설치되어 있는 경우에는 [RSAT(원격 서버 관리 도구)](../remote/remote-server-administration-tools.md)를 사용하여 이러한 시스템을 관리할 수 있습니다. RSAT에는 서버 관리자가 포함되어 있기 때문에 이를 사용하여 모든 서버를 관리할 수 있습니다.
@@ -84,14 +84,14 @@ Windows Server 인스턴스를 관리하는 데 사용하는 도구는 배포한
 
 Windows 10 및 Windows Server에서 수집할 수 있는 진단 데이터에 대한 정보는 [조직에서 Windows 진단 데이터 구성](/windows/configuration/configure-windows-diagnostic-data-in-your-organization)부터 시작합니다.
 
-### <a name="setup-and-boot-event-collectionget-started-with-setup-and-boot-event-collectionmd"></a>[설치 및 부팅 이벤트 수집](get-started-with-setup-and-boot-event-collection.md)
+### <a name="setup-and-boot-event-collectionget-started-with-setup-and-boot-event-collectionmd"></a>[이벤트 컬렉션 설치 및 부팅](get-started-with-setup-and-boot-event-collection.md)
 설치 및 부팅 이벤트 수집을 사용하면 "수집기" 컴퓨터를 지정하여 부팅을 할 때나 설정 프로세스를 진행할 때 다른 컴퓨터에서 발생하는 중요 이벤트를 다양하게 수집할 수 있습니다. 그런 다음 이벤트 뷰어, 메시지 분석기, Wevtutil, 또는 Windows PowerShell cmdlet 통해 수집 된 이벤트를 나중에 분석할 수 있습니다. 
 
-### <a name="software-inventory-logging-silsoftware-inventory-loggingget-started-with-software-inventory-loggingmd"></a>[소프트웨어 인벤토리 로깅 (SIL)](software-inventory-logging/get-started-with-software-inventory-logging.md)
+### <a name="software-inventory-logging-silsoftware-inventory-loggingget-started-with-software-inventory-loggingmd"></a>[소프트웨어 인벤토리 로깅(SIL)](software-inventory-logging/get-started-with-software-inventory-logging.md)
 
 Windows Server의 소프트웨어 인벤토리 로깅은 서버 관리자가 서버에 설치된 Microsoft 소프트웨어 목록을 검색하는 데 도움이 되는 간단한 PowerShell cmdlet 집합이 포함된 기능입니다. 또한 이 데이터를 수집하고 집계를 위해 HTTPS 프로토콜을 사용하여 네트워크를 통해 정기적으로 대상 웹 서버에 전달하는 기능을 제공합니다. 주로 시간별 수집 및 전달을 위한 기능 관리도 PowerShell 명령을 통해 수행됩니다.
 
-### <a name="user-access-logging-ualuser-access-loggingget-started-with-user-access-loggingmd"></a>[사용자 액세스 로깅 UAL)](user-access-logging/get-started-with-user-access-logging.md)
+### <a name="user-access-logging-ualuser-access-loggingget-started-with-user-access-loggingmd"></a>[사용자 액세스 로깅(UAL)](user-access-logging/get-started-with-user-access-logging.md)
 
 사용자 액세스 로깅은 Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012를 실행하는 컴퓨터에서 로깅된 고유한 클라이언트 디바이스 및 사용자 요청 이벤트를 로컬 데이터베이스로 집계합니다. 이렇게 레코드는 서버 관리자가 쿼리를 통해 서버 역할, 사용자, 장치, 로컬 서버 및 날짜를 기준으로 수량과 인스턴스를 검색하는 데 사용할 수 있습니다. 또한 UAL은 타사 소프트웨어 개발자가 집계할 UAL 이벤트를 계측할 수 있도록 해줍니다. 
 

@@ -1,8 +1,8 @@
 ---
 title: makecab
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7b120cf990abe2024fd6c96ca2f1ef11fa2350ae
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: b0231b6f1ddd3e81caa7544587f764e2308015b8
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66437535"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71374149"
 ---
 # <a name="makecab"></a>makecab
 
@@ -43,7 +43,7 @@ makecab [/v[<n>]] [/d var=<value> ...] /f <directives_file> [...]
 |          /?          |                                                           명령 프롬프트에 도움말을 표시합니다.                                                            |
 
 ## <a name="remarks"></a>설명
--   가리킵니다 [Microsoft 캐비닛 format](https://go.microsoft.com/fwlink/?LinkId=226852) directive_file 내용은 MSDN에서.
+-   Directive_file에 대 한 자세한 내용은 MSDN의 [Microsoft 캐비닛 형식](https://go.microsoft.com/fwlink/?LinkId=226852) 을 참조 하세요.
 
 ## <a name="additional-references"></a>추가 참조
 -   [명령줄 구문 키](command-line-syntax-key.md)

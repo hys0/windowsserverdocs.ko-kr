@@ -1,7 +1,7 @@
 ---
 title: Windows Server 2016 해야 적어도 최소 메모리 양을 사용 하 여 구성
-description: 이 모범 사례 분석기 규칙에 의해 보고 된 문제를 해결 하려면 지침을 제공 합니다.
-ms.prod: windows-server-threshold
+description: 이 모범 사례 분석기 규칙에서 보고 한 문제를 해결 하는 지침을 제공 합니다.
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -10,12 +10,12 @@ ms.topic: article
 ms.assetid: d324af73-af73-40b0-bd5b-8003ba3e921b
 author: KBDAzure
 ms.date: 8/16/2016
-ms.openlocfilehash: 687c36ee8b3dea1d67ad35155650e77a9cf7f0a4
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b3e4b29c11e2c501b9e9df6b1089a297dcced125
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59873884"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71364372"
 ---
 # <a name="windows-server-2016-should-be-configured-with-at-least-the-minimum-amount-of-memory"></a>Windows Server 2016 해야 적어도 최소 메모리 양을 사용 하 여 구성
 
@@ -33,15 +33,15 @@ ms.locfileid: "59873884"
 다음 섹션에서는 기울임꼴이이 문제에 대 한 모범 사례 분석기 도구에 표시 되는 UI 텍스트를 나타냅니다.
   
 ## <a name="issue"></a>**문제점**  
-*Windows Server 2016을 실행 하는 가상 머신 512mb RAM의 최소 크기 보다 더 적은 노력으로 구성 됩니다.*  
+*Windows Server 2016를 실행 하는 가상 머신은 최소 RAM 용량 (512 MB 미만)으로 구성 됩니다.*  
   
-## <a name="impact"></a>**Impact**  
-*다음 가상 머신에서 게스트 운영 체제 실행 되지 않거나 불안정 실행 될 수 있습니다.*  
+## <a name="impact"></a>**식**  
+*다음 가상 컴퓨터의 게스트 운영 체제가 실행 되지 않거나 불안정을 실행할 수 있습니다.*  
   
-\<가상 머신의 목록 >  
+@no__t-가상 머신 목록 >  
   
 ## <a name="resolution"></a>**해결 방법**  
-*Hyper-v 관리자를 사용 하 여이 가상 머신에 최소 512 MB 이상에 할당 된 메모리를 늘리세요.*  
+*Hyper-v 관리자를 사용 하 여이 가상 컴퓨터에 할당 된 메모리를 512 이상으로 늘립니다.*  
   
 #### <a name="increase-the-memory-using-hyper-v-manager"></a>Hyper-v 관리자를 사용 하 여 메모리 확보  
   
@@ -68,7 +68,7 @@ Set-VMMemory <MyVM> -StartupBytes 512MB
 ```  
   
 ## <a name="see-also"></a>관련 항목  
-[Set-VMMemory](https://technet.microsoft.com/library/hh848572.aspx)  
+[설정-VMMemory](https://technet.microsoft.com/library/hh848572.aspx)  
   
 
 

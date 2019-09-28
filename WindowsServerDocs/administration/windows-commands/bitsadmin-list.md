@@ -1,8 +1,8 @@
 ---
 title: bitsadmin list
-description: Windows 명령 항목에 대 한 **bitsadmin 목록** -현재 사용자가 소유 하 고 전송 작업을 나열 합니다.
+description: '**Bitsadmin 목록의** Windows 명령 항목-현재 사용자가 소유한 전송 작업을 나열 합니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f0b88001b9c4ae01b57006ffeef66dec0348ca77
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: bd4787f51dc2a7843ff6cf5c4f786658e530ad8f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59873864"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381102"
 ---
 # <a name="bitsadmin-list"></a>bitsadmin list
 
@@ -37,13 +37,13 @@ bitsadmin /List [/allusers][/verbose]
 |매개 변수|설명|
 |---------|-----------|
 |/ Allusers|선택적-모든 사용자에 대 한 작업을 나열 합니다.|
-|/ 세부 정보 표시|선택적-각 작업에 대 한 자세한 정보를 제공 합니다.|
+|/ 세부 정보 표시|선택 사항-각 작업에 대 한 자세한 정보를 제공 합니다.|
 
 ## <a name="remarks"></a>설명
 
 /Allusers 매개 변수를 사용 하려면 관리자 권한이 있어야 합니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 다음 예제에서는 현재 사용자가 소유한 작업에 대 한 정보를 검색 합니다.
 ```

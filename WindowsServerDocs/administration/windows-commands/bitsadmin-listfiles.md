@@ -1,8 +1,8 @@
 ---
 title: bitsadmin listfiles
-description: Windows 명령 항목에 대 한 **bitsadmin listfiles** -지정된 된 된 작업의 파일을 나열 합니다.
+description: '**Bitsadmin listfiles** 에 대 한 Windows 명령 항목-지정 된 작업의 파일을 나열 합니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4f0f86a7e176c601c51dbdf403baf51f70e53dc4
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 43823e4f5c8443396e21405f22ba8b3c5687da44
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59852974"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381056"
 ---
 # <a name="bitsadmin-listfiles"></a>bitsadmin listfiles
 
@@ -38,7 +38,7 @@ bitsadmin /ListFiles <Job>
 |---------|-----------|
 |작업|작업의 표시 이름 또는 GUID|
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 다음 예제에서는 라는 작업에 대 한 파일의 목록을 검색 *myDownloadJob*합니다.
 ```

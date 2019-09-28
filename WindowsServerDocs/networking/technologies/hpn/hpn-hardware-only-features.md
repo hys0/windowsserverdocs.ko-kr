@@ -1,7 +1,7 @@
 ---
 title: 고성능 네트워킹
 description: 이 항목에서는 Windows Server 2016의 오프 로드 및 최적화 기술에 대 한 개요를 제공 하며, 이러한 기술에 대 한 추가 지침에 대 한 링크를 제공 합니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
@@ -9,12 +9,12 @@ manager: dougkim
 ms.author: pashort
 author: shortpatti
 ms.date: 09/12/2018
-ms.openlocfilehash: 3a561096da49efc4c217c0736d888674b2acf202
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 5cf6a5057151c696bc1c29a1dcf6fc18c776605a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871955"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71405750"
 ---
 ## <a name="hardware-only-ho-features-and-technologies"></a>HO(하드웨어 전용) 기능 및 기술
 

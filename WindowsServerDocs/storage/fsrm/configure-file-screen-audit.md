@@ -2,18 +2,18 @@
 title: 파일 차단 감사 구성
 description: 이 문서에서는 파일 차단 감사 보고서를 생성하기 위해 파일 차단 감사를 구성하는 방법을 설명합니다.
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 89592a9e1f61374d2d909678a91dc4a06e0b1972
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a9444e158a935f4e931aa7a5d634d970c5acc88e
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59824474"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71394570"
 ---
 # <a name="configure-file-screen-audit"></a>파일 차단 감사 구성
 
@@ -34,5 +34,5 @@ ms.locfileid: "59824474"
 
 ## <a name="see-also"></a>참조
 
--   [설정 파일 서버 리소스 관리자 옵션](setting-file-server-resource-manager-options.md)
--   [저장소 보고서 관리](storage-reports-management.md)
+-   [파일 서버 리소스 관리자 옵션 설정](setting-file-server-resource-manager-options.md)
+-   [스토리지 보고서 관리](storage-reports-management.md)

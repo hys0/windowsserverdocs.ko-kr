@@ -1,7 +1,7 @@
 ---
 title: Hyper-v에서 지원 되는 SUSE 가상 컴퓨터
-description: Linux integration services 및 각 버전에 포함 된 기능을 나열 합니다.
-ms.prod: windows-server-threshold
+description: 각 버전에 포함 된 Linux 통합 서비스 및 기능을 나열 합니다.
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -11,24 +11,24 @@ ms.assetid: 7ec0e14c-4498-4bd9-8fe6-b94260198efc
 author: shirgall
 ms.author: kathydav
 ms.date: 10/03/2016
-ms.openlocfilehash: d7b6d3adb4841ea827c56309307549c911a439ea
-ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
+ms.openlocfilehash: 45517c1d381ba55c819b09b53ae563092e161b1e
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/25/2019
-ms.locfileid: "66222815"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71366730"
 ---
 # <a name="supported-suse-virtual-machines-on-hyper-v"></a>Hyper-v에서 지원 되는 SUSE 가상 컴퓨터
 
->적용 대상: Windows Server 2016에서 Hyper-v Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012 Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
+>적용 대상: Windows Server 2016, Hyper-v Server 2016, Windows Server 2012 R2, Hyper-v server 2012 R2, Windows Server 2012, Hyper-v Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
 
 다음은 각 버전의 기능을 나타내는 기능 배포 맵입니다. 알려진된 문제 및 각 배포에 대 한 대안 표 다음에 나열 됩니다.
 
-Hyper-v에 대 한 기본 제공 SUSE Linux Enterprise Service 드라이버 SUSE에 의해 인증 됩니다. 이 공지에서 구성 예를 볼 수 있습니다. [SUSE 예 인증 공지](https://www.suse.com/nbswebapp/yesBulletin.jsp?bulletinNumber=144176)합니다.
+Hyper-v에 대 한 기본 제공 SUSE Linux Enterprise Service 드라이버 SUSE에 의해 인증 됩니다. 예제 구성은이 공지에서 볼 수 있습니다. [예 인증 게시판을 SUSE](https://www.suse.com/nbswebapp/yesBulletin.jsp?bulletinNumber=144176).
 
 ## <a name="table-legend"></a>표의 범례
 
-* **기본 제공** -LIS이 Linux 배포판의 일부로 포함 됩니다. Microsoft에서 제공한 LIS 다운로드 패키지를 설치 하지 않는 있으므로이 배포에 대 한 작동 하지 않습니다. LIS에서 작성에 대 한 커널 모듈 버전 번호 (에 표시 된 대로 **lsmod**예를 들어)는 Microsoft에서 제공한 LIS 다운로드 패키지에 버전 번호와 다릅니다. LIS에서 작성 된 지 오래 된 불일치를 나타내지 않습니다.
+* **내장** 된 LIS는이 Linux 배포의 일부로 포함 됩니다. Microsoft에서 제공한 LIS 다운로드 패키지는이 배포에 대해 작동 하지 않으므로 설치 하지 마세요. 기본 제공 LIS의 커널 모듈 버전 번호 (예: **lsmod**에 표시)는 Microsoft에서 제공 하는 lis 다운로드 패키지의 버전 번호와 다릅니다. LIS에서 작성 된 지 오래 된 불일치를 나타내지 않습니다.
 
 * &#10004; -사용 가능한 기능
 
@@ -38,31 +38,31 @@ SLES12 +는 64 비트 전용입니다.
 
 |**기능**|**Windows Server 운영 체제 버전**|**SLES 15**|**SLES 12 SP3/SP4**|**SLES 12 SP2**|**SLES 12 SP1**|**SLES 11 SP4**|**SLES 11 SP3**|
 |-|-|-|-|-|-|-|-|
-|**가용성**||기본 제공|기본 제공|기본 제공|기본 제공|기본 제공|기본 제공|
+|**Availability**||기본 제공|기본 제공|기본 제공|기본 제공|기본 제공|기본 제공|
 |**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Windows Server 2016 정확한 시간|2019, 2016|&#10004;|&#10004;|&#10004;||||
-|**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**||||||||
+|**[Lan](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**||||||||
 |Jumbo 프레임|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|VLAN 태깅, 트렁킹|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|VLAN 태깅 및 트렁킹|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |실시간 마이그레이션|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|정적 IP 주입|2019, 2016, 2012 R2, 2012|&#10004;참고 1|&#10004;참고 1|&#10004;참고 1|&#10004;참고 1|&#10004;참고 1|&#10004;참고 1|
+|고정 IP 삽입|2019, 2016, 2012 R2, 2012|&#10004;참고 1|&#10004;참고 1|&#10004;참고 1|&#10004;참고 1|&#10004;참고 1|&#10004;참고 1|
 |vRSS|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|||
-|TCP 조각화와 체크섬 오프 로드|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||
+|TCP 조각화 및 체크섬 오프 로드|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||
 |SR-IOV|2019, 2016|&#10004;|&#10004;|&#10004;||||
-|**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**||||||||
+|**[저장할](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**||||||||
 |VHDX 크기 조정|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |가상 파이버 채널|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|가상 머신 백업|2019, 2016, 2012 R2|& #10004; Note 2, 3, 8|& #10004; Note 2, 3, 8|& #10004; Note 2, 3, 8|& #10004; Note 2, 3, 8|& #10004; Note 2, 3, 8|& #10004; Note 2, 3, 8|
+|라이브 가상 머신 백업|2019, 2016, 2012 R2|& #10004; Note 2, 3, 8|& #10004; Note 2, 3, 8|& #10004; Note 2, 3, 8|& #10004; Note 2, 3, 8|& #10004; Note 2, 3, 8|& #10004; Note 2, 3, 8|
 |TRIM 지원|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||
 |SCSI WWN|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;||||
-|**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)**||||||||
+|**[Ram](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)**||||||||
 |PAE 커널 지원|2019, 2016, 2012 R2, 2012, 2008 R2|해당 사항 없음|해당 사항 없음|해당 사항 없음|해당 사항 없음|&#10004;|&#10004;|
 |MMIO 간격 구성|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |동적 메모리-즉석 추가|2019, 2016, 2012 R2, 2012|&#10004; 참고 5, 6|&#10004; 참고 5, 6|&#10004; 참고 5, 6|&#10004; 참고 5, 6|&#10004; 4, 5, 6 note|&#10004; 4, 5, 6 note|
 |동적 메모리-Ballooning|2019, 2016, 2012 R2, 2012|&#10004; 참고 5, 6|&#10004; 참고 5, 6|&#10004; 참고 5, 6|&#10004; 참고 5, 6|&#10004; 4, 5, 6 note|&#10004; 4, 5, 6 note|
 |런타임 메모리 크기 조정|2019, 2016|&#10004; 참고 5, 6|&#10004; 참고 5, 6|&#10004; 참고 5, 6||||
-|**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**||||||||
-|하이퍼-V-특정 비디오 장치|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|**[화면이](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**||||||||
+|Hyper-v 관련 비디오 장치|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |**[기타](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)**||||||||
 |키/값 쌍|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004; 참고 7|&#10004; 참고 7|
 |마스크 불가능 인터럽트|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
@@ -74,7 +74,7 @@ SLES12 +는 64 비트 전용입니다.
 |UEFI를 사용 하 여 부팅|2019, 2016, 2012 R2|& #10004; 참고 9|& #10004; 참고 9|& #10004; 참고 9|& #10004; 참고 9|& #10004; 참고 9||
 |보안 부팅|2019, 2016|&#10004;|&#10004;|&#10004;|&#10004;|||
 
-## <a name="BKMK_notes"></a>참고 사항
+## <a name="BKMK_notes"></a>메모란
 
 1. 정적 IP 주입 하는 경우 작동 하지 않을 수 **네트워크 관리자** 가 가상 컴퓨터에는 지정 된 하이퍼-V-특정 네트워크 어댑터 구성 되었습니다. 고정 IP를 원활 하 게 작동 되도록 주입 확인 네트워크 관리자 완전히 해제 하 여 특정 네트워크 어댑터에 대 한 해제 되었습니다 해당 **ifcfg ethX** 파일입니다.
 
@@ -96,7 +96,7 @@ SLES12 +는 64 비트 전용입니다.
 
 8. VSS 백업에는 단일 파티션을 여러 번 탑재 된 경우 실패 합니다.
 
-9. Windows Server 2012 R2에서 가상 컴퓨터에 기본 세대 2 Linux 가상 컴퓨터를 사용 하도록 설정 하는 보안 부팅 2 세대는 보안 부팅 옵션을 해제 하지 않는 한 부팅 되지 않습니다. Hyper-V 관리자 내 가상 컴퓨터에 대한 설정의 **펌웨어** 섹션에서 보안 부팅을 사용하지 않도록 설정하거나 Powershell을 사용하여 사용하지 않도록 설정할 수 있습니다.
+9. Windows Server 2012 r 2에서 2 세대 가상 컴퓨터는 기본적으로 보안 부팅이 사용 하도록 설정 되어 있으며 2 세대 Linux 가상 컴퓨터는 보안 부팅 옵션을 사용 하지 않도록 설정 된 경우를 제외 하 고 부팅 되지 않습니다. Hyper-V 관리자 내 가상 컴퓨터에 대한 설정의 **펌웨어** 섹션에서 보안 부팅을 사용하지 않도록 설정하거나 Powershell을 사용하여 사용하지 않도록 설정할 수 있습니다.
 
    ```Powershell
    Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
@@ -105,18 +105,18 @@ SLES12 +는 64 비트 전용입니다.
 
 ## <a name="see-also"></a>관련 항목
 
-* [Set-VMFirmware](https://technet.microsoft.com/library/dn464287.aspx)
+* [Set-vmfirmware](https://technet.microsoft.com/library/dn464287.aspx)
 
-* [CentOS 지원 및 Hyper-v Red Hat Enterprise Linux 가상 컴퓨터](Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md)
+* [Hyper-v에서 지원 되는 CentOS 및 Red Hat Enterprise Linux 가상 컴퓨터](Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md)
 
 * [Hyper-V에서 지원되는 Debian 가상 머신](Supported-Debian-virtual-machines-on-Hyper-V.md)
 
 * [Hyper-v에서 지원 되는 Oracle Linux 가상 컴퓨터](Supported-Oracle-Linux-virtual-machines-on-Hyper-V.md)
 
-* [Hyper-v에서 지원 되는 Ubuntu 가상 컴퓨터](Supported-Ubuntu-virtual-machines-on-Hyper-V.md)
+* [Hyper-v에서 지원 되는 Ubuntu 가상 머신](Supported-Ubuntu-virtual-machines-on-Hyper-V.md)
 
 * [Hyper-v에서 지원 되는 FreeBSD 가상 컴퓨터](Supported-FreeBSD-virtual-machines-on-Hyper-V.md)
 
-* [Hyper-v의 Linux 및 FreeBSD 가상 컴퓨터에 대 한 설명이](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md)
+* [Hyper-v의 Linux 및 FreeBSD 가상 머신에 대 한 기능 설명](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md)
 
-* [Hyper-v에서 Linux를 실행 하는 것에 대 한 모범 사례](Best-Practices-for-running-Linux-on-Hyper-V.md)
+* [Hyper-v에서 Linux를 실행 하기 위한 모범 사례](Best-Practices-for-running-Linux-on-Hyper-V.md)

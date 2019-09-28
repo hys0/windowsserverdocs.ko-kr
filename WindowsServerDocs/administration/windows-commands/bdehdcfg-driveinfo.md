@@ -1,8 +1,8 @@
 ---
 title: bdehdcfg driveinfo
-description: '에 대 한 Windows 명령을 항목 * * bdehdcfg: driveinfo * *-드라이브 문자, 총 크기, 최대 여유 공간, 및 파티션 특성을 표시 합니다.'
+description: '\* * Bdehdcfg: driveinfo * *에 대 한 Windows 명령 항목은 드라이브 문자, 총 크기, 최대 여유 공간 및 파티션 특징을 표시 합니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b2dd62e34f8205e0b5d395ba759fff4b4937b0ad
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: b0f4541bfd71fb7639d18e6e548559ed02918815
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66435046"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71382275"
 ---
 # <a name="bdehdcfg-driveinfo"></a>bdehdcfg: driveinfo
 
@@ -37,7 +37,7 @@ bdehdcfg -driveinfo <DriveLetter>
 
 ## <a name="remarks"></a>설명
 이 명령은 정보 제공 용 이므로 이며은 드라이브를 수정 하지 않습니다.
-## <a name="BKMK_Examples"></a>예제
+## <a name="BKMK_Examples"></a>예 들어
 다음 예제에서는 C 드라이브에 대 한 드라이브 정보를 표시 합니다.
 ```
 bdehdcfg  driveinfo C:

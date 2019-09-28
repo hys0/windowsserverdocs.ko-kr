@@ -1,8 +1,8 @@
 ---
 title: bitsadmin getnotifycmdline
-description: Windows 명령 항목에 대 한 **bitsadmin getnotifycmdline** -데이터 전송 작업이 끝나면 실행 되는 명령줄 명령을 검색 합니다.
+description: '**Bitsadmin getnotifycmdline** 에 대 한 Windows 명령 항목-작업에서 데이터 전송을 완료할 때 실행 되는 명령줄 명령을 검색 합니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3ca7b2e67c0b5672733a25465fba89d1bd69d07a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b91d2c71ad4bedaac65e23041ca78a70ade99977
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59817294"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381492"
 ---
 # <a name="bitsadmin-getnotifycmdline"></a>bitsadmin getnotifycmdline
 
-데이터 전송 작업이 완료 될 때 실행할 명령줄 명령을 검색 합니다.
+작업에서 데이터 전송을 완료할 때 실행할 명령줄 명령을 검색 합니다.
 
-**1.2 및 이전 비트**: 지원되지 않습니다.
+**BITS 1.2 및 이전 버전**: 지원되지 않습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -38,9 +38,9 @@ bitsadmin /GetNotifyCmdLine <Job>
 |---------|-----------|
 |작업|작업의 표시 이름 또는 GUID|
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
-다음 예제에서는 작업 라는 서비스를 사용한 명령줄 명령을 검색 *myDownloadJob* 완료 합니다.
+다음 예제에서는 *Mydownloadjob* 이라는 작업이 완료 될 때 서비스에서 사용 하는 명령줄 명령을 검색 합니다.
 ```
 C:\>bitsadmin /GetNotifyCmdLine myDownloadJob
 ```

@@ -1,19 +1,19 @@
 ---
 title: QoS 정책 관리
 description: 이 항목에서는 Windows Server 2016에서 QoS (서비스 품질) 정책을 만들고 관리 하는 방법에 대 한 지침을 제공 합니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 04fdfa54-6600-43d4-8945-35f75e15275a
 manager: brianlic
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 3cff51b3cf76d3224832bf99ff966bf473d6ff6c
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: ac717555d1ab751600527e294d32f10d1f05bfa5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871853"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71395882"
 ---
 # <a name="manage-qos-policy"></a>QoS 정책 관리
 
@@ -280,7 +280,7 @@ DSCP 표시 재정의는 응용 프로그램의 기능을 지정 하 여 QoS 정
 
 ##### <a name="wireless-multimedia-and-dscp-values"></a>무선 멀티미디어 및 DSCP 값
 
-Wi-fi [동맹](https://go.microsoft.com/fwlink/?LinkId=160769) \(은 wi-fi\) \(\) 에서 전송 되는 네트워크 트래픽 우선 순위를 정하는 데 사용 되는 네 가지 액세스 범주 WMM_AC를 정의 하는 무선 멀티미디어 WMM 인증을 설정 했습니다.\-Fi 무선 네트워크. 액세스 범주에는 \(가장 높은 우선 순위\)(음성, 비디오, 최상의 작업 및 배경) (각각 .vo.msecnd.net, VI, be 및 BK)가 포함 됩니다. WMM 사양은 네 가지 액세스 범주 각각에 해당 하는 DSCP 값을 정의 합니다.
+Wi-fi [동맹](https://go.microsoft.com/fwlink/?LinkId=160769) 은 wi-fi 무선 네트워크에서 전송 되는 네트워크 트래픽 우선 순위를 정하는 데 사용 되는 4 개의 액세스 범주 \(WMM_AC @ no__t-4를 정의 하는 무선 멀티미디어 \(wmm @ no__t-2에 대 한 인증을 설정 했습니다. 액세스 범주에는 \(가장 높은 우선 순위\)(음성, 비디오, 최상의 작업 및 배경) (각각 .vo.msecnd.net, VI, be 및 BK)가 포함 됩니다. WMM 사양은 네 가지 액세스 범주 각각에 해당 하는 DSCP 값을 정의 합니다.
   
 |DSCP 값|WMM 액세스 범주|
 |----------|-------------------|
@@ -312,7 +312,7 @@ GPO의 우선 순위와 마찬가지로 QoS 정책에는 여러 QoS 정책이 �
 
 또는 겹치지 않는 조건을 지정 하 여 여러 QoS 정책이 동일한 트래픽에 적용 될 수 있습니다. 응용 프로그램의 조건과 network 5 중 사이에 응용 프로그램을 지정 하는 정책이 보다 구체적으로 간주 되어 적용 됩니다. 
 
-예를 들어 policy_A는 응용 프로그램 이름 (app.config)만 지정 하 고 policy_B은 대상 IP 주소 192.168.1.0/24를 지정 합니다. 이러한 QoS 정책이 충돌 \(하면 192.168.4.0/24\)범위 내에서 IP 주소로 트래픽을 전송 합니다. policy_A가 적용 됩니다.
+예를 들어 policy_A는 응용 프로그램 이름 (app.config)만 지정 하 고 policy_B은 대상 IP 주소 192.168.1.0/24를 지정 합니다. 이러한 QoS 정책이 @no__t 충돌 하면 192.168.4.0/24 @ no__t-1의 범위 내에 있는 IP 주소로 트래픽이 전송 됩니다.
 
  **네트워크 5 중 내에서 더 많은 특이성가 우선적으로 적용 됩니다.**
 

@@ -7,22 +7,22 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 69f5b3ff681caa534924e5a5e0f16bb2f53419ec
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f147cf630c49dfa8e9279b723a1ab02516028bf5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59841124"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402661"
 ---
-# <a name="appendix-a-locations-and-subnet-prefixes"></a>부록 a: 위치 및 서브넷 접두사
+# <a name="appendix-a-locations-and-subnet-prefixes"></a>부록 A: 위치 및 서브넷 접두사
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-다음 표에서 IP 버전 6(ipv6) 나열 하는 데 도움이 되는 데 Windows Server 2008 Active Directory Domain Services (AD DS)에 대 한 사이트 토폴로지를 디자인 하는 경우 서브넷 접두사입니다.  
+다음 표를 사용 하 여 Windows Server 2008 Active Directory Domain Services (AD DS)에 대 한 사이트 토폴로지를 디자인할 때 IPv6 (IP 버전 6) 서브넷 접두사를 나열할 수 있습니다.  
   
-|Location|네트워크 서브넷 접두사|  
+|위치|네트워크 서브넷 접두사|  
 |------------|-------------------------|  
 |||  
 |||  

@@ -2,7 +2,7 @@
 title: MultiPoint 대시보드에서 세션 미리 보기에 대한 옵션 보기
 description: MultiPoint 서비스에 대 한 보기 옵션을 사용자 지정 하는 방법 알아보기
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: a11f2f2bbafe4d21e1cd5d56d66a97e08cf35b11
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 9b6fa08a6f3215140a528dab0fb55bac23c60ccc
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871472"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71394802"
 ---
 # <a name="view-options-for-session-thumbnails-in-multipoint-dashboard"></a>MultiPoint 대시보드에서 세션 미리 보기에 대한 옵션 보기
 개별 데스크톱에서의 사용자 작업을 모니터링하는 손쉬운 방법은 MultiPoint 서비스 시스템에서 활성 데스크톱 각각의 미리 보기 이미지를 확인하는 것입니다. 기본적으로, 데스크톱의 이미지에 표시 됩니다 MultiPoint 대시보드에 **홈** 탭 합니다.  

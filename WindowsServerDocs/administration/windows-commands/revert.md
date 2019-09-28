@@ -1,8 +1,8 @@
 ---
-title: 되돌리기
-description: '에 대 한 Windows 명령을 항목 * * *- '
+title: 되돌립니다
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5bc77b17317f602d642c7a9e025b67be10ad7256
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3243f13a4997824d9fff7c874ce26d56325fefa4
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59875114"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71371455"
 ---
-# <a name="revert"></a>되돌리기
+# <a name="revert"></a>되돌립니다
 
 
 
@@ -36,7 +36,7 @@ revert <ShadowCopyID>
 
 |매개 변수|설명|
 |---------|-----------|
-|\<ShadowCopyID>|볼륨을 되돌리려면 섀도 복사본 ID를 지정 합니다.|
+|@no__t 0ShadowCopyID >|볼륨을 되돌리려면 섀도 복사본 ID를 지정 합니다.|
 
 #### <a name="additional-references"></a>추가 참조
 

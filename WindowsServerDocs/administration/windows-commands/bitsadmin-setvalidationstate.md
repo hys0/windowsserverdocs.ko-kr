@@ -1,8 +1,8 @@
 ---
 title: bitsadmin setvalidationstate
-description: Windows 명령 항목에 대 한 **bitsadmin setvalidationstate** -작업 내에서 지정된 된 파일의 콘텐츠 유효성 검사 상태를 설정 합니다.
+description: '**Bitsadmin setvalidationstate** 에 대 한 Windows 명령 항목-작업 내에서 지정 된 파일의 콘텐츠 유효성 검사 상태를 설정 합니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a832e8f3d21681f67a4486df33c387e5a8456718
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 37d7fa3a8a91abf1e7b6ac5a51b6cebd78984a91
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66434876"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71380402"
 ---
 # <a name="bitsadmin-setvalidationstate"></a>bitsadmin setvalidationstate
 
@@ -40,7 +40,7 @@ bitsadmin /SetValidationState <Job> <file index> <true|false>
 | 파일 인덱스 |         0부터 시작          |
 |    True    |             False              |
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 2 파일의 콘텐츠 유효성 검사 상태 라는 작업에 대해 TRUE로 설정 하는 다음 예제에서는 *myJob*합니다.
 ```

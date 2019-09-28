@@ -1,8 +1,8 @@
 ---
 title: cd
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 53340612d26eaa7c4ae6fd977a0eac573f91881d
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: ed0942232eb205a8198d4b3d366ca9482af1f4b3
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66434605"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71379712"
 ---
 # <a name="cd"></a>cd
 
@@ -45,8 +45,8 @@ chdir [..]
 |매개 변수|설명|
 |---------|-----------|
 |/d|드라이브에 대 한 현재 디렉터리와 현재 드라이브를 변경합니다.|
-|\<Drive>:|표시 하거나 (다른 경우 현재 드라이브)를 변경 하려면 드라이브를 지정 합니다.|
-|\<Path>|표시 하거나 변경 하려는 디렉터리의 경로를 지정 합니다.|
+|\<Drive >:|표시 하거나 (다른 경우 현재 드라이브)를 변경 하려면 드라이브를 지정 합니다.|
+|\< 경로 >|표시 하거나 변경 하려는 디렉터리의 경로를 지정 합니다.|
 |[..]|상위 폴더를 변경 하려면 지정 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
@@ -69,7 +69,7 @@ chdir [..]
 cmd /e:off
 ```
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 루트 디렉터리는 드라이브에 대 한 디렉터리 계층의 맨 위에 있습니다. 루트 디렉터리를 반환 하려면 다음을 입력 합니다.
 ```

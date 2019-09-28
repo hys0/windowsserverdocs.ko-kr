@@ -1,18 +1,18 @@
 ---
 title: 패치 서버 코어
 description: Windows Server의 Server Core 설치를 업데이트 하는 방법 알아보기
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: lizap
 ms.localizationpriority: medium
 ms.date: 10/17/2017
-ms.openlocfilehash: b649a3cc16bc1a527c5df0b4a0d543da22a882d2
-ms.sourcegitcommit: 216d97ad843d59f12bf0b563b4192b75f66c7742
+ms.openlocfilehash: eacb80d89e7bcc95d6b5c12269d7587dc7d6870c
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476482"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71383322"
 ---
 # <a name="patch-a-server-core-installation"></a>Server Core 설치 패치
 
@@ -58,7 +58,7 @@ Windows 업데이트를 사용 하 여 서버를 자동으로 패치 하려면 �
    Net start wuauserv 
    ```
 
-서버가 도메인 구성원인 경우 그룹 정책을 사용하여 Windows 업데이트를 구성할 수도 있습니다. 자세한 내용은 https://go.microsoft.com/fwlink/?LinkId=192470 을 참조하세요. 그러나이 방법을 사용 하는 경우 그래픽 인터페이스가 없기 때문에 옵션 4 ("자동 다운로드 및 설치 예약")만 Server Core 설치와 관련 됩니다. 설치되는 업데이트 및 업데이트 설치 시기를 보다 자세하게 제어하려면 대부분의 Windows 업데이트 그래픽 인터페이스와 동일한 역할을 수행하는 명령줄을 제공하는 스크립트를 사용합니다. 스크립트에 대 한 자세한 내용은을 https://go.microsoft.com/fwlink/?LinkId=192471 참조 하십시오.
+서버가 도메인 구성원인 경우 그룹 정책을 사용하여 Windows 업데이트를 구성할 수도 있습니다. 자세한 내용은 https://go.microsoft.com/fwlink/?LinkId=192470 을 참조하세요. 그러나이 방법을 사용 하는 경우 그래픽 인터페이스가 없기 때문에 옵션 4 ("자동 다운로드 및 설치 예약")만 Server Core 설치와 관련 됩니다. 설치되는 업데이트 및 업데이트 설치 시기를 보다 자세하게 제어하려면 대부분의 Windows 업데이트 그래픽 인터페이스와 동일한 역할을 수행하는 명령줄을 제공하는 스크립트를 사용합니다. 스크립트에 대 한 자세한 내용은 https://go.microsoft.com/fwlink/?LinkId=192471 을 참조 하세요.
 
 Windows 업데이트가 강제로 사용 가능한 업데이트를 즉시 검색하고 설치하도록 하려면 다음 명령을 실행합니다.
 

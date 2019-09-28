@@ -1,8 +1,8 @@
 ---
 title: reg 저장
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2a46dfe081421ed727bd7ffeeab364e6c23dd801
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6ae07cd3c90c51e7bd494bc6c35919680cde912a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59841084"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71371697"
 ---
 # <a name="reg-save"></a>reg 저장
 
@@ -38,22 +38,22 @@ reg save <KeyName> <FileName> [/y]
 
 |매개 변수|설명|
 |---------|-----------|
-|\<KeyName>|하위 키의 전체 경로 지정합니다. 원격 컴퓨터를 지정 하는 것에 대 한 컴퓨터 이름을 포함 합니다 (형식에서 \\ \\ComputerName\) 의 일부로 합니다 *KeyName*합니다. 생략 \\ \\ComputerName\ 하면 로컬 컴퓨터에 기본 작업이 있습니다. *KeyName* 유효한 루트 키를 포함 해야 합니다. 로컬 컴퓨터에 대 한 유효한 루트 키 다음과 같습니다. HKLM, HKCU, HKCR, HKU, and HKCC. 원격 컴퓨터를 지정 하는 경우 유효한 루트 키 다음과 같습니다. HKLM 및 HKU 합니다.|
-|\<FileName>|생성 되는 파일의 경로 이름을 지정 합니다. 지정 된 경로가 현재 경로가 사용 됩니다.|
+|\<KeyName >|하위 키의 전체 경로 지정합니다. 원격 컴퓨터를 지정 하려면 컴퓨터 이름을 *KeyName*의 일부로 \\ @ No__t-1computername @ no__t-2 형식으로 포함 합니다. @No__t를 생략 하면-0 @ no__t-1ComputerName \이 작업을 기본적으로 로컬 컴퓨터로 설정 합니다. *KeyName* 유효한 루트 키를 포함 해야 합니다. 로컬 컴퓨터의 유효한 루트 키는 다음과 같습니다. HKLM, HKCU, HKCR, HKU 및 HKCC가 있습니다. 원격 컴퓨터를 지정 하는 경우 유효한 루트 키는 다음과 같습니다. HKLM 및 HKU.|
+|\<파일 이름 >|생성 되는 파일의 경로 이름을 지정 합니다. 지정 된 경로가 현재 경로가 사용 됩니다.|
 |/y|기존 파일 이름으로 덮어씁니다 *FileName* 확인 메시지를 표시 하지 않고 있습니다.|
 |/?|에 대 한 도움말을 표시 **reg 저장** 명령 프롬프트입니다.|
 
-## <a name="remarks-optional-section"></a>주의 \<선택적인 섹션 >
+## <a name="remarks-optional-section"></a>주의 \< 선택적 섹션 >
 
 -   다음 표에 대 한 반환 값은 **reg 저장** 작업 합니다.
 
-|값|Description|
+|값|설명|
 |-----|-----------|
-|0|성공|
+|0|Success|
 |1|실패|
 -   레지스트리 항목을 편집 하기 전에 저장 된 부모 하위 키의 **reg 저장** 작업 합니다. 편집에 실패 하면 복원으로 원래 하위 키의 **reg 복원** 작업 합니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 현재 폴더에 hive MyApp 중인 라는 파일을 저장 하려면 다음을 입력 합니다.
 ```

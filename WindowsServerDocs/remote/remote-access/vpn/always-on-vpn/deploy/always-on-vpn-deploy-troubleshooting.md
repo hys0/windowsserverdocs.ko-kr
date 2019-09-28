@@ -1,7 +1,7 @@
 ---
 title: Always On VPN 문제 해결
 description: 이 항목에서는 Windows Server 2016에 Always On VPN 배포를 확인 하 고 문제를 해결 하기 위한 지침을 제공 합니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 4d08164e-3cc8-44e5-a319-9671e1ac294a
@@ -9,12 +9,12 @@ ms.localizationpriority: medium
 ms.date: 06/11/2018
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 60873c8bbf71ad5afa58bd9e19b1a3fd650bc65f
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 649fbc16e3dfef2ed1061d0ba6a5c22a8712b186
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871353"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71404376"
 ---
 # <a name="troubleshoot-always-on-vpn"></a>Always On VPN 문제 해결 
 
@@ -118,7 +118,7 @@ Always On VPN 설정에서 클라이언트를 내부 네트워크에 연결 하�
 
 ## <a name="nps-logs"></a>NPS 로그
 
-Nps가 NPS 계정 로그를 만들어 저장 합니다. 기본적으로이\\\\ 파일의 이름은 xxxx. x x x. x x x. x x x x. x는 파일이 만들어진 날짜입니다.\\
+Nps가 NPS 계정 로그를 만들어 저장 합니다. 기본적으로이 파일은 no__t에 있는 파일에% SYSTEMROOT% \\System32 @-1Logfiles @ no__t-2에 저장*됩니다. 여기서* *xxxx* 는 파일이 만들어진 날짜입니다.
 
 기본적으로 이러한 로그는 쉼표로 구분 된 값 형식 이지만 제목 행은 포함 되지 않습니다. 제목 행은 다음과 같습니다.
 

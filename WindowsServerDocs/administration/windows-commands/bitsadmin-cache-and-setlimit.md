@@ -1,8 +1,8 @@
 ---
 title: bitsadmin 캐시 및 setlimit
-description: Windows 명령 항목에 대 한 **bitsadmin 캐시 및 setlimit** -캐시 크기 제한을 설정 합니다.
+description: '**Bitsadmin cache 및 setlimit** 의 Windows 명령 항목-캐시 크기 제한을 설정 합니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7d0b72c5ec6c779fa4ce3fa038352836cd9456ac
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 88a10ce8599202e237daa6822cf62806d3c21429
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59852594"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381944"
 ---
 # <a name="bitsadmin-cache-and-setlimit"></a>bitsadmin 캐시 및 setlimit
 
@@ -36,9 +36,9 @@ bitsadmin /Cache /SetLimit Percent
 
 |매개 변수|설명|
 |---------|-----------|
-|백분율|총 하드 디스크 공간의 백분율로 정의 된 캐시 제한...|
+|Percent|총 하드 디스크 공간의 백분율로 정의 된 캐시 제한...|
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 다음 예제에서는 캐시 크기 50%를 제한합니다.
 ```

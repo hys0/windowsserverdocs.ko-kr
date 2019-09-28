@@ -1,8 +1,8 @@
 ---
-title: ksetup:server
-description: '에 대 한 Windows 명령을 항목 * * *- '
+title: 'ksetup: 서버'
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f370d4dede278e1facdda829503ea3793502b9e6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: dd05fd294640c63e633b7b866307197ae6770476
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59814574"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71374962"
 ---
-# <a name="ksetupserver"></a>ksetup:server
+# <a name="ksetupserver"></a>ksetup: 서버
 
 
 
@@ -36,7 +36,7 @@ ksetup /server <ServerName>
 
 |매개 변수|설명|
 |---------|-----------|
-|\<ServerName>|있는 구성은 효과적으로 IPops897.corp.contoso.com 같은 수의 전체 컴퓨터 이름입니다.</br>불완전 한 정규화 된 도메인 컴퓨터 이름이 지정 된 경우 명령이 실패 합니다.|
+|\<ServerName >|있는 구성은 효과적으로 IPops897.corp.contoso.com 같은 수의 전체 컴퓨터 이름입니다.</br>불완전 한 정규화 된 도메인 컴퓨터 이름이 지정 된 경우 명령이 실패 합니다.|
 
 ## <a name="remarks"></a>설명
 
@@ -44,7 +44,7 @@ ksetup /server <ServerName>
 
 레지스트리에 저장 된 대상 서버 이름 **HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\LSA\Kerberos**합니다. 사용 하 여 보고 되지 않습니다 **ksetup**합니다.
 
-## <a name="BKMK_Examples"></a>예제
+## <a name="BKMK_Examples"></a>예와
 
 확인 프로그램 **ksetup** 구성을 Contoso 도메인에 연결 되어 있는 IPops897 컴퓨터에 적용 합니다.
 ```

@@ -1,8 +1,8 @@
 ---
-title: ksetup:changepassword
-description: '에 대 한 Windows 명령을 항목 * * *- '
+title: 'ksetup: changepassword'
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f629c6c7930777583df38f5af900ed380ec60f9c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 51be9e71c2b290e6346d23144543e0eec29f9d07
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59878534"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71375185"
 ---
-# <a name="ksetupchangepassword"></a>ksetup:changepassword
+# <a name="ksetupchangepassword"></a>ksetup: changepassword
 
 
 
-로그온 한 사용자의 암호를 변경 하려면 키 배포 센터 (KDC) 암호 (kpasswd) 값을 사용 합니다. 이 명령을 사용할 수 있는 방법을의 예 참조 [예제](#BKMK_Examples)합니다.
+키 배포 센터 (KDC) 암호 (kpasswd) 값을 사용 하 여 로그온 한 사용자의 암호를 변경 합니다. 이 명령을 사용할 수 있는 방법을의 예 참조 [예제](#BKMK_Examples)합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -36,32 +36,32 @@ ksetup /changepassword <OldPasswd> <NewPasswd>
 
 |매개 변수|설명|
 |---------|-----------|
-|\<OldPasswd>|로그온 한 사용자의 기존 암호를 알려 줍니다.|
-|\<NewPasswd>|사용자의 새 암호 로그인을 명시합니다.|
+|\<OldPasswd >|로그온 한 사용자의 기존 암호를 명시 합니다.|
+|\<NewPasswd >|로그온 한 사용자의 새 암호를 명시 합니다.|
 
 ## <a name="remarks"></a>설명
 
-이 명령은 KDC 암호 (kpasswd) 값을 사용 하 여 로그온 한 사용자의 암호를 변경 합니다. kpasswd 경우 설정, 실행 하 여 출력에 표시 되는 **ksetup /dumpstate** 명령입니다.
+이 명령은 KDC password (kpasswd) 값을 사용 하 여 로그온 한 사용자의 암호를 변경 합니다. **Ksetup/** kpasswd 명령을 실행 하 여 출력에 설정 된 경우이를 표시 합니다.
 
 사용자의 새 암호는이 컴퓨터에 설정 된 모든 암호 요구 사항을 충족 해야 합니다.
 
-현재 도메인에서 사용자 계정이 없으면 사용자 계정이 있는 도메인 이름을 제공 하는 시스템이 묻습니다.
+사용자 계정이 현재 도메인에 없는 경우 시스템은 사용자 계정이 있는 도메인 이름을 입력 하도록 요청 합니다.
 
-강제로 다음 로그온 시 암호를 변경 하려는 경우이 명령은 새 암호를 묻는 메시지가 사용자 있으므로 별표 (*)를 사용할 수 있습니다.
+다음 로그온 할 때 암호 변경을 강제로 적용 하려면이 명령을 사용 하 여 별표 (*)를 사용할 수 있으므로 사용자에 게 새 암호를 입력 하 라는 메시지가 표시 됩니다.
 
-명령의 출력을 사용 하면 성공 또는 실패 상태의 알려줍니다.
+명령의 출력은 성공 또는 실패 상태를 알려 줍니다.
 
-## <a name="BKMK_Examples"></a>예제
+## <a name="BKMK_Examples"></a>예와
 
-이 도메인에서이 컴퓨터에 현재 로그온 한 사용자의 암호를 변경 합니다.
+이 도메인에서 현재이 컴퓨터에 로그온 한 사용자의 암호를 변경 합니다.
 ```
 ksetup /changepassword Pas$w0rd Pa$$w0rd
 ```
-Contoso 도메인에 현재 로그온 한 사용자의 암호를 변경 합니다.
+Contoso 도메인에 현재 로그온 되어 있는 사용자의 암호를 변경 합니다.
 ```
 ksetup /domain CONTOSO /changepassword Pas$w0rd Pa$$w0rd
 ```
-다음 로그온 시 암호를 변경 하려면 현재 로그온된 한 사용자를 강제 합니다.
+다음 로그온 할 때 현재 로그온 한 사용자가 암호를 변경 하도록 강제 합니다.
 ```
 ksetup /changepassword Pas$w0rd *
 ```

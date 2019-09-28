@@ -1,19 +1,19 @@
 ---
 ms.assetid: 01c8cece-66ce-4a83-a81e-aa6cc98e51fc
 title: 고급 데이터 중복 제거 설정
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage-deduplication
 ms.topic: article
 author: wmgries
 manager: klaasl
 ms.author: wgries
 ms.date: 09/15/2016
-ms.openlocfilehash: af977519b5e77eb768fdf8de1e6a34f7c8274666
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 1d0677cec134ddeb4c706d0f1231f2c26b39967e
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66447245"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71403219"
 ---
 # <a name="advanced-data-deduplication-settings"></a>고급 데이터 중복 제거 설정
 
@@ -26,10 +26,10 @@ ms.locfileid: "66447245"
 
 ### <a id="modifying-job-schedules-change-schedule"></a>데이터 중복 제거 일정 변경
 데이터 중복 제거 작업은 Windows 작업 스케줄러를 통해 예약되며 Microsoft\Windows\Deduplication 경로 아래에서 보고 편집할 수 있습니다. 데이터 중복 제거에는 예약을 도와주는 여러 cmdlet이 포함되어 있습니다.
-* [`Get-DedupSchedule`](https://technet.microsoft.com/library/hh848446.aspx) 현재 예약 된 작업을 보여 줍니다.
-* [`New-DedupSchedule`](https://technet.microsoft.com/library/hh848445.aspx) 새 예약 된 작업을 만듭니다.
-* [`Set-DedupSchedule`](https://technet.microsoft.com/library/hh848447.aspx) 기존 예약 된 작업을 수정합니다.
-* [`Remove-DedupSchedule`](https://technet.microsoft.com/library/hh848451.aspx) 예약된 된 작업을 제거합니다.
+* [`Get-DedupSchedule`](https://technet.microsoft.com/library/hh848446.aspx) 은 현재 예약 된 작업을 보여 줍니다.
+* [`New-DedupSchedule`](https://technet.microsoft.com/library/hh848445.aspx) 은 새 예약 된 작업을 만듭니다.
+* [`Set-DedupSchedule`](https://technet.microsoft.com/library/hh848447.aspx) 은 기존 예약 된 작업을 수정 합니다.
+* [`Remove-DedupSchedule`](https://technet.microsoft.com/library/hh848451.aspx) 은 예약 된 작업을 제거 합니다.
 
 데이터 중복 제거 작업을 실행하는 시점을 변경하는 가장 주된 이유는 유휴 시간에 실행하기 위한 것입니다. 다음 단계별 예에서는 *주간* 시나리오(하이퍼 수렴형 Hyper-V 호스트가 평일 오후 7시 이후와 주말에는 유휴 상태임)에 대한 데이터 중복 제거 일정을 수정하는 방법을 보여 줍니다. 일정을 변경하려면 관리자 컨텍스트에서 다음 PowerShell cmdlet을 실행합니다.
 
@@ -62,7 +62,7 @@ ms.locfileid: "66447245"
     New-DedupSchedule -Name "WeeklyIntegrityScrubbing" -Type Scrubbing -DurationHours 23 -Memory 100 -Cores 100 -Priority High -Days @(0) -Start (Get-Date "2016-08-14 07:00:00")
     ```
 
-### <a id="modifying-job-schedules-available-settings"></a>사용 가능한 작업 수준 설정
+### <a id="modifying-job-schedules-available-settings"></a>사용 가능한 작업 전체 설정
 신규 또는 예약된 데이터 중복 제거 작업에 대해 다음 설정을 전환할 수 있습니다.
 
 <table>
@@ -88,7 +88,7 @@ ms.locfileid: "66447245"
             <td>이 값은 예약해야 하는 작업 유형이기 때문에 필요합니다. 작업을 예약한 후에는 이 값을 변경할 수 없습니다.</td>
         </tr>
         <tr>
-            <td>Priority</td>
+            <td>우선 순위</td>
             <td>예약된 작업의 시스템 우선 순위</td>
             <td>
                 <ul>
@@ -123,7 +123,7 @@ ms.locfileid: "66447245"
             <td>DurationHours</td>
             <td>작업을 실행해야 하는 최대 시간</td>
             <td>양의 정수</td>
-            <td>워크 로드를 실행 하는 것에 대 한 작업을 방지 하기 위해&#39;s 비 유휴 시간</td>
+            <td>작업을 유휴 시간 외 시간에&#39;실행 하지 못하게 하려면</td>
         </tr>
         <tr>
             <td>Enabled</td>
@@ -141,7 +141,7 @@ ms.locfileid: "66447245"
             <td>InputOutputThrottle</td>
             <td>작업에 적용된 입/출력 스로틀 양 지정</td>
             <td>정수 0~100(백분율을 나타냄)</td>
-            <td>해당 작업 don 스로틀은&#39;t 다른 O 집약적인 프로세스를 방해 합니다.</td>
+            <td>제한을 사용 하면 작업이&#39;다른 i/o를 많이 사용 하는 프로세스를 방해 하지 않습니다.</td>
         </tr>
         <tr>
             <td>메모리</td>
@@ -162,10 +162,10 @@ ms.locfileid: "66447245"
             <td>디스크의 불량 섹션에 있는 파일을 수동으로 복원할 수 있습니다.</td>
         </tr>
         <tr>
-            <td>시작</td>
+            <td>Start</td>
             <td>작업을 시작해야 하는 시간을 지정합니다.</td>
             <td><code>System.DateTime</code></td>
-            <td><em>날짜</em> 부분을 <code>System.Datetime</code> 제공 <em>시작</em> 관련이 없는 (처럼 오래&#39;과거의), 하지만 <em>시간</em> 부분은 작업이 시작 되는 경우 지정 .</td>
+            <td><em>시작</em> 에 제공 되는 <code>System.Datetime</code>의&#39; <em>날짜</em> 부분은 이전에는 관련이 없지만 <em>시간</em> 부분은 작업을 시작할 시기를 지정 합니다.</td>
         </tr>
         <tr>
             <td>StopWhenSystemBusy</td>
@@ -176,7 +176,7 @@ ms.locfileid: "66447245"
     </tbody>
 </table>
 
-## <a id="modifying-volume-settings"></a>데이터 중복 제거 볼륨 수준 설정 수정
+## <a id="modifying-volume-settings"></a>데이터 중복 제거 볼륨 전체 설정 수정
 ### <a id="modifying-volume-settings-how-to-toggle"></a>볼륨 설정 전환
 볼륨에 대한 중복 제거를 사용하도록 설정할 때 선택하는 [사용 유형](understand.md#usage-type)을 통해 데이터 중복 제거에 대한 볼륨 수준의 기본 설정을 지정할 수 있습니다. 데이터 중복 제거에는 볼륨 수준 설정을 쉽게 편집할 수 있는 cmdlet이 포함되어 있습니다.
 
@@ -195,7 +195,7 @@ ms.locfileid: "66447245"
     Set-DedupVolume -Volume C:\ClusterStorage\Volume1 -OptimizePartialFiles
     ```
 
-### <a id="modifying-volume-settings-available-settings"></a>사용 가능한 볼륨 수준 설정
+### <a id="modifying-volume-settings-available-settings"></a>사용 가능한 볼륨 전체 설정
 <table>
     <thead>
         <tr>
@@ -208,9 +208,9 @@ ms.locfileid: "66447245"
     <tbody>
         <tr>
             <td>ChunkRedundancyThreshold</td>
-            <td>청크가 청크 저장소의 핫스폿 섹션으로 복제되기 전에 청크가 참조되는 횟수입니다. 핫스폿 섹션의 값은 즉 소위 &quot;핫&quot; 자주 참조 되는 청크 액세스 시간을 개선 하기 위해 여러 액세스 경로가 있어야 합니다.</td>
+            <td>청크가 청크 저장소의 핫스폿 섹션으로 복제되기 전에 청크가 참조되는 횟수입니다. 핫스폿 섹션의 값은 액세스 시간을 향상 시키기 위해 자주 참조 되는 여러 액세스 경로를 포함 하는 &quot;hot @ no__t 청크를 호출 하는 것입니다.</td>
             <td>양의 정수</td>
-            <td>이 수치를 수정하는 주된 이유는 중복도가 높은 볼륨의 공간 절약률을 늘리기 위한 것입니다. 권장 되는 설정과 있습니다 해서는 기본값 (100)은 하는 일반적으로&#39;이 값을 수정할 필요는 없습니다.</td>
+            <td>이 수치를 수정하는 주된 이유는 중복도가 높은 볼륨의 공간 절약률을 늘리기 위한 것입니다. 일반적으로 기본값 (100)은 권장 설정 이며,&#39;이를 수정 해야 합니다.</td>
         </tr>
         <tr>
             <td>ExcludeFileType</td>
@@ -228,7 +228,7 @@ ms.locfileid: "66447245"
             <td>InputOutputScale</td>
             <td>사후 처리 작업 중 볼륨에서 사용할 데이터 중복 제거에 대한 IO 병렬화(IO 큐) 수준을 지정합니다.</td>
             <td>1~36의 양의 정수</td>
-            <td>이 값을 수정하는 주된 이유는 볼륨에서 데이터 중복 제거에 사용할 수 있는 IO 큐 수를 제한하여 높은 IO 워크로드의 성능에 미치는 영향을 줄이기 위한 것입니다. 기본값에서이 설정을 수정 하면 데이터 중복 제거 될 수 있습니다&#39;s 사후 처리 작업이 느리게 실행 합니다.</td>
+            <td>이 값을 수정하는 주된 이유는 볼륨에서 데이터 중복 제거에 사용할 수 있는 IO 큐 수를 제한하여 높은 IO 워크로드의 성능에 미치는 영향을 줄이기 위한 것입니다. 이 설정을 기본값에서 수정 하면 데이터 중복 제거&#39;의 사후 처리 작업이 느리게 실행 될 수 있습니다.</td>
         </tr>
         <tr>
             <td>MinimumFileAgeDays</td>
@@ -258,7 +258,7 @@ ms.locfileid: "66447245"
             <td>OptimizeInUseFiles</td>
             <td>사용하도록 설정된 경우 활성 핸들이 있는 파일이 최적화에 대한 정책 내에 속하는 것으로 간주됩니다.</td>
             <td>True/false</td>
-            <td>워크로드가 연장된 기간 동안 열린 상태로 유지되는 경우 이 설정을 사용하도록 설정합니다. 이 설정을 사용 하지 않는 경우 파일이 최적화 되지 않으며 워크 로드에 열린 핸들이 있으면 경우에 해당&#39;s 가끔씩만 끝에 데이터를 추가 합니다.</td>
+            <td>워크로드가 연장된 기간 동안 열린 상태로 유지되는 경우 이 설정을 사용하도록 설정합니다. 이 설정을 사용 하도록 설정 하지 않으면 작업에 열린 핸들이 있는 경우 파일은 최적화 되지 않습니다. 단, 끝에 데이터를 추가&#39;하는 경우에도 마찬가지입니다.</td>
         </tr>
         <tr>
             <td>OptimizePartialFiles</td>
@@ -275,7 +275,7 @@ ms.locfileid: "66447245"
     </tbody>
 </table>
 
-## <a id="modifying-dedup-system-settings"></a>데이터 중복 제거 시스템 수준 설정 수정
+## <a id="modifying-dedup-system-settings"></a>데이터 중복 제거 시스템 전체 설정 수정
 데이터 중복 제거에는 [레지스트리](https://technet.microsoft.com/library/cc755256(v=ws.11).aspx)를 통해 구성할 수 있는 추가 시스템 수준 설정이 있습니다. 이러한 설정은 시스템에서 실행되는 모든 작업 및 볼륨에 적용됩니다. 레지스트리를 편집할 때마다 각별히 주의해야 합니다.
 
 예를 들어 전체 가비지 수집을 사용하지 않도록 설정할 수 있습니다. 이것이 사용자의 시나리오에 유용한 이유에 대한 자세한 내용은 [질문과 대답](#faq-why-disable-full-gc)에서 확인할 수 있습니다. PowerShell을 사용하여 레지스트리를 편집하려면 다음을 수행합니다.
@@ -310,7 +310,7 @@ ms.locfileid: "66447245"
         </tr>
         <tr>
             <td>DeepGCInterval</td>
-            <td>이 설정은 일반 가비지 수집 작업이 <a href="advanced-settings.md#faq-full-v-regular-gc" data-raw-source="[full Garbage Collection jobs](advanced-settings.md#faq-full-v-regular-gc)">전체 가비지 수집 작업</a>이 되는 간격을 구성합니다. 설정 n은 매 n<sup></sup>번째 작업이 전체 가비지 수집 작업임을 의미합니다. <a href="understand.md#usage-type-backup" data-raw-source="[Backup Usage Type](understand.md#usage-type-backup)">백업 사용 유형</a>을 사용하는 볼륨의 경우 전체 가비지 컬렉션은 항상 사용할 수 없습니다(레지스트리 값과 관계없음). <code>Start-DedupJob -Type GarbageCollection -Full</code> 백업 볼륨에 전체 가비지 수집을 원하는 경우 사용할 수 있습니다.</td>
+            <td>이 설정은 일반 가비지 수집 작업이 <a href="advanced-settings.md#faq-full-v-regular-gc" data-raw-source="[full Garbage Collection jobs](advanced-settings.md#faq-full-v-regular-gc)">전체 가비지 수집 작업</a>이 되는 간격을 구성합니다. 설정 n은 매 n<sup></sup>번째 작업이 전체 가비지 수집 작업임을 의미합니다. <a href="understand.md#usage-type-backup" data-raw-source="[Backup Usage Type](understand.md#usage-type-backup)">백업 사용 유형</a>을 사용하는 볼륨의 경우 전체 가비지 컬렉션은 항상 사용할 수 없습니다(레지스트리 값과 관계없음). 백업 볼륨에서 전체 가비지 수집을 원하는 경우 <code>Start-DedupJob -Type GarbageCollection -Full</code>을 사용할 수 있습니다.</td>
             <td>정수(-1은 사용할 수 없음을 의미함)</td>
             <td><a href="advanced-settings.md#faq-why-disable-full-gc" data-raw-source="[this frequently asked question](advanced-settings.md#faq-why-disable-full-gc)">이 질문과 대답</a>을 참조하세요.</td>
         </tr>
@@ -318,18 +318,18 @@ ms.locfileid: "66447245"
 </table>
 
 ## <a id="faq"></a>질문과 대답
-<a id="faq-use-responsibly"></a>**데이터 중복 제거 설정을 변경 하 고 이제 작업 느린가 완료 되지 않고 또는 내 워크 로드 성능이 저하. 이유**  
+<a id="faq-use-responsibly"></a>**I 데이터 중복 제거 설정을 변경 했으며 현재 작업이 느리거나 완료 되지 않았거나, 내 작업 성능이 저하 되었습니다. 이유**  
 이러한 설정은 데이터 중복 제거 실행 방법에 대한 제어 권한을 강화합니다. 책임감 있게 사용하고 [성능을 모니터링](run.md#monitoring-dedup)하세요.
 
-<a id="faq-running-dedup-jobs-manually"></a>**지금 바로 데이터 중복 제거 작업을 실행 하려고 하지만 새 일정을 만들려면 하지 않으려는 경우 그럴 수 있습니까?**  
+<a id="faq-running-dedup-jobs-manually"></a>**지금 바로 데이터 중복 제거 작업을 실행 하려고 하지만 새 일정을 만들지 않겠습니다 .이 작업을 수행할 수 있나요?**  
 예, [모든 작업을 수동으로 실행할 수 있습니다](run.md#running-dedup-jobs-manually).
 
-<a id="faq-full-v-regular-gc"></a>**전체 수집과 일반 가비지 수집 간의 차이 무엇입니까?**  
+<a id="faq-full-v-regular-gc"></a>**전체 가비지 수집과 일반적인 가비지 수집의 차이점은 무엇 인가요?**  
 두 가지 유형의 [가비지 수집](understand.md#job-info-gc)이 있습니다.
 
 - *일반 가비지 수집*은 통계 알고리즘을 사용하여 특정 조건(낮은 메모리 및 IOPs)을 충족하는 참조되지 않은 대용량 청크를 찾습니다. 일반 가비지 수집은 최소 비율의 청크가 참조되지 않은 경우에만 청크 저장소 컨테이너를 압축합니다. 이 유형의 가비지 수집은 전체 가비지 수집보다 훨씬 빠르게 실행되며 더 적은 리소스를 사용합니다. 일반 가비지 수집 작업의 기본 일정은 일주일에 한 번 실행되는 것입니다.
 - *전체 가비지 수집*은 훨씬 철저한 작업을 수행하여 참조되지 않은 청크를 찾고 더 많은 디스크 공간을 확보합니다. 전체 가비지 수집은 컨테이너의 단일 청크만 참조되지 않은 경우에도 모든 컨테이너를 압축합니다. 또한 전체 가비지 수집은 최적화 작업 중에 작동 중단이나 정전이 발생하는 경우에도 사용 중일 수 있는 공간을 확보합니다. 전체 가비지 수집 작업은 일반 가비지 수집 작업에 비해 더 많은 시간과 시스템 리소스가 필요하지만 중복 제거된 볼륨에서 복구할 수 있는 사용 가능한 공간을 100% 복구합니다. 전체 가비지 수집 작업은 일반적으로 일반 가비지 수집 작업보다 참조되지 않은 데이터를 5% 더 찾아서 확보합니다. 전체 가비지 수집 작업의 기본 일정은 네 번째 때마다 예약된 가비지 수집을 실행하는 것입니다.
 
-<a id="faq-why-disable-full-gc"></a>**전체 가비지 수집을 사용 하지 않도록 설정 하려고 하는 이유**  
+<a id="faq-why-disable-full-gc"></a>**전체 가비지 수집을 사용 하지 않도록 설정 하려면 어떻게 해야 하나요?**  
 - 가비지 수집은 볼륨의 수명, 섀도 복사본 및 증분 백업의 크기에 부정적인 영향을 줄 수 있습니다. 변동이 많거나 I/O 집약적인 워크로드는 전체 가비지 수집 작업으로 인해 성능이 저하될 수 있습니다.           
 - 시스템이 작동 중단되었음을 알고 있는 경우 PowerShell에서 전체 가비지 수집 작업을 수동으로 실행하여 누수를 정리할 수 있습니다.

@@ -1,6 +1,6 @@
 ---
 title: 저장소 공간 다이렉트 하드웨어 요구 사항
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 description: 저장소 공간 다이렉트 테스트에 대한 최소 하드웨어 요구 사항
 ms.author: eldenc
 ms.manager: eldenc
@@ -9,12 +9,12 @@ ms.topic: article
 author: eldenchristensen
 ms.date: 08/05/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 2f3f8bff39550108b0417b9513bee4a248dca432
-ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
+ms.openlocfilehash: 63a7152ec6abb318a096ac321ae7ccfaaef4d199
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69546376"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402936"
 ---
 # <a name="storage-spaces-direct-hardware-requirements"></a>저장소 공간 다이렉트 하드웨어 요구 사항
 
@@ -129,7 +129,7 @@ ms.locfileid: "69546376"
 
 ### <a name="maximum-capacity"></a>최대 용량
 
-| 최대값                | Windows Server 2019  | Windows Server 2016  |
+| 최대값                | Windows Server 2019  | Windows Server 2016  |
 | ---                     | ---------            | ---------            |
 | 서버당 원시 용량 | 400 TB               | 100 TB               |
 | 풀 용량           | 4 PB (4000 TB)      | 1 PB                 |

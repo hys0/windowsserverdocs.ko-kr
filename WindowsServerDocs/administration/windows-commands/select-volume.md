@@ -1,8 +1,8 @@
 ---
 title: select volume
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 98f42324dbd4c6b3add3333cf4687d1613b1f700
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: cc981131c8de2dc4534e390645ef45c39a7b02ab
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66441419"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71371057"
 ---
 # <a name="select-volume"></a>select volume
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-지정된 된 된 볼륨을 선택 하 고 포커스를 이동 합니다. 이 명령은 현재 선택된 된 디스크에 포커스를가지고 있는 볼륨을 표시 하려면 데도 사용할 수 있습니다.  
+지정 된 볼륨을 선택 하 고 포커스를 이동 합니다. 이 명령은 현재 선택된 된 디스크에 포커스를가지고 있는 볼륨을 표시 하려면 데도 사용할 수 있습니다.  
   
   
   
@@ -43,15 +43,15 @@ select volume={<n>|<d>}
   
 ## <a name="remarks"></a>설명  
   
--   없는 볼륨을 지정 하는 경우이 명령은 현재 선택된 된 된 디스크에 포커스를가지고 있는 볼륨을 표시 합니다.  
+-   볼륨이 지정 되지 않은 경우이 명령은 현재 선택 된 디스크에 포커스가 있는 볼륨을 표시 합니다.  
   
 -   기본 디스크에 볼륨을 선택 하면 또한 포커스를 해당 파티션에 합니다.  
   
--   해당 파티션이 있는 볼륨을 선택 하면 파티션이 자동으로 선택 됩니다.  
+-   해당 하는 파티션이 있는 볼륨을 선택 하면 파티션이 자동으로 선택 됩니다.  
   
--   파티션이 해당 볼륨을 선택 하는 경우 볼륨 자동으로 선택 됩니다.  
+-   파티션이 해당 볼륨으로 선택 된 경우 볼륨이 자동으로 선택 됩니다.  
   
-## <a name="BKMK_examples"></a>예제  
+## <a name="BKMK_examples"></a>예와  
 포커스를 볼륨 2 입력 합니다.  
   
 ```  
