@@ -1,6 +1,6 @@
 ---
 title: 저장소 공간 다이렉트의 내결함성 및 저장소 효율성
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: cosmosdarwin
 ms.manager: eldenc
 ms.technology: storage-spaces
@@ -10,12 +10,12 @@ ms.date: 10/11/2017
 ms.assetid: 5e1d7ecc-e22e-467f-8142-bad6d82fc5d0
 description: 미러링 및 패리티를 포함하는 저장소 공간 다이렉트의 복원력 옵션에 대한 설명.
 ms.localizationpriority: medium
-ms.openlocfilehash: 4e6a29e82a85ec9570cda827060dfe1cdf192c53
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d2220584c0021352110b27c3107d1113eb17ef59
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59849574"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71393813"
 ---
 # <a name="fault-tolerance-and-storage-efficiency-in-storage-spaces-direct"></a>저장소 공간 다이렉트의 내결함성 및 저장소 효율성
 
@@ -102,7 +102,7 @@ Windows Server 2016부터는 저장소 공간 다이렉트 볼륨이 일부는 �
 > [!IMPORTANT]
 > 성능이 가장 중요한 워크로드에 대한 미러링을 사용하는 것이 좋습니다. 워크로드에 따라 성능과 용량의 균형을 맞추는 방법에 관한 자세한 내용은 [볼륨 계획](plan-volumes.md#choosing-the-resiliency-type)을 참조하세요.
 
-## <a name="summary"></a>요약
+## <a name="summary"></a>정리
 
 이 섹션에서는 저장소 공간 다이렉트에서 사용 가능한 복원력 유형, 각 유형을 사용하기 위한 최소 크기 요구 사항, 각 유형에서 내결함성을 가지는 오류 횟수 및 해당 저장소 효율성을 요약했습니다.
 
@@ -171,7 +171,7 @@ Windows Server 2016부터는 저장소 공간 다이렉트 볼륨이 일부는 �
 |    15                 |    RS 6+2           |    75.0%        |
 |    16                 |    LRC(12, 2, 1)   |    80.0%        |
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예와
 
 서버가 두 대만 있는 경우 이외에는 더 높은 내결함성을 제공하므로 3방향 미러링 및/또는 이중 패리티를 사용하는 것이 좋습니다. 특히 두 개의 오류 도메인(저장소 공간 다이렉트 사용 시 두 개의 서버를 의미)이 동시 오류의 영향을 받더라도 모든 데이터가 안전하고 액세스 가능한 상태를 유지합니다.
 
@@ -179,17 +179,17 @@ Windows Server 2016부터는 저장소 공간 다이렉트 볼륨이 일부는 �
 
 이러한 여섯 개의 예제는 3방향 미러링 및/또는 이중 패리티로 허용 **가능한** 항목을 보여 줍니다.
 
-- **1.**    분실 한 드라이브 (캐시 드라이브 포함)
-- **2.**    하나의 서버 손실
+- **1.**    한 드라이브가 손실 됩니다 (캐시 드라이브 포함).
+- **2.**    한 서버 손실
 
 ![fault-tolerance-examples-1-and-2](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-12.png)
 
-- **3.**    한 서버 및 단일 드라이브 손실
-- **4.**    서로 다른 서버에서 두 개의 드라이브 손실
+- **3.**    한 대의 서버와 하나의 드라이브가 손실 됩니다.
+- **3-4.**    다른 서버에서 두 드라이브가 손실 됨
 
 ![fault-tolerance-examples-3-and-4](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-34.png)
 
-- **5.**    두 서버에 가장 영향을 받는 한다면 두 개 이상의 드라이브 손실
+- **5.**    최대 두 개의 서버가 영향을 받는 경우에는 두 개 이상의 드라이브가 손실 됩니다.
 - **6.**    두 서버 손실
 
 ![fault-tolerance-examples-5-and-6](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-56.png)
@@ -200,8 +200,8 @@ Windows Server 2016부터는 저장소 공간 다이렉트 볼륨이 일부는 �
 
 저장소 공간은 시간이 충분하다면 오류가 각각의 오류 발생 후 완전한 복원력으로 복원되므로 제한 없는 수의 오류를 허용할 수 있습니다. 하지만 특정 시점에 최대 두 개의 오류 도메인이 영향을 받는 경우에만 안전합니다. 따라서 다음은 3방향 미러링 및/또는 이중 패리티에서 허용 **불가능한** 항목의 예제입니다.
 
-- **7.** 한 번에 세 개 이상의 서버에서 드라이브 손실
-- **8.** 3 개 이상의 서버를 한 번에 손실
+- **일.** 한 번에 세 개 이상의 서버에서 분실 된 드라이브
+- **20cm(8.** 한 번에 세 개 이상의 서버 손실
 
 ![fault-tolerance-examples-7-and-8](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-78.png)
 
@@ -213,10 +213,10 @@ Windows Server 2016부터는 저장소 공간 다이렉트 볼륨이 일부는 �
 
 아래의 모든 링크는 이 항목의 본문에 포함되어 있습니다.
 
-- [Windows Server 2016의에서 저장소 공간 다이렉트](storage-spaces-direct-overview.md)
-- [Windows Server 2016의에서 장애 도메인 인식](../../failover-clustering/fault-domains.md)
-- [Azure Microsoft Research에서 코딩 지우기](https://www.microsoft.com/en-us/research/publication/erasure-coding-in-windows-azure-storage/)
+- [Windows Server 2016의 스토리지 공간 다이렉트](storage-spaces-direct-overview.md)
+- [Windows Server 2016의 장애 도메인 인식](../../failover-clustering/fault-domains.md)
+- [Microsoft Research에서 Azure의 코딩 지우기](https://www.microsoft.com/en-us/research/publication/erasure-coding-in-windows-azure-storage/)
 - [로컬 재구성 코드 및 가속화 패리티 볼륨](https://blogs.technet.microsoft.com/filecab/2016/09/06/volume-resiliency-and-efficiency-in-storage-spaces-direct/)
 - [저장소 관리 API의 볼륨](https://blogs.technet.microsoft.com/filecab/2016/08/29/deep-dive-volumes-in-spaces-direct/)
-- [저장소 효율성 데모 microsoft Ignite 2016](https://www.youtube.com/watch?v=-LK2ViRGbWs&t=36m55s)
-- [용량 계산기 PREVIEW 저장소 공간 다이렉트](http://aka.ms/s2dcalc)
+- [Microsoft Ignite 2016의 저장소 효율성 데모](https://www.youtube.com/watch?v=-LK2ViRGbWs&t=36m55s)
+- [스토리지 공간 다이렉트에 대 한 용량 계산기 미리 보기](http://aka.ms/s2dcalc)

@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 546507254f796e6a2fbe71e3ba30a7597ea51295
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 82dd9cec2c75a796eb0def508082508a5d0dbf5f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70869266"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71385426"
 ---
 # <a name="when-to-use-a-send-group-membership-as-a-claim-rule"></a>그룹 구성원을 클레임으로 보내기 규칙을 사용할 경우
 지정 된 Active Directory 보안 그룹의 구성원 \(인\) 사용자 에게만 새 나가는 클레임 값을 발급 하려는 경우 Active Directory Federation Services AD FS에서이 규칙을 사용할 수 있습니다. 이 규칙을 사용하는 경우 다음 표에 설명된 대로 직접 지정하고 규칙 논리와 일치하는 그룹에 대한 단일 클레임만 발급합니다.  

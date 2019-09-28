@@ -2,22 +2,22 @@
 title: BranchCache 파일 서버 조직 구성 단위로 파일 서버 이동
 description: 이 항목은 일부는 BranchCache 배포 가이드에 대 한 Windows Server 2016, 지사에 WAN 대역폭 사용량을 최적화 하기 위해 분산 및 호스트 캐시 모드로 BranchCache를 배포 하는 방법을 보여 주는
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 56c915ec-edb1-43b0-8ad2-c93841bb566f
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 037b354bb6725ac7f91fc323b81bbdf15d03ac15
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ad297e25f258140fce4af3f825e362f62748c77d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59885904"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71356526"
 ---
 # <a name="move-file-servers-to-the-branchcache-file-servers-organizational-unit"></a>BranchCache 파일 서버 조직 구성 단위로 파일 서버 이동
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 Active Directory 도메인 서비스 (AD DS)에서 BranchCache 파일 서버에 조직 구성 단위 (OU)를 추가 하려면이 절차를 사용할 수 있습니다.  
   

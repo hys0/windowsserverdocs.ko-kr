@@ -1,7 +1,7 @@
 ---
 title: Winlogon ARSO(자동 다시 시작 로그온)
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.service: na
 ms.suite: na
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: 172eb34fbfdb8a91adf55e35f888e90f5688d0e7
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f085cf78a01148f97a450577131213ce977a432a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59849244"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402326"
 ---
 # <a name="winlogon-automatic-restart-sign-on-arso"></a>Winlogon ARSO(자동 다시 시작 로그온)
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-**작성자**: Windows 그룹과 Justin Turner, 수석 지원 에스컬레이션 엔지니어  
+**작성자**: Justin Turner, Windows 그룹이 포함 된 선임 지원 에스컬레이션 엔지니어  
   
 > [!NOTE]  
 > 이 콘텐츠는 Microsoft 고객 지원 엔지니어에 의해 작성되었으며 Windows Server 2012 R2의 기능 및 솔루션에 대해 TechNet에서 일반적으로 제공하는 항목보다 더 자세한 기술적 설명을 찾고 있는 숙련된 관리자 및 시스템 설계자를 대상으로 합니다. 그러나 동일한 편집 과정을 수행하지 않았으므로 일부 언어는 일반적으로 TechNet에서 찾을 수 있는 것보다 완벽하지 않을 수 있습니다.  
@@ -74,14 +74,14 @@ Windows 8 잠금 화면 앱을 도입 되었습니다.  이 실행 하 고 사�
   
     -   BitLocker가 활성화 하는 경우에 설정할 수 있습니다.  
   
-## <a name="group-policy-sign-in-last-interactive-user-automatically-after-a-system-initiated-restart"></a>그룹 정책: 로그인 마지막 대화형 사용자 시스템에서 시작한 다시 시작한 후 자동으로  
+## <a name="group-policy-sign-in-last-interactive-user-automatically-after-a-system-initiated-restart"></a>그룹 정책: 시스템에서 시작한 다시 시작 후 자동으로 마지막 대화형 사용자 로그인  
 Windows 8.1에서 Windows Server 2012 R2, Windows Update 다시 시작 된 후에 잠금 화면 사용자의 자동 로그온 서버 Sku에 대해 옵트인 및 클라이언트 Sku에 대 한 참여 하지 않음 /.  
   
 **정책 위치:** 컴퓨터 구성 > 정책 > 관리 템플릿 > Windows 구성 요소 > Windows 로그온 옵션  
   
-**정책 이름:** 로그인 마지막 대화형 사용자 시스템에서 시작한 다시 시작한 후 자동으로  
+**정책 이름:** 시스템에서 시작한 다시 시작 후 자동으로 마지막 대화형 사용자 로그인  
   
-**지원 됩니다.** 에 최소 Windows Server 2012 R2, Windows 8.1 또는 Windows RT 8.1  
+**지원 되는 위치:** Windows Server 2012 R2, Windows 8.1 또는 Windows RT 8.1 이상  
   
 **설명/도움말:**  
   
@@ -95,11 +95,11 @@ Windows 8.1에서 Windows Server 2012 R2, Windows Update 다시 시작 된 후�
   
 |값 이름|형식|data|  
 |-------|----|----|  
-|DisableAutomaticRestartSignOn|DWORD|0<br /><br />**예:**<br /><br />0 (사용)<br /><br />1 (사용 안 함)|  
+|DisableAutomaticRestartSignOn|DWORD|0<br /><br />**예 들어**<br /><br />0 (사용)<br /><br />1 (사용 안 함)|  
   
 **정책 레지스트리 위치:** HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System  
   
-**형식:** DWORD  
+**유형:** DWORD  
   
 **레지스트리 이름:** DisableAutomaticRestartSignOn  
   
@@ -109,7 +109,7 @@ Windows 8.1에서 Windows Server 2012 R2, Windows Update 다시 시작 된 후�
   
 1 = 사용 안 함  
   
-![여부를 장치는 자동으로 로그인 마지막 대화형 사용자 Windows Update 시스템을 다시 시작 후 지정할 수 있는 UI를 제어 하는 정책 설정을 보여 주는 스크린샷](../media/winlogon-automatic-restart-sign-on-arso/GTR_ADDS_SignInPolicy.gif)  
+![Windows 업데이트 시스템을 다시 시작한 후 장치가 마지막 대화형 사용자에 게 자동으로 로그인 하는지 여부를 지정할 수 있는 정책 설정 제어 UI를 보여 주는 스크린샷](../media/winlogon-automatic-restart-sign-on-arso/GTR_ADDS_SignInPolicy.gif)  
   
 ## <a name="troubleshooting"></a>문제 해결  
 WinLogon를 자동으로 잠그는 경우에 WinLogon의 상태 추적 WinLogon 이벤트 로그에 저장 됩니다.  
@@ -143,7 +143,7 @@ WinLogon를 자동으로 잠그는 경우에 WinLogon의 상태 추적 WinLogon 
 로그온 시간 및 자녀 보호 하지 못할 수 있습니다 새 사용자 세션이 만들어지지 않도록 합니다.  다시 시작이이 기간 동안 발생 한다면 사용자 하지 로그인 허용 됩니다.  잠금 또는 규정 준수 동작으로 로그 아웃 시키는 추가 정책이 있습니다.  이 유지 관리 기간이이 시간 동안 일반적으로 경우에 특히 평판 시간 사이의 절전, 계정 잠금 발생할 수 있는 많은 자식 경우 문제가 될 수 있습니다.  
   
 ## <a name="additional-resources"></a>추가 리소스  
-**테이블 SEQ 테이블 \\ \* 아랍어 3: ARSO 용어집**  
+**Table SEQ 테이블 \\ @ no__t-2 아랍어 3: ARSO 용어집 @-0  
   
 |용어|정의|  
 |----|-------|  

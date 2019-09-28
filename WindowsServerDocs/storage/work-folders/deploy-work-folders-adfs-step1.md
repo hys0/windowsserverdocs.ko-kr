@@ -1,6 +1,6 @@
 ---
 title: AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포 - 1단계, AD FS 설치
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage-work-folders
 ms.topic: article
 manager: klaasl
@@ -8,31 +8,31 @@ ms.author: jeffpatt
 author: JeffPatt24
 ms.date: 10/18/2018
 ms.assetid: 938cdda2-f17e-4964-9218-f5868fd96735
-ms.openlocfilehash: 4f4119e893b215bd9f6d713bc5a17218b751c3d3
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.openlocfilehash: 0920d091d6e8b5f3db9bf945a966fdd577918179
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66812687"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71365791"
 ---
-# <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-1-set-up-ad-fs"></a>AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. AD FS 설치 1 단계
+# <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-1-set-up-ad-fs"></a>AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 1 단계, AD FS 설정
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 이 항목에서는 AD FS(Active Directory Federation Services) 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더를 배포하는 첫 번째 단계를 설명합니다. 이 과정의 다른 단계는 다음 항목에서 찾을 수 있습니다.  
   
--   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 개요](deploy-work-folders-adfs-overview.md)  
+-   [ AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 설명은](deploy-work-folders-adfs-overview.md)  
   
--   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 단계 2에서 AD FS 구성 후 작업](deploy-work-folders-adfs-step2.md)  
+-   [ AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 2 단계 AD FS 구성 후 작업 @ no__t-0  
   
--   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 단계 3, 작업 폴더 설정](deploy-work-folders-adfs-step3.md)  
+-   [ AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 3 단계, 클라우드 폴더 설정 @ no__t-0  
   
--   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 4 단계, 웹 응용 프로그램 프록시 설정](deploy-work-folders-adfs-step4.md)  
+-   [ AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 4 단계, 웹 응용 프로그램 프록시 설정 @ no__t-0  
   
--   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 5 단계 클라이언트 설정](deploy-work-folders-adfs-step5.md)  
+-   [ AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 5 단계, 클라이언트 설정 @ no__t-0  
   
 > [!NOTE]
->   Windows Server 2019 또는 Windows Server 2016 환경에 대 한 지침은이 섹션에서 설명 합니다. Windows Server 2012 R2를 사용하는 경우 [Windows Server 2012 R2 instructions(Windows Server 2012 R2 지침)](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx)을 따르세요.
+>   이 섹션에서 설명 하는 지침은 Windows Server 2019 또는 Windows Server 2016 환경용입니다. Windows Server 2012 R2를 사용하는 경우 [Windows Server 2012 R2 instructions(Windows Server 2012 R2 지침)](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx)을 따르세요.
 
 클라우드 폴더에 사용할 AD FS를 설치하려면 다음 절차를 수행하세요.  
   
@@ -104,7 +104,7 @@ AD FS 인증서는 다음 값을 가진 SAN 인증서여야 합니다.
 enterpriseregistration SAN은 Workplace Join에 필요합니다.  
   
 ### <a name="set-the-server-ip-address"></a>서버 IP 주소 설정  
-서버 IP 주소를 고정 IP 주소로 변경합니다. 테스트 예를 들어 192.168.0.160 인 IP 클래스 A를 사용 하 여 / 서브넷 마스크: 255.255.0.0/기본 게이트웨이: 192.168.0.1/DNS를 기본 설정: 192.168.0.150 (도메인 컨트롤러의 IP 주소\)합니다.  
+서버 IP 주소를 고정 IP 주소로 변경합니다. 테스트 예제에서는 192.168.0.160/subnet mask 인 IP 클래스 A를 사용 합니다. 255.255.0.0/기본 게이트웨이: 192.168.0.1/기본 설정 DNS: 192.168.0.150 (도메인 컨트롤러의 IP 주소 @ no__t-0.  
   
 ## <a name="install-the-ad-fs-role-service"></a>AD FS 역할 서비스 설치  
 AD DS를 설치하려면 다음 단계를 따릅니다.  
@@ -182,7 +182,7 @@ $thumbprint = $cert.Thumbprint
 Install-ADFSFarm -CertificateThumbprint $thumbprint -FederationServiceDisplayName "Contoso Corporation" –FederationServiceName blueadfs.contoso.com -GroupServiceAccountIdentifier contoso\ADFSService$ -OverwriteConfiguration -ErrorAction Stop  
 ```  
   
-다음 단계: [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 단계 2에서 AD FS 구성 후 작업](deploy-work-folders-adfs-step2.md)  
+다음 단계: [ AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 2 단계 AD FS 구성 후 작업 @ no__t-0  
   
 ## <a name="see-also"></a>관련 항목  
 [클라우드 폴더 개요](Work-Folders-Overview.md)  

@@ -1,7 +1,7 @@
 ---
 title: Hyper-v 가상 컴퓨터 관리 서비스는 자동으로 시작 되도록 구성 해야
-description: 이 모범 사례 분석기 규칙에 의해 보고 된 문제를 해결 하려면 지침을 제공 합니다.
-ms.prod: windows-server-threshold
+description: 이 모범 사례 분석기 규칙에서 보고 한 문제를 해결 하는 지침을 제공 합니다.
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -10,12 +10,12 @@ ms.topic: article
 ms.assetid: 222bbe76-c514-4a3f-b61b-860a4dc2826a
 author: KBDAzure
 ms.date: 8/16/2016
-ms.openlocfilehash: c33f81678d7fdc71e81834a002fd3d7917a6f632
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f35f94a815e9f895f7f7690737b6b8fb2bed82e1
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59833254"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71393422"
 ---
 # <a name="the-hyper-v-virtual-machine-management-service-should-be-configured-to-start-automatically"></a>Hyper-v 가상 컴퓨터 관리 서비스는 자동으로 시작 되도록 구성 해야
 
@@ -34,7 +34,7 @@ ms.locfileid: "59833254"
 
 ## <a name="issue"></a>문제점  
   
-*Hyper-v 가상 머신 관리 서비스가 자동으로 시작 되도록 구성 되지 않았습니다.*  
+*Hyper-v 가상 컴퓨터 관리 서비스가 자동으로 시작 되도록 구성 되어 있지 않습니다.*  
   
 ## <a name="impact"></a>영향  
   

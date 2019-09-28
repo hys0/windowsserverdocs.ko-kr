@@ -2,19 +2,19 @@
 title: 소프트웨어 정의 네트워킹에 대 한 인증서 관리
 description: 이 항목을 사용 하 여 Windows Server 2016 데이터 센터에서 SDN (소프트웨어 정의 네트워킹)을 배포할 때 네트워크 컨트롤러 Northbound 및 Southbound 통신용 인증서를 관리 하는 방법을 배울 수 있습니다.
 manager: dougkim
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: c4e2f6c7-0364-4bf8-bb66-9af59c0bbd74
 ms.author: pashort
 author: shortpatti
 ms.date: 08/22/2018
-ms.openlocfilehash: 8e2feba8232ae87d59478d3522c4e6f02baf27b8
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: b1cff080630c68ee8c4b7f0904f8fd0978330edc
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70870104"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71405990"
 ---
 # <a name="manage-certificates-for-software-defined-networking"></a>소프트웨어 정의 네트워킹에 대 한 인증서 관리
 

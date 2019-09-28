@@ -1,29 +1,29 @@
 ---
 ms.assetid: 5a64e790-6725-4099-aa08-8067d57c3168
-title: 서버 쪽 OAuth 기밀 클라이언트를 사용 하 여 AD FS 2016을 사용 하 여 응용 프로그램 또는 이후 빌드
+title: AD FS 2016 이상에서 OAuth 기밀 클라이언트를 사용 하 여 서버 쪽 응용 프로그램 빌드
 description: ''
 author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 167f74522172790d8f5b3fc1dea46d0b7059cd20
-ms.sourcegitcommit: cd12ace92e7251daaa4e9fabf1d8418632879d38
+ms.openlocfilehash: 5b2bf036de1de8300e36c3413c551e51d408a4d2
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66501675"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407861"
 ---
-# <a name="build-a-server-side-application-using-oauth-confidential-clients-with-ad-fs-2016-or-later"></a>서버 쪽 OAuth 기밀 클라이언트를 사용 하 여 AD FS 2016을 사용 하 여 응용 프로그램 또는 이후 빌드
+# <a name="build-a-server-side-application-using-oauth-confidential-clients-with-ad-fs-2016-or-later"></a>AD FS 2016 이상에서 OAuth 기밀 클라이언트를 사용 하 여 서버 쪽 응용 프로그램 빌드
 
 
-AD FS 2016 및 이후 버전에는 앱 또는 웹 서버에서 실행 되는 서비스와 같은 자신의 암호를 유지 관리할 수 있는 클라이언트에 대 한 지원을 제공 합니다.  이러한 클라이언트는 기밀 클라이언트 라고 합니다.
+AD FS 2016 이상 릴리스는 웹 서버에서 실행 되는 응용 프로그램 또는 서비스와 같이 자체 암호를 유지 관리할 수 있는 클라이언트에 대 한 지원을 제공 합니다.  이러한 클라이언트는 기밀 클라이언트 라고 합니다.
 다음은 웹 서버에서 실행 되 고 AD FS에 기밀 클라이언트로 웹 응용 프로그램의 개요입니다.  
 
 ## <a name="pre-requisites"></a>필수 구성 요소  
-이 문서를 완료 하기 전에 필요한 필수 구성 요소 목록은 다음과 같습니다. 이 문서에서는 AD FS 설치 되어 있는지 가정 합니다.  
+이 문서를 완료 하기 전에 필요한 필수 구성 요소 목록은 다음과 같습니다. 이 문서에서는 AD FS 설치 되어 있다고 가정 합니다.  
 
 -   GitHub 클라이언트 도구  
 
@@ -31,14 +31,14 @@ AD FS 2016 및 이후 버전에는 앱 또는 웹 서버에서 실행 되는 서
 
 -   Visual Studio 2013 이상입니다.  
 
-## <a name="create-an-application-group-in-ad-fs-2016-or-later"></a>2016 이상 AD FS에서 응용 프로그램 그룹 만들기
-다음 섹션에는 그룹에 AD FS 2016 이상 응용 프로그램을 구성 하는 방법을 설명 합니다.  
+## <a name="create-an-application-group-in-ad-fs-2016-or-later"></a>AD FS 2016 이상에서 응용 프로그램 그룹 만들기
+다음 섹션에서는 AD FS 2016 이상에서 응용 프로그램 그룹을 구성 하는 방법을 설명 합니다.  
 
 #### <a name="create-the-application-group"></a>응용 프로그램 그룹 만들기  
 
 1.  AD FS 관리에서 응용 프로그램 그룹을 마우스 오른쪽 단추로 클릭 하 고 선택 **응용 프로그램 그룹 추가**합니다.  
 
-2.  응용 프로그램 그룹 마법사에서에 대 한 합니다 **이름을** 입력 **ADFSOAUTHCC** 아래에서 **클라이언트-서버 응용 프로그램** 선택 합니다 **서버 응용 프로그램 Web API에 액세스** 템플릿.  **다음**을 클릭합니다.  
+2.  응용 프로그램 그룹 마법사에서 **이름** 에 대해 **Adfsoauthcc** 를 입력 하 고 **클라이언트-서버 응용 프로그램** 에서 **웹 API 템플릿에 액세스 하는 서버 응용 프로그램** 을 선택 합니다.  **다음**을 클릭합니다.  
 
     ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_2.PNG)  
 
@@ -46,21 +46,21 @@ AD FS 2016 및 이후 버전에는 앱 또는 웹 서버에서 실행 되는 서
 
     ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_3.PNG)  
 
-4.  에 다음과 같이 입력 **리디렉션 URI:**  -  **https://localhost:44323** 합니다.  **추가**를 클릭합니다. **다음**을 클릭합니다.  
+4.  **리디렉션 URI** - **에대해다음을입력합니다. https://localhost:44323**  **추가**를 클릭합니다. **다음**을 클릭합니다.  
 
-5.  에 **응용 프로그램 자격 증명 구성** 화면에서에 체크 **공유 암호를 생성** secret을 복사 합니다.  나중에 대 한 값으로 사용 됩니다 **ida: ClientSecret** 응용 프로그램 web.config 파일에서입니다.  **다음**을 클릭합니다.  
+5.  에 **응용 프로그램 자격 증명 구성** 화면에서에 체크 **공유 암호를 생성** secret을 복사 합니다.  이는 나중에 응용 프로그램 web.config 파일에서 **ida: ClientSecret** 의 값으로 사용 됩니다.  **다음**을 클릭합니다.  
 
     ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_4.PNG)   
 
-6. 에 **Web API 구성** 화면에서 입력 한 다음 **식별자** -  **https://contoso.com/WebApp** 합니다.  **추가**를 클릭합니다. **다음**을 클릭합니다.  이 값은 나중에 사용할 **ida: GraphResourceId** 응용 프로그램 web.config 파일에 있습니다.  
+6. **웹 API 구성** 화면에서 **https://contoso.com/WebApp** **식별자** -  에 대해 다음을 입력 합니다.  **추가**를 클릭합니다. **다음**을 클릭합니다.  이 값은 나중에 사용할 **ida: GraphResourceId** 응용 프로그램 web.config 파일에 있습니다.  
 
     ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_9.PNG)  
 
-7. 에 **액세스 제어 정책 적용** 화면에서 **모든 사용자 허용** 클릭 **다음**합니다.  
+7. **Access Control 정책 적용** 화면에서 **everyone 허용** 을 선택 하 고 **다음**을 클릭 합니다.  
 
     ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_7.PNG)  
 
-8. 에 **응용 프로그램 사용 권한 구성** 화면, 반드시 **openid** 하 고 **user_impersonation** 선택 하 고 클릭 **다음**합니다.  
+8. **응용 프로그램 사용 권한 구성** 화면에서 **openid connect** 및 **user_impersonation** 가 선택 되어 있는지 확인 하 고 **다음**을 클릭 합니다.  
 
     ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_8.PNG)  
 
@@ -83,7 +83,7 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-webapi
 
 #### <a name="to-upgrade-the-database-file"></a>데이터베이스 파일을 업그레이드 하려면  
 
-1.  Visual Studio에서 프로젝트를 열고, 응용 프로그램에 SQL Server 2012 Express 필요 함을 알리는 팝업 됩니다 또는 데이터베이스를 업그레이드 해야 합니다.  확인을 클릭 합니다.  
+1.  Visual Studio에서 프로젝트를 열면 앱에 SQL Server 2012 Express가 필요 하거나 데이터베이스를 업그레이드 해야 한다는 팝업이 표시 됩니다.  확인을 클릭 합니다.  
 
     ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_12.PNG)  
 
@@ -95,7 +95,7 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-webapi
 
     ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_14.PNG)  
 
-4.  **연결 수정**아래에 있는 **데이터베이스 파일 이름 (신규 또는 기존)** 를 선택 **찾아보기** 설명과 **path\filename.mdf**합니다. 클릭 **예** 대화 상자에서.
+4.  **연결 수정**의 **데이터베이스 파일 이름 (신규 또는 기존)** 에서 **찾아보기** 를 선택 하 고 **path\filename.mdf**를 제공 합니다. 대화 상자에서 **예** 를 클릭 합니다.
 
     ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_6.PNG)
 
@@ -103,7 +103,7 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-webapi
 
     ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_15.PNG)  
 
-6.  고급 속성에서 데이터 원본을 찾아 드롭 다운을 사용 하 여에서 변경할 **(Localdb\v11.0))** 하 **(LocalDB) \MSSQLLocalDB**합니다.  
+6.  고급 속성에서 데이터 원본을 찾고 드롭다운을 사용 하 여 **(Localdb\v11.0)** 에서 **(LocalDb) \MSSQLLocalDB**로 변경 합니다.  
 
     ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_16.PNG)  
 
@@ -149,11 +149,11 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-webapi
 
 2.  Web.config 파일을 엽니다.  다음 값을 수정 합니다.  
 
-    -   ida: ClientId-위의 응용 프로그램 그룹 섹션 만들기에서 3에서 값을 입력 합니다.  
+    -   ida: ClientId-위의 응용 프로그램 그룹 만들기 섹션에서 #3 값을 입력 합니다.  
 
-    -   ida: ClientSecret-만들기 위의 응용 프로그램 그룹 섹션에서에서 # 5에서 값을 입력 합니다.  
+    -   ida: ClientSecret-위의 응용 프로그램 그룹 만들기 섹션에서 #5 값을 입력 합니다.  
 
-    -   ida: GraphResourceId-위의 응용 프로그램 그룹 섹션 만들기에서 # 6에서 값을 입력 합니다.  
+    -   ida: GraphResourceId-위의 응용 프로그램 그룹 만들기 섹션에 있는 #6의 값을 입력 합니다.  
 
     ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_24.PNG)  
 
@@ -230,11 +230,11 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-webapi
 
    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_36.png)  
 
-2. ASP.Net 페이지가 나타난 후 클릭 **등록** 에서 페이지의 오른쪽 위에 있는 합니다.  사용자 이름 및 암호를 입력 한 다음 클릭 **등록** 단추입니다.  이 SQL 데이터베이스에 로컬 계정을 만듭니다.  
+2. ASP.Net 페이지가 시작 되 면 페이지의 오른쪽 위에서 **등록** 을 클릭 합니다.  사용자 이름 및 암호를 입력 한 다음 **등록** 단추를 클릭 합니다.  이 SQL 데이터베이스에 로컬 계정을 만듭니다.  
 
    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_31.PNG)  
 
-3. 알림 이제 ASP.NET 사이트 라는 Hello abby@contoso.com!.  클릭 **프로필**합니다.  
+3. 이제 ASP.NET 사이트에 Hello abby@contoso.com!이 표시 됩니다.  클릭 **프로필**합니다.  
 
    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_32.PNG)  
 

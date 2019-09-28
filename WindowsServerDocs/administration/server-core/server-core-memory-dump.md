@@ -1,18 +1,18 @@
 ---
 title: Server Core 설치를 위한 메모리 덤프 파일 구성
 description: Windows Server의 Server Core 설치에 대 한 메모리 덤프 파일을 구성 하는 방법에 대해 알아봅니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: lizap
 ms.localizationpriority: medium
 ms.date: 10/17/2017
-ms.openlocfilehash: 0cea3118abce156acdd9ad933518015a25f8afbf
-ms.sourcegitcommit: 216d97ad843d59f12bf0b563b4192b75f66c7742
+ms.openlocfilehash: 4f1baa52fc9f0ebfe8afae35d86b7a7238d56223
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476559"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71383392"
 ---
 # <a name="configure-memory-dump-files-for-server-core-installation"></a>Server Core 설치를 위한 메모리 덤프 파일 구성
 
@@ -39,10 +39,10 @@ wmic computersystem set AutomaticManagedPagefile=False
 3. **편집 > 새로 만들기 > 문자열 값**을 클릭 합니다.
 4. 새 값의 이름을 **DedicatedDumpFile**로 지정한 다음 enter 키를 누릅니다.
 5. **DedicatedDumpFile**를 마우스 오른쪽 단추로 클릭 한 다음 **수정**을 클릭 합니다.
-6. **값 데이터** 형식  **\<드라이브\>:Dedicateddumpfile을입력한다음확인을클릭합니다.\\\<\>**
+6. **값 데이터** 형식 **\<drive @ no__t: @no__t -4\<Dedicateddumpfile.sys @ no__t-6**을 입력 한 다음 **확인**을 클릭 합니다.
 
    >[!NOTE] 
-   > Drive \< \<\> 를 페이징 파일에 충분 한 디스크 공간이 있는 드라이브로 바꾸고 Dedicateddumpfile을 전용 파일의 전체 경로로 바꿉니다.\>
+   > @No__t-0Drive @ no__t-1을 페이징 파일을 위한 충분 한 디스크 공간이 있는 드라이브로 바꾸고 -2Dedicateddumpfile @ no__t-3을 전용 파일의 전체 경로로 @no__t 바꿉니다.
  
 7. **편집 > 새로 만들기 > DWORD 값**을 클릭 합니다.
 8. **DumpFileSize**를 입력 한 다음 enter 키를 누릅니다.
@@ -65,7 +65,7 @@ wmic RECOVEROS get DebugFilePath
 wmic RECOVEROS set DebugFilePath = <FilePath>
 ```
 
-\<FilePath\> 를 대상 경로로 설정 합니다. 예를 들어 다음 명령은 메모리 덤프 대상 경로를 C:\WINDOWS\MEMORY.로 설정 합니다. DMP 
+@No__t-0FilePath @ no__t-1을 대상 경로로 설정 합니다. 예를 들어 다음 명령은 메모리 덤프 대상 경로를 C:\WINDOWS\MEMORY.로 설정 합니다. DMP 
 
 ```
 wmic RECOVEROS set DebugFilePath = C:\WINDOWS\MEMORY.DMP
@@ -85,7 +85,7 @@ wmic RECOVEROS get DebugInfoType
 wmic RECOVEROS set DebugInfoType = <Value>
 ```
 
-\<값\> 은 아래에 정의 된 대로 0, 1, 2 또는 3 일 수 있습니다.
+@no__t 값 @ no__t-1은 아래에 정의 된 대로 0, 1, 2 또는 3 일 수 있습니다.
 
 - 0: 메모리 덤프 제거를 사용 하지 않도록 설정 합니다.
 - 1: 전체 메모리 덤프. 컴퓨터가 예기치 않게 중지 될 때 시스템 메모리의 모든 콘텐츠를 기록 합니다. 전체 메모리 덤프에는 메모리 덤프가 수집 될 때 실행 중 이었던 프로세스의 데이터가 포함 될 수 있습니다.

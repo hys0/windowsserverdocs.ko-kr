@@ -1,7 +1,7 @@
 ---
 title: Hyper-v에 대 한 가상 로컬 영역 네트워크를 구성 합니다.
-description: Hyper-v 호스트에서 virtual machines 사용에 대 한 가상 로컬 영역 네트워크 (VLAN)을 구성 하기 위한 지침을 제공 합니다.
-ms.prod: windows-server-threshold
+description: Hyper-v 호스트의 가상 컴퓨터에서 사용할 수 있도록 VLAN (virtual local area network)을 구성 하는 방법에 대 한 지침을 제공 합니다.
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -11,12 +11,12 @@ ms.assetid: 8510a709-001c-4eee-b6d6-c451e8a8a836
 author: KBDAzure
 ms.author: kathydav
 ms.date: 10/11/2016
-ms.openlocfilehash: 5b5eaf175e7c09124aaa3f7a33523e8b87a9ae84
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f2c240a3ad9f9783e509efb288cc6c6410339685
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59848464"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71364283"
 ---
 # <a name="configure-virtual-local-area-networks-for-hyper-v"></a>Hyper-v에 대 한 가상 로컬 영역 네트워크를 구성 합니다.
 Virtual local area network \(Vlan\) 네트워크 트래픽을 격리 하는 방법을 제공 합니다. 스위치 및 라우터를 지 원하는 802.1 q Vlan 구성 됩니다. 여러 Vlan을 구성 하 고 해당 사이의 통신을 원하는 경우이 작업을 허용 하도록 네트워크 장치를 구성 해야 합니다. 
@@ -58,4 +58,4 @@ Vlan을 구성 하려면 다음이 필요 합니다.
   
 ## <a name="see-also"></a>관련 항목  
  
-[하이퍼\-V 가상 스위치](https://technet.microsoft.com/windows-server-docs/networking/technologies/hyper-v-virtual-switch/hyper-v-virtual-switch)
+[하이퍼 @ no__t-1V 가상 스위치](https://technet.microsoft.com/windows-server-docs/networking/technologies/hyper-v-virtual-switch/hyper-v-virtual-switch)

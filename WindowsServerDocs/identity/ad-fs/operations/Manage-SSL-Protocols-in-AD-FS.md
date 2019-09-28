@@ -6,14 +6,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 951e7d74a3370d9863d747e349d7fe701615e225
-ms.sourcegitcommit: 2e38b26742f3b16c153170d6f5219c020a8e9383
+ms.openlocfilehash: 44fb4c02421a431edb502daecaa38f00fb4dd2ad
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69896816"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407532"
 ---
 # <a name="managing-ssltls-protocols-and-cipher-suites-for-ad-fs"></a>AD FS에 대 한 SSL/TLS 프로토콜 및 암호 그룹 관리
 다음 설명서에서는에서 사용 되는 특정 TLS/SSL 프로토콜 및 암호 그룹을 사용 하지 않도록 설정 하 고 사용 하도록 설정 하는 방법에 대 한 정보를 제공 AD FS
@@ -262,14 +262,14 @@ RC4를 사용 하거나 사용 하지 않도록 설정 하려면 다음 레지�
 .NET Framework 3.5/4.0/4.5. x 응용 프로그램은 SchUseStrongCrypto 레지스트리 키를 사용 하도록 설정 하 여 기본 프로토콜을 TLS 1.2로 전환할 수 있습니다.  이 레지스트리 키를 사용 하면 .NET 응용 프로그램에서 TLS 1.2을 강제로 사용 합니다.
 
 > [!IMPORTANT]
-> Windows Server 2016 및 Windows Server 2012 r 2에 대 한 AD FS .NET Framework 4.0/4.5. x 키를 사용 해야 합니다.  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. NETFramework\v4.0.30319
+> Windows Server 2016 및 Windows Server 2012 r 2에 대 한 AD FS .NET Framework 4.0/4.5. x 키를 사용 해야 합니다.  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft @ no__t-0. NETFramework\v4.0.30319
 
 
 .NET Framework 3.5의 경우 다음 레지스트리 키를 사용 합니다.
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\. NETFramework\v2.0.50727] "SchUseStrongCrypto" = dword: 00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft @ no__t-NETFramework\v2.0.50727] "SchUseStrongCrypto" = dword: 00000001
 
-.NET Framework 4.0/4.5. x의 경우 다음 레지스트리 키를 사용 합니다. HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. NETFramework\v4.0.30319 "SchUseStrongCrypto" = dword: 00000001
+.NET Framework 4.0/4.5. x의 경우 다음 레지스트리 키를 사용 합니다. HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft @ no__t-NETFramework\v4.0.30319 "SchUseStrongCrypto" = dword: 00000001
 
 ![강력한 인증](media/Managing-SSL-Protocols-in-AD-FS/strongauth.png)
 

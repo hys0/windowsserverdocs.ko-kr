@@ -2,18 +2,18 @@
 title: 클라이언트가 조회를 캐시하는 기간 변경
 description: 이 문서에서는 클라이언트가 조회를 캐시하는 기간을 변경하는 방법을 설명합니다.
 ms.date: 6/5/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 08a1212c983de6e2492609330c1be222286e9e8f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c6fcf64dc15404ca59e3ce5552b258f782441cfb
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59888774"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402261"
 ---
 # <a name="change-the-amount-of-time-that-clients-cache-referrals"></a>클라이언트가 조회를 캐시하는 기간 변경
 
@@ -42,7 +42,7 @@ ms.locfileid: "59888774"
 
 ## <a name="see-also"></a>참조
 
--   [DFS 네임 스페이스를 튜닝합니다.](tuning-dfs-namespaces.md)
--   [DFS 네임 스페이스에 대 한 관리 권한 위임](delegate-management-permissions-for-dfs-namespaces.md)
+-   [DFS 네임스페이스 튜닝](tuning-dfs-namespaces.md)
+-   [DFS 네임스페이스에 대한 관리 권한 위임](delegate-management-permissions-for-dfs-namespaces.md)
 
 

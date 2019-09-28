@@ -1,18 +1,18 @@
 ---
 title: Server Core 관리
 description: Windows Server의 Server Core 설치를 관리 하는 방법 알아보기
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: lizap
 ms.localizationpriority: medium
 ms.date: 07/23/2019
-ms.openlocfilehash: bbb04e761dbb1dd48d95e15d11c91608f4d6c240
-ms.sourcegitcommit: 216d97ad843d59f12bf0b563b4192b75f66c7742
+ms.openlocfilehash: bd96dbfc93f3999d8fb3ddf7ec94cc11025bba30
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476543"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71383402"
 ---
 # <a name="manage-a-server-core-server"></a>Server Core 서버 관리
  
@@ -30,13 +30,13 @@ ms.locfileid: "68476543"
 
 Server Core로 작업할 때 유의 해야 할 몇 가지 중요 한 제한 사항과 팁이 있습니다.
 
-- 모든 명령 프롬프트 창을 닫고 새로운 명령 프롬프트 창을 열려면 작업 관리자에서 수행할 수 있습니다. **Ctrl\+ALT\+delete**를 누르고 **작업 관리자 시작**, **자세한 내용 > 파일 > 실행**을 차례로 클릭 한 다음 **cmd.exe**를 입력 합니다. Powershell 명령 창을 열려면 **debug.exe** 를 입력 합니다. 또는 로그 아웃 한 다음 다시 로그인 할 수 있습니다.
+- 모든 명령 프롬프트 창을 닫고 새로운 명령 프롬프트 창을 열려면 작업 관리자에서 수행할 수 있습니다. **Ctrl @ no__t-1ALT @ no__t-2DELETE**를 누르고 **작업 관리자 시작**, **자세한 내용 > 파일 > 실행**을 차례로 클릭 한 다음 **cmd.exe**를 입력 합니다. Powershell 명령 창을 열려면 **debug.exe** 를 입력 합니다. 또는 로그 아웃 한 다음 다시 로그인 할 수 있습니다.
 - Windows Explorer를 시작하려는 모든 명령이나 도구는 작동하지 않습니다. 예를 들어 start를 실행 **합니다.** 명령 프롬프트에서가 작동 하지 않습니다.
 - Server Core에서는 HTML 렌더링 이나 HTML 도움말이 지원 되지 않습니다.
 - Server Core는 Windows Installer 파일에서 도구와 유틸리티를 설치할 수 있도록 자동 모드의 Windows Installer을 지원 합니다. Server Core에 Windows Installer 패키지를 설치 하는 경우 **/qb** 옵션을 사용 하 여 기본 사용자 인터페이스를 표시 합니다.
 - 표준 시간대를 변경 하려면 **설정 날짜**를 실행 합니다.
 - 국가별 설정을 변경 하려면 **control**을 실행 합니다.
-- **컨트롤** 은 자체적으로 실행 되지 않습니다. 이 파일은 **Timedate .cpl** **또는 node.js**를 사용 하 여 실행 해야 합니다.
+- **컨트롤** 은 자체적으로 실행 되지 않습니다. 이 파일은 **Timedate .cpl** 또는 node.js를 사용 하 여 실행 해야 **합니다.**
 - **Winver** 는 Server Core에서 사용할 수 없습니다. 버전 정보를 가져오려면 **printbrm.exe**를 사용 합니다.
 
 ## <a name="managing-server-core-with-windows-admin-center"></a>Windows 관리 센터를 사용 하 여 Server Core 관리

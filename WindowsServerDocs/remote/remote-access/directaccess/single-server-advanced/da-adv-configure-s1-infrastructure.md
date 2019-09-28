@@ -1,9 +1,9 @@
 ---
 title: 1 단계 고급 DirectAccess 인프라 구성
-description: 이 항목은 고급 설정을 Windows Server 2016 용으로 단일 DirectAccess 서버 배포 가이드의 일부
+description: 이 항목은 Windows Server 2016에 대 한 고급 설정을 사용 하 여 단일 DirectAccess 서버 배포 가이드의 일부입니다.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-da
@@ -12,12 +12,12 @@ ms.topic: article
 ms.assetid: 43abc30a-300d-4752-b845-10a6b9f32244
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 42cec0d2e6ded443d24d787191bcb72a17a92306
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 30705a9aa55cdc652280c27c327cf865a47c5a11
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67283532"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71404937"
 ---
 # <a name="step-1-configure-advanced-directaccess-infrastructure"></a>1 단계 고급 DirectAccess 인프라 구성
 
@@ -44,7 +44,7 @@ ms.locfileid: "67283532"
 ## <a name="ConfigNetworkSettings"></a>1.1 서버 네트워크 설정 구성  
 IPv4 및 IPv6을 사용하는 환경에 단일 서버를 배포하려면 다음 네트워크 인터페이스 설정이 필요합니다. 모든 IP 주소를 사용 하 여 구성 된 **어댑터 설정 변경** 에 **Windows 네트워크 및 공유 센터**합니다.  
   
-**지 토폴로지**  
+**Edge 토폴로지**  
   
 -   연속된 두 개의 인터넷 연결 공용 고정 IPv4 또는 IPv6 주소  
   
@@ -53,13 +53,13 @@ IPv4 및 IPv6을 사용하는 환경에 단일 서버를 배포하려면 다음 
   
 -   단일 내부 고정 IPv4 또는 IPv6 주소  
   
-**(사용 하 여 두 네트워크 어댑터) NAT 장치 뒤**  
+**NAT 장치 뒤 (네트워크 어댑터 2 개 포함)**  
   
 -   단일 인터넷 연결 고정 IPv4 또는 IPv6 주소  
   
 -   단일 내부 네트워크 연결 고정 IPv4 또는 IPv6 주소  
   
-**NAT 뒤 (네트워크 어댑터 1 개)**  
+**NAT 장치 뒤 (네트워크 어댑터 1 개 포함)**  
   
 -   단일 내부 네트워크 연결 고정 IPv4 또는 IPv6 주소  
   
@@ -96,9 +96,9 @@ Set-DAClientDNSConfiguration "DNSSuffix "." "ProxyServer <Name of the proxy serv
 > 같은 서버에서 DirectAccess와 VPN을 둘 다 사용하는 경우 VPN이 강제 터널 모드에 있고 서버가 에지 토폴로지 또는 NAT 장치 뒤 토폴로지(네트워크 어댑터 두 개가 각각 도메인과 프라이빗 네트워크에 하나씩 연결)에 배포되면 DirectAccess 서버의 외부 인터페이스를 통해 VPN 인터넷 트래픽을 전달할 수 없습니다. 이 시나리오를 지원하려면 조직에서 단일 네트워크 어댑터 토폴로지의 방화벽 뒤에 있는 서버에 원격 액세스를 배포해야 합니다. 또는 내부 네트워크에서 별도의 프록시 서버를 사용하여 VPN 클라이언트의 인터넷 트래픽을 전달할 수 있습니다.  
   
 > [!NOTE]  
-> 조직에서 DirectAccess 클라이언트가 인터넷 리소스에 액세스할 수 있도록 웹 프록시를 사용하는 경우 회사 프록시에서 내부 네트워크 리소스를 처리할 수 없으면 인트라넷 외부에 있는 DirectAccess 클라이언트에서 내부 리소스에 액세스할 수 없습니다. 이러한 시나리오에서 DirectAccess 클라이언트가 내부 리소스에 액세스할 수 있도록 수동으로 만들 내부 네트워크 접미사에 NRPT 항목 인프라 마법사의 DNS 페이지를 사용 하 여. 이러한 NRPT 접미사에 프록시 설정을 적용해서는 안 됩니다. 접미사가 기본 DNS 서버 항목으로 채워져야 합니다.  
+> 조직에서 DirectAccess 클라이언트가 인터넷 리소스에 액세스할 수 있도록 웹 프록시를 사용하는 경우 회사 프록시에서 내부 네트워크 리소스를 처리할 수 없으면 인트라넷 외부에 있는 DirectAccess 클라이언트에서 내부 리소스에 액세스할 수 없습니다. 이러한 시나리오에서 DirectAccess 클라이언트가 내부 리소스에 액세스할 수 있도록 하려면 인프라 마법사의 DNS 페이지를 사용 하 여 내부 네트워크 접미사에 대 한 NRPT 항목을 수동으로 만듭니다. 이러한 NRPT 접미사에 프록시 설정을 적용해서는 안 됩니다. 접미사가 기본 DNS 서버 항목으로 채워져야 합니다.  
   
-## <a name="ConfigRouting"></a>1.3 회사 네트워크의 라우팅을 구성합니다  
+## <a name="ConfigRouting"></a>1.3 회사 네트워크에서 라우팅 구성  
 다음과 같이 회사 네트워크의 라우팅을 구성합니다.  
   
 -   조직에 기본 IPv6이 배포된 경우 내부 네트워크의 라우터가 DirectAccess 서버를 통해 IPv6 트래픽을 다시 라우팅할 수 있도록 경로를 추가합니다.  
@@ -136,7 +136,7 @@ Set-DAClientDNSConfiguration "DNSSuffix "." "ProxyServer <Name of the proxy serv
   
 -   ICMP - 모든 IPv4/IPv6 트래픽  
   
-## <a name="ConfigCAs"></a>1.5 Ca 및 인증서를 구성 합니다.  
+## <a name="ConfigCAs"></a>1.5 Ca 및 인증서 구성  
 Windows Server 2012의 원격 액세스를 사용 하면 컴퓨터 인증용 인증서를 사용 또는 사용 하 여 기본 제공 Kerberos 프록시 사용자 이름 및 암호를 사용 하 여 인증 하는 중에 선택할 수 있습니다. 또한 DirectAccess 서버에서 IP-HTTPS 인증서를 구성해야 합니다.  
   
 자세한 내용은 참조 [Active Directory 인증서 서비스](https://technet.microsoft.com/library/cc770357.aspx)합니다.  
@@ -208,7 +208,7 @@ IP-HTTPS 인증에 사용되는 웹 사이트 인증서는 다음 요구 사항�
   
 ##### <a name="to-install-the-ip-https-certificate-from-an-internal-ca"></a>내부 CA의 IP-HTTPS 인증서를 설치하려면  
   
-1.  DirectAccess 서버에서 다음을 수행합니다. 에 **시작** 화면에서 입력**mmc.exe**, 한 다음 ENTER를 누릅니다.  
+1.  DirectAccess 서버에서 다음을 수행합니다. **시작** 화면에서**mmc.exe**를 입력 한 다음 enter 키를 누릅니다.  
   
 2.  MMC 콘솔에서에 **파일** 메뉴 클릭 **스냅인 추가/제거**합니다.  
   
@@ -238,7 +238,7 @@ IP-HTTPS 인증에 사용되는 웹 사이트 인증서는 다음 요구 사항�
   
 15. 인증서 스냅인의 세부 정보 창에서 새 인증서가 서버 인증 용도로 등록되었는지 확인합니다.  
   
-## <a name="ConfigDNS"></a>1.6 DNS 서버를 구성 합니다.  
+## <a name="ConfigDNS"></a>1.6 DNS 서버 구성  
 배포의 내부 네트워크에 대한 네트워크 위치 서버 웹 사이트의 DNS 항목을 수동으로 구성해야 합니다.  
   
 ### <a name="NLS_DNS"></a>네트워크 위치 서버를 만들려면  
@@ -263,7 +263,7 @@ IP-HTTPS 인증에 사용되는 웹 사이트 인증서는 다음 요구 사항�
   
 5.  에 **DNS** 대화 상자에서 클릭 **확인**, 를 클릭 하 고 **수행**합니다.  
   
-![Windows PowerShell](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![Windows PowerShell](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>windows powershell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -335,7 +335,7 @@ DirectAccess 서버와 모든 DirectAccess 클라이언트 컴퓨터는 Active D
   
 10. 컴퓨터를 다시 시작할지 묻는 메시지가 표시되면 **지금 다시 시작**을 클릭합니다.  
   
-![Windows PowerShell](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![Windows PowerShell](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>windows powershell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -424,7 +424,7 @@ Restart-Computer
   
     10. 에 **백업 검사** 페이지에서 클릭 **다음**, 를 클릭 하 고 **마침**합니다.  
   
-![Windows PowerShell](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![Windows PowerShell](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>windows powershell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -469,7 +469,7 @@ Restart-Computer
   
 6.  **사용자, 연락처, 컴퓨터 또는 서비스 계정 선택** 대화 상자에서 DirectAccess에 사용할 클라이언트 컴퓨터를 선택하고 **확인**을 클릭합니다.  
   
-![Windows PowerShell](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)**Windows PowerShell 해당 명령**  
+![Windows PowerShell](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)**windows powershell 해당 명령**  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -501,7 +501,7 @@ Add-ADGroupMember -Identity DirectAccess_clients_group_name -Members <computer_n
   
 #### <a name="to-install-the-network-location-server-certificate-from-an-internal-ca"></a>내부 CA의 네트워크 위치 서버 인증서를 설치하려면  
   
-1.  네트워크 위치 서버 웹 사이트를 호스트할 서버에서 다음을 수행합니다. 에 **시작** 화면에서 입력**mmc.exe**, 한 다음 ENTER를 누릅니다.  
+1.  네트워크 위치 서버 웹 사이트를 호스트할 서버에서 다음을 수행합니다. **시작** 화면에서**mmc.exe**를 입력 한 다음 enter 키를 누릅니다.  
   
 2.  MMC 콘솔에서에 **파일** 메뉴 클릭 **스냅인 추가/제거**합니다.  
   
@@ -545,7 +545,7 @@ Add-ADGroupMember -Identity DirectAccess_clients_group_name -Members <computer_n
   
     CRL 배포 지점은 다음을 통해 액세스할 수 있습니다.  
   
-    -   와 같은 HTTP 기반 URL을 사용 하 여 웹 서버: https://crl.corp.contoso.com/crld/corp-APP1-CA.crl  
+    -   HTTP 기반 URL을 사용 하는 웹 서버: https://crl.corp.contoso.com/crld/corp-APP1-CA.crl  
   
     -   파일 서버와 같은 범용 명명 규칙 (UNC) 경로 통해 액세스 하는 \\\crl.corp.contoso.com\crld\corp-APP1-CA.crl  
   

@@ -1,7 +1,7 @@
 ---
 title: vRSS 질문과 대답
 description: 이 항목에서는 vRSS 사용에 대 한 몇 가지 일반적인 질문과 대답을 찾을 수 있습니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 61ae242e-82a8-430d-b07d-52b86c01e686
@@ -10,12 +10,12 @@ manager: dougkim
 ms.date: 09/05/2018
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: f0f3cb2bebf5aed31be0dda0c8e33a78aae94367
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 5c7feb696c6ee9014032229543a4f43fb5884527
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871825"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71395851"
 ---
 # <a name="vrss-frequently-asked-questions"></a>vRSS 질문과 대답
 

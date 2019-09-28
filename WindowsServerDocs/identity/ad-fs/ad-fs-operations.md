@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 594e1605f44dad69ab7eee8b22e6a620ade02ad0
-ms.sourcegitcommit: c307886e96622e9595700c94128103b84f5722ce
+ms.openlocfilehash: 99167850ff9ee193aca888d34d98503ea0554c30
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70108738"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71408558"
 ---
 # <a name="ad-fs-operations"></a>AD FS 작업
 
@@ -54,7 +54,7 @@ ms.locfileid: "70108738"
 - [AD FS에서 인증서 인증에 대 한 대체 호스트 이름 바인딩을 구성 합니다.](../ad-fs/operations/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication.md)
 
 
-### <a name="device"></a>디바이스
+### <a name="device"></a>장치
 - [AD FS의 디바이스 인증 컨트롤](../ad-fs/operations/device-authentication-controls-in-AD-FS.md) 
 
 

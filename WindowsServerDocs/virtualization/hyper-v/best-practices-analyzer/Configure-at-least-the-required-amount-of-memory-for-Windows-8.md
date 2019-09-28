@@ -1,7 +1,7 @@
 ---
 title: 최소한 필요한 가상 컴퓨터의 Windows 8을 실행 하 고 동적 메모리에 사용할 수 있는 메모리 양을 구성합니다
 description: 이 모범 사례 분석기 규칙에 대 한 텍스트의 온라인 버전입니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -10,12 +10,12 @@ ms.topic: article
 ms.assetid: 1dab6af6-852f-4243-9600-afe541a0f4cd
 author: KBDAzure
 ms.date: 8/16/2016
-ms.openlocfilehash: 2c3bfa9c5c365bec89b7dbe7b00704ae2384e896
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 167eb189506b1efff0444ae5dd15b3b23a99eca5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59886214"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71366380"
 ---
 # <a name="configure-at-least-the-required-amount-of-memory-for-a-virtual-machine-running-windows-8-and-enabled-for-dynamic-memory"></a>최소한 필요한 가상 컴퓨터의 Windows 8을 실행 하 고 동적 메모리에 사용할 수 있는 메모리 양을 구성합니다
 
@@ -33,15 +33,15 @@ ms.locfileid: "59886214"
 다음 섹션에서는 기울임꼴이이 문제에 대 한 모범 사례 분석기 도구에 표시 되는 UI 텍스트를 나타냅니다.  
   
 ## <a name="issue"></a>**문제점**  
-*하나 이상의 가상 컴퓨터는 Windows 8에 필요한 메모리 용량 보다 더 적은 노력으로 동적 메모리를 사용 하도록 구성 됩니다.*  
+*하나 이상의 가상 컴퓨터는 Windows 8에 필요한 메모리 용량 보다 더 작은 동적 메모리를 사용 하도록 구성 되어 있습니다.*  
   
-## <a name="impact"></a>**Impact**  
-*다음 가상 머신에서 게스트 운영 체제 실행 되지 않거나 불안정 실행 될 수 있습니다.*  
+## <a name="impact"></a>**식**  
+*다음 가상 컴퓨터의 게스트 운영 체제가 실행 되지 않거나 불안정을 실행할 수 있습니다.*  
   
-\<가상 머신의 목록 >  
+@no__t-가상 머신 목록 >  
   
 ## <a name="resolution"></a>**해결 방법**  
-*Hyper-v 관리자를 사용 하 여 시작 메모리 256MB 이상 하는 최소 메모리 및 최소 512 MB 이상이 가상 머신에 대 한 최대 메모리를 늘립니다.*  
+*Hyper-v 관리자를 사용 하 여 최소 메모리를 256 MB 이상으로 늘리고,이 가상 컴퓨터의 시작 메모리와 최대 메모리를 최소 512 MB로 늘립니다.*  
   
 ### <a name="increase-memory-using-hyper-v-manager"></a>Hyper-v 관리자를 사용 하 여 메모리 확보  
   

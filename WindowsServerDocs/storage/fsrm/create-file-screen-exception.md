@@ -2,18 +2,18 @@
 title: 파일 차단 예외 만들기
 description: 이 문서에서는 파일 차단 예외를 만드는 방법을 설명합니다.
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 1f0e93cb2535862b9259d438de00c3b769c2282c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6a0fa660db6b03104b585c8ee78a4f20aafe5c88
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59866304"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71403145"
 ---
 # <a name="create-a-file-screen-exception"></a>파일 차단 예외 만들기
 
@@ -40,7 +40,7 @@ ms.locfileid: "59866304"
 4.  파일 차단에서 제외할 파일을 지정하려면:
 
     -   **파일 그룹**에서 파일 차단에서 제외할 각 파일 그룹을 선택합니다. (파일 그룹에 대한 확인란을 선택하려면 파일 그룹 레이블을 두 번 클릭합니다.)
-    -   파일 그룹 포함 및 제외 되는 파일 형식 파일 그룹 레이블을 클릭 하 고 클릭 하려는 경우 **편집**합니다.
+    -   파일 그룹이 포함 하 고 제외 하는 파일 형식을 확인 하려면 파일 그룹 레이블을 클릭 하 고 **편집**을 클릭 합니다.
     -   새 파일 그룹을 만들려면 **만들기**를 클릭합니다.
 
 5.  **확인**을 클릭합니다.
@@ -48,6 +48,6 @@ ms.locfileid: "59866304"
 ## <a name="see-also"></a>참조
 
 -   [파일 차단 관리](file-screening-management.md)
--   [차단에 대 한 파일 그룹을 정의 합니다.](define-file-groups-for-screening.md)
+-   [차단을 위한 파일 그룹 정의](define-file-groups-for-screening.md)
 
 

@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: e67c04c98a53f4f1db36e6586fa77bcf181a8d5a
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: e007d4449cb62e7888c30f5b5929e393d7b571ef
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66188973"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407455"
 ---
 # <a name="update-password-customization"></a>사용자 지정 암호를 업데이트 합니다. 
 
@@ -34,4 +34,4 @@ ms.locfileid: "66188973"
     Set-AdfsGlobalWebContent -UpdatePasswordPageDescriptionText "This is the Contoso Update Password page."  
 
 ## <a name="additional-references"></a>추가 참조 
-[AD FS 사용자 로그인 사용자 지정](AD-FS-user-sign-in-customization.md)  
+[사용자 로그인 사용자 지정 AD FS](AD-FS-user-sign-in-customization.md)  

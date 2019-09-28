@@ -3,7 +3,7 @@ title: 소프트웨어 정의 네트워크 인프라 계획
 description: 이 항목에서는 SDN (소프트웨어 정의 네트워크) 인프라 배포를 계획 하는 방법에 대 한 정보를 제공 합니다.
 manager: dougkim
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.service: virtual-network
 ms.suite: na
@@ -14,12 +14,12 @@ ms.assetid: ea7e53c8-11ec-410b-b287-897c7aaafb13
 ms.author: pashort
 author: shortpatti
 ms.date: 08/10/2018
-ms.openlocfilehash: e2c125867b461cee9f694849db5c8f61be91211d
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: ed2dc8861366b929de346d5bd5b3d40998cc8dd5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70869936"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71355793"
 ---
 # <a name="plan-a-software-defined-network-infrastructure"></a>소프트웨어 정의 네트워크 인프라 계획
 

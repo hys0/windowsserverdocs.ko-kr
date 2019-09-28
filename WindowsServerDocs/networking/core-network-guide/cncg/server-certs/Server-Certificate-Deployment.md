@@ -4,20 +4,20 @@ description: 이 항목은 서버 배포 인증서 802.1 X 유선 및 무선 배
 manager: brianlic
 ms.topic: article
 ms.assetid: 1ae4384b-f4e4-41e8-bc5f-9ac41953bca4
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 751c5c5958b3d06ae0f4b701e4d6e10a7fef19dc
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2105e2ccad69fcfdbc13e3201b4362e5c6b932e1
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59858494"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406273"
 ---
 # <a name="server-certificate-deployment"></a>서버 인증서 배포
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 엔터프라이즈 루트 인증 기관 (CA)를 설치 하 고 PEAP 및 EAP에 사용할 서버 인증서를 배포 하려면 다음이 단계를 수행 합니다.  
   
@@ -25,17 +25,17 @@ ms.locfileid: "59858494"
 > Active Directory 인증서 서비스를 설치 하기 전에 컴퓨터의 이름, 정적 IP 주소를 가진 컴퓨터를 구성 하며 컴퓨터를 도메인에 가입 있습니다. AD CS를 설치한 후 필요한 경우에 IP 주소를 변경할 수 있지만 컴퓨터 이름 또는 도메인 구성원 컴퓨터의 변경할 수 없습니다. 이러한 작업을 수행 하는 방법에 대 한 자세한 내용은 Windows Server 참조&reg; 2016 [핵심 네트워크 가이드](../../Core-Network-Guide.md)합니다.  
 
   
--   [웹 서버 WEB1을 설치 합니다.](../../../core-network-guide/cncg/server-certs/Install-the-Web-Server-WEB1.md)  
+-   [웹 서버 WEB1 설치](../../../core-network-guide/cncg/server-certs/Install-the-Web-Server-WEB1.md)  
   
--   [W e b 1에 대 한 DNS에서 별칭 (CNAME) 레코드 만들기](../../../core-network-guide/cncg/server-certs/Create-an-Alias-CNAME-Record-in-DNS-for-WEB1.md)  
+-   [DNS에 WEB1에 대한 별칭(CNAME) 레코드 만들기](../../../core-network-guide/cncg/server-certs/Create-an-Alias-CNAME-Record-in-DNS-for-WEB1.md)  
   
 -   [Crl (인증서 해지 목록)을 배포 하도록 WEB1 구성](../../../core-network-guide/cncg/server-certs/Configure-WEB1-to-Distribute-Certificate-Revocation-Lists.md)  
   
--   [CAPolicy inf 파일을 준비 합니다.](../../../core-network-guide/cncg/server-certs/Prepare-the-CAPolicy-inf-File.md)  
+-   [Capolicy.inf inf 파일 준비](../../../core-network-guide/cncg/server-certs/Prepare-the-CAPolicy-inf-File.md)  
   
 -   [인증 기관 설치](../../../core-network-guide/cncg/server-certs/Install-the-Certification-Authority.md)  
   
--   [C a 1에서 CDP 및 AIA 확장을 구성 합니다.](../../../core-network-guide/cncg/server-certs/Configure-the-CDP-and-AIA-Extensions-on-CA1.md)  
+-   [C A 1에서 CDP 및 AIA 확장 구성](../../../core-network-guide/cncg/server-certs/Configure-the-CDP-and-AIA-Extensions-on-CA1.md)  
   
 -   [가상 디렉터리에 CA 인증서 및 CRL 복사](../../../core-network-guide/cncg/server-certs/Copy-the-CA-Certificate-and-CRL-to-the-Virtual-Directory.md)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "59858494"
   
 -   [서버 인증서 자동 등록 구성](../../../core-network-guide/cncg/server-certs/Configure-Server-Certificate-Autoenrollment.md)  
   
--   [그룹 새로 고침 정책](../../../core-network-guide/cncg/server-certs/Refresh-Group-Policy.md)  
+-   [새로 고침 그룹 정책](../../../core-network-guide/cncg/server-certs/Refresh-Group-Policy.md)  
   
 -   [서버 인증서의 서버 등록 확인](../../../core-network-guide/cncg/server-certs/Verify-Server-Enrollment-of-a-Server-Certificate.md)  
   

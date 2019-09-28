@@ -1,9 +1,9 @@
 ---
 title: MultiPoint 서비스 마이그레이션 계획 워크시트
-description: Windows Server 2016에서 MultiPoint Service로 마이그레이션할 수 있도록 계획 워크시트를 제공 합니다.
+description: Windows Server 2016에서 MultiPoint 서비스로 마이그레이션하는 데 도움이 되는 계획 워크시트를 제공 합니다.
 ms.custom: na
 ms.date: 07/29/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ ms.assetid: 864405bb-47ed-4c83-97a2-8df4c6e6f96b
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.openlocfilehash: a9d9b62bced9be90c658b79338c6f4ef07710fc3
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d3d2ecca4062d28d210196d9191e08710eb731c2
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59880584"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71394632"
 ---
 # <a name="planning-worksheet-for-multipoint-services-migration"></a>MultiPoint 서비스 마이그레이션 계획 워크시트
 

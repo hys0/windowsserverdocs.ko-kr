@@ -1,36 +1,36 @@
 ---
-title: 클레임 발급을 AD FS 문제 해결-
-description: 이 문서에서는 AD FS 사용 하 여 토큰 발급 문제를 해결 하는 방법 설명
+title: AD FS 문제 해결-클레임 발급
+description: 이 문서에서는 AD FS에서 토큰 발급 문제를 해결 하는 방법을 설명 합니다.
 author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 01/03/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: fdf8851fe9b35f82191458ba3313fda2dc3ee4cf
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ea0e6112f00f9cace6a0c580661a5319b5adaea5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59839664"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71366245"
 ---
-# <a name="ad-fs-troubleshooting---claims-issuance"></a>클레임 발급을 AD FS 문제 해결-
-클레임은 문을 하나의 주제는 자신 또는 다른 방법에 대 한 제목입니다.  클레임을 신뢰 당사자가 발급 한와 하나 이상의 값을 지정 하 고 AD FS 서버에서 발급 한 보안 토큰에 패키지화 합니다.  이 프로세스에 몇 가지 움직이는 부분 이기 때문에 이러한 주요 부분으로 클레임 발급을 나눌 수 있습니다.
+# <a name="ad-fs-troubleshooting---claims-issuance"></a>AD FS 문제 해결-클레임 발급
+클레임은 한 주체가 자신 또는 다른 주체에 대해 수행 하는 문입니다.  클레임은 신뢰 당사자에 의해 발급 되며 하나 이상의 값이 지정 된 다음 AD FS 서버에서 발급 한 보안 토큰에 패키지 됩니다.  이 프로세스에는 몇 가지 이동 부분이 있으므로 클레임 발급을 이러한 주요 부분으로 나눌 수 있습니다.
 
 >[!NOTE]  
->사용할 수 있습니다 [ClaimsXRay](https://adfshelp.microsoft.com/ClaimsXray/TokenRequest) 에 [ADFS 도움말](https://adfshelp.microsoft.com) 문제를 해결 하는 데 도움이 되는 사이트 문제를 클레임 합니다.   
+>[ADFS 도움말](https://adfshelp.microsoft.com) 사이트의 [ClaimsXRay](https://adfshelp.microsoft.com/ClaimsXray/TokenRequest) 를 사용 하 여 클레임 문제 해결에 도움을 받을 수 있습니다.   
 
 ## <a name="token-request"></a>토큰 요청
-신뢰 당사자로 이동할 때 리디렉션되 며 토큰 요청을 사용 하 여 AD fs 합니다.  요청을 사용 하 여 문제가 발생할 수 있습니다.  가장 주목할 만한 것:
+신뢰 당사자로 이동 하는 경우 토큰 요청과 AD FS으로 리디렉션됩니다.  요청에서 문제가 발생할 수 있습니다.  가장 중요 한 점은 다음과 같습니다.
 
-### <a name="the-request-formatting-with-3rd-parties-particularly-saml"></a>제 3 자와 (특히 SAML)를 사용 하 여 서식 지정 요청
+### <a name="the-request-formatting-with-3rd-parties-particularly-saml"></a>타사 (특히 SAML)를 사용한 요청 형식
 
-### <a name="pre-formated-urls-that-have-typos"></a>오타가 있는 사전으로 포맷 된 Url
-신뢰 당사자 WS Federaion에서에서 토큰을 발급 하는 경우 URL 쿼리 문자열 매개 변수를 사용 하 여 해당 토큰 요청 제공 됩니다.  AD FS에 대 한 리디렉션을 수행 하는 경우 신뢰 당사자는 URL에 올바른 매개 변수를 지정 하지 않으면 요청을 사용 하 여 문제를 발생할 수 있습니다 것.
+### <a name="pre-formated-urls-that-have-typos"></a>오타가 있는 미리 포맷 된 Url
+Federaion 신뢰 당사자 로부터 토큰을 발급 하는 경우 토큰 요청은 URL 쿼리 문자열 매개 변수와 함께 제공 됩니다.  AD FS 리디렉션할 때 신뢰 당사자가 해당 URL에 올바른 매개 변수를 지정 하지 않으면 요청에 문제가 발생할 수 있습니다.
 
 
-토큰 형식 확인 하려면, 웹 디버거 도구를 사용할 수 있습니다.
+토큰 형식을 verifiy 웹 디버거 도구를 사용할 수 있습니다.
 
 
 ## <a name="token-response"></a>토큰 응답

@@ -1,9 +1,9 @@
 ---
 title: 소프트웨어 라이선스 준수에 대한 중요 정보
-description: MultiPoint 서비스에서 라이선스에 대 한 정보를 제공합니다.
+description: MultiPoint 서비스의 라이선스에 대 한 정보를 제공 합니다.
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ ms.assetid: cd42fbac-fa7b-484d-b97d-3911e9180e7b
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.openlocfilehash: 8916e8ebb8dc680f7863000da779b29e9a52494e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 100566b5d27e4d142307b3043d341833b99c4e3b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59887374"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71388947"
 ---
 # <a name="important-information-about-software-license-compliance"></a>소프트웨어 라이선스 준수에 대한 중요 정보
 MultiPoint 서비스 시스템에서 사용 하는 프로그램에 대 한 사용 약관을 준수 해야 합니다. 라이선스의 수에 대 한 적절 한 수 있어야 *스테이션* 다음 섹션에 설명 된 대로 MultiPoint 서비스 시스템에 추가 합니다.  

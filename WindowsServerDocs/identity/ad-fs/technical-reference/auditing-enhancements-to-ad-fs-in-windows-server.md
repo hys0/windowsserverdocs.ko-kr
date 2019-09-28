@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 10/25/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 2f6e4abb4255281be85b7fa928566f681bcf2de2
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 4eb93513d12b2bba2620ff16be24f62ace5dee85
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66188365"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407250"
 ---
 # <a name="auditing-enhancements-to-ad-fs-in-windows-server-2016"></a>Windows Server 2016 AD FS의 향상된 감사 기능
 
@@ -23,7 +23,7 @@ ms.locfileid: "66188365"
     Windows Server 2016에서 AD FS의 릴리스부터 감사 되었습니다 더 효율적이 고 상대적으로 간단 합니다.  
   
 ## <a name="auditing-levels-in-ad-fs-for-windows-server-2016"></a>Windows Server 2016 용 AD FS의 감사 수준  
-기본적으로 Windows Server 2016에서 AD FS 감사가 기본 사용 합니다.  기본 감사 관리자는 단일 요청에 대 한 이벤트 5 개 이하로 표시 됩니다.  이 관찰, 단일 요청을 확인 하기 위해 관리자는 이벤트 수가 크게 감소 되는 표시 됩니다.   감사 수준 수 거 나 낮추는 PowerShell cmdlt을 사용 하 여:  Set-AdfsProperties -AuditLevel.  아래 표에서 사용할 수 있는 감사 수준을 설명합니다.  
+기본적으로 Windows Server 2016에서 AD FS 감사가 기본 사용 합니다.  기본 감사 관리자는 단일 요청에 대 한 이벤트 5 개 이하로 표시 됩니다.  이 관찰, 단일 요청을 확인 하기 위해 관리자는 이벤트 수가 크게 감소 되는 표시 됩니다.   PowerShell cmdlt를 사용 하 여 감사 수준을 발생 하거나 낮출 수 있습니다.  Set-adfsproperties-AuditLevel을 설정 합니다.  아래 표에서 사용할 수 있는 감사 수준을 설명합니다.  
   
 ||||  
 |-|-|-|  
@@ -32,11 +32,11 @@ ms.locfileid: "66188365"
 |Basic (기본값)|Set-adfsproperties-AuditLevel Basic|단일 요청에 대 한 5 개 이하의 이벤트가 기록 됩니다.|  
 |자세히|Set-adfsproperties-AuditLevel 세부 정보 표시|모든 이벤트가 기록 됩니다.  이 상당한 양의 요청당 정보를 기록 합니다.|  
   
-현재 감사 수준을 보려면 PowerShell cmdlt을 사용할 수 있습니다.  Get-AdfsProperties.  
+현재 감사 수준을 보려면 PowerShell cmdlt를 사용 하면 됩니다.  Set-adfsproperties.  
   
 ![감사 기능 향상](media/Auditing-Enhancements-to-AD-FS-in-Windows-Server-2016/ADFS_Audit_1.PNG)  
   
-감사 수준 수 거 나 낮추는 PowerShell cmdlt을 사용 하 여:  Set-AdfsProperties -AuditLevel.  
+PowerShell cmdlt를 사용 하 여 감사 수준을 발생 하거나 낮출 수 있습니다.  Set-adfsproperties-AuditLevel을 설정 합니다.  
   
 ![감사 기능 향상](media/Auditing-Enhancements-to-AD-FS-in-Windows-Server-2016/ADFS_Audit_2.png)  
   

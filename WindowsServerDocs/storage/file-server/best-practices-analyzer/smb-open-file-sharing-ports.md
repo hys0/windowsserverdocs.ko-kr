@@ -2,17 +2,17 @@
 title: SMB 파일 및 프린터 공유 포트가 열려 있어야 합니다.
 TOCTitle: 'SMB: File and printer sharing ports should be open'
 ms.date: 07/02/2012
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: a22801be6ec73b6819a190c793d28feae4edcf69
-ms.sourcegitcommit: 23a6e83b688119c9357262b6815c9402c2965472
+ms.openlocfilehash: 22cd926fdb873538631a6f6850157dceb5a020d7
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69560429"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71385836"
 ---
 # <a name="smb-file-and-printer-sharing-ports-should-be-open"></a>SMB 파일 및 프린터 공유 포트가 열려 있어야 합니다.
 
@@ -21,7 +21,7 @@ ms.locfileid: "69560429"
 
 적용 대상: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 및 Windows server 2012, Windows Server 2008 R2
 
-*이 항목은 모범 사례 분석기 검사에서 식별 한 특정 문제를 해결 하는 데 사용 됩니다. 이 항목의 정보는 파일 서비스 모범 사례 분석기 실행 되 고이 항목에서 다루는 문제가 발생 한 컴퓨터에만 적용 해야 합니다. 모범 사례 및 검사에 대 한 자세한 내용은* [모범 사례 분석기](http://go.microsoft.com/fwlink/?linkid=122786%0d%0a)를 참조 하세요.
+*이 항목은 모범 사례 분석기 검사에서 식별 한 특정 문제를 해결 하는 데 사용 됩니다. 이 항목의 정보는 파일 서비스 모범 사례 분석기 실행 되 고이 항목에서 다루는 문제가 발생 한 컴퓨터에만 적용 해야 합니다. 모범 사례 및 검사에 대 한 자세한 내용은 @ no__t-0 [모범 사례 분석기](http://go.microsoft.com/fwlink/?linkid=122786%0d%0a)를 참조 하세요.
 
 
 <table>
@@ -75,5 +75,5 @@ ms.locfileid: "69560429"
 
 ## <a name="additional-references"></a>추가 참조
 
-[공유 폴더 및 Windows 방화벽 이해](https://technet.microsoft.com/library/cc731402.aspx) (https://technet.microsoft.com/library/cc731402.aspx)
+[공유 폴더 및 Windows 방화벽 이해](https://technet.microsoft.com/library/cc731402.aspx)(https://technet.microsoft.com/library/cc731402.aspx)
 

@@ -2,20 +2,20 @@
 title: 호스트 캐시 이동 및 크기 조정(선택 사항)
 description: 이 가이드에서는 Windows Server 2016 및 Windows 10을 실행 하는 컴퓨터에서 호스트 캐시 모드로 BranchCache를 배포 하는 방법 지침을 제공
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: article
 ms.assetid: bb0eb349-914d-4596-9140-d3aae7597d55
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: cb75e06b5da8ff95fcf763b22c5160ea200035f3
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 0b0e3b6b490dead32071d99becccd9dca937f1f3
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59853534"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406371"
 ---
-# <a name="move-and-resize-the-hosted-cache-optional"></a>이동 및 호스트 캐시 크기 조정 \(옵션\)
+# <a name="move-and-resize-the-hosted-cache-optional"></a>호스트 캐시를 이동 하 고 크기를 조정 \(Optional @ no__t-1
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -53,10 +53,10 @@ ms.locfileid: "59853534"
     Get-BCStatus
     ``` 
 
-    명령의 결과 BranchCache 설치의 모든 측면에 대 한 상태를 표시합니다. 다음은 몇 가지 BranchCache 설정 및 각 항목에 대 한 올바른 값입니다.
+    명령 결과는 BranchCache 설치의 모든 측면에 대 한 상태를 표시 합니다. 다음은 몇 가지 BranchCache 설정 및 각 항목에 대 한 올바른 값입니다.
 
-    -   DataCache | CacheFileDirectoryPath: SetBCCache 명령의 – MoveTo 매개 변수와 함께 제공 된 값과 일치 하는 하드 디스크 위치를 표시 합니다. 예를 들어, d: 값을 제공 하는 경우\\datacache를 값이 명령 출력에 표시 됩니다.
+    -   DataCache | CacheFileDirectoryPath: Setbccache 명령의 명령의 – MoveTo 매개 변수를 사용 하 여 제공한 값과 일치 하는 하드 디스크 위치를 표시 합니다. 예를 들어, d: 값을 제공 하는 경우\\datacache를 값이 명령 출력에 표시 됩니다.
 
-    -   DataCache | MaxCacheSizeAsPercentageOfDiskVolume: SetBCCache 명령의 – 백분율 매개 변수와 함께 제공 된 값과 일치 하는 번호를 표시 합니다. 예를 들어 값 20을 제공한 경우 해당 값은 명령 출력에 표시 됩니다.
+    -   DataCache | MaxCacheSizeAsPercentageOfDiskVolume: 지정 된 값과 일치 하는 숫자를 Setbccache 명령의 명령의 – 비율 매개 변수와 일치 하는 값으로 표시 합니다. 예를 들어 값 20을 제공한 경우 해당 값은 명령 출력에 표시 됩니다.
 
 이 가이드를 계속 하려면 참조 [Prehash 및 호스트 캐시 서버 & #40; 옵션 & #41;에서 미리 콘텐츠](7-Bc-Prehash-Preload.md)합니다.

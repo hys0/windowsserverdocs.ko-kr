@@ -7,13 +7,13 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 03/07/2019
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
-ms.openlocfilehash: 72524fcc71f722daeb8238bc3cffc6d38a611098
-ms.sourcegitcommit: 9f955be34c641b58ae8b3000768caa46ad535d43
+ms.prod: windows-server
+ms.openlocfilehash: c7f436ea9b2baa00294ccef52a5d7a27c7247e4a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2019
-ms.locfileid: "68590584"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406783"
 ---
 # <a name="manage-servers-with-windows-admin-center"></a>Windows 관리 센터를 사용 하 여 서버 관리
 
@@ -43,7 +43,7 @@ Windows 관리 센터에 서버를 추가 하려면 다음을 수행 합니다.
 > [!NOTE]
 > Windows 관리 센터에서 [장애 조치 (failover) 클러스터](manage-failover-clusters.md) 또는 [하이퍼 수렴 형 클러스터](manage-hyper-converged.md) 를 별도의 연결로 추가할 수도 있습니다.
 
-## <a name="tools"></a>Tools
+## <a name="tools"></a>도구
 
 서버 연결에 사용할 수 있는 도구는 다음과 같습니다.
 
@@ -53,7 +53,7 @@ Windows 관리 센터에 서버를 추가 하려면 다음을 수행 합니다.
 | [Active Directory](#active-directory-preview) | Active Directory 관리 |
 | [백](#backup) | Azure Backup 보기 및 구성 |  
 | [인증서](#certificates) | 인증서 보기 및 수정 |
-| [컨테이너](#containers) | 컨테이너 보기 |
+| [컨테이너가](#containers) | 컨테이너 보기 |
 | [디바이스](#devices) | 장치 보기 및 수정 |
 | [DHCP](#dhcp) | DHCP 서버 구성 보기 및 관리 |
 | [DNS](#dns) | DNS 서버 구성 보기 및 관리 |

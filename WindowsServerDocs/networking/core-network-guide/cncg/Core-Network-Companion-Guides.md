@@ -1,23 +1,23 @@
 ---
 title: 핵심 네트워크 부록 가이드
-description: 이 항목에서는 Windows Server 2016 핵심 네트워크 가이드에 부록 가이드의 개요를 제공합니다.
+description: 이 항목에서는 Windows Server 2016 핵심 네트워크 가이드의 부록 가이드 개요를 제공 합니다.
 manager: brianlic
 ms.technology: networking
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: d57af0bd-9301-4f62-9888-f528cd10451d
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: b757e1914ee263a041f39e9767d3cb8af38403dc
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: c0895cfd62d462ef6d158dc39ef59a9ee10a7c98
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59816804"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406305"
 ---
 # <a name="core-network-companion-guidance"></a>핵심 네트워크 부록 지침
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 Windows Server 2016 동안 [핵심 네트워크 가이드](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/core-network-guide) 새로운 Active Directory를 배포 하는 방법에 대해 설명&reg; 포리스트는 새 루트 도메인 및 부록 가이드 지원 네트워킹 인프라와 네트워크에 기능을 추가 하는 기능 제공 합니다.
 
@@ -42,7 +42,7 @@ Windows Server 2016 동안 [핵심 네트워크 가이드](https://technet.micro
 
 이 부록 가이드 Institute of Electrical and Electronics Engineers를 배포 하는 방법에 대 한 지침을 제공 하 여 핵심 네트워크에 작성 하는 방법에 설명 \(IEEE\) 802.1 X\-인증 보호 확장할 수 있는 인증 프로토콜 \ – Microsoft Challenge Handshake 인증 프로토콜 버전 2를 사용 하 여 IEEE 802.11 무선 액세스 \(PEAP\-MS\-CHAP v2\)합니다.
 
-인증 방법 PEAP\-MS\-CHAP v2 해당 인증 필요 네트워크 정책 서버를 실행 하는 서버 \(NPS\) NPS id를 증명 하기 위해 서버 인증서를 사용 하 여 무선 클라이언트를 제공 합니다 하지만 클라이언트 인증서-를 사용 하 여 사용자 인증이 수행 되지 않습니다 대신 사용자 제공 해당 도메인 사용자 이름 및 암호입니다.
+인증 방법 PEAP @ no__t-0MS @ no__t-1CHAP v 2를 사용 하려면 네트워크 정책 @no__t 서버를 실행 하는 인증 서버에서 클라이언트에 NPS id를 증명 하기 위해 서버 인증서가 있는 무선 클라이언트를 제공 해야 합니다. 인증서를 사용 하 여 인증을 수행 하지 않고 사용자가 도메인 사용자 이름과 암호를 제공 합니다.
 
 때문에 PEAP\-MS\-CHAP v2 필요는 사용자가 인증 프로세스 중 인증서가 아니라 암호 기반 자격 증명 제공, 일반적으로 더 쉽고 저렴 하 게 EAP 보다 배포\-TLS 또는 PEAP\-TLS 합니다.
 

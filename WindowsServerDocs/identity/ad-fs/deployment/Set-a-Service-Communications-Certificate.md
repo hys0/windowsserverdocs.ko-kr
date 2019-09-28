@@ -6,41 +6,41 @@ author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 7253502390db004747d3732cf3d288a51afdaaf1
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: d0464853c73f88ed76545921ffc8a4bf8551c800
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67280695"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71408328"
 ---
 # <a name="set-a-service-communications-certificate"></a>서비스 통신 인증서 설정
 
 
-Active Directory Federation Services에서 페더레이션 서버 \(AD FS\) 서비스 통신 인증서를 사용 하 여 Secure Sockets Layer에 대 한 웹 서비스 트래픽의 보안을 유지 \(SSL\) 웹와의 통신 클라이언트 또는 페더레이션 서버 프록시를 사용 하 여 합니다.
+Active Directory Federation Services @no__t의 페더레이션 서버-0AD FS @ no__t-1 서비스 통신 인증서를 사용 하 여 웹 서비스 트래픽을 보호 하는 SSL(Secure Sockets Layer) \(SSL @ no__t-3 통신할 웹 클라이언트 또는 페더레이션 서버 프록시.
 
 > [!NOTE]  
-> 서비스 통신 인증서는 SSL 인증서와 동일 합니다. AD FS SSL 인증서를 변경 하려면 Powershell을 사용 해야 합니다. 이 지침을 따릅니다 [문서](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/manage-ssl-certificates-ad-fs-wap)합니다.
+> 서비스 통신 인증서가 SSL 인증서와 동일 하지 않습니다. AD FS SSL 인증서를 변경 하려면 Powershell을 사용 해야 합니다. 이 [문서의](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/manage-ssl-certificates-ad-fs-wap)지침을 따르세요.
 
 
-다음 절차를 사용 하 여 AD FS 관리 스냅인을 사용 하 여 서비스 통신 인증서를 변경 하려면\-에서 합니다.  
+다음 절차를 사용 하 여 서비스 통신 인증서를 AD FS Management snap @ no__t-0in으로 변경할 수 있습니다.  
 
 > [!NOTE]  
-> AD FS 관리 스냅인\-에서 서버 인증 인증서를 서비스 통신 인증서로 페더레이션 서버에 대 한 참조입니다.  
+> AD FS Management snap @ no__t-0in은 페더레이션 서버에 대 한 서버 인증 인증서를 서비스 통신 인증서로 참조 합니다.  
 
-로컬 컴퓨터에서 이 절차를 완료하기 위해서는 최소한 **관리자** 또는 이와 동등한 자격이 있어야 합니다.  적절 한 계정을 사용 하는 방법에 대 한 세부 정보를 검토 하 고 그룹 구성원 자격 [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477) \(http:\/\/go.microsoft.com\/fwlink\/? LinkId\=83477\)합니다.   
+로컬 컴퓨터에서 이 절차를 완료하기 위해서는 최소한 **관리자** 또는 이와 동등한 자격이 있어야 합니다.  [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477) \(에서 적절 한 계정 및 그룹 구성원 자격 사용에 대 한 자세한 내용은\/http\/: go.microsoft.com fwlink?를 참조 하세요.\/\/ LinkId\=83477\).   
 
-### <a name="to-set-a-service-communications-certificate"></a>서비스 통신 인증서 설정  
+### <a name="to-set-a-service-communications-certificate"></a>서비스 통신 인증서를 설정 하려면  
 
-1.  에 **시작** 화면에서 입력**AD FS 관리**, 한 다음 ENTER를 누릅니다.  
+1.  **시작** 화면에서**AD FS 관리**를 입력 한 다음 enter 키를 누릅니다.  
 
-2.  콘솔 트리에서 두 번\-클릭 **Service**를 클릭 하 고 **인증서**합니다.  
+2.  콘솔 트리에서 no__t를 두 번 클릭 하 고 **서비스**를 클릭 한 다음 **인증서**를 클릭 합니다.  
 
-3.  에 **동작** 창 클릭 합니다 **서비스 통신 인증서 설정** 링크.  
+3.  **작업** 창에서 **서비스 통신 인증서 설정** 링크를 클릭 합니다.  
 
-4.  에 **서비스 통신 인증서를 선택** 대화 상자에서 서비스 통신 인증서로 인증서 파일을 선택한 다음 클릭 하려는 인증서 파일을 이동 **엽니다**.  
+4.  **서비스 통신 인증서 선택** 대화 상자에서 서비스 통신 인증서로 설정할 인증서 파일로 이동 하 고 인증서 파일을 선택한 다음 **열기**를 클릭 합니다.  
 
 ## <a name="additional-references"></a>추가 참조  
 [검사 목록: 페더레이션 서버 설정](Checklist--Setting-Up-a-Federation-Server.md)  

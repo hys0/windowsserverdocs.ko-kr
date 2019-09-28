@@ -1,9 +1,9 @@
 ---
-title: 고급 DirectAccess 서버를 구성 하는 2 단계
-description: 이 항목은 고급 설정을 Windows Server 2016 용으로 단일 DirectAccess 서버 배포 가이드의 일부
+title: 2 단계 고급 DirectAccess 서버 구성
+description: 이 항목은 Windows Server 2016에 대 한 고급 설정을 사용 하 여 단일 DirectAccess 서버 배포 가이드의 일부입니다.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-da
@@ -12,16 +12,16 @@ ms.topic: article
 ms.assetid: 35afec8e-39a4-463b-839a-3c300ab01174
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: b55e0f9a4d059da89a5d71678a6a0bb385895fd6
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 0ba2154338871827aae03936e5e39a356a43d675
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67281800"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71388628"
 ---
-# <a name="step-2-configure-advanced-directaccess-servers"></a>고급 DirectAccess 서버를 구성 하는 2 단계
+# <a name="step-2-configure-advanced-directaccess-servers"></a>2 단계 고급 DirectAccess 서버 구성
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 이 항목에서는 IPv4 및 IPv6 혼합 환경에서 단일 원격 액세스 서버를 사용하는 고급 원격 액세스 배포에 필요한 클라이언트 및 서버 설정을 구성하는 방법에 대해 설명합니다. 에 설명 된 계획 단계를 완료 한 배포 단계를 시작 하기 전에 확인 [고급 DirectAccess 배포 계획](Plan-an-Advanced-DirectAccess-Deployment.md)합니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "67281800"
   
 6.  **설치 진행률** 페이지에서 설치가 완료되었는지 확인하고 **닫기**를 클릭합니다.  
   
-![설치 진행률 성공](../../../media/Step-2-Configuring-DirectAccess-Servers/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![ 설치 진행률 성공](../../../media/Step-2-Configuring-DirectAccess-Servers/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -77,7 +77,7 @@ Install-WindowsFeature RemoteAccess -IncludeManagementTools
   
 #### <a name="to-configure-the-deployment-type"></a>배포 유형을 구성하려면  
   
-1.  원격 액세스 서버에서 원격 액세스 관리 콘솔을 엽니다. 에 **시작** 화면에서 입력**RAMgmtUI.exe**, 한 다음 ENTER를 누릅니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
+1.  원격 액세스 서버에서 원격 액세스 관리 콘솔을 엽니다. **시작** 화면에서**ramgmtui.exe**를 입력 한 다음 enter 키를 누릅니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
   
 2.  원격 액세스 관리 콘솔의 가운데 창에서 클릭 **원격 액세스 설치 마법사를 실행**합니다.  
   
@@ -204,11 +204,11 @@ DirectAccess를 사용하여 클라이언트 컴퓨터를 프로비전하려면 
 5.  **응용 프로그램 서버**: 특정 애플리케이션 서버에 대한 엔드투엔드 인증 상태 외에 DirectAccess 원격 관리 상태가 표시됩니다.  
   
 ## <a name="BKMK_PS"></a>2.8. Windows PowerShell을 사용하여 원격 액세스 서버를 구성하는 방법  
-![Windows PowerShell](../../../media/Step-2-Configuring-DirectAccess-Servers/PowerShellLogoSmall.gif)**Windows PowerShell 해당 명령**  
+![Windows PowerShell](../../../media/Step-2-Configuring-DirectAccess-Servers/PowerShellLogoSmall.gif)**windows powershell 해당 명령**  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
-루트가 **corp.contoso.com**이고, GPO: **DirectAccess Server Settings**, 클라이언트 GPO: DirectAccess Client Settings, 내부 네트워크 어댑터: **Corpnet**, 외부 네트워크 어댑터: **인터넷**, ConnectTto 주소: **edge1.contoso.com**, 및 네트워크 위치 서버: **nls.corp.contoso.com**:  
+루트가 **corp.contoso.com**이고, GPO: **DirectAccess Server Settings**, 클라이언트 GPO: DirectAccess Client Settings, 내부 네트워크 어댑터: **Corpnet**, 외부 네트워크 어댑터: **인터넷**, ConnectTto 주소: **edge1.contoso.com**및 네트워크 위치 서버: **nls.corp.contoso.com**:  
   
 ```  
 Install-RemoteAccess -Force -PassThru -ServerGpoName 'corp.contoso.com\DirectAccess Server Settings' -ClientGpoName 'corp.contoso.com\DirectAccess Client Settings' -DAInstallType 'FullInstall' -InternetInterface 'Internet' -InternalInterface 'Corpnet' -ConnectToAddress 'edge1.contoso.com' -NlsUrl 'https://nls.corp.contoso.com/'  

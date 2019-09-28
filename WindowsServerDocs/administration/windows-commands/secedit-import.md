@@ -1,8 +1,8 @@
 ---
-title: secedit:import
-description: '에 대 한 Windows 명령을 항목 * * *- '
+title: 'secedit: 가져오기'
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 305b915a0d7e8ab152b072ff131854f56b9b0386
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: bb90096c3483b44cc1285fa3531f47b2bf5c6d2f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66441528"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71384226"
 ---
-# <a name="seceditimport"></a>secedit:import
+# <a name="seceditimport"></a>secedit: 가져오기
 
 
 
@@ -48,11 +48,11 @@ Secedit /import /db <database file name> /cfg <configuration file name> [/overwr
 
 명령 secedit /quiet-사용자 데이터베이스에서 다른 컴퓨터로.inf 파일을 가져오기 전에 실행 가져오기 수행 되도록 하 고 secedit / 가져오기 파일의 무결성을 확인 하려면에서 유효성을 검사 합니다.
 
-로그 파일의 경로를 제공 하지 않으면, 기본 로그 파일 (*systemroot*\Documents and 설정을\*UserAccount<em>\My Documents\Security\Logs\*DatabaseName</em>합니다. 로그)이 사용 됩니다.
+로그 파일에 대 한 경로를 지정 하지 않으면 기본 로그 파일 (*systemroot*\Documents and Settings\*UserAccount<em>\My Documents\Security\Logs\*DatabaseName</em>)이 사용 됩니다.
 
 Windows Server 2008에서 `Secedit /refreshpolicy` 바뀌었습니다 `gpupdate`합니다. 보안 설정을 새로 고치는 방법에 대 한 자세한 내용은 [Gpupdate](gpupdate.md)합니다.
 
-## <a name="BKMK_Examples"></a>예제
+## <a name="BKMK_Examples"></a>예와
 
 보안 데이터베이스와 도메인 보안 정책 inf 파일을 내보낸 다음 다른 컴퓨터의 보안 정책 설정을 복제 하려면 다른 데이터베이스에 해당 파일을 가져옵니다.
 ```
@@ -68,5 +68,5 @@ Secedit /import /db C:\Security\FY12\SecDbContoso.sdb /cfg NetworkShare\Policies
 -   [Secedit:export](secedit-export.md)
 -   [Secedit:generaterollback](secedit-generaterollback.md)
 -   [Secedit:validate](secedit-validate.md)
--   [secedit](secedit.md)
+-   [Secedit](secedit.md)
 -   [명령줄 구문 키](command-line-syntax-key.md)

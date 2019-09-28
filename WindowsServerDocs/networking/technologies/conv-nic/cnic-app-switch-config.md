@@ -1,7 +1,7 @@
 ---
-title: 수렴 된 NIC에 대 한 물리적 스위치 구성
-description: 이 항목에서는 제공 하면 지침을 사용 하 여 물리적 스위치를 구성 합니다.
-ms.prod: windows-server-threshold
+title: 수렴 형 NIC에 대 한 물리적 스위치 구성
+description: 이 항목에서는 물리적 스위치를 구성 하기 위한 지침을 제공 합니다.
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 6d53c797-fb67-4b9e-9066-1c9a8b76d2aa
@@ -9,52 +9,52 @@ manager: dougkim
 ms.author: pashort
 author: shortpatti
 ms.date: 09/14/2018
-ms.openlocfilehash: e31d7b83fee84d9055d938f77b49389205786244
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d10e8ca6e4689b89a8b9532f77613f17280282b1
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59829404"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71355480"
 ---
-# <a name="physical-switch-configuration-for-converged-nic"></a>수렴 된 NIC에 대 한 물리적 스위치 구성
+# <a name="physical-switch-configuration-for-converged-nic"></a>수렴 형 NIC에 대 한 물리적 스위치 구성
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-이 항목에서는 제공 하면 지침을 사용 하 여 물리적 스위치를 구성 합니다. 
+이 항목에서는 물리적 스위치를 구성 하기 위한 지침을 제공 합니다. 
 
 
-여기에 명령 및 해당 용도로 사용 됩니다. 사용자 환경에서 Nic 연결 되어 있는 포트를 결정 합니다. 
+명령 및 해당 용도로만 사용 됩니다. 사용자 환경에서 Nic가 연결 되는 포트를 결정 해야 합니다. 
 
 >[!IMPORTANT]
->SMB는 구성 된 우선 순위에 대 한 VLAN 및 놓기 없음 정책 설정 되어 있는지 확인 합니다.
+>SMB가 구성 된 우선 순위에 대해 VLAN 및 삭제 방지 정책이 설정 되어 있는지 확인 합니다.
 
-## <a name="arista-switch-dcs-7050s-64-eos-4137m"></a>Arista 스위치 \(dcs\-7050s\-64 EOS\-4.13.7M\)
+## <a name="arista-switch-dcs-7050s-64-eos-4137m"></a>Arista 스위치 \(dcs @ no__t-17050s @ no__t-264, EOS @ no__t-34.13.7 M @ no__t-4
 
-1.  en \(관리자 모드로 전환, 일반적으로 암호 요청\)
-2.  config \(구성 모드를 입력 합니다.\)
-3.  실행 표시 \(현재 실행 중인 구성을 보여 줍니다.\)
-4.  Nic에는 연결 하는 스위치 포트에 대해 알아봅니다. 이러한 예제에서는 이러한 속성은 14/1,15/1,16/1,17/1입니다.
-5.  int eth 14/1,15/1,16/1,17/1 \(이러한 포트에 대 한 구성 모드로 입력\)
+1.  en \( 관리자 모드로 이동, 일반적으로 암호를 묻는 @ no__t-1
+2.  config \( 구성 모드로 전환 @ no__t-1
+3.  실행 @no__t 표시-0 현재 실행 중인 구성 @ no__t-1 표시
+4.  Nic가 연결 된 스위치 포트를 확인 합니다. 이 예에서는 14/1, 15/1, 16/1, 17/1입니다.
+5.  int eth 14/1, 15/1, 16/1, 17/1 \( 다음 포트에 대 한 config 모드로 전환 @ no__t-1
 6.  dcbx 모드 ieee
-7.  모드의 경우 우선 순위 흐름 제어
-8.  switchport 트렁크 기본 vlan 225
-9.  switchport 트렁크 vlan 100 225 허용
+7.  우선 순위-흐름 제어 모드
+8.  switchport 트렁크 native vlan 225
+9.  switchport 트렁크 허용 vlan 100-225
 10. switchport 모드 트렁크
-11. 우선 순위 흐름 제어 우선 순위 3 놓기 못함
-12. cos qos 신뢰
-13. 실행 표시 \(해당 구성이 포트에 올바르게 설치 확인\)
-14. 쓰기 \(스위치 재부팅 간에 유지 설정 하려면\)
+11. 우선 순위-흐름 제어 우선 순위 3 삭제 안 함
+12. qos 트러스트 co
+13. 실행 @no__t 표시-0 구성이 포트에서 올바르게 설정 되어 있는지 확인 @ no__t-1
+14. wr \(은 스위치를 다시 시작 합니다. @ no__t-1
 
-### <a name="tips"></a>팁:
-1.  없는 #command # 명령의 부정합니다.
-2.  새 VLAN을 추가 하는 방법: int vlan 100 \(저장소 네트워크 VLAN 100 이면\)
+### <a name="tips"></a>팁
+1.  No #command # 부정 명령
+2.  새 VLAN을 추가 하는 방법: int vlan 100 @no__t-저장소 네트워크가 VLAN 100 @ no__t-1에 있는 경우 0
 3.  기존 Vlan을 확인 하는 방법: vlan 표시
-4.  Arista 스위치를 구성 하는 방법에 대 한 자세한 내용은 온라인 검색: Arista EOS 수동
-5.  이 명령을 사용 하 여 PFC 설정을 확인 합니다: 우선 순위 흐름 제어 카운터 세부 정보를 표시 합니다.
+4.  Arista 스위치를 구성 하는 방법에 대 한 자세한 내용은 온라인에서 다음을 검색 하세요. Arista EOS 수동
+5.  이 명령을 사용 하 여 PFC 설정을 확인 합니다. 우선 순위 흐름 제어 카운터 정보를 표시 합니다.
 
 --- 
 
-## <a name="dell-switch-s4810-ftos-99-00"></a>Dell 스위치 \(S4810, FTOS 9.9 \(0.0\)\)
+## <a name="dell-switch-s4810-ftos-99-00"></a>Dell 스위치 \(S4810, FTOS 9.9 \(0.0 @ no__t-2 @ no__t-3
 
     
     !
@@ -74,7 +74,7 @@ ms.locfileid: "59829404"
     
 --- 
 
-## <a name="cisco-switch-nexus-3132-version-602u61"></a>Cisco 스위치 \(Nexus 3132 버전 6.0\(2\)U6\(1\)\)
+## <a name="cisco-switch-nexus-3132-version-602u61"></a>Cisco switch \(Nexus 3132, 버전 6.0 @ no__t-12 @ no__t-2U6 @ no__t-31 @ no__t-4 @ no__t-5
 
 ### <a name="global"></a>전역
     
@@ -105,7 +105,7 @@ ms.locfileid: "59829404"
     service-policy type network-qos QOS_NETWORK
     
 
-### <a name="port-specific"></a>특정 포트
+### <a name="port-specific"></a>포트 관련
 
     
     switchport mode trunk
@@ -121,8 +121,8 @@ ms.locfileid: "59829404"
 
 ## <a name="related-topics"></a>관련 항목
 
-- [단일 네트워크 어댑터로 수렴 형 된 NIC 구성](cnic-single.md)
-- [수렴 형 된 NIC 팀으로 구성 된 NIC 구성](cnic-datacenter.md)
+- [단일 네트워크 어댑터를 사용 하 여 수렴 형 NIC 구성](cnic-single.md)
+- [수렴 형 NIC 팀 NIC 구성](cnic-datacenter.md)
 - [수렴 형 NIC 구성 문제 해결](cnic-app-troubleshoot.md)
 
 --- 

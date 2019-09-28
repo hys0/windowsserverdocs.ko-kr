@@ -1,9 +1,9 @@
 ---
 title: 테스트 랩 시나리오 개요
-description: 이 항목에서는 테스트 랩 가이드의 일부인-DirectAccess 멀티 사이트 배포에 대 한 Windows Server 2016를 보여 줍니다.
+description: 이 항목은 테스트 랩 가이드-Windows Server 2016에 대 한 DirectAccess 멀티 사이트 배포 시연의 일부입니다.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-da
@@ -12,16 +12,16 @@ ms.topic: article
 ms.assetid: 9afeced4-1a9b-4cb3-9fc4-d7e44c675755
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: b067d5f247f5dc13ea294d83a76f267c5a57ffe7
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: bcee25c4a13afc2b41d6b1a9a43a1489054ef43d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67283295"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71388413"
 ---
 # <a name="overview-of-the-test-lab-scenario"></a>테스트 랩 시나리오 개요
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 이 테스트 랩 시나리오에서 DirectAccess는 배포 됩니다.  
   

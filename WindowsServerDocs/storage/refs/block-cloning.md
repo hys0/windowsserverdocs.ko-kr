@@ -7,18 +7,18 @@ ms.author: gawatu
 manager: gawatu
 ms.date: 10/17/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage-file-systems
-ms.openlocfilehash: 54165700209320eee50fc63d98d78cbf4a92d053
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 81186624e19f9235cbdf8c7f0d44bd2927a68099
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59838114"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71394015"
 ---
 # <a name="block-cloning-on-refs"></a>ReFS에서 블록 복제
 
->적용 대상: Windows Server 2019, Windows Server 2016, Windows Server (반기 채널)
+>적용 대상: Windows Server 2019, Windows Server 2016, Windows Server(반기 채널)
 
 블록 복제는 응용 프로그램을 대신하여 파일 시스템에게 일정 범위의 파일 바이트를 복사하도록 지시하는데, 대상 파일은 원본 파일과 같을 수도 있고 다를 수도 있습니다. 복사 작업은 안타깝게도 비용이 많이 듭니다. 비용이 많이 드는 기본 물리적 데이터에 대한 읽기 및 쓰기를 발생시키기 때문입니다. 
 
@@ -65,7 +65,7 @@ ReFS에서의 블록 복제는 파일 데이터 작업을 메타데이터 작업
 ## <a name="see-also"></a>참조
 
 -   [ReFS 개요](refs-overview.md)
--   [ReFS의 무결성 스트림](integrity-streams.md)
--   [저장소 공간 다이렉트 개요](../storage-spaces/storage-spaces-direct-overview.md)
+-   [ReFS 무결성 스트림](integrity-streams.md)
+-   [스토리지 공간 다이렉트 개요](../storage-spaces/storage-spaces-direct-overview.md)
 -   [DUPLICATE_EXTENTS_DATA](https://msdn.microsoft.com/library/windows/desktop/mt590821(v=vs.85).aspx)
 -   [FSCTL_DUPLICATE_EXTENTS_TO_FILE](https://msdn.microsoft.com/library/windows/desktop/mt590823(v=vs.85).aspx)

@@ -1,7 +1,7 @@
 ---
 title: vRSS(가상 수신측 배율)
 description: Windows Server의 vRSS (가상 수신측 배율)에 대해 알아보고, VM의 여러 논리 프로세서 코어에서 들어오는 네트워크 트래픽의 부하를 분산 하도록 가상 네트워크 어댑터를 구성 하는 방법에 대해 알아봅니다. 호스트 가상 네트워크 인터페이스 카드 (vNIC)에 대 한 여러 실제 코어를 구성할 수도 있습니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 9be477b3-f81d-4e84-a6b0-ac4c1ea97715
@@ -10,12 +10,12 @@ ms.localizationpriority: medium
 manager: dougkim
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: ae017d7d78adea565942a952aaea3da1669f39a9
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: b24cabe3597af35e7c7f3c6f81d360bb11675e23
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871801"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71395792"
 ---
 # <a name="virtual-receive-side-scaling-vrss"></a>가상 수신측 배율 \(vRSS\)
 

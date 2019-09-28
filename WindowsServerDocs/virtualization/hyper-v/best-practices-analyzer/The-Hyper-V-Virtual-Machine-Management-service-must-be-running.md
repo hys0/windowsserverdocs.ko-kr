@@ -1,7 +1,7 @@
 ---
 title: Hyper-v 가상 컴퓨터 관리 서비스가 실행 되어야 합니다.
-description: 이 모범 사례 분석기 규칙에 의해 보고 된 문제를 해결 하려면 지침을 제공 합니다.
-ms.prod: windows-server-threshold
+description: 이 모범 사례 분석기 규칙에서 보고 한 문제를 해결 하는 지침을 제공 합니다.
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -10,12 +10,12 @@ ms.topic: article
 ms.assetid: f44d6887-6458-4438-9d93-574587e3f7d1
 author: KBDAzure
 ms.date: 10/03/2016
-ms.openlocfilehash: 58886b68ca30ddeb064fc12c6cb4c00183399715
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: de1e2ed9fc24afe7d1ccc12bc11eb94a846f0664
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59826114"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71364683"
 ---
 # <a name="the-hyper-v-virtual-machine-management-service-must-be-running"></a>Hyper-v 가상 컴퓨터 관리 서비스가 실행 되어야 합니다.
 
@@ -34,11 +34,11 @@ ms.locfileid: "59826114"
 
 ## <a name="issue"></a>문제점  
   
-*가상 컴퓨터를 관리 하는 데 필요한 서비스가 실행 되지 않습니다.*  
+*가상 컴퓨터를 관리 하는 데 필요한 서비스가 실행 되 고 있지 않습니다.*  
   
 ## <a name="impact"></a>영향  
   
-*없는 가상 머신 관리 작업을 수행할 수 있습니다.*  
+*가상 컴퓨터 관리 작업을 수행할 수 없습니다.*  
   
 가상 컴퓨터를 실행 하는 계속 실행 됩니다. 그러나 가상 컴퓨터를 관리 하거나 만들거나 서비스가 실행 될 때까지를 삭제할 수 없습니다.  
   
@@ -47,11 +47,11 @@ ms.locfileid: "59826114"
 *서비스 스냅인 또는 Sc config 명령줄 도구를 사용 하 여 자동으로 시작 되도록 서비스를 다시 구성 합니다.*  
   
 > [!TIP]  
-> 데스크톱 응용 프로그램에서 서비스를 찾을 수 없습니다 또는 명령줄 도구는 서비스가 존재 하지 않으면 Hyper-v 관리 도구 것을 보고 하는 경우 설치 되지 않습니다. 및 시작 메뉴에서 Hyper-v MMC 콘솔을 볼 수 없는 경우에 Hyper-v 관리 도구 설치 해야 합니다.
+> 데스크톱 응용 프로그램에서 서비스를 찾을 수 없습니다 또는 명령줄 도구는 서비스가 존재 하지 않으면 Hyper-v 관리 도구 것을 보고 하는 경우 설치 되지 않습니다. 그리고 시작 메뉴에서 Hyper-v MMC 콘솔을 볼 수 없는 경우에는 Hyper-v 관리 도구를 설치 해야 합니다.
 
-Hyper-v 관리 도구를 설치 합니다.  
+Hyper-v 관리 도구를 설치 하려면:  
 >   
-> - Windows server에서는 서버 관리자를 열고 역할 및 기능 추가 마법사를 사용 합니다. 자세한 내용은 다음을 참조 하십시오. [Windows Server 2016에 Hyper-v 역할을 설치](../get-started/Install-the-Hyper-V-role-on-Windows-Server.md)합니다.  도구를 설치 하려면 PowerShell을 사용할 수도 있습니다 (`Install-WindowsFeature -Name Hyper-V-Tools, Hyper-V-PowerShell`) 
+> - Windows server에서는 서버 관리자를 열고 역할 및 기능 추가 마법사를 사용 합니다. 자세한 내용은 다음을 참조 하십시오. [Windows Server 2016에 Hyper-v 역할을 설치](../get-started/Install-the-Hyper-V-role-on-Windows-Server.md)합니다.  PowerShell을 사용 하 여 도구를 설치할 수도 있습니다 (`Install-WindowsFeature -Name Hyper-V-Tools, Hyper-V-PowerShell`). 
 > - Windows에서 바탕 화면에서 입력을 시작 **프로그램**, 클릭 **프로그램 및 기능** (제어판) > **Windows 기능 설정 또는 해제** > **Hyper-v** > **Hyper-v 관리 도구**합니다. 클릭 **확인**합니다.  
   
 ### <a name="to-reconfigure-the-service-to-start-automatically-using-the-services-desktop-app"></a>서비스 데스크톱 응용 프로그램을 사용 하 여 자동으로 시작 되도록 서비스를 다시 구성 하려면  

@@ -1,25 +1,25 @@
 ---
-title: Vssadmin 목록 작성기
-description: Vssadmin list 기록기 명령 설명입니다.
-ms.prod: windows-server-threshold
+title: Vssadmin list writer
+description: Vssadmin list writer 명령에 대 한 설명입니다.
+ms.prod: windows-server
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 ms.technology: storage
 ms.date: 05/18/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: e3bd77d844ed6b613659d095d7ef07b9e5f40f61
-ms.sourcegitcommit: 2977c707a299929c6ab0d1e0adab2e1c644b8306
+ms.openlocfilehash: f62f44b3a47a0fe2d307c9d65d6cdc473f60db74
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63706986"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71362583"
 ---
-# <a name="vssadmin-list-writers"></a>Vssadmin 목록 작성기
+# <a name="vssadmin-list-writers"></a>Vssadmin list writer
 
->적용 대상: Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+>적용 대상: Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2, windows server 2012, windows server 2008 R2, Windows Server 2008
 
-볼륨 섀도 복사본 작성자를 구독 하는 목록입니다.
+구독 된 볼륨 섀도 복사본 작성자를 나열 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -34,4 +34,4 @@ vssadmin list writers
 ## <a name="additional-references"></a>추가 참조
 
 * [명령줄 구문 키](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc771080(v%3dws.11))
-* [Vssadmin](vssadmin.md)
+* [List](vssadmin.md)

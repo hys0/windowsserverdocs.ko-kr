@@ -1,8 +1,8 @@
 ---
 title: setx
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0b2caceed6962bef22e7d546fa3b4469c9682b39
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: c206f36e2d0bc947329124b08fb797091e838bcd
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66441248"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71384034"
 ---
 # <a name="setx"></a>setx
 
@@ -40,25 +40,25 @@ setx [/s <Computer> [/u [<Domain>\]<User name> [/p [<Password>]]]] /f <FileName>
 
 |         매개 변수          |                                                                                                                                              설명                                                                                                                                              |
 |----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|       /s \<컴퓨터 >       |                                                                                  이름 또는 원격 컴퓨터의 IP 주소를 지정합니다. 백슬래시를 사용 하지 마십시오. 기본값은 로컬 컴퓨터의 이름입니다.                                                                                  |
-| /u [\<도메인 >\]<User name> |                                                                                           지정 된 사용자 계정의 자격 증명으로 스크립트를 실행합니다. 기본값은 시스템 사용 권한.                                                                                            |
-|      /p [\<Password>]      |                                                                                                         에 지정 된 사용자 계정의 암호를 지정 된 **/u** 매개 변수입니다.                                                                                                         |
-|        \<Variable>         |                                                                                                                 설정할 환경 변수의 이름을 지정 합니다.                                                                                                                  |
-|          \<Value>          |                                                                                                                환경 변수를 설정 하려는 값을 지정 합니다.                                                                                                                 |
-|         /k \<Path>         | 레지스트리 키에서 정보에 변수가 기반으로 설정 되도록 지정 합니다. P *"ath"* 는 다음 구문을 사용 합니다.</br>`\\<HIVE>\<KEY>\...\<Value>`</br>예를 들어 다음 경로 지정할 수 있습니다.</br>`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation\StandardName` |
-|      /f \<파일 이름 >       |                                                                                                                               사용 하 여 원하는 파일을 지정 합니다.                                                                                                                                |
-|        /a \<X>,<Y>         |                                                                                                                    검색 매개 변수로 절대 좌표와 오프셋을 지정합니다.                                                                                                                    |
-|   /r \<X>,<Y> "<String>"   |                                                                                                            상대 좌표 및 오프셋이 지정 **문자열** 매개 변수를 검색으로 합니다.                                                                                                            |
+|       /s \<Computer >       |                                                                                  이름 또는 원격 컴퓨터의 IP 주소를 지정합니다. 백슬래시를 사용 하지 마십시오. 기본값은 로컬 컴퓨터의 이름입니다.                                                                                  |
+| /u [\<Domain > \] @ no__t-2 |                                                                                           지정 된 사용자 계정의 자격 증명으로 스크립트를 실행합니다. 기본값은 시스템 사용 권한.                                                                                            |
+|      /p [\<Password >]      |                                                                                                         에 지정 된 사용자 계정의 암호를 지정 된 **/u** 매개 변수입니다.                                                                                                         |
+|        \<Variable >         |                                                                                                                 설정할 환경 변수의 이름을 지정 합니다.                                                                                                                  |
+|          \<Value >          |                                                                                                                환경 변수를 설정 하려는 값을 지정 합니다.                                                                                                                 |
+|         /k \<Path >         | 레지스트리 키에서 정보에 변수가 기반으로 설정 되도록 지정 합니다. P *"ath"* 는 다음 구문을 사용 합니다.</br>`\\<HIVE>\<KEY>\...\<Value>`</br>예를 들어 다음 경로 지정할 수 있습니다.</br>`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation\StandardName` |
+|      /f \< 파일 이름 >       |                                                                                                                               사용 하 여 원하는 파일을 지정 합니다.                                                                                                                                |
+|        /a \<X >, <Y>         |                                                                                                                    검색 매개 변수로 절대 좌표와 오프셋을 지정합니다.                                                                                                                    |
+|   /r \<X >, <Y> "<String>"   |                                                                                                            상대 좌표 및 오프셋이 지정 **문자열** 매개 변수를 검색으로 합니다.                                                                                                            |
 |             /m             |                                                                                                시스템 환경에서 변수를 설정 하도록 지정 합니다. 기본 설정은 로컬 환경입니다.                                                                                                 |
 |             /x             |                                                                                                       표시 파일을 무시 하 고 좌표는 **/a**, **/r**, 및 **/d** 명령줄 옵션입니다.                                                                                                        |
-|      /d \<Delimiters>      |                    와 같은 구분 기호를 지정 " **,** "또는" **\\** " 4 개의 기본 제공 구분 기호 외에도 사용할 수-공백, 탭, ENTER, 및 줄 바꿈 합니다. 모든 ASCII 문자를 포함 하는 유효한 구분 기호. 구분 기호는 최대 수는 15, 기본 제공 구분 기호를 포함 합니다.                    |
+|      /d \< 구분 기호 >      |                    와 같은 구분 기호를 지정 " **,** "또는" **\\** " 4 개의 기본 제공 구분 기호 외에도 사용할 수-공백, 탭, ENTER, 및 줄 바꿈 합니다. 모든 ASCII 문자를 포함 하는 유효한 구분 기호. 구분 기호는 최대 수는 15, 기본 제공 구분 기호를 포함 합니다.                    |
 |             /?             |                                                                                                                                 명령 프롬프트에 도움말을 표시합니다.                                                                                                                                  |
 
 ## <a name="remarks"></a>설명
 
 -   **Setx** 명령 SETENV UNIX 유틸리티와 비슷합니다.
 -   **Setx** 직접 고 영구적으로 시스템 환경 값을 설정 하는 명령줄 또는 프로그램 방법을 제공 합니다. 시스템 환경 변수를 통해 수동으로 구성할 수는 **제어판** 또는 레지스트리 편집기를 통해. **설정** 명령 인터프리터 (Cmd.exe)의 내부 인 명령의 현재 콘솔 창에 사용자 환경 변수를 설정 합니다.
--   사용할 수는 **setx** 세 가지 소스 (모드) 중 하나에서 사용자 및 시스템에 대 한 값 환경 변수를 설정 하는 명령: 명령줄 모드, 레지스트리 모드 또는 파일 모드를 선택 합니다.
+-   다음 세 가지 원본 (모드) 중 하나에서 사용자 및 시스템 환경 변수의 값을 설정 하는 데 **setx** 명령을 사용할 수 있습니다. 명령줄 모드, 레지스트리 모드 또는 파일 모드입니다.
 -   **Setx** 레지스트리에 마스터 환경 변수를 기록 합니다. 사용 하 여 변수 설정 **setx** 변수가 다음 명령 창 에서만 사용할 수 있는 현재 명령 창에 있습니다.
 -   **HKEY_CURRENT_USER** 및 **HKEY_LOCAL_MACHINE** 만 지원 되는 하이브 됩니다. REG_DWORD, REG_EXPAND_SZ, REG_SZ, 및 REG_MULTI_SZ는 유효한 **RegKey** 데이터 형식입니다.
 -   에 대 한 액세스를 얻을 때 **REG_MULTI_SZ** 첫 번째 항목만 레지스트리 값을 추출 하 고 사용 합니다.
@@ -66,7 +66,7 @@ setx [/s <Computer> [/u [<Domain>\]<User name> [/p [<Password>]]]] /f <FileName>
 -   REG_DWORD 레지스트리 값 추출 되 고 16 진수 모드에서 사용 됩니다.
 -   캐리지 리턴를 구문 분석 하는 파일 모드를 지원 하 고 줄 바꿈 (CRLF) 텍스트 파일에만 합니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 Brand1 값에 로컬 환경에서 컴퓨터 환경 변수를 설정 하려면 다음을 입력 합니다.
 ```

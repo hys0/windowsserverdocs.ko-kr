@@ -3,7 +3,7 @@ title: MultiPoint 서비스에서 직접 비디오 연결 스테이션을 설정
 description: MultiPoint 서비스에서 직접 비디오에 연결 된 스테이션을 만드는 방법에 대해 알아봅니다.
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ ms.assetid: 82ba3517-9743-4cde-8eea-63a17edb016f
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.openlocfilehash: eda8d5eee0635370873adec5b1fde2d65fc9fd9c
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: ab57f3d996cfe9196fd256a76516a44dc146043b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871596"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71389357"
 ---
 # <a name="set-up-a-direct-video-connected-station-in-multipoint-services"></a>MultiPoint 서비스에서 직접 비디오 연결 스테이션을 설정 합니다.
 직접 비디오에 연결 된 스테이션 모니터가 MultiPoint 서버 컴퓨터에서 비디오 포트에 직접 연결 되어 있습니다. 키보드 및 마우스 USB 허브에 연결 되어 및 모니터와 연결 합니다.  

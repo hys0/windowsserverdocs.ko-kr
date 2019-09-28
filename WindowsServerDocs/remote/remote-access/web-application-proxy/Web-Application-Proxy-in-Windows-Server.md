@@ -2,7 +2,7 @@
 ms.assetid: 0b3587b2-219f-43d8-88b4-1254eaa8b910
 title: Windows server에서 웹 응용 프로그램 프록시
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.service: ''
 ms.suite: na
@@ -10,18 +10,18 @@ ms.technology: web-app-proxy
 ms.tgt_pltfrm: na
 ms.topic: article
 author: kgremban
-ms.openlocfilehash: 760b0fa11d8d0b77c2a44a8696d199bc378da947
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: bfa57a18ee74e1e54f6e7c1ed85d4bfbccb8937b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66446794"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71404247"
 ---
 # <a name="web-application-proxy-in-windows-server"></a>Windows server에서 웹 응용 프로그램 프록시
 
->적용 대상: Windows Server&reg; 2016
+>적용 대상: Windows Server @ no__t-0 2016
 
-**이 콘텐츠는 웹 응용 프로그램 프록시의 온-프레미스 버전에 적합 합니다. 클라우드를 통해 온-프레미스 응용 프로그램에 대 한 보안 액세스를 사용 합니다 [Azure AD 응용 프로그램 프록시 콘텐츠](https://azure.microsoft.com/documentation/articles/active-directory-application-proxy-get-started/)합니다.**  
+**이 콘텐츠는 웹 응용 프로그램 프록시의 온-프레미스 버전과 관련이 있습니다. 클라우드를 통해 온-프레미스 응용 프로그램에 안전 하 게 액세스할 수 있도록 하려면 [Azure AD 응용 프로그램 프록시 콘텐츠](https://azure.microsoft.com/documentation/articles/active-directory-application-proxy-get-started/)를 참조 하세요.**  
   
 이 섹션에는 웹 응용 프로그램 프록시에 대 한 Windows Server 2016의 새로운 기능과 변경 이란 설명 합니다. 새로운 기능과 변경 내용이 여기에 나열 된에이 미리 보기를 사용 하 여 작업할 때 가장 큰 영향을 있을 가능성이 높은 원인입니다.  
   

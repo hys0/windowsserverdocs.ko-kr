@@ -1,6 +1,6 @@
 ---
 title: 공유 저장소를 사용하여 확장 클러스터 복제
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: eldenc
 ms.author: nedpyle
 ms.technology: storage-replica
@@ -8,12 +8,12 @@ ms.topic: get-started-article
 author: nedpyle
 ms.date: 04/26/2019
 ms.assetid: 6c5b9431-ede3-4438-8cf5-a0091a8633b0
-ms.openlocfilehash: 3acfcfd13ee3f78bac59a96b6021e5489f4e39ac
-ms.sourcegitcommit: 6f8993e2180c4d3c177e3e1934d378959396b935
+ms.openlocfilehash: 654b4aea135c360f5fc5f59fdf85627fe8dd4cc2
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000749"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402968"
 ---
 # <a name="stretch-cluster-replication-using-shared-storage"></a>공유 저장소를 사용하여 확장 클러스터 복제
 
@@ -36,7 +36,7 @@ ms.locfileid: "70000749"
 
 ![Bellevue 사이트에 있는 동일한 클러스터의 2개 노드로 복제하는 Redmond의 2개 사이트를 보여 주는 다이어그램](./media/Stretch-Cluster-Replication-Using-Shared-Storage/Storage_SR_StretchClusterExample.png)  
 
-**그림 1:  스트레치 클러스터의 저장소 복제**  
+** 그림 1:  스트레치 클러스터의 저장소 복제 @ no__t-0  
 
 ## <a name="prerequisites"></a>사전 요구 사항  
 -   Active Directory 도메인 서비스 포리스트(Windows Server 2016을 실행하지 않아도 됨).  

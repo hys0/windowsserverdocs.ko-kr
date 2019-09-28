@@ -1,23 +1,23 @@
 ---
 title: 시간 기반 지능형 DNS 응답에 DNS 정책 사용
-description: 이 항목은 DNS 정책 시나리오 가이드에 대 한 Windows Server 2016의 일부
+description: 이 항목은 Windows Server 2016에 대 한 DNS 정책 시나리오 가이드의 일부입니다.
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: 161446ff-a072-4cc4-b339-00a04857ff3a
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: c36475dacb8664352f4ab270878357118d281c60
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: e497b0d73c816f0295588aa77a21c49d376c0dcf
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66446424"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406190"
 ---
 # <a name="use-dns-policy-for-intelligent-dns-responses-based-on-the-time-of-day"></a>시간 기반 지능형 DNS 응답에 DNS 정책 사용
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 하루 중 시간을 기반으로 하는 DNS 정책을 사용 하 여 응용 프로그램의 서로 다른 지리적으로 분산 된 인스턴스 응용 프로그램 트래픽을 분산 하는 방법에 알아보려면이 항목을 사용할 수 있습니다.  
   
@@ -38,7 +38,7 @@ Contosogiftservices.com 고객 웹 사이트에서 응답성이 뛰어난 환경
   
 ![하루 DNS 정책의 예의 시간](../../media/DNS-Policy-Tod1/dns_policy_tod1.jpg)  
   
-### <a name="bkmk_works1"></a>일의 작동 시간에 따라 어떻게 지능형 DNS 응답  
+### <a name="bkmk_works1"></a>하루 중 시간을 기준으로 지능형 DNS 응답 방법  
   
 DNS 서버가 시간 오후 6 시와 각각의 지리적 위치에서 오후 9 시 사이의 일 DNS 정책으로 구성 된 경우 DNS 서버는 다음을 수행 합니다.  
   
@@ -53,7 +53,7 @@ DNS에 여러 DNS 정책이 구성 되 면 규칙의 정렬된 된 집합 않으
   
 정책 형식 및 조건에 대 한 자세한 내용은 참조 [DNS 정책 개요](../../dns/deploy/DNS-Policies-Overview.md)합니다.  
   
-### <a name="bkmk_how1"></a>하루 중 시간에 따라 지능형 DNS 응답에 대 한 DNS 정책을 구성 하는 방법  
+### <a name="bkmk_how1"></a>하루 중 시간을 기준으로 지능형 DNS 응답에 대 한 DNS 정책을 구성 하는 방법  
 시간 기반 일 응용 프로그램 부하 분산의 쿼리 응답에 대 한 DNS 정책을 구성 하려면 다음 단계를 수행 해야 합니다.  
   
 - [DNS 클라이언트 서브넷 만들기](#bkmk_subnets)  

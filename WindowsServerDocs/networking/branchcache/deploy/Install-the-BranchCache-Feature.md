@@ -2,22 +2,22 @@
 title: BranchCache 기능 설치
 description: 이 항목은 일부는 BranchCache 배포 가이드에 대 한 Windows Server 2016, 지사에 WAN 대역폭 사용량을 최적화 하기 위해 분산 및 호스트 캐시 모드로 BranchCache를 배포 하는 방법을 보여 주는
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 4f31dc61-2dbe-4c7e-b3f9-85ae49a45049
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 8b4aecd9e9355a6c2d5ac485ac77c76428fe295f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 5ee438ef57d3355cf19713d8574591aeea6ae06f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59872194"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406437"
 ---
 # <a name="install-the-branchcache-feature"></a>BranchCache 기능 설치
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 이 절차를 사용 하 여 BranchCache 기능을 설치 하 고 Windows Server를 실행 하는 컴퓨터에서 BranchCache 서비스를 시작 하려면&reg; 2016 년까지 Windows Server 2012 R2 또는 Windows Server 2012.  
   

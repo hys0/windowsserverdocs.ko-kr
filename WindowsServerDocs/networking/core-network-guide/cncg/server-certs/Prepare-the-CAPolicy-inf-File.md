@@ -4,16 +4,16 @@ description: Capolicy.inf에는 Active Directory 인증 서비스 (AD CS)를 설
 manager: alanth
 ms.topic: article
 ms.assetid: 65b36794-bb09-4c1b-a2e7-8fc780893d97
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: fb2e25dcd27ed3046eeeb444a9f167ccff6e1dd3
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 810f6f8ba9e33f1f26f49f542ad6d23819deb463
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70868963"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406286"
 ---
 # <a name="capolicyinf-syntax"></a>Capolicy.inf 구문
 >   적용 대상: Windows Server(반기 채널), Windows Server 2016
@@ -42,7 +42,7 @@ Capolicy.inf를 사용 하면 다양 한 CA 특성 및 옵션을 지정 하 고 
 
 -   _Value_ – 매개 변수 이며 등호 오른쪽에 나타납니다.
 
-아래 예제에서 **[Version]** 은 섹션이 고, **Signature** 는 키 이며, **\$"Windows NT\$"** 는 값입니다.
+아래 예제에서 **[Version]** 은 섹션입니다. **Signature** 는 키이 고 **"\$windows NT @ no__t-4"** 는 값입니다.
 
 예:
 

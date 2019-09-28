@@ -7,18 +7,18 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: abb00e14dd0b3ce7b06efba816fbd7452e7bf0f1
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 1356218c5f9f47073f007286e8acfdf4c3608b73
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66189410"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407621"
 ---
 # <a name="create-a-rule-to-permit-all-users"></a>모든 사용자를 허용하는 규칙 만들기
 
-Windows Server 2016에서 사용할 수 있습니다는 **액세스 제어 정책** 을 액세스할 모든 사용자가 신뢰 당사자에 게는 규칙을 만듭니다.  Windows Server 2012 R2에서 사용 하는 **모든 사용자 허용** Active Directory Federation Services에서 규칙 템플릿을 \(AD FS\)을 액세스할 모든 사용자가 신뢰 하는 권한 부여 규칙을 만들 수 있습니다 당사자입니다. 
+Windows Server 2016에서 사용할 수 있습니다는 **액세스 제어 정책** 을 액세스할 모든 사용자가 신뢰 당사자에 게는 규칙을 만듭니다.  Windows Server 2012 r 2에서 Active Directory Federation Services의 **모든 사용자 허용** 규칙 템플릿을 사용 하 여 \(ad FS @ no__t-2를 사용 하는 경우 모든 사용자가 신뢰 당사자에 액세스할 수 있도록 하는 권한 부여 규칙을 만들 수 있습니다. 
 
 권한을 더욱 제한 하려면 추가 권한 부여 규칙을 사용할 수 있습니다. 페더레이션 서비스에서 신뢰 당사자에 대한 액세스가 허용된 사용자도 신뢰 당사자에 의해 서비스가 거부될 수 있습니다.  
   

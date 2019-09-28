@@ -1,9 +1,9 @@
 ---
 title: Windows PowerShell 을 사용하여 역할 기반 액세스 제어 관리
-description: 이 항목은 Windows Server 2016에서 관리 IPAM (IP 주소) 관리 가이드의 일부입니다.
+description: 이 항목은 Windows Server 2016의 IPAM (IP 주소 관리) 관리 가이드의 일부입니다.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-ipam
@@ -12,35 +12,35 @@ ms.topic: article
 ms.assetid: 4f13f78e-0114-4e41-9a28-82a4feccecfc
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 11dd417be4720b09851fc03f111edaaf06b55e59
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: dec5c9b9b5d5fe858e063af70ff0a8e16991e632
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67282129"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71355215"
 ---
 # <a name="manage-role-based-access-control-with-windows-powershell"></a>Windows PowerShell 을 사용하여 역할 기반 액세스 제어 관리
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-Windows PowerShell을 사용 하 여 역할 기반 액세스 제어를 관리 하려면 IPAM을 사용 하는 방법을 알아보려면이 항목에서는 사용할 수 있습니다.  
+이 항목을 사용 하 여 Windows PowerShell에서 IPAM을 사용 하 여 역할 기반 액세스 제어를 관리 하는 방법을 배울 수 있습니다.  
   
 >[!NOTE]
->IPAM Windows PowerShell 명령 참조에 대 한 참조를 [Windows PowerShell의 cmdlet IpamServer](https://docs.microsoft.com/powershell/module/ipamserver/?view=win10-ps)합니다.  
+>IPAM Windows PowerShell 명령 참조는 [Windows powershell의 IpamServer cmdlet](https://docs.microsoft.com/powershell/module/ipamserver/?view=win10-ps)을 참조 하세요.  
   
-새 Windows PowerShell IPAM 명령을 검색 하 고 DNS 및 DHCP 개체의 액세스 범위를 변경 하는 기능을 제공 합니다. 다음 표에서 올바른 명령에서 각 IPAM 개체에 대 한 사용을 보여 줍니다.  
+새 Windows PowerShell IPAM 명령은 DNS 및 DHCP 개체의 액세스 범위를 검색 하 고 변경할 수 있는 기능을 제공 합니다. 다음 표에서는 각 IPAM 개체에 사용할 올바른 명령을 보여 줍니다.  
   
 |IPAM 개체|명령|설명|  
 |---------------|-----------|---------------|  
-|DNS 서버|Get-IpamDnsServer|이 cmdlet은 IPAM에서 DNS 서버 개체를 반환합니다.|  
-|DNS 영역|Get-IpamDnsZone|이 cmdlet은 IPAM에서 DNS 영역 개체를 반환합니다.|  
-|DNS 리소스 레코드|Get-IpamResourceRecord|이 cmdlet은 IPAM에서 DNS 리소스 레코드 개체를 반환합니다.|  
-|DNS 조건부 전달자|Get-IpamDnsConditionalForwarder|이 cmdlet은 IPAM의 DNS 조건부 전달자 개체를 반환합니다.|  
-|DHCP 서버|Get-IpamDhcpServer|이 cmdlet은 IPAM에서 DHCP 서버 개체를 반환합니다.|  
-|DHCP 대범위|Get-IpamDhcpSuperscope|이 cmdlet은 IPAM에서 DHCP 대 범위 개체를 반환합니다.|  
-|DHCP 범위|Get-IpamDhcpScope|이 cmdlet은 IPAM에서 DHCP 범위 개체를 반환합니다.|  
+|DNS 서버|IpamDnsServer|이 cmdlet은 IPAM의 DNS 서버 개체를 반환 합니다.|  
+|DNS 영역|IpamDnsZone|이 cmdlet은 IPAM의 DNS 영역 개체를 반환 합니다.|  
+|DNS 리소스 레코드|IpamResourceRecord|이 cmdlet은 IPAM의 DNS 리소스 레코드 개체를 반환 합니다.|  
+|DNS 조건부 전달자|IpamDnsConditionalForwarder|이 cmdlet은 IPAM의 DNS 조건부 전달자 개체를 반환 합니다.|  
+|DHCP 서버|IpamDhcpServer|이 cmdlet은 IPAM에서 DHCP 서버 개체를 반환 합니다.|  
+|DHCP 대범위|IpamDhcpSuperscope|이 cmdlet은 IPAM의 DHCP 대 범위 개체를 반환 합니다.|  
+|DHCP 범위|IpamDhcpScope|이 cmdlet은 IPAM의 DHCP 범위 개체를 반환 합니다.|  
   
-명령 출력의 다음 예제에서는 `Get-IpamDnsZone` cmdlet을 검색 합니다 **dublin.contoso.com** DNS 영역입니다.  
+다음 명령 출력 예제에서 `Get-IpamDnsZone` cmdlet은 **Dublin.contoso.com** DNS 영역을 검색 합니다.  
   
 ```  
 PS C:\Users\Administrator.CONTOSO> Get-IpamDnsZone -ZoneType Forward -ZoneName dublin.contoso.com  
@@ -54,7 +54,7 @@ ScavengeStaleRecords : False
 ```  
   
 ## <a name="setting-access-scopes-on-ipam-objects"></a>IPAM 개체에 대 한 액세스 범위 설정  
-사용 하 여 IPAM 개체에 대 한 액세스 범위를 설정할 수는 `Set-IpamAccessScope` 명령입니다. 부모 개체에 액세스 범위 상속에 개체 또는 개체에 대 한 특정 값에 대 한 액세스 범위를 설정 하려면이 명령을 사용할 수 있습니다. 다음은이 명령을 사용 하 여 구성할 수 있는 개체입니다.  
+@No__t-0 명령을 사용 하 여 IPAM 개체에 대 한 액세스 범위를 설정할 수 있습니다. 이 명령을 사용 하 여 액세스 범위를 개체의 특정 값으로 설정 하거나 개체가 부모 개체에서 액세스 범위를 상속 하도록 할 수 있습니다. 다음은이 명령을 사용 하 여 구성할 수 있는 개체입니다.  
   
 -   DHCP 범위  
   
@@ -78,7 +78,7 @@ ScavengeStaleRecords : False
   
 -   IP 주소 서브넷  
   
-다음 구문은 `Set-IpamAccessScope` 명령입니다.  
+다음은 `Set-IpamAccessScope` 명령에 대 한 구문입니다.  
   
 ```  
 NAME  
@@ -116,7 +116,7 @@ SYNTAX
     Set-IpamAccessScope [-IpamBlock] -InputObject <ciminstance[]> [-AccessScopePath <string>] [-IsInheritedAccessScope] [-PassThru] [-CimSession <CimSession[]>] [-ThrottleLimit <int>] [-AsJob] [-WhatIf] [-Confirm]  [<CommonParameters>]  
 ```  
   
-다음 예제에서는 DNS 영역 액세스 범위의 **dublin.contoso.com** 에서 변경 되었습니다 **더블린** 에 **유럽**합니다.  
+다음 예제에서는 DNS 영역 **dublin.contoso.com** 의 액세스 범위가 **더블린** 에서 **유럽**으로 변경 됩니다.  
   
 ```  
 PS C:\Users\Administrator.CONTOSO> Get-IpamDnsZone -ZoneType Forward -ZoneName dublin.contoso.com  

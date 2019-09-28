@@ -6,14 +6,14 @@ ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.date: 06/07/2019
-ms.openlocfilehash: 36c9dfcb38ef417df56206cdb18633cc877183c4
-ms.sourcegitcommit: af80963a1d16c0b836da31efd9c5caaaf6708133
+ms.openlocfilehash: 144c57bba621ee1b94a66914f8d9b6c0292f8b03
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68658896"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406873"
 ---
 # <a name="what-type-of-installation-is-right-for-you"></a>나에게 적합한 유형의 설치는 무엇입니까?
 
@@ -37,19 +37,19 @@ Windows 관리 센터는 다음 Windows 운영 체제에 **설치할** 수 있�
 | Windows 10, 버전 1709 이상  | 로컬 클라이언트 |
 | Windows Server 반기 채널 | 게이트웨이 서버, 관리 서버, 장애 조치 (failover) 클러스터 |
 | Windows Server 2016                | 게이트웨이 서버, 관리 서버, 장애 조치 (failover) 클러스터 |
-| Windows Server 2019                | 게이트웨이 서버, 관리 서버, 장애 조치 (failover) 클러스터 |
+| Windows Server 2019                | 게이트웨이 서버, 관리 서버, 장애 조치 (failover) 클러스터 |
 
 Windows 관리 센터를 운영 하려면:
 
-- **로컬 클라이언트 시나리오에서:** 시작 메뉴에서 Windows 관리 센터 게이트웨이를 시작 하 고에 액세스 `https://localhost:6516`하 여 클라이언트 웹 브라우저에서 연결 합니다.
-- **다른 시나리오에서는 다음을 수행 합니다.** 클라이언트 브라우저에서 URL을 통해 다른 컴퓨터의 Windows 관리 센터 게이트웨이에 연결 합니다 (예:).`https://servername.contoso.com`
+- **로컬 클라이언트 시나리오에서:** 시작 메뉴에서 Windows 관리 센터 게이트웨이를 시작 하 고 `https://localhost:6516`에 액세스 하 여 클라이언트 웹 브라우저에서 연결 합니다.
+- **다른 시나리오에서는 다음을 수행 합니다.** URL (예: `https://servername.contoso.com`)을 통해 클라이언트 브라우저에서 다른 컴퓨터의 Windows 관리 센터 게이트웨이에 연결 합니다.
 
 > [!WARNING]
 > 도메인 컨트롤러에 Windows 관리 센터를 설치 하는 것은 지원 되지 않습니다. [도메인 컨트롤러 보안 모범 사례에 대해 자세히](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/security-best-practices/securing-domain-controllers-against-attack)알아보세요. 
 
 ## <a name="installation-supported-web-browsers"></a>설치: 지원 되는 웹 브라우저
 
-Microsoft Edge 및 Google Chrome은 Windows 10에서 테스트 되 고 지원 됩니다. Internet Explorer 및 Firefox를 비롯 한 다른 웹 브라우저는 현재 테스트 매트릭스의 일부가 아니므로 *공식적* 으로 지원 되지 않습니다. 이러한 브라우저는 Windows 관리 센터를 실행 하는 데 문제가 있을 수 있습니다. 예를 들어 firefox에는 자체 인증서 저장소가 있으므로 windows 10에서 windows 관리 센터 `Windows Admin Center Client` 를 사용 하려면 firefox로 인증서를 가져와야 합니다. 자세한 내용은 [브라우저 관련 알려진 문제](../support/known-issues.md#browser-specific-issues)를 참조 하세요.
+Microsoft Edge 및 Google Chrome은 Windows 10에서 테스트 되 고 지원 됩니다. Internet Explorer 및 Firefox를 비롯 한 다른 웹 브라우저는 현재 테스트 매트릭스의 일부가 아니므로 *공식적* 으로 지원 되지 않습니다. 이러한 브라우저는 Windows 관리 센터를 실행 하는 데 문제가 있을 수 있습니다. 예를 들어 Firefox에는 자체 인증서 저장소가 있으므로 Windows 10에서 Windows 관리 센터를 사용 하려면 `Windows Admin Center Client` 인증서를 Firefox로 가져와야 합니다. 자세한 내용은 [브라우저 관련 알려진 문제](../support/known-issues.md#browser-specific-issues)를 참조 하세요.
 
 ## <a name="management-target-supported-operating-systems"></a>관리 대상: 지원되는 운영 체제
 
@@ -59,7 +59,7 @@ Windows 관리 센터를 사용 하 여 다음 Windows 운영 체제를 **관리
 | ------------------------- |--------------- | ----- | ------------------------ |
 | Windows 10, 버전 1709 이상 | 예 (컴퓨터 관리를 통해) | 해당 사항 없음 | 해당 사항 없음 |
 | Windows Server 반기 채널 | 예 | 예 | 해당 사항 없음 |
-| Windows Server 2019 | 예 | 예 | 예 |
+| Windows Server 2019 | 예 | 예 | 예 |
 | Windows Server 2016 | 예 | 예 | 예, [최신 누적 업데이트](../use/manage-hyper-converged.md#prepare-your-windows-server-2016-cluster-for-windows-admin-center) 포함 |
 | Microsoft Hyper-V Server 2016 | 예 | 예 | 해당 사항 없음 |
 | Windows Server 2012 R2 | 예 | 예 | 해당 사항 없음 |

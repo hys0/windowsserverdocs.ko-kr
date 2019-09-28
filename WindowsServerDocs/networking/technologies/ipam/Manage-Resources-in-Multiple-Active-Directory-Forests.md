@@ -1,9 +1,9 @@
 ---
 title: 여러 Active Directory 포리스트의 리소스 관리
-description: 이 항목은 Windows Server 2016에서 관리 IPAM (IP 주소) 관리 가이드의 일부입니다.
+description: 이 항목은 Windows Server 2016의 IPAM (IP 주소 관리) 관리 가이드의 일부입니다.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-ipam
@@ -12,16 +12,16 @@ ms.topic: article
 ms.assetid: 82f8f382-246e-4164-8306-437f7a019e0f
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 2bbd303df635af314cee2126a75f0569ede2f5de
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 5fad1062b65b4784a8a5ddfde927951230cb6ab8
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67282194"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71355225"
 ---
 # <a name="manage-resources-in-multiple-active-directory-forests"></a>여러 Active Directory 포리스트의 리소스 관리
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 도메인 컨트롤러, DHCP 서버 및 여러 Active Directory 포리스트에 대 한 DNS 서버를 관리 하려면 IPAM을 사용 하는 방법에 알아보려면이 항목을 사용할 수 있습니다.  
   

@@ -2,22 +2,22 @@
 title: 비도메인 구성원 파일 서버에 해시 게시 사용
 description: 이 항목은 일부는 BranchCache 배포 가이드에 대 한 Windows Server 2016, 지사에 WAN 대역폭 사용량을 최적화 하기 위해 분산 및 호스트 캐시 모드로 BranchCache를 배포 하는 방법을 보여 주는
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 11584b73-f9e2-4530-afa5-b8df970e6b24
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 00be97abbd583e4c5e762775ea563ba0720d5142
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e870863b497c17b4b56265d99d91274e34690767
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59814954"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71356540"
 ---
 # <a name="enable-hash-publication-for-non-domain-member-file-servers"></a>비도메인 구성원 파일 서버에 해시 게시 사용
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 이 절차를 사용 하 여 Windows Server 2016으로 실행 되는 파일 서버에 로컬 컴퓨터 그룹 정책을 사용 하 여 BranchCache에 대 한 해시 게시를 구성 하는 **네트워크 파일용 BranchCache** 설치 파일 서비스 서버 역할의 역할 서비스입니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "59814954"
   
 3.  **추가 / 제거 스냅인**,  **사용 가능한 스냅인**, 를 두 번 클릭 **그룹 정책 개체 편집기**합니다. 로컬 컴퓨터 개체를 선택 하는 그룹 정책 마법사가 열립니다. **마침**을 클릭한 다음 **확인**을 클릭합니다.  
   
-4.  로컬 그룹 정책 편집기 mmc에서 다음 경로 확장: **로컬 컴퓨터 정책**, **컴퓨터 구성**를 **관리 템플릿**를 **네트워크**를 **Lanman Server**합니다. 클릭 **Lanman Server**합니다.  
+4.  로컬 그룹 정책 편집기 MMC에서 다음 경로를 확장 합니다. **로컬 컴퓨터 정책**, **컴퓨터 구성**, **관리 템플릿**, **네트워크**, **Lanman Server**. 클릭 **Lanman Server**합니다.  
   
 5.  세부 정보 창에서 두 번 클릭 **BranchCache 해시 게시**합니다. **BranchCache 해시 게시** 대화 상자가 열립니다.  
   

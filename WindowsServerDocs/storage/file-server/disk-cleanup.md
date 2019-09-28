@@ -1,19 +1,19 @@
 ---
 title: Windows Server에서 디스크 정리 사용
 description: 명령줄 옵션을 사용 하 여 특정 파일을 자동으로 정리 하도록 디스크 정리 도구 (Cleanmgr)를 구성 하는 방법에 대해 알아봅니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: cosmosdarwin
 author: iangpgh
 ms.author: jgerend
 manager: daveba
 ms.technology: storage-spaces
 ms.date: 06/20/2019
-ms.openlocfilehash: 4bf32520dc6fa2be36d44fbd66a7efc885a8f5d7
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 2de3452a3528122beb26f403fb0c73d7ff13efd7
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70867405"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402115"
 ---
 # <a name="using-disk-cleanup-on-windows-server"></a>Windows Server에서 디스크 정리 사용
 

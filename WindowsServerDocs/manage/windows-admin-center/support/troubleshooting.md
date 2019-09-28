@@ -6,14 +6,14 @@ ms.topic: article
 author: jwwool
 ms.author: jeffrew
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.date: 06/07/2019
-ms.openlocfilehash: 4d108161dd4f6b57d4a86cbcaa5852aff53f0ac3
-ms.sourcegitcommit: 63926404009f9e1330a4a0aa8cb9821a2dd7187e
+ms.openlocfilehash: f4e772550aaba6fe9a4f78a6032eaabde4aeb0bf
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469517"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406861"
 ---
 # <a name="troubleshooting-windows-admin-center"></a>Windows Admin Center 문제 해결
 
@@ -22,9 +22,9 @@ ms.locfileid: "67469517"
 > [!Important]
 > 이 가이드는 Windows Admin Center를 사용할 수 없게 만드는 문제를 진단하고 해결하는데 도움이 됩니다. 특정 도구에 문제가 발생하는 경우 [알려진 문제](http://aka.ms/wacknownissues)를 참조하여 확인하십시오.
 
-## <a name="installer-fails-with-message-the-module-microsoftpowershelllocalaccounts-could-not-be-loaded"></a>설치 관리자는 메시지와 함께 실패합니다. ** _'Microsoft.PowerShell.LocalAccounts' 모듈을 로드할 수 없습니다._ **
+## <a name="installer-fails-with-message-_the-module-microsoftpowershelllocalaccounts-could-not-be-loaded_"></a>설치 관리자가 다음 메시지와 함께 실패 합니다. **_' Microsoft. PowerShell. LocalAccounts ' 모듈을 로드할 수 없습니다._**
 
-이 PowerShell 모듈 기본 경로 수정 되거나 제거 된 경우 발생할 수 있습니다. 이 문제를 해결 하려면 ```%SystemRoot%\system32\WindowsPowerShell\v1.0\Modules``` 은 합니다 **첫 번째** PSModulePath 환경 변수에 대 한 항목입니다. 다음 PowerShell 사용 하 여이 얻을 수 있습니다.
+이는 기본 PowerShell 모듈 경로를 수정 하거나 제거 하는 경우에 발생할 수 있습니다. 이 문제를 해결 하려면 ```%SystemRoot%\system32\WindowsPowerShell\v1.0\Modules```이 PSModulePath 환경 변수의 **첫 번째** 항목 인지 확인 합니다. PowerShell의 다음 줄을 사용 하 여이 작업을 수행할 수 있습니다.
 
 ```powershell
 [Environment]::SetEnvironmentVariable("PSModulePath","%SystemRoot%\system32\WindowsPowerShell\v1.0\Modules;" + ([Environment]::GetEnvironmentVariable("PSModulePath","User")),"User")
@@ -34,7 +34,7 @@ ms.locfileid: "67469517"
 
 ### <a name="if-youve-installed-windows-admin-center-as-an-app-on-windows-10"></a>**Windows 10의 앱**으로 Windows Admin Center를 설치한 경우
 
-* Windows Admin Center가 실행되고 있는지 확인합니다. Windows Admin Center 아이콘을 찾아보세요 ![](../media/trayIcon.PNG) 시스템 트레이에 또는 **Windows Admin Center 데스크톱 / SmeDesktop.exe** 작업 관리자에서. 그렇지 않은 경우 시작 메뉴에서 **Windows Admin Center**를 실행합니다.
+* Windows Admin Center가 실행되고 있는지 확인합니다. 작업 관리자의 시스템 트레이 또는 **Windows 관리 센터 Desktop/SmeDesktop** 에서 Windows 관리 센터 아이콘 ![](../media/trayIcon.PNG)을 찾습니다. 그렇지 않은 경우 시작 메뉴에서 **Windows Admin Center**를 실행합니다.
 
 > [!NOTE] 
 > 다시 부팅한 후 시작 메뉴에서 Windows Admin Center를 시작해야 합니다.  
@@ -47,13 +47,13 @@ ms.locfileid: "67469517"
 
   * 개인 세션에서 브라우저를 열어 보십시오. 작동하는 경우 캐시를 지워야 합니다.
 
-* 최근에 업그레이드 했습니까 Windows 10를 새 빌드 또는 버전?
+* 최근에 Windows 10을 새 빌드 또는 버전으로 업그레이드 했나요?
 
-  * 신뢰할 수 있는 호스트 설정을 지울이 있습니다. [신뢰할 수 있는 호스트 설정을 업데이트 하려면 다음이 지침을 따릅니다.](#configure-trustedhosts)
+  * 이렇게 하면 신뢰할 수 있는 호스트 설정이 지워질 수 있습니다. [다음 지침에 따라 신뢰할 수 있는 호스트 설정을 업데이트 합니다.](#configure-trustedhosts)
 
 ### <a name="if-youve-installed-windows-admin-center-as-a-gateway-on-windows-server"></a>**Windows Server에서 게이트웨이**로 Windows Admin Center를 설치한 경우
 
-* Windows Admin Center 이전 버전에서 업그레이드 했습니까? 방화벽 규칙으로 인해 삭제 되지 않았습니다 있는지 확인 합니다 [알려진 문제가](known-issues.md#upgrade)합니다. 아래 PowerShell 명령을 사용 하 여 규칙이 있는지 확인 합니다. 그렇지 않은 경우에 따라 [이러한 지침](known-issues.md#upgrade) 를 다시 만듭니다.
+* 이전 버전의 Windows 관리 센터에서 업그레이드 했나요? [이 알려진 문제로](known-issues.md#upgrade)인해 방화벽 규칙이 삭제 되지 않았는지 확인 합니다. 아래의 PowerShell 명령을 사용 하 여 규칙이 있는지 확인 합니다. 그렇지 않은 경우 [다음 지침](known-issues.md#upgrade) 에 따라 다시 만드십시오.
     
     ```powershell
     Get-NetFirewallRule -DisplayName "SmeInboundOpenException"
@@ -63,20 +63,20 @@ ms.locfileid: "67469517"
 
 * 웹 브라우저로 Microsoft Edge 또는 Google Chrome 중 하나를 사용하고 있는지 확인합니다.
 
-* 서버에서 작업 관리자를 열고 > 서비스 및 해야 **ServerManagementGateway / Windows Admin Center** 실행 합니다.
+* 서버에서 작업 관리자 > 서비스를 열고 **Servermanagementgateway/Windows 관리 센터가** 실행 중인지 확인 합니다.
 ![](../media/Service-TaskMan.PNG)
 
-* 게이트웨이에 네트워크 연결 테스트 (대체 \<값 > 배포의 정보를 사용 하 여)
+* 게이트웨이에 대 한 네트워크 연결 테스트 (\<values >를 배포의 정보로 바꾸기)
 
     ```powershell
     Test-NetConnection -Port <port> -ComputerName <gateway> -InformationLevel Detailed
     ```
 
-### <a name="if-you-have-installed-windows-admin-center-in-an-azure-windows-server-vm"></a>Azure Windows Server VM에서 Windows Admin Center 설치한 경우
+### <a name="if-you-have-installed-windows-admin-center-in-an-azure-windows-server-vm"></a>Azure Windows Server VM에 Windows 관리 센터를 설치한 경우
 
 * [Windows 버전 확인](#check-the-windows-version)
 * HTTPS에 대한 인바운드 포트 규칙을 추가했습니까? 
-* [Azure VM에서 Windows Admin Center 설치 하는 방법에 대 한 자세한 정보](https://docs.microsoft.com/windows-server/manage/windows-admin-center/configure/azure-integration#use-a-windows-admin-center-gateway-deployed-in-azure)
+* [Azure VM에 Windows 관리 센터를 설치 하는 방법에 대 한 자세한 정보](https://docs.microsoft.com/windows-server/manage/windows-admin-center/configure/azure-integration#use-a-windows-admin-center-gateway-deployed-in-azure)
 
 ### <a name="check-the-windows-version"></a>Windows 버전 확인
 
@@ -84,38 +84,38 @@ ms.locfileid: "67469517"
 
 * Windows 10 버전 1703 또는 이전을 사용하는 경우 Windows Admin Center는 귀하의 Microsoft Edge 버전에서 지원되지 않습니다. Windows 10의 최신 버전으로 업그레이드하거나 Chrome을 사용하십시오.
 
-* 참가자 미리 보기 버전의 Windows 10 또는 Server 17134 사이의 17637 빌드 버전을 사용 하 여를 사용 하는 경우 Windows는 Windows Admin Center 실패를 일으키는 버그가 있었습니다. 지원 되는 현재 Windows 버전을 사용 하십시오.
+* Windows 10의 insider preview 버전 또는 17134과 17637 사이의 빌드 버전이 포함 된 서버를 사용 하는 경우 windows 관리 센터에 오류가 발생 하는 버그가 발생 했습니다. 현재 지원 되는 Windows 버전을 사용 하세요.
 
-### <a name="make-sure-the-windows-remote-management-winrm-service-is-running-on-both-the-gateway-machine-and-managed-node"></a>게이트웨이 컴퓨터와 관리 노드의 Windows Remote Management (WinRM) 서비스가 실행 중인지 확인
+### <a name="make-sure-the-windows-remote-management-winrm-service-is-running-on-both-the-gateway-machine-and-managed-node"></a>Windows 원격 관리 (WinRM) 서비스가 게이트웨이 컴퓨터와 관리 되는 노드에서 모두 실행 되 고 있는지 확인 합니다.
 
-* WindowsKey + R을 사용 하 여 실행된 대화 상자를 엽니다.
-* 형식 ```services.msc``` 및 enter 키를 누릅니다
-* 열리는 창에서 Windows 원격 관리 (WinRM)을 찾습니다에서 실행 되 고 자동으로 시작 되도록 설정 되어 있는지 확인
+* WindowsKey + R을 사용 하 여 실행 대화 상자 열기
+* @No__t-0을 입력 하 고 enter 키를 누릅니다.
+* 열리는 창에서 WinRM (Windows 원격 관리)을 찾고, 실행 중이 고 자동으로 시작 되도록 설정 되어 있는지 확인 합니다.
 
-### <a name="did-you-upgrade-your-server-from-2016-to-2019"></a>업그레이드 했습니까 서버 2016에서 2019에?
+### <a name="did-you-upgrade-your-server-from-2016-to-2019"></a>서버를 2016에서 2019로 업그레이드 했나요?
 
-* 신뢰할 수 있는 호스트 설정을 지울이 있습니다. [신뢰할 수 있는 호스트 설정을 업데이트 하려면 다음이 지침을 따릅니다.](#configure-trustedhosts) 
+* 이렇게 하면 신뢰할 수 있는 호스트 설정이 지워질 수 있습니다. [다음 지침에 따라 신뢰할 수 있는 호스트 설정을 업데이트 합니다.](#configure-trustedhosts) 
 
-## <a name="i-get-the-message-cant-connect-securely-to-this-page-this-might-be-because-the-site-uses-outdated-or-unsafe-tls-security-settings"></a>메시지가 표시: "둘이이 페이지에 안전 하 게 연결 합니다. 사이트에 오래 된 레코드나 안전 하지 않은 TLS 보안 설정을 사용 하 여 때문일 수 있습니다.
+## <a name="i-get-the-message-cant-connect-securely-to-this-page-this-might-be-because-the-site-uses-outdated-or-unsafe-tls-security-settings"></a>메시지를 가져옵니다. "이 페이지에 안전 하 게 연결할 수 없습니다. 사이트에서 오래 되거나 안전 하지 않은 TLS 보안 설정을 사용 하기 때문일 수 있습니다.
 
-컴퓨터에 HTTP/2 연결으로 제한 됩니다. Windows Admin Center는 HTTP/2에서 지원 되지 않는 통합된 Windows 인증을 사용 합니다. 아래에 다음 두 레지스트리 값을 추가 합니다 ```HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Http\Parameters``` 키 **브라우저를 실행 하는 컴퓨터** HTTP/2 제한을 제거 하려면:
+사용자의 컴퓨터는 HTTP/2 연결로 제한 됩니다. Windows 관리 센터는 HTTP/2에서 지원 되지 않는 통합 Windows 인증을 사용 합니다. **브라우저를 실행** 하는 컴퓨터의 ```HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Http\Parameters``` 키 아래에 다음 두 레지스트리 값을 추가 하 여 HTTP/2 제한을 제거 합니다.
 
 ```
 EnableHttp2Cleartext=dword:00000000
 EnableHttp2Tls=dword:00000000
 ```
 
-## <a name="im-having-trouble-with-the-remote-desktop-events-and-powershell-tools"></a>원격 데스크톱, 이벤트 및 PowerShell 도구를 사용 하 여 문제가 있습니다.
+## <a name="im-having-trouble-with-the-remote-desktop-events-and-powershell-tools"></a>원격 데스크톱, 이벤트 및 PowerShell 도구에 문제가 있습니다.
 
-이러한 세 가지 도구는 일반적으로 프록시 서버 및 방화벽에서 차단 된 websocket 프로토콜을 필요 합니다. Google Chrome을 사용 하는 경우는 [알려진 문제](known-issues.md#google-chrome) websocket 및 NTLM 인증을 사용 하 여 합니다.
+이러한 세 가지 도구에는 일반적으로 프록시 서버 및 방화벽에 의해 차단 되는 websocket 프로토콜이 필요 합니다. Google Chrome을 사용 하는 경우 websocket 및 NTLM 인증에 [알려진 문제가](known-issues.md#google-chrome) 있습니다.
 
 ## <a name="i-can-connect-to-some-servers-but-not-others"></a>일부 서버에 연결할 수 없지만 다른 서버에는 연결할 수 있음
 
-* 시도 하 고 게이트웨이 컴퓨터에 로컬로 로그온 ```Enter-PSSession <machine name>``` PowerShell에서 대체 \<컴퓨터 이름 > Windows Admin Center 관리 하려는 컴퓨터의 이름입니다. 
+* 게이트웨이 컴퓨터에 로컬로 로그온 하 고 PowerShell에서 @no__t 하 여 \<machine name >을 Windows 관리 센터에서 관리 하려는 컴퓨터의 이름으로 바꿉니다. 
 
 * 귀하의 환경에서 도메인 대신 작업 그룹을 사용하는 경우 [작업 그룹에서 Windows Admin Center 사용](#using-windows-admin-center-in-a-workgroup)을 참조하십시오.
 
-* **로컬 관리자 계정을 사용 하 여:** 기본 제공 관리자 계정이 아닌 로컬 사용자 계정을 사용 하는 경우 명령을 실행 하 여 다음 PowerShell 또는 명령 프롬프트에서 관리자 권한으로 대상 컴퓨터에서 대상 컴퓨터에서 정책을 사용 하도록 설정 해야 합니다.
+* **로컬 관리자 계정 사용:** 기본 제공 관리자 계정이 아닌 로컬 사용자 계정을 사용 하는 경우 대상 컴퓨터의 관리자 권한으로 PowerShell 또는 명령 프롬프트에서 다음 명령을 실행 하 여 대상 컴퓨터에서 정책을 사용 하도록 설정 해야 합니다.
 
     ```
     REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1
@@ -149,7 +149,7 @@ REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalA
 
 Windows Admin Center를 설치할 때 Windows Admin Center가 게이트웨이의 TrustedHosts 설정을 관리하도록 할 수 있는 옵션이 제공됩니다. 작업 그룹 환경에서 또는 도메인에서 로컬 관리자 자격 증명을 사용하는 경우 필요합니다. 이 설정을 중단하고 싶으면 반드시 TrustedHosts를 수동으로 구성해야 합니다.
 
-**다음 PowerShell 명령을 사용 하 여 TrustedHosts을 수정 하려면**
+**PowerShell 명령을 사용 하 여 TrustedHosts를 수정 하려면:**
 
 1. 관리자 PowerShell 세션을 엽니다.
 2. 현재 TrustedHosts 설정 보기:
@@ -186,42 +186,42 @@ Windows Admin Center를 설치할 때 Windows Admin Center가 게이트웨이의
     Set-Item WSMan:localhost\Client\TrustedHosts -Value '<paste values from text file>'
     ```
 
-## <a name="i-previously-had-windows-admin-center-installed-and-now-nothing-else-can-use-the-same-tcpip-port"></a>이미 Windows Admin Center 설치 하 고 이제 아무 동일한 TCP/IP 포트를 사용할 수 있습니다.
+## <a name="i-previously-had-windows-admin-center-installed-and-now-nothing-else-can-use-the-same-tcpip-port"></a>이전에 Windows 관리 센터를 설치 했 고 이제 동일한 TCP/IP 포트를 사용할 수 없습니다.
 
-관리자 권한 명령 프롬프트에서 다음 두 명령을 수동으로 실행합니다.
+관리자 권한 명령 프롬프트에서 다음 두 명령을 수동으로 실행 합니다.
 
 ```cmd
 netsh http delete sslcert ipport=0.0.0.0:443
 netsh http delete urlacl url=https://+:443/
 ```
 
-## <a name="azure-features-dont-work-properly-in-edge"></a>Edge의 azure 기능 제대로 작동 하지 않습니다.
+## <a name="azure-features-dont-work-properly-in-edge"></a>Edge에서 Azure 기능이 제대로 작동 하지 않음
 
-가장자리에 [알려진 문제](https://github.com/AzureAD/azure-activedirectory-library-for-js/wiki/Known-issues-on-Edge) Windows Admin Center Azure 로그인에 영향을 주는 보안 영역에 관련 됩니다. Edge를 사용 하는 경우 Azure 기능을 사용 하는 데 문제가 있는 경우 추가 해 보세요 https://login.microsoftonline.com , https://login.live.com 으로 게이트웨이의 URL을 신뢰할 수 있는 사이트 및 클라이언트 쪽 브라우저에서 팝업 차단 설정을 지에 대 한 허용 된 사이트에 한 합니다. 
+Edge에는 Windows 관리 센터의 Azure 로그인에 영향을 주는 보안 영역과 관련 된 [알려진 문제가](https://github.com/AzureAD/azure-activedirectory-library-for-js/wiki/Known-issues-on-Edge) 있습니다. Edge를 사용할 때 Azure 기능을 사용 하는 데 문제가 있는 경우 https://login.microsoftonline.com , https://login.live.com 및 게이트웨이의 URL을 신뢰할 수 있는 사이트로 추가 하 고 클라이언트 쪽 브라우저에서 Edge 팝업 차단 설정에 대해 허용 된 사이트에 추가 해 보세요. 
 
 가상 하드 디스크 파일에 대한 중요 정보를 제공하려면
-1. 검색할 **인터넷 옵션** 를 Windows 시작 메뉴
-2. 로 이동 합니다 **보안** 탭
-3. 아래는 **신뢰할 수 있는 사이트** 옵션을 클릭 합니다 **사이트** 단추 및 열리는 대화 상자에서 Url을 추가 합니다. 게이트웨이 URL을 추가 해야 뿐만 https://login.microsoftonline.com 고 https://login.live.com 입니다.
-4. 로 이동 합니다 **개인 정보 보호** 탭
-5. 아래는 **팝업 차단을** 섹션을 클릭 합니다 **설정** 단추 및 열리는 대화 상자에서 Url을 추가 합니다. 게이트웨이 URL을 추가 해야 뿐만 https://login.microsoftonline.com 고 https://login.live.com 입니다.
+1. Windows 시작 메뉴에서 **인터넷 옵션** 을 검색 합니다.
+2. **보안** 탭으로 이동 합니다.
+3. **신뢰할 수 있는 사이트** 옵션에서 **사이트** 단추를 클릭 하 고 열리는 대화 상자에 url을 추가 합니다. 게이트웨이 URL 뿐만 아니라 https://login.microsoftonline.com 및 https://login.live.com 을 추가 해야 합니다.
+4. **개인 정보** 탭으로 이동
+5. **팝업 차단** 섹션 아래에서 **설정** 단추를 클릭 하 고 열리는 대화 상자에 url을 추가 합니다. 게이트웨이 URL 뿐만 아니라 https://login.microsoftonline.com 및 https://login.live.com 을 추가 해야 합니다.
 
-## <a name="having-an-issue-with-an-azure-related-feature"></a>Azure 관련 기능을 사용 하 여 문제가 발생 하나요?
+## <a name="having-an-issue-with-an-azure-related-feature"></a>Azure 관련 기능을 사용 하는 데 문제가 있나요?
 
-보내주세요 이메일을 wacFeedbackAzure@microsoft.com 다음 정보를 사용 하 여:
-* 일반적인 문제 정보를 [아래에 나열 된 질문](#providing-feedback-on-issues)합니다.
-* 문제 및 문제를 재현 하는 단계를 설명 합니다. 
-* 가 이전에 새 AadApp.ps1 다운로드할 수 있는 스크립트를 사용 하 여 Azure에 게이트웨이 등록 하 고 1807 버전으로 업그레이드 한 후? 게이트웨이 설정에서 UI를 사용 하 여 Azure에 등록 또는 > Azure?
-* 여러 디렉터리/테 넌 트와 연결 된 Azure 계정 인지 확인
-    * 그러한 경우: Windows Admin Center Azure AD 응용 프로그램을 등록할 때 Azure에서 기본 디렉터리를 사용 하 여 directory 되었나요? 
-* Azure 계정에 여러 구독에 액세스할 수 있습니까?
-* 사용 된 구독 청구 연결 되어 있습니까?
-* 하면 기록 된 여러 Azure 계정에 문제가 발생 했을 때?
-* Azure 계정에 다단계 인증 필요 합니까?
-* Azure VM을 관리 하려는 컴퓨터는?
-* Azure VM에서 Windows Admin Center 설치 되어 있습니까?
+다음 정보와 함께 wacFeedbackAzure@microsoft.com에서 전자 메일을 보내 주세요.
+* [아래에 나열 된 질문](#providing-feedback-on-issues)의 일반적인 문제 정보
+* 문제 및 문제를 재현 하기 위해 수행한 단계를 설명 합니다. 
+* 이전에 New-AadApp 다운로드 가능한 스크립트를 사용 하 여 게이트웨이를 Azure에 등록 한 다음 버전 1807로 업그레이드 했습니까? 또는 Azure > 게이트웨이 설정의 UI를 사용 하 여 Azure에 게이트웨이를 등록 하셨습니까?
+* Azure 계정이 여러 디렉터리/테 넌 트와 연결 되어 있나요?
+    * 예 인 경우: Azure AD 응용 프로그램을 Windows 관리 센터에 등록 하는 경우 Azure에서 기본 디렉터리를 사용한 디렉터리 인가요? 
+* Azure 계정에 여러 구독에 대 한 액세스 권한이 있나요?
+* 사용 중인 구독에 청구가 연결 되어 있나요?
+* 문제가 발생 했을 때 여러 Azure 계정에 로그인 했습니까?
+* Azure 계정에 다단계 인증이 필요 한가요?
+* Azure VM을 관리 하려는 컴퓨터가 있나요?
+* Azure VM에 Windows 관리 센터가 설치 되어 있나요?
 
-## <a name="providing-feedback-on-issues"></a>문제에 대 한 의견
+## <a name="providing-feedback-on-issues"></a>문제에 대 한 피드백 제공
 
 이벤트 뷰어 > 응용 프로그램 및 서비스 > Microsoft-ServerManagementExperience로 이동하여 오류나 경고를 찾습니다.
 
@@ -230,8 +230,8 @@ netsh http delete urlacl url=https://+:443/
 다음 정보를 비롯하여 이벤트 로그에서 찾은 오류 또는 경고를 포함하십시오. 
 
 * Windows Admin Center가 **설치된** 플랫폼(Windows 10 또는 Windows Server):
-    * Windows 서버에 설치 하는 경우 무엇입니까 [버전](#check-the-windows-version) 의 **브라우저를 실행 하는 컴퓨터** Windows Admin Center 액세스 하려면: 
-    * 설치 관리자에서 만든 자체 서명 된 인증서를 사용 중 입니까?
+    * 서버에 설치 된 경우 Windows 관리 센터에 액세스 하기 위해 **브라우저를 실행** 하는 컴퓨터의 windows [버전](#check-the-windows-version) 은 다음과 같습니다. 
+    * 설치 관리자에서 만든 자체 서명 된 인증서를 사용 하 고 있습니까?
     * 자체 인증서를 사용하는 경우 주체 이름이 컴퓨터와 일치합니까?
     * 자체 인증서를 사용하는 경우 대체 주체 이름이 지정되었습니까?
 * 기본 포트 설정을 사용하여 설치했습니까?

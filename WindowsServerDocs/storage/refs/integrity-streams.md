@@ -6,15 +6,15 @@ ms.author: jgerend
 manager: dmoss
 ms.date: 10/16/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.assetid: 1f1215cd-404f-42f2-b55f-3888294d8a1f
-ms.openlocfilehash: 11f0a696fb843f5cd8b4a7ff3318c28d6c1adeb8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 0e41d7ae577bf7e9227ff0c02689d916f1008a3d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59871344"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71403038"
 ---
 # <a name="refs-integrity-streams"></a>ReFS 무결성 스트림
 >적용 대상: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server (반기 채널), Windows 10
@@ -27,7 +27,7 @@ ms.locfileid: "59871344"
 
 무결성 스트림을 사용하도록 설정하면 ReFS는 해당 파일의 메타데이터에 지정된 파일에 대한 체크섬을 만들고 유지합니다. 이 체크섬을 통해 ReFS는 데이터에 액세스하기 전에 데이터의 무결성을 확인할 수 있습니다. 무결성 스트림을 사용할 수 있는 모든 데이터를 반환하기 전에 ReFS는 먼저 해당 체크섬을 계산합니다.
 
-![파일 데이터에 대 한 체크섬을 계산](media/compute-checksum.gif)
+![파일 데이터에 대 한 계산 체크섬](media/compute-checksum.gif)
 
 그런 다음 이 체크섬을 파일 메타데이터에 포함된 체크섬과 비교합니다. 체크섬이 일치하는 경우 데이터가 유효한 것으로 표시되고 사용자에게 반환됩니다. 체크섬이 일치하지 않으면 데이터가 손상된 것입니다. 볼륨의 복원력에 따라 ReFS가 손상에 대응하는 방식이 결정됩니다.
 
@@ -38,7 +38,7 @@ ms.locfileid: "59871344"
 
 ReFS는 모든 손상을 시스템 이벤트 로그에 기록하고 손상의 수정 여부가 로그에 반영됩니다. 
 
-![데이터 무결성을 복원 하는 정정 쓰기](media/corrective-write.gif)
+![수정 쓰기는 데이터 무결성을 복원 합니다.](media/corrective-write.gif)
 
 ## <a name="performance"></a>성능 
 
@@ -97,4 +97,4 @@ PS C:\> Set-FileIntegrity H:\Docs -Enable $True
 
 -   [ReFS 개요](refs-overview.md)
 -   [ReFS 블록 복제](block-cloning.md)
--   [저장소 공간 다이렉트 개요](../storage-spaces/storage-spaces-direct-overview.md)
+-   [스토리지 공간 다이렉트 개요](../storage-spaces/storage-spaces-direct-overview.md)

@@ -1,8 +1,8 @@
 ---
 title: 사용자 세션 로그오프
-description: MultiPoint 서비스에서 기록 하는 방법에 알아봅니다.
+description: MultiPoint 서비스를 로그 오프 하는 방법 알아보기
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: 2e70acdf022bddb163b634fbb68e0226e8d789fd
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b8107795f330fdf04758c35efc5682fd5cb734da
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59863544"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71395282"
 ---
 # <a name="log-off-user-sessions"></a>사용자 세션 로그오프
 표준 사용자, 다중 포인트 대시보드 사용자 및 관리자가 로그온 하 고 더라도 모든 Windows 세션의 데스크톱 세션에서 로그 수입니다. 또한 관리 권한이 있는 사용자 및 다중 포인트 대시보드 사용자 MultiPoint 서비스 시스템에서 모니터링 되는 세션의 모든 사용자 세션을 종료할 수 있습니다.  
@@ -33,5 +33,5 @@ ms.locfileid: "59863544"
   
 ## <a name="see-also"></a>관련 항목  
 [사용자 데스크톱 관리](manage-user-desktops-using-multipoint-dashboard.md)  
-[로그 오프 또는 연결 끊기 사용자 세션](Log-off-or-Disconnect-User-Sessions.md)  
-[일시 중단 하 고 사용자 세션을 활성 상태 유지](Suspend-and-Leave-User-Session-Active.md)
+[사용자 세션 로그오프 또는 연결 끊기](Log-off-or-Disconnect-User-Sessions.md)  
+[사용자 세션 일시 중단 및 활성 상태로 유지](Suspend-and-Leave-User-Session-Active.md)

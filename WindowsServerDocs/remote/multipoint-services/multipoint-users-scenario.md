@@ -2,7 +2,7 @@
 title: MultiPoint 서비스 사용자 계정
 description: MultiPoint 서비스의 사용자 계정, 특히 다양 한 시나리오에 사용할 종류에 대해 알아봅니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: 67aa84244aa9ebfcd8375bd82f9d6ae431fc5eac
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: ff81af2a0aa8da7f801ec14c27dc00c9bae6e8aa
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871421"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71388961"
 ---
 # <a name="example-scenarios-multipoint-services-user-accounts"></a>예제 시나리오: MultiPoint 서비스 사용자 계정
 MultiPoint 서비스 환경에 대해 선택한 사용자 계정 시나리오를 구현 하려면 작업을 수행 하 시겠습니까? 다음 표에서 사용자 계정을 구성 하 고 작업 그룹 또는 Active Directory 도메인에 네트워크로 연결 된 서버 또는 독립 실행형 MultiPoint 컴퓨터에서 공유 또는 개별 사용자 계정에 대 한 스테이션을 준비 하기 위해 수행 하는 각 작업에 설명 합니다. 사용자 환경에 적용 되는 시나리오를 선택 합니다. 그런 다음 각 필수 구성 작업을 완료 하기 위해 테이블에 있는 링크를 따릅니다.  

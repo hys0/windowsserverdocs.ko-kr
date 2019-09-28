@@ -2,22 +2,22 @@
 title: BranchCache 파일 서버 조직 구성 단위 만들기
 description: 이 항목은 일부는 BranchCache 배포 가이드에 대 한 Windows Server 2016, 지사에 WAN 대역폭 사용량을 최적화 하기 위해 분산 및 호스트 캐시 모드로 BranchCache를 배포 하는 방법을 보여 주는
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 2cda192f-6b45-4e6c-88d9-70ca179ddb94
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: b7b26ec5808f5b11141e81dc5e738c83c94ef6b8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f058dbec42997f22106666b014508191a8861694
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59874084"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406485"
 ---
 # <a name="create-the-branchcache-file-servers-organizational-unit"></a>BranchCache 파일 서버 조직 구성 단위 만들기
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 이 절차를 사용 하 여 Active Directory 도메인 서비스에 AD DS BranchCache 파일 서버에 대 한 조직 구성 단위 (OU)를 만들려면 수 있습니다.  
   

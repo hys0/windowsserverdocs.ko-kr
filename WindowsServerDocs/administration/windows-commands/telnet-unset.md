@@ -1,8 +1,8 @@
 ---
-title: telnet unset
-description: '에 대 한 Windows 명령을 항목 * * *- '
+title: 텔넷 설정 해제
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 37c4d84d1664fdc13ea7ffec60bf981b264dba00
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e6f0eb98c4168d2f664780dad42ca1aea5463d24
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59853894"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71383478"
 ---
-# <a name="telnet-unset"></a>telnet: unset
+# <a name="telnet-unset"></a>텔넷: 설정 해제
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -34,13 +34,13 @@ u[nset] {bsasdel | crlf | delasbs | escape | localecho | logging | ntlm} [?]
 |-------|--------|  
 |bsasdel|보냅니다 **백스페이스** 으로 **백스페이스**합니다.|  
 |crlf|전송 된 **Enter** CR로 키입니다. 라고도 줄 바꿈 모드입니다.|  
-|delasbs|보냅니다 **삭제할** 으로 **삭제**합니다.|  
-|이스케이프|이스케이프 문자 설정을 제거합니다.|  
+|delasbs|**Delete로** **삭제** 를 보냅니다.|  
+|이스케이프|이스케이프 문자 설정을 제거 합니다.|  
 |에코|에코를 해제합니다.|  
 |logging|로깅을 해제합니다.|  
 |ntlm|NTLM 인증을 해제합니다.|  
 |?|이 명령에 대 한 도움말을 표시 합니다.|  
-## <a name="BKMK_Examples"></a>예제  
+## <a name="BKMK_Examples"></a>예와  
 로깅을 해제 합니다.  
 ```  
 u logging  

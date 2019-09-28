@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 8bcc653cc9eb9adb6d31331463d01774d4faec1a
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 98cd1dd6763886a9b9f63ab6eca1c52094424284
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66189223"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407553"
 ---
 # <a name="custom-error-messages-for-ad-fs-sign-in-page"></a>AD FS 로그인 페이지에 대 한 사용자 지정 오류 메시지  
 
@@ -69,4 +69,4 @@ AD FS에서 신뢰 당사자 권한 부여 오류 메시지를 구성할 수 있
 
 
 ## <a name="additional-references"></a>추가 참조 
-[AD FS 사용자 로그인 사용자 지정](AD-FS-user-sign-in-customization.md)    
+[사용자 로그인 사용자 지정 AD FS](AD-FS-user-sign-in-customization.md)    

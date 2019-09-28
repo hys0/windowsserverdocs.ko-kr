@@ -7,19 +7,19 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: a29406880481f0e4e257105e94bc1a33ee661164
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 15a4583d429de9383e9405cfcd444777aa55c921
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66444439"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407576"
 ---
 # <a name="create-a-rule-to-transform-an-incoming-claim"></a>들어오는 클레임 변환 규칙 만들기
 
 
-사용 하 여 합니다 **들어오는 클레임 변환** Active Directory Federation Services에서 규칙 템플릿을 \(AD FS\), 들어오는 클레임을 선택, 클레임 형식을 변경 및 해당 클레임 값을 변경할 수 있습니다. 예를 들어 들어오는 그룹 클레임의 동일한 클레임 값으로 역할 클레임을 전송 하는 규칙을 만들려면이 규칙 서식 파일을 사용할 수 있습니다. 관리자의 값을 사용 하 여 들어오는 그룹 클레임 하거나 사용자 계정 이름만 보낼 수 있습니다 구매자의 클레임 값을 사용 하 여 그룹 클레임을 보내도록이 규칙을 사용할 수도 있습니다 \(UPN\) 으로 끝나는 클레임 @fabrikam합니다.  
+Active Directory Federation Services에서 **들어오는 클레임 변환** 규칙 템플릿을 사용 하 여 \(AD FS @ no__t-2를 사용 하 여 들어오는 클레임을 선택 하 고 클레임 유형을 변경 하며 클레임 값을 변경할 수 있습니다. 예를 들어 들어오는 그룹 클레임의 동일한 클레임 값으로 역할 클레임을 전송 하는 규칙을 만들려면이 규칙 서식 파일을 사용할 수 있습니다. 또한이 규칙을 사용 하 여 값이 Admins 인 들어오는 그룹 클레임이 있는 경우 클레임 값이 구매자 인 그룹 클레임을 전송 하거나 @fabrikam로 끝나는 사용자 계정 이름 \(UPN @ no__t-1 클레임만 보낼 수 있습니다.  
   
 다음 절차를 사용 하 여 AD FS 관리 스냅인을 사용 하 여 클레임 규칙을 만들려면\-에 있습니다.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66444439"
   
     -   **들어오는 클레임 값을 다른 나가는 클레임 값으로 바꿉니다.**  
   
-    -   **들어오는 전자 바꾸기\-접미사를 클레임 새 전자 메일\-메일 접미사**  
+    -   **들어오는 e @ no__t-1 메일 접미사 클레임을 새 e @ no__t-2 메일 접미사로 바꾸기**  
 ![규칙 만들기](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform4.PNG)   
 
 7.  클릭 하 고 **마침** 단추입니다.  
@@ -81,7 +81,7 @@ ms.locfileid: "66444439"
   
     -   **들어오는 클레임 값을 다른 나가는 클레임 값으로 바꿉니다.**  
   
-    -   **들어오는 전자 바꾸기\-접미사를 클레임 새 전자 메일\-메일 접미사**  
+    -   **들어오는 e @ no__t-1 메일 접미사 클레임을 새 e @ no__t-2 메일 접미사로 바꾸기**  
 ![규칙 만들기](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform4.PNG)       
 
 7.  클릭 하 고 **마침** 단추입니다.  
@@ -104,7 +104,7 @@ ms.locfileid: "66444439"
   
 4.  에 **클레임 규칙 편집** 대화 상자에서 하나를 선택 했는지에 따라 편집 하는 규칙 수를 설정 하는 신뢰 하는 다음과 같은 탭이이 규칙을 만들고 연결할 클릭 **규칙 추가** 해당 규칙 집합에 연관 된 규칙 마법사를 시작 합니다.  
   
-    -   **수용 변환 규칙**  
+    -   **수락 변환 규칙**  
   
     -   **발급 변환 규칙**  
   
@@ -122,7 +122,7 @@ ms.locfileid: "66444439"
   
     -   **들어오는 클레임 값을 다른 나가는 클레임 값으로 바꿉니다.**  
   
-    -   **들어오는 전자 바꾸기\-접미사를 클레임 새 전자 메일\-메일 접미사**  
+    -   **들어오는 e @ no__t-1 메일 접미사 클레임을 새 e @ no__t-2 메일 접미사로 바꾸기**  
 ![규칙 만들기](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform2.PNG)  
 
 > [!NOTE]  

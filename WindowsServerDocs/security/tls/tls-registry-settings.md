@@ -2,7 +2,7 @@
 title: TLS (전송 계층 보안) 레지스트리 설정
 description: Windows Server 보안
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: security-tls-ssl
@@ -12,12 +12,12 @@ author: justinha
 ms.author: justinha
 manager: brianlic-msft
 ms.date: 02/28/2019
-ms.openlocfilehash: 83146bd8a65b90994ed90a6dda29a4bc00a2533a
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 60202e537093bd21515043ba56f70f3895c91d42
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70870302"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71403406"
 ---
 # <a name="transport-layer-security-tls-registry-settings"></a>TLS (전송 계층 보안) 레지스트리 설정
 
@@ -214,7 +214,7 @@ TLS 클라이언트에서 허용 하는 조각화 된 TLS 핸드셰이크 메시
 | Windows 버전 | Time |
 |-----------------|------|
 | Windows Server 2012 및 Windows 8 이상 | FALSE |
-| Windows Server 2008 R2 및 Windows 7 및 이전 버전 | TRUE |
+| Windows Server 2008 R2 및 Windows 7 및 이전 버전 | true |
 
 적용 가능한 버전: Windows Server 2008 및 Windows Vista부터 모든 버전
 

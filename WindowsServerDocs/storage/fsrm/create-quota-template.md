@@ -2,18 +2,18 @@
 title: 할당량 템플릿 만들기
 description: 이 문서에서는 저장소 공간 제한을 정의하기 위한 할당량 템플릿을 만드는 방법을 설명합니다.
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 236b5cb198a13441a087ad6dbfeef9a416e07e61
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 28a64c77d09bffeccbbc94ba7648d1bc0227e945
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66445978"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71394161"
 ---
 # <a name="create-a-quota-template"></a>할당량 템플릿 만들기
 
@@ -53,7 +53,7 @@ ms.locfileid: "66445978"
 > [!Important]
 > 전자 메일 알림을 보내고 서버 환경에 적절한 매개 변수로 저장소 보고서를 구성하려면, 먼저 일반 파일 서버 리소스 관리자 옵션을 설정해야 합니다. 자세한 내용은 [파일 서버 리소스 관리자 옵션 설정](setting-file-server-resource-manager-options.md)을 참조하세요.
 
-**할당량 임계값 알림을 생성 하는 파일 서버 리소스 관리자를 구성 하려면**
+**파일 서버 리소스 관리자 할당량 임계값에 생성 되는 알림을 구성 하려면**
 
 1. **할당량 템플릿 만들기** 대화 상자의 **알림 임계값**에서 **추가**를 클릭합니다. **임계값 추가** 대화 상자가 나타납니다.
 
@@ -67,7 +67,7 @@ ms.locfileid: "66445978"
 
    - 임계값에 도달했을 때 관리자에게 알리려면, **다음 관리자에게 전자 메일 보내기** 확인란을 선택한 다음 알림을 받을 관리 계정의 이름을 입력합니다. <em>account@domain</em>  형식을 사용하고 세미콜론으로 여러 계정을 구분합니다.
    - 할당량 임계값에 도달한 파일을 저장한 사람에게 전자 메일을 보내려면 **임계값을 초과한 사용자에게 전자 메일 보내기** 확인란을 선택합니다.
-   - 메시지를 구성하려면 기본 제목 줄과 메시지 본문을 편집합니다. 괄호에 있는 텍스트는 알림을 발생시킨 할당량 이벤트에 대한 변수 정보를 삽입합니다. 예를 들어 합니다 **\[원본 Io 소유자\]** 변수에 할당량 임계값에 도달 하는 파일을 저장 한 사용자의 이름을 삽입 합니다. 텍스트에 추가 변수를 삽입하려면 **변수 삽입**을 클릭합니다.
+   - 메시지를 구성하려면 기본 제목 줄과 메시지 본문을 편집합니다. 괄호에 있는 텍스트는 알림을 발생시킨 할당량 이벤트에 대한 변수 정보를 삽입합니다. 예를 들어 **\[Source Io Owner @ no__t** 변수는 할당량 임계값에 도달한 파일을 저장 한 사용자의 이름을 삽입 합니다. 텍스트에 추가 변수를 삽입하려면 **변수 삽입**을 클릭합니다.
    - 추가 헤더(보낸 사람, 참조, 숨은 참조, 회신)를 구성하려면 **추가 전자 메일 헤더**를 클릭합니다.
 
 4. 이벤트를 기록하려면:

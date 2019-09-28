@@ -1,8 +1,8 @@
 ---
 title: systeminfo
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3d08d3f86bdbd176aa4de157f58a58c9ea418470
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 32a84a33c5339e9949648a4e40d71daf25c055d8
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59841504"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71370686"
 ---
 # <a name="systeminfo"></a>systeminfo
 
@@ -38,26 +38,26 @@ Systeminfo [/s <Computer> [/u <Domain>\<UserName> [/p <Password>]]] [/fo {TABLE 
 
 |매개 변수|설명|
 |---------|-----------|
-|/s \<컴퓨터 >|이름 또는 원격 컴퓨터의 IP 주소를 지정 합니다 (백슬래시를 사용 하지 않습니다). 기본값은 로컬 컴퓨터입니다.|
-|/u \<Domain>\<UserName>|지정 된 사용자 계정의 계정 권한으로 명령을 실행 합니다. 경우 **/u** 를 지정 하지 않으면이 명령은 명령을 실행 하는 컴퓨터에 현재 로그온 된 사용자의 사용 권한을 사용 합니다.|
-|/p \<Password>|에 지정 된 사용자 계정의 암호를 지정 된 **/u** 매개 변수입니다.|
-|/fo \<형식 >|다음 값 중 하 나와 함께 출력 형식을 지정 합니다.</br>테이블: 테이블에 출력을 표시 합니다.</br>목록: 출력을 목록으로 표시 합니다.</br>CSV: 쉼표로 구분 된 값의 출력을 표시 합니다.|
+|/s \<Computer >|이름 또는 원격 컴퓨터의 IP 주소를 지정 합니다 (백슬래시를 사용 하지 않습니다). 기본값은 로컬 컴퓨터입니다.|
+|/u \<Domain > \< 사용자 이름 >|지정 된 사용자 계정의 계정 권한으로 명령을 실행 합니다. 경우 **/u** 를 지정 하지 않으면이 명령은 명령을 실행 하는 컴퓨터에 현재 로그온 된 사용자의 사용 권한을 사용 합니다.|
+|/p \<암호 >|에 지정 된 사용자 계정의 암호를 지정 된 **/u** 매개 변수입니다.|
+|/fo \<Format >|다음 값 중 하 나와 함께 출력 형식을 지정 합니다.</br>테이블 테이블에 출력을 표시 합니다.</br>은 목록에 출력을 표시 합니다.</br>CSV 쉼표로 구분 된 값 형식으로 출력을 표시 합니다.|
 |/nh|출력에서 열 머리글을 표시 하지 않습니다. 유효한 경우에는 **/fo** 매개 변수는 테이블 또는 CSV로 설정 됩니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
-Srvmain 라는 컴퓨터에 대 한 구성 정보를 보려면 다음을 입력 합니다.
+Srvmain 이라는 컴퓨터에 대 한 구성 정보를 보려면 다음을 입력 합니다.
 
-**systeminfo /s srvmain**
+**systeminfo/s srvmain**
 
-Maindom 도메인에 있는 Srvmain2 라는 컴퓨터에 대 한 구성 정보를 원격으로 보려면 다음을 입력 합니다.
+Maindom 도메인에 있는 Srvmain2 이라는 컴퓨터에 대 한 구성 정보를 원격으로 보려면 다음을 입력 합니다.
 
-**systeminfo /s srvmain2 /u maindom\hiropln**
+**systeminfo/s srvmain2/u maindom\hiropln**
 
-Maindom 도메인에 있는 Srvmain2 라는 컴퓨터에 대 한 형식으로 나타낸 목록 구성 정보를 원격으로 보려면 다음을 입력 합니다.
+Maindom 도메인에 있는 Srvmain2 이라는 컴퓨터에 대 한 구성 정보를 목록 형식으로 원격으로 보려면 다음을 입력 합니다.
 
-**systeminfo /s srvmain2 /u maindom\hiropln /p p@ssW23 /fo list**
+**systeminfo/s srvmain2/u maindom\hiropln/p p@ssW23/fo list**
 
 #### <a name="additional-references"></a>추가 참조
 

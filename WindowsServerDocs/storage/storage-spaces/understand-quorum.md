@@ -1,8 +1,8 @@
 ---
-title: 클러스터 및 풀 쿼럼 이해
+title: 클러스터 및 풀 쿼럼의 이해
 description: 클러스터 및 풀 쿼럼을 이해 하 고 복잡 한 방법에 대 한 구체적인 예를 살펴보겠습니다.
 keywords: 스토리지 공간 다이렉트, 쿼럼, 미러링 모니터 서버, S2D, 클러스터 쿼럼, 풀 쿼럼, 클러스터, 풀
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: adagashe
 ms.manager: eldenc
 ms.technology: storage-spaces
@@ -10,14 +10,14 @@ ms.topic: article
 author: adagashe
 ms.date: 01/18/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 962a4edc1a171167a6af336d4fb32188a526f455
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 8950e9d09e3bd07dc02228c295ab223ead969ea6
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70872126"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71366012"
 ---
-# <a name="understanding-cluster-and-pool-quorum"></a>클러스터 및 풀 쿼럼 이해
+# <a name="understanding-cluster-and-pool-quorum"></a>클러스터 및 풀 쿼럼의 이해
 
 >적용 대상: Windows Server 2019, Windows Server 2016
 

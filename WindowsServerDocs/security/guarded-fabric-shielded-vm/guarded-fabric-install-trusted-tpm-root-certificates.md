@@ -1,43 +1,43 @@
 ---
-title: 신뢰할 수 있는 TPM 루트 인증서를 설치 합니다.
+title: 신뢰할 수 있는 TPM 루트 인증서 설치
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 06/27/2019
-ms.openlocfilehash: 0d42befcfacfffd302cfcb27f9f3c2c973534398
-ms.sourcegitcommit: 2c2c37170c65434179bcf2989d557f97dcbe1b9f
+ms.openlocfilehash: 15614ce1065170bc557fad10a168b3dda6a5b05a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67419225"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71386554"
 ---
-# <a name="install-trusted-tpm-root-certificates"></a>신뢰할 수 있는 TPM 루트 인증서를 설치 합니다.
+# <a name="install-trusted-tpm-root-certificates"></a>신뢰할 수 있는 TPM 루트 인증서 설치
 
->적용 대상: Windows Server, Windows Server 2016, Windows Server (반기 채널) 2019
+>적용 대상: Windows server 2019, Windows Server (반기 채널), Windows Server 2016
 
-TPM 증명을 사용 하도록 HGS를 구성한 경우 또한 HGS 서버에 Tpm의 공급 업체를 신뢰 하도록 구성 해야 합니다.
-추가 인증 하면 인증, 신뢰할 수 있는 Tpm만 HGS를 사용 하 여 증명할 수 있습니다.
-사용 하 여 신뢰할 수 없는 TPM 등록 하려는 경우 `Add-HgsAttestationTpmHost`, TPM 공급 업체를 신뢰할 수 있는 아님을 나타내는 오류가 표시 됩니다.
+TPM 증명을 사용 하도록 HGS를 구성 하는 경우 서버에서 Tpm 공급 업체를 신뢰 하도록 HGS를 구성 해야 합니다.
+이 추가 확인 프로세스를 통해 인증 된 신뢰할 수 있는 Tpm만 HGS로 증명할 수 있습니다.
+@No__t-0을 사용 하 여 신뢰할 수 없는 TPM을 등록 하려고 하면 TPM 공급 업체를 신뢰할 수 없다는 오류가 표시 됩니다.
 
-에 Tpm를 신뢰 하려면 루트 및 서버 Tpm 인증 키를 로그인 하는 데 사용 되는 중간 서명 인증서를 HGS에 설치 해야 합니다.
-데이터 센터에 둘 이상의 TPM 모델을 사용 하는 경우 각 모델에 대 한 다른 인증서를 설치 해야 합니다.
-HGS에서 "TrustedTPM_RootCA"와 "TrustedTPM_IntermediateCA" 인증서 저장소 공급 업체 인증서에 대 한 합니다.
+Tpm을 신뢰 하려면 서버 Tpm의 인증 키에 서명 하는 데 사용 되는 루트 및 중간 서명 인증서를 HGS에 설치 해야 합니다.
+데이터 센터에서 TPM 모델을 둘 이상 사용 하는 경우 각 모델에 대해 서로 다른 인증서를 설치 해야 할 수 있습니다.
+HGS는 공급 업체 인증서에 대 한 "TrustedTPM_RootCA" 및 "TrustedTPM_IntermediateCA" 인증서 저장소를 확인 합니다.
 
 > [!NOTE]
-> TPM 공급 업체 인증서를 Windows에 기본적으로 설치 하는 것과 다른 되며 특정 루트 및 TPM 공급 업체에 의해 사용 되는 중간 인증서를 나타냅니다.
+> TPM 공급 업체 인증서는 기본적으로 Windows에 설치 된 인증서와 다르며 TPM 공급 업체에서 사용 하는 특정 루트 및 중간 인증서를 나타냅니다.
 
-신뢰할 수 있는 TPM 루트 및 중간 인증서의 컬렉션은 사용자 편의 위해 Microsoft에서 게시 됩니다.
-이러한 인증서를 설치 하려면 다음 단계를 사용할 수 있습니다.
-TPM 인증서 아래 패키지에 포함 되지 않은, 경우에 TPM 공급 업체 또는 OEM 서버 루트와 특정 TPM 모델에 대 한 중간 인증서를 가져오려면에 문의 합니다.
+사용자 편의를 위해 신뢰할 수 있는 TPM 루트 및 중간 인증서 컬렉션은 Microsoft에서 게시 합니다.
+아래 단계를 사용 하 여 이러한 인증서를 설치할 수 있습니다.
+아래 패키지에 TPM 인증서가 포함 되지 않은 경우 tpm 공급 업체 또는 서버 OEM에 문의 하 여 특정 TPM 모델에 대 한 루트 및 중간 인증서를 가져옵니다.
 
-다음 단계를 반복 **모든 HGS 서버**:
+**모든 HGS 서버**에서 다음 단계를 반복 합니다.
 
-1.  최신 패키지를 다운로드 [ https://go.microsoft.com/fwlink/?linkid=2097925 ](https://go.microsoft.com/fwlink/?linkid=2097925)합니다.
+1.  [@No__t-1](https://go.microsoft.com/fwlink/?linkid=2097925)에서 최신 패키지를 다운로드 합니다.
 
-2.  신뢰성을 확인 하는 cab 파일의 서명을 확인 합니다. 서명이 유효 하지 않은 경우 진행 하지 마십시오.
+2.  Cab 파일의 서명을 확인 하 여 정품 인증을 확인 하십시오. 서명이 유효 하지 않은 경우에는 진행 하지 마십시오.
 
     ```powershell
     Get-AuthenticodeSignature .\TrustedTpm.cab
@@ -60,7 +60,7 @@ TPM 인증서 아래 패키지에 포함 되지 않은, 경우에 TPM 공급 업
     expand.exe -F:* <Path-To-TrustedTpm.cab> .\TrustedTPM
     ```
 
-3.  구성 스크립트는 기본적으로 모든 TPM 공급 업체에 대 한 인증서 설치 됩니다. 특정 TPM 공급 업체에 대 한 인증서를 가져올 하려는 경우 조직에서 신뢰할 수 없는 TPM 공급 업체 폴더를 삭제 합니다.
+3.  기본적으로 구성 스크립트는 모든 TPM 공급 업체에 대 한 인증서를 설치 합니다. 특정 TPM 공급 업체에 대 한 인증서를 가져오려면 조직에서 신뢰 하지 않는 TPM 공급 업체에 대 한 폴더를 삭제 합니다.
 
 4.  확장 된 폴더에서 설치 스크립트를 실행 하 여 신뢰할 수 있는 인증서 패키지를 설치 합니다.
 
@@ -69,8 +69,8 @@ TPM 인증서 아래 패키지에 포함 되지 않은, 경우에 TPM 공급 업
     .\setup.cmd
     ```
 
-새 인증서 또는 이전 설치를 의도적으로 건너뛰었습니다 추가할 HGS 클러스터의 모든 노드에 대해 위의 단계를 반복 하면 됩니다.
-기존 인증서 신뢰할 수 있는 상태로 유지 되지만 신뢰할 수 있는 TPM에 추가할 확장 된 cab 파일에 새 인증서를 저장 합니다.
+이전 설치 중에 새 인증서 또는 의도적으로 건너뛴 인증서를 추가 하려면 HGS 클러스터의 모든 노드에서 위의 단계를 반복 하면 됩니다.
+기존 인증서는 신뢰할 수 있는 상태로 유지 되지만 확장 된 cab 파일에 있는 새 인증서는 신뢰할 수 있는 TPM 저장소에 추가 됩니다.
 
 ## <a name="next-step"></a>다음 단계
 

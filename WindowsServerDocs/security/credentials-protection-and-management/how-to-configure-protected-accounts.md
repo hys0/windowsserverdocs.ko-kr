@@ -1,7 +1,7 @@
 ---
 title: 보호된 계정을 구성하는 방법
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.service: na
 ms.suite: na
@@ -12,16 +12,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: 9bd03beb81d4a3031b80d0633607efea2f2fe1f7
-ms.sourcegitcommit: d84dc3d037911ad698f5e3e84348b867c5f46ed8
+ms.openlocfilehash: e728265f42289aeceb22c78053f0d84f9bdb9941
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66266816"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71387392"
 ---
 # <a name="how-to-configure-protected-accounts"></a>보호된 계정을 구성하는 방법
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 PtH(Pass-the-hash) 공격을 통해 공격자는 사용자 암호(또는 다른 자격 증명 파생물)의 기본 NTLM 해시를 사용하여 원격 서버 또는 서비스에서 인증을 받을 수 있습니다. Microsoft는 이전에 PtH(Pass-the-hash) 공격을 완화할 수 있는 [지침을 게시](https://www.microsoft.com/download/details.aspx?id=36036) 했습니다.  Windows Server 2012 r 2에는 이러한 공격을 추가로 위험을 완화 하려면 새로운 기능이 있습니다. 자격 증명 도난을 방지하는 데 도움이 되는 다른 보안 기능에 대한 자세한 내용은 [자격 증명 보호 및 관리](https://technet.microsoft.com/library/dn408190.aspx)를 참조하세요. 이 항목에서는 다음과 같은 새로운 기능을 구성하는 방법에 대해 설명합니다.  
   
@@ -86,7 +86,7 @@ Windows 8.1 및 Windows Server 2012 R2에는 자격 증명 도난을 방지하�
 이 섹션에서는 보호된 사용자와 관련된 이벤트 문제를 해결하는 데 도움이 되는 새로운 로그 및 보호된 사용자가 TGT(Ticket-Granting Ticket) 만료 또는 위임 문제를 해결하기 위한 변경 사항에 미치는 영향에 대해 알아봅니다.  
   
 #### <a name="new-logs-for-protected-users"></a>보호된 사용자에 대한 새로운 로그  
-보호된 사용자와 관련된 이벤트 문제를 해결하는 데 도움이 되는 두 가지 새로운 작업 관리 로그인 보호 된 사용자-클라이언트 로그와 보호 된 사용자 실패-도메인 컨트롤러 로그 합니다. 이러한 새 로그는 이벤트 뷰어에 있으며 기본적으로 사용되지 않습니다. 로그를 사용하려면 **응용 프로그램 및 서비스 로그**, **Microsoft**, **Windows**, **인증**을 차례로 클릭하고 로그 이름을 클릭한 다음 **작업** 을 클릭(또는 로그를 마우스 오른쪽 단추로 클릭)하고 **로그 사용**을 클릭합니다.  
+보호된 사용자와 관련된 이벤트 문제를 해결하는 데 도움이 되는 두 가지 새로운 작업 관리 로그인 보호 된 사용자-클라이언트 로그 및 보호 된 사용자 실패-도메인 컨트롤러 로그 이러한 새 로그는 이벤트 뷰어에 있으며 기본적으로 사용되지 않습니다. 로그를 사용하려면 **응용 프로그램 및 서비스 로그**, **Microsoft**, **Windows**, **인증**을 차례로 클릭하고 로그 이름을 클릭한 다음 **작업** 을 클릭(또는 로그를 마우스 오른쪽 단추로 클릭)하고 **로그 사용**을 클릭합니다.  
   
 이러한 로그의 이벤트에 대한 자세한 내용은 [인증 정책 및 인증 정책 사일로](https://technet.microsoft.com/library/dn486813.aspx)를 참조하세요.  
   
@@ -112,9 +112,9 @@ Windows 8.1 및 Windows Server 2012 R2에는 자격 증명 도난을 방지하�
 ### <a name="provide-dc-side-protections-for-services-and-computers"></a>서비스 및 컴퓨터에 대한 DC 쪽 보호 제공  
 서비스 및 컴퓨터 계정은 **보호된 사용자**의 구성원일 수 없습니다. 이 섹션에서는 이러한 계정에 제공할 수 있는 도메인 컨트롤러 기반 보호에 대해 설명합니다.  
   
--   NTLM 인증 거부: 통해 구성할 수 있는 유일한 [NTLM 차단 정책](https://technet.microsoft.com/library/jj865674(v=ws.10).aspx)합니다.  
+-   NTLM 인증 거부: [NTLM 차단 정책](https://technet.microsoft.com/library/jj865674(v=ws.10).aspx)을 통해서만 구성할 수 있습니다.  
   
--   Kerberos 사전 인증에서 DES(데이터 암호화 표준) 거부:  Kerberos와 함께 릴리스된 Windows의 모든 버전에서는 RC4도 지원 때문에 des 구성 되지 않으면 Windows Server 2012 R2 도메인 컨트롤러 컴퓨터 계정에 대해 DES를 허용 하지 않습니다.  
+-   Kerberos 사전 인증에서 DES(데이터 암호화 표준) 거부:  Windows Server 2012 R2 도메인 컨트롤러는 Kerberos를 사용 하 여 릴리스된 모든 Windows 버전 에서도 RC4를 지원 하기 때문에 DES에 대해서만 구성 되지 않은 경우 컴퓨터 계정에 대해 DES를 허용 하지 않습니다.  
   
 -   Kerberos 사전 인증에서 RC4 거부: 구성할 수 없습니다.  
   
@@ -177,7 +177,7 @@ AP 교환은 응용 프로그램 프로토콜 내부의 데이터처럼 일반�
 |정책|요구 사항|  
 |-----|--------|  
 |사용자 지정 TGT 수명 제공| Windows Server 2012 R2 도메인 기능 수준 계정 도메인|  
-|사용자 로그온 제한|-동적 액세스 제어 지원 Windows Server 2012 R2 도메인 기능 수준 계정 도메인<br />Windows 8, Windows 8.1, Windows Server 2012 또는 Windows Server 2012 R2 장치 동적 액세스 제어를 사용 하 여 지원|  
+|사용자 로그온 제한|-동적 액세스 제어 지원 Windows Server 2012 R2 도메인 기능 수준 계정 도메인<br />-Windows 8, Windows 8.1, Windows Server 2012 또는 동적 Access Control 지원 되는 windows Server 2012 R2 장치|  
 |사용자 계정 및 보안 그룹을 기반으로 하는 서비스 티켓 발급 제한| Windows Server 2012 R2 도메인 기능 수준 리소스 도메인|  
 |사용자 클레임이나 장치 계정, 보안 그룹 또는 클레임을 기반으로 하는 서비스 티켓 발급 제한| 동적 액세스 제어를 사용한 Windows Server 2012 R2 도메인 기능 수준 리소스 도메인 지원|  
   
@@ -187,7 +187,7 @@ AP 교환은 응용 프로그램 프로토콜 내부의 데이터처럼 일반�
 #### <a name="configure-domain-controller-support"></a>도메인 컨트롤러 지원 구성  
 사용자의 계정 도메인 (DFL) Windows Server 2012 R2 도메인 기능 수준에 있어야 합니다. 모든 도메인 컨트롤러가 Windows Server 2012 r 2를 하 고 Active Directory 도메인 및 트러스트를 사용 하 여 확인 [dfl](https://technet.microsoft.com/library/cc753104.aspx) Windows Server 2012 r 2로 합니다.  
   
-**동적 Access Control에 대 한 지원을 구성 하려면**  
+**동적 Access Control 지원 구성**  
   
 1.  기본 도메인 컨트롤러 정책에서 **사용**을 클릭하여 컴퓨터 구성 | 관리 템플릿 | 시스템 | KDC에서 **클레임, 복합 인증 및 Kerberos 아머링(armoring)에 대한 KDC(키 배포 센터) 클라이언트 지원**을 사용하도록 설정합니다.  
   

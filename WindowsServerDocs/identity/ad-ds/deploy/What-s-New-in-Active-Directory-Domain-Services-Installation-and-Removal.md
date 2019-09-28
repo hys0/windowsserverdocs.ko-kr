@@ -7,28 +7,28 @@ author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/09/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 66455a9ec4eb8a6ff6bfcfa387aeb59acb3ddcc2
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 286d3ee6e9c2b9959a4cc60a710b1cb078612201
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59821354"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71369557"
 ---
 # <a name="whats-new-in-active-directory-domain-services-installation-and-removal"></a>Active Directory 도메인 서비스 설치 및 제거의 새로운 기능
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Windows Server 2012에서 active Directory Domain Services (AD DS) 배포에 더 간단 하 고 이전 버전의 Windows Server 보다 더 빠릅니다. 이제 AD DS 설치 프로세스는 Windows PowerShell에서 구축되며 서버 관리자와 통합됩니다. 따라서 도메인 컨트롤러를 기존의 Active Directory 환경에 추가하는 데 필요한 단계 수가 줄어들었으며, 이를 통해 새 Active Directory 환경을 만드는 프로세스가 보다 간편해지고 효율성이 개선되었습니다. 새 AD DS 배포 프로세스는 설치를 방해하는 오류 가능성을 최소화합니다.  
+Windows Server 2012의 Active Directory Domain Services (AD DS) 배포는 이전 버전의 Windows Server 보다 간단 하 고 빠릅니다. 이제 AD DS 설치 프로세스는 Windows PowerShell에서 구축되며 서버 관리자와 통합됩니다. 따라서 도메인 컨트롤러를 기존의 Active Directory 환경에 추가하는 데 필요한 단계 수가 줄어들었으며, 이를 통해 새 Active Directory 환경을 만드는 프로세스가 보다 간편해지고 효율성이 개선되었습니다. 새 AD DS 배포 프로세스는 설치를 방해하는 오류 가능성을 최소화합니다.  
   
-또한 여러 서버에 동시에 AD DS 서버 역할인 AD DS 서버 역할 바이너리를 설치할 수 있으며, 개별 서버에서 원격으로 AD DS 설치 마법사를 실행할 수도 있습니다. 이러한 향상 된이 기능 특히 많은 도메인 컨트롤러가 다른 지역에는 사무실에 배포 해야 하는 대규모 글로벌 배포에 대 한 Windows Server 2012를 실행 하는 도메인 컨트롤러를 배포 하기 위한 더 많은 유연성을 제공 합니다.  
+또한 여러 서버에 동시에 AD DS 서버 역할인 AD DS 서버 역할 바이너리를 설치할 수 있으며, 개별 서버에서 원격으로 AD DS 설치 마법사를 실행할 수도 있습니다. 이러한 향상 된 기능을 통해 Windows Server 2012를 실행 하는 도메인 컨트롤러를 보다 유연 하 게 배포할 수 있습니다. 특히 많은 도메인 컨트롤러를 여러 지역에 배포 해야 하는 대규모 글로벌 배포의 경우 더욱 유연 합니다.  
   
 AD DS 설치에는 다음 기능이 포함됩니다.  
   
 - **AD DS 설치 프로세스에 Adprep.exe 통합** 여러 개의 서로 다른 자격 증명을 사용하거나 Adprep.exe 파일을 복사하거나 특정 도메인 컨트롤러에 로그온해야 하는 등 Active Directory를 준비하는 데 필요했던 기존의 여러 가지 복잡한 단계가 모두 간소화되거나 자동으로 수행됩니다. 따라서 AD DS 를 설치하는 데 소요되는 시간이 단축되며 도메인 컨트롤러의 수준을 올리는 데 방해될 수 있는 오류 가능성이 줄어듭니다.  
 
-   새 도메인 컨트롤러를 설치하는 데 앞서 adprep.exe 명령을 실행해야 하는 환경의 경우 AD DS 설치와 별도로 adprep.exe 명령을 계속해서 실행할 수 있습니다. Windows Server 2012 버전의 adprep.exe는 64 비트 버전의 Windows Server 2008 이상을 실행 하는 서버에서 필요한 모든 명령을 실행할 수 있도록 원격으로 실행 됩니다.  
+   새 도메인 컨트롤러를 설치하는 데 앞서 adprep.exe 명령을 실행해야 하는 환경의 경우 AD DS 설치와 별도로 adprep.exe 명령을 계속해서 실행할 수 있습니다. Adprep.exe의 Windows Server 2012 버전은 원격으로 실행 되므로 64 비트 버전의 Windows Server 2008 이상을 실행 하는 서버에서 필요한 모든 명령을 실행할 수 있습니다.  
 
 - **새 AD DS 설치가 Windows PowerShell에 구축되며 원격으로 호출할 수 있습니다.** 새 AD DS 설치가 서버 관리자와 통합되어 다른 서버 역할 설치 시 사용하는 것과 동일한 인터페이스를 사용하여 AD DS를 설치할 수 있습니다. Windows PowerShell 사용자의 경우 AD DS 배포 cmdlet은 보다 많은 기능 및 향상된 유연성을 제공합니다. 명령줄 및 GUI 설치 옵션 간 기능 패리티가 유지됩니다.  
 - **새로운 AD DS 설치에 필수 유효성 검사가 포함됩니다.** 설치를 시작하기 전에 잠재적인 오류가 식별됩니다. 업그레이드 부분 완료와 관련한 우려 없이 오류가 발생하기 전에 오류 상태를 수정할 수 있습니다. 예를 들어 adprep /domainprep을 실행해야 하는 경우 설치 마법사에서 사용자에게 이 작업을 실행하는 데 필요한 권한이 있는지 확인합니다.  
@@ -41,22 +41,22 @@ AD DS 설치에는 다음 기능이 포함됩니다.
 Windows Server 2012 부터는 Active Directory 도메인 서비스 구성 마법사는 도메인 컨트롤러를 설치할 때 설정을 지정 하는 사용자 인터페이스 (UI) 옵션으로는 레거시 Active Directory 도메인 서비스 설치 마법사를 대체 합니다. Active Directory 도메인 서비스 구성 마법사는 역할 추가 마법사가 완료되면 시작됩니다.  
 
 > [!WARNING]  
-> 레거시 Active Directory 도메인 서비스 설치 마법사 (dcpromo.exe)는 Windows Server 2012부터 사용 되지 않습니다.  
+> 레거시 Active Directory Domain Services 설치 마법사 (dcpromo.exe)는 Windows Server 2012부터 더 이상 사용 되지 않습니다.  
 
 [#40; 및 Active Directory 도메인 서비스 설치 수준 100 & #41;](../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md), UI 프로시저 AD DS 서버를 설치 하려면 역할 추가 마법사를 시작 하는 방법을 보여 줍니다 역할 이진 파일 및 다음 도메인 컨트롤러 설치를 완료 하는 Active Directory 도메인 서비스 구성 마법사를 실행 합니다. Windows PowerShell 예제에는 AD DS 배포 cmdlet을 사용하여 두 단계를 모두 완료하는 방법을 보여 줍니다.  
   
 ## <a name="BKMK_NewAdprep"></a>Adprep.exe 통합
 
-Windows Server 2012 부터는 Adprep.exe 버전이 하나만 있기 (32 비트 버전이 adprep32.exe). Adprep 명령은 기존 Active Directory 도메인 또는 포리스트를 Windows Server 2012를 실행 하는 도메인 컨트롤러를 설치할 때 필요에 따라 자동으로 실행 됩니다.  
+Windows Server 2012 부터는 Adprep.exe 버전이 하나 뿐입니다 (32 비트 버전인 adprep32.exe는 없음). Adprep 명령은 Windows Server 2012를 실행 하는 도메인 컨트롤러를 기존 Active Directory 도메인 또는 포리스트에 설치할 때 필요에 따라 자동으로 실행 됩니다.  
   
-adprep 작업이 자동으로 실행되더라도 Adprep.exe를 별도로 실행할 수 있습니다. 예를 들어 AD DS를 설치하는 사용자가 Adprep /forestprep을 실행하는 데 필요한 Enterprise Admins 그룹의 구성원이 아닌 경우 이 명령을 별도로 실행해야 할 수 있습니다. 하지만 adprep.exe를 실행 중 업그레이드 하려는 경우 첫 번째 Windows Server 2012 도메인 컨트롤러 해야 (즉, 전체 계획 업그레이드 Windows Server 2012를 실행 하는 도메인 컨트롤러의 운영 체제).  
+adprep 작업이 자동으로 실행되더라도 Adprep.exe를 별도로 실행할 수 있습니다. 예를 들어 AD DS를 설치하는 사용자가 Adprep /forestprep을 실행하는 데 필요한 Enterprise Admins 그룹의 구성원이 아닌 경우 이 명령을 별도로 실행해야 할 수 있습니다. 하지만 첫 번째 Windows Server 2012 도메인 컨트롤러를 전체 업그레이드 하려는 경우 (즉, Windows Server 2012를 실행 하는 도메인 컨트롤러의 운영 체제를 전체 업그레이드 하려면) adprep.exe만 실행 하면 됩니다.  
   
 Adprep.exe는 Windows Server 2012 설치 디스크의 \support\adprep 폴더에 있습니다. Windows Server 2012 버전의 adprep은 원격으로 실행할 수 있습니다.  
   
-Windows Server 2012 버전의 adprep.exe는 64 비트 버전의 Windows Server 2008 이상을 실행 하는 모든 서버에서 실행할 수 있습니다. 이 경우 서버에는 도메인 컨트롤러를 추가할 도메인의 인프라 마스터 및 포리스트의 스키마 마스터에 대한 네트워크 연결이 설정되어 있어야 합니다. 이러한 역할 중 하나가 Windows Server 2003을 실행하는 서버에서 호스트된 경우 adprep을 원격으로 실행해야 합니다. adprep을 실행하는 서버는 도메인 컨트롤러일 필요는 없습니다. 서버를 도메인에 가입시키거나 작업 그룹에 포함할 수 있습니다.  
+Windows server 2012 버전의 adprep.exe는 64 비트 버전의 Windows Server 2008 이상을 실행 하는 모든 서버에서 실행할 수 있습니다. 이 경우 서버에는 도메인 컨트롤러를 추가할 도메인의 인프라 마스터 및 포리스트의 스키마 마스터에 대한 네트워크 연결이 설정되어 있어야 합니다. 이러한 역할 중 하나가 Windows Server 2003을 실행하는 서버에서 호스트된 경우 adprep을 원격으로 실행해야 합니다. adprep을 실행하는 서버는 도메인 컨트롤러일 필요는 없습니다. 서버를 도메인에 가입시키거나 작업 그룹에 포함할 수 있습니다.  
 
 > [!NOTE]  
-> Windows Server 2003을 실행 하는 서버에서 Windows Server 2012 버전의 adprep.exe 실행 하려고 하면 다음 오류가 표시 됩니다.  
+> Windows server 2003를 실행 하는 서버에서 Windows Server 2012 버전의 adprep.exe를 실행 하려고 하면 다음과 같은 오류가 나타납니다.  
 >   
 > Adprep.exe가 올바른 Win32 응용 프로그램이 아닙니다.  
 
@@ -94,7 +94,7 @@ Adprep.exe /forestprep /forest <forest name> /userdomain <user domain name> /use
 
 ### <a name="running-adprep-using-smartcard"></a>스마트 카드를 사용하여 adprep 실행
 
-Windows Server 2012 버전의 adprep.exe는 자격 증명으로 스마트 카드를 사용 하 여 작동 하지만 명령줄을 통해 스마트 카드 자격 증명을 지정 하기가 어렵습니다. 한 가지 방법은 PowerShell cmdlet Get-Credential을 통해 스마트 카드 자격 증명을 가져오는 것입니다. 그런 다음 반환된 PSCredential 개체의 사용자 이름을 사용합니다. 이 이름은 `@@...`로 표시됩니다. 암호는 스마트 카드의 PIN입니다.  
+Windows Server 2012 버전의 adprep.exe는 자격 증명으로 스마트 카드를 사용 하 여 작동 하지만 명령줄을 통해 스마트 카드 자격 증명을 지정 하는 쉬운 방법은 없습니다. 한 가지 방법은 PowerShell cmdlet Get-Credential을 통해 스마트 카드 자격 증명을 가져오는 것입니다. 그런 다음 반환된 PSCredential 개체의 사용자 이름을 사용합니다. 이 이름은 `@@...`로 표시됩니다. 암호는 스마트 카드의 PIN입니다.  
 
 /user가 지정된 경우 Adprep.exe를 실행하려면 /userdomain이 필요합니다. 스마트 카드 자격 증명의 경우 /userdomain이 스마트 카드에 표시된 기본 사용자 계정의 도메인이어야 합니다.  
 
@@ -102,33 +102,33 @@ Windows Server 2012 버전의 adprep.exe는 자격 증명으로 스마트 카드
 
 adprep /domainprep /gpprep 명령은 AD DS 설치 과정에서 실행되지 않습니다. 이 명령은 RSOP(정책 결과 집합) 계획 모드 기능에 필요한 사용 권한을 설정합니다. 이 명령에 대한 자세한 내용은 [Microsoft 기술 자료 문서 324392](https://support.microsoft.com/kb/324392)를 참조하세요. Active Directory 도메인에서 이 명령을 실행해야 하는 경우 AD DS 설치와 별도로 명령을 실행할 수 있습니다. Windows Server 2003 SP1 이상을 실행하는 도메인 컨트롤러를 배포하는 준비 과정으로 이 명령이 이미 실행된 경우에는 명령을 다시 실행하지 않아도 됩니다.  
 
-Adprep /domainprep /gpprep 실행 하지 않고 기존 도메인에 Windows Server 2012를 실행 하는 도메인 컨트롤러를 안전 하 게 추가할 수 있지만 RSOP 계획 모드가 제대로 작동 하지 않습니다.  
+Adprep/domainprep/gpprep을 실행 하지 않고 Windows Server 2012를 실행 하는 도메인 컨트롤러를 기존 도메인에 안전 하 게 추가할 수 있지만 RSOP 계획 모드가 제대로 작동 하지 않습니다.  
 
-## <a name="BKMK_PrereqCheck"></a>AD DS 설치에 대 한 필수 구성 요소 확인
+## <a name="BKMK_PrereqCheck"></a>설치 필수 구성 요소 유효성 검사 AD DS
 
 AD DS 설치 마법사는 설치 전에 다음 필수 구성 요소가 충족되었는지 확인합니다. 이를 통해 잠재적으로 설치를 방해할 수 있는 문제를 수정할 수 있습니다.  
   
 예를 들어 Adprep 관련 필수 구성 요소에는 다음 항목이 포함됩니다.  
 
-- Adprep 자격 증명을 확인 합니다. Adprep을 실행 하는 경우 설치 마법사는 사용자 필요한 Adprep 작업을 실행 하려면 충분 한 권한이 있는지 확인 합니다.  
-- 스키마 마스터 가용성 확인. 설치 마법사는 adprep /forestprep을 실행 해야 합니다. 확인, 스키마 마스터가 온라인 상태이 고 그렇지 않으면 실패를 확인 합니다.  
-- 인프라 마스터 사용 가능 여부 확인: Adprep /domainprep 실행 되도록 설치 마법사를 결정 하는 경우 인프라 마스터가 온라인 상태이 고 그렇지 않으면 실패를 확인 합니다.
+- Adprep 자격 증명 확인: Adprep을 실행 해야 하는 경우 설치 마법사는 사용자에 게 필요한 Adprep 작업을 실행할 수 있는 충분 한 권한이 있는지 확인 합니다.  
+- 스키마 마스터 가용성 검사: 설치 마법사에서 adprep/forestprep를 실행 해야 한다고 결정 하면 스키마 마스터가 온라인 상태 인지 확인 하 고 그렇지 않으면 실패 합니다.  
+- 인프라 마스터 가용성 검사: 설치 마법사에서 adprep/domainprep를 실행 해야 한다고 결정 한 경우 인프라 마스터가 온라인 상태 인지 확인 하 고 그렇지 않으면 실패 합니다.
 
 레거시 Active Directory 설치 마법사(dcpromo.exe)에서 가져온 기타 필수 구성 요소 확인으로는 다음과 같은 확인이 있습니다.  
 
-- 포리스트 이름 확인: 포리스트 이름을 유효 하 고 현재 존재를 확인 합니다.  
-- NetBIOS 이름 확인: NetBIOS 이름이 유효 하며 기존 이름과 충돌 하지 않는 제공 하는지 확인 합니다.  
-- 구성 요소 경로 확인: Active Directory 데이터베이스, 로그 및 SYSVOL에 대 한 경로가 올바른지에 사용할 수 있는 충분 한 디스크 공간이 있는지 확인 합니다.  
-- 자식 도메인 이름 확인 합니다. 부모 및 새로운 자식 도메인 이름이 유효한 지 고 기존의 도메인과 충돌 하지 않는 확인 합니다.  
-- 트리 도메인 이름 확인: 지정 된 트리 이름이 유효 하 고는 존재 하지 않는 현재를 확인 합니다.  
+- 포리스트 이름 확인: 포리스트 이름이 유효 하 고 현재 존재 하지 않는지 확인 합니다.  
+- NetBIOS 이름 확인: 제공 된 NetBIOS 이름이 유효 하 고 기존 이름과 충돌 하지 않는지 확인 합니다.  
+- 구성 요소 경로 확인: Active Directory 데이터베이스, 로그 및 SYSVOL에 대 한 경로가 유효 하 고 사용 가능한 디스크 공간이 충분 한지 확인 합니다.  
+- 자식 도메인 이름 확인: 부모 및 새 자식 도메인 이름이 유효 하 고 기존 도메인과 충돌 하지 않는지 확인 합니다.  
+- 트리 도메인 이름 확인: 지정 된 트리 이름이 유효 하 고 현재 존재 하지 않는지 확인 합니다.  
 
 ## <a name="BKMK_SystemReqs"></a>시스템 요구 사항
 
-Windows Server 2012에 대 한 시스템 요구 사항 Windows Server 2008 R2에서 변경 되지 않습니다. 자세한 내용은 [Windows Server 2008 R2 SP1 시스템 요구 사항](https://www.microsoft.com/windowsserver2008/en/us/system-requirements.aspx) (https://www.microsoft.com/windowsserver2008/en/us/system-requirements.aspx)합니다.  
+Windows server 2012에 대 한 시스템 요구 사항은 Windows 2008 Server 2008 r 2에서 변경 되지 않았습니다. 자세한 내용은 [Windows Server 2008 R2 SP1 시스템 요구 사항](https://www.microsoft.com/windowsserver2008/en/us/system-requirements.aspx) (https://www.microsoft.com/windowsserver2008/en/us/system-requirements.aspx) 을 참조 하세요.  
 
-일부 기능에는 추가 요구 사항이 포함될 수 있습니다. 예를 들어 가상 도메인 컨트롤러 복제 기능 필요는 PDC 에뮬레이터 Windows Server 2012 및 Hyper-v 역할이 설치 된 Windows Server 2012를 실행 하는 컴퓨터를 실행 합니다.  
+일부 기능에는 추가 요구 사항이 포함될 수 있습니다. 예를 들어 가상 도메인 컨트롤러 복제 기능을 사용 하려면 PDC 에뮬레이터에서 Windows Server 2012를 실행 하 고 Hyper-v 역할이 설치 된 Windows Server 2012를 실행 하는 컴퓨터를 실행 해야 합니다.  
 
-## <a name="BKMK_KnownIssues"></a>알려진된 문제
+## <a name="BKMK_KnownIssues"></a>알려진 문제
 
 이 섹션에는 Windows Server 2012의 AD DS 설치에 영향을 주는 알려진된 문제 중 일부를 나열 합니다. 그 밖의 알려진 문제는 [도메인 컨트롤러 배포 문제 해결](../../ad-ds/deploy/Troubleshooting-Domain-Controller-Deployment.md)을 참조하십시오.  
 
@@ -164,7 +164,7 @@ Windows Server 2012에 대 한 시스템 요구 사항 Windows Server 2008 R2에
    ```
 
 - Ctrl + C를 입력하여 Install-ADDSForest cmdlet을 취소할 수 있습니다. 취소 작업은 설치를 중지하며 서버 상태에 대한 모든 변경 사항을 되돌립니다. 단, 취소 명령을 실행하고 나면 컨트롤이 Windows PowerShell로 반환되지 않으며 cmdlet이 무기한 정지될 수 있습니다.  
-- **스마트 카드 자격 증명을 사용 하 여 추가 도메인 컨트롤러의 설치는 대상 서버를 설치 하기 전에 도메인에 가입 되어 있지 않으면 실패 합니다.**  
+- **설치 하기 전에 대상 서버가 도메인에 가입 되지 않은 경우 스마트 카드 자격 증명을 사용 하 여 추가 도메인 컨트롤러를 설치 하지 못합니다.**  
 
    이 경우 반환된 오류 메시지는 다음과 같습니다.  
 
@@ -172,12 +172,12 @@ Windows Server 2012에 대 한 시스템 요구 사항 Windows Server 2008 R2에
 
    대상 서버를 도메인에 가입시킨 후 스마트 카드를 사용하여 설치를 수행하면 설치가 제대로 수행됩니다.  
   
-- **32비트 프로세스에서 ADDSDeployment 모듈이 실행되지 않습니다.** 스크립트는 ADDSDeployment 나타냅니다 오류와 함께 실패할 수 있습니다 ADDSDeployment cmdlet 및 네이티브 64 비트 프로세스를 지원 하지 않는 다른 모든 cmdlet을 포함 하는 스크립트를 사용 하 여 Windows Server 2012의 배포 및 구성을 자동화 하는 경우 cmdlet은 찾을 수 없습니다.  
+- **32비트 프로세스에서 ADDSDeployment 모듈이 실행되지 않습니다.** ADDSDeployment cmdlet 및 기본 64 비트 프로세스를 지원 하지 않는 다른 모든 cmdlet을 포함 하는 스크립트를 사용 하 여 Windows Server 2012의 배포 및 구성을 자동화 하는 경우 ADDSDeployment를 나타내는 오류와 함께 스크립트가 실패할 수 있습니다. cmdlet을 찾을 수 없습니다.  
 
    이 경우 기본 64비트 프로세스를 지원하지 않는 cmdlet과 별도로 ADDSDeployment cmdlet을 실행해야 합니다.  
 
-- 복원 파일 시스템 이라는 Windows Server 2012의 새로운 파일 시스템이 있습니다. ReFS(복원 파일 시스템)로 포맷된 데이터 볼륨에 Active Directory 데이터베이스, 로그 파일 또는 SYSVOL을 저장하지 마십시오. ReFS에 대 한 자세한 내용은 참조 하세요. [Windows 용 차세대 파일 시스템 빌드: ReFS](http://blogs.msdn.com/b/b8/archive/2012/01/16/building-the-next-generation-file-system-for-windows-refs.aspx).  
-- 서버 관리자에서 Server Core 설치에서 AD DS 또는 기타 서버 역할을 실행 하 고 Windows Server 2012로 업그레이드 하는 서버 이벤트 및 상태가 예상 대로 수집 하는 경우에 서버 역할이 빨간색 상태로 나타날 수 있습니다. Windows Server 2012 영향이 있을 수 있습니다 예비 릴리스의 Server Core 설치를 실행 하는 서버입니다.  
+- 복원 파일 시스템 이라는 Windows Server 2012에는 새로운 파일 시스템이 있습니다. ReFS(복원 파일 시스템)로 포맷된 데이터 볼륨에 Active Directory 데이터베이스, 로그 파일 또는 SYSVOL을 저장하지 마십시오. ReFS에 대 한 자세한 내용은 Windows 용 차세대 파일 시스템 구축을 참조 @no__t 하세요. ReFS @ no__t-0.  
+- 서버 관리자에서 Server Core 설치에서 AD DS 또는 기타 서버 역할을 실행 하 고 Windows Server 2012로 업그레이드 하는 서버 이벤트 및 상태가 예상 대로 수집 하는 경우에 서버 역할이 빨간색 상태로 나타날 수 있습니다. 예비 릴리스 Windows Server 2012의 Server Core 설치를 실행 하는 서버에도 영향을 줄 수 있습니다.  
 
 ### <a name="active-directory-domain-services-installation-hangs-if-an-error-prevents-critical-replication"></a>오류로 인해 중요한 복제가 수행되지 않는 경우 Active Directory 도메인 서비스 설치가 정지됩니다.
 
@@ -230,7 +230,7 @@ Windows Server 2012에 대 한 시스템 요구 사항 Windows Server 2008 R2에
 
    로컬 관리자 계정 및 암호 지정으로 인해 오류가 발생한 경우 복구하려면 운영 체제를 다시 설치하고, 설치를 완료하지 못한 도메인 컨트롤러 계정에 대해 [메타데이터 정리를 수행](https://technet.microsoft.com/library/cc816907(WS.10).aspx) 한 다음, 도메인 관리자 자격 증명을 사용하여 AD DS 설치를 다시 시도해야 합니다. 서버를 다시 시작하는 것으로는 이 오류가 해결되지 않습니다. 서버에서는 설치가 성공적으로 완료되지 않은 경우에도 AD DS가 설치된 것으로 나타내기 때문입니다.  
 
-### <a name="BKMK_nonnormalDNSNameWarning"></a>Active Directory Domain Services 구성 마법사에서 정규화 되지 않은 DNS 이름을 지정 하는 경우 경고를 표시합니다
+### <a name="BKMK_nonnormalDNSNameWarning"></a>Active Directory Domain Services 구성 마법사는 정규화 되지 않은 DNS 이름이 지정 된 경우 경고를 표시 합니다.
 
 새 도메인이나 포리스트를 만들 때 정규화되지 않은 다국어 문자를 포함하는 DNS 도메인 이름을 지정하는 경우 Active Directory Domain Services 구성 마법사에는 이름에 대한 DNS 쿼리가 실패할 수 있다는 경고가 표시됩니다. DNS 도메인 이름이 배포 구성 페이지에서 지정된 경우에도 나중에 마법사의 필수 구성 요소 확인 페이지에 경고가 표시됩니다.  
 

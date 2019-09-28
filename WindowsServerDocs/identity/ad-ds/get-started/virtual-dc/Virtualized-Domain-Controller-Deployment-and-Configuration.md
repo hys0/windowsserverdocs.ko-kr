@@ -7,14 +7,14 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 059bb3c1b15afdc579ba048b8bbb02ed185f3d42
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: be2c919e4379cf615fe25d68446855229ace87dd
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67280951"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71390700"
 ---
 # <a name="virtualized-domain-controller-deployment-and-configuration"></a>가상화된 도메인 컨트롤러 배포 및 구성
 
@@ -62,9 +62,9 @@ Windows Server 2012 도메인 컨트롤러를 사용하려면 Windows Server 201
 |||  
 |-|-|  
 |**가상화 제품**|**가상화 된 도메인 컨트롤러 및 VMGID 지원**|  
-|**Hyper-v 기능을 사용 하 여 Microsoft Windows Server 2012 서버**|예|  
+|**Hyper-v 기능이 포함 된 Microsoft Windows Server 2012 서버**|예|  
 |**Microsoft Windows Server 2012 Hyper-V Server**|예|  
-|**하이퍼-V 클라이언트를 사용 하 여 Microsoft Windows 8 기능**|예|  
+|**Microsoft Windows 8 (Hyper-v 클라이언트 기능 포함)**|예|  
 |**Windows Server 2008 R2 및 Windows Server 2008**|아니요|  
 |**타사 가상화 솔루션**|공급업체에 문의|  
   
@@ -91,7 +91,7 @@ Microsoft에서는 Windows 7 Virtual PC, Virtual PC 2007, Virtual PC 2004 및 Vi
 >   
 > 스냅샷을 복원하면 스냅샷 후 해당 도메인 컨트롤러에서 발생한 이전에 복제되지 않은 변경 내용이 영구적으로 손실됩니다. 안전 복원은 실수로 인한 도메인 컨트롤러 격리 *만*방지하기 위해 신뢰할 수 없는 자동 복원을 구현합니다.  
   
-USN 버블 및 느린 개체에 대 한 자세한 내용은 참조 하세요. [오류 8606는 Active Directory 문제 해결 작업: "Insufficient attributes were 개체를 만드는 given"](https://support.microsoft.com/kb/2028495)합니다.  
+USN 버블 및 느린 개체에 대 한 자세한 내용은 @no__t-Active Directory 0Troubleshooting 오류을 참조 하십시오. "개체를 만들기 위해 충분 한 특성이 지정 되지 않았습니다." ](https://support.microsoft.com/kb/2028495)  
   
 ## <a name="BKMK_VDCCloning"></a>가상화 된 도메인 컨트롤러 복제  
 그래픽 도구를 사용하든 Windows PowerShell을 사용하든 가상화된 도메인 컨트롤러를 복제하려면 몇 가지 단계를 수행해야 합니다. 상위 수준에는 다음 세 단계가 있습니다.  
@@ -100,7 +100,7 @@ USN 버블 및 느린 개체에 대 한 자세한 내용은 참조 하세요. [�
   
 -   1단계: 하이퍼바이저가 VM-Generation ID를 지원하며, 따라서 복제를 지원하는지 확인  
   
--   2단계: PDC 에뮬레이터 역할 복제 하는 동안 복제 된 도메인 컨트롤러에서 Windows Server 2012를 실행 하 고 온라인 상태이 고 연결할 수 있는지는 도메인 컨트롤러에서 호스팅되는 확인 합니다.  
+-   2단계: PDC 에뮬레이터 역할이 Windows Server 2012를 실행 하 고 온라인 상태이 고 복제 하는 동안 복제 된 도메인 컨트롤러에서 연결할 수 있는 도메인 컨트롤러에 의해 호스트 되는지 확인 합니다.  
   
 **원본 도메인 컨트롤러 준비**  
   
@@ -268,7 +268,7 @@ New-ADDCCloneConfigFile
   
 ||||  
 |-|-|-|  
-|**ActiveDirectory**<br /><br />**Cmdlet**|**인수**|**설명**|  
+|**ActiveDirectory**<br /><br />**#A0**|**인수**|**보고**|  
 |**New-ADDCCloneConfigFile**|*<no argument specified>*|DSA 작업 디렉터리(기본값: %systemroot%\ntds)에 빈 DcCloneConfig.xml 파일을 만듭니다.|  
 ||-CloneComputerName|복제 DC 컴퓨터 이름을 지정합니다. 문자열 데이터 형식입니다.|  
 ||-Path|DcCloneConfig.xml을 만들 폴더를 지정합니다. 지정하지 않으면 DSA 작업 디렉터리(기본값: %systemroot%\ntds)에 기록합니다. 문자열 데이터 형식입니다.|  
@@ -451,7 +451,7 @@ Convert-vm
   
 ![가상화 된 DC 배포](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSConvertVhd.png)  
   
-#### <a name="BKMK_Offline"></a>오프 라인 시스템 디스크에 XML을 추가합니다.  
+#### <a name="BKMK_Offline"></a>오프 라인 시스템 디스크에 XML 추가  
 실행 중인 원본 DC에 Dccloneconfig.xml을 복사한 경우 업데이트된 dccloneconfig.xml 파일을 복사한/내보낸 오프라인 시스템 디스크에 즉시 복사해야 합니다. 이전에 Get-ADDCCloningExcludedApplicationList를 사용하여 검색한 설치된 응용 프로그램에 따라 CustomDCCloneAllowList.xml 파일을 디스크에 복사해야 할 수도 있습니다.  
   
 다음 위치에 DcCloneConfig.xml 파일을 포함할 수 있습니다.  
@@ -648,7 +648,7 @@ Remove-VMSnapshot
 > 컴퓨터를 가져올 때 정적 MAC 주소가 원본 도메인 컨트롤러에 할당되지 않았는지 확인해야 합니다. 정적 MAC 주소를 사용하는 원본 컴퓨터를 복제한 경우에는 이러한 복사한 컴퓨터에서 네트워크 트래픽을 올바르게 보내거나 받지 못합니다. 이 경우 새로운 고유한 정적 또는 동적 MAC 주소를 설정합니다. 다음 명령을 사용하여 VM에서 정적 MAC 주소를 사용하는지 확인할 수 있습니다.  
 > 
 > **Get-VM -VMName**   
->  ***test-vm* | Get-VMNetworkAdapter | fl \\** *  
+>  ***테스트-vm* | VMNetworkAdapter | fl \\** *  
   
 ### <a name="step-9---clone-the-new-virtual-machine"></a>9단계 - 새 가상 컴퓨터 복제  
 필요한 경우 복제를 시작하기 전에 오프라인 복제 원본 도메인 컨트롤러를 다시 시작합니다. 이와 상관없이 PDC 에뮬레이터가 온라인 상태인지 확인합니다.  
@@ -670,7 +670,7 @@ Start-VM
   
 복제가 완료된 후 컴퓨터가 다시 시작되고 나면 해당 컴퓨터가 도메인 컨트롤러가 되며, 정상적으로 로그온하여 정상 작동을 확인할 수 있습니다. 오류가 발생하면 조사를 위해 서버가 디렉터리 서비스 복원 모드로 시작하도록 설정됩니다.  
   
-## <a name="BKMK_VDCSafeRestore"></a>가상화 세이프 가드  
+## <a name="BKMK_VDCSafeRestore"></a>가상화 보호  
 가상화된 도메인 컨트롤러 복제와 달리 Windows Server 2012 가상화 세이프가드에는 구성 단계가 없습니다. 몇 가지 간단한 조건만 충족하면 사용자 개입 없이 기능이 작동합니다.  
   
 -   하이퍼바이저에서 VM-Generation ID를 지원합니다.  
@@ -714,10 +714,10 @@ Start-VM
 >   
 > [BurFlags 레지스트리 키를 사용하여 파일 복제 서비스 복제 집합 다시 초기화](https://support.microsoft.com/kb/290762)  
 >   
-> [DFSR 복제 된 SYSVOL (예: "D4/D2" FRS 용)에 대 한 신뢰할 수 있는 도메인과 신뢰할 수 없는 동기화를 강제 하는 방법](https://support.microsoft.com/kb/2218556)  
+> [DFSR 복제 SYSVOL에 대해 신뢰할 수 있고 신뢰할 수 없는 동기화를 강제로 적용 하는 방법 (예: FRS의 경우 "D4/D2")](https://support.microsoft.com/kb/2218556)  
   
 > [!WARNING]  
-> 같은 하이퍼바이저 호스트에서 포리스트 또는 도메인의 모든 도메인 컨트롤러를 실행 하지 마십시오. 하이퍼바이저가 오프라인 상태로 전환될 때마다 AD DS, Exchange, SQL 및 기타 엔터프라이즈 작업을 중단시키는 단일 실패 지점이 발생합니다. 이는 전체 도메인 또는 포리스트에 하나의 도메인 컨트롤러만 사용하는 것과 같습니다. 여러 플랫폼에서 여러 도메인 컨트롤러를 사용하면 중복성과 내결함성을 유지하는 데 도움이 됩니다.  
+> 포리스트 또는 도메인의 모든 도메인 컨트롤러를 같은 하이퍼바이저 호스트에서 실행 하지 마세요. 하이퍼바이저가 오프라인 상태로 전환될 때마다 AD DS, Exchange, SQL 및 기타 엔터프라이즈 작업을 중단시키는 단일 실패 지점이 발생합니다. 이는 전체 도메인 또는 포리스트에 하나의 도메인 컨트롤러만 사용하는 것과 같습니다. 여러 플랫폼에서 여러 도메인 컨트롤러를 사용하면 중복성과 내결함성을 유지하는 데 도움이 됩니다.  
   
 #### <a name="post-snapshot-replication"></a>스냅숏 후 복제  
 스냅샷 만들기가 인바운드로 복제된 이후에 로컬로 발생한 모든 변경 내용이 적용될 때까지 스냅샷을 복원하지 마세요. 다른 도메인 컨트롤러에서 복제를 통해 받지 못한 경우 발생하는 모든 변경 내용이 영구적으로 손실됩니다.  

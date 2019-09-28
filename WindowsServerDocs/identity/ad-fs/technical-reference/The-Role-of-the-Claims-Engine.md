@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 055f9baff9c20019493a54fbb92e5c53c199a5e3
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 4d227be18cd69d79f24edca96bd873afda3f2d2a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70865520"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71385452"
 ---
 # <a name="the-role-of-the-claims-engine"></a>클레임 엔진의 역할
 가장 높은 수준에서 Active Directory Federation Services \(AD FS\) 의 클레임 엔진은 페더레이션 서비스에 대 한\-클레임 요청을 처리 하 고 처리 하는 데만 사용 되는 규칙 기반 엔진입니다. 클레임 엔진은 구성한 모든 페더레이션 트러스트 관계에서 각 규칙 집합을 실행하고 출력 결과를 클레임 파이프라인에 전달하는 일을 담당하는 페더레이션 서비스 내 유일한 엔터티입니다.  

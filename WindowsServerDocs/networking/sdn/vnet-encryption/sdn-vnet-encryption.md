@@ -2,19 +2,19 @@
 title: 암호화 Virtual Network
 description: 가상 네트워크 암호화를 사용 하면 ' 암호화 사용 '으로 표시 된 서브넷 내에서 서로 통신 하는 가상 컴퓨터 간의 가상 네트워크 트래픽 암호화가 가능 합니다.
 manager: dougkim
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-hv-switch
 ms.topic: get-started-article
 ms.assetid: 7da0f509-7b02-4a0f-90fb-d97c83a2bc4e
 ms.author: pashort
 author: shortpatti
 ms.date: 08/08/2018
-ms.openlocfilehash: 056edc49d6089be5f9753d41ebd0cec7feacc0c5
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 7ecb2a1373efcf15aada451313e334e210c76d1e
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70870045"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71355530"
 ---
 # <a name="virtual-network-encryption"></a>암호화 Virtual Network
 

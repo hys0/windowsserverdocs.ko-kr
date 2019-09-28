@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 9505772dcb3ec10ff087856ff0d8cb3832b17c6e
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 09b7edcd843dfe65d7e2391612f029cf18b633ec
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66445720"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71357502"
 ---
 # <a name="deploy-a-central-access-policy-demonstration-steps"></a>중앙 액세스 정책 배포(시연 단계)
 
@@ -26,15 +26,15 @@ ms.locfileid: "66445720"
 
 |단계|설명  
 |---------|---------------  
-|[계획: 정책 및 배포에 필요한 구성에 대 한 필요를 식별 합니다.](Deploy-a-Central-Access-Policy--Demonstration-Steps-.md#BKMK_1.2)|정책의 필요성 및 배포에 필요한 구성 확인 
-|[구현: 구성 요소 및 정책](Deploy-a-Central-Access-Policy--Demonstration-Steps-.md#BKMK_1.3)|구성 요소 및 정책 구성  
+|[Plan: 정책에 대 한 필요성 및 배포에 필요한 구성 @ no__t-0 확인|정책의 필요성 및 배포에 필요한 구성 확인 
+|[ 구현: 구성 요소 및 정책 구성 @ no__t-0|구성 요소 및 정책 구성  
 |[중앙 액세스 정책 배포](Deploy-a-Central-Access-Policy--Demonstration-Steps-.md#BKMK_1.4)|정책을 배포합니다.  
-|[유지 관리 합니다. 변경 및 스테이지 정책](Deploy-a-Central-Access-Policy--Demonstration-Steps-.md#BKMK_1.5)|정책 변경 및 준비 합니다. 
+|[ 유지 관리: 정책 변경 및 준비 @ no__t-0|정책 변경 및 준비 합니다. 
 
 ## <a name="BKMK_1.1"></a>테스트 환경 설정  
-시작하기 전에 이 시나리오를 테스트할 랩을 설정해야 합니다. 랩을 설정 하는 단계에 자세히 설명 되어 [부록 b: 테스트 환경 설정](Appendix-B--Setting-Up-the-Test-Environment.md)합니다.  
+시작하기 전에 이 시나리오를 테스트할 랩을 설정해야 합니다. 랩을 설정 하는 단계는 [Appendix B에서 자세히 설명 합니다. 테스트 환경 설정 @ no__t-0.  
 
-## <a name="BKMK_1.2"></a>계획: 정책의 필요성 및 배포에 필요한 구성 확인  
+## <a name="BKMK_1.2"></a>옵션 정책의 필요성 및 배포에 필요한 구성 확인  
 이 섹션에서는 배포의 계획 단계에 도움이 되는 개략적인 단계를 제공합니다.  
 
 ||단계|예제|  
@@ -46,10 +46,10 @@ ms.locfileid: "66445720"
 |1.5|정책에 필요한 클레임 유형 및 그룹 결정|클레임 유형:<br /><br />-국가<br />-부서<br /><br />사용자 그룹:<br /><br />-FinanceAdmin<br />-FinanceException|  
 |1.6|이 정책을 적용할 서버 결정|모든 재무 파일 서버에 정책을 적용합니다.|  
 
-## <a name="BKMK_1.3"></a>구현: 구성 요소 및 정책 구성  
+## <a name="BKMK_1.3"></a>구현한 구성 요소 및 정책 구성  
 이 섹션에서는 재무 문서에 대한 중앙 액세스 정책을 배포하는 예제를 제공합니다.  
 
-|아니오|단계|예제|  
+|아니요|단계|예제|  
 |------|--------|-----------|  
 |2.1|클레임 유형 만들기|다음 클레임 유형을 만듭니다.<br /><br />-부서<br />-국가|  
 |2.2|리소스 속성 만들기|다음 리소스 속성을 만들고 사용하도록 설정합니다.<br /><br />-부서<br />-국가|  
@@ -62,7 +62,7 @@ ms.locfileid: "66445720"
 
 #### <a name="to-create-claim-types"></a>클레임 유형을 만들려면  
 
-1. 암호를 사용 하 여 contoso\administrator로에서 Hyper-v 관리자에서 DC1 서버를 열고 <strong>pass@word1</strong>합니다.  
+1. Hyper-v 관리자에서 DC1 서버를 열고 contoso\administrator로 로그온 한 후 암호 <strong>pass@word1</strong>을 사용 합니다.  
 
 2. Active Directory 관리 센터를 엽니다.  
 
@@ -85,7 +85,7 @@ ms.locfileid: "66445720"
 
 9. 위 단계를 반복합니다. **제안 값 추가** 대화 상자에서 **값** 및 **표시 이름** 필드에 **JP**를 입력하고 **확인**을 클릭합니다.  
 
-![솔루션 가이드](media/Deploy-a-Central-Access-Policy--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![solution guide](media/Deploy-a-Central-Access-Policy--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
 
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
 
@@ -117,11 +117,11 @@ ms.locfileid: "66445720"
 
 6.  에 **리소스 속성** 목록 Active Directory 관리 센터 탐색 창에서 지금 할 두 가지 사용 가능한 리소스 속성:  
 
-    -   국가  
+    -   Country  
 
     -   부서  
 
-![솔루션 가이드](media/Deploy-a-Central-Access-Policy--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![solution guide](media/Deploy-a-Central-Access-Policy--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
 
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
 
@@ -189,7 +189,7 @@ Add-ADResourcePropertyListMember "Global Resource Property List" -Members Depart
 
 11. **확인** 을 세 번 클릭하여 작업을 마치고 Active Directory 관리 센터로 돌아갑니다.  
 
-    ![솔루션 가이드](media/Deploy-a-Central-Access-Policy--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+    ![solution guide](media/Deploy-a-Central-Access-Policy--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
 
     다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
 
@@ -206,7 +206,7 @@ New-ADCentralAccessRule "Finance Documents Rule" -CurrentAcl $currentAcl -Resour
 
 
 > [!IMPORTANT]  
-> 위 예제 cmdlet에서 FinanceAdmin 그룹과 사용자의 SID(보안 식별자)는 만들 당시에 정해지므로 실제 예에서는 이와 다릅니다. 예를 들어 FinanceAdmins에 제공된 SID 값 (S-1-5-21-1787166779-1215870801-2157059049-1113)을 실제 배포에서 만들어야 하는 FinanceAdmin 그룹의 실제 SID로 바꿔야 합니다. 이 그룹의 SID 값을 조회를 해당 값을 변수에 할당 한 다음 변수를 여기서 사용 하려면 Windows PowerShell을 사용할 수 있습니다. 자세한 내용은 참조 하세요. [Windows PowerShell 팁: Sid 작업](https://go.microsoft.com/fwlink/?LinkId=253545)합니다.  
+> 위 예제 cmdlet에서 FinanceAdmin 그룹과 사용자의 SID(보안 식별자)는 만들 당시에 정해지므로 실제 예에서는 이와 다릅니다. 예를 들어 FinanceAdmins에 제공된 SID 값 (S-1-5-21-1787166779-1215870801-2157059049-1113)을 실제 배포에서 만들어야 하는 FinanceAdmin 그룹의 실제 SID로 바꿔야 합니다. 이 그룹의 SID 값을 조회를 해당 값을 변수에 할당 한 다음 변수를 여기서 사용 하려면 Windows PowerShell을 사용할 수 있습니다. 자세한 내용은 [Windows PowerShell 팁: Sid @ no__t-0을 사용 합니다.  
 
 이제 사용자가 동일한 국가와 동일한 부서의 문서에 액세스할 수 있는 중앙 액세스 규칙이 만들어졌습니다. 이 규칙은 FinanceAdmin 그룹에서 문서를 편집할 수 있도록 허용하고, FinanceException 그룹에서 문서를 읽을 수 있도록 허용합니다. 이 규칙은 재무로 분류된 문서에만 적용됩니다.  
 
@@ -224,7 +224,7 @@ New-ADCentralAccessRule "Finance Documents Rule" -CurrentAcl $currentAcl -Resour
 
 6. **확인**을 클릭하여 작업을 마칩니다. 이제 재무 정책이라는 중앙 액세스 정책이 만들어졌습니다.  
 
-   ![솔루션 가이드](media/Deploy-a-Central-Access-Policy--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+   ![solution guide](media/Deploy-a-Central-Access-Policy--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
 
    다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
 
@@ -292,7 +292,7 @@ New-ADCentralAccessRule "Finance Documents Rule" -CurrentAcl $currentAcl -Resour
 
 #### <a name="to-assign-a-central-access-policy-to-a-file-server"></a>파일 서버에 중앙 액세스 정책을 할당하려면  
 
-1. Hyper-V 관리자에서 FILE1 서버에 연결합니다. Contoso\administrator 암호로 사용 하 여 서버에 로그온 합니다. <strong>pass@word1</strong>합니다.  
+1. Hyper-V 관리자에서 FILE1 서버에 연결합니다. Contoso\administrator를 사용 하 여 서버에 로그온 합니다 ( <strong>pass@word1</strong>).  
 
 2. 관리자 권한 명령 프롬프트를 열고 **gpupdate /force**를 입력합니다. 그러면 그룹 정책 변경 내용이 서버에 적용됩니다.  
 
@@ -301,7 +301,7 @@ New-ADCentralAccessRule "Finance Documents Rule" -CurrentAcl $currentAcl -Resour
    > [!TIP]
    > 파일 서버에 로그온하여 전역 리소스 속성을 새로 고칠 수도 있습니다. 파일 서버에서 전역 리소스 속성을 새로 고치려면 다음을 수행합니다  
    > 
-   > 1. 암호를 사용 하 여 contoso\administrator로 파일 서버 FILE1에 로그온 <strong>pass@word1</strong>합니다.  
+   > 1. 암호 <strong>pass@word1</strong>을 사용 하 여 파일 서버 FILE1에 contoso\administrator로 로그온 합니다.  
    > 2. 파일 서버 리소스 관리자를 엽니다. 파일 서버 리소스 관리자를 열려면 **시작**을 클릭하고 **파일 서버 리소스 관리자**를 입력한 다음 **파일 서버 리소스 관리자**를 클릭합니다.  
    > 3. 파일 서버 리소스 관리자에서 클릭 **파일 분류 관리** , 를 마우스 오른쪽 단추로 클릭 **분류 속성** 클릭 하 고 **새로 고침**합니다.  
 
@@ -340,7 +340,7 @@ New-ADCentralAccessRule "Finance Documents Rule" -CurrentAcl $currentAcl -Resour
 
     유효한 액세스 창에 **액세스 제한 기준**이라는 마지막 열이 있습니다. 이 열은 주는 게이트 사용자의 권한에 영향을 알려 줍니다. 이 예제에서는 공유 및 NTFS 권한이 모든 사용자에게 모든 권한을 허용합니다. 그러나 중앙 액세스 정책이 이전에 구성한 규칙에 따라 액세스를 제한합니다.  
 
-## <a name="BKMK_1.5"></a>유지 관리 합니다. 정책 변경 및 준비  
+## <a name="BKMK_1.5"></a>관리 정책 변경 및 준비  
 
 ||||  
 |-|-|-|  
@@ -360,7 +360,7 @@ New-ADCentralAccessRule "Finance Documents Rule" -CurrentAcl $currentAcl -Resour
 
 #### <a name="to-enable-a-claim-for-devices"></a>장치에 클레임을 사용하려면  
 
-1. 암호를 사용 하 여 contoso\Administrator로에서 Hyper-v 관리자에서 DC1 서버를 열고 <strong>pass@word1</strong>합니다.  
+1. Hyper-v 관리자에서 DC1 서버를 열고 contoso\Administrator로 로그온 한 후 암호 <strong>pass@word1</strong>을 사용 합니다.  
 
 2. **도구** 메뉴에서 Active Directory 관리 센터를 엽니다.  
 
@@ -373,7 +373,7 @@ New-ADCentralAccessRule "Finance Documents Rule" -CurrentAcl $currentAcl -Resour
 
 #### <a name="to-create-a-staging-policy-rule-and-add-it-to-the-central-access-policy"></a>준비 정책 규칙을 만들고 중앙 액세스 정책에 추가하려면  
 
-1. 암호를 사용 하 여 contoso\Administrator로에서 Hyper-v 관리자에서 DC1 서버를 열고 <strong>pass@word1</strong>합니다.  
+1. Hyper-v 관리자에서 DC1 서버를 열고 contoso\Administrator로 로그온 한 후 암호 <strong>pass@word1</strong>을 사용 합니다.  
 
 2. Active Directory 관리 센터를 엽니다.  
 
@@ -402,7 +402,7 @@ New-ADCentralAccessRule "Finance Documents Rule" -CurrentAcl $currentAcl -Resour
 
 12. 클릭 **확인** 완료를 두 번입니다.  
 
-![솔루션 가이드](media/Deploy-a-Central-Access-Policy--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![solution guide](media/Deploy-a-Central-Access-Policy--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
 
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
 
@@ -423,11 +423,11 @@ Set-ADCentralAccessRule
 
 #### <a name="to-verify-the-results-of-the-staging-policy"></a>준비 정책의 결과를 확인하려면  
 
-1. 암호를 사용 하 여 contoso\administrator로에서 Hyper-v 관리자에서 FILE1 파일 서버에 연결 <strong>pass@word1</strong>합니다.  
+1. Hyper-v 관리자에서 파일 서버 FILE1에 연결 하 고 contoso\administrator로 로그온 한 후 <strong>pass@word1</strong>암호를 사용 합니다.  
 
 2. 명령 프롬프트 창을 열고 유형 **gpupdate /force**합니다. 그러면 그룹 정책 변경 내용이 서버에 적용됩니다.  
 
-3. Hyper-V 관리자에서 CLIENT1에 연결합니다. 현재 로그온된 사용자를 로그오프합니다. 가상 컴퓨터 CLIENT1을 다시 시작합니다. 그런 다음 컴퓨터에 로그온 contoso\EValle를 사용 하 여 pass@word1입니다.  
+3. Hyper-V 관리자에서 CLIENT1에 연결합니다. 현재 로그온된 사용자를 로그오프합니다. 가상 컴퓨터 CLIENT1을 다시 시작합니다. 그런 다음 contoso\EValle를 사용 하 여 컴퓨터에 로그온 pass@word1 합니다.  
 
 4. 바탕 화면 바로 가기를 두 번 클릭 \\\FILE1\Finance 문서입니다. EValle이 여전히 파일에 액세스할 수 있습니다. FILE1로 다시 전환합니다.  
 

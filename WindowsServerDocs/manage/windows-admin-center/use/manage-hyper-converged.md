@@ -7,13 +7,13 @@ author: daniellee-msft
 ms.author: jol
 ms.date: 03/01/2019
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
-ms.openlocfilehash: 5df035b448b80aa147067004c6a2f14aa03a9684
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.prod: windows-server
+ms.openlocfilehash: d692251e1ba0fef43e4eeee6f259f26f4347f3c0
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70869093"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71356880"
 ---
 # <a name="manage-hyper-converged-infrastructure-with-windows-admin-center"></a>Windows 관리 센터를 사용 하 여 하이퍼 수렴 형 인프라 관리
 
@@ -157,7 +157,7 @@ Windows 관리 센터에 클러스터를 추가 하려면 다음을 수행 합�
 
 Windows Admin Center는 Windows 이외에 추가 비용이 들지 않습니다.
 
-Windows 관리 센터 (별도 다운로드로 제공 됨)는 추가 비용 없이 windows Server 또는 Windows 10의 유효한 라이선스를 사용 하 여 사용할 수 있습니다. Windows 추가 EULA에 따라 라이선스가 부여 됩니다.
+유효한 Windows Server 또는 Windows 10 라이선스를 가지고 추가 비용 없이 Windows Admin Center(별도 다운로드를 통해 사용 가능)를 사용할 수 있습니다. Windows 추가 EULA에 의해 사용권이 부여됩니다.
 
 ### <a name="does-windows-admin-center-require-system-center"></a>Windows Admin Center에 System Center가 필요합니까?
 

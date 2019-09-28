@@ -1,19 +1,19 @@
 ---
 title: 서버 코어 관리
 description: Windows Server의 Server Core 설치를 관리 하는 방법 알아보기
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: lizap
 ms.author: elizapo
 ms.localizationpriority: medium
 ms.date: 12/18/2018
-ms.openlocfilehash: 78006dbbd2bdc569c15ac9967d8c5c542664312c
-ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
+ms.openlocfilehash: bcc4bf7b3fbdbff1aed2c8dd07b90346fe9eebab
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69546284"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71383427"
 ---
 # <a name="administer-a-server-core-server"></a>Server Core 서버 관리
 
@@ -80,12 +80,12 @@ DHCP를 사용 하도록 전환 해야 하는 경우 **Set DnsClientServerAddres
 서버 이름을 바꾸려면 다음 단계를 사용 합니다.
 
 1. **hostname** 또는 **ipconfig** 명령으로 현재 서버 이름을 확인합니다.
-2. **이름 바꾸기-컴퓨터-ComputerName \<new_name\>** 을 실행 합니다.
+2. **이름 바꾸기-컴퓨터-ComputerName \<new_name @ no__t-2**를 실행 합니다.
 3. 컴퓨터를 다시 시작합니다.
 
 ### <a name="activate-the-server"></a>서버 정품 인증
 
-**Slmgr.vbs – ipk\<productkey\>** 를 실행 합니다. 그런 다음 **slmgr.vbs – ato**를 실행 합니다. 활성화가 성공 하면 메시지가 표시 되지 않습니다.
+**Slmgr.vbs – ipk @ no__t-1productkey @ no__t-2**를 실행 합니다. 그런 다음 **slmgr.vbs – ato**를 실행 합니다. 활성화가 성공 하면 메시지가 표시 되지 않습니다.
 
 > [!NOTE]
 > 전화, [KMS (키 관리 서비스) 서버](../../get-started/server-2016-activation.md)를 사용 하 여 또는 원격으로 서버를 정품 인증할 수도 있습니다. 원격으로 정품 인증 하려면 원격 컴퓨터에서 다음 cmdlet을 실행 합니다. 
@@ -111,32 +111,32 @@ Windows PowerShell cmdlet 및 스크립트를 사용하여 Server Core 컴퓨터
 
 |                             태스크                              |                                                                                                                                                                                                                 명령                                                                                                                                                                                                                 |
 |---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|             로컬 관리자 암호 설정             |                                                                                                                                                                                                      **net 사용자 관리자**\*                                                                                                                                                                                                      |
-|                  도메인에 컴퓨터 가입                  |                                                                                                                                                       **netdom join% computername%** **/domain:\<domain\> /userd:\<domain\\username/passwordd:\>** \* <br> 컴퓨터를 다시 시작합니다.                                                                                                                                                        |
+|             로컬 관리자 암호 설정             |                                                                                                                                                                                                      **net 사용자 관리자** \*                                                                                                                                                                                                      |
+|                  도메인에 컴퓨터 가입                  |                                                                                                                                                       **netdom join% computername%** **/domain: \<domain @ no__t-3/userd: \<domain @ no__t-5username @ no__t-6/passwordd:** \* <br> 컴퓨터를 다시 시작합니다.                                                                                                                                                        |
 |              도메인 변경 여부 확인              |                                                                                                                                                                                                                 **set**                                                                                                                                                                                                                 |
-|                도메인에서 컴퓨터 제거                |                                                                                                                                                                                                   **netdom computername \<제거\>**                                                                                                                                                                                                    |
-|         로컬 관리자 그룹에 사용자 추가          |                                                                                                                                                                                       **net localgroup Administrators/add \<도메인\\사용자 이름\>**                                                                                                                                                                                       |
-|       로컬 관리자 그룹에서 사용자 제거       |                                                                                                                                                                                     **net localgroup Administrators/delete \<도메인\\사용자 이름\>**                                                                                                                                                                                      |
-|               로컬 컴퓨터에 사용자 추가                |                                                                                                                                                                                                **net user \<domain\username\> /add\***                                                                                                                                                                                                 |
-|               로컬 컴퓨터에 그룹 추가               |                                                                                                                                                                                                 **net localgroup \<그룹 이름\> /add**                                                                                                                                                                                                  |
-|          도메인 가입 컴퓨터 이름 변경          |                                                                                                                                                           **netdom renamecomputer% computername%/newname:\<새 컴퓨터 이름\> /userd:\<도메인\\사용자\> 이름/passwordd:** \*                                                                                                                                                            |
+|                도메인에서 컴퓨터 제거                |                                                                                                                                                                                                   **netdom remove \<computername @ no__t-2**                                                                                                                                                                                                    |
+|         로컬 관리자 그룹에 사용자 추가          |                                                                                                                                                                                       **net localgroup Administrators/add \<domain @ no__t-2username @ no__t-3**                                                                                                                                                                                       |
+|       로컬 관리자 그룹에서 사용자 제거       |                                                                                                                                                                                     **net localgroup Administrators/delete \<domain @ no__t-2username @ no__t-3**                                                                                                                                                                                      |
+|               로컬 컴퓨터에 사용자 추가                |                                                                                                                                                                                                **net user \<domain \ username @ no__t-2 \*/add**                                                                                                                                                                                                 |
+|               로컬 컴퓨터에 그룹 추가               |                                                                                                                                                                                                 **net localgroup \<group name @ no__t-2/add**                                                                                                                                                                                                  |
+|          도메인 가입 컴퓨터 이름 변경          |                                                                                                                                                           **netdom renamecomputer% computername%/newname: \< 새 컴퓨터 이름 @ no__t-2/userd: \<domain @ no__t-4username @ no__t-5/passwordd:** \*                                                                                                                                                            |
 |                 새 컴퓨터 이름 확인                 |                                                                                                                                                                                                                 **set**                                                                                                                                                                                                                 |
-|         작업 그룹의 컴퓨터 이름 변경         |                                                                                                                                                                **netdom renamecomputer \<currentcomputername\> /newname:\<newcomputername\>** <br>컴퓨터를 다시 시작합니다.                                                                                                                                                                 |
-|                페이징 파일 관리 사용 안 함                 |                                                                                                                                                                        **wmic computersystem 이름 = "\<computername\>" set 자동 managed파일 이름 = False**                                                                                                                                                                         |
-|                   페이징 파일 구성                   |                                                            **wmic pagefileset where name = "\<path/filename\>" set InitialSize =\<InitialSize\>, MaximumSize =\<maxsize\>** <br>여기서 *path/filename* 은 페이징 파일의 경로 및 이름입니다. *initialsize* 는 페이징 파일의 시작 크기 (바이트)이 고 *maxsize* 는 페이지 파일의 최대 크기 (바이트)입니다.                                                             |
-|                 고정 IP 주소로 변경                 | **ipconfig/all** <br>관련 정보를 기록 하거나 텍스트 파일로 리디렉션합니다 (**ipconfig/all > ipconfig .txt**).<br>**netsh 인터페이스 ipv4 표시 인터페이스**<br>인터페이스 목록이 있는지 확인 합니다.<br>**netsh interface ipv4 set address name \<ID from interface list\> source = 고정 주소 =\<기본 설정 IP\> 주소 게이트웨이\<= 게이트웨이 주소\>**<br>**Ipconfig/all** 을 실행 하 여 DHCP Enabled가 **No**로 설정 되어 있는지 확인 합니다. |
-|                   정적 DNS 주소를 설정 합니다.                   |   <strong>netsh interface ipv4 add dnsserver name =\<네트워크 인터페이스에 대 한 이름 또는 ID\> 를 추가\<합니다. 카드 주소 = 주 DNS\> 서버 인덱스의 IP 주소 = 1 <br></strong>netsh interface ipv4 add dnsserver name =\<보조 dns 서버\> 주소\<이름 = 보조 dns 서버\> 인덱스의 IP 주소 = 2\*\* <br> 서버를 더 추가 하려면 적절 하 게 반복 합니다.<br>**Ipconfig/all** 을 실행 하 여 주소가 올바른지 확인 합니다.   |
-| 고정 IP 주소에서 DHCP 제공 IP 주소로 변경 |                                                                                                                                      **netsh 인터페이스 ipv4 설정 주소 이름 =\<로컬 시스템\> 원본의 IP 주소 = DHCP** <br>**Ipconfig/all** 을 실행 하 여 DCHP Enabled가 **Yes**로 설정 되었는지 확인 합니다.                                                                                                                                      |
-|                      제품 키 입력                      |                                                                                                                                                                                                   **slmgr.vbs – ipk \<제품 키\>**                                                                                                                                                                                                    |
+|         작업 그룹의 컴퓨터 이름 변경         |                                                                                                                                                                **netdom renamecomputer \<currentcomputername @ no__t-2/NewName: \<newcomputername @ no__t-4** <br>컴퓨터를 다시 시작합니다.                                                                                                                                                                 |
+|                페이징 파일 관리 사용 안 함                 |                                                                                                                                                                        **wmic computersystem 이름 = "\<computername @ no__t-2" set 자동 Managed파일 이름 = False**                                                                                                                                                                         |
+|                   페이징 파일 구성                   |                                                            **wmic pagefileset where name = "\<path/filename @ no__t-2" set InitialSize = \<initialsize @ no__t-4, MaximumSize = \<maxsize @ no__t-6** <br>여기서 *path/filename* 은 페이징 파일의 경로 및 이름입니다. *initialsize* 는 페이징 파일의 시작 크기 (바이트)이 고 *maxsize* 는 페이지 파일의 최대 크기 (바이트)입니다.                                                             |
+|                 고정 IP 주소로 변경                 | **ipconfig/all** <br>관련 정보를 기록 하거나 텍스트 파일로 리디렉션합니다 (**ipconfig/all > ipconfig .txt**).<br>**netsh 인터페이스 ipv4 표시 인터페이스**<br>인터페이스 목록이 있는지 확인 합니다.<br>**netsh interface ipv4 set address name \< ID from interface list @ no__t-2 source = static address = \<preferred 설정 IP 주소 @ no__t-4 gateway = \<gateway address @ no__t-6**<br>**Ipconfig/all** 을 실행 하 여 DHCP Enabled가 **No**로 설정 되어 있는지 확인 합니다. |
+|                   정적 DNS 주소를 설정 합니다.                   |   <strong>netsh interface ipv4 add dnsserver name = \< 네트워크 인터페이스 카드의 이름 또는 ID @ no__t-2 address = =-주 DNS 서버의 IP 주소 @no__t = 1.4 인덱스 = 1 <br></strong>netsh interface ipv4 add dnsserver name = \< 보조 DNS 서버의 이름 = \> = 보조 DNS 서버의 IP 주소입니다. @ no__t-4 index = 2 @ no__t-5 @ no__t-6 <br> 서버를 더 추가 하려면 적절 하 게 반복 합니다.<br>**Ipconfig/all** 을 실행 하 여 주소가 올바른지 확인 합니다.   |
+| 고정 IP 주소에서 DHCP 제공 IP 주소로 변경 |                                                                                                                                      **netsh interface ipv4 set address name = \< 로컬 시스템의 IP 주소 (no__t source = DHCP)** <br>**Ipconfig/all** 을 실행 하 여 DCHP Enabled가 **Yes**로 설정 되었는지 확인 합니다.                                                                                                                                      |
+|                      제품 키 입력                      |                                                                                                                                                                                                   **slmgr.vbs – ipk \<product 키 @ no__t-2**                                                                                                                                                                                                    |
 |                  로컬로 서버 정품 인증                  |                                                                                                                                                                                                           **slmgr.vbs-ato**                                                                                                                                                                                                            |
-|                 원격으로 서버 정품 인증                  |                                            **cscript slmgr.vbs – ipk \<제품 키\<\>서버이름\<사용자 이름암호\>\>\<\>** <br>**cscript slmgr.vbs-ato \<servername\> \<사용자 이름\> 암호\<\>** <br>**Cscript slmgr.vbs** 를 실행 하 여 컴퓨터의 GUID를 가져옵니다. <br> **Cscript dli \<GUID\> 를 실행 합니다.** <br>라이선스 상태가 라이선스 **(활성화 됨)** 로 설정 되어 있는지 확인 합니다.                                             |
+|                 원격으로 서버 정품 인증                  |                                            **cscript slmgr.vbs – ipk \< 제품 키 @ no__t-2 @ no__t-3server name @ no__t-4 @ no__t-5username @ no__t-6 @ no__t-7password @ no__t-8** <br>**cscript ato \<servername @ no__t-2 \<username @ no__t-4 \<password @ no__t-6** <br>**Cscript slmgr.vbs** 를 실행 하 여 컴퓨터의 GUID를 가져옵니다. <br> **Dli \< guid @ no__t-2를** 실행 합니다. <br>라이선스 상태가 라이선스 **(활성화 됨)** 로 설정 되어 있는지 확인 합니다.                                             |
 
 ### <a name="networking-and-firewall"></a>네트워킹 및 방화벽
 
 |태스크|명령| 
 |----|-------|
-|프록시 서버를 사용 하도록 서버 구성|**netsh Winhttp set proxy \<servername\>:\<포트 번호\>** <br>**참고:** Server Core 설치는 연결을 허용 하기 위해 암호가 필요한 프록시를 통해 인터넷에 액세스할 수 없습니다.|
-|인터넷 주소에 프록시를 사용 하지 않도록 서버 구성|**netsh winhttp set proxy \<servername\>:\<포트 번호\> 바이패스 목록 = "\<local\>"**| 
+|프록시 서버를 사용 하도록 서버 구성|**netsh Winhttp set proxy \<servername @ no__t-2: \<port number @ no__t-4** <br>**참고:** Server Core 설치는 연결을 허용 하기 위해 암호가 필요한 프록시를 통해 인터넷에 액세스할 수 없습니다.|
+|인터넷 주소에 프록시를 사용 하지 않도록 서버 구성|**netsh winhttp set proxy \<servername @ no__t-2: \<port number @ no__t-4 바이패스-list = "\<local @ no__t"**| 
 |IPSEC 구성 표시 또는 수정|**netsh ipsec**| 
 |NAP 구성 표시 또는 수정|**netsh nap**| 
 |IP를 실제 주소 변환에 표시 하거나 수정 합니다.|**arp**| 
@@ -154,10 +154,10 @@ Windows PowerShell cmdlet 및 스크립트를 사용하여 Server Core 컴퓨터
 
 |                               태스크                                |                                                                                                                               명령                                                                                                                                |
 |-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|                         업데이트 설치                         |                                                                                                                    **wusa \<업데이트\>.msu/quiet**                                                                                                                    |
+|                         업데이트 설치                         |                                                                                                                    **wusa @no__t -1update\>.msu/quiet**                                                                                                                    |
 |                      설치된 업데이트 나열                       |                                                                                                                            **systeminfo**                                                                                                                            |
-|                         업데이트 제거                          |                                 **/f:\* \<update.exe를확장합니다.\>** <br>C:\test\으로 이동 하 여 \<텍스트\>편집기에서 업데이트 .xml을 엽니다.<br>**Install** 을 **Remove** 로 바꾸고 파일을 저장 합니다.<br>**pkgmgr.exe/n:\<업데이트\>.xml**                                 |
-|                    자동 업데이트 구성                    |          현재 설정인 **cscript%systemroot%\system32\scregedit.wsf \*/AU/v <br> \*에서 자동 업데이트를 사용 하도록 설정 하려면: \* \*cscript scregedit.exe. .wsf/AU 4** 를 확인 합니다. <br>자동 업데이트를 사용 하지 않도록 설정 하려면: **cscript%SYSTEMROOT%\SYSTEM32\SCREGEDIT.WSF/AU 1**          |
+|                         업데이트 제거                          |                                 **/f: \* @no__t -2update\>.msu c:\test를 확장 합니다.** <br>C:\test\으로 이동 하 여 텍스트 편집기에서 @no__t -0update\>.xml를 엽니다.<br>**Install** 을 **Remove** 로 바꾸고 파일을 저장 합니다.<br>**pkgmgr.exe/n: @no__t -1update\>.xml**                                 |
+|                    자동 업데이트 구성                    |          현재 설정을 확인 하려면: **cscript%SYSTEMROOT%\SYSTEM32\SCREGEDIT.WSF/AU/v \* @ no__t @ no__t-3 자동 업데이트를 사용 하도록 설정 하려면: \* @ no__t-5cscript scregedit.exe** .wsf/AU 4 <br>자동 업데이트를 사용 하지 않도록 설정 하려면: **cscript%SYSTEMROOT%\SYSTEM32\SCREGEDIT.WSF/AU 1**          |
 |                      오류 보고 사용                       | 현재 설정을 확인 하려면: **serverWerOptin/query** <br>상세 보고서를 자동으로 보내려면: **serverWerOptin 자세한/** <br>요약 보고서를 자동으로 보내려면: **serverWerOptin/summary** <br>오류 보고를 사용 하지 않도록 설정 하려면: **serverWerOptin/disable** |
 | CEIP(사용자 환경 개선 프로그램) 참여 |                                                     현재 설정을 확인 하려면: **serverCEIPOptin/query** <br>CEIP를 사용 하도록 설정 하려면: **serverCEIPOptin/enable** <br>CEIP를 사용 하지 않도록 설정 하려면: **serverCEIPOptin/disable**                                                      |
 
@@ -166,20 +166,20 @@ Windows PowerShell cmdlet 및 스크립트를 사용하여 Server Core 컴퓨터
 |                               태스크                               |                                                                                                                                                                                                             명령                                                                                                                                                                                                              |
 |------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |                    실행 중인 서비스 나열                     |                                                                                                                                                                                                  **sc 쿼리** 또는 **net start**                                                                                                                                                                                                   |
-|                         서비스 시작                          |                                                                                                                                                                                 **sc 시작 \<서비스 이름\>**  또는 **net start \<서비스 이름\>**                                                                                                                                                                                  |
-|                          서비스 중지                          |                                                                                                                                                                                  **sc 서비스 \<이름\>**  또는 **net stop \<서비스 이름\>**  중지                                                                                                                                                                                   |
+|                         서비스 시작                          |                                                                                                                                                                                 **sc start \<service name @ no__t** 또는 **net start \<service name @ no__t-5**                                                                                                                                                                                  |
+|                          서비스 중지                          |                                                                                                                                                                                  **sc stop \<service name @ no__t** 또는 **net stop \<service name @ no__t-5**                                                                                                                                                                                   |
 | 실행 중인 응용 프로그램 목록 및 관련 프로세스 검색 |                                                                                                                                                                                                           **tasklist**                                                                                                                                                                                                           |
 |                        작업 관리자 시작                        |                                                                                                                                                                                                           **taskmgr->networking**                                                                                                                                                                                                            |
-|    이벤트 추적 세션 및 성능 로그 만들기 및 관리    | 카운터, 추적, 구성 데이터 컬렉션 또는 API를 만들려면: **logman 만들기** <br>데이터 수집기 속성을 쿼리하려면: **logman query** <br>데이터 수집을 시작 하거나 중지 하려면: **logman\|start stop** <br>수집기를 삭제 하려면: **logman delete** <br> 수집기의 속성을 업데이트 하려면: **logman update** <br>Xml 파일에서 데이터 수집기 집합을 가져오거나 xml 파일로 내보내려면: **\|logman 가져오기 내보내기** |
+|    이벤트 추적 세션 및 성능 로그 만들기 및 관리    | 카운터, 추적, 구성 데이터 컬렉션 또는 API를 만들려면: **logman 만들기** <br>데이터 수집기 속성을 쿼리하려면: **logman query** <br>데이터 수집을 시작 하거나 중지 하려면: **logman start @ no__t-1stop** <br>수집기를 삭제 하려면: **logman delete** <br> 수집기의 속성을 업데이트 하려면: **logman update** <br>XML 파일에서 데이터 수집기 집합을 가져오거나 XML 파일로 내보내려면: **logman import @ no__t-1 export** |
 
 ### <a name="event-logs"></a>이벤트 로그
 
 |태스크|명령| 
 |----|-------|
 |이벤트 로그 나열|**wevtutil el**| 
-|지정 된 로그의 쿼리 이벤트|**wevtutil qe/f: 텍스트 \<로그 이름\>**| 
-|이벤트 로그 내보내기|**wevtutil epl \<로그 이름\>**| 
-|이벤트 로그 지우기|**wevtutil cl \<로그 이름\>**| 
+|지정 된 로그의 쿼리 이벤트|**wevtutil qe/f: text \<log name @ no__t-2**| 
+|이벤트 로그 내보내기|**wevtutil epl \<log name @ no__t-2**| 
+|이벤트 로그 지우기|**wevtutil cl \<log name @ no__t-2**| 
 
 
 ### <a name="disk-and-file-system"></a>디스크 및 파일 시스템
@@ -190,7 +190,7 @@ Windows PowerShell cmdlet 및 스크립트를 사용하여 Server Core 컴퓨터
 |           소프트웨어 RAID 관리           | 명령의 전체 목록을 보려면 **diskraid/?** 를 실행 하십시오.  |
 |        볼륨 탑재 지점 관리        | 전체 명령 목록은 **mountvol/?** 를 실행 합니다.  |
 |           볼륨 조각 모음            |  전체 명령 목록을 보려면 **defrag/?** 를 실행 하십시오.   |
-| NTFS 파일 시스템으로 볼륨 변환 |        **\<볼륨문자\> /fs: NTFS**         |
+| NTFS 파일 시스템으로 볼륨 변환 |        **convert \<volume letter @ no__t-2/FS: NTFS**         |
 |              파일 압축              |  전체 명령 목록을 보려면 **compact/?** 를 실행 하십시오.  |
 |          열린 파일 관리           | 전체 명령 목록을 보려면 **openfiles/?** 를 실행 하십시오. |
 |          VSS 폴더 관리          | 전체 명령 목록을 보려면 **vssadmin/?** 를 실행 하십시오.  |
@@ -201,5 +201,5 @@ Windows PowerShell cmdlet 및 스크립트를 사용하여 Server Core 컴퓨터
 
 |태스크|명령| 
 |----|-------|
-|새 하드웨어 장치의 드라이버 추가|% Homedrive%\\\<driver 폴더\>에 있는 폴더에 드라이버를 복사 합니다. **Pnputil-\\i-a% homedrive%\<driver folder\<\>\\driver\>.inf를 실행 합니다.**|
-|하드웨어 장치의 드라이버 제거|로드 된 드라이버 목록을 보려면 **sc query type = driver**를 실행 합니다. 그런 다음 **sc delete \<service_name\>**  를 실행 합니다.|
+|새 하드웨어 장치의 드라이버 추가|% Homedrive% \\ @ no__t-1driver 폴더 @ no__t-2에 있는 폴더에 드라이버를 복사 합니다. **Pnputil 실행-i-a% homedrive% \\ @ no__t-2driver 폴더 @ no__t-3 @ no__t-4 @ no__t-5driver\>.inf**|
+|하드웨어 장치의 드라이버 제거|로드 된 드라이버 목록을 보려면 **sc query type = driver**를 실행 합니다. 그런 다음 **sc delete \<service_name @ no__t-2를** 실행 합니다.|

@@ -1,7 +1,7 @@
 ---
 title: Hyper-v에 대 한 2 세대 가상 컴퓨터의 보안 설정
-description: 2 세대 가상 컴퓨터에 대 한 Hyper-v 관리자에서 사용할 수 있는 보안 설정을 설명합니다.
-ms.prod: windows-server-threshold
+description: 2 세대 가상 컴퓨터의 Hyper-v 관리자에서 사용할 수 있는 보안 설정에 대해 설명 합니다.
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -11,12 +11,12 @@ ms.assetid: 06ab4f5f-6b8e-4058-8108-76785aa93d4c
 author: larsiwer
 ms.author: kathydav
 ms.date: 10/04/2016
-ms.openlocfilehash: 90a2b7234ee55d8469b6e02ba3de3a0efc080a3e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 82544a58a8d46b3063605557be3c63cfa799e4fb
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59889504"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71364240"
 ---
 # <a name="generation-2-virtual-machine-security-settings-for-hyper-v"></a>Hyper-v에 대 한 2 세대 가상 컴퓨터의 보안 설정
 
@@ -30,7 +30,7 @@ Hyper-v 관리자에서 가상 컴퓨터의 보안 설정을 사용 하 여 데�
 
 만드는 방법을 가상 컴퓨터 호스트 보호자 서비스와 보다 안전한 알아보려면 다음 리소스를 참조 합니다.  
 
-- [패브릭 강화: Hyper-v (Ignite 비디오)에서 테 넌 트 암호 보호](https://go.microsoft.com/fwlink/?LinkId=746379)
+- [패브릭 강화: Hyper-v (Ignite video)에서 테 넌 트 비밀 보호 ](https://go.microsoft.com/fwlink/?LinkId=746379)
 - [보호 된 패브릭 및 보호 된 Vm](https://go.microsoft.com/fwlink/?LinkId=746381)
 
 ## <a name="secure-boot-setting-in-hyper-v-manager"></a>Hyper-v 관리자에서 부팅 설정을 보안합니다  
@@ -42,14 +42,14 @@ Hyper-v 관리자에서 가상 컴퓨터의 보안 설정을 사용 하 여 데�
 |템플릿 이름|설명|  
 |-----------------|---------------|  
 |Microsoft Windows|보안 부팅에는 Windows 운영 체제에 대 한 가상 컴퓨터를 선택 합니다.|  
-|UEFI 인증 기관|보안 부팅 Linux 배포 운영 체제에 대 한 가상 머신을 선택 합니다.|  
-|오픈 소스 보호 된 VM|이 템플릿에에 대 한 보안 부팅 하는 데 [보호 된 Vm Linux 기반](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-create-a-linux-shielded-vm-template)입니다.|
+|UEFI 인증 기관|Linux 배포 운영 체제에 대 한 가상 컴퓨터의 보안 부팅을 선택 합니다.|  
+|오픈 소스 보호 된 VM|이 템플릿은 [Linux 기반 보호 된 vm](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-create-a-linux-shielded-vm-template)에 대 한 보안 부팅에 활용 됩니다.|
 
 자세한 내용은 다음 항목을 참조하세요.  
 
 - [Windows 10 보안 개요](https://docs.microsoft.com/windows/security/threat-protection/overview-of-threat-mitigations-in-windows-10)  
-- [Hyper-v에 1 또는 2 세대 가상 머신을 만들어야 하나요?](../plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md)  
-- [Linux 및 Hyper-v에 FreeBSD 가상 컴퓨터](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)  
+- [Hyper-v에서 1 세대 또는 2 세대 가상 머신을 만들어야 하나요?](../plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md)  
+- [Hyper-v의 Linux 및 FreeBSD Virtual Machines](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)  
 
 ## <a name="encryption-support-settings-in-hyper-v-manager"></a>Hyper-v 관리자의 암호화 지원 설정
 
@@ -61,7 +61,7 @@ Hyper-v 관리자에서 가상 컴퓨터의 보안 설정을 사용 하 여 데�
 
 ### <a name="enable-isolated-user-mode"></a>격리 된 사용자 모드를 사용 하도록 설정
 
-선택 하는 경우 **신뢰할 수 있는 플랫폼 모듈을 사용 하도록 설정** Windows 10 기념일 업데이트 보다 이전 버전의 Windows 실행 하는 Hyper-v 호스트, 격리 된 사용자 모드를 설정 해야 합니다. Hyper-v 호스트는 실행된 Windows Server 2016 또는 Windows 10 1 주년 업데이트에 대 한이 작업을 수행할 필요가 없습니다 이상.
+선택 하는 경우 **신뢰할 수 있는 플랫폼 모듈을 사용 하도록 설정** Windows 10 기념일 업데이트 보다 이전 버전의 Windows 실행 하는 Hyper-v 호스트, 격리 된 사용자 모드를 설정 해야 합니다. Windows Server 2016 또는 Windows 10 기념일 업데이트 이상을 실행 하는 Hyper-v 호스트에 대해서는이 작업을 수행할 필요가 없습니다.
 
 격리 된 사용자 모드는 Hyper-v 호스트에서 가상 보안 모드 내에서 보안 응용 프로그램을 호스팅하는 런타임 환경입니다. TPM 칩을 가상의 상태를 보호 하는 가상 보안 모드 사용 됩니다.  
 
@@ -78,11 +78,11 @@ Hyper-v 관리자에서 가상 컴퓨터의 보안 설정을 사용 하 여 데�
 
     ```  
 
-Windows Server 2016 실행 되는 모든 호스트에 사용 하도록 설정 하는 가상 TPM이 있는 가상 컴퓨터를 마이그레이션할 수 있습니다, Windows 10 10586 이상 버전을 빌드합니다. 하지만 다른 호스트로 마이그레이션하는 경우에 시작할 수 없습니다. 새 호스트 가상 컴퓨터를 실행할 권한을 부여 하려면 해당 가상 컴퓨터에 대 한 키 보호기를 업데이트 해야 합니다. 자세한 내용은 [보호 된 패브릭 및 차폐 Vm](https://go.microsoft.com/fwlink/?LinkId=746381) 하 고 [Windows Server에서 Hyper-v에 대 한 시스템 요구 사항](../System-requirements-for-Hyper-V-on-Windows.md)합니다.  
+Windows Server 2016 실행 되는 모든 호스트에 사용 하도록 설정 하는 가상 TPM이 있는 가상 컴퓨터를 마이그레이션할 수 있습니다, Windows 10 10586 이상 버전을 빌드합니다. 하지만 다른 호스트로 마이그레이션하는 경우에 시작할 수 없습니다. 새 호스트 가상 컴퓨터를 실행할 권한을 부여 하려면 해당 가상 컴퓨터에 대 한 키 보호기를 업데이트 해야 합니다. 자세한 내용은 [Windows Server의 hyper-v에 대 한](../System-requirements-for-Hyper-V-on-Windows.md) [보호 된 패브릭 및 보호 된 vm](https://go.microsoft.com/fwlink/?LinkId=746381) 및 시스템 요구 사항을 참조 하세요.  
 
 ## <a name="security-policy-in-hyper-v-manager"></a>Hyper-v 관리자의 보안 정책  
 더 많은 가상 컴퓨터 보안을 사용 하 여는 **쉴 딩 사용** 콘솔 연결, PowerShell 직접, 일부 통합 구성 요소 등과 같은 관리 기능을 사용 하지 않도록 설정 하는 옵션입니다. 이 옵션을 선택 하는 경우 **보안 부팅**, **신뢰할 수 있는 플랫폼 모듈을 사용 하도록 설정**, 및 **암호화 상태와 VM 마이그레이션 트래픽을** 옵션 선택 및 적용 합니다.   
 
 차폐 가상 컴퓨터 호스트 보호자 서비스를 설정 하지 않고 로컬에서 실행할 수 있습니다. 하지만 다른 호스트로 마이그레이션하는 경우에 시작할 수 없습니다. 새 호스트 가상 컴퓨터를 실행할 권한을 부여 하려면 해당 가상 컴퓨터에 대 한 키 보호기를 업데이트 해야 합니다. 자세한 내용은 참조 [보호 된 패브릭 및 차폐 Vm](https://go.microsoft.com/fwlink/?LinkId=746381)합니다.  
 
-Windows Server의 보안에 대 한 자세한 내용은 참조 하세요. [보안 및 보증](../../../security/Security-and-Assurance.md)합니다.  
+Windows Server의 보안에 대 한 자세한 내용은 [보안 및 보증](../../../security/Security-and-Assurance.md)을 참조 하세요.  

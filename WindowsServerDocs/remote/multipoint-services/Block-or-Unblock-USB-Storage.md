@@ -1,8 +1,8 @@
 ---
 title: USB 저장소 차단 또는 차단 해제
 ms.custom: na
-description: 사용자가 MultiPoint 스테이션에서 USB 저장소를 사용 하지 못하도록 하는 방법에 알아봅니다.
-ms.prod: windows-server-threshold
+description: 사용자가 MultiPoint 스테이션에서 USB 저장소를 사용 하는 것을 방지 하는 방법 알아보기
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,19 +13,19 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: 4f2d5a20ee3245834ff11294514f9c5c08385429
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2740d68841f1250d9ba50ad6b4728098c72678a5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59888164"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71405116"
 ---
 # <a name="block-or-unblock-usb-storage"></a>USB 저장소 차단 또는 차단 해제
 사용자가 자신의 사용자 스테이션에서 USB 저장소를 사용하지 못하게 할 수 있습니다.  
   
 ## <a name="to-block-usb-storage-for-selected-stations"></a>선택한 스테이션에 대해 USB 저장소를 차단하려면  
 1. MultiPoint 대시보드에서 차단할 스테이션을 클릭합니다.  
-2. **차단** > **Block Selected desktop(s)**(선택한 데스크톱 차단)를 클릭합니다.   
+2. **차단** > **Block Selected desktop(s)** (선택한 데스크톱 차단)를 클릭합니다.   
   
 ## <a name="to-block-usb-storage-for-all-stations"></a>모든 스테이션에 대해 USB 저장소를 차단하려면  
 MultiPoint 대시보드를 열고 드롭다운 메뉴에서 **Block Storage on all stations**(모든 스테이션에서 저장소 차단)를 선택합니다.   

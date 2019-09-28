@@ -7,14 +7,14 @@ ms.author: billmath
 manager: mtillman
 ms.date: 11/14/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 586f2d7b73c6017f8b69103a09f6b38bb31f542d
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 12c47f98af24331b25355178370cc4cd28c0aa10
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70865798"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71358046"
 ---
 # <a name="configuring-alternate-login-id"></a>대체 로그인 ID 구성
 

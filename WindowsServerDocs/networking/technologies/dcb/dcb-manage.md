@@ -1,19 +1,19 @@
 ---
 title: 데이터 센터 브리징 관리 (DCB)
 description: 이 항목에서는 windows PowerShell 명령을 사용 하 여 Windows Server 2016에서 데이터 센터 브리징을 관리 하는 방법에 대 한 지침을 제공 합니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 1575cc7c-62a7-4add-8f78-e5d93effe93f
 manager: brianlic
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: fd6e8e5dd0bb4103011269473c3e1091739c775e
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: d635f96516040fcb30504f752c8194b0323c63f3
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70869803"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71405780"
 ---
 # <a name="manage-data-center-bridging-dcb"></a>데이터 센터 브리징 관리 (DCB)
 
@@ -109,7 +109,7 @@ DCB 구성에는 다음 단계가 포함 됩니다.
     SMB  ETS   30   4Global
       
 
-기본적으로 모든 802.1 p 값은 실제 링크 대역폭의 100%를 포함 하는 기본 트래픽 클래스에 매핑됩니다. **Get-netqostrafficclass** 명령은 802.1 p 우선 순위 값 4로 태그가 지정 된 패킷이 매핑되는 새 트래픽 클래스를 만듭니다. 전송 선택 알고리즘 \(tsa\) 는 하이 고 대역폭의 30%가 있습니다.
+기본적으로 모든 802.1 p 값은 실제 링크 대역폭의 100%를 포함 하는 기본 트래픽 클래스에 매핑됩니다. **Get-netqostrafficclass** 명령은 802.1 p 우선 순위 값 4로 태그가 지정 된 패킷이 매핑되는 새 트래픽 클래스를 만듭니다. 전송 선택 알고리즘 \(TSA @ no__t-1은 남은 대역폭의 30%입니다.
 
 최대 7 개의 새 트래픽 클래스를 만들 수 있습니다. 기본 트래픽 클래스를 포함 하 여 시스템에는 최대 8 개의 트래픽 클래스가 있을 수 있습니다. 그러나 DCB 가능 네트워크 어댑터는 하드웨어에서 많은 트래픽 클래스를 지원 하지 않을 수 있습니다. 네트워크 어댑터에서 수용할 수 있는 것 보다 더 많은 트래픽 클래스를 만들 때 해당 네트워크 어댑터에서 DCB를 사용 하도록 설정 하면 미니 포트 드라이버가 운영 체제에 오류를 보고 합니다. 오류는 이벤트 로그에 기록 됩니다.
 

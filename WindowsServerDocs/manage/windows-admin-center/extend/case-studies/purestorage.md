@@ -7,13 +7,13 @@ author: daniellee-msft
 ms.author: jol
 ms.date: 1/7/2019
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
-ms.openlocfilehash: cfd9d31d388b9acb1a4a4fa40b3975b235a8634b
-ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
+ms.prod: windows-server
+ms.openlocfilehash: c6ab75a2375368d7c87d9dffd6175eb611508dd5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69546613"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406952"
 ---
 # <a name="pure-storage-extension"></a>순수 저장소 확장
 
@@ -27,7 +27,7 @@ ms.locfileid: "69546613"
 
 ![순수 저장소 확장](../../media/extend-case-study-purestorage/purestorage-1.png)
 
-> <cite>"Microsoft는 Windows 관리 센터 내에서 직접 관리할 수 있도록 FlashArray 웹 인터페이스를 모방 하는 기능 집합을 통합 했습니다. 고객 및 파트너는 단일 창에서 두 가지 관리 도구를 사용 하 여 작업 해야 하는 이점을 누릴 수 있습니다. 단일 관리 이점 외에도 고객은 FlashArray에 연결 된 Windows Server를 컨텍스트 관리할 수 있습니다. "</cite>
+> <cite> "Windows 관리 센터 내에서 직접 관리할 수 있도록 FlashArray 웹 인터페이스를 모방 하는 기능 집합을 통합 했습니다. 고객 및 파트너는 단일 창에서 두 가지 관리 도구를 사용 하 여 작업 해야 하는 이점을 누릴 수 있습니다. 단일 관리 이점 외에도 고객은 FlashArray에 연결 된 Windows Server를 컨텍스트 관리할 수 있습니다. " </cite>
 >
 > --바 kz, 기술 감독 Microsoft Solutions & 통합, 순수 저장소
 

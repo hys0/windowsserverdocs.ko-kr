@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 1ec4165209b726609b1f9b2caeab02fb5072c756
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 91fd437895e765d4d73f3a200f76a5f8f96b52f2
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59873414"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407099"
 ---
 # <a name="scenario-central-access-policy"></a>시나리오: 중앙 액세스 정책
 
@@ -81,11 +81,11 @@ ms.locfileid: "59873414"
   
 -   [중앙 액세스 정책 배포 계획](assetId:///0311a76d-d66c-4ddb-ade6-af586a2ad82f)  
   
--   [중앙 액세스 정책 배포 &#40;데모 단계&#41;](Deploy-a-Central-Access-Policy--Demonstration-Steps-.md)  
+-   [중앙 액세스 정책 &#40;데모 단계 배포&#41;](Deploy-a-Central-Access-Policy--Demonstration-Steps-.md)  
   
--   [동적 Access Control: 시나리오 개요](Dynamic-Access-Control--Scenario-Overview.md)  
+-   [동적 액세스 제어: 시나리오 개요](Dynamic-Access-Control--Scenario-Overview.md)  
   
-## <a name="BKMK_NEW"></a>역할과이 시나리오에 포함 된 기능  
+## <a name="BKMK_NEW"></a>이 시나리오에 포함 된 역할 및 기능  
 다음 표에는 이 시나리오에 포함된 역할 및 기능이 나열되어 있으며, 이러한 역할 및 기능이 시나리오를 지원하는 방법에 대한 설명이 나와 있습니다.  
   
 |역할/기능|이 시나리오를 지원하는 방법|  

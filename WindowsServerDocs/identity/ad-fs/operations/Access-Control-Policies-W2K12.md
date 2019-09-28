@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 06/05/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 43a42c211557a41400fada17baaab6a0d5ab822a
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 517582661374c388d44362538da6933a916b0039
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70866099"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407757"
 ---
 # <a name="access-control-policies-in-windows-server-2012-r2-and-windows-server-2012-ad-fs"></a>Windows Server 2012 R2 및 Windows Server 2012의 Access Control 정책 AD FS
 
@@ -259,7 +259,7 @@ Windows 10 도메인 가입 및 로그온에 필요한 AD FS 끝점
 
   따라서 두 개의 주소 (예: 192.168.1.1 또는 10.0.0.1)만 일치 하는 예제는\\\b192입니다.\\168\\1. \ b&#124;\b10\\.0 .0\\\\  
 
-  이렇게 하면 원하는 수의 주소를 입력할 수 있는 방법이 제공 됩니다. 주소 범위 (예: 192.168.1.1 – 192.168.1.25)를 허용 해야 하는 경우 일치 하는 문자는 \b192\\.\\168\\. ( [1-9] &#124;1 [0-9]&#124;2 [0-5]) \b  
+  이렇게 하면 원하는 수의 주소를 입력할 수 있는 방법이 제공 됩니다. 주소 범위 (예: 192.168.1.1 – 192.168.1.25)를 허용 해야 하는 경우 일치 항목은 \b192 @ no__t-0.168 @ no__t-1.1 @ no__t-2와 같이 입력 해야 합니다. ([1-9]&#124;1 [0-9]&#124;2 [0-5]) \b  
 
   다음 사항에 유의하세요.  
 
@@ -279,9 +279,9 @@ Windows 10 도메인 가입 및 로그온에 필요한 AD FS 끝점
 
 - IP 주소의 다른 부분 일치를 시작 하지 않도록 괄호를 올바르게 배치 해야 합니다.  
 
-- 192 블록 일치를 사용 하 여 10 개의 블록 (\b10\\.0\\.0\\)에 대 한 유사한 식을 작성할 수 있습니다. [1-9] &#124;1 [0-4]) \b  
+- 192 블록의 일치를 사용 하 여 10 개의 블록에 대 한 유사한 식을 작성할 수 있습니다. \b10 @ no__t-0.0 @ no__t-1.0 @ no__t-2. ([1-9]&#124;1 [0-4]) \b  
 
-- 다음 식은 "192.168.1.1 ~ 25" 및 "10.0.0.1 ~ 14": \b192.\\\\168\\1. ( [1-9] &#124;1 [0-9]&#124;2 [0-5]) \b&#124;\b10\\.0\\.0\\. ( [1-9] &#124;1 [0-4]) \b  
+- 다음 식은 "192.168.1.1 ~ 25" 및 "10.0.0.1 ~ 14": \b192 @ no__t-0.168 @ no__t-1.1 @ no__t-2에 대 한 모든 주소와 일치 해야 합니다. ([1-9]&#124;1 [0-9]&#124;2 [0-5]) \b&#124;\b10 @ no__t-6.0 @ no__t @ no__t-8. ([1-9]&#124;1 [0-4]) \b  
 
 ### <a name="testing-the-expression"></a>식 테스트  
  Regex 식이 매우 복잡할 수 있으므로 regex 확인 도구를 사용 하는 것이 좋습니다. "온라인 regex 식 작성기"에 대해 인터넷 검색을 수행 하는 경우 샘플 데이터에 대해 식을 사용해 볼 수 있도록 하는 몇 가지 좋은 온라인 유틸리티를 찾을 수 있습니다.  

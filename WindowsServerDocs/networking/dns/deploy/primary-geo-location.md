@@ -1,28 +1,28 @@
 ---
 title: 주 서버를 사용한 지리적 위치 기반 트래픽 관리에 DNS 정책 사용
-description: 이 항목은 DNS 정책 시나리오 가이드에 대 한 Windows Server 2016의 일부
+description: 이 항목은 Windows Server 2016에 대 한 DNS 정책 시나리오 가이드의 일부입니다.
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: ef9828f8-c0ad-431d-ae52-e2065532e68f
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 110014adf1e23be574f23efc01e8a4d69397e547
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9c313b88e2502a99baf5962a1f2eb224d67a38dc
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59831984"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406179"
 ---
 # <a name="use-dns-policy-for-geo-location-based-traffic-management-with-primary-servers"></a>주 서버를 사용한 지리적 위치 기반 트래픽 관리에 DNS 정책 사용
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 가장 가까운 리소스의 IP 주소로 클라이언트 제공 클라이언트와를 클라이언트에서 연결 하려는, 리소스의 지리적 위치에 따라 DNS 클라이언트 쿼리에 응답 하도록 DNS 서버를 주 수 있도록 DNS 정책을 구성 하는 방법에 알아보려면이 항목을 사용할 수 있습니다.  
   
 >[!IMPORTANT]  
->이 시나리오에만 주 DNS 서버를 사용할 때 지리적 위치 기반 트래픽 관리에 대 한 DNS 정책을 배포 하는 방법을 보여 줍니다. 기본 및 보조 DNS 서버가 있는 경우에 지리적 위치 기반 트래픽 관리를 수행할 수 있습니다. 주-보조 배포가 있는 경우 먼저이 항목의 단계를 완료 하 고 다음 항목에서 제공 되는 단계를 완료 [기본보조배포와지리적위치기반트래픽관리에대한DNS정책을사용하여](primary-secondary-geo-location.md).
+>이 시나리오에만 주 DNS 서버를 사용할 때 지리적 위치 기반 트래픽 관리에 대 한 DNS 정책을 배포 하는 방법을 보여 줍니다. 기본 및 보조 DNS 서버가 있는 경우에 지리적 위치 기반 트래픽 관리를 수행할 수 있습니다. 주-보조 배포를 사용 하는 경우 먼저이 항목의 단계를 완료 한 후 [기본-보조 배포를 사용 하 여 지리적 위치 기반 트래픽 관리에 DNS 정책 사용](primary-secondary-geo-location.md)항목에서 제공 하는 단계를 완료 합니다.
 
 새 DNS 정책을 사용 하 여 클라이언트 쿼리 웹 서버의 IP 주소에 대 한 요청에 응답 하도록 DNS 서버를 허용 하는 DNS 정책을 만들 수 있습니다. 웹 서버 인스턴스는 서로 다른 물리적 위치에 있는 다른 데이터 센터에 있을 수 있습니다. DNS는 클라이언트 및 웹 서버 위치를 평가 하는 다음을 제공 하 여 클라이언트와 웹 서버 IP 주소는 클라이언트에 더 가까이 있는 물리적으로 웹 서버에 대 한 클라이언트 요청에 응답할 수 있습니다.  
 
@@ -56,7 +56,7 @@ Woodgrove.com 고객 웹 사이트에서 응답성이 뛰어난 환경을 얻을
   
 ![지리적 위치 기반 트래픽 관리 예제](../../media/DNS-Policy-Geo1/dns_policy_geo1.png)  
   
-##  <a name="bkmk_works"></a>DNS 확인 프로세스 이름을 어떻게 작동  
+##  <a name="bkmk_works"></a>DNS 이름 확인 프로세스의 작동 방식  
   
 이름 확인 프로세스 중 사용자 www.woodgrove.com에 연결 하려고 합니다. 그러면 사용자의 컴퓨터에서 네트워크 연결 속성에서 구성 된 DNS 서버에 전송 되는 DNS 이름 확인 요청 됩니다. 일반적으로 역할 캐싱 해결 프로그램을 로컬 ISP에서 제공 하는 DNS 서버 이며는 LDNS 라고 합니다.   
   

@@ -6,14 +6,14 @@ ms.author: billmath
 manager: mtillman
 ms.date: 02/21/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: cee87ce864e333b98e92fa64e939f2ead7edc156
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: fdadbefc138562246c72f7707b303d966bff0989
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70869191"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407192"
 ---
 # <a name="ad-fs-troubleshooting---certificates"></a>AD FS 문제 해결-인증서
 AD FS 올바르게 작동 하려면 다음 인증서가 필요 합니다.  이러한 설정 또는 구성이 제대로 구성 되지 않은 경우 문제가 발생할 수 있습니다.  

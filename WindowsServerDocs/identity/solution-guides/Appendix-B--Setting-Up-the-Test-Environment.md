@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 3ebe125ce7850797d786e7b564c98889cfb19927
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: af045545826269630af9327480cda59093d219df
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66445864"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407147"
 ---
 # <a name="appendix-b-setting-up-the-test-environment"></a>부록 B: 테스트 환경 설정
 
@@ -100,7 +100,7 @@ Windows Server 2008 R2 SP1을 실행하는 컴퓨터에 Hyper-V를 설치해야 
 
 ##### <a name="to-install-active-directory-domain-services"></a>Active Directory 도메인 서비스를 설치하려면  
 
-1. 가상 컴퓨터를 ID_AD_Network에 연결합니다. DC1에 관리자로 로그인 암호로 <strong>pass@word1</strong>합니다.  
+1. 가상 컴퓨터를 ID_AD_Network에 연결합니다. <strong>@No__t-1</strong>암호를 사용 하 여 d c 1에 관리자로 로그인 합니다.  
 
 2. 서버 관리자에서 **관리**, **역할 및 기능 추가**를 차례로 클릭합니다.  
 
@@ -122,7 +122,7 @@ Windows Server 2008 R2 SP1을 실행하는 컴퓨터에 Hyper-V를 설치해야 
 
 11. **배포 구성** 페이지에서 **새 포리스트 추가**를 클릭하고 루트 도메인의 이름 **contoso.com**을 입력한 후 **다음**을 클릭합니다.  
 
-12. 에 **도메인 컨트롤러 옵션** 페이지, 도메인 및 포리스트 기능 수준을 Windows Server 2012로 선택 하 고, DSRM 암호를 지정 <strong>pass@word1</strong>를 클릭 하 고 **다음**.  
+12. **도메인 컨트롤러 옵션** 페이지에서 도메인 및 포리스트 기능 수준을 Windows Server 2012로 선택 하 고 DSRM 암호 <strong>pass@word1</strong>를 지정한 후 **다음**을 클릭 합니다.  
 
 13. **DNS 옵션** 페이지에서 **다음**을 클릭합니다.  
 
@@ -205,7 +205,7 @@ Active Directory 관리 센터를 사용하여 다음 사용자를 만듭니다.
 
 2. 가상 컴퓨터를 ID_AD_Network에 연결합니다.  
 
-3. 가상 컴퓨터를 contoso.com 도메인에 가입 하 고 다음 암호를 사용 하 여 contoso\administrator로 FILE1에 로그인 <strong>pass@word1</strong>합니다.  
+3. Contoso.com 도메인에 가상 머신을 조인한 다음 <strong>pass@word1</strong>암호를 사용 하 여 FILE1에 contoso\administrator로 로그인 합니다.  
 
 #### <a name="install-file-services-resource-manager"></a>파일 서비스 리소스 관리자 설치  
 
@@ -245,13 +245,13 @@ IFilter를 다운로드하여 설치하려면 [Microsoft Office 2010 필터 팩]
 
 3. **메일 알림** 탭에서 SMTP 서버 이름 또는 IP 주소 아래에 메일 알림을 전달할 SMTP 서버의 호스트 이름 또는 IP 주소를 입력합니다.  
 
-4. 특정 관리자 할당량에 알리거나 아래에 있는 파일 차단 이벤트를 정기적으로 하려는 경우 **기본 수신 관리자**와 같은 각 전자 메일 주소를 입력 fileadmin@contoso.com합니다. 형식을 사용 하 여 account@domain, 및 세미콜론을 사용 하 여 여러 계정을 구분 합니다.  
+4. 특정 관리자에 게 할당량 또는 파일 차단 이벤트를 정기적으로 알리려면 **기본 관리자**에 게 fileadmin@contoso.com과 같은 각 전자 메일 주소를 입력 합니다. @No__t-0 형식을 사용 하 고 세미콜론을 사용 하 여 여러 계정을 구분 합니다.  
 
 #### <a name="create-groups-on-file1"></a>FILE1에서 그룹 만들기  
 
 ###### <a name="to-create-security-groups-on-file1"></a>FILE1에서 보안 그룹을 만들려면  
 
-1. 암호를 사용 하 여 contoso\administrator로 FILE1에 로그인: <strong>pass@word1</strong>합니다.  
+1. Contoso\administrator로 FILE1에 로그인 하 고 암호: <strong>pass@word1</strong>을 사용 합니다.  
 
 2. NT AUTHORITY\Authenticated Users를 **WinRMRemoteWMIUsers__** 그룹에 추가합니다.  
 
@@ -270,9 +270,9 @@ IFilter를 다운로드하여 설치하려면 [Microsoft Office 2010 필터 팩]
 
     -   **Word Document2.docx**: 이 문서에 테스트 콘텐츠를 추가 합니다.  
 
-    -   **Workbook1.xlsx**  
+    -   **Workbook1**  
 
-    -   **Workbook2.xlsx**  
+    -   **Workbook2**  
 
     -   바탕 화면에 Regular Expressions라는 폴더를 만듭니다. 이 폴더에 **RegEx-SSN**이라는 텍스트 문서를 만듭니다. 파일에 다음 콘텐츠를 입력한 다음 파일을 저장하고 닫습니다.   
         ^(?!000)([0-7]\d{2}|7([0-7]\d|7[012]))([ -]?)(?!00)\d\d\3(?!0000)\d{4}$  
@@ -282,7 +282,7 @@ IFilter를 다운로드하여 설치하려면 [Microsoft Office 2010 필터 팩]
 > [!NOTE]  
 > 중앙 액세스 정책은 시스템 또는 부팅 볼륨 C:에는 기본적으로 사용되지 않습니다.  
 
-#### <a name="BKMK_CS1"></a>Active Directory Rights Management Services를 설치 합니다.  
+#### <a name="BKMK_CS1"></a>Active Directory Rights Management Services 설치  
 서버 관리자를 통해 AD RMS(Active Directory Rights Management Services)와 모든 필수 기능을 추가합니다. 모든 기본값을 선택합니다.  
 
 ###### <a name="to-install-active-directory-rights-management-services"></a>Active Directory Rights Management Services를 설치하려면  
@@ -329,13 +329,13 @@ IFilter를 다운로드하여 설치하려면 [Microsoft Office 2010 필터 팩]
     > [!NOTE]  
     > Windows 내부 데이터베이스는 AD RMS 클러스터에서 둘 이상의 서버를 지원하지 않으므로 테스트 환경에서만 사용하는 것이 좋습니다. 프로덕션 배포에서는 별도의 데이터베이스 서버를 사용해야 합니다.  
 
-19. 에 **서비스 계정** 화면의 **도메인 사용자 계정을**, 클릭 **지정** 사용자 이름을 지정 합니다 (**contoso\rms**), 및 암호 (<strong>pass@word1</strong>)를 클릭 하 고 **확인**를 클릭 하 고 **다음**합니다.  
+19. **서비스 계정** 화면의 **도메인 사용자 계정**에서 **지정** 을 클릭 한 다음 사용자 이름 (**contoso\rms**) 및 암호 (<strong>pass@word1</strong>)를 지정 하 고 **확인**을 클릭 한 후 **다음**을 클릭 합니다.  
 
 20. **암호화 모드** 화면에서 **암호화 모드 2**를 클릭합니다.  
 
 21. **클러스터 키 저장소** 화면에서 **다음**을 클릭합니다.  
 
-22. 에 **클러스터 키 암호** 화면의 합니다 **암호** 및 **암호 확인** 상자를 입력 <strong>pass@word1</strong>를 클릭 하 고 **다음**합니다.  
+22. **클러스터 키 암호** 화면에서 **암호** 및 **암호 확인** 상자에 <strong>pass@word1</strong>를 입력 하 고 **다음**을 클릭 합니다.  
 
 23. **클러스터 웹 사이트** 화면에서 **기본 웹 사이트** 가 선택되어 있는지 확인하고 **다음**을 클릭합니다.  
 
@@ -347,7 +347,7 @@ IFilter를 다운로드하여 설치하려면 [Microsoft Office 2010 필터 팩]
 
 27. **확인** 화면에서 **설치**를 클릭합니다.  
 
-28. **결과** 화면에서 **닫기**를 클릭한 다음 **설치 진행률** 화면에서 **닫기**를 클릭합니다. 로그 오프 했다가 제공 된 암호를 사용 하 여 contoso\rms로 로그온 완료 되 면 (<strong>pass@word1</strong>).  
+28. **결과** 화면에서 **닫기**를 클릭한 다음 **설치 진행률** 화면에서 **닫기**를 클릭합니다. 완료 되 면 로그 오프 한 다음 제공 된 암호 (<strong>pass@word1</strong>)를 사용 하 여 contoso\rms로 로그온 합니다.  
 
 29. AD RMS 콘솔을 시작하고 **권한 정책 템플릿**으로 이동합니다.  
 
@@ -363,7 +363,7 @@ IFilter를 다운로드하여 설치하려면 [Microsoft Office 2010 필터 팩]
 
     **추가**를 클릭하고 **다음**을 클릭합니다.  
 
-31. 사용자 및 권한 섹션에서 클릭 **사용자 및 사용 권한**, 클릭 **추가**, 형식 <strong>financeadmin@contoso.com</strong>를 클릭 하 고 **확인**합니다.  
+31. 사용자 및 권한 섹션에서 **사용자 및 권한**을 클릭 하 고 **추가**를 클릭 한 다음 <strong>financeadmin@contoso.com</strong>을 입력 하 고 **확인**을 클릭 합니다.  
 
 32. **모든 권한**을 선택하고 **소유자(만든 이)에게 만료 없이 모든 권한을 부여** 를 선택된 상태로 둡니다.  
 
@@ -388,7 +388,7 @@ IFilter를 다운로드하여 설치하려면 [Microsoft Office 2010 필터 팩]
 
 ###### <a name="to-install-and-configure-an-ad-rms-cluster-in-windows-server-2012-using-windows-powershell"></a>Windows PowerShell을 사용하여 Windows Server 2012에서 AD RMS 클러스터를 설치하고 구성하려면  
 
-1. 암호를 사용 하 여 CONTOSO\Administrator로 로그온 합니다. <strong>pass@word1</strong>합니다.  
+1. <strong>@No__t-1</strong>암호를 사용 하 여 CONTOSO\Administrator로 로그온 합니다.  
 
    > [!IMPORTANT]  
    > AD RMS 서버 역할을 설치하려면 설치 관리자 계정(이 예제의 경우 CONTOSO\Administrator)에 AD RMS를 설치할 서버 컴퓨터의 로컬 Administrators 그룹과 Active Directory의 Enterprise Admins 그룹 모두에 대한 구성원 자격을 부여해야 합니다.  
@@ -475,7 +475,7 @@ IFilter를 다운로드하여 설치하려면 [Microsoft Office 2010 필터 팩]
 
    설치를 시작할지 확인하라는 메시지가 표시되면 "Y"를 입력합니다.  
 
-7. 로그 아웃 CONTOSO\Administrator로 로그 제공된 된 암호를 사용 하 여 CONTOSO\RMS로 ("pass@word1").  
+7. CONTOSO\Administrator로 로그 아웃 하 고 제공 된 암호 ("pass@word1")를 사용 하 여 CONTOSO\RMS로 로그온 합니다.  
 
    > [!IMPORTANT]  
    > AD RMS 서버를 관리하려면 로그온하여 서버를 관리하는 데 사용할 계정(이 예제의 경우 CONTOSO\RMS)에 AD RMS 서버 컴퓨터의 로컬 Administrators 그룹과 Active Directory의 Enterprise Admins 그룹 모두에 대한 구성원 자격을 부여해야 합니다.  
@@ -522,7 +522,7 @@ SRV1은 SMTP/POP3 메일 서버입니다. 액세스 거부 지원 시나리오�
 
    - 이름: File Administrator  
 
-   - 전자 메일 주소: fileadmin@contoso.com  
+   - 메일 주소: fileadmin@contoso.com  
 
    - 계정 유형: POP3  
 
@@ -530,7 +530,7 @@ SRV1은 SMTP/POP3 메일 서버입니다. 액세스 거부 지원 시나리오�
 
    - 보내는 메일 서버: SRV1의 고정 IP 주소  
 
-   - 사용자 이름: fileadmin@contoso.com  
+   - 사용자 이름:fileadmin@contoso.com  
 
    - 암호 저장: 선택  
 
@@ -554,7 +554,7 @@ SRV1은 SMTP/POP3 메일 서버입니다. 액세스 거부 지원 시나리오�
 
 ## <a name="BKMK_CF"></a>포리스트 시나리오에서 클레임을 배포 하기 위한 랩 설정  
 
-### <a name="BKMK_2.1"></a>DC2 용 가상 머신 빌드  
+### <a name="BKMK_2.1"></a>D c 2 용 가상 머신 빌드  
 
 -   Windows Server 2012 ISO에서 가상 컴퓨터를 빌드하십시오.  
 
@@ -567,11 +567,11 @@ SRV1은 SMTP/POP3 메일 서버입니다. 액세스 거부 지원 시나리오�
 >   
 > 고정 IPv4(IP 버전 4) 주소 및 DNS(Domain Name System) 클라이언트 설정을 사용하도록 모든 가상 컴퓨터 이미지(서버 및 클라이언트)를 구성해야 합니다. 자세한 내용은 [고정 IP 주소를 사용하도록 DNS 클라이언트 구성](https://go.microsoft.com/fwlink/?LinkId=150952)을 참조하세요.  
 
-### <a name="BKMK_2.2"></a>Adatum.com 이라는 새 포리스트 설정  
+### <a name="BKMK_2.2"></a>Adatum.com 라는 새 포리스트를 설정 합니다.  
 
 ##### <a name="to-install-active-directory-domain-services"></a>Active Directory 도메인 서비스를 설치하려면  
 
-1. 가상 컴퓨터를 ID_AD_Network에 연결합니다. DC2에 관리자로 로그인 암호로 <strong>Pass@word1</strong>합니다.  
+1. 가상 컴퓨터를 ID_AD_Network에 연결합니다. <strong>@No__t-1</strong>암호를 사용 하 여 d c 2에 관리자로 로그인 합니다.  
 
 2. 서버 관리자에서 **관리**, **역할 및 기능 추가**를 차례로 클릭합니다.  
 
@@ -596,7 +596,7 @@ SRV1은 SMTP/POP3 메일 서버입니다. 액세스 거부 지원 시나리오�
 
 11. **배포 구성** 페이지에서 **새 포리스트 추가**를 클릭하고 루트 도메인의 이름 **adatum.com**을 입력한 후 **다음**을 클릭합니다.  
 
-12. 에 **도메인 컨트롤러 옵션** 페이지, 도메인 및 포리스트 기능 수준을 Windows Server 2012로 선택 하 고, DSRM 암호를 지정 <strong>pass@word1</strong>를 클릭 하 고 **다음**.  
+12. **도메인 컨트롤러 옵션** 페이지에서 도메인 및 포리스트 기능 수준을 Windows Server 2012로 선택 하 고 DSRM 암호 <strong>pass@word1</strong>를 지정한 후 **다음**을 클릭 합니다.  
 
 13. **DNS 옵션** 페이지에서 **다음**을 클릭합니다.  
 
@@ -620,7 +620,7 @@ SRV1은 SMTP/POP3 메일 서버입니다. 액세스 거부 지원 시나리오�
 >   
 > 이러한 명령이 오류 없이 실행되면 포리스트에서 서로 통신할 수 있습니다. nslookup 오류에 대한 자세한 내용은 [NSlookup.exe 사용](https://support.microsoft.com/kb/200525)항목에서 문제 해결 섹션을 참조하세요.  
 
-### <a name="BKMK_2.22"></a>Contoso.com을 adatum.com의 트러스팅 포리스트로 설정  
+### <a name="BKMK_2.22"></a>Contoso.com을 트러스팅 포리스트로 adatum.com로 설정 합니다.  
 이 단계에서는 Adatum Corporation 사이트와 Contoso, Ltd. 사이트 간의 트러스트 관계를 만듭니다.  
 
 ##### <a name="to-set-contoso-as-a-trusting-forest-to-adatum"></a>Contoso를 Adatum의 트러스팅 포리스트로 설정하려면  
@@ -642,7 +642,7 @@ SRV1은 SMTP/POP3 메일 서버입니다. 액세스 거부 지원 시나리오�
 8.  계속해서 마법사의 지침을 따릅니다.  
 
 ### <a name="BKMK_2.4"></a>Adatum 포리스트에서 추가 사용자 만들기  
-암호를 사용 하 여 사용자 Jeff Low를 만들고 <strong>pass@word1</strong>를 회사 특성 값으로 할당 하 고 **Adatum**합니다.  
+암호 <strong>pass@word1</strong>인 사용자 Jeff Low를 만들고 값이 **Adatum**인 company 특성을 할당 합니다.  
 
 ##### <a name="to-create-a-user-with-the-company-attribute"></a>Company 특성을 가진 사용자를 만들려면  
 
@@ -662,7 +662,7 @@ SRV1은 SMTP/POP3 메일 서버입니다. 액세스 거부 지원 시나리오�
 
     ```  
 
-### <a name="BKMK_2.5"></a>Adataum.com에서 Company 클레임 유형 만들기  
+### <a name="BKMK_2.5"></a>Adataum.com에서 회사 클레임 유형 만들기  
 
 ##### <a name="to-create-a-claim-type-by-using-windows-powershell"></a>Windows PowerShell을 사용하여 클레임 유형을 만들려면  
 
@@ -697,7 +697,7 @@ SRV1은 SMTP/POP3 메일 서버입니다. 액세스 거부 지원 시나리오�
 
 5.  **리소스 속성** 목록에서 **회사**를 선택하고 마우스 오른쪽 단추를 클릭한 다음 **사용**을 선택합니다.  
 
-### <a name="BKMK_2.6"></a>Adatum.com에서 동적 Access Control을 사용 하도록 설정  
+### <a name="BKMK_2.6"></a>Adatum.com에서 동적 Access Control 사용  
 
 ##### <a name="to-enable-dynamic-access-control-for-adatumcom"></a>adatum.com에 동적 액세스 제어를 사용하려면  
 
@@ -717,7 +717,7 @@ SRV1은 SMTP/POP3 메일 서버입니다. 액세스 거부 지원 시나리오�
     gpupdate /force  
     ```  
 
-### <a name="BKMK_2.8"></a>Contoso.com에서 Company 클레임 유형 만들기  
+### <a name="BKMK_2.8"></a>Contoso.com에서 회사 클레임 유형 만들기  
 
 ##### <a name="to-create-a-claim-type-by-using-windows-powershell"></a>Windows PowerShell을 사용하여 클레임 유형을 만들려면  
 
@@ -752,7 +752,7 @@ SRV1은 SMTP/POP3 메일 서버입니다. 액세스 거부 지원 시나리오�
 
 7. **확인** 을 세 번 클릭하여 작업을 마치고 Active Directory 관리 센터로 돌아갑니다.  
 
-   ![솔루션 가이드](media/Appendix-B--Setting-Up-the-Test-Environment/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+   ![solution guide](media/Appendix-B--Setting-Up-the-Test-Environment/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
 
    다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
 
@@ -779,7 +779,7 @@ SRV1은 SMTP/POP3 메일 서버입니다. 액세스 거부 지원 시나리오�
     -Member "AdatumEmployeeAccessRule" `  
     ```  
 
-### <a name="BKMK_2.11"></a>그룹 정책을 통해 새 정책 게시  
+### <a name="BKMK_2.11"></a>그룹 정책를 통해 새 정책 게시  
 
 ##### <a name="to-apply-the-central-access-policy-across-file-servers-through-group-policy"></a>그룹 정책을 통해 파일 서버에서 중앙 액세스 정책을 적용하려면  
 
@@ -811,17 +811,17 @@ SRV1은 SMTP/POP3 메일 서버입니다. 액세스 거부 지원 시나리오�
 
 7.  그룹 정책 관리 편집기를 닫습니다. 이제 그룹 정책에 중앙 액세스 정책이 추가되었습니다.  
 
-### <a name="BKMK_2.12"></a>파일 서버에서 Earnings 폴더 만들기  
+### <a name="BKMK_2.12"></a>파일 서버에서 소득 폴더 만들기  
 FILE1에서 새 NTFS 볼륨을 만든 다음 D:\Earnings 폴더를 만듭니다.  
 
 > [!NOTE]  
 > 중앙 액세스 정책은 시스템 또는 부팅 볼륨 C:에는 기본적으로 사용되지 않습니다.  
 
-### <a name="BKMK_2.13"></a>분류를 설정 하 고 Earnings 폴더에 중앙 액세스 정책 적용  
+### <a name="BKMK_2.13"></a>등급을 설정 하 고 수익 폴더에 중앙 액세스 정책을 적용 합니다.  
 
 ##### <a name="to-assign-the-central-access-policy-on-the-file-server"></a>파일 서버에서 중앙 액세스 정책을 할당하려면  
 
-1. Hyper-V 관리자에서 FILE1 서버에 연결합니다. 암호를 사용 하 여 contoso\administrator로 로그인을 사용 하 여 서버에 로그인 <strong>pass@word1</strong>합니다.  
+1. Hyper-V 관리자에서 FILE1 서버에 연결합니다. Contoso\Administrator를 사용 하 여 서버에 로그인 하 고 <strong>pass@word1</strong>암호를 사용 합니다.  
 
 2. 관리자 권한 명령 프롬프트를 열고 **gpupdate /force**를 입력합니다. 그러면 그룹 정책 변경 내용이 서버에 적용됩니다.  
 

@@ -1,31 +1,31 @@
 ---
 title: 네트워킹의 새로운 기능
 description: 이 항목에서는 Windows Server 2016의 네트워킹에 대 한 새 기능 및 기술에 대 한 개요 정보 제공
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: get-started-article
 ms.assetid: 08fb7563-d319-48a9-b181-ca0ca3032c18
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 43ce6290f6559be7cb078032b79519d1681506d4
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: da2166d28edda5662797824d9b26ad930f51083c
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59829194"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406750"
 ---
 # <a name="whats-new-in-networking"></a>네트워킹의 새로운 기능
 
 >적용 대상: Windows Server 2016
 
 다음은 Windows Server 2016의 새로운 기능과 향상 된 네트워킹 기술입니다.  
-  이 항목에서는 Upd에는 다음 섹션이 포함 합니다.  
+  Upd이 항목에는 다음과 같은 섹션이 포함 되어 있습니다.  
   
--   [새 네트워킹 기능 및 기술](#bkmk_features)  
+-   [새로운 네트워킹 기능 및 기술](#bkmk_features)  
   
 -   [추가 네트워킹 기술에 대 한 새로운 기능](#bkmk_existing)  
   
-## <a name="bkmk_features"></a>새 네트워킹 기능 및 기술
+## <a name="bkmk_features"></a>새로운 네트워킹 기능 및 기술
 
 네트워킹 소프트웨어 정의 된 데이터 센터 (SDDC) 플랫폼의 기본적인 일부인 및 Windows Server 2016 조직에 대해 완벽 하 게 실현된 SDDC 솔루션으로 이동 하는 데 도움이 하는 새로운 기능과 향상 된 네트워킹 SDN (소프트웨어) 기술을 제공 합니다.  
   
@@ -91,7 +91,7 @@ DNS는 TCP/IP 네트워크에서 컴퓨터 및 네트워크 서비스의 이름�
   
 -   **DNS 클라이언트 서비스 바인딩을**합니다. Windows 10에서 DNS 클라이언트 서비스는 둘 이상의 네트워크 인터페이스를 사용 하 여 컴퓨터에 대 한 향상 된 지원을 제공합니다.  
   
-자세한 내용은 참조 하세요. [What's New in Windows Server 2016에서 DNS 클라이언트](dns/What-s-New-in-DNS-Client.md)  
+자세한 내용은 [Windows Server 2016에서 제공 되는 DNS 클라이언트의 새로운 기능](dns/What-s-New-in-DNS-Client.md) 을 참조 하세요.  
   
 ### <a name="bkmk_dnss"></a>DNS 서버  
 다음은 새로운 또는 향상 된 DNS 서버 기술입니다.  
@@ -105,7 +105,7 @@ DNS는 TCP/IP 네트워크에서 컴퓨터 및 네트워크 서비스의 이름�
   
 -   **응답 속도 제한 (RRL)** 합니다.  DNS 서버에 대 한 응답 속도 제한 하는 것이 가능 합니다. 이 작업을 수행 하 여 DNS 서버를 사용 하 여 DNS 클라이언트에 서비스 공격 거부를 시작 하는 악의적인 시스템의 가능성을 방지할 수 있습니다.  
   
--   **명명 된 엔터티 (있는지)의 DNS 기반 인증**합니다.   DNS 클라이언트에 어떤 CA (인증 기관)에서 도메인 이름에 대 한 인증서를 기대 해야 상태 정보를 제공 하도록 TLSA (전송 계층 보안 인증) 레코드를 사용할 수 있습니다. 이 방지 중간자 개입 공격 누군가가 수 자신의 웹 사이트를 가리키도록 DNS 캐시를 손상 하 고 다른 CA에서 발급 한 인증서를 제공 합니다.  
+-   **명명 된 엔터티 (있는지)의 DNS 기반 인증**합니다.   DNS 클라이언트에 어떤 CA (인증 기관)에서 도메인 이름에 대 한 인증서를 기대 해야 상태 정보를 제공 하도록 TLSA (전송 계층 보안 인증) 레코드를 사용할 수 있습니다. 이렇게 하면 누군가가 자체 웹 사이트를 가리키도록 DNS 캐시를 손상 시키고 다른 CA에서 발급 한 인증서를 제공할 수 있는 메시지 가로채기 (man-in-the-middle) 공격을 방지할 수 있습니다.  
   
 -   **알 수 없는 레코드 지원**합니다.   
      알 수 없는 레코드 기능을 사용 하 여 Windows DNS 서버에 의해 명시적으로 지원 되지 않는 레코드를 추가할 수 있습니다.  
@@ -116,17 +116,17 @@ DNS는 TCP/IP 네트워크에서 컴퓨터 및 네트워크 서비스의 이름�
 -   **Windows PowerShell 지원 개선**합니다.   
       새 Windows PowerShell cmdlet은 DNS 서버에 사용할 수 있습니다.  
   
-자세한 내용은 참조 하세요. [What's New in Windows Server 2016에서 DNS 서버](dns/What-s-New-in-DNS-Server.md)  
+자세한 내용은 [Windows server 2016에서 제공 되는 DNS 서버의 새로운 기능](dns/What-s-New-in-DNS-Server.md) 을 참조 하세요.  
   
 ## <a name="bkmk_GRE"></a>GRE 터널링  
 RAS 게이트웨이 이제 사이트 간 연결 및 게이트웨이 M + N 중복에 대 한 고가용성 캡슐화 GRE (Generic Routing) 터널을 지원합니다. GRE는 인터넷 프로토콜 네트워크를 통한 가상 지점 간 연결 내에서 다양한 네트워크 계층 프로토콜을 캡슐화할 수 있는 간단한 터널링 프로토콜입니다.  
   
-자세한 내용은 [Windows Server 2016에서 GRE 터널링](../remote/remote-access/ras-gateway/gre-tunneling-windows-server.md)합니다.  
+자세한 내용은 [Windows Server 2016의 GRE 터널링](../remote/remote-access/ras-gateway/gre-tunneling-windows-server.md)을 참조 하세요.  
   
 ## <a name="HNV"></a>Hyper-v 네트워크 가상화  
-Windows Server 2012에 도입 된, Hyper-v 네트워크 가상화 (HNV) 고객 네트워크 공유의 실제 네트워크 인프라의 가상화를 수 있습니다. 실제 네트워크 패브릭에서 필요한 최소한의 변화를 통해 HNV를 통해 서비스 공급자 배포 하 고 세 개의 클라우드에 걸쳐 아무 곳 이나 테 넌 트 작업을 마이그레이션하는 민첩성과: 서비스 공급자 클라우드, 프라이빗 클라우드 또는 Microsoft Azure 퍼블릭 클라우드입니다.  
+Windows Server 2012에 도입 된, Hyper-v 네트워크 가상화 (HNV) 고객 네트워크 공유의 실제 네트워크 인프라의 가상화를 수 있습니다. 실제 네트워크 패브릭에서 필요한 최소한의 변화를 통해 HNV를 통해 서비스 공급자 배포 하 고 세 개의 클라우드에 걸쳐 아무 곳 이나 테 넌 트 작업을 마이그레이션하는 민첩성과: 서비스 공급자 클라우드, 프라이빗 클라우드 또는 Microsoft Azure 공용 클라우드입니다.  
   
-자세한 내용은 참조 하세요. [What's New in Windows Server 2016에서 Hyper-v 네트워크 가상화](sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md)  
+자세한 내용은 [Windows Server 2016에서 제공 되는 Hyper-v 네트워크 가상화의 새로운 기능](sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md) 을 참조 하세요.  
   
 ## <a name="bkmk_ipam"></a>IPAM  
 IPAM 조직 네트워크의 IP 주소 및 DNS 인프라에 대 한 사용자 정의 가능한 관리 및 모니터링 기능을 제공합니다. IPAM을 사용 하 여 모니터링, 감사 및 동적 호스트 구성 프로토콜 (DHCP) 및 도메인 이름 시스템 (DNS)를 실행 하는 서버를 관리할 수 있습니다.  

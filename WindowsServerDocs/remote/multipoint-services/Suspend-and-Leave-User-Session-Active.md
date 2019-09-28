@@ -2,7 +2,7 @@
 title: 사용자 세션 일시 중단 및 활성 상태 유지
 description: 연결을 끊지 않고 MultiPoint 세션에서 사용자를 일시 중단 하는 방법을 알아봅니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: a7c94b9d1edd36efc8651e35dfabbc95239335cb
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 0ef9d98584df568438cc3c905a7c86cd58f53343
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871533"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71394930"
 ---
 # <a name="suspend-and-leave-user-session-active"></a>사용자 세션 일시 중단 및 활성 상태 유지
 사용자의 세션을 종료 하지 않으려는 경우 MultiPoint 서비스 시스템에서 사용자의 연결을 끊거나 일시 중단할 수 있습니다. 또한 관리자가 사용자 세션의 연결을 끊는 대신 사용자가 세션의 연결을 직접 끊을 수도 있습니다. 사용자 세션이 일시 중단 된 동안에는 컴퓨터가 종료 되거나 다시 시작 될 때까지 MultiPoint 서비스 시스템의 컴퓨터 메모리에서 세션이 활성 상태로 유지 됩니다. 컴퓨터가 종료되거나 다시 시작되면 일시 중단된 모든 세션이 종료되고 저장되지 않은 작업은 손실됩니다.  

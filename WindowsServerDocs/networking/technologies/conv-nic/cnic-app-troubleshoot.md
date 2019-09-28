@@ -1,19 +1,19 @@
 ---
 title: 수렴 형 NIC 구성 문제 해결
 description: 이 항목은 Windows Server 2016에 대 한 수렴 형 NIC 구성 가이드의 일부입니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 0bc6746f-2adb-43d8-a503-52f473833164
 manager: brianlic
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 0a732c91b1eaee870a8aeb6d33c5aa604bf4f2a7
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 297044397088bfb64b51e1553d3f69d5b933e81b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70870123"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71405894"
 ---
 # <a name="troubleshooting-converged-nic-configurations"></a>수렴 형 NIC 구성 문제 해결
 

@@ -1,9 +1,9 @@
 ---
 title: 3 단계 부하 분산 된 클러스터를 구성 합니다.
-description: 이 항목은 Windows Server 2016에서 클러스터에 원격 액세스 배포 가이드의 일부입니다.
+description: 이 항목은 Windows Server 2016의 클러스터에 원격 액세스 배포 가이드의 일부입니다.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-ras
@@ -12,25 +12,25 @@ ms.topic: article
 ms.assetid: f000066e-7cf8-4085-82a3-4f4fe1cb3c5c
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: aea8ce1e07b29be49761e33cbe92a1bf56c29f43
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: fb7dca9a0f7875936cbb30cbc9c5e9e0a7473237
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67282965"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71404641"
 ---
 # <a name="step-3-configure-a-load-balanced-cluster"></a>3 단계 부하 분산 된 클러스터를 구성 합니다.
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 서버 클러스터에 대 한 준비 된 후 단일 서버에 부하 분산을 구성, 필요한 인증서를 구성 하 고 클러스터를 배포 합니다.  
   
 |태스크|설명|  
 |----|--------|  
-|[3.1 IPv6 접두사를 구성 합니다.](#BKMK_Prefix)|회사 환경은 IPv6 + IPv4, IPv6 전용 또는 다음 단일 원격 액세스 서버에 DirectAccess 클라이언트 컴퓨터에 할당 된 IPv6 접두사 모든 클러스터의 서버에 충분히 큰지 확인 하십시오.|  
-|[3.2 로드 균형 조정 사용](#BKMK_NLB)|단일 원격 액세스 서버에 부하 분산을 사용 하도록 설정 합니다.|  
-|[3.3 IP-HTTPS 인증서를 설치 합니다.](#BKMK_InstallIPHTTP)|클러스터의 각 서버는 IP-HTTPS 연결을 인증 하려면 서버 인증서가 필요 합니다.  단일 원격 액세스 서버에서 IP-HTTPS 인증서를 내보내고를 클러스터에 추가할 각 서버에 배포 합니다. 이 자체 서명 된 인증서를 사용 하 여 하는 경우에 필요 합니다.|  
-|[3.4 네트워크 위치 서버 인증서를 설치 합니다.](#BKMK_NLS)|단일 서버에 로컬로 배포 하는 네트워크 위치 서버에 있는 클러스터의 각 서버에서 네트워크 위치 서버 인증서를 배포 해야 합니다. 네트워크 위치 서버는 외부 서버에서 호스팅되는, 경우에 각 서버에 인증서 필요 하지 않습니다. 이 자체 서명 된 인증서를 사용 하 여 하는 경우에 필요 합니다.|  
+|[3.1 IPv6 접두사 구성](#BKMK_Prefix)|회사 환경은 IPv6 + IPv4, IPv6 전용 또는 다음 단일 원격 액세스 서버에 DirectAccess 클라이언트 컴퓨터에 할당 된 IPv6 접두사 모든 클러스터의 서버에 충분히 큰지 확인 하십시오.|  
+|[3.2 부하 분산 사용](#BKMK_NLB)|단일 원격 액세스 서버에 부하 분산을 사용 하도록 설정 합니다.|  
+|[3.3 IP-HTTPS 인증서 설치](#BKMK_InstallIPHTTP)|클러스터의 각 서버는 IP-HTTPS 연결을 인증 하려면 서버 인증서가 필요 합니다.  단일 원격 액세스 서버에서 IP-HTTPS 인증서를 내보내고를 클러스터에 추가할 각 서버에 배포 합니다. 이 자체 서명 된 인증서를 사용 하 여 하는 경우에 필요 합니다.|  
+|[3.4 네트워크 위치 서버 인증서 설치](#BKMK_NLS)|단일 서버에 로컬로 배포 하는 네트워크 위치 서버에 있는 클러스터의 각 서버에서 네트워크 위치 서버 인증서를 배포 해야 합니다. 네트워크 위치 서버는 외부 서버에서 호스팅되는, 경우에 각 서버에 인증서 필요 하지 않습니다. 이 자체 서명 된 인증서를 사용 하 여 하는 경우에 필요 합니다.|  
 |[3.5 클러스터에 서버 추가](#BKMK_Add)|클러스터에 모든 서버를 추가 합니다. 서버를 추가할 수에 대 한 원격 액세스를 구성 되어야 합니다.|  
 |[3.6 클러스터에서 서버를 제거 합니다.](#BKMK_remove)|클러스터에서 서버를 제거 하는 것에 대 한 지침입니다.|  
 |[3.7 부하 분산 사용 안 함](#BKBK_disable)|부하 분산을 사용 하지 않도록 설정 하는 것에 대 한 지침입니다.|  
@@ -41,7 +41,7 @@ ms.locfileid: "67282965"
 > [!NOTE]  
 > 이 네트워크에서 다른 컴퓨터에 이미 있는 DIP를 사용 해야 합니다.  
   
-## <a name="BKMK_Prefix"></a>3.1 IPv6 접두사를 구성 합니다.  
+## <a name="BKMK_Prefix"></a>3.1 IPv6 접두사 구성  
   
 ### <a name="configDA"></a>접두사를 구성 하려면  
   
@@ -57,7 +57,7 @@ ms.locfileid: "67282965"
   
 6.  에 **원격 액세스 검토** 대화 상자에서 구성 설정을 검토 하 고 클릭 한 다음 **적용**합니다. **원격 액세스 설정 마법사 설정 적용** 대화 상자에서 **닫기**를 클릭합니다.  
   
-## <a name="BKMK_NLB"></a>3.2 로드 균형 조정 사용  
+## <a name="BKMK_NLB"></a>3.2 부하 분산 사용  
   
 #### <a name="to-enable-load-balancing"></a>부하 분산을 사용 하도록 설정 하려면  
   
@@ -69,9 +69,9 @@ ms.locfileid: "67282965"
   
 4.  계획 단계에서 선택한 내용에 따라:  
   
-    1.  Windows NLB: 에 **부하 분산 방법** 페이지에서 클릭 **사용 하 여 Windows 네트워크 부하 분산 (NLB)** 를 클릭 하 고 **다음**합니다.  
+    1.  Windows NLB: **부하 분산 방법** 페이지에서 **Windows NLB (네트워크 부하 분산) 사용**을 클릭 한 후 **다음**을 클릭 합니다.  
   
-    2.  외부 부하 분산 장치: 에 **부하 분산 방법** 페이지에서 **외부 부하 분산 장치를 사용 하 여**를 클릭 하 고 **다음**합니다.  
+    2.  외부 부하 분산 장치: **부하 분산 방법** 페이지에서 **외부 부하 분산 장치 사용**을 클릭 하 고 **다음**을 클릭 합니다.  
   
 5.  단일 네트워크 어댑터 배포의 경우에 **전용 IP 주소** 페이지에서 다음을 수행 하 고 클릭 한 다음 **다음**:  
   
@@ -100,7 +100,7 @@ ms.locfileid: "67282965"
     > [!NOTE]  
     > 외부 부하 분산 사용 되는 경우 가상 Ip를 외부 부하 분산 장치에서와 같이를 제공 합니다.  
   
-![Windows PowerShell](../../../../media/Step-3-Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![Windows PowerShell](../../../../media/Step-3-Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)***<em>windows powershell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -119,7 +119,7 @@ Set-RemoteAccessLoadBalancer -InternetDedicatedIPAddress "2.1.1.20/255.255.255.0
 > [!NOTE]  
 > 준비 Gpo를 사용 하는 경우 다른 설정으로 변경 하 여 부하 분산 장치 설정의 변경 사항을 포함 하지 않도록 좋습니다. 부하 분산 장치 설정에 변경 내용을 먼저 적용 해야 하 고 다른 구성을 변경 수 있어야 합니다. 또한 새로운 DirectAccess 서버의 부하 분산 장치를 구성한 후 허용 IP 변경 내용을 적용 하 고 새 클러스터에 관련 된 다른 DirectAccess 설정을 변경 하기 전에 엔터프라이즈의 DNS 서버에 걸쳐 복제 하려면 몇 시간.  
   
-## <a name="BKMK_InstallIPHTTP"></a>3.3 IP-HTTPS 인증서를 설치 합니다.  
+## <a name="BKMK_InstallIPHTTP"></a>3.3 IP-HTTPS 인증서 설치  
 로컬의 멤버 자격이 **관리자** 그룹 또는 그에 해당 하는이 절차를 완료 하는 데 필요한 최소입니다.  
   
 ### <a name="IPHTTPSCert"></a>IP-HTTPS 인증서를 설치 하려면  
@@ -170,7 +170,7 @@ Set-RemoteAccessLoadBalancer -InternetDedicatedIPAddress "2.1.1.20/255.255.255.0
   
 23. 클러스터 구성원으로 만들 수 있는 모든 서버에서 13-22 단계를 반복 합니다.  
   
-## <a name="BKMK_NLS"></a>3.4 네트워크 위치 서버 인증서를 설치 합니다.  
+## <a name="BKMK_NLS"></a>3.4 네트워크 위치 서버 인증서 설치  
 로컬의 멤버 자격이 **관리자** 그룹 또는 그에 해당 하는이 절차를 완료 하는 데 필요한 최소입니다.  
   
 #### <a name="to-install-a-certificate-for-network-location"></a>네트워크 위치에 대 한 인증서를 설치 하려면  
@@ -247,7 +247,7 @@ Set-RemoteAccessLoadBalancer -InternetDedicatedIPAddress "2.1.1.20/255.255.255.0
   
 12. 에 **추가 및 제거 하는 서버** 대화 상자를 클릭 하 여 **닫기**합니다.  
   
-![Windows PowerShell](../../../../media/Step-3-Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![Windows PowerShell](../../../../media/Step-3-Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)***<em>windows powershell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -277,7 +277,7 @@ Add-RemoteAccessLoadBalancerNode -RemoteAccessServer <server name>
   
 7.  에 **추가 및 제거 하는 서버** 대화 상자를 클릭 하 여 **닫기**합니다.  
   
-![Windows PowerShell](../../../../media/Step-3-Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![Windows PowerShell](../../../../media/Step-3-Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)***<em>windows powershell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -286,7 +286,7 @@ Remove-RemoteAccessLoadBalancerNode -RemoteAccessServer <server name>
 ```  
   
 ## <a name="BKBK_disable"></a>3.7 부하 분산 사용 안 함  
-[Windows PowerShell을 사용 하 여이 단계를 수행 합니다.](assetId:///7a817ca0-2b4a-4476-9d28-9a63ff2453f9)  
+[Windows PowerShell을 사용 하 여이 단계 수행](assetId:///7a817ca0-2b4a-4476-9d28-9a63ff2453f9)  
   
 #### <a name="to-disable-load-balancing"></a>부하 분산을 사용 하지 않도록 설정 하려면  
   
@@ -298,7 +298,7 @@ Remove-RemoteAccessLoadBalancerNode -RemoteAccessServer <server name>
   
 4.  에 **부하 분산 사용 안 함** 대화 상자를 클릭 하 여 **닫기**.  
   
-![Windows PowerShell](../../../../media/Step-3-Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![Windows PowerShell](../../../../media/Step-3-Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)***<em>windows powershell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -317,7 +317,7 @@ set-RemoteAccessLoadBalancer -disable
   
 ## <a name="BKMK_Links"></a>참고 항목  
   
--   [4단계: 클러스터를 확인합니다.](Step-4-Verify-the-Cluster.md)  
+-   [4단계: 클러스터를 확인 하는 중 @ no__t-0  
   
 
 

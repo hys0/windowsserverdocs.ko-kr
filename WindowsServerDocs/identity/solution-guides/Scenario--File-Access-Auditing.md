@@ -7,20 +7,20 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 93d78bbefce38173198f991543fb3a06d145b373
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 37a3b17360112d958b59a7e9c3f64aed5e6f6a5b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59867684"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406999"
 ---
 # <a name="scenario-file-access-auditing"></a>시나리오: 파일 액세스 감사
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-보안 감사는 회사의 보안을 유지 관리할 수 있는 가장 효율적인 도구 중 하나입니다. 보안 감사의 주요 목표 중 하나는 규정 준수 합니다. 예를 들어 Sarbanes Oxley, HIPAA(Health Insurance Portability and Accountability Act), PCI(Payment Card Industry) 등의 업계 표준에서는 기업에서 데이터 보안 및 개인 정보와 관련된 엄격한 규칙 집합을 따르도록 규정하고 있습니다. 보안 감사를 통해 이러한 정책의 유무를 파악하고 해당 표준 준수 여부를 증명할 수 있습니다. 또한 보안 감사를 사용하면 비정상적인 동작을 파악하고, 보안 정책의 결함을 파악 및 완화하며, 법정 분석에 사용할 수 있는 사용자 작업 내역을 만들어 무책임한 행위를 방지할 수 있습니다.  
+보안 감사는 회사의 보안을 유지 관리할 수 있는 가장 효율적인 도구 중 하나입니다. 보안 감사의 주요 목표 중 하나는 규정 준수입니다. 예를 들어 Sarbanes Oxley, HIPAA(Health Insurance Portability and Accountability Act), PCI(Payment Card Industry) 등의 업계 표준에서는 기업에서 데이터 보안 및 개인 정보와 관련된 엄격한 규칙 집합을 따르도록 규정하고 있습니다. 보안 감사를 통해 이러한 정책의 유무를 파악하고 해당 표준 준수 여부를 증명할 수 있습니다. 또한 보안 감사를 사용하면 비정상적인 동작을 파악하고, 보안 정책의 결함을 파악 및 완화하며, 법정 분석에 사용할 수 있는 사용자 작업 내역을 만들어 무책임한 행위를 방지할 수 있습니다.  
   
 감사 정책 요구 사항은 일반적으로 다음과 같은 수준에서 도출됩니다.  
   
@@ -67,11 +67,11 @@ Windows Server 2012와 함께 클레임 및 리소스 속성을 사용 하 여 �
 ## <a name="in-this-scenario"></a>이 시나리오의 내용  
 다음 항목에는 이 시나리오에 대한 추가 지침이 나와 있습니다.  
   
--   [파일에 대 한 계획 액세스 감사](Plan-for-File-Access-Auditing.md)  
+-   [파일 액세스 감사 계획](Plan-for-File-Access-Auditing.md)  
   
--   [중앙 감사 정책을 사용 하 여 보안 감사 배포 &#40;데모 단계&#41;](Deploy-Security-Auditing-with-Central-Audit-Policies--Demonstration-Steps-.md)  
+-   [중앙 감사 정책을 &#40;사용 하 여 보안 감사 배포 데모 단계&#41;](Deploy-Security-Auditing-with-Central-Audit-Policies--Demonstration-Steps-.md)  
   
-## <a name="BKMK_NEW"></a>역할과이 시나리오에 포함 된 기능  
+## <a name="BKMK_NEW"></a>이 시나리오에 포함 된 역할 및 기능  
 다음 표에는 이 시나리오에 포함된 역할 및 기능이 나열되어 있으며, 이러한 역할 및 기능이 시나리오를 지원하는 방법에 대한 설명이 나와 있습니다.  
   
 |역할/기능|이 시나리오를 지원하는 방법|  

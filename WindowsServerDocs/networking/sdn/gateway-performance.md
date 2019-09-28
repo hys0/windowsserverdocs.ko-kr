@@ -2,47 +2,47 @@
 title: Windows Server 2019 게이트웨이 성능
 description: ''
 manager: dougkim
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-hv-switch
 ms.topic: get-started-article
 ms.assetid: ''
 ms.author: pashort
 author: shortpatti
 ms.date: 08/22/2018
-ms.openlocfilehash: a6530b29ce7ffb0d18e0266e70cb2ca45188915c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 58e85c15723126f2976fac3ccc21b3cfc6585750
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59845634"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71355932"
 ---
 # <a name="windows-server-2019-gateway-performance"></a>Windows Server 2019 게이트웨이 성능
 
 >적용 대상: Windows Server
 
 
-Windows Server 2016의 SDN 게이트웨이 최신 네트워크 처리량 요구 사항을 충족할 수 없이 된 고객의 관심사 중 하나입니다. IPsec 및 GRE 터널의 네트워크 처리량은 IPsec 연결에 대 한 300mbps 되 고 약 2.5 g b p s 되 GRE 연결에 대 한 단일 연결 처리량으로 제한 했습니다.
+Windows Server 2016에서는 고객의 관심사 중 하나가 최신 네트워크의 처리량 요구 사항을 충족할 수 있는 SDN 게이트웨이가 없습니다. IPsec 및 GRE 터널의 네트워크 처리량에는 IPsec 연결에 대 한 단일 연결 처리량에 약 300 Mbps 및 GRE 연결에 대 한 약 2.5 Gbps가 포함 됩니다.
 
-개선 했습니다 크게 Windows Server 2019에 각각 1.8 Gbps 15gbps IPsec 및 GRE 연결을 soaring 번호. 이 모든 것을 CPU 주기를 / 당 바이트, 초 고성능 처리량을 제공 하 여 훨씬 적은 cpu를 사용 하 여 중요 한 축소 합니다.
+Windows Server 2019에서는 Windows Server에서 크게 개선 되었으며, IPsec 및 GRE 연결에 대 한 숫자는 각각 1.8, soaring는 15gbps입니다. 이러한 모든 기능을 통해 CPU 사이클/바이트 단위로 상당한 비용을 절감할 수 있으므로 CPU 사용률이 훨씬 낮은 고성능 처리량이 제공 됩니다.
 
-## <a name="enable-high-performance-with-gateways-in-windows-server-2019"></a>Windows Server 2019에 게이트웨이 사용 하 여 고성능을 사용 하도록 설정
+## <a name="enable-high-performance-with-gateways-in-windows-server-2019"></a>Windows Server 2019의 게이트웨이에서 높은 성능 사용
 
-에 대 한 **GRE 연결**, 향상 된 성능 면 있습니다 배포/업그레이드 하는 게이트웨이 Vm에 Windows Server 2019 빌드를 자동으로 표시 됩니다. 수동 단계 없이 포함 됩니다.
+**GRE 연결**의 경우 게이트웨이 Vm에서 Windows Server 2019 빌드를 배포/업그레이드 하 고 나면 향상 된 성능을 자동으로 확인 해야 합니다. 수동 단계는 포함 되지 않습니다.
 
-에 대 한 **IPsec 연결**, 기본적으로 가상 네트워크에 대 한 연결을 만들 때 얻게 Windows Server 2016 데이터 경로 및 성능 번호입니다. Windows Server 2019 데이터 경로 사용 하도록 설정 하려면 다음을 수행 합니다.
+기본적으로 **IPsec 연결**의 경우 가상 네트워크에 대 한 연결을 만들 때 Windows Server 2016 데이터 경로 및 성능 번호를 가져옵니다. Windows Server 2019 데이터 경로를 사용 하도록 설정 하려면 다음을 수행 합니다.
 
-   1. 게이트웨이에서 SDN VM으로 이동 **Services** 콘솔 (services.msc).
-   2. 명명 된 서비스를 찾는 **Azure 게이트웨이 서비스**, 시작 유형을 설정 하 고 **자동**합니다.
+   1. SDN 게이트웨이 VM에서 **서비스** 콘솔 (services.msc)로 이동 합니다.
+   2. **Azure 게이트웨이 서비스**라는 서비스를 찾고 시작 유형을 **자동**으로 설정 합니다.
    3. 게이트웨이 VM을 다시 시작 합니다.
-      중복 게이트웨이 VM에 대 한 게이트웨이 장애 조치에 대 한 활성 연결.
-   4. 게이트웨이 Vm의 나머지 부분에 대 한 이전 단계를 반복 합니다.
+      이 게이트웨이의 활성 연결이 중복 게이트웨이 VM으로 장애 조치 (failover) 됩니다.
+   4. 나머지 게이트웨이 Vm에 대해 이전 단계를 반복 합니다.
 
 >[!TIP]
->최상의 성능 결과 확인 하는 고 cipherTransformationConstant authenticationTransformConstant IPsec 연결 사용의 빠른 모드 설정에는 **GCMAES256** 암호 그룹입니다.
+>최상의 성능 결과를 위해 IPsec 연결의 빠른 모드 설정에서 cipherTransformationConstant 및 authenticationTransformConstant가 **GCMAES256** 암호 그룹을 사용 하는지 확인 합니다.
 >
->최상의 성능을 위해 게이트웨이 호스트 하드웨어 AES-NI 및 PCLMULQDQ CPU 명령 집합을 지원 해야 합니다. 이러한 모든 Westmere (32nm) 및 AES-NI가 비활성화 된 모델에서 제외 하 고 이후 Intel CPU에 사용할 수 있습니다. CPU AES-NI 및 PCLMULQDQ CPU 명령 지원 하는지 하드웨어 공급 업체 설명서를 살펴볼 수 있습니다 설정 합니다.
+>최대 성능을 위해 게이트웨이 호스트 하드웨어는 AES-NI 및 PCLMULQDQ CPU 명령 집합을 지원 해야 합니다. 이러한 기능은 AES-NI을 사용 하지 않도록 설정 된 모델을 제외 하 고 모든 Westmere (32nm) 이상 Intel CPU에서 사용할 수 있습니다. 하드웨어 공급 업체 설명서를 살펴보면 CPU에서 AES-NI 및 PCLMULQDQ CPU 명령 집합을 지원 하는지 확인할 수 있습니다.
 
-다음은 최적의 보안 알고리즘을 사용 하 여 IPsec 연결의 REST 샘플이입니다.
+다음은 최적의 보안 알고리즘을 사용한 IPsec 연결의 REST 샘플입니다.
 
 ```PowerShell
 # NOTE: The virtual gateway must be created before creating the IPsec connection. More details here.
@@ -94,6 +94,6 @@ New-NetworkControllerVirtualGatewayNetworkConnection -ConnectionUri $uri -Virtua
 
 ## <a name="testing-results"></a>테스트 결과
 
-광범위 한 성능 테스트에서 SDN 게이트웨이에 대 한 테스트를 수행한 합니다. 테스트에서 SDN 시나리오 및 SDN 아닌 시나리오에서 Windows Server 2019를 사용 하 여 게이트웨이 네트워크 성능을 비교 합니다. 결과 찾을 하 고 블로그 문서에서 캡처된 설정 세부 정보를 테스트할 수 있습니다 [여기](https://blogs.technet.microsoft.com/networking/2018/08/15/high-performance-gateways/)합니다.
+테스트 랩에서 SDN 게이트웨이에 대 한 광범위 한 성능 테스트를 완료 했습니다. 이 테스트에서는 SDN 시나리오 및 비 SDN 시나리오에서 Windows Server 2019와 게이트웨이 네트워크 성능을 비교 했습니다. [여기](https://blogs.technet.microsoft.com/networking/2018/08/15/high-performance-gateways/)의 블로그 문서에서 캡처된 결과와 테스트 정보를 확인할 수 있습니다.
 
 ---

@@ -2,22 +2,22 @@
 title: 콘텐츠 서버로 새 파일 서버 설치
 description: 이 항목은 일부는 BranchCache 배포 가이드에 대 한 Windows Server 2016, 지사에 WAN 대역폭 사용량을 최적화 하기 위해 분산 및 호스트 캐시 모드로 BranchCache를 배포 하는 방법을 보여 주는
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 1f49fc3c-28a6-4d3d-b787-1be9e61e792f
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: e3a4dbe5339685b385b0157756379e9e545f1964
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 489006c50ccbfa1f452d56b1a18217692d45cb1f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59812024"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406461"
 ---
 # <a name="install-a-new-file-server-as-a-content-server"></a>콘텐츠 서버로 새 파일 서버 설치
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 이 절차를 사용 하 여 파일 서비스 서버 역할을 설치 하 고 **네트워크 파일용 BranchCache** Windows Server 2016를 실행 하는 컴퓨터에서 역할 서비스입니다.  
   

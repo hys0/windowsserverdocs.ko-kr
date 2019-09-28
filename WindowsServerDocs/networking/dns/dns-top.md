@@ -1,23 +1,23 @@
 ---
 title: DNS(Domain Name System)
-description: 이 항목에서는 Windows Server 2016에서 DNS의 개요를 제공합니다.
+description: 이 항목에서는 Windows Server 2016의 DNS에 대 한 개요를 제공 합니다.
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: 1324ba18-4e28-4b9d-bbe7-75707e6d30ab
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 3d4ec63e904dd899a3ddc53a59274ad607136edd
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6ad3b66ff0b271c3b6f6134a96aaf6b5171bc7d4
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59870824"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406165"
 ---
 # <a name="domain-name-system-dns"></a>DNS(Domain Name System)
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 도메인 이름 시스템 (DNS) TCP/IP를 구성 하는 프로토콜의 산업 표준 프로토콜 중 하나 이며 DNS 클라이언트와 DNS 서버 함께 컴퓨터와 사용자에 게 컴퓨터 이름-IP 주소 매핑 이름 확인 서비스를 제공 합니다.  
   
@@ -27,7 +27,7 @@ ms.locfileid: "59870824"
 > -   [DNS 클라이언트의 새로운 기능](What-s-New-in-DNS-Client.md)  
 > -   [DNS 서버의 새로운 기능](What-s-New-in-DNS-Server.md)  
 > -   [DNS 정책 시나리오 가이드](deploy/DNS-Policy-Scenario-Guide.md)  
-> -   비디오: [Windows Server 2016: IPAM에서 DNS 관리](https://channel9.msdn.com/Blogs/windowsserver/Windows-Server-2016-DNS-management-in-IPAM)  
+> -   비디오: [Windows Server 2016: IPAM의 DNS 관리 @ no__t-0  
   
 Windows Server 2016에서 DNS는 서버 관리자 또는 Windows PowerShell 명령을 사용 하 여 설치할 수 있는 서버 역할입니다. 새 Active Directory 포리스트 및 도메인을 설치 하는 경우 DNS 자동으로 설치 됩니다 Active directory 포리스트 및 도메인에 대 한 글로벌 카탈로그 서버입니다.  
   

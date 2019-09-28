@@ -6,24 +6,24 @@ author: kgremban
 manager: femila
 ms.date: 07/13/2016
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: web-app-proxy
-ms.openlocfilehash: c4e4eb73b7d50c7618ad2c998ee484e660bcfef1
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 4f2827f02ec13d187cdf360637882c6c9d4b2441
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66446758"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71387974"
 ---
 # <a name="web-application-proxy-in-windows-server-2016"></a>Windows Server 2016에서 웹 응용 프로그램 프록시
 
 >적용 대상: Windows Server 2016
 
-**이 콘텐츠는 웹 응용 프로그램 프록시의 온-프레미스 버전에 적합 합니다. 클라우드를 통해 온-프레미스 응용 프로그램에 대 한 보안 액세스를 사용 합니다 [Azure AD 응용 프로그램 프록시 콘텐츠](https://azure.microsoft.com/documentation/articles/active-directory-application-proxy-get-started/)합니다.**  
+**이 콘텐츠는 웹 응용 프로그램 프록시의 온-프레미스 버전과 관련이 있습니다. 클라우드를 통해 온-프레미스 응용 프로그램에 안전 하 게 액세스할 수 있도록 하려면 [Azure AD 응용 프로그램 프록시 콘텐츠](https://azure.microsoft.com/documentation/articles/active-directory-application-proxy-get-started/)를 참조 하세요.**  
   
 이 섹션에는 웹 응용 프로그램 프록시에 대 한 Windows Server 2016의 새로운 기능과 변경 이란 설명 합니다. 새로운 기능과 변경 내용이 여기에 나열 된에이 미리 보기를 사용 하 여 작업할 때 가장 큰 영향을 있을 가능성이 높은 원인입니다.  
   
-## <a name="web-application-proxy-new-features-in-windows-server-2016"></a>웹 응용 프로그램 프록시 Windows Server 2016의 새로운 기능
+## <a name="web-application-proxy-new-features-in-windows-server-2016"></a>Windows Server 2016의 웹 응용 프로그램 프록시 새 기능
   
 - HTTP 기본 응용 프로그램 게시에 대 한 사전 인증  
   

@@ -1,7 +1,7 @@
 ---
 title: SH(소프트웨어 및 하드웨어) 통합 기능 및 기술
 description: 이러한 기능에는 소프트웨어와 하드웨어 구성 요소가 모두 있습니다. 이 소프트웨어는 기능을 작동 하는 데 필요한 하드웨어 기능에 깊이 됩니다. 이러한 예로는 VMMQ, VMQ, 송신 측 IPv4 체크섬 오프 로드 및 RSS가 있습니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
@@ -9,12 +9,12 @@ manager: dougkim
 ms.author: pashort
 author: shortpatti
 ms.date: 09/12/2018
-ms.openlocfilehash: 2f6bb2190dbaa432d20f445c90a560843d6cf4e5
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: f032717b9f4dca65454d8251083b73ff2d57dba7
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871936"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71355314"
 ---
 # <a name="software-and-hardware-sh-integrated-features-and-technologies"></a>SH(소프트웨어 및 하드웨어) 통합 기능 및 기술
 

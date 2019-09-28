@@ -1,7 +1,7 @@
 ---
 title: SO(소프트웨어 전용) 기능 및 기술
 description: 이러한 기능은 OS의 일부로 구현 되며 기본 NIC와는 독립적입니다. 이러한 기능에는 최적의 작업을 위해 NIC를 조정 해야 하는 경우가 있습니다. 이러한 예로는 vmQoS (Virtual Machines 서비스 품질), Access Control 목록 (Acl) 및 NIC 팀과 같은 Hyper-v 이외의 기능과 같은 Hyper-v 기능이 있습니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
@@ -9,12 +9,12 @@ manager: dougkim
 ms.author: pashort
 author: shortpatti
 ms.date: 09/20/2018
-ms.openlocfilehash: 27fbbcc5eedb1bc8ee37a85356542335c2eac77a
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 8c354d53db983d0437749de918b2d5f12ede0f5b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871927"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71405697"
 ---
 # <a name="software-only-so-features-and-technologies"></a>SO(소프트웨어 전용) 기능 및 기술
 소프트웨어 전용 기능은 OS의 일부로 구현 되며 기본 NIC와는 독립적입니다. 이러한 기능에는 최적의 작업을 위해 NIC를 조정 해야 하는 경우가 있습니다. 이러한 예로는 vmQoS (Virtual Machines 서비스 품질), Access Control 목록 (Acl) 및 NIC 팀과 같은 Hyper-v 이외의 기능과 같은 Hyper-v 기능이 있습니다.

@@ -4,20 +4,20 @@ description: 이 항목은 서버 배포 인증서 802.1 X 유선 및 무선 배
 manager: brianlic
 ms.topic: article
 ms.assetid: ca5c3e04-ae25-4590-97f3-0376a9c2a9a2
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 0cafa4bdeb80b22d6bac4ad09bcae9436cda97c8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d4b713437f031e4a381d2759bdcbf7f41bd573d5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59877824"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406351"
 ---
 # <a name="server-certificate-deployment-overview"></a>서버 인증서 배포 개요
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 이 항목에는 다음 섹션이 수록되어 있습니다.  
   
@@ -36,19 +36,19 @@ ms.locfileid: "59877824"
 ![서버 인증서 배포 필수 인프라](../../../media/Nps-Certs/Nps-Certs.jpg)  
   
 > [!NOTE]  
-> 위의 그림에서는 여러 서버 표시 됩니다. DC1, c a 1, WEB1 및 많은 SDN 서버입니다. 이 가이드는 c a 1와 w e b 1을 배포 및 구성에 대 한 고 d c 1에서이 가이드에서는 네트워크에 이미 설치한 가정 구성 하기 위한 지침을 제공 합니다. Active Directory 도메인을 아직 설치 하지 않은 경우 해도 사용 하 여는 [핵심 네트워크 가이드](https://technet.microsoft.com/library/mt604042.aspx) Windows Server 2016 용입니다.  
+> 위의 그림에는 여러 서버가 표시 되어 있습니다. DC1, C A 1, WEB1 및 많은 SDN 서버가 있습니다. 이 가이드는 c a 1와 w e b 1을 배포 및 구성에 대 한 고 d c 1에서이 가이드에서는 네트워크에 이미 설치한 가정 구성 하기 위한 지침을 제공 합니다. Active Directory 도메인을 아직 설치 하지 않은 경우 해도 사용 하 여는 [핵심 네트워크 가이드](https://technet.microsoft.com/library/mt604042.aspx) Windows Server 2016 용입니다.  
   
 위의 그림에 나와 있는 각 항목에 대 한 자세한 내용은 다음을 참조 합니다.  
   
--   [CA1](#bkmk_ca1)  
+-   [C A 1](#bkmk_ca1)  
   
 -   [WEB1](#bkmk_web1)  
   
--   [DC1](#bkmk_dc1)  
+-   [D C 1](#bkmk_dc1)  
   
 -   [NPS1](#bkmk_nps1)  
   
-### <a name="bkmk_ca1"></a>CA1 AD CS 서버 역할을 실행  
+### <a name="bkmk_ca1"></a>AD CS 서버 역할을 실행 하는 C A 1  
 이 시나리오에서는 엔터프라이즈 루트 인증 기관 (CA) 이기도 CA를 발급 합니다. CA는 인증서를 등록 하는 올바른 보안 권한이 있는 서버 컴퓨터에 인증서를 발급 합니다. Active Directory 인증서 서비스 (AD CS)는 c a 1에 설치 됩니다.  
   
 대규모 네트워크 또는 보안 문제 사유를 제공 하는 위치에 대 한 루트 CA 및 발급 CA의 역할을 구분 하 고 발급 Ca는 하위 Ca를 배포할 수 있습니다.  
@@ -66,13 +66,13 @@ AD CS를 설치 하기 전에 구성한 CAPolicy.inf 파일 특정 설정을 사
 #### <a name="additional-ca1-configuration"></a>추가 c a 1 구성  
 CA는 컴퓨터 id 증명으로에 표시 되는 인증서에 유효한 인증서를 확인 하 고 해지 여부를 확인 해야 하는 인증서 해지 목록 (CRL)를 게시 합니다. 컴퓨터를 인증 프로세스 중에 CRL을 찾을 위치를 알 수 있도록 CRL의 올바른 위치와 CA를 구성 해야 합니다.  
   
-### <a name="bkmk_web1"></a>W e b 1 웹 서비스 (IIS) 서버 역할을 실행  
+### <a name="bkmk_web1"></a>웹 서비스 (IIS) 서버 역할을 실행 하는 WEB1  
 W e b 1을 웹 서버 (IIS) 서버 역할을 실행 하는 컴퓨터에서 만들어야 폴더 Windows 탐색기에서 CRL 및 AIA 위치로 사용 하기 위해.  
   
 #### <a name="virtual-directory-for-the-crl-and-aia"></a>CRL 및 AIA에 대 한 가상 디렉터리  
 Windows 탐색기에서 폴더를 만든 후에 인터넷 정보 서비스 (IIS) 관리자와 같은 가상 디렉터리에 대 한 액세스 제어 목록 구성 컴퓨터 허용할 있습니다 게시 후 AIA 및 CRL에 액세스 하는 가상 디렉터리와 폴더를 구성 해야 합니다.  
   
-### <a name="bkmk_dc1"></a>D c 1 AD DS 및 DNS 서버 역할을 실행  
+### <a name="bkmk_dc1"></a>AD DS 및 DNS 서버 역할을 실행 하는 DC1  
 D c 1에는 도메인 컨트롤러와 네트워크에 DNS 서버입니다.  
   
 #### <a name="group-policy-default-domain-policy"></a>그룹 정책 기본 도메인 정책  
@@ -81,8 +81,8 @@ CA에서 인증서 템플릿을 구성한 후 인증서에 NPS 및 RAS 서버에
 #### <a name="dns-alias-cname-resource-record"></a>DNS 별칭 (CNAME) 리소스 레코드입니다.  
 다른 컴퓨터는 서버 뿐만 아니라 AIA 및 서버에 저장 된 CRL을 찾을 수 있도록 웹 서버에 대 한 별칭 (CNAME) 리소스 레코드를 만들어야 합니다. 또한 별칭 CNAME 리소스 레코드를 사용 하 여 웹 및 FTP 사이트를 호스트 하는 것과 같은 다른 용도 대 한 웹 서버를 사용할 수 있도록 유연성이 제공 됩니다.  
   
-### <a name="bkmk_nps1"></a>NPS1 네트워크 정책 및 액세스 서비스 서버 역할의 네트워크 정책 서버 역할 서비스를 실행 합니다.  
-Windows Server 2016 핵심 네트워크 가이드의 작업을 수행 하는 경우 NPS 설치 된, 하나 이상의 NPSs 네트워크에 설치 되어 있어야이 가이드의 작업을 수행 하기 전에 있도록 합니다.  
+### <a name="bkmk_nps1"></a>네트워크 정책 및 액세스 서비스 서버 역할의 네트워크 정책 서버 역할 서비스를 실행 하는 NPS1  
+NPS는 Windows Server 2016 Core 네트워크 가이드의 작업을 수행할 때 설치 되므로이 가이드의 작업을 수행 하기 전에 이미 하나 이상의 NPSs가 네트워크에 설치 되어 있어야 합니다.  
   
 #### <a name="group-policy-applied-and-certificate-enrolled-to-servers"></a>그룹 정책을 적용 하 고 서버에 등록 된 인증서  
 인증서 템플릿 및 자동 등록을 구성 하 고 나면 모든 대상 서버에서 그룹 정책을 새로 고칠 수 있습니다. 이 이번에는 서버 c a 1에서 서버 인증서를 등록합니다.  

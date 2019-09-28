@@ -2,18 +2,18 @@
 title: 전자 메일 알림 구성
 description: 이 문서에서는 전자 메일 알림을 구성하는 방법을 설명합니다.
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 541ceec25e8cb0fae0b55c3de3be269982546c54
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 9fef24dccc71eab49fa8c77f0f80d5ec3b3a9327
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66447664"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402026"
 ---
 # <a name="configure-e-mail-notifications"></a>전자 메일 알림 구성
 

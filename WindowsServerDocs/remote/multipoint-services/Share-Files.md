@@ -1,8 +1,8 @@
 ---
 title: 파일 공유
-description: 공유 폴더 및 네트워크를 사용 하 여 MultiPoint 서비스에서 파일을 공유 하는 방법 알아보기
+description: 공유 폴더 및 네트워크를 사용 하 여 MultiPoint 서비스에서 파일을 공유 하는 방법을 알아봅니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ author: lizap
 manager: dongill
 ms.date: 08/04/2016
 ms.author: elizapo
-ms.openlocfilehash: 130bd81affba68d92d7db6b691e7817dedfbb22c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: f050691603ed0989ab3b0ea3aac34a5fd74e1fbd
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59857474"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71394990"
 ---
 # <a name="share-files"></a>파일 공유
 Windows 탐색기에서 공용 폴더에 콘텐츠를 저장하여 다른 MultiPoint 서비스 사용자와 콘텐츠를 공유할 수 있습니다. MultiPoint 서비스 시스템의 모든 사용자는 Windows 탐색기에서 MultiPoint 서비스 시스템의 공용 폴더에 저장된 모든 콘텐츠에 액세스할 수 있습니다.  

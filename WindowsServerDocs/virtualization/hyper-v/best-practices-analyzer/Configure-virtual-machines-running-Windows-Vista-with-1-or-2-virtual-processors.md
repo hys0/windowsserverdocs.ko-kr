@@ -1,7 +1,7 @@
 ---
 title: 1 또는 2 가상 프로세서와 함께 Windows Vista를 실행 하는 가상 컴퓨터 구성
 description: 이 모범 사례 분석기 규칙에 대 한 텍스트의 온라인 버전입니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -10,12 +10,12 @@ ms.topic: article
 ms.assetid: e562bce3-fd68-42c9-821c-12022ae4746c
 author: KBDAzure
 ms.date: 8/16/2016
-ms.openlocfilehash: fae7d5e437fd83b9c00afcceaaf0eb7e8a7b909b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f0fd83122ce148cfa97147a352ebef4f7cc443cf
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59812074"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71364928"
 ---
 # <a name="configure-virtual-machines-running-windows-vista-with-1-or-2-virtual-processors"></a>1 또는 2 가상 프로세서와 함께 Windows Vista를 실행 하는 가상 컴퓨터 구성
 
@@ -28,19 +28,19 @@ ms.locfileid: "59812074"
 |**운영 체제**|Windows Server 2016|  
 |**제품/기능**|Hyper-V|  
 |**Severity**|Configuration|  
-|**범주**|Error|  
+|**범주**|오류|  
   
 다음 섹션에서는 기울임꼴이이 문제에 대 한 모범 사례 분석기 도구에 표시 되는 UI 텍스트를 나타냅니다.  
   
 ## <a name="issue"></a>문제점  
   
-*Windows Vista를 실행 하는 가상 머신 2 개 가상 프로세서를 사용 하 여 구성 됩니다.*  
+*Windows Vista를 실행 하는 가상 머신은 2 개 이상의 가상 프로세서로 구성 됩니다.*  
   
 ## <a name="impact"></a>영향  
   
-*Microsoft는 다음 가상 컴퓨터의 구성을 지원 하지 않습니다.*  
+*Microsoft는 다음과 같은 가상 컴퓨터의 구성을 지원 하지 않습니다.*  
   
-\<가상 머신 이름 목록 >  
+@no__t-가상 머신 이름의 목록 >  
   
 ## <a name="resolution"></a>해결 방법  
   

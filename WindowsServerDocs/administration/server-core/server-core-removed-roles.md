@@ -1,18 +1,18 @@
 ---
 title: Windows Server에서 제공 하지 않는 역할, 역할 서비스 및 기능-Server Core
 description: Windows Server의 Server Core 설치 옵션에 포함 되지 않은 역할 및 기능에 대해 알아봅니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: lizap
 ms.localizationpriority: medium
 ms.date: 02/23/2018
-ms.openlocfilehash: 882410792c7b8df8a8275c357d64fc17c9f3479e
-ms.sourcegitcommit: feec5cbe983c8c5800ccd4fc214914084fcceaba
+ms.openlocfilehash: ce8fd0edc426b673f873717a27e6045e3476170f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70975256"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71383361"
 ---
 # <a name="roles-role-services-and-features-not-in-windows-server---server-core"></a>Windows Server에서 제공 하지 않는 역할, 역할 서비스 및 기능-Server Core
 

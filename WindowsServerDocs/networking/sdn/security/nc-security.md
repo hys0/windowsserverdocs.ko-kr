@@ -2,19 +2,19 @@
 title: 네트워크 컨트롤러 보안
 description: 이 항목을 사용 하 여 네트워크 컨트롤러와 기타 소프트웨어 및 장치 간의 모든 통신에 대 한 보안을 구성 하는 방법을 배울 수 있습니다.
 manager: dougkim
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: bc625de9-ee31-40a4-9ad2-7448bfbfb6e6
 ms.author: pashort
 author: shortpatti
 ms.date: 08/30/2018
-ms.openlocfilehash: cea660eb28645fb814d718ac04d0c9acea7b2e34
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: bd44b4d696fef3c167c7bcd4ffbc7ca79009cebc
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70867140"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71405976"
 ---
 # <a name="secure-the-network-controller"></a>네트워크 컨트롤러 보안
 
@@ -134,7 +134,7 @@ SSL 인증서는 네트워크 컨트롤러 노드에 수동으로 등록 해야 
 
 다음 표에서는 다양 한 southbound 장치와의 네트워크 컨트롤러 상호 작용에 대 한 정보를 제공 합니다.
 
-| Southbound 장치/서비스 | 프로토콜              | 사용 되는 인증    |
+| Southbound 장치/서비스 | Protocol              | 사용 되는 인증    |
 |---------------------------|-----------------------|------------------------|
 | 소프트웨어 부하 분산 장치    | WCF (MUX), TCP (호스트) | 인증서           |
 | 방화벽                  | OVSDB                 | 인증서           |

@@ -1,28 +1,28 @@
 ---
 title: DHCP(동적 호스트 구성 프로토콜)
-description: 이 항목의 동적 호스트 구성 프로토콜 (DHCP) Windows Server 2016에 대 한 간략 한 개요를 제공합니다.
+description: 이 항목에서는 Windows Server 2016에서 DHCP (Dynamic Host Configuration Protocol)에 대 한 간략 한 개요를 제공 합니다.
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-dhcp
 ms.topic: article
 ms.assetid: 0ff29ef3-c458-4432-9065-e50a7de5b4b9
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 7828d75d58ff328e826cb685899a76347ce56953
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.openlocfilehash: c71517bc742cf9eda62cc7d83128f1ab9bd04547
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66812209"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71355402"
 ---
 # <a name="dynamic-host-configuration-protocol-dhcp"></a>DHCP(동적 호스트 구성 프로토콜)
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 Windows Server 2016에서 DHCP의 간략 한 개요는이 항목을 사용할 수 있습니다.
 
 > [!NOTE]
-> 이 항목 외에 다음 DHCP 설명서는 사용할 수 있습니다.
+> 이 항목 외에도 다음과 같은 DHCP 설명서를 사용할 수 있습니다.
 >
 > - [DHCP의 새로운 기능](What-s-New-in-DHCP.md)
 > - [Windows PowerShell을 사용 하 여 DHCP 배포](dhcp-deploy-wps.md)

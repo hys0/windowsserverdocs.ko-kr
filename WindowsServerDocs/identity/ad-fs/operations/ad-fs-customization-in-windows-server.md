@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: b8832e7e53e94761a489e850726bbd206b8be62b
-ms.sourcegitcommit: 02f1e11ba37a83e12d8ffa3372e3b64b20d90d00
+ms.openlocfilehash: 4b0ea70bd9346bf8abee4e0d96a8915e29cac462
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68863427"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71357785"
 ---
 # <a name="ad-fs-customization-in-windows-server-2016"></a>Windows Server 2016에서에서 AD FS 사용자 지정 합니다.
 
@@ -85,7 +85,7 @@ RP 당 사용자 지정 테마를 할당 하려면 다음 절차를 사용 합�
 암호 업데이트 페이지를 사용자 지정 하는 방법에 대 한 자세한 내용은 [AD FS 로그인 페이지 사용자 지정](https://technet.microsoft.com/library/dn280950.aspx)을 참조 하세요.  
   
 ## <a name="customizing-and-alternate-ids"></a>사용자 지정 및 대체 Id  
-사용자는 AD DS (Active Directory Domain Services)에서 허용 하는 모든 형태의 사용자 식별자를 사용 하 여 Active Directory Federation Services (AD FS) 사용 응용 프로그램에 로그인 할 수 있습니다. 여기에는 upn (사용자 계정 이름)johndoe@contoso.com() 또는 도메인 정규화 된 sam-계정 이름 (예 contoso\johndoe 또는 com\johndoe)이 포함 됩니다.  이에 대 한 자세한 내용은 [대체 로그인 ID 구성](Configuring-Alternate-Login-ID.md) 을 참조 하세요.  
+사용자는 AD DS (Active Directory Domain Services)에서 허용 하는 모든 형태의 사용자 식별자를 사용 하 여 Active Directory Federation Services (AD FS) 사용 응용 프로그램에 로그인 할 수 있습니다. 여기에는 Upn (사용자 계정 이름) (johndoe@contoso.com) 또는 도메인 정규화 된 sam-계정 이름 (예 contoso\johndoe 또는 com\johndoe)이 포함 됩니다.  이에 대 한 자세한 내용은 [대체 로그인 ID 구성](Configuring-Alternate-Login-ID.md) 을 참조 하세요.  
   
 일부 힌트가 대체 로그인 ID에 대 한 최종 사용자에 게 AD FS 로그인 페이지 사용자 지정 또한 하려는 경우 사용자 지정 된 로그인 페이지 설명을 추가 하 여이 작업을 수행할 수 있습니다. 자세한 내용은 [AD FS 로그인 페이지 사용자 지정](https://technet.microsoft.com/library/dn280950.aspx) 을 참조 하세요.   
   

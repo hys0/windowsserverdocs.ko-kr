@@ -2,18 +2,18 @@
 title: 대상 우선 순위를 설정하여 조회 순서 지정 무시
 description: 이 문서에서는 대상 우선 순위를 설정하여 조회 순서 지정을 무시하는 방법을 설명합니다.
 ms.date: 6/5/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 59db08d5ef46b696f550a5fa0738c5c1f9375fda
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f0a6496802d2be16e84ef62c41fea6f0ae9f6438
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59826364"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71386123"
 ---
 # <a name="set-target-priority-to-override-referral-ordering"></a>대상 우선 순위를 설정하여 조회 순서 지정 무시
 
@@ -57,5 +57,5 @@ ms.locfileid: "59826364"
 
 ## <a name="see-also"></a>참조
 
--   [DFS 네임 스페이스를 튜닝합니다.](tuning-dfs-namespaces.md)
--   [DFS 네임 스페이스에 대 한 관리 권한 위임](delegate-management-permissions-for-dfs-namespaces.md)
+-   [DFS 네임스페이스 튜닝](tuning-dfs-namespaces.md)
+-   [DFS 네임스페이스에 대한 관리 권한 위임](delegate-management-permissions-for-dfs-namespaces.md)

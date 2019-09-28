@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: a1210918067bbb71ea26dff4db11561bbeb09dbd
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 08382a8eccaafac257165587fe7b6c18a8ecfbbc
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70869250"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407273"
 ---
 # <a name="when-to-use-a-send-ldap-attributes-as-claims-rule"></a>LDAP 특성을 클레임으로 보내기 규칙을 사용하는 경우
 에 존재 하는 실제 경량 디렉터리 \(액세스\) 프로토콜 \(LDAP\) 특성 값을 포함 하는 나가는 클레임을 발급 하려는 경우 Active Directory Federation Services AD FS에서이 규칙을 사용할 수 있습니다. 특성을 저장 한 다음 클레임 유형을 각 LDAP 특성과 연결 합니다. 특성 저장소에 대 한 자세한 내용은 [특성 저장소의 역할](The-Role-of-Attribute-Stores.md)을 참조 하세요.  

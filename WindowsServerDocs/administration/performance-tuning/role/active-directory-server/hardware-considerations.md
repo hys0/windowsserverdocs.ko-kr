@@ -1,18 +1,18 @@
 ---
 title: AD 성능 조정의 하드웨어 고려 사항
 description: AD 성능 조정의 하드웨어 고려 사항
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: TimWi; ChrisRob; HerbertM; KenBrumf;  MLeary; ShawnRab
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 4d1e6c2744cfe0d16b034e6511144bef92a46b2e
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 8e9b121036d33bc36cabb92ca682407bc2382fca
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70866654"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71355104"
 ---
 # <a name="hardware-considerations-in-adds-performance-tuning"></a>성능 튜닝 추가의 하드웨어 고려 사항 
 
@@ -61,7 +61,7 @@ Active Directory는 메모리를 허용 하는 만큼의 데이터베이스를 �
 
 -   CPU 부하를 줄이기 위해 하드웨어를 추가 하거나, 부하를 최적화 하 고, 다른 곳에서 클라이언트를 추가 하거나, 환경에서 로드를 제거 합니다.
 
--   프로세서 정보 (\_총)\\% 프로세서 사용률 &lt; 60% 성능 카운터를 사용 합니다.
+-   프로세서 정보 (\_ 합계) \\% 프로세서 사용률 &lt; 60% 성능 카운터를 사용 합니다.
 
 ## <a name="avoid-overloading-the-network-adapter"></a>네트워크 어댑터 오버 로드 방지
 

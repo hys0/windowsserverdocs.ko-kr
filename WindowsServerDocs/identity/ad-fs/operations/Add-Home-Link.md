@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: a9a043390f5bfb412e549779ed4a9048d1c8a0b5
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: e5f1fad340629304fdf960139be05b8dbc2690e0
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66190185"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407778"
 ---
 # <a name="add-home-link"></a>홈 링크 추가 
 
@@ -31,4 +31,4 @@ ms.locfileid: "66190185"
 > 이 cmdlet의 `linkText` 매개 변수는 기본값( *Home*)이 아닌 다른 값을 사용하는 경우에만 필요합니다. 기본값을 사용하면 모든 클라이언트 로캘로 지역화된다는 점이 장점입니다. 로그인 한 후\-페이지는 사용자 정의 사용자 지정 항목이 우선적; 이므로 지원 하려는 모든 언어에 대 한 사용자 지정 해야 합니다.
 
 ## <a name="additional-references"></a>추가 참조 
-[AD FS 사용자 로그인 사용자 지정](AD-FS-user-sign-in-customization.md)  
+[사용자 로그인 사용자 지정 AD FS](AD-FS-user-sign-in-customization.md)  

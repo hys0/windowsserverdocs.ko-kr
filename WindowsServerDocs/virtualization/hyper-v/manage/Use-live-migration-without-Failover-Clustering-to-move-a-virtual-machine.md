@@ -1,7 +1,7 @@
 ---
 title: 가상 컴퓨터를 이동 하려면 장애 조치 클러스터링이 없는 실시간 마이그레이션 사용
-description: 필수 구성 요소 및 독립 실행형 환경에서 실시간 마이그레이션을 수행 하는 것에 대 한 지침을 제공 합니다.
-ms.prod: windows-server-threshold
+description: 독립 실행형 환경에서 실시간 마이그레이션을 수행 하기 위한 필수 구성 요소 및 지침을 제공 합니다.
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -11,12 +11,12 @@ ms.assetid: 75c32e42-97f7-48df-aac9-1d82d34825e1
 author: KBDAzure
 ms.author: kathydav
 ms.date: 01/17/2017
-ms.openlocfilehash: 9be61fbc860e9d8c5cbc020d6dd4082722e32509
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.openlocfilehash: 55c96ff4696871e4013c3abd6247209d0d4517c0
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66812100"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392561"
 ---
 # <a name="use-live-migration-without-failover-clustering-to-move-a-virtual-machine"></a>가상 컴퓨터를 이동 하려면 장애 조치 클러스터링이 없는 실시간 마이그레이션 사용
 
@@ -28,9 +28,9 @@ ms.locfileid: "66812100"
 
 - 로컬 Hyper-v Administrators 그룹 또는 소스와 대상 컴퓨터에서 Administrators 그룹의 구성원 인 사용자 계정입니다. 
   
-- Windows Server 2016 또는 Windows Server 2012 R2에서 Hyper-v 역할 원본 및 대상 서버에 설치 하 고 실시간 마이그레이션에 대해 설정 합니다. 가상 컴퓨터 하나 이상 있으면 Windows Server 2016 및 Windows Server 2012 R2를 실행 하는 호스트 간에 실시간 마이그레이션을 할 수 있는 버전 5입니다.
+- 원본 및 대상 서버에 설치 된 Windows Server 2016 또는 Windows Server 2012 r 2의 Hyper-v 역할이 며 실시간 마이그레이션에 대해 설정 됩니다. 가상 컴퓨터가 버전 5 이상인 경우 Windows Server 2016 및 Windows Server 2012 r 2를 실행 하는 호스트 간에 실시간 마이그레이션을 수행할 수 있습니다.
 
-    버전 업그레이드 지침은 [Windows 10 또는 Windows Server 2016에서 Hyper-v에서 가상 머신을 업그레이드 버전](../deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md)합니다. 설치 지침은 [실시간 마이그레이션에 대해 호스트 설정](../deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md)합니다.
+    버전 업그레이드 지침은 [windows 10 또는 Windows Server 2016에서 hyper-v의 가상 머신 버전 업그레이드](../deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md)를 참조 하세요. 설치 지침은 [실시간 마이그레이션을 위한 호스트 설정](../deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md)을 참조 하세요.
 
 - 도구는 원본 또는 대상 서버에 설치 되어 있지 않으면 Windows Server 2016 또는 Windows 10을 실행 하는 컴퓨터에 설치 된 Hyper-v 관리 도구에서에서 실행 합니다.  
    
@@ -61,7 +61,7 @@ PS C:\> Move-VM LMTest TestServer02 -IncludeStorage -DestinationStoragePath D:\L
 제한 된 위임의 설정 하지 않은 경우에 로그인 해야 원본 서버에 가상 컴퓨터를 이동할 수 있습니다. 이렇게 하지 않으면 인증 시도가 실패 하면 오류가 발생 하 고이 메시지가 표시 됩니다.  
   
 "마이그레이션 원본에서 가상 컴퓨터 마이그레이션 작업이 실패 했습니다.  
-호스트와의 연결을 설정 하지 못했습니다 *컴퓨터 이름*: 자격 증명이 없습니다 0x8009030E 보안 패키지에서 사용할 수 있습니다. "
+호스트 *컴퓨터 이름*에 대 한 연결을 설정 하지 못했습니다. 0x8009030E 보안 패키지에 사용할 수 있는 자격 증명이 없습니다. "
   
  이 문제를 해결 하려면 원본 서버에 로그인 하 고 이동 다시 합니다. 실시간 마이그레이션을 수행 하기 전에 원본 서버에 로그인 하는 것을 방지 하려면 제한 된 위임을 설정 합니다. 제한 된 위임을 설정 하려면 도메인 관리자 자격 증명이 필요 합니다. 자세한 내용은 [실시간 마이그레이션에 대 한 호스트를 설정](../deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md)합니다. 
  
@@ -69,7 +69,7 @@ PS C:\> Move-VM LMTest TestServer02 -IncludeStorage -DestinationStoragePath D:\L
  
  가상 컴퓨터 프로세서 호환성 설정에 없는 하나 이상의 스냅샷이 이동 하는 호스트 프로세서 버전이 다른 경우 실패 합니다. 오류가 발생 하 고이 메시지가 표시 됩니다.
  
-**대상 컴퓨터에 가상 컴퓨터를 이동할 수 없습니다. 대상 컴퓨터의 하드웨어가 가상 컴퓨터의 하드웨어 요구 사항와 호환 되지 않습니다.**
+@no__t-가상 컴퓨터를 대상 컴퓨터로 이동할 수 없습니다. 대상 컴퓨터의 하드웨어가이 가상 컴퓨터의 하드웨어 요구 사항과 호환 되지 않습니다. **
  
  이 문제를 해결 하려면 가상 컴퓨터를 종료 한 프로세서 호환성 설정을 사용 합니다.
  

@@ -1,9 +1,9 @@
 ---
 title: 문제 해결
-description: 문제 해결에 대 한 탐색 항목
+description: 문제 해결을 위한 탐색 항목
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -14,12 +14,12 @@ author: lizap
 manager: dongill
 robots: noindex,nofollow
 ms.author: evas
-ms.openlocfilehash: 7cb27de3348a02a43cdfdc79df63ffefbd7a064e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: dc00305442db3053699d9afd2552ad005d2392aa
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59819214"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71389221"
 ---
 # <a name="troubleshooting"></a>문제 해결
-MultiPoint 서비스를 사용 하는 경우 문제를 해결 하는 데 문제 해결 항목을 봅니다.  
+MultiPoint 서비스를 사용 하는 경우 문제를 해결 하는 데 도움이 되는 문제 해결 항목을 확인 하세요.  

@@ -7,14 +7,14 @@ ms.author: billmath
 manager: mtillman
 ms.date: 03/06/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: b93848a47eca952ebbeeec2a55c3e6f9b60dbfb8
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: c8ab160699bc6a961f4fbed6c58cf072a395a313
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70865475"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407427"
 ---
 # <a name="ad-fs-requirements"></a>AD FS 요구 사항
 
@@ -46,7 +46,7 @@ ms.locfileid: "70865475"
 
 **권유** 모든 AD FS 페더레이션 서버 및 웹 응용 프로그램 프록시에 대해 동일한 SSL 인증서를 사용 합니다. 
 
-**요구 사항:**
+**사항이**
 
 페더레이션 서버에서 SSL 인증서에는 다음 요구 사항을 충족 해야 합니다.
 - 인증서 (예: 프로덕션 배포의 경우) 공개적으로 신뢰할 수 있는
@@ -71,7 +71,7 @@ ms.locfileid: "70865475"
 
 **권유** AD FS 기본, 내부적으로 생성 된 자체 서명 된 토큰 서명 인증서를 사용 합니다.  
 
-**요구 사항:**
+**사항이**
 - 조직에서 엔터프라이즈 PKI 인증서를 토큰 서명에 사용할 수는 경우, 이렇게 설치 AdfsFarm cmdlet의 SigningCertificateThumbprint 매개 변수를 사용 합니다.
 - 모든 신뢰 당사자는 새 인증서 정보로 업데이트 되며 내부적으로 생성 된 기본 인증서를 사용 하 여 연결 하거나 외부에서 토큰 서명 인증서를 변경 될 때 인증서를 등록 한 있는지 확인 해야 합니다.  그렇지 않은 경우에 업데이트 되지 모든 신뢰 당사자에 대 한 로그온 실패 합니다.
 
@@ -80,7 +80,7 @@ ms.locfileid: "70865475"
 
 **권유** AD FS 기본, 내부적으로 생성 된 자체 서명 된 토큰 암호 해독 인증서를 사용 합니다.  
 
-**요구 사항:**
+**사항이**
 - 조직에서 엔터프라이즈 PKI 인증서를 토큰 서명에 사용할 수는 경우, 이렇게 설치 AdfsFarm cmdlet의 DecryptingCertificateThumbprint 매개 변수를 사용 합니다.
 - 내부적으로 생성 된 기본 인증서를 사용 하 여 여부 또는 외부에서 사용자 인증서의 암호를 해독 하는 토큰 변경 될 때 인증서를 등록 한 모든 클레임 공급자는 새 인증서 정보로 업데이트 되며 확인 해야 합니다.  그렇지 않으면 모든 클레임 공급자 업데이트 되지를 사용 하 여 로그온 실패 합니다.
   

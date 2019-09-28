@@ -2,24 +2,24 @@
 title: 액세스 기반 열거와 함께 상속된 사용 권한 사용
 description: 이 문서에서는 액세스 기반 열거와 함께 상속된 사용 권한을 사용하는 방법을 설명합니다.
 ms.date: 6/5/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: e6bd7a018a7f3a245581b5a9c63494048c7187a2
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 433fe53a3d580aafc50b152ec20156436b05481f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59812134"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402135"
 ---
 # <a name="using-inherited-permissions-with-access-based-enumeration"></a>액세스 기반 열거와 함께 상속된 사용 권한 사용
 
 > 적용 대상: Windows Server 2019, Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
-기본적으로 DFS 폴더에 사용되는 사용 권한은 네임스페이스 서버의 로컬 파일 시스템에서 상속됩니다. 시스템 드라이브의 루트 디렉터리에서 상속 된 사용 권한과 도메인 부여\\사용자 그룹 읽기 권한을 합니다. 결과적으로 액세스 기반 열거를 사용하도록 설정한 후에도 네임스페이스의 모든 폴더가 모든 도메인 사용자에게 계속 보입니다.
+기본적으로 DFS 폴더에 사용되는 사용 권한은 네임스페이스 서버의 로컬 파일 시스템에서 상속됩니다. 사용 권한은 시스템 드라이브의 루트 디렉터리에서 상속 되며 도메인 @ no__t-0Users 그룹에 읽기 권한을 부여 합니다. 결과적으로 액세스 기반 열거를 사용하도록 설정한 후에도 네임스페이스의 모든 폴더가 모든 도메인 사용자에게 계속 보입니다.
 
 ## <a name="advantages-and-limitations-of-inherited-permissions"></a>상속된 사용 권한의 이점과 제한 사항
 
@@ -42,7 +42,7 @@ ms.locfileid: "59812134"
 
 DFS 폴더를 볼 수 있는 사용자를 제한하려면 다음 작업 중 하나를 수행해야 합니다.
 
--   **상속을 사용 하지 않도록 설정 하 고 폴더에 대 한 명시적 권한을 설정 합니다.** DFS 관리나 **Dfsutil** 명령을 사용하여 대상을 가진 폴더(링크)에 명시적 권한을 설정하려면 [네임스페이스에 액세스 기반 열거 사용](enable-access-based-enumeration-on-a-namespace.md)을 참조하세요.
+-   **폴더에 대 한 명시적 사용 권한을 설정 하 고 상속을 해제 합니다.** DFS 관리나 **Dfsutil** 명령을 사용하여 대상을 가진 폴더(링크)에 명시적 권한을 설정하려면 [네임스페이스에 액세스 기반 열거 사용](enable-access-based-enumeration-on-a-namespace.md)을 참조하세요.
 -   **로컬 파일 시스템의 상위 폴더에 대한 상속된 사용 권한을 수정합니다**. 대상을 가진 폴더에서 상속하는 사용 권한을 수정하려면 폴더에 대한 명시적 권한을 이미 설정한 경우 다음 절차에 따라 명시적 권한에서 상속된 사용 권한으로 전환합니다. 그런 다음 Windows 탐색기나 **Icacls** 명령을 사용하여 대상을 가진 폴더가 해당 사용 권한을 상속할 폴더의 사용 권한을 수정합니다.
 
 > [!NOTE]
@@ -60,4 +60,4 @@ DFS 폴더를 볼 수 있는 사용자를 제한하려면 다음 작업 중 하�
 
 ## <a name="see-also"></a>참조
 
--   [DFS Namespace 만들기](create-a-dfs-namespace.md)
+-   [DFS 네임스페이스 만들기](create-a-dfs-namespace.md)

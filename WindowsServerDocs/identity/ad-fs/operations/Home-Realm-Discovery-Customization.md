@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: e91306ecd8ef08dd6af9173ead314a39dd5d2eff
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 5a151e46e566d9f5459419771cbd476bb26c248d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66189133"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71357957"
 ---
 # <a name="home-realm-discovery-customization"></a>홈 영역 검색 사용자 지정
 
@@ -30,7 +30,7 @@ ms.locfileid: "66189133"
 
 
 ## <a name="configure-identity-provider-to-use-certain-email-suffixes"></a>특정 메일 접미사를 사용하도록 ID 공급자 구성  
-조직에서는 여러 클레임 공급자와 페더레이션할 수 있습니다. AD FS는 이제 제공는에서\-상자 예를 들어, 접미사를 나열 하려면 관리자에 대 한 기능 @us.contoso.com, @eu.contoso.com되는 클레임 공급자에서 지 원하는 접미사에 대 한 사용 및\-기반 검색 합니다. 이 구성을 사용 하 여 최종 사용자가 자신의 조직 계정을 입력할 수 및 AD FS는 해당 클레임 공급자를 자동으로 선택 합니다.  
+조직에서는 여러 클레임 공급자와 페더레이션할 수 있습니다. 이제는 관리자가 no__t-0box 기능을 제공 하 여 클레임 공급자가 지 원하는 접미사 (예: @us.contoso.com, @eu.contoso.com)를 나열 하 고이를 접미사 @ no__t 기반 검색에 사용할 수 있도록 합니다. AD FS 이 구성을 사용 하 여 최종 사용자가 자신의 조직 계정을 입력할 수 및 AD FS는 해당 클레임 공급자를 자동으로 선택 합니다.  
   
 Id 공급자를 구성 하려면 \(IDP\), 와 같은 `fabrikam`, 을 특정 전자 메일 접미사를 사용 하 여 다음 Windows PowerShell cmdlet 및 구문을 사용 합니다.  
   
@@ -38,7 +38,7 @@ Id 공급자를 구성 하려면 \(IDP\), 와 같은 `fabrikam`, 을 특정 전�
 `Set-AdfsClaimsProviderTrust -TargetName fabrikam -OrganizationalAccountSuffix @("fabrikam.com";"fabrikam2.com") ` 
  
 >[!NOTE]
-> 두 명의 AD FS 서버 간의 페더레이션을 때 ForwardPromptAndHintsOverWsFederation에 클레임 공급자 트러스트에 PromptLoginFederation 속성을 설정 합니다.  이 AD FS login_hint 및 프롬프트 매개 변수를 IDP로 전달 됩니다.  다음 PowerShell cmdlet을 실행 하 여이 수행할 수 있습니다.
+> 두 AD FS 서버 간에 페더레이션 하는 경우 클레임 공급자 트러스트에 대 한 PromptLoginFederation 속성을 ForwardPromptAndHintsOverWsFederation로 설정 합니다.  이는 AD FS에서 login_hint 및 프롬프트 매개 변수를 IDP로 전달 하는 것입니다.  다음 PowerShell cmdlet을 실행 하 여이 작업을 수행할 수 있습니다.
 >
 >`Set-AdfsclaimsProviderTrust -PromptLoginFederation ForwardPromptAndHintsOverWsFederation`
 
@@ -64,4 +64,4 @@ Id 공급자를 구성 하려면 \(IDP\), 와 같은 `fabrikam`, 을 특정 전�
 > 참고는 신뢰 당사자에 대 한 id 공급자 목록 구성 된 경우 경우에는 이전 설정이 사용 되 고 AD FS 홈 영역 검색을 계속 표시의 인트라넷에서 사용자가 액세스 \(HRD\) 페이지입니다. 이 경우 HRD를 무시하려면 이 신뢰 당사자에 대한 IDP 목록에 "Active Directory"도 추가해야 합니다.  
 
 ## <a name="additional-references"></a>추가 참조 
-[AD FS 사용자 로그인 사용자 지정](AD-FS-user-sign-in-customization.md)  
+[사용자 로그인 사용자 지정 AD FS](AD-FS-user-sign-in-customization.md)  

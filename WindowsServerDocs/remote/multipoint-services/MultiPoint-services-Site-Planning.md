@@ -3,7 +3,7 @@ title: MultiPoint 서비스 사이트 계획
 description: Windows Server 2016에서 MultiPoint 서비스 배포에 대 한 정보 계획
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ ms.assetid: 063783cd-d748-489e-b175-46eadc993f7a
 author: evaseydl
 manager: scottman
 ms.author: evas
-ms.openlocfilehash: 3d49b2861d81a938fb20544c3edeb0976ac6d327
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 744e49f47f7144dac82dbe68c885060b0c08490d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871637"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71389601"
 ---
 # <a name="multipoint-services-site-planning"></a>MultiPoint 서비스 사이트 계획
 MultiPoint 서비스를 실행 하는 하나 이상의 컴퓨터와 연결 된 스테이션이 배포 될 위치를 고려해 야 합니다.  

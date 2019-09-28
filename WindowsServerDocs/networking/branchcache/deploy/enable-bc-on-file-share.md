@@ -3,7 +3,7 @@ title: 파일 공유에서 BranchCache 사용(선택 사항)
 description: 이 항목은 일부는 BranchCache 배포 가이드에 대 한 Windows Server 2016, 지사에 WAN 대역폭 사용량을 최적화 하기 위해 분산 및 호스트 캐시 모드로 BranchCache를 배포 하는 방법을 보여 주는
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-bc
@@ -12,16 +12,16 @@ ms.topic: get-started-article
 ms.assetid: 9c465a9e-c504-44ec-9ebc-4e06ba54db30
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: fd1757f6da011c2f774d8f97f628e5f0e87d3bf7
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 37bab11a0914a3f6854314016bb59297aa6954f2
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67284029"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406356"
 ---
 # <a name="enable-branchcache-on-a-file-share-optional"></a>파일 공유에서 BranchCache 사용(선택 사항)
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 파일 공유에서 BranchCache를 사용 하도록 설정 하려면이 절차를 사용할 수 있습니다.  
   

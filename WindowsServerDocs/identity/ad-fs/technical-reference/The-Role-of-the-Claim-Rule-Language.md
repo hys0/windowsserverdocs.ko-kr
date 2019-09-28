@@ -6,15 +6,15 @@ ms.author: billmath
 manager: femila
 ms.date: 07/07/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.assetid: dda9d148-d72f-4bff-aa2a-f2249fa47e4c
 ms.technology: identity-adfs
-ms.openlocfilehash: 0c2d411be7ef807198df30074ea706d7c5398617
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: ff4c43bb8dc5582716638f0a3f6e4f6a8022aece
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70869364"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407376"
 ---
 # <a name="the-role-of-the-claim-rule-language"></a>클레임 규칙 언어의 역할
 Active Directory Federation Services (AD FS) 클레임 규칙 언어는 들어오고 나가는 클레임의 동작에 대 한 관리 구성 요소 역할을 하는 반면 클레임 엔진은 클레임 규칙 언어의 논리에 대 한 처리 엔진 역할을 합니다. 사용자 지정 규칙을 정의 합니다. 모든 규칙은 클레임 엔진에서 처리 하는 방법에 대 한 자세한 내용은 참조 하십시오. [클레임 엔진의 역할](The-Role-of-the-Claims-Engine.md)합니다.  
@@ -144,7 +144,7 @@ AD FS에는 또한 미리 정의 된 클레임 발급 및 일반적인 구현 �
 
 -   Claim.ValueType  
 
--   Claim 속성이름\]( _name 속성을 클레임의 properties 컬렉션에서 찾을 수 없는 경우이 속성은 빈 문자열을 반환 합니다.\_\[ )  
+-   Claim. Properties @ no__t-0property @ no__t-1name @ no__t-2 (이 속성은 클레임의 Properties 컬렉션에서 _name 속성을 찾을 수 없는 경우 빈 문자열을 반환 합니다. )  
 
 RegexReplace 함수를 사용하여 식 내에서 호출할 수 있습니다. 이 함수는 입력 식을 사용하고 지정된 패턴과 일치시킵니다. 패턴이 일치하는 경우 일치 항목 출력이 대체 값으로 대체됩니다.  
 

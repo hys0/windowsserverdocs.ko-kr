@@ -1,8 +1,8 @@
 ---
 title: Get 서버 명령 사용
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: da8bf0fc6e31bd8d0079933f1d7c529c4fe96f42
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c7e0ee4529858b16cdc63ea1d6d358a190b8b1a9
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59870984"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392113"
 ---
 # <a name="using-the-get-server-command"></a>Get 서버 명령 사용
 
@@ -33,9 +33,9 @@ wdsutil [Options] /Get-Server [/Server:<Server name>] /Show:{Config | Images | A
 |매개 변수|설명|
 |-------|--------|
 |[/ 서버:<Server name>]|서버 이름을 지정합니다. 이 NetBIOS 이름 또는 정규화 된 도메인 이름 (FQDN) 수 있습니다. 서버 이름을 지정 하지, 로컬 서버가 사용 됩니다.|
-|/ 표시: {구성 (& a) #124; 이미지 및 #124; 모든}|반환할 정보의 유형을 지정 합니다.<br /><br />-   **Config** 구성 정보를 반환 합니다.<br />-   **이미지** 이미지 그룹, 부팅 이미지 및 설치 이미지에 대 한 정보를 반환 합니다.<br />-   **모든** 구성 정보 및 이미지 정보를 반환 합니다.|
-|[/detailed]|이 옵션을 사용할 수 있습니다 **/Show:Images** 또는 **/Show:All** 각 이미지에서 모든 이미지 메타 데이터 반환 되어야 함을 나타냅니다. 경우는 **자세한 /** 옵션이 사용 되지 않으면, 기본 동작은 이미지 이름, 설명 및 파일 이름을 반환 합니다.|
-## <a name="BKMK_examples"></a>예제
+|/ 표시: {구성 (& a) #124; 이미지 및 #124; 모든}|반환할 정보의 유형을 지정 합니다.<br /><br />-    구성은 구성 정보를**반환 합니다.**<br />-   **이미지** 는 이미지 그룹, 부팅 이미지 및 설치 이미지에 대 한 정보를 반환 합니다.<br />-   은**모두** 구성 정보 및 이미지 정보를 반환 합니다.|
+|자세한/|이 옵션을 사용할 수 있습니다 **/Show:Images** 또는 **/Show:All** 각 이미지에서 모든 이미지 메타 데이터 반환 되어야 함을 나타냅니다. **자세한/** 옵션을 사용 하지 않는 경우 기본 동작은 이미지 이름, 설명 및 파일 이름을 반환 하는 것입니다.|
+## <a name="BKMK_examples"></a>예와
 서버에 대 한 정보를 보려면 다음을 입력 합니다.
 ```
 wdsutil /Get-Server /Show:Config

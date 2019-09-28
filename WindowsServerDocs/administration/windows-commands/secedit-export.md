@@ -1,8 +1,8 @@
 ---
-title: secedit:export
-description: '에 대 한 Windows 명령을 항목 * * *- '
+title: 'secedit: 내보내기'
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 398d2fa47f2418aec910569c2eb85aec408ad482
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 2aed2774bcba1ac3d5ba828901586acbbe24d255
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66441594"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71384252"
 ---
-# <a name="seceditexport"></a>secedit:export
+# <a name="seceditexport"></a>secedit: 내보내기
 
 
 
@@ -47,11 +47,11 @@ Secedit /export /db <database file name> [/mergedpolicy] /cfg <configuration fil
 
 보안 정책 설정을 다른 컴퓨터로 가져올 뿐만 아니라 로컬 컴퓨터에 백업 하려면이 명령을 사용할 수 있습니다.
 
-로그 파일의 경로를 제공 하지 않으면, 기본 로그 파일 (*systemroot*\Documents and 설정을\*UserAccount<em>\My Documents\Security\Logs\*DatabaseName</em>합니다. 로그)이 사용 됩니다.
+로그 파일에 대 한 경로를 지정 하지 않으면 기본 로그 파일 (*systemroot*\Documents and Settings\*UserAccount<em>\My Documents\Security\Logs\*DatabaseName</em>)이 사용 됩니다.
 
 Windows Server 2008에서 `Secedit /refreshpolicy` 바뀌었습니다 `gpupdate`합니다. 보안 설정을 새로 고치는 방법에 대 한 자세한 내용은 [Gpupdate](gpupdate.md)합니다.
 
-## <a name="BKMK_Examples"></a>예제
+## <a name="BKMK_Examples"></a>예와
 
 보안 데이터베이스와 도메인 보안 정책 inf 파일을 내보낸 다음 다른 컴퓨터의 보안 정책 설정을 복제 하려면 다른 데이터베이스에 해당 파일을 가져옵니다.
 ```
@@ -65,5 +65,5 @@ Secedit /import /db C:\Security\FY12\SecDbContoso.sdb /cfg SecContoso.inf /log C
 #### <a name="additional-references"></a>추가 참조
 
 -   [Secedit:import](secedit-import.md)
--   [secedit](secedit.md)
+-   [Secedit](secedit.md)
 -   [명령줄 구문 키](command-line-syntax-key.md)

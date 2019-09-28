@@ -7,18 +7,18 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 19e73e43a863ec60fbc9da09b24173220bb331ed
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 60072037aea4ecd81376e1334f3a89b7bb2ff851
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66191361"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71408088"
 ---
 # <a name="federation-server-farm-using-wid-and-proxies"></a>WID와 프록시를 사용하는 페더레이션 서버 팜
 
-Active Directory Federation Services에 대 한이 배포 토폴로지 \(AD FS\) 는 Windows 내부 데이터베이스를 사용 하 여 페더레이션 서버 팜에 동일 \(WID\) 토폴로지를 만들었지만 추가 페더레이션 서버 프록시 외부 사용자를 지원 하도록 경계 네트워크. 페더레이션 서버 프록시는 페더레이션 서버 팜에 회사 네트워크 외부에서 발생 하는 클라이언트 인증 요청을 리디렉션합니다.  
+Active Directory Federation Services \(AD FS @ no__t-1에 대 한이 배포 토폴로지는 Windows 내부 데이터베이스 \(WID @ no__t 토폴로지를 사용 하는 페더레이션 서버 팜과 동일 하지만 경계 네트워크에 페더레이션 서버 프록시를 추가 합니다. 외부 사용자를 지원 합니다. 페더레이션 서버 프록시는 페더레이션 서버 팜에 회사 네트워크 외부에서 발생 하는 클라이언트 인증 요청을 리디렉션합니다.  
   
 ## <a name="deployment-considerations"></a>배포 고려 사항  
 이 섹션에서는 대상, 이점 및이 배포 토폴로지와 연결 된 제한 사항에 대 한 다양 한 고려 사항을 설명 합니다.  

@@ -3,7 +3,7 @@ title: NIC 팀
 description: 이 항목에서는 Windows Server 2016의 NIC (네트워크 인터페이스 카드) 팀에 대 한 개요를 제공 합니다. NIC 팀을 사용 하면 32 하나 이상의 실제 이더넷 네트워크 어댑터 간에 하나 이상의 소프트웨어 기반 가상 네트워크 어댑터로 그룹화 할 수 있습니다. 이 가상 네트워크 어댑터에는 빠른 성능과 네트워크 어댑터 오류 발생 시 내결함성을 제공합니다.
 manager: dougkim
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-nict
@@ -13,12 +13,12 @@ ms.assetid: abded6f3-5708-4e35-9a9e-890e81924fec
 ms.author: pashort
 author: shortpatti
 ms.date: 09/10/2018
-ms.openlocfilehash: acbb01acb39990126d5dce1d0811aefb8c931164
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 2356de674bfc6e57c9444136b1244934464a2d02
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871912"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71396497"
 ---
 # <a name="nic-teaming"></a>NIC 팀
 

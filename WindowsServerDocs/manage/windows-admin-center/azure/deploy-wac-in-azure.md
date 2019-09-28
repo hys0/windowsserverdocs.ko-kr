@@ -7,13 +7,13 @@ author: jwwool
 ms.author: jeffrew
 ms.date: 04/12/2019
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
-ms.openlocfilehash: d0ebc957715f88898a9c14d2841d8b820f862a0d
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.prod: windows-server
+ms.openlocfilehash: 42216375d1784a5bc853994a9de7cff72920088d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70869144"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71357316"
 ---
 # <a name="deploy-windows-admin-center-in-azure"></a>Azure에서 Windows 관리 센터 배포
 
@@ -89,7 +89,7 @@ $Image = "Win2016Datacenter"
 $Credential = Get-Credential
 ```
 
-#### <a name="example-1-use-the-script-to-deploy-wac-gateway-on-a-new-vm-in-a-new-virtual-network-and-resource-group-use-the-msi-from-akamswacdownload-and-a-self-signed-cert-from-the-msi"></a>예제 1: 스크립트를 사용 하 여 새 가상 네트워크 및 리소스 그룹의 새 VM에 WAC gateway를 배포 합니다. Aka.ms/WACDownload의 MSI 및 MSI에서 자체 서명 된 인증서를 사용 합니다.
+#### <a name="example-1-use-the-script-to-deploy-wac-gateway-on-a-new-vm-in-a-new-virtual-network-and-resource-group-use-the-msi-from-akamswacdownload-and-a-self-signed-cert-from-the-msi"></a>예 1: 스크립트를 사용 하 여 새 가상 네트워크 및 리소스 그룹의 새 VM에 WAC gateway를 배포 합니다. Aka.ms/WACDownload의 MSI 및 MSI에서 자체 서명 된 인증서를 사용 합니다.
 
 ```PowerShell
 $scriptParams = @{
@@ -103,7 +103,7 @@ $scriptParams = @{
 ./Deploy-WACAzVM.ps1 @scriptParams
 ```
 
-#### <a name="example-2-same-as-1-but-using-a-certificate-from-azure-key-vault"></a>예제 2: #1와 동일 하지만 Azure Key Vault 인증서를 사용 합니다.
+#### <a name="example-2-same-as-1-but-using-a-certificate-from-azure-key-vault"></a>예 2: #1와 동일 하지만 Azure Key Vault 인증서를 사용 합니다.
 
 ```PowerShell
 $scriptParams = @{

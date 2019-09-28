@@ -2,22 +2,22 @@
 title: BranchCache 배포 안내서
 description: 이 항목은 일부는 BranchCache 배포 가이드에 대 한 Windows Server 2016, 지사에 WAN 대역폭 사용량을 최적화 하기 위해 분산 및 호스트 캐시 모드로 BranchCache를 배포 하는 방법을 보여 주는
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 3830b356-36d3-44f9-a1d7-990ff3e57403
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 9bccf69f0a913159a395fabc670a63e2c159bd91
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 14eb9e5b4d5a28a64d3cfa0d27b5294ba7168da9
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59888184"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71356733"
 ---
 # <a name="branchcache-deployment-guide"></a>BranchCache 배포 안내서
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 Windows Server 2016의 BranchCache를 배포 하는 방법에 알아보려면이 가이드를 사용할 수 있습니다.  
   
@@ -25,7 +25,7 @@ Windows Server 2016의 BranchCache를 배포 하는 방법에 알아보려면이
   
 -   [BranchCache 디자인 선택](../../branchcache/plan/Choosing-a-BranchCache-Design.md)  
   
--   [BranchCache를 배포 합니다.](../../branchcache/deploy/Deploy-BranchCache.md)  
+-   [BranchCache 배포](../../branchcache/deploy/Deploy-BranchCache.md)  
   
 ## <a name="branchcache-deployment-overview"></a>BranchCache 배포 개요
 
@@ -64,7 +64,7 @@ BranchCache는 WAN 트래픽 및 지점 사용자가 네트워크에서 파일�
 
 다음은이 가이드를 사용 하 여 BranchCache를 배포 하기 위한 요구 사항입니다.  
   
--   **파일 및 웹 콘텐츠 서버** BranchCache 기능을 제공 하는 다음 운영 체제 중 하나를 실행 해야 합니다. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 또는 Windows Server 2008 R2를 선택 합니다. Windows 8 및 이후 클라이언트 계속 만들 수 있지만 Windows Server 2008 r 2를 실행 하는 콘텐츠 서버에 액세스할 때 BranchCache에서 혜택을 볼 새 청크 및 Windows Server 2016, Windows Server 2012 R2 및 Windows Server 2012의 기술 해시를 사용 합니다.  
+-   **파일 및 웹 콘텐츠 서버** 는 BranchCache 기능을 제공 하기 위해 다음 운영 체제 중 하나를 실행 해야 합니다. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 또는 Windows Server 2008 R2. Windows 8 및 이후 클라이언트 계속 만들 수 있지만 Windows Server 2008 r 2를 실행 하는 콘텐츠 서버에 액세스할 때 BranchCache에서 혜택을 볼 새 청크 및 Windows Server 2016, Windows Server 2012 R2 및 Windows Server 2012의 기술 해시를 사용 합니다.  
   
 -   **클라이언트 컴퓨터** 수 있도록 하는 Windows 10, Windows 8.1 또는 Windows 8 실행 해야 가장 최근의 배포 모델 및 청크 및 Windows Server 2012에서 도입 된 향상 된 기능 해시를 사용 합니다.  
   

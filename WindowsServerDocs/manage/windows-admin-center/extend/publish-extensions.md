@@ -7,13 +7,13 @@ author: daniellee-msft
 ms.author: jol
 ms.date: 09/18/2018
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
-ms.openlocfilehash: d2bb97fb65e3fbf5c7809317a8565ff7051d0447
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.prod: windows-server
+ms.openlocfilehash: 24beb287aa35757e1f8057920e8fd95828baf83b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70869703"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71385197"
 ---
 # <a name="publishing-extensions"></a>확장 게시
 
@@ -119,7 +119,7 @@ NuGet 패키지를 만들려면 먼저. nuspec 파일을 만들어야 합니다.
 | iconUrl | Windows 관리 센터 피드에 게시할 때 권장 됨 | 확장 관리자에 표시할 아이콘의 URL입니다. |
 | projectUrl | Windows 관리 센터 피드에 게시 하는 데 필요 합니다. | 확장의 웹 사이트에 대 한 URL입니다. 별도의 웹 사이트가 없는 경우 NuGet 피드에서 패키지 웹 페이지의 URL을 사용 합니다. |
 | licenseUrl | Windows 관리 센터 피드에 게시 하는 데 필요 합니다. | 확장의 최종 사용자 사용권 계약에 대 한 URL입니다. |
-| 파일 | 필수 | 이러한 두 설정은 Windows 관리 센터에서 UI 확장 및 게이트웨이 플러그 인에 대해 예상 하는 폴더 구조를 설정 합니다. |
+| files | 필수 | 이러한 두 설정은 Windows 관리 센터에서 UI 확장 및 게이트웨이 플러그 인에 대해 예상 하는 폴더 구조를 설정 합니다. |
 
 ### <a name="3-build-the-extension-nuget-package"></a>3. 확장 NuGet 패키지 빌드
 

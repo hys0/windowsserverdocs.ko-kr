@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: e94b07d7fa654732526d0b43daadc9ad0ad4f3a8
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: b0ea877170a07db6abe9ac82e72d1722600ec933
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66444934"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71358114"
 ---
 # <a name="create-a-non-claims-aware-relying-party-trust"></a>비 클레임 인식 신뢰 당사자 트러스트 만들기
 
@@ -31,25 +31,25 @@ AD FS 관리 스냅인에서\-비에서\-클레임\-인식 신뢰 당사자 트�
 1. 서버 관리자에서 클릭 **도구**, 를 선택한 다음 **AD FS 관리**합니다.  
   
 2.  아래에서 **작업**, 클릭 **신뢰 당사자 트러스트 추가**합니다.  
-![신뢰 당사자](media/Create-a-Relying-Party-Trust/addtrust1.PNG)   
+![relying 당사자 @ no__t-1   
 
 3.  에 **시작** 페이지에서 선택 **비 클레임 인식** 클릭 **시작**합니다.  
-![신뢰 당사자](media/Create-a-Non-Claims-Aware-Relying-Party-Trust/addnon1.PNG) 
+![relying 당사자 @ no__t-1 
   
 4.  에 **표시 이름 지정** 페이지에 이름을 입력 합니다 **표시 이름**, 아래 **메모** 이 신뢰 당사자 트러스트에 대 한 설명을 입력 한 다음 클릭 **다음**합니다.  
-![신뢰 당사자](media/Create-a-Non-Claims-Aware-Relying-Party-Trust/addnon2.PNG)
+![relying 당사자 @ no__t-1
 
 5. **식별자 구성** 페이지에서 이 신뢰 당사자에 대한 식별자를 하나 이상 지정하고 **추가**를 클릭하여 목록에 추가한 후 **다음**을 클릭합니다.  
-![신뢰 당사자](media/Create-a-Non-Claims-Aware-Relying-Party-Trust/addnon3.PNG)
+![relying 당사자 @ no__t-1
 
 6.  에 **액세스 제어 정책 선택** 정책을 선택 하 고 클릭 **다음**합니다.  액세스 제어 정책에 대 한 자세한 내용은 참조 [AD FS에서 액세스 제어 정책](Access-Control-Policies-in-AD-FS.md)합니다. 
-![신뢰 당사자](media/Create-a-Non-Claims-Aware-Relying-Party-Trust/addnon4.PNG)
+![relying 당사자 @ no__t-1
 
 7. **트러스트 추가 준비 완료** 페이지에서 설정을 검토한 후 **다음** 을 클릭하여 신뢰 당사자 트러스트 정보를 저장합니다.  
-   ![신뢰 당사자](media/Create-a-Non-Claims-Aware-Relying-Party-Trust/addnon5.PNG) 
+   ![relying 당사자 @ no__t-1 
 
 8. **Finish(마침)** 페이지에서 **Close(닫기)** 를 클릭합니다. 이 작업을 통해 **클레임 규칙 편집** 대화 상자가 자동으로 표시됩니다.  
-![신뢰 당사자](media/Create-a-Non-Claims-Aware-Relying-Party-Trust/addnon6.PNG)  
+![relying 당사자 @ no__t-1  
   
 ## <a name="see-also"></a>관련 항목  
 [AD FS 작업](../../ad-fs/AD-FS-2016-Operations.md) 

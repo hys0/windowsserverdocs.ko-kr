@@ -1,7 +1,7 @@
 ---
 title: 보호된 계정을 구성하는 방법
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.service: na
 ms.suite: na
@@ -12,16 +12,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: 28296b588c87bddb0364b9c3e10ad443870dc52f
-ms.sourcegitcommit: d84dc3d037911ad698f5e3e84348b867c5f46ed8
+ms.openlocfilehash: e6e547cde0d1f315f9a8a9b5d0593df559adef51
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66266830"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71403345"
 ---
 # <a name="how-to-configure-protected-accounts"></a>보호된 계정을 구성하는 방법
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 PtH(Pass-the-hash) 공격을 통해 공격자는 사용자 암호(또는 다른 자격 증명 파생물)의 기본 NTLM 해시를 사용하여 원격 서버 또는 서비스에서 인증을 받을 수 있습니다. Microsoft는 이전에 PtH(Pass-the-hash) 공격을 완화할 수 있는 [지침을 게시](https://www.microsoft.com/download/details.aspx?id=36036) 했습니다.  Windows Server 2012 r 2에는 이러한 공격을 추가로 위험을 완화 하려면 새로운 기능이 있습니다. 자격 증명 도난을 방지하는 데 도움이 되는 다른 보안 기능에 대한 자세한 내용은 [자격 증명 보호 및 관리](https://technet.microsoft.com/library/dn408190.aspx)를 참조하세요. 이 항목에서는 다음과 같은 새로운 기능을 구성하는 방법에 대해 설명합니다.  
   
@@ -62,7 +62,7 @@ Windows 8.1 및 Windows Server 2012 R2에는 자격 증명 도난을 방지하�
   
 -   초기 4시간의 수명이 지난 후 사용자 티켓(TGT) 갱신  
   
-그룹에 사용자를 추가 하려면 사용할 수 있습니다 [UI 도구](https://technet.microsoft.com/library/cc753515.aspx) Active Directory 관리 센터 ADAC () 또는 Active Directory 사용자 및 컴퓨터와 같은 명령줄 도구 등 [Dsmod 그룹](https://technet.microsoft.com/library/cc732423.aspx), 나는 Windows PowerShell [Add-adgroupmember](https://technet.microsoft.com/library/ee617210.aspx) cmdlet. 서비스 및 컴퓨터 계정은 보호된 사용자 그룹의 구성원이 *될 수 없습니다*. 암호 또는 인증서를 호스트에서 항상 사용할 수 있으므로, 이러한 계정의 구성원 자격에는 로컬 보호 기능이 제공되지 않습니다.  
+그룹에 사용자를 추가 하려면 ADAC (Active Directory 관리 센터) 또는 Active Directory 사용자 및 컴퓨터와 같은 [UI 도구](https://technet.microsoft.com/library/cc753515.aspx) 를 사용 하거나 [Dsmod 그룹](https://technet.microsoft.com/library/cc732423.aspx)또는 Windows PowerShell [추가 adgroupmember](https://technet.microsoft.com/library/ee617210.aspx) 와 같은 명령줄 도구를 사용할 수 있습니다. #a0. 서비스 및 컴퓨터 계정은 보호된 사용자 그룹의 구성원이 *될 수 없습니다*. 암호 또는 인증서를 호스트에서 항상 사용할 수 있으므로, 이러한 계정의 구성원 자격에는 로컬 보호 기능이 제공되지 않습니다.  
   
 > [!WARNING]  
 > 인증 제한은 피할 수 있는 방법이 없습니다. 즉, Enterprise Admins 그룹 또는 Domain Admins 그룹과 같은 매우 강력한 권한의 그룹 구성원에게도 보호된 사용자 그룹의 다른 구성원과 동일한 제한이 적용됩니다. 이러한 그룹의 모든 구성원이 보호된 사용자 그룹에 추가된 경우 해당 계정이 모두 잠길 수 있습니다. 따라서 잠재적 영향을 철저히 테스트할 때까지 매우 강력한 권한의 계정을 보호된 사용자 그룹에 추가해서는 안 됩니다.  
@@ -86,14 +86,14 @@ Windows 8.1 및 Windows Server 2012 R2에는 자격 증명 도난을 방지하�
 이 섹션에서는 보호된 사용자와 관련된 이벤트 문제를 해결하는 데 도움이 되는 새로운 로그 및 보호된 사용자가 TGT(Ticket-Granting Ticket) 만료 또는 위임 문제를 해결하기 위한 변경 사항에 미치는 영향에 대해 알아봅니다.  
   
 #### <a name="new-logs-for-protected-users"></a>보호된 사용자에 대한 새로운 로그  
-보호된 사용자와 관련된 이벤트 문제를 해결하는 데 도움이 되는 두 가지 새로운 작업 관리 로그인 보호 된 사용자-클라이언트 로그와 보호 된 사용자 실패-도메인 컨트롤러 로그 합니다. 이러한 새 로그는 이벤트 뷰어에 있으며 기본적으로 사용되지 않습니다. 로그를 사용하려면 **응용 프로그램 및 서비스 로그**, **Microsoft**, **Windows**, **인증**을 차례로 클릭하고 로그 이름을 클릭한 다음 **작업** 을 클릭(또는 로그를 마우스 오른쪽 단추로 클릭)하고 **로그 사용**을 클릭합니다.  
+보호된 사용자와 관련된 이벤트 문제를 해결하는 데 도움이 되는 두 가지 새로운 작업 관리 로그인 보호 된 사용자-클라이언트 로그 및 보호 된 사용자 실패-도메인 컨트롤러 로그 이러한 새 로그는 이벤트 뷰어에 있으며 기본적으로 사용되지 않습니다. 로그를 사용하려면 **응용 프로그램 및 서비스 로그**, **Microsoft**, **Windows**, **인증**을 차례로 클릭하고 로그 이름을 클릭한 다음 **작업** 을 클릭(또는 로그를 마우스 오른쪽 단추로 클릭)하고 **로그 사용**을 클릭합니다.  
   
 이러한 로그의 이벤트에 대한 자세한 내용은 [인증 정책 및 인증 정책 사일로](https://technet.microsoft.com/library/dn486813.aspx)를 참조하세요.  
   
 #### <a name="troubleshoot-tgt-expiration"></a>TGT 만료 문제 해결  
 일반적으로 도메인 컨트롤러는 다음 그룹 정책 관리 편집기 창에 표시된 대로 도메인 정책을 기반으로 TGT 수명 및 갱신을 설정합니다.  
   
-![도메인 컨트롤러는 TGT 수명 및 갱신이 도메인 정책을 기반으로 설정 하는 방법을 보여 주는 그룹 정책 관리 편집기 창의 스크린샷](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_TGTExpiration.png)  
+![도메인 컨트롤러에서 도메인 정책을 기반으로 TGT 수명 및 갱신을 설정 하는 방법을 보여 주는 그룹 정책 관리 편집기 창의 스크린샷](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_TGTExpiration.png)  
   
 **보호된 사용자**에 대해 다음 설정이 하드 코드됩니다.  
   
@@ -104,7 +104,7 @@ Windows 8.1 및 Windows Server 2012 R2에는 자격 증명 도난을 방지하�
 #### <a name="troubleshoot-delegation-issues"></a>위임 문제 해결  
 이전에는 Kerberos 위임을 사용하는 기술이 실패한 경우 클라이언트 계정을 검사하여 **계정이 민감하여 위임할 수 없음** 이 설정되어 있는지 확인했습니다. 그러나 계정이 **보호된 사용자**의 구성원인 경우 ADAC(Active Directory 관리 센터)에 이 설정이 구성되어 있지 않을 수 있습니다. 따라서 위임 문제를 해결할 때 설정 및 그룹 구성원 자격을 확인해야 합니다.  
   
-![확인 하는 위치를 보여주는 스크린샷 * * 계정이 민감하여 위임할 수 없음 * * UI 요소](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_TshootDelegation.gif)  
+![\* * 계정이 민감하여 위임할 수 없음 * * UI 요소를 확인할 수 있는 위치를 보여 주는 스크린샷](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_TshootDelegation.gif)  
   
 ### <a name="audit-authentication-attempts"></a>인증 시도 감사  
 **보호된 사용자** 그룹의 구성원에 대한 인증 시도를 명시적으로 감사하기 위해 보안 로그 감사 이벤트를 계속 명시적으로 수집하거나 새로운 작업 관리 로그에서 데이터를 수집할 수 있습니다. 이러한 이벤트에 대한 자세한 내용은 [인증 정책 및 인증 정책 사일로](https://technet.microsoft.com/library/dn486813.aspx)를 참조하세요.  
@@ -112,9 +112,9 @@ Windows 8.1 및 Windows Server 2012 R2에는 자격 증명 도난을 방지하�
 ### <a name="provide-dc-side-protections-for-services-and-computers"></a>서비스 및 컴퓨터에 대한 DC 쪽 보호 제공  
 서비스 및 컴퓨터 계정은 **보호된 사용자**의 구성원일 수 없습니다. 이 섹션에서는 이러한 계정에 제공할 수 있는 도메인 컨트롤러 기반 보호에 대해 설명합니다.  
   
--   NTLM 인증 거부: 통해 구성할 수 있는 유일한 [NTLM 차단 정책](https://technet.microsoft.com/library/jj865674(v=ws.10).aspx)합니다.  
+-   NTLM 인증 거부: [NTLM 차단 정책](https://technet.microsoft.com/library/jj865674(v=ws.10).aspx)을 통해서만 구성할 수 있습니다.  
   
--   Kerberos 사전 인증에서 DES(데이터 암호화 표준) 거부:  Kerberos와 함께 릴리스된 Windows의 모든 버전에서는 RC4도 지원 때문에 des 구성 되지 않으면 Windows Server 2012 R2 도메인 컨트롤러 컴퓨터 계정에 대해 DES를 허용 하지 않습니다.  
+-   Kerberos 사전 인증에서 DES(데이터 암호화 표준) 거부:  Windows Server 2012 R2 도메인 컨트롤러는 Kerberos를 사용 하 여 릴리스된 모든 Windows 버전 에서도 RC4를 지원 하기 때문에 DES에 대해서만 구성 되지 않은 경우 컴퓨터 계정에 대해 DES를 허용 하지 않습니다.  
   
 -   Kerberos 사전 인증에서 RC4 거부: 구성할 수 없습니다.  
   
@@ -125,7 +125,7 @@ Windows 8.1 및 Windows Server 2012 R2에는 자격 증명 도난을 방지하�
   
 -   제한 없는 위임 또는 제한된 위임의 통한 위임 거부: 계정을 제한하려면 ADAC(Active Directory 관리 센터)를 열고 **계정이 민감하여 위임할 수 없음** 확인란을 선택합니다.  
   
-    ![계정을 제한 하려면 위치를 보여 주는 스크린샷](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_TshootDelegation.gif)  
+    ![계정을 제한할 위치를 보여 주는 스크린샷](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_TshootDelegation.gif)  
   
 ## <a name="authentication-policies"></a>인증 정책  
 인증 정책은 인증 정책 개체를 포함하는 AD DS의 새 컨테이너입니다. 인증 정책에서는 계정에 대한 TGT 수명을 제한하거나 다른 클레임 관련 조건을 추가하는 등 자격 증명 도난에 대한 노출 완화에 도움이 되는 설정을 지정할 수 있습니다.  
@@ -141,7 +141,7 @@ Windows Server 2012 동적 액세스 제어에는 조직 전체에서 파일 서
 ### <a name="quick-kerberos-refresher"></a>빠른 Kerberos 리프레셔  
 Kerberos 인증 프로토콜은 하위 프로토콜이라고도 하는 세 가지 유형의 교환 기능으로 구성됩니다.  
   
-![세 가지 유형의 Kerberos 인증 프로토콜 교환, 하위 프로토콜 라고도 보여 주는 스크린샷](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_KerbRefresher.gif)  
+![하위 프로토콜이 라고도 하는 세 가지 유형의 Kerberos 인증 프로토콜 교환을 보여 주는 스크린샷](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_KerbRefresher.gif)  
   
 -   AS(인증 서비스) 교환(KRB_AS_*)  
   
@@ -166,7 +166,7 @@ AP 교환은 응용 프로그램 프로토콜 내부의 데이터처럼 일반�
   
 -   사용자 로그온을 제한하는 액세스 제어 조건(AS 교환을 보내는 장치에서 이 조건을 충족해야 함)  
   
-![사용자 지정 도메인을 제한 하는 TGT 수명 및 액세스 제어 조건을 구성 하 여 초기 인증을 제한 하는 방법을 보여 주는 스크린샷](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_RestrictAS.gif)  
+![사용자 로그온을 제한 하는 TGT 수명 및 액세스 제어 조건을 구성 하 여 초기 인증을 제한 하는 방법을 보여 주는 스크린샷](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_RestrictAS.gif)  
   
 다음을 구성하여 TGS(Ticket-Granting Service) 교환을 통한 서비스 티켓 요청을 제한할 수 있습니다.  
   
@@ -177,7 +177,7 @@ AP 교환은 응용 프로그램 프로토콜 내부의 데이터처럼 일반�
 |정책|요구 사항|  
 |-----|--------|  
 |사용자 지정 TGT 수명 제공| Windows Server 2012 R2 도메인 기능 수준 계정 도메인|  
-|사용자 로그온 제한|-동적 액세스 제어 지원 Windows Server 2012 R2 도메인 기능 수준 계정 도메인<br />Windows 8, Windows 8.1, Windows Server 2012 또는 Windows Server 2012 R2 장치 동적 액세스 제어를 사용 하 여 지원|  
+|사용자 로그온 제한|-동적 액세스 제어 지원 Windows Server 2012 R2 도메인 기능 수준 계정 도메인<br />-Windows 8, Windows 8.1, Windows Server 2012 또는 동적 Access Control 지원 되는 windows Server 2012 R2 장치|  
 |사용자 계정 및 보안 그룹을 기반으로 하는 서비스 티켓 발급 제한| Windows Server 2012 R2 도메인 기능 수준 리소스 도메인|  
 |사용자 클레임이나 장치 계정, 보안 그룹 또는 클레임을 기반으로 하는 서비스 티켓 발급 제한| 동적 액세스 제어를 사용한 Windows Server 2012 R2 도메인 기능 수준 리소스 도메인 지원|  
   
@@ -187,18 +187,18 @@ AP 교환은 응용 프로그램 프로토콜 내부의 데이터처럼 일반�
 #### <a name="configure-domain-controller-support"></a>도메인 컨트롤러 지원 구성  
 사용자의 계정 도메인 (DFL) Windows Server 2012 R2 도메인 기능 수준에 있어야 합니다. 모든 도메인 컨트롤러가 Windows Server 2012 r 2를 하 고 Active Directory 도메인 및 트러스트를 사용 하 여 확인 [dfl](https://technet.microsoft.com/library/cc753104.aspx) Windows Server 2012 r 2로 합니다.  
   
-**동적 Access Control에 대 한 지원을 구성 하려면**  
+**동적 Access Control 지원 구성**  
   
 1.  기본 도메인 컨트롤러 정책에서 **사용**을 클릭하여 컴퓨터 구성 | 관리 템플릿 | 시스템 | KDC에서 **클레임, 복합 인증 및 Kerberos 아머링(armoring)에 대한 KDC(키 배포 센터) 클라이언트 지원**을 사용하도록 설정합니다.  
   
-    ![기본 도메인 컨트롤러 정책에서 * * 사용 * *을 사용 하도록 설정 하려면 * * 클레임, 복합 인증 및 Kerberos 아머 링에 대 한 키 배포 센터 (KDC) 클라이언트 지원 * * 컴퓨터 구성에서 | 관리 템플릿 | 시스템 | KDC](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_EnableKDCClaims.gif)  
+    ![기본 도메인 컨트롤러 정책에서 * * 사용 * *을 클릭 하 여 컴퓨터 구성에서 클레임, 복합 인증 및 Kerberos 아머 링 (armoring)에 대 한 * * 키 배포 센터 (KDC) 클라이언트 지원을 사용 하도록 설정 합니다. 관리 템플릿 | 시스템 | KDC](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_EnableKDCClaims.gif)  
   
 2.  **옵션**아래의 드롭다운 목록에서 **항상 클레임 제공**을 선택합니다.  
   
     > [!NOTE]  
     > **지원** 구성할 수도 있습니다 하지만 도메인에서 Windows Server 2012 R2 DFL, Dc를 항상 필요 없으므로 제공 클레임 사용자 클레임 기반 액세스 확인이 비 클레임 인식 장치를 사용할 때 발생 하 고 클레임 인식 서비스에 연결할 호스트를 허용 합니다.  
   
-    ![아래에서 * * 옵션 * *, 드롭다운 목록 상자에서 선택 * * 항상 클레임 제공](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_AlwaysProvideClaims.png)  
+    ![\* * 옵션 * * 아래의 드롭다운 목록 상자에서 * * 항상 클레임 제공을 선택 합니다.](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_AlwaysProvideClaims.png)  
   
     > [!WARNING]  
     > 구성 **아머 링 되지 않은 인증 요청 실패** Windows 7 및 이전 운영 체제와 같은 Kerberos 아머 링을 지원 하지 않는 모든 운영 체제 또는 Windows 8을 지원 하도록 명시적으로 구성 하지 않은로 시작 하는 운영 체제에서 인증 오류가 발생 합니다.  
@@ -234,25 +234,25 @@ AP 교환은 응용 프로그램 프로토콜 내부의 데이터처럼 일반�
   
 4.  사용자 계정에 대한 TGT 수명을 구성하려면 **사용자 계정에 대한 허용 티켓 수명을 지정하세요.** 확인란을 선택하고 시간(분)을 입력합니다.  
   
-    ![사용자 계정에 대 한 허용 티켓 수명을 지정합니다](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_TGTLifetime.gif)  
+    ![사용자 계정에 대 한 티켓 부여 티켓 수명을 지정 합니다.](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_TGTLifetime.gif)  
   
     예를 들어 최대 TGT 수명을 10시간으로 지정하려면 그림과 같이 **600** 을 입력합니다. TGT 수명을 구성하지 않으면 계정이 **Protected Users** 그룹의 구성원인 경우 TGT 수명 및 갱신이 4시간으로 설정됩니다. 그렇지 않으면 기본 설정을 사용하는 도메인에 대한 다음 그룹 정책 관리 편집기 창에 표시된 것처럼 TGT 수명 및 갱신이 도메인 정책을 기반으로 설정됩니다.  
   
-    ![기본 설정 사용 하 여 도메인에 대 한 그룹 정책 관리 편집기 창](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_TGTExpiration.png)  
+    ![기본 설정이 있는 도메인의 그룹 정책 관리 편집기 창](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_TGTExpiration.png)  
   
 5.  사용자 계정의 장치 선택을 제한하려면 **편집**을 클릭하여 장치에 필요한 조건을 정의합니다.  
   
-    ![사용자 계정의 장치 선택을 제한 하려면 * * 편집 * *](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_EditAuthNPolicy.gif)  
+    ![장치를 선택 하도록 사용자 계정을 제한 하려면 * * 편집 * *을 클릭 합니다.](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_EditAuthNPolicy.gif)  
   
 6.  **액세스 제어 조건 편집** 창에서 **조건 추가**를 클릭합니다.  
   
-    ![액세스 제어 조건 편집](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_AddCondition.png)  
+    ![Access Control 조건 편집](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_AddCondition.png)  
   
 ##### <a name="add-computer-account-or-group-conditions"></a>컴퓨터 계정 또는 그룹 조건 추가  
   
 1.  컴퓨터 계정 또는 그룹을 구성하려면 드롭다운 목록에서 **각 그룹의 구성원** 드롭다운 목록 상자를 선택하고 **모든 그룹의 구성원**으로 변경합니다.  
   
-    ![컴퓨터 계정 또는 그룹을 구성 합니다.](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_AddCompMember.png)  
+    ![컴퓨터 계정 또는 그룹 구성](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_AddCompMember.png)  
   
     > [!NOTE]  
     > 이 액세스 제어는 사용자가 로그온하는 장치 또는 호스트의 조건을 정의합니다. 액세스 제어 용어에서 장치 또는 호스트의 컴퓨터 계정은 사용자를 의미하기 때문에 옵션이 **사용자**뿐입니다.  
@@ -275,17 +275,17 @@ AP 교환은 응용 프로그램 프로토콜 내부의 데이터처럼 일반�
   
 6.  확인을 클릭하고 컴퓨터 계정에 대한 다른 모든 조건을 만듭니다.  
   
-    ![확인을 클릭 하 고 컴퓨터 계정에 대 한 다른 모든 조건을 만듭니다](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_AddCompAddConditions.png)  
+    ![확인을 클릭 하 고 컴퓨터 계정에 대 한 다른 조건을 만듭니다.](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_AddCompAddConditions.png)  
   
 7.  작업을 마친 경우 **확인** 을 클릭하면 해당 컴퓨터 계정에 대해 정의된 조건이 표시됩니다.  
   
-    ![마치면 클릭 * * 확인 * *](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_AddCompDone.png)  
+    ![완료 되 면 * * 확인 * *을 클릭 합니다.](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_AddCompDone.png)  
   
 ##### <a name="add-computer-claim-conditions"></a>컴퓨터 클레임 조건 추가  
   
 1.  컴퓨터 클레임을 구성하려면 그룹 드롭다운에서 클레임을 선택합니다.  
   
-    ![컴퓨터 클레임을 구성 하려면 그룹 드롭다운에서 클레임을 선택](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_CompClaim.gif)  
+    ![컴퓨터 클레임을 구성 하려면 드롭다운 그룹에서 클레임을 선택 합니다.](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_CompClaim.gif)  
   
     포리스트에 이미 프로비전된 경우에만 클레임을 사용할 수 있습니다.  
   
@@ -295,28 +295,28 @@ AP 교환은 응용 프로그램 프로토콜 내부의 데이터처럼 일반�
   
 3.  작업을 마친 경우 확인을 클릭하면 상자에 정의된 조건이 표시됩니다.  
   
-    ![클릭을 확인 했으면](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_CompClaimComplete.gif)  
+    ![작업이 완료 되 면 확인을 클릭 합니다.](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_CompClaimComplete.gif)  
   
 ##### <a name="troubleshoot-missing-computer-claims"></a>누락된 컴퓨터 클레임 문제 해결  
 클레임이 프로비전되어 있지만 사용할 수 없는 경우 **컴퓨터** 클래스에 대해서만 구성되었기 때문일 수 있습니다.  
   
 조직 구성 단위 (OU)에 따라 인증을 제한 하려는 경우 이미 구성 된 컴퓨터의 하지만 가정해에 대해서만 **컴퓨터** 클래스입니다.  
   
-![컴퓨터의 조직 구성 단위 (OU) 기반 인증을 제한 하는 방법을 보여 주는 스크린샷](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_RestrictComputers.gif)  
+![컴퓨터의 OU (조직 구성 단위)에 따라 인증을 제한 하는 방법을 보여 주는 스크린샷](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_RestrictComputers.gif)  
   
 사용자 로그온을 장치로 제한하는 데 사용할 수 있는 클레임에 대해 **사용자** 확인란을 선택합니다.  
   
-![Select를 확인 하 여 장치에 대 한 로그온 사용자를 제한 하는 방법을 보여 주는 스크린 샷 * * 사용자 * * 확인란 합니다.  ](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_RestrictUsersComputers.gif)  
+![선택 * * 사용자 * * 확인란을 선택 하 여 장치에 대 한 사용자 로그인을 제한 하는 방법을 보여 주는 스크린샷  ](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_RestrictUsersComputers.gif)  
   
 #### <a name="provision-a-user-account-with-an-authentication-policy-with-adac"></a>ADAC를 사용하여 인증 정책과 함께 사용자 계정 프로비전  
   
 1.  **사용자** 계정에서 **정책**을 클릭합니다.  
   
-    ![* * 사용자 * * 계정에 클릭 * * 정책 * *](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_UserPolicy.gif)  
+    ![\* * 사용자 * * 계정에서 * * 정책 * *을 클릭 합니다.](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_UserPolicy.gif)  
   
 2.  **이 계정에 인증 정책을 할당합니다.** 확인란을 선택합니다.  
   
-    ![선택 된 * *이 계정 * * 확인란에 인증 정책을 할당](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_UserPolicyAssign.gif)  
+    ![\* *이 계정에 인증 정책 할당 * * 확인란을 선택 합니다.](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_UserPolicyAssign.gif)  
   
 3.  그런 다음 사용자에게 적용할 인증 정책을 선택합니다.  
   
@@ -327,14 +327,14 @@ DAC(동적 액세스 제어)를 구성하지 않고 TGT 수명을 구성할 수 
   
 그룹 정책 또는 로컬 그룹 정책 편집기를 사용하여 컴퓨터 구성 | 관리 템플릿 | 시스템 | Kerberos에서 **클레임, 복합 인증 및 Kerberos 아머링(armoring)에 대한 Kerberos 클라이언트 지원**을 사용하도록 설정합니다.  
   
-![사용 하도록 설정 하려면 그룹 정책 또는 로컬 그룹 정책 편집기를 사용 하는 방법을 보여 주는 스크린 샷 * * 클레임, 복합 인증 및 Kerberos 아머 링에 대 한 Kerberos 클라이언트 지원 * *](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_KerbClientDACSupport.gif)  
+![그룹 정책 또는 로컬 그룹 정책 편집기를 사용 하 여 클레임, 복합 인증 및 Kerberos 아머 링 (armoring)에 대 한 Kerberos 클라이언트 지원을 사용 하도록 설정 하는 방법을 보여 주는 스크린샷 * *](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_KerbClientDACSupport.gif)  
   
 ### <a name="troubleshoot-authentication-policies"></a>인증 정책 문제 해결  
   
 #### <a name="determine-the-accounts-that-are-directly-assigned-an-authentication-policy"></a>인증 정책이 직접 할당된 계정 확인  
 인증 정책의 계정 섹션에 정책을 직접 적용한 계정이 표시됩니다.  
   
-![정책을 직접 적용 하는 계정을 보여주는 인증 정책의 계정 섹션의 스크린 샷](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_AccountsAssigned.gif)  
+![정책을 직접 적용 한 계정을 보여 주는 인증 정책의 계정 섹션 스크린샷](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_AccountsAssigned.gif)  
   
 #### <a name="use-the-authentication-policy-failures---domain-controller-administrative-log"></a>인증 정책 실패-도메인 컨트롤러 관리 로그를 사용 하 여  
 새 **인증 정책 실패-도메인 컨트롤러** 관리 로그에서 **응용 프로그램 및 서비스 로그** > **Microsoft** > **Windows** > **인증** 쉽게 인증 정책으로 인 한 오류를 검색 하기 위해 만들었습니다. 이 로그는 기본적으로 사용되지 않습니다. 사용하려면 로그 이름을 마우스 오른쪽 단추로 클릭한 다음 **로그 사용**을 클릭합니다. 새 이벤트는 기존 Kerberos TGT 및 서비스 티켓 감사 이벤트와 내용이 매우 유사합니다. 이러한 이벤트에 대한 자세한 내용은 [인증 정책 및 인증 정책 사일로](https://technet.microsoft.com/library/dn486813.aspx)를 참조하세요.  
@@ -423,11 +423,11 @@ Active Directory 관리 센터 또는 Windows PowerShell을 사용 하 여 인�
   
 1.  **Active Directory 관리 센터**를 열고 **인증**을 클릭한 다음 **인증 정책 사일로**를 마우스 오른쪽 단추로 클릭하고 **새로 만들기**, **인증 정책 사일로**를 차례로 클릭합니다.  
   
-    ![열기 * * Active Directory 관리 센터 * *을 클릭 * * 인증 * *을 마우스 오른쪽 단추로 클릭 * * 인증 정책 사일로 * *을 클릭 * * 새 * *을 클릭 한 다음 * * 인증 정책 사일로 * *](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_CreateNewAuthNPolicySilo.gif)  
+    ![\* * Active Directory 관리 센터 * *를 열고 * * 인증 * *을 클릭 하 고 * * 인증 정책 사일로 * *를 마우스 오른쪽 단추로 클릭 한 다음 * * 새로 만들기 * *를 클릭 하 고 * * 인증 정책 사일로 * *를 클릭 합니다.](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_CreateNewAuthNPolicySilo.gif)  
   
 2.  **표시 이름**에 사일로의 이름을 입력합니다. **허용된 계정**에서 **추가**를 클릭하고 계정의 이름을 입력한 다음 **확인**을 클릭합니다. 사용자, 컴퓨터 또는 서비스 계정을 지정할 수 있습니다. 그런 다음 모든 보안 주체에 단일 정책을 사용할지 또는 각 유형의 보안 주체에 별도의 정책을 사용할지 지정하고 정책의 이름을 지정합니다.  
   
-    ![* * 표시 이름 * *에 사일로의 이름을 입력 합니다. * * 허용 계정 * *을 클릭 * * 추가 * * 고 계정의 이름을 입력 하 고 클릭 * * 확인 * *](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_NewAuthNPolicySiloDisplayName.gif)  
+    ![\* * 표시 이름 * *에 사일로의 이름을 입력 합니다. \* * 허용 된 계정 * *에서 * * 추가 * *를 클릭 하 고 계정의 이름을 입력 한 다음 * * 확인 * *을 클릭 합니다.](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_NewAuthNPolicySiloDisplayName.gif)  
   
 ### <a name="manage-authentication-policy-silos-by-using-windows-powershell"></a>Windows PowerShell을 사용하여 인증 정책 사일로 관리  
 다음 명령은 인증 정책 사일로 개체를 만들고 적용합니다.  

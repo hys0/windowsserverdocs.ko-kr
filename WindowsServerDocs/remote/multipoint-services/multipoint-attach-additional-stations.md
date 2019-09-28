@@ -2,7 +2,7 @@
 title: 추가 스테이션 MultiPoint 서버에 연결
 description: MultiPoint 서비스 배포에 더 많은 스테이션 추가
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ author: evaseydl
 manager: scottman
 ms.author: evas
 ms.date: 08/04/2016
-ms.openlocfilehash: 70609d491f5eb60daf89df219c06c8b9d4c3cd3e
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 45340f02b120b1431b1f58a58ed03ea40e17a14c
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871407"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71394751"
 ---
 # <a name="attach-additional-stations-to-multipoint-services"></a>추가 스테이션을 MultiPoint 서비스에 연결 합니다.
 MultiPoint 서비스 환경에서 사용자가 스테이션을 사용 하 여 MultiPoint 서비스에 연결 하 여 해당 작업을 수행 합니다. 참여 하는 스테이션은 Multipoint Service를 실행 하는 컴퓨터에 연결 하기 위한 사용자 끝점입니다.  

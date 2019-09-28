@@ -1,27 +1,27 @@
 ---
 title: 주-보조 배포를 사용한 지리적 위치 기반 트래픽 관리에 DNS 정책 사용
-description: 이 항목은 DNS 정책 시나리오 가이드에 대 한 Windows Server 2016의 일부
+description: 이 항목은 Windows Server 2016에 대 한 DNS 정책 시나리오 가이드의 일부입니다.
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: a9ee7a56-f062-474f-a61c-9387ff260929
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: cf66a306c7f023852cec93d6458e74a99c46c831
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.openlocfilehash: 6a7836160fc7363ec3d7b2fb11e194db82970f9a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66812106"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406161"
 ---
 # <a name="use-dns-policy-for-geo-location-based-traffic-management-with-primary-secondary-deployments"></a>주-보조 배포를 사용한 지리적 위치 기반 트래픽 관리에 DNS 정책 사용
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 기본 및 보조 DNS 서버를 포함 하는 DNS 배포 하는 경우 지역 위치 기반 트래픽 관리에 대 한 DNS 정책을 만드는 방법에 알아보려면이 항목을 사용할 수 있습니다.  
 
-이전 시나리오 [주 서버와 지리적 위치 기반 트래픽 관리에 대 한 DNS 정책을 사용 하 여](primary-geo-location.md), 주 DNS 서버의 지리적 위치 기반 트래픽 관리에 대 한 DNS 정책을 구성 하기 위한 지침을 제공 합니다. 그러나 인터넷 인프라에서 DNS 서버는 널리 사용 되는 주-보조 모델에서는 여기서 영역의 쓰기 가능한 복사본은 선택 하 고 안전한 주 서버에 저장 하 고 읽기 전용 복사본이 영역의 여러 보조 서버에 저장 됩니다.   
+이전 시나리오에서는 주 DNS 서버에서 지리적 위치 기반 트래픽 관리에 대 한 DNS 정책을 구성 하는 방법에 대 한 지침을 제공 하는 [기본 서버와 지리적 위치 기반 트래픽 관리에 Dns 정책을 사용](primary-geo-location.md)합니다. 그러나 인터넷 인프라에서 DNS 서버는 널리 사용 되는 주-보조 모델에서는 여기서 영역의 쓰기 가능한 복사본은 선택 하 고 안전한 주 서버에 저장 하 고 읽기 전용 복사본이 영역의 여러 보조 서버에 저장 됩니다.   
   
 보조 서버는 요청 하 고 주 DNS 서버에서 영역에 새 변경 내용을 포함 하는 영역 업데이트를 받을 신뢰할 수 있는 전송 (AXFR) 및 증분 영역 전송 (IXFR) 영역 전송 프로토콜을 사용 합니다.   
   
@@ -37,7 +37,7 @@ Woodgrove.com 고객 웹 사이트에서 응답성이 뛰어난 환경을 얻을
   
 Contoso 클라우드 서비스에서 미국 및 유럽, Contoso는 해당 식료품 woodgrove.com에 대 한 포털 주문를 호스트에서 다른 두 데이터 센터를 있습니다.  
   
-두 명의 보조 서버를 포함 하는 Contoso DNS 배포: **SecondaryServer1**, IP 주소가 10.0.0.2; 및 **SecondaryServer2**, IP 주소 10.0.0.3 합니다. 이러한 보조 서버 역할을 하는 이름 서버는 두 개의 서로 다른 지역에서 유럽과 미국에 있는 SecondaryServer2에 SecondaryServer1와
+Contoso DNS 배포에는 두 개의 보조 서버가 포함 됩니다. IP 주소가 10.0.0.2 인 **SecondaryServer1** IP 주소가 10.0.0.3 인 and **SecondaryServer2**. 이러한 보조 서버 역할을 하는 이름 서버는 두 개의 서로 다른 지역에서 유럽과 미국에 있는 SecondaryServer2에 SecondaryServer1와
   
 쓰기 가능한 영역의 주 복사본에 없는 **PrimaryServer** (IP 주소 10.0.0.1) 여기서 영역 변경 합니다. 보조 서버에 일반 영역 전송 보조 서버는 항상 최신는 PrimaryServer에 영역에 새 변경 사항입니다.
   
@@ -49,7 +49,7 @@ Contoso 클라우드 서비스에서 미국 및 유럽, Contoso는 해당 식료
 
 기본-보조 DNS 배포의 지리적 위치 기반 트래픽 관리를 배포할 때에 전송이 영역 범위 수준 전송 알아보기 전에 먼저 발생 하는 방법을 정상 기본 보조 영역을 이해 하는 것이 중요 합니다. 다음 섹션에서는 영역 및 영역 범위 수준 전송 정보를 제공 합니다.  
   
-- [DNS 기본 보조 배포에서 영역 전송](#zone-transfers-in-a-dns-primary-secondary-deployment)  
+- [DNS 기본 보조 배포의 영역 전송](#zone-transfers-in-a-dns-primary-secondary-deployment)  
 - [DNS 기본 보조 배포에서 영역 범위 수준 전송](#zone-scope-level-transfers-in-a-dns-primary-secondary-deployment)  
   
 ### <a name="zone-transfers-in-a-dns-primary-secondary-deployment"></a>DNS 기본 보조 배포에서 영역 전송
@@ -91,7 +91,7 @@ OPT RR의 값에는 요청은 전송 영역 범위 이름입니다. 주 DNS 서�
 - [주 영역에서 영역 전송 설정 구성](#configure-the-zone-transfer-settings-on-the-primary-zone)  
 - [DNS 클라이언트 서브넷 복사](#copy-the-dns-client-subnets)  
 - [보조 서버에서 영역 범위 만들기](#create-the-zone-scopes-on-the-secondary-server)  
-- [DNS 정책을 구성합니다](#configure-dns-policy)  
+- [DNS 정책 구성](#configure-dns-policy)  
   
 다음 섹션에서는 자세한 구성 지침을 제공 합니다.  
   
@@ -151,7 +151,7 @@ SecondaryServer1 및 SecondaryServer2를 복제 하는 데 사용할 영역의 �
   
 ### <a name="create-the-zone-scopes-on-the-secondary-server"></a>보조 서버에서 영역 범위를 만듭니다
 
-보조 서버에서 영역 범위를 만들어야 합니다. DNS에서 영역 범위 XFRs 주 서버에서 요청를 시작할 수도 있습니다. 주 서버에서 영역 범위에서 변경 되 면 영역 범위 정보를 포함 하는 알림을 보조 서버로 보냅니다. 보조 서버 증분 변경 사항으로 해당 영역 범위를 업데이트할 수 있습니다.  
+보조 서버에서 영역 범위를 만들어야 합니다. DNS에서 영역 범위는 주 서버에서 XFRs 요청도 시작 합니다. 주 서버에서 영역 범위에서 변경 되 면 영역 범위 정보를 포함 하는 알림을 보조 서버로 보냅니다. 보조 서버 증분 변경 사항으로 해당 영역 범위를 업데이트할 수 있습니다.  
   
 보조 서버에서 영역 범위를 만들 수는 다음 Windows PowerShell 명령을 사용할 수 있습니다.  
   

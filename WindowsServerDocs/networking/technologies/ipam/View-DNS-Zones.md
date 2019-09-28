@@ -1,9 +1,9 @@
 ---
 title: DNS 영역 보기
-description: 이 항목은 Windows Server 2016에서 관리 IPAM (IP 주소) 관리 가이드의 일부입니다.
+description: 이 항목은 Windows Server 2016의 IPAM (IP 주소 관리) 관리 가이드의 일부입니다.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-ipam
@@ -12,18 +12,18 @@ ms.topic: article
 ms.assetid: 2cfe4e40-ec6d-4541-baa9-d772409fe27c
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 22d00865d1fb30faa2cf9cd79479772f768bfbbe
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: a362eb5d7b1a80d8b90bdf565debecb187d7a254
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67283774"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71405590"
 ---
 # <a name="view-dns-zones"></a>DNS 영역 보기
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-IPAM 클라이언트 콘솔에서 DNS 영역을 보려면이 항목에서는 사용할 수 있습니다.  
+이 항목을 사용 하 여 IPAM 클라이언트 콘솔에서 DNS 영역을 볼 수 있습니다.  
   
 이 절차를 수행하려면 최소한 **Administrators** 그룹의 구성원이거나 이와 동등한 자격이 있어야 합니다.  
   
@@ -33,9 +33,9 @@ IPAM 클라이언트 콘솔에서 DNS 영역을 보려면이 항목에서는 사
   
 2.  탐색 창에서에서 **모니터링 및 관리**, 를 클릭 하 여 **DNS 영역**합니다.  탐색 창 위쪽 탐색 창 및 아래쪽 탐색 창으로 나눕니다.  
   
-3.  아래쪽 탐색 창에서 다음 선택 항목 중 하나를 수행 합니다.  
+3.  아래쪽 탐색 창에서 다음 중 하나를 선택 합니다.  
   
-    -   정방향 조회  
+    -   전방 조회  
   
     -   IPv4 역방향 조회  
   

@@ -7,18 +7,18 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: f7454279f234f65136b9fe6649a6e96ea53e5d51
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 6a3e7eb6c42c8190da799c88c1e947e6aef1c29f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66191512"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71408107"
 ---
 # <a name="federated-web-sso-design"></a>페더레이션된 웹 SSO 디자인
 
-페더레이션 웹 Single\-Sign\-온 \(SSO\) Active Directory Federation Services에서 디자인 \(AD FS\) 여러 방화벽에 걸쳐 있는 보안 통신이 필요 경계 네트워크 이름과\-확인 서버-전체 인터넷 라우팅 인프라 외에도 합니다.  
+Active Directory Federation Services \(AD FS @ no__t-5의 페더레이션된 웹 Single @ no__t-0Sign @ no__t @no__t는 여러 방화벽, 경계 네트워크 및 이름 @ no__t-6resolution에 걸쳐 있는 보안 통신을 포함 합니다. 서버-전체 인터넷 라우팅 인프라 외에도  
   
 두 조직 동의 단일 조직에서 사용자를 허용 하도록 페더레이션 트러스트 관계를 만들려면이 디자인 일반적으로 사용 됩니다 \(계정 파트너 조직\) 웹에 액세스할\-응용 프로그램이 나 다른 조직에서 AD FS를 통해 보호 되는 서비스 기반 \(리소스 파트너 조직의\)합니다.  
   
@@ -43,7 +43,7 @@ Contoso는 리소스 공급자입니다. 다음과 같은 AD FS 배포 목표를
   
 -   [Active Directory 사용자에게 클레임 인식 애플리케이션 및 서비스에 대한 액세스 제공](Provide-Your-Active-Directory-Users-Access-to-Your-Claims-Aware-Applications-and-Services.md)  
   
-페더레이션된 웹 SSO 디자인 계획 및 배포 하는 데 사용할 수 있는 자세한 작업 목록은 참조 하세요. [검사 목록: 페더레이션된 웹 SSO 디자인 구현](../../ad-fs/deployment/Checklist--Implementing-a-Federated-Web-SSO-Design.md)합니다.  
+페더레이션된 웹 SSO 디자인을 계획 하 고 배포 하는 데 사용할 수 있는 자세한 작업 목록은 [Checklist 목록을 참조 하세요. 페더레이션된 웹 SSO 디자인 @ no__t-0을 구현 합니다.  
   
 ## <a name="see-also"></a>관련 항목
 [Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)

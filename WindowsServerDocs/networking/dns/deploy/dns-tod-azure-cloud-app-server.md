@@ -1,23 +1,23 @@
 ---
 title: Azure 클라우드 응용 프로그램 서버로 시간 기반 DNS 응답
-description: 이 항목은 DNS 정책 시나리오 가이드에 대 한 Windows Server 2016의 일부
+description: 이 항목은 Windows Server 2016에 대 한 DNS 정책 시나리오 가이드의 일부입니다.
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: 4846b548-8fbc-4a7f-af13-09e834acdec0
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 68f30973ef58b64006181990425e6ca84c39c059
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.openlocfilehash: 4307ce1512980277af819e0710e0447d8dbac8c4
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66812041"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406198"
 ---
 # <a name="dns-responses-based-on-time-of-day-with-an-azure-cloud-app-server"></a>Azure 클라우드 응용 프로그램 서버로 시간 기반 DNS 응답
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 하루 중 시간을 기반으로 하는 DNS 정책을 사용 하 여 응용 프로그램의 서로 다른 지리적으로 분산 된 인스턴스 응용 프로그램 트래픽을 분산 하는 방법에 알아보려면이 항목을 사용할 수 있습니다. 
 
@@ -32,7 +32,7 @@ ms.locfileid: "66812041"
 
 이 예제에서는 가상의 회사를 해당 웹 사이트를 통해 전 세계에 걸쳐 온라인 gifting 솔루션에서 제공 하는 Contoso 선물 서비스를 사용 하 여 contosogiftservices.com 합니다. 
 
-Contosogiftservices.com 웹 사이트 (사용 하 여 공용 IP와 192.68.30.2) 시애틀에 단일 온-프레미스 데이터 센터에만 호스팅됩니다. 
+Contosogiftservices.com 웹 사이트는 시애틀의 단일 온-프레미스 데이터 센터 (공용 IP 192.68.30.2 사용) 에서만 호스팅됩니다. 
 
 DNS 서버는 온-프레미스 데이터 센터에도 있습니다. 
 
@@ -59,9 +59,9 @@ DNS 서버는 5-9 오후 매일 사이의 30%의 쿼리는 Azure에서 실행 �
 
 오후 6 시에 오후 9 시 시애틀의 사용량이 적은 시간을 기반으로 하는 새 DNS 정책의 구성한 후 DNS 서버에서 보내는 시애틀 웹 서버의 IP 주소를 포함 하는 클라이언트에 대 한 DNS 응답의 / 72% 및 Azure 웹 서버의 IP 주소를 포함 하는 클라이언트에 대 한 DNS 응답의 30% 있으므로 클라이언트 트래픽을 새 Azure 웹 서버로 보내는 및 시애틀 웹 서버 오버 로드를 방지 합니다. 
 
-요일, 그 외에 일반 쿼리 처리가 수행 하 고 응답 온-프레미스 데이터 센터에서 웹 서버에 대 한 레코드를 포함 하는 기본 영역 범위에서 전송 됩니다. 
+그 외 시간에는 일반적인 쿼리 처리가 수행 되며, 온-프레미스 데이터 센터의 웹 서버에 대 한 레코드를 포함 하는 기본 영역 범위에서 응답이 전송 됩니다. 
 
-Azure 레코드에서 10 분의 TTL Azure VM을 제거 하기 전에 레코드가 LDNS 캐시에서 만료 된 것을 확인 합니다. 이러한 확장의 이점 중 하나에 DNS 데이터가 온-프레미스를 유지 하 고 수요에 따라 Azure에 확장을 유지 하는 것입니다.
+Azure 레코드에서 10 분의 TTL Azure VM을 제거 하기 전에 레코드가 LDNS 캐시에서 만료 된 것을 확인 합니다. 이러한 크기 조정의 이점 중 하나는 DNS 데이터를 온-프레미스에 유지 하 고 요구 사항에 따라 Azure에 확장을 유지할 수 있다는 것입니다.
 
 ## <a name="how-to-configure-dns-policy-for-intelligent-dns-responses-based-on-time-of-day-with-azure-app-server"></a>Azure 응용 프로그램 서버와 시간에 따라 지능형 DNS 응답에 대 한 DNS 정책을 구성 하는 방법
 
@@ -100,7 +100,7 @@ Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "AzureZoneScope
 
 AzureZoneScope, 레코드 www.contosogiftservices.com Azure 퍼블릭 클라우드에 있는 IP 주소, 192.68.31.44와 함께 추가 됩니다. 
 
-기본 영역 범위에 마찬가지로 \(contosogiftservices.com\), 레코드 \(www.contosogiftservices.com\) 시애틀 온-프레미스에서 실행 중인 웹 서버의 IP 주소 192.68.30.2와 함께 추가 됩니다 데이터 센터입니다.
+마찬가지로 -0contosogiftservices @ no__t-1 @no__t 기본 영역 범위에서 contosogiftservices @ no__t-3 @no__t 레코드는 시애틀 온-프레미스 데이터 센터에서 실행 되는 웹 서버의 IP 주소 192.68.30.2를 사용 하 여 추가 됩니다.
 
 아래 두 번째 cmdlet – ZoneScope 매개 변수가 포함 되지 않습니다. 이 때문에 기본 ZoneScope 레코드가 추가 됩니다. 
 
@@ -117,8 +117,8 @@ Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -
 ### <a name="create-the-dns-policies"></a>DNS 정책 만들기 
 영역 범위를 만든 후에 다음 작업이 수행 되도록 이러한 범위 간에 들어오는 쿼리를 분산 하는 DNS 정책을 만들 수 있습니다.
 
-1. 클라이언트의 오후 9 시 매일, 30%로 오후 6 시에서 클라이언트의 70% 시애틀 온-프레미스 웹 서버의 IP 주소를 수신 하는 동안 %DNS 응답에는 Azure 데이터 센터에서 웹 서버의 IP 주소를 받습니다.
-2. 그 외에 모든 클라이언트 시애틀 온-프레미스 웹 서버의 IP 주소를 수신 합니다.
+1. 매일 오후 6 시부터 오후 9 시까지 클라이언트의 30%는 DNS 응답의 Azure 데이터 센터에서 웹 서버의 IP 주소를 수신 하는 반면, 70%의 클라이언트는 시애틀 온-프레미스 웹 서버의 IP 주소를 받습니다.
+2. 모든 클라이언트는 다른 시간에 시애틀 온-프레미스 웹 서버의 IP 주소를 수신 합니다.
 
 하루 중 시간에는 DNS 서버의 현지 시간으로 표현 될 수 있습니다.
 

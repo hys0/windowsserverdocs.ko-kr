@@ -7,14 +7,14 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 9f502addbd214abad12bb9a2d6ab3bef8882209d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8ffcb9d403b8d83285099e4cb9449771f95c16a8
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59842714"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71408922"
 ---
 # <a name="deploying-ad-ds-in-a-new-organization"></a>새 조직에서 AD DS 배포
 
@@ -26,7 +26,7 @@ Active Directory 도메인 서비스 (AD DS)를 준비 하 고 철저 하 게 �
   
 ![새 조직에 배포](media/Deploying-AD-DS-in-a-New-Organization/daa38971-86f2-4033-9442-0cdff9ecc48f.gif)  
   
-에서 계획 하 고 새 조직에 AD DS를 배포 하는 데 사용할 수 있는 세부 작업 목록은 참조 하세요. [검사 목록: 새 조직에 AD DS 배포](https://technet.microsoft.com/library/cc725897.aspx)합니다.  
+새 조직에서 AD DS를 계획 하 고 배포 하는 데 사용할 수 있는 자세한 작업 목록은 [Checklist 목록: 새 조직에 AD DS 배포 @ no__t-0.  
   
 
 

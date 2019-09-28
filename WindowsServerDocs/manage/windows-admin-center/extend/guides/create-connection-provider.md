@@ -7,13 +7,13 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 06/06/2019
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
-ms.openlocfilehash: c1f3a7f7004b573fece71cdaf2f43661c13ad496
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.prod: windows-server
+ms.openlocfilehash: 9c04db3196d1e806e50af9164b3c8bcdfb19b079
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70869626"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406885"
 ---
 # <a name="create-a-connection-provider-for-a-solution-extension"></a>솔루션 확장에 대 한 연결 공급자 만들기
 
@@ -208,7 +208,7 @@ RelativeGatewayUrl 사용에 대 한 참고 사항:
 
 이제 OnInit을 구현 하는 TypeScript 클래스를 만들어 응용 프로그램 계층에서 연결 공급자를 구현할 예정입니다. 클래스에는 다음과 같은 함수가 있습니다.
 
-| 함수 | 설명 |
+| 기능 | 설명 |
 | -------- | ----------- |
 | 생성자 (개인 appContextService: AppContextService, 개인 경로: ActivatedRoute) |  |
 | public ngOnInit () |  |

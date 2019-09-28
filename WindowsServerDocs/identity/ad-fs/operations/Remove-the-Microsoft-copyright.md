@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 6e15f9d1490ad62f1458cd32da6e78a6febec58d
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 0c24173dd03e03f9e8a19ef5981a6dc1259d62d7
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66189034"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407518"
 ---
 # <a name="remove-the-microsoft-copyright"></a>Microsoft 저작권 정보를 제거 합니다. 
 
@@ -38,9 +38,9 @@ ms.locfileid: "66189034"
    Export-AdfsWebTheme -Name custom -DirectoryPath C:\CustomWebTheme
    ```
 
-3. 찾을 `Style.css` 출력 폴더에 있는 파일입니다. 앞의 예제를 사용 하 여 경로 것 `C:\CustomWebTheme\Css\Style.css.`
+3. 출력 폴더에 있는 `Style.css` 파일을 찾습니다. 이전 예제를 사용 하 여 경로는 `C:\CustomWebTheme\Css\Style.css.`입니다.
   
-4. 열기는 `Style.css` 메모장과 같은 편집기를 사용 하 여 파일입니다.  
+4. 메모장 등의 편집기를 사용 하 여 `Style.css` 파일을 엽니다.  
   
 5. `#copyright` 부분을 찾아서 다음으로 변경합니다.  
 
@@ -48,7 +48,7 @@ ms.locfileid: "66189034"
    #copyright {color:#696969; display:none;}
    ```
 
-6. 새의 기반이 되는 사용자 지정 테마를 만들려면 `Style.css` 파일입니다.  
+6. 새 `Style.css` 파일을 기반으로 하는 사용자 지정 테마를 만듭니다.  
 
    ```powershell
    Set-AdfsWebTheme -TargetName custom -StyleSheet @{locale="";path="C:\customWebTheme\css\style.css"}
@@ -65,4 +65,4 @@ ms.locfileid: "66189034"
 ![저작권 정보를 제거 합니다.](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom1a.png) 
 
 ## <a name="additional-references"></a>추가 참조 
-[AD FS 사용자 로그인 사용자 지정](AD-FS-user-sign-in-customization.md) 
+[사용자 로그인 사용자 지정 AD FS](AD-FS-user-sign-in-customization.md) 

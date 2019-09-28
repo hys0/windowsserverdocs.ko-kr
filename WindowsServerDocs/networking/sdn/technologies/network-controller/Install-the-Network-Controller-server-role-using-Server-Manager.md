@@ -1,29 +1,29 @@
 ---
 title: 서버 관리자를 사용 하 여 네트워크 컨트롤러 서버 역할 설치
-description: 이 항목에서는 Windows Server 2016에서 서버 관리자를 사용 하 여 네트워크 컨트롤러 서버 역할을 설치 하는 방법에 지침을 제공 합니다.
+description: 이 항목에서는 Windows Server 2016에서 서버 관리자를 사용 하 여 네트워크 컨트롤러 서버 역할을 설치 하는 방법에 대 한 지침을 제공 합니다.
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 3a6e4352-ff62-4290-b8a4-5c83740070fc
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 699e2ca5c4ec33099d0ad948523b6f587ad118e4
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8b656bbd823a10f1e36d1757bb53c4565d4e828c
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59859064"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71405836"
 ---
 # <a name="install-the-network-controller-server-role-using-server-manager"></a>서버 관리자를 사용 하 여 네트워크 컨트롤러 서버 역할 설치
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 이 항목에서는 서버 관리자를 사용 하 여 네트워크 컨트롤러 서버 역할을 설치 하는 방법에 지침을 제공 합니다.
 
 >[!IMPORTANT]
->실제 호스트에서 네트워크 컨트롤러 서버 역할을 배포 하지 않습니다. 네트워크 컨트롤러를 배포 하려면 Hyper-v 가상 컴퓨터에서 네트워크 컨트롤러 서버 역할을 설치 해야 \(VM\) Hyper-v 호스트에 설치 된. 세 가지 다른 하이퍼의 Vm에서 네트워크 컨트롤러를 설치한 후\-V 호스트 Hyper을 사용 하도록 설정 해야\-소프트웨어 정의 네트워킹에 대 한 호스트 \(SDN\) 호스트를 사용 하 여 네트워크 컨트롤러를 추가 하 여 Windows PowerShell 명령 **새로 만들기-NetworkControllerServer**합니다. 이렇게 하면 함수에 SDN 소프트웨어 부하 분산 장치를 사용 하는 합니다. 자세한 내용은 [새로 만들기-NetworkControllerServer](https://technet.microsoft.com/itpro/powershell/windows/network-controller/new-networkcontrollerserver)합니다.
+>실제 호스트에 네트워크 컨트롤러 서버 역할을 배포 하지 마십시오. 네트워크 컨트롤러를 배포 하려면 hyper-v 호스트에 설치 된 Hyper-v 가상 컴퓨터에 네트워크 컨트롤러 서버 역할을 설치 해야 합니다 \(VM @ no__t-1. 3 개의 서로 다른 Hyper-v 호스트의 Vm에 네트워크 컨트롤러를 설치한 후 Windows PowerShell을 사용 하 여 네트워크 컨트롤러에 호스트를 추가 하 여 소프트웨어 정의 네트워킹 \(SDN @ no__t-3에 대 한 하이퍼 @ no__t-1V 호스트를 사용 하도록 설정 해야 합니다. **NetworkControllerServer**명령입니다. 이렇게 하면 SDN 소프트웨어 Load Balancer 기능을 사용할 수 있습니다. 자세한 내용은 [NetworkControllerServer](https://technet.microsoft.com/itpro/powershell/windows/network-controller/new-networkcontrollerserver)를 참조 하세요.
   
 네트워크 컨트롤러를 설치한 후 추가 네트워크 컨트롤러 구성에 대 한 Windows PowerShell 명령을 사용 해야 합니다. 자세한 내용은 참조 [Windows PowerShell을 사용 하 여 네트워크 컨트롤러 배포](../../deploy/Deploy-Network-Controller-using-Windows-PowerShell.md)합니다.  
   

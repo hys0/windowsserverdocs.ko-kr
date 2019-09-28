@@ -1,39 +1,39 @@
 ---
-title: 기존 배스 천 포리스트 또는 새 포리스트에 자체에서 HGS를 설치할지 여부를 선택합니다
+title: 새 포리스트 또는 기존 요새 포리스트에 HGS를 설치할지 여부를 선택 합니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 4e02cd37391e629c9b947095fe32626bd15726ff
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 28c7eceefa4747a35d1b989df4a2c5e43a8d6a42
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59827504"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71386796"
 ---
-# <a name="choose-whether-to-install-hgs-in-its-own-dedicated-forest-or-in-an-existing-bastion-forest"></a>자체 전용된 포리스트 또는 기존 배스 천 포리스트의 HGS를 설치할지 여부를 선택합니다
+# <a name="choose-whether-to-install-hgs-in-its-own-dedicated-forest-or-in-an-existing-bastion-forest"></a>자체 전용 포리스트 또는 기존 요새 포리스트에 HGS를 설치할지 여부를 선택 합니다.
 
->적용 대상: Windows Server, Windows Server 2016, Windows Server (반기 채널) 2019
+>적용 대상: Windows server 2019, Windows Server (반기 채널), Windows Server 2016
 
 
-HGS에 대 한 Active Directory 포리스트는 해당 관리자 제어 보호 된 Vm의 키에 액세스할 수 있으므로 중요 합니다. 기본 설치 하도록 설정 된 새 포리스트 전용 HGS를 다른 종속성을 구성 합니다. 이 옵션은 자체 포함 된 환경 이므로 권장 이며 만들어질 때 안전한 것으로 알려진. 
+해당 관리자는 보호 된 Vm을 제어 하는 키에 액세스할 수 있으므로 HGS의 Active Directory 포리스트는 중요 합니다. 기본 설치에서는 HGS 전용의 새 포리스트를 설정 하 고 다른 종속성을 구성 합니다. 환경이 자체 포함 되 고 생성 시 보안이 유지 되는 것으로 알려져 있으므로이 옵션을 선택 하는 것이 좋습니다. 
 
-기술만 기존 포리스트에 있는 HGS를 설치 하기 위한 요구 사항인 루트 도메인;에 추가할 것 루트가 아닌 도메인 지원 되지 않습니다. 하지만 밖에도 운영 요구 사항 및 기존 포리스트를 사용 하 여에 대 한 보안 관련 모범 사례입니다. 적합 한 포리스트에서 사용 하는 포리스트 같은 중요 한 함수 하나에 맞도록 의도적으로 빌드됩니다 [AD DS에 대 한 Privileged Access Management](https://docs.microsoft.com/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) 요소나 [향상 된 보안 관리 환경 (ESAE) 포리스트에](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access-reference-material#ESAE_BM). 이러한 포리스트는 일반적으로 다음과 같은 특징을 나타냅니다.
+기존 포리스트에 HGS를 설치 하기 위한 유일한 기술적 요구 사항은 루트 도메인에 추가 된다는 것입니다. 루트가 아닌 도메인은 지원 되지 않습니다. 그러나 기존 포리스트 사용에 대 한 운영 요구 사항 및 보안 관련 모범 사례도 있습니다. 적절 한 포리스트는 AD DS 또는 [ESAE (강화 된 보안 관리 환경) 포리스트에](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access-reference-material#ESAE_BM) [대해 Privileged Access Management](https://docs.microsoft.com/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) 에서 사용 하는 포리스트와 같은 하나의 중요 한 기능을 제공 하도록 의도적으로 빌드됩니다. 이러한 포리스트에는 일반적으로 다음과 같은 특징이 있습니다.
 
-- 몇 가지 관리자 (패브릭 관리자가 별도)를가지고
-- 이러한 많은 낮은 로그온
-- 이들은 특성에서 범용 
+- 소수의 관리자 (패브릭 관리자와 구분)가 있습니다.
+- 적은 수의 로그온을 포함 합니다.
+- 기본적으로 일반적인 용도가 아닙니다. 
 
-프로덕션 포리스트 같은 범용 포리스트 HGS 사용에 적합 하지 않습니다. HGS 패브릭 관리자 로부터 격리 해야 하므로 fabric 포리스트 적합도 하지 않습니다.
+프로덕션 포리스트와 같은 범용 포리스트는 HGS에서 사용 하기에 적합 하지 않습니다. 또한 패브릭 포리스트는 패브릭 관리자와 격리 해야 하기 때문에 적합 하지 않습니다.
 
 ## <a name="next-step"></a>다음 단계
 
-사용자 환경에 가장 적합 한 설치 옵션을 선택 합니다.
+환경에 가장 적합 한 설치 옵션을 선택 합니다.
 
-- [HGS는 자체 전용된 포리스트에 설치](guarded-fabric-install-hgs-default.md)
-- [기존 배스 천 포리스트의 HGS를 설치 합니다.](guarded-fabric-install-hgs-in-a-bastion-forest.md)
+- [자체 전용 포리스트에 HGS 설치](guarded-fabric-install-hgs-default.md)
+- [기존 요새 포리스트에 HGS 설치](guarded-fabric-install-hgs-in-a-bastion-forest.md)
 
 

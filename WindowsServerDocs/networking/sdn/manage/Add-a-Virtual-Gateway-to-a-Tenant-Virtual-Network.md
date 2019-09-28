@@ -3,7 +3,7 @@ title: 테넌트 가상 네트워크에 가상 게이트웨이 추가
 description: Windows PowerShell cmdlet 및 스크립트를 사용 하 여 테 넌 트의 가상 네트워크에 대 한 사이트 간 연결을 제공 하는 방법을 알아봅니다.
 manager: dougkim
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-sdn
@@ -13,12 +13,12 @@ ms.assetid: b9552054-4eb9-48db-a6ce-f36ae55addcd
 ms.author: pashort
 author: shortpatti
 ms.date: 08/23/2018
-ms.openlocfilehash: 39199a96b1f3cd5a62e60f676e8ab47ad4acb4a8
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: deeb226d81c48e0e389ea4d2619c43aca01e25c2
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70869953"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71355892"
 ---
 # <a name="add-a-virtual-gateway-to-a-tenant-virtual-network"></a>테넌트 가상 네트워크에 가상 게이트웨이 추가 
 

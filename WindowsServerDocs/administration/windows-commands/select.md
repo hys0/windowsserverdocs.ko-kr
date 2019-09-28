@@ -1,8 +1,8 @@
 ---
 title: 선택
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4c3723dd414adca68c22011ef3f6be02eb6531d5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7dc3bc8775f971968f096ba4344348e77c112cfa
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59889904"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71384114"
 ---
 # <a name="select"></a>선택
 
@@ -39,10 +39,10 @@ select vdisk
 
 |매개 변수|설명|
 |---------|-----------|
-|[디스크를 선택 합니다.](select-disk.md)|디스크에 포커스를 이동합니다.|
-|[파티션을 선택합니다](select-partition.md)|파티션의 포커스가 이동합니다.|
+|[디스크 선택](select-disk.md)|디스크에 포커스를 이동합니다.|
+|[파티션 선택](select-partition.md)|파티션의 포커스가 이동합니다.|
 |[볼륨 선택](select-volume.md)|볼륨에 포커스를 이동합니다.|
-|[vdisk를 선택 합니다.](select-vdisk.md)|VHD에 포커스를 이동합니다.|
+|[Vdisk 선택](select-vdisk.md)|VHD에 포커스를 이동합니다.|
 
 ## <a name="remarks"></a>설명
 

@@ -1,45 +1,45 @@
 ---
 title: 스플릿 브레인 DNS 배포에 DNS 정책 사용
-description: 이 항목은 DNS 정책 시나리오 가이드에 대 한 Windows Server 2016의 일부
+description: 이 항목은 Windows Server 2016에 대 한 DNS 정책 시나리오 가이드의 일부입니다.
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: a255a4a5-c1a0-4edc-b41a-211bae397e3c
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: c74bb2ee2f1647716c8c38e392434a5b7f01805f
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 5449c9e96a5a9ecd08ca35e703a76927f4e27158
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66446397"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71356020"
 ---
-# <a name="use-dns-policy-for-split-brain-dns-deployment"></a>분할에 대 한 DNS 정책을 사용 하 여\-머리 DNS 배포
+# <a name="use-dns-policy-for-split-brain-dns-deployment"></a>분할 @ no__t-0Brain DNS 배포에 DNS 정책 사용
 
 >적용 대상: Windows Server 2016
 
 이 항목을 사용 하 여 Windows Server에서 DNS 정책을 구성 하는 방법을 알아봅니다&reg; 스플릿 브레인 DNS 배포의 경우 2016 있으면 다음 두 가지 버전의 단일 영역-인터넷에 있는 사용자는 일반적으로 외부 사용자에 대 한 조직 인트라넷에 내부 사용자에 대 한 합니다.
 
 >[!NOTE]
->분할에 대 한 DNS 정책을 사용 하는 방법에 대 한 내용은\-브레인 DNS 배포와 Active Directory 통합 DNS 영역을 참조 하십시오 [Split-Brain DNS Active Directory에 대 한 DNS 정책을 사용 하 여](dns-sb-with-ad.md)입니다.
+>분할 @ no__t에 DNS 정책을 사용 하는 방법에 대 한 자세한 내용은 Active Directory 통합 DNS 영역를 사용 하 여 dns 배포를 참조 [Active Directory](dns-sb-with-ad.md)하세요.
 
-이전에이 시나리오는 DNS 관리자가 서로 다른 두 DNS 서버, 내부 및 외부 사용자가 각 집합에 각 제공 서비스를 유지 하는 데 필요 합니다. 영역 내에서 몇 가지 레코드가 된 분할만\-brained 또는 영역 (내부 및 외부)의 두 인스턴스 모두 위임 된 관리 수수께끼 알게 되었습니다이 동일한 부모 도메인에 있습니다. 
+이전에이 시나리오는 DNS 관리자가 서로 다른 두 DNS 서버, 내부 및 외부 사용자가 각 집합에 각 제공 서비스를 유지 하는 데 필요 합니다. 영역 내에 있는 소수의 레코드만 split @ no__t-0brained 이거나 영역 인스턴스 (내부 및 외부)가 모두 동일한 부모 도메인에 위임 된 경우이는 관리 난제. 
 
 스플릿 브레인 배포 다른 구성 시나리오에는 DNS 이름 확인에 대 한 선택적 재귀 컨트롤입니다. 일부 환경에서는 엔터프라이즈 DNS 서버는 또한 해야, 외부 사용자에 대 한 신뢰할 수 있는 이름 서버 역할을 하 고 해당 재귀를 차단 하는 동안 내부 사용자에 대 한 인터넷을 통해 재귀 확인을 수행 해야 합니다. 
 
 이 항목에는 다음 섹션이 수록되어 있습니다.
 
-- [스플릿 브레인 DNS 배포의 예](#bkmk_sbexample)
-- [DNS 선택적 재귀 컨트롤의 예](#bkmk_recursion)
+- [DNS 분할 두뇌 배포의 예](#bkmk_sbexample)
+- [DNS 선택적 재귀 제어의 예](#bkmk_recursion)
 
-## <a name="bkmk_sbexample"></a>스플릿 브레인 DNS 배포의 예
+## <a name="bkmk_sbexample"></a>DNS 분할 두뇌 배포의 예
 다음은 정책 DNS를 사용 하 여 스플릿 브레인 DNS의 앞에서 설명한 시나리오를 수행 하는 방법의 예입니다.
 
 이 섹션에서는 다음 항목을 다룹니다.
 
-- [스플릿 브레인 DNS 배포의 작동 원리](#bkmk_sbhow)
-- [스플릿 브레인 DNS 배포를 구성 하는 방법](#bkmk_sbconfigure)
+- [DNS 분할 인 두뇌 배포의 작동 방식](#bkmk_sbhow)
+- [DNS 분할-두뇌 배포를 구성 하는 방법](#bkmk_sbconfigure)
 
 
 이 예제에서는 하나의 가상 회사 Contoso는 www.career.contoso.com에서 경력 웹 사이트에서 유지 관리를 사용 합니다.
@@ -57,7 +57,7 @@ DNS 정책을 사용 하 여 이러한 영역을 동일한 DNS 서버에서 호�
 ![스플릿 브레인 DNS 배포](../../media/DNS-Split-Brain/Dns-Split-Brain-01.jpg)  
 
 
-## <a name="bkmk_sbhow"></a>스플릿 브레인 DNS 배포의 작동 원리
+## <a name="bkmk_sbhow"></a>DNS 분할 인 두뇌 배포의 작동 방식
 
 DNS 서버를 구성 하 여 필요한 DNS 정책을 사용 하 여, 각 이름 확인 요청 DNS 서버에서 정책에 따라 평가 됩니다.
 
@@ -67,7 +67,7 @@ DNS 서버를 구성 하 여 필요한 DNS 정책을 사용 하 여, 각 이름 
 
 따라서; 내부 IP 주소를 포함 하는 DNS 응답 수신 프라이빗 IP (10.0.0.56)에 수신된 www.career.contoso.com에 대한 DNS 쿼리 예제 및 공용 네트워크 인터페이스에서 수신된 DNS 쿼리 (이것이 일반적인 쿼리 해상도와 동일) 기본 영역 범위에서 공용 IP 주소를 포함하는 DNS 응답을 수신합니다.  
 
-## <a name="bkmk_sbconfigure"></a>스플릿 브레인 DNS 배포를 구성 하는 방법
+## <a name="bkmk_sbconfigure"></a>DNS 분할-두뇌 배포를 구성 하는 방법
 DNS 정책을 사용 하 여 DNS Split-Brain 배포를 구성 하려면 다음 단계를 사용 해야 합니다.
 
 - [영역 범위 만들기](#bkmk_zscopes)  
@@ -128,13 +128,13 @@ DNS 서버는 프라이빗 인터페이스에 대한 쿼리를 받으면 DNS 쿼
 자세한 내용은 참조 [추가 DnsServerQueryResolutionPolicy](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps)합니다.  
 
 
-## <a name="bkmk_recursion"></a>DNS 선택적 재귀 컨트롤의 예
+## <a name="bkmk_recursion"></a>DNS 선택적 재귀 제어의 예
 
 다음은 정책 DNS를 사용 하 여 DNS 선택적 재귀 컨트롤의 앞에서 설명한 시나리오를 수행 하는 방법의 예입니다.
 
 이 섹션에서는 다음 항목을 다룹니다.
 
-- [어떻게 DNS 선택적 재귀 제어는](#bkmk_recursionhow)
+- [DNS 선택적 재귀 제어 작동 방법](#bkmk_recursionhow)
 - [DNS 선택적 재귀 제어를 구성 하는 방법](#bkmk_recursionconfigure)
 
 이 예제에서는 Contoso www.career.contoso.com에서 경력 웹 사이트를 유지 관리 하는 이전 예와 같은 가상의 회사를 사용 합니다.
@@ -154,7 +154,7 @@ DNS 서버 열려 해결 프로그램 리소스 소모에 취약할 수 및 악�
 ![선택적 순환 제어](../../media/DNS-Split-Brain/Dns-Split-Brain-02.jpg) 
 
 
-### <a name="bkmk_recursionhow"></a>어떻게 DNS 선택적 재귀 제어는
+### <a name="bkmk_recursionhow"></a>DNS 선택적 재귀 제어 작동 방법
 
 Contoso DNS 서버는 신뢰할 수 없는 쿼리를 받은 경우와 같은 www.microsoft.com에 대 한 다음 이름 확인 요청은 평가 DNS 서버에서 정책에 따라 합니다. 
 
@@ -196,7 +196,7 @@ DNS 정책을 사용 하 여 DNS 선택적 순환 제어를 구성 하려면 다
 
 DNS 서버에 일부 쿼리에 대 한 권한이 없는 경우 DNS 서버 재귀 정책 쿼리를 해결 하는 방법을 제어할 수 있도록 메시지를 표시 합니다. 
 
-이 예제에서 사용 하도록 설정 하는 재귀 내부 재귀 범위는 개인 네트워크 인터페이스를 사용 하 여 연결 됩니다.
+이 예제에서 재귀가 활성화 된 내부 재귀 범위는 개인 네트워크 인터페이스와 연결 됩니다.
 
 DNS 재귀 정책을 구성 하려면 다음 예제에서는 명령을 사용할 수 있습니다.
 
@@ -210,4 +210,4 @@ DNS 재귀 정책을 구성 하려면 다음 예제에서는 명령을 사용할
 
 관리 요구 사항을 트래픽이 따라 DNS 정책의 수천을 만들 수 있습니다 하 고 들어오는 쿼리-DNS 서버를 다시 시작 하지 않고 모든 새 정책-동적으로 적용 됩니다. 
 
-자세한 내용은 [DNS 정책 시나리오 가이드](DNS-Policy-Scenario-Guide.md)합니다.
+자세한 내용은 [DNS 정책 시나리오 가이드](DNS-Policy-Scenario-Guide.md)를 참조 하세요.

@@ -7,20 +7,20 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: b14ded98c4f1a340349119bd9f5f42e3a1bf9434
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: ecbaa33d83d7b37f376a426571c0d2df89c7695d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66445738"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407118"
 ---
 # <a name="deploy-security-auditing-with-central-audit-policies-demonstration-steps"></a>중앙 감사 정책으로 보안 감사 배포(시연 단계)
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-이 시나리오에서는 만든 금융 정책을 사용 하 여 금융 문서 폴더의 파일에 대 한 액세스를 감사 됩니다 [중앙 액세스 정책 배포 &#40;데모 단계&#41;](Deploy-a-Central-Access-Policy--Demonstration-Steps-.md)합니다. 폴더에 대한 액세스 권한이 없는 사용자가 이 폴더에 액세스할 경우 이벤트 뷰어에 작업이 캡처됩니다.   
+이 시나리오에서는 [중앙 액세스 정책 &#40;&#41;데모 단계 배포](Deploy-a-Central-Access-Policy--Demonstration-Steps-.md)에서 만든 금융 정책을 사용 하 여 금융 문서 폴더의 파일에 대 한 액세스를 감사 합니다. 폴더에 대한 액세스 권한이 없는 사용자가 이 폴더에 액세스할 경우 이벤트 뷰어에 작업이 캡처됩니다.   
  이 시나리오를 테스트하려면 다음 단계가 필요합니다.  
   
 |태스크|설명|  
@@ -34,7 +34,7 @@ ms.locfileid: "66445738"
   
 #### <a name="to-configure-a-global-object-access-policy"></a>글로벌 개체 액세스 정책을 구성하려면  
   
-1. 암호를 사용 하 여 contoso\administrator로 도메인 컨트롤러 DC1에 로그인 <strong>pass@word1</strong>합니다.  
+1. <strong>@No__t-1</strong>암호를 사용 하 여 contoso\administrator로 도메인 컨트롤러 d c 1에 로그인 합니다.  
   
 2. 서버 관리자에서 **도구**를 가리킨 다음 **그룹 정책 관리**를 클릭합니다.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66445738"
   
 #### <a name="to-update-group-policy-settings"></a>그룹 정책 설정을 업데이트하려면  
   
-1. 파일 서버에 암호를 사용 하 여 contoso\Administrator로 FILE1에 로그인 <strong>pass@word1</strong>합니다.  
+1. Contoso\Administrator로 파일 서버 FILE1에 로그인 하 고 <strong>pass@word1</strong>암호를 사용 합니다.  
   
 2. Windows 키+R을 누른 다음 **cmd**를 입력하여 명령 프롬프트 창을 엽니다.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "66445738"
   
 #### <a name="to-verify-that-the-global-object-access-policy-has-been-applied"></a>글로벌 개체 액세스 정책이 적용되었는지 확인하려면  
   
-1.  Contoso\MReid로 클라이언트 컴퓨터 CLIENT1에 로그인합니다. 하이퍼링크 폴더로 "file:///\\\\\\\ID_AD_FILE1\\\Finance" \\\ FILE1\Finance Documents를 Word Document 2를 수정 합니다.  
+1.  Contoso\MReid로 클라이언트 컴퓨터 CLIENT1에 로그인합니다. HYPERLINK "file:///\\ @ no__t @ no__t-2\ID_AD_FILE1 @ no__t-3\Finance" \\ \ File1\finance documents Documents 폴더로 이동한 다음 Word 문서 2를 수정 합니다.  
   
 2.  contoso\administrator로 파일 서버 FILE1에 로그인합니다. 이벤트 뷰어를 열고 **Windows 로그**를 찾은 후 **보안**을 선택하고 만들거나, 수정하거나, 삭제한 파일이나 폴더에 대해 명시적인 감사 SACL을 설정하지 않았더라도 작업을 통해 감사 이벤트 **4656** 및 **4663** 이 생성되었는지 확인합니다.  
   
