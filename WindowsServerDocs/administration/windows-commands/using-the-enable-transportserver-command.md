@@ -1,8 +1,8 @@
 ---
 title: Enable TransportServer 명령을 사용 하 여
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 40793ac0b9dc7d8b4a80d6a66b55244202aa37d1
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 732a021b02193a3bfb5cb573a33879dbecb840b9
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59834334"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71363428"
 ---
 # <a name="using-the-enable-transportserver-command"></a>Enable TransportServer 명령을 사용 하 여
 
@@ -33,7 +33,7 @@ wdsutil [Options] /Enable-TransportServer [/Server:<Server name>]
 |매개 변수|설명|
 |-------|--------|
 |[/ 서버:<Server name>]|전송 서버 이름을 지정합니다. 이 NetBIOS 이름 또는 정규화 된 도메인 이름 (FQDN) 수 있습니다. 이름이 지정 되지 않은, 로컬 서버를 사용 됩니다.|
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 서버에서 서비스를 사용 하려면 다음 중 하나를 실행 합니다.
 ```
 wdsutil /Enable-TransportServer
