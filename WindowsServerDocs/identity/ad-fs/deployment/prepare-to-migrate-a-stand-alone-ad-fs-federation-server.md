@@ -1,42 +1,42 @@
 ---
 title: 독립 실행형 AD FS 페더레이션 서버 마이그레이션 준비
-description: 독립 실행형 AD FS 서버를 Windows Server 2012로 마이그레이션할 준비 하기에 정보를 제공 합니다.
+description: 독립 실행형 AD FS 서버를 Windows Server 2012로 마이그레이션하도록 준비 하는 방법에 대 한 정보를 제공 합니다.
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 06/28/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 4d2b8a9c35b106a237b47d1bd062026469af59a0
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 09b8cbd9097a95cd00b1413ce9e32ff9bf2f44c3
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66444484"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71359321"
 ---
 #  <a name="prepare-to-migrate-a-stand-alone-ad-fs-federation-server-or-a-single-node-ad-fs-farm"></a>독립 실행형 AD FS 페더레이션 서버 또는 단일 노드 AD FS 팜 마이그레이션 준비  
  
-마이그레이션 (동일 서버 마이그레이션) 하기 위해 준비 하려면 독립 실행형 AD FS 2.0 페더레이션 서버 또는 단일 노드 AD FS 팜을 Windows Server 2012 내보내고이 서버에서 AD FS 구성 데이터를 백업 합니다.  
+독립 실행형 AD FS 2.0 페더레이션 서버 또는 단일 노드 AD FS 팜을 Windows Server 2012로 마이그레이션 (동일 서버 마이그레이션) 하기 위해 준비 하려면이 서버에서 AD FS 구성 데이터를 내보내고 백업 해야 합니다.  
   
 AD FS 구성 데이터를 내보내려면 다음 작업을 수행합니다.  
   
--   [1단계:  서비스 설정 내보내기](#step-1-export-service-settings)  
+-   [1단계:  서비스 설정 내보내기 @ no__t-0  
   
--   [2단계:  클레임 공급자 트러스트 내보내기](#step-2-export-claims-provider-trusts)  
+-   [2단계:  클레임 공급자 트러스트 내보내기 @ no__t-0  
   
--   [3단계:  신뢰 당사자 트러스트 내보내기](#step-3-export-relying-party-trusts)  
+-   [3단계:  신뢰 당사자 트러스트를 내보냅니다. @ no__t-0  
   
--   [4단계:  사용자 지정 특성 저장소 백업](#step-4-back-up-custom-attribute-stores)  
+-   [4단계:  사용자 지정 특성 저장소 백업 @ no__t-0  
   
--   [5단계:  웹 페이지 사용자 지정 백업](#step-5-back-up-webpage-customizations)  
+-   [5단계:  웹 페이지 사용자 지정 백업 @ no__t-0  
   
 ## <a name="step-1-export-service-settings"></a>1단계: 서비스 설정 내보내기  
  서비스 설정을 내보내려면 다음 절차를 수행합니다.  
   
 ### <a name="to-export-service-settings"></a>서비스 설정을 내보내려면  
   
-1.  페더레이션 서비스에서 사용하는 SSL 인증서의 인증서 주체 이름 및 지문 값을 기록합니다. SSL 인증서를 찾으려면 IIS(인터넷 정보 서비스) 관리 콘솔을 열고 왼쪽 창에서 **기본 웹 사이트** 를 선택합니다. 그런 다음 **동작** 에 **작업** 찾기 및 선택 https 바인딩, 창 클릭 **편집**를 클릭 하 고 **보기**합니다.  
+1.  페더레이션 서비스에서 사용하는 SSL 인증서의 인증서 주체 이름 및 지문 값을 기록합니다. SSL 인증서를 찾으려면 IIS(인터넷 정보 서비스) 관리 콘솔을 열고 왼쪽 창에서 **기본 웹 사이트** 를 선택합니다. 그런 다음 **동작** **작업** 창에서 https 바인딩을 찾아서 선택 하 고 **편집**을 클릭 한 다음 **보기**를 클릭 합니다.  
   
 > [!NOTE]
 >  필요한 경우 페더레이션 서비스에서 사용되는 SSL 인증서와 해당 프라이빗 키를 .pfx 파일로 내보낼 수도 있습니다. 자세한 내용은 [서버 인증 인증서의 프라이빗 키 부분 내보내기](Export-the-Private-Key-Portion-of-a-Server-Authentication-Certificate.md)를 참조하세요.  
@@ -57,7 +57,7 @@ AD FS 구성 데이터를 내보내려면 다음 작업을 수행합니다.
 출력 파일에 다음과 같은 중요한 구성 값이 포함됩니다.  
   
     
-|**Get-adfsproperties에서 보고 한 대로 페더레이션 서비스 속성 이름**|**AD FS 관리 콘솔의 페더레이션 서비스 속성 이름**|
+|**Set-adfsproperties에서 보고 한 속성 이름 페더레이션 서비스**|**AD FS management console에서 속성 이름 페더레이션 서비스**|
 |------|------|
 |HostName|페더레이션 서비스 이름|  
 |Identifier|페더레이션 서비스 식별자|  
@@ -109,7 +109,7 @@ ID 값을 찾으려면 **Services(서비스)** 콘솔에서 **AD FS 2.0 Windows 
 
 ## <a name="next-steps"></a>다음 단계
  [AD FS 2.0 페더레이션 서버 마이그레이션 준비](prepare-to-migrate-ad-fs-fed-server.md)   
- [AD FS 2.0 페더레이션 서버 프록시 마이그레이션 준비](prepare-to-migrate-ad-fs-fed-proxy.md)   
+ [AD FS 2.0 페더레이션 서버 프록시 @no__t 마이그레이션 준비](prepare-to-migrate-ad-fs-fed-proxy.md)-1  
  [AD FS 2.0 페더레이션 서버 마이그레이션](migrate-the-ad-fs-fed-server.md)   
- [AD FS 2.0 페더레이션 서버 프록시 마이그레이션](migrate-the-ad-fs-2-fed-server-proxy.md)   
+ [AD FS 2.0 페더레이션 서버 프록시](migrate-the-ad-fs-2-fed-server-proxy.md) 을 마이그레이션합니다.  
  [AD FS 1.1 웹 에이전트 마이그레이션](migrate-the-ad-fs-web-agent.md)

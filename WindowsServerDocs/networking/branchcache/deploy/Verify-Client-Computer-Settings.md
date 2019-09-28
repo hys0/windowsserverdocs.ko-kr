@@ -2,22 +2,22 @@
 title: 클라이언트 컴퓨터 설정 확인
 description: 이 항목은 일부는 BranchCache 배포 가이드에 대 한 Windows Server 2016, 지사에 WAN 대역폭 사용량을 최적화 하기 위해 분산 및 호스트 캐시 모드로 BranchCache를 배포 하는 방법을 보여 주는
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 31ea58b0-d407-4f62-8ec6-6a1b19174042
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: d628886186474d3f05d7961ca3d3b45b8bf12e73
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6d0adbf0db2d7888ca12ca49f50fc37baa8cbc16
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59834054"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71356513"
 ---
 # <a name="verify-client-computer-settings"></a>클라이언트 컴퓨터 설정 확인
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 BranchCache에 대 한 클라이언트 컴퓨터가 올바르게 구성 되었는지 확인 하려면이 절차를 사용할 수 있습니다.  
   
