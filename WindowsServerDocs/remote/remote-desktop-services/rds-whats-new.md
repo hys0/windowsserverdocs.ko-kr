@@ -2,7 +2,7 @@
 title: 원격 데스크톱 서비스의 새로운 기능
 description: 새로운 기능 Windows Server 2016에서 RDS 설명을 제공합니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: 04d52dff-e61b-4633-9908-be8600abc2ba
 author: ChristianMontoya
 manager: scottman
-ms.openlocfilehash: ad13fdce251c1f84bac725e9f1ee266c6aae5e13
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: e976f4d4ffa33efb98a744909f8c46ba498ea43b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "63711788"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71403840"
 ---
 # <a name="whats-new-in-remote-desktop-services"></a>원격 데스크톱 서비스의 새로운 기능
 
@@ -35,7 +35,7 @@ RD 연결 브로커는 배포 정보 (예: 연결 상태 및 사용자/호스트
 추가 정보: [원격 데스크톱 연결 브로커 고가용성 환경에 Azure SQL DB 사용](https://blogs.technet.microsoft.com/enterprisemobility/2016/05/03/new-windows-server-2016-capability-use-azure-sql-db-for-your-remote-desktop-connection-broker-high-availability-environment/)
 
 ## <a name="graphics---solving-graphics-needs-across-various-scenarios"></a>그래픽-다양 한 시나리오에서 그래픽 요구를 해결 합니다.
-Hyper-v의 불연속 디바이스 할당, 덕분에 Gpu는 GPU 필요한 응용 프로그램에서 사용할 수 있도록 VM에 직접 호스트 컴퓨터에 이제 매핑할 수 있습니다. 또한 향상 되었습니다 OpenGL 4.4, OpenCL 1.1, 4, 000 해상도 및 Windows Server 가상 컴퓨터에 대 한 지원을 포함 하는 RemoteFX vGPU에 있습니다.
+Hyper-v의 불연속 디바이스 할당, 덕분에 Gpu는 GPU 필요한 애플리케이션에서 사용할 수 있도록 VM에 직접 호스트 컴퓨터에 이제 매핑할 수 있습니다. 또한 향상 되었습니다 OpenGL 4.4, OpenCL 1.1, 4, 000 해상도 및 Windows Server 가상 컴퓨터에 대 한 지원을 포함 하는 RemoteFX vGPU에 있습니다.
 
 추가 정보: [개별 디바이스 할당](https://blogs.technet.microsoft.com/virtualization/2015/11/)
 

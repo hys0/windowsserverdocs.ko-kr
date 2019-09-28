@@ -1,18 +1,18 @@
 ---
 title: Windows Server에서 PowerShell을 사용하여 "작업 리소스" RDS 제목 사용자 지정
 description: 작업 영역 이름을 Windows Server의 기본 이름에서 다르게 변경하는 방법을 설명합니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: remote-desktop-services
 ms.author: helohr
 ms.date: 10/26/2017
 ms.topic: article
 author: Heidilohr
-ms.openlocfilehash: 43837826a6cddc2c3c4c7c1af874334718a3a067
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: ea7e1505f705c87e58145e7a306ed355ab3acf7f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "63743342"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71387054"
 ---
 # <a name="customize-the-rds-title-work-resources-using-powershell-on-windows-server"></a>Windows Server에서 PowerShell을 사용하여 "작업 리소스" RDS 제목 사용자 지정
 

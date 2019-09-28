@@ -1,7 +1,7 @@
 ---
 title: Windows Server 2016에서 제거되었거나 사용되지 않는 기능
 description: 현재 릴리스에서 제거되었거나 다음 릴리스에서 제거될 예정인 Windows Server 2016의 기능, 즉 더 이상 사용되지 않는 기능의 목록입니다. 상용 환경에서 운영 체제를 업데이트하는 IT 전문가가 참조하시면 유용합니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
 ms.date: 08/22/2019
@@ -10,12 +10,12 @@ author: jasongerend
 ms.author: jgerend
 manager: dougkim
 ms.localizationpriority: medium
-ms.openlocfilehash: a35da3fda1736139290a2503a5c06317cf322ccc
-ms.sourcegitcommit: 6f8993e2180c4d3c177e3e1934d378959396b935
+ms.openlocfilehash: b3f531325c338224d7ac69e46a9d16c9d236ee87
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000607"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71360362"
 ---
 # <a name="features-removed-or-deprecated-in--windows-server-2016"></a>Windows Server 2016에서 제거되었거나 사용되지 않는 기능
 

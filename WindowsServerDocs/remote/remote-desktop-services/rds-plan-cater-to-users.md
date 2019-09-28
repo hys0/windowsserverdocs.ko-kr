@@ -2,7 +2,7 @@
 title: 원격 데스크톱 서비스 기능을 다양 한 종류의 사용자 제공
 description: RDS의 다양한 사용자 유형에 대해 설명합니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -13,12 +13,12 @@ author: spatnaik
 ms.author: spatnaik
 ms.date: 09/23/2016
 manager: scottman
-ms.openlocfilehash: 05b9dcfdb28613e4f8a815e78a84ba1f70c35b97
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: eaf242309dbdbd4716ea8f39e7ebcb1d9225b53a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70870928"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71387326"
 ---
 # <a name="remote-desktop-services---cater-to-different-kinds-of-users"></a>원격 데스크톱 서비스 기능을 다양 한 종류의 사용자 제공
 

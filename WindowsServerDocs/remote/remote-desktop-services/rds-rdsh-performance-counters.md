@@ -1,7 +1,7 @@
 ---
 title: 성능 카운터를 사용하여 원격 데스크톱 세션 호스트에서 애플리케이션 응답성 문제 진단
 description: RDS에서 앱이 느리게 실행되나요? RDSH에서 앱 성능 문제를 진단하는 데 사용할 수 있는 성능 카운터에 대해 알아보기
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 07/11/2019
@@ -10,12 +10,12 @@ ms.topic: article
 author: lizap
 manager: dougkim
 ms.localizationpriority: medium
-ms.openlocfilehash: 3eb1e4b6da971d788383b8facbf8bbcbe00a5953
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: b59d93d576967ee83b3efecc2630034eab919bf2
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70870913"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71403907"
 ---
 # <a name="use-performance-counters-to-diagnose-app-performance-problems-on-remote-desktop-session-hosts"></a>성능 카운터를 사용하여 원격 데스크톱 세션 호스트에서 앱 성능 문제 진단
 

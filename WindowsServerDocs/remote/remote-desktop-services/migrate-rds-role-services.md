@@ -2,7 +2,7 @@
 title: 원격 데스크톱 서비스 배포를 Windows Server 2016으로 마이그레이션
 description: 이 문서에서는 원격 데스크톱 서비스 배포를 새로운 Windows Server 2016 서버로 마이그레이션하는 방법을 설명합니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 msreviewer: ''
 nams.suite: ''
 nams.technology: remote-desktop-services
@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: 9b1fa833-4325-48a8-bf34-46265f40c001
 author: christianmontoya
 manager: scottman
-ms.openlocfilehash: 0e4736f753fc0ad2ece6135de84d481eecb8b7a1
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: e8471d67c8b9978d8b3c08fd3ef497e4e329d84b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66812588"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71387598"
 ---
 # <a name="migrate-your-remote-desktop-services-deployment-to-windows-server-2016"></a>원격 데스크톱 서비스 배포를 Windows Server 2016으로 마이그레이션
 

@@ -1,19 +1,19 @@
 ---
 title: RDS 피드를 구독하도록 이메일 검색 설정
 description: RDS 배포에 Azure AD Domain Services를 통합하는 방법을 알아봅니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: remote-desktop-services
 ms.author: chrimo
 ms.date: 3/27/2018
 ms.localizationpriority: medium
 ms.topic: article
 author: christianmontoya
-ms.openlocfilehash: ca9484cc8abffcc21b4ed11756fb009b55046a0c
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: c56a233adf28270aac809dc960e32b5363e4b8ab
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70870967"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71387512"
 ---
 # <a name="set-up-email-discovery-to-subscribe-to-your-rds-feed"></a>RDS 피드를 구독하도록 이메일 검색 설정
 

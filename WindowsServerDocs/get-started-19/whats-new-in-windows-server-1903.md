@@ -1,18 +1,18 @@
 ---
 title: Windows Server 버전 1903의 새로운 기능
 description: 이 항목에서는 Windows Server 버전 1903(반기 채널 릴리스)의 새로운 기능 중 일부를 설명합니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
 author: jasongerend
 ms.author: jgerend
 ms.date: 05/21/2019
-ms.openlocfilehash: cde394cd4e626466f17a27a68660e85f9fe55553
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: b8ef24aa62df0ea538a6ee34da17714ac9b4107f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70868526"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71391901"
 ---
 # <a name="whats-new-in-windows-server-version-1903"></a>Windows Server 버전 1903의 새로운 기능
 

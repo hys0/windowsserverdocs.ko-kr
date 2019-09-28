@@ -1,19 +1,19 @@
 ---
 title: Windows Server 2019의 새로운 기능
 description: 데스크톱 경험, 스토리지 마이그레이션 서비스, 시스템 인사이트, Azure 네트워크 어댑터를 포함한 Windows Server 2019의 새로운 기능, 스토리지 공간 다이렉트의 개선 사항 및 기타 변경에 대한 개요입니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
 author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: high
 ms.date: 06/04/2019
-ms.openlocfilehash: 665363c17cf5cb8d8ad52872128f2f63c07ea683
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 13eed225dfc144d5e7e59be13dbed14d4de8bb01
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70868546"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71360783"
 ---
 # <a name="whats-new-in-windows-server-2019"></a>Windows Server 2019의 새로운 기능
 

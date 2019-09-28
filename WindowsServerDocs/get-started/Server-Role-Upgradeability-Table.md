@@ -2,7 +2,7 @@
 title: Windows Server 2016에 대한 서버 역할 업그레이드 및 마이그레이션 매트릭스
 description: Windows Server 2016으로 업그레이드 또는 마이그레이션할 수 있는 서버 역할을 보여 줍니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.date: 10/05/2016
@@ -14,12 +14,12 @@ author: jaimeo
 ms.author: jaimeo
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f8310baf659810d5d51587bafcc868c59ace61a
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 84500d3012eda99ff3b3c857fc4b5c154d0d0fe5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "63687270"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71360185"
 ---
 # <a name="server-role-upgrade-and-migration-matrix-for-windows-server-2016"></a>Windows Server 2016에 대한 서버 역할 업그레이드 및 마이그레이션 매트릭스
 

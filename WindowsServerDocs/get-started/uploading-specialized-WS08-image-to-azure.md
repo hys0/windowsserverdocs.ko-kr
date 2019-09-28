@@ -1,7 +1,7 @@
 ---
 title: Windows Server 2008/2008 R2 특수 이미지를 Azure에 업로드
 description: Windows Server 2008 및 2008 R2 서비스가 종료될 예정입니다. 클라우드에서 Windows Server를 호스팅하여 Azure로 이동하는 방법을 알아봅니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: mikeblodge
@@ -10,12 +10,12 @@ ms.date: 07/11/2018
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.localizationpriority: high
-ms.openlocfilehash: 9bd2b17296872d4b94de5a7468178fbb2ba39709
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 19e4abf1573b8d3ee99b8e8828c1674f24d27695
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70868400"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71391497"
 ---
 # <a name="upload-a-windows-server-20082008-r2-specialized-image-to-azure"></a>Windows Server 2008/2008 R2 특수 이미지를 Azure에 업로드 
 

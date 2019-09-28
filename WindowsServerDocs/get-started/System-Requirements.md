@@ -2,7 +2,7 @@
 title: 시스템 요구 사항
 description: 각 설치 옵션의 새로 설치 시 스토리지, CPU, 네트워크, 메모리 및 RAM에 대한 최소 요구 사항입니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.date: 10/17/2017
@@ -14,12 +14,12 @@ author: jaimeo
 ms.author: jaimeo
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: d089af3562467aa1c222b17d9a1ad69d9c1b5008
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 155e828c77670c7c489b334ec3e7c49aa0809d4d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66810589"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71391621"
 ---
 # <a name="system-requirements"></a>시스템 요구 사항
 
@@ -71,7 +71,7 @@ ms.locfileid: "66810589"
 > -   Shift+F10을 사용하여 가상 머신에서 이 릴리스의 부팅 프로세스를 중단합니다. 명령 프롬프트가 열리면 Diskpart.exe를 사용하여 설치 파티션을 만들고 포맷합니다. **Wpeutil createpagefile /path=C:\pf.sys** 를 실행합니다(만든 설치 파티션이 C:인 경우 예제). 명령 프롬프트를 닫고 설치를 계속 진행합니다.  
 
 ## <a name="storage-controller-and-disk-space-requirements"></a>저장소 컨트롤러 및 디스크 공간 요구 사항  
-Windows Server 2016을 실행하는 컴퓨터에는 PCI Express 아키텍처 사양과 호환되는 스토리지 어댑터가 포함되어 있어야 합니다. 서버에서 하드 디스크 드라이브로 분류된 영구 저장 디바이스는 PATA가 아니어야 합니다. Windows Server 2016에서는 부팅, 페이지 또는 데이터 드라이브에 ATA/PATA/IDE/EIDE를 사용할 수 없습니다.  
+Windows Server 2016을 실행하는 컴퓨터에는 PCI Express 아키텍처 사양과 호환되는 스토리지 어댑터가 포함되어 있어야 합니다. 서버에서 하드 디스크 드라이브로 분류된 영구 스토리지 디바이스는 PATA가 아니어야 합니다. Windows Server 2016에서는 부팅, 페이지 또는 데이터 드라이브에 ATA/PATA/IDE/EIDE를 사용할 수 없습니다.  
 
 다음은 시스템 파티션을 위한 **최소** 예상 디스크 공간 요구 사항입니다.  
 

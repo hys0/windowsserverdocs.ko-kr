@@ -2,7 +2,7 @@
 title: RD 웹 및 게이트웨이 웹 프런트에 고가용성 추가
 description: RDS 배포에 RD 웹 및 게이트웨이 서버를 설치하기 위한 단계를 제공합니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -12,12 +12,12 @@ author: lizap
 ms.author: elizapo
 ms.date: 11/08/2016
 manager: dongill
-ms.openlocfilehash: 869d47be73a39114ecc05080f8da16f460fb8198
-ms.sourcegitcommit: 6423dfa9cecb3b06bdd563cae113c3e80a4ec330
+ms.openlocfilehash: 5838480847e5f86a03f264a0ece1f8d4097597cc
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71105044"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71387231"
 ---
 # <a name="add-high-availability-to-the-rd-web-and-gateway-web-front"></a>RD 웹 및 게이트웨이 웹 프런트에 고가용성 추가
 

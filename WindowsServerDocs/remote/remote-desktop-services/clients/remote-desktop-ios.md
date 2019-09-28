@@ -2,7 +2,7 @@
 title: iOS 클라이언트 시작
 description: iOS용 원격 데스크톱 클라이언트 설정 방법 알아보기
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -14,12 +14,12 @@ manager: dongill
 ms.author: elizapo
 date: 08/27/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 97f7c3e26a54b9170ebc65e0c48acd964d9e2429
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 700d419d06c0b007ed05be4f82137828f52143e1
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871162"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71404144"
 ---
 # <a name="get-started-with-the-ios-client"></a>iOS 클라이언트 시작
 

@@ -2,7 +2,7 @@
 title: 원격 데스크톱 서비스 - 어디에서나 빌드
 description: RDS 배포를 호스팅할 수 있는 위치를 결정할 수 있도록 돕는 계획 정보입니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -13,12 +13,12 @@ author: lizap
 ms.author: elizapo
 ms.date: 09/07/2016
 manager: dongill
-ms.openlocfilehash: 4563108d2efa9cd864fbe75fa82349d21659a941
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 16f85531f8ac58ed80d4d3f666692b307977c68c
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "63712330"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71403945"
 ---
 # <a name="remote-desktop-services---build-anywhere"></a>원격 데스크톱 서비스 - 어디에서나 빌드
 

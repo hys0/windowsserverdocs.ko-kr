@@ -2,7 +2,7 @@
 title: RDS - 나에게 적합한 그래픽 가상화 기술은 무엇일까요?
 description: 사용자의 RDS 배포에 적합한 그래픽 가상화 옵션을 선택하는 데 유용한 계획 정보입니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: d6ff5b22-7695-4fee-b1bd-6c9dce5bd0e8
 author: lizap
 manager: scottman
-ms.openlocfilehash: ce10575d38bccc0b22dadf55bd89156c6ce5ea7b
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: d5fe737fcdc664a757518f495e3815968d17c331
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871051"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71387496"
 ---
 # <a name="which-graphics-virtualization-technology-is-right-for-you"></a>나에게 적합한 그래픽 가상화 기술은 무엇일까요?
 

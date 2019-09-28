@@ -1,7 +1,7 @@
 ---
 title: 시작
 description: Windows Server 2019 및 배포, 업그레이드 또는 마이그레이션을 준비하는 방법에 대한 자세한 정보입니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: jasgroce
 ms.technology: get-started
 layout: LandingPage
@@ -9,16 +9,16 @@ ms.topic: landing-page
 author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e75f4262ea3e1d20b399b3fa1214f0ede33e1e0
-ms.sourcegitcommit: b17ccf7f81e58e8f4dd844be8acf784debbb20ae
+ms.openlocfilehash: acc18e9b960473098f59d8980b4b85e63f209b82
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69023904"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71360801"
 ---
 # <a name="get-started-with-windows-server-2019"></a>Windows Server 2019 시작
 
-> 적용 대상: 시작
+> 적용 대상: Windows Server 2019
 
 이 컬렉션에는 Windows Server 2019로 전환할 준비가 되었는지 확인하는 데 도움이 되는 자세한 정보가 포함되어 있습니다. 시스템 요구 사항, 업그레이드 옵션 및 Windows Server 2019로 전환하는 방법에 대한 기타 정보가 확인되었으면 요구 사항에 가장 적합한 버전 및 설치 옵션을 설치하는 과정을 시작할 수 있습니다. Windows Server 2019를 다운로드하려면 [Windows Server 평가판](https://www.microsoft.com/evalcenter/evaluate-windows-server-2019)을 참조하세요.
 

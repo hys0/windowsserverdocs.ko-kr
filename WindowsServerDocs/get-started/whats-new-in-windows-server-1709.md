@@ -1,19 +1,19 @@
 ---
 title: Windows Server 버전 1709의 새로운 기능
 description: 계산, ID, 관리, 자동화, 네트워킹, 보안, 저장소의 새로운 기능입니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
 author: coreyp-at-msft
 ms.author: coreyp
 ms.localizationpriority: medium
 ms.date: 06/03/2019
-ms.openlocfilehash: b5391677397660e3beacb9a71189bf3ffe2aeaab
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 5dbbdc19707f2eadfa3b2c919af95b58645de441
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70868336"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71391371"
 ---
 # <a name="whats-new-in-windows-server-version-1709"></a>Windows Server 버전 1709의 새로운 기능
 

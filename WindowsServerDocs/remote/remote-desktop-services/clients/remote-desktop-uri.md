@@ -2,7 +2,7 @@
 title: 원격 데스크톱 클라이언트 URI 체계
 description: 원격 데스크톱 클라이언트의 Uniform Resource Identifier 체계에 대해 알아보기
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -14,12 +14,12 @@ manager: dongill
 ms.author: elizapo
 ms.date: 06/11/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: f2934fed43c8f4feec2f321d684cc3593933eb5d
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 56d11a2ab0afab1e119666aea17bb6d54cd5638b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "63743857"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71404128"
 ---
 # <a name="remote-desktop-client-universal-resource-identifier-uri-scheme-support"></a>원격 데스크톱 클라이언트 리소스 URI (Universal Identifier) 체계 지원
 

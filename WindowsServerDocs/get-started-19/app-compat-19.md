@@ -2,7 +2,7 @@
 title: Windows Server 2019 및 Microsoft 서버 애플리케이션 호환성
 description: Windows Server 2019 및 Microsoft 서버 애플리케이션의 호환성 표
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: server-general
@@ -13,16 +13,16 @@ author: coreyp
 ms.author: coreyp-at-msft
 manager: jasgroce
 ms.localizationpriority: medium
-ms.openlocfilehash: 8dcaff6ab8a296790158f59035bd4a5c1a093cbd
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 40c90b179321062949af5eea6d92f6238fb9b460
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66442374"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71391994"
 ---
 # <a name="windows-server-2019-and-microsoft-server-application-compatibility"></a>Windows Server 2019 및 Microsoft 서버 애플리케이션 호환성
 
->적용 대상: 시작
+>적용 대상: Windows Server 2019
 
 다음 표는 Window Server 2019에서 설치 및 기능을 지원하는 Microsoft 서버 애플리케이션 목록을 보여 줍니다. 이 정보는 빠른 참조를 위한 것이며 개별 제품 사양, 요구 사항, 알림 또는 각 개별 서버 응용 프로그램에 대한 일반적인 전달 사항을 대체하지 않습니다. 호환성 및 옵션을 완전히 이해하려는 경우 각 제품에 대한 공식 설명서를 참조하세요.
 

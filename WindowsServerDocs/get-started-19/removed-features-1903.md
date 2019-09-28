@@ -1,19 +1,19 @@
 ---
 title: Windows Server, 버전 1903부터 제거되었거나 교체 예정인 기능
 description: 다음은 이 릴리스에서 제거되었거나 다음 릴리스에서 교체될 가능성이 고려되기 시작한 Windows Server, 버전 1903 기능의 목록입니다. 상용 환경에서 운영 체제를 업데이트하는 IT 전문가가 참조하시면 유용합니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
 ms.date: 08/22/2019
 author: jasongerend
 ms.author: jgerend
 manager: daveba
-ms.openlocfilehash: 4471d6f9d98d58f7444151a7b8be33d2d81423e1
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: b31cde8216b3ceb230c9c197924b40e8cc8fc3f8
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70868660"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71361181"
 ---
 # <a name="features-removed-or-planned-for-replacement-starting-with-windows-server-version-1903"></a>Windows Server, 버전 1903부터 제거되었거나 교체 예정인 기능
 

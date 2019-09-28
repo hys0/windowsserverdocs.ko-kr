@@ -1,19 +1,19 @@
 ---
 title: 사용자에 대한 원격 데스크톱 웹 클라이언트 설정
 description: 관리자가 원격 데스크톱 웹 클라이언트를 설정하는 방법을 설명합니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: remote-desktop-services
 ms.author: helohr
 ms.date: 09/19/2019
 ms.topic: article
 author: Heidilohr
 ms.localizationpriority: medium
-ms.openlocfilehash: 86667c744acfd340c2608609323b95c159e1279d
-ms.sourcegitcommit: ccec91c1d32a978159f9b8bb5e39ead5805c26c4
+ms.openlocfilehash: 38f54548e8e68a0ee693c5d8ec80e67057b3d5b7
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71143747"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71387662"
 ---
 # <a name="set-up-the-remote-desktop-web-client-for-your-users"></a>사용자에 대한 원격 데스크톱 웹 클라이언트 설정
 

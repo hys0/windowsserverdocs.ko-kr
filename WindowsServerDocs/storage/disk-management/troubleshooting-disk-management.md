@@ -2,18 +2,18 @@
 title: 디스크 관리 문제 해결
 description: 이 문서에서는 디스크 관리 문제를 해결하는 방법을 설명합니다.
 ms.date: 06/07/2019
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 4d9448cc642ef522fa129dcfe97e2286f16bad1b
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: d801b051918c090257a466ab58c200943487b2e8
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66812536"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402162"
 ---
 # <a name="troubleshooting-disk-management"></a>디스크 관리 문제 해결
 
@@ -22,7 +22,7 @@ ms.locfileid: "66812536"
 이 항목에서는 디스크 관리를 사용할 때 발생할 수 있는 몇 가지 일반적인 문제를 나열합니다.
 
 > [!TIP]
-> 이 절차를 수행하면서 오류가 발생하거나 작동하지 않더라도 당황하지 마세요! [Microsoft 커뮤니티](https://answers.microsoft.com/en-us/windows) 사이트에는 수많은 정보가 있습니다. [파일, 폴더 및 스토리지](https://answers.microsoft.com/en-us/windows/forum/windows_10-files?sort=lastreplydate&dir=desc&tab=All&status=all&mod=&modAge=&advFil=&postedAfter=&postedBefore=&threadType=all&isFilterExpanded=true&tm=1514405359639) 섹션을 검색해보고 그래도 도움이 필요하면 질문을 게시하세요. 그러면 Microsoft나 커뮤니티의 다른 멤버로부터 도움을 받을 수 있습니다. 이러한 문서의 개선 방안에 대한 피드백이 있으면 주저하지 말고 의견을 알려 주세요! *이 페이지가 도움이 되었나요?* 프롬프트에 답변을 하거나 이 문서의 맨 아래에 있는 공개 코멘트 스레드에 의견을 남겨주세요.
+> 이 절차를 수행하면서 오류가 발생하거나 작동하지 않더라도 당황하지 마세요! [Microsoft 커뮤니티](https://answers.microsoft.com/en-us/windows) 사이트에는 수많은 정보가 있습니다. [파일, 폴더 및 스토리지](https://answers.microsoft.com/en-us/windows/forum/windows_10-files?sort=lastreplydate&dir=desc&tab=All&status=all&mod=&modAge=&advFil=&postedAfter=&postedBefore=&threadType=all&isFilterExpanded=true&tm=1514405359639) 섹션을 검색해보고 그래도 도움이 필요하면 질문을 게시하세요. 그러면 Microsoft나 커뮤니티의 다른 멤버로부터 도움을 받을 수 있습니다. 이러한 문서의 개선 방안에 대한 피드백이 있으면 주저하지 말고 의견을 알려주세요! *이 페이지가 도움이 되었나요?* 프롬프트에 답변을 하거나 이 문서의 맨 아래에 있는 공개 코멘트 스레드에 의견을 남겨주세요.
 
 ## <a name="a-disks-status-is-not-initialized-or-the-disk-is-missing"></a>디스크의 상태가 초기화 안 됨이거나 디스크가 없음
 

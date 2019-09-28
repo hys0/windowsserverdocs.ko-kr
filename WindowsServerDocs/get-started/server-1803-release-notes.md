@@ -2,7 +2,7 @@
 title: 릴리스 정보 - Windows Server, 버전 1803의 중요한 문제
 description: Windows Server, 버전 1803을 설치하기 전에 필요한 알려진 문제, 제한 사항 또는 기타 정보에 대해 알아봅니다
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.date: 05/07/2018
@@ -13,12 +13,12 @@ author: lizap
 ms.author: elizapo
 manager: dougkim
 ms.localizationpriority: medium
-ms.openlocfilehash: 506236cbb3893fe200b39aa1d58ed44cdbd9704a
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: a250f83a4f46966666556ba3d078d2faf3ea8e06
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70868383"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71391462"
 ---
 # <a name="release-notes-important-issues-in-windows-server-version-1803"></a>릴리스 정보: Windows Server 버전 1803의 중요한 이슈
 

@@ -2,7 +2,7 @@
 title: Azure 재해 복구를 사용하여 RDS에 대해 재해 복구 설정
 description: RDS 배포의 재해 복구에 Azure 재해 복구를 사용하는 방법 알아보기
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
 manager: dongill
-ms.openlocfilehash: 79e0364bcb9d2ed899568a6699c61b43d84044e5
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 514262fde3b433baf89fe8f5a0cf8b04ef267354
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871014"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71387540"
 ---
 # <a name="set-up-disaster-recovery-for-rds-using-azure-site-recovery"></a>Azure Site Recovery를 사용하여 RDS에 대해 재해 복구 설정
 

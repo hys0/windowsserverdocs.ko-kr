@@ -2,7 +2,7 @@
 title: macOS 클라이언트의 새로운 기능
 description: Mac용 원격 데스크톱 클라이언트의 최근 변경 내용에 대해 알아봅니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -13,12 +13,12 @@ manager: daveba
 ms.author: helohr
 ms.date: 09/11/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 9fbd3e9c5f7938fbf6a80e9f5dc950a2c0a9a257
-ms.sourcegitcommit: 61767c405da44507bd3433967543644e760b20aa
+ms.openlocfilehash: 092804ea84ba2d0e68eede3a597cb354c53bb8bd
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70987345"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71404198"
 ---
 # <a name="whats-new-in-the-macos-client"></a>macOS 클라이언트의 새로운 기능
 

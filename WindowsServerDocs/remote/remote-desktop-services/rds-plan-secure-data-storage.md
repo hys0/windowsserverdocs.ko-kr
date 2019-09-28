@@ -2,7 +2,7 @@
 title: 원격 데스크톱 서비스 - 데이터 스토리지 보안
 description: RDS에서 UPD(사용자 프로파일 디스크)를 사용하여 데이터를 안전하게 저장하기 위한 계획 정보
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -13,12 +13,12 @@ author: lizap
 ms.author: elizapo
 ms.date: 11/21/2016
 manager: dongill
-ms.openlocfilehash: d681530f849fe55495de0f4d4b564921d3b0bb3d
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 8b7fa596f88f5cb361e0c681ffec3bcc72403d03
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70870874"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71403924"
 ---
 # <a name="remote-desktop-services---secure-data-storage-with-upds"></a>원격 데스크톱 서비스 - UPD를 사용한 데이터 스토리지 보안
 

@@ -2,7 +2,7 @@
 title: 재해 복구 계획 만들기
 description: RDS 배포에 대한 재해 복구 계획을 만드는 방법을 알아봅니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
 manager: dongill
-ms.openlocfilehash: e7bfe19258662a8e334ea0476689d8e860bfc8e5
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: e4e9a9ab05e672c72925e3699900218abdf1c682
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "63743896"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71404022"
 ---
 # <a name="create-your-disaster-recovery-plan-for-rds"></a>RDS에 대한 재해 복구 계획 만들기
 

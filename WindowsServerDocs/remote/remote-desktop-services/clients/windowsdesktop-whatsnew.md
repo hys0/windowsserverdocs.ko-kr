@@ -2,7 +2,7 @@
 title: Windows 데스크톱 클라이언트의 새로운 기능
 description: Windows 데스크톱용 원격 데스크톱 클라이언트의 최근 변경 내용에 대해 알아봅니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -11,14 +11,14 @@ ms.topic: article
 author: heidilohr
 manager: daveba
 ms.author: helohr
-ms.date: 09/17/2019
+ms.date: 09/24/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 587ad44509451497b253689238c3aef233a37153
-ms.sourcegitcommit: e210fce039452a9855353520c7f8698acd76ffce
+ms.openlocfilehash: 4325bd7b33c16d972cac980e17c10bacbfeffd8c
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71071290"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71387592"
 ---
 # <a name="whats-new-in-the-windows-desktop-client"></a>Windows 데스크톱 클라이언트의 새로운 기능
 
@@ -30,7 +30,7 @@ Windows 데스크톱 클라이언트에 대한 자세한 내용은 [Windows 데�
 
 |사용자 그룹 |버전  |
 |-----------|---------|
-|Public     |1.2.246  |
+|Public     |1.2.247  |
 |Windows 참가자 프로그램    |1.2.247  |
 
 ## <a name="updates-for-version-12247"></a>1\.2.247 버전에 대한 업데이트

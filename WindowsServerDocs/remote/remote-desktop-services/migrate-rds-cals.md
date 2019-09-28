@@ -2,7 +2,7 @@
 title: RDS CAL(원격 데스크톱 서비스 클라이언트 액세스 라이선스) 마이그레이션
 description: 이 문서에서는 원격 데스크톱 서비스 클라이언트 액세스 라이선스를 새로운 Windows Server 2016 라이선스 서버로 마이그레이션하는 방법을 설명합니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 msreviewer: ''
 nams.suite: ''
 nams.technology: remote-desktop-services
@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: 91bdedce-6145-469f-b72e-7e113c4391e9
 author: christianmontoya
 manager: scottman
-ms.openlocfilehash: c947375b58c0ad88781335b799055e101bd2a193
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 02d783916625a6f24e3413e8801686d8e5ddb8f3
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66447103"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71404051"
 ---
 # <a name="migrate-your-remote-desktop-services-client-access-licenses-rds-cals"></a>RDS CAL(원격 데스크톱 서비스 클라이언트 액세스 라이선스) 마이그레이션
 

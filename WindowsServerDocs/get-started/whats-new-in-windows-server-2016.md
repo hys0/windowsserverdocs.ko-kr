@@ -1,7 +1,7 @@
 ---
 title: Windows Server 2016의 새로운 기능
 description: 계산, ID, 관리, 자동화, 네트워킹, 보안, 저장소의 새로운 기능입니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.date: 05/21/2019
 ms.technology: server-general
 ms.topic: article
@@ -10,12 +10,12 @@ author: jasongerend
 ms.author: jgerend
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: b2be54748a36f97a11796ebfa16701baac1c612d
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 76cfd0f0cca18fb072883a9e14fae420516bd329
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67280639"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71391364"
 ---
 # <a name="whats-new-in-windows-server-2016"></a>Windows Server 2016의 새로운 기능
 
@@ -51,7 +51,7 @@ Windows Server 2016에서는 손상된 패브릭에서 모든 2세대 가상 머
 
 - 실행 중인 호스트 보호 서비스에서 증명 모드를 전환할 수 있습니다. 이제 보안 수준은 낮지만 보다 간단한 Active Directory 기반 증명과 TPM 기반 증명 간에 즉시 전환할 수 있습니다.  
 
-- 보호된 Hyper-V 호스트와 호스트 보호 서비스 모두에서 잘못된 구성 또는 오류를 감지할 수 있는 Windows PowerShell 기반의 종단 간 진단 도구가 제공됩니다.  
+- 보호된 Hyper-V 호스트와 호스트 보호 서비스 모두에서 잘못된 구성 또는 오류를 감지할 수 있는 Windows PowerShell 기반의 엔드투엔드 진단 도구가 제공됩니다.  
 
 - 보호된 가상 머신 자체와 동일한 보호 수준을 제공하는 한편, 패브릭 내에서 정상적으로 실행되는 보호된 가상 머신을 안전하게 복구하고 문제를 해결할 수 있는 복구 환경을 제공합니다.
 
@@ -138,7 +138,7 @@ Windows Server 2016의 저장소에는 소프트웨어 정의 저장소와 기�
 
 ### <a name="storage-spaces-direct"></a>저장소 공간 다이렉트
 
-스토리지 공간 다이렉트는 로컬 스토리지가 있는 서버를 사용하여 확장 가능한 고가용성 스토리지를 구축하도록 지원합니다. 이는 소프트웨어 정의 저장소 시스템의 배포 및 관리를 간소화하고 SATA SSD 및 NVMe 디스크 디바이스와 같이 이전에 공유 디스크를 사용하는 클러스터형 저장소 공간에서는 불가능했던 새로운 등급의 디스크 디바이스를 사용합니다.
+스토리지 공간 다이렉트는 로컬 스토리지가 있는 서버를 사용하여 확장 가능한 고가용성 스토리지를 구축하도록 지원합니다. 이는 소프트웨어 정의 스토리지 시스템의 배포 및 관리를 간소화하고 SATA SSD 및 NVMe 디스크 디바이스와 같이 이전에 공유 디스크를 사용하는 클러스터형 스토리지 공간에서는 불가능했던 새로운 등급의 디스크 디바이스를 사용합니다.
 
 자세한 내용은 [스토리지 공간 다이렉트](../storage/storage-spaces/storage-spaces-direct-overview.md)를 참조하세요.
 
@@ -150,7 +150,7 @@ Windows Server 2016의 저장소에는 소프트웨어 정의 저장소와 기�
 
 ### <a name="storage-quality-of-service-qos"></a>스토리지 서비스 품질(QoS)
 
-이제 스토리지 QoS(서비스 품질)를 사용하여 중앙에서 종단 간 스토리지 성능을 모니터링하고 Windows Server 2016의 Hyper-V 및 CSV 클러스터를 통해 관리 정책을 만들 수 있습니다.
+이제 스토리지 QoS(서비스 품질)를 사용하여 중앙에서 엔드투엔드 스토리지 성능을 모니터링하고 Windows Server 2016의 Hyper-V 및 CSV 클러스터를 통해 관리 정책을 만들 수 있습니다.
 
 자세한 내용은 [저장소 서비스 품질](../storage/storage-qos/storage-qos-overview.md)을 참조하세요.
 

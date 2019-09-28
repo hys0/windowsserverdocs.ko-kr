@@ -1,7 +1,7 @@
 ---
 title: Server Core 설치
 description: Windows Server 2019, Windows Server 2016 또는 Windows Server(반기 채널)에 Server Core 설치를 가져오고 설치하는 방법입니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.date: 05/21/2019
 ms.technology: server-general
 ms.tgt_pltfrm: na
@@ -11,12 +11,12 @@ author: jasongerend
 ms.author: jgerend
 manager: dougkim
 ms.localizationpriority: medium
-ms.openlocfilehash: 542eeea4bfae53defc2624b3b56a7db5ae454c2c
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: e6264a59a837003e49e82529750cfb153cc37b92
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70868449"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71360342"
 ---
 # <a name="install-server-core"></a>Server Core 설치
 

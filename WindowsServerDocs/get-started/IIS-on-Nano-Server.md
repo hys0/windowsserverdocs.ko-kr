@@ -1,7 +1,7 @@
 ---
 title: Nano Server의 IIS
 description: Nano 서버의 IIS 구성에 대한 세부 정보
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: DonGill
 ms.technology: server-nano
@@ -12,12 +12,12 @@ ms.assetid: 16984724-2d77-4d7b-9738-3dff375ed68c
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: 54c8d05c028cbca364b6a46052d12cdcb12c01b0
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 04c2d7eab2f149505758ab21f08cd6b8bdb74b85
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66443608"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71360297"
 ---
 # <a name="iis-on-nano-server"></a>Nano Server의 IIS
 
@@ -253,13 +253,13 @@ Nano 서버에서 웹 사이트에 대한 HTTPS를 구성하는 방법을 보여
 - IIS-디렉터리 검색
 - IIS-Http 오류
 - IIS-Http 리디렉션
-- IIS-응용 프로그램 개발
+- IIS-애플리케이션 개발
 - IIS-CGI
 - IIS-ISAPI 확장
 - IIS-ISAPI 필터
 - IIS-SSI(Server Side Include)
 - IIS-WebSocket
-- IIS-응용 프로그램 초기화
+- IIS-애플리케이션 초기화
 - IIS-보안
 - IIS-기본 인증
 - IIS-Windows 인증
