@@ -1,8 +1,8 @@
 ---
 title: bcdboot
-description: Windows 명령 항목에 대 한 **bcdboot** -신속 하 게 시스템 파티션을 설정 하거나 시스템 파티션에 있는 부팅 환경을 복구 합니다.
+description: '**Bcdboot** 의 Windows 명령 항목-시스템 파티션을 빠르게 설정 하거나 시스템 파티션에 있는 부팅 환경을 복구 합니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 78838dd6567ad886948df8ac21425a8f9b596d5f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a1c0f505180a503617335cc9575fea3d346bbe02
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59825884"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71383443"
 ---
 # <a name="bcdboot"></a>bcdboot
 
@@ -38,11 +38,11 @@ bcdboot <source> [/l] [/s]
 
 |매개 변수|설명|
 |---------|-----------|
-|원본(source)|부팅 환경 파일을 복사 하기 위한 원본으로 사용 하 여 Windows 디렉터리의 위치를 지정 합니다.|
+|원본|부팅 환경 파일을 복사 하기 위한 원본으로 사용 하 여 Windows 디렉터리의 위치를 지정 합니다.|
 |/l|로캘을 지정 합니다. 기본 로캘은 영어 (미국)입니다.|
 |/s|시스템 파티션의 볼륨 문자를 지정합니다. 기본값은 시스템 파티션을 펌웨어에서 식별 합니다.|
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 이 명령을 사용 하는 방법의 자세한 예제는 참조는 [BCDboot 명령줄 옵션](https://technet.microsoft.com/library/hh824874.aspx) 항목입니다.
 

@@ -1,8 +1,8 @@
 ---
 title: replace
-description: 바꾸기 명령을 사용 하 여 파일을 대체 하는 방법에 알아봅니다.
+description: Replace 명령을 사용 하 여 파일을 바꾸는 방법에 대해 알아봅니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 293534a2287fe0219643dacc88926018c37dbdcc
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 0e96be58106847a3ff6451cdb7792a197ec40227
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66441768"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71384514"
 ---
 # <a name="replace"></a>replace
 
@@ -39,8 +39,8 @@ replace [<Drive1>:][<Path1>]<FileName> [<Drive2>:][<Path2>] [/p] [/r] [/s] [/w] 
 
 |매개 변수|설명|
 |---------|-----------|
-|[\<Drive1>:][\<Path1>]\<FileName>|위치 및 소스 파일의 이름 또는 파일 집합을 지정합니다. *FileName* 이 필요 하 고 와일드 카드 문자를 포함할 수 있습니다 ( **&#42;** 하 고 **?** ).|
-|[\<Drive2>:][\<Path2>]|대상 파일의 위치를 지정합니다. 바꾸려는 파일에 대 한 파일 이름을 지정할 수 없습니다. 드라이브 또는 경로 지정 하지 않으면 **대체** 현재 드라이브 및 디렉터리를 대상으로 사용 합니다.|
+|[\<드라이브 1 >:] [\<Path1 >] \<FileName >|위치 및 소스 파일의 이름 또는 파일 집합을 지정합니다. *FileName* 은 필수 이며 와일드 카드 문자를 포함할 수 **&#42;** 있습니다 (및 **?** ).|
+|[\<Drive2 >:] [\<Path2 >]|대상 파일의 위치를 지정합니다. 바꾸려는 파일에 대 한 파일 이름을 지정할 수 없습니다. 드라이브 또는 경로 지정 하지 않으면 **대체** 현재 드라이브 및 디렉터리를 대상으로 사용 합니다.|
 |/ a|기존 파일을 대체 하지 않고 대상 디렉터리에 새 파일을 추가 합니다. 이 명령줄 옵션을 사용할 수 없습니다는 **/s** 또는 **/u** 명령줄 옵션입니다.|
 |/p|대상 파일을 교체 하거나 원본 파일을 추가 하기 전에 확인 하면 메시지를 표시 합니다.|
 |/r|읽기 전용 및 보호 되지 않은 파일을 대체합니다. 읽기 전용 파일을 대체 하려고 하지만 지정 하지 않는 경우 **/r**, 오류가 발생 하 고 대체 작업을 중지 합니다.|
@@ -74,7 +74,7 @@ replace [<Drive1>:][<Path1>]<FileName> [<Drive2>:][<Path2>] [/p] [/r] [/s] [/w] 
 > [!NOTE]
 > ERRORLEVEL 매개 변수를 사용 하 여에 **경우** 일괄 처리에서 반환 되는 프로세스 종료 코드를 프로그램에서 명령줄 **대체**합니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 A 드라이브에 플로피 디스크에서 Phones.cli 파일의 최신 버전으로 Phones.cli (에 표시 되는 C 드라이브에 여러 디렉터리) 라는 파일의 모든 버전을 업데이트 하려면 다음을 입력 합니다.
 

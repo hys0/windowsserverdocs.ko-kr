@@ -6,14 +6,14 @@ ms.author: billmath
 manager: daveba
 ms.date: 06/20/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 29c8e8ba52f62a335ab136756e759b6114ecfb20
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 785ecd4de86c06dd12eb57e41efaa1103f2afdc5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70865612"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71357809"
 ---
 # <a name="fine-tuning-sql-and-addressing-latency-issues-with-ad-fs"></a>SQL을 미세 조정 하 고 AD FS의 대기 시간 문제 해결
 [AD FS 2016](https://support.microsoft.com/help/4503294/windows-10-update-kb4503294) 에 대 한 업데이트에서는 데이터베이스 간 대기 시간을 줄이기 위해 다음과 같은 향상 된 기능이 도입 되었습니다. AD FS 2019의 예정 된 업데이트에는 이러한 향상 된 기능이 포함 됩니다.
@@ -105,7 +105,7 @@ SQL 컴퓨터에서 생성 된 스크립트를 실행 하 여 필요한 데이�
     
     마스터에서 다음 항목을 추가 합니다. 세 키는 모두 대/소문자를 구분 합니다. 
 
-    &lt;useractivityfarmrole masterFQDN = [선택한 기본의 FQDN] isMaster = "true"/&gt;
+    &lt;useractivityfarmrole masterFQDN = [선택한 주 복제본의 FQDN] isMaster = "true"/&gt;
     
     다른 노드에서 다음 항목을 추가 합니다.
 

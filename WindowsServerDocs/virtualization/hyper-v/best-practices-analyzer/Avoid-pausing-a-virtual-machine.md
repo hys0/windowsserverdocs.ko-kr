@@ -1,7 +1,7 @@
 ---
 title: 일시 중지 하면 가상 컴퓨터 방지
 description: 이 모범 사례 분석기 규칙에 대 한 텍스트의 온라인 버전입니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -10,12 +10,12 @@ ms.topic: article
 ms.assetid: 930f927c-e414-4a36-9786-028941e886e4
 author: KBDAzure
 ms.date: 8/16/2016
-ms.openlocfilehash: 4492ac385a289d075ebcd48b1c7c1c78c1af2f8c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 406b24edd4a7e87e32058006590ac7cd37206568
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59814354"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71366455"
 ---
 # <a name="avoid-pausing-a-virtual-machine"></a>일시 중지 하면 가상 컴퓨터 방지
 
@@ -34,17 +34,17 @@ ms.locfileid: "59814354"
 
 ## <a name="issue"></a>문제점  
   
-*이 서버에 하나 이상의 가상 컴퓨터 일시 중지 상태*  
+*이 서버에는 하나 이상의 가상 머신이 일시 중지 된 상태입니다.*  
   
 ## <a name="impact"></a>영향  
   
-*수에 사용 가능한 메모리의 양에 따라에 추가 virtual machines를 실행할 수 없습니다.*  
+*사용 가능한 메모리의 양에 따라 추가 가상 컴퓨터를 실행 하지 못할 수 있습니다.*  
   
 일시 중지 된 가상 컴퓨터의 할당 된 메모리를 놓지 마십시오 다른 가상 컴퓨터를 시작할 수 없는 메모리를 의미 하는 합니다.  
   
 ## <a name="resolution"></a>해결 방법  
   
-*의도적인 작업 인 경우 추가 조치가 필요 하지 않습니다. 그렇지 않은 경우 이러한 가상 컴퓨터를 다시 시작 하거나 종료할 것이 좋습니다.*  
+*이 의도적인 경우 추가 작업이 필요 하지 않습니다. 그렇지 않은 경우 이러한 가상 컴퓨터를 다시 시작 하거나 종료 하는 것이 좋습니다.*  
   
 #### <a name="use-hyper-v-manager-to-resume-the-virtual-machine"></a>Hyper-v 관리자를 사용 하 여 가상 컴퓨터를 다시 시작 하려면  
   

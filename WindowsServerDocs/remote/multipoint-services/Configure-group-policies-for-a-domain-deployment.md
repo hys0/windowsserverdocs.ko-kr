@@ -3,7 +3,7 @@ title: 도메인 배포를 위한 그룹 정책 구성
 description: MultiPoint 서비스에서 그룹 정책을 설정 하는 방법 알아보기
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ ms.assetid: 13e5fa90-d330-4155-a6b8-78eb650cbbfa
 author: evaseydl
 manager: scottman
 ms.author: evas
-ms.openlocfilehash: 5c9d8efc1ed4a2f498ffce6c69d443ae819dced9
-ms.sourcegitcommit: 1bc3c229e9688ac741838005ec4b88e8f9533e8a
+ms.openlocfilehash: 5ac6524289d231d152e366d2ba750a59d27ce14f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68314316"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71395517"
 ---
 # <a name="configure-group-policies-for-a-domain-deployment"></a>도메인 배포를 위한 그룹 정책 구성
 MultiPoint 서비스의 도메인 배포가 제대로 작동 하도록 하려면 MultiPoint 서비스 시스템의 WMSshell 사용자 계정에 다음 그룹 정책 설정을 적용 합니다.  
@@ -63,7 +63,7 @@ MultiPoint 서비스의 도메인 배포의 경우 다음 레지스트리 하위
   
 2.  왼쪽 창에서 다음 레지스트리 하위 키를 찾아 선택 합니다.  
   
-    HKEY_USERS\<SIDofWMSshell > \Software\Policies\Microsoft\Windows\Control Panel\Desktop  
+    HKEY_USERS @ no__t-0SIDofWMSshell > \Software\Policies\Microsoft\Windows\Control Panel\Desktop  
   
     여기서 '<SIDofWMSshell>'는 WMSshell 계정에 대 한 SID (보안 식별자)입니다. SID를 식별 하는 방법에 대 한 자세한 내용은 [사용자 이름을 sid (보안 식별자)와 연결 하는 방법](https://support.microsoft.com/kb/154599)을 참조 하세요.  
   

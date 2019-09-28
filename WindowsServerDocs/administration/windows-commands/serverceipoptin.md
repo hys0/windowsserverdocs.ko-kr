@@ -1,8 +1,8 @@
 ---
 title: serverceipoptin
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: fca2497af308faf298e1df03d8b07c68bf9e8b98
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f400a8f66f15e5a138cf355ad54d276cfa7f3ce3
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59840564"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71371012"
 ---
 # <a name="serverceipoptin"></a>serverceipoptin
 
@@ -32,11 +32,11 @@ serverceipoptin [/query] [/enable] [/disable]
 ### <a name="parameters"></a>매개 변수
 |매개 변수|설명|
 |-------|--------|
-|/ 쿼리|현재 설정을 확인합니다.|
+|/ 쿼리|현재 설정을 확인 합니다.|
 |같습니다.|참여를 활성화 합니다.|
 |/disable|참여를 비활성화합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
-## <a name="BKMK_Examples"></a>예제
+## <a name="BKMK_Examples"></a>예와
 현재 설정의 확인 하려면 다음을 입력 합니다.
 ```
 serverceipoptin /query

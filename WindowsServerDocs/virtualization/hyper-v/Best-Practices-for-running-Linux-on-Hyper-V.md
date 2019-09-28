@@ -1,7 +1,7 @@
 ---
 title: Hyper-v에서 Linux를 실행 하기 위한 모범 사례
-description: 가상 머신에서 Linux를 실행 하는 것에 대 한 권장 사항을 제공 합니다.
-ms.prod: windows-server-threshold
+description: 가상 머신에서 Linux를 실행 하기 위한 권장 사항을 제공 합니다.
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -11,16 +11,16 @@ ms.assetid: a08648eb-eea0-4e2b-87fb-52bfe8953491
 author: shirgall
 ms.author: kathydav
 ms.date: 3/1/2019
-ms.openlocfilehash: a24e2b1a1d79d52c1cc16f9e7c1b253d9b477aae
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 3488bbc1e295a68befc7044b83379bd65a5f28df
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67284447"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71365575"
 ---
 # <a name="best-practices-for-running-linux-on-hyper-v"></a>Hyper-v에서 Linux를 실행 하기 위한 모범 사례
 
->적용 대상: Windows Server 2019, Windows Server 2016에서 Hyper-v Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012 Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
+>적용 대상: Windows Server 2019, Windows Server 2016, Hyper-v Server 2016, Windows Server 2012 R2, Hyper-v Server 2012 R2, Windows Server 2012, Hyper-v 서버 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
 
 이 항목에는 Hyper-v에서 Linux 가상 컴퓨터를 실행 하기 위한 권장 사항 목록이 포함 되어 있습니다.
 
@@ -51,7 +51,7 @@ PS > New-VHD -Path C:\MyVHDs\test.vhdx -SizeBytes 127GB -Dynamic -BlockSizeBytes
 
 없기 때문에 PIT 타이머에 2 세대 가상 컴퓨터를 PxE TFTP 서버에 대 한 네트워크 연결 종료가 중단 하 고 Grub 구성을 읽고 커널을 로드 하는 서버에서 부팅 로더를 방지 합니다.
 
-RHEL에서 6.x, 여기에 설명 된 대로 grub2 대신 레거시 grub v0.97 EFI 부팅 로더를 사용할 수 있습니다. [https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Installation_Guide/s1-netboot-pxe-config-efi.html](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Installation_Guide/s1-netboot-pxe-config-efi.html)
+RHEL 6.x에서는 여기에 설명 된 대로 grub2 대신 레거시 grub v v0.97 EFI 부팅 기능을 사용할 수 있습니다. [https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Installation_Guide/s1-netboot-pxe-config-efi.html](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Installation_Guide/s1-netboot-pxe-config-efi.html)
 
 RHEL 이외의 다른 Linux 배포에 6.x, grub v0.97 PxE 서버에서 Linux 커널을 로드를 구성 하려면 유사한 단계가 적용 될 수 있습니다.
 
@@ -68,21 +68,21 @@ Set-VMComPort -VMName <Name> -Number 2 -Path \\.\pipe\dbg1
 
 설치 전 커널 실행이 시작 파일을 지정 하는 또한 하지 않으려면 키보드 및 마우스 설치 하는 동안 입력 합니다.
 
-## <a name="use-static-mac-addresses-with-failover-clustering"></a>정적 MAC 주소를 장애 조치 클러스터링 사용
+## <a name="use-static-mac-addresses-with-failover-clustering"></a>장애 조치 (failover) 클러스터링과 함께 정적 MAC 주소 사용
 
 Linux 가상 컴퓨터 장애 조치 클러스터링을 사용 하 여 배포할 각 가상 네트워크 어댑터에 대 한 정적 미디어 액세스 제어 (MAC) 주소에 구성 되어야 합니다. 일부 Linux 버전에서 네트워킹 구성 손실 될 수 있습니다 장애 조치 후 새 MAC 주소를 가상 네트워크 어댑터에 할당 되어 있습니다. 네트워크 구성을 잃지를 방지 하려면 각 가상 네트워크 어댑터에 정적 MAC 주소가 있는지 확인 합니다. Hyper-v 관리자 또는 장애 조치 클러스터 관리자에서 가상 컴퓨터의 설정을 편집 하 여 MAC 주소를 구성할 수 있습니다.
 
-## <a name="use-hyper-v-specific-network-adapters-not-the-legacy-network-adapter"></a>레거시 네트워크 어댑터가 아닌 하이퍼-V-특정 네트워크 어댑터를 사용 합니다.
+## <a name="use-hyper-v-specific-network-adapters-not-the-legacy-network-adapter"></a>레거시 네트워크 어댑터가 아닌 Hyper-v 관련 네트워크 어댑터 사용
 
 구성 하 고 향상 된 성능의 하이퍼-V 관련 네트워크 카드가 가상 이더넷 어댑터를 사용 합니다. 이전 및 하이퍼-V-특정 네트워크 어댑터는 가상 컴퓨터에 연결 하면 경우에 네트워크의 출력에 이름을 **ifconfig-a** 와 같은 임의의 값을 표시할 수 있습니다 **_tmp12000801310**합니다. 이 문제를 방지 하려면 Linux 가상 컴퓨터에서 하이퍼-V-특정 네트워크 어댑터를 사용 하는 경우 모든 레거시 네트워크 어댑터를 제거 합니다.
 
-## <a name="use-io-scheduler-noop-for-better-disk-io-performance"></a>더 나은 디스크 I/O 성능에 대 한 I/O 스케줄러 NOOP를 사용 합니다.
+## <a name="use-io-scheduler-noop-for-better-disk-io-performance"></a>디스크 i/o 성능 향상을 위해 i/o scheduler NOOP 사용
 
 Linux 커널에는 서로 다른 알고리즘을 사용 하 여 요청을 다시 정렬 하려면 네 명의 다른 I/O 스케줄러입니다. NOOP는 하이퍼바이저 수행 하기 위해 일정 의사 결정을 전달 하는 선입 선출 방식입니다. Hyper-v의 Linux 가상 컴퓨터를 실행 하는 경우 NOOP 스케줄러로 사용 하는 것이 좋습니다. 부팅 로더가 구성에서 특정 장치에 대 한 스케줄러를 변경 하려면 (/ 예를 들어 etc/grub.conf), 추가 **엘리베이터 noop =** 커널 매개 변수를 다음 다시 시작 하십시오.
 
 ## <a name="numa"></a>NUMA
 
-Linux 커널 버전 이전 2.6.37 보다 지원 하지 않습니다 NUMA Hyper-v에서 더 큰 VM 크기를 사용 하 여. 이 문제에 주로 영향을 줍니다 이전 배포는 업스트림을 사용 하 여 Red Hat 2.6.32 커널을에서 Red Hat Enterprise Linux (RHEL) 6.6 (커널-2.6.32-504)를 수정 했습니다. 2\.6.32-504 부트 매개 변수를 설정 해야 하는 보다 2.6.37 보다 오래 된 사용자 지정 커널 또는 오래 된 RHEL 기반 커널을 실행 하는 시스템 `numa=off` 의 경우 grub.conf의 커널 명령줄에 있습니다. 자세한 내용은 [Red Hat KB 436883](https://access.redhat.com/solutions/436883)합니다.
+2\.6.37 이전의 Linux 커널 버전은 VM 크기가 더 큰 Hyper-v에서 NUMA를 지원 하지 않습니다. 이 문제는 주로 업스트림 Red Hat 2.6.32 커널을 커널을 사용 하는 이전 배포판에 영향을 주며 RHEL () 6.6 (2.6.32 커널을-504) Red Hat Enterprise Linux에서 수정 되었습니다. 2\.6.37 보다 오래 된 사용자 지정 커널을 실행 하는 시스템 또는 2.6.32 커널을-504 보다 오래 된 RHEL 기반 커널은의 커널 명령줄에서 부팅 매개 @no__t 변수를 0으로 설정 해야 합니다. 자세한 내용은 [Red HAT KB 436883](https://access.redhat.com/solutions/436883)을 참조 하세요.
 
 ## <a name="reserve-more-memory-for-kdump"></a>Kdump에 대 한 더 많은 메모리를 예약 합니다.
 
@@ -96,9 +96,9 @@ VHD 또는 VHDX 크기를 조정한 후 관리자 fdisk와 같은 유틸리티�
 
 ## <a name="see-also"></a>참조
 
-* [Windows의 Hyper-v에 대 한 지원 되는 Linux 및 FreeBSD 가상 컴퓨터](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)
+* [Windows의 Hyper-v에 대해 지원 되는 Linux 및 FreeBSD 가상 컴퓨터](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)
 
-* [Hyper-v에 FreeBSD를 실행 하는 것에 대 한 모범 사례](Best-practices-for-running-FreeBSD-on-Hyper-V.md)
+* [Hyper-v에서 FreeBSD 실행에 대 한 모범 사례](Best-practices-for-running-FreeBSD-on-Hyper-V.md)
 
 * [Hyper-v 클러스터 배포](https://technet.microsoft.com/library/jj863389.aspx)
 

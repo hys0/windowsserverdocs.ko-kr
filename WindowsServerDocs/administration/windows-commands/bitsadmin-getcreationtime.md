@@ -1,8 +1,8 @@
 ---
 title: bitsadmin getcreationtime
-description: Windows 명령 항목에 대 한 **bitsadmin getcreationtime** -지정된 된 된 작업에 대 한 생성 시간을 검색 합니다.
+description: '**Bitsadmin getcreationtime** 에 대 한 Windows 명령 항목-지정 된 작업에 대 한 생성 시간을 검색 합니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d8cc0f02933c6a890ae8bf40361d859ad508b319
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2ea92133c90e20e37e5d281116e91bf1f109e83f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59858474"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381692"
 ---
 # <a name="bitsadmin-getcreationtime"></a>bitsadmin getcreationtime
 
 
 
-지정된 된 된 작업에 대 한 생성 시간을 검색합니다.
+지정 된 작업의 만든 시간을 검색 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -38,9 +38,9 @@ bitsadmin /GetCreationTime <Job>
 |---------|-----------|
 |작업|작업의 표시 이름 또는 GUID|
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
-다음 예제에서는 검색 이라는 작업에 대 한 생성 시간 *myDownloadJob*합니다.
+다음 예제에서는 이름이 *Mydownloadjob*인 작업을 만든 시간을 검색 합니다.
 ```
 C:\>bitsadmin /GetCreationTime myDownloadJob
 ```

@@ -6,14 +6,14 @@ ms.author: nedpyle
 manager: siroy
 ms.date: 08/19/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: a1e195ab755dfd0b61cc4201f43373421ce51aa2
-ms.sourcegitcommit: 86350de764b89ebcac2a78ebf32631b7b5ce409a
+ms.openlocfilehash: a776920caa85c3ee133070d52b020c8ad3c799e1
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70923554"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402997"
 ---
 # <a name="storage-migration-service-frequently-asked-questions-faq"></a>Storage Migration Service 질문과 대답 (FAQ)
 
@@ -63,7 +63,7 @@ Storage Migration Service는 SMB 공유의 모든 플래그, 설정 및 보안�
     - Id 원격
     - 인프라
     - 이름
-    - Path
+    - 경로
     - 범위
     - 범위 이름
     - 보안 설명자

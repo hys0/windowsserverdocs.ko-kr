@@ -1,8 +1,8 @@
 ---
 title: fondue
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bcbbbf80f25f77d1feb83f358401e4d14da3d354
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: d75d2d9fb57f8888cfc5bf50e2f7796aefc66102
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66439224"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71377091"
 ---
 # <a name="fondue"></a>fondue
 
@@ -33,11 +33,11 @@ fondue.exe /enable-feature:<feature_name> [/caller-name:<program_name>] [/hide-u
 
 |              매개 변수              |                                                                                                                                                                     설명                                                                                                                                                                     |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|  /enable-feature:<*feature_name*>   |                                                                               사용 하려는 Windows 선택적 기능의 이름을 지정 합니다. 명령줄 당 기능 중 하나에 사용할 수 있습니다. 여러 기능을 사용 하려면 각 기능에 대해 fondue.exe를 사용 합니다.                                                                                |
-|    /caller-name:<*program_name*>    |                                                                                 스크립트 또는 배치 파일에서 fondue.exe를 호출할 때 프로그램이 나 프로세스 이름을 지정 합니다. 이 옵션을 사용 하 여 오류가 발생 하는 경우 프로그램 이름을 SQM 보고서에 추가할 수 있습니다.                                                                                 |
+|  /enable-feature: <*feature_name*>   |                                                                               사용 하려는 Windows 선택적 기능의 이름을 지정 합니다. 명령줄 당 기능 중 하나에 사용할 수 있습니다. 여러 기능을 사용 하도록 설정 하려면 각 기능에 대해 fondue 사용 합니다.                                                                                |
+|    /caller-name: <*program_name*>    |                                                                                 스크립트나 배치 파일에서 fondue 호출할 때 프로그램 또는 프로세스 이름을 지정 합니다. 이 옵션을 사용 하 여 오류가 발생 하는 경우 프로그램 이름을 SQM 보고서에 추가할 수 있습니다.                                                                                 |
 | /hide-ux: {모든 &#124; rebootRequest} | 사용 하 여 **모든** Windows Update에 액세스 하는 진행률 및 사용 권한 요청을 포함 하 여 사용자에 게 모든 메시지를 숨기려면 합니다. 권한이 필요한 경우 작업이 실패 합니다.<br /><br />사용 하 여 **rebootRequest** 만 메시지를 숨기려면 사용자 컴퓨터를 다시 부팅 수 있는 권한을 요청 합니다. 컨트롤 요청 다시 부팅 하는 스크립트가 있으면이 옵션을 사용 합니다. |
 
-## <a name="BKMK_Examples"></a>예제
+## <a name="BKMK_Examples"></a>예와
 Microsoft.NET Framework 3.5를 사용 하려면 다음을 입력 합니다.
 ```
 fondue.exe /enable-feature:NETFX3
@@ -49,4 +49,4 @@ fondue.exe /enable-feature:NETFX3 /caller-name:Admin.bat /hide-ux:all
 ## <a name="additional-references"></a>추가 참조
 - [명령줄 구문 키](command-line-syntax-key.md)
   ## <a name="see-also"></a>관련 항목
-  [Microsoft.NET Framework 3.5 배포 고려 사항](https://go.microsoft.com/fwlink/?LinkId=248869)
+  [Microsoft .NET Framework 3.5 배포 고려 사항](https://go.microsoft.com/fwlink/?LinkId=248869)

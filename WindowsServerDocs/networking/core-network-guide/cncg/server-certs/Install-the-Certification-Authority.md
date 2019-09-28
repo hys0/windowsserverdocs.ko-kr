@@ -4,20 +4,20 @@ description: 이 항목은 서버 배포 인증서 802.1 X 유선 및 무선 배
 manager: brianlic
 ms.topic: article
 ms.assetid: 4acdc3ad-078e-45cc-b54c-e9456e0c90f5
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 1774d235703bd75d810f2649cb8ed3f2f92622d5
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.openlocfilehash: 024fc73c4ed089d81808cf44d7cfe8b01bfffaa0
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66811599"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406329"
 ---
 # <a name="install-the-certification-authority"></a>인증 기관 설치
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 네트워크 정책 (NPS 서버), 라우팅 및 원격 액세스 서비스 (RRAS) 또는 둘 모두를 실행 하는 서버에 서버 인증서를 등록할 수 있도록 Active Directory 인증서 서비스 (AD CS)를 설치 하려면이 절차를 사용할 수 있습니다.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66811599"
 ### <a name="to-install-active-directory-certificate-services"></a>Active Directory 인증서 서비스를 설치 하려면  
 
 > [!TIP]
-> 참조를 Active Directory 인증서 서비스를 설치 하려면 Windows PowerShell을 사용 하려는 경우 [Install-adcscertificationauthority](https://docs.microsoft.com/powershell/module/adcsdeployment/install-adcscertificationauthority?view=win10-ps) cmdlet 및 선택적 매개 변수입니다.
+> Windows PowerShell을 사용 하 여 Active Directory 인증서 서비스를 설치 하려는 경우 cmdlet에 대 한 [AdcsCertificationAuthority](https://docs.microsoft.com/powershell/module/adcsdeployment/install-adcscertificationauthority?view=win10-ps) 및 선택적 매개 변수를 참조 하세요.
   
 1.  Enterprise Admins 그룹 및 루트 도메인의 Domain Admins 그룹의 구성원으로 로그온 합니다.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66811599"
   
 13. 에 **프라이빗 키의 형식을 지정** 페이지에서 **새 프라이빗 키를 만들** 을 선택한 다음 클릭 **다음**합니다.  
   
-14. 에 **CA에 대 한 암호화** 페이지, CSP에 대 한 기본 설정을 유지 (**RSA #Microsoft Software Key Storage Provider**) 및 해시 알고리즘 (**SHA2**), 최상의 결정 배포에 대 한 키 문자 길이입니다. 최적의 보안;을 제공 하는 큰 키 문자 길이 그러나 서버 성능에 영향을 줄 수 하며 레거시 응용 프로그램과 호환 되지 않을 수 있습니다. 2048의 기본 설정을 유지 하는 것이 좋습니다. **다음**을 클릭합니다.  
+14. **CA에 대 한 암호화** 페이지에서 CSP (**RSA # Microsoft 소프트웨어 키 저장소 공급자**) 및 해시 알고리즘 (**SHA2**)에 대 한 기본 설정을 유지 하 고 배포에 가장 적합 한 키 문자 길이를 결정 합니다. 최적의 보안;을 제공 하는 큰 키 문자 길이 그러나 서버 성능에 영향을 줄 수 하며 레거시 응용 프로그램과 호환 되지 않을 수 있습니다. 2048의 기본 설정을 유지 하는 것이 좋습니다. **다음**을 클릭합니다.  
   
 15. 에 **CA 이름** 페이지, CA에 대 한 일반적인 제안 된 이름을 그대로 사용 하거나 요구 사항에 따라 이름을 변경 합니다. 사용자가 있는지 확인 특정 AD CS를 설치한 후 CA 이름을 변경할 수 없으므로 CA 이름 명명 규칙 및 용도와 호환 됩니다. **다음**을 클릭합니다.  
   

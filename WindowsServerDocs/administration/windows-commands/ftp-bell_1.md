@@ -1,8 +1,8 @@
 ---
 title: ftp bell_1
-description: Ftp bell_1에 대 한 Windows 명령을 항목
+description: Ftp bell_1 Windows 명령 항목
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f93c7a5f11b88b06c04d1525c5edc2953cafe700
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: eb47bc8eb4dff06596a332a4d5875e7442e8df96
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59882854"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71376613"
 ---
-# <a name="ftp-bell1"></a>ftp: bell_1
+# <a name="ftp-bell_1"></a>ftp: bell_1
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -30,10 +30,10 @@ ms.locfileid: "59882854"
 bell  
 ```  
 ### <a name="parameters"></a>매개 변수  
-none  
+없음  
 ## <a name="remarks"></a>설명  
 벨은 기본적으로 해제 되어 있습니다.  
-## <a name="BKMK_Examples"></a>예제  
+## <a name="BKMK_Examples"></a>예와  
 각 파일 전송 명령을 완료 한 후에 소리를 낼지를 전환 합니다.  
 ```  
 bell  

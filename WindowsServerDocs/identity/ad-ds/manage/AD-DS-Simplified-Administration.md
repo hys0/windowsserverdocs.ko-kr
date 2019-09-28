@@ -7,22 +7,22 @@ author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/09/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 863e5352253d53941e64b52d1ca58d565a3aa8b1
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4f12b1e88414a17c8fb82a707bd4399505df4c6c
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59890594"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71369452"
 ---
 # <a name="ad-ds-simplified-administration"></a>AD DS 간소화된 관리
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-이 항목에서는 기능 및 혜택 Windows Server 2012 도메인 컨트롤러 배포 및 관리, 운영 체제 DC 배포 이전 및 새 Windows Server 2012 구현 간의 차이점을 설명합니다.  
+이 항목에서는 Windows Server 2012 도메인 컨트롤러 배포 및 관리의 기능과 이점, 이전 운영 체제 DC 배포와 새로운 Windows Server 2012 구현 간의 차이점에 대해 설명 합니다.  
   
-Windows Server 2012에서는 차세대 Active Directory 도메인 서비스 간소화 된 관리를 도입 했는데 가장 근본적인 도메인 다시 구상 Windows 2000 Server 이후 사용 합니다. AD DS 간소화된 관리에서는 12년 동안 Active Directory에서 얻은 교훈을 바탕으로 설계자와 관리자를 위한 보다 지원 가능하고 유연하며 직관적인 관리 환경을 제공합니다. 이는 기존 기술의 새 버전을 만들 수 있을 뿐만 아니라 Windows Server 2008 R2에서 릴리스된 구성 요소의 기능을 확장할 수도 있습니다.  
+Windows Server 2012는 차세대 Active Directory Domain Services 단순화 된 관리를 도입 했으며 Windows 2000 서버부터 가장 많은 부를 다시 구상 했습니다. AD DS 간소화된 관리에서는 12년 동안 Active Directory에서 얻은 교훈을 바탕으로 설계자와 관리자를 위한 보다 지원 가능하고 유연하며 직관적인 관리 환경을 제공합니다. 이는 기존 기술의 새 버전을 만들 수 있을 뿐만 아니라 Windows Server 2008 R2에서 릴리스된 구성 요소의 기능을 확장할 수도 있습니다.  
   
 AD DS 간소화된 관리는 도메인 배포의 새로운 디자인입니다.  
   
@@ -42,7 +42,7 @@ AD DS 간소화된 관리는 도메인 배포의 새로운 디자인입니다.
 - 그룹 관리 서비스 계정에서 동일한 보안 주체를 사용하여 여러 컴퓨터를 지원합니다.  
 - 성숙한 Active Directory 도메인에서 관리 효율성을 향상시킬 수 있도록 RID(상대 식별자) 발급 및 모니터링 기능이 향상되었습니다.  
 
-AD DS와 같은 Windows Server 2012에 포함 된 다른 새로운 기능에서을 활용할 수 있습니다:  
+다음과 같이 Windows Server 2012에 포함 된 다른 새로운 기능을 AD DS 수익  
 
 - NIC 팀 및 데이터 센터 브리징  
 - DNS 보안 및 부팅 후 보다 빠른 AD 통합 영역 가용성  
@@ -205,7 +205,7 @@ ADDSDeployment Windows PowerShell 관리 코드에 기본 제공되는 필수 �
 |CheckRODCPrep<br /><br />GroupMembership|LDAP,<br /><br />RPC over SMB(LSARPC)|사용자가 Enterprise Admins 그룹의 구성원이고 기존 도메인 컨트롤러에 대한 감사 및 보안 이벤트 로그 관리(SesScurityPrivilege) 권한이 있는지 확인합니다.|  
 |VerifyInitSync<br /><br />AfterReboot|LDAP|rootDSE 특성 becomeSchemaMaster에서 더미 값을 설정하여 스키마 마스터가 다시 시작된 이후 한 번 이상 복제되었는지 확인합니다.|  
 |VerifySFUHotFix<br /><br />Applied|LDAP|기존 포리스트 스키마에 OID가 1.2.840.113556.1.4.7000.187.102인 UID 특성에 대한 SFU2 확장 관련 알려진 문제가 없는지<br /><br />([https://support.microsoft.com/kb/821732](https://support.microsoft.com/kb/821732))|  
-|VerifyExchange<br /><br />SchemaFixed|LDAP, WMI, DCOM, RPC|기존 포리스트 스키마 문제 Exchange 2000 확장 ms 포함-관련 문제가 없는지 확인-도우미-이름, ms-관련 문제가 없는지 확인-LabeledURI, 및 ms가 없는지 확인-집 식별자 ([https://support.microsoft.com/kb/314649](https://support.microsoft.com/kb/314649))|  
+|VerifyExchange<br /><br />SchemaFixed|LDAP, WMI, DCOM, RPC|기존 포리스트 스키마의 유효성을 검사 하는 데 문제가 Exchange 2000 확장명 ms-Exch-Name, ms Exch-LabeledURI 및 ms-Exch-Id ([https://support.microsoft.com/kb/314649](https://support.microsoft.com/kb/314649))에 아직 포함 되지 않았습니다.|  
 |VerifyWin2KSchema<br /><br />일관성|LDAP|기존 포리스트 스키마에 일관된(타사에서 잘못 수정하지 않은) 핵심 특성 및 클래스가 있는지 확인합니다.|  
 |DCPromo|DRSR over RPC,<br /><br />LDAP,<br /><br />DNS<br /><br />RPC over SMB(SAMR)|수준 올리기 코드로 전달된 명령줄 구문의 유효성을 검사하고 수준 올리기를 테스트합니다. 포리스트 또는 도메인을 새로 만드는 경우 이미 존재하지 않는지 확인합니다.|  
 |VerifyOutbound<br /><br />ReplicationEnabled|LDAP, DRSR over SMB, RPC over SMB(LSARPC)|NTDS 설정 개체의 옵션 특성에서 NTDSDSA_OPT_DISABLE_OUTBOUND_REPL(0x00000004)을 확인하여 복제 파트너로 지정된 기존 도메인 컨트롤러에 아웃바운드 복제가 사용하도록 설정되어 있는지 확인합니다.|  

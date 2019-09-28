@@ -6,29 +6,29 @@ author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: b027bff4645203c44e228f11c651b767fa4502e0
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 8240903b3c446d4f02ca93dc053e520480f5e8ca
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66192065"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71359495"
 ---
 # <a name="manually-configure-a-service-account-for-a-federation-server-farm"></a>페더레이션 서버 팜에 대해 수동으로 서비스 계정 구성
 
-Active Directory Federation Services에서 페더레이션 서버 팜 환경을 구성 하려면 \(AD FS\)를 만들고 Active Directory Domain Services에서 전용된 서비스 계정을 구성 해야 \(AD DS\) 팜에서 상주 합니다. 그런 다음 이 계정을 사용하도록 팜의 각 페더레이션 서버를 구성합니다. Windows 통합 인증을 사용 하 여 AD FS 팜에 페더레이션 서버에 인증 하려면 회사 네트워크에서 클라이언트 컴퓨터를 허용 하려는 경우 조직에서 다음 작업을 완료 해야 합니다.  
+Active Directory Federation Services \(AD FS @ no__t-1에서 페더레이션 서버 팜 환경을 구성 하려면 Active Directory Domain Services \(AD DS @ no__t-3에서 전용 서비스 계정을 만들고 구성 해야 합니다. 상주할 수 있습니다. 그런 다음 이 계정을 사용하도록 팜의 각 페더레이션 서버를 구성합니다. 회사 네트워크의 클라이언트 컴퓨터가 Windows 통합 인증을 사용 하 여 AD FS 팜의 페더레이션 서버에 인증 하도록 허용 하려면 조직에서 다음 작업을 완료 해야 합니다.  
 
 > [!IMPORTANT]
-> AD FS 3.0 (Windows Server 2012 R2), AD FS 지원의 사용을 [그룹 관리 서비스 계정](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview) \(gMSA\) 서비스 계정으로 합니다.  시간이 지남에 따라 서비스 계정 암호를 관리할 필요가 없으므로 이것이 권장된 옵션입니다.  이 문서에서는 여전히 실행 하는 Windows Server 2008 R2 또는 이전 도메인 기능 수준은 도메인에서와 같은 기존 서비스 계정을 사용에 대 한 대체 사례의 \(DFL\)합니다.
+> AD FS 3.0 (Windows Server 2012 R2)에서 AD FS는 [그룹 관리 서비스 계정](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview) \(gMSA @ no__t-2를 서비스 계정으로 사용 하도록 지원 합니다.  이 옵션은 시간 경과에 따라 서비스 계정 암호를 관리할 필요가 없기 때문에 권장 되는 옵션입니다.  이 문서에서는 Windows Server 2008 R2 이전 도메인 기능 수준을 실행 하는 도메인에서와 같이 기존 서비스 계정 사용에 대 한 대체 사례를 설명 합니다 \(DFL @ no__t-1.
 
 > [!NOTE]  
-> 이 절차의 작업은 전체 페더레이션 서버 팜에 대해 한 번만 수행해야 합니다. 나중에 AD FS 페더레이션 서버 구성 마법사를 사용 하 여 페더레이션 서버를 만들 때 지정 해야이 동일한 계정에는 **서비스 계정** 팜의 각 페더레이션 서버에서 마법사 페이지입니다.  
+> 이 절차의 작업은 전체 페더레이션 서버 팜에 대해 한 번만 수행해야 합니다. 나중에 AD FS 페더레이션 서버 구성 마법사를 사용 하 여 페더레이션 서버를 만들 때는 팜에 있는 각 페더레이션 서버의 **서비스 계정** 마법사 페이지에서 이와 동일한 계정을 지정 해야 합니다.  
   
 #### <a name="create-a-dedicated-service-account"></a>전용 서비스 계정 만들기  
   
-1.  전용된 사용자를 만드는\/서비스 계정 id 공급자 조직에 있는 Active Directory 포리스트에 있습니다. 이 계정은 Kerberos 인증 프로토콜이 팜 시나리오에서 작동 하 고 통과 허용 하려면 반드시\-각 페더레이션 서버의 인증을 통해. 페더레이션 서버 팜의 목적에이 계정을 사용 합니다.  
+1.  Id 공급자 조직에 있는 Active Directory 포리스트에서 전용 사용자 @ no__t-0service 계정을 만듭니다. 이 계정은 Kerberos 인증 프로토콜이 팜 시나리오에서 작동 하 고 각 페더레이션 서버에서 pass @ no__t-0through authentication을 허용 하는 데 필요 합니다. 이 계정은 페더레이션 서버 팜의 용도로만 사용 합니다.  
   
 2.  사용자 계정 속성을 편집하고 **암호 사용 기간 제한 없음** 확인란을 선택합니다. 이 작업은 도메인 암호 변경 요구 사항으로 인해 이 서비스 계정의 작동이 중단되지 않도록 해줍니다.  
   
@@ -37,13 +37,13 @@ Active Directory Federation Services에서 페더레이션 서버 팜 환경을 
   
 #### <a name="to-set-the-spn-of-the-service-account"></a>서비스 계정의 SPN을 설정하려면  
   
-1.  AD FS AppPool에 대 한 응용 프로그램 풀 id에 도메인 사용자로 실행 되 고 있어서\/서비스 계정, 서비스 주체 이름을 구성한 \(SPN\) Setspn.exe명령사용하여도메인에서해당계정에대한\-명령줄 도구입니다. Setspn.exe는 Windows Server 2008을 실행 하는 컴퓨터에서 기본적으로 설치 됩니다. 동일한 도메인에 가입 된 컴퓨터에서 다음 명령을 실행 여기서 사용자\/상주 하는 서비스 계정:  
+1.  AD FS AppPool의 응용 프로그램 풀 id는 도메인 사용자 @ no__t-0service 계정으로 실행 되기 때문에 Setspn 명령 @ no__t-3line 도구를 사용 하 여 도메인에서 해당 계정에 대 한 서비스 사용자 이름 \(SPN @ no__t-2를 구성 해야 합니다. Setspn은 Windows Server 2008를 실행 하는 컴퓨터에 기본적으로 설치 됩니다. 사용자 @ no__t-0service 계정이 있는 동일한 도메인에 가입 된 컴퓨터에서 다음 명령을 실행 합니다.  
   
     ```  
     setspn -a host/<server name> <service account>  
     ```  
   
-    에 모든 페더레이션 서버는 아래에 클러스터 Domain Name System 시나리오의 예를 들어 \(DNS\) 호스트 이름 fs.fabrikam.com 및 AD FS AppPool에 할당 되는 서비스 계정 이름이 adfs2farm 라는 명령을 입력 합니다. 같이 다음 ENTER를 누릅니다.  
+    예를 들어 모든 페더레이션 서버가 도메인 이름 @no__t 시스템에서 클러스터 되는 시나리오에서-0DNS @ no__t 호스트 Name fs.fabrikam.com을 지정 하 고, AppPool AD FS에 할당 된 서비스 계정 이름을 adfs2farm으로 지정로 지정 하면 다음과 같이 명령을 입력 합니다. enter 키를 누릅니다.  
   
     ```  
     setspn -a host/fs.fabrikam.com adfs2farm  
@@ -51,6 +51,6 @@ Active Directory Federation Services에서 페더레이션 서버 팜 환경을 
   
     이 작업은 이 계정에 대해 한 번만 완료해야 합니다.  
   
-2.  AD FS AppPool id는 서비스 계정에 변경 되 면 액세스 제어 목록 설정 \(Acl\) AD FS AppPool에서 정책 데이터를 읽을 수 있도록이 새 계정에 대 한 읽기 권한을 허용 하려면 SQL Server 데이터베이스에 있습니다.  
+2.  AD FS AppPool id를 서비스 계정으로 변경한 후에는 AD FS AppPool에서 정책 데이터를 읽을 수 있도록이 새 계정에 대 한 읽기 액세스를 허용 하도록 SQL Server 데이터베이스에 대 한 액세스 제어 목록 \(ACLs @ no__t-1을 설정 합니다.  
   
 

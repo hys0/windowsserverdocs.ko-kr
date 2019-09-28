@@ -2,19 +2,19 @@
 title: SDN 인프라 업그레이드, 백업 및 복원
 description: 이 항목에서는 SDN 인프라를 업데이트, 백업 및 복원 하는 방법에 대해 알아봅니다.
 manager: dougkim
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: e9a8f2fd-48fe-4a90-9250-f6b32488b7a4
 ms.author: grcusanz
 author: shortpatti
 ms.date: 08/27/2018
-ms.openlocfilehash: 1bee4ef9023a1fab49bf796907780662a0297a7c
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 7f385e094ca70027d1b036bf53af23c1fc4a1bd1
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70869965"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406052"
 ---
 # <a name="upgrade-backup-and-restore-sdn-infrastructure"></a>SDN 인프라 업그레이드, 백업 및 복원
 
@@ -125,7 +125,7 @@ NetworkControllerClusterVersion NetworkControllerVersion
 
 네트워크 컨트롤러 데이터베이스의 정기 백업은 재해 또는 데이터 손실이 발생할 경우 비즈니스 연속성을 보장 합니다.  네트워크 컨트롤러 Vm을 백업 하는 데는 세션이 여러 네트워크 컨트롤러 노드에서 계속 되는 것을 보장 하지 않기 때문에 충분 하지 않습니다.
 
-**요구 사항:**
+**사항이**
 * 공유 및 파일 시스템에 대 한 읽기/쓰기 권한이 있는 SMB 공유 및 자격 증명
 * 네트워크 컨트롤러가 GMSA를 사용 하 여 설치 된 경우 필요에 따라 GMSA (그룹 관리 서비스 계정)를 사용할 수 있습니다.
 

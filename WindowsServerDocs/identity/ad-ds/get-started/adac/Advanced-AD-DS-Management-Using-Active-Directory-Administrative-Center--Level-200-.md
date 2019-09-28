@@ -7,14 +7,14 @@ author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/07/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: fc2aaa9f7c7c42b6e94995ff473a580ce560ed93
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 00e307da35911189114257eea88ccaf90ceab1ae
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59820004"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71390721"
 ---
 # <a name="advanced-ad-ds-management-using-active-directory-administrative-center-level-200"></a>Advanced AD DS Management Using Active Directory Administrative Center (Level 200)
 
@@ -23,14 +23,14 @@ ms.locfileid: "59820004"
 이 항목에서는 아키텍처, 일반 작업에 대한 예제 및 문제 해결 정보를 비롯하여 새로운 Active Directory 휴지통, 세분화된 암호 정책 및 Windows PowerShell 기록 뷰어 등의 기능과 함께 업데이트된 Active Directory 관리 센터에 대해 자세히 알아봅니다. 참조에 대 한 소개 [Active Directory 관리 센터 개선 사항 및 #40; 도입 수준 100 & #41;](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md)합니다.  
   
 - [Active Directory 관리 센터 아키텍처](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#BKMK_Arch)  
-- [Active Directory 관리 센터를 사용 하 여 휴지통 사용 하도록 설정 하 고 Active Directory 관리](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#BKMK_EnableRecycleBin)  
-- [구성 하 고 Active Directory 관리 센터를 사용 하 여 세분화 된 암호 정책 관리](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#BKMK_FGPP)  
-- [Active Directory 관리 센터 Windows PowerShell 기록 뷰어를 사용 하 여](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#BKMK_HistoryViewer)  
+- [Active Directory 관리 센터를 사용 하 여 Active Directory 휴지통 사용 및 관리](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#BKMK_EnableRecycleBin)  
+- [Active Directory 관리 센터를 사용 하 여 세분화 암호 정책 구성 및 관리](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#BKMK_FGPP)  
+- [Windows PowerShell 기록 뷰어 Active Directory 관리 센터 사용](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#BKMK_HistoryViewer)  
 - [AD DS 관리 문제 해결](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#BKMK_Tshoot)  
   
 ## <a name="BKMK_Arch"></a>Active Directory 관리 센터 아키텍처  
   
-### <a name="active-directory-administrative-center-executables-dlls"></a>Active Directory Administrative Center 실행 파일, Dll  
+### <a name="active-directory-administrative-center-executables-dlls"></a>Active Directory 관리 센터 실행 파일, Dll  
 
 새 휴지통, FGPP 및 기록 뷰어 기능이 추가되었지만 Active Directory 관리 센터의 모듈 및 기본 아키텍처는 변경되지 않았습니다.  
   
@@ -44,11 +44,11 @@ ms.locfileid: "59820004"
   
 ![고급 AD DS 관리](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/adds_adrestore.png)  
   
-## <a name="BKMK_EnableRecycleBin"></a>Active Directory 관리 센터를 사용 하 여 휴지통 사용 하도록 설정 하 고 Active Directory 관리  
+## <a name="BKMK_EnableRecycleBin"></a>Active Directory 관리 센터를 사용 하 여 Active Directory 휴지통 사용 및 관리  
   
 ### <a name="capabilities"></a>기능  
   
-- Windows Server 2012 또는 최신 Active Directory 관리 센터를 구성 하 고 Active Directory 휴지통 포리스트의 모든 도메인 파티션에 대 한 관리 할 수 있습니다. 이제 Windows PowerShell 또는 Ldp.exe를 사용하여 Active Directory 휴지통을 활성화하거나 도메인 파티션에 개체를 복원하기 위한 요구 사항이 없습니다.
+- Windows Server 2012 이상 Active Directory 관리 센터를 사용 하면 포리스트의 모든 도메인 파티션에 대해 Active Directory 휴지통을 구성 하 고 관리할 수 있습니다. 이제 Windows PowerShell 또는 Ldp.exe를 사용하여 Active Directory 휴지통을 활성화하거나 도메인 파티션에 개체를 복원하기 위한 요구 사항이 없습니다.
 - Active Directory 관리 센터에서는 의도적으로 삭제된 개체가 많은 대규모 환경에서 특정 대상을 보다 쉽게 복원할 수 있는 고급 필터링 조건을 제공합니다.
   
 ### <a name="limitations"></a>제한 사항  
@@ -60,7 +60,7 @@ ms.locfileid: "59820004"
     > [!NOTE]  
     > Active Directory 관리 센터 일괄 복원 작업에서는 한 "최상의" 삭제 된 개체에 일종의 *만 선택 영역 내* 있으므로 부모 복원 목록에 대 한 자식 앞에 정렬 됩니다. 간단한 테스트 사례에서는 단일 작업으로 개체의 하위 트리를 복원할 수 있습니다. 하지만 부분 트리-누락 된 삭제 된 부모 노드 중 일부와 트리-를 포함 하는 선택과 같은 코너 케이스 또는 오류 것과 같은 경우 예상 대로 작동 하지 않을 수, 실패 하면 부모 복원 하는 경우 자식 개체를 건너뜁니다. 따라서 항상 부모 개체를 복원한 후 개체의 하위 트리를 별도 작업으로 복원해야 합니다.  
   
-Active Directory 휴지통에 Windows Server 2008 R2 포리스트 기능 수준이 필요 하 고 Enterprise Admins 그룹의 멤버 여야 합니다. 활성화된 후에는 Active Directory 휴지통을 비활성화할 수 없습니다. Active Directory 휴지통은 포리스트의 모든 도메인 컨트롤러에서 Active Directory 데이터베이스(NTDS.DIT)의 크기를 증가시킵니다. 휴지통에 사용되는 디스크 공간은 개체 및 모든 특성 데이터를 유지하므로 시간이 지남에 따라 계속 증가합니다.  
+Active Directory 휴지통에는 Windows Server 2008 R2 포리스트 기능 수준이 필요 하며 Enterprise Admins 그룹의 구성원 이어야 합니다. 활성화된 후에는 Active Directory 휴지통을 비활성화할 수 없습니다. Active Directory 휴지통은 포리스트의 모든 도메인 컨트롤러에서 Active Directory 데이터베이스(NTDS.DIT)의 크기를 증가시킵니다. 휴지통에 사용되는 디스크 공간은 개체 및 모든 특성 데이터를 유지하므로 시간이 지남에 따라 계속 증가합니다.  
   
 ### <a name="enabling-active-directory-recycle-bin-using-active-directory-administrative-center"></a>Active Directory 관리 센터를 사용하여 Active Directory 휴지통 활성화
 
@@ -76,7 +76,7 @@ Active Directory 관리 센터에 **휴지통 사용 확인** 대화 상자가 �
 > - 포리스트 기능 수준이 Windows Server 2008 R2보다 낮은 경우  
 > - 이미 활성화된 경우  
 
-해당 Active Directory Windows PowerShell cmdlet은 다음과 같습니다.  
+해당 하는 Active Directory Windows PowerShell cmdlet은 다음과 같습니다.  
 
 ```powershell
 Enable-ADOptionalFeature  
@@ -98,7 +98,7 @@ Active Directory 휴지통은 포리스트에서 삭제된 모든 개체를 유�
   
 **삭제된 개체** 컨테이너에는 해당 도메인 파티션의 복구 가능한 모든 개체가 표시됩니다. **msDS-deletedObjectLifetime** 보다 오래된 삭제된 개체를 재활용된 개체라고 합니다. Active Directory 관리 센터에는 재활용된 개체가 표시되지 않으므로 Active Directory 관리 센터를 사용하여 이러한 개체를 복원할 수 없습니다.  
   
-휴지통의 아키텍처 및 처리 규칙의 자세한 내용은 참조 하세요. [AD 휴지통: 이해, 구현, 모범 사례 및 문제 해결](http://blogs.technet.com/b/askds/archive/2009/08/27/the-ad-recycle-bin-understanding-implementing-best-practices-and-troubleshooting.aspx)합니다.  
+휴지통의 아키텍처 및 처리 @no__t 규칙에 대 한 자세한 설명은 AD 휴지통: 이해, 구현, 모범 사례 및 문제 해결 @ no__t-0.  
   
 Active Directory 관리 센터는 컨테이너에서 반환되는 기본 개체 수를 인위적으로 20,000개로 제한합니다. **관리** 메뉴를 클릭한 다음 **관리 목록 옵션**을 클릭하여 이 제한을 100,000개까지 늘릴 수 있습니다.  
   
@@ -116,7 +116,7 @@ Active Directory 관리 센터에서는 강력한 조건 및 필터링 옵션을
   
 복원 작업에는 다른 검색과 마찬가지로 모든 표준 필터 조건 옵션이 지원됩니다. 기본 제공 필터를 사용할 경우 개체 복원의 중요한 요소는 일반적으로 다음과 같습니다.  
   
-- *ANR (모호한 이름 확인-메뉴에서 있지만에 입력할 때 사용 되는 것에 나열 되지 않은 합니다 * * * 필터 * * * 상자)*  
+- *ANR (모호한 이름 확인-메뉴에는 표시 되지 않지만 * * * * * * * * * 상자에를 입력할 때 사용 되는 항목)*  
 - 지정한 날짜 사이에 마지막으로 수정된 개체  
 - 개체는 사용자/조직 구성원/컴퓨터/그룹/조직 구성 단위  
 - 이름  
@@ -137,7 +137,7 @@ Active Directory 관리 센터에서는 강력한 조건 및 필터링 옵션을
 - UPN  
 - 우편 번호  
 
-여러 조건을 추가할 수 있습니다. 예를 들어 일 일리노이 주 시카고에서에서 2012 년 9 월 24 일 관리자의 직함으로 삭제 된 모든 사용자 개체를 찾을 수 있습니다.
+여러 조건을 추가할 수 있습니다. 예를 들어 시카고에서 2012 년 9 월 24 일에 삭제 된 모든 사용자 개체를 찾을 수 있습니다. Illinois는 관리자의 직함입니다.
   
 복구할 개체를 평가할 때 열 머리글을 추가, 수정 또는 다시 정렬하여 보다 자세한 정보를 제공할 수도 있습니다.  
   
@@ -184,7 +184,7 @@ Active Directory 관리 센터에서는 삭제된 개체의 중첩된 트리를 
   
 자식 OU 및 사용자가 포함된 Sales OU를 관리자가 실수로 삭제한 시나리오를 예로 들어 보겠습니다.  
   
-첫째,의 값을 관찰 합니다 **마지막으로 알려진 부모** 삭제 된 모든 사용자에 대 한 특성을 읽는 방법을 **OU = Sales\0ADEL:*< guid + 삭제 된 개체 컨테이너 고유 이름 > * * *:  
+먼저 모든 삭제 된 사용자에 대 한 **마지막으로 알려진 부모** 특성의 값과 **OU = Sales\0ADEL:* < guid + 삭제 된 개체 컨테이너 고유 이름 > * * *을 읽습니다.  
   
 ![고급 AD DS 관리](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_LastKnownParent.gif)  
   
@@ -202,7 +202,7 @@ Active Directory 관리 센터에서는 삭제된 개체의 중첩된 트리를 
   
 **Sales** OU에 자식 OU가 포함된 경우 먼저 이 자식 OU를 복원한 다음 해당 자식을 차례로 복원할 수 있습니다.  
   
-삭제 된 부모 컨테이너를 지정 하 여 중첩 된 모든 삭제 된 개체를 복원 하려면 참조 [부록 b: 여러 복원할 삭제 된 Active Directory 개체 (예제 스크립트)](https://technet.microsoft.com/library/dd379504(WS.10).aspx)합니다.  
+삭제 된 부모 컨테이너를 지정 하 여 중첩 된 모든 삭제 된 개체를 복원 하려면 [Appendix B: 여러 개의 삭제 된 Active Directory 개체 (샘플 스크립트)를 복원 ](https://technet.microsoft.com/library/dd379504(WS.10).aspx)입니다.  
   
 삭제된 개체를 복원하는 Active Directory Windows PowerShell cmdlet은 다음과 같습니다.  
 
@@ -220,7 +220,7 @@ Restore-adobject
 2. 펼침 단추를 클릭하여 **+조건 추가** 메뉴를 표시하고 **지정한 날짜 사이에 마지막으로 수정된 개체**를 선택하여 추가합니다. 마지막 수정 시간(**whenChanged** 특성)은 삭제 시간의 근사치이며, 대부분의 환경에서 동일합니다. 이 쿼리는 서버 쪽 검색을 수행합니다.  
 3. 결과에서 추가 표시 필터링, 정렬 등을 사용하여 복원할 삭제된 개체를 찾은 후 정상적으로 복원합니다.  
   
-## <a name="BKMK_FGPP"></a>구성 하 고 Active Directory 관리 센터를 사용 하 여 세분화 된 암호 정책 관리  
+## <a name="BKMK_FGPP"></a>Active Directory 관리 센터를 사용 하 여 세분화 암호 정책 구성 및 관리  
   
 ### <a name="configuring-fine-grained-password-policies"></a>세분화된 암호 정책 구성
 
@@ -270,7 +270,7 @@ Active Directory 관리 센터를 사용하여 특정 사용자에 대해 적용
   
 암시적 FGPP 할당 여기서 표시 되지 않습니다. 사용 해야 하는 **결과 암호 설정... 볼** 옵션입니다.  
   
-## <a name="BKMK_HistoryViewer"></a>Active Directory 관리 센터 Windows PowerShell 기록 뷰어를 사용 하 여
+## <a name="BKMK_HistoryViewer"></a>Windows PowerShell 기록 뷰어 Active Directory 관리 센터 사용
 
 Windows 관리의 미래는 Windows PowerShell입니다. 그래픽 도구의 계층을 작업 자동화 프레임워크 위에 두면 아무리 복잡한 분산 시스템도 일관성 있게 효율적으로 관리할 수 있습니다. 잠재력을 최대한 실현하고 컴퓨팅 투자를 극대화하려면 Windows PowerShell의 작동 방식을 이해해야 합니다.  
   
@@ -326,9 +326,9 @@ Active Directory 관리 센터는 필요한 코드 사용 및 모듈을 최소�
   
 #### <a name="logging-options"></a>로깅 옵션
 
-Active Directory 관리 센터는 이제 기본 제공 로깅, 추적 구성 파일의 일부로 포함 됩니다. dsac.exe와 동일한 폴더에서 다음 파일을 만들고 수정합니다.  
+이제 Active Directory 관리 센터에는 추적 구성 파일의 일부로 기본 제공 로깅이 포함 되어 있습니다. dsac.exe와 동일한 폴더에서 다음 파일을 만들고 수정합니다.  
   
-**dsac.exe.config**
+**dsac .exe .config**
   
 다음 콘텐츠를 만듭니다.  
   
@@ -439,7 +439,7 @@ Active Directory 관리 센터는 이제 기본 제공 로깅, 추적 구성 파
 또한 Verbose 수준을 설정하면 각 함수에 대한 .NET 스택이 표시되지만 Dsac.exe의 액세스 위반 또는 크래시 문제를 해결할 때 외에는 특별히 유용한 데이터는 포함되지 않습니다. 이 문제의 가능한 원인에는 다음 두 가지가 있습니다.
   
 - ADWS 서비스가 액세스 가능한 도메인 컨트롤러에서 실행되고 있지 않습니다.
-- 네트워크 통신 ADWS 서비스에 Active Directory 관리 센터를 실행 하는 컴퓨터에서 차단 됩니다.
+- 네트워크 통신은 Active Directory 관리 센터를 실행 하는 컴퓨터의 ADWS 서비스로 차단 됩니다.
 
 > [!IMPORTANT]  
 > Windows Server 2008 SP2 및 Windows Server 2003 SP2에서 실행되는 [Active Directory 관리 게이트웨이](https://www.microsoft.com/download/en/details.aspx?displaylang=en&id=2852)라는 대역 외 버전의 서비스도 있습니다.
@@ -447,7 +447,7 @@ Active Directory 관리 센터는 이제 기본 제공 로깅, 추적 구성 파
 
 사용 가능한 Active Directory 웹 서비스 인스턴스가 없는 경우에 표시되는 오류는 다음과 같습니다.  
   
-|Error|연산|
+|오류|연산|
 | --- | --- |  
 |"도메인에 연결할 수 없습니다. 연결되면 새로 고치거나 다시 시도해 보세요."|Active Directory 관리 센터 응용 프로그램을 시작할 때 표시됩니다.|
 |"에서 사용 가능한 서버를 찾을 수 없습니다는 *<NetBIOS domain name>* 는 웹 서비스 ADWS (Active Directory)를 실행 중인 도메인"|Active Directory 관리 센터 응용 프로그램에서 도메인 노드를 선택하려고 할 때 표시됩니다.|
@@ -486,4 +486,4 @@ Active Directory 관리 센터는 이제 기본 제공 로깅, 추적 구성 파
   
 ## <a name="see-also"></a>관련 항목
 
-[AD 휴지통, 세분화 된 암호 정책을 PowerShell 기록](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md)  
+[AD 휴지통, 세분화된 암호 정책, PowerShell 기록](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md)  

@@ -2,7 +2,7 @@
 title: tracerpt
 description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 25014d23c797f37dcc488b5fea20c73907eb6f4c
-ms.sourcegitcommit: feec5cbe983c8c5800ccd4fc214914084fcceaba
+ms.openlocfilehash: 1c8e85acc59383d0a027c8d5ec51e68942a76b85
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70975300"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71385681"
 ---
 # <a name="tracerpt"></a>tracerpt
 
@@ -57,7 +57,7 @@ tracerpt <[-l] <value [value [...]]>|-rt <session_name [session_name [...]]>> [o
 |           -보고서 [filename]           |                                  텍스트 출력 보고서 파일을 생성 합니다. 지정 하지 않으면 파일에는 workload.xml입니다.                                   |
 |                  -lr                   |                        지정 "덜 제한적입니다." 이 이벤트 스키마와 일치 하지 않는 이벤트에 대 한 최선의 노력을 사용 합니다.                         |
 |           -[filename] 내보내기           |                                  이벤트 스키마 내보내기 파일을 생성 합니다. 지정 하지 않으면 파일에는 schema.man입니다.                                   |
-|       [-l] \<값 [값 [...]] >        |                                                   처리 이벤트 추적 로그 파일을 지정 합니다.                                                    |
+|       [-l] \<value [값 [...]] >        |                                                   처리 이벤트 추적 로그 파일을 지정 합니다.                                                    |
 | -rt \<session_name [session_name [...]] > |                                                실시간 이벤트 추적 세션 데이터 소스를 지정 합니다.                                                |
 
 ## <a name="BKMK_EXAMPLES"></a>예와

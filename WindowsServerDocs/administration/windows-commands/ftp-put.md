@@ -1,8 +1,8 @@
 ---
-title: ftp 입력
-description: '에 대 한 Windows 명령을 항목 * * *- '
+title: ftp put
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4d602c685b7eac5d18c88bc0f6709b189cc61a77
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 15c1734322d3642ebc85891b71c6ad68100d514d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66438459"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71376067"
 ---
-# <a name="ftp-put"></a>ftp: 배치
+# <a name="ftp-put"></a>ftp: put
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -38,17 +38,17 @@ put <LocalFile> [<remoteFile>]
 
 ## <a name="remarks"></a>설명  
 - **배치** 명령은 동일 합니다는 **보낼** 명령입니다.  
-- 하는 경우 *remoteFile* 지정 하지 않으면 파일 제공할지는 *LocalFile* 이름입니다.  
-  ## <a name="BKMK_Examples"></a>예제  
-  로컬 파일을 복사 **test.txt** 하 고 이름을 **test1.txt** 원격 컴퓨터.  
+- *Remotefile* 을 지정 하지 않으면 파일에 *localfile* 이름이 지정 됩니다.  
+  ## <a name="BKMK_Examples"></a>예와  
+  로컬 파일 **test.txt** 를 복사 하 고 원격 컴퓨터에서 이름을 **test1** 로 설정 합니다.  
   ```  
   put test.txt test1.txt  
   ```  
-  로컬 파일을 복사 **program.exe** 원격 컴퓨터에 있습니다.  
+  로컬 파일 **프로그램** 을 원격 컴퓨터에 복사 합니다.  
   ```  
   put program.exe  
   ```  
   ## <a name="additional-references"></a>추가 참조  
 - [ftp: ascii](ftp-ascii.md)  
-- [ftp: binary](ftp-binary.md)  
+- [ftp: 이진](ftp-binary.md)  
 - [명령줄 구문 키](command-line-syntax-key.md)  

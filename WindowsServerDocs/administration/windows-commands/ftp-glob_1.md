@@ -1,8 +1,8 @@
 ---
 title: ftp glob_1
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,29 +13,29 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8824fab77c3cc10828b31abbe2f9034778c39c47
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 3052769d78cdbb067d32db7dc70b1506590576da
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66438738"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71376402"
 ---
-# <a name="ftp-glob1"></a>ftp: glob_1
+# <a name="ftp-glob_1"></a>ftp: glob_1
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-로컬 파일 이름의 와일드 카드 확장 설정/해제 합니다.   
+로컬 파일 이름의 와일드 카드 확장을 설정/해제 합니다.   
 ## <a name="syntax"></a>구문  
 ```  
 glob  
 ```  
 ### <a name="parameters"></a>매개 변수  
-none  
+없음  
 ## <a name="remarks"></a>설명  
-- 기본적으로 와일드 카드 사용 켜져 있습니다.  
-- 와일드 카드 사용 로컬 파일 또는 경로 이름에 와일드 카드 문자로 별표 (*) 및 물음표 (?)의 사용을 허용합니다.  
-  ## <a name="BKMK_Examples"></a>예제  
-  로컬 파일 이름에 와일드 카드 확장을 / 축소 합니다.  
+- 기본적으로 와일드 카드 사용는 on입니다.  
+- 와일드 카드 사용는 로컬 파일 또는 경로 이름에 와일드 카드 문자로 별표 (*) 및 물음표 (?)를 사용할 수 있습니다.  
+  ## <a name="BKMK_Examples"></a>예와  
+  로컬 파일 이름의 와일드 카드 확장을 설정/해제 합니다.  
   ```  
   glob  
   ```  

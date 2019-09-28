@@ -1,8 +1,8 @@
 ---
 title: path
-description: PATH 환경 변수를 설정 하는 방법에 알아봅니다.
+description: PATH 환경 변수를 설정 하는 방법에 대해 알아봅니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a637abc91dd3342afb3a2723d1b3a835be149122
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 81e8441e7c67e42bdf929e703c8fe780a6f8aff8
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66436322"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71372416"
 ---
 # <a name="path"></a>path
 
@@ -39,7 +39,7 @@ path ;
 
 |     매개 변수     |                                                                                                     설명                                                                                                      |
 |-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [\<Drive>:]<Path> |                                                                            드라이브와 명령 경로에 설정 하는 디렉터리를 지정 합니다.                                                                             |
+| [\<Drive >:] <Path> |                                                                            드라이브와 명령 경로에 설정 하는 디렉터리를 지정 합니다.                                                                             |
 |         ;         | 명령 경로에서 디렉터리를 구분 합니다. 다른 매개 변수 없이 사용 하는 경우 **;** 기존 명령 경로 PATH 환경 변수를 지우고 Cmd.exe 현재 디렉터리 에서만에서 검색 하도록 지시 합니다. |
 |      % PATH %       |                                                         PATH 환경 변수에 나열 된 디렉터리의 기존 집합에 명령 경로 추가 합니다.                                                         |
 |        /?         |                                                                                         명령 프롬프트에 도움말을 표시합니다.                                                                                         |
@@ -54,7 +54,7 @@ path ;
 -   동일한 파일 이름 및 확장명, 명령 경로에 두 개 이상의 파일의 경우 **경로** 현재 디렉터리에 지정된 된 파일에 대 한 첫 번째 검색 이름을 지정 합니다. 다음 명령 경로 PATH 환경 변수에 나열 된 순서에 있는 디렉터리를 검색 합니다.
 -   배치 하는 경우는 **경로** Windows 운영 체제는 자동으로 지정된 된 MS-DOS 하위 시스템 검색 경로 추가 컴퓨터에 로그온 할 때마다 Autoexec.nt 파일에 명령 합니다. Cmd.exe는 Autoexec.nt 파일을 사용 하지 않습니다. 바로 가기에서 시작할 때 Cmd.exe 내 컴퓨터/속성/고급/환경에 설정 된 환경 변수를 상속 합니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 외부 명령에 대 한 C:\User\Taxes, B:\User\Invest, 및 B:\Bin 경로 검색 하려면 다음을 입력 합니다.
 

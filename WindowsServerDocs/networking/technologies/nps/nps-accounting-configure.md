@@ -2,19 +2,19 @@
 title: 네트워크 정책 서버 계정 구성
 description: 이 항목에서는 Windows Server 2016의 네트워크 정책 서버에 대 한 SQL Server 로그 및 텍스트 파일에 대 한 정보를 제공 합니다.
 manager: dougkim
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: dfde2e21-f3d5-41e8-8492-cb3f0d028afb
 ms.author: pashort
 author: shortpatti
 ms.date: 05/25/2018
-ms.openlocfilehash: f16e4093ed58f2a2fadc4b9faa1fa42c0c157ca3
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 0c154d4d4534f4c343107eecd158974b92903e39
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871896"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71405566"
 ---
 # <a name="configure-network-policy-server-accounting"></a>네트워크 정책 서버 계정 구성
 
@@ -55,7 +55,7 @@ NPS (네트워크 정책 서버)를 구성 하 여 사용자 인증 요청, 액�
 
 - 컬렉션에 대 한 로그 파일 데이터를 다른 프로세스에서 전송 하려면 명명 된 파이프에 쓰도록 NPS를 구성 하면 됩니다. 명명 된 파이프를 사용 하려면 로그 파일 폴더를 .\pipe \\또는 \\ComputerName\pipe.로 설정 합니다. 명명 된 파이프 서버 프로그램은 데이터를 수락 하기 \\위해 .\pipe\iaslog.log 라는 명명 된 파이프를 만듭니다. 명명 된 파이프를 사용 하는 경우 로컬 파일 속성 대화 상자의 새 로그 파일 만들기에서 안 함 (파일 크기 제한 없음)을 선택 합니다.
 
-- 로그 파일 디렉터리는 사용자 변수 대신 시스템 환경 변수를 사용 하 여 만들 수 있습니다 (예:% 최대 수%,% systemroot%,% windir%). 예를 들어% windir% 환경 변수를 사용 하는 다음 경로는 \System32\Logs 하위 폴더 (즉,%windir%\System32\Logs\))의 시스템 디렉터리에서 로그 파일을 찾습니다.
+- 로그 파일 디렉터리는 사용자 변수 대신 시스템 환경 변수를 사용 하 여 만들 수 있습니다 (예:% 최대 수%,% systemroot%,% windir%). 예를 들어% windir% 환경 변수를 사용 하는 다음 경로는 \System32\Logs 하위 폴더의 시스템 디렉터리에서 로그 파일을 찾습니다 (즉,%windir%\System32\Logs @ no__t-0).
 
 - 로그 파일 형식을 전환 하면 새 로그가 생성 되지 않습니다. 로그 파일 형식을 변경 하는 경우 변경 시 활성 상태인 파일에는 두 가지 형식이 혼합 되어 포함 됩니다. 즉, 로그의 시작 부분에 있는 레코드는 이전 형식이 고 로그의 끝에 있는 레코드는 새 형식이 됩니다.
 

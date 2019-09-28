@@ -1,8 +1,8 @@
 ---
 title: netstat
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c06684eb73639e7480b5bad39d4d679739682800
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 54bd21b7e96275d329e45e825971d9236488c793
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66437153"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71373257"
 ---
 # <a name="netstat"></a>netstat
 
@@ -47,14 +47,14 @@ netstat [-a] [-e] [-n] [-o] [-p <Protocol>] [-r] [-s] [<Interval>]
 
 ## <a name="remarks"></a>설명
 -   이 명령과 함께 사용 되는 매개 변수가 하이픈 접두사로 추가 해야 합니다 ( **-** ) 대신 슬래시 ( **/** ).
--   **netstat** 다음에 대 한 통계를 제공 합니다.
+-   **netstat** 는 다음에 대 한 통계를 제공 합니다.
     -   프로토콜 (TCP 또는 UDP) 프로토콜의 이름입니다.
-    -   로컬 주소는 로컬 컴퓨터와 사용 중인 포트 번호의 IP 주소입니다. IP 주소에 해당 하는 로컬 컴퓨터의 이름 및 포트의 이름을 확인할 수는 **-n** 매개 변수를 지정 합니다. 포트 연결이 아직 설정 되지 포트 번호는 별표 (*)로 표시 됩니다.
-    -   외부 주소 IP 주소와 포트 번호에서 소켓 연결 되는 원격 컴퓨터의 합니다. 않는 한 IP 주소 및 포트에 해당 하는 이름이 표시 됩니다는 **-n** 매개 변수를 지정 합니다. 포트 연결이 아직 설정 되지 포트 번호는 별표 (*)로 표시 됩니다.
-    -   (상태) TCP 연결의 상태를 나타냅니다. 가능한 상태는 다음과 같습니다. 닫힌 설정 FIN_WAIT_1 FIN_WAIT_2 LAST_ACK listEN SYN_RECEIVED SYN_SEND timeD_WAIT TCP 연결의 상태에 대 한 자세한 내용은 Rfc 793을 참조 하십시오.
+    -   로컬 주소 로컬 컴퓨터의 IP 주소와 사용 중인 포트 번호입니다. IP 주소에 해당 하는 로컬 컴퓨터의 이름 및 포트의 이름을 확인할 수는 **-n** 매개 변수를 지정 합니다. 포트 연결이 아직 설정 되지 포트 번호는 별표 (*)로 표시 됩니다.
+    -   외부 주소 소켓이 연결 된 원격 컴퓨터의 IP 주소와 포트 번호입니다. 않는 한 IP 주소 및 포트에 해당 하는 이름이 표시 됩니다는 **-n** 매개 변수를 지정 합니다. 포트 연결이 아직 설정 되지 포트 번호는 별표 (*)로 표시 됩니다.
+    -   (상태) TCP 연결의 상태를 나타냅니다. 가능한 상태는 다음과 같습니다. CLOSE_WAIT CLOSED 설정 된 FIN_WAIT_1 FIN_WAIT_2 LAST_ACK listEN SYN_RECEIVED SYN_SEND timeD_WAIT TCP 연결 상태에 대 한 자세한 내용은 Rfc 793을 참조 하십시오.
 -   이 명령은 네트워크 연결에서 네트워크 어댑터의 속성에 구성 요소로 인터넷 프로토콜 (TCP/IP) 프로토콜을 설치 하는 경우에 사용할 수입니다.
 
-## <a name="BKMK_Examples"></a>예제
+## <a name="BKMK_Examples"></a>예와
 이더넷 통계와 모든 프로토콜에 대 한 통계를 표시 하려면 다음을 입력 합니다.
 ```
 netstat -e -s

@@ -1,8 +1,8 @@
 ---
-title: 볼륨 특성
-description: Windows 명령 항목에 대 한 **볼륨 특성** -표시, 집합 또는 볼륨의 특성을 지웁니다.
+title: 특성 볼륨
+description: '**특성 볼륨** 에 대 한 Windows 명령 항목-볼륨의 특성을 표시, 설정 또는 지웁니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 37af55ee2a041fbcf8068e0def72147732d3a687
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 225a10307123763d1a024fcc08fbae536fd0b5df
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59846584"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71382576"
 ---
-# <a name="attributes-volume"></a>볼륨 특성
+# <a name="attributes-volume"></a>특성 볼륨
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -44,17 +44,17 @@ attributes volume [{set | clear}] [{hidden | readonly | nodefaultdriveletter | s
 |hidden|볼륨 숨겨지는지를 지정 합니다.|  
 |nodefaultdriveletter|볼륨 기본적으로 드라이브 문자를 할당 하지 않는 것을 지정 합니다.|  
 |섀도 복사본|볼륨 섀도 복사본 볼륨 임을 지정 합니다.|  
-|noerr|만 스크립팅 합니다. 오류가 발생 하면 오류가 발생 하지 않은 경우에 따라 명령을 처리 하도록 DiskPart 계속 합니다. 이 매개 변수를 크기는 오류 코드를 수행 합니다.|  
+|noerr|스크립팅 전용입니다. 오류가 발생 하면 오류가 발생 하지 않은 경우에 따라 명령을 처리 하도록 DiskPart 계속 합니다. 이 매개 변수를 크기는 오류 코드를 수행 합니다.|  
   
 ## <a name="remarks"></a>설명  
   
 -   마스터 부트 레코드에서 \(MBR\) 디스크는 **숨겨진**, **readonly**, 및 **nodefaultdriveletter** 매개 변수는 디스크에 있는 모든 볼륨에 적용 합니다.  
   
--   기본 GUID 파티션 테이블에 \(gpt\) 디스크 및 동적 MBR 및 gpt 디스크에는 **숨겨진**에 **readonly**, 및 **nodefaultdriveletter** 매개 변수는 선택한 볼륨에만 적용 됩니다.  
+-   기본 GUID 파티션 테이블 \(gpt @ no__t 디스크 및 동적 MBR 및 gpt 디스크에서 **hidden**, **readonly**및 **nodefaultdriveletter** 매개 변수는 선택한 볼륨에만 적용 됩니다.  
   
 -   볼륨을 선택 해야는 **볼륨 특성** 명령을 성공적으로 합니다. 사용 하 여는 **볼륨 선택** 볼륨을 선택 하 고 포커스를 이동 하는 명령입니다.  
   
-## <a name="BKMK_examples"></a>예제  
+## <a name="BKMK_examples"></a>예와  
 선택된 된 볼륨의 현재 속성을 표시 하려면 다음을 입력 합니다.  
   
 ```  

@@ -1,8 +1,8 @@
 ---
 title: 별칭 추가
-description: Windows 명령 항목에 대 한 **별칭 추가** -별칭 환경에 별칭을 추가 합니다.
+description: '**별칭 추가** 에 대 한 Windows 명령 항목-별칭 환경에 별칭을 추가 합니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 50de932ea0153546816face61f0852a08707ea85
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f2834376e497f54eadf1d9077e74f9c398202c5a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59862224"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71382821"
 ---
 # <a name="add-alias"></a>별칭 추가
 
@@ -38,21 +38,21 @@ add alias <AliasName> <AliasValue>
 
 |매개 변수|설명|
 |---------|-----------|
-|\<AliasName>|별칭의 이름을 지정합니다.|
-|\<AliasValue>|별칭 값을 지정합니다.|
+|@no__t 0AliasName >|별칭의 이름을 지정합니다.|
+|@no__t 0AliasValue >|별칭 값을 지정합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
 ## <a name="remarks"></a>설명
 
 -   별칭 메타 데이터 파일에 저장 되 고으로 로드 되는 **메타 데이터를 로드** 명령입니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 해당 별칭을 포함 하 여 모든 그림자를 나열 하려면 다음을 입력 합니다.
 ```
 list shadows all
 ```
-다음 발췌 구문 VSS_SHADOW_x, 기본 별칭, 할당 된 섀도 복사본을 보여 줍니다.
+다음 발췌에서는 기본 별칭 VSS_SHADOW_x가 할당 된 섀도 복사본을 보여 줍니다.
 ```
 * Shadow Copy ID = {ff47165a-1946-4a0c-b7f4-80f46a309278}
 %VSS_SHADOW_1%

@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 441dad92611e1a4a1135bd15bbcdfd05f38c1be3
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: afc05f395753e5c5614e92d109d71e05980d5d92
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66445822"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407173"
 ---
 # <a name="deploy-access-denied-assistance-demonstration-steps"></a>Deploy Access-Denied Assistance (Demonstration Steps)
 
@@ -22,13 +22,13 @@ ms.locfileid: "66445822"
 
 이 항목에서는 액세스 거부 지원을 구성하고 제대로 작동하는지 확인하는 방법에 대해 설명합니다.  
   
-**이 문서에서는**  
+**이 문서의**  
   
--   [1단계: 액세스 거부 지원 구성](Deploy-Access-Denied-Assistance--Demonstration-Steps-.md#BKMK_1)  
+-   [1단계: 액세스 거부 지원 구성 @ no__t-0  
   
--   [2단계: 전자 메일 알림 설정 구성](Deploy-Access-Denied-Assistance--Demonstration-Steps-.md#BKMK_2)  
+-   [2단계: 전자 메일 알림 설정 구성 @ no__t-0  
   
--   [3단계: 액세스 거부 지원이 올바르게 구성 되어 있는지 확인 합니다.](Deploy-Access-Denied-Assistance--Demonstration-Steps-.md#BKMK_3)  
+-   [3단계: 액세스 거부 지원이 올바르게 구성 되었는지 확인 @ no__t-0  
   
 > [!NOTE]  
 > 이 항목에는 설명한 절차의 일부를 자동화하는 데 사용할 수 있는 샘플 Windows PowerShell cmdlet이 포함되어 있습니다. 자세한 내용은 참조 [Cmdlet를 사용 하 여](https://go.microsoft.com/fwlink/p/?linkid=230693)합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "66445822"
   
 다음과 같이 그룹 정책을 사용하여 도메인에 대한 액세스 거부 지원을 구성할 수 있습니다.  
   
-[Windows PowerShell을 사용 하 여이 단계를 수행 합니다.](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep1)  
+[Windows PowerShell을 사용 하 여이 단계 수행](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep1)  
   
 #### <a name="to-configure-access-denied-assistance-by-using-group-policy"></a>그룹 정책을 사용하여 액세스 거부 지원을 구성하려면  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66445822"
   
     3.  나머지 기본 설정을 그대로 둡니다.  
   
-![솔루션 가이드](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![solution guide](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -88,7 +88,7 @@ Set-GPRegistryValue -Name "Name of GPO" -key "HKLM\Software\Policies\Microsoft\W
   
 또는 파일 서버 리소스 관리자 콘솔을 사용하여 각 파일 서버에서 개별적으로 액세스 거부 지원을 구성할 수 있습니다.  
   
-[Windows PowerShell을 사용 하 여이 단계를 수행 합니다.](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep1a)  
+[Windows PowerShell을 사용 하 여이 단계 수행](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep1a)  
   
 #### <a name="to-configure-access-denied-assistance-by-using-file-server-resource-manager"></a>파일 서버 리소스 관리자를 사용하여 액세스 거부 지원을 구성하려면  
   
@@ -118,7 +118,7 @@ Set-GPRegistryValue -Name "Name of GPO" -key "HKLM\Software\Policies\Microsoft\W
   
 8.  **확인**을 클릭합니다.  
   
-![솔루션 가이드](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![solution guide](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.
   
@@ -128,7 +128,7 @@ Set-FSRMAdrSetting -Event "AccessDenied" -DisplayMessage "Type the text that the
   
 액세스 거부 지원을 구성한 후에는 그룹 정책을 사용하여 모든 파일 형식에 액세스 거부 지원을 사용하도록 설정해야 합니다.  
   
-[Windows PowerShell을 사용 하 여이 단계를 수행 합니다.](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep1c)  
+[Windows PowerShell을 사용 하 여이 단계 수행](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep1c)  
   
 #### <a name="to-configure-access-denied-assistance-for-all-file-types-by-using-group-policy"></a>그룹 정책을 사용하여 모든 파일 형식에 대해 액세스 거부 지원을 구성하려면  
   
@@ -142,7 +142,7 @@ Set-FSRMAdrSetting -Event "AccessDenied" -DisplayMessage "Type the text that the
   
 5.  **사용**을 클릭한 다음 **확인**을 클릭합니다.  
   
-![솔루션 가이드](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![solution guide](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요. 
   
@@ -153,7 +153,7 @@ Set-GPRegistryValue -Name "Name of GPO" -key "HKLM\SOFTWARE\Policies\Microsoft\W
   
 또한 파일 서버 리소스 관리자 콘솔을 사용하여 파일 서버의 각 공유 폴더에 대해 별도의 액세스 거부 메시지를 지정할 수 있습니다.  
   
-[Windows PowerShell을 사용 하 여이 단계를 수행 합니다.](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep1b)  
+[Windows PowerShell을 사용 하 여이 단계 수행](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep1b)  
   
 #### <a name="to-specify-a-separate-access-denied-message-for-a-shared-folder-by-using-file-server-resource-manager"></a>파일 서버 리소스 관리자를 사용하여 공유 폴더에 대해 별도의 액세스 거부 메시지를 지정하려면  
   
@@ -181,7 +181,7 @@ Set-GPRegistryValue -Name "Name of GPO" -key "HKLM\SOFTWARE\Policies\Microsoft\W
   
 7.  **확인**을 클릭하고 **닫기**를 클릭합니다.  
   
-![솔루션 가이드](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![solution guide](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요. 
   
@@ -192,7 +192,7 @@ Set-FSRMMgmtProperty -Namespace "folder path" -Name "AccessDeniedMessage_MS" -Va
 ## <a name="BKMK_2"></a>2 단계: 전자 메일 알림 설정 구성  
 각 파일 서버에서 액세스 거부 지원 메시지를 보낼 전자 메일 알림 설정을 구성해야 합니다.  
   
-[Windows PowerShell을 사용 하 여이 단계를 수행 합니다.](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep2)  
+[Windows PowerShell을 사용 하 여이 단계 수행](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep2)  
   
 1.  파일 서버 리소스 관리자를 엽니다. 서버 관리자에서 **도구**를 클릭한 다음 **파일 서버 리소스 관리자**를 클릭합니다.  
   
@@ -210,7 +210,7 @@ Set-FSRMMgmtProperty -Namespace "folder path" -Name "AccessDeniedMessage_MS" -Va
   
 6.  **확인**을 클릭합니다.  
   
-![솔루션 가이드](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![solution guide](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.
   

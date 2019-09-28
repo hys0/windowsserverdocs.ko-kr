@@ -1,8 +1,8 @@
 ---
 title: pnpunattend
-description: 드라이버 자동 설치를 수행할 수 있을 뿐만 아니라 컴퓨터에서 장치 드라이버를 감사 하는 방법에 알아봅니다.
+description: 컴퓨터에서 장치 드라이버를 감사 하는 방법 및 자동 드라이버 설치를 수행 하는 방법을 알아봅니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,16 +13,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 53b72459d497ac5d079336c2a00ba65634b2e3a6
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 77a6ab1ea45322e3c53e8b095c412cf8838be60d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66436328"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71372274"
 ---
 # <a name="pnpunattend"></a>pnpunattend
 
-장치 드라이버에 대 한 컴퓨터 감사 무인된 드라이버 설치를 수행할 또는 검색 드라이버를 설치 하지 않고 하 고, 필요에 따라 명령줄에 결과 보고 합니다. 이 명령을 사용 하 여 특정 하드웨어 장치에 대 한 특정 드라이버의 설치를 지정 합니다. 설명 부분을 참조하세요.
+컴퓨터에서 장치 드라이버를 감사 하 고 무인 드라이버 설치를 수행 하거나, 설치 하지 않고 드라이버를 검색 하 고, 필요에 따라 명령줄에 결과를 보고 합니다. 특정 하드웨어 장치에 대 한 특정 드라이버의 설치를 지정 하려면이 명령을 사용 합니다. 설명 부분을 참조하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -34,25 +34,25 @@ PnPUnattend.exe auditSystem [/help] [/?] [/h] [/s] [/L]
 
 |매개 변수|설명|
 |---------|-----------|
-|auditSystem|온라인 설치를 지정합니다.</br>필요한 경우 제외 **pnpunattend** 중 하나를 사용 하 여 실행 합니다 **/help** 또는 **/?** 필요합니다.|
-|/s|(선택 사항) 드라이버를 설치 하지 않고 검색 하도록 지정 합니다.|
+|auditSystem|온라인 드라이버 설치를 지정 합니다.</br>**Pnpunattend** 가 **/help** 또는 **/?** 를 사용 하 여 실행 되는 경우를 제외 하 고는 필수 항목입니다. 필요합니다.|
+|/s|(선택 사항) 를 설치 하지 않고 드라이버를 검색 하도록 지정 합니다.|
 |/L|(선택 사항) 명령 프롬프트에서이 명령에 대 한 로그 정보를 표시 하도록 지정 합니다.|
 |/?|(선택 사항) 명령 프롬프트에서이 명령에 대 한 도움말을 표시 합니다.|
 
 ## <a name="remarks"></a>설명
 
-사전 준비가 필요 합니다. 이 명령을 사용 하기 전에 다음 작업을 완료 해야 합니다.
+예비 준비가 필요 합니다. 이 명령을 사용 하기 전에 다음 작업을 완료 해야 합니다.
 
-1. 설치 하려는 드라이버에 대 한 디렉터리를 만듭니다. 예를 들어 있는 폴더를 만듭니다 **C:\Drivers\Video** 비디오 어댑터 드라이버에 대 한 합니다.
-2. 다운로드 하 고 장치에 대 한 드라이버 패키지를 추출 합니다. 운영 체제의 버전에 대 한 INF 파일이 포함 된 하위 폴더 및 하위 폴더의 내용을 사용자가 만든 비디오 폴더로 복사 합니다. 예를 들어 C:\Drivers\Video에 비디오 드라이버 파일을 복사 합니다.
-3. 예를 들어, 1 단계에서에서 만든 폴더를 path 시스템 환경 변수를 추가 **C:\Drivers\Video**합니다.
-4. 다음 레지스트리 키를 만듭니다 한 후는 **DriverPaths** 키를 만드는 설정 합니다 **값 데이터** 에 **1**.
-5. 에 대 한 Windows® 7 레지스트리 경로 이동 합니다. **하기 위해 HKEY_LOCAL_Machine\Software\Microsoft\Windows NT\CurrentVersion\\** , 한 다음 키를 만듭니다. **UnattendSettings\PnPUnattend\DriverPaths\\**
-6. Windows Vista에 대 한 레지스트리 경로 이동 합니다. **HK_LM\Software\Microsoft\Windows 찾습니다\\** 를 만든 다음 키 및 = **\UnattendSettings\PnPUnattend\DriverPaths**합니다.
+1. 설치 하려는 드라이버에 대 한 디렉터리를 만듭니다. 예를 들어 비디오 어댑터 드라이버용 **C:\vom\video** 에서 폴더를 만듭니다.
+2. 장치에 대 한 드라이버 패키지를 다운로드 하 고 압축을 풉니다. 운영 체제 버전의 INF 파일을 포함 하는 하위 폴더의 내용 및 만든 비디오 폴더의 하위 폴더를 복사 합니다. 예를 들어 비디오 드라이버 파일을 C:\vom\videos에 복사 합니다.
+3. 1 단계에서 만든 폴더에 시스템 환경 경로 변수를 추가 합니다 (예: **C:\vom\video**).
+4. 다음 레지스트리 키를 만든 다음 만든 **Driverpaths** 키에 대해 **값 데이터** 를 **1**로 설정 합니다.
+5. Windows® 7의 경우 레지스트리 경로를 탐색 합니다. **HKEY_LOCAL_Machine\Software\Microsoft\Windows NT\CurrentVersion @ no__t-1**을 차례로 클릭 한 다음 키를 만듭니다. **UnattendSettings\PnPUnattend\DriverPaths @ no__t-1**
+6. Windows Vista의 경우 레지스트리 경로로 이동 합니다. **HK_LM\Software\Microsoft\Windows NT\CurrentVersion @ no__t-1**을 지정한 후 keys = **\UnattendSettings\PnPUnattend\DriverPaths**를 만듭니다.
 
 ## <a name="examples"></a>예
 
-다음 예제에서는 명령을 사용 하는 방법을 보여 줍니다 합니다 **PNPUnattend.exe** 가능한 드라이버 업데이트에 대 한 컴퓨터를 감사 하 고 다음 명령 프롬프트에 결과 보고 합니다.
+다음 예제 명령은 **PNPUnattend** 을 사용 하 여 컴퓨터에서 가능한 드라이버 업데이트를 감사 한 다음 결과를 명령 프롬프트에 보고 하는 방법을 보여 줍니다.
 
 ```
 pnpunattend auditsystem /s /l 

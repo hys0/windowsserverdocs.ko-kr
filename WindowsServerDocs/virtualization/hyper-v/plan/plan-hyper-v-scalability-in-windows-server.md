@@ -1,7 +1,7 @@
 ---
 title: Windows Server 2016의 Hyper-v 확장성에 대 한 계획
 description: 'Hyper-v 및 가상 컴퓨터에서 추가 하거나 제거할 수 있는 구성 요소에 대해 지원 되는 최대 수를 나열 합니다 (예: 메모리 양과 가상 프로세서 수).'
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -10,12 +10,12 @@ ms.topic: article
 author: KBDAzure
 ms.author: kathydav
 ms.date: 09/28/2016
-ms.openlocfilehash: b54d3e655d10d2dbb015d57f2b1be86a803d9911
-ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
+ms.openlocfilehash: 3d94d8475f5de8d6b3d1d3f0bc549a8791e1d0c8
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69546639"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71364064"
 ---
 # <a name="plan-for-hyper-v-scalability-in-windows-server-2016"></a>Windows Server 2016의 Hyper-v 확장성에 대 한 계획
 
@@ -23,7 +23,7 @@ ms.locfileid: "69546639"
   
 이 문서에서는 Hyper-v 호스트 또는 가상 컴퓨터 (예: 가상 프로세서 또는 검사점)에서 추가 하 고 제거할 수 있는 구성 요소의 최대 구성에 대 한 세부 정보를 제공 합니다. 배포를 계획할 때 각 가상 머신에 적용 되는 최대값 및 Hyper-v 호스트에 적용 되는 최대값을 고려 합니다. 
 
-메모리 및 논리 프로세서의 최대값은 Windows Server 2012에서 가장 큰 것으로, machine learning 및 데이터 분석과 같은 새로운 시나리오를 지원 하기 위한 요청에 대 한 응답으로 제공 됩니다. Windows Server 블로그 최근 5.5 테라바이트의 4TB 메모리 내 데이터베이스를 실행 하는 128 가상 프로세서 및 메모리와 가상 컴퓨터의 성능 결과 게시 합니다. 성능은 물리적 서버 성능의 95% 이상입니다. 자세한 내용은 다음을 참조 하십시오. [메모리 내 트랜잭션 처리를 위해 Windows Server 2016 Hyper-v 대규모 VM 성능](https://blogs.technet.microsoft.com/windowsserver/2016/09/28/windows-server-2016-hyper-v-large-scale-vm-performance-for-in-memory-transaction-processing/)합니다. 다른 숫자는 Windows Server 2012에 적용 되는 것과 비슷합니다. \(Windows Server 2012 r 2의 최대값은 Windows Server 2012와 동일 합니다.\) 
+메모리 및 논리 프로세서의 최대값은 Windows Server 2012에서 가장 큰 것으로, machine learning 및 데이터 분석과 같은 새로운 시나리오를 지원 하기 위한 요청에 대 한 응답으로 제공 됩니다. Windows Server 블로그 최근 5.5 테라바이트의 4TB 메모리 내 데이터베이스를 실행 하는 128 가상 프로세서 및 메모리와 가상 컴퓨터의 성능 결과 게시 합니다. 성능은 물리적 서버 성능의 95% 이상입니다. 자세한 내용은 다음을 참조 하십시오. [메모리 내 트랜잭션 처리를 위해 Windows Server 2016 Hyper-v 대규모 VM 성능](https://blogs.technet.microsoft.com/windowsserver/2016/09/28/windows-server-2016-hyper-v-large-scale-vm-performance-for-in-memory-transaction-processing/)합니다. 다른 숫자는 Windows Server 2012에 적용 되는 것과 비슷합니다. Windows Server 2012 r 2의 \( 최대값은 Windows Server 2012와 동일 합니다. \) 
   
 > [!NOTE]  
 > System Center VMM(Virtual Machine Manager)에 대한 자세한 내용은 [Virtual Machine Manager](https://technet.microsoft.com/system-center-docs/vmm/vmm)를 참조하세요. VMM은 별도로 판매되는 가상화된 데이터 센터를 관리하기 위한 Microsoft 제품입니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "69546639"
 ## <a name="maximums-for-virtual-machines"></a>가상 컴퓨터의 최대값  
 이러한 최대값은 각 가상 컴퓨터에 적용 됩니다. 모든 구성 요소를 두 세대의 가상 컴퓨터에서 사용할 수 있는 것은 아닙니다. 세대를 비교 하려면 [hyper-v에서 1 세대 또는 2 세대 가상 머신을 만들어야 하나요?](should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v.md) 를 참조 하세요. 
   
-|구성 요소|최대값|메모|  
+|구성 요소|최대값|참고|  
 |-------------|-----------|---------|  
 |검사점|50|사용 가능한 저장소에 따라 실제 수가 이보다 적을 수 있습니다. 각 검사점은 실제 저장소를 사용 하는 .avhd 파일로 저장 됩니다.|  
 |메모리|2 세대의 경우 12tb <br>1tb (1 세대)|특정 운영 체제의 요구 사항을 검토하여 최소 및 권장 용량을 확인할 수 있습니다.|  
@@ -49,7 +49,7 @@ ms.locfileid: "69546639"
 ## <a name="maximums-for-hyper-v-hosts"></a>Hyper-v 호스트의 최대값  
 이러한 최대값은 각 Hyper-v 호스트에 적용 됩니다.  
   
-|구성 요소|최대값|메모|  
+|구성 요소|최대값|참고|  
 |-------------|-----------|---------|  
 |논리 프로세서|512|이러한 두 가지 모두 펌웨어에서 사용 하도록 설정 해야 합니다.<br /><br />-하드웨어 지원 가상화<br />-하드웨어 적용 DEP (데이터 실행 방지)<br /><br />호스트 OS (루트 파티션)에는 최대 320 논리 프로세서만 표시 됩니다.|  
 |메모리|24TB|없음|  
@@ -68,7 +68,7 @@ ms.locfileid: "69546639"
 
 가상 컴퓨터에 대 한 새로운 기능을 비롯 한 장애 조치 (Failover) 클러스터링 업데이트에 대 한 자세한 내용은 [Windows Server 2016 장애 조치 (Failover) 클러스터링의 새로운](../../../failover-clustering/whats-new-in-failover-clustering.md)기능을 참조 하세요.
 
-|구성 요소|최대값|메모|  
+|구성 요소|최대값|참고|  
 |-------------|-----------|---------|  
 |클러스터당 노드|64|업데이트 적용 같은 유지 보수 작업과 장애 조치를 위해 예약할 노드의 수를 고려해 봅니다. 노드 하나를 장애 조치용으로 예약함으로써 다른 노드로 장애 조치하기까지 유휴 상태로 대기시킬 수 있도록 충분한 리소스 계획을 수립하는 것이 좋습니다. 이러한 노드를 종종 패시브 노드라고도 합니다. 노드를 더 예약하려면 이 수를 늘릴 수 있습니다. 활성 노드에 대 한 예약 된 노드의 비율 또는 승수는 권장 되지 않습니다. 유일한 요구 사항은 클러스터의 총 노드 수가 최대 64을 초과 하지 않아야 한다는 것입니다.|  
 |클러스터 및 노드당 실행 가상 컴퓨터|클러스터당 8,000개|다음과 같이 한 노드에서 동시에 실행할 수 있는 가상 컴퓨터의 실제 수에 영향을 줄 수 있는 몇 가지 요인이 있습니다.<br />-각 가상 컴퓨터에 사용 되는 실제 메모리의 양입니다.<br />-네트워킹 및 저장소 대역폭.<br />-디스크 i/o 성능에 영향을 주는 디스크 스핀 들 수입니다.|  

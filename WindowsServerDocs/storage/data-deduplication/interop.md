@@ -2,18 +2,18 @@
 ms.assetid: 60fca6b2-f1c0-451f-858f-2f6ab350d220
 title: 데이터 중복 제거 상호 운용성
 ms.technology: storage-deduplication
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 author: wmgries
 manager: klaasl
 ms.author: wgries
 ms.date: 09/16/2016
-ms.openlocfilehash: b82e02b7896c3795ae7470ca03bb8d19a8d5e403
-ms.sourcegitcommit: fe621b72d45d0259bac1d5b9031deed3dcbed29d
+ms.openlocfilehash: fb3c9842f1d698151bffebbe5f77618c8b19b366
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66455419"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71403201"
 ---
 # <a name="data-deduplication-interoperability"></a>데이터 중복 제거 상호 운용성
 
@@ -22,7 +22,7 @@ ms.locfileid: "66455419"
 ## <a name="supported"></a>지원됨
 
 ### <a name="refs"></a>ReFS
-데이터 중복 제거는 Windows Server 2019부터 지원 됩니다. 
+데이터 중복 제거는 Windows Server 2019에서 지원 됩니다. 
 
 ### <a name="failover-clustering"></a>장애 조치(failover) 클러스터링
 
@@ -64,14 +64,14 @@ Windows Server 백업에서는 최적화된 볼륨을 있는 그대로(즉, 중�
     wbadmin get versions
     ```
 
-    이 출력 버전 ID는 날짜 및 시간 문자열이 됩니다, 예를 들어: 08/18/2016-06:22.
+    이 출력 버전 ID는 날짜 및 시간 문자열이 됩니다. 예를 들면 다음과 같습니다. 08/18/2016-06:22.
 
 4. 전체 볼륨을 복원합니다.
     ```PowerShell
     wbadmin start recovery –version:02/16/2012-06:22 -itemtype:Volume  -items:E: -recoveryTarget:E:
     ```
 
-    **--OR--**  
+    **--또는--**  
 
     특정 폴더를 복원합니다(이 경우 E:\Docs 폴더).
     ```PowerShell

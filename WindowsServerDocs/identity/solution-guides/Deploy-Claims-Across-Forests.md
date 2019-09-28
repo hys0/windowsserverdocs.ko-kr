@@ -7,20 +7,20 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 7d78258d8f1db9889b6d2db8c497780940ed35a1
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 21ddcbd3b71a8d623950f1600b654e04ecc41f1e
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59890654"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71357573"
 ---
 # <a name="deploy-claims-across-forests"></a>포리스트에 클레임 배포
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Windows Server 2012는 클레임 형식에는 연결 된 개체에 대 한 어설션입니다. 클레임 유형은 Active Directory에서 포리스트별로 정의됩니다. 보안 주체가 트러스트된 포리스트의 리소스에 액세스하기 위해 트러스트 경계를 트래버스해야 하는 시나리오가 많이 있습니다. Windows Server 2012에서 포리스트 간 클레임 변환을 통해 클레임 인식 및 트러스팅 포리스트와 트러스트 된 포리스트의 허용 되도록 포리스트를 트래버스하는 송신 및 수신 클레임을 변환 하는 데 수 있습니다. 클레임 변환에 대한 몇 가지 실제 시나리오는 다음과 같습니다.  
+Windows Server 2012에서 클레임 유형은 연결 된 개체에 대 한 어설션입니다. 클레임 유형은 Active Directory에서 포리스트별로 정의됩니다. 보안 주체가 트러스트된 포리스트의 리소스에 액세스하기 위해 트러스트 경계를 트래버스해야 하는 시나리오가 많이 있습니다. Windows Server 2012의 포리스트 간 클레임 변환을 사용 하면 트러스팅 포리스트와 트러스트 된 포리스트에서 클레임이 인식 및 허용 되도록 포리스트를 트래버스하는 송신 및 수신 클레임을 변환할 수 있습니다. 클레임 변환에 대한 몇 가지 실제 시나리오는 다음과 같습니다.  
   
 -   트러스팅 포리스트는 특정 값으로 들어오는 클레임을 필터링하여 권한 상승에 대한 보호 기능으로 클레임 변환을 사용할 수 있습니다.  
   
@@ -45,11 +45,11 @@ Windows Server 2012는 클레임 형식에는 연결 된 개체에 대 한 어�
 ## <a name="in-this-scenario"></a>이 시나리오의 내용  
 이 시나리오에 대해 제공되는 지침은 다음과 같습니다.  
   
--   [포리스트에 클레임 배포 &#40;데모 단계&#41;](Deploy-Claims-Across-Forests--Demonstration-Steps-.md)  
+-   [포리스트 &#40;전체에 클레임 배포 데모 단계&#41;](Deploy-Claims-Across-Forests--Demonstration-Steps-.md)  
   
--   [Claims Transformation Rules Language](Claims-Transformation-Rules-Language.md)  
+-   [클레임 변환 규칙 언어](Claims-Transformation-Rules-Language.md)  
   
-## <a name="BKMK_NEW"></a>역할과이 시나리오에 포함 된 기능  
+## <a name="BKMK_NEW"></a>이 시나리오에 포함 된 역할 및 기능  
 다음 표에는 이 시나리오에 포함된 역할 및 기능이 나열되어 있으며, 이러한 역할 및 기능이 시나리오를 지원하는 방법에 대한 설명이 나와 있습니다.  
   
 |역할/기능|이 시나리오를 지원하는 방법|  

@@ -4,20 +4,20 @@ description: 이 항목은 서버 배포 인증서 802.1 X 유선 및 무선 배
 manager: brianlic
 ms.topic: article
 ms.assetid: bfae23f0-ae12-486b-94fe-50a137e141a5
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 442ee8b70311eaad3f0b3f263003786b6beab8bc
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 77b8e464d2d8fab8803477e59826c3e715c0a6d2
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59813164"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406300"
 ---
 # <a name="create-an-alias-cname-record-in-dns-for-web1"></a>별칭을 만들 \(CNAME\) w e b 1에 대 한 dns 레코드
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 이 절차를 사용 하 여 별칭 정식 이름을 추가 하려면 \(CNAME\) 도메인 컨트롤러에서 dns에서 영역에 웹 서버에 대 한 리소스 레코드입니다. CNAME 레코드를 통해 파일 전송 프로토콜 모두 호스트 하는 등의 작업을 수행 하기 쉽고, 단일 호스트를 가리키도록 이름을 여러 개를 사용할 수 있습니다 \(FTP\) 서버와 동일한 컴퓨터에 웹 서버입니다.   
   

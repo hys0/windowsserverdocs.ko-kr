@@ -1,8 +1,8 @@
 ---
 title: mqbkup
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a809bfc788ba25afab280e80e5c6f0dc9c70dc86
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 66783e0bbfe5c82971e14fd05e913d485485dc6f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59842904"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71373515"
 ---
 # <a name="mqbkup"></a>mqbkup
 
@@ -38,12 +38,12 @@ mqbkup {/b | /r} <folder path_to_storage_device>
 |/r|복원 작업을 지정합니다.|  
 |< 폴더 path_to_storage\_장치 >|MSMQ 메시지 파일 및 레지스트리 설정이 저장 되는 경로 지정 합니다.|  
 |/?|명령 프롬프트에 도움말을 표시합니다.|  
-## <a name="BKMK_Examples"></a>예제  
+## <a name="BKMK_Examples"></a>예와  
 모든 MSMQ 메시지 파일 및 레지스트리 설정을 백업에 저장 하는 *Msmqbkup* c: 드라이브의 폴더에 있습니다.  
 ```  
 mqbkup /b c:\msmqbkup  
 ```  
-지정한 폴더가 없으면 유틸리티 자동으로 만들어집니다. 기존 폴더를 지정 하려는 경우이 폴더는 비어 있어야 합니다. 비어 있지 않은 폴더를 지정 하는 경우 모든 파일 및 하위 폴더 내에 포함 된 유틸리티 삭제 됩니다. 이 경우 기존 파일 및 하위 폴더를 삭제할 수 있는 권한을 부여 하 라는 메시지가 됩니다. 사용할 수는 **/y** 모든 기존 파일 및 지정된 된 폴더에 하위 삭제에 미리 동의 함을 나타내는 매개 변수를 합니다.  
+지정 된 폴더가 존재 하지 않는 경우 유틸리티에서 자동으로 하나를 만듭니다. 기존 폴더를 지정 하려는 경우이 폴더는 비어 있어야 합니다. 비어 있지 않은 폴더를 지정 하는 경우 모든 파일 및 하위 폴더 내에 포함 된 유틸리티 삭제 됩니다. 이 경우 기존 파일 및 하위 폴더를 삭제할 수 있는 권한을 부여 하 라는 메시지가 됩니다. 사용할 수는 **/y** 모든 기존 파일 및 지정된 된 폴더에 하위 삭제에 미리 동의 함을 나타내는 매개 변수를 합니다.  
 모든 파일 및 하위 폴더에서 삭제 하는 *Oldbkup* 폴더에 c: 드라이브와 저장소 MSMQ 메시지 파일 및 레지스트리 설정을이 폴더에 있습니다.  
 ```  
 mqbkup /b /y c:\oldbkup  

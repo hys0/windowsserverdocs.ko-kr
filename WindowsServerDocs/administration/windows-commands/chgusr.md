@@ -1,8 +1,8 @@
 ---
 title: chgusr
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4ed57e67bf55e535100a115e37d1542ad55ee621
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: a19699e63168edc603e0292280b868306cbc6f90
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66434386"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71379484"
 ---
 # <a name="chgusr"></a>chgusr
 
@@ -26,7 +26,7 @@ ms.locfileid: "66434386"
 
 원격 데스크톱 세션 호스트 (rd 세션 호스트) 서버에 대 한 설치 모드를 변경 합니다.  
 > [!NOTE]
-> Windows Server 2008 R2에서는 터미널 서비스의 이름이 원격 데스크톱 서비스로 바뀌었습니다. 최신 버전의 새로운 기능을 참조 하세요 [어떤 새로운 Windows Server 2012의 원격 데스크톱 서비스](https://technet.microsoft.com/library/hh831527) 는 Windows Server TechNet 라이브러리에서.  
+> Windows Server 2008 R2에서는 터미널 서비스의 이름이 원격 데스크톱 서비스로 바뀌었습니다. 최신 버전의 새로운 기능에 대 한 자세한 내용은 Windows Server TechNet 라이브러리의 [Windows server 2012에 있는 원격 데스크톱 서비스의 새로운 기능](https://technet.microsoft.com/library/hh831527) 을 참조 하십시오.  
 > ## <a name="remarks"></a>설명  
 > 이 명령은 같습니다는 **사용자 변경** 명령입니다.  
 > #### <a name="additional-references"></a>추가 참조  

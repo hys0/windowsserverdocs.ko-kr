@@ -2,22 +2,22 @@
 title: BranchCache 해시 게시 그룹 정책 개체 구성
 description: 이 항목은 일부는 BranchCache 배포 가이드에 대 한 Windows Server 2016, 지사에 WAN 대역폭 사용량을 최적화 하기 위해 분산 및 호스트 캐시 모드로 BranchCache를 배포 하는 방법을 보여 주는
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: da74fea7-52b2-4d6d-9d21-19184eedbe3c
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 6e9a338dfebfb1dfadb258bcbdfcc8d75bd3ea86
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: bae0d3dff22205f3311020e233a26835527186f5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59862964"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406497"
 ---
 # <a name="configure-the-branchcache-hash-publication-group-policy-object"></a>BranchCache 해시 게시 그룹 정책 개체 구성
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 OU에 추가 하는 모든 파일 서버에 적용 된 동일한 해시 게시 정책 설정을 갖도록 BranchCache 해시 게시 그룹 정책 개체 (GPO)를 구성 하려면이 절차를 사용할 수 있습니다.  
   
@@ -34,11 +34,11 @@ OU에 추가 하는 모든 파일 서버에 적용 된 동일한 해시 게시 �
   
 3.  **추가 / 제거 스냅인**,  **사용 가능한 스냅인**, 두 번 클릭 **그룹 정책 관리**, 를 클릭 하 고 **확인**합니다.  
   
-4.  그룹 정책 관리 MMC에서 BranchCache 해시 게시 이전에 만든 GPO에 경로 확장 합니다. 포리스트 example.com 이름이 인 경우 도메인은 example1.com, 하 고 해당 GPO가 이름 예를 들어 **BranchCache 해시 게시**을 다음 경로 확장: **그룹 정책 관리**, **포리스트: example.com**를 **도메인**를 **example1.com**를 **그룹 정책 개체**,  **BranchCache 해시 게시**합니다.  
+4.  그룹 정책 관리 MMC에서 BranchCache 해시 게시 이전에 만든 GPO에 경로 확장 합니다. 예를 들어 포리스트의 이름이 example.com이 고, 도메인 이름이 example1.com이 고, GPO가 **BranchCache 해시 게시**인 경우 다음 경로를 확장 합니다. **그룹 정책 관리**, **포리스트: example.com**, **도메인**, **Example1.com**, **그룹 정책 개체**, **BranchCache 해시 게시**.  
   
-5.  마우스 오른쪽 단추로 클릭는 **BranchCache 해시 게시** GPO 및 클릭 **편집**합니다. 그룹 정책 관리 편집기 콘솔을 엽니다.  
+5.  마우스 오른쪽 단추로 클릭는 **BranchCache 해시 게시** GPO 및 클릭 **편집**합니다. 그룹 정책 관리 편집기 콘솔이 열립니다.  
   
-6.  그룹 정책 관리 편집기 콘솔에서 다음 경로 확장: **컴퓨터 구성**, **정책을**를 **관리 템플릿**를 **네트워크**를 **Lanman Server**합니다.  
+6.  그룹 정책 관리 편집기 콘솔에서 다음 경로를 확장 합니다. **컴퓨터 구성**, **정책**, **관리 템플릿**, **네트워크**, **Lanman Server**.  
   
 7.  그룹 정책 관리 편집기 콘솔에서 클릭 **Lanman Server**합니다. 세부 정보 창에서 두 번 클릭 **BranchCache 해시 게시**합니다. **BranchCache 해시 게시** 대화 상자가 열립니다.  
   

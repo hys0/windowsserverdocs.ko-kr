@@ -1,8 +1,8 @@
 ---
 title: 업데이트 ServerFiles 명령
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ec96e2ba9aea14ed9a203dabbb697187736b33a8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 93eeb0deaa527921db35f4ab955d2ccc46b57d7a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59817444"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71385853"
 ---
 # <a name="the-update-serverfiles-command"></a>업데이트 ServerFiles 명령
 
 
 
-서버의 %Windir%\System32\RemInst 폴더에 저장 되는 최신 파일을 사용 하 여 REMINST 공유 폴더의 파일을 업데이트 합니다. Windows 배포 서비스 설치의 유효성을 보장 하려면 Windows 배포 서비스 파일에 각 server 업그레이드, 서비스 팩 설치 또는 업데이트 후이 명령을 실행 해야 있습니다.
+서버%Windir%\System32\RemInst 폴더에 저장 된 최신 파일을 사용 하 여 REMINST 공유 폴더의 파일을 업데이트 합니다. Windows 배포 서비스 설치의 유효성을 검사 하려면 각 서버를 업그레이드 한 후에이 명령을 한 번 실행 하거나, 설치를 Service Pack Windows 배포 서비스 파일을 업데이트 해야 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -36,9 +36,9 @@ WDSUTIL [Options] /Update-ServerFiles [/Server:<Server name>]
 
 |매개 변수|설명|
 |---------|-----------|
-|[/ 서버:\<서버 이름 >]|서버 이름을 지정합니다. 이 NetBIOS 이름 또는 정규화 된 도메인 이름 (FQDN) 수 있습니다. 서버 이름이 없는 지정 하는 경우 로컬 서버 사용 됩니다.|
+|[/Server: \<Server name >]|서버 이름을 지정합니다. 이 NetBIOS 이름 또는 정규화 된 도메인 이름 (FQDN) 수 있습니다. 서버 이름이 없는 지정 하는 경우 로컬 서버 사용 됩니다.|
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 파일을 업데이트 하려면 다음 중 하나를 입력 합니다.
 ```

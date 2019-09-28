@@ -1,7 +1,7 @@
 ---
 ms.assetid: 7787a72e-a26b-415f-b700-a32806803478
 title: Fsutil fsinfo
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
 author: toklima
@@ -9,17 +9,17 @@ ms.technology: storage
 audience: IT Pro
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: 434dfde2286538367fb96d168b06983cb4357067
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 472c3b91285810ac1ff528da24de50533bae526d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59873044"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71376936"
 ---
 # <a name="fsutil-fsinfo"></a>Fsutil fsinfo
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
 
-모든 드라이브를 나열, 드라이브 종류, 볼륨 정보, NTFS 관련 볼륨 정보를 쿼리 또는 파일 시스템 통계를 쿼리 합니다.
+모든 드라이브를 나열 하 고, 드라이브 종류 쿼리, 볼륨 정보 쿼리, NTFS 특정 볼륨 정보 쿼리 또는 파일 시스템 통계를 쿼리 합니다.
 
 이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
 
@@ -38,15 +38,15 @@ fsutil fsinfo [volumeinfo] <RootPath>
 |매개 변수|설명|
 |-------------|---------------|
 |드라이브|컴퓨터에 있는 모든 드라이브를 나열합니다.|
-|drivetype|드라이브를 쿼리하고 해당 형식, 예를 들어 CD-ROM 드라이브를 나열 합니다.|
+|drivetype|드라이브를 쿼리하고 해당 유형 (예: CD-ROM 드라이브)을 나열 합니다.|
 |ntfsinfo|섹터, 전체 클러스터, 가능한 클러스터 시작 및 끝 MFT 영역의 수와 같은 지정된 된 볼륨에 대 한 NTFS 관련 볼륨 정보를 나열합니다.|
-|sectorinfo|하드웨어 섹터 크기 및 맞춤에 대 한 정보를 나열합니다.|
+|sectorinfo|하드웨어의 섹터 크기 및 맞춤에 대 한 정보를 나열 합니다.|
 |통계|파일 메타 데이터, 로그 파일 및 MFT 읽기 및 쓰기와 같은 지정된 된 볼륨에 대 한 시스템 통계입니다.|
-|volumeinfo|파일 시스템 등 지정 된 볼륨에 대 한 정보를 나열 하 고 디스크 할당량 또는 DirectAccess (DAX) 볼륨은 볼륨에서 대/소문자 구분 파일 이름, 파일 이름에 유니코드를 지원 하는지 여부를 합니다.|
-|<"VolumePath">|(콜론) 드라이브 문자를 지정 합니다.|
-|<"RootPathname">|루트 드라이브 (콜론) 드라이브 문자를 지정 합니다.|
+|volumeinfo|지정 된 볼륨에 대 한 정보 (예: 파일 시스템, 볼륨에서 대/소문자를 구분 하는 파일 이름, 파일 이름의 유니코드, 디스크 할당량 또는 DirectAccess (DAX) 볼륨)를 지원 하는지 여부를 나열 합니다.|
+|"VolumePath" < >|드라이브 문자를 지정 하 고 그 뒤에 콜론을 지정 합니다.|
+|"RootPathname" < >|루트 드라이브의 드라이브 문자 (콜론)를 지정 합니다.|
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 모든 컴퓨터에서 드라이브를 나열 하려면 다음을 입력 합니다.
 
 ```
@@ -97,7 +97,7 @@ Supports Named Streams
 Is DAX Volume
 ```
 
-F 드라이브를 쿼리하려면 NTFS 관련 볼륨 정보를 입력 합니다.
+F 드라이브에서 NTFS 관련 볼륨 정보를 쿼리하려면 다음을 입력 합니다.
 
 ```
 fsutil fsinfo ntfsinfo f:
@@ -115,7 +115,7 @@ Total Clusters :            0x000000000021d409
 Mft Zone End   :            0x0000000000004700       
 ```
 
-섹터 정보에 대 한 파일 시스템의 기본 하드웨어를 쿼리하려면 다음을 입력 합니다.
+파일 시스템의 기본 하드웨어 섹터 정보를 쿼리하려면 다음을 입력 합니다.
 
 ```
 fsinfo sectorinfo d:

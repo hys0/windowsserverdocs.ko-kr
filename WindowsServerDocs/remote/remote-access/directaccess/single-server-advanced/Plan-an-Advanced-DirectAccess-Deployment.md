@@ -1,9 +1,9 @@
 ---
 title: 고급 DirectAccess 배포 계획
-description: 이 항목은 고급 설정을 Windows Server 2016 용으로 단일 DirectAccess 서버 배포 가이드의 일부
+description: 이 항목은 Windows Server 2016에 대 한 고급 설정을 사용 하 여 단일 DirectAccess 서버 배포 가이드의 일부입니다.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-da
@@ -12,18 +12,18 @@ ms.topic: article
 ms.assetid: d486735e-71fe-4443-9878-4b784cd588a7
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: db8d2e6ffe8e3fae4723eb78cb9212a64fdb5711
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 5fead00e1fbf0785d8c3af038039816e1cf618b2
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67283549"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71404946"
 ---
 # <a name="plan-an-advanced-directaccess-deployment"></a>고급 DirectAccess 배포 계획
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-이 항목에서는 광범위 한 기본 기능과 고급 기능을 사용 하 여 Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012를 실행 하는 단일 DirectAccess 서버를 배포 하는 데 필요한 계획 단계를 설명 합니다. 이 계획 단계는 다음 항목으로 구성됩니다.  
+이 항목에서는 모든 기본 및 고급 기능을 갖춘 windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012를 실행 하는 단일 DirectAccess 서버를 배포 하는 데 필요한 계획 단계를 나열 합니다. 이 계획 단계는 다음 항목으로 구성됩니다.  
   
 -   [1단계: 고급 DirectAccess 인프라 계획](da-adv-plan-s1-infrastructure.md)  
   
@@ -34,7 +34,7 @@ ms.locfileid: "67283549"
     이 단계에서는 DirectAccess 인프라 및 응용 프로그램 서버를 포함하여 클라이언트 및 서버 배포를 계획합니다.  
   
 ## <a name="next-step"></a>다음 단계  
-이러한 계획 단계를 완료한 후 서버 배포를 시작할 수 있습니다. 자세한 내용은 [Install and Configure Advanced DirectAccess](Install-and-Configure-Advanced-DirectAccess.md)합니다.  
+이러한 계획 단계를 완료한 후 서버 배포를 시작할 수 있습니다. 지침은 [고급 DirectAccess 설치 및 구성](Install-and-Configure-Advanced-DirectAccess.md)을 참조 하세요.  
   
 
 

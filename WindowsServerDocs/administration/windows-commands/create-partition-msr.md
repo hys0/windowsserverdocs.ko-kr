@@ -1,8 +1,8 @@
 ---
 title: 파티션 msr 만들기
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,21 +13,21 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3fa9ba46418c3ed3b7999a734b4c0df40dce5027
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 45cc215b097ce048b15f0e907f95f976e4941e28
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66434170"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71378902"
 ---
 # <a name="create-partition-msr"></a>파티션 msr 만들기
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Microsoft 예약 만듭니다 \(MSR\) GUID 파티션 테이블에 파티션을 \(gpt\) 디스크.  
+GUID 파티션 테이블 \(gpt @ no__t-3 디스크에 Microsoft Reserved \(MSR @ no__t-1 파티션을 만듭니다.  
   
 > [!CAUTION]  
-> 이 명령을 사용할 때는 매우 주의 해야 합니다. Gpt 디스크에 특정 파티션 레이아웃에 필요 합니다 때문에 Microsoft 예약 파티션을 만들 디스크를 읽을 수 없게 발생할 수 있습니다.  
+> 이 명령을 사용할 때는 매우 주의 해야 합니다. Gpt 디스크에는 특정 파티션 레이아웃이 필요 하므로 Microsoft 예약 파티션을 만들면 디스크를 읽을 수 없게 될 수 있습니다.  
   
   
   
@@ -41,21 +41,21 @@ create partition msr [size=<n>] [offset=<n>] [noerr]
   
 |  매개 변수  |                                                                                                                         설명                                                                                                                         |
 |-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|  size\=<n>  |               메가바이트 단위로 파티션의 크기 \(MB\)합니다. 파티션을 사용 하는 바이트에서 길이가에 지정한 수 만큼 <n>합니다. 크기를 지정 하는 경우에 현재 지역에서 사용 가능한 공간이 더 이상 없는 파티션을 계속 합니다.               |
-| offset\=<n> | (킬로바이트)에서 오프셋을 지정 \(KB\), 파티션을 만들 때에 있습니다. 오프셋 반올림을 완전히 사용 되는 모든 섹터 크기를 채웁니다. 오프셋이, 파티션은 저장 하는 데 충분히 큰 첫 번째 디스크에에서 배치 됩니다. |
-|    noerr    |                            만 스크립팅 합니다. 오류가 발생 하면 오류가 발생 하지 않은 경우에 따라 명령을 처리 하도록 DiskPart 계속 합니다. 이 매개 변수를 크기는 오류 코드를 수행 합니다.                             |
+|  size @ no__t-0 @ no__t-1  |               메가바이트 단위로 파티션의 크기 \(MB\)합니다. 파티션을 사용 하는 바이트에서 길이가에 지정한 수 만큼 <n>합니다. 크기를 지정 하는 경우에 현재 지역에서 사용 가능한 공간이 더 이상 없는 파티션을 계속 합니다.               |
+| offset @ no__t-0 @ no__t-1 | (킬로바이트)에서 오프셋을 지정 \(KB\), 파티션을 만들 때에 있습니다. 오프셋 반올림을 완전히 사용 되는 모든 섹터 크기를 채웁니다. 오프셋이, 파티션은 저장 하는 데 충분히 큰 첫 번째 디스크에에서 배치 됩니다. |
+|    noerr    |                            스크립팅 전용입니다. 오류가 발생 하면 오류가 발생 하지 않은 경우에 따라 명령을 처리 하도록 DiskPart 계속 합니다. 이 매개 변수를 크기는 오류 코드를 수행 합니다.                             |
   
 ## <a name="remarks"></a>설명  
   
--   확장 가능 펌웨어 인터페이스 Windows 운영 체제를 부팅 하는 데 사용 되는 gpt 디스크 \(EFI\) 시스템 파티션은 Microsoft 예약 파티션이 옵니다 디스크에서 첫 번째 파티션입니다. gpt 디스크 데이터 저장소에 대해서만 사용 되는 경우 Microsoft 예약 파티션을 첫 번째 파티션에 EFI 시스템 파티션을 갖지 않습니다.  
+-   Windows 운영 체제를 부팅 하는 데 사용 되는 gpt 디스크에서 확장 가능한 펌웨어 인터페이스 \(EFI @ no__t-1 시스템 파티션은 디스크의 첫 번째 파티션이 고 그 다음 Microsoft Reserved partition입니다. 데이터 저장소에만 사용 되는 gpt 디스크는 EFI 시스템 파티션을 포함 하지 않습니다 .이 경우 Microsoft Reserved partition은 첫 번째 파티션입니다.  
   
 -   Windows는 Microsoft 예약 파티션을 탑재 되지 않습니다. 에 데이터를 저장할 수 없습니다 하 고 삭제할 수는 없습니다.  
   
--   Microsoft 예약 파티션 모든 gpt 디스크에서 필요 합니다. 이 파티션의 크기는 gpt 디스크의 총 크기에 따라 달라 집니다. Gpt 디스크의 크기는 최소 32 MB Microsoft 예약 파티션을 만들려면 이어야 합니다.  
+-   Microsoft Reserved partition은 모든 gpt 디스크에 필요 합니다. 이 파티션의 크기는 gpt 디스크의 전체 크기에 따라 달라 집니다. Microsoft 예약 파티션을 만들려면 gpt 디스크의 크기가 32 이상 이어야 합니다.  
   
--   이 작업을 수행 하려면 기본 gpt 디스크를 선택 해야 합니다. 사용 된 **디스크 선택** 기본 gpt 디스크를 선택 하 고 포커스를 이동 하는 명령입니다.  
+-   이 작업을 수행 하려면 기본 gpt 디스크를 선택 해야 합니다. **디스크 선택** 명령을 사용 하 여 기본 gpt 디스크를 선택 하 고 포커스를 이동 합니다.  
   
-## <a name="BKMK_examples"></a>예제  
+## <a name="BKMK_examples"></a>예와  
 1000 메가바이트 Microsoft 예약 파티션 크기에서를 만들려면 다음을 입력 합니다.  
   
 ```  

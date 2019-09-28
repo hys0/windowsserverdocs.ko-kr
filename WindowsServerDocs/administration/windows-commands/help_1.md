@@ -1,8 +1,8 @@
 ---
 title: 도움말
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 078c779e7813d2aa7499e515d9729edf92452237
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: c3d76a71ec287e5c874ae3e4dec34016c5c80336
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66438205"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71375584"
 ---
 # <a name="help"></a>도움말
 
@@ -42,9 +42,9 @@ help [<command>]
   
 ## <a name="remarks"></a>설명  
   
--   명령이 지정 된 경우 **도움말** 가능한 모든 명령이 표시 됩니다.  
+-   명령을 지정 하지 않으면 가능한 모든 명령이 **도움말** 에 표시 됩니다.  
   
-## <a name="BKMK_examples"></a>예제  
+## <a name="BKMK_examples"></a>예와  
 DiskPart에서 사용할 수 있는 모든 명령 목록을 표시 하려면 다음을 입력 합니다.  
   
 ```  

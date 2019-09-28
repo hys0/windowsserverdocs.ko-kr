@@ -2,19 +2,19 @@
 title: 스토리지 공간 다이렉트-질문과 대답
 description: 스토리지 공간 다이렉트 방법 알아보기
 keywords: 저장소 공간
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: kaushik
 ms.technology: storage-spaces
 ms.topic: article
 author: kaushika-msft
 ms.date: 10/24/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 1aafac9a994e907e8b8ee3b556618d630cdf8418
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: df9dac8c761a83a13fb937a99cba3697dce95201
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70872071"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402798"
 ---
 # <a name="storage-spaces-direct---frequently-asked-questions-faq"></a>스토리지 공간 다이렉트-질문과 대답 (FAQ)
 

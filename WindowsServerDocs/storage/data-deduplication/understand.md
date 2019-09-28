@@ -2,22 +2,22 @@
 ms.assetid: acc0803b-fa05-4fc3-b94d-2916abf4fdbd
 title: 데이터 중복 제거 이해
 ms.technology: storage-deduplication
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 author: wmgries
 manager: klaasl
 ms.author: wgries
 ms.date: 09/15/2016
-ms.openlocfilehash: 37ce7d7b50fc7b8dde3e11d47c2cfcaf358b00e0
-ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
+ms.openlocfilehash: e26d285f1802e78b2cbf84e38407ff134e7b7035
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65476194"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71403230"
 ---
 # <a name="understanding-data-deduplication"></a>데이터 중복 제거 이해
 
-> 적용 대상:  Windows Server 2019, Windows Server 2016, Windows Server (반기 채널)
+> 적용 대상:  Windows Server 2019, Windows Server 2016, Windows Server(반기 채널)
 
 이 문서에서는 [데이터 중복 제거](overview.md) 작동 방식을 설명합니다.
 
@@ -25,10 +25,10 @@ ms.locfileid: "65476194"
 
 Windows Server의 데이터 중복 제거는 다음 두 가지 원칙으로 만들어졌습니다.
 
-1. **디스크에 쓰기를 방해 하지 가져와야 최적화**  
+1. **최적화는 디스크에 쓰는 방법으로 가져올 수 없습니다.**  
     데이터 중복 제거는 후처리 모델을 사용하여 데이터를 최적화합니다. 모든 데이터는 최적화되지 않은 상태로 디스크에 기록된 후 나중에 데이터 중복 제거에 의해 최적화됩니다.
 
-2. **최적화는 액세스 의미 체계를 변경 하지 마십시오**  
+2. **최적화는 액세스 의미를 변경 해서는 안 됩니다.**  
     최적화된 볼륨의 데이터에 액세스하는 사용자 및 응용 프로그램은 액세스하는 파일의 중복 제거 여부를 완전히 알지 못합니다.
 
 볼륨에 대해 사용하도록 설정하면 데이터 중복 제거가 백그라운드에서 실행됩니다.
@@ -56,11 +56,11 @@ Windows Server의 데이터 중복 제거는 다음 두 가지 원칙으로 만�
 
 | 사용 유형 | 적합한 워크로드 | 차이점 |
 |------------|-----------------|------------------|
-| <a id="usage-type-default"></a>Default | 일반용 파일 서버:<ul><li>팀 공유</li><li>클라우드 폴더</li><li>폴더 리디렉션</li><li>소프트웨어 개발 공유</li></ul> | <ul><li>백그라운드 최적화</li><li>기본 최적화 정책:<ul><li>최소 파일 사용 기간 = 3일</li><li>사용 중인 파일 최적화 = 아니요</li><li>부분 파일 최적화 = 아니요</li></ul></li></ul> |
-| <a id="usage-type-hyperv"></a>Hyper-V | VDI(가상 데스크톱 인프라) 서버 | <ul><li>백그라운드 최적화</li><li>기본 최적화 정책:<ul><li>최소 파일 사용 기간 = 3일</li><li>사용 중인 파일 최적화 = 예</li><li>부분 파일 최적화 = 예</li></ul></li><li>Hyper-V interop에 대한 "세부" 조정</li></ul> |
-| <a id="usage-type-backup"></a>Backup | [Microsoft DPM(Data Protection Manager)](https://technet.microsoft.com/library/hh758173.aspx)과 같은 가상화된 백업 응용 프로그램 | <ul><li>우선 순위 최적화</li><li>기본 최적화 정책:<ul><li>최소 파일 사용 기간 = 0일</li><li>사용 중인 파일 최적화 = 예</li><li>부분 파일 최적화 = 아니요</li></ul></li><li>DPM/DPM과 유사한 솔루션으로 interop에 대해 "세부" 조정</li></ul> |
+| <a id="usage-type-default"></a>기본 | 일반용 파일 서버:<ul><li>팀 공유</li><li>클라우드 폴더</li><li>폴더 리디렉션</li><li>소프트웨어 개발 공유</li></ul> | <ul><li>백그라운드 최적화</li><li>기본 최적화 정책:<ul><li>최소 파일 사용 기간 = 3일</li><li>사용 중인 파일 최적화 = 아니요</li><li>부분 파일 최적화 = 아니요</li></ul></li></ul> |
+| <a id="usage-type-hyperv"></a>Hyper-v | VDI(가상 데스크톱 인프라) 서버 | <ul><li>백그라운드 최적화</li><li>기본 최적화 정책:<ul><li>최소 파일 사용 기간 = 3일</li><li>사용 중인 파일 최적화 = 예</li><li>부분 파일 최적화 = 예</li></ul></li><li>Hyper-V interop에 대한 "세부" 조정</li></ul> |
+| <a id="usage-type-backup"></a>백 | [Microsoft DPM(Data Protection Manager)](https://technet.microsoft.com/library/hh758173.aspx)과 같은 가상화된 백업 응용 프로그램 | <ul><li>우선 순위 최적화</li><li>기본 최적화 정책:<ul><li>최소 파일 사용 기간 = 0일</li><li>사용 중인 파일 최적화 = 예</li><li>부분 파일 최적화 = 아니요</li></ul></li><li>DPM/DPM과 유사한 솔루션으로 interop에 대해 "세부" 조정</li></ul> |
 
-## <a id="job-info"></a>Jobs
+## <a id="job-info"></a>직업
 데이터 중복 제거는 사후 처리 전략을 사용하여 볼륨의 공간 효율성을 최적화하고 유지 관리합니다.
 
 | 작업 이름 | 작업 설명 | 기본 일정 |
@@ -73,9 +73,9 @@ Windows Server의 데이터 중복 제거는 다음 두 가지 원칙으로 만�
 ## <a id="dedup-term"></a>데이터 중복 제거 용어
 | 용어 | 정의 |
 |------|------------|
-| <a id="dedup-term-chunk"></a>Chunk | 청크는 다른 유사한 파일에서도 발견될 가능성이 있어 데이터 중복 제거 청크 알고리즘에 의해 선택된 파일의 섹션입니다. |
+| <a id="dedup-term-chunk"></a>장이나 | 청크는 다른 유사한 파일에서도 발견될 가능성이 있어 데이터 중복 제거 청크 알고리즘에 의해 선택된 파일의 섹션입니다. |
 | <a id="dedup-term-chunk-store"></a>청크 저장소 | 청크 저장소는 데이터 중복 제거에서 청크를 고유하게 저장하는 데 사용하는 시스템 볼륨 정보 폴더에 구성된 일련의 컨테이너 파일입니다. |
-| <a id="dedup-term-dedup"></a>Dedup | PowerShell, Windows Server API 및 구성 요소, Windows Server 커뮤니티에서 일반적으로 사용되는 데이터 중복 제거(Data Deduplication)의 약어입니다. |
+| <a id="dedup-term-dedup"></a>페이징된 | PowerShell, Windows Server API 및 구성 요소, Windows Server 커뮤니티에서 일반적으로 사용되는 데이터 중복 제거(Data Deduplication)의 약어입니다. |
 | <a id="dedup-term-file-metadata"></a>파일 메타 데이터 | 모든 파일에는 파일의 주요 내용에 상관없이 파일에 대한 흥미로운 속성을 설명하는 메타데이터가 포함되어 있습니다. 예를 들어 만든 날짜, 마지막으로 읽은 날짜, 만든 이 등이 여기에 해당합니다. |
 | <a id="dedup-term-file-stream"></a>파일 스트림 | 파일 스트림은 파일의 주요 내용입니다. 이는 데이터 중복 제거에서 최적화하는 부분입니다. |
 | <a id="dedup-term-file-system"></a>파일 시스템 | 파일 시스템은 운영 체제가 저장소 미디어에 파일을 저장하기 위해 사용하는 소프트웨어 및 디스크 상의 데이터 구조입니다. 데이터 중복 제거는 NTFS로 포맷된 볼륨에서 지원됩니다. |
@@ -84,32 +84,32 @@ Windows Server의 데이터 중복 제거는 다음 두 가지 원칙으로 만�
 | <a id="dedup-term-in-policy"></a>최적화 정책 | 최적화 정책은 데이터 중복 제거 대상 파일을 지정합니다. 예를 들어 파일은 새롭거나 볼륨의 특정 경로에서 열리거나 특정 파일 형식을 가진 경우 정책에서 벗어나는 것으로 간주될 수 있습니다. |
 | <a id="dedup-term-reparse-point"></a>재분석 지점 | [재분석 지점](https://msdn.microsoft.com/library/windows/desktop/aa365503.aspx)은 지정된 파일 시스템 필터로 I/O를 전달하도록 파일 시스템에 알리는 특수 태그입니다. 파일의 파일 스트림이 최적화된 경우 데이터 중복 제거는 해당 파일의 액세스 의미 체계를 유지할 수 있도록 파일 스트림을 재분석 지점으로 바꿉니다. |
 | <a id="dedup-term-volume"></a>볼륨 | 볼륨은 여러 실제 저장소 장치를 하나 이상의 서버에 걸쳐 놓을 수 있는 논리적 저장소 드라이브를 위한 Windows 구성체입니다. 중복 제거는 볼륨 단위로 설정됩니다. |
-| <a id="dedup-term-workload"></a>워크 로드 | 워크로드는 Windows Server에서 실행되는 응용 프로그램입니다. 예를 들어 일반용 파일 서버, Hyper-V, SQL Server 등이 여기에 해당합니다. |
+| <a id="dedup-term-workload"></a>부하가 | 워크로드는 Windows Server에서 실행되는 응용 프로그램입니다. 예를 들어 일반용 파일 서버, Hyper-V, SQL Server 등이 여기에 해당합니다. |
 
 > [!Warning]  
 > 권한 있는 Microsoft 지원 담당자의 지시가 없는 한, 청크 저장소를 수동으로 수정하지 마세요. 수동으로 수정하면 데이터가 손상 또는 손실될 수 있습니다.
 
 ## <a name="frequently-asked-questions"></a>질문과 대답
-**데이터 중복 제거와 어떻게 다른 최적화 제품과?**  
+**데이터 중복 제거는 다른 최적화 제품과 어떻게 다릅니까?**  
 데이터 중복 제거와 다른 일반 저장소 최적화 제품 간에는 몇 가지 중요한 차이점이 있습니다.
 
-* *단일 인스턴스 저장소에서 데이터 중복 제거와?*  
+* *데이터 중복 제거는 단일 인스턴스 저장소와 어떻게 다릅니까?*  
     SIS(단일 인스턴스 저장소)는 이전의 데이터 중복 제거 기술로 Windows Storage Server 2008 R2에 처음 도입되었습니다. 단일 인스턴스 저장소는 볼륨을 최적화하기 위해 완전히 동일한 파일을 식별하여 SIS 일반 저장소에 저장된 파일의 단일 복사본에 대한 논리적 링크로 대체했습니다. 단일 인스턴스 저장소와 달리, 데이터 중복 제거는 동일하지 않지만 많은 일반 패턴을 공유하는 파일 및 자체적으로 많은 반복 패턴을 포함하는 파일에서 공간을 확보할 수 있습니다. 단일 인스턴스 저장소는 Windows Server 2012 R2부터 사용 중단되었으며 Windows Server 2016에서 제거되고 데이터 중복 제거로 대체되었습니다.
 
-* *NTFS 압축으로 데이터 중복 제거와?*  
+* *데이터 중복 제거는 NTFS 압축과 어떻게 다릅니까?*  
     NTFS 압축은 볼륨 수준에서 선택적으로 사용할 수 있는 NTFS 기능입니다. NTFS 압축을 사용하면 각 파일이 쓰기 시 압축을 통해 개별적으로 최적화됩니다. NTFS 압축을 달리, 데이터 중복 제거는 볼륨의 모든 파일에서 공간을 확보할 수 있습니다. 파일에는 내부 중복(NTFS 압축으로 해결됨)과 볼륨에 있는 다른 파일과의 유사성(NTFS 압축으로 해결되지 않음)이 <u>모두</u> 있을 수 있으므로 데이터 중복 제거는 NTFS 압축보다 유리합니다. 또한 데이터 중복 제거는 사후 처리 모델입니다. 즉, 새 파일 또는 수정된 파일이 최적화되지 않은 상태로 디스크에 기록되고 나중에 데이터 중복 제거에 의해 최적화됩니다.
 
-* *Zip, rar, 7z, cab 등의 보관 파일 형식과에서 데이터 중복 제거와 어떻게?*  
+* *데이터 중복 제거는 zip, rar, 7z, cab 등의 보관 파일 형식과 어떻게 다릅니까?*  
     zip, rar, 7z, cab 등의 보관 파일 형식은 지정된 파일 집합에 대해 압축을 수행합니다. 데이터 중복 제거와 마찬가지로, 파일 내 중복된 패턴 및 파일 간 중복된 패턴이 최적화됩니다. 그러나 보관 파일에 포함할 파일을 선택해야 합니다. 액세스 의미 체계 역시 다릅니다. 보관 파일 내 특정 파일에 액세스하려면 보관 파일을 열고, 특정 파일을 선택하고, 사용을 위해 해당 파일의 압축을 해제해야 합니다. 데이터 중복 제거는 사용자 및 관리자에게 투명하게 작동하므로 수동 작업이 필요 없습니다. 또한 데이터 중복 제거는 액세스 의미 체계를 유지합니다. 따라서 최적화된 파일이 최적화 후 변경되지 않은 상태로 표시됩니다.
 
-**내 선택한 사용 유형에 대 한 데이터 중복 제거 설정을 변경할 수 있나요?**  
-예 데이터 중복 제거에서 **권장 워크로드**에 적합한 기본값을 제공하지만 저장소를 최대한 활용하기 위해 데이터 중복 제거 설정을 조정할 수 있습니다. 또한 다른 워크로드는 [데이터 중복 제거가 워크로드를 간섭하지 않도록](install-enable.md#enable-dedup-sometimes-considerations) 하기 위해 약간의 조정이 필요할 수 있습니다.
+**선택한 사용 형식에 대 한 데이터 중복 제거 설정을 변경할 수 있나요?**  
+예. 데이터 중복 제거에서 **권장 워크로드**에 적합한 기본값을 제공하지만 저장소를 최대한 활용하기 위해 데이터 중복 제거 설정을 조정할 수 있습니다. 또한 다른 워크로드는 [데이터 중복 제거가 워크로드를 간섭하지 않도록](install-enable.md#enable-dedup-sometimes-considerations) 하기 위해 약간의 조정이 필요할 수 있습니다.
 
-**수동으로 데이터 중복 제거 작업을를 실행할 수 있습니까?**  
+**데이터 중복 제거 작업을 수동으로 실행할 수 있나요?**  
 예. [모든 데이터 중복 제거 작업을 수동으로 실행할 수 있습니다](run.md#running-dedup-jobs-manually). 이는 예약된 작업이 시스템 리소스 부족 또는 오류로 인해 실행되지 않은 경우에 바람직할 수 있습니다. 또한 최적화 해제 작업은 수동으로만 실행할 수 있습니다.
 
-**데이터 중복 제거 작업의 기록 결과 모니터링할 수 있습니까?**  
+**데이터 중복 제거 작업의 기록 결과를 모니터링할 수 있나요?**  
 예. [모든 데이터 중복 제거 작업은 Windows 이벤트 로그에 항목을 만듭니다](run.md#monitoring-dedup).
 
-**필자의 시스템에서 데이터 중복 제거 작업에 대 한 기본 일정을 변경할 수 있나요?**  
+**내 시스템에서 데이터 중복 제거 작업에 대 한 기본 일정을 변경할 수 있나요?**  
 예. [모든 일정을 구성할 수 있습니다](advanced-settings.md#modifying-job-schedules). 기본 데이터 중복 제거 일정을 수정하는 것은 데이터 중복 제거 작업이 여유 있게 완료되고 워크로드와 리소스를 경합하지 않도록 하는 데 특히 바람직합니다.

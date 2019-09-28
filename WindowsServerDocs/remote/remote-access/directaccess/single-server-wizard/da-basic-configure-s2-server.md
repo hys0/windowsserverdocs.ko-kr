@@ -1,9 +1,9 @@
 ---
-title: 기본 DirectAccess 서버를 구성 하는 2 단계
-description: 이 항목은 시작 시작 마법사에 대 한 Windows Server 2016을 사용 하 여 단일 DirectAccess 서버 배포 가이드의 일부
+title: 2 단계 기본 DirectAccess 서버 구성
+description: 이 항목은 Windows Server 2016에 대 한 시작 마법사를 사용 하 여 단일 DirectAccess 서버 배포 가이드의 일부입니다.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-da
@@ -12,16 +12,16 @@ ms.topic: article
 ms.assetid: 82bf5fed-93b3-4fa6-8e71-522146eccdb1
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 5bd248e36c316b11ea5e272707b75624d73dc49a
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: a21e5799824c968b29c719585ca16b6b45a9ef37
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67283424"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71404920"
 ---
-# <a name="step-2-configure-the-basic-directaccess-server"></a>기본 DirectAccess 서버를 구성 하는 2 단계
+# <a name="step-2-configure-the-basic-directaccess-server"></a>2 단계 기본 DirectAccess 서버 구성
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 이 항목에서는 기본 DirectAccess 배포에 필요한 클라이언트 및 서버 설정을 구성하는 방법에 대해 설명합니다. 에 설명 된 계획 단계를 완료 한 확인 배포 단계를 시작 하기 전에 [기본 DirectAccess 배포 계획](Plan-a-Basic-DirectAccess-Deployment.md)합니다.  
   
@@ -53,13 +53,13 @@ ms.locfileid: "67283424"
   
 7.  **설치 진행률** 대화 상자에서 설치가 완료되었는지 확인하고 **닫기**를 클릭합니다.  
   
-![Windows PowerShell](../../../media/Step-2-Configure-the-DirectAccess-Server/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![Windows PowerShell](../../../media/Step-2-Configure-the-DirectAccess-Server/PowerShellLogoSmall.gif)***<em>windows powershell 해당 명령</em>***  
   
-다음 Windows PowerShell cmdlet 또는 cmdlet을 원격 액세스 역할을 설치 합니다. 
+다음 Windows PowerShell cmdlet 또는 cmdlet은 원격 액세스 역할을 설치 합니다. 
 
 1. 관리자 권한으로 PowerShell을 엽니다.
 
-2. 원격 액세스 기능을 설치 합니다.
+2. 원격 액세스 기능 설치:
 
    ```  
    Install-WindowsFeature RemoteAccess   
@@ -71,7 +71,7 @@ ms.locfileid: "67283424"
    Restart-Computer
    ```
    
-4. 원격 액세스 PowerShell을 설치 합니다.
+4. 원격 액세스 PowerShell 설치:
 
    ```
    Install-WindowsFeature RSAT-RemoteAccess-PowerShell
@@ -125,7 +125,7 @@ ms.locfileid: "67283424"
   
 ## <a name="next-step"></a>다음 단계  
   
--   [3 단계에는 기본 DirectAccess 배포 확인](da-basic-configure-s3-verify.md)  
+-   [3 단계 기본 DirectAccess 배포 확인](da-basic-configure-s3-verify.md)  
   
 
 

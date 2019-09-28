@@ -1,8 +1,8 @@
 ---
 title: ver
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 384a5e8adb6c8304033f7dc645184ff2b674ae39
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e48b3b1061edf793c88693b3353753c6a4cedcfc
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59887174"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71362717"
 ---
 # <a name="ver"></a>ver
 
@@ -26,7 +26,7 @@ ms.locfileid: "59887174"
 
 운영 체제 버전 번호를 표시합니다.
 
-이 명령은 PowerShell 아니라 Windows 명령 프롬프트 (Cmd.exe)에서 지원 됩니다.
+이 명령은 Windows 명령 프롬프트 (Cmd.exe)에서 지원 되지만 PowerShell에서는 지원 되지 않습니다.
 
 이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
 
@@ -42,7 +42,7 @@ ver
 |---------|-----------|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 명령 셸 (cmd.exe)에서 운영 체제의 버전 번호를 가져오려면 다음을 입력 합니다.
 
@@ -50,7 +50,7 @@ ver
 ver
 ```
 
-Ver 명령을 PowerShell에서 작동 하지 않습니다. PowerShell에서 OS 버전을 얻으려면 다음을 입력 합니다.
+Ver 명령은 PowerShell에서 작동 하지 않습니다. PowerShell에서 OS 버전을 가져오려면 다음을 입력 합니다.
 
 ```powershell
 $PSVersionTable.BuildVersion

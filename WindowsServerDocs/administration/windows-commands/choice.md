@@ -1,8 +1,8 @@
 ---
 title: choice
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 78d2816bff754ef04558cf37eaada7c7fafba823
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e710b3813525647053365ebf4c764181fc38b3f6
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59841554"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71379365"
 ---
 # <a name="choice"></a>choice
 
@@ -38,11 +38,11 @@ choice [/c [<Choice1><Choice2><…>]] [/n] [/cs] [/t <Timeout> /d <Choice>] [/m 
 
 |매개 변수|설명|
 |---------|-----------|
-|/c \<Choice1><Choice2><…>|만들려는 선택 목록을 지정 합니다. 유효한 선택 항목 a-z, A-Z, 0-9 및 확장된 ASCII 문자 (128-254)를 포함 합니다. 기본 목록은 "YN"으로 표시 되는 `[Y,N]?`합니다.|
+|/c \<Choice1 > <Choice2> < ... >|만들려는 선택 목록을 지정 합니다. 유효한 선택 항목 a-z, A-Z, 0-9 및 확장된 ASCII 문자 (128-254)를 포함 합니다. 기본 목록은 "YN"으로 표시 되는 `[Y,N]?`합니다.|
 |/n|중에서 선택할 수는 여전히 사용할 수 있지만 선택 목록이 숨깁니다 메시지 텍스트 (지정 된 경우 **/m**) 계속 표시 됩니다.|
 |/cs|선택 항목은 대/소문자 구분을 지정 합니다. 기본적으로 선택 항목은 대/소문자 구분 하지 않습니다.|
-|/t \<Timeout>|사용 하 여 지정 된 기본 선택 하기 전에 일시 중지 시간 (초)의 수를 지정 **/d**합니다. 사용할 수 있는 값은 **0** 에 **9999**합니다. 경우 **/t** 로 설정 된 **0**, **선택** 기본 선택 항목을 반환 하기 전에 일시 중지 되지 않습니다.|
-|/d \<Choice>|기본 선택으로 지정 된 초 수를 대기한 후 사용 하 여 지정 **/t**합니다. 기본적으로 선택 하 여 지정 된 선택 항목 목록에 있어야 합니다. **/c**합니다.|
+|/t \<Timeout >|사용 하 여 지정 된 기본 선택 하기 전에 일시 중지 시간 (초)의 수를 지정 **/d**합니다. 사용할 수 있는 값은 **0** 에 **9999**합니다. 경우 **/t** 로 설정 된 **0**, **선택** 기본 선택 항목을 반환 하기 전에 일시 중지 되지 않습니다.|
+|/d \<Choice >|기본 선택으로 지정 된 초 수를 대기한 후 사용 하 여 지정 **/t**합니다. 기본적으로 선택 하 여 지정 된 선택 항목 목록에 있어야 합니다. **/c**합니다.|
 |/m < "text" >|선택 항목의 목록 앞에 표시할 메시지를 지정 합니다. 경우 **/m** 를 지정 하지 않으면만 선택 프롬프트가 표시 됩니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
@@ -53,7 +53,7 @@ choice [/c [<Choice1><Choice2><…>]] [/n] [/cs] [/t <Timeout> /d <Choice>] [/m 
 > [!NOTE]
 > 일괄 프로그램에서 ERRORLEVEL 값을 사용 하는 경우 내림차순으로 나열 합니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 선택 항목을 제공 Y, N, 및 C, 배치 파일에서 다음 줄을 입력 합니다.
 ```

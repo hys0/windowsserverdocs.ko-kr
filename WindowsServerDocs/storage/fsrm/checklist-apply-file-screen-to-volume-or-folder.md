@@ -2,18 +2,18 @@
 title: 검사 목록 - 볼륨 또는 폴더에 파일 차단 적용
 description: 이 문서에서는 볼륨 또는 폴더에 파일 차단을 적용하는 방법을 설명합니다.
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 03325d8a65d88c35f09985223608fc7474a0fde5
-ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
+ms.openlocfilehash: 4d38e9a92a9c99663d81aab2a0164c5a30002f6a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65475844"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71401995"
 ---
 # <a name="checklist---apply-a-file-screen-to-a-volume-or-folder"></a>검사 목록 - 볼륨 또는 폴더에 파일 차단 적용
 
@@ -25,11 +25,11 @@ ms.locfileid: "65475844"
 2. 파일 차단 감사 보고서를 생성하려면 감사 데이터베이스에서 차단 이벤트를 기록하도록 설정합니다.
 [파일 차단 감사 구성](configure-file-screen-audit.md)
 
-3. 차단 규칙의 후보인 저장된 파일 형식을 평가합니다. **저장소 보고서 관리** 노드의 보고서를 사용하여 데이터를 제공할 수 있습니다. (예를 들어 실행 파일을 파일 그룹 보고서 또는 큰 파일 보고서에서 많은 양의 디스크 공간을 차지 하는 파일을 식별 하는 요청 시) [주문형 보고서 생성](generate-reports-on-demand.md) 
+3. 차단 규칙의 후보인 저장된 파일 형식을 평가합니다. **저장소 보고서 관리** 노드의 보고서를 사용하여 데이터를 제공할 수 있습니다. (예를 들어 파일 그룹 보고서로 파일을 실행 하거나 요청 시 큰 파일 보고서 보고서를 실행 하 여 많은 양의 디스크 공간을 차지 하는 파일을 식별 합니다.) [주문형 보고서 생성](generate-reports-on-demand.md) 
 
 4. 미리 구성된 파일 그룹을 검토하거나 조직에 특정 차단 정책을 적용하기 위한 새 파일 그룹을 만듭니다. [차단을 위한 파일 그룹 정의](define-file-groups-for-screening.md)  
 
-5. 사용할 수 있는 파일 차단 템플릿의 속성을 검토합니다. (에 **파일 차단 관리**를 클릭 합니다 **파일 화면 템플릿** 노드.) [파일 화면 템플릿 속성 편집](edit-file-screen-template-properties.md) 
+5. 사용할 수 있는 파일 차단 템플릿의 속성을 검토합니다. ( **파일 차단 관리**에서 **파일 화면 템플릿** 노드를 클릭 합니다.) [파일 화면 템플릿 속성 편집](edit-file-screen-template-properties.md) 
 <br />
  -또는-
  <br /> 조직에 저장소 정책을 적용하기 위한 새 파일 차단 템플릿을 만듭니다.  [파일 차단 템플릿 만들기](create-file-screen-template.md) 
@@ -44,4 +44,4 @@ ms.locfileid: "65475844"
 
 
 > [!NOTE]
-> 특정 볼륨이 나 폴더의 저장소를 제한 하려면 참조 [검사 목록: 볼륨 또는 폴더에 할당량 적용](checklist-apply-file-screen-to-volume-or-folder.md)
+> 볼륨 또는 폴더의 저장소를 제한 하려면 [Checklist 목록: 볼륨 또는 폴더에 할당량 적용](checklist-apply-file-screen-to-volume-or-folder.md)

@@ -1,8 +1,8 @@
 ---
 title: bitsadmin setclientcertificatebyname
-description: Windows 명령 항목에 대 한 **bitsadmin setclientcertificatebyname** -HTTPS (SSL) 요청에 클라이언트 인증에 사용할 클라이언트 인증서의 주체 이름을 지정 합니다.
+description: '**Bitsadmin setclientcertificatebyname** 에 대 한 Windows 명령 항목-HTTPS (SSL) 요청에서 클라이언트 인증에 사용할 클라이언트 인증서의 주체 이름을 지정 합니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 76150ccb34693eb692d27efbd6538f5363ba1c26
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: de2e84401673848ecc8823bb6dd3f91224d9a87e
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59871314"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71380674"
 ---
 # <a name="bitsadmin-setclientcertificatebyname"></a>bitsadmin setclientcertificatebyname
 
 
 
-HTTPS (SSL) 요청에 클라이언트 인증에 사용할 클라이언트 인증서의 주체 이름을 지정 합니다.
+HTTPS (SSL) 요청에서 클라이언트 인증에 사용할 클라이언트 인증서의 주체 이름을 지정 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -41,9 +41,9 @@ bitsadmin /SetClientCertificateByID <Job> <store_location> <store_name> <subject
 |Store_name|인증서 저장소의 이름입니다. 가능한 값은 다음과 같습니다.</br>CA (인증 기관 인증서)</br>내 (개인 인증서)</br>루트 (루트 인증서)</br>SPC (소프트웨어 게시자 인증서)|
 |Subject_name|인증서의 이름|
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
-다음 예제에서는 클라이언트 인증서의 이름을 지정 *myCertificate* 명명 된 작업에 대 한 HTTPS (SSL) 요청에 클라이언트 인증에 사용할 *myJob*합니다.
+다음 예제에서는 *mycertificate*이라는 작업에 대 한 HTTPS (SSL) 요청에서 클라이언트 인증에 사용할 클라이언트 인증서 *mycertificate* 의 이름을 지정 합니다.
 ```
 C:\>bitsadmin Bitsadmin /SetClientCertificateByName myJob 1 MY myCertificate 
 ```

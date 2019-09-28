@@ -3,7 +3,7 @@ title: MultiPoint 서비스 배포를 위한 작업
 description: 지침에 대 한 링크와 함께 MultiPoint 서비스 배포와 관련 된 모든 작업을 나열 합니다.
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ ms.assetid: e08c5784-5b3e-4028-86c1-96deaee41f09
 author: evaseydl
 manager: scottman
 ms.author: evas
-ms.openlocfilehash: 9f0b69da06fb783ac7cccc2dc5bc7337dae59d66
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 9d50cfc3ed48f77281af400e9e80fb8b4895bac5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871452"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71394761"
 ---
 # <a name="task-lists-multipoint-services"></a>작업 목록: MultiPoint 서비스
 이 항목의 작업 목록을 사용 하 여 MultiPoint 서비스 시스템을 배포 하 고 완료 된 작업을 추적 하는 데 도움이 됩니다. 일부 작업의 모든 환경에 적용 됩니다. 예를 들어, 일부 작업은 Active Directory 도메인에 있는 MultiPoint 서버를 배포 하는 경우에 수행 됩니다. 화면 분할 스테이션을 만들거나 스테이션에 대 한 가상 데스크톱을 배포 하는 나머지는 선택 사항입니다. 이러한 작업을 수행 하는 방법을 설명 하는 절차를 참조 하십시오. [MultiPoint 서비스 배포](deploying-multipoint-services.md)합니다.  

@@ -7,13 +7,13 @@ author: jasongerend
 ms.author: jgerend
 ms.date: 10/17/2018
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
-ms.openlocfilehash: 229a911039ba88847de42e542f47b344d7a032c2
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.prod: windows-server
+ms.openlocfilehash: 159202fcb8c6125134154094e67e862ce8eb12ab
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70869601"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71357034"
 ---
 # <a name="windows-admin-center-ui-text-and-design-style-guide"></a>Windows Admin Center UI 텍스트와 디자인 스타일 가이드
 
@@ -144,7 +144,7 @@ Microsoft 개발자는 사용자가 수동으로 입력 해야 하는 도움말 
     - 스타일 아님
         - Windows 방화벽에 대 한 자세한 정보
         - 색 관리에 대해 자세히 알아보기
-        - 자세한 정보
+        - 자세한 내용
 - 키워드 뿐 아니라 링크 텍스트에 전체 문장을 사용 합니다. 
     - Microsoft 스타일 
         - [예외를 허용할 경우의 위험은 무엇입니까?]()
@@ -224,7 +224,7 @@ Null 상태는 검색 후에 결과가 반환 되지 않는 경우 또는 트랜
 
 상태 메시지는 팝업(알림) 메시지와 알림으로 구성됩니다.
 
-|문자열 형식         | 메모                               |
+|문자열 형식         | 참고                               |
 |------------        |-------------------------------------|
 |알림               |마침표가 있는 첫 글자를 대문자로 - 사용자가 대상에서 벗어난 경우 메시지가 적용되는 대상을 이해할 수 있도록 개체 변수를 사용하는 것이 이상적|
 |알림 제목|마침표가 있든 없든 첫 글자를 대문자로(제목) - 개체 변수를 사용하는 것이 이상적|
@@ -232,7 +232,7 @@ Null 상태는 검색 후에 결과가 반환 되지 않는 경우 또는 트랜
 
 알림 메시지에 대한 일부 자세한 권장 사항은 다음과 같습니다.
 
-|문자열 형식         | 메모                               |
+|문자열 형식         | 참고                               |
 |------------        |-------------------------------------|
 |시작됨             |가능한 경우 생략 - 일반적으로 주의를 분산시키는 요소를 최소화하기 위해 진행 중인 메시지를 생략할 수 있습니다.|
 |진행 중         |수행 중인 작업의 동사로 시작하고 타원을 진행 중인 작업을 나타내기 위해 줄임표로 끝냅니다. 예를 들면 다음과 같습니다.<br> *"고객 데이터" 볼륨을 만드는 중 ...*|

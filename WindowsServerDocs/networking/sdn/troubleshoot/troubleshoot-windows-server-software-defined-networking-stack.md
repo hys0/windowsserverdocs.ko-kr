@@ -1,24 +1,24 @@
 ---
 title: Windows Server 소프트웨어 정의 네트워킹 스택 문제 해결
-description: 이 Windows Server 가이드는 일반적인 소프트웨어 정의 네트워킹 (SDN) 오류 및 실패 시나리오를 검사 하 고 사용 가능한 진단 도구를 활용 하는 문제 해결 워크플로 간략하게 설명 합니다.
+description: 이 Windows Server 가이드는 일반적인 SDN (소프트웨어 정의 네트워킹) 오류 및 오류 시나리오를 검사 하 고 사용 가능한 진단 도구를 활용 하는 문제 해결 워크플로를 간략하게 설명 합니다.
 manager: ravirao
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: 9be83ed2-9e62-49e8-88e7-f52d3449aac5
 ms.author: pashort
 author: JMesser81
 ms.date: 08/14/2018
-ms.openlocfilehash: eeb0c335e4afd3c6835a04421a15073aeab6cdc6
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 22dcfb318a0e60bd1694496288f3e63b2780d643
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66446246"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71355496"
 ---
 # <a name="troubleshoot-the-windows-server-software-defined-networking-stack"></a>Windows Server 소프트웨어 정의 네트워킹 스택 문제 해결
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 이 가이드는 네트워킹 SDN (소프트웨어)는 일반적인 오류 및 오류 시나리오를 검사 하 고 사용할 수 있는 진단 도구를 활용 하는 문제 해결 워크플로 간략하게 설명 합니다.  
 
@@ -31,12 +31,12 @@ Microsoft의 소프트웨어 정의 네트워킹에 대 한 자세한 내용은 
 * **잘못 되었거나 지원 되지 않는 구성**  
    잘못 되거나 잘못 된 정책 NorthBound API를 호출 하는 사용자.   
 
-* **정책 응용 프로그램에 오류가 있습니다.**  
+* **정책 응용 프로그램에서 오류 발생**  
      네트워크 컨트롤러에서 정책 상당히 지연 및/또는 최신 버전이 아닙니다 (예: 실시간 마이그레이션) 후 모든 Hyper-v 호스트에서 Hyper-v 호스트를 배달 하지 못했습니다.  
 * **구성 드리프트 또는 소프트웨어 버그**  
   삭제 된 패킷의 결과 데이터 경로 문제가 있습니다.  
 
-* **외부 오류 NIC 하드웨어와 관련 된 / 드라이버 또는 언더레이 네트워크 패브릭**  
+* **NIC 하드웨어/드라이버 또는 언더레이 네트워크 패브릭에 관련 된 외부 오류**  
   오동작 작업 오프 로드 (예: VMQ) 또는 언더레이 네트워크 패브릭 MTU) (예: 잘못 구성 되었습니다.   
 
   이 문제 해결 가이드는 이러한 각 오류 범주를 검사 하 고 모범 사례 및 확인 하 고 오류를 해결 하려면 사용할 수 있는 진단 도구를 권장 합니다.  
@@ -70,7 +70,7 @@ Import-Module hnvdiagnostics
 _디버그 VirtualMachineQueueOperation_, _Get CustomerRoute_, _Get PACAMapping_, _Get ProviderAddress_, _Get VMNetworkAdapterPortId_, _Get VMSwitchExternalPortId_, 및 _테스트 EncapOverheadSettings_ 는 모든 Hyper-v 호스트에서 실행 될 수 있는 모든 로컬 테스트 합니다. 네트워크 컨트롤러를 통해 데이터 경로 테스트를 호출 하 고 따라서 위에서 descried와 네트워크 컨트롤러에 대 한 액세스를 해야 하는 다른 cmdlet.
 
 ### <a name="github"></a>GitHub
-[Microsoft/SDN GitHub 리포지토리](https://github.com/microsoft/sdn) 다양 한 샘플 스크립트와 이러한 기본 cmdlet을 기반으로 구축 하는 워크플로 했습니다. 특히, 진단 스크립트에 있습니다는 [진단](https://github.com/Microsoft/sdn/diagnostics) 폴더입니다. 주시면 끌어오기 요청을 제출 하 여 이러한 스크립트에 기여 합니다.
+[Microsoft/SDN GitHub 리포지토리](https://github.com/microsoft/sdn) 다양 한 샘플 스크립트와 이러한 기본 cmdlet을 기반으로 구축 하는 워크플로 했습니다. 특히, 진단 스크립트에 있습니다는 [진단](https://github.com/Microsoft/sdn/diagnostics) 폴더입니다. 끌어오기 요청을 제출 하 여 이러한 스크립트에 참여 하는 데 도움을 주세요.
 
 ## <a name="troubleshooting-workflows-and-guides"></a>문제 해결 가이드 및 워크플로  
 
@@ -121,7 +121,7 @@ Message:          Host is not Connected.
 아래 표에서 오류 코드, 메시지 및 관찰 된 구성 상태에 따라 수행할 작업이의 목록입니다.
 
 
-| **코드**| **메시지**| **동작**|  
+| **Code**| **메시지**| **동작**|  
 |--------|-----------|----------|  
 | 알 수 없음| 알 수 없는 오류| |  
 | HostUnreachable                       | 호스트 컴퓨터에 연결할 수 없다는 | 네트워크 컨트롤러와 호스트 간의 네트워크 연결을 관리 확인 |  
@@ -168,7 +168,7 @@ netstat -anp tcp |findstr 6640
   TCP    10.127.132.153:50023   10.127.132.211:6640    ESTABLISHED
 ```
 #### <a name="check-host-agent-services"></a>호스트 에이전트 서비스를 확인 합니다.
-네트워크 컨트롤러는 Hyper-v 호스트에 두 개의 호스트 에이전트 서비스와 통신합니다. SLB 호스트 에이전트 및 NC 호스트 에이전트입니다. 이러한 서비스 중 하나 또는 모두가 실행 하지는 것 같습니다. 상태를 확인 하 고 실행 되지 않는 경우 다시 시작 하십시오.
+네트워크 컨트롤러는 Hyper-v 호스트의 두 호스트 에이전트 서비스와 통신 합니다. SLB 호스트 에이전트 및 NC 호스트 에이전트. 이러한 서비스 중 하나 또는 모두가 실행 하지는 것 같습니다. 상태를 확인 하 고 실행 되지 않는 경우 다시 시작 하십시오.
 
 ```none
 Get-Service SlbHostAgent
@@ -310,7 +310,7 @@ SLB 구성 상태 정보를 찾을 수는 _진단 slbstateResults.Json_ 이 디�
 
 #### <a name="gateway-validation"></a>게이트웨이 유효성 검사
 
-**네트워크 컨트롤러:**
+**네트워크 컨트롤러에서:**
 ```
 Get-NetworkControllerLogicalNetwork
 Get-NetworkControllerPublicIPAddress
@@ -320,7 +320,7 @@ Get-NetworkControllerVirtualGateway
 Get-NetworkControllerNetworkInterface
 ```
 
-**게이트웨이 VM:**
+**게이트웨이 VM에서:**
 ```
 Ipconfig /allcompartments /all
 Get-NetRoute -IncludeAllCompartments -AddressFamily
@@ -329,7 +329,7 @@ Get-NetBgpRouter | Get-BgpPeer
 Get-NetBgpRouter | Get-BgpRouteInformation
 ```
 
-**Tor () 스위치의 위에서:**
+**랙 (내부) 스위치에서:**
 
 `sh ip bgp summary (for 3rd party BGP Routers)`
 
@@ -491,8 +491,8 @@ IsDeleted            : False
 
 또 다른 일반적인 문제는 HNV 공급자 논리 네트워크에서 실제 네트워크 포트 및/또는 이더넷 카드에의 VXLAN (또는 NVGRE) 캡슐화 하는 오버 헤드를 처리 하도록 구성 하는 충분히 큰 MTU 없는 경우 
 >[!NOTE]
-> 일부 이더넷 카드 및 드라이버 지원 새 * EncapOverhead 키워드 160 값으로 네트워크 컨트롤러 호스트 에이전트에 의해 자동으로 설정 됩니다. 이 값 다음의 값에 추가할 합니다 * JumboPacket 키워드 해당 합계 보급된 된 MTU로 사용 됩니다.
-> 예: * EncapOverhead = 160 및 * JumboPacket 1514 = = > MTU 1674B =
+> 일부 이더넷 카드 및 드라이버는 네트워크 컨트롤러 호스트 에이전트에서 값 160으로 자동 설정 되는 새로운 * EncapOverhead 키워드를 지원 합니다. 그런 다음 합계를 알린 MTU로 사용 하는 * JumboPacket 키워드의 값에이 값을 추가 합니다.
+> 예: * EncapOverhead = 160 및 * JumboPacket = 1514 = > MTU = 1674B
 
 ```none
 # Check whether or not your Ethernet card and driver support *EncapOverhead
@@ -527,7 +527,7 @@ Cannot send jumbo packets to the destination. Physical switch ports may not be c
 # TODO: Success Results aftering updating MTU on physical switch ports
 ```
 
-*업데이트 관리*
+*재구성*
 * 적어도 물리적 스위치 포트에서 MTU 크기 조정 1674B (14B 이더넷 헤더 및 트레일러 포함)
 * NIC 카드 EncapOverhead 키워드를 지원 하지 않는 경우 조정 적어도 JumboPacket 키워드 1674B
 
@@ -555,29 +555,29 @@ CA IP Address CA MAC Address    Virtual Subnet ID PA IP Address
 
 ## <a name="specific-troubleshooting-scenarios"></a>특정 문제 해결 시나리오
 
-다음 섹션에서는 특정 시나리오를 해결 하기 위한 지침을 제공 합니다.
+다음 섹션에서는 특정 시나리오의 문제 해결에 대 한 지침을 제공 합니다.
 
 ### <a name="no-network-connectivity-between-two-tenant-virtual-machines"></a>두 개의 테 넌 트 가상 컴퓨터 간 네트워크 연결 없음
 
 1.  [Tenant] 테 넌 트 가상 컴퓨터에서 Windows 방화벽이 트래픽을 차단 하지 확인 합니다.  
 2.  [Tenant] IP 주소를 실행 하 여 테 넌 트 가상 컴퓨터에 할당 된 있는지 확인 하십시오. _ipconfig_합니다. 
-3.  [호스터] 실행할 **테스트 VirtualNetworkConnection** 문제의 두 테 넌 트 가상 컴퓨터 간의 연결의 유효성을 검사 하는 Hyper-v 호스트에서. 
+3.  호스팅 Hyper-v 호스트에서 **VirtualNetworkConnection** 를 실행 하 여 해당 하는 두 개의 테 넌 트 가상 컴퓨터 간의 연결을 확인 합니다. 
 
 >[!NOTE]
->Vsid가 참조 된 가상 서브넷 id. VXLAN의 경우는 VXLAN 네트워크 식별자 (vni) 또는입니다. 실행 하 여이 값을 찾을 수 있습니다 합니다 **Get PACAMapping** cmdlet.
+>Vsid가 참조 된 가상 서브넷 id. VXLAN의 경우는 VXLAN 네트워크 식별자 (vni) 또는입니다. 이 값은 **PACAMapping** cmdlet을 실행 하 여 찾을 수 있습니다.
 
 #### <a name="example"></a>예제
 
     $password = ConvertTo-SecureString -String "password" -AsPlainText -Force
     $cred = New-Object pscredential -ArgumentList (".\administrator", $password) 
 
-CA-ping 녹색 봚 VM 1"의 호스트에서 192.168.1.4 SenderCA IP를 사용 하 여 간에" sa18n30-2.sa18.nttest.microsoft.com "ListenerCA ip 10.127.132.153 Mgmt IP를 사용 하 여 둘 다 연결에 가상 서브넷 (VSID) 4114 192.168.1.5의 만듭니다.
+ListenerCA (가상 서브넷) 4114에 연결 된 192.168.1.5 IP의 sa18n30-2.sa18.nttest.microsoft.com ip를 사용 하는 호스트 ""에서 SenderCA IP가 192.168.1.4 인 "녹색 웹 VM 1" 간의 CA ping을 만듭니다.
 
     Test-VirtualNetworkConnection -OperationId 27 -HostName sa18n30-2.sa18.nttest.microsoft.com -MgmtIp 10.127.132.153 -Creds $cred -VMName "Green Web VM 1" -VMNetworkAdapterName "Green Web VM 1" -SenderCAIP 192.168.1.4 -SenderVSID 4114 -ListenerCAIP 192.168.1.5 -ListenerVSID 4114
 
     Test-VirtualNetworkConnection at command pipeline position 1
 
-시작 CA 공간 ping 테스트 192.168.1.4 주소의 성공 192.168.1.5 Ping 추적 세션을 시작 Rtt = 0ms
+CA 공간 ping 테스트 시작 192.168.1.5에 대 한 추적 세션 Ping을 시작 했습니다. 주소 192.168.1.4 Rtt = 0 ms
 
 
 CA 라우팅 정보:
@@ -601,12 +601,12 @@ PA 라우팅 정보:
 
 4. [Tenant] 가상 서브넷 이나 트래픽을 차단 하는 VM 네트워크 인터페이스에 지정 된 분산된 방화벽 정책이 없습니다 인지 확인 합니다.    
 
-Sa18.nttest.microsoft.com 도메인 있는 sa18n30nc 데모 환경에서 네트워크 컨트롤러 REST API를 쿼리 합니다.
+Sa18.nttest.microsoft.com 도메인의 sa18n30nc에 있는 데모 환경에서 찾을 수 REST API 네트워크 컨트롤러를 쿼리 합니다.
 
     $uri = "https://sa18n30nc.sa18.nttest.microsoft.com"
     Get-NetworkControllerAccessControlList -ConnectionUri $uri 
 
-# <a name="look-at-ip-configuration-and-virtual-subnets-which-are-referencing-this-acl"></a>IP 구성 및 가상 서브넷이이 ACL을 참조 하는 확인
+# <a name="look-at-ip-configuration-and-virtual-subnets-which-are-referencing-this-acl"></a>이 ACL을 참조 하는 IP 구성 및 가상 서브넷을 확인 합니다.
 
 1. [호스터] 실행 ``Get-ProviderAddress`` 두 hyper-v 호스트 두 호스팅 질문의 가상 컴퓨터를 테 넌 트 한 다음 실행 ``Test-LogicalNetworkConnection`` 또는 ``ping -c <compartment>`` HNV 공급자 논리 네트워크에 대 한 연결 유효성을 검사 하는 Hyper-v 호스트에서
 2.  [호스터] Hyper-v 호스트에 올바른 및 모든 계층 2 장치 사이 Hyper-v 호스트를 전환 MTU 설정 되어 있는지 확인 합니다. 실행 ``Test-EncapOverheadValue`` 에 모든 Hyper-v 호스트에 있습니다. 또한 확인 사이 있는 모든 계층 2 스위치 MTU 160 바이트의 최대 오버 헤드를 고려 하 1674 바이트 이상으로 설정 합니다.  
@@ -617,21 +617,21 @@ Sa18.nttest.microsoft.com 도메인 있는 sa18n30nc 데모 환경에서 네트�
 
 ## <a name="logging-tracing-and-advanced-diagnostics"></a>로깅, 추적 및 고급 진단
 
-다음 섹션에서는 고급 진단에서 로깅 및 추적 정보를 제공 합니다.
+다음 섹션에서는 고급 진단, 로깅 및 추적에 대 한 정보를 제공 합니다.
 
 ### <a name="network-controller-centralized-logging"></a>네트워크 컨트롤러 중앙 집중식으로 로깅 
 
-자동으로 네트워크 컨트롤러 디버거 로그를 수집 하 고 중앙 집중화 된 위치에 저장할 수 있습니다. 처음으로 또는 나중에 모든 시간에 대 한 네트워크 컨트롤러를 배포 하는 경우 로그 수집을 사용할 수 있습니다. 로그의 네트워크 컨트롤러에서 수집 되 고 네트워크 네트워크 컨트롤러가 관리 하는 요소: 컴퓨터, 소프트웨어 부하 분산 장치 (SLB) 및 게이트웨이 컴퓨터를 호스트 합니다. 
+자동으로 네트워크 컨트롤러 디버거 로그를 수집 하 고 중앙 집중화 된 위치에 저장할 수 있습니다. 처음으로 또는 나중에 네트워크 컨트롤러를 배포 하는 경우 로그 수집을 사용 하도록 설정할 수 있습니다. 로그의 네트워크 컨트롤러에서 수집 되 고 네트워크 네트워크 컨트롤러가 관리 하는 요소: 컴퓨터, 소프트웨어 부하 분산 장치 (SLB) 및 게이트웨이 컴퓨터를 호스트 합니다. 
 
 이러한 로그 네트워크 컨트롤러 클러스터, 네트워크 컨트롤러 응용 프로그램, 게이트웨이 로그, SLB, 가상 네트워킹 및 분산된 방화벽에 대 한 디버그 로그를 포함 합니다. 새 호스트/SLB/게이트웨이 네트워크 컨트롤러에 추가 되 면 때마다 로깅 해당 컴퓨터에서 시작 됩니다. 마찬가지로, 호스트/SLB/게이트웨이 네트워크 컨트롤러에서 제거 되 면 해당 컴퓨터에서 로깅이 중지 됩니다.
 
 #### <a name="enable-logging"></a>로깅 사용
 
-자동으로 로깅을 사용 하 여 네트워크 컨트롤러 클러스터를 설치 합니다 **설치 NetworkControllerCluster** cmdlet. 기본적으로 로그는 로컬로 수집의 네트워크 컨트롤러 노드에서 *%systemdrive%\SDNDiagnostics*합니다. **좋습니다** 이 위치를 원격 파일 공유 (로컬) 수를 변경 하는 합니다. 
+로깅은 **NetworkControllerCluster** cmdlet을 사용 하 여 네트워크 컨트롤러 클러스터를 설치할 때 자동으로 사용 하도록 설정 됩니다. 기본적으로 로그는 로컬로 수집의 네트워크 컨트롤러 노드에서 *%systemdrive%\SDNDiagnostics*합니다. **좋습니다** 이 위치를 원격 파일 공유 (로컬) 수를 변경 하는 합니다. 
 
-네트워크 컨트롤러 클러스터 로그에 저장 된 *%programData%\Windows Fabric\log\Traces*합니다. 사용 하 여 로그 수집을 위해 중앙된 위치를 지정할 수 있습니다 합니다 **DiagnosticLogLocation** 매개 변수 이기도 된 권장 구성이 사용할 원격 파일 공유 합니다. 
+네트워크 컨트롤러 클러스터 로그에 저장 된 *%programData%\Windows Fabric\log\Traces*합니다. **DiagnosticLogLocation** 매개 변수를 사용 하 여 로그 컬렉션에 대 한 중앙 위치를 지정 하 고이를 원격 파일 공유로 지정할 수도 있습니다. 
 
-이 위치에 대 한 액세스를 제한 하려는 경우에 액세스 자격 증명을 제공할 수 있습니다 합니다 **LogLocationCredential** 매개 변수입니다. 또한 제공 해야 로그 위치에 액세스 하려면 자격 증명을 제공 하는 경우는 **CredentialEncryptionCertificate** 네트워크 컨트롤러 노드에 로컬로 저장 된 자격 증명을 암호화 하는 데 사용 되는 매개 변수입니다.  
+이 위치에 대 한 액세스를 제한 하려는 경우 **LogLocationCredential** 매개 변수를 사용 하 여 액세스 자격 증명을 제공할 수 있습니다. 로그 위치에 액세스 하기 위한 자격 증명을 제공 하는 경우 네트워크 컨트롤러 노드에 로컬로 저장 된 자격 증명을 암호화 하는 데 사용 되는 **credentialencryptioncertificate** 매개 변수도 제공 해야 합니다.  
 
 기본 설정으로 했을 때 최소 75 g B의 여유 공간이 25GB 고 중앙 위치에서 로컬 노드 (중앙 위치를 사용 하지) 네트워크 컨트롤러 3 노드 클러스터에 대 한 것이 좋습니다.
 
@@ -639,13 +639,13 @@ Sa18.nttest.microsoft.com 도메인 있는 sa18n30nc 데모 환경에서 네트�
 
 로깅 설정을 사용 하는 모든 시간에 변경할 수는 ``Set-NetworkControllerDiagnostic`` cmdlet입니다. 다음 설정은 변경할 수 있습니다.
 
-- **로그 위치를 중앙 집중식**합니다.  적용 된 모든 로그를 저장 하는 위치를 변경할 수는 ``DiagnosticLogLocation`` 매개 변수입니다.  
-- **로그 위치에 액세스 하려면 자격 증명**합니다.  로그 위치와 액세스 하는 데 사용할 자격 증명을 변경할 수는 ``LogLocationCredential`` 매개 변수입니다.  
+- **중앙 집중식 로그 위치**입니다.  적용 된 모든 로그를 저장 하는 위치를 변경할 수는 ``DiagnosticLogLocation`` 매개 변수입니다.  
+- **로그 위치에 액세스 하기 위한 자격 증명**입니다.  로그 위치와 액세스 하는 데 사용할 자격 증명을 변경할 수는 ``LogLocationCredential`` 매개 변수입니다.  
 - **로컬 로깅으로 이동**합니다.  로그를 저장 하는 중앙된 위치를 입력 한 경우 다시 이동할 수 있습니다 사용 하 여 네트워크 컨트롤러 노드를 로컬로 로그온 하는 ``UseLocalLogLocation`` 매개 변수 (많은 디스크 공간 요구 사항으로 인해 권장 하지 않음).  
-- **로깅 범위**합니다.  기본적으로 모든 로그가 수집 됩니다. 유일한 네트워크 컨트롤러 클러스터 로그를 수집 하도록 범위를 변경할 수 있습니다.  
-- **로깅 수준**합니다.  기본 로깅 수준을 정보입니다. 오류, 경고 또는 자세한 정보 표시를 변경할 수 있습니다.  
-- **로그 시간을 에이징**합니다.  로그는 순환 방식으로 저장 됩니다. 로컬 로깅 또는 중앙된 로깅이 기본적으로 로깅 데이터의 3 일을 해야 합니다. 이 시간 제한을 사용 하 여 변경할 수 있습니다 **LogTimeLimitInDays** 매개 변수입니다.  
-- **로그 크기 일 유예 기간**합니다.  기본적으로 로컬 로깅을 사용 하는 경우 중앙 집중식된 로깅 및 25GB를 사용 하는 경우 로깅 데이터의 최대 75GB를 해야 합니다. 사용 하 여이 제한을 변경할 수 있습니다 합니다 **LogSizeLimitInMBs** 매개 변수입니다.
+- **로깅 범위**.  기본적으로 모든 로그가 수집 됩니다. 유일한 네트워크 컨트롤러 클러스터 로그를 수집 하도록 범위를 변경할 수 있습니다.  
+- **로깅 수준**입니다.  기본 로깅 수준을 정보입니다. 오류, 경고 또는 자세한 정보 표시를 변경할 수 있습니다.  
+- **로그 에이징 시간**입니다.  로그는 순환 방식으로 저장 됩니다. 로컬 로깅 또는 중앙된 로깅이 기본적으로 로깅 데이터의 3 일을 해야 합니다. **Logtimelimit Indays** 매개 변수를 사용 하 여이 시간 제한을 변경할 수 있습니다.  
+- **로그 에이징 크기**입니다.  기본적으로 로컬 로깅을 사용 하는 경우 중앙 집중식된 로깅 및 25GB를 사용 하는 경우 로깅 데이터의 최대 75GB를 해야 합니다. **Logsizelimit Inmb** 매개 변수를 사용 하 여이 제한을 변경할 수 있습니다.
 
 #### <a name="collecting-logs-and-traces"></a>로그 수집 및 추적
 
@@ -668,7 +668,7 @@ VMM 배포는 기본적으로 네트워크 컨트롤러에 대 한 중앙 집중
 
 #### <a name="slbm-fabric-errors-hosting-service-provider-actions"></a>SLBM 패브릭 오류 (호스팅 서비스 공급자 동작)
 
-1.  소프트웨어 부하 분산 장치 관리자 (SLBM) 작동 하 고 오케스트레이션 레이어가 서로 통신할 수를 확인 합니다. SLBM SLB Mux-> 하 고 SLBM SLB 호스트 에이전트. 실행 [DumpSlbRestState](https://github.com/Microsoft/SDN/blob/master/Diagnostics/DumpSlbRestState.ps1) 네트워크 컨트롤러 REST 끝점에 액세스할 수 있는 모든 노드에서 합니다.  
+1.  SLBM (Software Load Balancer Manager)가 작동 하 고 오케스트레이션 계층이 서로 통신할 수 있는지 확인 합니다. SLBM-SLB Mux 및 SLBM > SLB 호스트 에이전트를 > 합니다. 실행 [DumpSlbRestState](https://github.com/Microsoft/SDN/blob/master/Diagnostics/DumpSlbRestState.ps1) 네트워크 컨트롤러 REST 끝점에 액세스할 수 있는 모든 노드에서 합니다.  
 2.  유효성 검사는 *SDNSLBMPerfCounters* 네트워크 컨트롤러 노드 Vm (가급적 주 네트워크 컨트롤러 노드-Get NetworkControllerReplica) 중 하나에서 성능 모니터에서:
     1.  부하 분산 장치 (LB) 엔진 SLBM에 연결 되어 있습니까? (*SLBM LBEngine 구성 총* > 0)  
     2.  SLBM 적어도 알 자체 끝점에 대 한? (*VIP 끝점 총* > = 2)  
@@ -688,7 +688,7 @@ VMM 배포는 기본적으로 네트워크 컨트롤러에 대 한 중앙 집중
 
 검사 실패 위의 경우에 실패 모드에 테 넌 트 SLB 상태 수도 있습니다.  
 
-**업데이트 관리**   
+**업데이트**   
 제공 된 다음 진단 정보에 따릅니다, 다음 수정 합니다.  
 * SLB 멀티플렉서 연결 되도록  
   * 인증서 문제 해결  
@@ -706,7 +706,7 @@ VMM 배포는 기본적으로 네트워크 컨트롤러에 대 한 중앙 집중
     1.  DIP의 유효성을 검사 SLBM에 등록 되어 있는 끝점 LoadBalancer 백 엔드 주소 풀의 IP 구성에 해당 하는 테 넌 트 가상 컴퓨터를 호스트  
 3.  [호스터] DIP 끝점 발견 하지 않거나 연결 합니다.   
     1.  확인 *NetworkControllerConfigurationState 디버그*  
-        1.  해당 NC 유효성 검사 및 SLB 호스트 에이전트를 성공적으로 사용 하 여 네트워크 컨트롤러 행사 코디네이터에 연결 ``netstat -anp tcp |findstr 6640)``  
+        1.  @No__t-0을 사용 하 여 NC 및 SLB 호스트 에이전트가 네트워크 컨트롤러 이벤트 코디네이터에 성공적으로 연결 되었는지 확인 합니다.  
     2.  확인 *HostId* 에서 *nchostagent* 서비스 레지스트리 키 (참조 *HostNotConnected* 부록에 오류 코드) 해당 하는 서버 리소스의 인스턴스 Id와 일치 (``Get-NCServer |convertto-json -depth 8``)  
     3.  가상 컴퓨터 포트에 대 한 포트 프로필 id에 해당 가상 컴퓨터 NIC 리소스의 인스턴스 Id와 일치 확인   
 4.  [호스팅 공급자] 로그 수집   

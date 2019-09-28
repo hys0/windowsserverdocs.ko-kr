@@ -1,25 +1,25 @@
 ---
-title: 보호 된 패브릭 계획 수립 및 보호 된 Vm
+title: 보호 된 패브릭 및 보호 된 Vm 계획
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: a754b78c-048d-4be9-a846-cf41ff0bcbc4
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.openlocfilehash: befb34c5d684c09b3be22704cab3a9806e47487d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f0ace5a081569cbe1ecb86c63fd88635035cf908
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59879274"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71403557"
 ---
-# <a name="planning-a-guarded-fabric"></a>보호 된 패브릭 계획 수립
+# <a name="planning-a-guarded-fabric"></a>보호 된 패브릭 계획
 
->적용 대상: Windows Server, Windows Server 2016, Windows Server (반기 채널) 2019
+>적용 대상: Windows server 2019, Windows Server (반기 채널), Windows Server 2016
 
-다음 항목의 보호 된 패브릭 배포 계획을 설명 하 고 보호 된 가상 머신 (Vm):
+다음 항목에서는 보호 된 패브릭 및 차폐 Vm (가상 머신)의 배포에 대 한 계획을 다룹니다.
 
-- [보호 된 패브릭 및 차폐 VM 호스팅 서비스 공급자에 대 한 계획](guarded-fabric-planning-for-hosters.md) 
-- [코드 무결성에 대 한 Windows Server 2016 가상화 기반 보호를 사용 하 여 호환 되는 하드웨어](guarded-fabric-compatible-hardware-with-virtualization-based-protection-of-code-integrity.md)
-- [보호 된 패브릭 및 차폐 VM 테 넌 트에 대 한 계획](guarded-fabric-shielded-vm-planning-for-tenants.md)
+- [호스팅 서비스 공급자에 대 한 보호 된 패브릭 및 차폐 VM 계획 가이드](guarded-fabric-planning-for-hosters.md) 
+- [Windows Server 2016 가상화 기반 코드 무결성 보호와 호환 되는 하드웨어](guarded-fabric-compatible-hardware-with-virtualization-based-protection-of-code-integrity.md)
+- [테 넌 트 용 보호 된 패브릭 및 차폐 VM 계획 가이드](guarded-fabric-shielded-vm-planning-for-tenants.md)

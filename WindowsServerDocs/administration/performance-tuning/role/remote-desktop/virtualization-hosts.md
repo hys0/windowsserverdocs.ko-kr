@@ -1,18 +1,18 @@
 ---
 title: 원격 데스크톱 가상화 호스트 성능 조정
 description: 원격 데스크톱 가상화 호스트에 대 한 성능 조정
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: HammadBu; VladmiS
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 24e3243d4e9791c8941729d396e0a96cd8b11a7d
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 6aad1560fa9f9429af94426487d9a33369137ded
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70866435"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71370032"
 ---
 # <a name="performance-tuning-remote-desktop-virtualization-hosts"></a>원격 데스크톱 가상화 호스트 성능 조정
 
@@ -129,7 +129,7 @@ RemoteFX 사용 서버에서 시스템은 가상 GPU 사용 가상 데스크톱 
 
 -   **VRAM 사용 중이 아닌** 전용 비디오 메모리의 GPU 크기 당 사용 가능한 MB
 
--   **VRAM RemoteFX 용으로 예약** 된 전용 비디오 메모리의 GPU 당 예약 된 비율 (%)
+-   **VRAM No__t 예약 된 전용 비디오 메모리의 0% (GPU 당 예약 됨)
 
 **RemoteFX 소프트웨어**
 

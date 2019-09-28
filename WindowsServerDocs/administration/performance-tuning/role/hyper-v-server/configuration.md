@@ -1,18 +1,18 @@
 ---
 title: Hyper-V 구성
 description: 성능 조정을 위한 hyper-v 구성 고려 사항
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: Asmahi; SandySp; JoPoulso
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 0c608d3762c45a0b1478bcb3303159feef963291
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: f21115265ca7d2788fc0be078860048602d82c0f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70866618"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71370162"
 ---
 # <a name="hyper-v-configuration"></a>Hyper-V 구성
 
@@ -76,11 +76,11 @@ Hyper-v는 가상화 서버의 동작에 대 한 특징을 규정 하 고 리소
 
 항상 Hyper-v 하이퍼바이저 논리 프로세서 성능 카운터를 사용 하 여 물리적 시스템의 CPU 사용량을 측정 해야 합니다. 작업 관리자 및 성능 모니터에서 루트 및 자식 파티션에 보고 하는 CPU 사용률 카운터는 실제 실제 CPU 사용량을 반영 하지 않습니다. 성능을 모니터링 하려면 다음 성능 카운터를 사용 합니다.
 
-- **Hyper-v 하이퍼바이저 논리 프로세서 ()%\*총\\실행 시간 (** 논리 프로세서의 비 유휴 시간)
+- **Hyper-v 하이퍼바이저 논리적 프로세서 (\*) @no__t 총 실행 시간 2%** 논리적 프로세서의 유휴 상태가 아닌 총 시간
 
-- **Hyper-v 하이퍼바이저 논리 프로세서 (\*)\\% 게스트 런타임** 게스트 내에서 또는 호스트 내에서 주기를 실행 하는 데 걸린 시간
+- **Hyper-v 하이퍼바이저 논리적 프로세서 (\*) \\% 게스트 실행 시간** 게스트 또는 호스트 내에서 주기를 실행 하는 데 걸린 시간
 
-- **Hyper-v 하이퍼바이저 논리적 프로세서 (\*)\\% 하이퍼바이저 런타임** 내에서 실행 하는 데 걸린 시간
+- **Hyper-v 하이퍼바이저 논리적 프로세서 (\*) \\% 하이퍼바이저 실행 시간** 하이퍼바이저 내에서 실행 하는 데 걸린 시간
 
 - **Hyper-v 하이퍼바이저 루트 가상\*프로세서 ()\\\\** * 루트 파티션의 CPU 사용량을 측정 합니다.
 

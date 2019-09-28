@@ -1,7 +1,7 @@
 ---
 ms.assetid: c91c7196-ee0d-4856-8cfb-4c38494ccf1f
 title: 클라우드 폴더 개요
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage-work-folders
 ms.topic: article
 author: JasonGerend
@@ -9,12 +9,12 @@ manager: dougkim
 ms.author: jgerend
 ms.date: 06/07/2019
 description: 클라우드 폴더 개요 - 사용자가 PC와 디바이스에서 일관적인 방법으로 작업 파일에 액세스할 수 있게 해주는 Windows Server의 서버 역할입니다.
-ms.openlocfilehash: 1313c49982cb85b5cce1e9a442ff0c622c6be272
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.openlocfilehash: 69c7319bf1bf777c2a06d4c3a0025220aa4b819d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66812569"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71365685"
 ---
 # <a name="work-folders-overview"></a>클라우드 폴더 개요
 
@@ -22,13 +22,13 @@ ms.locfileid: "66812569"
 
 이 항목에서는 Windows Server를 실행하는 파일 서버에 대한 역할 서비스로써 사용자가 PC와 디바이스에서 일관적인 방법으로 작업 파일에 액세스할 수 있게 해주는 클라우드 폴더에 대해 알아봅니다.  
   
-다운로드 하 여 클라우드 폴더를 사용 하 여 Windows 10, Windows 7, Android 또는 iOS 장치에 원하는 경우 다음을 참조 합니다.
+Windows 10, Windows 7 또는 Android 또는 iOS 장치에서 클라우드 폴더를 다운로드 하거나 사용 하려는 경우 다음을 참조 하세요.
 
-- [Windows 10 용 작업 폴더](https://support.microsoft.com/help/12370/windows-10-work-folders)
-- [Windows 7 용 작업 폴더 (64 비트 다운로드)](https://www.microsoft.com/download/details.aspx?id=42558)
-- [Windows 7 용 작업 폴더 (32 비트 다운로드)](https://www.microsoft.com/download/details.aspx?id=42559)
-- [IOS 용 작업 폴더](https://itunes.apple.com/app/work-folders/id950878067)
-- [Android 용 작업 폴더](https://play.google.com/store/apps/details?id=com.microsoft.workfolders)
+- [Windows 10 용 클라우드 폴더](https://support.microsoft.com/help/12370/windows-10-work-folders)
+- [Windows 7 용 클라우드 폴더 (64 비트 다운로드)](https://www.microsoft.com/download/details.aspx?id=42558)
+- [Windows 7 용 클라우드 폴더 (32 비트 다운로드)](https://www.microsoft.com/download/details.aspx?id=42559)
+- [IOS 용 클라우드 폴더](https://itunes.apple.com/app/work-folders/id950878067)
+- [Android 용 클라우드 폴더](https://play.google.com/store/apps/details?id=com.microsoft.workfolders)
 
 ## <a name="role-description"></a>역할 설명
 
@@ -70,7 +70,7 @@ ms.locfileid: "66812569"
 | 기능 | 새로운 기능 또는 업데이트된 기능 | 설명 |
 | ---------------------------- | --------------------- | ----------------- |
 | Azure AD 응용 프로그램 프록시 지원 | Windows 10 버전 1703, Android, iOS에 추가 | 원격 사용자가 Azure AD 응용 프로그램 프록시를 사용하여 클라우드 폴더 서버에 있는 자신의 파일에 안전하게 액세스할 수 있습니다. |
-| 더 빠르게 변경 내용 복제 | Windows 10 및 Windows Server 2016에서 업데이트된 기능 | Windows Server 2012 R2의 경우 파일 변경을 작업 폴더 서버와 동기화하면 클라이언트는 해당 변경에 대해 알리지 않고 업데이트될 때까지 최대 10분을 기다립니다. Windows Server 2016을 사용 하는 경우 작업 폴더 서버가 즉시 Windows 10 클라이언트 알리고 파일 변경 내용이 즉시 동기화 합니다. 이 기능은 Windows Server 2016의 새로운 기능이며 Windows 10 클라이언트가 필요합니다. 이전 클라이언트를 사용하거나 클라우드 폴더 서버가 Windows Server 2012 R2인 경우 클라이언트가 10분마다 변경 내용을 계속 폴링합니다. |  
+| 더 빠르게 변경 내용 복제 | Windows 10 및 Windows Server 2016에서 업데이트된 기능 | Windows Server 2012 R2의 경우 파일 변경을 작업 폴더 서버와 동기화하면 클라이언트는 해당 변경에 대해 알리지 않고 업데이트될 때까지 최대 10분을 기다립니다. Windows Server 2016를 사용 하는 경우 클라우드 폴더 서버는 즉시 Windows 10 클라이언트에 알리고 파일 변경 내용이 즉시 동기화 됩니다. 이 기능은 Windows Server 2016의 새로운 기능이며 Windows 10 클라이언트가 필요합니다. 이전 클라이언트를 사용하거나 클라우드 폴더 서버가 Windows Server 2012 R2인 경우 클라이언트가 10분마다 변경 내용을 계속 폴링합니다. |  
 | WIP(Windows Information Protection)와 통합 | Windows 10 버전 1607에 추가 | 관리자가 WIP를 배포하면 클라우드 폴더는 PC의 데이터를 암호화하여 데이터 보호를 적용할 수 있습니다. 암호화에는 엔터프라이즈 ID와 연결된 키가 사용되며, 이 키는 Microsoft Intune 등의 지원되는 모바일 디바이스 관리 패키지를 사용하여 원격으로 지울 수 있습니다. |  
 | Microsoft Office 통합 | Windows 10 버전 1511에 추가 | Windows 8.1에서는 이 PC를 클릭하거나 탭한 후 PC의 클라우드 폴더 위치를 탐색하여 Office 앱 내부에서 클라우드 폴더를 탐색할 수 있습니다. Windows 10에서는 파일을 저장하거나 열 때 Office가 표시하는 위치 목록에 클라우드 폴더를 추가하면 훨씬 간편하게 클라우드 폴더로 이동할 수 있습니다. 자세한 내용은 [Windows 10의 클라우드 폴더](https://windows.microsoft.com/windows-10/work-folders-in-windows-10) 및  [Troubleshooting using Work Folders as a Place in Microsoft Office(클라우드 폴더를 Microsoft Office의 장소로 사용할 때의 문제 해결](https://social.technet.microsoft.com/wiki/contents/articles/32881.troubleshooting-using-work-folders-as-a-place-in-microsoft-office.aspx)를 참조하세요. |  
   
@@ -78,7 +78,7 @@ ms.locfileid: "66812569"
 
 클라우드 폴더에는 파일 서버와 네트워크 인프라에 대한 다음과 같은 소프트웨어 요구 사항이 있습니다.  
   
--   사용자 파일을 사용 하 여 공유 동기화 호스팅에 대 한 Windows Server 2012 R2 또는 Windows Server 2016, Windows Server 2019를 실행 하는 서버,  
+-   사용자 파일과의 동기화 공유를 호스팅하기 위한 windows Server 2019, Windows Server 2016 또는 Windows Server 2012 r 2를 실행 하는 서버  
   
 -   사용자 파일을 저장하기 위한 NTFS 파일 시스템으로 포맷된 볼륨  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66812569"
 
 -   클라우드 폴더를 호스팅할 각 파일 서버에 대한 서버 인증서가 있어야 합니다. 이러한 인증서는 사용자가 신뢰할 수 있는 CA(인증 기관)(공용 CA가 가장 적합)에서 발급한 것이어야 합니다.
 
--   (선택 사항) 여러 파일 서버를 사용 하는 경우 자동으로 참조할 Pc 및 장치에서 올바른 파일 서버를 지원 하기 위해 Windows Server 2012 r2에서 스키마 확장을 사용 하 여 Active Directory Domain Services 포리스트를 합니다.  
+-   필드 여러 파일 서버를 사용할 때 Pc 및 장치를 올바른 파일 서버에 자동으로 참조 하는 기능을 지원 하기 위해 Windows Server 2012 r 2의 스키마 확장이 포함 된 Active Directory Domain Services 포리스트입니다.  
   
 사용자가 인터넷을 통해 동기화할 수 있도록 하려면 다음과 같은 추가 요구 사항을 충족해야 합니다.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "66812569"
   
 -   Windows 7 PC에서 다음 Windows 버전 중 하나를 실행해야 합니다.  
   
-    -   Windows 7 Professional  
+    -   Windows 7 Professional  
   
     -   Windows 7 Ultimate  
   
@@ -137,7 +137,7 @@ ms.locfileid: "66812569"
 | | 클라우드 폴더 | 오프라인 파일 | 비즈니스용 OneDrive | OneDrive |
 | - | ------------------ | ------------------- | -------------------------- | -------------- |
 | **기술 요약** | 파일 서버에 저장된 파일을 PC 및 디바이스와 동기화 | 파일 서버에 저장된 파일을 회사 네트워크에 액세스할 수 있는 PC와 동기화(클라우드 폴더로 대체 가능) | Office 365 또는 SharePoint에 저장된 파일을 회사 네트워크 내부 또는 외부의 PC 및 디바이스와 동기화하고 문서 공동 작업 기능 제공 | OneDrive에 저장된 파일을 PC, Mac 컴퓨터 및 디바이스와 동기화 |
-| **작업 파일에 대 한 사용자 액세스를 제공 하기 위한** | 예 | 예 | 예 | 아니요 |
+| **작업 파일에 대 한 사용자 액세스를 제공 하기 위한 것입니다.** | 예 | 예 | 예 | 아니요 |
 | **클라우드 서비스** | 없음 | 없음 | Office 365 | Microsoft OneDrive |
 | **내부 네트워크 서버** | Windows Server 2012 R2 또는 Windows Server 2016을 실행하는 파일 서버 | 파일 서버 | SharePoint 서버(선택 사항) | 없음 |
 | **지원 되는 클라이언트** | PC, iOS, Android | 회사 네트워크의 PC 또는 DirectAccess, VPN, 기타 원격 액세스 기술을 통해 연결된 PC | PC, iOS, Android, Windows Phone | PC, Mac 컴퓨터, Windows Phone, iOS, Android |
@@ -167,9 +167,9 @@ Windows Azure 가상 컴퓨터를 시작하는 방법에 대해 자세히 알아
   
 | 콘텐츠 형식 | 참조 |
 | ------------------ | ---------------- |
-| **제품 평가** | -   [Android-에 대 한 작업 폴더 릴리스됨](https://blogs.technet.microsoft.com/filecab/2016/03/16/work-folders-for-android-released) (블로그 게시물)<br />-   [IPad 앱 릴리스 – iOS에 대 한 작업 폴더](https://blogs.technet.com/b/filecab/archive/2015/01/16/work-folders-for-ios-ipad-app-release.aspx) (블로그 게시물)<br />-   [Windows Server 2012 R2의 클라우드 폴더 소개](http://blogs.technet.com/b/filecab/archive/2013/07/09/introducing-work-folders-on-windows-server-2012-r2.aspx) (블로그 게시물)<br />-   [클라우드 폴더 소개](http://channel9.msdn.com/posts/Introduction-to-Work-Folders) (채널 9 비디오)<br />-   [클라우드 폴더 테스트 랩 배포](http://blogs.technet.com/b/filecab/archive/2013/07/10/work-folders-test-lab-deployment.aspx) (블로그 게시물)<br />-   [Windows 7 용 폴더 클라우드](http://blogs.technet.com/b/filecab/archive/2014/04/24/work-folders-for-windows-7.aspx) (블로그 게시물) |
-| **배포** | -   [클라우드 폴더 구현 디자인](plan-work-folders.md)<br />-   [클라우드 폴더 배포](deploy-work-folders.md)<br />-   [AD FS 및 WAP (웹 응용 프로그램 프록시)를 사용 하 여 클라우드 폴더 배포](deploy-work-folders-adfs-overview.md)<br />-   [Azure AD 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포](https://blogs.technet.microsoft.com/filecab/2017/05/31/enable-remote-access-to-work-folders-using-azure-active-directory-application-proxy/)<br />- [오프 라인 파일 (CSC) 작업 폴더 마이그레이션 가이드](https://blogs.technet.microsoft.com/filecab/2016/08/12/offline-files-csc-to-work-folders-migration-guide/)<br />-   [클라우드 폴더 배포를 위한 성능 고려 사항](https://blogs.technet.com/b/filecab/archive/2013/11/01/performance-considerations-for-large-scale-work-folders-deployments.aspx)<br />-   [Windows 7 용 작업 폴더 (64 비트 다운로드)](https://www.microsoft.com/download/details.aspx?id=42558)<br />-   [Windows 7 용 작업 폴더 (32 비트 다운로드)](https://www.microsoft.com/download/details.aspx?id=42559) |
-| **작업** | -   [작업 폴더 iPad 앱: FAQ](https://windows.microsoft.com/windows/work-folders-ipad-faq) (사용자 용)<br />-   [작업 폴더 인증서 관리](https://blogs.technet.com/b/filecab/archive/2013/08/09/work-folders-certificate-management.aspx) (블로그 게시물)<br />-   [Windows Server 2012 R2의 클라우드 폴더 배포를 모니터링](https://blogs.technet.com/b/filecab/archive/2013/10/15/monitoring-windows-server-2012-r2-work-folders-deployments.aspx) (블로그 게시물)<br />-   [Windows PowerShell의 SyncShare (작업 폴더) Cmdlet](https://docs.microsoft.com/powershell/module/syncshare/?view=win10-ps)<br />-   [Windows Server 2012 R2 미리 보기 버전에 대 한 빠른 참조 카드 저장소 및 파일 서비스 PowerShell Cmdlet](http://blogs.technet.com/b/filecab/archive/2013/07/30/storage-and-file-services-powershell-cmdlets-quick-reference-card-for-windows-server-2012-r2-preview-edition.aspx) |
-| **문제 해결** | -   [Windows Server 2012 R2 – IIS 웹 사이트 클라우드 폴더와 Resolving 포트 충돌이](https://blogs.technet.com/b/filecab/archive/2013/10/15/windows-server-2012-r2-resolving-port-conflict-with-iis-websites-and-work-folders.aspx) (블로그 게시물)<br />-   [클라우드 폴더에 있는 일반적인 오류](https://social.technet.microsoft.com/wiki/contents/articles/30578.common-errors-in-work-folders.aspx) |
-| **커뮤니티 리소스** | -   [파일 서비스 및 저장소 포럼](https://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserverfiles)<br />-   [Microsoft-파일 캐비닛 블로그 저장소 팀](http://blogs.technet.com/b/filecab/)<br />-   [디렉터리 서비스 팀 블로그에 요청](http://blogs.technet.com/b/askds/) |  
-| **관련 기술** | -   [Windows Server 2016의 저장소](../storage.md)<br>-   [File and Storage Services](https://technet.microsoft.com/library/hh831487(v=ws.11).aspx)<br />-   [파일 서버 리소스 관리자](https://technet.microsoft.com/library/hh831701(v=ws.11).aspx)<br />-   [폴더 리디렉션, 오프 라인 파일 및 로밍 사용자 프로필](https://technet.microsoft.com/library/hh848267(v=ws.11).aspx)<br />-   [BranchCache](https://technet.microsoft.com/library/hh831696(v=ws.11).aspx)<br />-   [DFS 네임 스페이스 및 DFS 복제](https://technet.microsoft.com/library/jj127250(v=ws.11).aspx) |
+| **제품 평가** | @no__t-[Android 용 작업 폴더 0 – 릴리스](https://blogs.technet.microsoft.com/filecab/2016/03/16/work-folders-for-android-released) (블로그 게시물)<br />@no__t-[iOS 용 작업 폴더 0 – IPad 앱 릴리스](https://blogs.technet.com/b/filecab/archive/2015/01/16/work-folders-for-ios-ipad-app-release.aspx) (블로그 게시물)<br />-   [Windows Server 2012 r 2의 클라우드 폴더 소개](http://blogs.technet.com/b/filecab/archive/2013/07/09/introducing-work-folders-on-windows-server-2012-r2.aspx) (블로그 게시물)<br />-   [클라우드 폴더 소개](http://channel9.msdn.com/posts/Introduction-to-Work-Folders) (Channel 9 비디오)<br />-   [클라우드 폴더 테스트 랩 배포](http://blogs.technet.com/b/filecab/archive/2013/07/10/work-folders-test-lab-deployment.aspx) (블로그 게시물)<br />@no__t-[Windows 7 용 작업 폴더](http://blogs.technet.com/b/filecab/archive/2014/04/24/work-folders-for-windows-7.aspx) (블로그 게시물) |
+| **배포** | -   [클라우드 폴더 구현 디자인](plan-work-folders.md)<br />-   [클라우드 폴더 배포](deploy-work-folders.md)<br />-   [AD FS 및 WAP (웹 응용 프로그램 프록시)를 사용 하 여 클라우드 폴더 배포](deploy-work-folders-adfs-overview.md)<br />-   [Azure AD 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포](https://blogs.technet.microsoft.com/filecab/2017/05/31/enable-remote-access-to-work-folders-using-azure-active-directory-application-proxy/)<br />- [오프라인 파일 (CSC)-클라우드 폴더 마이그레이션 가이드](https://blogs.technet.microsoft.com/filecab/2016/08/12/offline-files-csc-to-work-folders-migration-guide/)<br />[작업 폴더 배포에 대 한 -    성능 고려 사항](https://blogs.technet.com/b/filecab/archive/2013/11/01/performance-considerations-for-large-scale-work-folders-deployments.aspx)<br />@no__t-[Windows 7 용 작업 폴더 (64 비트 다운로드)](https://www.microsoft.com/download/details.aspx?id=42558)<br />@no__t-[Windows 7 용 작업 폴더 (32 비트 다운로드)](https://www.microsoft.com/download/details.aspx?id=42559) |
+| **작업** | -    @ no__t-1 클라우드 폴더 iPad 앱: Q @ no__t-0 (사용자의 경우)<br />-   [클라우드 폴더 인증서 관리](https://blogs.technet.com/b/filecab/archive/2013/08/09/work-folders-certificate-management.aspx) (블로그 게시물)<br />-   [모니터링 Windows Server 2012 R2 클라우드 폴더 배포](https://blogs.technet.com/b/filecab/archive/2013/10/15/monitoring-windows-server-2012-r2-work-folders-deployments.aspx) (블로그 게시물)<br />[Windows PowerShell의 -    Syncshare (작업 폴더) cmdlet](https://docs.microsoft.com/powershell/module/syncshare/?view=win10-ps)<br />-   [저장소 및 파일 서비스 PowerShell Cmdlet Windows Server 2012 R2 Preview 버전용 빠른 참조 카드](http://blogs.technet.com/b/filecab/archive/2013/07/30/storage-and-file-services-powershell-cmdlets-quick-reference-card-for-windows-server-2012-r2-preview-edition.aspx) |
+| **문제 해결** | -   [Windows Server 2012 R2 – IIS 웹 사이트 및 작업 폴더와의 포트 충돌 해결](https://blogs.technet.com/b/filecab/archive/2013/10/15/windows-server-2012-r2-resolving-port-conflict-with-iis-websites-and-work-folders.aspx) (블로그 게시물)<br />@no__t-[작업 폴더의 일반적인 오류](https://social.technet.microsoft.com/wiki/contents/articles/30578.common-errors-in-work-folders.aspx) 0 개 |
+| **커뮤니티 리소스** | -   [파일 서비스 및 저장소 포럼](https://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserverfiles)<br />[Microsoft-파일 캐비닛 블로그의 저장소 팀](http://blogs.technet.com/b/filecab/) -   <br />-   [디렉터리 서비스 팀 블로그에 요청](http://blogs.technet.com/b/askds/) |  
+| **관련 기술** | -   -[Windows Server 2016 저장소](../storage.md)<br>-   [파일 및 저장소 서비스](https://technet.microsoft.com/library/hh831487(v=ws.11).aspx)<br />-   [파일 서버 리소스 관리자](https://technet.microsoft.com/library/hh831701(v=ws.11).aspx)<br />-   [폴더 리디렉션, 오프라인 파일 및 로밍 사용자 프로필](https://technet.microsoft.com/library/hh848267(v=ws.11).aspx)<br />-   [BranchCache](https://technet.microsoft.com/library/hh831696(v=ws.11).aspx)<br />-   [DFS 네임 스페이스 및 DFS 복제](https://technet.microsoft.com/library/jj127250(v=ws.11).aspx) |

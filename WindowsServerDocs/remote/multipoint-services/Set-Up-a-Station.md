@@ -2,7 +2,7 @@
 title: 스테이션 설치
 description: MultiPoint 서비스에서 스테이션을 설정 하는 방법을 알아봅니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: 043b0d8dba844f40569a854a4f4f2a2efb38a870
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 95a332a3d15e82047b46cc19f168f945cdb334d2
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871615"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71389449"
 ---
 # <a name="set-up-a-station"></a>스테이션 설치
 일반적으로 MultiPoint 서비스 *스테이션*은 *스테이션 허브*, 마우스, 키보드 및 비디오 모니터로 구성됩니다. 이 항목에서는 MultiPoint 서비스 스테이션을 만들기 위해 하드웨어 장치를 스테이션 허브에 연결하는 방법을 설명합니다.  

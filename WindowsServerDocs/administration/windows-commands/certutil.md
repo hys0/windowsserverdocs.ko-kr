@@ -2,7 +2,7 @@
 title: certutil
 description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3bc1e544c0e0684678bc168f286b52e5573f3ac2
-ms.sourcegitcommit: 286e3181ebd2cb9d7dc7fe651858a4e0d61d153f
+ms.openlocfilehash: 45c9946cc53fe3a901c3f6ee53f082a5b3d086c0
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68300680"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71379655"
 ---
 # <a name="certutil"></a>certutil
 
@@ -516,7 +516,7 @@ CertUtil [옵션]-보기 [큐 | 로그 | LogFail | 해지 됨 | Ext | 특성 | C
 
 로그 발급 되거나 해지 된 인증서 및 실패 한 요청
 
-LogFail: 실패 한 요청
+LogFail: 실패한 요청
 
 됨 해지 된 인증서
 
@@ -1168,7 +1168,7 @@ CertUtil [Options] -DCInfo [Domain] [Verify | DeleteBad | DeleteAll]
 [-f] [-user] [-urlfetch] [-dc DCName] [-t 제한 시간]
 
 > [!TIP]
-> Active Directory Domain Services (AD DS) 도메인을 지정 **하 고 도메인** 컨트롤러 ( **-dc**)를 지정 하는 기능은 Windows Server 2012에 추가 되었습니다. 명령을 성공적으로 실행 하려면의 구성원 인 계정을 사용 해야 **Domain Admins** 또는 **Enterprise Admins**합니다. 이 명령의 동작 수정 작업은 다음과 같습니다.</br>> 1.  도메인을 지정 하지 않으면 특정 도메인 컨트롤러를 지정 하지 않은 경우이 옵션의 기본 도메인 컨트롤러에서 처리 하는 도메인 컨트롤러의 목록을 반환 합니다.</br>> 2.  도메인을 지정 하지 않으면, 도메인 컨트롤러는 지정 하는 경우 지정된 된 도메인 컨트롤러에는 인증서의 보고서가 생성 됩니다.</br>> 3.  도메인을 지정 하는 경우 도메인 컨트롤러를 지정 하지 않으면 보고서 목록에서 각 도메인 컨트롤러에 대 한 인증서와 함께 도메인 컨트롤러 목록이 생성 됩니다.</br>> 4.  도메인 및 도메인 컨트롤러를 지정 하는 경우 대상된 도메인 컨트롤러에서 도메인 컨트롤러 목록이 생성 됩니다. 목록에서 각 도메인 컨트롤러에 대 한 인증서에 대 한 보고서도 생성 됩니다.
+> Active Directory Domain Services (AD DS) **도메인을 지정 하 고 도메인** 컨트롤러 ( **-dc**)를 지정 하는 기능은 Windows Server 2012에 추가 되었습니다. 명령을 성공적으로 실행 하려면의 구성원 인 계정을 사용 해야 **Domain Admins** 또는 **Enterprise Admins**합니다. 이 명령의 동작 수정 작업은 다음과 같습니다.</br>> 1.  도메인을 지정 하지 않으면 특정 도메인 컨트롤러를 지정 하지 않은 경우이 옵션의 기본 도메인 컨트롤러에서 처리 하는 도메인 컨트롤러의 목록을 반환 합니다.</br>> 2.  도메인을 지정 하지 않으면, 도메인 컨트롤러는 지정 하는 경우 지정된 된 도메인 컨트롤러에는 인증서의 보고서가 생성 됩니다.</br>> 3.  도메인을 지정 하는 경우 도메인 컨트롤러를 지정 하지 않으면 보고서 목록에서 각 도메인 컨트롤러에 대 한 인증서와 함께 도메인 컨트롤러 목록이 생성 됩니다.</br>> 4.  도메인 및 도메인 컨트롤러를 지정 하는 경우 대상된 도메인 컨트롤러에서 도메인 컨트롤러 목록이 생성 됩니다. 목록에서 각 도메인 컨트롤러에 대 한 인증서에 대 한 보고서도 생성 됩니다.
 
 예를 들어 CPANDL-d c 1 이라는 도메인 컨트롤러와 CPANDL 라는 도메인이 가정 합니다. 다음 명령을 실행 하 여 CPANDL-DC1: certutil-dc CPANDL-dc1-dcinfo CPANDL에서 도메인 컨트롤러 및 해당 인증서 목록을 검색할 수 있습니다.
 
@@ -1208,7 +1208,7 @@ CRYPT_DELETEKEYSET: 스마트 카드에서 모든 키 삭제
 
 CertUtil [옵션]-SCRoots 업데이트 [+] [InputRootFile] [ReaderName]
 
-CertUtil [옵션]-scroots 저장 \@outputrootfile [readername]
+CertUtil [옵션]-SCRoots save \@OutputRootFile [ReaderName]
 
 CertUtil [옵션]-SCRoots 뷰 [InputRootFile | 판독기 이름
 
@@ -1308,7 +1308,7 @@ CertDir: CTL 항목과 일치 하는 인증서를 포함 하는 폴더입니다.
 
 ## <a name="-sign"></a>-기호
 
-CertUtil [옵션]-InFileList 서명 | 일련의 CRL OutFileList [SerialNumberList + dd: hh] [+ |-SerialNumberList |-수정 | \@Extensionfile]
+CertUtil [옵션]-InFileList 서명 | 일련의 CRL OutFileList [SerialNumberList + dd: hh] [+ |-SerialNumberList |-수정 | \@ExtensionFile]
 
 CertUtil [Options] -sign InFileList|SerialNumber|CRL OutFileList [#HashAlgorithm] [+AlternateSignatureAlgorithm | -AlternateSignatureAlgorithm]
 

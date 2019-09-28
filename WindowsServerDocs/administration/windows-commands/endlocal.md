@@ -1,8 +1,8 @@
 ---
 title: endlocal
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3e516b2bf9e8a45ada910dfbd93e3ed5e7d86c14
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 16d2b7b445a2220a10f88f21029948ed10ee96e4
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59862144"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71377566"
 ---
 # <a name="endlocal"></a>endlocal
 
@@ -49,7 +49,7 @@ endlocal
 > [!NOTE]
 > 명령 확장을 사용 하도록 설정 하는 방법에 대 한 자세한 내용은 참조 [Cmd](cmd.md)합니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 배치 파일에서 환경 변수를 지역화할 수 있습니다. 예를 들어 다음 프로그램 superapp 일괄 프로그램 네트워크에서 시작 되 고 출력 파일을 고 메모장에서 파일을 표시.
 ```

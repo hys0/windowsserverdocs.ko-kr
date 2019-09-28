@@ -3,7 +3,7 @@ title: MultiPoint 스테이션
 description: 사용자를 위한 다양 한 옵션을 포함 하 여 MultiPoint 서비스의 스테이션에 대해 알아보기
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ ms.assetid: f9f9d618-ccfe-41ea-a52c-00c3c7adb51a
 author: evaseydl
 manager: scottman
 ms.author: evas
-ms.openlocfilehash: 4aa08f58f8fdf6d6fce816ee090275b0bf46a844
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 7b8f757d552bf54cd7f4eed0783ba8e0062b9d30
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871632"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71405073"
 ---
 # <a name="multipoint--stations"></a>MultiPoint 스테이션
 MultiPoint 서비스 시스템 환경에서는 *스테이션* MultiPoint Service를 실행 하는 컴퓨터에 연결 하기 위한 사용자 끝점입니다. 각 스테이션은 사용자에 게 독립적인 Windows 10 환경을 제공 합니다. 다음 스테이션 유형이 지원 됩니다.  

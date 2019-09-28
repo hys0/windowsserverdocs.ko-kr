@@ -1,7 +1,7 @@
 ---
-title: Windows Server에서 Hyper-v에 대 한 시스템 요구 사항
-description: Windows Server의 Hyper-v에 대 한 하드웨어 및 펌웨어 요구 사항을 나열합니다.
-ms.prod: windows-server-threshold
+title: Windows Server의 Hyper-v에 대 한 시스템 요구 사항
+description: Windows Server의 Hyper-v에 대 한 하드웨어 및 펌웨어 요구 사항을 나열 합니다.
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -11,14 +11,14 @@ ms.assetid: bc4a4971-f727-40cd-91f5-2ee6d24b54cb
 author: KBDAzure
 ms.author: kathydav
 ms.date: 9/30/2016
-ms.openlocfilehash: 97fb1b9003705ba8ad26c2b3e71eda34e88642ee
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.openlocfilehash: fabaa1933fef836bb6ce3fc01badf337b832d072
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66812619"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71365444"
 ---
-# <a name="system-requirements-for-hyper-v-on-windows-server"></a>Windows Server에서 Hyper-v에 대 한 시스템 요구 사항
+# <a name="system-requirements-for-hyper-v-on-windows-server"></a>Windows Server의 Hyper-v에 대 한 시스템 요구 사항
 
 >적용 대상: Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
 
@@ -56,7 +56,7 @@ Systeminfo.exe
 
 ## <a name="requirements-for-specific-features"></a>특정 기능에 대 한 요구 사항
 
-개별 장치 할당 및 차폐 가상 컴퓨터에 대 한 요구 사항은 다음과 같습니다. 이러한 기능 설명은 참조 하십시오 [Windows Server에서 Hyper-v의 새로운 기능](What-s-new-in-Hyper-V-on-Windows.md)합니다.
+개별 장치 할당 및 차폐 가상 컴퓨터에 대 한 요구 사항은 다음과 같습니다. 이러한 기능에 대 한 설명은 [Windows Server에서 hyper-v의 새로운](What-s-new-in-Hyper-V-on-Windows.md)기능을 참조 하세요.
 
 ### <a name="discrete-device-assignment"></a>개별 장치 할당
 
@@ -78,7 +78,7 @@ Systeminfo.exe
 
 ### <a name="shielded-virtual-machines"></a>실드 된 가상 컴퓨터
 
-이러한 가상 머신은 가상화 기반 보안을 사용 되며 Windows Server 2016부터 사용할 수 있습니다.
+이러한 가상 머신은 가상화 기반 보안을 사용 하며 Windows Server 2016부터 사용할 수 있습니다.
 
 **호스트** 요구 사항이 있습니다.
 
@@ -92,5 +92,5 @@ Systeminfo.exe
 **가상 컴퓨터** 요구 사항이 있습니다.
 
 - 2세대
-- Windows Server 2012 또는 게스트 운영 체제를 최신 버전
+- 게스트 운영 체제의 Windows Server 2012 이상
 

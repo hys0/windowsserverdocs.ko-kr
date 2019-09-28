@@ -1,7 +1,7 @@
 ---
 title: NPS 서버 설치 및 구성
 description: VPN 서버에서 전송 하는 연결 요청에 대 한 NPS 서버 처리는 사용자에 게 연결 권한이 있는지 확인 하 고, 사용자의 id를 확인 하 고, NPS에서 RADIUS 계정을 구성할 때 선택한 연결 요청의 측면을 기록 합니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: ''
@@ -9,12 +9,12 @@ ms.localizationpriority: medium
 ms.author: pashort
 author: shortpatti
 ms.date: 08/30/2018
-ms.openlocfilehash: 553f3327e6252d2b03744b2e0fc88f340701f3a9
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 5cb0d342afec9c28259efb7a2e15666358f3cb5b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871327"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71404256"
 ---
 # <a name="step-4-install-and-configure-the-network-policy-server-nps"></a>4단계. NPS (네트워크 정책 서버) 설치 및 구성
 

@@ -2,7 +2,7 @@
 title: 관리 서비스 계정 그룹 시작하기
 description: Windows Server 보안
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: security-gmsa
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: 3d07f137aa40b26b4f4fd69c050415b82608ed7e
-ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
+ms.openlocfilehash: 8086ce329c532e07363fd22fe424a9a1dda04250
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69546361"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71386890"
 ---
 # <a name="getting-started-with-group-managed-service-accounts"></a>관리 서비스 계정 그룹 시작하기
 
@@ -153,9 +153,9 @@ gMSA 기능을 사용하는 서버 팜의 수명 주기에는 일반적으로 �
 
 2.  Windows PowerShell에 대한 명령 프롬프트에서 다음 명령을 입력하고 Enter 키를 누릅니다. Active Directory 모듈이 자동으로 로드됩니다.
 
-    **Uninstall-adserviceaccount [-Name] <string> -DNSHostName <string> [-KerberosEncryptionType <ADKerberosEncryptionType>] [-managedpasswordintervalindays < Nullable [Int32] >] [-PrincipalsAllowedToRetrieveManagedPassword < adprincipal [] >]-SamAccountName <string> -ServicePrincipalNames < string [] >**
+    **Uninstall-adserviceaccount [-Name] <string>-DNSHostName <string> [-KerberosEncryptionType <ADKerberosEncryptionType>] [-ManagedPasswordIntervalInDays < Nullable [Int32] >] [-PrincipalsAllowedToRetrieveManagedPassword < ADPrincipal [] >]-SamAccountName <string>-ServicePrincipalNames < string [] >**
 
-    |매개 변수|String|예제|
+    |매개 변수|문자열|예제|
     |-------|-----|------|
     |이름|계정 이름|ITFarm1|
     |DNSHostName|서비스의 DNS 호스트 이름|ITFarm1.contoso.com|
@@ -185,9 +185,9 @@ gMSA 기능을 사용하는 서버 팜의 수명 주기에는 일반적으로 �
 
 2.  Windows PowerShell Active Directory 모듈에 대한 명령 프롬프트에서 다음 명령을 입력하고 Enter 키를 누릅니다.
 
-    **Uninstall-adserviceaccount [-Name] <string> -RestrictToOutboundAuthenticationOnly [-managedpasswordintervalindays < Nullable [Int32] >] [-PrincipalsAllowedToRetrieveManagedPassword < adprincipal [] >]**
+    **Uninstall-adserviceaccount [-Name] <string>-RestrictToOutboundAuthenticationOnly [-ManagedPasswordIntervalInDays < Nullable [Int32] >] [-PrincipalsAllowedToRetrieveManagedPassword < ADPrincipal [] >]**
 
-    |매개 변수|String|예제|
+    |매개 변수|문자열|예제|
     |-------|-----|------|
     |이름|계정 이름|ITFarm1|
     |ManagedPasswordIntervalInDays|암호 변경 간격(지정하지 않을 경우 기본값은 30일)|75|
@@ -206,7 +206,7 @@ New-ADServiceAccount ITFarm1 -RestrictToOutboundAuthenticationOnly - PrincipalsA
 ### <a name="BKMK_ConfigureServiceIdentity"></a>2 단계: 서비스 ID 응용 프로그램 서비스 구성
 Windows Server 2012에서 서비스를 구성 하려면 다음 기능 설명서를 참조 하세요.
 
--   IIS 애플리케이션 풀
+-   IIS 응용 프로그램 풀
 
     자세한 내용은 [응용 프로그램 풀의 ID 지정(IIS 7)](https://technet.microsoft.com/library/cc771170(WS.10).aspx)을 참조하세요.
 
@@ -247,13 +247,13 @@ Windows Server 2012에서 서비스를 구성 하려면 다음 기능 설명서�
 
 2.  Windows PowerShell Active Directory 모듈에 대한 명령 프롬프트에서 다음 명령을 입력하고 Enter 키를 누릅니다.
 
-    **Uninstall-adserviceaccount [-Name] <string> -PrincipalsAllowedToRetrieveManagedPassword**
+    **Uninstall-adserviceaccount [-Name] <string>-PrincipalsAllowedToRetrieveManagedPassword**
 
 3.  Windows PowerShell Active Directory 모듈에 대한 명령 프롬프트에서 다음 명령을 입력하고 Enter 키를 누릅니다.
 
-    **Uninstall-adserviceaccount [-Name] <string> -PrincipalsAllowedToRetrieveManagedPassword < adprincipal [] >**
+    **Uninstall-adserviceaccount [-Name] <string>-PrincipalsAllowedToRetrieveManagedPassword < ADPrincipal [] >**
 
-|매개 변수|String|예제|
+|매개 변수|문자열|예제|
 |-------|-----|------|
 |이름|계정 이름|ITFarm1|
 |PrincipalsAllowedToRetrieveManagedPassword|구성원 호스트 또는 구성원 호스트가 속해 있는 보안 그룹의 컴퓨터 계정|Host1, Host2, Host3|
@@ -307,13 +307,13 @@ Windows PowerShell Active Directory 모듈을 열고 Set-ADServiceAccount cmdlet
 
 2.  Windows PowerShell Active Directory 모듈에 대한 명령 프롬프트에서 다음 명령을 입력하고 Enter 키를 누릅니다.
 
-    **Uninstall-adserviceaccount [-Name] <string> -PrincipalsAllowedToRetrieveManagedPassword**
+    **Uninstall-adserviceaccount [-Name] <string>-PrincipalsAllowedToRetrieveManagedPassword**
 
 3.  Windows PowerShell Active Directory 모듈에 대한 명령 프롬프트에서 다음 명령을 입력하고 Enter 키를 누릅니다.
 
-    **Uninstall-adserviceaccount [-Name] <string> -PrincipalsAllowedToRetrieveManagedPassword < adprincipal [] >**
+    **Uninstall-adserviceaccount [-Name] <string>-PrincipalsAllowedToRetrieveManagedPassword < ADPrincipal [] >**
 
-|매개 변수|String|예제|
+|매개 변수|문자열|예제|
 |-------|-----|------|
 |이름|계정 이름|ITFarm1|
 |PrincipalsAllowedToRetrieveManagedPassword|구성원 호스트 또는 구성원 호스트가 속해 있는 보안 그룹의 컴퓨터 계정|Host1, Host3|

@@ -3,7 +3,7 @@ title: Windows PowerShell을 사용하여 네트워크 컨트롤러 배포
 description: 이 항목에서는 하나 이상의 컴퓨터 또는 Windows Server 2016를 실행 하는 가상 컴퓨터 (Vm)에서 네트워크 컨트롤러를 배포 하려면 Windows PowerShell을 사용 하 여 설명 합니다.
 manager: dougkim
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-sdn
@@ -13,21 +13,21 @@ ms.assetid: 2448d381-55aa-4c14-997a-202c537c6727
 ms.author: pashort
 author: shortpatti
 ms.date: 08/23/2018
-ms.openlocfilehash: d671d044896ae9e71edad8302f06f2a21fe50772
-ms.sourcegitcommit: 21165734a0f37c4cd702c275e85c9e7c42d6b3cb
+ms.openlocfilehash: 294466ef70a9ffc230953b48bb292938be519eac
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2019
-ms.locfileid: "65034558"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406114"
 ---
 # <a name="deploy-network-controller-using-windows-powershell"></a>Windows PowerShell을 사용하여 네트워크 컨트롤러 배포
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-이 항목에서는 하나 이상의 가상 머신에서 (Vm) Windows Server 2016을 실행 하는 네트워크 컨트롤러를 배포 하려면 Windows PowerShell을 사용 하 여 지침을 제공 합니다.
+이 항목에서는 windows PowerShell을 사용 하 여 Windows Server 2016를 실행 하는 하나 이상의 Vm (가상 컴퓨터)에 네트워크 컨트롤러를 배포 하는 방법에 대 한 지침을 제공 합니다.
 
 >[!IMPORTANT]
->실제 호스트에서 네트워크 컨트롤러 서버 역할을 배포 하지 않습니다. 네트워크 컨트롤러를 배포 하려면 Hyper-v 가상 컴퓨터에서 네트워크 컨트롤러 서버 역할을 설치 해야 \(VM\) Hyper-v 호스트에 설치 된. 세 가지 다른 하이퍼의 Vm에서 네트워크 컨트롤러를 설치한 후\-V 호스트 Hyper을 사용 하도록 설정 해야\-소프트웨어 정의 네트워킹에 대 한 호스트 \(SDN\) 호스트를 사용 하 여 네트워크 컨트롤러를 추가 하 여 Windows PowerShell 명령 **새로 만들기-NetworkControllerServer**합니다. 이렇게 하면 함수에 SDN 소프트웨어 부하 분산 장치를 사용 하는 합니다. 자세한 내용은 [새로 만들기-NetworkControllerServer](https://technet.microsoft.com/itpro/powershell/windows/network-controller/new-networkcontrollerserver)합니다.
+>실제 호스트에 네트워크 컨트롤러 서버 역할을 배포 하지 마십시오. 네트워크 컨트롤러를 배포 하려면 hyper-v 호스트에 설치 된 Hyper-v 가상 컴퓨터에 네트워크 컨트롤러 서버 역할을 설치 해야 합니다 \(VM @ no__t-1. 3 개의 서로 다른 Hyper-v 호스트의 Vm에 네트워크 컨트롤러를 설치한 후 Windows PowerShell을 사용 하 여 네트워크 컨트롤러에 호스트를 추가 하 여 소프트웨어 정의 네트워킹 \(SDN @ no__t-3에 대 한 하이퍼 @ no__t-1V 호스트를 사용 하도록 설정 해야 합니다. **NetworkControllerServer**명령입니다. 이렇게 하면 SDN 소프트웨어 Load Balancer 기능을 사용할 수 있습니다. 자세한 내용은 [NetworkControllerServer](https://technet.microsoft.com/itpro/powershell/windows/network-controller/new-networkcontrollerserver)를 참조 하세요.
 
 이 항목에는 다음 섹션이 수록되어 있습니다.
 
@@ -47,10 +47,10 @@ ms.locfileid: "65034558"
 
 ## <a name="install-the-network-controller-server-role"></a>네트워크 컨트롤러 서버 역할 설치
 
-이 절차를 사용 하 여 가상 컴퓨터에서 네트워크 컨트롤러 서버 역할을 설치 하려면 \(VM\)합니다.
+이 절차를 사용 하 여 가상 컴퓨터에 네트워크 컨트롤러 서버 역할을 설치할 수 있습니다 \(VM @ no__t-1.
 
 >[!IMPORTANT]
->실제 호스트에서 네트워크 컨트롤러 서버 역할을 배포 하지 않습니다. 네트워크 컨트롤러를 배포 하려면 Hyper-v 가상 컴퓨터에서 네트워크 컨트롤러 서버 역할을 설치 해야 \(VM\) Hyper-v 호스트에 설치 된. 세 가지 다른 하이퍼의 Vm에서 네트워크 컨트롤러를 설치한 후\-V 호스트 Hyper을 사용 하도록 설정 해야\-소프트웨어 정의 네트워킹에 대 한 호스트 \(SDN\) 네트워크 컨트롤러 호스트를 추가 하 여 합니다. 이렇게 하면 함수에 SDN 소프트웨어 부하 분산 장치를 사용 하는 합니다.
+>실제 호스트에 네트워크 컨트롤러 서버 역할을 배포 하지 마십시오. 네트워크 컨트롤러를 배포 하려면 hyper-v 호스트에 설치 된 Hyper-v 가상 컴퓨터에 네트워크 컨트롤러 서버 역할을 설치 해야 합니다 \(VM @ no__t-1. 3 개의 서로 다른 Hyper-v 호스트의 Vm에 네트워크 컨트롤러를 설치한 후 네트워크 컨트롤러에 호스트를 추가 하 여 소프트웨어 정의 네트워킹 \(SDN @ no__t-3에 대 한 하이퍼 @ no__t-1V 호스트를 사용 하도록 설정 해야 합니다. 이렇게 하면 SDN 소프트웨어 Load Balancer 기능을 사용할 수 있습니다.
 
 이 절차를 수행하려면 최소한 **Administrators** 그룹의 구성원이거나 이와 동등한 자격이 있어야 합니다.  
 
@@ -70,13 +70,13 @@ Windows PowerShell을 사용 하 여 네트워크 컨트롤러를 설치 하려�
 네트워크 컨트롤러 클러스터 높은 가용성과 네트워크 컨트롤러 응용 프로그램에 클러스터를 만든 후 구성할 수 있으며, 이렇게 클러스터 위에 호스팅되는 확장성을 제공 합니다.
 
 >[!NOTE]
->수 절차를 수행한 다음 섹션에서 네트워크 컨트롤러를 설치 하거나 실행 하는 원격 컴퓨터에서 절차를 수행 하려면 원격 서버 관리 도구에 대 한 Windows Server 2016을 사용할 수 있는 VM에서 직접 Windows Server 2016 또는 Windows 10입니다. 또한의 멤버 자격이 **관리자**, 또는 이와 동등한이 절차를 수행 하는 데 필요한 최소입니다. 네트워크 컨트롤러를 설치한 VM 또는 컴퓨터 도메인에 가입 된, 사용자 계정에 속해야 **도메인 사용자**합니다.
+>네트워크 컨트롤러를 설치한 VM에서 직접 다음 섹션의 절차를 수행 하거나 Windows Server 2016에 대 한 원격 서버 관리 도구를 사용 하 여를 실행 하는 원격 컴퓨터에서 절차를 수행할 수 있습니다. Windows Server 2016 또는 Windows 10 또한의 멤버 자격이 **관리자**, 또는 이와 동등한이 절차를 수행 하는 데 필요한 최소입니다. 네트워크 컨트롤러를 설치한 VM 또는 컴퓨터 도메인에 가입 된, 사용자 계정에 속해야 **도메인 사용자**합니다.
 
 네트워크 컨트롤러 클러스터 노드 개체를 만들고 다음 클러스터를 구성 하 여 만들 수 있습니다.
 
 ### <a name="create-a-node-object"></a>노드 개체 만들기
 
-네트워크 컨트롤러 클러스터의 구성원 인 각 VM에 대 한 노드 개체를 만들려고 합니다.
+네트워크 컨트롤러 클러스터의 구성원 인 각 VM에 대해 노드 개체를 만들어야 합니다.
 
 노드 개체를 만들려면 Windows PowerShell 명령 프롬프트에서 다음 명령을 입력 한 다음 ENTER 키를 누릅니다. 추가한 각 매개 변수에 대 한 배포에 대 한 적절 한 값을 확인 합니다.  
 
@@ -90,7 +90,7 @@ New-NetworkControllerNodeObject -Name <string> -Server <String> -FaultDomain <st
 |-------------|---------------|
 |이름|**이름** 매개 변수는 클러스터에 추가 하려는 서버의 이름을 지정 합니다.|
 |서버|**서버** 매개 변수는 호스트 이름, 완벽 하 게 정규화 된 도메인 이름 (FQDN), 또는 클러스터에 추가 하려는 서버의 IP 주소를 지정 합니다. 도메인에 가입 된 컴퓨터에 대 한 FQDN이 필요 합니다.|
-|FaultDomain|**FaultDomain** 매개 변수는 클러스터에 추가 하는 서버에 대 한 오류 도메인을 지정 합니다. 이 매개 변수는 클러스터에 추가 하는 서버와 동시에 오류를 경험할 수 있는 서버를 정의 합니다. 이 오류는 전력 및 네트워킹 소스와 같은 공유 물리적 종속성 때문일 수 있습니다. 일반적으로 오류 도메인 공유 종속성 오류 도메인 트리에 있는 높은 지점에서 함께 실패할 가능성이 더 많은 서버와 관련 된 계층 구조를 나타냅니다. 런타임 중에, 네트워크 컨트롤러는 클러스터의 장애 도메인을 고려 하 고 분산 된 네트워크 컨트롤러 서비스 별도 오류 도메인에 있도록 하려고 합니다. 이 프로세스 사용 하면, 어떤 하나씩 오류 도메인 오류가 발생 한 경우 상태 및 해당 서비스의 가용성을 손상 되지 않습니다. 오류 도메인 계층 구조 형식에 지정 됩니다. 예를 들어 다음과 같은 가치를 제공해야 합니다. "Fd: / DC1/Rack1/Host1" 여기서 d c 1는 데이터 센터 이름, rack1 랙 이름 고 Host1 노드를 배치할 호스트의 이름입니다.|
+|FaultDomain|**FaultDomain** 매개 변수는 클러스터에 추가 하는 서버에 대 한 오류 도메인을 지정 합니다. 이 매개 변수는 클러스터에 추가 하는 서버와 동시에 오류를 경험할 수 있는 서버를 정의 합니다. 이 오류는 전력 및 네트워킹 소스와 같은 공유 물리적 종속성 때문일 수 있습니다. 일반적으로 오류 도메인 공유 종속성 오류 도메인 트리에 있는 높은 지점에서 함께 실패할 가능성이 더 많은 서버와 관련 된 계층 구조를 나타냅니다. 런타임 중에, 네트워크 컨트롤러는 클러스터의 장애 도메인을 고려 하 고 분산 된 네트워크 컨트롤러 서비스 별도 오류 도메인에 있도록 하려고 합니다. 이 프로세스 사용 하면, 어떤 하나씩 오류 도메인 오류가 발생 한 경우 상태 및 해당 서비스의 가용성을 손상 되지 않습니다. 오류 도메인 계층 구조 형식에 지정 됩니다. 예를 들어 다음과 같은 가치를 제공해야 합니다. "Fd:/DC1/Rack1/Host1". 여기서 DC1은 데이터 센터 이름이 고 Rack1는 랙 이름 이며 Host1은 노드가 배치 된 호스트의 이름입니다.|
 |RestInterface|**RestInterface** 매개 변수 REPRESENTATIONAL State Transfer () 통신을 종료 하는 노드에서 인터페이스의 이름을 지정 합니다. 이 네트워크 컨트롤러 인터페이스에서 네트워크의 관리 계층 Northbound API 요청을 수신합니다.|
 |NodeCertificate|**NodeCertificate** 매개 변수는 네트워크 컨트롤러 컴퓨터 인증을 위해 사용 하는 인증서를 지정 합니다. 인증서가 필요한; 클러스터 내에서 통신에 대 한 인증서 기반 인증을 사용 하는 경우 인증서는 또한 네트워크 컨트롤러 서비스 간의 트래픽을 암호화에 사용 됩니다. 인증서 주체 이름은 노드의 DNS 이름으로 동일 해야 합니다.|
 
@@ -149,7 +149,7 @@ Install-NetworkController -Node <NetworkControllerNode[]> -ClientAuthentication 
 
 멤버 자격이 ClientAuthentication 메커니즘으로 Kerberos를 사용 한다면는 **ClientSecurityGroup** 을 만들어야 하는 것은이 절차를 수행 하는 데 필요한 최소입니다.
 
-**절차:**
+**여기서**
 
 1.  클라이언트 컴퓨터에서 Kerberos를 ClientAuthentication 메커니즘으로 사용 하는 경우 로그온의 구성원 인 사용자 계정과 사용자 **ClientSecurityGroup**합니다.
 
@@ -198,7 +198,7 @@ Install-NetworkController -Node <NetworkControllerNode[]> -ClientAuthentication 
 
 다음 표에서 이러한 작업 수행을 위해 사용할 수 있는 Windows PowerShell에 대 한 구문의 명령을 제공 합니다.
 
-|태스크|Command|구문|
+|태스크|명령|구문|
 |--------|-------|----------|
 |네트워크 컨트롤러 클러스터 설정 수정|집합 NetworkControllerCluster|`Set-NetworkControllerCluster [-ManagementSecurityGroup <string>][-Credential <PSCredential>] [-computerName <string>][-CertificateThumbprint <String> ] [-UseSSL]`
 |네트워크 컨트롤러 응용 프로그램 설정 수정|집합 NetworkController|`Set-NetworkController [-ClientAuthentication <ClientAuthentication>] [-Credential <PSCredential>] [-ClientCertificateThumbprint <string[]>] [-ClientSecurityGroup <string>] [-ServerCertificate <X509Certificate2>] [-RestIPAddress <String>] [-ComputerName <String>][-CertificateThumbprint <String> ] [-UseSSL]`

@@ -1,9 +1,9 @@
 ---
 title: DNS 리소스 레코드 추가
-description: 이 항목은 Windows Server 2016에서 관리 IPAM (IP 주소) 관리 가이드의 일부입니다.
+description: 이 항목은 Windows Server 2016의 IPAM (IP 주소 관리) 관리 가이드의 일부입니다.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-ipam
@@ -12,16 +12,16 @@ ms.topic: article
 ms.assetid: 5379373f-a3d9-4f51-b6fc-bf0f6df1d244
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 36773525187229e498b9addf4b1e6532fd413701
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: f8fd9974ad1670ae4106c5c38470fa51b53cf4f5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67282318"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71405722"
 ---
 # <a name="add-a-dns-resource-record"></a>DNS 리소스 레코드 추가
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 IPAM 클라이언트 콘솔을 사용 하 여 하나 이상의 새 DNS 리소스 레코드를 추가 하려면이 항목을 사용할 수 있습니다.  
   

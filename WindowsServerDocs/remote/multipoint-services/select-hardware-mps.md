@@ -3,7 +3,7 @@ title: MultiPoint 서비스 시스템용 하드웨어 선택
 description: MultiPoint 서비스에 대 한 하드웨어 고려 사항
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ ms.assetid: e74961a2-bd38-48ae-b1c0-4b3eff761b4a
 author: evaseydl
 manager: scottman
 ms.author: evas
-ms.openlocfilehash: 697ab9a1f97eab399dafac4e0c5fa5b641ed841c
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 9cfd6572c82bf5c3754165420e61054ec12b9617
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871401"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71388996"
 ---
 # <a name="selecting-hardware-for-your-multipoint-services-system"></a>MultiPoint 서비스 시스템용 하드웨어 선택
 MultiPoint 서비스 시스템을 빌드할 때에 Windows Server 2016 시스템 요구 사항을 충족 하는 컴퓨터를 선택 해야 합니다. 선택한 구성 요소를 결정 하는 경우에 다음 사항을 고려 합니다.  

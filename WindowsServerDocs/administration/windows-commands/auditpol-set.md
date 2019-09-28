@@ -1,8 +1,8 @@
 ---
 title: auditpol 집합
-description: Windows 명령 항목에 대 한 **auditpol 집합** -사용자 단위 감사 정책, 시스템 감사 정책 설정 또는 감사 옵션입니다.
+description: Windows 명령 항목 **auditpol 집합** -사용자 단위 감사 정책, 시스템 감사 정책 또는 감사 옵션을 설정 합니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8778401efb272a167aaa3d9abb4ecafc67e5f50d
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: f3c9ec2fab4cad408e0bb845fe157cfdf94f8e09
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66435116"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71382400"
 ---
 # <a name="auditpol-set"></a>auditpol 집합
 
@@ -47,15 +47,15 @@ auditpol /set
 | /subcategory |                                                                                         하나 이상의 감사 하위 범주 GUID 또는 이름을 지정 합니다. 사용자를 지정 하는 경우에 시스템 정책이 설정 됩니다.                                                                                          |
 |   /success   |                 성공 감사를 지정합니다. 이 설정은 기본값이 며 /success 아니고 /failure 매개 변수를 명시적으로 지정 하는 경우 자동으로 적용 됩니다. 이 설정은 설정을 사용할지 여부를 나타내는 매개 변수와 함께 사용 되어야 합니다.                 |
 |   /failure   |                                                                                  실패 감사를 지정합니다. 이 설정은 설정을 사용할지 여부를 나타내는 매개 변수와 함께 사용 되어야 합니다.                                                                                   |
-|   /option    |                                                                                   CrashOnAuditFail, 트래버스, AuditBaseObjects, 또는 AuditBasedirectories 옵션에 대 한 감사 정책을 설정합니다.                                                                                    |
+|   /option    |                                                                                   CrashOnAuditFail, 트래버스, AuditBaseObjects 또는 Auditbaseobjects 옵션에 대 한 감사 정책을 설정 합니다.                                                                                    |
 |     /sd      |                 감사 정책에 대 한 액세스 권한을 위임 하는 데 사용 되는 보안 설명자를 설정 합니다. 보안 설명자 정의 언어 (SDDL)를 사용 하 여 보안 설명자를 지정 해야 합니다. 보안 설명자는 임의 액세스 제어 목록 (DACL) 있어야 합니다.                 |
 |      /?      |                                                                                                                              명령 프롬프트에 도움말을 표시합니다.                                                                                                                              |
 
 ## <a name="remarks"></a>설명
-사용자별 정책 및 시스템 정책에 대 한 모든 집합 작업을 작성 한 해야 하거나 보안 설명자에 해당 개체에 대 한 모든 권한을 설정 합니다. 처리 하는 개체로 설정 작업을 수행할 수도 있습니다는 **관리 감사 및 보안 로그** (SeSecurityPrivilege) 사용자 권한이 있습니다. 그러나이 권한을 설정 작업을 수행할 필요가 없는 추가 액세스를 허용 합니다.
-## <a name="BKMK_examples"></a>예제
+사용자 정책 및 시스템 정책에 대 한 모든 집합 작업에 대해 보안 설명자에 설정 된 해당 개체에 대 한 쓰기 또는 모든 제어 권한이 있어야 합니다. 처리 하는 개체로 설정 작업을 수행할 수도 있습니다는 **관리 감사 및 보안 로그** (SeSecurityPrivilege) 사용자 권한이 있습니다. 그러나이 권한을 설정 작업을 수행할 필요가 없는 추가 액세스를 허용 합니다.
+## <a name="BKMK_examples"></a>예와
 ### <a name="examples-for-the-per-user-audit-policy"></a>사용자 단위 감사 정책에 대 한 예제
-설정 사용자 단위 감사 정책을 사용자 mikedan에 대 한 자세한 추적 범주 아래의 모든 하위 범주에 대 한 형식이 모두 사용자의 성공한 시도 감사할 수 있도록:
+사용자 mikedan에 대 한 자세한 추적 범주 아래의 모든 하위 범주에 대 한 사용자 단위 감사 정책을 설정 하려면 모든 사용자의 성공 시도가 감사 됩니다.
 ```
 auditpol /set /user:mikedan /category:"detailed Tracking" /include /success:enable
 ```
@@ -69,7 +69,7 @@ auditpol /set /user:mikedan /exclude /category:"Object Access","System",{6997984
 auditpol /set /user:mikedan /exclude /category:* /success:enable
 ```
 ### <a name="examples-for-the-system-audit-policy"></a>시스템 감사 정책에 대 한 예제
-성공적인 시도 대 한 감사를 포함 하도록 세부 추적 범주 아래의 모든 하위 범주에 대 한 시스템 감사 정책을 설정 하려면 다음을 입력 합니다.
+성공한 시도에 대 한 감사를 포함 하도록 자세한 추적 범주 아래의 모든 하위 범주에 대 한 시스템 감사 정책을 설정 하려면 다음을 입력 합니다.
 ```
 auditpol /set /category:"detailed Tracking" /success:enable
 ```

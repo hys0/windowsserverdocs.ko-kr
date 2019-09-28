@@ -1,7 +1,7 @@
 ---
 title: 최소한 필요한 가상 컴퓨터를 Windows 7을 실행 하 고 동적 메모리 사용에 대 한 메모리 양을 구성합니다
 description: 이 모범 사례 분석기 규칙에 대 한 텍스트의 온라인 버전입니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -10,12 +10,12 @@ ms.topic: article
 ms.assetid: 119965bf-6154-414d-b3a1-aa5b30eac5f6
 author: KBDAzure
 ms.date: 8/16/2016
-ms.openlocfilehash: 414746d5b039be27420a8507384cc1a759906d46
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f0865866c3494a0b3719f49f3dd85e85fb48c4e9
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59887814"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71365089"
 ---
 # <a name="configure-at-least-the-required-amount-of-memory-for-a-virtual-machine-running-windows-7-and-enabled-for-dynamic-memory"></a>최소한 필요한 가상 컴퓨터를 Windows 7을 실행 하 고 동적 메모리 사용에 대 한 메모리 양을 구성합니다
 
@@ -33,15 +33,15 @@ ms.locfileid: "59887814"
 다음 섹션에서는 기울임꼴이이 문제에 대 한 모범 사례 분석기 도구에 표시 되는 UI 텍스트를 나타냅니다.  
   
 ## <a name="issue"></a>문제점  
-*하나 이상의 가상 컴퓨터는 Windows 7에 필요한 메모리 용량 보다 더 적은 노력으로 동적 메모리를 사용 하도록 구성 됩니다.*  
+*하나 이상의 가상 컴퓨터는 Windows 7에 필요한 메모리 용량 보다 더 작은 동적 메모리를 사용 하도록 구성 되어 있습니다.*  
   
 ## <a name="impact"></a>영향  
-*다음 가상 머신에서 게스트 운영 체제 실행 되지 않거나 불안정 실행 될 수 있습니다.*  
+*다음 가상 컴퓨터의 게스트 운영 체제가 실행 되지 않거나 불안정을 실행할 수 있습니다.*  
   
-\<가상 머신의 목록 >  
+@no__t-가상 머신 목록 >  
   
 ## <a name="resolution"></a>해결 방법  
-*Hyper-v 관리자 또는 Windows PowerShell을 사용 하 여 시작 메모리 256MB 이상 하는 최소 메모리 및 최대 메모리를 최소 512 MB 이상 증가 합니다.*  
+*Hyper-v 관리자 또는 Windows PowerShell을 사용 하 여 최소 메모리를 256 MB 이상으로 늘리고 시작 메모리와 최대 메모리를 512 MB 이상으로 늘립니다.*  
   
 ### <a name="increase-memory-using-hyper-v-manager"></a>Hyper-v 관리자를 사용 하 여 메모리 확보  
   

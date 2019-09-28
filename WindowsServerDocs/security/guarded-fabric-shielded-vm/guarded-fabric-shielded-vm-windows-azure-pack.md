@@ -1,50 +1,50 @@
 ---
-title: 테 넌 트-Windows Azure Pack을 사용 하 여 보호 된 VM을 배포에 대 한 보호 된 Vm
+title: 테 넌 트 용 차폐 vm-Windows Azure 팩를 사용 하 여 보호 된 VM 배포
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 095315e4-c4a7-4b80-91d8-528119b62c4c
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 4cb5ed3433e04b7a5fe7004e517eb4cc38c7eb53
-ms.sourcegitcommit: 63926404009f9e1330a4a0aa8cb9821a2dd7187e
+ms.openlocfilehash: ec9f12990e7e16aebb208edfe0d97d6671623da1
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469656"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71403534"
 ---
-# <a name="shielded-vms--for-tenants---deploying-a-shielded-vm-by-using-windows-azure-pack"></a>테 넌 트-Windows Azure Pack을 사용 하 여 보호 된 VM을 배포에 대 한 보호 된 Vm
+# <a name="shielded-vms--for-tenants---deploying-a-shielded-vm-by-using-windows-azure-pack"></a>테 넌 트 용 차폐 vm-Windows Azure 팩를 사용 하 여 보호 된 VM 배포
 
->적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2019, Windows Server 2016
 
-호스팅 서비스 공급자에서 지원할 경우에 보호 된 VM을 배포 하려면 Windows Azure 팩을 사용할 수 있습니다.
+호스팅 서비스 공급자가 지 원하는 경우 Windows Azure 팩를 사용 하 여 보호 된 VM을 배포할 수 있습니다.
 
-다음 단계를 수행 합니다.
+다음 단계를 완료 합니다.
 
 1. Windows Azure 팩에서 제공 하는 하나 이상의 계획을 구독 합니다.
 
-2. Windows Azure Pack을 사용 하 여 보호 된 VM을 만듭니다.
+2. Windows Azure 팩를 사용 하 여 보호 된 VM을 만듭니다.
 
-    [보호 된 가상 머신을 사용 하 여](https://technet.microsoft.com/library/mt720674.aspx), 다음 항목에 설명 되어 있습니다.
+    [보호 된 가상 컴퓨터를 사용](https://technet.microsoft.com/library/mt720674.aspx)합니다 .이에 대해서는 다음 항목에서 설명 합니다.
 
-   - [실딩 데이터 작성](https://technet.microsoft.com/library/mt720672.aspx) (및 항목의 두 번째 절차에 설명 된 대로 보호 데이터 파일 업로드) 합니다.
+   - 항목의 두 번째 절차에 설명 된 대로 [보호 데이터를 만들고](https://technet.microsoft.com/library/mt720672.aspx) 보호 데이터 파일을 업로드 합니다.
     
      > [!NOTE]
-     > 실딩 데이터 만들기의 일환으로, utf-8 형식으로 XML 파일로 될에 보호자 키 파일을 다운로드 합니다. U t F-16으로 파일을 변경 하지 마세요.
+     > 보호 데이터를 만드는 과정의 일부로 보호 키 파일을 다운로드 합니다 .이 파일은 UTF-8 형식의 XML 파일이 됩니다. 파일을 u t f-16으로 변경 하지 마십시오.
     
-   - [보호 된 가상 컴퓨터를 만들](https://technet.microsoft.com/library/mt720673.aspx) - **빠른 생성**, 보호 된 템플릿 또는 일반 템플릿.
+   - 차폐 템플릿 또는 일반 템플릿을 통해 **빠른 생성**을 사용 하 여 [차폐 가상 머신을 만듭니다](https://technet.microsoft.com/library/mt720673.aspx) .
     
        > [!WARNING]
-       > 경우 있습니다 [일반 템플릿을 사용 하 여 보호 된 가상 컴퓨터를 만들](https://technet.microsoft.com/library/mt720673.aspx#Anchor_2), 것에 VM이 프로 비전 하는 유의 해야 *차폐 되지 않은*합니다. 이 의미는 실딩 데이터 파일에서 신뢰할 수 있는 디스크 목록과 비교 하 여 템플릿 디스크 검증 하지도 실딩 데이터 파일의 암호는 VM을 프로 비전을 사용 합니다. 보호 된 템플릿 사용 가능한 경우 엔드-투-엔드 비밀 보호 하기 위해 보호 된 템플릿 사용 하 여 보호 된 VM을 배포 하는 것이 좋습니다.
+       > [일반 템플릿을 사용 하 여 보호 된 가상 컴퓨터를 만드는](https://technet.microsoft.com/library/mt720673.aspx#Anchor_2)경우 VM이 *보호 되지 않는*으로 프로 비전 된다는 점에 유의 해야 합니다. 즉, 보호 데이터 파일의 신뢰할 수 있는 디스크 목록에 대해 템플릿 디스크가 확인 되지 않으며, VM을 프로 비전 하는 데 사용 되는 보호 데이터 파일의 비밀이 아닙니다. 차폐 템플릿을 사용할 수 있는 경우 보호 된 템플릿을 사용 하 여 보호 된 VM을 배포 하는 것이 좋습니다 .이를 통해 암호의 종단 간 보호를 제공할 수 있습니다.
     
-   - [2 세대 가상 컴퓨터 실드 된 가상 컴퓨터 변환](https://technet.microsoft.com/library/mt720670.aspx)
+   - [2 세대 가상 컴퓨터를 보호 된 가상 컴퓨터로 변환](https://technet.microsoft.com/library/mt720670.aspx)
     
        > [!NOTE]
-       > 가상 컴퓨터 실드 된 가상 머신을 변환할 기존 검사점 및 백업이 암호화 되지 않습니다. 오래 되 고 암호 해독 된 데이터에 대 한 액세스를 방지 하려면 가능한 경우 이전 검사점을 삭제 해야 합니다.
+       > 가상 컴퓨터를 보호 된 가상 컴퓨터로 변환 하는 경우 기존 검사점 및 백업은 암호화 되지 않습니다. 이전에 해독 된 데이터에 대 한 액세스를 방지 하기 위해 가능한 경우 오래 된 검사점을 삭제 해야 합니다.
 
 ## <a name="see-also"></a>참조
 
-- [보호 된 호스트 및 차폐 Vm 호스팅 서비스 공급자 구성 단계](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
+- [보호 된 호스트 및 보호 된 Vm에 대 한 호스팅 서비스 공급자 구성 단계](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [보호된 패브릭 및 보호된 VM](guarded-fabric-and-shielded-vms-top-node.md)

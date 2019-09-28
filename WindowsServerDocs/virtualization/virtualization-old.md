@@ -1,7 +1,7 @@
 ---
 title: 가상화
 description: 컨테이너, Hyper-V 및 Hyper-V 가상 스위치 같은 가상 기술에 대한 개요와 버전이 Windows Server 2016 이상인 운영 체제를 위한 추가 콘텐츠 링크를 제공합니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: dougkim
 ms.technology: compute
 ms.topic: article
@@ -9,23 +9,23 @@ author: shortpatti
 ms.author: pashort
 ms.localizationpriority: medium
 ms.date: 03/16/2018
-ms.openlocfilehash: e6dbb5be6d836462c9a24078dbec3700b09b08fc
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: bbbd8ea812a25b0d538dcb87a380184412235b99
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66446052"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71364040"
 ---
 # <a name="virtualization"></a>가상화
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016 
+>적용 대상: Windows Server(반기 채널), Windows Server 2016 
 
 >[!TIP]
 > 이전 버전의 Windows Server에 대한 자세한 내용이 궁금하십니까? docs.microsoft.com에서 다른 [Windows Server 라이브러리](/previous-versions/windows/)를 확인할 수 있습니다. 또한 특정 정보에 대해 [이 사이트를 검색](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions)할 수 있습니다.
 
 <img src="../media/landing-icons/virtualization.png" style='float:left; padding:.5em;' alt="Icon showing a box with spokes"> Windows Server 2016의 가상화 기술은 소프트웨어 정의 인프라를 생성하기 위해 필요한 기본 기술 중 하나입니다. 가상화 기능은 네트워킹 및 저장소와 함께 고객에게 워크로드를 지원하기 위해 필요한 유연성을 제공합니다.
 
-Hyper-v, Hyper-v 가상 스위치 및 보호 된 패브릭 및 차폐 가상 컴퓨터에 대 한 업데이트를 포함 하는 Windows Server 가상화 기술을 \(Vm\), 보안, 확장성 및 안정성을 개선 하는 합니다. 장애 조치(failover) 클러스터링, 네트워킹 및 저장소 업데이트를 통해 Hyper-V와 함께 사용될 때 이러한 기술을 더욱 쉽게 배포 및 관리할 수 있습니다. 
+Windows Server 가상화 기술에는 Hyper-v, Hyper-v 가상 스위치, 보호 된 패브릭 및 차폐 Virtual Machines \(VMs @ no__t-1에 대 한 업데이트가 포함 되어 보안, 확장성 및 안정성이 향상 됩니다. 장애 조치(failover) 클러스터링, 네트워킹 및 저장소 업데이트를 통해 Hyper-V와 함께 사용될 때 이러한 기술을 더욱 쉽게 배포 및 관리할 수 있습니다. 
 
 
 <ul class="cardsI panelContent">
@@ -41,7 +41,7 @@ Hyper-v, Hyper-v 가상 스위치 및 보호 된 패브릭 및 차폐 가상 컴
                     </div>
                     <div class="cardText">
                         <h3>보호된 패브릭 및 보호된 VM</h3>
-                        <p>클라우드 서비스 공급자 또는 엔터프라이즈 사설 클라우드 관리자로서 보호된 패브릭을 사용하여 VM에 대한 더욱 안전한 환경을 제공할 수 있습니다. 보호 된 패브릭 하나의 서비스 HGS (호스트 보호)-일반적으로 세 개 노드의 클러스터-1을 더한 구성 되거나 호스트 및 보호 된 Vm 집합을 보호 하는 자세한 내용은 합니다.</p>
+                        <p>클라우드 서비스 공급 기업 또는 엔터프라이즈 프라이빗 클라우드 관리자로서 보호된 패브릭을 사용하여 VM에 대한 더욱 안전한 환경을 제공할 수 있습니다. 보호된 패브릭은 하나의 호스트 보호 서비스(HGS)와 3개 노드로 이루어진 하나의 클러스터, 하나 이상의 보호된 호스트, 보호된 VM 세트로 구성되어 있습니다.</p>
                     </div>
                 </div>
             </div>
@@ -59,8 +59,8 @@ Hyper-v, Hyper-v 가상 스위치 및 보호 된 패브릭 및 차폐 가상 컴
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>엔터프라이즈를 위한 Windows 10: 작업에 대 한 장치를 사용 하는 방법</h3>
-                        <p>Hyper-V 기술은 하드웨어 가상화를 통해 컴퓨팅 리소스를 제공합니다. Hyper-V는 운영 체제 및 응용 프로그램을 실행하는 데 사용할 수 있도록 VM이라는 소프트웨어 버전의 컴퓨터를 생성합니다. 동시에 여러 VM을 실행할 수 있으며, 필요에 따라 VM을 생성 및 삭제할 수 있습니다. </p>
+                        <h3>엔터프라이즈용 Windows 10: 작업에 디바이스를 사용하는 방법</h3>
+                        <p>Hyper-V 기술은 하드웨어 가상화를 통해 컴퓨팅 리소스를 제공합니다. Hyper-V는 운영 체제 및 애플리케이션을 실행하는 데 사용할 수 있도록 VM이라는 소프트웨어 버전의 컴퓨터를 생성합니다. 동시에 여러 VM을 실행할 수 있으며, 필요에 따라 VM을 생성 및 삭제할 수 있습니다. </p>
                     </div>
                 </div>
             </div>
@@ -80,7 +80,7 @@ Hyper-v, Hyper-v 가상 스위치 및 보호 된 패브릭 및 차폐 가상 컴
                     </div>
                     <div class="cardText">
                         <h3>Microsoft Hyper-V Server</h3>
-                        <p>Hyper-V 기술은 하드웨어 가상화를 통해 컴퓨팅 리소스를 제공합니다. Hyper-V는 운영 체제 및 응용 프로그램을 실행하는 데 사용할 수 있도록 VM이라는 소프트웨어 버전의 컴퓨터를 생성합니다. 동시에 여러 VM을 실행할 수 있으며, 필요에 따라 VM을 생성 및 삭제할 수 있습니다. </p>
+                        <p>Hyper-V 기술은 하드웨어 가상화를 통해 컴퓨팅 리소스를 제공합니다. Hyper-V는 운영 체제 및 애플리케이션을 실행하는 데 사용할 수 있도록 VM이라는 소프트웨어 버전의 컴퓨터를 생성합니다. 동시에 여러 VM을 실행할 수 있으며, 필요에 따라 VM을 생성 및 삭제할 수 있습니다. </p>
                     </div>
                 </div>
             </div>
@@ -128,7 +128,7 @@ Hyper-v, Hyper-v 가상 스위치 및 보호 된 패브릭 및 차폐 가상 컴
                     </div>
                     <div class="cardText">
                         <h3>Windows 컨테이너</h3>
-                        <p>Windows 컨테이너는 시스템 수준 가상화를 제공하기 때문에 여러 개의 격리된 응용 프로그램을 단일 시스템에서 실행할 수 있습니다. 두 가지 형식의 컨테이너 런타임이 응용 프로그램 격리 수준이 서로 다른 기능과 함께 포함되어 있습니다.</p>
+                        <p>Windows 컨테이너는 여러 개의 격리된 애플리케이션을 단일 시스템에서 실행할 수 있는 운영 체제 수준 가상화를 제공합니다. 두 가지 형식의 컨테이너 런타임이 응용 프로그램 격리 수준이 서로 다른 기능과 함께 포함되어 있습니다.</p>
                     </div>
                 </div>
             </div>

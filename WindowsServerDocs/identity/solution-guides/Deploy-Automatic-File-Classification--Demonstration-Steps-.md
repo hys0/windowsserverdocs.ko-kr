@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 8d1ea7a428b2d03649a7a9347421d717be3f468a
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 7b8d613653bc2effdae155d34a1a94a820bae3aa
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66445837"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71357593"
 ---
 # <a name="deploy-automatic-file-classification-demonstration-steps"></a>Deploy Automatic File Classification (Demonstration Steps)
 
@@ -26,15 +26,15 @@ ms.locfileid: "66445837"
   
 -   파일 집합에 대해 한 파일에서 10번 이상 주민 등록 번호와 일치하는 정규식을 검색하는 콘텐츠 분류 규칙. 패턴이 발견되면 파일은 개인 식별이 가능한 정보를 가진 것으로 되고 개인 식별이 가능한 정보 리소스 속성이 높음으로 설정됩니다.  
   
-**이 문서에서는**  
+**이 문서의**  
   
--   [1단계: 리소스 속성 정의 만들기](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_Step1)  
+-   [1단계: 리소스 속성 정의 만들기 @ no__t-0  
   
--   [2단계: 문자열 콘텐츠 분류 규칙 만들기](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_Step2)  
+-   [2단계: 문자열 콘텐츠 분류 규칙 만들기 @ no__t-0  
   
--   [3단계: 정규식 콘텐츠 분류 규칙 만들기](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_Step3)  
+-   [3단계: 정규식 콘텐츠 분류 규칙 만들기 @ no__t-0  
   
--   [4단계: 파일 분류 되었는지 확인](Deploy-Automatic-File-Classification--Demonstration-Steps-.md#BKMK_Step4)  
+-   [4단계: 파일이 분류 되어 있는지 확인 @ no__t-0  
   
 > [!NOTE]  
 > 이 항목에는 설명한 절차의 일부를 자동화하는 데 사용할 수 있는 샘플 Windows PowerShell cmdlet이 포함되어 있습니다. 자세한 내용은 참조 [Cmdlet를 사용 하 여](https://go.microsoft.com/fwlink/p/?linkid=230693)합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "66445837"
 ## <a name="BKMK_Step1"></a>1 단계: 리소스 속성 정의 만들기  
 파일 분류 인프라가 네트워크 공유 폴더에서 검사된 파일에 태그를 지정할 수 있도록 영향 및 개인 식별이 가능한 정보 리소스 속성을 설정합니다.  
   
-[Windows PowerShell을 사용 하 여이 단계를 수행 합니다.](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep1)  
+[Windows PowerShell을 사용 하 여이 단계 수행](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep1)  
   
 #### <a name="to-create-resource-property-definitions"></a>리소스 속성 정의를 만들려면  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66445837"
   
 5.  **개인 식별이 가능한 정보**를 마우스 오른쪽 단추로 클릭한 다음 **사용**을 클릭합니다.  
   
-![솔루션 가이드](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![solution guide](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -68,7 +68,7 @@ Set-ADResourceProperty '"Enabled:$true '"Identity:'CN=PII_MS,CN=Resource Propert
 ## <a name="BKMK_Step2"></a>2 단계: 문자열 콘텐츠 분류 규칙 만들기  
 문자열 콘텐츠 분류 규칙은 파일에서 특정 문자열을 검사합니다. 문자열이 발견되면 리소스 속성 값을 구성할 수 있습니다. 이 예제에서는 검색 네트워크 공유 폴더에 있는 각 파일 하 고 ' Contoso Confidential.' 문자열을 찾습니다. 문자열이 발견되면 해당 파일은 높은 비즈니스 영향을 가진 것으로 분류됩니다.  
   
-[Windows PowerShell을 사용 하 여이 단계를 수행 합니다.](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep2)  
+[Windows PowerShell을 사용 하 여이 단계 수행](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep2)  
   
 #### <a name="to-create-a-string-content-classification-rule"></a>문자열 콘텐츠 분류 규칙을 만들려면  
   
@@ -107,7 +107,7 @@ Set-ADResourceProperty '"Enabled:$true '"Identity:'CN=PII_MS,CN=Resource Propert
   
 13. **평가 유형** 탭에서 **기존 속성 값 다시 평가** 확인란을 선택하고 **기존 값 덮어쓰기**를 클릭한 다음 **확인**을 클릭합니다.  
   
-![솔루션 가이드](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![solution guide](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -121,7 +121,7 @@ New-FSRMClassificationRule -Name 'Contoso Confidential' -Property "Impact_MS" -P
 ## <a name="BKMK_Step3"></a>3 단계: 정규식 콘텐츠 분류 규칙 만들기  
 정규식 분류 규칙은 파일에서 정규식과 일치하는 패턴을 검사합니다. 정규식과 일치하는 문자열이 발견되면 리소스 속성 값을 구성할 수 있습니다. 이 예제에서는 네트워크 공유 폴더에 있는 각 파일을 검사하여 주민 등록 번호(XXX XX XXXX) 패턴과 일치하는 문자열을 찾습니다. 패턴이 발견되면 해당 파일은 개인 식별이 가능한 정보를 가진 것으로 분류됩니다.  
   
-[Windows PowerShell을 사용 하 여이 단계를 수행 합니다.](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep3)  
+[Windows PowerShell을 사용 하 여이 단계 수행](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep3)  
   
 #### <a name="to-create-a-regular-expression-content-classification-rule"></a>정규식 콘텐츠 분류 규칙을 만들려면  
   
@@ -149,13 +149,13 @@ New-FSRMClassificationRule -Name 'Contoso Confidential' -Property "Impact_MS" -P
   
 9. **식 형식** 열에서 **정규식**을 선택합니다.  
   
-10. In the **Expression** column, type **^(?!000)([0-7]\d{2}|7([0-7]\d|7[012]))([ -]?)(?!00)\d\d\3(?!0000)\d{4}$**  
+10. **식** 열에서 **^ (?! 000) ([0-7] \d @ no__t-2 | 7 ([0-7] \d | 7 [012])) ([-]?) (?! 00) \d\d\3 (?! 0000) \d @ no__t-3 $**  
   
 11. **최소 발생 수** 열에 **10**을 입력하고 **확인**을 클릭합니다.  
   
 12. **평가 유형** 탭에서 **기존 속성 값 다시 평가** 확인란을 선택하고 **기존 값 덮어쓰기**를 클릭한 다음 **확인**을 클릭합니다.  
   
-![솔루션 가이드](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![solution guide](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -176,7 +176,7 @@ New-FSRMClassificationRule -Name "PII Rule" -Property "PII_MS" -PropertyValue "5
   
     3.  자동 분류 보고서를 닫습니다.  
   
-    4.  이 작업은 Windows PowerShell에서 다음 명령을 사용하여 수행할 수 있습니다. **시작 FSRMClassification ' "RunDuration 0-확인: $false**  
+    4.  이 작업은 Windows PowerShell에서 다음 명령을 사용하여 수행할 수 있습니다. **시작-FSRMClassification ' "RunDuration 0-Confirm: $false**  
   
 2.  분류 규칙에 지정된 폴더(예: D:\Finance Documents)로 이동합니다.  
   
@@ -188,7 +188,7 @@ New-FSRMClassificationRule -Name "PII Rule" -Property "PII_MS" -PropertyValue "5
   
 -   [시나리오: 분류를 사용하여 데이터 이해](Scenario--Get-Insight-into-Your-Data-by-Using-Classification.md)  
   
--   [자동 파일 분류에 대 한 계획](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/jj574209(v%3dws.11))  
+-   [자동 파일 분류 계획](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/jj574209(v%3dws.11))  
 
   
 -   [동적 액세스 제어: 시나리오 개요](Dynamic-Access-Control--Scenario-Overview.md)  

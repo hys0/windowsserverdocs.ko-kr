@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: bd21f2d6e8dcb167aa2c614d096807305a7728d6
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 08aadcf0322fcb937bdde17d18aa5d30e3da68ce
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66188890"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71357790"
 ---
 # <a name="walkthrough-guide-manage-risk-with-additional-multi-factor-authentication-for-sensitive-applications"></a>연습 가이드: 추가 다단계 인증을 사용하여 중요한 응용 프로그램에 대한 위험 관리
 
@@ -28,13 +28,13 @@ Adfs에서 MFA 및 인증 메커니즘에 대 한 자세한 내용은 참조 [�
 
 이 연습은 다음 섹션으로 구성됩니다.
 
--   [1단계: 랩 환경 설정](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_1)
+-   [1단계: 랩 환경 설정 @ no__t-0
 
--   [2단계: 기본 AD FS 인증 메커니즘 확인](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_2)
+-   [2단계: 기본 AD FS 인증 메커니즘 확인 @ no__t-0
 
--   [3단계: 페더레이션 서버에서 MFA를 구성 합니다.](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_3)
+-   [3단계: 페더레이션 서버에서 MFA 구성 @ no__t-0
 
--   [4단계: MFA 메커니즘 확인](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_4)
+-   [4단계: MFA 메커니즘 @ no__t-0 확인
 
 ## <a name="BKMK_1"></a>1 단계: 랩 환경 설정
 이 연습을 완료하려면 다음 구성 요소로 구성된 환경이 필요합니다.
@@ -57,7 +57,7 @@ Adfs에서 MFA 및 인증 메커니즘에 대 한 자세한 내용은 참조 [�
 ## <a name="BKMK_2"></a>2 단계: 기본 AD FS 인증 메커니즘 확인
 이 단계에서는 사용자가 AD FS 로그인 페이지로 리디렉션된 후 유효한 자격 증명을 제공하면 응용 프로그램에 대한 액세스 권한이 부여되는 기본 AD FS 액세스 제어 메커니즘(엑스트라넷의 경우**폼 인증** 및 인트라넷의 경우 **Windows 인증** )을 확인합니다. 사용할 수는 **Robert Hatley** AD 계정 및 **claimapp** 샘플 응용 프로그램에서 구성한 [Windows Server 2012 r 2에서 AD FS에 대 한 랩 환경 설정](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)합니다.
 
-1.  클라이언트 컴퓨터에서 브라우저 창을 열고 샘플 응용 프로그램으로 이동 합니다. **https://webserv1.contoso.com/claimapp** 합니다.
+1.  클라이언트 컴퓨터에서 브라우저 창을 열고 샘플 응용 프로그램: **https://webserv1.contoso.com/claimapp** 로 이동 합니다.
 
     이 작업을 수행하면 요청이 자동으로 페더레이션 서버로 리디렉션되고 사용자 이름과 암호를 사용하여 로그인하라는 메시지가 표시됩니다.
 
@@ -98,20 +98,20 @@ MFA를 설정하려면 추가 인증 방법을 선택해야 합니다. 이 연�
     ```
 
     > [!WARNING]
-    > 이 명령이 성공적으로 실행을 실행할 수를 확인 하는 `Get-AdfsGlobalAuthenticationPolicy` 명령입니다.
+    > 이 명령이 성공적으로 실행 되었는지 확인 하려면 `Get-AdfsGlobalAuthenticationPolicy` 명령을 실행 하면 됩니다.
 
-#### <a name="BKMK_8"></a>Windows Azure Multi-factor Authentication
+#### <a name="BKMK_8"></a>Windows Azure Multi-Factor Authentication
 페더레이션 서버에서 **Windows Azure Multi-Factor Authentication** 을 다운로드하여 추가 인증으로 구성하고 선택하려면 다음 절차를 완료합니다.
 
-1.  [Windows 통해 Multi-factor Authentication 공급자를 만들려면 Azure Portal](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_a)
+1.  [Windows Azure 포털을 통해 Multi-Factor Authentication 공급자 만들기](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_a)
 
-2.  [Windows Azure Multi-factor Authentication 서버 다운로드](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_b)
+2.  [Windows Azure Multi-Factor Authentication 서버 다운로드](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_b)
 
-3.  [페더레이션 서버에서 Windows Azure Multi-factor Authentication 서버를 설치 합니다.](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_c)
+3.  [페더레이션 서버에 Windows Azure Multi-Factor Authentication 서버 설치](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_c)
 
-4.  [Windows Azure Multi-factor Authentication을 추가 인증 방법으로 구성](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_d)
+4.  [추가 인증 방법으로 Windows Azure Multi-Factor Authentication 구성](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_d)
 
-##### <a name="BKMK_a"></a>Windows 통해 Multi-factor Authentication 공급자를 만들려면 Azure Portal
+##### <a name="BKMK_a"></a>Windows Azure 포털을 통해 Multi-Factor Authentication 공급자 만들기
 
 1.  Windows Azure 포털에 관리자로 로그온합니다.
 
@@ -141,7 +141,7 @@ MFA를 설정하려면 추가 인증 방법을 선택해야 합니다. 이 연�
 
 이제 Windows Azure Multi-Factor Authentication 서버를 다운로드해야 합니다. Windows Azure 포털을 통해 Windows Azure Multi-Factor Authentication 포털을 시작하면 됩니다.
 
-##### <a name="BKMK_b"></a>Windows Azure Multi-factor Authentication 서버 다운로드
+##### <a name="BKMK_b"></a>Windows Azure Multi-Factor Authentication 서버 다운로드
 
 1.  Windows Azure 포털에 관리자로 로그온하여 위 절차에서 만든 다단계 인증 공급자를 클릭합니다. 그런 다음 **관리** 단추를 클릭합니다.
 
@@ -151,7 +151,7 @@ MFA를 설정하려면 추가 인증 방법을 선택해야 합니다. 이 연�
 
 Windows Azure Multi-Factor Authentication 서버 실행 파일을 다운로드한 후에는 페더레이션 서버에 설치해야 합니다.
 
-##### <a name="BKMK_c"></a>페더레이션 서버에서 Windows Azure Multi-factor Authentication 서버를 설치 합니다.
+##### <a name="BKMK_c"></a>페더레이션 서버에 Windows Azure Multi-Factor Authentication 서버 설치
 
 1.  Windows Azure Multi-Factor Authentication 서버 실행 파일을 다운로드하고 두 번 클릭합니다.  그러면 설치가 시작됩니다.
 
@@ -163,7 +163,7 @@ Windows Azure Multi-Factor Authentication 서버 실행 파일을 다운로드�
 
 이제 페더레이션 서버에 설치한 Windows Azure Multi-Factor Authentication 서버를 시작하여 추가 인증 방법으로 구성할 준비가 완료되었습니다.
 
-##### <a name="BKMK_d"></a>Windows Azure Multi-factor Authentication을 추가 인증 방법으로 구성
+##### <a name="BKMK_d"></a>추가 인증 방법으로 Windows Azure Multi-Factor Authentication 구성
 
 1.  페더레이션 서버의 설치 위치에서 **Windows Azure Multi-Factor Authentication** 을 시작한 후 시작 페이지에서 **인증 구성 마법사 사용 건너뛰기** 확인란을 선택하고 **다음**을 클릭합니다.
 
@@ -235,7 +235,7 @@ AD FS 관리 콘솔 또는 Windows PowerShell을 사용하여 MFA 정책을 설�
 ## <a name="BKMK_4"></a>4 단계: MFA 메커니즘 확인
 이 단계에서는 이전 단계에서 설정한 MFA 기능을 확인합니다. 다음 절차를 사용하여 **Robert Hatley** AD 사용자가 응용 프로그램 예제에 액세스할 수 있는지 확인할 수 있습니다. 이번에는 이 사용자가 **금융** 그룹에 속해 있으므로 MFA를 진행해야 합니다.
 
-1.  클라이언트 컴퓨터에서 브라우저 창을 열고 샘플 응용 프로그램으로 이동 합니다. **https://webserv1.contoso.com/claimapp** 합니다.
+1.  클라이언트 컴퓨터에서 브라우저 창을 열고 샘플 응용 프로그램: **https://webserv1.contoso.com/claimapp** 로 이동 합니다.
 
     이 작업을 수행하면 요청이 자동으로 페더레이션 서버로 리디렉션되고 사용자 이름과 암호를 사용하여 로그인하라는 메시지가 표시됩니다.
 

@@ -2,18 +2,18 @@
 title: 할당량 템플릿 속성 편집
 description: 이 문서에서는 할당량 템플릿 속성을 편집하여 변경 사항을 원본 할당량 템플릿으로 만든 할당량에까지 확장하는 방법을 설명합니다.
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 0362b30e16dacb354220c770899195240f3e19ee
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 37719656e107869b97045af98c1a63744e4f6b38
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59885784"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71403027"
 ---
 # <a name="edit-quota-template-properties"></a>할당량 템플릿 속성 편집
 

@@ -2,22 +2,22 @@
 title: 파일 서버에 해시 게시 사용
 description: 이 항목은 일부는 BranchCache 배포 가이드에 대 한 Windows Server 2016, 지사에 WAN 대역폭 사용량을 최적화 하기 위해 분산 및 호스트 캐시 모드로 BranchCache를 배포 하는 방법을 보여 주는
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 5697aefe-1dd2-4ff9-82a9-da0afc182cb3
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 6f7d9c286f80b8c1ad4fb2370389f1afcd16dff8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 62ebddf85a2a86b9759d970f29b3c8edbeba63f0
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59859744"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406462"
 ---
 # <a name="enable-hash-publication-for-file-servers"></a>파일 서버에 해시 게시 사용
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 BranchCache 해시 게시 한 파일 서버 또는 여러 파일 서버를 사용할 수 있습니다.  
   

@@ -2,18 +2,18 @@
 title: 파일 차단 만들기
 description: 이 문서에서는 파일 차단을 만드는 방법을 설명합니다.
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: c1f261eb926eca3ead58b87aeb00a5060b9d957c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e049162e7aff449774928d6a1d25cc1116f9aee9
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59815924"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71403152"
 ---
 # <a name="create-a-file-screen"></a>파일 차단 만들기
 
@@ -39,7 +39,7 @@ ms.locfileid: "59815924"
 
 7.  **파일 그룹**에서 파일 차단에 포함할 각 파일 그룹을 선택합니다. (파일 그룹에 대한 확인란을 선택하려면 파일 그룹 레이블을 두 번 클릭합니다.)
 
-    파일 그룹 포함 및 제외 하는 파일 형식 보기, 파일 그룹 레이블를 클릭 한 다음 클릭 하려는 경우 **편집**합니다. 새 파일 그룹을 만들려면 **만들기**합니다.
+    파일 그룹이 포함 하 고 제외 하는 파일 형식을 보려면 파일 그룹 레이블을 클릭 한 다음 **편집**을 클릭 합니다. 새 파일 그룹을 만들려면 **만들기**를 클릭 합니다.
 
 8.  또한 **전자 메일 메시지**, **이벤트 로그**, **명령** 및 **보고서** 탭에서 옵션을 설정하여 **파일 서버 리소스 관리자**가 하나 이상의 알림을 생성하도록 구성할 수 있습니다. 파일 차단 알림 옵션에 대한 자세한 내용은 [파일 차단 템플릿 만들기](create-file-screen-template.md)를 참조하세요.
 
@@ -57,8 +57,8 @@ ms.locfileid: "59815924"
 ## <a name="see-also"></a>참조
 
 -   [파일 차단 관리](file-screening-management.md)
--   [차단에 대 한 파일 그룹을 정의 합니다.](define-file-groups-for-screening.md)
--   [파일 화면 템플릿 만들기](create-file-screen-template.md)
--   [파일 화면 템플릿 속성 편집](edit-file-screen-template-properties.md)
+-   [차단을 위한 파일 그룹 정의](define-file-groups-for-screening.md)
+-   [파일 차단 템플릿 만들기](create-file-screen-template.md)
+-   [파일 차단 템플릿 속성 편집](edit-file-screen-template-properties.md)
 
 

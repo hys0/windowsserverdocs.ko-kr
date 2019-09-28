@@ -1,9 +1,9 @@
 ---
 title: 9 단계 EDGE1 구성
-description: 이 항목에서는 테스트 랩 가이드의 일부인-DirectAccess 멀티 사이트 배포에 대 한 Windows Server 2016를 보여 줍니다.
+description: 이 항목은 테스트 랩 가이드-Windows Server 2016에 대 한 DirectAccess 멀티 사이트 배포 시연의 일부입니다.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-da
@@ -12,46 +12,46 @@ ms.topic: article
 ms.assetid: f6e8d85b-de65-43b3-bf3e-ec84471a1fcc
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: b0a47a436bbd11c795caa8b402054ae0d2c3282f
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: ce86a75ac5b8d53874d2fc5c6743979506591680
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67281372"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71388234"
 ---
 # <a name="step-9-configure-edge1"></a>9 단계 EDGE1 구성
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-다음 절차는 EDGE1 서버에서 수행 됩니다.  
+EDGE1 서버에서 수행 되는 절차는 다음과 같습니다.  
   
-1. EDGE1에서 DNS 서버를 구성 합니다. EDGE1에서 corp2.corp.contoso.com 도메인에서 DNS 서버를 구성 하는 것이 반드시 합니다.  
+1. EDGE1에서 DNS 서버를 구성 합니다. EDGE1의 corp2.corp.contoso.com 도메인에서 DNS 서버를 구성 해야 합니다.  
   
-2. 서브넷 간 라우팅을 구성 합니다. Corpnet 및 2 Corpnet 서브넷 간의 통신이 가능 하도록 EDGE1에 라우팅을 구성 합니다.  
+2. 서브넷 간 라우팅을 구성 합니다. EDGE1에서 라우팅을 구성 하 여 Corpnet와 Corpnet 서브넷 간의 통신을 사용 하도록 설정 합니다.  
   
-## <a name="IPv6"></a>EDGE1에서 DNS 서버를 구성 합니다.  
+## <a name="IPv6"></a>EDGE1에서 DNS 서버 구성  
   
-1.  서버 관리자 콘솔에서 클릭 **로컬 서버**를 선택한 다음는 **속성** 영역에서 다음을 **Corpnet**, 링크를 클릭 합니다.  
+1.  서버 관리자 콘솔에서 **로컬 서버**를 클릭 한 다음 **속성** 영역에서 **Corpnet**옆에 있는 링크를 클릭 합니다.  
   
-2.  네트워크 연결 창에서 마우스 오른쪽 단추로 클릭 **Corpnet**를 클릭 하 고 **속성**합니다.  
+2.  네트워크 연결 창에서 **Corpnet**를 마우스 오른쪽 단추로 클릭 한 다음 **속성**을 클릭 합니다.  
   
 3.  **Internet Protocol Version 4(TCP/IPv4)** 를 클릭하고 **속성**을 클릭합니다.  
   
-4.  **대체 DNS 서버**, 형식 **10.2.0.1**합니다. **확인**을 클릭합니다.  
+4.  **대체 DNS 서버**에 **10.2.0.1**를 입력 합니다. **확인**을 클릭합니다.  
   
 5.  **인터넷 프로토콜 버전 6(TCP/IPv6)** , **속성**을 차례로 클릭합니다.  
   
-6.  **대체 DNS 서버**, 형식 **2001:db8:2::1** 을 클릭 한 다음 **확인**합니다.  
+6.  **대체 DNS 서버**에 **2001: db8:2:: 1** 을 입력 한 다음 **확인**을 클릭 합니다.  
   
-7.  에 **Corpnet 속성** 대화 상자, 클릭 **닫기**합니다.  
+7.  **Corpnet 속성** 대화 상자에서 **닫기**를 클릭 합니다.  
   
 8.  **네트워크 연결** 창을 닫습니다.  
   
 ## <a name="ConfigRouting"></a>서브넷 간 라우팅 구성  
   
-1.  에 **시작** 화면에서 입력**cmd.exe**를 마우스 오른쪽 단추로 클릭 **cmd**, 클릭 **고급**를 클릭 하 고 **으로 실행 관리자**합니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
+1.  **시작** 화면에서**cmd.exe**를 입력 하 고 **cmd**를 마우스 오른쪽 단추로 클릭 한 다음 **고급**을 클릭 하 고 **관리자 권한으로 실행**을 클릭 합니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
   
-2.  명령 프롬프트 창에서 다음 명령을 입력 합니다. 각 명령을 입력 한 후 enter 키를 누릅니다.  
+2.  명령 프롬프트 창에서 다음 명령을 입력 합니다. 각 명령을 입력 한 후 ENTER 키를 누릅니다.  
   
     ```  
     netsh interface IPv4 add route 10.2.0.0/24 Corpnet 10.0.0.254  

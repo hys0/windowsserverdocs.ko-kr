@@ -1,8 +1,8 @@
 ---
 title: setlocal
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 70e58e3c3a7c3de594c620f7530816b57727d4c3
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 997c996854f488bb1776f135e3288e3b094e683c
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59868864"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71384092"
 ---
 # <a name="setlocal"></a>setlocal
 
@@ -65,7 +65,7 @@ setlocal [enableextensions | disableextensions] [enabledelayedexpansion | disabl
     ```  
     때문에 **cmd** 명령 확장 비활성화 되 면 ERRORLEVEL 변수를 설정 하지 않는 **확인** 명령에 잘못 된 인수를 사용 하는 경우 0이 아닌 값으로 ERRORLEVEL 변수를 초기화 합니다. 또한 사용 하는 경우는 **setlocal** 명령 인수에 {**enableextensions** | **disableextensions**} 또는 {**enabledelayedexpansion** | **disabledelayedexpansion**} ERRORLEVEL 변수 설정 하지 않으므로 및 **1**, 명령 확장을 사용할 수 없습니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 다음 예제 스크립트에 표시 된 대로 배치 파일에서 환경 변수를 지역화할 수 있습니다.
 ```

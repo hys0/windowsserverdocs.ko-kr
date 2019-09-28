@@ -2,18 +2,18 @@
 title: 주문형 보고서 생성
 description: 이 문서에서는 서버의 디스크 사용량을 분석하는 주문형 보고서를 생성하는 방법을 설명합니다.
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: b51ab0ad2a9c670aa63c4c86f7ff2c052139cb95
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 9b3cde8a01c40a04df1bc433687029a2e0e7c394
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66445969"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71403004"
 ---
 # <a name="generate-reports-on-demand"></a>주문형 보고서 생성
 

@@ -1,38 +1,38 @@
 ---
 title: 도구 확장 개발
-description: 개발 도구 확장 Windows Admin Center SDK (프로젝트 브라 티)
+description: 도구 확장 Windows 관리 센터 SDK 개발 (Project Honolulu)
 ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
-ms.openlocfilehash: 1a068c0d33887e8e9287ff15c1aa14f3dc84915a
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.prod: windows-server
+ms.openlocfilehash: c5c87be882a32958946198eb6ff1b9d7000577e7
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66445936"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71385294"
 ---
-# <a name="install-extension-payload-on-a-managed-node"></a>관리 되는 노드에서 확장 페이로드를 설치 합니다.
+# <a name="install-extension-payload-on-a-managed-node"></a>관리 노드에 확장 페이로드 설치
 
 >적용 대상: Windows Admin Center, Windows Admin Center 미리 보기
 
-## <a name="setup"></a>설치 프로그램
+## <a name="setup"></a>설정
 > [!NOTE]
-> 이 가이드에 따라 필요한 만들어야 1.2.1904.02001 이상. 빌드를 검사할 수는 Windows Admin Center 열고 오른쪽 위에 있는 물음표를 클릭 합니다.
+> 이 가이드를 따르려면 빌드 1.2.1904.02001 이상이 필요 합니다. 빌드 번호를 확인 하려면 Windows 관리 센터를 열고 오른쪽 위에 있는 물음표를 클릭 합니다.
 
-이미 않았다면 만듭니다는 [확장 도구](../develop-tool.md) Windows Admin Center 대 한 합니다. 이 확인을 마친 후 확장을 만들 때 사용한 값을 기록 합니다.
+Windows 관리 센터에 대 한 [도구 확장](../develop-tool.md) 을 아직 만들지 않은 경우 만듭니다. 이 작업을 완료 한 후에는 확장을 만들 때 사용 된 값을 기록해 둡니다.
 
 | 값 | 설명 | 예제 |
 | ----- | ----------- | ------- |
 | ```{!Company Name}``` | 회사 이름 (공백 포함) | ```Contoso``` |
-| ```{!Tool Name}``` | 사용자 도구 이름 (공백 포함) | ```InstallOnNode``` |
+| ```{!Tool Name}``` | 도구 이름 (공백 포함) | ```InstallOnNode``` |
 
-사용자 도구 확장 폴더 안에 만듭니다는 ```Node``` 폴더 (```{!Tool Name}\Node```). 이 API를 사용 하는 경우이 폴더에 배치 된 모든 개체를 관리 노드로 복사 됩니다. 사용 사례에 필요한 모든 파일을 추가 합니다. 
+도구 확장 폴더 내에 ```Node``` 폴더 (```{!Tool Name}\Node```)를 만듭니다. 이 API를 사용 하는 경우이 폴더에 배치 된 모든 항목이 관리 노드에 복사 됩니다. 사용 사례에 필요한 파일을 추가 합니다. 
 
-만들 수도 ```{!Tool Name}\Node\installNode.ps1``` 스크립트입니다. 모든 파일에서 복사 되 면 관리 되는 노드에서이 스크립트를 실행할 수는 ```{!Tool Name}\Node``` 를 관리 노드로 폴더입니다. 사용 사례에 대 한 추가 논리를 추가 합니다. 예로 ```{!Tool Name}\Node\installNode.ps1``` 파일:
+또한 ```{!Tool Name}\Node\installNode.ps1``` 스크립트를 만듭니다. 이 스크립트는 모든 파일이 ```{!Tool Name}\Node``` 폴더에서 관리 노드로 복사 되 면 관리 되는 노드에서 실행 됩니다. 사용 사례에 대 한 추가 논리를 추가 합니다. 예 ```{!Tool Name}\Node\installNode.ps1``` 파일:
 
 ``` ps1
 # Add logic for installing payload on managed node
@@ -40,12 +40,12 @@ echo 'Success'
 ```
 
 > [!NOTE]
-> ```{!Tool Name}\Node\installNode.ps1``` 에 대 한 API를 검색 하는 특정 이름을 있습니다. 이 파일의 이름을 변경 하면 오류가 발생 합니다.
+> ```{!Tool Name}\Node\installNode.ps1```에는 API가 찾는 특정 이름이 있습니다. 이 파일의 이름을 변경 하면 오류가 발생 합니다.
 
 
-## <a name="integration-with-ui"></a>UI 사용 하 여 통합
+## <a name="integration-with-ui"></a>UI와 통합
 
-업데이트 ```\src\app\default.component.ts``` 다음과:
+@No__t-0을 다음으로 업데이트 합니다.
 
 ``` ts
 import { Component } from '@angular/core';
@@ -88,7 +88,7 @@ export class DefaultComponent {
 
 }
 ```
-확장을 만들 때 사용 된 값을 자리 표시자를 업데이트 합니다.
+확장을 만들 때 사용 된 값으로 자리 표시자를 업데이트 합니다.
 ``` ts
 this.post('contoso.install-on-node', '1.0.0',
       this.appContextService.activeConnection.nodeName).subscribe(
@@ -105,13 +105,13 @@ this.post('contoso.install-on-node', '1.0.0',
       );
 ```
 
-또한 업데이트 ```\src\app\default.component.html``` 하려면:
+또한 ```\src\app\default.component.html```을 업데이트 합니다.
 ``` html
 <button (click)="installOnNode()">Click to install</button>
 <sme-loading-wheel *ngIf="loading" size="large"></sme-loading-wheel>
 <p *ngIf="response">{{response}}</p>
 ```
-마지막으로 ```\src\app\default.module.ts```:
+마지막 ```\src\app\default.module.ts```:
 ``` ts
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
@@ -132,13 +132,13 @@ export class DefaultModule { }
 
 ```
 
-## <a name="creating-and-installing-a-nuget-package"></a>만들기 및 NuGet 패키지를 설치 합니다.
+## <a name="creating-and-installing-a-nuget-package"></a>NuGet 패키지 만들기 및 설치
 
-마지막 단계 추가 했습니다 파일과 함께 NuGet 패키지를 작성 및 다음 Windows Admin Center 해당 패키지를 설치 합니다.
+마지막 단계는 추가한 파일을 사용 하 여 NuGet 패키지를 빌드한 다음 Windows 관리 센터에서 해당 패키지를 설치 하는 것입니다.
 
-에 따라 합니다 [게시 확장](../publish-extensions.md) 하기 전에 확장 패키지를 만들지 않은 경우 가이드입니다. 
+이전에 확장 패키지를 만들지 않은 경우 [게시 확장](../publish-extensions.md) 가이드를 따르세요. 
 > [!IMPORTANT]
-> 이 확장에 대 한.nuspec 파일에서 중요 한 것입니다를 ```<id>``` 값이 프로젝트의 이름과 일치 ```manifest.json``` 및 ```<version>``` 에 추가 된 기능을 일치 ```\src\app\default.component.ts```합니다. 아래에 있는 항목을 추가할 수도 ```<files>```: 
+> 이 확장에 대 한 nuspec 파일에서 ```<id>``` 값이 프로젝트 ```manifest.json```의 이름과 일치 하 고 ```<version>```가 ```\src\app\default.component.ts```에 추가 된 항목과 일치 하는지 확인 하는 것이 중요 합니다. 또한 @no__t 아래에 항목을 추가 합니다. 
 > 
 > ```<file src="Node\**\*.*" target="Node" />```.
 
@@ -165,4 +165,4 @@ export class DefaultModule { }
 </package>
 ```
 
-이 패키지를 만든 후 해당 피드 경로 추가 합니다. Windows Admin Center 설정으로 이동 > 확장 > 피드를 패키지에 있는 경로 추가 합니다. 확장 완료 되 면 설치 되 고 클릭 수 있습니다는 ```install``` 단추 및 API 호출 됩니다.  
+이 패키지를 만든 후에는 해당 피드에 경로를 추가 합니다. Windows 관리 센터에서 설정 > 확장 > 피드로 이동 하 여 패키지가 있는 위치에 경로를 추가 합니다. 확장이 설치 되 면 ```install``` 단추를 클릭할 수 있습니다. 그러면 API가 호출 됩니다.  

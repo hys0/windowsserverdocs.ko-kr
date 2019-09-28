@@ -1,41 +1,41 @@
 ---
-title: 저장소 공간 다이렉트를 사용 하 여 진단 데이터 수집
-description: 저장소 공간 다이렉트 데이터 수집 도구를 실행 하 고 사용 하는 방법의 특정 예제를 사용 하 여 이해 합니다.
-keywords: 이벤트 채널, Get SDDCDiagnosticInfo, 문제 해결, 데이터 수집, 저장소 공간
+title: 스토리지 공간 다이렉트를 사용 하 여 진단 데이터 수집
+description: 데이터 수집 도구를 사용 하 여 이러한 도구를 실행 하 고 사용 하는 방법에 대 한 구체적인 예제를 이해 스토리지 공간 다이렉트.
+keywords: 저장소 공간, 데이터 수집, 문제 해결, 이벤트 채널, SDDCDiagnosticInfo
 ms.assetid: ''
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: adagashe
 ms.technology: storage-spaces
 ms.topic: article
 author: adagashe
 ms.date: 10/24/2018
 ms.localizationpriority: ''
-ms.openlocfilehash: 51cf96fb462b68f2ba01d49642a858430c71e9f5
-ms.sourcegitcommit: 63926404009f9e1330a4a0aa8cb9821a2dd7187e
+ms.openlocfilehash: 67f35e3afa8e9eafabe7b22eb60cc85c7be6cb23
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469608"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402881"
 ---
-# <a name="collect-diagnostic-data-with-storage-spaces-direct"></a>저장소 공간 다이렉트를 사용 하 여 진단 데이터 수집
+# <a name="collect-diagnostic-data-with-storage-spaces-direct"></a>스토리지 공간 다이렉트를 사용 하 여 진단 데이터 수집
 
 > 적용 대상: Windows Server 2019, Windows Server 2016
 
-저장소 공간 다이렉트 및 장애 조치 클러스터 문제를 해결 하는 데 필요한 데이터를 수집 하는 데 사용할 수 있는 다양 한 진단 도구가 있습니다. 이 문서에서는 중점적 **Get SDDCDiagnosticInfo** -클러스터를 진단 하는 데 관련 된 모든 정보를 수집 하는 하나의 터치 도구입니다.
+스토리지 공간 다이렉트 및 장애 조치 (Failover) 클러스터 문제를 해결 하는 데 필요한 데이터를 수집 하는 데 사용할 수 있는 다양 한 진단 도구가 있습니다. 이 문서에서는 클러스터를 진단 하는 데 도움이 되는 모든 관련 정보를 수집 하는 **SDDCDiagnosticInfo** -a touch tool에 초점을 둡니다.
 
-로그 및 기타 정보를 지정 하는 **Get SDDCDiagnosticInfo** 는 조밀한 아래 문제 해결 정보를 문제는 에스컬레이션 된 고 수 하는 고급 문제 해결 하는 데 도움이 됩니다. 분류에 대 한 Microsoft에 보낼 데이터가 필요 합니다.
+**SDDCDiagnosticInfo** 하는 로그 및 기타 정보가 조밀한 경우 아래에 표시 된 문제 해결에 대 한 정보는 에스컬레이션 된 고급 문제를 해결 하는 데 도움이 되며, 데이터를 전송 해야 할 수도 있습니다. Microsoft에서 심사를 담당 합니다.
 
-## <a name="installing-get-sddcdiagnosticinfo"></a>Get-SDDCDiagnosticInfo 설치
+## <a name="installing-get-sddcdiagnosticinfo"></a>SDDCDiagnosticInfo 설치
 
-합니다 **Get SDDCDiagnosticInfo** PowerShell cmdlet (즉, **Get-PCStorageDiagnosticInfo**, 이전의 **테스트 StorageHealth**)에 대 한 로그를 수집 하 고 수행할 수 저장소 공간 (장애 조치 클러스터링 (클러스터, 리소스, 네트워크, 노드)에 대 한 상태 검사 실제 디스크, 엔클로저, 가상 디스크)를 클러스터 공유 볼륨, SMB 파일 공유 및 중복 제거 합니다. 
+**SDDCDiagnosticInfo** PowerShell cmdlet ( **PCStorageDiagnosticInfo**, 이전에는 **테스트-storagehealth**)를 사용 하 여에 대 한 로그를 수집 하 고 장애 조치 (Failover) 클러스터링에 대 한 상태 검사를 수행할 수 있습니다 (클러스터, 리소스, 네트워크, 노드), 저장소 공간 (실제 디스크, 인클로저, 가상 디스크), 클러스터 공유 볼륨, SMB 파일 공유 및 중복 제거입니다. 
 
-아래 윤곽선은 모두 스크립트를 설치 하는 두 가지 방법 있습니다.
+스크립트를 설치 하는 방법에는 다음 두 가지가 있습니다.
 
 ### <a name="powershell-gallery"></a>PowerShell 갤러리
 
-합니다 [PowerShell 갤러리](https://www.powershellgallery.com/packages/PrivateCloud.DiagnosticInfo) GitHub 리포지토리의 스냅숏입니다. Note는 최신 버전의 Windows 10에서,에 Windows WMF (Management Framework) 5.0 또는 MSI 기반 설치 관리자 (PowerShell 3 및 4)에서 사용할 수 있는 PowerShellGet 모듈이 필요 PowerShell 갤러리에서 항목을 설치 합니다.
+[PowerShell 갤러리](https://www.powershellgallery.com/packages/PrivateCloud.DiagnosticInfo) 은 GitHub 리포지토리의 스냅숏입니다. PowerShell 갤러리에서 항목을 설치 하려면 Windows 10, WMF (Windows Management Framework) 5.0 또는 MSI 기반 설치 관리자 (PowerShell 3 및 4 용)에서 사용할 수 있는 PowerShellGet 모듈의 최신 버전이 필요 합니다.
 
-명령을 실행 하 여 다음 PowerShell에서 관리자 권한으로 모듈을 설치할 수 있습니다.
+관리자 권한으로 PowerShell에서 다음 명령을 실행 하 여 모듈을 설치할 수 있습니다.
 
 ``` PowerShell
 Install-PackageProvider NuGet -Force
@@ -51,7 +51,7 @@ Update-Module PrivateCloud.DiagnosticInfo
 
 ### <a name="github"></a>GitHub
 
-합니다 [GitHub 리포지토리](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/) 모듈의 최신 버전 이므로 여기 반복 지속적으로 했습니다. GitHub에서 모듈을 설치 하려면에서 최신 모듈을 다운로드 합니다 [보관](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/archive/master.zip) PrivateCloud.DiagnosticInfo 디렉터리를 가리키는 올바른 PowerShell 모듈 경로 추출 하 고 ```$env:PSModulePath```
+[GitHub 리포지토리](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/) 는이 모듈의 최신 버전으로, 계속 해 서 반복 하 고 있습니다. GitHub에서 모듈을 설치 하려면 [보관](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/archive/master.zip) 에서 최신 모듈을 다운로드 하 고 PrivateCloud DiagnosticInfo 디렉터리를 ```$env:PSModulePath```이 가리키는 올바른 PowerShell 모듈 경로로 추출 합니다.
 
 ``` PowerShell
 # Allowing Tls12 and Tls11 -- e.g. github now requires Tls12
@@ -79,56 +79,56 @@ Import-Module $module -Force
 
 ``` 
 
-오프 라인 클러스터에서이 모듈을 가져올 경우 다운로드 zip에 대상 서버 노드를 이동 하 고 모듈을 설치 합니다.
+이 모듈을 오프 라인 클러스터에서 가져와야 하는 경우 zip을 다운로드 하 여 대상 서버 노드로 이동 하 고 모듈을 설치 합니다.
 
-## <a name="gathering-logs"></a>로그 수집
+## <a name="gathering-logs"></a>로그 수집 중
 
-이벤트 채널을 사용 하도록 설정 하 고 설치 프로세스를 완료 한 후 가져오려는 모듈에서 Get-SDDCDiagnosticInfo PowerShell cmdlet을 사용할 수 있습니다.
+이벤트 채널을 사용 하도록 설정 하 고 설치 프로세스를 완료 한 후 모듈에서 SDDCDiagnosticInfo PowerShell cmdlet을 사용 하 여 가져올 수 있습니다.
 
-- 저장소 상태 및 비정상 구성 요소에 대 한 세부 정보 보고서
-- 저장소 풀, 볼륨 및 중복 제거 된 볼륨 용량에 대 한 보고서
-- 모든 클러스터 노드 및 오류 요약 보고서에서 이벤트 로그
+- 저장소 상태 및 비정상 구성 요소에 대 한 세부 정보를 보고 합니다.
+- 풀, 볼륨 및 중복 제거 된 볼륨 별로 저장소 용량 보고서
+- 모든 클러스터 노드의 이벤트 로그 및 요약 오류 보고서
 
-저장소 클러스터 이름에 있다고 가정 *"CLUS01"입니다.*
+저장소 클러스터의 이름이 *"CLUS01"* 인 것으로 가정 합니다.
 
-원격 저장소 클러스터에 대해 실행 합니다.
+원격 저장소 클러스터에 대해 실행 하려면:
 
 ``` PowerShell
 Get-SDDCDiagnosticInfo -ClusterName CLUS01
 ```
 
-클러스터 된 저장소 노드에서 로컬로 실행 합니다.
+클러스터 된 저장소 노드에서 로컬로 실행 하려면 다음을 수행 합니다.
 
 ``` PowerShell
 Get-SDDCDiagnosticInfo
 ```
 
-에 지정된 된 폴더에 결과 저장 합니다.
+지정 된 폴더에 결과를 저장 하려면 다음을 수행 합니다.
 
 ``` PowerShell
 Get-SDDCDiagnosticInfo -WriteToPath D:\Folder 
 ```
 
-실제 클러스터에서이 모양을의 예는 다음과 같습니다.
+실제 클러스터에서 표시 되는 방법의 예는 다음과 같습니다.
 
 ``` PowerShell
 New-Item -Name SDDCDiagTemp -Path d:\ -ItemType Directory -Force
 Get-SddcDiagnosticInfo -ClusterName S2D-Cluster -WriteToPath d:\SDDCDiagTemp
 ```
 
-알 수 있듯이 스크립트 작업이 수행 됩니다. 현재 클러스터 상태의 유효성 검사
+여기에서 볼 수 있듯이 스크립트는 현재 클러스터 상태에 대 한 유효성 검사도 수행 합니다.
 
-![데이터 컬렉션 powershell 스크린샷](media/data-collection/CollectData.png)
+![데이터 수집 powershell 스크린샷](media/data-collection/CollectData.png)
 
-모든 데이터를 볼 수 있듯이 SDDCDiagTemp 폴더에 기록 됩니다.
+여기에서 볼 수 있듯이 모든 데이터는 SDDCDiagTemp 폴더에 기록 됩니다.
 
-![데이터 파일 탐색기 스크린샷](media/data-collection/CollectDataFolder.png)
+![파일 탐색기의 데이터 스크린샷](media/data-collection/CollectDataFolder.png)
 
-스크립트는 끝나면 ZIP users 디렉터리에 만들어집니다.
+스크립트가 완료 되 면 사용자 디렉터리에 ZIP이 생성 됩니다.
 
-![데이터 zip의 powershell 스크린샷](media/data-collection/CollectDataResult.png)
+![powershell의 데이터 zip 스크린샷](media/data-collection/CollectDataResult.png)
 
-텍스트 파일에 보고서를 생성 해 보겠습니다
+텍스트 파일에 보고서를 생성 하겠습니다.
 
 ```PowerShell
 #find the latest diagnostic zip in UserProfile
@@ -143,45 +143,45 @@ Get-SddcDiagnosticInfo -ClusterName S2D-Cluster -WriteToPath d:\SDDCDiagTemp
     
 ```
 
-참조를 위해 여기에 대 한 링크는 합니다 [예제 보고서](https://github.com/Microsoft/WSLab/blob/dev/Scenarios/S2D%20Tools/Get-SDDCDiagnosticInfo/SDDCReport.txt) 하 고 [zip 샘플](https://github.com/Microsoft/WSLab/blob/dev/Scenarios/S2D%20Tools/Get-SDDCDiagnosticInfo/HealthTest-S2D-Cluster-20180522-1546.ZIP)합니다.
+참조를 위해 [샘플 보고서](https://github.com/Microsoft/WSLab/blob/dev/Scenarios/S2D%20Tools/Get-SDDCDiagnosticInfo/SDDCReport.txt) 와 [샘플 zip](https://github.com/Microsoft/WSLab/blob/dev/Scenarios/S2D%20Tools/Get-SDDCDiagnosticInfo/HealthTest-S2D-Cluster-20180522-1546.ZIP)에 대 한 링크는 다음과 같습니다.
 
-Windows Admin Center (버전 1812에부터 해당)에서이 보기에 *진단* 탭 합니다. 아래 스크린샷에 표시 된 대로 다음을 할 수 있습니다. 
+Windows 관리 센터 (버전 1812 이상)에서이를 보려면 *진단* 탭으로 이동 합니다. 아래 스크린샷에 표시 된 것 처럼 다음을 수행할 수 있습니다. 
 
-- 진단 도구를 설치 합니다.
-- 업데이트 하는 (오래 된 경우) 
-- 일일 진단 실행을 예약 (시스템에 미치는 영향, 일반적으로 낮은 있습니다 < 백그라운드에서 5 분 500mb를 초과 하 여 클러스터에서 사용 되지 않습니다)
-- 보기를 지원 하거나 직접 분석할 수 있도록 해야 하는 경우 이전에 진단 정보를 수집 합니다.
+- 진단 도구 설치
+- 업데이트 (만료 된 경우), 
+- 매일 진단 실행 예약 (시스템에 미치는 영향이 적고, 일반적으로 백그라운드에서 5 분 정도 < 걸리며, 클러스터에 500mb를 초과 하지 않음)
+- 직접 지원 하거나 분석 하기 위해 제공 해야 하는 경우 이전에 수집한 진단 정보를 확인 합니다.
 
 ![wac 진단 스크린샷](media/data-collection/Wac.png)
 
-## <a name="get-sddcdiagnosticinfo-output"></a>Get-SDDCDiagnosticInfo 출력
+## <a name="get-sddcdiagnosticinfo-output"></a>SDDCDiagnosticInfo 출력
 
-Get-SDDCDiagnosticInfo의 압축 된 출력에 포함 된 파일은 다음과 같습니다.
+다음은 SDDCDiagnosticInfo의 압축 된 출력에 포함 된 파일입니다.
 
 ### <a name="health-summary-report"></a>상태 요약 보고서
 
-상태 요약 보고서로 저장 됩니다.
-- 0_CloudHealthSummary.log
+상태 요약 보고서는 다음과 같이 저장 됩니다.
+- 0_CloudHealthSummary
 
-수집 하 고 시스템의 요약을 제공 하려는 모든 데이터를 구문 분석 후에이 파일이 생성 됩니다. 포함 되어 있습니다.
+이 파일은 수집 된 모든 데이터를 구문 분석 한 후에 생성 되며 시스템에 대 한 간략 한 요약을 제공 하기 위한 것입니다. 다음을 포함 합니다.
 
 - 시스템 정보
-- 저장소 상태 개요 (노드, 리소스 online 클러스터 공유 볼륨을 온라인, 비정상 구성 요소 등의 수입니다.)
-- 비정상 (오프 라인, 실패 또는 보류 중인 온라인에 있는 클러스터 리소스) 구성 요소에 대 한 세부 정보
+- 저장소 상태 개요 (노드 수, 온라인 리소스, 클러스터 공유 볼륨 온라인, 비정상 구성 요소 등)
+- 비정상 구성 요소 (오프 라인, 실패 또는 온라인 보류 중인 클러스터 리소스)에 대 한 세부 정보
 - 펌웨어 및 드라이버 정보
 - 풀, 실제 디스크 및 볼륨 세부 정보
-- 저장소 성능 (성능 카운터는 수집)
+- 저장소 성능 (성능 카운터 수집)
 
-이 보고서는 지속적으로 유용한 정보를 포함 하도록 업데이트 중입니다. 최신 정보를 참조 하세요. 합니다 [GitHub 추가 정보](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/edit/master/README.md)합니다.
+이 보고서는 더 유용한 정보를 포함 하도록 지속적으로 업데이트 되 고 있습니다. 최신 정보는 [GITHUB 추가](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/edit/master/README.md)정보를 참조 하세요.
 
 ### <a name="logs-and-xml-files"></a>로그 및 XML 파일
 
-스크립트 실행 스크립트를 수집 하는 다양 한 로그 및 출력을 xml 파일로 저장 합니다. 클러스터 및 상태 로그, 시스템 정보 (MSInfo32), 장애 조치 클러스터링, 디스크 진단, 하이퍼-v, 저장소 공간 등, 필터링 되지 않은 이벤트 로그 및 저장소 진단 정보 수집 (작업 로그). 수집 되는 정보에서 최신 정보를 참조 하세요. 합니다 [GitHub 추가 정보 (새로운 수집한)](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/blob/master/README.md#what-does-the-cmdlet-output-include)합니다.
+이 스크립트는 다양 한 로그 수집 스크립트를 실행 하 고 출력을 xml 파일로 저장 합니다. 클러스터 및 상태 로그, MSInfo32 (시스템 정보), 필터링 되지 않은 이벤트 로그 (장애 조치 (failover) 클러스터링, 되지 않는 진단, hyper-v, 저장소 공간 등) 및 저장소 진단 정보 (작업 로그)를 수집 합니다. 수집 되는 정보에 대 한 최신 정보는 [GITHUB 추가 정보 (수집 정보)](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/blob/master/README.md#what-does-the-cmdlet-output-include)를 참조 하세요.
 
-## <a name="how-to-consume-the-xml-files-from-get-pcstoragediagnosticinfo"></a>Get-PCStorageDiagnosticInfo에서 XML 파일을 사용 하는 방법
-에 의해 수집 된 데이터에서 제공 하는 XML 파일에서 데이터를 사용할 수 있습니다 합니다 **Get PCStorageDiagnosticInfo** cmdlet. 이러한 파일에 대 한 정보는 가상 디스크, 실제 디스크, 기본 클러스터 정보 및 다른 PowerShell 관련 출력 합니다. 
+## <a name="how-to-consume-the-xml-files-from-get-pcstoragediagnosticinfo"></a>PCStorageDiagnosticInfo에서 XML 파일을 사용 하는 방법
+**PCStorageDiagnosticInfo** cmdlet에 의해 수집 된 데이터에 제공 된 XML 파일의 데이터를 사용할 수 있습니다. 이러한 파일에는 가상 디스크, 실제 디스크, 기본 클러스터 정보 및 기타 PowerShell 관련 출력에 대 한 정보가 포함 됩니다. 
 
-이러한 출력의 결과 보려면 PowerShell 창을 열고 다음 단계를 실행 합니다. 
+이러한 출력의 결과를 보려면 PowerShell 창을 열고 다음 단계를 실행 합니다. 
 
 ```PowerShell
 ipmo storage
@@ -189,6 +189,6 @@ $d = import-clixml <filename>
 $d
 ```
 
-## <a name="what-to-expect-next"></a>예상 되는 다음?
-많은 향상 된 기능 및 SDDC 시스템 상태를 분석 하는 새 cmdlet.
-문제를 제출 하 여 보려는 원하는 항목에 대 한 의견 [여기](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/issues)합니다. 또한 자유롭게 기여 스크립트에 유용한 변경 내용을 제출 하 여는 [끌어오기 요청](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/pulls)합니다.
+## <a name="what-to-expect-next"></a>다음에는 어떻게 해야 하나요?
+SDDC 시스템 상태를 분석 하기 위한 많은 향상 된 기능 및 새로운 cmdlet.
+[여기](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/issues)에서 문제를 제출 하 여 확인 하고자 하는 내용에 대 한 피드백을 제공 합니다. 또한 [끌어오기 요청](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/pulls)을 제출 하 여 스크립트에 유용한 변경 사항을 자유롭게 적용할 수 있습니다.

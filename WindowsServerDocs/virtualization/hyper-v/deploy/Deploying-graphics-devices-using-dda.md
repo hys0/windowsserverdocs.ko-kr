@@ -1,7 +1,7 @@
 ---
 title: 불연속 장치 할당을 사용 하 여 그래픽 장치 배포
 description: DDA를 사용 하 여 Windows Server에서 그래픽 장치를 배포 하는 방법을 알아봅니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 ms.technology: hyper-v
 ms.tgt_pltfrm: na
@@ -9,12 +9,12 @@ ms.topic: article
 author: chrishuybregts
 ms.author: chrihu
 ms.assetid: 67a01889-fa36-4bc6-841d-363d76df6a66
-ms.openlocfilehash: 94ba561f35ea257a897f51cb3522196f7988eb71
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 3b37abaf5a2341aff66ff0064ecc4f52faf47f06
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70872102"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392999"
 ---
 # <a name="deploy-graphics-devices-using-discrete-device-assignment"></a>불연속 장치 할당을 사용 하 여 그래픽 장치 배포
 
@@ -86,7 +86,7 @@ Device Manager 또는 PowerShell을 사용 하 여 장치가 "사용 안 함" �
 Add-VMAssignableDevice -LocationPath $locationPath -VMName VMName
 ```
 
-## <a name="whats-next"></a>새로운 기능
+## <a name="whats-next"></a>다음 단계
 장치가 VM에 성공적으로 탑재 되 면 이제 운영 체제 미 설치 시스템에서 실행 되는 경우와 마찬가지로 해당 VM을 시작 하 고 장치와 상호 작용할 수 있습니다.  즉, 이제 VM에 하드웨어 공급 업체의 드라이버를 설치할 수 있으며 응용 프로그램은 해당 하드웨어를 볼 수 있습니다.  게스트 VM에서 장치 관리자를 열고 하드웨어가 표시 되는 것을 확인 하 여이를 확인할 수 있습니다.
 
 ## <a name="removing-a-device-and-returning-it-to-the-host"></a>장치를 제거 하 고 호스트에 반환

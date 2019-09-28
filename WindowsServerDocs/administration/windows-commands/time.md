@@ -1,8 +1,8 @@
 ---
-title: time
-description: 설정 및 시스템 시간을 표시 하는 방법에 알아봅니다.
+title: Time
+description: 시스템 시간을 설정 하 고 표시 하는 방법을 알아봅니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b5c1f43be98a19c4b150c247cc7fd48d62edeb5c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 484653ed65d5e5c16d74b2cb45b2c9da71aa62aa
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59861914"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71369955"
 ---
-# <a name="time"></a>time
+# <a name="time"></a>Time
 
 
 
@@ -38,7 +38,7 @@ time [/t | [<HH>[:<MM>[:<SS>]] [am|pm]]]
 
 |매개 변수|설명|
 |---------|-----------|
-|\<HH>[:\<MM>[:\<SS>[.\<NN>]]] [am\|pm]|여기서 지정 된 시간에 시스템 시간을 설정 *HH* (필수) 시간에 *MM* 는 분으로 및 *SS* (초)입니다. *NN* 1/100 초를 지정 하는 것입니다. 경우 **고** 또는 **오후** 를 지정 하지 않으면 **시간** 기본적으로 24 시간 형식을 사용 합니다.|
+|\<HH > [: \<MM > [: \<SS > [. \<NN >]]] [am @ no__t-4pm]|여기서 지정 된 시간에 시스템 시간을 설정 *HH* (필수) 시간에 *MM* 는 분으로 및 *SS* (초)입니다. *NN* 1/100 초를 지정 하는 것입니다. 경우 **고** 또는 **오후** 를 지정 하지 않으면 **시간** 기본적으로 24 시간 형식을 사용 합니다.|
 |/t|새 시간에 대 한 메시지를 표시 하지 않고 현재 시간을 표시 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
@@ -49,7 +49,7 @@ time [/t | [<HH>[:<MM>[:<SS>]] [am|pm]]]
 -   유효한 *HH* 값은 0-24입니다.
 -   유효한 *MM* 및 *SS* 값은 0부터 59까지 합니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 명령 확장을 사용 하는 경우 현재 시스템 시간을 표시 하려면 입력 합니다.
 ```

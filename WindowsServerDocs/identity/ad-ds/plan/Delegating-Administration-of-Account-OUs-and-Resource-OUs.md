@@ -7,14 +7,14 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 70900b44de85774e8e595f9691885d67682fa753
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 63fda63d5a34404563bab44ee54ba2e22d852782
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59834264"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402696"
 ---
 # <a name="delegating-administration-of-account-ous-and-resource-ous"></a>OU의 사용자 계정 및 리소스 OU 관리 위임
 

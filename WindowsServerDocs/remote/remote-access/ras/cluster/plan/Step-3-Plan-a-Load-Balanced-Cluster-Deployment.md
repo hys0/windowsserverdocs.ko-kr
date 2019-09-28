@@ -1,9 +1,9 @@
 ---
 title: 3 단계 부하 분산 된 클러스터 배포 계획
-description: 이 항목은 Windows Server 2016에서 클러스터에 원격 액세스 배포 가이드의 일부입니다.
+description: 이 항목은 Windows Server 2016의 클러스터에 원격 액세스 배포 가이드의 일부입니다.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-ras
@@ -12,16 +12,16 @@ ms.topic: article
 ms.assetid: 7540c17b-81de-47de-a04f-3247afa26f70
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 8efeb29bf07b572d5e2faef677349690d4282b4d
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: beb2f5ce27115bf328917e38910198794f523547
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67281176"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71404603"
 ---
 # <a name="step-3-plan-a-load-balanced-cluster-deployment"></a>3 단계 부하 분산 된 클러스터 배포 계획
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 부하 분산 구성 및 클러스터 배포를 계획 하는 다음 단계가입니다.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "67281176"
   
     -   관리자는 외부 부하 분산 장치 또는 그 반대로 Windows NLB에서 전환할 수 있습니다. Note는 관리자로 전환할 수 없으며 외부 부하 분산 장치에서 Windows NLB 8 개 이상의 서버 외부 부하 분산 장치 배포에서 보유 하는 경우.  
   
-### <a name="ELBConfigEx"></a>3.1.1 외부 부하 분산 장치 구성 예제  
+### <a name="ELBConfigEx"></a>3.1.1 외부 Load Balancer 구성 예제  
 이 섹션에서는 새 원격 액세스 배포에는 외부 부하 분산 장치를 사용 하기 위한 구성 단계를 설명 합니다. 외부 부하 분산 장치를 사용 하는 경우 원격 액세스 클러스터는 아래 그림 처럼 보일 수 있습니다 원격 액세스 서버를 내부 네트워크에 부하 분산 장치를 통해 회사 네트워크 및 외부 네트워크에 연결 하는 부하 분산 장치를 통해 인터넷에 연결 되어 있는:  
   
 ![외부 부하 분산 장치 구성 예제](../../../../media/Step-3-Plan-a-Load-Balanced-Cluster-Deployment/ELBDiagram-URA_Enterprise_NLB-.png)  
@@ -85,7 +85,7 @@ ms.locfileid: "67281176"
   
 6.  원격 액세스 서버가 이제 계획 된 IP 주소로 구성 되 고 외부 및 내부 IP 주소는 클러스터에 대 한 계획 된 IP 주소에 따라 구성 됩니다.  
   
-## <a name="bkmk_2_2_NLB"></a>3.2 Plan IP-HTTPS  
+## <a name="bkmk_2_2_NLB"></a>3.2 IP-HTTPS 요금제  
   
 1.  **인증서 요구 사항은**-단일 원격 액세스 서버를 배포 하는 동안 공용 또는 내부 인증 기관 (CA)에서 발급 하는 IP-HTTPS 인증서 또는 자체 서명 된 인증서를 사용 하 여 선택 합니다. 클러스터 배포에 대 한 원격 액세스 클러스터의 각 구성원에서 동일한 유형의 인증서를 사용 해야 합니다. 즉, (권장) 공용 CA에서 발급 한 인증서를 사용 하는 경우 클러스터의 각 구성원에서 공용 CA에서 발급 한 인증서를 설치 해야 합니다. 새 인증서의 주체 이름을 현재 배포에 사용 된 IP-HTTPS 인증서의 주체 이름에 동일 해야 합니다. 자체 서명 된 인증서를 사용 하는 경우 이러한 구성 됩니다 자동으로 각 서버에서 클러스터 배포 시 참고 합니다.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "67281176"
     > [!NOTE]  
     > 접두사 요구 사항이 사용 하도록 설정 하는 IPv6 내부 네트워크에만 해당 (IPv6 전용 또는 i p v 4 + IPv6). I p v 4만 회사 네트워크에 클라이언트 접두사는 자동으로 구성 하 고 관리자가이 변경할 수 없습니다.  
   
-## <a name="BKMK_3.3"></a>3.3 VPN 클라이언트 연결에 대 한 계획  
+## <a name="BKMK_3.3"></a>3.3 VPN 클라이언트 연결 계획  
 VPN 클라이언트 연결에 대 한 고려 사항 많습니다.  
   
 -   VPN 클라이언트 트래픽 부하를 분산 하는 경우 VPN 클라이언트 주소는 DHCP를 사용 하 여 할당 된 수 없습니다. 고정 주소 풀이 필요 합니다.  

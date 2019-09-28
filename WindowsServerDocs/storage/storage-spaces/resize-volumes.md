@@ -1,42 +1,42 @@
 ---
 title: 저장소 공간 다이렉트에서 볼륨 확장
-description: 저장소 공간 다이렉트 Windows Admin Center 및 PowerShell을 사용 하 여 볼륨 크기를 조정 하는 방법.
-ms.prod: windows-server-threshold
+description: Windows 관리 센터 및 PowerShell을 사용 하 여 스토리지 공간 다이렉트 볼륨의 크기를 조정 하는 방법입니다.
+ms.prod: windows-server
 ms.reviewer: cosmosdarwin
 author: cosmosdarwin
 ms.author: cosdar
 manager: eldenc
 ms.technology: storage-spaces
 ms.date: 05/07/2019
-ms.openlocfilehash: 3be6a4cda20f4d7d7d881ad8a272dc38fd787bba
-ms.sourcegitcommit: 75f257d97d345da388cda972ccce0eb29e82d3bc
+ms.openlocfilehash: 20482fe1728b12d4fe56dcfa397352fbb4b4f981
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65613230"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71366086"
 ---
 # <a name="extending-volumes-in-storage-spaces-direct"></a>저장소 공간 다이렉트에서 볼륨 확장
 > 적용 대상: Windows Server 2019, Windows Server 2016
 
-이 항목에서는의 볼륨 크기 조정에 대 한 지침을 제공 된 [저장소 공간 다이렉트](storage-spaces-direct-overview.md) Windows Admin Center 사용 하 여 클러스터.
+이 항목에서는 Windows 관리 센터를 사용 하 여 [스토리지 공간 다이렉트](storage-spaces-direct-overview.md) 클러스터의 볼륨 크기를 조정 하는 지침을 제공 합니다.
 
 볼륨 크기를 조정 하는 방법에 대 한 빠른 비디오를 시청 하세요.
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/hqyBzipBoTI]
 
-## <a name="extending-volumes-using-windows-admin-center"></a>Windows Admin Center 사용 하 여 볼륨을 확장 합니다.
+## <a name="extending-volumes-using-windows-admin-center"></a>Windows 관리 센터를 사용 하 여 볼륨 확장
 
-1. Windows Admin Center 저장소 공간 다이렉트 클러스터에 연결 하 고 선택한 **볼륨이** 에서 합니다 **도구** 창입니다.
-2. 볼륨 페이지에서 선택 합니다 **인벤토리** 탭을 선택한 다음 크기를 조정 하려는 볼륨입니다.
+1. Windows 관리 센터에서 스토리지 공간 다이렉트 클러스터에 연결한 다음 **도구** 창에서 **볼륨** 을 선택 합니다.
+2. 볼륨 페이지에서 **인벤토리** 탭을 선택한 후 크기를 조정 하려는 볼륨을 선택 합니다.
 
-    볼륨 세부 정보 페이지에서 볼륨에 대 한 저장소 용량 표시 됩니다. 또한 대시보드에서 직접 볼륨 세부 정보 페이지를 열 수 있습니다. 대시보드에서 경고 창에 저장소 용량에 대 한 볼륨 낮게 실행 중인 경우 알려, 경고를 선택 하 고 선택한 **볼륨을 이동**합니다.
+    볼륨 세부 정보 페이지에서 볼륨의 저장소 용량이 표시 됩니다. 대시보드에서 직접 볼륨 세부 정보 페이지를 열 수도 있습니다. 대시보드의 경고 창에서 볼륨의 저장소 용량이 부족 한 경우이를 알리는 경고를 선택 하 고 **볼륨으로 이동**을 선택 합니다.
 
-4. 볼륨 세부 정보 페이지의 맨 위에 있는 선택 **크기 조정**합니다.
-5. 더 큰 새 크기를 입력 한 다음 선택 **크기 조정**합니다.
+4. 볼륨 세부 정보 페이지의 위쪽에서 **크기 조정**을 선택 합니다.
+5. 더 큰 크기를 새로 입력 하 고 크기 **조정**을 선택 합니다.
 
-    볼륨 세부 정보 페이지에서 볼륨에 대 한 더 큰 저장소 용량을 지정 하 고 대시보드에서 경고의 선택을 취소 합니다.
+    볼륨 세부 정보 페이지에는 볼륨에 대 한 더 큰 저장소 용량이 표시 되 고 대시보드의 경고는 지워집니다.
 
-## <a name="extending-volumes-using-powershell"></a>PowerShell을 사용 하 여 볼륨을 확장 합니다.
+## <a name="extending-volumes-using-powershell"></a>PowerShell을 사용 하 여 볼륨 확장
 
 ### <a name="capacity-in-the-storage-pool"></a>저장소 풀의 용량
 
@@ -141,7 +141,7 @@ $Partition | Resize-Partition -Size ($Partition | Get-PartitionSupportedSize).Si
 
 ## <a name="see-also"></a>참조
 
-- [Windows Server 2016의에서 저장소 공간 다이렉트](storage-spaces-direct-overview.md)
-- [저장소 공간 다이렉트 볼륨 계획](plan-volumes.md)
-- [저장소 공간 다이렉트에서 볼륨 만들기](create-volumes.md)
-- [저장소 공간 다이렉트의 볼륨 삭제](delete-volumes.md)
+- [Windows Server 2016의 스토리지 공간 다이렉트](storage-spaces-direct-overview.md)
+- [스토리지 공간 다이렉트에서 볼륨 계획](plan-volumes.md)
+- [스토리지 공간 다이렉트에서 볼륨 만들기](create-volumes.md)
+- [스토리지 공간 다이렉트 볼륨 삭제](delete-volumes.md)

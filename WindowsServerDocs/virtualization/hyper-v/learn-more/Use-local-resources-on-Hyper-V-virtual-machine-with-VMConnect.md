@@ -1,7 +1,7 @@
 ---
 title: Use local resources on Hyper-V virtual machine with VMConnect
-description: VMConnect를 사용 하 여 로컬 리소스 사용의 요구 사항을 설명 합니다.
-ms.prod: windows-server-threshold
+description: VMConnect에서 로컬 리소스를 사용 하기 위한 요구 사항에 대해 설명 합니다.
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -11,27 +11,27 @@ ms.assetid: 18eface5-7518-4c6b-9282-93e2e3e87492
 author: KBDAzure
 ms.author: kathyDav
 ms.date: 12/06/2016
-ms.openlocfilehash: a7e465313c68ee793715aba045cc56a2ca5fd1de
-ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
+ms.openlocfilehash: 70bf72ec2277679820d985c9f78f10a4ea6e04df
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/25/2019
-ms.locfileid: "66222846"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392890"
 ---
 # <a name="use-local-resources-on-hyper-v-virtual-machine-with-vmconnect"></a>Use local resources on Hyper-V virtual machine with VMConnect
 
 >적용 대상: Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2
 
-가상 머신 연결 (VMConnect)를 사용 하면 이동식 USB 플래시 드라이브 또는 프린터와 같은 가상 컴퓨터에서 컴퓨터의 로컬 리소스를 사용할 수 있습니다. 고급 세션 모드에서는 VMConnect 창 크기를 조정할 수도 있습니다. 이 문서는 방법을 안내 호스트를 구성 하 고 다음 로컬 리소스에 가상 컴퓨터 파일에 대 한 액세스를 제공 합니다.
+VMConnect (가상 컴퓨터 연결)를 사용 하면 이동식 USB 플래시 드라이브 또는 프린터와 같은 가상 컴퓨터에서 컴퓨터의 로컬 리소스를 사용할 수 있습니다. 고급 세션 모드를 사용 하면 VMConnect 창의 크기를 조정할 수도 있습니다. 이 문서에서는 호스트를 구성한 다음 가상 컴퓨터에 로컬 리소스에 대 한 액세스 권한을 부여 하는 방법을 보여 줍니다.
 
-고급 세션 모드 및 클립보드 텍스트 입력 최신 Windows 운영 체제를 실행 하는 가상 머신에 대해서만 사용할 수 있습니다. \(참조 [로컬 리소스를 사용 하기 위한 요구](#requirements-for-using-local-resources)아래.\) 
+고급 세션 모드 및 형식 클립보드 텍스트는 최근 Windows 운영 체제를 실행 하는 가상 컴퓨터에만 사용할 수 있습니다. @no__t 아래에서 [로컬 리소스를 사용 하기 위한 요구 사항을](#requirements-for-using-local-resources)참조 하세요. \) 
 
 Ubuntu를 실행 하는 가상 컴퓨터에 대 한 참조 [Hyper-v VM에서 Ubuntu 화면 해상도 변경](https://blogs.msdn.microsoft.com/virtual_pc_guy/2014/09/19/changing-ubuntu-screen-resolution-in-a-hyper-v-vm/)합니다. 
   
 ## <a name="turn-on-enhanced-session-mode-on-a-hyper-v-host"></a>Hyper-v 호스트에서 고급 세션 모드 켜기  
-Hyper-v 호스트에서 Windows 10 또는 Windows 8.1 실행 하는 경우 고급 세션 모드 이므로에서 기본적으로이 건너뛰고 다음 섹션으로 이동 합니다. 하지만 호스트에서 Windows Server 2016 또는 Windows Server 2012 R2를 실행 하는 경우 먼저 이렇게 합니다. 
+Hyper-v 호스트에서 Windows 10 또는 Windows 8.1를 실행 하는 경우 고급 세션 모드는 기본적으로 켜져 있으므로이를 건너뛰고 다음 섹션으로 이동할 수 있습니다. 그러나 호스트에서 Windows Server 2016 또는 Windows Server 2012 r 2를 실행 하는 경우 먼저이 작업을 수행 합니다. 
   
-고급 세션 모드 켜기:
+고급 세션 모드를 설정 합니다.
 
 1.  가상 컴퓨터를 호스트하는 컴퓨터에 연결합니다.  
   
@@ -59,11 +59,11 @@ Hyper-v 호스트에서 Windows 10 또는 Windows 8.1 실행 하는 경우 고�
   
 8.  **확인**을 클릭합니다.  
   
-## <a name="choose-a-local-resource"></a>로컬 리소스를 선택 합니다.
+## <a name="choose-a-local-resource"></a>로컬 리소스 선택
 
-로컬 리소스에는 프린터, 클립보드에 및 VMConnect 실행 중인 컴퓨터의 로컬 드라이브 포함 됩니다. 자세한 내용은 참조 하세요. [로컬 리소스를 사용 하기 위한 요구](#requirements-for-using-local-resources)아래.  
+로컬 리소스에는 프린터, 클립보드 및 VMConnect를 실행 하는 컴퓨터의 로컬 드라이브가 있습니다. 자세한 내용은 아래의 [로컬 리소스를 사용 하기 위한 요구 사항](#requirements-for-using-local-resources)을 참조 하세요.  
   
-로컬 리소스를 선택 합니다.
+로컬 리소스를 선택 하려면:
   
 1.  VMConnect를 엽니다.  
   
@@ -97,17 +97,17 @@ Windows PowerShell 또는 명령 프롬프트에서 다음 명령을 실행하�
   
 `VMConnect.exe <ServerName> <VMName> /edit`  
   
-## <a name="requirements-for-using-local-resources"></a>로컬 리소스를 사용 하 여 요구 사항
+## <a name="requirements-for-using-local-resources"></a>로컬 리소스 사용을 위한 요구 사항
 
 컴퓨터의 로컬 리소스를 사용 하 여 가상 컴퓨터 수 있습니다:  
   
--   Hyper-v 호스트에 있어야 합니다 **고급 세션 모드 정책** 하 고 **고급 세션 모드** 설정이 켜져 합니다.  
+-   Hyper-v 호스트의 **고급 세션 모드 정책** 및 **고급 세션 모드** 설정이 켜져 있어야 합니다.  
   
--   VMConnect를 사용 하는 컴퓨터에서 Windows 10, Windows 8.1, Windows Server 2016 또는 Windows Server 2012 R2 실행 해야 합니다.  
+-   VMConnect를 사용 하는 컴퓨터는 Windows 10, Windows 8.1, Windows Server 2016 또는 Windows Server 2012 r 2를 실행 해야 합니다.  
   
--   가상 컴퓨터에 원격 데스크톱 서비스를 사용 하 고 Windows 10, Windows 8.1, Windows Server 2016 또는 Windows Server 2012 R2를 게스트 운영 체제로 실행 있어야 합니다.  
+-   가상 컴퓨터에서 원격 데스크톱 서비스 사용 하도록 설정 하 고 Windows 10, Windows 8.1, Windows Server 2016 또는 Windows Server 2012 r 2를 게스트 운영 체제로 실행 해야 합니다.  
   
-VMConnect와 가상 컴퓨터를 실행 하는 컴퓨터 둘 다의 요구 사항을 충족 하는 경우 사용 가능한 경우 다음과 같은 로컬 리소스의 모든 사용할 수 있습니다.  
+VMConnect를 실행 하는 컴퓨터와 가상 컴퓨터가 모두 요구 사항을 충족 하는 경우 다음 로컬 리소스를 사용할 수 있습니다.  
   
 -   디스플레이 구성  
   
@@ -139,8 +139,8 @@ VMConnect와 가상 컴퓨터를 실행 하는 컴퓨터 둘 다의 요구 사�
 -   RDP를 사용하지 않고 USB 및 사운드 리디렉션이 필요한 개발자 응용 프로그램을 테스트하고 문제를 해결하려는 경우  
   
 ## <a name="see-also"></a>관련 항목  
-[가상 머신에 연결](https://technet.microsoft.com/library/cc742407.aspx)  
-[Hyper-v에 1 또는 2 세대 가상 머신을 만들어야 하나요?](../plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md)
+[가상 컴퓨터에 연결](https://technet.microsoft.com/library/cc742407.aspx)  
+[Hyper-v에서 1 세대 또는 2 세대 가상 머신을 만들어야 하나요?](../plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md)
 
 
 

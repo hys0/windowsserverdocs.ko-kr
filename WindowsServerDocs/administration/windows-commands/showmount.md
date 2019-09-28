@@ -1,8 +1,8 @@
 ---
 title: showmount
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 26acf24922e6ac53a5c902d65eb0f23bff0af93b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e1d197072db93130de880b5ec52d1875720b1d26
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59852354"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71383908"
 ---
 # <a name="showmount"></a>showmount
 
@@ -36,9 +36,9 @@ showmount {-e|-a|-d} <Server>
   
 다음 옵션 중 하나를 제공 해야 합니다.  
   
-- **\-e** -시스템 서버에서 내보낸 모든 파일 표시 합니다.  
-- **\-** -모든 네트워크 파일 시스템 표시 \(NFS\) 클라이언트와 각 볼륨이 탑재 서버의 디렉터리입니다.  
-- **\-d** -NFS 클라이언트에서 현재 탑재 하는 서버에서 모든 디렉터리를 표시 합니다.  
+- **\-e** -서버에서 내보낸 모든 파일 시스템을 표시 합니다.  
+- **\-a** -모든 네트워크 파일 시스템 \(nfs @ no__t-3 클라이언트와 각 서버에 탑재 된 디렉터리를 표시 합니다.  
+- **\-d** -NFS 클라이언트에서 현재 탑재 한 서버의 모든 디렉터리를 표시 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
-[네트워크 파일 시스템 명령 참조에 대 한 서비스](services-for-network-file-system-command-reference.md)  
+[네트워크 파일 시스템 서비스 명령 참조](services-for-network-file-system-command-reference.md)  

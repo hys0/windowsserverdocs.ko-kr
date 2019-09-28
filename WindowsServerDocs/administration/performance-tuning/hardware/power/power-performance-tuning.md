@@ -1,18 +1,18 @@
 ---
 title: 전원 및 성능 조정
 description: Windows Server 분산 전원 계획에 대 한 프로세서 전원 관리 (PPM) 튜닝
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: Qizha;TristanB
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 4ffa39d50d7b4c8429485e7db35bb2c863b7a995
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 1fcb1601169fa8f8b45a8a89b6495179092a0adc
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70866769"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71370543"
 ---
 # <a name="power-and-performance-tuning"></a>전원 및 성능 조정
 

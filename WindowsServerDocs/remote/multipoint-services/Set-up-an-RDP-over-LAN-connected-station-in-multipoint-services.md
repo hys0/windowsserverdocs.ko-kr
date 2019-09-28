@@ -3,7 +3,7 @@ title: MultiPoint 서비스에서 RDP over LAN 연결 스테이션 설정
 description: MultiPoint 서비스에서 RDP over LAN 시스템을 설정 하는 방법에 대해 알아봅니다.
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ ms.assetid: 60e1a025-c2fb-4708-a3ff-c44c223a3224
 author: evaseydl
 manager: scottman
 ms.author: evas
-ms.openlocfilehash: 40899b277ae60169a0eca34b359172941e5391fb
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: d0d63a75d3ef6e042d44df0ecf4cc08973e859a6
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871558"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71394997"
 ---
 # <a name="set-up-an-rdp-over-lan-connected-station-in-multipoint-services"></a>MultiPoint 서비스에서 RDP over LAN 연결 스테이션 설정
 RDP-LAN 연결 된 스테이션은 원격 데스크톱 프로토콜 (RDP)를 사용 하 여 LAN (local area network)에서 MultiPoint 서비스에 연결 하는 씬 클라이언트, 기존 데스크톱 또는 랩톱 컴퓨터입니다. 이 및 다른 스테이션 형식에 대 한 자세한 내용은 참조 [MultiPoint 스테이션](MultiPoint-services-Stations.md)합니다.  

@@ -7,14 +7,14 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: d2a832d17c4f6ab926aeb44ea3598c1c2ea932b8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: fcf10ee11e92a00aca8bc0589c7419690312b6b9
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59890864"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71390143"
 ---
 # <a name="how-to-configure-protected-accounts"></a>보호된 계정을 구성하는 방법
 
@@ -72,7 +72,7 @@ Windows 8.1 및 Windows Server 2012 R2에는 자격 증명 도난을 방지하�
 
 -   **암호 변경** 보호 된 사용자 계정을 추가 하기 전에 각 사용자에 대 한 그룹 또는 Windows Server 2008을 실행 하는 도메인 컨트롤러에 최근에 변경 된 이상 암호 되었는지 확인 합니다.
 
-### <a name="BKMK_Prereq"></a>보호 된 계정 사용에 대 한 요구 사항
+### <a name="BKMK_Prereq"></a>보호 된 계정 사용을 위한 요구 사항
 보호된 계정에는 다음과 같은 배포 요구 사항이 있습니다.
 
 -   호스트는 보호 된 사용자에 대 한 클라이언트 쪽 제한을 제공 하려면 Windows 8.1 또는 Windows Server 2012 r 2를 실행 해야 합니다. 사용자는 보호된 사용자 그룹의 구성원 계정으로만 로그온해야 합니다. 보호 된 사용자 그룹을 만들 수 있습니다이 경우 [주 도메인 컨트롤러 (PDC) 에뮬레이터 역할을 전송](https://technet.microsoft.com/library/cc816944(v=ws.10).aspx) Windows Server 2012 r 2를 실행 하는 도메인 컨트롤러에 있습니다. 해당 그룹 개체를 다른 도메인 컨트롤러에 복제한 후 이전 버전의 Windows Server를 실행하는 도메인 컨트롤러에서 PDC 에뮬레이터 역할을 호스트할 수 있습니다.
@@ -84,7 +84,7 @@ Windows 8.1 및 Windows Server 2012 R2에는 자격 증명 도난을 방지하�
 
 #### <a name="new-logs-for-protected-users"></a>보호된 사용자에 대한 새로운 로그
 
-보호된 사용자와 관련된 이벤트 문제를 해결하는 데 도움이 되는 두 가지 새로운 작업 관리 로그인 보호 된 사용자-클라이언트 로그와 보호 된 사용자 실패-도메인 컨트롤러 로그 합니다. 이러한 새 로그는 이벤트 뷰어에 있으며 기본적으로 사용되지 않습니다. 로그를 사용하려면 **응용 프로그램 및 서비스 로그**, **Microsoft**, **Windows**, **인증**을 차례로 클릭하고 로그 이름을 클릭한 다음 **작업** 을 클릭(또는 로그를 마우스 오른쪽 단추로 클릭)하고 **로그 사용**을 클릭합니다.
+보호된 사용자와 관련된 이벤트 문제를 해결하는 데 도움이 되는 두 가지 새로운 작업 관리 로그인 보호 된 사용자-클라이언트 로그 및 보호 된 사용자 실패-도메인 컨트롤러 로그 이러한 새 로그는 이벤트 뷰어에 있으며 기본적으로 사용되지 않습니다. 로그를 사용하려면 **응용 프로그램 및 서비스 로그**, **Microsoft**, **Windows**, **인증**을 차례로 클릭하고 로그 이름을 클릭한 다음 **작업** 을 클릭(또는 로그를 마우스 오른쪽 단추로 클릭)하고 **로그 사용**을 클릭합니다.
 
 이러한 로그의 이벤트에 대한 자세한 내용은 [인증 정책 및 인증 정책 사일로](https://technet.microsoft.com/library/dn486813.aspx)를 참조하세요.
 
@@ -107,12 +107,12 @@ Windows 8.1 및 Windows Server 2012 R2에는 자격 증명 도난을 방지하�
 ### <a name="BKMK_AuditAuthNattempts"></a>인증 시도 감사
 **보호된 사용자** 그룹의 구성원에 대한 인증 시도를 명시적으로 감사하기 위해 보안 로그 감사 이벤트를 계속 명시적으로 수집하거나 새로운 작업 관리 로그에서 데이터를 수집할 수 있습니다. 이러한 이벤트에 대한 자세한 내용은 [인증 정책 및 인증 정책 사일로](https://technet.microsoft.com/library/dn486813.aspx)를 참조하세요.
 
-### <a name="BKMK_ProvidePUdcProtections"></a>서비스 및 컴퓨터에 대 한 DC 쪽 보호 기능을 제공 합니다.
+### <a name="BKMK_ProvidePUdcProtections"></a>서비스 및 컴퓨터에 대 한 DC 쪽 보호 제공
 서비스 및 컴퓨터 계정은 **보호된 사용자**의 구성원일 수 없습니다. 이 섹션에서는 이러한 계정에 제공할 수 있는 도메인 컨트롤러 기반 보호에 대해 설명합니다.
 
--   NTLM 인증 거부: 통해 구성할 수 있는 유일한 [NTLM 차단 정책](https://technet.microsoft.com/library/jj865674(v=ws.10).aspx)
+-   NTLM 인증 거부: [NTLM 차단 정책](https://technet.microsoft.com/library/jj865674(v=ws.10).aspx) 을 통해서만 구성할 수 있습니다.
 
--   Kerberos 사전 인증에서 DES(데이터 암호화 표준) 거부:  Kerberos와 함께 릴리스된 Windows의 모든 버전에서는 RC4도 지원 때문에 des 구성 되지 않으면 Windows Server 2012 R2 도메인 컨트롤러 컴퓨터 계정에 대해 DES를 허용 하지 않습니다.
+-   Kerberos 사전 인증에서 DES(데이터 암호화 표준) 거부:  Windows Server 2012 R2 도메인 컨트롤러는 Kerberos를 사용 하 여 릴리스된 모든 Windows 버전 에서도 RC4를 지원 하기 때문에 DES에 대해서만 구성 되지 않은 경우 컴퓨터 계정에 대해 DES를 허용 하지 않습니다.
 
 -   Kerberos 사전 인증에서 RC4 거부: 구성할 수 없습니다.
 
@@ -170,7 +170,7 @@ AP 교환은 응용 프로그램 프로토콜 내부의 데이터처럼 일반�
 
 -   TGS 교환을 보내는 장치 또는 클라이언트(사용자, 서비스, 컴퓨터)에서 충족해야 하는 액세스 제어 조건
 
-### <a name="BKMK_ReqForAuthnPolicies"></a>인증 정책을 사용 하 여 요구 사항
+### <a name="BKMK_ReqForAuthnPolicies"></a>인증 정책 사용을 위한 요구 사항
 
 |정책|요구 사항|
 |----------|----------------|
@@ -186,7 +186,7 @@ AP 교환은 응용 프로그램 프로토콜 내부의 데이터처럼 일반�
 
 사용자의 계정 도메인 (DFL) Windows Server 2012 R2 도메인 기능 수준에 있어야 합니다. 모든 도메인 컨트롤러가 Windows Server 2012 r 2를 하 고 Active Directory 도메인 및 트러스트를 사용 하 여 확인 [dfl](https://technet.microsoft.com/library/cc753104.aspx) Windows Server 2012 r 2로 합니다.
 
-**동적 Access Control에 대 한 지원을 구성 하려면**
+**동적 Access Control 지원 구성**
 
 1.  기본 도메인 컨트롤러 정책에서 **사용**을 클릭하여 컴퓨터 구성 | 관리 템플릿 | 시스템 | KDC에서 **클레임, 복합 인증 및 Kerberos 아머링(armoring)에 대한 KDC(키 배포 센터) 클라이언트 지원**을 사용하도록 설정합니다.
 

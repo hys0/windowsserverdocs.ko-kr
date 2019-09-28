@@ -1,8 +1,8 @@
 ---
 title: wbadmin get 버전
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e4ebbd0d78de0ffbff1ee8c658d6d9811b87df1d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 0b7ba0749c8ef347e27590bde4eed7bbcf25af7e
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59813534"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71362365"
 ---
 # <a name="wbadmin-get-versions"></a>wbadmin get 버전
 
@@ -49,13 +49,13 @@ wbadmin get versions
 
 특정 백업에서 복구에 사용할 수 있는 목록 항목을 사용 하 여 **wbadmin 항목을 가져와**합니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 H 볼륨에 저장 되어 있는 사용 가능한 백업 목록을 보려면 다음을 입력 합니다.
 ```
 wbadmin get versions -backupTarget:h:
 ```
-원격 공유 폴더에 저장 되는 사용 가능한 백업 목록을 보려면 \\ \\servername\share 컴퓨터 server01, 유형:
+원격 공유 폴더에 저장 된 사용 가능한 백업 목록을 보려면 computer server01에 대 한 \\ @ no__t-1servername\share을 입력 하 고 다음을 입력 합니다.
 ```
 wbadmin get versions -backupTarget:\\servername\share -machine:server01
 ```

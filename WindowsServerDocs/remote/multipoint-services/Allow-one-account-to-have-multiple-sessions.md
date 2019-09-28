@@ -1,8 +1,8 @@
 ---
 title: 하나의 계정에서 여러 세션을 유지하도록 허용
-description: 동시에 여러 시스템에 액세스 하는 사용자 수 있습니다.
+description: 사용자가 동시에 여러 시스템에 액세스할 수 있도록 합니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: 69a8bc9080e13c3062bc287300620e24457265ad
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: dbc3f3b5a01f86cd1376cd4ecca59fd2951559e4
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59863794"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71395611"
 ---
 # <a name="allow-one-account-to-have-multiple-sessions"></a>하나의 계정에서 여러 세션을 유지하도록 허용
 사용자가 사용 하 여 그룹을 사용 하도록 설정 하는 동시에 여러 개의 스테이션에는 공유 계정 MultiPoint 허용 하도록 서버를 동시에 여러 개의 스테이션에에 기록 되도록 하려면 계정 하나를 구성 합니다. 기본적으로 사용자가 공유 사용자 계정으로 두 번째 스테이션에 로그온 하는 경우 첫 번째 스테이션 오프 사용자 계정 기록 됩니다.  

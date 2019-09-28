@@ -7,14 +7,14 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: d69ccfd15004619f890c6f5c1cb630c62e16256b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: e8673b9e66a0aa3b6bea89b91ae5022efb26c65c
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59889194"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71390513"
 ---
 # <a name="virtualized-domain-controller-architecture"></a>가상화된 도메인 컨트롤러 아키텍처
 
@@ -182,7 +182,7 @@ AD DS에서는 하이퍼바이저 플랫폼을 기반으로 **VM-Generation ID**
   
 1.  T1 시점에 하이퍼바이저 관리자는 가상 DC1의 스냅샷을 만듭니다. 이 시점에 DC1의 USN 값(실제로는 **highestCommittedUsn**)은 100이고, InvocationId(위 다이어그램에 ID로 표시) 값은 A(실제로는 GUID일 수 있음)입니다. savedVMGID 값은 DC의 DIT 파일에 있는 VM-GenerationID입니다(DC 컴퓨터 개체에 대해 **msDS-GenerationId**특성에 저장됨). VMGID는 가상 컴퓨터 드라이버에서 사용할 수 있는 VM-GenerationId의 현재 값입니다. 이 값은 하이퍼바이저에서 제공됩니다.  
   
-2.  나중에 T2 시점에 100명의 사용자가 이 DC에 추가됩니다. 사용자를 T1과 T2 사이에 이 DC에서 수행되었을 수 있는 업데이트의 예로 간주하면 됩니다. 이러한 업데이트에는 실제로 사용자 만들기, 그룹 만들기, 암호 업데이트, 특성 업데이트 등이 혼합될 수 있습니다. 이 예에서는 각 업데이트에서 하나의 고유한 USN(실제로는 사용자 만들기에 둘 이상의 USN이 사용될 수 있음)을 사용합니다. 이러한 업데이트를 커밋하기 전에 DC1에서 해당 데이터베이스에 있는 VM-GenerationID 값(savedVMGID)이 드라이버에서 사용할 수 있는 현재 값(VMGID)과 일치하는지 확인합니다. 아직 롤백이 발생하지 않아 두 값이 동일하므로 업데이트가 커밋되고 USN이 200까지 이동합니다. 이는 다음 업데이트에서 USN 201을 사용할 수 있음을 나타냅니다. InvocationId, savedVMGID 또는 VMGID는 변경되지 않습니다. 이러한 업데이트는 다음 복제 주기에서 DC2에 복제됩니다. DC2 업데이트 상위 워터 마크 (및 **UptoDatenessVector**) 표현 DC1(A) 단순히 여기서 @USN = 200으로 표시 합니다. 즉, DC2는 InvocationId A 컨텍스트에서 USN 200까지 DC1의 모든 업데이트를 인식합니다.  
+2.  나중에 T2 시점에 100명의 사용자가 이 DC에 추가됩니다. 사용자를 T1과 T2 사이에 이 DC에서 수행되었을 수 있는 업데이트의 예로 간주하면 됩니다. 이러한 업데이트에는 실제로 사용자 만들기, 그룹 만들기, 암호 업데이트, 특성 업데이트 등이 혼합될 수 있습니다. 이 예에서는 각 업데이트에서 하나의 고유한 USN(실제로는 사용자 만들기에 둘 이상의 USN이 사용될 수 있음)을 사용합니다. 이러한 업데이트를 커밋하기 전에 DC1에서 해당 데이터베이스에 있는 VM-GenerationID 값(savedVMGID)이 드라이버에서 사용할 수 있는 현재 값(VMGID)과 일치하는지 확인합니다. 아직 롤백이 발생하지 않아 두 값이 동일하므로 업데이트가 커밋되고 USN이 200까지 이동합니다. 이는 다음 업데이트에서 USN 201을 사용할 수 있음을 나타냅니다. InvocationId, savedVMGID 또는 VMGID는 변경되지 않습니다. 이러한 업데이트는 다음 복제 주기에서 DC2에 복제됩니다. D c 1은 단순히 DC1 (A) @USN = 200으로 표시 된 상위 워터 마크 (및 **UptoDatenessVector**)를 업데이트 합니다. 즉, DC2는 InvocationId A 컨텍스트에서 USN 200까지 DC1의 모든 업데이트를 인식합니다.  
   
 3.  T3 시점에는 T1 시점에 생성된 스냅샷이 DC1에 적용됩니다. DC1이 롤백되었으므로 해당 USN이 100으로 롤백됩니다. 이는 101부터 USN을 사용하여 후속 업데이트와 연결할 수 있음을 나타냅니다. 그러나 이 시점에서는 VMGID 값이 VM-GenerationID를 지원하는 하이퍼바이저의 값과 다를 수 있습니다.  
   

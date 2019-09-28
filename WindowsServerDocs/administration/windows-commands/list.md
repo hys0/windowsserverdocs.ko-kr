@@ -1,8 +1,8 @@
 ---
-title: 목록
-description: '에 대 한 Windows 명령을 항목 * * *- '
+title: list
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: aacc93e1c7a16a7327ddbd17515f19cf41a5b458
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 91b42925fc822b10157bb488167d06fe82cfe1e3
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59825544"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71374704"
 ---
-# <a name="list"></a>목록
+# <a name="list"></a>list
 
 
 
@@ -41,10 +41,10 @@ list providers
 |매개 변수|설명|
 |---------|-----------|
 |작성자|기록기를 나열합니다. 참조 [작성기 목록](list-writers.md) 구문 및 매개 변수입니다.|
-|그림자|영구 및 기존 비 영구적인 섀도 복사본을 나열 합니다. 참조 [그림자 목록](list-shadows.md) 구문 및 매개 변수입니다.|
-|공급자|현재 목록 섀도 복사본 공급자를 등록 합니다. 참조 [공급자 나열](list-providers.md) 구문 및 매개 변수입니다.|
+|그림자|영구 및 기존 비영구 섀도 복사본을 나열 합니다. 참조 [그림자 목록](list-shadows.md) 구문 및 매개 변수입니다.|
+|providers|현재 목록 섀도 복사본 공급자를 등록 합니다. 참조 [공급자 나열](list-providers.md) 구문 및 매개 변수입니다.|
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 모든 섀도 복사본을 나열 하려면 다음을 입력 합니다.
 ```

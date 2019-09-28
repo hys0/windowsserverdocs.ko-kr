@@ -1,8 +1,8 @@
 ---
 title: prnqctl
-description: 테스트 페이지를 인쇄, 일시 중지 하거나 프린터를 다시 시작 합니다.
+description: 테스트 페이지를 인쇄 하거나 프린터를 일시 중지 하거나 다시 시작 합니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 1ba58970e76497f6e91c53c73a429eb65a275b2f
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 189b344dc0c4f587ba7a6382c481304242e22c74
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66442098"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71372035"
 ---
 # <a name="prnqctl"></a>prnqctl
 
@@ -35,32 +35,32 @@ cscript Prnqctl {-z | -m | -e | -x | -?} [-s <ServerName>]
 
 |매개 변수|설명|  
 |-------|--------|  
-|-z|지정 된 프린터에서 인쇄를 일시 중지 합니다 **-p** 매개 변수입니다.|  
+|-z|**-p** 매개 변수를 사용 하 여 지정 된 프린터에서 인쇄를 일시 중지 합니다.|  
 |-M|지정 된 프린터에서 인쇄를 다시 시작 되는 **-p** 매개 변수입니다.|  
-|-e|지정 된 프린터에서 테스트 페이지를 인쇄 합니다 **-p** 매개 변수입니다.|  
+|-e|**-p** 매개 변수를 사용 하 여 지정 된 프린터에서 테스트 페이지를 인쇄 합니다.|  
 |-x|지정 된 프린터에서 인쇄 작업을 모두 취소는 **-p** 매개 변수입니다.|  
-|-s \<ServerName>|프린터를 관리 하려면를 호스트 하는 원격 컴퓨터의 이름을 지정 합니다. 컴퓨터를 지정 하지 않으면 로컬 컴퓨터가 사용 됩니다.|  
-|-p \<printerName>|관리 하려는 프린터의 이름을 지정 합니다. 필수.|  
-|-u \<사용자 이름 >-w \<암호 >|프린터를 관리 하려면를 호스트 하는 컴퓨터에 연결할 수 있는 권한이 있는 계정을 지정 합니다. 대상 컴퓨터의 로컬 관리자 그룹의 모든 구성원이 이러한 권한이 있지만 사용 권한을 다른 사용자에 게 부여 될 수도 있습니다. 계정을 지정 하지 않으면, 작동 하려면 명령에 대 한 이러한 사용 권한이 있는 계정으로 로그온 해야 합니다.|  
+|-s \<ServerName >|프린터를 관리 하려면를 호스트 하는 원격 컴퓨터의 이름을 지정 합니다. 컴퓨터를 지정 하지 않으면 로컬 컴퓨터가 사용 됩니다.|  
+|-p \<printerName >|관리 하려는 프린터의 이름을 지정 합니다. 필수.|  
+|-u \<UserName >-w \<Password >|프린터를 관리 하려면를 호스트 하는 컴퓨터에 연결할 수 있는 권한이 있는 계정을 지정 합니다. 대상 컴퓨터의 로컬 관리자 그룹의 모든 구성원이 이러한 권한이 있지만 사용 권한을 다른 사용자에 게 부여 될 수도 있습니다. 계정을 지정 하지 않으면, 작동 하려면 명령에 대 한 이러한 사용 권한이 있는 계정으로 로그온 해야 합니다.|  
 |/?|명령 프롬프트에 도움말을 표시합니다.|  
 
 ## <a name="remarks"></a>설명  
-- 합니다 **prnqctl** 명령입니다는 %WINdir%\System32\printing_Admin_Scripts에 있는 Visual Basic 스크립트\\ <language> 디렉터리입니다. 명령 프롬프트에서이 명령을 사용 하려면 입력 **cscript** 전체 경로 뒤에 prnqctl 파일 또는 디렉터리 적절 한 폴더로 변경 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+- **Prnqctl.vbs** 명령은%WINdir%\System32\printing_Admin_Scripts @ no__t-1 @ no__t-2 디렉터리에 있는 Visual Basic 스크립트입니다. 이 명령을 사용 하려면 명령 프롬프트에서 **cscript** 다음에 prnqctl.vbs 파일의 전체 경로를 입력 하거나 디렉터리를 적절 한 폴더로 변경 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
   ```  
   cscript %WINdir%\System32\printing_Admin_Scripts\en-US\prnqctl  
   ```  
-- 텍스트 주위에 따옴표를 사용 하 여 사용자가 제공한 정보에 공백이 있으면 (예를 들어 `"computer Name"`).  
+- 사용자가 제공 하는 정보에 공백이 포함 된 경우 텍스트에 따옴표를 사용 합니다 (예: `"computer Name"`).  
 
-## <a name="BKMK_examples"></a>예제  
-공유 Laserprinter1 프린터에서 테스트 페이지를 인쇄 하는 \\\Server1 컴퓨터를 입력 합니다.  
+## <a name="BKMK_examples"></a>예와  
+@No__t-0 \ Server1 컴퓨터에서 공유 하는 Laserprinter1 프린터에서 테스트 페이지를 인쇄 하려면 다음을 입력 합니다.  
 ```  
 cscript Prnqctl -e -s Server1 -p Laserprinter1  
 ```  
-로컬 컴퓨터에서 Laserprinter1 프린터에서 인쇄를 일시 중지 하려면 다음을 입력 합니다.  
+로컬 컴퓨터의 Laserprinter1 프린터에서 인쇄를 일시 중지 하려면 다음을 입력 합니다.  
 ```  
 cscript Prnqctl -z -p Laserprinter1  
 ```  
-로컬 컴퓨터에서 Laserprinter1 프린터에서 모든 인쇄 작업을 취소 하려면 다음을 입력 합니다.  
+로컬 컴퓨터에서 Laserprinter1 프린터의 모든 인쇄 작업을 취소 하려면 다음을 입력 합니다.  
 ```  
 cscript Prnqctl -x -p Laserprinter1  
 ```  

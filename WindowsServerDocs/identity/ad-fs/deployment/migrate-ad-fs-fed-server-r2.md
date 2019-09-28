@@ -6,14 +6,14 @@ ms.author: billmath
 manager: femila
 ms.date: 07/10/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: d72217d9e8dc3b0f47382e08346dca977ac14b67
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 9e947f1894516de232a0db50bcbb56c7452098cd
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70867928"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71359417"
 ---
 # <a name="migrate-the-ad-fs-20-federation-server-to-ad-fs-on-windows-server-2012-r2"></a>AD FS 2.0 페더레이션 서버를 Windows Server 2012 r 2의 AD FS로 마이그레이션
 
@@ -108,9 +108,9 @@ Get-ADFSClaimDescription | Out-File “.\claimtypes.txt”`.
 > [!IMPORTANT]
 >  내보내기 스크립트에는 다음 매개 변수가 사용됩니다.  
 > 
-> - Export-federationconfiguration.ps1-\> Path < string [-ComputerName < string\>] [-Credential < pscredential\>] [-Force] [-certificatepassword < securestring\>]  
->   -   Export-federationconfiguration.ps1-\> Path < string [-ComputerName < string\>] [-Credential < pscredential\>] [-Force] [-certificatepassword < securestring\>] [- RelyingPartyTrustIdentifier < string [] >] [-ClaimsProviderTrustIdentifier < string [] >]  
->   -   Export-federationconfiguration.ps1-\> Path < string [-ComputerName < string\>] [-Credential < pscredential\>] [-Force] [-certificatepassword < securestring\>] [- RelyingPartyTrustName < string [] >] [-ClaimsProviderTrustName < string [] >]  
+> - Export-federationconfiguration.ps1-Path < string @ no__t-0 [-ComputerName < string @ no__t-1] [-Credential < pscredential @ no__t-2] [-Force] [-CertificatePassword < securestring @ no__t]  
+>   -   Export-federationconfiguration.ps1-Path < string @ no__t-0 [-ComputerName < string @ no__t-1] [-Credential < pscredential @ no__t-2] [-Force] [-CertificatePassword < securestring @ no__t-3] [-RelyingPartyTrustIdentifier < string [] >] [-ClaimsProviderTrustIdentifier < string [] >]  
+>   -   Export-federationconfiguration.ps1-Path < string @ no__t-0 [-ComputerName < string @ no__t-1] [-Credential < pscredential @ no__t-2] [-Force] [-CertificatePassword < securestring @ no__t-3] [-RelyingPartyTrustName < string [] >] [- ClaimsProviderTrustName < string [] >]  
 > 
 >   **-RelyingPartyTrustIdentifier <string[]>** - 이 cmdlet은 식별자가 문자열 배열에 지정된 신뢰 당사자 트러스트만 내보냅니다. 기본값은 신뢰 당사자 트러스트를 내보내지 않는 것입니다. RelyingPartyTrustIdentifier, ClaimsProviderTrustIdentifier, RelyingPartyTrustName 및 ClaimsProviderTrustName 중에 지정된 항목이 없는 경우 이 스크립트는 모든 신뢰 당사자 트러스트와 클레임 공급자 트러스트를 내보냅니다.  
 > 
@@ -193,9 +193,9 @@ import-federationconfiguration.ps1
 > [!IMPORTANT]
 >  가져오기 스크립트에는 다음 매개 변수가 사용됩니다.  
 > 
-> - Import-federationconfiguration.ps1-\> Path < string [-ComputerName < string\>] [-Credential < pscredential\>] [-Force] [-LogPath < string\>] [-certificatepassword < securestring \>]  
->   -   Import-federationconfiguration.ps1-\> Path < string [-ComputerName < string\>] [-Credential < pscredential\>] [-Force] [-LogPath < string\>] [-certificatepassword < securestring \>] [-RelyingPartyTrustIdentifier < string [] >] [-ClaimsProviderTrustIdentifier < string [] >  
->   -   Import-federationconfiguration.ps1-\> Path < string [-ComputerName < string\>] [-Credential < pscredential\>] [-Force] [-LogPath < string\>] [-certificatepassword < securestring \>] [-RelyingPartyTrustName < string [] >] [-ClaimsProviderTrustName < string [] >]  
+> - Import-federationconfiguration.ps1-Path < string @ no__t-0 [-ComputerName < string @ no__t-1] [-Credential < pscredential @ no__t-2] [-Force] [-LogPath < string @ no__t-3] [-CertificatePassword < securestring @ no__t-4]  
+>   -   Import-federationconfiguration.ps1-Path < string @ no__t-0 [-ComputerName < string @ no__t-1] [-Credential < pscredential @ no__t-2] [-Force] [-LogPath < string @ no__t-3] [-CertificatePassword < securestring @ no__t-4] [- RelyingPartyTrustIdentifier < string [] >] [-ClaimsProviderTrustIdentifier < string [] >  
+>   -   Import-federationconfiguration.ps1-Path < string @ no__t-0 [-ComputerName < string @ no__t-1] [-Credential < pscredential @ no__t-2] [-Force] [-LogPath < string @ no__t-3] [-CertificatePassword < securestring @ no__t-4] [- RelyingPartyTrustName < string [] >] [-ClaimsProviderTrustName < string [] >]  
 > 
 >   **-RelyingPartyTrustIdentifier <string[]>** - 이 cmdlet은 식별자가 문자열 배열에 지정된 신뢰 당사자 트러스트만 가져옵니다. 기본값은 신뢰 당사자 트러스트를 가져오지 않는 것입니다. RelyingPartyTrustIdentifier, ClaimsProviderTrustIdentifier, RelyingPartyTrustName 및 ClaimsProviderTrustName 중에 지정된 항목이 없는 경우 이 스크립트는 모든 신뢰 당사자 트러스트와 클레임 공급자 트러스트를 가져옵니다.  
 > 

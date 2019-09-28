@@ -2,22 +2,22 @@
 title: Windows PowerShell을 사용 하 여 비-도메인 구성원 클라이언트 컴퓨터를 구성 하려면
 description: 이 항목은 일부는 BranchCache 배포 가이드에 대 한 Windows Server 2016, 지사에 WAN 대역폭 사용량을 최적화 하기 위해 분산 및 호스트 캐시 모드로 BranchCache를 배포 하는 방법을 보여 주는
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 1b511e1a-686d-441f-a1c7-d4d029e1a061
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 9abb77e573d7b3f144ab831c655c81370a4a6af1
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9743d93fe7bc21a971ff886a7e255eed3b775c97
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59839954"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406422"
 ---
 # <a name="use-windows-powershell-to-configure-non-domain-member-client-computers"></a>Windows PowerShell을 사용 하 여 비-도메인 구성원 클라이언트 컴퓨터를 구성 하려면
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 호스트 캐시 모드 하거나 수동으로 분산된 캐시 모드로 BranchCache 클라이언트 컴퓨터를 구성 하려면이 절차를 사용할 수 있습니다.  
   

@@ -1,8 +1,8 @@
 ---
 title: trEE
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: de22de1c9d62ba79c1aa68248109cca88009703a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 22875e63526dc3465021c9aa990f6cea388b81e4
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59872634"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71385623"
 ---
 # <a name="tree"></a>trEE
 
@@ -38,17 +38,17 @@ tree [<Drive>:][<Path>] [/f] [/a]
 
 |매개 변수|설명|
 |---------|-----------|
-|\<Drive>:|디렉터리 구조를 표시 하려는 디스크를 포함 하는 드라이브를 지정 합니다.|
-|\<Path>|디렉터리 구조를 표시 하려는 디렉터리를 지정 합니다.|
+|\<Drive >:|디렉터리 구조를 표시 하려는 디스크를 포함 하는 드라이브를 지정 합니다.|
+|\< 경로 >|디렉터리 구조를 표시 하려는 디렉터리를 지정 합니다.|
 |/f|각 디렉터리에 있는 파일의 이름을 표시 합니다.|
-|/ a|형식임 **트리** 그래픽 문자 대신 텍스트 문자를 사용 하 여 하위 디렉터리를 연결 하는 줄을 표시 하는 것입니다.|
+|/ a|**트리가** 그래픽 문자 대신 텍스트 문자를 사용 하 여 하위 디렉터리를 연결 하는 줄을 표시 하도록 지정 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
 ## <a name="remarks"></a>설명
 
 표시 구조 **트리** 명령 프롬프트에서 지정 하는 매개 변수에 따라 달라 집니다. 드라이브 또는 경로 지정 하지 않으면 **트리** 현재 드라이브의 현재 디렉터리부터 시작 하는 트리 구조를 표시 합니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 모든 하위 디렉터리의 이름을 현재 드라이브에 디스크를 표시 하려면 다음을 입력 합니다.
 ```

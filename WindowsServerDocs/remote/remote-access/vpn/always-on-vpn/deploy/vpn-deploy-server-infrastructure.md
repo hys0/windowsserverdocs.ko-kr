@@ -1,7 +1,7 @@
 ---
 title: 서버 인프라 구성
 description: 이 단계에서는 VPN을 지 원하는 데 필요한 서버 쪽 구성 요소를 설치 하 고 구성 합니다. 서버 쪽 구성 요소에는 사용자, VPN 서버 및 NPS 서버에서 사용 하는 인증서를 배포 하도록 PKI를 구성 하는 작업이 포함 됩니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: ''
@@ -10,12 +10,12 @@ ms.author: pashort
 author: shortpatti
 ms.date: 08/30/2018
 ms.reviewer: deverette
-ms.openlocfilehash: 260d5c6273d877386dc1cd8833b2f226533127c3
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: c7e2c4172621416048fa9e82bbd12f5b1717d490
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871299"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71404296"
 ---
 # <a name="step-2-configure-the-server-infrastructure"></a>2단계. 서버 인프라 구성
 
@@ -116,7 +116,7 @@ RRAS 서버가 도메인에 가입 되어 있지 않으므로 VPN 게이트웨�
 
     - **용도:** 서버 인증, IP 보안 IKE 중간 
 
-    - **인증서 템플릿:** [_고객_] VPN 서버
+    - **인증서 템플릿:** [_Customer_] VPN 서버
 
 #### <a name="example-vpngatewayinf-script"></a>예: VPNGateway 스크립트
 

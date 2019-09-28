@@ -1,6 +1,6 @@
 ---
-title: 상태 서비스 설정
-ms.prod: windows-server-threshold
+title: 상태 관리 서비스 설정
+ms.prod: windows-server
 manager: eldenc
 ms.author: cosdar
 ms.technology: storage-health-service
@@ -8,21 +8,21 @@ ms.topic: article
 ms.assetid: ''
 author: cosmosdarwin
 ms.date: 08/14/2017
-ms.openlocfilehash: 569cf7ba30fd3f993394efd3735a56d116c067e0
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 1b10d7c5432b10262e8df85d427f17f402d4f64a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59858334"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71361044"
 ---
-# <a name="health-service-settings"></a>상태 서비스 설정
-> 적용 대상: Windows Server 2016
+# <a name="health-service-settings"></a>상태 관리 서비스 설정
+> 적용 대상: Windows Server 2019, Windows Server 2016
 
-상태 관리 서비스는 저장소 공간 다이렉트를 실행 하는 클러스터에 대 한 작업 경험과 일상적인 모니터링을 향상 시키는 Windows Server 2016의 새로운 기능입니다.
+상태 관리 서비스는 스토리지 공간 다이렉트를 실행 하는 클러스터에 대 한 일상적인 모니터링 및 운영 환경을 개선 하는 Windows Server 2016의 새로운 기능입니다.
 
-다양 한 상태 관리 서비스의 동작을 제어 하는 매개 변수는 설정으로 노출 됩니다. 오류 또는 작업의 강도 조정, 켬/끔 등 특정 동작을 설정 하 고 수정할 수 있습니다.
+상태 관리 서비스의 동작을 제어 하는 많은 매개 변수가 설정으로 노출 됩니다. 이러한 옵션을 수정 하 여 오류 또는 동작의 강도를 조정 하 고 특정 동작을 설정/해제 하는 등의 작업을 수행할 수 있습니다.
 
-설정 하거나 설정을 수정 하려면 다음 PowerShell cmdlet을 사용 합니다.
+다음 PowerShell cmdlet을 사용 하 여 설정을 설정 하거나 수정할 수 있습니다.
 
 ### <a name="usage"></a>사용법
 
@@ -38,7 +38,7 @@ Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Storage.V
 
 ### <a name="common-settings"></a>일반 설정
 
-일반적으로 수정 된 일부 설정은 해당 기본값으로 함께 아래 나열 됩니다.
+일부 일반적으로 수정 된 설정은 기본값과 함께 아래에 나열 됩니다.
 
 #### <a name="volume-capacity-threshold"></a>볼륨 용량 임계값
 
@@ -48,7 +48,7 @@ Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Storage.V
 "System.Storage.Volume.CapacityThreshold.Critical" = 90
 ```
 
-#### <a name="pool-reserve-capacity-threshold"></a>풀의 예약 용량 임계값
+#### <a name="pool-reserve-capacity-threshold"></a>풀 예약 용량 임계값
 
 ```
 "System.Storage.StoragePool.CheckPoolReserveCapacity.Enabled" = True
@@ -80,14 +80,14 @@ Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Storage.V
 "System.Storage.PhysicalDisk.AutoFirmwareUpdate.RollOut.FailureTolerance"  = 3
 ```
 
-#### <a name="platform--quiescence"></a>플랫폼 / 정지
+#### <a name="platform--quiescence"></a>Platform/정지
 
 ```
 "Platform.Quiescence.MinDelaySeconds" = 120 (i.e. 2 minutes)
 "Platform.Quiescence.MaxDelaySeconds" = 420 (i.e. 7 minutes)
 ```
 
-#### <a name="metrics"></a>메트릭
+#### <a name="metrics"></a>metrics
 
 ```
 "System.Reports.ReportingPeriodSeconds" = 1
@@ -101,5 +101,5 @@ Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Storage.V
 
 ## <a name="see-also"></a>참조
 
-- [Windows Server 2016의에서 상태 관리 서비스](health-service-overview.md)
-- [Windows Server 2016의에서 저장소 공간 다이렉트](../storage/storage-spaces/storage-spaces-direct-overview.md)
+- [Windows Server 2016의 상태 관리 서비스](health-service-overview.md)
+- [Windows Server 2016의 스토리지 공간 다이렉트](../storage/storage-spaces/storage-spaces-direct-overview.md)

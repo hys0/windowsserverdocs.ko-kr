@@ -1,8 +1,8 @@
 ---
 title: bitsadmin cancel
-description: Windows 명령 항목에 대 한 **bitsadmin 취소** -전송 큐에서 작업을 제거 하 고 작업과 연결 된 모든 임시 파일을 삭제 합니다.
+description: '**Bitsadmin cancel** 의 Windows 명령 항목-전송 큐에서 작업을 제거 하 고 작업과 연결 된 모든 임시 파일을 삭제 합니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0a4d1e2d6e4fd66cb525316f236d070fcd72d73f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 77e46d787359af43a37faba5d844bfec09730454
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59814074"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381800"
 ---
 # <a name="bitsadmin-cancel"></a>bitsadmin cancel
 
@@ -36,7 +36,7 @@ bitsadmin /cancel <Job>
 |---------|-----------|
 |작업|작업의 표시 이름 또는 GUID|
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 다음 예제에서는 제거 된 *myDownloadJob* 전송 큐에서 작업 합니다.
 ```

@@ -7,14 +7,14 @@ ms.author: billmath
 manager: mtillman
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 89b2bf8422fb1151a7e502b381f9842f77009277
-ms.sourcegitcommit: 4fa147d552481d8279a5390f458a9f7788061977
+ms.openlocfilehash: 9c6c6e7d2c12b6b822989bba05370015f7cd1833
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009126"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407813"
 ---
 # <a name="build-a-multi-tiered-application-using-on-behalf-of-obo-using-oauth-with-ad-fs-2016-or-later"></a>AD FS 2016 이상에서 OAuth를 사용 하 여 OBO ()를 사용 하는 다중 계층 응용 프로그램 빌드
 
@@ -276,12 +276,12 @@ MySampleGroup 응용 프로그램 그룹을 엽니다. 추가 응용 프로그�
 
 | Key                      | 값                                                                                                                                                                                                                   |
 |:-------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ida: 대상             | ToDoListService WebAPI를 구성 하는 동안 AD FS에 지정 된 ToDoListService의 ID입니다. 예를 들면 https://localhost:44321/                                                                                         |
-| ida: ClientID             | ToDoListService WebAPI를 구성 하는 동안 AD FS에 지정 된 ToDoListService의 ID입니다. 예를 들면<https://localhost:44321/> </br>**Ida: 대상 그룹과 ida: ClientID는 서로 일치 해야 합니다.** |
+| ida: 대상             | ToDoListService WebAPI를 구성 하는 동안 AD FS에 지정 된 ToDoListService의 ID (예: https://localhost:44321/ )                                                                                         |
+| ida: ClientID             | ToDoListService WebAPI를 구성 하는 동안 AD FS에 지정 된 ToDoListService의 ID (예: <https://localhost:44321/>) </br>**Ida: 대상 그룹과 ida: ClientID는 서로 일치 해야 합니다.** |
 | ida: ClientSecret         | 이 AD FS에는 AD FS에서 ToDoListService 클라이언트 구성할 때 생성 되는 암호                                                                                                                   |
-| ida: AdfsMetadataEndpoint | AD FS 메타 데이터에 대 한 URL입니다 (예:). https://fs.anandmsft.com/federationmetadata/2007-06/federationmetadata.xml                                                                                             |
-| ida: OBOWebAPIBase        | 백 엔드 API를 호출 하는 데 사용할 기본 주소 (예:)입니다. https://localhost:44300                                                                                                                     |
-| ida: 기관            | AD FS 서비스의 URL입니다. 예를 들면 다음과 같습니다. https://fs.anandmsft.com/adfs/                                                                                                                                          |
+| ida: AdfsMetadataEndpoint | AD FS 메타 데이터에 대 한 URL입니다 (예: https://fs.anandmsft.com/federationmetadata/2007-06/federationmetadata.xml ).                                                                                             |
+| ida: OBOWebAPIBase        | 백 엔드 API를 호출 하는 데 사용할 기본 주소입니다 (예: https://localhost:44300 ).                                                                                                                     |
+| ida: 기관            | AD FS 서비스에 대 한 URL입니다 (예 https://fs.anandmsft.com/adfs/ ).                                                                                                                                          |
 
 모든 다른 ida: XXXXXXX에 키의 **appsettings** 노드를 주석으로 처리 하거나 삭제 수
 
@@ -298,7 +298,7 @@ MySampleGroup 응용 프로그램 그룹을 엽니다. 추가 응용 프로그�
                 TokenValidationParameters = new TokenValidationParameters{ SaveSigninToken = true }
             });
 
-다음 문자열로 바꾸세요.
+의 태그 값을
 
         app.UseActiveDirectoryFederationServicesBearerAuthentication(
             new ActiveDirectoryFederationServicesBearerAuthenticationOptions
@@ -335,7 +335,7 @@ System.Web.Extensions에 대 한 참조를 추가 합니다. 아래 코드를 �
     private static string graphUserUrl = ConfigurationManager.AppSettings["ida:GraphUserUrl"];
     private const string TenantIdClaimType = "https://schemas.microsoft.com/identity/claims/tenantid";
 
-다음 문자열로 바꾸세요.
+의 태그 값을
 
     //
     // The Client ID is used by the application to uniquely identify itself to Azure AD.
@@ -494,10 +494,10 @@ AD FS에서 Nmae 클레임을 실행 하는 것 하지만 하지 NameIdentifier 
 ![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO27.PNG)
 
 또한 Fiddler에 자세한 추적을 볼 수 있습니다. Fiddler를 시작 하 고 HTTPS 암호 해독을 설정 합니다. /Adfs/oautincludes 끝점에 두 개의 요청을 수행할 것을 볼 수 있습니다.
-첫 번째 상호 작용에서 토큰 끝점에 대 한 액세스 코드를 제공 하 고 AD FS obo에 https://localhost:44321/ 대 한 ![ 액세스 토큰을 가져옵니다.](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO22.PNG)
+첫 번째 상호 작용에서는 토큰 끝점에 대 한 액세스 코드를 제공 하 고 @no__t @no__t에 대 한 액세스 토큰을 가져옵니다.
 
-두 번째 토큰 끝점과의 상호 작용에서 **requested_token_use** 가 **on_behalf_of** 로 설정 되 고, 중간 계층 웹 서비스에 대해 획득 한 액세스 토큰을 사용 하 고 있음을 확인할 수 있습니다. https://localhost:44321/ 즉, 토큰을 대신 합니다.
-![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO23.PNG)
+두 번째 토큰 끝점과의 상호 작용에서 **requested_token_use** 가 **on_behalf_of** 로 설정 되어 있고 중간 계층 웹 서비스에 대해 획득 한 액세스 토큰을 사용 하 고 있음을 확인할 수 있습니다 @no__t. 즉, 토큰을 대신 합니다.
+![AD FS OBO @ NO__T-1
 
 ## <a name="next-steps"></a>다음 단계
 [AD FS 개발](../../ad-fs/AD-FS-Development.md)  

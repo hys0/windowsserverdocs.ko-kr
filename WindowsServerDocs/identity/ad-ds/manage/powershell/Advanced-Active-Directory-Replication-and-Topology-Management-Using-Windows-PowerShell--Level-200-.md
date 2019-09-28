@@ -7,14 +7,14 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: d56bc89189c3b17367549aeb076633a6ea0e1007
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: eeac84fb4e875ffe31b560bc72190895cd0527bc
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66442746"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402677"
 ---
 # <a name="advanced-active-directory-replication-and-topology-management-using-windows-powershell-level-200"></a>Windows PowerShell을 사용한 고급 Active Directory 복제 및 토폴로지 관리(수준 200)
 
@@ -26,17 +26,17 @@ ms.locfileid: "66442746"
   
 2.  [복제 및 메타 데이터](../../../ad-ds/manage/powershell/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-.md#BKMK_Repl)  
   
-3.  [Get-ADReplicationAttributeMetadata](../../../ad-ds/manage/powershell/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-.md#BKMK_ReplAttrMD)  
+3.  [ADReplicationAttributeMetadata](../../../ad-ds/manage/powershell/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-.md#BKMK_ReplAttrMD)  
   
-4.  [Get-ADReplicationPartnerMetadata](../../../ad-ds/manage/powershell/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-.md#BKMK_PartnerMD)  
+4.  [ADReplicationPartnerMetadata](../../../ad-ds/manage/powershell/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-.md#BKMK_PartnerMD)  
   
-5.  [Get-ADReplicationFailure](../../../ad-ds/manage/powershell/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-.md#BKMK_ReplFail)  
+5.  [ADReplicationFailure](../../../ad-ds/manage/powershell/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-.md#BKMK_ReplFail)  
   
-6.  [Get-ADReplicationQueueOperation and Get-ADReplicationUpToDatenessVectorTable](../../../ad-ds/manage/powershell/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-.md#BKMK_ReplQueue)  
+6.  [Get-adreplicationqueueoperation 및 Get-adreplicationuptodatenessvectortable](../../../ad-ds/manage/powershell/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-.md#BKMK_ReplQueue)  
   
-7.  [Sync-ADObject](../../../ad-ds/manage/powershell/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-.md#BKMK_Sync)  
+7.  [동기화-ADObject](../../../ad-ds/manage/powershell/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-.md#BKMK_Sync)  
   
-8.  [Topology](../../../ad-ds/manage/powershell/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-.md#BKMK_Topo)  
+8.  [형태가](../../../ad-ds/manage/powershell/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-.md#BKMK_Topo)  
   
 ## <a name="BKMK_Intro"></a>소개  
 Windows Server 2012에서는 복제 및 토폴로지를 관리할 수 있도록 Windows PowerShell용 Active Directory 모듈이 25개의 새 cmdlet으로 확장되었습니다. 이전에 제네릭 사용 해야 했습니다 **\*-AdObject** 명사 또는.NET 함수를 호출 합니다.  
@@ -96,17 +96,17 @@ Repadmin.exe는 Active Directory 복제의 상태 및 일관성을 확인합니�
   
 또한 다음 cmdlet은 **Target**, **Scope** 및 **EnumerationServer**의 새로운 매개 변수 집합을 구현합니다.  
   
--   **Get-ADReplicationFailure**  
+-   **ADReplicationFailure**  
   
--   **Get-ADReplicationPartnerMetadata**  
+-   **ADReplicationPartnerMetadata**  
   
--   **Get-ADReplicationUpToDatenessVectorTable**  
+-   **Get-adreplicationuptodatenessvectortable**  
   
 **Target** 인수는 **Scope** 인수에 지정된 대상 서버, 사이트, 도메인 또는 포리스트를 식별하는 문자열의 쉼표로 구분된 목록을 허용합니다. 별표 (\*)를 사용할 수도 및 지정된 된 범위 내 모든 서버를 의미 합니다. 없는 범위를 지정 하는 경우 현재 사용자의 포리스트에 있는 모든 서버를 의미 합니다. **Scope** 인수는 검색 허용 범위를 지정합니다. 사용 가능한 값은 **Server**, **Site**, **Domain** 및 **Forest**입니다. **EnumerationServer** 는 **Target** 및 **Scope**에 지정된 도메인 컨트롤러 목록을 열거하는 서버를 지정합니다. **Server** 인수와 동일하게 작동하며, 지정된 서버에서 Active Directory 웹 서비스를 실행해야 합니다.  
   
 새로운 cmdlet을 소개하기 위해 여기에 repadmin.exe로는 불가능한 기능을 보여 주는 몇 가지 예제 시나리오가 나와 있습니다. 이러한 그림을 보면 관리 가능성을 명확히 알 수 있습니다. 특정 사용 요구 사항은 cmdlet 도움말을 검토하세요.  
   
-### <a name="BKMK_ReplAttrMD"></a>Get-ADReplicationAttributeMetadata  
+### <a name="BKMK_ReplAttrMD"></a>ADReplicationAttributeMetadata  
 이 cmdlet은 **repadmin.exe /showobjmeta**와 유사합니다. 이를 사용하여 복제 메타데이터(예: 특성이 변경된 경우), 원래 도메인 컨트롤러, 버전 및 USN 정보, 특성 데이터 등을 반환할 수 있습니다. 이 cmdlet은 변경이 발생한 위치 및 시점을 감사하는 데 유용합니다.  
   
 Repadmin과 달리 Windows PowerShell은 유연한 검색 및 출력 제어를 제공합니다. 예를 들어 읽기 가능한 목록으로 정렬된 Domain Admins 개체의 메타데이터를 출력할 수 있습니다.  
@@ -160,7 +160,7 @@ get-adobject -filter 'objectclass -like "*"' | Get-ADReplicationAttributeMetadat
 get-adobject -filter 'objectclass -eq "user"' | Get-ADReplicationAttributeMetadata -server dc1.corp.contoso.com -showalllinkedvalues | export-csv allgroupmetadata.csv  
 ```  
   
-### <a name="BKMK_PartnerMD"></a>Get-ADReplicationPartnerMetadata  
+### <a name="BKMK_PartnerMD"></a>ADReplicationPartnerMetadata  
 이 cmdlet은 모니터링, 인벤토리 관리 또는 문제 해결을 지원하기 위해 도메인 컨트롤러의 복제 상태 및 구성 정보를 반환합니다. Repadmin.exe와 달리 Windows PowerShell을 사용하면 사용자가 원하는 형식으로 자신에게 중요한 데이터만 볼 수 있습니다.  
   
 예를 들어 단일 도메인 컨트롤러의 읽기 가능한 복제 상태를 확인할 수 있습니다.  
@@ -188,7 +188,7 @@ Get-ADReplicationPartnerMetadata -target * -scope server | where {$_.lastreplica
   
 ![powershell 사용 하 여 고급 관리](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplPartnerMdFail.png)  
   
-### <a name="BKMK_ReplFail"></a>Get-ADReplicationFailure  
+### <a name="BKMK_ReplFail"></a>ADReplicationFailure  
 이 cmdlet은 최근의 복제 오류에 대한 정보를 반환하는 데 사용될 수 있습니다. **Repadmin.exe /showreplsum**과 유사하지만 Windows PowerShell 덕분에 제어 기능이 훨씬 뛰어납니다.  
   
 예를 들어 도메인 컨트롤러의 가장 최근 오류와 도메인 컨트롤러에서 연결하는 데 실패한 파트너를 반환할 수 있습니다.  
@@ -208,10 +208,10 @@ Get-ADReplicationFailure -scope site -target default-first-site-name | format-ta
   
 ![powershell 사용 하 여 고급 관리](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplFailScoped.png)  
   
-### <a name="BKMK_ReplQueue"></a>Get-ADReplicationQueueOperation and Get-ADReplicationUpToDatenessVectorTable  
+### <a name="BKMK_ReplQueue"></a>Get-adreplicationqueueoperation 및 Get-adreplicationuptodatenessvectortable  
 이 두 cmdlet은 보류 중인 복제 및 버전 벡터 정보를 포함하여 도메인 컨트롤러의 "최신" 정보를 추가로 반환합니다.  
   
-### <a name="BKMK_Sync"></a>Sync-ADObject  
+### <a name="BKMK_Sync"></a>동기화-ADObject  
 이 cmdlet은 **Repadmin.exe /replsingleobject**와 유사하며, 대역 외 복제가 필요한 변경 작업을 수행할 때, 특히 문제를 해결할 때 매우 유용합니다.  
   
 예를 들어 누군가 CEO의 사용자 계정을 삭제한 후 Active Directory 휴지통을 사용하여 복원한 경우 이를 모든 도메인 컨트롤러에 즉시 복제할 수 있습니다. 또한 다른 모든 개체 변경 내용을 강제로 복제하지 않고 이 작업을 수행할 수 있습니다. WAN 링크 오버로드를 방지하기 위해 복제 일정을 예약하는 것도 결국 이 때문입니다.  
@@ -223,12 +223,12 @@ Get-ADDomainController -filter * | foreach {Sync-ADObject -object "cn=tony wang,
   
 ![powershell 사용 하 여 고급 관리](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSSyncAD.png)  
   
-### <a name="BKMK_Topo"></a>토폴로지  
+### <a name="BKMK_Topo"></a>형태가  
 Repadmin.exe는 사이트, 사이트 링크, 사이트 링크 브리지 및 연결과 같은 복제 토폴로지에 대한 정보를 반환하는 데 유용하지만 변경 작업을 수행할 수 있는 포괄적인 인수 집합이 없습니다. 실제로 관리자가 AD DS 토폴로지를 만들고 수정할 수 있도록 특별히 디자인된 스크립트 가능한 Windows 제공 유틸리티로 제공된 적이 없습니다. Active Directory는 수백만 개의 고객 환경에서 성숙되어 오면서 Active Directory 논리 정보에 대한 대량 수정의 필요성이 명확해졌습니다.  
   
 예를 들어 다른 지점의 통합과 함께 새로운 지점의 급속한 확장 후 실제 위치, 네트워크 변경 사항 및 새로운 용량 요구 사항을 기반으로 100여 가지의 사이트 변경 작업을 수행해야 할 수 있습니다. 이 경우 Dssites.msc 및 Adsiedit.msc를 사용하여 변경하는 대신 자동화할 수 있습니다. 이는 네트워크 및 시설 팀에서 제공한 데이터 스프레드시트로 시작하는 경우에 특히 유용합니다.  
   
-합니다 **Get Adreplication\\** * cmdlet 복제 토폴로지에 대 한 정보를 반환 하 고으로 파이프라인에 유용 합니다 **집합 Adreplication\\** * cmdlet에 대량 합니다. **가져올** cmdlet는 데이터를 변경 하지 마십시오, 데이터 표시 또는 세션 개체를 만들려면 Windows PowerShell 파이프라인 할 **집합 Adreplication\\** * cmdlet. **New** 및 **Remove** cmdlet은 Active Directory 토폴로지 개체를 만들거나 제거하는 데 유용합니다.  
+**Get adreplication @ no__t-1*** cmdlet은 복제 토폴로지에 대 한 정보를 반환 하며, 대량으로 **집합 adreplication @ no__t-3*** cmdlet에 대 한 파이프라인에 유용 합니다. **Get** cmdlet은 데이터를 변경 하지 않고 데이터를 표시 하거나 **설정-adreplication @ no__t*** cmdlet으로 파이프라인 될 수 있는 Windows PowerShell 세션 개체를 만들기만 합니다. **New** 및 **Remove** cmdlet은 Active Directory 토폴로지 개체를 만들거나 제거하는 데 유용합니다.  
   
 예를 들어 CSV 파일을 사용하여 새 사이트를 만들 수 있습니다.  
   
@@ -268,6 +268,6 @@ get-adreplicationsite -filter * -property subnets | where-object {!$_.subnets -e
 ![powershell 사용 하 여 고급 관리](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSNewADReplSiteFiltrer.png)  
   
 ## <a name="see-also"></a>관련 항목  
-[Introduction to Active Directory 복제 및 토폴로지 관리 Windows PowerShell을 사용 하 여 &#40;수준 100&#41;](../../../ad-ds/manage/powershell/Introduction-to-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-100-.md)  
+[Windows PowerShell &#40;수준 100을 사용한 Active Directory 복제 및 토폴로지 관리 소개&#41;](../../../ad-ds/manage/powershell/Introduction-to-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-100-.md)  
   
 

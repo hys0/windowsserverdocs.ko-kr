@@ -2,18 +2,18 @@
 title: 조회 및 클라이언트 장애 복구(failback) 사용 또는 사용 안 함
 description: 이 문서에서는 조회와 클라이언트 장애 복구(failback)를 사용하거나 사용하지 않도록 설정하는 방법을 설명합니다.
 ms.date: 6/5/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 20ac61f86ede938efd574fc6a048775437a51211
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e7dd11b530c61e2536db425d3e85e0fbe458d349
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59835024"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71386224"
 ---
 # <a name="enable-or-disable-referrals-and-client-failback"></a>조회 및 클라이언트 장애 복구(failback) 사용 또는 사용 안 함
 
@@ -39,11 +39,11 @@ ms.locfileid: "59835024"
 
 
 > [!TIP]
-> 를 사용 하거나 Windows PowerShell을 사용 하 여 조회를 사용 하지 않도록 설정 하려면 사용 합니다 [집합 DfsnRootTarget – 상태](https://technet.microsoft.com/library/jj884266.aspx) 또는 [집합 DfsnServerConfiguration](https://technet.microsoft.com/library/jj884277.aspx) Windows Server 2012에 도입 된 cmdlet.
+> Windows PowerShell을 사용 하 여 조회를 사용 하거나 사용 하지 않도록 설정 하려면 [DfsnRootTarget – State](https://technet.microsoft.com/library/jj884266.aspx) 또는 [DfsnServerConfiguration](https://technet.microsoft.com/library/jj884277.aspx) cmdlet을 사용 합니다 .이 cmdlet은 windows Server 2012에 도입 되었습니다.
 
 ## <a name="enable-client-failback"></a>클라이언트 장애 복구를 사용하도록 설정
 
-대상을 사용할 수 없는 경우 대상이 복원된 후 대상으로 장애 복구하도록 클라이언트를 구성할 수 있습니다. 장애 복구가 작동 하려면 클라이언트 컴퓨터에는 다음 항목에 나열 된 요구 사항을 충족 해야 합니다. [DFS 네임 스페이스 클라이언트 요구 사항을 검토](https://technet.microsoft.com/library/cc771913(v=ws.11).aspx)합니다.
+대상을 사용할 수 없는 경우 대상이 복원된 후 대상으로 장애 복구하도록 클라이언트를 구성할 수 있습니다. 장애 복구 (failback)가 작동 하려면 클라이언트 컴퓨터가 다음 항목에 나열 된 요구 사항을 충족 해야 합니다. [DFS 네임 스페이스 클라이언트 요구 사항을 검토](https://technet.microsoft.com/library/cc771913(v=ws.11).aspx)합니다.
 
 
 > [!NOTE]
@@ -70,6 +70,6 @@ ms.locfileid: "59835024"
 
 ## <a name="see-also"></a>참조 
 
--   [DFS 네임 스페이스를 튜닝합니다.](tuning-dfs-namespaces.md)
+-   [DFS 네임스페이스 튜닝](tuning-dfs-namespaces.md)
 -   [DFS 네임 스페이스 클라이언트 요구 사항 검토](https://technet.microsoft.com/library/cc771913(v=ws.11).aspx)
--   [DFS 네임 스페이스에 대 한 관리 권한 위임](delegate-management-permissions-for-dfs-namespaces.md)
+-   [DFS 네임스페이스에 대한 관리 권한 위임](delegate-management-permissions-for-dfs-namespaces.md)

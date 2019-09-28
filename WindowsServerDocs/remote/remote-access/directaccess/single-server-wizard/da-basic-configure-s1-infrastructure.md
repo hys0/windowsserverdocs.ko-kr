@@ -1,9 +1,9 @@
 ---
-title: 1 단계에는 기본 DirectAccess 인프라 구성
-description: 이 항목은 시작 시작 마법사에 대 한 Windows Server 2016을 사용 하 여 단일 DirectAccess 서버 배포 가이드의 일부
+title: 1 단계 기본 DirectAccess 인프라 구성
+description: 이 항목은 Windows Server 2016에 대 한 시작 마법사를 사용 하 여 단일 DirectAccess 서버 배포 가이드의 일부입니다.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-da
@@ -12,16 +12,16 @@ ms.topic: article
 ms.assetid: ba4de2a4-f237-4b14-a8a7-0b06bfcd89ad
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 2a8fb9565c5a84844104b202d749e74337101601
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 2cd84949dddf75730aca6302f1244f784b5933d0
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67281730"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71388568"
 ---
-# <a name="step-1-configure-the-basic-directaccess-infrastructure"></a>1 단계에는 기본 DirectAccess 인프라 구성
+# <a name="step-1-configure-the-basic-directaccess-infrastructure"></a>1 단계 기본 DirectAccess 인프라 구성
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 이 항목에서는 IPv4 및 IPv6 혼합된 환경에서 단일 DirectAccess 서버를 사용 하 여 기본 DirectAccess 배포에 필요한 인프라를 구성 하는 방법에 설명 합니다. 에 설명 된 계획 단계를 완료 한 확인 배포 단계를 시작 하기 전에 [기본 DirectAccess 배포 계획](../../../remote-access/directaccess/single-server-wizard/Plan-a-Basic-DirectAccess-Deployment.md)합니다.  
   
@@ -74,7 +74,7 @@ IPv4 및 IPv6을 사용하는 환경에 단일 서버를 배포하려면 다음 
 >   
 >     IPsec 정책 이름은 DirectAccess DaServerToInfra 및 DirectAccess DaServerToCorp 제공 됩니다.  
   
-## <a name="ConfigRouting"></a>회사 네트워크의 라우팅을 구성 합니다.  
+## <a name="ConfigRouting"></a>회사 네트워크에서 라우팅 구성  
 다음과 같이 회사 네트워크의 라우팅을 구성합니다.  
   
 -   조직에 기본 IPv6이 배포된 경우 내부 네트워크의 라우터가 원격 액세스 서버를 통해 IPv6 트래픽을 다시 라우팅할 수 있도록 경로를 추가합니다.  
@@ -106,10 +106,10 @@ IPv4 및 IPv6을 사용하는 환경에 단일 서버를 배포하려면 다음 
   
 -   TCP/UDP - 모든 IPv4/IPv6 트래픽  
   
-## <a name="ConfigDNS"></a>DNS 서버를 구성 합니다.  
+## <a name="ConfigDNS"></a>DNS 서버 구성  
 배포의 내부 네트워크에 대한 네트워크 위치 서버 웹 사이트의 DNS 항목을 수동으로 구성해야 합니다.  
   
-### <a name="NLS_DNS"></a>서버와 NCSI 프로브 DNS 레코드 네트워크 위치를 만들려면  
+### <a name="NLS_DNS"></a>네트워크 위치 서버 및 NCSI 프로브 DNS 레코드를 만들려면  
   
 1.  내부 네트워크 DNS 서버에서 실행 **dnsmgmt.msc** 한 다음 ENTER를 누릅니다.  
   
@@ -121,7 +121,7 @@ IPv4 및 IPv6을 사용하는 환경에 단일 서버를 배포하려면 다음 
   
 5.  **완료**를 클릭합니다.  
   
-![Windows PowerShell](../../../media/Step-1-Configure-the-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![Windows PowerShell](../../../media/Step-1-Configure-the-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>windows powershell 해당 명령</em>***  
 
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -183,7 +183,7 @@ Add-DnsServerResourceRecordAAAA -Name <network_location_server_name> -ZoneName <
   
 9. 에 **시스템 속성** 대화 상자에서 닫기를 클릭 합니다. 클릭 **지금 다시 시작** 메시지가 표시 되 면 합니다.  
   
-![Windows PowerShell](../../../media/Step-1-Configure-the-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![Windows PowerShell](../../../media/Step-1-Configure-the-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>windows powershell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -227,7 +227,7 @@ Restart-Computer
   
 6.  에 **사용자 선택, 연락처, 컴퓨터 또는 서비스 계정** 대화 상자에서 클라이언트 컴퓨터를 DirectAccess에 사용 하도록 설정 하 고 클릭 하 고 선택 **확인**합니다.  
   
-![Windows PowerShell](../../../media/Step-1-Configure-the-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)**Windows PowerShell 해당 명령**  
+![Windows PowerShell](../../../media/Step-1-Configure-the-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)**windows powershell 해당 명령**  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   

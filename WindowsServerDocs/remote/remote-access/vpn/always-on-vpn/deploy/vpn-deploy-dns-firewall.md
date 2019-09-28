@@ -1,7 +1,7 @@
 ---
 title: DNS 및 방화벽 설정 구성
 description: 이 항목에서는 Windows Server 2016에 Always On VPN을 배포 하는 방법에 대 한 자세한 지침을 제공 합니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: d8cf3bae-45bf-4ffa-9205-290d555c59da
@@ -9,12 +9,12 @@ ms.localizationpriority: medium
 ms.author: pashort
 author: shortpatti
 ms.date: 06/11/2018
-ms.openlocfilehash: b1efa918971208bb9819de189de7298b4de144a5
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 326f1e8d52dc34ad433e8cc3bd4c4e84508026b7
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871323"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71388083"
 ---
 # <a name="step-5-configure-dns-and-firewall-settings"></a>5단계. DNS 및 방화벽 설정 구성
 

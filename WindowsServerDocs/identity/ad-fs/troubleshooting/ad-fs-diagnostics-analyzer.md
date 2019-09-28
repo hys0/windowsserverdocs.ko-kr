@@ -7,14 +7,14 @@ manager: mtillman
 ms.reviewer: anandyadavMSFT
 ms.date: 03/29/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 6b6b7563aaa1f3c7d706cfdd172faf18417623e5
-ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
+ms.openlocfilehash: 5d56a84680467359b68ae1ab115801d82a34c822
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69546586"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407237"
 ---
 # <a name="ad-fs-help-diagnostics-analyzer"></a>AD FS 도움말 진단 분석기
 
@@ -26,7 +26,7 @@ AD FS에는 인증 및 응용 프로그램 개발을 위해 제공 되는 다양
 2. 진단을 실행 하 고 파일을 업로드 하 AD FS 도움말
 3. 진단 분석 보기 및 문제 해결
 
-문제 해결을 시작 하려면 [AD FS 도움말 https://aka.ms/adfsdiagnosticsanalyzer) 진단 분석기](https://aka.ms/adfsdiagnosticsanalyzer) 로 이동 합니다.
+[AD FS 도움말 진단 분석기 (https://aka.ms/adfsdiagnosticsanalyzer)](https://aka.ms/adfsdiagnosticsanalyzer) 로 이동 하 여 문제 해결을 시작 합니다.
 
 ![AD FS 도움말 AD FS 진단 분석기 도구](media/ad-fs-diagonostics-analyzer/home.png)
 
@@ -58,7 +58,7 @@ ADFSToolbox 모듈을 AD FS 또는 WAP 서버에 수동으로 복사 해야 합�
     ```powershell
     Install-Module -Name ADFSToolbox -Force
     ```
-3. 로컬 컴퓨터에 있는 `%SYSTEMDRIVE%\Program Files\WindowsPowerShell\Modules\` adfstoolbox 폴더를 AD FS 또는 WAP 컴퓨터의 동일한 위치에 복사 합니다.
+3. 로컬 컴퓨터에서 `%SYSTEMDRIVE%\Program Files\WindowsPowerShell\Modules\` 인 ADFSToolbox 폴더를 AD FS 또는 WAP 컴퓨터의 동일한 위치에 복사 합니다.
 
 4. AD FS 컴퓨터에서 관리자 권한 PowerShell 창을 시작 하 고 다음 cmdlet을 실행 하 여 모듈을 가져옵니다.
 
@@ -82,13 +82,13 @@ ADFSToolbox 모듈을 AD FS 또는 WAP 서버에 수동으로 복사 해야 합�
     Export-AdfsDiagnosticsFile -ServerNames @("adfs1.contoso.com", "adfs2.contoso.com")
 ```
 
-결과는 명령이 실행 된 디렉터리에 생성 되는 JSON 파일입니다. 파일 이름은 AdfsDiagnosticsFile\<\>입니다. 파일 이름 예는 AdfsDiagnosticsFile-07312019-184201입니다.
+결과는 명령이 실행 된 디렉터리에 생성 되는 JSON 파일입니다. 파일의 이름은 @no__t AdfsDiagnosticsFile-0timestamp @ no__t-1입니다. 파일 이름 예는 AdfsDiagnosticsFile-07312019-184201입니다.
 
 ## <a name="step-3-upload-the-diagnostics-file"></a>3단계: 진단 파일 업로드
 
-3 단계에서 파일 [https://aka.ms/adfsdiagnosticsanalyzer](https://aka.ms/adfsdiagnosticsanalyzer) 브라우저를 사용 하 여 업로드할 결과 파일을 선택 합니다.
+[@No__t](https://aka.ms/adfsdiagnosticsanalyzer) 3 단계에서 파일 브라우저를 사용 하 여 업로드할 결과 파일을 선택 합니다.
 
-업로드를 클릭 하 여 업로드를 완료 합니다.
+**업로드를 클릭 하 여** 업로드를 완료 합니다.
 
 Microsoft 계정를 사용 하 여 로그인 하면 이후 표시 지점에 대 한 진단 결과를 저장 하 고 Microsoft 지원으로 보낼 수 있습니다. 언제 든 지 지원 사례를 열면 Microsoft에서 진단 분석기 결과를 확인 하 고 문제 해결을 더 빠르게 도울 수 있습니다.
 
@@ -104,7 +104,7 @@ Microsoft 계정를 사용 하 여 로그인 하면 이후 표시 지점에 대 
 4. 실행 되지 않음: 이 섹션에는 정보가 누락 되어 실행할 수 없는 테스트 목록이 포함 되어 있습니다.
 5. 해당 없음: 이 섹션에서는 명령이 실행 되 고 있는 특정 서버에 적용 되지 않기 때문에 실행 되지 않은 테스트 목록을 포함 합니다.
 
-![AD FS 진단 분석기 도구-테스트 결과 목록](media/ad-fs-diagonostics-analyzer/step3a_v3.png) 각 테스트 결과는 테스트를 설명 하 고 단계를 해결 하는 세부 정보를 표시 합니다.
+![AD FS 진단 분석기 도구-테스트 결과 목록 @ no__t-1 각 테스트 결과는 테스트를 설명 하 고 단계를 해결 하는 세부 정보를 표시 합니다.
 
 1. 테스트 이름: 실행 된 테스트의 이름입니다.
 2. 설명: 테스트에 대 한 설명입니다.

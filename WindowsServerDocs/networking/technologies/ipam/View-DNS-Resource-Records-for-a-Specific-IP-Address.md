@@ -1,9 +1,9 @@
 ---
 title: 특정 IP 주소에 대 한 DNS 리소스 레코드 보기
-description: 이 항목은 Windows Server 2016에서 관리 IPAM (IP 주소) 관리 가이드의 일부입니다.
+description: 이 항목은 Windows Server 2016의 IPAM (IP 주소 관리) 관리 가이드의 일부입니다.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-ipam
@@ -12,18 +12,18 @@ ms.topic: article
 ms.assetid: f590fb86-4195-4f90-98cb-e90459d4c1e3
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 7436a41e167b4d01af0ff9cf294aaf4e5a2d8393
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 63fc52644b4f08d745891763265cc8f929e89910
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67282062"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71355085"
 ---
 # <a name="view-dns-resource-records-for-a-specific-ip-address"></a>특정 IP 주소에 대 한 DNS 리소스 레코드 보기
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-선택한 IP 주소와 연결 된 DNS 리소스 레코드를 보려면이 항목에서는 사용할 수 있습니다.  
+이 항목을 사용 하 여 선택한 IP 주소와 연결 된 DNS 리소스 레코드를 볼 수 있습니다.  
   
 이 절차를 수행하려면 최소한 **Administrators** 그룹의 구성원이거나 이와 동등한 자격이 있어야 합니다.  
   
@@ -31,11 +31,11 @@ ms.locfileid: "67282062"
   
 1.  서버 관리자에서 클릭  **IPAM**합니다. IPAM 클라이언트 콘솔에 나타납니다.  
   
-2.  탐색 창에서의 **IP 주소 공간**, 클릭 **IP 주소 인벤토리**합니다. 아래쪽 탐색 창에서 하나를 클릭 **IPv4** 하거나 **IPv6**합니다. IP 주소 인벤토리 디스플레이 창 검색 보기에 표시 됩니다. 찾아 보려는 DNS 리소스 레코드 IP 주소를 선택 합니다.  
+2.  탐색 창의 **IP 주소 공간**에서 **ip 주소 인벤토리**를 클릭 합니다. 아래쪽 탐색 창에서 **IPv4** 또는 **IPv6**을 클릭 합니다. IP 주소 인벤토리가 표시 창 검색 보기에 표시 됩니다. 보려는 DNS 리소스 레코드의 IP 주소를 찾아 선택 합니다.  
   
     ![IP 주소 인벤토리 보기](../../media/View-DNS-Resource-Records-for-a-Specific-IP-Address/ipam_IPInventory_01.jpg)  
   
-3.  디스플레이 창에서 **자세히 보기**, 클릭 **DNS 리소스 레코드**합니다. 선택한 IP 주소와 연관 된 리소스 레코드를 표시 됩니다.  
+3.  디스플레이 창 **세부 정보 보기**에서 **DNS 리소스 레코드**를 클릭 합니다. 선택한 IP 주소와 연결 된 리소스 레코드가 표시 됩니다.  
   
     ![DNS 리소스 레코드 보기](../../media/View-DNS-Resource-Records-for-a-Specific-IP-Address/ipam_IPInventory_02.jpg)  
   

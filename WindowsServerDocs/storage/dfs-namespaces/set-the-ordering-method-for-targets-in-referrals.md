@@ -2,18 +2,18 @@
 title: 조회 대상 순서 지정 방법 설정
 description: 이 문서에서는 어떻게 조회 대상 순서 지정 방법을 설정하는지 설명합니다.
 ms.date: 6/5/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 52568944a98bed7960b37335b2e3cbbde61479ca
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: bb42a98666941c5dfa50a8dfbf45635ad25dc767
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66447206"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71386139"
 ---
 # <a name="set-the-ordering-method-for-targets-in-referrals"></a>조회 대상 순서 지정 방법 설정
 
@@ -67,7 +67,7 @@ DFSN Windows PowerShell 모듈은 Windows Server 2012에서 도입 되었습니�
 
 이 방법을 사용하면 다음과 같이 대상 순서가 지정됩니다.
 
-1.  클라이언트와 동일한 Active Directory Directory Services (AD DS) 사이트에 대상 조회의 맨 위에 있는 임의의 순서로 나열 됩니다.
+1.  클라이언트와 동일한 AD DS (Active Directory Directory Services) 사이트의 대상은 조회 맨 위에 임의의 순서로 나열 됩니다.
 2.  클라이언트 사이트의 외부 대상은 임의의 순서로 나열됩니다.
 
 동일한 사이트의 대상 서버를 사용할 수 없는 경우 클라이언트 컴퓨터는 연결 비용이나 대상과의 거리에 관계없이 임의의 대상 서버에 조회합니다.

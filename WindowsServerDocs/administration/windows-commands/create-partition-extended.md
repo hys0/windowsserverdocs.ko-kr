@@ -1,8 +1,8 @@
 ---
 title: 확장 된 파티션 만들기
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0a1cca93a064cfb6e5c18f4a472ea837b922d07b
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 21620da46be0e1375f320172e7ccfe2edc338114
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66434196"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71378906"
 ---
 # <a name="create-partition-extended"></a>확장 된 파티션 만들기
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-포커스가 있는 디스크에는 확장 된 파티션을 만듭니다. 이 명령을 사용 하 여 마스터 부트 레코드에 대해서만 \(MBR\) 디스크.  
+포커스가 있는 디스크에 확장 된 파티션을 만듭니다. 이 명령을 사용 하 여 마스터 부트 레코드에 대해서만 \(MBR\) 디스크.  
   
   
   
@@ -38,10 +38,10 @@ create partition extended [size=<n>] [offset=<n>] [align=<n>] [noerr]
   
 |  매개 변수  |                                                                                                                             설명                                                                                                                              |
 |-------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|  size\=<n>  |                                                  파티션의 크기 (메가바이트)에서 지정 \(MB\)합니다. 크기를 지정 하는 경우 파티션을 확장 파티션의 가능한 공간이 없을 때까지 계속 합니다.                                                  |
-| offset\=<n> |                     (킬로바이트)에서 오프셋을 지정 \(KB\), 파티션을 만들 때에 있습니다. 없는 오프셋을 지정 하는 경우 새 파티션을 보유할 수 있도록 충분히 큰 디스크에 여유 공간 시작 부분에 파티션을 시작 됩니다.                      |
-| align\=<n>  | 모든 파티션 범위에 있는 가장 가까운 맞춤 경계선을 맞춥니다. 일반적으로 하드웨어 RAID 논리 단위 번호와 사용 \(LUN\) 성능을 향상 시키기 위해 배열입니다. <n> (킬로바이트)입니다 \(KB\) 가장 가까운 맞춤 경계선을 디스크의 시작 부분에서. |
-|    noerr    |                                 만 스크립팅 합니다. 오류가 발생 하면 오류가 발생 하지 않은 경우에 따라 명령을 처리 하도록 DiskPart 계속 합니다. 이 매개 변수를 크기는 오류 코드를 수행 합니다.                                 |
+|  size @ no__t-0 @ no__t-1  |                                                  파티션의 크기 (메가바이트)에서 지정 \(MB\)합니다. 크기를 지정 하는 경우 파티션을 확장 파티션의 가능한 공간이 없을 때까지 계속 합니다.                                                  |
+| offset @ no__t-0 @ no__t-1 |                     (킬로바이트)에서 오프셋을 지정 \(KB\), 파티션을 만들 때에 있습니다. 없는 오프셋을 지정 하는 경우 새 파티션을 보유할 수 있도록 충분히 큰 디스크에 여유 공간 시작 부분에 파티션을 시작 됩니다.                      |
+| align @ no__t-0 @ no__t-1  | 모든 파티션 범위에 있는 가장 가까운 맞춤 경계선을 맞춥니다. 일반적으로 하드웨어 RAID 논리 단위 번호와 사용 \(LUN\) 성능을 향상 시키기 위해 배열입니다. <n>은 디스크의 처음부터 가장 가까운 맞춤 경계로 @no__t kb (1KB @ no__t) 수입니다. |
+|    noerr    |                                 스크립팅 전용입니다. 오류가 발생 하면 오류가 발생 하지 않은 경우에 따라 명령을 처리 하도록 DiskPart 계속 합니다. 이 매개 변수를 크기는 오류 코드를 수행 합니다.                                 |
   
 ## <a name="remarks"></a>설명  
   
@@ -55,7 +55,7 @@ create partition extended [size=<n>] [offset=<n>] [align=<n>] [noerr]
   
 -   이 작업을 수행 하려면 기본 MBR 디스크를 선택 해야 합니다. 사용 된 **디스크 선택** 디스크를 선택 하 고 포커스를 이동 하는 명령입니다.  
   
-## <a name="BKMK_examples"></a>예제  
+## <a name="BKMK_examples"></a>예와  
 1000 메가바이트 확장된 파티션 크기에서를 만들려면 다음을 입력 합니다.  
   
 ```  

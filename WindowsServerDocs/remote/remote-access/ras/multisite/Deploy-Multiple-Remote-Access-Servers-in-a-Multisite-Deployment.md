@@ -1,9 +1,9 @@
 ---
 title: 멀티 사이트 배포에서 여러 원격 액세스 서버 배포
-description: 이 가이드의 일부인이 항목에서는 여러 원격 액세스 서버 배포 Windows Server 2016에서 멀티 사이트 배포에서 합니다.
+description: 이 항목은 Windows Server 2016에서 멀티 사이트 배포에서 여러 원격 액세스 서버 배포 가이드의 일부입니다.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-ras
@@ -12,16 +12,16 @@ ms.topic: article
 ms.assetid: ac2f6015-50a5-4909-8f67-8565f9d332a2
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 607e3f5b2aa7e4c81e507a3d551d3d56e1f0b347
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: da23f3082e1d97f1bcfbee7365b863d29ba2d020
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67282589"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71404501"
 ---
 # <a name="deploy-multiple-remote-access-servers-in-a-multisite-deployment"></a>멀티 사이트 배포에서 여러 원격 액세스 서버 배포
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
  Windows Server 2016 및 Windows Server 2012 DirectAccess 및 원격 액세스 서비스 (RAS) VPN 단일 원격 액세스 역할로 결합 합니다. 원격 액세스는 다양한 엔터프라이즈 시나리오를 통해 배포될 수 있습니다. 이 개요에서는 멀티 사이트 구성에 원격 액세스 서버를 배포 하기 위한 엔터프라이즈 시나리오를 소개 합니다.  
   
@@ -49,7 +49,7 @@ Windows 7을 실행 하는 클라이언트에 대 한 지원 각 진입점에 �
   
 -   공개 키 인프라를 배포해야 합니다.  
   
-    자세한 내용은 다음을 참조하세요. [테스트 랩 가이드 미니 모듈: 에 Windows Server 2012에 대 한 기본 PKI](https://social.technet.microsoft.com/wiki/contents/articles/7862.test-lab-guide-mini-module-basic-pki-for-windows-server-2012.aspx)  
+    자세한 내용은 다음을 참조하세요. [ 테스트 랩 가이드 미니 모듈: Windows Server 2012에 대 한 기본 PKI ](https://social.technet.microsoft.com/wiki/contents/articles/7862.test-lab-guide-mini-module-basic-pki-for-windows-server-2012.aspx)  
   
 -   회사 네트워크에 IPv6 사용 가능 해야 합니다. ISATAP를 사용 중인 경우 이를 제거하고 기본 IPv6을 사용해야 합니다.  
   
@@ -64,14 +64,14 @@ Windows 7을 실행 하는 클라이언트에 대 한 지원 각 진입점에 �
   
 4. [멀티 사이트 배포의 문제를 해결](troubleshoot/Troubleshoot-a-Multisite-Deployment.md)합니다. 이 문제 해결 섹션에서는 여러 원격 액세스 멀티 사이트 배포에서를 배포할 때 발생할 수 있는 가장 일반적인 오류를 설명 합니다.
   
-## <a name="BKMK_APP"></a>실제 응용 프로그램  
+## <a name="BKMK_APP"></a>실용적인 응용 프로그램  
 멀티 사이트 배포는 다음을 제공합니다.  
   
 -   향상 된 성능 A 멀티 사이트 배포 하 고 가장 적합 한 가장 가까운 진입점을 사용 하 여 연결 하려면 원격 액세스를 사용 하 여 내부 리소스에 액세스 하는 컴퓨터 클라이언트를 수 있습니다. 클라이언트에서 내부 리소스를 효율적으로 액세스 하 고 DirectAccess를 통해 라우트된 인터넷 요청 클라이언트의 속도 향상 됩니다. 진입점에서 트래픽은 외부 전역 부하 분산 장치를 사용 분산할 수 있습니다.  
   
 -   용이성의 관리 멀티 관리자가 원격 액세스 배포 간소화 된 아키텍처를 제공 하는 Active Directory 사이트 배포를 맞출 수 있습니다. 공유 설정은 항목 지점 서버 또는 클러스터에서 쉽게 설정할 수 있습니다. 원격 액세스 설정에는 배포 또는 원격 서버 관리 도구 (RSAT)를 사용 하 여 원격 서버에서 관리할 수 있습니다. 또한 단일 원격 액세스 관리 콘솔에서 전체 멀티 사이트 배포를 모니터링할 수 있습니다.  
   
-## <a name="BKMK_NEW"></a>역할과이 시나리오에 포함 된 기능  
+## <a name="BKMK_NEW"></a>이 시나리오에 포함 된 역할 및 기능  
 다음 표에서 역할과이 시나리오에서 사용 되는 기능을 나열 합니다.  
   
 |역할/기능|이 시나리오를 지원하는 방법|  
@@ -117,7 +117,7 @@ Windows 7을 실행 하는 클라이언트에 대 한 지원 각 진입점에 �
   
         -   고유한 Windows 7 클라이언트 GPO가 각 도메인에 대 한 Windows 7 클라이언트 지원에 대해 활성화 된 각 진입점에 대 한 필요 합니다.  
   
-## <a name="KnownIssues"></a>알려진된 문제  
+## <a name="KnownIssues"></a>알려진 문제  
 다음은 알려진 문제는 멀티 사이트 시나리오를 구성 하는 경우:  
   
 -   **동일한 IPv4 서브넷에 여러 진입점**합니다. 동일한 IPv4 서브넷에 여러 진입점을 추가 IP 주소 충돌 메시지 고 DNS64 주소 진입점에 대 한 예상 대로 구성 되지 않습니다. I p v 6은 회사 네트워크에서 서버의 내부 인터페이스에 배포 되지 않은 경우이 문제가 발생 합니다. 이 문제를 방지 모든 현재 및 미래의 원격 액세스 서버에서 다음 Windows PowerShell 명령을 실행 합니다.  

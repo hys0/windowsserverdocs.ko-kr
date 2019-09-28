@@ -1,24 +1,24 @@
 ---
-title: Windows Admin Center SDK 사례 연구-BiitOps
-description: Windows Admin Center SDK 사례 연구-BiitOps
+title: Windows 관리 센터 SDK 사례 연구-BiitOps
+description: Windows 관리 센터 SDK 사례 연구-BiitOps
 ms.technology: extend
 ms.topic: article
 author: daniellee-msft
 ms.author: jol
 ms.date: 06/2/2019
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
-ms.openlocfilehash: 5059bbc24894b897ea5cdf6b813fceb51762f4cc
-ms.sourcegitcommit: 3be280c8638214857dc355b201eb56a04499a5e5
+ms.prod: windows-server
+ms.openlocfilehash: 5a4ddc520581d7308366ea52838de32d87b1d21f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67396753"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71357172"
 ---
 # <a name="biitops-changes-extension"></a>BiitOps 변경 확장
 
-Windows Admin Center BiitOps 변경에 대 한 Windows Server 실제/가상 머신에서 하드웨어, 소프트웨어 및 구성 설정 변경에 대 한 정보를 제공합니다. BiitOps 변경 확장을 사용 하면 빠르고 비용 효율적으로 규정 준수, 안정성 또는 보안 관련 문제를 일으킬 수 있는 변경 내용을 확인 수 있습니다. 정확 하 게 새로운 기능, 변경 된 내용 및 단일-창-의-유리에서 삭제 되었습니다. 새로운 표시 됩니다. 서버 및 Microsoft Windows Server에서 선택한 서비스 모두에서 작동합니다.
+Windows 관리 센터의 BiitOps 변경 내용에 따라 Windows Server 물리적/가상 컴퓨터의 하드웨어, 소프트웨어 및 구성 설정에 대 한 변경 내용이 제공 됩니다. BiitOps는 확장을 변경 하 여 규정 준수, 안정성 또는 보안과 관련 된 문제를 해결 하는 신속 하 고 비용 효율적으로 변화를 확인할 수 있습니다. 여기에는 새로운 기능, 변경 된 내용 및 단일 창에서 삭제 된 내용이 정확 하 게 표시 됩니다. 서버와 Microsoft Windows Server의 선택한 서비스 모두에서 작동 합니다.
 
-방문 하 여 자세한 정보는 [BiitOps 제품 사이트](http://www.biitops.com/solutions/changes-for-wac/) 에 대 한 구독 또는 [평가판](http://www.biitops.com/solutions/register-changes-for-wac/)합니다.
+[Biitops 제품 사이트](http://www.biitops.com/solutions/changes-for-wac/) 를 방문 하거나 [무료 평가판](http://www.biitops.com/solutions/register-changes-for-wac/)을 신청 하 여 자세히 알아보세요.
 
 ![BiitOps 확장](../../media/extend-case-study-biitops/biitops-1.png)

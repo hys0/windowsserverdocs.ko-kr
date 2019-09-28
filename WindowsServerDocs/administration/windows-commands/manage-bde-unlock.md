@@ -1,8 +1,8 @@
 ---
-title: 관리 bde 잠금 해제
-description: '에 대 한 Windows 명령을 항목 * * *- '
+title: manage-bde 잠금 해제
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a86267890449be2048221940e5955e49f30f99f3
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 92ed2e00babfad890be83e45827ae8e0080cac40
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59814604"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71373873"
 ---
-# <a name="manage-bde-unlock"></a>관리 bde: 잠금 해제
+# <a name="manage-bde-unlock"></a>manage-bde: unlock
 
 
 
@@ -37,10 +37,10 @@ manage-bde -unlock {-recoverypassword <Password>|-recoverykey <PathToExternalKey
 |매개 변수|값|설명|
 |---------|-----|-----------|
 |-recoverypassword||복구 암호를 드라이브의 잠금을 해제 하는 것을 지정 합니다. Rp 약어:|
-||\<Password>|드라이브를 잠금 해제를 사용할 수 있는 복구 암호를 나타냅니다.|
+||\<Password >|드라이브를 잠금 해제를 사용할 수 있는 복구 암호를 나타냅니다.|
 |-recoverykey||외부 복구 키 파일의 드라이브 잠금을 해제 하는 것을 지정 합니다. 약어: 날짜별|
-||\<PathToExternalKeyFile>|드라이브를 잠금 해제를 사용할 수 있는 외부 복구 키 파일을 나타냅니다.|
-||\<Drive>|드라이브 문자를 뒤에 콜론을 나타냅니다.|
+||@no__t 0PathToExternalKeyFile >|드라이브를 잠금 해제를 사용할 수 있는 외부 복구 키 파일을 나타냅니다.|
+||\<Drive >|드라이브 문자를 뒤에 콜론을 나타냅니다.|
 |-인증서||Unclock 볼륨에 BitLocker 인증서에 대 한 로컬 사용자 인증서는 locat 사용자 인증서 저장소에 있습니다. 약어:-인증서|
 ||<-cf PathToCertificateFile >|Cerficate 파일 경로|
 ||<-ct CertificateThumbprint >|PIN을 선택적으로 포함할 수 있는 인증서 지문 (-핀).|
@@ -50,7 +50,7 @@ manage-bde -unlock {-recoverypassword <Password>|-recoverykey <PathToExternalKey
 |-? 또는 /?||도움말에 대 한 간단한 명령 프롬프트에 표시 됩니다.|
 |-help 또는-h||명령 프롬프트에서 전체 도움말을 표시 합니다.|
 
-## <a name="BKMK_Examples"></a>예제
+## <a name="BKMK_Examples"></a>예와
 
 다음 예제를 사용 하는 **-잠금 해제** 다른 드라이브에 백업 폴더에 저장 된 복구 키 파일과 함께 E 드라이브를 잠금 해제 하는 명령입니다.
 ```

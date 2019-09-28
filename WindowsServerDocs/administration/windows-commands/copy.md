@@ -1,8 +1,8 @@
 ---
 title: copy
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d593fbdbffd2a5ee4e4dfb4a817ad4708162160a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 102fd6b59516b04b8986ee47b52f521be73f04de
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59853774"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71379042"
 ---
 # <a name="copy"></a>copy
 
@@ -46,8 +46,8 @@ copy [/d] [/v] [/n] [/y | /-y] [/z] [/a | /b] <Source> [/a | /b] [+<Source> [/a 
 |/z|다시 시작 가능 모드에서 네트워크에 연결 된 파일을 복사 합니다.|
 |/ a|ASCII 텍스트 파일을 나타냅니다.|
 |/b|이진 파일을 나타냅니다.|
-|\<Source>|필수. 파일 또는 파일 집합이 복사 하려는 위치를 지정 합니다. *소스* 드라이브 문자 및 콜론, 디렉터리 이름, 파일 이름, 또는 이들의 조합으로 구성 될 수 있습니다.|
-|\<대상 >|필수 사항입니다. 파일 또는 파일 집합이 복사 하려는 위치를 지정 합니다. *대상* 드라이브 문자 및 콜론, 디렉터리 이름, 파일 이름, 또는 이들의 조합으로 구성 될 수 있습니다.|
+|\<Source >|필수. 파일 또는 파일 집합이 복사 하려는 위치를 지정 합니다. *소스* 드라이브 문자 및 콜론, 디렉터리 이름, 파일 이름, 또는 이들의 조합으로 구성 될 수 있습니다.|
+|\<Destination >|필수. 파일 또는 파일 집합이 복사 하려는 위치를 지정 합니다. *대상* 드라이브 문자 및 콜론, 디렉터리 이름, 파일 이름, 또는 이들의 조합으로 구성 될 수 있습니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
 ## <a name="remarks"></a>설명
@@ -112,7 +112,7 @@ copy [/d] [/v] [/n] [/y | /-y] [/z] [/a | /b] <Source> [/a | /b] [+<Source> [/a 
     사용 하 여 모든 디렉터리의 파일 및 하위 디렉터리를 복사 하려면는 **xcopy** 명령입니다.
 -   **복사** 다른 매개 변수와 함께 명령을 복구 콘솔에서 사용할 수 있습니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 현재 드라이브에 다음을로 라는 파일을 복사 하 고 복사 된 파일의 끝에는 파일의 끝 문자 (CTRL + Z) 인지 확인 하려면 다음을 입력 합니다.
 ```

@@ -2,7 +2,7 @@
 title: Windows Server를 위한 상위 지원 솔루션
 description: Windows Server 문제에 대한 해결 방법에 대한 링크 가져오기
 layout: LandingPage
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: alant
 ms.technology: server-general
@@ -10,12 +10,12 @@ ms.date: 03/16/2018
 ms.topic: landing-page
 author: kaushika-msft
 ms.author: elizapo
-ms.openlocfilehash: d25142e3d0e5875fd8c0553d70e7bdff4d325097
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 796f2351813218955a72ee9746dddb63453ac112
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70872095"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71365652"
 ---
 # <a name="top-support-solutions-for-windows-server"></a>Windows Server를 위한 상위 지원 솔루션
 

@@ -1,8 +1,8 @@
 ---
-title: ksetup:removerealm
-description: '에 대 한 Windows 명령을 항목 * * *- '
+title: 'ksetup: removerealm'
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 579b0772e4642389b90aa370dad80a3eebea9d34
-ms.sourcegitcommit: 08eba714d3ceb5f2dfb5486d6b990da1aa4dcbdd
+ms.openlocfilehash: 11858d8a24d4f125c83b3e4092ac48f336a9ef0b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65564724"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71374951"
 ---
-# <a name="ksetupremoverealm"></a>ksetup:removerealm
+# <a name="ksetupremoverealm"></a>ksetup: removerealm
 
 
 
@@ -36,25 +36,25 @@ ksetup /removerealm <RealmName>
 
 |매개 변수|설명|
 |---------|-----------|
-|\<RealmName>|영역 이름은 CORP. 같은 대문자는 DNS 이름으로 지정 됩니다. CONTOSO.COM 하며 기본 영역으로 표시 되 면 **ksetup** 실행 됩니다.|
+|@no__t 0RealmName >|영역 이름은 CORP와 같은 대문자 DNS 이름으로 명시 됩니다. CONTOSO.COM는 **ksetup** 가 실행 될 때 기본 영역으로 나열 됩니다.|
 
 ## <a name="remarks"></a>설명
 
-영역 이름은 레지스트리에 두 위치에 저장 됩니다. **HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001** 하 고 **\CurrentControlSet\Control\Lsa\Kerberos**합니다.
+영역 이름은 레지스트리의 두 위치에 저장 됩니다. **HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001** 및 **\CurrentControlSet\Control\Lsa\Kerberos**.
 
-이렇게 하면 해당 DNS 정보를 다시 설정 하 고 제거 해야 도메인 컨트롤러를 사용할 수 없는 때문에 도메인 컨트롤러에서 기본 영역 이름을 제거할 수 없습니다.
+도메인 컨트롤러에서 기본 영역 이름을 제거할 수 없습니다. DNS 정보를 다시 설정 하 고 제거 하면 도메인 컨트롤러를 사용할 수 없게 될 수 있습니다.
 
-## <a name="BKMK_Examples"></a>예제
+## <a name="BKMK_Examples"></a>예와
 
-실수로 영역 이름을 설정 ".COM"를 잘못 입력 하 여 로컬 컴퓨터의 CORP. CONTOSO입니다. CON
+로컬 컴퓨터에서 CORP로 영역 이름을 잘못 된 ".COM"으로 설정 합니다. CONTOSO.COM. 이라는
 ```
 ksetup /setrealm CORP.CONTOSO.CON
 ```
-로컬 컴퓨터에서 해당 잘못 된 영역 이름을 제거 합니다.
+로컬 컴퓨터에서 잘못 된 영역 이름을 제거 합니다.
 ```
 ksetup /removerealm CORP.CONTOSO.CON
 ```
-실행 하 여 제거를 확인 하십시오 **ksetup** 출력을 검토 합니다.
+**Ksetup** 를 실행 하 여 제거를 확인 하 고 출력을 검토 합니다.
 
 #### <a name="additional-references"></a>추가 참조
 

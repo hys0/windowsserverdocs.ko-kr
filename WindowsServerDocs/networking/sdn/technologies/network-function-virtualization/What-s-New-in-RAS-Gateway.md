@@ -3,7 +3,7 @@ title: RAS 게이트웨이의 새로운 기능
 description: 다중 테 넌 트, Windows Server 2016에서 프로토콜 BGP (Border Gateway) 가능 라우터는 소프트웨어 기반 RAS 게이트웨이의 새 기능에 알아보려면이 항목을 사용할 수 있습니다.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-sdn
@@ -12,16 +12,16 @@ ms.topic: get-started-article
 ms.assetid: 709cb192-313a-47b5-954e-eb5f6fee51a7
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 5cc7d8bab3f2783750dbd723da745b1df3c2e462
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 85595c47c599a72039e93e67ea2f33f92af7200c
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59863024"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71405906"
 ---
 # <a name="whats-new-in-ras-gateway"></a>RAS 게이트웨이의 새로운 기능
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 다중 테 넌 트, Windows Server 2016에서 프로토콜 BGP (Border Gateway) 가능 라우터는 소프트웨어 기반 RAS 게이트웨이의 새 기능에 알아보려면이 항목을 사용할 수 있습니다. RAS 게이트웨이 다중 테 넌 트 BGP 라우터는 클라우드 서비스 공급자 (Csp) 및 Hyper-v 네트워크 가상화를 사용 하 여 여러 테 넌 트 가상 네트워크를 호스팅하는 회사를 위해 설계 되었습니다.  
   
@@ -38,10 +38,10 @@ ms.locfileid: "59863024"
   
 -   [M + N 게이트웨이 풀 중복성](#bkmk_m)  
   
--   [경로 Reflector](#bkmk_rr)  
+-   [경로 리플렉터](#bkmk_rr)  
   
 ## <a name="bkmk_s2s"></a>사이트 간 연결 옵션  
-RAS 게이트웨이 이제 세 가지 유형의 VPN 사이트 간 연결을 지원합니다.  Internet Key Exchange version 2 (IKEv2) 사이트 간 가상 사설망 (VPN), (L3) 계층 3 VPN 및 라우팅 GRE (Generic Encapsulation) 터널링 합니다.  
+RAS 게이트웨이는 이제 다음과 같은 세 가지 유형의 VPN 사이트 간 연결을 지원 합니다.  IKEv2 (IKE(Internet Key Exchange) version 2) 사이트 간 VPN (가상 사설망), L3 (Layer 3) VPN 및 GRE (Generic Routing 캡슐화) 터널.  
   
 Gre 방식에 대 한 자세한 내용은 참조 [Windows Server 2016에서 GRE 터널링](../../../../remote/remote-access/ras-gateway/gre-tunneling-windows-server.md)합니다.  
   
@@ -70,7 +70,7 @@ Windows Server 2016에서 서로 다른 유형의 게이트웨이 풀을 만들 
   
 자세한 내용은 참조 [RAS 게이트웨이 고가용성](RAS-Gateway-High-Availability.md)합니다.  
   
-## <a name="bkmk_rr"></a>경로 Reflector  
+## <a name="bkmk_rr"></a>경로 리플렉터  
 프로토콜 BGP (Border Gateway) 경로 Reflector는 이제 RAS 게이트웨이와 포함 되어 있으며 라우터 간의 경로 동기화에 필요한 BGP 풀 메시 토폴로지에 대 한 대안을 제공 합니다. 풀 메시 동기화를 수행 하면 모든 BGP 라우터 라우팅 토폴로지에 있는 다른 모든 라우터 연결 해야 합니다. 그러나 경로 Reflector를 사용 하면 경로 Reflector는 연결 된 모든 다른 라우터에, BGP 클라이언트, 따라서 간소화 경로 동기화 되 고 네트워크 트래픽 감소 효과 호출 하는 유일한 라우터. 경로 Reflector 모든 경로 학습 최상의 경로 계산 하 고 최상의 경로 BGP 클라이언트를 다시 배포 합니다.  
   
 Windows Server 2016 RAS 게이트웨이 VM을 여러 개를 종료 하는 개별 테 넌 트의 원격 액세스 터널을 구성할 수 있습니다. 유연성이 향상 하나의 RAS 게이트웨이 VM 만나는 수 없는 상황에 직면 하는 경우 클라우드 서비스 공급자에 대 한 모든 테 넌 트 연결의 대역폭 요구 합니다.  
@@ -93,6 +93,6 @@ Windows Server 2016 RAS 게이트웨이 VM을 여러 개를 종료 하는 개별
   
 -   RAS 게이트웨이 경로 Reflector 기업 고객 BGP 라우팅을 사용 하 여 고객 주소 공간에, 경우 모든 해당 테 넌 트 사이트에 대 한 유일한 외부 BGP (eBGP) 환경이 있습니다. 엔터프라이즈 테 넌 트의 터널 종료 지점에 관계 없이 마찬가지입니다. 즉, 데이터 센터에 테 넌 트 사이트에 대 한 사이트 간 VPN 터널 종료 되는 RAS 게이트웨이 VM CSP에 관계 없이, 모든 테 넌 트 사이트에 대 한 피어 eBGP 경로 Reflector 있습니다.  
   
-자세한 내용은 [RAS 게이트웨이 배포 아키텍처](RAS-Gateway-Deployment-Architecture.md) 의견 항목에 대 한 Task Force IETF (Internet Engineering) 요청 [RFC 4456 BGP 경로 리플렉션: 대신 전체 메시 내부 BGP (IBGP)](https://tools.ietf.org/html/rfc4456)합니다.  
+자세한 내용은 [RAS 게이트웨이 배포 아키텍처](RAS-Gateway-Deployment-Architecture.md) 및 설명 항목에 대 한 IETF (Internet 엔지니어링 작업 Force) 요청 항목 [rfc 4456 BGP 경로 리플렉션을 참조 하세요. IBGP (전체 메시 내부 BGP) ](https://tools.ietf.org/html/rfc4456)에 대 한 대안입니다.  
   
 
