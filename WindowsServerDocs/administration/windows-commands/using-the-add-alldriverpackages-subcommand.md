@@ -1,8 +1,8 @@
 ---
 title: 추가 AllDriverPackages 하위 명령 사용
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3f934d8c65da939fb60c564b375699f411b7c9ac
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: d8290a95dd53718b200d10b6804d312abe95e257
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66440829"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71363894"
 ---
 # <a name="using-the-add-alldriverpackages-subcommand"></a>추가 AllDriverPackages 하위 명령 사용
 
@@ -36,12 +36,12 @@ WDSUTIL /Add-AllDriverPackages /FolderPath:<Folder Path> [/Server:<Server name>]
 
 |          매개 변수           |                                                              설명                                                              |
 |------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-|  /FolderPath:\<Folder Path>  |                      드라이버 패키지에 대 한.inf 파일이 있는 폴더의 전체 경로 지정 합니다.                      |
-|   [/ 서버:\<서버 이름 >]   | 서버 이름을 지정합니다. 이 NetBIOS 이름이 나 FQDN 수 있습니다. 서버 이름을 지정 하지, 로컬 서버가 사용 됩니다. |
-|     [/ 아키텍처: {x86      |                                                                 ia64                                                                  |
-| [/ DriverGroup:\<그룹 이름 >] |                             패키지를 추가할 드라이버 그룹의 이름을 지정 합니다.                             |
+|  /FolderPath: \< 폴더 경로 >  |                      드라이버 패키지에 대 한.inf 파일이 있는 폴더의 전체 경로 지정 합니다.                      |
+|   [/Server: \<Server name >]   | 서버 이름을 지정합니다. 이 NetBIOS 이름이 나 FQDN 수 있습니다. 서버 이름을 지정 하지, 로컬 서버가 사용 됩니다. |
+|     [/아키텍처: {x86      |                                                                 ia64                                                                  |
+| [/Drivergroup: \< 그룹 이름 >] |                             패키지를 추가할 드라이버 그룹의 이름을 지정 합니다.                             |
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 드라이버 패키지를 추가 하려면 다음 중 하나를 입력 합니다.
 ```
@@ -55,4 +55,4 @@ WDSUTIL /Add-AllDriverPackages /FolderPath:"C:\Temp\Drivers\Printers" /DriverGro
 
 [명령줄 구문 키](command-line-syntax-key.md)
 
-[Add-WdsDriverPackage](https://technet.microsoft.com/library/dn283440.aspx)
+[WdsDriverPackage](https://technet.microsoft.com/library/dn283440.aspx)
