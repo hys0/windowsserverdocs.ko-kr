@@ -1,8 +1,8 @@
 ---
 title: repair-bde
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9e2bce0c0a0f12a3a171c161a669c903044e8b4b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 817e5fb5cf032376ddfddb3a54f73411ac175def
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59813544"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71384547"
 ---
 # <a name="repair-bde"></a>repair-bde
 
@@ -27,7 +27,7 @@ ms.locfileid: "59813544"
 액세스에 암호화 된 데이터가 심각 하 게 손상된 된 하드 디스크 드라이브는 BitLocker를 사용 하 여 암호화 된 경우. Repair-bde는 드라이브의 중요 한 부분을 다시 생성할 수와 올바른 복구 암호 또는 복구 키가 데이터를 해독 하는 데 사용으로 복구 가능한 데이터를 복원 합니다. 드라이브에 BitLocker 메타 데이터 데이터 손상 된 경우 복구 암호 또는 복구 키 외에도 백업 키 패키지를 제공할 수 있어야 합니다. 이 키 패키지 경우는 백업 Active Directory 도메인 서비스 (AD DS)에서 AD DS 백업에 대 한 기본 설정을 사용 합니다. 이 키 패키지 하 고 복구 암호 또는 복구 키를 디스크에서 손상 된 경우 BitLocker 보호 드라이브의 일부를 해독할 수 있습니다. 각 키 패키지는 해당 드라이브 식별자를가지고 있는 드라이브에 대해서만 작동 합니다. 사용할 수는 [Active Directory에 대 한 BitLocker 복구 암호 뷰어](https://technet.microsoft.com/library/dd875531(v=ws.10).aspx) AD DS에서이 키 패키지를 얻을 수 있습니다.
 
 > [!NOTE]
-> BitLocker 복구 암호 뷰어 서버 관리를 사용 하 여 Windows Server 2012에 설치할 수 있는 선택적 관리 기능 중 하나로 포함 되어 있습니다.
+> BitLocker 복구 암호 뷰어는 Windows Server 2012에서 서버 관리를 사용 하 여 설치할 수 있는 선택적 관리 기능 중 하나로 포함 됩니다.
 
 Repair-bde 명령줄 도구에는 다음과 같은 제한이 있습니다.
 -   복구 bde 암호화 또는 암호 해독 프로세스 동안 실패 한 드라이브를 복구할 수 없습니다.
@@ -45,8 +45,8 @@ repair-bde <InputVolume> <OutputVolumeorImage> [-rk] [–rp] [-pw] [–kp] [–l
 
 |매개 변수|설명|
 |---------|-----------|
-|\<InputVolume>|복구 하고자 하는 BitLocker로 암호화 된 드라이브의 드라이브 문자를 식별 합니다. 드라이브 문자는 콜론; 있어야 합니다. 예를 들어: **C:**.|
-|\<OutputVolumeorImage>|복구 된 드라이브의 콘텐츠를 저장 하는 드라이브를 식별 합니다. 출력 드라이브에 대 한 모든 정보를 덮어씁니다.|
+|\<InputVolume >|복구 하고자 하는 BitLocker로 암호화 된 드라이브의 드라이브 문자를 식별 합니다. 드라이브 문자는 콜론을 포함 해야 합니다. 예를 들어: **C:** .|
+|@no__t 0OutputVolumeorImage >|복구 된 드라이브의 콘텐츠를 저장 하는 드라이브를 식별 합니다. 출력 드라이브에 대 한 모든 정보를 덮어씁니다.|
 |-날짜별|볼륨의 잠금을 해제 하는 데 사용 해야 하는 복구 키의 위치를 식별 합니다. 이 명령으로도 지정할 수 있습니다 **-recoverykey**합니다.|
 |-rp|볼륨의 잠금을 해제 하는 데 사용 해야 하는 숫자로 된 복구 암호를 식별 합니다. 이 명령으로도 지정할 수 있습니다 **-recoverypassword**합니다.|
 |-pw|볼륨의 잠금을 해제 하는 데 사용 해야 하는 암호를 식별 합니다. 이 명령으로도 지정할 수 있습니다 **-암호**|
@@ -59,7 +59,7 @@ repair-bde <InputVolume> <OutputVolumeorImage> [-rk] [–rp] [-pw] [–kp] [–l
 
 키 패키지의 경로를 지정 하지 않으면 **복구 bde** 키 패키지에 대 한 드라이브를 검색 합니다. 그러나 하드 드라이브가 손상 된 경우, **복구 bde** 패키지를 찾을 수 없으며 경로 제공 하 라는 메시지가 나타납니다.
 
-## <a name="BKMK_Examples"></a>예제
+## <a name="BKMK_Examples"></a>예와
 
 다음 예제에서는 C 드라이브를 복구 하 고 내용을 F 드라이브에 저장 된 복구 키 파일 (RecoveryKey.bek)를 사용 하 여 D 드라이브에 C 드라이브에서 기록 하 고 Z 드라이브에 로그 파일 (log.txt)에이 시도의 결과 기록 합니다.
 ```

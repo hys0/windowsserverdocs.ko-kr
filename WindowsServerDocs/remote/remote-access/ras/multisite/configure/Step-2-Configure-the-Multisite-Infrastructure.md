@@ -1,9 +1,9 @@
 ---
 title: 멀티 사이트 인프라를 구성 하는 2 단계
-description: 이 가이드의 일부인이 항목에서는 여러 원격 액세스 서버 배포 Windows Server 2016에서 멀티 사이트 배포에서 합니다.
+description: 이 항목은 Windows Server 2016에서 멀티 사이트 배포에서 여러 원격 액세스 서버 배포 가이드의 일부입니다.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-ras
@@ -12,12 +12,12 @@ ms.topic: article
 ms.assetid: faec70ac-88c0-4b0a-85c7-f0fe21e28257
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 2d8d5fbe427f25e9e26eac96d89dc5fae17e197b
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: b345ce7cdbb0cf9ff91ec99275232da5ba34edb0
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67281047"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71367200"
 ---
 # <a name="step-2-configure-the-multisite-infrastructure"></a>멀티 사이트 인프라를 구성 하는 2 단계
 
@@ -60,7 +60,7 @@ ms.locfileid: "67281047"
   
 8.  Active Directory 사이트 및 서비스를 닫습니다.  
   
-![Windows PowerShell](../../../../media/Step-2-Configure-the-Multisite-Infrastructure/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![Windows PowerShell](../../../../media/Step-2-Configure-the-Multisite-Infrastructure/PowerShellLogoSmall.gif)***<em>windows powershell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -169,7 +169,7 @@ New-ADReplicationSubnet -Name "2001:db8:2::/64" -Site "Second-Site"
   
 8.  필요에 따라 모든 진입점에 대 한 보안 그룹을 만들기 위해이 절차를 반복 합니다.  
   
-![Windows PowerShell](../../../../media/Step-2-Configure-the-Multisite-Infrastructure/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![Windows PowerShell](../../../../media/Step-2-Configure-the-Multisite-Infrastructure/PowerShellLogoSmall.gif)***<em>windows powershell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -213,7 +213,7 @@ Add-ADGroupMember -Identity Win7_Clients_Entrypoint1 -Members CLIENT2$
   
 그룹 정책 개체를 만들려면 참조 [만들고 그룹 정책 개체 편집](https://technet.microsoft.com/library/cc754740.aspx)합니다.  
   
-### <a name="DCMaintandDowntime"></a>도메인 컨트롤러가 유지 관리 및 가동 중지 시간  
+### <a name="DCMaintandDowntime"></a>도메인 컨트롤러 유지 관리 및 가동 중지 시간  
 PDC 에뮬레이터 역할을 실행 하는 도메인 컨트롤러 또는 서버 Gpo를 관리 하는 도메인 컨트롤러는 가동 중지 시간을 발생 하는 경우 로드 하거나 원격 액세스 구성을 수정 하는 것이 불가능 합니다. 다른 도메인 컨트롤러를 사용할 수 있는 경우 클라이언트 연결 되지 영향이 수 있습니다.  
   
 을 로드 하거나 원격 액세스 구성을 수정 하려면 클라이언트 또는 응용 프로그램 서버 Gpo;에 대 한 다른 도메인 컨트롤러에 PDC 에뮬레이터 역할을 전송할 수 있습니다. 서버 Gpo에 대 한 서버 Gpo를 관리 하는 도메인 컨트롤러를 변경 합니다.  
@@ -255,7 +255,7 @@ PDC 에뮬레이터 역할을 실행 하는 도메인 컨트롤러 또는 서버
         Set-DAEntryPointDC "ExistingDC 'dc1.corp.contoso.com' "ComputerName 'DA1.corp.contoso.com' "ErrorAction Inquire  
         ```  
   
-### <a name="ChangeTwoDCs"></a>서버 Gpo를 관리 하는 두 개 이상의 도메인 컨트롤러를 변경 합니다.  
+### <a name="ChangeTwoDCs"></a>서버 Gpo를 관리 하는 두 개 이상의 도메인 컨트롤러 변경  
 사례 수가 최소 서버 Gpo를 관리 하는 도메인 컨트롤러 두 개 이상 제공 되지 않습니다. 이 경우 서버 Gpo에 대 한 도메인 컨트롤러 연결을 변경 하려면 더 많은 단계가 필요한 합니다.  
   
 원격 액세스 서버의 레지스트리에 모든 서버 Gpo에서 도메인 컨트롤러 연결 정보가 저장 됩니다. 다음 예제에서 두 명의 원격 액세스 서버를 "DA1" 인 두 개의 진입점에 있는 "1" 및 "d a 2"의 진입점 "진입점 2"입니다. "진입점 1"의 서버 GPO의 서버 GPO 하는 동안 도메인 컨트롤러 "d c 1"에서 관리 하는 "진입점 2"는 "DC2" 도메인 컨트롤러에서 관리 합니다. "D c 1" 및 "d c 2"을 모두 사용할 수 있습니다. 세 번째 도메인 컨트롤러 "DC3" 도메인에서 이용할 수 있으며 "DC1" 및 "d c 2"에서 데이터를 이미 "DC3"에 복제 됩니다.  
@@ -299,8 +299,8 @@ PDC 에뮬레이터 역할을 실행 하는 도메인 컨트롤러 또는 서버
   
     ![Windows PowerShell](../../../../media/Step-2-Configure-the-Multisite-Infrastructure/DCAssocFinal.png)  
   
-### <a name="ConfigDistOptimization"></a>구성 배포의 최적화  
-구성 변경 작업을 수행 하는 경우 서버 Gpo 원격 액세스 서버에 전파 된 후에 변경 내용이 적용 됩니다. 구성 배포 시간을 줄이기 위해 원격 액세스를 자동으로 선택 하이퍼링크는 쓰기 가능한 도메인 컨트롤러 "<https://technet.microsoft.com/library/cc978016.aspx>" 해당 서버 GPO를 만들 때 원격 액세스 서버에 가장 가까운 합니다.  
+### <a name="ConfigDistOptimization"></a>구성 배포 최적화  
+구성 변경 작업을 수행 하는 경우 서버 Gpo 원격 액세스 서버에 전파 된 후에 변경 내용이 적용 됩니다. 구성 배포 시간을 줄이기 위해 원격 액세스는 서버 GPO를 만들 때 원격 액세스 서버에 가장 가까운 "<https://technet.microsoft.com/library/cc978016.aspx>" 하이퍼링크 인 쓰기 가능 도메인 컨트롤러를 자동으로 선택 합니다.  
   
 일부 시나리오에서는 해야 구성 배포 시간을 최적화 하기 위해 서버 GPO를 관리 하는 도메인 컨트롤러를 수동으로 수정 해야 합니다.  
   
@@ -334,6 +334,6 @@ PDC 에뮬레이터 역할을 실행 하는 도메인 컨트롤러 또는 서버
   
 ## <a name="BKMK_Links"></a>참고 항목  
   
--   [3단계: 멀티 사이트 배포를 구성 합니다.](Step-3-Configure-the-Multisite-Deployment.md)  
--   [1단계: 단일 서버 원격 액세스 배포 구현](Step-1-Implement-a-Single-Server-Remote-Access-Deployment.md)  
+-   [3단계: 멀티 사이트 배포 구성 @ no__t-0  
+-   [1단계: 단일 서버 원격 액세스 배포 구현 @ no__t-0  
 

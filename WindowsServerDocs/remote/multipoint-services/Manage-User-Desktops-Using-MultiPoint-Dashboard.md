@@ -1,8 +1,8 @@
 ---
 title: MultiPoint 대시보드를 사용하여 사용자 데스크톱 관리
-description: 다중 포인트 대시보드 개요를 제공합니다.
+description: MultiPoint 대시보드에 대 한 개요를 제공 합니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: 049910029f0ed2623ae34131d3755964d3499d0e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b250d820e7086054d18d62eebe8ce9d3686f8d5d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59837344"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71405098"
 ---
 # <a name="manage-user-desktops-using-multipoint-dashboard"></a>MultiPoint 대시보드를 사용하여 사용자 데스크톱 관리
 MultiPoint 서비스 시스템에서 데스크톱은 각 사용자 *스테이션*의 모니터에 표시된 소프트웨어 사용자 인터페이스입니다. 다중 포인트 대시보드는 이러한 데스크톱을 관리 하는 데 도움이 되는 도구입니다.   

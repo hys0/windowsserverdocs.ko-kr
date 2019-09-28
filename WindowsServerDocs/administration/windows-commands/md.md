@@ -1,8 +1,8 @@
 ---
 title: Md
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1396038410ecc5db5a124a1768038c4f8c8bea8c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 965a5c506535a2c52d6cc7b3557c6104182c12a5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59820844"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71373694"
 ---
 # <a name="md"></a>Md
 
@@ -42,15 +42,15 @@ mkdir [<Drive>:]<Path>
 
 |매개 변수|설명|
 |---------|-----------|
-|\<Drive>:|새 디렉터리를 만들고 원하는 드라이브를 지정 합니다.|
-|\<Path>|필수 사항입니다. 새 디렉터리의 위치와 이름을 지정합니다. 단일 경로의 최대 길이 파일 시스템에 의해 결정 됩니다.|
+|\<Drive >:|새 디렉터리를 만들고 원하는 드라이브를 지정 합니다.|
+|\< 경로 >|필수. 새 디렉터리의 위치와 이름을 지정합니다. 단일 경로의 최대 길이 파일 시스템에 의해 결정 됩니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
 ## <a name="remarks"></a>설명
 
 기본적으로 사용 하도록 설정 된 명령 확장을 사용 하면 단일을 사용할 수 있도록 **md** 지정된 된 경로에서 중간 디렉터리를 만드는 명령입니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 현재 디렉터리 내에서 Directory1 라는 디렉터리를 만들려면 다음을 입력 합니다.
 ```

@@ -8,14 +8,14 @@ manager: mtillman
 ms.reviewer: cahick
 ms.date: 08/20/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 56f485491340b3974d8bf5ba697c6cf01f3e56ac
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 53626c4cfac17cb11402ada9ce3397c487cd0720
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70868213"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71389846"
 ---
 # <a name="winlogon-automatic-restart-sign-on-arso"></a>Winlogon 자동 다시 시작 로그온 (ARSO)
 
@@ -73,7 +73,7 @@ Windows 10에서는 서버 Sku에 대해 ARSO을 사용 하지 않도록 설정 
 
 **레지스트리 편집기:**
 
-| 값 이름 | 형식 | data |
+| 값 이름 | type | data |
 | --- | --- | --- |
 | DisableAutomaticRestartSignOn | DWORD | 0 (ARSO를 사용 하도록 설정) |
 |   |   | 1 (ARSO 사용 안 함) |

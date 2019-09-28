@@ -2,7 +2,7 @@
 title: 다시 시작 또는 종료
 description: MultiPoint 서비스에서 시스템을 다시 시작 하거나 완전히 종료 하는 방법에 대해 알아봅니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: d2ef7185dc660e50dfde1816ed843b9c2586e930
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 76155fa5f8baf877999bdc3eb0753d7805087a72
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871570"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71389425"
 ---
 # <a name="restart-or-shut-down"></a>다시 시작 또는 종료
 하드웨어, 소프트웨어 및 소프트웨어 업데이트를 설치한 후 지침이 표시되면 MultiPoint 서비스 시스템의 모든 *스테이션* 및 호스트 컴퓨터를 다시 시작해야 할 수 있습니다. 새 하드웨어 장치를 스테이션에 추가한 경우 해당 스테이션에 하드웨어 장치를 연결해야 합니다. *스테이션 연결* 방법에 대한 자세한 내용은 [모드 간 전환](Switch-Between-Modes.md) 항목을 참조하세요.  

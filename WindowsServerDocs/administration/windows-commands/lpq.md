@@ -1,8 +1,8 @@
 ---
 title: lpq
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 18ff1ff3ecbc2df0a437ec8a465dec9a12123ede
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 6a3755c010c9bb4549deed08f26b5a0670fe7318
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66437514"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71374198"
 ---
 # <a name="lpq"></a>lpq
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-라인 프린터 데몬 (LPD)를 실행 하는 컴퓨터에서 인쇄 큐의 상태를 표시 합니다.  
+LPD (Line printer Daemon)를 실행 하는 컴퓨터에서 인쇄 큐의 상태를 표시 합니다.  
 
 ## <a name="syntax"></a>구문  
 ```  
@@ -41,8 +41,8 @@ lpq -S <ServerName> -P <printerName> [-l]
 
 ## <a name="remarks"></a>설명  
 **-S** 및 **-P** 매개 변수는 대/소문자 구분 및 대문자로 입력 해야 합니다.  
-## <a name="BKMK_examples"></a>예제  
-이 예제에서 10.0.0.45 LPD 호스트 Laserprinter1 프린터 큐의 상태를 표시 하는 방법을 보여 줍니다.  
+## <a name="BKMK_examples"></a>예와  
+이 예제에서는에서 10.0.0.45에서 LPD 호스트에 Laserprinter1 프린터 큐의 상태를 표시 하는 방법을 보여 줍니다.  
 ```  
 lpq -S 10.0.0.45 -P Laserprinter1  
 ```  

@@ -3,7 +3,7 @@ title: 실제 컴퓨터 및 기본 스테이션 설정
 description: MultiPoint 서비스에서 첫 번째 시스템, 기본 스테이션을 설정 하는 방법에 대해 알아봅니다.
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ ms.assetid: 4e83b126-ce9a-4cd7-a0bd-6627c9e0f81b
 author: evaseydl
 manager: scottman
 ms.author: evas
-ms.openlocfilehash: 01b405b679afa3815652b91bec63c786bd661cf7
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 1a5865b6bd15b6cd07cde393012afd495e3378be
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871551"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71395292"
 ---
 # <a name="set-up-the-physical-computer-and-primary-station"></a>실제 컴퓨터 및 기본 스테이션 설정
 MultiPoint 서비스를 설치 하기 전에 MultiPoint 서비스 시스템에 대 한 기본 스테이션을 설정 해야 합니다. LAN (local area network)을 사용 하는 경우 컴퓨터를 LAN에 연결 합니다.  

@@ -1,7 +1,7 @@
 ---
 title: Hyper-v에 FreeBSD를 실행 하기 위한 모범 사례
 description: 가상 컴퓨터에서 FreeBSD을 실행 하기 위한 권장 사항을 제공 합니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -11,12 +11,12 @@ ms.assetid: 0c66f1c8-2606-43a3-b4cc-166acaaf2d2a
 author: shirgall
 ms.author: kathydav
 ms.date: 01/09/2017
-ms.openlocfilehash: 598087411b35dde2e4a1cb606fae6a4602fe588e
-ms.sourcegitcommit: 6f968368c12b9dd699c197afb3a3d13c2211f85b
+ms.openlocfilehash: 1d284b38e1bdb642aa40ecbb8e82caa7712f7aad
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68544682"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71365633"
 ---
 # <a name="best-practices-for-running-freebsd-on-hyper-v"></a>Hyper-v에 FreeBSD를 실행 하기 위한 모범 사례
 

@@ -7,19 +7,19 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: b9702873d42e0a72e510ac022d8d7fb04b45dab9
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: cc0da10858ca6924a516fbf825206e376294209d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66189173"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407564"
 ---
 # <a name="customize-the-display-names-and-descriptions-for-authentication-methods"></a>표시 이름 및 인증 방법에 대 한 설명을 사용자 지정 
 
 
-인증 방법에 대한 표시 이름 및 설명을 사용자 지정하려면 `Set-AdfsAuthenticationProviderWebContent` PowerShell cmdlet을 사용하면 됩니다.  이 cmdlet을 사용하려면 먼저 사용자 지정하려는 인증 방법의 이름을 얻어야 합니다.  `Get-AdfsGlobalAuthenticationPolicy`를 사용하여 이 작업을 수행할 수 있습니다.  아래 예에서 알, 우리의 기호\-다음 페이지에 표시 됩니다.  "X.509 인증서를 사용하여 로그인"  사용자의 경우 이 작업을 간소화할 수 있습니다.  
+인증 방법에 대한 표시 이름 및 설명을 사용자 지정하려면 `Set-AdfsAuthenticationProviderWebContent` PowerShell cmdlet을 사용하면 됩니다.  이 cmdlet을 사용하려면 먼저 사용자 지정하려는 인증 방법의 이름을 얻어야 합니다.  `Get-AdfsGlobalAuthenticationPolicy`를 사용하여 이 작업을 수행할 수 있습니다.  아래 예제에서는 sign @ no__t-0in 페이지에 다음이 표시 됩니다.  "X.509 인증서를 사용하여 로그인"  사용자의 경우 이 작업을 간소화할 수 있습니다.  
   
 ![displayname을 사용자 지정](media/AD-FS-user-sign-in-customization/ADFS_Customize_Update1.PNG)  
   
@@ -44,4 +44,4 @@ ms.locfileid: "66189173"
 ![displayname을 사용자 지정](media/AD-FS-user-sign-in-customization/ADFS_Customize_Update3.PNG)  
 
 ## <a name="additional-references"></a>추가 참조 
-[AD FS 사용자 로그인 사용자 지정](AD-FS-user-sign-in-customization.md) 
+[사용자 로그인 사용자 지정 AD FS](AD-FS-user-sign-in-customization.md) 

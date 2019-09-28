@@ -1,8 +1,8 @@
 ---
 title: echo
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bfe6c936ee5606e286aab076bea08db04b8b6500
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.openlocfilehash: 343d6327d262401b4be14e472a135062456890f1
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66811169"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71377633"
 ---
 # <a name="echo"></a>echo
 
@@ -39,13 +39,13 @@ echo [on | off]
 
 |매개 변수|설명|
 |---------|-----------|
-|[에서 \| off]|또는 명령 에코 기능의 해제를 설정 합니다. 기본적으로 켜져 명령 에코 합니다.|
-|\<Message>|화면에 표시할 텍스트를 지정 합니다.|
+|[on \| 해제]|또는 명령 에코 기능의 해제를 설정 합니다. 기본적으로 켜져 명령 에코 합니다.|
+|\<Message >|화면에 표시할 텍스트를 지정 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
 ## <a name="remarks"></a>설명
 
--   합니다 **echo** *메시지* 명령은 특히 유용 **echo** 해제 됩니다. 여러 줄 메시지를 표시 하려면 모든 명령을 표시 하지 않고는 여러 **echo** *메시지* 후 명령는 **오프 에코** 명령을 프로그램 일괄 처리 프로그램입니다.
+-   Echo *Message* 명령은 특히 **echo** 가 꺼진 경우에 유용 합니다. 명령을 표시 하지 않고 몇 줄의 긴 메시지를 표시 하려면 일괄 처리 프로그램에서 **echo off** 명령 뒤에 몇 가지 **echo** *메시지* 명령을 포함할 수 있습니다.
 -   때 **echo** 꺼져, 명령 프롬프트 명령 프롬프트 창에 나타나지 않습니다. 명령 프롬프트를 표시 하려면 입력 **화면 표시 합니다.**
 -   배치 파일에서 사용 하는 경우 **화면 표시** 및 **오프 에코** 명령 프롬프트에서 설정 하는 데 영향을 주지 않습니다.
 -   배치 파일에서 특정 명령 출력을 방지 하려면 삽입는 at 기호 (@) 명령 앞에 있습니다. 배치 파일에서 모든 명령 에코를 방지 하려면 포함는 **오프 에코** 파일의 시작 부분에 명령 합니다.

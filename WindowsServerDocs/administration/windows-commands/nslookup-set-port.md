@@ -1,8 +1,8 @@
 ---
 title: nslookup set port
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 47eb780631da766f49c0ca2cac8ef90007a95c7e
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 5e1d7565499b87d861b727be54442a86527a85a7
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66436712"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71372921"
 ---
 # <a name="nslookup-set-port"></a>nslookup set port
 
@@ -36,7 +36,7 @@ set port=<Port>
 
 | 매개 변수 |                                          설명                                          |
 |-----------|-----------------------------------------------------------------------------------------------|
-|  \<Port>  | 기본 TCP/UDP DNS 이름 서버 포트에 대 한 새 값을 지정합니다. 기본 포트는 53입니다. |
+|  \<Port >  | 기본 TCP/UDP DNS 이름 서버 포트에 대 한 새 값을 지정합니다. 기본 포트는 53입니다. |
 |   {도움말   |                                              ?}                                               |
 
 #### <a name="additional-references"></a>추가 참조

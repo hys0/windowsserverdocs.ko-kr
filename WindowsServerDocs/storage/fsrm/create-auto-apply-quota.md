@@ -2,18 +2,18 @@
 title: 할당량 자동 적용 만들기
 description: 이 문서에서는 할당량 템플릿을 기반으로 할당량 자동 적용을 만드는 방법을 설명합니다.
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: e2837df448434252470d783a6c06f0690ba09021
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 68967ff920f25c05affc206ed45bad9275e781b6
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59847924"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71394242"
 ---
 # <a name="create-an-auto-apply-quota"></a>할당량 자동 적용 만들기
 
@@ -43,4 +43,4 @@ ms.locfileid: "59847924"
 ## <a name="see-also"></a>참조
 
 -   [할당량 관리](quota-management.md)
--   [자동 편집 할당량 속성 적용](edit-auto-apply-quota-properties.md)
+-   [할당량 자동 적용 속성 편집](edit-auto-apply-quota-properties.md)

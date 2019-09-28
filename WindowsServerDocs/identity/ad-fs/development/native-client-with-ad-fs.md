@@ -7,14 +7,14 @@ ms.reviewer: anandy
 manager: mtillman
 ms.date: 07/17/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: active-directory-federation-services
-ms.openlocfilehash: 2eb2d0a3cfa6763d308bbd73f1ccf50795b06e77
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 442aef6daccda2ab3e95690a82f43f642e5a3f73
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70866342"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71358752"
 ---
 # <a name="build-a-native-client-application-using-oauth-public-clients-with-ad-fs-2016-or-later"></a>AD FS 2016 이상에서 OAuth 공용 클라이언트를 사용 하 여 네이티브 클라이언트 응용 프로그램 빌드
 
@@ -153,7 +153,7 @@ ConfigureAuth 함수를 아래와 같이 수정 합니다.
     }
 
 기본적으로 AD FS를 사용 하도록 인증을 구성 하 고 AD FS 메타 데이터에 대 한 정보를 추가로 제공 하 고, 토큰의 유효성을 검사 하기 위해 대상 클레임은 Web API에서 예상 하는 값 이어야 합니다.
-애플리케이션 실행
+응용 프로그램 실행
 
 1. 솔루션 NativeClient에서 마우스 오른쪽 단추를 클릭 하 고 속성으로 이동 합니다. 아래와 같이 시작 프로젝트를 여러 개의 시작 프로젝트로 변경 하 고 TodoListClient 및 TodoListService를 모두 시작으로 설정 합니다.
 ![솔루션 속성](media/native-client-with-ad-fs-2016/solutionproperties.png)

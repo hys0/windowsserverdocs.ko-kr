@@ -1,8 +1,8 @@
 ---
 title: start
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ab7388633681120442544adf4ee0e337d8599854
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 1fb0875c972f8259b47f48ef84ed486fc678d8b0
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66441218"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71370894"
 ---
 # <a name="start"></a>start
 
@@ -38,17 +38,17 @@ start ["<Title>"] [/d <Path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/lo
 
 |매개 변수|설명|
 |---------|-----------|
-|"\<Title>"|명령 프롬프트 창 제목 표시줄에 표시할 제목을 지정 합니다.|
-|/d \<경로 >|시작 디렉터리를 지정합니다.|
+|"\< 제목 >"|명령 프롬프트 창 제목 표시줄에 표시할 제목을 지정 합니다.|
+|/d \<Path >|시작 디렉터리를 지정합니다.|
 |/i|Cmd.exe 시작 환경을 새 명령 프롬프트 창으로 전달합니다. 경우 **/i** 를 지정 하지 않으면 현재 환경이 사용 됩니다.|
-|/min  \| /최대 용량|최소화 하기 위해 지정 ( **/min**) 하거나 최대화 ( **/최대 용량**) 새 명령 프롬프트 창입니다.|
-|분리/\| 공유 /|별도 메모리 공간에서 16 비트 프로그램을 시작 ( **/separate**) 또는 공유 메모리 공간 (**공유 /** ). 이러한 옵션은 64 비트 플랫폼에서 지원 되지 않습니다.|
-|/low \| /normal \| /high \| /realtime \| /abovenormal \| /belownormal|지정 된 우선 순위 클래스에서 응용 프로그램을 시작 합니다. 유효한 우선 순위 클래스 값은 **낮은/** , **일반/** , **높은/** , **/realtime**, **/abovenormal**, 및 **/belownormal**합니다.|
-|/affinity \<HexAffinity >|새 응용 프로그램 (16 진수 숫자로 표현 되는) 지정 된 프로세서 선호도 마스크를 적용 합니다.|
+|/min \|/최대값|최소화 하기 위해 지정 ( **/min**) 하거나 최대화 ( **/최대 용량**) 새 명령 프롬프트 창입니다.|
+|/별도 \|/공유|별도 메모리 공간에서 16 비트 프로그램을 시작 ( **/separate**) 또는 공유 메모리 공간 (**공유 /** ). 이러한 옵션은 64 비트 플랫폼에서 지원 되지 않습니다.|
+|/low \|/일반 \|/높음 \|/low-3/abovenormal \|/belownormal|지정 된 우선 순위 클래스에서 응용 프로그램을 시작 합니다. 유효한 우선 순위 클래스 값은 **낮은/** , **일반/** , **높은/** , **/realtime**, **/abovenormal**, 및 **/belownormal**합니다.|
+|/선호도 \<HexAffinity >|새 응용 프로그램 (16 진수 숫자로 표현 되는) 지정 된 프로세서 선호도 마스크를 적용 합니다.|
 |/wait|응용 프로그램을 시작 하 고 끝날 때까지 대기 합니다.|
 |/b|새 명령 프롬프트 창을 열지 않고 응용 프로그램을 시작 합니다. CTRL + C 처리는 CTRL + C 처리 응용 프로그램을 사용 하지 않으면 무시 됩니다. 응용 프로그램을 중단 하려면 CTRL + BREAK를 사용 합니다.|
-|/ b \<명령 > \| \<프로그램 >|명령이 나 프로그램 시작을 지정 합니다.|
-|\<매개 변수 >|명령이 나 프로그램에 전달할 매개 변수를 지정 합니다.|
+|/b \<Command > @no__t 1 \<Program >|명령이 나 프로그램 시작을 지정 합니다.|
+|\< 매개 변수 >|명령이 나 프로그램에 전달할 매개 변수를 지정 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
 ## <a name="remarks"></a>설명
@@ -63,7 +63,7 @@ start ["<Title>"] [/d <Path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/lo
   구문을 경로 변수와 각 확장 프로그램을 구분 하는 세미콜론으로 동일 하 게 않음을 유의 하십시오.
 - 모든 확장에 일치 하는 경우 실행 파일을 검색할 때 **시작** 이름이 디렉터리 이름에 일치 하는 경우를 확인 합니다. 그렇지 않으면 **시작** Explorer.exe 해당 경로에 열립니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 명령 프롬프트에서 Myapp 프로그램을 시작 하 고 현재 명령 프롬프트 창을 사용 하 여 유지 하려면 다음을 입력 합니다.
 ```

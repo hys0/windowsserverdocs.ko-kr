@@ -1,8 +1,8 @@
 ---
 title: manage-bde
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8923177b03f378f8252c532ec386f1808e516e1e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7ca23e5f4499672f1e4bfcca6b9ad27f4e84039b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59874504"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71373771"
 ---
 # <a name="manage-bde"></a>manage-bde
 
@@ -37,28 +37,28 @@ manage-bde [-status] [–on] [–off] [–pause] [–resume] [–lock] [–unloc
 
 |매개 변수|설명|
 |---------|-----------|
-|[관리 bde: 상태](manage-bde-status.md)|BitLocker로 보호 되는 여부는 컴퓨터에 모든 드라이브에 대 한 정보를 제공 합니다.|
-|[관리 bde:에](manage-bde-on.md)|드라이브를 암호화 하 고 BitLocker를 설정 합니다.|
-|[관리 bde: 해제](manage-bde-off.md)|드라이브를 해독 하 고 BitLocker를 해제 합니다. 암호 해독 완료 되 면 모든 키 보호기 제거 됩니다.|
-|[관리 bde: 일시 중지](manage-bde-pause.md)|일시 중지 암호화 또는 암호 해독 합니다.|
-|[관리 bde: 다시 시작](manage-bde-resume.md)|암호화 또는 암호 해독을 다시 시작합니다.|
-|[관리 bde: 잠금](manage-bde-lock.md)|BitLocker로 보호 된 데이터에 대 한 액세스를 차단합니다.|
-|[관리 bde: 잠금 해제](manage-bde-unlock.md)|복구 암호 또는 복구 키를 사용 하 여 BitLocker로 보호 된 데이터에 액세스할 수 있습니다.|
-|[관리 bde: 잠금](manage-bde-autounlock.md)|데이터 드라이브 자동 잠금 해제를 관리 합니다.|
-|[관리 bde: 보호기](manage-bde-protectors.md)|암호화 키에 대 한 보호 방법을 관리합니다.|
-|[관리 bde: tpm](manage-bde-tpm.md)|컴퓨터의 신뢰할 수 있는 플랫폼 모듈 (TPM)를 구성합니다. 이 명령은 Windows 8을 실행 하는 컴퓨터에서 지원 되지 않습니다 또는 **win8_server_2**합니다. 이러한 컴퓨터에서 TPM을 관리 하려면 Windows PowerShell에 대 한 TPM 관리 MMC 스냅인 또는 TPM 관리 cmdlet을 사용 합니다.|
-|[관리 bde: setidentifier](manage-bde-setidentifier.md)|드라이브 식별자 필드에 지정 된 값을 드라이브에 설정 된 **조직에 대 한 고유 식별자를 제공** 그룹 정책 설정.|
-|[관리 bde: ForceRecovery](manage-bde-forcerecovery.md)|BitLocker로 보호 된 드라이브를 복구 모드로 다시 시작 되도록합니다. 이 명령은 드라이브에서 모든 TPM 관련 키 보호기를 삭제합니다. 컴퓨터 다시 시작 되 면 복구 암호 또는 복구 키만 데 사용할 수 드라이브의 잠금을 해제 합니다.|
-|[관리 bde: 암호 변경](manage-bde-changepassword.md)|데이터 드라이브에 대 한 암호를 수정합니다.|
-|[관리 bde: changepin](manage-bde-changepin.md)|운영 체제 드라이브에 대 한 PIN을 수정합니다.|
-|[관리 bde: 변환](manage-bde-changekey.md)|운영 체제 드라이브에 대 한 시작 키를 수정합니다.|
-|[관리 bde: KeyPackage](manage-bde-keypackage.md)|드라이브에 대 한 키 패키지를 생성합니다.|
-|[관리 bde: 업그레이드](manage-bde-upgrade.md)|BitLocker 버전을 업그레이드합니다.|
-|[관리 bde: WipeFreeSpace](manage-bde-wipefreespace.md)|드라이브의 가용 공간을 초기화 합니다.|
+|[Manage-bde: status](manage-bde-status.md)|BitLocker로 보호 되는 여부는 컴퓨터에 모든 드라이브에 대 한 정보를 제공 합니다.|
+|[Manage-bde: on](manage-bde-on.md)|드라이브를 암호화 하 고 BitLocker를 설정 합니다.|
+|[Manage-bde: off](manage-bde-off.md)|드라이브를 해독 하 고 BitLocker를 해제 합니다. 암호 해독 완료 되 면 모든 키 보호기 제거 됩니다.|
+|[Manage-bde: pause](manage-bde-pause.md)|일시 중지 암호화 또는 암호 해독 합니다.|
+|[Manage-bde: resume](manage-bde-resume.md)|암호화 또는 암호 해독을 다시 시작합니다.|
+|[Manage-bde: lock](manage-bde-lock.md)|BitLocker로 보호 된 데이터에 대 한 액세스를 차단합니다.|
+|[Manage-bde: unlock](manage-bde-unlock.md)|복구 암호 또는 복구 키를 사용 하 여 BitLocker로 보호 된 데이터에 액세스할 수 있습니다.|
+|[Manage-bde: autounlock](manage-bde-autounlock.md)|데이터 드라이브 자동 잠금 해제를 관리 합니다.|
+|[Manage-bde: protectors](manage-bde-protectors.md)|암호화 키에 대 한 보호 방법을 관리합니다.|
+|[Manage-bde: tpm](manage-bde-tpm.md)|컴퓨터의 신뢰할 수 있는 플랫폼 모듈 (TPM)를 구성합니다. 이 명령은 Windows 8을 실행 하는 컴퓨터에서 지원 되지 않습니다 또는 **win8_server_2**합니다. 이러한 컴퓨터에서 TPM을 관리 하려면 Windows PowerShell에 대 한 TPM 관리 MMC 스냅인 또는 TPM 관리 cmdlet을 사용 합니다.|
+|[Manage-bde: setidentifier](manage-bde-setidentifier.md)|드라이브 식별자 필드에 지정 된 값을 드라이브에 설정 된 **조직에 대 한 고유 식별자를 제공** 그룹 정책 설정.|
+|[Manage-bde: ForceRecovery](manage-bde-forcerecovery.md)|BitLocker로 보호 된 드라이브를 복구 모드로 다시 시작 되도록합니다. 이 명령은 드라이브에서 모든 TPM 관련 키 보호기를 삭제합니다. 컴퓨터 다시 시작 되 면 복구 암호 또는 복구 키만 데 사용할 수 드라이브의 잠금을 해제 합니다.|
+|[Manage-bde: changepassword](manage-bde-changepassword.md)|데이터 드라이브에 대 한 암호를 수정합니다.|
+|[Manage-bde: changepin](manage-bde-changepin.md)|운영 체제 드라이브에 대 한 PIN을 수정합니다.|
+|[Manage-bde: changekey](manage-bde-changekey.md)|운영 체제 드라이브에 대 한 시작 키를 수정합니다.|
+|[Manage-bde: KeyPackage](manage-bde-keypackage.md)|드라이브에 대 한 키 패키지를 생성합니다.|
+|[Manage-bde: upgrade](manage-bde-upgrade.md)|BitLocker 버전을 업그레이드합니다.|
+|[Manage-bde: WipeFreeSpace](manage-bde-wipefreespace.md)|드라이브의 가용 공간을 초기화 합니다.|
 |-? 또는 /?|도움말에 대 한 간단한 명령 프롬프트에 표시 됩니다.|
 |-help 또는-h|명령 프롬프트에서 전체 도움말을 표시 합니다.|
 
-## <a name="BKMK_Examples"></a>예제
+## <a name="BKMK_Examples"></a>예와
 
 다음 예제에서는 컴퓨터의 드라이브를 표시 하 고 식별 BitLocker로 보호 되는 여부 및 현재 암호화 상태입니다.
 ```
@@ -76,4 +76,4 @@ manage-bde –unlock E: -recoverypassword 111111-222222-333333-444444-555555-666
 #### <a name="additional-references"></a>추가 참조
 
 -   [명령줄 구문 키](command-line-syntax-key.md)
--   [명령줄을 사용 하 여 BitLocker를 사용 하도록 설정](https://technet.microsoft.com/library/dd894351(v=ws.10).aspx)
+-   [명령줄을 사용 하 여 BitLocker 사용](https://technet.microsoft.com/library/dd894351(v=ws.10).aspx)

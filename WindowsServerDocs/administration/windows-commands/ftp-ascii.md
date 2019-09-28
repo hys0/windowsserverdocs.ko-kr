@@ -1,8 +1,8 @@
 ---
-title: ascii ftp
-description: 'Windows 명령 항목에 대 한 ftp ascii '
+title: ftp ascii
+description: 'Ftp ascii에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8e38c57b7a5ffd9afe677c4b49787383412621fe
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: d5ae0064f9c1679bb8b386271f042d589b158c73
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66438804"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71376623"
 ---
 # <a name="ftp-ascii"></a>ftp: ascii
 
@@ -30,16 +30,16 @@ ASCII 파일 전송 유형을 설정합니다.
 ascii  
 ```  
 ### <a name="parameters"></a>매개 변수  
-none  
+없음  
 ## <a name="remarks"></a>설명  
 - 기본 파일 전송 유형이 ASCII입니다.  
 - ASCII 모드에서는 네트워크 표준 문자 집합 사이에 문자 변환이 수행 됩니다. 예를 들어, 줄의 끝 문자는 대상 운영 체제에 따라 필요에 따라 변환 됩니다.  
-- **ftp** ASCII 및 이진 이미지 파일 전송 형식을 모두 지원 합니다. ASCII 텍스트 파일을 전송할 때 사용 합니다. 이진 파일 전송에 대 한 자세한 내용은 참조 하세요. **ftp: 이진** 추가 참조 합니다.  
-  ## <a name="BKMK_Examples"></a>예제  
+- **ftp** 는 ASCII 및 이진 이미지 파일 전송 형식을 모두 지원 합니다. ASCII 텍스트 파일을 전송할 때 사용 합니다. 이진 파일 전송에 대 한 자세한 내용은 추가 참조에서 **ftp: binary** 를 참조 하세요.  
+  ## <a name="BKMK_Examples"></a>예와  
   ASCII 파일 전송 유형을 설정 합니다.  
   ```  
   ascii  
   ```  
   ## <a name="additional-references"></a>추가 참조  
-- [ftp: binary](ftp-binary.md)  
+- [ftp: 이진](ftp-binary.md)  
 - [명령줄 구문 키](command-line-syntax-key.md)  

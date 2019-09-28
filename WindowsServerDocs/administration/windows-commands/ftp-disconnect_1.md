@@ -1,8 +1,8 @@
 ---
 title: ftp disconnect_1
-description: Ftp disconnect_1에 대 한 Windows 명령을 항목
+description: Ftp disconnect_1 Windows 명령 항목
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,26 +13,26 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 49aeb97ab679c22cbd6faa94380eb2c7a7ee8abe
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6c9aa880063784fa0ac4fb6251e3e2cc5ed16f8e
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59853944"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71376422"
 ---
-# <a name="ftp-disconnect1"></a>ftp: disconnect_1
+# <a name="ftp-disconnect_1"></a>ftp: disconnect_1
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-원격 컴퓨터에서 연결을 해제 하 고 유지 합니다 **ftp >** 프롬프트.   
+원격 컴퓨터에서 연결을 끊고 **ftp >** 프롬프트를 유지 합니다.   
 ## <a name="syntax"></a>구문  
 ```  
 disconnect  
 ```  
 ### <a name="parameters"></a>매개 변수  
-none  
-## <a name="BKMK_Examples"></a>예제  
-원격 컴퓨터에서 분리 하 고 유지 합니다 **ftp >** 프롬프트.  
+없음  
+## <a name="BKMK_Examples"></a>예와  
+원격 컴퓨터에서 연결을 끊고 **ftp >** 프롬프트를 유지 합니다.  
 ```  
 disconnect  
 ```  

@@ -1,8 +1,8 @@
 ---
 title: bitsadmin getpeercachingflags
-description: Windows 명령 항목에 대 한 **bitsadmin getpeercachingflags** -작업의 파일을 캐시 동료에 게 제공 하 고 하 고 BITS 피어에서 작업에 대 한 콘텐츠를 다운로드 하는 경우를 결정 하는 플래그를 검색 합니다.
+description: '**Bitsadmin getpeercachingflags** 에 대 한 Windows 명령 항목-작업의 파일을 캐시 하 고 동료에 게 제공할 수 있는지 여부와 BITS에서 작업에 대 한 콘텐츠를 다운로드할 수 있는지 여부를 결정 하는 플래그를 검색 합니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 28f248bab3e3cc3f5c7dd4f5f878f0b6d776029b
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 6b86214b5289a59e8db2ecff065ab3b8cd17007e
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66434919"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381441"
 ---
 # <a name="bitsadmin-getpeercachingflags"></a>bitsadmin getpeercachingflags
 
@@ -38,7 +38,7 @@ bitsadmin /GetPeerCachingFlags <Job>
 |-------|--------|
 |작업|작업의 표시 이름 또는 GUID|
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 다음 예제에서는 검색 이라는 작업에 대 한 플래그 *myJob*합니다.
 
 ```

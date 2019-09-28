@@ -1,9 +1,9 @@
 ---
 title: 1 단계 원격 액세스 인프라 구성
-description: 이 항목은 가이드 Windows Server 2016에서 원격으로 관리 DirectAccess 클라이언트의 일부입니다.
+description: 이 항목은 Windows Server 2016에서 원격으로 DirectAccess 클라이언트 관리 가이드의 일부입니다.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-ras
@@ -12,20 +12,20 @@ ms.topic: article
 ms.assetid: 0e7d1f5b-c939-47ca-892f-5bb285027fbc
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 712ef2fb5ada3f1890d0cdeac33bed1c0fb82e41
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 110696d9f1ff082cfae315632c78fddc14359d52
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67282849"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71367318"
 ---
 # <a name="step-1-configure-the-remote-access-infrastructure"></a>1 단계 원격 액세스 인프라 구성
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 **참고:** Windows Server 2012에는 DirectAccess와 RRAS(Routing and Remote Access Service)가 단일 원격 액세스 역할로 통합되어 있습니다.  
   
-이 항목에서는 IPv4 및 IPv6 혼합된 환경에서 단일 원격 액세스 서버를 사용 하는 고급 원격 액세스 배포에 필요한 인프라를 구성 하는 방법을 설명 합니다. 배포 단계를 시작 하기 전에 설명 된 계획 단계를 완료 한 확인 [1 단계: 원격 액세스 인프라 계획](../plan/Step-1-Plan-the-Remote-Access-Infrastructure.md)합니다.  
+이 항목에서는 IPv4 및 IPv6 혼합된 환경에서 단일 원격 액세스 서버를 사용 하는 고급 원격 액세스 배포에 필요한 인프라를 구성 하는 방법을 설명 합니다. 배포 단계를 시작 하기 전에 [Step 1에 설명 된 계획 단계를 완료 했는지 확인 합니다. 원격 액세스 인프라 @ no__t-0을 계획 합니다.  
   
 |태스크|설명|  
 |----|--------|  
@@ -78,7 +78,7 @@ ms.locfileid: "67282849"
   
     이 명령에서 사용 하 여 IPsec 정책의 이름은 **DirectAccess DaServerToInfra** 및 **DirectAccess DaServerToCorp**합니다.  
   
-## <a name="BKMK_ConfigRouting"></a>회사 네트워크의 라우팅을 구성 합니다.  
+## <a name="BKMK_ConfigRouting"></a>회사 네트워크에서 라우팅 구성  
 다음과 같이 회사 네트워크의 라우팅을 구성합니다.  
   
 -   조직에 기본 IPv6이 배포된 경우 내부 네트워크의 라우터가 원격 액세스 서버를 통해 IPv6 트래픽을 다시 라우팅할 수 있도록 경로를 추가합니다.  
@@ -118,7 +118,7 @@ ms.locfileid: "67282849"
 ### <a name="remote-access-traffic"></a>원격 액세스 트래픽  
 원격 액세스 트래픽에 대해 다음 내부 네트워크 방화벽 예외를 적용 합니다.  
   
--   ISATAP: 프로토콜 41 인바운드 및 아웃 바운드  
+-   ISATAP 프로토콜 41 인바운드 및 아웃 바운드  
   
 -   TCP/UDP-모든 IPv4 또는 IPv6 트래픽  
   
@@ -167,11 +167,11 @@ IPsec 인증을 사용할 수 있도록 원격 액세스 서버와 모든 Direct
   
     타사에서 제공합니다.  
   
--   **개인**  
+-   **문자**  
   
     인증서에서 만든 인증서 템플릿을 기반 [인증서 템플릿 구성](assetId:///6a5ec5c1-d653-47b1-a567-cc485004e7bc#ConfigCertTemp)합니다. 필요한 공개적으로 확인 가능한 FQDN에서 연결할 수 있는 인증서 해지 목록 (CRL) 배포 지점입니다.  
   
--   **자체 서명**  
+-   **자체 서명 됨**  
   
     이 인증서는 공개적으로 확인 가능한 FQDN에서 연결할 수 있는 CRL 배포 지점에 필요 합니다.  
   
@@ -198,7 +198,7 @@ IP-HTTPS 인증에 사용되는 웹 사이트 인증서는 다음 요구 사항�
   
 ##### <a name="to-install-the-ip-https-certificate-from-an-internal-ca"></a>내부 CA의 IP-HTTPS 인증서를 설치하려면  
   
-1.  원격 액세스 서버에서 다음을 수행합니다. 에 **시작** 화면에서 입력**mmc.exe**, 한 다음 ENTER를 누릅니다.  
+1.  원격 액세스 서버에서 다음을 수행합니다. **시작** 화면에서**mmc.exe**를 입력 한 다음 enter 키를 누릅니다.  
   
 2.  MMC 콘솔에서에 **파일** 메뉴 클릭 **스냅인 추가/제거**합니다.  
   
@@ -226,10 +226,10 @@ IP-HTTPS 인증에 사용되는 웹 사이트 인증서는 다음 요구 사항�
   
 14. 인증서 스냅인의 세부 정보 창에서 새 인증서가 서버 인증의 원래 용도 등록 있는지를 확인 합니다.  
   
-## <a name="BKMK_ConfigDNS"></a>DNS 서버를 구성 합니다.  
+## <a name="BKMK_ConfigDNS"></a>DNS 서버 구성  
 배포의 내부 네트워크에 대한 네트워크 위치 서버 웹 사이트의 DNS 항목을 수동으로 구성해야 합니다.  
   
-### <a name="NLS_DNS"></a>네트워크 위치 서버와 웹 프로브를 추가 하려면  
+### <a name="NLS_DNS"></a>네트워크 위치 서버 및 웹 검색을 추가 하려면  
   
 1.  내부 네트워크 DNS 서버에서 다음을 수행합니다. 에 **시작** 화면에서 입력**dnsmgmt.msc**, 한 다음 ENTER를 누릅니다.  
   
@@ -243,7 +243,7 @@ IP-HTTPS 인증에 사용되는 웹 사이트 인증서는 다음 요구 사항�
   
 6.  **완료**를 클릭합니다.  
   
-![Windows PowerShell](../../../../media/Step-1-Configure-the-Remote-Access-Infrastructure/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![Windows PowerShell](../../../../media/Step-1-Configure-the-Remote-Access-Infrastructure/PowerShellLogoSmall.gif)***<em>windows powershell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -315,7 +315,7 @@ Add-DnsServerResourceRecordAAAA -Name <network_location_server_name> -ZoneName <
   
 10. 클릭 **지금 다시 시작** 메시지가 표시 되 면 합니다.  
   
-![Windows PowerShell](../../../../media/Step-1-Configure-the-Remote-Access-Infrastructure/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![Windows PowerShell](../../../../media/Step-1-Configure-the-Remote-Access-Infrastructure/PowerShellLogoSmall.gif)***<em>windows powershell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -370,7 +370,7 @@ Restart-Computer
   
 7.  **사용자, 연락처, 컴퓨터 또는 서비스 계정 선택** 대화 상자에서 DirectAccess에 사용할 클라이언트 컴퓨터를 선택하고 **확인**을 클릭합니다.  
   
-![Windows PowerShell](../../../../media/Step-1-Configure-the-Remote-Access-Infrastructure/PowerShellLogoSmall.gif)**Windows PowerShell 해당 명령**  
+![Windows PowerShell](../../../../media/Step-1-Configure-the-Remote-Access-Infrastructure/PowerShellLogoSmall.gif)**windows powershell 해당 명령**  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -387,12 +387,12 @@ Add-ADGroupMember -Identity DirectAccess_clients_group_name -Members <computer_n
   
 네트워크 위치 서버 인증서에 대한 인증서 옵션에는 다음 두 가지가 있습니다.  
   
--   **개인**  
+-   **문자**  
   
     > [!NOTE]  
     > 인증서에서 만든 인증서 템플릿을 기반 [인증서 템플릿 구성](assetId:///6a5ec5c1-d653-47b1-a567-cc485004e7bc#ConfigCertTemp)합니다.  
   
--   **자체 서명**  
+-   **자체 서명 됨**  
   
     > [!NOTE]  
     > 멀티 사이트 배포에는 자체 서명된 인증서를 사용할 수 없습니다.  
@@ -405,7 +405,7 @@ Add-ADGroupMember -Identity DirectAccess_clients_group_name -Members <computer_n
   
 #### <a name="to-install-the-network-location-server-certificate-from-an-internal-ca"></a>내부 CA의 네트워크 위치 서버 인증서를 설치하려면  
   
-1.  네트워크 위치 서버 웹 사이트를 호스트할 서버에서 다음을 수행합니다. 에 **시작** 화면에서 입력**mmc.exe**, 한 다음 ENTER를 누릅니다.  
+1.  네트워크 위치 서버 웹 사이트를 호스트할 서버에서 다음을 수행합니다. **시작** 화면에서**mmc.exe**를 입력 한 다음 enter 키를 누릅니다.  
   
 2.  MMC 콘솔에서에 **파일** 메뉴 클릭 **스냅인 추가/제거**합니다.  
   
@@ -445,7 +445,7 @@ Add-ADGroupMember -Identity DirectAccess_clients_group_name -Members <computer_n
   
     CRL 배포 지점은 다음을 통해 액세스할 수 있습니다.  
   
-    -   와 같은 HTTP 기반 URL을 사용 하는 웹 서버: https://crl.corp.contoso.com/crld/corp-APP1-CA.crl  
+    -   HTTP 기반 URL을 사용 하는 웹 서버: https://crl.corp.contoso.com/crld/corp-APP1-CA.crl  
   
     -   파일 서버와 같은 범용 명명 규칙 (UNC) 경로 통해 액세스 하는 \\\crl.corp.contoso.com\crld\corp-APP1-CA.crl  
   

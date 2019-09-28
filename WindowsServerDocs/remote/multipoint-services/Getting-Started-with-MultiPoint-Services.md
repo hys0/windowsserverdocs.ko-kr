@@ -2,7 +2,7 @@
 title: MultiPoint 서비스 시작
 description: 는 MultiPoint 서비스를 소개 하 고 사용을 시작 합니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: 2ed2084038236dc8914eefe6bdafc133817b7b41
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: cf31e62345b006ef9572a2ea97a23e3e0bf41b64
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871685"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71395365"
 ---
 # <a name="getting-started-with-multipoint-services"></a>MultiPoint 서비스 시작
 MultiPoint 서비스 시스템 스테이션 허브만 한 컴퓨터를 사용 하 여 물리적으로 연결 된 여러 개의 스테이션을 사용 하 여 많은 사용자를 수 있습니다. 각 장치는 일반적으로 스테이션 허브, 마우스, 키보드 및 비디오 모니터 구성 됩니다. 각 사용자 MultiPoint 서비스 스테이션에서 다중 포인트 관리자를 사용 하 여 관리할 수 있는 고유한 Windows 컴퓨팅 세션을 경험 했습니다.  

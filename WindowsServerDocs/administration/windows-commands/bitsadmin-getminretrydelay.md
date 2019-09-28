@@ -1,8 +1,8 @@
 ---
 title: bitsadmin getminretrydelay
-description: Windows 명령 항목에 대 한 **bitsadmin getminretrydelay** -서비스에 일시적인 오류가 발생 하는 파일을 전송 하기 전에 대기 하는 초 단위로 시간 길이 검색 합니다.
+description: '**Bitsadmin getminretrydelay** 에 대 한 Windows 명령 항목-파일을 전송 하기 전에 일시적 오류가 발생 한 후 서비스가 대기 하는 시간 (초)을 검색 합니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2a6df9faab8340994ad9219a863ad8e50186ccd1
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 0a2bde6340034e48b97b4c86f48a3b2ef72560a5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59832204"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381554"
 ---
 # <a name="bitsadmin-getminretrydelay"></a>bitsadmin getminretrydelay
 
 
 
-시간 (초) 서비스는 일시적인 오류가 발생 하는 파일을 전송 하기 전에 대기 하는 기간을 검색 합니다.
+서비스에서 임시 오류가 발생 한 후 파일을 전송 하기 전에 대기 하는 시간 (초)을 검색 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -38,9 +38,9 @@ bitsadmin /GetMinRetryDelay <Job>
 |---------|-----------|
 |작업|작업의 표시 이름 또는 GUID|
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
-다음 예제에서는 검색 이라는 작업에 대 한 최소 재시도 지연 *myDownloadJob*합니다.
+다음 예에서는 이름이 *Mydownloadjob*인 작업의 최소 다시 시도 지연을 검색 합니다.
 ```
 C:\>bitsadmin /GetMinRetryDelay myDownloadJob
 ```

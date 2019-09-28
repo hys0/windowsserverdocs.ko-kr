@@ -2,7 +2,7 @@
 title: Kerberos Constrained Delegation Overview
 description: Windows Server 보안
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: security-kerberos
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: 02677c8d9db4129ebbd7edd79027e0a6348372b5
-ms.sourcegitcommit: 6f968368c12b9dd699c197afb3a3d13c2211f85b
+ms.openlocfilehash: e6e62effcb875c0e3a1cdd6c886f3d74923e1b94
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68544619"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71403415"
 ---
 # <a name="kerberos-constrained-delegation-overview"></a>Kerberos Constrained Delegation Overview
 
@@ -36,7 +36,7 @@ Windows Server 2012 R2 및 Windows Server 2012에서 서비스에 대 한 제한
 
 Windows Server 2003에서 도입된 제한 위임에 대한 자세한 내용은 [Kerberos 프로토콜 전환 및 제한 위임](https://technet.microsoft.com/library/cc739587(v=ws.10))(영문)을 참조하세요.
 
-Kerberos 프로토콜의 Windows Server 2012 R2 및 Windows Server 2012 구현에는 제한 된 위임 전용 확장이 포함 되어 있습니다.  S4U2Proxy(Service for User to Proxy)를 통해 서비스에서 사용자에 대한 Kerberos 서비스 티켓을 사용하여 KDC(키 배포 센터)로부터 백 엔드 서비스에 대한 서비스 티켓을 얻을 수 있습니다. 이러한 확장을 통해 다른 도메인에 있을 수 있는 백 엔드 서비스 계정에 제한 된 위임을 구성할 수 있습니다. 이러한 확장 [\]에 대 한 자세한 내용은 MSSFU:\[ 섹션(영문)을 사용자 서비스 및 제한 위임 프로토콜 사양](https://msdn.microsoft.com/library/cc246071(PROT.13).aspx) (MSDN Library)
+Kerberos 프로토콜의 Windows Server 2012 R2 및 Windows Server 2012 구현에는 제한 된 위임 전용 확장이 포함 되어 있습니다.  S4U2Proxy(Service for User to Proxy)를 통해 서비스에서 사용자에 대한 Kerberos 서비스 티켓을 사용하여 KDC(키 배포 센터)로부터 백 엔드 서비스에 대한 서비스 티켓을 얻을 수 있습니다. 이러한 확장을 통해 다른 도메인에 있을 수 있는 백 엔드 서비스 계정에 제한 된 위임을 구성할 수 있습니다. 이러한 확장에 대 한 자세한 내용은 [ @ no__t-1MS @ no__t-2를 참조 하세요. 섹션(영문)을 사용자 서비스 및 제한 위임 프로토콜 사양 @ no__t-0 (MSDN Library)
 
 **실용적인 응용 프로그램**
 
@@ -58,7 +58,7 @@ Windows Server 2012 R2 및 Windows Server 2012에서 도메인 간 제한 위임
 
 기본 프로토콜의 변경을 통해 도메인 간 제한 위임을 사용할 수 있습니다. Kerberos 프로토콜의 Windows Server 2012 R2 및 Windows Server 2012 구현에는 S4U2Proxy (Service for User to Proxy) 프로토콜에 대 한 확장이 포함 되어 있습니다. 이 확장은 서비스에서 사용자에 대한 Kerberos 서비스 티켓을 사용하여 KDC(키 배포 센터)로부터 백 엔드 서비스에 대한 서비스 티켓을 얻을 수 있도록 해주는 Kerberos 프로토콜에 대한 확장 집합입니다.
 
-이러한 확장 [\]에 대 한 구현 정보는 MSSFU:\[ 섹션(영문)을 사용자 서비스 및 제한 위임 프로토콜 사양](https://msdn.microsoft.com/library/cc246071(PROT.10).aspx) (MSDN)
+이러한 확장에 대 한 구현 정보는 [ @ no__t-1MS-SFU @ no__t-2를 참조 하세요. 섹션(영문)을 사용자 서비스 및 제한 위임 프로토콜 사양 @ no__t-0 (MSDN)
 
 S4U(Service for User) 확장과 비교하여 전달된 TGT(Ticket-Granting Ticket)를 포함한 Kerberos 위임의 기본 메시지 순서에 대한 자세한 내용은 [MS-SFU]: Kerberos 프로토콜 확장: 사용자 서비스 및 제한 위임 프로토콜 사양의 [1.3.3 프로토콜 개요](https://msdn.microsoft.com/library/cc246080(v=prot.10).aspx) 섹션(영문)을 참조하세요.
 
@@ -79,9 +79,9 @@ KDC는 프로토콜 전환을 제한 하지 않으므로, 리소스 관리자에
 
 사용자를 대신하여 프런트 엔드 서비스 액세스를 허용하도록 리소스 서비스를 구성하려면 Windows PowerShell cmdlet을 사용합니다.
 
--   보안 주체 목록을 검색 하려면 **PrincipalsAllowedToDelegateToAccount** 매개 변수를 사용 하 여 **uninstall-adserviceaccount**및 get adcomputer cmdlet을  사용 합니다.
+-   보안 주체 목록을 검색 하려면 **PrincipalsAllowedToDelegateToAccount** 매개 변수를 사용 하 여 **uninstall-adserviceaccount** **및 get** **adcomputer** cmdlet을 사용 합니다.
 
--   리소스 서비스를 구성 하려면 다음을 사용 하 여 **새-ADComputer**, **uninstall-adserviceaccount**, **새-adcomputer**,  **uninstall-adserviceaccount**및 set-adcomputer cmdlet  **을 사용 합니다. PrincipalsAllowedToDelegateToAccount** 매개 변수입니다.
+-   리소스 서비스를 구성 하려면 다음을 사용 하 여 **새-ADComputer**, **uninstall-adserviceaccount**, **새-adcomputer**, **uninstall-adserviceaccount**및 **set-** **adcomputer** cmdlet **을 사용 합니다. PrincipalsAllowedToDelegateToAccount** 매개 변수입니다.
 
 ## <a name="BKMK_SOFT"></a>소프트웨어 요구 사항
 리소스 기반 제한 위임은 Windows Server 2012 R2 및 Windows Server 2012를 실행 하는 도메인 컨트롤러 에서만 구성할 수 있지만 혼합 모드 포리스트 내에서 적용할 수 있습니다.

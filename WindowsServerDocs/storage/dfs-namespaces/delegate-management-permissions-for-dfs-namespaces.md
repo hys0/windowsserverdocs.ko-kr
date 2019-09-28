@@ -2,18 +2,18 @@
 title: DFS 네임스페이스에 대한 관리 권한 위임
 description: 이 문서에서는 DFS 네임스페이스에 대한 관리 권한을 위임하는 방법과 기본적으로 어느 그룹이 네임스페이스 작업을 실행할 수 있는지 설명합니다.
 ms.date: 6/5/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 7895432ca16dd13c6425d966f99104fc03db100d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 5bf23498c95d4b44d5c17aecd216921dc70819a3
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59829494"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402212"
 ---
 # <a name="delegate-management-permissions-for-dfs-namespaces"></a>DFS 네임스페이스에 대한 관리 권한 위임
 
@@ -32,4 +32,4 @@ ms.locfileid: "59829494"
 
 <br />
 
-\*독립형 네임 스페이스를 관리 하기 위한 관리 권한을 위임 권한을 부여 하지 않습니다 사용자 보고를 사용 하 여 보안을 관리 하는 기능을 **위임** 사용자가 로컬 Administrators 그룹의 멤버에 있지 않으면 탭을 네임 스페이스 서버입니다. 이는 DFS 관리 스냅인이 레지스트리에서 독립형 네임스페이스에 대한 DACL(임의 액세스 제어 목록)을 검색할 수 없기 때문입니다. 위임 정보를 표시 하려면 스냅인을 사용 하려면 Microsoft에서 단계를 수행 해야<sup>®</sup> 기술 자료 문서: [KB314837: 레지스트리에 대 한 원격 액세스를 관리 하는 방법](https://go.microsoft.com/fwlink?linkid=46803)
+\* 독립 실행형 네임 스페이스를 관리 하는 관리 권한을 위임 하는 경우 사용자가 네임 스페이스 서버에서 로컬 관리자 그룹의 멤버가 아닌 경우 **위임** 탭을 사용 하 여 보안을 확인 하 고 관리할 수 있는 기능을 사용자에 게 부여 하지 않습니다. 이는 DFS 관리 스냅인이 레지스트리에서 독립형 네임스페이스에 대한 DACL(임의 액세스 제어 목록)을 검색할 수 없기 때문입니다. 스냅인에서 위임 정보를 표시 하도록 설정 하려면 Microsoft<sup>®</sup> 기술 자료 문서의 단계를 수행 해야 합니다. [KB314837: 레지스트리에 대 한 원격 액세스를 관리 하는 방법 @ no__t-0

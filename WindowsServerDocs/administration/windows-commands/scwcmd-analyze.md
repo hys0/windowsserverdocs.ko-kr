@@ -1,8 +1,8 @@
 ---
 title: Scwcmd 분석
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: cce3428b281ede582ed781afbdee9dea495b52ae
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 14426ae33144ae9bdd8f8154b4be74a3f088606b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59873914"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71371256"
 ---
 # <a name="scwcmd-analyze"></a>Scwcmd: 분석
 
@@ -37,14 +37,14 @@ scwcmd analyze [[[/m:<ComputerName> | /ou:<Ou>] /p:<Policy>] | /i:<ComputerList>
 
 |매개 변수|설명|
 |---------|-----------|
-|/m:\<ComputerName>|NetBIOS 이름, DNS 이름 또는 분석할 컴퓨터의 IP 주소를 지정 합니다. 하는 경우는 **/m** 매개 변수를 지정 하면 **/p** 매개 변수도 지정 해야 합니다.|
-|/ou:\<OuName >|Active Directory 도메인 서비스에 조직 구성 단위 (OU)의 정규화 된 도메인 이름 (FQDN)을 지정합니다. 하는 경우는 **/ou** 매개 변수를 지정 하면 **/p** 매개 변수도 지정 해야 합니다. OU의 모든 컴퓨터는 해당된 정책에 대해 분석 됩니다.|
-|/p:\<정책 >|분석을 수행 하는 데 사용할.xml 정책 파일의 경로 파일 이름을 지정 합니다.|
-|/i:\<ComputerList>|예상 되는 정책 파일과 함께 컴퓨터의 목록이 포함 된.xml 파일의 경로 파일 이름을 지정 합니다. .Xml 파일에 있는 모든 컴퓨터는 해당 정책 파일에 대해 분석 됩니다. 샘플.xml 파일은 %windir%\security\SampleMachineList.xml.|
-|/o:\<ResultDir>|경로 분석 결과 파일을 저장할 디렉터리를 지정 합니다. 기본값은 현재 디렉터리입니다.|
-|/u:\<UserName>|원격 컴퓨터에서 분석을 수행할 때 사용 하는 대체 사용자 자격 증명을 지정 합니다. 기본값은 로그온 된 사용자입니다.|
-|/pw:\<암호 >|원격 컴퓨터에서 분석을 수행할 때 사용 하는 대체 사용자 자격 증명을 지정 합니다. 기본값은 로그온된 한 사용자의 암호입니다.|
-|/t:\<Threads>|분석 하는 동안 유지 해야 하는 동시 처리 중인 분석 작업의 수를 지정 합니다 (DefaultValue 40, MinValue = = 1, MaxValue = 1000)입니다.|
+|/m: \<ComputerName >|NetBIOS 이름, DNS 이름 또는 분석할 컴퓨터의 IP 주소를 지정 합니다. 하는 경우는 **/m** 매개 변수를 지정 하면 **/p** 매개 변수도 지정 해야 합니다.|
+|/ou: \<OuName >|Active Directory 도메인 서비스에 조직 구성 단위 (OU)의 정규화 된 도메인 이름 (FQDN)을 지정합니다. 하는 경우는 **/ou** 매개 변수를 지정 하면 **/p** 매개 변수도 지정 해야 합니다. OU의 모든 컴퓨터는 해당된 정책에 대해 분석 됩니다.|
+|/p: \<Policy >|분석을 수행 하는 데 사용할.xml 정책 파일의 경로 파일 이름을 지정 합니다.|
+|/i: \<ComputerList >|예상 되는 정책 파일과 함께 컴퓨터의 목록이 포함 된.xml 파일의 경로 파일 이름을 지정 합니다. .Xml 파일에 있는 모든 컴퓨터는 해당 정책 파일에 대해 분석 됩니다. 샘플.xml 파일은 %windir%\security\SampleMachineList.xml.|
+|/o: \<ResultDir >|경로 분석 결과 파일을 저장할 디렉터리를 지정 합니다. 기본값은 현재 디렉터리입니다.|
+|/u: \< 사용자 이름 >|원격 컴퓨터에서 분석을 수행할 때 사용 하는 대체 사용자 자격 증명을 지정 합니다. 기본값은 로그온 된 사용자입니다.|
+|/pw: \<Password >|원격 컴퓨터에서 분석을 수행할 때 사용 하는 대체 사용자 자격 증명을 지정 합니다. 기본값은 로그온된 한 사용자의 암호입니다.|
+|/t: \<Threads >|분석 하는 동안 유지 해야 하는 동시 처리 중인 분석 작업의 수를 지정 합니다 (DefaultValue 40, MinValue = = 1, MaxValue = 1000)입니다.|
 |/l|분석 프로세스를 기록 하면 합니다. 분석 되 고 각 컴퓨터에 대해 하나의 로그 파일이 생성 됩니다. 로그 파일은 결과 파일과 동일한 디렉터리에 저장 됩니다. 사용 하 여 **/o** 결과 파일의 디렉터리를 지정 하는 옵션입니다.|
 |/e|불일치가 발견 되는 경우 응용 프로그램 이벤트 로그에 이벤트를 기록 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
@@ -53,7 +53,7 @@ scwcmd analyze [[[/m:<ComputerName> | /ou:<Ou>] /p:<Policy>] | /i:<ComputerList>
 
 Scwcmd.exe은 Windows Server 2008 R2, Windows Server 2008 또는 Windows Server 2003을 실행 하는 컴퓨터에서 사용할 수만 있습니다.
 
-## <a name="BKMK_Examples"></a>예제
+## <a name="BKMK_Examples"></a>예와
 
 파일 webpolicy.xml에 대 한 보안 정책을 분석 하려면 다음을 입력 합니다.
 ```

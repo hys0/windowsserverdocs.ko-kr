@@ -1,8 +1,8 @@
 ---
-title: ksetup:setenctypeattr
-description: '에 대 한 Windows 명령을 항목 * * *- '
+title: 'ksetup: setenctypeattr'
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a91539ec7a9e0ce4c75d5165da1b88ae36d3fe6c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: bcc268ecb591e3008d7274f6c9f6d6017c86f99d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59879204"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71374927"
 ---
-# <a name="ksetupsetenctypeattr"></a>ksetup:setenctypeattr
+# <a name="ksetupsetenctypeattr"></a>ksetup: setenctypeattr
 
 
 
@@ -36,22 +36,22 @@ ksetup /setenctypeattr <Domain name> {DES-CBC-CRC | DES-CBC-MD5 | RC4-HMAC-MD5 |
 
 |매개 변수|설명|
 |---------|-----------|
-|\<DomainName>|연결을 설정 하려는 도메인 이름입니다. 정규화 된 도메인 이름 또는 간단한 형태의 corp.contoso.com 또는 contoso와 같은 이름 사용 합니다.|
-|암호화 유형|다음 지원 되는 암호화 유형 중 하나 여야 합니다.</br>-   DES-CBC-CRC</br>-   DES-CBC-MD5</br>-   RC4-HMAC-MD5</br>-   AES128-CTS-HMAC-SHA1-96</br>-   AES256-CTS-HMAC-SHA1-96|
+|\<DomainName >|연결을 설정 하려는 도메인 이름입니다. 정규화 된 도메인 이름 또는 corp.contoso.com 또는 contoso와 같은 간단한 형식의 이름을 사용 합니다.|
+|암호화 유형|다음 지원 되는 암호화 유형 중 하나 여야 합니다.</br>-DES-CBC-CRC</br>-DES-CBC-MD5</br>-RC4-HMAC-MD5</br>-AES128--HMAC-SHA1-96</br>-AES256--HMAC-SHA1-96|
 
 ## <a name="remarks"></a>설명
 
-Kerberos 티켓 부여 티켓 (TGT) 및 세션 키의 암호화 유형을 보려면를 실행 합니다 **klist** 명령 및 출력을 확인 합니다.
+Kerberos TGT (티켓 허용 티켓) 및 세션 키의 암호화 유형을 보려면 **klist** 명령을 실행 하 고 출력을 확인 합니다.
 
-설정 하거나 공백을 사용 하 여 명령에서 암호화 유형을 구분 하 여 여러 암호화 종류를 추가할 수 있습니다. 그러나만 하면 한 도메인에 대 한 번입니다.
+명령의 암호화 유형을 공백으로 구분 하 여 여러 암호화 유형을 설정 하거나 추가할 수 있습니다. 그러나 한 번에 하나의 도메인에 대해서만이 작업을 수행할 수 있습니다.
 
-명령이 성공 또는 실패 하는 경우 상태 메시지가 표시 됩니다.
+명령이 성공 하거나 실패 하면 상태 메시지가 표시 됩니다.
 
-연결 하 고 사용 하려는 도메인을 설정 하려면 다음을 실행 합니다 **ksetup /domain \<DomainName >** 명령입니다.
+연결 하 고 사용 하려는 도메인을 설정 하려면 **ksetup/domain \<DomainName >** 명령을 실행 합니다.
 
-## <a name="BKMK_Examples"></a>예제
+## <a name="BKMK_Examples"></a>예와
 
-이 컴퓨터에 설정 된 현재 암호화 종류를 결정 합니다.
+이 컴퓨터에 설정 된 현재 암호화 종류를 확인 합니다.
 ```
 klist
 ```
@@ -63,7 +63,7 @@ Corp.contoso.com 도메인 내에 대 한 AES-256-CTS-HMAC-SHA1-96을 암호화 
 ```
 ksetup /setenctypeattr corp.contoso.com AES-256-CTS-HMAC-SHA1-96
 ```
-암호화 유형 특성을 도메인에 대 한 의도 한 대로 설정 된 있는지 확인 합니다.
+암호화 유형 특성이 도메인에 대해 의도 한 대로 설정 되었는지 확인 합니다.
 ```
 ksetup /getenctypeattr corp.contoso.com
 ```

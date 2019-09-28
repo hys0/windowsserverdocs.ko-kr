@@ -6,20 +6,20 @@ author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 7d046c720c5c6250b6efa03e068aa66e2a6bbe3d
-ms.sourcegitcommit: 9a4ab3a0d00b06ff16173aed616624c857589459
+ms.openlocfilehash: de4627f2e03e6432f4e678cd9ca932819cb483d5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66828527"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71408432"
 ---
 # <a name="configure-name-resolution-for-a-federation-server-proxy-in-a-dns-zone-that-serves-only-the-perimeter-network"></a>경계 네트워크에서만 작동하는 DNS 영역에 페더레이션 서버 프록시에 대한 이름 확인 구성
 
 
-페더레이션 서버는 Active Directory Federation Services에 대 한 이름 확인이 성공적으로 작업할 수 있도록 \(AD FS\) 시나리오는 하나 이상의 도메인 이름 시스템 \(DNS\) 영역 경계 에서만 제공 네트워크, 다음 작업을 완료 해야 합니다.  
+Active Directory Federation Services에서 페더레이션 서버에 대 한 이름 확인이 성공적으로 작동할 수 있도록 \(AD FS @ no__t 시나리오에서 하나 이상의 도메인 이름 시스템 \(DNS @ no__t-3 영역이 경계 네트워크만 제공 하는 시나리오는 다음과 같습니다. 작업을 완료 해야 합니다.  
   
 -   페더레이션 서버의 IP 주소를 추가 하려면 호스트 파일에 페더레이션 서버 프록시를 업데이트 해야 합니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66828527"
 호스트를 먼저 만들어야 인터넷의 클라이언트를 성공적으로 새로 배포 된 페더레이션 서버 프록시를 통해 페더레이션 서버에 액세스할 수, 있도록 \(A\) 경계 DNS에에서 리소스 레코드입니다. 이 리소스 레코드의 계정 페더레이션 서버 호스트 이름을 확인 \(예를 들어 fs.fabrikam.com\) 계정 페더레이션 서버 프록시의 IP 주소를 \(예를 들어 131.107.27.68\) 경계 네트워크에 있습니다.  
   
 > [!NOTE]  
-> 사용 하는 DNS 서버를 Windows 2000 Server, Windows Server 2003 또는 Windows Server 2008 DNS 서버 서비스와 함께 실행 경계 DNS 영역을 제어 하 간주 됩니다.  
+> Dns 서버를 사용 하는 dns 서버를 DNS 서버 서비스와 함께 2008 2003 2000 사용 하 여 경계 DNS 영역을 제어 하는 것으로 가정 합니다.  
   
 멤버 자격이 **관리자**, 또는 이와 동등한 최소한이이 절차를 완료 합니다.  적절 한 계정을 사용 하는 방법에 대 한 세부 정보를 검토 하 고 그룹 구성원 자격 [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477)합니다.   
   

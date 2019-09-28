@@ -1,7 +1,7 @@
 ---
 title: VRSS 문제 해결
 description: VM LPs에 대 한 vRSS 부하 분산 트래픽이 표시 되지 않는 경우 vRSS 문제를 해결 합니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: ''
@@ -10,12 +10,12 @@ manager: dougkim
 ms.author: pashort
 author: shortpatti
 ms.date: 09/04/2018
-ms.openlocfilehash: 412f24e25f75b390ac6315609705b463548c4345
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 850aa376e8cd0060992573561a0c32af563b88ad
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871806"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71405157"
 ---
 ## <a name="resolve-vrss-issues"></a>VRSS 문제 해결
 

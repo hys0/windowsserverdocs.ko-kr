@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: edd708985b8caac30b8788b12237430c1711f22f
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 2ae91b16448c5acd61712332310544c1fd66789f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70865450"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71385493"
 ---
 # <a name="how-uris-are-used-in-ad-fs"></a>AD FS에서 URI를 사용하는 방법
 \(Uri\) (Uniform resource identifier)는 고유 식별자로 사용 되는 문자 문자열입니다.  AD FS에서 URI는 파트너 네트워크 주소와 구성 개체를 모두 식별하는 데 사용됩니다.  파트너 네트워크 주소를 식별하는 데 사용되는 경우 URI는 항상 URL이고,  구성 개체를 식별하는 데 사용되는 경우 URI는 URN 또는 URL일 수 있습니다.  URI에 대한 자세한 내용은 [RFC 2396](https://go.microsoft.com/fwlink/?LinkId=48289) 및 [RFC 3986](https://go.microsoft.com/fwlink/?LinkId=90453)을 참조하세요.  
@@ -63,12 +63,12 @@ URI의 경로 구문은 계층적으로 구성 되며 모든 "\/" 문자 또는 
   
 |AD FS 구성 데이터베이스의 신뢰 당사자 식별자|요청 메시지의 신뢰 당사자 식별자|요청 식별자가 구성 식별자와 일치하는지 여부|Reason|  
 |------------------------------------------------------------|-----------------------------------------------|------------------------------------------------------------|----------|  
-|http:\/\/contoso.com|http:\/\/contoso.com|TRUE|정확히 일치|  
-|http:\/\/contoso.com\/|http:\/\/contoso.com|TRUE|후행 슬래시가 무시됩니다.|  
-|http:\/\/contoso.com|http:\/\/contoso.com\/|TRUE|후행 슬래시가 무시됩니다.|  
-|http:\/\/contoso.com|http:\/\/contoso.comhr\/|TRUE|URI1에 경로가 없으며 URI2의 체계 및 기관과 일치합니다.|  
-|http:\/\/contoso.comhr\/|http:\/\/contoso.comhr\/web\/|TRUE|첫 번째 경로 섹션이 일치하며, URI1 에는 두 번째 경로 섹션이 없습니다.|  
-|http:\/\/contoso.comhr\/|http:\/\/contoso.comhr\/web\/?m\=t\/|TRUE|위와 동일한 이유로 쿼리 문자열에서 아무것도 변경 되지 않습니다.|  
+|http:\/\/contoso.com|http:\/\/contoso.com|true|정확히 일치|  
+|http:\/\/contoso.com\/|http:\/\/contoso.com|true|후행 슬래시가 무시됩니다.|  
+|http:\/\/contoso.com|http:\/\/contoso.com\/|true|후행 슬래시가 무시됩니다.|  
+|http:\/\/contoso.com|http:\/\/contoso.comhr\/|true|URI1에 경로가 없으며 URI2의 체계 및 기관과 일치합니다.|  
+|http:\/\/contoso.comhr\/|http:\/\/contoso.comhr\/web\/|true|첫 번째 경로 섹션이 일치하며, URI1 에는 두 번째 경로 섹션이 없습니다.|  
+|http:\/\/contoso.comhr\/|http:\/\/contoso.comhr\/web\/?m\=t\/|true|위와 동일한 이유로 쿼리 문자열에서 아무것도 변경 되지 않습니다.|  
 |http:\/\/contoso.comhr\/\/|http:\/\/contoso.com\/hrw\/main|FALSE|URI1 경로 섹션 1이 URI2 경로 섹션 1과 일치하지 않습니다.|  
 |http:\/\/contoso.comhr\/|http:\/\/contoso.com|FALSE|URI1에 URI2보다 더 많은 경로 섹션이 있습니다.|  
 |http:\/\/contoso.comhr\/|http:\/\/contoso.com\/hrweb|FALSE|첫 번째 경로 섹션이 일치하지 않습니다.|  

@@ -1,7 +1,7 @@
 ---
 title: 설치 및 부팅 이벤트 컬렉션 시작
 description: 설치 및 부팅 이벤트 컬렉션 수집기 및 목표 설정
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: DonGill
 ms.technology: server-sbec
@@ -12,12 +12,12 @@ ms.topic: get-started-article
 ms.assetid: fc239aec-e719-47ea-92fc-d82a7247b3f8
 author: jaimeo
 ms.author: jaimeo
-ms.openlocfilehash: e94659c62db574dc8779c8246d471ab401414ddb
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: d1d24cdf481f19b37093f76cf8741702e1b4de60
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66435799"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71370514"
 ---
 # <a name="get-started-with-setup-and-boot-event-collection"></a>설치 및 부팅 이벤트 컬렉션 시작
 
@@ -95,7 +95,7 @@ ms.locfileid: "66435799"
   
 4.  수집기 컴퓨터 하 고 다음 Windows PowerShell 명령 중 하나를 실행 하 여 원격 연결을 테스트 합니다.  
   
-    대상 컴퓨터는 수집기 컴퓨터와 동일한 도메인에 있으면 실행 `New-PSSession -Computer <target> | Remove-PSSession`  
+    대상 컴퓨터가 수집기 컴퓨터와 동일한 도메인에 있는 경우 `New-PSSession -Computer <target> | Remove-PSSession`을 실행 합니다.  
   
     대상 컴퓨터는 동일한 도메인에 없는 경우 실행 `New-PSSession -Computer  <target>  -Credential Administrator | Remove-PSSession`, 자격 증명을 묻는 됩니다입니다.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "66435799"
   
     `Enable-SbecBcd -ComputerName <target_name> -CollectorIP <ip> -CollectorPort <port> -Key <a.b.c.d>`  
   
-    다음 < target_name >은 대상 컴퓨터의 이름을 \<ip > 수집기 컴퓨터의 IP 주소입니다. \<포트 >는 포트 번호는 수집기가 실행 하는 위치입니다. < A.b.c.d > 키는 통신에 필요한 암호화 키를 점으로 구분 된 4 개의 영숫자 문자열을 구성 합니다. 이 키 수집기 컴퓨터에서 사용 됩니다. 키를 입력 하지 않으면, 시스템에서 임의 키입니다. 수집기 컴퓨터에 대해이 필요 합니다 기록해 둡니다.  
+    다음 < target_name >은 대상 컴퓨터의 이름을 \<ip > 수집기 컴퓨터의 IP 주소입니다. \<port >는 수집기가 실행 되는 포트 번호입니다. < A.b.c.d > 키는 통신에 필요한 암호화 키를 점으로 구분 된 4 개의 영숫자 문자열을 구성 합니다. 이 키 수집기 컴퓨터에서 사용 됩니다. 키를 입력 하지 않으면, 시스템에서 임의 키입니다. 수집기 컴퓨터에 대해이 필요 합니다 기록해 둡니다.  
   
 6.  설정 하는 수집기 컴퓨터를 이미 있는 경우 새 대상 컴퓨터에 대 한 정보로 수집기 컴퓨터에서 구성 파일을 업데이트 합니다. 자세한 내용은 "수집기 컴퓨터 구성" 섹션을 참조 합니다.  
   
@@ -113,15 +113,15 @@ ms.locfileid: "66435799"
   
 1.  관리자 권한 명령 프롬프트를 시작 하 고이 명령을 실행 합니다.  
   
-    **bcdedit /event 예**  
+    **bcdedit/이벤트 예**  
   
-    **bcdedit /eventsettings net hostip:1.2.3.4 포트: 50000 key: a.b.c.d**  
+    **bcdedit/eventsettings net hostip: 1.2.3.4 포트: 50000 키: a. b. c. d**  
   
     여기 "1.2.3.4"은 예입니다. 수집기 컴퓨터의 IP 주소로 대체 합니다. 또한 통신에 필요한 암호화 키가 있는 "50000을" "a.b.c.d" 및 포트 번호는 수집기가 실행 될 위치와 바꿉니다. 이 키 수집기 컴퓨터에서 사용 됩니다. 키를 입력 하지 않으면, 시스템에서 임의 키입니다. 수집기 컴퓨터에 대해이 필요 합니다 기록해 둡니다.  
   
 2.  설정 하는 수집기 컴퓨터를 이미 있는 경우 새 대상 컴퓨터에 대 한 정보로 수집기 컴퓨터에서 구성 파일을 업데이트 합니다. 자세한 내용은 "수집기 컴퓨터 구성" 섹션을 참조 합니다.  
   
-**이벤트 전송 자체는 사용 하도록 설정 했으므로 실제로 해당 전송을 통해 ETW 이벤트를 전송 하려면 시스템을 활성화 해야 합니다.**  
+**이제 이벤트 전송 자체를 사용 하도록 설정 했으므로 해당 전송을 통해 ETW 이벤트를 실제로 보내도록 시스템을 설정 해야 합니다.**  
   
 ##### <a name="to-enable-sending-of-etw-events-through-the-transport-remotely"></a>ETW 이벤트 전송을 통해 보내는 원격으로 사용 하도록 설정 하려면  
   
@@ -154,7 +154,7 @@ Windows PowerShell 원격을 설정할 수 없는 경우 대상 컴퓨터에 직
   
 3.  이러한 명령 중 하나를 실행 합니다.  
   
-    관리자 권한 Windows PowerShell 프롬프트: `Enable-SbecBcd -ComputerName <target_name> -CollectorIP <ip> -CollectorPort <port> -Key <a.b.c.d> -BusParams <X.Y.Z>`  
+    관리자 권한 Windows PowerShell 프롬프트에서: `Enable-SbecBcd -ComputerName <target_name> -CollectorIP <ip> -CollectorPort <port> -Key <a.b.c.d> -BusParams <X.Y.Z>`  
   
     관리자 권한 명령 프롬프트에서: **bcdedit /eventsettings net hostip:aaa 포트: 50000 키: bbb busparams:X.Y.Z**  
   
@@ -188,7 +188,7 @@ ETW 형식을 허용 하지 않으면 대상 컴퓨터 이름을 지정할 수 �
   
 **수집기 구성 파일 만들기**  
   
-세 개의 XML 구성 파일을 만들고에 저장 된 서비스를 사용 하는 경우 **c:\ProgramData\Microsoft\BootEventCollector\Config**:  
+서비스를 사용 하도록 설정 하면 **c:\ProgramData\Microsoft\BootEventCollector\Config**에 세 개의 XML 구성 파일이 만들어지고 저장 됩니다.  
   
 -   **Active.xml** 이 파일에는 수집기 서비스의 현재 활성 구성을 포함 합니다.  바로 설치 후이 파일의 내용이 동일한 Empty.xml. 새 수집기 구성을 설정 하는 경우이 파일에 저장 합니다.  
   
@@ -196,9 +196,9 @@ ETW 형식을 허용 하지 않으면 대상 컴퓨터 이름을 지정할 수 �
   
 -   **Example.xml** 이 파일은 예제와 설명이 가능한 구성 요소를 제공 합니다.  
   
-**최대 파일 크기를 선택합니다.**  
+**파일 크기 제한 선택**  
   
-파일 크기 제한을 설정 해야 할 결정 사항 중 하나입니다. 최상의 파일 크기 제한을 이벤트 및 사용 가능한 디스크 공간이 예상된 볼륨에 따라 달라 집니다. 더 작은 파일은 이전 데이터 정리의 관점에서 더 편리 합니다. 그러나 각 파일에는 저마다 64 KB 헤더의 오버 헤드가 있으며 많은 파일을 결합된 한 기록 읽기 불편할 수 있습니다. 절대 최소 파일 크기 제한은 256KB입니다. 적절 한 실제 파일 크기 제한을 1MB 이상 이어야 합니다 10MB는 아마도 좋은 일반적인 값입니다. 더 높은 한도 많은 이벤트를 예상 하는 경우 적절 한 수 있습니다.  
+파일 크기 제한을 설정 해야 할 결정 사항 중 하나입니다. 최상의 파일 크기 제한을 이벤트 및 사용 가능한 디스크 공간이 예상된 볼륨에 따라 달라 집니다. 더 작은 파일은 이전 데이터 정리의 관점에서 더 편리 합니다. 그러나 각 파일에는 64KB 헤더의 오버 헤드가 발생 하 고 여러 파일을 읽어 결합 된 기록을 가져오는 것이 불편할 수 있습니다. 절대 최소 파일 크기 제한은 256 KB입니다. 적절 한 실제 파일 크기 제한을 1MB 이상 이어야 합니다 10MB는 아마도 좋은 일반적인 값입니다. 더 높은 한도 많은 이벤트를 예상 하는 경우 적절 한 수 있습니다.  
   
 자세한 정보는 구성 파일에 대 한 염두에 두 가지가 있습니다.  
   
@@ -271,7 +271,7 @@ ETW 형식을 허용 하지 않으면 대상 컴퓨터 이름을 지정할 수 �
   
 다시 시작할 필요 없이 서비스를 업데이트 하는 자동으로 새 구성을 적용 하려면 Windows PowerShell 명령, 경우에 항상 다시 시작할 수 있습니다 서비스 직접 사용 하 여 다음이 명령 중:  
   
--   Windows powershell: `Restart-Service BootEventCollector`  
+-   Windows PowerShell을 사용 하는 경우: `Restart-Service BootEventCollector`  
   
 -   일반 명령 프롬프트에: **BootEventCollector 중지 sc; sc BootEventCollector 시작**  
   
@@ -292,7 +292,7 @@ Nano 서버에 의해 제공 되는 최소 인터페이스 때로는 하기가 �
   
     3.  AutoLoggers 사용할 수 있도록 Nano 서버 VHD 레지스트리를 업데이트 합니다. 이 위해 실행 `Enable-SbecAutoLogger -Path C:\NanoServer\Workloads\IncludingWorkloads.vhd`합니다. 가장 일반적인 설치 및 부팅 이벤트;의 기본 목록 추가 다른 사용자를 알아보고 [이벤트 추적 세션을 제어](https://msdn.microsoft.com/library/windows/desktop/aa363694(v=vs.85).aspx)합니다.  
   
-4.  이벤트 플래그를 설정 하 고 올바른 서버에 전송 되 게 진단 이벤트 수집기 컴퓨터를 설정 하려면 Nano 서버 이미지에 BCD 설정을 업데이트 합니다. Note 수집기 컴퓨터의 IPv4 주소, TCP 포트 및 암호화 키 (이 항목에서 다른 곳에서 설명)는 수집기 Active.XML 파일에서 구성 합니다. 관리자 권한으로 Windows PowerShell 콘솔에서이 명령을 사용 합니다. `Enable-SbecBcd -Path C:\NanoServer\Workloads\IncludingWorkloads.vhd -CollectorIp 192.168.100.1 -CollectorPort 50000 -Key a.b.c.d`  
+4.  이벤트 플래그를 설정 하 고 올바른 서버에 전송 되 게 진단 이벤트 수집기 컴퓨터를 설정 하려면 Nano 서버 이미지에 BCD 설정을 업데이트 합니다. Note 수집기 컴퓨터의 IPv4 주소, TCP 포트 및 암호화 키 (이 항목에서 다른 곳에서 설명)는 수집기 Active.XML 파일에서 구성 합니다. 상승 된 권한으로 Windows PowerShell 콘솔에서이 명령을 사용 합니다. `Enable-SbecBcd -Path C:\NanoServer\Workloads\IncludingWorkloads.vhd -CollectorIp 192.168.100.1 -CollectorPort 50000 -Key a.b.c.d`  
   
 5.  수집기 컴퓨터에서 Active.XML 파일에 IPv4 주소 범위, 특정 IPv4 주소 또는 Nano 서버의 MAC 주소를 추가 하 여 Nano 서버 컴퓨터에서 보낸 이벤트를 받도록 수집기 컴퓨터 업데이트 (이 항목의 "수집기 컴퓨터 구성" 섹션 참조).  
   
@@ -301,7 +301,7 @@ Nano 서버에 의해 제공 되는 최소 인터페이스 때로는 하기가 �
   
 (이 서비스에 의해 수집 된 설정 및 부팅 데이터 구분) 수집기 서비스 자체에 대 한 로그는 Microsoft-Windows-BootEvent-수집기/관리자에서 찾을 수 있습니다. 이벤트에 대 한 그래픽 인터페이스에 대 한 이벤트 뷰어를 사용 합니다. 새 보기, 만들기 확장 **응용 프로그램 및 서비스 로그**, 를 확장 한 다음 **Microsoft** 차례로 **Windows**합니다. 찾을 **BootEvent 수집기**, 확장 하 고 찾을 **Admin**합니다.  
 
--   Windows powershell: `Get-WinEvent -LogName Microsoft-Windows-BootEvent-Collector/Admin`  
+-   Windows PowerShell을 사용 하는 경우: `Get-WinEvent -LogName Microsoft-Windows-BootEvent-Collector/Admin`  
   
 -   일반 명령 프롬프트에: **wevtutil qe Microsoft-Windows-BootEvent-수집기/관리**  
   
@@ -316,7 +316,7 @@ Nano 서버에 의해 제공 되는 최소 인터페이스 때로는 하기가 �
   
 ### <a name="troubleshooting-the-collector"></a>수집기 문제 해결  
   
-**로깅:**  
+**기록이**  
 수집기는 ETW 공급자 Microsoft Windows-BootEvent 수집기 고유한 이벤트를 기록합니다. 이 수집기와 함께 문제 해결을 위한 같아야 합니다. 첫 번째 위치입니다. 이벤트 뷰어에서 응용 프로그램 및 서비스 로그에서 찾을 수 있습니다 > Microsoft > Windows > BootEvent 수집기 > 관리자 또는 사용자에서 읽을 수 명령 창을 사용 하 여 다음이 명령 중:  
   
 일반 명령 프롬프트에: **wevtutil qe Microsoft-Windows-BootEvent-수집기/관리**  
@@ -333,7 +333,7 @@ Windows PowerShell 프롬프트에서: `Get-WinEvent -LogName Microsoft-Windows-
   
 < 수집기 configVersionMajor "1" minlog = = "debug" 로그\="c:\ProgramData\Microsoft\BootEventCollector\Logs\log.txt" >  
       
- **수집기 문제 해결 권장 된 방법:**  
+ **수집기 문제를 해결 하기 위한 제안 된 접근 방법:**  
    
 1. 첫째, 수집기가 받았는지 확인 연결 (만들어집니다 파일 대상에서 메시지를 보내기 시작 하는 경우에) 대상에서 사용   
    ```  
@@ -342,10 +342,10 @@ Windows PowerShell 프롬프트에서: `Get-WinEvent -LogName Microsoft-Windows-
    이 대상에서 연결 되어 있는 반환 하는 경우에 autologger 설정에는 문제 수 있습니다. Nothing을 반환 하는 경우 문제가 KDNET 연결으로 시작 하 여이 있습니다. KDNET 연결 문제를 진단 하려는 확인하실 양쪽 끝에서 연결 (즉, 대상 및 수집기에서).  
   
 2. 보려면 수집기에서 진단 유틸리티 추가 추가 하려면이 옵션은 \<수집기 > 구성 파일의 요소:  
-   \<collector ... minlog="verbose">  
+   \<collector ... minlog = "verbose" >  
    이렇게 하면 모든 받은 패킷에 대 한 메시지입니다.  
 3. 모든 패킷이 전혀 수신 되는지 여부를 확인 합니다. 필요에 따라 다음 파일을 대신 ETW를 통해 직접 세부 정보 표시 모드에서 로그를 작성 하는 것이 좋습니다. 이 추가 하려면이 옵션은 \<수집기 > 구성 파일의 요소:  
-   \<collector ... minlog="verbose" log="c:\ProgramData\Microsoft\BootEventCollector\Logs\log.txt">  
+   \<collector ... minlog = "verbose" log = "c:\ProgramData\Microsoft\BootEventCollector\Logs\log.txt" >  
       
 4. 받은 패킷에 대 한 메시지에 대 한 이벤트 로그를 확인 합니다. 모든 패킷이 전혀 수신 되는지 여부를 확인 합니다. 패킷을 수신 하는 잘못 된 경우 세부 정보에 대 한 이벤트 메시지를 확인 합니다.  
 5. 대상 쪽에서 KDNET 레지스트리에 일부 진단 정보를 기록 합니다. 찾는 위치   
@@ -382,5 +382,5 @@ Windows PowerShell 명령 사용 하 여 구성을 적용 한 경우 `$result = 
 |-|---------|---------------------|-----------|---------------------|  
 |대상 컴퓨터||대상은 수집기에 연결 되지 않습니다.||-대상 컴퓨터를 구성한 후 다시 시작 가져오기 하지 않았습니다. 대상 컴퓨터를 다시 시작 합니다.<br />-대상 컴퓨터에 잘못 된 BCD 설정이 있습니다. "유효성 검사 대상 컴퓨터 설정" 섹션의 설정을 확인 합니다. 필요에 따라 잡고 대상 컴퓨터를 다시 시작 합니다.<br />-KDNET/이벤트-NET 드라이버는 네트워크 어댑터에 연결할 수 없거나 잘못 된 네트워크 어댑터에 연결 되어 없습니다. Windows PowerShell에서 실행 `gwmi Win32_NetworkAdapter` ServiceName 사용에 대 한 출력을 확인 하 고 **kdnic**합니다. 잘못 된 네트워크 어댑터를 선택 하는 경우 "에 네트워크 어댑터를 지정 합니다."의 단계를 다시 수행 네트워크 어댑터 전혀 나타나지 않으면 드라이버는 네트워크 어댑터를 지원 하지 않습니다 수 있습니다.<br>**참고 항목** "수집기를 해결 하는 제안 된 방안을" 위에 특히 단계 5-8입니다.|  
 |Collector||더 이상 이벤트 수집기 내에서 호스팅되는 VM을 마이그레이션한 후 표시 합니다.||수집기 컴퓨터의 IP 주소 변경 되지 않은 것을 확인 합니다. 있는 경우, "을 사용 하도록 원격으로 ETW 이벤트 전송을 통해 보내는" 검토|  
-|Collector||ETL 파일 생성 되지 않습니다.|`Get-SbecForwarding` 나타나지만 오류 없이 대상 연결에 ETL 파일이 생성 되지 않습니다.|대상 컴퓨터에서 아직; 모든 데이터를 보내 않을 ETL 파일은 데이터를 받을 때에 만들어집니다.|  
+|Collector||ETL 파일 생성 되지 않습니다.|`Get-SbecForwarding`은 대상이 연결 되었지만 오류가 없지만 ETL 파일이 생성 되지 않음을 보여 줍니다.|대상 컴퓨터에서 아직; 모든 데이터를 보내 않을 ETL 파일은 데이터를 받을 때에 만들어집니다.|  
 |Collector||이벤트는 ETL 파일에는 표시 되지 않습니다.|대상 컴퓨터에 이벤트 보냈지만 Message Analyzer의 이벤트 뷰어, ETL 파일을 읽고 이벤트가 없는 경우.|-이벤트 버퍼에 해질 수 있습니다. 이벤트는 수집 되는 전체 64KB 버퍼 또는 없는 새 이벤트로 약 10-15 초 시간 제한이 발생 될 때까지 ETL 파일에 기록 되지 않습니다. 제한 시간이 만료 되거나와 버퍼를 플러시하게 기다리거나 `Save-SbecInstance`합니다.<br />-이벤트 매니페스트를 수집기 컴퓨터 또는 이벤트 뷰어 또는 Message Analyzer 실행 되는 컴퓨터에서 사용할 수 없습니다.  이 경우에 수집기 (수집기 로그를 확인) 이벤트를 처리 하지 못할 수 있습니다 또는 뷰어에 표시 되도록 못할 수 있습니다.  수집기 컴퓨터에 설치 된 모든 매니페스트는 대상 컴퓨터에 설치 하기 전에 수집기 컴퓨터에서 업데이트를 설치 하는 것이 좋습니다.|

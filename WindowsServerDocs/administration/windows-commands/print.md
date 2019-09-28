@@ -1,8 +1,8 @@
 ---
 title: print
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d85fc5b2cd5f5ba09ebdf4756a5adb60c1759f2a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ada0657e2f17754e55e97e6488aac99fb0025afb
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59831554"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71372147"
 ---
 # <a name="print"></a>print
 
@@ -38,30 +38,30 @@ Print [/d:<PrinterName>] [<Drive>:][<Path>]<FileName>[ ...]
 
 |매개 변수|설명|
 |---------|-----------|
-|/d:\<PrinterName>|프린터 작업을 인쇄 하려면를 지정 합니다. 로컬로 연결 된 프린터로 인쇄할 프린터 연결 되어 있는 컴퓨터에서 포트를 지정 합니다.</br>병렬 포트에 대 한 유효한 값 LPT1, LPT2, LPT3 됩니다.</br>@ COM1, COM2, COM3, 및 COM4 직렬 포트에 대 한 유효한 값 이며</br>큐 이름을 사용 하 여 네트워크 프린터를 지정할 수도 있습니다 (\\\\*ServerName*\*PrinterName *). 프린터를 지정 하지 않으면 인쇄 작업은 기본적으로 LPT1에 전송 됩니다.|
-|\<Drive>:|인쇄 하려는 파일이 위치 하는 논리적 또는 물리적 드라이브를 지정 합니다. 인쇄 하려는 파일은 현재 드라이브에 있는 경우이 매개 변수가 필요 하지 않습니다.|
-|\<Path>|인쇄 하려는 파일의 위치를 지정 합니다. 인쇄 하려는 파일을 현재 디렉터리에 있는 경우이 매개 변수가 필요 하지 않습니다.|
-|\<FileName>[ ...]|필수. 인쇄 하려는 파일을 지정 합니다. 하나의 명령에서 여러 파일을 포함할 수 있습니다.|
+|/d: @no__t 0PrinterName >|작업을 인쇄 하려는 프린터를 지정 합니다. 로컬로 연결 된 프린터로 인쇄 하려면 프린터가 연결 된 컴퓨터의 포트를 지정 합니다.</br>-병렬 포트의 유효한 값은 LPT1, LPT2 및 LPT3입니다.</br>-직렬 포트에 대 한 유효한 값은 COM1, COM2, COM3 및 COM4입니다.</br>해당 큐 이름을 사용 하 여 네트워크 프린터를 지정할 수도 있습니다 (\\ @ no__t-1*ServerName*\*PrinterName *). 프린터를 지정 하지 않으면 기본적으로 인쇄 작업이 LPT1에 전송 됩니다.|
+|\<Drive >:|인쇄 하려는 파일이 있는 논리적 또는 물리적 드라이브를 지정 합니다. 인쇄 하려는 파일이 현재 드라이브에 있는 경우에는이 매개 변수가 필요 하지 않습니다.|
+|\< 경로 >|인쇄 하려는 파일의 위치를 지정 합니다. 인쇄 하려는 파일이 현재 디렉터리에 있는 경우에는이 매개 변수가 필요 하지 않습니다.|
+|\<FileName > [...]|필수. 인쇄 하려는 파일을 지정 합니다. 하나의 명령에 여러 파일을 포함할 수 있습니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
 ## <a name="remarks"></a>설명
 
--   파일을 로컬 컴퓨터의 직렬 또는 병렬 포트에 연결 된 프린터에 보낼 경우 백그라운드에서 인쇄할 수 있습니다.
--   사용 하 여 명령 프롬프트에서 여러 구성 작업을 수행할 수는 **모드** 명령입니다.
+-   파일은 로컬 컴퓨터의 직렬 또는 병렬 포트에 연결 된 프린터로 보낼 경우 백그라운드에서 인쇄할 수 있습니다.
+-   명령 프롬프트에서 **모드** 명령을 사용 하 여 여러 구성 작업을 수행할 수 있습니다.
 
-    참조 [모드](mode.md) 에 대 한 자세한 내용은 합니다.  
-    -   병렬 포트에 연결 된 프린터를 구성 합니다.
-    -   직렬 포트에 연결 된 프린터를 구성 합니다.
-    -   프린터의 상태를 표시합니다.
+    에 대 한 자세한 내용은 [모드](mode.md) 를 참조 하세요.  
+    -   병렬 포트에 연결 된 프린터 구성
+    -   직렬 포트에 연결 된 프린터 구성
+    -   프린터 상태 표시
     -   코드 페이지 전환에 대 한 프린터 준비
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
-로컬 컴퓨터의 프린터에 현재 디렉터리에 Report.txt LPT2 연결할 파일을 보내려면 다음을 입력 합니다.
+현재 디렉터리에 있는 파일을 로컬 컴퓨터의 LPT2에 연결 된 프린터로 보내려면 다음을 입력 합니다.
 ```
 print /d:lpt2 report.txt
 ```
-파일을 보내는 Report.txt c:\Accounting 디렉터리에 프린터 1 인쇄 큐는 \\ \\CopyRoom 서버 유형:
+C:\ca 계정 디렉터리에 있는 Printer1 인쇄 큐의 인쇄 @no__t 큐에 no__t 파일을 보내려면 다음을 입력 합니다.
 ```
 print /d:\\copyroom\printer1 c:\accounting\report.txt 
 ```

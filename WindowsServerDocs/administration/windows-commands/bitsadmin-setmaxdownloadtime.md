@@ -1,8 +1,8 @@
 ---
 title: bitsadmin setmaxdownloadtime
-description: Windows 명령 항목에 대 한 **bitsadmin setmaxdownloadtime** -다운로드 제한 시간을 초 단위로 설정 합니다.
+description: '**Bitsadmin setmaxdownloadtime** 에 대 한 Windows 명령 항목-다운로드 제한 시간 (초)을 설정 합니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f13b44429bec2718af1a648f273fead18d4e9e08
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 985453de5bd2f4a06b5635ae5b0a9794d30175b0
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59830994"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71380562"
 ---
 # <a name="bitsadmin-setmaxdownloadtime"></a>bitsadmin setmaxdownloadtime
 
@@ -43,7 +43,7 @@ bitsadmin /SetMaxDownloadTime <Job> <Timeout>
 
 -   해당 사항 없음
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 다음 예제에서는 명명 된 작업에 대 한 제한 시간 설정 *myDownloadJob* 으로 10 초로 설정 합니다.
 ```

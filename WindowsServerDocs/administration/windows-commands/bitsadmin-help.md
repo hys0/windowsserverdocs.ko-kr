@@ -1,8 +1,8 @@
 ---
 title: bitsadmin help
-description: Windows 명령 항목에 대 한 **bitsadmin 도움말** -명령줄 사용법을 표시 합니다.
+description: '**Bitsadmin help** 에 대 한 Windows 명령 항목-명령줄 사용법을 표시 합니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d00eeb56216852f7861295c930c36cb65fb183dc
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9917e3537d4b642cdaeabf7d592614ec7de17ab8
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59886014"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381119"
 ---
 # <a name="bitsadmin-help"></a>bitsadmin help
 
@@ -32,7 +32,7 @@ ms.locfileid: "59886014"
 bitsadmin /help | /?
 ```
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 다음 예제에서는 명령줄 도움말을 검색합니다.
 ```

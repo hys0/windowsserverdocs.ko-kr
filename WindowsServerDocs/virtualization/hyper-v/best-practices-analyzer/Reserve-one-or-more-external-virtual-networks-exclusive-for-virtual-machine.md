@@ -1,7 +1,7 @@
 ---
 title: 가상 컴퓨터에서 하나 이상의 외부 가상 네트워크에 배타적으로 사용을 예약 합니다.
-description: 이 모범 사례 분석기 규칙에 의해 보고 된 문제를 해결 하려면 지침을 제공 합니다.
-ms.prod: windows-server-threshold
+description: 이 모범 사례 분석기 규칙에서 보고 한 문제를 해결 하는 지침을 제공 합니다.
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -10,12 +10,12 @@ ms.topic: article
 ms.assetid: f7732258-93f1-44e8-835b-5ad2d1c45cd9
 author: KBDAzure
 ms.date: 8/16/2016
-ms.openlocfilehash: c8c90a74352bae0b348608db0fc05107e4d09010
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a72f3d616bb0c520e49c27f90686196463f25953
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59884744"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71364783"
 ---
 # <a name="reserve-one-or-more-external-virtual-networks-for-exclusive-use-by-virtual-machines"></a>가상 컴퓨터에서 하나 이상의 외부 가상 네트워크에 배타적으로 사용을 예약 합니다.
 
@@ -34,15 +34,15 @@ ms.locfileid: "59884744"
   
 ## <a name="issue"></a>문제점  
   
-*모든 외부 가상 네트워크 관리 운영 체제와 가상 컴퓨터에서 사용 하 여 구성 됩니다.*  
+*모든 외부 가상 네트워크는 관리 운영 체제와 가상 컴퓨터 모두에서 사용 하도록 구성 됩니다.*  
   
 ## <a name="impact"></a>영향  
   
-*관리 운영 체제의 네트워킹 성능 저하 될 수 있습니다.*  
+*관리 운영 체제에서 네트워킹 성능이 저하 될 수 있습니다.*  
   
 ## <a name="resolution"></a>해결 방법  
   
-*가상 스위치 관리자를 사용 하 여 관리 운영 체제와 외부 가상 네트워크의 공유를 중지 합니다.*  
+*가상 스위치 관리자를 사용 하 여 관리 운영 체제와 외부 가상 네트워크 공유를 중지 합니다.*  
   
 #### <a name="to-stop-sharing-the-external-virtual-network-with-the-management-operating-system"></a>관리 운영 체제와 외부 가상 네트워크 공유를 중지 하려면  
   

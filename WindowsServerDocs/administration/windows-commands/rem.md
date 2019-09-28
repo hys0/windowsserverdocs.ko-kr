@@ -1,8 +1,8 @@
 ---
 title: rem
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 85c8a69bf21a386cd36e45bbca6dacd35aef2509
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2da0b6e42858582c1485659f3bf8f59e8e2ed97e
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59847004"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71384567"
 ---
 # <a name="rem"></a>rem
 
@@ -38,16 +38,16 @@ rem [<Comment>]
 
 |매개 변수|설명|
 |---------|-----------|
-|\<설명 >|문자열을 주석으로 포함 하도록 지정 합니다.|
+|\< 주석 >|문자열을 주석으로 포함 하도록 지정 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
 ## <a name="remarks"></a>설명
 
 -   **rem** 명령 화면에서 설명을 표시 하지 않습니다. 사용 해야는 **화면 표시** 명령을 일괄 처리 또는 구성 합니다. 화면에 주석을 표시 하려면 SYS 파일입니다.
--   리디렉션 문자를 사용할 수 없습니다 (**<** 또는 **>**) 또는 파이프 (**|**)에서 사용할 수 있습니다.
+-   리디렉션 문자를 사용할 수 없습니다 ( **<** 또는 **>** ) 또는 파이프 ( **|** )에서 사용할 수 있습니다.
 -   사용할 수 있지만 **rem** 배치 파일에 세로 간격을 추가 하려면 설명 없이 사용할 수 있습니다 빈 줄. 일괄 처리 프로그램을 처리할 때 빈 줄은 무시 됩니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 다음 예제에서는 세로 간격 조정 및 메모에 대 한 설명 부분을 사용 하는 배치 파일을 보여 줍니다.
 ```

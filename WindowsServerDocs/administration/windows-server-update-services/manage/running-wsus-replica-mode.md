@@ -1,7 +1,7 @@
 ---
 title: WSUS 복제본 모드 실행
-description: 'Windows Server Update Service (WSUS) 항목-복제본 모드를 구성 하는 방법 '
-ms.prod: windows-server-threshold
+description: 'WSUS (Windows Server Update Service) 항목-복제본 모드를 구성 하는 방법 '
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-wsus
@@ -12,12 +12,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3b4139354a3f0f7b1f1a97107d2f6b28db2b02c2
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 5323210962298ff3f2d0b159cba7726adfbb89d1
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59878744"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71361617"
 ---
 # <a name="running-wsus-replica-mode"></a>WSUS 복제본 모드 실행
 

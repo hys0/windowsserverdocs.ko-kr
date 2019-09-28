@@ -7,14 +7,14 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 49798f785fe02b5a97fd8bd979c327b86c9ddef2
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: dd265fecce06b849bd14d4d6b81503aba7311656
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59874224"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71390066"
 ---
 # <a name="managing-rid-issuance"></a>RID 발급 관리
 
@@ -266,7 +266,7 @@ RID 발급의 모든 로그는 시스템 이벤트 로그의 원본 Directory-Se
 |이벤트 ID|16654|  
 |Source|Directory-Services-SAM|  
 |Severity|정보|  
-|메시지|RID(계정 ID)가 무효화되었습니다. 이는 다음과 같은 경우에 발생할 수 있습니다.<br /><br />1. 도메인 컨트롤러가 백업에서 복원되었습니다.<br /><br />2. 가상 컴퓨터에서 실행 중인 도메인 컨트롤러가 스냅샷에서 복원되었습니다.<br /><br />3. 관리자가 풀을 수동으로 무효화했습니다.<br /><br />자세한 내용은 https://go.microsoft.com/fwlink/?LinkId=226247를 참조하세요.|  
+|메시지|RID(계정 ID)가 무효화되었습니다. 이는 다음과 같은 경우에 발생할 수 있습니다.<br /><br />1. 도메인 컨트롤러가 백업에서 복원되었습니다.<br /><br />2. 가상 컴퓨터에서 실행 중인 도메인 컨트롤러가 스냅샷에서 복원되었습니다.<br /><br />3. 관리자가 풀을 수동으로 무효화했습니다.<br /><br />자세한 내용은 https://go.microsoft.com/fwlink/?LinkId=226247 를 참조하세요.|  
 |참고 사항 및 해결 방법|이 이벤트가 예상치 못한 이벤트인 경우 모든 도메인 관리자에게 문의하여 이러한 작업 중 어떤 작업이 수행되었는지 확인하세요. 디렉터리 서비스 이벤트 로그에는 이러한 단계 중 하나가 수행된 시점에 대한 자세한 정보도 포함됩니다.|  
   
 |||  
@@ -283,14 +283,14 @@ RID 발급의 모든 로그는 시스템 이벤트 로그의 원본 Directory-Se
 |Source|Directory-Services-SAM|  
 |Severity|경고|  
 |메시지|RID(계정 ID)의 전역 최대값이 %1(으)로 증가했습니다.|  
-|참고 사항 및 해결 방법|조치가 필요합니다! RID(계정 ID) 풀이 이 도메인 컨트롤러에 할당되었습니다. 풀 값은 이 도메인이 사용 가능한 전체 계정 ID의 많은 부분을 사용했음을 나타냅니다.<br /><br />도메인에는 총 사용 가능한 계정 id의 남은 다음 임계값에 도달 하면 보호 메커니즘이 활성화 됩니다: %1입니다.  이 보호 메커니즘으로 인해 RID 마스터 도메인 컨트롤러에서 계정 ID 할당을 수동으로 다시 사용하도록 설정할 때까지 계정 만들기가 차단됩니다.<br /><br />자세한 내용은 https://go.microsoft.com/fwlink/?LinkId=228610를 참조하세요.|  
+|참고 사항 및 해결 방법|조치가 필요합니다! RID(계정 ID) 풀이 이 도메인 컨트롤러에 할당되었습니다. 풀 값은 이 도메인이 사용 가능한 전체 계정 ID의 많은 부분을 사용했음을 나타냅니다.<br /><br />도메인에는 총 사용 가능한 계정 id의 남은 다음 임계값에 도달 하면 보호 메커니즘이 활성화 됩니다: %1입니다.  이 보호 메커니즘으로 인해 RID 마스터 도메인 컨트롤러에서 계정 ID 할당을 수동으로 다시 사용하도록 설정할 때까지 계정 만들기가 차단됩니다.<br /><br />자세한 내용은 https://go.microsoft.com/fwlink/?LinkId=228610 를 참조하세요.|  
   
 |||  
 |-|-|  
 |이벤트 ID|16657|  
 |Source|Directory-Services-SAM|  
 |Severity|Error|  
-|메시지|조치가 필요합니다! 이 도메인이 사용 가능한 전체 RID(계정 ID)의 많은 부분을 사용했습니다. 사용 가능한 전체 계정 ID 중 남은 ID가 X%개[인공 최대값 인수]보다 적으므로 보호 메커니즘이 활성화되었습니다.<br /><br />이 보호 메커니즘으로 인해 RID 마스터 도메인 컨트롤러에서 계정 ID 할당을 수동으로 다시 사용하도록 설정할 때까지 계정 만들기가 차단됩니다.<br /><br />이 도메인이 비정상적으로 높은 비율의 계정 ID를 사용하지 못하도록 하려면 계정 만들기를 다시 사용하도록 설정하기 전에 특정 진단을 수행해야 합니다. 또한 계정 만들기를 다시 사용하도록 설정하기 전에 식별된 모든 문제를 해결해야 합니다.<br /><br />기본 문제의 진단 및 해결에 실패하면 비정상적으로 높은 비율의 계정 ID 사용으로 인해 도메인의 계정 ID가 소진되어 이후 이 도메인에서 계정을 영구적으로 만들지 못하게 될 수 있습니다.<br /><br />자세한 내용은 https://go.microsoft.com/fwlink/?LinkId=228610를 참조하세요.|  
+|메시지|조치가 필요합니다! 이 도메인이 사용 가능한 전체 RID(계정 ID)의 많은 부분을 사용했습니다. 사용 가능한 전체 계정 ID 중 남은 ID가 X%개[인공 최대값 인수]보다 적으므로 보호 메커니즘이 활성화되었습니다.<br /><br />이 보호 메커니즘으로 인해 RID 마스터 도메인 컨트롤러에서 계정 ID 할당을 수동으로 다시 사용하도록 설정할 때까지 계정 만들기가 차단됩니다.<br /><br />이 도메인이 비정상적으로 높은 비율의 계정 ID를 사용하지 못하도록 하려면 계정 만들기를 다시 사용하도록 설정하기 전에 특정 진단을 수행해야 합니다. 또한 계정 만들기를 다시 사용하도록 설정하기 전에 식별된 모든 문제를 해결해야 합니다.<br /><br />기본 문제의 진단 및 해결에 실패하면 비정상적으로 높은 비율의 계정 ID 사용으로 인해 도메인의 계정 ID가 소진되어 이후 이 도메인에서 계정을 영구적으로 만들지 못하게 될 수 있습니다.<br /><br />자세한 내용은 https://go.microsoft.com/fwlink/?LinkId=228610 를 참조하세요.|  
 |참고 사항 및 해결 방법|모든 도메인 관리자에게 이 보호를 재정의할 때까지 이 도메인에서 더 이상 보안 주체를 만들 수 없음을 알려 주세요. 풀에서 보호를 재정의 하 고 가능한 전체 RID 증가 하는 방법에 대 한 자세한 내용은 참조 하십시오. [전역 RID 공간 크기 잠금 해제](../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/Managing-RID-Issuance.md#BKMK_GlobalRidSpaceUnlock)합니다.|  
   
 |||  
@@ -298,11 +298,11 @@ RID 발급의 모든 로그는 시스템 이벤트 로그의 원본 Directory-Se
 |이벤트 ID|16658|  
 |Source|Directory-Services-SAM|  
 |Severity|경고|  
-|메시지|이 이벤트는 사용 가능한 RID(계정 ID) 중 남아 있는 총 개수에 대한 정기적인 업데이트입니다. 남아 있는 계정 id 수는 약: %1입니다.<br /><br />계정 ID는 계정이 만들어질 때 사용됩니다. 계정 ID가 모두 소진되면 도메인에서 새 계정이 만들어지지 않습니다.<br /><br />자세한 내용은 https://go.microsoft.com/fwlink/?LinkId=228745를 참조하세요.|  
+|메시지|이 이벤트는 사용 가능한 RID(계정 ID) 중 남아 있는 총 개수에 대한 정기적인 업데이트입니다. 남아 있는 계정 id 수는 약: %1입니다.<br /><br />계정 ID는 계정이 만들어질 때 사용됩니다. 계정 ID가 모두 소진되면 도메인에서 새 계정이 만들어지지 않습니다.<br /><br />자세한 내용은 https://go.microsoft.com/fwlink/?LinkId=228745 를 참조하세요.|  
 |참고 사항 및 해결 방법|모든 도메인 관리자에게 RID 사용량이 주요 지표를 초과했음을 알려 주세요. 또한 보안 트러스티 만들기 패턴을 검토하여 이 동작이 예상된 동작인지 여부를 확인해야 합니다. 이 이벤트가 매우 비정상적인 것으로 간주되는 경우 이는 1억 개 이상의 RID가 할당되었음을 의미합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
-[Windows Server 2012에서에서 RID 발급 관리](http://blogs.technet.com/b/askds/archive/2012/08/10/managing-rid-issuance-in-windows-server-2012.aspx)  
+[Windows Server 2012에서 RID 발급 관리](http://blogs.technet.com/b/askds/archive/2012/08/10/managing-rid-issuance-in-windows-server-2012.aspx)  
   
 
 

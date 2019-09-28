@@ -3,7 +3,7 @@ title: 스테이션용 Windows 10 Enterprise 가상 데스크톱 만들기
 description: 스테이션에 대해 Windows Server 2016 데스크톱을 만드는 방법 알아보기
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ ms.assetid: 63f08b5b-c735-41f4-b6c8-411eff85a4ab
 author: evaseydl
 ms.author: evas
 manager: scottman
-ms.openlocfilehash: e68412808e037b788d5b25c1c2c7b14253e40ea6
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: cd08caef8228a4d20c6d5f4a40fe5bd90aacbe40
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871735"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71395541"
 ---
 # <a name="create-windows-10-enterprise-virtual-desktops-for-stations"></a>스테이션용 Windows 10 Enterprise 가상 데스크톱 만들기
 MultiPoint 서비스에서이 옵션 구성은 필수 응용 프로그램가 각 사용자에 대 한 클라이언트 운영 체제의 자체 인스턴스를 필요로 하는 경우에 주로 사용 됩니다. Windows 서버에 설치할 수 없는 응용 프로그램 및 여러 인스턴스를 동일한 호스트 컴퓨터에서 실행 되지 않는 응용 프로그램을 예로 들 수 있습니다.  

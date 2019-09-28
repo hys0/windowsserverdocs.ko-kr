@@ -1,19 +1,19 @@
 ---
 title: Hyper-v 가상 컴퓨터에서 Intel 성능 모니터링 하드웨어 사용
 description: Hyper-v 컴퓨터에서 Intel의 성능 모니터링 하드웨어를 사용 하도록 설정 하는 방법 또한 성능 모니터링을 사용 하도록 설정 하는 방법에 대해서는 실시간 마이그레이션을 수행 합니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: ifufondu
 author: ifeomaufondu-ms
 ms.author: ifufondu
 manager: chhuybre
 ms.topic: article
 ms.date: 09/20/2019
-ms.openlocfilehash: 67f32a6e2ceeaf07701d558f473e2f997fbd8219
-ms.sourcegitcommit: d12d9e6afd71d23e8a24682ad80d2cf3bc486588
+ms.openlocfilehash: 6938739d7c8efdf60c859d2d5ea5bc63246ae4fe
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71226024"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71364103"
 ---
 # <a name="enable-intel-performance-monitoring-hardware-in-a-hyper-v-virtual-machine"></a>Hyper-v 가상 컴퓨터에서 Intel 성능 모니터링 하드웨어 사용
 

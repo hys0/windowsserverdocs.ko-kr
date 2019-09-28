@@ -1,9 +1,9 @@
 ---
 title: 원격 액세스 서버 및 해당 구성 요소의 작동 상태 모니터링
-description: 이 항목은 원격 액세스 모니터링 및 계정 관리에 Windows Server 2016에 대 한 가이드의 일부입니다.
+description: 이 항목은 Windows Server 2016의 원격 액세스 모니터링 및 계정에 대 한 가이드의 일부입니다.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-ras
@@ -12,16 +12,16 @@ ms.topic: article
 ms.assetid: 077a3a64-2fa3-4994-9711-ec1fbdc081ba
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 9ccfd0cd65a3504349dcad3bd7a549ed18eb6279
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: d0ad63ec88a428239a174a0217db94c44ab799bc
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67281140"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71404548"
 ---
 # <a name="monitor-the-operations-status-of-the-remote-access-server-and-its-components"></a>원격 액세스 서버 및 해당 구성 요소의 작동 상태 모니터링
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 **참고:** Windows Server 2012에는 DirectAccess와 RRAS(Routing and Remote Access Service)가 단일 원격 액세스 역할로 통합되어 있습니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "67281140"
   
 4.  클릭 **새로 고침** 아래 **작업** 작동 상태를 다시 로드 하려면 오른쪽 창에 있습니다. 작업 상태는 자동으로 새로 고쳐집니다 5 분 마다 되는 기본 새로 고침 간격. 기본 새로 고침 간격을 변경 하려면 **구성 새로 고침 간격**합니다.  
   
-![Windows PowerShell](../../../media/Monitor-the-operations-status-of-the-Remote-Access-server-and-its-components/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![Windows PowerShell](../../../media/Monitor-the-operations-status-of-the-Remote-Access-server-and-its-components/PowerShellLogoSmall.gif)***<em>windows powershell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   

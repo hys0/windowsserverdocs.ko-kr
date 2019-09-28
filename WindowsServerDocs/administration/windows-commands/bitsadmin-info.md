@@ -1,8 +1,8 @@
 ---
 title: bitsadmin info
-description: 에 대 한 Windows 명령을 항목 **지정된 된 된 작업에 대 한 요약 정보가 표시 됩니다.** -bitsadmin 정보
+description: 의 Windows 명령 항목에서는 **지정 된 작업에 대 한 요약 정보를 표시 합니다.** -bitsadmin 정보
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2ee96c69e311600a53f04b1b883983718adf0f69
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3b6710d73860315fcd13670669871cd310ffb41c
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59851524"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381082"
 ---
 # <a name="bitsadmin-info"></a>bitsadmin info
 
@@ -42,7 +42,7 @@ bitsadmin /Info <Job> [/verbose]
 
 사용 하는 자세한 정보 표시 / 매개 변수는 작업에 대 한 자세한 정보를 제공 합니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 명명 된 작업에 대 한 정보를 검색 하는 다음 예제에서는 *myDownloadJob*합니다.
 ```

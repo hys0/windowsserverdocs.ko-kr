@@ -7,14 +7,14 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 169d0a55f9fb167390c13ac1c89f8d68427f318d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3d04530c53150a3222b609a80938d7fdfcdfeff7
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59842114"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402590"
 ---
 # <a name="evaluating-ad-ds-deployment-strategy-examples"></a>AD DS 배포 전략 예제 평가
 

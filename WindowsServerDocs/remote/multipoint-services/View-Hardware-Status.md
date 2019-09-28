@@ -1,8 +1,8 @@
 ---
 title: 하드웨어 상태 보기
-description: MultiPoint 서비스에서 하드웨어 정보를 보는 방법에 알아봅니다.
+description: MultiPoint 서비스에서 하드웨어 정보를 보는 방법에 대해 알아봅니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: 5ec1e32cf39738f3dbf008763031060f19500a38
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: bfaa9166012dd349124c70a54546c288895d7897
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59871794"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71389171"
 ---
 # <a name="view-hardware-status"></a>하드웨어 상태 보기
 다중 포인트 관리자에서 사용 하 여는 **스테이션** 보려면 탭을 *스테이션* 내용은 같은:  
@@ -37,4 +37,4 @@ ms.locfileid: "59871794"
   
 ## <a name="see-also"></a>관련 항목  
 [스테이션 하드웨어 관리](Manage-Station-Hardware.md)  
-[모드 간 전환](Switch-Between-Modes.md)
+[모드 전환](Switch-Between-Modes.md)

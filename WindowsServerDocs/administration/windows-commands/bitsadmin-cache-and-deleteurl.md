@@ -1,8 +1,8 @@
 ---
 title: bitsadmin 캐시 및 deleteurl
-description: Windows 명령 항목에 대 한 **bitsadmin 캐시 및 deleteurl** -지정된 된 URL에 대 한 모든 캐시 항목을 삭제 합니다.
+description: '**Bitsadmin cache 및 deleteurl** 에 대 한 Windows 명령 항목-지정 된 URL에 대 한 모든 캐시 항목을 삭제 합니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a831c49e1461761cb7466b46e7a5ad8e037f4ec9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 869d3bc0f011cc82aaea9b7468667964051e1c00
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59816654"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71382062"
 ---
 # <a name="bitsadmin-cache-and-deleteurl"></a>bitsadmin 캐시 및 deleteurl
 
@@ -38,9 +38,9 @@ bitsadmin /DeleteURL url
 |---------|-----------|
 |url|원격 파일을 식별 하는 Uniform Resource Locator|
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
-다음 예제에 대 한 모든 캐시 항목을 삭제합니다. https://www.microsoft.com/en/us/default.aspx
+다음 예에서는 @no__t에 대 한 모든 캐시 항목을 삭제 합니다.
 ```
 C:\>bitsadmin /DeleteURL https://www.microsoft.com/en/us/default.aspx 
 ```

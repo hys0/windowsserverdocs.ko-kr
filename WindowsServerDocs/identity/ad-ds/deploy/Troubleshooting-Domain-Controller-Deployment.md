@@ -7,14 +7,14 @@ ms.author: joflore
 manager: mtillman
 ms.date: 03/20/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 15ba8b9d17dfcaf5893086c83811d864c019dac6
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 88fc0e14569c395bd1479ead338d83bffc2fd72f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66443123"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71369617"
 ---
 # <a name="troubleshooting-domain-controller-deployment"></a>도메인 컨트롤러 배포 문제 해결
 
@@ -26,17 +26,17 @@ ms.locfileid: "66443123"
 
 ![문제 해결](media/Troubleshooting-Domain-Controller-Deployment/adds_deploy_troubleshooting.png)  
 
-## <a name="built-in-logs-for-troubleshooting"></a>문제 해결에 대 한 기본 제공 로그
+## <a name="built-in-logs-for-troubleshooting"></a>문제 해결을 위한 기본 제공 로그
 
 기본 제공 로그는 도메인 컨트롤러 수준 올리기 및 내리기 문제를 해결하는 데 가장 중요한 도구입니다. 이러한 로그는 기본적으로 사용되며 최대한의 자세한 표시 수준을 제공하도록 구성됩니다.  
 
 |단계|Log|  
 |---------|-------|  
-|서버 관리자 또는 ADDSDeployment Windows PowerShell 작업|-   %systemroot%\debug\dcpromoui.log<br /><br />-   %systemroot%\debug\dcpromoui*.log|  
-|도메인 컨트롤러 설치/수준 올리기|-%systemroot%\debug\dcpromo.log<br /><br />-   %systemroot%\debug\dcpromo*.log<br /><br />이벤트 viewer\Windows 로그 \ 시스템<br /><br />이벤트 viewer\Windows 로그 \ 응용 프로그램<br /><br />이벤트 뷰어 \ 응용 프로그램 및 서비스 logs\Directory 서비스<br /><br />이벤트 뷰어 \ 응용 프로그램 및 서비스 logs\File 복제 서비스<br /><br />이벤트 뷰어 \ 응용 프로그램 및 서비스 logs\DFS 복제|  
-|포리스트 또는 도메인 업그레이드|-   %systemroot%\debug\adprep\\<datetime>\adprep.log<br /><br />-   %systemroot%\debug\adprep\\<datetime>\csv.log<br /><br />-   %systemroot%\debug\adprep\\<datetime>\dspecup.log<br /><br />-   %systemroot%\debug\adprep\\<datetime>\ldif.log*|  
-|서버 관리자 ADDSDeployment Windows PowerShell 배포 엔진|이벤트 뷰어 \ 응용 프로그램 및 서비스 logs\Microsoft\Windows\DirectoryServices-Deployment\Operational|  
-|Windows 서비스|-   %systemroot%\Logs\CBS\\*<br /><br />-   %systemroot%\servicing\sessions\sessions.xml<br /><br />-   %systemroot%\winsxs\poqexec.log<br /><br />-   %systemroot%\winsxs\pending.xml|  
+|서버 관리자 또는 ADDSDeployment Windows PowerShell 작업|- %systemroot%\debug\dcpromoui.log<br /><br />-%systemroot%\debug\dcpromoui * .log|  
+|도메인 컨트롤러 설치/수준 올리기|-%systemroot%\debug\dcpromo.log<br /><br />-%systemroot%\debug\dcpromo * .log<br /><br />이벤트 viewer\Windows 로그 \ 시스템<br /><br />이벤트 viewer\Windows 로그 \ 응용 프로그램<br /><br />이벤트 뷰어 \ 응용 프로그램 및 서비스 logs\Directory 서비스<br /><br />이벤트 뷰어 \ 응용 프로그램 및 서비스 logs\File 복제 서비스<br /><br />이벤트 뷰어 \ 응용 프로그램 및 서비스 logs\DFS 복제|  
+|포리스트 또는 도메인 업그레이드|-%systemroot%\debug\adprep @ no__t-0 @ no__t-1\adprep.log<br /><br />-%systemroot%\debug\adprep @ no__t-0 @ no__t-1\csv.log<br /><br />-%systemroot%\debug\adprep @ no__t-0 @ no__t-1\dspecup.log<br /><br />-%systemroot%\debug\adprep @ no__t-0 @ no__t-1\ldif.log *|  
+|서버 관리자 ADDSDeployment Windows PowerShell 배포 엔진|-이벤트 viewer\Applications 및 서비스 logs\Microsoft\Windows\DirectoryServices-Deployment\Operational|  
+|Windows 서비스|-%systemroot%\Logs\CBS @ no__t-0 @ no__t-1<br /><br />- %systemroot%\servicing\sessions\sessions.xml<br /><br />- %systemroot%\winsxs\poqexec.log<br /><br />- %systemroot%\winsxs\pending.xml|  
 
 ### <a name="tools-and-commands-for-troubleshooting-domain-controller-configuration"></a>도메인 컨트롤러 구성 문제 해결을 위한 도구 및 명령
 
@@ -112,7 +112,7 @@ ms.locfileid: "66443123"
    > [!NOTE]  
    > 아래에 나열된 오류 중 일부는 운영 체제와 향후 운영 체제의 도메인 컨트롤러 구성 변경으로 인해 더 이상 발생하지 않습니다. 또한 새로운 ADDSDeployment Windows PowerShell 코드는 특정 오류를 방지하지만 dcpromo.exe /unattend는 그렇지 않습니다. 따라서 현재 사용 중인 모든 자동화를 더 이상 사용되지 않는 DCPromo에서 ADDSDeployment Windows PowerShell로 전환해야 합니다.  
 
-### <a name="promotion-and-demotion-success-codes"></a>승격 및 강등에 성공 코드
+### <a name="promotion-and-demotion-success-codes"></a>수준 올리기 및 수준 내리기 성공 코드
 
 |오류 코드|설명|참고|  
 |--------------|---------------|--------|  
@@ -121,7 +121,7 @@ ms.locfileid: "66443123"
 |3|종료, 성공, 사소한 오류|일반적으로 DNS 위임 경고를 반환할 때 표시됩니다. DNS 위임을 구성하지 않으려면 다음을 사용합니다.<br /><br />-creatednsdelegation:$false|  
 |4|종료, 성공, 사소한 오류, 다시 부팅해야 함|일반적으로 DNS 위임 경고를 반환할 때 표시됩니다. DNS 위임을 구성하지 않으려면 다음을 사용합니다.<br /><br />-creatednsdelegation:$false|  
 
-### <a name="promotion-and-demotion-failure-codes"></a>승격 및 강등에 오류 코드
+### <a name="promotion-and-demotion-failure-codes"></a>수준 올리기 및 수준 내리기 오류 코드
 
 수준 올리기 및 내리기에서 반환되는 실패 메시지 코드는 다음과 같습니다. 확장된 오류 메시지일 수도 있으므로 숫자 부분만 읽지 말고 항상 전체 오류를 자세히 읽어보아야 합니다.  
 
@@ -133,12 +133,12 @@ ms.locfileid: "66443123"
 |     13     |                                               인증 기관이 설치되어 있습니다.                                               | 이 도메인 컨트롤러도 인증 기관이므로 수준을 내릴 수 없습니다. 해당 사용 현황을 인벤토리에 신중하게 추가하기 전에 CA를 제거하지 마세요. 인증서를 발급하고 있는 경우 역할을 제거하면 작동이 중단됩니다. 도메인 컨트롤러에서 CA를 실행하지 않는 것이 좋습니다. |
 |     14     |                                                    안전 부팅 모드로 실행 중입니다.                                                     |                                                                                                                      서버를 표준 모드로 부팅하세요.                                                                                                                      |
 |     15     |                                            역할 변경이 진행 중이거나 다시 부팅해야 합니다.                                            |                                                                                             이전 구성 변경으로 인해 수준을 올리기 전에 서버를 다시 시작해야 합니다.                                                                                              |
-|     16     |                                                    잘못된 플랫폼에서 실행 중입니다.                                                     |                                                                                                                       *이 오류가 발생할 가능성이 없습니다*                                                                                                                       |
+|     16     |                                                    잘못된 플랫폼에서 실행 중입니다.                                                     |                                                                                                                       *이 오류가 발생 하지 않을 수 있습니다.*                                                                                                                       |
 |     17     |                                                      NTFS 5 드라이브가 없습니다.                                                      |                                                                            최소한 %systemdrive%를 NTFS로 포맷해야 하는 Windows Server 2012에서는 이 오류가 발생하지 않습니다.                                                                             |
 |     18     |                                                    windir에 공간이 부족합니다.                                                    |                                                                                                        cleanmgr.exe를 사용하여 %systemdrive% 볼륨의 여유 공간을 확보하세요.                                                                                                        |
 |     19     |                                                이름 변경이 보류 중이며 다시 부팅해야 합니다.                                                 |                                                                                                                             서버를 다시 부팅하세요.                                                                                                                              |
 |     20     |                                                 컴퓨터 이름의 구문이 잘못되었습니다.                                                  |                                                                                                                   컴퓨터 이름을 올바른 이름으로 바꾸세요.                                                                                                                    |
-|     21     |                             이 도메인 컨트롤러는 FSMO 역할을 하거나 GC 및/또는 DNS 서버입니다.                             |                                                                                                      추가 **-demoteoperationmasterrole** 사용 하는 경우 **-forceremoval**합니다.                                                                                                      |
+|     21     |                             이 도메인 컨트롤러는 FSMO 역할을 하거나 GC 및/또는 DNS 서버입니다.                             |                                                                                                      **-Forceremoval**을 사용 하는 경우 **-demoteoperationmasterrole** 을 추가 합니다.                                                                                                      |
 |     22     |                                        TCP/IP를 설치해야 하거나 TCP/IP가 작동 중이지 않습니다.                                         |                                                                                                    컴퓨터에 TCP/IP가 구성되고 바인딩되고 올바르게 작동 중인지 확인하세요.                                                                                                     |
 |     23     |                                             DNS 클라이언트를 먼저 구성해야 합니다.                                              |                                                                                                  새 도메인 컨트롤러를 도메인에 추가할 경우 주 DNS 서버를 설정하세요.                                                                                                  |
 |     24     |                                  제공된 자격 증명이 잘못되었거나 필수 요소가 누락되었습니다.                                   |                                                                                                               사용자 이름 및 암호가 올바른지 확인하세요.                                                                                                                |
@@ -166,9 +166,9 @@ ms.locfileid: "66443123"
 |     47     |                                          지정한 이름의 트리가 이미 있습니다.                                           |                                                                                                                  다른 트리 DNS 도메인 이름을 선택하세요.                                                                                                                   |
 |     48     |                                       트리 이름이 포리스트 구조에 맞지 않습니다.                                       |                                                                                                                  다른 트리 DNS 도메인 이름을 선택하세요.                                                                                                                   |
 |     49     |                                               지정한 도메인이 없습니다.                                                |                                                                                                                       입력한 도메인 이름을 확인하세요.                                                                                                                        |
-|     50     | 수준 내리기 중에 검색되거나 지정한 마지막 도메인 컨트롤러가 실제 마지막 도메인 컨트롤러가 아닙니다. |        실제 마지막 도메인 컨트롤러가 아닌 경우 **도메인의 마지막 도메인 컨트롤러**( **-lastdomaincontrollerindomain**)를 지정하지 마세요. 사용 하 여 **-ignorelastdcindomainmismatch** 경우 실제로 마지막 도메인 컨트롤러 가상 도메인 컨트롤러 메타 데이터 재정의        |
+|     50     | 수준 내리기 중에 검색되거나 지정한 마지막 도메인 컨트롤러가 실제 마지막 도메인 컨트롤러가 아닙니다. |        실제 마지막 도메인 컨트롤러가 아닌 경우 **도메인의 마지막 도메인 컨트롤러**( **-lastdomaincontrollerindomain**)를 지정하지 마세요. 실제로 마지막 도메인 컨트롤러이 고 가상 도메인 컨트롤러 메타 데이터가 있는 경우 **-ignorelastdcindomainmismatch** 를 사용 하 여 재정의 합니다.        |
 |     51     |                                          이 도메인 컨트롤러에 응용 프로그램 파티션이 있습니다.                                          |                                                                                              **응용 프로그램 파티션을 제거**( **-removeapplicationpartitions**)하도록 지정하세요.                                                                                               |
-|     52     |            필요한 명령줄 인수가 없습니다. 즉, 명령줄에 응답 파일을 지정해야 합니다.             |                                                                                              *Dcpromo를 사용 하 여 볼만 / 무인는 사용 되지 않습니다. 이전 설명서를 참조 하세요.*                                                                                              |
+|     52     |            필요한 명령줄 인수가 없습니다. 즉, 명령줄에 응답 파일을 지정해야 합니다.             |                                                                                              *은 더 이상 사용 되지 않는 dcpromo/unattend와만 표시 됩니다. 이전 설명서 참조 @ no__t-0                                                                                              |
 |     53     |                               수준 올리기/내리기에 실패했습니다. 정리하려면 컴퓨터를 다시 부팅해야 합니다.                                |                                                                                                                    확장된 오류 및 로그를 검토하세요.                                                                                                                     |
 |     54     |                                                  수준 올리기/내리기에 실패했습니다.                                                   |                                                                                                                    확장된 오류 및 로그를 검토하세요.                                                                                                                     |
 |     55     |                                         사용자가 수준 올리기/내리기를 취소했습니다.                                          |                                                                                                                    확장된 오류 및 로그를 검토하세요.                                                                                                                     |
@@ -176,15 +176,15 @@ ms.locfileid: "66443123"
 |     58     |                                       RODC 수준을 올리는 동안 사이트 이름을 지정해야 합니다.                                        |                                                                                           RODC 사이트를 지정해야 합니다. RWDC처럼 사이트가 자동으로 검색되지 않습니다.                                                                                           |
 |     59     |                        수준을 내리는 동안 이 도메인 컨트롤러가 해당 영역 중 하나의 마지막 DNS 서버입니다.                         |                                                                                    이 도메인 컨트롤러를 **도메인의 마지막 DNS 서버**로 지정하거나, **-ignorelastdnsserverfordomain**을 사용하세요.                                                                                     |
 |     60     |         RODC의 수준을 올리려면 Windows Server 2008 이상을 실행하는 도메인 컨트롤러가 도메인에 있어야 합니다.          |                                                                                             Windows Server 2008 이상의 모델을 실행하는 하나 이상의 쓰기 가능한 도메인 컨트롤러의 수준을 올리세요.                                                                                             |
-|     61     |        DNS를 아직 호스트하지 않은 기존 도메인에는 DNS와 함께 Active Directory Domain Services를 설치할 수 없습니다.         |                                                                                                                      *이 오류는 발생 하지 않습니다*                                                                                                                      |
-|     62     |                                         응답 파일에 [DCInstall] 섹션이 없습니다.                                          |                                                                                             *Dcpromo를 사용 하 여 볼만 / 무인는 사용 되지 않습니다. 이전 설명서를 참조 하세요.*                                                                                              |
+|     61     |        DNS를 아직 호스트하지 않은 기존 도메인에는 DNS와 함께 Active Directory Domain Services를 설치할 수 없습니다.         |                                                                                                                      *이 오류를 가져올 수 없습니다.*                                                                                                                      |
+|     62     |                                         응답 파일에 [DCInstall] 섹션이 없습니다.                                          |                                                                                             *은 더 이상 사용 되지 않는 dcpromo/unattend와만 표시 됩니다. 이전 설명서를 참조 하세요.*                                                                                              |
 |     63     |                                       포리스트 기능 수준이 Windows Server 2003보다 낮습니다.                                       |                                                            포리스트 기능 수준을 Windows Server 2003 기본 모드 이상으로 올리세요. Windows 2000 및 Windows NT 4.0은 더 이상 지원되는 운영 체제가 아닙니다.                                                             |
 |     64     |                                      구성 요소 파일을 검색하지 못해 수준 올리기에 실패했습니다.                                      |                                                                                                                           AD DS 역할을 설치하세요.                                                                                                                           |
 |     65     |                                    구성 요소 파일을 설치하지 못해 수준 올리기에 실패했습니다.                                     |                                                                                                                           AD DS 역할을 설치하세요.                                                                                                                           |
 |     66     |                                      운영 체제를 검색하지 못해 수준 올리기에 실패했습니다.                                      |                                  확장된 오류 및 로그를 검토하세요. 서버에서 해당 운영 체제 버전을 반환하지 못하고 있습니다. 전반적인 상태가 매우 의심스러우므로 컴퓨터를 다시 설치해야 할 수 있습니다.                                   |
-|     68     |                                                  복제 파트너가 잘못되었습니다.                                                  |                                                                             Repadmin.exe를 사용 하 여 또는 **Get ADReplication\\**  \* 파트너 도메인 컨트롤러 상태의 유효성을 검사 하려면 Windows PowerShell                                                                              |
+|     68     |                                                  복제 파트너가 잘못되었습니다.                                                  |                                                                             Repadmin.exe 또는 @no__t **No__t**Windows PowerShell을 사용 하 여 파트너 도메인 컨트롤러 상태의 유효성을 검사 합니다.                                                                              |
 |     69     |                                    필요한 포트가 다른 응용 프로그램에서 이미 사용되고 있습니다.                                     |                                                                                    **netstat.exe -anob**를 사용하여 예약된 AD DS 포트에 잘못 할당된 프로세스를 찾으세요.                                                                                     |
-|     70     |                                          포리스트 루트 도메인 컨트롤러는 GC여야 합니다.                                          |                                                                                              *Dcpromo를 사용 하 여 볼만 / 무인는 사용 되지 않습니다. 이전 설명서를 참조 하세요.*                                                                                              |
+|     70     |                                          포리스트 루트 도메인 컨트롤러는 GC여야 합니다.                                          |                                                                                              *은 더 이상 사용 되지 않는 dcpromo/unattend와만 표시 됩니다. 이전 설명서 참조 @ no__t-0                                                                                              |
 |     71     |                                                 DNS 서버가 이미 설치되어 있습니다.                                                  |                                                                                          DNS 서비스가 이미 설치된 경우 DNS를 설치( **-installDNS**)하도록 지정하지 마세요.                                                                                           |
 |     72     |                                  컴퓨터에서 관리 모드가 아닌 모드로 원격 데스크톱 서비스를 실행하고 있습니다.                                   |        이 도메인 컨트롤러는 세 명 이상의 관리 사용자용으로 구성된 RDS 서버이기도 하므로 수준을 올릴 수 없습니다. 해당 사용 현황을 인벤토리에 신중하게 추가하기 전에 RDS를 제거하지 마세요. 애플리케이션 또는 최종 사용자가 사용 중인 경우 제거하면 작동이 중단됩니다.         |
 |     73     |                                        지정한 포리스트 기능 수준이 잘못되었습니다.                                         |                                                                                                                  올바른 포리스트 기능 수준을 지정하세요.                                                                                                                   |
@@ -197,33 +197,33 @@ ms.locfileid: "66443123"
 |     80     |                                                Domainprep를 수행하지 않았습니다.                                                 |                                                                                              Windows Server 2012를 사용하여 도메인을 준비하거나 **adprep.exe /domainprep**를 사용하세요.                                                                                               |
 |     81     |                                                Forestprep를 수행하지 않았습니다.                                                 |                                                                                              Windows Server 2012를 사용하여 포리스트를 준비하거나 **adprep.exe /forestprep**를 사용하세요.                                                                                               |
 |     82     |                                                      포리스트 스키마가 일치하지 않습니다.                                                      |                                                                                              Windows Server 2012를 사용하여 포리스트를 준비하거나 **adprep.exe /forestprep**를 사용하세요.                                                                                               |
-|     83     |                                                         지원되지 않는 SKU입니다.                                                          |                                                                                                                       *이 오류가 발생할 가능성이 없습니다*                                                                                                                       |
+|     83     |                                                         지원되지 않는 SKU입니다.                                                          |                                                                                                                       *이 오류가 발생 하지 않을 수 있습니다.*                                                                                                                       |
 |     84     |                                           도메인 컨트롤러 계정을 검색할 수 없습니다.                                           |                                                                                         기존 도메인 컨트롤러에 올바른 사용자 계정 컨트롤 특성이 설정되어 있는지 확인하세요.                                                                                         |
 |     85     |                                     2단계에 대한 도메인 컨트롤러 계정을 선택할 수 없습니다.                                     |                                                 "기존 계정 사용"을 지정했지만 계정을 찾을 수 없거나 계정 조회 중 오류가 발생한 경우에 반환됩니다. 올바른 준비된 RODC 계정을 제공했는지 확인하세요.                                                 |
 |     86     |                                                  2단계 수준 올리기를 실행해야 합니다.                                                   |                                                                       추가 도메인 컨트롤러의 수준을 올리려고 하지만 기존 계정이 있고 "다시 설치 허용"을 지정하지 않은 경우에 반환됩니다.                                                                       |
-|     87     |                                      충돌하는 유형의 도메인 컨트롤러 계정이 있습니다.                                      |   비어 있는 도메인 컨트롤러에 연결하려는 경우가 아니면 수준을 올리기 전에 컴퓨터 이름을 바꾸세요. 사용 하 여 비어 있는 도메인 컨트롤러 계정에 연결 해야 합니다 **-useexistingaccount** 및 올바른 읽기 전용 또는 쓰기 가능 인수와 계정 유형에 따라    |
+|     87     |                                      충돌하는 유형의 도메인 컨트롤러 계정이 있습니다.                                      |   비어 있는 도메인 컨트롤러에 연결하려는 경우가 아니면 수준을 올리기 전에 컴퓨터 이름을 바꾸세요. 계정 유형에 따라 **-useexistingaccount** 및 올바른 읽기 전용 또는 쓰기 가능 인수를 사용 하 여 비어 있는 도메인 컨트롤러 계정에 연결 해야 합니다.    |
 |     88     |                                             지정한 서버 관리자가 올바르지 않습니다.                                              |                                                                           잘못된 RODC 관리 위임 계정을 지정했습니다. 지정한 계정이 올바른 사용자 또는 그룹인지 확인하세요.                                                                           |
 |     89     |                                         지정한 도메인의 RID 마스터가 오프라인 상태입니다.                                          |                                                                 **netdom.exe query fsmo**를 사용하여 RID 마스터를 검색하세요. 온라인 상태로 전환한 후 수준을 올리려는 도메인 컨트롤러에서 액세스할 수 있도록 설정하세요.                                                                  |
 |     90     |                                                 도메인 명명 마스터가 오프라인 상태입니다.                                                 |                                                            **netdom.exe query fsmo**를 사용하여 도메인 명명 마스터를 검색하세요. 온라인 상태로 전환한 후 수준을 올리려는 도메인 컨트롤러에서 액세스할 수 있도록 설정하세요.                                                             |
-|     91     |                                             프로세스가 wow64인지 검색하지 못했습니다.                                             |                                                                                                  *이 오류는 발생 하지 않습니다 더 이상 운영 체제는 64 비트*                                                                                                  |
-|     92     |                                                  Wow64 프로세스는 지원되지 않습니다.                                                  |                                                                                                  *이 오류는 발생 하지 않습니다 더 이상 운영 체제는 64 비트*                                                                                                  |
+|     91     |                                             프로세스가 wow64인지 검색하지 못했습니다.                                             |                                                                                                  *이 오류를 더 이상 가져올 수 없습니다. 운영 체제가 64 비트입니다.*                                                                                                  |
+|     92     |                                                  Wow64 프로세스는 지원되지 않습니다.                                                  |                                                                                                  *이 오류를 더 이상 가져올 수 없습니다. 운영 체제가 64 비트입니다.*                                                                                                  |
 |     93     |                                도메인 컨트롤러 서비스가 비강제 수준 내리기에 대해 실행되고 있지 않습니다.                                |                                                                                                                          AD DS 서비스를 시작하세요.                                                                                                                           |
 |     94     |                           로컬 관리자 암호가 요구 사항을 충족하지 않습니다. 비어 있거나 필요하지 않습니다.                           |                                                                                         비어 있지 않은 암호를 제공하고 로컬 암호 정책에서 암호를 요구하는지 확인하세요.                                                                                         |
 |     95     |              라이브 RODC가 있는 도메인에서는 Windows Server 2008 이상을 실행하는 마지막 도메인 컨트롤러의 수준을 내릴 수 없습니다.              |                                                                             Windows Server 2008 이상을 실행하는 모든 쓰기 가능한 도메인 컨트롤러의 수준을 내리려면 먼저 모든 RODC의 수준을 내려야 합니다.                                                                             |
-|     96     |                                                 DS 파일을 제거할 수 없습니다.                                                  |                                                                                              *Dcpromo를 사용 하 여 볼만 / 무인는 사용 되지 않습니다. 이전 설명서를 참조 하세요.*                                                                                              |
+|     96     |                                                 DS 파일을 제거할 수 없습니다.                                                  |                                                                                              *은 더 이상 사용 되지 않는 dcpromo/unattend와만 표시 됩니다. 이전 설명서 참조 @ no__t-0                                                                                              |
 |     97     |                      포리스트 기능 수준의 버전이 자식 도메인 운영 체제의 버전보다 높습니다.                       |                                                                                           포리스트 기능 수준보다 높거나 같은 자식 도메인 기능 수준을 제공하세요.                                                                                            |
-|     98     |                                        구성 요소 파일 설치/제거가 진행 중입니다.                                        |                                                                                              *Dcpromo를 사용 하 여 볼만 / 무인는 사용 되지 않습니다. 이전 설명서를 참조 하세요.*                                                                                              |
+|     98     |                                        구성 요소 파일 설치/제거가 진행 중입니다.                                        |                                                                                              *은 더 이상 사용 되지 않는 dcpromo/unattend와만 표시 됩니다. 이전 설명서 참조 @ no__t-0                                                                                              |
 |     99     |                              포리스트 기능 수준이 너무 낮습니다(Windows Server 2012에만 해당하는 오류).                              |                                                            포리스트 기능 수준을 Windows Server 2003 기본 모드 이상으로 올리세요. Windows 2000 및 Windows NT 4.0은 더 이상 지원되는 운영 체제가 아닙니다.                                                             |
 |    100     |                              도메인 기능 수준이 너무 낮습니다(Windows Server 2012에만 해당하는 오류).                              |                                                            도메인 기능 수준을 Windows Server 2003 기본 모드 이상으로 올리세요. Windows 2000 및 Windows NT 4.0은 더 이상 지원되는 운영 체제가 아닙니다.                                                             |
 
-## <a name="known-issues-and-common-support-scenarios"></a>알려진된 문제 및 일반적인 지원 시나리오
+## <a name="known-issues-and-common-support-scenarios"></a>알려진 문제 및 일반적인 지원 시나리오
 
 다음은 Windows Server 2012 개발 프로세스 중에 발생하는 일반적인 문제입니다. 이러한 문제는 모두 "의도적인" 것이며, 유효한 해결 방법 또는 사전에 이를 방지할 수 있는 보다 적절한 기술이 있습니다. 이러한 동작의 대부분은 Windows Server 2008 R2 및 이전 운영 체제에서 동일하지만 AD DS 배포 다시 쓰기에서는 문제가 민감도가 높습니다.  
 
 |문제점|도메인 컨트롤러의 수준을 내리면 DNS가 영역 없이 실행되는 상태로 유지됩니다.|  
 |---------|-----------------------------------------------------------------|  
 |증상|서버에서 여전히 DNS 요청에 응답하지만 영역 정보가 없습니다.|  
-|해결 방법 및 참고 사항|AD DS 역할을 제거할 때 DNS 서버 역할도 제거하거나 DNS 서버 서비스를 사용 안 함으로 설정하세요. DNS 클라이언트 자체보다 다른 서버를 가리켜야 합니다. Windows PowerShell을 사용하는 경우 서버의 수준을 내린 후 다음을 실행하세요.<br /><br />코드-제거 windowsfeature dns<br /><br />로 구분하거나 여러<br /><br />코드-서비스 설정 하는 dns-starttype 사용 하지 않도록 설정<br />dns 서비스 중지|  
+|해결 방법 및 참고 사항|AD DS 역할을 제거할 때 DNS 서버 역할도 제거하거나 DNS 서버 서비스를 사용 안 함으로 설정하세요. DNS 클라이언트 자체보다 다른 서버를 가리켜야 합니다. Windows PowerShell을 사용하는 경우 서버의 수준을 내린 후 다음을 실행하세요.<br /><br />코드 제거-add-windowsfeature dns<br /><br />로 구분하거나 여러<br /><br />코드 집합-서비스 dns-starttype 사용 안 함<br />중지-서비스 dns|  
 
 |문제점|Windows Server 2012를 기존 단일 레이블 도메인으로 수준을 올릴 경우 updatetopleveldomain=1 또는 allowsinglelabeldnsdomain=1이 구성되지 않습니다.|  
 |---------|----------------------------------------------------------------------------------------------------------------------------------------------------|  
@@ -232,7 +232,7 @@ ms.locfileid: "66443123"
 
 |문제점|미리 만든 비어 있는 RODC 계정이 있는 경우 도메인의 마지막 도메인 컨트롤러에 대한 수준 내리기에 실패합니다.|  
 |---------|------------------------------------------------------------------------------------------------------------|  
-|증상|다음 메시지와 함께 수준 내리기에 실패합니다.<br /><br />**Dcpromo.General.54**<br /><br />Active Directory Domain Services에서 다른 Active Directory 도메인 컨트롤러를 찾지 못해 디렉터리 파티션 CN=Schema,CN=Configuration,DC=corp,DC=contoso,DC=com의 나머지 데이터를 전송할 수 없습니다.<br /><br />"지정된 도메인 이름의 포맷이 틀립니다."|  
+|증상|다음 메시지와 함께 수준 내리기에 실패합니다.<br /><br />**Dcpromo. 일반. 54**<br /><br />Active Directory Domain Services에서 다른 Active Directory 도메인 컨트롤러를 찾지 못해 디렉터리 파티션 CN=Schema,CN=Configuration,DC=corp,DC=contoso,DC=com의 나머지 데이터를 전송할 수 없습니다.<br /><br />"지정된 도메인 이름의 포맷이 틀립니다."|  
 |해결 방법 및 참고 사항|도메인의 수준을 내리기 전에 **Dsa.msc** 또는 **Ntdsutil.exe metadata cleanup**을 사용하여 나머지 미리 만든 RODC 계정을 모두 제거하세요.|  
 
 |문제점|자동화된 포리스트 및 도메인 준비에서 GPPREP를 실행하지 않습니다.|  
@@ -242,28 +242,28 @@ ms.locfileid: "66443123"
 
 |문제점|UNC 경로를 가리킬 때 미디어에서 설치를 확인하지 못합니다.|  
 |---------|------------------------------------------------------------------|  
-|증상|다음 오류가 반환됩니다.<br /><br />코드-미디어 경로 확인할 수 없습니다. "2" 인수를 사용 하 여 "GetDatabaseInfo"를 호출 하는 예외입니다. 폴더가 잘못 되었습니다.|  
+|증상|다음 오류가 반환됩니다.<br /><br />코드-미디어 경로를 확인할 수 없습니다. "2" 인수를 사용 하 여 "GetDatabaseInfo"를 호출 하는 동안 예외가 발생 했습니다. 폴더가 잘못 되었습니다.|  
 |해결 방법 및 참고 사항|원격 UNC 경로가 아니라 로컬 디스크에 IFM 파일을 저장해야 합니다. 이 의도적인 차단은 네트워크 중단으로 인해 서버 수준 올리기가 일부만 완료되는 것을 방지합니다.|  
 
 |문제점|도메인 컨트롤러 수준 올리기 중에 DNS 위임 경고가 두 번 표시됩니다.|  
 |---------|-------------------------------------------------------------------------|  
-|증상|반환 된 경고 *두 번* ADDSDeployment Windows PowerShell을 사용 하 여 수준을 올릴 때:<br /><br />코드-"Windows DNS를 실행 하지 않습니다 또는 신뢰할 수 있는 부모 영역을 찾을 수 없습니다 때문에이 DNS 서버에 대 한 위임을 만들 수 없습니다 서버. 기존 DNS 인프라와 통합 하는 경우 도메인 외부에서 확인을 신뢰할 수 있는 이름 수 있도록 부모 영역에이 DNS 서버에 대 한 위임을 수동으로 만들 해야 있습니다. 그렇지 않은 경우 조치가 필요 하지 않습니다. "|  
-|해결 방법 및 참고 사항|무시하세요. ADDSDeployment Windows PowerShell은 필수 구성 요소를 검사하는 동안 첫 번째 경고를 표시한 다음 도메인 컨트롤러를 구성하는 동안 경고를 다시 표시합니다. DNS 위임을 구성하지 않으려면 다음 인수를 사용하세요.<br /><br />코드-creatednsdelegation: $false<br /><br />이 메시지를 표시하지 않기 위해 필수 구성 요소 확인을 건너뛰지 *마세요*.|  
+|증상|ADDSDeployment Windows PowerShell을 사용 하 여 수준을 올릴 때 경고가 *두 번* 반환 됩니다.<br /><br />코드-"신뢰할 수 있는 부모 영역을 찾을 수 없거나 Windows DNS 서버를 실행 하지 않으므로이 DNS 서버에 대 한 위임을 만들 수 없습니다. 기존 DNS 인프라와 통합 하는 경우 도메인 외부에서 안정적인 이름 확인을 위해 부모 영역에이 DNS 서버에 대 한 위임을 수동으로 만들어야 합니다. 그렇지 않으면 아무 작업도 필요 하지 않습니다. "|  
+|해결 방법 및 참고 사항|무시하세요. ADDSDeployment Windows PowerShell은 필수 구성 요소를 검사하는 동안 첫 번째 경고를 표시한 다음 도메인 컨트롤러를 구성하는 동안 경고를 다시 표시합니다. DNS 위임을 구성하지 않으려면 다음 인수를 사용하세요.<br /><br />코드--creatednsdelegation: $false<br /><br />이 메시지를 표시하지 않기 위해 필수 구성 요소 확인을 건너뛰지 *마세요*.|  
 
 |문제점|구성 중에 UPN 또는 도메인이 아닌 자격 증명을 지정하면 잘못된 오류가 반환됩니다.|  
 |---------|--------------------------------------------------------------------------------------------|  
-|증상|서버 관리자에서 다음 오류가 반환됩니다.<br /><br />코드-"6" 인수를 사용 하 여 "DNSOption"를 호출 하는 예외<br /><br />ADDSDeployment Windows PowerShell에서 다음 오류가 반환됩니다.<br /><br />코드의 사용자 권한 확인 하지 못했습니다. 이 사용자 계정이 속해 있는 도메인의 이름을 제공 해야 합니다.|  
+|증상|서버 관리자에서 다음 오류가 반환됩니다.<br /><br />"6" 개 인수를 사용 하 여 "DNSOption"을 호출 하는 코드 예외<br /><br />ADDSDeployment Windows PowerShell에서 다음 오류가 반환됩니다.<br /><br />사용자 권한을 코드에서 확인 하지 못했습니다. 이 사용자 계정이 속한 도메인의 이름을 제공 해야 합니다.|  
 |해결 방법 및 참고 사항|**domain\user** 형식의 올바른 도메인 자격 증명을 제공했는지 확인하세요.|  
 
 |문제점|Dism.exe를 사용하여 DirectoryServices-DomainController 역할을 제거한 경우 서버를 부팅할 수 없습니다.|  
 |---------|---------------------------------------------------------------------------------------------------|  
-|증상|도메인 컨트롤러의 수준을 정상적으로 내리기 전에 Dism.exe를 사용하여 AD DS 역할을 제거한 경우 서버가 더 이상 정상적으로 부팅되지 않고 다음 오류가 표시됩니다.<br /><br />코드-상태: 0x000000000<br />정보: 예기치 않은 오류가 발생 했습니다.|  
+|증상|도메인 컨트롤러의 수준을 정상적으로 내리기 전에 Dism.exe를 사용하여 AD DS 역할을 제거한 경우 서버가 더 이상 정상적으로 부팅되지 않고 다음 오류가 표시됩니다.<br /><br />코드 상태: 0x000000000<br />나타납니다 예기치 않은 오류가 발생 했습니다.|  
 |해결 방법 및 참고 사항|*Shift+F8*을 사용하여 디렉터리 서비스 복구 모드로 부팅하세요. AD DS 역할을 다시 추가한 다음 도메인 컨트롤러의 수준을 강제로 내리세요. 또는 백업에서 시스템 상태를 복원하세요. AD DS 역할 제거에 Dism.exe를 사용하지 마세요. 이 유틸리티는 도메인 컨트롤러를 인식하지 못합니다.|  
 
 |문제점|forestmode를 Win2012로 설정한 경우 새 포리스트 설치에 실패합니다.|  
 |---------|--------------------------------------------------------------------|  
-|증상|ADDSDeployment Windows PowerShell을 사용하여 수준을 올릴 때 다음 오류가 반환됩니다.<br /><br />Code -  Test.VerifyDcPromoCore.DCPromo.General.74<br /><br />도메인 컨트롤러 수준 올리기에 대 한 필수 구성 요소 확인 하지 못했습니다. 지정한 도메인 기능 수준이 잘못 되었습니다.|  
-|해결 방법 및 참고 사항|포리스트 기능 모드 Win2012를 지정하려면 도메인 기능 모드 Win2012도 *함께* 지정해야 합니다. 다음은 오류 없이 작동하는 예제입니다.<br /><br />Code - -forestmode Win2012 -domainmode Win2012]|  
+|증상|ADDSDeployment Windows PowerShell을 사용하여 수준을 올릴 때 다음 오류가 반환됩니다.<br /><br />VerifyDcPromoCore (코드-일반. 74)<br /><br />도메인 컨트롤러 수준을 올리는 데 필요한 필수 구성 요소를 확인 하지 못했습니다. 지정 된 도메인 기능 수준이 잘못 되었습니다.|  
+|해결 방법 및 참고 사항|포리스트 기능 모드 Win2012를 지정하려면 도메인 기능 모드 Win2012도 *함께* 지정해야 합니다. 다음은 오류 없이 작동하는 예제입니다.<br /><br />코드--forestmode Win2012-domainmode Win2012]|  
 
 |||  
 |-|-|  
@@ -275,66 +275,66 @@ ms.locfileid: "66443123"
 |-|-|  
 |문제점|서버 관리자를 사용하여 수준을 내리는 경우 완료될 때까지 피드백이 제공되지 않습니다.|  
 |증상|서버 관리자를 사용하여 AD DS 역할을 제거하고 도메인 컨트롤러의 수준을 내리는 경우 수준 내리기가 완료되거나 실패할 때까지 진행 중에 제공되는 피드백이 없습니다.|  
-|해결 방법 및 참고 사항|이것은 서버 관리자의 제한 사항입니다. 피드백을 받으려면 다음 ADDSDeployment Windows PowerShell cmdlet을 사용하세요.<br /><br />코드-addsdomaincontroller 제거|  
+|해결 방법 및 참고 사항|이것은 서버 관리자의 제한 사항입니다. 피드백을 받으려면 다음 ADDSDeployment Windows PowerShell cmdlet을 사용하세요.<br /><br />코드 제거-install-addsdomaincontroller|  
 
 |||  
 |-|-|  
 |문제점|미디어에서 설치 확인이 쓰기 가능한 도메인 컨트롤러에 대해 제공된 RODC 미디어를 검색하지 못하며, 그 반대의 경우도 마찬가지입니다.|  
-|증상|IFM을 사용하여 새 도메인 컨트롤러의 수준을 올리고 IFM에 잘못된 미디어를 제공한 경우(예: 쓰기 가능한 도메인 컨트롤러에 RODC 미디어를 제공하거나, RODC에 RWDC 미디어를 제공한 경우) 확인 단추에서 오류가 반환되지 않습니다. 나중에 다음 오류와 함께 수준 올리기에 실패합니다.<br /><br />코드-이 컴퓨터를 도메인 컨트롤러로 구성 하는 동안 오류가 발생 했습니다. <br />읽기 전용 DC의 수준을 올리기 미디어에서 설치는 지정한 원본 데이터베이스 허용 되지 않으므로 시작할 수 없습니다. RODC의 IFM 홍보를 위해 다른 Rodc에서 데이터베이스에만 사용할 수 있습니다.|  
+|증상|IFM을 사용하여 새 도메인 컨트롤러의 수준을 올리고 IFM에 잘못된 미디어를 제공한 경우(예: 쓰기 가능한 도메인 컨트롤러에 RODC 미디어를 제공하거나, RODC에 RWDC 미디어를 제공한 경우) 확인 단추에서 오류가 반환되지 않습니다. 나중에 다음 오류와 함께 수준 올리기에 실패합니다.<br /><br />코드-이 컴퓨터를 도메인 컨트롤러로 구성 하는 동안 오류가 발생 했습니다. <br />지정 된 원본 데이터베이스가 허용 되지 않기 때문에 읽기 전용 DC의 미디어에서 설치 수준을 올리는 것을 시작할 수 없습니다. RODC의 IFM 수준 올리기에는 다른 Rodc의 데이터베이스만 사용할 수 있습니다.|  
 |해결 방법 및 참고 사항|확인은 IFM의 전체 무결성에 대한 유효성 검사만 수행합니다. 서버에 잘못된 IFM 유형을 제공하지 마세요. 올바른 미디어로 수준 올리기를 다시 시도하기 전에 서버를 다시 시작하세요.|  
 
 |||  
 |-|-|  
 |문제점|미리 만든 컴퓨터 계정으로 RODC의 수준을 올릴 수 없습니다.|  
-|증상|ADDSDeployment Windows PowerShell을 사용하여 준비된 컴퓨터 계정으로 새 RODC의 수준을 올릴 때 다음 오류가 발생합니다.<br /><br />코드 매개 변수 집합은 지정 된 명명 된 매개 변수를 사용 하 여 확인할 수 없습니다.    <br />InvalidArgument: ParameterBindingException<br />    + FullyQualifiedErrorId: AmbiguousParameterSet,Microsoft.DirectoryServices.Deployment.PowerShell.Commands.Install|  
-|해결 방법 및 참고 사항|미리 만든 RODC 계정에 이미 정의된 매개 변수를 제공하지 마세요. 이러한 개체는 다음과 같습니다.<br /><br />-Readonlyreplica 코드<br />-installdns<br />-donotconfigureglobalcatalog<br />-sitename<br />-installdns|  
+|증상|ADDSDeployment Windows PowerShell을 사용하여 준비된 컴퓨터 계정으로 새 RODC의 수준을 올릴 때 다음 오류가 발생합니다.<br /><br />지정 된 명명 된 매개 변수를 사용 하 여 코드 매개 변수 집합을 확인할 수 없습니다.    <br />InvalidArgument: ParameterBindingException<br />    + FullyQualifiedErrorId: AmbiguousParameterSet, DirectoryServices를 설치 합니다.|  
+|해결 방법 및 참고 사항|미리 만든 RODC 계정에 이미 정의된 매개 변수를 제공하지 마세요. 이러한 개체는 다음과 같습니다.<br /><br />코드--readonlyreplica<br />-installdns<br />-donotconfigureglobalcatalog<br />-sitename<br />-installdns|  
 
 |||  
 |-|-|  
 |문제점|"필요한 경우 자동으로 대상 서버 다시 시작"을 선택/선택 취소한 경우 아무 작업도 실행되지 않습니다.|  
-|증상|선택 (또는 선택 하지 않으면) 하는 경우 서버 관리자 옵션 **필요한 경우 자동으로 대상 서버를 다시 시작** whendemoting 역할 제거를 통해 도메인 컨트롤러, 서버가 항상 다시 시작 되 면을 선택 하 든 합니다.|  
+|증상|역할 제거를 통해 도메인 컨트롤러의 수준을 내리는 **데 필요한 경우 자동으로 각 대상 서버를 다시 시작** 합니다. 옵션을 서버 관리자 선택 하는 경우에 관계 없이 서버가 항상 다시 시작 됩니다.|  
 |해결 방법 및 참고 사항|이는 의도적인 것입니다. 수준 내리기 프로세스는 이 설정에 상관없이 서버를 다시 시작합니다.|  
 
 |||  
 |-|-|  
 |문제점|Dcpromo.log에 "[오류] 2로 인해 서버 파일의 보안 설정에 실패했습니다."가 표시됩니다.|  
-|증상|도메인 컨트롤러의 수준 내리기가 문제 없이 완료되지만 dcpromo 로그를 검토하면 다음 오류가 표시됩니다.<br /><br />2를 사용 하 여 코드-[error] 서버 파일의 보안을 설정 하지 못했습니다.|  
+|증상|도메인 컨트롤러의 수준 내리기가 문제 없이 완료되지만 dcpromo 로그를 검토하면 다음 오류가 표시됩니다.<br /><br />코드-[오류] 서버 파일에 보안을 설정 하지 못했습니다. 2|  
 |해결 방법 및 참고 사항|무시하세요. 이 오류는 형식적이며 예상된 오류입니다.|  
 
 |||  
 |-|-|  
 |문제점|"Exchange 스키마 충돌 검사를 수행할 수 없습니다." 오류로 인해 필수 구성 요소 adprep 검사에 실패합니다.|  
-|증상|Windows Server 2012 도메인 컨트롤러를 기존 Windows Server 2003, Windows Server 2008 또는 Windows Server 2008 R2 포리스트로 수준을 올리려고 할 때 다음 오류로 인해 필수 구성 요소 확인에 실패합니다.<br /><br />코드-AD 준비에 대 한 필수 구성 요소 확인에 실패 했습니다. 도메인에 대 한 Exchange 스키마 충돌 검사를 수행할 수 없습니다 *<domain name>* (예외: RPC 서버를 사용할 수 없는 경우)<br /><br />adprep.log에 다음 오류가 표시됩니다.<br /><br />코드는 서버에서 Adprep 데이터 검색 하지 못했습니다. *<domain controller>*<br /><br />Windows Management Instrumentation (WMI)을 통해|  
-|해결 방법 및 참고 사항|새 도메인 컨트롤러에서 기존 도메인 컨트롤러에 대한 DCOM/RPC 프로토콜을 통해 WMI에 액세스할 수 없습니다. 지금까지 확인된 이 오류의 원인은 다음 세 가지입니다.<br /><br />기존 도메인 컨트롤러-방화벽 규칙 요소 액세스<br /><br />-네트워크 서비스 계정이 "서비스로 로그온"에서 누락 된 기존 도메인 컨트롤러에 권한 (SeServiceLogonRight)<br /><br />-NTLM에 설명 된 보안 정책을 사용 하 여 도메인 컨트롤러에서 비활성화 되어 [NTLM 인증 제한 사항 소개](https://technet.microsoft.com/library/dd560653(WS.10).aspx)|  
+|증상|Windows Server 2012 도메인 컨트롤러를 기존 Windows Server 2003, Windows Server 2008 또는 Windows Server 2008 R2 포리스트로 수준을 올리려고 할 때 다음 오류로 인해 필수 구성 요소 확인에 실패합니다.<br /><br />코드-AD 준비에 대 한 필수 구성 요소를 확인 하지 못했습니다. 도메인 *@no__t* 에 대해 Exchange 스키마 충돌 검사를 수행할 수 없습니다 (예외: RPC 서버를 사용할 수 없음).<br /><br />adprep.log에 다음 오류가 표시됩니다.<br /><br />코드-Adprep에서 서버 @no__t 데이터를 검색 하지 못했습니다. *-1*<br /><br />WMI(Windows Management Instrumentation) (WMI)를 통해|  
+|해결 방법 및 참고 사항|새 도메인 컨트롤러에서 기존 도메인 컨트롤러에 대한 DCOM/RPC 프로토콜을 통해 WMI에 액세스할 수 없습니다. 지금까지 확인된 이 오류의 원인은 다음 세 가지입니다.<br /><br />-방화벽 규칙이 기존 도메인 컨트롤러에 대 한 액세스를 차단 합니다.<br /><br />-네트워크 서비스 계정이 기존 도메인 컨트롤러에 대 한 "서비스로 로그온" (SeServiceLogonRight) 권한에서 누락 되었습니다.<br /><br />-Ntlm [인증 제한 사항 소개](https://technet.microsoft.com/library/dd560653(WS.10).aspx) 에 설명 된 보안 정책을 사용 하 여 도메인 컨트롤러에서 ntlm을 사용 하지 않도록 설정 합니다.|  
 
 |||  
 |-|-|  
 |문제점|새 AD DS 포리스트를 만들면 항상 DNS 경고가 표시됩니다.|  
-|증상|새 AD DS 포리스트를 만들고 새 도메인 컨트롤러에서 그 자체에 대한 DNS 영역을 만들 때 항상 다음 경고 메시지가 표시됩니다.<br /><br />DNS 구성에서 코드 오류가 발견 되었습니다. <br />이 컴퓨터에서 사용 하는 DNS 서버가 없는 시간 제한 간격 내에 응답 합니다.<br />(오류 코드 0x000005B4 "ERROR_TIMEOUT")|  
+|증상|새 AD DS 포리스트를 만들고 새 도메인 컨트롤러에서 그 자체에 대한 DNS 영역을 만들 때 항상 다음 경고 메시지가 표시됩니다.<br /><br />코드-DNS 구성에서 오류가 발견 되었습니다. <br />이 컴퓨터에서 사용 하는 DNS 서버가 제한 시간 간격 내에 응답 하지 않습니다.<br />(오류 코드 0x000005B4 "ERROR_TIMEOUT")|  
 |해결 방법 및 참고 사항|무시하세요. 이 경고는 기존 DNS 서버 및 영역을 가리키도록 의도한 경우 새 포리스트의 루트 도메인 내 첫 번째 도메인 컨트롤러에서 기본적으로 발생합니다.|  
 
 |||  
 |-|-|  
 |문제점|Windows PowerShell -whatif 인수가 잘못된 DNS 서버 정보를 반환합니다.|  
-|증상|암시적 또는 명시적 **-installdns:$true** 인수를 사용하여 도메인 컨트롤러를 구성할 때 **-whatif** 인수를 사용할 경우 결과 출력에 다음이 표시됩니다.<br /><br />코드-"DNS 서버: No "|  
+|증상|암시적 또는 명시적 **-installdns:$true** 인수를 사용하여 도메인 컨트롤러를 구성할 때 **-whatif** 인수를 사용할 경우 결과 출력에 다음이 표시됩니다.<br /><br />코드-"DNS 서버: 전혀|  
 |해결 방법 및 참고 사항|무시하세요. DNS가 올바르게 설치되고 구성됩니다.|  
 
 |||  
 |-|-|  
 |문제점|수준 올리기 후 "사용 가능한 저장소가 부족하여 이 명령을 처리할 수 없습니다." 오류로 인해 로그온에 실패합니다.|  
-|증상|새 도메인 컨트롤러의 수준을 올린 후 로그오프했다가 대화형으로 로그온하려는 경우 다음 오류가 발생합니다.<br /><br />코드-저장소가 부족는이 명령을 처리할 수 없습니다.|  
+|증상|새 도메인 컨트롤러의 수준을 올린 후 로그오프했다가 대화형으로 로그온하려는 경우 다음 오류가 발생합니다.<br /><br />코드-이 명령을 처리 하는 데 사용할 수 있는 충분 한 저장소가 없습니다.|  
 |해결 방법 및 참고 사항|수준을 올린 후 오류로 인해 도메인 컨트롤러가 다시 부팅되지 않았습니다. 또는 ADDSDeployment Windows PowerShell 인수 **-norebootoncompletion**을 지정했기 때문일 수도 있습니다. 도메인 컨트롤러를 다시 시작하세요.|  
 
 |||  
 |-|-|  
 |문제점|도메인 컨트롤러 옵션 페이지에서 다음 단추를 사용할 수 없음|  
 |증상|암호를 설정했는데도 서버 관리자의 **도메인 컨트롤러 옵션** 페이지에서 **다음** 단추를 사용할 수 없습니다. **사이트 이름** 메뉴에 나열된 사이트가 없습니다.|  
-|해결 방법 및 참고 사항|여러 AD DS 사이트가 있으며, 그 중 하나 이상에 서브넷이 누락되었습니다. 이 향후 도메인 컨트롤러는 이러한 서브넷 중 하나에 속합니다. 사이트 이름 드롭다운 메뉴에서 서브넷을 수동으로 선택해야 합니다. 또한 DSSITE.MSC를 사용하여 모든 AD 사이트를 검토하거나 다음 Windows PowerShell 명령을 사용하여 서브넷이 누락된 모든 사이트를 찾아야 합니다.<br /><br />코드-get adreplicationsite-필터 \* -속성 서브넷 &#124; 장소-개체 {! $_.subnets-eq "\*"을 (를) &#124; 형식 테이블 이름|  
+|해결 방법 및 참고 사항|여러 AD DS 사이트가 있으며, 그 중 하나 이상에 서브넷이 누락되었습니다. 이 향후 도메인 컨트롤러는 이러한 서브넷 중 하나에 속합니다. 사이트 이름 드롭다운 메뉴에서 서브넷을 수동으로 선택해야 합니다. 또한 DSSITE.MSC를 사용하여 모든 AD 사이트를 검토하거나 다음 Windows PowerShell 명령을 사용하여 서브넷이 누락된 모든 사이트를 찾아야 합니다.<br /><br />New-adreplicationsite-filter \*-속성 서브넷 &#124; (여기서-object {! $ _. 서브넷-eq "\*"} &#124; 서식 테이블 이름|  
 
 |||  
 |-|-|  
 |문제점|"서비스를 시작할 수 없습니다."라는 메시지와 함께 수준 올리기 또는 수준 내리기에 실패합니다.|  
-|증상|도메인 컨트롤러의 수준 올리기, 수준 내리기 또는 복제를 시도한 경우 다음 오류가 발생합니다.<br /><br />코드-서비스를 시작할 수 없습니다, 이므로 사용 하지 않도록 설정 하거나에 연결 된 사용 가능한 장치가 없기"(0x80070422)<br /><br />이 오류는 대화형이거나, 이벤트이거나, dcpromoui.log 또는 dcpromo.log와 같은 로그에 기록될 수 있습니다.|  
+|증상|도메인 컨트롤러의 수준 올리기, 수준 내리기 또는 복제를 시도한 경우 다음 오류가 발생합니다.<br /><br />코드-서비스를 사용할 수 없거나 서비스와 연결 된 사용 가능한 장치가 없기 때문에 서비스를 시작할 수 없습니다. "(0x80070422)<br /><br />이 오류는 대화형이거나, 이벤트이거나, dcpromoui.log 또는 dcpromo.log와 같은 로그에 기록될 수 있습니다.|  
 |해결 방법 및 참고 사항|DS 역할 서버 서비스(DsRoleSvc)가 사용하지 않도록 설정되어 있습니다. 기본적으로 이 서비스는 AD DS 역할을 설치하는 동안 설치되며 수동 시작 유형으로 설정됩니다. 이 서비스를 사용하지 않도록 설정하지 마세요. 다시 수동으로 설정하고 요청 시 DS 역할 작업에서 서비스를 시작 및 중지하도록 허용하세요. 이 동작은 의도된 것입니다.|  
 
 |||  
@@ -357,10 +357,10 @@ ms.locfileid: "66443123"
 
 |문제점|Dcpromo /unattend에서 지원되지 않는 기능 수준을 허용합니다.|  
 |-|-|  
-|증상|다음 예제 응답 파일과 함께 dcpromo /unattend를 사용하여 도메인 컨트롤러의 수준을 올리는 경우<br /><br />코드-<br /><br />[DCInstall]<br />NewDomain=Forest<br /><br />ReplicaOrNewDomain=Domain<br /><br />NewDomainDNSName=corp.contoso.com<br /><br />SafeModeAdminPassword=Safepassword@6<br /><br />DomainNetbiosName=corp<br /><br />DNSOnNetwork=Yes<br /><br />AutoConfigDNS=Yes<br /><br />RebootOnSuccess=NoAndNoPromptEither<br /><br />RebootOnCompletion=No<br /><br />*DomainLevel=0*<br /><br />*ForestLevel=0*<br /><br />dcpromoui.log의 다음 오류로 인해 수준 올리기에 실패합니다.<br /><br />코드-dcpromoui EA4.5B8 0089 13:31:50.783 Enter CArgumentsSpec::ValidateArgument DomainLevel<br /><br />dcpromoui EA4.5B8 008A 13:31:50.783 DomainLevel에 대 한 값은 0<br /><br />가 77 dcpromoui EA4.5B8 008B 13:31:50.783 종료 코드<br /><br />dcpromoui EA4.5B8 008 C 13:31:50.783 지정한 인수가 잘못 되었습니다.<br /><br />dcpromoui EA4.5B8 008 D 13:31:50.783 닫는 로그<br /><br />가 77 dcpromoui EA4.5B8 0032 13:31:50.830 종료 코드<br /><br />수준 0은 Windows 2000이며, 이는 Windows Server 2012에서 지원되지 않습니다.|  
+|증상|다음 예제 응답 파일과 함께 dcpromo /unattend를 사용하여 도메인 컨트롤러의 수준을 올리는 경우<br /><br />코드-<br /><br />[DCInstall]<br />NewDomain = 포리스트<br /><br />ReplicaOrNewDomain = 도메인<br /><br />NewDomainDNSName = corp. contoso .com<br /><br />SafeModeAdminPassword = Safepassword@6<br /><br />DomainNetbiosName = corp<br /><br />DNSOnNetwork = Yes<br /><br />AutoConfigDNS = 예<br /><br />RebootOnSuccess = NoAndNoPromptEither<br /><br />RebootOnCompletion = 아니요<br /><br />*DomainLevel = 0*<br /><br />*ForestLevel = 0*<br /><br />dcpromoui.log의 다음 오류로 인해 수준 올리기에 실패합니다.<br /><br />코드-dcpromoui.log EA 4.5 B8 0089 13:31:50.783 Enter CArgumentsSpec:: ValidateArgument DomainLevel<br /><br />dcpromoui.log EA 4.5 B8 008A 13:31: DomainLevel에 대 한 50.783 값이 0입니다.<br /><br />dcpromoui.log EA 4.5 B8 008B 13:31:50.783 종료 코드는 77입니다.<br /><br />dcpromoui.log EA 4.5 B8 008C 13:31:50.783 지정 된 인수가 잘못 되었습니다.<br /><br />dcpromoui.log EA 4.5 B8 008D 13:31:50.783 로그 닫기<br /><br />dcpromoui.log EA 4.5 B8 0032 13:31:50.830 종료 코드는 77<br /><br />수준 0은 Windows 2000이며, 이는 Windows Server 2012에서 지원되지 않습니다.|  
 |해결 방법 및 참고 사항|더 이상 사용되지 않는 dcpromo /unattend를 사용하지 마세요. 이 명령을 사용하면 잘못된 설정을 지정하여 나중에 오류가 발생할 수 있습니다. 이 동작은 예상된 동작이며 의도된 것입니다.|  
 
-|문제점|완료 되지 않고 프로 모션 "중지" NTDS 설정 개체 만들기|  
+|문제점|NTDS 설정 개체를 만들 때 "중단" 됩니다. 완료 되지 않습니다.|  
 |-|-|  
-|증상|복제본 DC 또는 RODC의 수준을 올릴 때 승격 "NTDS 설정 개체 만들기"에 도달 하 고 진행 되지 않습니다 또는 완료 합니다. 로그 업데이트도 중지됩니다.|  
-|해결 방법 및 참고 사항|이는 기본 제공 도메인 관리자 계정과 일치하는 암호를 사용하여 기본 제공 로컬 관리자 계정의 자격 증명을 제공하는 경우에 발생하는 알려진 문제입니다. 이로 인해 핵심 설치 엔진의 작동이 중단됩니다. 이는 오류가 아니지만 무기한(quasi-loop) 대기해야 합니다. 이 정상적인 동작-바람직하지 않은-라도 동작 합니다.<br /><br />서버 문제를 해결하려면<br /><br />1.  서버를 다시 부팅합니다.<br /><br />1.  AD에서 해당 서버의 구성원 컴퓨터 계정 (아직 되지 않는 DC 계정)를 삭제 합니다.<br /><br />1.  이 서버에서 도메인 가입을 강제로 해제합니다.<br /><br />1.  이 서버에서 AD DS 역할을 제거합니다.<br /><br />1.  다시 부팅<br /><br />1.  AD DS 역할을 다시 추가한 후 수준 올리기를 다시 시도합니다. 이때 기본 제공 로컬 관리자 계정뿐 아니라 항상 ***domain\admin*** 형식의 자격 증명을 DC 수준 올리기에 제공해야 합니다.|  
+|증상|복제본 DC 또는 RODC의 수준을 올리는 경우 프로 모션은 "NTDS 설정 개체 만들기"에 도달 하 고 진행 되거나 완료 되지 않습니다. 로그 업데이트도 중지됩니다.|  
+|해결 방법 및 참고 사항|이는 기본 제공 도메인 관리자 계정과 일치하는 암호를 사용하여 기본 제공 로컬 관리자 계정의 자격 증명을 제공하는 경우에 발생하는 알려진 문제입니다. 이로 인해 핵심 설치 엔진의 작동이 중단됩니다. 이는 오류가 아니지만 무기한(quasi-loop) 대기해야 합니다. 이는 의도 하지 않은 동작을 예상 합니다.<br /><br />서버 문제를 해결하려면<br /><br />1.  서버를 다시 부팅합니다.<br /><br />1.  AD에서 해당 서버의 구성원 컴퓨터 계정 (아직 DC 계정이 아님)을 삭제 합니다.<br /><br />1.  이 서버에서 도메인 가입을 강제로 해제합니다.<br /><br />1.  이 서버에서 AD DS 역할을 제거합니다.<br /><br />1.  다시 부팅<br /><br />1.  AD DS 역할을 다시 추가한 후 수준 올리기를 다시 시도합니다. 이때 기본 제공 로컬 관리자 계정뿐 아니라 항상 ***domain\admin*** 형식의 자격 증명을 DC 수준 올리기에 제공해야 합니다.|  

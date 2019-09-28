@@ -1,8 +1,8 @@
 ---
 title: vol
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 57233c58cf8c1c27288d94503c56733f287652f8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 19f7de75b633903b2fcc0b7188846c7d6d7370a4
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59825604"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71362570"
 ---
 # <a name="vol"></a>vol
 
@@ -36,7 +36,7 @@ vol [<Drive>:]
 
 |매개 변수|설명|
 |---------|-----------|
-|\<Drive>:|볼륨 레이블 및 일련 번호를 표시 하려는 디스크를 포함 하는 드라이브를 지정 합니다.|
+|\<Drive >:|볼륨 레이블 및 일련 번호를 표시 하려는 디스크를 포함 하는 드라이브를 지정 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
 #### <a name="additional-references"></a>추가 참조

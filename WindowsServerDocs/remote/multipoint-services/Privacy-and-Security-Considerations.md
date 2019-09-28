@@ -1,8 +1,8 @@
 ---
 title: 개인 정보 및 보안 고려 사항
-description: MultiPoint 서비스에 대 한 개인 정보 보호 및 보안 정보를 제공합니다.
+description: MultiPoint 서비스에 대 한 개인 정보 및 보안 정보를 제공 합니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: 6580d0974e0e27a6ecd2706890801fbeb9c45d27
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 5dffc99342cba3b4c5d43585745dedfd002a7c89
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59848534"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71389498"
 ---
 # <a name="privacy-and-security-considerations"></a>개인 정보 및 보안 고려 사항
 MultiPoint 서비스 시스템은 기본적으로 공유 컴퓨팅 환경이므로 다음과 같은 개인 정보 및 보안 컴퓨팅 문제를 고려해야 합니다.  

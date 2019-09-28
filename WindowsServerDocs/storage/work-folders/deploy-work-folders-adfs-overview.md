@@ -1,6 +1,6 @@
 ---
 title: AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포 개요
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage-work-folders
 ms.topic: article
 ms.assetid: ea19f0f0-6cc0-4322-b387-c0873f7795ad
@@ -8,16 +8,16 @@ manager: klaasl
 ms.author: jeffpatt
 author: JeffPatt24
 ms.date: 4/5/2017
-ms.openlocfilehash: 48c7d771c7ec75a4bc340608a96410ea388418e9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 40cc953ce7393781497d957fc8e6690c5c9abc0b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59874624"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71365917"
 ---
-# <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-overview"></a>AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 개요
+# <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-overview"></a>AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 개요
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 이 섹션의 항목에서는 AD FS(Active Directory Federation Services) 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더를 배포하는 방법에 대한 지침을 제공합니다. 이 지침은 온-프레미스 또는 인터넷을 통해 클라우드 폴더를 사용하여 즉시 시작할 수 있는 클라이언트 컴퓨터가 포함된 완전하게 작동하는 클라우드 폴더 설치를 만들 수 있도록 설계되었습니다.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "59874624"
   
 -   여러 파일 서버를 사용할 때 PC 및 디바이스에서 올바른 파일 서버를 자동으로 참조할 수 있도록 지원하는 Windows Server 2012 R2의 스키마 확장이 포함된 Active Directory® Domain Services 포리스트. 포리스트에서 DNS를 사용하도록 설정하는 것이 좋지만 필수 사항은 아닙니다.  
   
--   도메인 컨트롤러: AD DS 역할이 사용 하도록 설정 하 고 도메인을 사용 하 여 구성 된 서버입니다 (테스트 예를 들어 contoso.com).  
+-   도메인 컨트롤러: AD DS 역할을 사용 하도록 설정 하 고 도메인 (테스트 예: contoso.com)으로 구성 된 서버입니다.  
   
     Workplace Join에 사용할 디바이스를 등록하려면 Windows Server 2012 R2 이상을 실행하는 도메인 컨트롤러가 필요합니다. Workplace Join을 사용하지 않으려면 도메인 컨트롤러에서 Windows Server 2012를 실행해도 됩니다.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "59874624"
   
 이 가이드에서 다루는 테스트 환경의 경우 다음 다이어그램에 표시된 토폴로지가 있어야 합니다. 컴퓨터는 실제 컴퓨터도 되고 VM(가상 컴퓨터)도 됩니다. 
   
-![인터넷, DMZ 및 Contoso 네트워크 세그먼트를 보여 주는 다이어그램. 인터넷 세그먼트: Client2; DMZ에: WAP 서버; Contoso 세그먼트: 작업 폴더 서버 및 도메인 컨트롤러, AD FS 서버, Client1](media/deploy-work-folders-adfs/WF_ADFS_WAP_Diagram.png)
+![인터넷, DMZ 및 Contoso 네트워크 세그먼트를 보여 주는 다이어그램. 인터넷 세그먼트에서 다음을 수행 합니다. Client2 DMZ에서: WAP 서버 Contoso 세그먼트에서 다음을 수행 합니다. 클라우드 폴더 서버, 도메인 컨트롤러, AD FS 서버, Client1](media/deploy-work-folders-adfs/WF_ADFS_WAP_Diagram.png)
 
 ## <a name="deployment-overview"></a>배포 개요  
 이 항목 그룹에서는 테스트 환경에 AD FS, 웹 응용 프로그램 프록시 및 클라우드 폴더를 설치하는 단계별 예제를 연습하겠습니다. 구성 요소는 다음 순서로 설치됩니다.  
@@ -69,15 +69,15 @@ ms.locfileid: "59874624"
 ## <a name="deployment-steps"></a>배포 단계  
 Windows Server 사용자 인터페이스를 사용하여 배포를 수행하려면 다음 항목의 단계를 따르세요.  
   
--   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 1 단계, AD FS 설정](deploy-work-folders-adfs-step1.md)  
+-   [ AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 1 단계, AD FS 설정 @ no__t-0  
   
--   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 단계 2에서 AD FS 구성 후 작업](deploy-work-folders-adfs-step2.md)  
+-   [ AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 2 단계 AD FS 구성 후 작업 @ no__t-0  
   
--   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 단계 3, 작업 폴더 설정](deploy-work-folders-adfs-step3.md)  
+-   [ AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 3 단계, 클라우드 폴더 설정 @ no__t-0  
   
--   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 4 단계, 웹 응용 프로그램 프록시 설정](deploy-work-folders-adfs-step4.md)  
+-   [ AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 4 단계, 웹 응용 프로그램 프록시 설정 @ no__t-0  
   
--   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 5 단계 클라이언트 설정](deploy-work-folders-adfs-step5.md)  
+-   [ AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 5 단계, 클라이언트 설정 @ no__t-0  
 
 ## <a name="see-also"></a>관련 항목  
 [클라우드 폴더 개요](Work-Folders-Overview.md)  

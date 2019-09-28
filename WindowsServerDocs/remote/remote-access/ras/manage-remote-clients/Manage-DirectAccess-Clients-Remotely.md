@@ -1,9 +1,9 @@
 ---
 title: DirectAccess 클라이언트 원격 관리
-description: 이 항목은 가이드 Windows Server 2016에서 원격으로 관리 DirectAccess 클라이언트의 일부입니다.
+description: 이 항목은 Windows Server 2016에서 원격으로 DirectAccess 클라이언트 관리 가이드의 일부입니다.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-ras
@@ -12,20 +12,20 @@ ms.topic: article
 ms.assetid: 36255d80-a13e-4af7-a5c0-ab4c8f302622
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: c4ebab1cb444df9c756d66ded24e1c851023d17a
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: ecfbd6dc09f251d5197a16b166aa76e6a37b933a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67281165"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71367302"
 ---
 # <a name="manage-directaccess-clients-remotely"></a>DirectAccess 클라이언트 원격 관리
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 원격 액세스 모니터링은 DirectAccess 및 VPN 연결에 대한 원격 사용자 활동 및 상태를 보고합니다. 특히, 클라이언트 연결 수 및 기간을 추적하며, 서버의 작업 상태를 모니터링합니다. 사용하기 쉬운 모니터링 콘솔에서 전체 원격 액세스 인프라 보기를 제공합니다. 모니터링 보기는 단일 서버, 클러스터 및 멀티 사이트 구성에 사용할 수 있습니다.  
   
-**참고:** Windows Server 2016 DirectAccess 및 원격 액세스 서비스 (RAS)를 단일 원격 액세스 역할로 결합합니다.  
+**참고:** Windows Server 2016에서는 DirectAccess 및 원격 액세스 서비스 (RAS)를 단일 원격 액세스 역할로 결합 합니다.  
   
 ## <a name="in-this-guide"></a>이 가이드의 내용  
 이 문서에는 DirectAccess 관리 콘솔 및 원격 액세스 서버 역할의 일부로 제공되는 해당 Windows PowerShell cmdlet을 사용하여 원격 액세스의 모니터링 기능을 활용하는 방법에 대한 지침이 수록되어 있습니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "67281165"
   
 -   **모니터링**은 지정된 시점에 연결되어 있는 활성 사용자를 보여 줍니다.  
   
--   **계정**은 회사 네트워크에 연결한 사용자의 기록 및 해당 사용 정보(규정 준수 및 감사용)를 유지합니다.  
+-   **계정** 은 회사 네트워크에 연결한 사용자의 기록 및 해당 사용 정보(규정 준수 및 감사용)를 유지합니다.  
   
 원격 클라이언트 모니터링은 연결을 기반으로 합니다. DirectAccess 클라이언트에서 설정되는 터널 연결에는 다음 두 가지 유형이 있습니다.  
   

@@ -2,7 +2,7 @@
 title: more
 description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/26/2019
-ms.openlocfilehash: 291d98492f3f2b200ff0567c28a97927ca8c75be
-ms.sourcegitcommit: e55e27143dad1d3fb956cfdac4c23ef4186af321
+ms.openlocfilehash: d505f99511d8702f11ac0c70edba3d62c8cf7996
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68603236"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71373911"
 ---
 # <a name="more"></a>more
 
@@ -40,21 +40,21 @@ more [/c] [/p] [/s] [/t<N>] [+<N>] [<Files>]
 
 |           매개 변수            |                               설명                               |
 |--------------------------------|-------------------------------------------------------------------------|
-|           \<명령 >           |      출력을 표시 하려는 명령을 지정 합니다.      |
+|           \<Command >           |      출력을 표시 하려는 명령을 지정 합니다.      |
 |               /c               |               페이지를 표시 하기 전에 화면을 지웁니다.               |
 |               /p               |                      용지 공급 문자를 확장 합니다.                      |
 |               /s               |          비어 있는 단일 선으로 여러 개의 빈 줄을 표시합니다.          |
-|             /t\<N >             |         탭 하 여 지정 된 공백 수로 표시 *N*합니다.         |
-|             +\<N >              |     지정한 줄에서 첫 번째 파일 시작을 표시 *N*합니다.     |
-| [\<드라이브 >:] [\<경로 >]\<파일 이름 > |          표시할 파일의 이름과 위치를 지정 합니다.          |
-|            \<파일 >            | 표시할 파일의 목록을 지정 합니다. 파일 이름을 공백으로 구분 합니다. |
+|             /t @ no__t-0N >             |         탭 하 여 지정 된 공백 수로 표시 *N*합니다.         |
+|             + @ NO__T-1N >              |     지정한 줄에서 첫 번째 파일 시작을 표시 *N*합니다.     |
+| [\<Drive >:] [\<Path >] \<FileName > |          표시할 파일의 이름과 위치를 지정 합니다.          |
+|            \<Files >            | 표시할 파일의 목록을 지정 합니다. 파일 이름을 공백으로 구분 합니다. |
 |               /?               |                  명령 프롬프트에 도움말을 표시합니다.                   |
 
 ## <a name="remarks"></a>설명
 
 -   에 다음 하위 명령 들은 **더** 프롬프트 (`-- More --`). 
 
-    | Key | Action |
+    | Key | 작업 |
     | --- | ------ |
     | 스페이스바 | 다음 페이지를 표시합니다. |
     | Enter 키 | 다음 줄을 표시합니다. |
@@ -65,7 +65,7 @@ more [/c] [/p] [/s] [/t<N>] [+<N>] [<Files>]
     | s \<N > |S kips는 다음 *N 개* 줄입니다. |
     | ? | 사용할 수 있는 명령이 표시는 **자세한** 프롬프트입니다.| 
     
--   리디렉션 문자 ( **<** )를 사용 하는 경우 파일 이름을 원본으로 지정 해야 합니다. 파이프 **\|** ()를 사용 하는 경우 **dir**, **sort**및 **type**과 같은 명령을 사용할 수 있습니다.
+-   리디렉션 문자 ( **<** )를 사용 하는 경우 파일 이름을 원본으로 지정 해야 합니다. 파이프 ( **\|** )를 사용 하는 경우 이러한 명령을 **dir**, **sort**및 **type**으로 사용할 수 있습니다.
 -   **자세한** 다른 매개 변수와 함께 명령을 복구 콘솔에서 사용할 수 있습니다.
 
 ## <a name="BKMK_examples"></a>예와

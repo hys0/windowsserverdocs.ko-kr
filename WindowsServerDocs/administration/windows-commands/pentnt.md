@@ -1,8 +1,8 @@
 ---
 title: pentnt
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,17 +13,17 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8ed84e26559fe78172643b29f96e43e76d083b88
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a81cac6327955eebfe9e6b420695f4e4a6a77a02
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59822314"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71372340"
 ---
 # <a name="pentnt"></a>pentnt
 
 
 
-Pentnt, 않으며 Windows의 이후 릴리스에서 지원 될 보장 되지 않습니다.
+Pentnt는 더 이상 사용 되지 않으며, 이후 버전의 Windows에서는 지원 되지 않습니다.
 
-이 도구는 Windows Server 2003에 포함 됩니다. 자세한 내용은 참조 [Pentnt](https://technet.microsoft.com/library/cc755868(v=ws.10).aspx)합니다.
+이 도구는 Windows Server 2003에 포함 됩니다. 자세한 내용은 [Pentnt](https://technet.microsoft.com/library/cc755868(v=ws.10).aspx)를 참조 하세요.

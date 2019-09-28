@@ -7,14 +7,14 @@ ms.author: billmath
 manager: daveba
 ms.date: 04/23/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 2a5de194f5870652920ec6a3d451d18840ba7b2a
-ms.sourcegitcommit: 2082335e1260826fcbc3dccc208870d2d9be9306
+ms.openlocfilehash: 6294c7b6ead0a9fa338f8b2cc8134b750f7e3e8f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69980344"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71385552"
 ---
 # <a name="whats-new-in-active-directory-federation-services"></a>Active Directory Federation Services의 새로운 기능
 
@@ -52,7 +52,7 @@ AD FS 2019에는 다음과 같은 인증/정책 기능이 있습니다.
 AD FS 2019에서는 다음과 같은 로그인 SSO 기능이 향상 되었습니다.
 
 - [가운데에 맞춘 테마를 사용 하 여 페이지가 매겨진 ux](../operations/AD-FS-paginated-sign-in.md) -adfs에서 유효성을 검사 하 고 보다 원활한 로그인 환경을 제공할 수 있는 페이지가 매겨진 ux 흐름으로 이동 되었습니다. 이제 ADFS는 화면 오른쪽 대신 가운데에 있는 UI를 사용 합니다. 이 환경에 맞게 최신 로고 및 배경 이미지를 요구할 수 있습니다. 또한 Azure AD에서 제공 되는 기능을 미러링합니다.
-- **버그 수정: Win10 장치에 대 한 영구 SSO 상태 prt** 인증을 수행할 때 Windows 10 장치에 대해 PRT 인증을 사용 하는 경우 MFA 상태가 유지 되지 않는 문제를 해결 합니다. 문제의 결과 최종 사용자에 게 MFA (두 번째 단계 자격 증명)를 자주 묻는 메시지가 표시 됩니다. 또한 클라이언트 TLS 및 PRT 메커니즘을 통해 장치 인증을 성공적으로 수행 하는 경우에도 문제가 해결 됩니다. 
+- ** 버그 수정: Win10 장치에 대 한 영구 SSO 상태, PRT auth @ no__t를 수행할 때 Windows 10 장치에 대해 PRT 인증을 사용 하는 경우 MFA 상태가 유지 되지 않는 문제를 해결 합니다. 문제의 결과 최종 사용자에 게 MFA (두 번째 단계 자격 증명)를 자주 묻는 메시지가 표시 됩니다. 또한 클라이언트 TLS 및 PRT 메커니즘을 통해 장치 인증을 성공적으로 수행 하는 경우에도 문제가 해결 됩니다. 
 
 
 ### <a name="suppport-for-building-modern-line-of-business-apps"></a>최신 lob (기간 업무) 앱을 빌드하는 지원
@@ -62,7 +62,7 @@ AD FS 2019에서는 다음과 같은 로그인 SSO 기능이 향상 되었습니
  - **' Resource ' 매개 AD FS 변수를 제거** 하면 현재 Oauth 사양과 함께 사용 되는 리소스 매개 변수를 지정 해야 하는 요구 사항이 제거 됩니다. 클라이언트는 이제 요청 된 권한 외에도 신뢰 당사자 트러스트 식별자를 범위 매개 변수로 제공할 수 있습니다. 
  - **AD FS 응답의 CORS 헤더** -이제 고객이 AD FS의 oidc 검색 문서에서 서명 키를 쿼리하여 id_token 서명의 유효성을 검사할 수 있도록 하는 단일 페이지 응용 프로그램을 빌드할 수 있습니다. 
  - **Pkce 지원** -AD FS는 pkce 지원을 추가 하 여 OAuth 내에서 보안 인증 코드 흐름을 제공 합니다. 이렇게 하면 코드를 하이재킹 하 고 다른 클라이언트에서 재생 하지 않도록이 흐름에 추가 보안 계층이 추가 됩니다. 
- - **버그 수정: X5t 및 kid 클레임** 보내기-사소한 버그 수정입니다. 이제 AD FS는 ' kid ' 클레임을 추가로 전송 하 여 서명을 확인 하는 키 id 힌트를 나타냅니다. 이전에는이 AD FS ' x5t ' 클레임으로 전송 했습니다.
+ - ** 버그 수정: Send x5t 및 kid 클레임 @ no__t-0-사소한 버그 수정입니다. 이제 AD FS는 ' kid ' 클레임을 추가로 전송 하 여 서명을 확인 하는 키 id 힌트를 나타냅니다. 이전에는이 AD FS ' x5t ' 클레임으로 전송 했습니다.
 
 ### <a name="supportability-improvements"></a>지원 가능성 향상
 다음 지원 가능성 향상 기능은 AD FS 2019에 포함 되지 않습니다.
@@ -76,14 +76,14 @@ AD FS 2019에서는 다음과 같은 로그인 SSO 기능이 향상 되었습니
 
 ### <a name="saml-updates"></a>SAML 업데이트
 다음 SAML 업데이트는 AD FS 2019에 있습니다.
-- **버그 수정: 집계 된 페더레이션** 에서 버그 수정-집계 된 페더레이션 지원에 대 한 많은 버그 수정이 있습니다 (예: incommon). 수정 사항은 다음과 같습니다. 
+- ** 버그 수정: 집계 된 페더레이션 @ no__t-0에서 버그 수정-집계 된 페더레이션 지원에 대 한 많은 버그 수정이 있습니다 (예: InCommon). 수정 사항은 다음과 같습니다. 
   - 집계 된 페더레이션 메타 데이터 doc에서 많은 엔터티 #의 크기를 향상 시켰습니다. 이전에는 "ADMIN0017" 오류로 인해 실패 합니다. 
   - AdfsRelyingPartyTrustsGroup PSH cmdlet을 통해 ' ScopeGroupID ' 매개 변수를 사용 하 여 쿼리 합니다. 
   - 중복 entityID 관련 된 오류 조건 처리
 
 
 ### <a name="azure-ad-style-resource-specification-in-scope-parameter"></a>범위 매개 변수의 Azure AD 스타일 리소스 사양 
-이전에는 필요한 리소스 및 범위가 모든 인증 요청에서 별도의 매개 변수에 있어야 AD FS 했습니다. 예를 들어 일반적인 oauth 요청은 다음과 같습니다. 7 **https:&#47;&#47;fs.contoso.com/adfs/oauth2/authorize?</br> response_type = code & client_id = claimsxrayclient & resource = urn: microsoft:</br>adfs: claimsxray & scope = oauth & redirect_uri = https:&#47;&#47;adfshelp.microsoft.com/</br> claimsxray/ TokenResponse & 프롬프트 = 로그인**
+이전에는 필요한 리소스 및 범위가 모든 인증 요청에서 별도의 매개 변수에 있어야 AD FS 했습니다. 예를 들어 일반적인 oauth 요청은 다음과 같습니다. 7 **https:&#47;&#47;fs.contoso.com/adfs/oauth2/authorize? </br>response_type = code & client_id = claimsxrayclient & resource = urn: microsoft: </br>adfs: claimsxray & 범위 = oauth & redirect_uri = https:&#47; &#47; adfshelp.microsoft.com/</br> ClaimsXray/TokenResponse & prompt = login**
  
 서버 2019에서 AD FS를 사용 하 여 이제 범위 매개 변수에 포함 된 리소스 값을 전달할 수 있습니다. 이는 Azure AD에 대 한 인증을 수행할 수 있는 방법과 일치 합니다. 
 

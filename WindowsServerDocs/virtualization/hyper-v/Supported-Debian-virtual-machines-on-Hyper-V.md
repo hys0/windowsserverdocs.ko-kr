@@ -1,7 +1,7 @@
 ---
 title: Hyper-v에서 지원 되는 Debian 가상 컴퓨터
 description: 각 버전에 포함 된 Linux 통합 서비스 및 기능을 나열 합니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -11,12 +11,12 @@ ms.assetid: 3cc62c10-02a3-4633-960c-23bf91a45bd5
 author: shirgall
 ms.author: kathydav
 ms.date: 10/03/2016
-ms.openlocfilehash: 35603d47439b0bc8702dbaba09dea9d449964026
-ms.sourcegitcommit: 6f968368c12b9dd699c197afb3a3d13c2211f85b
+ms.openlocfilehash: 71b1985da522ef9ee2d7745bd19d2548e0241a2f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68544736"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71366770"
 ---
 # <a name="supported-debian-virtual-machines-on-hyper-v"></a>Hyper-v에서 지원 되는 Debian 가상 컴퓨터
 

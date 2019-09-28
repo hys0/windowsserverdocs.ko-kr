@@ -1,8 +1,8 @@
 ---
 title: waitfor
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 21ced4a9ef0dd7dac5f6c4fc6f171d99fa516c07
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: aecea0ad19ee42e61396eb8b8ccd579b9ce2057b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66440312"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71362605"
 ---
 # <a name="waitfor"></a>waitfor
 
@@ -39,12 +39,12 @@ waitfor [/t <Timeout>] <SignalName>
 
 |       매개 변수       |                                                                                         설명                                                                                          |
 |-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    /s \<컴퓨터 >     | 이름 또는 원격 컴퓨터의 IP 주소를 지정 합니다 (백슬래시를 사용 하지 않습니다). 기본값은 로컬 컴퓨터입니다. 이 매개 변수는 모든 파일 및 명령에 지정 된 폴더에 적용 됩니다. |
-| /u [\<도메인 >\]<User> |                              지정한 사용자 계정의 자격 증명을 사용 하 여 스크립트를 실행 합니다. 기본적으로 **waitfor** 현재 사용자의 자격 증명을 사용 합니다.                               |
-|   /p [\<Password>]    |                                                    에 지정 된 사용자 계정의 암호를 지정 된 **/u** 매개 변수입니다.                                                     |
+|    /s \<Computer >     | 이름 또는 원격 컴퓨터의 IP 주소를 지정 합니다 (백슬래시를 사용 하지 않습니다). 기본값은 로컬 컴퓨터입니다. 이 매개 변수는 모든 파일 및 명령에 지정 된 폴더에 적용 됩니다. |
+| /u [\<Domain > \] @ no__t-2 |                              지정한 사용자 계정의 자격 증명을 사용 하 여 스크립트를 실행 합니다. 기본적으로 **waitfor** 현재 사용자의 자격 증명을 사용 합니다.                               |
+|   /p [\<Password >]    |                                                    에 지정 된 사용자 계정의 암호를 지정 된 **/u** 매개 변수입니다.                                                     |
 |          /si          |                                                                        네트워크를 통해 지정된 된 신호를 보냅니다.                                                                        |
-|     /t \<Timeout>     |                                              신호를 기다릴 시간 (초) 수를 지정 합니다. 기본적으로 **waitfor** 무기한 대기 합니다.                                               |
-|     \<SignalName>     |                                                신호를 지정 하는 **waitfor** 보내거나 될 때까지 대기 합니다. *SignalName* 는 대 소문자를 구분 하지 않습니다.                                                 |
+|     /t \<Timeout >     |                                              신호를 기다릴 시간 (초) 수를 지정 합니다. 기본적으로 **waitfor** 무기한 대기 합니다.                                               |
+|     @no__t 0SignalName >     |                                                신호를 지정 하는 **waitfor** 보내거나 될 때까지 대기 합니다. *SignalName* 는 대 소문자를 구분 하지 않습니다.                                                 |
 |          /?           |                                                                             명령 프롬프트에 도움말을 표시합니다.                                                                             |
 
 ## <a name="remarks"></a>설명
@@ -57,7 +57,7 @@ waitfor [/t <Timeout>] <SignalName>
 -   만 컴퓨터 신호를 보내는 컴퓨터와 동일한 도메인에 있는 경우 신호를 받을 수 있습니다.
 -   사용할 수 있습니다 **waitfor** 소프트웨어 빌드를 테스트할 수 있습니다. 예를 들어 컴파일 컴퓨터 신호를 실행 하는 여러 컴퓨터에 보낼 수 **waitfor** 는 컴파일 성공적으로 완료 된 후입니다. 에 신호를 받으면, 배치 파일은 포함 된 **waitfor** 즉시 소프트웨어를 설치 하거나 컴파일된 빌드에서 테스트 실행을 시작 하는 컴퓨터에 지시할 수 있습니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 "Espresso\build007" 신호가 수신 될 때까지 기다려야 다음을 입력 합니다.
 ```

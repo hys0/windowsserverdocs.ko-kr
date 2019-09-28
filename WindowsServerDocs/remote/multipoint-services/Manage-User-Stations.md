@@ -2,7 +2,7 @@
 title: 사용자 스테이션 관리
 description: MultiPoint 서비스에서 사용자 스테이션을 관리 하는 방법 알아보기
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: 6de378284f5cd41f5c5c3228c8305176367b5dd5
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 7f46d2a68fc6247bddc1251c32ac55544b6fbf52
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871622"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71405064"
 ---
 # <a name="manage-user-stations"></a>사용자 스테이션 관리
 이 섹션에서는 MultiPoint 서비스 시스템을 구성하는 *스테이션*의 관리에 대해 논의합니다. MultiPoint 서비스 시스템 관리에는 다중 포인트 관리자의 하드웨어 및 소프트웨어 구성 요소 관리가 모두 포함 됩니다. MultiPoint 서비스 시스템에서 데스크톱은 각 사용자 스테이션의 모니터에 표시 된 소프트웨어 사용자 인터페이스입니다.  

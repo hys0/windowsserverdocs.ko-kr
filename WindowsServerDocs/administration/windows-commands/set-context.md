@@ -1,8 +1,8 @@
 ---
 title: 컨텍스트 설정
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6f24e795f2d7c92d462cf822e70e4830b53827e5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 16f71d831f374f495abf2239cb8e694eee69efdf
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59845854"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71370983"
 ---
 # <a name="set-contex"></a>설정 하면
 
@@ -39,7 +39,7 @@ set context {clientaccessible | persistent [nowriters] | volatile [nowriters]}
 |매개 변수|설명|
 |---------|-----------|
 |clientaccessible|섀도 복사본 클라이언트 버전의 Windows에서 사용할 수 있음을 지정 합니다.|
-|persistent|프로그램 종료, 다시 설정 또는 다시 시작에서 섀도 복사본이 유지 되도록 지정 합니다.|
+|지속적|프로그램 종료, 다시 설정 또는 다시 시작에서 섀도 복사본이 유지 되도록 지정 합니다.|
 |volatile|삭제에는 섀도 복사 종료 또는 다시 설정 합니다.|
 |nowriters|모든 기록기 제외를 지정 합니다.|
 
@@ -47,7 +47,7 @@ set context {clientaccessible | persistent [nowriters] | volatile [nowriters]}
 
 -   *clientaccessible* 컨텍스트는 기본적으로 지속적으로 유지 합니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 섀도 복사본 DiskShadow를 종료할 때 삭제 되는 것을 방지 하려면 다음을 입력 합니다.
 ```

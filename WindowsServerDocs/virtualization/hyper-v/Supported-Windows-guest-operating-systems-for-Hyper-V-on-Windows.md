@@ -1,7 +1,7 @@
 ---
 title: Windows Server에서 Hyper-v에 대해 지원 되는 Windows 게스트 운영 체제
 description: 가상 컴퓨터에서 게스트로 사용 하도록 지원 되는 Windows 운영 체제를 나열 합니다. 또한 이전 버전의 Hyper-v에 대 한 유사한 문서에 대 한 링크도 제공 합니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -11,12 +11,12 @@ ms.assetid: 06b35897-2192-48b7-8c2d-125c520b0786
 author: lizap
 ms.author: elizapo
 ms.date: 01/08/2019
-ms.openlocfilehash: b24c67de90f8773eec69f10381bd9ce1e121853e
-ms.sourcegitcommit: b68ff64ecd87959cd2acde4a47506a01035b542a
+ms.openlocfilehash: f491f283861098bbe98e253cb2ff1d5cee2ac57f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68830887"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71365462"
 ---
 # <a name="supported-windows-guest-operating-systems-for-hyper-v-on-windows-server"></a>Windows Server에서 Hyper-v에 대해 지원 되는 Windows 게스트 운영 체제
 
@@ -34,7 +34,7 @@ Windows server 2016 및 Windows Server 2019에서 Hyper-v에 대 한 게스트 �
 |-------------------------------------|----------------------------------------|------------------------|---------|  
 |Windows Server, 버전 1903 |2 세대의 경우 240;<br>64 세대 1|기본 제공||
 |Windows Server, 버전 1809 |2 세대의 경우 240;<br>64 세대 1|기본 제공|| 
-|Windows Server 2019 |2 세대의 경우 240;<br>64 세대 1|기본 제공||
+|Windows Server 2019 |2 세대의 경우 240;<br>64 세대 1|기본 제공||
 |Windows Server, 버전 1803 |2 세대의 경우 240;<br>64 세대 1|기본 제공|| 
 |Windows Server 2016 |2 세대의 경우 240;<br>64 세대 1|기본 제공|| 
 |Windows Server 2012 R2 |64|기본 제공||  
@@ -59,7 +59,7 @@ Windows Server 2016 및 Windows Server 2019에서 Hyper-v에 대 한 게스트 �
 |호스트 운영 체제|항목|  
 |-------------------------|---------|  
 |Windows 10|[Windows 10의 클라이언트 Hyper-v에 대해 지원 되는 게스트 운영 체제](https://docs.microsoft.com/virtualization/hyper-v-on-windows/about/supported-guest-os)|  
-|Windows Server 2012 R2 및 Windows 8.1|-   [Windows Server 2012 R2 및 Windows 8.1의 Hyper-v에 대해 지원 되는 Windows 게스트 운영 체제](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn792027(v=ws.11))<br />-   [Hyper-v의 Linux 및 FreeBSD Virtual Machines](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)|  
+|Windows Server 2012 R2 및 Windows 8.1|-   [Windows Server 2012 R2 및 Windows 8.1의 hyper-v에 대해 지원 되는 Windows 게스트 운영 체제](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn792027(v=ws.11))<br />Hyper-v의 -   [Linux 및 FreeBSD Virtual Machines](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)|  
 |Windows Server 2012 및 Windows 8|[Windows Server 2012 및 Windows 8에서 Hyper-v에 대해 지원 되는 Windows 게스트 운영 체제](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn792028(v=ws.11))|  
 |Windows Server 2008 및 Windows Server 2008 R2|[가상 컴퓨터 및 게스트 운영 체제 정보](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc794868(v=ws.10))|  
   

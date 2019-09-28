@@ -7,19 +7,19 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: ade2a8304288d102608c81a0c29155478e5a4b7b
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 8cd3e6d0073061710bd9ee76958891e036688472
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66189426"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407604"
 ---
 # <a name="create-a-rule-to-send-claims-using-a-custom-rule"></a>사용자 지정 규칙을 사용하여 클레임을 보내도록 규칙 만들기
 
 
-사용 하 여 합니다 **사용자 지정 규칙을 사용 하 여 클레임 보내기** 템플릿을 Active Directory Federation Services (AD FS)에서 표준 규칙 템플릿을 요구 사항을 충족 하지 않는 상황에 대 한 사용자 지정 클레임 규칙을 만들 수 있습니다 프로그램 조직입니다. 사용자 지정 클레임 규칙 클레임 규칙 언어 작성 되 고 그런 다음에 복사 해야는 **사용자 지정 규칙** 텍스트 상자는 규칙 집합에서 사용할 수 있습니다. 고급 규칙에 대 한 구문을 구성 하는 방법에 대 한 정보를 참조 하십시오. [클레임 규칙 언어의 역할](../../ad-fs/technical-reference/The-Role-of-the-Claim-Rule-Language.md)합니다.  
+Active Directory Federation Services (AD FS)에서 **사용자 지정 규칙 템플릿을 사용 하 여 클레임 보내기** 를 사용 하 여 표준 규칙 템플릿이 조직의 요구 사항을 충족 하지 않는 상황에 대 한 사용자 지정 클레임 규칙을 만들 수 있습니다. 사용자 지정 클레임 규칙 클레임 규칙 언어 작성 되 고 그런 다음에 복사 해야는 **사용자 지정 규칙** 텍스트 상자는 규칙 집합에서 사용할 수 있습니다. 고급 규칙에 대 한 구문을 구성 하는 방법에 대 한 정보를 참조 하십시오. [클레임 규칙 언어의 역할](../../ad-fs/technical-reference/The-Role-of-the-Claim-Rule-Language.md)합니다.  
   
 다음 절차를 사용 하 여 AD FS 관리 스냅인을 사용 하 여 클레임 규칙을 만들 수 있습니다\-에 있습니다.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "66189426"
   
 4.  에 **클레임 규칙 편집** 대화 상자에서 하나를 선택 했는지에 따라 편집 하는 규칙 수를 설정 하는 신뢰 하는 다음과 같은 탭이이 규칙을 만들고 연결할 클릭 **규칙 추가** 해당 규칙 집합에 연관 된 규칙 마법사를 시작 합니다.  
   
-    -   **수용 변환 규칙**  
+    -   **수락 변환 규칙**  
   
     -   **발급 변환 규칙**  
   

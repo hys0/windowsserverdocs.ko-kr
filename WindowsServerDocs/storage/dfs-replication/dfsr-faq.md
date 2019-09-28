@@ -1,17 +1,17 @@
 ---
 title: 'DFS 복제: FAQ(질문과 대답)'
 ms.date: 06/18/2014
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: 5bf85938f242ec29d75b32cdcb8b03c5f34bd1bb
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 12410d619245153f759b54e7a8aff257888f04dc
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871966"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71386066"
 ---
 # <a name="dfs-replication-frequently-asked-questions-faq"></a>DFS 복제: FAQ(질문과 대답)
 
@@ -432,13 +432,13 @@ RDC (원격 차등 압축)는 제한 된 대역폭 네트워크를 통해 효율
 <tr class="even">
 <td><p>Windows Server 2012 R2</p></td>
 <td><p>예<em></p></td>
-<td><p>사용할 수 없음</p></td>
+<td><p>제공되지 않음</p></td>
 <td><p>예</em></p></td>
 </tr>
 <tr class="odd">
 <td><p>Windows Server 2012</p></td>
 <td><p>예</p></td>
-<td><p>사용할 수 없음</p></td>
+<td><p>제공되지 않음</p></td>
 <td><p>예</p></td>
 </tr>
 <tr class="even">

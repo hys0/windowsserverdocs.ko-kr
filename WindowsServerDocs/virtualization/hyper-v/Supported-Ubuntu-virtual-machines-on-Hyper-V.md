@@ -1,7 +1,7 @@
 ---
 title: Hyper-v에서 지원 되는 Ubuntu 가상 컴퓨터
 description: 각 버전에 포함 된 Linux 통합 서비스 및 기능을 나열 합니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -11,12 +11,12 @@ ms.assetid: 95ea5f7c-25c6-494b-8ffd-2a77f631ee94
 author: shirgall
 ms.author: shirgall
 ms.date: 06/13/2019
-ms.openlocfilehash: ad0f79767310595244d0d57876c20b9548a81a96
-ms.sourcegitcommit: e2b565ce85a97c0c51f6dfe7041f875a265b35dd
+ms.openlocfilehash: ed1c1a9f678dd7cb68b59d2df239ca278b7a3688
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69584812"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71365484"
 ---
 # <a name="supported-ubuntu-virtual-machines-on-hyper-v"></a>Hyper-v에서 지원 되는 Ubuntu 가상 컴퓨터
 
@@ -74,7 +74,7 @@ Ubuntu 12.04 부터는 게스트 가상 컴퓨터로 사용 하기에 적합 한
 |UEFI를 사용 하 여 부팅|2019, 2016, 2012 R2|&#10004; 참고 11, 12|&#10004; 참고 11, 12|&#10004; 참고 11, 12|&#10004; 참고 11, 12||
 |보안 부팅|2019, 2016|&#10004;|&#10004;|&#10004;|&#10004;||
 
-## <a name="notes"></a>메모
+## <a name="notes"></a>참고
 
 1. 정적 IP 주입 하는 경우 작동 하지 않을 수 **네트워크 관리자** 가 가상 컴퓨터에는 지정 된 하이퍼-V-특정 네트워크 어댑터 구성 되었습니다. 고정 IP를 원활 하 게 작동 되도록 주입 확인 네트워크 관리자 완전히 해제 하 여 특정 네트워크 어댑터에 대 한 해제 되었습니다 해당 **ifcfg ethX** 파일입니다.
 

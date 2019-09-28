@@ -6,14 +6,14 @@ ms.author: billmath
 manager: femila
 ms.date: 09/07/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: b67177c8bf0ce9869aa51c3012d57f3208ac02f5
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 78db6f8b6961cecea55b8d371e9abf952cafdab3
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70866293"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71358672"
 ---
 # <a name="compound-authentication-and-ad-ds-claims-in-ad-fs"></a>AD FS의 복합 인증 및 AD DS 클레임
 Windows Server 2012는 복합 인증을 도입 하 여 Kerberos 인증을 향상 시킵니다.  복합 인증을 사용 하면 Kerberos TGS (티켓 부여 서비스) 요청에 다음 두 개의 id를 포함할 수 있습니다. 

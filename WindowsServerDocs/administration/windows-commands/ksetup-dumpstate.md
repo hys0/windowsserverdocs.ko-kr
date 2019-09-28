@@ -1,8 +1,8 @@
 ---
-title: ksetup:dumpstate
-description: '에 대 한 Windows 명령을 항목 * * *- '
+title: 'ksetup: 상태를'
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8e5e8f20188fc27cc08dfd37c5fdbd811925f476
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 625d05b2fea9ae58681648c64e309aa8b2a201ed
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59863124"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71375003"
 ---
-# <a name="ksetupdumpstate"></a>ksetup:dumpstate
+# <a name="ksetupdumpstate"></a>ksetup: 상태를
 
 
 
@@ -41,15 +41,15 @@ ksetup /dumpstate
 이 명령의 출력은 기본 영역 (컴퓨터의 구성원 인 도메인)를 포함 하 고이 컴퓨터에 정의 된 모든 영역입니다. 다음 각 영역에 대 한 포함 되어 있습니다.
 -   모든 키 배포 센터 (Kdc)이이 영역에 연관 된
 -   모든는 **집합 영역** 이 영역에 대 한 플래그
--   KDC 암호가
+-   KDC 암호
 
-이 명령은 DNS 검색 하거나 명령에 의해 지정 된 도메인 이름을 표시 하지 않습니다 **ksetup /domain**합니다.
+이 명령은 DNS 검색 또는 명령 **ksetup/domain**에서 지정한 도메인 이름을 표시 하지 않습니다.
 
 이 명령은 명령을 사용 하 여 설정 된 컴퓨터 암호를 표시 하지 않습니다 **ksetup /setcomputerpassword**합니다.
 
 **Ksetup** 동일한 출력을 생성 **ksetup /dumpstate**합니다.
 
-## <a name="BKMK_Examples"></a>예제
+## <a name="BKMK_Examples"></a>예와
 
 컴퓨터에서 Kerberos 영역 구성의 대부분을 찾을:
 ```

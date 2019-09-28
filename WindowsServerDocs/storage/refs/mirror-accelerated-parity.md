@@ -1,6 +1,6 @@
 ---
 title: 미러 가속 패리티
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: gawatu
 ms.manager: masriniv
 ms.technology: storage-file-systems
@@ -8,12 +8,12 @@ ms.topic: article
 author: gawatu
 ms.date: 10/17/2018
 ms.assetid: ''
-ms.openlocfilehash: ec1f04b20b0b743085bacd95ad95a52c15207f40
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 0325a37e38845ea9482a6ed260e2bb3b493cc79a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70872005"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71394003"
 ---
 # <a name="mirror-accelerated-parity"></a>미러 가속 패리티
 
@@ -114,7 +114,7 @@ ReFS는 미러-가속 패리티 성능 평가에 도움이 되도록 성능 카�
 -   값이 낮으면 ReFS가 사전에 데이터 준비를 취소하고 들어오는 IO를 더 잘 수집할 수 있습니다. 이는 보관 저장소 등의 수집량이 많은 워크로드에 적용 가능합니다. 그러나 값이 낮으면 범용 워크로드에 대한 성능이 저하됩니다. 미러 계층 밖으로 데이터를 불필요하게 순환하면 성능이 떨어집니다. 
 
 ReFS는 레지스트리 키로 구성 가능한 이 임계값을 조정하기 위해 튜닝할 수 있는 매개 변수를 지정합니다. **저장소 공간 다이렉트 배포의 각 노드**에 이 레지스트리 키를 구성해야 하며 다시 시작해야 변경 내용이 적용됩니다. 
--   **키인지** HKEY_LOCAL_MACHINE\System\CurrentControlSet\Policies
+-   **키:** HKEY_LOCAL_MACHINE\System\CurrentControlSet\Policies
 -   **ValueName (DWORD):** DataDestageSsdFillRatioThreshold
 -   **System.valuetype** 백분율
 

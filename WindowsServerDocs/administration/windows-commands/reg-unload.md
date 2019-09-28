@@ -1,8 +1,8 @@
 ---
-title: Reg 언로드
-description: '에 대 한 Windows 명령을 항목 * * *- '
+title: 레지스트리 언로드
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: aaa7d7a9fa82db2968d988e3b7b3fb8275a72337
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 32df397b597291269dcfb1449d00e86b2f4f5836
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59834984"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71384622"
 ---
-# <a name="reg-unload"></a>Reg 언로드
+# <a name="reg-unload"></a>레지스트리 언로드
 
 
 
@@ -38,19 +38,19 @@ reg unload <KeyName>
 
 |매개 변수|설명|
 |---------|-----------|
-|\<KeyName>|언로드해야 하는 하위 키의 전체 경로 지정 합니다. 원격 컴퓨터를 지정 하는 것에 대 한 컴퓨터 이름을 포함 합니다 (형식에서 \\ \\ComputerName\) 의 일부로 합니다 *KeyName*합니다. 생략 \\ \\ComputerName\ 하면 로컬 컴퓨터에 기본 작업이 있습니다. *KeyName* 유효한 루트 키를 포함 해야 합니다. 로컬 컴퓨터에 대 한 유효한 루트 키 HKLM, HKCU, HKCR, HKU, 및 HKCC 됩니다. 원격 컴퓨터를 지정 하는 경우 HKLM 및 HKU 유효한 루트 키가 있습니다.|
+|\<KeyName >|언로드해야 하는 하위 키의 전체 경로 지정 합니다. 원격 컴퓨터를 지정 하려면 컴퓨터 이름을 *KeyName*의 일부로 \\ @ No__t-1computername @ no__t-2 형식으로 포함 합니다. @No__t를 생략 하면-0 @ no__t-1ComputerName \이 작업을 기본적으로 로컬 컴퓨터로 설정 합니다. *KeyName* 유효한 루트 키를 포함 해야 합니다. 로컬 컴퓨터에 대 한 유효한 루트 키 HKLM, HKCU, HKCR, HKU, 및 HKCC 됩니다. 원격 컴퓨터를 지정 하는 경우 HKLM 및 HKU 유효한 루트 키가 있습니다.|
 |/?|에 대 한 도움말을 표시 **reg 언로드** 명령 프롬프트입니다.|
 
 ## <a name="remarks"></a>설명
 
 다음 표에 대 한 반환 값은 **reg 언로드** 옵션이 있습니다.
 
-|값|Description|
+|값|설명|
 |-----|-----------|
-|0|성공|
+|0|Success|
 |1|실패|
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 HKLM 파일에서 TempHive 하이브 언로드 작업을 입력 합니다.
 ```

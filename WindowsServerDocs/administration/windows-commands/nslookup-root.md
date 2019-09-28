@@ -1,8 +1,8 @@
 ---
 title: nslookup root
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 47a26be99a5eee510970d3eee6b486331a98b159
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 3eb3375df3a109685fc8dc5d23f0c5008339d09e
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66436901"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71373394"
 ---
 # <a name="nslookup-root"></a>nslookup root
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-도메인 이름 시스템 (DNS) 도메인 네임 스페이스의 루트에 대 한 서버에 기본 서버를 변경합니다.
+DNS (Domain Name System) 도메인 이름 공간의 루트에 대 한 서버에 기본 서버를 변경 합니다.
 ## <a name="syntax"></a>구문
 ```
 root 
@@ -39,4 +39,4 @@ root
 - 현재, ns.nic.ddn.mil 이름 서버가 사용 됩니다. 이 명령은 lserver ns.nic.ddn.mil에 대 한 동의어입니다. 루트 서버를의 이름을 변경할 수는 **세트 루트** 명령입니다.
   ## <a name="additional-references"></a>추가 참조
   [명령줄 구문 키](command-line-syntax-key.md)
-  [nslookup 루트 설정](nslookup-set-root.md)
+  [nslookup 집합 루트](nslookup-set-root.md)

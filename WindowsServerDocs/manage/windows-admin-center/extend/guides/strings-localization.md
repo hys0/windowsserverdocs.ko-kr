@@ -7,13 +7,13 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 06/18/2018
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
-ms.openlocfilehash: 4cc624dcc985f13f97b7bbc767de6bbb9c72217a
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.prod: windows-server
+ms.openlocfilehash: 61289ae175ca8b906386cff9e36f5023ea28d051
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70869706"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71385243"
 ---
 # <a name="strings-and-localization-in-windows-admin-center"></a>Windows 관리 센터의 문자열 및 지역화 #
 
@@ -42,7 +42,7 @@ MsftSme.resourcesStrings<Strings>().HelloWorld.cim.title;
 
 다른 언어에 대 한 지역화의 경우 각 언어에 대해 문자열. resjson 파일을 만들어야 합니다. 이러한 파일은에 ```\loc\output\{!ExtensionName}\{!LanguageFolder}\strings.resjson```배치 해야 합니다. 해당 폴더에 사용 가능한 언어는 다음과 같습니다.
 
-| 언어      | Folder      |
+| 언어      | 폴더      |
 | ------------- |-------------|
 | Čeština | cs-CZ |
 | Deutsch | de-DE |
@@ -71,7 +71,7 @@ MsftSme.resourcesStrings<Strings>().HelloWorld.cim.title;
 ```json
 "HelloWorld_cim_title": "CIM Componente",
 ```
-지역화 된 문자열을 추가할 때마다 gulp 생성을 다시 실행 하 여 표시 되도록 해야 합니다. 실행:
+지역화 된 문자열을 추가할 때마다 gulp 생성을 다시 실행 하 여 표시 되도록 해야 합니다. 다음을 실행합니다.
 ``` cmd
 gulp generate 
 ```

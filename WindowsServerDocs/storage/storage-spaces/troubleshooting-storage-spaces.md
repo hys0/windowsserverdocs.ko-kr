@@ -2,19 +2,19 @@
 title: 스토리지 공간 다이렉트 문제 해결
 description: 스토리지 공간 다이렉트 배포 문제를 해결 하는 방법을 알아봅니다.
 keywords: 저장소 공간
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: ''
 ms.technology: storage-spaces
 ms.topic: article
 author: kaushika-msft
 ms.date: 10/24/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 30fdda5ada01510027100efce1e95f310f69c6a1
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: ace19b711445106956ae223f17afb6b4181d352d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70865101"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71365945"
 ---
 # <a name="troubleshoot-storage-spaces-direct"></a>문제 해결 스토리지 공간 다이렉트
 

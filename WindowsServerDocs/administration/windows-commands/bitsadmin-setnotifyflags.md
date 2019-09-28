@@ -1,8 +1,8 @@
 ---
 title: bitsadmin setnotifyflags
-description: Windows 명령 항목에 대 한 **bitsadmin setnotifyflags** -이벤트가 지정된 된 된 작업에 대 한 알림 플래그를 설정 합니다.
+description: '**Bitsadmin setnotifyflags** 에 대 한 Windows 명령 항목-지정 된 작업에 대 한 이벤트 알림 플래그를 설정 합니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bc817e03e0f1916ea392830d14985a7a1377d69a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d9cfabf05610cbbe8fa65fd16b0d33e161dcef9b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59868794"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71380454"
 ---
 # <a name="bitsadmin-setnotifyflags"></a>bitsadmin setnotifyflags
 
@@ -39,11 +39,11 @@ bitsadmin /SetNotifyFlags <Job> <NotifyFlags>
 
 ## <a name="remarks"></a>설명
 
-합니다 **NotifyFlags** 매개 변수는 다음과 같은 알림 플래그 중 하나 이상을 포함할 수 있습니다.
+**NotifyFlags** 매개 변수는 다음 알림 플래그 중 하나 이상을 포함할 수 있습니다.
 
-|---|---| | 1 | 작업의 모든 파일 전송 된 경우 이벤트를 생성 합니다. | | 2 | 오류가 발생 하면 이벤트를 생성 합니다. | | 4 | 알림을 사용 하지 않도록 설정 합니다. |
+|-----|-----| | 1 | 작업의 모든 파일이 전송 되 면 이벤트를 생성 합니다. | | 2 | 오류가 발생 하면 이벤트를 생성 합니다. | | 4 | 알림을 사용 하지 않도록 설정 합니다. |
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 다음 예제에서는 전송에 대 한 알림 플래그를 설정 및 오류 이벤트 라는 작업에 대 한 작업 *myDownloadJob*합니다.
 ```

@@ -7,14 +7,14 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: d5760820613c3b791b577a600cae543621eee257
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c8a5863865d465d55f1d5865fdcbdeeb942ce194
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59845594"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71409087"
 ---
 # <a name="introduction-to-active-directory-replication-and-topology-management-using-windows-powershell-level-100"></a>Windows PowerShell을 사용한 Active Directory 복제 및 토폴로지 관리 소개(수준 100)
 
@@ -43,12 +43,12 @@ Active Directory 모듈에 대 한 Windows PowerShell은 Windows Server 2012를 
 
 ## <a name="lab-requirements"></a>랩 요구 사항
 
--   두 개의 Windows Server 2012 도메인 컨트롤러: 컨트롤러(**DC1** 및 **DC2**)
+-   Windows Server 2012 도메인 컨트롤러 두 개: 컨트롤러(**DC1** 및 **DC2**)
 
 ## <a name="view-domain-controllers-and-their-sites"></a>도메인 컨트롤러 및 해당 사이트 확인
 이 단계에서는 Windows PowerShell용 Active Directory 모듈을 사용하여 기존 도메인 컨트롤러 및 도메인의 복제 토폴로지를 확인합니다.
 
-다음 절차의 단계를 완료 하려면 Domain Admins 그룹의 구성원 이어야 하거나 해당 권한이 해야 합니다.
+다음 절차의 단계를 완료 하려면 Domain Admins 그룹의 구성원 이거나 이와 동등한 권한이 있어야 합니다.
 
 #### <a name="to-view-all-active-directory-sites"></a>모든 Active Directory 사이트를 확인하려면
 
@@ -82,7 +82,7 @@ Active Directory 모듈에 대 한 Windows PowerShell은 Windows Server 2012를 
 ## <a name="manage-replication-topology"></a>복제 토폴로지 관리
 이전 단계에서 `Get-ADDomainController -Filter * | ft Hostname,Site`명령을 실행하고 나면 **DC2** 가 **CORPORATE** 사이트의 일부분으로 나열됩니다. 아래 절차에서는 새 지점 사이트 **BRANCH1**을 만들고 새 사이트 링크를 만든 다음, 사이트 링크 비용 및 복제 빈도를 설정하고 나서 **DC2**를 **BRANCH1**로 이동합니다.
 
-다음 절차의 단계를 완료 하려면 Domain Admins 그룹의 구성원 이어야 하거나 해당 권한이 해야 합니다.
+다음 절차의 단계를 완료 하려면 Domain Admins 그룹의 구성원 이거나 이와 동등한 권한이 있어야 합니다.
 
 #### <a name="to-create-a-new-site"></a>새 사이트를 만들려면
 
@@ -134,7 +134,7 @@ Active Directory 모듈에 대 한 Windows PowerShell은 Windows Server 2012를 
 ## <a name="view-replication-status-information"></a>복제 상태 정보 확인
 다음 절차에서는 Active Directory용 Windows PowerShell 복제 및 관리 cmdlet 중 하나인 `Get-ADReplicationUpToDatenessVectorTable DC1`을 사용하여 간단한 복제 보고서(각 도메인 컨트롤러가 유지 관리하는 최신 벡터 테이블 사용)를 생성합니다. 이 최신 벡터 테이블은 포리스트의 각 도메인 컨트롤러에 표시되는 최고 원래 쓰기 USN을 추적합니다.
 
-다음 절차의 단계를 완료 하려면 Domain Admins 그룹의 구성원 이어야 하거나 해당 권한이 해야 합니다.
+다음 절차의 단계를 완료 하려면 Domain Admins 그룹의 구성원 이거나 이와 동등한 권한이 있어야 합니다.
 
 #### <a name="to-view-the-up-to-dateness-vector-table-for-a-single-domain-controller"></a>단일 도메인 컨트롤러에 대한 최신 벡터 테이블을 확인하려면
 
@@ -155,6 +155,6 @@ Active Directory 모듈에 대 한 Windows PowerShell은 Windows Server 2012를 
     이처럼 데이터가 정렬되므로 지정된 복제 파트너에 대해 각 도메인 컨트롤러가 마지막으로 표시한 USN을 쉽게 비교할 수 있습니다. 이러한 방법으로 환경 전체에서 수행되는 복제를 빠르게 확인할 수 있습니다. 복제가 정상적으로 작동하면 지정된 복제 파트너에 대해 보고되는 UsnFilter 값은 모든 도메인 컨트롤러에서 비슷해야 합니다.
 
 ## <a name="see-also"></a>관련 항목
-[고급 Active Directory 복제 및 토폴로지 관리 Windows PowerShell을 사용 하 여 &#40;수준 200&#41;](Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-.md)
+[Windows PowerShell &#40;수준 200을 사용한 고급 Active Directory 복제 및 토폴로지 관리&#41;](Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-.md)
 
 

@@ -2,19 +2,19 @@
 title: 가상 네트워크 피어링 구성
 description: 가상 네트워크 피어 링을 구성 하려면 피어 링를 가져오는 두 개의 가상 네트워크를 만들어야 합니다.
 manager: dougkim
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-hv-switch
 ms.topic: get-started-article
 ms.assetid: ''
 ms.author: pashort
 author: shortpatti
 ms.date: 08/08/2018
-ms.openlocfilehash: 417585ffbe1e8374be1560073d5636659eaf4332
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 4d35501b8d876f2a178a4744d495125dea8da6c7
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70869882"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71405816"
 ---
 # <a name="configure-virtual-network-peering"></a>가상 네트워크 피어링 구성
 

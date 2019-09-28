@@ -1,7 +1,7 @@
 ---
 title: 권장된 메모리 양은로 Windows 7은 구성 해야
-description: 이 모범 사례 분석기 규칙에 의해 보고 된 문제를 해결 하려면 지침을 제공 합니다.
-ms.prod: windows-server-threshold
+description: 이 모범 사례 분석기 규칙에서 보고 한 문제를 해결 하는 지침을 제공 합니다.
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -10,12 +10,12 @@ ms.topic: article
 ms.assetid: d77d648c-6e26-43fa-be0a-6eb4b28f9cb4
 author: KBDAzure
 ms.date: 8/16/2016
-ms.openlocfilehash: e91e3d5f2ddb374a6e5fd5b60ac1adee125257c2
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3ce8d31b13664f09c97755399503de1c12ef070a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59812294"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71364525"
 ---
 # <a name="windows-7-should-be-configured-with-the-recommended-amount-of-memory"></a>권장된 메모리 양은로 Windows 7은 구성 해야
 
@@ -34,17 +34,17 @@ ms.locfileid: "59812294"
 
 ## <a name="issue"></a>문제점  
   
-*Windows 7을 실행 하는 가상 컴퓨터는 1GB ram 권장된 크기 보다 더 적은 노력으로 구성 됩니다.*  
+*Windows 7을 실행 하는 가상 머신은 1gb RAM 권장 된 크기 보다 더 작은 수준으로 구성 됩니다.*  
   
 ## <a name="impact"></a>영향  
   
-*게스트 운영 체제 및 응용 프로그램 잘 작동 하지 않을 수 있습니다. 메모리가 부족 하 여 한 번에 여러 응용 프로그램을 실행 하려면 아닐 수도 있습니다. 이 가상 컴퓨터에 영향을 줍니다.*  
+@no__t 게스트 운영 체제 및 응용 프로그램이 제대로 작동 하지 않을 수 있습니다. 메모리가 부족 하 여 한 번에 여러 응용 프로그램을 실행 하려면 아닐 수도 있습니다. 이는 다음과 같은 가상 컴퓨터에 영향을 줍니다. *  
 ```  
 <list of virtual machine names>  
 ```  
 ## <a name="resolution"></a>해결 방법  
   
-*Hyper-v 관리자를 사용 하 여이 가상 머신에 1GB 이상에 할당 된 메모리를 늘리세요.*  
+*Hyper-v 관리자를 사용 하 여이 가상 컴퓨터에 할당 된 메모리를 1GB 이상으로 늘리십시오.*  
   
 ### <a name="to-increase-the-memory-using-hyper-v-manager"></a>Hyper-v 관리자를 사용 하 여 메모리를 늘리려면  
   
@@ -71,7 +71,7 @@ Set-VMMemory <MyVM> -StartupBytes 1GB
 ```  
   
 ## <a name="see-also"></a>관련 항목  
-[Set-VMMemory](https://technet.microsoft.com/library/hh848572.aspx)  
+[설정-VMMemory](https://technet.microsoft.com/library/hh848572.aspx)  
   
 
 

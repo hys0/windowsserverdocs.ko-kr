@@ -1,20 +1,20 @@
 ---
 title: Active Directory 도메인 서비스 구성 요소 업데이트
-description: 이 문서에서는 Windows Server 2012 R2 용 AD DS 구성 요소 업데이트 설명
+description: 이 문서에서는 Windows Server 2012 r 2에 대 한 AD DS 구성 요소 업데이트에 대해 설명 합니다.
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 09/08/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.assetid: a3a91034-a4da-4ad7-93f8-0cd2ec3e7824
 ms.technology: identity-adds
-ms.openlocfilehash: b0bd021863e1e25bd222baf9a633438153fe820b
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: e7bacf4f238144fca26776a729a5e4d5bf3444ab
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66442765"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71389953"
 ---
 # <a name="active-directory-domain-services-component-updates"></a>Active Directory 도메인 서비스 구성 요소 업데이트
 
@@ -40,7 +40,7 @@ ms.locfileid: "66442765"
 
     -   [SPN 및 UPN 고유성](../../../ad-ds/manage/component-updates/SPN-and-UPN-uniqueness.md)  
 
-    -   [Winlogon 자동 다시 시작 로그온 &#40;ARSO&#41;](../../../ad-ds/manage/component-updates/Winlogon-Automatic-Restart-Sign-On--ARSO-.md)  
+    -   [Winlogon 자동 다시 시작 로그온 &#40;arso&#41;](../../../ad-ds/manage/component-updates/Winlogon-Automatic-Restart-Sign-On--ARSO-.md)  
 
     -   [TPM 키 증명](../../../ad-ds/manage/component-updates/TPM-Key-Attestation.md)  
 

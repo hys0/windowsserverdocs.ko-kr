@@ -1,8 +1,8 @@
 ---
 title: bitsadmin getstate
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f7ed7529fda264efaceb6b4b36e36e728c211f3f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 55be37a6b1b44b81ed9002e5e3b9eb1fd46bd0dc
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59889624"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381226"
 ---
 # <a name="bitsadmin-getstate"></a>bitsadmin getstate
 
@@ -42,9 +42,9 @@ bitsadmin /GetState <Job>
 
 가능한 상태는.
 
-|-----|-----| | 큐에 대기 | 작업 실행 되기를 기다리고 있습니다. | | 연결 | 비트에는 서버에 연결 됩니다. | | 전송 | 비트 데이터를 전송 합니다. | | 일시 중단 | 작업 일시 중지 됩니다. | | 오류 | 복구할 수 없는 오류가 발생 했습니다. 전송 재시도 되지 것입니다. | | TRANSIENT_ERROR | 복구 가능한 오류가 발생 했습니다. 최소 재시도 간격에서 만료 되 면 전송 재시도 합니다. | | 승인 | 작업이 완료 되었습니다. | | 취소 | 작업이 취소 되었습니다. |
+|-----|-----| | 큐에 대기 | 작업이 실행 되기를 기다리고 있습니다. | | 연결 | BITS가 서버에 연결 하는 중입니다. | | 전송 중 | BITS가 데이터를 전송 하 고 있습니다. | | 일시 중단 됨 | 작업이 일시 중지 되었습니다. | | 오류 | 복구할 수 없는 오류가 발생 했습니다. 전송은 다시 시도 되지 않습니다. | | TRANSIENT_ERROR | 복구 가능한 오류가 발생 했습니다. 최소 다시 시도 지연이 만료 되 면 전송 다시 시도 됩니다. | | 승인 됨 | 작업이 완료 되었습니다. | | 취소 | 작업이 취소 되었습니다. |
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 다음 예제에서는 명명 된 작업에 대 한 상태를 검색 *myDownloadJob*합니다.
 ```

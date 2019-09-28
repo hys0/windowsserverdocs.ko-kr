@@ -1,8 +1,8 @@
 ---
 title: bitsadmin util
-description: Windows 명령 항목에 대 한 **bitsadmin util** -목록을 합니다 **Util** 스위치
+description: '**Bitsadmin util** 에 대 한 Windows 명령 항목- **util** 스위치 목록'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: edc8c5b2d2d42a50902603c56ef7326133bb22f6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a192df3254ac28cbbd9c8186e321b77e087e63e8
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59867014"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71380166"
 ---
 # <a name="bitsadmin-util"></a>bitsadmin util
 
@@ -38,11 +38,11 @@ bitsadmin /Util /version
 
 |매개 변수|설명|
 |-------|--------|
-|[bitsadmin util 및 도움말](bitsadmin-util-and-help.md)|/Util 스위치에 대 한 명령줄 사용법을 표시합니다. 지정할 수도 있습니다 /? **BITSAdmin 1.5 및 이전 버전**: 지원되지 않습니다.|
-|[bitsadmin util 및 getieproxy](bitsadmin-util-and-getieproxy.md)|지정한 서비스 계정에 대 한 프록시 사용을 검색합니다.|
-|[bitsadmin util 및 repairservice](bitsadmin-util-and-repairservice.md)|알려진 문제가 BITS 서비스 복구|
-|[bitsadmin util 및 setieproxy](bitsadmin-util-and-setieproxy.md)|서비스 계정을 사용 하 여 파일을 전송할 때 사용 하 여 프록시 설정을 지정 합니다.|
-|[bitsadmin util 및 버전](bitsadmin-util-and-version.md)|BITS 서비스의 버전을 표시|
+|[bitsadmin util and help](bitsadmin-util-and-help.md)|/Sva 스위치에 대 한 명령줄 사용법을 표시 합니다. /?를 지정할 수도 있습니다. **Bitsadmin 1.5 및 이전 버전**: 지원되지 않습니다.|
+|[bitsadmin util and getieproxy](bitsadmin-util-and-getieproxy.md)|지정한 서비스 계정에 대 한 프록시 사용을 검색합니다.|
+|[bitsadmin util and repairservice](bitsadmin-util-and-repairservice.md)|BITS 서비스의 알려진 문제를 복구 합니다.|
+|[bitsadmin util and setieproxy](bitsadmin-util-and-setieproxy.md)|서비스 계정을 사용 하 여 파일을 전송할 때 사용 하 여 프록시 설정을 지정 합니다.|
+|[bitsadmin util and version](bitsadmin-util-and-version.md)|BITS 서비스의 버전을 표시|
 
 #### <a name="additional-references"></a>추가 참조
 

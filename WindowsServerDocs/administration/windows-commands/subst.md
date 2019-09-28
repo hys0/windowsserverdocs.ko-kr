@@ -1,8 +1,8 @@
 ---
 title: subst
-description: 드라이브 문자를 사용 하 여 경로 연결 하는 방법에 알아봅니다.
+description: 드라이브 문자와 경로를 연결 하는 방법에 대해 알아봅니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 858195de89ca8661cf47c25b6cf9b519cc4efbf8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f3010d1e58fbd360b8311512e6664873b020c12b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59858074"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71383749"
 ---
 # <a name="subst"></a>subst
 
@@ -39,14 +39,14 @@ subst <Drive1>: /d
 
 |매개 변수|설명|
 |---------|-----------|
-|\<Drive1>:|경로 할당할 가상 드라이브를 지정 합니다.|
-|[\<Drive2>:]\<Path>|실제 드라이브와 가상 드라이브에 할당 하 고 원하는 경로 지정 합니다.|
+|\<Drive1 >:|경로 할당할 가상 드라이브를 지정 합니다.|
+|[\<Drive2 >:] \<Path >|실제 드라이브와 가상 드라이브에 할당 하 고 원하는 경로 지정 합니다.|
 |/d|대체 된 가상 드라이브를 삭제합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
 ## <a name="remarks"></a>설명
 
--   다음 명령은 작동 하지 않습니다 하 고에 지정 된 드라이브에서 사용할 수 없습니다는 **subst** 명령:
+-   다음 명령은 작동 하지 않으며 **subst** 명령에 지정 된 드라이브에서 사용 하면 안 됩니다.
 
     **chkdsk**
 
@@ -63,7 +63,7 @@ subst <Drive1>: /d
 
     `Invalid parameter - drive1:`
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 B:\User\Betty\Forms 경로 대 한 가상 드라이브 Z를 만들려면 다음을 입력 합니다.
 ```

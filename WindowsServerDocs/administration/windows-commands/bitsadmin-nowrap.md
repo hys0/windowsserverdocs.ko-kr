@@ -1,8 +1,8 @@
 ---
 title: bitsadmin nowrap
-description: Windows 명령 항목에 대 한 **bitsadmin nowrap** -출력 명령 창 맨 오른쪽 가장자리로 벗어난 텍스트의 줄을 자릅니다.
+description: '**Bitsadmin nowrap** 에 대 한 Windows 명령 항목-명령 창의 가장 오른쪽 가장자리를 벗어나 확장 되는 출력 텍스트 줄을 자릅니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4130f606a6b1874e1ea31952160de44d6e09c6b6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3806ec51161eeae498e3c9b367b2aacf0bd32c99
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59822924"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381047"
 ---
 # <a name="bitsadmin-nowrap"></a>bitsadmin nowrap
 
@@ -32,9 +32,9 @@ bitsadmin /NoWrap
 
 ## <a name="remarks"></a>설명
 
-기본적으로 모든 스위치를 제외 합니다 **모니터** 전환, 출력을 래핑합니다. 지정 된 **NoWrap** 다른 스위치 전에 전환 합니다.
+기본적으로 **모니터** 스위치를 제외한 모든 스위치는 출력을 래핑합니다. 다른 스위치 앞에 **NoWrap** 스위치를 지정 합니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 다음 예제에서는 명명 된 작업에 대 한 상태를 검색 *myDownloadJob* 고 출력 래핑하지 않습니다
 ```

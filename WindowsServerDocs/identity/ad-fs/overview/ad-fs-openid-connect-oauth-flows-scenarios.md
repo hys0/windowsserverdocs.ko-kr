@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: d7ed8f7976116ab245fa730a5a050e7ec46cebea
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: e1e0235e50945fadd09fe9dd5ffeaf6d7119e482
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70869485"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71385597"
 ---
 # <a name="ad-fs-openid-connectoauth-flows-and-application-scenarios"></a>AD FS Openid connect Connect/OAuth 흐름 및 응용 프로그램 시나리오
 AD FS 2016 이상에 적용 됩니다.
@@ -63,7 +63,7 @@ client_id=6731de76-14a6-49ae-97bc-6eba6914391e
 |매개 변수|필수/선택|설명| 
 |-----|-----|-----|
 |client_id|필수|앱에 할당 AD FS는 응용 프로그램 (클라이언트) ID입니다.| 
-|response_type|필수|Openid connect Connect `id_token`로그인을 포함 해야 합니다. Response_type `token`포함 될 수도 있습니다. 여기에서 토큰을 사용 하면 앱이 토큰 끝점에 대 한 두 번째 요청을 수행 하지 않고도 권한 부여 끝점에서 즉시 액세스 토큰을 받을 수 있습니다.| 
+|response_type|필수|Openid connect Connect `id_token`로그인을 포함 해야 합니다. Response_type @ no__t-0도 포함 될 수 있습니다. 여기에서 토큰을 사용 하면 앱이 토큰 끝점에 대 한 두 번째 요청을 수행 하지 않고도 권한 부여 끝점에서 즉시 액세스 토큰을 받을 수 있습니다.| 
 |redirect_uri|필수|앱에서 인증 응답을 보내고 받을 수 있는 앱의 redirect_uri입니다. AD FS에서 구성한 redirect_uris 중 하 나와 정확 하 게 일치 해야 합니다.| 
 |임시|필수|앱에서 생성 한 요청에 포함 된 값으로, 결과로 생성 된 id_token에 클레임으로 포함 됩니다. 그러면 앱에서 토큰 재생 공격을 완화 하기 위해이 값을 확인할 수 있습니다. 값은 일반적으로 요청의 출처를 식별 하는 데 사용할 수 있는 임의의 고유 문자열입니다. Id_token가 요청 된 경우에만 필요 합니다.|
 |범위|선택적|공백으로 구분 된 범위 목록입니다. Openid connect Connect의 경우 범위 `openid`를 포함 해야 합니다.|
@@ -95,11 +95,11 @@ access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik5HVEZEstZnl0aEV...
 
 |매개 변수|설명| 
 |-----|-----|
-|access_token|Response_type에가 포함 `token`된 경우 포함 됩니다.|
-|token_type|Response_type에가 포함 `token`된 경우 포함 됩니다. 는 항상 전달자입니다.| 
-|expires_in| Response_type에가 포함 `token`된 경우 포함 됩니다. 캐싱을 위해 토큰이 유효한 시간 (초)을 나타냅니다.| 
+|access_token|Response_type에 @ no__t-0이 포함 된 경우 포함 됩니다.|
+|token_type|Response_type에 @ no__t-0이 포함 된 경우 포함 됩니다. 는 항상 전달자입니다.| 
+|expires_in| Response_type에 @ no__t-0이 포함 된 경우 포함 됩니다. 캐싱을 위해 토큰이 유효한 시간 (초)을 나타냅니다.| 
 |범위| Access_token이 유효한 범위를 나타냅니다.|  
-|id_token|Response_type에가 포함 `id_token`된 경우 포함 됩니다. JWT (서명 된 JSON Web Token)입니다. 앱은이 토큰의 세그먼트를 디코드 하 여 로그인 한 사용자에 대 한 정보를 요청할 수 있습니다. 앱은 값을 캐시 하 고 표시할 수 있지만 권한 부여 또는 보안 경계에는이 값을 사용 하지 않아야 합니다.| 
+|id_token|Response_type에 @ no__t-0이 포함 된 경우 포함 됩니다. JWT (서명 된 JSON Web Token)입니다. 앱은이 토큰의 세그먼트를 디코드 하 여 로그인 한 사용자에 대 한 정보를 요청할 수 있습니다. 앱은 값을 캐시 하 고 표시할 수 있지만 권한 부여 또는 보안 경계에는이 값을 사용 하지 않아야 합니다.| 
 |state|요청에 state 매개 변수가 포함 되어 있으면 동일한 값이 응답에 표시 되어야 합니다. 앱은 요청 및 응답의 상태 값이 동일한 지 확인 해야 합니다.|
 
 ### <a name="refresh-tokens"></a>토큰 새로 고침 
@@ -139,12 +139,12 @@ client_id=6731de76-14a6-49ae-97bc-6eba6914391e
 |redirect_uri|필수|앱에서 인증 응답을 보내고 받을 수 있는 앱 의입니다.`redirect_uri` 클라이언트의 AD FS에 등록 한 redirect_uris 중 하 나와 정확 하 게 일치 해야 합니다.|  
 |resource|선택적|웹 API의 url입니다.</br>참고 – MSAL 클라이언트 라이브러리를 사용 하는 경우 리소스 매개 변수가 전송 되지 않습니다. 대신 리소스 url은 범위 매개 변수의 일부로 전송 됩니다.`scope = [resource url]//[scope values e.g., openid]`</br>리소스가 여기에 전달 되지 않거나 범위에서 ADFS는 기본 리소스 urn: microsoft: userinfo를 사용 합니다. MFA, 발급 또는 권한 부여 정책과 같은 사용자 정보 리소스 정책은 사용자 지정할 수 없습니다.| 
 |범위|선택적|공백으로 구분 된 범위 목록입니다.|
-|response_mode|선택적|결과 토큰을 앱에 다시 보내는 데 사용 해야 하는 메서드를 지정 합니다. 다음 중 하나일 수 있습니다. </br>-쿼리 </br>-조각 </br>- form_post</br>`query` 코드를 리디렉션 URI에 대 한 쿼리 문자열 매개 변수로 제공 합니다. 코드를 요청 하는 경우 쿼리, 조각 또는 form_post를 사용할 수 있습니다.  `form_post` 리디렉션URI에대한코드를포함하는 POST를 실행 합니다.|
+|response_mode|선택적|결과 토큰을 앱에 다시 보내는 데 사용 해야 하는 메서드를 지정 합니다. 다음 중 하나일 수 있습니다. </br>-쿼리 </br>-조각 </br>- form_post</br>`query` 코드를 리디렉션 URI에 대 한 쿼리 문자열 매개 변수로 제공 합니다. 코드를 요청 하는 경우 쿼리, 조각 또는 form_post를 사용할 수 있습니다.  `form_post` @ no__t-1은 코드를 포함 하는 POST를 리디렉션 URI에 실행 합니다.|
 |state|선택적|토큰 응답에도 반환 되는 요청에 포함 된 값입니다. 원하는 모든 콘텐츠의 문자열일 수 있습니다. 임의로 생성 된 고유 값은 일반적으로 교차 사이트 요청 위조 공격을 방지 하는 데 사용 됩니다. 또한이 값은 인증 요청이 발생 하기 전에 앱에서 사용자 상태에 대 한 정보 (예: 설정 된 페이지 또는 보기)를 인코딩할 수 있습니다.|
 |prompt|선택적|필요한 사용자 상호 작용의 유형을 나타냅니다. 현재 유일 하 게 유효한 값은 로그인 이며 없음입니다.</br>- `prompt=login` 는 사용자가 해당 요청에 대 한 자격 증명을 입력 하도록 하 여 single sign-on을 부정 합니다. </br>- `prompt=none` 그 반대의 경우에는 사용자에 게 대화형 프롬프트가 표시 되지 않습니다. Single sign-on을 통해 요청을 자동으로 완료할 수 없는 경우 AD FS는 interaction_required 오류를 반환 합니다.|
 |login_hint|선택적|사용자의 사용자 이름을 미리 알고 있는 경우 사용자에 대 한 로그인 페이지의 사용자 이름/이메일 주소 필드를 미리 채우는 데 사용할 수 있습니다. 앱에서 `upn` `id_token`클레임을 사용 하 여 이전 로그인에서 사용자 이름을 이미 추출 하 여 다시 인증 하는 동안이 매개 변수를 사용 하는 경우가 많습니다.|
 |domain_hint|선택적|포함 되는 경우 사용자가 로그인 페이지에서 이동 하는 도메인 기반 검색 프로세스를 건너뛰고 약간 더 간소화 된 사용자 환경을 제공 합니다.|
-|code_challenge_method|선택적|Code_challenge 매개 변수에 대 한 code_verifier를 인코딩하는 데 사용 되는 메서드입니다. 다음 값 중 하나입니다. </br>-일반 </br>- S256 </br>제외 된 경우이 포함 된 경우 `code_challenge` code_challenge는 일반 텍스트로 간주 됩니다. AD FS는 일반 및 S256을 모두 지원 합니다. 자세한 내용은 [Pkce RFC](https://tools.ietf.org/html/rfc7636)를 참조 하세요.|
+|code_challenge_method|선택적|Code_challenge 매개 변수에 대 한 code_verifier를 인코딩하는 데 사용 되는 메서드입니다. 다음 값 중 하나입니다. </br>-일반 </br>- S256 </br>제외 하는 경우 @ no__t-0 @ no__t-1is가 포함 된 경우 code_challenge는 일반 텍스트로 간주 됩니다. AD FS는 일반 및 S256을 모두 지원 합니다. 자세한 내용은 [Pkce RFC](https://tools.ietf.org/html/rfc7636)를 참조 하세요.|
 |code_challenge|선택적| 인증 코드의 보안을 유지 하는 데 사용 됩니다. 가 포함 `code_challenge_method`된 경우 필수입니다. 자세한 내용은 [Pkce RFC](https://tools.ietf.org/html/rfc7636) 를 참조 하세요.|
 
 이 시점에서 사용자에 게 자격 증명을 입력 하 고 인증을 완료 하 라는 메시지가 표시 됩니다. 사용자가 AD FS 인증 되 면 `redirect_uri` 매개 변수에 지정 `response_mode`된 메서드를 사용 하 여 지정 된에서 앱에 대 한 응답을 반환 합니다.  
@@ -190,7 +190,7 @@ client_id=6731de76-14a6-49ae-97bc-6eba6914391e
 |code|필수|흐름의 첫 번째 레그에서 가져온 입니다.`authorization_code`| 
 |redirect_uri|필수|`redirect_uri` 을`authorization_code`획득 하는 데 사용 된 것과 동일한 값입니다.| 
 |client_secret|웹 앱에 필요|AD FS에서 앱을 등록 하는 동안 만든 응용 프로그램 암호입니다. Client_secrets를 장치에 안정적으로 저장할 수 없기 때문에 네이티브 앱에서 응용 프로그램 암호를 사용 하면 안 됩니다. Client_secret을 서버 쪽에 안전 하 게 저장할 수 있는 웹 앱과 web Api에 필요 합니다. 클라이언트 암호를 보내기 전에 URL로 인코딩해야 합니다. 이러한 앱은 JWT에 서명 하 고 client_assertion 매개 변수로 추가 하 여 키 기반 인증을 사용할 수도 있습니다.| 
-|code_verifier|선택적|Authorization_code를 `code_verifier` 가져오는 데 사용 된 것과 동일한입니다. 권한 부여 코드 부여 요청에서 PKCE를 사용한 경우에 필요 합니다. 자세한 내용은 [Pkce RFC](https://tools.ietf.org/html/rfc7636)를 참조 하세요.</br>참고 – AD FS 2019 이상에 적용 됩니다.| 
+|code_verifier|선택적|Authorization_code를 가져오는 데 사용 된 것과 동일한 `code_verifier`입니다. 권한 부여 코드 부여 요청에서 PKCE를 사용한 경우에 필요 합니다. 자세한 내용은 [Pkce RFC](https://tools.ietf.org/html/rfc7636)를 참조 하세요.</br>참고 – AD FS 2019 이상에 적용 됩니다.| 
 
 ### <a name="successful-response"></a>성공적인 응답 
  
@@ -227,7 +227,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik5HVEZ2ZEstZn
 
 ### <a name="refresh-the-access-token"></a>액세스 토큰 새로 고침 
  
-Access_tokens은 수명이 짧고 리소스에 계속 액세스할 수 있도록 만료 된 후 새로 고쳐야 합니다. 이렇게 하려면 다른 POST 요청을 `/token` 끝점에 제출 합니다. 이번에는 코드 대신 refresh_token를 제공 합니다. 새로 고침 토큰은 클라이언트에서 이미 액세스 토큰을 받은 모든 사용 권한에 대해 유효 합니다. 
+Access_tokens은 수명이 짧고 리소스에 계속 액세스할 수 있도록 만료 된 후 새로 고쳐야 합니다. @ No__t-0 @ no__t 끝점에 다른 POST 요청을 제출 하 여이 작업을 수행할 수 있습니다. 이번에는 코드 대신 refresh_token를 제공 합니다. 새로 고침 토큰은 클라이언트에서 이미 액세스 토큰을 받은 모든 사용 권한에 대해 유효 합니다. 
  
 새로 고침 토큰에 지정 된 수명이 없습니다. 일반적으로 새로 고침 토큰의 수명은 비교적 깁니다. 그러나 경우에 따라 새로 고침 토큰이 만료 되거나 해지 되거나 원하는 작업을 수행할 수 있는 권한이 부족 합니다. 응용 프로그램은 토큰 발급 끝점에서 반환 하는 오류를 정확 하 게 예측 하 고 처리 해야 합니다.  
  
@@ -591,7 +591,7 @@ scope=openid
 |verification_uri|사용자가 로그인 하기 위해 user_code로 이동 해야 하는 URI입니다.| 
 |verification_uri_complete|사용자가 로그인 하기 위해 user_code로 이동 해야 하는 URI입니다. 사용자가 user_code를 입력할 필요가 없도록 미리 user_code으로 채워집니다.| 
 |expires_in|Device_code 및 user_code가 만료 되기까지의 시간 (초)입니다.| 
-|간격은|클라이언트에서 폴링 요청 사이에 대기 해야 하는 시간 (초)입니다.| 
+|간격|클라이언트에서 폴링 요청 사이에 대기 해야 하는 시간 (초)입니다.| 
 |message|사용자에 대 한 지침이 포함 된 사람이 인식할 수 있는 문자열입니다. 이를 지역화 하려면? mkt = xx-XX 형식의 요청에 쿼리 매개 변수를 포함 하 여 해당 언어 문화권 코드를 입력 합니다.  
 
 ### <a name="authenticating-the-user"></a>사용자 인증 

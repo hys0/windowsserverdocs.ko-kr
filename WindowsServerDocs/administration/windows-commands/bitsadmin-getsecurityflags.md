@@ -1,8 +1,8 @@
 ---
 title: bitsadmin getsecurityflags
-description: Windows 명령 항목에 대 한 **bitsadmin getsecurityflags** -URL 리디렉션에 대 한 HTTP 보안 플래그를 보고 하 고 전송 하는 동안 서버 인증서의 수행을 확인 합니다.
+description: '**Bitsadmin getsecurityflags** 에 대 한 Windows 명령 항목-전송 하는 동안 서버 인증서에서 수행 되는 URL 리디렉션과 검사에 대 한 HTTP 보안 플래그를 보고 합니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6e1db167b12d47afccb8842da617f1e9fe72acff
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: fb53664a6366b411ae1eb9b0fe7c93392d60b542
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66434965"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381463"
 ---
 # <a name="bitsadmin-getsecurityflags"></a>bitsadmin getsecurityflags
 
@@ -38,7 +38,7 @@ bitsadmin /GetSecurityFlags <Job>
 |-------|--------|
 |작업|작업의 표시 이름 또는 GUID|
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 다음 예제에서는 명명 된 작업에서 securitly 플래그를 검색 *myJob*합니다.
 
 ```

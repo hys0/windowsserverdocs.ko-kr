@@ -2,7 +2,7 @@
 title: 사용자 계정 고려 사항
 description: MultiPoint 서비스에 대 한 사용자 계정, 사용자 이름 및 암호 고려 사항을 제공 합니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: c4a0355b5e081e0673447fb86f1475d0b34c3792
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: c81d14d46e96d39676e1fb6fa31892e0d5e1b683
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871503"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71389262"
 ---
 # <a name="user-account-considerations"></a>사용자 계정 고려 사항
 이 항목에서는, 관리자는 사용자를 고려해 야 할 사용자 계정 관리를 만들 때 문제를 설명 합니다. 다중 포인트 관리자의 사용자 탭에서 사용자 계정을 관리할 수 있습니다. 자세한 내용은 [사용자 계정 관리](Manage-User-Accounts.md) 항목을 참조하세요.  

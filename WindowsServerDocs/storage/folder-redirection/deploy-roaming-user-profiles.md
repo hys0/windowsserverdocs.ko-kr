@@ -1,19 +1,19 @@
 ---
 title: 로밍 사용자 프로필 배포
 TOCTitle: Deploying Roaming User Profiles
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.date: 06/07/2019
 ms.author: jgerend
-ms.openlocfilehash: 3442ad46590add695fb3fed607c6f728e2bc5ee1
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: b7a89ce8d72cf4f060e83b3653b3b2d93eed5cfd
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70867285"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402037"
 ---
 # <a name="deploying-roaming-user-profiles"></a>로밍 사용자 프로필 배포
 
@@ -238,7 +238,7 @@ Windows Server에서 파일 공유를 만드는 방법은 다음과 같습니다
 | 값 이름   | **SpecialRoamingOverrideAllowed** |
 | 값 유형   | **REG_DWORD**               |
 | 값 데이터   | **1** (또는 **0** 으로 설정) |
-| 기본         | **Decimal**                 |
+| 기본         | **진수가**                 |
 
 5. 필드 사용자에 게 더 빠르게 로그인 하려면 처음 로그온 최적화를 사용 하도록 설정 합니다. 이렇게 하려면 [정책 적용을 참조 하 여 로그인 시간을 향상 시킵니다](https://docs.microsoft.com/windows/client-management/mandatory-user-profile#apply-policies-to-improve-sign-in-time).
 6. 필드 클라이언트 Pc를 배포 하는 데 사용 하는 Windows 10 기본 이미지에서 불필요 한 앱을 제거 하 여 로그인 시간을 더 줄일 수 있습니다. Windows Server 2019 및 Windows Server 2016에는 미리 프로 비전 된 앱이 없으므로 서버 이미지에서이 단계를 건너뛸 수 있습니다.
@@ -287,7 +287,7 @@ Windows Server에서 파일 공유를 만드는 방법은 다음과 같습니다
 
 ## <a name="appendix-a-checklist-for-deploying-roaming-user-profiles"></a>부록 A: 로밍 사용자 프로필 배포 검사 목록
 
-| 상태                     | 작업                                                |
+| Status                     | 작업                                                |
 | ---                        | ------                                                |
 | ☐<br>☐<br>☐<br>☐<br>☐   | 1. 도메인 준비<br>-도메인에 컴퓨터 가입<br>-별도의 프로필 버전을 사용 하도록 설정<br>-사용자 계정 만들기<br>-(선택 사항) 폴더 리디렉션 배포 |
 | ☐<br><br><br>             | 2. 로밍 사용자 프로필에 대한 보안 그룹 만들기<br>-그룹 이름:<br>멤버 |

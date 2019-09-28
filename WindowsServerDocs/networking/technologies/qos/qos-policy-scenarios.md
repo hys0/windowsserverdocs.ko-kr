@@ -1,19 +1,19 @@
 ---
 title: QoS 정책 시나리오
 description: 이 항목에서는 그룹 정책를 사용 하 여 Windows Server 2016의 특정 응용 프로그램 및 서비스에 대 한 네트워크 트래픽 우선 순위를 지정 하는 방법을 설명 하는 QoS (서비스 품질) 정책 시나리오를 제공 합니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: c4306f06-a117-4f65-b78b-9fd0d1133f95
 manager: brianlic
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: e0968157532c0b3bd926acbaff4291e27a71de31
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 9ac5ab31db1b8c184fd179ecb3e6b87f7fffd2ba
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871867"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71405237"
 ---
 # <a name="qos-policy-scenarios"></a>QoS 정책 시나리오
 

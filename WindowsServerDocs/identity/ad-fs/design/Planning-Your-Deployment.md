@@ -7,27 +7,27 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 0206197b24f13d80019cbc864057e99e195ebc4b
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 607dc34c8f44d8d96a8dc0c9d1ed004edc799167
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66191144"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407993"
 ---
 # <a name="planning-your-deployment"></a>배포 계획
 
-계획할 때 교차\-조직 \(페더레이션\-기반\) Active Directory Federation Services를 사용 하 여 공동 작업 \(AD FS\)를 먼저 확인 조직 인터넷을 통해 다른 조직에서 액세스 하는 웹 리소스를 호스트 하는 경우 조직에서 직원에 대 한 웹 리소스에 대 한 액세스를 제공 합니다. 이 결정 AD FS를 배포 하는 방법에 영향을 줍니다. 및 AD FS 인프라에 대 한 계획의 기반이 됩니다.  
+Active Directory Federation Services \(AD FS @ no__t-5를 사용 하 여 cross @ no__t-0organizational \(federation @ no__t-2 기반 @ no__t-3 공동 작업을 계획 하는 경우 먼저 조직에서 다른 사용자가 액세스할 수 있는 웹 리소스를 호스팅하도록 결정 합니다. 조직에서 조직의 직원에 게 웹 리소스에 대 한 액세스 권한을 제공 하는 경우 이러한 결정은 AD FS를 배포 하는 방법에 영향을 주며, AD FS 인프라 계획의 기반이 됩니다.  
   
 > [!NOTE]  
 > 조직이 페더레이션 규약에서 수행하는 역할을 모든 사용자가 명확하게 이해하 고 있는지 확인합니다.  
   
-에 대 한 합니다 [페더레이션된 웹 SSO 디자인](Federated-Web-SSO-Design.md), AD FS와 같은 용어를 사용 합니다 *계정 파트너* \(라고도 *id 공급자* ADFS관리스냅인\-에\) 하 고 *리소스 파트너* \(라고도 *신뢰 당사자* AD FS 관리 스냅인\-에서\) 를 계정을 호스트 하는 조직을 차별화 하는 데 도움이 \(계정 파트너\) 웹 호스트 하는 조직에서\-기반 리소스 \(리소스 파트너\)합니다.  
+[페더레이션된 웹 SSO 디자인](Federated-Web-SSO-Design.md)의 경우 AD FS은 *계정 파트너* @no__t- *2와 같은* 용어를 사용 합니다 .이는 AD FS 관리 snap @ no__t-4in @ no__t 및 *resource partner* @no__t계정을 호스트 하는 조직을 구분 하는 데 도움이 되는 AD FS Management snap @ no__t-9in @ no__t-10에 있는 신뢰 당사자는 웹 @ no__t-13based @no__t 리소스를 호스트 하는 조직의 계정 파트너 @ no__t-12를 사용 하 여 리소스를 @no__t 합니다. partner @ no__t-15.  
   
 [Web SSO Design](Web-SSO-Design.md)에서는 조직이 사용자에게 해당 응용 프로그램에 대한 액세스 권한을 제공하므로 계정 파트너와 리소스 파트너의 역할을 모두 수행합니다.  
   
-다음 항목에서는 AD FS의 일부 파트너 조직 개념을 설명 합니다. 또한 AD FS 배포 가이드에서 설정 및 계정 파트너 조직 및 리소스 파트너 조직의 AD FS 배포 목표에 따라 구성 하는 방법에 대 한 정보가 포함 된 항목의 링크를 포함 합니다.  
+다음 항목에서는 AD FS 파트너 조직 개념 중 일부에 대해 설명 합니다. 또한 AD FS 배포 목표에 따라 계정 파트너 조직 및 리소스 파트너 조직의 설정 및 구성에 대 한 정보를 포함 하는 AD FS 배포 가이드의 항목에 대 한 링크도 포함 되어 있습니다.  
   
 ## <a name="in-this-section"></a>단원 내용  
   

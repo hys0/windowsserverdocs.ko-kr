@@ -1,8 +1,8 @@
 ---
 title: 스테이션 하드웨어 관리
-description: MultiPoint 스테이션에 대 한 하드웨어를 관리 하는 방법의 개요를 제공 합니다.
+description: MultiPoint 스테이션의 하드웨어를 관리 하는 방법에 대 한 개요를 제공 합니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: 3a1cdfd12c9bd6a21fec9cbfffae04573ef5ea98
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9ca65352a6f016d5d18bdd92b39b737cdddb9057
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59841634"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71395241"
 ---
 # <a name="manage-station-hardware"></a>스테이션 하드웨어 관리
 MultiPoint 서비스 시스템 하나로 구성 컴퓨터와 하나 이상의 스테이션 합니다. 스테이션 하드웨어 스테이션 허브, 마우스, 키보드, 비디오 모니터의 일반적으로 구성 됩니다. 일반적으로 스테이션은 컴퓨터에 물리적으로 연결됩니다.  
@@ -36,7 +36,7 @@ MultiPoint 서비스 시스템 하나로 구성 컴퓨터와 하나 이상의 �
 USB 장치 및 기타 주변 하드웨어 장치가 MultiPoint 서비스 시스템에 연결되어 있는 경우 이러한 장치는 MultiPoint 서비스 컴퓨터에 연결된 경우와 MultiPoint 서비스 스테이션에 연결된 경우에 서로 다르게 작동합니다. [USB 장치 작업](Work-with-USB-Devices.md) 항목에서는 다양한 하드웨어 장치가 이러한 시나리오에서 어떻게 작동하는지 설명하고 스테이션 허브에서 작업하는 방법에 대한 자세한 내용도 다룹니다.  
   
 ## <a name="work-with-video-devices"></a>비디오 장치 작업  
-합니다 [비디오 장치 작업](Work-with-Video-Devices.md) 항목 모니터, 프로젝터 또는 MultiPoint 서비스 스테이션을 MultiPoint 서비스 시스템의 컴퓨터에 연결 되어 있는 경우 함수 등의 방법 비디오 장치가 설명 합니다.  
+[비디오 장치 작업](Work-with-Video-Devices.md) 항목에서는 모니터, 프로젝터 등의 비디오 장치가 multipoint 서비스 시스템의 컴퓨터 또는 multipoint 서비스 스테이션에 연결 된 경우 어떻게 작동 하는지 설명 합니다.  
   
 ## <a name="set-up-a-station"></a>스테이션 설치  
 [스테이션 설치](Set-Up-a-Station.md) 항목에서는 MultiPoint 서비스 스테이션 허브에 주변 하드웨어 장치를 연결하여 MultiPoint 서비스 스테이션을 만드는 방법에 관해 설명합니다. MultiPoint 서비스는 다음과 같은 두 가지 유형의 스테이션 허브를 지원합니다.  
@@ -49,6 +49,6 @@ USB 장치 및 기타 주변 하드웨어 장치가 MultiPoint 서비스 시스�
   
 ## <a name="see-also"></a>관련 항목  
 [하드웨어 상태 보기](View-Hardware-Status.md)  
-[USB 장치 작업](Work-with-USB-Devices.md)  
-[비디오 장치 작업](Work-with-Video-Devices.md)  
-[스테이션 설정](Set-Up-a-Station.md)
+[USB 디바이스 작업](Work-with-USB-Devices.md)  
+[비디오 디바이스 작업](Work-with-Video-Devices.md)  
+[스테이션 설치](Set-Up-a-Station.md)

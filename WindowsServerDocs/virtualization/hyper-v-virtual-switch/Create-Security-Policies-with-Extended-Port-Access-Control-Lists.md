@@ -1,9 +1,9 @@
 ---
 title: 확장 포트 액세스 제어 목록을 사용하여 보안 정책 만들기
-description: 이 항목에서는 확장된 포트 액세스 제어 목록 (Acl) Windows Server 2016에 대 한 정보를 제공합니다.
+description: 이 항목에서는 Windows Server 2016의 확장 된 포트 Access Control 목록 (Acl)에 대해 설명 합니다.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-hv-switch
@@ -12,18 +12,18 @@ ms.topic: article
 ms.assetid: a92e61c3-f7d4-4e42-8575-79d75d05a218
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: d847213f0332b57ae38ada444d7a6cd98ab325ca
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f76a3146c1cb38dab26019be655fadbd15d924c5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59848984"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71365597"
 ---
 # <a name="create-security-policies-with-extended-port-access-control-lists"></a>확장 포트 액세스 제어 목록을 사용하여 보안 정책 만들기
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-이 항목에서는 확장된 포트 액세스 제어 목록 (Acl) Windows Server 2016에 대 한 정보를 제공합니다. Hyper-V 가상 스위치에서 확장 ACL을 구성하여 가상 네트워크 어댑터를 통해 스위치에 연결된 VM(가상 컴퓨터)에서 들어오고 나가는 네트워크 트래픽을 허용하거나 차단할 수 있습니다.  
+이 항목에서는 Windows Server 2016의 확장 된 포트 Access Control 목록 (Acl)에 대해 설명 합니다. Hyper-V 가상 스위치에서 확장 ACL을 구성하여 가상 네트워크 어댑터를 통해 스위치에 연결된 VM(가상 컴퓨터)에서 들어오고 나가는 네트워크 트래픽을 허용하거나 차단할 수 있습니다.  
   
 이 항목에는 다음 섹션이 수록되어 있습니다.  
   
@@ -94,9 +94,9 @@ Hyper-v 가상 스위치 확장 Acl에는 Hyper-v 가상 스위치에 연결 된
   
 -   [응용 프로그램 수준 보안 적용](#bkmk_enforce)  
   
--   [사용자 수준와 응용 프로그램 수준 보안 적용](#bkmk_both)  
+-   [사용자 수준 및 응용 프로그램 수준 보안 모두 적용](#bkmk_both)  
   
--   [비 TCP/UDP 응용 프로그램에 대 한 보안 지원 제공](#bkmk_tcp)  
+-   [비-TCP/UDP 응용 프로그램에 보안 지원 제공](#bkmk_tcp)  
   
 > [!NOTE]  
 > 아래 표의 규칙 매개 변수 **Direction**의 값은 규칙을 만들려는 VM에서 들어오고 나가는 트래픽 흐름을 기반으로 합니다. VM에서 트래픽을 받는 경우에는 이 트래픽은 인바운드이고, VM에서 트래픽을 보내는 경우 이 트래픽은 아웃바운드입니다. 예를 들어 인바운드 트래픽을 차단하는 규칙을 VM에 적용하는 경우 인바운드 트래픽의 방향은 외부 리소스에서 VM으로 이동하는 방향입니다. 아웃바운드 트래픽을 차단하는 규칙을 적용하는 경우 아웃바운드 트래픽의 방향은 로컬 VM에서 외부 리소스로 이동하는 방향입니다.  
@@ -106,9 +106,9 @@ Hyper-v 가상 스위치 확장 Acl에는 Hyper-v 가상 스위치에 연결 된
   
 예를 들어 RDP(원격 데스크톱 연결)를 사용하여 사용자가 데이터 센터의 응용 프로그램 서버에 로그인하도록 할 수 있습니다. RDP에서는 TCP 포트 3389를 사용하므로 다음 규칙을 신속하게 설정할 수 있습니다.  
   
-|원본 IP|대상 IP|프로토콜|원본 포트|대상 포트|Direction|작업|  
+|원본 IP|대상 IP|Protocol|원본 포트|대상 포트|Direction|작업|  
 |-------------|------------------|------------|---------------|--------------------|-------------|----------|  
-|*|*|TCP|*|3389|입력|허용|  
+|*|*|TCP|*|3389|입력|Allow|  
   
 다음은 Windows PowerShell 명령을 사용하여 규칙을 만들 수 있는 방법에 대한 두 가지 예입니다. 첫 번째 예제에서는 규칙은 "ApplicationServer." 라는 VM에 모든 트래픽을 차단합니다 "ApplicationServer" 라는 VM의 네트워크 어댑터에 적용 되는 두 번째 예제에서는 규칙을 VM에 인바운드 RDP 트래픽만을 허용 합니다.  
   
@@ -120,16 +120,16 @@ Add-VMNetworkAdapterExtendedAcl -VMName "ApplicationServer" -Action "Deny" -Dire
 Add-VMNetworkAdapterExtendedAcl -VMName "ApplicationServer" -Action "Allow" -Direction "Inbound" -LocalPort 3389 -Protocol "TCP" -Weight 10  
 ```  
   
-### <a name="bkmk_both"></a>사용자 수준와 응용 프로그램 수준 보안 적용  
+### <a name="bkmk_both"></a>사용자 수준 및 응용 프로그램 수준 보안 모두 적용  
 하나의 규칙에서 5개 튜플 IP 패킷(원본 IP, 대상 IP, 프로토콜, 원본 포트 및 대상 포트)을 일치시킬 수 있으므로 규칙은 포트 ACL보다 더 세부적인 보안 정책을 적용할 수 있습니다.  
   
 예를 들어 제한 된 수의 클라이언트에 DHCP 서비스가 DHCP 서버의 특정 집합을 사용 하 여 컴퓨터를 제공 하려는 경우 Hyper-v, 사용자 Vm 호스팅되는 위치를 실행 하는 Windows Server 2016 컴퓨터에서 다음 규칙을 구성할 수 있습니다.  
   
-|원본 IP|대상 IP|프로토콜|원본 포트|대상 포트|Direction|작업|  
+|원본 IP|대상 IP|Protocol|원본 포트|대상 포트|Direction|작업|  
 |-------------|------------------|------------|---------------|--------------------|-------------|----------|  
-|*|255.255.255.255|UDP|*|67|바깥쪽|허용|  
-|*|10.175.124.0/25|UDP|*|67|바깥쪽|허용|  
-|10.175.124.0/25|*|UDP|*|68|입력|허용|  
+|*|주소인|UDP|*|67|바깥쪽|Allow|  
+|*|10.175.124.0/25|UDP|*|67|바깥쪽|Allow|  
+|10.175.124.0/25|*|UDP|*|68|입력|Allow|  
   
 다음은 Windows PowerShell 명령을 사용하여 이러한 규칙을 만들 수 있는 방법에 대한 예입니다.  
   
@@ -140,16 +140,16 @@ Add-VMNetworkAdapterExtendedAcl -VMName "ServerName" -Action "Allow" -Direction 
 Add-VMNetworkAdapterExtendedAcl -VMName "ServerName" -Action "Allow" -Direction "Inbound" -RemoteIPAddress 10.175.124.0/25 -RemotePort 68 -Protocol "UDP"-Weight 20  
 ```  
   
-### <a name="bkmk_tcp"></a>비 TCP/UDP 응용 프로그램에 대 한 보안 지원 제공  
+### <a name="bkmk_tcp"></a>비-TCP/UDP 응용 프로그램에 보안 지원 제공  
 데이터 센터의 네트워크 트래픽은 대부분 TCP 및 UDP이지만 다른 프로토콜을 사용하는 트래픽도 있습니다. 예를 들어 서버 그룹에서 IGMP(Internet Group Management Protocol)를 기반으로 하는 IP 멀티캐스트 응용 프로그램을 실행하도록 허용하려는 경우 다음 규칙을 만들 수 있습니다.  
   
 > [!NOTE]  
 > IGMP에는 지정된 IP 프로토콜 번호(0x02)가 있습니다.  
   
-|원본 IP|대상 IP|프로토콜|원본 포트|대상 포트|Direction|작업|  
+|원본 IP|대상 IP|Protocol|원본 포트|대상 포트|Direction|작업|  
 |-------------|------------------|------------|---------------|--------------------|-------------|----------|  
-|*|*|0x02|*|*|입력|허용|  
-|*|*|0x02|*|*|바깥쪽|허용|  
+|*|*|0x02|*|*|입력|Allow|  
+|*|*|0x02|*|*|바깥쪽|Allow|  
   
 다음은 Windows PowerShell 명령을 사용하여 이러한 규칙을 만들 수 있는 방법에 대한 예입니다.  
   
@@ -187,11 +187,11 @@ Add-VMNetworkAdapterExtendedAcl -VMName "ServerName" -Action "Allow" -Direction 
 |-------------|----------|----------|----------|  
 |원본 IP|*|*|*|  
 |대상 IP|*|*|*|  
-|프로토콜|*|*|TCP|  
+|Protocol|*|*|TCP|  
 |원본 포트|*|*|*|  
 |대상 포트|*|*|80|  
 |Direction|입력|바깥쪽|바깥쪽|  
-|작업|거부|거부|허용|  
+|작업|거부|거부|Allow|  
 |상태 저장|아니요|아니요|예|  
 |시간 제한(초)|해당 사항 없음|해당 사항 없음|3600|  
   

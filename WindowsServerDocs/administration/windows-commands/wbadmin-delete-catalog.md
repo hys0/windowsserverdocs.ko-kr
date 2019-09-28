@@ -1,8 +1,8 @@
 ---
 title: wbadmin delete 카탈로그
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2d9f60cf79fcd856fa972d8f43f195c5823e5d81
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 58b8bc6043437755675af28c084257ba0d8b176d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59841414"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71362531"
 ---
 # <a name="wbadmin-delete-catalog"></a>wbadmin delete 카탈로그
 
@@ -49,4 +49,4 @@ wbadmin delete catalog
 
 -   [명령줄 구문 키](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
--   [Remove-WBCatalog](https://technet.microsoft.com/library/jj902445.aspx)
+-   [WBCatalog](https://technet.microsoft.com/library/jj902445.aspx)

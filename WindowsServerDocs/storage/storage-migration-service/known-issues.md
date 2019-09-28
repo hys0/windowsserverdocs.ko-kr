@@ -6,14 +6,14 @@ ms.author: nedpyle
 manager: siroy
 ms.date: 07/09/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: d8437e0e33a370ab698d25f25b43fbbcbae97792
-ms.sourcegitcommit: 45415ba58907d650cfda45f4c57f6ddf1255dcbf
+ms.openlocfilehash: 391430b75670f207520a7d972b54ba293616d0e1
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71206916"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71393910"
 ---
 # <a name="storage-migration-service-known-issues"></a>저장소 마이그레이션 서비스의 알려진 문제
 
@@ -133,7 +133,7 @@ Windows Server 2019 대상 컴퓨터에 저장소 마이그레이션 서비스 �
   로그 이름:      Microsoft-Windows-StorageMigrationService-프록시/디버그 소스:        Microsoft-Windows-StorageMigrationService-프록시 날짜:          오전 2/26/2019 9:00:04 이벤트 ID:      1만 작업 범주: 없음 수준:         오류 키워드:      
   사용자:          네트워크 서비스 컴퓨터: srv1.contoso.com 설명:
 
-  02/26/2019-09:00:04.860 [error] srv1에 대 \\한 전송 오류: com\public\indy.png: (5) 액세스가 거부 되었습니다.
+  02/26/2019-09:00:04.860 [오류] @no__t 0srv1 com\public\indy.png에 대 한 전송 오류: (5) 액세스가 거부 되었습니다.
 스택 추적: StorageMigration. FileDirUtils. System.windows.forms.openfiledialog.openfile (String fileName, DesiredAccess desiredAccess, ShareMode shareMode, CreationDisposition creationDisposition, FlagsAndAttributes flagsAndAttributes) at StorageMigration. FileDirUtils... FileDirUtils 파일 (FileInfo 파일)에 있는 (FileInfo 파일 (FileInfo 파일))에 있습니다. StorageMigration () at FileTransfer () ()에 있는 InitializeSourceFileInfo ()를 (를) (으)로 변환 합니다. StorageMigration () [d:\os\src\base\dms\proxy\transfer\transferproxy\FileTransfer.cs:: FileTransfer () :: Trtransfer:: 55]
 
 

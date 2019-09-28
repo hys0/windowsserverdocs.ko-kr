@@ -1,18 +1,18 @@
 ---
 title: 가상화 된 환경에서 병목 상태 검색
 description: 잠재적 Hyper-v 성능 병목 상태를 검색 하 고 해결 하는 방법
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: Asmahi; SandySp; JoPoulso
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: a0d6d263b344cde412ee4dd3caa80305742d56e7
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 53ec6159d177284773f17a05a37dd89184ef3c12
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70866602"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71370118"
 ---
 # <a name="detecting-bottlenecks-in-a-virtualized-environment"></a>가상화 된 환경에서 병목 상태 검색
 
@@ -28,15 +28,15 @@ ms.locfileid: "70866602"
 
 호스트에서 다음 성능 카운터를 사용할 수 있습니다.
 
--   논리 프로세서 사용률- \\hyper-v 하이퍼바이저 논리적 프로세서 (\*)\\% 총 실행 시간
+-   논리 프로세서 사용률-\\Hyper 하이퍼바이저 논리 프로세서 (\*) \\% 총 실행 시간
 
--   가상 프로세서 사용률- \\hyper-v 하이퍼바이저 가상 프로세서 (\*)\\% 총 실행 시간
+-   가상 프로세서 사용률-\\Hyper 하이퍼바이저 가상 프로세서 (\*) \\% 총 실행 시간
 
--   루트 가상 프로세서 사용률- \\hyper-v 하이퍼바이저 루트 가상 프로세서 (\*)\\% 총 실행 시간
+-   루트 가상 프로세서 사용률-\\Hyper 하이퍼바이저 루트 가상 프로세서 (\*) \\% 총 실행 시간
 
-**Hyper-v 하이퍼바이저 논리 프로세서 (\_total)\\% total Runtime** 카운터가 90%를 초과 하면 호스트가 오버 로드 됩니다. 처리 능력을 추가 하거나 일부 가상 컴퓨터를 다른 호스트로 이동 해야 합니다.
+**Hyper-v 하이퍼바이저 논리 프로세서 (\_total) \\%의 총 런타임** 카운터가 90%를 초과 하면 호스트가 오버 로드 됩니다. 처리 능력을 추가 하거나 일부 가상 컴퓨터를 다른 호스트로 이동 해야 합니다.
 
-**Hyper-v 하이퍼바이저 가상 프로세서 (VM 이름: VP x)\\% Total Runtime** 카운터가 모든 가상 프로세서에 대해 90%를 초과 하는 경우 다음을 수행 해야 합니다.
+**Hyper-v 하이퍼바이저 가상 프로세서 (VM 이름: VP x) \\% Total 런타임** 카운터가 모든 가상 프로세서에 대해 90%를 초과 하는 경우 다음을 수행 해야 합니다.
 
 -   호스트가 오버 로드 되지 않았는지 확인 합니다.
 
@@ -44,7 +44,7 @@ ms.locfileid: "70866602"
 
 -   가상 컴퓨터에 가상 프로세서를 더 할당 합니다.
 
-**Hyper-v 하이퍼바이저 가상 프로세서 (VM 이름: VP x)\\% Total Runtime** 카운터가 일부 가상 프로세서에 대해 90%를 초과 하는 경우 다음을 수행 해야 합니다.
+**Hyper-v 하이퍼바이저 가상 프로세서 (VM 이름: VP x) \\% Total Runtime** 카운터가 가상 프로세서 중 일부에 대해 90%를 초과 하는 경우 다음을 수행 해야 합니다.
 
 -   워크 로드가 네트워크를 많이 수신할 경우 vRSS를 사용 하는 것이 좋습니다.
 
@@ -52,7 +52,7 @@ ms.locfileid: "70866602"
 
 -   작업 부하가 저장소 집약적 이면 가상 NUMA를 사용 하도록 설정 하 고 가상 디스크를 더 추가 해야 합니다.
 
-**Hyper-v 하이퍼바이저 루트 가상 프로세서 (root VP x)\\% Total Runtime** 카운터가 일부 가상 프로세서 및 **프로세서 (x)\\% 인터럽트 시간 및 프로세서 (x)\\% DPC 시간 동안 90%를 초과 하는 경우** 카운터는 대략 **루트 가상 프로세서 (루트 VP x)\\% 총 런타임** 카운터에 대 한 값을 더하여 네트워크 어댑터에서 VMQ를 사용 하도록 설정 해야 합니다.
+**Hyper-v 하이퍼바이저 루트 가상 프로세서 (루트 VP x) @no__t% 총 런타임** 카운터가 일부 가상 프로세서 및 프로세서 (x) @no__t에 대해 90%를 초과 하는 경우 **-3% 인터럽트 시간 및 프로세서 (x) \\% DPC time** 카운터 대략적으로 **루트 가상 프로세서 (루트 VP x) @no__t** 의 값까지 추가 합니다. 총 런타임 카운터는 네트워크 어댑터에서 VMQ를 사용 하도록 설정 해야 합니다.
 
 ## <a name="memory-bottlenecks"></a>메모리 병목 상태
 

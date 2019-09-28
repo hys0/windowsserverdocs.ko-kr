@@ -1,8 +1,8 @@
 ---
 title: ipxroute
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d995204eea0af776a2084a82411fa95542d1d77a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: bd5f33766ff9b33c9d6020b7284f2fbf9552d44d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59889094"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71375335"
 ---
 # <a name="ipxroute"></a>ipxroute
 
@@ -43,10 +43,10 @@ ipxroute config
 |def|모든 경로 브로드캐스트 패킷을 전송합니다. 원본 라우팅 테이블에 없는 고유한 미디어 액세스 카드 (MAC) 주소에 패킷이 전송 되는 경우 **ipxroute** 기본적으로 브로드캐스트하는 단일 경로 패킷을 보냅니다.|  
 |gbr|모든 경로 브로드캐스트 패킷을 전송합니다. 패킷을 브로드캐스트 주소 (FFFFFFFFFFFF)에 전송 되는 경우 **ipxroute** 기본적으로 브로드캐스트하는 단일 경로 패킷을 보냅니다.|  
 |mbr|모든 경로 브로드캐스트 패킷을 전송합니다. 패킷이 멀티 캐스트 주소 (C000xxxxxxxx)로 전송 되는 경우 **ipxroute** 기본적으로 브로드캐스트하는 단일 경로 패킷을 보냅니다.|  
-|제거 = *됩니다.*|원본 라우팅 테이블에서 지정 된 노드의 주소를 제거합니다.|  
+|제거 = *됩니다.*|원본 라우팅 테이블에서 지정 된 노드 주소를 제거 합니다.|  
 |구성|모든 바인딩은 IPX가 구성에 대 한 정보를 표시 합니다.|  
 |/?|명령 프롬프트에 도움말을 표시합니다.|  
-## <a name="BKMK_Examples"></a>예제  
+## <a name="BKMK_Examples"></a>예와  
 워크스테이션에 연결 된 네트워크 세그먼트, 워크스테이션 노드 주소 및 사용 되는 유형을 프레임을 표시 하려면 다음을 입력 합니다.  
 ```  
 ipxroute config  

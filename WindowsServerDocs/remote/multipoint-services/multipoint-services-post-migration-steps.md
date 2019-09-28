@@ -1,9 +1,9 @@
 ---
 title: MultiPoint 서비스-마이그레이션 후 작업
-description: 유효성을 검사 하 여 MultiPoint 서비스 마이그레이션을 종료 하는 방법을 알아봅니다
+description: MultiPoint 서비스에 대 한 마이그레이션을 확인 하 고 종료 하는 방법에 대해 알아봅니다.
 ms.custom: na
 ms.date: 07/29/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -12,12 +12,12 @@ ms.topic: article
 ms.assetid: 1497cae0-071e-467d-89b8-a7050815d7de
 author: lizap
 manager: dongill
-ms.openlocfilehash: e3fa3c812355a14289ea4eeff3ab1e7e92e00d97
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3102a442b4668856050f603f30f57f6bbed20654
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59863504"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71389023"
 ---
 # <a name="multipoint-services---post-migration-tasks"></a>MultiPoint 서비스-마이그레이션 후 작업
 

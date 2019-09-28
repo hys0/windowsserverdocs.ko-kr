@@ -1,30 +1,30 @@
 ---
-title: 키 모드를 사용 하 여 새 전용된 포리스트로, (기본값)에서 HGS 클러스터를 초기화 합니다.
+title: 새 전용 포리스트에서 키 모드를 사용 하 여 HGS 클러스터 초기화 (기본값)
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 891e94338544e1ced5833a5272502beb239dfd86
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: b8c5c090f97ee02a8c9e5bc6041eacb01c1fa4cf
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66447448"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402410"
 ---
-# <a name="initialize-the-hgs-cluster-using-key-mode-in-a-new-dedicated-forest-default"></a>키 모드를 사용 하 여 새 전용된 포리스트로, (기본값)에서 HGS 클러스터를 초기화 합니다.
+# <a name="initialize-the-hgs-cluster-using-key-mode-in-a-new-dedicated-forest-default"></a>새 전용 포리스트에서 키 모드를 사용 하 여 HGS 클러스터 초기화 (기본값)
 
->적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2019, Windows Server 2016
 
 
 1.  [!INCLUDE [Initialize HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-one.md)] 
 2.  [!INCLUDE [Obtain certificates for HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-two.md)]
 
-3.  실행할 [Initialize HgsServer](https://technet.microsoft.com/library/mt652185.aspx) 첫 번째 HGS 노드에서 관리자 권한 PowerShell 창에서. 이 cmdlet의 구문을 많은 다양 한 입력을 지원 하지만 2 가장 일반적인 호출은 다음과 같습니다.
+3.  첫 번째 HGS 노드의 관리자 권한 PowerShell 창에서 [HgsServer](https://technet.microsoft.com/library/mt652185.aspx) 를 실행 합니다. 이 cmdlet의 구문은 다양 한 입력을 지원 하지만, 가장 일반적인 두 가지 호출은 다음과 같습니다.
 
-    -   PFX 파일에 서명 및 암호화 인증서를 사용 하는 경우에 다음 명령을 실행 합니다.
+    -   서명 및 암호화 인증서에 PFX 파일을 사용 하는 경우 다음 명령을 실행 합니다.
 
         ```powershell
         $signingCertPass = Read-Host -AsSecureString -Prompt "Signing certificate password"
@@ -33,7 +33,7 @@ ms.locfileid: "66447448"
         Initialize-HgsServer -HgsServiceName 'MyHgsDNN' -SigningCertificatePath '.\signCert.pfx' -SigningCertificatePassword $signingCertPass -EncryptionCertificatePath '.\encCert.pfx' -EncryptionCertificatePassword $encryptionCertPass -TrustHostkey
         ```
 
-    -   로컬 인증서 저장소에 설치 되는 내보낼 수 없는 인증서를 사용 하는 경우 다음 명령을 실행 합니다. 인증서의 지문을 모르는 경우 실행 하 여 사용 가능한 인증서를 나열할 수 있습니다 `Get-ChildItem Cert:\LocalMachine\My`합니다.
+    -   로컬 인증서 저장소에 설치 된 내보낼 수 없는 인증서를 사용 하는 경우 다음 명령을 실행 합니다. 인증서 지문을 모르는 경우 `Get-ChildItem Cert:\LocalMachine\My`을 실행 하 여 사용 가능한 인증서를 나열할 수 있습니다.
 
         ```powershell
         Initialize-HgsServer -HgsServiceName 'MyHgsDNN' -SigningCertificateThumbprint '1A2B3C4D5E6F...' -EncryptionCertificateThumbprint '0F9E8D7C6B5A...' --TrustHostKey

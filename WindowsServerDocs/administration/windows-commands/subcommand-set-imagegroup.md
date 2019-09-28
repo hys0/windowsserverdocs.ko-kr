@@ -1,8 +1,8 @@
 ---
-title: 하위 명령 집합 ImageGroup
-description: '에 대 한 Windows 명령을 항목 * * *- '
+title: 하위 명령 집합-ImageGroup
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d0c7ba47148ba6f8295ab720dd0118759ac9346c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 10023e493ae4db51783b7401c12bc1605145b86c
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59822984"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71370792"
 ---
 # <a name="subcommand-set-imagegroup"></a>하위 명령: 집합 ImageGroup
 
@@ -32,11 +32,11 @@ wdsutil [Options] /Set-ImageGroumediaGroup:<Image group name> [/Server:<Server n
 ## <a name="parameters"></a>매개 변수
 |매개 변수|설명|
 |-------|--------|
-mediaGroup:<Image group name>|이미지 그룹의 이름을 지정합니다.|
+mediaGroup: <Image group name>|이미지 그룹의 이름을 지정합니다.|
 |[/ 서버:<Server name>]|서버 이름을 지정합니다. 이 NetBIOS 이름 또는 정규화 된 도메인 이름 (FQDN) 수 있습니다. 지정 하지 않으면 로컬 서버가 사용 됩니다.|
 |[/Name:<New image group name>]|이미지 그룹의 새 이름을 지정합니다.|
 |[/ 보안:<SDDL>]|보안 설명자 정의 언어 (SDDL) 형식에서 이미지 그룹의 새 보안 설명자를 지정합니다.|
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 이미지 그룹에 대 한 이름을 설정 하려면 다음을 입력 합니다.
 ```
 wdsutil /Set-ImageGroumediaGroup:ImageGroup1 /Name:"New Image Group Name"

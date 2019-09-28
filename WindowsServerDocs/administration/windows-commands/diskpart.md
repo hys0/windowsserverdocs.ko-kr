@@ -1,16 +1,16 @@
 ---
 title: DiskPart 명령
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: 7155dbf34f9986b3ebdd8b549b6a861cf7fcfe3a
-ms.sourcegitcommit: 23a6e83b688119c9357262b6815c9402c2965472
+ms.openlocfilehash: 0826b773927f09cc846fb1cfdf4d5dfbf75d5cca
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69560439"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71377832"
 ---
 # <a name="diskpart-commands"></a>DiskPart 명령
 
@@ -18,7 +18,7 @@ ms.locfileid: "69560439"
 
 DiskPart 명령은 PC의 드라이브 (디스크, 파티션, 볼륨 또는 가상 하드 디스크)를 관리 하는 데 도움이 됩니다. DiskPart 명령을 사용 하려면 먼저을 나열 하 고 개체를 선택 하 여 포커스를 제공 해야 합니다. 개체에 포커스가 있으면 사용자가 입력 하는 모든 DiskPart 명령이 해당 개체에 대해 작동 합니다.
 
-사용 가능한 개체를 나열 하 고 **list disk, list volume, list partition**및 **list vdisk** 명령을 사용 하 여 개체의 번호 또는 드라이브 문자를 결정할 수 있습니다. **디스크 목록, vdisk 목록** 및 **볼륨 나열** 명령이 컴퓨터의 모든 디스크 및 볼륨을 표시 합니다. 그러나 **파티션 나열** 명령은 포커스가 있는 디스크의 파티션만 표시 합니다. **목록** 명령을 사용 하면 포커스가 있는 개체 옆에 별표\*()가 나타납니다.
+사용 가능한 개체를 나열 하 고 **list disk, list volume, list partition**및 **list vdisk** 명령을 사용 하 여 개체의 번호 또는 드라이브 문자를 결정할 수 있습니다. **디스크 목록, vdisk 목록** 및 **볼륨 나열** 명령이 컴퓨터의 모든 디스크 및 볼륨을 표시 합니다. 그러나 **파티션 나열** 명령은 포커스가 있는 디스크의 파티션만 표시 합니다. **List** 명령을 사용 하면 포커스가 있는 개체 옆에 별표 (\*)가 표시 됩니다.
 
 개체를 선택 하면 다른 개체를 선택할 때까지 해당 개체에 포커스가 남아 있습니다. 예를 들어 포커스가 디스크 0에 설정 되어 있고 디스크 2에서 볼륨 8을 선택 하는 경우 포커스는 디스크 0에서 디스크 2, 볼륨 8로 이동 합니다. 일부 명령은 자동으로 포커스를 변경 합니다. 예를 들어 새 파티션을 만들 때 포커스는 자동으로 새 파티션으로 전환 됩니다.
 
@@ -47,7 +47,7 @@ Diskpart 명령 인터프리터에서 다음 명령을 실행할 수 있습니�
       
   - [자동 탑재](automount.md)  
       
-  - [Break](break.md)  
+  - [끊어야](break.md)  
       
   - [청소할](clean.md)  
       
@@ -63,7 +63,7 @@ Diskpart 명령 인터프리터에서 다음 명령을 실행할 수 있습니�
       
   - [Detail](detail.md)  
       
-  - [끝내기](exit.md)  
+  - [종료](exit.md)  
       
   - [Vdisk 확장](expand-vdisk.md)  
       

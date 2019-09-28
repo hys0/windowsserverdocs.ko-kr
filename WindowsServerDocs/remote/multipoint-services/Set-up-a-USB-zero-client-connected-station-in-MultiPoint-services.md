@@ -1,9 +1,9 @@
 ---
 title: MultiPoint 서비스에서 클라이언트 연결 스테이션 0을 USB를 설정
-description: MultiPoint 서비스에서 USB 0 클라이언트 스테이션을 만드는 방법 알아보기
+description: MultiPoint 서비스에서 USB 제로 클라이언트 스테이션을 만드는 방법에 대해 알아봅니다.
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,17 +13,17 @@ ms.assetid: d2908865-6be3-474d-88f1-995f40bb61d0
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.openlocfilehash: 1a64373f4ed5e0d1ac96a0257ac5697ff94ffcbe
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 80a73065024e5c40f1ebf8efd64022ee6d48fbe8
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59878934"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71395066"
 ---
 # <a name="set-up-a-usb-zero-client-connected-station-in-multipoint-services"></a>MultiPoint 서비스에서 클라이언트 연결 스테이션 0을 USB를 설정
 USB 제로 클라이언트를 사용 하 여 MultiPoint 서비스 스테이션을 만들 때 각 장치에 대 한 모니터는 다음 그림에 표시 된 것 처럼 비디오 포트에 USB 제로 클라이언트 연결 됩니다. 이 및 다른 스테이션 형식에 대 한 자세한 내용은 참조 [MultiPoint 스테이션](MultiPoint-services-Stations.md)합니다.
   
-**하나의 직접 비디오 연결 스테이션 및 두 개의 USB 제로 클라이언트 연결 스테이션 multiPoint 서비스 시스템**  
+**직접 비디오에 연결 된 스테이션 하나와 두 개의 USB 제로 클라이언트 연결 스테이션을 사용 하는 MultiPoint 서비스 시스템**  
   
 ![USB 제로 클라이언트 연결 스테이션](./media/WMS11_diagram7.gif)  
   

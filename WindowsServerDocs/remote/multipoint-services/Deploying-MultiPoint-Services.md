@@ -3,7 +3,7 @@ title: MultiPoint 서비스 배포
 description: MultiPoint 서비스 배포 프로세스 개요
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ ms.assetid: 594bc09e-5d2d-4984-a9de-79d40b1308d6
 author: evaseydl
 ms.author: evas
 manager: scottman
-ms.openlocfilehash: 19e1b52c79e0d87804a76ec8963662b96c82b41b
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 842b7b743624aa1e4b168b1be8e94f6d405d07e3
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871716"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71395693"
 ---
 # <a name="deploying-multipoint-services"></a>MultiPoint 서비스 배포
 이 가이드에서는 MultiPoint 서비스를 실행 하는 서버를 배포 하 고 MultiPoint 스테이션을 설정 하 고, 시스템을 설치 및 구성 하 고, 사용자 계정을 설정 하 고, 디스크 보호 설정 및 백업 설정과 같은 몇 가지 기본적인 관리 작업을 수행 하는 방법을 설명 합니다. 시스템 사용을 시작 하기 전에  

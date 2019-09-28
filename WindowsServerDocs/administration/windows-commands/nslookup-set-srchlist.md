@@ -1,8 +1,8 @@
 ---
 title: nslookup set srchlist
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 39b28e7d43df2427caae46d323cd30f03b6b484c
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: fb93a9f7cf969161536e88bec929b7e6ba0f0e5d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66436568"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71372773"
 ---
 # <a name="nslookup-set-srchlist"></a>nslookup set srchlist
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-기본 도메인 이름 시스템 (DNS) 도메인 이름 및 검색 목록을 변경합니다.
+기본 DNS (Domain Name System) 도메인 이름 및 검색 목록을 변경 합니다.
 
 ## <a name="syntax"></a>구문
 ```
@@ -39,12 +39,12 @@ Set srchlist=<DomainName>[/...]
 
 ## <a name="remarks"></a>설명
 - **srchlist 설정**명령을 사용 하면 재정의 기본 DNS 도메인 이름 및 검색 목록에는 **집합 도메인** 명령입니다. 사용 하는 **모두 설정** 목록을 표시 하는 명령입니다.
-  ## <a name="BKMK_examples"></a>예제
+  ## <a name="BKMK_examples"></a>예와
   다음 예제에서는 mfg.widgets.com, 이름 3 개를 검색 목록에 DNS 도메인을 설정합니다.
   ```
   set srchlist=mfg.widgets.com/mrp2.widgets.com/widgets.com
   ```
   ## <a name="additional-references"></a>추가 참조
   [명령줄 구문 키](command-line-syntax-key.md)
-  [nslookup 도메인 설정](nslookup-set-domain.md)
-  [nslookup 모두 설정](nslookup-set-all.md)
+  [nslookup set 도메인](nslookup-set-domain.md)
+  [nslookup set all](nslookup-set-all.md)

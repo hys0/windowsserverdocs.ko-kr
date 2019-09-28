@@ -2,7 +2,7 @@
 title: typeperf
 description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: cfcbac82b88c0c8d8bcc706ebfd807f96e359de7
-ms.sourcegitcommit: af80963a1d16c0b836da31efd9c5caaaf6708133
+ms.openlocfilehash: 087b201c51d5aec8e6f61c7469c59307d3ed8b4d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "66440781"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392300"
 ---
 # <a name="typeperf"></a>typeperf
 
@@ -41,30 +41,30 @@ typeperf -qx [object] [options]
 
 |매개 변수|설명|
 |---------|-----------|
-|\<카운터 [카운터 [...]] >|모니터링 하는 성능 카운터를 지정 합니다.|
+|\<counter [counter [...]] >|모니터링 하는 성능 카운터를 지정 합니다.|
 
 > [!NOTE]
-> counter >는 Server1\Processor (0)  *\\ \\*  **\<**  **와\\같이Computer\Object(Instance) \ 카운터 형식으로 된 성능 카운터의 전체 이름입니다. \\\%사용자 시간**.
+> **\< 카운터 >** 는 **\\ @ no__t-7Server1\Processor (0) \% 사용자 시간과**같은 *\\ @ No__t-4Computer\Object (인스턴스) \ 카운터* 형식으로 된 성능 카운터의 전체 이름입니다.
 
 ## <a name="options"></a>변수
 
 |                   옵션                   |                                                         설명                                                          |
 |--------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
 |                     -?                     |                                               도움말 상황에 맞는 표시 합니다.                                               |
-| -f \<CSV&verbar;TSV&verbar;BIN&verbar;SQL > |                                    출력 파일 형식을 지정합니다. 기본값은 CSV입니다.                                     |
-|              -cf \<파일 이름 >               |              줄당 하나의 카운터를 모니터링 하는 성능 카운터 목록을 포함 하는 파일을 지정 합니다.               |
+| -f \<CSV @ no__t-1TSV @ no__t-2BIN @ no__t-3SQL > |                                    출력 파일 형식을 지정합니다. 기본값은 CSV입니다.                                     |
+|              -cf \< 파일 이름 >               |              줄당 하나의 카운터를 모니터링 하는 성능 카운터 목록을 포함 하는 파일을 지정 합니다.               |
 |             -si < [[hh:] mm:] ss >             |                                  샘플 간격을 지정합니다. 기본값은 1 초입니다.                                   |
-|               -o \<파일 이름 >               |     출력 파일 또는 SQL 데이터베이스에 대 한 경로 지정합니다. 기본값은 STDOUT (명령 창에 기록).      |
-|                -q [object]                 | 설치 된 카운터 (인스턴스가 없음)의 목록을 표시 합니다. 하나의 개체에 대 한 카운터를 나열 하려면 개체 이름을 포함 합니다. \*\*\*예 들어 |
+|               -o \< 파일 이름 >               |     출력 파일 또는 SQL 데이터베이스에 대 한 경로 지정합니다. 기본값은 STDOUT (명령 창에 기록).      |
+|                -q [object]                 | 설치 된 카운터 (인스턴스가 없음)의 목록을 표시 합니다. 하나의 개체에 대 한 카운터를 나열 하려면 개체 이름을 포함 합니다. \* @ NO__T-1 @ NO__T-2EXAMPLE |
 |                -qx [object]                |        인스턴스와 함께 설치 된 카운터의 목록을 표시 합니다. 하나의 개체에 대 한 카운터를 나열 하려면 개체 이름을 포함 합니다.        |
-|               -sc \<샘플 >               |             수집 하는 샘플 수를 지정 합니다. CTRL + C를 누를 때까지 데이터를 수집 하는 것이 기본값이입니다.              |
+|               -sc \<samples >               |             수집 하는 샘플 수를 지정 합니다. CTRL + C를 누를 때까지 데이터를 수집 하는 것이 기본값이입니다.              |
 |            -config \<파일 이름 >             |                                    명령 옵션을 포함 하는 설정 파일을 지정 합니다.                                     |
 |            -s \<computer_name >             |                   카운터 경로에 지정 된 컴퓨터가 있는 경우에 모니터링을 위해 원격 컴퓨터를 지정 합니다.                    |
 |                     -y                     |                                        메시지를 표시 하지 않고 모든 질문에 예로 답변 합니다.                                        |
 
 ## <a name="BKMK_EXAMPLES"></a>예와
 
-- 다음 예에서는 로컬 컴퓨터의 성능 카운터  **\\ \\프로세서 (_total\% ) 프로세서 시간** 에 대 한 값을 명령 창에 기록 합니다. .  
+- 다음 예에서는 로컬 컴퓨터의 성능 카운터 **\\ @ no__t-2processor (_total) \% 프로세서 시간** 값을 명령 창에 기록 합니다. 단, CTRL + C를 누를 때까지 1 초입니다.  
   ```
   typeperf "\Processor(_Total)\% Processor Time"
   ```  

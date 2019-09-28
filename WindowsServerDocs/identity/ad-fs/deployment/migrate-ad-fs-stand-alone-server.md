@@ -1,33 +1,33 @@
 ---
 title: 독립 실행형 AD FS 페더레이션 서버 또는 단일 노드 AD FS 팜 마이그레이션
-description: 독립 실행형 또는 단일 노드 AD FS 2.0 서버를 Windows Server 2012로 마이그레이션하는 방법에 정보를 제공 합니다.
+description: 독립 실행형 또는 단일 노드 AD FS 2.0 서버를 Windows Server 2012로 마이그레이션하는 방법에 대 한 정보를 제공 합니다.
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 06/28/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 5526afa758a142e30b9a238b4c7204cacebb1812
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: b8029d67a9f21e5189322692b8f1316306542c96
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66444548"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71359376"
 ---
 # <a name="migrate-a-stand-alone-ad-fs-federation-server-or-a-single-node-ad-fs-farm"></a>독립 실행형 AD FS 페더레이션 서버 또는 단일 노드 AD FS 팜 마이그레이션  
-이 문서는 Windows Server 2012로 AD FS 2.0의 독립 실행형 서버를 마이그레이션하는 방법에 자세한 정보를 제공 합니다.
+이 문서에서는 AD FS 2.0 독립 실행형 서버를 Windows Server 2012로 마이그레이션하는 방법에 대 한 자세한 정보를 제공 합니다.
 
-## <a name="migrate-a-stand-alone-ad-fs-20-server"></a>마이그레이션할 독립 실행형 AD FS 2.0 서버
+## <a name="migrate-a-stand-alone-ad-fs-20-server"></a>독립형 AD FS 2.0 서버 마이그레이션
 
-AD FS 2.0을 마이그레이션하려면 다음 절차를 사용 하 여 서버를 Windows Server 2012.
+AD FS 2.0 서버를 Windows Server 2012로 마이그레이션하려면 다음 절차를 따르십시오.
   
-1.  검토 하 고의 절차를 수행 [독립 실행형 AD FS 페더레이션 서버 또는 단일 노드 AD FS 팜 마이그레이션 준비](prepare-to-migrate-a-stand-alone-ad-fs-federation-server.md)합니다.  
+1.  [독립 실행형 AD FS 페더레이션 서버 또는 단일 노드 AD FS 팜 마이그레이션 준비](prepare-to-migrate-a-stand-alone-ad-fs-federation-server.md)의 절차를 검토 하 고 수행 합니다.  
   
-2.  Windows Server 2008 R2에서 서버 또는 Windows Server 2012에 Windows Server 2008 운영 체제의 현재 위치 업그레이드를 수행 합니다. 자세한 내용은 [Installing Windows Server 2012](https://technet.microsoft.com/library/jj134246.aspx)를 참조하세요.  
+2.  서버 운영 체제를 Windows Server 2008 R2 또는 Windows Server 2008에서 Windows Server 2012로 전체 업그레이드를 수행 합니다. 자세한 내용은 [Installing Windows Server 2012](https://technet.microsoft.com/library/jj134246.aspx)를 참조하세요.  
   
 > [!IMPORTANT]
->  운영 체제 업그레이드로 인해 이 서버의 AD FS 구성이 손실되고 AD FS 2.0 서버 역할이 제거됩니다. Windows Server 2012 AD FS 서버 역할 대신 설치 되지만 구성 되지는 않습니다. 수동으로 원래 AD FS 구성을 만들고 나머지 AD FS 설정을 복원하여 페더레이션 서버 마이그레이션을 완료해야 합니다.  
+>  운영 체제 업그레이드로 인해 이 서버의 AD FS 구성이 손실되고 AD FS 2.0 서버 역할이 제거됩니다. Windows Server 2012 AD FS 서버 역할이 대신 설치 되지만 구성 되지 않습니다. 수동으로 원래 AD FS 구성을 만들고 나머지 AD FS 설정을 복원하여 페더레이션 서버 마이그레이션을 완료해야 합니다.  
   
 3. 원래 AD FS 구성을 만듭니다. 다음 방법 중 하나를 사용하여 원래 AD FS 구성을 만들 수 있습니다.  
   
@@ -35,7 +35,7 @@ AD FS 2.0을 마이그레이션하려면 다음 절차를 사용 하 여 서버�
   
 다음과 같이 마법사를 진행하면서 AD FS 페더레이션 서버 마이그레이션을 준비하는 동안 수집한 정보를 사용합니다.  
   
- |**페더레이션 서버 구성 마법사 입력 옵션**|**다음 값을 사용 하 여**| 
+ |**페더레이션 서버 구성 마법사 입력 옵션**|**다음 값을 사용 합니다.**| 
 |-----|-----| 
 |**페더레이션 서비스 이름 지정** 페이지의 **SSL 인증서**|AD FS 페더레이션 서버 마이그레이션을 준비하는 동안 주체 이름 및 지문을 기록한 SSL 인증서를 선택합니다.|  
 |**서비스 계정 지정** 페이지의 **서비스 계정** 및 **암호**|AD FS 페더레이션 서버를 준비하는 동안 기록한 서비스 계정 정보를 입력합니다. **참고:**  마법사의 두 번째 페이지에서 독립 실행형 페더레이션 서버를 선택하면 NETWORK SERVICE가 서비스 계정으로 자동으로 사용됩니다.|  
@@ -57,7 +57,7 @@ AD FS 2.0을 마이그레이션하려면 다음 절차를 사용 하 여 서버�
 > [!NOTE]
 >  이 단계는 독립 실행형 페더레이션 서버 또는 단일 노드 WID 팜을 마이그레이션하는 경우에만 필요합니다.  페더레이션 서버에서 SQL Server 데이터베이스를 구성 저장소로 사용하는 경우에는 서비스 설정 및 트러스트 관계가 데이터베이스에서 유지됩니다.  
   
-5. AD FS 웹 페이지를 업데이트합니다. 이것은 수동 단계입니다. 마이그레이션을 준비 하는 동안 사용자 지정된 AD FS 웹 페이지를 백업한 경우 덮어쓰려면 기본 AD FS 웹 페이지에서 기본적으로 생성 된 백업 데이터를 사용 합니다 **%systemdrive%\inetpub\adfs\ls** 의 결과로 디렉터리 Windows Server 2012에서 AD FS 구성 합니다.  
+5. AD FS 웹 페이지를 업데이트합니다. 이것은 수동 단계입니다. 마이그레이션을 준비 하는 동안 사용자 지정 된 AD FS 웹 페이지를 백업한 경우 백업 데이터를 사용 하 여 기본적으로 **%systemdrive%\inetpub\adfs\ls** 디렉터리에 생성 된 기본 AD FS 웹 페이지를 AD FS의 결과로 덮어쓸 수 있습니다. Windows Server 2012에 대 한 구성입니다.  
   
 6. 사용자 지정 특성 저장소와 같은 나머지 AD FS 사용자 지정 항목을 복원합니다.  
   
@@ -68,7 +68,7 @@ AD FS 2.0을 마이그레이션하려면 다음 절차를 사용 하 여 서버�
     -   AD FS 관리 콘솔에서 **서비스** 를 선택하고 **페더레이션 서비스 편집...** 을 클릭합니다. 각 값을 마이그레이션을 준비하는 동안 properties.txt 파일로 내보낸 값과 대조하여 페더레이션 서비스 설정을 확인합니다.  
   
     
-|**Get-adfsproperties에서 보고 한 대로 페더레이션 서비스 속성 이름**|**AD FS 관리 콘솔의 페더레이션 서비스 속성 이름**|  
+|**Set-adfsproperties에서 보고 한 속성 이름 페더레이션 서비스**|**AD FS Management console에서 속성 이름 페더레이션 서비스**|  
 |-----|-----|
 |DisplayName|페더레이션 서비스 표시 이름|  
 |HostName|페더레이션 서비스 이름|  
@@ -88,9 +88,9 @@ AD FS 2.0을 마이그레이션하려면 다음 절차를 사용 하 여 서버�
 
 ## <a name="next-steps"></a>다음 단계
  [AD FS 2.0 페더레이션 서버 마이그레이션 준비](prepare-to-migrate-ad-fs-fed-server.md)   
- [AD FS 2.0 페더레이션 서버 프록시 마이그레이션 준비](prepare-to-migrate-ad-fs-fed-proxy.md)   
+ [AD FS 2.0 페더레이션 서버 프록시 @no__t 마이그레이션 준비](prepare-to-migrate-ad-fs-fed-proxy.md)-1  
  [AD FS 2.0 페더레이션 서버 마이그레이션](migrate-the-ad-fs-fed-server.md)   
- [AD FS 2.0 페더레이션 서버 프록시 마이그레이션](migrate-the-ad-fs-2-fed-server-proxy.md)   
+ [AD FS 2.0 페더레이션 서버 프록시](migrate-the-ad-fs-2-fed-server-proxy.md) 을 마이그레이션합니다.  
  [AD FS 1.1 웹 에이전트 마이그레이션](migrate-the-ad-fs-web-agent.md)
 
 

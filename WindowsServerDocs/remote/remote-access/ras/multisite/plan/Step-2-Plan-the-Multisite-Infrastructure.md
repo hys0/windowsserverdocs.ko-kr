@@ -1,9 +1,9 @@
 ---
 title: 2 단계 계획 멀티 사이트 인프라
-description: 이 가이드의 일부인이 항목에서는 여러 원격 액세스 서버 배포 Windows Server 2016에서 멀티 사이트 배포에서 합니다.
+description: 이 항목은 Windows Server 2016에서 멀티 사이트 배포에서 여러 원격 액세스 서버 배포 가이드의 일부입니다.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-ras
@@ -12,19 +12,19 @@ ms.topic: article
 ms.assetid: 64c10107-cb03-41f3-92c6-ac249966f574
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: a2655f4de83576ef62b113419a69badaacc868f9
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: ff8a58aa679691132d074ef52b876cea05366ab5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67281002"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71367098"
 ---
 # <a name="step-2-plan-the-multisite-infrastructure"></a>2 단계 계획 멀티 사이트 인프라
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 원격 액세스 멀티 사이트 토폴로지에 배포 하는 다음 단계는; 멀티 사이트 인프라 계획을 완료 하는 것 포함 하 여 Active Directory 보안 그룹, 그룹 정책 개체입니다.  
-## <a name="bkmk_2_1_AD"></a>2.1 Active Directory 계획  
+## <a name="bkmk_2_1_AD"></a>2.1 계획 Active Directory  
 다양 한 토폴로지는 원격 액세스 멀티 사이트 배포를 구성할 수 있습니다.  
   
 -   **단일 Active Directory 사이트, 여러 진입점**-이 토폴로지에서 단일 Active Directory 사이트, 사이트 전체에 걸쳐 고속 인트라넷 링크와 함께 전체 조직에 대해 있지만 각 역할 진입점을 조직 전체에 걸쳐 배포 하는 여러 원격 액세스 서버가 있는 합니다. 이 토폴로지는 지리적 예는 미국 동부 및 서 부 해안 진입점에 대 한 단일 Active Directory 사이트를 것입니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "67281002"
   
 -   모든 Windows 8 클라이언트 컴퓨터에 대 한 하나의 보안 그룹입니다. 각 도메인에 대 한 이러한 클라이언트에 대 한 고유한 보안 그룹을 만드는 것이 좋습니다.  
   
--   각 진입점에 대 한 Windows 7 클라이언트 컴퓨터를 포함 하는 고유한 보안 그룹입니다. 각 도메인에 대 한 고유한 그룹을 만드는 것이 좋습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다. Domain1\DA_Clients_Europe; Domain2\DA_Clients_Europe; Domain1\DA_Clients_US; Domain2\DA_Clients_US 합니다.  
+-   각 진입점에 대 한 Windows 7 클라이언트 컴퓨터를 포함 하는 고유한 보안 그룹입니다. 각 도메인에 대 한 고유한 그룹을 만드는 것이 좋습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다. Domain1\DA_Clients_Europe; Domain2\DA_Clients_Europe; Domain1\DA_Clients_US; Domain2\DA_Clients_US.  
   
 ## <a name="bkmk_2_3_GPO"></a>2.3 그룹 정책 개체 계획  
 원격 액세스 배포 중 구성 된 DirectAccess 설정은 Gpo에 수집 됩니다. DirectAccess 클라이언트의 원격 액세스 서버 및 필요에 따라 응용 프로그램 서버에 대 한 Gpo를 사용 하는 이미 단일 서버 배포 합니다. 멀티 사이트 배포에는 다음 Gpo 사항이 필요합니다.  

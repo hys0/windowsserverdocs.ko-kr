@@ -1,8 +1,8 @@
 ---
 title: 서버 사용 안 함-명령을 사용 하 여
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3b229146206c1fbe6ce8b6f585b2ff9b50ae6104
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9376bf1c5a5641aa6763c88b58bfe92d799b44f5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59853034"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71363507"
 ---
 # <a name="using-the-disable-server-command"></a>서버 사용 안 함-명령을 사용 하 여
 
@@ -36,9 +36,9 @@ WDSUTIL [Options] /Disable-Server [/Server:<Server name>]
 
 |매개 변수|설명|
 |---------|-----------|
-|[/ 서버:\<서버 이름 >]|서버 이름을 지정합니다. 이 NetBIOS 이름 또는 정규화 된 도메인 이름 (FQDN) 수 있습니다. 서버 이름이 없는 지정 하는 경우 로컬 서버 사용 됩니다.|
+|[/Server: \<Server name >]|서버 이름을 지정합니다. 이 NetBIOS 이름 또는 정규화 된 도메인 이름 (FQDN) 수 있습니다. 서버 이름이 없는 지정 하는 경우 로컬 서버 사용 됩니다.|
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 서버를 비활성화 하려면 다음 중 하나를 실행 합니다.
 ```

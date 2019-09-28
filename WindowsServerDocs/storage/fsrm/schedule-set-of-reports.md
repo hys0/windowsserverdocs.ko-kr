@@ -2,18 +2,18 @@
 title: 보고서 집합 예약
 description: 이 문서에서는 정기적으로 보고서 집합을 생성하는 방법을 설명합니다.
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 681939409b9b8b952179992a2a86415e737ee675
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: b718ceed7a378649c51e1ca64bffaaddf051c292
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66447702"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71394063"
 ---
 # <a name="schedule-a-set-of-reports"></a>보고서 집합 예약
 

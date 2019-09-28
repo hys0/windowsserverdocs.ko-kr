@@ -1,8 +1,8 @@
 ---
 title: ksetup
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0194cf81d069d7a5c1223f0a514d593e4870d397
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 265f67bff65794938485472a41064837551c7699
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59868844"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71374801"
 ---
 # <a name="ksetup"></a>ksetup
 
@@ -68,7 +68,7 @@ ksetup
 |[Ksetup:server](ksetup-server.md)|변경 내용을 적용 하는 Windows 컴퓨터의 이름을 지정할 수 있습니다.|
 |[Ksetup:setcomputerpassword](ksetup-setcomputerpassword.md)|컴퓨터의 도메인 계정 (또는 호스트 보안 주체)에 대 한 암호를 설정합니다.|
 |[Ksetup:removerealm](ksetup-removerealm.md)|레지스트리에서 지정한 영역에 대 한 모든 정보를 삭제합니다.|
-|[Ksetup:domain](ksetup-domain.md)|도메인을 지정할 수 있습니다 (경우 \<도메인 이름 >를 사용 하 여 설정 되지 않은 **/domain**).|
+|[Ksetup:domain](ksetup-domain.md)|도메인을 지정할 수 있습니다 (\<DomainName > **를 사용 하 여 설정**하지 않은 경우).|
 |[Ksetup:changepassword](ksetup-changepassword.md)|로그온된 한 사용자의 암호를 변경 하는 Kpasswd를 사용할 수 있습니다.|
 |[Ksetup:listrealmflags](ksetup-listrealmflags.md)|사용할 수 있는 목록 영역에 플래그를 지정 하는 **ksetup** 감지할 수 있습니다.|
 |[Ksetup:setrealmflags](ksetup-setrealmflags.md)|특정 영역에 대 한 영역 플래그를 설정합니다.|
@@ -87,9 +87,9 @@ ksetup
 
 **Ksetup** Kerberos 영역을 찾기 위한 컴퓨터 설정을 변경 하는 데 사용 됩니다. Microsoft Kerberos 기반 구현에서이 정보는 일반적으로 Krb5.conf 파일에 유지 됩니다. Windows Server 운영 체제의 레지스트리에 저장 됩니다. 이 설정을 수정 하려면이 도구를 사용할 수 있습니다. 이러한 설정은가 도메인 컨트롤러를 찾을 영역 간 트러스트 관계에 대 한 Kerberos 영역 Kerberos 영역을 찾으려고 워크스테이션이 사용 됩니다.
 
-**Ksetup** Kerberos 보안 지원 공급자 (SSP) 컴퓨터가 Windows Server 2003, Windows Server 2008 또는 Windows Server 2008 R2 실행 되 고는 Windows의 구성원이 아닙니다 경우 Kerberos 영역에 대 한 KDC를 찾기 위해 사용 하는 레지스트리 키를 초기화 합니다. 도메인입니다. 구성 후 운영 체제에 로그온 할 수는 Windows를 실행 하는 클라이언트 컴퓨터의 사용자는 Kerberos 영역에 차지 합니다.
+**Ksetup** 는 컴퓨터가 windows server 2003, windows server 2008 또는 windows server 2008 r 2를 실행 하 고 windows의 멤버가 아닌 경우 kerberos SSP (보안 지원 공급자)가 kerberos 영역에 대 한 KDC를 찾기 위해 사용 하는 레지스트리 키를 초기화 합니다. 도메인. 구성 후 운영 체제에 로그온 할 수는 Windows를 실행 하는 클라이언트 컴퓨터의 사용자는 Kerberos 영역에 차지 합니다.
 
-Kerberos 버전 5 프로토콜은 Windows XP Professional, Windows Vista 및 Windows 7을 실행 하는 컴퓨터에 네트워크 인증에 대 한 기본값입니다. Kerberos SSP에는 분야와 사용자의 도메인 이름에 대 한 레지스트리를 검색 하 고 DNS 서버를 쿼리하여 이름을 IP 주소로 확인 합니다. Kerberos 프로토콜 영역 이름만 사용 하 여 Kdc를 찾는 데 DNS를 사용할 수 있지만 그러려면 특별히 구성 해야 합니다.
+Kerberos 버전 5 프로토콜은 Windows XP Professional, Windows Vista 및 Windows 7을 실행 하는 컴퓨터의 네트워크 인증에 대 한 기본값입니다. Kerberos SSP에는 분야와 사용자의 도메인 이름에 대 한 레지스트리를 검색 하 고 DNS 서버를 쿼리하여 이름을 IP 주소로 확인 합니다. Kerberos 프로토콜 영역 이름만 사용 하 여 Kdc를 찾는 데 DNS를 사용할 수 있지만 그러려면 특별히 구성 해야 합니다.
 
 #### <a name="additional-references"></a>추가 참조
 

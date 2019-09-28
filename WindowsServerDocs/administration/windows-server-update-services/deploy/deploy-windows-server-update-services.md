@@ -1,7 +1,7 @@
 ---
 title: Windows Server Update Services 배포
-description: Windows Server Update Service (WSUS) 항목-작업을 수행 하 네 단계에 대 한 링크를 사용 하 여 배포 프로세스 개요
-ms.prod: windows-server-threshold
+description: WSUS (Windows Server Update Service) 항목-이 작업을 수행 하는 4 단계에 대 한 링크가 포함 된 배포 프로세스 개요
+ms.prod: windows-server
 ms.reviewer: na
 ms.technology: manage-wsus
 ms.topic: get-started-article
@@ -10,12 +10,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 51972ad352f6530c8ee2aa84aec57b62784da728
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e3e6bcd5f90d1a7df2a35dda45b4bf8951940815
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59873184"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71361682"
 ---
 # <a name="deploy-windows-server-update-services"></a>Windows Server Update Services 배포
 
@@ -33,6 +33,6 @@ WSUS 구현에서 사용 가능한 업데이트 정보를 얻으려면 네트워
 
 -   [2단계: WSUS 구성](2-configure-wsus.md)  
 
--   [3 단계: WSUS에서 업데이트 승인 및 배포](3-approve-and-deploy-updates-in-wsus.md)  
+-   [3단계: WSUS에서 업데이트 승인 및 배포](3-approve-and-deploy-updates-in-wsus.md)  
 
--   [4 단계: 자동 업데이트에 대 한 그룹 정책 설정 구성](4-configure-group-policy-settings-for-automatic-updates.md)  
+-   [4단계: 자동 업데이트를 위한 그룹 정책 설정 구성](4-configure-group-policy-settings-for-automatic-updates.md)  

@@ -7,20 +7,20 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 40d0d06f8d6d25c2c1dbf4662d3296a996d22055
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ba67a5fcc127bbe6ffce9454ff98fd3bc3725e55
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59882944"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71367714"
 ---
 # <a name="monitoring-active-directory-for-signs-of-compromise"></a>손상 징후에 대한 Active Directory 모니터링
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-*법률 숫자 5: 영원한 보안의 경우* - [10 immutable Laws of Security 관리](https://technet.microsoft.com/library/cc722488.aspx)  
+*Law 번호 5: 영구 경계는 보안의 가격입니다.* - [10 불변의 보안 관리 법칙](https://technet.microsoft.com/library/cc722488.aspx)  
   
 시스템을 모니터링 하는 견고한 이벤트 로그에는 모든 보안 Active Directory 디자인의 중요 한 부분입니다. 많은 컴퓨터 보안 손상은 검색할 수 없습니다 초기 이벤트는 교착 상태가 발생 된 적절 한 이벤트 로그 모니터링 및 경고를 실행 하는 경우. 독립적인 보고서이 결론 지원 되는 시간입니다. 예를 들어는 [2009 Verizon 데이터 위반 보고서](http://www.verizonbusiness.com/resources/security/reports/2009_databreach_rp.pdf) 상태:  
   
@@ -103,11 +103,11 @@ Windows Vista 및 Windows Server 2008 부터는 Microsoft 각 주 감사 범주 
   
 모든 사용할 수 있는 감사 하위 범주를 나열 하려면 그룹 정책 개체에서 고급 감사 정책 컨테이너를 검토 하거나 Windows Server 2012, Windows Server 2008 R2 또는 Windows Server 2008, Windows 8, Windows 7 또는 Windows Vista를 실행 하는 컴퓨터에서 명령 프롬프트에서 다음을 입력 합니다.  
   
-`auditpol /list /subcategory:\*`
+`auditpol /list /subcategory:*`
   
 Windows Server 2012, Windows Server 2008 R2 또는 Windows 2008을 실행 하는 컴퓨터에 현재 구성 된 감사 하위 범주의 목록을 가져오려면 다음을 입력 합니다.  
   
-`auditpol /get /category:\*`
+`auditpol /get /category:*`
   
 다음 스크린 샷에서 현재 감사 정책을 나열 auditpol.exe의 예를 보여줍니다.  
   
@@ -124,7 +124,7 @@ Windows Server 2012, Windows Server 2008 R2 또는 Windows 2008을 실행 하는
 #### <a name="account-logon"></a>계정 로그온  
   
 ##### <a name="credential-validation"></a>자격 증명 유효성 검사  
-이 하위 범주에 대 한 사용자 계정 로그온 요청을 제출 하는 자격 증명 유효성 검사 테스트의 결과 보고 합니다. 자격 증명에 대 한 권한이 있는 컴퓨터에서 이러한 이벤트가 발생 합니다. 반면 로컬 계정의 경우 로컬 컴퓨터는 신뢰할 수 있는 도메인 계정에 대 한 도메인 컨트롤러가 신뢰할 수입니다.  
+이 하위 범주에 대 한 사용자 계정 로그온 요청을 제출 하는 자격 증명 유효성 검사 테스트의 결과 보고 합니다. 이러한 이벤트는 자격 증명에 대 한 권한이 있는 컴퓨터에서 발생 합니다. 반면 로컬 계정의 경우 로컬 컴퓨터는 신뢰할 수 있는 도메인 계정에 대 한 도메인 컨트롤러가 신뢰할 수입니다.  
   
 도메인 환경에서 대부분의 경우 계정 로그온 이벤트는 도메인 계정에 대 한 권한이 있는 도메인 컨트롤러의 보안 로그에 기록 됩니다. 그러나 이러한 이벤트는 로컬 계정을 사용 하 여 로그온 할 때 조직에서 다른 컴퓨터에서 발생할 수 있습니다.  
   
@@ -132,10 +132,10 @@ Windows Server 2012, Windows Server 2008 R2 또는 Windows 2008을 실행 하는
 이 하위 도메인 계정에 대 한 권한이 있는 도메인 컨트롤러에서 Kerberos 티켓 요청 프로세스에 의해 생성 된 이벤트를 보고 합니다.  
   
 ##### <a name="kerberos-authentication-service"></a>Kerberos 인증 서비스  
-이 하위 Kerberos 인증 서비스에 의해 생성 된 이벤트를 보고 합니다. 자격 증명에 대 한 권한이 있는 컴퓨터에서 이러한 이벤트가 발생 합니다.  
+이 하위 Kerberos 인증 서비스에 의해 생성 된 이벤트를 보고 합니다. 이러한 이벤트는 자격 증명에 대 한 권한이 있는 컴퓨터에서 발생 합니다.  
   
 ##### <a name="other-account-logon-events"></a>기타 계정 로그온 이벤트  
-이 하위 자격 증명 사용자 계정 로그온 요청을 위해 제출 하는 자격 증명 유효성 검사 또는 Kerberos 티켓에 대 한 응답으로 발생 하는 이벤트를 보고 합니다. 자격 증명에 대 한 권한이 있는 컴퓨터에서 이러한 이벤트가 발생 합니다. 반면 로컬 계정의 경우 로컬 컴퓨터는 신뢰할 수 있는 도메인 계정에 대 한 도메인 컨트롤러가 신뢰할 수입니다.  
+이 하위 자격 증명 사용자 계정 로그온 요청을 위해 제출 하는 자격 증명 유효성 검사 또는 Kerberos 티켓에 대 한 응답으로 발생 하는 이벤트를 보고 합니다. 이러한 이벤트는 자격 증명에 대 한 권한이 있는 컴퓨터에서 발생 합니다. 반면 로컬 계정의 경우 로컬 컴퓨터는 신뢰할 수 있는 도메인 계정에 대 한 도메인 컨트롤러가 신뢰할 수입니다.  
   
 도메인 환경에서 대부분 계정 로그온 이벤트는 도메인 계정에 대 한 권한이 있는 도메인 컨트롤러의 보안 로그에 기록 됩니다. 그러나 이러한 이벤트는 로컬 계정을 사용 하 여 로그온 할 때 조직에서 다른 컴퓨터에서 발생할 수 있습니다. 예제는 다음과 같습니다.  
   
@@ -309,7 +309,7 @@ IPsec 드라이버
 이 하위 인터넷 프로토콜 보안 (IPsec) 드라이버의 활동을 보고합니다.  
   
 ##### <a name="other-system-events"></a>기타 시스템 이벤트  
-이 하위 기타 시스템 이벤트를 보고 합니다.  
+이 하위 시스템 이벤트를 보고 합니다.  
   
 하위 범주 설명에 대 한 자세한 내용은 참조는 [도구 Microsoft Security Compliance Manager](https://technet.microsoft.com/library/cc677002.aspx)합니다.  
   
@@ -361,19 +361,19 @@ Microsoft에서 제공 된 [샘플 스크립트](https://support.microsoft.com/k
 
 저장 하 고는 로컬 감사 정책을 복원 하 고 다른 감사 관련된 명령을 볼 Auditpol.exe는 사용할 수 있습니다. 다음은 다른 **auditpol** 명령입니다.  
   
-`auditpol /clear` -선택을 취소 하 고 로컬 감사 정책을 다시 설정 하는 데 사용  
+@no__t-로컬 감사 정책을 삭제 하 고 다시 설정 하는 데 사용 됩니다.  
   
-`auditpol /backup /file:<filename>` -이진 파일에는 현재 로컬 감사 정책을를 백업 하는 데 사용  
+@no__t-현재 로컬 감사 정책을 이진 파일에 백업 하는 데 사용 됩니다.  
   
-`auditpol /restore /file:<filename>` -로컬 감사 정책에는 이전에 저장 된 감사 정책 파일을 가져오는 데 사용 합니다.  
+@no__t-이전에 저장 된 감사 정책 파일을 로컬 감사 정책으로 가져오는 데 사용 됩니다.  
   
-`auditpol /<get/set> /option:<CrashOnAuditFail> /<enable/disable>` -이 감사 정책 설정을 사용 하면 시스템을 즉시 중지 (STOP을 사용 하 여: C0000244 {감사 실패} 메시지) 보안 감사 하는 경우를 로그할 수 없는 어떤 이유로 든 합니다. 보안 감사 로그가 꽉 차고 보안 로그에 대해 지정 된 보존 메서드는 로그에 이벤트 실패 하는 일반적으로 **이벤트 덮어쓰지 않음** 또는 **이벤트 덮어쓰기**합니다. 일반적으로 로그온 하는 보안 로그를 더 높은 보증 해야 하는 환경에 의해 활성화만 됩니다. 설정 된 경우 관리자가 보안 로그 크기를 시청 고 필요에 따라 로그 회전 밀접 하 게 해야 합니다. 또한 설정할 수 있습니다 그룹 정책 보안 옵션을 수정 하 여 **감사 합니다. 보안 감사를 로그할 수 없는 경우 즉시 시스템 종료** (기본값 = 사용 안 함).  
+`auditpol /<get/set> /option:<CrashOnAuditFail> /<enable/disable>`-이 감사 정책 설정을 사용 하도록 설정 하면 시스템이 즉시 중지 됩니다 (중지: 어떤 이유로 든 보안 감사를 로그할 수 없는 경우 {Audit Failed} C0000244 {Audit Failed} message). 보안 감사 로그가 꽉 차고 보안 로그에 대해 지정 된 보존 메서드는 로그에 이벤트 실패 하는 일반적으로 **이벤트 덮어쓰지 않음** 또는 **이벤트 덮어쓰기**합니다. 일반적으로 로그온 하는 보안 로그를 더 높은 보증 해야 하는 환경에 의해 활성화만 됩니다. 설정 된 경우 관리자가 보안 로그 크기를 시청 고 필요에 따라 로그 회전 밀접 하 게 해야 합니다. 보안 옵션 **Audit를 수정 하 여 그룹 정책 설정할 수도 있습니다. 보안 감사를 로그할 수 없는 경우 즉시 시스템 종료 @ no__t-0 (기본값 = 사용 안 함).  
   
-`auditpol /<get/set> /option:<AuditBaseObjects> /<enable/disable>` -이 감사 정책 설정을 글로벌 시스템 개체에 대 한 액세스를 감사 여부를 결정 합니다. 이 정책 옵션을 사용 하면 뮤텍스, 이벤트, 세마포 및 기본 시스템 액세스 제어 목록 (SACL)를 사용 하 여 만들어집니다 DOS 장치 등의 시스템 개체입니다. 대부분의 관리자가 너무 "심하거"를 글로벌 시스템 개체를 감사 하 고 악의적인 해킹 의심 되 면만 로드할 수 있습니다. 명명 된 개체만 SACL이 제공 됩니다. 감사 개체 액세스 감사 정책 (또는 커널 개체 감사 하위 범주)도 사용 하는 경우 이러한 시스템 개체에 대 한 액세스 감사 됩니다. 이 보안 설정을 구성할 때 변경 내용이 적용 되지 않습니다 Windows를 다시 시작 해야 합니다. 이 정책을 설정할 수 있으며 그룹 정책을 사용 하 여 글로벌 시스템 개체에 대 한 액세스 감사 보안 옵션을 수정 하 여 (기본값 = 사용 안 함).  
+`auditpol /<get/set> /option:<AuditBaseObjects> /<enable/disable>`-이 감사 정책 설정은 글로벌 시스템 개체의 액세스 감사 여부를 결정 합니다. 이 정책 옵션을 사용 하면 뮤텍스, 이벤트, 세마포 및 기본 시스템 액세스 제어 목록 (SACL)를 사용 하 여 만들어집니다 DOS 장치 등의 시스템 개체입니다. 대부분의 관리자가 너무 "심하거"를 글로벌 시스템 개체를 감사 하 고 악의적인 해킹 의심 되 면만 로드할 수 있습니다. 명명 된 개체만 SACL이 제공 됩니다. 감사 개체 액세스 감사 정책 (또는 커널 개체 감사 하위 범주)도 사용 하는 경우 이러한 시스템 개체에 대 한 액세스 감사 됩니다. 이 보안 설정을 구성할 때 변경 내용이 적용 되지 않습니다 Windows를 다시 시작 해야 합니다. 이 정책을 설정할 수 있으며 그룹 정책을 사용 하 여 글로벌 시스템 개체에 대 한 액세스 감사 보안 옵션을 수정 하 여 (기본값 = 사용 안 함).  
   
-`auditpol /<get/set> /option:<AuditBaseDirectories> /<enable/disable>` -이 감사 정책 설정을 생성 될 때 Sacl이 제공 될 명명 된 커널 개체 (예: 뮤텍스 및 세마포에) 지정 합니다. AuditBaseDirectories는 AuditBaseObjects 다른 개체를 포함할 수 없는 개체를 적용 하는 동안 컨테이너 개체를 영향을 줍니다.  
+`auditpol /<get/set> /option:<AuditBaseDirectories> /<enable/disable>`-이 감사 정책 설정은 명명 된 커널 개체 (예: 뮤텍스 및 세마포)를 만들 때 Sacl을 지정 하도록 지정 합니다. AuditBaseDirectories는 AuditBaseObjects 다른 개체를 포함할 수 없는 개체를 적용 하는 동안 컨테이너 개체를 영향을 줍니다.  
   
-`auditpol /<get/set> /option:<FullPrivilegeAuditing> /<enable/disable>` -이 감사 정책 설정은 클라이언트가 생성 한 경우 이벤트 여부 사용자 보안 토큰에 할당 된 이러한 권한을 더를 지정 합니다. AssignPrimaryTokenPrivilege, AuditPrivilege, BackupPrivilege, CreateTokenPrivilege, DebugPrivilege, EnableDelegationPrivilege, ImpersonatePrivilege, LoadDriverPrivilege, RestorePrivilege, SecurityPrivilege, SystemEnvironmentPrivilege, TakeOwnershipPrivilege, 및 TcbPrivilege 합니다. 이 옵션을 사용 하지 않는 경우 (기본값 = 사용 안 함), BackupPrivilege 및 RestorePrivilege 권한을 기록 되지 않습니다. 이 옵션을 사용 하면 백업 작업 중에서 보안 로그 매우 시끄러운 (때로는 수백 개의 이벤트를 두 번째로) 가능 합니다. 이 정책을 설정할 수도 있습니다 그룹 정책 보안 옵션을 수정 하 여 **감사 합니다. 백업 및 복원 권한 사용 감사**합니다.  
+`auditpol /<get/set> /option:<FullPrivilegeAuditing> /<enable/disable>`-이 감사 정책 설정은 다음 권한 중 하나 이상이 사용자 보안 토큰에 할당 된 경우 클라이언트가 이벤트를 생성할지 여부를 지정 합니다. 할당 Primarytoken권한, AuditPrivilege, BackupPrivilege, CreateTokenPrivilege, DebugPrivilege, EnableDelegationPrivilege, ImpersonatePrivilege, LoadDriverPrivilege, RestorePrivilege, SecurityPrivilege, System환경 권한 TakeOwnershipPrivilege 및 TcbPrivilege. 이 옵션을 사용 하지 않는 경우 (기본값 = 사용 안 함), BackupPrivilege 및 RestorePrivilege 권한을 기록 되지 않습니다. 이 옵션을 사용 하면 백업 작업 중에서 보안 로그 매우 시끄러운 (때로는 수백 개의 이벤트를 두 번째로) 가능 합니다. 보안 옵션 **Audit를 수정 하 여 그룹 정책로이 정책을 설정할 수도 있습니다. 백업 및 복원 권한 사용 감사 @ no__t-0.  
   
 > [!NOTE]  
 > 여기에 제공 된 일부 정보는 Microsoft에서 가져왔으면 [감사 옵션 종류](https://msdn.microsoft.com/library/dd973862(prot.20).aspx) 및 Microsoft SCM 도구입니다.  
@@ -390,10 +390,10 @@ Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 8, Win
   
 ## <a name="next-steps"></a>다음 단계
   
-* [에서 고급 보안 감사 Windows 7 및 Windows Server 2008 R2](https://social.technet.microsoft.com/wiki/contents/articles/advanced-security-auditing-in-windows-7-and-windows-server-2008-r2.aspx)  
+* [Windows 7 및 Windows Server 2008 r 2의 고급 보안 감사](https://social.technet.microsoft.com/wiki/contents/articles/advanced-security-auditing-in-windows-7-and-windows-server-2008-r2.aspx)  
   
-* [감사 및 Windows Server 2008의에서 규정 준수](https://technet.microsoft.com/magazine/2008.03.auditing.aspx)  
+* [Windows Server 2008의 감사 및 규정 준수](https://technet.microsoft.com/magazine/2008.03.auditing.aspx)  
   
-* [그룹 정책을 사용 하 여 세부 보안 감사 Windows Vista 및 Windows Server 2008 기반 컴퓨터에서 Windows Server 2008 도메인, Windows Server 2003 도메인 또는 Windows 2000 도메인에 대 한 설정을 구성 하는 방법](https://support.microsoft.com/kb/921469)  
+* [그룹 정책를 사용 하 여 windows Server 2008 도메인, Windows Server 2003 도메인 또는 Windows 2000 도메인의 windows Vista 기반 및 Windows Server 2008 기반 컴퓨터에 대 한 세부 보안 감사 설정을 구성 하는 방법](https://support.microsoft.com/kb/921469)  
   
 * [고급 보안 감사 정책 단계별 가이드](https://technet.microsoft.com/library/dd408940(WS.10).aspx)  

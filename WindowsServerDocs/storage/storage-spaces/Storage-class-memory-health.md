@@ -1,7 +1,7 @@
 ---
 ms.assetid: 2bab6bf6-90e7-46a7-b917-14a7a8f55366
 title: Windows의 저장소 클래스 메모리(NVDIMM-N) 상태 관리
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: jgerend
 ms.manager: dongill
 ms.technology: storage-spaces
@@ -9,12 +9,12 @@ ms.topic: article
 author: JasonGerend
 ms.date: 06/25/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 4ebec8618c79c43816680387ae5e495f125b3c54
-ms.sourcegitcommit: 545dcfc23a81943e129565d0ad188263092d85f6
+ms.openlocfilehash: 03d986832e14e0dd7b80324de3c9f14d0537dba5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67407559"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402908"
 ---
 # <a name="storage-class-memory-nvdimm-n-health-management-in-windows"></a>Windows의 저장소 클래스 메모리(NVDIMM-N) 상태 관리
 
@@ -23,11 +23,11 @@ ms.locfileid: "67407559"
 이 문서에서는 시스템 관리자 및 IT 전문가에게 저장소 클래스 메모리와 기존 저장 장치 간의 차이점을 중심으로 Windows의 저장소 클래스 메모리(NVDIMM-N) 장치에 특정한 오류 처리 및 상태 관리에 대한 정보를 제공합니다.
 
 Windows의 저장소 클래스 메모리 장치 지원에 익숙하지 않은 경우 다음의 짧은 비디오에서 개요를 확인할 수 있습니다.
-- [Windows Server 2016에서에서 블록 저장소로 비휘발성 메모리 (Nvdimm-n) 사용](https://channel9.msdn.com/Events/Build/2016/P466)
-- [Windows Server 2016에서에서 바이트 주소 지정 가능 저장소로 비휘발성 메모리 (Nvdimm-n) 사용](https://channel9.msdn.com/Events/Build/2016/P470)
-- [Windows Server 2016에서 영구 메모리로 SQL Server 2016 성능 가속화](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-Windows-Server-2016-SCM--FAST)
+- [Windows Server 2016에서 블록 저장소로 비휘발성 메모리 (NVDIMM-N) 사용](https://channel9.msdn.com/Events/Build/2016/P466)
+- [Windows Server 2016에서 바이트 주소 지정 가능 저장소로 비휘발성 메모리 (NVDIMM-N) 사용](https://channel9.msdn.com/Events/Build/2016/P470)
+- [Windows Server 2016에서 영구적 메모리로 SQL Server 2016 성능 가속화](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-Windows-Server-2016-SCM--FAST)
 
-도 참조 하세요 [이해 하 고 영구 메모리 저장소 공간 다이렉트 배포](deploy-pmem.md)합니다.
+또한 [스토리지 공간 다이렉트의 영구적 메모리 이해 및 배포를](deploy-pmem.md)참조 하세요.
 
 JEDEC 규격 NVDIMM-N 저장소 클래스 메모리 장치는 Windows Server 2016 및 Windows 10(버전 1607)부터 기본 드라이버를 통해 Windows에서 지원됩니다. 이러한 장치는 다른 디스크(HDD 및 SSD)와 유사하게 동작하지만 몇 가지 차이점이 있습니다.
 
@@ -54,7 +54,7 @@ PS C:\> Get-PhysicalDisk | where BusType -eq "SCM" | select SerialNumber, Health
 | SerialNumber | HealthStatus | OperationalStatus | OperationalDetails |
 | --- | --- | --- | --- |
 | 802c-01-1602-117cb5fc | 정상 | 확인 | |
-| 802c-01-1602-117cb64f | 경고 | 자동 완성 오류 | {Threshold Exceeded,NVDIMM\_N Error} |
+| 802c-01-1602-117cb64f | Warning | 자동 완성 오류 | {Threshold Exceeded,NVDIMM\_N Error} |
 
 > [!NOTE]
 > 이벤트에서 지정된 NVDIMM-N 장치의 물리적 위치를 찾으려면 이벤트 뷰어의 이벤트에 있는 **세부 정보** 탭에서 **EventData** > **위치**로 이동합니다. Windows Server 2016은 NVDIMM-N 장치의 잘못된 위치를 나열하지만 이는 Windows Server, 버전 1709에서 수정되었습니다.
@@ -68,7 +68,7 @@ PS C:\> Get-PhysicalDisk | where BusType -eq "SCM" | select SerialNumber, Health
 | SerialNumber | HealthStatus | OperationalStatus | OperationalDetails |
 | --- | --- | --- | --- |
 | 802c-01-1602-117cb5fc | 정상 | 확인 | |
-| 802c-01-1602-117cb64f | 경고 | 자동 완성 오류 | {Threshold Exceeded,NVDIMM\_N Error} |
+| 802c-01-1602-117cb64f | Warning | 자동 완성 오류 | {Threshold Exceeded,NVDIMM\_N Error} |
 
 다음 표에 이 조건에 대한 몇 가지 정보가 나와 있습니다.
 
@@ -108,7 +108,7 @@ PS C:\> Get-PhysicalDisk | where BusType -eq "SCM" | select SerialNumber, Health
 | SerialNumber | HealthStatus | OperationalStatus | OperationalDetails |
 | --- | --- | --- | --- |
 |802c-01-1602-117cb5fc|정상|확인||
-||경고|Lost Communication||
+||Warning|Lost Communication||
 
 다음 표에 이 조건에 대한 몇 가지 정보가 나와 있습니다.
 

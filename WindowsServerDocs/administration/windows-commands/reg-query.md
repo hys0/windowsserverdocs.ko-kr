@@ -1,8 +1,8 @@
 ---
-title: 레지스트리 쿼리
-description: '에 대 한 Windows 명령을 항목 * * *- '
+title: reg 쿼리
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1e239184cc5d118a858d012528fd8135f0b834e5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d2f616fb33974df4327c7b2536b3143b75d116be
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59827754"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71371723"
 ---
-# <a name="reg-query"></a>레지스트리 쿼리
+# <a name="reg-query"></a>reg 쿼리
 
 
 
@@ -38,30 +38,30 @@ reg query <KeyName> [{/v <ValueName> | /ve}] [/s] [/se <Separator>] [/f <Data>] 
 
 |매개 변수|설명|
 |---------|-----------|
-|\<KeyName>|하위 키의 전체 경로 지정합니다. 원격 컴퓨터를 지정 하는 것에 대 한 컴퓨터 이름을 포함 합니다 (형식에서 \\ \\ComputerName\) 의 일부로 합니다 *KeyName*합니다. 생략 \\ \\ComputerName\ 하면 로컬 컴퓨터에 기본 작업이 있습니다. *KeyName* 유효한 루트 키를 포함 해야 합니다. 로컬 컴퓨터에 대 한 유효한 루트 키 다음과 같습니다. HKLM, HKCU, HKCR, HKU, and HKCC. 원격 컴퓨터를 지정 하는 경우 유효한 루트 키 다음과 같습니다. HKLM 및 HKU 합니다.|
-|/v \<ValueName>|쿼리할 수 있는 레지스트리 값 이름을 지정 합니다. 에 대 한 이름을 생략 하면 모든 값 *KeyName* 반환 됩니다. *ValueName* 이 매개 변수는 선택 사항에 대 한 경우는 **/f** 옵션이 사용 됩니다.|
+|\<KeyName >|하위 키의 전체 경로 지정합니다. 원격 컴퓨터를 지정 하려면 컴퓨터 이름을 *KeyName*의 일부로 \\ @ No__t-1computername @ no__t-2 형식으로 포함 합니다. @No__t를 생략 하면-0 @ no__t-1ComputerName \이 작업을 기본적으로 로컬 컴퓨터로 설정 합니다. *KeyName* 유효한 루트 키를 포함 해야 합니다. 로컬 컴퓨터의 유효한 루트 키는 다음과 같습니다. HKLM, HKCU, HKCR, HKU 및 HKCC가 있습니다. 원격 컴퓨터를 지정 하는 경우 유효한 루트 키는 다음과 같습니다. HKLM 및 HKU.|
+|/v \<ValueName >|쿼리할 수 있는 레지스트리 값 이름을 지정 합니다. 에 대 한 이름을 생략 하면 모든 값 *KeyName* 반환 됩니다. *ValueName* 이 매개 변수는 선택 사항에 대 한 경우는 **/f** 옵션이 사용 됩니다.|
 |/s 모든 하위|비어 있는 값 이름에 대 한 쿼리를 실행 합니다.|
 |/s|모든 하위 키 및 값 이름 재귀적으로 쿼리를 지정 합니다.|
-|/se \<구분 >|값 이름에 입력 REG_MULTI_SZ 검색할 단일 값 구분 기호를 지정 합니다. 경우 *구분 기호* 를 지정 하지 않으면 **\0** 사용 됩니다.|
-|/f \<데이터 >|데이터 또는 패턴에 대 한 검색을 지정 합니다. 문자열에 공백이 있으면 큰따옴표를 사용 합니다. 지정 하지 않으면 와일드 카드 (**&#42;**)는 검색 패턴으로 사용 됩니다.|
+|/se \<Separator >|값 이름에 입력 REG_MULTI_SZ 검색할 단일 값 구분 기호를 지정 합니다. 경우 *구분 기호* 를 지정 하지 않으면 **\0** 사용 됩니다.|
+|/f \<Data >|데이터 또는 패턴에 대 한 검색을 지정 합니다. 문자열에 공백이 있으면 큰따옴표를 사용 합니다. 지정 하지 않으면 와일드 카드 ( **&#42;** )가 검색 패턴으로 사용 됩니다.|
 |/k|키 이름만에서 검색 하도록 지정 합니다.|
 |/d|데이터 에서만 검색 하도록 지정 합니다.|
 |/c|쿼리 대/소문자 구분 임을 지정 합니다. 기본적으로 쿼리는 대 소문자를 구분 하지 않습니다.|
 |/e|만 정확히 일치를 반환 하도록 지정 합니다. 기본적으로 일치 항목을 모두 반환 됩니다.|
-|/t \<형식 >|검색할 레지스트리 형식을 지정 합니다. 유효한 형식은 다음과 같습니다. REG_SZ, REG_MULTI_SZ, REG_EXPAND_SZ, REG_DWORD, REG_BINARY, REG_NONE. 지정 하지 않으면 모든 형식은 검색 됩니다.|
+|/t \<Type >|검색할 레지스트리 형식을 지정 합니다. 유효한 형식은 다음과 같습니다. REG_SZ, REG_MULTI_SZ, REG_EXPAND_SZ, REG_DWORD, REG_BINARY, REG_NONE. 지정 하지 않으면 모든 형식은 검색 됩니다.|
 |/z|검색 결과에 레지스트리 형식에 대 한 해당 숫자를 포함 하도록 지정 합니다.|
 |/?|에 대 한 도움말을 표시 **레지스트리 쿼리** 명령 프롬프트입니다.|
 
-## <a name="remarks-optional-section"></a>주의 \<선택적인 섹션 >
+## <a name="remarks-optional-section"></a>주의 \< 선택적 섹션 >
 
 다음 표에 대 한 반환 값은 **레지스트리 쿼리** 작업 합니다.
 
-|값|Description|
+|값|설명|
 |-----|-----------|
-|0|성공|
+|0|Success|
 |1|실패|
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 HKLM\Software\Microsoft\ResKit 키의 버전 이름 값의 값을 표시 하려면 다음을 입력 합니다.
 ```

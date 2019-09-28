@@ -1,7 +1,7 @@
 ---
 title: 저장소 공간 다이렉트에서 서버 제거
 ms.assetid: 9d8499a7-1307-473d-9f00-8a051164fad2
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: cosdar
 ms.manager: eldenc
 ms.technology: storage-spaces
@@ -10,12 +10,12 @@ author: cosmosdarwin
 description: Windows Server의 저장소 공간 다이렉트 클러스터에서 서버를 제거하는 방법.
 ms.date: 2/5/2017
 ms.localizationpriority: medium
-ms.openlocfilehash: 9fcb67b3c5fbcff0ca2a48ee9a1d2e109af3e9a8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ce8caef2b51279c97cc012045750b7a73d97a4ba
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59890784"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402804"
 ---
 # <a name="removing-servers-in-storage-spaces-direct"></a>저장소 공간 다이렉트에서 서버 제거
 
@@ -58,7 +58,7 @@ Windows에서 해당 서버에 저장된 모든 데이터를 클러스터의 다
 
 #### <a name="enough-capacity"></a>충분한 용량
 
-첫째, 모든 볼륨에 맞게 나머지 서버에 충분 한 저장소 용량이 있어야 합니다.
+먼저 모든 볼륨을 수용할 수 있도록 남은 서버에 충분 한 저장소 용량이 있어야 합니다.
 
 예를 들어, 각각 10 x 1TB 드라이브를 가진 4개의 서버가 있는 경우 40TB의 전체 물리적 저장소 용량을 갖게 됩니다. 하나의 서버와 해당 드라이브를 모두 제거한 후에 30TB의 용량이 남습니다. 볼륨의 사용 공간이 30TB를 초과하면 나머지 서버에 맞지 않으므로 cmdlet은 오류를 반환하고 데이터를 옮기지 않습니다.
 
@@ -81,4 +81,4 @@ Windows에서 해당 서버에 저장된 모든 데이터를 클러스터의 다
 
 ## <a name="see-also"></a>참조
 
-- [저장소 공간 다이렉트 개요](storage-spaces-direct-overview.md)
+- [스토리지 공간 다이렉트 개요](storage-spaces-direct-overview.md)

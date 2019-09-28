@@ -1,8 +1,8 @@
 ---
 title: cls
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c09053ebc842b35e5eee02f783c343497da047ce
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 5baf217529017228ecf3e3c1b9ddecc5ecfb59b9
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59889514"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71379537"
 ---
 # <a name="cls"></a>cls
 
@@ -40,9 +40,9 @@ cls
 |---------|-----------|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
-명령 프롬프트 창에 표시 되 고 빈 창으로 반환 하는 모든 정보를 지우려면 다음을 입력 합니다.
+명령 프롬프트 창에 표시 되는 모든 정보를 지우고 빈 창으로 돌아가려면 다음을 입력 합니다.
 ```
 cls 
 ```

@@ -7,14 +7,14 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 9e3a5cc2c71455bb040f1311bdbfed1ac7e213fb
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e1018d5bbff5922df5a696e5c4fad12dc9f6ec3d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59832234"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71408584"
 ---
 # <a name="virtualized-domain-controller-technical-reference-appendix"></a>가상화된 도메인 컨트롤러 기술 참조 부록
 
@@ -24,27 +24,27 @@ ms.locfileid: "59832234"
   
 -   [용어](../../../ad-ds/reference/virtual-dc/../../../ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-Technical-Reference-Appendix.md#BKMK_Terms)  
   
--   [FixVDCPermissions.ps1](../../../ad-ds/reference/virtual-dc/../../../ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-Technical-Reference-Appendix.md#BKMK_FixPDCPerms)  
+-   [FixVDCPermissions. p s 1](../../../ad-ds/reference/virtual-dc/../../../ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-Technical-Reference-Appendix.md#BKMK_FixPDCPerms)  
   
-## <a name="BKMK_Terms"></a>용어  
+## <a name="BKMK_Terms"></a>기술  
   
--   **스냅숏** -특정 시점에서 가상 컴퓨터의 상태입니다. 이 가상화 플랫폼에 이전 스냅숏을 하드웨어에서 체인에 따라 달라 집니다.  
+-   **스냅숏** -특정 시점에 있는 가상 컴퓨터의 상태입니다. 이는 사용 된 이전 스냅숏의 체인, 하드웨어 및 가상화 플랫폼에 따라 달라 집니다.  
   
--   **복제** -완료 하 고 가상 머신의 복사본을 구분 합니다. 가상 하드웨어 (하이퍼바이저)에서 다릅니다.  
+-   **복제** -가상 컴퓨터의 전체 및 개별 복사본입니다. 가상 하드웨어 (하이퍼바이저)에 따라 달라 집니다.  
   
--   **전체 복제** -전체 클론을 복제 작업 후 부모 가상 머신과 없는 리소스를 공유 하는 가상 컴퓨터의 독립적인 복사본입니다. 진행 중인 작업의 전체 클론을는 부모 가상 컴퓨터와 완전히 별개입니다.  
+-   **전체 복제** -전체 클론은 복제 작업 후에 부모 가상 머신과 리소스를 공유 하지 않는 가상 머신의 독립적인 복사본입니다. 전체 클론의 진행 중인 작업은 부모 가상 머신과 완전히 분리 됩니다.  
   
--   **차이점 보관용 디스크** -지속적인 방식으로 부모 가상 머신과 가상 디스크를 공유 하는 가상 머신의 복사본입니다. 이 일반적으로 디스크 공간을 절약 하며 동일한 소프트웨어 설치를 사용 하도록 여러 가상 머신이 있습니다.  
+-   **차이점 보관용 디스크** -가상 디스크를 부모 가상 머신과 지속적으로 공유 하는 가상 머신의 복사본입니다. 일반적으로 디스크 공간을 절약 하 고 여러 가상 컴퓨터에서 동일한 소프트웨어 설치를 사용할 수 있습니다.  
   
--   **VM 복사**-파일의 모든 관련된 파일 시스템 복사 및 가상 컴퓨터의 폴더입니다.  
+-   **VM 복사**-가상 컴퓨터의 모든 관련 파일 및 폴더에 대 한 파일 시스템 복사본입니다.  
   
--   **VHD 파일 복사** -가상 머신의 VHD의 복사본  
+-   **Vhd 파일 복사** -가상 컴퓨터의 vhd 복사본  
   
--   **VM 생성 ID** -하이퍼바이저에서 가상 컴퓨터를 지정 하는 128 비트 정수입니다. 이 ID는 메모리에 저장 되 고 스냅숏이 적용 될 때마다 다시 설정 합니다. 가상 컴퓨터에 있는 Vm-generation ID를 표시 하는 것에 대 한 하이퍼바이저 독립적인 메커니즘을 사용 하는 디자인 합니다. Hyper-v 구현을 가상 머신의 ACPI 테이블의 ID를 표시합니다.  
+-   **VM 생성 ID** -하이퍼바이저에 의해 가상 머신에 지정 된 128 비트 정수입니다. 이 ID는 메모리에 저장 되며 스냅숏이 적용 될 때마다 다시 설정 됩니다. 이 디자인에서는 가상 머신에서 VM 생성 ID를 인식 하기 위해 하이퍼바이저와 무관 한 메커니즘을 사용 합니다. Hyper-v 구현은 가상 컴퓨터의 ACPI 테이블에 ID를 제공 합니다.  
   
--   **Import/Export** -사용자에 게는 전체 가상 컴퓨터 (VM, VHD 파일과 컴퓨터 구성)를 저장할 수 있도록 하는 Hyper-v 기능입니다. 그런 다음 다시 동일한 VM (복원)와 동일한 컴퓨터에서 컴퓨터를 파일 집합을 사용 하 여 사용자가 동일한 VM (이동) 또는 새 VM (복사)을 다른 컴퓨터에서 수 있습니다.  
+-   **가져오기/내보내기** -사용자가 전체 가상 컴퓨터 (VM 파일, VHD 및 컴퓨터 구성)를 저장할 수 있도록 하는 hyper-v 기능입니다. 그런 다음 사용자가 해당 파일 집합을 사용 하 여 동일한 VM (복원)과 동일한 컴퓨터에서 동일한 VM (이동) 또는 새 VM (복사)로 컴퓨터를 다시 가져올 수 있습니다.  
   
-## <a name="BKMK_FixPDCPerms"></a>FixVDCPermissions.ps1  
+## <a name="BKMK_FixPDCPerms"></a>FixVDCPermissions. p s 1  
   
 ```  
 # Unsigned script, requires use of set-executionpolicy remotesigned -force  

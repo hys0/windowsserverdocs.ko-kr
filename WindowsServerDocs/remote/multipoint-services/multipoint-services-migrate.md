@@ -1,9 +1,9 @@
 ---
 title: Windows Server 2016에서에서 MultiPoint Service로 마이그레이션
-description: MultiPoint 서비스의 이전 버전에서 마이그레이션하는 방법을 알아봅니다
+description: 이전 버전의 MultiPoint 서비스에서 마이그레이션하는 방법에 대해 알아봅니다.
 ms.custom: na
 ms.date: 07/29/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ ms.assetid: 16c217ad-700a-48a3-8398-4a7f7e9edb52
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.openlocfilehash: 24c35c31bf920c41bafa16901ee30a023565dad8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 297de9ee2450856e24b9196a8bfb312991657e6d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59861204"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71389043"
 ---
 # <a name="multipoint-services-migration-in-windows-server-2016"></a>Windows Server 2016에서 multiPoint 서비스 마이그레이션
 >적용 대상: Windows Server 2016
@@ -53,6 +53,6 @@ MultiPoint 서비스 역할은 사용할 수 없음을 마이그레이션하는 
 ## <a name="migration-information-and-steps"></a>마이그레이션 정보 및 단계
 MultiPoint 서비스 마이그레이션을 계획 및 수행 하려면 다음 정보를 사용 합니다.
 
-- [마이그레이션에 대 한 필요한 정보를 수집 합니다.](multipoint-services-migration-preparation.md)
-- [MultiPoint 서비스 역할 서비스를 마이그레이션하십시오.](multipoint-services-migration-steps.md)
-- [마이그레이션 확인 및 마이그레이션 후 정리 작업 수행](multipoint-services-post-migration-steps.md)
+- [마이그레이션에 필요한 정보를 수집 합니다.](multipoint-services-migration-preparation.md)
+- [MultiPoint 서비스 역할 서비스를 마이그레이션합니다.](multipoint-services-migration-steps.md)
+- [마이그레이션의 유효성을 검사 하 고 마이그레이션 후 정리 작업 수행](multipoint-services-post-migration-steps.md)

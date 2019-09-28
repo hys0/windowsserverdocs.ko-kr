@@ -3,7 +3,7 @@ title: 사용자 연결 상태 보기
 description: MultiPoint 서비스에서 사용자 상태를 확인 하는 방법 알아보기
 ms.custom: na
 ms.date: 07/08/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ ms.assetid: 426df382-07a0-4be1-a87a-12e63bd8157b
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.openlocfilehash: ea162c24dd9fe68e9492dea007583a6b1293da2d
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 0473ac9a08967dfc9ed7b9590ba5fa87a9250d2e
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871465"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71389165"
 ---
 # <a name="view-user-connection-status"></a>사용자 연결 상태 보기
 **스테이션** 탭을 사용 하 여 MultiPoint 서비스 스테이션에 대 한 표준 또는 다른 관리 사용자의 연결 상태를 확인할 수 있습니다.  

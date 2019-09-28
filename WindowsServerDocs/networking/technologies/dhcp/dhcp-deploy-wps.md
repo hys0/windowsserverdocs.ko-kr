@@ -1,25 +1,25 @@
 ---
 title: Windows PowerShell을 사용하여 DHCP 배포
 description: 이 항목을 사용 하 여 네트워크에 있는 하나 이상의 서브넷에 연결 된 IPv4 DHCP 클라이언트에 자동 IP 주소 및 DHCP 옵션을 제공 하는 Windows Server 2016 인터넷 프로토콜 (IP) 버전 4 DHCP 서버를 배포할 수 있습니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-dhcp
 ms.topic: article
 ms.assetid: 7110ad21-a33e-48d5-bb3c-129982913bc8
 manager: brianlic
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: c02de23f285106ebee7fd6c78e4cf012437d616e
-ms.sourcegitcommit: 6f968368c12b9dd699c197afb3a3d13c2211f85b
+ms.openlocfilehash: 66e5845bdc8f473929bfd97a3999be82cd7730c8
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68544657"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71405771"
 ---
 # <a name="deploy-dhcp-using-windows-powershell"></a>Windows PowerShell을 사용하여 DHCP 배포
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-이 가이드에서는 Windows PowerShell을 사용 하 여 ip (인터넷 프로토콜) 버전 4 동적 호스트 구성 프로토콜 \(dhcp\) 서버를 배포 하는 방법에 대 한 지침을 제공 하 여 ip 주소 및 dhcp 옵션을 IPv4 dhcp에 자동으로 할당 합니다. 네트워크에 있는 하나 이상의 서브넷에 연결 된 클라이언트입니다.
+이 가이드에서는 Windows PowerShell을 사용 하 여 ip (인터넷 프로토콜) 버전 4 동적 호스트 구성 프로토콜 \(DHCP @ no__t 서버를 배포 하는 방법에 대 한 지침을 제공 합니다 .이 서버는 IP 주소 및 DHCP 옵션을 IPv4 DHCP 클라이언트에 자동으로 할당 합니다. 네트워크에 있는 하나 이상의 서브넷에 연결 됩니다.
 
 >[!NOTE]
 >TechNet 갤러리에서이 문서를 Word 형식으로 다운로드 하려면 [Windows Server 2016에서 Windows PowerShell을 사용 하 여 DHCP 배포](https://gallery.technet.microsoft.com/Deploy-DHCP-Using-Windows-246dd293)를 참조 하세요.
@@ -63,7 +63,7 @@ TCP/IP 기반 네트워크의 경우 DHCP는 컴퓨터 구성과 관련 된 관�
 
 기본적으로 모든 버전의 Windows Server 및 Windows 클라이언트 운영 체제에는 DHCP 서버에서 IP 주소 및 DHCP 옵션 이라고 하는 기타 정보를 자동으로 가져오도록 구성 된 IP 버전 4 네트워크 연결에 대 한 TCP/IP 설정이 있습니다. 따라서 컴퓨터가 서버 컴퓨터 이거나 수동으로 구성 된 고정 IP 주소가 필요한 다른 장치인 경우에만 TCP/IP 설정을 수동으로 구성할 필요가 없습니다. 
 
-예를 들어 DHCP 서버의 ip 주소와 Active Directory Domain Services \(AD DS\)를 실행 하는 DNS 서버 및 도메인 컨트롤러의 ip 주소를 수동으로 구성 하는 것이 좋습니다.
+예를 들어 DHCP 서버의 IP 주소를 수동으로 구성 하 고 Active Directory Domain Services를 실행 하는 DNS 서버 및 도메인 컨트롤러의 IP 주소를 \(AD DS @ no__t-1로 설정 하는 것이 좋습니다.
 
 Windows Server 2016의 TCP/IP는 다음과 같습니다.
 
@@ -217,7 +217,7 @@ DHCP 서버에 대해 범위를 만들면 DHCP 서버가 컴퓨터 및 기타 �
 >[!NOTE]
 >테스트 랩에서 DHCP를 배포 하지 않으려면 [Dhcp 배포](#bkmk_deploy)섹션으로 건너뛸 수 있습니다.
 
-랩에 대 한 요구 사항은 실제 서버 또는 가상 컴퓨터 \(vm\)을 사용 하는지 여부, Active Directory 도메인을 사용 하는지, 아니면 독립 실행형 DHCP 서버를 배포 하는지에 따라 달라 집니다.
+랩에 대 한 요구 사항은 \(VMs @ no__t-1의 실제 서버 또는 가상 컴퓨터를 사용 하는지 여부, Active Directory 도메인을 사용 하는지 아니면 독립 실행형 DHCP 서버를 배포 하는지에 따라 달라 집니다.
 
 다음 정보를 사용 하 여이 가이드를 사용 하 여 DHCP 배포를 테스트 하는 데 필요한 최소 리소스를 결정할 수 있습니다.
 
@@ -225,7 +225,7 @@ DHCP 서버에 대해 범위를 만들면 DHCP 서버가 컴퓨터 및 기타 �
 
 Vm을 사용 하 여 테스트 랩에서 DHCP를 배포 하려면 다음 리소스가 필요 합니다.
 
-도메인 배포 또는 독립 실행형 배포의 경우 hyper-v\-호스트로 구성 된 서버가 하나 필요 합니다.
+도메인 배포 또는 독립 실행형 배포의 경우 하이퍼 @ no__t-0V 호스트로 구성 된 서버가 하나 필요 합니다.
 
 **도메인 배포**
 
@@ -233,7 +233,7 @@ Vm을 사용 하 여 테스트 랩에서 DHCP를 배포 하려면 다음 리소�
 
 실제 서버의 Hyper-v 관리자에서 다음 항목을 만듭니다.
 
-1. **내부** 가상 스위치 하나 **외부** 가상 스위치를 만들지 마세요. hyper-v\-호스트가 dhcp 서버를 포함 하는 서브넷에 있는 경우 테스트 vm은 dhcp 서버에서 IP 주소를 수신 합니다. 또한 배포 하는 테스트 DHCP 서버는 hyper-v\-호스트가 설치 된 서브넷에 있는 다른 컴퓨터에 IP 주소를 할당할 수 있습니다.
+1. **내부** 가상 스위치 하나 **외부** 가상 스위치를 만들지 마세요. HYPER-V 호스트가 dhcp 서버를 포함 하는 서브넷에 있는 경우 테스트 VM은 dhcp 서버에서 IP 주소를 수신 합니다. 또한 배포 하는 테스트 DHCP 서버는 Hyper-v 호스트가 설치 된 서브넷에 있는 다른 컴퓨터에 IP 주소를 할당할 수 있습니다.
 1. 사용자가 만든 내부 가상 스위치에 연결 된 Active Directory Domain Services를 사용 하 여 도메인 컨트롤러로 구성 된 Windows Server 2016를 실행 하는 VM 하나가 있습니다. 이 가이드를 충족 하기 위해이 서버에는 고정적으로 구성 된 IP 주소 10.0.0.2가 있어야 합니다. AD DS 배포에 대 한 자세한 내용은 Windows Server 2016 [Core 네트워크 가이드](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/core-network-guide#BKMK_deployADDNS01)의 **DC1 배포** 섹션을 참조 하세요.
 1. Windows Server 2016를 실행 하는 VM 하나는이 가이드를 사용 하 여 DHCP 서버로 구성 하 고 사용자가 만든 내부 가상 스위치에 연결 됩니다. 
 1. 사용자가 만든 내부 가상 스위치에 연결 된 Windows 클라이언트 운영 체제를 실행 하는 하나의 VM은 DHCP 서버가 IP 주소 및 DHCP 옵션을 DHCP 클라이언트에 동적으로 할당 하 고 있는지 확인 하는 데 사용 합니다.
@@ -244,7 +244,7 @@ Vm을 사용 하 여 테스트 랩에서 DHCP를 배포 하려면 다음 리소�
 
 실제 서버의 Hyper-v 관리자에서 다음 항목을 만듭니다.
 
-1. **내부** 가상 스위치 하나 **외부** 가상 스위치를 만들지 마세요. hyper-v\-호스트가 dhcp 서버를 포함 하는 서브넷에 있는 경우 테스트 vm은 dhcp 서버에서 IP 주소를 수신 합니다. 또한 배포 하는 테스트 DHCP 서버는 hyper-v\-호스트가 설치 된 서브넷에 있는 다른 컴퓨터에 IP 주소를 할당할 수 있습니다.
+1. **내부** 가상 스위치 하나 **외부** 가상 스위치를 만들지 마세요. HYPER-V 호스트가 dhcp 서버를 포함 하는 서브넷에 있는 경우 테스트 VM은 dhcp 서버에서 IP 주소를 수신 합니다. 또한 배포 하는 테스트 DHCP 서버는 Hyper-v 호스트가 설치 된 서브넷에 있는 다른 컴퓨터에 IP 주소를 할당할 수 있습니다.
 2. Windows Server 2016를 실행 하는 VM 하나는이 가이드를 사용 하 여 DHCP 서버로 구성 하 고 사용자가 만든 내부 가상 스위치에 연결 됩니다.
 3. 사용자가 만든 내부 가상 스위치에 연결 된 Windows 클라이언트 운영 체제를 실행 하는 하나의 VM은 DHCP 서버가 IP 주소 및 DHCP 옵션을 DHCP 클라이언트에 동적으로 할당 하 고 있는지 확인 하는 데 사용 합니다.
 
@@ -292,7 +292,7 @@ Vm을 사용 하 여 테스트 랩에서 DHCP를 배포 하려면 다음 리소�
 
 ### <a name="where-to-install-dhcp---on-a-physical-computer-or-a-vm"></a>물리적 컴퓨터 또는 VM에서 DHCP를 설치 하는 위치
 
-Hyper-v\) \(호스트에설치된가상컴퓨터VM또는물리적컴퓨터에DHCP서버역할을설치할수있습니다.\- VM에 DHCP를 설치 하 고 DHCP 서버가 Hyper-v 호스트가 연결 된 실제 네트워크의 컴퓨터에 IP 주소 할당을 제공 하도록 하려면 VM 가상 네트워크 어댑터를 외부의 Hyper-v 가상 스위치에 연결 해야 합니다.  **/c0 >.**
+물리적 컴퓨터 또는 Hyper-v 호스트에 설치 된 가상 컴퓨터 \(VM @ no__t-1에 DHCP 서버 역할을 설치할 수 있습니다. VM에 DHCP를 설치 하 고 DHCP 서버가 Hyper-v 호스트가 연결 된 실제 네트워크의 컴퓨터에 IP 주소 할당을 제공 하도록 하려면 VM 가상 네트워크 어댑터를 외부의 Hyper-v 가상 스위치에 연결 해야 합니다.  **/c0 >.**
 
 자세한 내용은 [가상 네트워크 만들기](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/connect-to-network)항목에서 **hyper-v 관리자를 사용 하 여 가상 스위치 만들기** 섹션을 참조 하세요.
 
@@ -338,7 +338,7 @@ Restart-Computer
 - [이름 바꾸기-컴퓨터](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.management/rename-computer)
 - [Restart-Computer](https://msdn.microsoft.com/powershell/reference/4.0/microsoft.powershell.management/restart-computer)
 
-### <a name="join-the-computer-to-the-domain-optional"></a>도메인 \(에 컴퓨터 가입 옵션\)
+### <a name="join-the-computer-to-the-domain-optional"></a>컴퓨터를 도메인에 가입 \(Optional @ no__t-1
 
 Active Directory 도메인 환경에 DHCP 서버를 설치 하는 경우 컴퓨터를 도메인에 가입 시켜야 합니다. 관리자 권한으로 Windows PowerShell을 열고 도메인 NetBios 이름 **CORP** 를 사용자 환경에 적합 한 값으로 바꾼 후 다음 명령을 실행 합니다.
 
@@ -370,7 +370,7 @@ Install-WindowsFeature DHCP -IncludeManagementTools
 
 ### <a name="create-dhcp-security-groups"></a>DHCP 보안 그룹 만들기
 
-보안 그룹을 만들려면 Windows PowerShell에서 Network Shell \(netsh\) 명령을 실행 한 다음 새 그룹이 활성 상태가 되도록 DHCP 서비스를 다시 시작 해야 합니다.
+보안 그룹을 만들려면 Windows PowerShell에서 네트워크 셸을 \(netsh @ no__t-1 명령을 실행 한 다음 DHCP 서비스를 다시 시작 해야 새 그룹이 활성화 됩니다.
 
 Dhcp 서버에서 다음 netsh 명령을 실행 하면 dhcp **관리자** 및 dhcp **사용자** 보안 그룹이 dhcp 서버의 **로컬 사용자 및 그룹** 에 만들어집니다.
 
@@ -389,7 +389,7 @@ Restart-Service dhcpserver
 - [Netsh(네트워크 셸)](../netsh/netsh.md)
 - [서비스 다시 시작](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.management/restart-service)
 
-### <a name="authorize-the-dhcp-server-in-active-directory-optional"></a>Active Directory \(옵션에서 DHCP 서버 권한 부여\)
+### <a name="authorize-the-dhcp-server-in-active-directory-optional"></a>Active Directory @no__t에서 DHCP 서버에 권한을 부여 합니다.-0Optional @ no__t-1
 
 도메인 환경에서 DHCP를 설치 하는 경우 다음 단계를 수행 하 여 DHCP 서버가 도메인에서 작동할 수 있도록 권한을 부여 해야 합니다.
 
@@ -424,11 +424,11 @@ IPAddress   DnsName
 - [-DhcpServerInDC 추가](https://technet.microsoft.com/itpro/powershell/windows/dhcp-server/add-dhcpserverindc)
 - [Get DhcpServerInDC](https://technet.microsoft.com/itpro/powershell/windows/dhcp-server/get-dhcpserverindc)
 
-### <a name="notify-server-manager-that-post-install-dhcp-configuration-is-complete-optional"></a>설치 후\-DHCP 구성이 완료 \(됨을 서버 관리자에 알림\)
+### <a name="notify-server-manager-that-post-install-dhcp-configuration-is-complete-optional"></a>Post @ no__t-0install DHCP 구성이 완료 되었음을 서버 관리자에 알립니다. \( 옵션 @ no__t-2
 
-Active Directory에서 보안 그룹을\-만들고 DHCP 서버에 권한을 부여 하는 등의 설치 후 작업을 완료 한 후에도 사용자 인터페이스에이 게시물\- 을 나타내는 경고를 표시할 수 서버 관리자. 설치 단계는 DHCP 사후 설치 구성 마법사를 사용 하 여 완료 해야 합니다.
+Active Directory에서 보안 그룹을 만들고 DHCP 서버에 권한을 부여 하는 것과 같은 post @ no__t-0installation 작업을 완료 한 후에는 서버 관리자 사용자 인터페이스에 경고를 표시할 수 있습니다. 즉, post @ no__t 설치 단계는 DHCP Post 설치 구성 마법사를 사용 하 여 완료 됩니다.
 
-이 Windows PowerShell 명령을 사용\-하 여 다음 레지스트리 키를 구성 하 여 서버 관리자에 불필요 하 고 부정확 한 메시지가 표시 되지 않도록 할 수 있습니다.
+이 Windows PowerShell 명령을 사용 하 여 다음 레지스트리 키를 구성 하 여 서버 관리자에서이를 방지할 수 있습니다.
 
 ```
 Set-ItemProperty –Path registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ServerManager\Roles\12 –Name ConfigurationState –Value 2
@@ -438,7 +438,7 @@ Set-ItemProperty –Path registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ServerM
 
 - [Get-itemproperty](https://msdn.microsoft.com/powershell/reference/4.0/microsoft.powershell.management/set-itemproperty?f=255&MSPPError=-2147217396)
 
-### <a name="set-server-level-dns-dynamic-update-configuration-settings-optional"></a>서버 수준 DNS 동적 업데이트 구성 설정 \(옵션 설정\)
+### <a name="set-server-level-dns-dynamic-update-configuration-settings-optional"></a>서버 수준 DNS 동적 업데이트 구성 설정 \(Optional @ no__t-1을 설정 합니다.
 
 Dhcp 서버에서 DHCP 클라이언트 컴퓨터에 대 한 DNS 동적 업데이트를 수행 하도록 하려면 다음 명령을 실행 하 여이 설정을 구성할 수 있습니다. 이 설정은 범위 수준 설정이 아니라 서버에서 구성 하는 모든 범위에 영향을 줍니다. 또한이 예제 명령은 클라이언트의 최소 만료 시간에 클라이언트에 대 한 DNS 리소스 레코드를 삭제 하도록 DHCP 서버를 구성 합니다.
 
@@ -475,9 +475,9 @@ Set-DhcpServerv4OptionValue -DnsDomain corp.contoso.com -DnsServer 10.0.0.2
 - [DhcpServerv4ExclusionRange](https://technet.microsoft.com/itpro/powershell/windows/dhcp-server/add-dhcpserverv4exclusionrange)
 - [DhcpServerv4OptionValue](https://technet.microsoft.com/itpro/powershell/windows/dhcp-server/set-dhcpserverv4optionvalue)
 
-### <a name="configure-the-corpnet2-scope-optional"></a>Corpnet2 Scope \(구성 (선택 사항)\)
+### <a name="configure-the-corpnet2-scope-optional"></a>Corpnet2 범위 \(Optional @ no__t-1을 구성 합니다.
 
-DHCP 전달이 사용 하도록 설정 된 라우터를 사용 하 여 첫 번째 서브넷에 연결 된 두 번째 서브넷이 있는 경우 다음 명령을 사용 하 여이 예제에 Corpnet2 라는 두 번째 범위를 추가할 수 있습니다. 또한이 예제에서는 기본 게이트웨이의 \(Corpnet2 서브넷에\) 있는 라우터 ip 주소에 대 한 제외 범위와 ip 주소를 구성 합니다.
+DHCP 전달이 사용 하도록 설정 된 라우터를 사용 하 여 첫 번째 서브넷에 연결 된 두 번째 서브넷이 있는 경우 다음 명령을 사용 하 여이 예제에 Corpnet2 라는 두 번째 범위를 추가할 수 있습니다. 또한이 예제에서는 기본 @no__t 게이트웨이의 제외 범위와 IP 주소를 구성 합니다 .이 경우 Corpnet2 서브넷의 서브넷 @ no__t-1에서 라우터 IP 주소는 0입니다.
 
 ```
 Add-DhcpServerv4Scope -name "Corpnet2" -StartRange 10.0.1.1 -EndRange 10.0.1.254 -SubnetMask 255.255.255.0 -State Active
@@ -499,7 +499,7 @@ Dhcp 서버가 DHCP 클라이언트에 IP 주소를 동적으로 할당 하 고 
 1. 이더넷 케이블이 컴퓨터와 이더넷 스위치, 허브 또는 라우터 모두에 연결 되어 있는지 확인 합니다.
 2. 라우터를 통해 DHCP 서버와 분리 된 네트워크 세그먼트에 클라이언트 컴퓨터를 연결한 경우 라우터가 DHCP 메시지를 전달 하도록 구성 되어 있는지 확인 합니다.
 3. Active Directory에서 권한이 부여 된 DHCP 서버 목록을 검색 하기 위해 다음 명령을 실행 하 여 Active Directory에서 DHCP 서버에 권한을 부여 했는지 확인 합니다. [-DhcpServerInDC를 가져옵니다](https://technet.microsoft.com/itpro/powershell/windows/dhcp-server/get-dhcpserverindc).
-4. Dhcp \(콘솔 서버 관리자, **도구**, **dhcp**\)를 열고 서버 트리를 확장 하 여 범위를 검토 한 다음 각 범위를 마우스 오른쪽 단추로\-클릭 하 여 범위를 활성화 해야 합니다. 결과 메뉴에 선택 **활성화**가 포함 되어 있으면 **활성화**를 클릭 합니다. \(범위가 이미 활성화 되어 있으면 메뉴 선택이 **비활성화**를 읽습니다.\)
+4. DHCP 콘솔 \(Server Manager, **Tools**, **DHCP**\)을 열고 서버 트리를 확장 하 여 범위를 검토 한 다음, 오른쪽 @ no__t에서 각 범위를 클릭 하 여 범위를 활성화 해야 합니다. 결과 메뉴에 선택 **활성화**가 포함 되어 있으면 **활성화**를 클릭 합니다. \( 범위를 이미 활성화 한 경우 메뉴 선택은 **비활성화**를 읽습니다. \)
 
 ## <a name="bkmk_dhcpwps"></a>DHCP 용 Windows PowerShell 명령
 

@@ -2,7 +2,7 @@
 title: 표준 사용자 계정 만들기
 ms.custom: na
 description: MultiPoint 서비스에 대 한 기본 사용자 계정 만들기
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -11,12 +11,12 @@ ms.topic: article
 ms.assetid: 1e113666-e45f-48b6-aad8-42c361c9046d
 author: lizap
 manager: dongill
-ms.openlocfilehash: c854fdf7ccb71047b6631d53c08aa095499e7d45
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: dc1307855b847b3d27f655e953c718e4049f8332
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59837934"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71395484"
 ---
 # <a name="create-a-standard-user-account"></a>표준 사용자 계정 만들기
 스테이션에 정기적으로 액세스하지만 MultiPoint 서비스 시스템을 관리하지는 않을 사용자에 대해 *표준 사용자 계정*을 만들 수 있습니다. 표준 사용자 계정 가진 사용자는 대부분의 응용 프로그램을 실행 하 고 저장 파일을 하지만 다중 포인트 관리자를 실행할 수 없습니다. 다중 포인트 관리자에서 표준 사용자 액세스 권한이 있는 사용자를 보려면 클릭는 **사용자** 탭 합니다. 표준 사용자 계정은 **계정 유형** 열에 **표준**으로 표시됩니다.  

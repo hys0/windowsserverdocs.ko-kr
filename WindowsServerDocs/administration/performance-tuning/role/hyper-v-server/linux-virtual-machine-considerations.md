@@ -1,40 +1,40 @@
 ---
 title: Linux 가상 머신 고려 사항
-description: Linux 및 BSD 가상 머신
-ms.prod: windows-server-threshold
+description: Linux 및 BSD 가상 컴퓨터
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: Asmahi; SandySp; JoPoulso
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: cc6aab7825754579269eb05e591ca2a3cf5a561b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 5668629e7eded214525561d30fec496a4e91b8dc
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59869684"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71385073"
 ---
 # <a name="linux-virtual-machine-considerations"></a>Linux 가상 머신 고려 사항
 
-Linux 및 BSD virtual machines에는 Hyper-v에서 Windows 가상 머신에 비해 하는 추가 고려 사항이 있습니다.
+Linux 및 BSD 가상 컴퓨터에는 Hyper-v의 Windows 가상 컴퓨터와 비교 하 여 추가 고려 사항이 있습니다.
 
-첫 번째 고려 Integration Services 있는지 여부를 인지 하지 계몽을 사용 하 여 에뮬레이트된 하드웨어에서 단순히 VM이 실행 하는 경우. 기본 제공 또는 다운로드할 수 있는 Integration Services가 있는 Linux 및 BSD 버전의 테이블은 영어로 [Windows의 Hyper-v에 대 한 지원 되는 Linux 및 FreeBSD 가상 컴퓨터](https://technet.microsoft.com/windows-server-docs/compute/hyper-v/supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows)합니다. 이러한 페이지에 해당 하는 경우 Linux 배포 릴리스 및 이러한 기능에 대 한 정보를 사용할 수 있는 Hyper-v 기능 표입니다.
+첫 번째 고려 사항은 Integration Services 있는지 또는 VM이 계몽이 없는 에뮬레이트된 하드웨어 에서만 실행 되 고 있는지 여부입니다. [Windows의 hyper-v에 대 한 지원 되는 linux 및 FreeBSD 가상 머신에서 지원](https://technet.microsoft.com/windows-server-docs/compute/hyper-v/supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows)되는 기본 제공 또는 다운로드 가능 Integration Services 있는 LINUX 및 BSD 릴리스 표 이러한 페이지에는 Linux 배포 릴리스에 제공 되는 사용 가능한 Hyper-v 기능의 표 및 해당 하는 경우 해당 기능에 대 한 설명이 있습니다.
 
-게스트 통합 서비스가 실행 중일 때에 최상의 성능을 나타내지 않습니다 레거시 하드웨어를 사용 하 여 구성할 수 있습니다. 예를 들어, 구성 및 레거시 네트워크 어댑터를 사용 하는 대신 게스트에 가상 이더넷 어댑터를 사용 합니다. Windows Server 2016을 사용 하 여 고급 네트워킹 같은 SR-IOV도 사용할 수 있습니다.
+게스트가 Integration Services 실행 되는 경우에도 최상의 성능을 보이는 레거시 하드웨어로 구성할 수 있습니다. 예를 들어 레거시 네트워크 어댑터를 사용 하는 대신 게스트에 대 한 가상 이더넷 어댑터를 구성 하 고 사용 합니다. Windows Server 2016를 사용 하 여 SR-IOV와 같은 고급 네트워킹도 사용할 수 있습니다.
 
 ## <a name="linux-network-performance"></a>Linux 네트워크 성능
 
-기본적으로 Linux 하드웨어 가속을 사용 하도록 설정 하 고 기본적으로 오프 로드 합니다. VRSS는 호스트에서 NIC의 속성에서 사용할 수 있고 Linux 게스트 vRSS를 사용 하는 기능에는 기능을 사용할 수 있습니다. Powershell에서이 동일한 매개 변수를 변경할 수는 `EnableNetAdapterRSS` 명령입니다.
+기본적으로 Linux는 하드웨어 가속 및 오프 로드를 기본적으로 사용 하도록 설정 합니다. 호스트의 NIC 속성에서 vRSS를 사용 하도록 설정 하 고 Linux 게스트에 vRSS를 사용 하는 기능이 있는 경우 기능을 사용할 수 있습니다. Powershell에서이 매개 변수는 `EnableNetAdapterRSS` 명령으로 변경할 수 있습니다.
 
-마찬가지로, 게스트 사용 된 실제 NIC에 VMMQ (가상 스위치 RSS) 기능을 사용할 수 있습니다 **속성** > **구성 하는 중...**   >  **고급** 탭 > 설정 **가상 스위치 RSS** 에 **Enabled** 또는 다음을 사용 하 여 Powershell에서 VMMQ 사용:
+마찬가지로 VMMQ (가상 스위치 RSS) 기능을 게스트 @no__t **속성**에서 사용 하는 실제 NIC에서 사용 하도록 설정할 수 있습니다.-1**Configure ...** @no__t 3**고급** > 탭에서 다음을 사용 하 여 **가상 스위치 RSS** 를 **사용** 으로 설정 하거나 Powershell에서 VMMQ를 사용 하도록 설정 합니다.
 
 ```PowerShell
  Set-VMNetworkAdapter -VMName **$VMName** -VmmqEnabled $True
  ```
 
-게스트에서 추가 TCP 조정을 수행할 수 있습니다 제한을 늘려. 최상의 성능을 위해 워크 로드를 여러 Cpu를 분산 하 고 전체 워크 로드는 최상의 처리량을 생성 가상화 된 워크 로드의 대기 시간이 길어집니다 "베어 메탈" 보다 것입니다.
+게스트에서 추가 TCP 튜닝은 제한 값을 높여 수행할 수 있습니다. 가상화 된 워크 로드는 "운영 체제 미 설치" 보다 대기 시간이 더 높기 때문에 여러 Cpu에 대 한 최상의 성능을 극대화 하 고 심층 워크 로드를 통해 최상의 처리량을 얻을 수 있습니다.
 
-네트워크 벤치 마크에서 유용한 몇 가지 예제 튜닝 매개 변수는 다음과 같습니다.
+네트워크 벤치 마크에 유용한 몇 가지 예의 튜닝 매개 변수는 다음과 같습니다.
 
 ```PowerShell
 net.core.netdev_max_backlog = 30000
@@ -49,28 +49,28 @@ net.ipv4.ip_local_port_range = 10240 65535
 net.ipv4.tcp_abort_on_overflow = 1
 ```
 
-네트워크 microbenchmarks에 대 한 유용한은 ntttcp를 Linux 및 Windows 모두에서 사용할 수 있습니다. Linux 버전은 오픈 소스에서 사용할 수 있습니다 [github.com에서 linux에 대 한 ntttcp](https://github.com/Microsoft/ntttcp-for-linux)합니다. Windows 버전에서 찾을 수 있습니다 합니다 [다운로드 센터](https://gallery.technet.microsoft.com/NTttcp-Version-528-Now-f8b12769)합니다. 작업을 튜닝 하는 경우 필요에 따라 최상의 처리량을 가져오려는 만큼 스트림을 사용 하는 것이 적합 합니다. 모델 트래픽에 ntttcp를 사용 하 여는 `-P` 매개 변수가 사용 되는 병렬 연결 수를 설정 합니다.
+네트워크 마이크로 벤치 마크에 유용한 도구는 Linux 및 Windows 모두에서 사용할 수 있는 ntttcp입니다. Linux 버전은 오픈 소스 이며 [github.com의 ntttcp-linux](https://github.com/Microsoft/ntttcp-for-linux)에서 사용할 수 있습니다. Windows 버전은 [다운로드 센터](https://gallery.technet.microsoft.com/NTttcp-Version-528-Now-f8b12769)에서 찾을 수 있습니다. 작업을 튜닝 하는 경우 최적의 처리량을 얻기 위해 필요한 만큼의 스트림을 사용 하는 것이 가장 좋습니다. Ntttcp를 사용 하 여 트래픽을 모델링할 때 `-P` 매개 변수는 사용 되는 병렬 연결 수를 설정 합니다.
 
 ## <a name="linux-storage-performance"></a>Linux 저장소 성능
 
-다음과 같은 몇 가지 모범 사례에 나열 됩니다 [Hyper-v의 Linux를 실행에 대 한 모범 사례](https://technet.microsoft.com/windows-server-docs/compute/hyper-v/best-practices-for-running-linux-on-hyper-v)합니다. Linux 커널에는 다양 한 알고리즘을 사용 하 여 요청을 다시 정렬 하려면 다른 I/O 스케줄러입니다. NOOP는 하이퍼바이저 수행 하기 위해 일정 의사 결정을 전달 하는 선입 선출 방식입니다. Hyper-v의 Linux 가상 컴퓨터를 실행 하는 경우 NOOP 스케줄러로 사용 하는 것이 좋습니다. 부팅 로더가 구성에서 특정 장치에 대 한 스케줄러를 변경 하려면 (/ 예를 들어 grub.conf), 추가 `elevator=noop` 커널 매개 변수를 다음 다시 시작 합니다.
+[Hyper-v에서 Linux를 실행 하기 위한 모범 사례](https://technet.microsoft.com/windows-server-docs/compute/hyper-v/best-practices-for-running-linux-on-hyper-v)에는 다음과 같은 몇 가지 모범 사례가 나와 있습니다. Linux 커널에는 서로 다른 알고리즘을 사용 하 여 요청을 다시 정렬 하는 서로 다른 i/o 스케줄러가 있습니다. NOOP는 하이퍼바이저 수행 하기 위해 일정 의사 결정을 전달 하는 선입 선출 방식입니다. Hyper-v의 Linux 가상 컴퓨터를 실행 하는 경우 NOOP 스케줄러로 사용 하는 것이 좋습니다. 특정 장치에 대 한 스케줄러를 변경 하려면 부팅 로더에서 구성 (예:/etc/grub.conf)에서 커널 매개 변수에 `elevator=noop`을 추가 하 고를 다시 시작 합니다.
 
-네트워킹와 마찬가지로 Linux 게스트 성능 저장소를 사용 하 여 사용 중인 호스트를 유지 하려면 충분 한 깊이 사용 하 여 여러 큐에서 가장 이점을 제공 합니다. Microbenchmarking 저장소 성능은 libaio 엔진과 fio 벤치 마크 도구를 사용 하 여 것이 가장 좋습니다.
+네트워킹의 경우와 유사 하 게 저장소를 사용 하는 Linux 게스트 성능에는 호스트를 계속 사용 하는 데 충분 한 깊이가 있는 여러 큐의 이점이 있습니다. Libaio 엔진을 사용 하는 fio 벤치 마크 도구를 사용 하면 마이크로 벤치마킹 저장소 성능이 가장 적합할 수 있습니다.
 
 ## <a name="see-also"></a>참조
 
--   [Hyper-v 용어](terminology.md)
+-   [Hyper-V 용어](terminology.md)
 
--   [Hyper-v 아키텍처](architecture.md)
+-   [Hyper-V 아키텍처](architecture.md)
 
--   [Hyper-v 서버-구성](configuration.md)
+-   [Hyper-V 서버 구성](configuration.md)
 
--   [Hyper-v 프로세서 성능](processor-performance.md)
+-   [Hyper-V 프로세서 성능](processor-performance.md)
 
--   [Hyper-v 메모리 성능](memory-performance.md)
+-   [Hyper-V 메모리 성능](memory-performance.md)
 
--   [Hyper-v 저장소 I/O 성능](storage-io-performance.md)
+-   [Hyper-V 스토리지 I/O 성능](storage-io-performance.md)
 
--   [Hyper-v 네트워크 I/O 성능](network-io-performance.md)
+-   [Hyper-V 네트워크 I/O 성능](network-io-performance.md)
 
--   [가상화 된 환경에서 병목 상태를 검색합니다.](detecting-virtualized-environment-bottlenecks.md)
+-   [가상화된 환경의 병목 상태 탐지](detecting-virtualized-environment-bottlenecks.md)

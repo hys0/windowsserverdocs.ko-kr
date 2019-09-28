@@ -1,8 +1,8 @@
 ---
-title: 하위 명령 서버 중지
-description: '에 대 한 Windows 명령을 항목 * * *- '
+title: 하위 명령 중지-서버
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ddb681234cfcbe6d02e56f2e366167faeeb25280
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7584dcbca5bfc52d303f187f62be24cbad407416
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59834734"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71383736"
 ---
 # <a name="subcommand-stop-server"></a>하위 명령: 서버 중지
 
@@ -33,7 +33,7 @@ wdsutil [Options] /Stop-Server [/Server:<Server name>]
 |매개 변수|설명|
 |-------|--------|
 |[/ 서버:<Server name>]|서버 이름을 지정합니다. 이 NetBIOS 이름 또는 정규화 된 도메인 이름 (FQDN) 수 있습니다. 서버 이름이 없는 지정 하는 경우 로컬 서버 사용 됩니다.|
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 서비스를 중지 하려면 다음 중 하나를 입력 합니다.
 ```
 wdsutil /Stop-Server

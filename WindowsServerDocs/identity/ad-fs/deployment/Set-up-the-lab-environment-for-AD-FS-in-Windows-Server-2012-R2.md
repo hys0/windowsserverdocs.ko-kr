@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: c1ead3b649b22429afd1090efecab552aef7ebf8
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 52199ab8ca6f82443e78e72c6980746fa561363a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66442426"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71408306"
 ---
 # <a name="set-up-the-lab-environment-for-ad-fs-in-windows-server-2012-r2"></a>Windows Server 2012 R2의 AD FS에 대한 랩 환경 설정
 
@@ -28,7 +28,7 @@ ms.locfileid: "66442426"
 
 -   [연습 가이드: 조건부 액세스 제어를 사용하여 위험 관리](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
 
--   [연습 가이드: 추가 Multi-factor Authentication for Sensitive Applications 사용 하 여 위험 관리](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
+-   [연습 가이드: 중요 한 응용 프로그램에 대 한 추가 Multi-Factor Authentication로 위험 관리](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 
 > [!NOTE]
 > 웹 서버와 페더레이션 서버를 동일한 컴퓨터에 설치하지 않는 것이 좋습니다.
@@ -37,32 +37,32 @@ ms.locfileid: "66442426"
 
 1.  [1단계: 도메인 컨트롤러 (DC1) 구성](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_1)
 
-2.  [2단계: 페더레이션 서버 (ADFS1) with Device Registration Service 구성](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_4)
+2.  [2단계: Device Registration Service를 사용 하 여 페더레이션 서버 (ADFS1) 구성](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_4)
 
 3.  [3단계: 웹 서버 (WebServ1) 및 샘플 클레임 기반 응용 프로그램 구성](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_5)
 
 4.  [4단계: 클라이언트 컴퓨터 (Client1) 구성](../../ad-fs/deployment/../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_10)
 
 ## <a name="BKMK_1"></a>1 단계: 도메인 컨트롤러(DC1) 구성
-이 테스트 환경을 위해 루트 Active Directory 도메인을 호출할 수 있습니다 **contoso.com** 지정 <strong>pass@word1</strong> 을 관리자 암호로 합니다.
+이 테스트 환경의 목적을 위해 루트 Active Directory 도메인 **contoso.com** 를 호출 하 고를 관리자 암호로 지정할 <strong>pass@word1</strong> 수 있습니다.
 
--   AD DS 역할 서비스를 설치 하 고 Active Directory Domain Services에서 Windows Server 2012 R2 컴퓨터를 도메인 컨트롤러 만들기 (AD DS)를 설치 합니다. 이 작업은 도메인 컨트롤러 만들기의 일부로 AD DS 스키마를 업그레이드합니다. 자세한 내용 및 단계별 지침은 참조 하세요[https://technet.microsoft.com/library/hh472162.aspx](https://technet.microsoft.com/library/hh472162.aspx)합니다.
+-   AD DS 역할 서비스를 설치 하 고 Active Directory Domain Services (AD DS)를 설치 하 여 Windows Server 2012 r 2에서 컴퓨터를 도메인 컨트롤러로 만듭니다. 이 작업을 수행 하면 도메인 컨트롤러 만들기의 일부로 AD DS 스키마가 업그레이드 됩니다. 자세한 내용 및 단계별 지침은[https://technet.microsoft.com/library/hh472162.aspx](https://technet.microsoft.com/library/hh472162.aspx)을 참조 하세요.
 
 ### <a name="BKMK_2"></a>테스트 Active Directory 계정 만들기
 도메인 컨트롤러가 작동하면 이 도메인에서 테스트 그룹 및 테스트 사용자 계정을 만들고 해당 사용자 계정을 그룹 계정에 추가할 수 있습니다. 이러한 계정을 사용하여 이 항목의 앞부분에 언급된 연습 가이드의 연습을 완료합니다.
 
 다음 계정을 만듭니다.
 
-- 사용자: **Robert Hatley**, 자격 증명 - 사용자 이름: **RobertH** 및 암호: <strong>P@ssword</strong>
+- 사용자: **Robert Hatley**, 자격 증명 - 사용자 이름: **Roberth** 및 암호:<strong>P@ssword</strong>
 
-- 그룹: **재무**
+- 그룹: **부서**
 
-Active Directory (AD) 사용자 및 그룹 계정을 만드는 방법에 대 한 자세한 내용은 [ https://technet.microsoft.com/library/cc783323%28v.aspx ](https://technet.microsoft.com/library/cc783323%28v=ws.10%29.aspx)합니다.
+AD (Active Directory)에서 사용자 및 그룹 계정을 만드는 방법에 대 한 자세한 내용은을 [https://technet.microsoft.com/library/cc783323%28v.aspx](https://technet.microsoft.com/library/cc783323%28v=ws.10%29.aspx)참조 하십시오.
 
-**Robert Hatley** 계정을 **Finance** 그룹에 추가합니다. Active Directory에서 그룹에 사용자를 추가 하는 방법에 대 한 자세한 내용은 [ https://technet.microsoft.com/library/cc737130%28v=ws.10%29.aspx ](https://technet.microsoft.com/library/cc737130%28v=ws.10%29.aspx)합니다.
+**Robert Hatley** 계정을 **Finance** 그룹에 추가합니다. Active Directory에서 그룹에 사용자를 추가 하는 방법에 대 한 자세한 내용은 [https://technet.microsoft.com/library/cc737130%28v=ws.10%29.aspx](https://technet.microsoft.com/library/cc737130%28v=ws.10%29.aspx)을 참조 하십시오.
 
 ### <a name="create-a-gmsa-account"></a>GMSA 계정 만들기
-GMSA (그룹 관리 서비스 계정) 계정은 Active Directory Federation Services (AD FS) 설치 및 구성 하는 동안 필요 합니다.
+GMSA (그룹 관리 서비스 계정) 계정은 Active Directory Federation Services (AD FS) 설치 및 구성 중에 필요 합니다.
 
 ##### <a name="to-create-a-gmsa-account"></a>GMSA 계정을 만들려면
 
@@ -75,9 +75,9 @@ GMSA (그룹 관리 서비스 계정) 계정은 Active Directory Federation Serv
     ```
 
 ## <a name="BKMK_4"></a>2 단계: Device Registration Service를 사용하여 페더레이션 서버(ADFS1) 구성
-다른 가상 컴퓨터를 설정 하려면 Windows Server 2012 R2를 설치 하 고 도메인에 연결 **contoso.com**합니다. 도메인에 가입한 후 컴퓨터를 설정 하 고 설치 및 AD FS 역할을 구성 합니다. 계속 진행 합니다.
+다른 가상 컴퓨터를 설정 하려면 Windows Server 2012 r 2를 설치 하 고이를 도메인 **contoso.com**에 연결 합니다. 도메인에 가입한 후 컴퓨터를 설정 하 고 AD FS 역할 설치 및 구성을 계속 진행 합니다.
 
-비디오를 참조 하세요. [Active Directory Federation Services 방법 비디오 시리즈: AD FS 서버 팜 설치](https://technet.microsoft.com/video/dn469436)합니다.
+비디오는 Active Directory Federation Services 방법 비디오 [시리즈를 참조 하세요. AD FS 서버 팜을](https://technet.microsoft.com/video/dn469436)설치 합니다.
 
 ### <a name="install-a-server-ssl-certificate"></a>서버 SSL 인증서 설치
 ADFS1 서버의 로컬 컴퓨터 저장소에 서버 SSL(Secure Socket Layer) 인증서를 설치해야 합니다. 인증서에는 다음 특성이 있어야 합니다.
@@ -90,13 +90,13 @@ ADFS1 서버의 로컬 컴퓨터 저장소에 서버 SSL(Secure Socket Layer) �
 
 SSL 인증서를 설정하는 방법에 대한 자세한 내용은 [엔터프라이즈 CA를 사용하여 도메인의 웹 사이트에서 SSL/TLS 구성](https://social.technet.microsoft.com/wiki/contents/articles/12485.configure-ssltls-on-a-web-site-in-the-domain-with-an-enterprise-ca.aspx)(영문)을 참조하세요.
 
-[Active Directory Federation Services 방법 비디오 시리즈: 인증서 업데이트](https://technet.microsoft.com/video/adfs-updating-certificates)합니다.
+[Active Directory Federation Services 방법 비디오 시리즈: 인증서](https://technet.microsoft.com/video/adfs-updating-certificates)를 업데이트 합니다.
 
 ### <a name="install-the-ad-fs-server-role"></a>AD FS 서버 역할 설치
 
 ##### <a name="to-install-the-federation-service-role-service"></a>페더레이션 서비스 역할 서비스를 설치하려면
 
-1. 도메인 관리자 계정을 사용 하 여 서버에 로그온 administrator@contoso.com합니다.
+1. 도메인 관리자 계정을 administrator@contoso.com사용 하 여 서버에 로그온 합니다.
 
 2. 서버 관리자를 시작합니다. 서버 관리자를 시작하려면 Windows **시작** 화면에서 **서버 관리자** 를 클릭하거나 Windows 바탕 화면의 Windows 작업 표시줄에서 **서버 관리자** 를 클릭합니다. **대시보드** 페이지의 **시작** 타일에 있는 **빠른 시작** 탭에서 **역할 및 기능 추가**를 클릭합니다. 또는 **관리** 메뉴에서 **역할 및 기능 추가**를 클릭해도 됩니다.
 
@@ -148,7 +148,7 @@ SSL 인증서를 설정하는 방법에 대한 자세한 내용은 [엔터프라
 9. **결과** 페이지에서 결과를 검토하고 구성이 성공적으로 완료되었는지 확인한 다음 **페더레이션 서비스 배포를 완료하는 데 필요한 다음 단계**를 클릭합니다.
 
 ### <a name="configure-device-registration-service"></a>Device Registration Service 구성
-다음 단계에서는 ADFS1 서버에서 Device Registration Service를 구성합니다. 비디오를 참조 하세요. [Active Directory Federation Services 방법 비디오 시리즈: Device Registration Service를 사용 하도록 설정 하면](https://technet.microsoft.com/video/adfs-how-to-enabling-the-device-registration-service)합니다.
+다음 단계에서는 ADFS1 서버에서 Device Registration Service를 구성합니다. 비디오는 Active Directory Federation Services 방법 비디오 [시리즈를 참조 하세요. 장치 등록 서비스](https://technet.microsoft.com/video/adfs-how-to-enabling-the-device-registration-service)를 사용 하도록 설정 합니다.
 
 ##### <a name="to-configure-device-registration-service-for-windows-server-2012-rtm"></a>Windows Server 2012 RTM에 대한 Device Registration Service를 구성하려면
 
@@ -174,14 +174,14 @@ SSL 인증서를 설정하는 방법에 대한 자세한 내용은 [엔터프라
 ### <a name="add-host-a-and-alias-cname-resource-records-to-dns"></a>DNS에 호스트(A) 및 별칭(CNAME) 리소스 레코드 추가
 DC1에서 다음 DNS(Domain Name System) 레코드가 Device Registration Service에 대해 만들어졌는지 확인해야 합니다.
 
-|입력|형식|주소|
+|입력|type|주소|
 |---------|--------|-----------|
 |adfs1|호스트(A)|AD FS 서버의 IP 주소|
 |enterpriseregistration|별칭(CNAME)|adfs1.contoso.com|
 
 다음 절차를 사용하여 페더레이션 서버 및 Device Registration Service용 회사 DNS 이름 서버에 호스트(A) 리소스 레코드를 추가할 수 있습니다.
 
-이 절차를 완료하려면 최소한 Administrators 또는 이와 동등한 그룹 구성원 자격이 필요합니다. 적절 한 계정을 사용 하는 방법에 대 한 세부 정보를 검토 하 고 그룹 구성원 자격 하이퍼링크에 "<https://go.microsoft.com/fwlink/?LinkId=83477>" 로컬 및 도메인 기본 그룹 (<https://go.microsoft.com/fwlink/p/?LinkId=83477>).
+이 절차를 완료하려면 최소한 Administrators 또는 이와 동등한 그룹 구성원 자격이 필요합니다. "" 로컬 및 도메인 기본 그룹 (<https://go.microsoft.com/fwlink/?LinkId=83477><https://go.microsoft.com/fwlink/p/?LinkId=83477>) "하이퍼링크에서 적절 한 계정 및 그룹 구성원 자격 사용에 대 한 세부 정보를 검토 합니다.
 
 ##### <a name="to-add-a-host-a-and-alias-cname-resource-records-to-dns-for-your-federation-server"></a>페더레이션 서버에 대한 DNS에 호스트(A) 및 별칭(CNAME) 리소스 레코드를 추가하려면
 
@@ -203,20 +203,20 @@ DC1에서 다음 DNS(Domain Name System) 레코드가 Device Registration Servic
     > 실제 배포에서는 회사에 여러 UPN(사용자 계정 이름) 접미사가 있는 경우 DNS의 각 UPN 접미사마다 하나씩 여러 CNAME 레코드를 만들어야 합니다.
 
 ## <a name="BKMK_5"></a>3 단계: 웹 서버(WebServ1) 및 예제 클레임 기반 응용 프로그램 구성
-Windows Server 2012 R2 운영 체제를 설치 하 여 가상 컴퓨터 (WebServ1)를 설정 하 고 도메인에 연결 **contoso.com**합니다. 도메인에 가입한 후에는 웹 서버 역할 설치 및 구성을 계속 진행할 수 있습니다.
+Windows Server 2012 R2 운영 체제를 설치 하 고 도메인 **contoso.com**에 연결 하 여 가상 컴퓨터 (WebServ1)를 설정 합니다. 도메인에 가입한 후에는 웹 서버 역할 설치 및 구성을 계속 진행할 수 있습니다.
 
 이 항목의 앞부분에 언급된 연습을 완료하려면 페더레이션 서버(ADFS1)로 보호된 예제 응용 프로그램이 있어야 합니다.
 
-Windows Identity Foundation SDK를 다운로드할 수 있습니다 ([https://www.microsoft.com/download/details.aspx?id=4451](https://www.microsoft.com/download/details.aspx?id=4451), 샘플 클레임 기반 응용 프로그램을 포함 합니다.
+샘플 클레임 기반 응용 프로그램을 포함 하[https://www.microsoft.com/download/details.aspx?id=4451](https://www.microsoft.com/download/details.aspx?id=4451)는 Windows Identity Foundation SDK (를 다운로드할 수 있습니다.
 
 이 예제 클레임 기반 응용 프로그램으로 웹 서버를 설정하려면 다음 단계를 완료해야 합니다.
 
 > [!NOTE]
-> Windows Server 2012 R2 운영 체제를 실행 하는 웹 서버에서 다음이 단계를 거쳤습니다.
+> 이러한 단계는 Windows Server 2012 R2 운영 체제를 실행 하는 웹 서버에서 테스트 되었습니다.
 
 1.  [웹 서버 역할 및 Windows Identity Foundation 설치](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_15)
 
-2.  [Install Windows Identity Foundation SDK](../../ad-fs/deployment/../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_13)
+2.  [Windows Identity Foundation SDK 설치](../../ad-fs/deployment/../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_13)
 
 3.  [IIS에서 간단한 클레임 응용 프로그램 구성](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_9)
 
@@ -225,9 +225,9 @@ Windows Identity Foundation SDK를 다운로드할 수 있습니다 ([https://ww
 ### <a name="BKMK_15"></a>웹 서버 역할 및 Windows Identity Foundation 설치
 
 1. > [!NOTE]
-   > Windows Server 2012 R2 설치 미디어에 액세스할 수 있어야 합니다.
+   > Windows Server 2012 R2 설치 미디어에 대 한 액세스 권한이 있어야 합니다.
 
-   사용 하 여 WebServ1에 로그온 <strong>administrator@contoso.com</strong> 암호 <strong>pass@word1</strong>합니다.
+   및 암호 <strong>administrator@contoso.com</strong> <strong>pass@word1</strong>를 사용 하 여 WebServ1에 로그온 합니다.
 
 2. 서버 관리자 **대시보드** 페이지의 **시작** 타일에 있는 **빠른 시작** 탭에서 **역할 및 기능 추가**를 클릭합니다. 또는 **관리** 메뉴에서 **역할 및 기능 추가**를 클릭해도 됩니다.
 
@@ -245,13 +245,13 @@ Windows Identity Foundation SDK를 다운로드할 수 있습니다 ([https://ww
 
 9. **역할 서비스 선택** 페이지에서 **응용 프로그램 개발**을 선택하고 확장합니다. **ASP.NET 3.5**를 선택하고 **기능 추가**를 클릭한 후 **다음**을 클릭합니다.
 
-10. **설치 선택 확인** 페이지에서 **대체 원본 경로 지정**을 클릭합니다. Windows Server 2012 R2 설치 미디어에 있는 Sxs 디렉터리의 경로 입력 합니다. 예를 들어 D:\Sources\Sxs를 입력합니다. **확인**을 클릭한 다음 **설치**를 클릭합니다.
+10. **설치 선택 확인** 페이지에서 **대체 원본 경로 지정**을 클릭합니다. Windows Server 2012 R2 설치 미디어에 있는 Sxs 디렉터리의 경로를 입력 합니다. 예를 들어 D:\Sources\Sxs를 입력합니다. **확인**을 클릭한 다음 **설치**를 클릭합니다.
 
 ### <a name="BKMK_13"></a>Windows Identity Foundation SDK 설치
 
-1.  Windowsidentityfoundation-sdk-3.5.msi Windows Identity Foundation SDK 3.5를 설치 하려면 실행 (https://www.microsoft.com/download/details.aspx?id=4451)합니다. 모든 기본 옵션을 선택합니다.
+1.  Windowsidentityfoundation-sdk-3.5.msi 3.5 .msi를 실행 하 여 Windows Identity Foundation SDK 3.5 (https://www.microsoft.com/download/details.aspx?id=4451) )을 설치 합니다. 모든 기본 옵션을 선택합니다.
 
-### <a name="BKMK_9"></a>IIS에서 간단한 클레임 응용 프로그램 구성
+### <a name="BKMK_9"></a>IIS에서 간단한 클레임 앱 구성
 
 1.  컴퓨터 인증서 저장소에 유효한 SSL 인증서를 설치합니다. 인증서에는 웹 서버의 이름 **webserv1.contoso.com**이 포함되어야 합니다.
 
@@ -263,7 +263,7 @@ Windows Identity Foundation SDK를 다운로드할 수 있습니다 ([https://ww
 
     2.  파일에서 `ExpectedClaims`의 두 번째 인스턴스를 검색합니다.
 
-    3.  전체 `IF` 문과 해당 중괄호를 주석 처리합니다. 주석을 입력 하 여 표시 "/ /" (따옴표 제외)는 줄의 시작 부분입니다.
+    3.  전체 `IF` 문과 해당 중괄호를 주석 처리합니다. 줄의 시작 부분에 "//" (따옴표 제외)를 입력 하 여 주석을 표시 합니다.
 
     4.  `FOREACH` 문이 다음 코드 예제와 유사하게 표시됩니다.
 
@@ -288,7 +288,7 @@ Windows Identity Foundation SDK를 다운로드할 수 있습니다 ([https://ww
 
     8.  **web.config**를 저장하고 닫습니다.
 
-4.  **IIS 관리자를 구성 합니다.**
+4.  **IIS 관리자 구성**
 
     1.  **IIS(인터넷 정보 서비스) 관리자**를 엽니다.
 
@@ -308,9 +308,9 @@ Windows Identity Foundation SDK를 다운로드할 수 있습니다 ([https://ww
 
     1.  **C:\Program Files (x86)\Windows Identity Foundation SDK\v3.5**에 있는 FedUtil.exe를 실행합니다.
 
-    2.  응용 프로그램 구성 위치를 설정 합니다 **C:\inetput\claimapp\web.config** 사이트에 대 한 URL로 응용 프로그램 URI를 설정 하 고  **https://webserv1.contoso.com /claimapp/** 합니다. **다음**을 클릭합니다.
+    2.  응용 프로그램 구성 위치를 **c:\inetput\claimapp\web.config로 설정** 로 설정 하 고 응용 프로그램 URI를 사이트의 URL ( **https://webserv1.contoso.com /claimapp/)** 로 설정 합니다. **다음**을 클릭합니다.
 
-    3.  선택 **기존 STS 사용** AD FS 서버의 메타 데이터 URL로 이동 하 고 **https://adfs1.contoso.com/federationmetadata/2007-06/federationmetadata.xml** 합니다. **다음**을 클릭합니다.
+    3.  **기존 STS 사용** 을 선택 하 고 AD FS 서버의 메타 데이터 URL **https://adfs1.contoso.com/federationmetadata/2007-06/federationmetadata.xml** 로 이동 합니다. **다음**을 클릭합니다.
 
     4.  **인증서 체인 유효성 검사 사용 안 함**을 선택하고 **다음**을 클릭합니다.
 
@@ -318,15 +318,15 @@ Windows Identity Foundation SDK를 다운로드할 수 있습니다 ([https://ww
 
     6.  **매일 WS-Federation 메타데이터 업데이트를 수행하도록 작업 예약**옆의 확인란을 선택합니다. **마침**을 클릭합니다.
 
-    7.  이제 예제 응용 프로그램이 구성되었습니다. 응용 프로그램 URL을 테스트 하는 경우 **https://webserv1.contoso.com/claimapp** 를 페더레이션 서버로 리디렉션됩니다 해야 합니다. 신뢰 당사자 트러스트를 구성하지 않았으므로 페더레이션 서버에 오류 메시지가 표시됩니다. 즉, AD FS에서이 테스트 응용 프로그램을 보호 하지 않았습니다.
+    7.  이제 예제 응용 프로그램이 구성되었습니다. 응용 프로그램 URL **https://webserv1.contoso.com/claimapp** 을 테스트 하면 페더레이션 서버로 리디렉션됩니다. 신뢰 당사자 트러스트를 구성하지 않았으므로 페더레이션 서버에 오류 메시지가 표시됩니다. 즉, AD FS 하 여이 테스트 응용 프로그램을 보호 하지 않았습니다.
 
-이제 AD FS 사용 하 여 웹 서버에서 실행 되는 샘플 응용 프로그램 보호 해야 합니다. 이렇게 하려면 페더레이션 서버(ADFS1)에서 신뢰 당사자 트러스트를 추가하면 됩니다. 비디오를 참조 하세요. [Active Directory Federation Services 방법 비디오 시리즈: 신뢰 당사자 트러스트 추가](https://technet.microsoft.com/video/adfs-how-to-add-a-relying-party-trust)합니다.
+이제 AD FS를 사용 하 여 웹 서버에서 실행 되는 샘플 응용 프로그램의 보안을 유지 해야 합니다. 이렇게 하려면 페더레이션 서버(ADFS1)에서 신뢰 당사자 트러스트를 추가하면 됩니다. 비디오는 Active Directory Federation Services 방법 비디오 [시리즈를 참조 하세요. 신뢰 당사자 트러스트](https://technet.microsoft.com/video/adfs-how-to-add-a-relying-party-trust)를 추가 합니다.
 
 ### <a name="BKMK_11"></a>페더레이션 서버에서 신뢰 당사자 트러스트 만들기
 
 1.  페더레이션 서버(ADFS1)의 **AD FS 관리 콘솔**에서 **신뢰 당사자 트러스트**로 이동하여 **신뢰 당사자 트러스트 추가**를 클릭합니다.
 
-2.  **데이터 원본 선택** 페이지에서 **온라인 또는 로컬 네트워크에 게시된 신뢰 당사자에 대한 데이터 가져오기**를 선택하고 **claimapp**에 대한 메타데이터 URL을 입력한 후 **다음**을 클릭합니다. FedUtil.exe를 실행하면 메타데이터 .xml 파일이 생성됩니다. 에 위치한 **https://webserv1.contoso.com/claimapp/federationmetadata/2007-06/federationmetadata.xml** 합니다.
+2.  **데이터 원본 선택** 페이지에서 **온라인 또는 로컬 네트워크에 게시된 신뢰 당사자에 대한 데이터 가져오기**를 선택하고 **claimapp**에 대한 메타데이터 URL을 입력한 후 **다음**을 클릭합니다. FedUtil.exe를 실행하면 메타데이터 .xml 파일이 생성됩니다. **@No__t-1**에 있습니다.
 
 3.  **표시 이름 지정** 페이지에서 신뢰 당사자 트러스트에 대한 **표시 이름** **claimapp**을 지정하고 **다음**을 클릭합니다.
 
@@ -351,9 +351,9 @@ Windows Identity Foundation SDK를 다운로드할 수 있습니다 ([https://ww
 10. **마침**을 클릭한 다음 **확인**을 클릭합니다.
 
 ## <a name="BKMK_10"></a>4 단계: 클라이언트 컴퓨터(Client1) 구성
-다른 가상 컴퓨터를 설정 하 고 Windows 8.1 설치 합니다. 이 가상 컴퓨터는 다른 컴퓨터와 동일한 가상 네트워크에 있어야 합니다. 이 컴퓨터는 Contoso 도메인에 가입되지 않아야 합니다.
+다른 가상 컴퓨터를 설정 하 고 Windows 8.1를 설치 합니다. 이 가상 컴퓨터는 다른 컴퓨터와 동일한 가상 네트워크에 있어야 합니다. 이 컴퓨터는 Contoso 도메인에 가입되지 않아야 합니다.
 
-클라이언트에서 설정한 페더레이션 서버 (ADFS1)에 사용 되는 SSL 인증서를 신뢰 해야 [2 단계: 페더레이션 서버 (ADFS1) with Device Registration Service 구성](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_4)합니다. 또한 인증서에 대한 인증서 해지 정보의 유효성을 검사할 수 있어야 합니다.
+클라이언트는 페더레이션 서버 (ADFS1) [에 사용 되는 SSL 인증서를 신뢰 해야 합니다 .이 인증서는 2 단계: Device Registration Service](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_4)를 사용 하 여 페더레이션 서버 (ADFS1)를 구성 합니다. 또한 인증서에 대한 인증서 해지 정보의 유효성을 검사할 수 있어야 합니다.
 
 Microsoft 계정을 설정하고 이를 사용하여 Client1에 로그온해야 합니다.
 
@@ -363,7 +363,7 @@ Microsoft 계정을 설정하고 이를 사용하여 Client1에 로그온해야 
 - [Active Directory Federation Services 방법 비디오 시리즈: AD FS 서버 팜 설치](https://technet.microsoft.com/video/dn469436)
 - [Active Directory Federation Services 방법 비디오 시리즈: 인증서 업데이트](https://technet.microsoft.com/video/adfs-updating-certificates)
 - [Active Directory Federation Services 방법 비디오 시리즈: 신뢰 당사자 트러스트 추가](https://technet.microsoft.com/video/adfs-how-to-add-a-relying-party-trust)
-- [Active Directory Federation Services 방법 비디오 시리즈: Device Registration Service 사용](https://technet.microsoft.com/video/adfs-how-to-enabling-the-device-registration-service)
+- [Active Directory Federation Services 방법 비디오 시리즈: 장치 등록 서비스 사용](https://technet.microsoft.com/video/adfs-how-to-enabling-the-device-registration-service)
 - [Active Directory Federation Services 방법 비디오 시리즈: 웹 응용 프로그램 프록시 설치](https://technet.microsoft.com/video/dn469438)
 
 

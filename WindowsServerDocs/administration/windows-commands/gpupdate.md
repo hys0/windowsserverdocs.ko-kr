@@ -1,8 +1,8 @@
 ---
 title: gpupdate
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: dba8a0fb7d9a4e95f91ed1c1e140d965f5f9e2fb
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.openlocfilehash: 994e37ebd972d881e06bdb99d5256e75096ccd81
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66811119"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71375636"
 ---
 # <a name="gpupdate"></a>gpupdate
 
@@ -34,9 +34,9 @@ gpupdate [/target:{Computer | User}] [/force] [/wait:<VALUE>] [/logoff] [/boot] 
 
 |     매개 변수     |                                                                                                                                                                                                                                                                                                                             설명                                                                                                                                                                                                                                                                                                                             |
 |-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| /target: {컴퓨터 |                                                                                                                                                                                                                                                                                                                                사용자}                                                                                                                                                                                                                                                                                                                                |
+| /target: {컴퓨터 |                                                                                                                                                                                                                                                                                                                                정의                                                                                                                                                                                                                                                                                                                                |
 |      /force       |                                                                                                                                                                                                                                                                                   모든 정책 설정을 다시 적용합니다. 기본적으로 변경 된 정책 설정만 적용 됩니다.                                                                                                                                                                                                                                                                                    |
-|  /wait:\<VALUE>   | 정책 처리 명령 프롬프트를 반환 하기 전에 완료 될 때까지 기다리는 시간 (초) 수를 설정 합니다. 시간 제한이 초과 되 면 명령 프롬프트 표시 되지만 정책 처리가 계속 됩니다. 기본값은 600 초입니다. 값 **0** 기다려야 하지 함을 의미 합니다. 값 **-1** 무기한 대기를 의미 합니다.</br>스크립트에서이 명령을 사용 하 여 제한 시간을 지정 하 여 실행할 수 있습니다 **gpupdate** 하 고 완료 될 때 종속 되지 않는 명령으로 계속 **gpupdate**합니다. 수 있도록 지정 된 시간 제한이 없는이 명령을 사용할 수는 또는 **gpupdate** 의존 하는 다른 명령을 실행 하기 전에 실행을 완료 합니다. |
+|  /wait: \<VALUE >   | 정책 처리 명령 프롬프트를 반환 하기 전에 완료 될 때까지 기다리는 시간 (초) 수를 설정 합니다. 시간 제한이 초과 되 면 명령 프롬프트 표시 되지만 정책 처리가 계속 됩니다. 기본값은 600 초입니다. 값 **0** 기다려야 하지 함을 의미 합니다. 값 **-1** 무기한 대기를 의미 합니다.</br>스크립트에서이 명령을 사용 하 여 제한 시간을 지정 하 여 실행할 수 있습니다 **gpupdate** 하 고 완료 될 때 종속 되지 않는 명령으로 계속 **gpupdate**합니다. 수 있도록 지정 된 시간 제한이 없는이 명령을 사용할 수는 또는 **gpupdate** 의존 하는 다른 명령을 실행 하기 전에 실행을 완료 합니다. |
 |      /logoff      |                                                                                                                                   그룹 정책 설정을 업데이트 한 후 로그 오프를 하면 됩니다. 이 명령은 백그라운드 업데이트 주기에서 정책을 처리 하지 않는 경우에 처리 정책을 사용자가 로그온 하는 그룹 정책 클라이언트 쪽 확장에 필요 합니다. 사용자 대상 소프트웨어 설치 및 폴더 리디렉션을 예로 들 수 있습니다. 로그 오프를 요청 하는 확장이 없는 경우이 옵션은 효과가 없습니다.                                                                                                                                    |
 |       /boot       |                                                                                                                                       그룹 정책 설정을 적용 한 후 컴퓨터를 다시 시작을 하면 됩니다. 이 명령은 백그라운드 업데이트 주기에서 정책을 처리 하지만 컴퓨터를 시작할 때 정책을 처리 하는 그룹 정책 클라이언트 쪽 확장에 필요 합니다. 예로 소프트웨어 설치 컴퓨터를 대상으로 합니다. 다시 시작을 요청 하는 확장이 없는 경우이 옵션은 효과가 없습니다.                                                                                                                                        |
 |       /sync       |                                                                                                                                                                              동기적으로 완료 되도록 다음 전경 정책 응용을 프로그램이 있습니다. 포그라운드는 컴퓨터 부팅 및 사용자 로그온 시 적용 됩니다. 사용자, 컴퓨터 또는 모두를 사용 하 여이 지정할 수는 **/대상** 매개 변수입니다. **/force** 및 **/wait** 지정 하면 매개 변수가 무시 됩니다.                                                                                                                                                                               |
@@ -44,7 +44,7 @@ gpupdate [/target:{Computer | User}] [/force] [/wait:<VALUE>] [/logoff] [/boot] 
 
 ## <a name="remarks"></a>설명
 
--   합니다 **gpupdate** Windows Server 2008 R2, Windows Server 2008, Windows 7 Ultimate, Windows 7 Professional, Windows Vista Ultimate, Windows Vista Enterprise 및 Windows Vista Business에서 사용할 수 있는 명령입니다.
+-   **Gpupdate** 명령은 windows Server 2008 R2, windows server 2008, Windows 7 Ultimate, Windows 7 Professional, Windows vista Ultimate, Windows vista Enterprise 및 Windows vista Business에서 사용할 수 있습니다.
 
 ## <a name="examples"></a>예
 

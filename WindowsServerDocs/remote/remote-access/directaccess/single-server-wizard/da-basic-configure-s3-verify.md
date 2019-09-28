@@ -1,9 +1,9 @@
 ---
 title: 3 단계는 배포 확인
-description: 이 항목은 시작 시작 마법사에 대 한 Windows Server 2016을 사용 하 여 단일 DirectAccess 서버 배포 가이드의 일부
+description: 이 항목은 Windows Server 2016에 대 한 시작 마법사를 사용 하 여 단일 DirectAccess 서버 배포 가이드의 일부입니다.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-da
@@ -12,16 +12,16 @@ ms.topic: article
 ms.assetid: 45e9edd6-acca-4d59-851a-a0cc8bd8b4c6
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: e9e78ed78671c5c61fb3736cccf4e095b5186e23
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 29457f6f1859a8f3aee2f9d0f84e226b20905175
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67281647"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71388534"
 ---
 # <a name="step-3-verify-deployments"></a>3 단계는 배포 확인
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 이 항목에서는 기본 DirectAccess 배포가 올바르게 구성되었는지 확인하는 방법에 대해 설명합니다.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67281647"
   
 ## <a name="BKMK_Links"></a>이전 단계  
   
--   [2단계: DirectAccess 서버 구성](da-basic-configure-s2-server.md)  
+-   [2단계: DirectAccess 서버 구성 @ no__t-0  
   
 
 

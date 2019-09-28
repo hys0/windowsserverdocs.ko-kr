@@ -2,7 +2,7 @@
 title: mountvol
 description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 07c57f7ab9c41d6155e4a8d38322176aabf3868f
-ms.sourcegitcommit: 6f968368c12b9dd699c197afb3a3d13c2211f85b
+ms.openlocfilehash: 5a3de8e5744c50acff3fdad0c7cf1dabf14fb144
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68544598"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71373581"
 ---
 # <a name="mountvol"></a>mountvol
 
@@ -44,8 +44,8 @@ mountvol <Drive>: /s
 
 |매개 변수|설명|
 |---------|-----------|
-|[\<드라이브 >:]<Path>|탑재 지점이 있는 기존 NTFS 디렉터리를 지정 합니다.|
-|\<VolumeName >|탑재 지점의 대상인 볼륨 이름을 지정 합니다. 볼륨 이름에 다음 구문을 사용 하 여 여기서 *GUID* 전역 고유 식별자입니다.</br>`\\\\?\Volume\{GUID}\`</br>대괄호 {}는 필요 합니다.|
+|[\<Drive >:] <Path>|탑재 지점이 있는 기존 NTFS 디렉터리를 지정 합니다.|
+|@no__t 0VolumeName >|탑재 지점의 대상인 볼륨 이름을 지정 합니다. 볼륨 이름에 다음 구문을 사용 하 여 여기서 *GUID* 전역 고유 식별자입니다.</br>`\\\\?\Volume\{GUID}\`</br>대괄호 {}는 필요 합니다.|
 |/d|지정된 된 폴더의 볼륨 탑재 지점을 제거합니다.|
 |/l|지정된 된 폴더에 탑재 된 볼륨 이름을 나열합니다.|
 |/p|지정된 된 디렉터리에서 볼륨 탑재 지점을 제거 하 고 기본 볼륨을 분리는 기본 볼륨을 오프 라인을 탑재할 수 없게 만드는 합니다. 다른 프로세스에서 볼륨을 사용 하는 경우 **mountvol** 에서 볼륨을 분리 하기 전에 열린 핸들을 닫습니다.|

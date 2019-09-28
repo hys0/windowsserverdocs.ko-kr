@@ -1,8 +1,8 @@
 ---
 title: bitsadmin getfilestransferred
-description: Windows 명령 항목에 대 한 **bitsadmin getfilestransferred** -지정된 된 된 작업에 대해 전송 된 파일 수를 검색 합니다.
+description: '**Bitsadmin getfilestransferred** 에 대 한 Windows 명령 항목-지정 된 작업에 대해 전송 된 파일 수를 검색 합니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5df7f2abfdad6780878b1f00da44c772eecf9fba
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d02d9d7bc216a5ad7ca922e716c368f64c4b9a44
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59822264"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381605"
 ---
 # <a name="bitsadmin-getfilestransferred"></a>bitsadmin getfilestransferred
 
 
 
-지정된 된 된 작업에 대해 전송 된 파일 수를 검색 합니다.
+지정 된 작업에 대해 전송 된 파일 수를 검색 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -38,9 +38,9 @@ bitsadmin /GetFilesTransferred <Job>
 |---------|-----------|
 |작업|작업의 표시 이름 또는 GUID|
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
-다음 예제에서는 검색 이라는 작업의 전송 파일 수가 *myDownloadJob*합니다.
+다음 예제에서는 이름이 *Mydownloadjob*인 작업에서 전송 된 파일 수를 검색 합니다.
 ```
 C:\>bitsadmin /GetFilesTransferred myDownloadJob
 ```

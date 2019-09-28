@@ -1,29 +1,29 @@
 ---
 title: AD FS 2.0 페더레이션 서버 프록시 마이그레이션 준비
-description: Windows Server 2012로 AD FS 서버 프록시 마이그레이션 준비에 정보를 제공 합니다.
+description: AD FS 서버 프록시를 Windows Server 2012로 마이그레이션할 준비에 대 한 정보를 제공 합니다.
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 06/28/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 2b2275af0934413fa2de02de720d609feda7392c
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 20fbf3ea9231706635df2bd4c1d541fde0c1484b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66444455"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71408206"
 ---
 # <a name="prepare-to-migrate-the-ad-fs-20-federation-server-proxy"></a>AD FS 2.0 페더레이션 서버 프록시 마이그레이션 준비
 
-Windows Server 2012로 AD FS 2.0 페더레이션 서버 프록시 마이그레이션 준비를 하려면 내보내기 하 고이 서버 프록시에서 AD FS 구성 데이터를 백업 해야 합니다.  이 항목의 단계는 프록시 페더레이션 서버가 하나 이상 포함된 시나리오에 적용됩니다.  
+AD FS 2.0 페더레이션 서버 프록시를 Windows Server 2012로 마이그레이션하기 위해 준비 하려면이 서버 프록시에서 AD FS 구성 데이터를 내보내고 백업 해야 합니다.  이 항목의 단계는 프록시 페더레이션 서버가 하나 이상 포함된 시나리오에 적용됩니다.  
   
  AD FS 구성 데이터를 내보내려면 다음 작업을 수행합니다.  
   
--   [1단계: 프록시 서비스 설정 내보내기](#step-1-export-proxy-service-settings)  
+-   [1단계: 프록시 서비스 설정 내보내기 @ no__t-0  
   
--   [2단계: 웹 페이지 사용자 지정 백업](#step-2-back-up-webpage-customizations)  
+-   [2단계: 웹 페이지 사용자 지정 백업 @ no__t-0  
   
 ##  <a name="step-1-export-proxy-service-settings"></a>1단계: 프록시 서비스 설정 내보내기  
  페더레이션 서버 프록시 서비스 설정을 내보내려면 다음 절차를 수행합니다.  
@@ -54,7 +54,7 @@ Windows PowerShell을 열고 `PSH:>add-pssnapin “Microsoft.adfs.powershell”`
   
 ## <a name="next-steps"></a>다음 단계
  [AD FS 2.0 페더레이션 서버 마이그레이션 준비](prepare-to-migrate-ad-fs-fed-server.md)   
- [AD FS 2.0 페더레이션 서버 프록시 마이그레이션 준비](prepare-to-migrate-ad-fs-fed-proxy.md)   
+ [AD FS 2.0 페더레이션 서버 프록시 @no__t 마이그레이션 준비](prepare-to-migrate-ad-fs-fed-proxy.md)-1  
  [AD FS 2.0 페더레이션 서버 마이그레이션](migrate-the-ad-fs-fed-server.md)   
- [AD FS 2.0 페더레이션 서버 프록시 마이그레이션](migrate-the-ad-fs-2-fed-server-proxy.md)   
+ [AD FS 2.0 페더레이션 서버 프록시](migrate-the-ad-fs-2-fed-server-proxy.md) 을 마이그레이션합니다.  
  [AD FS 1.1 웹 에이전트 마이그레이션](migrate-the-ad-fs-web-agent.md)

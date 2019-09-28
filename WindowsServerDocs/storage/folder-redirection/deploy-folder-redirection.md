@@ -1,19 +1,19 @@
 ---
 title: 오프라인 파일를 사용 하 여 폴더 리디렉션 배포
 description: Windows Server를 사용 하 여 오프라인 파일 Windows 클라이언트 컴퓨터에 폴더 리디렉션을 배포 하는 방법입니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 ms.technology: storage
 ms.date: 06/06/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 90b3e3d0b5030f8c0140e54c8b0bf55317437427
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 21172d9d3e6d91af691986bfd84b0e32049f3b88
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70867309"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71401966"
 ---
 # <a name="deploy-folder-redirection-with-offline-files"></a>오프라인 파일를 사용 하 여 폴더 리디렉션 배포
 
@@ -175,7 +175,7 @@ Windows Server 2019, Windows Server 2016 및 Windows Server 2012에서 파일 �
 
 ## <a name="appendix-a-checklist-for-deploying-folder-redirection"></a>부록 A: 폴더 리디렉션 배포를 위한 검사 목록
 
-| 상태           | 작업 |
+| Status           | 작업 |
 | ---              | ---    |
 | ☐<br>☐<br>☐    | 1. 도메인 준비<br>-도메인에 컴퓨터 가입<br>-사용자 계정 만들기 |
 | ☐<br><br><br>   | 2. 폴더 리디렉션에 대 한 보안 그룹 만들기<br>-그룹 이름:<br>멤버 |

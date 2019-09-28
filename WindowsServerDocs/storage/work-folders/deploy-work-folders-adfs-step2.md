@@ -1,6 +1,6 @@
 ---
 title: AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포 - 2단계, AD FS 구성 후 작업
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage-work-folders
 ms.topic: article
 manager: klaasl
@@ -8,31 +8,31 @@ ms.author: jeffpatt
 author: JeffPatt24
 ms.date: 06/06/2019
 ms.assetid: 0a48852e-48cc-4047-ae58-99f11c273942
-ms.openlocfilehash: 5497651f57a0276daced614687e89f8047af9116
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.openlocfilehash: 6364c3f8dc35fbafa518a106780ae6b767d4d40c
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66812679"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71365785"
 ---
-# <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-2-ad-fs-post-configuration-work"></a>AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 단계 2에서 AD FS 구성 후 작업
+# <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-2-ad-fs-post-configuration-work"></a>AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 2 단계 AD FS 구성 후 작업
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 이 항목에서는 AD FS(Active Directory Federation Services) 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더를 배포하는 두 번째 단계를 설명합니다. 이 과정의 다른 단계는 다음 항목에서 찾을 수 있습니다.  
   
--   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 개요](deploy-work-folders-adfs-overview.md)  
+-   [ AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 설명은](deploy-work-folders-adfs-overview.md)  
   
--   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 1 단계, AD FS 설정](deploy-work-folders-adfs-step1.md)  
+-   [ AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 1 단계, AD FS 설정 @ no__t-0  
   
--   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 단계 3, 작업 폴더 설정](deploy-work-folders-adfs-step3.md)  
+-   [ AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 3 단계, 클라우드 폴더 설정 @ no__t-0  
   
--   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 4 단계, 웹 응용 프로그램 프록시 설정](deploy-work-folders-adfs-step4.md)  
+-   [ AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 4 단계, 웹 응용 프로그램 프록시 설정 @ no__t-0  
   
--   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 5 단계 클라이언트 설정](deploy-work-folders-adfs-step5.md)  
+-   [ AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 5 단계, 클라이언트 설정 @ no__t-0  
   
 > [!NOTE]
-> Windows Server 2019 또는 Windows Server 2016 환경에 대 한 지침은이 섹션에서 설명 합니다. Windows Server 2012 R2를 사용하는 경우 [Windows Server 2012 R2 instructions(Windows Server 2012 R2 지침)](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx)을 따르세요.
+> 이 섹션에서 설명 하는 지침은 Windows Server 2019 또는 Windows Server 2016 환경용입니다. Windows Server 2012 R2를 사용하는 경우 [Windows Server 2012 R2 instructions(Windows Server 2012 R2 지침)](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx)을 따르세요.
 
 1단계에서 AD FS를 설치하고 구성했습니다. 이제 다음과 같은 AD FS 구성 후 단계를 수행해야 합니다.  
   
@@ -104,7 +104,7 @@ Add-DnsServerResourceRecord  -ZoneName "contoso.com" -Name enterpriseregistratio
   
 7.  **URL 구성** 페이지에서 **다음**을 클릭합니다.  
   
-8. 에 **식별자 구성** 페이지에서 다음 식별자 추가: `https://windows-server-work-folders/V1`합니다. 이 식별자는 클라우드 폴더에서 사용하는 하드 코드 값이며, 클라우드 폴더가 AD FS와 통신할 때 이 식별자를 전송합니다. **다음**을 클릭합니다.  
+8. **식별자 구성** 페이지에서 다음 식별자를 추가 합니다. `https://windows-server-work-folders/V1`. 이 식별자는 클라우드 폴더에서 사용하는 하드 코드 값이며, 클라우드 폴더가 AD FS와 통신할 때 이 식별자를 전송합니다. **다음**을 클릭합니다.  
   
 9. 액세스 제어 정책 선택 페이지에서 **모든 사용자 허용**을 선택하고 **다음**을 클릭합니다.  
   
@@ -128,7 +128,7 @@ Add-DnsServerResourceRecord  -ZoneName "contoso.com" -Name enterpriseregistratio
   
     -   표시 이름: 이름  
   
-    -   성: 성  
+    -   성 성  
   
     -   지정 된 이름: 지정된 이름  
   
@@ -242,15 +242,15 @@ Set-ADFSGlobalAuthenticationPolicy -DeviceAuthenticationEnabled $true
   
 13. **권한** 창에서 계정에 적어도 읽기 권한 이상을 부여하고 **확인**을 클릭합니다.  
   
-개인 키를 관리 하는 옵션 목록에 없으면 다음 명령을 실행 해야 합니다. `certutil -repairstore my *`  
+개인 키를 관리할 수 있는 옵션이 없는 경우 다음 명령을 실행 해야 합니다. `certutil -repairstore my *`  
   
 ## <a name="verify-that-ad-fs-is-operational"></a>AD FS가 작동하는지 확인
 
-AD FS 작동 중인지를 확인 하려면 브라우저 창을 열고 이동할 `https://blueadfs.contoso.com/federationmetadata/2007-06/federationmetadata.xml`, 환경에 맞게 URL을 변경 합니다.
+AD FS 작동 하는지 확인 하려면 브라우저 창을 열고 `https://blueadfs.contoso.com/federationmetadata/2007-06/federationmetadata.xml`으로 이동 하 여 사용자 환경에 맞게 URL을 변경 합니다.
   
 브라우저 창에 아무 서식 없는 페더레이션 서버 메타데이터가 표시됩니다. SSL 오류나 경고 없이 데이터가 표시되면 페더레이션 서버가 정상적으로 작동하는 것입니다.  
   
-다음 단계: [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포 합니다. 단계 3, 작업 폴더 설정](deploy-work-folders-adfs-step3.md)  
+다음 단계: [ AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 3 단계, 클라우드 폴더 설정 @ no__t-0  
   
 ## <a name="see-also"></a>관련 항목  
 [클라우드 폴더 개요](Work-Folders-Overview.md)

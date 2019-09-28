@@ -1,29 +1,29 @@
 ---
-title: 파일 공유는 SMB 3 프로토콜을 사용 하 여 Windows Server의 개요
-description: SMB 3 프로토콜을 사용 하 여 파일 공유 및 Windows Server를 사용 하 여 파일 서비스에 대해 간략히 설명 합니다.
-ms.prod: windows-server-threshold
+title: Windows Server에서 SMB 3 프로토콜을 사용 하 여 파일 공유 개요
+description: 파일 공유 및 Windows Server의 파일 서비스에 대 한 SMB 3 프로토콜 사용에 대 한 개요입니다.
+ms.prod: windows-server
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 ms.technology: storage
 ms.date: 07/09/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: fc4c8b341ee78db80f862ee412400f0a930fe810
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: b40c179d242a0c48c6eb176db1225979f9e6a123
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59845054"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402083"
 ---
-# <a name="overview-of-file-sharing-using-the-smb-3-protocol-in-windows-server"></a>파일 공유는 SMB 3 프로토콜을 사용 하 여 Windows Server의 개요
+# <a name="overview-of-file-sharing-using-the-smb-3-protocol-in-windows-server"></a>Windows Server에서 SMB 3 프로토콜을 사용 하 여 파일 공유 개요
 
 >적용 대상: Windows Server 2012 R2, Windows Server 2012, Windows Server 2016
 
-Windows Server® 2012, Windows Server 2012 R2 및 Windows Server 2016에서 SMB 3.0 기능에 설명, 유용한 팁 가장 중요 한 기능에 대 한 새로운 사용 하거나 이전 버전 및 하드웨어에 비해 이번이 버전에서 기능 업데이트 요구 사항입니다.
+이 항목에서는 Windows Server® 2012, Windows Server 2012 R2 및 Windows Server 2016의 SMB 3.0 기능에 대해 설명 합니다 .이 기능에 대 한 실용적인 사용, 이전 버전과 비교 하 여 이번 버전에서 가장 중요 한 새로운 기능 또는 업데이트 된 기능, 하드웨어 사항이.
 
 ## <a name="feature-description"></a>기능 설명
 
-SMB(서버 메시지 블록) 프로토콜은 컴퓨터의 응용 프로그램에서 파일을 읽고 쓸 수 있으며 컴퓨터 네트워크상의 서버 프로그램에서 서비스를 요청할 수 있도록 지원하는 네트워크 파일 공유 프로토콜입니다. SMB 프로토콜은 해당 TCP/IP 프로토콜이나 기타 네트워크 프로토콜상에서 사용될 수 있습니다. SMB 프로토콜을 사용하면 응용 프로그램이나 응용 프로그램의 사용자가 원격 서버에 있는 파일이나 기타 리소스를 액세스할 수 있습니다. 즉, 원격 서버의 파일을 읽고 만들며 업데이트할 수 있습니다. 또한 SMB 클라이언트 요청을 수신하도록 설정된 서버 프로그램과 통신할 수 있습니다. Windows Server 2012의 새로운 SMB 프로토콜 버전 3.0을 소개합니다.
+SMB(서버 메시지 블록) 프로토콜은 컴퓨터의 응용 프로그램에서 파일을 읽고 쓸 수 있으며 컴퓨터 네트워크상의 서버 프로그램에서 서비스를 요청할 수 있도록 지원하는 네트워크 파일 공유 프로토콜입니다. SMB 프로토콜은 해당 TCP/IP 프로토콜이나 기타 네트워크 프로토콜상에서 사용될 수 있습니다. SMB 프로토콜을 사용하면 응용 프로그램이나 응용 프로그램의 사용자가 원격 서버에 있는 파일이나 기타 리소스를 액세스할 수 있습니다. 즉, 원격 서버의 파일을 읽고 만들며 업데이트할 수 있습니다. 또한 SMB 클라이언트 요청을 수신하도록 설정된 서버 프로그램과 통신할 수 있습니다. Windows Server 2012에는 새로운 3.0 버전의 SMB 프로토콜이 도입 되었습니다.
 
 ## <a name="practical-applications"></a>유용한 팁
 
@@ -35,9 +35,9 @@ SMB(서버 메시지 블록) 프로토콜은 컴퓨터의 응용 프로그램에
 
 ## <a name="new-and-changed-functionality"></a>새로운 기능 및 변경된 기능
 
-Windows Server 2012 R2의 새로운 기능과 변경 된 기능에 대 한 자세한 내용은 [What's New in Windows Server에서 SMB](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831474(v%3dws.11)>)합니다.
+Windows Server 2012 r 2의 새로운 기능 및 변경 된 기능에 대 한 자세한 내용은 [Windows server에서](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831474(v%3dws.11)>)제공 되는 SMB의 새로운 기능을 참조 하세요.
 
-Windows Server 2012 및 Windows Server 2016에서 SMB는 다음 표에 설명 하는 여러 새로운 개선 사항 및 새로운 SMB 3.0 프로토콜을 포함 합니다.
+Windows Server 2012 및 Windows Server 2016의 SMB에는 새로운 SMB 3.0 프로토콜과 다음 표에 설명 된 새로운 향상 된 여러 기능이 포함 되어 있습니다.
 
 <table>
 <colgroup>
@@ -105,32 +105,32 @@ Windows Server 2012 및 Windows Server 2016에서 SMB는 다음 표에 설명 �
 
 SMB 투명 장애 조치(Failover)의 요구 사항은 다음과 같습니다.
 
-* 장애 조치 클러스터 구성 된 두 개 이상의 노드를 사용 하 여 Windows Server 2012 또는 Windows Server 2016을 실행 합니다. 클러스터는 유효성 검사 마법사에 포함된 클러스터 유효성 테스트를 통과해야 합니다.
+* 두 개 이상의 노드가 구성 된 windows Server 2012 또는 Windows Server 2016를 실행 하는 장애 조치 (failover) 클러스터 클러스터는 유효성 검사 마법사에 포함된 클러스터 유효성 테스트를 통과해야 합니다.
 * 파일 공유는 CA(Continuous Availability) 속성이 기본값으로 설정되어 만들어져야 합니다.
 * 파일 공유를 CSV 볼륨 경로에 만들어야 SMB 스케일 아웃에 도달할 수 있습니다.
-* 클라이언트 컴퓨터는 Windows® 8 또는 Windows Server 2012에서 지속적인 가용성을 지 원하는 업데이트 된 SMB 클라이언트를 포함 하는 둘 다 실행 되어야 합니다.
+* 클라이언트 컴퓨터는 지속적인 가용성을 지 원하는 업데이트 된 SMB 클라이언트를 포함 하 여 Windows® 8 또는 Windows Server 2012를 실행 해야 합니다.
 
 >[!NOTE]
->하위 수준 클라이언트는 CA 속성이 있는 파일 공유에 연결할 수 있지만 이러한 클라이언트에 대 한 투명 한 장애 조치 지원 되지 않습니다.
+>하위 수준 클라이언트는 CA 속성이 있는 파일 공유에 연결할 수 있지만 이러한 클라이언트에는 투명 장애 조치 (failover)가 지원 되지 않습니다.
 
 SMB 다중 채널의 요구 사항은 다음과 같습니다.
 
-* Windows Server 2012를 실행 하는 두 개 이상의 컴퓨터는 필요 합니다. 이 기술은 추가 기능을 설치할 필요 없이 기본적으로 작동됩니다.
+* Windows Server 2012를 실행 하는 컴퓨터가 두 대 이상 필요 합니다. 이 기술은 추가 기능을 설치할 필요 없이 기본적으로 작동됩니다.
 * 권장 네트워크 구성에 대한 자세한 내용은 이 개요 항목의 마지막 부분에 있는 참고 항목을 참조하세요.
 
 SMB 다이렉트의 요구 사항은 다음과 같습니다.
 
-* Windows Server 2012를 실행 하는 두 개 이상의 컴퓨터는 필요 합니다. 이 기술은 추가 기능을 설치할 필요 없이 기본적으로 작동됩니다.
+* Windows Server 2012를 실행 하는 컴퓨터가 두 대 이상 필요 합니다. 이 기술은 추가 기능을 설치할 필요 없이 기본적으로 작동됩니다.
 * RDMA 기능이 있는 네트워크 어댑터가 필요합니다. 현재 이러한 어댑터는 iWARP, Infiniband 또는 RoCE(RDMA over Converged Ethernet) 유형으로 제공됩니다.
 
 ## <a name="more-information"></a>자세한 정보
 
-다음은 SMB 및 Windows Server 2012 R2, Windows Server 2012 및 Windows Server 2016의 관련된 기술에 대 한 웹의 추가 리소스를 제공합니다.
+다음 목록에서는 Windows Server 2012 R2, Windows Server 2012 및 Windows Server 2016의 SMB 및 관련 기술에 대해 웹의 추가 리소스를 제공 합니다.
 
-* [Windows Server에서 저장소](../storage.md)
-* [응용 프로그램 데이터용 스케일 아웃 파일 서버](../../failover-clustering/sofs-overview.md)
-* [직접 SMB 사용 하 여 파일 서버의 성능 향상](smb-direct.md)
+* [Windows Server의 스토리지](../storage.md)
+* [응용 프로그램 데이터에 대 한 스케일 아웃 파일 서버](../../failover-clustering/sofs-overview.md)
+* [SMB 다이렉트를 사용 하 여 파일 서버의 성능 향상](smb-direct.md)
 * [SMB를 통한 Hyper-v 배포](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>)
 * [SMB 다중 채널 배포](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn610980(v%3dws.11)>)
-* [서버 응용 프로그램에 대 한 빠르고 효율적인 파일 서버 배포](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831723(v%3dws.11)>)
-* [SMB: 문제 해결 가이드](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn659439(v%3dws.11)>)
+* [서버 응용 프로그램을 위한 빠르고 효율적인 파일 서버 배포](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831723(v%3dws.11)>)
+* [SMB: 문제 해결 가이드 @ no__t-0

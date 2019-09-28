@@ -1,8 +1,8 @@
 ---
-title: 비활성
-description: '에 대 한 Windows 명령을 항목 * * *- '
+title: 라
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9c8ded732d984830c7892720f75938979f1abb67
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 9ce91b6a024c165e3aa63148b9ad6dfcc4db7a7c
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66438159"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71375366"
 ---
-# <a name="inactive"></a>비활성
+# <a name="inactive"></a>라
 
 
 
-마스터 부트 레코드 (MBR) 디스크에 시스템 파티션 또는 비활성으로 포커스가 있는 부팅 파티션을 표시합니다.
+기본 MBR (마스터 부트 레코드) 디스크에서 포커스가 있는 시스템 파티션 또는 부팅 파티션을 비활성으로 표시 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -35,11 +35,11 @@ inactive
 ## <a name="remarks"></a>설명
 
 > [!CAUTION]
-> 활성 파티션이 없으면 컴퓨터 시작할 수 없습니다. 에 익숙한 사용자는 Windows 운영 체제 제품군에 잘 알고 있지 않은 경우에 시스템 또는 부팅 파티션을 비활성으로 표시 하지 마십시오.</br>> 시스템 또는 부팅 파티션을 비활성으로 표시 한 후 컴퓨터를 시작할 수 없는 경우 CD-ROM 드라이브에 Windows 설치 CD를 삽입, 컴퓨터를 다시 시작 하 고 사용 하 여 파티션 복구는 **fixmbr** 고**fixboot** 복구 콘솔에서 명령을 합니다.
-> -   시스템 파티션 또는 부팅 파티션을 비활성으로 표시 하면 컴퓨터를 BIOS에서 CD-ROM 드라이브는 사전 부팅 환경 PXE (eXecution) 등에서 다음 옵션에서 시작 합니다.
+> 활성 파티션이 없으면 컴퓨터 시작할 수 없습니다. 에 익숙한 사용자는 Windows 운영 체제 제품군에 잘 알고 있지 않은 경우에 시스템 또는 부팅 파티션을 비활성으로 표시 하지 마십시오.</br>> 시스템 또는 부팅 파티션을 비활성으로 표시 한 후 컴퓨터를 시작할 수 없는 경우 cd-rom 드라이브에 Windows 설치 프로그램 CD를 삽입 하 고 컴퓨터를 다시 시작한 다음에서 **fixmbr** 및 **fixboot** 명령을 사용 하 여 파티션을 복구 합니다. 복구 콘솔.
+> -   시스템 파티션 또는 부팅 파티션을 비활성으로 표시 한 후 컴퓨터는 BIOS에 지정 된 다음 옵션 (예: CD-ROM 드라이브 또는 PXE (사전 부팅 실행 환경))에서 시작 됩니다.
 > -   이 작업을 완료 하려면 활성 시스템 또는 부팅 파티션을 선택 되어야 합니다. 사용 된 **파티션을 선택** 활성 파티션을 선택에서 포커스를 전환 하는 명령입니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 ```
 inactive

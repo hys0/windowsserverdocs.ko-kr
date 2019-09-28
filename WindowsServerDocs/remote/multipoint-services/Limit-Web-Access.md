@@ -3,7 +3,7 @@ title: 웹 액세스 제한
 description: MultiPoint 서비스에서 인터넷에 대 한 사용자 액세스를 제한 하는 방법을 알아봅니다.
 ms.custom: na
 ms.date: 07/08/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ ms.assetid: 044f2fd5-5b87-42bb-ba0d-c06516ac48c8
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.openlocfilehash: 9f3524261e8e93439ff48a3e6666fa7680a76a29
-ms.sourcegitcommit: ccec91c1d32a978159f9b8bb5e39ead5805c26c4
+ms.openlocfilehash: 8e12eebd55aa066979bbcbe4d2f3e613b5876a01
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71143741"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71395325"
 ---
 # <a name="limit-web-access"></a>웹 액세스 제한
 개별 데스크톱에서 사용자 활동을 모니터링 하는 것 외에도, 관리자는 사용자를 제한할 수 있습니다 지정 된 웹 사이트에 대 한 사용자 액세스 허용 가능한 웹 사이트 및 사용자 액세스를 차단 하려는 웹 사이트를 지정 하 여.  

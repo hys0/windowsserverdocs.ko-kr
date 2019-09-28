@@ -1,8 +1,8 @@
 ---
 title: bitsadmin getnotifyflags
-description: Windows 명령 항목에 대 한 **bitsadmin getnotifyflags** -지정된 된 된 작업에 대 한 알림 플래그를 검색 합니다.
+description: '**Bitsadmin getnotifyflags** 에 대 한 Windows 명령 항목-지정 된 작업에 대 한 알림 플래그를 검색 합니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 690e94805c5e61d96603e4ade102fb3a4bda409e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 56ee3a30050b6cc934b35bab24e9508911ea250e
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59889284"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381484"
 ---
 # <a name="bitsadmin-getnotifyflags"></a>bitsadmin getnotifyflags
 
 
 
-지정된 된 된 작업에 대 한 알림 플래그를 검색합니다.
+지정 된 작업에 대 한 알림 플래그를 검색 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -40,13 +40,13 @@ bitsadmin /GetNotifyFlags <Job>
 
 ## <a name="remarks"></a>설명
 
-작업은 다음과 같은 알림 플래그 중 하나 이상을 포함할 수 있습니다.
+작업은 다음 알림 플래그 중 하나 이상을 포함할 수 있습니다.
 
-|---|---| | 0x001 | 작업의 모든 파일 전송 된 경우 이벤트를 생성 합니다. | | 0x002 | 오류가 발생 하면 이벤트를 생성 합니다. | | 0x004 | 알림을 사용 하지 않도록 설정 합니다. | | 0x008 | 작업 수정 되거나 전송이 진행 하는 경우 이벤트를 생성 합니다. |
+|-----|-----| | 0x001 | 작업의 모든 파일이 전송 되 면 이벤트를 생성 합니다. | | 0x002 | 오류가 발생 하면 이벤트를 생성 합니다. | | 0x004 | 알림을 사용 하지 않도록 설정 합니다. | | 0x008 | 작업을 수정 하거나 진행 중인 전송 작업을 수행할 때 이벤트를 생성 합니다. |
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
-다음 예제에서는 검색 이라는 작업에 대 한 알림 플래그 *myDownloadJob*합니다.
+다음 예제에서는 명명 된 작업에 대 한 알림 플래그를 검색 *Mydownloadjob*합니다.
 ```
 C:\>bitsadmin /GetNotifyFlags myDownloadJob
 ```

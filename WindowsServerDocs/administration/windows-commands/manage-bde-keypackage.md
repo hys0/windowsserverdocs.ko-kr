@@ -1,8 +1,8 @@
 ---
-title: 관리 bde KeyPackage
-description: '에 대 한 Windows 명령을 항목 * * *- '
+title: manage-bde KeyPackage
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8fb49ce8fbe4be076151b203560e62f44a78c9d4
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a0a1b4fd0fff1153a0f778eca105ecfc618a4689
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59886904"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71374047"
 ---
-# <a name="manage-bde-keypackage"></a>manage-bde: KeyPackage
+# <a name="manage-bde-keypackage"></a>manage-bde.exe KeyPackage
 
 
 
@@ -36,7 +36,7 @@ manage-bde -KeyPackage [<Drive>] [-ID <KeyProtectoryID>] [-path <PathToExternalK
 
 |매개 변수|설명|
 |---------|-----------|
-|\<Drive>|드라이브 문자를 뒤에 콜론을 나타냅니다.|
+|\<Drive >|드라이브 문자를 뒤에 콜론을 나타냅니다.|
 |-ID|이 ID 값으로 지정 된 식별자와 키 보호기를 사용 하 여 키 패키지를 만듭니다.|
 |-경로|만든 키 패키지를 저장 하는 위치입니다.|
 |-computername|다른 컴퓨터에서 BitLocker 보호를 수정 하려면 bde.exe 사용될지를 지정 합니다. 사용할 수도 있습니다 **-cn** 이 명령의 축약된 버전으로 합니다.|
@@ -44,7 +44,7 @@ manage-bde -KeyPackage [<Drive>] [-ID <KeyProtectoryID>] [-path <PathToExternalK
 |-? 또는 /?|도움말에 대 한 간단한 명령 프롬프트에 표시 됩니다.|
 |-help 또는-h|명령 프롬프트에서 전체 도움말을 표시 합니다.|
 
-## <a name="BKMK_Examples"></a>예제
+## <a name="BKMK_Examples"></a>예와
 
 다음 예제를 사용 하는 **-KeyPackage** GUID로 식별 되는 키 보호기 기반으로 C 드라이브에 대 한 키 패키지를 만들고 F:\Folder에 키 패키지를 저장 하는 명령입니다.
 ```

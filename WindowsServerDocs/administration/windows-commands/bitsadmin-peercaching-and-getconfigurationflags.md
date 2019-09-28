@@ -1,8 +1,8 @@
 ---
 title: bitsadmin 피어 캐싱 및 getconfigurationflags
-description: Windows 명령 항목에 대 한 **bitsadmin 피어 캐싱 및 getconfigurationflags** -컴퓨터는 동료에 게 콘텐츠를 제공 하는 경우를 결정 하는 구성 플래그를 가져옵니다 하 고 피어 로부터 콘텐츠를 다운로드할 수 있습니다.
+description: '**Bitsadmin 피어 캐싱 및 getconfigurationflags** 에 대 한 Windows 명령 항목-컴퓨터가 피어에 콘텐츠를 제공 하는지 여부를 결정 하는 구성 플래그를 가져오며 피어에서 콘텐츠를 다운로드할 수 있습니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6afa39993cf90b2d71b6b681680c3b4e1fd9b56b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 94c7eb1a115fe9152b149b8cf65765b179080cc3
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59826354"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381097"
 ---
 # <a name="bitsadmin-peercaching-and-getconfigurationflags"></a>bitsadmin 피어 캐싱 및 getconfigurationflags
 
@@ -38,7 +38,7 @@ bitsadmin /PeerCaching /GetConfigurationFlags <Job>
 |---------|-----------|
 |작업|작업의 표시 이름 또는 GUID|
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 다음 예제에서는 명명 된 작업에 대 한 구성 플래그를 가져옵니다 *myJob*합니다.
 ```

@@ -2,7 +2,7 @@
 title: 비디오 장치 작업
 description: 비디오 모니터와 프로젝터가 MultiPoint 서비스의 스테이션에서 작동 하는 방식 알아보기
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: 4439d72165d70623d854d0221137c1fe282c922b
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: b7019000c99295204f196ee918129cded02e084f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871480"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71389253"
 ---
 # <a name="work-with-video-devices"></a>비디오 장치 작업
 모니터, 프로젝터 등의 비디오 장치가 MultiPoint 서비스 시스템의 컴퓨터나 MultiPoint 서비스 *스테이션*에 연결된 경우 어떻게 작동하는지 알아봅니다.  

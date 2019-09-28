@@ -1,8 +1,8 @@
 ---
 title: 호스트 이름
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 10d0e8d5a484ecd017fb4f299935c9a3fa802b64
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 39c85f869c0366236d99eba55774a7e3dab6e52f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59837754"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71375507"
 ---
 # <a name="hostname"></a>호스트 이름
 
@@ -35,7 +35,7 @@ hostname
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 ## <a name="remarks"></a>설명
 이 명령은 네트워크의 네트워크 어댑터의 속성에 구성 요소로 인터넷 프로토콜 (TCP/IP) 프로토콜을 설치 하는 경우에 사용할 수입니다.
-## <a name="BKMK_Examples"></a>예제
+## <a name="BKMK_Examples"></a>예와
 표시 하려면 컴퓨터의 이름을 입력 합니다.
 ```
 hostname

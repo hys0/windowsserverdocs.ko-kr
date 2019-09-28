@@ -1,8 +1,8 @@
 ---
 title: msinfo32
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f8ad4cf5480492042cdd1e372abae652aff71b90
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 9ec08171816476cf04bbfb70637ff8253192e21b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66437195"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71373384"
 ---
 # <a name="msinfo32"></a>msinfo32
 
@@ -37,17 +37,17 @@ msinfo32 [/pch] [/nfo <path>] [/report <path>] [/computer <computerName>] [/show
 | <computerName>  |                                                                             대상 또는 로컬 컴퓨터의 이름을 지정합니다. 이 UNC 이름, IP 주소 또는 전체 컴퓨터 이름 수 있습니다.                                                                              |
 |  <CategoryID>   |                                                                                     범주 항목의 ID를 지정합니다. 사용 하 여 범주 ID를 얻을 수 **/showcategories**합니다.                                                                                      |
 |      /pch       |                                                                                                       시스템 정보 도구에서 시스템 기록 보기를 표시합니다.                                                                                                       |
-|      /nfo       |                                     내보낸된 파일을 저장 한 **.nfo** 파일입니다. 에 지정 된 파일 이름을 지정 하는 경우 *경로* 끝나지를 **.nfo** 확장명을 **.nfo** 확장명이 파일 이름에 자동으로 추가 됩니다.                                      |
-|     /report     |                                               파일에 저장 *경로* 텍스트 파일로. 파일 이름에 표시 된 대로 정확 하 게 저장 됩니다 *경로*합니다. 경로에 지정 되지 않는 확장명이.txt 파일에 추가 되지 않습니다.                                                |
-|    / 컴퓨터    |                                                                지정된 된 원격 컴퓨터에 대 한 시스템 정보 도구를 시작합니다. 원격 컴퓨터에 액세스 하려면 적절 한 사용 권한이 있어야 합니다.                                                                |
-| /showcategories |                         또는 지역화 된 이름을 표시 하지 않고 Id를 표시 하는 사용 가능한 모든 범주를 사용 하 여 시스템 정보 도구를 시작 합니다. 소프트웨어 환경 범주도 표시 하는 예를 들어는 **SWEnv** 범주입니다.                         |
+|      /nfo       |                                     내보낸된 파일을 저장 한 **.nfo** 파일입니다. *경로* 에 지정 된 파일 이름이 **.nfo** 확장명으로 끝나지 않는 경우 **.nfo** 확장명이 파일 이름에 자동으로 추가 됩니다.                                      |
+|     /report     |                                               *경로* 에 파일을 텍스트 파일로 저장 합니다. 파일 이름은 *경로*에 나타난 대로 정확 하 게 저장 됩니다. 경로에 지정 된 경우를 제외 하 고는 .txt 확장명이 파일에 추가 되지 않습니다.                                                |
+|    / 컴퓨터    |                                                                지정 된 원격 컴퓨터에 대 한 시스템 정보 도구를 시작 합니다. 원격 컴퓨터에 액세스 하려면 적절 한 사용 권한이 있어야 합니다.                                                                |
+| /showcategories |                         친숙 하거나 지역화 된 이름을 표시 하는 대신 사용 가능한 모든 범주 Id를 사용 하 여 시스템 정보 도구를 시작 합니다. 소프트웨어 환경 범주도 표시 하는 예를 들어는 **SWEnv** 범주입니다.                         |
 |    /category    |                                                                     지정 된 범주를 선택 하 여 시스템 정보를 시작 합니다. 사용 하 여 **/showcategories** 사용 가능한 범주 Id의 목록을 표시 합니다.                                                                     |
-|   /categories   |                          지정 된 범주 또는 범주를 표시 하 여 시스템 정보를 시작 합니다. 또한 선택한 범주 또는 범주에 대 한 출력을 제한합니다. 사용 하 여 **/showcategories** 사용 가능한 범주 Id의 목록을 표시 합니다.                          |
+|   /categories   |                          지정 된 범주나 범주만 표시 된 시스템 정보를 시작 합니다. 또한 선택한 범주 또는 범주에 대 한 출력을 제한합니다. 사용 하 여 **/showcategories** 사용 가능한 범주 Id의 목록을 표시 합니다.                          |
 |       /?        |                                                                                                                     명령 프롬프트에 도움말을 표시합니다.                                                                                                                     |
 
 ## <a name="remarks"></a>설명
 일부 시스템 정보 범주는 많은 양의 데이터를 포함합니다. 사용할 수는 **start /wait** 명령을 이러한 범주에 대 한 보고 성능을 최적화할 수 있습니다. 자세한 내용은 참조 [시스템 정보](https://technet.microsoft.com/library/cc783305(v=ws.10).aspx)합니다.
-## <a name="BKMK_Examples"></a>예제
+## <a name="BKMK_Examples"></a>예와
 사용 가능한 범주 Id를 나열 하려면 다음을 입력 합니다.
 ```
 msinfo32 /showcategories

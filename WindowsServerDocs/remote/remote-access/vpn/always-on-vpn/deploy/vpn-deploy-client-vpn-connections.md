@@ -1,7 +1,7 @@
 ---
 title: Windows 10 클라이언트 Always On VPN 연결 구성
 description: 이 단계에서는 프로 파일링 옵션 및 스키마에 대해 알아보고 VPN 연결을 사용 하 여 해당 인프라와 통신 하도록 Windows 10 클라이언트 컴퓨터를 구성 합니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.date: 05/29/2018
@@ -10,12 +10,12 @@ ms.localizationpriority: medium
 ms.author: pashort
 author: shortpatti
 ms.reviewer: deverette
-ms.openlocfilehash: c3ac8295d048c599a1cb6d1ed141cd63a7a73f47
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 9621f9bdca0416965861112ba23c1c8dd731f67b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871342"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71404286"
 ---
 # <a name="step-6-configure-windows-10-client-always-on-vpn-connections"></a>6단계. Windows 10 클라이언트 Always On VPN 연결 구성
 
@@ -863,7 +863,7 @@ Intune을 사용 하 여 Windows 10 원격 액세스 Always On VPN 프로필을 
 >[!NOTE]
 >이제 Intune에서 Azure AD 그룹을 사용 합니다. Azure AD Connect VPN 사용자 그룹을 온-프레미스에서 Azure AD로 동기화 하 고 사용자가 VPN 사용자 그룹에 할당 되 면 진행할 준비가 된 것입니다.
 
-VPN 장치 구성 정책을 만들어 그룹에 추가 된 모든 사용자에 대 한 Windows 10 클라이언트 컴퓨터를 구성 합니다. Intune 템플릿에서 VPN 매개 변수를 제공 하기 때문에 VPN_ProfileXML \<파일의 eaphostconfig > \</srhostconfig > 부분만 복사 합니다.
+VPN 장치 구성 정책을 만들어 그룹에 추가 된 모든 사용자에 대 한 Windows 10 클라이언트 컴퓨터를 구성 합니다. Intune 템플릿에서 VPN 매개 변수를 제공 하므로 VPN_ProfileXML 파일의 \<EapHostConfig > \</EapHostConfig > 부분만 복사 합니다.
 
 ### <a name="create-the-always-on-vpn-configuration-policy"></a>Always On VPN 구성 정책 만들기
 

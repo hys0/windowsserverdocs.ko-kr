@@ -7,17 +7,17 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 5ed8ee500582e0e687a2b52e83d99fc3cb8f147f
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: b7cdf68783db1b6b775209e4e42dc6b6ccf0e1b8
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66188336"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71385423"
 ---
 # <a name="when-to-use-a-transform-claim-rule"></a>변환 클레임 규칙을 사용하는 경우
-Active Directory Federation Services에서이 규칙을 사용할 수 있습니다 \(AD FS\) 들어오는 클레임 유형을 나가는 클레임 유형에 매핑한 출력을 사용할지 결정 하는 작업을 적용 해야 할 때 값을 기반으로 하는 들어오는 클레임에서 발생합니다. 이 규칙을 사용하는 경우 다음 표에 설명된 대로 규칙에서 구성하는 옵션 중 하나에 따라 다음 규칙 논리와 일치하는 클레임을 통과 또는 변환합니다.  
+들어오는 클레임 유형을 나가는 클레임 유형에 매핑한 다음에서 발생 하는 값에 따라 발생 해야 하는 출력을 결정 하는 작업을 적용 하려면 Active Directory Federation Services \(AD FS @ no__t-1에서이 규칙을 사용할 수 있습니다. 들어오는 클레임입니다. 이 규칙을 사용하는 경우 다음 표에 설명된 대로 규칙에서 구성하는 옵션 중 하나에 따라 다음 규칙 논리와 일치하는 클레임을 통과 또는 변환합니다.  
   
 |규칙 옵션|규칙 논리|  
 |---------------|--------------|  
@@ -76,7 +76,7 @@ Ad FS 용어 *클레임 변환* 수단을 대체 한 들어오는 클레임 다�
 이 서식 파일을 만드는 방법에 대 한 자세한 내용은 참조 하십시오. [들어오는 클레임 변환 하는 규칙을 만들](https://technet.microsoft.com/library/dd807068.aspx) AD FS 배포 가이드에 있습니다.  
   
 ## <a name="using-the-claim-rule-language"></a>클레임 규칙 언어 사용  
-둘 이상의 들어오는 클레임 내용에서 나가는 클레임을 생성해야 하는 경우 대신 사용자 지정 규칙을 사용해야 합니다. 나가는 클레임의 클레임 값이 들어오는 클레임 값을 기반으로 해야 하지만 추가 콘텐츠도 포함해야 하는 경우에도 사용자 지정 규칙을 사용해야 합니다. 자세한 내용은 [When to Use a Custom Claim Rule](When-to-Use-a-Custom-Claim-Rule.md)를 참조하세요.  
+둘 이상의 들어오는 클레임 내용에서 나가는 클레임을 생성해야 하는 경우 대신 사용자 지정 규칙을 사용해야 합니다. 나가는 클레임의 클레임 값이 들어오는 클레임 값을 기반으로 해야 하지만 추가 콘텐츠도 포함해야 하는 경우에도 사용자 지정 규칙을 사용해야 합니다. 자세한 내용은 [사용자 지정 클레임 규칙을 사용 하는 경우](When-to-Use-a-Custom-Claim-Rule.md)합니다.  
   
 ### <a name="examples-of-how-to-construct-a-transform-rule-syntax"></a>변환 규칙 구문을 생성하는 방법의 예  
 클레임 규칙 언어 구문을 사용하여 클레임을 변환하는 경우 변환된 클레임의 속성을 새 리터럴 값으로 설정할 수 있습니다. 예를 들어 다음 규칙은 동일한 클레임 유형을 유지하면서 역할 클레임의 값을 "Administrators"에서 "root"로 변경합니다.  

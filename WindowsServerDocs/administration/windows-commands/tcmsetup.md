@@ -1,8 +1,8 @@
 ---
 title: tcmsetup
-description: 설정 및 TAPI 클라이언트를 사용 하지 않도록 설정 하는 방법을 알아봅니다.
+description: TAPI 클라이언트를 설정 하 고 해제 하는 방법에 대해 알아봅니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ac92c7b793274227bd20e6fa90a4106a32ea0446
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 0c646acef51f06c57f16ec7e5310e3319a11383f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59862004"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71370683"
 ---
 # <a name="tcmsetup"></a>tcmsetup
 
@@ -40,8 +40,8 @@ tcmsetup  [/q] /c /d
 |/q|메시지 상자를 표시를 하지 않습니다.|
 |/x|연결 지향 콜백이 사용될지를 많은 네트워크에 패킷 손실이 높습니다 지정 합니다. 이 매개 변수를 생략 하면 연결 없는 콜백이 사용 됩니다.|
 |/c|필수. 클라이언트 설치를 지정합니다.|
-|\<Server1>|필수. 원격 서버에 클라이언트에서 사용 되는 TAPI 서비스 공급자의 이름을 지정 합니다. 클라이언트는 서비스 공급자의 회선과 사용 합니다. 클라이언트는 서버가 있는 도메인과 양방향 트러스트 관계를 맺고 있는 도메인 또는 서버와 동일한 도메인에 있어야 합니다.|
-|\<Server2>…|모든 추가 서버 또는이 클라이언트에서 사용할 수 있는 서버를 지정 합니다. 서버 목록으로 지정 하는 경우 서버 이름을 구분 하는 공간을 사용 합니다.|
+|\<Server1 >|필수. 원격 서버에 클라이언트에서 사용 되는 TAPI 서비스 공급자의 이름을 지정 합니다. 클라이언트는 서비스 공급자의 회선과 사용 합니다. 클라이언트는 서버가 있는 도메인과 양방향 트러스트 관계를 맺고 있는 도메인 또는 서버와 동일한 도메인에 있어야 합니다.|
+|\<Server2 > ...|모든 추가 서버 또는이 클라이언트에서 사용할 수 있는 서버를 지정 합니다. 서버 목록으로 지정 하는 경우 서버 이름을 구분 하는 공간을 사용 합니다.|
 |/d|원격 서버의 목록을 지웁니다. 원격 서버에 있는 TAPI 서비스 공급자를 사용 하 여 하지 못하도록 하 여 TAPI 클라이언트를 사용 하지 않도록 설정 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
@@ -58,7 +58,7 @@ tcmsetup  [/q] /c /d
 
 [명령 셸 개요](https://technet.microsoft.com/library/cc737438(v=ws.10).aspx)
 
-[클라이언트 컴퓨터에서 전화 통신 서버 지정](https://technet.microsoft.com/library/cc759226(v=ws.10).aspx)
+[클라이언트 컴퓨터의 전화 통신 서버 지정](https://technet.microsoft.com/library/cc759226(v=ws.10).aspx)
 
-[선 또는 휴대폰 전화 통신 사용자 할당](https://technet.microsoft.com/library/cc736875(v=ws.10).aspx)
+[회선이 나 전화에 전화 통신 사용자 할당](https://technet.microsoft.com/library/cc736875(v=ws.10).aspx)
 

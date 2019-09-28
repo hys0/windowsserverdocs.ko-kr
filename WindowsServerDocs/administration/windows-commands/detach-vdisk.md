@@ -1,8 +1,8 @@
 ---
 title: Vdisk를 분리 합니다.
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0b6a1ecd3d787506c89f120bed204cc30e6d68d9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4850f9f17218178f210820dd4c6ca96fd918accc
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59822734"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71378692"
 ---
 # <a name="detach-vdisk"></a>Vdisk를 분리 합니다.
 
@@ -45,7 +45,7 @@ detach vdisk [noerr]
   
 -   VHD는 선택 하 고이 작업이 성공 하기 위해 분리 해야 합니다. 사용 하 여는 **vdisk 선택** VHD를 선택 하 고 포커스를 이동 하는 명령입니다.  
   
-## <a name="BKMK_Examples"></a>예제  
+## <a name="BKMK_Examples"></a>예와  
 선택한 VHD를 분리 하려면 다음을 입력 합니다.  
   
 ```  
@@ -56,19 +56,19 @@ detach vdisk
   
 -   [명령줄 구문 키](command-line-syntax-key.md)  
   
--   [vdisk를 연결 합니다.](attach-vdisk.md)  
+-   [연결 vdisk](attach-vdisk.md)  
   
--   [vdisk를 압축 합니다.](compact-vdisk.md)  
+-   [compact vdisk](compact-vdisk.md)  
   
   
   
--   [세부 vdisk](detail-vdisk.md)  
+-   [세부 정보 vdisk](detail-vdisk.md)  
   
--   [vdisk를 확장 합니다.](expand-vdisk.md)  
+-   [vdisk 확장](expand-vdisk.md)  
   
--   [Vdisk를 병합 합니다.](merge-vdisk.md)  
+-   [Merge vdisk](merge-vdisk.md)  
   
--   [vdisk를 선택 합니다.](select-vdisk.md)  
+-   [vdisk 선택](select-vdisk.md)  
   
 -   [list_1](list_1.md)  
   

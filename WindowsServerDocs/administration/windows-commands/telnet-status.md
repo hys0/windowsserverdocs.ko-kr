@@ -1,8 +1,8 @@
 ---
 title: 텔넷 상태
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 840c5042db1a72d8d902f080215dcca76fdeb775
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f56deefffa6488b22ee8845f3eda463fe9455f11
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59863194"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71370558"
 ---
 # <a name="telnet-status"></a>텔넷: 상태
 
@@ -30,8 +30,8 @@ ms.locfileid: "59863194"
 st[atus]  
 ```  
 ### <a name="parameters"></a>매개 변수  
-none  
-## <a name="BKMK_Examples"></a>예제  
+없음  
+## <a name="BKMK_Examples"></a>예와  
 상태 정보를 표시 합니다.  
 ```  
 st  

@@ -2,7 +2,7 @@
 title: bdehdcfg 크기
 description: Windows 명령 항목-새 시스템 드라이브를 만들 때 시스템 파티션의 크기를 지정 합니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d024bb4092f93782300d6afb9053cee1da32629a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6ec42cdb5716c63c7210ea6cfde8ce8884833b45
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59817524"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71382202"
 ---
 # <a name="bdehdcfg-size"></a>bdehdcfg: 크기
 
@@ -36,16 +36,16 @@ bdehdcfg -target {default|unallocated|<DriveLetter> shrink} -size <SizeinMB>
 
 |매개 변수|설명|
 |---------|-----------|
-|\<SizeinMB>|메가바이트 (MB)는 새 파티션의 사용 하 여 수를 나타냅니다.|
+|\<SizeinMB >|메가바이트 (MB)는 새 파티션의 사용 하 여 수를 나타냅니다.|
 
 ## <a name="remarks"></a>설명
 
 크기를 지정 하지 않으면 도구 기본값인 300MB를 사용 합니다. 시스템 드라이브의 최소 크기는 100MB입니다. 저장 하려는 경우 다른 시스템 도구 또는 시스템 복구 시스템 파티션에, 크기를 늘려야는 적절 하 게 합니다.
 
 > [!NOTE]
-> 합니다 **크기** 명령을 함께 사용할 수 없습니다는 **대상** \<DriveLetter > **병합** 명령입니다.
+> **Size** 명령은 **대상** \<DriveLetter > **merge** 명령과 함께 사용할 수 없습니다.
 
-## <a name="BKMK_Examples"></a>예제
+## <a name="BKMK_Examples"></a>예와
 
 다음 예제를 사용 하는 **크기** 500MB의 기본 시스템 드라이브에 할당 하기 위해 명령입니다.
 ```

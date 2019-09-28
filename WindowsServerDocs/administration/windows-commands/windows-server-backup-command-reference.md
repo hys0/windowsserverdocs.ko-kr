@@ -1,8 +1,8 @@
 ---
 title: Windows Server 백업 명령 참조
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ded5039e122832c95eda864bcdcc76f580ca7108
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c05a44d3390e110fbaf276dfb9b40c1f0adc1dd5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59839814"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71362053"
 ---
 # <a name="windows-server-backup-command-reference"></a>Windows Server 백업 명령 참조
 
@@ -32,18 +32,18 @@ ms.locfileid: "59839814"
 
 |하위 명령|설명|
 |----------|-----------|
-|[wbadmin 백업 사용](wbadmin-enable-backup.md)|구성 하 고 일별 백업 일정을 활성화 합니다.|
-|[wbadmin 백업 사용 안 함](wbadmin-disable-backup.md)|매일 백업을 사용 하지 않습니다.|
-|[wbadmin 백업 시작](wbadmin-start-backup.md)|일회성 백업을 실행합니다. 매개 변수 없이 사용 하는 경우에 일별 백업 일정의 설정을 사용 합니다.|
-|[wbadmin 중지 작업](wbadmin-stop-job.md)|현재 실행 중인 백업이 나 복구 작업을 중지 합니다.|
-|[wbadmin get 버전](wbadmin-get-versions.md)|로컬 컴퓨터에서 복구 가능한 백업의 세부 정보를 나열 하거나 다른 컴퓨터에서 다른 위치를 지정 합니다.|
-|[wbadmin 가져오기 항목](wbadmin-get-items.md)|특정 백업에 포함 된 항목을 나열 합니다.|
-|[wbadmin 시작 복구](wbadmin-start-recovery.md)|볼륨, 응용 프로그램, 파일 또는 지정 된 폴더의 복구를 실행 합니다.|
-|[wbadmin 상태 가져오기](wbadmin-get-status.md)|현재 실행 중인 백업이 나 복구 작업의 상태를 보여 줍니다.|
-|[wbadmin get 디스크](wbadmin-get-disks.md)|현재 온라인 상태의 디스크를 나열 합니다.|
-|[wbadmin 시작 systemstaterecovery](wbadmin-start-systemstaterecovery.md)|시스템 상태 복구를 실행합니다.|
-|[wbadmin 시작 systemstatebackup](wbadmin-start-systemstatebackup.md)|시스템 상태 백업을 실행합니다.|
-|[wbadmin delete systemstatebackup](wbadmin-delete-systemstatebackup.md)|하나 이상의 시스템 상태 백업을 삭제합니다.|
-|[wbadmin 시작 sysrecovery](wbadmin-start-sysrecovery.md)|전체 시스템 (최소한 모든 볼륨 운영 체제의 상태를 포함 하는)의 복구를 실행 합니다. 이 하위 명령은 Windows 복구 환경을 사용 하는 경우에 사용할 수만 있습니다.|
-|[wbadmin 복원 카탈로그](wbadmin-restore-catalog.md)|백업 카탈로그는 로컬 컴퓨터에 손상 된 경우에서 지정 된 저장소 위치에서 백업 카탈로그를 복구 합니다.|
-|[wbadmin delete 카탈로그](wbadmin-delete-catalog.md)|로컬 컴퓨터에서 백업 카탈로그를 삭제합니다. 이 컴퓨터에 백업 카탈로그 손상 되 고 카탈로그를 복원 하는 데 사용할 수 있는 다른 위치에 저장 된 백업이 있는 경우에이 명령을 사용 합니다.|
+|[Wbadmin enable backup](wbadmin-enable-backup.md)|구성 하 고 일별 백업 일정을 활성화 합니다.|
+|[Wbadmin disable backup](wbadmin-disable-backup.md)|매일 백업을 사용 하지 않습니다.|
+|[Wbadmin start backup](wbadmin-start-backup.md)|일회성 백업을 실행합니다. 매개 변수 없이 사용 하는 경우에 일별 백업 일정의 설정을 사용 합니다.|
+|[Wbadmin stop job](wbadmin-stop-job.md)|현재 실행 중인 백업이 나 복구 작업을 중지 합니다.|
+|[Wbadmin get versions](wbadmin-get-versions.md)|로컬 컴퓨터에서 복구 가능한 백업의 세부 정보를 나열 하거나 다른 컴퓨터에서 다른 위치를 지정 합니다.|
+|[Wbadmin get items](wbadmin-get-items.md)|특정 백업에 포함 된 항목을 나열 합니다.|
+|[Wbadmin start recovery](wbadmin-start-recovery.md)|볼륨, 응용 프로그램, 파일 또는 지정 된 폴더의 복구를 실행 합니다.|
+|[Wbadmin get status](wbadmin-get-status.md)|현재 실행 중인 백업이 나 복구 작업의 상태를 보여 줍니다.|
+|[Wbadmin get disks](wbadmin-get-disks.md)|현재 온라인 상태의 디스크를 나열 합니다.|
+|[Wbadmin start systemstaterecovery](wbadmin-start-systemstaterecovery.md)|시스템 상태 복구를 실행합니다.|
+|[Wbadmin start systemstatebackup](wbadmin-start-systemstatebackup.md)|시스템 상태 백업을 실행합니다.|
+|[Wbadmin delete systemstatebackup](wbadmin-delete-systemstatebackup.md)|하나 이상의 시스템 상태 백업을 삭제합니다.|
+|[Wbadmin start sysrecovery](wbadmin-start-sysrecovery.md)|전체 시스템 (최소한 모든 볼륨 운영 체제의 상태를 포함 하는)의 복구를 실행 합니다. 이 하위 명령은 Windows 복구 환경을 사용 하는 경우에 사용할 수만 있습니다.|
+|[Wbadmin restore catalog](wbadmin-restore-catalog.md)|백업 카탈로그는 로컬 컴퓨터에 손상 된 경우에서 지정 된 저장소 위치에서 백업 카탈로그를 복구 합니다.|
+|[Wbadmin delete catalog](wbadmin-delete-catalog.md)|로컬 컴퓨터에서 백업 카탈로그를 삭제합니다. 이 컴퓨터에 백업 카탈로그 손상 되 고 카탈로그를 복원 하는 데 사용할 수 있는 다른 위치에 저장 된 백업이 있는 경우에이 명령을 사용 합니다.|

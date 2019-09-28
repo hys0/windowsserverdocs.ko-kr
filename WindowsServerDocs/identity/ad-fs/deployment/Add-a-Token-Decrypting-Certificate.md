@@ -6,36 +6,36 @@ author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: cf89972120f3f0effa3eb1cf0fee6d29dbc8ed4e
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 388414fff97705901bf52ee844b90508d62f8c83
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66192477"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71408455"
 ---
 # <a name="add-a-token-decrypting-certificate"></a>토큰 암호 해독 인증서 추가
 
-토큰을 사용 하는 페더레이션 서버\-암호 해독 인증서 신뢰 당사자 페더레이션 서버를 새 인증서를 기본 암호 해독 인증서로 설정 되 면 이전 인증서를 사용 하 여 발급 된 토큰의 암호를 해독 해야 합니다. Active Directory Federation Services \(AD FS\) Secure Sockets Layer를 사용 하 여 \(SSL\) 인터넷 정보 서비스에 대 한 인증서 \(IIS\) 기본 암호 해독을 인증서입니다.  
+페더레이션 서버는 새 인증서가 기본 암호 해독 인증서로 설정 된 후 신뢰 당사자 페더레이션 서버에서 이전 인증서를 사용 하 여 발급 된 토큰의 암호를 해독 해야 하는 경우 토큰 @ no__t-0decryption 해독 인증서를 사용 합니다. Active Directory Federation Services \(AD FS @ no__t-1은 인터넷 정보 서비스 \(IIS @ no__t-5에 대 한 SSL(Secure Sockets Layer) \(SSL @ no__t 인증서를 기본 암호 해독 인증서로 사용 합니다.  
   
 > [!CAUTION]  
-> 토큰에 사용 되는 인증서\-암호를 해독 하는 것은 페더레이션 서비스의 안정성에 중요 합니다. 손실 되거나 의도치 않게 제거가이 목적을 위해 구성 된 모든 인증서는 서비스 중단 될 수 있습니다, 때문에이 목적을 위해 구성 된 모든 인증서를 백업 해야 합니다.  
+> 토큰 @ no__t-0decrypting 해독에 사용 되는 인증서는 페더레이션 서비스 안정성에 매우 중요 합니다. 이 용도로 구성 된 인증서의 손실 또는 계획 되지 않은 제거는 서비스를 방해할 수 있으므로이 목적을 위해 구성 된 모든 인증서를 백업 해야 합니다.  
   
-다음 절차를 사용 하 여 토큰을 추가할\-AD FS 관리 스냅인에는 인증서를 암호 해독\-에서 내보낸 된 파일에서입니다.  
+다음 절차를 사용 하 여 사용자가 내보낸 파일에서 토큰 @ no__t-0decrypting 해독 인증서를 AD FS Management snap @ no__t-1in에 추가할 수 있습니다.  
   
-로컬 컴퓨터에서 이 절차를 완료하기 위해서는 최소한 **관리자** 또는 이와 동등한 자격이 있어야 합니다.  적절 한 계정을 사용 하는 방법에 대 한 세부 정보를 검토 하 고 그룹 구성원 자격 [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477) \(http:\/\/go.microsoft.com\/fwlink\/? LinkId\=83477\)합니다.   
+로컬 컴퓨터에서 이 절차를 완료하기 위해서는 최소한 **관리자** 또는 이와 동등한 자격이 있어야 합니다.  [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477) \(에서 적절 한 계정 및 그룹 구성원 자격 사용에 대 한 자세한 내용은\/http\/: go.microsoft.com fwlink?를 참조 하세요.\/\/ LinkId\=83477\).   
   
-### <a name="to-add-a-token-decrypting-certificate"></a>토큰을 추가 하려면\-인증서를 암호 해독  
+### <a name="to-add-a-token-decrypting-certificate"></a>토큰 @ no__t-0decrypting 해독 인증서를 추가 하려면  
   
-1.  에 **시작** 화면에서 입력**AD FS 관리**, 한 다음 ENTER를 누릅니다.  
+1.  **시작** 화면에서**AD FS 관리**를 입력 한 다음 enter 키를 누릅니다.  
   
-2.  콘솔 트리에서 두 번\-클릭 **Service**를 클릭 하 고 **인증서**합니다.  
+2.  콘솔 트리에서 no__t를 두 번 클릭 하 고 **서비스**를 클릭 한 다음 **인증서**를 클릭 합니다.  
   
-3.  에 **동작** 창 클릭 합니다 **토큰 추가\-암호 해독 인증서** 링크.  
+3.  **작업** 창에서 **토큰 추가 @ No__t-2Decrypting 해독 인증서** 링크를 클릭 합니다.  
   
-4.  에 **인증서 파일을 찾습니다** 대화 상자에서 추가 인증서 파일을 선택한 다음 클릭 하려는 인증서 파일을 이동 **오픈**합니다.  
+4.  **인증서 파일 찾아보기** 대화 상자에서 추가 하려는 인증서 파일로 이동 하 여 인증서 파일을 선택한 다음 **열기**를 클릭 합니다.  
   
 ## <a name="additional-references"></a>추가 참조  
 [검사 목록: 페더레이션 서버 설정](Checklist--Setting-Up-a-Federation-Server.md)  

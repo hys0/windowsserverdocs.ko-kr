@@ -2,7 +2,7 @@
 title: IT 관리자용 Windows Server 기술 콘텐츠 - Windows Server
 description: IT 전문가용 현재 및 이전 릴리스 및 제품 평가에 대한 Windows Server 기술 문서를 다운로드하세요.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: server-general
@@ -14,12 +14,12 @@ author: lizap
 ms.author: elizapo
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: f9a4e4e0dde0c2c6178629f0dee744448edc72dd
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.openlocfilehash: 5430dfa2facfb7412077931637f5e95e35f0d934
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66812594"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392467"
 ---
 # <a name="windows-server---it-administrator-content-for-current-and-previous-releases"></a>Windows Server - 현재 및 이전 릴리스에 대한 IT 관리자 콘텐츠
 
@@ -40,23 +40,23 @@ Windows Server는 작업 그룹에서 데이터 센터까지 응용 프로그램
 
 [Windows Server 2012 R2 및 Windows Server 2012 기술 라이브러리](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/) 
 
-[MSDN의 Windows Server 2012 R2 개발자 라이브러리](https://msdn.microsoft.com/library/dn609939(v=vs.85).aspx) 
+[MSDN의 Windows Server 2012 R2 Developer Library](https://msdn.microsoft.com/library/dn609939(v=vs.85).aspx) 
 
 ## <a name="windows-server-2008-r2-and-windows-server-2008"></a>Windows Server 2008 R2 및 Windows Server 2008
 
 [Windows Server 2008 R2 및 Windows Server 2008 기술 라이브러리](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008)
  
-[MSDN의 Windows Server 2008 개발자 라이브러리](https://msdn.microsoft.com/library/hh738539.aspx) 
+[MSDN의 Windows Server 2008 Developer Library](https://msdn.microsoft.com/library/hh738539.aspx) 
 
 ## <a name="windows-server-2003"></a>Windows Server 2003
 
 [Windows Server 2003 기술 라이브러리](https://www.microsoft.com/download/details.aspx?id=53314) - 보관된 콘텐츠의 PDF 버전 다운로드
 
-[MSDN의 Windows Server 2003 개발자 라이브러리](https://msdn.microsoft.com/library/dn792549.aspx)
+[MSDN의 Windows Server 2003 Developer Library](https://msdn.microsoft.com/library/dn792549.aspx)
 
 ## <a name="product-evaluations"></a>제품 평가
 
-[Windows Server 2016 평가판 다운로드](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016?i=1) 
+[Windows Server 2016 Evaluation 다운로드](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016?i=1) 
 
 [Windows Server 2012 R2 평가판 다운로드](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012-r2) 
 

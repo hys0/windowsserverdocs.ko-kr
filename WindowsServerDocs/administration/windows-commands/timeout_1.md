@@ -1,8 +1,8 @@
 ---
-title: 제한 시간
-description: '에 대 한 Windows 명령을 항목 * * *- '
+title: timeout
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3997399b732c494050797c83a0a52938574986bd
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 09f294eb78a8868b4e3962557a36199b69fae0c9
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59830174"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71385767"
 ---
-# <a name="timeout"></a>제한 시간
+# <a name="timeout"></a>timeout
 
 
 
@@ -38,7 +38,7 @@ timeout /t <TimeoutInSeconds> [/nobreak]
 
 |매개 변수|설명|
 |---------|-----------|
-|/t \<TimeoutInSeconds>|명령 프로세서 처리를 계속 하기 전에 대기 하는 10 진수 (-1에서 99999) 사이 시간 (초)을 지정 합니다. 값-1 하면 컴퓨터의 키 입력을 무기한 대기 합니다.|
+|/t \<TimeoutInSeconds >|명령 프로세서 처리를 계속 하기 전에 대기 하는 10 진수 (-1에서 99999) 사이 시간 (초)을 지정 합니다. 값-1 하면 컴퓨터의 키 입력을 무기한 대기 합니다.|
 |/nobreak|사용자 키 입력을 무시 하도록 지정 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
@@ -48,7 +48,7 @@ timeout /t <TimeoutInSeconds> [/nobreak]
 -   사용자 키 입력 제한 시간 만료 되지 않은 경우에 즉시 명령 프로세서 실행을 계속 합니다.
 -   와 함께에서 사용 하는 경우는 **절전** 명령을 **제한 시간** 비슷합니다는 **일시 중지** 명령입니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 명령 프로세서를 10 초 동안 일시 중지 하려면 다음을 입력 합니다.
 ```

@@ -8,52 +8,34 @@ author: jasongerend
 ms.author: jgerend
 manager: dongill
 ms.date: 06/26/2019
-ms.prod: windows-server-threshold
-ms.openlocfilehash: d0cf58ea8d37efccf80ce262b64e604218bd8d0b
-ms.sourcegitcommit: 545dcfc23a81943e129565d0ad188263092d85f6
+ms.prod: windows-server
+ms.openlocfilehash: 5cb26bcff99d9cf3a1ee8b3a937ad6098a913c3d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67407655"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71362056"
 ---
 # <a name="windows-commands"></a>Windows 명령
 
-Windows (서버 및 클라이언트)의 모든 지원 되는 버전에는 기본 제공 하는 Win32 콘솔 명령 집합이.
+지원 되는 모든 버전의 Windows (서버 및 클라이언트)에는에서 기본 제공 되는 Win32 콘솔 명령 집합이 있습니다.
 
-이 설명서 집합 스크립팅 도구 또는 스크립트를 사용 하 여 작업을 자동화 하 여 Windows 명령을 설명 합니다.
+이 설명서 집합에서는 스크립트나 스크립팅 도구를 사용 하 여 작업을 자동화 하는 데 사용할 수 있는 Windows 명령을 설명 합니다.
 
 다음 ㄱ-ㅎ 메뉴에서 특정 명령에 대 한 정보를 찾기 위해 명령을 첫 글자를 클릭 하 고 명령 이름을 클릭 합니다.
 
-[A](#a) |
-[B](#b) | 
+[@NO__T-](#a)1[B](#b) | 
 [C](#c) | 
 [D](#d) | 
-[E](#e)  | 
- [F](#f) | 
-[G](#g) | 
-[H](#h) | 
-[합니까](#i)  |
- [J](#j) | 
-[K](#k) | 
-[L](#l) | 
-[M](#m) | 
-[N](#n)  | 
- [O](#o) | 
-[P](#p) | 
-[Q](#q) | 
-[R](#r)  | 
- [S](#s) | 
-[T](#t) | 
-[U](#u) | 
-[V](#v)  | 
- [W](#w) | 
-[X](#x) | Y | Z
+[E](#e) | 
+[F](#f) |
+1[G](#g)3[H](#h)5[I](#i)7[J](#j)9[K](#k)1[L ](#l)3[M](#m)5[N](#n)7[O](#o)9[P](#p)1[Q](#q)3[R](#r)5[S](#s)7[T](#t)9[U](#u)1[V](#v)3 [W](#w)5[X](#x) | Y | -
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-이 항목에서는에 포함 된 정보에 적용 됩니다.
+이 항목에 포함 된 정보는 다음에 적용 됩니다.
 
--   Windows Server 2019
+-   Windows Server 2019
 -   Windows Server(반기 채널)
 -   Windows Server 2016
 -   Windows Server 2012 R2
@@ -65,54 +47,36 @@ Windows (서버 및 클라이언트)의 모든 지원 되는 버전에는 기본
 
 ### <a name="command-shell-overview"></a>명령 셸 개요
 
-명령 셸에서 배치 (.bat) 파일을 사용 하 여 사용자 계정 관리 또는 야간 백업 같은 일상적인 작업을 자동화 하는 Windows에 기본 제공 되는 첫 번째 셸이 이었습니다. Windows 스크립트 호스트를 사용 하 여 명령 셸에서 보다 정교한 스크립트를 실행할 수 있습니다. 자세한 내용은 [cscript](cscript.md) 하거나 [wscript](wscript.md)합니다. 사용자 인터페이스를 사용 하 여 수 있는 것 보다 스크립트를 사용 하 여 작업을 보다 효율적으로 수행할 수 있습니다. 스크립트는 명령줄에서 사용할 수 있는 모든 명령에 동의 합니다.
+명령 셸은 배치 (.bat) 파일을 사용 하 여 사용자 계정 관리 또는 야간 백업과 같은 일상적인 작업을 자동화 하기 위해 Windows에 기본 제공 되는 셸 이었습니다. Windows 스크립트 호스트를 사용 하면 명령 셸에서 보다 정교한 스크립트를 실행할 수 있습니다. 자세한 내용은 [cscript](cscript.md) 또는 [wscript](wscript.md)를 참조 하세요. 사용자 인터페이스를 사용 하는 것 보다 스크립트를 사용 하 여 작업을 보다 효율적으로 수행할 수 있습니다. 스크립트는 명령줄에서 사용할 수 있는 모든 명령을 허용 합니다.
 
-Windows 명령 셸에서 두에 있습니다. 명령 셸 및 [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting?view=powershell-6)합니다. 각 shell은 하 고 운영 체제 또는 IT 작업을 자동화 하는 환경을 제공 하는 응용 프로그램 간의 직접 통신을 제공 하는 소프트웨어 프로그램입니다.
+Windows에는 두 개의 명령 셸이 있습니다. 명령 셸 및 [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting?view=powershell-6) 각 shell은 사용자와 운영 체제 또는 응용 프로그램 간의 직접 통신을 제공 하 여 IT 운영을 자동화 하는 환경을 제공 하는 소프트웨어 프로그램입니다.
 
-PowerShell은 cmdlet을 호출 하는 PowerShell 명령을 실행 하려면 명령 셸의 기능을 확장 하도록 설계 되었습니다. Cmdlet은 Windows 명령과 유사 하 게 하지만 보다 확장성이 뛰어난 스크립팅 언어를 제공 합니다. Powershell에서 Windows 명령 및 PowerShell cmdlet을 실행할 수 있지만 명령 셸은 Windows 명령 및 PowerShell cmdlet 없습니다만 실행할 수 있습니다.
+PowerShell은 cmdlet 이라는 PowerShell 명령을 실행 하기 위해 명령 셸의 기능을 확장 하도록 설계 되었습니다. Cmdlet은 Windows 명령과 비슷하지만 보다 확장 가능한 스크립트 언어를 제공 합니다. Powershell에서 Windows 명령 및 PowerShell cmdlet을 실행할 수 있지만 명령 셸은 PowerShell cmdlet이 아닌 Windows 명령만 실행할 수 있습니다.
 
-Automation에 대 한 가장 강력 하 고 최신 Windows, Windows 명령 또는 Windows 스크립트 호스트에 대 한 Windows 자동화 하는 대신 PowerShell을 사용 하는 것이 좋습니다. 
+가장 강력 하 고 최신 Windows automation의 경우 windows 용 windows 명령 또는 windows 스크립트 호스트 대신 PowerShell을 사용 하는 것이 좋습니다. 
 > [!NOTE]
->또한 다운로드 하 고 설치할 수 있습니다 [PowerShell Core](https://docs.microsoft.com/powershell/scripting/whats-new/what-s-new-in-powershell-core-60?view=powershell-6), 오픈 소스 버전의 PowerShell. 
+>Powershell의 오픈 소스 버전인 powershell [Core](https://docs.microsoft.com/powershell/scripting/whats-new/what-s-new-in-powershell-core-60?view=powershell-6)를 다운로드 하 여 설치할 수도 있습니다. 
 
 > [!CAUTION]
 > 레지스트리를 잘못 편집하면 시스템에 심각한 손상을 줄 수 있습니다. 레지스트리를 다음과 같이 변경 하기 전에 컴퓨터의 중요 한 데이터를 백업 해야 합니다.
 
 > [!NOTE]
-> 를 사용 하거나 컴퓨터 또는 사용자 로그온 세션에서 명령 셸에서 있는 파일 및 디렉터리 이름 완성을 사용 하지 않도록 설정 하려면 실행 **regedit.exe** 다음을 설정 하 고 **reg_DWOrd 값**:
+> 컴퓨터 또는 사용자 로그온 세션의 명령 셸에서 파일 및 디렉터리 이름 완성을 사용 하거나 사용 하지 않도록 설정 하려면 **regedit.exe** 를 실행 하 고 다음 **reg_DWOrd 값**을 설정 합니다.
 > 
 > HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\completionChar\reg_DWOrd
 > 
-> 설정 하는 **reg_DWOrd** 값을 특정 함수에 대 한 제어 문자의 16 진수 값을 사용 (예를 들어 **0 9** 은 탭 및 **0 08** 백스페이스). 사용자 지정 설정이 컴퓨터 설정 보다 우선 하며 명령줄 옵션 레지스트리 설정 보다 우선 합니다.
+> **Reg_DWOrd** 값을 설정 하려면 특정 함수에 대 한 제어 문자의 16 진수 값을 사용 합니다 (예: **0 9** 은 Tab, **0 08** 은 백스페이스). 사용자 지정 설정이 컴퓨터 설정 보다 우선 하며 명령줄 옵션 레지스트리 설정 보다 우선 합니다.
 
 ## <a name="command-line-reference-a-z"></a>명령줄 참조 ㄱ-ㅎ
 
-다음 ㄱ-ㅎ 메뉴에서 특정 Windows 명령에 대 한 정보를 찾기 위해 명령을 첫 글자를 클릭 하 고 명령 이름을 클릭 합니다.
+특정 Windows 명령에 대 한 정보를 찾으려면 다음 A-z 메뉴에서 명령이 시작 되는 문자를 클릭 하 고 명령 이름을 클릭 합니다.
 
-[A](#a) |
-[B](#b) | 
+[@NO__T-](#a)1[B](#b) | 
 [C](#c) | 
 [D](#d) | 
-[E](#e)  | 
- [F](#f) | 
-[G](#g) | 
-[H](#h) | 
-[합니까](#i)  |
- [J](#j) | 
-[K](#k) | 
-[L](#l) | 
-[M](#m) | 
-[N](#n)  | 
- [O](#o) | 
-[P](#p) | 
-[Q](#q) | 
-[R](#r)  | 
- [S](#s) | 
-[T](#t) | 
-[U](#u) | 
-[V](#v)  | 
- [W](#w) | 
-[X](#x) | Y | Z)
+[E](#e) | 
+[F](#f) |
+1[G](#g)3[H](#h)5[I](#i)7[J](#j)9[K](#k)1[L ](#l)3[M](#m)5[N](#n)7[O](#o)9[P](#p)1[Q](#q)3[R](#r)5[S](#s)7[T](#t)9[U](#u)1[V](#v)3 [W](#w)5[X](#x) | Y | -
 
 ### <a name="a"></a>변수를 잠그기 위한
 -   [append](append.md)
@@ -298,7 +262,7 @@ Automation에 대 한 가장 강력 하 고 최신 Windows, Windows 명령 또�
   -   [fsutil usn](fsutil-usn.md)
   -   [fsutil volume](fsutil-volume.md)
   -   [fsutil wim](fsutil-wim.md)
-- [ftp](ftp.md)
+- [p](ftp.md)
 - [ftype](ftype.md)
 - [fveupdate](fveupdate.md)
 
@@ -330,28 +294,28 @@ Automation에 대 한 가장 강력 하 고 최신 Windows, Windows 명령 또�
 ### <a name="k"></a>K
 - [klist](klist.md)
 - [ksetup](ksetup.md)
-  -   [ksetup:setrealm](ksetup-setrealm.md)
-  -   [ksetup:mapuser](ksetup-mapuser.md)
-  -   [ksetup:addkdc](ksetup-addkdc.md)
-  -   [ksetup:delkdc](ksetup-delkdc.md)
-  -   [ksetup:addkpasswd](ksetup-addkpasswd.md)
-  -   [ksetup:delkpasswd](ksetup-delkpasswd.md)
-  -   [ksetup:server](ksetup-server.md)
-  -   [ksetup:setcomputerpassword](ksetup-setcomputerpassword.md)
-  -   [ksetup:removerealm](ksetup-removerealm.md)
-  -   [ksetup:domain](ksetup-domain.md)
-  -   [ksetup:changepassword](ksetup-changepassword.md)
-  -   [ksetup:listrealmflags](ksetup-listrealmflags.md)
-  -   [ksetup:setrealmflags](ksetup-setrealmflags.md)
-  -   [ksetup:addrealmflags](ksetup-addrealmflags.md)
-  -   [ksetup:delrealmflags](ksetup-delrealmflags.md)
-  -   [ksetup:dumpstate](ksetup-dumpstate.md)
-  -   [ksetup:addhosttorealmmap](ksetup-addhosttorealmmap.md)
-  -   [ksetup:delhosttorealmmap](ksetup-delhosttorealmmap.md)
-  -   [ksetup:setenctypeattr](ksetup-setenctypeattr.md)
-  -   [ksetup:getenctypeattr](ksetup-getenctypeattr.md)
-  -   [ksetup:addenctypeattr](ksetup-addenctypeattr.md)
-  -   [ksetup:delenctypeattr](ksetup-delenctypeattr.md) 
+  -   [ksetup: setrealm](ksetup-setrealm.md)
+  -   [ksetup: mapuser](ksetup-mapuser.md)
+  -   [ksetup: addkdc](ksetup-addkdc.md)
+  -   [ksetup: delkdc](ksetup-delkdc.md)
+  -   [ksetup: addkpasswd](ksetup-addkpasswd.md)
+  -   [ksetup: delkpasswd](ksetup-delkpasswd.md)
+  -   [ksetup: 서버](ksetup-server.md)
+  -   [ksetup: setcomputerpassword](ksetup-setcomputerpassword.md)
+  -   [ksetup: removerealm](ksetup-removerealm.md)
+  -   [ksetup: 도메인](ksetup-domain.md)
+  -   [ksetup: changepassword](ksetup-changepassword.md)
+  -   [ksetup: listrealmflags](ksetup-listrealmflags.md)
+  -   [ksetup: setrealmflags](ksetup-setrealmflags.md)
+  -   [ksetup: addrealmflags](ksetup-addrealmflags.md)
+  -   [ksetup: delrealmflags](ksetup-delrealmflags.md)
+  -   [ksetup: 상태를](ksetup-dumpstate.md)
+  -   [ksetup: addhosttorealmmap](ksetup-addhosttorealmmap.md)
+  -   [ksetup: delhosttorealmmap](ksetup-delhosttorealmmap.md)
+  -   [ksetup: setenctypeattr](ksetup-setenctypeattr.md)
+  -   [ksetup: getenctypeattr](ksetup-getenctypeattr.md)
+  -   [ksetup: addenctypeattr](ksetup-addenctypeattr.md)
+  -   [ksetup: delenctypeattr](ksetup-delenctypeattr.md) 
 - [ktmutil](ktmutil.md)
 - [ktpass](ktpass.md)
 
@@ -361,10 +325,10 @@ Automation에 대 한 가장 강력 하 고 최신 Windows, Windows 명령 또�
 - [logman](logman.md)
   -   [logman create](logman-create.md)
   -   [logman query](logman-query.md)
-  -   [logman 시작 & 124; 중지](logman-start-stop.md)
+  -   [logman start & 124; 막을](logman-start-stop.md)
   -   [logman delete](logman-delete.md)
   -   [logman update](logman-update.md)
-  -   [logman 가져오기 및 124; 내보내기](logman-import-export.md)
+  -   [logman 가져오기 & 124; 내보내기가](logman-import-export.md)
 - [logoff](logoff.md)
 - [lpq](lpq.md)
 - [lpr](lpr.md)
@@ -373,24 +337,24 @@ Automation에 대 한 가장 강력 하 고 최신 Windows, Windows 명령 또�
 - [macfile](macfile.md)
 - [makecab](makecab.md)
 - [manage-bde](manage-bde.md)
-  -   [관리 bde: 상태](manage-bde-status.md)
-  -   [관리 bde:에](manage-bde-on.md)
-  -   [관리 bde: 해제](manage-bde-off.md)
-  -   [관리 bde: 일시 중지](manage-bde-pause.md)
-  -   [관리 bde: 다시 시작](manage-bde-resume.md)
-  -   [관리 bde: 잠금](manage-bde-lock.md)
-  -   [관리 bde: 잠금 해제](manage-bde-unlock.md)
-  -   [관리 bde: 잠금](manage-bde-autounlock.md)
-  -   [관리 bde: 보호기](manage-bde-protectors.md)
-  -   [관리 bde: tpm](manage-bde-tpm.md)
-  -   [관리 bde: setidentifier](manage-bde-setidentifier.md)
-  -   [manage-bde: ForceRecovery](manage-bde-forcerecovery.md)
-  -   [관리 bde: 암호 변경](manage-bde-changepassword.md)
-  -   [관리 bde: changepin](manage-bde-changepin.md)
-  -   [관리 bde: 변환](manage-bde-changekey.md)
-  -   [manage-bde: KeyPackage](manage-bde-keypackage.md)
-  -   [관리 bde: 업그레이드](manage-bde-upgrade.md)
-  -   [manage-bde: WipeFreeSpace](manage-bde-wipefreespace.md)
+  -   [manage-bde: 상태](manage-bde-status.md)
+  -   [manage-bde: on](manage-bde-on.md)
+  -   [manage-bde: off](manage-bde-off.md)
+  -   [manage-bde: pause](manage-bde-pause.md)
+  -   [manage-bde: resume](manage-bde-resume.md)
+  -   [manage-bde: lock](manage-bde-lock.md)
+  -   [manage-bde: unlock](manage-bde-unlock.md)
+  -   [manage-bde: autounlock](manage-bde-autounlock.md)
+  -   [manage-bde: 보호기](manage-bde-protectors.md)
+  -   [manage-bde: tpm](manage-bde-tpm.md)
+  -   [manage-bde: setidentifier](manage-bde-setidentifier.md)
+  -   [manage: ForceRecovery](manage-bde-forcerecovery.md)
+  -   [manage-bde: changepassword](manage-bde-changepassword.md)
+  -   [manage-bde: changepin](manage-bde-changepin.md)
+  -   [manage-bde: 변환](manage-bde-changekey.md)
+  -   [manage: KeyPackage](manage-bde-keypackage.md)
+  -   [manage-bde: upgrade](manage-bde-upgrade.md)
+  -   [manage: WipeFreeSpace](manage-bde-wipefreespace.md)
 - [mapadmin](mapadmin.md)
 - [Md](Md.md)
 - [mkdir](mkdir.md)
@@ -422,7 +386,7 @@ Automation에 대 한 가장 강력 하 고 최신 Windows, Windows 명령 또�
 - [nlbmgr](nlbmgr.md)
 - [nslookup](nslookup.md)
   -   [nslookup exit 명령](nslookup-exit-command.md)
-  -   [nslookup 손가락 명령](nslookup-finger-command.md)
+  -   [nslookup finger 명령](nslookup-finger-command.md)
   -   [nslookup help](nslookup-help.md)
   -   [nslookup ls](nslookup-ls.md)
   -   [nslookup lserver](nslookup-lserver.md)
@@ -491,17 +455,17 @@ Automation에 대 한 가장 강력 하 고 최신 Windows, Windows 명령 또�
 - [rdpsign](rdpsign.md)
 - [recover](recover.md)
 - [reg](reg.md)
-  -   [Reg 추가](reg-add.md)
+  -   [reg 추가](reg-add.md)
   -   [reg 비교](reg-compare.md)
-  -   [reg copy](reg-copy.md)
-  -   [reg delete](reg-delete.md)
-  -   [reg export](reg-export.md)
-  -   [reg import](reg-import.md)
-  -   [Reg 부하](reg-load.md)
-  -   [reg query](reg-query.md)
+  -   [reg 복사](reg-copy.md)
+  -   [reg 삭제](reg-delete.md)
+  -   [reg 내보내기](reg-export.md)
+  -   [reg 가져오기](reg-import.md)
+  -   [reg 로드](reg-load.md)
+  -   [reg 쿼리](reg-query.md)
   -   [reg 복원](reg-restore.md)
   -   [reg 저장](reg-save.md)
-  -   [Reg 언로드](reg-unload.md)
+  -   [레지스트리 언로드](reg-unload.md)
 - [regini](regini.md)
 - [regsvr32](regsvr32.md)
 - [relog](relog.md)
@@ -525,19 +489,19 @@ Automation에 대 한 가장 강력 하 고 최신 Windows, Windows 명령 또�
 ### <a name="s"></a>S
 - [schtasks](schtasks.md)
 - [scwcmd](Scwcmd.md)
-  -   [scwcmd: analyze](scwcmd-analyze.md)
-  -   [scwcmd: configure](scwcmd-configure.md)
-  -   [scwcmd: register](scwcmd-register.md) 
-  -   [scwcmd: rollback](scwcmd-rollback.md) 
-  -   [scwcmd: transform](scwcmd-transform.md) 
-  -   [scwcmd: view](scwcmd-view.md) 
+  -   [scwcmd: 분석](scwcmd-analyze.md)
+  -   [scwcmd: 구성](scwcmd-configure.md)
+  -   [scwcmd: 등록](scwcmd-register.md) 
+  -   [scwcmd: 롤백](scwcmd-rollback.md) 
+  -   [scwcmd: 변환](scwcmd-transform.md) 
+  -   [scwcmd: 뷰](scwcmd-view.md) 
 - [secedit](secedit.md)
-  -   [secedit:analyze](secedit-analyze.md)
-  -   [secedit:configure](secedit-configure.md)
-  -   [secedit:export](secedit-export.md)
-  -   [secedit:generaterollback](secedit-generaterollback.md)
-  -   [secedit:import](secedit-import.md)
-  -   [secedit:validate](secedit-validate.md)
+  -   [secedit: 분석](secedit-analyze.md)
+  -   [secedit: 구성](secedit-configure.md)
+  -   [secedit: 내보내기](secedit-export.md)
+  -   [secedit: generaterollback](secedit-generaterollback.md)
+  -   [secedit: 가져오기](secedit-import.md)
+  -   [secedit: 유효성 검사](secedit-validate.md)
 - [serverceipoptin](serverceipoptin.md)
 - [Servermanagercmd](Servermanagercmd.md)
 - [serverweroptin](serverweroptin.md)
@@ -597,11 +561,11 @@ Automation에 대 한 가장 강력 하 고 최신 Windows, Windows 명령 또�
   -   [wbadmin 백업 사용](wbadmin-enable-backup.md)
   -   [wbadmin 백업 사용 안 함](wbadmin-disable-backup.md)
   -   [wbadmin 백업 시작](wbadmin-start-backup.md)
-  -   [wbadmin stop job](wbadmin-stop-job.md)
+  -   [wbadmin 중지 작업](wbadmin-stop-job.md)
   -   [wbadmin get 버전](wbadmin-get-versions.md)
-  -   [wbadmin get items](wbadmin-get-items.md)
-  -   [wbadmin 시작 복구](wbadmin-start-recovery.md)
-  -   [wbadmin get status](wbadmin-get-status.md)
+  -   [wbadmin get 항목](wbadmin-get-items.md)
+  -   [wbadmin 복구 시작](wbadmin-start-recovery.md)
+  -   [wbadmin 가져오기 상태](wbadmin-get-status.md)
   -   [wbadmin get 디스크](wbadmin-get-disks.md)
   -   [wbadmin 시작 systemstaterecovery](wbadmin-start-systemstaterecovery.md)
   -   [wbadmin 시작 systemstatebackup](wbadmin-start-systemstatebackup.md)

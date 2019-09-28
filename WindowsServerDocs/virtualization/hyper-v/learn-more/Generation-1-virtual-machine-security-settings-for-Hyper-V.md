@@ -1,7 +1,7 @@
 ---
 title: Hyper-v에 대 한 1 세대 가상 컴퓨터의 보안 설정
-description: 1 세대 가상 컴퓨터에 대 한 Hyper-v 관리자에서 사용할 수 있는 보안 설정을 설명합니다.
-ms.prod: windows-server-threshold
+description: 1 세대 가상 컴퓨터의 Hyper-v 관리자에서 사용할 수 있는 보안 설정에 대해 설명 합니다.
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -11,12 +11,12 @@ ms.assetid: f8f8c569-8b74-4c19-876e-1c7d00cce308
 author: larsiwer
 ms.author: kathydav
 ms.date: 10/04/2016
-ms.openlocfilehash: 73cc2e45367d448aa736644e4a3bc02d3670fc6c
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: ceb3c2628546815f9b0af35946e173f4276130d2
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66447914"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392792"
 ---
 # <a name="generation-1-virtual-machine-security-settings"></a>1 세대 가상 컴퓨터의 보안 설정
 
@@ -47,5 +47,5 @@ Hyper-v 관리자 1 세대 가상 컴퓨터의 보안 설정의 사용 하 여 �
 
 ## <a name="see-also"></a>참조
 
-- [Hyper-v 관리자에서 2 세대 가상 머신의 보안 설정](Generation-2-virtual-machine-security-settings-for-hyper-v.md)
+- [Hyper-v 관리자의 2 세대 가상 컴퓨터 보안 설정](Generation-2-virtual-machine-security-settings-for-hyper-v.md)
 - [보안 및 보증](../../../security/Security-and-Assurance.md)

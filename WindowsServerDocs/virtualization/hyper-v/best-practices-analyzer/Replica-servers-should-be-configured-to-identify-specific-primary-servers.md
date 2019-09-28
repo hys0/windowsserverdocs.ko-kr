@@ -1,7 +1,7 @@
 ---
 title: 복제 트래픽을 보낼 수 있는 권한이 고유한 기본 서버를 식별 하도록 복제 서버를 구성 해야
-description: 이 모범 사례 분석기 규칙에 의해 보고 된 문제를 해결 하려면 지침을 제공 합니다.
-ms.prod: windows-server-threshold
+description: 이 모범 사례 분석기 규칙에서 보고 한 문제를 해결 하는 지침을 제공 합니다.
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -10,12 +10,12 @@ ms.topic: article
 ms.assetid: 0aeb1f4b-2e75-430b-9557-fe64738c4992
 author: KBDAzure
 ms.date: 8/16/2016
-ms.openlocfilehash: 47b215d4c84e68d93ae1189ddd370358e2781eff
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 567b20d00d2f245ae7e9577d9d200dca116a9b4d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59822244"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71364741"
 ---
 # <a name="replica-servers-should-be-configured-to-identify-specific-primary-servers-authorized-to-send-replication-traffic"></a>복제 트래픽을 보낼 수 있는 권한이 고유한 기본 서버를 식별 하도록 복제 서버를 구성 해야
 
@@ -33,13 +33,13 @@ ms.locfileid: "59822244"
 다음 섹션에서는 기울임꼴이이 문제에 대 한 모범 사례 분석기 도구에 표시 되는 UI 텍스트를 나타냅니다.  
   
 ## <a name="issue"></a>문제점  
-*구성 된 대로이 복제본 서버로 모든 주 서버에서 복제 트래픽을 받아들이고 단일 위치에 저장 합니다.*  
+*구성 된 대로이 복제 서버는 모든 주 서버에서 복제 트래픽을 받아서 단일 위치에 저장 합니다.*  
   
 ### <a name="impact"></a>영향  
-*모든 주 서버에서 모든 복제는 개인 정보 또는 보안 문제가 발생할 수 있는 위치에 저장 됩니다.*  
+*모든 주 서버의 모든 복제는 한 위치에 저장 되므로 개인 정보나 보안 문제가 발생할 수 있습니다.*  
   
 ## <a name="resolution"></a>해결 방법  
-*Hyper-v 관리자를 사용 하 여 특정 주 서버에 대 한 새 권한 부여 항목을 만들고 각각에 대해 별도 저장소 위치를 지정 합니다. 각 권한 부여 항목에 대 한 집합으로 주 서버를 그룹화 하려면 와일드 카드 문자를 사용할 수 있습니다.*  
+@no__t Hyper-v 관리자를 사용 하 여 특정 주 서버에 대 한 새 권한 부여 항목을 만들고 각각에 대해 별도의 저장소 위치를 지정 합니다. 와일드 카드 문자를 사용 하 여 각 권한 부여 항목에 대 한 기본 서버를 집합으로 그룹화 할 수 있습니다. *  
   
 #### <a name="create-authorization-entries-using-hyper-v-manager"></a>Hyper-v 관리자를 사용 하 여 권한 부여 항목 만들기  
   
@@ -84,7 +84,7 @@ New-VMReplicationAuthorizationEntry server01.domain01.contoso.com D:\ReplicaVMSt
 ```  
   
 ## <a name="see-also"></a>관련 항목  
-[New-VMReplicationAuthorizationEntry](https://technet.microsoft.com/library/hh848606.aspx)  
+[New-vmreplicationauthorizationentry](https://technet.microsoft.com/library/hh848606.aspx)  
   
 
 

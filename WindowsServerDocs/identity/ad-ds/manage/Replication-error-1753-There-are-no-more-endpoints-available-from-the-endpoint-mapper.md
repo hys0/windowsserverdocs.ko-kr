@@ -7,14 +7,14 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 9c8efee98cc8128443d9c835ccc5cb6b7695a094
-ms.sourcegitcommit: a9625758fbfb066494fe62e0da5f9570ccb738a3
+ms.openlocfilehash: 64b479663dfc930ec9a6d2055b4c9ad5755b30fc
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68952467"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71389974"
 ---
 # <a name="replication-error-1753-there-are-no-more-endpoints-available-from-the-endpoint-mapper"></a>복제 오류 1753 끝점 매퍼에서 사용할 수 있는 끝점이 더 이상 없음
 
@@ -96,7 +96,7 @@ Active Directory 사이트 및 서비스의 **지금 복제** 명령은 "끝점 
 원본 DC에서 연결 개체를 마우스 오른쪽 단추로 클릭 하 고 **지금 복제** 를 선택 하면 "끝점 매퍼에서 사용할 수 있는 끝점이 더 이상 없습니다."가 발생 합니다.
 화면에 표시 되는 오류 메시지는 다음과 같습니다.
 
-대화 상자 제목 텍스트: 지금 복제 대화 상자 메시지 텍스트: 명명 컨텍스트 \<% directory 파티션 이름% >을 (를) 도메인 컨트롤러 \<원본 dc >에서 도메인 컨트롤러 \<대상 dc > 동기화 하는 동안 다음 오류가 발생 했습니다.
+대화 상자 제목 텍스트: 지금 복제 대화 상자 메시지 텍스트: 명명 컨텍스트 \<% 디렉터리 파티션 이름% >을 (를) 도메인 컨트롤러 \<Source DC >에서 도메인 컨트롤러 \<Destination DC > 동기화 하는 동안 다음 오류가 발생 했습니다.
 
 끝점 매퍼에서 사용할 수 있는 끝점이 더 이상 없습니다.
 작업을 계속할 수 없습니다.
@@ -150,7 +150,7 @@ Active Directory 사이트 및 서비스의 **지금 복제** 명령은 "끝점 
 
 RPC 클라이언트 (대상 DC)가 의도 한 RPC 서버 (원본 DC)에 연결 되어 있는지 확인 합니다.
 
-공통 Active Directory 포리스트의 모든 Dc는 _msdcs에 도메인 컨트롤러 CNAME 레코드를 등록 합니다. \<포리스트 루트 도메인은 포리스트 내에 상주 하는 도메인에 관계 없이 DNS 영역을 > 합니다. DC CNAME 레코드는 각 도메인 컨트롤러에 대 한 NTDS 설정 개체의 objectGUID 특성에서 파생 됩니다.
+공통 Active Directory 포리스트의 모든 Dc는 _msdcs에 도메인 컨트롤러 CNAME 레코드를 등록 합니다. 포리스트 내에 상주 하는 도메인에 관계 없이 DNS 영역을 \<forest 루트 도메인 > 합니다. DC CNAME 레코드는 각 도메인 컨트롤러에 대 한 NTDS 설정 개체의 objectGUID 특성에서 파생 됩니다.
 
 복제 기반 작업을 수행할 때 대상 DC는 DNS에서 원본 Dc CNAME 레코드를 쿼리 합니다. CNAME 레코드에는 DNS 클라이언트 캐시 조회, 호스트/LMHost 파일 조회, DNS의 호스트 A/AAAA 레코드 또는 WINS를 통해 원본 dc IP 주소를 파생 시키는 데 사용 되는 원본 DC의 정규화 된 컴퓨터 이름이 포함 됩니다.
 
@@ -291,7 +291,7 @@ F# SRC    DEST    Operation
 
 프레임 **11**에서 원본 dc에서 아직 dc 역할을 호스팅하지 않으므로 E351를 등록 하지 않은 구성원 컴퓨터입니다. 로컬 EPM이 있는 복제 서비스의 UUID는 10 진수 오류 1753, 16 진수 오류 0x6d9 및 친숙 한 오류 (끝점 매퍼에서 사용할 수 있는 끝점이 더 이상 없음)에 매핑되는 기호화 된 오류 EP_S_NOT_REGISTERED 응답 합니다.
 
-나중에 IP 주소가 x. x. 1.2 인 구성원 컴퓨터가 contoso.com 도메인의 "MayberryDC" 복제본으로 승격 됩니다. 다시 복제 명령이 복제를 트리거하는 데 사용 되지만이 시간은 "대상 사용자 이름이 잘못 되었습니다." 화면 오류와 함께 실패 합니다. 네트워크 어댑터에 할당 된 IP 주소에는 IP 주소 x. x. 1.2.1.2는 도메인 컨트롤러 이며, 현재 표준 모드로 부팅 되어 E351 ... 복제 서비스 UUID를 로컬 EPM으로 사용 하는 경우에는 DC2의 이름 또는 보안 id를 소유 하 고 있지 않으며 DC1에서 Kerberos 요청을 해독할 수 없으므로 "대상 사용자 이름이 잘못 되었습니다." 라는 오류와 함께 요청이 실패 합니다. 오류는 10 진수 오류-2146893022/16 진수 오류 0x80090322에 매핑됩니다.
+나중에 IP 주소가 x. x. 1.2 인 구성원 컴퓨터가 contoso.com 도메인의 "MayberryDC" 복제본으로 승격 됩니다. 다시 **복제 명령이 복제를 트리거하는 데** 사용 되지만이 시간은 "대상 사용자 이름이 잘못 되었습니다." 화면 오류와 함께 실패 합니다. 네트워크 어댑터에 할당 된 IP 주소에는 IP 주소 x. x. 1.2.1.2는 도메인 컨트롤러 이며, 현재 표준 모드로 부팅 되어 E351 ... 복제 서비스 UUID를 로컬 EPM으로 사용 하는 경우에는 DC2의 이름 또는 보안 id를 소유 하 고 있지 않으며 DC1에서 Kerberos 요청을 해독할 수 없으므로 "대상 사용자 이름이 잘못 되었습니다." 라는 오류와 함께 요청이 실패 합니다. 오류는 10 진수 오류-2146893022/16 진수 오류 0x80090322에 매핑됩니다.
 
 이러한 잘못 된 호스트-IP 매핑은 호스트/lmhost 파일, DNS의 호스트 A/AAAA 등록 또는 WINS의 부실 항목으로 인해 발생할 수 있습니다.
 
@@ -299,7 +299,7 @@ F# SRC    DEST    Operation
 
 ## <a name="related-topics"></a>관련 항목
 
-* [1753 오류로 인해 실패 하는 Active Directory 작업 문제 해결: 끝점 매퍼에서 사용할 수 있는 끝점이 더 이상 없습니다.](https://support.microsoft.com/kb/2089874)
+* [ 1753 오류와 함께 실패 하는 Active Directory 작업 문제 해결: 끝점 매퍼에서 사용할 수 있는 끝점이 더 이상 없습니다. ](https://support.microsoft.com/kb/2089874)
 * [KB 문서 839880 제품 CD의 Windows Server 2003 지원 도구를 사용 하 여 RPC 끝점 매퍼 오류 문제 해결](https://support.microsoft.com/kb/839880)
 * [KB 문서 832017 Windows Server 시스템의 서비스 개요 및 네트워크 포트 요구 사항](https://support.microsoft.com/kb/832017/)
 * [KB 문서 224196 Active Directory 복제 트래픽 및 클라이언트 RPC 트래픽을 특정 포트로 제한](https://support.microsoft.com/kb/224196/)

@@ -7,18 +7,18 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: e2776cc29b8c9ede884a6b304cd541f700f516ca
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 88ec418bd72a6389856deb1abd85641d8782bc30
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66191265"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71408042"
 ---
 # <a name="name-resolution-requirements-for-federation-servers"></a>페더레이션 서버에 대한 이름 확인 요구 사항
 
-회사 네트워크의 클라이언트 컴퓨터를 응용 프로그램 또는 Active Directory Federation Services로 보호 되는 웹 서비스에 액세스 하려고 하는 경우 \(AD FS\), 먼저 페더레이션 서버에 인증 해야 합니다. Windows 통합 인증을 통해 로컬 페더레이션 서버에 액세스 하는 회사 네트워크 클라이언트를 인증 하는 한 가지 방법은 이며  
+회사 네트워크의 클라이언트 컴퓨터가 Active Directory Federation Services \(AD FS @ no__t-1로 보호 되는 응용 프로그램 또는 웹 서비스에 액세스 하려고 할 때 먼저 페더레이션 서버에 인증 해야 합니다. Windows 통합 인증을 통해 로컬 페더레이션 서버에 액세스 하는 회사 네트워크 클라이언트를 인증 하는 한 가지 방법은 이며  
   
 ## <a name="configure-corporate-dns"></a>회사 DNS 구성  
 이름 확인이 성공한 Windows 통합 인증을 통해 로컬 페더레이션 서버에서 발생할 수 Domain Name System 있도록 \(DNS\) 계정의 회사 네트워크 파트너는 새 호스트에 구성 해야 합니다 \(A\) 정규화 된 도메인 이름 확인 되는 리소스 레코드 \(FQDN\) 의 페더레이션 서버 클러스터의 IP 주소는 페더레이션 서버 호스트 이름입니다.  

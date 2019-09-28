@@ -2,7 +2,7 @@
 title: TLS (전송 계층 보안) 관리
 description: Windows Server 보안
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: security-tls-ssl
@@ -12,12 +12,12 @@ author: justinha
 ms.author: justinha
 manager: brianlic-msft
 ms.date: 05/16/2018
-ms.openlocfilehash: f691775d5ab24de8b23df048c13ec3d7c572833f
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: a4ac1ea5b0648dbb80f103c146ad3df23fc04ab7
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70870291"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402344"
 ---
 # <a name="manage-transport-layer-security-tls"></a>TLS (전송 계층 보안) 관리
 
@@ -124,7 +124,7 @@ Certutil.exe –deleteEccCurve curveName
 1.  Windows 10 및 Windows Server 2016에서는 **certutil.exe** 를 사용 하 여 windows에 등록 된 새 새 곡선을 추가 합니다.
 2.  동일한 컴퓨터에서 그룹 정책 관리 콘솔 (GPMC)를 열고 새 그룹 정책 개체를 만든 다음 편집 합니다.
 3.  **컴퓨터 구성으로 이동 | 기본 설정 | Windows 설정 | 레지스트리**.  **레지스트리**를 마우스 오른쪽 단추로 클릭 합니다. **새** 항목 위로 마우스를 이동 하 고 **컬렉션 항목**을 선택 합니다. 곡선의 이름과 일치 하도록 컬렉션 항목의 이름을 바꿉니다. *HKEY_LOCAL_MACHINE\CurrentControlSet\Control\Cryptography\ECCParameters*아래의 각 레지스트리 키에 대해 하나의 레지스트리 컬렉션 항목을 만듭니다.
-4.  HKEY_LOCAL_MACHINE\CurrentControlSet\Control\Cryptography\ECCParameters curvename 아래에 나열 된 각 레지스트리 값에 새 **레지스트리 항목** 을 추가 하 여 새로 만든 그룹 정책 기본 설정 레지스트리 컬렉션을 구성 합니다. *\[ ]* .
+4.  *HKEY_LOCAL_MACHINE\CurrentControlSet\Control\Cryptography\ECCParameters @ no__t-2curveName]* 아래에 나열 된 각 레지스트리 값에 대 한 새 **레지스트리 항목** 을 추가 하 여 새로 만든 그룹 정책 기본 설정 레지스트리 컬렉션을 구성 합니다. .
 5.  새 명명 된 곡선을 받아야 하는 Windows 10 및 Windows Server 2016 컴퓨터에 그룹 정책 레지스트리 컬렉션 항목을 포함 하는 그룹 정책 개체를 배포 합니다.
 
     ![GPP 분포 곡선](../media/Transport-Layer-Security-protocol/gpp-distribute-curves.png)

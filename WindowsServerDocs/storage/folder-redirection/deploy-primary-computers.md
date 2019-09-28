@@ -1,19 +1,19 @@
 ---
 title: 폴더 리디렉션 및 로밍 사용자 프로필에 대 한 기본 컴퓨터 배포
 description: 기본 컴퓨터 지원을 사용 하도록 설정 하 고 폴더 리디렉션 및 로밍 사용자 프로필을 사용 하는 사용자에 대해 기본 컴퓨터를 지정 하는 방법
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 ms.technology: storage
 ms.date: 06/06/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: fe026b97f15b4094303c8162c5363cc6205dedd1
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: be2b41cf32e2020422c32415e2d8f4273eb09859
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70867282"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71394444"
 ---
 # <a name="deploy-primary-computers-for-folder-redirection-and-roaming-user-profiles"></a>폴더 리디렉션 및 로밍 사용자 프로필에 대 한 기본 컴퓨터 배포
 

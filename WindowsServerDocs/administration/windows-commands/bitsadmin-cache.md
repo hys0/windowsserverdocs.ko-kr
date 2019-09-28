@@ -1,8 +1,8 @@
 ---
 title: bitsadmin 캐시
-description: Windows 명령 항목에 대 한 **bitsadmin 캐시** 전환-/Cache 전환 bitsadmin 목록 포함
+description: '**Bitsadmin 캐시** 스위치에 대 한 Windows 명령 항목-bitsadmin/cache 스위치 목록을 포함 합니다.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 80077957df0891d738364552491a66a00e831168
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: aaf1df20c7f0be97a9449fc952523dc7dfacc16b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66435053"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381856"
 ---
 # <a name="bitsadmin-cache"></a>bitsadmin 캐시
 
@@ -43,10 +43,10 @@ bitsadmin /Cache /SetExpirationtime
 
 |매개 변수|설명|
 |-------|--------|
-|[bitsadmin cache and help](bitsadmin-cache-and-help.md)|명령이 표시 됩니다\-줄에 대 한 사용량을 \/스위치를 캐시 합니다.|
+|[bitsadmin cache and help](bitsadmin-cache-and-help.md)|@No__t-1Cache 스위치에 대 한 @ no__t-0line 사용법 명령을 표시 합니다.|
 |[bitsadmin cache and clear](bitsadmin-cache-clear.md)|로컬 캐시를 제거 합니다.|
 |[bitsadmin cache and delete](bitsadmin-cache-and-delete.md)|캐시 엔트리를 삭제 합니다.|
-|[bitsadmin cache and deleteurl](bitsadmin-cache-and-deleteurl.md)|지정된 된 URL에 대 한 모든 캐시 항목을 삭제합니다.|
+|[bitsadmin cache and deleteurl](bitsadmin-cache-and-deleteurl.md)|지정 된 URL에 대 한 모든 캐시 엔트리를 삭제 합니다.|
 |[bitsadmin cache and list](bitsadmin-cache-and-list.md)|모든 캐시 항목을 나열 합니다.|
 |[bitsadmin cache and info](bitsadmin-cache-and-info.md)|특정 캐시 엔트리를 덤프합니다.|
 |[bitsadmin cache and getlimit](bitsadmin-cache-and-getlimit.md)|캐시 한계를 검색합니다.|

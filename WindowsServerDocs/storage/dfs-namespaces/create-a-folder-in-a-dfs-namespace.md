@@ -2,18 +2,18 @@
 title: DFS 네임스페이스에 폴더 만들기
 description: 이 문서에서는 DFS 네임스페이스에 폴더를 만드는 방법을 설명합니다.
 ms.date: 6/5/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 47bb13aa404cdf4fef86b7250425a92cc208ba9d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7389b825afe5ccae3059f50ffdedac72ecd5ac9a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59856854"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402246"
 ---
 # <a name="create-a-folder-in-a-dfs-namespace"></a>DFS 네임스페이스에 폴더 만들기
 
@@ -40,7 +40,7 @@ ms.locfileid: "59856854"
 
 ## <a name="see-also"></a>참조
 
--   [DFS 네임 스페이스를 배포합니다.](deploying-dfs-namespaces.md)
--   [DFS 네임 스페이스에 대 한 관리 권한 위임](delegate-management-permissions-for-dfs-namespaces.md)
+-   [DFS 네임스페이스 배포](deploying-dfs-namespaces.md)
+-   [DFS 네임스페이스에 대한 관리 권한 위임](delegate-management-permissions-for-dfs-namespaces.md)
 
 

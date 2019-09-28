@@ -1,8 +1,8 @@
 ---
 title: 텔넷 송신
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 36dc7f861e88cf991af57dda2f150107c6870f0f
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 958e0e507e5a0ae836da98de8d677a116dbb38bd
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66441046"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71383626"
 ---
-# <a name="telnet-send"></a>텔넷: 보내기
+# <a name="telnet-send"></a>텔넷: 송신
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -33,17 +33,17 @@ sen[d] {ao | ayt | brk | esc | ip | synch | <string>} [?]
 
 | 매개 변수 |                     설명                      |
 |-----------|------------------------------------------------------|
-|    ao     |       텔넷 명령을 중단 출력을 보냅니다.        |
-|    ayt    |       있습니다에 하는 텔넷 명령을 보냅니다.       |
-|    brk    |            텔넷 명령을 brk를 보냅니다.            |
+|    ao     |       텔넷 명령 중단 출력을 보냅니다.        |
+|    ayt    |       텔넷 명령을 보냅니다.       |
+|    brk    |            텔넷 명령 brk를 보냅니다.            |
 |    esc 키    |      현재 텔넷 이스케이프 문자를 보냅니다.      |
-|    ip     |     프로세스를 중단 텔넷 명령을 보냅니다.     |
-|   동기화   |           텔넷 명령을 동기화를 보냅니다.           |
-| <string>  | 텔넷 서버에 입력 문자열을 보냅니다. |
-|     ?     |     이 명령을 사용 하 여 관련 된 도움말을 표시 합니다.      |
+|    ip     |     텔넷 명령 인터럽트 프로세스를 보냅니다.     |
+|   동기화   |           텔넷 명령 동기화를 보냅니다.           |
+| <string>  | 텔넷 서버에 입력 하는 모든 문자열을 보냅니다. |
+|     ?     |     이 명령과 관련 된 도움말을 표시 합니다.      |
 
-## <a name="BKMK_Examples"></a>예제  
-Send는 텔넷 서버 수 있습니다.  
+## <a name="BKMK_Examples"></a>예와  
+그러면 텔넷 서버에 전송 됩니다.  
 ```  
 sen ayt  
 ```  

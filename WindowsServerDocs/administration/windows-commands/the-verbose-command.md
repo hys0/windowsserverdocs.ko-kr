@@ -1,8 +1,8 @@
 ---
-title: 자세한 정보 표시 명령
-description: '에 대 한 Windows 명령을 항목 * * *- '
+title: Verbose 명령
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6a655ccdbd95b2f3523babecaa713ccdf99f9ec7
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7c7ecc2bb3578b578060694c95833fd32674db10
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59827244"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71369907"
 ---
-# <a name="the-verbose-command"></a>자세한 정보 표시 명령
+# <a name="the-verbose-command"></a>Verbose 명령
 
 
 

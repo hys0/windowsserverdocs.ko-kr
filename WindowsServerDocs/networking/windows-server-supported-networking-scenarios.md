@@ -1,24 +1,24 @@
 ---
 title: Windows Server 지원 네트워킹 시나리오
-description: 이 항목에서는 지원 되는 새로운 네트워킹 시나리오에서 Windows Server 2016 이상에 대 한 정보를 제공합니다.
+description: 이 항목에서는 Windows Server 2016 이상에서 지원 되는 새 네트워킹 시나리오에 대 한 정보를 제공 합니다.
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.date: ''
 ms.assetid: 6de4232d-b0b3-4e43-8735-ebae35ae4f9f
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 85f73f1f7caf833d23d3d693c0d754f52c4aa27d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: f338ddf0a7d3a4fe41277ddbf49b0c3db34ae11b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59812234"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71395702"
 ---
 # <a name="windows-server-supported-networking-scenarios"></a>Windows Server 지원 네트워킹 시나리오
 
->적용 대상: Windows Server \(Semi-Annual Channel\), Windows Server 2016
+>적용 대상: Windows Server \(Semi 채널 @ no__t-1, Windows Server 2016
 
 이 항목 수 또는이 버전의 Windows Server 2016를 사용 하 여 수행할 수 있는 지원 되거나 지원 되지 않는 시나리오에 대 한 정보를 제공 합니다.  
 >[!IMPORTANT]
@@ -28,19 +28,19 @@ ms.locfileid: "59812234"
 
 이 섹션에는 Windows Server 2016 용 지원 되는 네트워킹 시나리오에 대 한 정보를 포함 및 시나리오 범주가 포함 됩니다.  
   
--   [소프트웨어 정의 네트워킹 (SDN) 시나리오](#bkmk_sdn)  
+-   [SDN (소프트웨어 정의 네트워킹) 시나리오](#bkmk_sdn)  
   
 -   [네트워크 플랫폼 시나리오](#bkmk_netp)  
   
 -   [DNS 서버 시나리오](#bkmk_dns)  
   
--   [DHCP 및 DNS와 IPAM 시나리오](#bkmk_ipam)  
+-   [DHCP 및 DNS를 사용 하는 IPAM 시나리오](#bkmk_ipam)  
   
 -   [NIC 팀 시나리오](#bkmk_nicteam)
 
-- [포함 된 팀 전환 \(설정\) 시나리오](#bkmk_set)
+- [포함 된 팀 전환 \(SET @ no__t 시나리오](#bkmk_set)
   
-### <a name="bkmk_sdn"></a>소프트웨어 정의 네트워킹 (SDN) 시나리오
+### <a name="bkmk_sdn"></a>SDN (소프트웨어 정의 네트워킹) 시나리오
  
 Windows Server 2016 SDN 시나리오를 배포 하려면 다음 문서를 사용할 수 있습니다.  
   
@@ -138,7 +138,7 @@ DNS 서버 시나리오를 수행할 수 있습니다.
   
 자세한 내용은 항목을 참조 하십시오. [Windows Server 2016의 DNS 클라이언트의 새로운](dns/What-s-New-in-DNS-Client.md) 및 [Windows Server 2016에서 DNS 서버에서 새로운](dns/What-s-New-in-DNS-Server.md)합니다.  
   
-### <a name="bkmk_ipam"></a>DHCP 및 DNS와 IPAM 시나리오
+### <a name="bkmk_ipam"></a>DHCP 및 DNS를 사용 하는 IPAM 시나리오
 
 IPAM 시나리오를 수행할 수 있습니다.  
   
@@ -165,11 +165,11 @@ NIC 팀 등의 시나리오를 수행할 수 있습니다.
 -   NIC 팀에서 네트워크 어댑터를 제거 합니다.  
   
 > [!NOTE]  
-> 하지만 Windows Server 2016에서 사용할 수 있습니다 NIC 팀에서 하이퍼-V 일부 경우에 큐 VMQ (가상 컴퓨터) 수 자동으로 사용 하도록 설정 하지 내부 네트워크 어댑터에 NIC 팀을 만들 때. 이 경우 NIC 팀 구성원 어댑터에서 VMQ가 사용 되는지 확인 하려면 다음 Windows PowerShell 명령을 사용할 수 있습니다. `Set-NetAdapterVmq -Name <NetworkAdapterName> -Enable`  
+> 하지만 Windows Server 2016에서 사용할 수 있습니다 NIC 팀에서 하이퍼-V 일부 경우에 큐 VMQ (가상 컴퓨터) 수 자동으로 사용 하도록 설정 하지 내부 네트워크 어댑터에 NIC 팀을 만들 때. 이 경우 다음 Windows PowerShell 명령을 사용 하 여 NIC 팀 구성원 어댑터에서 VMQ가 사용 하도록 설정 되었는지 확인할 수 있습니다. `Set-NetAdapterVmq -Name <NetworkAdapterName> -Enable`  
 
 자세한 내용은 참조 [NIC 팀](technologies/nic-teaming/NIC-Teaming.md)합니다. 
 
-### <a name="bkmk_set"></a>포함 된 팀 전환 \(설정\) 시나리오
+### <a name="bkmk_set"></a>포함 된 팀 전환 \(SET @ no__t 시나리오
 
 집합은 Windows Server 2016에 Hyper-v 및 네트워킹 SDN (소프트웨어) 스택을 포함 하는 환경에서 사용할 수 있는 대체 NIC 팀 솔루션. 일부 NIC 팀 기능은 Hyper-v 가상 스위치에 통합 하는 설정 합니다. 
 

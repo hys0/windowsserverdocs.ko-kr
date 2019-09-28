@@ -2,7 +2,7 @@
 title: wbadmin 백업 시작
 description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: cdd63d0a3a813b32a212b09eb93a64ea1429ee06
-ms.sourcegitcommit: a9625758fbfb066494fe62e0da5f9570ccb738a3
+ms.openlocfilehash: c8eb017e8bf49191c33cd2d9f0cf4a62b08ebb07
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68952449"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71362342"
 ---
 # <a name="wbadmin-start-backup"></a>wbadmin 백업 시작
 
@@ -67,19 +67,19 @@ Wbadmin start backup
 
 |매개 변수|설명|
 |---------|-----------|
-|-backupTarget|이 백업에 대 한 저장소 위치를 지정합니다. 하드 디스크 드라이브 문자 (f:), 볼륨 GUID 기반 경로 (형식 \\) \\\\ 볼륨 {GUID} 또는 원격 공유 폴더에 대 한 UNC (범용 명명 규칙)\\경로 (\\\<\<servername >\\sharename >\\). 기본적으로 \\백업은: servername >sharename>\\ \\**WindowsImageBackup** \<\\에\<저장 됩니다.\\ \< ComputerBackedUp >\\.</br>중요: 원격 공유 폴더에 백업을 저장 하는 경우 동일한 폴더를 사용 하 여 동일한 컴퓨터를 다시 백업 하면 해당 백업을 덮어쓰게 됩니다. 또한 백업 작업이 실패 하는 경우 얻게 될 수 있습니다 백업이 하나도 최신 백업을 사용할 수 없습니다. 하지만 이전 백업을 덮어쓰게 됩니다. 백업을 구성 하는 원격 공유 폴더에 하위 폴더를 만들어서이 방지할 수 있습니다. 이렇게 하면 하위 폴더는 부모 폴더와 두 배의 공간이 필요 합니다.|
+|-backupTarget|이 백업에 대 한 저장소 위치를 지정합니다. 하드 디스크 드라이브 문자 (f:), \\ @ no__t? \\ 볼륨 {GUID} 형식의 볼륨 GUID 기반 경로 또는 원격 공유 폴더에 대 한 UNC (범용 명명 규칙) 경로 (\\ @ no__t-4 @ no__t-5servername > \\ @ no__)가 필요 합니다. t-7sharename > \\). 기본적으로 백업은 \\ @ no__t-1 @ no__t-2servername > \\ @ no__t-4sharename > \\**WindowsImageBackup**\\ @ No__t-8ComputerBackedUp > \\에 저장 됩니다.</br>중요: 원격 공유 폴더에 백업을 저장 하는 경우 동일한 폴더를 사용 하 여 동일한 컴퓨터를 다시 백업 하면 해당 백업을 덮어쓰게 됩니다. 또한 백업 작업이 실패 하는 경우 얻게 될 수 있습니다 백업이 하나도 최신 백업을 사용할 수 없습니다. 하지만 이전 백업을 덮어쓰게 됩니다. 백업을 구성 하는 원격 공유 폴더에 하위 폴더를 만들어서이 방지할 수 있습니다. 이렇게 하면 하위 폴더는 부모 폴더와 두 배의 공간이 필요 합니다.|
 |-포함|Windows ° Vista 및 Windows Server 2008의 경우 백업에 포함할 볼륨 드라이브 문자, 볼륨 탑재 지점의 GUID 기반 볼륨 이름 또는 쉼표로 구분 된 목록을 지정 합니다. 이 매개 변수를 사용할 경우에만 **-backupTarget** 매개 변수를 사용 합니다.</br>Windows ° 7 및 Windows Server 2008 R2 이상에서는 백업에 포함할 항목의 쉼표로 구분 된 목록을 지정 합니다. 여러 파일, 폴더 또는 볼륨을 포함할 수 있습니다. 볼륨 드라이브 문자, 볼륨 탑재 지점이 나 GUID 기반 볼륨 이름을 사용 하 여 볼륨 경로를 지정할 수 있습니다. 종료 백슬래시를 삽입 하면 GUID 기반의 볼륨 이름을 사용 하는 경우 (\\). 와일드 카드 문자를 사용할 수 있습니다 (\*) 파일에 대 한 경로 지정 하는 경우 파일 이름에 있습니다. 사용할 경우에만 **-backupTarget** 매개 변수를 사용 합니다.|
 |-제외|Windows ° 7 및 Windows Server 2008 R2 이상에서는 백업에서 제외할 항목의 쉼표로 구분 된 목록을 지정 합니다. 파일, 폴더 또는 볼륨을 제외할 수 있습니다. 볼륨 드라이브 문자, 볼륨 탑재 지점이 나 GUID 기반 볼륨 이름을 사용 하 여 볼륨 경로를 지정할 수 있습니다. 종료 백슬래시를 삽입 하면 GUID 기반의 볼륨 이름을 사용 하는 경우 (\\). 와일드 카드 문자를 사용할 수 있습니다 (\*) 파일에 대 한 경로 지정 하는 경우 파일 이름에 있습니다. 사용할 경우에만 **-backupTarget** 매개 변수를 사용 합니다.|
 |-nonRecurseInclude|Windows ° 7 및 Windows Server 2008 R2 이상 버전의 경우 백업에 포함할 비재귀적, 쉼표로 구분 된 항목 목록을 지정 합니다. 여러 파일, 폴더 또는 볼륨을 포함할 수 있습니다. 볼륨 드라이브 문자, 볼륨 탑재 지점이 나 GUID 기반 볼륨 이름을 사용 하 여 볼륨 경로를 지정할 수 있습니다. 종료 백슬래시를 삽입 하면 GUID 기반의 볼륨 이름을 사용 하는 경우 (\\). 와일드 카드 문자를 사용할 수 있습니다 (\*) 파일에 대 한 경로 지정 하는 경우 파일 이름에 있습니다. 사용할 경우에만 **-backupTarget** 매개 변수를 사용 합니다.|
 |-nonRecurseExclude|Windows ° 7 및 Windows Server 2008 R2 이상 버전의 경우 백업에서 제외할 항목의 쉼표로 구분 된 목록을 지정 합니다. 파일, 폴더 또는 볼륨을 제외할 수 있습니다. 볼륨 드라이브 문자, 볼륨 탑재 지점이 나 GUID 기반 볼륨 이름을 사용 하 여 볼륨 경로를 지정할 수 있습니다. 종료 백슬래시를 삽입 하면 GUID 기반의 볼륨 이름을 사용 하는 경우 (\\). 와일드 카드 문자를 사용할 수 있습니다 (\*) 파일에 대 한 경로 지정 하는 경우 파일 이름에 있습니다. 사용할 경우에만 **-backupTarget** 매개 변수를 사용 합니다.|
-|-allCritical|모든 중요 한 볼륨 (운영 체제의 상태를 포함 하는 볼륨)는 백업에 포함 되도록 지정 합니다. 이 매개 변수는 완전 복구에 대 한 백업을 만드는 경우에 유용 합니다. 사용할 경우에만 **-backupTarget** 가 지정 하 고, 그렇지 않으면 명령이 실패 합니다. 와 함께 사용할 수는 **-포함** 옵션입니다.</br>팁:  중요 한 볼륨 백업에 대 한 대상 볼륨은 로컬 드라이브 일 수 있지만 백업에 포함 된 볼륨이 될 수는 없습니다.|
+|-allCritical|모든 중요 한 볼륨 (운영 체제의 상태를 포함 하는 볼륨)는 백업에 포함 되도록 지정 합니다. 이 매개 변수는 완전 복구에 대 한 백업을 만드는 경우에 유용 합니다. 사용할 경우에만 **-backupTarget** 가 지정 하 고, 그렇지 않으면 명령이 실패 합니다. 와 함께 사용할 수는 **-포함** 옵션입니다.</br>팁: 중요 한 볼륨 백업에 대 한 대상 볼륨은 로컬 드라이브 일 수 있지만 백업에 포함 된 볼륨이 될 수는 없습니다.|
 |-systemState|Windows ° 7 및 Windows Server 2008 R2 이상에서는 **-include** 매개 변수를 사용 하 여 지정한 다른 항목과 함께 시스템 상태를 포함 하는 백업을 만듭니다. 시스템 상태 (그룹 정책 및 로그온 스크립트) SYSVOL, Active Directory 및 NTDS COM 설정을 포함 하 여 Windows 레지스트리 부팅 파일 (Boot.ini, NDTLDR, NTDetect.com)를 포함 합니다. 도메인 컨트롤러에서 DIT 및 인증서를 저장 하는 인증서 서비스가 설치 된 경우. 서버에 설치 된 웹 서버 역할을 하는 경우 IIS 메타 디렉터리 포함 됩니다. 서버 클러스터의 일부 이면 클러스터 서비스 정보가 포함 됩니다.|
 |-noVerify|이동식 미디어 (예: DVD)에 저장 되는 백업 오류에 대 한 확인 되지 않습니다 지정 합니다. 이 매개 변수를 사용 하지 않는 경우 이동식 미디어에 저장 되는 백업 오류에 대 한 확인 됩니다.|
 |-사용자|백업을 원격 공유 폴더에 저장 되는 경우에 폴더에 쓰기 권한이 있는 사용자 이름을 지정 합니다.|
 |-암호|매개 변수에서 제공 되는 사용자 이름에 대 한 암호를 지정 **-사용자**합니다.|
-|-noInheritAcl|**-User** 및 **-password** 매개 변수에서 제공한 자격 증명에 해당 하는 ACL (액세스 제어 목록) 권한을 servername에 \\ \\ \<적용 >\\ \< sharename >\\WindowsImageBackup\\ComputerBackedUp\<>\\ (백업이 포함 된 폴더) 백업에 액세스 하 나중에 이러한 자격 증명을 사용 하거나 해야 Administrators 그룹 또는 공유 폴더를 사용 하 여 컴퓨터에서 Backup Operators 그룹의 구성원 이어야 합니다. **-NoInheritAcl** 을 사용 하지 않는 경우 원격 공유 폴더에 대 한 ACL 권한이 기본적으로 \\ \<ComputerBackedUp > 폴더에 적용 되므로 원격 공유 폴더에 대 한 액세스 권한이 있는 사용자는 누구나 백업에 액세스할 수 있습니다.|
+|-noInheritAcl|**-User** 및 **-password** 매개 변수에서 제공 하는 자격 증명에 해당 하는 ACL (액세스 제어 목록) 권한을 \\ @ no__t-3 @ no__t-4servername > \\ @ no__t-6sharename >에 적용 @no__ t-7WindowsImageBackup @ no__t-8 @ no__t-9ComputerBackedUp > 0 (백업이 포함 된 폴더) 백업에 액세스 하 나중에 이러한 자격 증명을 사용 하거나 해야 Administrators 그룹 또는 공유 폴더를 사용 하 여 컴퓨터에서 Backup Operators 그룹의 구성원 이어야 합니다. **-NoInheritAcl** 을 사용 하지 않는 경우 원격 공유 폴더에 대 한 ACL 사용 권한이 기본적으로 \\ @ No__t-2ComputerBackedUp > 폴더에 적용 되므로 원격 공유 폴더에 대 한 액세스 권한이 있는 사용자는 누구나 백업에 액세스할 수 있습니다.|
 |-vssFull|전체 백업 볼륨 섀도 복사본 서비스 (VSS)를 사용 하 여 수행 합니다. 모든 파일이 백업, 각 파일의 기록 백업 된 것을 이전 백업의 로그 문자열이 잘릴 수를 반영 하도록 업데이트 됩니다. 이 매개 변수를 사용 하지 않는 경우 **wbadmin 백업 시작** 이유로 복사 백업 하지만 기록 파일 백업 되는 업데이트 되지 않습니다.</br>주의: Windows Server 백업 이외의 제품을 사용 하 여 현재 백업에 포함 된 볼륨에 있는 응용 프로그램을 백업 하는 경우에는이 매개 변수를 사용 하지 마십시오. 이렇게 하면 백업할 데이터의 크기를 결정 하는 데 의존 하 고 있는 기록 및 전체 백업을 수행할 수 있으므로 다른 백업 제품에서 만드는 증분, 차등 또는 다른 유형의 백업이 손상 될 수 있습니다. 시간이.|
-|-vssCopy|Windows 7 및 Windows Server 2008 R2 이상에서는 VSS를 사용 하 여 복사 백업을 수행 합니다. 모든 파일을 백업할 수 있지만 응용 프로그램 로그 파일 뿐 아니라는 대 한 모든 정보는 파일 변경, 삭제 및 온 위치를 유지할 백업 되는 파일의 기록을 업데이트 되지 않습니다. 이 백업 유형을 사용 해도이 복사 백업에 독립적으로 발생할 수 있는 증분 및 차등 백업의 시퀀스에는 영향을 주지 않습니다. 이것은 기본값입니다.</br>경고: 증분 또는 차등 백업 또는 복원에는 복사 백업을 사용할 수 없습니다.|
+|-vssCopy|Windows 7 및 Windows Server 2008 R2 이상에서는 VSS를 사용 하 여 복사 백업을 수행 합니다. 모든 파일을 백업할 수 있지만 응용 프로그램 로그 파일 뿐 아니라는 대 한 모든 정보는 파일 변경, 삭제 및 온 위치를 유지할 백업 되는 파일의 기록을 업데이트 되지 않습니다. 이 백업 유형을 사용 해도이 복사 백업에 독립적으로 발생할 수 있는 증분 및 차등 백업의 시퀀스에는 영향을 주지 않습니다. 기본값입니다.</br>경고: 증분 또는 차등 백업 또는 복원에는 복사 백업을 사용할 수 없습니다.|
 |-quiet|사용자에 게 하위 명령 프롬프트 없이 실행 됩니다.|
 
 ## <a name="BKMK_examples"></a>예와
@@ -87,21 +87,21 @@ Wbadmin start backup
 다음 예에서는 다양 한 백업 시나리오에서 **wbadmin start backup** 명령을 사용 하는 방법을 보여 줍니다.
 
 시나리오 #1
-- 볼륨 e:,\\d: 탑재 지점에 대\\ 한 \\ \\백업을 만듭니다. 볼륨 {cc566d14-4410-11d9-9d93-806e6f6e6963}
+- 볼륨 e:, d: \\mountpoint 및 \\ @ no__t? \\Volume {cc566d14-4410-11d9-9d93-806e6f6e6963}의 백업을 만듭니다.
 - F: 볼륨에 백업을 저장합니다
   ```
   wbadmin start backup -backupTarget:f: -include:e:,d:\mountpoint,\\?\Volume{cc566d14-44a0-11d9-9d93-806e6f6e6963}\
   ```
   시나리오 #2
-- 볼륨 *d*:에 대 한 *f:\\folder1* 및 *h:\\folder2* 의 일회성 백업을 수행 합니다.
+- *F: \\folder1* 및 *h: \\folder2* 를 볼륨 *d:* 에 한 번 백업 합니다.
 - 시스템 상태 백업
 - 복사 백업 정상적으로 예약 된 차등 백업에 영향을 받지 않도록 확인 하십시오.
   ```
   wbadmin start backup –backupTarget:d: -include:g\folder1,h:\folder2 –systemstate -vsscopy
   ```
   시나리오 #3
-- 비 재귀적으로 백업 되어야 하는 *d:\\folder1* 의 일회성 백업을 수행 합니다.
-- 네트워크 위치  *\\ \\backupshare\\백업 1에 폴더를 백업 합니다.*
+- 비 재귀적으로 백업 되어야 하는 *d: \\folder1* 의 일회성 백업을 수행 합니다.
+- 네트워크 위치에 폴더를 백업 *\\ @ no__t-2backupshare @ no__t-3backup1*
 - 멤버에 대 한 백업에 대 한 액세스를 제한 된 **관리자** 또는 **백업 운영자** 그룹입니다.
   ```
   wbadmin start backup –backupTarget: \\backupshare\backup1 -noinheritacl -nonrecurseinclude:d:\folder1
