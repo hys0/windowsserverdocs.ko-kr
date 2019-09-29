@@ -2,7 +2,7 @@
 title: 설치에 필요한 하드웨어 및 장치 드라이버 수집
 description: MultiPoint 서비스에 대해 설치 해야 하는 드라이버에 대 한 정보
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ author: evaseydl
 manager: scottman
 ms.author: evas
 ms.date: 08/04/2016
-ms.openlocfilehash: f7fec373bc62c93fbf31bbb24bf1a11a42c0736d
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: cfbb8c8b68768c72b869df539c93f05e7e01d256
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871430"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71394695"
 ---
 # <a name="collect-hardware-and-device-drivers-needed-for-the-installation"></a>설치에 필요한 하드웨어 및 장치 드라이버 수집
 MultiPoint 서비스 시스템 배포를 시작 하기 전에 다음이 필요 합니다.  

@@ -1,7 +1,7 @@
 ---
 title: 생성 및 게스트에서 Hyper-v 기능 호환성
-description: 세대 및 주요 Hyper-v 기능을 사용 하 여 호환 되는 운영 체제를 나열 합니다.
-ms.prod: windows-server-threshold
+description: 키 Hyper-v 기능과 호환 되는 세대 및 운영 체제를 나열 합니다.
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -11,12 +11,12 @@ ms.assetid: 81c1f32d-7814-4992-8a66-dd4b77c939b4
 author: KBDAzure
 ms.author: kathydav
 ms.date: 12/05/2016
-ms.openlocfilehash: 5950a75da4569979794a5848bd41ab349dc34676
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.openlocfilehash: cdca6c31ff14fe63e99ec4afa2581885677bb61d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66812658"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71365542"
 ---
 # <a name="hyper-v-feature-compatibility-by-generation-and-guest"></a>생성 및 게스트에서 Hyper-v 기능 호환성
 
@@ -24,7 +24,7 @@ ms.locfileid: "66812658"
   
 이 문서의 표에 세대 및 범주별으로 그룹화 하는 Hyper-v 기능 중 일부와 호환 되는 운영 체제를 보여 줍니다. 일반적으로 최상의 가용성의 최신 운영 체제를 실행 하는 2 세대 가상 컴퓨터 기능을 얻을 수 있습니다.  
   
-일부 기능은 하드웨어 또는 기타 인프라를 사용 하는 점을 염두에 두십시오. 하드웨어 정보를 참조 하세요 [Windows Server 2016에서 Hyper-v에 대 한 시스템 요구 사항](System-requirements-for-Hyper-V-on-Windows.md)합니다. 일부 경우에는 기능이 지원 되는 게스트 운영 체제에 사용할 수 있습니다. 운영 체제를 지원 세부 정보를 보려면  
+일부 기능은 하드웨어 또는 기타 인프라를 사용 하는 점을 염두에 두십시오. 하드웨어 세부 정보는 [Windows Server 2016의 hyper-v에 대 한 시스템 요구 사항](System-requirements-for-Hyper-V-on-Windows.md)을 참조 하세요. 일부 경우에는 기능이 지원 되는 게스트 운영 체제에 사용할 수 있습니다. 운영 체제를 지원 세부 정보를 보려면  
   
 * [지원 되는 Linux 및 FreeBSD 가상 컴퓨터](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)  
 * [지원되는 Windows 게스트 운영 체제](Supported-Windows-guest-operating-systems-for-Hyper-V-on-Windows.md)  
@@ -36,7 +36,7 @@ ms.locfileid: "66812658"
 검사점 | 1과 2 | 모든 지원 되는 게스트  
 게스트 클러스터링 | 1과 2 | 게스트 클러스터 인식 응용 프로그램을 실행 하 고 iSCSI 대상 소프트웨어를 설치 하는  
 복제 | 1과 2 | 모든 지원 되는 게스트  
-도메인 컨트롤러 | 1과 2 | 지원 되는 모든 프로덕션 검사점만을 사용 하 여 Windows Server 게스트 참조 [지원 되는 Windows Server 게스트 운영 체제](https://docs.microsoft.com/windows-server/virtualization/hyper-v/supported-windows-guest-operating-systems-for-hyper-v-on-windows#supported-windows-server-guest-operating-systems)   
+도메인 컨트롤러 | 1과 2 | 프로덕션 검사점만 사용 하는 모든 지원 되는 Windows Server 게스트입니다. [지원 되는 Windows Server 게스트 운영 체제](https://docs.microsoft.com/windows-server/virtualization/hyper-v/supported-windows-guest-operating-systems-for-hyper-v-on-windows#supported-windows-server-guest-operating-systems) 를 참조 하세요.   
   
 ## <a name="compute"></a>컴퓨팅  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66812658"
 ## <a name="development-and-test"></a>개발 및 테스트  
 기능  | 생성 | 게스트 운영 체제  
 ------------- | ------------- | -----------  
-COM/직렬 포트 | 1과 2 <br>**참고:** 2 세대를 구성 하려면 Windows PowerShell을 사용 합니다. 자세한 내용은 참조 하세요 [커널 디버깅에 대 한 COM 포트를 추가](./plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v.md#add-a-com-port-for-kernel-debugging)합니다. | 모든 지원 되는 게스트  
+COM/직렬 포트 | 1과 2 <br>**참고:** 2 세대의 경우 Windows PowerShell을 사용 하 여를 구성 합니다. 자세한 내용은 [커널 디버깅을 위한 COM 포트 추가](./plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v.md#add-a-com-port-for-kernel-debugging)를 참조 하세요. | 모든 지원 되는 게스트  
   
 ## <a name="mobility"></a>이동성  
   
@@ -71,18 +71,18 @@ Import/export(가져오기/내보내기) | 1과 2 |  모든 지원 되는 게스
   
 기능  | 생성 | 게스트 운영 체제  
 ------------- | ------------- | -----------  
-개별 장치 할당 (DDA) | 1과 2 | Windows Server 2016, Windows Server 2012 R2 업데이트 3133690 에서만 설치, Windows 10 <br> **참고:** 3133690 업데이트에 대 한 내용은 참조 하세요 [이](https://support.microsoft.com/kb/3133690) 지원 문서입니다.  
-고급 세션 모드 | 1과 2 | Windows Server 2016, Windows Server 2012 R2, Windows 10 및 Windows 8.1, 원격 데스크톱 서비스를 사용 하 여 사용 하도록 설정 <br>**참고**: 또한 호스트를 구성 해야 합니다. 자세한 내용은 다음을 참조 하십시오. [VMConnect 사용 하 여 Hyper-v 가상 컴퓨터에서 로컬 리소스 사용](./learn-more/Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md)합니다.  
+개별 장치 할당 (DDA) | 1과 2 | Windows Server 2016, Windows Server 2012 R2 업데이트 3133690 에서만 설치, Windows 10 <br> **참고:** 업데이트 3133690에 대 한 자세한 내용은 [이](https://support.microsoft.com/kb/3133690) 지원 문서를 참조 하세요.  
+고급 세션 모드 | 1과 2 | Windows Server 2016, Windows Server 2012 R2, Windows 10 및 Windows 8.1, 원격 데스크톱 서비스 사용 <br>**참고**: 호스트를 구성 해야 할 수도 있습니다. 자세한 내용은 다음을 참조 하십시오. [VMConnect 사용 하 여 Hyper-v 가상 컴퓨터에서 로컬 리소스 사용](./learn-more/Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md)합니다.  
 RemoteFx | 1과 2 | 1 세대 Windows 8로 시작 하는 32 비트 및 64 비트 Windows 버전입니다. <br> 64 비트 Windows 10 버전에 2 세대  
   
 ## <a name="security"></a>보안  
   
 기능  | 생성 | 게스트 운영 체제  
 ------------- | ------------- | -----------  
-보안 부팅 | 2 | **Linux**: Ubuntu 14.04 이상, SUSE Linux Enterprise Server 12 및 이후, Red Hat Enterprise Linux 7.0 이상 및 CentOS 7.0 이상<br>**Windows**: 2 세대 가상 머신에서 실행할 수 있는 지원 되는 모든 버전  
-실드 된 가상 컴퓨터 | 2 | **Windows**: 2 세대 가상 머신에서 실행할 수 있는 지원 되는 모든 버전  
+보안 부팅 | 2 | **Linux**: Ubuntu 14.04 이상, SUSE Linux Enterprise Server 12 이상, Red Hat Enterprise Linux 7.0 이상 및 CentOS 7.0 이상<br>**Windows**: 2 세대 가상 머신에서 실행할 수 있는 모든 지원 되는 버전  
+실드 된 가상 컴퓨터 | 2 | **Windows**: 2 세대 가상 머신에서 실행할 수 있는 모든 지원 되는 버전  
   
-## <a name="storage"></a>저장 공간  
+## <a name="storage"></a>스토리지  
   
 기능  | 생성 | 게스트 운영 체제  
 ------------- | ------------- | -----------  

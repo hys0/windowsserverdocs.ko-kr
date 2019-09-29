@@ -1,7 +1,7 @@
 ---
 title: Windows Server 2012 R2 권장된 메모리 양은로 구성 해야
-description: 이 모범 사례 분석기 규칙에 의해 보고 된 문제를 해결 하려면 지침을 제공 합니다.
-ms.prod: windows-server-threshold
+description: 이 모범 사례 분석기 규칙에서 보고 한 문제를 해결 하는 지침을 제공 합니다.
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -10,12 +10,12 @@ ms.topic: article
 ms.assetid: b383a3c9-3ab6-442e-abd8-0942a32b60f8
 author: KBDAzure
 ms.date: 8/16/2016
-ms.openlocfilehash: 871230ee4616ac6f18778cd46b3e5c833b544c68
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9607c5df741e08a57fd5fe6d24f4c77ab33d7b12
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59812154"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71393151"
 ---
 # <a name="windows-server-2012-r2-should-be-configured-with-the-recommended-amount-of-memory"></a>Windows Server 2012 R2 권장된 메모리 양은로 구성 해야
 
@@ -33,15 +33,15 @@ ms.locfileid: "59812154"
 다음 섹션에서는 기울임꼴이이 문제에 대 한 모범 사례 분석기 도구에 표시 되는 UI 텍스트를 나타냅니다.  
   
 ## <a name="issue"></a>**문제점**  
-*Windows Server 2012 R2를 실행 하는 가상 머신 권장 되는 2GB RAM 용량 보다 더 적은 노력으로 구성 됩니다.*  
+*Windows Server 2012 r 2를 실행 하는 가상 머신은 권장 되는 RAM 용량 (2gb) 보다 작게 구성 됩니다.*  
   
-## <a name="impact"></a>**Impact**  
-*게스트 운영 체제 및 응용 프로그램 잘 작동 하지 않을 수 있습니다. 메모리가 부족 하 여 한 번에 여러 응용 프로그램을 실행 하려면 아닐 수도 있습니다. 이 가상 컴퓨터에 영향을 줍니다.*  
+## <a name="impact"></a>**식**  
+@no__t 게스트 운영 체제 및 응용 프로그램이 제대로 작동 하지 않을 수 있습니다. 메모리가 부족 하 여 한 번에 여러 응용 프로그램을 실행 하려면 아닐 수도 있습니다. 이는 다음과 같은 가상 컴퓨터에 영향을 줍니다. *  
  
-\<가상 머신의 목록 >  
+@no__t-가상 머신 목록 >  
  
 ## <a name="resolution"></a>**해결 방법**  
-*Hyper-v 관리자를 사용 하 여이 가상 머신에 최소 2GB에 할당 된 메모리를 늘리세요.*  
+*Hyper-v 관리자를 사용 하 여이 가상 컴퓨터에 할당 된 메모리를 2gb 이상으로 늘리십시오.*  
   
 ### <a name="increase-the-memory-using-hyper-v-manager"></a>Hyper-v 관리자를 사용 하 여 메모리 확보  
   
@@ -68,7 +68,7 @@ Set-VMMemory <MyVM> -StartupBytes 2GB
 ```  
   
 ## <a name="see-also"></a>관련 항목  
-[Set-VMMemory](https://technet.microsoft.com/library/hh848572.aspx)  
+[설정-VMMemory](https://technet.microsoft.com/library/hh848572.aspx)  
   
 
 

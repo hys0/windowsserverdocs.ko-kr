@@ -1,7 +1,7 @@
 ---
 title: 불연속 장치 할당을 사용 하 여 NVMe 저장소 장치 배포
 description: DDA를 사용 하 여 저장소 장치를 배포 하는 방법을 알아봅니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 ms.technology: hyper-v
 ms.tgt_pltfrm: na
@@ -9,12 +9,12 @@ ms.topic: article
 author: chrishuybregts
 ms.author: chrihu
 ms.assetid: 1c36107e-78c9-4ec0-a313-6ed557ac0ffc
-ms.openlocfilehash: 001d8addba2cdb8cbbd5d72ffa224d16f62d1245
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: eb76b25e8ff1428b2c03b37dde1f76562751d3bb
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70872118"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71364320"
 ---
 # <a name="deploy-nvme-storage-devices-using-discrete-device-assignment"></a>불연속 장치 할당을 사용 하 여 NVMe 저장소 장치 배포
 
@@ -56,7 +56,7 @@ Dismount-VMHostAssignableDevice -LocationPath $locationPath
 Add-VMAssignableDevice -LocationPath $locationPath -VMName VMName
 ```
 
-## <a name="whats-next"></a>새로운 기능
+## <a name="whats-next"></a>다음 단계
 장치가 VM에 성공적으로 탑재 되 면 이제 운영 체제 미 설치 시스템에서 실행 되는 경우와 마찬가지로 해당 VM을 시작 하 고 장치와 상호 작용할 수 있습니다.  게스트 VM에서 장치 관리자를 열고 하드웨어가 표시 되는 것을 확인 하 여이를 확인할 수 있습니다.
 
 ## <a name="removing-a-device-and-returning-it-to-the-host"></a>장치를 제거 하 고 호스트에 반환

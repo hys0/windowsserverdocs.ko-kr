@@ -1,8 +1,8 @@
 ---
 title: regsvr32
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 87d9291755ddb4484e85248cb01ad78b01a25965
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 444af0ccf7c9bbe21c013f32b396997b7cb2e00f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59889994"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71371634"
 ---
 # <a name="regsvr32"></a>regsvr32
 
@@ -41,11 +41,11 @@ regsvr32 [/u] [/s] [/n] [/i[:cmdline]] <DllName>
 |/u|서버 등록 취소합니다.|
 |/s|실행 **Regsvr32** 메시지를 표시 하지 않고 있습니다.|
 |/n|실행 **Regsvr32** 호출 하지 않고 **DllRegisterServer**합니다. (필요는 **/i** 매개 변수입니다.)|
-|/i:\<cmdline>|선택적 명령줄 문자열을 전달 (*명령줄*)를 **DllInstall**합니다. 와 함께에서이 매개 변수를 사용 하는 경우는 **/u** 호출 매개 변수를 **DllUninstall**합니다.|
-|\<DllName>|가 등록 하는.dll 파일의 이름입니다.|
+|/i: \<cmdline >|선택적 명령줄 문자열을 전달 (*명령줄*)를 **DllInstall**합니다. 와 함께에서이 매개 변수를 사용 하는 경우는 **/u** 호출 매개 변수를 **DllUninstall**합니다.|
+|@no__t 0DllName >|가 등록 하는.dll 파일의 이름입니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 .Dll Active Directory 스키마를 등록 하려면 다음을 입력 합니다.
 ```

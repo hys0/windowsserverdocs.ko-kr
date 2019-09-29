@@ -1,17 +1,17 @@
 ---
 title: Active Directory에서 클러스터 계정 구성하는 중
 ms.date: 11/12/2012
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage-failover-clustering
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: 06fcb7ee7d05b85c1e7d1c6752268ea7e5dbbdb2
-ms.sourcegitcommit: 94ba5a33e783fdfb965c612943d0bfe35f9fcaa1
+ms.openlocfilehash: 8a540361cdd07f6adfc1c929d77c510ef8433d6d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71250223"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71369886"
 ---
 # <a name="configuring-cluster-accounts-in-active-directory"></a>Active Directory에서 클러스터 계정 구성하는 중
 

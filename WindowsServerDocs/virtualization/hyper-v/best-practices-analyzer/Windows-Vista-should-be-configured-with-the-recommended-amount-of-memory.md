@@ -1,7 +1,7 @@
 ---
 title: Windows Vista 메모리의 양이 추천된 하 여 구성 해야
-description: 이 모범 사례 분석기 규칙에 의해 보고 된 문제를 해결 하려면 지침을 제공 합니다.
-ms.prod: windows-server-threshold
+description: 이 모범 사례 분석기 규칙에서 보고 한 문제를 해결 하는 지침을 제공 합니다.
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -10,12 +10,12 @@ ms.topic: article
 ms.assetid: 64f4e53b-4adb-4e1d-bc48-c24f5f9d222f
 author: KBDAzure
 ms.date: 8/16/2016
-ms.openlocfilehash: 6ba96b713bc838ec1ebfc577df7cbbeeb39b1c22
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 698e795a9157383063c54eb3cb06461ff58532f0
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59826304"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71364355"
 ---
 # <a name="windows-vista-should-be-configured-with-the-recommended-amount-of-memory"></a>Windows Vista 메모리의 양이 추천된 하 여 구성 해야
 
@@ -34,17 +34,17 @@ ms.locfileid: "59826304"
   
 ## <a name="issue"></a>문제점  
   
-*Windows Vista를 실행 하는 가상 컴퓨터는 1GB ram 권장된 크기 보다 더 적은 노력으로 구성 됩니다.*  
+*Windows Vista를 실행 하는 가상 머신은 1gb RAM 권장 크기 보다 더 작은 수준으로 구성 됩니다.*  
   
 ## <a name="impact"></a>영향  
   
-*게스트 운영 체제 및 응용 프로그램 잘 작동 하지 않을 수 있습니다. 메모리가 부족 하 여 한 번에 여러 응용 프로그램을 실행 하려면 아닐 수도 있습니다. 이 가상 컴퓨터에 영향을 줍니다.*  
+@no__t 게스트 운영 체제 및 응용 프로그램이 제대로 작동 하지 않을 수 있습니다. 메모리가 부족 하 여 한 번에 여러 응용 프로그램을 실행 하려면 아닐 수도 있습니다. 이는 다음과 같은 가상 컴퓨터에 영향을 줍니다. *  
   
-\<가상 머신 이름 목록 >  
+@no__t-가상 머신 이름의 목록 >  
   
 ## <a name="resolution"></a>해결 방법  
   
-*Hyper-v 관리자를 사용 하 여이 가상 머신에 1GB 이상에 할당 된 메모리를 늘리세요.*  
+*Hyper-v 관리자를 사용 하 여이 가상 컴퓨터에 할당 된 메모리를 1GB 이상으로 늘리십시오.*  
   
 ### <a name="to-increase-the-memory-allocated-to-a-virtual-machine"></a>가상 컴퓨터에 할당 된 메모리를 늘리려면  
   
@@ -71,7 +71,7 @@ Set-VMMemory <MyVM> -StartupBytes 1GB
 ```  
   
 ## <a name="see-also"></a>관련 항목  
-[Set-VMMemory](https://technet.microsoft.com/library/hh848572.aspx)  
+[설정-VMMemory](https://technet.microsoft.com/library/hh848572.aspx)  
   
 
 

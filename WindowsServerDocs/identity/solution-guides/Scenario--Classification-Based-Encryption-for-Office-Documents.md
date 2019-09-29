@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 38e058f36522ba6a2c81694cb883d0946b04adda
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ab1b277b83369cf2e4ef4be5aa467dea8b2d2f84
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59865184"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71357437"
 ---
 # <a name="scenario-classification-based-encryption-for-office-documents"></a>시나리오: Office 문서에 대한 분류 기반 암호화
 
@@ -36,13 +36,13 @@ AD RMS 암호화는 또 다른 파일 보호 계층을 제공합니다. 중요�
 ## <a name="in-this-scenario"></a>이 시나리오의 내용  
 다음은 이 시나리오에 사용할 수 있는 지침입니다.  
   
--   [Office 문서 암호화에 대 한 계획 고려 사항](assetId:///14714ba6-d6a2-45e4-aae5-d3318817e52a)  
+-   [Office 문서의 암호화에 대 한 계획 고려 사항](assetId:///14714ba6-d6a2-45e4-aae5-d3318817e52a)  
   
--   [Office 파일 암호화 배포 &#40;데모 단계&#41;](Deploy-Encryption-of-Office-Files--Demonstration-Steps-.md)  
+-   [Office 파일 &#40;의 암호화 배포 데모 단계&#41;](Deploy-Encryption-of-Office-Files--Demonstration-Steps-.md)  
   
--   [동적 Access Control: 시나리오 개요](Dynamic-Access-Control--Scenario-Overview.md)  
+-   [동적 액세스 제어: 시나리오 개요](Dynamic-Access-Control--Scenario-Overview.md)  
   
-## <a name="BKMK_NEW"></a>역할과이 시나리오에 포함 된 기능  
+## <a name="BKMK_NEW"></a>이 시나리오에 포함 된 역할 및 기능  
 다음 표에는 이 시나리오에 포함된 역할 및 기능이 나열되어 있으며, 이러한 역할 및 기능이 시나리오를 지원하는 방법에 대한 설명이 나와 있습니다.  
   
 |역할/기능|이 시나리오를 지원하는 방법|  

@@ -1,8 +1,8 @@
 ---
-title: ksetup:domain
-description: '에 대 한 Windows 명령을 항목 * * *- '
+title: 'ksetup: 도메인'
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1f53e807891b434709b1a8faed7aae8e8d444f6e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 0a4d9f09def32c7518046c25887f4154020c5d7e
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59857454"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71375120"
 ---
-# <a name="ksetupdomain"></a>ksetup:domain
+# <a name="ksetupdomain"></a>ksetup: 도메인
 
 
 
@@ -36,13 +36,13 @@ ksetup /domain <DomainName>
 
 |매개 변수|설명|
 |---------|-----------|
-|\<DomainName>|연결을 설정 하려는 도메인 이름입니다. 정규화 된 도메인 이름 또는 간단한 형태의 contoso.com 또는 contoso과 같은 이름 사용 합니다.|
+|\<DomainName >|연결을 설정 하려는 도메인 이름입니다. 정규화 된 도메인 이름 또는 간단한 형태의 contoso.com 또는 contoso과 같은 이름 사용 합니다.|
 
 ## <a name="remarks"></a>설명
 
 없음
 
-## <a name="BKMK_Examples"></a>예제
+## <a name="BKMK_Examples"></a>예와
 
 예: Microsoft /mapuser 하위 명령을 사용 하 여 올바른 도메인에 대 한 연결을 설정 합니다.
 ```

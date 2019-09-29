@@ -1,8 +1,8 @@
 ---
 title: nslookup set debug
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: af0d028e3886e6743f402c2c9aa934d6046abf9b
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 63423481e685daac821ae75864f20783f96c56c5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66436746"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71372947"
 ---
 # <a name="nslookup-set-debug"></a>nslookup set debug
 
@@ -38,7 +38,7 @@ set [no]debug
 |-------------|--------------------------------------------------------------|
 | **nodebug** | 디버깅 모드를 해제합니다. 기본 구문은 **nodebug**합니다. |
 |  **debug**  |                   디버깅 모드를 설정합니다.                   |
-|  \*\*{help  |                            ?}\*\*                            |
+|  \* @ no__t {help  |                            ?} \* @ no__t-1                            |
 
 ## <a name="remarks"></a>설명
 

@@ -1,8 +1,8 @@
 ---
 title: 레이블
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d0c68fbbf3ea776bbf6cd49fc4fa446d5dd46542
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: e66a2d9a7d28462b287084e3f8b129ffc03800bd
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66437914"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71374795"
 ---
 # <a name="label"></a>레이블
 
@@ -39,8 +39,8 @@ label [/mp] [<Volume>] [<Label>]
 |매개 변수|설명|
 |---------|-----------|
 |/mp|볼륨 탑재 지점 또는 볼륨 이름으로 처리 해야 함을 지정 합니다.|
-|\<볼륨 >|(콜론) 드라이브 문자 지정 탑재 지점 또는 볼륨 이름입니다. 볼륨 이름을 지정 하는 경우는 **/mp** 매개 변수가 필요 하지 않습니다.|
-|\<Label>|볼륨에 대 한 레이블을 지정합니다.|
+|\<Volume >|(콜론) 드라이브 문자 지정 탑재 지점 또는 볼륨 이름입니다. 볼륨 이름을 지정 하는 경우는 **/mp** 매개 변수가 필요 하지 않습니다.|
+|\<Label >|볼륨에 대 한 레이블을 지정합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
 ## <a name="remarks"></a>설명
@@ -59,7 +59,7 @@ label [/mp] [<Volume>] [<Label>]
   ```  
   레이블을 삭제 하려면 Y 키 또는 레이블을 변경 하지 않으려면 N 키를 누릅니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="BKMK_examples"></a>예와
 
 7 월에 대 한 판매 정보를 포함 하는 드라이브의 디스크에에서 레이블을 입력 합니다.
 ```

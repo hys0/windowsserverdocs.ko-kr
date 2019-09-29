@@ -1,8 +1,8 @@
 ---
 title: ftp 사용자
-description: '에 대 한 Windows 명령을 항목 * * *- '
+description: '\* * * *에 대 한 Windows 명령 항목 '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1c9406af0868421fa54fe757742cf2a120561b9c
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 63281a0ffdd646d3652eb3a442a8edd9acec9cce
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66438338"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71375873"
 ---
 # <a name="ftp-user"></a>ftp: 사용자
 
@@ -37,7 +37,7 @@ user <UserName> [<Password>] [<Account>]
 | [<Password>] |               암호를 지정 *UserName*합니다. 암호는 지정 하지 않고 필요한 경우  **ftp** 암호를 묻는 메시지를 표시 합니다.               |
 | [<Account>]  | 원격 컴퓨터에 로그온 하는 데 사용할 계정을 지정 합니다. 하는 경우는 *계정* 는 지정 하지 않고 필요 하며,  **ftp** 는 계정에 대 한 메시지를 표시 합니다. |
 
-## <a name="BKMK_Examples"></a>예제  
+## <a name="BKMK_Examples"></a>예와  
 User1 Password1 암호로 지정 합니다.  
 ```  
 user User1 Password1  

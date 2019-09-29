@@ -1,7 +1,7 @@
 ---
 title: 팀으로 구성 된 NIC 구성 (데이터 센터)에서 수렴 형 NIC
 description: 이 항목에서는 스위치 포함 된 팀 (설정)을 사용 하 여 팀으로 구성 된 NIC 구성에서 수렴 형 NIC를 배포 하기 위한 지침을 제공 합니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: f01546f8-c495-4055-8492-8806eee99862
@@ -9,12 +9,12 @@ manager: dougkim
 ms.author: pashort
 author: shortpatti
 ms.date: 09/17/2018
-ms.openlocfilehash: 8229b72d69968d3690ece87d5116b215bdf78a08
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: e4c305a7c8c4c4618b0df1e1b2a646356d8f821f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70869874"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71356114"
 ---
 # <a name="converged-nic-in-a-teamed-nic-configuration-datacenter"></a>팀으로 구성 된 NIC 구성 (데이터 센터)에서 수렴 형 NIC
 
@@ -39,7 +39,7 @@ ms.locfileid: "70869874"
    _**검색**_
 
 
-   |    이름    |           인터페이스 설명           | ifIndex | 상태 |    Mac     | /%Linkspeed |
+   |    이름    |           인터페이스 설명           | ifIndex | Status |    Mac     | /%Linkspeed |
    |------------|------------------------------------------|---------|--------|-------------------|-----------|
    | 40G-1 | Mellanox Connectx-3 Pro 이더넷 어댑터 |   11    |   위쪽   | E4-1D-2D-07-43-D0 |  40 Gbps  |
 
@@ -61,7 +61,7 @@ ms.locfileid: "70869874"
    | InterfaceIndex |     11      |
    | InterfaceAlias | 40G-1  |
    | AddressFamily  |    IPv4     |
-   |      형식      |   유니캐스트   |
+   |      type      |   유니캐스트   |
    |  PrefixLength  |     24      |
 
    ---
@@ -75,7 +75,7 @@ ms.locfileid: "70869874"
    _**검색**_
 
 
-   |    이름    |          인터페이스 설명           | ifIndex | 상태 |    Mac     | /%Linkspeed |
+   |    이름    |          인터페이스 설명           | ifIndex | Status |    Mac     | /%Linkspeed |
    |------------|-----------------------------------------|---------|--------|-------------------|-----------|
    | 40G-2 | Mellanox Connectx-3 Pro 이더넷 A ... #2 |   13    |   위쪽   | E4-1D-07-40-70 |  40 Gbps  |
 
@@ -97,7 +97,7 @@ ms.locfileid: "70869874"
    | InterfaceIndex |     13      |
    | InterfaceAlias | 40G-2  |
    | AddressFamily  |    IPv4     |
-   |      형식      |   유니캐스트   |
+   |      type      |   유니캐스트   |
    |  PrefixLength  |     24      |
 
    ---
@@ -228,7 +228,7 @@ ms.locfileid: "70869874"
    _**검색**_
 
 
-   |    이름    |          인터페이스 설명           | ifIndex | 상태 |    Mac     | /%Linkspeed |
+   |    이름    |          인터페이스 설명           | ifIndex | Status |    Mac     | /%Linkspeed |
    |------------|-----------------------------------------|---------|--------|-------------------|-----------|
    | 40G-1 | Mellanox Connectx-3 Pro 이더넷 Ada ... |   11    |   위쪽   | E4-1D-2D-07-43-D0 |  40 Gbps  |
 
@@ -265,7 +265,7 @@ ms.locfileid: "70869874"
    _**검색**_
 
 
-   |    이름    |          인터페이스 설명           | ifIndex | 상태 |    Mac     | /%Linkspeed |
+   |    이름    |          인터페이스 설명           | ifIndex | Status |    Mac     | /%Linkspeed |
    |------------|-----------------------------------------|---------|--------|-------------------|-----------|
    | 40G-2 | Mellanox Connectx-3 Pro 이더넷 Ada ... |   11    |   위쪽   | E4-1D-2D-07-43-D1 |  40 Gbps  |
 
@@ -405,16 +405,16 @@ ms.locfileid: "70869874"
    _**검색**_
 
 
-   | 우선 순위 | Enabled | PolicySet | IfIndex | IfAlias |
+   | 우선 순위 | Enabled | PolicySet | ifIndex | IfAlias |
    |----------|---------|-----------|---------|---------|
-   |    0     |  False  |  Global   | &nbsp;  | &nbsp;  |
-   |    1     |  False  |  Global   | &nbsp;  | &nbsp;  |
-   |    2     |  False  |  Global   | &nbsp;  | &nbsp;  |
-   |    3     |  True   |  Global   | &nbsp;  | &nbsp;  |
-   |    4     |  False  |  Global   | &nbsp;  | &nbsp;  |
-   |    5     |  False  |  Global   | &nbsp;  | &nbsp;  |
-   |    6     |  False  |  Global   | &nbsp;  | &nbsp;  |
-   |    7     |  False  |  Global   | &nbsp;  | &nbsp;  |
+   |    0     |  False  |  전역   | &nbsp;  | &nbsp;  |
+   |    1     |  False  |  전역   | &nbsp;  | &nbsp;  |
+   |    2     |  False  |  전역   | &nbsp;  | &nbsp;  |
+   |    3     |  True   |  전역   | &nbsp;  | &nbsp;  |
+   |    4     |  False  |  전역   | &nbsp;  | &nbsp;  |
+   |    5     |  False  |  전역   | &nbsp;  | &nbsp;  |
+   |    6     |  False  |  전역   | &nbsp;  | &nbsp;  |
+   |    7     |  False  |  전역   | &nbsp;  | &nbsp;  |
 
    ---
 
@@ -450,7 +450,7 @@ ms.locfileid: "70869874"
    _**OperationalTrafficClasses**:_    
 
 
-   | 간체 |  TSA   | 대역 | 우선순위 |
+   | 간체 |  TSA의   | 대역 | 우선순위 |
    |----|--------|-----------|------------|
    | 0  | 높음 |  &nbsp;   |    0-7     |
 
@@ -463,7 +463,7 @@ ms.locfileid: "70869874"
    _**OperationalClassifications**:_  
 
 
-   | 프로토콜  | 포트/유형 | 우선 순위 |
+   | Protocol  | 포트/유형 | 우선 순위 |
    |-----------|-----------|----------|
    |  기본값  |  &nbsp;   |    0     |
    | NetDirect |    445    |    3     |
@@ -494,7 +494,7 @@ ms.locfileid: "70869874"
    _**OperationalTrafficClasses**:_  
 
 
-   | 간체 |  TSA   | 대역 | 우선순위 |
+   | 간체 |  TSA의   | 대역 | 우선순위 |
    |----|--------|-----------|------------|
    | 0  | 높음 |  &nbsp;   |    0-7     |
 
@@ -507,7 +507,7 @@ ms.locfileid: "70869874"
    _**OperationalClassifications**:_  
 
 
-   | 프로토콜  | 포트/유형 | 우선 순위 |
+   | Protocol  | 포트/유형 | 우선 순위 |
    |-----------|-----------|----------|
    |  기본값  |  &nbsp;   |    0     |
    | NetDirect |    445    |    3     |
@@ -524,9 +524,9 @@ ms.locfileid: "70869874"
    _**검색**_  
 
 
-   | 이름 | 알고리즘 | 대역폭 (%) | 우선 순위 | PolicySet | IfIndex | IfAlias |
+   | 이름 | 알고리즘 | 대역폭 (%) | 우선 순위 | PolicySet | ifIndex | IfAlias |
    |------|-----------|--------------|----------|-----------|---------|---------|
-   | SMB  |    요소가    |      50      |    3     |  Global   | &nbsp;  | &nbsp;  |
+   | SMB  |    요소가    |      50      |    3     |  전역   | &nbsp;  | &nbsp;  |
 
    ---
 
@@ -539,10 +539,10 @@ ms.locfileid: "70869874"
    _**검색**_  
 
 
-   |   이름    | 알고리즘 | 대역폭 (%) | 우선 순위 | PolicySet | IfIndex | IfAlias |
+   |   이름    | 알고리즘 | 대역폭 (%) | 우선 순위 | PolicySet | ifIndex | IfAlias |
    |-----------|-----------|--------------|----------|-----------|---------|---------|
-   | 기본 |    요소가    |      50      | 0-2, 4-7  |  Global   | &nbsp;  | &nbsp;  |
-   |    SMB    |    요소가    |      50      |    3     |  Global   | &nbsp;  | &nbsp;  |
+   | 기본 |    요소가    |      50      | 0-2, 4-7  |  전역   | &nbsp;  | &nbsp;  |
+   |    SMB    |    요소가    |      50      |    3     |  전역   | &nbsp;  | &nbsp;  |
 
    ---
 
@@ -558,9 +558,9 @@ ms.locfileid: "70869874"
    _**검색**_
 
 
-   | 이름 | 알고리즘 | 대역폭 (%) | 우선 순위 | PolicySet | IfIndex | IfAlias |
+   | 이름 | 알고리즘 | 대역폭 (%) | 우선 순위 | PolicySet | ifIndex | IfAlias |
    |------|-----------|--------------|----------|-----------|---------|---------|
-   | I P 1  |    요소가    |      10      |    1     |  Global   | &nbsp;  | &nbsp;  |
+   | I P 1  |    요소가    |      10      |    1     |  전역   | &nbsp;  | &nbsp;  |
 
    ---
 
@@ -571,9 +571,9 @@ ms.locfileid: "70869874"
    _**검색**_
 
 
-   | 이름 | 알고리즘 | 대역폭 (%) | 우선 순위 | PolicySet | IfIndex | IfAlias |
+   | 이름 | 알고리즘 | 대역폭 (%) | 우선 순위 | PolicySet | ifIndex | IfAlias |
    |------|-----------|--------------|----------|-----------|---------|---------|
-   | IP2  |    요소가    |      10      |    2     |  Global   | &nbsp;  | &nbsp;  |
+   | IP2  |    요소가    |      10      |    2     |  전역   | &nbsp;  | &nbsp;  |
 
    ---
 
@@ -586,12 +586,12 @@ ms.locfileid: "70869874"
     _**검색**_
 
 
-    |   이름    | 알고리즘 | 대역폭 (%) | 우선 순위 | PolicySet | IfIndex | IfAlias |
+    |   이름    | 알고리즘 | 대역폭 (%) | 우선 순위 | PolicySet | ifIndex | IfAlias |
     |-----------|-----------|--------------|----------|-----------|---------|---------|
-    | 기본 |    요소가    |      30      |  0, 4-7   |  Global   | &nbsp;  | &nbsp;  |
-    |    SMB    |    요소가    |      50      |    3     |  Global   | &nbsp;  | &nbsp;  |
-    |    I P 1    |    요소가    |      10      |    1     |  Global   | &nbsp;  | &nbsp;  |
-    |    IP2    |    요소가    |      10      |    2     |  Global   | &nbsp;  | &nbsp;  |
+    | 기본 |    요소가    |      30      |  0, 4-7   |  전역   | &nbsp;  | &nbsp;  |
+    |    SMB    |    요소가    |      50      |    3     |  전역   | &nbsp;  | &nbsp;  |
+    |    I P 1    |    요소가    |      10      |    1     |  전역   | &nbsp;  | &nbsp;  |
+    |    IP2    |    요소가    |      10      |    2     |  전역   | &nbsp;  | &nbsp;  |
 
     ---
 
@@ -761,7 +761,7 @@ VSwitch를 만들고 RDMA \(모드 2\)로 전환 하기 전에 패브릭이 올�
    _**검색**_
 
 
-   |        이름         |        인터페이스 설명         | ifIndex | 상태 |    Mac     | /%Linkspeed |
+   |        이름         |        인터페이스 설명         | ifIndex | Status |    Mac     | /%Linkspeed |
    |---------------------|-------------------------------------|---------|--------|-------------------|-----------|
    | vEthernet (VMSTEST) | Hyper-v 가상 이더넷 어댑터 #2 |   28    |   위쪽   | E4-1D-07-40-71 |  80 Gbps  |
 
@@ -776,7 +776,7 @@ VSwitch를 만들고 RDMA \(모드 2\)로 전환 하기 전에 패브릭이 올�
    _**검색**_
 
 
-   |  이름   | IsManagementOs | VMName  |  SwitchName  | Mac | 상태 | IPAddresses |
+   |  이름   | IsManagementOs | VMName  |  SwitchName  | Mac | Status | IPAddresses |
    |---------|----------------|---------|--------------|------------|--------|-------------|
    | VMSTEST |      True      | VMSTEST | E41D2D074071 |    확인을    | &nbsp; |             |
 
@@ -885,7 +885,7 @@ VSwitch를 만들고 RDMA \(모드 2\)로 전환 하기 전에 패브릭이 올�
    _**검색**_ 
 
 
-   |         이름         | IsManagementOs | VMName |      SwitchName      |  Mac  | 상태 | IPAddresses |
+   |         이름         | IsManagementOs | VMName |      SwitchName      |  Mac  | Status | IPAddresses |
    |----------------------|----------------|--------|----------------------|--------------|--------|-------------|
    | CORP-외부 전환 |      True      | &nbsp; | CORP-외부 전환 | 001B785768AA |  확인을  |   &nbsp;    |
    |         관리          |      True      | &nbsp; |       VMSTEST        | E41D2D074071 |  확인을  |   &nbsp;    |
@@ -901,7 +901,7 @@ VSwitch를 만들고 RDMA \(모드 2\)로 전환 하기 전에 패브릭이 올�
    _**검색**_
 
 
-   |      이름       |        인터페이스 설명         | ifIndex | 상태 |    Mac     | /%Linkspeed |
+   |      이름       |        인터페이스 설명         | ifIndex | Status |    Mac     | /%Linkspeed |
    |-----------------|-------------------------------------|---------|--------|-------------------|-----------|
    | vEthernet (MGT) | Hyper-v 가상 이더넷 어댑터 #2 |   28    |   위쪽   | E4-1D-07-40-71 |  80 Gbps  |
 
@@ -941,7 +941,7 @@ VSwitch를 만들고 RDMA \(모드 2\)로 전환 하기 전에 패브릭이 올�
    _**검색**_ 
 
 
-   |         이름         | IsManagementOs |        VMName        |  SwitchName  | Mac | 상태 | IPAddresses |
+   |         이름         | IsManagementOs |        VMName        |  SwitchName  | Mac | Status | IPAddresses |
    |----------------------|----------------|----------------------|--------------|------------|--------|-------------|
    | CORP-외부 전환 |      True      | CORP-외부 전환 | 001B785768AA |    확인을    | &nbsp; |             |
    |         관리          |      True      |       VMSTEST        | E41D2D074071 |    확인을    | &nbsp; |             |
