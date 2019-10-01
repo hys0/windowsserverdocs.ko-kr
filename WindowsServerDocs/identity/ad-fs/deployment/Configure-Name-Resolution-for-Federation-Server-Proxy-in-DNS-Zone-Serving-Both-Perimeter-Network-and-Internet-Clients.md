@@ -10,10 +10,10 @@ ms.prod: windows-server
 ms.technology: identity-adfs
 ms.author: billmath
 ms.openlocfilehash: 118c03ada32d3cd5b198ecd238078984a38df0db
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 8fbd2d877612a9feb02d7d91ed0372d7cd441d5c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 10/01/2019
 ms.locfileid: "71359828"
 ---
 # <a name="configure-name-resolution-for-a-federation-server-proxy-in-a-dns-zone-that-serves-both-the-perimeter-network-and-internet-clients"></a>경계 네트워크 및 인터넷 클라이언트 모두에서 작동하는 DNS 영역에 페더레이션 서버 프록시에 대한 이름 확인 구성
