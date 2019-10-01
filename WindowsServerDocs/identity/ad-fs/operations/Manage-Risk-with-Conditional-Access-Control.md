@@ -50,7 +50,7 @@ Windows Server 2012 r 2에서 AD FS의 조건부 액세스 제어는 다음과 �
 
 -   고급 조건부 액세스 제어 시나리오에 대한 다양한 클레임 언어 및 Windows PowerShell 지원
 
--   사용자 지정 (신뢰 당사자 응용 프로그램별) ' 액세스 거부 ' 메시지 자세한 내용은 [Customizing the AD FS Sign-in Pages](https://technet.microsoft.com/library/dn280950.aspx)를 참조하세요. 이러한 메시지를 사용자 지정할 수 있으면 사용자의 액세스가 거부된 이유를 설명할 수 있으며, 가능한 경우 장치를 작업 공간에 연결하라는 메시지를 표시하는 등의 방법으로 셀프 서비스 업데이트 관리를 지원할 수도 있습니다. 자세한 내용은 [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)를 참조하세요.
+-   사용자 지정 (신뢰 당사자 응용 프로그램별) ' 액세스 거부 ' 메시지 자세한 내용은 [Customizing the AD FS Sign-in Pages](https://technet.microsoft.com/library/dn280950.aspx)를 참조하세요. 이러한 메시지를 사용자 지정할 수 있으면 사용자의 액세스가 거부된 이유를 설명할 수 있으며, 가능한 경우 장치를 작업 공간에 연결하라는 메시지를 표시하는 등의 방법으로 셀프 서비스 업데이트 관리를 지원할 수도 있습니다. 자세한 내용은 [회사 응용 프로그램 전반에 SSO 및 연속된 두 번째 단계 인증을 위한 모든 장치의 작업 공간 연결](../../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)를 참조하세요.
 
 다음 표에는 조건부 액세스 제어를 구현 하는 데 사용 되는 Windows Server 2012 r 2의 AD FS에서 사용할 수 있는 모든 클레임 유형이 나와 있습니다.
 

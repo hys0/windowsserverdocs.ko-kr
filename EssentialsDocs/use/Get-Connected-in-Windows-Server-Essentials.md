@@ -90,7 +90,7 @@ ms.locfileid: "70866939"
 -   Windows Server Essentials 설치가 완료되고 서버가 실행 중입니다. Connector 소프트웨어에서는 서버와 통신할 수 없으면 설치를 종료합니다.  
 
 
--   클라이언트 컴퓨터에서 지원되는 운영 체제를 실행 중입니다. 자세한 내용은 [Supported operating systems for client computers](Get-Connected-in-Windows-Server-Essentials.md#BKMK_4)를 참조하세요.
+-   클라이언트 컴퓨터에서 지원되는 운영 체제를 실행 중입니다. 자세한 내용은 [클라이언트 컴퓨터에 대해 지원 되는 운영 체제](Get-Connected-in-Windows-Server-Essentials.md#BKMK_4)를 참조하세요.
 
 
 -   클라이언트 컴퓨터는 인터넷에 올바르게 연결되어 있어야 합니다.  
@@ -121,11 +121,11 @@ ms.locfileid: "70866939"
 
 > [!NOTE]
 > 
->  Windows server essentials 또는 Windows Server Essentials에 대 한 온-프레미스 클라이언트 배포에서는 컴퓨터를 Windows Server Essentials 도메인에 추가 하지 않고 서버에 연결할 수 있습니다. 이 방법은 모든 지원되는 클라이언트 운영 체제에서 사용할 수 있는 것은 아니며 그룹 정책 및 VPN(가상 사설망)과 같이 컴퓨터를 도메인에 연결해야 하는 기능은 사용할 수 없습니다. 요구 사항 및 지침은 [Connect computers to a Windows Server Essentials server without joining the domain](Get-Connected-in-Windows-Server-Essentials.md#BKMK_10)을 참조하세요.  
+>  Windows server essentials 또는 Windows Server Essentials에 대 한 온-프레미스 클라이언트 배포에서는 컴퓨터를 Windows Server Essentials 도메인에 추가 하지 않고 서버에 연결할 수 있습니다. 이 방법은 모든 지원되는 클라이언트 운영 체제에서 사용할 수 있는 것은 아니며 그룹 정책 및 VPN(가상 사설망)과 같이 컴퓨터를 도메인에 연결해야 하는 기능은 사용할 수 없습니다. 요구 사항 및 지침은 [도메인에 가입 하지 않고 Windows Server Essentials 서버에 컴퓨터 연결](Get-Connected-in-Windows-Server-Essentials.md#BKMK_10)을 참조하세요.  
 
  Windows Server Essentials를 실행하는 서버에 컴퓨터를 연결하기 위한 단계별 지침은 [Connect computers to the server](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)을 참조하세요.  
 
->  Windows server essentials 또는 Windows Server Essentials에 대 한 온-프레미스 클라이언트 배포에서는 컴퓨터를 Windows Server Essentials 도메인에 추가 하지 않고 서버에 연결할 수 있습니다. 이 방법은 모든 지원되는 클라이언트 운영 체제에서 사용할 수 있는 것은 아니며 그룹 정책 및 VPN(가상 사설망)과 같이 컴퓨터를 도메인에 연결해야 하는 기능은 사용할 수 없습니다. 요구 사항 및 지침은 [Connect computers to a Windows Server Essentials server without joining the domain](Get-Connected-in-Windows-Server-Essentials.md#BKMK_10)을 참조하세요.  
+>  Windows server essentials 또는 Windows Server Essentials에 대 한 온-프레미스 클라이언트 배포에서는 컴퓨터를 Windows Server Essentials 도메인에 추가 하지 않고 서버에 연결할 수 있습니다. 이 방법은 모든 지원되는 클라이언트 운영 체제에서 사용할 수 있는 것은 아니며 그룹 정책 및 VPN(가상 사설망)과 같이 컴퓨터를 도메인에 연결해야 하는 기능은 사용할 수 없습니다. 요구 사항 및 지침은 [도메인에 가입 하지 않고 Windows Server Essentials 서버에 컴퓨터 연결](Get-Connected-in-Windows-Server-Essentials.md#BKMK_10)을 참조하세요.  
 
  Windows Server Essentials를 실행하는 서버에 컴퓨터를 연결하기 위한 단계별 지침은 [Connect computers to the server](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)을 참조하세요.  
 
@@ -396,9 +396,9 @@ ms.locfileid: "70866939"
 
 > [!NOTE]
 > 
->  Windows server essentials 또는 Windows Server Essentials에 대 한 온-프레미스 클라이언트 배포에서는 컴퓨터를 Windows Server Essentials 도메인에 추가 하지 않고 서버에 연결할 수 있습니다. 이 방법은 모든 지원되는 클라이언트 운영 체제에서 사용할 수 있는 것은 아니며 그룹 정책 및 VPN(가상 사설망)과 같이 컴퓨터를 도메인에 연결해야 하는 기능은 사용할 수 없습니다. 요구 사항 및 지침은 [Connect computers to a Windows Server Essentials server without joining the domain](Get-Connected-in-Windows-Server-Essentials.md#BKMK_10)을 참조하세요.  
+>  Windows server essentials 또는 Windows Server Essentials에 대 한 온-프레미스 클라이언트 배포에서는 컴퓨터를 Windows Server Essentials 도메인에 추가 하지 않고 서버에 연결할 수 있습니다. 이 방법은 모든 지원되는 클라이언트 운영 체제에서 사용할 수 있는 것은 아니며 그룹 정책 및 VPN(가상 사설망)과 같이 컴퓨터를 도메인에 연결해야 하는 기능은 사용할 수 없습니다. 요구 사항 및 지침은 [도메인에 가입 하지 않고 Windows Server Essentials 서버에 컴퓨터 연결](Get-Connected-in-Windows-Server-Essentials.md#BKMK_10)을 참조하세요.  
 > 
->  Windows server essentials 또는 Windows Server Essentials에 대 한 온-프레미스 클라이언트 배포에서는 컴퓨터를 Windows Server Essentials 도메인에 추가 하지 않고 서버에 연결할 수 있습니다. 이 방법은 모든 지원되는 클라이언트 운영 체제에서 사용할 수 있는 것은 아니며 그룹 정책 및 VPN(가상 사설망)과 같이 컴퓨터를 도메인에 연결해야 하는 기능은 사용할 수 없습니다. 요구 사항 및 지침은 [Connect computers to a Windows Server Essentials server without joining the domain](Get-Connected-in-Windows-Server-Essentials.md#BKMK_10)을 참조하세요.  
+>  Windows server essentials 또는 Windows Server Essentials에 대 한 온-프레미스 클라이언트 배포에서는 컴퓨터를 Windows Server Essentials 도메인에 추가 하지 않고 서버에 연결할 수 있습니다. 이 방법은 모든 지원되는 클라이언트 운영 체제에서 사용할 수 있는 것은 아니며 그룹 정책 및 VPN(가상 사설망)과 같이 컴퓨터를 도메인에 연결해야 하는 기능은 사용할 수 없습니다. 요구 사항 및 지침은 [도메인에 가입 하지 않고 Windows Server Essentials 서버에 컴퓨터 연결](Get-Connected-in-Windows-Server-Essentials.md#BKMK_10)을 참조하세요.  
 
 
 ##### <a name="to-connect-a-client-computer-to-the-server"></a>서버에 클라이언트 컴퓨터를 연결하려면  
@@ -483,7 +483,7 @@ ms.locfileid: "70866939"
     -    Windows 7 Professional (x86 및 x64), Windows 7 Enterprise (x86 및 x64), Windows 7 Ultimate (x86 및 x64)  
 
 
--   컴퓨터는 Windows Server Essentials의 클라이언트 컴퓨터에 대한 모든 요구 사항을 충족해야 합니다. 자세한 내용은 [Prerequisites for connecting a computer to the server](Get-Connected-in-Windows-Server-Essentials.md#BKMK_2)를 참조하세요.  
+-   컴퓨터는 Windows Server Essentials의 클라이언트 컴퓨터에 대한 모든 요구 사항을 충족해야 합니다. 자세한 내용은 [서버에 컴퓨터를 연결 하기 위한 필수 구성 요소](Get-Connected-in-Windows-Server-Essentials.md#BKMK_2)를 참조하세요.  
 
 
 -   도메인에 가입하지 않고 연결을 사용하도록 설정하려면 로컬 관리자 그룹의 구성원인 계정으로 컴퓨터에 로그온해야 합니다.  
@@ -516,7 +516,7 @@ ms.locfileid: "70866939"
     ```  
 
 
-4.  [Connect computers to the server](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)의 단계를 완료합니다.  
+4.  [서버에 컴퓨터 연결](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)의 단계를 완료합니다.  
 
 
 ####  <a name="BKMK_SecondServer"></a>네트워크에 두 번째 서버 연결  
@@ -632,7 +632,7 @@ ms.locfileid: "70866939"
 6.  프로그램이 제거될 때까지 기다립니다. 소프트웨어가 제거되고 나면 설치된 프로그램 또는 업데이트 목록에 **Windows Server Essentials Connector**가 더 이상 나타나지 않습니다. 또한 실행 패드 및 대시보드의 바로 가기가 더 이상 컴퓨터 바탕 화면에 표시 되지 않습니다.  
 
 > [!NOTE]
-> - Connector 소프트웨어를 제거해도 대시보드의 **장치** 탭에 표시되는 컴퓨터 목록에서 컴퓨터가 제거되지 않습니다. 대시보드에서 컴퓨터를 제거하려면 [Remove a computer from the server](../manage/Manage-Devices-in-Windows-Server-Essentials.md#BKMK_3)를 참조하세요.  
+> - Connector 소프트웨어를 제거해도 대시보드의 **장치** 탭에 표시되는 컴퓨터 목록에서 컴퓨터가 제거되지 않습니다. 대시보드에서 컴퓨터를 제거하려면 [서버에서 컴퓨터 제거](../manage/Manage-Devices-in-Windows-Server-Essentials.md#BKMK_3)를 참조하세요.  
 >   -   Connector 소프트웨어를 제거해도 서버에 매핑된 클라이언트 컴퓨터의 공유 폴더가 삭제되지 않습니다. 서버에 매핑된 공유 폴더를 수동으로 삭제해야 합니다.  
 > 
 > -   Connector 소프트웨어를 제거해도 컴퓨터가 원래 도메인에서 가입 해제되지 않습니다. 컴퓨터를 도메인에서 수동으로 가입 해제해야 합니다. 지침은 [Remove a computer from a Windows domain](Get-Connected-in-Windows-Server-Essentials.md#BKMK_8)항목을 참조하세요.  
