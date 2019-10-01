@@ -2,7 +2,7 @@
 title: Android 클라이언트 시작
 description: Android 클라이언트에 대한 일반 정보입니다.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -14,12 +14,12 @@ manager: daveba
 ms.author: helohr
 ms.date: 09/16/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: f9e8eb861961dc714a964012960e8742b721d4de
-ms.sourcegitcommit: 081661f50d6dafb77180149956a02e679270c710
+ms.openlocfilehash: d11e8ad0cac1f9cf024097450e90d9be95d950b0
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71037597"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71387764"
 ---
 # <a name="get-started-with-the-android-client"></a>Android 클라이언트 시작
 
@@ -200,7 +200,7 @@ RD 게이트웨이(원격 데스크톱 게이트웨이)를 사용하면 인터�
 
 여러 개의 연결이 동시에 다른 Pc에 열려 있을 수 있습니다. 화면 왼쪽에 세션 선택 막대를 표시 하려면 연결 표시줄을 누릅니다. 세션 선택 막대를 사용하면 열려 있는 연결을 확인하고 연결 간에 전환할 수 있습니다.
 
-원격 리소스에 연결되어 있으면  확장기 메뉴를 탭하고 사용 가능한 항목 목록에서 선택하여 해당 세션 내에서 앱 간에 전환할 수 있습니다.
+원격 리소스에 연결되어 있으면 확장기 메뉴 **>** 를 탭하고 사용 가능한 항목 목록에서 선택하여 해당 세션 내에서 앱 간에 전환할 수 있습니다.
 
 현재 연결 내에서 새 세션을 시작하려면 **새로 시작**을 탭한 다음, 사용 가능한 항목 목록에서 선택합니다.
 

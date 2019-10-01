@@ -1,7 +1,7 @@
 ---
 title: 원격 데스크톱 환경 배포
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 description: 원격 데스크톱 환경을 배포하는 기본 단계입니다.
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ ms.topic: article
 author: lizap
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b9ce1bb87a7a2ad8819235edc412fd095bc2985
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: e00be471b2607ad4bc8cc8e11652d428419b4fd6
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66805134"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71404013"
 ---
 # <a name="deploy-your-remote-desktop-environment"></a>원격 데스크톱 환경 배포
 
@@ -46,7 +46,7 @@ ms.locfileid: "66805134"
 4.  RD 라이선스 서버를 활성화하고 라이선스 서버 그룹에 추가합니다.  
     1.  서버 관리자에서 **도구 > 터미널 서비스 > 원격 데스크톱 라이선스 관리자**를 클릭합니다.  
     2.  RD 라이선스 관리자에서 서버를 선택하고 **작업 > 서버 활성화**를 클릭합니다.  
-    3.  **회사 정보** 페이지에 도달할 때까지 서버 활성화 마법사의 기본값을 계속 적용합니다. 그런 후 회사 정보를 입력합니다.  
+    3.  서버 활성화 마법사에서 기본값을 적용합니다. **회사 정보** 페이지에 도달할 때까지 기본값을 계속 적용합니다. 그런 후 회사 정보를 입력합니다.  
     4.  마지막 페이지까지 나머지 페이지의 기본값을 그대로 적용합니다. **지금 라이선스 설치 마법사 시작**을 선택 취소하고 **마침**을 클릭합니다.  
     5.  **작업 > 구성 검토 > 그룹에 추가 > 확인**을 클릭합니다. AAD DC Administrators 그룹의 사용자에 대한 자격 증명을 입력하고 SCP로 등록합니다. 이 단계는 Azure AD Domain Services를 사용하는 경우 작동하지 않을 수 있지만 경고나 오류는 무시해도 됩니다.  
 5.  다음과 같이 RD 게이트웨이 서버 및 인증서 이름을 추가합니다.  

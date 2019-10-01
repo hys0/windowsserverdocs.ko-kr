@@ -2,7 +2,7 @@
 title: macOS 클라이언트 시작
 description: Mac용 원격 데스크톱 클라이언트 설정 방법 알아보기
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -14,12 +14,12 @@ manager: dongill
 ms.author: elizapo
 ms.date: 08/27/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 8836ab500e97b68efbcdd0cd1ca5bcbe39d79334
-ms.sourcegitcommit: 51eaab0f860312d97293fd90f3e632e7caee3df1
+ms.openlocfilehash: 1512589315489f5bc351ff105a56694e0947463b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70150937"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71404133"
 ---
 # <a name="get-started-with-the-macos-client"></a>macOS 클라이언트 시작
 
@@ -159,7 +159,7 @@ Mac 자판 배열 Windows 자판 배열에서 다릅니다.
 - 또한 FN 키를 눌러 해당 세션에서 기능 키를 활성화할 수 있습니다(예: FN + F1).
 - Alt 키를를 Mac 키보드의 공간 표시줄의 오른쪽 창에서 Alt Gr/오른쪽 Alt 키를 같습니다.
 
-기본적으로 원격 세션은 클라이언트가 실행되고 있는 OS와 동일한 키보드 로캘을 사용합니다. (Mac이 en-us OS를 실행 중인 경우 원격 세션에도 해당 로캘이 사용됩니다. OS 키보드 로캘이 사용되지 않은 경우 원격 PC에서 키보드 설정을 확인하고 수동으로 변경하세요. 키보드 및 로캘에 대한 자세한 내용은 [원격 데스크톱 클라이언트 FAQ](remote-desktop-client-faq.md)를 참조하세요.
+기본적으로 원격 세션은 클라이언트가 실행되고 있는 OS와 동일한 키보드 로캘을 사용합니다. (Mac에서 en-us OS를 실행하는 경우 원격 세션에도 해당 로캘이 사용됩니다.) OS 키보드 로캘을 사용하지 않는 경우 원격 PC에서 키보드 설정을 확인하고 수동으로 변경합니다. 키보드 및 로캘에 대한 자세한 내용은 [원격 데스크톱 클라이언트 FAQ](remote-desktop-client-faq.md)를 참조하세요.
 
 
 ## <a name="support-for-remote-desktop-gateway-pluggable-authentication-and-authorization"></a>원격 데스크톱 게이트웨이 플러그 가능 인증 및 권한 부여에 대 한 지원
