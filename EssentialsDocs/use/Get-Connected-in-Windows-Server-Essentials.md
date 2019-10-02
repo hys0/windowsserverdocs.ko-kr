@@ -123,11 +123,11 @@ ms.locfileid: "70866939"
 > 
 >  Windows server essentials 또는 Windows Server Essentials에 대 한 온-프레미스 클라이언트 배포에서는 컴퓨터를 Windows Server Essentials 도메인에 추가 하지 않고 서버에 연결할 수 있습니다. 이 방법은 모든 지원되는 클라이언트 운영 체제에서 사용할 수 있는 것은 아니며 그룹 정책 및 VPN(가상 사설망)과 같이 컴퓨터를 도메인에 연결해야 하는 기능은 사용할 수 없습니다. 요구 사항 및 지침은 [도메인에 가입 하지 않고 Windows Server Essentials 서버에 컴퓨터 연결](Get-Connected-in-Windows-Server-Essentials.md#BKMK_10)을 참조하세요.  
 
- Windows Server Essentials를 실행하는 서버에 컴퓨터를 연결하기 위한 단계별 지침은 [Connect computers to the server](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)을 참조하세요.  
+ Windows Server Essentials를 실행하는 서버에 컴퓨터를 연결하기 위한 단계별 지침은 [서버에 컴퓨터 연결](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)을 참조하세요.  
 
 >  Windows server essentials 또는 Windows Server Essentials에 대 한 온-프레미스 클라이언트 배포에서는 컴퓨터를 Windows Server Essentials 도메인에 추가 하지 않고 서버에 연결할 수 있습니다. 이 방법은 모든 지원되는 클라이언트 운영 체제에서 사용할 수 있는 것은 아니며 그룹 정책 및 VPN(가상 사설망)과 같이 컴퓨터를 도메인에 연결해야 하는 기능은 사용할 수 없습니다. 요구 사항 및 지침은 [도메인에 가입 하지 않고 Windows Server Essentials 서버에 컴퓨터 연결](Get-Connected-in-Windows-Server-Essentials.md#BKMK_10)을 참조하세요.  
 
- Windows Server Essentials를 실행하는 서버에 컴퓨터를 연결하기 위한 단계별 지침은 [Connect computers to the server](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)을 참조하세요.  
+ Windows Server Essentials를 실행하는 서버에 컴퓨터를 연결하기 위한 단계별 지침은 [서버에 컴퓨터 연결](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)을 참조하세요.  
 
 
 ###  <a name="BKMK_3"></a>Mac 컴퓨터를 네트워크에 연결 하기 위한 필수 구성 요소  
@@ -295,7 +295,7 @@ ms.locfileid: "70866939"
 -   클라이언트 컴퓨터에 VPN을 배포 하 고 Windows Server Essentials에서 vpn 기능을 사용 하는 경우 단일 클릭 환경을 제공 하거나, Windows Server Essentials에서 VPN 기능을 사용 하는 경우 자동 연결 환경을 제공 합니다.  
 
 
- 서버에 컴퓨터를 연결하는 방법에 대한 자세한 내용은 [Connect computers to the server](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)을 참조하세요.  
+ 서버에 컴퓨터를 연결하는 방법에 대한 자세한 내용은 [서버에 컴퓨터 연결](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)을 참조하세요.  
 
 ###  <a name="BKMK_6"></a>네트워크 사용자 이름 및 암호 정보  
  서버를 관리하는 사용자로부터 네트워크 사용자 이름 및 암호 정보를 얻을 수 있습니다. 이 자격 증명을 사용하여 컴퓨터를 서버에 연결하고 서버에서 정보에 액세스할 수 있습니다.  
@@ -546,7 +546,7 @@ ms.locfileid: "70866939"
     3.  웹 페이지를 새로 고칩니다.  
 
 
-    4.  Windows Server Essentials를 실행하는 서버에 두 번째 서버를 연결하려면 [Connect computers to the server](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)의 지침에 따릅니다.  
+    4.  Windows Server Essentials를 실행하는 서버에 두 번째 서버를 연결하려면 [서버에 컴퓨터 연결](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)의 지침에 따릅니다.  
 
 
 ~~~
@@ -598,7 +598,7 @@ ms.locfileid: "70866939"
 -   홈 컴퓨터에서 Windows Server Essentials를 구성하고 원격으로 관리할 수 있게 합니다.  
 
 
- Windows Server Essentials 서버에 컴퓨터를 연결하는 방법에 대한 단계별 지침은 [Connect computers to the server](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)을 참조하세요.   
+ Windows Server Essentials 서버에 컴퓨터를 연결하는 방법에 대한 단계별 지침은 [서버에 컴퓨터 연결](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)을 참조하세요.   
 
 
 ###  <a name="BKMK_12"></a>수동으로 컴퓨터 데이터 및 설정 이동  
@@ -656,7 +656,7 @@ ms.locfileid: "70866939"
 
 5. Windows Server Essentials 도메인에서 컴퓨터를 가입 해제하고 작업 그룹에 연결합니다. Windows를 작업 그룹에 연결하는 방법에 대한 단계별 지침은 [작업 그룹 연결 또는 만들기](https://windows.microsoft.com/windows7/Join-or-create-a-workgroup)를 참조하세요.  
 
-6. 컴퓨터 연결 마법사를 사용하여 서버에 컴퓨터를 연결합니다. 단계별 지침에 대해서는 [Connect computers to the server](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)항목을 참조하세요.  
+6. 컴퓨터 연결 마법사를 사용하여 서버에 컴퓨터를 연결합니다. 단계별 지침에 대해서는 [서버에 컴퓨터 연결](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)항목을 참조하세요.  
 
 ###  <a name="BKMK_Sleep"></a>백업이 절전 모드 및 최대 절전 모드에서 작동 하는 방식  
  서버에 컴퓨터를 연결할 때 **Wake This Computer for Backup** 옵션을 선택하면 컴퓨터를 백업할 수 있도록 매일 백업 일정에 지정된 대로 컴퓨터의 절전 또는 최대 절전 모드가 자동으로 해제됩니다. 백업이 완료되면 전원 관리 설정에 따라 컴퓨터가 절전 또는 최대 절전 모드로 돌아갑니다. 이 옵션을 선택하지 않으면 컴퓨터가 절전 또는 최대 절전 모드에 있을 경우 컴퓨터가 백업되지 않습니다. 자세한 내용은 [클라이언트 백업 관리](../manage/Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md)를 참조 하세요.  
