@@ -6,12 +6,12 @@ ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: 12410d619245153f759b54e7a8aff257888f04dc
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 92fe505c3ae7d76f7a8d5bd9d2ed0ce845159fde
+ms.sourcegitcommit: de71970be7d81b95610a0977c12d456c3917c331
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386066"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71940754"
 ---
 # <a name="dfs-replication-frequently-asked-questions-faq"></a>DFS 복제: FAQ(질문과 대답)
 
@@ -217,7 +217,7 @@ Windows 및 DFS 복제는 최대 32000 자까지 폴더 경로를 지원 합니�
 
 ### <a name="what-are-the-supported-limits-of-dfs-replication"></a>DFS 복제 지원 되는 제한은 무엇 인가요?
 
-다음 목록에서는 Windows Server 2012 r 2에서 Microsoft가 테스트 한 확장성 지침 집합을 제공 합니다.
+다음 목록에서는 Microsoft에서 테스트 하 고 Windows Server 2012 R2, Windows Server 2016 및 Windows Server 2019에 적용 하는 일련의 확장성 지침을 제공 합니다.
 
   - 서버에 있는 모든 복제 된 파일의 크기: 100 테라바이트  
       
@@ -228,7 +228,7 @@ Windows 및 DFS 복제는 최대 32000 자까지 폴더 경로를 지원 합니�
 
 
 > [!IMPORTANT]
-> 많은 수의 파일을 포함 하는 복제 그룹을 만들 때 데이터베이스 클론을 내보내고 초기 복제 기간을 최소화 하기 위해 사전 시드 기술을 사용 하는 것이 좋습니다. 자세한 내용은 Windows Server 2012 <A href="http://blogs.technet.com/b/filecab/archive/2013/08/21/dfs-replication-initial-sync-in-windows-server-2012-r2-attack-of-the-clones.aspx">r 2에서 DFS 복제 초기 동기화를 참조 하세요. 클론</A>의 공격입니다. 
+> 많은 수의 파일을 포함 하는 복제 그룹을 만들 때 데이터베이스 클론을 내보내고 초기 복제 기간을 최소화 하기 위해 사전 시드 기술을 사용 하는 것이 좋습니다. 자세한 내용은 Windows Server 2012 [r 2에서 DFS 복제 초기 동기화를 참조 하세요. 클론](https://techcommunity.microsoft.com/t5/Storage-at-Microsoft/DFS-Replication-Initial-Sync-in-Windows-Server-2012-R2-Attack-of/ba-p/424877)의 공격입니다. 
 <br>
 
 

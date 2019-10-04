@@ -7,16 +7,17 @@ ms.assetid: 424b8090-0692-49a6-9dc4-3c0e77d74b80
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.openlocfilehash: be817a2c06b13af254b80090b9a7488209d4df0a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.date: 09/25/2019
+ms.openlocfilehash: d34bbeee1a980aba76b5bed994be8db7fc8c8acf
+ms.sourcegitcommit: de71970be7d81b95610a0977c12d456c3917c331
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403529"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71940818"
 ---
 # <a name="troubleshooting-the-host-guardian-service"></a>호스트 보호자 서비스 문제 해결
 
-> 적용 대상: Windows Server(반기 채널), Windows Server 2016
+> 적용 대상: Windows server 2019, Windows Server (반기 채널), Windows Server 2016
 
 이 항목에서는 보호 된 패브릭에서 HGS (호스트 보호 서비스) 서버를 배포 하거나 작동할 때 발생 하는 일반적인 문제에 대 한 해결 방법을 설명 합니다.
 문제의 특성을 잘 모를 경우 먼저 HGS 서버 및 Hyper-v 호스트에서 보호 된 [패브릭 진단을](guarded-fabric-troubleshoot-diagnostics.md) 실행 하 여 잠재적인 원인을 좁혀 보세요.
@@ -80,6 +81,7 @@ $cert.Acl = $cert.Acl | Add-AccessRule $gMSA Read Allow
 
 인증서의 개인 키가 HSM (하드웨어 보안 모듈) 또는 사용자 지정 KSP (키 저장소 공급자)에 의해 지원 되는 경우 사용 권한 모델은 특정 소프트웨어 공급 업체에 따라 다릅니다.
 최상의 결과를 위해 특정 장치/소프트웨어에 대해 개인 키 권한이 처리 되는 방법에 대 한 자세한 내용은 공급 업체의 설명서 또는 지원 사이트를 참조 하십시오.
+모든 경우에서 HGS가 사용 하는 gMSA에는 서명 및 암호화 작업을 수행할 수 있도록 암호화, 서명 및 통신 인증서 개인 키에 대 한 *읽기* 권한이 필요 합니다.
 
 일부 하드웨어 보안 모듈은 특정 사용자 계정에 개인 키에 대 한 액세스 권한을 부여 하는 것을 지원 하지 않습니다. 대신, 컴퓨터 계정에서 특정 키 집합의 모든 키에 액세스할 수 있도록 허용 합니다.
 이러한 장치의 경우 일반적으로 컴퓨터에 키에 대 한 액세스 권한을 부여 하는 데 충분 하며, HGS는 해당 연결을 활용할 수 있습니다.
@@ -93,7 +95,7 @@ $cert.Acl = $cert.Acl | Add-AccessRule $gMSA Read Allow
 HSM 브랜드/시리즈      | 제안
 ----------------------|-------------
 Gemalto       | 인증서 요청 파일의 키 사용 속성이 0xa0로 설정 되었는지 확인 하 여 서명 및 암호화에 인증서를 사용할 수 있도록 합니다. 또한 로컬 인증서 관리자 도구를 사용 하 여 gMSA 계정에 개인 키에 대 한 *읽기* 액세스 권한을 부여 해야 합니다 (위의 단계 참조).
-nCipher nShield        | 각 HGS 노드가 서명 및 암호화 키를 포함 하는 보안 영역에 액세스할 수 있도록 합니다. GMSA 특정 사용 권한을 구성할 필요는 없습니다.
+nCipher nShield        | 각 HGS 노드가 서명 및 암호화 키를 포함 하는 보안 영역에 액세스할 수 있도록 합니다. 로컬 인증서 관리자를 사용 하 여 개인 키에 대 한 *읽기* 액세스 권한을 gMSA에 추가로 부여 해야 할 수도 있습니다 (위 단계 참조).
 Utimaco CryptoServers | 인증서 요청 파일의 키 사용 속성이 0x13로 설정 되었는지 확인 하 여 암호화, 암호 해독 및 서명에 인증서를 사용할 수 있도록 합니다.
 
 ### <a name="certificate-requests"></a>인증서 요청

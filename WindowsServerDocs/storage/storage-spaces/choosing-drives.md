@@ -7,14 +7,14 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 10/08/2018
+ms.date: 09/19/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: b02d26e8a2f2cd699d8e1eda95cf72fe71396a21
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 21ba41f636c95660d16055908f6bef857b0f3608
+ms.sourcegitcommit: 73898afec450fb3c2f429ca373f6b48a74b19390
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402892"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71934990"
 ---
 # <a name="choosing-drives-for-storage-spaces-direct"></a>저장소 공간 다이렉트용 드라이브 선택
 
@@ -114,9 +114,7 @@ ms.locfileid: "71402892"
 
 ### <a name="general"></a>일반
 
-서버당 전체 저장소 용량은 약 100TB로 제한하는 것이 좋습니다. 서버당 저장소 용량이 클수록 소프트웨어 업데이트를 적용하는 경우 등에 가동 중지 시간이나 다시 부팅 후 데이터를 다시 동기화하는 데 필요한 시간이 더 길어집니다.
-
-저장소 풀 당 현재 최대 크기는 Windows Server 2019의 경우 4 페타바이트 (PB) (4000 TB)이 고 Windows Server 2016의 경우 1 페타바이트입니다.
+서버당 총 저장소 용량을 약 400 테라바이트 (TB)로 제한 하는 것이 좋습니다. 서버당 저장소 용량이 클수록 소프트웨어 업데이트를 적용하는 경우 등에 가동 중지 시간이나 다시 부팅 후 데이터를 다시 동기화하는 데 필요한 시간이 더 길어집니다. 저장소 풀 당 현재 최대 크기는 Windows Server 2019의 경우 4 페타바이트 (PB) (4000 TB)이 고 Windows Server 2016의 경우 1 페타바이트입니다.
 
 ## <a name="see-also"></a>참조
 

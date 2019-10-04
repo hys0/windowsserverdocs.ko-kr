@@ -9,12 +9,12 @@ ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: daveba
 ms.reviewer: mas
-ms.openlocfilehash: 29e3785d1c004d669e0060854acb6af1d2953644
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: fb91ca583fd71a7fbe38369606d2dcc4a816d8aa
+ms.sourcegitcommit: 73898afec450fb3c2f429ca373f6b48a74b19390
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71357921"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71935012"
 ---
 # <a name="privileged-access-workstations"></a>Privileged Access Workstation
 
@@ -511,66 +511,136 @@ Domain Admin, Enterprise Admin 또는 이와 동등한 계층 0 그룹(중첩 �
 이 섹션에서는 권한 있는 관리 계정에서 하위 계층 호스트에 로그온하는 것을 방지하도록 그룹 정책을 구성합니다.
 
 1. 새 **Restrict Workstation Logon** GPO를 만듭니다. 이 설정은 계층 0 및 계층 1 관리자 계정이 표준 워크스테이션에 로그온하지 못하도록 제한합니다.  이 GPO는 "워크스테이션" 최상위 OU에 연결 되어야 하 고 다음과 같은 설정을 갖습니다.
-   * 컴퓨터 Configuration\Policies\Windows 설정 \ 보안 설정 \ 로컬 정책 \ 로컬 정책 \ 로컬 컴퓨터에서 **다음 정책 설정 정의** 를 선택 하 고 계층 0 및 계층 1 그룹을 추가 합니다.     Enterprise Admins Domain Admins 스키마 관리자 DOMAIN\Administrators 계정 운영자 Backup Operators 인쇄 운영자 서버 운영자 도메인 컨트롤러 읽기 전용 도메인 컨트롤러 그룹 정책 작성자 소유자 암호화 Oper 담당자
+   * 컴퓨터 Configuration\Policies\Windows 설정 \ 보안 설정 \ 로컬 정책 \ 로컬 정책 \ 로컬 컴퓨터에서 **다음 정책 설정 정의** 를 선택 하 고 계층 0 및 계층 1 그룹을 추가 합니다.
+     ```
+     Enterprise Admins
+     Domain Admins
+     Schema Admins
+     DOMAIN\Administrators
+     Account Operators
+     Backup Operators
+     Print Operators
+     Server Operators
+     Domain Controllers
+     Read-Only Domain Controllers
+     Group Policy Creators Owners
+     Cryptographic Operators
+     ```
 
-         > [!NOTE]
-         > Built-in Tier 0 Groups, see Tier 0 equivalency for more details.
+     > [!NOTE]
+     > 기본 제공 계층 0 그룹에 대 한 자세한 내용은 계층 0에 상응 하는 항목을 참조 하세요.
 
          Other Delegated Groups
 
-         > [!NOTE]
-         > Any custom created groups with effective Tier 0 access, see Tier 0 equivalency for more details.
+     > [!NOTE]
+     > 유효한 계층 0 액세스를 사용 하 여 만든 사용자 지정 그룹에 대 한 자세한 내용은 계층 0에 해당 하는 항목을 참조 하세요.
 
          Tier 1 Admins
 
-         > [!NOTE]
-         > This Group was created earlier in Phase 1.
+     > [!NOTE]
+     > 이 그룹은 이전에 1 단계에서 만든 것입니다.
 
-   * 컴퓨터 Configuration\Policies\Windows 설정 \ 보안 설정 \ 로컬 정책 \ 서비스 a 서비스로 로그온에서 **다음 정책 설정 정의** 를 선택 하 고 계층 0 및 계층 1 그룹을 추가 합니다.     Enterprise Admins Domain Admins 스키마 관리자 DOMAIN\Administrators 계정 운영자 Backup Operators 인쇄 운영자 서버 운영자 도메인 컨트롤러 읽기 전용 도메인 컨트롤러 그룹 정책 작성자 소유자 암호화 Oper 담당자
+   * 컴퓨터 Configuration\Policies\Windows 설정 \ 보안 설정 \ 로컬 정책 \ 서비스 a 서비스로 로그온에서 **다음 정책 설정 정의** 를 선택 하 고 계층 0 및 계층 1 그룹을 추가 합니다.
+     ```
+     Enterprise Admins
+     Domain Admins
+     Schema Admins
+     DOMAIN\Administrators
+     Account Operators
+     Backup Operators
+     Print Operators
+     Server Operators
+     Domain Controllers
+     Read-Only Domain Controllers
+     Group Policy Creators Owners
+     Cryptographic Operators
+     ```
 
-         > [!NOTE]
-         > Note: Built-in Tier 0 Groups, see Tier 0 equivalency for more details.
+     > [!NOTE]
+     > 참고: 기본 제공 계층 0 그룹에 대 한 자세한 내용은 계층 0에 상응 하는 항목을 참조 하세요.
 
          Other Delegated Groups
 
-         > [!NOTE]
-         > Note: Any custom created groups with effective Tier 0 access, see Tier 0 equivalency for more details.
+     > [!NOTE]
+     > 참고: 유효한 계층 0 액세스를 사용 하 여 만든 사용자 지정 그룹에 대 한 자세한 내용은 계층 0에 해당 하는 항목을 참조 하세요.
 
          Tier 1 Admins
 
-         > [!NOTE]
-         > Note: This Group was created earlier in Phase 1
+     > [!NOTE]
+     > 참고: 이 그룹은 이전에 1 단계에서 만든 것입니다.
 
 2. 새 **제한 서버 로그온** GPO 만들기-이 설정은 계층 0 관리자 계정이 계층 1 서버에 기록 되지 않도록 제한 합니다.  이 GPO는 "계층 1 서버" 최상위 OU에 연결 되어야 하 고 다음과 같은 설정을 갖습니다.
-   * 컴퓨터 Configuration\Policies\Windows 설정 \ 보안 설정 \ 로컬 정책 \ 로컬 정책 \ 로컬 컴퓨터에서 **다음 정책 설정 정의** 를 선택 하 고 계층 0 그룹을 추가 합니다.     Enterprise Admins Domain Admins 스키마 관리자 DOMAIN\Administrators 계정 운영자 Backup Operators 인쇄 운영자 서버 운영자 도메인 컨트롤러 읽기 전용 도메인 컨트롤러 그룹 정책 작성자 소유자 암호화 Oper 담당자
+   * 컴퓨터 Configuration\Policies\Windows 설정 \ 보안 설정 \ 로컬 정책 \ 로컬 정책 \ 로컬 컴퓨터에서 **다음 정책 설정 정의** 를 선택 하 고 계층 0 그룹을 추가 합니다.
+     ```
+     Enterprise Admins
+     Domain Admins
+     Schema Admins
+     DOMAIN\Administrators
+     Account Operators
+     Backup Operators
+     Print Operators
+     Server Operators
+     Domain Controllers
+     Read-Only Domain Controllers
+     Group Policy Creators Owners
+     Cryptographic Operators
+     ```
 
-         > [!NOTE]
-         > Built-in Tier 0 Groups, see Tier 0 equivalency for more details.
-
-         Other Delegated Groups
-
-         > [!NOTE]
-         > Any custom created groups with effective Tier 0 access, see Tier 0 equivalency for more details.
-
-   * 컴퓨터 Configuration\Policies\Windows 설정 \ 보안 설정 \ 로컬 정책 \ 서비스 a 서비스로 로그온에서 **다음 정책 설정 정의** 를 선택 하 고 계층 0 그룹을 추가 합니다.     Enterprise Admins Domain Admins 스키마 관리자 DOMAIN\Administrators 계정 운영자 Backup Operators 인쇄 운영자 서버 운영자 도메인 컨트롤러 읽기 전용 도메인 컨트롤러 그룹 정책 작성자 소유자 암호화 Oper 담당자
-
-         > [!NOTE]
-         > Built-in Tier 0 Groups, see Tier 0 equivalency for more details.
-
-         Other Delegated Groups
-
-         > [!NOTE]
-         > Any custom created groups with effective Tier 0 access, see Tier 0 equivalency for more details.
-
-   * 컴퓨터 Configuration\Policies\Windows 설정 \ 보안 설정 \ 로컬 정책 \ 로컬 정책 \ 로컬 컴퓨터에서 **다음 정책 설정 정의** 를 선택 하 고 계층 0 그룹을 추가 합니다.     Enterprise Admins Domain Admins Schema Admins 계정 운영자 Backup Operators 인쇄 운영자 서버 운영자 도메인 컨트롤러 읽기 전용 도메인 컨트롤러 그룹 정책 작성자 소유자 암호화 운영자
-
-         > [!NOTE]
-         > Note: Built-in Tier 0 Groups, see Tier 0 equivalency for more details.
+     > [!NOTE]
+     > 기본 제공 계층 0 그룹에 대 한 자세한 내용은 계층 0에 상응 하는 항목을 참조 하세요.
 
          Other Delegated Groups
 
-         > [!NOTE]
-         > Note: Any custom created groups with effective Tier 0 access, see Tier 0 equivalency for more details.
+     > [!NOTE]
+     > 유효한 계층 0 액세스를 사용 하 여 만든 사용자 지정 그룹에 대 한 자세한 내용은 계층 0에 해당 하는 항목을 참조 하세요.
+
+   * 컴퓨터 Configuration\Policies\Windows 설정 \ 보안 설정 \ 로컬 정책 \ 서비스 a 서비스로 로그온에서 **다음 정책 설정 정의** 를 선택 하 고 계층 0 그룹을 추가 합니다.
+     ```
+     Enterprise Admins
+     Domain Admins
+     Schema Admins
+     DOMAIN\Administrators
+     Account Operators
+     Backup Operators
+     Print Operators
+     Server Operators
+     Domain Controllers
+     Read-Only Domain Controllers
+     Group Policy Creators Owners
+     Cryptographic Operators
+     ```
+
+     > [!NOTE]
+     > 기본 제공 계층 0 그룹에 대 한 자세한 내용은 계층 0에 상응 하는 항목을 참조 하세요.
+
+         Other Delegated Groups
+
+     > [!NOTE]
+     > 유효한 계층 0 액세스를 사용 하 여 만든 사용자 지정 그룹에 대 한 자세한 내용은 계층 0에 해당 하는 항목을 참조 하세요.
+
+   * 컴퓨터 Configuration\Policies\Windows 설정 \ 보안 설정 \ 로컬 정책 \ 로컬 정책 \ 로컬 컴퓨터에서 **다음 정책 설정 정의** 를 선택 하 고 계층 0 그룹을 추가 합니다.
+     ```
+     Enterprise Admins
+     Domain Admins
+     Schema Admins
+     DOMAIN\Administrators
+     Account Operators
+     Backup Operators
+     Print Operators
+     Server Operators
+     Domain Controllers
+     Read-Only Domain Controllers
+     Group Policy Creators Owners
+     Cryptographic Operators
+     ```
+
+     > [!NOTE]
+     > 참고: 기본 제공 계층 0 그룹에 대 한 자세한 내용은 계층 0에 상응 하는 항목을 참조 하세요.
+
+         Other Delegated Groups
+
+     > [!NOTE]
+     > 참고: 유효한 계층 0 액세스를 사용 하 여 만든 사용자 지정 그룹에 대 한 자세한 내용은 계층 0에 해당 하는 항목을 참조 하세요.
 
 #### <a name="deploy-your-paws"></a>PAW 배포
 

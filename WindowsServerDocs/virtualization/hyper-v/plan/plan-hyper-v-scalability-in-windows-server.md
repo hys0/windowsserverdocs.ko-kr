@@ -1,5 +1,5 @@
 ---
-title: Windows Server 2016의 Hyper-v 확장성에 대 한 계획
+title: Windows Server 2016 및 Windows Server 2019에서 Hyper-v 확장성 계획
 description: 'Hyper-v 및 가상 컴퓨터에서 추가 하거나 제거할 수 있는 구성 요소에 대해 지원 되는 최대 수를 나열 합니다 (예: 메모리 양과 가상 프로세서 수).'
 ms.prod: windows-server
 ms.service: na
@@ -10,14 +10,14 @@ ms.topic: article
 author: KBDAzure
 ms.author: kathydav
 ms.date: 09/28/2016
-ms.openlocfilehash: 3d94d8475f5de8d6b3d1d3f0bc549a8791e1d0c8
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 493f7926a6ef686e6d47c1a3120a65ed0799b0db
+ms.sourcegitcommit: 73898afec450fb3c2f429ca373f6b48a74b19390
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71364064"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71934950"
 ---
-# <a name="plan-for-hyper-v-scalability-in-windows-server-2016"></a>Windows Server 2016의 Hyper-v 확장성에 대 한 계획
+# <a name="plan-for-hyper-v-scalability-in-windows-server-2016-and-windows-server-2019"></a>Windows Server 2016 및 Windows Server 2019에서 Hyper-v 확장성 계획
 
 > 적용 대상: Windows Server 2016, Windows Server 2019
   

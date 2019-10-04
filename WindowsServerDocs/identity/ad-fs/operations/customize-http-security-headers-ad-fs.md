@@ -9,12 +9,12 @@ ms.date: 02/19/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: e1042ad4dae0b023c9816dff798c25b05b60eccf
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 0685e0935a031b2f73474d59b025b70fc735902d
+ms.sourcegitcommit: 73898afec450fb3c2f429ca373f6b48a74b19390
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407446"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71935041"
 ---
 # <a name="customize-http-security-response-headers-with-ad-fs-2019"></a>AD FS 2019를 사용 하 여 HTTP 보안 응답 헤더 사용자 지정 
  
@@ -53,7 +53,7 @@ Set-AdfsResponseHeaders -EnableResponseHeaders $false
 ### <a name="http-strict-transport-security-hsts"></a>HTTP Strict-Transport-보안 (HSTS) 
 HSTS는 HTTP 및 HTTPS 끝점을 모두 포함 하는 서비스에 대해 프로토콜 다운 그레이드 공격 및 쿠키 가로채기를 완화 하는 데 도움이 되는 웹 보안 정책 메커니즘입니다. 웹 서버에서 웹 브라우저 (또는 기타 준수 사용자 에이전트)가 HTTPS를 사용 하 여 HTTP 프로토콜을 통해 상호 작용 하는 경우에만 해당 웹 브라우저 또는 다른 사용자 에이전트를 선언할 수 있습니다.  
  
-웹 인증 트래픽에 대 한 모든 AD FS 끝점은 HTTPS를 통해서만 열 수 있습니다. 결과적으로 http 엄격한 전송 보안 정책 메커니즘이 제공 하는 위협을 효과적으로 완화 하는 AD FS (HTTP에 수신기가 없기 때문에 기본적으로 HTTP에 다운 그레이드는 없습니다). 다음 매개 변수를 설정 하 여 헤더를 사용자 지정할 수 있습니다. 
+웹 인증 트래픽에 대 한 모든 AD FS 끝점은 HTTPS를 통해서만 열 수 있습니다. 결과적으로 http 엄격한 전송 보안 정책 메커니즘이 제공 하는 위협을 효과적으로 완화 하는 AD FS (HTTP에 수신기가 없기 때문에 기본적으로 HTTP에 다운 그레이드는 없습니다). 다음 매개 변수를 설정 하 여 헤더를 사용자 지정할 수 있습니다.
  
 - **max-age =&lt;만료 시간&gt;**  – 만료 시간 (초)은 HTTPS를 사용 하 여 사이트에 액세스 해야 하는 기간을 지정 합니다. 기본값 및 권장 값은 31536000 초 (1 년)입니다.  
 - **Includesubdomains 도메인** – 선택적 매개 변수입니다. 지정 된 경우 HSTS 규칙은 모든 하위 도메인에도 적용 됩니다.  
@@ -107,7 +107,7 @@ Set-AdfsResponseHeaders -RemoveHeaders "X-Frame-Options"
 ```
 
 ### <a name="x-xss-protection"></a>X-XSS-보호 
-이 HTTP 보안 응답 헤더는 브라우저에서 XSS (교차 사이트 스크립팅) 공격을 감지 하는 경우 웹 페이지 로드를 중지 하는 데 사용 됩니다. 이를 XSS 필터링 이라고 합니다. 헤더는 다음 값 중 하나로 설정할 수 있습니다. 
+이 HTTP 보안 응답 헤더는 브라우저에서 XSS (교차 사이트 스크립팅) 공격을 감지 하는 경우 웹 페이지 로드를 중지 하는 데 사용 됩니다. 이를 XSS 필터링 이라고 합니다. 헤더는 다음 값 중 하나로 설정할 수 있습니다.
  
 - **0** – XSS 필터링을 사용 하지 않도록 설정 합니다. 이 옵션은 사용하지 않는 것이 좋습니다.  
 - **1** – XSS 필터링을 사용 합니다. XSS 공격이 감지 되 면 브라우저는 페이지를 삭제 합니다.   
@@ -150,7 +150,7 @@ CORS 요청을 보다 잘 이해 하려면 SPA (단일 페이지 응용 프로�
     - 액세스 제어-허용-원본-원본 헤더의 값과 동일 합니다. 
     - 액세스 제어-요청-메서드 헤더의 값과 동일 합니다. 
     - 액세스 제어-헤더 값은 액세스 제어-요청 헤더의 헤더와 동일 합니다. 
-4. 브라우저는 다음 헤더를 포함 하 여 실제 요청을 보냅니다. 
+4. 브라우저는 다음 헤더를 포함 하는 실제 요청을 보냅니다.
     - HTTP 메서드 (예: 삭제) 
     - 원본-web API의 출처를 포함 합니다. 
     - 액세스 제어-헤더 응답 헤더에 포함 된 모든 헤더 
@@ -199,7 +199,7 @@ frame-src 'self'; manifest-src 'self'; media-src 'self';"
 ```PowerShell
 Set-AdfsResponseHeaders -SetHeaderName "Content-Security-Policy" -SetHeaderValue "default-src ‘self'; img-src *" 
 ```
-다음 소스는 기본-src 정책에 대해 정의할 수 있습니다. 
+다음 소스는 기본-src 정책에 대해 정의할 수 있습니다.
  
 - ' self ' –이를 지정 하면 콘텐츠 원점이 웹 페이지의 원본에 로드 되도록 제한 됩니다. 
 - ' unsafe-inline ' – 정책에이를 지정 하면 인라인 JavaScript 및 CSS를 사용할 수 있습니다. 
@@ -223,7 +223,7 @@ Set-AdfsResponseHeaders -SetHeaderName "TestHeader" -SetHeaderValue "TestHeaderV
  
 ![Fiddler](media/customize-http-security-headers-ad-fs/header2.png)
 
-## <a name="web-browswer-compatibility"></a>웹 브라우저 호환성
+## <a name="web-browser-compatibility"></a>웹 브라우저 호환성
 다음 표와 링크를 사용 하 여 각 보안 응답 헤더와 호환 되는 웹 브라우저를 확인 합니다.
 
 |HTTP 보안 응답 헤더|브라우저 호환성|
@@ -236,5 +236,5 @@ Set-AdfsResponseHeaders -SetHeaderName "TestHeader" -SetHeaderValue "TestHeaderV
 
 ## <a name="next"></a>다음
 
-- [AD FS 도움말 troublehshooting 가이드 사용](https://aka.ms/adfshelp/troubleshooting )
+- [AD FS 도움말을 사용 하 여 문제 해결 가이드](https://aka.ms/adfshelp/troubleshooting )
 - [AD FS 문제 해결](../../ad-fs/troubleshooting/ad-fs-tshoot-overview.md)

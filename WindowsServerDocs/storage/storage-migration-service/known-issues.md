@@ -8,12 +8,12 @@ ms.date: 07/09/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: 391430b75670f207520a7d972b54ba293616d0e1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 150c9f1e70df4f634886ea65efd9c61ef075f26a
+ms.sourcegitcommit: de71970be7d81b95610a0977c12d456c3917c331
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71393910"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71940704"
 ---
 # <a name="storage-migration-service-known-issues"></a>저장소 마이그레이션 서비스의 알려진 문제
 
@@ -257,6 +257,13 @@ Windows Server 2019 장애 조치 (failover) 클러스터 노드에 설치 된 S
 
 이 문제를 해결 하려면 Storage Migration Service orchestrator를 실행 하는 서버에 "장애 조치 (Failover) 클러스터 관리 도구" (RSAT-클러스터링-Mgmt)를 설치 합니다. 
 
+## <a name="error-there-are-no-more-endpoints-available-from-the-endpoint-mapper-when-running-inventory-against-a-windows-server-2003-source-computer"></a>Windows Server 2003 원본 컴퓨터에 대해 인벤토리를 실행 하는 경우 "끝점 매퍼에서 사용할 수 있는 끝점이 더 이상 없습니다." 오류가 발생 합니다.
+
+[KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) 누적 업데이트 이상으로 패치 된 저장소 마이그레이션 서비스 orchestrator 서버를 사용 하 여 인벤토리를 실행 하려고 할 때 다음과 같은 오류가 표시 됩니다.
+
+    There are no more endpoints available from the endpoint mapper  
+
+이 문제를 해결 하려면 저장소 마이그레이션 서비스 오 케 스트레이 터 컴퓨터에서 KB4512534 누적 업데이트 및이를 대체 하는 업데이트를 임시로 제거 합니다. 마이그레이션이 완료 되 면 최신 누적 업데이트를 다시 설치 합니다.  
 
 ## <a name="see-also"></a>참조
 

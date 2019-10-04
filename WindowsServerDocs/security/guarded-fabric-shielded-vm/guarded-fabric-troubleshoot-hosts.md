@@ -7,13 +7,13 @@ ms.assetid: 80ea38f4-4de6-4f85-8188-33a63bb1cf81
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 08/29/2018
-ms.openlocfilehash: e2685e33a215d0c5f97fe414b7458371930e862b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.date: 09/25/2019
+ms.openlocfilehash: 0479309efe629d204bdc98fe11a7ccb4447a7369
+ms.sourcegitcommit: de71970be7d81b95610a0977c12d456c3917c331
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386365"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71940723"
 ---
 # <a name="troubleshooting-guarded-hosts"></a>보호 된 호스트 문제 해결
 
@@ -57,7 +57,6 @@ TpmError                  | 호스트에서 TPM 오류로 인해 마지막 증�
 UnauthorizedHost          | 보호 된 Vm을 실행할 수 있는 권한이 없어 호스트가 증명을 통과 하지 못했습니다. 호스트가 보호 된 Vm을 실행 하기 위해 HGS에서 신뢰 하는 보안 그룹에 속하는지 확인 합니다.
 알 수 없음                   | 호스트가 아직 HGS를 증명 하려고 시도 하지 않았습니다.
 
-
 **AttestationStatus** 가 **Insecurehostconfiguration**으로 보고 되는 경우 하나 이상의 이유가 **AttestationSubStatus** 필드에 채워집니다.
 아래 표에서는 AttestationSubStatus의 가능한 값과 문제를 해결 하는 방법에 대 한 팁을 설명 합니다.
 
@@ -77,3 +76,20 @@ SecureBoot                 | 보안 부팅이이 호스트에서 사용 하도�
 SecureBootSettings         | 이 호스트의 TPM 기준이 HGS에서 신뢰 하는 기준과 일치 하지 않습니다. 새 하드웨어나 소프트웨어를 설치 하 여 UEFI 시작 기관, .DBX 변수, 디버그 플래그 또는 사용자 지정 보안 부팅 정책을 변경 하는 경우 발생할 수 있습니다. 이 컴퓨터의 현재 하드웨어, 펌웨어 및 소프트웨어 구성을 신뢰 하는 경우 [새 TPM 기준선을 캡처하고](guarded-fabric-tpm-trusted-attestation-capturing-hardware.md#capture-the-tpm-baseline-for-each-unique-class-of-hardware) [HGS에 등록할](guarded-fabric-manage-hgs.md#authorizing-new-guarded-hosts)수 있습니다.
 TcgLogVerification         | TCG 로그 (TPM 기준)를 얻거나 확인할 수 없습니다. 이는 호스트의 펌웨어, TPM 또는 기타 하드웨어 구성 요소에 문제가 있음을 나타낼 수 있습니다. Windows를 부팅 하기 전에 PXE 부팅을 시도 하도록 호스트를 구성한 경우 오래 된 NBP (네트워크 부팅 프로그램) 에서도이 오류가 발생할 수 있습니다. PXE 부팅을 사용 하는 경우 모든 NBPs가 최신 상태 인지 확인 합니다.
 VirtualSecureMode          | 가상화 기반 보안 기능이 호스트에서 실행 되 고 있지 않습니다. VBS를 사용 하도록 설정 하 고 시스템이 구성 된 [플랫폼 보안 기능](https://technet.microsoft.com/itpro/windows/keep-secure/deploy-device-guard-enable-virtualization-based-security#validate-enabled-device-guard-hardware-based-security-features)을 충족 하는지 확인 합니다. VBS 요구 사항에 대 한 자세한 내용은 [Device Guard 설명서](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide) 를 참조 하세요.
+
+## <a name="modern-tls"></a>최신 TLS
+
+그룹 정책을 배포 하거나 TLS 1.0을 사용 하지 못하도록 Hyper-v 호스트를 구성 하는 경우 보호 된 VM을 시작 하려고 할 때 "호스트 보호자 서비스 클라이언트가 호출 프로세스를 대신 하 여 키 보호기의 래핑을 해제 하지 못했습니다." 오류가 발생할 수 있습니다.
+이는 지원 되는 TLS 버전을 HGS 서버와 협상할 때 시스템 기본 TLS 버전이 고려 되지 않는 .NET 4.6의 기본 동작 때문입니다.
+
+이 동작을 해결 하려면 다음의 두 명령을 실행 하 여 .NET 앱에 대 한 시스템 기본 TLS 버전을 사용 하도록 .NET을 구성 합니다.
+
+```cmd
+reg add HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /v SystemDefaultTlsVersions /t REG_DWORD /d 1 /f /reg:64
+reg add HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /v SystemDefaultTlsVersions /t REG_DWORD /d 1 /f /reg:32
+```
+
+> [!WARNING]
+> 시스템 기본 TLS 버전 설정은 컴퓨터의 모든 .NET 앱에 영향을 줍니다. 프로덕션 컴퓨터에 배포 하기 전에 격리 된 환경에서 레지스트리 키를 테스트 해야 합니다.
+
+.NET 4.6 및 TLS 1.0에 대 한 자세한 내용은 [tls 1.0 문제 해결, 두 번째 버전](https://docs.microsoft.com/security/solving-tls1-problem)을 참조 하세요.

@@ -7,13 +7,13 @@ ms.assetid: f4b4d1a8-bf6d-4881-9150-ddeca8b48038
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 08/29/2018
-ms.openlocfilehash: b3e6aadbcbf2f2b826ca97d4ebb58c3736528b59
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.date: 09/25/2019
+ms.openlocfilehash: e8f4a3696ec5096281ba1ffd130aa97004530cc1
+ms.sourcegitcommit: de71970be7d81b95610a0977c12d456c3917c331
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386523"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71940731"
 ---
 # <a name="obtain-certificates-for-hgs"></a>HGS 용 인증서 가져오기
 
@@ -81,7 +81,7 @@ Hyper-v 호스트와 HGS 노드 모두 사용자가 제공 하는 SSL 인증서�
 
 SSL 인증서 속성 | 필요한 값
 -------------------------|---------------
-주체 이름             | HGS 클러스터의 이름 (분산 네트워크 이름)입니다. @No__t-0 및 HGS 도메인 이름에 제공 되는 HGS 서비스 이름의 연결입니다.
+주체 이름             | HGS 클러스터의 이름 (분산 네트워크 이름 또는 가상 컴퓨터 개체 FQDN 이라고 함)입니다. @No__t-0 및 HGS 도메인 이름에 제공 되는 HGS 서비스 이름의 연결입니다.
 주체 대체 이름 | 다른 DNS 이름을 사용 하 여 HGS 클러스터에 연결 하는 경우 (예: 부하 분산 장치 뒤에 있는 경우) 인증서 요청의 SAN 필드에 해당 DNS 이름을 포함 해야 합니다.
 
 HGS 서버를 초기화할 때이 인증서를 지정 하는 옵션은 [첫 번째 hgs 노드 구성](guarded-fabric-initialize-hgs.md)에서 설명 합니다.
