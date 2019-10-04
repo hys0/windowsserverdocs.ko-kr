@@ -1,9 +1,9 @@
 ---
 title: 테 넌 트 VM 네트워크 어댑터에 대 한 QoS (서비스 품질) 구성
-description: 테 넌 트 VM 네트워크 어댑터에 대 한 QoS를 구성 하는 경우 데이터 센터 브리징 DCB 또는 소프트웨어 정의 네트워킹 SDN qos 중에서 선택할 수 있습니다.
+description: 테 넌 트 VM 네트워크 어댑터에 대 한 QoS를 구성 하는 경우 데이터 센터 \(브리징 DCB\)또는 소프트웨어 정의 네트워킹 \(SDN\) qos 중에서 선택할 수 있습니다.
 manager: dougkim
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-sdn
@@ -13,12 +13,12 @@ ms.assetid: 6d783ff6-7dd5-496c-9ed9-5c36612c6859
 ms.author: pashort
 author: shortpatti
 ms.date: 08/23/2018
-ms.openlocfilehash: 99ef286b91bec4bcb008bfd9f62003e75a5a5921
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 1074525abe375e78ab0d2065ce8e98f894f50c61
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70870025"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71355849"
 ---
 # <a name="configure-quality-of-service-qos-for-a-tenant-vm-network-adapter"></a>테 넌 트 VM 네트워크 어댑터에 대 한 QoS (서비스 품질) 구성
 

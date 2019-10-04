@@ -1,26 +1,26 @@
 ---
 title: 네트워크 부하 분산
-description: 이 항목에서는 제공 네트워크 부하 분산의 개요 \(NLB\) Windows Server 2016의 기능입니다. 단일 가상 클러스터로 두 개 이상의 서버를 관리 하려면 NLB를 사용할 수 있습니다. NLB 가용성과 같은 웹, FTP에 사용 되는 인터넷 서버 애플리케이션의 확장성을 향상 시킵니다, 방화벽, 프록시, 가상 사설망 \(VPN\) 및 기타 업무상\-중요한 서버입니다.
+description: 이 항목에서는 Windows Server 2016의 네트워크 부하 분산 \(NLB @ no__t-1 기능에 대 한 개요를 제공 합니다. 단일 가상 클러스터로 두 개 이상의 서버를 관리 하려면 NLB를 사용할 수 있습니다. NLB 가용성과 같은 웹, FTP에 사용 되는 인터넷 서버 애플리케이션의 확장성을 향상 시킵니다, 방화벽, 프록시, 가상 사설망 \(VPN\) 및 기타 업무상\-중요한 서버입니다.
 manager: dougkim
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-nlb
 ms.topic: article
 ms.assetid: 244a4b48-06e5-4796-8750-a50e4f88ac72
 ms.author: pashort
 author: shortpatti
 ms.date: 09/13/2018
-ms.openlocfilehash: 0ea129fe2230332c0099d735f064768bce9fc50c
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.openlocfilehash: 4d79b6f29fbe64633bf04604ad586aff3dd86edf
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66812282"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71405848"
 ---
 # <a name="network-load-balancing"></a>네트워크 부하 분산
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-이 항목에서는 제공 네트워크 부하 분산의 개요 \(NLB\) Windows Server 2016의 기능입니다. 단일 가상 클러스터로 두 개 이상의 서버를 관리 하려면 NLB를 사용할 수 있습니다. NLB 가용성과 같은 웹, FTP에 사용 되는 인터넷 서버 애플리케이션의 확장성을 향상 시킵니다, 방화벽, 프록시, 가상 사설망 \(VPN\) 및 기타 업무상\-중요한 서버입니다.  
+이 항목에서는 Windows Server 2016의 네트워크 부하 분산 \(NLB @ no__t-1 기능에 대 한 개요를 제공 합니다. 단일 가상 클러스터로 두 개 이상의 서버를 관리 하려면 NLB를 사용할 수 있습니다. NLB 가용성과 같은 웹, FTP에 사용 되는 인터넷 서버 애플리케이션의 확장성을 향상 시킵니다, 방화벽, 프록시, 가상 사설망 \(VPN\) 및 기타 업무상\-중요한 서버입니다.  
 
 > [!NOTE]
 > 새 Azure 영감을 얻은 소프트웨어 부하 분산 장치를 포함 하는 Windows Server 2016 \(SLB\) 소프트웨어 정의 네트워킹의 구성 요소로 \(SDN\) 인프라입니다. 사용 하는 대신 NLB SLB SDN을 사용 하는 경우 사용 하는 Windows가 아닌 작업 부하, 아웃 바운드 네트워크 주소 변환 해야 \(NAT\), 계층 3 필요 또는 \(L3\) 또는 비 TCP 기반 부하 분산 합니다. Windows Server 2016 SDN 아닌 배포에 대 한 NLB를 사용 하 여 계속 수 있습니다. SLB에 대 한 자세한 내용은 참조 [소프트웨어 부하 분산 (SLB) SDN에 대 한](../sdn/technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md)합니다.
@@ -156,4 +156,4 @@ Windows PowerShell을 사용 하 여 NLB를 설치 하려면 다음 명령을 �
 |작업|[네트워크 부하 분산 클러스터 관리](https://technet.microsoft.com/library/cc753954(WS.10).aspx) &#124; [네트워크 로드 균형 조정 매개 변수를 설정](https://technet.microsoft.com/library/cc731619(WS.10).aspx) &#124; [네트워크 부하 분산 클러스터에서 호스트 제어](https://technet.microsoft.com/library/cc770870(WS.10).aspx)|  
 |문제 해결|[네트워크 부하 분산 클러스터 문제 해결](https://technet.microsoft.com/library/cc732592(WS.10).aspx) &#124; [NLB 클러스터 이벤트 및 오류](https://technet.microsoft.com/library/cc731678(WS.10).aspx)|
 |도구 및 설정|[네트워크 부하 분산 Windows PowerShell cmdlet](https://go.microsoft.com/fwlink/p/?LinkId=238123)|
-|커뮤니티 리소스|[High Availability \(클러스터링\) 포럼](https://go.microsoft.com/fwlink/p/?LinkId=230641)
+|커뮤니티 리소스|[고가용성 \(Clustering @ no__t-2 포럼](https://go.microsoft.com/fwlink/p/?LinkId=230641)

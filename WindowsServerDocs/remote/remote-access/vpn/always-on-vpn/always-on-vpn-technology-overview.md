@@ -1,19 +1,19 @@
 ---
 title: Always On VPN 기술 개요
 description: '이 페이지에서는 자세한 문서에 대 한 링크를 사용 하 여 Always On VPN 기술에 대 한 간략 한 개요를 제공 합니다. '
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.date: 11/05/2018
 ms.author: pashort
 author: shortpatti
 ms.localizationpriority: medium
-ms.openlocfilehash: de5dd8e17c07e46db28c529847607eec2a05a069
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 31d0d5c12760fc627ce93972f4a70e85f61dd178
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871388"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71404362"
 ---
 # <a name="always-on-vpn-technology-overview"></a>Always On VPN 기술 개요
 
@@ -144,7 +144,7 @@ AD DS에는 사용자 자격 증명을 인증 하 고 VPN 연결 요청에 대 �
 
 Active Directory 사용자 및 컴퓨터는 컴퓨터, 사용자 또는 보안 그룹을 같은 실제 엔터티를 나타내는 계정을 포함 하는 AD DS의 구성 요소입니다. 보안 그룹은 관리자가 단일 단위로 관리할 수 있는 사용자 또는 컴퓨터 계정의 모음입니다. 특정 그룹에 속하는 사용자 및 컴퓨터 계정을 그룹 구성원 이라고 합니다.
 
-Active Directory 사용자 및 컴퓨터의 사용자 계정에는 nps 네트워크 정책을 통해 액세스를 제어 하도록 사용자 계정의 **네트워크 액세스 권한** 속성이 설정 되지 않은 경우 권한 부여 프로세스 중 nps에서 평가 하는 전화 접속 속성이 있습니다. 모든 사용자 계정에 대 한 기본 설정입니다. 그러나 경우에 따라이 설정에는 사용자가 VPN을 사용 하 여 연결 하지 못하도록 차단 하는 다른 구성이 있을 수 있습니다. 이러한 가능성을 방지 하기 위해 사용자 계정 전화 접속 속성을 무시 하도록 NPS 서버를 구성할 수 있습니다.
+Active Directory 사용자 및 컴퓨터의 사용자 계정에는 nps 네트워크 정책을 통해 액세스를 제어 하도록 사용자 계정의 **네트워크 액세스 권한** 속성이 설정 되지 않은 경우 권한 부여 프로세스 중 nps에서 평가 하는 전화 접속 속성이 있습니다.. 모든 사용자 계정에 대 한 기본 설정입니다. 그러나 경우에 따라이 설정에는 사용자가 VPN을 사용 하 여 연결 하지 못하도록 차단 하는 다른 구성이 있을 수 있습니다. 이러한 가능성을 방지 하기 위해 사용자 계정 전화 접속 속성을 무시 하도록 NPS 서버를 구성할 수 있습니다.
 
 자세한 내용은 [사용자 계정 전화 접속을 무시 하도록 NPS 구성 속성](../../../../networking/technologies/nps/nps-np-configure.md#configure-nps-to-ignore-user-account-dial-in-properties)을 참조 하세요.
 
