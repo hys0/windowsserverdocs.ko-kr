@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 51d9636013fef182c4abb74ae196e08c51ff11d8
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 30e4c2c7c5cf2668d62e96d8d2a54dc33e3d2a55
+ms.sourcegitcommit: 9855d6b59b1f8722f39ae74ad373ce1530da0ccf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71362750"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71960950"
 ---
 # <a name="using-the-remove-imagegroup-command"></a>제거 ImageGroup 명령을 사용 하 여
 
@@ -41,8 +41,8 @@ wdsutil /remove-ImageGroumediaGroup:ImageGroup1
 wdsutil /verbose /remove-ImageGroumediaGroup:"My Image Group" /Server:MyWDSServer 
 ```
 #### <a name="additional-references"></a>추가 참조
-[명령줄 구문 키](command-line-syntax-key.md)
-[추가 ImageGroup 명령을 사용 하 여](using-the-add-imagegroup-command.md)
-[get AllImageGroups 명령을 사용 하 여](using-the-get-allimagegroups-command.md)
-[get ImageGroup 명령을 사용 하 여](using-the-get-imagegroup-command.md)
-[하위 명령: ImageGroup 집합](subcommand-set-imagegroup.md)
+[명령줄 구문 키](command-line-syntax-key.md)  
+[ImageGroup 명령 사용](using-the-add-imagegroup-command.md)  
+[AllImageGroups 명령 사용](using-the-get-allimagegroups-command.md)  
+[ImageGroup 명령 사용](using-the-get-imagegroup-command.md)  
+[하위 명령: ImageGroup](subcommand-set-imagegroup.md)  

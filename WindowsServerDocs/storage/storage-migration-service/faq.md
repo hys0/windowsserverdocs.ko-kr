@@ -8,12 +8,12 @@ ms.date: 08/19/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: a776920caa85c3ee133070d52b020c8ad3c799e1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6895c4b5f74beb237378060f82135d6f578986b7
+ms.sourcegitcommit: e92a78f8d307200e64617431a701b9112a9b4e48
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402997"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71973858"
 ---
 # <a name="storage-migration-service-frequently-asked-questions-faq"></a>Storage Migration Service 질문과 대답 (FAQ)
 
@@ -34,15 +34,15 @@ Storage Migration Service는 Windows 작업에 방해가 될 수 있는 파일 �
 
 ## <a name="are-clusters-supported-as-sources-or-destinations"></a>클러스터가 원본 또는 대상으로 지원 되나요?
 
-Storage Migration Service는 현재 Windows Server 2019의 클러스터 간에 마이그레이션하지 않습니다. 저장소 마이그레이션 서비스의 이후 릴리스에서 클러스터 지원을 추가할 예정입니다.
+Storage Migration Service는 누적 업데이트 [KB4513534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) 또는 후속 업데이트를 설치한 후 클러스터에서로의 마이그레이션을 지원 합니다. 여기에는 장치 통합을 위해 원본 클러스터에서 대상 클러스터로 마이그레이션하는 것 뿐만 아니라 독립 실행형 원본 서버에서 대상 클러스터로 마이그레이션하는 작업이 포함 됩니다. 
 
 ## <a name="do-local-groups-and-local-users-migrate"></a>로컬 그룹 및 로컬 사용자를 마이그레이션해야 하나요?
 
-저장소 마이그레이션 서비스는 현재 Windows Server 2019에서 로컬 사용자 또는 로컬 그룹을 마이그레이션하지 않습니다. 저장소 마이그레이션 서비스의 이후 릴리스에서 로컬 사용자 및 로컬 그룹 마이그레이션 지원을 추가할 예정입니다.
+Storage Migration Service는 누적 업데이트 [KB4513534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) 또는 후속 업데이트를 설치한 후 로컬 사용자 및 그룹의 마이그레이션을 지원 합니다. 
 
 ## <a name="is-domain-controller-migration-supported"></a>도메인 컨트롤러 마이그레이션이 지원 되나요?
 
-Storage Migration Service는 현재 Windows Server 2019에서 도메인 컨트롤러를 마이그레이션하지 않습니다. 한 가지 해결 방법으로, Active Directory 도메인에 도메인 컨트롤러가 두 개 이상 있는 한 도메인 컨트롤러를 마이그레이션한 후에 도메인 컨트롤러의 수준을 내린 후 이동이 완료 되 면 대상의 수준을 올립니다. 저장소 마이그레이션 서비스의 이후 릴리스에서 도메인 컨트롤러 마이그레이션 지원을 추가할 예정입니다.
+저장소 마이그레이션 서비스는 현재 Windows Server 2019에서 도메인 컨트롤러를 마이그레이션하지 않습니다. 한 가지 해결 방법으로, Active Directory 도메인에 도메인 컨트롤러가 두 개 이상 있는 한 도메인 컨트롤러를 마이그레이션한 후에 도메인 컨트롤러의 수준을 내린 후 이동이 완료 되 면 대상의 수준을 올립니다.
 
 ## <a name="what-attributes-are-migrated-by-the-storage-migration-service"></a>저장소 마이그레이션 서비스에서 마이그레이션되는 특성은 무엇 인가요?
 
@@ -73,11 +73,11 @@ Storage Migration Service는 SMB 공유의 모든 플래그, 설정 및 보안�
 
 ## <a name="can-i-consolidate-multiple-servers-into-one-server"></a>여러 서버를 하나의 서버로 통합할 수 있나요?
 
-Windows Server 2019에 제공 된 Storage Migration Service 버전은 여러 서버를 하나의 서버로 통합 하는 기능을 지원 하지 않습니다. 통합의 예는 서로 다른 세 원본 서버를 마이그레이션하는 것입니다 .이 경우 중복 또는 충돌을 방지 하기 위해 해당 경로 및 공유를 가상화 한 단일 새 서버에 공유 이름 및 로컬 파일 경로가 동일 합니다. 이전 서버 이름 및 IP 주소입니다. 저장소 마이그레이션 서비스의 이후 버전에서이 기능을 추가할 수 있습니다. 
+Windows Server 2019에 제공 된 Storage Migration Service 버전은 여러 서버를 하나의 서버로 통합 하는 기능을 지원 하지 않습니다. 통합의 예는 서로 다른 세 원본 서버를 마이그레이션하는 것입니다 .이 경우 중복 또는 충돌을 방지 하기 위해 해당 경로 및 공유를 가상화 한 단일 새 서버에 공유 이름 및 로컬 파일 경로가 동일 합니다. 이전 서버 이름 및 IP 주소입니다. 그러나 단일 클러스터에서 독립 실행형 서버를 여러 파일 서버 리소스로 마이그레이션할 수 있습니다. 
 
 ## <a name="can-i-migrate-from-sources-other-than-windows-server"></a>Windows Server 이외의 원본에서 마이그레이션할 수 있나요?
 
-Windows Server 2019에 제공 된 Storage Migration Service 버전은 Windows Server 2003 이상 운영 체제에서의 마이그레이션을 지원 합니다. Samba를 사용 하는 Linux 서버 또는 장치에서 저장소를 마이그레이션할 수도 있습니다. 이렇게 하려면 Windows Server 버전 1903 이상을 실행 하는 서버에서 Storage Migration Service를 실행 합니다.
+Storage Migration Service는 누적 업데이트 [KB4513534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) 또는 후속 업데이트를 설치한 후에 Samba Linux 서버에서의 마이그레이션을 지원 합니다. 지원 되는 Samba 버전 및 Linux 배포판의 목록에 대 한 요구 사항을 참조 하세요.
 
 ## <a name="can-i-migrate-previous-file-versions"></a>이전 파일 버전을 마이그레이션할 수 있나요?
 
@@ -129,7 +129,7 @@ Windows Server 2019에 제공 된 Storage Migration Service 버전은 NTFS에서
 Storage Migration Service는 기본적으로 hidden c:\programdata\microsoft\storagemigrationservice 폴더에 설치 된 ESE (extensible Storage engine) 데이터베이스를 사용 합니다. 이 데이터베이스는 작업이 추가 되 고 전송이 완료 되 면 증가 하며, 작업을 삭제 하지 않을 경우 수백만 개의 파일을 마이그레이션한 후에는 상당한 드라이브 공간을 사용할 수 있습니다. 데이터베이스를 이동 해야 하는 경우 다음 단계를 수행 합니다.
 
 1. Orchestrator 컴퓨터에서 "Storage Migration Service" 서비스를 중지 합니다.
-2. `%programdata%/Microsoft/StorageMigrationService` 폴더의 소유권 가져오기
+2. @No__t-0 폴더의 소유권 가져오기
 3. 해당 공유 및 모든 파일 및 하위 폴더에 대 한 모든 권한을 보유 하는 사용자 계정을 추가 합니다.
 4. Orchestrator 컴퓨터의 다른 드라이브로 폴더를 이동 합니다.
 5. 다음 레지스트리 REG_SZ 값을 설정 합니다.
@@ -145,7 +145,7 @@ Storage Migration Service에 대 한 피드백을 제공 하려면:
 
 - Windows 10에 포함 된 피드백 허브 도구를 사용 하 여 "기능 제안"을 클릭 하 고 "Windows Server" 범주 및 "저장소 마이그레이션"의 하위 범주를 지정 합니다.
 - [Windows Server UserVoice](https://windowsserver.uservoice.com) 사이트 사용
-- 메일 주소smsfeed@microsoft.com
+- 전자 메일 smsfeed@microsoft.com
 
 파일 버그:
 
