@@ -642,17 +642,17 @@ ms.locfileid: "70866939"
  서버에서 컴퓨터의 연결을 끊으려면 다음 단계를 완료해야 합니다.  
 
 
-1. 제어판을 사용하여 컴퓨터에서 Connector 소프트웨어를 제거합니다. 단계별 지침에 대해서는 [Uninstall the Connector software](Get-Connected-in-Windows-Server-Essentials.md#BKMK_13)항목을 참조하세요.   
+1. 제어판을 사용하여 컴퓨터에서 Connector 소프트웨어를 제거합니다. 단계별 지침에 대해서는 [Connector 소프트웨어 제거](Get-Connected-in-Windows-Server-Essentials.md#BKMK_13)항목을 참조하세요.   
 
 
 2. Windows Server Essentials 도메인에서 컴퓨터를 가입 해제하고 작업 그룹에 연결합니다. Windows를 작업 그룹에 연결하는 방법에 대한 단계별 지침은 [작업 그룹 연결 또는 만들기](https://windows.microsoft.com/windows7/Join-or-create-a-workgroup)를 참조하세요.  
 
-3. 대시보드를 사용하여 서버에서 컴퓨터를 제거합니다. 단계별 지침에 대해서는 [Remove a computer from the server](../manage/Manage-Devices-in-Windows-Server-Essentials.md#BKMK_3)항목을 참조하세요.  
+3. 대시보드를 사용하여 서버에서 컴퓨터를 제거합니다. 단계별 지침에 대해서는 [서버에서 컴퓨터 제거](../manage/Manage-Devices-in-Windows-Server-Essentials.md#BKMK_3)항목을 참조하세요.  
 
    이전에 Windows Server Essentials 서버 네트워크에서 연결이 끊어진 서버에 컴퓨터를 다시 연결하려면 다음 단계를 완료해야 합니다.  
 
 
-4. 제어판을 사용하여 컴퓨터에서 Connector 소프트웨어를 제거합니다. 단계별 지침에 대해서는 [Uninstall the Connector software](Get-Connected-in-Windows-Server-Essentials.md#BKMK_13)항목을 참조하세요.  
+4. 제어판을 사용하여 컴퓨터에서 Connector 소프트웨어를 제거합니다. 단계별 지침에 대해서는 [Connector 소프트웨어 제거](Get-Connected-in-Windows-Server-Essentials.md#BKMK_13)항목을 참조하세요.  
 
 5. Windows Server Essentials 도메인에서 컴퓨터를 가입 해제하고 작업 그룹에 연결합니다. Windows를 작업 그룹에 연결하는 방법에 대한 단계별 지침은 [작업 그룹 연결 또는 만들기](https://windows.microsoft.com/windows7/Join-or-create-a-workgroup)를 참조하세요.  
 
