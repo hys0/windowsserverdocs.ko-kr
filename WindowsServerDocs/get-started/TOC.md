@@ -20,10 +20,20 @@
 ## [Windows Server 2016에서 제거되었거나 사용되지 않는 기능](Deprecated-Features.md)
 ## [Windows Server 2016 버전 비교](2016-Edition-Comparison.md)
 ## [Windows Server의 Azure 하이브리드 혜택](azure-hybrid-benefit.md)
-## [Windows Server 2016 정품 인증 가이드](Server-2016-activation.md)
+## Windows Server 2016 정품 인증 가이드
+### [Windows Server 2016 정품 인증 가이드](Server-2016-activation.md)
 ### [KMS 클라이언트 설정 키](KMSclientkeys.md)
-### [정품 인증 오류 코드 문제 해결](activation-error-codes.md)
-####[KMS 및 DNS 문제에 대한 일반적인 문제 해결 절차](common-troubleshooting-procedures-kms-dns.md)
+## Windows 볼륨 정품 인증 문제 해결
+### [Windows 볼륨 정품 인증 문제 해결](activation-troubleshooting-guide.md)
+### [KMS 문제 해결을 위한 지침](activation-troubleshoot-kms-general.md)
+### [Slmgr.vbs 옵션](activation-slmgr-vbs-options.md)
+### 일반적인 정품 인증 문제에 대한 솔루션
+#### [Windows 정품 인증 오류 코드 해결](activation-error-codes.md)
+#### [KMS 정품 인증: 알려진 문제](activation-troubleshoot-KMS-issues.md)
+#### [MAK 정품 인증: 알려진 문제](activation-troubleshoot-MAK-issues.md)
+#### [DNS 관련 정품 인증 문제 해결을 위한 지침](common-troubleshooting-procedures-kms-dns.md)
+#### [Tokens.dat 파일 다시 빌드](activation-rebuild-tokens-dat-file.md)
+### [예제: 활성화되지 않은 ADBA 클라이언트 문제 해결](activation-troubleshoot-adba-clients.md)
 ## [Nano 서버 설치](Getting-started-with-Nano-Server.md)
 ### [Windows Server 다음 릴리스의 Nano 서버 변경 사항](nano-in-semi-annual-channel.md)
 ### [Nano 서버 빠른 시작](Nano-Server-Quick-start.md)

@@ -7,7 +7,7 @@
 ## [시스템 요구 사항](sys-reqs-19.md)
 ## [Windows Server 2019 정품 인증](activation-19.md)
 ## [Windows Server 2019 VM 정품 인증](vm-activation-19.md)
-## [정품 인증 오류 코드 문제 해결](../get-started/activation-error-codes.md)
+## [Windows 볼륨 정품 인증 문제 해결](../get-started/activation-troubleshooting-guide.md)
 ## [Windows Server 2019 및 Microsoft Server Application 호환성](app-compat-19.md)
 ## [Server Core 앱 호환성 FOD(Feature on Demand)](install-fod-19.md)
 ## [표준 | 데이터 센터 버전 비교](editions-comparison-19.md)
