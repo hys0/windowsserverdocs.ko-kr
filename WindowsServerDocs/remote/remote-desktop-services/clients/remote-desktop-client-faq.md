@@ -14,12 +14,12 @@ manager: dongill
 ms.author: elizapo
 ms.date: 07/16/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b1dd3b728f941d9c3732abccf19363cf631284e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 54ed455955053ebb234864f827759385ecf3d3c5
+ms.sourcegitcommit: 73898afec450fb3c2f429ca373f6b48a74b19390
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71387752"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71935031"
 ---
 # <a name="frequently-asked-questions-about-the-remote-desktop-clients"></a>원격 데스크톱 클라이언트에 대한 질문과 대답
 
@@ -166,7 +166,7 @@ PPTP 또는 L2TP VPN를 사용 중인 경우 설정 해야 **모든 트래픽 �
 2. 사용 하도록 설정 **모든 모니터를 사용 하 여** 및 **전체 화면**합니다.
 
 ### <a name="is-bi-directional-sound-supported"></a>양방향 소리 지원
-원격 데스크톱 클라이언트에서 소리를 업스트림 (마이크에 대 한 서버에 클라이언트)에서 지원 되지 않습니다.
+양방향 사운드는 Windows 클라이언트에서 연결별로 구성할 수 있습니다. 관련 설정은 **Local Resources** 옵션 탭의 **원격 오디오** 섹션에서 액세스할 수 있습니다.
 
 ### <a name="what-can-i-do-if-the-sound-wont-play"></a>소리가 재생 되지 않는 경우 어떻게 해야 합니까?
 세션에서 로그 아웃 (안 함만 분리, 로그 아웃까지) 한 다음 다시 로그인 합니다.

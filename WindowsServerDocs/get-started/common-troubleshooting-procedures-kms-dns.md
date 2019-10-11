@@ -1,26 +1,26 @@
 ---
-title: KMS 및 DNS 문제에 대한 일반적인 문제 해결 절차
+title: DNS 관련 정품 인증 문제 해결을 위한 지침
 description: ''
 ms.topic: article
-ms.date: 07/22/2019
+ms.date: 09/10/2019
 ms.technology: server-general
 ms.assetid: ''
 author: Teresa-Motiv
 ms.author: v-tea
 ms.localizationpriority: medium
-ms.openlocfilehash: 12e3c1fa82a567c43507df2f2ffd72595c3903ba
-ms.sourcegitcommit: af80963a1d16c0b836da31efd9c5caaaf6708133
+ms.openlocfilehash: e2bd9c766f07591e0c643a6cea644b2db7a95364
+ms.sourcegitcommit: 9855d6b59b1f8722f39ae74ad373ce1530da0ccf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68664895"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71960951"
 ---
-# <a name="common-troubleshooting-procedures-for-kms-and-dns-issues"></a>KMS 및 DNS 문제에 대한 일반적인 문제 해결 절차
+# <a name="guidelines-for-troubleshooting-dns-related-activation-issues"></a>DNS 관련 정품 인증 문제 해결을 위한 지침
 
 다음 조건 중 하나 이상을 충족하는 경우 다음 방법을 사용해야 할 수도 있습니다.
 
 - 볼륨 라이선스 미디어와&nbsp;볼륨 라이선스 일반 제품 키를 사용하여 다음 운영 체제 중 하나를 설치합니다.
-   - 시작
+   - Windows Server 2019
    - Windows Server 2016
    - Windows Server 2012 R2
    - Windows Server 2012

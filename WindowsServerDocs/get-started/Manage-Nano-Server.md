@@ -12,12 +12,12 @@ ms.assetid: 599d6438-a506-4d57-a0ea-1eb7ec19f46e
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: dc3a2386573c5beb4ec156fdfca3b77f025b1738
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 132f4e1966b332cd6bb6e21402984db7ceed4497
+ms.sourcegitcommit: d599eea5203f95609fb21801196252d5dd9f2669
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391763"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005217"
 ---
 # <a name="manage-nano-server"></a>Nano 서버 관리
 
@@ -206,9 +206,9 @@ $scanResults = Invoke-CimMethod -InputObject $sess -MethodName ScanForUpdates -A
 
 **참고:**  
 이러한 명령은 설치된 업데이트 목록을 표시하지만 출력에 "설치됨"이라고 구체적으로 표시하지는 않습니다. 보고서처럼 출력에 이러한 내용이 포함되기를 원한다면 다음 명령을 실행합니다.  
-```  
-Get-WindowsPackage--Online  
-```  
+```PowerShell
+Get-WindowsPackage -Online
+```
 
 ### <a name="using-wsus"></a>WSUS 사용  
 ---  

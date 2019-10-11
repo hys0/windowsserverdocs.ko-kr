@@ -10,12 +10,12 @@ ms.date: 11/26/2018
 ms.assetid: b886b2fd-3567-4f0a-8aa3-4ba7923d2d21
 author: nirb
 ms.author: nirb
-ms.openlocfilehash: 35bb2d547c4af2b90d5ed68e32dfa214bee6b3a7
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 175c4dbd23bac1822365ce80f05d69509d27321c
+ms.sourcegitcommit: 73898afec450fb3c2f429ca373f6b48a74b19390
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403241"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71935026"
 ---
 ## <a name="guidance-on-disabling-system-services-on-windows-server-2016-with-desktop-experience"></a>데스크톱 경험이 있는 Windows Server 2016에서 시스템 서비스를 사용하지 않도록 설정하기 위한 지침
 
@@ -1729,9 +1729,20 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br /><br/>
-## <a name="sensor-servicebr--br------br---strongservice-descriptionstrong----a-service-for-sensors-that-manages-different-sensors39-functionality-manages-simple-device-orientation-sdo-and-history-for-sensors-loads-the-sdo-sensor-that-reports-device-orientation-changes--if-this-service-is-stopped-or-disabled-the-sdo-sensor-will-not-be-loaded-and-so-auto-rotation-will-not-occur-history-collection-from-sensors-will-also-be-stopped"></a>센서 서비스<br/>| | |<br/>|---|---|<br/>|   <strong>서비스 설명</strong> |   다양한 센서의 기능을 관리하는 센서 서비스입니다. 센서의 SDO(단순형 디바이스 방향) 및 기록을 관리합니다. 디바이스 방향 변경을 보고하는 SDO 센서를 로드합니다.  이 서비스를 중지하거나 사용하지 않으면 SDO 센서가 로드되지 않으므로 자동 회전이 수행되지 않습니다. 센서의 기록 수집도 중지됩니다.
-|   <strong>서비스 이름</strong>    |   SensorService |   <strong>설치</strong>    |   데스크톱 경험이 있는 경우에만 |   <strong>시작 유형</strong>   |   수동 |   <strong>추천 사항</strong>  |   사용하지 않도록 설정할 수 있음 |   <strong>설명</strong>    |<br/>|||<br/>
+<br />
+
+## <a name="sensor-service"></a>센서 서비스
+
+| | |
+|---|---|
+|   **서비스 설명** |   다양한 센서 기능을 관리하는 센서 서비스입니다. 센서의 SDO(단순형 디바이스 방향) 및 기록을 관리합니다. 디바이스 방향 변경을 보고하는 SDO 센서를 로드합니다.  이 서비스를 중지하거나 사용하지 않으면 SDO 센서가 로드되지 않으므로 자동 회전이 수행되지 않습니다. 센서의 기록 수집도 중지됩니다.
+|   **서비스 이름**    |   SensorService
+|   **설치**    |   데스크톱 경험이 있는 경우에만
+|   **시작 유형**   |   수동
+|   **추천 사항**  |   사용하지 않도록 설정할 수 있음
+|   **설명**    |
+|||
+  
 <br />          
 
 ## <a name="server"></a>Server           

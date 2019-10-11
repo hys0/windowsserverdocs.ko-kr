@@ -4,16 +4,16 @@ description: Microsoft 지원에 대 한 로그를 수집 하는 방법과 같�
 author: nedpyle
 ms.author: nedpyle
 manager: siroy
-ms.date: 07/09/2019
+ms.date: 10/09/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: 150c9f1e70df4f634886ea65efd9c61ef075f26a
-ms.sourcegitcommit: de71970be7d81b95610a0977c12d456c3917c331
+ms.openlocfilehash: e3ec7ee787fb6fd2e8e9f59249a6c4013a76b377
+ms.sourcegitcommit: e2964a803cba1b8037e10d065a076819d61e8dbe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71940704"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252364"
 ---
 # <a name="storage-migration-service-known-issues"></a>저장소 마이그레이션 서비스의 알려진 문제
 
@@ -48,7 +48,7 @@ Windows 관리 센터 저장소 마이그레이션 서비스 확장은 Windows S
 
 Windows 관리 센터에서 0.57 버전의 Storage Migration Service 확장을 사용 하 고 있으며,이 경우에는 주소에 대 한 고정 IP를 선택할 수 없습니다. 강제로 DHCP를 사용 합니다.
 
-이 문제를 해결 하려면 Windows 관리 센터의 **설정** > **확장** 에서 업데이트 된 버전 저장소 마이그레이션 서비스 0.57.2를 설치할 수 있음을 나타내는 경고를 확인 합니다. Windows 관리 센터에 대 한 브라우저 탭을 다시 시작 해야 할 수 있습니다.
+이 문제를 해결 하려면 Windows 관리 센터에서 **설정** > **확장** 에서 업데이트 된 버전 Storage Migration Service 0.57.2를 설치할 수 있음을 나타내는 경고를 확인 합니다. Windows 관리 센터에 대 한 브라우저 탭을 다시 시작 해야 할 수 있습니다.
 
 ## <a name="storage-migration-service-cutover-validation-fails-with-error-access-is-denied-for-the-token-filter-policy-on-destination-computer"></a>"대상 컴퓨터에서 토큰 필터 정책에 대 한 액세스가 거부 되었습니다." 오류로 인해 저장소 마이그레이션 서비스에서 유효성 검사가 실패 함
 
@@ -225,7 +225,7 @@ StorageMigration ()에서 StorageMigration ()을 (를) 확인 합니다. Transfe
   사용자:          네트워크 서비스 컴퓨터:      FS02. TailwindTraders.net 설명: 컴퓨터를 인벤토리에 만들지 못했습니다.
 작업: foo2 컴퓨터: FS01. TailwindTraders.net 상태: 실패 한 오류:-2147463168 오류 메시지: 지침 자세한 오류를 확인 하 고 인벤토리 요구 사항이 충족 되었는지 확인 하십시오. 인벤토리에 지정 된 원본 컴퓨터의 모든 측면을 확인할 수 없습니다. 원본 또는 차단 된 방화벽 포트에 대 한 권한이 없거나 권한이 없기 때문일 수 있습니다.
   
-이 오류는 'meghan@contoso.com' 등의 UPN (사용자 계정 이름) 형식으로 마이그레이션 자격 증명을 제공 하는 경우 저장소 마이그레이션 서비스의 코드 오류로 인해 발생 합니다. 저장소 마이그레이션 서비스 오 케 스트레이 터 서비스에서이 형식을 올바르게 구문 분석 하지 못했습니다. 그러면 KB4512534 및 19H1의 클러스터 마이그레이션 지원에 추가 된 도메인 조회에 실패 하 게 됩니다.
+이 오류는 UPN (사용자 계정 이름) 형식 (예: ' meghan@contoso.com ')으로 마이그레이션 자격 증명을 제공 하는 경우 저장소 마이그레이션 서비스의 코드 오류로 인해 발생 합니다. 저장소 마이그레이션 서비스 오 케 스트레이 터 서비스에서이 형식을 올바르게 구문 분석 하지 못했습니다. 그러면 KB4512534 및 19H1의 클러스터 마이그레이션 지원에 추가 된 도메인 조회에 실패 하 게 됩니다.
 
 이 문제를 해결 하려면 ' Contoso\Meghan '과 같은 도메인 \ 사용자 형식으로 자격 증명을 제공 하십시오.
 
@@ -264,6 +264,28 @@ Windows Server 2019 장애 조치 (failover) 클러스터 노드에 설치 된 S
     There are no more endpoints available from the endpoint mapper  
 
 이 문제를 해결 하려면 저장소 마이그레이션 서비스 오 케 스트레이 터 컴퓨터에서 KB4512534 누적 업데이트 및이를 대체 하는 업데이트를 임시로 제거 합니다. 마이그레이션이 완료 되 면 최신 누적 업데이트를 다시 설치 합니다.  
+
+경우에 따라 KB4512534를 제거 하거나 대체 하는 업데이트를 제거 하면 저장소 마이그레이션 서비스가 더 이상 시작 되지 않을 수 있습니다. 이 문제를 해결 하기 위해 Storage Migration Service 데이터베이스를 백업 및 삭제할 수 있습니다.
+
+1.  관리자가 저장소 마이그레이션 서비스 orchestrator 서버에서 관리자의 구성원 인 관리자 권한 cmd 프롬프트를 열고 다음을 실행 합니다.
+
+     ```
+     MD c:\ProgramData\Microsoft\StorageMigrationService\backup
+
+     ICACLS c:\ProgramData\Microsoft\StorageMigrationService\* /grant Administrators:(GA)
+
+     XCOPY c:\ProgramData\Microsoft\StorageMigrationService\* .\backup\*
+
+     DEL c:\ProgramData\Microsoft\StorageMigrationService\* /q
+
+     ICACLS c:\ProgramData\Microsoft\StorageMigrationService  /GRANT networkservice:F /T /C
+
+     ICACLS c:\ProgramData\Microsoft\StorageMigrationService /GRANT networkservice:(GA)F /T /C
+     ```
+   
+2.  저장소 마이그레이션 서비스 서비스를 시작 합니다. 그러면 새 데이터베이스가 생성 됩니다.
+
+
 
 ## <a name="see-also"></a>참조
 

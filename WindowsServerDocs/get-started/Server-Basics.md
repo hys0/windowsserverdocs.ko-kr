@@ -10,12 +10,12 @@ ms.topic: article
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: 70c3f3df4890717e2604e98e909ecacae956d3e7
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 4b8d346ceafb81b02ebbffc62e558800b77f0086
+ms.sourcegitcommit: 8fbd2d877612a9feb02d7d91ed0372d7cd441d5c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391604"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71678807"
 ---
 # <a name="get-started-with-windows-server-2016"></a>Windows Server 2016 시작
 
@@ -46,7 +46,7 @@ Windows Server 2016을 설치 및 실행하기 위한 최소 하드웨어 요�
 현재 실행 중인 모든 항목에서 Windows Server 2016으로 이동하는 모든 방법에 대한 설명
 
 ## <a name="server-role-upgrade-and-migration-matrixserver-role-upgradeability-tablemd"></a>[서버 역할 업그레이드 및 마이그레이션 매트릭스](Server-Role-Upgradeability-Table.md)
-Windows Server 2016으로 특정 서버 역할을 가져오기 위해 필요한 추가 단계에 대한 정보
+Windows Server 2016으로 특정 서버 역할을 가져오기 위해 필요한 추가 단계에 대한 정보입니다.
 
 ## <a name="server-application-compatibility-tableserver-application-compatibilitymd"></a>[서버 애플리케이션 호환성 표](Server-Application-Compatibility.md)
 Windows Server 2016에서 SQL이 작동하나요? Exchange를 실행하는 데 필요한 단계는 어떻게 되나요? 이 항목에서는 수행해야 할 작업을 설명합니다.

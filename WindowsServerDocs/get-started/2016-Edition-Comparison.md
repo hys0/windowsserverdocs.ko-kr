@@ -1,84 +1,82 @@
 ---
 title: Windows Server 2016 제품 및 버전
-description: Standard Edition과 Datacenter Edition의 차이점
-ms.custom: na
+description: Windows Server Standard 및 Windows Server Datacenter 버전의 차이점에 대해 설명합니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.date: 01/03/2017
+ms.date: 10/04/2019
 ms.technology: server-general
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c5ca3bfe-7ced-49f6-a932-80cab33f419e
-author: jaimeo
-ms.author: jaimeo
+author: jasongerend
+ms.author: jgerend
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: e3d32d596746d2ff137fe2517a6430976f9e77ce
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f2940e5ad75fab90f717284eabafd555573cab35
+ms.sourcegitcommit: e92a78f8d307200e64617431a701b9112a9b4e48
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391882"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71973856"
 ---
 # <a name="comparison-of-standard-and-datacenter-editions-of-windows-server-2016"></a>Windows Server 2016 Standard Edition과 Datacenter Edition의 비교
 
 > 적용 대상: Windows Server 2016
   
 ## <a name="locks-and-limits"></a>잠금 및 제한
-|잠금 및 제한|Windows Server 2016 Standard|Windows Server 2016 Datacenter|  
-|-------------------|----------|---------------------------|  
-|최대 사용자 수|CAL 기준|CAL 기준|
-|최대 SMB 연결 수|16777216|16777216|
-|최대 RRAS 연결 수|제한 없음|제한 없음|
-|최대 IAS 연결 수|2147483647|2147483647|
-|최대 RDS 연결 수:|65535|65535|
-|64비트 소켓 최대 수|64|64|
-|최대 코어 수|제한 없음|제한 없음|
-|최대 RAM|24TB|24TB|
-|가상화 게스트로 이용 가능 여부|예(두 대의 가상 컴퓨터 및 라이선스당 하나의 Hyper-V 호스트)|예(가상 컴퓨터 무제한 허용 및 라이선스당 하나의 Hyper-V 호스트)|
-|서버의 도메인 가입 가능 여부|예|예|
-|경계 네트워크 보호/방화벽|아니요|아니요|
-|DirectAccess|예|예|
-|DLNA 코덱 및 웹 미디어 스트리밍|예(데스크톱 환경 포함 서버로 설치된 경우)|예(데스크톱 환경 포함 서버로 설치된 경우)|
+
+| 잠금 및 제한 | Windows Server 2016 Standard | Windows Server 2016 Datacenter |
+| ------------------- |---------- | --------------------------- |  
+| 최대 사용자 수 | CAL 기준   | CAL 기준     |
+| 최대 SMB 연결 수 | 16,777,216      | 16,777,216          |
+| 최대 RRAS 연결 수| 제한 없음       | 제한 없음         |
+| 최대 IAS 연결 수 | 2,147,483,647   | 2,147,483,647        |
+| 최대 RDS 연결 수: | 65535           | 65535             |
+| 64비트 소켓 최대 수 | 64     | 64                |
+| 최대 코어 수 | 제한 없음       | 제한 없음      |
+| 최대 RAM             | 24TB           | 24TB             |
+| 가상화 게스트로 이용 가능 여부 | 예(두 대의 가상 컴퓨터 및 라이선스당 하나의 Hyper-V 호스트) | 예(<strong>무제한 가상 머신</strong>, 라이선스당 하나의 Hyper-V 호스트) |
+| 서버의 도메인 가입 가능 여부 | 예            | 예                |
+| 경계 네트워크 보호/방화벽 | 아니요     | 아니요                 |
+| DirectAccess            | 예             | 예                |
+| DLNA 코덱 및 웹 미디어 스트리밍 | 예(데스크톱 환경 포함 서버로 설치된 경우) | 예(데스크톱 환경 포함 서버로 설치된 경우) |
 
 ## <a name="server-roles"></a>서버 역할
-|사용 가능한 Windows Server 역할|역할 서비스|Windows Server 2016 Standard|Windows Server 2016 Datacenter|  
-|-------------------|----------|----------|---------------------------|  
-|Active Directory 인증서 서비스| |예|예|
-|Active Directory 도메인 서비스| |예|예|
-|AD FS(Active Directory Federation Services)| |예|예|
-|AD LDS(Lightweight Directory Services)| |예|예|
-|AD Rights Management Services| |예|예|
-|디바이스 상태 증명| |예|예|
-|DHCP 서버| |예|예|
-|DNS 서버| |예|예|
-|팩스 서버| |예|예|
-|파일 및 저장소 서비스|파일 서버|예|예|
-|파일 및 저장소 서비스|네트워크 파일용 BranchCache|예|예|
-|파일 및 저장소 서비스|데이터 중복 제거|예|예|
-|파일 및 저장소 서비스|DFS 네임스페이스|예|예|
-|파일 및 저장소 서비스|DFS 복제|예|예|
-|파일 및 저장소 서비스|파일 서버 리소스 관리자|예|예|
-|파일 및 저장소 서비스|파일 서버 VSS 에이전트 서비스|예|예|
-|파일 및 저장소 서비스|iSCSI 대상 서버|예|예|
-|파일 및 저장소 서비스|iSCSI 대상 저장소 공급자|예|예|
-|파일 및 저장소 서비스|NFS용 서버|예|예|
-|파일 및 저장소 서비스|클라우드 폴더|예|예|
-|파일 및 저장소 서비스|저장소 서비스|예|예|
-|호스트 보호 서비스| |예|예|
-|Hyper-V| |예|예(보호된 가상 컴퓨터 포함)|
-|MultiPoint 서비스| |예|예|
-|네트워크 컨트롤러| |아니오|예|
-|네트워크 정책 및 액세스 서비스| |예(데스크톱 환경 포함 서버로 설치된 경우)|예(데스크톱 환경 포함 서버로 설치된 경우)|
-|인쇄 및 문서 서비스| |예|예|
-|원격 액세스| |예|예|
-|원격 데스크톱 서비스| |예|예|
-|볼륨 정품 인증 서비스| |예|예|
-|Web Services(IIS)| |예|예|
-|Windows 배포 서비스| |예(데스크톱 환경 포함 서버로 설치된 경우)|예(데스크톱 환경 포함 서버로 설치된 경우)|
-|Windows Server 필수 패키지 환경| |예|예|
-|Windows Server Update Services| |예|예|
+
+| 사용 가능한 Windows Server 역할     | 역할 서비스 | Windows Server 2016 Standard | Windows Server 2016 Datacenter |  
+| -------------------                | ----------    | ----------                   | ---------------------------    |  
+| Active Directory 인증서 서비스|              | 예                          | 예                            |
+| Active Directory 도메인 서비스    |               | 예                          | 예                            |
+| AD FS(Active Directory Federation Services)|               | 예                          | 예                            |
+| AD LDS(Lightweight Directory Services)| |예|예|
+| AD Rights Management Services| |예|예|
+| 디바이스 상태 증명| |예|예|
+| DHCP 서버| |예|예|
+| DNS 서버| |예|예|
+| 팩스 서버| |예|예|
+| 파일 및 저장소 서비스|파일 서버|예|예|
+| 파일 및 저장소 서비스|네트워크 파일용 BranchCache|예|예|
+| 파일 및 저장소 서비스|데이터 중복 제거|예|예|
+| 파일 및 저장소 서비스|DFS 네임스페이스|예|예|
+| 파일 및 저장소 서비스|DFS 복제|예|예|
+| 파일 및 저장소 서비스|파일 서버 리소스 관리자|예|예|
+| 파일 및 저장소 서비스|파일 서버 VSS 에이전트 서비스|예|예|
+| 파일 및 저장소 서비스|iSCSI 대상 서버|예|예|
+| 파일 및 저장소 서비스|iSCSI 대상 저장소 공급자|예|예|
+| 파일 및 저장소 서비스|NFS용 서버|예|예|
+| 파일 및 저장소 서비스|클라우드 폴더|예|예|
+| 파일 및 저장소 서비스|저장소 서비스|예|예|
+| 호스트 보호 서비스| |예|예|
+| Hyper-V| |예|예(<strong>보호된 가상 컴퓨터 포함</strong>)|
+| MultiPoint 서비스| |예|예|
+| 네트워크 컨트롤러| |아니오| <strong>예</strong> |
+| 네트워크 정책 및 액세스 서비스| |예(데스크톱 환경 포함 서버로 설치된 경우)|예(데스크톱 환경 포함 서버로 설치된 경우)|
+| 인쇄 및 문서 서비스| |예|예|
+| 원격 액세스| |예|예|
+| 원격 데스크톱 서비스| |예|예|
+| 볼륨 정품 인증 서비스| |예|예|
+| Web Services(IIS)| |예|예|
+| Windows 배포 서비스| |예(데스크톱 환경 포함 서버로 설치된 경우)|예(데스크톱 환경 포함 서버로 설치된 경우)|
+| Windows Server 필수 패키지 환경| |예|예|
+| Windows Server Update Services| |예|예|
 
 ## <a name="features"></a>기능
 
@@ -97,7 +95,7 @@ ms.locfileid: "71391882"
 |강화된 저장소|예|예|
 |장애 조치(failover) 클러스터링|예|예|
 |그룹 정책 관리|예|예|
-|호스트 보호 Hyper-V 지원|아니오|예|
+|호스트 보호 Hyper-V 지원|아니오|<strong>예</strong> |
 |I/O 서비스 품질|예|예|
 |IIS 호스팅 가능한 웹 코어|예|예|
 |인터넷 인쇄 클라이언트|예(데스크톱 환경 포함 서버로 설치된 경우)|예(데스크톱 환경 포함 서버로 설치된 경우)|
@@ -123,7 +121,7 @@ ms.locfileid: "71391882"
 |SMB 대역폭 제한|예|예|
 |SMTP 서버|예|예|
 |SNMP 서비스|예|예|
-|소프트웨어 부하 분산 장치|아니오|예|
+|소프트웨어 부하 분산 장치|아니오| <strong>예</strong> |
 |저장소 복제본|아니오|예|
 |텔넷 클라이언트|예|예|
 |TFTP 클라이언트|예(데스크톱 환경 포함 서버로 설치된 경우)|예(데스크톱 환경 포함 서버로 설치된 경우)|
@@ -160,15 +158,15 @@ ms.locfileid: "71391882"
 |Nano Server 설치 옵션|예|예|
 |서버 관리자|예|예|
 |SMB 다이렉트 및 SMB over RDMA|예|예|
-|소프트웨어 정의 네트워킹|아니오|예|
-|저장소 관리 서비스|예|예|
+| 소프트웨어 정의 네트워킹 | 아니오 | <strong>예</strong> |
+|저장소 복제본 | 아니오 | <strong>예</strong> |
 |저장소 공간|예|예|
-|저장소 공간 다이렉트|아니오|예|
+|저장소 공간 다이렉트|아니오| <strong>예</strong> |
 |볼륨 정품 인증 서비스|예|예|
 |VSS (Volume Shadow Copy Service) integration|예|예|
 |Windows Server Update Services|예|예|
 |Windows 시스템 리소스 관리자|예|예|
 |서버 라이선싱 로깅|예|예|
-|활성화 상속|데이터센터에서 호스트된 경우 게스트로 가능|호스트 또는 게스트로 가능|
+|활성화 상속|데이터센터에서 호스트된 경우 게스트로 가능| <strong>호스트 또는 게스트로 가능</strong> |
 |클라우드 폴더|예|예|
 

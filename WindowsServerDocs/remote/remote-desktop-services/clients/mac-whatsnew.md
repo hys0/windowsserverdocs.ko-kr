@@ -13,12 +13,12 @@ manager: daveba
 ms.author: helohr
 ms.date: 09/11/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 092804ea84ba2d0e68eede3a597cb354c53bb8bd
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: cc09a60882c481cea974508b0ef967aad0ed82fa
+ms.sourcegitcommit: de71970be7d81b95610a0977c12d456c3917c331
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404198"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71940640"
 ---
 # <a name="whats-new-in-the-macos-client"></a>macOS 클라이언트의 새로운 기능
 
@@ -189,7 +189,7 @@ ms.locfileid: "71404198"
 - 타원 곡선 비대칭 키가 포함된 RD 엔드포인트 인증서 지원이 추가되었습니다.
 - 일부 시나리오에서 관리형 리소스를 다운로드하지 못하는 버그가 수정되었습니다.
 - 고정된 연결 센터의 자르기 문제가 해결되었습니다.
-- 디스플레이 속성 시트의 확인란이 더 잘 작동하도록 수정되었습니다.
+- 데스크톱 추가 창의 표시 탭에서 더 잘 작동하도록 확인란을 수정했습니다.
 - 동적 디스플레이 변경이 적용되면 이제 가로 세로 비율 잠금이 비활성화됩니다.
 - F5 인프라와의 호환성 문제가 해결되었습니다.
 - 연결 시 올바른 메시지가 표시되도록 빈 암호 처리가 업데이트되었습니다.
