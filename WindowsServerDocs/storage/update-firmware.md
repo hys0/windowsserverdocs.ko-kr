@@ -1,22 +1,22 @@
 ---
 ms.assetid: e5945bae-4a33-487c-a019-92a69db8cf6c
-title: Windows Server 2016에서 드라이브 펌웨어 업데이트
-ms.prod: windows-server-threshold
+title: 드라이브 펌웨어 업데이트
+ms.prod: windows-server
 ms.author: toklima
 ms.manager: dmoss
 ms.technology: storage-spaces
 ms.topic: article
 author: toklima
 ms.date: 10/04/2016
-ms.openlocfilehash: 50291bd4da05d9c2736c84443b444b9a43f46344
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2f0530101bb7d597d2d95c26648aad65d62b69ca
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59884784"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71365866"
 ---
-# <a name="updating-drive-firmware-in-windows-server-2016"></a>Windows Server 2016에서 드라이브 펌웨어 업데이트
->적용 대상: Windows 10, Windows Server (반기 채널), Windows Server 2016
+# <a name="updating-drive-firmware"></a>드라이브 펌웨어 업데이트
+>적용 대상: Windows Server 2019, Windows Server 2016, Windows 10
 
 드라이브의 펌웨어 업데이트는 지금까지 가동 중지 시간이 생길 수 있는 번거로운 작업이었습니다. 이런 이유로 Microsoft는 저장소 공간, Windows Server 및 Windows 10, 버전 1703 및 이후 버전을 개선하고 있습니다. Windows에 포함된 새로운 펌웨어 업데이트 메커니즘을 지원하는 드라이브가 있는 경우 가동 중지 시간 없이 프로덕션 드라이브의 펌웨어를 업데이트할 수 있습니다. 그러나 프로덕션 드라이브의 펌웨어를 업데이트하려는 경우 강력한 최신 펌웨어 업데이트 기능을 사용하는 동시에 위험을 최소화하는 방법에 대한 팁을 읽어야 합니다.
 
@@ -30,11 +30,11 @@ Windows Server를 사용하여 드라이브 펌웨어를 업데이트하려면 �
 하드웨어가 드라이브 펌웨어를 업데이트하는 Windows를 지원하는지에 대한 정보는 솔루션 공급업체에 문의하세요.
 다음은 다양한 요구 사항에 대한 링크입니다.
 
--   SATA: [Device.Storage.Hd.Sata](https://msdn.microsoft.com/windows/hardware/commercialize/design/compatibility/device-storage#devicestoragehdsata) -합니다 **[구현 된 경우\] 펌웨어 다운로드 및 활성화** 섹션
+-   타 [Device.Storage.Hd.Sata](https://msdn.microsoft.com/windows/hardware/commercialize/design/compatibility/device-storage#devicestoragehdsata) - **[구현된 경우\] 펌웨어 다운로드 및 활성화** 섹션
     
--   SAS: [Device.Storage.Hd.Sas](https://msdn.microsoft.com/windows/hardware/commercialize/design/compatibility/device-storage#devicestoragehdsas) -합니다 **[구현 된 경우\] 펌웨어 다운로드 및 활성화** 섹션
+-   SAS [Device.Storage.Hd.Sas](https://msdn.microsoft.com/windows/hardware/commercialize/design/compatibility/device-storage#devicestoragehdsas) - **[구현된 경우\] 펌웨어 다운로드 및 활성화** 섹션
 
--   NVMe: [Device.Storage.ControllerDrive.NVMe](https://msdn.microsoft.com/windows/hardware/commercialize/design/compatibility/device-storage#devicestoragecontrollerdrivenvme) -단원의 **5.7** 하 고 **5.8**합니다.
+-   NVMe [Device. ControllerDrive. NVMe](https://msdn.microsoft.com/windows/hardware/commercialize/design/compatibility/device-storage#devicestoragecontrollerdrivenvme) -섹션 **5.7** 및 **5.8**.
 
 ## <a name="powershell-cmdlets"></a>PowerShell cmdlet
 
@@ -164,7 +164,7 @@ $NewDoc = Get-Content <Path> | Out-String
 $SpacesDirect | Set-StorageHealthSetting -Name "System.Storage.SupportedComponents.Document" -Value $NewDoc
 ```
 
-작업의 상태 관리 서비스를 참조 하세요. 해당 롤아웃 메커니즘에 자세히 알아보기를 원하는 경우이 동영상: https://channel9.msdn.com/Blogs/windowsserver/Update-Drive-Firmware-Without-Downtime-in-Storage-Spaces-Direct
+작동 중인 상태 관리 서비스 확인 하 고 해당 롤아웃 메커니즘에 대해 자세히 알아보려면 다음 비디오를 참조 하세요. https://channel9.msdn.com/Blogs/windowsserver/Update-Drive-Firmware-Without-Downtime-in-Storage-Spaces-Direct
 
 ## <a name="frequently-asked-questions"></a>질문과 대답
 
@@ -195,7 +195,7 @@ $SpacesDirect | Set-StorageHealthSetting -Name "System.Storage.SupportedComponen
 
 ### <a name="what-happens-if-the-update-fails"></a>업데이트가 실패하는 경우 어떤 일이 발생하나요?
 
-업데이트는 다양 한 이유로 실패할 수 있습니다, 그리고 그 중 일부는: 1) 드라이브의 펌웨어를 업데이트 하는 Windows에 대 한 올바른 명령을 지원 하지 않습니다. 이 경우 새 펌웨어 이미지는 활성화되지 않으며 드라이브는 계속해서 이전 이미지로 작동합니다. 2) 이미지를 이 드라이브에 다운로드 또는 적용할 수 없습니다(버전 불일치, 손상된 이미지...). 이 경우 드라이브에서 활성화 명령이 실패합니다. 그러나 이전 펌웨어 이미지는 계속해서 작동합니다.
+업데이트는 여러 가지 이유로 실패할 수 있으며, 그 중 일부는 다음과 같습니다. 1) 드라이브가 Windows에서 펌웨어를 업데이트 하는 올바른 명령을 지원 하지 않습니다. 이 경우 새 펌웨어 이미지는 활성화되지 않으며 드라이브는 계속해서 이전 이미지로 작동합니다. 2) 이미지를 이 드라이브에 다운로드 또는 적용할 수 없습니다(버전 불일치, 손상된 이미지...). 이 경우 드라이브에서 활성화 명령이 실패합니다. 그러나 이전 펌웨어 이미지는 계속해서 작동합니다.
 
 펌웨어 업데이트 후 드라이브에서 전혀 반응이 없으면 드라이브 펌웨어 자체의 버그일 수 있습니다. 프로덕션 환경에 배치하기 전에 랩 환경에서 모든 펌웨어 업데이트를 테스트하세요. 드라이브 교체가 유일한 해결책일 수 있습니다.
 
