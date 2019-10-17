@@ -1432,7 +1432,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설치**    |   항상 설치
 |   **시작 유형**   |   자동
 |   **추천 사항**  |   인쇄 서버 또는 DC가 아닌 경우 사용하지 않도록 설정할 수 있습니다.
-|   **설명**    |   도메인 컨트롤러에서 DC 역할을 설치하면 인쇄 정리 작업을 수행하는 스풀러 서비스에 스레드가 추가되어 Active Directory에서 오래된 인쇄 큐 개체를 제거합니다.  스풀러 서비스가 각 사이트에 있는 하나 이상의 DC에서 실행되고 있지 않으면 AD에서 더 이상 존재하지 않는 이전 큐를 제거할 수 없습니다. https://blogs.technet.microsoft.com/askperf/2008/11/18/disabling-unnecessary-services-a-word-to-the-wise/
+|   **설명**    |   도메인 컨트롤러에서 DC 역할을 설치하면 인쇄 정리 작업을 수행하는 스풀러 서비스에 스레드가 추가되어 Active Directory에서 오래된 인쇄 큐 개체를 제거합니다.  스풀러 서비스가 각 사이트에 있는 하나 이상의 DC에서 실행되고 있지 않으면 AD에서 더 이상 존재하지 않는 이전 큐를 제거할 수 없습니다. [https://blogs.technet.microsoft.com/askperf/2008/11/18/disabling-unnecessary-services-a-word-to-the-wise/](https://blogs.technet.microsoft.com/askperf/2008/11/18/disabling-unnecessary-services-a-word-to-the-wise/ )
 |||         
 
 <br />          
