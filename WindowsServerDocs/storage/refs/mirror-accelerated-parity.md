@@ -8,12 +8,12 @@ ms.topic: article
 author: gawatu
 ms.date: 10/17/2018
 ms.assetid: ''
-ms.openlocfilehash: 0325a37e38845ea9482a6ed260e2bb3b493cc79a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 2721f1c744c5c03d8e4bce0508fd23fa5237f95f
+ms.sourcegitcommit: 9a6a692a7b2a93f52bb9e2de549753e81d758d28
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71394003"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72591091"
 ---
 # <a name="mirror-accelerated-parity"></a>미러 가속 패리티
 
@@ -23,7 +23,7 @@ ms.locfileid: "71394003"
 
 ![미러-가속 패리티 볼륨](media/mirror-accelerated-parity/Mirror-Accelerated-Parity-Volume.png)
 
-## <a name="background"></a>배경
+## <a name="background"></a>백그라운드
 
 미러 및 패리티 복원 체계는 기본적으로 다른 저장소 및 성능 특징을 갖고 있습니다.
 - 미러 복원 력을 통해 사용자는 빠른 쓰기 성능을 얻을 수 있지만 각 복사본에 대 한 데이터를 복제 하는 것은 공간 효율성이 크지 않습니다. 
@@ -47,38 +47,38 @@ ReFS는 미러와 패리티 간에 데이터를 실시간으로 순환시킵니�
 
 ## <a name="io-on-mirror-accelerated-parity"></a>미러-가속 패리티의 IO
 ### <a name="io-behavior"></a>IO 동작
-**쓰므로** ReFS 서비스에서 들어오는 쓰기는 다음과 같은 세 가지 방법으로 수행 됩니다.
+**쓰기:** ReFS가 세 가지 방식으로 들어오는 쓰기를 처리합니다.
 
 1.  **미러에 쓰기:**
 
     - **a.** 들어오는 쓰기가 미러에서 기존 데이터를 수정할 경우 ReFS가 데이터를 바로 수정합니다.
     - **1b.** 들어오는 쓰기가 새로운 쓰기이고 ReFS가 미러에서 이 쓰기를 처리하기에 충분한 여유 공간을 찾을 수 있는 경우 ReFS가 미러에 씁니다.
-    ![쓰기-미러](media/mirror-accelerated-parity/Write-to-Mirror.png)
+    ![Write-미러 ](media/mirror-accelerated-parity/Write-to-Mirror.png)
 
 2. **미러에서 쓰고 패리티에서 다시 할당 합니다.**
 
     들어오는 쓰기가 패리티 데이터를 수정 하 고 ReFS에서 들어오는 쓰기를 처리할 수 있는 충분 한 사용 가능한 공간을 성공적으로 찾으면 ReFS는 먼저 이전 데이터를 패리티로 무효화 한 다음 미러 서버에 씁니다. 이 무효화는 패리티에 대한 쓰기 성능 향상에 도움이 되는 빠르고 저렴한 메타데이터 작업입니다.
-    ![다시 할당 됨-쓰기](media/mirror-accelerated-parity/Reallocated-Write.png)
+    ![Reallocated-쓰기 ](media/mirror-accelerated-parity/Reallocated-Write.png)
 
 3. **패리티에 씁니다.**
     
     ReFS가 미러에서 충분한 여유 공간을 찾지 못할 경우 ReFS가 패리티에 새 데이터를 쓰거나 패리티의 기존 데이터를 직접 수정합니다. 아래 “성능 최적화” 세션에서는 패리티에 쓰기를 최소화하는 데 도움이 되는 참고 자료를 제공합니다.
-    ![쓰기-패리티](media/mirror-accelerated-parity/Write-to-Parity.png)
+    ![Write-패리티 ](media/mirror-accelerated-parity/Write-to-Parity.png)
 
-**나타납니다** ReFS는 관련 데이터를 포함 하는 계층에서 직접 읽습니다. 패리티가 HDD로 생성된 경우 저장소 공간 다이렉트의 캐시가 이 데이터를 캐시하여 이후 읽기를 가속화합니다. 
+**읽기:** ReFS가 관련 데이터가 들어 있는 계층에서 직접 읽습니다. 패리티가 HDD로 생성된 경우 저장소 공간 다이렉트의 캐시가 이 데이터를 캐시하여 이후 읽기를 가속화합니다. 
 
 > [!NOTE]
 > 읽기 때문에 ReFS가 미러 계층으로 데이터를 다시 순환시키지는 않습니다. 
 
 ### <a name="io-performance"></a>IO 성능
 
-**쓰므로** 위에서 설명한 각 유형의 쓰기에는 고유한 성능 특성이 있습니다. 대체로 미러 계층에 쓰기가 재할당된 쓰기보다 훨씬 더 빠르며, 재할당된 쓰기는 패리티 계층에 직접 쓰기보다 현저히 더 빠릅니다. 이 관계는 아래의 부등호로 설명됩니다. 
+**쓰기:** 위에 설명된 쓰기 형식마다 고유의 성능 특징이 있습니다. 대체로 미러 계층에 쓰기가 재할당된 쓰기보다 훨씬 더 빠르며, 재할당된 쓰기는 패리티 계층에 직접 쓰기보다 현저히 더 빠릅니다. 이 관계는 아래의 부등호로 설명됩니다. 
 
 
 - **> 미러 계층 > > 패리티 계층에 다시 할당 됨**
 
 
-**나타납니다** 패리티를 읽을 때에는 의미 있는 부정적인 성능 영향을 주지 않습니다.
+**읽기:** 패리티에서 읽을 때 의미 있는 부정적인 성능 영향이 없습니다.
 - 미러와 패리티가 동일한 미디어 유형으로 생성된 경우 읽기 성능이 같습니다. 
 - 미러와 패리티가 미러된 SSD, 패리티 HDD 등 서로 다른 미디어 유형으로 생성되는 경우 [저장소 공간 다이렉트의 캐시](../storage-spaces/understand-the-cache.md)로 핫 데이터를 캐시하여 패리티에서 모든 읽기를 가속화할 수 있습니다.
 
@@ -86,7 +86,7 @@ ReFS는 미러와 패리티 간에 데이터를 실시간으로 순환시킵니�
 
 이에 해당 하는 반기 릴리스에서 ReFS는 압축을 도입 하 여 90 +% 가득 찬 미러 가속 패리티 볼륨의 성능을 크게 향상 시킵니다. 
 
-**백그라운드** 이전에는 미러 가속 패리티 볼륨이 가득 차서 이러한 볼륨의 성능이 저하 될 수 있습니다. 볼륨 초과 작업 시간 동안 핫 데이터와 콜드 데이터가 섞이기 때문에 성능이 저하됩니다. 이는 핫 데이터가 사용할 수 있는 미러의 공간을 콜드 데이터가 차지하기 때문에 미러에 더 적은 핫 데이터가 저장될 수 있음을 의미합니다. 미러에 직접 쓰기가 재할당된 쓰기보다 훨씬 더 빠르고 차수가 패리티에 직접 쓰기보다 더 빠르기 때문에 미러에 핫 데이터 저장은 고성능을 유지하는 데 중요합니다. 따라서 미러에 콜드 데이터가 있으면 ReFS가 미러에 직접 쓰기를 만들 가능성이 줄어들기 때문에 성능에 좋지 않습니다. 
+**배경:** 이전에는 미러-가속 패리티 볼륨이 가득 차면 이러한 볼륨의 성능이 저하되기도 했습니다. 볼륨 초과 작업 시간 동안 핫 데이터와 콜드 데이터가 섞이기 때문에 성능이 저하됩니다. 이는 핫 데이터가 사용할 수 있는 미러의 공간을 콜드 데이터가 차지하기 때문에 미러에 더 적은 핫 데이터가 저장될 수 있음을 의미합니다. 미러에 직접 쓰기가 재할당된 쓰기보다 훨씬 더 빠르고 차수가 패리티에 직접 쓰기보다 더 빠르기 때문에 미러에 핫 데이터 저장은 고성능을 유지하는 데 중요합니다. 따라서 미러에 콜드 데이터가 있으면 ReFS가 미러에 직접 쓰기를 만들 가능성이 줄어들기 때문에 성능에 좋지 않습니다. 
 
 ReFS 압축은 미러에 핫 데이터를 위한 여유 공간을 확보하여 이러한 성능 문제를 해결합니다. 압축은 먼저 미러와 패리티의 모든 데이터를 패리티에 통합합니다. 이를 통해 볼륨 내의 조각화가 줄고 미러의 주소 지정 가능한 공간은 늘어납니다. 더 중요한 것은 이 과정을 통해 ReFS가 핫 데이터를 미러로 다시 통합할 수 있다는 것입니다.
 -   새 쓰기가 들어오면 미러에서 처리됩니다. 또한 새로 쓴 핫 데이터는 미러에 상주합니다. 
@@ -101,10 +101,17 @@ ReFS 압축은 미러에 핫 데이터를 위한 여유 공간을 확보하여 �
 
 ReFS는 미러-가속 패리티 성능 평가에 도움이 되도록 성능 카운터를 유지합니다. 
 - 위의 패리티에 쓰기 섹션에서 설명한 것 처럼 ReFS는 미러에서 사용 가능한 공간을 찾을 수 없을 때 패리티에 직접 기록 합니다. 이러한 현상은 대개 ReFS가 패리티에 데이터를 순환시킬 수 있는 것보다 빠르게 미러된 계층이 가득 찰 때 발생합니다. 즉, ReFS 순환이 수집 속도를 따라갈 수 없습니다. 아래의 성능 카운터는 ReFS가 패리티에 직접 쓸 때를 식별합니다.
+
   ```
+  # Windows Server 2016
   ReFS\Data allocations slow tier/sec
   ReFS\Metadata allocations slow tier/sec
+
+  # Windows Server 2019
+  ReFS\Allocation of Data Clusters on Slow Tier/sec
+  ReFS\Allocation of Metadata Clusters on Slow Tier/sec
   ```
+
 - 이러한 카운터가 0이 아닐 경우 이는 ReFS가 미러 밖으로 데이터를 충분히 빠르게 순환하고 있지 않음을 나타냅니다. 이를 완화하는 데 도움이 되도록 순환 강도를 변경하거나 미러된 계층의 크기를 늘릴 수 있습니다.
 
 ### <a name="rotation-aggressiveness"></a>회전 강도
@@ -114,9 +121,9 @@ ReFS는 미러-가속 패리티 성능 평가에 도움이 되도록 성능 카�
 -   값이 낮으면 ReFS가 사전에 데이터 준비를 취소하고 들어오는 IO를 더 잘 수집할 수 있습니다. 이는 보관 저장소 등의 수집량이 많은 워크로드에 적용 가능합니다. 그러나 값이 낮으면 범용 워크로드에 대한 성능이 저하됩니다. 미러 계층 밖으로 데이터를 불필요하게 순환하면 성능이 떨어집니다. 
 
 ReFS는 레지스트리 키로 구성 가능한 이 임계값을 조정하기 위해 튜닝할 수 있는 매개 변수를 지정합니다. **저장소 공간 다이렉트 배포의 각 노드**에 이 레지스트리 키를 구성해야 하며 다시 시작해야 변경 내용이 적용됩니다. 
--   **키:** HKEY_LOCAL_MACHINE\System\CurrentControlSet\Policies
+-   **Key:** HKEY_LOCAL_MACHINE\System\CurrentControlSet\Policies
 -   **ValueName (DWORD):** DataDestageSsdFillRatioThreshold
--   **System.valuetype** 백분율
+-   **ValueType:** Percentage
 
 이 레지스트리 키를 설정하지 않으면 ReFS가 기본값 85%를 사용합니다.  대부분의 배포에 이 기본값이 권장되며 50% 미만의 값은 권장되지 않습니다. 아래의 PowerShell 명령은 75%의 값으로 이 레지스트리 키를 설정하는 방법을 보여줍니다. 
 ```PowerShell
@@ -146,7 +153,7 @@ Resize-StorageTier -InputObject (Get-StorageTier -FriendlyName “Performance”
 New-Volume – FriendlyName “TestVolume” -FileSystem CSVFS_ReFS -StoragePoolFriendlyName “StoragePoolName” -StorageTierFriendlyNames Performance, Capacity -StorageTierSizes 200GB, 800GB
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 -   [ReFS 개요](refs-overview.md)
 -   [ReFS 블록 복제](block-cloning.md)

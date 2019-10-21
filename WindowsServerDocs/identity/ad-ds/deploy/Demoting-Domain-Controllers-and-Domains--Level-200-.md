@@ -9,12 +9,12 @@ ms.date: 11/14/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 00f3851ce74a496bd530c8ea682ea312f8b06a0a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e3f320b67196a2400ebedbaeaf0a5b59969400e8
+ms.sourcegitcommit: b7f55949f166554614f581c9ddcef5a82fa00625
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71390924"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72588100"
 ---
 # <a name="demoting-domain-controllers-and-domains"></a>도메인 컨트롤러 및 도메인 수준 내리기
 
@@ -36,7 +36,7 @@ ms.locfileid: "71390924"
 |||  
 |-|-|  
 |**ADDSDeployment 및 ServerManager Cmdlet**|인수(**굵게** 표시된 인수는 필수 항목이며, *기울임꼴* 인수는 Windows PowerShell 또는 AD DS 구성 마법사를 사용하여 지정할 수 있음)|  
-|Uninstall-AddsDomainController|-SkipPreChecks<br /><br />*-LocalAdministratorPassword*<br /><br />-Confirm<br /><br />***-Credential***<br /><br />-DemoteOperationMasterRole<br /><br />*-DNSDelegationRemovalCredential*<br /><br />-Force<br /><br />*-ForceRemoval*<br /><br />*-IgnoreLastDCInDomainMismatch*<br /><br />*-IgnoreLastDNSServerForZone*<br /><br />*-LastDomainControllerInDomain*<br /><br />-Norebootoncompletion<br /><br />*-RemoveApplicationPartitions*<br /><br />*-RemoveDNSDelegation*<br /><br />-RetainDCMetadata|  
+|제거-Install-addsdomaincontroller|-SkipPreChecks<br /><br />*-LocalAdministratorPassword*<br /><br />-Confirm<br /><br />***-Credential***<br /><br />-DemoteOperationMasterRole<br /><br />*-DNSDelegationRemovalCredential*<br /><br />-Force<br /><br />*-ForceRemoval*<br /><br />*-IgnoreLastDCInDomainMismatch*<br /><br />*-IgnoreLastDNSServerForZone*<br /><br />*-LastDomainControllerInDomain*<br /><br />-Norebootoncompletion<br /><br />*-RemoveApplicationPartitions*<br /><br />*-RemoveDNSDelegation*<br /><br />-RetainDCMetadata|  
 |Uninstall-WindowsFeature/Remove-WindowsFeature|***-Name***<br /><br />***-IncludeManagementTools***<br /><br />*-Restart*<br /><br />-Remove<br /><br />-Force<br /><br />-ComputerName<br /><br />-Credential<br /><br />-LogPath<br /><br />-Vhd|  
   
 > [!NOTE]  
@@ -104,7 +104,7 @@ Uninstall-windowsfeature
    > [!WARNING]  
    > 도메인 컨트롤러에서 다른 도메인 컨트롤러에 연결할 수 없고 해당 네트워크 문제를 해결할 *합리적인 방법이 없는* 경우가 아니면 이 옵션을 선택하지 마십시오. 강제로 수준을 내리면 포리스트에서 남아 있는 도메인 컨트롤러의 Active Directory에서 메타데이터가 분리되게 됩니다. 또한 암호나 새 사용자 계정과 같이 해당 도메인 컨트롤러에서 복제되지 않은 모든 변경 사항이 영구 손실됩니다. 분리된 메타데이터는 AD DS, Exchange, SQL 및 기타 소프트웨어와 관련한 Microsoft 고객 지원 사례의 상당 부분을 차지하는 근본 원인입니다.  
    >
-   > 도메인 컨트롤러의 수준을 강제로 내리려면 바로 메타데이터 정리 작업을 수동으로 *수행해야 합니다*. 단계에 대 한 검토 [서버 메타 데이터 정리](https://technet.microsoft.com/library/cc816907(WS.10).aspx)합니다.  
+   > 도메인 컨트롤러의 수준을 강제로 내리려면 바로 메타데이터 정리 작업을 수동으로 *수행해야 합니다*. 단계에 대 한 검토 [서버 메타 데이터 정리](ad-ds-metadata-cleanup.md)합니다.  
 
    ![Active Directory Domain Services 구성 마법사-자격 증명 강제 제거](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_ForceDemote.png)  
   
@@ -188,7 +188,7 @@ Uninstall-windowsfeature
 **수준 내리기**를 클릭하여 다음 AD DS 배포 cmdlet을 실행합니다.
 
 ```
-Uninstall-DomainController
+Uninstall-ADDSDomainController
 ```
 
 선택적 **Whatif** 인수를 **Uninstall-ADDSDomainController** 및 cmdlet과 함께 사용하여 구성 정보를 검토합니다. 이를 통해 cmdlet 인수의 명시적 및 암시적 값을 확인할 수 있습니다.
@@ -208,7 +208,7 @@ Uninstall-DomainController
 * %systemroot%\debug\dcpromo.log
 * %systemroot%\debug\dcpromoui.log
 
-**Uninstall-AddsDomainController** 및 **Uninstall-WindowsFeature**는 각각 하나의 작업만 수행하므로 확인 단계에서 최소 필수 인수와 함께 여기에 표시됩니다. Enter 키를 누르면 취소할 수 없는 수준 내리기 프로세스가 시작되고 컴퓨터가 다시 시작됩니다.
+**Install-addsdomaincontroller** **및 각각** 에는 하나의 작업만 있기 때문에 여기에는 최소 필수 인수를 사용 하 여 확인 단계에 표시 됩니다. Enter 키를 누르면 취소할 수 없는 수준 내리기 프로세스가 시작되고 컴퓨터가 다시 시작됩니다.
 
 ![PowerShell 제거-Install-addsdomaincontroller 예제](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallConfirm.png)
 

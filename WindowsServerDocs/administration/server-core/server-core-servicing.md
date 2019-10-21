@@ -7,12 +7,12 @@ ms.sitesec: library
 author: lizap
 ms.localizationpriority: medium
 ms.date: 10/17/2017
-ms.openlocfilehash: eacb80d89e7bcc95d6b5c12269d7587dc7d6870c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d670add6e4b4fc7369c48905bb297642ae07ff20
+ms.sourcegitcommit: b7f55949f166554614f581c9ddcef5a82fa00625
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71383322"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72588061"
 ---
 # <a name="patch-a-server-core-installation"></a>Server Core 설치 패치
 
@@ -39,14 +39,14 @@ Windows 업데이트를 사용 하 여 서버를 자동으로 패치 하려면 �
 
 1. 현재 Windows 업데이트 설정을 확인 합니다.
    ```
-   %systemroot%\system32\Cscript scregedit.wsf /AU /v 
+   %systemroot%\system32\Cscript %systemroot%\system32\scregedit.wsf /AU /v 
    ```
 
 2. 자동 업데이트를 사용 하도록 설정 하려면
 
    ```
    Net stop wuauserv 
-   %systemroot%\system32\Cscript scregedit.wsf /AU 4 
+   %systemroot%\system32\Cscript %systemroot%\system32\scregedit.wsf /AU 4 
    Net start wuauserv
    ```  
 
@@ -54,11 +54,11 @@ Windows 업데이트를 사용 하 여 서버를 자동으로 패치 하려면 �
 
    ```
    Net stop wuauserv 
-   %systemroot%\system32\Cscript scregedit.wsf /AU 1 
+   %systemroot%\system32\Cscript %systemroot%\system32\scregedit.wsf /AU 1 
    Net start wuauserv 
    ```
 
-서버가 도메인 구성원인 경우 그룹 정책을 사용하여 Windows 업데이트를 구성할 수도 있습니다. 자세한 내용은 https://go.microsoft.com/fwlink/?LinkId=192470 을 참조하세요. 그러나이 방법을 사용 하는 경우 그래픽 인터페이스가 없기 때문에 옵션 4 ("자동 다운로드 및 설치 예약")만 Server Core 설치와 관련 됩니다. 설치되는 업데이트 및 업데이트 설치 시기를 보다 자세하게 제어하려면 대부분의 Windows 업데이트 그래픽 인터페이스와 동일한 역할을 수행하는 명령줄을 제공하는 스크립트를 사용합니다. 스크립트에 대 한 자세한 내용은 https://go.microsoft.com/fwlink/?LinkId=192471 을 참조 하세요.
+서버가 도메인 구성원인 경우 그룹 정책을 사용하여 Windows 업데이트를 구성할 수도 있습니다. 자세한 내용은 https://go.microsoft.com/fwlink/?LinkId=192470 를 참조하세요. 그러나이 방법을 사용 하는 경우 그래픽 인터페이스가 없기 때문에 옵션 4 ("자동 다운로드 및 설치 예약")만 Server Core 설치와 관련 됩니다. 설치되는 업데이트 및 업데이트 설치 시기를 보다 자세하게 제어하려면 대부분의 Windows 업데이트 그래픽 인터페이스와 동일한 역할을 수행하는 명령줄을 제공하는 스크립트를 사용합니다. 스크립트에 대 한 자세한 내용은 https://go.microsoft.com/fwlink/?LinkId=192471 를 참조 하세요.
 
 Windows 업데이트가 강제로 사용 가능한 업데이트를 즉시 검색하고 설치하도록 하려면 다음 명령을 실행합니다.
 

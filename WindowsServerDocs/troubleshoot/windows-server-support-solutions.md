@@ -1,189 +1,163 @@
 ---
-title: Windows Server를 위한 상위 지원 솔루션
-description: Windows Server 문제에 대한 해결 방법에 대한 링크 가져오기
+title: Windows Server 문제 해결
+description: Windows Server 문제에 대 한 문제 해결 문서 링크 가져오기
 layout: LandingPage
 ms.prod: windows-server
 ms.service: na
-manager: alant
+manager: ''
 ms.technology: server-general
-ms.date: 03/16/2018
+ms.date: 10/17/2019
 ms.topic: landing-page
 author: kaushika-msft
-ms.author: elizapo
-ms.openlocfilehash: 796f2351813218955a72ee9746dddb63453ac112
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: kaushika
+ms.openlocfilehash: 0d593ab28234d5abfa0b5d2931eb7d2c958efe2a
+ms.sourcegitcommit: b7f55949f166554614f581c9ddcef5a82fa00625
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71365652"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72588073"
 ---
-# <a name="top-support-solutions-for-windows-server"></a>Windows Server를 위한 상위 지원 솔루션
+# <a name="troubleshooting-windows-server-components"></a>Windows Server 구성 요소 문제 해결
 
->[!TIP]
-> 이전 버전의 Windows Server에 대한 자세한 내용이 궁금하십니까? docs.microsoft.com에서 다른 [Windows Server 라이브러리](/previous-versions/windows/)를 확인할 수 있습니다. 또한 특정 정보에 대해 [이 사이트를 검색](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions)할 수 있습니다.
+>- [!TIP]
+> 이전 버전의 Windows Server에 대한 정보를 찾으시나요? Docs.microsoft.com의 다른 [Windows Server 라이브러리](/previous-versions/windows/) 를 확인 하세요. [이 사이트](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) 에서 특정 정보를 검색할 수도 있습니다.
 
-Microsoft는 Windows Server에 대한 업데이트 및 솔루션을 정기적으로 릴리스합니다. 서버가 보안 업데이트를 포함한 향후 업데이트를 받을 수 있도록 업데이트된 상태로 유지해야 합니다. 릴리스된 업데이트의 전체 목록은 [Windows 10 및 Windows Server 2016 업데이트 기록](https://support.microsoft.com/en-us/help/4000825/windows-10-windows-server-2016-update-history)을 확인하세요.
+Microsoft에서는 Windows Server 용 업데이트를 정기적으로 모두 릴리스 합니다. 서버가 보안 업데이트를 포함한 향후 업데이트를 받을 수 있도록 업데이트된 상태로 유지해야 합니다. 릴리스된 업데이트에 대 한 전체 목록은 [windows 10 및 Windows Server 2016 업데이트 기록](https://support.microsoft.com/en-us/help/4000825/windows-10-windows-server-2016-update-history) 을 참조 하세요.
 
-Windows Server 2016을 사용할 때 경험하는 가장 일반적인 문제에 대한 최고의 Microsoft 지원 해결 방법입니다. 아래 링크는 참조 자료 문서, 업데이트 및 라이브러리 문서에 대한 링크를 포함합니다.
+이 섹션에서는 Windows Server의 문제를 해결 하는 데 도움이 되는 고급 문제 해결 항목 및 링크를 제공 합니다. 추가 항목이 사용 가능 해지면 추가 됩니다.
 
-<HR />
+### <a name="troubleshoot-activation"></a>정품 인증 문제 해결
+- [Windows 볼륨 정품 인증 문제 해결](https://docs.microsoft.com/windows-server/get-started/activation-troubleshooting-guide)
+- [KMS 문제 해결을 위한 지침](https://docs.microsoft.com/windows-server/get-started/activation-troubleshoot-kms-general)
+- [볼륨 정품 인증 정보를 얻기 위한 Slmgr.vbs 옵션](https://docs.microsoft.com/windows-server/get-started/activation-slmgr-vbs-options)
+- [Windows 정품 인증 오류 코드 해결](https://docs.microsoft.com/windows-server/get-started/activation-error-codes)
+- [KMS 정품 인증의 알려진 문제](https://docs.microsoft.com/windows-server/get-started/activation-troubleshoot-kms-issues)
+- [MAK 정품 인증의 알려진 문제](https://docs.microsoft.com/windows-server/get-started/activation-troubleshoot-mak-issues)
+- [DNS 관련 정품 인증 문제 해결을 위한 지침](https://docs.microsoft.com/windows-server/get-started/common-troubleshooting-procedures-kms-dns)
+- [Tokens.dat 파일 다시 빌드](https://docs.microsoft.com/windows-server/get-started/activation-rebuild-tokens-dat-file)
+- [ADBA 클라이언트 문제 해결](https://docs.microsoft.com/windows-server/get-started/activation-troubleshoot-adba-clients)
 
-<ul class="cardsF panelContent">
-<li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="../media/i-troubleshoot.svg" alt="" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Windows Server 설치 및 업그레이드</h3>
-<hr> 
-                        <a href="\windows\deployment\upgrade\resolve-windows-10-upgrade-errors">Windows 10 업그레이드 오류 해결: IT 전문가를 위한 기술 정보</a>
-<hr> 
-                        <p><a href="https://support.microsoft.com/en-US/help/4035631">Windows 10 버전 1607 및 Windows Server 2016의 서비스 스택 업데이트: 2017 년 8 월 8 일)</a></p>
-<hr> 
-                        <p><a href="https://support.microsoft.com/en-US/help/4033524">Windows 10 버전 1607 및 Windows Server 2016로 업그레이드에 대 한 호환성 업데이트: 2017 년 8 월 3 일)</a></p>
-<hr>
-                        <p><a href="https://support.microsoft.com/en-US/help/4014997">내부 시스템 업그레이드는 Windows 기반 Azure Vm에서 지원 되지 않습니다.</a></p>
-<hr>
-                        <p><a href="..\get-started\supported-upgrade-paths.md">Windows Server 2016에 대 한 업그레이드 및 변환 옵션</a></p>
-<hr>
-                       <p><a href="..\get-started\server-role-upgradeability-table.md">Windows Server 2016에 대 한 서버 역할 업그레이드 및 마이그레이션 매트릭스)</a></p>
-<hr>
-                       <p><a href="..\get-started\installation-and-upgrade.md">Windows Server 설치 및 업그레이드)</a></p>
-<hr>
-                       <p><a href="..\get-started\windows-server-2016-ga-release-notes.md">릴리스 정보: Windows Server 2016의 중요 한 문제</a></p>
-<hr>
-                       <p><a href="..\get-started\recommendations-moving-to-server2016.md">Windows Server 2016로의 이동에 대 한 권장 사항</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-<li>
- <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="../media/i-troubleshoot.svg" alt="" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>볼륨 정품 인증</h3>
-<hr> 
-                        <a href="../get-started/server-2016-activation.md">Windows Server 2016 정품 인증</a>
-<hr>
-                        <p><a href="https://technet.microsoft.com/library/jj134256(ws.11).aspx">활성화 방법 검토 및 선택</a></p>
-<hr>
-                        <p><a href="https://technet.microsoft.com/library/dn502528.aspx">볼륨 정품 인증에 대 한 정품 인증 오류 코드</a></p>
-<hr>
-                        <p><a href="https://technet.microsoft.com/library/ee939272.aspx">KMS (키 관리 서비스) 문제를 해결 하는 방법</a></p>
-<hr>
-                        <p><a href="https://technet.microsoft.com/library/ff793439.aspx">볼륨 정품 인증 문제 해결</a></p>
-<hr><br/>                        <p><a href="https://technet.microsoft.com/library/ff793399.aspx">활성화 오류 코드</a></p>
-<hr>
-                        <p><a href="https://support.microsoft.com/help/2796988/windows-8-or-windows-server-2012-installation-may-fail-with-error-mess">입력 한 제품 키가 설치 &quot;에 사용할 수 있는 windows 이미지와 일치 하지 않아 windows 설치가 실패할 수 있습니다. 다른 제품 키를 입력 하십시오.&quot;</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-<li>
- <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="../media/i-troubleshoot.svg" alt="" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>도메인 컨트롤러 DCPromo 및 설치</h3>
-<hr> 
-                        <a href="https://technet.microsoft.com/library/dd772723(v=ws.10).aspx">Active Directory 및 Active Directory Domain Services 포트 요구 사항</a>
-<hr>
-                        <p> <a href="http://blogs.msmvps.com/acefekay/2011/11/01/active-directory-firewall-ports-let-s-try-to-make-this-simple/">Active Directory 방화벽 포트 – 간단 하 게 만들어 보세요.</a></p>
-<hr>
-                        <p><a href="https://technet.microsoft.com/library/ff728623(v=exchg.150).aspx">Windows Server 2016에 대 한 Exchange Server 지원</a></p>
-<hr>
-                        <p><a href="https://support.microsoft.com/kb/255504">Ntdsutil.exe를 사용 하 여 도메인 컨트롤러에 FSMO 역할 전송 또는 점유</a></p>
-<hr>
-                        <p><a href="../identity/ad-ds/deploy/troubleshooting-domain-controller-deployment.md">도메인 컨트롤러 배포 문제 해결</a></p>
-<hr>
-                        <p><a href="https://msdn.microsoft.com/library/bb727058.aspx">Active Directory 설치 마법사 문제 해결</a></p>
-<hr>
-                        <p><a href="https://technet.microsoft.com/library/cc754463(v=ws.10).aspx">AD DS 설치 및 제거에 대 한 알려진 문제</a></p>
-                      </div>
-                 </div>
-            </div>
-        </div>
-    </li>
-<li>
- <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="../media/i-troubleshoot.svg" alt="" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>AD FS(Active Directory Federation Services)</h3>
-<hr> 
-                        <a href="/azure/active-directory/active-directory-conditional-access-automatic-device-registration-setup">Azure Active Directory를 사용 하 여 Windows 도메인 가입 장치의 자동 등록을 구성 하는 방법</a>
-<hr>
-                        <p><a href="/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup#step-2-setup-issuance-of-claims">클레임 발급 설정</a></p>
-<hr><br/>                        <p><a href="../identity/ad-fs/operations/configure-ad-fs-to-authenticate-users-stored-in-ldap-directories.md">LDAP 디렉터리에 저장된 사용자를 인증하도록 AD FS 구성</a></p>
-<hr>
-                        <p><a href="../identity/ad-fs/operations/ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication.md">인증서 인증의 대체 호스트 이름 바인딩에 대한 AD FS 지원</a></p>
-<hr>
-                        <p><a href="https://blogs.technet.microsoft.com/tspring/2017/01/20/federated-to-microsoft-cloud-and-account-lockouts/">암호 공격</a>
-                        <a href="../identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server-2016.md">으로부터 보호 WID 데이터베이스를 사용 하 여 Windows Server 2016에서 AD FS로 업그레이드</a></p>
-<hr>
-                        <p><a href="../identity/ad-fs/operations/configure-device-based-conditional-access-on-premises.md">Windows 10 로그온-AD FS를 사용 하 여 장치 인증 사용</a></p>
-<hr>
-                        <p><a href="../identity/ad-fs/operations/manage-ssl-certificates-ad-fs-wap-2016.md">Windows Server 2016의 AD FS 및 WAP에서 SSL 인증서 관리</a></p>
-<hr>
-                        <p><a href="../identity/ad-fs/operations/access-control-policies-in-ad-fs.md">Windows Server 2016 AD FS Access Control 정책</a></p>
-                      </div>
-                 </div>
-            </div>
-        </div>
-    </li>
-<li>
- <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="../media/i-troubleshoot.svg" alt="" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Active Directory 복제</h3>
-<hr> 
-                         <a href="../identity/ad-ds/manage/troubleshoot/troubleshooting-active-directory-replication-problems.md">Active Directory 복제 문제 해결</a>
-<hr>
-                         <a href="https://www.microsoft.com/en-in/download/details.aspx?id=30005">e2e 일반적인 Active Directory 복제 오류 문제를 해결 하는 방법</a>
-<hr>
-                         <a href="https://support.microsoft.com/kb/3108513">Microsoft 다운로드 센터에서 Active Directory 복제 상태 도구 다운로드</a>
-<hr>
-                         <a href="https://support.microsoft.com/kb/2028495">AD 복제 오류 8606: 개체를 만들기 위해 지정 된 특성이 부족 합니다.</a></p>
-<hr>
-                         <a href="https://support.microsoft.com/kb/837932">Windows 2000 Server 및 Windows Server 2003에서 Active Directory의 인바운드 복제 중에 이벤트 ID 2108 및 이벤트 ID 1084이 발생 합니다.</a>
-<hr>
-                         <a href="https://support.microsoft.com/kb/2645996">AD 복제 오류 8451: 복제 작업에서 데이터베이스 오류가 발생 했습니다.</a>
-<hr>
-                         <a href="https://support.microsoft.com/kb/2025726">AD 복제 오류 1127: 하드 디스크에 액세스 하는 동안 다시 시도 후에도 디스크 작업이 실패 했습니다.</a>
-<hr>
-                         <a href="https://technet.microsoft.com/library/cc816907.aspx">서버 메타 데이터 정리</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-</ul>
+### <a name="troubleshoot-ad-forest-recovery"></a>AD 포리스트 복구 문제 해결
+- [AD 포리스트 복구 - FAQ](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/ad-forest-recovery-faq)
+
+### <a name="troubleshoot-ad-replication"></a>AD 복제 문제 해결
+- [Active Directory 복제 문제 해결](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/troubleshoot/troubleshooting-active-directory-replication-problems)
+- [가상화된 도메인 컨트롤러 문제 해결](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/virtual-dc/virtualized-domain-controller-troubleshooting)
+- [도메인 컨트롤러 배포 문제 해결](https://docs.microsoft.com/windows-server/identity/ad-ds/deploy/troubleshooting-domain-controller-deployment)
+- [문제 해결을 위한 컴퓨터 구성](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/troubleshoot/configuring-a-computer-for-troubleshooting)
+
+### <a name="troubleshoot-ad-fs"></a>문제 해결 AD FS
+- [문제 해결 AD FS](https://docs.microsoft.com/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-overview)
+- [AD FS 문제 해결-감사 이벤트 및 로깅](https://docs.microsoft.com/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-logging)
+- [AD FS 문제 해결-SQL 연결](https://docs.microsoft.com/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-sql)
+- [AD FS 문제 해결-클레임 발급](https://docs.microsoft.com/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-claims-issuance)
+- [AD FS 문제 해결-루프 검색](https://docs.microsoft.com/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-loop)
+- [AD FS 문제 해결-인증서](https://docs.microsoft.com/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-certs)
+- [AD FS 문제 해결-Fiddler](https://docs.microsoft.com/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-fiddler)
+- [AD FS 문제 해결-Fiddler](https://docs.microsoft.com/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-fiddler-ws-fed)
+- [AD FS 문제 해결-클레임 규칙](https://docs.microsoft.com/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-claims-rules)
+- [AD FS 문제 해결-Windows 통합 인증](https://docs.microsoft.com/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-iwa)
+- [AD FS 문제 해결-Azure AD](https://docs.microsoft.com/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-azure)
+- [AD FS FAQ](https://docs.microsoft.com/windows-server/identity/ad-fs/overview/ad-fs-faq)
+- [AD FS 도움말 진단 분석기](https://docs.microsoft.com/windows-server/identity/ad-fs/troubleshooting/ad-fs-diagnostics-analyzer)
+
+### <a name="troubleshoot-aovpn"></a>AoVPN 문제 해결
+- [Always On VPN 문제 해결](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting)
+
+### <a name="troubleshoot-converged-nic"></a>수렴 형 NIC 문제 해결
+- [수렴 형 NIC 구성 문제 해결](https://docs.microsoft.com/windows-server/networking/technologies/conv-nic/cnic-app-troubleshoot)
+
+### <a name="troubleshoot-dfsr"></a>DFSR 문제 해결
+- [DFS 복제: FAQ (질문과 대답)](https://docs.microsoft.com/windows-server/storage/dfs-replication/dfsr-faq)
+
+### <a name="troubleshoot-directaccess"></a>DirectAccess 문제 해결
+- [DirectAccess 문제 해결](https://docs.microsoft.com/windows-server/remote/remote-access/directaccess/troubleshooting-directaccess)
+
+### <a name="troubleshoot-disk--management"></a>디스크 관리 문제 해결
+- [디스크 관리 문제 해결](https://docs.microsoft.com/windows-server/storage/disk-management/troubleshooting-disk-management)
+
+### <a name="troubleshoot-dns"></a>DNS 문제 해결
+- [DNS (Domain Name System) 문제 해결](https://docs.microsoft.com/windows-server/networking/dns/troubleshoot/troubleshoot-dns-data-collection)
+- [DNS 클라이언트 문제 해결](https://docs.microsoft.com/windows-server/networking/dns/troubleshoot/troubleshoot-dns-client)
+- [DNS 클라이언트에서 DNS 클라이언트 쪽 캐싱 비활성화](https://docs.microsoft.com/windows-server/networking/dns/troubleshoot/disable-dns-client-side-caching)
+- [DNS 서버 문제 해결](https://docs.microsoft.com/windows-server/networking/dns/troubleshoot/troubleshoot-dns-server)
+
+### <a name="troubleshoot-failover-cluster"></a>장애 조치 (Failover) 클러스터 문제 해결
+- [Windows 오류 보고를 사용하여 장애 조치(failover) 클러스터 문제 해결](https://docs.microsoft.com/windows-server/failover-clustering/troubleshooting-using-wer-reports)
+- [클러스터 인식 업데이트-질문과 대답](https://docs.microsoft.com/windows-server/failover-clustering/cluster-aware-updating-faq)
+
+### <a name="troubleshoot-fsrm"></a>FSRM 문제 해결
+- [파일 서버 리소스 관리자 문제 해결](https://docs.microsoft.com/windows-server/storage/fsrm/troubleshooting-file-server-resource-manager)
+
+### <a name="troubleshoot-guarded-fabric"></a>보호 된 패브릭 문제 해결
+- [보호 된 패브릭 진단 도구를 사용 하 여 문제 해결](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-diagnostics)
+- [호스트 보호자 서비스 문제 해결](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hgs)
+- [호스트 보호자 서비스 문제 해결](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hosts)
+
+### <a name="troubleshoot-multi-site-ras"></a>다중 사이트 RAS 문제 해결
+- [멀티 사이트 사용 관련 문제 해결](https://docs.microsoft.com/windows-server/remote/remote-access/ras/multisite/troubleshoot/troubleshooting-enabling-multisite)
+- [진입점 추가 문제 해결](https://docs.microsoft.com/windows-server/remote/remote-access/ras/multisite/troubleshoot/troubleshooting-adding-entry-points)
+- [진입점 도메인 컨트롤러 설정 관련 문제 해결](https://docs.microsoft.com/windows-server/remote/remote-access/ras/multisite/troubleshoot/troubleshooting-setting-the-entry-point-domain-controller)
+- [웹 프로브 URL 관련 문제 해결](https://docs.microsoft.com/windows-server/remote/remote-access/ras/multisite/troubleshoot/troubleshooting-web-probe-urls)
+
+### <a name="troubleshoot-nano-server"></a>Nano 서버 문제 해결
+- [Nano 서버 문제 해결](https://docs.microsoft.com/windows-server/get-started/troubleshooting-nano-server)
+
+### <a name="troubleshoot-nic-teaming"></a>NIC 팀 문제 해결
+- [NIC 팀 문제 해결](https://docs.microsoft.com/windows-server/networking/technologies/nic-teaming/troubleshooting-nic-teaming)
+
+### <a name="troubleshoot-otp-authentication"></a>OTP 인증 문제 해결
+- [인증 문제 해결](https://docs.microsoft.com/windows-server/remote/remote-access/ras/otp/troubleshoot/troubleshooting-authentication-issues)
+- [OTP 사용 문제 해결](https://docs.microsoft.com/windows-server/remote/remote-access/ras/otp/troubleshoot/troubleshooting-enabling-otp)
+
+### <a name="troubleshoot-qos"></a>QoS 문제 해결
+- [QoS 질문과 대답](https://docs.microsoft.com/windows-server/networking/technologies/qos/qos-policy-faq)
+
+### <a name="troubleshoot-s2d"></a>S2D 문제 해결
+- [스토리지 공간 다이렉트 문제 해결](https://docs.microsoft.com/windows-server/storage/storage-spaces/troubleshooting-storage-spaces)
+- [스토리지 공간 다이렉트-질문과 대답](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-faq)
+- [상태 및 작동 상태 스토리지 공간 다이렉트](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-states)
+- [스토리지 공간 다이렉트를 사용 하 여 진단 데이터 수집](https://docs.microsoft.com/windows-server/storage/storage-spaces/data-collection)
+- [Windows의 저장소 클래스 메모리 (NVDIMM-N) 상태 관리](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-class-memory-health)
+
+### <a name="troubleshoot-sdn"></a>SDN 문제 해결
+- [SDN 문제 해결](https://docs.microsoft.com/windows-server/networking/sdn/troubleshoot/troubleshoot-software-defined-networking)
+- [Windows Server 소프트웨어 정의 네트워킹 스택 문제 해결](https://docs.microsoft.com/windows-server/networking/sdn/troubleshoot/troubleshoot-windows-server-software-defined-networking-stack)
+
+### <a name="troubleshoot-rds-session-connectivity"></a>RDS 세션 연결 문제 해결
+- [일반 원격 데스크톱 연결 문제 해결](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/troubleshoot/rdp-error-general-troubleshooting)
+- [클라이언트에서 연결할 수 없으며 클래스가 등록 되지 않음 오류가 발생 합니다.](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/troubleshoot/rdp-error-class-not-registered)
+- [클라이언트에서 연결할 수 없고 사용 가능한 라이선스 없음 오류가 표시 됩니다.](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/troubleshoot/rdp-error-no-licenses-available)
+- [사용자가 인증할 수 없거나 두 번 인증해야 함](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/troubleshoot/cannot-authenticate-or-must-authenticate-twice)
+- [연결할 때 사용자가 원격 데스크톱 서비스를 수신 합니다. 메시지는 현재 사용 중입니다.](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/troubleshoot/remote-desktop-service-currently-busy)
+- [원격 데스크톱 클라이언트의 연결이 끊어지고 동일한 세션에 다시 연결할 수 없음](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/troubleshoot/rdp-client-disconnects-cannot-reconnect-same-session)
+- [무선 네트워크에서 원격 랩톱 연결 끊김](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/troubleshoot/remote-laptop-disconnects-wireless-network)
+- [원격 데스크톱 연결 중 성능 저하 또는 애플리케이션 문제 발생](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/troubleshoot/poor-performance-or-application-problems)
+
+### <a name="troubleshoot-shielded-vm"></a>차폐 VM 문제 해결
+- [차폐 Vm 문제 해결](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-shielded-vms)
+
+### <a name="troubleshoot-software-restriction-policies"></a>소프트웨어 제한 정책 문제 해결
+- [소프트웨어 제한 정책 문제 해결](https://docs.microsoft.com/windows-server/identity/software-restriction-policies/troubleshoot-software-restriction-policies)
+
+### <a name="troubleshoot-storage-migration"></a>저장소 마이그레이션 문제 해결
+- [저장소 마이그레이션 서비스의 알려진 문제](https://docs.microsoft.com/windows-server/storage/storage-migration-service/known-issues)
+- [Storage Migration Service 질문과 대답 (FAQ)](https://docs.microsoft.com/windows-server/storage/storage-migration-service/faq)
+
+### <a name="troubleshoot-storage-replica"></a>저장소 복제본 문제 해결
+- [저장소 복제본의 알려진 문제](https://docs.microsoft.com/windows-server/storage/storage-replica/storage-replica-known-issues)
+- [저장소 복제본에 대 한 질문과 대답](https://docs.microsoft.com/windows-server/storage/storage-replica/storage-replica-frequently-asked-questions)
+
+### <a name="troubleshoot-user-profiles"></a>사용자 프로필 문제 해결
+- [이벤트를 사용 하 여 사용자 프로필 문제 해결](https://docs.microsoft.com/windows-server/storage/folder-redirection/troubleshoot-user-profiles-events)
+
+### <a name="troubleshoot-vrss"></a>VRSS 문제 해결
+- [vRSS 질문과 대답](https://docs.microsoft.com/windows-server/networking/technologies/vrss/vrss-faq)
+
+### <a name="troubleshoot-webproxy"></a>WebProxy 문제 해결
+- [웹 애플리케이션 프록시 문제 해결](https://docs.microsoft.com/windows-server/remote/remote-access/web-application-proxy/troubleshooting-web-application-proxy)
+
+### <a name="troubleshoot-windows-admin-center"></a>Windows Admin Center 문제 해결
+- [Windows 관리 센터 일반적인 문제 해결 단계](https://docs.microsoft.com/windows-server/manage/windows-admin-center/support/troubleshooting)
+- [Windows 관리 센터의 알려진 문제](https://docs.microsoft.com/windows-server/manage/windows-admin-center/support/known-issues)
+- [Windows 관리 센터 질문과 대답](https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/faq)

@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 08cf41ec9b6ac30699013112216a538dcf625fd5
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5a1737275bf6321525bbba56cd4d6a77ef973423
+ms.sourcegitcommit: 9a6a692a7b2a93f52bb9e2de549753e81d758d28
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71372841"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72591023"
 ---
 # <a name="nslookup-set-root"></a>nslookup set root
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-쿼리에 사용 되는 루트 서버의 이름을 변경 합니다.
+쿼리에 사용 되는 루트 서버 이름을 변경 합니다.
 ## <a name="syntax"></a>구문
 ```
 set root=<RootServer>
@@ -39,5 +39,5 @@ set root=<RootServer>
 ## <a name="remarks"></a>설명
 - **세트 루트** 영향을 줌 하위 명령에서 **루트** 하위 명령입니다.
   ## <a name="additional-references"></a>추가 참조
-  [명령줄 구문 키](command-line-syntax-key.md)
-  [nslookup root](nslookup-root.md)
+  [명령줄 구문 키](command-line-syntax-key.md) 
+  [nslookup 루트](nslookup-root.md)

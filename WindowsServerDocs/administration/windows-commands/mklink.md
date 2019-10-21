@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9d930cbf7acbfceab16f2fa619aaaac6e789c131
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b7a5f9b819f16d058feb1dee74a8408ed174e04c
+ms.sourcegitcommit: b7f55949f166554614f581c9ddcef5a82fa00625
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71373644"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72588048"
 ---
 # <a name="mklink"></a>mklink
 기호화 된 링크를 만듭니다.
@@ -44,7 +44,7 @@ mklink [[/d] | [/h] | [/j]] <Link> <Target>
 
 ## <a name="BKMK_examples"></a>예와
 
-시나리오별 예제는 루트 디렉터리에서 \Users\User1\Documents 디렉터리에 있는 MyFolder 및 MyFile 라는 기호화 된 링크를 만들고이 디렉터리에 있는 예를 보여 줍니다.
+다음 예제에서는 루트 디렉터리에서 \Users\User1\Documents 디렉터리에 있는 MyFolder 및 MyFile 이라는 기호화 된 링크를 만들고 제거 하는 방법을 보여 줍니다.
 ```
 mklink /d \MyFolder \Users\User1\Documents
 mklink /h \MyFile.file \User1\Documents\example.file

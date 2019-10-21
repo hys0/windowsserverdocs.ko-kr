@@ -8,12 +8,12 @@ ms.prod: windows-server
 ms.technology: networking
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 810f6f8ba9e33f1f26f49f542ad6d23819deb463
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 2af3a621991627addb94238e84cceb357fb47731
+ms.sourcegitcommit: b7f55949f166554614f581c9ddcef5a82fa00625
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406286"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72588082"
 ---
 # <a name="capolicyinf-syntax"></a>Capolicy.inf 구문
 >   적용 대상: Windows Server(반기 채널), Windows Server 2016
@@ -42,9 +42,9 @@ Capolicy.inf를 사용 하면 다양 한 CA 특성 및 옵션을 지정 하 고 
 
 -   _Value_ – 매개 변수 이며 등호 오른쪽에 나타납니다.
 
-아래 예제에서 **[Version]** 은 섹션입니다. **Signature** 는 키이 고 **"\$windows NT @ no__t-4"** 는 값입니다.
+아래 예제에서 **[Version]** 은 섹션이 고, **Signature** 는 키 이며, **"\$Windows NT \$"** 는 값입니다.
 
-예:
+예제:
 
 ```PowerShell
 [Version]                     #section
@@ -116,7 +116,7 @@ URL=http://pki.wingtiptoys.com/cdp/WingtipToysRootCA.crl
 
 -   따옴표는 Url을 공백으로 묶어야 합니다.
 
--   Url을 지정 하지 않으면 (즉, **[CRLDistributionPoint]** 섹션이 파일에 있지만 비어 있는 경우) 루트 CA 인증서에서 권한 정보 액세스 확장이 생략 됩니다. 이는 일반적으로 루트 CA를 설정할 때 좋습니다. Windows에서는 루트 CA 인증서에 대 한 해지 검사를 수행 하지 않으므로, CDP 확장은 루트 CA 인증서에 불필요 합니다.
+-   Url이 지정 되지 않은 경우 즉, **[CRLDistributionPoint]** 섹션이 파일에 있지만 비어 있는 경우 루트 CA 인증서에서 CRL 배포 지점 확장이 생략 됩니다. 이는 일반적으로 루트 CA를 설정할 때 좋습니다. Windows에서는 루트 CA 인증서에 대 한 해지 검사를 수행 하지 않으므로, CDP 확장은 루트 CA 인증서에 불필요 합니다.
 
 -    예를 들어 CA는 클라이언트가 HTTP를 통해 검색 하는 웹 사이트의 폴더를 나타내는 공유에 파일 UNC에 게시할 수 있습니다.
 
@@ -142,7 +142,7 @@ URL=http://pki.wingtiptoys.com/Public/myCA.crt
 
 -   공백이 있는 Url은 따옴표로 묶어야 합니다.
 
--   Url이 지정 되지 않은 경우 즉, **[AuthorityInformationAccess]** 섹션이 파일에 있지만 비어 있는 경우 루트 CA 인증서에서 CRL 배포 지점 확장이 생략 됩니다. 이는 루트 ca 인증서에 대 한 링크에서 참조 해야 하는 루트 CA 보다 높은 권한이 없기 때문에 루트 CA 인증서의 경우이 설정이 기본 설정입니다.
+-   Url을 지정 하지 않으면 (즉, **[AuthorityInformationAccess]** 섹션이 파일에 있지만 비어 있는 경우) 루트 CA 인증서에서 권한 정보 액세스 확장이 생략 됩니다. 이는 루트 ca 인증서에 대 한 링크에서 참조 해야 하는 루트 CA 보다 높은 권한이 없기 때문에 루트 CA 인증서의 경우이 설정이 기본 설정입니다.
 
 ### <a name="certsrv_server"></a>certsrv_Server
 
@@ -170,11 +170,11 @@ EnableKeyCounting=0
 
 새 키 쌍을 사용 하 여 CA 인증서를 갱신 하는 경우 키 길이를 늘리거나 줄일 수 있습니다. 예를 들어 루트 CA 키 크기를 4096 바이트 이상으로 설정한 후에는 2048 바이트의 키 크기만 지원할 수 있는 Java 앱 또는 네트워크 장치가 있음을 알 수 있습니다. 크기를 늘리거나 줄일 경우 해당 CA에서 발급 한 모든 인증서를 다시 발급 해야 합니다.
 
-**RenewalValidityPeriod** 및 **RenewalValidityPeriodUnits** 는 이전 루트 ca 인증서를 갱신할 때 새 루트 ca 인증서의 수명을 설정 합니다. 루트 CA에만 적용 됩니다. 하위 CA의 인증서 수명은 상위 CA의 용도에 따라 결정 됩니다. RenewalValidityPeriod에는 다음 값을 사용할 수 있습니다. 시간, 일, 주, 월, 년
+**RenewalValidityPeriod** 및 **RenewalValidityPeriodUnits** 는 이전 루트 ca 인증서를 갱신할 때 새 루트 ca 인증서의 수명을 설정 합니다. 루트 CA에만 적용 됩니다. 하위 CA의 인증서 수명은 상위 CA의 용도에 따라 결정 됩니다. RenewalValidityPeriod에는 시간, 일, 주, 월, 년 등의 값을 사용할 수 있습니다.
 
-**CRLPeriod** 및 **CRLPERIODUNITS** 는 기본 CRL의 유효 기간을 설정 합니다. **CRLPeriod** 에는 다음 값을 사용할 수 있습니다. 시간, 일, 주, 월, 년
+**CRLPeriod** 및 **CRLPERIODUNITS** 는 기본 CRL의 유효 기간을 설정 합니다. **CRLPeriod** 에는 시간, 일, 주, 월, 년 등의 값을 사용할 수 있습니다.
 
-**CRLDeltaPeriod** 및 **CRLDELTAPERIODUNITS** 는 델타 CRL의 유효 기간을 설정 합니다. **CRLDeltaPeriod** 에는 다음 값을 사용할 수 있습니다. 시간, 일, 주, 월, 년
+**CRLDeltaPeriod** 및 **CRLDELTAPERIODUNITS** 는 델타 CRL의 유효 기간을 설정 합니다. **CRLDeltaPeriod** 에는 시간, 일, 주, 월, 년 등의 값을 사용할 수 있습니다.
 
 이러한 각 설정은 CA가 설치 된 후에 구성할 수 있습니다.
 
@@ -193,18 +193,17 @@ Certutil -setreg CACRLDeltaPeriodUnits 1
 
 CA가 설치 된 후 즉시 인증서를 발급 하지 않을 수 있으므로 LoadDefaultTemplates 설정을 사용 하 여 기본 템플릿이 엔터프라이즈 CA에 추가 되지 않도록 할 수 있습니다. CA에 구성 된 템플릿이 없는 경우 인증서를 발급할 수 있습니다.
 
-**AlternateSignatureAlgorithm** ca 인증서 및 인증서 요청 모두에\#대해 PKCS 1 v 2.1 서명 형식을 지원 하도록 ca를 구성 합니다. 루트 CA에서 1로 설정 된 경우 CA 인증서에 PKCS\#1 v 2.1 서명 형식이 포함 됩니다. 하위 CA에 설정 된 경우 하위 CA는 PKCS\#1 v 2.1 서명 형식을 포함 하는 인증서 요청을 만듭니다.
+**AlternateSignatureAlgorithm** ca 인증서 및 인증서 요청 모두에 대해 PKCS \#1 v 2.1 서명 형식을 지원 하도록 ca를 구성 합니다. 루트 CA에서 1로 설정 된 경우 CA 인증서에 PKCS \#1 V 2.1 서명 형식이 포함 됩니다. 하위 ca에 설정 된 경우 하위 CA는 PKCS \#1 V 2.1 서명 형식을 포함 하는 인증서 요청을 만듭니다.
 
 **ForceUTF8** 는 Subject 및 Issuer 고유 이름에 있는 RDNs (상대 고유 이름)의 기본 인코딩을 u t f-8로 변경 합니다. RFC에 의해 디렉터리 문자열 형식으로 정의 된 것과 같이 u t f-8을 지 원하는 RDNs 영향을 받습니다. 예를 들어 DC (도메인 구성 요소)에 대 한 RDN은 인코딩을 IA5 또는 u t f-8로 지원 하는 반면, Country RDN (C)은 인쇄 가능한 문자열로의 인코딩만 지원 합니다. 따라서 ForceUTF8 지시문은 DC RDN에 영향을 주지만 C RDN에는 영향을 주지 않습니다.
 
 **Enablekeycounting** 은 ca의 서명 키를 사용할 때마다 카운터를 증가 시 키는 ca를 구성 합니다. 키 계산을 지 원하는 HSM (하드웨어 보안 모듈) 및 연결 된 CSP (암호화 서비스 공급자)가 없는 경우에는이 설정을 사용 하지 마십시오. Microsoft 강력한 CSP 나 Microsoft 소프트웨어 KSP (키 저장소 공급자)는 키 계산을 지원 하지 않습니다.
 
-
 ## <a name="create-the-capolicyinf-file"></a>Capolicy.inf 파일 만들기
 
 AD CS를 설치 하기 전에 구성한 CAPolicy.inf 파일 특정 설정을 사용 하 여 배포 합니다.
 
-**인지** 관리자 그룹의 멤버 여야 합니다.
+**필수 구성 요소:** 관리자 그룹의 멤버 여야 합니다.
 
 1. AD CS를 설치 하려는 컴퓨터에서 Windows PowerShell을 열고 **notepad c:\CAPolicy.inf** 를 입력 한 다음 enter 키를 누릅니다.
 
@@ -243,7 +242,7 @@ AD CS를 설치 하기 전에 구성한 CAPolicy.inf 파일 특정 설정을 사
 
    -   **인코딩**이 **ANSI**임
 
-7. **저장**을 클릭합니다.
+7. **Save**을 클릭합니다.
 
 8. 파일을 덮어쓸지 묻는 메시지가 나타나면 **예**를 클릭합니다.
 
@@ -255,4 +254,4 @@ AD CS를 설치 하기 전에 구성한 CAPolicy.inf 파일 특정 설정을 사
 9. 메모장을 닫습니다.
 
 > [!IMPORTANT]
->   Capolicy.inf에서 URL https://pki.corp.contoso.com/pki/cps.txt 을 지정 하는 줄이 표시 되는 것을 볼 수 있습니다. CAPolicy.inf의 내부 정책 섹션은 CPS(인증서 사용 약관)의 위치를 지정하는 방법을 보여주는 예시로 제공되었습니다. 이 가이드에서는 CPS (certificate statement)를 만들도록 지시 하지 않습니다.
+>   Capolicy.inf에서 URL https://pki.corp.contoso.com/pki/cps.txt 를 지정 하는 줄이 표시 되는 것을 볼 수 있습니다. CAPolicy.inf의 내부 정책 섹션은 CPS(인증서 사용 약관)의 위치를 지정하는 방법을 보여주는 예시로 제공되었습니다. 이 가이드에서는 CPS (certificate statement)를 만들도록 지시 하지 않습니다.

@@ -7,12 +7,12 @@ ms.topic: upgrade
 author: RobHindman
 ms.author: robhind
 ms.date: 09/16/2019
-ms.openlocfilehash: 99133f2c582b180f240740fc2f39e99527bc0cf8
-ms.sourcegitcommit: 27f0caf74e88781054250455c3c1adf06deb6234
+ms.openlocfilehash: 62fe4f00cef121e6241a403ee339047cda9488b5
+ms.sourcegitcommit: 9a6a692a7b2a93f52bb9e2de549753e81d758d28
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71124823"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72591084"
 ---
 # <a name="upgrade-windows-server-2016-to-windows-server-2019"></a>Windows server 2016을 Windows Server 2019로 업그레이드
 
@@ -24,13 +24,13 @@ Windows Server 업그레이드를 시작 하기 전에 진단 및 문제 해결�
 
 ### <a name="to-collect-your-info"></a>정보를 수집 하려면
 
-1. 명령 프롬프트를 열고로 `c:\Windows\system32`이동한 다음 **printbrm.exe**를 입력 합니다.
+1. 명령 프롬프트를 열고 `c:\Windows\system32`로 이동한 다음 **printbrm.exe**를 입력 합니다.
 
 2. 결과 시스템 정보를 장치 어딘가에 복사 하 여 붙여넣고 저장 합니다.
 
 3. 명령 프롬프트에 **ipconfig/all** 을 입력 한 다음 결과 구성 정보를 복사 하 여 위와 동일한 위치에 붙여 넣습니다.
 
-4. 레지스트리 편집기를 열고 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion hive로 이동한 다음 Windows Server **Buildlabex** (버전) 및 **EditionID** (버전)를 위와 동일한 위치에 복사 하 여 붙여 넣습니다.
+4. 레지스트리 편집기를 열고 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion` 키로 이동한 다음 Windows Server **Buildlabex** (버전) 및 **EditionID** (버전)를 위와 동일한 위치에 복사 하 여 붙여 넣습니다.
 
 모든 Windows Server 관련 정보를 수집한 후에는 운영 체제, 앱 및 가상 컴퓨터를 백업 하는 것이 좋습니다. 또한 서버에서 현재 실행 중인 모든 가상 컴퓨터를 **종료**하거나, **신속**하 게 마이그레이션하거나, **실시간으로 마이그레이션해야** 합니다. 전체 업그레이드 중에는 가상 컴퓨터를 실행할 수 없습니다.
 
@@ -80,11 +80,11 @@ Windows Server 업그레이드를 시작 하기 전에 진단 및 문제 해결�
 
 ### <a name="to-make-sure-your-upgrade-was-successful"></a>업그레이드에 성공 했는지 확인 하려면
 
-1. 레지스트리 편집기를 열고 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion hive로 이동 하 여 **ProductName**을 봅니다. Windows server 2019 **Datacenter와 2019**같은 windows server 버전이 표시 되어야 합니다.
+1. 레지스트리 편집기를 열고 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion` 키로 이동 하 여 **ProductName**을 봅니다. Windows server 2019 **Datacenter와 2019**같은 windows server 버전이 표시 되어야 합니다.
 
 2. 모든 응용 프로그램이 실행 중이 고 응용 프로그램에 대 한 클라이언트 연결이 성공적인 지 확인 합니다.
 
-업그레이드 하는 동안 문제가 발생할 수 있다고 생각 되는 `%SystemRoot%\Panther` 경우 (일반적으로 `C:\Windows\Panther`) 디렉터리를 복사 하 여 압축 하 고 Microsoft 지원에 문의 하세요.
+업그레이드 하는 동안 문제가 발생할 수 있다고 생각 되 면 `%SystemRoot%\Panther` (일반적으로 `C:\Windows\Panther`) 디렉터리를 복사 하 여 압축 하 고 Microsoft 지원에 문의 하세요.
 
 ## <a name="related-articles"></a>관련 문서
 
