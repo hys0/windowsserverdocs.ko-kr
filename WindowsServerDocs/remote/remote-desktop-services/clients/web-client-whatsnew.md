@@ -11,14 +11,14 @@ ms.topic: article
 author: heidilohr
 manager: daveba
 ms.author: helohr
-ms.date: 09/11/2019
+ms.date: 10/18/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: d233708c6d206569f42f2a883bd342e90813f6a3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: bcbd3292bcd4653a4568492a996d53c17f465aa8
+ms.sourcegitcommit: 9a6a692a7b2a93f52bb9e2de549753e81d758d28
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404096"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72591047"
 ---
 # <a name="whats-new-in-the-web-client"></a>웹 클라이언트의 새로운 기능
 
@@ -27,12 +27,22 @@ ms.locfileid: "71404096"
 > [!NOTE]
 > 웹 클라이언트에 대한 시스템 버전 관리를 변경했습니다. 1\.0.18.0 버전부터 모든 웹 클라이언트 릴리스 버전에는 숫자가 포함됩니다(“W.X.Y.Z” 형식의). 원격 데스크톱 웹 클라이언트에 대한 릴리스 번호는 항상 0으로 끝납니다(예: W.X.Y.0). 각 Windows Virtual Desktop 웹 클라이언트 릴리스는 다음 원격 데스크톱 웹 클라이언트가 릴리스될 때까지 마지막 숫자를 변경합니다(예: 1.0.18.1).
 
+## <a name="updates-for-version-10200"></a>버전 1.0.20.0 업데이트
+*게시 날짜: 2019/10/18*
+
+- Windows 7 및 Windows Server 2008 R2 호스트 연결에 대한 지원이 추가되었습니다.
+- 특정 앱 아이콘이 투명 타일로 표시되는 문제가 해결되었습니다.
+- Windows 7의 Internet Explorer 브라우저에 대한 연결 문제가 해결되었습니다.
+- 브라우저의 크기를 조정할 때 발생하는 예기치 않은 연결 해제 문제가 해결되었습니다.
+- 내게 필요한 옵션 기능 개선.
+- 타사 라이브러리가 업데이트되었습니다.
+
 ## <a name="updates-for-version-10180"></a>1\.0.18.0 버전에 대한 업데이트
 *게시된 날짜: 2019/5/14*
 
 - 설정 탭에 리소스 시작 방법 구성이 추가되어 사용자가 브라우저에서 리소스를 열거나 다른 클라이언트에서 처리하는 .rdp 파일을 다운로드할 수 있습니다. 이 설정은 관리자가 구성할 수 있습니다. 이 기능의 관리 구성에 대한 세부 정보는 [웹 클라이언트 설치 설명서](remote-desktop-web-client-admin.md)에서 확인할 수 있습니다.
 - 색상 렌더링 문제가 해결되어 원격 세션에서 더 선명한 색상을 사용하도록 설정할 수 있습니다.
-- 원격 리소스 피드 오류와 관련된 오류 메시지가 수정되었습니다. 
+- 원격 리소스 피드 오류와 관련된 오류 메시지가 수정되었습니다.
 - 특수 문자 붙여넣기(Ctrl + Alt + V)와 같이 더 많은 office 바로 가기에 대한 지원이 추가되었습니다.
 - 원격 세션에서 Windows 키를 호출하도록 사용자를 위한 바로 가기 키가 추가되었습니다(Alt+F3).
 - 만료된 암호를 사용하여 인증을 시도하는 사용자를 위해 오류 메시지가 업데이트되었습니다.
@@ -105,4 +115,3 @@ ms.locfileid: "71404096"
 - **CTRL+C** 및 **CTRL+V**를 사용하여 클립보드를 통해 텍스트를 복사/붙여넣습니다.
 - PDF 파일로 인쇄합니다.
 - 18개 언어로 지역화되었습니다.
- 

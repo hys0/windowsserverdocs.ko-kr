@@ -8,12 +8,12 @@ ms.assetid: ''
 author: Teresa-Motiv
 ms.author: v-tea
 ms.localizationpriority: medium
-ms.openlocfilehash: e2bd9c766f07591e0c643a6cea644b2db7a95364
-ms.sourcegitcommit: 9855d6b59b1f8722f39ae74ad373ce1530da0ccf
+ms.openlocfilehash: 3165c926c50c2f91544895e0d328f1dae7424b4a
+ms.sourcegitcommit: b7f55949f166554614f581c9ddcef5a82fa00625
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71960951"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72588034"
 ---
 # <a name="guidelines-for-troubleshooting-dns-related-activation-issues"></a>DNS 관련 정품 인증 문제 해결을 위한 지침
 
@@ -66,7 +66,7 @@ KMS 호스트를 설치할 수 없거나 어떤 이유로 KMS 정품 인증을 �
 
 KMS를 정품 인증하려면 정품 인증할 클라이언트에 대해 KMS 호스트를 구성해야 합니다. 현재 환경에 KMS 호스트가 구성되어 있지 않으면 적절한 KMS 호스트 키를 사용하여 KMS 호스트를 설치하고 정품 인증합니다. KMS 소프트웨어를 호스트하도록 네트워크에서 컴퓨터를 구성한 후에는 DNS(Domain Name System) 설정을 게시합니다.
 
-KMS 호스트 구성 프로세스에 대한 자세한 내용은 [키 관리 서비스를 사용하여 정품 인증](https://docs.microsoft.com/windows/deployment/volume-activation/activate-using-key-management-service-vamt) 및 [VMAT 설치 및 구성](https://docs.microsoft.com/windows/deployment/volume-activation/install-configure-vamt)을 참조하세요.
+KMS 호스트 구성 프로세스에 대한 자세한 내용은 [키 관리 서비스를 사용하여 정품 인증](https://docs.microsoft.com/windows/deployment/volume-activation/activate-using-key-management-service-vamt) 및 [VAMT 설치 및 구성](https://docs.microsoft.com/windows/deployment/volume-activation/install-configure-vamt)을 참조하세요.
 
 [절차 목록으로 돌아갑니다.](#list)
 
