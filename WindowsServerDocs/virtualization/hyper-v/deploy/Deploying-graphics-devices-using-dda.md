@@ -9,16 +9,17 @@ ms.topic: article
 author: chrishuybregts
 ms.author: chrihu
 ms.assetid: 67a01889-fa36-4bc6-841d-363d76df6a66
-ms.openlocfilehash: 3b37abaf5a2341aff66ff0064ecc4f52faf47f06
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.date: 08/21/2019
+ms.openlocfilehash: 5466cecf9f11a53dc6e205f36d50d7b27b310ea1
+ms.sourcegitcommit: 81198fbf9e46830b7f77dcd345b02abb71ae0ac2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392999"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72923873"
 ---
 # <a name="deploy-graphics-devices-using-discrete-device-assignment"></a>불연속 장치 할당을 사용 하 여 그래픽 장치 배포
 
->적용 대상: Microsoft Hyper-V Server 2016, Windows Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019  
+> 적용 대상: Microsoft Hyper-V Server 2016, Windows Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019  
 
 Windows Server 2016 부터는 불연속 장치 할당 또는 DDA를 사용 하 여 전체 PCIe 장치를 VM에 전달할 수 있습니다.  이렇게 하면 장치 기본 드라이버를 활용할 수 있는 동안 VM 내에서 [NVMe 저장소](./Deploying-storage-devices-using-dda.md) 또는 그래픽 카드와 같은 장치에 고성능 액세스할 수 있습니다.  작동 하는 장치에 대 한 자세한 내용은 [개별 장치 할당을 사용 하 여 장치 배포 계획](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md) (영문)을 참조 하세요.
 
@@ -63,7 +64,7 @@ Set-VM -Name VMName -AutomaticStopAction TurnOff
 > 분할 드라이버를 제공 하지 않으면 분리 하는 동안 `-force` 옵션을 사용 하 여 보안 경고를 무시 해야 합니다. [불연속 장치 할당을 사용 하 여 장치를 배포 하기 위한 계획](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md)에서이 작업을 수행 하는 보안 문제에 대해 자세히 알아보세요.
 
 ### <a name="locating-the-devices-location-path"></a>장치의 위치 경로 찾기
-PCI 위치 경로는 호스트에서 장치를 분리 하 고 탑재 하는 데 필요 합니다.  예제 위치 경로 `"PCIROOT(20)#PCI(0300)#PCI(0000)#PCI(0800)#PCI(0000)"`는 다음과 같습니다.  위치 경로에 대 한 자세한 내용은 다음 위치에서 찾을 수 있습니다. [불연속 장치 할당을 사용 하 여 장치 배포를 계획](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md)합니다.
+PCI 위치 경로는 호스트에서 장치를 분리 하 고 탑재 하는 데 필요 합니다.  위치 경로 예제는 다음과 같습니다. `"PCIROOT(20)#PCI(0300)#PCI(0000)#PCI(0800)#PCI(0000)"`.  위치 경로에 대 한 자세한 내용은 [불연속 장치 할당을 사용 하 여 장치를 배포 하기 위한 계획](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md)을 참조 하세요.
 
 ### <a name="disable-the-device"></a>장치 사용 안 함
 Device Manager 또는 PowerShell을 사용 하 여 장치가 "사용 안 함" 인지 확인 합니다.  
@@ -99,7 +100,7 @@ Mount-VMHostAssignableDevice -LocationPath $locationPath
 ```
 그런 다음 장치 관리자에서 장치를 다시 사용 하도록 설정 하면 호스트 운영 체제가 장치와 상호 작용할 수 있습니다.
 
-## <a name="examples"></a>예
+## <a name="example"></a>예
 
 ### <a name="mounting-a-gpu-to-a-vm"></a>VM에 GPU 탑재
 이 예제에서는 PowerShell을 사용 하 여 "ddatest1" 라는 VM을 구성 하 고 제조업체 NVIDIA에서 사용 가능한 첫 번째 GPU를 가져와 VM에 할당 합니다.  
@@ -131,3 +132,13 @@ Dismount-VMHostAssignableDevice -force -LocationPath $locationPath
 #Assign the device to the guest VM.
 Add-VMAssignableDevice -LocationPath $locationPath -VMName $vm
 ```
+
+## <a name="troubleshooting"></a>문제 해결
+
+VM에 GPU를 전달 했지만 원격 데스크톱이 나 응용 프로그램이 GPU를 인식 하지 못하는 경우 다음과 같은 일반적인 문제를 확인 합니다.
+
+- 최신 버전의 GPU 공급 업체 지원 드라이버를 설치 했 고 Device Manager에서 장치 상태를 확인 하 여 드라이버에서 오류를 보고 하지 않는지 확인 합니다.
+- 장치에 VM 내에 할당 된 MMIO 공간이 충분 한지 확인 합니다. 자세한 내용은 [MMIO Space](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md#mmio-space)를 참조 하세요.
+- 공급 업체에서 지 원하는 GPU를이 구성에서 사용 하 고 있는지 확인 합니다. 예를 들어 일부 공급 업체는 VM으로 전달 될 때 해당 소비자 카드가 작동 하지 않도록 합니다.
+- 실행 중인 응용 프로그램이 VM 내에서의 실행을 지원 하 고 GPU와 관련 드라이버가 응용 프로그램에서 지원 되는지 확인 합니다. 일부 응용 프로그램에는 Gpu 및 환경을 허용 하는 목록이 있습니다.
+- 게스트에서 원격 데스크톱 세션 호스트 역할 또는 Windows Multipoint 서비스를 사용 하는 경우 특정 그룹 정책 항목이 기본 GPU를 사용할 수 있도록 설정 되어 있는지 확인 해야 합니다. 게스트 또는 게스트의 로컬 그룹 정책 편집기에 적용 된 그룹 정책 개체를 사용 하 여 다음 그룹 정책 항목으로 이동 합니다. **컴퓨터 구성** > **관리자 템플릿** > **Windows 구성 요소** > **원격 세션 환경** >  > **원격 데스크톱 서비스** **원격 데스크톱 세션 호스트** > **모든 원격 데스크톱 서비스 세션에 하드웨어 기본 그래픽 어댑터를 사용**합니다. 정책이 적용 된 후이 값을 사용으로 설정 하 고 VM을 다시 부팅 합니다.

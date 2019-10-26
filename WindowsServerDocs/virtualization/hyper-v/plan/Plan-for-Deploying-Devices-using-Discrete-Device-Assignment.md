@@ -8,22 +8,22 @@ ms.tgt_pltfrm: na
 ms.topic: article
 author: chrishuybregts
 ms.author: chrihu
-ms.date: 02/06/2018
-ms.openlocfilehash: 7084f4951ebe1d1203f4c9e45bc5f73cc6487a84
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.date: 08/21/2019
+ms.openlocfilehash: 114dd87b86bfffd1070229af57ae65deea2c2db0
+ms.sourcegitcommit: 81198fbf9e46830b7f77dcd345b02abb71ae0ac2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71364186"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72923870"
 ---
 # <a name="plan-for-deploying-devices-using-discrete-device-assignment"></a>불연속 장치 할당을 사용 하 여 장치 배포 계획
 >적용 대상: Microsoft Hyper-V Server 2016, Windows Server 2016, Microsoft Hyper-V Server 2019, Windows Server 2019
 
 불연속 장치 할당을 통해 가상 머신 내에서 물리적 PCIe 하드웨어를 직접 액세스할 수 있습니다.  이 가이드에서는 불연속 장치 할당을 사용할 수 있는 장치 유형, 호스트 시스템 요구 사항, 가상 머신에 적용 되는 제한 사항 및 불연속 장치 할당의 보안 영향에 대해 설명 합니다.
 
-불연속 장치 할당의 초기 릴리스에서는 Microsoft에서 공식적으로 지원 되는 두 가지 장치 클래스에 중점을 두었습니다. 그래픽 어댑터 및 NVMe 저장 장치.  다른 장치는 작동 하 고 하드웨어 공급 업체에서 해당 장치에 대 한 지원 문을 제공할 수 있습니다.  이러한 기타 장치의 경우 지원에 대 한 해당 하드웨어 공급 업체에 문의 하세요.
+불연속 장치 할당의 초기 릴리스에서는 Microsoft에서 공식적으로 지원 되는 두 가지 장치 클래스 (그래픽 어댑터 및 NVMe 저장소 장치)에 중점을 두었습니다.  다른 장치는 작동 하 고 하드웨어 공급 업체에서 해당 장치에 대 한 지원 문을 제공할 수 있습니다.  이러한 기타 장치의 경우 지원에 대 한 해당 하드웨어 공급 업체에 문의 하세요.
 
-개별 장치 할당을 사용해 볼 준비가 되 면 불연속 장치 [할당을 사용 하 여 그래픽 장치를 배포](../deploy/Deploying-graphics-devices-using-dda.md) 하거나 [불연속 장치 할당을 사용 하 여 저장 장치를 배포](../deploy/Deploying-storage-devices-using-dda.md) 하 여 시작 하는 방법으로 이동할 수 있습니다.
+GPU 가상화의 다른 방법에 대 한 자세한 내용은 [Windows Server에서 gpu 가속 계획](plan-for-gpu-acceleration-in-windows-server.md)을 참조 하세요. 개별 장치 할당을 사용해 볼 준비가 되 면 불연속 장치 [할당을 사용 하 여 그래픽 장치 배포](../deploy/Deploying-graphics-devices-using-dda.md) 또는 [불연속 장치 할당을 사용 하 여 저장 장치 배포](../deploy/Deploying-storage-devices-using-dda.md) 로 이동 하 여 시작할 수 있습니다.
 
 ## <a name="supported-virtual-machines-and-guest-operating-systems"></a>지원 되는 Virtual Machines 및 게스트 운영 체제
 불연속 장치 할당은 1 세대 또는 2 세대 Vm에 대해 지원 됩니다.  또한 지원 되는 게스트에는 Windows 10, Windows Server 2019, Windows Server 2016, Windows Server 2012r2 [KB 3133690](https://support.microsoft.com/kb/3133690) 이 적용 되 고 다양 한 [Linux OS](../supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows.md) 배포가 포함 됩니다.
@@ -57,13 +57,13 @@ ms.locfileid: "71364186"
 
 관리자가 신뢰할 수 없는 테 넌 트가 있는 장치를 사용 하려는 경우 호스트에 설치할 수 있는 장치 완화 드라이버를 만들 수 있는 기능이 장치 제조업체에 제공 되었습니다.  장치 완화 드라이버를 제공 하는지 여부에 대 한 자세한 내용은 장치 제조업체에 문의 하세요.
 
-장치 완화 드라이버가 없는 장치에 대 한 보안 검사를 무시 하려는 경우 `-Force` 매개 변수를 `Dismount-VMHostAssignableDevice` cmdlet에 전달 해야 합니다.  이렇게 하면 해당 시스템의 보안 프로필을 변경 했으며 프로토타입 또는 신뢰할 수 있는 환경 에서만 권장 됩니다.
+장치 완화 드라이버가 없는 장치에 대 한 보안 검사를 무시 하려는 경우에는 `-Force` 매개 변수를 `Dismount-VMHostAssignableDevice` cmdlet에 전달 해야 합니다.  이렇게 하면 해당 시스템의 보안 프로필을 변경 했으며 프로토타입 또는 신뢰할 수 있는 환경 에서만 권장 됩니다.
 
 ## <a name="pcie-location-path"></a>PCIe 위치 경로
-호스트에서 장치를 분리 하 고 탑재 하려면 PCIe 위치 경로가 필요 합니다.  예제 위치 경로 `"PCIROOT(20)#PCI(0300)#PCI(0000)#PCI(0800)#PCI(0000)"`는 다음과 같습니다.   또한 [컴퓨터 프로필 스크립트](#machine-profile-script) 는 PCIe 장치의 위치 경로도 반환 합니다.
+호스트에서 장치를 분리 하 고 탑재 하려면 PCIe 위치 경로가 필요 합니다.  위치 경로 예제는 다음과 같습니다. `"PCIROOT(20)#PCI(0300)#PCI(0000)#PCI(0800)#PCI(0000)"`.   또한 [컴퓨터 프로필 스크립트](#machine-profile-script) 는 PCIe 장치의 위치 경로도 반환 합니다.
 
 ### <a name="getting-the-location-path-by-using-device-manager"></a>Device Manager를 사용 하 여 위치 경로 가져오기
-![장치 관리자](../deploy/media/dda-devicemanager.png)
+![장치 관리자를 입력하고](../deploy/media/dda-devicemanager.png)
 - Device Manager를 열고 장치를 찾습니다.  
 - 장치를 마우스 오른쪽 단추로 클릭 하 고 "속성"을 선택 합니다.
 - 세부 정보 탭으로 이동 하 여 속성 드롭다운에서 "위치 경로"를 선택 합니다.  
@@ -104,7 +104,7 @@ Express Endpoint -- more secure.
 MMIO 공간에 대 한 자세한 내용은 TechCommunity 블로그의 [개별 장치 할당-gpu](https://techcommunity.microsoft.com/t5/Virtualization/Discrete-Device-Assignment-GPUs/ba-p/382266) 를 참조 하세요.
 
 ## <a name="machine-profile-script"></a>컴퓨터 프로필 스크립트
-서버가 올바르게 구성 되었는지, 개별 장치 할당을 사용 하 여 전달할 수 있는 장치를 식별 하는 과정을 간소화 하기 위해 엔지니어 중 하나가 다음 PowerShell 스크립트를 함께 제공 합니다. [SurveyDDA.](https://github.com/Microsoft/Virtualization-Documentation/blob/live/hyperv-tools/DiscreteDeviceAssignment/SurveyDDA.ps1)
+서버가 올바르게 구성 되었는지와 불연속 장치 할당을 사용 하 여 전달할 수 있는 장치를 식별 하는 과정을 간소화 하기 위해 엔지니어 중 한 [SurveyDDA](https://github.com/Microsoft/Virtualization-Documentation/blob/live/hyperv-tools/DiscreteDeviceAssignment/SurveyDDA.ps1) 는 다음과 같은 PowerShell 스크립트를 포함 합니다.
 
 스크립트를 사용 하기 전에 Hyper-v 역할이 설치 되어 있는지 확인 하 고 관리자 권한이 있는 PowerShell 명령 창에서 스크립트를 실행 하십시오.
 
@@ -113,42 +113,3 @@ MMIO 공간에 대 한 자세한 내용은 TechCommunity 블로그의 [개별 �
 검색 된 각 장치에 대해이 도구는 불연속 장치 할당과 함께 사용할 수 있는지 여부를 표시 합니다. 장치가 불연속 장치 할당과 호환 되는 것으로 식별 되는 경우 스크립트에서 이유를 제공 합니다.  장치가 호환 되는 것으로 식별 되 면 장치의 위치 경로가 표시 됩니다.  또한 해당 장치에는 [MMIO 공간이](#mmio-space)필요한 경우에도 표시 됩니다.
 
 ![SurveyDDA](./images/hyper-v-surveydda-ps1.png)
-
-## <a name="frequently-asked-questions"></a>질문과 대답
-
-### <a name="how-does-remote-desktops-remotefx-vgpu-technology-relate-to-discrete-device-assignment"></a>원격 데스크톱의 RemoteFX vGPU 기술은 개별 장치 할당과 어떻게 관련 되나요?
-완전히 별개의 기술입니다. 불연속 장치 할당이 작동 하려면 RemoteFX vGPU를 설치할 필요가 없습니다. 또한 추가 역할을 설치 하지 않아도 됩니다. Remotefx vGPU를 사용 하려면 RemoteFX vGPU 드라이버가 VM에 표시 되려면 RDVH 역할을 설치 해야 합니다. 불연속 장치 할당의 경우 하드웨어 공급 업체의 드라이버를 가상 머신에 설치할 예정 이므로 추가 역할을 제공할 필요가 없습니다.  
-
-### <a name="ive-passed-a-gpu-into-a-vm-but-remote-desktop-or-an-application-isnt-recognizing-the-gpu"></a>VM에 GPU를 전달 했지만 원격 데스크톱이 나 응용 프로그램이 GPU를 인식 하지 않습니다.
-이는 여러 가지 이유로 발생할 수 있지만 몇 가지 일반적인 문제는 다음과 같습니다.
-- 최신 GPU 공급 업체의 드라이버가 설치 되어 Device Manager에서 장치 상태를 확인 하 여 오류를 보고 하지 않는지 확인 합니다.
-- 장치에 VM 내에서 할당 된 [MMIO 공간이](#mmio-space) 충분 한지 확인 합니다.
-- 공급 업체에서 지 원하는 GPU를이 구성에서 사용 하 고 있는지 확인 합니다. 예를 들어 일부 공급 업체는 VM으로 전달 될 때 해당 소비자 카드가 작동 하지 않도록 합니다.
-- 실행 중인 응용 프로그램이 VM 내에서의 실행을 지원 하 고 GPU와 관련 드라이버가 응용 프로그램에서 지원 되는지 확인 합니다. 일부 응용 프로그램에는 Gpu 및 환경 허용 목록 있습니다.
-- 게스트에서 원격 데스크톱 세션 호스트 역할 또는 Windows Multipoint 서비스를 사용 하는 경우 특정 그룹 정책 항목이 기본 GPU를 사용할 수 있도록 설정 되어 있는지 확인 해야 합니다. 게스트 또는 게스트의 로컬 그룹 정책 편집기에 적용 된 그룹 정책 개체를 사용 하 여 다음 그룹 정책 항목으로 이동 합니다.
-   - 컴퓨터 구성
-   - 관리자 템플릿
-   - Windows 구성 요소
-   - 원격 데스크톱 서비스
-   - 원격 데스크톱 세션 호스트
-   - 원격 세션 환경
-   - 모든 원격 데스크톱 서비스 세션에 하드웨어 기본 그래픽 어댑터 사용
-
-    정책이 적용 된 후이 값을 사용으로 설정 하 고 VM을 다시 부팅 합니다.
-
-### <a name="can-discrete-device-assignment-take-advantage-of-remote-desktops-avc444-codec"></a>불연속 장치 할당은 원격 데스크톱의 AVC444 코덱을 활용할 수 있나요?
-예, 자세한 내용은이 블로그 게시물을 참조 하세요. [Windows 10 및 Windows Server 2016 Technical Preview의 RDP (원격 데스크톱 프로토콜) 10 AVC/10mb 향상](https://blogs.technet.microsoft.com/enterprisemobility/2016/01/11/remote-desktop-protocol-rdp-10-avch-264-improvements-in-windows-10-and-windows-server-2016-technical-preview/)
-
-### <a name="can-i-use-powershell-to-get-the-location-path"></a>PowerShell을 사용 하 여 위치 경로를 가져올 수 있나요?
-예, 다양 한 방법으로이 작업을 수행할 수 있습니다. 한 가지 예는 다음과 같습니다.
-```
-#Enumerate all PNP Devices on the system
-$pnpdevs = Get-PnpDevice -presentOnly
-#Select only those devices that are Display devices manufactured by NVIDIA
-$gpudevs = $pnpdevs |where-object {$_.Class -like "Display" -and $_.Manufacturer -like "NVIDIA"}
-#Select the location path of the first device that's available to be dismounted by the host.
-$locationPath = ($gpudevs | Get-PnpDeviceProperty DEVPKEY_Device_LocationPaths).data[0]
-```
-
-### <a name="can-discrete-device-assignment-be-used-to-pass-a-usb-device-into-a-vm"></a>불연속 장치 할당을 사용 하 여 USB 장치를 VM에 전달할 수 있나요?
-공식적으로 지원 되지 않지만, 고객은 전체 USB3 컨트롤러를 VM에 전달 하 여이 작업을 수행 하기 위해 불연속 장치 할당을 사용 했습니다.  전체 컨트롤러를 전달 하는 동안 해당 컨트롤러에 연결 된 각 USB 장치는 VM 에서도 액세스할 수 있습니다.  일부 USB3 컨트롤러만 작동할 수 있으며, USB2 컨트롤러는 불연속 장치 할당과 함께 사용할 수 없습니다.
