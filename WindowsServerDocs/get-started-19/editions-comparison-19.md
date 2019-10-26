@@ -8,12 +8,12 @@ author: jasongerend
 ms.author: jgerend
 manager: jasgroce
 ms.localizationpriority: medium
-ms.openlocfilehash: 24ae0e11a3e8ca2b50bd6722f7bd7d18b8c1c532
-ms.sourcegitcommit: e92a78f8d307200e64617431a701b9112a9b4e48
+ms.openlocfilehash: 2cb368b5ff4723c1afb53c5a9e787d9f8a39bef3
+ms.sourcegitcommit: 40e4ba214954d198936341c4d6ce1916dc891169
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71973870"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690453"
 ---
 # <a name="comparison-of-standard-and-datacenter-editions-of-windows-server-2019"></a>Windows Server 2019 Standard Edition과 Datacenter Edition의 비교
 
@@ -155,7 +155,6 @@ ms.locfileid: "71973870"
 |네트워크 부하 분산|예|예|
 |Windows PowerShell|예|예|
 |Server Core 설치 옵션|예|예|
-|Nano Server 설치 옵션|예|예|
 |서버 관리자|예|예|
 |SMB 다이렉트 및 SMB over RDMA|예|예|
 |소프트웨어 정의 네트워킹|아니오| <strong>예</strong> |

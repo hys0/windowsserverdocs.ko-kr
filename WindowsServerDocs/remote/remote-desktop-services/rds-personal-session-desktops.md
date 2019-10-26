@@ -10,14 +10,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
 ms.author: elizapo
-ms.date: 09/16/2016
+ms.date: 10/22/2019
 manager: dongill
-ms.openlocfilehash: 7429cd9cb87db310a716136c171de47cfe0892f2
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9386733911ca81ad60d038854bd68e5603aae4cf
+ms.sourcegitcommit: 3262c5c7cece9f2adf2b56f06b7ead38754a451c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71387364"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72812280"
 ---
 # <a name="use-personal-session-desktops-with-remote-desktop-services"></a>원격 데스크톱 서비스에서 개인 세션 데스크톱 사용
 
@@ -100,6 +100,3 @@ New-RDSessionCollection cmdlet을 사용하여 개인 세션 데스크톱 컬렉
 
 
 모든 새 cmdlet은 -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer, -OutVariable 등의 일반 매개 변수를 지원합니다. 자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216)를 참조하세요.
-
-## <a name="hardware-accelerated-graphics"></a>하드웨어 가속 그래픽
-Windows Server 2016은 RemoteFX 3D vGPU(그래픽 어댑터) 기술을 확장하여 OpenGL을 지원하고 단일 사용자 Windows Server 2016 게스트 VM을 지원합니다. 개인 세션 데스크톱을 새 vGPU 기능과 결합하여 가속된 그래픽을 필요로 하는 호스티드 애플리케이션을 지원할 수 있습니다. 또는 개인 세션 데스크톱을 새 DDA(개별 디바이스 할당) 기능과 결합하여 가속된 그래픽을 필요로 하는 호스티드 애플리케이션도 지원할 수 있습니다.
