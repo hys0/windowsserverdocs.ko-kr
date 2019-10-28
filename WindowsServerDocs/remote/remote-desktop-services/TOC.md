@@ -12,7 +12,7 @@
 ### [고가용성](rds-plan-high-availability.md)
 ### [다단계 인증](rds-plan-mfa.md)
 ### [데이터 스토리지 보안](rds-plan-secure-data-storage.md)
-### [그래픽 렌더링 기술 선택](rds-graphics-virtualization.md)
+### [GPU 가속](rds-graphics-virtualization.md)
 ### [모든 디바이스에서 연결](rds-plan-connect-from-any-device.md)
 ### [지불 방법 선택](rds-plan-choose-how-you-pay.md)
 ### [RDS 및 VDI 배포에 Office 2016 통합](https://docs.microsoft.com/deployoffice/rds-office-vdi-rdsh)
@@ -56,7 +56,6 @@
 ##### [재해 복구 계획 만들기](rds-disaster-recovery-plan.md)
 
 ## [실행 및 튜닝](rds-run-and-tune.md)
-### [원격 데스크톱 서비스에 대한 RemoteFX vGPU 설치 및 구성](rds-remotefx-vgpu.md)
 ### [개인 데스크톱 세션 컬렉션 관리](rds-manage-personal-collection.md)
 ### [추천되는 VDI 데스크톱 구성](rds-vdi-recommendations.md)
 ### [VDI(가상 데스크톱 인프라)를 위한 Windows 10 버전 1803 최적화](rds-vdi-recommendations-1803.md)
