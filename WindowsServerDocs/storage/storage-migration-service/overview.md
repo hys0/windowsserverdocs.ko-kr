@@ -1,25 +1,25 @@
 ---
 title: Storage Migration Service 개요
-description: 스토리지 마이그레이션 서비스를 사용하면 서버를 Windows Server의 최신 버전으로 쉽게 마이그레이션할 수 있습니다. 서버의 데이터를 조사한 다음, 데이터 및 구성을 새로운 서버로 전송하는 그래픽 도구가 제공됩니다. 앱이나 사용자가 아무것도 변경할 필요가 없습니다.
+description: Storage Migration Service를 사용 하면 저장소를 Windows Server 또는 Azure로 쉽게 마이그레이션할 수 있습니다. Windows 및 Linux 서버에서 데이터를 인벤토리에 추가한 다음 최신 서버 또는 Azure virtual machines로 데이터를 전송 하는 그래픽 도구를 제공 합니다. Storage Migration Service는 앱 및 사용자가 링크나 경로를 변경 하지 않고도 데이터에 액세스할 수 있도록 대상 서버에 서버의 id를 전송 하는 옵션을 제공 합니다.
 author: jasongerend
 ms.author: jgerend
 manager: elizapo
-ms.date: 08/16/2019
+ms.date: 10/25/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: 022b0c3445c007960c490159f6580a702233ee41
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 712befacaf1d5bddd4f9bd993ce0d423b15cba36
+ms.sourcegitcommit: 4b4ff8d9e18b2ddcd1916ffa2cd58fffbed8e7ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402975"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72986456"
 ---
 # <a name="storage-migration-service-overview"></a>Storage Migration Service 개요
 
 >적용 대상: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server (반기 채널)
 
-스토리지 마이그레이션 서비스를 사용하면 서버를 Windows Server의 최신 버전으로 쉽게 마이그레이션할 수 있습니다. 서버의 데이터를 조사한 다음, 데이터 및 구성을 새로운 서버로 전송하는 그래픽 도구가 제공됩니다. 앱이나 사용자가 아무것도 변경할 필요가 없습니다.
+Storage Migration Service를 사용 하면 저장소를 Windows Server 또는 Azure로 쉽게 마이그레이션할 수 있습니다. Windows 및 Linux 서버에서 데이터를 인벤토리에 추가한 다음 최신 서버 또는 Azure virtual machines로 데이터를 전송 하는 그래픽 도구를 제공 합니다. Storage Migration Service는 앱 및 사용자가 링크나 경로를 변경 하지 않고도 데이터에 액세스할 수 있도록 대상 서버에 서버의 id를 전송 하는 옵션을 제공 합니다.
 
 이 항목에서는 저장소 마이그레이션 서비스를 사용 하려는 이유와 마이그레이션 프로세스의 작동 방식 및 원본 및 대상 서버에 대 한 요구 사항에 대해 설명 합니다.
 
@@ -42,10 +42,10 @@ ms.locfileid: "71402975"
 
 1. 파일 및 구성에 대 한 정보를 수집 하는 **인벤토리 서버** (그림 2에 표시).
 2. 원본 서버에서 대상 서버로 **데이터를 전송 (복사)** 합니다.
-3. **새 서버로** 이동 (선택 사항).<br>대상 서버는 앱과 사용자가 아무것도 변경할 필요가 없도록 원본 서버의 이전 id를 가정 합니다. <br>원본 서버는 유지 관리 상태를 입력 합니다. 여기에는 항상 동일한 파일이 포함 되지만 (원본 서버에서는 파일을 제거 하지 않음) 사용자 및 앱에서 사용할 수 없습니다. 그런 다음 사용자의 편의를 위해 서버를 서비스 해제할 수 있습니다.
+3. **새 서버로** 이동 합니다 (선택 사항).<br>대상 서버는 앱과 사용자가 아무것도 변경할 필요가 없도록 원본 서버의 이전 id를 가정 합니다. <br>원본 서버는 유지 관리 상태를 입력 합니다. 여기에는 항상 동일한 파일이 포함 되지만 (원본 서버에서는 파일을 제거 하지 않음) 사용자 및 앱에서 사용할 수 없습니다. 그런 다음 사용자의 편의를 위해 서버를 서비스 해제할 수 있습니다.
 
-![](media/migrate/inventory.png)
-스캔할**준비가 된 서버를 보여 주는 스크린샷 그림 2: Storage Migration Service 서버 인벤토리**
+스캔할 준비가 된 서버를 보여 주는 ![스크린샷](media/migrate/inventory.png)
+**그림 2: 저장소 마이그레이션 서비스 서버 인벤토리**
 
 ## <a name="requirements"></a>요구 사항
 
@@ -80,9 +80,9 @@ Orchestrator와 대상 컴퓨터에는 2 개 이상의 코어 또는 두 개의 
 원본 서버는 다음 운영 체제 중 하나를 실행 해야 합니다.
 
 - Windows Server, 반기 채널
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2
+- 시작
+- Windows Server 2016
+- Windows Server 2012 R2
 - Windows Server 2012
 - Windows Server 2008 R2
 - Windows Server 2008
@@ -114,9 +114,9 @@ Orchestrator가 Windows Server, 버전 1903 이상을 실행 하거나 orchestra
 대상 서버는 다음 운영 체제 중 하나를 실행 해야 합니다.
 
 - Windows Server, 반기 채널
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2
+- 시작
+- Windows Server 2016
+- Windows Server 2012 R2
 
 > [!TIP]
 > Windows server 2019 또는 Windows Server, 반기 채널 이상을 실행 하는 대상 서버는 이전 버전의 Windows Server의 전송 성능을 두 배로 향상 합니다. 이러한 성능 향상은 기본 제공 저장소 마이그레이션 서비스 프록시 서비스를 포함 하기 때문에 발생 합니다 .이 서비스는 아직 열려 있지 않은 경우에도 필요한 방화벽 포트를 엽니다.
@@ -131,7 +131,7 @@ Windows Server, 버전 1903 이상 또는 [KB4512534](https://support.microsoft.
 - Azure 파일 동기화를 사용하여 마이그레이션된 공유를 Azure에 쉽게 동기화
 - Azure와 같은 신규 네트워크로 마이그레이션
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [저장소 마이그레이션 서비스를 사용 하 여 파일 서버 마이그레이션](migrate-data.md)
 - [Storage Migration Services FAQ (질문과 대답)](faq.md)

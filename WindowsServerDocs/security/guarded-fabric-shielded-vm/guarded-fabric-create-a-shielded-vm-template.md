@@ -8,16 +8,17 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 01/29/2019
-ms.openlocfilehash: 686fd2ed5969d191240bbd726f1d759e9974f08a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 70014c04bbb4425fe3c3fd0379f10cf00abe00ee
+ms.sourcegitcommit: 4b4ff8d9e18b2ddcd1916ffa2cd58fffbed8e7ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386684"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72986441"
 ---
 # <a name="create-a-windows-shielded-vm-template-disk"></a>Windows 차폐 VM 템플릿 디스크 만들기
 
->적용 대상: Windows server 2019, Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2019
+
 
 일반 Vm과 마찬가지로 테 넌 트와 관리자가 템플릿 디스크를 사용 하 여 패브릭에 새 Vm을 쉽게 배포할 수 있도록 VM 템플릿 (예: [Virtual Machine Manager (VMM)의 vm 템플릿](https://technet.microsoft.com/system-center-docs/vmm/manage/manage-library-add-vm-templates))을 만들 수 있습니다. 차폐 Vm은 보안에 민감한 자산 이므로 차폐를 지 원하는 VM 템플릿을 만들기 위한 추가 단계가 있습니다. 이 항목에서는 VMM에서 보호 된 템플릿 디스크 및 VM 템플릿을 만드는 단계에 대해 설명 합니다.
 
@@ -27,13 +28,13 @@ ms.locfileid: "71386684"
 
 먼저 차폐 템플릿 디스크 만들기 마법사를 통해 실행 되는 OS 디스크를 준비 합니다. 이 디스크는 테 넌 트의 Vm에서 OS 디스크로 사용 됩니다. 기존 도구를 사용 하 여이 디스크를 만들 수 있습니다 (예: DISM (Microsoft Desktop Image Service Manager)). 또는 새 VHDX를 사용 하 여 VM을 수동으로 설정 하 고 해당 디스크에 OS를 설치 합니다. 디스크를 설정 하는 경우 2 세대 및/또는 차폐 Vm과 관련 된 다음 요구 사항을 준수 해야 합니다. 
 
-| VHDX에 대 한 요구 사항 | Reason |
+| VHDX에 대 한 요구 사항 | 이유 |
 |-----------|----|
 |GPT (GUID 파티션 테이블) 디스크 여야 합니다. | UEFI를 지원 하기 위해 2 세대 가상 컴퓨터에 필요|
-|디스크 유형은 **동적**이 아닌 **기본** 이어야 합니다. <br>참고: 이는 Hyper-v에서 지 원하는 "동적 확장" VHDX 기능이 아니라 논리 디스크 유형을 나타냅니다. | BitLocker는 동적 디스크를 지원 하지 않습니다.|
+|디스크 유형은 **동적**이 아닌 **기본** 이어야 합니다. <br>참고:이는 Hyper-v에서 지 원하는 "동적 확장" VHDX 기능이 아니라 논리 디스크 유형을 나타냅니다. | BitLocker는 동적 디스크를 지원 하지 않습니다.|
 |디스크에 파티션이 두 개 이상 있습니다. 한 파티션에는 Windows가 설치 된 드라이브가 포함 되어야 합니다. BitLocker가 암호화 하는 드라이브입니다. 다른 파티션은 부팅 로더를 포함 하 고 컴퓨터를 시작할 수 있도록 암호화 되지 않은 상태로 유지 되는 활성 파티션입니다.|BitLocker에 필요|
 |파일 시스템이 NTFS입니다. | BitLocker에 필요|
-|VHDX에 설치 된 운영 체제는 다음 중 하나입니다.<br>-Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012 <br>-Windows 10, Windows 8.1, Windows 8| 2 세대 가상 컴퓨터 및 Microsoft 보안 부팅 템플릿을 지 원하는 데 필요 합니다.|
+|VHDX에 설치 된 운영 체제는 다음 중 하나입니다.<br>-Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012 <br>-Windows 10, Windows 8.1, Windows 8| 2 세대 가상 컴퓨터 및 Microsoft 보안 부팅 템플릿을 지 원하는 데 필요 합니다.|
 |운영 체제를 일반화 해야 합니다 (sysprep.exe 실행). | 템플릿 프로 비전에는 특정 테 넌 트의 작업에 대 한 특수화 Vm이 포함 됩니다.| 
 
 > [!NOTE]
@@ -50,7 +51,7 @@ ms.locfileid: "71386684"
 > [!NOTE]
 > 템플릿 디스크 마법사는 현재 위치의 지정 된 템플릿 디스크를 수정 합니다. 마법사를 실행 하 여 나중에 디스크를 업데이트할 때까지 보호 되지 않는 VHDX의 복사본을 만들 수 있습니다. 템플릿 디스크 마법사를 사용 하 여 보호 된 디스크는 수정할 수 없습니다.
 
-Windows Server 2016를 실행 하는 컴퓨터에서 다음 단계를 수행 합니다 (보호 된 호스트나 VMM 서버가 될 필요는 없음).
+Windows Server 2016, Windows 10 (원격 서버 관리 도구, RSAT가 설치 된) 이상을 실행 하는 컴퓨터에서 다음 단계를 수행 합니다 (보호 된 호스트나 VMM 서버가 될 필요는 없음).
 
 1. [운영 체제 VHDX](#prepare-an-operating-system-vhdx) 를 서버에 준비 (아직 없는 경우) 하 여 만든 일반화 된 vhdx를 복사 합니다.
 
@@ -92,7 +93,7 @@ VMM을 사용 하는 경우이 항목의 나머지 섹션에 나오는 단계를
 
 VMM을 사용 하는 경우 템플릿 디스크를 만든 후 VMM 라이브러리 공유에 복사 하 여 새 Vm을 프로 비전 할 때 호스트에서 디스크를 다운로드 하 고 사용할 수 있도록 해야 합니다. 다음 절차를 사용 하 여 템플릿 디스크를 VMM 라이브러리에 복사 하 고 라이브러리를 새로 고칩니다.
 
-1. VHDX 파일을 VMM 라이브러리 공유 폴더에 복사 합니다. 기본 VMM 구성을 사용한 경우 템플릿 디스크를 _\\ @ no__t-2\MSSCVMMLibrary\VHDs_로 복사 합니다.
+1. VHDX 파일을 VMM 라이브러리 공유 폴더에 복사 합니다. 기본 VMM 구성을 사용한 경우 템플릿 디스크를 _\\<vmmserver>\MSSCVMMLibrary\VHDs_에 복사 합니다.
 
 2. 라이브러리 서버를 새로 고칩니다. **라이브러리** 작업 영역을 열고 **라이브러리 서버**를 확장 하 고 새로 고칠 라이브러리 서버를 마우스 오른쪽 단추로 클릭 한 다음 **새로 고침**을 클릭 합니다.
 
@@ -135,9 +136,10 @@ VMM 라이브러리에 준비 된 템플릿 디스크가 있으면 보호 된 Vm
 
 ## <a name="prepare-and-protect-the-vhdx-using-powershell"></a>PowerShell을 사용 하 여 VHDX 준비 및 보호
 
-템플릿 디스크 마법사를 실행 하는 대신 RSAT를 실행 하는 컴퓨터에 템플릿 디스크 및 인증서를 복사 하 고 [Protect-템플릿 디스크 @ no__t-1을 실행 하 여 서명 프로세스를 시작할 수 있습니다.
+템플릿 디스크 마법사를 실행 하는 대신 RSAT를 실행 하는 컴퓨터에 템플릿 디스크 및 인증서를 복사 하 고 보호 템플릿 [디스크](https://docs.microsoft.com/powershell/module/shieldedvmtemplate/protect-templatedisk?view=win10-ps
+) 를 실행 하 여 서명 프로세스를 시작할 수 있습니다.
 다음 예에서는 _TemplateName_ 및 _version_ 매개 변수에서 지정한 이름 및 버전 정보를 사용 합니다.
-@No__t-0 매개 변수에 제공한 VHDX는 업데이트 된 템플릿 디스크로 덮어쓰여집니다. 따라서 명령을 실행 하기 전에 복사본을 만들어야 합니다.
+`-Path` 매개 변수에 제공 하는 VHDX는 업데이트 된 템플릿 디스크로 덮어쓰여집니다. 따라서 명령을 실행 하기 전에 복사본을 만들어야 합니다.
 
 ```powershell
 # Replace "THUMBPRINT" with the thumbprint of your template disk signing certificate in the line below
@@ -165,7 +167,7 @@ Save-VolumeSignatureCatalog -TemplateDiskPath 'C:\temp\MyLinuxTemplate.vhdx' -Vo
 > [!div class="nextstepaction"]
 > [보호 데이터 파일 만들기](guarded-fabric-tenant-creates-shielding-data.md)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [보호 된 호스트 및 보호 된 Vm에 대 한 호스팅 서비스 공급자 구성 단계](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [보호된 패브릭 및 보호된 VM](guarded-fabric-and-shielded-vms-top-node.md)
