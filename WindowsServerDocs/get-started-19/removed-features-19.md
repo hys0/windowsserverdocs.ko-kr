@@ -11,14 +11,14 @@ ms.topic: article
 author: jasongerend
 ms.author: jgerend
 manager: jasgro
-ms.date: 08/22/2019
+ms.date: 10/22/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 261023223b56e235320b7ad414fa91206420b1ed
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: a2d3a871165812ac3a27e65b5f52cc56a05c9efe
+ms.sourcegitcommit: 3262c5c7cece9f2adf2b56f06b7ead38754a451c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71360844"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72812296"
 ---
 # <a name="features-removed-or-planned-for-replacement-starting-windows-server-2019"></a>Windows Server 2019부터 제거되었거나 교체 예정인 기능
 
@@ -41,6 +41,7 @@ Windows Server 2019에서 설치된 제품 이미지에서 다음과 같은 기�
 | 분산 스캔 관리(DSM)라고도 하는 비즈니스 스캔|이 보안 스캔 및 스캐너 관리 기능을 제거할 예정입니다. 이 기능을 지원하는 디바이스가 없습니다. |
 | 인쇄 구성 요소 - 현재 Server Core 설치에 대한 선택적 구성 요소|Windows Server의 이전 릴리스에서 인쇄 구성 요소는 Server Core 설치 옵션에서 기본적으로 *비활성화*되었습니다. Windows Server 2016에서는 기본적으로 활성화되도록 변경했습니다. Windows Server 2019에서 해당 인쇄 구성 요소는 Server Core에 대해 다시 한 번 기본적으로 비활성화됩니다. 인쇄 구성 요소를 활성화해야 하는 경우 **Install-WindowsFeature Print-Server** cmdlet을 실행하여 수행할 수 있습니다. |
 | Server Core 설치의 [원격 데스크톱 연결 브로커 및 원격 데스크톱 가상화 호스트](../remote/remote-desktop-services/desktop-hosting-service.md)|대부분의 원격 데스크톱 서비스 배포는 원격 데스크톱 세션 호스트(RDSH)와 함께 위치하는 역할을 가지며, 이를 위해 데스크톱 환경 포함 서버가 필요합니다. RDSH와 일관성을 유지하기 위해 이러한 역할에 대해서도 데스크톱 환경 포함 서버를 요구하도록 변경하고 있습니다. 이러한 RDS 역할은 [Server Core 설치](../administration/server-core/what-is-server-core.md)에서 더 이상 사용할 수 없습니다. [이러한 역할을 원격 데스크톱 인프라의 일부로 배포](../remote/remote-desktop-services/rds-deploy-infrastructure.md)해야 하는 경우 [데스크톱 환경 포함 Windows Server에 설치할](../get-started/getting-started-with-server-with-desktop-experience.md) 수 있습니다. <br/><br/>이러한 역할은 Windows Server 2019의 데스크톱 경험 설치 옵션에도 포함됩니다. |
+| [RemoteFX 3D 비디오 어댑터(vGPU)](../remote/remote-desktop-services/rds-remotefx-vgpu.md)|가상화된 환경에 대한 새 그래픽 가속 옵션을 개발하고 있습니다. 대신 [개별 디바이스 할당(DDA)](../virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md)을 사용할 수도 있습니다. |
 
 ## <a name="features-were-no-longer-developing"></a>더 이상 개발하지 않는 기능
 

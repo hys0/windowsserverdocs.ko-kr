@@ -7,18 +7,18 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
-ms.date: 11/08/2016
+ms.date: 10/22/2019
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ae9767e3-864a-4eb2-96c0-626759ce6d60
 author: lizap
 manager: dongill
-ms.openlocfilehash: cec1ae43b51b17da5617f95e13b839d4ecfbb40c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 92af2b4e9fb174f1aa815256148ee8d5c7c7181a
+ms.sourcegitcommit: 3262c5c7cece9f2adf2b56f06b7ead38754a451c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404003"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72812248"
 ---
 # <a name="create-a-remote-desktop-services-collection-for-desktops-and-apps-to-run"></a>데스크톱 및 앱을 실행할 원격 데스크톱 서비스 컬렉션 만들기
 
@@ -33,7 +33,7 @@ ms.locfileid: "71404003"
  
 풀링된 세션을 사용할 경우 여러 명의 사용자가 공유 리소스 풀에 액세스할 수 있지만, 개인 데스크톱 세션을 사용할 경우 풀 내의 고유한 데스크톱이 할당됩니다. 풀링된 세션은 낮아진 전체 비용을 제공하지만, 개인 세션에서는 데스크톱 환경을 사용자 지정할 수 있습니다.
 
-그래픽을 많이 사용하는 호스티드 애플리케이션을 공유해야 하는 경우 개인 세션 데스크톱을 그래픽 가속을 위해 구성된 RemoteFX vGPU와 결합할 수 있습니다. 또는 개인 세션 데스크톱을 새 DDA(개별 디바이스 할당) 기능과 결합하여 가속된 그래픽을 필요로 하는 호스티드 애플리케이션도 지원할 수 있습니다. 자세한 내용은 [나에게 적합한 그래픽 가상화 기술은 무엇일까요?](rds-graphics-virtualization.md)를 참조하세요.
+그래픽 집약적 호스티드 애플리케이션을 공유해야 하는 경우, 개인 세션 데스크톱을 새 DDA(개별 디바이스 할당) 기능과 결합하여 가속된 그래픽을 필요로 하는 호스티드 애플리케이션도 지원할 수 있습니다. 자세한 내용은 [나에게 적합한 그래픽 가상화 기술은 무엇일까요?](rds-graphics-virtualization.md)를 참조하세요.
 
 
 선택한 컬렉션 형식에 관계 없이, 프로그램이 로컬로 실행되더라도 사용자가 지원되는 모든 디바이스에서 액세스하고 작동할 수 있는 RemoteApp - 프로그램 및 리소스로 이러한 컬렉션을 채웁니다.

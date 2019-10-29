@@ -7,13 +7,13 @@ ms.localizationpriority: medium
 ms.sitesec: library
 author: jasongerend
 ms.author: jgerend
-ms.date: 08/22/2019
-ms.openlocfilehash: 482897b31bfaf3c4fe1f6b44a184463e88c5ae65
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.date: 10/22/2019
+ms.openlocfilehash: 68edc1f0aaa857d0342f963e19964f5c9e389ed0
+ms.sourcegitcommit: 3262c5c7cece9f2adf2b56f06b7ead38754a451c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391308"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72812324"
 ---
 # <a name="features-removed-or-planned-for-replacement-starting-with-windows-server-version-1803"></a>Windows Server, 버전 1803부터 제거되었거나 교체 예정인 기능
 
@@ -52,7 +52,7 @@ Windows Server 버전 1803에서 설치된 제품 이미지에서 다음과 같�
 | [MultiPoint 서비스](../remote/multipoint-services/multipoint-services.md)|더 이상 Windows Server의 일부로 MultiPoint 서비스 역할을 개발하지 않습니다. MultiPoint 커넥터 서비스는 Windows Server 및 Windows 10에 대한 [주문형 기능](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities)을 통해 사용할 수 있습니다. [원격 데스크톱 서비스](../remote/remote-desktop-services/welcome-to-rds.md), 특히 원격 데스크톱 서비스 세션 호스트를 사용하여 RDP 연결을 제공할 수 있습니다. |
 | [오프라인 기호 패키지](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugger-download-symbols)(디버그 기호 MSI)|더 이상 기호 패키지를 다운로드 가능한 MSI로 사용할 수 없습니다. 대신, [Microsoft 기호 서버를 Azure 기반 기호 저장소로 이동](https://blogs.msdn.microsoft.com/windbg/2017/10/18/update-on-microsofts-symbol-server/)하고 있습니다. Windows 기호가 필요한 경우 Microsoft 기호 서버에 연결하여 기호를 로컬로 캐시하거나 인터넷에 액세스할 수 있는 컴퓨터에서 SymChk.exe로 매니페스트 파일을 사용합니다. |
 | Server Core 설치의 [원격 데스크톱 연결 브로커 및 원격 데스크톱 가상화 호스트](../remote/remote-desktop-services/desktop-hosting-service.md)|대부분의 원격 데스크톱 서비스 배포는 원격 데스크톱 세션 호스트(RDSH)와 함께 위치하는 역할을 가지며, 이를 위해 데스크톱 환경 포함 서버가 필요합니다. RDSH와 일관성을 유지하기 위해 이러한 역할에 대해서도 데스크톱 환경 포함 서버를 요구하도록 변경하고 있습니다. 더 이상 [Server Core 설치](../administration/server-core/what-is-server-core.md)에 사용하기 위해 이러한 RDS 역할을 개발하지 않습니다. [이러한 역할을 원격 데스크톱 인프라의 일부로 배포](../remote/remote-desktop-services/rds-deploy-infrastructure.md)해야 하는 경우 [데스크톱 환경 포함 Windows Server 2016에 설치할](getting-started-with-server-with-desktop-experience.md) 수 있습니다. <br/><br/>이러한 역할은 Windows Server 2019의 데스크톱 경험 설치 옵션에도 포함됩니다. [Windows Server 2019의 Windows 참가자 빌드](https://docs.microsoft.com/windows-insider/at-work/)에서 테스트할 수 있습니다. LTSC 이미지를 선택하도록 하십시오. |
-| [RemoteFX vGPU](../remote/remote-desktop-services/rds-remotefx-vgpu.md)|가상화된 환경에 대한 새 그래픽 가속 옵션을 개발하고 있습니다. 대신 [개별 디바이스 할당(DDA)](../virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md)을 사용할 수도 있습니다. |
+| [RemoteFX 3D 비디오 어댑터(vGPU)](../remote/remote-desktop-services/rds-remotefx-vgpu.md)|가상화된 환경에 대한 새 그래픽 가속 옵션을 개발하고 있습니다. 대신 [개별 디바이스 할당(DDA)](../virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md)을 사용할 수도 있습니다. |
 | 그룹 정책의 [소프트웨어 제한 정책](../identity/software-restriction-policies/software-restriction-policies.md)|사용자가 액세스할 수 있는 앱과 커널에서 실행할 수 있는 코드를 제어하기 위해 그룹 정책을 통해 소프트웨어 제한 정책을 사용하는 대신 [AppLocker](https://docs.microsoft.com/windows/security/threat-protection/applocker/applocker-overview) 또는 [Windows Defender Application Control](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control)을 사용할 수 있습니다. |
 | SAS 패브릭을 사용하는 공유 구성의 스토리지 공간|대신 [스토리지 공간 다이렉트](../storage/storage-spaces/storage-spaces-direct-overview.md)를 배포합니다. [스토리지 공간 다이렉트 하드웨어 요구 사항](../storage/storage-spaces/storage-spaces-direct-hardware-requirements.md)에 설명된 대로 스토리지 공간 다이렉트는 비공유 구성에서 HLK 인증 SAS 엔클로저의 사용을 지원합니다. |
 | Windows Server 필수 패키지 환경|Windows Server Standard 또는 Windows Server Datacenter SKU에 대해 더 이상 Essentials 환경 역할을 개발하지 않습니다. 중소 규모 기업을 위해 사용하기 쉬운 서버 솔루션을 필요로 하는 경우 이 새로운 [Microsoft 365 Business](https://www.microsoft.com/microsoft-365/business) 솔루션을 확인하거나 [Windows Server 2016 Essentials](https://docs.microsoft.com/windows-server-essentials/get-started/get-started)를 사용하세요. |

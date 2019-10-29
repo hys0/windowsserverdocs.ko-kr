@@ -13,18 +13,37 @@ author: spatnaik
 ms.author: spatnaik
 ms.date: 09/23/2016
 manager: scottman
-ms.openlocfilehash: eaf242309dbdbd4716ea8f39e7ebcb1d9225b53a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: c04909e9e0cfbf71b6632c154ac8b9b20b5bac10
+ms.sourcegitcommit: b4b0e73ce35f8b594eb467a2bb2aa91bd6d86369
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71387326"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72893083"
 ---
 # <a name="remote-desktop-services---cater-to-different-kinds-of-users"></a>원격 데스크톱 서비스 기능을 다양 한 종류의 사용자 제공
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2019, Windows Server 2016
 
-각 유형의 사용자의 예상된 필요에 따라 배포 크기를 조정 합니다.
-예를 들어 사용자는 실행 간단한 애플리케이션에서 데이터 입력을 수행하고 생산성 앱 Office와 같은 큰 데이터 세트를 조작하거나 강화한 엔지니어링 또는 그래픽 애플리케이션을 사용합니다.
+원격 데스크톱 서비스는 여러 유형의 워크로드를 지원합니다. 각 유형의 사용자의 예상된 필요에 따라 배포 크기를 조정 합니다.
 
-로드 하는 것이 좋습니다. 스트레스 테스트와의 실제 사용 시뮬레이션을 사용 하 여 배포를 테스트 합니다. 놀라는 부하 크기를 다르게 지정! 응답성 사용자 요구 사항을 충족 하는지 확인 하는 전체 시스템 복원 력이 뛰어난 인지 확인 합니다. LoginVSI와 같이 사용자의 요구를 충족하는 배포의 능력을 검사하는 시뮬레이션 도구를 사용하여 부하 테스트를 만듭니다. 
+## <a name="types-of-users"></a>사용자 유형
+
+### <a name="knowledge-user"></a>기술 자료 사용자
+
+기술 자료 사용자는 Microsoft Word, Excel, Outlook 및 Microsoft Edge 브라우저와 같은 경량 생산성 애플리케이션을 사용합니다.
+
+### <a name="professional-user"></a>전문 사용자
+
+전문 사용자는 인터넷 브라우저 및 생산성 애플리케이션을 사용하고 소프트웨어 개발 및 멀티미디어 콘텐츠 작성과 같은 보다 집중적인 워크로드를 지원합니다.
+
+### <a name="power-user"></a>고급 사용자
+
+고급 사용자는 CAD(Computer Users Design) 및 Adobe Photoshop과 같은 엔지니어링 및 그래픽 애플리케이션을 사용합니다. GPU는 종종 비디오 렌더링, 3D 디자인 및 시뮬레이션을 위해 그래픽 집약적 프로그램을 정기적으로 사용하는 사용자에게 적합한 선택입니다.
+
+그래픽 가속에 대해 자세히 알아보려면 [그래픽 렌더링 기술 선택](rds-graphics-virtualization.md)을 확인하세요.
+
+Azure에는 다른 그래픽 가속 배포 옵션과 사용 가능한 여러 GPU VM 크기가 있습니다. [GPU에 최적화된 가상 머신 크기](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-gpu)에서 이에 대해 알아봅니다.
+
+## <a name="test-workload"></a>워크로드 테스트
+
+스트레스 테스트와 실제 사용 시뮬레이션을 모두 사용하여 배포를 부하 테스트하는 것이 좋습니다. LoginVSI와 같은 시뮬레이션 도구를 사용하여 배포를 부하 테스트할 수 있습니다. 시스템이 사용자 요구를 충족할 수 있을 만큼 응답성이 뛰어나고 탄력적인지 확인하고, 부하 크기를 조정하여 당황하지 않도록 합니다.

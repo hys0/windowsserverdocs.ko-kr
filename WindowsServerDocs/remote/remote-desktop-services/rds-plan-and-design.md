@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: 047b08be-7f91-4194-a641-5b6941b92515
 author: spatnaik
 manager: scottman
-ms.openlocfilehash: 99930f1b4448bdadad3023558696d77294bd1a91
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e3a70f420d841311481962040f9d9ee78c08dd6a
+ms.sourcegitcommit: 81198fbf9e46830b7f77dcd345b02abb71ae0ac2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71387343"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72923792"
 ---
 # <a name="plan-and-design-your-remote-desktop-services-environment"></a>원격 데스크톱 서비스 환경 계획 및 디자인
 
@@ -33,7 +33,7 @@ ms.locfileid: "71387343"
 - [고가용성](rds-plan-high-availability.md)
 - [MultiFactor Authentication](rds-plan-mfa.md)
 - [데이터 스토리지 보안](rds-plan-secure-data-storage.md)
-- [고사양 그래픽 렌더링 사용](rds-graphics-virtualization.md)
+- [GPU 가속](rds-graphics-virtualization.md)
 - [모든 디바이스에서 연결](rds-plan-connect-from-any-device.md)
 - [지불 방법 선택](rds-plan-choose-how-you-pay.md)
 
