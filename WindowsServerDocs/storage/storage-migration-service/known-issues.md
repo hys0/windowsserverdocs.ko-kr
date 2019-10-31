@@ -8,12 +8,12 @@ ms.date: 10/09/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: e3ec7ee787fb6fd2e8e9f59249a6c4013a76b377
-ms.sourcegitcommit: e2964a803cba1b8037e10d065a076819d61e8dbe
+ms.openlocfilehash: 597bcbe647bca3595dc8251ce4d6bf52265d8731
+ms.sourcegitcommit: 4b4ff8d9e18b2ddcd1916ffa2cd58fffbed8e7ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72252364"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72986428"
 ---
 # <a name="storage-migration-service-known-issues"></a>저장소 마이그레이션 서비스의 알려진 문제
 
@@ -48,11 +48,11 @@ Windows 관리 센터 저장소 마이그레이션 서비스 확장은 Windows S
 
 Windows 관리 센터에서 0.57 버전의 Storage Migration Service 확장을 사용 하 고 있으며,이 경우에는 주소에 대 한 고정 IP를 선택할 수 없습니다. 강제로 DHCP를 사용 합니다.
 
-이 문제를 해결 하려면 Windows 관리 센터에서 **설정** > **확장** 에서 업데이트 된 버전 Storage Migration Service 0.57.2를 설치할 수 있음을 나타내는 경고를 확인 합니다. Windows 관리 센터에 대 한 브라우저 탭을 다시 시작 해야 할 수 있습니다.
+이 문제를 해결 하려면 Windows 관리 센터의 **설정**  > **확장** 에서 업데이트 된 버전 저장소 마이그레이션 서비스 0.57.2를 설치할 수 있음을 나타내는 경고를 확인 합니다. Windows 관리 센터에 대 한 브라우저 탭을 다시 시작 해야 할 수 있습니다.
 
 ## <a name="storage-migration-service-cutover-validation-fails-with-error-access-is-denied-for-the-token-filter-policy-on-destination-computer"></a>"대상 컴퓨터에서 토큰 필터 정책에 대 한 액세스가 거부 되었습니다." 오류로 인해 저장소 마이그레이션 서비스에서 유효성 검사가 실패 함
 
-유효성 검사를 통해 가공선을 실행 하면 오류 "실패: 대상 컴퓨터의 토큰 필터 정책에 대 한 액세스가 거부 되었습니다. " 원본 및 대상 컴퓨터에 대 한 올바른 로컬 관리자 자격 증명을 제공한 경우에도이 문제가 발생 합니다.
+유효성 검사를 반복할 때 "실패: 대상 컴퓨터에서 토큰 필터 정책에 대 한 액세스가 거부 되었습니다." 오류가 표시 됩니다. 원본 및 대상 컴퓨터에 대 한 올바른 로컬 관리자 자격 증명을 제공한 경우에도이 문제가 발생 합니다.
 
 이 문제는 Windows Server 2019의 코드 오류로 인해 발생 합니다. 이 문제는 대상 컴퓨터를 Storage Migration Service Orchestrator로 사용할 때 발생 합니다.
 
@@ -74,7 +74,7 @@ Windows 관리 센터를 사용 하 여 [Windows server 2019 Evaluation 릴리�
 
 Windows 관리 센터 또는 PowerShell을 사용 하 여 전송 작업에 대 한 자세한 오류 전용 CSV 로그를 다운로드 하는 경우 오류 메시지가 표시 됩니다.
 
- >   전송 로그-방화벽에서 파일 공유를 사용할 수 있는지 확인 하세요. : 이 요청 작업이 net.tcp:/localhost: 28940/sms/service/1/transfer에서 구성 된 시간 제한 (00:01:00) 내에 회신을 받지 못했습니다. 이 작업에 할당 된 시간이 보다 긴 시간 제한의 일부일 수 있습니다. 서비스가 작업을 계속 처리 하 고 있거나 서비스에서 회신 메시지를 보낼 수 없기 때문일 수 있습니다. 채널/프록시를 IContextChannel로 캐스팅 하 고 OperationTimeout 속성을 설정 하 여 작업 시간 제한을 늘리고 서비스가 클라이언트에 연결할 수 있는지 확인 하세요.
+ >   전송 로그-방화벽에서 파일 공유를 사용할 수 있는지 확인 하세요. :이 요청 작업이 net.tcp:/localhost: 28940/sms/service/1/transfer에서 구성 된 시간 제한 (00:01:00) 내에 회신을 받지 못했습니다. 이 작업에 할당 된 시간이 보다 긴 시간 제한의 일부일 수 있습니다. 서비스가 작업을 계속 처리 하 고 있거나 서비스에서 회신 메시지를 보낼 수 없기 때문일 수 있습니다. 채널/프록시를 IContextChannel로 캐스팅 하 고 OperationTimeout 속성을 설정 하 여 작업 시간 제한을 늘리고 서비스가 클라이언트에 연결할 수 있는지 확인 하세요.
 
 이 문제는 저장소 마이그레이션 서비스에서 허용 하는 기본 1 분 제한 시간 내에 필터링 할 수 없는 너무 많은 전송 된 파일에 의해 발생 합니다. 
 
@@ -120,7 +120,7 @@ Azure IaaS 인스턴스와 같이 원본이 아닌 다른 네트워크에서를 
 전송 작업의 유효성을 검사할 때 다음과 같은 경고가 표시 됩니다.
 
  > **자격 증명에는 관리 권한이 있습니다.**
- > 경고: 동작을 원격으로 사용할 수 없습니다.
+ > 경고: 원격으로 작업을 사용할 수 없습니다.
  > **대상 프록시가 등록 되었습니다.**
  > 경고: 대상 프록시를 찾을 수 없습니다.
 
@@ -130,11 +130,11 @@ Windows Server 2019 대상 컴퓨터에 저장소 마이그레이션 서비스 �
 
 원본 컴퓨터에서 대상 컴퓨터로 파일을 인벤토리 또는 전송 하는 경우 사용자가 관리자 그룹 권한을 제거 하는 파일은 마이그레이션하지 못합니다. 저장소 마이그레이션 서비스 검사-프록시 디버그는 다음을 보여 줍니다.
 
-  로그 이름:      Microsoft-Windows-StorageMigrationService-프록시/디버그 소스:        Microsoft-Windows-StorageMigrationService-프록시 날짜:          오전 2/26/2019 9:00:04 이벤트 ID:      1만 작업 범주: 없음 수준:         오류 키워드:      
-  사용자:          네트워크 서비스 컴퓨터: srv1.contoso.com 설명:
+  로그 이름: Microsoft-Windows-StorageMigrationService-프록시/디버그 원본: Microsoft-Windows-StorageMigrationService-프록시 날짜: 2/26/2019 9:00:04 AM 이벤트 ID: 1만 작업 범주: 없음 수준: 오류 키워드:      
+  사용자: 네트워크 서비스 컴퓨터: srv1.contoso.com 설명:
 
-  02/26/2019-09:00:04.860 [오류] @no__t 0srv1 com\public\indy.png에 대 한 전송 오류: (5) 액세스가 거부 되었습니다.
-스택 추적: StorageMigration. FileDirUtils. System.windows.forms.openfiledialog.openfile (String fileName, DesiredAccess desiredAccess, ShareMode shareMode, CreationDisposition creationDisposition, FlagsAndAttributes flagsAndAttributes) at StorageMigration. FileDirUtils... FileDirUtils 파일 (FileInfo 파일)에 있는 (FileInfo 파일 (FileInfo 파일))에 있습니다. StorageMigration () at FileTransfer () ()에 있는 InitializeSourceFileInfo ()를 (를) (으)로 변환 합니다. StorageMigration () [d:\os\src\base\dms\proxy\transfer\transferproxy\FileTransfer.cs:: FileTransfer () :: Trtransfer:: 55]
+  02/26/2019-09:00:04.860 [오류] \\srv1에 대 한 전송 오류입니다. com\public\indy.png: (5) 액세스가 거부 되었습니다.
+스택 추적: StorageMigration. FileDirUtils. System.windows.forms.openfiledialog.openfile (String fileName, DesiredAccess desiredAccess, ShareMode shareMode, CreationDisposition creationDisposition, FlagsAndAttributes flagsAndAttributes) at StorageMigration. FileDirUtils... FileDirUtils 파일 (FileInfo 파일)에 있는 (FileInfo 파일 (FileInfo 파일))에 있습니다. StorageMigration () at FileTransfer () ()에 있는 InitializeSourceFileInfo ()를 (를) (으)로 변환 합니다. StorageMigration () d:\os\src\base\dms\proxy\transfer\transferproxy\FileTransfer.cs:: FileTransfer () [:: Trtransfer:: 55]
 
 
 이 문제는 저장소 마이그레이션 서비스에서 백업 권한이 호출 되지 않은 코드 오류로 인해 발생 합니다. 
@@ -171,7 +171,7 @@ DFSR 디버그 로그:
 
 전송 작업이 끝날 때 전송 또는 오류 로그를 다운로드 하려고 하면 다음과 같은 오류가 표시 됩니다.
 
-  $jobname: 전송 로그: ajax 오류 404
+  $jobname: 로그 전송: ajax 오류 404
 
 Orchestrator 서버에서 "파일 및 프린터 공유 (SMB In)" 방화벽 규칙을 사용 하도록 설정 하지 않은 경우이 오류가 발생 합니다. Windows 관리 센터 파일 다운로드에는 연결 된 컴퓨터에서 포트 TCP/445 (SMB)가 필요 합니다.  
 
@@ -199,14 +199,14 @@ StorageMigrationService/Admin 이벤트 로그를 검사 하면 다음이 표시
 
    저장소를 전송할 수 없습니다.
 
-   직함 Job1 ID:  
+   작업: Job1 ID:  
    상태: 실패 한 오류: 36931 오류 메시지: 
 
-   지침 자세한 오류를 확인 하 고 전송 요구 사항이 충족 되었는지 확인 하십시오. 전송 작업에서 원본 및 대상 컴퓨터를 전송할 수 없습니다. 이는 방화벽 규칙 또는 권한 누락으로 인해 오 케 스트레이 터 컴퓨터가 원본 또는 대상 컴퓨터에 연결할 수 없기 때문일 수 있습니다.
+   지침: 자세한 오류를 확인 하 고 전송 요구 사항이 충족 되는지 확인 합니다. 전송 작업에서 원본 및 대상 컴퓨터를 전송할 수 없습니다. 이는 방화벽 규칙 또는 권한 누락으로 인해 오 케 스트레이 터 컴퓨터가 원본 또는 대상 컴퓨터에 연결할 수 없기 때문일 수 있습니다.
 
 StorageMigrationService-프록시/디버그 로그를 검사 하면 다음이 표시 됩니다.
 
-   07/02/2019-13:35:57.231 [오류] 전송 유효성 검사에 실패 했습니다. ErrorCode 40961, 소스 끝점에 연결할 수 없거나, 소스 자격 증명이 잘못 되었거나, 인증 된 사용자에 게 액세스 권한이 없습니다.
+   07/02/2019-13:35:57.231 [오류] 전송 유효성 검사에 실패 했습니다. ErrorCode: 40961, 소스 끝점에 연결할 수 없거나, 원본 자격 증명이 잘못 되었거나, 인증 된 사용자에 게 액세스 권한이 없습니다.
 StorageMigration ()에서 StorageMigration ()을 (를) 확인 합니다. TransferRequestHandler (FileTransferRequest fileTransferRequest, Guid operationId)를 확인 합니다.    [d:\os\src\base\dms\proxy\transfer\transferproxy\TransferRequestHandler.cs::
 
 마이그레이션 계정에 SMB 공유에 대 한 읽기 이상의 권한이 없는 경우이 오류가 발생 합니다. 이 오류를 해결 하려면 원본 컴퓨터의 SMB 공유에 원본 마이그레이션 계정이 포함 된 보안 그룹을 추가 하 고 읽기, 변경 또는 모든 권한을 부여 합니다. 마이그레이션이 완료 된 후이 그룹을 제거할 수 있습니다.
@@ -217,15 +217,15 @@ StorageMigration ()에서 StorageMigration ()을 (를) 확인 합니다. Transfe
 
   HRESULT의 예외: 0x80005000
   
-  로그 이름:      Microsoft-Windows-StorageMigrationService/관리자 원본:        Microsoft-Windows-StorageMigrationService 날짜:          9/9/2019 5:21:42 PM 이벤트 ID:      2503 작업 범주: 없음 수준:         오류 키워드:      
-  사용자:          네트워크 서비스 컴퓨터:      FS02. TailwindTraders.net 설명: 컴퓨터를 인벤토리에 만들지 못했습니다.
-작업: foo2 ID: 20ac3f75-4945-41d1-9a79-d11dbb57798b 상태: 실패 한 오류: 36934 오류 메시지: 모든 장치에 대 한 인벤토리가 실패 함 지침: 자세한 오류를 확인 하 고 인벤토리 요구 사항이 충족 되었는지 확인 하십시오. 작업에서 지정 된 원본 컴퓨터를 인벤토리에 만들지 못했습니다. 이는 방화벽 규칙 또는 권한 누락으로 인해 오 케 스트레이 터 컴퓨터가 네트워크를 통해 연결할 수 없기 때문일 수 있습니다.
+  로그 이름: Microsoft-Windows-StorageMigrationService/Admin Source: Microsoft-Windows-StorageMigrationService 날짜: 9/9/2019 5:21:42 PM 이벤트 ID: 2503 작업 범주: 없음 수준: 오류 키워드:      
+  사용자: 네트워크 서비스 컴퓨터: FS02. TailwindTraders.net 설명: 컴퓨터를 인벤토리에 만들지 못했습니다.
+작업: foo2 ID: 20ac3f75-4945-41d1-9a79-d11dbb57798b State: 실패 오류: 36934 오류 메시지: 모든 장치에 대 한 인벤토리 실패 지침: 자세한 오류를 확인 하 고 인벤토리 요구 사항이 충족 되었는지 확인 합니다. 작업에서 지정 된 원본 컴퓨터를 인벤토리에 만들지 못했습니다. 이는 방화벽 규칙 또는 권한 누락으로 인해 오 케 스트레이 터 컴퓨터가 네트워크를 통해 연결할 수 없기 때문일 수 있습니다.
   
-  로그 이름:      Microsoft-Windows-StorageMigrationService/관리자 원본:        Microsoft-Windows-StorageMigrationService 날짜:          9/9/2019 5:21:42 PM 이벤트 ID:      2509 작업 범주: 없음 수준:         오류 키워드:      
-  사용자:          네트워크 서비스 컴퓨터:      FS02. TailwindTraders.net 설명: 컴퓨터를 인벤토리에 만들지 못했습니다.
-작업: foo2 컴퓨터: FS01. TailwindTraders.net 상태: 실패 한 오류:-2147463168 오류 메시지: 지침 자세한 오류를 확인 하 고 인벤토리 요구 사항이 충족 되었는지 확인 하십시오. 인벤토리에 지정 된 원본 컴퓨터의 모든 측면을 확인할 수 없습니다. 원본 또는 차단 된 방화벽 포트에 대 한 권한이 없거나 권한이 없기 때문일 수 있습니다.
+  로그 이름: Microsoft-Windows-StorageMigrationService/Admin Source: Microsoft-Windows-StorageMigrationService 날짜: 9/9/2019 5:21:42 PM 이벤트 ID: 2509 작업 범주: 없음 수준: 오류 키워드:      
+  사용자: 네트워크 서비스 컴퓨터: FS02. TailwindTraders.net 설명: 컴퓨터를 인벤토리에 만들지 못했습니다.
+작업: foo2 컴퓨터: FS01. TailwindTraders.net 상태: 실패 오류:-2147463168 오류 메시지: 지침: 자세한 오류를 확인 하 고 인벤토리 요구 사항이 충족 되었는지 확인 하십시오. 인벤토리에 지정 된 원본 컴퓨터의 모든 측면을 확인할 수 없습니다. 원본 또는 차단 된 방화벽 포트에 대 한 권한이 없거나 권한이 없기 때문일 수 있습니다.
   
-이 오류는 UPN (사용자 계정 이름) 형식 (예: ' meghan@contoso.com ')으로 마이그레이션 자격 증명을 제공 하는 경우 저장소 마이그레이션 서비스의 코드 오류로 인해 발생 합니다. 저장소 마이그레이션 서비스 오 케 스트레이 터 서비스에서이 형식을 올바르게 구문 분석 하지 못했습니다. 그러면 KB4512534 및 19H1의 클러스터 마이그레이션 지원에 추가 된 도메인 조회에 실패 하 게 됩니다.
+이 오류는 ' meghan@contoso.com '와 같은 UPN (사용자 계정 이름) 형식으로 마이그레이션 자격 증명을 제공 하는 경우 저장소 마이그레이션 서비스의 코드 오류로 인해 발생 합니다. 저장소 마이그레이션 서비스 오 케 스트레이 터 서비스에서이 형식을 올바르게 구문 분석 하지 못했습니다. 그러면 KB4512534 및 19H1의 클러스터 마이그레이션 지원에 추가 된 도메인 조회에 실패 하 게 됩니다.
 
 이 문제를 해결 하려면 ' Contoso\Meghan '과 같은 도메인 \ 사용자 형식으로 자격 증명을 제공 하십시오.
 
@@ -270,6 +270,8 @@ Windows Server 2019 장애 조치 (failover) 클러스터 노드에 설치 된 S
 1.  관리자가 저장소 마이그레이션 서비스 orchestrator 서버에서 관리자의 구성원 인 관리자 권한 cmd 프롬프트를 열고 다음을 실행 합니다.
 
      ```
+     TAKEOWN /d /a /r /f c:\ProgramData\Microsoft\StorageMigrationService
+     
      MD c:\ProgramData\Microsoft\StorageMigrationService\backup
 
      ICACLS c:\ProgramData\Microsoft\StorageMigrationService\* /grant Administrators:(GA)
@@ -280,13 +282,31 @@ Windows Server 2019 장애 조치 (failover) 클러스터 노드에 설치 된 S
 
      ICACLS c:\ProgramData\Microsoft\StorageMigrationService  /GRANT networkservice:F /T /C
 
-     ICACLS c:\ProgramData\Microsoft\StorageMigrationService /GRANT networkservice:(GA)F /T /C
+     ICACLS c:\ProgramData\Microsoft\StorageMigrationService /GRANT networkservice:(GA) /T /C
      ```
    
 2.  저장소 마이그레이션 서비스 서비스를 시작 합니다. 그러면 새 데이터베이스가 생성 됩니다.
 
+## <a name="error-clusctl_resource_netname_repair_vco-failed-against-netname-resource-and-windows-server-2008-r2-cluster-cutover-fails"></a>"CLUSCTL_RESOURCE_NETNAME_REPAIR_VCO failed to netName RESOURCE" 오류 및 Windows Server 2008 R2 클러스터를 장애 조치 (failover) 합니다.
 
+Windows Server 2008 R2 클러스터 원본에서 잘라내기를 실행 하려고 하면 "원본 컴퓨터 이름 바꾸기 ..." 단계에서 중단 됩니다. 다음과 같은 오류가 표시 됩니다.
 
-## <a name="see-also"></a>참조
+    Log Name:      Microsoft-Windows-StorageMigrationService-Proxy/Debug
+    Source:        Microsoft-Windows-StorageMigrationService-Proxy
+    Date:          10/17/2019 6:44:48 PM
+    Event ID:      10000
+    Task Category: None
+    Level:         Error
+    Keywords:      
+    User:          NETWORK SERVICE
+    Computer:      WIN-RNS0D0PMPJH.contoso.com
+    Description:
+    10/17/2019-18:44:48.727 [Erro] Exception error: 0x1. Message: Control code CLUSCTL_RESOURCE_NETNAME_REPAIR_VCO failed against netName resource 2008r2FS., stackTrace:    at Microsoft.FailoverClusters.Framework.ClusterUtils.NetnameRepairVCO(SafeClusterResourceHandle netNameResourceHandle, String netName)
+       at Microsoft.FailoverClusters.Framework.ClusterUtils.RenameFSNetName(SafeClusterHandle ClusterHandle, String clusterName, String FsResourceId, String NetNameResourceId, String newDnsName, CancellationToken ct)
+       at Microsoft.StorageMigration.Proxy.Cutover.CutoverUtils.RenameFSNetName(NetworkCredential networkCredential, Boolean isLocal, String clusterName, String fsResourceId, String nnResourceId, String newDnsName, CancellationToken ct)    [d:\os\src\base\dms\proxy\cutover\cutoverproxy\CutoverUtils.cs::RenameFSNetName::1510]
+
+이 문제는 이전 버전의 Windows Server에서 API 누락으로 인해 발생 합니다. 현재 Windows Server 2008 및 Windows Server 2003 클러스터를 마이그레이션할 수 있는 방법은 없습니다. 인벤토리를 수행 하 고 Windows Server 2008 R2 클러스터에서 문제 없이 전송 한 다음 수동으로 클러스터의 원본 파일 서버 리소스 (netname 및 IP 주소)를 변경 하 고 대상 클러스터 netname 및 IP를 변경 하 여 수동으로 조치를 수행할 수 있습니다. 원본 원본과 일치 하는 주소입니다. 
+
+## <a name="see-also"></a>참고 항목
 
 - [Storage Migration Service 개요](overview.md)
