@@ -8,12 +8,12 @@ ms.author: ifufondu
 manager: chhuybre
 ms.topic: article
 ms.date: 09/20/2019
-ms.openlocfilehash: 6938739d7c8efdf60c859d2d5ea5bc63246ae4fe
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 515831df6b97271b52c4a715fd979f2afff4a3a1
+ms.sourcegitcommit: f73662069329b1abf6aa950c2a826bc113718857
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71364103"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73240350"
 ---
 # <a name="enable-intel-performance-monitoring-hardware-in-a-hyper-v-virtual-machine"></a>Hyper-v 가상 컴퓨터에서 Intel 성능 모니터링 하드웨어 사용
 
@@ -23,31 +23,43 @@ Intel 프로세서에는 성능 모니터링 하드웨어 (예: PMU, PEBS, LBR) 
 
 가상 컴퓨터에서 성능 모니터링 하드웨어를 사용 하도록 설정 하려면 다음이 필요 합니다.
 
-- 성능 모니터링 하드웨어 (예: PMU, PEBS, IPT)를 포함 하는 Intel 프로세서
+- 성능 모니터링 하드웨어를 포함 하는 Intel 프로세서 (예: PMU, PEBS, LBR)  Intel의 [이 문서]( https://software.intel.com/en-us/vtune-amplifier-cookbook-configuring-a-hyper-v-virtual-machine-for-hardware-based-hotspots-analysis) 를 참조 하 여 시스템에서 지 원하는 성능 모니터링 하드웨어를 확인 합니다.
 - Windows Server 2019 또는 Windows 10 버전 1809 (10 월 2018 업데이트) 이상
 - [중첩 된 가상화](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization) 가 _없는_ hyper-v 가상 컴퓨터도 중지 된 상태입니다.
- 
+
+가상 머신에서 예정 된 IPT (Intel Processor Trace) 성능 모니터링 하드웨어를 사용 하도록 설정 하려면 다음이 필요 합니다.
+
+- IPT 및 PT2GPA 기능을 지 원하는 Intel 프로세서.  Intel의 [이 문서]( https://software.intel.com/en-us/vtune-amplifier-cookbook-configuring-a-hyper-v-virtual-machine-for-hardware-based-hotspots-analysis) 를 참조 하 여 시스템에서 지 원하는 성능 모니터링 하드웨어를 확인 합니다.
+- Windows Server 버전 1903 (SAC) 또는 Windows 10 버전 1903 (2019를 업데이트할 수 있음) 이상
+- [중첩 된 가상화](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization) 가 _없는_ hyper-v 가상 컴퓨터도 중지 된 상태입니다.
+
 ## <a name="enabling-performance-monitoring-components-in-a-virtual-machine"></a>가상 컴퓨터에서 성능 모니터링 구성 요소 사용
 
-특정 게스트 가상 컴퓨터에 대해 다른 성능 모니터링 구성 요소를 사용 하도록 설정 `Set-VMProcessor` 하려면 PowerShell cmdlet을 사용 합니다.
- 
+특정 게스트 가상 컴퓨터에 대해 다양 한 성능 모니터링 구성 요소를 사용 하도록 설정 하려면 관리자 권한으로 실행 하는 동안 `Set-VMProcessor` PowerShell cmdlet을 사용 합니다.
+
 ``` Powershell
-# Enable all components
+# Enable all components except IPT
 Set-VMProcessor MyVMName -Perfmon @("pmu", "lbr", "pebs")
 ```
- 
+
 ``` Powershell
 # Enable a specific component
 Set-VMProcessor MyVMName -Perfmon @("pmu")
 ```
- 
+
+``` Powershell
+# Enable IPT 
+Set-VMProcessor MyVMName -Perfmon @("ipt")
+```
+
 ``` Powershell
 # Disable all components
 Set-VMProcessor MyVMName -Perfmon @()
 ```
 > [!NOTE]
-> 성능 모니터링 구성 요소를 사용 하도록 설정 `"pebs"` 하는 경우을 `"pmu"` 지정한 경우을 지정 해야 합니다.  또한 호스트의 실제 프로세서에서 지원 하지 않는 구성 요소를 사용 하도록 설정 하면 가상 컴퓨터 시작 실패가 발생 합니다.
- 
+> 성능 모니터링 구성 요소를 사용 하도록 설정 하는 경우 `"pebs"` 지정 하면 `"pmu"`도 지정 해야 합니다. PEBS는 PMU 버전 > = 4 인 하드웨어 에서만 지원 됩니다. 호스트의 실제 프로세서에서 지원 하지 않는 구성 요소를 사용 하도록 설정 하면 가상 컴퓨터 시작 실패가 발생 합니다.
+
 ## <a name="effects-of-enabling-performance-monitoring-hardware-on-saverestore-export-and-live-migration"></a>저장/복원, 내보내기 및 실시간 마이그레이션에 대 한 성능 모니터링 하드웨어 사용의 효과
- 
+
 Microsoft는 다른 Intel 하드웨어를 사용 하는 시스템 간에 성능 모니터링 하드웨어를 사용 하 여 가상 컴퓨터를 실시간으로 마이그레이션하거나 저장/복원 하지 않는 것이 좋습니다. 성능 모니터링 하드웨어의 특정 동작은 종종 아키텍처와 Intel 하드웨어 시스템 간의 변경입니다.  서로 다른 시스템 간에 실행 중인 가상 컴퓨터를 이동 하면 아키텍처 카운터가 아닌 카운터의 예기치 않은 동작이 발생할 수 있습니다.
+
