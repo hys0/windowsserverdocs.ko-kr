@@ -20,7 +20,7 @@
 ##### [클레임 변환 규칙 언어](solution-guides/Claims-Transformation-Rules-Language.md)
 #### [부록 A: 동적 액세스 제어 용어](solution-guides/appendix-A--Dynamic-Access-Control-Glossary.md)
 #### [부록 B: 테스트 환경 설정](solution-guides/appendix-B--Setting-Up-the-Test-Environment.md)
-
+### [사용자 지정 포트에서 인증서 키 기반 갱신을 수행하기 위한 인증서 등록 웹 서비스 구성](solution-guides/certificate-enrollment-certificate-key-based-renewal.md)
 
 ## [Active Directory Domain Services](ad-ds/active-directory-Domain-Services.md)
 
