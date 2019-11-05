@@ -22,7 +22,7 @@ ms.locfileid: "71963039"
 
 여러분 안녕하세요! 제 이름은 Mike Kammer이며, Microsoft에서 플랫폼 PFE로 근무한지 2년이 조금 넘었습니다. 최근에 Windows Server 2016을 자신의 환경에 배포하는 고객에게 도움을 주었습니다. 또한 이 기회를 통해 정품 인증 방법론을 KMS 서버에서 [Active Directory 기반 정품 인증](https://docs.microsoft.com/previous-versions/windows/hh852637(v=win.10))으로 마이그레이션했습니다.
 
-모든 변경을 수행하기 위한 적절한 절차로 고객의 테스트 환경에서 마이그레이션을 시작했습니다. 우리는 Charity Shelbourne의 훌륭한 블로그 게시물인 [Active Directory 기반 정품 인증 및 키 관리 서비스]의](https://techcommunity.microsoft.com/t5/Core-Infrastructure-and-Security/Active-Directory-Based-Activation-vs-Key-Management-Services/ba-p/256016)' 지침에 따라 배포를 시작했습니다. 테스트 환경의 도메인 컨트롤러는 모두 Windows Server 2012 R2를 실행하고 있었으므로 포리스트를 준비할 필요가 없었습니다. 역할을 Windows Server 2012 R2 도메인 컨트롤러에 설치하고, 볼륨 정품 인증 방법으로 Active Directory 기반 정품 인증을 선택했습니다. KMS 키를 설치하고, "KMS AD 정품 인증( ** LAB)"이라는 이름을 지정했습니다. 블로그 게시물을 단계별로 자세히 수행했습니다.
+모든 변경을 수행하기 위한 적절한 절차로 고객의 테스트 환경에서 마이그레이션을 시작했습니다. 우리는 Charity Shelbourne의 훌륭한 블로그 게시물인 [Active Directory 기반 정품 인증 및 키 관리 서비스](https://techcommunity.microsoft.com/t5/Core-Infrastructure-and-Security/Active-Directory-Based-Activation-vs-Key-Management-Services/ba-p/256016)의 지침에 따라 배포를 시작했습니다. 테스트 환경의 도메인 컨트롤러는 모두 Windows Server 2012 R2를 실행하고 있었으므로 포리스트를 준비할 필요가 없었습니다. 역할을 Windows Server 2012 R2 도메인 컨트롤러에 설치하고, 볼륨 정품 인증 방법으로 Active Directory 기반 정품 인증을 선택했습니다. KMS 키를 설치하고, "KMS AD 정품 인증( ** LAB)"이라는 이름을 지정했습니다. 블로그 게시물을 단계별로 자세히 수행했습니다.
 
 먼저 4개의 가상 머신, 2개의 Windows 2016 Standard, 2개의 Windows 2016 Datacenter를 구축하여 시작했습니다. 이제 모든 것이 잘 되었고 모든 사람이 만족할 것입니다. Windows 2016 Standard를 실행하는 물리적 서버를 구축했으며, 이 머신이 제대로 작동했습니다. 여기서 우리의 이야기는 끝납니다.
 
