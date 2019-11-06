@@ -27,6 +27,7 @@
 ## Windows Server Update Services와 함께
 ### [시작](use/get-started.md)
 ### [서버 관리](use/manage-servers.md)
+### [하이퍼 컨버지드 인프라 배포](use/deploy-hyperconverged-infrastructure.md)
 ### [하이퍼 컨버지드 인프라 관리](use/manage-hyper-converged.md)
 ### [장애 조치(failover) 클러스터 관리](use/manage-failover-clusters.md)
 ### [Hyper-V 가상 머신 관리](use/manage-virtual-machines.md)
