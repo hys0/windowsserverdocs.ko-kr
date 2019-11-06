@@ -8,12 +8,12 @@ ms.date: 10/09/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: 597bcbe647bca3595dc8251ce4d6bf52265d8731
-ms.sourcegitcommit: 4b4ff8d9e18b2ddcd1916ffa2cd58fffbed8e7ef
+ms.openlocfilehash: 5889ae43c4b572ae75c8df10d0c47fc21337d558
+ms.sourcegitcommit: 9e123d475f3755218793a130dda88455eac9d4ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72986428"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73413253"
 ---
 # <a name="storage-migration-service-known-issues"></a>저장소 마이그레이션 서비스의 알려진 문제
 
@@ -48,7 +48,7 @@ Windows 관리 센터 저장소 마이그레이션 서비스 확장은 Windows S
 
 Windows 관리 센터에서 0.57 버전의 Storage Migration Service 확장을 사용 하 고 있으며,이 경우에는 주소에 대 한 고정 IP를 선택할 수 없습니다. 강제로 DHCP를 사용 합니다.
 
-이 문제를 해결 하려면 Windows 관리 센터의 **설정**  > **확장** 에서 업데이트 된 버전 저장소 마이그레이션 서비스 0.57.2를 설치할 수 있음을 나타내는 경고를 확인 합니다. Windows 관리 센터에 대 한 브라우저 탭을 다시 시작 해야 할 수 있습니다.
+이 문제를 해결 하려면 Windows 관리 센터의 **설정** > **확장** 에서 업데이트 된 버전 저장소 마이그레이션 서비스 0.57.2를 설치할 수 있음을 나타내는 경고를 확인 합니다. Windows 관리 센터에 대 한 브라우저 탭을 다시 시작 해야 할 수 있습니다.
 
 ## <a name="storage-migration-service-cutover-validation-fails-with-error-access-is-denied-for-the-token-filter-policy-on-destination-computer"></a>"대상 컴퓨터에서 토큰 필터 정책에 대 한 액세스가 거부 되었습니다." 오류로 인해 저장소 마이그레이션 서비스에서 유효성 검사가 실패 함
 
@@ -134,7 +134,7 @@ Windows Server 2019 대상 컴퓨터에 저장소 마이그레이션 서비스 �
   사용자: 네트워크 서비스 컴퓨터: srv1.contoso.com 설명:
 
   02/26/2019-09:00:04.860 [오류] \\srv1에 대 한 전송 오류입니다. com\public\indy.png: (5) 액세스가 거부 되었습니다.
-스택 추적: StorageMigration. FileDirUtils. System.windows.forms.openfiledialog.openfile (String fileName, DesiredAccess desiredAccess, ShareMode shareMode, CreationDisposition creationDisposition, FlagsAndAttributes flagsAndAttributes) at StorageMigration. FileDirUtils... FileDirUtils 파일 (FileInfo 파일)에 있는 (FileInfo 파일 (FileInfo 파일))에 있습니다. StorageMigration () at FileTransfer () ()에 있는 InitializeSourceFileInfo ()를 (를) (으)로 변환 합니다. StorageMigration () d:\os\src\base\dms\proxy\transfer\transferproxy\FileTransfer.cs:: FileTransfer () [:: Trtransfer:: 55]
+스택 추적: StorageMigration. FileDirUtils. System.windows.forms.openfiledialog.openfile (String fileName, DesiredAccess desiredAccess, ShareMode shareMode, CreationDisposition creationDisposition, FlagsAndAttributes flagsAndAttributes) at StorageMigration. FileDirUtils... FileDirUtils 파일 (FileInfo 파일)에 있는 (FileInfo 파일 (FileInfo 파일))에 있습니다. StorageMigration () at FileTransfer () ()에 있는 InitializeSourceFileInfo ()를 (를) (으)로 변환 합니다. StorageMigration () [d:\os\src\base\dms\proxy\transfer\transferproxy\FileTransfer.cs:: FileTransfer () :: Trtransfer:: 55]
 
 
 이 문제는 저장소 마이그레이션 서비스에서 백업 권한이 호출 되지 않은 코드 오류로 인해 발생 합니다. 
@@ -225,7 +225,7 @@ StorageMigration ()에서 StorageMigration ()을 (를) 확인 합니다. Transfe
   사용자: 네트워크 서비스 컴퓨터: FS02. TailwindTraders.net 설명: 컴퓨터를 인벤토리에 만들지 못했습니다.
 작업: foo2 컴퓨터: FS01. TailwindTraders.net 상태: 실패 오류:-2147463168 오류 메시지: 지침: 자세한 오류를 확인 하 고 인벤토리 요구 사항이 충족 되었는지 확인 하십시오. 인벤토리에 지정 된 원본 컴퓨터의 모든 측면을 확인할 수 없습니다. 원본 또는 차단 된 방화벽 포트에 대 한 권한이 없거나 권한이 없기 때문일 수 있습니다.
   
-이 오류는 ' meghan@contoso.com '와 같은 UPN (사용자 계정 이름) 형식으로 마이그레이션 자격 증명을 제공 하는 경우 저장소 마이그레이션 서비스의 코드 오류로 인해 발생 합니다. 저장소 마이그레이션 서비스 오 케 스트레이 터 서비스에서이 형식을 올바르게 구문 분석 하지 못했습니다. 그러면 KB4512534 및 19H1의 클러스터 마이그레이션 지원에 추가 된 도메인 조회에 실패 하 게 됩니다.
+이 오류는 UPN (사용자 계정 이름) 형식 (예: ' meghan@contoso.com ')으로 마이그레이션 자격 증명을 제공 하는 경우 저장소 마이그레이션 서비스의 코드 오류로 인해 발생 합니다. 저장소 마이그레이션 서비스 오 케 스트레이 터 서비스에서이 형식을 올바르게 구문 분석 하지 못했습니다. 그러면 KB4512534 및 19H1의 클러스터 마이그레이션 지원에 추가 된 도메인 조회에 실패 하 게 됩니다.
 
 이 문제를 해결 하려면 ' Contoso\Meghan '과 같은 도메인 \ 사용자 형식으로 자격 증명을 제공 하십시오.
 
@@ -270,7 +270,7 @@ Windows Server 2019 장애 조치 (failover) 클러스터 노드에 설치 된 S
 1.  관리자가 저장소 마이그레이션 서비스 orchestrator 서버에서 관리자의 구성원 인 관리자 권한 cmd 프롬프트를 열고 다음을 실행 합니다.
 
      ```
-     TAKEOWN /d /a /r /f c:\ProgramData\Microsoft\StorageMigrationService
+     TAKEOWN /d y /a /r /f c:\ProgramData\Microsoft\StorageMigrationService
      
      MD c:\ProgramData\Microsoft\StorageMigrationService\backup
 
