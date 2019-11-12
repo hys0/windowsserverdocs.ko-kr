@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.localizationpriority: medium
 ms.date: 06/07/2019
 ms.prod: windows-server
-ms.openlocfilehash: 74d886246eb9d27264c0b8653f90f2eed86b891c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e443616b4fcae3e84cfd00b3c20a4ebbf72749ea
+ms.sourcegitcommit: 1da993bbb7d578a542e224dde07f93adfcd2f489
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406825"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73567113"
 ---
 # <a name="windows-admin-center-frequently-asked-questions"></a>Windows Admin Center 질문과 대답
 
@@ -143,7 +143,7 @@ Windows Admin Center는 두 버전으로 다운로드할 수 있습니다.
 
 ### <a name="windows-admin-center"></a>Windows Admin Center
 
-* 자주 업데이트할 수 없거나 프로덕션 환경에서 사용하는 릴리스에 대한 추가 유효성 검사를 원하는 IT 관리자에게 이 버전이 적합합니다. 현재 GA(일반 공급) 릴리스는 Windows Admin Center 1904입니다.
+* 자주 업데이트할 수 없거나 프로덕션 환경에서 사용하는 릴리스에 대한 추가 유효성 검사를 원하는 IT 관리자에게 이 버전이 적합합니다. 현재 GA(일반 공급) 릴리스는 Windows Admin Center 1910입니다.
 * [!INCLUDE [support-policy](../includes/support-policy.md)]
 * 최신 릴리스를 가져오려면 [여기에서 다운로드](https://aka.ms/WACDownload)하세요.
 

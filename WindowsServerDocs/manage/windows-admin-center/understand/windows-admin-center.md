@@ -8,12 +8,12 @@ ms.author: harowl
 ms.date: 08/22/2019
 ms.localizationpriority: high
 ms.prod: windows-server
-ms.openlocfilehash: a2ff1d6a31715488c9c2dd2ed3421ea3d5e29085
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 3366a1ba1ed9405130d7c8a7b71ad51f7d917e51
+ms.sourcegitcommit: 1da993bbb7d578a542e224dde07f93adfcd2f489
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71356926"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73567104"
 ---
 # <a name="hello-windows-admin-center"></a>안녕하세요, Windows Admin Center입니다!
 
@@ -23,11 +23,9 @@ Windows Admin Center는 서버, 클러스터, 하이퍼 컨버지드 인프라 �
 
 ## <a name="download-now"></a>지금 다운로드
 
-[나는 어떤 버전이 맞을까?](faq.md#what-is-windows-admin-center-preview-which-version-is-right-for-me)
+Microsoft Eval Center를 방문하여 지금 [Windows Admin Center](https://www.microsoft.com/evalcenter/evaluate-windows-admin-center)를 다운로드하세요.
 
-[Windows Admin Center **미리 보기** 1909](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver) - 최신 기능 업데이트가 포함되어 있습니다.
-
-[Windows Admin Center(버전 1904.1)](https://aka.ms/WACDownload) - 광범위하게 검증되고 일반적으로 이용 가능합니다.
+"Eval Center"의 위치로 혼동하지 마세요. 이를 통해 일반 공급 버전을 가져올 수 있습니다.
 
 [새로운 기능은 무엇인가요?](../overview.md#release-history)
 

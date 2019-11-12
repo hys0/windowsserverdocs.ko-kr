@@ -10,14 +10,14 @@ ms.date: 11/26/2018
 ms.assetid: b886b2fd-3567-4f0a-8aa3-4ba7923d2d21
 author: nirb
 ms.author: nirb
-ms.openlocfilehash: 175c4dbd23bac1822365ce80f05d69509d27321c
-ms.sourcegitcommit: 73898afec450fb3c2f429ca373f6b48a74b19390
+ms.openlocfilehash: 54352f47a31826b91b5696eb90104ca166a4299d
+ms.sourcegitcommit: 18f6b104e73e0397009283d55bee7984ac7ef0d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71935026"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632659"
 ---
-## <a name="guidance-on-disabling-system-services-on-windows-server-2016-with-desktop-experience"></a>데스크톱 경험이 있는 Windows Server 2016에서 시스템 서비스를 사용하지 않도록 설정하기 위한 지침
+# <a name="guidance-on-disabling-system-services-on-windows-server-2016-with-desktop-experience"></a>데스크톱 경험이 있는 Windows Server 2016에서 시스템 서비스를 사용하지 않도록 설정하기 위한 지침
 
 적용 대상: Windows Server 2016
 
@@ -47,7 +47,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 
 (첨부된 Microsoft Excel 스프레드시트를 확인하여 이 문서([데스크톱 경험이 있는 Windows Server 2016에서 시스템 서비스를 사용하지 않도록 설정하기 위한 지침](https://msdnshared.blob.core.windows.net/media/2017/05/Service-management-WS2016.xlsx))에서 자세히 설명하는 모든 서비스에 대한 정보에 액세스할 수도 있습니다.)
 
-<br />
+
 
 ### <a name="disabling-services-not-installed-by-default"></a>기본적으로 설치되지 않은 서비스 사용 안 함
 
@@ -57,10 +57,10 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 -  기본이 아닌 Windows 서비스(예: W3SVC)를 사용하지 않도록 설정하는 기준 또는 벤치마크는 해당 기술(예: IIS)이 본질적으로 안전하지 않으므로 사용하면 안 된다는 잘못된 인상을 일부 감사자에게 줄 수 있습니다.
 -  기능(및 서비스)이 설치되지 않으면 기준 및 확인 작업에 불필요한 큰 부담만 추가될 뿐입니다.
 
-<br />
+
 이 문서에 나열된 모든 시스템 서비스에 대해 다음 두 표에서는 데스크톱 경험이 있는 Windows Server 2016에서 시스템 서비스를 사용하거나 사용하지 않도록 설정하는 데 필요한 열과 Microsoft 추천 사항에 대해 설명합니다. 
 
-<br />
+
 
 ### <a name="explanation-of-columns"></a>열에 대한 설명
 
@@ -68,12 +68,12 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |---|---|
 |**서비스 설명**|   sc.exe qdescription에서 제공하는 서비스 설명입니다.|
 |**이름** |서비스의 키(내부) 이름|
-|**설치** |항상 설치: 서비스가 서버 코어 및 데스크톱 경험이 있는 서버에 있습니다.  <br /> 데스크톱 경험이 있는 경우에만: 서비스가 데스크톱 경험이 있는 Windows Server 2016에있지만, 서버 코어에는 ***없습니다***. |
+|**설치** |항상 설치: 서비스가 서버 코어 및 데스크톱 경험이 있는 서버에 있습니다. 데스크톱 경험이 있는 경우에만: 서비스가 데스크톱 경험이 있는 Windows Server 2016에있지만, 서버 코어에는 ***없습니다***. |
 |**시작 유형**  |Windows Server 2016의 서비스 시작 유형|
 |**추천 사항** |일반적이고 효율적으로 관리되는 엔터프라이즈 배포의 Windows Server 2016에서 이 서비스를 사용하지 않도록 설정하는 방법 및 서버가 최종 사용자 데스크톱 대체본으로 사용되지 않는 경우에 대한 Microsoft 추천 사항/조언입니다.|
 |**설명** |추가 설명|
 
-<br />
+
 
 ### <a name="explanation-of-microsoft-recommendations"></a>Microsoft 추천 사항에 대한 설명
 
@@ -84,11 +84,11 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |**이미 사용하지 않도록 설정됨**|  이 서비스는 기본적으로 사용하지 않도록 설정되어 있습니다. 정책을 적용할 필요가 없습니다.|
 |**사용하지 않도록 설정해야 함** |이 서비스는 효율적으로 관리되는 엔터프라이즈 시스템에서 사용하도록 설정하면 안 됩니다.|
 
-<br />
+
 
 다음 표에서는 데스크톱 경험이 있는 Windows Server 2016에서 시스템 서비스를 사용하지 않도록 설정하는 방법에 대한 Microsoft 지침을 제공합니다.
 
-<br />
+
 
 ##  <a name="activex-installer-axinstsv"></a>ActiveX Installer(AxInstSV)
 
@@ -102,7 +102,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   기능이 필요하지 않은 경우 사용하지 않도록 설정할 수 있습니다. |
 
 
-<br />
+
 
 ## <a name="alljoyn-router-service"></a>AllJoyn 라우터 서비스   
 
@@ -116,7 +116,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |       |
 | | |
 
-<br />
+
 
 ## <a name="app-readiness"></a>앱 준비 상태
 
@@ -130,7 +130,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 **설명**    |   
 | | |
 
-<br />
+
 
 ##  <a name="application-identity"></a>애플리케이션 ID
 
@@ -144,7 +144,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 **설명**    |   
 |||     
 
-<br />
+
 
 ##  <a name="application-information"></a>애플리케이션 정보 
 
@@ -158,7 +158,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   UAC가 통일한 데스크톱의 권한 상승을 지원합니다.
 |||     
 
-<br />
+
 
 ##  <a name="application-layer-gateway-service"></a>애플리케이션 계층 게이트웨이 서비스       
 
@@ -172,7 +172,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||     
 
-<br />
+
 
 ##  <a name="application-management"></a>응용 프로그램 관리      
 
@@ -186,7 +186,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="appx-deployment-service-appxsvc"></a>AppX 배포 서비스(AppXSVC)       
 
@@ -200,7 +200,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="auto-time-zone-updater"></a>자동 표준 시간대 업데이트 프로그램           
 
@@ -214,7 +214,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="background-intelligent-transfer-service"></a>BITS(Background Intelligent Transfer Service)          
 
@@ -228,7 +228,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 
 ## <a name="background-tasks-infrastructure-service"></a>백그라운드 작업 인프라 서비스      
@@ -243,7 +243,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="base-filtering-engine"></a>기본 필터링 엔진            
 
@@ -257,7 +257,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="bluetooth-support-service"></a>Bluetooth 지원 서비스            
 
@@ -271,7 +271,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   사용하지 않을 경우 사용하지 않도록 설정할 수 있습니다. 사용하지 않도록 설정하는 다른 메커니즘: https://technet.microsoft.com/library/dd252791.aspx
 |||         
 
-<br />          
+
 
 
 ## <a name="cdpusersvc"></a>CDPUserSvc           
@@ -286,7 +286,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   사용자 서비스 템플릿
 |||         
 
-<br />          
+
 
 
 ##  <a name="certificate-propagation"></a>인증서 전파     
@@ -301,7 +301,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="client-license-service-clipsvc"></a>클라이언트 라이선스 서비스(ClipSVC)        
 
@@ -315,7 +315,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="cng-key-isolation"></a>CNG 키 격리
 
@@ -329,7 +329,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="com-event-system"></a>COM + 이벤트 시스템       
 
@@ -343,7 +343,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="com-system-application"></a>COM + 시스템 애플리케이션     
 
@@ -357,7 +357,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="computer-browser"></a>컴퓨터 브라우저        
 
@@ -371,7 +371,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="connected-devices-platform-service"></a>연결된 디바이스 플랫폼 서비스       
 
@@ -385,7 +385,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="connected-user-experiences-and-telemetry"></a>연결된 사용자 환경 및 원격 분석     
 
@@ -399,7 +399,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="contact-data"></a>연락처 데이터        
 
@@ -413,7 +413,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   사용자 서비스 템플릿
 |||         
 
-<br />          
+
 
 ## <a name="coremessaging"></a>CoreMessaging            
 
@@ -427,7 +427,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="credential-manager"></a>자격 증명 관리자           
 
@@ -441,7 +441,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="cryptographic-services"></a>암호화 서비스           
 
@@ -455,7 +455,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="data-sharing-service"></a>데이터 공유 개요         
 
@@ -469,7 +469,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="datacollectionpublishingservice"></a>DataCollectionPublishingService          
 
@@ -483,7 +483,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="dcom-server-process-launcher"></a>DCOM Server Process Launcher         
 
@@ -497,7 +497,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />
+
 
 ##  <a name="device-association-service"></a>디바이스 연결 서비스      
 
@@ -511,7 +511,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />
+
 
 ##  <a name="device-install-service"></a>디바이스 설치 서비스
 
@@ -525,7 +525,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |
 |||
 
-<br />          
+
 
 ##  <a name="device-management-enrollment-service"></a>디바이스 관리 등록 서비스        
 
@@ -539,7 +539,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="device-setup-manager"></a>디바이스 설정 관리자         
 
@@ -553,7 +553,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="devquery-background-discovery-broker"></a>DevQuery 백그라운드 검색 브로커         
 
@@ -567,7 +567,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="dhcp-client"></a>DHCP 클라이언트          
 
@@ -581,7 +581,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="diagnostic-policy-service"></a>진단 정책 서비스            
 
@@ -595,7 +595,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="diagnostic-service-host"></a>진단 서비스 호스트     
 
@@ -609,7 +609,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="diagnostic-system-host"></a>진단 시스템 호스트           
 
@@ -623,7 +623,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="distributed-link-tracking-client"></a>분산된 링크 추적 클라이언트            
 
@@ -637,7 +637,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="distributed-transaction-coordinator"></a>DTC(Distributed Transaction Coordinator)     
 
@@ -651,7 +651,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />  
+
 
 ##  <a name="dmwappushsvc"></a>dmwappushsvc        
 
@@ -665,7 +665,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   Intune, MDM 및 이와 비슷한 관리 기술 및 통합 쓰기 필터를 위해 클라이언트 디바이스에 필요한 서비스입니다. 서버에는 필요하지 않습니다.
 |||         
 
-<br />      
+
 
 ##  <a name="dns-client"></a>DNS 클라이언트      
 
@@ -679,7 +679,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="downloaded-maps-manager"></a>다운로드한 지도 관리자     
 
@@ -693,7 +693,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   사용하지 않도록 설정하면 서비스를 사용하는 앱이 중단됩니다. 앱에서 이 서비스를 사용하지 않으면 사용하지 않도록 설정할 수 있습니다.
 |||         
 
-<br />          
+
 
 ## <a name="embedded-mode"></a>포함된 모드            
 
@@ -707,7 +707,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="encrypting-file-system-efs"></a>EFS(파일 시스템 암호화)
 
@@ -721,7 +721,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**   |
 |||                 
 
-<br />  
+
 
 ## <a name="enterprise-app-management-service"></a>엔터프라이즈 앱 관리 서비스            
 
@@ -735,7 +735,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="extensible-authentication-protocol"></a>확장할 수 있는 인증 프로토콜           
 
@@ -749,7 +749,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="function-discovery-provider-host"></a>기능 검색 공급자 호스트         
 
@@ -763,7 +763,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="function-discovery-resource-publication"></a>기능 검색 리소스 게시      
 
@@ -777,7 +777,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="geolocation-service"></a>지리적 위치 서비스          
 
@@ -791,7 +791,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   사용하지 않도록 설정하면 서비스를 사용하는 앱이 중단됩니다. 앱에서 이 서비스를 사용하지 않으면 사용하지 않도록 설정할 수 있습니다.
 |||         
 
-<br />          
+
 
 ##  <a name="group-policy-client"></a>그룹 정책 클라이언트     
 
@@ -805,7 +805,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 
 ## <a name="human-interface-device-service"></a>휴먼 인터페이스 장치 서비스           
@@ -820,7 +820,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="hv-host-service"></a>HV 호스트 서비스     
 
@@ -834,7 +834,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   게스트 VM용 성능 강화 도구입니다. 현재 명시적으로 채워진 VM을 제외하고는 사용되지 않지만 Application Guard에서 사용됩니다.
 |||         
 
-<br />          
+
 
 ## <a name="hyper-v-data-exchange-service"></a>Hyper-V 데이터 교환 서비스        
 
@@ -848,7 +848,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   HvHost 참조
 |||         
 
-<br />      
+
 
 ## <a name="hyper-v-guest-service-interface"></a>Hyper-V 게스트 서비스 인터페이스          
 
@@ -862,7 +862,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   HvHost 참조
 |||         
 
-<br />  
+
 
 ## <a name="hyper-v-guest-shutdown-service"></a>Hyper-V 게스트 종료 서비스           
 
@@ -876,7 +876,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   HvHost 참조
 |||         
 
-<br />
+
 
 ## <a name="hyper-v-heartbeat-service"></a>Hyper-V 하트비트 서비스
 | | |
@@ -889,7 +889,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   HvHost 참조
 |||
 
-<br />          
+
 
 ## <a name="hyper-v-powershell-direct-service"></a>Hyper-V PowerShell Direct 서비스            
 
@@ -903,7 +903,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   HvHost 참조
 |||         
 
-<br />          
+
 
 ## <a name="hyper-v-remote-desktop-virtualization-service"></a>Hyper-V 원격 데스크톱 가상화 서비스            
 
@@ -917,7 +917,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   HvHost 참조
 |||         
 
-<br />          
+
 
 ## <a name="hyper-v-time-synchronization-service"></a>Hyper-V 시간 동기화 서비스         
 
@@ -931,7 +931,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   HvHost 참조
 |||         
 
-<br />          
+
 
 ## <a name="hyper-v-volume-shadow-copy-requestor"></a>Hyper-V 볼륨 섀도 복사본 요청자         
 
@@ -945,7 +945,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   HvHost 참조
 |||         
 
-<br />          
+
 
 ## <a name="ike-and-authip-ipsec-keying-modules"></a>IKE 및 AuthIP IPsec 키 지정 모듈          
 
@@ -959,7 +959,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |    
 |||         
 
-<br />          
+
 
 ## <a name="interactive-services-detection"></a>대화형 서비스 감지           
 
@@ -973,7 +973,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />  
+
 
 ## <a name="internet-connection-sharing-ics"></a>ICS(인터넷 연결 공유)            
 
@@ -987,7 +987,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   WiFi 핫스팟으로 사용되는 클라이언트 및 Miracast 프로젝션의 양쪽 끝에 필요합니다. ICS는 "사용자의 DNS 도메인 네트워크에서 인터넷 연결 공유 사용 금지" GPO 설정으로 차단할 수 있습니다.
 |||         
 
-<br />          
+
 
 ## <a name="ip-helper"></a>IP 도우미            
 
@@ -1001,7 +1001,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 
 ##  <a name="ipsec-policy-agent"></a>IPSec 정책 에이전트      
@@ -1016,7 +1016,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />
+
 
 ##  <a name="kdc-proxy-server-service-kps"></a>KDC 프록시 서버(KPS) 서비스      
 
@@ -1030,7 +1030,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="ktmrm-for-distributed-transaction-coordinator"></a>DTC(Distributed Transaction Coordinator)용 KtmRm            
 
@@ -1044,7 +1044,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />
+
 
 ##  <a name="link-layer-topology-discovery-mapper"></a>Link-Layer Topology Discovery Mapper        
 
@@ -1058,7 +1058,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   네트워크 맵에 종속성이 없는 경우 사용하지 않도록 설정할 수 있습니다.
 |||         
 
-<br />
+
 
 ## <a name="local-session-manager"></a>로컬 세션 관리자                    
 
@@ -1072,7 +1072,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||                 
 
-<br />                  
+
 
 ## <a name="microsoft-r-diagnostics-hub-standard-collector"></a>Microsoft (R) 진단 허브 표준 수집기 서비스         
 
@@ -1086,7 +1086,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />
+
 
 ## <a name="microsoft-account-sign-in-assistant"></a>Microsoft 계정 로그인 도우미
 | | |
@@ -1099,7 +1099,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   Microsoft 계정은 Windows Server에서 사용할 수 없음
 |||
 
-<br />          
+
 
 ##  <a name="microsoft-app-v-client"></a>Microsoft App-V 클라이언트      
 
@@ -1113,7 +1113,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="microsoft-iscsi-initiator-service"></a>Microsoft iSCSI 초기자 서비스            
 
@@ -1127,7 +1127,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   진단 데이터는 클라이언트와 서버에서 모두에서 사용됨을 나타냅니다. 이 서비스를 사용하지 않도록 설정해도 이점이 없습니다.
 |||         
 
-<br />          
+
 
 ## <a name="microsoft-passport"></a>Microsoft Passport           
 
@@ -1141,7 +1141,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   서버에서 지원되지 않는 PIN/Hello 로그온에 필요합니다.
 |||         
 
-<br />          
+
 
 ## <a name="microsoft-passport-container"></a>Microsoft Passport 컨테이너         
 
@@ -1155,7 +1155,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="microsoft-software-shadow-copy-provider"></a>Microsoft 소프트웨어 섀도 복사본 공급자          
 
@@ -1169,7 +1169,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="microsoft-storage-spaces-smp"></a>Microsoft 스토리지 공간 SMP         
 
@@ -1183,7 +1183,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   이 서비스가 없으면 스토리지 관리 API가 실패합니다. 예제: "Get-WmiObject -class MSFT_Disk -Namespace Root\Microsoft\Windows\Storage"
 |||         
 
-<br />          
+
 
 ## <a name="nettcp-port-sharing-service"></a>Net.Tcp Port Sharing Service         
 
@@ -1197,7 +1197,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="netlogon"></a>Netlogon         
 
@@ -1211,7 +1211,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="network-connection-broker"></a>네트워크 연결 브로커            
 
@@ -1225,7 +1225,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="network-connections"></a>네트워크 연결         
 
@@ -1239,7 +1239,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="network-connectivity-assistant"></a>네트워크 연결 길잡이      
 
@@ -1253,7 +1253,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />  
+
 
 ##  <a name="network-list-service"></a>네트워크 목록 서비스        
 
@@ -1267,7 +1267,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="network-location-awareness"></a>네트워크 위치 인식           
 
@@ -1281,7 +1281,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="network-setup-service"></a>네트워크 설정 서비스       
 
@@ -1295,7 +1295,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="network-store-interface-service"></a>네트워크 저장소 인터페이스 서비스      
 
@@ -1309,7 +1309,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="offline-files"></a>오프라인 파일            
 
@@ -1323,7 +1323,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="optimize-drives"></a>드라이브 최적화          
 
@@ -1337,7 +1337,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />
+
 
 ## <a name="performance-counter-dll-host"></a>성능 카운터 DLL 호스트         
 
@@ -1351,7 +1351,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="performance-logs--alerts"></a>성능 로그 및 경고            
 
@@ -1365,7 +1365,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="phone-service"></a>전화 서비스       
 
@@ -1379,7 +1379,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   최신 VoIP 앱에서 사용됨
 |||         
 
-<br />          
+
 
 ##      <a name="plug-and-play"></a>플러그 앤 플레이       
 
@@ -1393,7 +1393,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="portable-device-enumerator-service"></a>휴대용 디바이스 열거자 서비스           
 
@@ -1407,7 +1407,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="power"></a>전원            
 
@@ -1421,7 +1421,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="print-spooler"></a>인쇄 스풀러            
 
@@ -1435,7 +1435,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   도메인 컨트롤러에서 DC 역할을 설치하면 인쇄 정리 작업을 수행하는 스풀러 서비스에 스레드가 추가되어 Active Directory에서 오래된 인쇄 큐 개체를 제거합니다.  스풀러 서비스가 각 사이트에 있는 하나 이상의 DC에서 실행되고 있지 않으면 AD에서 더 이상 존재하지 않는 이전 큐를 제거할 수 없습니다. [https://blogs.technet.microsoft.com/askperf/2008/11/18/disabling-unnecessary-services-a-word-to-the-wise/](https://blogs.technet.microsoft.com/askperf/2008/11/18/disabling-unnecessary-services-a-word-to-the-wise/ )
 |||         
 
-<br />          
+
 
 ##  <a name="printer-extensions-and-notifications"></a>프린터 확장 및 알림        
 
@@ -1449,7 +1449,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="problem-reports-and-solutions-control-panel-support"></a>문제 보고서 및 해결 방법 제어판 지원     
 
@@ -1463,7 +1463,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="program-compatibility-assistant-service"></a>프로그램 호환성 관리자 서비스     
 
@@ -1477,7 +1477,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="quality-windows-audio-video-experience"></a>qWave(Quality Windows Audio Video Experience)      
 
@@ -1491,7 +1491,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   클라이언트 쪽 QoS 서비스
 |||         
 
-<br />          
+
 
 ##      <a name="radio-management-service"></a>무선 송수신 장치 관리 서비스        
 
@@ -1505,7 +1505,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="remote-access-auto-connection-manager"></a>원격 액세스 자동 연결 관리자            
 
@@ -1519,7 +1519,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="remote-access-connection-manager"></a>원격 액세스 연결 관리자         
 
@@ -1533,7 +1533,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="remote-desktop-configuration"></a>원격 데스크톱 구성         
 
@@ -1547,7 +1547,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="remote-desktop-services"></a>원격 데스크톱 서비스          
 
@@ -1561,7 +1561,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="remote-desktop-services-usermode-port-redirector"></a>원격 데스크톱 서비스 UserMode 포트 리디렉터        
 
@@ -1575,7 +1575,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   연결의 서버 쪽에서 리디렉션을 지원합니다.
 |||         
 
-<br />          
+
 
 ## <a name="remote-procedure-call-rpc"></a>RPC(원격 프로시저 호출)          
 
@@ -1589,7 +1589,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="remote-procedure-call-rpc-locator"></a>RPC(원격 프로시저 호출) 로케이터             
 
@@ -1603,7 +1603,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |       |
 |||             
 
-<br />              
+
 
 ## <a name="remote-registry"></a>원격 레지스트리          
 
@@ -1617,7 +1617,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="resultant-set-of-policy-provider"></a>공급자 정책 결과 집합            
 
@@ -1631,7 +1631,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="routing-and-remote-access"></a>라우팅 및 원격 액세스            
 
@@ -1645,7 +1645,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   이미 사용하지 않도록 설정됨
 |||         
 
-<br />          
+
 
 ## <a name="rpc-endpoint-mapper"></a>RPC 끝점 매퍼          
 
@@ -1659,7 +1659,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="secondary-logon"></a>보조 타일     
 
@@ -1673,7 +1673,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="secure-socket-tunneling-protocol-service"></a>SSTP(Secure Socket Tunneling Protocol) 서비스            
 
@@ -1687,7 +1687,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   사용하지 않도록 설정하면 RRAS가 중단됩니다.   |
 |||             
 
-<br />              
+
 
 ## <a name="security-accounts-manager"></a>보안 계정 관리자            
 
@@ -1701,7 +1701,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="sensor-data-service"></a>센서 데이터 서비스  
 
@@ -1715,7 +1715,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />  
+
 
 ## <a name="sensor-monitoring-service"></a>센서 모니터링 서비스            
 
@@ -1729,21 +1729,17 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />
-
 ## <a name="sensor-service"></a>센서 서비스
 
 | | |
 |---|---|
-|   **서비스 설명** |   다양한 센서 기능을 관리하는 센서 서비스입니다. 센서의 SDO(단순형 디바이스 방향) 및 기록을 관리합니다. 디바이스 방향 변경을 보고하는 SDO 센서를 로드합니다.  이 서비스를 중지하거나 사용하지 않으면 SDO 센서가 로드되지 않으므로 자동 회전이 수행되지 않습니다. 센서의 기록 수집도 중지됩니다.
+|   **서비스 설명** |   다양한 센서의 기능을 관리하는 센서 서비스입니다. 센서의 SDO(단순형 디바이스 방향) 및 기록을 관리합니다. 디바이스 방향 변경을 보고하는 SDO 센서를 로드합니다.  이 서비스를 중지하거나 사용하지 않으면 SDO 센서가 로드되지 않으므로 자동 회전이 수행되지 않습니다. 센서의 기록 수집도 중지됩니다.
 |   **서비스 이름**    |   SensorService
 |   **설치**    |   데스크톱 경험이 있는 경우에만
 |   **시작 유형**   |   수동
 |   **추천 사항**  |   사용하지 않도록 설정할 수 있음
 |   **설명**    |
 |||
-  
-<br />          
 
 ## <a name="server"></a>Server           
 
@@ -1757,7 +1753,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   원격 관리, IPC$, SMB 파일 공유에 필요합니다.
 |||         
 
-<br />          
+
 
 ## <a name="shell-hardware-detection"></a>셸 하드웨어 검색             
 
@@ -1771,7 +1767,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="smart-card"></a>스마트 카드           
 
@@ -1785,7 +1781,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="smart-card-device-enumeration-service"></a>스마트 카드 디바이스 열거 서비스                    
 
@@ -1799,7 +1795,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   WinRT 앱에만 거의 독점적으로 필요합니다.    |
 |||             
 
-<br />              
+
 
 ## <a name="smart-card-removal-policy"></a>스마트 카드 제거 정책        
 
@@ -1813,7 +1809,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="snmp-trap"></a>SNMP 트랩            
 
@@ -1827,7 +1823,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="software-protection"></a>소프트웨어 보호             
 
@@ -1841,7 +1837,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="special-administration-console-helper"></a>특수 관리 콘솔 도우미        
 
@@ -1855,7 +1851,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="spot-verifier"></a>즉석 검증 도구            
 
@@ -1869,7 +1865,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="ssdp-discovery"></a>SSDP 검색           
 
@@ -1883,7 +1879,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="state-repository-service"></a>상태 리포지토리 서비스         
 
@@ -1897,7 +1893,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="still-image-acquisition-events"></a>정지 이미지 인식 이벤트
 
@@ -1911,7 +1907,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />  
+
 
 ## <a name="storage-service"></a>스토리지 서비스          
 
@@ -1925,7 +1921,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="storage-tiers-management"></a>스토리지 계층 관리        
 
@@ -1939,7 +1935,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="superfetch"></a>Superfetch          
 
@@ -1953,7 +1949,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="sync-host"></a>호스트 동기화            
 
@@ -1967,7 +1963,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   사용자 서비스 템플릿
 |||         
 
-<br />          
+
 
 ## <a name="system-event-notification-service"></a>시스템 이벤트 알림 서비스            
 
@@ -1981,7 +1977,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="system-events-broker"></a>시스템 이벤트 브로커             
 
@@ -1995,7 +1991,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   WinRT 앱에만 해당된다는 설명에도 불구하고 작업 스케줄러, 브로커 인프라 서비스 및 기타 내부 구성 요소에 필요합니다.
 |||         
 
-<br />          
+
 
 ## <a name="task-scheduler"></a>작업 스케줄러           
 
@@ -2009,7 +2005,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="tcpip-netbios-helper"></a>TCP/IP NetBIOS 도우미            
 
@@ -2023,7 +2019,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="telephony"></a>Telephony           
 
@@ -2037,7 +2033,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   사용하지 않도록 설정하면 RRAS가 중단됩니다.
 |||         
 
-<br />          
+
 
 ## <a name="themes"></a>테마           
 
@@ -2051,7 +2047,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   이 서비스를 사용하지 않도록 설정하면 접근성 테마를 설정할 수 없습니다.
 |||         
 
-<br />  
+
 
 ## <a name="tile-data-model-server"></a>타일 데이터 모델 서버           
 
@@ -2065,7 +2061,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   이 서비스를 사용하지 않도록 설정하면 시작 메뉴가 중단됩니다.
 |||         
 
-<br />          
+
 
 ##  <a name="time-broker"></a>시간 브로커     
 
@@ -2079,7 +2075,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   WinRT 앱에만 해당된다는 설명에도 불구하고 작업 스케줄러, 브로커 인프라 서비스 및 기타 내부 구성 요소에 필요합니다.
 |||         
 
-<br />          
+
 
 ## <a name="touch-keyboard-and-handwriting-panel-service"></a>터치 키보드 및 필기 패널 서비스         
 
@@ -2093,7 +2089,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="update-orchestrator-service-for-windows-update"></a>Update Orchestrator Service for Windows Update           
 
@@ -2107,7 +2103,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   v1607에서는 서비스 설명이 누락되었습니다. Windows 업데이트(WSUS 포함)는 이 서비스에 따라 달라집니다.
 |||         
 
-<br />          
+
 
 ## <a name="upnp-device-host"></a>UPnP Device Host         
 
@@ -2121,7 +2117,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="user-access-logging-service"></a>사용자 액세스 로깅 서비스          
 
@@ -2135,7 +2131,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="user-data-access"></a>사용자 데이터 액세스        
 
@@ -2149,7 +2145,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   사용자 서비스 템플릿
 |||         
 
-<br />          
+
 
 ## <a name="user-data-storage"></a>사용자 데이터 스토리지            
 
@@ -2163,7 +2159,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   사용자 서비스 템플릿
 |||         
 
-<br />          
+
 
 ## <a name="user-experience-virtualization-service"></a>User Experience Virtualization 서비스           
 
@@ -2177,7 +2173,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="user-manager"></a>사용자 관리자        
 
@@ -2191,7 +2187,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="user-profile-service"></a>사용자 프로필 서비스         
 
@@ -2205,7 +2201,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="virtual-disk"></a>가상 디스크             
 
@@ -2219,7 +2215,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="volume-shadow-copy"></a>볼륨 섀도 복사본           
 
@@ -2233,7 +2229,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="walletservice"></a>WalletService           
 
@@ -2247,7 +2243,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="windows-audio"></a>Windows 오디오            
 
@@ -2261,7 +2257,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="windows-audio-endpoint-builder"></a>Windows 오디오 엔드포인트 작성기           
 
@@ -2275,7 +2271,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="windows-biometric-service"></a>Windows 생체 인식 서비스            
 
@@ -2289,7 +2285,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="windows-camera-frame-server"></a>Windows 카메라 프레임 서버         
 
@@ -2303,7 +2299,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="windows-connection-manager"></a>Windows 연결 관리자           
 
@@ -2317,7 +2313,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="windows-defender-network-inspection-service"></a>Windows Defender 네트워크 검사 서비스          
 
@@ -2331,7 +2327,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="windows-defender-service"></a>Windows Defender 서비스         
 
@@ -2345,7 +2341,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="windows-driver-foundation---user-mode-driver-framework"></a>Windows 드라이버 파운데이션 - 사용자 모드 드라이버 프레임워크           
 
@@ -2359,7 +2355,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="windows-encryption-provider-host-service"></a>Windows 암호화 공급자 호스트 서비스     
 
@@ -2373,7 +2369,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="windows-error-reporting-service"></a>Windows 오류 보고 서비스          
 
@@ -2387,7 +2383,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   MS 및 타사 ISV/IHV에서 사용되는 작동 중단/중단 데이터를 수집하여 보냅니다. 이 데이터는 보안 버그가 포함될 수 있는 작동 중단 유도 버그를 진단하는 데 사용됩니다. 또한 회사 오류 보고에도 필요합니다.
 |||         
 
-<br />          
+
 
 ## <a name="windows-event-collector"></a>Windows 이벤트 수집기          
 
@@ -2401,7 +2397,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   관리 효율성, 진단을 위해 ETW 이벤트(보안 이벤트 포함)를 수집합니다.  보안 감사 도구를 포함하여 많은 기능과 타사 도구에서 이 도구를 사용합니다.
 |||         
 
-<br />          
+
 
 ## <a name="windows-event-log"></a>Windows 이벤트 로그            
 
@@ -2415,7 +2411,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="windows-firewall"></a>Windows 방화벽         
 
@@ -2429,7 +2425,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="windows-font-cache-service"></a>Windows 글꼴 캐시 서비스      
 
@@ -2443,7 +2439,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="windows-image-acquisition-wia"></a>WIA(Windows 이미지 인식)          
 
@@ -2457,7 +2453,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="windows-insider-service"></a>Windows 참가자 서비스     
 
@@ -2471,7 +2467,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   서버는 플라이팅을 지원하지 않으므로 이 서비스는 서버에서 작동하지 않습니다. GP를 통해서도 기능을 사용하지 않도록 설정할 수 있습니다.
 |||         
 
-<br />          
+
 
 ##  <a name="windows-installer"></a>Windows Installer       
 
@@ -2485,7 +2481,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="windows-license-manager-service"></a>Windows 라이선스 관리자 서비스          
 
@@ -2499,7 +2495,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="windows-management-instrumentation"></a>WMI(Windows Management Instrumentation)       
 
@@ -2513,7 +2509,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="windows-mobile-hotspot-service"></a>Windows 모바일 핫스팟 서비스          
 
@@ -2527,7 +2523,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="windows-modules-installer"></a>Windows 모듈 설치 관리자        
 
@@ -2541,7 +2537,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="windows-push-notifications-system-service"></a>Windows 푸시 알림 시스템 서비스            
 
@@ -2555,7 +2551,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   라이브 타일 및 다른 기능에 필요합니다.
 |||         
 
-<br />      
+
 
 ## <a name="windows-push-notifications-user-service"></a>Windows 푸시 알림 사용자 서비스          
 
@@ -2569,7 +2565,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   사용자 서비스 템플릿
 |||         
 
-<br />
+
 
 ## <a name="windows-remote-management-ws-management"></a>Windows 원격 관리(WS-Management)
 | | |
@@ -2582,7 +2578,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   원격 관리에 필요합니다.
 |||
 
-<br />          
+
 
 ##  <a name="windows-search"></a>Windows 검색      
 
@@ -2596,7 +2592,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ##  <a name="windows-time"></a>Windows 시간        
 
@@ -2610,7 +2606,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="windows-update"></a>Windows 업데이트           
 
@@ -2624,7 +2620,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="winhttp-web-proxy-auto-discovery-service"></a>WinHTTP 웹 프록시 자동 검색 서비스         
 
@@ -2638,7 +2634,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   네트워크 스택을 사용하는 모든 항목이 이 서비스에 기능적으로 종속될 수 있습니다. 많은 조직에서는 이를 사용하여 내부 네트워크의 HTTP 프록시 라우팅을 구성합니다.  이 서비스를 사용하지 않으면 인터넷에서 내부적으로 생성되는 HTTP 연결이 모두 실패합니다.
 |||         
 
-<br />          
+
 
 ## <a name="wired-autoconfig"></a>유선 자동 구성         
 
@@ -2652,7 +2648,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="wmi-performance-adapter"></a>WMI Performance Adapter          
 
@@ -2666,7 +2662,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="workstation"></a>워크스테이션          
 
@@ -2680,7 +2676,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />
+
 
 ## <a name="xbox-live-auth-manager"></a>Xbox Live 인증 관리자           
 
@@ -2694,7 +2690,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   
 |||         
 
-<br />          
+
 
 ## <a name="xbox-live-game-save"></a>Xbox Live 게임 저장          
 
@@ -2708,6 +2704,6 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |   **설명**    |   Xbox Live 저장을 지원하는 게임의 저장 데이터를 동기화합니다.  이 서비스가 중지되면 게임 저장 데이터는 Xbox Live로 업로드되거나 Xbox Live로 다운로드되지 않습니다.
 |||         
 
-<br /> 
-<br /> 
+
+
 

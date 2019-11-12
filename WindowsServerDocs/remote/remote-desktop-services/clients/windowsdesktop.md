@@ -11,14 +11,14 @@ ms.topic: article
 author: heidilohr
 manager: daveba
 ms.author: helohr
-ms.date: 09/24/2019
+ms.date: 10/31/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 961d636fb59b33d0c562ec25d13174abbe766606
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: aff7e6e1f37cad66530679ade024c089a4ba034e
+ms.sourcegitcommit: 1da993bbb7d578a542e224dde07f93adfcd2f489
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404073"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73567172"
 ---
 # <a name="get-started-with-the-windows-desktop-client"></a>Windows 데스크톱 클라이언트 시작
 
@@ -33,9 +33,11 @@ Windows 데스크톱용 원격 데스크톱 클라이언트를 사용하여 다�
 
 ## <a name="install-the-client"></a>클라이언트 설치
 
-현재 Windows 64비트용 클라이언트를 다운로드할 수 있습니다. 더 많은 Windows 버전에서 클라이언트를 사용할 수 있게 되면 다음 목록을 업데이트할 것입니다.
+Windows 버전과 일치하는 클라이언트를 선택합니다.
 
-- [Windows 64비트 클라이언트](https://go.microsoft.com/fwlink/?linkid=2068602)
+- [Windows 64비트](https://go.microsoft.com/fwlink/?linkid=2068602)
+- [Windows 32비트 미리 보기](https://go.microsoft.com/fwlink/?linkid=2098960)
+- [Windows ARM64 미리 보기](https://go.microsoft.com/fwlink/?linkid=2098961)
 
 관리자 권한이 필요하지 않은 현재 사용자의 클라이언트를 설치하거나, 디바이스의 모든 사용자가 클라이언트에 액세스할 수 있도록 관리자가 클라이언트를 설치 및 구성할 수 있습니다.
 

@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.date: 09/18/2019
 ms.localizationpriority: high
 ms.prod: windows-server
-ms.openlocfilehash: e235c8013afa573712feaec75bbd1ca195c0e307
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: c914a472869f9887c83733d6aab614b5676d17d7
+ms.sourcegitcommit: 1da993bbb7d578a542e224dde07f93adfcd2f489
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71357004"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73567132"
 ---
 # <a name="windows-admin-center"></a>Windows Admin Center
 
@@ -25,9 +25,9 @@ ms.locfileid: "71357004"
 
 >[!VIDEO https://www.youtube.com/embed/PcQj6ZklmK0]
 
-![Windows Admin Center 정보 그래픽](media/WAC1809Poster_thumb.PNG)
+![Windows Admin Center 정보 그래픽](media/WAC1910Poster_thumb.PNG)
 
-[PDF 다운로드](https://github.com/MicrosoftDocs/windowsserverdocs/raw/master/WindowsServerDocs/manage/windows-admin-center/media/WindowsAdminCenter1809Poster.pdf)
+[PDF 다운로드](https://github.com/MicrosoftDocs/windowsserverdocs/raw/master/WindowsServerDocs/manage/windows-admin-center/media/WindowsAdminCenter1910Poster.pdf)
 
 ## <a name="quick-start"></a>빠른 시작
 
@@ -86,6 +86,7 @@ ms.locfileid: "71357004"
             <ul>
             <li><a href="use/get-started.md">연결 시작 및 추가</a>
             <li><a href="use/manage-servers.md">서버 관리</a>
+            <li><a href="use/deploy-hyperconverged-infrastructure.md">하이퍼 컨버지드 인프라 배포</a>
             <li><a href="use/manage-hyper-converged.md">하이퍼 컨버지드 인프라 관리</a>
             <li><a href="use/manage-failover-clusters.md">장애 조치(failover) 클러스터 관리</a>
             <li><a href="use/manage-virtual-machines.md">가상 머신 관리</a>
@@ -129,11 +130,12 @@ ms.locfileid: "71357004"
 
 최신 출시된 기능에 대해 자세히 알아보세요.
 
+- 버전 [1910](https://aka.ms/wac1910)은 몇 가지 새로운 Azure 하이브리드 서비스를 도입하고 이전에 미리 보기에 있던 기능을 GA 채널에 가져온 최신 GA 릴리스입니다.
 - 버전 [1909](https://aka.ms/wac1909)에서는 Azure VM 관련 연결 유형을 소개하고 기존 장애 조치(failover) 클러스터 및 HCI 클러스터에 대한 연결 유형을 통합합니다.
 - 버전 [1908](https://aka.ms/wac1908)에는 시각적 업데이트, Packetmon, FlowLog Audit, 클러스터용 Azure Monitor 온보딩 및 HTTPS를 통한 WinRM 지원(포트 5986)이 추가되었습니다.
 - 버전 [1907](https://aka.ms/wac1907)은 Azure 비용 추정 링크를 추가하고 가상 머신의 가져오기/내보내기 및 태그 지정을 개선했습니다.
 - 버전 [1906](https://aka.ms/wac1906)에는 VM 가져오기/내보내기, Azure 계정 전환, Azure에서 연결 추가, 연결 설정 실험, 성능 개선 및 성능 프로파일링 도구가 추가되었습니다.
-- 버전 1904.1은 가장 최근의 GA 릴리스로, 게이트웨이 플러그인 안정성 개선을 위한 유지 관리 업데이트입니다.
+- 버전 1904.1은 게이트웨이 플러그 인 안정성 개선을 위한 유지 관리 업데이트입니다.
 - 버전 [1904](https://aka.ms/wac1904)는 Azure Hybrid Services 도구를 도입하고, 이전에 미리 보기에 있던 기능을 GA 채널에 가져온 GA 릴리스였습니다.
 - 버전 [1903](https://aka.ms/wac1903)에는 Azure Monitor의 이메일 알림, Active Directory에서 서버 또는 PC 연결을 추가하는 기능, Active Directory, DHCP, DNS를 관리하는 새로운 도구가 추가되었습니다.
 - 버전 [1902](https://aka.ms/wac1902)에는 공유 연결 목록과 소프트웨어 정의 네트워크(SDN) 관리에 대한 개선 사항(ACL, 게이트웨이 연결 및 논리 네트워크를 관리하는 새로운 SDN 도구 포함)이 추가되었습니다.
