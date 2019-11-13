@@ -38,10 +38,10 @@ ms.locfileid: "71367737"
 
 Active Directory의 높은 권한의 계정을 사용 하 여 손상 된 계정을 전파 하 고 VIP 계정이 나 액세스할 수 있는 데이터를 조작할 수 있으므로 자격 증명 도난 공격에 대 한 가장 유용한 계정은 엔터프라이즈 관리자의 구성원 인 계정입니다. Active Directory의 domain Admins 및 Administrators 그룹  
 
-도메인 컨트롤러는 AD DS 데이터베이스에 대 한 리포지토리입니다. 도메인 컨트롤러는 Active Directory의 모든 데이터에 대 한 전체 액세스 권한을 갖고 있으므로 도메인 컨트롤러는 손상이 나 자격 증명 도난 공격과 동시에 있든 하나 이상의 매우 권한 있는 Active Directory 계정이 손상 되었습니다. 수많은 게시 (및 대부분의 공격자)는 통과 해시 및 기타 자격 증명 도난 공격을 설명할 때 ( [Active Directory 공격 노출 영역 축소](../../../ad-ds/plan/security-best-practices/Reducing-the-Active-Directory-Attack-Surface.md)에 설명 된 대로) 도메인 관리자 그룹 멤버 자격에 집중 하지만 여기에 나열 된 그룹의 멤버를 사용 하 여 전체 AD DS 설치를 손상 시킬 수 있습니다.  
+도메인 컨트롤러는 AD DS 데이터베이스에 대 한 리포지토리입니다. 도메인 컨트롤러는 Active Directory의 모든 데이터에 대 한 전체 액세스 권한을 갖고 있으므로 도메인 컨트롤러는 손상이 나 자격 증명 도난 공격과 동시에 있든 하나 이상의 매우 권한 있는 Active Directory 계정이 손상 되었습니다. 수많은 게시 (및 많은 공격자)가 도메인 관리자 그룹 멤버 자격에 초점을 맞춘 경우 ( [Active Directory 공격 노출 영역 축소](../../../ad-ds/plan/security-best-practices/Reducing-the-Active-Directory-Attack-Surface.md)에 설명 된 대로), 여기에 나열 된 그룹의 멤버인 계정은 전체 AD DS 설치를 손상 시키는 데 사용할 수 있습니다.  
 
 > [!NOTE]  
-> 해시 전달 및 기타 자격 증명 도난 공격에 대 한 자세한 내용은 [Appendix M에 나열 된 [PTH (Pass pass) 공격 및 기타 자격 증명 도난 기술 완화](https://download.microsoft.com/download/7/7/A/77ABC5BD-8320-41AF-863C-6ECFB10CB4B9/Mitigating%20Pass-the-Hash%20(PtH)%20Attacks%20and%20Other%20Credential%20Theft%20Techniques_English.pdf) 백서를 참조 하십시오. 문서 링크 및 권장 되는 @ no__t-0 읽기 "APTs (advanced persistent 악의적 사용자)" 라고도 하는 결정 된의 공격에 대 한 자세한 내용은 [결정 된 악의적 사용자 및 목표 공격](https://www.microsoft.com/download/details.aspx?id=34793)을 참조 하세요.  
+> 패스-해시 및 기타 자격 증명 도난 공격에 대 한 포괄적인 정보는 [부록 M: 문서 링크 및 권장 되는 읽기](../../../ad-ds/manage/Appendix-M--Document-Links-and-Recommended-Reading.md)에 나열 된 [PTH (Pass pass) 공격 및 기타 자격 증명 도난 기술](https://download.microsoft.com/download/7/7/A/77ABC5BD-8320-41AF-863C-6ECFB10CB4B9/Mitigating%20Pass-the-Hash%20(PtH)%20Attacks%20and%20Other%20Credential%20Theft%20Techniques_English.pdf) 백서를 참조 하십시오. "APTs (advanced persistent 악의적 사용자)" 라고도 하는 결정 된의 공격에 대 한 자세한 내용은 [결정 된 악의적 사용자 및 목표 공격](https://www.microsoft.com/download/details.aspx?id=34793)을 참조 하세요.  
 
 ## <a name="activities-that-increase-the-likelihood-of-compromise"></a>손상 가능성을 높이는 활동  
 자격 증명 도난 목표는 일반적으로 높은 권한의 도메인 계정 및 VIP 계정이 기 때문에 관리자는 자격 증명 도난 공격의 성공 가능성을 높이는 활동을 인식 하는 것이 중요 합니다. 공격자는 VIP 계정도 대상으로 하지만, 시스템 또는 도메인에서 vip에 높은 수준의 권한이 부여 되지 않은 경우 자격 증명을 도용 하려면 비밀 정보를 제공 하는 VIP를 사회 공학적 엔지니어링 하는 등의 다른 유형의 공격이 필요 합니다. 또는 공격자가 먼저 VIP 자격 증명이 캐시 된 시스템에 대 한 권한 있는 액세스 권한을 얻어야 합니다. 이로 인해 여기서 설명 하는 자격 증명 도난 가능성을 높일 수 있는 활동은 매우 권한 있는 관리 자격 증명의 획득을 방지 하는 데 주로 초점을 맞추고 있습니다. 이러한 활동은 공격자가 권한 있는 자격 증명을 얻기 위해 시스템을 손상 시킬 수 있는 일반적인 메커니즘입니다.  
@@ -58,7 +58,7 @@ Active Directory의 높은 권한의 계정을 사용 하 여 손상 된 계정�
 권한이 높은 도메인 계정이 손상 된 워크스테이션 또는 구성원 서버에 대화형으로 로그온 하는 데 사용 되는 경우 손상 된 컴퓨터에서 시스템에 로그온 하는 모든 계정의 자격 증명을 수집할 수 있습니다.  
 
 #### <a name="unsecured-administrative-workstations"></a>보안 되지 않은 관리 워크스테이션  
-많은 조직에서 IT 직원은 여러 계정을 사용 합니다. 직원의 워크스테이션에 로그온 하는 데 사용 되는 계정은 하나 이며, IT 직원은 워크스테이션에 대 한 로컬 관리자 권한이 있는 경우가 많습니다. 경우에 따라 사용자가 최소한으로 로그온 할 때 분할 액세스 토큰을 받을 수 있도록 UAC를 사용 하도록 설정 하 고 권한이 필요할 때 권한을 상승 시켜야 합니다. 이러한 사용자가 유지 관리 작업을 수행 하는 경우 일반적으로 로컬로 설치 된 관리 도구를 사용 하 고 **관리자 권한으로 실행** 옵션을 선택 하거나를 제공 하 여 도메인 권한 계정에 대 한 자격 증명을 제공 합니다. 메시지가 표시 되 면 자격 증명 이 구성은 적절 한 것 처럼 보일 수 있지만 다음과 같은 이유로 손상 시킬 환경을 노출 합니다.  
+많은 조직에서 IT 직원은 여러 계정을 사용 합니다. 직원의 워크스테이션에 로그온 하는 데 사용 되는 계정은 하나 이며, IT 직원은 워크스테이션에 대 한 로컬 관리자 권한이 있는 경우가 많습니다. 경우에 따라 사용자가 최소한으로 로그온 할 때 분할 액세스 토큰을 받을 수 있도록 UAC를 사용 하도록 설정 하 고 권한이 필요할 때 권한을 상승 시켜야 합니다. 이러한 사용자가 유지 관리 작업을 수행 하는 경우 일반적으로 로컬로 설치 된 관리 도구를 사용 하 고 **관리자 권한으로 실행** 옵션을 선택 하거나 메시지가 표시 되 면 자격 증명을 제공 하 여 도메인 권한 계정에 대 한 자격 증명을 제공 합니다. 이 구성은 적절 한 것 처럼 보일 수 있지만 다음과 같은 이유로 손상 시킬 환경을 노출 합니다.  
 
 -   직원이 자신의 워크스테이션에 로그온 하는 데 사용 하는 "일반" 사용자 계정에 로컬 관리자 권한이 있는 경우 컴퓨터는 사용자가 맬웨어를 설치 하도록 유도 하는 [다운로드](https://www.microsoft.com/security/sir/glossary/drive-by-download-sites.aspx) 공격에 취약 합니다.  
 

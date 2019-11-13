@@ -30,7 +30,7 @@ ms.locfileid: "71404484"
   
 ## <a name="BKMK_Links"></a>참고 항목  
   
--   [2단계: 멀티 사이트 인프라 구성 @ no__t-0  
+-   [2 단계: 멀티 사이트 인프라 구성](Step-2-Configure-the-Multisite-Infrastructure.md)  
 
 
 

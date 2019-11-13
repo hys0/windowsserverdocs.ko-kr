@@ -15,21 +15,21 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71365785"
 ---
-# <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-2-ad-fs-post-configuration-work"></a>AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 2 단계 AD FS 구성 후 작업
+# <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-2-ad-fs-post-configuration-work"></a>AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포: 2단계, AD FS 구성 후 작업
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 이 항목에서는 AD FS(Active Directory Federation Services) 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더를 배포하는 두 번째 단계를 설명합니다. 이 과정의 다른 단계는 다음 항목에서 찾을 수 있습니다.  
   
--   [ AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 설명은](deploy-work-folders-adfs-overview.md)  
+-   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 개요](deploy-work-folders-adfs-overview.md)  
   
--   [ AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 1 단계, AD FS 설정 @ no__t-0  
+-   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 1 단계, AD FS 설정](deploy-work-folders-adfs-step1.md)  
   
--   [ AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 3 단계, 클라우드 폴더 설정 @ no__t-0  
+-   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 3 단계, 클라우드 폴더 설정](deploy-work-folders-adfs-step3.md)  
   
--   [ AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 4 단계, 웹 응용 프로그램 프록시 설정 @ no__t-0  
+-   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 4 단계, 웹 응용 프로그램 프록시 설정](deploy-work-folders-adfs-step4.md)  
   
--   [ AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 5 단계, 클라이언트 설정 @ no__t-0  
+-   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 5 단계, 클라이언트 설정](deploy-work-folders-adfs-step5.md)  
   
 > [!NOTE]
 > 이 섹션에서 설명 하는 지침은 Windows Server 2019 또는 Windows Server 2016 환경용입니다. Windows Server 2012 R2를 사용하는 경우 [Windows Server 2012 R2 instructions(Windows Server 2012 R2 지침)](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx)을 따르세요.
@@ -104,7 +104,7 @@ Add-DnsServerResourceRecord  -ZoneName "contoso.com" -Name enterpriseregistratio
   
 7.  **URL 구성** 페이지에서 **다음**을 클릭합니다.  
   
-8. **식별자 구성** 페이지에서 다음 식별자를 추가 합니다. `https://windows-server-work-folders/V1`. 이 식별자는 클라우드 폴더에서 사용하는 하드 코드 값이며, 클라우드 폴더가 AD FS와 통신할 때 이 식별자를 전송합니다. **다음**을 클릭합니다.  
+8. **식별자 구성** 페이지에서 다음 식별자를 추가 합니다. `https://windows-server-work-folders/V1` 이 식별자는 클라우드 폴더에서 사용하는 하드 코드 값이며, 클라우드 폴더가 AD FS와 통신할 때 이 식별자를 전송합니다. **다음**을 클릭합니다.  
   
 9. 액세스 제어 정책 선택 페이지에서 **모든 사용자 허용**을 선택하고 **다음**을 클릭합니다.  
   
@@ -124,13 +124,13 @@ Add-DnsServerResourceRecord  -ZoneName "contoso.com" -Name enterpriseregistratio
   
 17. 매핑 테이블에서 다음 값을 입력합니다.  
   
-    -   사용자-사용자 이름: UPN  
+    -   User-Principal-Name: UPN  
   
-    -   표시 이름: 이름  
+    -   Display Name: 이름  
   
-    -   성 성  
+    -   Surname: 성  
   
-    -   지정 된 이름: 지정된 이름  
+    -   Given-Name: 이름  
   
 18. **마침**을 클릭합니다. 발급 변환 규칙 탭에 WorkFolders 규칙이 보이면 **확인**을 클릭합니다.  
   
@@ -250,7 +250,7 @@ AD FS 작동 하는지 확인 하려면 브라우저 창을 열고 `https://blue
   
 브라우저 창에 아무 서식 없는 페더레이션 서버 메타데이터가 표시됩니다. SSL 오류나 경고 없이 데이터가 표시되면 페더레이션 서버가 정상적으로 작동하는 것입니다.  
   
-다음 단계: [ AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 3 단계, 클라우드 폴더 설정 @ no__t-0  
+다음 단계: [AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포: 3단계, 클라우드 폴더 설치](deploy-work-folders-adfs-step3.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [클라우드 폴더 개요](Work-Folders-Overview.md)

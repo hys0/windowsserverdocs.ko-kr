@@ -75,7 +75,7 @@ DirectAccess 클라이언트가 OTP 인증서를 요청 하면 원격 액세스 
   
 ## <a name="BKMK_Links"></a>참고 항목  
   
--   [4단계: 원격 액세스 서버에 대 한 OTP 계획 @ no__t-0  
+-   [4 단계: 원격 액세스 서버에 대 한 OTP 계획](Step-4-Plan-for-OTP-on-the-Remote-Access-Server.md)  
   
 
 

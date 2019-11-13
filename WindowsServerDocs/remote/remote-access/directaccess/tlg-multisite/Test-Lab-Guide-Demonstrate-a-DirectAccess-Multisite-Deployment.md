@@ -23,7 +23,7 @@ ms.locfileid: "71388224"
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-원격 액세스는 원격 사용자가 DirectAccess 또는 RRAS VPN을 사용 하 여 내부 네트워크 리소스에 안전 하 게 액세스할 수 있도록 하는 Windows Server 2016, Windows Server 2012 R2 및 Windows Server 2012 운영 체제의 서버 역할입니다. 이 가이드에는 [ 테스트 랩 가이드를 확장 하는 단계별 지침이 포함 되어 있습니다. 멀티 사이트 시나리오에서 원격 액세스를 시연 하기 위해 IPv4 및 IPv6 @ no__t를 혼합 하 여 DirectAccess 단일 서버 설치를 시연 합니다.  
+원격 액세스는 원격 사용자가 DirectAccess 또는 RRAS VPN을 사용 하 여 내부 네트워크 리소스에 안전 하 게 액세스할 수 있도록 하는 Windows Server 2016, Windows Server 2012 R2 및 Windows Server 2012 운영 체제의 서버 역할입니다. 이 가이드에는 [테스트 랩 가이드: IPv4 및 i p v 6을 사용 하 여 DirectAccess 단일 서버 설치 시연](https://go.microsoft.com/fwlink/p/?LinkId=237004) 을 확장 하 여 멀티 사이트 시나리오에서 원격 액세스를 시연 하는 단계별 지침이 포함 되어 있습니다.  
   
 다중 사이트 시나리오에서 원격 액세스를 배포 하면 지리적으로 다양 한 위치에서 원격 액세스 서버를 구성할 수 있습니다. 이전에는 원격 사용자가 항상 특정 DirectAccess 서버를 통해 회사 네트워크에 연결 해야 했습니다. Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012 및 Windows 10 또는 Windows 8을 사용 하 여 배포의 각 지리적 위치에 대 한 진입점을 구성할 수 있습니다. 각 진입점은 단일 원격 액세스 서버 또는 원격 액세스 서버 클러스터 일 수 있습니다. 원격 사용자에 게는 조직의 원격 액세스 진입점에 연결할 수 있는 옵션이 있습니다. 예를 들어, 원격 사용자가 보통 아시아에 있는 원격 액세스 진입점에 연결 하는 경우 유럽으로의 b2b로 이동 하는 경우 클라이언트 컴퓨터는 가장 가까운 원격 액세스 진입점에 자동으로 연결 됩니다.  
   

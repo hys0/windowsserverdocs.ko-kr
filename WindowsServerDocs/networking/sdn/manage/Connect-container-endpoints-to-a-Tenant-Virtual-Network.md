@@ -45,7 +45,7 @@ ms.locfileid: "71355823"
 >이러한 네트워킹 모드는 Azure 공용 클라우드의 테 넌 트 가상 네트워크에 windows 컨테이너 끝점을 연결 하는 데 작동 하지 않습니다.
 
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 -  네트워크 컨트롤러를 사용 하 여 배포 된 SDN 인프라
 -  테 넌 트 가상 네트워크를 만들었습니다.
 -  Windows 컨테이너 기능이 사용 하도록 설정 되 고 Docker가 설치 되었으며 Hyper-v 기능이 활성화 된 배포 된 테 넌 트 가상 컴퓨터입니다. L2bridge 및 l2tunnel 네트워크용 이진 파일을 여러 개 설치 하려면 Hyper-v 기능이 필요 합니다.
@@ -61,7 +61,10 @@ ms.locfileid: "71355823"
 
 ## <a name="workflow"></a>워크플로
 
-[1. 네트워크 컨트롤러 (Hyper-v 호스트) ](#1-add-multiple-ip-configurations) @ no__t-1 @ no__t-22를 통해 기존 VM NIC 리소스에 여러 IP 구성을 추가 합니다. 호스트에서 네트워크 프록시를 사용 하도록 설정 하 여 컨테이너 끝점 (Hyper-v 호스트) @no__t에 대 한 CA IP 주소를 할당 합니다.-0 @ no__t-1 @ no__t-23. 사설 클라우드 플러그 인을 설치 하 여 컨테이너 끝점 (컨테이너 호스트 VM)에 CA IP 주소를 할당 ](#3-install-the-private-cloud-plug-in) @ no__t-1 @ no__t-24. Docker (컨테이너 호스트 VM) ](#4-create-an-l2bridge-container-network)를 사용 하 여 *l2bridge* 또는 *l2tunnel* 네트워크 만들기
+[1. 네트워크 컨트롤러 (Hyper-v 호스트)
+2를 통해 기존 VM NIC 리소스에 여러 IP 구성을 추가 합니다.](#1-add-multiple-ip-configurations) [ 호스트에서 네트워크 프록시를 사용 하도록 설정 하 여 컨테이너 끝점 (Hyper-v 호스트)
+3에 대 한 CA IP 주소를 할당](#2-enable-the-network-proxy) 합니다 [. 컨테이너 끝점 (컨테이너 호스트 VM)에 CA IP 주소를 할당 하려면 사설 클라우드 플러그](#3-install-the-private-cloud-plug-in) 인
+4를 설치 [합니다. Docker를 사용 하 여 *l2bridge* 또는 *l2tunnel* 네트워크 만들기 (컨테이너 호스트 VM)](#4-create-an-l2bridge-container-network)
 
 >[!NOTE]
 >System Center Virtual Machine Manager를 통해 만든 VM NIC 리소스에 대해 여러 IP 구성이 지원 되지 않습니다. 것이 좋습니다 이러한 배포 유형에 대 한 네트워크 컨트롤러 PowerShell을 사용 하 여 대역 외에서 VM NIC 리소스를 만들어야 합니다.
@@ -126,7 +129,7 @@ New-NetworkControllerNetworkInterface -ResourceId $vmnic.ResourceId -Properties 
 PS C:\> ConfigureMCNP.ps1
 ```
 
-### <a name="3-install-the-private-cloud-plug-in"></a>3. 사설 클라우드 플러그 인 설치
+### <a name="3-install-the-private-cloud-plug-in"></a>3. 사설 클라우드 플러그 인을 설치 합니다.
 이 단계에서는 HNS가 Hyper-v 호스트의 네트워크 프록시와 통신할 수 있도록 플러그 인을 설치 합니다.
 
 플러그 인을 설치 하려면 **컨테이너 호스트 (테 넌 트) 가상 머신**내에서 [InstallPrivateCloudPlugin](https://github.com/Microsoft/SDN/blob/master/Containers/InstallPrivateCloudPlugin.ps1) 스크립트를 실행 합니다.
@@ -136,8 +139,8 @@ PS C:\> ConfigureMCNP.ps1
 PS C:\> InstallPrivateCloudPlugin.ps1
 ```
 
-### <a name="4-create-an-l2bridge-container-network"></a>4. 만들기는 *l2bridge* 컨테이너 네트워크
-이 단계에서는 **컨테이너 호스트 (테 넌 트) 가상 컴퓨터** 에서 `docker network create` 명령을 사용 하 여 l2bridge 네트워크를 만듭니다. 
+### <a name="4-create-an-l2bridge-container-network"></a>4. *l2bridge* Container Network 만들기
+이 단계에서는 **컨테이너 호스트 (테 넌 트) 가상 컴퓨터** 의 `docker network create` 명령을 사용 하 여 l2bridge 네트워크를 만듭니다. 
 
 ```powershell
 # Create the container network

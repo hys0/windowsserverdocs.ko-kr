@@ -28,13 +28,13 @@ Adfs에서 MFA 및 인증 메커니즘에 대 한 자세한 내용은 참조 [�
 
 이 연습은 다음 섹션으로 구성됩니다.
 
--   [1단계: 랩 환경 설정 @ no__t-0
+-   [1 단계: 랩 환경 설정](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_1)
 
--   [2단계: 기본 AD FS 인증 메커니즘 확인 @ no__t-0
+-   [2 단계: 기본 AD FS 인증 메커니즘 확인](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_2)
 
--   [3단계: 페더레이션 서버에서 MFA 구성 @ no__t-0
+-   [3 단계: 페더레이션 서버에서 MFA 구성](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_3)
 
--   [4단계: MFA 메커니즘 @ no__t-0 확인
+-   [4 단계: MFA 메커니즘 확인](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_4)
 
 ## <a name="BKMK_1"></a>1 단계: 랩 환경 설정
 이 연습을 완료하려면 다음 구성 요소로 구성된 환경이 필요합니다.
@@ -98,7 +98,7 @@ MFA를 설정하려면 추가 인증 방법을 선택해야 합니다. 이 연�
     ```
 
     > [!WARNING]
-    > 이 명령이 성공적으로 실행 되었는지 확인 하려면 `Get-AdfsGlobalAuthenticationPolicy` 명령을 실행 하면 됩니다.
+    > 이 명령이 성공적으로 실행 되었는지 확인 하려면 `Get-AdfsGlobalAuthenticationPolicy` 명령을 실행할 수 있습니다.
 
 #### <a name="BKMK_8"></a>Windows Azure Multi-Factor Authentication
 페더레이션 서버에서 **Windows Azure Multi-Factor Authentication** 을 다운로드하여 추가 인증으로 구성하고 선택하려면 다음 절차를 완료합니다.
@@ -243,11 +243,11 @@ AD FS 관리 콘솔 또는 Windows PowerShell을 사용하여 MFA 정책을 설�
 
     구성한 MFA 정책 때문에 추가 인증을 진행하라는 메시지가 표시됩니다. 기본 메시지 텍스트는 **보안상 계정을 확인하기 위해 추가 정보가 필요합니다.** 입니다. (보안상 계정을 확인하기 위해 추가 정보가 필요합니다.)이지만 이 텍스트를 원하는 대로 사용자 지정할 수 있습니다. 로그인 환경을 사용자 지정하는 방법에 대한 자세한 내용은 [Customizing the AD FS Sign-in Pages](https://technet.microsoft.com/library/dn280950.aspx)을 참조하세요.
 
-    추가 인증 방법으로 인증서 인증을 구성한 경우에 기본 메시지 텍스트는 **인증에 사용 하려는 인증서를 선택 합니다. 작업을 취소 하면 브라우저를 닫고 다시 시도 하십시오.**
+    인증서 인증을 추가 인증 방법으로 구성한 경우 기본 메시지 텍스트는 **Select a certificate that you want to use for authentication. If you cancel the operation, please close your browser and try again.** (인증에 사용할 인증서를 선택하세요. 작업을 취소하려면 브라우저를 닫고 다시 시도하세요.)입니다.
 
     Microsoft Azure Multi-Factor Authentication을 추가 인증 방법으로 구성한 경우 기본 메시지 텍스트는 **A call will be placed to your phone to complete your authentication.** Windows Azure Multi-factor Authentication을 사용 하 여 로그인 하 고 확인 하는 기본 방법에 대 한 다양 한 옵션을 사용 하는 방법에 대 한 자세한 내용은 참조 [Windows Azure Multi-factor Authentication 개요](https://technet.microsoft.com/library/dn249479.aspx)합니다.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 [중요 한 응용 프로그램에 대 한 추가 다단계 인증을 사용 하 여 위험 관리](../../ad-fs/operations/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 [Windows Server 2012 r 2에서 AD FS에 대 한 랩 환경 설정](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
 

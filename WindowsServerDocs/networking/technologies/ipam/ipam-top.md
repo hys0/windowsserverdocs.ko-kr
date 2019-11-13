@@ -31,4 +31,4 @@ IPAM (IP 주소 관리)은 풍부한 사용자 환경을 통해 IP 주소 인프
 > -   [IPAM의 새로운 기능](../../technologies/ipam/What-s-New-in-IPAM.md)  
 > -   [IPAM 관리](../../technologies/ipam/Manage-IPAM.md)  
 > -   [Windows PowerShell의 IPAM (IP 주소 관리) 서버 Cmdlet](https://technet.microsoft.com/library/jj553807.aspx)  
-> -   비디오: [Windows Server 2016: IPAM의 DNS 관리 @ no__t-0  
+> -   비디오: [Windows Server 2016: IPAM에서 DNS 관리](https://channel9.msdn.com/Blogs/windowsserver/Windows-Server-2016-DNS-management-in-IPAM)  

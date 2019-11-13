@@ -22,7 +22,7 @@ ms.locfileid: "71361603"
 ---
 # <a name="setting-up-update-synchronizations"></a>업데이트 동기화 설정
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 동기화 하는 동안 WSUS 서버는 업데이트 원본에서 업데이트 (업데이트 메타 데이터 및 파일)을 다운로드 합니다. 또한 다운로드 새 제품 분류 및 범주 있으면 됩니다. WSUS 서버에 처음으로 동기화, 동기화 옵션을 구성할 때 지정한 업데이트를 모두 다운로드 됩니다. 첫 번째 동기화 후 WSUS 서버에 기존 업데이트 및 만료 정책에 대 한 메타 데이터에 대 한 수정 버전 뿐만 아니라 업데이트 원본에서 업데이트에만 업데이트를 다운로드합니다.
 
@@ -38,7 +38,7 @@ WSUS 서버는 제품이 나 제품군 (예: Windows, Windows Server 2008, Datac
 
 업데이트 제품 및 분류를 지정할 수는 **옵션** 페이지 **제품 및 분류**합니다. 제품은 제품군 별로 그룹화 된 계층 구조에 나와 있습니다. Windows를 선택 하면 자동으로 해당 제품 계층에 속하는 모든 제품을 선택 합니다. 부모 확인란을 선택 하 여 그 아래 모든 항목 뿐만 아니라 모든 이후 버전을 선택 합니다. 자식 확인란을 선택 하면 부모 확인란은 선택 되지 않습니다. 제품은 모든 Windows 제품 및 분류에 대 한 기본 설정에 대 한 기본 설정 및 보안 업데이트 합니다.
 
-WSUS 서버에서 복제 모드에서을 실행 하는 경우이 작업을 수행할 수 없습니다. 복제 모드에 대 한 자세한 내용은 [WSUS 복제 모드 실행](running-wsus-replica-mode.md)및 [ 단계 1을 참조 하세요. WSUS 배포 @ no__t-0에 대해 준비 합니다.
+WSUS 서버에서 복제 모드에서을 실행 하는 경우이 작업을 수행할 수 없습니다. 복제 모드에 대 한 자세한 내용은 [Wsus 복제 모드 실행](running-wsus-replica-mode.md)및 [1 단계: wsus 배포 준비](../plan/plan-your-wsus-deployment.md)를 참조 하세요.
 
 ##### <a name="to-specify-update-products-and-classifications-for-synchronization"></a>업데이트 제품 및 동기화에 대 한 분류를 지정 하려면
 
@@ -59,7 +59,7 @@ WSUS 서버에서 복제 모드에서을 실행 하는 경우이 작업을 수�
 WSUS 서버는 지정한 언어에 따라 업데이트를 다운로드 합니다. 사용 하는 언어의 모든 업데이트를 동기화 할 수 또는 언어 하위 집합을 지정할 수 있습니다. WSUS 서버 계층 있고 서로 다른 언어의 업데이트를 다운로드 해야 하는 경우 업스트림 서버에서 필요한 모든 언어를 지정 해야 합니다. 다운스트림 서버에서 업스트림 서버에서 지정 된 언어의 하위 집합을 지정할 수 있습니다.
 
 ### <a name="synchronizing-updates-from-the-microsoft-update-catalog"></a>Microsoft Update 카탈로그에서 업데이트를 동기화합니다.
-Microsoft 업데이트 카탈로그 사이트에서 업데이트를 동기화 하는 방법에 대 한 자세한 내용은 다음을 참조 하세요. [WSUS 및 카탈로그 사이트](wsus-and-the-catalog-site.md)
+Microsoft 업데이트 카탈로그 사이트에서 업데이트를 동기화 하는 방법에 대 한 자세한 내용은 [WSUS 및 카탈로그 사이트](wsus-and-the-catalog-site.md)를 참조 하십시오.
 
 ## <a name="configuring-proxy-server-settings"></a>프록시 서버 설정 구성
 업스트림 서버 또는 Microsoft Update와 동기화 하는 동안 프록시 서버를 사용 하도록 WSUS 서버를 구성할 수 있습니다. 이 설정은 사용자의 WSUS 동기화를 실행 하는 경우에 적용 됩니다. 기본적으로 WSUS 서버는 Microsoft Update 또는 업스트림 서버에 직접 연결 하려고 합니다.
@@ -87,9 +87,9 @@ Microsoft 업데이트 카탈로그 사이트에서 업데이트를 동기화 �
 
 WSUS 서버의 업데이트 소스와 동기화 하는 방법을 사용자 지정 하기 위한 옵션은 다음과 같습니다.
 
--   동기화에 대 한 사용자 지정 포트를 지정할 수 있습니다. 포트를 구성 하는 방법에 대 한 자세한 내용은 [Step 3: Wsus 배포 가이드에서 WSUS @ no__t-0을 구성 합니다.
+-   동기화에 대 한 사용자 지정 포트를 지정할 수 있습니다. 포트를 구성 하는 방법에 대 한 정보를 참조 하십시오. [3 단계: WSUS 구성](../deploy/2-configure-wsus.md) WSUS 배포 가이드에 있습니다.
 
--   보안 동기화 WSUS 서버 간에 업데이트 정보를 보안 소켓 레이어 (SSL)를 사용할 수 있습니다. SSL을 사용 하는 방법에 대 한 자세한 내용은 "3.5 섹션을 참조 하십시오. SSL(Secure Sockets Layer) 프로토콜을 사용 하 여 WSUS 보안 설정 ([Step 단계: Wsus 배포 가이드에서 WSUS @ no__t-0을 구성 합니다.
+-   보안 동기화 WSUS 서버 간에 업데이트 정보를 보안 소켓 레이어 (SSL)를 사용할 수 있습니다. SSL을 사용 하는 방법에 대 한 자세한 내용은 "3.5 섹션을 참조 하십시오. WSUS를 보호 Secure Sockets Layer 프로토콜 사용"의 [3 단계: WSUS 구성](../deploy/2-configure-wsus.md) WSUS 배포 가이드에 있습니다.
 
 ## <a name="synchronizing-manually-or-automatically"></a>수동 또는 자동으로 동기화합니다.
 WSUS 서버를 수동으로 동기화 하거나 자동으로 동기화 하는 시간을 지정할 수 있습니다.

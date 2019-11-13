@@ -30,7 +30,7 @@ OTP를 사용 하 여 원격 액세스를 구성 하려면 먼저 [고급 설정
   
 ## <a name="BKMK_Links"></a>참고 항목  
   
--   [2단계: RADIUS 서버 @ no__t-0 구성  
+-   [2 단계: RADIUS 서버 구성](Step-2-Configure-the-RADIUS-Server.md)  
   
 
 

@@ -19,11 +19,11 @@ ms.locfileid: "71393486"
 ---
 # <a name="storage-controllers-should-be-enabled-in-virtual-machines-to-provide-access-to-attached-storage"></a>저장소 컨트롤러 사용 해야 가상 컴퓨터에 연결 된 저장소에 대 한 액세스를 제공 합니다.
 
->적용 대상: Windows Server 2016
+>적용 대상: Windows Server 2016
 
 모범 사례 및 검사에 대한 자세한 내용은 [모범 사례 분석기](https://go.microsoft.com/fwlink/?LinkId=122786)를 참조하세요.  
   
-|속성|설명|  
+|속성|세부 정보|  
 |-|-|  
 |**운영 체제**|Windows Server 2016|  
 |**제품/기능**|Hyper-V|  
@@ -38,13 +38,13 @@ ms.locfileid: "71393486"
   
 ## <a name="impact"></a>영향  
   
-*Virtual machines는 사용 하지 않도록 설정 된 저장소 컨트롤러에 연결 된 저장소를 사용할 수 없습니다. 이는 다음과 같은 가상 컴퓨터에 영향을 줍니다.*  
+*가상 컴퓨터는 사용 하지 않도록 설정 된 저장소 컨트롤러에 연결 된 저장소를 사용할 수 없습니다. 이는 다음과 같은 가상 컴퓨터에 영향을 줍니다.*  
   
-@no__t-가상 머신 이름의 목록 >  
+가상 컴퓨터 이름 목록 \<>  
   
 ## <a name="resolution"></a>해결 방법  
   
-@no__t 게스트 운영 체제의 Device Manager를 사용 하 여 모든 저장소 컨트롤러를 사용 하도록 설정 합니다. 저장소 컨트롤러가 필요 하지 않은 경우 Hyper-v 관리자를 사용 하 여 가상 머신에서 제거 합니다. *  
+*게스트 운영 체제의 Device Manager를 사용 하 여 모든 저장소 컨트롤러를 사용 하도록 설정 합니다. 저장소 컨트롤러가 필요 하지 않은 경우 Hyper-v 관리자를 사용 하 여 가상 머신에서 제거 합니다.*  
   
 장치 관리자를 사용 하는 방법에 대 한 자세한 내용은 게스트 운영 체제에서 도움말을 참조 합니다. 저장소 컨트롤러를 제거 하는 방법에 대 한 지침은 다음 절차를 참조 합니다.  
   

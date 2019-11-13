@@ -16,7 +16,7 @@ ms.locfileid: "71386537"
 ---
 # <a name="managing-the-host-guardian-service"></a>호스트 보호자 서비스 관리
 
-> 적용 대상: Windows server 2019, Windows Server (반기 채널), Windows Server 2016
+> 적용 대상: Windows Server 2019, Windows Server (반기 채널), Windows Server 2016
 
 HGS (호스트 보호 서비스)는 보호 된 패브릭 솔루션의 핵심이입니다.
 패브릭의 Hyper-v 호스트를 호스터 또는 엔터프라이즈에서 인식 하 고 신뢰할 수 있는 소프트웨어를 실행 하 고 보호 된 Vm을 시작 하는 데 사용 되는 키를 관리 하는 일을 담당 합니다.
@@ -50,7 +50,7 @@ HGS는 미리 구성 된 2 개의 JEA 역할을 제공 합니다.
 - 사용자만이 기존 정책을 감사할 수 있도록 허용 하는 **HGS 검토자** . HGS 구성을 변경할 수 없습니다.
 
 JEA를 사용 하려면 먼저 새 표준 사용자를 만들어 HGS admins 또는 HGS 검토자 그룹의 구성원으로 설정 해야 합니다.
-@No__t-0을 사용 하 여 HGS에 대해 새 포리스트를 설정 하는 경우 이러한 그룹의 이름은 각각 "*servicename*Administrators" 및 "*servicename*검토자"로 지정 됩니다. 여기서 *servicename* 은 hgs 클러스터의 네트워크 이름입니다.
+`Install-HgsServer`를 사용 하 여 HGS에 대 한 새 포리스트를 설정 하는 경우 이러한 그룹은 각각 "*servicename*Administrators" 및 "*servicename*검토자"로 이름이 지정 됩니다. 여기서 *servicename* 은 hgs 클러스터의 네트워크 이름입니다.
 기존 도메인에 HGS를 조인한 경우 `Initialize-HgsServer`에서 지정한 그룹 이름을 참조 해야 합니다.
 
 **HGS 관리자 및 검토자 역할에 대 한 표준 사용자 만들기**
@@ -76,7 +76,7 @@ HGS에 네트워크로 연결 된 원격 컴퓨터에서 PowerShell에서 다음
 Enter-PSSession -ComputerName <hgsnode> -Credential '<hgsdomain>\hgsreviewer01' -ConfigurationName 'microsoft.windows.hgs'
 ```
 
-그런 다음 `Get-Command`을 사용 하 여 세션에서 허용 되는 명령을 확인 하 고 허용 되는 명령을 실행 하 여 구성을 감사할 수 있습니다.
+그런 다음 `Get-Command` 세션에서 허용 되는 명령을 확인 하 고 허용 되는 명령을 실행 하 여 구성을 감사할 수 있습니다.
 아래 예제에서는 HGS에서 사용 하도록 설정 된 정책을 확인 합니다.
 
 ```powershell
@@ -85,7 +85,7 @@ Get-Command
 Get-HgsAttestationPolicy
 ```
 
-JEA 세션을 사용 하 여 작업을 완료 한 후에 `Exit-PSSession` 또는 해당 별칭 `exit`을 입력 합니다. 
+JEA 세션에 대 한 작업이 완료 되 면 명령 `Exit-PSSession` 또는 해당 별칭 `exit`을 입력 합니다. 
 
 **관리자 역할을 사용 하 여 HGS에 새 정책 추가**
 
@@ -201,7 +201,7 @@ Export-HgsServerState -Path C:\temp\HGSBackup.xml
 
 **인증서 백업**
 
-@No__t-0 명령은 명령이 실행 될 때 HGS에 추가 된 PFX 기반 인증서를 백업 합니다.
+`Export-HgsServerState` 명령은 명령이 실행 될 때 HGS에 추가 된 PFX 기반 인증서를 백업 합니다.
 지문을 사용 하 여 HGS에 인증서를 추가한 경우 (일반적으로 내보낼 수 없고 하드웨어 지원 인증서의 경우) 인증서에 대 한 개인 키를 수동으로 백업 해야 합니다.
 HGS에 등록 되어 있고 수동으로 백업 해야 하는 인증서를 식별 하려면 작동 하는 모든 HGS 서버 노드에서 다음 PowerShell 명령을 실행 합니다.
 
@@ -220,7 +220,7 @@ Get-HgsKeyProtectionCertificate | Where-Object { $_.CertificateData.GetType().Na
 백업 된 HGS 서버 상태에는 hgs 클러스터의 이름, Active Directory의 정보 또는 HGS Api와의 보안 통신에 사용 되는 SSL 인증서가 포함 되지 않습니다.
 이러한 설정은 일관성을 위해 중요 하지만 재해 발생 후 HGS 클러스터를 다시 온라인 상태로 전환 하는 것은 중요 하지 않습니다.
 
-HGS 서비스의 이름을 캡처하려면 `Get-HgsServer`을 실행 하 고 증명 및 키 보호 Url에서 플랫 이름을 적어 둡니다.
+HGS 서비스의 이름을 캡처하려면 `Get-HgsServer`를 실행 하 고 증명 및 키 보호 Url에서 플랫 이름을 확인 합니다.
 예를 들어 증명 URL이 "<http://hgs.contoso.com/Attestation>" 인 경우 "hgs"는 HGS 서비스 이름입니다.
 
 HGS에서 사용 하는 Active Directory 도메인은 다른 Active Directory 도메인과 같이 관리 해야 합니다.
@@ -260,9 +260,9 @@ HGS의 전체 손실에서 복구 하는 경우 [배포 가이드의 지침](gua
 Import-HgsServerState -Path C:\Temp\HGSBackup.xml
 ```
 
-관리자가 신뢰할 수 있는 증명 정책 또는 TPM으로 신뢰할 수 있는 증명 정책만 가져오려는 경우 [HgsServerState](https://technet.microsoft.com/library/mt652168.aspx)에 `-ImportActiveDirectoryModeState` 또는 `-ImportTpmModeState` 플래그를 지정 하 여이 작업을 수행할 수 있습니다.
+관리자가 신뢰할 수 있는 증명 정책 또는 TPM으로 신뢰할 수 있는 증명 정책만 가져오려는 경우 `-ImportActiveDirectoryModeState` 또는 `-ImportTpmModeState` 플래그를 [HgsServerState](https://technet.microsoft.com/library/mt652168.aspx)으로 지정 하 여 수행할 수 있습니다.
 
-@No__t-0을 실행 하기 전에 Windows Server 2016에 대 한 최신 누적 업데이트가 설치 되어 있는지 확인 합니다.
+`Import-HgsServerState`를 실행 하기 전에 Windows Server 2016에 대 한 최신 누적 업데이트가 설치 되어 있는지 확인 합니다.
 실패 하면 가져오기 오류가 발생할 수 있습니다.
 
 > [!NOTE]
@@ -280,7 +280,7 @@ Import-HgsServerState -Path C:\Temp\HGSBackup.xml
 복원 된 HGS 클러스터에 추가 하는 각 추가 노드에서이 단계를 반복 해야 합니다.
 
 #### <a name="review-imported-attestation-policies"></a>가져온 증명 정책 검토
-백업에서 설정을 가져온 후 보호 된 Vm을 실행 하는 데 신뢰할 수 있는 호스트만 성공적으로 인증할 수 있도록 `Get-HgsAttestationPolicy`을 사용 하 여 가져온 모든 정책을 철저히 검토 하는 것이 좋습니다.
+백업에서 설정을 가져온 후에는 `Get-HgsAttestationPolicy`를 사용 하 여 가져온 모든 정책을 철저히 검토 하 여 보호 된 Vm을 실행 하기 위해 신뢰 하는 호스트만 성공적으로 입증할 수 있도록 하는 것이 좋습니다.
 더 이상 보안 상태와 일치 하지 않는 정책을 찾으면 [해당 정책을 사용 하지 않도록 설정 하거나 제거할](#review-attestation-policies)수 있습니다.
 
 #### <a name="run-diagnostics-to-check-system-state"></a>진단을 실행 하 여 시스템 상태 확인
@@ -334,7 +334,7 @@ HGS는 호스트가 "정상"으로 간주 되어 보호 된 Vm을 실행할 수 
 TPM 증명은 더 복잡 하며, 시스템의 코드 및 구성을 측정 하는 다양 한 정책을 포함 하 여 시스템의 상태가 정상 인지 확인 합니다.
 
 단일 HGS는 Active Directory 및 TPM 정책 모두를 사용 하 여 한 번에 구성할 수 있지만 서비스는 호스트가 증명을 시도할 때 구성 된 현재 모드의 정책만 확인 합니다.
-HGS 서버의 모드를 확인 하려면 `Get-HgsServer`을 실행 합니다.
+HGS 서버의 모드를 확인 하려면 `Get-HgsServer`를 실행 합니다.
 
 ### <a name="default-policies"></a>기본 정책
 TPM에서 신뢰할 수 있는 증명의 경우 HGS에 구성 된 몇 가지 기본 제공 정책이 있습니다.
@@ -355,13 +355,13 @@ Hgs_BitLockerEnabled           | Hyper-v 호스트에서 BitLocker를 사용 하
 Hgs_IommuEnabled               | 직접 메모리 액세스 공격을 방지 하기 위해 호스트에 IOMMU 장치가 사용 되어야 합니다. 이 정책을 사용 하지 않도록 설정 하 고 IOMMU를 사용 하지 않는 호스트를 사용 하면 테 넌 트 VM 암호를 노출 하 여 메모리 공격을 직접
 Hgs_NoHibernation              | Hyper-v 호스트에서 최대 절전 모드를 사용 하지 않도록 설정 해야 합니다. 이 정책을 사용 하지 않도록 설정 하면 호스트가 보호 된 VM 메모리를 암호화 되지 않은 최대 절전 모드 파일에 저장할 수 있습니다.
 Hgs_NoDumps                    | Hyper-v 호스트에서 메모리 덤프를 사용 하지 않도록 설정 해야 합니다. 이 정책을 사용 하지 않도록 설정 하는 경우 보호 된 VM 메모리가 암호화 되지 않은 크래시 덤프 파일에 저장 되지 않도록 덤프 암호화를 구성 하는 것이 좋습니다.
-Hgs_DumpEncryption             | Hyper-v 호스트에서 사용 하도록 설정 된 경우 HGS에서 신뢰 하는 암호화 키를 사용 하 여 암호화 하려면 메모리 덤프가 필요 합니다. 호스트에서 덤프가 사용 되지 않는 경우에는이 정책이 적용 되지 않습니다. 이 정책과 *Hgs @ no__t-1NoDumps* 를 모두 사용 하지 않도록 설정 하면 보호 된 VM 메모리가 암호화 되지 않은 덤프 파일에 저장 될 수 있습니다.
-Hgs_DumpEncryptionKey          | 메모리 덤프를 허용 하도록 구성 된 호스트가 HGS에 알려진 관리 정의 덤프 파일 암호화 키를 사용 하도록 하는 부정 정책입니다. 이 정책은 *Hgs @ no__t-1암호화* 를 사용 하지 않도록 설정한 경우에는 적용 되지 않습니다.
+Hgs_DumpEncryption             | Hyper-v 호스트에서 사용 하도록 설정 된 경우 HGS에서 신뢰 하는 암호화 키를 사용 하 여 암호화 하려면 메모리 덤프가 필요 합니다. 호스트에서 덤프가 사용 되지 않는 경우에는이 정책이 적용 되지 않습니다. 이 정책과 *Hgs\_nodumps* 모두 사용 하지 않도록 설정 된 경우 보호 된 VM 메모리를 암호화 되지 않은 덤프 파일에 저장할 수 있습니다.
+Hgs_DumpEncryptionKey          | 메모리 덤프를 허용 하도록 구성 된 호스트가 HGS에 알려진 관리 정의 덤프 파일 암호화 키를 사용 하도록 하는 부정 정책입니다. 이 정책은 *Hgs\_암호화* 되지 않은 암호화를 사용 하지 않도록 설정한 경우에는 적용 되지 않습니다.
 
 ### <a name="authorizing-new-guarded-hosts"></a>새 보호 된 호스트 권한 부여
 새 호스트가 보호 된 호스트가 될 수 있는 권한을 부여 하려면 (예: 증명 성공), HGS는 호스트를 신뢰 하 고 (TPM에서 신뢰할 수 있는 증명을 사용 하도록 구성 된 경우) 해당 소프트웨어에서 실행 되는 소프트웨어를 신뢰 해야 합니다.
 새 호스트에 권한을 부여 하는 단계는 현재 HGS가 구성 된 증명 모드에 따라 다릅니다.
-보호 된 패브릭에 대 한 증명 모드를 확인 하려면 모든 HGS 노드에서 `Get-HgsServer`을 실행 합니다.
+보호 된 패브릭에 대 한 증명 모드를 확인 하려면 모든 HGS 노드에서 `Get-HgsServer`를 실행 합니다.
 
 #### <a name="software-configuration"></a>소프트웨어 구성
 새 Hyper-v 호스트에서 Windows Server 2016 Datacenter edition이 설치 되어 있는지 확인 합니다.
@@ -468,7 +468,7 @@ Add-HgsAttestationCiPolicy -Name 'WS2016-Hardware01' -Path 'C:\temp\ws2016-hardw
 
 **메모리 덤프 암호화 키 추가**
 
-*Hgs @ no__t-1NoDumps* 정책을 사용 하지 않도록 설정 하 고 *hgs @ no__t-3덤프 암호화* 정책을 사용 하는 경우 보호 된 호스트는 이러한 덤프가 암호화 된 동안에도 메모리 덤프 (크래시 덤프 포함)를 사용할 수 있습니다. 보호 된 호스트는 메모리 덤프를 사용할 수 없거나 HGS에 알려진 키를 사용 하 여 암호화 하는 경우에만 증명을 전달 합니다. 기본적으로 HGS에는 덤프 암호화 키가 구성 되어 있지 않습니다.
+*Hgs\_NoDumps* 정책을 사용 하지 않도록 설정 하 고 *hgs\_암호화* 되지 않은 암호화 정책을 사용 하는 경우 보호 된 호스트는 덤프를 암호화 하는 동안 메모리 덤프 (크래시 덤프 포함)를 사용할 수 있습니다. 보호 된 호스트는 메모리 덤프를 사용할 수 없거나 HGS에 알려진 키를 사용 하 여 암호화 하는 경우에만 증명을 전달 합니다. 기본적으로 HGS에는 덤프 암호화 키가 구성 되어 있지 않습니다.
 
 HGS에 덤프 암호화 키를 추가 하려면 `Add-HgsAttestationDumpPolicy` cmdlet을 사용 하 여 HGS에 덤프 암호화 키의 해시를 제공 합니다.
 덤프 암호화를 사용 하 여 구성 된 Hyper-v 호스트에서 TPM 기준선을 캡처하면 해시가 tcglog에 포함 되 고 `Add-HgsAttestationDumpPolicy` cmdlet에 제공 될 수 있습니다.
@@ -490,14 +490,14 @@ HGS에 알려지지 않은 키를 사용 하 여 메모리 덤프를 암호화 �
 
 #### <a name="check-if-the-system-passed-attestation"></a>시스템이 증명을 통과 했는지 확인 합니다.
 필요한 정보를 HGS에 등록 한 후 호스트가 증명을 전달 하는지 확인 해야 합니다.
-새로 추가 된 Hyper-v 호스트에서 `Set-HgsClientConfiguration`을 실행 하 고 HGS 클러스터에 올바른 Url을 제공 합니다.
-이러한 Url은 임의의 HGS 노드에서 `Get-HgsServer`을 실행 하 여 얻을 수 있습니다.
+새로 추가 된 Hyper-v 호스트에서 `Set-HgsClientConfiguration`를 실행 하 고 HGS 클러스터에 올바른 Url을 제공 합니다.
+이러한 Url은 모든 HGS 노드에서 `Get-HgsServer`를 실행 하 여 가져올 수 있습니다.
 
 ```powershell
 Set-HgsClientConfiguration -KeyProtectionServerUrl 'http://hgs.bastion.local/KeyProtection' -AttestationServerUrl 'http://hgs.bastion.local/Attestation'
 ```
 
-결과 상태가 "IsHostGuarded: True "구성 문제를 해결 해야 합니다.
+결과 상태가 "IsHostGuarded: True"를 나타내지 않으면 구성 문제를 해결 해야 합니다.
 증명에 실패 한 호스트에서 다음 명령을 실행 하 여 실패 한 증명을 해결 하는 데 도움이 될 수 있는 문제에 대 한 자세한 보고서를 가져옵니다.
 
 ```powershell
@@ -505,7 +505,7 @@ Get-HgsTrace -RunDiagnostics -Detailed
 ```
 
 > [!IMPORTANT]
-> Windows Server 2019 또는 Windows 10 버전 1809을 사용 중이 고 코드 무결성 정책을 사용 하는 경우 `Get-HgsTrace`은 **코드 무결성 정책 활성** 진단에 대 한 오류를 반환할 수 있습니다.
+> Windows Server 2019 또는 Windows 10 버전 1809을 사용 중이 고 코드 무결성 정책을 사용 하는 경우 `Get-HgsTrace` **코드 무결성 정책 활성** 진단에 대 한 오류를 반환할 수 있습니다.
 > 오류가 유일한 진단 인 경우에는이 결과를 무시 해도 안전 합니다.
 
 ### <a name="review-attestation-policies"></a>증명 정책 검토
@@ -525,9 +525,9 @@ Get-HgsAttestationPolicy
 Disable-HgsAttestationPolicy -Name 'PolicyName'
 ```
 
-마찬가지로 `Enable-HgsAttestationPolicy`을 사용 하 여 정책을 다시 사용 하도록 설정할 수 있습니다.
+마찬가지로 `Enable-HgsAttestationPolicy`를 사용 하 여 정책을 다시 사용 하도록 설정할 수 있습니다.
 
-더 이상 정책을 필요로 하지 않고 모든 HGS 노드에서 제거 하려는 경우 `Remove-HgsAttestationPolicy -Name 'PolicyName'`을 실행 하 여 정책을 영구적으로 삭제 합니다.
+더 이상 정책을 필요로 하지 않고 모든 HGS 노드에서 제거 하려는 경우 `Remove-HgsAttestationPolicy -Name 'PolicyName'`를 실행 하 여 정책을 영구적으로 삭제 합니다.
 
 ## <a name="changing-attestation-modes"></a>증명 모드 변경
 관리자가 신뢰할 수 있는 증명을 사용 하 여 보호 된 패브릭을 시작한 경우 사용자 환경에 TPM 2.0 호환 호스트를 충분히 확보 하는 즉시 더 강력한 TPM 증명 모드로 업그레이드할 가능성이 높습니다.
@@ -564,7 +564,7 @@ Get-HgsTrace -RunDiagnostics -Target $targets -Diagnostic GuardedFabricTpmMode
 Set-HgsServer -TrustTpm
 ```
 
-문제가 발생 하 여 Active Directory 모드로 다시 전환 해야 하는 경우에는 `Set-HgsServer -TrustActiveDirectory`을 실행 하 여이 작업을 수행할 수 있습니다.
+문제가 발생 하 여 Active Directory 모드로 다시 전환 해야 하는 경우 `Set-HgsServer -TrustActiveDirectory`를 실행 하 여이 작업을 수행할 수 있습니다.
 
 모든 것이 예상 대로 작동 하는지 확인 한 후에는 모든 신뢰할 수 있는 Active Directory 호스트 그룹을 HGS에서 제거 하 고 HGS와 패브릭 도메인 간의 트러스트를 제거 해야 합니다.
 Active Directory 신뢰를 그대로 유지 하는 경우 누군가가 트러스트를 다시 사용 하도록 설정 하 고 Active Directory 모드로 전환 하 여 보호 된 호스트에서 신뢰할 수 없는 코드가 실행 되지 않도록 할 수 있습니다.
@@ -586,7 +586,7 @@ HGS에 새 키를 추가 하는 가장 일반적인 두 가지 이유는 다음�
 
 새 키를 추가 하는 프로세스는 사용 하는 인증서의 유형에 따라 달라 집니다.
 
-**옵션 1: HSM @ no__t에 저장 된 인증서 추가-0
+**옵션 1: HSM에 저장 된 인증서 추가**
 
 HGS 키를 보호 하는 데 권장 되는 방법은 HSM (하드웨어 보안 모듈)에서 만든 인증서를 사용 하는 것입니다.
 Hsm을 사용 하 여 키 사용은 데이터 센터의 보안에 민감한 장치에 물리적으로 액세스할 수 있습니다.
@@ -599,7 +599,7 @@ Hsm을 사용 하 여 키 사용은 데이터 센터의 보안에 민감한 장�
     1. HSM에서 **데이터** 암호화 키 사용 속성을 사용 하 여 암호화 인증서 만들기
     2. HSM에서 **디지털 서명** 키 사용 속성을 사용 하 여 서명 인증서 만들기
 3. HSM 공급 업체의 지침에 따라 각 HGS 노드의 로컬 인증서 저장소에 인증서를 설치 합니다.
-4. HSM이 세분화 된 사용 권한을 사용 하 여 개인 키를 사용할 수 있는 특정 응용 프로그램 또는 사용자 권한을 부여 하는 경우, 인증서에 대 한 HGS 그룹 관리 서비스 계정 액세스 권한을 부여 해야 합니다. @No__t-0을 실행 하 여 HGS gMSA 계정의 이름을 찾을 수 있습니다.
+4. HSM이 세분화 된 사용 권한을 사용 하 여 개인 키를 사용할 수 있는 특정 응용 프로그램 또는 사용자 권한을 부여 하는 경우, 인증서에 대 한 HGS 그룹 관리 서비스 계정 액세스 권한을 부여 해야 합니다. `(Get-IISAppPool -Name KeyProtection).ProcessModel.UserName`를 실행 하 여 HGS gMSA 계정의 이름을 찾을 수 있습니다.
 5. 다음 명령에서 지문을 인증서의 인증서로 바꿔서 HGS에 서명 및 암호화 인증서를 추가 합니다.
 
     ```powershell
@@ -607,11 +607,11 @@ Hsm을 사용 하 여 키 사용은 데이터 센터의 보안에 민감한 장�
     Add-HgsKeyProtectionCertificate -CertificateType Signing -Thumbprint "99887766554433221100FFEEDDCCBBAA"
     ```
 
-**옵션 2: 내보낼 수 없는 소프트웨어 인증서 추가 @ no__t-0
+**옵션 2: 내보낼 수 없는 소프트웨어 인증서 추가**
 
 회사 또는 공용 인증 기관에서 발급 한 소프트웨어 지원 인증서를 내보낼 수 없는 개인 키가 있는 경우 해당 지문을 사용 하 여 HGS에 인증서를 추가 해야 합니다.
 1. 인증 기관의 지침에 따라 컴퓨터에 인증서를 설치 합니다.
-2. HGS 그룹 관리 서비스 계정에 인증서의 개인 키에 대 한 읽기 액세스 권한을 부여 합니다. @No__t-0을 실행 하 여 HGS gMSA 계정의 이름을 찾을 수 있습니다.
+2. HGS 그룹 관리 서비스 계정에 인증서의 개인 키에 대 한 읽기 액세스 권한을 부여 합니다. `(Get-IISAppPool -Name KeyProtection).ProcessModel.UserName`를 실행 하 여 HGS gMSA 계정의 이름을 찾을 수 있습니다.
 3. 다음 명령을 사용 하 여 인증서를 HGS에 등록 하 고 인증서의 지문 (서명 인증서에 대 한 *서명* *변경)을 대체* 합니다.
 
     ```powershell
@@ -622,7 +622,7 @@ Hsm을 사용 하 여 키 사용은 데이터 센터의 보안에 민감한 장�
 > 개인 키를 수동으로 설치 하 고 각 HGS 노드의 gMSA 계정에 대 한 읽기 권한을 부여 해야 합니다.
 > HGS는 해당 지 문으로 등록 된 *모든* 인증서에 대 한 개인 키를 자동으로 복제할 수 없습니다.
 
-**Option 3: PFX 파일에 저장 된 인증서 추가 @ no__t-0
+**옵션 3: PFX 파일에 저장 된 인증서 추가**
 
 PFX 파일 형식으로 저장 하 고 암호로 보호할 수 있는 내보내기 가능한 개인 키가 포함 된 소프트웨어 지원 인증서가 있는 경우 HGS는 자동으로 인증서를 관리할 수 있습니다.
 PFX 파일을 사용 하 여 추가한 인증서는 HGS 클러스터의 모든 노드에 자동으로 복제 되 고, HGS는 개인 키에 대 한 액세스를 보호 합니다.
@@ -710,11 +710,11 @@ HGS 노드에서 다음 단계를 수행 하 여 새 쌍의 암호화 및 서명
 
 > [!NOTE]
 > Vm 소유자가 vm에서 잘못 된 키 보호기를 설정 하 고 패브릭에서 VM을 실행할 수 있는 권한을 부여 하지 않는 경우 보호 된 VM을 시작할 수 없습니다.
-> 마지막으로 성공한 키 보호기로 돌아가려면 `Set-VMKeyProtector -RestoreLastKnownGoodKeyProtector`을 실행 합니다.
+> 마지막으로 알려진 좋은 키 보호기로 돌아가려면 `Set-VMKeyProtector -RestoreLastKnownGoodKeyProtector`를 실행 합니다.
 
 새 보호자 키에 대 한 권한을 부여 하도록 모든 Vm을 업데이트 한 후에는 이전 키를 사용 하지 않도록 설정 하 고 제거할 수 있습니다.
 
-13. @No__t-0에서 이전 인증서의 지문을 가져옵니다.
+13. `Get-HgsKeyProtectionCertificate -IsPrimary $false`에서 이전 인증서의 지문을 가져옵니다.
 
 14. 다음 명령을 실행 하 여 각 인증서를 사용 하지 않도록 설정 합니다.  
 

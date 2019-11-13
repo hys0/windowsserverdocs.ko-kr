@@ -50,13 +50,13 @@ Azure 구독이 없는 경우 시작 하기 전에 [무료 계정을 만듭니�
 
 | 변수 이름 | 용도 |
 | :---: | :--- |
-| adminUsername | 각 VM에서 로컬 관리자로 구성할 사용자 이름입니다. |
-| adminPassword | 각 VM에서 로컬 관리자 암호로 구성할 일반 텍스트 암호입니다. |
-| resourceGroupName | 리소스 그룹에 사용할 이름입니다. 기존 이름을 복제 하면 안 됩니다. |
-| 위치 | 배포 하려는 Azure location name입니다. @No__t-0을 사용 하 여 현재 구독에 대해 지원 되는 영역을 나열 합니다. |
+| AdminUsername | 각 VM에서 로컬 관리자로 구성할 사용자 이름입니다. |
+| AdminPassword | 각 VM에서 로컬 관리자 암호로 구성할 일반 텍스트 암호입니다. |
+| ResourceGroupName | 리소스 그룹에 사용할 이름입니다. 기존 이름을 복제 하면 안 됩니다. |
+| 위치 | 배포 하려는 Azure location name입니다. `az account list-locations`를 사용 하 여 현재 구독에 대해 지원 되는 영역을 나열 합니다. |
 | VNetName | Azure 가상 네트워크를 할당 하는 이름은 기존 이름을 중복 하면 안 됩니다. |
 | VNetAddress | Azure 네트워킹에 사용할 IP 범위입니다. 기존 범위를 복제 하면 안 됩니다. |
-| subnetName | IP 서브넷을 할당 하는 이름입니다. 기존 이름을 복제 하면 안 됩니다. |
+| SubnetName | IP 서브넷을 할당 하는 이름입니다. 기존 이름을 복제 하면 안 됩니다. |
 | SubnetAddress | 도메인 컨트롤러의 서브넷 주소입니다. 는 VNet 내부의 서브넷 이어야 합니다. |
 | 가용성 집합 | 도메인 컨트롤러 Vm이 가입할 가용성 집합의 이름입니다. |
 | VMSize | 배포 위치에서 사용할 수 있는 표준 Azure VM 크기입니다. |
@@ -159,7 +159,8 @@ az vm create \
 
 Azure에서 새 도메인 컨트롤러의 수준을 올린 후에는 가상 네트워크에 대 한 기본 및 보조 DNS 서버로 설정 해야 하며, 모든 온-프레미스 DNS 서버는 3 차 이상으로 강등 됩니다. DNS 서버를 변경 하는 방법에 대 한 자세한 내용은 [가상 네트워크 만들기, 변경 또는 삭제](https://docs.microsoft.com/azure/virtual-network/manage-virtual-network#change-dns-servers)문서에서 찾을 수 있습니다.
 
-온-프레미스 네트워크를 Azure로 확장 하는 방법에 대 한 정보는 사이트 간 VPN 연결 만들기 @ no__t-1 @no__t 문서에서 찾을 수 있습니다.
+온-프레미스 네트워크를 Azure로 확장 하는 방법에 대 한 정보는 [사이트 간 VPN 연결 만들기](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal
+)문서에서 찾을 수 있습니다.
 
 ## <a name="configure-the-vms-and-install-active-directory-domain-services"></a>Vm을 구성 하 고 Active Directory Domain Services를 설치 합니다.
 

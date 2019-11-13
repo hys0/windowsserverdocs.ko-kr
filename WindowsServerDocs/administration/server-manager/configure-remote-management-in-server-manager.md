@@ -22,7 +22,7 @@ ms.locfileid: "71383215"
 ---
 # <a name="configure-remote-management-in-server-manager"></a>서버 관리자에서 원격 관리 구성
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Windows Server의 원격 서버에서 관리 작업을 수행 하려면 서버 관리자를 사용할 수 있습니다. Windows Server 2016를 실행 하는 서버에서는 원격 관리가 기본적으로 사용 됩니다. 서버를 원격으로 관리 하려면 서버 관리자를 사용 하 여 서버 관리자 서버 풀에는 서버를 추가 합니다.
 
@@ -32,9 +32,9 @@ Windows Server 2016 보다 오래 된 Windows Server 릴리스를 실행 하는 
 
 |운영 체제|필요한 소프트웨어|관리 효율성|
 |----------|-----------|---------|
-| Windows Server 2012 R2 또는 Windows Server 2012 |-   [.NET Framework 4.6](https://www.microsoft.com/download/details.aspx?id=45497)<br />-   [Windows Management Framework 5.0](https://go.microsoft.com/fwlink/?LinkID=395058). Windows 관리 프레임 워크 5.0 다운로드 패키지는 Windows Server 2012 R2, Windows Server 2012 및 Windows Server 2008 r 2에서 Windows Management Instrumentation (WMI) 공급자를 업데이트합니다. 관리 되는 서버에 설치 되어 있는 역할 및 기능에 대 한 정보를 수집 하는 서버 관리자를 사용 하는 업데이트 된 WMI 공급자 있습니다. Windows Server 2012 R2, Windows Server 2012 또는 Windows Server 2008 r 2를 실행 하는 서버는 관리 효율성 상태는 업데이트가 적용 될 때까지 **액세스할 수 없습니다.** 합니다.<br />-성능 업데이트와 관련 된 [기술 자료 문서 2682011](https://go.microsoft.com/fwlink/p/?LinkID=245487) 은 Windows Server 2012 r 2를 실행 하는 서버 또는 Windows Server 2012에 필요 하지 않습니다.||
-| Windows Server 2008 R2 |-   [.NET Framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653)<br />-   [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/?LinkId=293881). Windows Management Framework 4.0 다운로드 패키지는 Windows Server 2008 r 2에서 Windows Management Instrumentation (WMI) 공급자를 업데이트합니다. 관리 되는 서버에 설치 되어 있는 역할 및 기능에 대 한 정보를 수집 하는 서버 관리자를 사용 하는 업데이트 된 WMI 공급자 있습니다. Windows Server 2008 r 2를 실행 하는 서버는 관리 효율성 상태는 업데이트가 적용 될 때까지 **액세스할 수 없습니다.** 합니다.<br />-성능 업데이트와 관련 된 [기술 자료 문서 2682011](https://go.microsoft.com/fwlink/p/?LinkID=245487) 서버 관리자 Windows Server 2008 r 2에서 성능 데이터를 수집할 수 있습니다.||
-| Windows Server 2008 |-   [.NET Framework 4](https://www.microsoft.com/download/en/details.aspx?id=17718)<br />-    windows[management framework 3.0](https://go.microsoft.com/fwlink/p/?LinkID=229019) windows Server 2008의 Windows management framework 3.0 WMI(WINDOWS MANAGEMENT INSTRUMENTATION) (WMI) 공급자를 다운로드 합니다. 관리 되는 서버에 설치 되어 있는 역할 및 기능에 대 한 정보를 수집 하는 서버 관리자를 사용 하는 업데이트 된 WMI 공급자 있습니다. 업데이트가 적용 될 때까지 Windows Server 2008를 실행 하는 서버의 관리 효율성 상태는 **액세스할 수 없음-이전 버전에서 Windows Management Framework 3.0를 실행 하는지 확인**합니다.<br />-성능 업데이트와 관련 된 [기술 자료 문서 2682011](https://go.microsoft.com/fwlink/p/?LinkID=245487) 서버 관리자에서 Windows Server 2008 성능 데이터를 수집할 수 있습니다.||
+| Windows Server 2012 R2 또는 Windows Server 2012 |-   [.NET Framework 4.6](https://www.microsoft.com/download/details.aspx?id=45497)<br />[Windows Management Framework 5.0](https://go.microsoft.com/fwlink/?LinkID=395058)을 -   합니다. Windows 관리 프레임 워크 5.0 다운로드 패키지는 Windows Server 2012 R2, Windows Server 2012 및 Windows Server 2008 r 2에서 Windows Management Instrumentation (WMI) 공급자를 업데이트합니다. 관리 되는 서버에 설치 되어 있는 역할 및 기능에 대 한 정보를 수집 하는 서버 관리자를 사용 하는 업데이트 된 WMI 공급자 있습니다. Windows Server 2012 R2, Windows Server 2012 또는 Windows Server 2008 r 2를 실행 하는 서버는 관리 효율성 상태는 업데이트가 적용 될 때까지 **액세스할 수 없습니다.** 합니다.<br />-성능 업데이트와 관련 된 [기술 자료 문서 2682011](https://go.microsoft.com/fwlink/p/?LinkID=245487) 은 Windows Server 2012 r 2를 실행 하는 서버 또는 Windows Server 2012에 필요 하지 않습니다.||
+| Windows Server 2008 R2 |-   [.NET Framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653)<br />[Windows Management Framework 4.0](https://go.microsoft.com/fwlink/?LinkId=293881)을 -   합니다. Windows Management Framework 4.0 다운로드 패키지는 Windows Server 2008 r 2에서 Windows Management Instrumentation (WMI) 공급자를 업데이트합니다. 관리 되는 서버에 설치 되어 있는 역할 및 기능에 대 한 정보를 수집 하는 서버 관리자를 사용 하는 업데이트 된 WMI 공급자 있습니다. Windows Server 2008 r 2를 실행 하는 서버는 관리 효율성 상태는 업데이트가 적용 될 때까지 **액세스할 수 없습니다.** 합니다.<br />-성능 업데이트와 관련 된 [기술 자료 문서 2682011](https://go.microsoft.com/fwlink/p/?LinkID=245487) 서버 관리자 Windows Server 2008 r 2에서 성능 데이터를 수집할 수 있습니다.||
+| Windows Server 2008 |-   [.NET Framework 4](https://www.microsoft.com/download/en/details.aspx?id=17718)<br />windows management framework [3.0](https://go.microsoft.com/fwlink/p/?LinkID=229019) -   Windows management framework 3.0 windows Server 2008의 WMI (패키지 업데이트 WMI(Windows Management Instrumentation)) 공급자를 다운로드 합니다. 관리 되는 서버에 설치 되어 있는 역할 및 기능에 대 한 정보를 수집 하는 서버 관리자를 사용 하는 업데이트 된 WMI 공급자 있습니다. 업데이트가 적용 될 때까지 Windows Server 2008를 실행 하는 서버의 관리 효율성 상태는 **액세스할 수 없음-이전 버전에서 Windows Management Framework 3.0를 실행 하는지 확인**합니다.<br />-성능 업데이트와 관련 된 [기술 자료 문서 2682011](https://go.microsoft.com/fwlink/p/?LinkID=245487) 서버 관리자에서 Windows Server 2008 성능 데이터를 수집할 수 있습니다.||
 
 작업 그룹에 있는 서버를 추가 하 여 관리 하거나 서버 관리자를 실행 하는 작업 그룹 컴퓨터에서 원격 서버를 관리 하는 방법에 대 한 자세한 내용은 [서버 관리자에 서버 추가](add-servers-to-server-manager.md)를 참조 하세요.
 
@@ -159,7 +159,7 @@ Windows Server 2016에서는 WinRM (Windows remote Management) 및 DCOM (Distrib
 
 ### <a name="to-disable-remote-management-by-using-an-answer-file-during-unattended-installation"></a>무인 설치 동안 응답 파일을 사용하여 원격 관리를 사용하지 않도록 설정하려면
 
-1.  windows SIM (Windows 시스템 이미지 관리자)을 사용 하 여 Windows Server 2016 설치를 위한 무인 설치 응답 파일을 만듭니다. 응답 파일을 만들고 Windows SIM을 사용 하는 방법에 대 한 자세한 내용은 [Windows 시스템 이미지 관리자 란?](https://technet.microsoft.com/library/cc766347.aspx) 및 [ 단계를 참조 하세요. IT 전문가를 위한 기본 Windows 배포 @ no__t-0.
+1.  windows SIM (Windows 시스템 이미지 관리자)을 사용 하 여 Windows Server 2016 설치를 위한 무인 설치 응답 파일을 만듭니다. 응답 파일을 만들고 Windows SIM을 사용하는 방법에 대한 자세한 내용은 [Windows 시스템 이미지 관리자란?](https://technet.microsoft.com/library/cc766347.aspx) 및 [단계: IT 전문가용 기본 Windows 배포](https://technet.microsoft.com/library/dd349348.aspx)를 참조하세요.
 
 2.  응답 파일에서 **Microsoft-Windows-Web-Services-for-Management-Core\EnableServerremoteManagement**설정을 찾습니다.
 
@@ -187,9 +187,10 @@ WinRM이 원격 컴퓨터와 통신하는 기본 포트 번호는 5985입니다.
 
 WinRM 수신기 설정을 구성 하는 방법에 대 한 자세한 내용을 보려면 명령 프롬프트에서 **winrm help config**를 입력 한 다음 enter 키를 누릅니다.
 
-## <a name="see-also"></a>관련 항목
-[서버를 서버 관리자 @no__t에 추가](add-servers-to-server-manager.md)[합니다. 1 Windows PowerShell: windows Server TechCenter](https://technet.microsoft.com/library/dd347642.aspx)
-[사용자 계정 컨트롤 설명](https://support.microsoft.com/kb/951016)
+## <a name="see-also"></a>참고 항목
+
+[서버 관리자에 서버 추가](add-servers-to-server-manager.md) windows PowerShell: [사용자 계정 컨트롤](https://support.microsoft.com/kb/951016) 에 대 한 [windows Server TechCenter](https://technet.microsoft.com/library/dd347642.aspx)
+설명 about_remote_Troubleshooting
 
 
 

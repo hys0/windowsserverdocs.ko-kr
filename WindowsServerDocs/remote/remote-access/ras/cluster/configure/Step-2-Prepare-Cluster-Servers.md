@@ -85,7 +85,7 @@ ms.locfileid: "71367413"
   
 ## <a name="BKMK_Links"></a>참고 항목  
   
--   [3단계: 부하 분산 된 클러스터 구성 @ no__t-0  
+-   [3 단계: 부하 분산 된 클러스터 구성](Step-3-Configure-a-Load-Balanced-Cluster.md)  
   
 
 

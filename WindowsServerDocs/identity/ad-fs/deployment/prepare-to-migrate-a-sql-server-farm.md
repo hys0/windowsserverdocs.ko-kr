@@ -20,11 +20,11 @@ ms.locfileid: "71408214"
   
  AD FS 구성 데이터를 내보내려면 다음 작업을 수행합니다.  
   
--   [1단계: 서비스 설정 내보내기 @ no__t-0  
+-   [1 단계: 서비스 설정 내보내기](#step-1-export-service-settings)  
   
--   [2단계: 사용자 지정 특성 저장소 백업 @ no__t-0  
+-   [2 단계: 사용자 지정 특성 저장소 백업](#step-2-back-up-custom-attribute-stores)  
   
--   [3단계: 웹 페이지 사용자 지정 백업 @ no__t-0  
+-   [3 단계: 웹 페이지 사용자 지정 백업](#step-3-back-up-webpage-customizations)  
   
 ## <a name="step-1-export-service-settings"></a>1단계: 서비스 설정 내보내기  
  서비스 설정을 내보내려면 다음 절차를 수행합니다.  
@@ -64,7 +64,7 @@ ID 값을 찾으려면 **Services(서비스)** 콘솔에서 **AD FS 2.0 Windows 
   
 ## <a name="next-steps"></a>다음 단계
  [AD FS 2.0 페더레이션 서버 마이그레이션 준비](prepare-to-migrate-ad-fs-fed-server.md)   
- [AD FS 2.0 페더레이션 서버 프록시 @no__t 마이그레이션 준비](prepare-to-migrate-ad-fs-fed-proxy.md)-1  
+ [AD FS 2.0 페더레이션 서버 프록시  마이그레이션 준비](prepare-to-migrate-ad-fs-fed-proxy.md)  
  [AD FS 2.0 페더레이션 서버 마이그레이션](migrate-the-ad-fs-fed-server.md)   
- [AD FS 2.0 페더레이션 서버 프록시](migrate-the-ad-fs-2-fed-server-proxy.md) 을 마이그레이션합니다.  
+ [AD FS 2.0 페더레이션 서버 프록시  마이그레이션](migrate-the-ad-fs-2-fed-server-proxy.md)  
  [AD FS 1.1 웹 에이전트 마이그레이션](migrate-the-ad-fs-web-agent.md)

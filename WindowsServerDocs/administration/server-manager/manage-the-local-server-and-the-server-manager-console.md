@@ -22,7 +22,7 @@ ms.locfileid: "71383113"
 ---
 # <a name="manage-the-local-server-and-the-server-manager-console"></a>Manage the Local Server and the Server Manager Console
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Windows Server의 서버 관리자 (서버 관리자를 실행 하는 Windows 서버와 클라이언트 Windows 기반 운영 체제에 없는) 하는 경우 로컬 서버를 관리할 수 있습니다와 Windows Server 2008 및 이후 버전의 Windows Server 운영 체제를 실행 하는 원격 서버입니다.
 
@@ -43,7 +43,7 @@ Windows Server의 서버 관리자 (서버 관리자를 실행 하는 Windows �
 -   [역할 홈 페이지에서 역할 관리](#BKMK_roles)
 
 ## <a name="BKMK_shutdown"></a>로컬 서버 종료
-로컬 서버 **속성** 타일의 **작업** 메뉴를 사용 하 여 로컬 서버에서 Windows PowerShell 세션을 시작 하거나, **컴퓨터 관리** mmc 스냅인을 열거나, 로컬에 설치 된 역할이 나 기능에 대 한 mmc 스냅인을 열 수 있습니다. 서버인. 이 **작업** 메뉴에서 **로컬 서버 종료** 명령을 사용하여 로컬 서버를 종료할 수도 있습니다. **로컬 서버 종료** 명령은 **모든 서버** 페이지나 로컬 서버가 표시된 역할이나 그룹 페이지의 **서버** 타일에 있는 로컬 서버에 대해서도 사용할 수 있습니다.
+로컬 서버 **속성** 타일의 **작업** 메뉴를 사용 하 여 로컬 서버에서 Windows PowerShell 세션을 시작 하거나, **컴퓨터 관리** mmc 스냅인을 열거나, 로컬 서버에 설치 된 역할이 나 기능에 대 한 mmc 스냅인을 열 수 있습니다. 이 **작업** 메뉴에서 **로컬 서버 종료** 명령을 사용하여 로컬 서버를 종료할 수도 있습니다. **로컬 서버 종료** 명령은 **모든 서버** 페이지나 로컬 서버가 표시된 역할이나 그룹 페이지의 **서버** 타일에 있는 로컬 서버에 대해서도 사용할 수 있습니다.
 
 이 방법을 사용 하 여 로컬 서버를 종료 하면 **시작** 화면에서 windows server 2016을 종료 하는 것과 달리 **windows** 종료 대화 상자가 열리며,이 대화 상자에서 **shutdown 이벤트 추적기** 영역에서 종료 이유를 지정할 수 있습니다.
 
@@ -74,7 +74,7 @@ Windows Server의 서버 관리자 (서버 관리자를 실행 하는 Windows �
 |마지막으로 확인한 업데이트|서버에서 사용 가능한 Windows 업데이트를 마지막으로 확인한 날짜와 시간을 표시합니다. **제어판\시스템 및 보안\Windows 업데이트**를 엽니다.|
 |Windows 오류 보고|Windows 오류 보고 옵트인 상태를 표시합니다. **Windows 오류 보고 구성** 대화 상자를 엽니다. Windows 오류 보고, 이점, 개인 정보 취급 방침 및 옵트인 설정에 대한 자세한 내용은 [Windows 오류 보고](https://go.microsoft.com/fwlink/?LinkID=245991)를 참조하세요.|
 |사용자 환경 개선 프로그램|Windows 사용자 환경 개선 프로그램 옵트인 상태를 표시합니다. **사용자 환경 개선 프로그램 구성** 대화 상자를 엽니다. Windows 사용자 환경 개선 프로그램, 이점, 옵트인 설정에 대한 자세한 내용은 [Windows 사용자 환경 개선 프로그램](https://go.microsoft.com/fwlink/?LinkID=245992)을 참조하세요.|
-|IE(Internet Explorer) 보안 강화 구성|IE 보안 강화 구성(IE 강화 또는 IE ESC라고도 함)이 설정되어 있는지 해제되어 있는지 여부를 표시합니다. **Internet Explorer 보안 강화 구성** 대화 상자를 엽니다. IE 보안 강화 구성은 웹 페이지가 Internet Explorer에서 열리지 않도록 하는 서버의 보안 정책입니다. IE 보안 강화 구성, 이점 및 설정에 대 한 자세한 내용은 [Internet Explorer: 보안 강화 구성 @ no__t-0.|
+|IE(Internet Explorer) 보안 강화 구성|IE 보안 강화 구성(IE 강화 또는 IE ESC라고도 함)이 설정되어 있는지 해제되어 있는지 여부를 표시합니다. **Internet Explorer 보안 강화 구성** 대화 상자를 엽니다. IE 보안 강화 구성은 웹 페이지가 Internet Explorer에서 열리지 않도록 하는 서버의 보안 정책입니다. IE 보안 강화 구성, 이점 및 설정에 대한 자세한 내용은 [Internet Explorer: 보안 강화 구성](https://go.microsoft.com/fwlink/?LinkId=253461)을 참조하세요.|
 |표준 시간대|로컬 서버의 표준 시간대를 표시합니다. **날짜 및 시간** 대화 상자를 엽니다.|
 |제품 ID|Windows Server 2016 운영 체제 (Windows가 정품 인증) 하는 경우 Windows 정품 인증 상태 및 제품 ID 번호를 표시 합니다. 이 번호는 Windows 제품 키와 동일한 번호가 아닙니다. **Windows 정품 인증** 대화 상자를 엽니다.|
 |프로세서|이 읽기 전용 필드는 제조업체, 모델 이름 및 로컬 서버의 프로세서에 대 한 속도 정보를 표시합니다.|
@@ -104,7 +104,7 @@ Windows Server의 서버 관리자 (서버 관리자를 실행 하는 Windows �
 원격 데스크톱 서비스, IP 주소 관리 및 파일 및 저장소 서비스에 대 한 서버 관리자의 역할 홈 페이지에 표시 되는 데이터는 자동으로 새로 고쳐지지 않습니다. 키를 눌러 수동으로 이러한 페이지에 표시 되는 데이터 새로 고침 **F5** 키를 누르거나 **새로 고침** 해당 페이지에 있는 동안 서버 관리자 콘솔 제목에 있습니다.
 
 ### <a name="add-or-remove-roles-or-features"></a>역할 또는 기능 추가 또는 제거
-역할 및 기능 추가 마법사를 열고 역할 및 기능 제거 마법사를 열고 역할, 역할 서비스 및 기능을 서버 풀의 서버에 추가 하거나 제거할 수 있는 명령은 서버 관리자 콘솔의 **관리** 메뉴 및 **작업** 역할 또는 그룹 페이지의 **역할 및 기능** 타일에 대 한 메뉴입니다. 역할 또는 기능 추가 또는 제거 하는 방법에 대 한 자세한 내용은 참조 하세요. [설치 또는 제거 하는 역할, 역할 서비스 또는 기능](install-or-uninstall-roles-role-services-or-features.md)합니다.
+역할 및 기능 추가 마법사를 열고 역할 및 기능 제거 마법사를 사용 하 여 서버 풀의 서버에 역할, 역할 서비스 및 기능을 추가 하거나 제거 하는 명령은 서버 관리자 콘솔의 **관리** 메뉴 및 역할 또는 그룹 페이지에 있는 **역할 및 기능** 타일의 **작업** 메뉴에 있습니다. 역할이나 기능을 추가하거나 제거하는 방법에 대한 자세한 내용은 [Install or Uninstall Roles, Role Services, or Features](install-or-uninstall-roles-role-services-or-features.md)를 참조하세요.
 
 서버 관리자에서 역할 및 기능 데이터는 시스템 기본 GUI 언어 또는 운영 체제의 설치 중에 선택한 언어 라고도 하는 시스템의 기본 언어로 표시 됩니다.
 
@@ -118,7 +118,7 @@ Windows Server의 서버 관리자 (서버 관리자를 실행 하는 Windows �
 또는 축소 서버 관리자 콘솔의 보기를 확대/축소 하는 방법은 사용 하 여는 **확대/축소** 에 있는 명령을 **보기** 메뉴를 사용 하거나 키를 눌러 **Ctrl + 더하기 (+)** 을 확대 및 **Ctrl + 빼기 (-)** 축소 하려면.
 
 ## <a name="BKMK_tools"></a>도구 메뉴에 표시 되는 도구 사용자 지정
-**도구** 서버 관리자 메뉴에서 바로 가기에 대 한 소프트 링크가 포함 된 **관리 도구** 폴더에 **제어판/시스템 및 보안**합니다. **관리 도구** 폴더에는 mmc 스냅인과 같은 사용 가능한 관리 도구에 대 한 바로 가기 또는 .lnk 파일 목록이 포함 되어 있습니다. 서버 관리자 정보를 표시는 **도구** 해당 바로 가기 키에 대 한 링크 된 메뉴의 폴더 구조를 복사 하 고는 **관리 도구** 폴더에는 **도구** 메뉴. 기본적으로 관리 도구 폴더의 도구는 유형 및 이름별로 단순 목록으로 정렬됩니다. 서버 관리자에서**도구** 메뉴 항목이 이름별로 유형별이 아닌 정렬 됩니다.
+**도구** 서버 관리자 메뉴에서 바로 가기에 대 한 소프트 링크가 포함 된 **관리 도구** 폴더에 **제어판/시스템 및 보안**합니다. **관리 도구** 폴더에는 mmc 스냅인과 같은 사용 가능한 관리 도구에 대 한 바로 가기 또는 .lnk 파일 목록이 포함 되어 있습니다. 서버 관리자 **는 도구** 메뉴를 해당 바로 가기에 대 한 링크로 채우고 **관리 도구** 폴더의 폴더 구조를 **도구** 메뉴에 복사 합니다. 기본적으로 관리 도구 폴더의 도구는 유형 및 이름별로 단순 목록으로 정렬됩니다. 서버 관리자에서**도구** 메뉴 항목이 이름별로 유형별이 아닌 정렬 됩니다.
 
 **도구** 메뉴를 사용자 지정하려면 사용할 도구 또는 스크립트 바로 가기를 **관리 도구** 폴더에 복사합니다. **도구** 메뉴에 계단식 메뉴를 만드는 바로 가기를 폴더에서 구성할 수도 있습니다. 또한 **도구** 메뉴의 사용자 지정 도구에 대 한 액세스를 제한 하려는 경우 관리 도구의 사용자 지정 도구 폴더에 대 한 사용자 액세스 권한을 설정 하거나 원래 도구나 스크립트 파일에 직접 설정할 수 있습니다.
 
@@ -175,13 +175,14 @@ Windows Server 2016에서 다음 역할 및 기능 관리 도구가 포함 된 �
 
     IPAM을 배포 하 고 관리 하는 방법에 대 한 자세한 내용은 [ipam (IP 주소 관리](https://go.microsoft.com/fwlink/p/?LinkId=241533))을 참조 하세요.
 
-## <a name="see-also"></a>관련 항목
-[서버 관리자](server-manager.md)@no__t 서버[를 서버 관리자에 추가](add-servers-to-server-manager.md)
-[서버 그룹 만들기 및 관리](create-and-manage-server-groups.md)
-[성능, 이벤트 및 서비스 데이터](view-and-configure-performance-event-and-service-data.md)
-[파일 및 저장소 서비스](https://go.microsoft.com/fwlink/p/?LinkId=241530)
-[ 를 확인 하 고 구성 합니다. 원격 데스크톱 서비스 (rdS)](https://go.microsoft.com/fwlink/p/?LinkId=241532)
-1[IPAM (IP 주소 관리](https://go.microsoft.com/fwlink/p/?LinkId=241533) )
+## <a name="see-also"></a>참고 항목
+서버 [를
+서버 관리자에 추가 하](add-servers-to-server-manager.md) 여 [서버 그룹을 만들고 관리](create-and-manage-server-groups.md) 하는 [서버 관리자](server-manager.md)
+는 [파일 및 저장소 서비스](https://go.microsoft.com/fwlink/p/?LinkId=241530)
+[rdS (](https://go.microsoft.com/fwlink/p/?LinkId=241532) 저장소 서비스
+
+) 원격 데스크톱 서비스 [IPAM (IP 주소 관리](https://go.microsoft.com/fwlink/p/?LinkId=241533) )을 [보고 구성](view-and-configure-performance-event-and-service-data.md)
+
 
 
 

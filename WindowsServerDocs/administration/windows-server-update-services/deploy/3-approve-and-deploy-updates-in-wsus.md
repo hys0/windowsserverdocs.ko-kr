@@ -17,17 +17,17 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71361686"
 ---
-# <a name="step-3-approve-and-deploy-updates-in-wsus"></a>3단계: WSUS에서 업데이트 승인 및 배포
+# <a name="step-3-approve-and-deploy-updates-in-wsus"></a>3 단계: 승인 및 WSUS에서 업데이트를 배포 합니다.
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 컴퓨터 그룹의 컴퓨터는 다음 24시간 동안 WSUS 서버에 자동으로 연결되어 업데이트를 가져옵니다. WSUS 보고 기능을 사용해 이러한 업데이트가 테스트 컴퓨터에 배포되었는지 확인할 수 있습니다. 테스트가 완료되면 조직 내 해당 컴퓨터 그룹에 대한 업데이트를 승인할 수 있습니다. 다음 검사 목록에는 WSUS 관리 콘솔을 사용해 업데이트를 승인하고 배포하기 위한 단계가 설명되어 있습니다.
 
 |태스크|설명|
 |----|--------|
-|[3.1. WSUS 업데이트 승인 및 배포 @ no__t-0|WSUS 관리 콘솔을 사용해 업데이트를 승인하고 배포합니다.|
-|[3.2. 자동 승인 규칙 구성 @ no__t-0|선택한 그룹에 대한 업데이트 설치 및 기존 업데이트에 대한 수정 버전을 자동으로 승인하도록 WSUS를 구성합니다.|
-|[3.3. WSUS 보고서를 사용 하 여 설치 된 업데이트 검토 @ no__t-0|WSUS 보고 기능을 사용해 설치된 업데이트와 해당 업데이트를 받은 컴퓨터 및 기타 상세 정보를 검토합니다.|
+|[3.1. WSUS 업데이트 승인 및 배포](3-approve-and-deploy-updates-in-wsus.md#BKM_3.1.)|WSUS 관리 콘솔을 사용해 업데이트를 승인하고 배포합니다.|
+|[3.2. 자동 승인 규칙 구성](3-approve-and-deploy-updates-in-wsus.md#BKM_3.2.a.)|선택한 그룹에 대한 업데이트 설치 및 기존 업데이트에 대한 수정 버전을 자동으로 승인하도록 WSUS를 구성합니다.|
+|[3.3. WSUS 보고서를 사용 하 여 설치 된 업데이트 검토](3-approve-and-deploy-updates-in-wsus.md#BKM_3.3.)|WSUS 보고 기능을 사용해 설치된 업데이트와 해당 업데이트를 받은 컴퓨터 및 기타 상세 정보를 검토합니다.|
 
 ## <a name="BKM_3.1."></a>3.1. WSUS 업데이트 승인 및 배포
 다음 절차에 따라 업데이트를 승인하고 배포합니다.
@@ -69,7 +69,7 @@ ms.locfileid: "71361686"
 
 5.  **2 단계: 속성 편집**에서 나열 된 각 옵션을 클릭 하 고 각각에 대해 적절 한 옵션을 선택 합니다.
 
-6.  @No__t-0Step 단계: 이름 @ no__t를 지정 하 고 규칙의 이름을 입력 한 다음 **확인**을 클릭 합니다.
+6.  **3단계: 이름 지정**에서 규칙의 이름을 입력하고 **확인**을 클릭합니다.
 
 7.  **확인** 을 클릭하여 자동 승인 대화 상자를 닫습니다.
 

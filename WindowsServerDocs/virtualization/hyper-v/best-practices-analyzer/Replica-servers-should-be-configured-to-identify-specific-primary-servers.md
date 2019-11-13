@@ -19,11 +19,11 @@ ms.locfileid: "71364741"
 ---
 # <a name="replica-servers-should-be-configured-to-identify-specific-primary-servers-authorized-to-send-replication-traffic"></a>복제 트래픽을 보낼 수 있는 권한이 고유한 기본 서버를 식별 하도록 복제 서버를 구성 해야
 
->적용 대상: Windows Server 2016
+>적용 대상: Windows Server 2016
 
 모범 사례 분석기 및 검사에 대한 자세한 내용은 [모범 사례 분석기 검사 실행 및 검사 결과 관리](https://go.microsoft.com/fwlink/p/?LinkID=223177)를 참조하세요.  
   
-|속성|설명|  
+|속성|세부 정보|  
 |-|-|  
 |**운영 체제**|Windows Server 2016|  
 |**제품/기능**|Hyper-V|  
@@ -39,7 +39,7 @@ ms.locfileid: "71364741"
 *모든 주 서버의 모든 복제는 한 위치에 저장 되므로 개인 정보나 보안 문제가 발생할 수 있습니다.*  
   
 ## <a name="resolution"></a>해결 방법  
-@no__t Hyper-v 관리자를 사용 하 여 특정 주 서버에 대 한 새 권한 부여 항목을 만들고 각각에 대해 별도의 저장소 위치를 지정 합니다. 와일드 카드 문자를 사용 하 여 각 권한 부여 항목에 대 한 기본 서버를 집합으로 그룹화 할 수 있습니다. *  
+*Hyper-v 관리자를 사용 하 여 특정 주 서버에 대 한 새 권한 부여 항목을 만들고 각각에 대해 별도의 저장소 위치를 지정 합니다. 와일드 카드 문자를 사용 하 여 각 권한 부여 항목에 대 한 기본 서버를 집합으로 그룹화 할 수 있습니다.*  
   
 #### <a name="create-authorization-entries-using-hyper-v-manager"></a>Hyper-v 관리자를 사용 하 여 권한 부여 항목 만들기  
   
@@ -83,7 +83,7 @@ ms.locfileid: "71364741"
 New-VMReplicationAuthorizationEntry server01.domain01.contoso.com D:\ReplicaVMStorage DEFAULT  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [New-vmreplicationauthorizationentry](https://technet.microsoft.com/library/hh848606.aspx)  
   
 

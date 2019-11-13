@@ -26,13 +26,13 @@ ms.locfileid: "71407461"
 
 이 연습은 다음 섹션으로 구성됩니다.
 
--   [1단계: 랩 환경 설정 @ no__t-0
+-   [1 단계: 랩 환경 설정](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_1)
 
--   [2단계: 기본 AD FS 액세스 제어 메커니즘을 확인 합니다. @ no__t-0
+-   [2 단계: 기본 AD FS 액세스 제어 메커니즘 확인](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_2)
 
--   [3단계: 사용자 데이터를 기반으로 조건부 액세스 제어 정책 구성 @ no__t-0
+-   [3 단계: 사용자 데이터를 기반으로 조건부 액세스 제어 정책 구성](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_3)
 
--   [4단계: 조건부 액세스 제어 메커니즘 확인 @ no__t-0
+-   [4 단계: 조건부 액세스 제어 메커니즘 확인](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_4)
 
 ## <a name="BKMK_1"></a>1 단계: 랩 환경 설정
 이 연습을 완료하려면 다음 구성 요소로 구성된 환경이 필요합니다.
@@ -65,7 +65,7 @@ ms.locfileid: "71407461"
 
     그러면 응용 프로그램에 대한 액세스 권한이 부여됩니다.
 
-## <a name="BKMK_3"></a>3 단계: 사용자 데이터에 따라 조건부 액세스 제어 정책 구성
+## <a name="BKMK_3"></a>3 단계: 사용자 데이터를 기반으로 조건부 액세스 제어 정책 구성
 이 단계에서는 사용자 그룹 구성원 자격 데이터를 기반으로 액세스 제어 정책을 설정합니다. 즉, 페더레이션 서버에서 샘플 응용 프로그램 **claimapp** 을 나타내는 신뢰 당사자 트러스트를 사용하도록 **발급 권한 부여 규칙**을 구성합니다. 이 규칙의 논리에 따라 **Robert Hatley** AD 사용자는 **재무** 그룹에 속하므로이 응용 프로그램에 액세스 하는 데 필요한 클레임이 발급 됩니다. **Robert Hatley** 계정을 [Windows Server 2012 r 2에서 AD FS에 대 한 랩 환경 설정](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)에서 **재무** 그룹에 추가 했습니다.
 
 AD FS 관리 콘솔 또는 Windows PowerShell을 통해 이 작업을 완료할 수 있습니다.
@@ -116,7 +116,7 @@ Set-AdfsRelyingPartyTrust -TargetRelyingParty $rp -IssuanceAuthorizationRules $G
 ## <a name="BKMK_4"></a>4 단계: 조건부 액세스 제어 메커니즘 확인
 이 단계에서는 이전 단계에서 설정한 조건부 액세스 제어 정책을 확인합니다. 다음 절차를 사용하여 **Finance** 그룹에 속한 **Robert Hatley** AD 사용자가 샘플 응용 프로그램에 액세스할 수 있고 **Finance** 그룹에 속하지 않은 AD 사용자가 샘플 응용 프로그램에 액세스할 수 없는지 확인할 수 있습니다.
 
-1.  클라이언트 컴퓨터에서 브라우저 창을 열고 샘플 응용 프로그램: **https://webserv1.contoso.com/claimapp** 로 이동 합니다.
+1.  클라이언트 컴퓨터에서 브라우저 창을 열고 샘플 응용 프로그램으로 이동 합니다. **https://webserv1.contoso.com/claimapp**
 
     이 작업을 수행하면 요청이 자동으로 페더레이션 서버로 리디렉션되고 사용자 이름과 암호를 사용하여 로그인하라는 메시지가 표시됩니다.
 
@@ -124,13 +124,13 @@ Set-AdfsRelyingPartyTrust -TargetRelyingParty $rp -IssuanceAuthorizationRules $G
 
     그러면 응용 프로그램에 대한 액세스 권한이 부여됩니다.
 
-3.  **Finance** 그룹에 속하지 않은 또 다른 AD 사용자의 자격 증명을 입력합니다. AD에서 사용자 계정을 만드는 방법에 대 한 자세한 내용은 [https://technet.microsoft.com/library/cc7833232.aspx](https://technet.microsoft.com/library/cc783323%28v=ws.10%29.aspx)을 참조 하세요.
+3.  **Finance** 그룹에 속하지 않은 또 다른 AD 사용자의 자격 증명을 입력합니다. AD에서 사용자 계정을 만드는 방법에 대 한 자세한 내용은 [https://technet.microsoft.com/library/cc7833232.aspx](https://technet.microsoft.com/library/cc783323%28v=ws.10%29.aspx)를 참조 하세요.
 
-    이제 이전 단계에서 설정한 액세스 제어 정책으로 인해이 AD 사용자에 대해 **재무** 그룹에 속하지 않은 ' 액세스 거부 ' 메시지가 표시 됩니다. 기본 메시지 텍스트는 @no__t이 사이트에 액세스할 수 있는 권한이 없습니다. 여기를 클릭 하 여 로그 아웃 하 고 다시 로그인 하거나 관리자에 게 권한에 대해 문의 하세요. ** (보안상 계정을 확인하기 위해 추가 정보가 필요합니다.)이지만 이 텍스트를 원하는 대로 사용자 지정할 수 있습니다. 로그인 환경을 사용자 지정하는 방법에 대한 자세한 내용은 [Customizing the AD FS Sign-in Pages](https://technet.microsoft.com/library/dn280950.aspx)을 참조하세요.
+    이제 이전 단계에서 설정한 액세스 제어 정책으로 인해이 AD 사용자에 대해 **재무** 그룹에 속하지 않은 ' 액세스 거부 ' 메시지가 표시 됩니다. 기본 메시지 텍스트는 **이 사이트에 액세스할 수 있는 권한이 없습니다. 여기를 클릭 하 여 로그 아웃 하 고 다시 로그인 하거나 관리자에 게 권한에 대해 문의 하세요.** (보안상 계정을 확인하기 위해 추가 정보가 필요합니다.)이지만 이 텍스트를 원하는 대로 사용자 지정할 수 있습니다. 로그인 환경을 사용자 지정하는 방법에 대한 자세한 내용은 [Customizing the AD FS Sign-in Pages](https://technet.microsoft.com/library/dn280950.aspx)을 참조하세요.
 
-## <a name="see-also"></a>관련 항목
-[조건부 Access Control 사용 하 여 위험 관리](../../ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md)
-[Windows Server 2012 r 2에서 AD FS에 대 한 랩 환경 설정](../deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
+## <a name="see-also"></a>참고 항목
+[조건부 Access Control 사용 하 여 위험 관리](../../ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md) [Windows Server 2012 r 2에서 AD FS에 대 한 랩 환경 설정](../deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
+
 
 
 

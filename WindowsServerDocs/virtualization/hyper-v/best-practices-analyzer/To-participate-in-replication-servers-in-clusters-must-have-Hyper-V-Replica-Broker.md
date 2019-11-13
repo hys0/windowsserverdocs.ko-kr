@@ -19,11 +19,11 @@ ms.locfileid: "71364600"
 ---
 # <a name="to-participate-in-replication-servers-in-failover-clusters-must-have-a-hyper-v-replica-broker-configured"></a>복제에 참여 하려면 장애 조치 클러스터의 서버에서에서 구성 하는 Hyper-v 복제본 브로커 있어야
 
->적용 대상: Windows Server 2016
+>적용 대상: Windows Server 2016
 
 모범 사례 분석기 및 검사에 대한 자세한 내용은 [모범 사례 분석기 검사 실행 및 검사 결과 관리](https://go.microsoft.com/fwlink/p/?LinkID=223177)를 참조하세요.  
   
-|속성|설명|  
+|속성|세부 정보|  
 |-|-|  
 |**운영 체제**|Windows Server 2016|  
 |**제품/기능**|Hyper-V|  
@@ -39,7 +39,7 @@ ms.locfileid: "71364600"
 *가상 컴퓨터가 다른 장애 조치 (failover) 클러스터 노드로 이동 하는 경우 복제를 계속할 수 없습니다.*  
   
 ## <a name="resolution"></a>해결 방법  
-@no__t-장애 조치(Failover) 클러스터 관리자를 사용 하 여 Hyper-v 복제본 브로커를 구성 합니다. Hyper-v 관리자에서 복제 구성에서 Hyper-v 복제본 브로커 이름을 서버 이름으로 사용 하는지 확인 합니다. *  
+*장애 조치(Failover) 클러스터 관리자를 사용 하 여 Hyper-v 복제본 브로커를 구성 합니다. Hyper-v 관리자에서 복제 구성에서 Hyper-v 복제본 브로커 이름을 서버 이름으로 사용 하는지 확인 합니다.*  
   
 
 

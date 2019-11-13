@@ -19,11 +19,11 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71388434"
 ---
-# <a name="test-lab-guide-demonstrate-directaccess-in-a-cluster-with-windows-nlb"></a>테스트 랩 가이드: Windows NLB를 사용 하 여 클러스터에서 DirectAccess 시연
+# <a name="test-lab-guide-demonstrate-directaccess-in-a-cluster-with-windows-nlb"></a>테스트 랩 가이드: Windows NLB를 사용하여 클러스터에서 DirectAccess 시연
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-원격 액세스는 원격 사용자가 DirectAccess 또는 RRAS VPN을 사용 하 여 내부 네트워크 리소스에 안전 하 게 액세스할 수 있도록 하는 windows server 2016, Windows Server 2012 R2 andWindows Server 2012 운영 체제의 서버 역할입니다. 이 가이드에는 [ 테스트 랩 가이드를 확장 하는 단계별 지침이 포함 되어 있습니다. DirectAccess 네트워크 부하 분산 및 클러스터 구성을 시연 하기 위해 IPv4 및 IPv6 @ no__t를 혼합 하 여 DirectAccess 단일 서버 설치를 시연 합니다.  
+원격 액세스는 원격 사용자가 DirectAccess 또는 RRAS VPN을 사용 하 여 내부 네트워크 리소스에 안전 하 게 액세스할 수 있도록 하는 windows server 2016, Windows Server 2012 R2 andWindows Server 2012 운영 체제의 서버 역할입니다. 이 가이드에는 [Test Lab Guide: Demonstrate DirectAccess Single Server Setup with Mixed IPv4 and IPv6(테스트 랩 가이드: IPv4 및 IPv6을 함께 사용하여 DirectAccess 단일 서버 설치 시연)](https://go.microsoft.com/fwlink/p/?LinkId=237004) 을 확장해 DirectAccess 네트워크 부하 분산 및 클러스터 구성을 시연하는 단계별 지침이 포함되어 있습니다.  
   
 ## <a name="about-this-guide"></a>이 가이드 정보  
 이 가이드에는 서버 6개와 클라이언트 컴퓨터 2대를 사용하여 원격 액세스를 구성 및 시연하는 지침이 나와 있습니다. 완료된 원격 액세스 테스트 랩(NLB 포함)은 인트라넷, 인터넷 및 홈 네트워크를 시뮬레이트하며 서로 다른 인터넷 연결 시나리오의 원격 액세스 기능을 시연합니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "71388434"
 ## <a name="KnownIssues"></a>알려진 문제  
 클러스터 시나리오를 구성할 때의 알려진 문제는 다음과 같습니다.  
   
--   IPv4 전용 배포에서 단일 네트워크 어댑터로 DirectAccess를 구성하여 기본 DNS64(":3333::"을 포함하는 IPv6 주소)가 자동으로 네트워크 어댑터에 구성된 후 원격 액세스 관리 콘솔을 통해 부하 분산 사용 설정을 시도하면 사용자가 IPv6 DIP를 공급하는 프롬프트가 만들어집니다. IPv6 DIP가 제공된 경우 **커밋** 클릭 후 다음 오류와 함께 구성에 실패합니다. 매개 변수가 잘못되었습니다.  
+-   IPv4 전용 배포에서 단일 네트워크 어댑터로 DirectAccess를 구성하여 기본 DNS64(":3333::"을 포함하는 IPv6 주소)가 자동으로 네트워크 어댑터에 구성된 후 원격 액세스 관리 콘솔을 통해 부하 분산 사용 설정을 시도하면 사용자가 IPv6 DIP를 공급하는 프롬프트가 만들어집니다. IPv6 DIP가 제공된 경우 **커밋** 클릭 후 매개 변수가 잘못되었습니다.라는 오류와 함께 구성에 실패합니다.  
   
     이 문제를 해결하려면  
   

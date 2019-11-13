@@ -62,7 +62,7 @@ ms.locfileid: "71359204"
     |독립 실행형 페더레이션 서버|Windows 내부 데이터베이스|`scwcmd register /kbname:ADFS2Standalone /kbfile:"WindowsADFSscwStandAlone.xml"`|  
     |팜에 가입된 페더레이션 서버|Windows 내부 데이터베이스|`scwcmd register /kbname:ADFS2Standalone /kbfile:"WindowsADFSscwFarm.xml"`|  
     |팜에 가입된 페더레이션 서버|SQL Server|`scwcmd register /kbname:ADFS2Standalone /kbfile:"WindowsADFSscwSQLFarm.xml"`|  
-    |페더레이션 서버 프록시|해당 사항 없음|`scwcmd register /kbname:ADFS2Standalone /kbfile:"WindowsADFSscwProxy.xml"`|  
+    |페더레이션 서버 프록시|해당 없음|`scwcmd register /kbname:ADFS2Standalone /kbfile:"WindowsADFSscwProxy.xml"`|  
   
     AD FS에서 사용할 수 있는 데이터베이스에 대한 자세한 내용은 [AD FS 구성 데이터베이스의 역할](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)을 참조하세요.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "71359204"
     |매개 변수 값|보안 수준|보호 설정|  
     |-------------------|------------------|----------------------|  
     |필요|서버가 완전히 강화됨|확장된 보호가 적용되며 항상 필요함|  
-    |Allow|서버가 부분적으로 강화됨|관련된 시스템에 확장된 보호를 지원하기 위한 패치가 적용된 경우 확장된 보호가 적용됨|  
+    |허용|서버가 부분적으로 강화됨|관련된 시스템에 확장된 보호를 지원하기 위한 패치가 적용된 경우 확장된 보호가 적용됨|  
     |없음|서버가 취약함|확장된 보호가 적용되지 않음|  
   
 -   **로깅 및 추적을 사용 하는 경우 중요 한 정보의 개인 정보 보호를 확인 합니다.**  
@@ -117,11 +117,11 @@ ms.locfileid: "71359204"
 다음 보안 모범 사례는 Microsoft SQL Server® 나 WID (Windows 내부 데이터베이스)를 사용 하는 것과 관련이 있습니다. 이러한 데이터베이스 기술은 AD FS 디자인 및 배포에서 데이터를 관리 하는 데 사용 됩니다.  
   
 > [!NOTE]  
-> 이러한 권장 사항은 SQL Server 제품 보안 지침을 대체하는 것이 아니라 확장하는 것입니다. 보안 SQL Server 설치를 계획 하는 방법에 대 한 자세한 내용은 보안 [SQL 설치를 위한 보안 고려 사항](https://go.microsoft.com/fwlink/?LinkID=139831) (https://go.microsoft.com/fwlink/?LinkID=139831) 을 참조 하세요.  
+> 이러한 권장 사항은 SQL Server 제품 보안 지침을 대체하는 것이 아니라 확장하는 것입니다. 보안 SQL Server 설치를 계획 하는 방법에 대 한 자세한 내용은 보안 [SQL 설치를 위한 보안 고려 사항](https://go.microsoft.com/fwlink/?LinkID=139831) (https://go.microsoft.com/fwlink/?LinkID=139831)을 참조 하세요.  
   
 -   **항상 물리적으로 안전한 네트워크 환경에서 방화벽 뒤에 SQL Server를 배포 합니다.**  
   
-    SQL Server 설치를 인터넷에 직접 노출해서는 안 됩니다. 데이터 센터 내에 있는 컴퓨터 에서만 AD FS를 지 원하는 SQL server 설치에 연결할 수 있어야 합니다. 자세한 내용은 [보안 모범 사례 검사 목록](https://go.microsoft.com/fwlink/?LinkID=189229) (https://go.microsoft.com/fwlink/?LinkID=189229) 을 참조 하세요.  
+    SQL Server 설치를 인터넷에 직접 노출해서는 안 됩니다. 데이터 센터 내에 있는 컴퓨터 에서만 AD FS를 지 원하는 SQL server 설치에 연결할 수 있어야 합니다. 자세한 내용은 [보안 모범 사례 검사 목록](https://go.microsoft.com/fwlink/?LinkID=189229) (https://go.microsoft.com/fwlink/?LinkID=189229)을 참조 하세요.  
   
 -   **기본 제공 되는 기본 시스템 서비스 계정을 사용 하는 대신 서비스 계정에서 SQL Server를 실행 합니다.**  
   
@@ -129,11 +129,11 @@ ms.locfileid: "71359204"
   
 -   **SQL Server의 노출 영역을 최소화 합니다.**  
   
-    필요한 SQL Server 끝점만 사용합니다. 기본적으로 SQL Server는 제거할 수 없는 단일 기본 제공 TCP 끝점을 제공합니다. AD FS의 경우 Kerberos 인증에이 TCP 끝점을 사용 하도록 설정 해야 합니다. 현재 TCP 끝점을 검토하여 추가 사용자 정의 TCP 포트가 SQL 설치에 추가되었는지 알아보려면 Transact-SQL(T-SQL) 세션에서 "SELECT * FROM sys.tcp_endpoints" 쿼리 문을 사용하면 됩니다. SQL Server 끝점 구성에 대 한 자세한 내용은 [How To: 여러 TCP 포트 @ no__t-0 (https://go.microsoft.com/fwlink/?LinkID=189231) 에서 수신 하도록 데이터베이스 엔진를 구성 합니다.  
+    필요한 SQL Server 끝점만 사용합니다. 기본적으로 SQL Server는 제거할 수 없는 단일 기본 제공 TCP 끝점을 제공합니다. AD FS의 경우 Kerberos 인증에이 TCP 끝점을 사용 하도록 설정 해야 합니다. 현재 TCP 끝점을 검토하여 추가 사용자 정의 TCP 포트가 SQL 설치에 추가되었는지 알아보려면 Transact-SQL(T-SQL) 세션에서 "SELECT * FROM sys.tcp_endpoints" 쿼리 문을 사용하면 됩니다. SQL Server 끝점 구성에 대 한 자세한 내용은 [방법: 여러 TCP 포트에서 수신 하도록 데이터베이스 엔진 구성](https://go.microsoft.com/fwlink/?LinkID=189231) (https://go.microsoft.com/fwlink/?LinkID=189231)을 참조 하십시오.  
   
 -   **SQL 기반 인증을 사용 하지 마십시오.**  
   
-    암호가 네트워크를 통해 일반 텍스트로 전송되거나 구성 설정에 저장되는 것을 방지하려면 SQL Server 설치에서 Windows 인증만 사용합니다. SQL Server 인증은 레거시 인증 모드입니다. SQL Server 인증을 사용할 때는 SQL(Structured Query Language) 로그인 자격 증명(SQL 사용자 이름 및 암호)을 저장하지 않는 것이 좋습니다. 자세한 내용은 [인증 모드](https://go.microsoft.com/fwlink/?LinkID=189232) (https://go.microsoft.com/fwlink/?LinkID=189232) 을 참조 하세요.  
+    암호가 네트워크를 통해 일반 텍스트로 전송되거나 구성 설정에 저장되는 것을 방지하려면 SQL Server 설치에서 Windows 인증만 사용합니다. SQL Server 인증은 레거시 인증 모드입니다. SQL Server 인증을 사용할 때는 SQL(Structured Query Language) 로그인 자격 증명(SQL 사용자 이름 및 암호)을 저장하지 않는 것이 좋습니다. 자세한 내용은 [인증 모드](https://go.microsoft.com/fwlink/?LinkID=189232) (https://go.microsoft.com/fwlink/?LinkID=189232)를 참조 하세요.  
   
 -   **SQL 설치에서 추가 채널 보안의 필요성을 신중 하 게 평가 합니다.**  
   
@@ -149,5 +149,5 @@ ms.locfileid: "71359204"
   
     더 나은 서비스 및 데이터 격리를 제공하기 위해 모든 특성 저장소 조회 명령에 대한 저장 프로시저를 만들 수 있습니다. 그런 다음 저장 프로시저 실행 권한을 부여할 데이터베이스 역할을 만들 수 있습니다. 이 데이터베이스 역할에 AD FS Windows 서비스의 서비스 id를 할당 합니다. AD FS Windows 서비스는 특성 조회에 사용 되는 적절 한 저장 프로시저 외에 다른 SQL 문을 실행할 수 없어야 합니다. 이 방식으로 SQL Server 데이터베이스에 대한 액세스를 잠그면 권한 상승 공격의 위험이 줄어듭니다.  
   
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 [Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)

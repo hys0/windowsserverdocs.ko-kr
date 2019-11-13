@@ -38,7 +38,7 @@ AD FS의 액세스 제어는 사용자 또는 사용자 그룹이 AD FS 보안 �
 
 이러한 규칙 옵션과 논리에 대한 자세한 내용은 [When to Use an Authorization Claim Rule](https://technet.microsoft.com/library/ee913560.aspx)를 참조하세요.
 
-Windows Server 2012 r 2의 AD FS에서는 사용자, 장치, 위치, 인증 데이터 등의 여러 요소로 액세스 제어가 향상 되었습니다. 이는 권한 부여 클레임 규칙에 다양한 클레임 유형을 사용할 수 있기 때문입니다.  즉, Windows Server 2012 r 2의 AD FS에서는 사용자 id 또는 그룹 구성원 자격, 네트워크 위치, 장치 (작업 공간에 연결 되어 있는지 여부)를 기반으로 조건부 액세스 제어를 적용할 수 있습니다. 자세한 내용은 [SSO를 위해 모든 장치에서 작업 공간에 연결을 참조 하세요. 그리고 회사 응용 프로그램 전체에서 원활한 두 번째 단계 인증](../../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)) 및 인증 상태 (MFA (다단계 인증)가 수행 되었는지 여부)
+Windows Server 2012 r 2의 AD FS에서는 사용자, 장치, 위치, 인증 데이터 등의 여러 요소로 액세스 제어가 향상 되었습니다. 이는 권한 부여 클레임 규칙에 다양한 클레임 유형을 사용할 수 있기 때문입니다.  즉, Windows Server 2012 r 2의 AD FS에서는 사용자 id 또는 그룹 구성원 자격, 네트워크 위치, 장치 (작업 공간에 연결 되었는지 여부, 자세한 내용은 [회사 응용 프로그램 전체에서 SSO 및 원활한 두 번째 단계 인증을 위해 모든 장치에서 작업 공간에 연결](../../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)) 및 인증 상태 (MFA (다단계 인증)가 수행 되었는지 여부)를 기반으로 조건부 액세스 제어를 적용할 수 있습니다.
 
 Windows Server 2012 r 2에서 AD FS의 조건부 액세스 제어는 다음과 같은 이점을 제공 합니다.
 
@@ -123,7 +123,7 @@ Windows Server 2012 r 2에서 AD FS의 조건부 액세스 제어는 다음과 �
 사용 가능한 설정을 통해 조건부 액세스 제어를 구현하여 위험을 관리할 수 있는 여러 가지 방법이 있습니다.
 
 ### <a name="common-scenarios"></a>일반적인 시나리오
-예를 들어 특정 응용 프로그램 (신뢰 당사자 트러스트)에 대 한 사용자의 그룹 구성원 자격 데이터를 기반으로 조건부 액세스 제어를 구현 하는 간단한 시나리오를 가정해 보겠습니다. 즉, AD 도메인의 특정 그룹에 속한 사용자가 AD FS으로 보안이 유지 되는 특정 응용 프로그램에 액세스할 수 있도록 페더레이션 서버에서 발급 권한 부여 규칙을 설정할 수 있습니다.  이 시나리오를 구현 하는 방법에 대 한 자세한 단계별 지침 (UI 및 Windows PowerShell 사용)은 [ 연습 가이드에서 설명 합니다. 조건 Access Control @ no__t를 사용 하 여 위험 관리-0. 이 연습의 단계를 완료 하려면 랩 환경을 설정 하 고 [Windows Server 2012 r 2에서 AD FS에 대 한 랩 환경 설정](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)의 단계를 수행 해야 합니다.
+예를 들어 특정 응용 프로그램 (신뢰 당사자 트러스트)에 대 한 사용자의 그룹 구성원 자격 데이터를 기반으로 조건부 액세스 제어를 구현 하는 간단한 시나리오를 가정해 보겠습니다. 즉, AD 도메인의 특정 그룹에 속한 사용자가 AD FS으로 보안이 유지 되는 특정 응용 프로그램에 액세스할 수 있도록 페더레이션 서버에서 발급 권한 부여 규칙을 설정할 수 있습니다.  이 시나리오를 구현하는 방법에 대한 자세한 단계별 지침(UI 및 Windows PowerShell 사용)은 [Walkthrough Guide: Manage Risk with Conditional Access Control](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)에서 다룹니다. 이 연습의 단계를 완료 하려면 랩 환경을 설정 하 고 [Windows Server 2012 r 2에서 AD FS에 대 한 랩 환경 설정](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)의 단계를 수행 해야 합니다.
 
 ### <a name="advanced-scenarios"></a>고급 시나리오
 Windows Server 2012 r 2에서 AD FS의 조건부 액세스 제어를 구현 하는 다른 예를 들면 다음과 같습니다.
@@ -174,8 +174,9 @@ Windows Server 2012 r 2에서 AD FS의 조건부 액세스 제어를 구현 하�
 
     ```
 
-## <a name="see-also"></a>관련 항목
-[연습 가이드: 조건부 Access Control 사용 하 여 위험 관리 @ no__t-0 @ no__t-1[Windows Server 2012 r 2의 AD FS에 대 한 랩 환경 설정](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
+## <a name="see-also"></a>참고 항목
+[연습 가이드: 조건부 Access Control 사용 하 여 위험 관리](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md) [Windows Server 2012 r 2에서 AD FS에 대 한 랩 환경 설정](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
+
 
 
 

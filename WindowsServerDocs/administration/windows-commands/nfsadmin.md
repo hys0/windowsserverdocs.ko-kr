@@ -22,36 +22,36 @@ ms.locfileid: "71373225"
 ---
 # <a name="nfsadmin"></a>nfsadmin
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 사용할 수 있습니다 **nfsadmin** NFS 용 서버와 NFS 용 클라이언트 서버를 관리 합니다.  
   
 ## <a name="syntax"></a>구문  
-**nfsadmin server** `[`*computerName*`] [` @ no__t-4u *UserName*`[` @ no__t-7p *Password*`]]` 0l  
+**nfsadmin server** `[`*computerName*`] [`\-u *사용자 이름*`[`\-p *암호*`]]` \-l  
   
-**nfsadmin server** `[`*computerName*`] [` @ no__t-4u *UserName* `[` @ no__t-7p *Password*`]]` 0r 1*client* 3 all @ no__t-14  
+**nfsadmin server** `[`*computerName*`] [`\-u *UserName* `[`\-p *Password*`]]` \-r `{`*client* `|` 모든`}`  
   
-**nfsadmin server** `[`*computerName*`] [` @ no__t-4u *UserName* `[` @ no__t-7p *Password*`]] {`start 0 stop @ no__t-11  
+**nfsadmin server** `[`*computerName*`] [`\-u *사용자 이름* `[`\-p *암호*`]] {`시작 `|` 중지`}`  
   
-**nfsadmin server** `[`*computerName*`] [` @ no__t-4u *UserName* `[` @ no__t-7p *Password*`]]` config *Option*1  
+**nfsadmin server** `[`*computerName*`] [`\-u *UserName* `[`\-p *Password*`]]` config *옵션*`[...]`  
   
-**nfsadmin server** `[`*computerName*`] [` @ no__t-4u *UserName* `[` @ no__t-7p *Password*`]]` creategroup *Name*  
+**nfsadmin server** `[`*computerName*`] [`\-u *사용자 이름* `[`\-p *암호*`]]` creategroup *이름*  
   
-**nfsadmin server** `[`*computerName*`] [` @ no__t-4u *UserName* `[` @ no__t-7p *Password*`]]` listgroups  
+**nfsadmin server** `[`*computerName*`] [`\-u *사용자 이름* `[`\-p *암호*`]]` listgroups  
   
-**nfsadmin server** `[`*computerName*`] [` @ no__t-4u *UserName* `[` @ no__t-7p *Password*`]]` 주로 *Name*  
+**nfsadmin server** `[`*computerName*`] [`\-u *사용자 이름* `[`\-p *암호*`]]` 주로 *이름*  
   
-**nfsadmin server** `[`*computerName*`] [` @ no__t-4u *UserName* `[` @ no__t-7p *Password*`]]` renamegroup *OldName NewName*  
+**nfsadmin server** `[`*computerName*`] [`\-u *UserName* `[`\-p *Password*`]]` renamegroup *OldName NewName*  
   
-**nfsadmin server** `[`*computerName*`] [` @ no__t-4u *UserName* `[` @ no__t-7p *Password*`]]` addmembers *Name Host*1  
+**nfsadmin server** `[`*computerName*`] [`\-u *사용자 이름* `[`\-p *암호*`]]` addmembers *이름 호스트*`[...]`  
   
-**nfsadmin server** `[`*computerName*`] [` @ no__t-4u *UserName* `[` @ no__t-7p *Password*`]]` listmembers  
+**nfsadmin server** `[`*computerName*`] [`\-u *UserName* `[`\-p *Password*`]]` listmembers  
   
-**nfsadmin server** `[`*computerName*`] [` @ no__t-4u *UserName* `[` @ no__t-7p *Password*`]]` deletemembers *Group Host*1  
+**nfsadmin server** `[`*computerName*`] [`\-u *사용자 이름* `[`\-p *암호*`]]` deletemembers *그룹 호스트*`[...]`  
   
-**nfsadmin client** `[`*computerName*`] [` @ no__t-4u *UserName* `[` @ no__t-7p *Password*`]] {`start 0 stop @ no__t-11  
+**nfsadmin client** `[`*computerName*`] [`\-u *사용자 이름* `[`\-p *암호*`]] {`시작 `|` 중지`}`  
   
-**nfsadmin client** `[`*computerName*`] [` @ no__t-4u *UserName* `[` @ no__t-7p *Password*`]]` config *Option*1  
+**nfsadmin client** `[`*computerName*`] [`\-u *UserName* `[`\-p *Password*`]]` config *옵션*`[...]`  
   
 ## <a name="description"></a>설명  
 **nfsadmin** 명령\-명령줄 유틸리티는 NFS 또는 NFS 용 클라이언트에 대 한 네트워크 파일 시스템에 대 한 Microsoft 서비스를 실행 하는 로컬 또는 원격 컴퓨터에서 서버를 관리 \(NFS\)합니다. 필요한 권한이 없는 계정으로 로그온 하는 경우에 사용자 이름 및 수행 하는 계정의 암호를 지정할 수 있습니다. 수행한 동작 **nfsadmin** 제공한 명령 인수에 따라 달라 집니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "71373225"
 **\-u** *사용자 이름*  
 자격 증명에 사용 하려는 사용자의 사용자 이름을 지정 합니다. 양식에서 사용자 이름에 도메인 이름을 추가 하려면 할 수 있습니다 <em>도메인</em> **\\** <em>사용자 이름</em>  
   
-**\- p** *암호*  
+**\-p** *암호*  
 사용 하 여 지정 된 사용자의 암호를 지정 된 **\-u** 옵션입니다. 지정 하는 경우는 **\-u** 옵션은 있 생략 된 **\-p** 옵션을 사용자의 암호를 묻는 메시지가 나타납니다.  
   
 #### <a name="administering-server-for-nfs"></a>NFS 용 서버 관리  
@@ -109,7 +109,7 @@ NFS 용 서버에 대 한 일반 설정을 지정합니다. 하나 이상의 다
 **fsize\=** \=*크기*  
 집합 *크기* 메가바이트 감사 파일의 최대 크기입니다. 기본 최대 크기는 7 MB입니다.  
   
-**audit @ no__t-1**\[ **\+** | **\-** \]**탑재** \=0**2**3**5**6**읽기** 8 @no__t-**20** **1 @no__ t-23**4**쓰기** 6**8**9**1**2**create** 4**6**7**9**0**delete** 2 **@no__ t-44**5**7**8**잠금** 0**2**3**5**6**all**  
+**audit\=** \[ **\+** | **\-** \]**mount** \[ **\+** | **\-** \]**읽기** \[ **\+|\-** **\]\[** **\+|** **\-\]** \[**만들기**\+ **|\-\]** \[ **\+** | **\-** \]**잠금** \[ **\+|\-** \]  
 이벤트가 기록 되도록 지정 합니다. 이벤트 로그를 시작 하려면 더하기 기호를 입력 \( **\+** \) ; 이벤트 로깅을 중지 하려면 이벤트 이름 앞에 빼기 기호를 입력 \( **\-** \) 이벤트 이름 앞입니다. 부호를 생략 하면 더하기 기호 가정 합니다. 사용 하지 않는 **모든** 다른 이벤트 이름입니다.  
   
 **lockperiod\=** <em>초</em>  
@@ -142,11 +142,11 @@ NFS 버전 3 프로토콜은 지원 되는지 여부를 지정 합니다. 기본
 **dircache\=** <em>크기</em>  
 디렉터리 캐시의 킬로바이트 단위에서 크기를 지정합니다. 로 지정 된 숫자 *크기* 4와 128 사이의 4의 배수 여야 합니다. 기본 디렉터리\-캐시 크기는 128KB입니다.  
   
-**translationfile**\= @ no__t-2file @ no__t-3  
+**translationfile**\=\[파일\]  
 Windows에서 이동 하는 경우 대체 파일의 이름에는 문자에 대 한 매핑 정보를 포함 하는 파일을 지정\-unix 기반\-파일 시스템을 기반으로 합니다. 경우 *파일* 를 지정 하지 않으면 파일 이름 문자 변환을 사용할 수 없습니다. 하는 경우의 값 **translationfile** 은 변경, 다시 시작 해야 변경 내용이 적용에 대 한 서버입니다.  
   
 **dotfileshidden**\={**예** | **없는**}  
-마침표로 시작 하는 이름을 사용 하 여 만든 파일을 \( @no__t.-1은 Windows 파일 시스템에서 숨김 상태로 표시 되 고 그에 따라 NFS 클라이언트에서 숨겨집니다. 기본 설정은 **없는**합니다.  
+마침표로 시작 하는 이름을 사용 하 여 만든 파일을 \(하는지 여부를 지정 합니다.\)은 Windows 파일 시스템에서 숨김 상태로 표시 되 고 그에 따라 NFS 클라이언트에서 숨겨집니다. 기본 설정은 **없는**합니다.  
   
 **casesensitivelookups\=** {**예** | **없는**}  
 디렉터리 조회 대/소문자 구분 여부를 지정 \(문자 사례의 정확한 일치 요구\)합니다.  
@@ -175,13 +175,13 @@ NTFS 파일 시스템에 있는 파일의 이름에 문자를 소문자, 대문�
 **renamegroup** *OldName NewName*  
 *OldName* 에 지정 된 클라이언트 그룹의 이름을 *NewName* 으로 변경 합니다.  
   
-**addmembers** *Name Host*\[ ... \]  
+**addmembers** *Name Host*\[...\]  
 *이름*으로 지정 된 클라이언트 그룹에 *호스트* 를 추가 합니다.  
   
 **listmembers** *이름*  
 *이름*으로 지정 된 클라이언트 그룹의 호스트 컴퓨터를 나열 합니다.  
   
-**deletemembers** *그룹 호스트*\[ ... \]  
+**deletemembers** *그룹 호스트*\[\]  
 *그룹*으로 지정 된 클라이언트 그룹에서 *호스트로* 지정 된 클라이언트를 제거 합니다.  
   
 명령 옵션 또는 인수를 지정 하지 않으면 **nfsadmin SERVER** NFS 구성 설정에 대 한 현재 서버를 표시 합니다.  
@@ -199,7 +199,7 @@ NFS 용 클라이언트 서비스를 중지합니다.
 NFS 용 클라이언트에 대 한 일반 설정을 지정합니다. 하나 이상의 다음 옵션을 제공 해야는 **config** 인수:  
   
 **fileaccess\=** <em>모드</em>  
--   네트워크 파일 시스템에서 만든 파일에 대 한 기본 사용 권한 모드를 지정 \(NFS\) 서버입니다. *모드* 인수는 세 자리 숫자로 0에서 7로 구성 됩니다. \(포괄\) 사용자, 그룹 및 부여 된 기본 사용 권한을 나타내는 \(각각\)합니다. 숫자는 다음과 같이 UNIX @ no__t-0style 사용 권한으로 변환 됩니다. 0 @ no__t-0none, 1 @ no__t-1x, 2 @ no__t-2w, 3 @ no__t-3wx, 4 @ no__t-4r, 5 @ no__t-5rx, 6 @ no__t-6rw 및 7 @ no__t-7rwx. 예를 들어 **fileaccess\=750** 제공 소유자에 게 rwx 권한, 그룹에 rx 권한 및 다른 사용자에 게 액세스 권한이 없습니다.  
+-   네트워크 파일 시스템에서 만든 파일에 대 한 기본 사용 권한 모드를 지정 \(NFS\) 서버입니다. *모드* 인수는 세 자리 숫자로 0에서 7로 구성 됩니다. \(포괄\) 사용자, 그룹 및 부여 된 기본 사용 권한을 나타내는 \(각각\)합니다. 숫자 UNIX 변환할\-사용 권한을 다음과 같은 스타일: 0\=없음, 1\=x, 2\=w, 3\=wx, 4\=r, 5\=rx, 6\=rw와 7\=rwx 합니다. 예를 들어 **fileaccess\=750** 제공 소유자에 게 rwx 권한, 그룹에 rx 권한 및 다른 사용자에 게 액세스 권한이 없습니다.  
   
 **mapsvr\=** <em>서버</em>  
 집합 *서버* NFS 용 클라이언트에 대 한 사용자 이름 매핑 서버입니다. 이 옵션을 이전 버전과 호환성에 대 한 지원 계속 있지만 사용 해야는 **sfuadmin** 유틸리티 대신 합니다.  
@@ -213,7 +213,7 @@ NFS 용 클라이언트에 대 한 일반 설정을 지정합니다. 하나 이�
 **제한 시간\=** <em>초</em>  
 연결 시 대기 시간 (초)의 수를 지정 \(원격 프로시저 호출\)합니다. 이 값은 0.8, 0.9, 또는 1에서 60도 (포함) 사이의 정수 여야 합니다. 기본값은 0.8입니다.  
   
-**프로토콜 @ no__t-1 {TCP | UDP | TCP @ no__t-2UDP}**  
+**프로토콜\={TCP | UDP | TCP\+UDP}**  
 클라이언트에서 지 원하는 전송 프로토콜을 지정 합니다. 기본 설정은 **TCP\+UDP**  
   
 **rsize\=** <em>크기</em>  
@@ -222,7 +222,7 @@ NFS 용 클라이언트에 대 한 일반 설정을 지정합니다. 하나 이�
 **wsize\=** <em>크기</em>  
 (킬로바이트) 쓰기 버퍼의 크기를 지정 합니다. 이 값은 0.5, 1, 2, 4, 8, 16, 32 또는 수 있습니다. 기본값은 32입니다.  
   
-**perf @ no__t-1default**  
+**성능\=기본값**  
 다음 성능 설정을 기본값으로 복원합니다.  
   
 -   **mtype**  
@@ -236,7 +236,7 @@ NFS 용 클라이언트에 대 한 일반 설정을 지정합니다. 하나 이�
 -   **wsize**  
   
 **fileaccess\=** <em>모드</em>  
-네트워크 파일 시스템에서 만든 파일에 대 한 기본 사용 권한 모드를 지정 \(NFS\) 서버입니다. *모드* 인수는 세 자리 숫자로 0에서 7로 구성 됩니다. \(포괄\) 사용자, 그룹 및 부여 된 기본 사용 권한을 나타내는 \(각각\)합니다. 숫자는 다음과 같이 UNIX @ no__t-0style 사용 권한으로 변환 됩니다. 0 @ no__t-0none, 1 @ no__t-1x, 2 @ no__t-2w, 3 @ no__t-3wx, 4 @ no__t-4r, 5 @ no__t-5rx, 6 @ no__t-6rw 및 7 @ no__t-7rwx. 예를 들어 **fileaccess\=750** 제공 소유자에 게 rwx 권한, 그룹에 rx 권한 및 다른 사용자에 게 액세스 권한이 없습니다.  
+네트워크 파일 시스템에서 만든 파일에 대 한 기본 사용 권한 모드를 지정 \(NFS\) 서버입니다. *모드* 인수는 세 자리 숫자로 0에서 7로 구성 됩니다. \(포괄\) 사용자, 그룹 및 부여 된 기본 사용 권한을 나타내는 \(각각\)합니다. 숫자 UNIX 변환할\-사용 권한을 다음과 같은 스타일: 0\=없음, 1\=x, 2\=w, 3\=wx, 4\=r, 5\=rx, 6\=rw와 7\=rwx 합니다. 예를 들어 **fileaccess\=750** 제공 소유자에 게 rwx 권한, 그룹에 rx 권한 및 다른 사용자에 게 액세스 권한이 없습니다.  
   
 명령 옵션 또는 인수를 지정 하지 않으면 **nfsadmin CLIENT** NFS 구성 설정에 대 한 현재 클라이언트를 표시 합니다.  
   

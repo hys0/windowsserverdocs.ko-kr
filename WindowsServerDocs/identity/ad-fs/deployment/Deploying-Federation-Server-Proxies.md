@@ -18,7 +18,7 @@ ms.locfileid: "71408402"
 ---
 # <a name="deploying-federation-server-proxies"></a>페더레이션 서버 프록시 배포
 
-Active Directory Federation Services \(AD FS @ no__t-1에서 페더레이션 서버 프록시를 배포 하려면 [ 검사 목록의 각 작업을 완료 합니다. 페더레이션 서버 프록시를 설정 하는 경우 @ no__t-0.  
+Active Directory Federation Services \(AD FS\)에서 페더레이션 서버 프록시를 배포 하려면 [검사 목록: 페더레이션 서버 프록시 설정](Checklist--Setting-Up-a-Federation-Server-Proxy.md)에서 각 작업을 완료 합니다.  
   
 > [!NOTE]  
 > 이 검사 목록을 사용 하는 경우 서버를 구성 하는 절차를 시작 하기 전에 먼저 [Windows server 2012의 AD FS 디자인 가이드](https://technet.microsoft.com/library/dd807036.aspx) 에서 페더레이션 서버 프록시 계획 지침에 대 한 참조를 읽어 보는 것이 좋습니다. 검사 목록에 따라 페더레이션 서버 프록시에 대 한 디자인 및 배포 프로세스를 보다 잘 이해할 수가 있습니다.  

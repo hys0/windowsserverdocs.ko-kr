@@ -150,7 +150,7 @@ VPN 연결에 해당 기본 게이트웨이가 비어 있거나 모두 0(0.0.0.0
   
 ## <a name="previous-step"></a>이전 단계  
   
--   [1단계: DirectAccess 인프라 계획 @ no__t-0  
+-   [1 단계: DirectAccess 인프라 계획](da-adv-plan-s1-infrastructure.md)  
   
 
 

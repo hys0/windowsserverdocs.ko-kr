@@ -22,8 +22,8 @@ ms.locfileid: "71388012"
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-- [**선행** 7.1단계. EAP-TLS를 사용하여 CRL(인증서 해지 목록) 확인 무시](vpn-config-eap-tls-to-ignore-crl-checking.md)
-- [**그런** 7.3단계. 조건부 액세스 정책 구성](vpn-config-conditional-access-policy.md)
+- [**이전:** 7.1 단계. EAP-TLS를 구성 하 여 CRL (인증서 해지 목록) 검사 무시](vpn-config-eap-tls-to-ignore-crl-checking.md)
+- [**다음:** 7.3 단계. 조건부 액세스 정책 구성](vpn-config-conditional-access-policy.md)
 
 이 단계에서는 Azure AD를 사용 하 여 VPN 인증에 대 한 조건부 액세스 루트 인증서를 구성 하 여 테 넌 트에서 VPN 서버 라는 클라우드 앱을 자동으로 만듭니다. VPN 연결에 대 한 조건부 액세스를 구성 하려면 다음을 수행 해야 합니다.
 
@@ -53,4 +53,4 @@ ms.locfileid: "71388012"
 
 ## <a name="next-steps"></a>다음 단계
 
-[7.3단계. 조건부 액세스 정책 구성 @ no__t-0: 이 단계에서는 VPN 연결에 대 한 조건부 액세스 정책을 구성 합니다.
+[7.3 단계. 조건부 액세스 정책 구성](vpn-config-conditional-access-policy.md):이 단계에서는 VPN 연결에 대 한 조건부 액세스 정책을 구성 합니다.

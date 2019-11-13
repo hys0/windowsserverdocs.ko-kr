@@ -19,11 +19,11 @@ ms.locfileid: "71393652"
 ---
 # <a name="enable-all-virtual-network-adapters-configured-for-a-virtual-machine"></a>가상 컴퓨터에 대해 구성 된 모든 가상 네트워크 어댑터를 사용 하도록 설정
 
->적용 대상: Windows Server 2016
+>적용 대상: Windows Server 2016
 
 모범 사례 및 검사에 대한 자세한 내용은 [모범 사례 분석기](https://go.microsoft.com/fwlink/?LinkId=122786)를 참조하세요.  
   
-|속성|설명|  
+|속성|세부 정보|  
 |-|-|  
 |**운영 체제**|Windows Server 2016|  
 |**제품/기능**|Hyper-V|  
@@ -40,11 +40,11 @@ ms.locfileid: "71393652"
   
 *다음 가상 컴퓨터는 네트워크에 연결 되어 있지 않을 수 있습니다.*  
   
-@no__t-가상 머신 이름의 목록 >  
+가상 컴퓨터 이름 목록 \<>  
   
 ## <a name="resolution"></a>해결 방법  
   
-@no__t 게스트 운영 체제의 Device Manager를 사용 하 여 모든 가상 네트워크 어댑터를 사용 하도록 설정 합니다. 어댑터가 필요 하지 않으면 Hyper-v 관리자를 사용 하 여 가상 머신에서 제거 하십시오. *  
+*게스트 운영 체제의 Device Manager를 사용 하 여 모든 가상 네트워크 어댑터를 사용 하도록 설정 합니다. 어댑터가 필요 하지 않으면 Hyper-v 관리자를 사용 하 여 가상 머신에서 제거 합니다.*  
   
 
 

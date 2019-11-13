@@ -18,11 +18,11 @@ ms.locfileid: "71366293"
 ---
 # <a name="configure-the-failover-tcpip-settings-that-you-want-the-replica-virtual-machine-to-use-in-the-event-of-a-failover"></a>장애 조치 시 사용 하 여 복제 가상 컴퓨터를 장애 조치 TCP/IP 설정을 구성합니다
 
->적용 대상: Windows Server 2016
+>적용 대상: Windows Server 2016
  
 모범 사례 분석기 및 검사에 대한 자세한 내용은 [모범 사례 분석기 검사 실행 및 검사 결과 관리](https://go.microsoft.com/fwlink/p/?LinkID=223177)를 참조하세요.  
   
-|속성|설명|  
+|속성|세부 정보|  
 |-|-|  
 |**운영 체제**|Windows Server 2016|  
 |**제품/기능**|Hyper-V|  
@@ -35,9 +35,9 @@ ms.locfileid: "71366293"
 *고정 IP 주소로 구성 된 복제본 가상 컴퓨터는 장애 조치 (failover) 시 해당 주 가상 컴퓨터와 다른 IP 주소를 사용 하도록 구성 해야 합니다.*  
   
 ## <a name="impact"></a>영향  
-주 가상 머신에서 지 원하는 워크 로드를 사용 하는 @no__t 클라이언트는 장애 조치 (failover) 후 복제본 가상 머신에 연결 하지 못할 수 있습니다. 또한 기본 가상 컴퓨터의 원래 IP 주소 올바르지 않을 경우 복제본 가상 컴퓨터 네트워크 토폴로지에서 합니다. 이는 다음과 같은 가상 컴퓨터에 영향을 줍니다. *  
+*주 가상 머신에서 지원 되는 워크 로드를 사용 하는 클라이언트는 장애 조치 (failover) 후 복제본 가상 머신에 연결 하지 못할 수 있습니다. 또한 주 가상 컴퓨터의 원래 IP 주소는 복제본 가상 컴퓨터 네트워크 토폴로지에서 유효 하지 않습니다. 이는 다음과 같은 가상 컴퓨터에 영향을 줍니다.*  
   
-@no__t-가상 머신 목록 >  
+가상 컴퓨터 \<목록 >  
   
 ## <a name="resolution"></a>해결 방법  
 *Hyper-v 관리자를 사용 하 여 장애 조치 (failover) 시 복제본 가상 컴퓨터에서 사용 해야 하는 IP 주소를 구성 합니다.*  

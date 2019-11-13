@@ -23,7 +23,7 @@ ms.locfileid: "71404732"
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-원격 액세스는 원격 사용자가 DirectAccess 또는 Vpn (가상 사설망)을 사용 하 여 내부 네트워크 리소스에 안전 하 게 액세스할 수 있도록 하는 Windows Server 2016, Windows Server 2012 R2 및 Windows Server 2012 운영 체제의 서버 역할입니다. RRAS (라우팅 및 원격 액세스 서비스). 이 가이드에는 [ 테스트 랩 가이드를 확장 하는 단계별 지침이 포함 되어 있습니다. IPv4 및 IPv6 @ no__t를 혼합 하 여 DirectAccess 단일 서버 설치를 시연 하 여 원격 액세스 OTP (일회용 암호) 구성을 보여 줍니다.  
+원격 액세스는 원격 사용자가 DirectAccess 또는 Vpn (가상 사설망)을 사용 하 여 내부 네트워크 리소스에 안전 하 게 액세스할 수 있도록 하는 Windows Server 2016, Windows Server 2012 R2 및 Windows Server 2012 운영 체제의 서버 역할입니다. RRAS (라우팅 및 원격 액세스 서비스). 이 가이드에는 [테스트 랩 가이드: IPv4 및 i p v 6을 사용 하 여 DirectAccess 단일 서버 설치 시연](https://go.microsoft.com/fwlink/p/?LinkId=237004) 을 확장 하 여 원격 액세스 OTP (일회용 암호) 구성을 시연 하는 단계별 지침이 포함 되어 있습니다.  
   
 > [!WARNING]  
 > 이 테스트 랩 가이드의 디자인에는 도메인 컨트롤러 및 Windows server 2016, Windows Server 2012 R2 또는 Windows Server 2012를 실행 하는 CA (인증 기관)와 같은 인프라 서버가 포함 되어 있습니다. 이 테스트 랩 가이드를 사용 하 여 다른 운영 체제를 실행 하는 인프라 서버를 구성 하는 것은 테스트 되지 않았으며 다른 운영 체제를 구성 하기 위한 지침은이 가이드에 포함 되어 있지 않습니다.  

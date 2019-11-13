@@ -39,7 +39,7 @@ ms.locfileid: "71404909"
   
 ## <a name="BKMK_Links"></a>이전 단계  
   
--   [2단계: DirectAccess 서버 구성 @ no__t-0  
+-   [2 단계: DirectAccess 서버 구성](Step-2-Configuring-DirectAccess-Servers.md)  
   
 
 

@@ -26,8 +26,8 @@ ms.locfileid: "71388066"
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-- [**선행** 7단계. 필드 Azure AD를 사용 하 여 VPN 연결에 대 한 조건부 액세스](ad-ca-vpn-connectivity-windows10.md)
-- [**그런** 7.2단계. Azure AD를 사용하여 VPN 인증에 대한 루트 인증서 만들기](vpn-create-root-cert-for-vpn-auth-azure-ad.md)
+- [**이전:** 7 단계. 필드 Azure AD를 사용 하 여 VPN 연결에 대 한 조건부 액세스](ad-ca-vpn-connectivity-windows10.md)
+- [**다음:** 7.2 단계. Azure AD를 사용 하 여 VPN 인증에 대 한 루트 인증서 만들기](vpn-create-root-cert-for-vpn-auth-azure-ad.md)
 
 >[!IMPORTANT]
 >이 레지스트리 변경을 구현 하지 못하면 PEAP를 사용 하는 클라우드 인증서를 사용 하는 IKEv2 연결이 실패 하지만, 온-프레미스 CA에서 발급 한 클라이언트 인증 인증서를 사용 하는 IKEv2 연결은 계속 작동 합니다.
@@ -45,7 +45,7 @@ ms.locfileid: "71388066"
 
 1. NPS 서버에서 **regedit.exe** 를 엽니다.
 
-2. **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\13**로 이동 합니다.
+2. **HKEY_LOCAL_MACHINE \system\currentcontrolset\services\rasman\ppp\eap\13**로 이동 합니다.
 
 3. **편집 > 새로 만들기** 를 선택 하 고 **DWORD (32 비트) 값** 을 선택 하 고 **Ignorenorevocationcheck**를 입력 합니다.
 
@@ -64,4 +64,4 @@ ms.locfileid: "71388066"
 
 ## <a name="next-steps"></a>다음 단계
 
-[7.2단계. Azure AD @ no__t를 사용 하 여 VPN 인증에 대 한 루트 인증서 만들기-0: 이 단계에서는 테 넌 트에서 VPN 서버 클라우드 앱을 자동으로 만드는 Azure AD를 사용 하 여 VPN 인증에 대 한 조건부 액세스 루트 인증서를 구성 합니다.
+[7.2 단계. Azure AD를 사용 하 여 VPN 인증에 대 한 루트 인증서 만들기](vpn-create-root-cert-for-vpn-auth-azure-ad.md):이 단계에서는 테 넌 트에서 Vpn 서버 클라우드 앱을 자동으로 만드는 AZURE ad를 사용 하 여 vpn 인증에 대 한 조건부 액세스 루트 인증서를 구성 합니다.

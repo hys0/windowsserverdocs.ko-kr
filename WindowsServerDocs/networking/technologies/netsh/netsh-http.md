@@ -23,7 +23,7 @@ ms.locfileid: "71401873"
 >[!TIP]
 >Windows Server 2016 또는 Windows 10을 실행 하는 컴퓨터에서 Windows PowerShell을 사용 하는 경우 **netsh** 를 입력 하 고 enter 키를 누릅니다. Netsh 프롬프트에서 **http** 를 입력 하 고 enter 키를 눌러 netsh http 프롬프트를 가져옵니다.
 >
->&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5 @ no__t-6netsh http @ no__t-7
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;netsh http\>
 
 사용 가능한 netsh http 명령은 다음과 같습니다.
 
@@ -98,7 +98,7 @@ add sslcert [ ipport= ] IPAddress:port [ certhash= ] CertHash [ appid= ] GUID [ 
 |         **revocationfreshnesstime**          | 업데이트 된 CRL (인증서 해지 목록)을 확인 하는 시간 간격 (초)을 지정 합니다. 이 값이 0 이면 이전 CRL이 만료 된 경우에만 새 CRL이 업데이트 됩니다. | 선택 사항 |
 |           **urlretrievaltimeout**            |                            원격 URL에 대 한 인증서 해지 목록을 검색 한 후의 제한 시간 간격 (밀리초)을 지정 합니다.                            | 선택 사항 |
 |             **sslctlidentifier**             |                신뢰할 수 있는 인증서 발급자 목록을 지정 합니다. 이 목록은 컴퓨터에서 신뢰할 수 있는 인증서 발급자의 하위 집합일 수 있습니다.                 | 선택 사항 |
-|             **sslctlstorename**              |                                                SslCtlIdentifier이 저장 된 LOCAL_MACHINE 아래의 인증서 저장소 이름을 지정 합니다.                                                | 선택 사항 |
+|             **sslctlstorename**              |                                                SslCtlIdentifier가 저장 된 LOCAL_MACHINE 아래의 인증서 저장소 이름을 지정 합니다.                                                | 선택 사항 |
 |              **dsmapperusage**               |                                                        DS 매퍼 사용 여부를 지정 합니다. 기본값은 사용 안 함입니다.                                                         | 선택 사항 |
 |          **clientcertnegotiation**           |                                              인증서 협상이 사용 되는지 여부를 지정 합니다. 기본값은 사용 안 함입니다.                                               | 선택 사항 |
 
@@ -157,7 +157,7 @@ add urlacl [ url= ] URL [ [user=] User [ [ listen= ] yes | no [ delegate= ] yes 
 |   **url**    |                                          정규화 된 URL (Uniform Resource Locator)을 지정 합니다.                                           | 필수 |
 |   **user**   |                                                      사용자 또는 사용자 그룹 이름을 지정 합니다.                                                       | 필수 |
 |  **들**  | 다음 값 중 하나를 지정 합니다. 예: 사용자가 Url을 등록할 수 있도록 허용 합니다. 기본값입니다. 아니요: 사용자가 Url을 등록 하지 못하도록 합니다. | 선택 사항 |
-| **대리자나** |  다음 값 중 하나를 지정 합니다. 예: 사용자가 Url을 위임할 수 있도록 허용: 사용자가 Url을 위임 하지 못하도록 합니다. 기본값입니다.  | 선택 사항 |
+| **대리자나** |  다음 값 중 하나를 지정 합니다. 예: 사용자가 Url을 위임할 수 있도록 허용 아니요: 사용자가 Url을 위임 하지 못하도록 합니다. 기본값입니다.  | 선택 사항 |
 |   **sddl**   |                                                DACL을 설명 하는 SDDL 문자열을 지정 합니다.                                                 | 선택 사항 |
 
 ---
@@ -166,10 +166,10 @@ add urlacl [ url= ] URL [ [user=] User [ [ listen= ] yes | no [ delegate= ] yes 
 
 다음은 **urlacl 추가** 명령의 네 가지 예입니다.
 
-- add urlacl url = https://+:80/MyUri user = DOMAIN @ no__t-1user
-- add urlacl url = <https://www.contoso.com:80/MyUri> 사용자 = DOMAIN @ no__t-1user listen = yes
-- add urlacl url = <https://www.contoso.com:80/MyUri> user = DOMAIN @ no__t-1user delegate = no
-- add urlacl url = https://+:80/MyUri sddl = ...
+- add urlacl url =https://+:80/MyUri user = DOMAIN\\user
+- add urlacl url =<https://www.contoso.com:80/MyUri> user = DOMAIN\\사용자 수신 = 예
+- add urlacl url =<https://www.contoso.com:80/MyUri> user = DOMAIN\\사용자 대리자 = 아니요
+- add urlacl url =https://+:80/MyUri sddl = ...
 
 ---
 
@@ -196,7 +196,7 @@ delete cache [ [ url= ] URL [ [recursive= ] yes | no ]
 
 다음은 **캐시 삭제** 명령의 두 가지 예입니다.
 
-- 캐시 삭제 url = <https://www.contoso.com:80/myresource/> 재귀 = 예
+- 캐시 삭제 url =<https://www.contoso.com:80/myresource/> recursive = 예
 - 캐시 삭제
 
 ---
@@ -312,8 +312,8 @@ delete urlacl [ url= ] URL
 
 다음은 **urlacl 삭제** 명령의 두 가지 예입니다.
 
-- urlacl url 삭제 = https://+:80/MyUri
-- urlacl url 삭제 = <https://www.contoso.com:80/MyUri>
+- urlacl url 삭제 =https://+:80/MyUri
+- urlacl url 삭제 =<https://www.contoso.com:80/MyUri>
 
 ---
 
@@ -352,7 +352,7 @@ show cachestate [ [url= ] URL]
 
 다음은 **cachestate** 명령의 두 가지 예입니다.
 
-- cachestate url = @no__t 표시
+- cachestate url =<https://www.contoso.com:80/myresource> 표시
 - cachestate 표시
 
 ---
@@ -462,8 +462,8 @@ show urlacl [ [url= ] URL]
 
 다음은 **urlacl 표시** 명령의 세 가지 예입니다.
 
-- urlacl url 표시 = https://+:80/MyUri
-- urlacl url 표시 = <https://www.contoso.com:80/MyUri>
+- urlacl url 표시 =https://+:80/MyUri
+- urlacl url 표시 =<https://www.contoso.com:80/MyUri>
 - urlacl 표시
 
 ---

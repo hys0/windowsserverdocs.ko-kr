@@ -24,8 +24,8 @@ ms.locfileid: "71404317"
 
 이 단계에서는 조건부 액세스 루트 인증서를 온-프레미스 AD에 대 한 VPN 인증에 대 한 신뢰할 수 있는 루트 인증서로 배포 합니다.
 
-- [**선행** 7.3단계. 조건부 액세스 정책 구성](vpn-config-conditional-access-policy.md)
-- [**그런** 7.5단계. Windows 10 디바이스에 대한 OMA-DM 기반 VPNv2 프로필 만들기](vpn-create-oma-dm-based-vpnv2-profiles.md)
+- [**이전:** 7.3 단계. 조건부 액세스 정책 구성](vpn-config-conditional-access-policy.md)
+- [**다음:** 7.5 단계. Windows 10 장치에 대 한 OMA DM 기반 VPNv2 프로필 만들기](vpn-create-oma-dm-based-vpnv2-profiles.md)
 
 1. **VPN 연결** 페이지에서 **인증서 다운로드**를 선택 합니다.
 
@@ -39,8 +39,8 @@ ms.locfileid: "71404317"
 
    | 명령 | 설명 |
    | --- | --- |
-   | `certutil -dspublish -f VpnCert.cer RootCA` | **Cn = AIA** 및 **Cn = 인증 기관** 컨테이너에 두 개의 **microsoft vpn 루트 CA gen 1** 컨테이너를 만들고 각 루트 인증서를 두 microsoft vpn 루트의 _cACertificate_ 특성 값으로 게시 합니다.  **CA gen 1** 컨테이너. |
-   | `certutil -dspublish -f VpnCert.cer NTAuthCA` | Cn = **AIA** 및 **Cn = 인증 기관** 컨테이너 아래에 **cn = NTAuthCertificates** 컨테이너를 하나 만들고 각 루트 인증서를 cn =의 _cACertificate_ 특성에 대 한 값으로 게시 합니다.  **NTAuthCertificates** 컨테이너입니다. |
+   | `certutil -dspublish -f VpnCert.cer RootCA` | **Cn = AIA** 및 **Cn = 인증 기관** 컨테이너에 두 개의 **microsoft vpn 루트 ca gen 1** 컨테이너를 만들고 각 루트 인증서를 **Microsoft Vpn 루트 ca gen 1** 컨테이너의 _cACertificate_ 특성 값으로 게시 합니다. |
+   | `certutil -dspublish -f VpnCert.cer NTAuthCA` | Cn = **AIA** 및 **Cn = 인증 기관** 컨테이너 아래에 **cn = NTAuthCertificates** 컨테이너를 하나 만들고 **cn = NTAuthCertificates** container의 _cACertificate_ 특성에 값으로 각 루트 인증서를 게시 합니다. |
    | `gpupdate /force` | Windows 서버 및 클라이언트 컴퓨터에 루트 인증서를 추가 하는 것을 신속 하 게 합니다. |
 
 3. 루트 인증서가 Enterprise NTauth 저장소에 있고 신뢰할 수 있는 것으로 표시 되는지 확인 합니다.
@@ -59,4 +59,4 @@ ms.locfileid: "71404317"
 
 ## <a name="next-steps"></a>다음 단계
 
-[7.5단계. Windows 10 장치에 대 한 OMA-URI 기반 VPNv2 프로필 만들기 @ no__t-0: 이 단계에서는 Intune을 사용 하 여 VPN 장치 구성 정책을 배포 하는 OMA DM 기반 VPNv2 프로필을 만들 수 있습니다. SCCM 또는 PowerShell 스크립트로 VPNv2 프로필을 만들려면 [VPNV2 CSP 설정](https://docs.microsoft.com/windows/client-management/mdm/vpnv2-csp) 에서 자세한 내용을 참조 하세요.
+[7.5 단계. Windows 10 장치에 대 한 OMA-URI 기반 VPNv2 프로필 만들기](vpn-create-oma-dm-based-vpnv2-profiles.md):이 단계에서는 Intune을 사용 하 여 VPN 장치 구성 정책을 배포 하는 OMA dm 기반 VPNv2 프로필을 만들 수 있습니다. SCCM 또는 PowerShell 스크립트로 VPNv2 프로필을 만들려면 [VPNV2 CSP 설정](https://docs.microsoft.com/windows/client-management/mdm/vpnv2-csp) 에서 자세한 내용을 참조 하세요.

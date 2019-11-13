@@ -21,15 +21,15 @@ ms.locfileid: "71359321"
   
 AD FS 구성 데이터를 내보내려면 다음 작업을 수행합니다.  
   
--   [1단계:  서비스 설정 내보내기 @ no__t-0  
+-   [1 단계: 서비스 설정 내보내기](#step-1-export-service-settings)  
   
--   [2단계:  클레임 공급자 트러스트 내보내기 @ no__t-0  
+-   [2 단계: 클레임 공급자 트러스트 내보내기](#step-2-export-claims-provider-trusts)  
   
--   [3단계:  신뢰 당사자 트러스트를 내보냅니다. @ no__t-0  
+-   [3 단계: 신뢰 당사자 트러스트 내보내기](#step-3-export-relying-party-trusts)  
   
--   [4단계:  사용자 지정 특성 저장소 백업 @ no__t-0  
+-   [4 단계: 사용자 지정 특성 저장소 백업](#step-4-back-up-custom-attribute-stores)  
   
--   [5단계:  웹 페이지 사용자 지정 백업 @ no__t-0  
+-   [5 단계: 웹 페이지 사용자 지정 백업](#step-5-back-up-webpage-customizations)  
   
 ## <a name="step-1-export-service-settings"></a>1단계: 서비스 설정 내보내기  
  서비스 설정을 내보내려면 다음 절차를 수행합니다.  
@@ -87,21 +87,21 @@ ID 값을 찾으려면 **Services(서비스)** 콘솔에서 **AD FS 2.0 Windows 
   
 이렇게 하려면 Windows PowerShell을 열고 `PSH:>add-pssnapin “Microsoft.adfs.powershell”`명령을 실행하여 Windows PowerShell 세션에 AD FS cmdlet을 추가합니다. 그런 다음 `Get-ADFSClaimDescription | Out-File “.\claimtypes.txt”` 명령을 실행하여 사용자 지정 클레임 설명을 파일로 내보냅니다.  
   
-##  <a name="step-2-export-claims-provider-trusts"></a>2단계: 클레임 공급자 트러스트 내보내기  
+##  <a name="step-2-export-claims-provider-trusts"></a>2 단계: 클레임 공급자 트러스트 내보내기  
  클레임 공급자 트러스트를 내보내려면 다음 절차를 수행합니다.  
   
 ### <a name="to-export-claims-provider-trusts"></a>클레임 공급자 트러스트를 내보내려면  
   
 1.  Windows PowerShell을 사용하여 모든 클레임 공급자 트러스트를 내보낼 수 있습니다. Windows PowerShell을 열고 `PSH:>add-pssnapin “Microsoft.adfs.powershell”`명령을 실행하여 Windows PowerShell 세션에 AD FS cmdlet을 추가합니다. 그런 다음 `PSH:>Get-ADFSClaimsProviderTrust | Out-File “.\cptrusts.txt”`명령을 실행하여 모든 클레임 공급자 트러스트를 내보냅니다.  
   
-## <a name="step-3-export-relying-party-trusts"></a>3단계: 신뢰 당사자 트러스트 내보내기  
+## <a name="step-3-export-relying-party-trusts"></a>3 단계: 신뢰 당사자 트러스트 내보내기  
  신뢰 당사자 트러스트를 내보내려면 다음 절차를 수행합니다.  
   
 ### <a name="to-export-relying-party-trusts"></a>신뢰 당사자 트러스트를 내보내려면  
   
 1.  모든 신뢰 당사자 트러스트를 내보내려면 Windows PowerShell을 열고 `PSH:>add-pssnapin “Microsoft.adfs.powershell”`명령을 실행하여 Windows PowerShell 세션에 AD FS cmdlet을 추가합니다. 그런 다음`PSH:>Get-ADFSRelyingPartyTrust | Out-File “.\rptrusts.txt”`명령을 실행하여 모든 신뢰 당사자 트러스트를 내보냅니다.  
   
-## <a name="step-4-back-up-custom-attribute-stores"></a>4단계: 사용자 지정 특성 저장소 백업  
+## <a name="step-4-back-up-custom-attribute-stores"></a>4 단계: 사용자 지정 특성 저장소 백업  
  Windows PowerShell을 사용하여 AD FS에서 사용 중인 사용자 지정 특성 저장소에 대한 정보를 확인할 수 있습니다. Windows PowerShell을 열고 `PSH:>add-pssnapin “Microsoft.adfs.powershell”`명령을 실행하여 Windows PowerShell 세션에 AD FS cmdlet을 추가합니다. 그런 다음 `PSH:>Get-ADFSAttributeStore`명령을 실행하여 사용자 지정 특성 저장소에 대한 정보를 찾습니다. 사용자 지정 특성 저장소를 업그레이드하거나 마이그레이션하는 단계는 다양합니다.  
   
 ## <a name="step-5-back-up-webpage-customizations"></a>5단계: 웹 페이지 사용자 지정 백업  
@@ -109,7 +109,7 @@ ID 값을 찾으려면 **Services(서비스)** 콘솔에서 **AD FS 2.0 Windows 
 
 ## <a name="next-steps"></a>다음 단계
  [AD FS 2.0 페더레이션 서버 마이그레이션 준비](prepare-to-migrate-ad-fs-fed-server.md)   
- [AD FS 2.0 페더레이션 서버 프록시 @no__t 마이그레이션 준비](prepare-to-migrate-ad-fs-fed-proxy.md)-1  
+ [AD FS 2.0 페더레이션 서버 프록시  마이그레이션 준비](prepare-to-migrate-ad-fs-fed-proxy.md)  
  [AD FS 2.0 페더레이션 서버 마이그레이션](migrate-the-ad-fs-fed-server.md)   
- [AD FS 2.0 페더레이션 서버 프록시](migrate-the-ad-fs-2-fed-server-proxy.md) 을 마이그레이션합니다.  
+ [AD FS 2.0 페더레이션 서버 프록시  마이그레이션](migrate-the-ad-fs-2-fed-server-proxy.md)  
  [AD FS 1.1 웹 에이전트 마이그레이션](migrate-the-ad-fs-web-agent.md)

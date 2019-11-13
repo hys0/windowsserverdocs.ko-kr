@@ -25,9 +25,9 @@ ms.locfileid: "71388602"
 
 이 항목에서는 Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012를 실행 하는 단일 DirectAccess 서버를 기본 기능과 함께 배포 하는 데 필요한 계획 단계에 대해 설명 합니다.  
   
-1.  [1단계: 기본 DirectAccess 인프라 계획 @ no__t-0-네트워크 및 서버 토폴로지, 방화벽 설정, 인증서 요구 사항, DNS 및 Active Directory 계획 합니다.  
+1.  [1 단계: 기본 DirectAccess 인프라](da-basic-plan-s1-infrastructure.md)계획 네트워크 및 서버 토폴로지, 방화벽 설정, 인증서 요구 사항, DNS 및 Active Directory을 계획 합니다.  
   
-2.  [2단계: 기본 DirectAccess 배포 @ no__t-0-계획 클라이언트 및 서버 배포를 계획 합니다.  
+2.  [2 단계: 기본 DirectAccess 배포](da-basic-plan-s2-deployment.md)계획 클라이언트 및 서버 배포를 계획 합니다.  
   
 ## <a name="next-step"></a>다음 단계  
 이러한 계획 단계를 완료한 후 서버 배포를 시작할 수 있습니다. 지침은 [기본 DirectAccess 설치 및 구성](Install-and-Configure-Basic-DirectAccess.md)을 참조 하세요.  

@@ -36,7 +36,7 @@ Windows Server 2012 R2 및 Windows Server 2012에서 서비스에 대 한 제한
 
 Windows Server 2003에서 도입된 제한 위임에 대한 자세한 내용은 [Kerberos 프로토콜 전환 및 제한 위임](https://technet.microsoft.com/library/cc739587(v=ws.10))(영문)을 참조하세요.
 
-Kerberos 프로토콜의 Windows Server 2012 R2 및 Windows Server 2012 구현에는 제한 된 위임 전용 확장이 포함 되어 있습니다.  S4U2Proxy(Service for User to Proxy)를 통해 서비스에서 사용자에 대한 Kerberos 서비스 티켓을 사용하여 KDC(키 배포 센터)로부터 백 엔드 서비스에 대한 서비스 티켓을 얻을 수 있습니다. 이러한 확장을 통해 다른 도메인에 있을 수 있는 백 엔드 서비스 계정에 제한 된 위임을 구성할 수 있습니다. 이러한 확장에 대 한 자세한 내용은 [ @ no__t-1MS @ no__t-2를 참조 하세요. 섹션(영문)을 사용자 서비스 및 제한 위임 프로토콜 사양 @ no__t-0 (MSDN Library)
+Kerberos 프로토콜의 Windows Server 2012 R2 및 Windows Server 2012 구현에는 제한 된 위임 전용 확장이 포함 되어 있습니다.  S4U2Proxy(Service for User to Proxy)를 통해 서비스에서 사용자에 대한 Kerberos 서비스 티켓을 사용하여 KDC(키 배포 센터)로부터 백 엔드 서비스에 대한 서비스 티켓을 얻을 수 있습니다. 이러한 확장을 통해 다른 도메인에 있을 수 있는 백 엔드 서비스 계정에 제한 된 위임을 구성할 수 있습니다. 이러한 확장에 대 한 자세한 내용은 MSDN Library의 [\[MS SFU\]: Kerberos 프로토콜 확장: 서비스 사용자 및 제한 된 위임 프로토콜 사양](https://msdn.microsoft.com/library/cc246071(PROT.13).aspx) 을 참조 하세요.
 
 **실용적인 응용 프로그램**
 
@@ -58,7 +58,7 @@ Windows Server 2012 R2 및 Windows Server 2012에서 도메인 간 제한 위임
 
 기본 프로토콜의 변경을 통해 도메인 간 제한 위임을 사용할 수 있습니다. Kerberos 프로토콜의 Windows Server 2012 R2 및 Windows Server 2012 구현에는 S4U2Proxy (Service for User to Proxy) 프로토콜에 대 한 확장이 포함 되어 있습니다. 이 확장은 서비스에서 사용자에 대한 Kerberos 서비스 티켓을 사용하여 KDC(키 배포 센터)로부터 백 엔드 서비스에 대한 서비스 티켓을 얻을 수 있도록 해주는 Kerberos 프로토콜에 대한 확장 집합입니다.
 
-이러한 확장에 대 한 구현 정보는 [ @ no__t-1MS-SFU @ no__t-2를 참조 하세요. 섹션(영문)을 사용자 서비스 및 제한 위임 프로토콜 사양 @ no__t-0 (MSDN)
+이러한 확장에 대 한 구현 정보는 MSDN의 [\[ms-chap\]: Kerberos 프로토콜 확장: 서비스 사용자 및 제한 된 위임 프로토콜 사양](https://msdn.microsoft.com/library/cc246071(PROT.10).aspx) 을 참조 하세요.
 
 S4U(Service for User) 확장과 비교하여 전달된 TGT(Ticket-Granting Ticket)를 포함한 Kerberos 위임의 기본 메시지 순서에 대한 자세한 내용은 [MS-SFU]: Kerberos 프로토콜 확장: 사용자 서비스 및 제한 위임 프로토콜 사양의 [1.3.3 프로토콜 개요](https://msdn.microsoft.com/library/cc246080(v=prot.10).aspx) 섹션(영문)을 참조하세요.
 
@@ -81,9 +81,9 @@ KDC는 프로토콜 전환을 제한 하지 않으므로, 리소스 관리자에
 
 -   보안 주체 목록을 검색 하려면 **PrincipalsAllowedToDelegateToAccount** 매개 변수를 사용 하 여 **uninstall-adserviceaccount** **및 get** **adcomputer** cmdlet을 사용 합니다.
 
--   리소스 서비스를 구성 하려면 다음을 사용 하 여 **새-ADComputer**, **uninstall-adserviceaccount**, **새-adcomputer**, **uninstall-adserviceaccount**및 **set-** **adcomputer** cmdlet **을 사용 합니다. PrincipalsAllowedToDelegateToAccount** 매개 변수입니다.
+-   리소스 서비스를 구성 하려면 **uninstall-adserviceaccount**, Uninstall-adserviceaccount 및 **PrincipalsAllowedToDelegateToAccount** 매개 변수를 사용 하 여및 설정 **-** **adcomputer** **cmdlet을** **사용 합니다.**
 
 ## <a name="BKMK_SOFT"></a>소프트웨어 요구 사항
 리소스 기반 제한 위임은 Windows Server 2012 R2 및 Windows Server 2012를 실행 하는 도메인 컨트롤러 에서만 구성할 수 있지만 혼합 모드 포리스트 내에서 적용할 수 있습니다.
 
-Windows Server 이전 버전의 운영 체제를 실행 하는 프런트 엔드 도메인 및 백 엔드 도메인 간 조회 경로의 사용자 계정 도메인에서 Windows Server 2012를 실행 하는 모든 도메인 컨트롤러에 다음 핫픽스를 적용 해야 합니다.  Windows Server 2008 R2 기반 도메인 컨트롤러가 있는 환경에서 리소스 기반 제한 위임 KDC_ERR_POLICY 실패 (https://support.microsoft.com/en-gb/help/2665790/resource-based-constrained-delegation-kdc-err-policy-failure-in-enviro).
+Windows server 이전 버전의 운영 체제를 실행 하는 프런트 엔드 도메인 및 백 엔드 도메인 간 조회 경로의 사용자 계정 도메인에서 Windows Server 2012를 실행 하는 모든 도메인 컨트롤러에 대해 windows server를 실행 하는 모든 도메인 컨트롤러에 다음 핫픽스를 적용 해야 합니다. Windows Server 2008 R2 기반 도메인 컨트롤러가 있는 환경에서 리소스 기반의 제한 된 위임 KDC_ERR_POLICY 실패 합니다 (https://support.microsoft.com/en-gb/help/2665790/resource-based-constrained-delegation-kdc-err-policy-failure-in-enviro).

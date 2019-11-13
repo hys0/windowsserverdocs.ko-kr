@@ -19,7 +19,7 @@ ms.locfileid: "71361704"
 ---
 # <a name="step-1-install-the-wsus-server-role"></a>1단계: WSUS 서버 역할 설치
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 WSUS 서버 배포의 다음 단계는 WSUS 서버 역할을 설치하는 것입니다. 다음 절차에서는 서버 관리자를 사용하여 WSUS 서버를 설치하는 방법을 설명합니다.
 
@@ -63,5 +63,5 @@ WSUS 서버 배포의 다음 단계는 WSUS 서버 역할을 설치하는 것입
 14. **서버 관리자**에서 다시 시작해야 함을 알리는 메시지가 표시되는지 확인합니다. 이는 설치된 서버 역할에 따라 다를 수 있습니다. 다시 시작해야 하는 경우 서버를 다시 시작해야 설치가 완료됩니다.
 
 > [!IMPORTANT]
-> 이 시점에서 설치 프로세스가 완료 되지만 WSUS가 작동 하려면 [Step 2 단계를 진행 해야 합니다. WSUS @ no__t-0을 구성 합니다.
+> 그러나이 시점에서 설치 프로세스가 완료 되 면 작동에 WSUS에 대 한 진행 해야 하 [2 단계: WSUS 구성](2-configure-wsus.md)합니다.
 

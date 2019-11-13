@@ -92,7 +92,7 @@ IT 전문가를 위한 이 개요 항목에서는 Windows Server 2012 및 Window
 ### <a name="support-in-active-directory-to-store-user-and-device-claims-resource-properties-and-central-access-policy-objects"></a>Active Directory에 사용자 및 장치 클레임, 리소스 속성 및 중앙 액세스 정책 개체를 저장하도록 지원  
   
 ### <a name="support-for-using-group-policy-to-deploy-central-access-policy-objects"></a>그룹 정책을 사용하여 중앙 액세스 정책 개체를 배포하도록 지원  
-다음 그룹 정책 설정을 사용 하면 중앙 액세스 정책 개체를 조직의 파일 서버에 배포할 수 있습니다. **Computer 구성 Windows 보안 설정 \ System\Central 액세스 정책**.  
+그룹 정책 설정, **컴퓨터 구성\정책\Windows 설정\보안 설정\파일 시스템\중앙 액세스 정책**을 통해 조직의 파일 서버에 중앙 액세스 정책 개체를 배포할 수 있습니다.  
   
 ### <a name="support-for-claims-based-file-authorization-and-auditing-for-file-systems-by-using-group-policy-and-global-object-access-auditing"></a>그룹 정책 및 전역 개체 액세스 감사를 사용하여 파일 시스템에 대한 클레임 기반 파일 권한 부여 및 감사 지원  
 제안된 사용 권한을 사용하여 중앙 액세스 정책에 대한 유효한 액세스를 감사하려면 준비된 중앙 액세스 정책 감사를 사용하도록 설정해야 합니다. 컴퓨터에 대한 이 설정은 GPO(그룹 정책 개체)의 **보안 설정**에 있는 **고급 감사 정책 구성** 아래에서 구성할 수 있습니다. GPO의 보안 설정을 구성한 후 네트워크의 컴퓨터에 GPO를 배포할 수 있습니다.  
@@ -128,7 +128,7 @@ IT 전문가를 위한 이 개요 항목에서는 Windows Server 2012 및 Window
 Windows Server 2012 또는 Windows Server 2012 R2를 실행하는 파일 서버에는 클레임을 포함하지 않는 사용자 토큰에 대해 사용자 클레임을 가져와야 하는지 여부를 지정하는 그룹 정책 설정이 포함됩니다. 이 설정은 기본적으로 **자동**으로 설정됩니다. 따라서 해당 파일 서버에 대해 사용자 또는 장치 클레임을 포함하는 중앙 정책이 있는 경우 이 그룹 정책 설정이 **켜짐**으로 설정됩니다. 파일 서버에 사용자 클레임을 포함하는 임의의 ACL이 포함된 경우, 서버를 액세스할 때 클레임을 제공하지 않는 사용자 대신 서버에서 클레임을 요청해야 한다는 것을 알 수 있도록 이 그룹 정책을 **켜짐**으로 설정해야 합니다.  
   
 ## <a name="additional-resource"></a>추가 리소스  
-이 기술을 기반으로 솔루션을 구현 하는 방법에 대 한 자세한 내용은 [Dynamic Access Control를 참조 하세요. 시나리오 개요 @ no__t-0.  
+이 기술을 기반으로 솔루션을 구현 하는 방법에 대 한 자세한 내용은 [동적 Access Control: 시나리오 개요](Dynamic-Access-Control--Scenario-Overview.md)를 참조 하세요.  
   
 
 

@@ -48,15 +48,15 @@ Windows Server는 클라이언트에 쿠키를 반환하고 경우에 따라 쿠
 ## <a name="how-the-cookie-pool-is-managed"></a>쿠키 풀의 관리 방법  
 LDAP 서버는 한 번에 둘 이상의 클라이언트를 처리하고 한 번에 둘 이상의 클라이언트에서 서버 쿠키 캐시를 사용해야 하는 쿼리를 시작할 수도 있습니다. 따라서 Windows Server 구현에서는 쿠키 풀 사용 추적 및 제한을 적용하여 쿠키 풀에서 너무 많은 리소스를 사용하지 않도록 해야 합니다. 이 제한은 LDAP 정책에서 다음 설정을 사용하여 관리자가 설정할 수 있습니다. 기본값 및 설명은 다음과 같습니다.  
   
-** Min결과 집합: 4 @ no__t-0  
+**MinResultSets: 4**  
   
 서버 쿠키 캐시에 MinResultSets보다 적은 항목이 있을 경우 LDAP 서버에서 아래에 설명된 최대 풀 크기를 확인하지 않습니다.  
   
-@no__t 0MaxResultSetSize: 262144 바이트 @ no__t-0  
+**MaxResultSetSize: 262,144바이트**  
   
 서버의 총 쿠키 캐시 크기는 MaxResultSetSize(바이트)의 최대값을 초과할 수 없습니다. 초과할 경우 쿠키가 가장 오래된 것부터 시작하여 풀이 MaxResultSetSize 바이트보다 작아지거나 MinResultSets보다 적은 쿠키가 풀에 남을 때까지 삭제됩니다. 즉, 저장된 쿠키가 3개만 있을 경우 LDAP 서버는 기본 설정을 사용하여 450KB의 풀이 정상인 것으로 간주합니다.  
   
-@no__t 0MaxResultSetsPerConn: 10 @ no__t-0  
+**MaxResultSetsPerConn: 10**  
   
 LDAP 서버는 풀에서 LDAP 연결당 MaxResultSetsPerConn보다 많은 쿠키를 허용하지 않습니다.  
   

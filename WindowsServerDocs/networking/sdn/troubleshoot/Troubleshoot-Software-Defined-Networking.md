@@ -33,7 +33,7 @@ ms.locfileid: "71405831"
 이 섹션에서는 다음 항목을 다룹니다.
 
 - [Windows Server 소프트웨어 정의 네트워킹 스택 문제 해결](https://docs.microsoft.com/windows-server/networking/sdn/troubleshoot/troubleshoot-windows-server-software-defined-networking-stack)
-- 블로그 게시물 [SDN 문제 해결: UDP 통신 오류 및 네트워크 컨트롤러 인증서 변경 @ no__t-0
+- 블로그 게시물 [SDN 문제 해결: UDP 통신 오류 및 네트워크 컨트롤러 인증서 변경](https://techcommunity.microsoft.com/t5/Networking-Blog/SDN-Troubleshooting-UDP-Communication-failures-and-changing-the/ba-p/339694)
 - 블로그 게시물 [SDN (소프트웨어 정의 네트워킹)에서 인증서 문제 해결](https://techcommunity.microsoft.com/t5/Networking-Blog/Troubleshooting-certificate-issues-in-Software-Defined/ba-p/339671)
 - 블로그 게시물 [Windows Server 2016에서 BGP 피어 링에 대 한 SDN 게이트웨이 로컬 주소를 찾는 방법](https://techcommunity.microsoft.com/t5/Networking-Blog/How-to-find-the-SDN-gateway-local-address-for-BGP-peering-in/ba-p/339663)
 - 블로그 게시물 [Virtual Machine Manager에서 SDN RAS 게이트웨이 VPN 대역폭 설정 구성 문제 해결](https://techcommunity.microsoft.com/t5/Networking-Blog/Troubleshoot-Configuring-SDN-RAS-Gateway-VPN-Bandwidth-Settings/ba-p/339661)

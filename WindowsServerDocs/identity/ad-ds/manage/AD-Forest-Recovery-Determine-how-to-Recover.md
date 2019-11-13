@@ -51,7 +51,7 @@ Active Directory을 다른 하드웨어로 복원 해야 하는 경우 전체 �
 
 오류가 발생 한 시간을 알 수 없는 경우 포리스트의 마지막 안전 상태를 유지 하는 백업을 확인 하 여 더 자세히 조사 합니다. 이 방법은 그다지 바람직하지 않습니다. 따라서 매일 AD DS의 성능 상태에 대 한 자세한 로그를 유지 하는 것이 좋습니다. 따라서 포리스트 전체 오류가 발생 하는 경우에는 오류에 대 한 대략적인 시간을 식별할 수 있습니다. 또한 빠른 복구를 사용 하려면 백업의 로컬 복사본을 유지 해야 합니다.
 
-Active Directory 휴지통을 사용 하는 경우 백업 수명은 **msds-deletedobjectlifetime** 값 또는 **tombstoneLifetime** 값 중 더 작은 값과 같습니다. 자세한 내용은 [Active Directory 휴지통 단계별 가이드](https://go.microsoft.com/fwlink/?LinkId=178657) (https://go.microsoft.com/fwlink/?LinkId=178657) 을 참조 하세요.
+Active Directory 휴지통을 사용 하는 경우 백업 수명은 **msds-deletedobjectlifetime** 값 또는 **tombstoneLifetime** 값 중 더 작은 값과 같습니다. 자세한 내용은 [Active Directory 휴지통 단계별 가이드](https://go.microsoft.com/fwlink/?LinkId=178657) (https://go.microsoft.com/fwlink/?LinkId=178657)를 참조 하세요.
 
 또는 Active Directory 데이터베이스 탑재 도구 (Dsamain)와 Ldp.exe 또는 Active Directory 사용자 및 컴퓨터와 같은 LDAP (Lightweight Directory Access Protocol) 도구를 사용 하 여의 마지막 안전 상태를 가진 백업을 확인할 수도 있습니다. o. Windows Server 2008 이상 Windows Server 운영 체제에 포함 된 Active Directory 데이터베이스 탑재 도구는 백업 또는 스냅숏에 저장 된 Active Directory 데이터를 LDAP 서버로 노출 합니다. 그런 다음 LDAP 도구를 사용 하 여 데이터를 찾아볼 수 있습니다. 이 방법은 DSRM (디렉터리 서비스 복원 모드)에서 DC를 다시 시작 하 여 AD DS 백업의 내용을 검사 하지 않아도 된다는 장점이 있습니다.
 
@@ -76,13 +76,13 @@ Active Directory 데이터베이스 탑재 도구를 사용 하는 방법에 대
 - 오류가 발생 하기 전 DNS (Domain Name System) 서버 였던 DC입니다. 이렇게 하면 DNS를 다시 설치 하는 데 필요한 시간이 절약 됩니다.
 - Windows 배포 서비스 사용 하는 경우 BitLocker 네트워크 잠금 해제를 사용 하도록 구성 되지 않은 DC를 선택 합니다. 이 경우에는 포리스트 복구 중 백업에서 복원 하는 첫 번째 DC에 BitLocker 네트워크 잠금 해제를 사용할 수 없습니다.
 
-   BitLocker 네트워크 잠금 해제는 Windows 배포 서비스 (WDS)를 배포한 Dc에서 *유일한* 키 보호기를 사용할 *수* 없기 때문에 첫 번째 DC에서 Active Directory와 WDS가 작동 하 여 잠금을. 하지만 첫 번째 DC를 복원 하기 전에 Active Directory을 WDS에 사용할 수 없으므로 잠금을 해제할 수 없습니다.
+   BitLocker 네트워크 잠금 해제는 Windows 배포 서비스 (WDS)를 배포한 Dc에서 *유일한* 키 보호기를 사용할 *수* 없기 때문에 잠금 해제를 위해 첫 번째 DC에서 Active Directory와 WDS를 사용 해야 하는 시나리오를 발생 시킬 수 있기 때문입니다. 하지만 첫 번째 DC를 복원 하기 전에 Active Directory을 WDS에 사용할 수 없으므로 잠금을 해제할 수 없습니다.
 
    DC가 BitLocker 네트워크 잠금 해제를 사용 하도록 구성 되어 있는지 확인 하려면 다음 레지스트리 키에서 네트워크 잠금 해제 인증서가 식별 되었는지 확인 합니다.
 
    HKEY_LOCAL_MACHINESoftwarePoliciesMicrosoftSystemCertificatesFVE_NKP
 
-Active Directory 포함 된 백업 파일을 처리 하거나 복원할 때 보안 절차를 유지 합니다. 포리스트 복구를 수반 하는 긴급도 overlooking 보안 모범 사례를 일으킬 수 있습니다. 자세한 내용은 Active Directory 설치를 보호 하 고 일상적인 작업을 수행 하는 데 필요한 [Best 모범 사례 가이드의 "도메인 컨트롤러 백업 및 복원 전략 설정" 섹션을 참조 하세요. 파트 II @ no__t-0.
+Active Directory 포함 된 백업 파일을 처리 하거나 복원할 때 보안 절차를 유지 합니다. 포리스트 복구를 수반 하는 긴급도 overlooking 보안 모범 사례를 일으킬 수 있습니다. 자세한 내용은 [Active Directory 설치 보안 유지를 위한 모범 사례 가이드](https://technet.microsoft.com/library/bb727066.aspx)의 "도메인 컨트롤러 백업 및 복원 전략 설정" 섹션을 참조 하십시오. 2 부.
 
 ## <a name="identify-the-current-forest-structure-and-dc-functions"></a>현재 포리스트 구조 및 DC 기능 식별
 
@@ -92,24 +92,24 @@ Active Directory 포함 된 백업 파일을 처리 하거나 복원할 때 보�
 
 |DC 이름|운영 체제|컴퓨터가|GC|RODC|백업|DNS|Server Core|VM|VM-GenID|  
 |-------------|----------------------|----------|--------|----------|------------|---------|-----------------|--------|---------------|  
-|DC_1|Windows Server 2012|스키마 마스터, 도메인 명명 마스터|예|아니요|사용자 계정 컨트롤|아니오|아니요|예|예|  
+|DC_1|Windows Server 2012|스키마 마스터, 도메인 명명 마스터|예|아니요|예|아니요|아니요|예|예|  
 |DC_2|Windows Server 2012|없음|예|아니요|예|예|아니요|예|예|  
 |DC_3|Windows Server 2012|인프라 마스터|아니요|아니요|아니요|예|예|예|예|  
-|DC_4|Windows Server 2012|PDC 에뮬레이터, RID 마스터|예|아니오|아니요|아니요|아니요|사용자 계정 컨트롤|아니요|  
+|DC_4|Windows Server 2012|PDC 에뮬레이터, RID 마스터|예|아니요|아니요|아니요|아니요|예|아니요|  
 |DC_5|Windows Server 2012|없음|아니요|아니요|예|예|아니요|예|예|  
 |RODC_1|Windows Server 2008 R2|없음|예|예|예|예|예|예|아니요|  
 |RODC_2|Windows Server 2008|없음|예|예|아니요|예|예|예|아니요|  
 
 포리스트의 각 도메인에 대해 해당 도메인에 대 한 Active Directory 데이터베이스의 신뢰할 수 있는 백업이 있는 쓰기 가능한 단일 DC를 식별 합니다. 백업을 선택 하 여 DC를 복원할 때는 주의 해야 합니다. 오류의 요일과 원인을 대략적으로 알 수 있는 경우에는 해당 날짜 이전 며칠 동안 만든 백업을 사용 하는 것이 일반적으로 권장 됩니다.
   
-이 예에서는 다음과 같은 4 개의 백업 후보가 있습니다. DC_1, DC_2, DC_4 및 DC_5입니다. 이러한 백업 후보 중 하나만 복원 합니다. 권장 되는 DC는 다음과 같은 이유로 DC_5 됩니다.  
+이 예에서는 DC_1, DC_2, DC_4 및 DC_5의 네 가지 백업 후보가 있습니다. 이러한 백업 후보 중 하나만 복원 합니다. 권장 되는 DC는 다음과 같은 이유로 DC_5 됩니다.  
 
 - 가상화 된 DC 복제에 대 한 원본으로 사용 하기 위한 요구 사항을 충족 합니다. 즉, Vm-generationid를 지 원하는 하이퍼바이저에서 가상 DC로 Windows Server 2012를 실행 하 고, 복제할 수 있는 소프트웨어를 실행 하거나, 복제할 수 없는 경우 제거할 수 있습니다. d). 복원 후에는 PDC 에뮬레이터 역할이 해당 서버에 점유 되 고 도메인의 복제 가능 도메인 컨트롤러 그룹에 추가 될 수 있습니다.  
 - Windows Server 2012의 전체 설치를 실행 합니다. Server Core 설치를 실행 하는 DC는 복구 대상으로 서 편리 하지 않을 수 있습니다.  
 - DNS 서버입니다. 따라서 DNS를 다시 설치할 필요가 없습니다.  
 
 > [!NOTE]
-> DC_5는 글로벌 카탈로그 서버가 아니기 때문에 복원 후에는 글로벌 카탈로그를 제거할 필요가 없다는 장점이 있습니다. 그러나 DC가 글로벌 카탈로그 서버 이기도 하 고, Windows Server 2012부터 모든 Dc는 기본적으로 글로벌 카탈로그 서버 이므로 복원 후에 글로벌 카탈로그를 제거 하 고 추가 하는 것이 포리스트의 일부로 권장 됩니다. 모든 경우에 복구 프로세스  
+> DC_5는 글로벌 카탈로그 서버가 아니므로 복원 후에는 글로벌 카탈로그를 제거할 필요가 없다는 장점이 있습니다. 그러나 DC가 글로벌 카탈로그 서버 이기도 하 고, Windows Server 2012부터 모든 Dc는 기본적으로 글로벌 카탈로그 서버 이므로 복원 후에 글로벌 카탈로그를 제거 하 고 추가 하는 것이 포리스트의 일부로 권장 됩니다. 모든 경우에 복구 프로세스  
 
 ## <a name="recover-the-forest-in-isolation"></a>격리 된 상태에서 포리스트 복구
 

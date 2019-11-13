@@ -40,7 +40,7 @@ OTP 인증용 RADIUS 서버를 계획할 때에는 다음 사항에 유의 하�
   
 -   RADIUS 서버를 배포할 때 RADIUS 트래픽에 대 한 공유 암호 및 포트 번호를 구성 합니다. 이러한 세부 정보를 기록해 둡니다. 원격 액세스 서버를 구성할 때 필요 합니다.  
   
-@No__t-0Test 랩 가이드에서 RSA SecurID 서버를 사용 하 여 OTP 인증을 설정 하는 테스트 랩 가이드 예제를 볼 수 있습니다. OTP 인증 및 RSA SecurID @ no__t-0을 사용 하 여 DirectAccess를 시연 합니다.  
+[테스트 랩 가이드: otp 인증 및 Rsa securid를 사용한 DirectAccess 시연](https://technet.microsoft.com/windows-server-docs/networking/remote-access/directaccess/tlg-otp-securid/test-lab-guide-demonstrate-directaccess-with-otp-authentication-and-rsa-securid)에서 RSA securid 서버를 사용 하 여 otp 인증을 설정 하는 테스트 랩 가이드 예제를 볼 수 있습니다.  
   
   
   

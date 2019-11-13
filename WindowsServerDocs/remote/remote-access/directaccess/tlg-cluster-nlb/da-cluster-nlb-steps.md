@@ -27,21 +27,21 @@ ms.locfileid: "71388398"
   
 이 테스트 랩 가이드에서는 다음 단계를 수행 하 여 NLB (네트워크 부하 분산) 사용 원격 액세스 클러스터를 구축 합니다.  
   
--   [1 단계 DirectAccess 구성을 완료](STEP-1-Complete-the-DirectAccess-Configuration.md)합니다. @No__t-0 테스트 랩 가이드의 모든 단계를 완료 합니다. IPv4 및 IPv6 @ no__t를 혼합 하 여 DirectAccess 단일 서버 설치를 시연 합니다.  
+-   [1 단계 DirectAccess 구성을 완료](STEP-1-Complete-the-DirectAccess-Configuration.md)합니다. [테스트 랩 가이드: IPv4 및 IPv6 혼합을 사용 하 여 DirectAccess 단일 서버 설정 시연](https://go.microsoft.com/fwlink/p/?LinkId=237004)의 모든 단계를 완료 합니다.  
   
--   [2단계: EDGE1 @ no__t-0을 구성 합니다. 부하 분산을 위해 EDGE1에 대 한 원격 액세스 역할을 구성 합니다.  
+-   [2 단계: EDGE1 구성](STEP-2-Configure-EDGE1.md) 부하 분산을 위해 EDGE1에 대 한 원격 액세스 역할을 구성 합니다.  
   
--   [3단계: EDGE2 @ no__t-0을 설치 하 고 구성 합니다. EDGE2는 원격 액세스 클러스터의 두 번째 원격 액세스 서버 역할을 합니다.  
+-   [3 단계: EDGE2 설치 및 구성](STEP-3-Install-and-Configure-EDGE2.md) EDGE2는 원격 액세스 클러스터의 두 번째 원격 액세스 서버 역할을 합니다.  
   
--   [4단계: 네트워크 부하 분산 원격 액세스 클러스터 만들기 @ no__t-0-EDGE1가 원격 액세스 클러스터의 첫 번째 서버로 구성 됩니다. EDGE2가 클러스터에 연결 되 고 NLB가 클러스터에 대해 구성 됩니다.  
+-   [4 단계: 네트워크 부하 분산 된 원격 액세스 클러스터 만들기](STEP-4-Create-the-Network-Load-Balanced-Remote-Access-Cluster.md)-EDGE1는 원격 액세스 클러스터의 첫 번째 서버로 구성 됩니다. EDGE2가 클러스터에 연결 되 고 NLB가 클러스터에 대해 구성 됩니다.  
   
--   [5단계: 인터넷에서 및 클러스터 (@ no__t-0)를 통해 DirectAccess 연결을 테스트 합니다. NLB 및 클러스터 구성이 완료 되 면 부하 분산 된 클러스터를 통해 DirectAccess 클라이언트 연결을 테스트할 수 있습니다.  
+-   [5 단계: 인터넷 및 클러스터를 통해 DirectAccess 연결을 테스트](STEP-5-Test-DirectAccess-Connectivity-from-the-Internet-and-Through-the-Cluster.md)합니다. NLB 및 클러스터 구성이 완료 되 면 부하 분산 된 클러스터를 통해 DirectAccess 클라이언트 연결을 테스트할 수 있습니다.  
   
--   [6단계: NAT 장치 뒤에서 DirectAccess 클라이언트 연결을 테스트 @ no__t-0. 클라이언트 컴퓨터를 NAT 장치 뒤로 이동 하 여 홈 라우터 뒤에서 DirectAccess 클라이언트 연결 테스트를 시뮬레이션 합니다.  
+-   [6 단계: NAT 장치 뒤에서 DirectAccess 클라이언트 연결을 테스트](STEP-6-Test-DirectAccess-Client-Connectivity-from-Behind-a-NAT-Device.md)합니다. 클라이언트 컴퓨터를 NAT 장치 뒤로 이동 하 여 홈 라우터 뒤에서 DirectAccess 클라이언트 연결 테스트를 시뮬레이션 합니다.  
   
--   [7단계: Corpnet @ no__t-0으로 돌아갈 때 연결을 테스트 합니다. Corpnet으로 돌아갈 때 클라이언트 컴퓨터가 회사 리소스에 계속 액세스할 수 있는지 확인 합니다.  
+-   [7 단계: Corpnet으로 돌아갈 때 연결을 테스트](STEP-7-Test-Connectivity-When-Returning-to-the-Corpnet.md)합니다. Corpnet으로 돌아갈 때 클라이언트 컴퓨터가 회사 리소스에 계속 액세스할 수 있는지 확인 합니다.  
   
--   [8단계: 구성의 스냅숏 @ no__t-0 테스트 랩을 완료 한 후 나중에 다시 돌아가서 추가 시나리오를 테스트할 수 있도록 작동 하는 원격 액세스 NLB 클러스터의 스냅숏을 만듭니다.  
+-   [8 단계: 구성 스냅숏 만들기](da-cluster-nlb-s8-snapshot.md) 테스트 랩을 완료 한 후 나중에 다시 돌아가서 추가 시나리오를 테스트할 수 있도록 작동 하는 원격 액세스 NLB 클러스터의 스냅숏을 만듭니다.  
   
 
 

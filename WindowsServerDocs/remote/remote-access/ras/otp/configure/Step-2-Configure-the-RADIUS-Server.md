@@ -27,8 +27,8 @@ OTP 지원으로 DirectAccess를 지원 하도록 원격 액세스 서버를 구
   
 |태스크|설명|  
 |----|--------|  
-|[2.1. RADIUS 소프트웨어 배포 토큰 구성 @ no__t-0|RADIUS 서버에서 소프트웨어 배포 토큰을 구성 합니다.|  
-|[2.2. RADIUS 보안 정보 구성 @ no__t-0|RADIUS 서버에서 사용할 포트 및 공유 암호를 구성 합니다.|  
+|[2.1. RADIUS 소프트웨어 배포 토큰 구성](#BKMK_1.1)|RADIUS 서버에서 소프트웨어 배포 토큰을 구성 합니다.|  
+|[2.2. RADIUS 보안 정보 구성](#BKMK_1.2)|RADIUS 서버에서 사용할 포트 및 공유 암호를 구성 합니다.|  
 |[2.3 OTP 검색을 위한 사용자 계정 추가](#BKMK_Probe)|RADIUS 서버에서 OTP 검색을 위한 새 사용자 계정을 만듭니다.|  
 |[2.4 Active Directory와 동기화](#BKMK_Active)|RADIUS 서버에서 Active Directory 계정과 동기화 된 사용자 계정 만들기를 시작 합니다.|  
 |[2.5 RADIUS 인증 에이전트 구성](#BKMK_AuthAgent)|RADIUS 인증 에이전트로 원격 액세스 서버를 구성 합니다.|  

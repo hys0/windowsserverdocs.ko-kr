@@ -26,13 +26,13 @@ ms.locfileid: "71404628"
 
  Windows Server 2016 및 Windows Server 2012 Always On VPN 및 RRAS (라우팅 및 원격 액세스 서비스) VPN을 단일 원격 액세스 역할로 결합 합니다. 이 개요에서는 부하 분산 된 클러스터에서 단일 Windows Server 2016 또는 Windows Server 2012 원격 액세스 서버를 배포 하는 데 필요한 구성 단계를 소개 합니다.
   
--  1단계: [고급 옵션을 사용 하 여 Always ON VPN 서버를 배포](../../../vpn/always-on-vpn/deploy/always-on-vpn-adv-options.md)합니다.
+-  1 단계: [고급 옵션을 사용 하 여 Always ON VPN 서버를 배포](../../../vpn/always-on-vpn/deploy/always-on-vpn-adv-options.md)합니다.
   
--   [2단계: 클러스터 서버 @ no__t-0을 준비 합니다.  
+-   [2 단계: 클러스터 서버 준비](Step-2-Prepare-Cluster-Servers.md).  
   
--   [3단계: 부하 분산 된 클러스터 @ no__t-0을 구성 합니다.  
+-   [3 단계: 부하 분산 된 클러스터를 구성](Step-3-Configure-a-Load-Balanced-Cluster.md)합니다.  
   
--   [4단계: 클러스터 @ no__t-0을 확인 합니다.  
+-   [4 단계: 클러스터를 확인](Step-4-Verify-the-Cluster.md)합니다.  
   
 
 

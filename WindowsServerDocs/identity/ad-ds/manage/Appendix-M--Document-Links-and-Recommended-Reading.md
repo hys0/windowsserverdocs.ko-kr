@@ -16,19 +16,19 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71368942"
 ---
-# <a name="appendix-m-document-links-and-recommended-reading"></a>부록 M: 문서 링크 및 권장 되는 읽기
+# <a name="appendix-m-document-links-and-recommended-reading"></a>부록 M: 문서 링크 및 권장 자료
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
   
-## <a name="appendix-m-document-links-and-recommended-reading"></a>부록 M: 문서 링크 및 권장 되는 읽기  
+## <a name="appendix-m-document-links-and-recommended-reading"></a>부록 M: 문서 링크 및 권장 자료  
   
 ### <a name="document-links"></a>문서 링크  
 다음 표에는이 문서의 하드 복사본 판독기에서이 정보에 액세스할 수 있도록 외부 문서와 해당 Url에 대 한 링크 목록이 포함 되어 있습니다. 링크는 문서에 표시 된 순서 대로 나열 됩니다.  
   
 |||  
 |-|-|  
-|**링크**|**URLs**|  
+|**Links**|**URLs**|  
 |[보안 관리의 10 가지 불변 법](https://technet.microsoft.com/library/cc722488.aspx)|[https://technet.microsoft.com/library/cc722488.aspx](https://technet.microsoft.com/library/cc722488.aspx)|  
 |[Microsoft 보안 준수 관리자](https://technet.microsoft.com/library/cc677002.aspx)|[https://technet.microsoft.com/library/cc677002.aspx](https://technet.microsoft.com/library/cc677002.aspx)|  
 |[Gartner Symposium ITXPO](http://www.gartner.com/technology/symposium/orlando/)|[http://www.gartner.com/technology/symposium/orlando/](http://www.gartner.com/technology/symposium/orlando/)|  
@@ -40,7 +40,7 @@ ms.locfileid: "71368942"
 |[Microsoft 지원 문서 814777](https://support.microsoft.com/kb/814777)|[https://support.microsoft.com/kb/814777](https://support.microsoft.com/kb/814777)|  
 |[웹 응용 프로그램 보안 프로젝트 열기 (OWASP)](https://www.owasp.org/index.php/Main_Page)|[https://www.owasp.org/index.php/Main_Page](https://www.owasp.org/index.php/Main_Page)|  
 |[Microsoft 보안 개발 수명 주기](https://www.microsoft.com/security/sdl/default.aspx)|[https://www.microsoft.com/security/sdl/default.aspx](https://www.microsoft.com/security/sdl/default.aspx)|  
-|[PtH (Pass to Hash) 공격 및 기타 자격 증명 도난 기술 완화](https://download.microsoft.com/download/7/7/A/77ABC5BD-8320-41AF-863C-6ECFB10CB4B9/Mitigating%20Pass-the-Hash%20(PtH)%20Attacks%20and%20Other%20Credential%20Theft%20Techniques_English.pdf)|[https://download.microsoft.com/download/7/7/A/77ABC5BD-8320-41AF-863C-6ECFB10CB4B9/Mitigating -해시 (PtH) 공격 및 기타 자격 증명 도난 Techniques_English](https://download.microsoft.com/download/7/7/A/77ABC5BD-8320-41AF-863C-6ECFB10CB4B9/Mitigating%20Pass-the-Hash%20(PtH)%20Attacks%20and%20Other%20Credential%20Theft%20Techniques_English.pdf)|  
+|[PtH (Pass to Hash) 공격 및 기타 자격 증명 도난 기술 완화](https://download.microsoft.com/download/7/7/A/77ABC5BD-8320-41AF-863C-6ECFB10CB4B9/Mitigating%20Pass-the-Hash%20(PtH)%20Attacks%20and%20Other%20Credential%20Theft%20Techniques_English.pdf)|[https://download.microsoft.com/download/7/7/A/77ABC5BD-8320-41AF-863C-6ECFB10CB4B9/Mitigating 해시 (PtH) 공격 및 기타 자격 증명 도난 Techniques_English를 전달 합니다.](https://download.microsoft.com/download/7/7/A/77ABC5BD-8320-41AF-863C-6ECFB10CB4B9/Mitigating%20Pass-the-Hash%20(PtH)%20Attacks%20and%20Other%20Credential%20Theft%20Techniques_English.pdf)|  
 |[악의적 사용자 및 대상 공격 결정](https://www.microsoft.com/download/details.aspx?id=34793)|[https://www.microsoft.com/download/details.aspx?id=34793](https://www.microsoft.com/download/details.aspx?id=34793)|  
 |[GPO를 통해 기본 제공 관리자 계정의 암호를 관리 하는 솔루션](https://code.msdn.microsoft.com/windowsdesktop/Solution-for-management-of-ae44e789)|[https://code.msdn.microsoft.com/windowsdesktop/Solution-for-management-of-ae44e789](https://code.msdn.microsoft.com/windowsdesktop/Solution-for-management-of-ae44e789)|  
 |[Microsoft 지원 문서 817433](https://support.microsoft.com/?id=817433)|[https://support.microsoft.com/?id=817433](https://support.microsoft.com/?id=817433)|  
@@ -90,7 +90,7 @@ ms.locfileid: "71368942"
 |[레 티 나 CS 관리](http://www.wideeyesecurity.com/products.asp)|[http://www.wideeyesecurity.com/products.asp](http://www.wideeyesecurity.com/products.asp)|  
 |[Lumension](http://www.lumension.com/?rpLeadSourceId=5009&gclid=CKuai_e13rMCFal7QgodMFkAyA)|[http://www.lumension.com/?rpLeadSourceId=5009&gclid=CKuai_e13rMCFal7QgodMFkAyA](http://www.lumension.com/?rpLeadSourceId=5009&gclid=CKuai_e13rMCFal7QgodMFkAyA)|  
 |[Lumension 취약성 관리](http://www.lumension.com/Solutions/Vulnerability-Management.aspx)|[http://www.lumension.com/Solutions/Vulnerability-Management.aspx](http://www.lumension.com/Solutions/Vulnerability-Management.aspx)|  
-|[Threats 및 대책 가이드: 사용자 권한 @ no__t-0|[https://technet.microsoft.com/library/hh125917(v=ws.10).aspx](https://technet.microsoft.com/library/hh125917(v=ws.10).aspx)|  
+|[위협 및 대책 가이드: 사용자 권한](https://technet.microsoft.com/library/hh125917(v=ws.10).aspx)|[https://technet.microsoft.com/library/hh125917(v=ws.10).aspx](https://technet.microsoft.com/library/hh125917(v=ws.10).aspx)|  
 |[위협 요소 및 취약성 완화](https://technet.microsoft.com/library/cc755181(v=ws.10).aspx)|[https://technet.microsoft.com/library/cc755181(v=ws.10).aspx](https://technet.microsoft.com/library/cc755181(v=ws.10).aspx)|  
 |[사용자 권한](https://technet.microsoft.com/library/dd349804(v=WS.10).aspx)|[https://technet.microsoft.com/library/dd349804(v=WS.10).aspx](https://technet.microsoft.com/library/dd349804(v=WS.10).aspx)|  
 |[자격 증명 관리자를 신뢰할 수 있는 호출자로 액세스](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_2)|[https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_2](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_2)|  
@@ -166,7 +166,7 @@ ms.locfileid: "71368942"
 |Windows Server 2003에 대 한 [Active Directory 관리를 위임 하기 위한 모범 사례](https://www.microsoft.com/download/details.aspx?id=21678)|[https://www.microsoft.com/en-us/download/details.aspx?id=21678](https://www.microsoft.com/download/details.aspx?id=21678)|  
 |[Microsoft 지원 수명 주기](https://support.microsoft.com/lifecycle/)|[https://support.microsoft.com/common/international.aspx?RDPATH=%2flifecycle%2fdefault.aspx](https://support.microsoft.com/common/international.aspx?RDPATH=%2flifecycle%2fdefault.aspx)|  
 |[Active Directory 기술 사양](https://msdn.microsoft.com/library/cc223122(v=prot.20).aspx)|[https://msdn.microsoft.com/library/cc223122(v=prot.20).aspx](https://msdn.microsoft.com/library/cc223122(v=prot.20).aspx)|  
-|@no__t-제어 된 런타임으로 사용자가 컴퓨터를 Windows Server 2003 기반 또는 Windows Server 2008 기반 도메인 컨트롤러에 가입 시 키 려 고 하는 경우 오류 메시지가 나타납니다. "액세스가 거부 되었습니다." ](https://support.microsoft.com/kb/932455)|[https://support.microsoft.com/kb/932455](https://support.microsoft.com/kb/932455)| 
+|[런타임으로 사용자가 제어 하는 사용자가 컴퓨터를 Windows Server 2003 기반 또는 Windows Server 2008 기반 도메인 컨트롤러에 연결 하려고 할 때의 오류 메시지: "액세스가 거부 되었습니다."](https://support.microsoft.com/kb/932455)|[https://support.microsoft.com/kb/932455](https://support.microsoft.com/kb/932455)| 
 |[Windows Server 2008 R2 단계별 가이드의 AD DS에 대 한 인증 메커니즘 보증](https://technet.microsoft.com/library/dd378897(WS.10).aspx)|[https://technet.microsoft.com/library/dd378897(WS.10).aspx](https://technet.microsoft.com/library/dd378897(WS.10).aspx)|  
 |[엄격한 KDC 유효성 검사](https://www.microsoft.com/download/details.aspx?id=6382)|[https://www.microsoft.com/download/details.aspx?id=6382](https://www.microsoft.com/download/details.aspx?id=6382)|  
   
@@ -189,7 +189,7 @@ ms.locfileid: "71368942"
 |Windows Server 2003에 대 한 [Active Directory 관리를 위임 하기 위한 모범 사례](https://www.microsoft.com/download/details.aspx?id=21678)|  
 |[Microsoft 지원 수명 주기](https://support.microsoft.com/lifecycle/)|  
 |[Active Directory 기술 사양](https://msdn.microsoft.com/library/cc223122(v=prot.20).aspx) -dSHeuristics 정보|  
-|@no__t-제어 된 런타임으로 사용자가 컴퓨터를 Windows Server 2003 기반 또는 Windows Server 2008 기반 도메인 컨트롤러에 가입 시 키 려 고 하는 경우 오류 메시지가 나타납니다. "액세스가 거부 되었습니다." ](https://support.microsoft.com/kb/932455)|  
+|[런타임으로 사용자가 제어 하는 사용자가 컴퓨터를 Windows Server 2003 기반 또는 Windows Server 2008 기반 도메인 컨트롤러에 연결 하려고 할 때의 오류 메시지: "액세스가 거부 되었습니다."](https://support.microsoft.com/kb/932455)|  
 |[Active Directory 설치를 보호 하기 위한 모범 사례 가이드](https://go.microsoft.com/fwlink/?LinkId=140862)|  
 |[Hyper-v 보안 가이드](https://www.microsoft.com/download/details.aspx?id=16650)|  
 |[Windows Server 2008 R2 단계별 가이드의 AD DS에 대 한 인증 메커니즘 보증](https://technet.microsoft.com/library/dd378897(WS.10).aspx)입니다.|  

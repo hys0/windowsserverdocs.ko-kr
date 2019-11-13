@@ -20,7 +20,7 @@ ms.locfileid: "71366802"
 ---
 # <a name="feature-descriptions-for-linux-and-freebsd-virtual-machines-on-hyper-v"></a>Hyper-v의 Linux 및 FreeBSD 가상 머신에 대 한 기능 설명
 
->적용 대상: Windows Server 2016, Hyper-v Server 2016, Windows Server 2012 R2, Hyper-v server 2012 R2, Windows Server 2012, Hyper-v Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
+>적용 대상: Windows Server 2016, Hyper-v Server 2016, Windows Server 2012 R2, Hyper-v Server 2012 R2, Windows Server 2012, Hyper-v Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
 
 이 문서에서는 가상 머신에서 Linux 및 FreeBSD를 사용할 때 코어, 네트워킹, 저장소, 메모리 등의 구성 요소에서 사용할 수 있는 기능을 설명 합니다.
 
@@ -80,7 +80,7 @@ ms.locfileid: "71366802"
 
 |**기능**|**설명**|
 |-|-|
-|KVP (키-값 쌍) 교환|이 기능은 가상 컴퓨터에 대 한 KVP (키/값 쌍) exchange 서비스를 제공 합니다. 일반적으로 관리자는 KVP 메커니즘을 사용 하 여 가상 머신에서 사용자 지정 데이터 읽기 및 쓰기 작업을 수행 합니다. 자세한 내용은 [Data 교환: 키-값 쌍을 사용 하 여 Hyper-v @ no__t에서 호스트 및 게스트 간에 정보를 공유 합니다.|
+|KVP (키-값 쌍) 교환|이 기능은 가상 컴퓨터에 대 한 KVP (키/값 쌍) exchange 서비스를 제공 합니다. 일반적으로 관리자는 KVP 메커니즘을 사용 하 여 가상 머신에서 사용자 지정 데이터 읽기 및 쓰기 작업을 수행 합니다. 자세한 내용은 참조 [데이터 교환: hyper-v 호스트 및 게스트 간에 정보를 공유 키-값 쌍을 사용 하 여](https://technet.microsoft.com/library/dn798287.aspx)합니다.|
 |마스크 불가능 인터럽트|이 기능을 사용 하면 관리자가 가상 컴퓨터에 대 한 비 마스크 인터럽트 (NMI)를 실행할 수 있습니다. NMIs는 응용 프로그램 버그로 인해 응답 하지 않는 운영 체제의 크래시 덤프를 가져오는 데 유용 합니다. 를 다시 시작한 후에 이러한 크래시 덤프를 진단할 수 있습니다.|
 |호스트에서 게스트로 파일 복사|이 기능을 사용 하면 네트워크 어댑터를 사용 하지 않고 호스트 물리적 컴퓨터에서 게스트 가상 컴퓨터로 파일을 복사할 수 있습니다. 자세한 내용은 참조 [게스트 서비스](https://technet.microsoft.com/library/dn798297(WS.11).aspx#BKMK_guest)합니다.|
 |lsvmbus 명령|이 명령은 lspci와 같은 정보 명령과 유사한 Hyper-v 가상 컴퓨터 버스 (VMBus)의 장치에 대 한 정보를 가져옵니다.|
@@ -94,7 +94,7 @@ ms.locfileid: "71366802"
 |UEFI를 사용 하 여 부팅|이 기능을 사용 하면 UEFI (UEFI(Unified Extensible Firmware Interface))를 사용 하 여 가상 컴퓨터를 부팅할 수 있습니다.<br /><br />자세한 내용은 [2세대 가상 컴퓨터 개요](https://technet.microsoft.com/library/dn282285.aspx)를 참조하십시오.|
 |보안 부팅|이 기능을 사용 하면 가상 머신에서 UEFI 기반 보안 부팅 모드를 사용할 수 있습니다. 가상 컴퓨터가 보안 모드로 부팅 되 면 UEFI 데이터 저장소에 있는 서명을 사용 하 여 다양 한 운영 체제 구성 요소가 확인 됩니다.<br /><br />자세한 내용은 [보안 부팅](https://technet.microsoft.com/library/dn486875.aspx)을 참조하세요.|
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 * [Hyper-v에서 지원 되는 CentOS 및 Red Hat Enterprise Linux 가상 컴퓨터](Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md)
 

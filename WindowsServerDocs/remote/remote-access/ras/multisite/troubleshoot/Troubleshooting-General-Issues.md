@@ -38,12 +38,12 @@ DirectAccess에서 배포의 진입점 중 하나에 대 한 GPO에 액세스할
   
 배포의 각 진입점에 해당 하는 GPO가 해당 도메인 컨트롤러에 있는지 확인 하 고 로그온 한 사용자에 게 원격 액세스 배포에 구성 된 모든 Gpo에 대 한 읽기 및 쓰기 권한이 있는지 확인 합니다.  
   
-문제를 해결 하려면 원격 액세스 관리 콘솔을 사용 하는 대신 구성 cmdlet을 사용 합니다. 예를 들어 `Get-RemoteAccess`과 `Get-DAEntryPoint`을 사용 합니다.  
+문제를 해결 하려면 원격 액세스 관리 콘솔을 사용 하는 대신 구성 cmdlet을 사용 합니다. 예를 들어 `Get-RemoteAccess` 및 `Get-DAEntryPoint`를 사용 합니다.  
   
 > [!NOTE]  
 > 이 시나리오는 현재 진입점의 서버 GPO를 사용할 수 없는 경우에는 발생 하지 않습니다.  
   
-@No__t-0 cmdlet을 사용 하 여 서버 Gpo를 저장 하는 모든 도메인 컨트롤러를 나열 하 @no__t 고-1을 `Get-RemoteAccess`와 함께 사용 하 여 배포에서 전체 서버 Gpo 목록을 검색할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+`Get-DAEntryPointDC` cmdlet을 사용 하 여 서버 Gpo 및 `Get-DAMultiSite`를 `Get-RemoteAccess`와 함께 저장 하는 모든 도메인 컨트롤러를 나열 하 여 배포에서 전체 서버 Gpo 목록을 검색할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
   
 ```  
 $ServerGpos = Get-DAEntryPointDC | ForEach-Object {   
@@ -78,7 +78,7 @@ Remove-GPRegistryValue -Name <Windows7GpoName> -Domain <DomainName> -Key "HKEY_L
   
 -   **문제 1**  
   
-    **오류가 수신**되었습니다. 도메인 컨트롤러 < domain_controller >에 연결할 수 없습니다 > <.  
+    **오류가 수신**되었습니다. < Server_name 또는 entry_point_name >에 대해 도메인 컨트롤러 < domain_controller >에 연결할 수 없습니다.  
   
     **가능한 원인**  
   
@@ -86,7 +86,7 @@ Remove-GPRegistryValue -Name <Windows7GpoName> -Domain <DomainName> -Key "HKEY_L
   
     **해결 방법**  
   
-    @No__t-02.4에 설명 된 "서버 Gpo를 관리 하는 도메인 컨트롤러를 변경 하려면" 절차를 따르세요. Gpo 구성 @ no__t-0.  
+    2\.4에 설명 된 "서버 Gpo를 관리 하는 도메인 컨트롤러를 변경 하려면" 절차를 따르세요 [. Gpo를 구성](assetId:///b1960686-a81e-4f48-83f1-cc4ea484df43#ConfigGPOs)합니다.  
   
 -   **문제 2**  
   
@@ -98,7 +98,7 @@ Remove-GPRegistryValue -Name <Windows7GpoName> -Domain <DomainName> -Key "HKEY_L
   
     **해결 방법**  
   
-    @No__t-02.4에 설명 된 "PDC 에뮬레이터 역할을 전송 하려면" 절차를 따르세요. Gpo 구성 @ no__t-0.  
+    2\.4에 설명 된 "PDC 에뮬레이터 역할을 전송 하려면" 절차를 따르세요 [. Gpo를 구성](assetId:///b1960686-a81e-4f48-83f1-cc4ea484df43#ConfigGPOs)합니다.  
   
 
 

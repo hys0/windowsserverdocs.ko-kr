@@ -55,27 +55,27 @@ Windows Server 2012 및 Windows Server 2016의 SMB에는 새로운 SMB 3.0 프�
 <tbody>
 <tr class="odd">
 <td><p>SMB 투명 장애 조치(Failover)</p></td>
-<td><p>단추를 사용하여 새</p></td>
+<td><p>새로 만들기</p></td>
 <td><p>관리자는 서버 응용 프로그램에서 이러한 파일 공유에 데이터를 저장하는 것을 인터럽트하지 않고도 클러스터된 파일 서버의 노드에서 하드웨어 또는 소프트웨어 유지 관리 작업을 수행할 수 있습니다. 또한 클러스터 노드에서 하드웨어 또는 소프트웨어 오류가 발생하면 SMB 클라이언트는 이러한 파일 공유에 데이터를 저장하는 응용 프로그램을 인터럽트하지 않고 다른 클러스터 노드로 투명하게 다시 연결합니다.</p></td>
 </tr>
 <tr class="even">
 <td><p>SMB 스케일 아웃</p></td>
-<td><p>단추를 사용하여 새</p></td>
+<td><p>새로 만들기</p></td>
 <td><p>CSV(클러스터 공유 볼륨) 버전 2를 사용할 경우 관리자는 파일 서버 클러스터의 모든 노드 전반에서 직접 I/O를 사용하여 데이터 파일에 대한 동시 액세스가 가능한 파일 공유를 만들 수 있습니다. 이 기능을 통해 네트워크 대역폭의 사용률과 파일 서버 클라이언트의 부하 분산 효과를 향상시키고 서버 응용 프로그램의 성능을 최적화할 수 있습니다.</p></td>
 </tr>
 <tr class="odd">
 <td><p>SMB 다중 채널</p></td>
-<td><p>단추를 사용하여 새</p></td>
+<td><p>새로 만들기</p></td>
 <td><p>SMB 3.0 클라이언트와 SMB 3.0 서버 사이에 여러 경로가 있는 경우 네트워크 대역폭과 네트워크 내결함성을 집계할 수 있습니다. 이 기능을 통해 서버 응용 프로그램은 사용 가능한 모든 네트워크 대역폭을 완벽하게 활용할 수 있으며 네트워크 오류에 탄력적으로 대처할 수 있습니다.</p></td>
 </tr>
 <tr class="even">
 <td><p>SMB 다이렉트</p></td>
-<td><p>단추를 사용하여 새</p></td>
+<td><p>새로 만들기</p></td>
 <td><p>RDMA 기능을 갖추고, 대기 시간은 아주 적으면서 최대 속도로 작동할 수 있는 반면 CPU 소모량은 거의 없는 네트워크 어댑터를 사용할 수 있습니다. Hyper-V 또는 Microsoft SQL Server 등의 워크로드에 이 기능을 사용하면 원격 파일 서버가 로컬 저장소와 비슷한 역할을 할 수 있습니다.</p></td>
 </tr>
 <tr class="odd">
 <td><p>서버 응용 프로그램의 성능 카운터</p></td>
-<td><p>단추를 사용하여 새</p></td>
+<td><p>새로 만들기</p></td>
 <td><p>새로운 SMB 성능 카운터는 공유별 처리량, 대기 시간 및 IOPS(초당 I/O) 정보를 자세히 분석하여 관리자들이 데이터가 저장된 SMB 3.0 파일 공유 성능을 분석할 수 있습니다. 이러한 카운터는 특히, Hyper-V 및 SQL Server와 같이 파일을 원격 파일 서버에 저장하는 서버 응용 프로그램을 위해 만들어졌습니다.</p></td>
 </tr>
 <tr class="even">
@@ -85,17 +85,17 @@ Windows Server 2012 및 Windows Server 2016의 SMB에는 새로운 SMB 3.0 프�
 </tr>
 <tr class="odd">
 <td><p>SMB별 Windows PowerShell Cmdlet</p></td>
-<td><p>단추를 사용하여 새</p></td>
+<td><p>새로 만들기</p></td>
 <td><p>관리자는 명령줄에서 SMB용 Windows PowerShell cmdlet을 사용하여 종단 간 방식으로 파일 서버에서 파일 공유를 관리할 수 있습니다.</p></td>
 </tr>
 <tr class="even">
 <td><p>SMB 암호화</p></td>
-<td><p>단추를 사용하여 새</p></td>
+<td><p>새로 만들기</p></td>
 <td><p>SMB 데이터에 대한 엔드투엔드 암호화 기능을 제공하며, 신뢰할 수 없는 네트워크에서 발생하는 도청으로부터 데이터를 보호합니다. 새로운 배포 비용이 발생하지 않고 인터넷 프로토콜 보안(IPsec), 특수 하드웨어 또는 WAN 가속기가 필요하지 않습니다. 이 기능은 공유 단위별로 구성하거나 전체 파일 서버용으로 구성할 수 있으며 신뢰할 수 없는 네트워크에서 데이터가 전송되는 다양한 시나리오에서 사용할 수 있습니다.</p></td>
 </tr>
 <tr class="odd">
 <td><p>SMB 디렉터리 임대</p></td>
-<td><p>단추를 사용하여 새</p></td>
+<td><p>새로 만들기</p></td>
 <td><p>지점에서의 응용 프로그램 응답 시간이 향상됩니다. 디렉터리 임대를 사용하면 라이브 상태가 더 길어진 디렉터리 캐시로부터 메타데이터가 검색되므로 클라이언트에서 서버로의 왕복 시간이 단축됩니다. 서버의 디렉터리 정보가 변경되면 클라이언트에게 통보되므로 캐시 일관성이 유지됩니다. <em>홈폴더</em> (공유 비포함 읽기/쓰기) 및 <em>게시</em> (공유 포함 읽기 전용) 시나리오에 사용할 수 있습니다.</p></td>
 </tr>
 </tbody>
@@ -133,4 +133,4 @@ SMB 다이렉트의 요구 사항은 다음과 같습니다.
 * [SMB를 통한 Hyper-v 배포](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>)
 * [SMB 다중 채널 배포](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn610980(v%3dws.11)>)
 * [서버 응용 프로그램을 위한 빠르고 효율적인 파일 서버 배포](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831723(v%3dws.11)>)
-* [SMB: 문제 해결 가이드 @ no__t-0
+* [SMB: 문제 해결 가이드](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn659439(v%3dws.11)>)

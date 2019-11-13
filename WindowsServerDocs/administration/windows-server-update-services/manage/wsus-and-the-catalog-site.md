@@ -21,7 +21,7 @@ ms.locfileid: "71361454"
 ---
 # <a name="wsus-and-the-catalog-site"></a>WSUS 및 카탈로그 사이트
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 카탈로그 사이트는 핫픽스와 하드웨어 드라이버를 가져올 수 있는 Microsoft 위치입니다.
 
@@ -64,7 +64,7 @@ WSUS 관리자는 Microsoft 업데이트 카탈로그 사이트에서 다운로�
 
     -   선택 **Windows 인증** 클릭 하 고 **사용** 에 **작업** 오른쪽 창입니다.
 
-2.  핫픽스를 필요로 하는 컴퓨터에 대 한 WSUS 대상 그룹을 만들고 그룹에 추가 합니다. 컴퓨터 및 그룹에 대 한 자세한 내용은이 가이드의 [Wsus 클라이언트 컴퓨터 및 wsus 컴퓨터 그룹 관리](managing-wsus-client-computers-and-wsus-computer-groups.md) 및 [3.3 섹션을 참조 하십시오. WSUS 컴퓨터 그룹 구성 @ no__t-3 단계: Wsus 배포 가이드에서 WSUS를 구성 합니다.
+2.  핫픽스를 필요로 하는 컴퓨터에 대 한 WSUS 대상 그룹을 만들고 그룹에 추가 합니다. 컴퓨터 및 그룹에 대 한 자세한 내용은이 가이드의 [Wsus 클라이언트 컴퓨터 및 wsus 컴퓨터 그룹 관리](managing-wsus-client-computers-and-wsus-computer-groups.md) 및 섹션 3.3을 참조 하세요 [. ](../deploy/2-configure-wsus.md#23-configure-wsus-computer-groups)Wsus 배포 가이드에서 3 단계: Wsus 구성의 wsus 컴퓨터 그룹을 구성 합니다.
 
 3.  핫픽스 파일을 다운로드 합니다.
 

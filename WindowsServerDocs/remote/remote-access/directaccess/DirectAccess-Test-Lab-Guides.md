@@ -25,8 +25,8 @@ ms.locfileid: "71394550"
 
 다음은 Windows Server 2016, Windows server 2012 R2 및 Windows Server 2012의 DirectAccess 테스트 랩 가이드에 대 한 링크입니다.
 
-- [테스트 랩 가이드: Windows NLB를 사용 하 여 클러스터에서 DirectAccess 시연 @ no__t-0
+- [테스트 랩 가이드: Windows NLB를 사용 하 여 클러스터에서 DirectAccess 시연](tlg-cluster-nlb/Test-Lab-Guide-Demonstrate-DirectAccess-in-a-Cluster-with-Windows-NLB.md)
 
-- [테스트 랩 가이드: DirectAccess 멀티 사이트 배포 설명 @ no__t-0
+- [테스트 랩 가이드: DirectAccess 멀티 사이트 배포 시연](tlg-multisite/Test-Lab-Guide-Demonstrate-a-DirectAccess-Multisite-Deployment.md)
 
-- [테스트 랩 가이드: OTP 인증 및 RSA SecurID @ no__t를 사용 하 여 DirectAccess 시연
+- [테스트 랩 가이드: OTP 인증 및 RSA SecurID를 사용한 DirectAccess 시연](tlg-otp-securid/Test-Lab-Guide-Demonstrate-DirectAccess-with-OTP-Authentication-and-RSA-SecurID.md)

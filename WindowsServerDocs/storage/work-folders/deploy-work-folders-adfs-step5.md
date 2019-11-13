@@ -15,21 +15,21 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71402779"
 ---
-# <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-5-set-up-clients"></a>AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 5 단계, 클라이언트 설정
+# <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-5-set-up-clients"></a>AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포: 5단계, 클라이언트 설치
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 이 항목에서는 AD FS(Active Directory Federation Services) 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더를 배포하는 다섯 번째 단계를 설명합니다. 이 과정의 다른 단계는 다음 항목에서 찾을 수 있습니다.  
   
--   [ AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 설명은](deploy-work-folders-adfs-overview.md)  
+-   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 개요](deploy-work-folders-adfs-overview.md)  
   
--   [ AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 1 단계, AD FS 설정 @ no__t-0  
+-   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 1 단계, AD FS 설정](deploy-work-folders-adfs-step1.md)  
   
--   [ AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 2 단계 AD FS 구성 후 작업 @ no__t-0  
+-   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 2 단계, AD FS 후 구성 작업](deploy-work-folders-adfs-step2.md)  
   
--   [ AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 3 단계, 클라우드 폴더 설정 @ no__t-0  
+-   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 3 단계, 클라우드 폴더 설정](deploy-work-folders-adfs-step3.md)  
   
--   [ AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 4 단계, 웹 응용 프로그램 프록시 설정 @ no__t-0  
+-   [AD FS 및 웹 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포: 4 단계, 웹 응용 프로그램 프록시 설정](deploy-work-folders-adfs-step4.md)  
   
 다음 절차에 따라 도메인에 가입된 Windows 클라이언트 및 도메인에 가입되지 않은 Windows 클라이언트를 설치합니다. 이러한 클라이언트를 사용하여 클라이언트의 클라우드 폴더 간에 파일이 올바르게 동기화되고 있는지 테스트할 수 있습니다.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "71402779"
   
 2. **클라우드 폴더 설정**을 클릭합니다.  
   
-3. 회사 **메일 주소 입력** 페이지에서 사용자의 메일 주소 (예: user@contoso.com) 또는 클라우드 폴더 URL (테스트 예제의 https: @no__t/workfolders)을 입력 한 후 **다음**을 클릭 합니다.  
+3. 회사 **메일 주소 입력** 페이지에서 사용자의 메일 주소 (예: user@contoso.com) 또는 클라우드 폴더 URL (테스트 예제의 https:\//workfolders.contoso.com)을 입력 한 후 **다음**을 클릭 합니다.  
   
 4. 사용자가 회사 네트워크에 연결된 경우 Windows 통합 인증을 통해 인증이 수행됩니다. 사용자가 회사 네트워크에 연결되지 않은 경우 ADFS(OAuth)를 통해 인증이 수행되고 사용자는 자격 증명을 입력해야 합니다. 자격 증명을 입력하고 **확인**을 클릭합니다.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "71402779"
   
 이것으로 Windows Server UI를 통해 클라우드 폴더, AD FS 및 웹 응용 프로그램 프록시를 배포하는 절차를 마치겠습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [클라우드 폴더 개요](Work-Folders-Overview.md)  
   
 

@@ -47,12 +47,12 @@ Active Directory에 사용 하기 위해 쿼리를 올바르게 작성, 구조�
 
 - 대용량 쿼리를 사용 하면 ATQ LDAP 스레드의 사용량과 소비를 초래 하 게 됩니다. 다음 성능 카운터를 모니터링 합니다.
 
-    - **NTDS @ no__t-1 요청 대기 시간** -요청을 처리 하는 데 걸리는 시간에 따라 결정 됩니다. 120 초 (기본값) 후에 요청 시간이 초과 되는 경우 대부분의 시간이 훨씬 더 빨리 실행 되 고 장기 실행 쿼리는 전체 숫자에서 숨겨집니다. Active Directory 절대 임계값이 아닌이 기준에서 변경 내용을 확인 합니다.
+    - **NTDS\\요청 대기 시간** -요청을 처리 하는 데 걸리는 시간에 따라 결정 됩니다. 120 초 (기본값) 후에 요청 시간이 초과 되는 경우 대부분의 시간이 훨씬 더 빨리 실행 되 고 장기 실행 쿼리는 전체 숫자에서 숨겨집니다. Active Directory 절대 임계값이 아닌이 기준에서 변경 내용을 확인 합니다.
 
         > [!NOTE]
         > 여기에서 높은 값은 다른 도메인 및 CRL 확인에 대 한 "프록시" 요청의 지연을 확인할 수도 있습니다.
 
-    - **NTDS @ no__t-1 예상 큐 지연** -이는 최적의 성능을 위해 0에 근접 하는 것이 좋습니다 .이는 요청이 서비스 대기 시간을 소비 하지 않음을 의미 합니다.
+    - **NTDS\\예상 큐 지연** -이는 최적의 성능을 위해 0에 가까운 것이 좋습니다. 즉, 요청이 서비스 대기 시간을 소비 하지 않습니다.
 
 이러한 시나리오는 다음 방법 중 하나 이상을 사용 하 여 검색할 수 있습니다.
 
@@ -60,11 +60,11 @@ Active Directory에 사용 하기 위해 쿼리를 올바르게 작성, 구조�
 
 -   [비용이 많이 들고 비효율적인 검색 추적](https://msdn.microsoft.com/library/ms808539.aspx)
 
--   성능 모니터의 Active Directory 진단 데이터 수집기 집합 (SPA의 [Son: AD 데이터 수집기 집합 Win2008 및 이후 @ no__t-0)
+-   성능 모니터의 Active Directory 진단 데이터 수집기 집합 ([SPA: AD 데이터 수집기 집합 Win2008 이상](http://blogs.technet.com/b/askds/archive/2010/06/08/son-of-spa-ad-data-collector-sets-in-win2008-and-beyond.aspx))
 
 -   [Microsoft Server Performance Advisor](../../../server-performance-advisor/microsoft-server-performance-advisor.md) Active Directory Advisor 팩
 
--   상위 인덱스를 사용 하는 "(objectClass = \*)" 이외의 필터를 사용 하 여 검색 합니다.
+-   상위 인덱스를 사용 하는 "(objectClass =\*)" 외의 필터를 사용 하 여 검색 합니다.
 
 ### <a name="other-index-considerations"></a>기타 인덱스 고려 사항
 
@@ -80,11 +80,11 @@ Active Directory에 사용 하기 위해 쿼리를 올바르게 작성, 구조�
 
 -   튜플 인덱스는 중성 검색 문자열과 최종 검색 문자열을 지 원하는 데 필요 합니다. 초기 검색 문자열에는 튜플 인덱스가 필요 하지 않습니다.
 
-    -   초기 검색 문자열 – (samAccountName = MYPC @ no__t-0)
+    -   초기 검색 문자열 – (samAccountName = MYPC\*)
 
-    -   중성 검색 문자열-(samAccountName = \*MYPC @ no__t-1)
+    -   중성 검색 문자열-(samAccountName =\*MYPC\*)
 
-    -   최종 검색 문자열 – (samAccountName = \*MYPC $)
+    -   최종 검색 문자열 – (samAccountName =\*MYPC $)
 
 -   인덱스를 만들면 인덱스를 작성 하는 동안 디스크 i/o가 생성 됩니다. 이 작업은 우선 순위가 낮은 백그라운드 스레드에서 수행 되며, 들어오는 요청은 인덱스 빌드 보다 우선 순위가 지정 됩니다. 환경에 대 한 용량 계획을 올바르게 수행한 경우에는 투명 해야 합니다. 그러나 도메인 컨트롤러 저장소에 대 한 부하를 알 수 없는 쓰기 작업이 많은 시나리오 또는 환경에서는 클라이언트 환경이 저하 될 수 있으므로 시간이 지난 후에 야 합니다.
 
@@ -98,7 +98,7 @@ Active Directory에 사용 하기 위해 쿼리를 올바르게 작성, 구조�
 
 -   [인덱싱된 특성](https://msdn.microsoft.com/library/windows/desktop/ms677112.aspx)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [성능 튜닝 Active Directory 서버](index.md)
 - [하드웨어 고려 사항](hardware-considerations.md)

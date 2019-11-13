@@ -18,10 +18,10 @@ ms.locfileid: "71404274"
 ---
 # <a name="always-on-vpn-features-and-functionalities"></a>Always On VPN 기능 및 기능
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows 10
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows 10
 
-- [**선행** Windows Server 및 Windows 10에 대 한 Always On VPN 배포 @ no__t-0
-- [**그런** Always On VPN의 향상 된 기능에 대해 알아봅니다. @ no__t-0
+- [**이전:** Windows Server 및 Windows 10에 대 한 Always On VPN 배포](always-on-vpn/deploy/always-on-vpn-deploy.md)
+- [**다음:** Always On VPN 개선 사항에 대 한 자세한 정보](../vpn/always-on-vpn/always-on-vpn-enhancements.md)
 
 이 항목에서는 Always On VPN의 기능에 대해 알아봅니다.  다음 표는 전체 목록이 아니라 원격 액세스 솔루션에서 사용 되는 가장 일반적인 몇 가지 기능 및 기능을 포함 합니다. 
 

@@ -31,7 +31,7 @@ ms.locfileid: "71360134"
   
 -   복제는 다른 서버 역할을 복제 하는 일반적인 용도의 확장이 아니라 가상화 된 도메인 컨트롤러에 대 한 특정 배포 기능입니다. 일부 서버 역할은 특히 복제를 지원 하지 않습니다.  
   
-    -   DHCP(동적 호스트 구성 프로토콜)  
+    -   DHCP(Dynamic Host Configuration Protocol)  
   
     -   AD CS(Active Directory 인증서 서비스)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "71360134"
   
 -   도메인 컨트롤러에서 제거 됨  
   
-사용자가 Get-addccloningexcludedapplicationlist cmdlet을 처음 실행 하면 도메인 컨트롤러에서 실행 되는 서비스 및 응용 프로그램 목록이 반환 되지만 복제에 지원 되는 서비스 및 응용 프로그램의 기본 목록에는 표시 되지 않습니다. 기본적으로 서비스 또는 응용 프로그램은 나열 되지 않습니다. 안전 하 게 복제할 수 있는 응용 프로그램 및 서비스 목록에 서비스 또는 응용 프로그램을 추가 하기 위해 사용자는 Customdccloneallowlist.xml 파일에 추가 하기 위해-GenerateXML 옵션과 함께 Get-addccloningexcludedapplicationlist cmdlet을 다시 실행 합니다. 자세한 내용은 [Step 2를 참조 하세요. Get-addccloningexcludedapplicationlist cmdlet @ no__t-0을 실행 합니다.  
+사용자가 Get-addccloningexcludedapplicationlist cmdlet을 처음 실행 하면 도메인 컨트롤러에서 실행 되는 서비스 및 응용 프로그램 목록이 반환 되지만 복제에 지원 되는 서비스 및 응용 프로그램의 기본 목록에는 표시 되지 않습니다. 기본적으로 서비스 또는 응용 프로그램은 나열 되지 않습니다. 안전 하 게 복제할 수 있는 응용 프로그램 및 서비스 목록에 서비스 또는 응용 프로그램을 추가 하기 위해 사용자는 Customdccloneallowlist.xml 파일에 추가 하기 위해-GenerateXML 옵션과 함께 Get-addccloningexcludedapplicationlist cmdlet을 다시 실행 합니다. 자세한 내용은 [2 단계: get-addccloningexcludedapplicationlist Cmdlet 실행](https://technet.microsoft.com/library/hh831734.aspx#bkmk6_run_get_addccloningexcludedapplicationlist_cmdlet)을 참조 하세요.  
   
 ### <a name="distributed-system-interactions"></a>분산 시스템 상호 작용  
 일반적으로 로컬 컴퓨터와 격리 된 서비스는 복제에 참여할 때 통과 하거나 실패 합니다. 분산 서비스는 잠시 동안 네트워크에 호스트 컴퓨터의 인스턴스를 두 개 포함 하는 것을 걱정 해야 합니다. 복제본이 id의 새 공급 업체로 등록 된 파트너 시스템에서 정보를 가져오려고 시도 하는 서비스 인스턴스로 매니페스트 될 수 있습니다. 또는 서비스의 두 인스턴스는 서로 다른 결과를 사용 하 여 동시에 정보를 AD DS 데이터베이스로 푸시할 수 있습니다. 예를 들어 WTT (Windows 테스트 기술) 서비스가 있는 두 대의 컴퓨터가 도메인 컨트롤러를 사용 하 여 네트워크에 있는 경우 어떤 컴퓨터가 통신 하는지 명확 하지 않습니다.  
@@ -72,7 +72,7 @@ ms.locfileid: "71360134"
 ### <a name="cloning-failure"></a>복제 오류  
 복제에 실패 하는 경우 컴퓨터가 안전 모드 형태의 DSRM (디렉터리 서비스 복구 모드)으로 부팅 되기 때문에 서비스 공급 업체는이 시나리오를 테스트 해야 합니다. 이 시점에서 컴퓨터가 복제를 완료 하지 않았습니다. 일부 상태가 변경 되었을 수 있으며, 일부 상태는 원래 도메인 컨트롤러에서 남아 있을 수 있습니다. 이 시나리오를 테스트 하 여 응용 프로그램에 미칠 수 있는 영향을 파악 합니다.  
   
-복제 실패를 유도 하려면 복제 권한을 부여 하지 않고 도메인 컨트롤러를 복제 해 보세요. 이 경우 컴퓨터는 IP 주소만 변경 하 고 원래 도메인 컨트롤러에서 대부분의 상태를 유지 합니다. 복제할 도메인 컨트롤러 권한을 부여 하는 방법에 대 한 자세한 내용은 [Step 1: 가상화 된 원본 도메인 컨트롤러에 복제할 수 있는 권한 @ no__t-0을 부여 합니다.  
+복제 실패를 유도 하려면 복제 권한을 부여 하지 않고 도메인 컨트롤러를 복제 해 보세요. 이 경우 컴퓨터는 IP 주소만 변경 하 고 원래 도메인 컨트롤러에서 대부분의 상태를 유지 합니다. 복제할 도메인 컨트롤러 권한을 부여 하는 방법에 대 한 자세한 내용은 [1 단계: 가상화 된 원본 도메인 컨트롤러에 복제할 수 있는 권한 부여](https://technet.microsoft.com/library/hh831734.aspx#bkmk4_grant_source)를 참조 하세요.  
   
 ### <a name="pdc-emulator-cloning"></a>PDC 에뮬레이터 복제  
 PDC 에뮬레이터가 복제 될 때 추가 다시 부팅이 있으므로 서비스 및 응용 프로그램 공급 업체는이 시나리오를 테스트 해야 합니다. 또한 복제 프로세스 중에는 새 복제본이 PDC 에뮬레이터와 상호 작용할 수 있도록 임시 id로 대부분의 복제를 수행 합니다.  

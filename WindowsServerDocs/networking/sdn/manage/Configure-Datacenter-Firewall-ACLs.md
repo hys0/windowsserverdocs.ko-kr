@@ -31,8 +31,8 @@ ACL을 만들고 가상 서브넷에 할당 한 후에는 개별 네트워크 �
 
 이 항목에서는 네트워크 인터페이스에 ACL을 추가 하는 방법을 보여 줍니다. 또한 Windows PowerShell 및 네트워크 컨트롤러 REST API를 사용 하 여 네트워크 인터페이스에서 ACL을 제거 하는 방법을 보여 줍니다.
 
-- [예제: 네트워크 인터페이스에 ACL 추가 @ no__t-0
-- [예제: Windows Powershell 및 네트워크 컨트롤러 REST API @ no__t를 사용 하 여 네트워크 인터페이스에서 ACL을 제거 합니다.
+- [예: 네트워크 인터페이스에 ACL 추가](#example-add-an-acl-to-a-network-interface)
+- [예: Windows Powershell 및 네트워크 컨트롤러를 사용 하 여 네트워크 인터페이스에서 ACL을 제거 REST API](#example-remove-an-acl-from-a-network-interface-by-using-windows-powershell-and-the-network-controller-rest-api)
 
 
 ## <a name="example-add-an-acl-to-a-network-interface"></a>예: 네트워크 인터페이스에 ACL 추가

@@ -34,7 +34,7 @@ ms.locfileid: "71402737"
 
 - 특정 위치에 대 한 사이트가 필요 하지 않은 경우 해당 위치에 최대 WAN (광역 네트워크) 속도와 사용 가능한 대역폭을 사용 하는 사이트에 위치의 서브넷을 추가 합니다.  
   
-각 위치 내에서 사이트와 네트워크 주소 및 서브넷 마스크로 사용할 문서 위치 사이트를 문서화 하는 데 도움이 되는 워크시트의 경우 [Windows Server 2003 배포 키트의 작업 지원](https://go.microsoft.com/fwlink/?LinkID=102558)을 참조 하 고, Job_Aids_Designing_and_Deploying_Directory_and_Security_Services를 다운로드 하 고, "서브넷을 사이트와 연결" (DSSTOPO_6)을 엽니다.  
+각 위치 내에서 사이트와 네트워크 주소 및 서브넷 마스크로 사용할 문서 위치 사이트를 문서화 하는 데 도움이 되는 워크시트의 경우 [Windows Server 2003 배포 키트의 작업 지원](https://go.microsoft.com/fwlink/?LinkID=102558)을 참조 하 고, Job_Aids_Designing_and_Deploying_Directory_and_Security_Services .zip을 다운로드 하 고, "서브넷을 사이트와 연결" (DSSTOPO_6)을 엽니다.  
   
 ## <a name="creating-a-site-object-design"></a>사이트 개체 디자인 만들기
 
@@ -46,8 +46,8 @@ ms.locfileid: "71402737"
 
 각 위치와 연결 된 모든 IP 서브넷 및 서브넷 마스크에 대해 사이트 내의 모든 IP 주소를 나타내는 AD DS 서브넷 개체를 만들도록 계획 합니다.  
   
-Active Directory subnet 개체를 만들 때 네트워크 IP 서브넷 및 서브넷 마스크에 대 한 정보는 자동으로 네트워크 접두사 길이 표기법 형식으로 변환 됩니다 <IP address> @ no__t-1 @ no__t-2. 예를 들어 서브넷 마스크가 255.255.252.0 인 네트워크 IP 버전 4 (IPv4) 주소 172.16.4.0은 172.16.4.0/22로 표시 됩니다. IPv4 주소 외에도 Windows Server 2008는 IPv6 (IP 버전 6) 서브넷 접두사 (예: 3FFE: FFFF: 0: C000::/64)도 지원 합니다. 각 위치의 IP 서브넷에 대 한 자세한 내용은 [네트워크 정보 수집](../../ad-ds/plan/Collecting-Network-Information.md) 및 [Appendix a에서 "위치 및 서브넷" (DSSTOPO_2) 워크시트를 참조 하세요. 위치 및 서브넷 접두사 @ no__t-0.  
+Active Directory subnet 개체를 만들 때 네트워크 IP 서브넷 및 서브넷 마스크에 대 한 정보는 자동으로 /<prefix length><IP address>네트워크 접두사 길이 표기법 형식으로 변환 됩니다. 예를 들어 서브넷 마스크가 255.255.252.0 인 네트워크 IP 버전 4 (IPv4) 주소 172.16.4.0은 172.16.4.0/22로 표시 됩니다. IPv4 주소 외에도 Windows Server 2008는 IPv6 (IP 버전 6) 서브넷 접두사 (예: 3FFE: FFFF: 0: C000::/64)도 지원 합니다. 각 위치의 IP 서브넷에 대 한 자세한 내용은 [네트워크 정보 수집](../../ad-ds/plan/Collecting-Network-Information.md) 및 [부록 a: 위치 및 서브넷 접두사](Appendix-A--Locations-and-Subnet-Prefixes.md)에서 "위치 및 서브넷" (DSSTOPO_2) 워크시트를 참조 하세요.  
   
-"사이트의 위치 결정" 섹션에서 "사이트에 서브넷 연결" (DSSTOPO_6)을 참조 하 여 각 서브넷 개체를 사이트 개체와 연결 합니다. "사이트에 서브넷 연결" (DSSTOPO_6) 워크시트의 각 위치와 연결 된 Active Directory 서브넷 개체를 문서화 합니다.  
+"사이트의 위치 결정" 섹션의 "사이트에 서브넷 연결" (DSSTOPO_6 .doc) 워크시트를 참조 하 여 각 서브넷 개체를 사이트 개체와 연결 합니다. "사이트에 서브넷 연결" (DSSTOPO_6 .doc) 워크시트에서 각 위치와 연결 된 Active Directory 서브넷 개체를 문서화 합니다.  
   
 서브넷 개체를 만드는 방법에 대 한 자세한 내용은 [서브넷 만들기](https://go.microsoft.com/fwlink/?LinkId=107068)문서를 참조 하세요.

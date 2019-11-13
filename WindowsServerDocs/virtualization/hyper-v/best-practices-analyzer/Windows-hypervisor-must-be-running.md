@@ -19,14 +19,14 @@ ms.locfileid: "71393052"
 ---
 # <a name="windows-hypervisor-must-be-running"></a>Windows 하이퍼바이저를 실행 중 이어야 합니다.
 
->적용 대상: Windows Server 2016
+>적용 대상: Windows Server 2016
   
-|속성|설명|  
+|속성|세부 정보|  
 |-|-|  
 |**운영 체제**|Windows Server 2016|  
 |**제품/기능**|Hyper-V|  
 |**Severity**|경고|  
-|**범주**|사전 요구 사항|  
+|**범주**|필수 구성 요소|  
   
 다음 섹션에서는 기울임꼴이이 문제에 대 한 모범 사례 분석기 도구에 표시 되는 UI 텍스트를 나타냅니다.  
   
@@ -40,9 +40,9 @@ ms.locfileid: "71393052"
   
 ## <a name="resolution"></a>해결 방법  
   
-@no__t-Windows Server 카탈로그를 확인 하 여이 서버가 Hyper-v를 실행 하도록 한정 되어 있는지 확인 합니다. 다음으로, 하드웨어 기반 가상화 및 하드웨어 적용 데이터 실행 방지에 대 한 BIOS 설정 되어 있는지 확인 합니다. 그런 다음 Hyper-v-하이퍼바이저 이벤트 로그를 확인 합니다. *  
+*Windows Server 카탈로그를 확인 하 여이 서버가 Hyper-v를 실행 하도록 한정 되어 있는지 확인 합니다. 그런 다음 하드웨어 지원 가상화 및 하드웨어 적용 데이터 실행 방지를 위해 BIOS를 사용 하도록 설정 해야 합니다. 그런 다음 Hyper-v-하이퍼바이저 이벤트 로그를 확인 합니다.*  
   
-카탈로그를 확인 하려면 [Windows Server catalog](https://go.microsoft.com/fwlink/?LinkId=111228) (https://go.microsoft.com/fwlink/?LinkId=111228) 을 참조 하세요.  
+카탈로그를 확인 하려면 [Windows Server catalog](https://go.microsoft.com/fwlink/?LinkId=111228) (https://go.microsoft.com/fwlink/?LinkId=111228)를 참조 하세요.  
   
 > [!CAUTION]  
 > 컴퓨터의 시스템 BIOS에서 특정 매개 변수를 변경 하는 해당 컴퓨터의 운영 체제를 로드 중지 될 수 있습니다 또는 수 있도록 하드 디스크 드라이브 등의 하드웨어 장치를 사용할 수 없습니다. 항상 시스템 BIOS를 구성 하는 적절 한 방법을 결정 하는 컴퓨터에 대 한 사용자 설명서를 참조 하십시오. 또한 매개 변수를 수정 하 고 필요한 경우 나중에 복원할 수 있도록 원래 값을 추적 하는 것이 좋습니다는 항상 있습니다. 시스템 BIOS에서 매개 변수를 변경한 후 문제를 발생 하는 경우 기본 설정 (옵션은 일반적으로 BIOS 구성 유틸리티에서 사용할 수 있는)를 로드 하려고 하거나 컴퓨터 제조업체에 문의 합니다.  
@@ -86,9 +86,9 @@ ms.locfileid: "71393052"
   
 5.  하이퍼-V-하이퍼바이저 이벤트를 찾는 필터를 사용 합니다.   
     1. 에 **작업** 창에서 클릭 **현재 로그 필터링**합니다. 에 대 한 **이벤트 소스**, "하이퍼-V-하이퍼바이저"를 지정 합니다.   
-    2. 문제를 보고 하는 이벤트를 찾아보십시오. 예를 들어 이벤트 ID 41은 BIOS 구성에 문제가 있음을 나타냅니다. "Hyper-v를 시작 하지 못했습니다. .VMX가 없거나 BIOS에서 사용 하도록 설정 되어 있지 않습니다. "  
+    2. 문제를 보고 하는 이벤트를 찾아보십시오. 예를 들어 이벤트 ID 41 나타냅니다 BIOS 구성에 문제가 있는: "Hyper-v 시작 하지 못했습니다. 어느 VMX 없음 또는 BIOS에서 사용 안 함. "  
   
-### <a name="see-also"></a>관련 항목  
+### <a name="see-also"></a>참고 항목  
 컴퓨터가 하이퍼-V를 실행할 수 있는지 확인 하는 방법을 비롯 하 여 Windows 10에서는 Hyper-v를 사용 하는 방법에 대 한 자세한 내용은 참조 하십시오. [Windows 10 Hyper-v 시스템 요구 사항](https://msdn.microsoft.com/virtualization/hyperv_on_windows/quick_start/walkthrough_compatibility)합니다. 
 
 

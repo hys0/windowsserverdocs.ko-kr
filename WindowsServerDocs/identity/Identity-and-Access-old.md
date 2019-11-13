@@ -19,7 +19,7 @@ ms.locfileid: "71391117"
 ---
 # <a name="identity-and-access-in-windows-server-2016"></a>Id 및 Windows Server 2016에서 액세스
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 >[!TIP]
 > 이전 버전의 Windows Server에 대한 자세한 내용이 궁금하십니까? docs.microsoft.com에서 다른 [Windows Server 라이브러리](/previous-versions/windows/)를 확인할 수 있습니다. 또한 특정 정보에 대해 [이 사이트를 검색](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions)할 수 있습니다.
@@ -36,7 +36,7 @@ Windows Server 2016에 AD DS에 사용할 수 있는 모든 새 기능을 나열
 ## <a name="privileged-access-management-for-active-directory-domain-services-40ad-ds41httpstechnetmicrosoftcomlibrarydn903243aspx"></a>[Active Directory Domain Services &#40;에 대 한 Privileged Access Management AD DS&#41;](https://technet.microsoft.com/library/dn903243.aspx)
 Active Directory 도메인 서비스 (AD DS)에 대 한 권한 있는 액세스 관리 (PAM)는 MIM Microsoft Identity Manager () 및 Windows Server 2012 R2 및 Windows Server 2016를 기반으로 하는 솔루션입니다.
 
-## <a name="windows-10-for-the-enterprise-ways-to-use-devices-for-workhttpsazuremicrosoftcomdocumentationarticlesactive-directory-azureadjoin-windows10-devices-overviewrnd1"></a>엔터프라이즈를 위한 [Windows 10: 작업에 장치를 사용 하는 방법 @ no__t-0
+## <a name="windows-10-for-the-enterprise-ways-to-use-devices-for-workhttpsazuremicrosoftcomdocumentationarticlesactive-directory-azureadjoin-windows10-devices-overviewrnd1"></a>[엔터프라이즈를 위한 Windows 10: 작업에 장치를 사용 하는 방법](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-windows10-devices-overview/?rnd=1)
 Windows 10 Azure Active Directory를 활용 하는 기능을 제공 합니다. Windows 10 장치를 Azure AD에 연결할 수 있는 및 사용자가 Windows Azure AD 계정으로 로그인 하거나 비즈니스 앱 및 리소스에 액세스 하는 Azure ID 추가할 수 있습니다.
 
 ## <a name="active-directory-domain-servicesidentityad-dsactive-directory-domain-servicesmd"></a>[Active Directory Domain Services](../identity/ad-ds/Active-Directory-Domain-Services.md)

@@ -40,7 +40,7 @@ bitsadmin /DeleteURL url
 
 ## <a name="BKMK_examples"></a>예와
 
-다음 예에서는 @no__t에 대 한 모든 캐시 항목을 삭제 합니다.
+다음 예에서는에 대 한 모든 캐시 항목을 삭제 https://www.microsoft.com/en/us/default.aspx
 ```
 C:\>bitsadmin /DeleteURL https://www.microsoft.com/en/us/default.aspx 
 ```

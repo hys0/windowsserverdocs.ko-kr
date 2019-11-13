@@ -49,9 +49,9 @@ LSASS 내에서 가장 큰 가변 메모리 사용은 ESE 데이터베이스 버
 
 ESE 버전 저장소 (위 다이어그램의 빨간색 부분)에 따라 메모리 사용이 가변적입니다. 사용 되는 메모리 양은 Windows Server 2019 또는 이전 버전의 Windows가 있는지 여부에 따라 달라 집니다.
 
-- Windows server 2019 이상 Windows Server에서는 기본적으로 LSASS가 ESE 버전 저장소에 대 한 64 비트 컴퓨터의 메모리 (Cpu 수에 따라)를 최대 400MB까지 사용할 수 있습니다. 버전 저장소를 사용 하는 방법에 대 한 자세한 내용은 Ryan Ries의 다음 ASKDS 블로그 게시물을 참조 하세요. [이라는 버전 저장소는 모두 버킷 외부에](https://techcommunity.microsoft.com/t5/Ask-the-Directory-Services-Team/The-Version-Store-Called-and-They-8217-re-All-Out-of-Buckets/ba-p/400415)있습니다.
+- Windows server 2019 이상 Windows Server에서는 기본적으로 LSASS가 ESE 버전 저장소에 대 한 64 비트 컴퓨터의 메모리 (Cpu 수에 따라)를 최대 400MB까지 사용할 수 있습니다. 버전 저장소를 사용 하는 방법에 대 한 자세한 내용은 Ryan Ries의 다음 ASKDS 블로그 게시물을 참조 하세요. [버전 저장소는를 호출 하 고 모두 버킷이](https://techcommunity.microsoft.com/t5/Ask-the-Directory-Services-Team/The-Version-Store-Called-and-They-8217-re-All-Out-of-Buckets/ba-p/400415)없습니다.
 
-- Windows Server 2019에서는이 작업이 간소화 되 고, NTDS 서비스가 처음 시작 될 때 ESE 버전 저장소 크기는 최소한 400MB와 최대 4GB의 실제 RAM 10%로 계산 됩니다. 이 및 버전 저장소 문제 해결에 대 한 자세한 내용은 Ryan Ries의 다른 유용한 블로그를 참조 하십시오. [ 심층 이해: 서버 2019 @ no__t의 ESE 버전 저장소 변경 Active Directory-0.
+- Windows Server 2019에서는이 작업이 간소화 되 고, NTDS 서비스가 처음 시작 될 때 ESE 버전 저장소 크기는 최소한 400MB와 최대 4GB의 실제 RAM 10%로 계산 됩니다. 이 및 버전 저장소 문제 해결에 대 한 자세한 내용은 Ryan Ries의 다른 유용한 블로그: [심층 정보: ACTIVE DIRECTORY ESE 버전 저장소 변경 서버 2019](https://techcommunity.microsoft.com/t5/Ask-the-Directory-Services-Team/Deep-Dive-Active-Directory-ESE-Version-Store-Changes-in-Server/ba-p/400510)을 참조 하세요.
 
 ## <a name="other-memory-use"></a>기타 메모리 사용
 
@@ -63,7 +63,7 @@ ESE 버전 저장소 (위 다이어그램의 빨간색 부분)에 따라 메모�
 
 이로 인해 성능이 향상 되기 때문에 DC의 프로그램 수를 제한 하거나 최소화 하는 것이 좋습니다. 메모리 요청이 없는 경우 LSASS는이 메모리를 사용 하 여 Active Directory 데이터베이스를 캐시 하므로 최적의 성능을 달성할 수 있습니다.
 
-DC에 성능 문제가 있는 경우 메모리 사용률이 큰 프로세스를 감시 해야 합니다. 문제를 해결 해야 하는 문제가 있을 수 있습니다. 여기에는 Microsoft 구성 요소가 포함 될 수 있습니다. 최신 서비스 업데이트를 유지 해야 합니다. @ no__t-0Microsoft는 품질 업데이트의 일부로 과도 한 메모리 사용률에 대 한 솔루션을 포함 하 여 DC 성능을 향상 시킬 수 있도록 합니다.
+DC에 성능 문제가 있는 경우 메모리 사용률이 큰 프로세스를 감시 해야 합니다. 문제를 해결 해야 하는 문제가 있을 수 있습니다. 여기에는 Microsoft 구성 요소가 포함 될 수 있습니다. 최신 서비스 업데이트를 포함 하는 경우 Microsoft&mdash;Microsoft에서 품질 업데이트의 일부로 과도 한 메모리 사용률에 대 한 솔루션을 포함 하 여 DC 성능을 지원할 수 있는지 확인 하세요.
 
 사용 프로필에 따라 상당한 RAM을 사용할 수 있는 기본 제공 OS 기능이 있습니다.
 
