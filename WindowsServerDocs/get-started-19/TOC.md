@@ -1,6 +1,6 @@
 # [Windows Server 2019 시작](get-started-19.md) 
 ## [Windows Server 2019의 새로운 기능](whats-new-19.md)
-## [Windows Server 버전 1903의 새로운 기능](whats-new-in-windows-server-1903.md)
+## [Windows Server 버전 1903 및 1909의 새로운 기능](whats-new-in-windows-server-1903-1909.md)
 ## [서비스 채널 비교](servicing-channels-19.md)
 ## [설치 | 업그레이드 | 마이그레이션](install-upgrade-migrate-19.md)
 ## [릴리스 정보: Windows Server 2019의 중요한 이슈](rel-notes-19.md)
