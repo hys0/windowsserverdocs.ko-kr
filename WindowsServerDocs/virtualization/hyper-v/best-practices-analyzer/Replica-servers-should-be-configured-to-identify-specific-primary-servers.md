@@ -19,7 +19,7 @@ ms.locfileid: "71364741"
 ---
 # <a name="replica-servers-should-be-configured-to-identify-specific-primary-servers-authorized-to-send-replication-traffic"></a>복제 트래픽을 보낼 수 있는 권한이 고유한 기본 서버를 식별 하도록 복제 서버를 구성 해야
 
->적용 대상: Windows Server 2016
+>적용 대상: Windows Server 2016
 
 모범 사례 분석기 및 검사에 대한 자세한 내용은 [모범 사례 분석기 검사 실행 및 검사 결과 관리](https://go.microsoft.com/fwlink/p/?LinkID=223177)를 참조하세요.  
   

@@ -47,7 +47,7 @@ rdpsign /sha1 <hash> [/q | /v |] [/l] <file_name.rdp>
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
 ## <a name="remarks"></a>설명
--   SHA1 또는 SHA256 인증서 지 문은 신뢰할 수 있는 .rdp 파일 게시자를 나타내야 합니다. 인증서 지문을 얻으려면 인증서 스냅인을 열고 사용할 인증서 (로컬 컴퓨터의 인증서 저장소 또는 개인 인증서 저장소)를 두 번 클릭 한 다음 **세부 정보 탭을 클릭 하 고 필드** 목록에서 **손 도장 (Thumbprint**)을 클릭 합니다.
+-   SHA1 또는 SHA256 인증서 지 문은 신뢰할 수 있는 .rdp 파일 게시자를 나타내야 합니다. 인증서 지문을 얻으려면 인증서 스냅인을 열고 사용할 인증서 (로컬 컴퓨터의 인증서 저장소 또는 개인 인증서 저장소)를 두 번 클릭 한 다음 **자세히** 탭을 클릭 하 고 **필드** 목록에서 **지문**을 클릭 합니다.
 
     > [!NOTE]
     > Rdpsign 도구와 함께 사용 하기 위해 지문을 복사할 때 공백을 모두 제거 해야 합니다.
@@ -73,4 +73,4 @@ rdpsign /sha1 <hash> [/q | /v |] [/l] <file_name.rdp>
   ```
   ## <a name="see-also"></a>참고 항목
   [명령줄 구문 키](command-line-syntax-key.md)
-  [원격 데스크톱 서비스 & #40; 터미널 서비스 및 #41; 명령 참조](remote-desktop-services-terminal-services-command-reference.md)
+  [원격 데스크톱 서비스&#40; 터미널 서비스 및&#41; 명령 참조](remote-desktop-services-terminal-services-command-reference.md)

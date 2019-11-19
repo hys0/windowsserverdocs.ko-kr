@@ -78,7 +78,7 @@ AlternateSignatureAlgorithm=1
 ```  
 이 파일에 대 한 다음 항목을 계획 해야 합니다.  
   
--   **URL**합니다. 예제 Capolicy.inf 파일은 URL 값 **https://pki.corp.contoso.com/pki/cps.txt** 입니다. 이 가이드의 웹 서버 이름이 w e b 1 및 pki DNS CNAME 리소스 레코드를가지고 때문입니다. 웹 서버는 또한 corp.contoso.com 도메인에 가입 됩니다. 또한 인증서 해지 목록을 저장 된 "pki" 라는 웹 서버의 가상 디렉터리가입니다. 값에에서 입력 한 URL에 대 한 가상 디렉터리에 사용자 CAPolicy.inf 파일 지점을 도메인에서 웹 서버에 있는지 확인 합니다.  
+-   **URL**합니다. 예제 Capolicy.inf 파일에는 **https://pki.corp.contoso.com/pki/cps.txt** URL 값이 있습니다. 이 가이드의 웹 서버 이름이 w e b 1 및 pki DNS CNAME 리소스 레코드를가지고 때문입니다. 웹 서버는 또한 corp.contoso.com 도메인에 가입 됩니다. 또한 인증서 해지 목록을 저장 된 "pki" 라는 웹 서버의 가상 디렉터리가입니다. 값에에서 입력 한 URL에 대 한 가상 디렉터리에 사용자 CAPolicy.inf 파일 지점을 도메인에서 웹 서버에 있는지 확인 합니다.  
   
 -   **RenewalKeyLength**합니다. Windows Server 2012의 AD CS에 대 한 기본 갱신 키 길이 2048입니다. 선택 하는 키 길이 사용 하려는 응용 프로그램 호환성을 제공 하면서 최대한 오랫동안 이어야 합니다.  
   

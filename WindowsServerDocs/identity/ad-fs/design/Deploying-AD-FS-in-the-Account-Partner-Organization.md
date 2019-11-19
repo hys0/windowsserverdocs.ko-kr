@@ -26,7 +26,7 @@ Active Directory Federation Services \(AD FS\)의 계정 파트너는 지원 되
   
 계정 파트너 조직을 설정하고 구성하는 방법에 대한 자세한 내용은 [Checklist: Configuring the Account Partner Organization](../../ad-fs/deployment/Checklist--Configuring-the-Account-Partner-Organization.md)을 참조하세요.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>이 섹션의 내용  
   
 -   [계정 파트너에서 페더레이션 서버의 역할 검토](Review-the-Role-of-the-Federation-Server-in-the-Account-Partner.md)  
   
