@@ -5,16 +5,16 @@ ms.prod: windows-server
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.date: 05/21/2019
+ms.date: 11/12/2019
 author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: high
-ms.openlocfilehash: 7b45f5e8fa7f2586f6fd3b5f49599928dee436e7
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: c27fd6652e86211449c1db0e69e88a604d659498
+ms.sourcegitcommit: b9ec35416a06854c1bc875a2b731d42a436fe313
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391435"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73956052"
 ---
 # <a name="windows-server-release-information"></a>Windows Server 릴리스 정보
 
@@ -26,10 +26,10 @@ Microsoft는 서비스 모델을 업데이트하였습니다. 반기 채널에�
 
 | Windows Server 릴리스 | 버전 | OS 빌드 | 사용 가능한 시기 | 일반 지원 종료 날짜|연장된 지원 종료 날짜 |
 |----------------|---------|----------|----------|---------|----------|
+| Windows Server, 버전 1909(반기 채널)(Datacenter Core, Standard Core) | 1909  | 18363.418.191007-0143 | 2019/11/12 | 2021/05/11 | 검토 메모 |
 | Windows Server, 버전 1903(반기 채널)(Datacenter Core, Standard Core) | 1903  | 18362.30.190401-1528 | 2019/5/21 | 2020/12/08 | 검토 메모 |
 |Windows Server 2019(장기 서비스 채널)(Datacenter, Essentials, Standard)|1809|17763.107.1010129-1455|2018/11/13|2024/01/09|2029/01/09|
 |Windows Server, 버전 1809(반기 채널)(Datacenter Core, Standard Core)|1809|17763.107.1010129-1455|2018/11/13|2020/5/12|검토 메모|
-| Windows Server 버전 1803(반기 채널)(Datacenter, Standard)| 1803 |17134.1.180410-1804 |2018/04/30| 2019/11/12|검토 메모|
 | Windows Server 2016(장기 서비스 채널)| 1607 | 14393.0 | 2016/10/15 |2022/01/11| 2027/01/11|
 
 > [!NOTE]

@@ -10,12 +10,12 @@ ms.date: 11/26/2018
 ms.assetid: b886b2fd-3567-4f0a-8aa3-4ba7923d2d21
 author: nirb
 ms.author: nirb
-ms.openlocfilehash: 54352f47a31826b91b5696eb90104ca166a4299d
-ms.sourcegitcommit: 18f6b104e73e0397009283d55bee7984ac7ef0d1
+ms.openlocfilehash: 1711eb94b622775feaf02f6bada596fe03b08ea9
+ms.sourcegitcommit: b8e120fc574450e9eee13e7315424137a43e6a6c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632659"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74044804"
 ---
 # <a name="guidance-on-disabling-system-services-on-windows-server-2016-with-desktop-experience"></a>데스크톱 경험이 있는 Windows Server 2016에서 시스템 서비스를 사용하지 않도록 설정하기 위한 지침
 
@@ -68,7 +68,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 |---|---|
 |**서비스 설명**|   sc.exe qdescription에서 제공하는 서비스 설명입니다.|
 |**이름** |서비스의 키(내부) 이름|
-|**설치** |항상 설치: 서비스가 서버 코어 및 데스크톱 경험이 있는 서버에 있습니다. 데스크톱 경험이 있는 경우에만: 서비스가 데스크톱 경험이 있는 Windows Server 2016에있지만, 서버 코어에는 ***없습니다***. |
+|**설치** | *항상 설치*: 서비스는 Windows Server 2016, 데스크톱 환경이 있는 Windows Server 2016에 설치됩니다. *데스크톱 환경에만 해당*: 서비스는 데스크톱 환경이 있는 Windows Server 2016에 있지만, Server Core에는 설치되어 있지 ***않습니다***. |
 |**시작 유형**  |Windows Server 2016의 서비스 시작 유형|
 |**추천 사항** |일반적이고 효율적으로 관리되는 엔터프라이즈 배포의 Windows Server 2016에서 이 서비스를 사용하지 않도록 설정하는 방법 및 서버가 최종 사용자 데스크톱 대체본으로 사용되지 않는 경우에 대한 Microsoft 추천 사항/조언입니다.|
 |**설명** |추가 설명|

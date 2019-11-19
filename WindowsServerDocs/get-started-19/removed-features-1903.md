@@ -4,22 +4,22 @@ description: 다음은 이 릴리스에서 제거되었거나 다음 릴리스�
 ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
-ms.date: 08/22/2019
+ms.date: 10/15/2019
 author: jasongerend
 ms.author: jgerend
 manager: daveba
-ms.openlocfilehash: b31cde8216b3ceb230c9c197924b40e8cc8fc3f8
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b72f75509e9a50477bb1857782ef5dd4e2670b3f
+ms.sourcegitcommit: b9ec35416a06854c1bc875a2b731d42a436fe313
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71361181"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73956116"
 ---
-# <a name="features-removed-or-planned-for-replacement-starting-with-windows-server-version-1903"></a>Windows Server, 버전 1903부터 제거되었거나 교체 예정인 기능
+# <a name="features-removed-or-planned-for-replacement-starting-with-windows-server-version-1903-and-1909"></a>Windows Server, 버전 1903 및 1909부터 제거되었거나 교체 예정인 기능
 
->적용 대상: Windows Server, 버전 1903
+>적용 대상: Windows Server, 버전 1903 및 1909
 
-다음은 이 릴리스에서 제거되었거나 다음 릴리스에서 교체될 가능성이 고려되기 시작한 Windows Server, 버전 1903 기능의 목록입니다. 상용 환경에서 운영 체제를 업데이트하는 IT 전문가가 참조하시면 유용합니다. **후속 릴리스의 변경 사항에 따라 달라질 수 있으며 일부 영향을 받는 기능이 생략되었을 수 있습니다.**
+다음은 이 릴리스에서 제거되었거나 다음 릴리스에서 교체될 가능성이 고려되기 시작한 Windows Server, 버전 1903 및 1909 기능의 목록입니다. 상용 환경에서 운영 체제를 업데이트하는 IT 전문가가 참조하시면 유용합니다. **후속 릴리스의 변경 사항에 따라 달라질 수 있으며 일부 영향을 받는 기능이 생략되었을 수 있습니다.**
 
 또한 [Windows Server에서 제거되었거나 교체 예정인 기능](removed-features.md)을 참조하세요.
 
@@ -32,7 +32,7 @@ ms.locfileid: "71361181"
 
 |                         기능                         |                                                                                                                                                                                                                                                                                                                                                                                                                           대체 기능                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|              Wi-Fi WEP 및 TKIP(**신규**)               |                                                                                                                                                                  이전 WEP 및 TKIP 암호화를 사용하는 Wi-Fi 네트워크는 WPA2 및 WPA3과 같은 AES를 사용하는 것만큼 안전하지 않습니다. Windows 10, 버전 1903에서 WEP 또는 TKIP 네트워크에 대한 연결은 네트워크가 안전하지 않다는 경고 메시지를 표시하지만 Windows Server, 버전 1903에는 메시지가 표시되지 않습니다. 향후 릴리스에서는 이러한 이전 암호화를 사용하는 Wi-Fi 네트워크에 대한 연결을 사용할 수 없습니다. WEP 및 TKIP의 보안 위험에 대한 자세한 내용은 이 [블로그 게시물](https://go.microsoft.com/fwlink/p/?linkid=2008426)을 참조하세요.                                                                                                                                                                   |
+|              LBFO의 Hyper-V vSwitch                |                                                                                                                                                                  이후 릴리스에서는 Hyper-V vSwitch에 더 이상 LBFO 팀에 바인딩할 수 있는 기능이 없습니다. 대신  [SET(스위치 포함 팀)](../virtualization/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming.md#switch-embedded-teaming-set)를 통해 바인딩해야 합니다.                                                                                                                                                                    |
 |       XDDM 기반 원격 디스플레이 드라이버(**신규**)        |                                                                                                                                          이 릴리스부터 원격 데스크톱 서비스는 단일 세션 원격 데스크톱에 대해 WDDM(Windows 디스플레이 드라이버 모델) 기반 IDD(간접 디스플레이 드라이버)를 사용합니다. XDDM(Windows 2000 디스플레이 드라이버 모델) 기반 원격 디스플레이 드라이버에 대한 지원은 이후 릴리스에서 제거됩니다. XDDM 기반 원격 디스플레이 드라이버를 사용하는 ISV(Independent Software Vendor)는 WDDM 드라이버 모델로의 마이그레이션을 계획해야 합니다. 원격 디스플레이 간접 디스플레이 드라이버 ISV 구현에 대한 자세한 내용은 [rdsdev@microsoft.com](mailto:rdsdev@microsoft.com)에 문의할 수 있습니다.                                                                                                                                           |
 |            UCS 로그 컬렉션 도구(**신규**)            |                                                                                                                                                                                                                                                                                                                                                         UCS 로그 컬렉션 도구는 Windows Server와 함께 사용하도록 명시적으로 의도되지 않았지만 Windows 10의 피드백 허브로 교체되고 있습니다.                                                                                                                                                                                                                                                                                                                                                         |
 |              Hyper-V의 키 스토리지 드라이브               |                                                                                                                                                                                                        Hyper-V의 Key Storage Drive 기능에 대해 더 이상 사용하지 않습니다. 1세대 VM을 사용하는 경우 향후 옵션에 대한 정보는 [1세대 VM 가상화 보안](https://docs.microsoft.com/windows-server/virtualization/hyper-v/learn-more/generation-1-virtual-machine-security-settings-for-hyper-v)을 참조하세요. 새 VM을 만드는 경우 보다 안전한 솔루션에 대한 TPM 디바이스로 2세대 가상 머신을 사용합니다.                                                                                                                                                                                                         |

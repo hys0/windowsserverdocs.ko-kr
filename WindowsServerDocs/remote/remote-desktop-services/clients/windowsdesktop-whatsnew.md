@@ -11,14 +11,14 @@ ms.topic: article
 author: heidilohr
 manager: daveba
 ms.author: helohr
-ms.date: 10/31/2019
+ms.date: 11/12/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a8e66398bc61a69250b84101a3cb66f2c8f3548
-ms.sourcegitcommit: 1da993bbb7d578a542e224dde07f93adfcd2f489
+ms.openlocfilehash: db9c2b64e018b41b053974b5459bd320098a6d2d
+ms.sourcegitcommit: 315f015102c42c6fa7694e76adecdfb448390391
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73567066"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74019589"
 ---
 # <a name="whats-new-in-the-windows-desktop-client"></a>Windows 데스크톱 클라이언트의 새로운 기능
 
@@ -30,14 +30,14 @@ Windows 데스크톱 클라이언트에 대한 자세한 내용은 [Windows 데�
 
 |사용자 그룹 |버전  |
 |-----------|---------|
-|Public     |1.2.247  |
-|Windows 참가자 프로그램    |1.2.428  |
+|Public     |1.2.431  |
+|Windows 참가자 프로그램    |1.2.431  |
 
-## <a name="updates-for-version-12428"></a>1\.2.428 버전에 대한 업데이트
+## <a name="updates-for-version-12431"></a>1\.2.431 버전에 대한 업데이트
 
-*게시 날짜: 2019/10/31*
+*게시 날짜: 2019/11/12*
 
-- 이제 32비트 및 ARM64 버전의 클라이언트 미리 보기를 사용할 수 있습니다.
+- 이제 32비트 및 ARM64 버전의 클라이언트를 사용할 수 있습니다!
 - 이제 클라이언트는 연결 모음에 대한 변경 내용(예: 위치, 크기 및 고정 상태)을 저장하고 이러한 변경 내용을 세션 간에 적용합니다.
 - 업데이트된 게이트웨이 정보 및 연결 상태 대화 상자
 - Azure Active Directory 토큰이 만료된 후 연결을 시도하는 동안 두 자격 증명을 동시에 표시하는 문제를 해결했습니다.

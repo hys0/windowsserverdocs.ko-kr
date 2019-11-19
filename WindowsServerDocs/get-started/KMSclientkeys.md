@@ -7,14 +7,14 @@ ms.sitesec: library
 author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: medium
-ms.date: 05/21/2019
+ms.date: 11/12/2019
 ms.topic: get-started-article
-ms.openlocfilehash: e981343e0a811ada6a1634b193d6e1af3531f9ae
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e2879c56b1dd41b8d357959cca473dd69da77d10
+ms.sourcegitcommit: b9ec35416a06854c1bc875a2b731d42a436fe313
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391770"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73956078"
 ---
 # <a name="kms-client-setup-keys"></a>KMS 클라이언트 설정 키
 
@@ -45,26 +45,12 @@ Windows Server, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows 8, Wind
 
 ## <a name="windows-server-semi-annual-channel-versions"></a>Windows Server 반기 채널 버전
 
-### <a name="windows-server-version-1903-and-windows-server-version-1809"></a>Windows Server, 버전 1903 및 Windows Server, 버전 1809
+### <a name="windows-server-version-1909-version-1903-and-version-1809"></a>Windows Server, 버전 1909, 버전 1903 및 버전 1809
 
 | 운영 체제 버전  | KMS 클라이언트 설정 키          |
 |---------------------------|-------------------------------|
 | Windows Server Datacenter | 6NMRW-2C8FM-D24W7-TQWMY-CWH2D |
 | Windows Server Standard   | N2KJX-J94YW-TQVFB-DG9YT-724CC |
-
-### <a name="windows-server-version-1803"></a>Windows Server, 버전 1803
-
-| 운영 체제 버전       | KMS 클라이언트 설정 키          |
-|--------------------------------|-------------------------------|
-| Windows Server Datacenter | 2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG  | 
-| Windows Server Standard   | PTXN8-JFHJM-4WC78-MPCBR-9W4KR  |
-
-### <a name="windows-server-version-1709"></a>Windows Server, 버전 1709
-
-| 운영 체제 버전       | KMS 클라이언트 설정 키          |
-|--------------------------------|-------------------------------|
-| Windows Server Datacenter | 6Y6KB-N82V8-D8CQV-23MJW-BWTG6  | 
-| Windows Server Standard   | DPCNP-XQFKJ-BJF7R-FRC8D-GF6G4  |
 
 ## <a name="windows-server-ltscltsb-versions"></a>Windows Server LTSC/LTSB 버전
 
@@ -126,6 +112,21 @@ Windows Server, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows 8, Wind
 | Windows 10 Enterprise 2015 LTSB KN | 2F77B-TNFGY-69QQF-B8YKP-D69TJ |
 
 ## <a name="earlier-versions-of-windows-server"></a>이전 버전의 Windows Server
+
+### <a name="windows-server-version-1803"></a>Windows Server, 버전 1803
+
+| 운영 체제 버전       | KMS 클라이언트 설정 키          |
+|--------------------------------|-------------------------------|
+| Windows Server Datacenter | 2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG  | 
+| Windows Server Standard   | PTXN8-JFHJM-4WC78-MPCBR-9W4KR  |
+
+### <a name="windows-server-version-1709"></a>Windows Server, 버전 1709
+
+| 운영 체제 버전       | KMS 클라이언트 설정 키          |
+|--------------------------------|-------------------------------|
+| Windows Server Datacenter | 6Y6KB-N82V8-D8CQV-23MJW-BWTG6  | 
+| Windows Server Standard   | DPCNP-XQFKJ-BJF7R-FRC8D-GF6G4  |
+
 ### <a name="windows-server-2012-r2"></a>Windows Server 2012 R2
 
 | 운영 체제 버전               | KMS 클라이언트 설정 키          |
