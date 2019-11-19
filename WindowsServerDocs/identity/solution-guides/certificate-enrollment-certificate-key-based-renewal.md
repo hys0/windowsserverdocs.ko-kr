@@ -4,23 +4,24 @@ description: ''
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
-ms.date: 11/1/2019
+ms.date: 11/12/2019
 ms.topic: article
 ms.prod: windows-server
-ms.openlocfilehash: a5fea6681376abf6ea9ada67e31b10369256ea81
-ms.sourcegitcommit: 9e123d475f3755218793a130dda88455eac9d4ab
+ms.openlocfilehash: 3d3d08d6abe9daa571dd7365815c1fc61f926501
+ms.sourcegitcommit: e5df3fd267352528eaab5546f817d64d648b297f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73413460"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74163106"
 ---
 # <a name="configuring-certificate-enrollment-web-service-for-certificate-key-based-renewal-on-a-custom-port"></a>사용자 지정 포트에서 인증서 키 기반 갱신에 대 한 인증서 등록 웹 서비스 구성
 
-<!-- <Author(s): Jitesh Thakur, Meera Mohideen, Ankit Tyagi.-->  
+> 저자: Jitesh Thakur, Meera Mohideen, 기술 관리자는 Windows 그룹을 사용 합니다.
+Windows 그룹을 사용한 ankit Tyagi 지원 엔지니어
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 인증서 키 기반 갱신을 수행 하기 위해 443 이외의 사용자 지정 포트에서 인증서 등록 웹 서비스 (또는 CEP (인증서 등록 정책)/CES (인증서 등록 서비스)를 구현 하는 단계별 지침을 제공 합니다. CEP 및 CES의 자동 갱신 기능을 활용 합니다.
+이 문서에서는 자동 기능을 활용 하기 위해 인증서 키 기반 갱신에 443이 아닌 사용자 지정 포트에서 인증서 등록 정책 웹 서비스 (CEP) 및 인증서 등록 웹 서비스 (CES)를 구현 하는 단계별 지침을 제공 합니다. CEP 및 CES의 갱신 기능.
 
 또한이 문서에서는 CEP 및 CES가 작동 하는 방식에 대해 설명 하 고 설치 지침을 제공 합니다.
 
@@ -134,7 +135,7 @@ Install-AdcsEnrollmentWebService -ApplicationPoolIdentity -CAConfig "CA1.contoso
 설치가 완료 되 면 인터넷 정보 서비스 (IIS) 관리자 콘솔에 다음 표시가 표시 될 것입니다.
 ![IIS 관리자](media/certificate-enrollment-certificate-key-based-renewal-4.png) 
 
-**기본 웹 사이트**에서 **KeyBasedRenewal_ADPolicyProvider_CEP_Certificate**을 선택 하 고 **응용 프로그램 설정**을 엽니다. **ID** 와 **URI**를 확인 합니다.
+**기본 웹 사이트**에서 **ADPolicyProvider_CEP_UsernamePassword**를 선택한 다음 **응용 프로그램 설정**을 엽니다. **ID** 와 **URI**를 확인 합니다.
 
 관리를 위해 **친숙 한 이름을** 추가할 수 있습니다.
 
@@ -173,10 +174,10 @@ Install-AdcsEnrollmentWebService -CAConfig "CA1.contoso.com\contoso-CA1-CA" -SSL
 성공적으로 설치한 후에는 IIS 관리자 콘솔에 다음 표시가 표시 될 것입니다.
 ![IIS 관리자](media/certificate-enrollment-certificate-key-based-renewal-5.png) 
 
-**기본 웹 사이트** 아래에서 **KeyBasedRenewal_ADPolicyProvider_CEP_Certificate** 을 선택 하 고 **응용 프로그램 설정**을 엽니다. **ID** 와 **URI**를 적어 둡니다. 관리를 위해 **친숙 한 이름을** 추가할 수 있습니다.
+**기본 웹 사이트** 에서 **KeyBasedRenewal_ADPolicyProvider_CEP_Certificate** 를 선택 하 고 **응용 프로그램 설정**을 엽니다. **ID** 와 **URI**를 적어 둡니다. 관리를 위해 **친숙 한 이름을** 추가할 수 있습니다.
 
 > [!Note]
-> 인스턴스가 새 서버에 설치 되어 있고 id가 다르고 id가 재시도가 id가 CEPCES01 인스턴스에 사용 된 ID와 동일한 지 확인 합니다. 값을 직접 복사 하 여 붙여 넣을 수 있습니다.
+> 인스턴스가 새 서버에 설치 되어 있는 경우 id가 CEPCES01 인스턴스에서 생성 된 것과 동일한 지 확인 합니다. 값이 다른 경우 직접 복사 하 여 붙여 넣을 수 있습니다.
 
 #### <a name="complete-certificate-enrollment-web-services-configuration"></a>인증서 등록 웹 서비스 구성 완료
 
@@ -185,6 +186,9 @@ CEP 및 CES의 기능을 대신 하 여 인증서를 등록할 수 있으려면 
 ##### <a name="step-1-create-a-computer-account-of-the-workgroup-computer-in-active-directory"></a>1 단계: Active Directory에서 작업 그룹 컴퓨터의 컴퓨터 계정 만들기
 
 이 계정은 키 기반 갱신에 대 한 인증 및 인증서 템플릿에 대 한 "Active Directory에 게시" 옵션에 사용 됩니다.
+
+> [!Note]
+> 클라이언트 컴퓨터에 도메인에 가입할 필요는 없습니다. 이 계정은 KBR for dsmapper 서비스에서 인증서 기반 인증을 수행 하는 동안 그림으로 제공 됩니다.
 
 ![새 개체](media/certificate-enrollment-certificate-key-based-renewal-6.png) 
  
@@ -198,7 +202,7 @@ Set-ADUser -Identity cepcessvc -Add @{'msDS-AllowedToDelegateTo'=@('HOST/CA1.con
 ```
 
 > [!Note]
-> 이 명령에서 <cepcessvc>은 서비스 계정이 고 < > C A 1는 인증 기관입니다.
+> 이 명령에서 \<cepcessvc\>는 서비스 계정이 고 < C A 1 >는 인증 기관입니다.
 
 > [!Important]
 > Microsoft는 제한 된 위임을 사용 하 여 동일한 작업을 수행 하기 때문에이 구성에서 CA에 RENEWALONBEHALOF 플래그를 사용 하도록 설정 하지 않습니다. 이렇게 하면 서비스 계정에 대 한 권한을 CA의 보안에 추가 하지 않아도 됩니다.
@@ -212,19 +216,21 @@ Set-ADUser -Identity cepcessvc -Add @{'msDS-AllowedToDelegateTo'=@('HOST/CA1.con
 3. 기본 포트 설정을 443에서 사용자 지정 포트로 변경 합니다. 예제 스크린샷에서는 49999의 포트 설정을 보여 줍니다.
    포트 변경 ![](media/certificate-enrollment-certificate-key-based-renewal-7.png) 
 
-##### <a name="step-4-edit-the-ca-enrollment-services-object"></a>4 단계: CA 등록 서비스 개체 편집
+##### <a name="step-4-edit-the-ca-enrollment-services-object-on-active-directory"></a>4 단계: Active Directory에서 CA 등록 서비스 개체를 편집 합니다.
 
 1. 도메인 컨트롤러에서 adsiedit를 엽니다.
 
-2. 구성 파티션에 연결 하 고 CA 등록 서비스 개체로 이동 합니다.
+2. [구성 파티션에 연결](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/ff730188(v=ws.10))하 고 CA 등록 서비스 개체로 이동 합니다.
    
    CN = ENTCA, CN = 등록 서비스, CN = Public Key Services, CN = Services, CN = Configuration, DC = contoso, DC = com
 
-3. 개체를 편집 하 고 응용 프로그램 설정에서 발견 된 CEP 및 CES 서버 Uri와 사용자 지정 포트를 사용 하 여 Mspki-site-name 특성이 특성을 변경 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+3. CA 개체를 마우스 오른쪽 단추로 클릭 하 고 편집 합니다. 응용 프로그램 설정에서 찾은 CEP 및 CES 서버 Uri와 함께 사용자 지정 포트를 사용 하 여 **mspki-site-name 특성이** 특성을 변경 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
-   140 https://cepces.contoso.com:49999/ENTCA_CES_UsernamePassword/service.svc/CES0   
-   181 https://cepces.contoso.com:49999/ENTCA_CES_Certificate/service.svc/CES1
-
+   ```
+   140https://cepces.contoso.com:49999/ENTCA_CES_UsernamePassword/service.svc/CES0   
+   181https://cepces.contoso.com:49999/ENTCA_CES_Certificate/service.svc/CES1
+   ```
+   
    ![ADSI 편집](media/certificate-enrollment-certificate-key-based-renewal-8.png) 
 
 #### <a name="configure-the-client-computer"></a>클라이언트 컴퓨터 구성
@@ -269,9 +275,9 @@ Set-ADUser -Identity cepcessvc -Add @{'msDS-AllowedToDelegateTo'=@('HOST/CA1.con
 
 ## <a name="testing-the-setup"></a>설치 테스트
 
-자동 갱신이 작동 하는지 확인 하려면 동일한 키를 사용 하 여 수동 갱신이 작동 하는지 확인 합니다. 사용자 이름 및 암호를 입력 하 라는 메시지가 표시 되어서는 안 됩니다.  또한 등록할 때 "인증서를 선택 하 라는 메시지가 표시 됩니다. 이는 예정된 동작입니다.
+자동 갱신이 작동 하는지 확인 하려면 mmc를 사용 하 여 동일한 키로 인증서를 갱신 하 여 수동 갱신이 작동 하는지 확인 합니다. 또한 갱신 하는 동안 인증서를 선택 하 라는 메시지가 표시 됩니다. 이전에 등록 한 인증서를 선택할 수 있습니다. 프롬프트가 필요 합니다.
 
-컴퓨터 개인 인증서 저장소를 열고 "보관 된 인증서" 보기를 추가 합니다. 이렇게 하려면 다음 방법 중 하나를 사용 합니다.
+컴퓨터 개인 인증서 저장소를 열고 "보관 된 인증서" 보기를 추가 합니다. 이렇게 하려면 로컬 컴퓨터 계정 스냅인을 mmc에 추가 하 고, **인증서 (로컬 컴퓨터)** 를 클릭 하 여 강조 표시 하 고, mmc의 오른쪽 또는 위쪽에 있는 **작업 탭** 에서 **보기** 를 클릭 하 고, **옵션 보기**를 클릭 하 고, **보관 된 인증서**를 선택 하 고, **확인**을 클릭 합니다.
 
 ### <a name="method-1"></a>방법 1 
 
@@ -285,11 +291,11 @@ certreq -machine -q -enroll -cert <thumbprint> renew
 
 ### <a name="method-2"></a>방법 2
 
-인증서의 유효 기간이 만료 되 면 8의 배수로 시간 설정을 이동 합니다.
+클라이언트 컴퓨터의 시간과 날짜를 인증서 템플릿의 갱신 시간으로 이동 합니다.
 
-예를 들어 예제 인증서는 4:00에 해당 월의 18 일에 실행 되 고, 20에서 4:00에 만료 되며, 2 일 유효성 설정 및 8 시간 갱신 설정이 있습니다. 자동 등록 엔진은 약 8 시간 간격으로 다시 시작 될 때 트리거됩니다.
+예를 들어 인증서 템플릿의 경우 2 일 유효 설정 및 8 시간 갱신 설정이 구성 됩니다. 인증서 예제는 오전 4:00 시에 발급 되었습니다. 해당 월의 18 일에는 오전 4:00에 만료 됩니다. 20. 자동 등록 엔진은 다시 시작 시와 8 시간 간격 (약) 마다 트리거됩니다.
 
-따라서 시간을 오후 8:10 시로 이동 하는 경우 19 일에서 **Certutil-pulse** 를 실행 하 여 AE 엔진을 트리거하려면 인증서를 등록 합니다.
+따라서 시간을 오후 8:10 시로 이동 하는 경우 19 일 갱신 기간이 템플릿에서 8 시간으로 설정 되었기 때문에 Certutil-pulse (AE 엔진 트리거)를 실행 하 여 인증서를 등록 합니다.
 
 ![명령을 사용합니다.](media/certificate-enrollment-certificate-key-based-renewal-15.png)
  

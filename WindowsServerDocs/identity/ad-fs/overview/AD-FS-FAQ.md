@@ -10,12 +10,12 @@ ms.topic: article
 ms.custom: it-pro
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: a52676ffc89c9fc5ce0eba4f44407e76520fef0a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 0a2bbeeb459fd364db728579dc20015a2474fd25
+ms.sourcegitcommit: e5df3fd267352528eaab5546f817d64d648b297f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407437"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74163096"
 ---
 # <a name="ad-fs-frequently-asked-questions-faq"></a>AD FS FAQ (질문과 대답)
 
@@ -71,6 +71,8 @@ AD FS는 다중 포리스트 구성을 여러 개 지원 하며, 신뢰할 수 �
 - 파트너 id를 포함 하는 DMZ 포리스트와 같은 단방향 포리스트 트러스트의 경우, ADFS를 corp 포리스트에 배포 하 고 DMZ 포리스트를 LDAP를 통해 연결 된 다른 로컬 클레임 공급자 트러스트로 처리 하는 것이 좋습니다. 이 경우 DMZ 포리스트 사용자에 대해 Windows 통합 인증을 사용할 수 없으며, LDAP에 대해 지원 되는 유일한 메커니즘인 암호 인증을 수행 해야 합니다. 이 옵션을 사용할 수 없는 경우에는 DMZ 포리스트에 다른 ADFS를 설정 하 고이를 corp 포리스트의 ADFS에 클레임 공급자 트러스트로 추가 해야 합니다. 사용자는 홈 영역 검색을 수행 해야 하지만 Windows 통합 인증 및 암호 인증을 모두 사용할 수 있습니다. Corp 포리스트의 ADFS에서 DMZ 포리스트의 사용자에 대 한 추가 사용자 정보를 가져올 수 없기 때문에 DMZ 포리스트의 ADFS에 있는 발급 규칙을 적절 하 게 변경 하십시오.
 - 도메인 수준 트러스트가 지원 되 고 작동할 수 있지만 포리스트 수준 트러스트 모델로 이동 하는 것이 좋습니다. 또한 이름의 UPN 라우팅 및 NETBIOS 이름 확인이 정확 하 게 작동 해야 하는지 확인 해야 합니다.
 
+>[!NOTE]  
+>선택적 인증을 양방향 신뢰 구성과 함께 사용 하는 경우에는 호출자 사용자에 게 대상 서비스 계정에 대 한 "인증 허용" 권한이 부여 되어 있는지 확인 합니다. 
 
 
 ## <a name="design"></a>디자인
@@ -101,9 +103,9 @@ Apple은 AD FS를 인증 하는 iOS 앱의 호출에 영향을 줄 수 있는 AT
 
 AD FS 및 WAP 서버가 ATP를 지 원하는 TLS 암호 그룹만을 협상 하도록 하기 위해 [atp 규격 암호 그룹 목록](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW57)에 없는 모든 암호 그룹을 사용 하지 않도록 설정할 수 있습니다.  이렇게 하려면 [WINDOWS TLS PowerShell cmdlet](https://technet.microsoft.com/itpro/powershell/windows/tls/index)을 사용 합니다.
 
-## <a name="developer"></a>Developer
+## <a name="developer"></a>개발자
 
-### <a name="when-generating-an-id_token-with-adfs-for-a-user-authenticated-against-ad-how-is-the-sub-claim-generated-in-the-id_token"></a>AD에 대해 인증 된 사용자에 대해 ADFS를 사용 하 여 id_token를 생성 하는 경우 id_token에서 "sub" 클레임이 어떻게 생성 되나요?
+### <a name="when-generating-an-id_token-with-adfs-for-a-user-authenticated-against-ad-how-is-the-sub-claim-generated-in-the-id_token"></a>AD에 대해 인증 된 사용자에 대해 ADFS를 사용 하 여 id_token를 생성 하는 경우 id_token에서 "하위" 클레임을 생성 하는 방법은 무엇입니까?
 "Sub" 클레임의 값은 클라이언트 ID + 앵커 클레임 값의 해시입니다.
 
 ### <a name="what-is-the-lifetime-of-the-refresh-tokenaccess-token-when-the-user-logs-in-via-a-remote-claims-provider-trust-over-ws-fedsaml-p"></a>사용자가 WS-급지됨/SAML-P를 통해 원격 클레임 공급자 트러스트를 통해 로그인 하는 경우 새로 고침 토큰/액세스 토큰의 수명은 무엇 인가요?
@@ -113,7 +115,7 @@ AD FS 및 WAP 서버가 ATP를 지 원하는 TLS 암호 그룹만을 협상 하�
 사용자 지정 된 id_token를 사용 하 여 id_token 자체에 관련 정보를 추가할 수 있습니다. 자세한 내용은 [id_token에서 내보낼 클레임 사용자 지정](../development/Custom-Id-Tokens-in-AD-FS.md)문서를 참조 하세요.
 
 ### <a name="how-to-issue-json-blobs-inside-jwt-tokens"></a>JWT 토큰 내에서 json blob을 발급 하는 방법
-이에 대 한 특수<http://www.w3.org/2001/XMLSchema#json>ValueType ("") 및 이스케이프 문자 (\x22)가 AD FS 2016에 추가 되었습니다. 발급 규칙에 대해 아래 샘플을 확인 하 고 액세스 토큰의 최종 출력도 확인 하세요.
+이에 대 한 특수 ValueType ("<http://www.w3.org/2001/XMLSchema#json>") 및 이스케이프 문자 (\x22)는 2016 AD FS에 추가 되었습니다. 발급 규칙에 대해 아래 샘플을 확인 하 고 액세스 토큰의 최종 출력도 확인 하세요.
 
 샘플 발급 규칙:
 
@@ -124,18 +126,18 @@ AD FS 및 WAP 서버가 ATP를 지 원하는 TLS 암호 그룹만을 협상 하�
     "array_in_json":{"Items":[{"Name":"Apple","Price":12.3},{"Name":"Grape","Price":3.21}],"Date":"21/11/2010"}
 
 ### <a name="can-i-pass-resource-value-as-part-of-the-scope-value-like-how-requests-are-done-against-azure-ad"></a>Azure AD에 대 한 요청이 수행 되는 방법과 같이 범위 값의 일부로 리소스 값을 전달할 수 있나요?
-서버 2019에서 AD FS를 사용 하 여 이제 범위 매개 변수에 포함 된 리소스 값을 전달할 수 있습니다. 이제 범위 매개 변수를 공백으로 구분 된 목록으로 구성할 수 있습니다. 여기서 각 항목은 리소스/범위의 구조입니다. 예  
+서버 2019에서 AD FS를 사용 하 여 이제 범위 매개 변수에 포함 된 리소스 값을 전달할 수 있습니다. 이제 범위 매개 변수를 공백으로 구분 된 목록으로 구성할 수 있습니다. 여기서 각 항목은 리소스/범위의 구조입니다. 예를 들면 다음과 같습니다.  
 **< 올바른 샘플 요청을 만듭니다 >**
 
 ### <a name="does-ad-fs-support-pkce-extension"></a>PKCE 확장을 지원할 AD FS 있나요?
 Server 2019의 AD FS는 OAuth 인증 코드 부여 흐름에 대 한 PKCE (코드 교환에 대 한 증명 키)를 지원 합니다.
 
 ### <a name="what-permitted-scopes-are-supported-by-ad-fs"></a>AD FS에서 지 원하는 허용 범위는 무엇입니까?
-- aza- [Broker 클라이언트에 OAuth 2.0 프로토콜 확장](https://docs.microsoft.com/openspecs/windows_protocols/ms-oapxbc/2f7d8875-0383-4058-956d-2fb216b44706) 을 사용 하는 경우 범위 매개 변수에 "aza" 범위가 포함 되어 있으면 서버가 새 주 새로 고침 토큰을 발급 하 고 응답의 refresh_token 필드에 해당 토큰을 설정 하 고 refresh_token_를 설정 합니다. expires_in이 적용 되는 경우 새 주 새로 고침 토큰의 수명으로 필드를 유지 합니다.
+- aza- [Broker 클라이언트에 OAuth 2.0 프로토콜 확장](https://docs.microsoft.com/openspecs/windows_protocols/ms-oapxbc/2f7d8875-0383-4058-956d-2fb216b44706) 을 사용 하는 경우 범위 매개 변수에 "aza" 범위가 포함 되어 있으면 서버가 새 주 새로 고침 토큰을 발급 하 고 응답의 refresh_token 필드에 설정 하며, refresh_token_expires_in 필드를 적용 하는 경우 새 주 새로 고침 토큰의 수명으로 설정 합니다.
 - openid connect-응용 프로그램에서 Openid connect Connect 권한 부여 프로토콜의 사용을 요청할 수 있습니다.
 - logon_cert-logon_cert 범위를 통해 응용 프로그램은 인증 된 사용자를 대화형으로 로그온 하는 데 사용할 수 있는 로그온 인증서를 요청할 수 있습니다. AD FS 서버는 응답에서 access_token 매개 변수를 생략 하 고 대신 b a s e 64로 인코딩된 CMS 인증서 체인 또는 CMC 전체 PKI 응답을 제공 합니다. 자세한 내용은 [여기](https://docs.microsoft.com/openspecs/windows_protocols/ms-oapx/32ce8878-7d33-4c02-818b-6c9164cc731e)에 있습니다. 
-- user_impersonation-AD FS에서 온-액세스 토큰을 성공적으로 요청 하려면 user_impersonation 범위가 필요 합니다. 이 범위를 사용 하는 방법에 대 한 자세한 내용은 [AD FS 2016에서 OAuth를 사용 하 여 OBO (온-)를 사용 하는 다중 계층 응용 프로그램 빌드를](../../ad-fs/development/ad-fs-on-behalf-of-authentication-in-windows-server.md)참조 하세요.
-- vpn_cert-vpn_cert 범위를 사용 하면 응용 프로그램에서 VPN 인증서를 요청할 수 있으며,이는 EAP-TLS 인증을 사용 하 여 VPN 연결을 설정 하는 데 사용할 수 있습니다. 이는 더 이상 지원 되지 않습니다.
+- user_impersonation-AD FS에서 온-의 액세스 토큰을 성공적으로 요청 하려면 user_impersonation 범위가 필요 합니다. 이 범위를 사용 하는 방법에 대 한 자세한 내용은 [AD FS 2016에서 OAuth를 사용 하 여 OBO (온-)를 사용 하는 다중 계층 응용 프로그램 빌드를](../../ad-fs/development/ad-fs-on-behalf-of-authentication-in-windows-server.md)참조 하세요.
+- vpn_cert-vpn_cert 범위를 통해 응용 프로그램은 EAP-TLS 인증을 사용 하 여 VPN 연결을 설정 하는 데 사용할 수 있는 VPN 인증서를 요청할 수 있습니다. 이는 더 이상 지원 되지 않습니다.
 - 전자 메일-응용 프로그램에서 로그인 한 사용자에 대 한 전자 메일 클레임을 요청할 수 있습니다. 이는 더 이상 지원 되지 않습니다. 
 - 프로필-응용 프로그램에서 로그인 사용자에 대 한 프로필 관련 클레임을 요청할 수 있습니다. 이는 더 이상 지원 되지 않습니다. 
 
@@ -185,7 +187,7 @@ Adfs의 장치 또는 ADFS를 사용 하는 비즈니스용 Windows Hello 인증
 
 **등록 된 장치**
 
-- PRT 및 SSO 쿠키: PSSOLifeTimeMins에 의해 관리 되는 90 일 최대값 제공 된 장치는 최소 14 일 마다 사용 되며 DeviceUsageWindow에 의해 제어 됩니다.
+- PRT 및 SSO 쿠키: PSSOLifeTimeMins에 의해 관리 되는 최대 90 일입니다. 제공 된 장치는 최소 14 일 마다 사용 되며 DeviceUsageWindow에 의해 제어 됩니다.
 
 - 새로 고침 토큰: 일관 된 동작을 제공 하기 위해 위의을 기준으로 계산 됩니다.
 
@@ -216,8 +218,8 @@ HSTS (HTTP Strict Transport Security)는 HTTP 및 HTTPS 끝점이 모두 포함 
 
 ### <a name="x-ms-forwarded-client-ip-does-not-contain-the-ip-of-the-client-but-contains-ip-of-the-firewall-in-front-of-the-proxy-where-can-i-get-the-right-ip-of-the-client"></a>X-ms 전달-클라이언트 ip는 클라이언트의 IP를 포함 하지 않지만 프록시 앞에 방화벽의 IP를 포함 합니다. 클라이언트의 올바른 IP는 어디에서 얻을 수 있나요?
 WAP 이전에는 SSL 종료를 수행 하지 않는 것이 좋습니다. WAP 앞에서 SSL 종료를 수행 하는 경우 X-ms로 전달 된-클라이언트 ip에는 WAP 앞에 네트워크 장치의 IP가 포함 됩니다. 다음은 AD FS에서 지 원하는 다양 한 IP 관련 클레임에 대 한 간단한 설명입니다.
- - x-m-클라이언트-ip: STS에 연결 된 장치의 네트워크 IP입니다.  엑스트라넷 요청의 경우이는 항상 WAP의 IP를 포함 합니다.
- - x------------ip: 다중 값 클레임-Exchange Online에서 ADFS에 전달 된 값과 WAP에 연결 된 장치의 IP 주소를 포함 합니다.
+ - x-y-ip: STS에 연결 된 장치의 네트워크 IP입니다.  엑스트라넷 요청의 경우이는 항상 WAP의 IP를 포함 합니다.
+ - x-ms------------------------------------ip: 다중 값 클레임은 Exchange Online에서 ADFS에 전달 된
  - Userip: 엑스트라넷 요청에 대해이 클레임은 x-ms로 전달 된-클라이언트 ip 값을 포함 합니다.  인트라넷 요청의 경우이 클레임은 x-m s-i p--와 동일한 값을 포함 합니다.
 
  또한 AD FS 2016 (최신 패치 포함)에서 더 높은 버전은 x 전달 된 헤더 캡처도 지원 합니다. 계층 3에서 전달 되지 않는 모든 부하 분산 장치 또는 네트워크 장치 (IP가 유지 됨)는 들어오는 클라이언트 IP를 업계 표준 x 전달 됨 헤더에 추가 해야 합니다. 
@@ -299,7 +301,7 @@ WAP 서버에서 WebApplicationProxySslCertificate을 계속 사용할 수 있�
 ### <a name="is-adfs-supported-when-web-application-proxy-wap-servers-are-behind-azure-web-application-firewallwaf"></a>WAP (웹 응용 프로그램 프록시) 서버가 Azure WAF (웹 응용 프로그램 방화벽) 뒤에 있을 때 ADFS가 지원 되나요?
 ADFS 및 웹 응용 프로그램 서버는 끝점에서 SSL 종료를 수행 하지 않는 모든 방화벽을 지원 합니다. 또한 ADFS/WAP 서버는 사이트 간 스크립팅, ADFS 프록시와 같은 일반적인 웹 공격을 방지 하는 메커니즘을 기본 제공 하며, [MS-ADFSPIP 프로토콜](https://msdn.microsoft.com/library/dn392811.aspx)에서 정의한 모든 요구 사항을 충족 합니다.
 
-### <a name="i-am-seeing-an-event-441-a-token-with-a-bad-token-binding-key-was-found-what-should-i-do-to-resolve-this"></a>"이벤트 441: 토큰 바인딩 키가 잘못 된 토큰을 찾았습니다. " 이 문제를 해결 하려면 어떻게 해야 하나요?
+### <a name="i-am-seeing-an-event-441-a-token-with-a-bad-token-binding-key-was-found-what-should-i-do-to-resolve-this"></a>"이벤트 441: 잘못 된 토큰 바인딩 키가 있는 토큰이 있습니다."가 표시 됩니다. 이 문제를 해결 하려면 어떻게 해야 하나요?
 AD FS 2016에서 토큰 바인딩이 자동으로 사용 하도록 설정 되 고이 오류가 발생 하는 프록시 및 페더레이션 시나리오에서 알려진 여러 문제가 발생 합니다. 이 문제를 해결 하려면 다음 Powershell 명령을 실행 하 고 토큰 바인딩 지원을 제거 합니다.
 
 `Set-AdfsProperties -IgnoreTokenBinding $true`
