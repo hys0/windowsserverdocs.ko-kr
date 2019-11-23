@@ -22,7 +22,7 @@ ms.locfileid: "71383192"
 ---
 # <a name="install-or-uninstall-roles-role-services-or-features"></a>역할, 역할 서비스 또는 기능 설치 또는 제거
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Windows Server의 서버 관리자 콘솔 및 Windows PowerShell cmdlet에 대 한 서버 관리자는 로컬 또는 원격 서버 또는 오프 라인 가상 하드 디스크 (Vhd)로 역할 및 기능 설치를 허용 합니다. 단일 원격 서버 또는 단일 역할 및 기능 추가 마법사 또는 Windows PowerShell 세션에서 여러 역할 및 기능을 설치할 수 있습니다.  
   
@@ -91,9 +91,9 @@ Windows Server의 서버 관리자 콘솔 및 Windows PowerShell cmdlet에 대 �
   
     **설치 선택 확인** 페이지의 **대체 원본 경로 지정** 명령을 사용하면 선택한 서버에 역할 및 기능을 설치하는 데 필요한 파일의 대체 원본 경로를 지정할 수 있습니다. Windows Server 2012 및 이후 버전의 Windows Server에서 [주문형 기능](https://go.microsoft.com/fwlink/p/?LinkID=241573) 의 양을 줄일 수 있습니다. 디스크 공간 원격 으로만 관리 되는 서버에서 역할 및 기능 파일을 제거 하 여 운영 체제에서 사용 합니다. `Uninstall-WindowsFeature -remove` cmdlet을 사용하여 서버에서 역할 및 기능 파일을 제거한 경우, 필요한 역할과 기능 파일이 저장되어 있는 대체 원본 경로 또는 공유를 지정하여 나중에 역할 및 기능을 서버에 설치할 수 있습니다. 원본 경로 또는 파일 공유에서 **읽기** 권한을 **Everyone** 그룹 (보안상의 이유로 권장 되지 않음) 또는 대상 서버의 컴퓨터 계정 (*도메인*\\*SERverNAME*$)에 부여 해야 합니다. 사용자 계정 액세스 권한을 부여 하는 것 만으로는 충분 하지 않습니다. 주문형 기능에 대한 자세한 내용은 [Windows Server 설치 옵션](https://go.microsoft.com/fwlink/p/?LinkId=241573)을 참조하세요.  
   
-    실행 중인 실제 서버에서 역할, 역할 서비스 및 기능을 설치할 때 WIM 파일을 대체 기능 파일 원본으로 지정할 수 있습니다. WIM 파일의 원본 경로는 다음과 같은 형식 이어야 합니다. **wim** 은 접두사로, 기능 파일은 접미사로 있는 인덱스입니다. **Wim: e: \source\install\install.wim: 4**. 그러나 사용할 수 없습니다 WIM 파일을 원본으로 직접; 오프 라인 VHD에 역할, 역할 서비스 및 기능 설치 해야 하거나 오프 라인 VHD를 탑재 하 고 소스 파일의 탑재 경로 또는 WIM 파일의 내용의 복사본을 포함 하는 폴더를 가리켜야 합니다.  
+    실행 중인 실제 서버에서 역할, 역할 서비스 및 기능을 설치할 때 WIM 파일을 대체 기능 파일 원본으로 지정할 수 있습니다. WIM 파일의 원본 경로는 접두사로 **WIM**을 사용하고 접미사로 기능 파일이 있는 인덱스를 사용하여 **WIM:e:\sources\install.wim:4** 형식이어야 합니다. 그러나 사용할 수 없습니다 WIM 파일을 원본으로 직접; 오프 라인 VHD에 역할, 역할 서비스 및 기능 설치 해야 하거나 오프 라인 VHD를 탑재 하 고 소스 파일의 탑재 경로 또는 WIM 파일의 내용의 복사본을 포함 하는 폴더를 가리켜야 합니다.  
   
-8.  **설치를 클릭 하면**설치 진행률, 결과 및 메시지 (예: 경고, 오류 또는 역할이 나 기능에 필요한 설치 후 구성 단계)가 설치 **진행률 페이지에** 표시 됩니다. 설치한. Windows server 2012 이상 버전의 Windows Server에서는 설치가 진행 되는 동안 역할 및 기능 추가 마법사를 닫고 서버 관리자 맨 위에 있는 **알림** 영역에서 설치 결과 나 기타 메시지를 확인할 수 있습니다. 콘솔이. 클릭 된 **알림을** 설치 또는 서버 관리자에서 수행 되는 기타 작업에 대 한 자세한 내용을 보려면 플래그 아이콘입니다.  
+8.  **설치를 클릭 하면**설치 진행률, 결과 및 메시지 (예: 경고, 오류 또는 설치한 역할이 나 기능에 필요한 설치 후 구성 단계)가 설치 **진행률 페이지에** 표시 됩니다. Windows server 2012 이상 버전의 Windows Server에서는 설치가 진행 되는 동안 역할 및 기능 추가 마법사를 닫고 서버 관리자 콘솔 상단의 **알림** 영역에서 설치 결과 나 기타 메시지를 확인할 수 있습니다. 클릭 된 **알림을** 설치 또는 서버 관리자에서 수행 되는 기타 작업에 대 한 자세한 내용을 보려면 플래그 아이콘입니다.  
   
 ## <a name="install-roles-role-services-and-features-by-using-windows-powershell-cmdlets"></a>Windows PowerShell cmdlet을 사용하여 역할, 역할 서비스 및 기능 설치  
 GUI 기반 역할 및 기능 추가 마법사와 유사 하 게 작동 하는 Windows PowerShell 용 서버 관리자 배포 cmdlet 및 역할 및 기능 제거 마법사는 중요 한 차이점이 있습니다. Windows PowerShell에서는 역할 및 기능 추가 마법사와 달리 역할에 대 한 관리 도구 및 스냅인이 기본적으로 포함 되어 있지 않습니다. 관리 도구를 역할 설치의 일부로 포함하려면 cmdlet에 `IncludeManagementTools` 매개 변수를 추가합니다. 를 설치 하는 역할 및 기능 Windows Server 2012 또는 이후 버전의 Server Core 설치 옵션을 실행 하는 서버의 경우에 역할의 관리 도구 설치를 추가할 수 있지만 GUI 기반 관리 도구 및 스냅인과 Windows Server의 Server Core 설치 옵션을 실행 하는 서버에 설치할 수 없습니다. 명령줄만 Server Core 설치 옵션에서 Windows PowerShell 관리 도구를 설치할 수 있습니다.  
@@ -109,14 +109,14 @@ GUI 기반 역할 및 기능 추가 마법사와 유사 하 게 작동 하는 Wi
   
    -   Windows **시작** 화면에서 Windows PowerShell에 대 한 타일을 마우스 오른쪽 단추로 클릭 한 다음 앱 바에서 클릭 **관리자 권한으로 실행**합니다.  
   
-2. **Get-WindowsFeature** 를 입력한 다음 **Enter** 키를 누르면 로컬 서버에서 사용 가능하고 설치된 역할 및 기능 목록을 볼 수 있습니다. 로컬 컴퓨터가 서버가 아니거나 원격 서버에 대 한 정보를 원하는 경우 **@no__t**<em>computer_name</em>를 **<** 실행 합니다. 여기서 *computer_name* 는 원격 컴퓨터의 이름을 나타냅니다. Windows Server 2016를 실행 합니다. Cmdlet의 결과는 역할 및 4 단계에서 cmdlet에 추가 기능 명령 이름이 포함 됩니다.  
+2. **Get-WindowsFeature** 를 입력한 다음 **Enter** 키를 누르면 로컬 서버에서 사용 가능하고 설치된 역할 및 기능 목록을 볼 수 있습니다. 로컬 컴퓨터가 서버가 아닌 경우 또는 원격 서버에 대 한 정보가 필요한 경우 Windows Server 2016를 실행 하는 원격 컴퓨터의 이름을 나타내는 *computer_name* **>** <em>computer_name</em> **<** 를 실행 합니다. Cmdlet의 결과는 역할 및 4 단계에서 cmdlet에 추가 기능 명령 이름이 포함 됩니다.  
   
    > [!NOTE]  
    > Windows PowerShell 3.0 이상 버전의 Windows PowerShell에는 서버 관리자 cmdlet 모듈을 모듈의 일부인 cmdlet을 실행 하기 전에 Windows PowerShell 세션으로 가져올 필요가 없습니다 있습니다. 모듈의 일부인 cmdlet을 처음으로 실행하면 모듈을 자동으로 가져옵니다. 또한 Windows PowerShell cmdlet도 아니고 cmdlet 사용 되는 기능 이름은 대/소문자를 구분 합니다.  
   
 3. **Get-help Install-add-windowsfeature**를 입력 한 다음 **enter** 키를 눌러 `Install-WindowsFeature` cmdlet에 대 한 구문 및 허용 된 매개 변수를 확인 합니다.  
   
-4. 다음을 입력 하 고 **enter**키를 누릅니다. 여기서 *feature_name* 는 설치 하려는 역할이 나 기능의 명령 이름 (2 단계에서 가져옴)을 나타내고 *computer_name* 는를 설치 하려는 원격 컴퓨터를 나타냅니다. 역할 및 기능. *feature_name* 의 값이 여러 개인 경우에는 쉼표로 구분합니다. 역할 또는 기능 설치에 필요한 경우 `Restart` 매개 변수가 대상 서버를 자동으로 다시 시작합니다.  
+4. 다음을 입력 하 고 **enter**키를 누릅니다. 여기서 *feature_name* 는 설치 하려는 역할이 나 기능의 명령 이름 (2 단계에서 가져옴)을 나타내고 *computer_name* 는 역할 및 기능을 설치할 원격 컴퓨터를 나타냅니다. *feature_name* 의 값이 여러 개인 경우에는 쉼표로 구분합니다. 역할 또는 기능 설치에 필요한 경우 `Restart` 매개 변수가 대상 서버를 자동으로 다시 시작합니다.  
   
    ```  
    Install-WindowsFeature -Name <feature_name> -computerName <computer_name> -Restart  
@@ -140,13 +140,13 @@ GUI 기반 역할 및 기능 추가 마법사와 유사 하 게 작동 하는 Wi
    Install-WindowsFeature -Name <feature_name> -VHD <path> -computerName <computer_name> -Restart  
    ```  
   
-   **예 들어** 다음 cmdlet은 ContosoDC1 원격 서버에 active directory 도메인 서비스 역할 및 그룹 정책 관리 기능을 설치 합니다. `IncludeManagementTools` 매개 변수를 사용하여 관리 도구와 스냅인을 추가하며 설치 시에 서버를 다시 시작해야 할 경우 대상 서버가 자동으로 다시 시작됩니다.  
+   **예:** 다음 cmdlet은 ContosoDC1 원격 서버에 active directory 도메인 서비스 역할 및 그룹 정책 관리 기능을 설치 합니다. `IncludeManagementTools` 매개 변수를 사용하여 관리 도구와 스냅인을 추가하며 설치 시에 서버를 다시 시작해야 할 경우 대상 서버가 자동으로 다시 시작됩니다.  
   
    ```  
    Install-WindowsFeature -Name AD-Domain-Services,GPMC -computerName ContosoDC1 -IncludeManagementTools -Restart  
    ```  
   
-5. 설치가 완료 되 면 열어 설치를 확인는 **모든 서버** 서버 관리자에서 역할 및 기능을 설치 된 서버를 선택 하 고 보는 페이지는 **역할 및 기능** 선택한 서버에 대 한 페이지에 바둑판식으로 배열입니다. 선택한 서버를 대상으로 하는 `Get-WindowsFeature` cmdlet (*computer_name*< >)을 실행 하 여 서버에 설치 된 역할 및 기능 목록을 볼 수도 있습니다.  
+5. 설치가 완료 되 면 열어 설치를 확인는 **모든 서버** 서버 관리자에서 역할 및 기능을 설치 된 서버를 선택 하 고 보는 페이지는 **역할 및 기능** 선택한 서버에 대 한 페이지에 바둑판식으로 배열입니다. 선택한 서버를 대상으로 하는 `Get-WindowsFeature` cmdlet (<*computer_name*>)을 실행 하 여 서버에 설치 된 역할 및 기능 목록을 볼 수도 있습니다.  
   
 ## <a name="remove-roles-role-services-and-features-by-using-the-remove-roles-and-features-wizard"></a>역할 및 기능 제거 마법사를 사용 하 여 역할, 역할 서비스 및 기능 제거  
 역할, 역할 서비스 및 기능을 제거 하려면 관리자 권한으로 서버에 로그온 해야 합니다. 제거 대상 서버에 대해 관리자 권한이 없는 계정을 사용하여 로컬 컴퓨터에 로그온했으면 **서버** 타일에서 대상 서버를 마우스 오른쪽 단추로 클릭한 후 **다음으로 관리** 를 클릭하여 관리자 권한을 가진 계정을 제공합니다. 오프라인 VHD를 탑재하려는 서버는 서버 관리자에 추가되어 있어야 하며, 사용자는 해당 서버에 대한 관리자 권한이 있어야 합니다.  
@@ -200,7 +200,7 @@ Windows PowerShell 용 서버 관리자 배포 cmdlet은 GUI 기반 역할 및 �
   
    -   Windows **시작** 화면에서 windows PowerShell 타일을 마우스 오른쪽 단추로 클릭 한 다음 앱 바에서 **관리자 권한으로 실행**을 클릭 합니다.  
   
-2. **Get-WindowsFeature** 를 입력한 다음 **Enter** 키를 누르면 로컬 서버에서 사용 가능하고 설치된 역할 및 기능 목록을 볼 수 있습니다. 로컬 컴퓨터가 서버가 아니거나 원격 서버에 대 한 정보를 원하는 경우 **@no__t**<em>computer_name</em>를 **<** 실행 합니다. 여기서 *computer_name* 는 원격 컴퓨터의 이름을 나타냅니다. Windows Server 2016를 실행 합니다. Cmdlet의 결과는 역할 및 4 단계에서 cmdlet에 추가 기능 명령 이름이 포함 됩니다.  
+2. **Get-WindowsFeature** 를 입력한 다음 **Enter** 키를 누르면 로컬 서버에서 사용 가능하고 설치된 역할 및 기능 목록을 볼 수 있습니다. 로컬 컴퓨터가 서버가 아닌 경우 또는 원격 서버에 대 한 정보가 필요한 경우 Windows Server 2016를 실행 하는 원격 컴퓨터의 이름을 나타내는 *computer_name* **>** <em>computer_name</em> **<** 를 실행 합니다. Cmdlet의 결과는 역할 및 4 단계에서 cmdlet에 추가 기능 명령 이름이 포함 됩니다.  
   
    > [!NOTE]  
    > Windows PowerShell 3.0 이상 버전의 Windows PowerShell에는 서버 관리자 cmdlet 모듈을 모듈의 일부인 cmdlet을 실행 하기 전에 Windows PowerShell 세션으로 가져올 필요가 없습니다 있습니다. 모듈의 일부인 cmdlet을 처음으로 실행하면 모듈을 자동으로 가져옵니다. 또한 Windows PowerShell cmdlet도 아니고 cmdlet 사용 되는 기능 이름은 대/소문자를 구분 합니다.  
@@ -227,16 +227,16 @@ Windows PowerShell 용 서버 관리자 배포 cmdlet은 GUI 기반 역할 및 �
    Uninstall-WindowsFeature -Name <feature_name> -VHD <path> -computerName <computer_name> -Restart  
    ```  
   
-   **예 들어** 다음 cmdlet은 원격 서버 ContosoDC1에서 active directory 도메인 서비스 역할 및 그룹 정책 관리 기능을 제거 합니다. 관리 도구와 스냅인도 제거되며, 제거 시 서버를 다시 시작해야 할 경우 대상 서버가 자동으로 다시 시작됩니다.  
+   **예:** 다음 cmdlet은 원격 서버 ContosoDC1에서 active directory 도메인 서비스 역할 및 그룹 정책 관리 기능을 제거 합니다. 관리 도구와 스냅인도 제거되며, 제거 시 서버를 다시 시작해야 할 경우 대상 서버가 자동으로 다시 시작됩니다.  
   
    ```  
    Uninstall-WindowsFeature -Name AD-Domain-Services,GPMC -computerName ContosoDC1 -IncludeManagementTools -Restart  
    ```  
   
-5. 제거가 완료 되 면 확인을 열어서 역할 및 기능이 제거 됩니다는 **모든 서버** 서버 관리자에서 제거한 역할 및 기능을 서버를 선택 하 고 보는 페이지는 **역할 및 기능** 선택한 서버에 대 한 페이지에 바둑판식으로 배열입니다. 선택한 서버를 대상으로 하는 `Get-WindowsFeature` cmdlet (*computer_name*< >)을 실행 하 여 서버에 설치 된 역할 및 기능 목록을 볼 수도 있습니다.  
+5. 제거가 완료 되 면 확인을 열어서 역할 및 기능이 제거 됩니다는 **모든 서버** 서버 관리자에서 제거한 역할 및 기능을 서버를 선택 하 고 보는 페이지는 **역할 및 기능** 선택한 서버에 대 한 페이지에 바둑판식으로 배열입니다. 선택한 서버를 대상으로 하는 `Get-WindowsFeature` cmdlet (<*computer_name*>)을 실행 하 여 서버에 설치 된 역할 및 기능 목록을 볼 수도 있습니다.  
   
 ## <a name="install-roles-and-features-on-multiple-servers-by-running-a-windows-powershell-script"></a>Windows PowerShell 스크립트를 실행하여 여러 서버에 역할 및 기능 설치  
-역할 및 기능 추가 마법사를 사용 하 여 단일 마법사 세션에서 두 개 이상의 대상 서버에 역할, 역할 서비스 및 기능을 설치할 수는 없지만, Windows PowerShell 스크립트를 사용 하 여 여러 대상에 역할, 역할 서비스 및 기능을 설치할 수 있습니다. 서버 관리자를 사용 하 여 관리 하는 서버입니다. 일괄 배포를 수행 하는 데 사용 하는 스크립트는이 프로세스가 호출 될 때 역할 및 기능 추가 마법사를 사용 하 고 **구성 설정 내보내기** 를 클릭 하 여 쉽게 만들 수 있는 XML 구성 파일을 가리킵니다. 역할 및 기능 추가 마법사의 **설치 선택 확인** 페이지에서 마법사를 선택 합니다.  
+역할 및 기능 추가 마법사를 사용 하 여 단일 마법사 세션에서 두 개 이상의 대상 서버에 역할, 역할 서비스 및 기능을 설치할 수는 없지만, Windows PowerShell 스크립트를 사용 하 여 여러 대상에 역할, 역할 서비스 및 기능을 설치할 수 있습니다. 서버 관리자를 사용 하 여 관리 하는 서버입니다. 이 프로세스가 호출 될 때 일괄 배포를 수행 하는 데 사용 하는 스크립트는 역할 및 기능 추가 마법사를 사용 하 여 쉽게 만들 수 있는 XML 구성 파일을 가리키고 마법사를 통해 역할 및 기능 추가 마법사의 **설치 선택 확인** 페이지로 이동한 후 **구성 설정 내보내기** 를 클릭 하 여 쉽게 만들 수 있습니다.  
   
 > [!IMPORTANT]  
 > 스크립트에 지정 된 모든 대상 서버는 로컬 컴퓨터에서 실행 하는 서버 관리자의 버전과 일치 하는 Windows Server의 릴리스를 실행 되어야 합니다. 예를 들어, Windows 10에서 서버 관리자를 실행 하는 경우 Windows Server 2016를 실행 하는 서버에서 역할, 역할 서비스 및 기능 설치할 수 있습니다. GUI 기반 관리 도구 설치에 추가 되 면 설치 프로세스 전체 설치 옵션 (라고도 함: 실행 중인 서버 그래픽 셸, 전체 GUI 포함 서버)를 Windows Server의 Server Core 설치 옵션을 실행 하는 대상 서버를 자동으로 변환 합니다.  
@@ -245,7 +245,7 @@ Windows PowerShell 용 서버 관리자 배포 cmdlet은 GUI 기반 역할 및 �
   
 #### <a name="to-install-roles-and-features-on-multiple-servers"></a>여러 서버에 역할 및 기능을 설치하려면  
   
-1.  아직 수행 하는 경우에 역할, 역할 서비스를 포함 하는 XML 구성 파일 및 여러 서버에 설치 하려는 기능을 만듭니다. 역할 및 기능 추가 마법사를 실행 하 고, 역할, 역할 서비스 및 기능을 선택 하 고, 마법사를 완료 한 후 **구성 설정 내보내기** 를 클릭 하 여이 구성 파일을 만들 수 있습니다.  **설치 선택** 페이지. 구성 파일을 원하는 위치에 저장합니다. 마법사를 구성 파일을 만드는 데에만 실행할 경우에는 **설치** 를 클릭하거나 마법사를 완료할 필요가 없습니다.  
+1.  아직 수행 하는 경우에 역할, 역할 서비스를 포함 하는 XML 구성 파일 및 여러 서버에 설치 하려는 기능을 만듭니다. 역할 및 기능 추가 마법사를 실행 하 고 원하는 역할, 역할 서비스 및 기능을 선택한 다음 마법사를 통해 **설치 선택 확인** 페이지로 이동한 후 **구성 설정 내보내기** 를 클릭 하 여이 구성 파일을 만들 수 있습니다. 구성 파일을 원하는 위치에 저장합니다. 마법사를 구성 파일을 만드는 데에만 실행할 경우에는 **설치** 를 클릭하거나 마법사를 완료할 필요가 없습니다.  
   
 2.  다음 중 하나를 수행하여 관리자 권한으로 Windows PowerShell 세션을 엽니다.  
   
@@ -292,7 +292,7 @@ Windows PowerShell 용 서버 관리자 배포 cmdlet은 GUI 기반 역할 및 �
   
         **-WindowsFeatureBatchDeployment-computerNames $ServerNames-ConfigurationFilepath C:\Users\Sampleuser\Desktop\DeploymentConfigTemplate.xml**  
   
-5.  설치가 완료 되 면 열어 설치를 확인는 **모든 서버** 서버 관리자에서 역할 및 기능을 설치 된 서버를 선택 하 고 보는 페이지는 **역할 및 기능** 선택한 서버에 대 한 페이지에 바둑판식으로 배열입니다. 특정 서버를 대상으로 하는 `Get-WindowsFeature` cmdlet (`Get-WindowsFeature -computerName` @ no__t*computer_name*>)을 실행 하 여 서버에 설치 된 역할 및 기능 목록을 볼 수도 있습니다.  
+5.  설치가 완료 되 면 열어 설치를 확인는 **모든 서버** 서버 관리자에서 역할 및 기능을 설치 된 서버를 선택 하 고 보는 페이지는 **역할 및 기능** 선택한 서버에 대 한 페이지에 바둑판식으로 배열입니다. 특정 서버를 대상으로 하는 `Get-WindowsFeature` cmdlet (`Get-WindowsFeature -computerName` <*computer_name*>)을 실행 하 여 서버에 설치 된 역할 및 기능 목록을 볼 수도 있습니다.  
   
 ## <a name="install-net-framework-35-and-other-features-on-demand"></a>필요시 .NET Framework 3.5 및 기타 기능 설치  
 Windows Server 2012 및 Windows 8부터 .NET Framework 3.5 (.NET Framework 2.0 및 .NET Framework 3.0 포함)의 기능 파일을 로컬 컴퓨터에서 기본적으로 사용할 수 없습니다. 파일이 제거되었습니다. 주문형 기능 구성에서 제거된 기능의 파일과 .NET Framework 3.5의 기능 파일은 Windows 업데이트를 통해 제공됩니다. 기본적으로 기능 파일을 Windows Server 2012 또는 이후 릴리스를 실행 하는 대상 서버에서 사용할 수 없는 경우 설치 프로세스 검색 누락 된 파일에 대 한 Windows Update에 연결 하 여 합니다. 역할 및 기능 추가 마법사 GUI 또는 명령줄을 사용 하 여 설치 하는 경우 설치 중에 그룹 정책 설정을 구성 하거나 대체 원본 경로를 지정 하 여 기본 동작을 재정의할 수 있습니다.  
@@ -312,7 +312,7 @@ Windows Server 2012 및 Windows 8부터 .NET Framework 3.5 (.NET Framework 2.0 �
 >   
 > 작업 그룹에 속한 서버에서는 외부 공유에 대한 **읽기** 권한이 작업 그룹 서버의 컴퓨터 계정에 있더라도 외부 파일 공유에 액세스할 수 없습니다. 작업 그룹 서버에 사용되는 대체 원본 위치에는 로컬 작업 그룹 서버에 저장된 설치 미디어, Windows 업데이트 및 VHD 또는 WIM 파일이 포함됩니다.  
 >   
-> 실행 중인 실제 서버에서 역할, 역할 서비스 및 기능을 설치할 때 WIM 파일을 대체 기능 파일 원본으로 지정할 수 있습니다. WIM 파일의 원본 경로는 다음과 같은 형식 이어야 합니다. **wim** 은 접두사로, 기능 파일은 접미사로 있는 인덱스입니다. **Wim: e: \source\install\install.wim: 4**. 그러나 사용할 수 없습니다 WIM 파일을 원본으로 직접; 오프 라인 VHD에 역할, 역할 서비스 및 기능 설치 해야 하거나 오프 라인 VHD를 탑재 하 고 소스 파일의 탑재 경로 또는 WIM 파일의 내용의 복사본을 포함 하는 폴더를 가리켜야 합니다.  
+> 실행 중인 실제 서버에서 역할, 역할 서비스 및 기능을 설치할 때 WIM 파일을 대체 기능 파일 원본으로 지정할 수 있습니다. WIM 파일의 원본 경로는 접두사로 **WIM**을 사용하고 접미사로 기능 파일이 있는 인덱스를 사용하여 **WIM:e:\sources\install.wim:4** 형식이어야 합니다. 그러나 사용할 수 없습니다 WIM 파일을 원본으로 직접; 오프 라인 VHD에 역할, 역할 서비스 및 기능 설치 해야 하거나 오프 라인 VHD를 탑재 하 고 소스 파일의 탑재 경로 또는 WIM 파일의 내용의 복사본을 포함 하는 폴더를 가리켜야 합니다.  
   
 ### <a name="to-install-net-framework-35-by-running-the-install-windowsfeature-cmdlet"></a>Install-WindowsFeature cmdlet을 실행해 .NET Framework 3.5를 설치하려면  
   
@@ -349,11 +349,11 @@ Windows Server 2012 및 Windows 8부터 .NET Framework 3.5 (.NET Framework 2.0 �
   
 5. 설치 미디어의 side-by-side 저장소( **SxS**라고 함) 또는 WIM 파일의 경로를 제공합니다. 다음 예에서 설치 미디어는 D 드라이브에 있습니다.  
   
-   **D:\Sources\SxS @ no__t-1**  
+   **D:\Sources\SxS\\**  
   
    WIM 파일을 지정하려면 다음 예에 나와 있는 바와 같이 **WIM:** 접두사를 추가하고 WIM 파일에 사용할 이미지의 인덱스를 접미사로 추가합니다.  
   
-   **WIM: \\ @ no__t-2** **\share\install.wim: 3**  
+   **WIM:\\\\** <em>server_name</em> **\share\install.wim: 3**  
   
 6. **확인**을 클릭한 다음 **설치**를 클릭합니다.  
   
@@ -388,7 +388,7 @@ Windows Server 2012 및 Windows 8부터 .NET Framework 3.5 (.NET Framework 2.0 �
     > DISM 명령은 대/소문자를 구분합니다.  
   
 ### <a name="configure-alternate-sources-for-feature-files-in-group-policy"></a>그룹 정책에 기능 파일의 대체 원본 구성  
-이 섹션에 설명된 그룹 정책 설정에서는 .NET Framework 3.5 파일 및 주문형 기능 구성의 일부로 제거된 기타 기능 파일에 대해 위임된 원본 위치를 지정합니다. **선택적 구성 요소 설치 및 구성 요소 복구를 위한 설정 지정** 정책 설정은 그룹 정책 관리 콘솔 또는 로컬 그룹 정책의 **computer 템플릿 \ 시스템** 폴더에 있습니다. 편집.  
+이 섹션에 설명된 그룹 정책 설정에서는 .NET Framework 3.5 파일 및 주문형 기능 구성의 일부로 제거된 기타 기능 파일에 대해 위임된 원본 위치를 지정합니다. **선택적 구성 요소 설치 및 구성 요소 복구를 위한 설정 지정** 정책 설정은 그룹 정책 관리 콘솔 또는 로컬 그룹 정책 편집기의 **컴퓨터 구성 \ 템플릿 \ 시스템** 폴더에 있습니다.  
   
 > [!NOTE]  
 > 로컬 컴퓨터의 그룹 정책 설정을 변경하려면 Administrators 그룹의 구성원이어야 합니다. 관리하려는 컴퓨터의 그룹 정책 설정이 도메인 수준에서 제어되는 경우 Domain Administrators 그룹의 구성원이어야 그룹 정책 설정을 변경할 수 있습니다.  
@@ -403,9 +403,9 @@ Windows Server 2012 및 Windows 8부터 .NET Framework 3.5 (.NET Framework 2.0 �
   
 3. **옵션** 영역의 **대체 원본 파일 경로** 텍스트 상자에 공유 폴더 또는 WIM 파일의 정규화된 경로를 지정합니다. WIM 파일을 대체 원본 파일 위치로 지정하려면 **WIM:** 접두사를 경로에 추가하고 WIM 파일에 사용할 이미지의 인덱스를 접미사로 추가합니다. 다음 예에 나온 값을 지정할 수 있습니다.  
   
-   - 공유 폴더의 경로: **\\ @ no__t-2** **no__t-5**<em>folder_name</em>  
+   - 공유 폴더 경로: **\\\\** <em>server_name</em> **\share\\** <em>folder_name</em>  
   
-   - WIM 파일의 경로 이며, **3** 은 기능 파일이 있는 이미지의 인덱스를 나타냅니다.  **WIM: \\ @ no__t-2** **\share\install.wim: 3**  
+   - WIM 파일의 경로 이며, **3** 은 기능 파일이 있는 이미지의 인덱스를 나타냅니다. **wim:\\\\** <em>server_name</em> **\share\install.wim: 3**  
   
 4. 이 정책 설정에 따라 제어 되는 컴퓨터가 Windows 업데이트에서 누락 된 기능 파일을 검색 하지 않도록 하려면 **Windows 업데이트에서 페이로드를 다운로드 하지 않음**을 선택 합니다.  
   
@@ -413,7 +413,7 @@ Windows Server 2012 및 Windows 8부터 .NET Framework 3.5 (.NET Framework 2.0 �
   
 6. 이 정책 설정을 변경하면 **확인**을 클릭한 다음 그룹 정책 편집기를 닫습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [Windows Server 설치 옵션](https://go.microsoft.com/fwlink/p/?LinkId=241573)  
 [Microsoft .NET Framework 3.5 배포 고려 사항](https://go.microsoft.com/fwlink/p/?LinkId=248869)  
 [Windows 기능을 사용 하거나 사용 하지 않도록 설정 하는 방법](https://go.microsoft.com/fwlink/p/?LinkId=246552)  

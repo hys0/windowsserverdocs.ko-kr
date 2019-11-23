@@ -32,12 +32,12 @@ AD FS forms 로그인은 현재 Azure/O365 로그인 환경을 반영 하지 않
 
 ### <a name="to-enable-the-new-azure-ad-ux-web-theme-in-ad-fs"></a>AD FS에서 새 Azure AD UX 웹 테마를 사용 하도록 설정 하려면
 1. 관리자 권한으로 PowerShell 시작
-2. PowerShell을 사용 하 여 새 웹 테마를 만듭니다.`New-AdfsWebTheme –Name custom –StyleSheet @{path="c:\NewTheme.css"}`
-3. PowerShell을 사용 하 여 새 테마를 활성 테마로 설정 합니다.  `Set-AdfsWebConfig -ActiveThemeName custom`
-   ![슬래시](media/Azure-UX-Web-Theme-in-AD-FS/two.png)
-4. Https://<AD FS name.domain>/adfs/ls/idpinitiatedsignon.htm ![sign-on으로 이동 하 여 로그인 테스트](media/Azure-UX-Web-Theme-in-AD-FS/three.png)
+2. PowerShell을 사용 하 여 새 웹 테마 만들기: `New-AdfsWebTheme –Name custom –StyleSheet @{path="c:\NewTheme.css"}`
+3. Powershell: `Set-AdfsWebConfig -ActiveThemeName custom`
+   ![PowerShell을 사용 하 여 새 테마를 활성 테마로 설정](media/Azure-UX-Web-Theme-in-AD-FS/two.png)
+4. Https://<AD FS name.domain>/adfs/ls/idpinitiatedsignon.htm ![Sign-on으로 이동 하 여 로그인을 테스트](media/Azure-UX-Web-Theme-in-AD-FS/three.png)
 
-> ! 두고 Idpinitiatedsignon.aspx가 사용 하도록 설정 되었는지 확인 해야 합니다.  기본적으로 사용 하도록 설정 되어 있지 않습니다.  Idpinitiatedsignon.aspx를 사용 하도록 설정 하려면 다음 PowerShell 명령을 사용 합니다.`Set-AdfsProperties –EnableIdpInitiatedSignonPage $True`
+> ! 두고 Idpinitiatedsignon.aspx가 사용 하도록 설정 되었는지 확인 해야 합니다.  기본적으로 사용 하도록 설정 되어 있지 않습니다.  Idpinitiatedsignon.aspx를 사용 하도록 설정 하려면 다음 PowerShell 명령을 사용 합니다. `Set-AdfsProperties –EnableIdpInitiatedSignonPage $True`
 
 ## <a name="image-recommendations"></a>이미지 권장 사항
 가운데 표시 된 UI를 사용 하도록 설정 하면 동일한 이미지를 배경 및 로고에 사용할 수 있습니다 .이 이미지는 이미 회사 브랜딩을 Azure Active Directory 수 있습니다. 일반적으로 크기, 비율 및 형식에 대 한 동일한 권장 사항이 적용 됩니다.
@@ -52,7 +52,7 @@ AD FS forms 로그인은 현재 Azure/O365 로그인 환경을 반영 하지 않
 
 설명 | 제약 조건 | 권장 사항
 ------- | ------- | ----------
-이 옵션은 로그인 페이지의 배경에 표시 되며 볼 수 있는 공간의 가운데에 고정 되 고 브라우저 창에 맞도록 크기 조정 하 고 자릅니다.    <br>휴대폰과 같은 좁은 화면에서이 이미지는 표시 되지 않습니다.<br>페이지가 로드 될 때이 이미지에 0.55 불투명도가 적용 된 검은색 마스크가 적용 됩니다. | JPG 또는 PNG<br>이미지 크기: 1920 x 1080 px<br>파일 크기: &lt;300 KB | <br>강력한 주제 포커스가 없는 이미지를 사용 합니다. 불투명 로그인 양식이이 이미지의 가운데 위에 나타나고 브라우저 창의 크기에 따라 이미지의 모든 부분을 처리할 수 있습니다.<br>빠른 로드 시간을 보장 하려면 파일 크기를 작게 유지 합니다.
+이 옵션은 로그인 페이지의 배경에 표시 되며 볼 수 있는 공간의 가운데에 고정 되 고 브라우저 창에 맞도록 크기 조정 하 고 자릅니다.    <br>휴대폰과 같은 좁은 화면에서이 이미지는 표시 되지 않습니다.<br>페이지가 로드 될 때이 이미지에 0.55 불투명도가 적용 된 검은색 마스크가 적용 됩니다. | JPG 또는 PNG<br>이미지 크기: 1920 x 1080 px<br>파일 크기: &lt; 300 | <br>강력한 주제 포커스가 없는 이미지를 사용 합니다. 불투명 로그인 양식이이 이미지의 가운데 위에 나타나고 브라우저 창의 크기에 따라 이미지의 모든 부분을 처리할 수 있습니다.<br>빠른 로드 시간을 보장 하려면 파일 크기를 작게 유지 합니다.
 
 ## <a name="next-steps"></a>다음 단계
 - [Windows Server 2016에서 사용자 지정 AD FS](AD-FS-Customization-in-Windows-Server-2016.md)

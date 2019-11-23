@@ -39,11 +39,11 @@ ms.locfileid: "71393794"
 
 ![Redmond 사이트의 클러스터와 Bellevue 사이트의 클러스터가 복제되는 예제 환경을 보여 주는 다이어그램](./media/Cluster-to-Cluster-Storage-Replication/SR_ClustertoCluster.png)  
 
-** 그림 1: 클러스터에서 클러스터로 복제 @ no__t-0  
+**그림 1: 클러스터 간 복제**  
 
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
 
-* Active Directory 도메인 서비스 포리스트(Windows Server 2016을 실행하지 않아도 됨).  
+* Active Directory 도메인 서비스 포리스트(Windows Server 2016을 실행하지 않아도 됨)  
 * 4-128 서버 (2-64 서버의 두 클러스터) Windows Server 2019 또는 Windows Server 2016, Datacenter Edition을 실행 합니다. Windows Server 2019를 실행 하는 경우 최대 2tb 크기의 단일 볼륨만 복제 하는 경우 Standard Edition을 대신 사용할 수 있습니다.  
 * SAS JBOD, 파이버 채널 SAN, 공유 VHDX, 저장소 공간 다이렉트 또는 iSCSI 대상을 사용하는 저장소 집합 2개. 저장소에는 HDD 및 SSD 미디어가 혼합되어 있어야 합니다. 각 저장소 집합은 각 클러스터에만 사용할 수 있으며 클러스터 간의 공유 액세스는 없습니다.  
 * 각 저장소 집합에서 복제된 데이터용과 로그용으로 둘 이상의 가상 디스크를 만들 수 있어야 합니다. 실제 저장소의 섹터 크기는 모든 데이터 디스크의 섹터 크기와 동일해야 합니다. 실제 저장소의 섹터 크기는 모든 로그 디스크의 섹터 크기와 동일해야 합니다.  
@@ -109,7 +109,7 @@ ms.locfileid: "71393794"
     > -   로그 볼륨은 기본적으로 8GB 이상 이어야 하며, 로그 요구 사항에 따라 더 크거나 작을 수 있습니다.
     > -   NVME 또는 SSD 캐시에 스토리지 공간 다이렉트 (스토리지 공간 다이렉트)를 사용 하는 경우 스토리지 공간 다이렉트 클러스터 간에 저장소 복제본 복제를 구성 하는 동안 예상 되는 대기 시간이 증가 하는 것을 볼 수 있습니다. 대기 시간의 변화는 성능 + 용량 구성에서 NVME 및 SSD를 사용 하 고 HDD 계층 또는 용량 계층은 사용 하지 않는 것 보다 훨씬 더 높습니다.
 
-    이 문제는 느린 미디어와 비교 했을 때 sr-iov의 대기 시간이 매우 짧은 상태에서 sr-iov 로그 메커니즘의 아키텍처 제한으로 인해 발생 합니다. 스토리지 공간 다이렉트 스토리지 공간 다이렉트 cache를 사용 하는 경우 응용 프로그램의 모든 최근 읽기/쓰기 IO와 함께 SR 로그의 모든 IO가 캐시에서 발생 하 고 성능 또는 용량 계층에는 사용 되지 않습니다. 즉, 모든 SR 활동이 동일한 속도 미디어에서 발생 합니다 .이 구성은 권장 되지 않습니다 (로그 권장 사항은 https://aka.ms/srfaq 참조). 
+    이 문제는 느린 미디어와 비교 했을 때 sr-iov의 대기 시간이 매우 짧은 상태에서 sr-iov 로그 메커니즘의 아키텍처 제한으로 인해 발생 합니다. 스토리지 공간 다이렉트 스토리지 공간 다이렉트 cache를 사용 하는 경우 응용 프로그램의 모든 최근 읽기/쓰기 IO와 함께 SR 로그의 모든 IO가 캐시에서 발생 하 고 성능 또는 용량 계층에는 사용 되지 않습니다. 즉, 모든 SR 활동이 동일한 속도 미디어에서 발생 합니다 .이 구성은 권장 되지 않습니다 (로그 권장 사항에 대 한 https://aka.ms/srfaq 참조). 
 
     Hdd와 함께 스토리지 공간 다이렉트를 사용 하는 경우 캐시를 사용 하지 않도록 설정 하거나 방지할 수 없습니다. 해결 방법으로, SSD 및 NVME만 사용 하는 경우 성능 및 용량 계층만 구성할 수 있습니다. 해당 구성을 사용 하는 경우 성능 계층에 SR 로그를 서비스를 수행 하는 데이터 볼륨만 용량 계층에 배치 하면 위에서 설명한 대기 시간이 긴 문제를 피할 수 있습니다. 더 빠르고 느린 Ssd와 NVME를 혼합 하 여 동일한 작업을 수행할 수 있습니다.
 
@@ -119,7 +119,7 @@ ms.locfileid: "71393794"
 
 1. 각 클러스터에서 해당 사이트의 저장소 엔클로저만 볼 수 있는지, 그리고 SAS 연결이 제대로 구성되어 있는지 확인합니다.  
 
-2. Windows PowerShell 또는 서버 관리자를 [사용하여 독립 실행형 서버에서 저장소 공간 배포에](../storage-spaces/deploy-standalone-storage-spaces.md) 제공된 **1~3단계에** 따라 저장소 공간을 사용하는 저장소를 프로비전합니다.  
+2. Windows PowerShell 또는 서버 관리자를 **사용하여 독립 실행형 서버에서 저장소 공간 배포에** 제공된 [1~3단계에](../storage-spaces/deploy-standalone-storage-spaces.md) 따라 저장소 공간을 사용하는 저장소를 프로비전합니다.  
 
 -   **ISCSI 대상 저장소의 경우:**  
 
@@ -209,7 +209,7 @@ ms.locfileid: "71393794"
 
 4.  [스케일 아웃 파일 서버 구성](https://technet.microsoft.com/library/hh831718.aspx)의 지침을 사용하여 두 클러스터 모두에서 클러스터된 스케일 아웃 파일 서버를 만듭니다.  
 
-## <a name="step-3-set-up-cluster-to-cluster-replication-using-windows-powershell"></a>3단계: Windows PowerShell을 사용 하 여 클러스터에서 클러스터로 복제 설정  
+## <a name="step-3-set-up-cluster-to-cluster-replication-using-windows-powershell"></a>3단계: Windows PowerShell을 사용하여 클러스터 간 복제 설정  
 이제 Windows PowerShell을 사용하여 클러스터 간 복제를 설정합니다. 아래의 모든 단계를 노드에서 직접 수행 하거나 Windows Server가 포함 된 원격 관리 컴퓨터에서 수행할 수 있습니다 원격 서버 관리 도구  
 
 1. 첫 번째 클러스터의 모든 노드에서 또는 원격으로 **grant-sraccess** cmdlet을 실행 하 여 첫 번째 클러스터에 다른 클러스터에 대 한 모든 권한을 부여 합니다.  Windows Server 원격 서버 관리 도구
@@ -248,7 +248,7 @@ ms.locfileid: "71393794"
        ```PowerShell
        Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica -max 20
        ```
-   2.  대상 서버에서 다음 명령을 실행하여 파트너 관계 생성을 표시하는 저장소 복제본 이벤트를 확인합니다. 이 이벤트는 복사한 바이트 수와 걸린 시간을 알려 줍니다. 예:  
+   2.  대상 서버에서 다음 명령을 실행하여 파트너 관계 생성을 표시하는 저장소 복제본 이벤트를 확인합니다. 이 이벤트는 복사한 바이트 수와 걸린 시간을 알려 줍니다. 예제:  
         
        ```powershell
        Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica | Where-Object {$_.ID -eq "1215"} | Format-List
@@ -387,11 +387,11 @@ ms.locfileid: "71393794"
     > [!NOTE]  
     > 저장소 복제본이 대상 볼륨을 분리합니다. 이것은 의도적입니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 -   [저장소 복제본 개요](storage-replica-overview.md) 
 -   [공유 저장소를 사용 하 여 확장 클러스터 복제](stretch-cluster-replication-using-shared-storage.md)  
 -   [서버 간 저장소 복제](server-to-server-storage-replication.md)  
--   [스토리지 복제본: 알려진 문제](storage-replica-known-issues.md)  
--   [스토리지 복제본: 질문과 대답](storage-replica-frequently-asked-questions.md)  
+-   [저장소 복제본: 알려진 문제](storage-replica-known-issues.md)  
+-   [저장소 복제본: 질문과 대답](storage-replica-frequently-asked-questions.md)  
 -   [Windows Server 2016의 스토리지 공간 다이렉트](../storage-spaces/storage-spaces-direct-overview.md)  

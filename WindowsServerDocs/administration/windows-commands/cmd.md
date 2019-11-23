@@ -41,17 +41,17 @@ cmd [/c|/k] [/s] [/q] [/d] [/a|/u] [/t:{<B><F>|<F>}] [/e:{on|off}] [/f:{on|off}]
 |/d|자동 실행 명령의 실행을 사용 하지 않도록 설정 합니다.|
 |/ a|ANSI(American National Standards Institute) (ANSI)로 파이프 또는 파일에 대 한 내부 명령 출력의 서식을 지정 합니다.|
 |/u|파이프 또는 파일에 대 한 내부 명령 출력의 형식을 유니코드로 지정 합니다.|
-|/t: {\<B @ no__t @ no__t @ no__t-3 @ no__t-4 @ no__t-5F @ no__t-6}|배경 (*B*) 및 전경 (*F*) 색을 설정 합니다.|
+|/t: {\<B\>\<F\>\|\<F\>}|배경 (*B*) 및 전경 (*F*) 색을 설정 합니다.|
 |/e: on|명령 확장을 사용 하도록 설정 합니다.|
 |/e: off|명령 확장을 사용 하지 않습니다.|
 |/f: 설정|파일 및 디렉터리 이름 완성을 사용 하도록 설정 합니다.|
 |/f: off|파일 및 디렉터리 이름 완성을 사용 하지 않습니다.|
 |/v: 켜기|지연 된 환경 변수 확장을 사용 하도록 설정 합니다.|
 |/v: off|지연 된 환경 변수 확장을 사용 하지 않습니다.|
-|\< 문자열 >|수행 하려는 명령을 지정 합니다.|
+|\<문자열 >|수행 하려는 명령을 지정 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-다음 표에는 \<B @ no__t-1 및 \<F @ no__t-3에 대 한 값으로 사용할 수 있는 유효한 16 진수가 나와 있습니다.
+다음 표에서는 \<B\> 및 \<F의 값으로 사용할 수 있는 유효한 16 진수를 보여 줍니다\>
 
 |값|색|
 |-----|-----|
@@ -59,7 +59,7 @@ cmd [/c|/k] [/s] [/q] [/d] [/a|/u] [/t:{<B><F>|<F>}] [/e:{on|off}] [/f:{on|off}]
 |1|파랑|
 |2|녹색|
 |3|Aqua|
-|4|빨강|
+|추가를 클릭합니다.|빨강|
 |5|자주색|
 |6|노랑|
 |7|하얀|
@@ -76,7 +76,7 @@ cmd [/c|/k] [/s] [/q] [/d] [/a|/u] [/t:{<B><F>|<F>}] [/e:{on|off}] [/f:{on|off}]
 
 -   여러 명령 사용
 
-    @No__t-0String >에 대해 여러 명령을 사용 하려면 **-2 @no__t** 명령 구분 기호를 사용 하 여 구분 하 고 따옴표로 묶습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+    문자열 > \<대 한 여러 명령을 사용 하려면 명령 구분 기호 **&&** 를 사용 하 여 구분 하 고 따옴표로 묶습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
     ```
     "<Command>&&<Command>&&<Command>"
@@ -96,9 +96,9 @@ cmd [/c|/k] [/s] [/q] [/d] [/a|/u] [/t:{<B><F>|<F>}] [/e:{on|off}] [/f:{on|off}]
 
     *문자열*에 **/d** 를 지정 하지 않으면 cmd.exe는 다음 레지스트리 하위 키를 찾습니다.
 
-    **HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\AutoRun\REG_SZ**
+    **HKEY_LOCAL_MACHINE \Software\Microsoft\Command Processor\AutoRun\ REG_SZ**
 
-    **HKEY_CURRENT_USER\Software\Microsoft\Command Processor\AutoRun\REG_EXPAND_SZ**
+    **HKEY_CURRENT_USER \Software\Microsoft\Command Processor\AutoRun\ REG_EXPAND_SZ**
 
     하나 또는 두 레지스트리 하위 키가 있는 경우 다른 모든 변수 보다 먼저 실행 됩니다.
 
@@ -109,9 +109,9 @@ cmd [/c|/k] [/s] [/q] [/d] [/a|/u] [/t:{<B><F>|<F>}] [/e:{on|off}] [/f:{on|off}]
 
     Windows XP에서 명령 확장은 기본적으로 사용 하도록 설정 되어 있습니다. **/E: off**를 사용 하 여 특정 프로세스에 대해 사용 하지 않도록 설정할 수 있습니다. 다음 **REG_DWORD** 값을 설정 하 여 컴퓨터 또는 사용자 세션에서 모든 **cmd** 명령줄 옵션에 대 한 확장을 사용 하거나 사용 하지 않도록 설정할 수 있습니다.
 
-    **HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\EnableExtensions\REG_DWORD**
+    **HKEY_LOCAL_MACHINE \Software\Microsoft\Command Processor\EnableExtensions\ REG_DWORD**
 
-    **HKEY_CURRENT_USER\Software\Microsoft\Command Processor\EnableExtensions\REG_DWORD**
+    **HKEY_CURRENT_USER \Software\Microsoft\Command Processor\EnableExtensions\ REG_DWORD**
 
     Regedit.exe를 사용 하 여 레지스트리에서 **REG_DWORD** 값을 **0 × 1** (사용) 또는 **0 x 0** (사용 안 함)으로 설정 합니다. 사용자 지정 설정이 컴퓨터 설정 보다 우선 하며 명령줄 옵션 레지스트리 설정 보다 우선 합니다.
 
@@ -143,17 +143,17 @@ cmd [/c|/k] [/s] [/q] [/d] [/a|/u] [/t:{<B><F>|<F>}] [/e:{on|off}] [/f:{on|off}]
     지연 된 환경 변수 확장을 사용 하도록 설정 하면 런타임에 느낌표 문자를 사용 하 여 환경 변수 값을 대체할 수 있습니다.
 -   파일 및 디렉터리 이름 완성 사용
 
-    파일 및 디렉터리 이름 완성은 기본적으로 사용 되지 않습니다. **/F:** {**on**|**off**}를 사용 하 여 **cmd** 명령의 특정 프로세스에 대해 파일 이름 완성을 사용 하거나 사용 하지 않도록 설정할 수 있습니다. 다음 **REG_DWORD** 값을 설정 하 여 컴퓨터 또는 사용자 로그온 세션의 모든 **cmd** 명령 프로세스에 대해 파일 및 디렉터리 이름 완성을 사용 하거나 사용 하지 않도록 설정할 수 있습니다.
+    파일 및 디렉터리 이름 완성은 기본적으로 사용 되지 않습니다. **/F:** {**on**|**off**}를 사용 하 여 **cmd** 명령의 특정 프로세스에 대해 파일 이름 완성을 사용 하거나 사용 하지 않도록 설정할 수 있습니다. 다음 **REG_DWORD** 값을 설정 하 여 컴퓨터의 **cmd** 명령 또는 사용자 로그온 세션의 모든 프로세스에 대해 파일 및 디렉터리 이름 완성을 사용 하거나 사용 하지 않도록 설정할 수 있습니다.
 
-    **HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\CompletionChar\REG_DWORD**
+    **HKEY_LOCAL_MACHINE \Software\Microsoft\Command Processor\CompletionChar\ REG_DWORD**
 
-    **HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\PathCompletionChar\REG_DWORD**
+    **HKEY_LOCAL_MACHINE \Software\Microsoft\Command Processor\PathCompletionChar\ REG_DWORD**
 
-    **HKEY_CURRENT_USER\Software\Microsoft\Command Processor\CompletionChar\REG_DWORD**
+    **HKEY_CURRENT_USER \Software\Microsoft\Command Processor\CompletionChar\ REG_DWORD**
 
-    **HKEY_CURRENT_USER\Software\Microsoft\Command Processor\PathCompletionChar\REG_DWORD**
+    **HKEY_CURRENT_USER \Software\Microsoft\Command Processor\PathCompletionChar\ REG_DWORD**
 
-    **REG_DWORD** 값을 설정 하려면 regedit.exe를 실행 하 고 특정 함수에 대 한 제어 문자의 16 진수 값을 사용 합니다. 예를 들어 **0 × 9** 는 TAB이 고 **0 x 08** 은 백스페이스입니다. 사용자 지정 설정이 컴퓨터 설정 보다 우선 하며 명령줄 옵션 레지스트리 설정 보다 우선 합니다.
+    **REG_DWORD** 값을 설정 하려면 regedit.exe를 실행 하 고 특정 함수에 대 한 제어 문자의 16 진수 값을 사용 합니다. 예를 들어 **0 x 9** 는 TAB이 고 **0 x 08** 은 백스페이스입니다. 사용자 지정 설정이 컴퓨터 설정 보다 우선 하며 명령줄 옵션 레지스트리 설정 보다 우선 합니다.
 
 > [!CAUTION]
 > 레지스트리를 잘못 편집하면 시스템에 심각한 손상을 줄 수 있습니다. 따라서 레지스트리를 변경하기 전에 컴퓨터의 중요한 데이터를 백업해 두어야 합니다.

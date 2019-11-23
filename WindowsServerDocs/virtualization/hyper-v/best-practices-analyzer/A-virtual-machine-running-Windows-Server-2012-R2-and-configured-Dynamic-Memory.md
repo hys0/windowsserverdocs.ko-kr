@@ -19,11 +19,11 @@ ms.locfileid: "71366614"
 ---
 # <a name="a-virtual-machine-running-windows-server-2012-r2-and-configured-with-dynamic-memory-should-use-recommended-values-for-memory-settings"></a>Windows Server 2012 r 2를 실행 하 고 동적 메모리를 사용 하 여 구성 하는 가상 컴퓨터 메모리 설정에 대 한 권장된 값을 사용 해야
 
->적용 대상: Windows Server 2016
+>적용 대상: Windows Server 2016
 
 모범 사례 분석기 및 검사에 대한 자세한 내용은 [모범 사례 분석기 검사 실행 및 검사 결과 관리](https://go.microsoft.com/fwlink/p/?LinkID=223177)를 참조하세요.  
   
-|속성|설명|  
+|속성|세부 정보|  
 |-|-|  
 |**운영 체제**|Windows Server 2016|  
 |**제품/기능**|Hyper-V|  
@@ -38,7 +38,7 @@ ms.locfileid: "71366614"
 ## <a name="impact"></a>영향  
 *다음 가상 컴퓨터의 게스트 운영 체제가 실행 되지 않거나 불안정을 실행할 수 있습니다.*  
   
-@no__t-가상 머신 목록 >  
+가상 컴퓨터 \<목록 >  
   
 ## <a name="resolution"></a>해결 방법  
 *Hyper-v 관리자를 사용 하 여 최소 메모리를 256 MB 이상, 시작 메모리를 최소 512 MB 이상,이 가상 컴퓨터의 최대 메모리를 2gb 이상으로 늘립니다.*  

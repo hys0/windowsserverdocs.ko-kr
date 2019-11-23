@@ -40,7 +40,7 @@ bitsadmin /ReplaceRemotePrefix <Job> <OldPrefix> <NewPrefix
 
 ## <a name="examples"></a>예
 
-다음 예에서는 원격 URL이- *2 http://stageserver* *@no__t*로 시작 하는 *mydownloadjob* 이라는 작업의 모든 파일을 변경 합니다.
+다음 예에서는 원격 URL이로 시작 하는 *Mydownloadjob* 이라는 작업의 모든 파일을 *http://prodserver* *http://stageserver* 변경 합니다.
 
 ```
 C:\>bitsadmin /ReplaceRemotePrefix myDownloadJob http://stageserver http://prodserver

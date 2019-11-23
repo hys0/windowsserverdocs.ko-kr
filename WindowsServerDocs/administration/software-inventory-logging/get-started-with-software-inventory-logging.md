@@ -44,7 +44,7 @@ Windows Server의 소프트웨어 인벤토리 로깅은 서버 관리자가 서
 
 -   각 서버의 소프트웨어 인벤토리 로깅 기능을 사용 하도록 설정 하 고 웹 서버 대상 URI 및 인증을 위한 인증서 지문을 선택 하 여 광범위 한 소프트웨어 자산 관리 시나리오에 대 한 소프트웨어 및 서버 인벤토리 정보를 집계 합니다.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 [소프트웨어 인벤토리 로깅 집계](https://technet.microsoft.com/library/mt572043.aspx)<br>
 [소프트웨어 인벤토리 로깅 관리](manage-software-inventory-logging.md)<br>
 [Windows PowerShell의 소프트웨어 인벤토리 로깅 Cmdlet](https://technet.microsoft.com/library/dn283390.aspx)<br>

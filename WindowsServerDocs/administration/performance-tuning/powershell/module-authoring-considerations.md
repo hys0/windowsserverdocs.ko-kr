@@ -28,10 +28,10 @@ ms.locfileid: "71370363"
 
 ### <a name="guidelines"></a>지침
 
-* 모듈 매니페스트에서 `AliasesToExport`, `CmdletsToExport` 및 `FunctionsToExport` 항목에서 와일드 카드를 사용 하지 않습니다.
+* 모듈 매니페스트에서 `AliasesToExport`, `CmdletsToExport`및 `FunctionsToExport` 항목에 와일드 카드를 사용 하지 않습니다.
 
-* 모듈이 특정 형식의 명령을 내보내지 않는 경우 `@()`을 지정 하 여 매니페스트에 명시적으로 지정 합니다.
-누락 또는 @no__t 0 항목은 와일드 카드 `*`을 지정 하는 것과 같습니다.
+* 모듈이 특정 형식의 명령을 내보내지 않는 경우 `@()`를 지정 하 여 매니페스트에 명시적으로 지정 합니다.
+누락 되거나 `$null` 항목은 와일드 카드 `*`지정 하는 것과 같습니다.
 
 가능한 경우 다음을 피해 야 합니다.
 

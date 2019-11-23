@@ -16,7 +16,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71369207"
 ---
-# <a name="appendix-i-creating-management-accounts-for-protected-accounts-and-groups-in-active-directory"></a>부록 I: Active Directory의 보호 된 계정 및 그룹에 대 한 계정 관리
+# <a name="appendix-i-creating-management-accounts-for-protected-accounts-and-groups-in-active-directory"></a>부록 I: Active Directory의 보호된 계정 및 그룹에 대한 관리 계정 만들기
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -42,7 +42,7 @@ ms.locfileid: "71369207"
 철저 하 게 모든이 절차를 테스트 하 고 사용자 환경에 프로덕션 환경에서 구현 하기 전에 필요에 따라이 수정 해야 합니다. 모든 설정이 예상 대로 작동 하는지 확인 해야 (일부 테스트 절차는이 부록의 내용 제공), 하 고는 관리 계정을 사용할 수 없는 복구를 위해 보호 그룹을 채우는 데 사용할 재해 복구 시나리오를 테스트 해야 합니다. 백업 및 Active Directory를 복원 하는 방법에 대 한 자세한 내용은 참조는 [AD DS 백업 및 복구 단계별 가이드](https://technet.microsoft.com/library/cc771290(v=ws.10).aspx)합니다.  
   
 > [!NOTE]  
-> 이 부록에서 설명 하는 단계를 구현 하 여 EAs, DAs, BAs 등 가장 높은 권한 Active Directory 그룹 뿐만 아니라, 각 도메인의 모든 보호 된 그룹의 구성원을 관리할 수 있는 계정을 만듭니다. Active Directory의 보호 된 그룹에 대 한 자세한 내용은 [Appendix C: Active Directory @ no__t의 보호 된 계정 및 그룹-0.  
+> 이 부록에서 설명 하는 단계를 구현 하 여 EAs, DAs, BAs 등 가장 높은 권한 Active Directory 그룹 뿐만 아니라, 각 도메인의 모든 보호 된 그룹의 구성원을 관리할 수 있는 계정을 만듭니다. Active Directory의 보호 된 그룹에 대 한 자세한 내용은 참조 [부록 c: 보호 된 계정 및 Active Directory의 그룹](../../../ad-ds/plan/security-best-practices/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory.md)합니다.  
   
 ### <a name="step-by-step-instructions-for-creating-management-accounts-for-protected-groups"></a>보호 그룹에 대 한 관리 계정을 만들기 위한 단계별 지침  
   
@@ -60,7 +60,7 @@ ms.locfileid: "71369207"
   
     ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_116.png)  
   
-3.  방금 만든 그룹을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭하고 **개체** 탭을 클릭합니다. 그룹의 **개체 속성** 대화 상자에서 **실수로 삭제 되지 않도록에서 개체 보호**, 입니다만 공인한 그렇지 않으면 사용자가 그룹을 삭제 수 있지만 하지 않는 한 다른 OU로 이동 특성을 먼저 선택 해제 합니다.  
+3.  방금 만든 그룹을 마우스 오른쪽 단추로 클릭 하 고 **속성**을 클릭 한 다음 **개체** 탭을 클릭 합니다. 그룹의 **개체 속성** 대화 상자에서 **실수로 삭제 되지 않도록 개체 보호**를 선택 합니다. 이렇게 하면 권한 있는 사용자가 그룹을 삭제 하는 것을 방지할 뿐만 아니라 특성을 먼저 선택 취소 하지 않는 한 다른 OU로 이동 하는 것을 방지할 수 있습니다.  
   
     ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_117.png)  
   
@@ -71,7 +71,7 @@ ms.locfileid: "71369207"
   
     ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_118.png)  
   
-5.  이미 않았다면 등에 하는 경우는 **Active Directory 사용자 및 컴퓨터** 콘솔 **보기** 선택한 **고급 기능**합니다. 방금 만든 그룹을 마우스 오른쪽 단추로 클릭 합니다. **속성**, 를 클릭 하 고는 **보안** 탭 합니다. **보안** 탭에서 **고급**을 클릭합니다.  
+5.  이미 않았다면 등에 하는 경우는 **Active Directory 사용자 및 컴퓨터** 콘솔 **보기** 선택한 **고급 기능**합니다. 방금 만든 그룹을 마우스 오른쪽 단추로 클릭 하 고 **속성**을 클릭 한 다음 **보안** 탭을 클릭 합니다. **보안** 탭에서 **고급**을 클릭 합니다.  
   
     ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_119.png)  
   
@@ -140,7 +140,7 @@ Active Directory 설치의 권한 있는 그룹의 멤버 자격을 관리 하�
    ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_124.png)  
 
    > [!NOTE]  
-   > 다른 계정과 마찬가지로이 계정에는 제한 하지만 강력한 함수가 포함 되므로 계정은 보안 관리 호스트에만 사용 해야 합니다. 사용자 환경의 모든 보안 관리 호스트에 대해 그룹 정책 설정 **Network Security를 구현 하는 것을 고려해 야 합니다. 보안 호스트에 대해 구현할 수 있는 가장 안전한 암호화 유형만 허용 하도록 Kerberos @ no__t-0에 대해 허용 되는 암호화 유형 구성  
+   > 다른 계정과 마찬가지로이 계정에는 제한 하지만 강력한 함수가 포함 되므로 계정은 보안 관리 호스트에만 사용 해야 합니다. 모든 보안 관리에 있는 호스트의 사용자 환경에 대 한 구현을 고려해 그룹 정책 설정을 **네트워크 보안: Kerberos에 허용 되는 구성 암호화 종류** 가장 안전한 암호화 종류를 허용 하도록 보안 호스트에 구현할 수 있습니다.  
    >
    > 호스트에 대 한 보다 안전한 암호화 종류를 구현 하는 경우에 자격 증명 도난 공격 완화 되지 않습니다, 하지만 적절 한 사용 및 보안 호스트의 구성에서는 않습니다. 컴퓨터의 전반적인 공격 노출을 줄입니다만 권한 있는 계정에서 사용 되는 호스트에 대 한 더 강력한 암호화 유형을 설정 합니다.  
    >
@@ -233,7 +233,7 @@ Active Directory 설치의 권한 있는 그룹의 멤버 자격을 관리 하�
   
 대신 채우고 unpopulate 보호 된 그룹에 대 한 권한을 위임할 수 있는 그룹을 만들지만 보안 그룹 및 계정에 배치 해야 합니다. 보호 그룹의 구성원을 관리 하는 기능을 허용 하는 매우 적은 계정을 디렉터리에 있을 것 때문에 개별 계정을 만드는 가장 간단한 방법은 수 있습니다.  
   
-관리 계정의 넣을 있는 그룹을 만들려면 원하는 방법에 관계 없이 앞에서 설명한 대로 각 계정에 보안을 확인 해야 합니다. @No__t-0Appendix D에 설명 된 것과 유사한 GPO 제한도 구현 하는 것이 좋습니다. Active Directory @ no__t에서 기본 제공 관리자 계정 보안 설정-0.  
+관리 계정의 넣을 있는 그룹을 만들려면 원하는 방법에 관계 없이 앞에서 설명한 대로 각 계정에 보안을 확인 해야 합니다. GPO의 제한 사항에 설명 된 것과 유사한 구현도 고려해 야 [부록 d: 보안 기본 제공 관리자 계정에 Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)합니다.  
   
 ##### <a name="auditing-management-accounts"></a>감사 관리 계정
 
@@ -247,7 +247,7 @@ Active Directory 설치의 권한 있는 그룹의 멤버 자격을 관리 하�
 
 이 절차에서는 새로 만든된 관리 계정이 도메인의 보호 된 그룹의 멤버 자격을 수정할 수 있도록 도메인의 AdminSDHolder 개체에 사용 권한을 구성 합니다. 이 절차는 그래픽 사용자 인터페이스 (GUI)를 통해 수행할 수 없습니다.  
   
-@No__t-0Appendix C에 설명 된 대로: Active Directory @ no__t의 보호 된 계정 및 그룹 SDProp 작업이 실행 될 때 도메인의 AdminSDHolder 개체에 대 한 ACL은 보호 된 개체에 실제로 "복사" 됩니다. 보호 되는 그룹 및 계정에서에서 상속 하지 않는 사용 권한을 AdminSDHolder 개체입니다. AdminSDHolder 개체에 일치 하도록 해당 권한은 명시적으로 설정 합니다. 따라서 AdminSDHolder 개체에 대 한 권한을 수정 하면 대상으로 하는 보호 된 개체의 형식에 적절 한 특성에 대 한 수정할 해야 있습니다.  
+에 설명 된 대로 [부록 c: 보호 된 계정 및 Active Directory의 그룹](../../../ad-ds/plan/security-best-practices/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory.md), SDProp 작업이 실행 되 면 개체는 효과적으로 "복사" 하는 도메인의 AdminSDHolder에 대 한 ACL 개체를 보호 합니다. 보호 되는 그룹 및 계정에서에서 상속 하지 않는 사용 권한을 AdminSDHolder 개체입니다. AdminSDHolder 개체에 일치 하도록 해당 권한은 명시적으로 설정 합니다. 따라서 AdminSDHolder 개체에 대 한 권한을 수정 하면 대상으로 하는 보호 된 개체의 형식에 적절 한 특성에 대 한 수정할 해야 있습니다.  
   
 이 경우 있습니다 됩니다 수 부여에 새로 만든된 관리 계정을 읽기 위해 및 멤버 특성에 대 한 쓰기 그룹 개체를 허용 합니다. 그러나 AdminSDHolder 개체 그룹 개체 아니며 그룹 특성 그래픽 ACL 편집기에 표시 되지 않습니다. Dsacls 명령줄 유틸리티를 통해 사용 권한 변경 내용을 구현 하는 이러한 이유 때문입니다. (사용 안 함된) 관리 계정 권한 보호 되는 그룹의 구성원 자격 수정에 부여 하려면 다음 단계를 수행 합니다.  
   
@@ -278,7 +278,7 @@ Active Directory 설치의 권한 있는 그룹의 멤버 자격을 관리 하�
   
    - /G은 ACE 권한 부여 구성 되어 있는지 나타냅니다.  
   
-   - PIM001@tailspintoys.msft은 Ace가 부여 될 보안 주체의 UPN (사용자 계정 이름)입니다.  
+   - PIM001@tailspintoys.msft Ace가 부여 될 보안 주체의 UPN (사용자 계정 이름)입니다.  
   
    - RPWP 부여 속성 읽기 및 쓰기 권한을 속성  
   
@@ -286,7 +286,7 @@ Active Directory 설치의 권한 있는 그룹의 멤버 자격을 관리 하�
   
    사용에 대 한 자세한 내용은 **Dsacls**, 명령 프롬프트에서 매개 변수 없이 Dsacls를 입력 합니다.  
   
-   도메인 관리 계정을 여러 개를 만든 경우 각 계정에 대해 Dsacls 명령을 실행 해야 합니다. AdminSDHolder 개체에서 ACL 구성을 완료 했으면, 실행 또는 예약 된 실행이 완료 될 때까지 대기 하도록 SDProp를 강제로 수행 해야 합니다. 강제로 SDProp을 실행 하는 방법에 대 한 자세한 내용은 [Appendix C에서 "수동으로 SDProp 실행"을 참조 하세요. Active Directory @ no__t의 보호 된 계정 및 그룹-0.  
+   도메인 관리 계정을 여러 개를 만든 경우 각 계정에 대해 Dsacls 명령을 실행 해야 합니다. AdminSDHolder 개체에서 ACL 구성을 완료 했으면, 실행 또는 예약 된 실행이 완료 될 때까지 대기 하도록 SDProp를 강제로 수행 해야 합니다. 실행 하는 SDProp 강제 적용 하는 방법에 대 한 내용은 "실행 SDProp Manually"를 참조 [부록 c: 보호 된 계정 및 Active Directory의 그룹](../../../ad-ds/plan/security-best-practices/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory.md)합니다.  
   
    SDProp이 실행 될 때 도메인의 보호 된 그룹에는 AdminSDHolder 개체에 대 한 변경 내용이 적용 된 것을 확인할 수 있습니다. 앞에서 설명한 이유 때문에 AdminSDHolder 개체에 ACL을 확인 하 여이 확인할 수 없는 있지만 보호 된 그룹에 Acl을 확인 하 여 사용 권한이 적용 된 것을 확인할 수 있습니다.  
   
@@ -317,7 +317,7 @@ Active Directory 설치의 권한 있는 그룹의 멤버 자격을 관리 하�
   
 ##### <a name="test-the-group-that-will-enable-and-disable-management-accounts"></a>테스트 그룹을 설정 하 고 관리 계정 사용 안 함
   
-1.  관리 계정 사용을 테스트 하 고 암호를 재설정 하려면 [Appendix I에서 만든 그룹의 구성원 인 계정으로 보안 관리 워크스테이션에 로그온 합니다. Active Directory @ no__t에서 보호 된 계정 및 그룹에 대 한 관리 계정을 만드는 중입니다.  
+1.  관리 계정 사용 하도록 설정 하 고 해당 암호를 재설정를 테스트 하려면 워크스테이션에 로그온 한 보안 관리 그룹의 구성원 인 계정으로에서 만든 [부록 i: 관리 계정 만들기 Active Directory의 보호 된 계정 및 그룹에 대 한](../../../ad-ds/manage/component-updates/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory.md)합니다.  
   
     ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_142.gif)  
   

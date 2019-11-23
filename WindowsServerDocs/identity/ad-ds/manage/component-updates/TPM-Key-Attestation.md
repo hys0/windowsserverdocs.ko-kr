@@ -29,7 +29,7 @@ ms.locfileid: "71389864"
 지원 하는 동안 TPM으로 보호 된 키가 Windows 8부터 존재 했던에 대 한 없었습니다 암호화 인증서 요청자 프라이빗 키의 여는 모듈 TPM(Trusted Platform)을 보호 하 고 실제로 설명 하는 Ca에 대 한 메커니즘 없습니다. 이 업데이트에는 해당 증명을 수행 하 고 해당 증명 발급된 된 인증서에 반영 하는 CA 수 있도록 합니다.  
   
 > [!NOTE]  
-> 이 문서에서는 판독기가 인증서 템플릿 개념을 알고 있다고 가정 (참조를 참조 하십시오. [인증서 템플릿](https://technet.microsoft.com/library/cc730705.aspx)). 또한 인증서 템플릿을 기반으로 인증서를 발급 하도록 엔터프라이즈 Ca를 구성 하는 방법에 대해 잘 알고 있다고 가정 합니다 (참조에 대해서는 [Checklist 목록 참조). 인증서를 발급 하 고 관리 하기 위해 Ca 구성 @ no__t-0).  
+> 이 문서에서는 판독기가 인증서 템플릿 개념을 알고 있다고 가정 (참조를 참조 하십시오. [인증서 템플릿](https://technet.microsoft.com/library/cc730705.aspx)). 가 잘 인증서 템플릿을 기반으로 인증서를 발급 하는 엔터프라이즈 Ca를 구성 하는 방법에 잘 알고 있다고 가정 합니다 (참조를 참조 하십시오. [검사 목록: 구성 Ca가 인증서 발급 및 관리](https://technet.microsoft.com/library/cc771533.aspx)).  
   
 ### <a name="terminology"></a>용어  
   
@@ -54,7 +54,7 @@ TPM 키 증명은 인증서 요청에서 RSA 키가 CA가 신뢰 하는 "a" 또�
 ### <a name="why-is-tpm-key-attestation-important"></a>TPM 키 증명 중요 한 이유는 무엇입니까?  
 TPM-증명 된 키를 사용 하는 사용자 인증서는 내보내기, 공세 및 TPM에서 제공 하는 키 격리에 의해 백업 되는 더 높은 보안 보증을 제공 합니다.  
   
-이제 TPM 키 증명을 사용 하 여 새로운 관리 패러다임을 사용할 수 있습니다. 관리자는 사용자가 회사 리소스에 액세스 하는 데 사용할 수 있는 장치 집합 (예: VPN 또는 무선 액세스 지점)을 정의 하 고 다른 장치를 사용 하 여 액세스할 수 **없도록 할 수** 있습니다. 이 새로운 액세스 제어 패러다임은 소프트웨어 기반 자격 증명 보다 강력한 *하드웨어 바인딩된* 사용자 id에 연결 되기 때문에 **강력** 합니다.
+TPM 키 증명을 사용 하 여 새로운 관리 패러다임을 사용할 수 있습니다. 관리자는 사용자가 회사 리소스에 액세스 하는 데 사용할 수 있는 장치 집합 (예: VPN 또는 무선 액세스 지점)을 정의 하 고 다른 장치를 사용 하 여 액세스할 수 없도록 **강력** 하 게 보장할 수 있습니다. 이 새로운 액세스 제어 패러다임은 소프트웨어 기반 자격 증명 보다 강력한 *하드웨어 바인딩된* 사용자 id에 연결 되기 때문에 **강력** 합니다.
   
 ### <a name="how-does-tpm-key-attestation-work"></a>TPM 키 증명 어떻게 작동 합니까?  
 일반적으로 TPM 키 증명은 다음 핵심 요소을 기반으로 합니다.  
@@ -72,19 +72,19 @@ TPM-증명 된 키를 사용 하는 사용자 인증서는 내보내기, 공세 
 
 TPM 키 증명을 배포 하는 방법은 세 가지 단계가 있습니다.  
   
-1.  **TPM 트러스트 모델을 계획 합니다.** 첫 번째 단계는 사용할 TPM 트러스트 모델을 결정 하는 것입니다. 이 위해 지원 되는 3 가지가 있습니다.  
+1.  **TPM 트러스트 모델 계획:** 사용 하 여 TPM 트러스트 모델을 결정 하는 첫 번째 단계입니다. 이 위해 지원 되는 3 가지가 있습니다.  
   
-    -   **사용자 자격 증명을 기반으로 하는 신뢰:** 엔터프라이즈 CA는 사용자 제공 EKPub를 인증서 요청의 일부로 트러스트 하며, 사용자의 도메인 자격 증명 이외의 유효성 검사는 수행 되지 않습니다.  
+    -   **사용자 자격 증명을 기반으로 하는 신뢰:** 엔터프라이즈 CA 인증서 요청의 일부로 사용자가 제공한 EKPub를 트러스트 하 고 유효성 검사는 수행 하지는 사용자의 도메인 자격 증명 이외의 합니다.  
   
-    -   **EKCert 기반 신뢰:** 엔터프라이즈 CA는 허용 되는 *EK 인증서 체인*의 관리자 관리 목록에 대해 인증서 요청의 일부로 제공 되는 EKCert 체인의 유효성을 검사 합니다. 허용 되는 체인은 제조업체 별로 정의 되며 발급 CA에서 두 개의 사용자 지정 인증서 저장소를 통해 표현 됩니다 (중간에 대해 하나의 저장소 및 루트 CA 인증서 용 저장소). 이 신뢰 모드 즉 **모든** 특정된 제조업체의 Tpm은 신뢰 합니다. 이 모드에서는 환경에서 사용 중인 Tpm이 포함 되도록 EKCerts 참고 합니다.
+    -   **EKCert를 기반으로 신뢰:** 엔터프라이즈 CA는 관리자가 관리 되는 목록에 대 한 인증서 요청의 일부로 제공 되는 EKCert 체인의 유효성을 검사 *허용 EK 인증서 체인*합니다. 허용 되는 체인은 제조업체 별로 정의 되며 발급 CA에서 두 개의 사용자 지정 인증서 저장소를 통해 표현 됩니다 (중간에 대해 하나의 저장소 및 루트 CA 인증서 용 저장소). 이 신뢰 모드 즉 **모든** 특정된 제조업체의 Tpm은 신뢰 합니다. 이 모드에서는 환경에서 사용 중인 Tpm이 포함 되도록 EKCerts 참고 합니다.
   
-    -   **EKPub 기반 신뢰:** 엔터프라이즈 CA는 인증서 요청의 일부로 제공 된 EKPub가 관리자가 관리 하는 허용 되는 EKPubs 목록에 표시 되는지 확인 합니다. 이 목록은이 디렉터리에 있는 각 파일의 이름이 허용된 EKPub의 sha-2 해시 인 파일의 디렉터리로 표현 됩니다. 이 옵션은 최고 보증 수준을 제공 하지만 각 장치를 개별적으로 식별 하기 때문에 더 많은 관리 작업이 필요 합니다. 이 신뢰 모델에서는 허용 되는 EKPubs 목록에 해당 TPM의 EKPub 추가 된 장치만 TPM 증명 된 인증서를 등록할 수 있습니다.  
+    -   **EKPub를 기반으로 신뢰:** 엔터프라이즈 CA는 관리자가 관리 되는 목록에 표시 된 인증서 요청의 일부로으로 제공 된 EKPub EKPubs 수 있는지 확인 합니다. 이 목록은이 디렉터리에 있는 각 파일의 이름이 허용된 EKPub의 sha-2 해시 인 파일의 디렉터리로 표현 됩니다. 이 옵션은 최고 보증 수준을 제공 하지만 각 장치를 개별적으로 식별 하기 때문에 더 많은 관리 작업이 필요 합니다. 이 신뢰 모델에서는 허용 되는 EKPubs 목록에 해당 TPM의 EKPub 추가 된 장치만 TPM 증명 된 인증서를 등록할 수 있습니다.  
   
     사용 되는 방법에 따라 CA는 발급 된 인증서에 다른 발급 정책 OID를 적용 합니다. 발급 정책 Oid에 대 한 자세한 내용은 발급 정책 Oid 표를 참조는 [인증서 템플릿 구성](../../../ad-ds/manage/component-updates/TPM-Key-Attestation.md#BKMK_ConfigCertTemplate) 섹션을이 참조 합니다.  
   
     TPM 트러스트 모델의 조합을 선택할 수 있다는 것을 참고 합니다. 이 경우 CA는 증명 메서드를 모두 수락 하 고 발급 정책 Oid는 성공 하는 모든 증명 메서드를 반영 합니다.  
   
-2.  **인증서 템플릿 구성:** 인증서 템플릿을 구성 하는 방법에 대 한 자세한 내용은이 항목의 [배포 세부 정보](../../../ad-ds/manage/component-updates/TPM-Key-Attestation.md#BKMK_DeploymentDetails) 섹션을 참조 하십시오. 이 문서는 엔터프라이즈 CA에이 인증서 템플릿에 할당 되는 방법을 설명 하지 않거나 등록 하는 방법은 사용자의 그룹에 대 한 액세스 제공 됩니다. 자세한 내용은 [ 검사 목록을 참조 하세요. 인증서를 발급 하 고 관리 하기 위해 Ca 구성 @ no__t-0.  
+2.  **인증서 템플릿을 구성:** 에 설명 된 인증서 템플릿을 구성의 [배포 세부 정보](../../../ad-ds/manage/component-updates/TPM-Key-Attestation.md#BKMK_DeploymentDetails) 섹션을이 참조 합니다. 이 문서는 엔터프라이즈 CA에이 인증서 템플릿에 할당 되는 방법을 설명 하지 않거나 등록 하는 방법은 사용자의 그룹에 대 한 액세스 제공 됩니다. 자세한 내용은 참조 [검사 목록: 구성 Ca가 인증서 발급 및 관리](https://technet.microsoft.com/library/cc771533.aspx)합니다.  
   
 3.  **TPM 트러스트 모델용 CA 구성**  
   
@@ -92,7 +92,7 @@ TPM 키 증명을 배포 하는 방법은 세 가지 단계가 있습니다.
   
     2.  **EKCert 기반 신뢰:** 관리자는 tpm 제조업체에서 EKCert 체인 인증서를 가져온 다음 TPM 키 증명을 수행 하는 CA에서 관리자가 만든 두 개의 새 인증서 저장소로 가져와야 합니다. 자세한 내용은 참조는 [CA 구성을](../../../ad-ds/manage/component-updates/TPM-Key-Attestation.md#BKMK_CAConfig) 섹션을이 참조 합니다.  
   
-    3.  **EKPub 기반 신뢰:** 관리자는 TPM 증명 된 인증서를 필요로 하는 각 장치에 대 한 EKPub를 가져와서 허용 된 EKPubs 목록에 추가 해야 합니다. 자세한 내용은 참조는 [CA 구성을](../../../ad-ds/manage/component-updates/TPM-Key-Attestation.md#BKMK_CAConfig) 섹션을이 참조 합니다.  
+    3.  **EKPub를 기반으로 신뢰:** 관리자가 TPM 증명 된 인증서가 필요 하 EKPubs 허용된 목록에 추가할 각 장치에 대 한 EKPub를 얻어야 합니다. 자세한 내용은 참조는 [CA 구성을](../../../ad-ds/manage/component-updates/TPM-Key-Attestation.md#BKMK_CAConfig) 섹션을이 참조 합니다.  
   
     > [!NOTE]  
     > -   이 기능은 Windows 8.1/Windows Server 2012 r 2 필요로 합니다.  
@@ -132,7 +132,7 @@ TPM 키 증명에 대 한 인증서 템플릿을 구성 하려면 다음 구성 
   
     ![TPM 키 증명](media/TPM-Key-Attestation/GTR_ADDS_KeyModes.gif)  
   
-    -   **없음을** 키 증명을 사용 하지 않아야 함을 의미 합니다.  
+    -   **None:** 키 증명 해야 사용 되지 않음을 의미 합니다.  
   
     -   **클라이언트를 사용할 수 있는 경우 필수:** TPM 키 증명을 지원 하지 않는 장치의 사용자가 해당 인증서를 계속 등록할 수 있도록 허용 합니다. 증명을 수행할 수 있는 사용자는 OID 특수 발급 정책으로 구분 됩니다. 일부 장치는 키 증명을 지원 하지 않는 이전 TPM 또는 TPM이 없는 장치에 대 한 증명을 수행 하지 못할 수 있습니다.
   
@@ -142,9 +142,9 @@ TPM 키 증명에 대 한 인증서 템플릿을 구성 하려면 다음 구성 
   
     ![TPM 키 증명](media/TPM-Key-Attestation/GTR_ADDS_KeyTypeToEnforce.gif)  
   
-    -   **사용자 자격 증명:** 인증 하는 사용자가 도메인 자격 증명을 지정 하 여 유효한 TPM을 보증 하도록 허용 합니다.  
+    -   **사용자 자격 증명:** 는 인증 사용자가 해당 도메인 자격 증명을 지정 하 여 유효한 TPM에 대 한 신뢰성을 보증 하도록 허용 합니다.  
   
-    -   **인증 인증서:** 장치의 EKCert 관리자가 관리 하는 TPM 중간 CA 인증서를 통해 관리자가 관리 하는 루트 CA 인증서에 대 한 유효성을 검사 해야 합니다. EKCA 및 EKRoot를 설정 해야이 옵션을 선택 하는 경우에 설명 된 대로 인증서 발급 CA에는 저장소는  [CA 구성을](../../../ad-ds/manage/component-updates/TPM-Key-Attestation.md#BKMK_CAConfig) 섹션을이 참조 합니다.  
+    -   **보증 인증서:** The EKCert 장치 관리자에서 관리 되는 TPM 중간 CA 인증서 관리자에서 관리 하는 루트 CA 인증서를 통해 유효성을 검사 해야 합니다. EKCA 및 EKRoot를 설정 해야이 옵션을 선택 하는 경우에 설명 된 대로 인증서 발급 CA에는 저장소는  [CA 구성을](../../../ad-ds/manage/component-updates/TPM-Key-Attestation.md#BKMK_CAConfig) 섹션을이 참조 합니다.  
   
     -   **인증 키:** 장치의 EKPub는 PKI 관리자 관리 목록에 나타나야 합니다. 이 옵션은 가장 높은 보증 수준을 제공 하는 하지만 많은 노력이 필요 합니다. 에 설명 된 대로 EKPub 목록을 발급 ca를 설정 해야이 옵션을 선택 하는 경우는 [CA 구성을](../../../ad-ds/manage/component-updates/TPM-Key-Attestation.md#BKMK_CAConfig) 섹션을이 참조 합니다.  
   
@@ -154,9 +154,9 @@ TPM 키 증명에 대 한 인증서 템플릿을 구성 하려면 다음 구성 
   
     |OID|키 증명 유형|설명|보증 수준|  
     |-------|------------------------|---------------|-------------------|  
-    |1.3.6.1.4.1.311.21.30|EK|"EK 검증":   관리자가 관리 하는 EK 목록|높음|  
+    |1.3.6.1.4.1.311.21.30|EK|"EK Verified": EK의 목록은 관리자 관리|높음|  
     |1.3.6.1.4.1.311.21.31|보증 인증서|"EK 인증서 확인 됨": EK 인증서 체인의 유효성을 검사 하는 경우|보통|  
-    |1.3.6.1.4.1.311.21.32|사용자 자격 증명|"EK를 사용 하는 경우": 사용자 증명 된 EK|낮음|  
+    |1.3.6.1.4.1.311.21.32|사용자 자격 증명|"EK 신뢰할 수 있는 사용 시": EK 사용자 입증에 대 한|낮음|  
   
     Oid 경우 발급된 된 인증서에 삽입 됩니다 **발급 정책 포함** 됩니다 (기본 구성)를 선택 합니다.  
   
@@ -192,7 +192,7 @@ TPM 키 증명에 대 한 인증서 템플릿을 구성 하려면 다음 구성 
   
     1.  **EndorsementKeyListDirectories 레지스트리 항목을 만듭니다.** Certutil 명령줄 도구를 사용 하 여 다음 표에 설명 된 대로 신뢰할 수 있는 EKpubs가 정의 된 폴더 위치를 구성 합니다.  
   
-        |연산|명령 구문|  
+        |작업|명령 구문|  
         |-------------|------------------|  
         |폴더 위치를 추가 합니다.|certutil.exe-setreg CA\EndorsementKeyListDirectories + "<folder>"|  
         |폴더 위치를 제거 합니다.|certutil.exe-setreg CA\EndorsementKeyListDirectories-"<folder>"|  
@@ -201,7 +201,7 @@ TPM 키 증명에 대 한 인증서 템플릿을 구성 하려면 다음 구성 
   
         |값 이름|형식|data|  
         |--------------|--------|--------|  
-        |EndorsementKeyListDirectories|REG_MULTI_SZ|< EKPUB 로컬 또는 UNC 경로 목록을 허용 ><br /><br />예:<br /><br />*\\\blueCA.contoso.com\ekpub*<br /><br />*\\\bluecluster1.contoso.com\ekpub*<br /><br />D:\ekpub|  
+        |EndorsementKeyListDirectories|REG_MULTI_SZ|< EKPUB 로컬 또는 UNC 경로 목록을 허용 ><br /><br />예제:<br /><br />*\\\blueCA.contoso.com\ekpub*<br /><br />*\\\bluecluster1.contoso.com\ekpub*<br /><br />D:\ekpub|  
   
         HKLM\SYSTEM\CurrentControlSet\Services\CertSvc\Configuration\\<CA Sanitized Name>  
   
@@ -211,7 +211,7 @@ TPM 키 증명에 대 한 인증서 템플릿을 구성 하려면 다음 구성 
         > [!IMPORTANT]  
         > 변조 목록에서 폴더를 보호 하 고 관리자 권한이 있는 있도록 권한을 구성 하 여 무단된 액세스에 대 한 읽기 및 쓰기 액세스 합니다. CA의 컴퓨터 계정에는 읽기 액세스만 필요 합니다.  
   
-    2.  **EKPUB 목록을 채웁니다.** 다음 Windows PowerShell cmdlet을 사용 하 여 각 장치에서 Windows PowerShell을 사용 하 여 TPM EK의 공개 키 해시를 가져온 다음이 공개 키 해시를 CA에 전송 하 고 EKPubList 폴더에 저장 합니다.  
+    2.  **EKPUB 목록을 채우는:** 각 장치에서 Windows PowerShell을 사용 하 여 TPM EK의 공개 키 해시를 가져오려면 다음 Windows PowerShell cmdlet을 사용 하 고 다음 보내고이 공용 CA에 대 한 해시를 키 EKPubList 폴더에 저장 합니다.  
   
         ```powershell  
         PS C:>\$a=Get-TpmEndorsementKeyInfo -hashalgorithm sha256  
@@ -227,7 +227,7 @@ TPM 키 증명에 대 한 인증서 템플릿을 구성 하려면 다음 구성 
   
     1.  **인증 기관**: **Windows Server 2012 R2**  
   
-    2.  **인증서 받는 사람**: **Windows 8.1/Windows Server 2012 R2**  
+    2.  **받는 사람 인증서**: **Windows 8.1 또는 Windows Server 2012 R2**  
   
 2.  암호화 설정은 올바르게 구성 되지 않습니다. 다음과 같이 구성 되어 있는지 확인 합니다.  
   
@@ -239,22 +239,22 @@ TPM 키 증명에 대 한 인증서 템플릿을 구성 하려면 다음 구성 
   
 3.  요청 처리 설정이 올바르게 구성 되지 않습니다. 다음과 같이 구성 되어 있는지 확인 합니다.  
   
-    1.  **개인 키를 내보낼 수 있음** 옵션을 선택 하지 않아야 합니다.  
+    1.  **프라이빗 키를 내보낼 수 있음** 옵션을 선택하지 않아야 합니다.  
   
-    2.  **주체의 암호화 개인 키를 보관할** 옵션을 선택 하지 않아야 합니다.  
+    2.  **주체의 암호화 프라이빗 키를 보관할** 옵션을 선택하지 않아야 합니다.  
   
 ### <a name="verification-of-tpm-device-for-attestation"></a>TPM에 대 한 장치 증명 확인  
 Windows PowerShell cmdlet을 사용 하 여 **확인 CAEndorsementKeyInfo**, Ca가 증명에 대해 신뢰할 수 있는 특정 TPM 장치 인지 확인 합니다. 두 가지 옵션이 있습니다: EKCert, 및는 EKPub 확인 하기 위한 기타 확인 하기 위한 하나입니다. Cmdlet은 실행 로컬로 또는 원격 Ca는 CA에서 Windows PowerShell 원격을 사용 하 여.  
   
 1.  EKPub에 신뢰를 확인 하기 위한 다음 두 단계를 수행 합니다.  
   
-    1.  **클라이언트 컴퓨터에서 EKPub를 추출 합니다.** EKPub는 클라이언트 컴퓨터에서 **TpmEndorsementKeyInfo**를 통해 추출할 수 있습니다. 상승된 된 명령 프롬프트에서 다음을 실행 합니다.  
+    1.  **클라이언트 컴퓨터에서의 EKPub 추출:** The EKPub를 통해 클라이언트 컴퓨터에서 추출할 수 **Get TpmEndorsementKeyInfo**합니다. 상승된 된 명령 프롬프트에서 다음을 실행 합니다.  
   
         ```  
         PS C:>\$a=Get-TpmEndorsementKeyInfo -hashalgorithm sha256  
         ```  
   
-    2.  **CA 컴퓨터에서 EKCert에 대 한 트러스트 확인:** 추출한 문자열 (EKPub의 SHA-2 해시)을 서버에 복사 하 고 (예: 전자 메일을 통해) CAEndorsementKeyInfo cmdlet으로 전달 합니다. 이 매개 변수 이름은 64 자 이어야 하는 참고 합니다.  
+    2.  **CA 컴퓨터에는 EKCert에 트러스트 확인:** 예를 들어 (전자 메일)를 통해 서버에 압축 푼된 문자열 (EKPub는 sha-2 해시)을 복사 하 고 확인 CAEndorsementKeyInfo cmdlet에 전달 합니다. 이 매개 변수 이름은 64 자 이어야 하는 참고 합니다.  
   
         ```  
         Confirm-CAEndorsementKeyInfo [-PublicKeyHash] <string>  
@@ -262,7 +262,7 @@ Windows PowerShell cmdlet을 사용 하 여 **확인 CAEndorsementKeyInfo**, Ca�
   
 2.  EKCert에 신뢰를 확인 하기 위한 다음 두 단계를 수행 합니다.  
   
-    1.  **클라이언트 컴퓨터에서 EKCert를 추출 합니다.** EKCert는 클라이언트 컴퓨터에서 **TpmEndorsementKeyInfo**를 통해 추출할 수 있습니다. 상승된 된 명령 프롬프트에서 다음을 실행 합니다.  
+    1.  **클라이언트 컴퓨터에서의 EKCert 추출:** The EKCert를 통해 클라이언트 컴퓨터에서 추출할 수 **Get TpmEndorsementKeyInfo**합니다. 상승된 된 명령 프롬프트에서 다음을 실행 합니다.  
   
         ```  
         PS C:>\$a=Get-TpmEndorsementKeyInfo
@@ -275,6 +275,6 @@ Windows PowerShell cmdlet을 사용 하 여 **확인 CAEndorsementKeyInfo**, Ca�
         PS C:>new-object System.Security.Cryptography.X509Certificates.X509Certificate2 "c:\diagnose\myEKcert.cer" | Confirm-CAEndorsementKeyInfo  
         ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [신뢰할 수 있는 플랫폼 모듈 기술 개요](https://technet.microsoft.com/library/jj131725.aspx)  
-[ 외부 리소스: 신뢰할 수 있는 플랫폼 모듈 @ no__t-0  
+[외부 리소스: 신뢰할 수 있는 플랫폼 모듈](http://www.cs.unh.edu/~it666/reading_list/Hardware/tpm_fundamentals.pdf)  

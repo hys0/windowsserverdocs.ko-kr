@@ -43,7 +43,7 @@ Directaccess를 지 원하는 서버 및 클라이언트 운영 체제와 Window
 DirectAccess를 사용 하면 기존 VPN (가상 사설망)을 연결할 필요 없이 원격 사용자가 조직 네트워크 리소스에 연결할 수 있습니다. DirectAccess 연결을 사용 하는 경우 원격 클라이언트 컴퓨터는 항상 조직에 연결 되며, 원격 사용자가 연결을 시작 하 고 중지할 필요 없이 VPN 연결에 필요 합니다. 또한 IT 관리자가 DirectAccess 클라이언트 컴퓨터를 실행 하 고 인터넷에 연결할 때마다 관리할 수 있습니다.
 
 >[!IMPORTANT]
->Microsoft Azure에서 \(VM @ no__t-1을 사용 하 여 가상 컴퓨터에 원격 액세스를 배포 하지 마십시오. Microsoft Azure에서 원격 액세스를 사용 하는 것은 지원 되지 않습니다. Azure VM에서 원격 액세스를 사용 하 여 Windows server 2016 또는 이전 버전의 Windows Server에서 VPN, DirectAccess 또는 기타 원격 액세스 기능을 배포할 수 없습니다. 자세한 내용은 [Microsoft Azure 가상 컴퓨터에 대 한 Microsoft 서버 소프트웨어 지원](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines)을 참조 하세요.
+>Microsoft Azure에서 VM\) \(가상 컴퓨터에 원격 액세스를 배포 하지 마십시오. Microsoft Azure에서 원격 액세스를 사용 하는 것은 지원 되지 않습니다. Azure VM에서 원격 액세스를 사용 하 여 Windows server 2016 또는 이전 버전의 Windows Server에서 VPN, DirectAccess 또는 기타 원격 액세스 기능을 배포할 수 없습니다. 자세한 내용은 [Microsoft Azure 가상 컴퓨터에 대 한 Microsoft 서버 소프트웨어 지원](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines)을 참조 하세요.
   
 DirectAccess는 DirectAccess에 대 한 운영 체제 지원을 포함 하는 도메인에 가입 된 클라이언트만 지원 합니다.  
   

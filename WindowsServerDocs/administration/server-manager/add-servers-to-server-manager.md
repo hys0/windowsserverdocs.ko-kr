@@ -23,7 +23,7 @@ ms.locfileid: "71383265"
 ---
 # <a name="add-servers-to-server-manager"></a>Add Servers to Server Manager
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Windows Server의 단일 서버 관리자 콘솔을 사용 하 여 여러 원격 서버를 관리할 수 있습니다. 서버 관리자를 사용하여 관리하려는 서버는 Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 또는 Windows Server 2008을 실행할 수 있습니다. 참고 서버 관리자의 이전 버전을 Windows Server의 최신 릴리스를 관리할 수 없습니다.
 
@@ -96,7 +96,7 @@ Windows Server의 단일 서버 관리자 콘솔을 사용 하 여 여러 원격
 ### <a name="add-and-manage-servers-in-workgroups"></a>작업 그룹의 서버 추가 및 관리
 서버 관리자 작업 그룹에 속한 서버 성공할 수, 추가 된 후 추가 **관리 효율성** 의 열은 **서버** 타일에는 작업 그룹 서버가 포함 된 역할이 나 그룹 페이지를 표시할 수 **자격 증명이 잘못** 에 연결 하거나 원격으로 작업 그룹 서버에서 데이터를 수집 하는 동안 발생 하는 오류.
 
-다음 조건에서 이러한 오류나 유사한 오류가 발생할 수 있습니다.
+이 오류 또는 유사한 오류는 다음 조건에서 발생할 수 있습니다.
 
 -   관리 되는 서버가 서버 관리자를 실행 하는 컴퓨터와 같은 작업 그룹입니다.
 
@@ -165,7 +165,7 @@ Windows Server의 단일 서버 관리자 콘솔을 사용 하 여 여러 원격
 
 이 섹션의 절차를 수행하였지만 작업 그룹 컴퓨터 또는 작업 그룹 컴퓨터가 아닌 컴퓨터를 관리하는 데 문제가 계속 발생하는 경우 Microsoft 웹 사이트에서 [about_remote_Troubleshooting](https://technet.microsoft.com/library/dd347642.aspx)을 참조하십시오.
 
-### <a name="add-and-manage-servers-in-clusters"></a>클러스터의 서버 추가 및 관리
+### <a name="add-and-manage-servers-in-clusters"></a>클러스터에서 서버 추가 및 관리
 장애 조치 클러스터 (서버 클러스터 또는 MSCS 라고도 함)에 있는 서버를 관리 하려면 서버 관리자를 사용할 수 있습니다. 장애 조치 클러스터 (클러스터 노드 인지 실제 또는 가상)에 있는 서버를 서버 관리자에서 일부 고유 동작 및 관리 제한을 합니다.
 
 -   클러스터의 실제 및 가상 서버 클러스터의 한 서버에 서버 관리자에 추가 되 면 자동 서버 관리자에 추가 됩니다. 마찬가지로, 서버 관리자에서 클러스터 된 서버를 제거 하면 메시지가 표시 되는 클러스터의 다른 서버를 제거 하려면.
@@ -176,6 +176,6 @@ Windows Server의 단일 서버 관리자 콘솔을 사용 하 여 여러 원격
 
 -   클러스터된 가상 서버에 역할 및 기능을 설치할 수 없습니다.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 [서버 관리자](server-manager.md)
 [서버 그룹 만들기 및 관리](create-and-manage-server-groups.md)

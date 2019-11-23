@@ -19,11 +19,11 @@ ms.locfileid: "71393619"
 ---
 # <a name="ensure-that-the-virtual-function-driver-operates-correctly-when-a-virtual-machine-is-configured-to-use-sr-iov"></a>가상 컴퓨터는 SR-IOV를 사용 하도록 구성 된 경우 가상 함수 드라이버 올바르게 작동 하는지 확인 하십시오.
 
->적용 대상: Windows Server 2016
+>적용 대상: Windows Server 2016
 
 모범 사례 분석기 및 검사에 대한 자세한 내용은 [모범 사례 분석기 검사 실행 및 검사 결과 관리](https://go.microsoft.com/fwlink/p/?LinkID=223177)를 참조하세요.  
   
-|속성|설명|  
+|속성|세부 정보|  
 |-|-|  
 |**운영 체제**|Windows Server 2016|  
 |**제품/기능**|Hyper-V|  
@@ -38,10 +38,10 @@ ms.locfileid: "71393619"
 ## <a name="impact"></a>영향  
 *다음 가상 머신에서는 네트워크 성능이 최적이 아닙니다.*  
   
-@no__t-가상 머신 목록 >  
+가상 컴퓨터 \<목록 >  
   
 ## <a name="resolution"></a>해결 방법  
-*게스트 운영 체제에서 다음을 수행 합니다. 적절 한 드라이버가 설치 되어 있고 모든 네트워킹 장치를 사용할 수 있는지 확인 하 고 오류 또는 경고에 대 한 이벤트 로그를 확인 하십시오.*  
+*게스트 운영 체제에서 다음을 수행 합니다. 적절 한 드라이버가 설치 되어 있고 모든 네트워킹 장치를 사용할 수 있는지 확인 하 고 오류 또는 경고에 대 한 이벤트 로그를 확인 합니다.*  
   
 
 

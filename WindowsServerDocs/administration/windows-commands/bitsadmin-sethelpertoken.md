@@ -23,7 +23,7 @@ ms.locfileid: "71380573"
 
 현재 명령 프롬프트의 기본 토큰 또는 임의의 로컬 사용자 계정 토큰 (지정 된 경우)을 BITS 전송 작업의 [도우미 토큰](/windows/desktop/bits/helper-tokens-for-bits-transfer-jobs)으로 설정 합니다.
 
-**BITS 3.0 및 이전 버전**: 지원되지 않습니다.
+**BITS 3.0 및 이전 버전**: 지원 되지 않습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -36,7 +36,7 @@ bitsadmin /SetHelperToken <Job> [\<username@domain\> \<password\>]
 |매개 변수|설명|
 |---------|-----------|
 |작업|작업의 표시 이름 또는 GUID입니다.|
-|\< @ no__t-1 @ no__t-2 \<password @ no__t-4|선택적 @ no__t-0은 사용할 토큰을 포함 하는 로컬 사용자 계정의 자격 증명입니다.|
+|\<username@domain\> \<암호\>|선택적&mdash;사용할 토큰을 포함 하는 로컬 사용자 계정의 자격 증명입니다.|
 
 #### <a name="additional-references"></a>추가 참조
 

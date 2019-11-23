@@ -55,7 +55,7 @@ H 볼륨에 저장 되어 있는 사용 가능한 백업 목록을 보려면 다
 ```
 wbadmin get versions -backupTarget:h:
 ```
-원격 공유 폴더에 저장 된 사용 가능한 백업 목록을 보려면 computer server01에 대 한 \\ @ no__t-1servername\share을 입력 하 고 다음을 입력 합니다.
+원격 공유 폴더 \\\\servername\share에 저장 된 사용 가능한 백업 목록을 보려면 컴퓨터 server01에 대해 다음을 입력 합니다.
 ```
 wbadmin get versions -backupTarget:\\servername\share -machine:server01
 ```

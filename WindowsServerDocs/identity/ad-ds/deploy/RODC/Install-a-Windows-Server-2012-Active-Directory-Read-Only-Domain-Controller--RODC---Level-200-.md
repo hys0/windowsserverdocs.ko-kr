@@ -58,12 +58,12 @@ ms.locfileid: "71391115"
 > [!NOTE]  
 > **-credential** 인수는 현재 Domain Admins 그룹의 구성원으로 로그온되어 있지 않은 경우에만 필요합니다.  
   
-## <a name="staging"></a>준비  
+## <a name="staging"></a>스테이징  
 ![RODC 설치](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_PreCreateRODC.png)  
   
 Active Directory 관리 센터(**Dsac.exe**)를 열어 읽기 전용 도메인 컨트롤러 컴퓨터 계정의 준비 작업을 수행합니다. 탐색 창에서 도메인의 이름을 클릭합니다. 관리 목록에서 **도메인 컨트롤러**를 두 번 클릭합니다. 작업 창에서 **읽기 전용 도메인 컨트롤러 계정 미리 만들기**를 클릭합니다.  
   
-Active Directory 관리 센터에 대 한 자세한 내용은 [Active Directory 관리 센터 &#40;수준 200&#41; 을 사용한 고급 AD DS 관리](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md) 및 검토 [active Directory 관리 센터를 참조 하세요. 시작 하기 @ no__t-0.  
+Active Directory 관리 센터에 대 한 자세한 내용은 참조 [고급 AD DS 관리를 사용 하 여 Active Directory 관리 센터 & #40; 200 수준 & #41;](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md) 검토 및 [Active Directory 관리 센터: 시작](https://technet.microsoft.com/library/dd560651(WS.10).aspx)합니다.  
   
 읽기 전용 도메인 컨트롤러를 만들어 본 경험이 있다면 설치 마법사에 Windows Server 2008의 이전 Active Directory 사용자 및 컴퓨터 스냅인을 사용할 때 표시되는 것과 동일한 그래픽 인터페이스가 있으며, 오래된 dcpromo에서 사용하는 무인 파일 형식의 구성 내보내기가 포함된 동일한 코드를 사용하는 것을 알 수 있을 것입니다.  
   
@@ -229,7 +229,7 @@ Install-AddsDomainController
 ### <a name="domain-controller-options"></a>도메인 컨트롤러 옵션  
 ![RODC 설치](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_Stage2DCOptions.png)  
   
-**도메인 컨트롤러 옵션** 페이지에 도메인 컨트롤러 옵션은 새로운 도메인 컨트롤러에 대 한 표시 합니다. 이 페이지가 로드되면 Active Directory Domain Services 구성 마법사에서 기존 도메인 컨트롤러로 LDAP 쿼리를 보내 비어 있는 계정을 확인합니다. 현재 컴퓨터와 동일한 이름을 공유 하는 컴퓨터 계정의 비어 있는 도메인 컨트롤러를 찾을 경우 페이지 맨 위에 있는 마법사에 정보 메시지가 표시 됩니다. "**대상 서버의 이름과 일치 하는 미리 만든된 RODC 계정이 디렉터리에 있습니다. 이 기존 RODC 계정을 사용 하거나이 도메인 컨트롤러를 다시 설치 하도록 선택할**. " 마법사에서는 **기존 RODC 계정 사용**을 기본 구성으로 사용합니다.  
+**도메인 컨트롤러 옵션** 페이지에 도메인 컨트롤러 옵션은 새로운 도메인 컨트롤러에 대 한 표시 합니다. 이 페이지가 로드되면 Active Directory Domain Services 구성 마법사에서 기존 도메인 컨트롤러로 LDAP 쿼리를 보내 비어 있는 계정을 확인합니다. 쿼리에서 현재 컴퓨터와 동일한 이름을 공유 하는 비어 있는 도메인 컨트롤러 컴퓨터 계정을 찾은 경우 페이지 맨 위에 "**대상 서버 이름과 일치 하는 미리 만든 RODC 계정이 디렉터리에 있습니다." 라는 정보 메시지가 표시 됩니다. 기존 RODC 계정을 사용할지 또는이 도메인 컨트롤러를 다시 설치할지를 선택**하십시오. " 마법사에서는 **기존 RODC 계정 사용**을 기본 구성으로 사용합니다.  
   
 > [!IMPORTANT]  
 > 도메인 컨트롤러에 물리적인 문제가 발생하여 정상적인 작동 상태로 되돌릴 수 없는 경우 **이 도메인 컨트롤러 다시 설치** 옵션을 사용할 수 있습니다. 그러면 도메인 컨트롤러 컴퓨터 계정 및 개체 메타 데이터를 Active Directory에 남겨 두어 대체 도메인 컨트롤러를 구성할 때 시간이 절약 됩니다. *같은 이름*으로 새 컴퓨터를 설치하고 도메인의 도메인 컨트롤러로 수준을 올립니다. **이 도메인 컨트롤러를 다시 설치** 옵션은 Active Directory (메타 데이터 정리)에서 도메인 컨트롤러 개체의 메타 데이터를 제거 하는 경우에 사용할 수 없습니다.  

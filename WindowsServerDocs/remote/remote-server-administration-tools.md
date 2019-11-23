@@ -32,7 +32,7 @@ RSAT를 통해 IT 관리자는 windows 10 PC에서 Windows Server 역할 및 기
 
 원격 서버 관리 도구에는 서버 관리자, mmc (Microsoft Management Console) 스냅인, 콘솔, Windows PowerShell cmdlet 및 공급자, Windows Server에서 실행 되는 역할 및 기능을 관리 하기 위한 몇 가지 명령줄 도구가 포함 되어 있습니다.
 
-원격 서버 관리 도구에는 원격 서버에서 실행 되는 역할 및 기능을 관리 하는 데 사용할 수 있는 Windows PowerShell cmdlet 모듈이 포함 되어 있습니다. Windows PowerShell 원격 관리는 Windows Server 2016에서 기본적으로 활성화 되어, 있지만 Windows 10에서 기본적으로 사용 되지 않습니다. 원격 서버에 대해 원격 서버 관리 도구의 일부인 cmdlet을 실행 하려면를 설치한 후 Windows 클라이언트 컴퓨터에서 관리자 권한 (관리자 권한으로 실행)으로 연 Windows PowerShell 세션에서-0 @no__t를 실행 합니다. 원격 서버 관리 도구.
+원격 서버 관리 도구에는 원격 서버에서 실행 되는 역할 및 기능을 관리 하는 데 사용할 수 있는 Windows PowerShell cmdlet 모듈이 포함 되어 있습니다. Windows PowerShell 원격 관리는 Windows Server 2016에서 기본적으로 활성화 되어, 있지만 Windows 10에서 기본적으로 사용 되지 않습니다. 원격 서버에 대 한 원격 서버 관리 도구의 일부인 cmdlet을 실행 하려면 원격 서버 관리 도구를 설치한 후 Windows 클라이언트 컴퓨터에서 관리자 권한 (관리자 권한으로 실행)으로 연 Windows PowerShell 세션에서 `Enable-PSremoting`를 실행 합니다.
 
 ## <a name="BKMK_Thresh"></a>Windows 10에 대 한 원격 서버 관리 도구
 원격 서버 관리 도구에 대 한 Windows 10을 사용 하 여 제한 된 경우, Windows Server 2012 또는 Windows Server 2008 r 2에서 Windows Server 2016, Windows Server 2012 r 2를 실행 하는 컴퓨터에 특정 기술을 관리할 수 있습니다.
@@ -50,7 +50,7 @@ Windows 10에 대 한 원격 서버 관리 도구은 Windows 10의 x86 기반 �
 > [!IMPORTANT]
 > Windows 8.1, Windows 8, Windows Server 2008 R2, Windows Server 2008, Windows Server 2003 또는 Windows 2000 Server 용 관리 도구 팩을 실행 하는 컴퓨터에는 Windows 10에 대 한 원격 서버 관리 도구 설치 하면 안 됩니다. 원격 서버 관리를 설치 하기 전에 컴퓨터에서 이전 시험판 버전 및 다른 언어 또는 로캘의 도구를 포함 하 여 이전 버전의 관리 도구 팩 또는 원격 서버 관리 도구를 모두 제거 합니다. Windows 10 용 도구입니다.
 
-이 서버 관리자 릴리스를 사용 하 여 Windows Server 2012 R2, Windows Server 2012 또는 Windows Server 2008 r 2를 실행 하는 원격 서버에 액세스 하 고이를 관리 하려면 Se를 사용 하 여 이전 Windows Server 운영 체제를 관리할 수 있도록 여러 업데이트를 설치 해야 합니다. r 관리자. Windows 10 용 원격 서버 관리 도구에서 서버 관리자를 사용 하 여 Windows Server 2012 R2, Windows Server 2012 및 Windows Server 2008 r 2를 관리 하도록 준비 하는 방법에 대 한 자세한 내용은 서버를 사용 하 여 [여러 원격 서버 관리를 참조 하세요. 관리자](https://technet.microsoft.com/library/hh831456.aspx).
+이 서버 관리자 릴리스를 사용 하 여 Windows Server 2012 R2, Windows Server 2012 또는 Windows Server 2008 r 2를 실행 하는 원격 서버에 액세스 하 고이를 관리 하려면 Se를 사용 하 여 이전 Windows Server 운영 체제를 관리할 수 있도록 여러 업데이트를 설치 해야 합니다. r 관리자. Windows 10 용 원격 서버 관리 도구에서 서버 관리자를 사용 하 여 Windows Server 2012 R2, Windows Server 2012 및 Windows Server 2008 r 2를 관리 하도록 준비 하는 방법에 대 한 자세한 내용은 서버 관리자를 사용 하 여 [여러 원격 서버 관리](https://technet.microsoft.com/library/hh831456.aspx)를 참조 하세요.
 
 원격 서버 관리 도구에 대 한 Windows 10에 포함 된 도구를 사용 하 여 관리 하려면 원격 서버에서 Windows PowerShell 및 서버 관리자 원격 관리를 활성화 되어야 합니다. Windows Server 2016, Windows Server 2012 R2 및 Windows Server 2012를 실행 하는 서버에서는 원격 관리가 기본적으로 사용 됩니다. 사용되지 않는 경우 원격 관리를 사용하도록 설정하는 방법에 대한 자세한 내용은 [서버 관리자를 사용하여 여러 원격 서버 관리](https://go.microsoft.com/fwlink/p/?LinkId=241358)를 참조하세요.
 
@@ -74,11 +74,11 @@ Windows 10에서 **설정** 앱을 열고, **선택적 기능 관리**로 이동
 
 10 월 2018 업데이트 (1809) 이전 버전의 Windows 10이 있는 경우 **주문형 기능**을 사용할 수 없습니다. RSAT 패키지를 다운로드 하 여 설치 해야 합니다.
 
-- **위에서 설명한 대로 Windows 10에서 직접 RSAT를 설치 합니다**. Windows Server 2019 또는 이전 버전을 관리 하기 위해 Windows 10 10 월 2018 업데이트 (1809) 이상에 설치할 때
+- 위에 설명 된 대로 windows Server 2019 또는 이전 버전을 관리 하기 위해 windows 10 10 월 2018 업데이트 (1809) 이상에 설치할 경우 windows **10에서 직접 RSAT를 설치**합니다.
 
-- **아래에 설명 된 대로 WS_1803 RSAT 패키지를 다운로드 하 여 설치 합니다**. Windows Server, 버전 1803 또는 Windows Server 버전 1709을 관리 하기 위해 Windows 10 4 월 2018 업데이트 (1803) 또는 이전 버전에 설치 하는 경우
+- **아래에 설명 된 대로 WS_1803 RSAT 패키지를 다운로드 하 여 설치**합니다. windows server, 버전 1803 또는 windows server, 버전 1709을 관리 하기 위해 Windows 10 4 월 2018 업데이트 (1803) 또는 이전 버전에 설치 하는 경우입니다.
 
-- **아래에 설명 된 대로 WS2016 RSAT 패키지를 다운로드 하 여 설치 합니다**. Windows Server 2016 또는 이전 버전을 관리 하기 위해 Windows 10 4 월 2018 업데이트 (1803) 또는 이전 버전에 설치 하는 경우
+- Windows Server 2016 또는 이전 버전 관리를 위해 Windows 10 4 월 2018 업데이트 (1803) 또는 이전 버전에 설치 하는 경우 **아래에 설명 된 대로 WS2016 RSAT 패키지를 다운로드 하 여 설치**합니다.
 
 #### <a name="BKMK_installthresh"></a>RSAT 패키지를 다운로드 하 여 Windows 10 용 원격 서버 관리 도구 설치
 
@@ -141,7 +141,7 @@ Windows 10에 대 한 원격 서버 관리 도구에서는 서버 관리자 콘�
 
 2.  **관리 도구** 폴더에서 **서버 관리자**를 클릭합니다.
 
-서버 관리자 콘솔 **도구** 메뉴에는 표시 되지 않지만 Windows PowerShell Cmdlet 및 명령 프롬프트 관리 도구는 역할 및 기능에 대 한 원격 서버 관리 도구의 일부로도 설치 됩니다. 예를 들어 관리자 권한으로 Windows PowerShell 세션을 열고 (관리자 권한으로 실행) @no__t cmdlet을 실행 하는 경우 (관리자 권한으로 실행) 이제 설치 후 로컬 컴퓨터에서 실행할 수 있는 원격 데스크톱 서비스 cmdlet 목록이 결과에 포함 됩니다. 원격 서버 관리 도구 cmdlet은 원격 데스크톱 서비스 역할의 전체 또는 일부를 실행 하는 원격 서버를 대상으로 합니다.
+서버 관리자 콘솔 **도구** 메뉴에는 표시 되지 않지만 Windows PowerShell Cmdlet 및 명령 프롬프트 관리 도구는 역할 및 기능에 대 한 원격 서버 관리 도구의 일부로도 설치 됩니다. 예를 들어 관리자 권한으로 Windows PowerShell 세션을 열고 (관리자 권한으로 실행) cmdlet `Get-Command -Module RDManagement`실행 하면 cmdlet이 원격 데스크톱 서비스 역할의 전부 또는 일부를 실행 하는 원격 서버를 대상으로 하는 한, 원격 서버 관리 도구 설치 후 로컬 컴퓨터에서 실행할 수 있는 원격 데스크톱 서비스 cmdlet 목록이 결과에 포함 됩니다.
 
 ##### <a name="to-start-windows-powershell-with-elevated-user-rights-run-as-administrator"></a>관리자 권한으로 Windows PowerShell을 시작하려면(관리자 권한으로 실행)
 
@@ -155,15 +155,15 @@ Windows 10에 대 한 원격 서버 관리 도구에서는 서버 관리자 콘�
 
 ## <a name="known-issues"></a>알려진 문제
 
-### <a name="issue-rsat-fod-installation-fails-with-error-code-0x800f0954"></a>**문제**: RSAT를 설치 하지 못했습니다 (오류 코드 0x800f0954).
+### <a name="issue-rsat-fod-installation-fails-with-error-code-0x800f0954"></a>**문제**: RSAT를 설치 하지 못했습니다. 오류 코드 0x800f0954
 
-> **영향**: WSUS/SCCM 환경의 Windows 10 1809 (10 월 2018 업데이트)에 대 한 RSAT
+> **영향**: WSUS/SCCM 환경에서 Windows 10 1809 (10 월 2018 업데이트)에 대 한 RSAT
 > 
-> **해결**방법: WSUS 또는 SCCM을 통해 업데이트를 수신 하는 도메인에 가입 된 PC에 Ods를 설치 하려면 Windows 업데이트 또는 로컬 공유에서 직접 Ds를 다운로드할 수 있도록 그룹 정책 설정을 변경 해야 합니다. 해당 설정을 변경 하는 방법에 대 한 자세한 내용과 지침은 [WSUS/SCCM을 사용 하는 경우 주문형 기능](https://docs.microsoft.com/windows/deployment/update/fod-and-lang-packs)을 사용 하는 방법을 참조 하세요.
+> **해결**방법: WSUS 또는 SCCM을 통해 업데이트를 수신 하는 도메인에 가입 된 PC에 ods를 설치 하려면 Windows 업데이트 또는 로컬 공유에서 직접 ds를 다운로드할 수 있도록 그룹 정책 설정을 변경 해야 합니다. 해당 설정을 변경 하는 방법에 대 한 자세한 내용과 지침은 [WSUS/SCCM을 사용 하는 경우 주문형 기능](https://docs.microsoft.com/windows/deployment/update/fod-and-lang-packs)을 사용 하는 방법을 참조 하세요.
 
 ---
 
-### <a name="issue-rsat-fod-installation-via-settings-app-does-not-show-statusprogress"></a>**문제**: 설정 앱을 통해 RSAT 설치는 상태/진행률 표시 안 함
+### <a name="issue-rsat-fod-installation-via-settings-app-does-not-show-statusprogress"></a>**문제**: 설정 앱을 통해 RSAT를 설치 하면 상태/진행률이 표시 되지 않음
 
 > **영향**: Windows 10 1809에서 RSAT (2018 업데이트 10 월)
 > 
@@ -175,7 +175,7 @@ Windows 10에 대 한 원격 서버 관리 도구에서는 서버 관리자 콘�
 
 > **영향**: Windows 10 1809에서 RSAT (2018 업데이트 10 월)
 > 
-> **해결**방법: 경우에 따라 제거 오류는 수동으로 종속성을 제거 해야 하기 때문에 발생 합니다. 특히 rsat 도구 B에서 RSAT 도구 A가 필요한 경우 rsat 도구 B가 아직 설치 되어 있으면 A rsat 도구를 제거 하도록 선택 하면 실패 합니다. 이 경우 RSAT tool B를 먼저 제거한 다음 RSAT tool A를 제거 합니다. 종속성을 포함 하 여 RSAT의 목록을 참조 하세요.
+> **해결**방법: 일부 경우에는 종속성을 수동으로 제거 해야 하므로 제거 실패가 발생 합니다. 특히 rsat 도구 B에서 RSAT 도구 A가 필요한 경우 rsat 도구 B가 아직 설치 되어 있으면 A rsat 도구를 제거 하도록 선택 하면 실패 합니다. 이 경우 RSAT tool B를 먼저 제거한 다음 RSAT tool A를 제거 합니다. 종속성을 포함 하 여 RSAT의 목록을 참조 하세요.
 
 ---
 
@@ -191,8 +191,8 @@ Windows 10에 대 한 원격 서버 관리 도구에서는 서버 관리자 콘�
 
 > **영향**: 모든 RSAT. MSU 패키지 설치 (RSAT (RSAT) 이전)가 자동으로 다시 설치 되지 않음
 > 
-> **해결**방법: Rsat 설치는 RSAT로 인 한 OS 업그레이드에서 지속 될 수 없습니다. MSU는 Windows 업데이트 패키지로 제공 됩니다. Windows 10을 업그레이드 한 후에 RSAT를 다시 설치 하세요. 이 제한은 Windows 10 1809부터 시작 하는 이유 중 하나입니다. 설치 된 RSAT는 이후 Windows 10 버전 업그레이드에 따라 유지 됩니다.
+> **해결**방법: rsat 설치는 rsat로 인 한 OS 업그레이드에서 지속 될 수 없습니다. MSU는 Windows 업데이트 패키지로 제공 됩니다. Windows 10을 업그레이드 한 후에 RSAT를 다시 설치 하세요. 이 제한은 Windows 10 1809부터 시작 하는 이유 중 하나입니다. 설치 된 RSAT는 이후 Windows 10 버전 업그레이드에 따라 유지 됩니다.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 >- [Windows 10에 대 한 원격 서버 관리 도구](https://go.microsoft.com/fwlink/?LinkID=404281)
 >- [Windows Vista, Windows 7, Windows 8, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012 및 Windows Server 2012 R2 용 RSAT (원격 서버 관리 도구)](https://go.microsoft.com/fwlink/p/?LinkID=221055)

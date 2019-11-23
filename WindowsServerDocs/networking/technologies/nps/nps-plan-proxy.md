@@ -19,7 +19,7 @@ ms.locfileid: "71396019"
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-NPS (네트워크 정책 서버)를 RADIUS(Remote Authentication Dial-In User Service) \(RADIUS @ no__t 프록시로 배포할 때 NPS는 RADIUS 클라이언트 (예: 네트워크 액세스 서버 또는 기타 RADIUS 프록시)에서 연결 요청을 수신 하 고이를 전달 합니다. NPS 또는 다른 RADIUS 서버를 실행 하는 서버에 대 한 연결 요청 이러한 계획 지침을 사용 하 여 RADIUS 배포를 간소화할 수 있습니다.
+Nps (네트워크 정책 서버)를 RADIUS(Remote Authentication Dial-In User Service) \(RADIUS\) 프록시로 배포할 때 NPS는 네트워크 액세스 서버 또는 다른 RADIUS 프록시와 같은 RADIUS 클라이언트에서 연결 요청을 받은 후 NPS 또는 다른 RADIUS 서버를 실행 하는 서버로 이러한 연결 요청을 전달 합니다. 이러한 계획 지침을 사용 하 여 RADIUS 배포를 간소화할 수 있습니다.
 
 이러한 계획 지침에는 NPS를 RADIUS 서버로 배포 하려는 경우는 포함 되지 않습니다. NPS를 RADIUS 서버로 배포 하는 경우 NPS는 로컬 도메인 및 로컬 도메인을 신뢰 하는 도메인에 대 한 연결 요청에 대 한 인증, 권한 부여 및 계정을 수행 합니다.
 
@@ -39,7 +39,7 @@ NPS (네트워크 정책 서버)를 RADIUS(Remote Authentication Dial-In User Se
 
 ## <a name="plan-nps-configuration"></a>NPS 구성 계획
 
-Nps를 RADIUS 프록시로 사용 하는 경우 nps는 처리를 위해 NPS 또는 다른 RADIUS 서버에 대 한 연결 요청을 전달 합니다. 따라서 NPS 프록시의 도메인 멤버 자격은 관련이 없습니다. 프록시는 사용자 계정의 전화 접속 속성에 액세스할 필요가 없기 때문에 Active Directory Domain Services \(AD DS @ no__t-1에 등록할 필요가 없습니다. 또한 프록시에서 연결 요청에 대 한 권한 부여를 수행 하지 않기 때문에 NPS 프록시에서 네트워크 정책을 구성할 필요가 없습니다. NPS 프록시는 도메인 구성원이 될 수도 있고 도메인 멤버 자격이 없는 독립 실행형 서버 일 수도 있습니다.
+Nps를 RADIUS 프록시로 사용 하는 경우 nps는 처리를 위해 NPS 또는 다른 RADIUS 서버에 대 한 연결 요청을 전달 합니다. 따라서 NPS 프록시의 도메인 멤버 자격은 관련이 없습니다. 프록시는 사용자 계정의 전화 접속 속성에 액세스할 필요가 없기 때문에 Active Directory Domain Services \(AD DS\)에 등록할 필요가 없습니다. 또한 프록시에서 연결 요청에 대 한 권한 부여를 수행 하지 않기 때문에 NPS 프록시에서 네트워크 정책을 구성할 필요가 없습니다. NPS 프록시는 도메인 구성원이 될 수도 있고 도메인 멤버 자격이 없는 독립 실행형 서버 일 수도 있습니다.
 
 NPS는 RADIUS 프로토콜을 사용 하 여 네트워크 액세스 서버 라고도 하는 RADIUS 클라이언트와 통신 하도록 구성 되어야 합니다. 또한 NPS가 이벤트 로그에 기록 하는 이벤트 유형을 구성할 수 있으며 서버에 대 한 설명을 입력할 수 있습니다.
 
@@ -59,7 +59,7 @@ NPS 프록시 구성 계획 중에 다음 단계를 사용할 수 있습니다.
 
 ## <a name="plan-radius-clients"></a>RADIUS 클라이언트 계획
 
-RADIUS 클라이언트는 무선 액세스 @no__t 지점과 같은 네트워크 액세스 서버, VPN @ no__t 서버, 802.1 X 가능 스위치 및 전화 접속 서버와 같은 네트워크 액세스 서버입니다. 연결 요청 메시지를 RADIUS 서버로 전달 하는 RADIUS 프록시는 RADIUS 클라이언트 이기도 합니다. NPS는 RFC 2865, "원격 인증 전화 접속 사용자 서비스 \(RADIUS @ no__t-1", RFC 2866, "RADIUS 계정"에 설명 된 대로 RADIUS 프로토콜을 준수 하는 모든 네트워크 액세스 서버 및 RADIUS 프록시를 지원 합니다.
+RADIUS 클라이언트는 무선 액세스 \(지점과 같은 VPN\) 서버, 802.1 X 가능 스위치 및 전화 접속 서버와 같은 네트워크 액세스 서버입니다. 연결 요청 메시지를 RADIUS 서버로 전달 하는 RADIUS 프록시는 RADIUS 클라이언트 이기도 합니다. NPS는 RFC 2865, "원격 인증 전화 접속 사용자 서비스 \(RADIUS\)", RFC 2866, "RADIUS 계정"에 설명 된 대로 RADIUS 프로토콜을 준수 하는 모든 네트워크 액세스 서버 및 RADIUS 프록시를 지원 합니다.
 
 또한 두 무선 액세스 지점과 스위치 모두 802.1 X 인증을 수행할 수 있어야 합니다. EAP (확장할 수 있는 인증 프로토콜) 또는 PEAP (Protected Extensible Authentication Protocol)를 배포 하려는 경우 액세스 지점과 스위치가 EAP 사용을 지원 해야 합니다.
 
@@ -155,7 +155,7 @@ NPS 계정 계획 중에 다음 단계를 사용할 수 있습니다.
 
 - 다른 서버에 계정 메시지를 전달 하려는 경우 연결 요청 정책 구성 단계를 계획 합니다. NPS 프록시에 대해 로컬 계정을 사용 하지 않도록 설정 하는 경우 해당 프록시에서 구성 하는 각 연결 요청 정책에서 계정 메시지 전달을 사용 하도록 설정 하 고 올바르게 구성 해야 합니다.
 
-- 사용할 로깅 형식을 결정 합니다. IAS 형식 로그 파일, 데이터베이스 호환 형식 로그 파일 또는 NPS SQL Server 로깅
+- 사용할 로깅 형식을 결정 합니다. IAS 형식 로그 파일, 데이터베이스 호환 형식 로그 파일 또는 NPS SQL Server 로깅입니다.
 
 RADIUS 프록시로 NPS에 대 한 부하 분산을 구성 하려면 [Nps 프록시 서버 부하 분산](nps-manage-proxy-lb.md)을 참조 하세요.
 

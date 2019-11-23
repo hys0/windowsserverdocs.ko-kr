@@ -22,7 +22,7 @@ ms.locfileid: "71379601"
 ---
 # <a name="change-port"></a>change port
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 MS-DOS 응용 프로그램과 호환 되도록 COM 포트 매핑을 나열 하거나 변경 합니다.
 이 명령을 사용 하는 방법에 대 한 예는 [예제](#BKMK_examples)를 참조 하세요.
@@ -54,5 +54,6 @@ MS-DOS 응용 프로그램과 호환 되도록 COM 포트 매핑을 나열 하�
 >   change port /query
 >   ```
 >   #### <a name="additional-references"></a>추가 참조
->   [명령줄 구문 키](command-line-syntax-key.md)@no__t[변경](change.md)
->   [원격 데스크톱 서비스 &#40;터미널&#41; 서비스 명령 참조](remote-desktop-services-terminal-services-command-reference.md)
+>   명령줄 [구문 키](command-line-syntax-key.md)
+>   [변경](change.md)
+>   [원격 데스크톱 서비스 &#40;터미널 서비스&#41; 명령 참조](remote-desktop-services-terminal-services-command-reference.md)

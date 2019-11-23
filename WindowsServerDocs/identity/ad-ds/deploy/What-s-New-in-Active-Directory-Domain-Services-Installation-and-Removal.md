@@ -110,21 +110,21 @@ AD DS 설치 마법사는 설치 전에 다음 필수 구성 요소가 충족되
   
 예를 들어 Adprep 관련 필수 구성 요소에는 다음 항목이 포함됩니다.  
 
-- Adprep 자격 증명 확인: Adprep을 실행 해야 하는 경우 설치 마법사는 사용자에 게 필요한 Adprep 작업을 실행할 수 있는 충분 한 권한이 있는지 확인 합니다.  
-- 스키마 마스터 가용성 검사: 설치 마법사에서 adprep/forestprep를 실행 해야 한다고 결정 하면 스키마 마스터가 온라인 상태 인지 확인 하 고 그렇지 않으면 실패 합니다.  
-- 인프라 마스터 가용성 검사: 설치 마법사에서 adprep/domainprep를 실행 해야 한다고 결정 한 경우 인프라 마스터가 온라인 상태 인지 확인 하 고 그렇지 않으면 실패 합니다.
+- Adprep 자격 증명 확인: adprep을 실행해야 하는 경우 설치 마법사는 사용자에게 필요한 Adprep 작업을 실행하는 데 필요한 권한이 있는지 확인합니다.  
+- 스키마 마스터 사용 가능 여부 확인: 설치 마법사에서 adprep /forestprep을 실행해야 함을 확인한 경우 스키마가 온라인 상태인지 확인합니다. 온라인 상태가 아닐 경우 작업에 실패합니다.  
+- 인프라 마스터 사용 가능 여부 확인: 설치 마법사에서 adprep /domainprep을 실행해야 함을 확인한 경우 인프라 마스터가 온라인 상태인지 확인합니다. 온라인 상태가 아닐 경우 작업에 실패합니다.
 
 레거시 Active Directory 설치 마법사(dcpromo.exe)에서 가져온 기타 필수 구성 요소 확인으로는 다음과 같은 확인이 있습니다.  
 
-- 포리스트 이름 확인: 포리스트 이름이 유효 하 고 현재 존재 하지 않는지 확인 합니다.  
-- NetBIOS 이름 확인: 제공 된 NetBIOS 이름이 유효 하 고 기존 이름과 충돌 하지 않는지 확인 합니다.  
-- 구성 요소 경로 확인: Active Directory 데이터베이스, 로그 및 SYSVOL에 대 한 경로가 유효 하 고 사용 가능한 디스크 공간이 충분 한지 확인 합니다.  
-- 자식 도메인 이름 확인: 부모 및 새 자식 도메인 이름이 유효 하 고 기존 도메인과 충돌 하지 않는지 확인 합니다.  
-- 트리 도메인 이름 확인: 지정 된 트리 이름이 유효 하 고 현재 존재 하지 않는지 확인 합니다.  
+- 포리스트 이름 확인: 포리스트 이름이 유효하고 현재 존재하는 이름이 아닌지 확인합니다.  
+- NetBIOS 이름 확인: 제공된 NetBIOS 이름이 유효하고 기존의 이름과 충돌하지 않는지 확인합니다.  
+- 구성 요소 경로 확인: Active Directory 데이터베이스, 로그 및 SYSVOL의 경로가 유효하고 이러한 항목에 대해 사용 가능한 디스크 공간이 충분한지 확인합니다.  
+- 자식 도메인 이름 확인: 부모 도메인 이름 및 새로운 자식 도메인 이름이 유효하고 기존의 도메인과 충돌하지 않는지 확인합니다.  
+- 트리 도메인 이름 확인: 지정된 트리 이름이 유효하고 현재 존재하는 이름이 아닌지 확인합니다.  
 
 ## <a name="BKMK_SystemReqs"></a>시스템 요구 사항
 
-Windows server 2012에 대 한 시스템 요구 사항은 Windows 2008 Server 2008 r 2에서 변경 되지 않았습니다. 자세한 내용은 [Windows Server 2008 R2 SP1 시스템 요구 사항](https://www.microsoft.com/windowsserver2008/en/us/system-requirements.aspx) (https://www.microsoft.com/windowsserver2008/en/us/system-requirements.aspx) 을 참조 하세요.  
+Windows server 2012에 대 한 시스템 요구 사항은 Windows 2008 Server 2008 r 2에서 변경 되지 않았습니다. 자세한 내용은 [Windows Server 2008 R2 SP1 시스템 요구 사항](https://www.microsoft.com/windowsserver2008/en/us/system-requirements.aspx) (https://www.microsoft.com/windowsserver2008/en/us/system-requirements.aspx)을 참조 하세요.  
 
 일부 기능에는 추가 요구 사항이 포함될 수 있습니다. 예를 들어 가상 도메인 컨트롤러 복제 기능을 사용 하려면 PDC 에뮬레이터에서 Windows Server 2012를 실행 하 고 Hyper-v 역할이 설치 된 Windows Server 2012를 실행 하는 컴퓨터를 실행 해야 합니다.  
 
@@ -168,7 +168,7 @@ Windows server 2012에 대 한 시스템 요구 사항은 Windows 2008 Server 20
 
    이 경우 반환된 오류 메시지는 다음과 같습니다.  
 
-   복제 원본 도메인 컨트롤러 *원본 도메인 컨트롤러 이름*에 연결할 수 없습니다(예외: 예외: 로그온 실패: 알 수 없는 사용자 이름 또는 잘못 된 암호)  
+   복제 원본 도메인 컨트롤러 *원본 도메인 컨트롤러 이름*에 연결할 수 없습니다(예외: 로그온 실패: 알 수 없는 사용자 이름 또는 잘못된 암호).  
 
    대상 서버를 도메인에 가입시킨 후 스마트 카드를 사용하여 설치를 수행하면 설치가 제대로 수행됩니다.  
   
@@ -176,7 +176,7 @@ Windows server 2012에 대 한 시스템 요구 사항은 Windows 2008 Server 20
 
    이 경우 기본 64비트 프로세스를 지원하지 않는 cmdlet과 별도로 ADDSDeployment cmdlet을 실행해야 합니다.  
 
-- 복원 파일 시스템 이라는 Windows Server 2012에는 새로운 파일 시스템이 있습니다. ReFS(복원 파일 시스템)로 포맷된 데이터 볼륨에 Active Directory 데이터베이스, 로그 파일 또는 SYSVOL을 저장하지 마십시오. ReFS에 대 한 자세한 내용은 Windows 용 차세대 파일 시스템 구축을 참조 @no__t 하세요. ReFS @ no__t-0.  
+- 복원 파일 시스템 이라는 Windows Server 2012에는 새로운 파일 시스템이 있습니다. ReFS(복원 파일 시스템)로 포맷된 데이터 볼륨에 Active Directory 데이터베이스, 로그 파일 또는 SYSVOL을 저장하지 마십시오. ReFS에 대한 자세한 내용은 [차세대 Windows 파일 시스템 개발: ReFS](http://blogs.msdn.com/b/b8/archive/2012/01/16/building-the-next-generation-file-system-for-windows-refs.aspx)를 참조하세요.  
 - 서버 관리자에서 Server Core 설치에서 AD DS 또는 기타 서버 역할을 실행 하 고 Windows Server 2012로 업그레이드 하는 서버 이벤트 및 상태가 예상 대로 수집 하는 경우에 서버 역할이 빨간색 상태로 나타날 수 있습니다. 예비 릴리스 Windows Server 2012의 Server Core 설치를 실행 하는 서버에도 영향을 줄 수 있습니다.  
 
 ### <a name="active-directory-domain-services-installation-hangs-if-an-error-prevents-critical-replication"></a>오류로 인해 중요한 복제가 수행되지 않는 경우 Active Directory 도메인 서비스 설치가 정지됩니다.

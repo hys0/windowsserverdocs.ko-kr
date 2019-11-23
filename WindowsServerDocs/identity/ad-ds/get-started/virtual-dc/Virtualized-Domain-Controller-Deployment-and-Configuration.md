@@ -91,7 +91,7 @@ Microsoft에서는 Windows 7 Virtual PC, Virtual PC 2007, Virtual PC 2004 및 Vi
 >   
 > 스냅샷을 복원하면 스냅샷 후 해당 도메인 컨트롤러에서 발생한 이전에 복제되지 않은 변경 내용이 영구적으로 손실됩니다. 안전 복원은 실수로 인한 도메인 컨트롤러 격리 *만*방지하기 위해 신뢰할 수 없는 자동 복원을 구현합니다.  
   
-USN 버블 및 느린 개체에 대 한 자세한 내용은 @no__t-Active Directory 0Troubleshooting 오류을 참조 하십시오. "개체를 만들기 위해 충분 한 특성이 지정 되지 않았습니다." ](https://support.microsoft.com/kb/2028495)  
+USN 버블 및 느린 개체에 대한 자세한 내용은 [Troubleshooting Active Directory operations that fail with error 8606: "Insufficient attributes were given to create an object"(8606 오류 "개체를 만들기 위해 충분한 특성이 지정되지 않았습니다."로 인해 실패한 Active Directory 작업 문제 해결)](https://support.microsoft.com/kb/2028495)를 참조하세요.  
   
 ## <a name="BKMK_VDCCloning"></a>가상화 된 도메인 컨트롤러 복제  
 그래픽 도구를 사용하든 Windows PowerShell을 사용하든 가상화된 도메인 컨트롤러를 복제하려면 몇 가지 단계를 수행해야 합니다. 상위 수준에는 다음 세 단계가 있습니다.  
@@ -100,7 +100,7 @@ USN 버블 및 느린 개체에 대 한 자세한 내용은 @no__t-Active Direct
   
 -   1단계: 하이퍼바이저가 VM-Generation ID를 지원하며, 따라서 복제를 지원하는지 확인  
   
--   2단계: PDC 에뮬레이터 역할이 Windows Server 2012를 실행 하 고 온라인 상태이 고 복제 하는 동안 복제 된 도메인 컨트롤러에서 연결할 수 있는 도메인 컨트롤러에 의해 호스트 되는지 확인 합니다.  
+-   2 단계: PDC 에뮬레이터 역할 복제 하는 동안 복제 된 도메인 컨트롤러에서 Windows Server 2012를 실행 하 고 온라인 상태이 고 연결할 수는 도메인 컨트롤러에서 호스팅되는 것을 확인 합니다.  
   
 **원본 도메인 컨트롤러 준비**  
   
@@ -110,7 +110,7 @@ USN 버블 및 느린 개체에 대 한 자세한 내용은 @no__t-Active Direct
   
 -   5단계: DCCloneConfig.xml 만들기  
   
--   6단계: 원본 도메인 컨트롤러를 오프라인 상태로 전환  
+-   6단계: 원본 도메인 컨트롤러를 오프라인으로 전환  
   
 **복제 된 도메인 컨트롤러 만들기**  
   

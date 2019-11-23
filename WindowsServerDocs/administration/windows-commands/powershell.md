@@ -30,7 +30,7 @@ Windows PowerShell은 시스템 관리를 위해 특별히 설계 된 작업 기
 
 **Powershell .exe** 명령줄 도구를 사용 하 여 명령 프롬프트 창에서 Windows powershell 세션을 시작할 수 있습니다.
 
-- 명령 프롬프트 창에서 Windows PowerShell 세션을 시작 하려면 `PowerShell`을 입력 합니다. Windows PowerShell 세션에 있음을 나타내기 위해 **PS** 접두사가 명령 프롬프트에 추가 됩니다.
+- 명령 프롬프트 창에서 Windows PowerShell 세션을 시작 하려면 `PowerShell`를 입력 합니다. Windows PowerShell 세션에 있음을 나타내기 위해 **PS** 접두사가 명령 프롬프트에 추가 됩니다.
 
 - 특정 실행 정책으로 세션을 시작 하려면 **set-executionpolicy** 매개 변수를 사용 합니다.
 
@@ -56,9 +56,9 @@ Windows PowerShell은 시스템 관리를 위해 특별히 설계 된 작업 기
     PowerShell.exe -help, -?, /?
     ```
 
-- 명령 프롬프트 창에서 Windows PowerShell 세션을 종료 하려면 `exit`을 입력 합니다. 일반적인 명령 프롬프트는를 반환 합니다.
+- 명령 프롬프트 창에서 Windows PowerShell 세션을 종료 하려면 `exit`를 입력 합니다. 일반적인 명령 프롬프트는를 반환 합니다.
 
-**PowerShell .exe** 명령줄 매개 변수의 전체 목록은 [about_PowerShell](https://go.microsoft.com/fwlink/?LinkID=113439)를 참조 하세요.
+**PowerShell .exe** 명령줄 매개 변수의 전체 목록은 [about_PowerShell](https://go.microsoft.com/fwlink/?LinkID=113439)를 참조 하십시오.
 
 ## <a name="other-ways-to-start-windows-powershell"></a>Windows PowerShell을 시작 하는 다른 방법
 
@@ -70,5 +70,7 @@ Windows PowerShell은 Windows Server 운영 체제의 Server Core 설치 옵션�
 
 ## <a name="additional-references"></a>추가 참조
 
-[about_PowerShell](https://go.microsoft.com/fwlink/?LinkID=113439)
-[about_PowerShell_Ise](https://go.microsoft.com/fwlink/?LinkId=256512)@no__t[windows powershell을 사용 하 여](https://technet.microsoft.com/scriptcenter/dd742419) windows[powershell](https://go.microsoft.com/fwlink/?LinkID=107116)@no__t 5 스크립팅 참고 항목
+windows powershell을 사용 하는 [about_PowerShell](https://go.microsoft.com/fwlink/?LinkID=113439)
+[about_PowerShell_Ise .exe](https://go.microsoft.com/fwlink/?LinkId=256512) 를 [
+
+windows](https://go.microsoft.com/fwlink/?LinkID=107116) [powershell을 사용 하 여 스크립팅을](https://technet.microsoft.com/scriptcenter/dd742419) 참조 하세요.

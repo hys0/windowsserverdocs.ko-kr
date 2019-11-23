@@ -22,7 +22,7 @@ ms.locfileid: "71372863"
 ---
 # <a name="nslookup-set-retry"></a>nslookup set retry
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 재시도 횟수를 설정합니다.
 ## <a name="syntax"></a>구문
@@ -40,4 +40,4 @@ set retry=<Number>
 - 요청에 회신 하는 특정 시간 내에 수신 되지 않으면, 제한 시간을 두 배로 증가 하 고는 요청을 다시 보냅니다. 다시 시도 값을 포기 하기 전에 다시는 요청을 보내는 횟수를 제어 합니다. 와 제한 시간을 변경할 수는 **제한 시간 설정** 하위 명령.
   ## <a name="additional-references"></a>추가 참조
   [명령줄 구문 키](command-line-syntax-key.md)
-  [nslookup 집합 시간 제한](nslookup-set-timeout.md)
+  [nslookup 설정 시간 제한](nslookup-set-timeout.md)

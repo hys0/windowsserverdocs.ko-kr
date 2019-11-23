@@ -32,24 +32,24 @@ WMSshell 사용자 계정은 MultiPoint 서비스에서 콘솔에 로그인 하�
 > [!NOTE]  
 > 그룹 정책을 업데이트 하는 방법에 대 한 자세한 내용은 [로컬 그룹 정책 편집기](https://technet.microsoft.com/library/dn265982.aspx)를 참조 하세요.  
   
-**POLICY** 사용자 구성 > 관리 템플릿 > 제어판 > **개인 설정**  
+**정책:** 사용자 구성 > 관리 템플릿 > 제어판 > **개인 설정**  
   
 다음 값을 할당 합니다.  
   
 |설정|값|  
 |-----------|----------|  
-|화면 보호기 사용|사용 안 함|  
-|화면 보호기 시간 제한|사용 안 함<br /><br />초: xxx|  
-|암호로 화면 보호기 보호|사용 안 함|  
+|화면 보호기 사용|해제됨|  
+|화면 보호기 시간 제한|해제됨<br /><br />초: xxx|  
+|암호로 화면 보호기 보호|해제됨|  
   
-**POLICY** 컴퓨터 구성 > Windows 설정 > 보안 설정 > 로컬 정책 > 사용자 권한 할당 > 로컬 **로그온 허용**  
+**정책:** 컴퓨터 구성 > Windows 설정 > 보안 설정 > 로컬 정책 > 사용자 권한 할당 > 로컬 **로그온 허용**  
   
 |설정|값|  
 |-----------|----------|  
 |로컬 로그온 허용|계정 목록에 WMSshell 계정이 포함 되어 있는지 확인 합니다.<br /><br />**참고:** 기본적으로 WMSshell 계정은 Users 그룹의 구성원입니다. 사용자 그룹이 목록에 있고 WMSshell가 Users 그룹의 구성원 인 경우에는 WMSshell 계정을 목록에 추가할 필요가 없습니다.|  
   
 > [!IMPORTANT]  
-> 그룹 정책을 설정 하는 경우 해당 정책이 MultiPoint 서버에서 자동 업데이트 및 오류 Windows 오류 보고를 방해 하지 않는지 확인 합니다. 이러한 설정은 **자동으로 업데이트 설치** 및 Windows multipoint server 설치 중에 선택 되었거나 **서버 설정 편집**을 사용 하 여 다중 포인트 관리자에서 구성 된 **자동 Windows 오류 보고** 설정에 의해 설정 됩니다. 디스크 보호를 위해 예약 된 업데이트에서 구성 됩니다.  
+> 그룹 정책을 설정 하는 경우 해당 정책이 MultiPoint 서버에서 자동 업데이트 및 오류 Windows 오류 보고를 방해 하지 않는지 확인 합니다. 이러한 설정은 **자동으로 업데이트 설치** 및 자동 **Windows 오류 보고** 설정에 의해 설정 되며,이 설정은 **서버 설정 편집**을 사용 하 여 Multipoint Manager에서 구성 되거나, 디스크 보호를 위해 예약 된 업데이트에서 구성 된 Windows multipoint server 설치 중에 선택 되었습니다.  
   
 ## <a name="update-the-registry"></a>레지스트리 업데이트  
 MultiPoint 서비스의 도메인 배포의 경우 다음 레지스트리 하위 키를 업데이트 해야 합니다.  
@@ -63,7 +63,7 @@ MultiPoint 서비스의 도메인 배포의 경우 다음 레지스트리 하위
   
 2.  왼쪽 창에서 다음 레지스트리 하위 키를 찾아 선택 합니다.  
   
-    HKEY_USERS @ no__t-0SIDofWMSshell > \Software\Policies\Microsoft\Windows\Control Panel\Desktop  
+    HKEY_USERS\<SIDofWMSshell > \Software\Policies\Microsoft\Windows\Control Panel\Desktop  
   
     여기서 '<SIDofWMSshell>'는 WMSshell 계정에 대 한 SID (보안 식별자)입니다. SID를 식별 하는 방법에 대 한 자세한 내용은 [사용자 이름을 sid (보안 식별자)와 연결 하는 방법](https://support.microsoft.com/kb/154599)을 참조 하세요.  
   

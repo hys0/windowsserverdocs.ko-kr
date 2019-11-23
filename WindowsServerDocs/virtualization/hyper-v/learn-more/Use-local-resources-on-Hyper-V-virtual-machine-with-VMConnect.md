@@ -24,7 +24,7 @@ ms.locfileid: "71392890"
 
 VMConnect (가상 컴퓨터 연결)를 사용 하면 이동식 USB 플래시 드라이브 또는 프린터와 같은 가상 컴퓨터에서 컴퓨터의 로컬 리소스를 사용할 수 있습니다. 고급 세션 모드를 사용 하면 VMConnect 창의 크기를 조정할 수도 있습니다. 이 문서에서는 호스트를 구성한 다음 가상 컴퓨터에 로컬 리소스에 대 한 액세스 권한을 부여 하는 방법을 보여 줍니다.
 
-고급 세션 모드 및 형식 클립보드 텍스트는 최근 Windows 운영 체제를 실행 하는 가상 컴퓨터에만 사용할 수 있습니다. @no__t 아래에서 [로컬 리소스를 사용 하기 위한 요구 사항을](#requirements-for-using-local-resources)참조 하세요. \) 
+고급 세션 모드 및 형식 클립보드 텍스트는 최근 Windows 운영 체제를 실행 하는 가상 컴퓨터에만 사용할 수 있습니다. 아래에서 [로컬 리소스를 사용 하기 위한 요구 사항을](#requirements-for-using-local-resources)참조 \(.\) 
 
 Ubuntu를 실행 하는 가상 컴퓨터에 대 한 참조 [Hyper-v VM에서 Ubuntu 화면 해상도 변경](https://blogs.msdn.microsoft.com/virtual_pc_guy/2014/09/19/changing-ubuntu-screen-resolution-in-a-hyper-v-vm/)합니다. 
   
@@ -138,7 +138,7 @@ VMConnect를 실행 하는 컴퓨터와 가상 컴퓨터가 모두 요구 사항
   
 -   RDP를 사용하지 않고 USB 및 사운드 리디렉션이 필요한 개발자 응용 프로그램을 테스트하고 문제를 해결하려는 경우  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [가상 컴퓨터에 연결](https://technet.microsoft.com/library/cc742407.aspx)  
 [Hyper-v에서 1 세대 또는 2 세대 가상 머신을 만들어야 하나요?](../plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md)
 

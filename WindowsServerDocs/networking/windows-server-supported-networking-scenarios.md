@@ -18,7 +18,7 @@ ms.locfileid: "71395702"
 ---
 # <a name="windows-server-supported-networking-scenarios"></a>Windows Server 지원 네트워킹 시나리오
 
->적용 대상: Windows Server \(Semi 채널 @ no__t-1, Windows Server 2016
+>적용 대상: Windows Server \(반기 채널\), Windows Server 2016
 
 이 항목 수 또는이 버전의 Windows Server 2016를 사용 하 여 수행할 수 있는 지원 되거나 지원 되지 않는 시나리오에 대 한 정보를 제공 합니다.  
 >[!IMPORTANT]
@@ -38,7 +38,7 @@ ms.locfileid: "71395702"
   
 -   [NIC 팀 시나리오](#bkmk_nicteam)
 
-- [포함 된 팀 전환 \(SET @ no__t 시나리오](#bkmk_set)
+- [\) 시나리오를 설정 하 \(포함 된 팀 전환](#bkmk_set)
   
 ### <a name="bkmk_sdn"></a>SDN (소프트웨어 정의 네트워킹) 시나리오
  
@@ -165,11 +165,11 @@ NIC 팀 등의 시나리오를 수행할 수 있습니다.
 -   NIC 팀에서 네트워크 어댑터를 제거 합니다.  
   
 > [!NOTE]  
-> 하지만 Windows Server 2016에서 사용할 수 있습니다 NIC 팀에서 하이퍼-V 일부 경우에 큐 VMQ (가상 컴퓨터) 수 자동으로 사용 하도록 설정 하지 내부 네트워크 어댑터에 NIC 팀을 만들 때. 이 경우 다음 Windows PowerShell 명령을 사용 하 여 NIC 팀 구성원 어댑터에서 VMQ가 사용 하도록 설정 되었는지 확인할 수 있습니다. `Set-NetAdapterVmq -Name <NetworkAdapterName> -Enable`  
+> 하지만 Windows Server 2016에서 사용할 수 있습니다 NIC 팀에서 하이퍼-V 일부 경우에 큐 VMQ (가상 컴퓨터) 수 자동으로 사용 하도록 설정 하지 내부 네트워크 어댑터에 NIC 팀을 만들 때. 이 문제가 발생 하는 경우 다음 Windows PowerShell 명령을 사용 하 여 NIC 팀 구성원 어댑터에서 VMQ가 사용 하도록 설정 되었는지 확인할 수 있습니다. `Set-NetAdapterVmq -Name <NetworkAdapterName> -Enable`  
 
 자세한 내용은 참조 [NIC 팀](technologies/nic-teaming/NIC-Teaming.md)합니다. 
 
-### <a name="bkmk_set"></a>포함 된 팀 전환 \(SET @ no__t 시나리오
+### <a name="bkmk_set"></a>\) 시나리오를 설정 하 \(포함 된 팀 전환
 
 집합은 Windows Server 2016에 Hyper-v 및 네트워킹 SDN (소프트웨어) 스택을 포함 하는 환경에서 사용할 수 있는 대체 NIC 팀 솔루션. 일부 NIC 팀 기능은 Hyper-v 가상 스위치에 통합 하는 설정 합니다. 
 

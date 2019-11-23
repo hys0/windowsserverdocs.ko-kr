@@ -36,7 +36,7 @@ revert <ShadowCopyID>
 
 |매개 변수|설명|
 |---------|-----------|
-|@no__t 0ShadowCopyID >|볼륨을 되돌리려면 섀도 복사본 ID를 지정 합니다.|
+|\<ShadowCopyID >|볼륨을 되돌리려면 섀도 복사본 ID를 지정 합니다.|
 
 #### <a name="additional-references"></a>추가 참조
 

@@ -100,7 +100,7 @@ Windows 원격 관리 (WinRM), 원격 GPUpdate 및 원격 SCCM 업데이트 시�
 
 Windows PowerShell 스크립트를 사용 하 고 WMI(Windows Management Instrumentation) (WMI) 브리지를 사용 하 여 장치 터널을 구성할 수 있습니다. Always On VPN 장치 터널은 **로컬 시스템** 계정의 컨텍스트에서 구성 해야 합니다. 이를 위해 [Sysinternals](https://docs.microsoft.com/sysinternals/) 유틸리티 모음에 포함 된 [PsTools](https://docs.microsoft.com/sysinternals/downloads/pstools) 중 하나인 [PsExec](https://docs.microsoft.com/sysinternals/downloads/psexec)를 사용 해야 합니다.
 
-장치당 @no__t를 배포 하는 방법에 대 한 지침은-0 및 사용자별 `(.\User)` 프로필을 참조 하세요. [WMI 브리지 공급자와 함께 PowerShell 스크립팅 사용](https://docs.microsoft.com/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)을 참조 하세요.
+장치당 사용자별 `(.\User)` 프로필 `(.\Device)`를 배포 하는 방법에 대 한 지침은 [WMI 브리지 공급자와 함께 PowerShell 스크립팅 사용](https://docs.microsoft.com/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)을 참조 하세요.
 
 다음 Windows PowerShell 명령을 실행 하 여 장치 프로필을 성공적으로 배포 했는지 확인 합니다.
 
@@ -108,7 +108,7 @@ Windows PowerShell 스크립트를 사용 하 고 WMI(Windows Management Instrum
   Get-VpnConnection -AllUserConnection
   ```
 
-출력에는 장치에 배포 된 device @ no__t-0wide VPN 프로필의 목록이 표시 됩니다.
+출력에는 장치에 배포 된 장치\-wide VPN 프로필의 목록이 표시 됩니다.
 
 ### <a name="example-windows-powershell-script"></a>Windows PowerShell 스크립트 예제
 
@@ -186,5 +186,5 @@ RAS (원격 액세스 서버) 게이트웨이 리소스는 다음과 같습니�
 - [IKEv2 기반 원격 액세스 구성](https://technet.microsoft.com/library/ff687731.aspx)
 
 >[!IMPORTANT]
->Microsoft RAS 게이트웨이에서 장치 터널을 사용 하는 경우에 설명 된 대로 ikev2 인증 **에 대해 컴퓨터 인증서 인증 허용** 방법을 사용 하도록 설정 하 여 ikev2 컴퓨터 인증서 인증을 지원 하도록 RRAS 서버를 구성 해야 합니다. [여기](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee922682%28v=ws.10%29)를 참조 하세요. 이 설정을 사용 하도록 설정 하 고 나면 **VpnAuthProtocol** PowerShell Cmdlet을 **RootCertificateNameToAccept** 선택적 매개 변수와 함께 사용 하 여 RRAS IKEv2 연결이에만 허용 되도록 하는 것이 좋습니다. 명시적으로 정의 된 내부/개인 루트 인증 기관에 연결 되는 VPN 클라이언트 인증서입니다. 또는 [여기](https://blogs.technet.microsoft.com/rrasblog/2009/06/10/what-type-of-certificate-to-install-on-the-vpn-server/)에 설명 된 대로 공용 인증 기관을 포함 하지 않도록 RRAS 서버의 **신뢰할 수 있는 루트 인증 기관** 저장소를 수정 해야 합니다. 다른 VPN 게이트웨이의 경우에도 유사한 방법을 고려해 야 합니다.
+>Microsoft RAS 게이트웨이와 함께 장치 터널을 사용 하는 경우 [여기](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee922682%28v=ws.10%29)에 설명 된 대로 **ikev2 인증에 대 한 컴퓨터 인증서 인증 허용** 방법을 사용 하도록 설정 하 여 ikev2 컴퓨터 인증서 인증을 지원 하도록 RRAS 서버를 구성 해야 합니다. 이 설정을 사용 하도록 설정 하 고 나면 **VpnAuthProtocol** PowerShell Cmdlet을 **RootCertificateNameToAccept** 선택적 매개 변수와 함께 사용 하 여 명시적으로 정의 된 내부/개인 루트 인증 기관에 연결 된 VPN 클라이언트 인증서에 대해서만 RRAS IKEv2 연결이 허용 되도록 하는 것이 좋습니다. 또는 [여기](https://blogs.technet.microsoft.com/rrasblog/2009/06/10/what-type-of-certificate-to-install-on-the-vpn-server/)에 설명 된 대로 공용 인증 기관을 포함 하지 않도록 RRAS 서버의 **신뢰할 수 있는 루트 인증 기관** 저장소를 수정 해야 합니다. 다른 VPN 게이트웨이의 경우에도 유사한 방법을 고려해 야 합니다.
 

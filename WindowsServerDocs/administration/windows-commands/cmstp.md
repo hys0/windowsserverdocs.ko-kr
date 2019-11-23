@@ -22,7 +22,7 @@ ms.locfileid: "71379273"
 ---
 # <a name="cmstp"></a>cmstp
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 설치 하거나 연결 관리자 서비스 프로필을 제거 합니다. 선택적 매개 변수 없이 사용 **cmstp** 사용자의 사용 권한을 클릭 하 여 운영 체제에 적합 한 기본 설정으로 서비스 프로필을 설치 합니다. 
 ## <a name="syntax"></a>구문
@@ -39,7 +39,7 @@ cmstp.exe [/nf] [/ni] [/ns] [/s] [/su] [/u]  [Drive:][path]ServiceProfileFileNam
 |-------|--------|
 |< ServiceProfileFileName >.exe|설치 하려는 프로필을 포함 하는 설치 패키지 이름으로 지정 합니다.<br /><br />구문 2에 대 한 구문 1에 있지만 유효 하지 않은 필요합니다.|
 |/q:는|프로필이 사용자에 게 확인 하지 않고 설치 수를 지정 합니다. 성공적으로 설치 하는 확인 메시지가 표시 됩니다.<br /><br />구문 2에 대 한 구문 1에 있지만 유효 하지 않은 필요합니다.|
-|[드라이브:] [path] @no__t 64,|필수. 프로필을 설치 해야 하는 방법을 결정 하는 구성 파일의 이름을 지정 합니다.<br /><br />[Drive:] [path] 매개 변수는 구문 1에 사용할 수 없습니다.|
+|[드라이브:] [path] <ServiceProfileFileName>.inf|필수 요소. 프로필을 설치 해야 하는 방법을 결정 하는 구성 파일의 이름을 지정 합니다.<br /><br />[Drive:] [path] 매개 변수는 구문 1에 사용할 수 없습니다.|
 |/nf|지원 파일을 설치 하지 않도록 지정 합니다.|
 |/ni|바탕 화면 아이콘을 생성 되지 않도록 지정 합니다. 이 매개 변수는 Windows 95, Windows 98, Windows NT 4.0 또는 Windows Millennium edition을 실행 하는 컴퓨터에만 유효 합니다.|
 |/ns|바탕 화면 바로 가기를 만들지 않도록 지정 합니다. 이 매개 변수는 Windows Server 2003 제품군, Windows 2000 또는 Windows XP의 멤버를 실행 하는 컴퓨터에만 유효 합니다.|

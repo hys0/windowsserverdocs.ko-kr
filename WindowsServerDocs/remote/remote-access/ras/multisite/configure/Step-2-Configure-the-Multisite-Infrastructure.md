@@ -300,7 +300,7 @@ PDC 에뮬레이터 역할을 실행 하는 도메인 컨트롤러 또는 서버
     ![Windows PowerShell](../../../../media/Step-2-Configure-the-Multisite-Infrastructure/DCAssocFinal.png)  
   
 ### <a name="ConfigDistOptimization"></a>구성 배포 최적화  
-구성 변경 작업을 수행 하는 경우 서버 Gpo 원격 액세스 서버에 전파 된 후에 변경 내용이 적용 됩니다. 구성 배포 시간을 줄이기 위해 원격 액세스는 서버 GPO를 만들 때 원격 액세스 서버에 가장 가까운 "<https://technet.microsoft.com/library/cc978016.aspx>" 하이퍼링크 인 쓰기 가능 도메인 컨트롤러를 자동으로 선택 합니다.  
+구성 변경 작업을 수행 하는 경우 서버 Gpo 원격 액세스 서버에 전파 된 후에 변경 내용이 적용 됩니다. 구성 배포 시간을 줄이기 위해 원격 액세스는 서버 GPO를 만들 때 원격 액세스 서버에 가장 가까운 "<https://technet.microsoft.com/library/cc978016.aspx>" 하이퍼링크 인 쓰기 가능한 도메인 컨트롤러를 자동으로 선택 합니다.  
   
 일부 시나리오에서는 해야 구성 배포 시간을 최적화 하기 위해 서버 GPO를 관리 하는 도메인 컨트롤러를 수동으로 수정 해야 합니다.  
   
@@ -334,6 +334,6 @@ PDC 에뮬레이터 역할을 실행 하는 도메인 컨트롤러 또는 서버
   
 ## <a name="BKMK_Links"></a>참고 항목  
   
--   [3단계: 멀티 사이트 배포 구성 @ no__t-0  
--   [1단계: 단일 서버 원격 액세스 배포 구현 @ no__t-0  
+-   [3 단계: 멀티 사이트 배포 구성](Step-3-Configure-the-Multisite-Deployment.md)  
+-   [1 단계: 단일 서버 원격 액세스 배포 구현](Step-1-Implement-a-Single-Server-Remote-Access-Deployment.md)  
 

@@ -22,7 +22,7 @@ ms.locfileid: "71372734"
 ---
 # <a name="nslookup-set"></a>nslookup set
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 구성 설정에 영향을 주는 변경 방법을 조회 함수입니다.
 ## <a name="syntax"></a>구문

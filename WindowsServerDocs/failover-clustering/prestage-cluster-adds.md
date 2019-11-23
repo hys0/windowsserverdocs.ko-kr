@@ -59,9 +59,9 @@ CNO를 자동으로 만들려면 장애 조치(failover) 클러스터를 만드�
 
 ![예제 Clusters OU에서 사용하지 않도록 설정된 CNO](media/prestage-cluster-adds/disabled-cno-in-the-example-clusters-ou.png)
 
-** 그림 1. 예제 클러스터 OU @ no__t-0에서 사용 하지 않도록 설정 된 CNO
+**그림 1. 예제 클러스터 OU에서 사용 하지 않도록 설정 된 CNO**
 
-## <a name="step-2-grant-the-user-permissions-to-create-the-cluster"></a>2단계: 사용자에 게 클러스터를 만들 수 있는 권한 부여
+## <a name="step-2-grant-the-user-permissions-to-create-the-cluster"></a>2단계: 사용자에게 클러스터를 만들 수 있는 권한 부여
 
 장애 조치(failover) 클러스터를 만드는 데 사용할 사용자 계정에 CNO에 대한 모든 권한이 부여되도록 사용 권한을 구성해야 합니다.
 
@@ -77,7 +77,7 @@ CNO를 자동으로 만들려면 장애 조치(failover) 클러스터를 만드�
   
    ![클러스터를 만들 사용자 또는 그룹에 모든 권한 부여](media/prestage-cluster-adds/granting-full-control-to-the-user-create-the-cluster.png)
   
-   **Figure 2. 클러스터를 만들 사용자 또는 그룹에 모든 권한 부여 @ no__t-0
+   **그림 2. 클러스터를 만들 사용자 또는 그룹에 모든 권한 부여**
 6. **확인**을 선택합니다.
 
 이 단계를 완료하면 권한을 부여받은 사용자가 장애 조치(failover) 클러스터를 만들 수 있습니다. 그러나 CNO가 OU에 있는 경우 사용자는 3단계를 완료할 때까지 클라이언트 액세스 지점이 필요한 클러스터된 역할을 만들 수 없습니다.
@@ -85,13 +85,13 @@ CNO를 자동으로 만들려면 장애 조치(failover) 클러스터를 만드�
 >[!NOTE]
 >CNO가 기본 컴퓨터 컨테이너에 있는 경우 클러스터 관리자는 추가 구성 없이 최대 10개의 VCO를 만들 수 있습니다. 10개가 넘는 VCO를 추가하려면 컴퓨터 컨테이너의 CNO에 **컴퓨터 개체 만들기** 권한을 명시적으로 부여해야 합니다.
 
-## <a name="step-3-grant-the-cno-permissions-to-the-ou-or-prestage-vcos-for-clustered-roles"></a>3단계: OU에 CNO 권한을 부여 하거나 클러스터 된 역할에 대 한 Vco 사전 준비
+## <a name="step-3-grant-the-cno-permissions-to-the-ou-or-prestage-vcos-for-clustered-roles"></a>3단계: CNO에 OU에 대한 권한을 부여하거나 클러스터된 역할에 대한 VCO 사전 준비
 
 클라이언트 액세스 지점이 있는 클러스터된 역할을 만들면 클러스터에서 CNO와 동일한 OU에 VCO를 만듭니다. 이 작업이 자동으로 수행되려면 CNO에는 OU에 컴퓨터 개체를 만들 수 있는 권한이 있어야 합니다.
 
 AD DS에서 CNO를 사전 준비한 경우 다음 중 하나를 수행하여 VCO를 만들 수 있습니다.
 
-- 옵션 1: [OU에 CNO 권한을 부여](#grant-the-cno-permissions-to-the-ou)합니다. 이 옵션을 사용하면 클러스터에서 VCO를 AD DS에 자동으로 만들 수 있습니다. 따라서 장애 조치(failover) 클러스터의 관리자는 AD DS에서 VCO를 사전 준비하도록 요청하지 않고도 클러스터된 역할을 만들 수 있습니다.
+- 옵션 1: [CNO에 OU에 대한 권한 부여](#grant-the-cno-permissions-to-the-ou). 이 옵션을 사용하면 클러스터에서 VCO를 AD DS에 자동으로 만들 수 있습니다. 따라서 장애 조치(failover) 클러스터의 관리자는 AD DS에서 VCO를 사전 준비하도록 요청하지 않고도 클러스터된 역할을 만들 수 있습니다.
 
 >[!NOTE]
 >이 옵션에 대한 단계를 완료하려면 최소한 **Domain Admins** 그룹의 구성원이거나 이와 동등한 자격을 갖추고 있어야 합니다.
@@ -104,7 +104,7 @@ AD DS에서 CNO를 사전 준비한 경우 다음 중 하나를 수행하여 VCO
 ### <a name="grant-the-cno-permissions-to-the-ou"></a>OU에 CNO 사용 권한 부여
 
 1. Active Directory 사용자 및 컴퓨터의 **보기** 메뉴에서 **고급 기능**이 선택되어 있는지 확인합니다.
-2. CNO를 만든 OU를 마우스 오른쪽 단추로 클릭 [Step 1: AD DS @ no__t-0에서 CNO를 사전 준비 하 고 **속성**을 선택 합니다.
+2. CNO를 만든 OU를 마우스 오른쪽 단추로 클릭 하 고 [1 단계: 사전 준비 AD DS CNO](#step-1-prestage-the-cno-in-ad-ds)를 클릭 한 다음 **속성**을 선택 합니다.
 3. **보안** 탭에서 **고급**을 선택 합니다.
 4. **고급 보안 설정** 대화 상자에서 **추가**를 선택 합니다.
 5. **보안 주체**옆에서 **보안 주체 선택**을 선택 합니다.
@@ -115,7 +115,7 @@ AD DS에서 CNO를 사전 준비한 경우 다음 중 하나를 수행하여 VCO
 
    ![CNO에 컴퓨터 개체 만들기 권한 부여](media/prestage-cluster-adds/granting-create-computer-objects-permission-to-the-cno.png)
 
-   ** 그림 3. CNO @ no__t에 대 한 컴퓨터 개체 만들기 권한 부여-0
+   **그림 3. CNO에 대 한 컴퓨터 개체 만들기 권한 부여**
 10. Active Directory 사용자 및 컴퓨터 스냅인으로 돌아갈 때까지 **확인** 을 선택 합니다.
 
 이제 장애 조치(failover) 클러스터의 관리자가 클라이언트 액세스 지점이 있는 클러스터된 역할을 만들고 리소스를 온라인 상태로 전환할 수 있습니다.

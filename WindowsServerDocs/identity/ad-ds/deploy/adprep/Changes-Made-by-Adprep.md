@@ -30,9 +30,9 @@ ms.locfileid: "71369430"
   
 -   [스키마 업데이트](../../../ad-ds/deploy/Schema-Updates.md)  
   
-## <a name="see-also"></a>관련 항목  
-[Windows Server 2008 R2: AD DS @ no__t를 지원 하기 위해 Adprep.exe 변경의 부록-0  
-[Windows Server 2008: AD DS @ no__t를 지원 하기 위해 Adprep.exe 변경의 부록-0  
+## <a name="see-also"></a>참고 항목  
+[Windows Server 2008 R2: AD DS을 지원 하기 위해 Adprep.exe 변경 내용](https://technet.microsoft.com/library/dd378876.aspx)  
+[Windows Server 2008: AD DS을 지원 하기 위해 Adprep.exe 변경 내용 부록](https://technet.microsoft.com/library/cc770703.aspx)  
   
 
 

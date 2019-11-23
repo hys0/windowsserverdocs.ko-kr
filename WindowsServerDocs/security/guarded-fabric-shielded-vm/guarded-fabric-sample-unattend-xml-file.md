@@ -17,7 +17,7 @@ ms.locfileid: "71386498"
 ---
 # <a name="create-os-specialization-answer-file"></a>OS 전문화 응답 파일 만들기
 
->적용 대상: Windows server 2019, Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server 2019, Windows Server (반기 채널), Windows Server 2016
 
 보호 된 Vm 배포를 준비 하는 경우 운영 체제 특수화 응답 파일을 만들어야 할 수 있습니다. Windows에서이를 일반적으로 "unattend.xml" 파일 이라고 합니다. **ShieldingDataAnswerFile** Windows PowerShell 함수를 사용 하면이 작업을 수행할 수 있습니다. 그런 다음 System Center Virtual Machine Manager (또는 기타 패브릭 컨트롤러)를 사용 하 여 템플릿에서 보호 된 Vm을 만들 때 응답 파일을 사용할 수 있습니다.
 
@@ -31,7 +31,7 @@ ms.locfileid: "71386498"
 Install-Module GuardedFabricTools -Repository PSGallery -MinimumVersion 1.0.0
 ```
 
-@No__t-0 출력을 추가 아티팩트와 함께 보호 데이터로 패키지 하 여 템플릿에서 보호 된 Vm을 만드는 데 사용할 수 있습니다.
+`unattend.xml` 출력을 추가 아티팩트와 함께 보호 데이터로 패키지 하 여 템플릿에서 보호 된 Vm을 만드는 데 사용할 수 있습니다.
 
 다음 섹션에서는 다양 한 옵션을 포함 하는 `unattend.xml` 파일에 함수 매개 변수를 사용 하는 방법을 보여 줍니다.
 
@@ -76,7 +76,7 @@ New-ShieldingDataAnswerFile -Path '.\ShieldedVMAnswerFile.xml' -AdminCredentials
 
 다음 명령은 System Center Virtual Machine Manager와 같이 패브릭 관리자가 배포 시 제공 하는 고정 IP 주소를 사용 하는 Windows 응답 파일을 만듭니다.
 
-Virtual Machine Manager는 IP 풀을 사용 하 여 고정 IP 주소에 세 가지 구성 요소를 제공 합니다. IPv4 주소, IPv6 주소, 게이트웨이 주소 및 DNS 주소입니다. 추가 필드를 포함 하거나 사용자 지정 네트워크 구성이 필요한 경우에는 스크립트에 의해 생성 된 응답 파일을 수동으로 편집 해야 합니다.
+IP 풀을 사용 하 여 고정 IP 주소에 대 한 세 가지 구성 요소인 IPv4 주소, IPv6 주소, 게이트웨이 주소 및 DNS 주소를 제공 하는 Virtual Machine Manager 합니다. 추가 필드를 포함 하거나 사용자 지정 네트워크 구성이 필요한 경우에는 스크립트에 의해 생성 된 응답 파일을 수동으로 편집 해야 합니다.
 
 다음 스크린샷은 Virtual Machine Manager에서 구성할 수 있는 IP 풀을 보여 줍니다. 이러한 풀은 고정 IP를 사용 하려는 경우에 필요 합니다.
 
@@ -92,7 +92,7 @@ Virtual Machine Manager는 IP 풀을 사용 하 여 고정 IP 주소에 세 가�
 
 ![고정 IP를 사용 하도록 하드웨어 구성](../media/Guarded-Fabric-Shielded-VM/guarded-host-unattend-static-ip-address-pool-network-adapter-settings.png)
 
-그런 다음 `-StaticIPPool` 매개 변수를 사용 하 여 응답 파일에 고정 IP 요소를 포함할 수 있습니다. 응답 파일에서-0, `@NextHop-1-1@` 및 `@DNSAddr-1-1@` @no__t 매개 변수는 배포 시 Virtual Machine Manager에서 지정한 실제 값으로 대체 됩니다.
+그런 다음 `-StaticIPPool` 매개 변수를 사용 하 여 응답 파일에 고정 IP 요소를 포함할 수 있습니다. 응답 파일의 `@IPAddr-1@`, `@NextHop-1-1@`및 `@DNSAddr-1-1@` 매개 변수는 배포 시 Virtual Machine Manager에서 지정한 실제 값으로 대체 됩니다.
 
 ```powershell
 $adminCred = Get-Credential -Message "Local administrator account"
@@ -128,7 +128,7 @@ $rootPassword = Read-Host -Prompt "Root password" -AsSecureString
 New-ShieldingDataAnswerFile -Path '.\ShieldedVMAnswerFile.xml' -RootPassword $rootPassword -RootSshKey '~\.ssh\id_rsa.pub'
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [보호된 VM 배포](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [보호된 패브릭 및 보호된 VM](guarded-fabric-and-shielded-vms-top-node.md)

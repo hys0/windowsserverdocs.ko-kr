@@ -22,7 +22,7 @@ ms.locfileid: "71372073"
 ---
 # <a name="prnmngr"></a>prnmngr
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 추가, 삭제 하 고, 프린터 또는 프린터 연결 설정 및 기본 프린터를 표시 하는 것 외에도 나열 합니다.
 
@@ -52,22 +52,22 @@ cscript Prnmngr {-a | -d | -x | -g | -t | -l | -?}[c] [-s <ServerName>]
 |              /?               |                                                                                                                                                                           명령 프롬프트에 도움말을 표시합니다.                                                                                                                                                                            |
 
 ## <a name="remarks"></a>설명
--   **Prndrvr.vbs** 명령은%WINdir%\System32\printing_Admin_Scripts @ no__t-1 @ no__t-2 디렉터리에 있는 Visual Basic 스크립트입니다. 이 명령을 사용 하려면 명령 프롬프트에서 **cscript** 다음에 **prnmngr** 파일의 전체 경로를 입력 하거나 디렉터리를 적절 한 폴더로 변경 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+-   **Prndrvr.vbs** 명령은%windir%\system32\ printing_Admin_Scripts\\<language> 디렉터리에 있는 Visual Basic 스크립트입니다. 이 명령을 사용 하려면 명령 프롬프트에서 **cscript** 다음에 **prnmngr** 파일의 전체 경로를 입력 하거나 디렉터리를 적절 한 폴더로 변경 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
     ```
     cscript %WINdir%\System32\printing_Admin_Scripts\en-US\prnmngr
     ```
 -   사용자가 제공 하는 정보에 공백이 포함 된 경우 텍스트에 따옴표를 사용 합니다 (예: `"computer Name"`).
 
 ## <a name="BKMK_examples"></a>예와
-로컬 컴퓨터의 LPT1에 연결 된 colorprinter_2 라는 프린터를 추가 하 고 color printer Driver1 라는 프린터 드라이버가 필요한 경우 다음을 입력 합니다.
+로컬 컴퓨터의 LPT1에 연결 된 colorprinter_2 이라는 프린터를 추가 하 고 컬러 프린터 Driver1 이라는 프린터 드라이버가 필요한 경우 다음을 입력 합니다.
 ```
 cscript prnmngr -a -p colorprinter_2 -m "color printer Driver1" -r lpt1:
 ```
-HRServer 라는 원격 컴퓨터에서 colorprinter_2 이라는 프린터를 삭제 하려면 다음을 입력 합니다.
+HRServer 이라는 원격 컴퓨터에서 이름이 colorprinter_2 인 프린터를 삭제 하려면 다음을 입력 합니다.
 ```
 cscript prnmngr -d -s HRServer -p colorprinter_2 
 ```
 
 #### <a name="additional-references"></a>추가 참조
-[명령줄 구문 키](command-line-syntax-key.md)
+명령줄 [구문 키](command-line-syntax-key.md)
 [인쇄 명령 참조](print-command-reference.md)

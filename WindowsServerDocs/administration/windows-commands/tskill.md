@@ -22,7 +22,7 @@ ms.locfileid: "71392336"
 ---
 # <a name="tskill"></a>tskill
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 원격 데스크톱 세션 호스트 (rd 세션 호스트) 서버에서 세션에서 실행 중인 프로세스를 종료 합니다.
 이 명령을 사용 하는 방법에 대 한 예는 [예제](#BKMK_examples)를 참조 하세요.
@@ -40,9 +40,9 @@ tskill {<ProcessID> | <ProcessName>} [/server:<ServerName>] [/id:<SessionID> | /
 |매개 변수|설명|
 |-------|--------|
 |\<ProcessID >|종료 하려는 프로세스의 ID를 지정 합니다.|
-|@no__t 0ProcessName >|종료 하려는 프로세스의 이름을 지정 합니다. 이 매개 변수는 와일드 카드 문자를 포함할 수 있습니다.|
-|/server: \<ServerName >|종료 하려는 프로세스가 포함 된 터미널 서버를 지정 합니다. **/Server** 를 지정 하지 않으면 현재 RD 세션 호스트 서버가 사용 됩니다.|
-|/id: \<SessionID >|지정 된 세션에서 실행 중인 프로세스를 종료 합니다.|
+|\<ProcessName >|종료 하려는 프로세스의 이름을 지정 합니다. 이 매개 변수는 와일드 카드 문자를 포함할 수 있습니다.|
+|/server:\<ServerName >|종료 하려는 프로세스가 포함 된 터미널 서버를 지정 합니다. **/Server** 를 지정 하지 않으면 현재 RD 세션 호스트 서버가 사용 됩니다.|
+|/id:\<SessionID >|지정 된 세션에서 실행 중인 프로세스를 종료 합니다.|
 |/ a|모든 세션에서 실행 중인 프로세스를 종료 합니다.|
 |/v|수행 중인 작업에 대 한 정보를 표시 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
@@ -63,4 +63,4 @@ tskill {<ProcessID> | <ProcessName>} [/server:<ServerName>] [/id:<SessionID> | /
   ```
   #### <a name="additional-references"></a>추가 참조
   [명령줄 구문 키](command-line-syntax-key.md)
-  [원격 데스크톱 서비스&#40; 터미널 서비스 및&#41; 명령 참조](remote-desktop-services-terminal-services-command-reference.md)
+  [원격 데스크톱 서비스 & #40; 터미널 서비스 및 #41; 명령 참조](remote-desktop-services-terminal-services-command-reference.md)

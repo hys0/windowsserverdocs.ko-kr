@@ -36,7 +36,7 @@ exec <ScriptFile.cmd>
 
 |매개 변수|설명|
 |---------|-----------|
-|-0ScriptFile > @no__t|실행할 스크립트 파일을 지정 합니다.|
+|ScriptFile > \<|실행할 스크립트 파일을 지정 합니다.|
 
 ## <a name="remarks"></a>설명
 

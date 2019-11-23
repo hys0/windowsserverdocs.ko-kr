@@ -19,11 +19,11 @@ ms.locfileid: "71393316"
 ---
 # <a name="use-at-least-smb-protocol-version-30-for-file-shares-that-store-files-for-virtual-machines"></a>이상을 사용 가상 컴퓨터에 대 한 파일을 저장 하는 파일 공유에 대 한 SMB 프로토콜 버전 3.0입니다.
 
->적용 대상: Windows Server 2016
+>적용 대상: Windows Server 2016
 
 모범 사례 분석기 및 검사에 대한 자세한 내용은 [모범 사례 분석기 검사 실행 및 검사 결과 관리](https://go.microsoft.com/fwlink/p/?LinkID=223177)를 참조하세요.  
   
-|속성|설명|  
+|속성|세부 정보|  
 |-|-|  
 |**운영 체제**|Windows Server 2016|  
 |**제품/기능**|Hyper-V|  
@@ -36,9 +36,9 @@ ms.locfileid: "71393316"
 *가상 머신 파일 또는 가상 하드 디스크 파일은 SMB 프로토콜 버전 3.0 이상을 지원 하지 않는 파일 공유에 저장 됩니다.*  
   
 ## <a name="impact"></a>**식**  
-*Microsoft에서는이 구성을 지원 하지 않습니다. 이는 다음과 같은 가상 컴퓨터에 영향을 줍니다.*  
+*Microsoft는이 구성을 지원 하지 않습니다. 이는 다음과 같은 가상 컴퓨터에 영향을 줍니다.*  
   
-@no__t-가상 머신 목록 >  
+가상 컴퓨터 \<목록 >  
   
 ## <a name="resolution"></a>**해결 방법**  
 *SMB 프로토콜 버전 3.0 이상을 사용 하는 파일 공유로 파일을 이동 합니다.*  

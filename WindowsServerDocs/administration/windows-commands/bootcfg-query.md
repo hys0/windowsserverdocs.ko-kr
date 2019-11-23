@@ -22,7 +22,7 @@ ms.locfileid: "71379907"
 ---
 # <a name="bootcfg-query"></a>bootcfg query
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 를 쿼리하고 Boot.ini의 [부팅 로더] 및 [운영 체제] 섹션 항목을 표시 합니다.
 
@@ -35,7 +35,7 @@ bootcfg /query [/s <computer> [/u <Domain>\<User> /p <Password>]]
 |        용어         |                                                                                             정의                                                                                              |
 |---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    /s <computer>    |                                         이름 또는 원격 컴퓨터의 IP 주소를 지정 합니다 (백슬래시를 사용 하지 않습니다). 기본값은 로컬 컴퓨터입니다.                                          |
-| /u <Domain> @ no__t-1 @ no__t-2 | @No__t-0 또는 <Domain> @ no__t @ no__t-3로 지정 된 사용자의 계정 권한으로 명령을 실행 합니다. 기본값은 현재 로그온 된 명령을 실행 하는 컴퓨터에서 사용자의 사용 권한. |
+| /u <Domain>\\<User> | <User>또는 <Domain>\\<User>에 지정 된 사용자의 계정 권한으로 명령을 실행 합니다. 기본값은 현재 로그온 된 명령을 실행 하는 컴퓨터에서 사용자의 사용 권한. |
 |    /p <Password>    |                                                        에 지정 된 사용자 계정의 암호를 지정 된 **/u** 매개 변수입니다.                                                        |
 |         /?          |                                                                                명령 프롬프트에 도움말을 표시합니다.                                                                                 |
 
@@ -54,7 +54,7 @@ bootcfg /query [/s <computer> [/u <Domain>\<User> /p <Password>]]
   OS Load Options: /fastdetect /debug /debugport=com1:
   ```
 - **Bootcfg 쿼리** 출력의 부팅 로더 설정 부분에는 boot.ini의 [부팅 로더] 섹션에 각 항목이 표시 됩니다.
-- **Bootcfg 쿼리** 출력의 부팅 항목 부분에는 boot.ini의 [운영 체제] 섹션에 각 운영 체제 항목에 대 한 다음과 같은 세부 정보가 표시 됩니다. 부팅 항목 ID, 이름, 경로 및 OS 로드 옵션을 선택 합니다.
+- **Bootcfg 쿼리** 출력의 부팅 항목 부분에는 Boot.ini: 부팅 항목 ID, 이름, 경로 및 OS 로드 옵션의 [운영 체제] 섹션에 각 운영 체제 항목에 대 한 다음과 같은 세부 정보가 표시 됩니다.
   ## <a name="BKMK_examples"></a>예와
   다음 예에서는 **bootcfg/query** 명령을 사용 하는 방법을 보여 줍니다.
   ```

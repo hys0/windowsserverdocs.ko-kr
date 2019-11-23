@@ -23,9 +23,9 @@ ms.locfileid: "71396074"
 
 NPS (네트워크 정책 서버)를 실행 하는 서버에서 여러 네트워크 어댑터를 사용 하는 경우 다음을 구성할 수 있습니다.
 
-- 송신 및 수신 하지 않는 네트워크 어댑터 RADIUS(Remote Authentication Dial-In User Service) \(RADIUS @ no__t-1 트래픽
-- 네트워크 어댑터를 기준으로 NPS는 인터넷 프로토콜 버전 4 \(IPv4 @ no__t-1, IPv6 또는 IPv4 및 IPv6 둘 다에서 RADIUS 트래픽을 모니터링 하는지 여부입니다.
-- 프로토콜 당 \(IPv4 또는 IPv6 @ no__t-1 (네트워크 어댑터 기준)에서 RADIUS 트래픽을 보내고 받는 UDP 포트 번호입니다.
+- RADIUS(Remote Authentication Dial-In User Service) \(RADIUS\) 트래픽을 전송 및 수신 하지 않는 네트워크 어댑터입니다.
+- 네트워크 어댑터를 기준으로 NPS는 인터넷 프로토콜 버전 4 \(IPv4\), IPv6 또는 IPv4 및 IPv6 모두에서 RADIUS 트래픽을 모니터링 하는지 여부를 지정 합니다.
+- IPv4 또는 IPv6\)네트워크 어댑터를 기준으로 하는 프로토콜에 따라 RADIUS 트래픽이 전송 및 수신 되는 UDP 포트 번호를 \(합니다.
 
 기본적으로 NPS는 설치 된 모든 네트워크 어댑터에 대해 IPv6 및 IPv4의 포트 1812, 1813, 1645 및 1646에 대 한 RADIUS 트래픽을 수신 대기 합니다. NPS는 RADIUS 트래픽에 대해 모든 네트워크 어댑터를 자동으로 사용 하므로 nps가 특정 네트워크 어댑터를 사용 하지 못하도록 하려면 NPS에서 RADIUS 트래픽에 사용할 네트워크 어댑터만 지정 해야 합니다.
 
@@ -42,8 +42,8 @@ NPS (네트워크 정책 서버)를 실행 하는 서버에서 여러 네트워�
 
 네트워크 어댑터에서 RADIUS 트래픽을 수신 하 고 보내도록 NPS를 구성 하려면 NPS 콘솔의 네트워크 정책 서버에 대 한 속성 대화 상자에서 다음 구문을 사용 합니다.
 
-- IPv4 트래픽 구문: IPAddress: UDPport. 여기서 IPAddress는 RADIUS 트래픽을 보내려는 네트워크 어댑터에서 구성 된 IPv4 주소이 고, UDPport는 RADIUS 인증 또는 계정 트래픽에 사용 하려는 RADIUS 포트 번호입니다.
-- IPv6 트래픽 구문: [IPv6Address]: UDPport는 IPv6Address에 대 한 대괄호가 필요 하 고 IPv6Address는 RADIUS 트래픽을 보내려는 네트워크 어댑터에서 구성 된 IPv6 주소 이며, UDPport는 RADIUS 인증에 사용 하려는 RADIUS 포트 번호입니다. 계정 트래픽.
+- IPv4 트래픽 구문: IPAddress: UDPport. 여기서 IPAddress는 RADIUS 트래픽을 보내려는 네트워크 어댑터에서 구성 된 IPv4 주소이 고, UDPport는 RADIUS 인증 또는 계정에 사용 하려는 RADIUS 포트 번호입니다. 교통.
+- IPv6 트래픽 구문: [IPv6Address]: UDPport (IPv6Address 주위의 대괄호가 필요 함), IPv6Address는 RADIUS 트래픽을 보내려는 네트워크 어댑터에서 구성 된 IPv6 주소, UDPport는 원하는 RADIUS 포트 번호입니다. RADIUS 인증 또는 계정 트래픽에 사용 하는입니다.
 
 IP 주소와 UDP 포트 정보를 구성 하는 데 다음 문자를 구분 기호로 사용할 수 있습니다.
 

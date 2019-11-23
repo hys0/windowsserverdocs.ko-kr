@@ -19,7 +19,7 @@ ms.locfileid: "71402135"
 
 > 적용 대상: Windows Server 2019, Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
-기본적으로 DFS 폴더에 사용되는 사용 권한은 네임스페이스 서버의 로컬 파일 시스템에서 상속됩니다. 사용 권한은 시스템 드라이브의 루트 디렉터리에서 상속 되며 도메인 @ no__t-0Users 그룹에 읽기 권한을 부여 합니다. 결과적으로 액세스 기반 열거를 사용하도록 설정한 후에도 네임스페이스의 모든 폴더가 모든 도메인 사용자에게 계속 보입니다.
+기본적으로 DFS 폴더에 사용되는 사용 권한은 네임스페이스 서버의 로컬 파일 시스템에서 상속됩니다. 사용 권한은 시스템 드라이브의 루트 디렉터리에서 상속 되며 도메인\\Users 그룹에 읽기 권한을 부여 합니다. 결과적으로 액세스 기반 열거를 사용하도록 설정한 후에도 네임스페이스의 모든 폴더가 모든 도메인 사용자에게 계속 보입니다.
 
 ## <a name="advantages-and-limitations-of-inherited-permissions"></a>상속된 사용 권한의 이점과 제한 사항
 
@@ -58,6 +58,6 @@ DFS 폴더를 볼 수 있는 사용자를 제한하려면 다음 작업 중 하�
 
 4.  DFS 네임스페이스의 폴더 또는 네임스페이스 루트에 대한 상속된 사용 권한을 변경하려면 Windows 탐색기나 **ICacls** 명령을 사용합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 -   [DFS 네임스페이스 만들기](create-a-dfs-namespace.md)

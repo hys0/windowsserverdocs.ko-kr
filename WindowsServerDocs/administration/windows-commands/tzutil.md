@@ -22,7 +22,7 @@ ms.locfileid: "71392307"
 ---
 # <a name="tzutil"></a>tzutil
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Windows 표준 시간대 유틸리티를 표시 합니다. 
 ## <a name="syntax"></a>구문
@@ -35,7 +35,7 @@ tzutil [/?] [/g] [/s <timeZoneID>[_dstoff]] [/l]
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 |/g|현재 표준 시간대 ID를 표시 합니다.|
 |/s \<timeZoneID > [_dstoff]|지정 된 표준 시간대 ID를 사용 하 여 현재 표준 시간대를 설정 합니다. **_Dstoff** 접미사는 표준 시간대에 대 한 일광 절약 시간 조정을 사용 하지 않도록 설정 합니다 (해당 하는 경우).|
-|/l|모든 유효한 표준 시간대 Id 및 표시 이름을 나열 합니다. 출력은 다음과 같습니다.<br /><br />-    @ no__t-1 표시 이름 ><br />-    @ no__t-1 표준 시간대 ID >|
+|/l|모든 유효한 표준 시간대 Id 및 표시 이름을 나열 합니다. 출력은 다음과 같습니다.<br /><br />-   \<표시 이름 ><br />-   \<표준 시간대 ID >|
 
 ## <a name="remarks"></a>설명
 종료 코드 **0** 은 명령이 성공적으로 완료 되었음을 나타냅니다.

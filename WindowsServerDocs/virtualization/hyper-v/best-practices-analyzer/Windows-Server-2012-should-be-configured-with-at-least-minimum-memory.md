@@ -19,11 +19,11 @@ ms.locfileid: "71393100"
 ---
 # <a name="windows-server-2012-should-be-configured-with-at-least-the-minimum-amount-of-memory"></a>Windows Server 2012 해야 적어도 최소 메모리 양을 사용 하 여 구성
 
->적용 대상: Windows Server 2016
+>적용 대상: Windows Server 2016
 
 모범 사례 분석기 및 검사에 대한 자세한 내용은 [모범 사례 분석기 검사 실행 및 검사 결과 관리](https://go.microsoft.com/fwlink/p/?LinkID=223177)를 참조하세요.  
   
-|속성|설명|  
+|속성|세부 정보|  
 |-|-|  
 |**운영 체제**|Windows Server 2016|  
 |**제품/기능**|Hyper-V|  
@@ -38,7 +38,7 @@ ms.locfileid: "71393100"
 ## <a name="impact"></a>**식**  
 *다음 가상 컴퓨터의 게스트 운영 체제가 실행 되지 않거나 불안정을 실행할 수 있습니다.*  
   
-@no__t-가상 머신 목록 >  
+가상 컴퓨터 \<목록 >  
   
 ## <a name="resolution"></a>**해결 방법**  
 *Hyper-v 관리자를 사용 하 여이 가상 컴퓨터에 할당 된 메모리를 512 이상으로 늘립니다.*  
@@ -67,7 +67,7 @@ ms.locfileid: "71393100"
 Set-VMMemory <MyVM> -StartupBytes 512MB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [설정-VMMemory](https://technet.microsoft.com/library/hh848572.aspx)  
   
 

@@ -31,7 +31,7 @@ ms.locfileid: "71386743"
 
 2.  단방향 포리스트 트러스트를 만들려면 관리자 권한 명령 프롬프트에서 다음 명령을 실행 합니다.
 
-    @No__t-0을 HGS @no__t 도메인의 이름으로 바꾸고-1을 패브릭 도메인의 이름으로 바꿉니다. 패브릭 도메인의 관리자에 대 한 암호를 제공 합니다.
+    `bastion.local`를 HGS 도메인의 이름으로 바꾸고 `fabrikam.com`를 패브릭 도메인의 이름으로 바꿉니다. 패브릭 도메인의 관리자에 대 한 암호를 제공 합니다.
 
         netdom trust bastion.local /domain:fabrikam.com /userD:fabrikam.com\Administrator /passwordD:<password> /add
 

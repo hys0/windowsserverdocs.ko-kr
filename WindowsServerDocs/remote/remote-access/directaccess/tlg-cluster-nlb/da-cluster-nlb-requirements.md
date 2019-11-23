@@ -29,6 +29,6 @@ ms.locfileid: "71388421"
   
 -   Windows Server 2016, Windows server 2012 R2 또는 Windows Server 2012의 최소 하드웨어 요구 사항을 충족 하는 컴퓨터 또는 가상 컴퓨터 6 대 이러한 두 컴퓨터에는 두 개의 네트워크 어댑터가 설치 되어 있습니다.  
   
--   Windows 10 @ no__t-0 또는 Windows @ no__t-1 8의 제품 디스크 또는 파일입니다.  
+-   Windows 10&reg; 또는 Windows&reg; 8의 제품 디스크  
   
--   Windows 10 @ no__t-0 또는 Windows @ no__t-1 8의 최소 하드웨어 요구 사항을 충족 하는 컴퓨터 또는 가상 컴퓨터 2 대 이러한 컴퓨터 중 하나에는 두 개의 네트워크 어댑터가 설치 되어 있습니다.
+-   Windows 10&reg; 또는 Windows&reg; 8의 최소 하드웨어 요구 사항을 충족 하는 컴퓨터 또는 가상 컴퓨터 2 대 이러한 컴퓨터 중 하나에는 두 개의 네트워크 어댑터가 설치 되어 있습니다.

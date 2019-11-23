@@ -38,8 +38,8 @@ ksetup /addkpasswd <RealmName> [<KpasswdName>]
 
 |매개 변수|설명|
 |---------|-----------|
-|@no__t 0RealmName >|영역 이름은 CORP. 같은 대문자는 DNS 이름으로 명시 CONTOSO.COM, 기본적으로 나열 하 고 영역 또는 영역 = **ksetup** 실행 됩니다.|
-|@no__t 0KpasswdName >|Kerberos 암호 서버도 사용할 수 있는 KDC 이름이 mitkdc.microsoft.com 같은 대/소문자 정규화 된 도메인 이름으로 명시 됩니다. KDC 이름이 생략 된 경우 Kdc 찾을 DNS는 사용할 수 있습니다.|
+|\<RealmName >|영역 이름은 CORP. 같은 대문자는 DNS 이름으로 명시 CONTOSO.COM, 기본적으로 나열 하 고 영역 또는 영역 = **ksetup** 실행 됩니다.|
+|\<KpasswdName >|Kerberos 암호 서버도 사용할 수 있는 KDC 이름이 mitkdc.microsoft.com 같은 대/소문자 정규화 된 도메인 이름으로 명시 됩니다. KDC 이름이 생략 된 경우 Kdc 찾을 DNS는 사용할 수 있습니다.|
 
 ## <a name="remarks"></a>설명
 

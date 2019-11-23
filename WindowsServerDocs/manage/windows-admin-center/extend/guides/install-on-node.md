@@ -25,14 +25,14 @@ ms.locfileid: "71385294"
 
 Windows 관리 센터에 대 한 [도구 확장](../develop-tool.md) 을 아직 만들지 않은 경우 만듭니다. 이 작업을 완료 한 후에는 확장을 만들 때 사용 된 값을 기록해 둡니다.
 
-| 값 | 설명 | 예제 |
+| 값 | 설명 | 예 |
 | ----- | ----------- | ------- |
 | ```{!Company Name}``` | 회사 이름 (공백 포함) | ```Contoso``` |
 | ```{!Tool Name}``` | 도구 이름 (공백 포함) | ```InstallOnNode``` |
 
 도구 확장 폴더 내에 ```Node``` 폴더 (```{!Tool Name}\Node```)를 만듭니다. 이 API를 사용 하는 경우이 폴더에 배치 된 모든 항목이 관리 노드에 복사 됩니다. 사용 사례에 필요한 파일을 추가 합니다. 
 
-또한 ```{!Tool Name}\Node\installNode.ps1``` 스크립트를 만듭니다. 이 스크립트는 모든 파일이 ```{!Tool Name}\Node``` 폴더에서 관리 노드로 복사 되 면 관리 되는 노드에서 실행 됩니다. 사용 사례에 대 한 추가 논리를 추가 합니다. 예 ```{!Tool Name}\Node\installNode.ps1``` 파일:
+또한 ```{!Tool Name}\Node\installNode.ps1``` 스크립트를 만듭니다. 모든 파일이 ```{!Tool Name}\Node``` 폴더에서 관리 노드로 복사 되 면 관리 되는 노드에서이 스크립트를 실행 합니다. 사용 사례에 대 한 추가 논리를 추가 합니다. 예제 ```{!Tool Name}\Node\installNode.ps1``` 파일은 다음과 같습니다.
 
 ``` ps1
 # Add logic for installing payload on managed node
@@ -45,7 +45,7 @@ echo 'Success'
 
 ## <a name="integration-with-ui"></a>UI와 통합
 
-@No__t-0을 다음으로 업데이트 합니다.
+다음으로 ```\src\app\default.component.ts```를 업데이트 합니다.
 
 ``` ts
 import { Component } from '@angular/core';
@@ -105,13 +105,13 @@ this.post('contoso.install-on-node', '1.0.0',
       );
 ```
 
-또한 ```\src\app\default.component.html```을 업데이트 합니다.
+또한 ```\src\app\default.component.html```를 업데이트 합니다.
 ``` html
 <button (click)="installOnNode()">Click to install</button>
 <sme-loading-wheel *ngIf="loading" size="large"></sme-loading-wheel>
 <p *ngIf="response">{{response}}</p>
 ```
-마지막 ```\src\app\default.module.ts```:
+그리고 마지막으로 ```\src\app\default.module.ts```합니다.
 ``` ts
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
@@ -138,9 +138,9 @@ export class DefaultModule { }
 
 이전에 확장 패키지를 만들지 않은 경우 [게시 확장](../publish-extensions.md) 가이드를 따르세요. 
 > [!IMPORTANT]
-> 이 확장에 대 한 nuspec 파일에서 ```<id>``` 값이 프로젝트 ```manifest.json```의 이름과 일치 하 고 ```<version>```가 ```\src\app\default.component.ts```에 추가 된 항목과 일치 하는지 확인 하는 것이 중요 합니다. 또한 @no__t 아래에 항목을 추가 합니다. 
+> 이 확장에 대 한 nuspec 파일에서 ```<id>``` 값이 프로젝트 ```manifest.json```의 이름과 일치 하 고 ```<version>``` ```\src\app\default.component.ts```에 추가 된 항목과 일치 하는 것이 중요 합니다. 또한 ```<files>```아래에 항목을 추가 합니다. 
 > 
-> ```<file src="Node\**\*.*" target="Node" />```.
+> ```<file src="Node\**\*.*" target="Node" />```을 참조하십시오.
 
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -165,4 +165,4 @@ export class DefaultModule { }
 </package>
 ```
 
-이 패키지를 만든 후에는 해당 피드에 경로를 추가 합니다. Windows 관리 센터에서 설정 > 확장 > 피드로 이동 하 여 패키지가 있는 위치에 경로를 추가 합니다. 확장이 설치 되 면 ```install``` 단추를 클릭할 수 있습니다. 그러면 API가 호출 됩니다.  
+이 패키지를 만든 후에는 해당 피드에 경로를 추가 합니다. Windows 관리 센터에서 설정 > 확장 > 피드로 이동 하 여 패키지가 있는 위치에 경로를 추가 합니다. 확장이 설치 되 면 ```install``` 단추를 클릭 하 여 API가 호출 됩니다.  

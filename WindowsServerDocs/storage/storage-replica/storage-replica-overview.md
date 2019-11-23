@@ -44,19 +44,19 @@ ms.locfileid: "71393824"
 
 ![저장소 복제본을 사용하여 뉴저지에 있는 두 노드로 저장소를 복제하는 뉴욕의 두 클러스터 노드를 보여 주는 다이어그램](./media/Storage-Replica-Overview/Storage_SR_StretchCluster.png)  
 
-** 그림 1: 저장소 복제본을 사용 하는 확장 클러스터의 저장소 복제 @ no__t-0  
+**그림 1: 저장소 복제본을 사용 하 여 확장 클러스터의 저장소 복제**  
 
 **클러스터 간**: 두 클러스터 간의 복제를 지원합니다. 클러스터 간에 동기식 또는 비동기식으로 복제합니다. 이 시나리오에서는 저장소 공간 다이렉트, 공유 SAS 저장소가 포함된 저장소 공간, SAN 및 iSCSI 연결 LUN을 활용할 수 있습니다. Windows 관리 센터 및 PowerShell을 사용 하 여 관리 되며 장애 조치 (failover)를 위한 수동 작업이 필요 합니다. 
 
 ![저장소 복제본을 사용하여 라스베가스에 있는 서로 다른 클러스터로 저장소를 복제하는 로스앤젤레스의 클러스터를 보여 주는 다이어그램](./media/Storage-Replica-Overview/Storage_SR_ClustertoCluster.png)  
 
-**FIGURE 2: 저장소 복제본을 사용 하 여 클러스터 간 저장소 복제 @ no__t-0  
+**그림 2: 저장소 복제본을 사용 하 여 클러스터 간 저장소 복제**  
 
 **서버 간**을 통해 공유 SAS 저장소가 포함된 저장소 공간, SAN 및 iSCSI 연결 LUN과 로컬 드라이브를 사용하여 두 개의 독립 실행형 서버 간에 동기식 및 비동기식으로 복제할 수 있습니다. Windows 관리 센터 및 PowerShell을 사용 하 여 관리 되며 장애 조치 (failover)를 위한 수동 작업이 필요 합니다.  
 
 ![빌딩 5의 서버가 빌딩 9의 서버와 복제되는 모습을 보여 주는 다이어그램](./media/Storage-Replica-Overview/Storage_SR_ServertoServer.png)  
 
-**FIGURE 3: 저장소 복제본을 사용 하 여 서버 간 저장소 복제 @ no__t-0  
+**그림 3: 저장소 복제본을 사용 하 여 서버 간 저장소 복제**  
 
 > [!NOTE]
 > 또한 하나의 컴퓨터에서 4개의 볼륨을 사용하여 서버 자체 복제를 구성할 수 있습니다. 그러나 이 시나리오는 이 가이드에서 다루지 않습니다.  
@@ -85,7 +85,7 @@ ms.locfileid: "71393824"
 
 저장소 복제본에는 다음과 같은 기능이 포함 되어 있습니다.  
 
-| 기능 | 설명 |
+| 기능 | 세부 정보 |
 | ----------- | ----------- |  
 | 형식 | 호스트 기반 |
 | 동기 | 예 |
@@ -140,7 +140,7 @@ SLA(서비스 수준 계약)는 계획된 중단 및 계획되지 않은 중단 
 
 | 모드 | 다이어그램 | 단계 |
 | -------- | ----------- | --------- |
-| **동기적인**<br /><br />데이터 무손실<br /><br />RPO | ![저장소 복제본을 통해 동기 복제에서 데이터가 기록되는 방식을 보여 주는 다이어그램](./media/Storage-Replica-Overview/Storage_SR_SynchronousV2.png) | 1.  응용 프로그램이 데이터를 씁니다.<br />2.  로그 데이터가 기록되고 데이터가 원격 사이트에 복제됩니다.<br />3.  로그 데이터가 원격 사이트에 기록됩니다.<br />4.  원격 사이트에서 승인합니다.<br />5.  응용 프로그램 쓰기가 승인됩니다.<br /><br />t & t1: 볼륨에 플러시된 데이터, 로그는 항상 |
+| **동기적인**<br /><br />데이터 무손실<br /><br />RPO | ![저장소 복제본을 통해 동기 복제에서 데이터가 기록되는 방식을 보여 주는 다이어그램](./media/Storage-Replica-Overview/Storage_SR_SynchronousV2.png) | 1.  응용 프로그램이 데이터를 씁니다.<br />2.  로그 데이터가 기록되고 데이터가 원격 사이트에 복제됩니다.<br />3.  로그 데이터가 원격 사이트에 기록됩니다.<br />4.  원격 사이트에서 승인합니다.<br />5.  응용 프로그램 쓰기가 승인됩니다.<br /><br />t 및 t1: 데이터가 볼륨에 플러시되고 로그가 항상 기록됨 |
 
 ### <a name="asynchronous-replication"></a>비동기 복제
 
@@ -152,7 +152,7 @@ RPO가 0보다 높은 비동기 복제는 복원력 및 데이터 무손실을 �
 
 | 모드 | 다이어그램 | 단계 |
 | -------- | ----------- | --------- |
-| **비동기로**<br /><br />거의 데이터 무손실<br /><br />(여러 요소에 따라 달라짐)<br /><br />RPO | ![저장소 복제본을 통해 비동기 복제에서 데이터가 기록되는 방식을 보여 주는 다이어그램](./media/Storage-Replica-Overview/Storage_SR_AsynchronousV2.png)|1.  응용 프로그램이 데이터를 씁니다.<br />2.  로그 데이터가 기록됩니다.<br />3.  응용 프로그램 쓰기가 승인됩니다.<br />4.  데이터가 원격 사이트에 복제됩니다.<br />5.  로그 데이터가 원격 사이트에 기록됩니다.<br />6.  원격 사이트에서 승인합니다.<br /><br />t & t1: 볼륨에 플러시된 데이터, 로그는 항상 |
+| **비동기로**<br /><br />거의 데이터 무손실<br /><br />(여러 요소에 따라 달라짐)<br /><br />RPO | ![저장소 복제본을 통해 비동기 복제에서 데이터가 기록되는 방식을 보여 주는 다이어그램](./media/Storage-Replica-Overview/Storage_SR_AsynchronousV2.png)|1.  응용 프로그램이 데이터를 씁니다.<br />2.  로그 데이터가 기록됩니다.<br />3.  응용 프로그램 쓰기가 승인됩니다.<br />4.  데이터가 원격 사이트에 복제됩니다.<br />5.  로그 데이터가 원격 사이트에 기록됩니다.<br />6.  원격 사이트에서 승인합니다.<br /><br />t 및 t1: 데이터가 볼륨에 플러시되고 로그가 항상 기록됨 |
 
 ### <a name="key-evaluation-points-and-behaviors"></a>주요 평가 지점과 동작  
 
@@ -160,7 +160,7 @@ RPO가 0보다 높은 비동기 복제는 복원력 및 데이터 무손실을 �
 
 -   Windows Server 2016에서 복제하는 동안 대상 볼륨에 액세스할 수 없습니다. 복제를 구성할 때 대상 볼륨이 분리되어 사용자가 모든 읽기나 쓰기에 액세스할 수 없게 됩니다. 해당 드라이버 문자가 파일 탐색기와 같은 일반적인 인터페이스에 표시되지만 응용 프로그램에서 볼륨 자체에 액세스할 수 없습니다. 블록 수준 복제 기술은 볼륨에서 대상의 탑재된 파일 시스템에 대한 액세스를 허용하지 않습니다. NTFS 및 ReFS는 사용자가 볼륨에 데이터를 쓰는 것을 지원하지 않으며 변경을 차단합니다. 
 
-Windows Server, 버전 1709에서 **테스트 장애 조치 (Failover)** Cmdlet은 windows server 2019에도 포함 되었습니다. 이제 백업, 테스트 등에 대 한 대상 볼륨의 읽기-쓰기 스냅숏을 일시적으로 탑재할 수 있습니다. 자세한 정보는 https://aka.ms/srfaq 을 참조 하세요.
+Windows Server, 버전 1709에서 **테스트 장애 조치 (Failover)** Cmdlet은 windows server 2019에도 포함 되었습니다. 이제 백업, 테스트 등에 대 한 대상 볼륨의 읽기-쓰기 스냅숏을 일시적으로 탑재할 수 있습니다. 자세한 내용은 https://aka.ms/srfaq를 참조 하세요.
 
 -   비동기 복제의 Microsoft 구현은 대부분의 다른 구현과 다릅니다. 비동기 복제의 업계 구현은 대부분 주기적인 차등 전송이 다른 노드로 이동하고 병합되는 스냅샷 기반 복제를 기반으로 합니다. 저장소 복제본 비동기 복제는 대상의 직렬화된 동기 승인에 대한 요구 사항이 없다는 점을 제외하고는 동기 복제와 유사하게 작동합니다. 이는 이론적으로 저장소 복제본이 지속적으로 복제하므로 RPO가 낮다는 것을 의미합니다. 반면, 스냅샷을 사용하여 응용 프로그램 파일에서 일관성을 강제 적용하는 대신 내부 응용 프로그램 일관성 보장에 의존함을 의미하기도 합니다. 저장소 복제본은 모든 복제 모드에서 크래시 일관성을 보장합니다.  
 
@@ -188,12 +188,12 @@ Windows Server, 버전 1709에서 **테스트 장애 조치 (Failover)** Cmdlet�
 
 Windows Server 2019의 저장소 복제본에 있는 새로운 기능 목록은 [저장소의 새로운](../whats-new-in-storage.md#storage-replica2019) 기능을 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [공유 저장소를 사용 하 여 확장 클러스터 복제](stretch-cluster-replication-using-shared-storage.md)  
 - [서버 간 저장소 복제](server-to-server-storage-replication.md)  
 - [클러스터 간 저장소 복제](cluster-to-cluster-storage-replication.md)  
-- [스토리지 복제본: 알려진 문제](storage-replica-known-issues.md)  
-- [스토리지 복제본: 질문과 대답](storage-replica-frequently-asked-questions.md)  
+- [저장소 복제본: 알려진 문제](storage-replica-known-issues.md)  
+- [저장소 복제본: 질문과 대답](storage-replica-frequently-asked-questions.md)  
 - [Windows Server 2016의 스토리지 공간 다이렉트](../storage-spaces/storage-spaces-direct-overview.md)
 - [Windows IT 전문가 지원](https://www.microsoft.com/itpro/windows/support)

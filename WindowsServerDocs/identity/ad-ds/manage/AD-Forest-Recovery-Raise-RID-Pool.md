@@ -39,18 +39,18 @@ ms.locfileid: "71369063"
 
 1. 서버 관리자 열고 **도구** 를 클릭 한 다음 **ADSI 편집**을 클릭 합니다.
 2. 마우스 오른쪽 단추를 클릭 하 고 **연결 대상** 을 선택 하 고 연결을 선택한 다음 **확인**을 클릭 합니다.
-   ![ADSI Edit @ no__t-1 
-3. 다음 고유 이름 경로를 찾습니다. **Cn = RID Manager $, CN = System, DC = <domain name>** .
-   ![ADSI Edit @ no__t-1 
+   ADSI 편집](media/AD-Forest-Recovery-Raise-RID-Pool/adsi1.png) ![ 
+3. 다음 고유 이름 경로를 찾습니다. **cn = RID Manager $, cn = System, DC =<domain name>** .
+   ADSI 편집](media/AD-Forest-Recovery-Raise-RID-Pool/adsi2.png) ![ 
 3. 마우스 오른쪽 단추를 클릭 하 고 CN = RID Manager $의 속성을 선택 합니다. 
 4. **RIDAvailablePool**특성을 선택 하 고 **편집**을 클릭 한 다음, 긴 정수 값을 클립보드에 복사 합니다.
-   ![ADSI Edit @ no__t-1  
+   ADSI 편집](media/AD-Forest-Recovery-Raise-RID-Pool/adsi3.png) ![  
 5. 계산기를 시작 하 고 **보기** 메뉴에서 **공학용 모드**를 선택 합니다. 
 6. 현재 값에 10만을 추가 합니다.
-   ![ADSI Edit @ no__t-1 
+   ADSI 편집](media/AD-Forest-Recovery-Raise-RID-Pool/adsi4.png) ![ 
 7. Ctrl + c를 사용 하거나 **편집** 메뉴의 **복사** 명령을 사용 하 여 값을 클립보드에 복사 합니다. 
 8. Adsiedit의 편집 대화 상자에서이 새 값을 붙여넣습니다. 
-   ![ADSI Edit @ no__t-1 
+   ADSI 편집](media/AD-Forest-Recovery-Raise-RID-Pool/adsi5.png) ![ 
 9. 대화 상자에서 **확인** 을 클릭 하 고 속성 시트에서를 **적용** 하 여 **rIDAvailablePool** 특성을 업데이트 합니다. 
   
 ### <a name="to-raise-the-value-of-available-rid-pools-using-ldp"></a>LDP를 사용 하 여 사용 가능한 RID 풀의 값을 높이려면  
@@ -58,20 +58,20 @@ ms.locfileid: "71369063"
 1. 명령 프롬프트에서 다음 명령을 입력하고 Enter 키를 누릅니다.  
    **ldp**  
 2. **연결**을 클릭 하 고 **연결**을 클릭 한 다음 RID 관리자의 이름을 입력 하 고 **확인**을 클릭 합니다. 
-   ![LDP @ NO__T-1
+   ![LDP](media/AD-Forest-Recovery-Raise-RID-Pool/ldp1.png)
 3. **연결**, **바인딩**을 차례로 클릭 하 고 **자격 증명을 사용 하 여 바인딩** 을 선택 하 고 관리자 자격 증명을 입력 한 다음 **확인**을 클릭 합니다. 
-   ![LDP @ NO__T-1
-4. **보기**를 클릭 하 고 **트리** 를 클릭 한 후 다음 고유 이름 경로를 입력 합니다.  CN = RID Manager $, CN = System, DC =*도메인 이름*  
-   ![LDP @ NO__T-1
+   ![LDP](media/AD-Forest-Recovery-Raise-RID-Pool/ldp2.png)
+4. **보기**를 클릭 하 고 **트리** 를 클릭 한 후 다음 고유 이름 경로를 입력 합니다. cn = RID Manager $, CN = System, DC =*도메인 이름*  
+   ![LDP](media/AD-Forest-Recovery-Raise-RID-Pool/ldp3.png)
 5. **찾아보기**를 클릭 한 다음 **수정**을 클릭 합니다. 
 6. 현재 **rIDAvailablePool** 값에 10만을 추가한 다음 **값**에 합계를 입력 합니다. 
-7. **Dn**에 `cn=RID Manager$,cn=System,dc=` *< 도메인 이름 @ no__t-3*을 입력 합니다. 
+7. **Dn**에 `cn=RID Manager$,cn=System,dc=` *< 도메인 이름\>* 을 입력 합니다. 
 8. **항목 편집 특성**에 `rIDAvailablePool`을 입력 합니다. 
 9. 작업으로 **바꾸기** 를 선택 하 고 **enter 키**를 누릅니다.
-   ![LDP @ NO__T-1 
+   ![LDP](media/AD-Forest-Recovery-Raise-RID-Pool/ldp4.png) 
 10. **실행** 을 클릭 하 여 작업을 실행 합니다. **닫기**를 클릭합니다.
-11. 변경 내용의 유효성을 검사 하려면 **보기**를 클릭 하 고 **트리**를 클릭 한 후 다음 고유 이름 경로를 입력 합니다.   CN = RID Manager $, CN = System, DC =*도메인 이름*입니다.   **RIDAvailablePool** 특성을 확인 합니다. 
-   ![LDP @ NO__T-1
+11. 변경 내용의 유효성을 검사 하려면 **보기**를 클릭 하 고 **트리**를 클릭 한 후 다음 고유 이름 경로를 입력 합니다. cn = RID Manager $, CN = System, DC =*도메인 이름*.   **RIDAvailablePool** 특성을 확인 합니다. 
+   ![LDP](media/AD-Forest-Recovery-Raise-RID-Pool/ldp5.png)
 
 ## <a name="next-steps"></a>다음 단계
 

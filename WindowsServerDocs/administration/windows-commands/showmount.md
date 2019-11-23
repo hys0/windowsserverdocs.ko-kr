@@ -22,7 +22,7 @@ ms.locfileid: "71383908"
 ---
 # <a name="showmount"></a>showmount
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 사용할 수 있습니다 **showmount** 탑재 된 디렉터리를 표시 합니다.  
   
@@ -37,8 +37,8 @@ showmount {-e|-a|-d} <Server>
 다음 옵션 중 하나를 제공 해야 합니다.  
   
 - **\-e** -서버에서 내보낸 모든 파일 시스템을 표시 합니다.  
-- **\-a** -모든 네트워크 파일 시스템 \(nfs @ no__t-3 클라이언트와 각 서버에 탑재 된 디렉터리를 표시 합니다.  
-- **\-d** -NFS 클라이언트에서 현재 탑재 한 서버의 모든 디렉터리를 표시 합니다.  
+- **\-a** -모든 네트워크 파일 시스템 \(NFS\) 클라이언트 및 각 서버에서 탑재 된 디렉터리를 표시 합니다.  
+- **\-d** -NFS 클라이언트에 의해 현재 탑재 된 서버의 모든 디렉터리를 표시 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [네트워크 파일 시스템 서비스 명령 참조](services-for-network-file-system-command-reference.md)  

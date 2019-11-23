@@ -22,7 +22,7 @@ ms.locfileid: "71373060"
 ---
 # <a name="nslookup-server"></a>nslookup server
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 지정된 된 도메인 이름 시스템 (DNS) 도메인에 기본 서버를 변경합니다.
 ## <a name="syntax"></a>구문
@@ -33,7 +33,7 @@ server <DNSDomain>
 
 |    매개 변수    |                          설명                           |
 |-----------------|----------------------------------------------------------------|
-|   <DNSDomain>   | 필수. 기본 서버에 대 한 새 DNS 도메인을 지정합니다. |
+|   <DNSDomain>   | 필수 요소. 기본 서버에 대 한 새 DNS 도메인을 지정합니다. |
 | {도움말 및 #124;?} |     간단한 요약이 표시 되며 **nslookup** 하위 명령입니다.      |
 
 ## <a name="remarks"></a>설명
