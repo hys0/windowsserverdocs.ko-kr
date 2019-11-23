@@ -30,13 +30,13 @@ FRS SYSVOL 복제를 사용 하 여 DirectAccess를 배포 하는 경우 directa
   
 DirectAccess를 배포 하려는 경우 Windows Server 2003 R2 이후 버전의 운영 체제를 실행 하는 도메인 컨트롤러를 사용 해야 하며, DFS-R을 사용 해야 합니다.  
   
-FRS에서 DFS-R로 마이그레이션하는 방법에 대 한 자세한 내용은 [SYSVOL 복제 마이그레이션 가이드: FRS를 DFS 복제](https://technet.microsoft.com/library/dd640019(v=ws.10).aspx)합니다.  
+FRS에서 DFS-R로 마이그레이션하는 방법에 대 한 자세한 내용은 [SYSVOL 복제 마이그레이션 가이드: frs to DFS 복제](https://technet.microsoft.com/library/dd640019(v=ws.10).aspx)를 참조 하세요.  
   
 ## <a name="bkmk_nap"></a>DirectAccess 클라이언트에 대 한 네트워크 액세스 보호  
 NAP (네트워크 액세스 보호)는 원격 클라이언트 컴퓨터가 회사 네트워크에 대 한 액세스 권한을 부여 하기 전에 해당 정책을 충족 하는지 여부를 확인 하는 데 사용 됩니다. NAP는 Windows Server 2012 r 2에서 사용 되지 않으며 Windows Server 2016에는 포함 되어 있지 않습니다. 이러한 이유로 NAP를 사용 하 여 DirectAccess를 새로 배포 하는 것은 권장 되지 않습니다. DirectAccess 클라이언트 보안을 위한 다른 끝점 제어 방법이 권장 됩니다.  
   
 ## <a name="bkmk_multi"></a>Windows 7 클라이언트에 대 한 멀티 사이트 지원  
-DirectAccess를 멀티 사이트 배포에 구성 하면 Windows 10 @ no__t-0, Windows @ no__t 8.1 및 Windows @ no__t 8 클라이언트에 가장 가까운 사이트에 연결할 수 있는 기능이 있습니다.  Windows 7 @ no__t-0 클라이언트 컴퓨터에는 동일한 기능이 없습니다. Windows 7 클라이언트에 대 한 사이트 선택은 정책 구성 시 특정 사이트로 설정 되며, 이러한 클라이언트는 위치에 관계 없이 항상 지정 된 사이트에 연결 됩니다.  
+DirectAccess를 멀티 사이트 배포에 구성 하면 Windows 10&reg;, Windows&reg; 8.1 및 Windows&reg; 8 클라이언트에서 가장 가까운 사이트에 연결 하는 기능이 있습니다.  Windows 7&reg; 클라이언트 컴퓨터에는 동일한 기능이 없습니다. Windows 7 클라이언트에 대 한 사이트 선택은 정책 구성 시 특정 사이트로 설정 되며, 이러한 클라이언트는 위치에 관계 없이 항상 지정 된 사이트에 연결 됩니다.  
   
 ## <a name="bkmk_user"></a>사용자 기반 액세스 제어  
 DirectAccess 정책은 사용자 기반이 아닌 컴퓨터 기반입니다. 회사 네트워크에 대 한 액세스를 제어 하는 DirectAccess 사용자 정책을 지정 하는 것은 지원 되지 않습니다.  
@@ -45,7 +45,7 @@ DirectAccess 정책은 사용자 기반이 아닌 컴퓨터 기반입니다. 회
 Directaccess는 DirectAccess 설치 마법사, 원격 액세스 관리 콘솔 또는 원격 액세스 Windows PowerShell cmdlet을 사용 하 여 구성할 수 있습니다. Directaccess 설치 마법사 이외의 수단을 사용 하 여 directaccess를 구성 하는 방법 (예: 서버 또는 클라이언트에서 직접 또는 기본 정책 설정을 수동으로 수정 하는 그룹 정책 것과 같은 directaccess)을 구성 하는 것은 지원 되지 않습니다. 이러한 수정으로 인해 구성을 사용할 수 없게 될 수 있습니다.  
   
 ## <a name="bkmk_kerb"></a>KerbProxy 인증  
-시작 마법사를 사용 하 여 DirectAccess 서버를 구성 하면 컴퓨터 및 사용자 인증에 KerbProxy 인증을 사용 하도록 DirectAccess 서버가 자동으로 구성 됩니다. 따라서 Windows 10 @ no__t-0, Windows 8.1 또는 Windows 8 클라이언트만 배포 된 단일 사이트 배포에 대해서만 시작 마법사를 사용 해야 합니다.  
+시작 마법사를 사용 하 여 DirectAccess 서버를 구성 하면 컴퓨터 및 사용자 인증에 KerbProxy 인증을 사용 하도록 DirectAccess 서버가 자동으로 구성 됩니다. 따라서 Windows 10&reg;, Windows 8.1 또는 Windows 8 클라이언트만 배포 되는 단일 사이트 배포에 대해서만 시작 마법사를 사용 해야 합니다.  
   
 또한 KerbProxy 인증과 함께 다음 기능을 사용 하면 안 됩니다.  
   

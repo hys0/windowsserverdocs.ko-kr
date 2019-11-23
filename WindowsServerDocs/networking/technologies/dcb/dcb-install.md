@@ -15,7 +15,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71405787"
 ---
-# <a name="install-data-center-bridging-dcb-in-windows-server-2016-or-windows-10"></a>데이터 센터 브리징 @no__t 설치-0DCB @ no__t-1 (Windows Server 2016 또는 Windows 10)
+# <a name="install-data-center-bridging-dcb-in-windows-server-2016-or-windows-10"></a>Windows Server 2016 또는 Windows 10에서 데이터 센터 브리징 \(DCB\) 설치
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 
@@ -31,7 +31,7 @@ DCB를 구성 하 고 관리 하기 위한 필수 구성 요소는 다음과 같
 
 - Windows Server(반기 채널)
 - Windows Server 2016
-- Windows 10 \(all 버전 @ no__t-1
+- Windows 10 \(모든 버전\)
 
 다음 운영 체제에는 Windows Server 2016 및 Windows 10의 DCB 설명서에 사용 되는 명령과 호환 되지 않는 이전 버전의 DCB가 포함 되어 있습니다.
 
@@ -42,8 +42,8 @@ DCB를 구성 하 고 관리 하기 위한 필수 구성 요소는 다음과 같
 
 다음은 DCB에 대 한 하드웨어 요구 사항 목록입니다.
 
-- DCB @ no__t-0 지원 이더넷 네트워크 어댑터 @ no__t-1, no__t-2는 Windows Server 2016 DCB를 제공 하는 컴퓨터에 설치 해야 합니다.
-- DCB @ no__t 하드웨어 스위치를 네트워크에 배포 해야 합니다.
+- DCB\-지원 되는 이더넷 네트워크 어댑터\(s\) Windows Server 2016를 제공 하는 컴퓨터에 설치 해야 합니다.
+- DCB\-가능 하드웨어 스위치를 네트워크에 배포 해야 합니다.
 
 
 ## <a name="install-dcb-in-windows-server-2016"></a>Windows Server 2016에 DCB 설치
@@ -81,7 +81,7 @@ Windows PowerShell을 사용 하 여 DCB을 설치 하려면 다음 절차를 �
 7. **기능 선택**, 클릭 **다음**합니다. 
 8. 7.In **설치 선택 확인**에서 **설치**를 클릭 합니다. 설치 **진행률** 페이지에는 설치 과정 중에 상태가 표시 됩니다. 설치가 완료 되었다는 메시지가 표시 되 면 **닫기**를 클릭 합니다.
 
-### <a name="configure-the-kernel-debugger-to-allow-qos-optional"></a>QoS @no__t를 허용 하도록 커널 디버거를 구성 합니다.-0Optional @ no__t-1
+### <a name="configure-the-kernel-debugger-to-allow-qos-optional"></a>선택적\) QoS \(를 허용 하도록 커널 디버거를 구성 합니다.
 
  기본적으로 커널 디버거는 NetQos를 차단 합니다. DCB를 설치 하는 데 사용한 방법에 관계 없이 컴퓨터에 커널 디버거가 설치 되어 있는 경우 다음 명령을 실행 하 여 QoS를 사용 하도록 설정 하 고 구성할 수 있도록 디버거를 구성 해야 합니다.
 

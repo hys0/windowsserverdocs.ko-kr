@@ -56,6 +56,6 @@ Vlan을 구성 하려면 다음이 필요 합니다.
   
 -   트렁크 모드를 사용 하 여에서 가상 네트워크 word 어댑터를 구성 된 [설정\-VMNetworkAdapterVlan](https://technet.microsoft.com/library/hh848475.aspx) cmdlt 합니다.
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  
-[하이퍼 @ no__t-1V 가상 스위치](https://technet.microsoft.com/windows-server-docs/networking/technologies/hyper-v-virtual-switch/hyper-v-virtual-switch)
+[하이퍼\-V 가상 스위치](https://technet.microsoft.com/windows-server-docs/networking/technologies/hyper-v-virtual-switch/hyper-v-virtual-switch)

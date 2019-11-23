@@ -22,7 +22,7 @@ ms.locfileid: "71372761"
 ---
 # <a name="nslookup-set-timeout"></a>nslookup set timeout
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 조회 요청에 대 한 회신을 대기 하는 초기 시간 (초)을 변경 합니다.
 ## <a name="syntax"></a>구문
@@ -45,4 +45,4 @@ set timeout=<Number>
   ```
   ## <a name="additional-references"></a>추가 참조
   [명령줄 구문 키](command-line-syntax-key.md)
-  [nslookup 집합 다시 시도](nslookup-set-retry.md)
+  [nslookup 설정 다시 시도](nslookup-set-retry.md)

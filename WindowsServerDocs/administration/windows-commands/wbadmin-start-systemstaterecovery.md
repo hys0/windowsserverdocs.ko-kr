@@ -78,7 +78,7 @@ wbadmin start systemstaterecovery
   ```
   wbadmin start systemstaterecovery -version:03/31/2013-09:00
   ```  
-- 04/30/2013에서 오전 9:00에 백업 시스템 상태 복구를 수행 하려면 server01에 대 한 공유 리소스 \\ @ no__t-1servername\share에 저장 됩니다.  
+- 04/30/2013에서 오전 9:00에 백업 시스템 상태 복구를 수행 하려면 server01에 대 한 공유 리소스 \\\\servername\share에 저장 된 다음을 입력 합니다.  
   ```
   wbadmin start systemstaterecovery -version:04/30/2013-09:00 -backupTarget:\\servername\share -machine:server01
   ```

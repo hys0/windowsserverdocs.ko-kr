@@ -15,9 +15,9 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71356249"
 ---
-# <a name="prehash-and-preload-content-on-the-hosted-cache-server-optional"></a>호스트 캐시 서버에서 콘텐츠를 미리 해시 하 고 미리 로드 \(Optional @ no__t-1
+# <a name="prehash-and-preload-content-on-the-hosted-cache-server-optional"></a>호스트 캐시 서버에서 콘텐츠 사전 해시 및 미리 로드 \(선택\)
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 이 섹션의 절차를 사용 하 여 콘텐츠 서버에서 콘텐츠를 미리 해시 하 고, 데이터 패키지에 콘텐츠를 추가 하 고, 호스트 캐시 서버에서 콘텐츠를 미리 로드할 수 있습니다. 
 

@@ -16,12 +16,12 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71367840"
 ---
-# <a name="appendix-d-securing-built-in-administrator-accounts-in-active-directory"></a>부록 D: Active Directory에서 기본 제공 관리자 계정 보안
+# <a name="appendix-d-securing-built-in-administrator-accounts-in-active-directory"></a>부록 D: Active Directory의 기본 제공 관리자 계정 보안
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
-## <a name="appendix-d-securing-built-in-administrator-accounts-in-active-directory"></a>부록 D: Active Directory에서 기본 제공 관리자 계정 보안  
+## <a name="appendix-d-securing-built-in-administrator-accounts-in-active-directory"></a>부록 D: Active Directory의 기본 제공 관리자 계정 보안  
 Active Directory의 각 도메인의 관리자 계정이 도메인의 만들기의 일부로 만들어집니다. 이 계정은 기본적으로 도메인에 있는 Domain Admins 및 Administrators 그룹의 구성원이 고, 도메인이 포리스트 루트 도메인 인 경우 계정도 Enterprise Admins 그룹의 구성원 이기도 합니다.
 
 도메인의 관리자 계정 사용은 초기 빌드 작업 및 재해 복구 시나리오에 대해서만 예약 해야 합니다. 다른 계정을 사용할 수 없는 경우 관리자 계정을 사용 하 여 복구에 영향을 미칠 수 있도록 하려면 포리스트의 모든 도메인에서 관리자 계정의 기본 멤버 자격을 변경 하면 안 됩니다. 대신, 다음 섹션에 설명 된 대로 포리스트의 각 도메인에서 관리자 계정을 보호 하 고 다음에 나오는 단계별 지침에 자세히 설명 합니다. 
@@ -39,7 +39,7 @@ Active Directory의 각 도메인의 관리자 계정이 도메인의 만들기�
 
 -   도메인에 가입 된 시스템에서 관리자 계정의 사용을 제한 하도록 Gpo를 구성 합니다.  
 
-    -   사용자가 만들고 각 도메인의 워크스테이션 및 구성원 서버 Ou에 연결 하는 하나 이상의 Gpo에서 각 도메인의 관리자 계정을 **컴퓨터 Configuration\Policies\Windows 설정 \ 로컬 관리자 정책 \의 다음 사용자 권한에 추가 합니다. 사용자 권한 할당**:  
+    -   사용자가 만들고 각 도메인의 워크스테이션 및 구성원 서버 Ou에 연결 하는 하나 이상의 Gpo에서 각 도메인의 관리자 계정을 **컴퓨터 Configuration\Policies\Windows 설정 \ 로컬 정책 \ 사용자 권한 할당**의 다음 사용자 권한에 추가 합니다.  
 
         -   네트워크에서 이 컴퓨터 액세스 거부  
 
@@ -58,7 +58,7 @@ Active Directory의 각 도메인의 관리자 계정이 도메인의 만들기�
 ![기본 제공 관리자 계정 보안](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_23.gif)  
 
 -   도메인 컨트롤러에서 관리자 계정을 제한 하도록 Gpo 구성  
-    -   포리스트의 각 도메인에서 도메인 컨트롤러 OU에 연결 된 기본 도메인 컨트롤러 GPO 또는 정책을 수정 하 여 **컴퓨터 Configuration\Policies\Windows 설정 \의 다음 사용자 권한에 각 도메인의 관리자 계정을 추가 해야 합니다. 보안 정책 \ 로컬 정책 \ 보안 정책 \ 보안 정책**:   
+    -   포리스트의 각 도메인에서 기본 도메인 컨트롤러 GPO 또는 도메인 컨트롤러 OU에 연결 된 정책을 수정 하 여 각 도메인의 관리자 계정을 **Computer Configuration\Policies\Windows 설정 \ 로컬 정책 \ 사용자 권한 할당**의 다음 사용자 권한에 추가 해야 합니다.   
         -   네트워크에서 이 컴퓨터 액세스 거부  
 
         -   일괄 작업으로 로그온 거부  
@@ -105,13 +105,13 @@ Active Directory의 각 도메인의 관리자 계정이 도메인의 만들기�
 
 1.  **서버 관리자**에서 **도구**를 클릭 하 **그룹 정책 관리**를 클릭 합니다.  
 
-2.  콘솔 트리에서 <Forest> \ 도메인 @ no__t-1 @ no__t-2를 확장 한 다음 **개체를 그룹 정책** 합니다. 여기서 <Forest>는 포리스트의 이름이 고 <Domain>는 그룹 정책를 만들려는 도메인의 이름입니다.  
+2.  콘솔 트리에서 <Forest>\Domains\\<Domain>를 확장 한 다음 **개체를 그룹 정책** 합니다. 여기서 <Forest>는 포리스트의 이름이 고 <Domain>은 그룹 정책를 만들려는 도메인의 이름입니다.  
 
 3.  콘솔 트리에서 **그룹 정책 개체**를 마우스 오른쪽 단추로 클릭 하 고 **새로 만들기**를 클릭 합니다.  
 
     ![기본 제공 관리자 계정 보안](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_27.gif)  
 
-4.  **새 gpo** 대화 상자에서 <GPO Name>을 입력 하 고 **확인** 을 클릭 합니다. 여기서 <GPO Name>은이 GPO의 이름입니다. 여기서는 다음 스크린샷에 표시 된 것과 같습니다.  
+4.  **새 gpo** 대화 상자에서 <GPO Name>를 입력 하 고 **확인** 을 클릭 합니다. 여기서 <GPO Name>은 다음 스크린샷에 표시 된 것과 같습니다.  
 
     ![기본 제공 관리자 계정 보안](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_28.gif)  
 
@@ -127,7 +127,7 @@ Active Directory의 각 도메인의 관리자 계정이 도메인의 만들기�
 
     2.  **사용자 또는 그룹 추가** 를 클릭 하 고 **찾아보기**를 클릭 합니다.  
 
-    3.  **관리자**를 입력 하 고 **이름 확인**을 클릭 한 다음 **확인**을 클릭 합니다. 다음 스크린샷에 표시 된 것 처럼 <DomainName> \ 사용자 이름 형식으로 계정이 표시 되는지 확인 합니다.  
+    3.  **관리자**를 입력 하 고 **이름 확인**을 클릭 한 다음 **확인**을 클릭 합니다. 다음 스크린샷에 표시 된 것 처럼 계정이 <DomainName>\Username 형식으로 표시 되는지 확인 합니다.  
 
         ![기본 제공 관리자 계정 보안](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_30.gif)  
 
@@ -139,7 +139,7 @@ Active Directory의 각 도메인의 관리자 계정이 도메인의 만들기�
 
     2.  **사용자 또는 그룹 추가** 를 클릭 하 고 **찾아보기**를 클릭 합니다.  
 
-    3.  **관리자**를 입력 하 고 **이름 확인**을 클릭 한 다음 **확인**을 클릭 합니다. 다음 스크린샷에 표시 된 것 처럼 <DomainName> \ 사용자 이름 형식으로 계정이 표시 되는지 확인 합니다.  
+    3.  **관리자**를 입력 하 고 **이름 확인**을 클릭 한 다음 **확인**을 클릭 합니다. 다음 스크린샷에 표시 된 것 처럼 계정이 <DomainName>\Username 형식으로 표시 되는지 확인 합니다.  
 
         ![기본 제공 관리자 계정 보안](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_31.gif)  
 
@@ -151,7 +151,7 @@ Active Directory의 각 도메인의 관리자 계정이 도메인의 만들기�
 
     2.  **사용자 또는 그룹 추가** 를 클릭 하 고 **찾아보기**를 클릭 합니다.  
 
-    3.  **관리자**를 입력 하 고 **이름 확인**을 클릭 한 다음 **확인**을 클릭 합니다. 다음 스크린샷에 표시 된 것 처럼 <DomainName> \ 사용자 이름 형식으로 계정이 표시 되는지 확인 합니다.  
+    3.  **관리자**를 입력 하 고 **이름 확인**을 클릭 한 다음 **확인**을 클릭 합니다. 다음 스크린샷에 표시 된 것 처럼 계정이 <DomainName>\Username 형식으로 표시 되는지 확인 합니다.  
 
         ![기본 제공 관리자 계정 보안](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_32.gif)  
 
@@ -163,7 +163,7 @@ Active Directory의 각 도메인의 관리자 계정이 도메인의 만들기�
 
     2.  **사용자 또는 그룹 추가** 를 클릭 하 고 **찾아보기**를 클릭 합니다.  
 
-    3.  **관리자**를 입력 하 고 **이름 확인**을 클릭 한 다음 **확인**을 클릭 합니다. 다음 스크린샷에 표시 된 것 처럼 <DomainName> \ 사용자 이름 형식으로 계정이 표시 되는지 확인 합니다.  
+    3.  **관리자**를 입력 하 고 **이름 확인**을 클릭 한 다음 **확인**을 클릭 합니다. 다음 스크린샷에 표시 된 것 처럼 계정이 <DomainName>\Username 형식으로 표시 되는지 확인 합니다.  
 
         ![기본 제공 관리자 계정 보안](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_33.gif)  
 
@@ -173,7 +173,7 @@ Active Directory의 각 도메인의 관리자 계정이 도메인의 만들기�
 
 12. **그룹 정책 관리**에서 다음을 수행 하 여 GPO를 구성원 서버 및 워크스테이션 ou에 연결 합니다.  
 
-    1.  @No__t-0 \ 도메인 @ no__t-1 @ no__t-2로 이동 합니다. 여기서 <Forest>은 포리스트의 이름이 고, <Domain>는 그룹 정책를 설정 하려는 도메인의 이름입니다.  
+    1.  <Forest>\Domains\\<Domain>으로 이동 합니다. 여기서 <Forest>는 포리스트의 이름이 고 <Domain>는 그룹 정책를 설정 하려는 도메인의 이름입니다.  
 
     2.  GPO가 적용 될 OU를 마우스 오른쪽 단추로 클릭 하 고 **기존 Gpo 연결**을 클릭 합니다.  
 
@@ -218,7 +218,7 @@ GPO 변경의 영향을 받지 않는 구성원 서버 또는 워크스테이션
 
     ![기본 제공 관리자 계정 보안](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_38.gif)  
 
-5.  **명령 프롬프트** 창에서 **net use \\ @ no__t @ No__t-4server name @ no__t-5\c $** 을 입력 합니다. 여기서 \<server name @ no__t-7은 네트워크를 통해 액세스 하려는 구성원 서버 또는 워크스테이션의 이름입니다.  
+5.  **명령 프롬프트** 창에서 **net use \\\\\<서버 이름\>\c $** 를 입력 합니다. 여기서 \<server name\>은 네트워크를 통해 액세스 하려는 구성원 서버 또는 워크스테이션의 이름입니다.  
 
 6.  다음 스크린샷에서는 표시 되어야 하는 오류 메시지를 보여 줍니다.  
 
@@ -238,7 +238,7 @@ GPO 변경의 영향을 받는 모든 구성원 서버 또는 워크스테이션
 
 4.  **파일** 을 클릭 하 고 다른 **이름으로 저장**을 클릭 합니다.  
 
-5.  **파일 이름** 필드에 **@no__t -2** 를 입력 합니다. 여기서 <Filename>은 새 배치 파일의 이름입니다.  
+5.  **파일 이름** 필드에 **<Filename>** 을 입력 합니다. 여기서 <Filename>은 새 배치 파일의 이름입니다.  
 
 ###### <a name="schedule-a-task"></a>작업 예약  
 
@@ -251,7 +251,7 @@ GPO 변경의 영향을 받는 모든 구성원 서버 또는 워크스테이션
 
 3.  **작업 스케줄러**에서 **작업**을 클릭 하 고 **작업 만들기**를 클릭 합니다.  
 
-4.  **작업 만들기** 대화 상자에서 **<Task Name>** 를 입력 합니다. 여기서 **<Task Name>** 는 새 작업의 이름입니다.  
+4.  **작업 만들기** 대화 상자에서 **<Task Name>** 를 입력 합니다. 여기서 **<Task Name>** 은 새 작업의 이름입니다.  
 
 5.  **작업** 탭을 클릭 하 고 **새로 만들기**를 클릭 합니다.  
 

@@ -37,10 +37,10 @@ manage-bde -unlock {-recoverypassword <Password>|-recoverykey <PathToExternalKey
 |매개 변수|값|설명|
 |---------|-----|-----------|
 |-recoverypassword||복구 암호를 드라이브의 잠금을 해제 하는 것을 지정 합니다. Rp 약어:|
-||\<Password >|드라이브를 잠금 해제를 사용할 수 있는 복구 암호를 나타냅니다.|
+||암호 \<>|드라이브를 잠금 해제를 사용할 수 있는 복구 암호를 나타냅니다.|
 |-recoverykey||외부 복구 키 파일의 드라이브 잠금을 해제 하는 것을 지정 합니다. 약어: 날짜별|
-||@no__t 0PathToExternalKeyFile >|드라이브를 잠금 해제를 사용할 수 있는 외부 복구 키 파일을 나타냅니다.|
-||\<Drive >|드라이브 문자를 뒤에 콜론을 나타냅니다.|
+||\<PathToExternalKeyFile >|드라이브를 잠금 해제를 사용할 수 있는 외부 복구 키 파일을 나타냅니다.|
+||\<드라이브 >|드라이브 문자를 뒤에 콜론을 나타냅니다.|
 |-인증서||Unclock 볼륨에 BitLocker 인증서에 대 한 로컬 사용자 인증서는 locat 사용자 인증서 저장소에 있습니다. 약어:-인증서|
 ||<-cf PathToCertificateFile >|Cerficate 파일 경로|
 ||<-ct CertificateThumbprint >|PIN을 선택적으로 포함할 수 있는 인증서 지문 (-핀).|

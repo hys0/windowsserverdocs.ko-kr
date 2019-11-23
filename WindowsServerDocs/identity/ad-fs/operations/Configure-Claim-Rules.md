@@ -18,7 +18,7 @@ ms.locfileid: "71407671"
 ---
 # <a name="configure-claim-rules"></a>클레임 규칙 구성
 
-클레임 @ no__t-0based id 모델에서 Active Directory Federation Services \(AD FS @ no__t-2를 페더레이션 서비스로 사용 하는 기능은 클레임 집합이 포함 된 토큰을 발급 하는 것입니다. 클레임 규칙은 문제를 AD FS 하는 클레임과 관련 하 여 결정을 제어 합니다. 클레임 규칙 및 모든 서버 구성 데이터는 AD FS 구성 데이터베이스에 저장 됩니다.  
+클레임\-기반 id 모델에서 페더레이션 서비스로\) AD FS \(Active Directory Federation Services 함수는 클레임 집합을 포함 하는 토큰을 발급 하는 것입니다. 클레임 규칙은 문제를 AD FS 하는 클레임과 관련 하 여 결정을 제어 합니다. 클레임 규칙 및 모든 서버 구성 데이터는 AD FS 구성 데이터베이스에 저장 됩니다.  
   
 AD FS는 클레임 및 기타 컨텍스트 정보 형식으로 제공 되는 id 정보를 기반으로 하는 발급 결정을 내립니다. 높은 수준에서 AD FS 클레임 집합 하나를 입력으로 가져오고, 많은 변환을 수행 하 고, 다른 클레임 집합을 출력으로 반환 하 여 규칙 프로세서로 작동 합니다. 
 
@@ -41,5 +41,5 @@ AD FS는 클레임 및 기타 컨텍스트 정보 형식으로 제공 되는 id 
   
 -   [사용자 지정 규칙을 사용하여 클레임을 보내는 규칙 만들기](Create-a-Rule-to-Send-Claims-Using-a-Custom-Rule.md)  
 
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [AD FS 작업](../../ad-fs/AD-FS-2016-Operations.md) 

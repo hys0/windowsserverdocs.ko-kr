@@ -31,7 +31,7 @@ ms.locfileid: "71409094"
 3. **서버** 컨테이너를 확장 한 다음 글로벌 카탈로그를 제거할 DC에 대 한 *서버* 개체를 확장 합니다. 
 4. **NTDS 설정**을 마우스 오른쪽 단추로 클릭 한 다음 **속성**을 클릭 합니다. 
 5. **글로벌 카탈로그** 확인란의 선택을 취소 합니다. 
-   ![Remove GC @ no__t-1
+   GC ![제거](media/AD-Forest-Recovery-Remove-GC/removegc1.png)
 6. **적용**을 클릭합니다.
   
 ## <a name="to-remove-the-global-catalog-using-repadmin"></a>Repadmin을 사용 하 여 글로벌 카탈로그를 제거 하려면  

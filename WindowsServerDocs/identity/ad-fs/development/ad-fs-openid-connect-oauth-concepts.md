@@ -47,20 +47,20 @@ AD FS로 구성 된 모든 OAuth 클라이언트 (네이티브 또는 웹 앱) �
 ## <a name="security-tokens"></a>보안 토큰 
  
 최신 인증은 다음 토큰 유형을 사용 합니다. 
-- **id_token**: 권한 부여 서버 (AD FS)에서 발급 하 고 클라이언트에서 사용 하는 JWT 토큰입니다. ID 토큰의 클레임에는 클라이언트에서 사용할 수 있도록 사용자에 대 한 정보가 포함 됩니다.  
-- **access_token**: 권한 부여 서버 (AD FS)에서 발급 하 고 리소스에서 사용 하기 위한 JWT 토큰입니다. 이 토큰의 'aud' 또는 대상 그룹 클레임 리소스 또는 웹 API의 식별자를 일치 해야 합니다.  
-- **refresh_token**: 이 토큰은 클라이언트에서 id_token 및 access_token를 새로 고쳐야 할 때 사용할 AD FS에서 발급 한 토큰입니다. 토큰은 클라이언트에 불투명 하며 AD FS만 사용할 수 있습니다.  
+- **id_token**: 권한 부여 서버 (AD FS)에서 발급 하 고 클라이언트에서 사용 하는 JWT 토큰입니다. ID 토큰의 클레임에는 클라이언트에서 사용할 수 있도록 사용자에 대 한 정보가 포함 됩니다.  
+- **access_token**: 권한 부여 서버 (AD FS)에서 발급 하 고 리소스에서 사용 하기 위한 JWT 토큰입니다. 이 토큰의 'aud' 또는 대상 그룹 클레임 리소스 또는 웹 API의 식별자를 일치 해야 합니다.  
+- **refresh_token**: 클라이언트에서 id_token 및 access_token를 새로 고쳐야 할 때 사용할 수 있도록 AD FS에서 발급 한 토큰입니다. 토큰은 클라이언트에 불투명 하며 AD FS만 사용할 수 있습니다.  
 
 ## <a name="scopes"></a>영역 
  
 AD FS에서 리소스를 등록 하는 동안 AD FS 특정 작업을 수행할 수 있도록 범위를 구성할 수 있습니다. 범위를 구성 하는 것 외에도 작업을 수행 하는 AD FS에 대 한 요청에 범위 값을 전송 해야 합니다. 예를 들어, 관리자는 리소스 등록 중에 openid connect로 범위를 구성 해야 하 고, 응용 프로그램 (클라이언트)이 AD FS에 대 한 인증 요청에서 범위 = openid connect를 발급 ID 토큰으로 보내야 합니다. AD FS에서 사용할 수 있는 범위에 대 한 자세한 내용은 아래에 나와 있습니다. 
  
-- aza- [Broker 클라이언트에 대해 OAuth 2.0 프로토콜 확장](https://docs.microsoft.com/openspecs/windows_protocols/ms-oapxbc/2f7d8875-0383-4058-956d-2fb216b44706)을 사용 하는 경우  입니다. 범위 매개 변수에 "aza" 범위가 포함 되어 있으면 서버가 새 주 새로 고침 토큰을 발급 하 고 응답의 refresh_token 필드에 해당 토큰을 설정 하 고 refresh_를 설정 합니다. token_expires_in이 적용 되는 경우 새 주 새로 고침 토큰의 수명으로 필드를 유지 합니다. 
+- aza- [Broker 클라이언트에 OAuth 2.0 프로토콜 확장](https://docs.microsoft.com/openspecs/windows_protocols/ms-oapxbc/2f7d8875-0383-4058-956d-2fb216b44706) 을 사용 하는 경우 하 고 범위 매개 변수에 "aza" 범위가 포함 되어 있으면 서버가 새 주 새로 고침 토큰을 발급 하 고 응답의 refresh_token 필드에 설정 하 고, 적용 되는 경우 새 주 새로 고침 토큰의 수명으로 refresh_token_expires_in 필드를 설정 합니다. 
 - openid connect-응용 프로그램에서 Openid connect Connect 권한 부여 프로토콜의 사용을 요청할 수 있습니다. 
 - logon_cert-logon_cert 범위를 통해 응용 프로그램은 인증 된 사용자를 대화형으로 로그온 하는 데 사용할 수 있는 로그온 인증서를 요청할 수 있습니다. AD FS 서버는 응답에서 access_token 매개 변수를 생략 하 고 대신 b a s e 64로 인코딩된 CMS 인증서 체인 또는 CMC 전체 PKI 응답을 제공 합니다. 자세한 내용은 [여기](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-oapx/32ce8878-7d33-4c02-818b-6c9164cc731e)에 있습니다.
-- user_impersonation-AD FS에서 온-액세스 토큰을 성공적으로 요청 하려면 user_impersonation 범위가 필요 합니다. 이 범위를 사용 하는 방법에 대 한 자세한 내용은 AD FS 2016를 사용 하 여 OAuth를 사용 하 여 [(OBO)를 사용 하는 다중 계층 응용 프로그램 빌드](ad-fs-on-behalf-of-authentication-in-windows-server.md)를 참조 하세요. 
+- user_impersonation-AD FS에서 온-의 액세스 토큰을 성공적으로 요청 하려면 user_impersonation 범위가 필요 합니다. 이 범위를 사용 하는 방법에 대 한 자세한 내용은 AD FS 2016를 사용 하 여 OAuth를 사용 하 여 [(OBO)를 사용 하는 다중 계층 응용 프로그램 빌드](ad-fs-on-behalf-of-authentication-in-windows-server.md)를 참조 하세요. 
 - allatclaims – allatclaims 범위를 사용 하면 응용 프로그램에서 액세스 토큰의 클레임을 ID 토큰에 추가 하도록 요청할 수도 있습니다.   
-- vpn_cert-vpn_cert 범위를 사용 하면 응용 프로그램에서 VPN 인증서를 요청할 수 있으며,이는 EAP-TLS 인증을 사용 하 여 VPN 연결을 설정 하는 데 사용할 수 있습니다. 이는 더 이상 지원 되지 않습니다. 
+- vpn_cert-vpn_cert 범위를 통해 응용 프로그램은 EAP-TLS 인증을 사용 하 여 VPN 연결을 설정 하는 데 사용할 수 있는 VPN 인증서를 요청할 수 있습니다. 이는 더 이상 지원 되지 않습니다. 
 - 전자 메일-응용 프로그램에서 로그인 한 사용자에 대 한 전자 메일 클레임을 요청할 수 있습니다.  
 - 프로필-응용 프로그램에서 로그인 사용자에 대 한 프로필 관련 클레임을 요청할 수 있습니다.  
 
@@ -115,13 +115,13 @@ AD FS에는 두 가지 유형의 라이브러리가 사용 됩니다.
 특정 시나리오에서 웹 앱 (클라이언트)은 기능을 지원 하기 위해 ID 토큰에 추가 클레임이 필요할 수 있습니다. 다음 옵션 중 하나를 사용 하 여이를 수행할 수 있습니다. 
 
 **옵션 1:** 공용 클라이언트를 사용 하 고 웹 앱에 액세스 하려는 리소스가 없는 경우에 사용 해야 합니다. 옵션을 사용 하려면 
-1.  form_post로 설정 된 response_mode 
+1.  response_mode 설정 form_post 
 2.  신뢰 당사자 식별자 (웹 API 식별자)가 클라이언트 식별자와 동일 합니다.
 
 ![AD FS 토큰 옵션 1 사용자 지정](media/adfs-modern-auth-concepts/option1.png)
 
 **옵션 2:** 웹 앱에 액세스 하려는 리소스가 있고 ID 토큰을 통해 추가 클레임을 전달 해야 하는 경우에 사용 해야 합니다. 공용 및 기밀 클라이언트를 모두 사용할 수 있습니다. 옵션을 사용 하려면 
-1.  form_post로 설정 된 response_mode 
+1.  response_mode 설정 form_post 
 2.  AD FS 서버에 KB4019472이 설치 되어 있습니다. 
 3.  클라이언트에 할당 된 allatclaims 범위-RP 쌍 아래 예제에 표시 된 것 처럼 ADFSApplicationPermission (이미 한 번 부여 된 경우 AdfsApplicationPermission 사용) PowerShell cmdlet을 사용 하 여 범위를 할당할 수 있습니다. 
 
@@ -131,7 +131,7 @@ AD FS에는 두 가지 유형의 라이브러리가 사용 됩니다.
 
 ![AD FS 토큰 옵션 2 사용자 지정](media/adfs-modern-auth-concepts/option2.png)
 
-사용자 지정 ID 토큰을 얻기 위해 ADFS에서 웹 앱을 구성 하는 방법을 더 잘 이해 하려면 [Openid connect Connect 또는 OAuth with AD FS 2016 이상을 사용할 때 id_token에서 내보낼 클레임 사용자 지정](Custom-Id-Tokens-in-AD-FS.md)을 참조 하세요.
+사용자 지정 ID 토큰을 얻기 위해 ADFS에서 웹 앱을 구성 하는 방법을 더 잘 이해 하려면 [Openid connect Connect 또는 OAuth를 AD FS 2016 이상 사용 하는 경우 id_token에서 내보낼 클레임 사용자 지정](Custom-Id-Tokens-in-AD-FS.md)을 참조 하세요.
 
 ## <a name="single-log-out"></a>단일 로그 아웃
 

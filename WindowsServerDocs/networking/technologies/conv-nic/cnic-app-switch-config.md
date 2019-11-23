@@ -28,13 +28,13 @@ ms.locfileid: "71355480"
 >[!IMPORTANT]
 >SMB가 구성 된 우선 순위에 대해 VLAN 및 삭제 방지 정책이 설정 되어 있는지 확인 합니다.
 
-## <a name="arista-switch-dcs-7050s-64-eos-4137m"></a>Arista 스위치 \(dcs @ no__t-17050s @ no__t-264, EOS @ no__t-34.13.7 M @ no__t-4
+## <a name="arista-switch-dcs-7050s-64-eos-4137m"></a>Arista 스위치 \(dc\-7050s\-64, EOS\-4.13.7 M\)
 
-1.  en \( 관리자 모드로 이동, 일반적으로 암호를 묻는 @ no__t-1
-2.  config \( 구성 모드로 전환 @ no__t-1
-3.  실행 @no__t 표시-0 현재 실행 중인 구성 @ no__t-1 표시
+1.  en \(관리 모드로 이동 하 여 일반적으로 암호를 요청\)
+2.  구성 모드로 전환 하는 구성 \(\)
+3.  실행 \(표시 현재 실행 중인 구성을 표시\)
 4.  Nic가 연결 된 스위치 포트를 확인 합니다. 이 예에서는 14/1, 15/1, 16/1, 17/1입니다.
-5.  int eth 14/1, 15/1, 16/1, 17/1 \( 다음 포트에 대 한 config 모드로 전환 @ no__t-1
+5.  int eth 14/1, 15/1, 16/1, 17/1 \(이러한 포트에 대 한 구성 모드로 전환\)
 6.  dcbx 모드 ieee
 7.  우선 순위-흐름 제어 모드
 8.  switchport 트렁크 native vlan 225
@@ -42,19 +42,19 @@ ms.locfileid: "71355480"
 10. switchport 모드 트렁크
 11. 우선 순위-흐름 제어 우선 순위 3 삭제 안 함
 12. qos 트러스트 co
-13. 실행 @no__t 표시-0 구성이 포트에서 올바르게 설정 되어 있는지 확인 @ no__t-1
-14. wr \(은 스위치를 다시 시작 합니다. @ no__t-1
+13. 실행 \(표시 포트에서 구성이 올바르게 설정 되어 있는지 확인\)
+14. wr \(스위치 다시 부팅 전체에서 설정이 유지 되도록\)
 
 ### <a name="tips"></a>팁
 1.  No #command # 부정 명령
-2.  새 VLAN을 추가 하는 방법: int vlan 100 @no__t-저장소 네트워크가 VLAN 100 @ no__t-1에 있는 경우 0
+2.  새 VLAN을 추가 하는 방법: 저장소 네트워크가 VLAN 100에 있는 경우 int vlan 100 \(\)
 3.  기존 Vlan을 확인 하는 방법: vlan 표시
-4.  Arista 스위치를 구성 하는 방법에 대 한 자세한 내용은 온라인에서 다음을 검색 하세요. Arista EOS 수동
+4.  Arista 스위치를 구성 하는 방법에 대 한 자세한 내용은 온라인 검색: Arista EOS 수동
 5.  이 명령을 사용 하 여 PFC 설정을 확인 합니다. 우선 순위 흐름 제어 카운터 정보를 표시 합니다.
 
 --- 
 
-## <a name="dell-switch-s4810-ftos-99-00"></a>Dell 스위치 \(S4810, FTOS 9.9 \(0.0 @ no__t-2 @ no__t-3
+## <a name="dell-switch-s4810-ftos-99-00"></a>Dell 스위치 \(S4810, FTOS 9.9 \(0.0\)\)
 
     
     !
@@ -74,7 +74,7 @@ ms.locfileid: "71355480"
     
 --- 
 
-## <a name="cisco-switch-nexus-3132-version-602u61"></a>Cisco switch \(Nexus 3132, 버전 6.0 @ no__t-12 @ no__t-2U6 @ no__t-31 @ no__t-4 @ no__t-5
+## <a name="cisco-switch-nexus-3132-version-602u61"></a>Cisco 스위치 \(Nexus 3132, 버전 6.0\(2\)U6 옆\(1\)\)
 
 ### <a name="global"></a>전역
     

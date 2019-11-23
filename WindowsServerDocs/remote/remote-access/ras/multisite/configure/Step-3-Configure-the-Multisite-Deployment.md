@@ -81,7 +81,7 @@ Install-WindowsFeature RemoteAccess -IncludeManagementTools
   
 #### <a name="to-grant-administrator-permissions"></a>관리자 권한을 부여 하려면  
   
-1.  추가 진입점의 원격 액세스 서버에서 다음을 수행 합니다. **시작** 화면에서 **컴퓨터 관리**를 입력 하 고 enter 키를 누릅니다.  
+1.  추가 진입점에서 원격 액세스 서버에서:에 **시작** 화면에서 입력 **컴퓨터 관리**, 한 다음 ENTER를 누릅니다.  
   
 2.  왼쪽된 창에서 **로컬 사용자 및 그룹**합니다.  
   
@@ -104,7 +104,7 @@ Install-WindowsFeature RemoteAccess -IncludeManagementTools
   
 #### <a name="to-obtain-an-ip-https-certificate"></a>IP-HTTPS 인증서를 받으려면  
   
-1.  각 원격 액세스 서버에서 다음을 수행 합니다. **시작** 화면에서 **mmc**를 입력 한 다음 enter 키를 누릅니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
+1.  각 원격 액세스 서버에서:에 **시작** 화면에서 입력 **mmc**, 한 다음 ENTER를 누릅니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
   
 2.  클릭 **파일**, 를 클릭 하 고 **추가/제거 스냅인**합니다.  
   
@@ -142,7 +142,7 @@ Install-WindowsFeature RemoteAccess -IncludeManagementTools
   
 #### <a name="to-install-a-certificate-for-network-location"></a>네트워크 위치에 대 한 인증서를 설치 하려면  
   
-1.  원격 액세스 서버에서 다음을 수행합니다. **시작** 화면에서 **mmc**를 입력 한 다음 enter 키를 누릅니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
+1.  원격 액세스 서버에서:에 **시작** 화면에서 입력 **mmc**, 한 다음 ENTER를 누릅니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
   
 2.  클릭 **파일**, 를 클릭 하 고 **추가/제거 스냅인**합니다.  
   
@@ -180,7 +180,7 @@ Install-WindowsFeature RemoteAccess -IncludeManagementTools
   
 ### <a name="NLS"></a>네트워크 위치 서버 DNS 레코드를 만들려면  
   
-1.  DNS 서버에서 다음을 수행 합니다. **시작** 화면에서 **dnsmgmt.msc**를 입력 한 다음 enter 키를 누릅니다.  
+1.  DNS 서버에서:에 **시작** 화면에서 입력 **dnsmgmt.msc**, 한 다음 ENTER를 누릅니다.  
   
 2.  왼쪽된 창에서는 **DNS 관리자** 콘솔에서 내부 네트워크에 대 한 정방향 조회 영역을 엽니다. 관련 영역을 마우스 오른쪽 단추로 클릭 하 고 클릭 **새 호스트 (A 또는 AAAA)** 합니다.  
   
@@ -195,7 +195,7 @@ Install-WindowsFeature RemoteAccess -IncludeManagementTools
 7.  배포에 대 한 추가 진입점으로 서버를 추가 하기 전에이 절차를 반복 합니다.  
   
 ## <a name="BKMK_Client"></a>3.5. 멀티 사이트 배포에 DirectAccess 클라이언트 구성  
-DirectAccess Windows 클라이언트 컴퓨터에 연결 하 여 DirectAccess를 정의 하는 보안 그룹의 구성원 이어야 합니다. 멀티 사이트를 사용 하기 전에 이러한 보안 그룹 포함 될 수 있습니다 Windows 8 클라이언트와 Windows 7 클라이언트 (적절 한 "하위" 모드가 선택 된) 경우입니다. 멀티 사이트를 사용 하도록 설정 하면 단일 서버 모드에서 기존 클라이언트 보안 그룹으로 변환 됩니다 보안 그룹 Windows 8 용만. 멀티 사이트를 설정한 후 해당 전용된 Windows 7 클라이언트 보안 그룹 (프로그램이 관련 된 특정 진입점)를 이동 해야 하는 Windows 7 DirectAccess 클라이언트 컴퓨터 또는 DirectAccess를 통해 연결할 수 없습니다. Windows 7 클라이언트는 이제 Windows 8 보안 그룹인 기존 보안 그룹에서 먼저 제거 해야 합니다. 주의:  Windows 7 및 Windows 8 클라이언트 보안 그룹의 구성원 인 windows 7 클라이언트 컴퓨터는 원격 연결을 상실 하 고 s p 1이 설치 되지 않은 Windows 7 클라이언트는 회사의 연결도 잃게 됩니다. 따라서 Windows 8 보안 그룹에서 모든 Windows 7 클라이언트 컴퓨터를 제거 해야 합니다.  
+DirectAccess Windows 클라이언트 컴퓨터에 연결 하 여 DirectAccess를 정의 하는 보안 그룹의 구성원 이어야 합니다. 멀티 사이트를 사용 하기 전에 이러한 보안 그룹 포함 될 수 있습니다 Windows 8 클라이언트와 Windows 7 클라이언트 (적절 한 "하위" 모드가 선택 된) 경우입니다. 멀티 사이트를 사용 하도록 설정 하면 단일 서버 모드에서 기존 클라이언트 보안 그룹으로 변환 됩니다 보안 그룹 Windows 8 용만. 멀티 사이트를 설정한 후 해당 전용된 Windows 7 클라이언트 보안 그룹 (프로그램이 관련 된 특정 진입점)를 이동 해야 하는 Windows 7 DirectAccess 클라이언트 컴퓨터 또는 DirectAccess를 통해 연결할 수 없습니다. Windows 7 클라이언트는 이제 Windows 8 보안 그룹인 기존 보안 그룹에서 먼저 제거 해야 합니다. 주의: Windows 7 클라이언트 컴퓨터 둘 다 Windows 7 및 Windows 8 클라이언트 보안 그룹의 구성원 인 한 원격 연결이 끊어집니다 및 s p 1 설치 하지 않고 Windows 7 클라이언트 회사 연결도 손실 됩니다. 따라서 Windows 8 보안 그룹에서 모든 Windows 7 클라이언트 컴퓨터를 제거 해야 합니다.  
   
 #### <a name="remove--windows-7--clients-from-windows-8-security-groups"></a>Windows 8 보안 그룹에서 Windows 7 클라이언트를 제거 합니다.  
   
@@ -221,7 +221,7 @@ DirectAccess Windows 클라이언트 컴퓨터에 연결 하 여 DirectAccess를
   
 ### <a name="EnabledMultisite"></a>멀티 사이트 구성을 사용 하도록 설정 하려면  
   
-1.  기존 원격 액세스 서버에서 다음을 수행 합니다. **시작** 화면에서 **ramgmtui.exe**를 입력 한 다음 enter 키를 누릅니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
+1.  기존 원격 액세스 서버에서:에 **시작** 화면에서 입력 **RAMgmtUI.exe**, 한 다음 ENTER를 누릅니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
   
 2.  원격 액세스 관리 콘솔에서 클릭 **구성**, 한 다음는 **작업** 창에서 클릭 **멀티 사이트 사용**합니다.  
   
@@ -289,7 +289,7 @@ Add-DAClient -EntrypointName 'Edge1-US' -DownlevelSecurityGroupNameList @('corp.
   
 ### <a name="AddEP"></a>진입점을 멀티 사이트 배포에 추가 하려면  
   
-1.  기존 원격 액세스 서버에서 다음을 수행 합니다. **시작** 화면에서 **ramgmtui.exe**를 입력 한 다음 enter 키를 누릅니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
+1.  기존 원격 액세스 서버에서:에 **시작** 화면에서 입력 **RAMgmtUI.exe**, 한 다음 ENTER를 누릅니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
   
 2.  원격 액세스 관리 콘솔에서 클릭 **구성**, 한 다음는 **작업** 창에서 클릭 **진입점 추가**합니다.  
   
@@ -360,4 +360,4 @@ Add-DAClient -EntrypointName 'Edge2-Europe' -DownlevelGpoName @('corp.contoso.co
   
 ## <a name="BKMK_Links"></a>참고 항목  
   
--   [2단계: 멀티 사이트 인프라 구성 @ no__t-0
+-   [2 단계: 멀티 사이트 인프라 구성](Step-2-Configure-the-Multisite-Infrastructure.md)

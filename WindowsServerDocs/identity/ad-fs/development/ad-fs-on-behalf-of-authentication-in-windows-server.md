@@ -21,7 +21,7 @@ ms.locfileid: "71407813"
 
 이 연습에서는 Windows Server 2016 T P 5 이상에서 AD FS를 사용 하 여 (OBO) 인증을 구현 하기 위한 지침을 제공 합니다. OBO 인증에 대 한 자세한 내용은 [Openid connect Connect/OAuth 흐름 및 응용 프로그램 시나리오 AD FS](../../ad-fs/overview/ad-fs-openid-connect-oauth-flows-scenarios.md) 읽어 보세요.
 
->경고: 여기에서 빌드할 수 있는 예제는 교육용 으로만 사용 됩니다. 이러한 지침은 모델의 필수 요소를 노출할 수 가장 간단 하 고 가장 최소한의 구현에 대 한 것입니다. 예제에서는 오류 처리의 모든 측면을 포함 되지 않아야 하 고 다른 관련 기능에 성공적으로 OBO 인증을 가져오는 중점을 두고 있습니다.
+>경고: 여기 빌드할 수 있는 예제는 교육용 으로만입니다. 이러한 지침은 모델의 필수 요소를 노출할 수 가장 간단 하 고 가장 최소한의 구현에 대 한 것입니다. 예제에서는 오류 처리의 모든 측면을 포함 되지 않아야 하 고 다른 관련 기능에 성공적으로 OBO 인증을 가져오는 중점을 두고 있습니다.
 
 ## <a name="overview"></a>개요
 
@@ -62,9 +62,9 @@ WebAPIOBO | 백 엔드 웹 ToDoService 사용자 ToDoItem을 추가할 때 필�
 ## <a name="setting-up-the-environment"></a>환경 설정
 여기서의 기본 설정을 작업할 수 있습니다.
 
-1. **DC**: AD FS를 호스팅할 도메인의 도메인 컨트롤러입니다.
+1. **DC**: AD FS은 호스트 도메인에 대 한 도메인 컨트롤러
 2. **AD FS 서버**: 도메인에 대 한 AD FS 서버
-3. **개발 컴퓨터**: Visual Studio가 설치 되 고 샘플을 개발 하는 컴퓨터
+3. **개발 컴퓨터**:에서는 Visual Studio를 설치 하 고 컴퓨터 개발 샘플
 
 사용할 수 있습니다, 원하는 경우 컴퓨터가 두 대만. DC/ADFS와 샘플을 개발 하기 위한 기타 하나입니다.
 
@@ -85,8 +85,8 @@ WebAPIOBO | 백 엔드 웹 ToDoService 사용자 ToDoItem을 추가할 때 필�
 
 WebAPI-OnBehalfOf-DotNet 솔루션을 열면 바로 솔루션에 두 개의 프로젝트가 있는 것을 알 수 있습니다.
 
-* **ToDoListClient**: 사용자가 상호 작용할 Openid connect 클라이언트 역할을 합니다.
-* **ToDoListService**: 이는 인증 된 사용자에 대 한 다른 백 엔드 WebAPI OBO와 상호 작용 하는 중간 계층 웹 서버 앱/서비스입니다.
+* **ToDoListClient**:이 역할을 사용자와 상호 작용 하기는 OpenID 클라이언트
+* **ToDoListService**: 중간 계층 웹 서버 응용 프로그램 / 서비스에이 인증된 된 사용자 다른 백 엔드 WebAPI OBO 상호 작용 합니다
 
 여기에서 볼 수 있듯이 다른 프로젝트 나중에 역할을 중간 계층 ToDoListService에서 액세스할 수 있는 리소스를 추가 해야 합니다.
 
@@ -102,7 +102,7 @@ AD FS 관리 MMC를 열고 새 응용 프로그램 그룹을 추가 합니다. W
 
 다음에 클릭 하 고 클라이언트 응용 프로그램에 대 한 정보를 제공 하기 위한 페이지와 함께 나타납니다. AD FS에서 응용 프로그램 클라이언트는 적절 한 이름을 제공 합니다. 클라이언트 식별자를 복사 하 고이 visual studio에서 응용 프로그램 구성에 필요한 수 만큼 나중에 액세스할 수 어딘가에 저장 합니다.
 
->참고: 리디렉션 URI는 네이티브 클라이언트의 경우에는 완전히 사용 되지 않으므로 임의의 URI 일 수 있습니다.
+>참고: 리디렉션 URI도 가능 임의의 URI 실제로 사용 되지 않는 네이티브 클라이언트의 경우
 
 ![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO11.PNG)
 
@@ -276,12 +276,12 @@ MySampleGroup 응용 프로그램 그룹을 엽니다. 추가 응용 프로그�
 
 | Key                      | 값                                                                                                                                                                                                                   |
 |:-------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ida: 대상             | ToDoListService WebAPI를 구성 하는 동안 AD FS에 지정 된 ToDoListService의 ID (예: https://localhost:44321/ )                                                                                         |
-| ida: ClientID             | ToDoListService WebAPI를 구성 하는 동안 AD FS에 지정 된 ToDoListService의 ID (예: <https://localhost:44321/>) </br>**Ida: 대상 그룹과 ida: ClientID는 서로 일치 해야 합니다.** |
+| ida: 대상             | ToDoListService WebAPI를 구성 하는 동안 AD FS에 지정 된 ToDoListService의 ID (예: https://localhost:44321/                                                                                         |
+| ida: ClientID             | ToDoListService WebAPI를 구성 하는 동안 AD FS에 지정 된 ToDoListService의 ID (예: <https://localhost:44321/> </br>**Ida: 대상 그룹과 ida: ClientID는 서로 일치 해야 합니다.** |
 | ida: ClientSecret         | 이 AD FS에는 AD FS에서 ToDoListService 클라이언트 구성할 때 생성 되는 암호                                                                                                                   |
-| ida: AdfsMetadataEndpoint | AD FS 메타 데이터에 대 한 URL입니다 (예: https://fs.anandmsft.com/federationmetadata/2007-06/federationmetadata.xml ).                                                                                             |
-| ida: OBOWebAPIBase        | 백 엔드 API를 호출 하는 데 사용할 기본 주소입니다 (예: https://localhost:44300 ).                                                                                                                     |
-| ida: 기관            | AD FS 서비스에 대 한 URL입니다 (예 https://fs.anandmsft.com/adfs/ ).                                                                                                                                          |
+| ida: AdfsMetadataEndpoint | AD FS 메타 데이터에 대 한 URL (예: https://fs.anandmsft.com/federationmetadata/2007-06/federationmetadata.xml                                                                                             |
+| ida: OBOWebAPIBase        | 백 엔드 API를 호출 하는 데 사용 하는 기본 주소 (예: https://localhost:44300                                                                                                                     |
+| ida: 기관            | AD FS 서비스에 대 한 URL입니다 (예 https://fs.anandmsft.com/adfs/                                                                                                                                          |
 
 모든 다른 ida: XXXXXXX에 키의 **appsettings** 노드를 주석으로 처리 하거나 삭제 수
 
@@ -494,10 +494,10 @@ AD FS에서 Nmae 클레임을 실행 하는 것 하지만 하지 NameIdentifier 
 ![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO27.PNG)
 
 또한 Fiddler에 자세한 추적을 볼 수 있습니다. Fiddler를 시작 하 고 HTTPS 암호 해독을 설정 합니다. /Adfs/oautincludes 끝점에 두 개의 요청을 수행할 것을 볼 수 있습니다.
-첫 번째 상호 작용에서는 토큰 끝점에 대 한 액세스 코드를 제공 하 고 @no__t @no__t에 대 한 액세스 토큰을 가져옵니다.
+첫 번째 상호 작용에서 토큰 끝점에 대 한 액세스 코드를 제공 하 고 https://localhost:44321/ ![AD FS OBO에 대 한 액세스 토큰을 가져옵니다](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO22.PNG)
 
-두 번째 토큰 끝점과의 상호 작용에서 **requested_token_use** 가 **on_behalf_of** 로 설정 되어 있고 중간 계층 웹 서비스에 대해 획득 한 액세스 토큰을 사용 하 고 있음을 확인할 수 있습니다 @no__t. 즉, 토큰을 대신 합니다.
-![AD FS OBO @ NO__T-1
+두 번째 토큰 끝점과의 상호 작용에서 **on_behalf_of** 로 설정 된 **requested_token_use** 를 확인 하 고, 중간 계층 웹 서비스에 대해 획득 한 액세스 토큰 (예:)을 사용 하 여 토큰을 사용 하 여 토큰을 가져올 수 있습니다 https://localhost:44321/.
+![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO23.PNG)
 
 ## <a name="next-steps"></a>다음 단계
 [AD FS 개발](../../ad-fs/AD-FS-Development.md)  

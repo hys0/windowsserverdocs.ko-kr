@@ -72,7 +72,7 @@ Windows Server 2012 r 2의 AD FS에서는 AD FS으로 보안이 유지 되는 �
 
 -   MFA에 대한 설정 및 방법
 
--   장치 인증 사용 여부. 자세한 내용은 [회사 응용 프로그램 전반에 SSO 및 연속된 두 번째 단계 인증을 위한 모든 장치의 작업 공간 연결](../../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)를 참조하세요.
+-   장치 인증 사용 여부. 자세한 내용은 [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)를 참조하세요.
 
 신뢰 당사자 트러스트별 인증 정책은 신뢰 당사자 트러스트(응용 프로그램 또는 서비스)에 액세스하려는 경우에 특별히 적용됩니다. 신뢰 당사자 트러스트별 인증 정책의 일부로 다음 설정을 구성할 수 있습니다.
 

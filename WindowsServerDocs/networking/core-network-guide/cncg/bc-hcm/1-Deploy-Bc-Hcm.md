@@ -17,7 +17,7 @@ ms.locfileid: "71356383"
 ---
 # <a name="deploy-branchcache-hosted-cache-mode"></a>BranchCache 호스트 캐시 모드 배포
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 계획 및 배포를 완벽 하 게 작동 하는 네트워크 및 새로운 Active Directory에 필요한 핵심 구성 요소에 대 한 지침을 제공 하는 Windows Server 2016 핵심 네트워크 가이드&reg; 새 포리스트에 있는 도메인입니다.
 
@@ -71,7 +71,7 @@ Windows Server 2016 핵심 네트워크 가이드에 부록 가이드입니다. 
 
 ## <a name="bkmk_about"></a>이 가이드 정보
 
-이 가이드는 Windows Server 2016 핵심 네트워크 가이드 또는 Windows Server 2012 핵심 네트워크 가이드의 지침에 따라 핵심 네트워크를 배포 하는 네트워크 및 시스템 관리자를 위한 것으로, 이전에 배포 된 핵심 네트워크 가이드에 포함 된 기술에는 Active Directory Domain Services \(AD DS @ no__t-1, 도메인 이름 서비스 \(DNS @ no__t-3, 동적 호스트 구성 프로토콜 \(DHCP @ no__t-5, TCP @ no__t-6IP v4가 포함 됩니다.
+이 가이드는 Windows Server 2016 핵심 네트워크 가이드 또는 Windows Server 2012 핵심 네트워크 가이드의 지침에 따라 핵심 네트워크를 배포 하는 네트워크 및 시스템 관리자를 위한 것 이며, Active Directory Domain Services \(AD DS\), 도메인 이름 서비스 \(DNS\), 동적 호스트 구성 프로토콜 \(DHCP\)및 TCP\/IP v4를 비롯 한 핵심 네트워크 가이드에 포함 된 기술을 이전에 배포한 사용자를 대상으로 합니다.
 
 이 배포 시나리오에서 사용되는 각 기술에 대한 디자인 및 배포 가이드를 검토하는 것이 좋습니다. 이들 가이드를 통해 이 배포 시나리오가 조직 네트워크에 필요한 서비스 및 구성을 제공하는지 확인할 수 있습니다.
 
@@ -84,7 +84,7 @@ Windows Server 2016 핵심 네트워크 가이드에 부록 가이드입니다. 
 또한 이 가이드에서는 호스트 캐시 서버를 배포할 때 사용해야 하는 하드웨어에 대한 지침을 제공하지 않습니다. 호스트 캐시 서버에서 다른 서비스 및 응용 프로그램을 실행할 수 있지만 워크로드, 하드웨어 용량 및 지사 규모, 특정 컴퓨터에 BranchCache 호스트 캐시 서버를 설치할지 여부 및 캐시에 할당할 디스크 공간 크기에 따라 결정해야 합니다.  
 이 가이드는 Windows 7을 실행 중인 컴퓨터를 구성 하기 위한 지침을 제공 하지 않습니다. 하도록 구성 해야 지점에 이미 Windows 7을 실행 하는 클라이언트 컴퓨터를 설정한 경우 Windows 10, Windows 8.1 및 Windows 8을 실행 중인 클라이언트 컴퓨터에 대 한이 가이드에 제공 된 것과 다른 프로시저를 사용 합니다.
   
-또한 Windows 7을 실행 하는 컴퓨터의 경우 호스트 캐시 서버 클라이언트 컴퓨터를 신뢰 하는 인증 기관에서 발급 하는 서버 인증서로 구성 해야 합니다. @no__t 모든 클라이언트 컴퓨터에서 Windows 10, Windows 8.1 또는 Windows 8을 실행 하는 경우 서버 인증서를 사용 하 여 호스트 캐시 서버를 구성할 필요가 없습니다. \) 
+또한 Windows 7을 실행 하는 컴퓨터의 경우 호스트 캐시 서버 클라이언트 컴퓨터를 신뢰 하는 인증 기관에서 발급 하는 서버 인증서로 구성 해야 합니다. \(모든 클라이언트 컴퓨터에서 Windows 10, Windows 8.1 또는 Windows 8을 실행 하는 경우 서버 인증서를 사용 하 여 호스트 캐시 서버를 구성할 필요가 없습니다.\) 
 > [!IMPORTANT]
 > Windows Server 2008 r 2를 사용 하 여 호스트 캐시 서버는 Windows Server 2008 r 2를 실행 하는 경우 [BranchCache 배포 가이드](https://technet.microsoft.com/library/ee649232(v=ws.10).aspx) 이 가이드를 호스트 캐시 모드로 BranchCache를 배포 하는 대신 합니다. Windows 10에 Windows 7에서의 Windows 버전을 실행 중인 모든 BranchCache 클라이언트에이 설명서에서 설명 하는 그룹 정책 설정을 적용 합니다. 이 가이드의 단계를 사용 하 여 Windows Server 2008 r 2를 실행 중인 컴퓨터를 구성할 수 없습니다.
 

@@ -17,9 +17,9 @@ ms.locfileid: "71403515"
 ---
 # <a name="authorize-guarded-hosts-using-tpm-based-attestation"></a>TPM 기반 증명을 사용 하 여 보호 된 호스트에 권한 부여
 
->적용 대상: Windows server 2019, Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server 2019, Windows Server (반기 채널), Windows Server 2016
 
-TPM 모드는 TPM 식별자 (플랫폼 식별자 또는 인증 키 라고도 함 \[EKpub @ no__t)를 사용 하 여 특정 호스트가 "보호"로 인증 되었는지 여부를 확인 하기 시작 합니다. 이 증명 모드는 보안 부팅 및 코드 무결성 측정을 사용 하 여 지정 된 Hyper-v 호스트가 정상 상태이 고 신뢰할 수 있는 코드만 실행 되는지 확인 합니다. 증명에서 정상이 고 정상이 아닌 것을 이해 하려면 다음 아티팩트를 캡처해야 합니다.
+TPM 모드는 TPM 식별자 (플랫폼 식별자 또는 인증 키 \[EKpub\])를 사용 하 여 특정 호스트가 "보호"로 인증 되었는지 여부를 확인 하기 시작 합니다. 이 증명 모드는 보안 부팅 및 코드 무결성 측정을 사용 하 여 지정 된 Hyper-v 호스트가 정상 상태이 고 신뢰할 수 있는 코드만 실행 되는지 확인 합니다. 증명에서 정상이 고 정상이 아닌 것을 이해 하려면 다음 아티팩트를 캡처해야 합니다.
 
 1.  TPM 식별자 (EKpub)
 
@@ -45,7 +45,7 @@ Windows Server 2019에서는 EKPub를 HGS에 추가 하기 위해 TPM 인증서�
 
 1.  패브릭 도메인에서 각 호스트의 TPM을 사용할 준비가 되었는지 확인 합니다. 즉, TPM이 초기화 되 고 소유권이 획득 됩니다. Tpm 관리 콘솔 (services.msc)을 열거나 관리자 권한 Windows PowerShell 창 **에서 tpm을 실행 하** 여 tpm의 상태를 확인할 수 있습니다. TPM이 **준비** 상태가 아닌 경우 초기화 하 고 소유권을 설정 해야 합니다. TPM 관리 콘솔에서 또는 **Tpm 초기화**를 실행 하 여이 작업을 수행할 수 있습니다.
 
-2.  보호 된 각 호스트에서 관리자 권한 Windows PowerShell 콘솔에서 다음 명령을 실행 하 여 해당 EKpub를 가져옵니다. @No__t-0의 경우 고유한 호스트 이름을이 호스트를 식별 하는 데 적합 한 것으로 대체 합니다. 즉, 해당 호스트 이름이 나 패브릭 인벤토리 서비스에서 사용 하는 이름 (있는 경우)이 될 수 있습니다. 편의를 위해 호스트 이름을 사용 하 여 출력 파일의 이름을로 합니다.
+2.  보호 된 각 호스트에서 관리자 권한 Windows PowerShell 콘솔에서 다음 명령을 실행 하 여 해당 EKpub를 가져옵니다. `<HostName>`의 경우 고유한 호스트 이름을이 호스트를 식별 하는 데 적합 한 것으로 대체 합니다. 즉, 해당 호스트 이름이 나 패브릭 인벤토리 서비스에서 사용 하는 이름 (있는 경우)이 될 수 있습니다. 편의를 위해 호스트 이름을 사용 하 여 출력 파일의 이름을로 합니다.
 
     ```powershell
     (Get-PlatformIdentifier -Name '<HostName>').InnerXml | Out-file <Path><HostName>.xml -Encoding UTF8
@@ -64,7 +64,7 @@ Windows Server 2019에서는 EKPub를 HGS에 추가 하기 위해 TPM 인증서�
     > EKCert (신뢰할 수 없는 인증 키 인증서)와 관련 된 TPM 식별자를 추가할 때 오류가 발생 하는 경우 [신뢰할 수 있는 tpm 루트 인증서가](guarded-fabric-install-trusted-tpm-root-certificates.md) HGS 노드에 추가 되었는지 확인 합니다.
     > 또한 일부 TPM 공급 업체는 EKCerts을 사용 하지 않습니다.
     > 메모장과 같은 편집기에서 XML 파일을 열고 EKCert를 찾지 못했음을 나타내는 오류 메시지를 확인 하 여 EKCert이 누락 되었는지 확인할 수 있습니다.
-    > 이 경우 컴퓨터의 TPM이 인증 된 것을 신뢰 하는 경우 `-Force` 매개 변수를 사용 하 여 호스트 식별자를 HGS에 추가할 수 있습니다. Windows Server 2019에서는-1 @no__t 사용 하는 경우 `-PolicyVersion v1` 매개 변수도 사용 해야 합니다. 그러면 Windows Server 2016 동작과 일치 하는 정책이 생성 되며, CI 정책 및 TPM 기준도 등록할 때 `-PolicyVersion v1`을 사용 해야 합니다.
+    > 이 경우 컴퓨터의 TPM이 인증 된 것을 신뢰 하는 경우 `-Force` 매개 변수를 사용 하 여 호스트 식별자를 HGS에 추가할 수 있습니다. Windows Server 2019에서는 `-Force`사용 하는 경우에도 `-PolicyVersion v1` 매개 변수를 사용 해야 합니다. 그러면 Windows Server 2016 동작과 일치 하는 정책이 생성 되며, CI 정책 및 TPM 기준도 등록할 때 `-PolicyVersion v1`을 사용 해야 합니다.
 
 ## <a name="create-and-apply-a-code-integrity-policy"></a>코드 무결성 정책 만들기 및 적용
 
@@ -74,7 +74,7 @@ Windows Server 2019에서는 EKPub를 HGS에 추가 하기 위해 TPM 인증서�
 
 Windows Server 버전 1709부터 샘플 코드 무결성 정책은 Windows에 C:\Windows\schemas\CodeIntegrity\ExamplePolicies.에 포함 되어 있습니다. Windows Server에는 두 가지 정책이 권장 됩니다.
 
-- **Allowmicrosoft**: Microsoft에서 서명 하는 모든 파일을 허용 합니다. 이 정책은 SQL 또는 Exchange와 같은 서버 응용 프로그램에 권장 되며, Microsoft에서 게시 한 에이전트가 서버를 모니터링 하는 경우에 권장 됩니다.
+- **Allowmicrosoft**: microsoft에서 서명한 모든 파일을 허용 합니다. 이 정책은 SQL 또는 Exchange와 같은 서버 응용 프로그램에 권장 되며, Microsoft에서 게시 한 에이전트가 서버를 모니터링 하는 경우에 권장 됩니다.
 - **DefaultWindows_Enforced**: Windows에서 제공 된 파일만 허용 하 고 Office와 같이 Microsoft에서 릴리스된 다른 응용 프로그램을 허용 하지 않습니다. 이 정책은 Hyper-v와 같은 기본 제공 서버 역할 및 기능만 실행 하는 서버에 권장 됩니다. 
 
 먼저 감사 (로깅) 모드에서 CI 정책을 만들어 무엇이 누락 되었는지 확인 한 다음 호스트 프로덕션 워크 로드에 대 한 정책을 적용 하는 것이 좋습니다. 
@@ -128,11 +128,11 @@ CI 정책을 변경 하지 않고 동일한 게시자가 작성 한 새 소프�
     >[!NOTE]
     >CI 정책을 호스트에 적용 하 고 이러한 컴퓨터에서 소프트웨어를 업데이트할 때 주의 해야 합니다. CI 정책과 호환 되지 않는 모든 커널 모드 드라이버를 사용 하면 컴퓨터가 시작 되지 않을 수 있습니다. 
 
-6.  HGS 관리자에 게 이진 파일 (이 예제에서는 HW1CodeIntegrity @ no__t-0enforced)을 제공 합니다.
+6.  HGS 관리자에 게 이진 파일 (이 예제에서는 HW1CodeIntegrity\_)을 제공 합니다.
 
 7.  HGS 도메인에서 코드 무결성 정책을 HGS 서버에 복사 하 고 다음 명령을 실행 합니다.
 
-    @No__t-0에 대해 적용 되는 호스트의 유형을 설명 하는 CI 정책 이름을 지정 합니다. 컴퓨터의 제조업체/모델과 해당 컴퓨터에서 실행 되는 특수 소프트웨어 구성의 이름을 지정 하는 것이 가장 좋습니다.<br>@No__t-0의 경우 코드 무결성 정책의 경로와 파일 이름을 지정 합니다.
+    `<PolicyName>`의 경우 적용 되는 호스트의 유형을 설명 하는 CI 정책 이름을 지정 합니다. 컴퓨터의 제조업체/모델과 해당 컴퓨터에서 실행 되는 특수 소프트웨어 구성의 이름을 지정 하는 것이 가장 좋습니다.<br>`<Path>`의 경우 코드 무결성 정책의 경로와 파일 이름을 지정 합니다.
 
     ```powershell
     Add-HgsAttestationCIPolicy -Path <Path> -Name '<PolicyName>'

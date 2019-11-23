@@ -16,7 +16,7 @@ ms.locfileid: "71940749"
 ---
 # <a name="create-a-shielded-vm-using-powershell"></a>PowerShell을 사용 하 여 보호 된 VM 만들기
 
->적용 대상: Windows server 2019, Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server 2019, Windows Server (반기 채널), Windows Server 2016
 
 프로덕션 환경에서는 일반적으로 패브릭 관리자 (예: VMM)를 사용 하 여 보호 된 Vm을 배포 합니다. 그러나 아래에 설명 된 단계를 통해 패브릭 관리자 없이 전체 시나리오를 배포 하 고 유효성을 검사할 수 있습니다.
 
@@ -42,7 +42,7 @@ Save-VolumeSignatureCatalog -TemplateDiskPath "C:\temp\MyTemplateDisk.vhdx" -Vol
 차폐 VM을 실행 하려는 각 가상화 패브릭에 대해 패브릭의 HGS 클러스터에 대 한 보호자 메타 데이터를 가져와야 합니다.
 호스팅 공급자는이 정보를 제공할 수 있어야 합니다.
 
-엔터프라이즈 환경에 있고 HGS 서버와 통신할 수 있는 경우 http://에서 보호자 메타 데이터를 사용할 수 있습니다 *\<HGSCLUSTERNAME @ no__t/KeyProtection/service/metadata/2014-07/metadata .xml*
+엔터프라이즈 환경에 있고 HGS 서버와 통신할 수 있는 경우 *http://\<HGSCLUSTERNAME\>/KeyProtection/service/metadata/2014-07/metadata.xml* 에서 보호자 메타 데이터를 사용할 수 있습니다.
 
 ## <a name="create-shielding-data-pdk-file"></a>보호 데이터 파일 (PDK) 만들기
 
@@ -80,7 +80,7 @@ New-ShieldingDataFile -ShieldingDataFilePath 'C:\temp\Contoso.pdk' -Owner $Owner
 Install-Module GuardedFabricTools -Repository PSGallery -MinimumVersion 1.0.0
 ```
 
-인터넷에 액세스할 수 있는 다른 컴퓨터에 모듈을 다운로드 하 고 결과 모듈을 보호 된 호스트의 `C:\Program Files\WindowsPowerShell\Modules`에 복사할 수도 있습니다.
+인터넷에 액세스할 수 있는 다른 컴퓨터에 모듈을 다운로드 하 고 결과 모듈을 복사 하 여 보호 된 호스트에서 `C:\Program Files\WindowsPowerShell\Modules` 수도 있습니다.
 
 ```powershell
 Save-Module GuardedFabricTools -Repository PSGallery -MinimumVersion 1.0.0 -Path C:\temp\
@@ -111,7 +111,7 @@ New-ShieldedVM -Name 'MyStaticIPVM' -TemplateDiskPath 'C:\temp\MyTemplateDisk.vh
 New-ShieldedVM -Name 'MyLinuxVM' -TemplateDiskPath 'C:\temp\MyTemplateDisk.vhdx' -ShieldingDataFilePath 'C:\temp\Contoso.pdk' -Wait -Linux
 ```
 
-@No__t-0을 사용 하 여 도움말 콘텐츠를 확인 하 여 cmdlet에 전달할 수 있는 다른 옵션에 대해 자세히 알아보세요.
+Cmdlet에 전달할 수 있는 다른 옵션에 대 한 자세한 내용은 `Get-Help New-ShieldedVM -Full`를 사용 하 여 도움말 콘텐츠를 확인 하세요.
 
 VM이 프로 비전을 완료 하면 OS 특정 특수화 단계가 시작 되 고 그 후에 사용할 준비가 됩니다.
 VM이 실행 되 고 있는 경우 (RDP, PowerShell, SSH 또는 선호 하는 관리 도구를 사용 하 여) 해당 네트워크에 연결할 수 있도록 VM을 유효한 네트워크에 연결 해야 합니다.

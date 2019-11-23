@@ -22,7 +22,7 @@ ms.locfileid: "71373082"
 ---
 # <a name="nslookup-lserver"></a>nslookup lserver
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 지정된 된 도메인 이름 시스템 (DNS) 도메인에 기본 서버를 변경합니다.
 ## <a name="syntax"></a>구문
@@ -40,4 +40,4 @@ lserver <DNSDomain>
 - **lserver** 명령은 초기 서버를 사용 하 여 지정된 된 DNS 도메인에 대 한 정보를 조회 합니다. 이 달리는 **서버** 현재의 기본 서버를 사용 하는 명령입니다.
   ## <a name="additional-references"></a>추가 참조
   [명령줄 구문 키](command-line-syntax-key.md)
-  [nslookup 서버](nslookup-server.md)
+  [nslookup server](nslookup-server.md)

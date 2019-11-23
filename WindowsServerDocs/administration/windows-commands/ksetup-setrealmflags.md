@@ -36,7 +36,7 @@ ksetup /setrealmflags <RealmName> [sendaddress] [tcpsupported] [delegate] [ncsup
 
 |매개 변수|설명|
 |---------|-----------|
-|@no__t 0RealmName >|영역 이름은 CORP. 같은 대문자는 DNS 이름으로 명시 CONTOSO.COM입니다.|
+|\<RealmName >|영역 이름은 CORP. 같은 대문자는 DNS 이름으로 명시 CONTOSO.COM입니다.|
 |영역 플래그|다음 플래그 중 하나를 나타냅니다.</br>-SendAddress</br>-TcpSupported</br>-대리자</br>-NcSupported</br>RC4|
 
 ## <a name="remarks"></a>설명

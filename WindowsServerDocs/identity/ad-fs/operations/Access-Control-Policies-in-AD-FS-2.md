@@ -23,11 +23,11 @@ Active Directory Federation Services 2.0의 클라이언트 액세스 정책을 
 
 클라이언트 액세스 정책을 사용 하도록 설정 하려면 다음 단계를 수행 합니다.
 
-### <a name="step-1-install-the-update-rollup-2-for-ad-fs-20-package-on-your-ad-fs-servers"></a>1단계: AD FS 서버에 AD FS 2.0 패키지에 대 한 업데이트 롤업 2 설치
+### <a name="step-1-install-the-update-rollup-2-for-ad-fs-20-package-on-your-ad-fs-servers"></a>1 단계: AD FS 서버에 AD FS 2.0 패키지에 대 한 업데이트 롤업 2 설치
 
 [Active Directory Federation Services (AD FS) 2.0 용 업데이트 롤업 2](https://support.microsoft.com/en-us/help/2681584/description-of-update-rollup-2-for-active-directory-federation-services-ad-fs-2.0) 패키지를 다운로드 하 고 모든 페더레이션 서버 및 페더레이션 서버 프록시에 설치 합니다.
 
-### <a name="step-2-add-five-claim-rules-to-the-active-directory-claims-provider-trust"></a>2단계: Active Directory 클레임 공급자 트러스트에 5 개의 클레임 규칙을 추가 합니다.
+### <a name="step-2-add-five-claim-rules-to-the-active-directory-claims-provider-trust"></a>2 단계: 클레임 공급자 트러스트 Active Directory 5 개 클레임 규칙 추가
 
 모든 AD FS 서버 및 프록시에 업데이트 롤업 2를 설치한 후에는 다음 절차를 사용 하 여 새 클레임 유형을 정책 엔진에 사용할 수 있도록 하는 클레임 규칙 집합을 추가 합니다.
 
@@ -44,7 +44,7 @@ Active Directory 된 클레임 공급자 트러스트에서 새로운 각 요청
 4. 규칙 템플릿 선택 페이지의 클레임 규칙 템플릿에서 들어오는 클레임 통과 또는 필터링을 선택 하 고 다음을 클릭 합니다.
 5. 규칙 구성 페이지의 클레임 규칙 이름에이 규칙에 대 한 표시 이름을 입력 합니다. 들어오는 클레임 형식에 다음 클레임 유형 URL을 입력 하 고 모든 클레임 값 통과를 선택 합니다.</br>
         `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip`</br>
-6. 규칙을 확인 하려면 목록에서 규칙을 선택 하 고 규칙 편집을 클릭 한 다음 규칙 언어 보기를 클릭 합니다. 클레임 규칙 언어는 다음과 같이 표시 되어야 합니다.`c:[Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip"] => issue(claim = c);`
+6. 규칙을 확인 하려면 목록에서 규칙을 선택 하 고 규칙 편집을 클릭 한 다음 규칙 언어 보기를 클릭 합니다. 클레임 규칙 언어는 다음과 같이 표시 되어야 합니다. `c:[Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip"] => issue(claim = c);`
 7. 마침을 클릭 합니다.
 8. 클레임 규칙 편집 대화 상자에서 확인을 클릭 하 여 규칙을 저장 합니다.
 9. 2 ~ 6 단계를 반복 하 여 5 개의 규칙을 모두 만들 때까지 아래에 표시 된 나머지 4 개의 클레임 유형에 대해 추가 클레임 규칙을 만듭니다.
@@ -60,7 +60,7 @@ Active Directory 된 클레임 공급자 트러스트에서 새로운 각 요청
 `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path`
 ~~~
 
-### <a name="step-3-update-the-microsoft-office-365-identity-platform-relying-party-trust"></a>3단계: Microsoft Office 365 Id 플랫폼 신뢰 당사자 트러스트를 업데이트 합니다.
+### <a name="step-3-update-the-microsoft-office-365-identity-platform-relying-party-trust"></a>3 단계: Microsoft Office 365 Id 플랫폼 신뢰 당사자 트러스트 업데이트
 
 조직의 요구에 가장 부합 하는 Microsoft Office 365 Id 플랫폼 신뢰 당사자 트러스트에 대 한 클레임 규칙을 구성 하려면 아래 예제 시나리오 중 하나를 선택 합니다.
 
@@ -79,7 +79,7 @@ Active Directory 된 클레임 공급자 트러스트에서 새로운 각 요청
 2. 콘솔 트리의 AD FS 2.0 \ 트러스트 관계에서 신뢰 당사자 트러스트를 클릭 하 고 Microsoft Office 365 Id 플랫폼 트러스트를 마우스 오른쪽 단추로 클릭 한 다음 클레임 규칙 편집을 클릭 합니다. 
 3. 클레임 규칙 편집 대화 상자에서 발급 권한 부여 규칙 탭을 선택한 다음 규칙 추가를 클릭 하 여 클레임 규칙 마법사를 시작 합니다.
 4. 규칙 템플릿 선택 페이지의 클레임 규칙 템플릿에서 사용자 지정 규칙을 사용 하 여 클레임 보내기를 선택 하 고 다음을 클릭 합니다.
-5. 규칙 구성 페이지의 클레임 규칙 이름에이 규칙에 대 한 표시 이름을 입력 합니다. 사용자 지정 규칙에서 다음 클레임 규칙 언어 구문을 입력 하거나 붙여 넣습니다.`exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy"]) &&
+5. 규칙 구성 페이지의 클레임 규칙 이름에이 규칙에 대 한 표시 이름을 입력 합니다. 사용자 지정 규칙에서 다음 클레임 규칙 언어 구문을 입력 하거나 붙여 넣습니다. `exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy"]) &&
     NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip",
     Value=~"customer-provided public ip address regex"])
     => issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = "true");` 
@@ -102,7 +102,7 @@ Active Directory 된 클레임 공급자 트러스트에서 새로운 각 요청
 2. 콘솔 트리의 AD FS 2.0 \ 트러스트 관계에서 신뢰 당사자 트러스트를 클릭 하 고 Microsoft Office 365 Id 플랫폼 트러스트를 마우스 오른쪽 단추로 클릭 한 다음 클레임 규칙 편집을 클릭 합니다. 
 3. 클레임 규칙 편집 대화 상자에서 발급 권한 부여 규칙 탭을 선택한 다음 규칙 추가를 클릭 하 여 클레임 규칙 마법사를 시작 합니다.
 4. 규칙 템플릿 선택 페이지의 클레임 규칙 템플릿에서 사용자 지정 규칙을 사용 하 여 클레임 보내기를 선택 하 고 다음을 클릭 합니다.
-5. 규칙 구성 페이지의 클레임 규칙 이름에이 규칙에 대 한 표시 이름을 입력 합니다. 사용자 지정 규칙에서 다음 클레임 규칙 언어 구문을 입력 하거나 붙여 넣습니다.`exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy"]) &&
+5. 규칙 구성 페이지의 클레임 규칙 이름에이 규칙에 대 한 표시 이름을 입력 합니다. 사용자 지정 규칙에서 다음 클레임 규칙 언어 구문을 입력 하거나 붙여 넣습니다. `exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy"]) &&
     NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application",
     Value=="Microsoft.Exchange.Autodiscover"]) &&
     NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application",
@@ -131,7 +131,7 @@ Active Directory 된 클레임 공급자 트러스트에서 새로운 각 요청
 2. 콘솔 트리의 AD FS 2.0 \ 트러스트 관계에서 신뢰 당사자 트러스트를 클릭 하 고 Microsoft Office 365 Id 플랫폼 트러스트를 마우스 오른쪽 단추로 클릭 한 다음 클레임 규칙 편집을 클릭 합니다. 
 3. 클레임 규칙 편집 대화 상자에서 발급 권한 부여 규칙 탭을 선택한 다음 규칙 추가를 클릭 하 여 클레임 규칙 마법사를 시작 합니다.
 4. 규칙 템플릿 선택 페이지의 클레임 규칙 템플릿에서 사용자 지정 규칙을 사용 하 여 클레임 보내기를 선택 하 고 다음을 클릭 합니다.
-5. 규칙 구성 페이지의 클레임 규칙 이름에이 규칙에 대 한 표시 이름을 입력 합니다. 사용자 지정 규칙에서 다음 클레임 규칙 언어 구문을 입력 하거나 붙여 넣습니다.`exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy"]) &&
+5. 규칙 구성 페이지의 클레임 규칙 이름에이 규칙에 대 한 표시 이름을 입력 합니다. 사용자 지정 규칙에서 다음 클레임 규칙 언어 구문을 입력 하거나 붙여 넣습니다. `exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy"]) &&
     NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip",
     Value=~"customer-provided public ip address regex"]) &&
     NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path", Value == "/adfs/ls/"])
@@ -151,7 +151,7 @@ Active Directory 된 클레임 공급자 트러스트에서 새로운 각 요청
 2. 콘솔 트리의 AD FS 2.0 \ 트러스트 관계에서 신뢰 당사자 트러스트를 클릭 하 고 Microsoft Office 365 Id 플랫폼 트러스트를 마우스 오른쪽 단추로 클릭 한 다음 클레임 규칙 편집을 클릭 합니다. 
 3. 클레임 규칙 편집 대화 상자에서 발급 권한 부여 규칙 탭을 선택한 다음 규칙 추가를 클릭 하 여 클레임 규칙 마법사를 시작 합니다.
 4. 규칙 템플릿 선택 페이지의 클레임 규칙 템플릿에서 사용자 지정 규칙을 사용 하 여 클레임 보내기를 선택 하 고 다음을 클릭 합니다.
-5. 규칙 구성 페이지의 클레임 규칙 이름에이 규칙에 대 한 표시 이름을 입력 합니다. 사용자 지정 규칙에서 다음 클레임 규칙 언어 구문을 입력 하거나 붙여 넣습니다.`exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy"]) &&
+5. 규칙 구성 페이지의 클레임 규칙 이름에이 규칙에 대 한 표시 이름을 입력 합니다. 사용자 지정 규칙에서 다음 클레임 규칙 언어 구문을 입력 하거나 붙여 넣습니다. `exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy"]) &&
     exists([Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value =~ "Group SID value of allowed AD group"]) &&
     NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip",
     Value=~"customer-provided public ip address regex"])
@@ -170,7 +170,7 @@ Active Directory 된 클레임 공급자 트러스트에서 새로운 각 요청
 |                                                         지정 된 허용 범위 내에 IP가 있는 클라이언트에서 요청을 하는 것을 설정 하는 데 사용 됩니다.                                                         | 존재 하지 않음 ([Type = = "<https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip>", 값 = ~ "고객이 제공한 공용 ip 주소 regex"]) |
 |                                    이 절을 사용 하 여 액세스 하는 응용 프로그램이 Microsoft. Exchange.                                     |       존재 하지 않음 ([Type = = "<https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application>", 값 = = "Microsoft. Exchange. ActiveSync"])        |
 |                                                      이 규칙을 사용 하면 호출이 웹 브라우저를 통해 발생 했는지 여부를 확인할 수 있으며,이는 거부 되지 않습니다.                                                      |              존재 하지 않음 ([Type = = "<https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path>", 값 = = "/adfs/ls/"])               |
-| 이 규칙은 특정 Active Directory 그룹 (SID 값 기반)의 유일한 사용자를 거부 해야 함을 설명 합니다. 이 문에 NOT을 추가 하면 위치에 관계 없이 사용자 그룹이 허용 됩니다. |             exists ([Type = = "<https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid>", 값 = ~ "{그룹 SID 값 허용 된 AD 그룹}"])              |
+| 이 규칙은 특정 Active Directory 그룹 (SID 값 기반)의 유일한 사용자를 거부 해야 함을 설명 합니다. 이 문에 NOT을 추가 하면 위치에 관계 없이 사용자 그룹이 허용 됩니다. |             exists ([Type = = "<https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid>", 값 = ~ "{그룹 SID 값이 허용 된 AD 그룹}"])              |
 |                                                                위의 조건이 모두 충족 될 때 거부를 발급 하는 필수 절입니다.                                                                 |                                   = > issue (Type = "<https://schemas.microsoft.com/authorization/claims/deny>", Value = "true");                                    |
 
 ### <a name="building-the-ip-address-range-expression"></a>IP 주소 범위 식 작성
@@ -180,14 +180,14 @@ X AD FS--------------------------------------------------- 클레임의 값은 �
 >[!Note] 
 >Exchange Online은 현재 IPV4 및 IPV6 주소만 지원 합니다.
 
-단일 IP 주소: Exchange Online에 직접 연결 된 클라이언트의 IP 주소
+단일 IP 주소: Exchange Online에 직접 연결 되는 클라이언트의 IP 주소
 
 >[!Note] 
 >회사 네트워크에 있는 클라이언트의 IP 주소는 조직의 아웃 바운드 프록시 또는 게이트웨이의 외부 인터페이스 IP 주소로 표시 됩니다.
 
 Vpn 또는 da의 구성에 따라 VPN 또는 Microsoft DirectAccess (DA)를 통해 회사 네트워크에 연결 된 클라이언트는 내부 회사 클라이언트나 외부 클라이언트로 표시 될 수 있습니다.
 
-하나 이상의 IP 주소: Exchange Online에서 연결 하는 클라이언트의 IP 주소를 확인할 수 없는 경우에는 HTTP 기반 요청에 포함 될 수 있고 많은 클라이언트, 부하 분산 장치에서 지원 되는 비표준 헤더 인 x 전달-헤더의 값을 기반으로 값을 설정 합니다. 시장에 대 한 및 프록시.
+하나 이상의 IP 주소: Exchange Online에서 연결 하는 클라이언트의 IP 주소를 확인할 수 없는 경우, HTTP 기반 요청에 포함할 수 있는 비표준 헤더 인 x 전달 된 헤더의 값을 기반으로 값을 설정 합니다. 클라이언트, 부하 분산 장치 및 시장의 프록시.
 
 >[!Note]
 >클라이언트 IP 주소와 요청을 전달한 각 프록시의 주소를 나타내는 여러 IP 주소가 쉼표로 구분 됩니다.
@@ -203,19 +203,19 @@ IP 주소 범위와 일치 해야 하는 경우 비교를 수행 하는 정규�
 - 192.168.1.1 – 192.168.1.25
 - 10.0.0.1 – 10.0.0.14
 
-첫째, 단일 IP 주소와 일치 하는 기본 패턴은 다음과 같습니다. \b\.# ####\.###\.# # # # \b
+첫째, 단일 IP 주소와 일치 하는 기본 패턴은 다음과 같습니다. \b # # #\.###\.###\.# # # \b
 
-이를 확장 하 여 다음과 같이 두 개의 다른 IP 주소를 OR 식과 일치 시킬 수 있습니다.\.\b # #\. \.\. ######\.# # # # \b | \b # ##### ######\b \.
+이를 확장 하 여 다음과 같이 두 개의 서로 다른 IP 주소를 또는 식과 일치 시킬 수 있습니다. \b # # #\.###\.###\.# # # \b | \b # # #\.###\.###\.# # # \b
 
-따라서 두 개의 주소 (예: 192.168.1.1 또는 10.0.0.1)만 일치 시키는 예는\.\b192 168\.1\.1 \ b | \b10\.0\.0 0\.1 \ b입니다.
+따라서 두 개의 주소 (예: 192.168.1.1 또는 10.0.0.1)만 일치 시키는 예는 \b192\.168\.1\.1 \ b | \b10\.0\.0\.1 \ b입니다.
 
-이렇게 하면 원하는 수의 주소를 입력할 수 있는 방법이 제공 됩니다. 주소 범위를 허용 해야 하는 경우 (예: 192.168.1.1 – 192.168.1.25) 일치 하는 문자: \b192 @ no__t-0168 @ no__t-11 @ no__t-2 ([1-9] | 1 [0-9] | 2 [0-5]) \b
+이렇게 하면 원하는 수의 주소를 입력할 수 있는 방법이 제공 됩니다. 주소 범위 (예: 192.168.1.1 – 192.168.1.25)를 허용 해야 하는 경우 일치 하는 문자: \b192\.168\.1\.([1-9] | 1 [0-9] | 2 [0-5]) \b
 
 >[!Note] 
 >IP 주소는 숫자가 아니라 문자열로 처리 됩니다.
 
 
-이 규칙은 \b192\.168\.1과 같이 세분화 됩니다.\.
+이 규칙은 \b192\.168\.1\.와 같이 세분화 됩니다.
 
 이 값은 192.168.1로 시작 하는 모든 값과 일치 합니다.
 
@@ -229,9 +229,9 @@ IP 주소 범위와 일치 해야 하는 경우 비교를 수행 하는 정규�
 >[!Note]
 >IP 주소의 다른 부분과 일치 하지 않도록 괄호를 올바르게 배치 해야 합니다.
 
-192 블록 일치를 사용 하 여 10 개의 블록에 대 한 유사한 식을 작성할 수 있습니다. \b10 @ no__t-00 @ no__t-10 @ no__t ([1-9] | 1 [0-4]) \b
+192 블록 일치를 사용 하 여 10 개의 블록에 대 한 유사한 식을 작성할 수 있습니다. \b10\.0\.0\.([1-9] | 1 [0-4]) \b
 
-다음 식은 "192.168.1.1 ~ 25" 및 "10.0.0.1 ~ 14"의 모든 주소와 일치 해야 합니다. \b192 @ no__t-0168 @ no__t ([1-9] | 1 [0-9] | 2 [0-5]) \b | \b10 @ no__t-30 @ no__t-40 @ no__t-5 ([1-9] | 1 [0-4]) \b
+그리고 다음 식은 "192.168.1.1 ~ 25" 및 "10.0.0.1 ~ 14"의 모든 주소와 일치 해야 합니다. \b192\.168\.1\.([1-9] | 1 [0-9] | 2 [0-5]) \b | \b10\.0\.0\.([1-9] | 1 [0-4]) \b
 
 #### <a name="testing-the-expression"></a>식 테스트
 

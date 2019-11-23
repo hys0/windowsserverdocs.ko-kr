@@ -51,7 +51,7 @@ Windows 인터페이스나 명령줄을 사용하여 네임스페이스에 액�
 
 1.  **분산 파일 시스템** 역할 서비스나 **분산 파일 시스템 도구** 기능이 설치된 서버에서 명령 프롬프트 창을 엽니다.
 
-2.  다음 명령을 입력 합니다. 여기서 *< namespace @ no__t-1root >* 는 네임 스페이스의 루트입니다.
+2.  다음 명령을 입력 합니다. 여기서 *< 네임 스페이스\_root >* 는 네임 스페이스의 루트입니다.
 
     ```  
     dfsutil property abe enable \\ <namespace_root>
@@ -80,13 +80,13 @@ Windows 인터페이스나 명령줄을 사용하여 개별 DFS 폴더를 볼 �
 
 1. **분산 파일 시스템** 역할 서비스나 **분산 파일 시스템 도구** 기능이 설치된 서버에서 명령 프롬프트 창을 엽니다.
 
-2. 다음 명령을 입력 합니다. *@no__t 여기서 1DFSPath @ no__t* 은 DFS 폴더 (링크)의 경로이 고 *< DOMAIN @ no__t-4account >* 는 그룹 또는 사용자 계정의 이름입니다 *. (...)* 는 추가 Access Control 항목 (...)으로 대체 됩니다. Ace):
+2. 다음 명령을 입력 합니다. 여기서 *&lt;DFSPath&gt;* 는 DFS 폴더 (링크)의 경로이 고 *< 도메인\\계정 >* 는 그룹 또는 사용자 계정의 이름이 고, *(...)* 는 추가 Access Control 항목 (ace)으로 바뀝니다.
 
    ```
    dfsutil property sd grant <DFSPath> DOMAIN\Account:R (...) Protect Replace
    ```
 
-   예를 들어, 도메인 관리자 및 CONTOSO @ no__t-0Trainers 그룹이 @no__t-office\public\training 폴더에 대 한 액세스를 허용 하는 권한으로 기존 사용 권한을 바꾸려면 다음 명령을 입력 합니다.
+   예를 들어, Domain Admins 및 CONTOSO\\교육자 그룹이 \\office\public\training 폴더에 대 한 액세스 권한을 허용 하는 권한으로 기존 사용 권한을 바꾸려면 다음 명령을 입력 합니다.
 
    ```
    dfsutil property sd grant \\contoso.office\public\training "CONTOSO\Domain Admins":R CONTOSO\Trainers:R Protect Replace 
@@ -101,7 +101,7 @@ Windows 인터페이스나 명령줄을 사용하여 개별 DFS 폴더를 볼 �
 |[Dfsutil 속성 sd 다시 설정](https://msdn.microsoft.com/library/dd759150(v=ws.11).aspx) |폴더에서 모든 사용 권한을 제거합니다.|
 |[Dfsutil 속성 sd 취소](https://msdn.microsoft.com/library/dd759150(v=ws.11).aspx)| 폴더에서 그룹 또는 사용자 ACE를 제거합니다. |
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 -   [DFS 네임스페이스 만들기](create-a-dfs-namespace.md)
 -   [DFS 네임스페이스에 대한 관리 권한 위임](delegate-management-permissions-for-dfs-namespaces.md)

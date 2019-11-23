@@ -26,7 +26,7 @@ ms.locfileid: "71406033"
 
 가상 네트워크에 연결 된 가상 컴퓨터는 네트워크에서 통신 하기 위해 네트워크 컨트롤러가 할당 한 IP 주소만 사용할 수 있습니다.  Microsoft 장애 조치 (Failover) 클러스터링과 같이 부동 IP 주소를 필요로 하는 클러스터링 기술을 제대로 작동 하려면 몇 가지 추가 단계가 필요 합니다.
 
-부동 IP에 연결할 수 있도록 하는 방법은 소프트웨어 Load Balancer \(SLB @ no__t-1 가상 IP \(VIP @ no__t-3을 사용 하는 것입니다.  SLB가 현재 해당 IP를 보유 하 고 있는 컴퓨터로 트래픽을 전송 하도록 해당 IP의 포트에 대 한 상태 프로브를 사용 하 여 소프트웨어 부하 분산 장치를 구성 해야 합니다.
+부동 IP에 연결할 수 있도록 하는 방법은 SLB\) 가상 IP \(VIP\)\(소프트웨어 Load Balancer를 사용 하는 것입니다.  SLB가 현재 해당 IP를 보유 하 고 있는 컴퓨터로 트래픽을 전송 하도록 해당 IP의 포트에 대 한 상태 프로브를 사용 하 여 소프트웨어 부하 분산 장치를 구성 해야 합니다.
 
 
 ## <a name="example-load-balancer-configuration"></a>예: 부하 분산 장치 구성
@@ -50,7 +50,7 @@ ms.locfileid: "71406033"
    $LoadBalancerProperties = new-object Microsoft.Windows.NetworkController.LoadBalancerProperties
    ```
 
-3. 프런트 @ no__t-0 끝 IP 주소를 만듭니다.
+3. 프런트\-끝 IP 주소를 만듭니다.
 
    ```PowerShell
    $LoadBalancerProperties.frontendipconfigurations += $FrontEnd = new-object Microsoft.Windows.NetworkController.LoadBalancerFrontendIpConfiguration
@@ -63,7 +63,7 @@ ms.locfileid: "71406033"
    $FrontEnd.properties.privateIPAllocationMethod = "Static"
    ```
 
-4. 클러스터 노드를 포함 하는 back @ no__t-0end 풀을 만듭니다.
+4. 클러스터 노드를 포함 하는 back\-end 풀을 만듭니다.
 
    ```PowerShell
    $BackEnd = new-object Microsoft.Windows.NetworkController.LoadBalancerBackendAddressPool

@@ -17,7 +17,7 @@ ms.locfileid: "71405437"
 ---
 # <a name="export-an-nps-configuration-for-import-on-another-server"></a>다른 서버에서 가져오기 위한 NPS 구성 내보내기
 
-적용 대상: Windows Server 2016
+적용 대상: Windows Server 2016
 
 다른 nps에서 가져오기 위해 한 NPS에서 RADIUS 클라이언트 및 서버, 네트워크 정책, 연결 요청 정책, 레지스트리 및 로깅 구성을 비롯 한 전체 NPS 구성을 내보낼 수 있습니다. 
 
@@ -76,7 +76,7 @@ NPS 구성을 내보낸 후 대상 서버에 XML 파일을 복사 합니다.
 
 ## <a name="export-and-import-the-nps-configuration-by-using-netsh"></a>Netsh를 사용 하 여 NPS 구성 내보내기 및 가져오기
 
-Network Shell \(Netsh @ no__t-1을 사용 하 여 **netsh nps export** 명령을 사용 하 여 NPS 구성을 내보낼 수 있습니다.
+Network Shell \(Netsh\)를 사용 하 여 **netsh nps 내보내기** 명령을 사용 하 여 NPS 구성을 내보낼 수 있습니다.
 
 **Netsh nps import** 명령이 실행 될 때 nps는 업데이트 된 구성 설정을 사용 하 여 자동으로 새로 고쳐집니다. **Netsh nps 가져오기** 명령을 실행 하기 위해 대상 컴퓨터에서 nps를 중지할 필요는 없지만 구성 가져오기 중에 nps 콘솔 또는 nps MMC 스냅인이 열려 있으면 보기를 새로 고칠 때까지 서버 구성에 대 한 변경 내용이 표시 되지 않습니다. 
 
@@ -93,9 +93,9 @@ Network Shell \(Netsh @ no__t-1을 사용 하 여 **netsh nps export** 명령을
 
 2. **Netsh** 프롬프트에서 **nps**를 입력 한 다음 enter 키를 누릅니다. 
 
-3. **Netsh nps** 프롬프트에서 **export filename =** "*path\file.xml*" **exportPSK = YES**를 입력 합니다. 여기서 *path* 는 nps 구성 파일을 저장 하려는 폴더 위치이 고, *file* 은 xml 파일의 이름입니다. 저장 하려고 합니다. Enter 키를 누릅니다. 
+3. **Netsh nps** 프롬프트에서 **export filename =** "*path\file.xml*" **exportPSK = YES**를 입력 합니다. 여기서 *path* 는 nps 구성 파일을 저장 하려는 폴더 위치이 고 *file* 은 저장 하려는 xml 파일의 이름입니다. Enter 키를 누릅니다. 
 
-이렇게 하면 레지스트리 설정 @ no__t-1을 포함 하는 구성 @no__t 설정이 XML 파일에 저장 됩니다. 경로는 상대 경로 이거나 절대 경로일 수 있습니다. 또는-0UNC @ no__t-1 경로 @no__t 범용 명명 규칙 일 수 있습니다. Enter 키를 누르면 파일로 내보내기의 성공 여부를 나타내는 메시지가 표시 됩니다.
+이렇게 하면 XML 파일에\) 레지스트리 설정을 포함 하 \(구성 설정이 저장 됩니다. 경로는 상대 또는 절대 경로일 수 있으며 UNC\) 경로 \(범용 명명 규칙 일 수 있습니다. Enter 키를 누르면 파일로 내보내기의 성공 여부를 나타내는 메시지가 표시 됩니다.
 
 4. 만든 파일을 대상 NPS에 복사 합니다.
 

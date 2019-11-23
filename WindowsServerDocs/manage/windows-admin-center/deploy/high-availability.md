@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 ms.prod: windows-server
 ms.openlocfilehash: 6ae7bd9ed7aee5835ac1f53b9e10879ad8824f52
 ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71406949"
@@ -22,7 +22,7 @@ Windows 관리 센터 게이트웨이 서비스에 대해 고가용성을 제공
 
 [다른 Windows 관리 센터 배포 옵션에 대해 알아봅니다.](../plan/installation-options.md)
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 - Windows Server 2016 또는 2019에서 2 개 이상의 노드로 이루어진 장애 조치 (failover) 클러스터 [장애 조치 (Failover) 클러스터 배포에 대해 자세히 알아보세요](../../../failover-clustering/failover-clustering-overview.md).
 - Windows 관리 센터의 CSV (클러스터 공유 볼륨)는 클러스터의 모든 노드에서 액세스할 수 있는 영구 데이터를 저장 합니다. 10 GB는 CSV에 충분 합니다.
@@ -31,19 +31,19 @@ Windows 관리 센터 게이트웨이 서비스에 대해 고가용성을 제공
 
 ## <a name="install-windows-admin-center-on-a-failover-cluster"></a>장애 조치 (failover) 클러스터에 Windows 관리 센터 설치
 
-1. @No__t-0 스크립트를 클러스터의 노드에 복사 합니다. Windows 관리 센터 .msi를 동일한 노드에 다운로드 하거나 복사 합니다.
+1. ```Install-WindowsAdminCenterHA.ps1``` 스크립트를 클러스터의 노드에 복사 합니다. Windows 관리 센터 .msi를 동일한 노드에 다운로드 하거나 복사 합니다.
 2. RDP를 통해 노드에 연결 하 고 다음 매개 변수를 사용 하 여 해당 노드에서 ```Install-WindowsAdminCenterHA.ps1``` 스크립트를 실행 합니다.
     - `-clusterStorage`: Windows 관리 센터 데이터를 저장할 클러스터 공유 볼륨의 로컬 경로입니다.
-    - `-clientAccessPoint`: Windows 관리 센터에 액세스 하는 데 사용할 이름을 선택 합니다. 예를 들어 `-clientAccessPoint contosoWindowsAdminCenter` 매개 변수를 사용 하 여 스크립트를 실행 하는 경우 `https://contosoWindowsAdminCenter.<domain>.com`을 방문 하 여 Windows 관리 센터 서비스에 액세스 합니다.
-    - `-staticAddress`: (선택 사항) 클러스터 일반 서비스에 대 한 하나 이상의 정적 주소입니다. 
+    - `-clientAccessPoint`: Windows 관리 센터에 액세스 하는 데 사용할 이름을 선택 합니다. 예를 들어 `-clientAccessPoint contosoWindowsAdminCenter`매개 변수를 사용 하 여 스크립트를 실행 하는 경우를 방문 하 여 Windows 관리 센터 서비스에 액세스할 수 있습니다 `https://contosoWindowsAdminCenter.<domain>.com`
+    - `-staticAddress`: 선택 사항입니다. 클러스터 일반 서비스에 대 한 하나 이상의 정적 주소입니다. 
     - `-msiPath`: Windows 관리 센터 .msi 파일의 경로입니다.
-    - `-certPath`: (선택 사항) 인증서 .pfx 파일의 경로입니다.
-    - `-certPassword`: (선택 사항) @No__t에서 제공 하는 인증서 .pfx의 SecureString 암호입니다.-0
-    - `-generateSslCert`: (선택 사항) 서명 된 인증서를 제공 하지 않으려면이 매개 변수 플래그를 포함 하 여 자체 서명 된 인증서를 생성 합니다. 자체 서명 된 인증서는 60 일 후에 만료 됩니다.
-    - `-portNumber`: (선택 사항) 포트를 지정 하지 않으면 게이트웨이 서비스는 포트 443 (HTTPS)에 배포 됩니다. 다른 포트를 사용 하려면이 매개 변수에를 지정 합니다. 사용자 지정 포트 (443 외)를 사용 하는 경우 https://\<clientAccessPoint @ no__t-1: \<port @ no__t-3으로 이동 하 여 Windows 관리 센터에 액세스 합니다.
+    - `-certPath`: 선택 사항입니다. 인증서 .pfx 파일의 경로입니다.
+    - `-certPassword`: 선택 사항입니다. `-certPath`에서 제공 하는 인증서 .pfx에 대 한 SecureString 암호
+    - `-generateSslCert`: 선택 사항입니다. 서명 된 인증서를 제공 하지 않으려면이 매개 변수 플래그를 포함 하 여 자체 서명 된 인증서를 생성 합니다. 자체 서명 된 인증서는 60 일 후에 만료 됩니다.
+    - `-portNumber`: 선택 사항입니다. 포트를 지정 하지 않으면 게이트웨이 서비스는 포트 443 (HTTPS)에 배포 됩니다. 다른 포트를 사용 하려면이 매개 변수에를 지정 합니다. 사용자 지정 포트 (443 외)를 사용 하는 경우 https://\<clientAccessPoint\>:\<포트\>로 이동 하 여 Windows 관리 센터에 액세스 합니다.
 
 > [!NOTE]
-> @No__t-0 스크립트는 ```-WhatIf ``` 및 ```-Verbose``` 매개 변수를 지원 합니다.
+> ```Install-WindowsAdminCenterHA.ps1``` 스크립트는 ```-WhatIf ``` 및 ```-Verbose``` 매개 변수를 지원 합니다.
 
 ### <a name="examples"></a>예
 

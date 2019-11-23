@@ -1,6 +1,6 @@
 ---
 ms.assetid: 0b3587b2-219f-43d8-88b4-1254eaa8b910
-title: Windows server에서 웹 응용 프로그램 프록시
+title: Windows Server의 웹 응용 프로그램 프록시
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -17,9 +17,9 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71404247"
 ---
-# <a name="web-application-proxy-in-windows-server"></a>Windows server에서 웹 응용 프로그램 프록시
+# <a name="web-application-proxy-in-windows-server"></a>Windows Server의 웹 응용 프로그램 프록시
 
->적용 대상: Windows Server @ no__t-0 2016
+>적용 대상: Windows Server&reg; 2016
 
 **이 콘텐츠는 웹 응용 프로그램 프록시의 온-프레미스 버전과 관련이 있습니다. 클라우드를 통해 온-프레미스 응용 프로그램에 안전 하 게 액세스할 수 있도록 하려면 [Azure AD 응용 프로그램 프록시 콘텐츠](https://azure.microsoft.com/documentation/articles/active-directory-application-proxy-get-started/)를 참조 하세요.**  
   
@@ -57,7 +57,7 @@ ms.locfileid: "71404247"
   
 - 백 엔드 응용 프로그램에 대 한 클라이언트 IP 주소의 전파  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
   
 -   [Windows Server 2016의 새로운 기능](https://technet.microsoft.com/library/dn765472.aspx)  
   

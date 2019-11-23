@@ -18,7 +18,7 @@ ms.locfileid: "71358143"
 ---
 # <a name="create-a-rule-to-pass-through-or-filter-an-incoming-claim"></a>통과 또는 들어오는 클레임을 필터링 하는 규칙 만들기
 
-Active Directory Federation Services에서 들어오는 클레임 통과 또는 필터링 규칙 템플릿을 사용 하 여 \(AD FS @ no__t-1을 사용 하 여 선택한 클레임 유형으로 들어오는 모든 클레임을 통과할 수 있습니다. 또한 선택한 클레임 형식을 사용 하 여 들어오는 클레임의 값을 필터링 할 수 있습니다. 예를 들어이 규칙 서식 파일을 보낼 모든 들어오는 클레임 규칙을 만들려면 사용할 수 있습니다. 또한이 규칙을 사용 하 여 @fabrikam로 끝나는 사용자 계정 이름 \(UPN @ no__t-1 클레임만 보낼 수 있습니다.  
+Active Directory Federation Services \(AD FS\)에서 들어오는 클레임 통과 또는 필터링 규칙 템플릿을 사용 하 여 선택한 클레임 유형으로 들어오는 클레임을 모두 전달할 수 있습니다. 또한 선택한 클레임 형식을 사용 하 여 들어오는 클레임의 값을 필터링 할 수 있습니다. 예를 들어이 규칙 서식 파일을 보낼 모든 들어오는 클레임 규칙을 만들려면 사용할 수 있습니다. 또한이 규칙을 사용 하 여 사용자 계정 이름 \(UPN\) @fabrikam으로 끝나는 클레임만 보낼 수 있습니다.  
   
 다음 절차를 사용 하 여 AD FS 관리 스냅인을 사용 하 여 클레임 규칙을 만들려면\-에 있습니다.  
   
@@ -29,16 +29,16 @@ Active Directory Federation Services에서 들어오는 클레임 통과 또는 
 1.  서버 관리자에서 클릭 **도구**, 를 선택한 다음 **AD FS 관리**합니다.  
   
 2.  콘솔 트리에서 아래 **AD FS**, 클릭 **신뢰 당사자 트러스트**합니다. 
-![규칙 만들기](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)  
+규칙](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG) 만들기 ![  
   
 3.  오른쪽\-선택한 트러스트를 클릭 한 다음 클릭 **클레임 발급 정책 편집**합니다.
-![규칙 만들기](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG)   
+규칙](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG) 만들기 ![   
   
 4.  에 **클레임 발급 정책 편집** 대화 상자의 **발급 변환 규칙** 클릭 **규칙 추가** 규칙 마법사를 시작 합니다. 
-![규칙 만들기](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG)    
+규칙](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG) 만들기 ![    
 
 5.  에 **규칙 템플릿 선택** 페이지의 **클레임 규칙 템플릿**, 선택, **통과 또는 들어오는 클레임 필터링** 클릭 한 다음 확인 하 고 목록에서 **다음**합니다.  
-![규칙 만들기](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule4.PNG)    
+규칙](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule4.PNG) 만들기 ![    
 
 6.  에 **규칙 구성** 페이지 **클레임 규칙 이름** 에이 규칙에 대 한 표시 이름을 입력 **들어오는 클레임 유형** 클레임 유형을 목록에서 선택 하 고 조직의 요구에 따라 다음 옵션 중 하나를 선택 합니다.  
   
@@ -49,7 +49,7 @@ Active Directory Federation Services에서 들어오는 클레임 통과 또는 
     -   **특정 전자 메일 접미사 값과 일치 하는 클레임 값만 통과**  
   
     -   **특정 값으로 시작 하는 클레임 값만 통과**  
-![규칙 만들기](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule5.PNG)    
+규칙](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule5.PNG) 만들기 ![    
 
 7.  클릭 하 고 **마침** 단추입니다.  
   
@@ -60,16 +60,16 @@ Active Directory Federation Services에서 들어오는 클레임 통과 또는 
 1.  서버 관리자에서 클릭 **도구**, 를 선택한 다음 **AD FS 관리**합니다.  
   
 2.  콘솔 트리에서 아래 **AD FS**, 클릭 **클레임 공급자 트러스트**합니다. 
-![규칙 만들기](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule1.PNG)  
+규칙](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule1.PNG) 만들기 ![  
   
 3.  오른쪽\-선택한 트러스트를 클릭 한 다음 클릭 **클레임 규칙 편집**합니다.
-![규칙 만들기](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule2.PNG)   
+규칙](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule2.PNG) 만들기 ![   
   
 4.  에 **클레임 규칙 편집** 대화 상자의 **수용 변환 규칙** 클릭 **규칙 추가** 규칙 마법사를 시작 합니다.
-![규칙 만들기](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule3.PNG)    
+규칙](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule3.PNG) 만들기 ![    
 
 5.  에 **규칙 템플릿 선택** 페이지의 **클레임 규칙 템플릿**, 선택, **통과 또는 들어오는 클레임 필터링** 클릭 한 다음 확인 하 고 목록에서 **다음**합니다.  
-![규칙 만들기](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule4.PNG)    
+규칙](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule4.PNG) 만들기 ![    
 
 6.  에 **규칙 구성** 페이지 **클레임 규칙 이름** 에이 규칙에 대 한 표시 이름을 입력 **들어오는 클레임 유형** 클레임 유형을 목록에서 선택 하 고 조직의 요구에 따라 다음 옵션 중 하나를 선택 합니다.  
   
@@ -80,7 +80,7 @@ Active Directory Federation Services에서 들어오는 클레임 통과 또는 
     -   **특정 전자 메일 접미사 값과 일치 하는 클레임 값만 통과**  
   
     -   **특정 값으로 시작 하는 클레임 값만 통과**  
-![규칙 만들기](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule5.PNG)    
+규칙](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule5.PNG) 만들기 ![    
 
 7.  클릭 하 고 **마침** 단추입니다.  
   
@@ -93,7 +93,7 @@ Active Directory Federation Services에서 들어오는 클레임 통과 또는 
 2.  콘솔 트리에서 **AD FS FSAD\\트러스트 관계**, 클릭 **클레임 공급자 트러스트** 또는 **신뢰 당사자 트러스트**, 이 규칙을 만드는 목록에서 특정 트러스트를 클릭 하 고 있습니다.  
   
 3.  오른쪽\-선택한 트러스트를 클릭 한 다음 클릭 **클레임 규칙 편집**합니다.
-![규칙 만들기](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG)   
+규칙](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG) 만들기 ![   
   
 4.  에 **클레임 규칙 편집** 대화 상자는 다음과 같은 탭 하나를 선택, 편집 하 고 규칙 집합을 신뢰에 따라,이 규칙을 만들려고 할 및 클릭 **규칙 추가** 해당 규칙 집합에 연관 된 규칙 마법사를 시작 합니다.  
   
@@ -104,10 +104,10 @@ Active Directory Federation Services에서 들어오는 클레임 통과 또는 
     -   **발급 권한 부여 규칙**  
   
     -   **위임 권한 부여 규칙**  
-![규칙 만들기](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG)    
+규칙](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG) 만들기 ![    
 
 5.  에 **규칙 템플릿 선택** 페이지의 **클레임 규칙 템플릿**, 선택, **통과 또는 들어오는 클레임 필터링** 클릭 한 다음 확인 하 고 목록에서 **다음**합니다.  
-![규칙 만들기](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule7.PNG)    
+규칙](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule7.PNG) 만들기 ![    
 
 6.  에 **규칙 구성** 페이지 **클레임 규칙 이름** 에이 규칙에 대 한 표시 이름을 입력 **들어오는 클레임 유형** 클레임 유형을 목록에서 선택 하 고 조직의 요구에 따라 다음 옵션 중 하나를 선택 합니다.  
   
@@ -118,7 +118,7 @@ Active Directory Federation Services에서 들어오는 클레임 통과 또는 
     -   **특정 전자 메일 접미사 값과 일치 하는 클레임 값만 통과**  
   
     -   **특정 값으로 시작 하는 클레임 값만 통과**  
-![규칙 만들기](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule8.PNG)    
+규칙](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule8.PNG) 만들기 ![    
 
 7.  클릭 하 고 **마침** 단추입니다.  
   

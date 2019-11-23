@@ -29,7 +29,7 @@ ms.locfileid: "71369343"
 3. **서버** 컨테이너를 확장 한 다음 글로벌 카탈로그를 추가할 DC의 서버 개체를 확장 합니다.  
 4. **NTDS 설정**을 마우스 오른쪽 단추로 클릭 한 다음 **속성**을 클릭 합니다.  
 5. **글로벌 카탈로그** 확인란을 선택 합니다.  
-![ Add GC @ no__t-1
+GC 추가 ![](media/AD-Forest-Recovery-Add-GC/addgc1.png)
 
 ## <a name="to-add-the-global-catalog-using-repadmin"></a>Repadmin을 사용 하 여 글로벌 카탈로그를 추가 하려면  
 

@@ -19,7 +19,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71355570"
 ---
-# <a name="software-load-balancing-slb-for-sdn"></a>소프트웨어 부하 분산 \(SLB @ no__t-SDN 용-1
+# <a name="software-load-balancing-slb-for-sdn"></a>SDN에 대 한 소프트웨어 부하 분산 \(SLB\)
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 

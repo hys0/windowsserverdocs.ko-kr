@@ -24,9 +24,9 @@ ms.locfileid: "71405470"
 
 사용자 이름 RADIUS 특성은 일반적으로 사용자 계정 위치 및 사용자 계정 이름을 포함 하는 문자열입니다. 사용자 계정 위치는 영역 또는 영역 이름이 라고도 하 고 DNS 도메인, Active Directory® 도메인 및 Windows NT 4.0 도메인을 비롯 한 도메인 개념과 동의어입니다. 예를 들어 사용자 계정이 example.com 이라는 도메인에 대 한 사용자 계정 데이터베이스에 있는 경우 example.com는 영역 이름입니다.
 
-다른 예에서는 사용자 이름 RADIUS 특성에 사용자 이름 user1@example.com이 포함 된 경우 u s e r 1은 사용자 계정 이름이 고 example.com는 영역 이름입니다. 영역 이름은 접두사 또는 접미사로 사용자 이름에 표시 될 수 있습니다.
+다른 예에서는 사용자 이름 RADIUS 특성에 사용자 이름 user1@example.com포함 되어 있는 경우 user1은 사용자 계정 이름이 고 example.com는 영역 이름입니다. 영역 이름은 접두사 또는 접미사로 사용자 이름에 표시 될 수 있습니다.
 
-- **Example\user1**. 이 예에서 영역 이름 **예** 는 접두사입니다. 또한 Active Directory @ no__t 도메인 서비스 \(AD DS @ no__t 도메인의 이름입니다.
+- **Example\user1**. 이 예에서 영역 이름 **예** 는 접두사입니다. 또한 AD DS\) 도메인 \(Active Directory&reg; 도메인 서비스의 이름입니다.
 
 - <strong>user1@example.com</strong>. 이 예제에서 영역 이름 **example.com** 는 접미사입니다. DNS 도메인 이름 또는 AD DS 도메인의 이름입니다.
 
@@ -58,11 +58,11 @@ Radius 메시지를 로컬로 처리 하거나 (NPS를 RADIUS 서버로 사용 �
 
 사용자 이름 특성에 대 한 특성 조작 규칙을 구성 하 여 다음을 변경할 수 있습니다.
 
-- 사용자 이름에서 영역 이름을 제거 합니다. \(also 영역 제거 @ no__t-1이 라고도 합니다. 예를 들어 사용자 이름 user1@example.com은 u s e r 1로 변경 됩니다.
+- 사용자 이름 \(에서 영역 이름을 제거 합니다.\)영역을 제거 하는 것이 라고도 합니다. 예를 들어 사용자 이름 user1@example.com를 u s e r 1로 변경 합니다.
 
-- 영역 이름을 변경 하 고 구문은 변경 하지 마십시오. 예를 들어 사용자 이름 user1@example.com은 user1@wcoast.example.com로 변경 됩니다.
+- 영역 이름을 변경 하 고 구문은 변경 하지 마십시오. 예를 들어 사용자 이름 user1@example.com은 user1@wcoast.example.com으로 변경 됩니다.
 
-- 영역 이름의 구문을 변경 합니다. 예를 들어 사용자 이름 example\user1는 user1@example.com으로 변경 됩니다.
+- 영역 이름의 구문을 변경 합니다. 예를 들어 사용자 이름 example\user1는 user1@example.com로 변경 됩니다.
 
 사용자가 구성 하는 특성 조작 규칙에 따라 사용자 이름 특성을 수정한 후에는 첫 번째 일치 하는 연결 요청 정책의 추가 설정을 사용 하 여 다음을 확인 합니다.
 

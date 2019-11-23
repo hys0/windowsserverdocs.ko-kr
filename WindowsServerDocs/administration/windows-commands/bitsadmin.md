@@ -22,11 +22,11 @@ ms.locfileid: "71380101"
 ---
 # <a name="bitsadmin"></a>bitsadmin
 
-> **적용**대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
+> **적용 대상**: windows Server (반기 채널), windows server 2016, windows Server 2012 R2, windows server 2012, windows 10
 
-bitsadmin은 다운로드 또는 업로드 작업을 만들고 진행 상황을 모니터링 하는 데 사용할 수 있는 명령줄 도구입니다. Bitsadmin 도구는 스위치를 사용 하 여 수행할 작업을 식별 합니다.  @No__t-0 또는 `bitsadmin /HELP`을 호출 하 여 스위치 목록을 가져올 수 있습니다.
+bitsadmin은 다운로드 또는 업로드 작업을 만들고 진행 상황을 모니터링 하는 데 사용할 수 있는 명령줄 도구입니다. Bitsadmin 도구는 스위치를 사용 하 여 수행할 작업을 식별 합니다.  `bitsadmin /?` 또는 `bitsadmin /HELP`를 호출 하 여 스위치 목록을 가져올 수 있습니다.
 
-대부분의 스위치에는 작업의 표시 이름 또는 GUID로 설정 하는 \<Job @ no__t-1 매개 변수가 필요 합니다. 작업의 표시 이름은 고유 하지 않을 수 있습니다. **/Create** 및 **/list** 스위치는 작업의 GUID를 반환 합니다.
+대부분의 스위치에는 작업의 표시 이름 또는 GUID로 설정 하는 \<작업\> 매개 변수가 필요 합니다. 작업의 표시 이름은 고유 하지 않을 수 있습니다. **/Create** 및 **/list** 스위치는 작업의 GUID를 반환 합니다.
 
 기본적으로 자신의 작업에 대 한 정보에 액세스할 수 있습니다. 다른 사용자의 작업에 대 한 정보에 액세스 하려면 관리자 권한이 있어야 합니다. 작업이 상승 된 상태에서 만들어진 경우에는 관리자 권한 창에서 bitsadmin을 실행 해야 합니다. 그렇지 않은 경우에는 작업에 대 한 읽기 전용 액세스 권한이 있습니다.
 

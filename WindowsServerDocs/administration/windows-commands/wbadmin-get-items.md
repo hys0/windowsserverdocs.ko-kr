@@ -53,7 +53,7 @@ wbadmin get items
 ```
 wbadmin get items -version:03/31/2013-09:00
 ```
-항목을 나열 하려면 백업에서 오전 9시 2013 년 4 월 30 일에 실행 된 server01의 \\ @ no__t-1servername\share에 저장 되 고 다음을 입력 합니다.
+항목을 나열 하려면 백업에서 오전 9시 2013 년 4 월 30 일에 실행 된 server01의 \\\\servername\share에 저장 하 고 다음을 입력 합니다.
 ```
 wbadmin get items -version:04/30/2013-09:00 -backupTarget:\\servername\share -machine:server01
 ```

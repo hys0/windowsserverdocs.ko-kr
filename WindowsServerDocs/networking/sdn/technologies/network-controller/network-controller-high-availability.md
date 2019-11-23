@@ -19,16 +19,16 @@ ms.locfileid: "71405938"
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-이 항목을 사용 하 여 소프트웨어 정의 네트워킹 \(SDN @ no__t-1의 네트워크 컨트롤러 고가용성 및 확장성 구성에 대해 알아볼 수 있습니다.
+이 항목을 사용 하 여 소프트웨어 정의 네트워킹 \(SDN\)의 네트워크 컨트롤러 고가용성 및 확장성 구성에 대해 알아볼 수 있습니다.
 
-데이터 센터에 SDN을 배포 하는 경우 네트워크 컨트롤러를 사용 하 여 RAS 게이트웨이, 소프트웨어 부하 분산 장치, 테 넌 트 통신에 대 한 가상 네트워킹 정책, 데이터 센터 방화벽 등을 비롯 한 여러 네트워크 요소를 중앙에서 배포, 모니터링 및 관리할 수 있습니다. 정책, 서비스 품질 \(QoS @ no__t-SDN 정책, 하이브리드 네트워킹 정책 등에 대 한-1입니다.
+데이터 센터에 SDN을 배포 하는 경우 네트워크 컨트롤러를 사용 하 여 RAS 게이트웨이, 소프트웨어 부하 분산 장치, 테 넌 트 통신에 대 한 가상 네트워킹 정책, 데이터 센터 방화벽 정책 \(, SDN 정책의 QoS\), 하이브리드 네트워킹 정책 등을 비롯 한 여러 네트워크 요소를 중앙에서 배포, 모니터링 및 관리할 수 있습니다.
 
 네트워크 컨트롤러는 SDN 관리의 cornerstone 때문에 네트워크 컨트롤러 배포에서 고가용성을 제공 하 고, 데이터 센터 요구에 맞게 네트워크 컨트롤러 노드를 쉽게 확장 하거나 축소할 수 있는 기능을 제공 하는 것이 중요 합니다.
 
 네트워크 컨트롤러를 단일 컴퓨터 클러스터로 배포할 수 있지만 고가용성 및 장애 조치 (failover)를 위해 최소 3 대의 컴퓨터를 사용 하는 다중 컴퓨터 클러스터에 네트워크 컨트롤러를 배포 해야 합니다.
 
 >[!NOTE]
->서버 컴퓨터 또는 가상 컴퓨터 (Windows Server 2016 Datacenter edition을 실행 하는 \(VMs @ no__t-1)에서 네트워크 컨트롤러를 배포할 수 있습니다. Vm에 네트워크 컨트롤러를 배포 하는 경우에는 Datacenter edition을 실행 하는 Hyper-v 호스트에서 Vm이 실행 되 고 있어야 합니다. Windows Server 2016 Standard edition에서는 네트워크 컨트롤러를 사용할 수 없습니다.
+>서버 컴퓨터 또는 Windows Server 2016 Datacenter edition을 실행 하는 가상 컴퓨터 \(Vm\)에서 네트워크 컨트롤러를 배포할 수 있습니다. Vm에 네트워크 컨트롤러를 배포 하는 경우에는 Datacenter edition을 실행 하는 Hyper-v 호스트에서 Vm이 실행 되 고 있어야 합니다. Windows Server 2016 Standard edition에서는 네트워크 컨트롤러를 사용할 수 없습니다.
 
 ## <a name="network-controller-as-a-service-fabric-application"></a>Service Fabric 응용 프로그램으로 서의 네트워크 컨트롤러
 
@@ -45,7 +45,7 @@ ms.locfileid: "71405938"
 
 각 Service Fabric 서비스에는 하나의 주 복제본과 두 개의 보조 복제본이 있습니다. 주 서비스 복제본은 요청을 처리 하는 반면, 두 보조 서비스 복제본은 몇 가지 이유로 주 복제본을 사용 하지 않도록 설정 하거나 사용할 수 없는 경우 고가용성을 제공 합니다.
 
-다음 그림은 5 대의 컴퓨터를 포함 하는 네트워크 컨트롤러 Service Fabric 클러스터를 보여 줍니다. 5 대의 컴퓨터에 배포 되는 4 개의 서비스: 방화벽 서비스, 게이트웨이 서비스, 소프트웨어 부하 분산 \(SLB @ no__t 서비스 및 가상 네트워크 \(Vnet @ no__t-3 서비스입니다.  각각의 네 가지 서비스에는 하나의 기본 서비스 복제본과 두 개의 보조 서비스 복제본이 포함 됩니다.
+다음 그림은 5 대의 컴퓨터를 포함 하는 네트워크 컨트롤러 Service Fabric 클러스터를 보여 줍니다. 5 대의 컴퓨터에 배포 되는 4 개의 서비스: 방화벽 서비스, 게이트웨이 서비스, 소프트웨어 부하 분산 \(SLB\) 서비스 및 가상 네트워크 \(Vnet\) 서비스.  각각의 네 가지 서비스에는 하나의 기본 서비스 복제본과 두 개의 보조 서비스 복제본이 포함 됩니다.
 
 ![네트워크 컨트롤러 Service Fabric 클러스터](../../../media/Network-Controller-HA/Network-Controller-HA.jpg)
 
@@ -62,11 +62,11 @@ ms.locfileid: "71405938"
 
 ### <a name="persistent-storage"></a>영구 저장소
 
-네트워크 컨트롤러 응용 프로그램의 구성 및 상태에 대 한 저장소 요구 사항이 크게 설정 되어 있습니다. 또한 응용 프로그램은 계획 되거나 계획 되지 않은 중단에서 사용할 수 있어야 합니다. 이러한 목적을 위해 Service Fabric는 복제 된 트랜잭션 및 지속형 저장소 인 키-값 저장소 \(KVS @ no__t-1을 제공 합니다.
+네트워크 컨트롤러 응용 프로그램의 구성 및 상태에 대 한 저장소 요구 사항이 크게 설정 되어 있습니다. 또한 응용 프로그램은 계획 되거나 계획 되지 않은 중단에서 사용할 수 있어야 합니다. 이러한 목적을 위해 Service Fabric는 복제 된 트랜잭션 및 지속형 저장소 인 키-값 저장소 \(KVS\)를 제공 합니다.
 
 ### <a name="modularity"></a>성과
 
-네트워크 컨트롤러는 모듈형 아키텍처로 설계 되었으며, 각 네트워크 서비스 (예: 가상 네트워크 서비스 및 방화벽 서비스)는 개별 서비스로 @ no__t-0in 빌드 했습니다. 
+네트워크 컨트롤러는 모듈형 아키텍처를 사용 하 여 설계 되었으며, 각 네트워크 서비스 (예: 가상 네트워크 서비스 및 방화벽 서비스)가 개별 서비스로\-빌드 되었습니다. 
 
 이 응용 프로그램 아키텍처는 다음과 같은 이점을 제공 합니다.
 
@@ -80,7 +80,7 @@ Service Fabric 모듈화는 서비스 모델 스키마를 사용 하 여 응용 
 
 ## <a name="network-controller-deployment-options"></a>네트워크 컨트롤러 배포 옵션
 
-System Center Virtual Machine Manager \(VMM @ no__t-1을 사용 하 여 네트워크 컨트롤러를 배포 하려면 [vmm 패브릭에서 SDN 네트워크 컨트롤러 설정](https://technet.microsoft.com/system-center-docs/vmm/scenario/sdn-network-controller)을 참조 하세요.
+VMM\)\(System Center Virtual Machine Manager을 사용 하 여 네트워크 컨트롤러를 배포 하려면 [vmm 패브릭에서 SDN 네트워크 컨트롤러 설정](https://technet.microsoft.com/system-center-docs/vmm/scenario/sdn-network-controller)을 참조 하세요.
 
 스크립트를 사용 하 여 네트워크 컨트롤러를 배포 하려면 [스크립트를 사용 하 여 소프트웨어 정의 네트워크 인프라 배포](../../deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md)를 참조 하세요.
 

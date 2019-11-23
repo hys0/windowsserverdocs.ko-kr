@@ -19,11 +19,11 @@ ms.locfileid: "71364572"
 ---
 # <a name="windows-10-should-be-configured-with-the-recommended-amount-of-memory"></a>Windows 10 권장된 메모리 양은로 구성 해야
 
->적용 대상: Windows Server 2016
+>적용 대상: Windows Server 2016
 
 모범 사례 분석기 및 검사에 대한 자세한 내용은 [모범 사례 분석기 검사 실행 및 검사 결과 관리](https://go.microsoft.com/fwlink/p/?LinkID=223177)를 참조하세요.  
   
-|속성|설명|  
+|속성|세부 정보|  
 |-|-|  
 |**운영 체제**|Windows Server 2016|  
 |**제품/기능**|Hyper-V|  
@@ -36,7 +36,7 @@ ms.locfileid: "71364572"
 *Windows 10을 실행 하는 가상 머신은 1gb RAM 권장 크기 보다 더 작은 수준으로 구성 됩니다.*  
   
 ## <a name="impact"></a>**식**  
-@no__t 게스트 운영 체제 및 응용 프로그램이 제대로 작동 하지 않을 수 있습니다. 메모리가 부족 하 여 한 번에 여러 응용 프로그램을 실행 하려면 아닐 수도 있습니다. 이는 다음과 같은 가상 컴퓨터에 영향을 줍니다. *  
+*게스트 운영 체제 및 응용 프로그램이 제대로 작동 하지 않을 수 있습니다. 한 번에 여러 응용 프로그램을 실행 하기에 충분 한 메모리가 없을 수 있습니다. 이는 다음과 같은 가상 컴퓨터에 영향을 줍니다.*  
 ```  
 <list of virtual machines>  
 ```  
@@ -67,7 +67,7 @@ ms.locfileid: "71364572"
 Set-VMMemory <MyVM> -StartupBytes 1GB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [설정-VMMemory](https://technet.microsoft.com/library/hh848572.aspx)  
   
 

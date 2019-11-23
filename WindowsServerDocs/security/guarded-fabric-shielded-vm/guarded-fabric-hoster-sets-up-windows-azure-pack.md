@@ -50,9 +50,9 @@ ms.locfileid: "71403657"
 
 2.  [웹 플랫폼 설치 관리자](https://www.microsoft.com/web/downloads/platform.aspx)를 다운로드 하 여 설치 합니다. 컴퓨터가 인터넷에 연결 되어 있지 않은 경우 [오프 라인 설치 지침](http://www.iis.net/learn/install/web-platform-installer/web-platform-installer-v4-command-line-webpicmdexe-rtw-release)을 따르세요.
 
-3.  웹 플랫폼 설치 관리자를 열고 **Windows Azure 팩을 찾습니다. **제품** 탭에서 포털 및 API Express @ no__t-0 **추가**를 클릭 한 다음 창 맨 아래에서 **설치** 를 클릭 합니다.
+3.  웹 플랫폼 설치 관리자를 열고 **제품** 탭 아래에서 **Windows Azure 팩: 포털 및 API Express** 를 찾습니다. **추가**를 클릭 한 다음 창 맨 아래에서 **설치** 를 클릭 합니다.
 
-4.  설치를 계속합니다. 설치가 완료 되 면 구성 사이트 (*https://&lt;wapserver @ no__t-2:30101/* )가 웹 브라우저에서 열립니다. 이 웹 사이트에서 SQL server에 대 한 정보를 제공 하 고 WAP 구성을 완료 합니다.
+4.  설치를 계속합니다. 설치가 완료 되 면 구성 사이트 (*https://&lt;wapserver&gt;: 30101/* )가 웹 브라우저에서 열립니다. 이 웹 사이트에서 SQL server에 대 한 정보를 제공 하 고 WAP 구성을 완료 합니다.
 
 Windows Azure 팩 설정에 대 한 도움말은 [Windows Azure 팩 express 배포 설치](https://technet.microsoft.com/dn296439.aspx)를 참조 하세요.
 
@@ -63,7 +63,7 @@ Windows Azure 팩 설정에 대 한 도움말은 [Windows Azure 팩 express 배�
 
 Windows Azure 팩를 사용 하기 전에 인프라에 대해를 이미 설치 하 고 구성 해야 합니다.
 
-1.  *Https://&lt;wapserver @ no__t-2:30091*에서 Windows Azure 팩 관리 포털로 이동한 후 관리자 자격 증명을 사용 하 여 로그인 합니다.
+1.  *Https://&lt;wapserver&gt;: 30091*Windows Azure 팩 관리 포털로 이동한 후 관리자 자격 증명을 사용 하 여 로그인 합니다.
 
 2.  왼쪽 창에서 **VM 클라우드**를 클릭 합니다.
 
@@ -113,7 +113,7 @@ Windows Azure 팩를 사용 하기 전에 인프라에 대해를 이미 설치 �
 
     이 시점에서 Windows Azure 팩 구성 되 고 테 넌 트가 방금 만든 계획을 구독 하 고 보호 된 Vm을 배포할 수 있습니다. 테 넌 트가 완료 해야 하는 추가 단계는 [테 넌 트에 대 한 보호 된 vm-Windows Azure 팩를 사용 하 여 보호 된 Vm 배포](guarded-fabric-shielded-vm-windows-azure-pack.md)를 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [보호 된 호스트 및 보호 된 Vm에 대 한 호스팅 서비스 공급자 구성 단계](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [보호된 패브릭 및 보호된 VM](guarded-fabric-and-shielded-vms-top-node.md)

@@ -18,7 +18,7 @@ ms.locfileid: "71408021"
 ---
 # <a name="planning-federation-server-placement"></a>페더레이션 서버 배치 계획
 
-Active Directory Federation Services \(AD FS @ no__t-1 배포의 가장 중요 한 구성 요소는 페더레이션 서버입니다. 따라서 페더레이션 서버를 배포 하는 시기와 위치를 포함 하 여 페더레이션 서버 배치 전략을 신중 하 게 계획 하는 것이 중요 합니다. 다음 항목의 정보는 페더레이션 서버 또는 페더레이션 서버 팜을 만드는 시기와 위치 및 계정 파트너 역할, 리소스 파트너 역할 또는 둘 다에서 해당 페더레이션 서버를 사용할지 여부를 결정 하는 데 도움이 될 수 있습니다.  
+Active Directory Federation Services \(AD FS\) 배포의 가장 중요 한 구성 요소는 페더레이션 서버입니다. 따라서 페더레이션 서버를 배포 하는 시기와 위치를 포함 하 여 페더레이션 서버 배치 전략을 신중 하 게 계획 하는 것이 중요 합니다. 다음 항목의 정보는 페더레이션 서버 또는 페더레이션 서버 팜을 만드는 시기와 위치 및 계정 파트너 역할, 리소스 파트너 역할 또는 둘 다에서 해당 페더레이션 서버를 사용할지 여부를 결정 하는 데 도움이 될 수 있습니다.  
   
 -   [계정 파트너에서 페더레이션 서버의 역할 검토](Review-the-Role-of-the-Federation-Server-in-the-Account-Partner.md)  
   
@@ -39,6 +39,6 @@ Active Directory Federation Services \(AD FS @ no__t-1 배포의 가장 중요 �
   
 페더레이션 서버를 두 가지 기본 AD FS 설계 시나리오 중 하나에 배치 하는 방법에 대 한 예제는 [배포 목표를 AD FS 디자인에 매핑](Mapping-Your-Deployment-Goals-to-an-AD-FS-Design.md)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 [Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
 

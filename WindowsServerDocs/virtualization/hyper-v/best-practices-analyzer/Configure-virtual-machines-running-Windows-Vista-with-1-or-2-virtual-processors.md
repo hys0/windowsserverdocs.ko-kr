@@ -19,16 +19,16 @@ ms.locfileid: "71364928"
 ---
 # <a name="configure-virtual-machines-running-windows-vista-with-1-or-2-virtual-processors"></a>1 또는 2 가상 프로세서와 함께 Windows Vista를 실행 하는 가상 컴퓨터 구성
 
->적용 대상: Windows Server 2016
+>적용 대상: Windows Server 2016
 
 모범 사례 분석기 및 검사에 대한 자세한 내용은 [모범 사례 분석기 검사 실행 및 검사 결과 관리](https://go.microsoft.com/fwlink/p/?LinkID=223177)를 참조하세요.  
   
-|속성|설명|  
+|속성|세부 정보|  
 |-|-|  
 |**운영 체제**|Windows Server 2016|  
 |**제품/기능**|Hyper-V|  
 |**Severity**|Configuration|  
-|**범주**|오류|  
+|**범주**|Error|  
   
 다음 섹션에서는 기울임꼴이이 문제에 대 한 모범 사례 분석기 도구에 표시 되는 UI 텍스트를 나타냅니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "71364928"
   
 *Microsoft는 다음과 같은 가상 컴퓨터의 구성을 지원 하지 않습니다.*  
   
-@no__t-가상 머신 이름의 목록 >  
+가상 컴퓨터 이름 목록 \<>  
   
 ## <a name="resolution"></a>해결 방법  
   

@@ -18,7 +18,7 @@ ms.locfileid: "71408060"
 ---
 # <a name="name-resolution-requirements-for-federation-server-proxies"></a>페더레이션 서버 프록시에 대한 이름 확인 요구 사항
 
-인터넷의 클라이언트 컴퓨터가 Active Directory Federation Services \(AD FS @ no__t-1을 통해 보안이 유지 되는 응용 프로그램에 액세스 하려고 할 때 먼저 페더레이션 서버에 인증 해야 합니다. 대부분의 경우에서 페더레이션 서버 없는 일반적으로 인터넷에서 직접 액세스할 수 있습니다. 따라서 인터넷 클라이언트 컴퓨터 리디렉션되어야 페더레이션 서버 프록시를 대신 합니다. 적절 한 도메인 이름 시스템을 추가 하 여 성공적인 리디렉션을 수행할 수 있습니다 \(DNS\) 레코드 DNS 영역 또는 인터넷 직면 하는 영역입니다.  
+인터넷의 클라이언트 컴퓨터가\)AD FS \(Active Directory Federation Services 의해 보안이 유지 되는 응용 프로그램에 액세스 하려고 하면 먼저 페더레이션 서버에 인증 해야 합니다. 대부분의 경우에서 페더레이션 서버 없는 일반적으로 인터넷에서 직접 액세스할 수 있습니다. 따라서 인터넷 클라이언트 컴퓨터 리디렉션되어야 페더레이션 서버 프록시를 대신 합니다. 적절 한 도메인 이름 시스템을 추가 하 여 성공적인 리디렉션을 수행할 수 있습니다 \(DNS\) 레코드 DNS 영역 또는 인터넷 직면 하는 영역입니다.  
   
 페더레이션 서버 프록시에 인터넷 클라이언트가 리디렉션할 사용 하는 메서드 경계 네트워크의 DNS 영역 구성 방법 또는 인터넷에서 사용자가 제어 하는 DNS 영역 구성 방법에 따라 달라 집니다. 페더레이션 서버 프록시는 경계 네트워크에서 사용하기 위한 것입니다. 이러한 속성 리디렉션합니다 인터넷 클라이언트 요청을 페더레이션 서버 성공적으로 DNS 모든 인터넷에 올바르게 구성 된 경우에\-사용자가 제어 하는 영역을 연결 합니다. 인터넷의 구성에 따라서\-영역 연결-있는지 여부는 경계 네트워크에만 서비스를 제공 하는 DNS 영역 또는 경계 네트워크와 인터넷 클라이언트가 서비스를 제공 하는 DNS 영역-이 중요 합니다.  
   
@@ -66,5 +66,5 @@ ms.locfileid: "71408060"
   
 경계 네트워크와 인터넷 DNS 영역을 수정 하는 방법에 대 한 자세한 내용은 참조 [DNS 영역을 역할 모두 경계 네트워크 및 인터넷 클라이언트에서 페더레이션 서버 프록시에 대 한 이름 확인 구성](../../ad-fs/deployment/Configure-Name-Resolution-for-a-Federation-Server-Proxy-in-a-DNS-Zone-That-Serves-Both-the-Perimeter-Network-and-Internet-Clients.md)합니다.  
   
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 [Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)

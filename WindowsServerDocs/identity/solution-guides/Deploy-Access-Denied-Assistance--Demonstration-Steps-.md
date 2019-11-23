@@ -24,11 +24,11 @@ ms.locfileid: "71407173"
   
 **이 문서의**  
   
--   [1단계: 액세스 거부 지원 구성 @ no__t-0  
+-   [1 단계: 액세스 거부 지원 구성](Deploy-Access-Denied-Assistance--Demonstration-Steps-.md#BKMK_1)  
   
--   [2단계: 전자 메일 알림 설정 구성 @ no__t-0  
+-   [2 단계: 전자 메일 알림 설정 구성](Deploy-Access-Denied-Assistance--Demonstration-Steps-.md#BKMK_2)  
   
--   [3단계: 액세스 거부 지원이 올바르게 구성 되었는지 확인 @ no__t-0  
+-   [3 단계: 액세스 거부 지원이 올바르게 구성 되었는지 확인](Deploy-Access-Denied-Assistance--Demonstration-Steps-.md#BKMK_3)  
   
 > [!NOTE]  
 > 이 항목에는 설명한 절차의 일부를 자동화하는 데 사용할 수 있는 샘플 Windows PowerShell cmdlet이 포함되어 있습니다. 자세한 내용은 참조 [Cmdlet를 사용 하 여](https://go.microsoft.com/fwlink/p/?linkid=230693)합니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "71407173"
   
     3.  나머지 기본 설정을 그대로 둡니다.  
   
-![solution guide](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![솔루션 가이드](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -118,7 +118,7 @@ Set-GPRegistryValue -Name "Name of GPO" -key "HKLM\Software\Policies\Microsoft\W
   
 8.  **확인**을 클릭합니다.  
   
-![solution guide](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![솔루션 가이드](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.
   
@@ -142,7 +142,7 @@ Set-FSRMAdrSetting -Event "AccessDenied" -DisplayMessage "Type the text that the
   
 5.  **사용**을 클릭한 다음 **확인**을 클릭합니다.  
   
-![solution guide](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![솔루션 가이드](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요. 
   
@@ -179,9 +179,9 @@ Set-GPRegistryValue -Name "Name of GPO" -key "HKLM\SOFTWARE\Policies\Microsoft\W
   
     -   **[데이터 소유자 전자 메일]** 데이터 소유자 전자 메일 받는 사람 목록입니다.  
   
-7.  **확인**을 클릭하고 **닫기**를 클릭합니다.  
+7.  **확인**을 클릭한 다음 **닫기**를 클릭합니다.  
   
-![solution guide](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![솔루션 가이드](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요. 
   
@@ -210,7 +210,7 @@ Set-FSRMMgmtProperty -Namespace "folder path" -Name "AccessDeniedMessage_MS" -Va
   
 6.  **확인**을 클릭합니다.  
   
-![solution guide](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![솔루션 가이드](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.
   
@@ -218,7 +218,7 @@ Set-FSRMMgmtProperty -Namespace "folder path" -Name "AccessDeniedMessage_MS" -Va
 set-FSRMSetting -SMTPServer "server1" -AdminEmailAddress "fileadmin@contoso.com" -FromEmailAddress "fileadmin@contoso.com"  
 ```  
   
-## <a name="BKMK_3"></a>3 단계: 액세스 거부 지원이 올바르게 구성되었는지 확인  
+## <a name="BKMK_3"></a>3 단계: 액세스 거부 지원이 올바르게 구성 되었는지 확인  
 에 액세스할 수 없는 공유 하는 공유 또는 파일에 액세스 하려고 하는 Windows 8을 실행 하는 사용자 액세스 거부 지원이 올바르게 구성 되어 있는지 확인할 수 있습니다. 액세스 거부 메시지가 나타날 때 사용자에게 **지원 요청** 단추가 표시됩니다. 사용자는 지원 요청 단추를 클릭하여 액세스 이유를 지정한 다음 폴더 소유자 또는 파일 서버 관리자에게 전자 메일을 보낼 수 있습니다. 폴더 소유자 또는 파일 서버 관리자는 전자 메일이 도착했으며 적절한 세부 정보를 포함하고 있는지 확인해 줄 수 있습니다.  
   
 > [!IMPORTANT]  
@@ -230,6 +230,6 @@ set-FSRMSetting -SMTPServer "server1" -AdminEmailAddress "fileadmin@contoso.com"
   
 -   [액세스 거부 지원 계획](assetId:///b169f0a4-8b97-4da8-ae4a-c8f1986d19e1)  
   
--   [동적 액세스 제어: 시나리오 개요](Dynamic-Access-Control--Scenario-Overview.md)  
+-   [동적 Access Control: 시나리오 개요](Dynamic-Access-Control--Scenario-Overview.md)  
   
 

@@ -190,9 +190,9 @@ Windows Server 2016의 BranchCache 기능 또는 파일 서비스 서버 역할�
 
 |기능|컴퓨터 위치|설치할 BranchCache 요소|
 |-----------------|---------------------|------------------------------------|
-|콘텐츠 서버 \(BITS 기반 응용 프로그램 서버 @ no__t-1|본사 또는 클라우드 데이터 센터|BranchCache 기능|
-|콘텐츠 서버 \(Web server @ no__t-1|본사 또는 클라우드 데이터 센터|BranchCache 기능|
-|콘텐츠 서버 @no__t SMB 프로토콜을 사용 하는 파일 서버 @ no__t-1|본사 또는 클라우드 데이터 센터|파일 서비스 서버 역할의 네트워크 파일용 BranchCache 역할 서비스|
+|콘텐츠 서버 \(BITS 기반 응용 프로그램 서버\)|본사 또는 클라우드 데이터 센터|BranchCache 기능|
+|콘텐츠 서버 \(웹 서버\)|본사 또는 클라우드 데이터 센터|BranchCache 기능|
+|SMB 프로토콜을 사용 하 여 콘텐츠 서버 \(파일 서버\)|본사 또는 클라우드 데이터 센터|파일 서비스 서버 역할의 네트워크 파일용 BranchCache 역할 서비스|
 |호스트 캐시 서버|지점|호스트 캐시 서버 모드를 사용하도록 설정한 BranchCache 기능|
 |BranchCache 사용 가능 클라이언트 컴퓨터|지점|설치를 하지 않고도 사용할 수 있습니다. BranchCache와 BranchCache 모드를 설정 해 \(분산 또는 호스트\) 클라이언트|
 
@@ -235,7 +235,7 @@ Windows Server 2016의 BranchCache 기능 또는 파일 서비스 서버 역할�
 -   Windows 7 Pro 비트만 지원
 
 > [!NOTE]
-> BranchCache는 Windows Server 2008 또는 Windows Vista 운영 체제에서 기본적으로 제공 되지 않습니다. 그러나 이러한 운영 체제에서 다운로드 하 고 Windows 관리 프레임 워크 업데이트를 설치 하는 경우 BranchCache 기능을 사용할 수는 BITS Background Intelligent Transfer Service () 프로토콜입니다. 자세한 내용을 확인 하 고 Windows Management Framework를 다운로드 하려면 https://go.microsoft.com/fwlink/?LinkId=188677 에서 [Windows Management framework (Windows PowerShell 2.0, WinRM 2.0 및 BITS 4.0)](https://go.microsoft.com/fwlink/?LinkId=188677) 를 참조 하십시오.
+> BranchCache는 Windows Server 2008 또는 Windows Vista 운영 체제에서 기본적으로 제공 되지 않습니다. 그러나 이러한 운영 체제에서 다운로드 하 고 Windows 관리 프레임 워크 업데이트를 설치 하는 경우 BranchCache 기능을 사용할 수는 BITS Background Intelligent Transfer Service () 프로토콜입니다. 자세한 내용을 확인 하 고 Windows Management Framework를 다운로드 하려면 https://go.microsoft.com/fwlink/?LinkId=188677에서 [Windows Management framework (Windows PowerShell 2.0, WinRM 2.0 및 BITS 4.0)](https://go.microsoft.com/fwlink/?LinkId=188677) 를 참조 하세요.
   
 ### <a name="operating-systems-for-branchcache-content-server-functionality"></a>BranchCache 콘텐츠 서버 기능을 지원하는 운영 체제
 
@@ -322,13 +322,13 @@ BranchCache는 피어 콘텐츠 캐싱 프로토콜 및 검색 프레임워크 �
 
 콘텐츠 정보 및 실제 콘텐츠의 흐름은 다음의 네 단계로 구분됩니다.
 
-1.  [BranchCache 프로세스: 요청 콘텐츠 @ no__t-0
+1.  [BranchCache 프로세스: 콘텐츠 요청](#BKMK_8)
 
-2.  [BranchCache 프로세스: 콘텐츠 찾기 @ no__t-0
+2.  [BranchCache 프로세스: 콘텐츠 찾기](#BKMK_9)
 
-3.  [BranchCache 프로세스: 콘텐츠 검색 @ no__t-0
+3.  [BranchCache 프로세스: 콘텐츠 검색](#BKMK_10)
 
-4.  [BranchCache 프로세스: 캐시 콘텐츠 @ no__t-0
+4.  [BranchCache 프로세스: 콘텐츠 캐시](#BKMK_11)
 
 다음 섹션에서는 이러한 단계에 대해 설명합니다.
 
@@ -376,7 +376,7 @@ WS-Discovery 프로세스가 정상적으로 진행되는지는 검색을 수행
 
 클라이언트 컴퓨터는 콘텐츠 호스트(호스트된 캐시 서버 또는 분산 캐시 모드 클라이언트 컴퓨터)에서 원하는 콘텐츠를 찾으면 콘텐츠 검색 프로세스를 시작합니다.
 
-먼저 클라이언트 컴퓨터는 필요한 첫 번째 블록에 대한 요청을 콘텐츠 호스트로 보냅니다. 이 요청에는 원하는 콘텐츠를 식별하는 세그먼트 ID와 블록 범위가 포함됩니다. 블록은 하나만 반환되므로 블록 범위에도 블록이 하나만 포함됩니다. 여러 블록에 대한 요청은 현재 지원되지 않습니다. 또한 클라이언트는 로컬의 해결되지 않은 요청 목록에 요청을 저장합니다.  
+먼저 클라이언트 컴퓨터는 필요한 첫 번째 블록에 대한 요청을 콘텐츠 호스트로 보냅니다. 이 요청에는 원하는 콘텐츠를 식별하는 세그먼트 ID와 블록 범위가 포함됩니다. 블록은 하나만 반환되므로 블록 범위에도 블록이 하나만 포함됩니다. 여러 블록에 대 한 요청은 현재 지원 되지 않습니다. 또한 클라이언트는 로컬의 해결 되지 않은 요청 목록에 요청을 저장 합니다.  
 
 클라이언트에서 유효한 요청 메시지를 받을 때 콘텐츠 호스트는 요청에 지정 된 블록이 콘텐츠 호스트의 콘텐츠 캐시에 있는지 여부를 확인 합니다.
 

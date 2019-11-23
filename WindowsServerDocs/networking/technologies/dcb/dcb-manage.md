@@ -19,7 +19,7 @@ ms.locfileid: "71405780"
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-이 항목에서는 Windows PowerShell 명령을 사용 하 여 데이터 센터 브리징 \(DCB\) 를 구성 하는 방법에 대 한 지침\-을 제공 합니다. DCB 호환 네트워크 어댑터에서 Windows Server 2016 또는 Windows 10
+이 항목에서는 windows PowerShell 명령을 사용 하 여 Windows Server 2016 또는 Windows 10을 실행 하는 컴퓨터에 설치 된\-DCB 호환 가능 네트워크 어댑터에서 DCB\) \(데이터 센터 브리징를 구성 하는 방법에 대 한 지침을 제공 합니다.
 
 ## <a name="install-dcb-in-windows-server-2016-or-windows-10"></a>Windows Server 2016 또는 Windows 10에서 DCB 설치
 
@@ -30,7 +30,7 @@ ms.locfileid: "71405780"
 
 Windows Server 2016 이전에는 모든 DCB 구성이 DCB을 지 원하는 모든 네트워크 어댑터에 전체적으로 적용 되었습니다. 
 
-Windows Server 2016에서는 전역 정책 저장소 또는 개별 정책 저장소\(\)에 DCB 구성을 적용할 수 있습니다. 개별 정책을 적용 하면 모든 전역 정책 설정이 재정의 됩니다.
+Windows Server 2016에서는 DCB 구성을 전역 정책 저장소 또는 개별 정책 저장소\(s\)적용할 수 있습니다. 개별 정책을 적용 하면 모든 전역 정책 설정이 재정의 됩니다.
 
 시스템 수준의 트래픽 클래스, PFC 및 응용 프로그램 우선 순위 할당 구성은 다음 작업을 수행할 때까지 네트워크 어댑터에 적용 되지 않습니다.
 
@@ -109,7 +109,7 @@ DCB 구성에는 다음 단계가 포함 됩니다.
     SMB  ETS   30   4Global
       
 
-기본적으로 모든 802.1 p 값은 실제 링크 대역폭의 100%를 포함 하는 기본 트래픽 클래스에 매핑됩니다. **Get-netqostrafficclass** 명령은 802.1 p 우선 순위 값 4로 태그가 지정 된 패킷이 매핑되는 새 트래픽 클래스를 만듭니다. 전송 선택 알고리즘 \(TSA @ no__t-1은 남은 대역폭의 30%입니다.
+기본적으로 모든 802.1 p 값은 실제 링크 대역폭의 100%를 포함 하는 기본 트래픽 클래스에 매핑됩니다. **Get-netqostrafficclass** 명령은 802.1 p 우선 순위 값 4로 태그가 지정 된 패킷이 매핑되는 새 트래픽 클래스를 만듭니다. 전송 선택 알고리즘 \(TSA\)은 (는), 대역폭의 30%가 있습니다.
 
 최대 7 개의 새 트래픽 클래스를 만들 수 있습니다. 기본 트래픽 클래스를 포함 하 여 시스템에는 최대 8 개의 트래픽 클래스가 있을 수 있습니다. 그러나 DCB 가능 네트워크 어댑터는 하드웨어에서 많은 트래픽 클래스를 지원 하지 않을 수 있습니다. 네트워크 어댑터에서 수용할 수 있는 것 보다 더 많은 트래픽 클래스를 만들 때 해당 네트워크 어댑터에서 DCB를 사용 하도록 설정 하면 미니 포트 드라이버가 운영 체제에 오류를 보고 합니다. 오류는 이벤트 로그에 기록 됩니다.
 
@@ -146,9 +146,9 @@ DCB 구성에는 다음 단계가 포함 됩니다.
 
 1. 대역폭 할당 \(-BandwidthPercentage\)
 
-2. Tsa (\-알고리즘\)
+2. TSA (\-알고리즘\)
 
-3. 우선 순위 \(매핑-우선 순위\)
+3. 우선 순위 매핑 \(우선 순위\)
 
 ### <a name="remove-a-traffic-class"></a>트래픽 클래스 제거
 
@@ -175,7 +175,7 @@ DCB 구성에는 다음 단계가 포함 됩니다.
 
 위의 모든 예제에서는 전역 정책을 설정 합니다. 다음은 NIC 별 정책을 설정 하 고 가져오는 방법에 대 한 예입니다. 
 
-"PolicySet" 필드가 전역에서 AdapterSpecific으로 변경 됩니다. Adapterspecific 정책이 표시 되 면 인터페이스 \(인덱스 ifIndex\) 및 인터페이스 이름 \(ifalias\) 도 표시 됩니다.
+"PolicySet" 필드가 전역에서 AdapterSpecific으로 변경 됩니다. AdapterSpecific 정책이 표시 되 면 인터페이스 인덱스 \(ifIndex\) 및 인터페이스 이름 \(ifAlias\)도 표시 됩니다.
 
 ```
 PS C:\> Get-NetQosTrafficClass
@@ -476,12 +476,12 @@ Windows Server 2016 및 Windows Server 2012 r 2에 대 한 Windows PowerShell �
 
 ### <a name="windows-server-2016-windows-powershell-commands-for-dcb"></a>DCB 용 windows Server 2016 Windows PowerShell 명령
 
-Windows Server 2016에 대 한 다음 항목에서는 모든 데이터 센터 브리징 \(DCB\) \(QoS\)\-특정 cmdlet에 대 한 windows PowerShell cmdlet 설명 및 구문을 제공 합니다. cmdlet은 cmdlet의 시작 부분에 있는 동사에 따라 사전순으로 나열됩니다.
+Windows Server 2016에 대 한 다음 항목에서는 모든 데이터 센터 브리징 \(DCB\) 서비스 품질 \(QoS\)\-특정 cmdlet에 대 한 Windows PowerShell cmdlet 설명 및 구문을 제공 합니다. cmdlet은 cmdlet의 시작 부분에 있는 동사에 따라 사전순으로 나열됩니다.
 
 - [DcbQoS 모듈](https://technet.microsoft.com/itpro/powershell/windows/dcbqos/dcbqos)
 
 ### <a name="windows-server-2012-r2-windows-powershell-commands-for-dcb"></a>DCB 용 windows Server 2012 R2 Windows PowerShell 명령
 
-Windows Server 2012 r 2에 대 한 다음 항목에서는 모든 데이터 센터 브리징 \(DCB\) \(QoS\)\-특정 cmdlet에 대 한 windows PowerShell cmdlet 설명 및 구문을 제공 합니다. cmdlet은 cmdlet의 시작 부분에 있는 동사에 따라 사전순으로 나열됩니다.
+Windows Server 2012 r 2의 다음 항목에서는 모든 데이터 센터 브리징 \(DCB\) 서비스 품질 \(QoS\)\-특정 cmdlet에 대 한 Windows PowerShell cmdlet 설명 및 구문을 제공 합니다. cmdlet은 cmdlet의 시작 부분에 있는 동사에 따라 사전순으로 나열됩니다.
 
 - [Windows PowerShell의 DCB (데이터 센터 브리징) QoS (서비스 품질) Cmdlet](https://technet.microsoft.com/library/hh967440.aspx)

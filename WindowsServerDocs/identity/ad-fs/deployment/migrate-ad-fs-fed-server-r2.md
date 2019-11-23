@@ -43,7 +43,7 @@ SSL 인증서를 찾으려면 IIS(인터넷 정보 서비스) 관리 콘솔을 �
 페더레이션 서비스에서 사용되는 SSL 인증서와 해당 프라이빗 키를 .pfx 파일로 내보내야 합니다. 자세한 내용은 [서버 인증 인증서의 프라이빗 키 부분 내보내기](export-the-private-key-portion-of-a-server-authentication-certificate.md)를 참조하세요.  
   
 > [!NOTE]
->  Windows Server 2012 r 2에서 AD FS를 실행 하는 과정의 일부로 장치 등록 서비스를 배포 하려면 새 SSL 인증서를 가져와야 합니다. 자세한 내용은 [AD FS에 대 한 SSL 인증서를 등록](enroll-an-ssl-certificate-for-ad-fs.md) 하 고 [Device Registration Service를 사용 하 여 페더레이션 서버 구성](configure-a-federation-server-with-device-registration-service.md)합니다.  
+>  Windows Server 2012 r 2에서 AD FS를 실행 하는 과정의 일부로 장치 등록 서비스를 배포 하려면 새 SSL 인증서를 가져와야 합니다. 자세한 내용은 [AD FS에 대 한 SSL 인증서 등록](enroll-an-ssl-certificate-for-ad-fs.md) 및 [장치 등록 서비스를 사용 하 여 페더레이션 서버 구성](configure-a-federation-server-with-device-registration-service.md)을 참조 하세요.  
   
 토큰 서명, 토큰 암호 해독 및 사용되는 서비스 통신 인증서를 보려면 다음 Windows PowerShell 명령을 실행하여 사용 중인 모든 인증서 목록을 파일로 만듭니다.  
   
@@ -103,14 +103,14 @@ Get-ADFSClaimDescription | Out-File “.\claimtypes.txt”`.
   
 ###  <a name="to-export-claims-provider-trusts-and-relying-party-trusts"></a>클레임 공급자 트러스트와 신뢰 당사자 트러스트를 내보내려면  
   
-1.  AD FS 클레임 공급자 트러스트와 신뢰 당사자 트러스트를 내보내려면 도메인 관리자가 아니라 관리자로 페더레이션 서버에 로그인 하 여 **media/server_support에 있는 다음 Windows PowerShell 스크립트를 실행 해야 합니다.** Windows Server 2012 R2 설치 CD의/wds 폴더: `export-federationconfiguration.ps1`.  
+1.  AD FS 클레임 공급자 트러스트와 신뢰 당사자 트러스트를 내보내려면 도메인 관리자가 아니라 관리자로 페더레이션 서버에 로그인 하 고 Windows Server 2012 R2 설치 CD의 **미디어/server_support** /s s i o n 폴더에 있는 다음 windows PowerShell 스크립트를 실행 해야 합니다. `export-federationconfiguration.ps1`.  
   
 > [!IMPORTANT]
 >  내보내기 스크립트에는 다음 매개 변수가 사용됩니다.  
 > 
-> - Export-federationconfiguration.ps1-Path < string @ no__t-0 [-ComputerName < string @ no__t-1] [-Credential < pscredential @ no__t-2] [-Force] [-CertificatePassword < securestring @ no__t]  
->   -   Export-federationconfiguration.ps1-Path < string @ no__t-0 [-ComputerName < string @ no__t-1] [-Credential < pscredential @ no__t-2] [-Force] [-CertificatePassword < securestring @ no__t-3] [-RelyingPartyTrustIdentifier < string [] >] [-ClaimsProviderTrustIdentifier < string [] >]  
->   -   Export-federationconfiguration.ps1-Path < string @ no__t-0 [-ComputerName < string @ no__t-1] [-Credential < pscredential @ no__t-2] [-Force] [-CertificatePassword < securestring @ no__t-3] [-RelyingPartyTrustName < string [] >] [- ClaimsProviderTrustName < string [] >]  
+> - Export-federationconfiguration.ps1-Path < string\> [-ComputerName < string\>] [-Credential < pscredential\>] [-Force] [-CertificatePassword < securestring\>]  
+>   -   Export-federationconfiguration.ps1-Path < string\> [-ComputerName < string\>] [-Credential < pscredential\>] [-Force] [-CertificatePassword < securestring\>] [-RelyingPartyTrustIdentifier < string [] >] [-ClaimsProviderTrustIdentifier < string [] >]  
+>   -   Export-federationconfiguration.ps1-Path < string\> [-ComputerName < string\>] [-Credential < pscredential\>] [-Force] [-CertificatePassword < securestring\>] [-RelyingPartyTrustName < string [] >] [-ClaimsProviderTrustName < string [] >]  
 > 
 >   **-RelyingPartyTrustIdentifier <string[]>** - 이 cmdlet은 식별자가 문자열 배열에 지정된 신뢰 당사자 트러스트만 내보냅니다. 기본값은 신뢰 당사자 트러스트를 내보내지 않는 것입니다. RelyingPartyTrustIdentifier, ClaimsProviderTrustIdentifier, RelyingPartyTrustName 및 ClaimsProviderTrustName 중에 지정된 항목이 없는 경우 이 스크립트는 모든 신뢰 당사자 트러스트와 클레임 공급자 트러스트를 내보냅니다.  
 > 
@@ -120,17 +120,17 @@ Get-ADFSClaimDescription | Out-File “.\claimtypes.txt”`.
 > 
 >   **-ClaimsProviderTrustName <string[]>** - 이 cmdlet은 이름이 문자열 배열에 지정된 클레임 공급자 트러스트만 내보냅니다. 기본값은 클레임 공급자 트러스트를 내보내지 않는 것입니다.  
 > 
->   **-Path < string\>**  -내보낸 파일을 포함 하는 폴더의 경로입니다.  
+>   **-Path < string\>** -내보낸 파일을 포함 하는 폴더의 경로입니다.  
 > 
->   **-ComputerName < string\>**  -STS 서버 호스트 이름을 지정 합니다. 기본값은 로컬 컴퓨터입니다. Windows Server 2012의 AD FS 2.0 또는 AD FS를 Windows Server 2012 R2의 AD FS로 마이그레이션하는 경우 기존 AD FS 서버의 호스트 이름으로 설정됩니다.  
+>   **-ComputerName < string\>** -STS 서버 호스트 이름을 지정 합니다. 기본값은 로컬 컴퓨터입니다. Windows Server 2012의 AD FS 2.0 또는 AD FS를 Windows Server 2012 R2의 AD FS로 마이그레이션하는 경우 기존 AD FS 서버의 호스트 이름으로 설정됩니다.  
 > 
->   **-Credential < PSCredential\>**  -이 작업을 수행할 수 있는 권한이 있는 사용자 계정을 지정 합니다. 기본값은 현재 사용자입니다.  
+>   **-Credential < PSCredential\>** -이 작업을 수행할 수 있는 권한이 있는 사용자 계정을 지정 합니다. 기본값은 현재 사용자입니다.  
 > 
 >   **-Force** – 사용자 확인 메시지를 표시하지 않도록 지정합니다.  
 > 
->   **-Certificatepassword < SecureString\>**  -AD FS 인증서의 개인 키를 내보내기 위한 암호를 지정 합니다. 이 매개 변수를 지정하지 않으면 프라이빗 키가 있는 AD FS 인증서를 내보내야 하는 경우 암호를 묻는 메시지가 표시됩니다.  
+>   **-Certificatepassword < SecureString\>** -AD FS 인증서의 개인 키를 내보내기 위한 암호를 지정 합니다. 이 매개 변수를 지정하지 않으면 프라이빗 키가 있는 AD FS 인증서를 내보내야 하는 경우 암호를 묻는 메시지가 표시됩니다.  
 > 
->   **입력**: 없음  
+>   **Inputs**: 없음  
 > 
 >   **Outputs**: 문자열 - 이 cmdlet은 내보내기 폴더 경로를 반환합니다. 반환된 개체를 Import-FederationConfiguration에 파이프할 수 있습니다.  
   
@@ -193,9 +193,9 @@ import-federationconfiguration.ps1
 > [!IMPORTANT]
 >  가져오기 스크립트에는 다음 매개 변수가 사용됩니다.  
 > 
-> - Import-federationconfiguration.ps1-Path < string @ no__t-0 [-ComputerName < string @ no__t-1] [-Credential < pscredential @ no__t-2] [-Force] [-LogPath < string @ no__t-3] [-CertificatePassword < securestring @ no__t-4]  
->   -   Import-federationconfiguration.ps1-Path < string @ no__t-0 [-ComputerName < string @ no__t-1] [-Credential < pscredential @ no__t-2] [-Force] [-LogPath < string @ no__t-3] [-CertificatePassword < securestring @ no__t-4] [- RelyingPartyTrustIdentifier < string [] >] [-ClaimsProviderTrustIdentifier < string [] >  
->   -   Import-federationconfiguration.ps1-Path < string @ no__t-0 [-ComputerName < string @ no__t-1] [-Credential < pscredential @ no__t-2] [-Force] [-LogPath < string @ no__t-3] [-CertificatePassword < securestring @ no__t-4] [- RelyingPartyTrustName < string [] >] [-ClaimsProviderTrustName < string [] >]  
+> - Import-federationconfiguration.ps1-Path < string\> [-ComputerName < string\>] [-Credential < pscredential\>] [-Force] [-LogPath < string\>] [-CertificatePassword < securestring\>]  
+>   -   Import-federationconfiguration.ps1-Path < string\> [-ComputerName < string\>] [-Credential < pscredential\>] [-Force] [-LogPath < string\>] [-CertificatePassword < securestring\>] [-RelyingPartyTrustIdentifier < string [] >] [-ClaimsProviderTrustIdentifier < string [] >  
+>   -   Import-federationconfiguration.ps1-Path < string\> [-ComputerName < string\>] [-Credential < pscredential\>] [-Force] [-LogPath < string\>] [-CertificatePassword < securestring\>] [-RelyingPartyTrustName < string [] >] [-ClaimsProviderTrustName < string [] >]  
 > 
 >   **-RelyingPartyTrustIdentifier <string[]>** - 이 cmdlet은 식별자가 문자열 배열에 지정된 신뢰 당사자 트러스트만 가져옵니다. 기본값은 신뢰 당사자 트러스트를 가져오지 않는 것입니다. RelyingPartyTrustIdentifier, ClaimsProviderTrustIdentifier, RelyingPartyTrustName 및 ClaimsProviderTrustName 중에 지정된 항목이 없는 경우 이 스크립트는 모든 신뢰 당사자 트러스트와 클레임 공급자 트러스트를 가져옵니다.  
 > 
@@ -205,17 +205,17 @@ import-federationconfiguration.ps1
 > 
 >   **-ClaimsProviderTrustName <string[]>** - 이 cmdlet은 이름이 문자열 배열에 지정된 클레임 공급자 트러스트만 가져옵니다. 기본값은 클레임 공급자 트러스트를 가져오지 않는 것입니다.  
 > 
->   **-Path < string\>**  -가져올 구성 파일을 포함 하는 폴더의 경로입니다.  
+>   **-Path < string\>** -가져올 구성 파일을 포함 하는 폴더의 경로입니다.  
 > 
->   **-LogPath < string\>**  -가져오기 로그 파일을 포함할 폴더에 대 한 경로입니다. "Import.log"라는 로그 파일이 이 폴더에 만들어집니다.  
+>   **-LogPath < string\>** -가져오기 로그 파일을 포함할 폴더에 대 한 경로입니다. "Import.log"라는 로그 파일이 이 폴더에 만들어집니다.  
 > 
->   **-ComputerName < string\>**  -STS 서버의 호스트 이름을 지정 합니다. 기본값은 로컬 컴퓨터입니다. Windows Server 2012의 AD FS 2.0 또는 AD FS를 Windows Server 2012 R2의 AD FS로 마이그레이션하는 경우 이 매개 변수는 기존 AD FS 서버의 호스트 이름으로 설정됩니다.  
+>   **-ComputerName < string\>** -STS 서버의 호스트 이름을 지정 합니다. 기본값은 로컬 컴퓨터입니다. Windows Server 2012의 AD FS 2.0 또는 AD FS를 Windows Server 2012 R2의 AD FS로 마이그레이션하는 경우 이 매개 변수는 기존 AD FS 서버의 호스트 이름으로 설정됩니다.  
 > 
 >   **-Credential < PSCredential\>** -이 작업을 수행할 수 있는 권한이 있는 사용자 계정을 지정 합니다. 기본값은 현재 사용자입니다.  
 > 
 >   **-Force** – 사용자 확인 메시지를 표시하지 않도록 지정합니다.  
 > 
->   **-Certificatepassword < SecureString\>**  -AD FS 인증서의 개인 키를 가져오기 위한 암호를 지정 합니다. 이 매개 변수를 지정하지 않으면 프라이빗 키가 있는 AD FS 인증서를 가져와야 하는 경우 암호를 묻는 메시지가 표시됩니다.  
+>   **-Certificatepassword < SecureString\>** -AD FS 인증서의 개인 키를 가져오기 위한 암호를 지정 합니다. 이 매개 변수를 지정하지 않으면 프라이빗 키가 있는 AD FS 인증서를 가져와야 하는 경우 암호를 묻는 메시지가 표시됩니다.  
 > 
 >   **Inputs:** 문자열 - 이 명령은 가져오기 폴더 경로를 입력으로 사용합니다. Export-FederationConfiguration을 이 명령에 파이프할 수 있습니다.  
 > 
@@ -245,7 +245,7 @@ import-federationconfiguration.ps1
   
 4. 모든 사용자 지정 AD FS 끝점 설정을 구성합니다. AD FS 관리 콘솔에서 **Endpoints(끝점)** 를 선택합니다. AD FS 마이그레이션을 준비하는 동안 파일로 내보낸 사용 가능한 AD FS 끝점 목록과 사용하도록 설정된 AD FS 끝점을 대조합니다.  
   
-    \-하거나  
+    \- 및-  
   
     모든 사용자 지정 클레임 설명을 구성합니다. AD FS 관리 콘솔에서 **Claim Descriptions(클레임 설명)** 를 선택합니다. AD FS 마이그레이션을 준비하는 동안 파일로 내보낸 클레임 설명 목록과 AD FS 클레임 설명 목록을 대조합니다. 파일에 포함되어 있지만 AD FS의 기본 목록에 포함되어 있지 않은 모든 사용자 지정 클레임 설명을 추가합니다. 관리 콘솔의 클레임 식별자는 파일의 ClaimType에 매핑됩니다.  
   
@@ -255,13 +255,13 @@ import-federationconfiguration.ps1
   
    -   **Userelaystateforidpinitiatedsignon과** 가 AD FS 2.0 또는 windows server 2012 팜의 AD FS **web.config 파일에 추가 된 경우** windows server 2012 R2 팜의 AD FS에서 다음 서비스 속성을 구성 해야 합니다.  
   
-       -   Windows Server 2012 r 2의 AD FS에는 **%systemroot%\ADFS\Microsoft.IdentityServer.Servicehost.exe.config** 파일이 포함 되어 있습니다. **Web.config 파일 요소** `<useRelayStateForIdpInitiatedSignOn enabled="true" />`와 동일한 구문을 사용 하 여 요소를 만듭니다. 이 요소를 **identityserver** 파일의 **< identityserver >** 섹션의 일부로 포함 합니다.  
+       -   Windows Server 2012 r 2의 AD FS에는 **%systemroot%\ADFS\Microsoft.IdentityServer.Servicehost.exe.config** 파일이 포함 되어 있습니다. **Web.config 파일 요소** 와 동일한 구문을 사용 하 여 요소를 만듭니다. `<useRelayStateForIdpInitiatedSignOn enabled="true" />`. 이 요소를 **identityserver** 파일의 **< identityserver >** 섹션의 일부로 포함 합니다.  
   
-   -   **< PersistIdentityProviderInformation&#124;enabled = "true false" lifetimeInDays = "90" enablewhrpersistence 속성 = "true&#124;false"/\>**  가 Windows Server에서 AD FS 2.0 또는 AD FS의 **web.config** 파일에 추가 되었습니다. 2012 팜, Windows Server 2012 R2 팜의 AD FS에서 다음 서비스 속성을 구성 해야 합니다.  
+   -   **< persistIdentityProviderInformation enabled = "true&#124;false" lifetimeInDays = "90" enablewhrPersistence 속성 = "true&#124;False"/\>** 가 windows server 2012 팜에서 AD FS 2.0 또는 AD FS의 **Web.config** 파일에 추가 된 경우 windows server 2012 R2 팜의 AD FS에서 다음 서비스 속성을 구성 해야 합니다.  
   
-       1.  Windows Server 2012 r 2의 AD FS에서 다음 Windows PowerShell 명령을 `Set-AdfsWebConfig –HRDCookieEnabled –HRDCookieLifetime`실행 합니다.  
+       1.  Windows Server 2012 r 2의 AD FS에서 다음 Windows PowerShell 명령을 실행 합니다. `Set-AdfsWebConfig –HRDCookieEnabled –HRDCookieLifetime`.  
   
-   -   **< SingleSignOn enabled = "true&#124;false"/\>**  가 windows server 2012 팜에서 AD FS 2.0 또는 AD FS의 web.config 파일에 추가 된 경우 windows server 2012의 AD FS에서 추가 서비스 속성을 설정할 필요가 없습니다. R2 팜. Single sign-on은 Windows Server 2012 R2 팜의 AD FS에서 기본적으로 사용 하도록 설정 되어 있습니다.  
+   -   **< singleSignOn enabled = "true&#124;false"/\>** 를 windows server 2012 팜에서 AD FS 2.0 또는 AD FS의 **web.config** 파일에 추가 하는 경우 windows server 2012 R2 팜의 AD FS에서 추가 서비스 속성을 설정할 필요가 없습니다. Single sign-on은 Windows Server 2012 R2 팜의 AD FS에서 기본적으로 사용 하도록 설정 되어 있습니다.  
   
    -   LocalAuthenticationTypes 설정이 AD FS 2.0 또는 Windows Server 2012 팜의 AD FS **web.config 파일에 추가 된 경우** windows Server 2012 R2 팜의 AD FS에서 다음 서비스 속성을 구성 해야 합니다.  
   
@@ -272,5 +272,5 @@ import-federationconfiguration.ps1
 ## <a name="next-steps"></a>다음 단계
  [Active Directory Federation Services 역할 서비스를 Windows Server 2012 r 2로 마이그레이션](migrate-ad-fs-service-role-to-windows-server-r2.md)   
  [AD FS 페더레이션 서버 마이그레이션을 준비 하는 중](prepare-migrate-ad-fs-server-r2.md)   
- [AD FS 페더레이션 서버 프록시 마이그레이션](migrate-fed-server-proxy-r2.md)   
+ [AD FS 페더레이션 서버 프록시  마이그레이션](migrate-fed-server-proxy-r2.md)  
  [Windows Server 2012 r 2로 AD FS 마이그레이션 확인](verify-ad-fs-migration.md)

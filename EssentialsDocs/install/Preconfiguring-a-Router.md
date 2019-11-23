@@ -29,11 +29,11 @@ ms.locfileid: "70865195"
   
  또한 라우터의 포트 전달 설정에서 라우터의 외부 인터페이스에서 내부 네트워크에 있는 서버의 주소로 특정 포트를 전달하도록 사전 구성해야 합니다. 다음 표에 권장 구성이 나와 있습니다.  
   
-|구성 설정|설명|  
+|구성 설정|세부 정보|  
 |---------------------------|-------------|  
 |DHCP|켜짐|  
 |포트 전달|다음 포트를 서버 주소로 전달해야 합니다.<br /><br /> -80 (hosted 구성의 경우 443만 사용)<br />-443|  
-|UPnP 지원|설치 하는 동안 고객에 게 가장 쉬운 라우터 구성과 최상의 고객 환경을 제공 하려면 UPnP 지원을 사용 하도록 설정 해야 합니다.<br /><br /> **경고:** UPnP 아키텍처는 사용하도록 설정된 상태로 유지되면 보안 위험에 노출될 수 있습니다.|  
+|UPnP 지원|설치 하는 동안 고객에 게 가장 쉬운 라우터 구성과 최상의 고객 환경을 제공 하려면 UPnP 지원을 사용 하도록 설정 해야 합니다.<br /><br /> **경고:** UPnP 아키텍처를 사용 하는 경우 보안 위험이 발생할 수 있습니다.|  
   
  기본 라우터 사전 구성 설정 외에도 다음 작업을 수행하여 라우터 관리를 위해 좀 더 통합된 사용자 환경을 제공할 수 있습니다.  
   
@@ -48,9 +48,9 @@ ms.locfileid: "70865195"
 > [!NOTE]
 >  무선 연결을 구성하는 방법에 대한 자세한 내용은 [Configure Support for a Wireless Network](Configure-Support-for-a-Wireless-Network.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [Windows Server Essentials ADK 시작 하기](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
- [이미지 만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)   
+## <a name="see-also"></a>참고 항목  
+ [Windows Server ESSENTIALS ADK를 사용 하 여 시작](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
+ [이미지  만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)  
  [추가 사용자 지정](Additional-Customizations.md)   
- [배포를 위한 이미지 준비](Preparing-the-Image-for-Deployment.md)   
+ [배포할 이미지를 준비 하는 중](Preparing-the-Image-for-Deployment.md)   
  [사용자 환경 테스트](Testing-the-Customer-Experience.md)

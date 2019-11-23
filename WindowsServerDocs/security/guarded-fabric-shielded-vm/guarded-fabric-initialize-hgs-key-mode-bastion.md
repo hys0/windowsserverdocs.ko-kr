@@ -27,7 +27,7 @@ Active Directory Domain Services는 컴퓨터에 설치 되지만 구성 되지 
 [!INCLUDE [Obtain certificates for HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-two.md)] 
 
 계속 하기 전에 호스트 보호자 서비스에 대 한 클러스터 개체를 미리 준비 하 고 Active Directory의 VCO 및 CNO 개체에 대 한 **모든 권한을** 로그인 한 사용자에 게 부여 했는지 확인 합니다.
-가상 컴퓨터 개체 이름을 `-HgsServiceName` 매개 변수로 전달 하 고 클러스터 이름을 `-ClusterName` 매개 변수에 전달 해야 합니다.
+가상 컴퓨터 개체 이름을 `-HgsServiceName` 매개 변수에 전달 하 고 클러스터 이름을 `-ClusterName` 매개 변수에 전달 해야 합니다.
 
 > [!TIP]
 > 계속 하기 전에 AD 도메인 컨트롤러를 두 번 확인 하 여 클러스터 개체가 모든 Dc에 복제 되었는지 확인 합니다.

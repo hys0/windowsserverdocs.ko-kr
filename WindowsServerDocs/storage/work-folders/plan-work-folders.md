@@ -18,7 +18,7 @@ ms.locfileid: "71365737"
 ---
 # <a name="planning-a-work-folders-deployment"></a>클라우드 폴더 배포 계획 수립
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 8.1, Windows 7
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 8.1, Windows 7
 
 이 항목에서는 클라우드 폴더 구현을 위한 디자인 프로세스를 설명하며, 다음과 같은 배경 지식이 있는 것으로 가정합니다.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "71365737"
  호스팅된 배포에서는 동기화 서버가 Windows Azure VM과 같은 IAAS(Infrastructure-as-a-Service) 솔루션에 배포됩니다. 이 배포 방법은 고객 회사 내의 WAN 연결에 종속되지 않고 파일 서버를 사용할 수 있는 이점이 있습니다. 장치에서 인터넷에 연결할 수 있으면 해당 동기화 서버에 연결할 수 있습니다. 그러나 호스팅된 환경에 배포된 서버도 사용자를 인증하기 위해 조직의 Active Directory 도메인에 연결할 수 있어야 하며, 온-프레미스 인프라 요구 사항이 없는 대신 이러한 연결을 유지 관리해야 하는 복잡성이 추가됩니다.  
   
 ## <a name="deployment-technologies"></a>배포 기술  
- 클라우드 폴더 배포는 내부 및 외부 네트워크의 장치에 서비스를 제공하기 위해 함께 작동하는 여러 기술로 구성됩니다. 클라우드 폴더 배포를 디자인하기 전에 고객은 다음 각 기술에 대한 요구 사항을 알아야 합니다.  
+ 클라우드 폴더 배포는 내부 및 외부 네트워크의 디바이스에 서비스를 제공하기 위해 함께 작동하는 여러 기술로 구성됩니다. 클라우드 폴더 배포를 디자인하기 전에 고객은 다음 각 기술에 대한 요구 사항을 알아야 합니다.  
   
 ### <a name="active-directory-domain-services"></a>Active Directory 도메인 서비스  
  AD DS는 클라우드 폴더 배포에서 중요한 두 가지 서비스를 제공합니다. 첫째, Windows 인증을 위한 백 엔드로서 AD DS는 사용자 데이터에 대한 액세스 권한을 부여하는 데 사용되는 보안 및 인증 서비스를 제공합니다. 도메인 컨트롤러에 연결할 수 없는 경우 파일 서버가 들어오는 요청을 인증할 수 없으므로 디바이스에서 해당 파일 서버의 동기화 공유에 저장된 데이터에 액세스할 수 없게 됩니다.  
@@ -128,7 +128,7 @@ ms.locfileid: "71365737"
   그룹 정책을 사용하여 사용자 또는 컴퓨터별로 클라우드 폴더를 강제로 설정할 수도 있습니다. 그러나 이 경우 사용자가 로그인(사용자별 정책 설정을 사용할 경우)하는 모든 PC에서 클라우드 폴더가 동기화되며 사용자가 자신의 PC에서 클라우드 폴더의 대체 위치(예: 기본 드라이브의 공간을 절약하기 위한 microSD 카드)를 지정할 수 없게 됩니다. 따라서 자동 설정을 강제로 적용하기 전에 사용자의 요구 사항을 신중히 평가하는 것이 좋습니다.  
   
 ### <a name="windows-intune"></a>Windows Intune  
- Windows Intune도 도메인에 가입되지 않은 장치에 대해 다른 방식으로는 제공할 수 없는 보안 및 관리 효율성을 제공합니다. Windows Intune을 사용하여 인터넷을 통해 클라우드 폴더에 연결된 사용자의 개인 디바이스(예: 태블릿)를 구성하고 관리할 수 있습니다. Windows Intune은 사용할 동기화 서버 URL을 장치에 제공할 수 있습니다. 그렇지 않으면 사용자가 회사 전자 메일 주소를 입력 하 여 설정을 조회할 수 있습니다 (https://workfolders 형식의 공용 클라우드 폴더 URL을 게시 하는 경우). <em>contoso.com</em>)를 입력 하거나 동기화 서버 URL을 직접 입력 합니다.  
+ Windows Intune도 도메인에 가입되지 않은 장치에 대해 다른 방식으로는 제공할 수 없는 보안 및 관리 효율성을 제공합니다. Windows Intune을 사용하여 인터넷을 통해 클라우드 폴더에 연결된 사용자의 개인 디바이스(예: 태블릿)를 구성하고 관리할 수 있습니다. Windows Intune은 사용할 동기화 서버 URL을 장치에 제공할 수 있습니다. 그렇지 않으면 사용자가 회사 전자 메일 주소를 입력 하 여 설정을 조회할 수 있습니다 (https://workfolders형식으로 공용 클라우드 폴더 URL을 게시 하는 경우). <em>contoso.com</em>)를 입력 하거나 동기화 서버 URL을 직접 입력 합니다.  
   
  Windows Intune을 배포하지 않으면 사용자가 외부 디바이스를 수동으로 구성해야 하므로 이로 인해 고객의 지원 데스크 담당자에 대한 문의 횟수가 증가할 수 있습니다.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "71365737"
   클라우드 폴더 서버 확장 및 성능에 대한 자세한 내용은 [클라우드 폴더 배포를 위한 성능 고려 사항](http://blogs.technet.com/b/filecab/archive/2013/11/01/performance-considerations-for-large-scale-work-folders-deployments.aspx)(영문)을 참조하세요.  
   
 > [!NOTE]
->  여러 동기화 서버를 사용할 때는 사용자에 대해 자동 서버 검색을 설정하는 것이 좋습니다. 이 프로세스는 AD DS의 각 사용자 계정에 대한 특성 구성을 기반으로 합니다. **msDS-SyncServerURL**이라는 이 특성은 Windows Server 2012 R2 도메인 컨트롤러가 도메인에 추가되거나 Active Directory 스키마 업데이트를 적용한 후 사용자 계정에서 사용할 수 있습니다. 사용자가 적절한 동기화 서버에 연결되도록 하려면 각 사용자에 대해 이 특성을 설정해야 합니다. 자동 서버 검색을 사용 하 여 조직에서는 작업 중인 동기화 서버 수에 관계 없이 *https://workfolders.contoso.com* 과 같은 "친숙 한" URL 뒤에 클라우드 폴더를 게시할 수 있습니다.  
+>  여러 동기화 서버를 사용할 때는 사용자에 대해 자동 서버 검색을 설정하는 것이 좋습니다. 이 프로세스는 AD DS의 각 사용자 계정에 대한 특성 구성을 기반으로 합니다. **msDS-SyncServerURL**이라는 이 특성은 Windows Server 2012 R2 도메인 컨트롤러가 도메인에 추가되거나 Active Directory 스키마 업데이트를 적용한 후 사용자 계정에서 사용할 수 있습니다. 사용자가 적절한 동기화 서버에 연결되도록 하려면 각 사용자에 대해 이 특성을 설정해야 합니다. 자동 서버 검색을 사용 하 여 조직에서는 작업 중인 동기화 서버 수에 관계 없이 *https://workfolders.contoso.com* 같은 "친숙 한" URL 뒤에 클라우드 폴더를 게시할 수 있습니다.  
   
 ### <a name="number-of-sync-shares"></a>동기화 공유 수  
  개별 동기화 서버에서 여러 동기화 공유를 유지할 수 있습니다. 이 구성의 장점은 다음과 같습니다.  
@@ -248,12 +248,12 @@ ms.locfileid: "71365737"
     -   장치를 연결하는 데 장치 등록이 필요합니까?  
   
 ## <a name="next-steps"></a>다음 단계  
- 클라우드 폴더 구현을 디자인한 후에는 클라우드 폴더를 배포해야 합니다. 자세한 내용은 [Deploying Work Folders](deploy-work-folders.md)를 참조하세요.  
+ 클라우드 폴더 구현을 디자인한 후에는 클라우드 폴더를 배포해야 합니다. 자세한 내용은 [클라우드 폴더 배포](deploy-work-folders.md)를 참조하세요.  
   
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
  자세한 내용은 다음 리소스를 참조하십시오.  
   
-|콘텐츠 형식|참조|  
+|콘텐츠 유형|참조|  
 |------------------|----------------|  
-|**제품 평가**|-   [작업 폴더](work-folders-overview.md)<br />@no__t-[Windows 7 용 작업 폴더](http://blogs.technet.com/b/filecab/archive/2014/04/24/work-folders-for-windows-7.aspx) (블로그 게시물)|  
-|**배포**|-   [클라우드 폴더 구현 디자인](plan-work-folders.md)<br />-   [클라우드 폴더 배포](deploy-work-folders.md)<br />-   [AD FS 및 WAP (웹 응용 프로그램 프록시)를 사용 하 여 클라우드 폴더 배포](deploy-work-folders-adfs-overview.md)<br />- [Azure AD 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포](https://blogs.technet.microsoft.com/filecab/2017/05/31/enable-remote-access-to-work-folders-using-azure-active-directory-application-proxy/)<br />[작업 폴더 배포에 대 한 -    성능 고려 사항](https://blogs.technet.com/b/filecab/archive/2013/11/01/performance-considerations-for-large-scale-work-folders-deployments.aspx)<br />@no__t-[Windows 7 용 작업 폴더 (64 비트 다운로드)](https://www.microsoft.com/download/details.aspx?id=42558)<br />@no__t-[Windows 7 용 작업 폴더 (32 비트 다운로드)](https://www.microsoft.com/download/details.aspx?id=42559)<br />-   [클라우드 폴더 테스트 랩 배포](http://blogs.technet.com/b/filecab/archive/2013/07/10/work-folders-test-lab-deployment.aspx) (블로그 게시물)|
+|**제품 평가**|-   [클라우드 폴더](work-folders-overview.md)<br />[Windows 7 용 클라우드 폴더](http://blogs.technet.com/b/filecab/archive/2014/04/24/work-folders-for-windows-7.aspx) -   (블로그 게시물)|  
+|**배포**|[클라우드 폴더 구현 -   디자인](plan-work-folders.md)<br />[클라우드 폴더 -   배포](deploy-work-folders.md)<br />[AD FS 및 WAP (웹 응용 프로그램 프록시)를 사용 하 여 클라우드 폴더 배포](deploy-work-folders-adfs-overview.md) -   <br />[Azure AD 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포](https://blogs.technet.microsoft.com/filecab/2017/05/31/enable-remote-access-to-work-folders-using-azure-active-directory-application-proxy/) - <br />[클라우드 폴더 배포에 대 한 -   성능 고려 사항](https://blogs.technet.com/b/filecab/archive/2013/11/01/performance-considerations-for-large-scale-work-folders-deployments.aspx)<br />[Windows 7 용 클라우드 폴더 -   (64 비트 다운로드)](https://www.microsoft.com/download/details.aspx?id=42558)<br />[Windows 7 용 클라우드 폴더 -   (32 비트 다운로드)](https://www.microsoft.com/download/details.aspx?id=42559)<br />-   [클라우드 폴더 테스트 랩 배포](http://blogs.technet.com/b/filecab/archive/2013/07/10/work-folders-test-lab-deployment.aspx) (블로그 게시물)|

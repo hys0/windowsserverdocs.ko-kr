@@ -19,7 +19,7 @@ ms.locfileid: "71407576"
 # <a name="create-a-rule-to-transform-an-incoming-claim"></a>들어오는 클레임 변환 규칙 만들기
 
 
-Active Directory Federation Services에서 **들어오는 클레임 변환** 규칙 템플릿을 사용 하 여 \(AD FS @ no__t-2를 사용 하 여 들어오는 클레임을 선택 하 고 클레임 유형을 변경 하며 클레임 값을 변경할 수 있습니다. 예를 들어 들어오는 그룹 클레임의 동일한 클레임 값으로 역할 클레임을 전송 하는 규칙을 만들려면이 규칙 서식 파일을 사용할 수 있습니다. 또한이 규칙을 사용 하 여 값이 Admins 인 들어오는 그룹 클레임이 있는 경우 클레임 값이 구매자 인 그룹 클레임을 전송 하거나 @fabrikam로 끝나는 사용자 계정 이름 \(UPN @ no__t-1 클레임만 보낼 수 있습니다.  
+Active Directory Federation Services \(AD FS\)에서 **들어오는 클레임 변환** 규칙 템플릿을 사용 하 여 들어오는 클레임을 선택 하 고 클레임 유형을 변경 하며 클레임 값을 변경할 수 있습니다. 예를 들어 들어오는 그룹 클레임의 동일한 클레임 값으로 역할 클레임을 전송 하는 규칙을 만들려면이 규칙 서식 파일을 사용할 수 있습니다. 또한이 규칙을 사용 하면 값이 Admins 인 들어오는 그룹 클레임이 있을 때 클레임 값이 구매자 인 그룹 클레임을 전송 하거나, 사용자 계정 이름 \(UPN\) @fabrikam로 끝나는 클레임만 보낼 수 있습니다.  
   
 다음 절차를 사용 하 여 AD FS 관리 스냅인을 사용 하 여 클레임 규칙을 만들려면\-에 있습니다.  
   
@@ -30,16 +30,16 @@ Active Directory Federation Services에서 **들어오는 클레임 변환** 규
 1.  서버 관리자에서 클릭 **도구**, 를 선택한 다음 **AD FS 관리**합니다.  
   
 2.  콘솔 트리에서 아래 **AD FS**, 클릭 **신뢰 당사자 트러스트**합니다. 
-![규칙 만들기](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)  
+규칙](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG) 만들기 ![  
   
 3.  오른쪽\-선택한 트러스트를 클릭 한 다음 클릭 **클레임 발급 정책 편집**합니다.
-![규칙 만들기](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG)   
+규칙](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG) 만들기 ![   
   
 4.  에 **클레임 발급 정책 편집** 대화 상자의 **발급 변환 규칙** 클릭 **규칙 추가** 규칙 마법사를 시작 합니다. 
-![규칙 만들기](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG)    
+규칙](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG) 만들기 ![    
 
 5.  에 **규칙 템플릿 선택** 페이지의 **클레임 규칙 템플릿**, 선택, **들어오는 클레임 변환** 클릭 한 다음 확인 하 고 목록에서 **다음**합니다.  
-![규칙 만들기](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform3.PNG)      
+규칙](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform3.PNG) 만들기 ![      
 
 6.  에 **규칙 구성** 페이지의 **클레임 규칙 이름**, 이 규칙에 대 한 표시 이름을 입력 합니다. **들어오는 클레임 유형**, 목록에 클레임 유형을 선택 합니다. **보내는 클레임 유형**, 클레임 유형을 목록에서 선택 하 고 조직의 요구 사항에 따라 다음 옵션 중 하나를 선택 합니다.  
   
@@ -47,8 +47,8 @@ Active Directory Federation Services에서 **들어오는 클레임 변환** 규
   
     -   **들어오는 클레임 값을 다른 나가는 클레임 값으로 바꿉니다.**  
   
-    -   **들어오는 e @ no__t-1 메일 접미사 클레임을 새 e @ no__t-2 메일 접미사로 바꾸기**  
-![규칙 만들기](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform4.PNG)   
+    -   **들어오는 e\-메일 접미사 클레임을 새 e\-메일 접미사로 바꿉니다.**  
+규칙](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform4.PNG) 만들기 ![   
 
 7.  클릭 하 고 **마침** 단추입니다.  
   
@@ -64,16 +64,16 @@ Active Directory Federation Services에서 **들어오는 클레임 변환** 규
 1.  서버 관리자에서 클릭 **도구**, 를 선택한 다음 **AD FS 관리**합니다.  
   
 2.  콘솔 트리에서 아래 **AD FS**, 클릭 **클레임 공급자 트러스트**합니다. 
-![규칙 만들기](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule1.PNG)  
+규칙](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule1.PNG) 만들기 ![  
   
 3.  오른쪽\-선택한 트러스트를 클릭 한 다음 클릭 **클레임 규칙 편집**합니다.
-![규칙 만들기](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule2.PNG)   
+규칙](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule2.PNG) 만들기 ![   
   
 4.  에 **클레임 규칙 편집** 대화 상자의 **수용 변환 규칙** 클릭 **규칙 추가** 규칙 마법사를 시작 합니다.
-![규칙 만들기](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule3.PNG)    
+규칙](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule3.PNG) 만들기 ![    
 
 5.  에 **규칙 템플릿 선택** 페이지의 **클레임 규칙 템플릿**, 선택, **들어오는 클레임 변환** 클릭 한 다음 확인 하 고 목록에서 **다음**합니다.  
-![규칙 만들기](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform3.PNG)      
+규칙](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform3.PNG) 만들기 ![      
 
 6.  에 **규칙 구성** 페이지의 **클레임 규칙 이름**, 이 규칙에 대 한 표시 이름을 입력 합니다. **들어오는 클레임 유형**, 목록에 클레임 유형을 선택 합니다. **보내는 클레임 유형**, 클레임 유형을 목록에서 선택 하 고 조직의 요구 사항에 따라 다음 옵션 중 하나를 선택 합니다.  
   
@@ -81,8 +81,8 @@ Active Directory Federation Services에서 **들어오는 클레임 변환** 규
   
     -   **들어오는 클레임 값을 다른 나가는 클레임 값으로 바꿉니다.**  
   
-    -   **들어오는 e @ no__t-1 메일 접미사 클레임을 새 e @ no__t-2 메일 접미사로 바꾸기**  
-![규칙 만들기](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform4.PNG)       
+    -   **들어오는 e\-메일 접미사 클레임을 새 e\-메일 접미사로 바꿉니다.**  
+규칙](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform4.PNG) 만들기 ![       
 
 7.  클릭 하 고 **마침** 단추입니다.  
   
@@ -100,7 +100,7 @@ Active Directory Federation Services에서 **들어오는 클레임 변환** 규
 2.  콘솔 트리에서 **AD FS\\트러스트 관계**, 클릭 **클레임 공급자 트러스트** 또는 **신뢰 당사자 트러스트**, 이 규칙을 만드는 목록에서 특정 트러스트를 클릭 하 고 있습니다.  
   
 3.  오른쪽\-선택한 트러스트를 클릭 한 다음 클릭 **클레임 규칙 편집**합니다.  
-![규칙 만들기](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG) 
+규칙](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG) 만들기 ![ 
   
 4.  에 **클레임 규칙 편집** 대화 상자에서 하나를 선택 했는지에 따라 편집 하는 규칙 수를 설정 하는 신뢰 하는 다음과 같은 탭이이 규칙을 만들고 연결할 클릭 **규칙 추가** 해당 규칙 집합에 연관 된 규칙 마법사를 시작 합니다.  
   
@@ -111,10 +111,10 @@ Active Directory Federation Services에서 **들어오는 클레임 변환** 규
     -   **발급 권한 부여 규칙**  
   
     -   **위임 권한 부여 규칙**  
-![규칙 만들기](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG)
+규칙](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG) 만들기 ![
   
 5.  에 **규칙 템플릿 선택** 페이지의 **클레임 규칙 템플릿**, 선택, **들어오는 클레임 변환** 클릭 한 다음 확인 하 고 목록에서 **다음**합니다.  
-![규칙 만들기](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform1.PNG)   
+규칙](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform1.PNG) 만들기 ![   
 
 6.  에 **규칙 구성** 페이지의 **클레임 규칙 이름**, 이 규칙에 대 한 표시 이름을 입력 합니다. **들어오는 클레임 유형**, 목록에 클레임 유형을 선택 합니다. **보내는 클레임 유형**, 클레임 유형을 목록에서 선택 하 고 조직의 요구 사항에 따라 다음 옵션 중 하나를 선택 합니다.  
   
@@ -122,8 +122,8 @@ Active Directory Federation Services에서 **들어오는 클레임 변환** 규
   
     -   **들어오는 클레임 값을 다른 나가는 클레임 값으로 바꿉니다.**  
   
-    -   **들어오는 e @ no__t-1 메일 접미사 클레임을 새 e @ no__t-2 메일 접미사로 바꾸기**  
-![규칙 만들기](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform2.PNG)  
+    -   **들어오는 e\-메일 접미사 클레임을 새 e\-메일 접미사로 바꿉니다.**  
+규칙](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform2.PNG) 만들기 ![  
 
 > [!NOTE]  
 > AD FS를 사용 하는 동적 액세스 제어 시나리오를 설정 하는 경우\-와 클레임 공급자 트러스트에서 변환 규칙을 먼저 만듭니다 클레임 발급 **들어오는 클레임 유형**, 들어오는 클레임에 대 한 이름을 입력 하거나, 클레임 설명 이전에 만든 경우 목록에서 선택 합니다. 두 번째 **보내는 클레임 유형**, 원하는 클레임 URL을 선택 하 고 다음 장치 클레임을 발급 하도록 신뢰 당사자 트러스트에 변환 규칙을 만듭니다.  
@@ -137,9 +137,9 @@ Active Directory Federation Services에서 **들어오는 클레임 변환** 규
 ## <a name="additional-references"></a>추가 참조 
 [클레임 규칙 구성](Configure-Claim-Rules.md)  
  
-[검사 목록: 신뢰 당사자 트러스트를 위한 클레임 규칙 만들기](https://technet.microsoft.com/library/ee913578.aspx)  
+[검사 목록: 신뢰 당사자 트러스트에 대 한 클레임 규칙 만들기](https://technet.microsoft.com/library/ee913578.aspx)  
 
-[검사 목록: 클레임 공급자 트러스트를 위한 클레임 규칙 만들기](https://technet.microsoft.com/library/ee913564.aspx)  
+[검사 목록: 클레임 공급자 트러스트에 대 한 클레임 규칙 만들기](https://technet.microsoft.com/library/ee913564.aspx)  
   
 [권한 부여 클레임 규칙을 사용 하는 경우](../../ad-fs/technical-reference/When-to-Use-an-Authorization-Claim-Rule.md)  
 

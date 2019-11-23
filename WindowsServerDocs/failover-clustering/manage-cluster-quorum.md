@@ -95,7 +95,7 @@ Windows Server 2012에서는 고급 쿼럼 구성 옵션으로 클러스터 별�
 
 ## <a name="general-recommendations-for-quorum-configuration"></a>쿼럼 구성에 대한 일반 권장 사항
 
-클러스터 소프트웨어는 구성된 노드 수 및 공유 저장소의 가용성을 기반으로 새 클러스터에 대한 쿼럼을 자동으로 구성합니다. 일반적으로 이 구성이 해당 클러스터에 가장 적합한 쿼럼 구성입니다. 그러나 클러스터가 만들어진 후 해당 클러스터를 프로덕션 환경에 배치하기 전에 쿼럼 구성을 검토하는 것이 좋습니다. 자세한 클러스터 쿼럼 구성을 보려면 구성 유효성 검사 마법사 또는 [테스트 클러스터](https://docs.microsoft.com/powershell/module/failoverclusters/test-cluster?view=win10-ps) Windows PowerShell cmdlet을 사용 하 여 **쿼럼 구성 유효성 검사** 테스트를 실행할 수 있습니다. 장애 조치(Failover) 클러스터 관리자에서 선택한 클러스터에 대 한 요약 정보에 기본 쿼럼 구성이 표시 되거나 [, Windows PowerShell을 실행할](https://docs.microsoft.com/powershell/module/failoverclusters/get-clusterquorum?view=win10-ps) 때 반환 되는 쿼럼 리소스에 대 한 정보를 검토할 수 있습니다. #a0.
+클러스터 소프트웨어는 구성된 노드 수 및 공유 저장소의 가용성을 기반으로 새 클러스터에 대한 쿼럼을 자동으로 구성합니다. 일반적으로 이 구성이 해당 클러스터에 가장 적합한 쿼럼 구성입니다. 그러나 클러스터가 만들어진 후 해당 클러스터를 프로덕션 환경에 배치하기 전에 쿼럼 구성을 검토하는 것이 좋습니다. 자세한 클러스터 쿼럼 구성을 보려면 구성 유효성 검사 마법사 또는 [테스트 클러스터](https://docs.microsoft.com/powershell/module/failoverclusters/test-cluster?view=win10-ps) Windows PowerShell cmdlet을 사용 하 여 **쿼럼 구성 유효성 검사** 테스트를 실행할 수 있습니다. 장애 조치(Failover) 클러스터 관리자에서 선택한 클러스터에 대 한 요약 정보에 기본 쿼럼 구성이 표시 됩니다. [또는 Windows PowerShell cmdlet을 실행할](https://docs.microsoft.com/powershell/module/failoverclusters/get-clusterquorum?view=win10-ps) 때 반환 되는 쿼럼 리소스에 대 한 정보를 검토할 수 있습니다.
 
 언제든지 **쿼럼 구성 유효성 검사** 테스트를 실행하여 쿼럼 구성이 클러스터에 가장 적합한 구성인지 확인할 수 있습니다. 테스트 출력에는 쿼럼 구성 변경이 권장되는지 여부와 최적의 설정이 표시됩니다. 변경이 권장되는 경우 클러스터 쿼럼 구성 마법사를 사용하여 권장 설정을 사용할 수 있습니다.
 
@@ -157,7 +157,7 @@ Windows Server 2012에서는 고급 쿼럼 구성 옵션으로 클러스터 별�
 
 4. **다음**을 선택합니다. 표시 되는 확인 페이지에서 선택 항목을 확인 하 고 **다음**을 선택 합니다.
 
-마법사를 실행 하 고 **요약** 페이지가 표시 된 후 마법사에서 수행한 작업에 대 한 보고서를 보려면 **보고서 보기**를 선택 합니다. 가장 최근 보고서는 이름이 **quorumconfiguration.mht 라는**인 <em>Systemroot</em> **\\Cluster @ no__t-3reports** 폴더에 그대로 유지 됩니다.
+마법사를 실행 하 고 **요약** 페이지가 표시 된 후 마법사에서 수행한 작업에 대 한 보고서를 보려면 **보고서 보기**를 선택 합니다. 가장 최근 보고서는 **quorumconfiguration.mht 라는**이름이 있는 <em>systemroot</em> **\\Cluster\\Reports** 폴더에 그대로 유지 됩니다.
 
 > [!NOTE]
 > 클러스터 쿼럼을 구성한 후에는 **쿼럼 구성 유효성 검사** 테스트를 실행하여 업데이트된 쿼럼 설정을 확인하는 것이 좋습니다.
@@ -178,7 +178,7 @@ Set-ClusterQuorum –Cluster CONTOSO-FC1 -NodeMajority
 Set-ClusterQuorum -NodeAndDiskMajority "Cluster Disk 2"
 ```
 
-다음 예제에서는 로컬 클러스터의 쿼럼 구성을 감시 구성이 있는 노드 과반수로 변경합니다. *@No__t-1 @ no__t-2 contoso-FS @ no__t-3fsw* 라는 파일 공유 리소스가 파일 공유 감시로 구성 됩니다.
+다음 예제에서는 로컬 클러스터의 쿼럼 구성을 감시 구성이 있는 노드 과반수로 변경합니다. *\\\\CONTOSO-FS\\fsw* 이라는 파일 공유 리소스가 파일 공유 감시로 구성 됩니다.
 
 ```PowerShell
 Set-ClusterQuorum -NodeAndFileShareMajority "\\fileserver\fsw"

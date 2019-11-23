@@ -19,7 +19,7 @@ ms.locfileid: "71405167"
 ---
 # <a name="manage-vrss"></a>vRSS 관리
 
-이 항목에서는 Windows PowerShell 명령을 사용 하 여 가상 컴퓨터 \(VMs @ no__t-1과 Hyper-v 호스트의 vRSS를 관리 합니다.
+이 항목에서는 Windows PowerShell 명령을 사용 하 여 가상 컴퓨터 \(Vm\) 및 하이퍼\-V 호스트에서 vRSS를 관리 합니다.
 
 >[!NOTE]
 >이 항목에서 설명 하는 명령에 대 한 자세한 내용은 [RSS 및 vRSS에 대 한 Windows PowerShell 명령](vrss-wps.md)을 참조 하세요.
@@ -43,7 +43,7 @@ Set-NetAdapterVmq
 
 ## <a name="vrss-on-hyper-v-switch-ports"></a>Hyper-v 스위치 포트의 vRSS
 
-Hyper-v 호스트에서 Hyper-v 가상 스위치 포트에 대해 vRSS를 사용 하도록 설정 해야 합니다.
+Hyper-v 호스트의 경우 하이퍼\-V 가상 스위치 포트에서 vRSS를 사용 하도록 설정 해야 합니다.
 
 **현재 설정 보기:**
 
@@ -59,9 +59,9 @@ Get-VMNetworkAdapter -ManagementOS | fl
 - VrssEnabled: True
     
 >[!IMPORTANT]
->일부 리소스 제한 조건에서 Hyper-v 가상 스위치 포트는이 기능을 사용 하도록 설정 하지 못할 수 있습니다. 이는 일시적인 상태 이며 나중에 기능을 사용할 수 있게 될 것입니다.
+>일부 리소스 제한 조건에서 하이퍼\-V 가상 스위치 포트는이 기능을 사용 하도록 설정 하지 못할 수 있습니다. 이는 일시적인 상태 이며 나중에 기능을 사용할 수 있게 될 것입니다.
 >
->**VrssEnabled** 이 **True**인 경우이 hyper-v 가상 스위치 포트 (즉,이 VM 또는 vNIC)에 대해이 기능을 사용할 수 있습니다.
+>**VrssEnabled** 가 **True**이면이\-hyper-v 가상 스위치 포트 (즉,이 VM 또는 vNIC)에 대해이 기능이 활성화 됩니다.
 
 **스위치 포트 vRSS 설정 구성:**
 
@@ -88,7 +88,7 @@ Set-NetAdapterRss
 ```
 
 >[!NOTE]
-> VM 내에서 프로필을 설정 해도 작업 예약에는 영향을 주지 않습니다. Hyper-v가 모든 일정을 결정 하 고 VM 내의 프로필을 무시 합니다.
+> VM 내에서 프로필을 설정 해도 작업 예약에는 영향을 주지 않습니다. 하이퍼\-V는 모든 일정을 결정 하 고 VM 내에서 프로필을 무시 합니다.
 
 ## <a name="disable-vrss"></a>VRSS 사용 안 함
 
@@ -97,21 +97,21 @@ VRSS를 사용 하지 않도록 설정 하 여 앞서 언급 한 설정 중 하�
 - 실제 NIC 또는 VM에 대해 VMQ를 사용 하지 않도록 설정 합니다.
 
   >[!CAUTION]
-  >실제 NIC에서 VMQ를 사용 하지 않도록 설정 하면 들어오는 패킷을 처리 하는 하이퍼 @ no__t-0V 호스트의 기능에 심각한 영향을 줍니다.
+  >실제 NIC에서 VMQ를 사용 하지 않도록 설정 하면 들어오는 패킷을 처리 하는 하이퍼\-V 호스트의 기능에 심각한 영향을 줍니다.
 
-- Hyper-v 호스트의 Hyper-v 가상 스위치 포트에서 VM에 대해 vRSS를 사용 하지 않도록 설정 합니다.
+- 하이퍼\-V 호스트의\-Hyper-v 가상 스위치 포트에서 VM에 대해 vRSS를 사용 하지 않도록 설정 합니다.
 
    ```PowerShell
    Set-VMNetworkAdapter <vm-name> -VrssEnabled $FALSE
    ```
 
-- 하이퍼 @ no__t-1V 호스트의 Hyper-v 가상 스위치 포트에서 호스트 vNIC vRSS를 사용 하지 않도록 설정 합니다.
+- 하이퍼\-V 호스트의\-Hyper-v 가상 스위치 포트에서 호스트 vNIC vRSS를 사용 하지 않도록 설정 합니다.
 
    ```PowerShell
    Set-VMNetworkAdapter -ManagementOS -VrssEnabled $FALSE
    ```
 
-- Vm에서 \(or host vNIC @ no__t-@no__t 1을 사용 하지 않도록 설정 합니다.
+- Vm \(에서 RSS를 사용 하지 않도록 설정 하거나 호스트에서 vNIC \(\)를 호스트\)
 
    ```PowerShell
    Disable-NetAdapterRSS *

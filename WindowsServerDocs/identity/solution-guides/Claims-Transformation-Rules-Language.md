@@ -29,16 +29,16 @@ Active Directory 포리스트에 있는 포리스트 간 트러스트에 적용 
 이 항목에서는 Active Directory에서 클레임 변환 규칙 언어의 구문 및 의미 체계와 정책을 제작할 때 수행할 사항을 간략하게 설명 합니다. 이 클래스는 사용자가 시작 하는 데 사용할 수 있는 몇 가지 예제 규칙 집합을 제공 하 고, 잘못 된 구문과 생성 되는 메시지의 예를 제공 하 여 규칙을 작성할 때 오류 메시지를 쉽게 해독할 수 있도록 합니다.  
   
 ## <a name="tools-for-authoring-claims-transformation-policies"></a>클레임 변환 정책을 작성 하기 위한 도구  
-**Active Directory에 대 한 Windows PowerShell cmdlet**: 클레임 변환 정책을 작성 하 고 설정 하는 데 권장 되는 방법입니다. 이러한 cmdlet은 간단한 정책에 대 한 스위치를 제공 하 고 더 복잡 한 정책에 대해 설정 된 규칙을 확인 합니다.  
+**Active Directory에 대 한 Windows PowerShell cmdlet**: 클레임 변환 정책을 작성 하 고 설정 하는 데 권장 되는 권장 방법입니다. 이러한 cmdlet은 간단한 정책에 대 한 스위치를 제공 하 고 더 복잡 한 정책에 대해 설정 된 규칙을 확인 합니다.  
   
-**LDAP**: 클레임 변환 정책은 LDAP (Lightweight Directory Access Protocol)를 통해 Active Directory에서 편집할 수 있습니다. 그러나 정책에 복잡 한 구성 요소가 여러 개 있으므로 사용 하는 도구에서 Active Directory 정책의 유효성을 검사 하지 못할 수 있습니다. 이후에 문제를 진단 하는 데 상당한 시간이 걸릴 수 있습니다.  
+**Ldap**: 클레임 변환 정책은 Ldap (Lightweight Directory Access Protocol)를 통해 Active Directory에서 편집할 수 있습니다. 그러나 정책에 복잡 한 구성 요소가 여러 개 있으므로 사용 하는 도구에서 Active Directory 정책의 유효성을 검사 하지 못할 수 있습니다. 이후에 문제를 진단 하는 데 상당한 시간이 걸릴 수 있습니다.  
   
 ## <a name="active-directory-claims-transformation-rules-language"></a>Active Directory 클레임 변환 규칙 언어  
   
 ### <a name="syntax-overview"></a>구문 개요  
 다음은 해당 언어의 구문 및 의미에 대 한 간략 한 개요입니다.  
   
--   클레임 변환 규칙 집합은 0 개 이상의 규칙으로 구성 됩니다. 각 규칙에는 두 가지 활성 부분이 있습니다. **조건 목록** 및 **규칙 동작**을 선택 합니다. **조건 선택 목록이** TRUE로 평가 되 면 해당 규칙 동작이 실행 됩니다.  
+-   클레임 변환 규칙 집합은 0 개 이상의 규칙으로 구성 됩니다. 각 규칙에는 **조건 목록** 및 **규칙 동작**선택 이라는 두 가지 활성 부분이 있습니다. **조건 선택 목록이** TRUE로 평가 되 면 해당 규칙 동작이 실행 됩니다.  
   
 -   **조건 목록** 에서 **select 조건이**0 개 이상 있습니다. Select **조건 목록을** true로 평가 하려면 모든 **select 조건이** true로 평가 되어야 합니다.  
   
@@ -91,7 +91,7 @@ ISSUE (TYPE= "EmpType", VALUE = C1.VALUE, VALUETYPE = C1.VALUETYPE) == Rule Acti
   
 이전 런타임 동작을 기반으로 복잡 한 클레임 변환을 작성할 수 있습니다.  
   
-**예제: 런타임 작업 @ no__t-0  
+**예: 런타임 작업**  
   
 이 예제에서는 두 개의 규칙을 사용 하는 클레임 변환의 런타임 작업을 보여 줍니다.  
   
@@ -135,7 +135,7 @@ Final Output:
   
 2.  Empty Select Condition List = = 모든 클레임이 조건 선택 목록과 일치  
   
-    **예제: 빈 Select 조건 목록 @ no__t-0  
+    **예: 빈 조건 선택 목록**  
   
     다음 규칙은 작업 집합의 모든 클레임과 일치 합니다.  
   
@@ -145,7 +145,7 @@ Final Output:
   
 3.  빈 Select 일치 목록 = = 모든 클레임이 조건 선택 목록과 일치  
   
-    **예제: 빈 일치 조건 @ no__t-0  
+    **예: 빈 일치 조건**  
   
     다음 규칙은 작업 집합의 모든 클레임과 일치 합니다. 단독으로 사용 되는 경우 기본 "허용-모든" 규칙입니다.  
   
@@ -184,7 +184,7 @@ Active Directory에는 포리스트를 입력 하는 클레임의 잘못 된 구
   
 4.  규칙 동작이 규칙의 Select Condition 목록 부분에서 사용 되지 않은 식별자를 참조 하는 경우에는 잘못 된 사용입니다. 이 경우 구문 오류가 발생 합니다.  
   
-    **예제: 식별자 참조가 잘못 되었습니다. @ no__t-0  
+    **예: 잘못 된 식별자 참조**  
     다음 규칙은 규칙 동작에 사용 된 잘못 된 식별자를 보여 줍니다.  
   
     ```  
@@ -225,7 +225,7 @@ Active Directory에는 포리스트를 입력 하는 클레임의 잘못 된 구
   
 이 섹션에서는 잘못 된 구문과 파서에서 생성 되는 해당 구문 오류를 사용 하 여 작성 된 규칙의 몇 가지 예를 보여 줍니다.  
   
-1. 예:  
+1. 예제:  
   
    ```  
    c1;[]=>Issue(claim=c1);  
@@ -235,9 +235,9 @@ Active Directory에는 포리스트를 입력 하는 클레임의 잘못 된 구
    **오류 메시지:**  
    *POLICY0002: 정책 데이터를 구문 분석할 수 없습니다.*  
    *줄 번호: 1, 열 번호: 2, 오류 토큰:;. 줄: ' c1; [] = > Issue (클레임 = c1); '.*  
-   *Parser 오류: 'POLICY0030: 구문 오류, 예기치 않은 '; ', ': ' 중 하나가 필요 합니다. '*  
+   *파서 오류: ' POLICY0030: 구문 오류가 발생 했습니다. 예기치 않은 '; ' 다음 중 하나가 필요 합니다. ': '. '*  
   
-2. 예:  
+2. 예제:  
   
    ```  
    c1:[]=>Issue(claim=c2);  
@@ -247,7 +247,7 @@ Active Directory에는 포리스트를 입력 하는 클레임의 잘못 된 구
    **오류 메시지**:   
    *POLICY0011: 클레임 규칙의 조건이 CopyIssuanceStatement에 지정 된 조건 태그와 일치 하지 않습니다. ' c2 '.*  
   
-3. 예:  
+3. 예제:  
   
    ```  
    c1:[type=="x1", value=="1", valuetype=="bool"]=>Issue(claim=c1)  
@@ -257,9 +257,9 @@ Active Directory에는 포리스트를 입력 하는 클레임의 잘못 된 구
    **오류 메시지:**  
    *POLICY0002: 정책 데이터를 구문 분석할 수 없습니다.*  
    줄 번호: 1, 열 번호: 39, 오류 토큰: "bool". 줄: ' c1: [type = = "x1", 값 = = "1", valuetype = = "bool"] = > Issue (클레임 = c1); '.   
-   *Parser 오류: 'POLICY0030: 구문 오류, 예기치 않은 ' STRING ', 다음 중 하나가 필요 합니다. ' INT64_TYPE ' ' UINT64_TYPE ' ' STRING_TYPE ' ' BOOLEAN_TYPE ' ' IDENTIFIER '*  
+   *파서 오류: ' POLICY0030: 구문 오류, 예기치 않은 ' STRING ', ' INT64_TYPE ' ' UINT64_TYPE ' ' STRING_TYPE ' ' BOOLEAN_TYPE ' ' 식별자 ' 중 하나가 필요 합니다.*  
   
-4. 예:  
+4. 예제:  
   
    ```  
    c1:[type=="x1", value==1, valuetype=="boolean"]=>Issue(claim=c1);  
@@ -268,9 +268,9 @@ Active Directory에는 포리스트를 입력 하는 클레임의 잘못 된 구
    이 예제의 숫자 **1** 은 언어의 유효한 토큰이 아니므로 이러한 사용은 일치 조건에 사용할 수 없습니다. 문자열을 만들려면 큰따옴표로 묶어야 합니다.   
    **오류 메시지:**  
    *POLICY0002: 정책 데이터를 구문 분석할 수 없습니다.*  
-   *줄 번호: 1, 열 번호: 23, 오류 토큰: 1. 줄: ' c1: [type = = "x1", 값 = = 1, valuetype = = "bool"] = > Issue (클레임 = c1); '.* @ no__t-1 파서 오류: 'POLICY0029: 예기치 않은 입력입니다. </em>  
+   *줄 번호: 1, 열 번호: 23, 오류 토큰: 1. 줄: ' c1: [type = = "x1", 값 = = 1, valuetype = = "bool"] = > Issue (클레임 = c1); '.* <em>파서 오류: ' POLICY0029: 예기치 않은 입력입니다.</em>  
   
-5. 예:  
+5. 예제:  
   
    ```  
    c1:[type == "x1", value == "1", valuetype == "boolean"] =>   
@@ -283,9 +283,9 @@ Active Directory에는 포리스트를 입력 하는 클레임의 잘못 된 구
    *POLICY0002: 정책 데이터를 구문 분석할 수 없습니다.*  
    *줄 번호: 1, 열 번호: 91, 오류 토큰: = = 줄: ' c1: [type = = "x1", 값 = = "1",*  
    *valuetype = = "boolean"] = > Issue (type = c1. type, value = "0", valuetype = = "boolean"); '.*  
-   *Parser 오류: 'POLICY0030: 구문 오류, 예기치 않은 ' = = ', 다음 중 하나가 필요 합니다. ' = '*  
+   *파서 오류: ' POLICY0030: 구문 오류가 발생 했습니다. 예기치 않은 ' = = ' 다음 중 하나가 필요 합니다. ' = '*  
   
-6. 예:  
+6. 예제:  
   
    ```  
    c1:[type=="x1", value=="boolean", valuetype=="string"] =>   
@@ -320,8 +320,8 @@ Active Directory에는 포리스트를 입력 하는 클레임의 잘못 된 구
 |기본값|값|  
 |system.valuetype|VALUE_TYPE|  
 |요청할|요청할|  
-|"[_A] [_A-a-za-z0-9] *"|한정자|  
-|"\\" [^ \\ "\n] * \\" "|문자열|  
+|"[_A-Za] [_A-a-za-z0] *"|한정자|  
+|"\\" [^\\"\n] *\\" "|문자열|  
 |작아|UINT64_TYPE|  
 |푸시하고|INT64_TYPE|  
 |문자열|STRING_TYPE|  

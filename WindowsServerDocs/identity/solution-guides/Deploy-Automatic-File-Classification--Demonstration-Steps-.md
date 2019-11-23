@@ -28,13 +28,13 @@ ms.locfileid: "71357593"
   
 **이 문서의**  
   
--   [1단계: 리소스 속성 정의 만들기 @ no__t-0  
+-   [1 단계: 리소스 속성 정의 만들기](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_Step1)  
   
--   [2단계: 문자열 콘텐츠 분류 규칙 만들기 @ no__t-0  
+-   [2 단계: 문자열 콘텐츠 분류 규칙 만들기](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_Step2)  
   
--   [3단계: 정규식 콘텐츠 분류 규칙 만들기 @ no__t-0  
+-   [3 단계: 정규식 콘텐츠 분류 규칙 만들기](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_Step3)  
   
--   [4단계: 파일이 분류 되어 있는지 확인 @ no__t-0  
+-   [4 단계: 파일이 분류 되었는지 확인](Deploy-Automatic-File-Classification--Demonstration-Steps-.md#BKMK_Step4)  
   
 > [!NOTE]  
 > 이 항목에는 설명한 절차의 일부를 자동화하는 데 사용할 수 있는 샘플 Windows PowerShell cmdlet이 포함되어 있습니다. 자세한 내용은 참조 [Cmdlet를 사용 하 여](https://go.microsoft.com/fwlink/p/?linkid=230693)합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "71357593"
   
 5.  **개인 식별이 가능한 정보**를 마우스 오른쪽 단추로 클릭한 다음 **사용**을 클릭합니다.  
   
-![solution guide](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![솔루션 가이드](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -107,7 +107,7 @@ Set-ADResourceProperty '"Enabled:$true '"Identity:'CN=PII_MS,CN=Resource Propert
   
 13. **평가 유형** 탭에서 **기존 속성 값 다시 평가** 확인란을 선택하고 **기존 값 덮어쓰기**를 클릭한 다음 **확인**을 클릭합니다.  
   
-![solution guide](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![솔루션 가이드](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -149,13 +149,13 @@ New-FSRMClassificationRule -Name 'Contoso Confidential' -Property "Impact_MS" -P
   
 9. **식 형식** 열에서 **정규식**을 선택합니다.  
   
-10. **식** 열에서 **^ (?! 000) ([0-7] \d @ no__t-2 | 7 ([0-7] \d | 7 [012])) ([-]?) (?! 00) \d\d\3 (?! 0000) \d @ no__t-3 $**  
+10. **식** 열에서 **^ (?! 000) ([0-7] \d{2}| 7 ([0-7] \d | 7 [012])) ([-]?) (?! 00) \d\d\3 (?! 0000) \d{4}$**  
   
 11. **최소 발생 수** 열에 **10**을 입력하고 **확인**을 클릭합니다.  
   
 12. **평가 유형** 탭에서 **기존 속성 값 다시 평가** 확인란을 선택하고 **기존 값 덮어쓰기**를 클릭한 다음 **확인**을 클릭합니다.  
   
-![solution guide](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
+![솔루션 가이드](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -163,7 +163,7 @@ New-FSRMClassificationRule -Name 'Contoso Confidential' -Property "Impact_MS" -P
 New-FSRMClassificationRule -Name "PII Rule" -Property "PII_MS" -PropertyValue "5000" -Namespace @('D:\Finance Documents') -ClassificationMechanism "Content Classifier" -Parameters @("RegularExpressionEx=Min=10;Expr=^(?!000)([0-7]\d{2}|7([0-7]\d|7[012]))([ -]?)(?!00)\d\d\3(?!0000)\d{4}$") -ReevaluateProperty Overwrite  
 ```  
   
-## <a name="BKMK_Step4"></a>4 단계: 파일이 올바르게 분류되었는지 확인  
+## <a name="BKMK_Step4"></a>4 단계: 파일이 올바르게 분류 되었는지 확인  
 분류 규칙에 지정된 폴더에 만들어진 파일의 속성을 보고 파일이 올바르게 분류되었는지 확인할 수 있습니다.  
   
 #### <a name="to-verify-that-the-files-are-classified-correctly"></a>파일이 올바르게 분류되었는지 확인하려면  
@@ -176,7 +176,7 @@ New-FSRMClassificationRule -Name "PII Rule" -Property "PII_MS" -PropertyValue "5
   
     3.  자동 분류 보고서를 닫습니다.  
   
-    4.  이 작업은 Windows PowerShell에서 다음 명령을 사용하여 수행할 수 있습니다. **시작-FSRMClassification ' "RunDuration 0-Confirm: $false**  
+    4.  다음 명령을 사용 하 여 Windows PowerShell을 사용 하 여 수행할 수 있습니다: **시작 FSRMClassification ' "RunDuration 0-확인: $false**  
   
 2.  분류 규칙에 지정된 폴더(예: D:\Finance Documents)로 이동합니다.  
   
@@ -186,11 +186,11 @@ New-FSRMClassificationRule -Name "PII Rule" -Property "PII_MS" -PropertyValue "5
   
 ## <a name="BKMK_Links"></a>참고 항목  
   
--   [시나리오: 분류를 사용하여 데이터 이해](Scenario--Get-Insight-into-Your-Data-by-Using-Classification.md)  
+-   [시나리오: 분류를 사용 하 여 데이터에 대 한 통찰력 얻기](Scenario--Get-Insight-into-Your-Data-by-Using-Classification.md)  
   
 -   [자동 파일 분류 계획](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/jj574209(v%3dws.11))  
 
   
--   [동적 액세스 제어: 시나리오 개요](Dynamic-Access-Control--Scenario-Overview.md)  
+-   [동적 Access Control: 시나리오 개요](Dynamic-Access-Control--Scenario-Overview.md)  
   
 

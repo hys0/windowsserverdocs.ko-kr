@@ -52,7 +52,7 @@ ksetup /addrealmflags <RealmName> [sendaddress] [tcpsupported] [delegate] [ncsup
 |0x08|NcSupported|이 영역은 DNS 및 영역 명명 표준을 허용 하는 이름 정규화를 지원 합니다.|
 |0x80|RC4|이 영역 TLS 사용에 대 한 수 있는 상호 영역 트러스트를 사용 하도록 설정 하려면 RC4 암호화를 지원 합니다.|
 
-영역 플래그는 레지스트리의 **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Domains @ no__t-1**<em>영역 이름</em>아래에 저장 됩니다. 이 항목은 기본적으로 레지스트리에 없습니다. [Ksetup: addrealmflags](ksetup-addrealmflags.md) 명령을 사용 하 여 레지스트리를 채울 수 있습니다.
+영역 플래그는 **HKEY_LOCAL_MACHINE \system\currentcontrolset\control\lsa\kerberos\domains\\** 의 레지스트리에 저장 <em>됩니다.</em> 이 항목은 기본적으로 레지스트리에 없습니다. [Ksetup: addrealmflags](ksetup-addrealmflags.md) 명령을 사용 하 여 레지스트리를 채울 수 있습니다.
 
 Ksetup 또는 ksetup/dumpstate.의 출력을 확인 하 여 사용할 수 있는 영역 플래그와 설정 된 영역 플래그를 확인할 수 있습니다.
 

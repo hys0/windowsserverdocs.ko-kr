@@ -20,7 +20,7 @@ ms.locfileid: "71367714"
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-*Law 번호 5: 영구 경계는 보안의 가격입니다.* - [10 불변의 보안 관리 법칙](https://technet.microsoft.com/library/cc722488.aspx)  
+*법률 번호 5: 영구 경계는 보안의 가격입니다.* - [10 가지 불변의 보안 관리 법칙](https://technet.microsoft.com/library/cc722488.aspx)  
   
 시스템을 모니터링 하는 견고한 이벤트 로그에는 모든 보안 Active Directory 디자인의 중요 한 부분입니다. 많은 컴퓨터 보안 손상은 검색할 수 없습니다 초기 이벤트는 교착 상태가 발생 된 적절 한 이벤트 로그 모니터링 및 경고를 실행 하는 경우. 독립적인 보고서이 결론 지원 되는 시간입니다. 예를 들어는 [2009 Verizon 데이터 위반 보고서](http://www.verizonbusiness.com/resources/security/reports/2009_databreach_rp.pdf) 상태:  
   
@@ -361,19 +361,19 @@ Microsoft에서 제공 된 [샘플 스크립트](https://support.microsoft.com/k
 
 저장 하 고는 로컬 감사 정책을 복원 하 고 다른 감사 관련된 명령을 볼 Auditpol.exe는 사용할 수 있습니다. 다음은 다른 **auditpol** 명령입니다.  
   
-@no__t-로컬 감사 정책을 삭제 하 고 다시 설정 하는 데 사용 됩니다.  
+`auditpol /clear`-로컬 감사 정책을 삭제 하 고 다시 설정 하는 데 사용 됩니다.  
   
-@no__t-현재 로컬 감사 정책을 이진 파일에 백업 하는 데 사용 됩니다.  
+`auditpol /backup /file:<filename>`-현재 로컬 감사 정책을 이진 파일에 백업 하는 데 사용 됩니다.  
   
-@no__t-이전에 저장 된 감사 정책 파일을 로컬 감사 정책으로 가져오는 데 사용 됩니다.  
+`auditpol /restore /file:<filename>`-이전에 저장 된 감사 정책 파일을 로컬 감사 정책으로 가져오는 데 사용 됩니다.  
   
-`auditpol /<get/set> /option:<CrashOnAuditFail> /<enable/disable>`-이 감사 정책 설정을 사용 하도록 설정 하면 시스템이 즉시 중지 됩니다 (중지: 어떤 이유로 든 보안 감사를 로그할 수 없는 경우 {Audit Failed} C0000244 {Audit Failed} message). 보안 감사 로그가 꽉 차고 보안 로그에 대해 지정 된 보존 메서드는 로그에 이벤트 실패 하는 일반적으로 **이벤트 덮어쓰지 않음** 또는 **이벤트 덮어쓰기**합니다. 일반적으로 로그온 하는 보안 로그를 더 높은 보증 해야 하는 환경에 의해 활성화만 됩니다. 설정 된 경우 관리자가 보안 로그 크기를 시청 고 필요에 따라 로그 회전 밀접 하 게 해야 합니다. 보안 옵션 **Audit를 수정 하 여 그룹 정책 설정할 수도 있습니다. 보안 감사를 로그할 수 없는 경우 즉시 시스템 종료 @ no__t-0 (기본값 = 사용 안 함).  
+`auditpol /<get/set> /option:<CrashOnAuditFail> /<enable/disable>`-이 감사 정책 설정을 사용 하는 경우 어떤 이유로 든 보안 감사를 로그할 수 없는 경우 시스템이 즉시 중지 됩니다 (STOP: C0000244 {Audit Failed} message). 보안 감사 로그가 꽉 차고 보안 로그에 대해 지정 된 보존 메서드는 로그에 이벤트 실패 하는 일반적으로 **이벤트 덮어쓰지 않음** 또는 **이벤트 덮어쓰기**합니다. 일반적으로 로그온 하는 보안 로그를 더 높은 보증 해야 하는 환경에 의해 활성화만 됩니다. 설정 된 경우 관리자가 보안 로그 크기를 시청 고 필요에 따라 로그 회전 밀접 하 게 해야 합니다. 또한 설정할 수 있습니다 그룹 정책 보안 옵션을 수정 하 여 **감사: 보안 감사를 로그할 수 없는 경우 즉시 시스템 종료** (기본값 = 사용 안 함).  
   
 `auditpol /<get/set> /option:<AuditBaseObjects> /<enable/disable>`-이 감사 정책 설정은 글로벌 시스템 개체의 액세스 감사 여부를 결정 합니다. 이 정책 옵션을 사용 하면 뮤텍스, 이벤트, 세마포 및 기본 시스템 액세스 제어 목록 (SACL)를 사용 하 여 만들어집니다 DOS 장치 등의 시스템 개체입니다. 대부분의 관리자가 너무 "심하거"를 글로벌 시스템 개체를 감사 하 고 악의적인 해킹 의심 되 면만 로드할 수 있습니다. 명명 된 개체만 SACL이 제공 됩니다. 감사 개체 액세스 감사 정책 (또는 커널 개체 감사 하위 범주)도 사용 하는 경우 이러한 시스템 개체에 대 한 액세스 감사 됩니다. 이 보안 설정을 구성할 때 변경 내용이 적용 되지 않습니다 Windows를 다시 시작 해야 합니다. 이 정책을 설정할 수 있으며 그룹 정책을 사용 하 여 글로벌 시스템 개체에 대 한 액세스 감사 보안 옵션을 수정 하 여 (기본값 = 사용 안 함).  
   
 `auditpol /<get/set> /option:<AuditBaseDirectories> /<enable/disable>`-이 감사 정책 설정은 명명 된 커널 개체 (예: 뮤텍스 및 세마포)를 만들 때 Sacl을 지정 하도록 지정 합니다. AuditBaseDirectories는 AuditBaseObjects 다른 개체를 포함할 수 없는 개체를 적용 하는 동안 컨테이너 개체를 영향을 줍니다.  
   
-`auditpol /<get/set> /option:<FullPrivilegeAuditing> /<enable/disable>`-이 감사 정책 설정은 다음 권한 중 하나 이상이 사용자 보안 토큰에 할당 된 경우 클라이언트가 이벤트를 생성할지 여부를 지정 합니다. 할당 Primarytoken권한, AuditPrivilege, BackupPrivilege, CreateTokenPrivilege, DebugPrivilege, EnableDelegationPrivilege, ImpersonatePrivilege, LoadDriverPrivilege, RestorePrivilege, SecurityPrivilege, System환경 권한 TakeOwnershipPrivilege 및 TcbPrivilege. 이 옵션을 사용 하지 않는 경우 (기본값 = 사용 안 함), BackupPrivilege 및 RestorePrivilege 권한을 기록 되지 않습니다. 이 옵션을 사용 하면 백업 작업 중에서 보안 로그 매우 시끄러운 (때로는 수백 개의 이벤트를 두 번째로) 가능 합니다. 보안 옵션 **Audit를 수정 하 여 그룹 정책로이 정책을 설정할 수도 있습니다. 백업 및 복원 권한 사용 감사 @ no__t-0.  
+`auditpol /<get/set> /option:<FullPrivilegeAuditing> /<enable/disable>`-이 감사 정책 설정은 클라이언트에서 하나 이상의 권한이 사용자 보안 토큰에 할당 될 때 이벤트를 생성할지 여부를 지정 합니다. 할당 Primarytoken권한, AuditPrivilege, BackupPrivilege, CreateTokenPrivilege, DebugPrivilege, EnableDelegationPrivilege, ImpersonatePrivilege, LoadDriverPrivilege 권한, RestorePrivilege, SecurityPrivilege, System환경 권한, TakeOwnershipPrivilege 및 TcbPrivilege. 이 옵션을 사용 하지 않는 경우 (기본값 = 사용 안 함), BackupPrivilege 및 RestorePrivilege 권한을 기록 되지 않습니다. 이 옵션을 사용 하면 백업 작업 중에서 보안 로그 매우 시끄러운 (때로는 수백 개의 이벤트를 두 번째로) 가능 합니다. 이 정책을 설정할 수 있으며 그룹 정책 보안 옵션을 수정 하 여 **감사: 백업 및 복원 권한 사용 감사**합니다.  
   
 > [!NOTE]  
 > 여기에 제공 된 일부 정보는 Microsoft에서 가져왔으면 [감사 옵션 종류](https://msdn.microsoft.com/library/dd973862(prot.20).aspx) 및 Microsoft SCM 도구입니다.  

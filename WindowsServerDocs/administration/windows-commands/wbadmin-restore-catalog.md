@@ -57,7 +57,7 @@ D: 디스크에 저장 된 백업에서 카탈로그를 복원 하려면 다음�
 ```
 wbadmin restore catalog -backupTarget:d
 ```
-공유 폴더에 저장 된 백업에서 카탈로그를 복원 하려면 \\ @ no__t-1servername\share of server01을 입력 합니다.
+공유 폴더 \\\\servername\share server01에 저장 된 백업에서 카탈로그를 복원 하려면 다음을 입력 합니다.
 ```
 wbadmin restore catalog -backupTarget:\\servername\share -machine:server01
 ```

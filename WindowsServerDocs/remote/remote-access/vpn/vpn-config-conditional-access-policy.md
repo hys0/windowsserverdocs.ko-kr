@@ -26,18 +26,18 @@ ms.locfileid: "71404346"
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-- [**선행** 7.2단계. Azure AD를 사용하여 VPN 인증에 대한 루트 인증서 만들기](vpn-create-root-cert-for-vpn-auth-azure-ad.md)
-- [**그런** 7.4단계. 온-프레미스 AD에 조건부 액세스 루트 인증서 배포 @ no__t-0
+- [**이전:** 7.2 단계. Azure AD를 사용 하 여 VPN 인증에 대 한 루트 인증서 만들기](vpn-create-root-cert-for-vpn-auth-azure-ad.md)
+- [**다음:** 7.4 단계. 온-프레미스 AD에 조건부 액세스 루트 인증서 배포](vpn-deploy-cond-access-root-cert-to-on-premise-ad.md)
 
 이 단계에서는 VPN 연결에 대 한 조건부 액세스 정책을 구성 합니다. ' VPN 연결 ' 블레이드에서 첫 번째 루트 인증서가 생성 되 면 테 넌 트에서 ' VPN 서버 ' 클라우드 응용 프로그램을 자동으로 만듭니다.
 
 VPN 사용자 그룹에 할당 된 조건부 액세스 정책을 만들고 **클라우드 앱** 을 **vpn 서버로**범위를 지정 합니다.
 
-- **Users**: VPN 사용자
+- **사용자**: VPN 사용자
 - **클라우드 앱**: VPN 서버
-- **Grant (access control)** : ' Multi-factor authentication 필요 '가 있습니다. 원하는 경우 다른 컨트롤을 사용할 수 있습니다.
+- **Grant (access control)** : ' Multi-factor authentication 필요 '. 원하는 경우 다른 컨트롤을 사용할 수 있습니다.
 
-**여기서** 이 단계에서는 가장 기본적인 조건부 액세스 정책 만들기에 대해 설명 합니다.  원하는 경우 추가 조건 및 컨트롤을 사용할 수 있습니다.
+**절차:** 이 단계에서는 가장 기본적인 조건부 액세스 정책 만들기에 대해 설명 합니다.  원하는 경우 추가 조건 및 컨트롤을 사용할 수 있습니다.
 
 
 1. **조건부 액세스** 페이지의 위쪽에 있는 도구 모음에서 **추가**를 선택 합니다.
@@ -94,4 +94,4 @@ VPN 사용자 그룹에 할당 된 조건부 액세스 정책을 만들고 **클
 
 
 ## <a name="next-steps"></a>다음 단계
-[7.4단계. 온-프레미스 AD @ no__t에 조건부 액세스 루트 인증서 배포-0: 이 단계에서는 조건부 액세스 루트 인증서를 온-프레미스 AD에 대 한 VPN 인증에 대 한 신뢰할 수 있는 루트 인증서로 배포 합니다.
+[7.4 단계. 온-프레미스 AD에 조건부 액세스 루트 인증서 배포](vpn-deploy-cond-access-root-cert-to-on-premise-ad.md):이 단계에서는 조건부 액세스 루트 인증서를 온-프레미스 ad에 대 한 VPN 인증에 대 한 신뢰할 수 있는 루트 인증서로 배포 합니다.

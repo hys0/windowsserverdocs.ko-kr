@@ -20,7 +20,7 @@ ms.locfileid: "71358459"
 
 
 ## <a name="to-add-a-help-desk-link"></a>지원 센터 링크를 추가 하려면  
-Sign @ no__t-0in 페이지에 표시 되는 지원 센터 링크를 추가 하려면 다음 Windows PowerShell cmdlet 및 구문을 사용 합니다.  
+로그인\-페이지에 표시 되는 지원 센터 링크를 추가 하려면 다음 Windows PowerShell cmdlet 및 구문을 사용 합니다.  
 
 ![기술 지원 서비스를 추가 합니다.](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom2.png)
   

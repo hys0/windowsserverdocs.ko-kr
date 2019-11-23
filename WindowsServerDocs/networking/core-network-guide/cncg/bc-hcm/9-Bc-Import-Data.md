@@ -15,9 +15,9 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71356195"
 ---
-# <a name="import-data-packages-on-the-hosted-cache-server-optional"></a>호스트 캐시 서버에서 데이터 패키지 가져오기 \(Optional @ no__t-1
+# <a name="import-data-packages-on-the-hosted-cache-server-optional"></a>호스트 캐시 서버에서 데이터 패키지 가져오기 \(선택 사항\)
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 데이터 패키지를 가져오고 호스트 캐시 서버에서 콘텐츠를 미리 로드 하려면이 절차를 사용할 수 있습니다.
 

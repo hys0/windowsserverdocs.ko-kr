@@ -36,9 +36,9 @@ WDSUTIL /Remove-DriverGroupFilter /DriverGroup:<Group Name> [/Server:<Server nam
 
 |매개 변수|설명|
 |---------|-----------|
-|/DriverGroup: \< 그룹 이름 >|드라이버 그룹의 이름을 지정합니다.|
-|[/Server: \<Server name >]|서버 이름을 지정합니다. 이 NetBIOS 이름이 나 FQDN 수 있습니다. 서버 이름을 지정 하지 않으면 로컬 서버가 사용 됩니다.|
-|[/FilterType: \<FilterType >]|그룹에서 제거할 필터의 유형을 지정 합니다. @no__t 0FilterType >은 다음 중 하나일 수 있습니다.</br>**BiosVendor**</br>**BiosVersion**</br>**ChassisType**</br>**Manufacturer**</br>**Uuid**</br>**OsVersion**</br>**OsEdition**</br>**OsLanguage**|
+|/DriverGroup:\<그룹 이름 >|드라이버 그룹의 이름을 지정합니다.|
+|[/Server:\<서버 이름 >]|서버 이름을 지정합니다. 이 NetBIOS 이름이 나 FQDN 수 있습니다. 서버 이름을 지정 하지 않으면 로컬 서버가 사용 됩니다.|
+|[/FilterType:\<FilterType >]|그룹에서 제거할 필터의 유형을 지정 합니다. \<FilterType >은 다음 중 하나일 수 있습니다.</br>**BiosVendor**</br>**BiosVersion**</br>**ChassisType**</br>**Manufacturer**</br>**Uuid**</br>**OsVersion**</br>**OsEdition**</br>**OsLanguage**|
 
 ## <a name="BKMK_examples"></a>예와
 

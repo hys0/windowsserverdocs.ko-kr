@@ -36,10 +36,10 @@ ms.locfileid: "71402968"
 
 ![Bellevue 사이트에 있는 동일한 클러스터의 2개 노드로 복제하는 Redmond의 2개 사이트를 보여 주는 다이어그램](./media/Stretch-Cluster-Replication-Using-Shared-Storage/Storage_SR_StretchClusterExample.png)  
 
-** 그림 1:  스트레치 클러스터의 저장소 복제 @ no__t-0  
+**그림 1: 확장 클러스터의 저장소 복제**  
 
-## <a name="prerequisites"></a>사전 요구 사항  
--   Active Directory 도메인 서비스 포리스트(Windows Server 2016을 실행하지 않아도 됨).  
+## <a name="prerequisites"></a>필수 구성 요소  
+-   Active Directory 도메인 서비스 포리스트(Windows Server 2016을 실행하지 않아도 됨)  
 -   2-64 Windows Server 2019 또는 Windows Server 2016, Datacenter Edition을 실행 하는 서버 Windows Server 2019를 실행 하는 경우 최대 2tb 크기의 단일 볼륨만 복제 하는 경우 Standard Edition을 대신 사용할 수 있습니다. 
 -   SAS JBOD(저장소 공간 등), 파이버 채널 SAN, 공유 VHDX 또는 iSCSI 대상을 사용하는 공유 저장소 집합 2개. 저장소는 HDD 및 SSD 미디어가 혼합되고 영구 예약을 지원해야 합니다. 각 저장소 집합을 두 개의 서버에만 사용할 수 있도록 설정합니다(비대칭).  
 -   각 저장소 집합에서 복제된 데이터용과 로그용으로 둘 이상의 가상 디스크를 만들 수 있어야 합니다. 실제 저장소의 섹터 크기는 모든 데이터 디스크의 섹터 크기와 동일해야 합니다. 실제 저장소의 섹터 크기는 모든 로그 디스크의 섹터 크기와 동일해야 합니다.  
@@ -114,7 +114,7 @@ ms.locfileid: "71402968"
 
         1.  각 쌍을 이루는 서버 노드 집합에서 해당 사이트의 저장소 엔클로저만(즉, 비대칭 저장소) 볼 수 있는지, 그리고 SAS 연결이 제대로 구성되어 있는지 확인합니다.  
 
-        2.  Windows PowerShell 또는 서버 관리자를 [사용하여 독립 실행형 서버에서 저장소 공간 배포에](../storage-spaces/deploy-standalone-storage-spaces.md) 제공된 **1~3단계에** 따라 저장소 공간을 사용하는 저장소를 프로비전합니다.  
+        2.  Windows PowerShell 또는 서버 관리자를 **사용하여 독립 실행형 서버에서 저장소 공간 배포에** 제공된 [1~3단계에](../storage-spaces/deploy-standalone-storage-spaces.md) 따라 저장소 공간을 사용하는 저장소를 프로비전합니다.  
 
     -   **ISCSI 저장소:**  
 
@@ -220,7 +220,7 @@ ms.locfileid: "71402968"
 
 14. **(선택 사항)** 보다 빠른 DNS 사이트 장애 조치(failover)를 위해 클러스터 네트워킹 및 Active Directory를 구성합니다. Hyper-V 소프트웨어 정의 네트워킹, 확장된 VLAN, 네트워크 추상화 장치, 낮은 DNS TTL 및 기타 일반적인 기술을 활용할 수 있습니다.
 
-    자세한 내용은 Microsoft Ignite 세션을 참조 하세요. [Windows Server vNext에서 장애 조치 (Failover) 클러스터 및 저장소 복제본 사용 및](http://channel9.msdn.com/Events/Ignite/2015/BRK3487) [사이트 간에 변경 알림 사용-방법과 이유](http://blogs.technet.com/b/qzaidi/archive/2010/09/23/enable-change-notifications-between-sites-how-and-why.aspx) 블로그 게시물  
+    자세한 내용은 Microsoft Ignite 세션 [Windows Server vNext에서 장애 조치(Failover) 클러스터 확장 및 저장소 복제본 사용](http://channel9.msdn.com/Events/Ignite/2015/BRK3487) 및 [사이트 간에 변경 알림 사용 - 방법과 이유](http://blogs.technet.com/b/qzaidi/archive/2010/09/23/enable-change-notifications-between-sites-how-and-why.aspx) 블로그 게시물을 참조하세요.  
 
 15. **(선택 사항)** 노드 장애 중 게스트가 장시간 일시 중지하지 않도록 VM 복원력을 구성합니다. 대신, 게스트는 10초 이내에 새 복제 원본 저장소로 장애 조치(failover)됩니다.  
 
@@ -287,7 +287,7 @@ ms.locfileid: "71402968"
 
 9. **(선택 사항)** 보다 빠른 DNS 사이트 장애 조치(failover)를 위해 클러스터 네트워킹 및 Active Directory를 구성합니다. Hyper-V 소프트웨어 정의 네트워킹, 확장된 VLAN, 네트워크 추상화 장치, 낮은 DNS TTL 및 기타 일반적인 기술을 활용할 수 있습니다.  
 
-   자세한 내용은 Microsoft Ignite 세션을 참조 하세요. [장애 조치 (Failover) 클러스터를 확장 하 고 Windows Server vNext에서 저장소 복제본을 사용](http://channel9.msdn.com/Events/Ignite/2015/BRK3487) 하 고, [사이트 간에 변경 알림 사용-방법과 이유](http://blogs.technet.com/b/qzaidi/archive/2010/09/23/enable-change-notifications-between-sites-how-and-why.aspx).  
+   자세한 내용은 Microsoft Ignite 세션 [Windows Server vNext에서 장애 조치(Failover) 클러스터 확장 및 저장소 복제본 사용](http://channel9.msdn.com/Events/Ignite/2015/BRK3487) 및 [사이트 간에 변경 알림 사용 - 방법과 이유](http://blogs.technet.com/b/qzaidi/archive/2010/09/23/enable-change-notifications-between-sites-how-and-why.aspx)를 참조하세요.  
 
 10. **(선택 사항)** 노드 장애 중 게스트가 장시간 일시 중지하지 않도록 VM 복원력을 구성합니다. 대신, 게스트는 10초 이내에 새 복제 원본 저장소로 장애 조치(failover)됩니다.  
 
@@ -344,7 +344,7 @@ ms.locfileid: "71402968"
 
 13. 새 파일 서버 역할을 마우스 오른쪽 단추로 클릭한 다음 **파일 공유 추가**를 클릭합니다. 계속해서 마법사를 통해 공유를 구성합니다.  
 
-14. 선택 사항: 이 사이트의 다른 저장소를 사용 하는 다른 파일 서버 역할을 추가 합니다.  
+14. 선택 사항: 이 사이트의 다른 저장소를 사용하는 다른 파일 서버 역할을 추가합니다.  
 
 15. SR-SRV01 및 SR-SRV02 서버가 Redmond 사이트에 있고, SR-SRV03 및 SR-SRV04 서버가 Bellevue에 있으며, Redmond가 원본 저장소 및 VM의 노드 소유권에 대한 기본 설정이 되도록 확장 클러스터 사이트 인식을 구성합니다.  
 
@@ -470,7 +470,7 @@ ms.locfileid: "71402968"
 
 11. 이제 절반의 두 클러스터 간에 저장소 복제본 파트너 관계를 구성했지만 복제는 계속 진행 중입니다. 그래픽 도구를 통해 복제 상태를 볼 수 있는 여러 가지 방법이 있습니다.  
 
-    1.  **복제 역할** 열 및 **복제** 탭을 사용합니다. 초기 동기화를 마치면 원본 및 대상 디스크의 복제 상태가 **지속적으로 복제 중**으로 전환됩니다.   
+    1.  **복제 역할** 열과 **복제** 탭을 사용합니다. 초기 동기화가 완료되면 원본 및 대상 디스크의 복제 상태가 **지속적으로 복제 중**이 됩니다.   
 
         ![장애 조치(Failover) 클러스터 관리자에서 디스크의 복제 탭을 보여 주는 화면](./media/Stretch-Cluster-Replication-Using-Shared-Storage/Storage_SR_ReplicationDetails2.png)  
 
@@ -478,7 +478,7 @@ ms.locfileid: "71402968"
 
         1.  원본 서버에서 **응용 프로그램 및 서비스\Microsoft\Windows\저장소 복제본\관리**로 이동하여 이벤트 5015, 5002, 5004, 1237, 5001 및 2200을 검토합니다.  
 
-        2.  대상 서버에서 **응용 프로그램 및 서비스\Microsoft\Windows\저장소 복제본\운영**으로 이동하여 이벤트 1215를 기다립니다. 이 이벤트는 복사한 바이트 수와 걸린 시간을 알려 줍니다. 예:  
+        2.  대상 서버에서 **응용 프로그램 및 서비스\Microsoft\Windows\저장소 복제본\운영**으로 이동하여 이벤트 1215를 기다립니다. 이 이벤트는 복사한 바이트 수와 걸린 시간을 알려 줍니다. 예제:  
 
             ```  
             Log Name:      Microsoft-Windows-StorageReplica/Operational  
@@ -578,7 +578,7 @@ ms.locfileid: "71402968"
         Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica -max 20  
         ```  
 
-    2.  대상 서버에서 다음 명령을 실행하여 파트너 관계 생성을 표시하는 저장소 복제본 이벤트를 확인합니다. 이 이벤트는 복사한 바이트 수와 걸린 시간을 알려 줍니다. 예:  
+    2.  대상 서버에서 다음 명령을 실행하여 파트너 관계 생성을 표시하는 저장소 복제본 이벤트를 확인합니다. 이 이벤트는 복사한 바이트 수와 걸린 시간을 알려 줍니다. 예제:  
 
             Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica | Where-Object {$_.ID -eq "1215"} | fl  
 
@@ -796,9 +796,9 @@ ms.locfileid: "71402968"
 - [저장소 복제본 개요](storage-replica-overview.md)  
 - [서버 간 저장소 복제](server-to-server-storage-replication.md)  
 - [클러스터 간 저장소 복제](cluster-to-cluster-storage-replication.md)  
-- [스토리지 복제본: 알려진 문제](storage-replica-known-issues.md) 
-- [스토리지 복제본: 질문과 대답](storage-replica-frequently-asked-questions.md)  
+- [저장소 복제본: 알려진 문제](storage-replica-known-issues.md) 
+- [저장소 복제본: 질문과 대답](storage-replica-frequently-asked-questions.md)  
 
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 - [Windows Server 2016](../../get-started/windows-server-2016.md)  
 - [Windows Server 2016의 스토리지 공간 다이렉트](../storage-spaces/storage-spaces-direct-overview.md)

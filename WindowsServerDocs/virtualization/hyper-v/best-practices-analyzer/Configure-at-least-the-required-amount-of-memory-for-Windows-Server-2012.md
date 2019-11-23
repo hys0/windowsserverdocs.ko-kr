@@ -19,11 +19,11 @@ ms.locfileid: "71364996"
 ---
 # <a name="configure-at-least-the-required-amount-of-memory-for-a-virtual-machine-running-windows-server-2012-and-enabled-for-dynamic-memory"></a>최소한 필요한 가상 컴퓨터를 Windows Server 2012 실행 되 고 동적 메모리 사용에 대 한 메모리 양을 구성합니다
 
->적용 대상: Windows Server 2016
+>적용 대상: Windows Server 2016
 
 모범 사례 분석기 및 검사에 대한 자세한 내용은 [모범 사례 분석기 검사 실행 및 검사 결과 관리](https://go.microsoft.com/fwlink/p/?LinkID=223177)를 참조하세요.  
   
-|속성|설명|  
+|속성|세부 정보|  
 |-|-|  
 |**운영 체제**|Windows Server 2016|  
 |**제품/기능**|Hyper-V|  
@@ -38,7 +38,7 @@ ms.locfileid: "71364996"
 ## <a name="impact"></a>**식**  
 *다음 가상 컴퓨터의 게스트 운영 체제가 실행 되지 않거나 불안정을 실행할 수 있습니다.*  
   
-@no__t-가상 머신 목록 >  
+가상 컴퓨터 \<목록 >  
   
 ## <a name="resolution"></a>**해결 방법**  
 *Hyper-v 관리자를 사용 하 여 최소 메모리를 256 MB 이상으로 늘리고,이 가상 컴퓨터의 시작 메모리와 최대 메모리를 최소 512 MB로 늘립니다.*  

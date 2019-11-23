@@ -22,7 +22,7 @@ ms.locfileid: "71363541"
 ---
 # <a name="using-the-delete-autoadddevices-command"></a>Delete AutoaddDevices 명령을 사용 하 여
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 자동 추가 데이터베이스에서 보류 중이거나 거부 되거나 승인 된 컴퓨터를 삭제 합니다. 이 데이터베이스는 서버에서 이러한 컴퓨터에 대 한 정보를 저장합니다.
 ## <a name="syntax"></a>구문
@@ -44,5 +44,7 @@ wdsutil /delete-AutoaddDevices /Devicetype:RejectedDevices
 wdsutil /verbose /delete-AutoaddDevices /Server:MyWDSServer /Devicetype:ApprovedDevices
 ```
 #### <a name="additional-references"></a>추가 참조
-[명령줄 구문 키](command-line-syntax-key.md)
- @no__t[승인](using-the-approve-autoadddevices-command.md)-autoadddevices 명령을 사용 하 여-3 @no__t[get](using-the-get-autoadddevices-command.md)autoadddevices 명령을 사용 하 여-5[거부 autoadddevices 명령을 사용](using-the-reject-autoadddevices-command.md) 하 여
+[명령줄 구문 키](command-line-syntax-key.md) [승인 autoadddevices](using-the-approve-autoadddevices-command.md) 명령을 사용 하
+[get](using-the-get-autoadddevices-command.md) autoadddevices 명령을 사용 하 여
+
+[거부 autoadddevices](using-the-reject-autoadddevices-command.md) 명령을 사용 하 여

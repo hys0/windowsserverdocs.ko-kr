@@ -23,7 +23,7 @@ AD FS (Active Directory 페더레이션 서비스) 팜의 동일한 서버를 Wi
   
 ### <a name="to-verify-that-a-federation-server-is-operational"></a>페더레이션 서버가 작동하는지 확인하려면  
   
-1.  브라우저 창을 열고 주소 표시줄에 페더레이션 서버 이름을 입력 한 다음에 추가 `federationmetadata/2007-06/federationmetadata.xml` 하 여 페더레이션 서비스 메타 데이터 끝점을 찾습니다. 예를 `https://fs.contoso.com/federationmetadata/2007-06/federationmetadata.xml` 들면입니다.  
+1.  브라우저 창을 열고 주소 표시줄에 페더레이션 서버 이름을 입력 한 다음 `federationmetadata/2007-06/federationmetadata.xml`에 추가 하 여 페더레이션 서비스 메타 데이터 끝점을 찾습니다. 예를 들어 `https://fs.contoso.com/federationmetadata/2007-06/federationmetadata.xml` 합니다.  
   
 브라우저 창에서 SSL 오류 또는 경고 없이 페더레이션 서버 메타데이터를 볼 수 있는 경우 페더레이션 서버가 작동하는 것입니다.  
   

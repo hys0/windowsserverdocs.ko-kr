@@ -54,12 +54,12 @@ Windows server 2016 AD FS 서버는 windows server 2012 R2 팜에 추가할 수 
 1.  서버 관리자 사용 하 여 Windows Server 2016에 Active Directory Federation Services 역할 설치  
 
 2.  AD FS 구성 마법사를 사용 하 여 새 Windows Server 2016 서버를 기존 AD FS 팜에 가입 시킵니다.  **시작** 화면에서 **다음**을 클릭 합니다.
- ![Join 팜 @ no__t-1  
+ ![팜 참가](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure1.png)  
 3.  **Active Directory Domain Services에 연결** 화면에서 페더레이션 서비스 구성을 수행할 수 있는 권한이 있는**관리자 계정을 p)** **다음**을 클릭 합니다.
 4.  **팜 지정** 화면에서 SQL server 및 인스턴스 이름을 입력 하 고 **다음**을 클릭 합니다.
-![Join 팜 @ no__t-1
+![팜 참가](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure3.png)
 5.  **SSL 인증서 지정** 화면에서 인증서를 지정 하 고 **다음**을 클릭 합니다.
-![Join 팜 @ no__t-1
+![팜 참가](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure4.png)
 6.  **서비스 계정 지정** 화면에서 서비스 계정을 지정 하 고 **다음**을 클릭 합니다.
 7.  **검토 옵션** 화면에서 옵션을 검토 하 고 **다음**을 클릭 합니다.
 8.  필수 구성 요소 **확인** 화면에서 모든 필수 구성 요소 검사를 통과 했는지 확인 하 고 **구성**을 클릭 합니다.
@@ -72,11 +72,11 @@ Windows server 2016 AD FS 서버는 windows server 2012 R2 팜에 추가할 수 
 >SQL을 데이터베이스로 사용할 때 AdfsSyncProperties-Role을 사용 하 여 기본 AD FS 서버를 설정할 필요가 없습니다.  이 구성에서는 모든 노드가 주 복제본으로 간주 되기 때문입니다.
 
 1.  서버 관리자의 Windows Server 2012 R2 AD FS 서버에서 **관리**아래의 **역할 및 기능 제거** 를 사용 합니다.
-![Remove @ no__t-1 제거
+서버](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/remove1.png) ![제거
 2.  **시작하기 전** 화면에서 **다음**을 클릭합니다.
 3.  **서버 선택** 화면에서 **다음**을 클릭 합니다.
 4.  **서버 역할** 화면에서 **Active Directory Federation Services** 옆의 확인란을 제거 하 고 **다음**을 클릭 합니다.
-![Remove @ no__t-1 제거
+서버](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/remove2.png) ![제거
 5.  **기능** 화면에서 **다음**을 클릭 합니다.
 6.  **확인** 화면에서 **제거**를 클릭 합니다.
 7.  이 작업이 완료 되 면 서버를 다시 시작 합니다.
@@ -89,11 +89,11 @@ Windows server 2016 AD FS 서버는 windows server 2012 R2 팜에 추가할 수 
 
 1. 이제 Windows Server 2016 서버에서 PowerShell을 열고 다음을 실행 합니다. **$cred = Get 자격 증명** 을 입력 하 고 enter 키를 누릅니다.
 2. SQL Server에 대 한 관리자 권한이 있는 자격 증명을 입력 합니다.
-3. 이제 PowerShell에서 다음을 입력 합니다. **AdfsFarmBehaviorLevelRaise $cred**
+3. 이제 PowerShell에서 다음을 입력 합니다. **AdfsFarmBehaviorLevelRaise-Credential $cred**
 2. 메시지가 표시 되 면 **Y**를 입력 합니다.  그러면 수준이 시작 됩니다.  이 작업이 완료 되 면 FBL 성공적으로 발생 합니다.  
-![ 업데이트 @ no__t-1
+업데이트를 완료 ![](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/finish1.png)
 3. 이제 AD FS 관리로 이동 하면 Windows Server 2016에 AD FS에 추가 된 새 노드가 표시 됩니다.  
-4. 마찬가지로 PowerShell cmdlt를 사용할 수 있습니다.  현재 FBL을 표시 하는 AdfsFarmInformation입니다.  
+4. 마찬가지로 PowerShell cmdlt: AdfsFarmInformation를 사용 하 여 현재 FBL를 표시할 수 있습니다.  
 ![업데이트 완료](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/finish2.png)
 
 #### <a name="upgrade-the-configuration-version-of-existing-wap-servers"></a>기존 WAP 서버의 구성 버전 업그레이드

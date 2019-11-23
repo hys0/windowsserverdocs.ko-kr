@@ -136,98 +136,98 @@ ms.locfileid: "71405329"
 |||  
 |-|-|  
 |**있어**|16600|  
-|**Severity**|Warning|  
+|**Severity**|경고|  
 |**SymbolicName**|EVENT_EQOS_WARNING_TEST_1|  
 |**언어**|영어|  
-|**메시지**|지정 하도록 EQOS: * * * 테스트 @ no__t-0 @ no__t [, 한 문자열] "% 2"|  
+|**메시지**|지정 하도록 EQOS: * * * 테스트\*\*\*[, 한 문자열] "%2"이 (가) 있습니다.|  
   
 |||  
 |-|-|  
 |**있어**|16601|  
-|**Severity**|Warning|  
+|**Severity**|경고|  
 |**SymbolicName**|EVENT_EQOS_WARNING_TEST_2|  
 |**언어**|영어|  
-|**메시지**|지정 하도록 EQOS: * * * 테스트 @ no__t-0 @ no__t [, 두 문자열이 있는, 문자열 1은] "% 2" [, 문자열 2:] "% 3".|  
+|**메시지**|지정 하도록 EQOS: * * * 테스트\*\*\*[, 두 개의 문자열이 있습니다. 문자열 1은] "%2" [, 문자열 2:] "%3"입니다.|  
   
 |||  
 |-|-|  
 |**있어**|16602|  
-|**Severity**|Warning|  
+|**Severity**|경고|  
 |**SymbolicName**|EVENT_EQOS_WARNING_MACHINE_POLICY_VERSION|  
 |**언어**|영어|  
-|**메시지**|컴퓨터 QoS 정책 "% 2"의 버전 번호가 잘못 되었습니다. 이 정책은 적용 되지 않습니다.|  
+|**메시지**|컴퓨터 QoS 정책 "%2"의 버전 번호가 잘못 되었습니다. 이 정책은 적용 되지 않습니다.|  
   
 |||  
 |-|-|  
 |**있어**|16603|  
-|**Severity**|Warning|  
+|**Severity**|경고|  
 |**SymbolicName**|EVENT_EQOS_WARNING_USER_POLICY_VERSION|  
 |**언어**|영어|  
-|**메시지**|사용자 QoS 정책 "% 2"의 버전 번호가 잘못 되었습니다. 이 정책은 적용 되지 않습니다.|  
+|**메시지**|사용자 QoS 정책 "%2"의 버전 번호가 잘못 되었습니다. 이 정책은 적용 되지 않습니다.|  
   
 |||  
 |-|-|  
 |**있어**|16604|  
-|**Severity**|Warning|  
+|**Severity**|경고|  
 |**SymbolicName**|EVENT_EQOS_WARNING_MACHINE_POLICY_PROFILE_NOT_SPECIFIED|  
 |**언어**|영어|  
-|**메시지**|컴퓨터 QoS 정책 "% 2"이 (가) DSCP 값 또는 스로틀 비율을 지정 하지 않습니다. 이 정책은 적용 되지 않습니다.|  
+|**메시지**|컴퓨터 QoS 정책 "%2"이 (가) DSCP 값 또는 스로틀 비율을 지정 하지 않습니다. 이 정책은 적용 되지 않습니다.|  
   
 |||  
 |-|-|  
 |**있어**|16605|  
-|**Severity**|Warning|  
+|**Severity**|경고|  
 |**SymbolicName**|EVENT_EQOS_WARNING_USER_POLICY_PROFILE_NOT_SPECIFIED|  
 |**언어**|영어|  
-|**메시지**|사용자 QoS 정책 "% 2"이 (가) DSCP 값 또는 스로틀 비율을 지정 하지 않습니다. 이 정책은 적용 되지 않습니다.|  
+|**메시지**|사용자 QoS 정책 "%2"이 (가) DSCP 값 또는 스로틀 비율을 지정 하지 않습니다. 이 정책은 적용 되지 않습니다.|  
   
 |||  
 |-|-|  
 |**있어**|16606|  
-|**Severity**|Warning|  
+|**Severity**|경고|  
 |**SymbolicName**|EVENT_EQOS_WARNING_MACHINE_POLICY_QUOTA_EXCEEDED|  
 |**언어**|영어|  
-|**메시지**|최대 컴퓨터 QoS 정책 수를 초과 했습니다. QoS 정책 "% 2" 및 후속 컴퓨터 QoS 정책이 적용 되지 않습니다.|  
+|**메시지**|최대 컴퓨터 QoS 정책 수를 초과 했습니다. QoS 정책 "%2" 및 후속 컴퓨터 QoS 정책이 적용 되지 않습니다.|  
   
 |||  
 |-|-|  
 |**있어**|16607|  
-|**Severity**|Warning|  
+|**Severity**|경고|  
 |**SymbolicName**|EVENT_EQOS_WARNING_USER_POLICY_QUOTA_EXCEEDED|  
 |**언어**|영어|  
-|**메시지**|최대 사용자 QoS 정책 수를 초과 했습니다. QoS 정책 "% 2" 및 후속 사용자 QoS 정책이 적용 되지 않습니다.|  
+|**메시지**|최대 사용자 QoS 정책 수를 초과 했습니다. QoS 정책 "%2" 및 후속 사용자 QoS 정책이 적용 되지 않습니다.|  
   
 |||  
 |-|-|  
 |**있어**|16608|  
-|**Severity**|Warning|  
+|**Severity**|경고|  
 |**SymbolicName**|EVENT_EQOS_WARNING_MACHINE_POLICY_CONFLICT|  
 |**언어**|영어|  
-|**메시지**|컴퓨터 QoS 정책 "% 2"이 (가) 다른 QoS 정책과 충돌할 수 있습니다. 적용 되는 정책에 대 한 규칙은 설명서를 참조 하세요.|  
+|**메시지**|컴퓨터 QoS 정책 "%2"이 (가) 다른 QoS 정책과 충돌할 수 있습니다. 적용 되는 정책에 대 한 규칙은 설명서를 참조 하세요.|  
   
 |||  
 |-|-|  
 |**있어**|16609|  
-|**Severity**|Warning|  
+|**Severity**|경고|  
 |**SymbolicName**|EVENT_EQOS_WARNING_USER_POLICY_CONFLICT|  
 |**언어**|영어|  
-|**메시지**|사용자 QoS 정책 "% 2"이 (가) 다른 QoS 정책과 충돌할 수 있습니다. 적용 되는 정책에 대 한 규칙은 설명서를 참조 하세요.|  
+|**메시지**|사용자 QoS 정책 "%2"이 (가) 다른 QoS 정책과 충돌할 수 있습니다. 적용 되는 정책에 대 한 규칙은 설명서를 참조 하세요.|  
   
 |||  
 |-|-|  
 |**있어**|16610|  
-|**Severity**|Warning|  
+|**Severity**|경고|  
 |**SymbolicName**|EVENT_EQOS_WARNING_MACHINE_POLICY_NO_FULLPATH_APPNAME|  
 |**언어**|영어|  
-|**메시지**|응용 프로그램 경로를 처리할 수 없기 때문에 컴퓨터 QoS 정책 "% 2"이 (가) 무시 되었습니다. 응용 프로그램 경로가 잘못 되었거나, 잘못 된 드라이브 문자를 포함 하거나, 네트워크 매핑된 드라이브를 포함 하 고 있습니다.|  
+|**메시지**|응용 프로그램 경로를 처리할 수 없기 때문에 컴퓨터 QoS 정책 "%2"이 (가) 무시 되었습니다. 응용 프로그램 경로가 잘못 되었거나, 잘못 된 드라이브 문자를 포함 하거나, 네트워크 매핑된 드라이브를 포함 하 고 있습니다.|  
   
 |||  
 |-|-|  
 |**있어**|16611|  
-|**Severity**|Warning|  
+|**Severity**|경고|  
 |**SymbolicName**|EVENT_EQOS_WARNING_USER_POLICY_NO_FULLPATH_APPNAME|  
 |**언어**|영어|  
-|**메시지**|응용 프로그램 경로를 처리할 수 없기 때문에 사용자 QoS 정책 "% 2"이 (가) 무시 되었습니다. 응용 프로그램 경로가 잘못 되었거나, 잘못 된 드라이브 문자를 포함 하거나, 네트워크 매핑된 드라이브를 포함 하 고 있습니다.|  
+|**메시지**|응용 프로그램 경로를 처리할 수 없기 때문에 사용자 QoS 정책 "%2"이 (가) 무시 되었습니다. 응용 프로그램 경로가 잘못 되었거나, 잘못 된 드라이브 문자를 포함 하거나, 네트워크 매핑된 드라이브를 포함 하 고 있습니다.|  
   
 ## <a name="error-messages"></a>오류 메시지  
 
@@ -236,114 +236,114 @@ ms.locfileid: "71405329"
 |||  
 |-|-|  
 |**있어**|16700|  
-|**Severity**|오류|  
+|**Severity**|Error|  
 |**SymbolicName**|EVENT_EQOS_ERROR_MACHINE_POLICY_REFERESH|  
 |**언어**|영어|  
-|**메시지**|컴퓨터 QoS 정책을 새로 고치지 못했습니다. 오류 코드: "% 2".|  
+|**메시지**|컴퓨터 QoS 정책을 새로 고치지 못했습니다. 오류 코드: "%2".|  
   
 |||  
 |-|-|  
 |**있어**|16701|  
-|**Severity**|오류|  
+|**Severity**|Error|  
 |**SymbolicName**|EVENT_EQOS_ERROR_USER_POLICY_REFERESH|  
 |**언어**|영어|  
-|**메시지**|사용자 QoS 정책을 새로 고치지 못했습니다. 오류 코드: "% 2".|  
+|**메시지**|사용자 QoS 정책을 새로 고치지 못했습니다. 오류 코드: "%2".|  
   
 |||  
 |-|-|  
 |**있어**|16702|  
-|**Severity**|오류|  
+|**Severity**|Error|  
 |**SymbolicName**|EVENT_EQOS_ERROR_OPENING_MACHINE_POLICY_ROOT_KEY|  
 |**언어**|영어|  
-|**메시지**|Qos가 QoS 정책에 대 한 컴퓨터 수준 루트 키를 열지 못했습니다. 오류 코드: "% 2".|  
+|**메시지**|Qos가 QoS 정책에 대 한 컴퓨터 수준 루트 키를 열지 못했습니다. 오류 코드: "%2".|  
   
 |||  
 |-|-|  
 |**있어**|16703|  
-|**Severity**|오류|  
+|**Severity**|Error|  
 |**SymbolicName**|EVENT_EQOS_ERROR_OPENING_USER_POLICY_ROOT_KEY|  
 |**언어**|영어|  
-|**메시지**|Qos가 QoS 정책에 대 한 사용자 수준 루트 키를 열지 못했습니다. 오류 코드: "% 2".|  
+|**메시지**|Qos가 QoS 정책에 대 한 사용자 수준 루트 키를 열지 못했습니다. 오류 코드: "%2".|  
   
 |||  
 |-|-|  
 |**있어**|16704|  
-|**Severity**|오류|  
+|**Severity**|Error|  
 |**SymbolicName**|EVENT_EQOS_ERROR_MACHINE_POLICY_KEYNAME_TOO_LONG|  
 |**언어**|영어|  
-|**메시지**|컴퓨터 QoS 정책이 허용 되는 최대 이름 길이를 초과 합니다. 잘못 된 정책은 인덱스 "% 2"을 (를) 포함 하는 컴퓨터 수준 QoS 정책 루트 키 아래에 나열 됩니다.|  
+|**메시지**|컴퓨터 QoS 정책이 허용 되는 최대 이름 길이를 초과 합니다. 잘못 된 정책은 인덱스 "%2"을 (를) 포함 하는 컴퓨터 수준 QoS 정책 루트 키 아래에 나열 됩니다.|  
   
 |||  
 |-|-|  
 |**있어**|16705|  
-|**Severity**|오류|  
+|**Severity**|Error|  
 |**SymbolicName**|EVENT_EQOS_ERROR_USER_POLICY_KEYNAME_TOO_LONG|  
 |**언어**|영어|  
-|**메시지**|사용자 QoS 정책이 허용 된 최대 이름 길이를 초과 합니다. 잘못 된 정책은 인덱스 "% 2"이 (가) 있는 사용자 수준 QoS 정책 루트 키 아래에 나열 됩니다.|  
+|**메시지**|사용자 QoS 정책이 허용 된 최대 이름 길이를 초과 합니다. 잘못 된 정책은 인덱스 "%2"이 (가) 있는 사용자 수준 QoS 정책 루트 키 아래에 나열 됩니다.|  
   
 |||  
 |-|-|  
 |**있어**|16706|  
-|**Severity**|오류|  
+|**Severity**|Error|  
 |**SymbolicName**|EVENT_EQOS_ERROR_MACHINE_POLICY_KEYNAME_SIZE_ZERO|  
 |**언어**|영어|  
-|**메시지**|컴퓨터 QoS 정책에는 길이가 0 인 이름이 있습니다. 잘못 된 정책은 인덱스 "% 2"을 (를) 포함 하는 컴퓨터 수준 QoS 정책 루트 키 아래에 나열 됩니다.|  
+|**메시지**|컴퓨터 QoS 정책에는 길이가 0 인 이름이 있습니다. 잘못 된 정책은 인덱스 "%2"을 (를) 포함 하는 컴퓨터 수준 QoS 정책 루트 키 아래에 나열 됩니다.|  
   
 |||  
 |-|-|  
 |**있어**|16707|  
-|**Severity**|오류|  
+|**Severity**|Error|  
 |**SymbolicName**|EVENT_EQOS_ERROR_USER_POLICY_KEYNAME_SIZE_ZERO|  
 |**언어**|영어|  
-|**메시지**|사용자 QoS 정책에 길이가 0 인 이름이 있습니다. 잘못 된 정책은 인덱스 "% 2"이 (가) 있는 사용자 수준 QoS 정책 루트 키 아래에 나열 됩니다.|  
+|**메시지**|사용자 QoS 정책에 길이가 0 인 이름이 있습니다. 잘못 된 정책은 인덱스 "%2"이 (가) 있는 사용자 수준 QoS 정책 루트 키 아래에 나열 됩니다.|  
   
 |||  
 |-|-|  
 |**있어**|16708|  
-|**Severity**|오류|  
+|**Severity**|Error|  
 |**SymbolicName**|EVENT_EQOS_ERROR_OPENING_MACHINE_POLICY_SUBKEY|  
 |**언어**|영어|  
-|**메시지**|QoS가 컴퓨터 QoS 정책에 대 한 레지스트리 하위 키를 열지 못했습니다. 이 정책은 인덱스 "% 2"을 (를) 포함 하는 컴퓨터 수준 QoS 정책 루트 키 아래에 나열 됩니다.|  
+|**메시지**|QoS가 컴퓨터 QoS 정책에 대 한 레지스트리 하위 키를 열지 못했습니다. 이 정책은 인덱스 "%2"을 (를) 포함 하는 컴퓨터 수준 QoS 정책 루트 키 아래에 나열 됩니다.|  
   
 |||  
 |-|-|  
 |**있어**|16709|  
-|**Severity**|오류|  
+|**Severity**|Error|  
 |**SymbolicName**|EVENT_EQOS_ERROR_OPENING_USER_POLICY_SUBKEY|  
 |**언어**|영어|  
-|**메시지**|QoS가 사용자 QoS 정책에 대 한 레지스트리 하위 키를 열지 못했습니다. 이 정책은 인덱스 "% 2"이 (가) 있는 사용자 수준 QoS 정책 루트 키 아래에 나열 됩니다.|  
+|**메시지**|QoS가 사용자 QoS 정책에 대 한 레지스트리 하위 키를 열지 못했습니다. 이 정책은 인덱스 "%2"이 (가) 있는 사용자 수준 QoS 정책 루트 키 아래에 나열 됩니다.|  
   
 |||  
 |-|-|  
 |**있어**|16710|  
-|**Severity**|오류|  
+|**Severity**|Error|  
 |**SymbolicName**|EVENT_EQOS_ERROR_PROCESSING_MACHINE_POLICY_FIELD|  
 |**언어**|영어|  
-|**메시지**|QoS에서 컴퓨터 QoS 정책 "% 3"에 대 한 "% 2" 필드를 읽거나 유효성을 검사 하지 못했습니다.|  
+|**메시지**|QoS에서 컴퓨터 QoS 정책 "%3"에 대 한 "%2" 필드를 읽거나 유효성을 검사 하지 못했습니다.|  
   
 |||  
 |-|-|  
 |**있어**|16711|  
-|**Severity**|오류|  
+|**Severity**|Error|  
 |**SymbolicName**|EVENT_EQOS_ERROR_PROCESSING_USER_POLICY_FIELD|  
 |**언어**|영어|  
-|**메시지**|QoS가 사용자 QoS 정책 "% 3"에 대 한 "% 2" 필드를 읽거나 유효성을 검사 하지 못했습니다.|  
+|**메시지**|QoS가 사용자 QoS 정책 "%3"에 대 한 "%2" 필드를 읽거나 유효성을 검사 하지 못했습니다.|  
   
 |||  
 |-|-|  
 |**있어**|16712|  
-|**Severity**|오류|  
+|**Severity**|Error|  
 |**SymbolicName**|EVENT_EQOS_ERROR_SETTING_TCP_AUTOTUNING|  
 |**언어**|영어|  
-|**메시지**|QoS가 인바운드 TCP 처리량 수준을 읽거나 설정 하지 못했습니다. 오류 코드: "% 2".|  
+|**메시지**|QoS가 인바운드 TCP 처리량 수준을 읽거나 설정 하지 못했습니다. 오류 코드: "%2".|  
   
 |||  
 |-|-|  
 |**있어**|16713|  
-|**Severity**|오류|  
+|**Severity**|Error|  
 |**SymbolicName**|EVENT_EQOS_ERROR_SETTING_APP_MARKING|  
 |**언어**|영어|  
-|**메시지**|QoS에서 DSCP 표시 재정의 설정을 읽거나 설정 하지 못했습니다. 오류 코드: "% 2".|  
+|**메시지**|QoS에서 DSCP 표시 재정의 설정을 읽거나 설정 하지 못했습니다. 오류 코드: "%2".|  
 
 이 가이드의 다음 항목에 대해서는 [QoS 정책 질문과 대답](qos-policy-faq.md)을 참조 하세요.
 

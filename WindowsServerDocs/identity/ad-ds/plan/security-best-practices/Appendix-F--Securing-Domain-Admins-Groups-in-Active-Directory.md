@@ -16,21 +16,21 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71408693"
 ---
-# <a name="appendix-f-securing-domain-admins-groups-in-active-directory"></a>부록 F: Active Directory에서 도메인 관리자 그룹 보안
+# <a name="appendix-f-securing-domain-admins-groups-in-active-directory"></a>부록 F: Active Directory의 Domain Admins 그룹 보안
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
-## <a name="appendix-f-securing-domain-admins-groups-in-active-directory"></a>부록 F: Active Directory에서 도메인 관리자 그룹 보안  
-EA (Enterprise Admins) 그룹의 경우와 마찬가지로, 도메인 관리자 (DA) 그룹의 구성원은 빌드 또는 재해 복구 시나리오에만 필요 합니다. @No__t-0Appendix D에 설명 된 대로 보안 된 경우 도메인에 대 한 기본 제공 관리자 계정을 제외 하 고 DA 그룹에는 일상적인 사용자 계정이 없어야 합니다. Active Directory @ no__t에서 기본 제공 관리자 계정 보안 설정-0.  
+## <a name="appendix-f-securing-domain-admins-groups-in-active-directory"></a>부록 F: Active Directory의 Domain Admins 그룹 보안  
+EA (Enterprise Admins) 그룹의 경우와 마찬가지로, 도메인 관리자 (DA) 그룹의 구성원은 빌드 또는 재해 복구 시나리오에만 필요 합니다. 도메인에 대 한 기본 제공 관리자 계정을 제외 하 고 DA 그룹에는 일상적인 사용자 계정이 없어야 합니다 ( [부록 D: 보안 기본 제공 관리자 계정 Active Directory에](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)설명 된 대로 보안 된 경우).  
 
 Domain Admins는 기본적으로 모든 구성원 서버 및 워크스테이션의 해당 도메인에 로컬 관리자 그룹의 구성원입니다. 지원 가능성 및 재해 복구를 위해이 기본 중첩을 수정 하면 안 됩니다. 구성원 서버의 로컬 관리자 그룹에서 도메인 관리자가 제거 된 경우 그룹은 각 구성원 서버 및 도메인의 워크스테이션에서 관리자 그룹에 추가 되어야 합니다. 아래의 단계별 지침에 설명 된 대로 각 도메인의 Domain Admins 그룹에 보안을 설정 해야 합니다.  
 
 포리스트의 각 도메인에서 Domain Admins 그룹:  
 
-1.  @No__t-0Appendix D에 설명 된 대로 보안 된 경우 도메인에 대 한 기본 제공 관리자 계정을 제외 하 고 그룹에서 모든 구성원을 제거 합니다. Active Directory @ no__t에서 기본 제공 관리자 계정 보안 설정-0.  
+1.  [부록 D: 보안 기본 제공 관리자 계정 Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)의 설명에 따라 보안이 설정 된 경우 도메인에 대 한 기본 제공 관리자 계정을 제외 하 고 그룹에서 모든 구성원을 제거 합니다.  
 
-2.  각 도메인의 구성원 서버 및 워크스테이션을 포함 하는 Ou에 연결 된 Gpo에서 DA 그룹을 **컴퓨터 Configuration\Policies\Windows 설정 \ 로컬 정책 \ 사용자 권한 할당** 의 다음 사용자 권한에 추가 해야 합니다. :  
+2.  각 도메인의 구성원 서버 및 워크스테이션을 포함 하는 Ou에 연결 된 Gpo에서 DA 그룹을 **컴퓨터 Configuration\Policies\Windows 설정 \ 로컬 정책 \ 사용자 권한 할당**의 다음 사용자 권한에 추가 해야 합니다.  
 
     -   네트워크에서 이 컴퓨터 액세스 거부  
 
@@ -62,17 +62,17 @@ Domain Admins는 기본적으로 모든 구성원 서버 및 워크스테이션�
 
 1.  **서버 관리자**에서 **도구**를 클릭 하 **그룹 정책 관리**를 클릭 합니다.  
 
-2.  콘솔 트리에서 \<Forest @ no__t-1 @ no__t-2Domains @ no__t-3 @ no__t-4Domain @ no__t-5를 확장 한 다음 **개체를 그룹 정책** 합니다. 여기서 \<forest @ no__t-8은 포리스트의 이름이 고 \<domain @ no__t-10은 도메인의 이름입니다. 그룹 정책)를 설정 하려고 합니다.  
+2.  콘솔 트리에서 \<포리스트\>\\\\도메인 \<도메인\>을 확장 한 다음 **개체를 그룹 정책** 합니다. 여기서 \<포리스트\>는 포리스트의 이름이 고 \<도메인\>는 그룹 정책를 설정 하려는 도메인의 이름입니다.  
 
 3.  콘솔 트리에서 **그룹 정책 개체**를 마우스 오른쪽 단추로 클릭 하 고 **새로 만들기**를 클릭 합니다.  
 
     ![보안 도메인 관리자 그룹](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_63.gif)  
 
-4.  **새 gpo** 대화 상자에서 \< GPO name @ no__t-2를 입력 하 고 **확인** 을 클릭 합니다. 여기서 \<gpo name @ no__t-5는이 GPO의 이름입니다.  
+4.  **새 gpo** 대화 상자에서 gpo 이름\>\<을 입력 하 고 **확인** 을 클릭 합니다. 여기서 \<GPO 이름\>이 GPO의 이름입니다.  
 
     ![보안 도메인 관리자 그룹](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_64.gif)  
 
-5.  세부 정보 창에서 \<GPO Name @ no__t-1을 마우스 오른쪽 단추로 클릭 하 고 **편집**을 클릭 합니다.  
+5.  세부 정보 창에서 GPO 이름\>\<을 마우스 오른쪽 단추로 클릭 하 고 **편집**을 클릭 합니다.  
 
 6.  **Computer Configuration\Policies\Windows 설정 \ 로컬 정책**으로 이동 하 고 **사용자 권한 할당**을 클릭 합니다.  
 
@@ -142,7 +142,7 @@ Domain Admins는 기본적으로 모든 구성원 서버 및 워크스테이션�
 
 13. 그룹 정책 관리에서 다음을 수행 하 여 GPO를 구성원 서버 및 워크스테이션 Ou에 연결 합니다.  
 
-    1.  @No__t-0Forest @ no__t-1\Domains @ no__t-2 @ no__t 도메인 @ no__t-4로 이동 합니다. 여기서 \< 포리스트 @ no__t-6은 포리스트의 이름이 고 \<Domain @ no__t-8은 그룹 정책를 설정 하려는 도메인의 이름입니다.  
+    1.  \<포리스트\>\Domains\\\<도메인\>로 이동 합니다. 여기서 \<포리스트\>는 포리스트 이름이 고 \<도메인\>는 그룹 정책를 설정 하려는 도메인의 이름입니다.  
 
     2.  GPO가 적용 될 OU를 마우스 오른쪽 단추로 클릭 하 고 **기존 Gpo 연결**을 클릭 합니다.  
 
@@ -174,7 +174,7 @@ GPO 변경의 영향을 받지 않는 구성원 서버 또는 워크스테이션
 
     ![보안 도메인 관리자 그룹](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_73.gif)  
 
-5.  **명령 프롬프트** 창에서 **net use \\ @ no__t @ No__t-4server name @ no__t-5\c $** 을 입력 합니다. 여기서 \<server name @ no__t-7은 네트워크를 통해 액세스 하려는 구성원 서버 또는 워크스테이션의 이름입니다.  
+5.  **명령 프롬프트** 창에서 **net use \\\\\<서버 이름\>\c $** 를 입력 합니다. 여기서 \<server name\>은 네트워크를 통해 액세스 하려는 구성원 서버 또는 워크스테이션의 이름입니다.  
 
 6.  다음 스크린샷은 표시 되어야 하는 오류 메시지를 보여 줍니다.  
 
@@ -194,7 +194,7 @@ GPO 변경의 영향을 받는 모든 구성원 서버 또는 워크스테이션
 
 4.  **파일**을 클릭 하 고 다른 **이름으로 저장**을 클릭 합니다.  
 
-5.  **파일** 이름 필드에 **@no__t -2Filename\>.bat** 를 입력 합니다. 여기서 \<filename @ no__t-5는 새 배치 파일의 이름입니다.  
+5.  **파일** 이름 필드에 **\<filename\>** 을 입력 합니다. 여기서 \<filename\>은 새 배치 파일의 이름입니다.  
 
 ###### <a name="schedule-a-task"></a>작업 예약  
 
@@ -207,7 +207,7 @@ GPO 변경의 영향을 받는 모든 구성원 서버 또는 워크스테이션
 
 3.  **작업 스케줄러** 메뉴 모음에서 **작업**을 클릭 하 고 **작업 만들기**를 클릭 합니다.  
 
-4.  **작업 만들기** 대화 상자에서 **\<task name @ no__t-3** 을 입력 합니다. 여기서 \<task name @ no__t-5는 새 작업의 이름입니다.  
+4.  **작업 만들기** 대화 상자에서 **\<작업 이름\>** 을 입력 합니다. 여기서 \<작업 이름\>은 새 작업의 이름입니다.  
 
 5.  **작업** 탭을 클릭 하 고 **새로 만들기**를 클릭 합니다.  
 

@@ -16,19 +16,19 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71408649"
 ---
-# <a name="appendix-g-securing-administrators-groups-in-active-directory"></a>부록 G: Active Directory에서 관리자 그룹의 보안 설정
+# <a name="appendix-g-securing-administrators-groups-in-active-directory"></a>부록 G: Active Directory에서 Administrators 그룹 보안
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
-## <a name="appendix-g-securing-administrators-groups-in-active-directory"></a>부록 G: Active Directory에서 관리자 그룹의 보안 설정  
-EA (Enterprise Admins) 및 DA (Domain Admins) 그룹의 경우와 마찬가지로 기본 제공 관리자 (BA) 그룹의 멤버 자격은 빌드 또는 재해 복구 시나리오 에서만 필요 합니다. 도메인에 대 한 기본 제공 관리자 계정 ([Appendix D에 설명 된 대로 보안 된 경우)을 제외 하 고 Administrators 그룹에는 일상적인 사용자 계정이 없어야 합니다. Active Directory @ no__t에서 기본 제공 관리자 계정 보안 설정-0.  
+## <a name="appendix-g-securing-administrators-groups-in-active-directory"></a>부록 G: Active Directory에서 Administrators 그룹 보안  
+EA (Enterprise Admins) 및 DA (Domain Admins) 그룹의 경우와 마찬가지로 기본 제공 관리자 (BA) 그룹의 멤버 자격은 빌드 또는 재해 복구 시나리오 에서만 필요 합니다. [부록 D: 보안 기본 제공 관리자 계정 Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)의 설명에 따라 보안이 설정 된 경우 도메인에 대 한 기본 제공 관리자 계정을 제외 하 고 Administrators 그룹에는 일상적인 사용자 계정이 없어야 합니다.  
 
 관리자는 기본적으로 대부분의 각 도메인의 AD DS 개체의 소유자입니다. 이 그룹의 멤버 자격은 소유권 또는 개체의 소유권을 획득 하는 기능이 필요한 빌드 또는 재해 복구 시나리오에 필요할 수 있습니다. 또한 DAs 및 EAs에는 다양 한 해당 권한 및 관리자 그룹의 해당 기본 멤버 자격을 통해 권한을 상속합니다. Active Directory의 권한 있는 그룹에 대 한 기본 그룹 중첩은 수정할 수 없으며, 각 도메인의 관리자 그룹은 다음에 나오는 단계별 지침에 설명 된 대로 보안을 설정 해야 합니다.  
 
 포리스트의 각 도메인에 있는 관리자 그룹의 경우:  
 
-1.  @No__t-0Appendix D에 설명 된 대로 보안 된 경우 도메인에 대 한 기본 제공 관리자 계정을 제외 하 고 Administrators 그룹에서 모든 구성원을 제거 합니다. Active Directory @ no__t에서 기본 제공 관리자 계정 보안 설정-0.  
+1.  [부록 D: 보안 기본 제공 관리자 계정 Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)의 설명에 따라 보안이 설정 된 경우 도메인에 대 한 기본 제공 관리자 계정을 제외 하 고 Administrators 그룹에서 모든 구성원을 제거 합니다.  
 
 2.  각 도메인의 구성원 서버 및 워크스테이션을 포함 하는 Ou에 연결 된 Gpo에서는 **컴퓨터 Configuration\Policies\Windows 설정 \ 사용자 권한 할당**의 다음 사용자 권한에 BA 그룹을 추가 해야 합니다.  
 
@@ -66,13 +66,13 @@ EA (Enterprise Admins) 및 DA (Domain Admins) 그룹의 경우와 마찬가지�
 
 1.  **서버 관리자**에서 **도구**를 클릭 하 **그룹 정책 관리**를 클릭 합니다.  
 
-2.  콘솔 트리에서 &lt;Forest @ no__t-1\Domains @ no__t @ no__t @ 도메인 @ no__t-4를 확장 한 다음 **개체를 그룹 정책** 합니다. 여기서 &lt;forest @ no__t-7은 포리스트의 이름이 고 &lt;domain @ no__t-9는 원하는 도메인의 이름입니다. 그룹 정책)를 설정 합니다.  
+2.  콘솔 트리에서 &lt;포리스트&gt;\Domains\\&lt;도메인&gt;을 확장 한 다음 **개체를 그룹 정책** 합니다. 여기서 &lt;포리스트&gt;는 포리스트의 이름이 고 &lt;도메인&gt;는 그룹 정책를 설정 하려는 도메인의 이름입니다.  
 
 3.  콘솔 트리에서 **그룹 정책 개체**를 마우스 오른쪽 단추로 클릭 하 고 **새로 만들기**를 클릭 합니다.  
 
     ![보안 관리 그룹](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_80.gif)  
 
-4.  **새 gpo** 대화 상자에서 <GPO Name>을 입력 하 고 **확인** 을 클릭 합니다. 여기서 *gpo 이름* 은이 GPO의 이름입니다.  
+4.  **새 gpo** 대화 상자에서 <GPO Name>를 입력 하 고 **확인** 을 클릭 합니다. 여기서 *gpo 이름* 은이 GPO의 이름입니다.  
 
     ![보안 관리 그룹](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_81.gif)  
 
@@ -122,7 +122,7 @@ EA (Enterprise Admins) 및 DA (Domain Admins) 그룹의 경우와 마찬가지�
 
 11. **그룹 정책 관리**에서 다음을 수행 하 여 GPO를 구성원 서버 및 워크스테이션 ou에 연결 합니다.  
 
-    1.  @No__t-0Forest @ no__t-1 > \Domains @ no__t-2 @ no__t-3 도메인 @ no__t-4로 이동 합니다. 여기서 &lt; 포리스트 @ no__t-6은 포리스트의 이름이 고 &lt;Domain @ no__t-8은 그룹 정책를 설정 하려는 도메인의 이름입니다.  
+    1.  &lt;포리스트&gt;> \Domains\\&lt;도메인&gt;로 이동 합니다. 여기서 &lt;포리스트&gt;는 포리스트의 이름이 고 &lt;도메인&gt;는 그룹 정책를 설정 하려는 도메인의 이름입니다.  
 
     2.  GPO가 적용 될 OU를 마우스 오른쪽 단추로 클릭 하 고 **기존 Gpo 연결**을 클릭 합니다.  
 
@@ -150,13 +150,13 @@ EA (Enterprise Admins) 및 DA (Domain Admins) 그룹의 경우와 마찬가지�
 
 1.  **서버 관리자**에서 **도구**를 클릭 하 **그룹 정책 관리**를 클릭 합니다.  
 
-2.  콘솔 트리에서 <Forest> \ 도메인 @ no__t-1 @ no__t-2를 확장 한 다음 **개체를 그룹 정책** 합니다. 여기서 <Forest>는 포리스트의 이름이 고 <Domain>는 그룹 정책를 설정 하려는 도메인의 이름입니다.  
+2.  콘솔 트리에서 <Forest>\Domains\\<Domain>를 확장 한 다음 **개체를 그룹 정책** 합니다. 여기서 <Forest>는 포리스트의 이름이 고 <Domain>은 그룹 정책를 설정 하려는 도메인의 이름입니다.  
 
 3.  콘솔 트리에서 **그룹 정책 개체**를 마우스 오른쪽 단추로 클릭 하 고 **새로 만들기**를 클릭 합니다.  
 
     ![보안 관리 그룹](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_89.gif)  
 
-4.  **새 gpo** 대화 상자에서 <GPO Name>을 입력 하 고 **확인** 을 클릭 합니다. 여기서 <GPO Name>은이 GPO의 이름입니다.  
+4.  **새 gpo** 대화 상자에서 <GPO Name>를 입력 하 고 **확인** 을 클릭 합니다. 여기서 <GPO Name>는이 GPO의 이름입니다.  
 
     ![보안 관리 그룹](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_90.gif)  
 
@@ -206,7 +206,7 @@ EA (Enterprise Admins) 및 DA (Domain Admins) 그룹의 경우와 마찬가지�
 
 11. **그룹 정책 관리**에서 다음을 수행 하 여 GPO를 도메인 컨트롤러 OU에 연결 합니다.  
 
-    1.  @No__t-0 \ 도메인 @ no__t-1 @ no__t-2로 이동 합니다. 여기서 <Forest>은 포리스트의 이름이 고, <Domain>는 그룹 정책를 설정 하려는 도메인의 이름입니다.  
+    1.  <Forest>\Domains\\<Domain>으로 이동 합니다. 여기서 <Forest>는 포리스트의 이름이 고 <Domain>는 그룹 정책를 설정 하려는 도메인의 이름입니다.  
 
     2.  도메인 컨트롤러 OU를 마우스 오른쪽 단추로 클릭 하 고 **기존 GPO 연결**을 클릭 합니다.  
 
@@ -231,7 +231,7 @@ GPO 변경의 영향을 받지 않는 구성원 서버 또는 워크스테이션
 
     ![보안 관리 그룹](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_97.gif)  
 
-5.  **명령 프롬프트** 창에서 **net use \\ @ no__t @ No__t-4server name @ no__t-5\c $** 을 입력 합니다. 여기서 \<server name @ no__t-7은 네트워크를 통해 액세스 하려는 구성원 서버 또는 워크스테이션의 이름입니다.  
+5.  **명령 프롬프트** 창에서 **net use \\\\\<서버 이름\>\c $** 를 입력 합니다. 여기서 \<server name\>은 네트워크를 통해 액세스 하려는 구성원 서버 또는 워크스테이션의 이름입니다.  
 
 6.  다음 스크린샷은 표시 되어야 하는 오류 메시지를 보여 줍니다.  
 
@@ -250,7 +250,7 @@ GPO 변경의 영향을 받는 모든 구성원 서버 또는 워크스테이션
 
 4.  **파일**을 클릭 하 고 다른 **이름으로 저장**을 클릭 합니다.  
 
-5.  **파일 이름** 필드에 **@no__t -2** 를 입력 합니다. 여기서 <Filename>은 새 배치 파일의 이름입니다.  
+5.  **파일 이름** 필드에 **<Filename>** 을 입력 합니다. 여기서 <Filename>은 새 배치 파일의 이름입니다.  
 
 ###### <a name="schedule-a-task"></a>작업 예약  
 

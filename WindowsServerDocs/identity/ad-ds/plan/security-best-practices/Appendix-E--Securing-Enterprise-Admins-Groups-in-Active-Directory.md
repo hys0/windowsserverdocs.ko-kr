@@ -16,19 +16,19 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71408717"
 ---
-# <a name="appendix-e-securing-enterprise-admins-groups-in-active-directory"></a>부록 B: Active Directory에서 엔터프라이즈 관리자 그룹 보안
+# <a name="appendix-e-securing-enterprise-admins-groups-in-active-directory"></a>부록 E: Active Directory의 Enterprise Admins 그룹 보안
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
-## <a name="appendix-e-securing-enterprise-admins-groups-in-active-directory"></a>부록 B: Active Directory에서 엔터프라이즈 관리자 그룹 보안  
-포리스트 루트 도메인에 있는 EA (Enterprise Admins) 그룹에는 매일 사용자를 포함 하지 않아야 합니다 .이 그룹에는 루트 도메인의 관리자 계정에 대 한 예외가 있습니다 ([Appendix D에 설명 된 대로 보안이 설정 됨). Active Directory @ no__t에서 기본 제공 관리자 계정 보안 설정-0.  
+## <a name="appendix-e-securing-enterprise-admins-groups-in-active-directory"></a>부록 E: Active Directory의 Enterprise Admins 그룹 보안  
+포리스트 루트 도메인에 있는 EA (Enterprise Admins) 그룹에는 사용자가 필요 하지 않은 경우, 루트 도메인의 관리자 계정에 대 한 예외가 있을 수 있습니다 .이 경우에는 [부록 D: 보안 기본 제공 관리자 Active Directory 계정](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)에 설명 된 대로 보안을 유지 해야 합니다.  
 
 엔터프라이즈 관리자는 기본적으로 포리스트의 각 도메인에 있는 Administrators 그룹의 구성원입니다. 포리스트 재해 복구 시나리오의 경우 EA 권한이 필요할 가능성이 있으므로 각 도메인의 관리자 그룹에서 EA 그룹을 제거 하면 안 됩니다. 포리스트의 Enterprise Admins 그룹은 다음에 나오는 단계별 지침에 설명 된 대로 보안을 유지 해야 합니다.  
 
 포리스트의 Enterprise Admins 그룹:  
 
-1.  각 도메인의 구성원 서버 및 워크스테이션을 포함 하는 Ou에 연결 된 Gpo에서는 Enterprise Admins 그룹을 **Computer Configuration\Policies\Windows 설정 \ 로컬 정책 \ 사용자 \ 사용자 권한에서 다음 사용자 권한으로 추가 해야 합니다. 할당**:  
+1.  각 도메인의 구성원 서버 및 워크스테이션을 포함 하는 Ou에 연결 된 Gpo에서는 Enterprise Admins 그룹을 Computer Configuration\Policies\Windows의 다음 사용자 권한 **정책 \ 사용자 권한 할당**에서 추가 해야 합니다.  
 
     -   네트워크에서 이 컴퓨터 액세스 거부  
 
@@ -46,7 +46,7 @@ ms.locfileid: "71408717"
 
 1.  **서버 관리자**에서 **도구**를 클릭 하 **Active Directory 사용자 및 컴퓨터**를 클릭 합니다.  
 
-2.  포리스트의 루트 도메인을 관리 하지 않는 경우 콘솔 트리에서 <Domain>을 마우스 오른쪽 단추로 클릭 한 다음 **도메인 변경** 을 클릭 합니다. 여기서 <Domain>는 현재 관리 중인 도메인의 이름입니다.  
+2.  포리스트의 루트 도메인을 관리 하지 않는 경우 콘솔 트리에서 <Domain>를 마우스 오른쪽 단추로 클릭 한 다음 **도메인 변경** 을 클릭 합니다. 여기서 <Domain>는 현재 관리 중인 도메인의 이름입니다.  
 
     ![보안 엔터프라이즈 관리 그룹](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_43.gif)  
 
@@ -68,7 +68,7 @@ ms.locfileid: "71408717"
 
 1.  **서버 관리자**에서 **도구**를 클릭 하 **그룹 정책 관리**를 클릭 합니다.  
 
-2.  콘솔 트리에서 <Forest> \ 도메인 @ no__t-1 @ no__t-2를 확장 한 다음 **개체를 그룹 정책** 합니다. 여기서 <Forest>는 포리스트의 이름이 고 <Domain>는 그룹 정책를 설정 하려는 도메인의 이름입니다.  
+2.  콘솔 트리에서 <Forest>\Domains\\<Domain>를 확장 한 다음 **개체를 그룹 정책** 합니다. 여기서 <Forest>는 포리스트의 이름이 고 <Domain>은 그룹 정책를 설정 하려는 도메인의 이름입니다.  
 
     > [!NOTE]  
     > 여러 도메인을 포함 하는 포리스트에서 Enterprise Admins 그룹을 보호 해야 하는 각 도메인에 비슷한 GPO를 만들어야 합니다.  
@@ -77,7 +77,7 @@ ms.locfileid: "71408717"
 
     ![보안 엔터프라이즈 관리 그룹](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_46.gif)  
 
-4.  **새 gpo** 대화 상자에서 <GPO Name>을 입력 하 고 **확인** 을 클릭 합니다. 여기서 <GPO Name>은이 GPO의 이름입니다.  
+4.  **새 gpo** 대화 상자에서 <GPO Name>를 입력 하 고 **확인** 을 클릭 합니다. 여기서 <GPO Name>는이 GPO의 이름입니다.  
 
     ![보안 엔터프라이즈 관리 그룹](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_47.gif)  
 
@@ -163,7 +163,7 @@ ms.locfileid: "71408717"
 
 13. **그룹 정책 관리**에서 다음을 수행 하 여 GPO를 구성원 서버 및 워크스테이션 ou에 연결 합니다.  
 
-    1.  @No__t-0 \ 도메인 @ no__t-1 @ no__t-2로 이동 합니다. 여기서 <Forest>은 포리스트의 이름이 고, <Domain>는 그룹 정책를 설정 하려는 도메인의 이름입니다.  
+    1.  <Forest>\Domains\\<Domain>으로 이동 합니다. 여기서 <Forest>는 포리스트의 이름이 고 <Domain>는 그룹 정책를 설정 하려는 도메인의 이름입니다.  
 
     2.  GPO가 적용 될 OU를 마우스 오른쪽 단추로 클릭 하 고 **기존 Gpo 연결**을 클릭 합니다.  
 
@@ -197,7 +197,7 @@ GPO 변경의 영향을 받지 않는 구성원 서버 또는 워크스테이션
 
     ![보안 엔터프라이즈 관리 그룹](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_56.gif)  
 
-5.  **명령 프롬프트** 창에서 **net use \\ @ no__t @ No__t-4server name @ no__t-5\c $** 을 입력 합니다. 여기서 \<server name @ no__t-7은 네트워크를 통해 액세스 하려는 구성원 서버 또는 워크스테이션의 이름입니다.  
+5.  **명령 프롬프트** 창에서 **net use \\\\\<서버 이름\>\c $** 를 입력 합니다. 여기서 \<server name\>은 네트워크를 통해 액세스 하려는 구성원 서버 또는 워크스테이션의 이름입니다.  
 
 6.  다음 스크린샷은 표시 되어야 하는 오류 메시지를 보여 줍니다.  
 
@@ -217,7 +217,7 @@ GPO 변경의 영향을 받는 모든 구성원 서버 또는 워크스테이션
 
 4.  **파일**을 클릭 하 고 다른 **이름으로 저장**을 클릭 합니다.  
 
-5.  **파일** 이름 상자에 **@no__t -2** 를 입력 합니다. 여기서 <Filename>은 새 배치 파일의 이름입니다.  
+5.  **파일** 이름 상자에 **<Filename>** 을 입력 합니다. 여기서 <Filename>은 새 배치 파일의 이름입니다.  
 
 ##### <a name="schedule-a-task"></a>작업 예약  
 

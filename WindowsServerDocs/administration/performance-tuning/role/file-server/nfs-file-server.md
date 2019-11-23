@@ -33,7 +33,7 @@ NFS 용 Microsoft 서비스는 혼합 된 Windows 및 UNIX 환경을 포함 하�
 
 ### <a name="tuning-parameters-for-nfs-file-servers"></a>NFS 파일 서버에 대 한 튜닝 매개 변수
 
-다음 REG @ no__t-0DWORD 레지스트리 설정은 NFS 파일 서버의 성능에 영향을 줄 수 있습니다.
+다음 REG\_DWORD 레지스트리 설정은 NFS 파일 서버의 성능에 영향을 줄 수 있습니다.
 
 -   **OptimalReads**
 
@@ -41,7 +41,7 @@ NFS 용 Microsoft 서비스는 혼합 된 Windows 및 UNIX 환경을 포함 하�
     HKLM\System\CurrentControlSet\Services\NfsServer\Parameters\OptimalReads
     ```
 
-    기본값은 0입니다. 이 매개 변수는 워크 로드 i/o 특성에 따라 파일을 열 때 파일을 열 수 있는지 여부를 결정 합니다. 파일은 @ no__t-0RANDOM @ no__t-1ACCESS 또는 FILE @ no__t-2SEQUENTIAL @ no__t-3ONLY입니다. 이 값을 1로 설정 하 여 파일 @ no__t-0RANDOM @ no__t-1ACCESS에 대 한 파일을 강제로 엽니다. FILE @ no__t-0RANDOM @ no__t-1ACCESS는 파일 시스템 및 캐시 관리자의 프리페치를 방지 합니다.
+    기본값은 0입니다. 이 매개 변수는 작업 i/o 특성에 따라 파일\_임의\_액세스를 위한 파일을 열지, 아니면 파일\_순차적\_만 열지를 결정 합니다. 파일\_임의\_액세스에 대해 파일을 열도록 하려면이 값을 1로 설정 합니다. 파일\_임의\_액세스를 사용 하면 파일 시스템 및 캐시 관리자가 프리페치 되지 않습니다.
 
     >[!NOTE]
     > 이 설정은 시스템 파일 캐시 증가에 잠재적 영향을 줄 수 있으므로 신중 하 게 평가 해야 합니다.
@@ -85,7 +85,7 @@ NFS 용 Microsoft 서비스는 혼합 된 Windows 및 UNIX 환경을 포함 하�
     HKLM\System\CurrentControlSet\Services\NfsServer\Parameters\FileHandleCacheSizeinMB
     ```
 
-    기본값은 4입니다. 이 매개 변수는 파일 핸들 캐시 항목에서 사용 되는 최대 메모리를 지정 합니다. 최소값은 1이 고 최대값은 1 @ no__t-01024 @ no__t-11024 @ no__t (1073741824)입니다.
+    기본값은 4입니다. 이 매개 변수는 파일 핸들 캐시 항목에서 사용 되는 최대 메모리를 지정 합니다. 최소값은 1이 고 최대값은 1\*1024\*1024\*1024 (1073741824)입니다.
 
 -   **LockFileHandleCacheInMemory**
 

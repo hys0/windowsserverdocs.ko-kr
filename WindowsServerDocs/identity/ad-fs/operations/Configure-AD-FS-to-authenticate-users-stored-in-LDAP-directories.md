@@ -50,7 +50,7 @@ LDAP 디렉터리에서 사용자를 인증 하도록 AD FS 팜을 구성 하려
    > [!NOTE]
    > 연결 하려는 각 LDAP 서버에 대 한 새 연결 개체를 만드는 것이 좋습니다. AD FS는 여러 복제본 LDAP 서버에 연결할 수 있으며 특정 LDAP 서버가 다운 되는 경우 자동으로 장애 조치 (failover) 됩니다. 이러한 경우에는 이러한 각 복제본 LDAP 서버에 대해 하나의 AdfsLdapServerConnection을 만든 다음 **AdfsLocalClaimsProviderTrust** cmdlet의-**LdapServerConnection** 매개 변수를 사용 하 여 연결 개체의 배열을 추가할 수 있습니다.
 
-   **참고:** LDAP 인스턴스에 바인딩하는 데 사용할 DN 및 암호에 Get 자격 증명과 유형을 사용 하려고 하면 특정 입력 형식에 대 한 사용자 인터페이스 요구 사항 (예: domain\username 또는 user@domain.tld)으로 인해 오류가 발생할 수 있습니다. 대신 다음과 같이 Convertto-html cmdlet을 사용할 수 있습니다. 아래 예제에서는 uid = admin, ou = system을 LDAP 인스턴스에 바인딩하는 데 사용할 자격 증명의 DN으로 가정 합니다.
+   **참고:** LDAP 인스턴스에 바인딩하는 데 사용 하기 위해 자격 증명을 사용 하 여 DN과 암호를 입력 하려고 하면 특정 입력 형식에 대 한 사용자 인터페이스 요구 사항 (예: domain\username 또는 user@domain.tld) 때문에 오류가 발생할 수 있습니다. 대신 다음과 같이 Convertto-html cmdlet을 사용할 수 있습니다. 아래 예제에서는 uid = admin, ou = system을 LDAP 인스턴스에 바인딩하는 데 사용할 자격 증명의 DN으로 가정 합니다.
 
    ```
    $ldapuser = ConvertTo-SecureString -string "uid=admin,ou=system" -asplaintext -force
@@ -93,9 +93,9 @@ LDAP 디렉터리에서 사용자를 인증 하도록 AD FS 팜을 구성 하려
    -OrganizationalAccountSuffix "vendors.contoso.com"
    ```
 
-   위의 예제에서는 "공급 업체" 라는 로컬 클레임 공급자 트러스트를 만듭니다. AD FS에 대 한 연결 정보를 지정 합니다 .이 로컬 클레임 공급자 트러스트는 `-LdapServerConnection` 매개 변수에 `$vendorDirectory`을 할당 하 여 나타냅니다. 1 단계에서는 특정 LDAP 디렉터리에 연결할 때 사용할 연결 문자열을 0 @no__t 할당 했습니다. 마지막으로, multi-factor authentication 정책 및 발급 권한 부여 규칙을 비롯 하 여 조건부 액세스 제어에 사용 되는 `$GivenName`, `$Surname` 및 `$CommonName` LDAP 특성 (AD FS 클레임에 매핑)을 사용 하도록 지정 합니다. AD FS 발급 된 보안 토큰에서 클레임을 통해 발급 합니다. AD FS에서 Ws-trust와 같은 활성 프로토콜을 사용 하려면 활성 권한 부여 요청을 처리할 때 로컬 클레임 공급자 트러스트를 구분할 수 AD FS 있도록 하는 OrganizationalAccountSuffix 매개 변수를 지정 해야 합니다.
+   위의 예제에서는 "공급 업체" 라는 로컬 클레임 공급자 트러스트를 만듭니다. AD FS에 대 한 연결 정보를 지정 합니다 .이 로컬 클레임 공급자 트러스트는 `$vendorDirectory`를 `-LdapServerConnection` 매개 변수에 할당 하 여이를 나타냅니다. 1 단계에서는 특정 LDAP 디렉터리에 연결할 때 사용할 연결 문자열 `$vendorDirectory` 할당 했습니다. 마지막으로, AD FS 발급 된 보안 토큰의 클레임을 통한 발급 뿐만 아니라 multi-factor authentication 정책 및 발급 권한 부여 규칙을 비롯 하 여 조건부 액세스 제어에 사용 되는 `$GivenName`, `$Surname`및 `$CommonName` LDAP AD FS 특성을 지정 합니다. AD FS에서 Ws-trust와 같은 활성 프로토콜을 사용 하려면 활성 권한 부여 요청을 처리할 때 로컬 클레임 공급자 트러스트를 구분할 수 AD FS 있도록 하는 OrganizationalAccountSuffix 매개 변수를 지정 해야 합니다.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 [AD FS 작업](../../ad-fs/AD-FS-2016-Operations.md)
 
 

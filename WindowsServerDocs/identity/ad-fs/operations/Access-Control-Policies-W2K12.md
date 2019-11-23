@@ -181,7 +181,7 @@ Windows 10 도메인 가입 및 로그온에 필요한 AD FS 끝점
     ![발급](media/Access-Control-Policies-W2K12/clientaccess3.png)  
 
 ###  <a name="scenario4"></a>시나리오 4: 지정 된 Active Directory 그룹을 제외 하 고 Office 365에 대 한 모든 외부 액세스 차단  
- 다음 예제에서는 IP 주소를 기반으로 하는 내부 클라이언트에서 액세스할 수 있도록 합니다. 지정 된 Active Directory 그룹의 개인을 제외 하 고 외부 클라이언트 IP 주소가 있는 회사 네트워크 외부에 있는 클라이언트의 액세스를 차단 합니다. 다음 단계를 사용 하 여에 올바른 발급 권한 부여 규칙 **을 추가 하십시오. Microsoft Office 365** 클레임 규칙 마법사를 사용 하 여 Id 플랫폼 신뢰 당사자 트러스트:  
+ 다음 예제에서는 IP 주소를 기반으로 하는 내부 클라이언트에서 액세스할 수 있도록 합니다. 지정 된 Active Directory 그룹의 개인을 제외 하 고 외부 클라이언트 IP 주소가 있는 회사 네트워크 외부에 있는 클라이언트 로부터의 액세스를 차단 합니다. 클레임 규칙 마법사를 사용 하 여 **Microsoft Office 365 Id 플랫폼** 신뢰 당사자 트러스트에 올바른 발급 권한 부여 규칙을 추가 하려면 다음 단계를 수행 합니다.  
 
 ##### <a name="to-create-rules-to-block-all-external-access-to-office-365-except-for-designated-active-directory-groups"></a>지정 된 Active Directory 그룹을 제외 하 고 Office 365에 대 한 모든 외부 액세스를 차단 하는 규칙을 만들려면  
 
@@ -234,13 +234,13 @@ Windows 10 도메인 가입 및 로그온에 필요한 AD FS 끝점
 > [!NOTE]
 >  Exchange Online은 현재 IPV4 및 IPV6 주소만 지원 합니다.  
 
--   단일 IP 주소: Exchange Online에 직접 연결 된 클라이언트의 IP 주소  
+-   단일 IP 주소: Exchange Online에 직접 연결 되는 클라이언트의 IP 주소  
 
 > [!NOTE]
 > - 회사 네트워크에 있는 클라이언트의 IP 주소는 조직의 아웃 바운드 프록시 또는 게이트웨이의 외부 인터페이스 IP 주소로 표시 됩니다.  
 >   -   Vpn 또는 da의 구성에 따라 VPN 또는 Microsoft DirectAccess (DA)를 통해 회사 네트워크에 연결 된 클라이언트는 내부 회사 클라이언트나 외부 클라이언트로 표시 될 수 있습니다.  
 
--   하나 이상의 IP 주소: Exchange Online에서 연결 하는 클라이언트의 IP 주소를 확인할 수 없는 경우에는 HTTP 기반 요청에 포함 될 수 있고 많은 클라이언트, 부하 분산 장치에서 지원 되는 비표준 헤더 인 x 전달-헤더의 값을 기반으로 값을 설정 합니다. 시장에 대 한 및 프록시.  
+-   하나 이상의 IP 주소: Exchange Online에서 연결 하는 클라이언트의 IP 주소를 확인할 수 없는 경우, HTTP 기반 요청에 포함할 수 있는 비표준 헤더 인 x 전달 된 헤더의 값을 기반으로 값을 설정 합니다. 클라이언트, 부하 분산 장치 및 시장의 프록시.  
 
 > [!NOTE]
 > 1. 클라이언트 IP 주소와 요청을 전달한 각 프록시의 주소를 나타내는 여러 IP 주소가 쉼표로 구분 됩니다.  
@@ -253,19 +253,19 @@ Windows 10 도메인 가입 및 로그온에 필요한 AD FS 끝점
 
 - 10.0.0.1 – 10.0.0.14  
 
-  첫째, 단일 IP 주소와 일치 하는 기본 패턴은 \b # # #\\.\\\\# # #. # # #. # # \b와 같습니다.  
+  첫째, 단일 IP 주소와 일치 하는 기본 패턴은 다음과 같습니다. \b # # #\\. # # #\\. # # #\\. # # # \b  
 
-  이를 확장 하 여 두 개의 서로 다른 IP 주소를 또는 식과 일치 시킬 수 있습니다. \b\\# # #.\\# # #.\\# # #. #&#124;# # \b \b\\#\\# #.\\# # #. # # #. # # #. # # #. # # #. # # # \b  
+  이를 확장 하 여 두 개의 서로 다른 IP 주소를 또는 식과 일치 시킬 수 있습니다. \b # # #\\. # # #\\. # # #\\. #&#124;# # \b # # #\\. # # #\\. # # #\\. # # # \b  
 
-  따라서 두 개의 주소 (예: 192.168.1.1 또는 10.0.0.1)만 일치 하는 예제는\\\b192입니다.\\168\\1. \ b&#124;\b10\\.0 .0\\\\  
+  따라서 두 개의 주소 (예: 192.168.1.1 또는 10.0.0.1)만 일치 시키는 예는 \b192\\입니다. 168\\1\\&#124;7ab\b10\\.0\\\\. 1 \ b  
 
-  이렇게 하면 원하는 수의 주소를 입력할 수 있는 방법이 제공 됩니다. 주소 범위 (예: 192.168.1.1 – 192.168.1.25)를 허용 해야 하는 경우 일치 항목은 \b192 @ no__t-0.168 @ no__t-1.1 @ no__t-2와 같이 입력 해야 합니다. ([1-9]&#124;1 [0-9]&#124;2 [0-5]) \b  
+  이렇게 하면 원하는 수의 주소를 입력할 수 있는 방법이 제공 됩니다. 주소 범위 (예: 192.168.1.1 – 192.168.1.25)를 허용 해야 하는 경우 일치 하는 문자: \b192\\. 168\\\\를 입력 해야 합니다. ([1-9]&#124;1 [0-9]&#124;2 [0-5]) \b  
 
   다음 사항에 유의하세요.  
 
 - IP 주소는 숫자가 아니라 문자열로 처리 됩니다.  
 
-- 이 규칙은 \b192\\.\\168\\1과 같이 세분화 되어 있습니다.  
+- 이 규칙은 \b192\\. 168\\\\와 같이 세분화 됩니다.  
 
 - 이 값은 192.168.1로 시작 하는 모든 값과 일치 합니다.  
 
@@ -279,9 +279,9 @@ Windows 10 도메인 가입 및 로그온에 필요한 AD FS 끝점
 
 - IP 주소의 다른 부분 일치를 시작 하지 않도록 괄호를 올바르게 배치 해야 합니다.  
 
-- 192 블록의 일치를 사용 하 여 10 개의 블록에 대 한 유사한 식을 작성할 수 있습니다. \b10 @ no__t-0.0 @ no__t-1.0 @ no__t-2. ([1-9]&#124;1 [0-4]) \b  
+- 192 블록 일치를 사용 하 여 10 개의 블록에 대 한 유사한 식을 작성할 수 있습니다. \b10\\.0\\. 0\\. ([1-9]&#124;1 [0-4]) \b  
 
-- 다음 식은 "192.168.1.1 ~ 25" 및 "10.0.0.1 ~ 14": \b192 @ no__t-0.168 @ no__t-1.1 @ no__t-2에 대 한 모든 주소와 일치 해야 합니다. ([1-9]&#124;1 [0-9]&#124;2 [0-5]) \b&#124;\b10 @ no__t-6.0 @ no__t @ no__t-8. ([1-9]&#124;1 [0-4]) \b  
+- 다음 식은 "192.168.1.1 ~ 25" 및 "10.0.0.1 ~ 14"의 모든 주소와 일치 해야 합니다. \b192\\. 168\\. 1\\. ([1-9]&#124;1 [0-9]&#124;2 [0-5]) \b&#124;\b10\\.0\\. 0\\. ([1-9]&#124;1 [0-4]) \b  
 
 ### <a name="testing-the-expression"></a>식 테스트  
  Regex 식이 매우 복잡할 수 있으므로 regex 확인 도구를 사용 하는 것이 좋습니다. "온라인 regex 식 작성기"에 대해 인터넷 검색을 수행 하는 경우 샘플 데이터에 대해 식을 사용해 볼 수 있도록 하는 몇 가지 좋은 온라인 유틸리티를 찾을 수 있습니다.  
@@ -296,7 +296,7 @@ Windows 10 도메인 가입 및 로그온에 필요한 AD FS 끝점
  Windows Server 2012 r 2의 AD FS는 다음 클레임 유형을 사용 하 여 요청 컨텍스트 정보를 제공 합니다.  
 
 ### <a name="x-ms-forwarded-client-ip"></a>X-MS 전달-클라이언트-IP  
- 클레임 유형:`http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip`  
+ 클레임 유형: `http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip`  
 
  이 AD FS 클레임은 요청을 수행 하는 사용자의 IP 주소 (예: Outlook 클라이언트)를 확인의 "최상의 시도"를 나타냅니다. 이 클레임은 요청을 전달한 모든 프록시의 주소를 포함 하 여 여러 IP 주소를 포함할 수 있습니다.  이 클레임은 HTTP에서 채워집니다. 클레임의 값은 다음 중 하나일 수 있습니다.  
 
@@ -318,7 +318,7 @@ Windows 10 도메인 가입 및 로그온에 필요한 AD FS 끝점
 >  Exchange Online은 현재 IPV4 주소만 지원 합니다. IPV6 주소는 지원 하지 않습니다.  
 
 ### <a name="x-ms-client-application"></a>X-y-클라이언트 응용 프로그램  
- 클레임 유형:`http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application`  
+ 클레임 유형: `http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application`  
 
  이 AD FS 클레임은 사용 중인 응용 프로그램에 느슨하게 해당 하는 최종 클라이언트에서 사용 하는 프로토콜을 나타냅니다.  이 클레임은 현재 Exchange Online 에서만 설정 되는 HTTP 헤더에서 채워지며, AD FS에 인증 요청을 전달할 때 헤더를 채웁니다. 응용 프로그램에 따라이 클레임의 값은 다음 중 하나가 됩니다.  
 
@@ -345,7 +345,7 @@ Windows 10 도메인 가입 및 로그온에 필요한 AD FS 끝점
     -   Microsoft Exchange. Imap  
 
 ### <a name="x-ms-client-user-agent"></a>X-y-사용자-에이전트  
- 클레임 유형:`http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-user-agent`  
+ 클레임 유형: `http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-user-agent`  
 
  이 AD FS 클레임은 클라이언트에서 서비스에 액세스 하는 데 사용 하는 장치 유형을 나타내는 문자열을 제공 합니다. 고객이 특정 유형의 스마트폰 등 특정 장치에 대 한 액세스를 차단 하려는 경우에 사용할 수 있습니다.  이 클레임에 대 한 값 예에는 아래 값이 포함 됩니다 (이에 국한 되지 않음).  
 
@@ -368,23 +368,23 @@ Windows 10 도메인 가입 및 로그온에 필요한 AD FS 끝점
   이 값이 비어 있을 수도 있습니다.  
 
 ### <a name="x-ms-proxy"></a>X-MS 프록시  
- 클레임 유형:`http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy`  
+ 클레임 유형: `http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy`  
 
  이 AD FS 클레임은 요청이 웹 응용 프로그램 프록시를 통해 전달 되었음을 나타냅니다.  이 클레임은 페더레이션 서비스 백 엔드에 인증 요청을 전달할 때 헤더를 채우는 웹 응용 프로그램 프록시를 통해 채워집니다. 그런 다음 AD FS 클레임으로 변환 합니다.  
 
  클레임의 값은 요청을 전달 하는 웹 응용 프로그램 프록시의 DNS 이름입니다.  
 
 ### <a name="insidecorporatenetwork"></a>InsideCorporateNetwork  
- 클레임 유형:`http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork`  
+ 클레임 유형: `http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork`  
 
  위의 x-ms 프록시 클레임 형식과 마찬가지로이 클레임 유형은 요청이 웹 응용 프로그램 프록시를 통과 했는지 여부를 나타냅니다. Insidecorporatenetwork은 x-y와 달리, 회사 네트워크 내부에서 페더레이션 서비스에 직접 요청을 나타내는 True를 포함 하는 부울 값입니다.  
 
 ### <a name="x-ms-endpoint-absolute-path-active-vs-passive"></a>X-y-절대 경로 (활성 vs 수동)  
- 클레임 유형:`http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path`  
+ 클레임 유형: `http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path`  
 
  이 클레임 유형은 "active" (리치) 클라이언트와 "passive" (웹 브라우저 기반) 클라이언트에서 시작 되는 요청을 확인 하는 데 사용할 수 있습니다. 이렇게 하면 Microsoft Outlook과 같은 리치 클라이언트에서 들어오는 요청이 차단 되는 동안 Outlook 웹 액세스, SharePoint Online 또는 Office 365 포털과 같은 브라우저 기반 응용 프로그램의 외부 요청이 허용 됩니다.  
 
  클레임의 값은 요청을 받은 AD FS 서비스의 이름입니다.  
 
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [AD FS 작업](../../ad-fs/AD-FS-2016-Operations.md)

@@ -89,9 +89,9 @@ Kerberos 프로토콜은 Windows 2000 이후의 기본 인증 프로토콜 이�
 
 -   [Microsoft Kerberos (Windows)](https://msdn.microsoft.com/library/aa378747(VS.85).aspx)
 
--   [ @ NO__T-1MS @ NO__T: Kerberos 프로토콜 확장 @ no__t-0
+-   [\[MS-KD\]: Kerberos 프로토콜 확장](https://msdn.microsoft.com/library/cc233855(PROT.10).aspx)
 
--   [ @ NO__T-1MS @ NO__T: 섹션(영문)을 사용자 서비스 및 제한 위임 프로토콜 사양 @ no__t-0
+-   [\[MS SFU\]: Kerberos 프로토콜 확장: 사용자 서비스 및 제한 위임 프로토콜 사양](https://msdn.microsoft.com/library/cc246071(PROT.13).aspx)
 
 -   [Kerberos SSP/AP (Windows)](https://msdn.microsoft.com/library/aa377942(VS.85).aspx)
 
@@ -114,7 +114,7 @@ Ntlm SSP (NTLM 보안 지원 공급자)는 SSPI (Security Support Provider Inter
 
 -   보안 원격 프로시저 호출 서비스 또는 DCOM 서비스
 
-위치:%windir%\Windows\System32\msv1_0.dll
+Location:%windir%\Windows\System32\ msv1_0 .dll
 
 이 공급자는이 항목의 시작 부분에 있는 **적용 대상** 목록에 지정 된 버전 및 windows Server 2003 및 windows XP에 기본적으로 포함 되어 있습니다.
 
@@ -145,7 +145,7 @@ Ntlm SSP (NTLM 보안 지원 공급자)는 SSPI (Security Support Provider Inter
 
 -   [Microsoft Digest 인증 (Windows)](https://msdn.microsoft.com/library/aa378745(VS.85).aspx)
 
--   [ @ NO__T-1MS-DPSP @ NO__T: 다이제스트 프로토콜 확장 @ no__t-0
+-   [\[MS-6psp\]: 다이제스트 프로토콜 확장](https://msdn.microsoft.com/library/cc227906(PROT.13).aspx)
 
 ### <a name="BKMK_SchannelSSP"></a>Schannel 보안 지원 공급자
 보안 채널 (Schannel)은 사용자가 보안 웹 서버에 액세스 하려고 할 때와 같이 웹 기반 서버 인증에 사용 됩니다.
@@ -183,7 +183,7 @@ DTLS는 응용 프로그램에 의해 명시적으로 호출 될 때 사용 됩�
 
 -   [TLS/SSL 기술 참조](https://technet.microsoft.com/library/cc784149(v=ws.10).aspx)
 
--   [ @ NO__T-1MS-TLSP @ NO__T: TLS (Transport Layer Security) 프로필 @ no__t-0
+-   [\[MS TLSP\]: TLS (Transport Layer Security) 프로필](https://msdn.microsoft.com/library/dd207968(PROT.13).aspx)
 
 ### <a name="BKMK_NegoSSP"></a>보안 지원 공급자 협상
 간단 하 고 보호 된 GSS-API 협상 메커니즘 (SPNEGO)은 특정 인증 프로토콜을 협상 하는 데 사용할 whichcan Negotiate SSP의 기반을 형성 합니다. 응용 프로그램에서 SSPI를 호출 하 여 네트워크에 로그온 하는 경우 요청을 처리할 SSP를 지정할 수 있습니다. 응용 프로그램에서 Negotiate SSP를 지정 하는 경우 요청을 분석 하 고 고객 구성 보안 정책에 따라 적절 한 공급자를 선택 하 여 요청을 처리 합니다.
@@ -200,9 +200,9 @@ SPNEGO는 RFC 2478에 지정 되어 있습니다.
 
 -   [Microsoft Negotiate (Windows)](https://msdn.microsoft.com/library/aa378748(VS.85).aspx)
 
--   [ @ NO__T-1MS-SPNG: 간단 하 고 보호 된 GSS-API 협상 메커니즘 (SPNEGO) 확장 @ no__t-0
+-   [\[MS-SPNG\]: 간단 하 고 보호 된 GSS-SPNEGO (API 협상 메커니즘) 확장](https://msdn.microsoft.com/library/cc247021(PROT.13).aspx)
 
--   [ @ NO__T-1MS-N2HT @ NO__T-2: Negotiate and Nego2 HTTP Authentication Protocol Specification @ no__t-0
+-   [\[N2HT\]: Negotiate and Nego2 HTTP Authentication Protocol Specification](https://msdn.microsoft.com/library/dd303576(PROT.13).aspx)
 
 ### <a name="BKMK_CredSSP"></a>자격 증명 보안 지원 공급자
 CredSSP (Credential Security Service Provider)는 새 터미널 서비스 및 원격 데스크톱 서비스 세션을 시작할 때 SSO (Single Sign-On) 사용자 환경을 제공 합니다. CredSSP를 통해 응용 프로그램은 클라이언트의 정책을 기반으로 클라이언트 컴퓨터에서 클라이언트 쪽 ssp를 사용 하 여 사용자 자격 증명을 대상 서버 (서버 쪽 SSP를 통해)에 위임할 수 있습니다. CredSSP 정책은 그룹 정책를 사용 하 여 구성 되 고 자격 증명 위임은 기본적으로 해제 되어 있습니다.
@@ -213,7 +213,7 @@ CredSSP (Credential Security Service Provider)는 새 터미널 서비스 및 �
 
 **SSP 자격 증명에 대 한 추가 리소스**
 
--   [ @ NO__T-1MS-CSSP @ NO__T: CredSSP (Credential Security Support Provider) 프로토콜 사양 @ no__t-0
+-   [\[MS-CSSP\]: CredSSP (Credential Security Support Provider) 프로토콜 사양](https://msdn.microsoft.com/library/cc226764(PROT.13).aspx)
 
 -   [터미널 서비스 로그온을 위한 자격 증명 보안 서비스 공급자 및 SSO](https://technet.microsoft.com/library/cc749211(v=ws.10).aspx)
 
@@ -284,7 +284,7 @@ Negotiate 옵션을 사용 하면 클라이언트와 서버가 허용 가능한 
 
     -   클라이언트 컴퓨터에서 나열 된 프로토콜을 모두 지원 하지 않는 경우 인증 교환이 실패 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 [Windows 인증 아키텍처](https://technet.microsoft.com/library/dn169024(v=ws.10).aspx)
 
 

@@ -59,7 +59,7 @@ ms.locfileid: "71364085"
 
 |64 비트 버전의 Windows|1세대|2세대|  
 |-------------------------------|----------------|----------------|  
-| Windows Server 2019 |&#10004;|&#10004;|  
+| Windows Server 2019 |&#10004;|&#10004;|  
 | Windows Server 2016 |&#10004;|&#10004;|  
 | Windows Server 2012 R2 |&#10004;|&#10004;|  
 | Windows Server 2012 |&#10004;|&#10004;|  
@@ -81,7 +81,7 @@ ms.locfileid: "71364085"
 
 ### <a name="centos-and-red-hat-enterprise-linux-guest-operating-system-support"></a>CentOS 및 Red Hat Enterprise Linux 게스트 운영 체제 지원
 
-다음 표에서는 1 세대 및 2 세대 가상 컴퓨터에 대 한 게스트 운영 체제로 사용할 수 있는 Red Hat Enterprise Linux @no__t 0RHEL @ no__t-1 및 CentOS 버전을 보여 줍니다.
+다음 표에서는 1 세대 및 2 세대 가상 컴퓨터에 대 한 게스트 운영 체제로 사용할 수 있는 Red Hat Enterprise Linux \(RHEL\) 및 CentOS 버전을 보여 줍니다.
 
 |운영 체제 버전|1세대|2세대|  
 |-----------------------------|----------------|----------------|  
@@ -189,16 +189,16 @@ ms.locfileid: "71364085"
 |IDE CD-ROM|가상 SCSI CD-ROM|SCSI 컨트롤러당 최대 64개의 SCSI DVD 장치 지원|  
 |레거시 BIOS|UEFI 펌웨어|보안 부팅|  
 |레거시 네트워크 어댑터|가상 네트워크 어댑터|IPv4 및 IPv6을 사용한 네트워크 부팅|  
-|플로피 컨트롤러 및 DMA 컨트롤러|플로피 컨트롤러 지원 안 함|해당 사항 없음|  
+|플로피 컨트롤러 및 DMA 컨트롤러|플로피 컨트롤러 지원 안 함|해당 없음|  
 |COM 포트용 UART(범용 비동기 수신기/송신기)|디버깅에 대한 선택적 UART|보다 빠르고 안정적|  
 |i8042 키보드 컨트롤러|소프트웨어 기반 입력|에뮬레이션이 없으므로 더 적은 리소스를 사용하며, 게스트 운영 체제의 공격 취약점 감소|  
 |PS/2 키보드|소프트웨어 기반 키보드|에뮬레이션이 없으므로 더 적은 리소스를 사용하며, 게스트 운영 체제의 공격 취약점 감소|  
 |PS/2 마우스|소프트웨어 기반 마우스|에뮬레이션이 없으므로 더 적은 리소스를 사용하며, 게스트 운영 체제의 공격 취약점 감소|  
 |S3 비디오|소프트웨어 기반 비디오|에뮬레이션이 없으므로 더 적은 리소스를 사용하며, 게스트 운영 체제의 공격 취약점 감소|  
-|PCI 버스|더 이상 필요 없음|해당 사항 없음|  
-|PIC(프로그램 가능 인터럽트 컨트롤러)|더 이상 필요 없음|해당 사항 없음|  
-|PIT(프로그램 가능 간격 타이머)|더 이상 필요 없음|해당 사항 없음|  
-|Super I/O 장치|더 이상 필요 없음|해당 사항 없음|  
+|PCI 버스|더 이상 필요 없음|해당 없음|  
+|PIC(프로그램 가능 인터럽트 컨트롤러)|더 이상 필요 없음|해당 없음|  
+|PIT(프로그램 가능 간격 타이머)|더 이상 필요 없음|해당 없음|  
+|Super I/O 장치|더 이상 필요 없음|해당 없음|  
 
 ## <a name="more-about-generation-2-virtual-machines"></a>2 세대 가상 컴퓨터에 대 한 자세한
 
@@ -251,7 +251,7 @@ COM 포트를 추가 하려면:
 > [!NOTE]  
 > 구성 된 COM 포트는 Hyper-v 관리자의 가상 머신 설정에 나열 되지 않습니다.
 
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 
 - [Hyper-v의 Linux 및 FreeBSD Virtual Machines](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)
 - [VMConnect를 사용 하 여 Hyper-v 가상 머신에서 로컬 리소스 사용](../learn-more/Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md)

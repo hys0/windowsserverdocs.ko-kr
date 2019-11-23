@@ -35,6 +35,7 @@ Windows 관리 센터 내에서 서버를 관리 하는 경우에도 동일한 �
 
 장애 조치 (failover) 클러스터 및 하이퍼 수렴 형 클러스터에 대 한 도구 확장은 전체 클러스터 하드웨어 상태, 상태 경고, 펌웨어 일관성 상태 및 보고서, 전원 소비 및 온도, 팬 및 전원 공급 장치를 표시 하는 대시보드를 제공 합니다. 상태.
 
-@no__t 0Lenovo Extension @ no__t-1 @ no__t-2Lenovo Extension @ no__t-3
+![Lenovo 확장](../../media/extend-case-study-lenovo/lenovo-4.png)
+![Lenovo Extension](../../media/extend-case-study-lenovo/lenovo-5.png)
 
 [Lenovo 웹 사이트](https://support.lenovo.com/us/en/solutions/ht507549)의 Windows 관리 센터에 대 한 Lenovo Xclarity 통합자 제품에 대해 자세히 알아보세요.

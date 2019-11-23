@@ -231,7 +231,7 @@ RSA는 RADIUS 및 otp 서버 이며 RADIUS 및 OTP를 구성 하기 전에 설�
   
     3.  이제 EDGE1의 IP 주소가 **Ip 주소** 필드에 표시 됩니다. **저장**을 클릭합니다.  
   
-11. EDGE1 서버 (AM_Config)에 대 한 구성 파일을 생성 합니다.  
+11. EDGE1 서버에 대 한 구성 파일을 생성 합니다 (AM_Config .zip).  
   
     1.  **액세스** 탭에서 **인증 에이전트**를 강조 표시 하 고 **구성 파일 생성**을 클릭 합니다.  
   
@@ -241,7 +241,7 @@ RSA는 RADIUS 및 otp 서버 이며 RADIUS 및 OTP를 구성 하기 전에 설�
   
     4.  **다운로드 완료** 대화 상자에서 **닫기** 를 클릭 합니다.  
   
-12. EDGE1 서버 (EDGE1_NodeSecret)에 대 한 노드 비밀 파일을 생성 합니다.  
+12. EDGE1 서버에 대 한 노드 암호 파일 (EDGE1_NodeSecret .zip)을 생성 합니다.  
   
     1.  **액세스** 탭에서 **인증 에이전트**를 강조 표시 하 고 **기존 관리**를 클릭 합니다.  
   
@@ -255,7 +255,7 @@ RSA는 RADIUS 및 otp 서버 이며 RADIUS 및 OTP를 구성 하기 전에 설�
   
     6.  **파일 다운로드** 대화 상자에서 **저장**을 클릭 하 고 c:\rsa 설치를 찾은 다음 **저장**을 클릭 합니다. **다운로드 완료** 대화 상자에서 **닫기** 를 클릭 합니다.  
   
-    7.  RSA 인증 관리자 미디어 \auth_mgr\windows-x86_64\am\rsa-ace_nsload\win32-5.0-x86\agent_nsload.exe에서 C:\RSA 설치로 복사 합니다.  
+    7.  RSA 인증 관리자 미디어 복사본 \ auth_mgr \windows-x86_64 \am\rsa-ace_nsload \win32-5.0-x86\ agent_nsload를 C:\RSA 설치로 복사 합니다.  
   
 ## <a name="BKMK_DAProbeUser"></a>DAProbeUser 만들기  
   
@@ -268,7 +268,7 @@ RSA는 RADIUS 및 otp 서버 이며 RADIUS 및 OTP를 구성 하기 전에 설�
   
 #### <a name="install-securid-software-token"></a>SecurID 소프트웨어 토큰 설치  
   
-1.  CLIENT1 컴퓨터에서 C:\RSA 파일 폴더를 만듭니다. RSA 컴퓨터의 C:\RSA 설치에서 C:\RSA 파일에 Software_Tokens 파일을 복사 합니다. C l i e n t 1의 C:\RSA 파일에 User1_000031701832 파일을 추출 합니다.  
+1.  CLIENT1 컴퓨터에서 C:\RSA 파일 폴더를 만듭니다. RSA 컴퓨터의 C:\RSA 설치에서 C:\RSA 파일에 파일 Software_Tokens .zip을 복사 합니다. C l i e n t 1의 C:\RSA 파일에 User1_000031701832 파일을 추출 합니다.  
   
 2.  RSA SecurID 소프트웨어 토큰 미디어 원본에 액세스 하 고 **SecurID \Token 클라이언트 앱** 폴더에서 RSASECURIDTOKEN410를 두 번 클릭 하 여 rsa SecurID 설치를 시작 합니다. **파일 열기-보안 경고** 메시지가 표시 되 면 **실행**을 클릭 합니다.  
   
@@ -284,7 +284,7 @@ RSA는 RADIUS 및 otp 서버 이며 RADIUS 및 OTP를 구성 하기 전에 설�
   
 8.  **파일에서 가져오기를**클릭 합니다.  
   
-9. **찾아보기**를 클릭 하 고 C:\rsa Files\User1_000031701832.SDTID를 선택한 다음 **열기**를 클릭 합니다.  
+9. **찾아보기**를 클릭 하 고 C:\rsa Files \ User1_000031701832를 선택 하 고 **열기**를 클릭 합니다.  
   
 10. **확인** 을 두 번 클릭합니다.  
   
@@ -295,7 +295,7 @@ RSA 인증을 수행 하도록 EDGE1을 구성 하려면 다음 절차를 따르
   
 1. EDGE1에서 Windows 탐색기를 열고 C:\RSA 파일 폴더를 만듭니다. RSA ACE 설치 미디어로 이동 합니다.  
   
-2. RSA 미디어에서 C:\RSA 파일에 agent_nsload, AM_Config 및 EDGE1_NodeSecret 파일을 복사 합니다.  
+2. RSA 미디어에서 C:\RSA 파일에 agent_nsload 파일 AM_Config, .zip 및 EDGE1_NodeSecret 파일을 복사 합니다.  
   
 3. 다음 위치에 두 zip 파일의 콘텐츠를 추출 합니다.  
   
@@ -303,11 +303,11 @@ RSA 인증을 수행 하도록 EDGE1을 구성 하려면 다음 절차를 따르
   
    2.  C:\windows\syswow64입니다  
   
-4. Agent_nsload을 C:\windows\syswow64입니다 @ no__t-0에 복사 합니다.  
+4. Agent_nsload를 C:\windows\syswow64입니다\\에 복사 합니다.  
   
 5. 관리자 권한 명령 프롬프트를 열고 C:\Windows\SysWOW64.로 이동 합니다.  
   
-6. **Agent_nsload-f nodesecret. rec-p <password>** 을 입력 합니다. 여기서 <password>는 초기 RSA 구성 중에 만든 강력한 암호입니다. Enter 키를 누릅니다.  
+6. Agent_nsload를 입력 합니다. 여기서 <password>는 초기 RSA 구성 중에 만든 강력한 암호 **<password>입니다.** Enter 키를 누릅니다.  
   
 7. C:\Windows\SysWOW64\securid을 C:\Windows\System32.에 복사 합니다.  
   
@@ -335,7 +335,7 @@ DirectAccess에 대해 OTP를 구성 하 고 구성을 확인 하려면 다음 �
   
 8.  **OTP CA Servers** 섹션에서 APP1.corp.contoso.com를 선택 하 고 **추가**를 클릭 합니다. **다음**을 클릭합니다.  
   
-9. **Otp 인증서 템플릿** 페이지에서 **찾아보기** 를 클릭 하 여 otp 인증에 대해 발급 된 인증서를 등록 하는 데 사용 되는 인증서 템플릿을 선택 하 고 **인증서 템플릿** 대화 상자에서 DAOTPLogon를 선택 합니다.. **확인**을 클릭합니다. **찾아보기** 를 클릭 하 여 원격 액세스 서버에서 OTP 인증서 등록 요청에 서명 하는 데 사용 하는 인증서를 등록 하는 데 사용 되는 인증서 템플릿을 선택 하 고 **인증서 템플릿** 대화 상자에서 **DAOTPRA**를 선택 합니다. **확인**을 클릭합니다. **다음**을 클릭합니다.  
+9. **Otp 인증서 템플릿** 페이지에서 **찾아보기** 를 클릭 하 여 otp 인증에 대해 발급 된 인증서를 등록 하는 데 사용 되는 인증서 템플릿을 선택 하 고 **인증서 템플릿** 대화 상자에서 **DAOTPLogon**를 선택 합니다. **확인**을 클릭합니다. **찾아보기** 를 클릭 하 여 원격 액세스 서버에서 OTP 인증서 등록 요청에 서명 하는 데 사용 하는 인증서를 등록 하는 데 사용 되는 인증서 템플릿을 선택 하 고 **인증서 템플릿** 대화 상자에서 **DAOTPRA**를 선택 합니다. **확인**을 클릭합니다. **다음**을 클릭합니다.  
   
 10. **원격 액세스 서버 설치** 페이지에서 **마침**을 클릭 하 고 **DirectAccess 전문가 마법사**에서 **마침** 을 클릭 합니다.  
   

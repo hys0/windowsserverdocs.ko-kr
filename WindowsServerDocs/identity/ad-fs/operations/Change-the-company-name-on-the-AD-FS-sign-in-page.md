@@ -18,7 +18,7 @@ ms.locfileid: "71407735"
 ---
 # <a name="change-the-company-name-on-the-ad-fs-sign-in-page"></a>AD FS 로그인 페이지에서 회사 이름을 변경 합니다.
  
-Sign @ no__t-0in 페이지에 표시 되는 회사 이름을 변경 하려면 다음 Windows PowerShell cmdlet 및 구문을 사용 합니다. 이 값은 기본적으로 설치하는 동안 입력한 페더레이션 서비스 표시 이름 값을 사용하여 설정됩니다.  
+페이지의 부호\-에 표시 되는 회사 이름을 변경 하려면 다음 Windows PowerShell cmdlet 및 구문을 사용 합니다. 이 값은 기본적으로 설치하는 동안 입력한 페더레이션 서비스 표시 이름 값을 사용하여 설정됩니다.  
 
 ![이름 변경](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom1.png)
   

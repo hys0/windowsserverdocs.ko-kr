@@ -22,7 +22,7 @@ ms.locfileid: "71363382"
 ---
 # <a name="using-the-get-alldrivergroups-command"></a>Get AllDriverGroups 명령을 사용 하 여
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 서버에 있는 모든 드라이버 그룹에 대 한 정보를 표시합니다.
 ## <a name="syntax"></a>구문

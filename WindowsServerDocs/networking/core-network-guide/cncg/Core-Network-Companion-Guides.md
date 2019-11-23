@@ -25,7 +25,7 @@ Windows Server 2016 동안 [핵심 네트워크 가이드](https://technet.micro
 
 핵심 네트워크 가이드를 미처 참고하기 전에 Active Directory 도메인 및 핵심 네트워크를 배포한 경우에도 부록 가이드를 사용하여 네트워크에 기능을 추가할 수 있습니다. 필수 구성 요소 목록으로 핵심 네트워크 가이드를 사용하고 부록 가이드로 추가 기능을 배포한다는 사실을 알기만 하면 됩니다. 물론 사용자 네트워크가 핵심 네트워크 가이드에서 제공하는 필수 구성 요소를 충족해야 합니다.
 
-## <a name="core-network-companion-guide-deploy-server-certificates-for-8021x-wired-and-wireless-deployments"></a>핵심 네트워크 부록 가이드: 802.1 X 유선 및 무선 배포용 서버 인증서 배포 
+## <a name="core-network-companion-guide-deploy-server-certificates-for-8021x-wired-and-wireless-deployments"></a>802.1 X 유선 및 무선 배포에 대 한 서버 인증서를 배포 하는 핵심 네트워크 부록 가이드: 
 
 이 부록 가이드에서는 네트워크 정책 서버를 실행 중인 컴퓨터에 대 한 서버 인증서를 배포 하 여 핵심 네트워크에 작성 하는 방법에 설명 \(NPS\), 원격 액세스 서비스 \(RAS\), 또는 둘 다.
 
@@ -42,7 +42,7 @@ Windows Server 2016 동안 [핵심 네트워크 가이드](https://technet.micro
 
 이 부록 가이드 Institute of Electrical and Electronics Engineers를 배포 하는 방법에 대 한 지침을 제공 하 여 핵심 네트워크에 작성 하는 방법에 설명 \(IEEE\) 802.1 X\-인증 보호 확장할 수 있는 인증 프로토콜 \ – Microsoft Challenge Handshake 인증 프로토콜 버전 2를 사용 하 여 IEEE 802.11 무선 액세스 \(PEAP\-MS\-CHAP v2\)합니다.
 
-인증 방법 PEAP @ no__t-0MS @ no__t-1CHAP v 2를 사용 하려면 네트워크 정책 @no__t 서버를 실행 하는 인증 서버에서 클라이언트에 NPS id를 증명 하기 위해 서버 인증서가 있는 무선 클라이언트를 제공 해야 합니다. 인증서를 사용 하 여 인증을 수행 하지 않고 사용자가 도메인 사용자 이름과 암호를 제공 합니다.
+인증 방법 PEAP\-MS\-CHAP v 2를 사용 하려면 네트워크 정책\) \(서버를 실행 하는 인증 서버에서 클라이언트에 NPS id를 증명 하기 위해 서버 인증서를 사용 하 여 무선 클라이언트를 제공 해야 하지만 인증서를 사용 하 여 사용자 인증이 수행 되지 않습니다. 대신 사용자가 도메인 사용자 이름과 암호를 제공 합니다.
 
 때문에 PEAP\-MS\-CHAP v2 필요는 사용자가 인증 프로세스 중 인증서가 아니라 암호 기반 자격 증명 제공, 일반적으로 더 쉽고 저렴 하 게 EAP 보다 배포\-TLS 또는 PEAP\-TLS 합니다.
 

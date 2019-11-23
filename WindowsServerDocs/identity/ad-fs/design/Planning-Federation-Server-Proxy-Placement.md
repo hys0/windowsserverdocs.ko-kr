@@ -18,7 +18,7 @@ ms.locfileid: "71408015"
 ---
 # <a name="planning-federation-server-proxy-placement"></a>페더레이션 서버 프록시 배치 계획
 
-@No__t Active Directory Federation Services를 디자인 하는 데 사용할 모든 정보를 수집한 후-0AD FS @ no__t-1 인프라를 사용 하 고 페더레이션 서버 및 웹 서버 전략을 계획 한 후에 페더레이션 서버를 어디에 배치할지를 계획할 수 있습니다. 새 디자인의 프록시. 다음 항목의 정보를 참조 하 여 페더레이션 서버 프록시를 어디에 배치할지와 계정 파트너 역할 또는 리소스 파트너 역할에 대해 구성할 지 여부를 결정할 수 있습니다.  
+Active Directory Federation Services \(AD FS\) 인프라를 디자인 하는 데 사용할 모든 정보를 수집 하 고 페더레이션 서버 및 웹 서버 전략을 계획 한 후 새 디자인에서 페더레이션 서버 프록시를 언제, 어디에 배치할지 계획할 수 있습니다. 다음 항목의 정보를 참조 하 여 페더레이션 서버 프록시를 어디에 배치할지와 계정 파트너 역할 또는 리소스 파트너 역할에 대해 구성할 지 여부를 결정할 수 있습니다.  
   
 -   [계정 파트너에서 페더레이션 서버의 역할 검토](Review-the-Role-of-the-Federation-Server-in-the-Account-Partner.md)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "71408015"
   
 페더레이션 서버 프록시를 두 가지 기본 AD FS 설계 시나리오 중 하나에 배치 하는 방법에 대 한 예제는 [배포 목표를 AD FS 디자인에 매핑](Mapping-Your-Deployment-Goals-to-an-AD-FS-Design.md)을 참조 하세요.  
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 [Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
   
 

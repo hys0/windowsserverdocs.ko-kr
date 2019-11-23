@@ -23,9 +23,9 @@ ms.locfileid: "71405966"
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-Windows Server 2016에서 소프트웨어 정의 네트워킹 \(SDN @ no__t-3을 배포할 계획인 클라우드 서비스 공급자 \(CSP @ no__t 또는 Enterprise에 대 한 작업을 수행 하는 경우 내부 DNS를 사용 하 여 호스트 된 테 넌 트 워크 로드에 DNS 서비스를 제공할 수 있습니다 @no__ t-4iDNS @ no__t-5-SDN과 통합 됩니다.
+Windows Server 2016에서 SDN\) 소프트웨어 정의 네트워킹 \(배포를 계획 하는 클라우드 서비스 공급자 \(CSP\) 또는 엔터프라이즈에 대해 작업 하는 경우 SDN과 통합 된 내부 DNS \(Idn\)를 사용 하 여 호스트 된 테 넌 트 워크 로드에 DNS 서비스를 제공할 수 있습니다.
 
-호스트 된 가상 머신 \(VMs @ no__t-1 및 응용 프로그램은 DNS에서 자체 네트워크와 인터넷의 외부 리소스 사이에 통신 해야 합니다. Idn를 사용 하면 격리 된 로컬 이름 공간 및 인터넷 리소스에 대해 DNS 이름 확인 서비스를 사용 하 여 테 넌 트를 제공할 수 있습니다.
+호스트 되는 가상 컴퓨터 \(Vm\) 및 응용 프로그램은 DNS를 사용 하 여 자체 네트워크와 인터넷의 외부 리소스에서 통신 해야 합니다. Idn를 사용 하면 격리 된 로컬 이름 공간 및 인터넷 리소스에 대해 DNS 이름 확인 서비스를 사용 하 여 테 넌 트를 제공할 수 있습니다.
 
 Idn 서비스는 Idn 프록시를 통해서가 아닌 테 넌 트 가상 네트워크에서 액세스할 수 없기 때문에 테 넌 트 네트워크의 악의적인 작업에 취약 하지 않습니다.
 
@@ -54,7 +54,7 @@ Idn 서버는 내부 DNS 영역에 대 한 권한 있는 서버 이며, 테 넌 
 
 가상 네트워크의 Vm에 대 한 모든 호스트 이름은 동일한 영역에 DNS 리소스 레코드로 저장 됩니다. 예를 들어 Idn 이라는 영역에 대해를 배포 하는 경우 해당 네트워크의 Vm에 대 한 DNS 리소스 레코드는 contoso. 로컬 영역에 저장 됩니다.
 
-테 넌 트 VM 정규화 된 도메인 이름 \(FQDNs @ no__t-1은 컴퓨터 이름 및 Virtual Network에 대 한 DNS 접미사 문자열 (GUID 형식)으로 구성 됩니다. 예를 들어 테 넌 트 이라는 테 넌 트 VM Virtual Network이 있는 경우 (예: contoso, local) VM의 FQDN은 테 넌 트입니다. *vn*. 여기서 *vn* 는 VIRTUAL NETWORK에 대 한 DNS 접미사 문자열입니다.
+Fqdn \(\) Fqdn (정규화 된 도메인 이름)은 Virtual Network에 대 한 컴퓨터 이름 및 DNS 접미사 문자열 (GUID 형식)으로 구성 됩니다. 예를 들어 테 넌 트 이라는 테 넌 트 VM Virtual Network이 있는 경우 (예: contoso, local) VM의 FQDN은 테 넌 트입니다. *vn*. 여기서 *vn* 는 VIRTUAL NETWORK에 대 한 DNS 접미사 문자열입니다.
 
 >[!NOTE]
 >패브릭 관리자는 Idn 서버로 사용 하기 위해 특별히 새 DNS 서버를 배포 하는 대신 CSP 또는 엔터프라이즈 DNS 인프라를 Idn 서버로 사용할 수 있습니다. Idn에 대 한 새 서버를 배포 하거나 기존 인프라를 사용 하는 경우에는 Idn가 Active Directory에 의존 하 여 고가용성을 제공 합니다. 따라서 Idn 서버는 Active Directory와 통합 되어야 합니다.
@@ -82,12 +82,12 @@ Idn proxy는 모든 호스트에서 실행 되 고 테 넌 트 Virtual Network D
 >[!NOTE]
 >스크립트를 사용 하 여 SDN을 배포한 경우에는 이러한 단계를 수행할 필요가 없습니다. 이러한 단계는 정보 및 문제 해결을 위해서만 제공 됩니다.
 
-### <a name="step-1-deploy-dns"></a>1단계: DNS 배포
+### <a name="step-1-deploy-dns"></a>1 단계: DNS 배포
 다음 예제 Windows PowerShell 명령을 사용 하 여 DNS 서버를 배포할 수 있습니다.
     
     Install-WindowsFeature DNS -IncludeManagementTools
     
-### <a name="step-2-configure-idns-information-in-network-controller"></a>2단계: 네트워크 컨트롤러에서 Idn 정보 구성
+### <a name="step-2-configure-idns-information-in-network-controller"></a>2 단계: 네트워크 컨트롤러에서 Idn 정보 구성
 이 스크립트 세그먼트는 관리자가 네트워크 컨트롤러에 대해 수행 하는 REST 호출로, Idn 영역 구성 (예: iDNSServer의 IP 주소 및 Idn 이름을 호스트 하는 데 사용 되는 영역)에 대해 알립니다. 
 
 ```
@@ -114,7 +114,7 @@ Method: PUT
 >[!NOTE]
 >이는 SDNExpress. p s 1에서 **구성 ConfigureIDns** 섹션에서 발췌 한 것입니다. 자세한 내용은 [스크립트를 사용 하 여 소프트웨어 정의 네트워크 인프라 배포](https://technet.microsoft.com/windows-server-docs/networking/sdn/deploy/deploy-a-software-defined-network-infrastructure-using-scripts)를 참조 하세요.
 
-### <a name="step-3-configure-the-idns-proxy-service"></a>3단계: Idn 프록시 서비스 구성
+### <a name="step-3-configure-the-idns-proxy-service"></a>3 단계: Idn 프록시 서비스 구성
 Idn 프록시 서비스는 각 Hyper-v 호스트에서 실행 되며, 테 넌 트의 가상 네트워크와 Idn 서버가 있는 실제 네트워크 간의 브리지를 제공 합니다. 모든 Hyper-v 호스트에서 다음 레지스트리 키를 만들어야 합니다.
 
 
@@ -148,7 +148,7 @@ Idn 프록시 서비스는 각 Hyper-v 호스트에서 실행 되며, 테 넌 �
 - ValueData = "aa-bb-cc-aa-/bb-cc"
 - ValueType = "String"
 
-**서버 주소 IDN:** 쉼표로 구분 된 Idn 서버 목록입니다.
+**서버 주소 idn:** 쉼표로 구분 된 Idn 서버 목록입니다.
 
 - 레지스트리 키: HKLM\SYSTEM\CurrentControlSet\Services\DNSProxy\Parameters
 - ValueName = "전달자"
@@ -160,7 +160,7 @@ Idn 프록시 서비스는 각 Hyper-v 호스트에서 실행 되며, 테 넌 �
 >[!NOTE]
 >이는 SDNExpress. p s 1에서 **구성 ConfigureIDnsProxy** 섹션에서 발췌 한 것입니다. 자세한 내용은 [스크립트를 사용 하 여 소프트웨어 정의 네트워크 인프라 배포](https://technet.microsoft.com/windows-server-docs/networking/sdn/deploy/deploy-a-software-defined-network-infrastructure-using-scripts)를 참조 하세요.
 
-### <a name="step-4-restart-the-network-controller-host-agent-service"></a>4단계: 네트워크 컨트롤러 호스트 에이전트 서비스 다시 시작
+### <a name="step-4-restart-the-network-controller-host-agent-service"></a>4 단계: 네트워크 컨트롤러 호스트 에이전트 서비스 다시 시작
 다음 Windows PowerShell 명령을 사용 하 여 네트워크 컨트롤러 호스트 에이전트 서비스를 다시 시작할 수 있습니다.
     
     Restart-Service nchostagent -Force

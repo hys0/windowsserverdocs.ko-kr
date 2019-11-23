@@ -42,7 +42,7 @@ ms.locfileid: "71408614"
 ### <a name="account-configuration"></a>계정 구성  
 현재 조직에서 스마트 카드를 사용 하지 않더라도 권한 있는 계정 및 보안 관리 호스트에 대 한 구현을 고려해 야 합니다. 관리 호스트를 포함 하는 Ou에 연결 된 GPO에서 다음 설정을 수정 하 여 모든 계정에 대해 스마트 카드 로그온을 요구 하도록 관리 호스트를 구성 해야 합니다.  
   
-**Computer Configuration\Policies\Windows FaOptions\Interactive logon: 스마트 카드 @ no__t 필요-0  
+**Computer Configuration\Policies\Windows logon logon Options\Interactive logon: 스마트 카드 필요**  
   
 이 설정을 사용 하려면 Active Directory의 개별 계정 구성에 관계 없이 모든 대화형 로그온이 스마트 카드를 사용 해야 합니다.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "71408614"
 관리 호스트 전략의 일부로 점프 서버를 구현 하는 경우 기본 제공 보안 구성 마법사를 사용 하 여 서비스, 레지스트리, 감사 및 방화벽 설정을 구성 하 여 서버의 공격 노출 영역을 줄여야 합니다. 보안 구성 마법사 구성 설정을 수집 하 고 구성 하면 모든 점프 서버에서 일관 된 기준 구성을 적용 하는 데 사용 되는 GPO로 설정을 변환할 수 있습니다. GPO를 추가로 편집 하 여 점프 서버와 관련 된 보안 설정을 구현할 수 있으며 모든 설정을 Microsoft 보안 규정 준수 관리자에서 추출한 추가 기준 설정과 결합할 수 있습니다.  
   
 ### <a name="microsoft-security-compliance-manager"></a>Microsoft Security Compliance Manager  
-[Microsoft 보안 규정 준수 관리자](https://technet.microsoft.com/library/cc677002.aspx) 는 운영 체제 버전 및 역할 구성에 따라 microsoft에서 권장 하는 보안 구성을 통합 하는 무료로 사용할 수 있는 도구로, 단일 도구와 UI에서 도메인 컨트롤러에 대 한 기본 보안 설정을 만들고 구성 하는 데 사용 됩니다. Microsoft 보안 준수 관리자 템플릿을 보안 구성 마법사 설정과 함께 사용 하 여 점프 서버가 있는 Ou에 배포 된 Gpo에서 배포 하 고 적용 하는 점프 서버에 대 한 포괄적인 구성 기준을 생성할 수 있습니다. Active Directory에 있습니다.  
+[Microsoft 보안 규정 준수 관리자](https://technet.microsoft.com/library/cc677002.aspx) 는 운영 체제 버전 및 역할 구성에 따라 microsoft에서 권장 하는 보안 구성을 통합 하 고 도메인 컨트롤러에 대 한 기본 보안 설정을 만들고 구성 하는 데 사용할 수 있는 단일 도구 및 UI로 수집 하는 무료로 사용할 수 있는 도구입니다. Microsoft 보안 준수 관리자 템플릿을 보안 구성 마법사 설정과 함께 사용 하 여 점프 서버가 있는 Ou에 배포 된 Gpo에서 배포 하 고 적용 하는 점프 서버에 대 한 포괄적인 구성 기준을 생성할 수 있습니다. Active Directory에 있습니다.  
   
 > [!NOTE]  
 > 이 문서를 작성할 당시에는 Microsoft 보안 규정 준수 관리자에 게 점프 서버 또는 다른 보안 관리 호스트에 대 한 설정이 포함 되어 있지 않지만 SCM (보안 준수 관리자)을 사용 하 여 관리에 대 한 초기 기준을 만들 수 있습니다. 호스팅해야. 그러나 호스트를 적절히 보호 하려면 매우 안전한 워크스테이션과 서버에 적절 한 추가 보안 설정을 적용 해야 합니다.  
@@ -84,7 +84,7 @@ ms.locfileid: "71408614"
 권한 있는 사용자가 대화형 로그온을 허용 해야 하며, 서버 액세스에 필요 하지 않은 다른 로그온 유형도 제거 하거나 차단 해야 합니다.  
   
 ### <a name="patch-and-configuration-management"></a>패치 및 구성 관리  
-소규모 조직에서는 WSUS (Windows 업데이트 또는 [Windows Server Update Services](https://technet.microsoft.com/windowsserver/bb332157) )와 같은 제품을 사용 하 여 Windows 시스템에 대 한 업데이트 배포를 관리할 수 있으며, 대규모 조직에서는 엔터프라이즈 패치 및 구성 관리를 구현할 수 있습니다. System Center Configuration Manager 등의 소프트웨어 일반 서버 및 워크스테이션 채우기에 업데이트를 배포 하는 데 사용 하는 메커니즘에 관계 없이 도메인 컨트롤러, 인증 기관 및 관리 호스트와 같은 매우 안전한 시스템에 대해 별도의 배포를 고려해 야 합니다. 이러한 시스템을 일반 관리 인프라에서 분리 하 여 관리 소프트웨어 또는 서비스 계정이 손상 되 면 인프라에서 가장 안전한 시스템으로 손상을 쉽게 확장할 수 없습니다.  
+소규모 조직에서는 WSUS (Windows 업데이트 또는 [Windows Server Update Services](https://technet.microsoft.com/windowsserver/bb332157) )와 같은 제품을 사용 하 여 Windows 시스템에 대 한 업데이트 배포를 관리할 수 있지만, 규모가 큰 조직은 System Center Configuration Manager와 같은 엔터프라이즈 패치 및 구성 관리 소프트웨어를 구현할 수 있습니다. 일반 서버 및 워크스테이션 채우기에 업데이트를 배포 하는 데 사용 하는 메커니즘에 관계 없이 도메인 컨트롤러, 인증 기관 및 관리 호스트와 같은 매우 안전한 시스템에 대해 별도의 배포를 고려해 야 합니다. 이러한 시스템을 일반 관리 인프라에서 분리 하 여 관리 소프트웨어 또는 서비스 계정이 손상 되 면 인프라에서 가장 안전한 시스템으로 손상을 쉽게 확장할 수 없습니다.  
   
 보안 시스템에 대 한 수동 업데이트 프로세스를 구현 해서는 안 되지만 보안 시스템을 업데이트 하기 위한 별도의 인프라를 구성 해야 합니다. 매우 큰 조직의 경우에도이 인프라는 일반적으로 전용 WSUS 서버 및 보안 시스템에 대 한 Gpo를 통해 구현할 수 있습니다.  
   

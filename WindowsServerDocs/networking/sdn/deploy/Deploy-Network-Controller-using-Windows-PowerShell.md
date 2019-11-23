@@ -1,5 +1,5 @@
 ---
-title: Windows PowerShell을 사용하여 네트워크 컨트롤러 배포
+title: Windows PowerShell을 사용한 네트워크 컨트롤러 배포
 description: 이 항목에서는 하나 이상의 컴퓨터 또는 Windows Server 2016를 실행 하는 가상 컴퓨터 (Vm)에서 네트워크 컨트롤러를 배포 하려면 Windows PowerShell을 사용 하 여 설명 합니다.
 manager: dougkim
 ms.custom: na
@@ -20,14 +20,14 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71406114"
 ---
-# <a name="deploy-network-controller-using-windows-powershell"></a>Windows PowerShell을 사용하여 네트워크 컨트롤러 배포
+# <a name="deploy-network-controller-using-windows-powershell"></a>Windows PowerShell을 사용한 네트워크 컨트롤러 배포
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 이 항목에서는 windows PowerShell을 사용 하 여 Windows Server 2016를 실행 하는 하나 이상의 Vm (가상 컴퓨터)에 네트워크 컨트롤러를 배포 하는 방법에 대 한 지침을 제공 합니다.
 
 >[!IMPORTANT]
->실제 호스트에 네트워크 컨트롤러 서버 역할을 배포 하지 마십시오. 네트워크 컨트롤러를 배포 하려면 hyper-v 호스트에 설치 된 Hyper-v 가상 컴퓨터에 네트워크 컨트롤러 서버 역할을 설치 해야 합니다 \(VM @ no__t-1. 3 개의 서로 다른 Hyper-v 호스트의 Vm에 네트워크 컨트롤러를 설치한 후 Windows PowerShell을 사용 하 여 네트워크 컨트롤러에 호스트를 추가 하 여 소프트웨어 정의 네트워킹 \(SDN @ no__t-3에 대 한 하이퍼 @ no__t-1V 호스트를 사용 하도록 설정 해야 합니다. **NetworkControllerServer**명령입니다. 이렇게 하면 SDN 소프트웨어 Load Balancer 기능을 사용할 수 있습니다. 자세한 내용은 [NetworkControllerServer](https://technet.microsoft.com/itpro/powershell/windows/network-controller/new-networkcontrollerserver)를 참조 하세요.
+>실제 호스트에 네트워크 컨트롤러 서버 역할을 배포 하지 마십시오. 네트워크 컨트롤러를 배포 하려면 hyper-v 호스트에 설치 된 VM\) \(Hyper-v 가상 컴퓨터에 네트워크 컨트롤러 서버 역할을 설치 해야 합니다. 3 개의 서로 다른\-Hyper-v 호스트에 Vm에 네트워크 컨트롤러를 설치한 후 Windows PowerShell 명령 **NetworkControllerServer**를 사용 하 여 네트워크 컨트롤러에 호스트를 추가 하 여 소프트웨어 정의 네트워킹 \(SDN\)에 대 한 하이퍼\-V 호스트를 사용 하도록 설정 해야 합니다. 이렇게 하면 SDN 소프트웨어 Load Balancer 기능을 사용할 수 있습니다. 자세한 내용은 [NetworkControllerServer](https://technet.microsoft.com/itpro/powershell/windows/network-controller/new-networkcontrollerserver)를 참조 하세요.
 
 이 항목에는 다음 섹션이 수록되어 있습니다.
 
@@ -47,10 +47,10 @@ ms.locfileid: "71406114"
 
 ## <a name="install-the-network-controller-server-role"></a>네트워크 컨트롤러 서버 역할 설치
 
-이 절차를 사용 하 여 가상 컴퓨터에 네트워크 컨트롤러 서버 역할을 설치할 수 있습니다 \(VM @ no__t-1.
+이 절차를 사용 하 여 가상 컴퓨터 \(VM\)에 네트워크 컨트롤러 서버 역할을 설치할 수 있습니다.
 
 >[!IMPORTANT]
->실제 호스트에 네트워크 컨트롤러 서버 역할을 배포 하지 마십시오. 네트워크 컨트롤러를 배포 하려면 hyper-v 호스트에 설치 된 Hyper-v 가상 컴퓨터에 네트워크 컨트롤러 서버 역할을 설치 해야 합니다 \(VM @ no__t-1. 3 개의 서로 다른 Hyper-v 호스트의 Vm에 네트워크 컨트롤러를 설치한 후 네트워크 컨트롤러에 호스트를 추가 하 여 소프트웨어 정의 네트워킹 \(SDN @ no__t-3에 대 한 하이퍼 @ no__t-1V 호스트를 사용 하도록 설정 해야 합니다. 이렇게 하면 SDN 소프트웨어 Load Balancer 기능을 사용할 수 있습니다.
+>실제 호스트에 네트워크 컨트롤러 서버 역할을 배포 하지 마십시오. 네트워크 컨트롤러를 배포 하려면 hyper-v 호스트에 설치 된 VM\) \(Hyper-v 가상 컴퓨터에 네트워크 컨트롤러 서버 역할을 설치 해야 합니다. 3 개의 서로 다른\-Hyper-v 호스트에 Vm에 네트워크 컨트롤러를 설치한 후 네트워크 컨트롤러에 호스트를 추가 하 여 소프트웨어 정의 네트워킹 \(SDN\)에 대 한 하이퍼\-V 호스트를 사용 하도록 설정 해야 합니다. 이렇게 하면 SDN 소프트웨어 Load Balancer 기능을 사용할 수 있습니다.
 
 이 절차를 수행하려면 최소한 **Administrators** 그룹의 구성원이거나 이와 동등한 자격이 있어야 합니다.  
 
@@ -90,7 +90,7 @@ New-NetworkControllerNodeObject -Name <string> -Server <String> -FaultDomain <st
 |-------------|---------------|
 |이름|**이름** 매개 변수는 클러스터에 추가 하려는 서버의 이름을 지정 합니다.|
 |서버|**서버** 매개 변수는 호스트 이름, 완벽 하 게 정규화 된 도메인 이름 (FQDN), 또는 클러스터에 추가 하려는 서버의 IP 주소를 지정 합니다. 도메인에 가입 된 컴퓨터에 대 한 FQDN이 필요 합니다.|
-|FaultDomain|**FaultDomain** 매개 변수는 클러스터에 추가 하는 서버에 대 한 오류 도메인을 지정 합니다. 이 매개 변수는 클러스터에 추가 하는 서버와 동시에 오류를 경험할 수 있는 서버를 정의 합니다. 이 오류는 전력 및 네트워킹 소스와 같은 공유 물리적 종속성 때문일 수 있습니다. 일반적으로 오류 도메인 공유 종속성 오류 도메인 트리에 있는 높은 지점에서 함께 실패할 가능성이 더 많은 서버와 관련 된 계층 구조를 나타냅니다. 런타임 중에, 네트워크 컨트롤러는 클러스터의 장애 도메인을 고려 하 고 분산 된 네트워크 컨트롤러 서비스 별도 오류 도메인에 있도록 하려고 합니다. 이 프로세스 사용 하면, 어떤 하나씩 오류 도메인 오류가 발생 한 경우 상태 및 해당 서비스의 가용성을 손상 되지 않습니다. 오류 도메인 계층 구조 형식에 지정 됩니다. 예를 들어 다음과 같은 가치를 제공해야 합니다. "Fd:/DC1/Rack1/Host1". 여기서 DC1은 데이터 센터 이름이 고 Rack1는 랙 이름 이며 Host1은 노드가 배치 된 호스트의 이름입니다.|
+|FaultDomain|**FaultDomain** 매개 변수는 클러스터에 추가 하는 서버에 대 한 오류 도메인을 지정 합니다. 이 매개 변수는 클러스터에 추가 하는 서버와 동시에 오류를 경험할 수 있는 서버를 정의 합니다. 이 오류는 전력 및 네트워킹 소스와 같은 공유 물리적 종속성 때문일 수 있습니다. 일반적으로 오류 도메인 공유 종속성 오류 도메인 트리에 있는 높은 지점에서 함께 실패할 가능성이 더 많은 서버와 관련 된 계층 구조를 나타냅니다. 런타임 중에, 네트워크 컨트롤러는 클러스터의 장애 도메인을 고려 하 고 분산 된 네트워크 컨트롤러 서비스 별도 오류 도메인에 있도록 하려고 합니다. 이 프로세스 사용 하면, 어떤 하나씩 오류 도메인 오류가 발생 한 경우 상태 및 해당 서비스의 가용성을 손상 되지 않습니다. 오류 도메인 계층 구조 형식에 지정 됩니다. 예: "Fd: / DC1/Rack1/Host1" 여기서 d c 1은 데이터 센터 이름, Rack1 랙 이름 고 Host1 노드를 배치할 호스트의 이름입니다.|
 |RestInterface|**RestInterface** 매개 변수 REPRESENTATIONAL State Transfer () 통신을 종료 하는 노드에서 인터페이스의 이름을 지정 합니다. 이 네트워크 컨트롤러 인터페이스에서 네트워크의 관리 계층 Northbound API 요청을 수신합니다.|
 |NodeCertificate|**NodeCertificate** 매개 변수는 네트워크 컨트롤러 컴퓨터 인증을 위해 사용 하는 인증서를 지정 합니다. 인증서가 필요한; 클러스터 내에서 통신에 대 한 인증서 기반 인증을 사용 하는 경우 인증서는 또한 네트워크 컨트롤러 서비스 간의 트래픽을 암호화에 사용 됩니다. 인증서 주체 이름은 노드의 DNS 이름으로 동일 해야 합니다.|
 

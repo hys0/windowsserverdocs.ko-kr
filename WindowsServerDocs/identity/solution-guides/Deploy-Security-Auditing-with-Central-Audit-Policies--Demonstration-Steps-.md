@@ -34,7 +34,7 @@ ms.locfileid: "71407118"
   
 #### <a name="to-configure-a-global-object-access-policy"></a>글로벌 개체 액세스 정책을 구성하려면  
   
-1. <strong>@No__t-1</strong>암호를 사용 하 여 contoso\administrator로 도메인 컨트롤러 d c 1에 로그인 합니다.  
+1. 암호 <strong>pass@word1</strong>를 사용 하 여 contoso\administrator로 도메인 컨트롤러 d c 1에 로그인 합니다.  
   
 2. 서버 관리자에서 **도구**를 가리킨 다음 **그룹 정책 관리**를 클릭합니다.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "71407118"
   
 #### <a name="to-update-group-policy-settings"></a>그룹 정책 설정을 업데이트하려면  
   
-1. Contoso\Administrator로 파일 서버 FILE1에 로그인 하 고 <strong>pass@word1</strong>암호를 사용 합니다.  
+1. 암호 <strong>pass@word1</strong>를 사용 하 여 파일 서버 FILE1에 contoso\Administrator로 로그인 합니다.  
   
 2. Windows 키+R을 누른 다음 **cmd**를 입력하여 명령 프롬프트 창을 엽니다.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "71407118"
   
 #### <a name="to-verify-that-the-global-object-access-policy-has-been-applied"></a>글로벌 개체 액세스 정책이 적용되었는지 확인하려면  
   
-1.  Contoso\MReid로 클라이언트 컴퓨터 CLIENT1에 로그인합니다. HYPERLINK "file:///\\ @ no__t @ no__t-2\ID_AD_FILE1 @ no__t-3\Finance" \\ \ File1\finance documents Documents 폴더로 이동한 다음 Word 문서 2를 수정 합니다.  
+1.  Contoso\MReid로 클라이언트 컴퓨터 CLIENT1에 로그인합니다. HYPERLINK "file:///\\\\\\\ ID_AD_FILE1\\\Finance" \\\ File1\finance documents Documents 폴더로 이동한 다음 Word 문서 2를 수정 합니다.  
   
 2.  contoso\administrator로 파일 서버 FILE1에 로그인합니다. 이벤트 뷰어를 열고 **Windows 로그**를 찾은 후 **보안**을 선택하고 만들거나, 수정하거나, 삭제한 파일이나 폴더에 대해 명시적인 감사 SACL을 설정하지 않았더라도 작업을 통해 감사 이벤트 **4656** 및 **4663** 이 생성되었는지 확인합니다.  
   
@@ -97,6 +97,6 @@ ms.locfileid: "71407118"
   
 -   [파일 액세스 감사 계획](Plan-for-File-Access-Auditing.md)  
   
--   [동적 액세스 제어: 시나리오 개요](Dynamic-Access-Control--Scenario-Overview.md)  
+-   [동적 Access Control: 시나리오 개요](Dynamic-Access-Control--Scenario-Overview.md)  
   
 

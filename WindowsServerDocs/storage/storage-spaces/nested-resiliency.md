@@ -18,9 +18,9 @@ ms.locfileid: "71402862"
 
 > 적용 대상: Windows Server 2019
 
-중첩 된 복원 력은 Windows Server 2019에 [스토리지 공간 다이렉트](storage-spaces-direct-overview.md) 의 새로운 기능으로,이 기능을 통해 두 서버 클러스터에서 저장소 가용성의 손실 없이 여러 하드웨어 오류를 동시에 견딜 수 있습니다. 즉, 사용자, 앱 및 가상 컴퓨터를 사용할 수 있습니다. 중단 없이 계속 실행 합니다. 이 항목에서는 작동 방식에 대해 설명 하 고, 시작 하는 단계별 지침을 제공 하 고, 가장 자주 묻는 질문에 대 한 답을 제공 합니다.
+중첩 된 복원 력은 Windows Server 2019에 [스토리지 공간 다이렉트](storage-spaces-direct-overview.md) 의 새로운 기능으로,이 기능을 통해 두 서버 클러스터는 저장소 가용성의 손실 없이 여러 하드웨어 오류를 동시에 견딜 수 있으므로 사용자, 앱 및 가상 머신은 중단 없이 계속 실행 됩니다. 이 항목에서는 작동 방식에 대해 설명 하 고, 시작 하는 단계별 지침을 제공 하 고, 가장 자주 묻는 질문에 대 한 답을 제공 합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 ### <a name="green-checkmark-iconmedianested-resiliencysupportedpng-consider-nested-resiliency-if"></a>![녹색 확인 표시 아이콘입니다.](media/nested-resiliency/supported.png) 다음과 같은 경우 중첩 된 복원 력을 고려 합니다.
 
@@ -40,9 +40,9 @@ ms.locfileid: "71402862"
 
 이는 중첩 된 복원 력이 **클래식 양방향 미러링 보다 용량 효율성이 낮으므로**사용 가능한 공간을 조금 단축 한다는 것입니다. 자세한 내용은 아래의 [용량 효율성](#capacity-efficiency) 단원을 참조 하세요.
 
-## <a name="how-it-works"></a>작동 방법
+## <a name="how-it-works"></a>작동 방식
 
-### <a name="inspiration-raid-51"></a>영감 RAID 5 + 1
+### <a name="inspiration-raid-51"></a>: RAID 5 + 1
 
 RAID 5 + 1은 중첩 된 복원 력을 이해 하는 데 도움이 되는 일종의 분산 저장소 복원 력입니다. RAID 5 + 1의 각 서버 내에서 단일 드라이브의 손실을 방지 하기 위해 RAID 5 또는 *단일 패리티*에서 로컬 복원 력을 제공 합니다. 그런 다음 두 서버 간에 두 서버를 모두 손실 하지 않도록 보호 하기 위해 RAID 1 또는 *양방향 미러링의*추가 복원 력을 제공 합니다.
 
@@ -70,7 +70,7 @@ Windows Server 2019의 스토리지 공간 다이렉트에서는 특수 RAID 하
 
   | 서버당 용량 드라이브 | 10% 미러 | 20% 미러 | 30% 미러 |
   |----------------------------|------------|------------|------------|
-  | 4                          | 35.7%      | 34.1%      | 32.6%      |
+  | 추가를 클릭합니다.                          | 35.7%      | 34.1%      | 32.6%      |
   | 5                          | 37.7%      | 35.7%      | 33.9%      |
   | 6                          | 39.1%      | 36.8%      | 34.7%      |
   | 7 이상                         | 40.0%      | 37.5%      | 35.3%      |
@@ -86,9 +86,9 @@ Windows Server 2019의 스토리지 공간 다이렉트에서는 특수 RAID 하
 
 PowerShell에서 친숙 한 저장소 cmdlet을 사용 하 여 중첩 된 복원 력이 있는 볼륨을 만들 수 있습니다.
 
-### <a name="step-1-create-storage-tier-templates"></a>1단계: 저장소 계층 템플릿 만들기
+### <a name="step-1-create-storage-tier-templates"></a>1 단계: 저장소 계층 템플릿 만들기
 
-먼저 `New-StorageTier` cmdlet을 사용 하 여 새 저장소 계층 템플릿을 만듭니다. 이 작업은 한 번만 수행 하면 되며, 새로 만드는 모든 볼륨은 이러한 템플릿을 참조할 수 있습니다. 용량 드라이브의 `-MediaType`을 지정 하 고 필요에 따라 원하는 @no__t 1을 지정 합니다. 다른 매개 변수를 수정 하지 마십시오.
+먼저 `New-StorageTier` cmdlet을 사용 하 여 새 저장소 계층 템플릿을 만듭니다. 이 작업은 한 번만 수행 하면 되며, 새로 만드는 모든 볼륨은 이러한 템플릿을 참조할 수 있습니다. 용량 드라이브의 `-MediaType` 및 필요에 따라 원하는 `-FriendlyName`를 지정 합니다. 다른 매개 변수를 수정 하지 마십시오.
 
 용량 드라이브가 HDD (하드 디스크 드라이브) 인 경우 관리자 권한으로 PowerShell을 시작 하 고 다음을 실행 합니다.
 
@@ -100,18 +100,18 @@ New-StorageTier -StoragePoolFriendlyName S2D* -FriendlyName NestedMirror -Resili
 New-StorageTier -StoragePoolFriendlyName S2D* -FriendlyName NestedParity -ResiliencySettingName Parity -MediaType HDD -NumberOfDataCopies 2 -PhysicalDiskRedundancy 1 -NumberOfGroups 1 -FaultDomainAwareness StorageScaleUnit -ColumnIsolation PhysicalDisk 
 ``` 
 
-용량 드라이브가 SSD (반도체 드라이브) 인 경우 `-MediaType`을 대신 `SSD`로 설정 합니다. 다른 매개 변수를 수정 하지 마십시오.
+용량 드라이브가 SSD (반도체 드라이브) 인 경우 `-MediaType`를 `SSD` 대신로 설정 합니다. 다른 매개 변수를 수정 하지 마십시오.
 
 > [!TIP]
-> @No__t-0을 사용 하 여 성공적으로 만든 계층이 있는지 확인 합니다.
+> `Get-StorageTier`를 사용 하 여 성공적으로 만든 계층이 있는지 확인 합니다.
 
-### <a name="step-2-create-volumes"></a>2단계: 볼륨 만들기
+### <a name="step-2-create-volumes"></a>2 단계: 볼륨 만들기
 
 그런 다음 `New-Volume` cmdlet을 사용 하 여 새 볼륨을 만듭니다.
 
 #### <a name="nested-two-way-mirror"></a>중첩 된 양방향 미러
 
-중첩 된 양방향 미러를 사용 하려면 `NestedMirror` 계층 템플릿을 참조 하 고 크기를 지정 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+중첩 양방향 미러를 사용 하려면 `NestedMirror` 계층 템플릿을 참조 하 고 크기를 지정 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
 ```PowerShell
 New-Volume -StoragePoolFriendlyName S2D* -FriendlyName Volume01 -StorageTierFriendlyNames NestedMirror -StorageTierSizes 500GB
@@ -119,13 +119,13 @@ New-Volume -StoragePoolFriendlyName S2D* -FriendlyName Volume01 -StorageTierFrie
 
 #### <a name="nested-mirror-accelerated-parity"></a>중첩 된 미러 가속 패리티
 
-중첩 된 미러 가속 패리티를 사용 하려면 `NestedMirror` 및 `NestedParity` 계층 템플릿을 모두 참조 하 고 볼륨의 각 부분에 대해 하나씩 두 개의 크기 (미러를 먼저, 패리티 초)를 지정 합니다. 예를 들어 20% 중첩 된 양방향 미러 및 80% 중첩 된 패리티의 1 500 GB 볼륨을 만들려면 다음을 실행 합니다.
+중첩 된 미러 가속 패리티를 사용 하려면 `NestedMirror` 및 `NestedParity` 계층 템플릿을 모두 참조 하 고 볼륨의 각 부분 (먼저 미러, 패리티 초)에 대해 두 개의 크기를 지정 합니다. 예를 들어 20% 중첩 된 양방향 미러 및 80% 중첩 된 패리티의 1 500 GB 볼륨을 만들려면 다음을 실행 합니다.
 
 ```PowerShell
 New-Volume -StoragePoolFriendlyName S2D* -FriendlyName Volume02 -StorageTierFriendlyNames NestedMirror, NestedParity -StorageTierSizes 100GB, 400GB
 ```
 
-### <a name="step-3-continue-in-windows-admin-center"></a>3단계: Windows 관리 센터에서 계속
+### <a name="step-3-continue-in-windows-admin-center"></a>3 단계: Windows 관리 센터에서 계속
 
 중첩 된 복원 력을 사용 하는 볼륨은 아래 스크린샷에 나와 있는 것 처럼 명확 하 게 레이블 지정 된 [Windows 관리 센터](https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/windows-admin-center) 에 표시 됩니다. 만든 후에는 스토리지 공간 다이렉트의 다른 볼륨과 마찬가지로 Windows 관리 센터를 사용 하 여 관리 하 고 모니터링할 수 있습니다.
 
@@ -133,7 +133,7 @@ New-Volume -StoragePoolFriendlyName S2D* -FriendlyName Volume02 -StorageTierFrie
 
 ### <a name="optional-extend-to-cache-drives"></a>선택 사항: 캐시 드라이브로 확장
 
-중첩 복원 력은 기본 설정을 사용 하 여 동시에 여러 용량 드라이브의 손실을 방지 하거나 한 서버와 하나의 용량 드라이브를 동시에 보호 합니다. [캐시](understand-the-cache.md) 드라이브에 대해이 보호를 확장 하기 위해 추가 고려 사항이 있습니다. 캐시 드라이브가 *여러* 용량 드라이브에 대 한 읽기 *및 쓰기* 캐싱을 종종 제공 하기 때문에 캐시 드라이브의 손실을 허용할 수 있는 유일한 방법은 다른 서버 다운은 단순히 쓰기를 캐시 하지 않고 성능에 영향을 주는 것입니다.
+중첩 복원 력은 기본 설정을 사용 하 여 동시에 여러 용량 드라이브의 손실을 방지 하거나 한 서버와 하나의 용량 드라이브를 동시에 보호 합니다. [캐시](understand-the-cache.md) 드라이브에 대해이 보호를 확장 하기 위해 추가 고려 사항이 있습니다. 캐시 드라이브에서 *여러* 용량 드라이브에 대 한 읽기 *및 쓰기* 캐싱을 제공 하기 때문에 다른 서버가 다운 되었을 때 캐시 드라이브의 손실을 허용할 수 있도록 하는 유일한 방법은 쓰기를 캐시 하지 않는 것 이지만 성능에 영향을 주는 유일한 방법입니다.
 
 이 시나리오를 해결 하기 위해 스토리지 공간 다이렉트는 두 서버 클러스터의 한 서버가 다운 된 경우 자동으로 쓰기 캐싱을 사용 하지 않도록 설정 하는 옵션을 제공 하 고 서버가 백업 된 후 쓰기 캐싱을 다시 사용 하도록 설정 합니다. 성능에 영향을 주지 않고 루틴 다시 시작을 허용 하려면 30 분 동안 서버가 중단 될 때까지 쓰기 캐싱을 사용 하지 않도록 설정 되지 않습니다. 쓰기 캐싱을 사용 하지 않도록 설정 하면 쓰기 캐시의 콘텐츠가 용량 장치에 기록 됩니다. 그런 다음 서버는 온라인 서버에서 실패 한 캐시 장치를 허용할 수 있습니다. 그러나 캐시 장치에 오류가 발생 하면 캐시에서 읽기가 지연 되거나 실패할 수 있습니다.
 
@@ -159,7 +159,7 @@ Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Storage.N
 
 ### <a name="can-i-use-nested-resiliency-with-multiple-types-of-capacity-drives"></a>여러 유형의 용량 드라이브로 중첩 된 복원 력을 사용할 수 있나요?
 
-예, 위의 [1 단계](#step-1-create-storage-tier-templates) 에서 각 계층의 `-MediaType`을 적절 하 게 지정 하면 됩니다. 예를 들어 동일한 클러스터에서 NVMe, SSD 및 HDD를 사용 하는 경우 NVMe는 캐시를 제공 하 고, 두 번째는 용량을 제공 하는 반면, `NestedMirror` 계층을 `-MediaType SSD`로 설정 하 고 `NestedParity` 계층을 `-MediaType HDD`으로 설정 합니다. 이 경우 패리티 용량 효율성은 HDD 드라이브의 수에만 의존 하므로 서버당 4 개 이상이 필요 합니다.
+예, 위의 [1 단계](#step-1-create-storage-tier-templates) 에서 각 계층의 `-MediaType`을 적절 하 게 지정 합니다. 예를 들어 동일한 클러스터에서 NVMe, SSD 및 HDD를 사용 하는 경우 NVMe는 캐시를 제공 하 고, 두 번째는 용량을 제공 하는 반면, `NestedMirror` 계층은 `-MediaType SSD`으로, `NestedParity` 계층은 `-MediaType HDD`로 설정 합니다. 이 경우 패리티 용량 효율성은 HDD 드라이브의 수에만 의존 하므로 서버당 4 개 이상이 필요 합니다.
 
 ### <a name="can-i-use-nested-resiliency-with-3-or-more-servers"></a>3 개 이상의 서버에서 중첩 된 복원 력을 사용할 수 있나요?
 
@@ -184,7 +184,7 @@ Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Storage.N
 
 자세한 내용은 [서버 제거](remove-servers.md) 항목을 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [스토리지 공간 다이렉트 개요](storage-spaces-direct-overview.md)
 - [스토리지 공간 다이렉트의 내결함성을 이해 합니다.](storage-spaces-fault-tolerance.md)

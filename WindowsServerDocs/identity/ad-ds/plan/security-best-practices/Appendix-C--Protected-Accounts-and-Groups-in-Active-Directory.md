@@ -16,11 +16,11 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71408728"
 ---
-# <a name="appendix-c-protected-accounts-and-groups-in-active-directory"></a>부록 C: Active Directory의 보호 된 계정 및 그룹
+# <a name="appendix-c-protected-accounts-and-groups-in-active-directory"></a>부록 C: Active Directory의 보호된 계정 및 그룹
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-## <a name="appendix-c-protected-accounts-and-groups-in-active-directory"></a>부록 C: Active Directory의 보호 된 계정 및 그룹
+## <a name="appendix-c-protected-accounts-and-groups-in-active-directory"></a>부록 C: Active Directory의 보호된 계정 및 그룹
 
 Active Directory 내에서 높은 권한 있는 계정 및 그룹의 기본 집합은 보호 된 계정 및 그룹으로 간주 됩니다. Active Directory에서 대부분의 개체를 사용 하는 경우 위임 된 관리자 (Active Directory 개체를 관리 하는 권한을 위임 받은 사용자)는 해당 개체에 대 한 사용 권한을 변경할 수 있습니다. 예를 들어 그룹입니다.  
 
@@ -53,7 +53,7 @@ Active Directory 내에서 높은 권한 있는 계정 및 그룹의 기본 집�
 
 #### <a name="adminsdholder"></a>AdminSDHolder
 
-AdminSDHolder 개체의 목적은 도메인의 보호 된 계정 및 그룹에 대 한 "템플릿" 권한을 제공 하는 것입니다. AdminSDHolder는 모든 Active Directory 도메인의 시스템 컨테이너에 개체로 자동으로 생성 됩니다. 해당 경로는 다음과 같습니다. **CN = AdminSDHolder, CN = System, DC = < domain_component >, DC = < domain_component >?.**  
+AdminSDHolder 개체의 목적은 도메인의 보호 된 계정 및 그룹에 대 한 "템플릿" 권한을 제공 하는 것입니다. AdminSDHolder는 모든 Active Directory 도메인의 시스템 컨테이너에 개체로 자동으로 생성 됩니다. 경로는 **cn = AdminSDHolder, cn = System, dc = < domain_component >, dc = < domain_component >?입니다** .  
 
 Administrators 그룹에서 소유 하는 Active Directory 도메인의 대부분 개체와 달리 AdminSDHolder는 Domain Admins 그룹에서 소유 합니다. 기본적으로 EAs는 도메인의 도메인 관리자 및 관리자 그룹이 될 때 도메인의 모든 AdminSDHolder 개체를 변경할 수 있습니다. 또한 AdminSDHolder의 기본 소유자는 도메인의 Domain Admins 그룹 이지만 Administrators 또는 Enterprise Admins의 구성원은 개체의 소유권을 가져올 수 있습니다.  
 
@@ -88,11 +88,11 @@ Ldp.exe를 사용 하거나 LDAP 수정 스크립트를 실행 하 여 SDProp를
 
    ![보호 된 계정 및 그룹](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_10.png)  
 
-4. @No__t-0Dn에 표시 된 대로 성공적으로 연결 되었는지 확인 합니다. (RootDSE) ** 다음 스크린샷에서 **연결** 을 클릭 하 고 **바인딩**을 클릭 합니다.  
+4. 다음 스크린샷에서 **Dn: (RootDSE)** 에 표시 된 대로 성공적으로 연결 되었는지 확인 하 고 **연결** 을 클릭 한 다음 **바인딩**을 클릭 합니다.  
 
    ![보호 된 계정 및 그룹](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_11.png)  
 
-5. **바인딩** 대화 상자에서 rootDSE 개체를 수정할 수 있는 권한이 있는 사용자 계정의 자격 증명을 입력 합니다. 해당 사용자로 로그온 한 경우 현재 로그온 한 사용자 **로 바인딩** 을 선택할 수 있습니다. **확인**을 클릭합니다.  
+5. **바인딩** 대화 상자에서 rootDSE 개체를 수정할 수 있는 권한이 있는 사용자 계정의 자격 증명을 입력 합니다. 해당 사용자로 로그온 한 경우 현재 로그온 한 사용자 **로 바인딩** 을 선택할 수 있습니다. **확인을**클릭 합니다.  
 
    ![보호 된 계정 및 그룹](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_12.png)  
 
@@ -107,7 +107,7 @@ Ldp.exe를 사용 하거나 LDAP 수정 스크립트를 실행 하 여 SDProp를
 8. 채워진 수정 대화 상자에서 실행을 클릭 하 고 AdminSDHolder 개체에 대 한 변경 내용이 해당 개체에 표시 되는지 확인 합니다.  
 
 > [!NOTE]  
-> 지정 된 권한 없는 계정이 보호 된 그룹의 멤버 자격을 수정할 수 있도록 AdminSDHolder를 수정 하는 방법에 대 한 자세한 내용은 [Appendix I: Active Directory @ no__t에서 보호 된 계정 및 그룹에 대 한 관리 계정을 만드는 중입니다.  
+> 지정 된 권한 없는 계정이 보호 된 그룹의 멤버 자격을 수정할 수 있도록 AdminSDHolder를 수정 하는 방법에 대 한 자세한 내용은 [부록 I: 보호 된 계정 및 그룹에 대 한 관리 계정 만들기 Active Directory](../../../ad-ds/manage/component-updates/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory.md)를 참조 하세요.  
 
 LDIFDE 또는 스크립트를 통해 SDProp를 수동으로 실행 하려는 경우 다음과 같이 수정 항목을 만들 수 있습니다.  
 
@@ -127,11 +127,11 @@ LDIFDE 또는 스크립트를 통해 SDProp를 수동으로 실행 하려는 경
 
    ![보호 된 계정 및 그룹](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_17.gif)  
 
-4. @No__t-0Dn에 표시 된 대로 성공적으로 연결 되었는지 확인 합니다. (RootDSE) ** 다음 스크린샷에서 **연결** 을 클릭 하 고 **바인딩**을 클릭 합니다.  
+4. 다음 스크린샷에서 **Dn: (RootDSE)** 에 표시 된 대로 성공적으로 연결 되었는지 확인 하 고 **연결** 을 클릭 한 다음 **바인딩**을 클릭 합니다.  
 
    ![보호 된 계정 및 그룹](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_18.gif)  
 
-5. **바인딩** 대화 상자에서 rootDSE 개체를 수정할 수 있는 권한이 있는 사용자 계정의 자격 증명을 입력 합니다. 해당 사용자로 로그온 한 경우 **현재 로그온 한 사용자로 바인딩**을 선택할 수 있습니다. **확인**을 클릭합니다.  
+5. **바인딩** 대화 상자에서 rootDSE 개체를 수정할 수 있는 권한이 있는 사용자 계정의 자격 증명을 입력 합니다. 해당 사용자로 로그온 한 경우 **현재 로그온 한 사용자로 바인딩**을 선택할 수 있습니다. **확인을**클릭 합니다.  
 
    ![보호 된 계정 및 그룹](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_19.gif)  
 

@@ -25,7 +25,7 @@ ms.locfileid: "71364040"
 
 <img src="../media/landing-icons/virtualization.png" style='float:left; padding:.5em;' alt="Icon showing a box with spokes"> Windows Server 2016의 가상화 기술은 소프트웨어 정의 인프라를 생성하기 위해 필요한 기본 기술 중 하나입니다. 가상화 기능은 네트워킹 및 저장소와 함께 고객에게 워크로드를 지원하기 위해 필요한 유연성을 제공합니다.
 
-Windows Server 가상화 기술에는 Hyper-v, Hyper-v 가상 스위치, 보호 된 패브릭 및 차폐 Virtual Machines \(VMs @ no__t-1에 대 한 업데이트가 포함 되어 보안, 확장성 및 안정성이 향상 됩니다. 장애 조치(failover) 클러스터링, 네트워킹 및 저장소 업데이트를 통해 Hyper-V와 함께 사용될 때 이러한 기술을 더욱 쉽게 배포 및 관리할 수 있습니다. 
+Windows Server 가상화 기술에는 Hyper-v, Hyper-v 가상 스위치 및 보호 된 패브릭 및 보호 된 패브릭 및 보호 된 Virtual Machines \(\)Vm에 대 한 업데이트가 포함 되어 보안, 확장성 및 안정성이 향상 됩니다. 장애 조치(failover) 클러스터링, 네트워킹 및 저장소 업데이트를 통해 Hyper-V와 함께 사용될 때 이러한 기술을 더욱 쉽게 배포 및 관리할 수 있습니다. 
 
 
 <ul class="cardsI panelContent">
@@ -59,8 +59,8 @@ Windows Server 가상화 기술에는 Hyper-v, Hyper-v 가상 스위치, 보호 
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>엔터프라이즈용 Windows 10: 작업에 디바이스를 사용하는 방법</h3>
-                        <p>Hyper-V 기술은 하드웨어 가상화를 통해 컴퓨팅 리소스를 제공합니다. Hyper-V는 운영 체제 및 애플리케이션을 실행하는 데 사용할 수 있도록 VM이라는 소프트웨어 버전의 컴퓨터를 생성합니다. 동시에 여러 VM을 실행할 수 있으며, 필요에 따라 VM을 생성 및 삭제할 수 있습니다. </p>
+                        <h3>엔터프라이즈를 위한 Windows 10: 작업에 대 한 장치를 사용 하는 방법</h3>
+                        <p>Hyper-V 기술은 하드웨어 가상화를 통해 컴퓨팅 리소스를 제공합니다. Hyper-V는 운영 체제 및 응용 프로그램을 실행하는 데 사용할 수 있도록 VM이라는 소프트웨어 버전의 컴퓨터를 생성합니다. 동시에 여러 VM을 실행할 수 있으며, 필요에 따라 VM을 생성 및 삭제할 수 있습니다. </p>
                     </div>
                 </div>
             </div>
@@ -80,7 +80,7 @@ Windows Server 가상화 기술에는 Hyper-v, Hyper-v 가상 스위치, 보호 
                     </div>
                     <div class="cardText">
                         <h3>Microsoft Hyper-V Server</h3>
-                        <p>Hyper-V 기술은 하드웨어 가상화를 통해 컴퓨팅 리소스를 제공합니다. Hyper-V는 운영 체제 및 애플리케이션을 실행하는 데 사용할 수 있도록 VM이라는 소프트웨어 버전의 컴퓨터를 생성합니다. 동시에 여러 VM을 실행할 수 있으며, 필요에 따라 VM을 생성 및 삭제할 수 있습니다. </p>
+                        <p>Hyper-V 기술은 하드웨어 가상화를 통해 컴퓨팅 리소스를 제공합니다. Hyper-V는 운영 체제 및 응용 프로그램을 실행하는 데 사용할 수 있도록 VM이라는 소프트웨어 버전의 컴퓨터를 생성합니다. 동시에 여러 VM을 실행할 수 있으며, 필요에 따라 VM을 생성 및 삭제할 수 있습니다. </p>
                     </div>
                 </div>
             </div>
@@ -128,7 +128,7 @@ Windows Server 가상화 기술에는 Hyper-v, Hyper-v 가상 스위치, 보호 
                     </div>
                     <div class="cardText">
                         <h3>Windows 컨테이너</h3>
-                        <p>Windows 컨테이너는 여러 개의 격리된 애플리케이션을 단일 시스템에서 실행할 수 있는 운영 체제 수준 가상화를 제공합니다. 두 가지 형식의 컨테이너 런타임이 응용 프로그램 격리 수준이 서로 다른 기능과 함께 포함되어 있습니다.</p>
+                        <p>Windows 컨테이너는 시스템 수준 가상화를 제공하기 때문에 여러 개의 격리된 응용 프로그램을 단일 시스템에서 실행할 수 있습니다. 두 가지 형식의 컨테이너 런타임이 애플리케이션 격리 수준이 서로 다른 기능과 함께 포함되어 있습니다.</p>
                     </div>
                 </div>
             </div>

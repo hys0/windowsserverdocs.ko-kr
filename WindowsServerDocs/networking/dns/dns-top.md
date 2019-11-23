@@ -27,7 +27,7 @@ ms.locfileid: "71406165"
 > -   [DNS 클라이언트의 새로운 기능](What-s-New-in-DNS-Client.md)  
 > -   [DNS 서버의 새로운 기능](What-s-New-in-DNS-Server.md)  
 > -   [DNS 정책 시나리오 가이드](deploy/DNS-Policy-Scenario-Guide.md)  
-> -   비디오: [Windows Server 2016: IPAM의 DNS 관리 @ no__t-0  
+> -   비디오: [Windows Server 2016: IPAM에서 DNS 관리](https://channel9.msdn.com/Blogs/windowsserver/Windows-Server-2016-DNS-management-in-IPAM)  
   
 Windows Server 2016에서 DNS는 서버 관리자 또는 Windows PowerShell 명령을 사용 하 여 설치할 수 있는 서버 역할입니다. 새 Active Directory 포리스트 및 도메인을 설치 하는 경우 DNS 자동으로 설치 됩니다 Active directory 포리스트 및 도메인에 대 한 글로벌 카탈로그 서버입니다.  
   

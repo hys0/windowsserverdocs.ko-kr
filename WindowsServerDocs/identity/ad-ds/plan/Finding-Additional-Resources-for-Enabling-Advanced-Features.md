@@ -22,11 +22,11 @@ ms.locfileid: "71408811"
 
 Windows Server 2008 기술 라이브러리에서 Active Directory Domain Services (AD DS)에 대 한 다음 설명서를 찾을 수 있습니다.  
   
--   Windows Server 2008 포리스트 루트 도메인을 배포 하는 방법에 대 한 자세한 내용은 [Windows server 2008 포리스트 루트 도메인 배포 \[LH @ no__t-2](assetId:///92406e8d-dc1c-4740-a00a-2c4032896dd1)를 참조 하세요.  
+-   Windows Server 2008 포리스트 루트 도메인을 배포 하는 방법에 대 한 자세한 내용은 [Windows server 2008 포리스트 루트 도메인 배포 \[LH\]](assetId:///92406e8d-dc1c-4740-a00a-2c4032896dd1)를 참조 하세요.  
   
--   Active Directory 도메인을 Windows Server 2008로 업그레이드 하는 방법에 대 한 자세한 내용은 [Active Directory 도메인을 Windows server 2008 AD DS 도메인으로 업그레이드 \[LH @ no__t-2](assetId:///9c91be5f-df14-40b2-b176-2b1852a51e61)를 참조 하세요.  
+-   Active Directory 도메인을 Windows Server 2008로 업그레이드 하는 방법에 대 한 자세한 내용은 [Active Directory 도메인을 Windows server 2008 AD DS 도메인으로 업그레이드 \[LH\]](assetId:///9c91be5f-df14-40b2-b176-2b1852a51e61)을 참조 하세요.  
   
--   AD DS를 배포 하는 방법에 대 한 자세한 내용은 Windows Server 2008 Active Directory Domain Services 설치 및 제거에 대 한 단계별 가이드 ([https://go.microsoft.com/fwlink/?LinkId=100492](https://go.microsoft.com/fwlink/?LinkId=100492))를 참조 하세요.  
+-   AD DS를 배포 하는 방법에 대 한 자세한 내용은 Windows Server 2008 Active Directory Domain Services 설치 및 제거에 대 한 단계별 가이드 ([https://go.microsoft.com/fwlink/?LinkId=100492](https://go.microsoft.com/fwlink/?LinkId=100492))를 참조 하십시오.  
   
 
 

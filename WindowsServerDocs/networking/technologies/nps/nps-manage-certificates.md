@@ -19,17 +19,17 @@ ms.locfileid: "71396200"
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-인증서 기반 인증 방법을 배포 하는 경우 (예: 확장할 수 있는 인증 프로토콜 @ no__t-0Transport Layer Security \(EAP @ no__t-2TLS @ no__t-3, Protected Extensible Authentication Protocol @ no__t-4Transport Layer Security @no__ t-5PEAP @ no__t-6TLS @ no__t-7 및 PEAP @ no__t-8Microsoft 챌린지 핸드셰이크 인증 프로토콜 버전 2 \(MS @ no__t-10CHAP v2 @ no__t-11, 모든 NPSs에 서버 인증서를 등록 해야 합니다. 서버 인증서는 다음을 수행 해야 합니다.
+EAP (Extensible Authentication Protocol\-전송 계층 보안 \(EAP\-TLS\), 보호 된 확장할 수 있는 인증 프로토콜\-전송 계층 보안 \(PEAP\-TLS\), PEAP\-Microsoft 챌린지 핸드셰이크 인증 프로토콜 버전 2 \(m\-CHAP v2\)에서 서버 인증서를 모든 NPSs에 등록 해야 합니다. 서버 인증서는 다음을 수행 해야 합니다.
 
 - [PEAP 및 EAP 요구 사항에 대 한 인증서 템플릿 구성](nps-manage-cert-requirements.md) 에 설명 된 최소 서버 인증서 요구 사항을 충족 합니다.
 
-- 클라이언트 컴퓨터에서 신뢰 하는 \(CA @ no__t-1 인증 기관에서 발급 합니다. 현재 사용자 및 로컬 컴퓨터에 대 한 신뢰할 수 있는 루트 인증 기관 인증서 저장소에 해당 인증서가 있으면 CA를 신뢰할 수 있습니다.
+- 클라이언트 컴퓨터에서 신뢰할 수 있는 CA\) \(인증 기관에서 발급 해야 합니다. 현재 사용자 및 로컬 컴퓨터에 대 한 신뢰할 수 있는 루트 인증 기관 인증서 저장소에 해당 인증서가 있으면 CA를 신뢰할 수 있습니다.
 
-다음 지침에 따라 신뢰할 수 있는 루트 CA가 타사 CA (예: Verisign) 인 배포에서 NPS 인증서를 관리할 수 있으며,를 사용 하 여 \(PKI @ no__t-1을 사용 하 여 공개 키 인프라에 대해 배포한 CA를 관리할 수 있습니다 Active Directory 인증서 서비스 \(AD CS @ no__t-3.
+다음 지침에 따라 신뢰할 수 있는 루트 CA가 타사 CA (예: Verisign) 인 배포에서 NPS 인증서를 관리할 수 있습니다. 또는 AD CS\)\(Active Directory 인증서 서비스를 사용 하 여 PKI\) \(PKI에 대해 배포한 CA입니다.
 
 ## <a name="change-the-cached-tls-handle-expiry"></a>캐시 된 TLS 핸들 만료 변경
 
-EAP @ no__t-0TLS, PEAP @ no__t-1TLS 및 PEAP @ no__t-2MS @ no__t-3CHAP v 2에 대 한 초기 인증 프로세스 중에 NPS는 연결 하는 클라이언트의 TLS 연결 속성의 일부를 캐시 합니다. 또한 클라이언트는 NPS의 TLS 연결 속성 일부를 캐시 합니다.
+EAP\-TLS, PEAP\-TLS 및 PEAP\-MS\-CHAP v 2에 대 한 초기 인증 프로세스 중에 NPS는 연결 하는 클라이언트의 TLS 연결 속성 중 일부를 캐시 합니다. 또한 클라이언트는 NPS의 TLS 연결 속성 일부를 캐시 합니다.
 
 이러한 TLS 연결 속성의 각 개별 컬렉션을 TLS 핸들 이라고 합니다.
 
@@ -50,7 +50,7 @@ Windows 10 및 Windows Server 2016를 실행 하는 컴퓨터에서 기본 TLS �
 
 ## <a name="configure-the-tls-handle-expiry-time-on-client-computers"></a>클라이언트 컴퓨터에서 TLS 핸들 만료 시간 구성
 
-이 절차를 사용 하 여 클라이언트 컴퓨터가 NPS의 TLS 핸들을 캐시 하는 시간을 변경할 수 있습니다. NPS를 성공적으로 인증 한 후 클라이언트 컴퓨터는 NPS의 TLS 연결 속성을 TLS 핸들로 캐시 합니다. TLS 핸들의 기본 기간은 10 시간 \(36000000 밀리초 @ no__t-1입니다. 다음 절차를 사용 하 여 TLS 핸들 만료 시간을 늘리거나 줄일 수 있습니다.
+이 절차를 사용 하 여 클라이언트 컴퓨터가 NPS의 TLS 핸들을 캐시 하는 시간을 변경할 수 있습니다. NPS를 성공적으로 인증 한 후 클라이언트 컴퓨터는 NPS의 TLS 연결 속성을 TLS 핸들로 캐시 합니다. TLS 핸들의 기본 기간은 10 시간 \(3600만 밀리초\)입니다. 다음 절차를 사용 하 여 TLS 핸들 만료 시간을 늘리거나 줄일 수 있습니다.
 
 멤버 자격이 **관리자**, 또는 이와 동등한 최소한이이 절차를 완료 합니다.
 
@@ -61,7 +61,7 @@ Windows 10 및 Windows Server 2016를 실행 하는 컴퓨터에서 기본 TLS �
 
 1. NPS에서 레지스트리 편집기를 엽니다.
 
-2. **HKEY @ no__t-1LOCAL @ no__t-2MACHINE\System\CurrentControlSet\Control\SecurityProviders\SCHANNEL** 레지스트리 키로 이동 합니다.
+2. **HKEY\_LOCAL\_MACHINE\System\CurrentControlSet\Control\SecurityProviders\SCHANNEL** 레지스트리 키를 찾습니다.
 
 3. **편집** 메뉴에서 **새로 만들기**를 클릭 한 다음 **키**를 클릭 합니다.
 
@@ -73,7 +73,7 @@ Windows 10 및 Windows Server 2016를 실행 하는 컴퓨터에서 기본 TLS �
 
 ## <a name="configure-the-tls-handle-expiry-time-on-npss"></a>NPSs에서 TLS 핸들 만료 시간 구성
 
-NPSs가 클라이언트 컴퓨터의 TLS 핸들을 캐시 하는 시간을 변경 하려면 다음 절차를 따르십시오. Access 클라이언트를 성공적으로 인증 한 후 NPSs는 클라이언트 컴퓨터의 TLS 연결 속성을 TLS 핸들로 캐시 합니다. TLS 핸들의 기본 기간은 10 시간 \(36000000 밀리초 @ no__t-1입니다. 다음 절차를 사용 하 여 TLS 핸들 만료 시간을 늘리거나 줄일 수 있습니다.
+NPSs가 클라이언트 컴퓨터의 TLS 핸들을 캐시 하는 시간을 변경 하려면 다음 절차를 따르십시오. Access 클라이언트를 성공적으로 인증 한 후 NPSs는 클라이언트 컴퓨터의 TLS 연결 속성을 TLS 핸들로 캐시 합니다. TLS 핸들의 기본 기간은 10 시간 \(3600만 밀리초\)입니다. 다음 절차를 사용 하 여 TLS 핸들 만료 시간을 늘리거나 줄일 수 있습니다.
 
 멤버 자격이 **관리자**, 또는 이와 동등한 최소한이이 절차를 완료 합니다.
 
@@ -84,7 +84,7 @@ NPSs가 클라이언트 컴퓨터의 TLS 핸들을 캐시 하는 시간을 변�
 
 1. NPS에서 레지스트리 편집기를 엽니다.
 
-2. **HKEY @ no__t-1LOCAL @ no__t-2MACHINE\System\CurrentControlSet\Control\SecurityProviders\SCHANNEL** 레지스트리 키로 이동 합니다.
+2. **HKEY\_LOCAL\_MACHINE\System\CurrentControlSet\Control\SecurityProviders\SCHANNEL** 레지스트리 키를 찾습니다.
 
 3. **편집** 메뉴에서 **새로 만들기**를 클릭 한 다음 **키**를 클릭 합니다.
 
@@ -106,7 +106,7 @@ NPSs가 클라이언트 컴퓨터의 TLS 핸들을 캐시 하는 시간을 변�
 
 ### <a name="to-obtain-the-sha-1-hash-of-a-trusted-root-ca-certificate"></a>신뢰할 수 있는 루트 CA 인증서의 SHA-1 해시를 가져오려면
 
-1. 실행 대화 상자 또는 Windows PowerShell에서 **mmc**를 입력 한 다음 enter 키를 누릅니다. Microsoft Management Console \(MMC @ no__t-1이 열립니다. MMC에서 **파일**을 클릭 한 다음 **Snap\in 추가/제거**를 클릭 합니다. **추가 / 제거 스냅인** 대화 상자가 열립니다.
+1. 실행 대화 상자 또는 Windows PowerShell에서 **mmc**를 입력 한 다음 enter 키를 누릅니다. Microsoft Management Console \(MMC\) 열립니다. MMC에서 **파일**을 클릭 한 다음 **Snap\in 추가/제거**를 클릭 합니다. **추가 / 제거 스냅인** 대화 상자가 열립니다.
 
 2. **스냅인 추가/제거**의 **사용 가능한 스냅인**에서 **인증서**를 두 번 클릭 합니다. 인증서 스냅인 마법사가 열립니다. **컴퓨터 계정**을 클릭 한 후 **다음**을 클릭 합니다.
 
@@ -122,9 +122,9 @@ NPSs가 클라이언트 컴퓨터의 TLS 핸들을 캐시 하는 시간을 변�
 
 8. 필드 목록에서를 스크롤하여 **지문**을 선택 합니다.
 
-9. 아래쪽 창에서 인증서의 SHA-1 해시가 표시 되는 16 진수 문자열을 표시 합니다. SHA-1 해시를 선택 하 고 복사 명령에 대 한 Windows 바로 가기 키 \(CTRL @ no__t-1C @ no__t-2를 눌러 해시를 Windows 클립보드에 복사 합니다.
+9. 아래쪽 창에서 인증서의 SHA-1 해시가 표시 되는 16 진수 문자열을 표시 합니다. SHA-1 해시를 선택 하 고 복사 명령에 대 한 Windows 바로 가기 키 \(CTRL\+C\)를 눌러 해시를 Windows 클립보드에 복사 합니다.
 
-10. SHA-1 해시를 붙여 넣을 위치를 열고, 커서를 올바르게 찾은 다음, 붙여넣기 명령에 대 한 Windows 바로 가기 키 \(CTRL @ no__t-1V no__t-2를 누릅니다. 
+10. SHA-1 해시를 붙여 넣을 위치를 열고, 커서를 올바르게 찾은 다음, 붙여넣기 명령에 대 한 Windows 바로 가기 키 \(CTRL\+V\)를 누릅니다. 
 
 인증서 및 NPS에 대 한 자세한 내용은 [PEAP 및 EAP 요구 사항에 대 한 인증서 템플릿 구성](nps-manage-cert-requirements.md)을 참조 하세요.
 

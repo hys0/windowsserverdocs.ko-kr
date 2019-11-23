@@ -73,4 +73,4 @@ rdpsign /sha1 <hash> [/q | /v |] [/l] <file_name.rdp>
   ```
   ## <a name="see-also"></a>참고 항목
   [명령줄 구문 키](command-line-syntax-key.md)
-  [원격 데스크톱 서비스&#40; 터미널 서비스 및&#41; 명령 참조](remote-desktop-services-terminal-services-command-reference.md)
+  [원격 데스크톱 서비스 & #40; 터미널 서비스 및 #41; 명령 참조](remote-desktop-services-terminal-services-command-reference.md)

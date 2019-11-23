@@ -29,7 +29,7 @@ ICMP (Internet Control Message Protocol) 에코 요청 메시지를 전송 하 �
 
 ### <a name="to-use-a-ping-test"></a>PING 테스트를 사용 하려면
 1.  명령 프롬프트 열기
-2. PING <name of adfs server> a를 입력 합니다. 예:  PING sts.contoso.com
+2. PING <name of adfs server>을 입력 합니다. 예: PING sts.contoso.com
 3. 서버에서 회신이 표시 되어야 합니다.
 
 ![Ping](media/ad-fs-tshoot-dns/dns1.png)
@@ -39,8 +39,8 @@ ICMP (Internet Control Message Protocol) 에코 요청 메시지를 전송 하 �
 
 ### <a name="to-use-a-nslookup"></a>NSLookup을 사용 하려면
 1.  명령 프롬프트 열기
-2. PING <name of adfs server> a를 입력 합니다. 예: nslookup sts.contoso.com
-3. 서버 ![NSLookup @ no__t-1에 대 한 dns 정보가 표시 되어야 합니다.
+2. PING <name of adfs server>을 입력 합니다. 예: nslookup sts.contoso.com
+3. 서버 ![서버에 대 한 dns 정보가 표시 됩니다](media/ad-fs-tshoot-dns/dns2.png)
 
 ## <a name="tracert"></a>Tracert
 경로 대상으로 보내는 제어 메시지 ICMP (Internet Protocol) 에코 요청 또는 ICMPv6 메시지 대상으로 증분 TTL (Live) 필드 값에 시간을 증가 시켜를 결정 합니다.   자세한 내용은 [Tracert](https://technet.microsoft.com/library/ff961507.aspx)를 참조 하세요.
@@ -48,8 +48,8 @@ ICMP (Internet Control Message Protocol) 에코 요청 메시지를 전송 하 �
 
 ### <a name="to-use-tracert"></a>Tracert를 사용 하려면
 1.  명령 프롬프트 열기
-2. Tracert <name of adfs server>을 입력 합니다. 예: tracert sts.contoso.com
-3. 서버에 연결 하는 데 사용 되는 대상 경로가 표시 됩니다 ![Tracert @ no__t-1
+2. Tracert <name of adfs server>를 입력 합니다. 예: tracert sts.contoso.com
+3. 서버 ![Tracert에 연결 하는 데 사용 되는 대상 경로가 표시 됩니다](media/ad-fs-tshoot-dns/dns3.png)
 
 ## <a name="next-steps"></a>다음 단계
 

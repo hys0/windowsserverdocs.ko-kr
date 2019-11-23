@@ -16,7 +16,7 @@ ms.locfileid: "71403592"
 ---
 # <a name="install-hgs-in-an-existing-bastion-forest"></a>기존 요새 포리스트에 HGS 설치 
 
->적용 대상: Windows server 2019, Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server 2019, Windows Server (반기 채널), Windows Server 2016
 
 
 ## <a name="join-the-hgs-server-to-the-existing-domain"></a>기존 도메인에 HGS 서버 조인
@@ -100,7 +100,7 @@ CNO는 클러스터의 이름을 나타내며 주로 장애 조치 (Failover) �
 VCO는 클러스터의 맨 위에 있고 DNS 서버에 등록 된 이름이 되는 HGS 서비스를 나타냅니다.
 
 > [!IMPORTANT]
-> @No__t-0을 실행 하는 사용자에 게는 Active Directory CNO 및 VCO 개체에 대 한 **모든 권한이** 필요 합니다.
+> `Initialize-HgsServer`를 실행 하는 사용자에 게는 Active Directory CNO 및 VCO 개체에 대 한 **모든 권한이** 필요 합니다.
 
 CNO 및 VCO를 빠르게 사전 준비 하려면 Active Directory 관리자에 게 다음 PowerShell 명령을 실행 합니다.
 
@@ -130,19 +130,19 @@ Set-Acl -Path $vcoPath -AclObject $acl
 
 **정책 경로:** 컴퓨터 구성 \ 로컬 정책 \ 보안 설정 \ 로컬 정책 \ 보안 설정
 
-**정책 이름:** 네트워크에서 이 컴퓨터 액세스 거부
+**정책 이름:** 네트워크에서이 컴퓨터 액세스 거부
 
 **필요한 값:** 값이 모든 로컬 계정에 대 한 네트워크 로그온을 차단 하지 않는지 확인 합니다. 그러나 로컬 관리자 계정은 안전 하 게 차단할 수 있습니다.
 
-**문서화** 장애 조치 (Failover) 클러스터링은 CLIUSR 이라는 비관리자 로컬 계정을 사용 하 여 클러스터 노드를 관리 합니다. 이 사용자에 대 한 네트워크 로그온을 차단 하면 클러스터가 올바르게 작동 하지 않습니다.
+**이유:** 장애 조치 (Failover) 클러스터링은 CLIUSR 이라는 비관리자 로컬 계정을 사용 하 여 클러스터 노드를 관리 합니다. 이 사용자에 대 한 네트워크 로그온을 차단 하면 클러스터가 올바르게 작동 하지 않습니다.
 
 ### <a name="kerberos-encryption"></a>Kerberos 암호화
 
-**정책 경로:** 컴퓨터 구성\Windows 설정\보안 설정\로컬 정책\보안 옵션
+**정책 경로:** 컴퓨터 구성 \ 보안 설정 \ 로컬 정책 \ 보안 옵션
 
 **정책 이름:** 네트워크 보안: Kerberos에 허용 된 암호화 유형 구성
 
-**작업**: 이 정책을 구성 하는 경우이 정책에서 지원 되는 암호화 유형만 사용 하도록 gMSA 계정을 [uninstall-adserviceaccount](https://docs.microsoft.com/powershell/module/addsadministration/set-adserviceaccount?view=win10-ps) 로 업데이트 해야 합니다. 예를 들어 정책에서 AES128 @ no__t-0HMAC @ no__t-1SHA1 및 AES256 @ no__t-2HMAC @ no__t-3SHA1만 허용 하는 경우-4 @no__t 실행 해야 합니다.
+**작업**:이 정책을 구성 하는 경우이 정책에서 지원 되는 암호화 유형만 사용 하도록 GMSA 계정을 [uninstall-adserviceaccount](https://docs.microsoft.com/powershell/module/addsadministration/set-adserviceaccount?view=win10-ps) 로 업데이트 해야 합니다. 예를 들어 정책에서 AES128\_HMAC\_SHA1 및 AES256\_HMAC\_SHA1을 허용 하는 경우 `Set-ADServiceAccount -Identity HGSgMSA -KerberosEncryptionType AES128,AES256`를 실행 해야 합니다.
 
 
 

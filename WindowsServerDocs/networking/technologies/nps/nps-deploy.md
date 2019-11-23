@@ -27,11 +27,11 @@ ms.locfileid: "71405421"
 >- [네트워크 정책 서버 계획](nps-plan-top.md)
 >- [네트워크 정책 서버 관리](nps-manage-top.md)
 
-Windows Server 2016 핵심 네트워크 가이드에는 네트워크 정책 서버 \(NPS @ no__t-1을 계획 하 고 설치 하는 섹션이 포함 되어 있으며,이 가이드에 제시 된 기술은 Active Directory 도메인에 NPS를 배포 하기 위한 필수 구성 요소로 제공 됩니다. 자세한 내용은 Windows Server 2016 [Core 네트워크 가이드](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/core-network-guide#BKMK_deployNPS1)의 "Deploy NPS1" 섹션을 참조 하세요.
+Windows Server 2016 핵심 네트워크 가이드에는 NPS\)\(네트워크 정책 서버 계획 및 설치에 대 한 섹션과 가이드에 제공 된 기술이 Active Directory 도메인에 NPS를 배포 하기 위한 필수 조건으로 제공 됩니다. 자세한 내용은 Windows Server 2016 [Core 네트워크 가이드](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/core-network-guide#BKMK_deployNPS1)의 "Deploy NPS1" 섹션을 참조 하세요.
 
 ## <a name="deploy-nps-certificates-for-vpn-and-8021x-access"></a>VPN 및 802.1 X 액세스를 위한 NPS 인증서 배포
 
-NPS에서 서버 인증서를 사용 해야 하는 \(EAP @ no__t-1 및 보호 된 EAP와 같은 인증 방법을 배포 하려는 경우에는 다음 [에 대 한 서버 인증서 배포 가이드를 사용 하 여 nps 인증서를 배포할 수 있습니다. 802.1 x 유선 및 무선 배포](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/cncg/server-certs/deploy-server-certificates-for-802.1x-wired-and-wireless-deployments).
+NPS에서 서버 인증서를 사용 해야 하는 EAP\) 및 보호 된 EAP \(EAP (Extensible Authentication Protocol)와 같은 인증 방법을 배포 하려는 경우 [802.1 x 유선 및 무선 배포에 대 한 서버 인증서 배포](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/cncg/server-certs/deploy-server-certificates-for-802.1x-wired-and-wireless-deployments)가이드를 사용 하 여 nps 인증서를 배포할 수 있습니다.
 
 ## <a name="deploy-nps-for-8021x-wireless-access"></a>802.1 X 무선 액세스를 위한 NPS 배포
 
@@ -39,7 +39,7 @@ NPS에서 서버 인증서를 사용 해야 하는 \(EAP @ no__t-1 및 보호 �
 
 ## <a name="deploy-nps-for-windows-10-vpn-access"></a>Windows 10 VPN 액세스용 NPS 배포
 
-NPS를 사용 하 여 Windows 10을 실행 하는 컴퓨터 및 장치를 사용 하는 원격 직원의 @no__t Always On VPN @ no__t 연결에 대 한 연결 요청을 처리할 수 있습니다.
+NPS를 사용 하 여 Windows 10을 실행 하는 컴퓨터 및 장치를 사용 하는 원격 직원에 대해 VPN\) 연결을 Always On VPN (가상 사설망 \() 연결 요청을 처리할 수 있습니다.
 
 자세한 내용은 [Windows Server 2016 및 windows 10에 대 한 원격 액세스 ALWAYS ON VPN 배포 가이드](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy)를 참조 하세요.
 

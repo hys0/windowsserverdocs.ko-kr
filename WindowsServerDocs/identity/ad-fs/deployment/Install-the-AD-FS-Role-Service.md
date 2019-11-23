@@ -28,7 +28,7 @@ ms.locfileid: "71408356"
   
 2.  **시작하기 전** 페이지에서 **다음**을 클릭합니다.  
   
-3.  **설치 유형 선택** 페이지에서 **역할 @ no__t-2Based 또는 기능 @ no__t-3based 설치**를 클릭 한 후 **다음**을 클릭 합니다.  
+3.  **설치 유형 선택** 페이지에서 **역할\-기반 또는 기능\-기반 설치**를 클릭 한 후 **다음**을 클릭 합니다.  
   
 4.  **대상 서버 선택** 페이지에서 **서버 풀에서 서버 선택**을 클릭하고 대상 컴퓨터가 선택되어 있는지 확인한 후 **다음**을 클릭합니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "71408356"
   
 6.  **기능 선택** 페이지에서 **다음**을 클릭합니다. 필요한 필수 구성 요소는 미리 선택 되어 있습니다. 다른 기능을 선택할 필요가 없습니다.  
   
-7.  **Active Directory 페더레이션 서비스 \(AD FS @ no__t-2** 페이지에서 **다음**을 클릭 합니다.  
+7.  **Active Directory 페더레이션 서비스 \(AD FS\)** 페이지에서 **다음**을 클릭 합니다.  
   
 8.  **설치 선택 확인** 페이지에서 정보를 확인 한 후 **설치**를 클릭 합니다.  
   
@@ -44,9 +44,9 @@ ms.locfileid: "71408356"
   
 ### <a name="to-install-the-ad-fs-server-role-via-windows-powershell"></a>Windows PowerShell을 통해 AD FS 서버 역할을 설치 하려면  
   
-1.  페더레이션 서버로 구성 하려는 컴퓨터에서 Windows PowerShell 명령 창을 열고 다음 명령을 `Install-windowsfeature adfs-federation –IncludeManagementTools`실행 합니다.  
+1.  페더레이션 서버로 구성 하려는 컴퓨터에서 Windows PowerShell 명령 창을 열고 다음 명령을 실행 합니다. `Install-windowsfeature adfs-federation –IncludeManagementTools`.  
   
-## <a name="see-also"></a>관련 항목 
+## <a name="see-also"></a>참고 항목 
 
 [AD FS 배포](../../ad-fs/AD-FS-Deployment.md)  
 

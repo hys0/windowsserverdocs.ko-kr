@@ -19,11 +19,11 @@ ms.locfileid: "71364606"
 ---
 # <a name="the-number-of-running-virtual-machines-configured-for-sr-iov-should-not-exceed-the-number-of-virtual-functions-available-to-the-virtual-machines"></a>SR-IOV에 대 한 구성 된 가상 컴퓨터를 실행할 수 있는 가상 컴퓨터에 사용할 수 있는 가상 함수의 수를 넘지 않아야
 
->적용 대상: Windows Server 2016
+>적용 대상: Windows Server 2016
 
 모범 사례 분석기 및 검사에 대한 자세한 내용은 [모범 사례 분석기 검사 실행 및 검사 결과 관리](https://go.microsoft.com/fwlink/p/?LinkID=223177)를 참조하세요.  
   
-|속성|설명|  
+|속성|세부 정보|  
 |-|-|  
 |**운영 체제**|Windows Server 2016|  
 |**제품/기능**|Hyper-V|  
@@ -38,7 +38,7 @@ ms.locfileid: "71364606"
 ## <a name="impact"></a>영향  
 *다음 가상 머신에서는 네트워킹 성능이 최적이 아닐 수 있습니다.*  
    
-@no__t-가상 머신 목록 >  
+가상 컴퓨터 \<목록 >  
   
 ## <a name="resolution"></a>해결 방법  
 *SR-IOV 가상 함수를 요구 하지 않는 하나 이상의 가상 컴퓨터에서 SR-IOV를 사용 하지 않도록 설정 하는 것이 좋습니다.*  

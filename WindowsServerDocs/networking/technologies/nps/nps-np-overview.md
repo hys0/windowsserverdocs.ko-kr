@@ -30,7 +30,7 @@ NPS의 네트워크 정책에 대 한 개요는이 항목을 사용할 수 있�
 
 연결 요청을 RADIUS (RADIUS(Remote Authentication Dial-In User Service)) 서버로 처리할 때 NPS는 연결 요청에 대 한 인증과 권한 부여를 모두 수행 합니다. 인증 프로세스 중에 NPS는 네트워크에 연결 하는 사용자 또는 컴퓨터의 id를 확인 합니다. 권한 부여 프로세스 중에 NPS는 사용자 또는 컴퓨터에서 네트워크에 액세스할 수 있는지 여부를 확인 합니다.
 
-이러한 결정을 위해 NPS는 NPS 콘솔에서 구성 된 네트워크 정책을 사용 합니다. 또한 NPS는 Active Directory @ no__t-0 도메인 서비스 \(AD DS @ no__t-2에 있는 사용자 계정의 전화 접속 속성을 검토 하 여 권한 부여를 수행 합니다.
+이러한 결정을 위해 NPS는 NPS 콘솔에서 구성 된 네트워크 정책을 사용 합니다. 또한 NPS는 Active Directory&reg; 도메인 서비스\) AD DS \(에서 사용자 계정의 전화 접속 속성을 검사 하 여 권한 부여를 수행 합니다.
 
 ## <a name="network-policies---an-ordered-set-of-rules"></a>네트워크 정책-정렬 된 규칙 집합
 

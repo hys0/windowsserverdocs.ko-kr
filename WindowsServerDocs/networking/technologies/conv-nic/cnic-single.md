@@ -22,14 +22,14 @@ ms.locfileid: "71405795"
 
 이 항목에서는 Hyper-v 호스트에서 단일 NIC를 사용 하 여 수렴 형 NIC를 구성 하는 지침을 제공 합니다.
 
-이 항목의 예제 구성에서는 두 개의 Hyper-v 호스트, **Hyper-v 호스트 A**및 **hyper-v 호스트 B**에 대해 설명 합니다. 두 호스트에 모두 단일 물리적 NIC (pNIC)가 설치 되어 있고 Nic가 랙 \(Cno__t-1 실제 스위치의 상단에 연결 되어 있습니다. 또한 호스트는 192.168.1/24와 동일한 서브넷에 있습니다.
+이 항목의 예제 구성에서는 두 개의 Hyper-v 호스트, **Hyper-v 호스트 A**및 **hyper-v 호스트 B**에 대해 설명 합니다. 두 호스트에 모두 단일 물리적 NIC (pNIC)가 설치 되어 있고 Nic가 랙 \(에 연결 되어\) 실제 스위치를 사용할 수 있습니다. 또한 호스트는 192.168.1/24와 동일한 서브넷에 있습니다.
 
 ![Hyper-V 호스트](../../media/Converged-NIC/1-single-test-conn.jpg)
 
 
 ## <a name="step-1-test-the-connectivity-between-source-and-destination"></a>1단계. 원본 및 대상 간의 연결 테스트
 
-실제 NIC가 대상 호스트에 연결할 수 있는지 확인 합니다. 이 테스트는 계층 3 \(L3 @ no__t-1 또는 IP 계층을 사용 하 여 연결을 보여 주며 계층 2 \(L2 @ no__t-3을 사용 합니다.
+실제 NIC가 대상 호스트에 연결할 수 있는지 확인 합니다. 이 테스트는 계층 3 \(L3\) 또는 IP 계층을 사용 하 여 연결을 보여 주며 L2\)\(
 
 1. 네트워크 어댑터 속성을 봅니다.
 
@@ -40,9 +40,9 @@ ms.locfileid: "71405795"
    _**검색**_  
 
 
-   | 이름 |    인터페이스 설명     | ifIndex | Status |    Mac     | /%Linkspeed |
+   | 이름 |    인터페이스 설명     | ifIndex | 상태 |    Mac     | /%Linkspeed |
    |------|-----------------------------|---------|--------|-------------------|-----------|
-   |  M 1  | Mellanox Connectx-3-3 Pro ... |    4    |   위쪽   | 7C-FE-90-8F-A1 |  40 Gbps  |
+   |  M 1  | Mellanox Connectx-3-3 Pro ... |    추가를 클릭합니다.    |   위쪽   | 7C-FE-90-8F-A1 |  40 Gbps  |
 
    ---
 
@@ -159,9 +159,9 @@ ms.locfileid: "71405795"
 
 많은 네트워크 구성에서 Vlan을 사용 하며, 네트워크에서 Vlan을 사용 하려는 경우 Vlan을 구성 하 여 이전 테스트를 반복 해야 합니다. 또한 RDMA 서비스에 RoCE를 사용 하려는 경우 Vlan을 사용 하도록 설정 해야 합니다.
 
-이 단계에서는 Nic가 **액세스** 모드입니다. 그러나이 가이드의 뒷부분에서 hyper-v 가상 스위치 \(vSwitch\) 를 만들 때 VLAN 속성은 vSwitch 포트 수준에서 적용 됩니다. 
+이 단계에서는 Nic가 **액세스** 모드입니다. 그러나이 가이드의 뒷부분에서 Hyper-v 가상 스위치 \(vSwitch\)를 만들 때 VLAN 속성은 vSwitch 포트 수준에서 적용 됩니다. 
 
-스위치는 여러 vlan을 호스트할 수 있으므로, 랙 \(\) 연결 물리적 스위치의 상단에 호스트가 트렁크 모드에서 구성 된 포트를 갖도록 해야 합니다.
+스위치는 여러 Vlan을 호스트할 수 있으므로, 랙 \(에\) 물리적 스위치를 설정 하 여 호스트가 트렁크 모드에서 구성 된 포트를 갖도록 해야 합니다.
 
 >[!NOTE]
 >스위치에서 트렁크 모드를 구성 하는 방법에 대 한 지침은 해당 하는 스위치 설명서를 참조 하세요.
@@ -209,9 +209,9 @@ ms.locfileid: "71405795"
    _**검색**_
 
 
-   | 이름 |          인터페이스 설명           | ifIndex | Status |    Mac     | /%Linkspeed |
+   | 이름 |          인터페이스 설명           | ifIndex | 상태 |    Mac     | /%Linkspeed |
    |------|-----------------------------------------|---------|--------|-------------------|-----------|
-   |  M 1  | Mellanox Connectx-3 Pro 이더넷 Ada ... |    4    |   위쪽   | 7C-FE-90-8F-A1 |  40 Gbps  |
+   |  M 1  | Mellanox Connectx-3 Pro 이더넷 Ada ... |    추가를 클릭합니다.    |   위쪽   | 7C-FE-90-8F-A1 |  40 Gbps  |
 
    ---
 
@@ -224,15 +224,15 @@ ms.locfileid: "71405795"
    Test-NetConnection 192.168.1.5
    ```
 
-## <a name="step-4-configure-quality-of-service-qos"></a>4단계. 서비스 \(품질 QoS 구성\)
+## <a name="step-4-configure-quality-of-service-qos"></a>4단계. QoS\) 서비스 품질 \(구성
 
 >[!NOTE]
 >서로 통신 하는 모든 호스트에서 다음 DCB 및 QoS 구성 단계를 모두 수행 해야 합니다.
 
-1. 각 hyper-v 호스트에 \(데이터\) 센터 브리징 DCB를 설치 합니다.
+1. 각 Hyper-v 호스트에 데이터 센터 브리징 \(DCB\)를 설치 합니다.
 
    - RDMA 서비스용 iWarp을 사용 하는 네트워크 구성의 경우 **선택 사항** 입니다.
-   - RDMA 서비스\) 의 경우 roce \(를 사용 하는 네트워크 구성에 **필요** 합니다.
+   - RoCE를 사용 하는 네트워크 구성 \(RDMA 서비스용 모든 버전\) **필요** 합니다.
 
    ```PowerShell
    Install-WindowsFeature Data-Center-Bridging
@@ -255,7 +255,7 @@ ms.locfileid: "71405795"
    |   매개 변수    |          값           |
    |----------------|--------------------------|
    |      이름      |           SMB            |
-   |     소유자      | 그룹 정책 \(컴퓨터\) |
+   |     소유자      | 그룹 정책 \(Machine\) |
    | NetworkProfile |           모두            |
    |   우선 순위   |           127            |
    |   JobObject    |          &nbsp;          |
@@ -280,7 +280,7 @@ ms.locfileid: "71405795"
    |    1     |  False  |  전역   | &nbsp;  | &nbsp;  |
    |    2     |  False  |  전역   | &nbsp;  | &nbsp;  |
    |    3     |  True   |  전역   | &nbsp;  | &nbsp;  |
-   |    4     |  False  |  전역   | &nbsp;  | &nbsp;  |
+   |    추가를 클릭합니다.     |  False  |  전역   | &nbsp;  | &nbsp;  |
    |    5     |  False  |  전역   | &nbsp;  | &nbsp;  |
    |    6     |  False  |  전역   | &nbsp;  | &nbsp;  |
    |    7     |  False  |  전역   | &nbsp;  | &nbsp;  |
@@ -299,8 +299,8 @@ ms.locfileid: "71405795"
 
    _**검색**_
 
-   **Name**: M 1  
-   **Enabled**: True  
+   **이름**: M1  
+   **사용**: True  
 
    _**역량**_   
 
@@ -330,14 +330,14 @@ ms.locfileid: "71405795"
    _**OperationalClassifications:**_  
 
 
-   | Protocol  | 포트/유형 | 우선 순위 |
+   | 프로토콜  | 포트/유형 | 우선 순위 |
    |-----------|-----------|----------|
    |  기본값  |  &nbsp;   |    0     |
    | NetDirect |    445    |    3     |
 
    ---
 
-5. SMB 다이렉트 \(RDMA @ no__t-1에 대 한 대역폭의 비율을 예약 합니다.
+5. SMB 다이렉트 \(RDMA\)에 대 한 대역폭 비율을 예약 합니다.
 
     이 예에서는 30% 대역폭 예약이 사용 됩니다. 저장소 트래픽에 필요한 항목을 나타내는 값을 선택 해야 합니다. 
 
@@ -415,9 +415,9 @@ VSwitch를 만들고 RDMA (수렴 형 NIC)로 전환 하기 전에 패브릭이 
 
    ---
 
-3. [Diskspd .exe 유틸리티](https://aka.ms/diskspd) 를 다운로드 하 여 C:\TEST로 압축을 풉니다.\.
+3. [Diskspd .exe 유틸리티](https://aka.ms/diskspd) 를 다운로드 하 고 C:\TEST로 압축을 풉니다\.
 
-4. [테스트 RDMA powershell 스크립트](https://github.com/Microsoft/SDN/blob/master/Diagnostics/Test-Rdma.ps1) 를 로컬 드라이브의 테스트 폴더 (예: C:\TEST @ no__t-1)에 다운로드 합니다.
+4. [테스트 RDMA powershell 스크립트](https://github.com/Microsoft/SDN/blob/master/Diagnostics/Test-Rdma.ps1) 를 로컬 드라이브의 테스트 폴더 (예: C:\TEST\.에 다운로드 합니다.
 
 5. **Test-Rdma** PowerShell 스크립트를 실행 하 여 ifIndex 값을 동일한 VLAN에 있는 원격 어댑터의 IP 주소와 함께 스크립트에 전달 합니다.<p>이 예제에서 스크립트는 원격 네트워크 어댑터 IP 주소 192.168.1.5에 **ifIndex** 값 14를 전달 합니다.
 
@@ -493,15 +493,15 @@ Hyper-v 스위치를 만들기 위한 준비에서는 위에서 설치한 VLAN �
    _**검색**_
 
 
-   |         이름          |        인터페이스 설명         | ifIndex | Status |    Mac     | /%Linkspeed |
+   |         이름          |        인터페이스 설명         | ifIndex | 상태 |    Mac     | /%Linkspeed |
    |-----------------------|-------------------------------------|---------|--------|-------------------|-----------|
-   | vEthernet \(VMSTEST @ no__t-1 | Hyper-v 가상 이더넷 어댑터 #2 |   27    |   위쪽   | E4-1D-07-40-71 |  40 Gbps  |
+   | vEthernet \(VMSTEST\) | Hyper-v 가상 이더넷 어댑터 #2 |   27    |   위쪽   | E4-1D-07-40-71 |  40 Gbps  |
 
    ---
 
 3. 다음 두 가지 방법 중 하나로 호스트 vNIC를 관리 합니다. 
 
-   - **Get-netadapter** view는 "vEthernet \(VMSTEST @ no__t" 이름을 기반으로 작동 합니다. 모든 네트워크 어댑터 속성이이 보기에 표시 되는 것은 아닙니다.
+   - **Get-netadapter** view는 "vEthernet \(VMSTEST\)" 이름에 따라 작동 합니다. 모든 네트워크 어댑터 속성이이 보기에 표시 되는 것은 아닙니다.
    - **VMNetworkAdapter** view는 "vEthernet" 접두사를 삭제 하 고, vm 이름을 사용 하기만 하면 됩니다. 좋습니다. 
 
    ```PowerShell
@@ -511,7 +511,7 @@ Hyper-v 스위치를 만들기 위한 준비에서는 위에서 설치한 VLAN �
    _**검색**_
 
 
-   |         이름         | IsManagementOs |        VMName        |  SwitchName  | Mac | Status | IPAddresses |
+   |         이름         | IsManagementOs |        VMName        |  SwitchName  | Mac | 상태 | IPAddresses |
    |----------------------|----------------|----------------------|--------------|------------|--------|-------------|
    | CORP-외부 전환 |      True      | CORP-외부 전환 | 001B785768AA |    확인을    | &nbsp; |             |
    |       VMSTEST        |      True      |       VMSTEST        | E41D2D074071 |    확인을    | &nbsp; |             |
@@ -547,7 +547,7 @@ Hyper-v 스위치를 만들기 위한 준비에서는 위에서 설치한 VLAN �
 
    | VMName | VMNetworkAdapterName |  모드  | VlanList |
    |--------|----------------------|--------|----------|
-   | &nbsp; |       VMSTEST        | 액세스 권한 |   101    |
+   | &nbsp; |       VMSTEST        | 액세스 |   101    |
 
    ---  
 
@@ -584,7 +584,7 @@ Hyper-v 스위치를 만들기 위한 준비에서는 위에서 설치한 VLAN �
 
    _**검색**_
 
-    이름: VMSTEST IeeePriorityTag: 켜짐
+    이름: VMSTEST IeeePriorityTag: On
 
 
 2. 네트워크 어댑터 RDMA 정보를 확인 합니다. 
@@ -598,7 +598,7 @@ Hyper-v 스위치를 만들기 위한 준비에서는 위에서 설치한 VLAN �
 
    |         이름          |        인터페이스 설명         | Enabled |
    |-----------------------|-------------------------------------|---------|
-   | vEthernet \(VMSTEST @ no__t-1 | Hyper-v 가상 이더넷 어댑터 #2 |  False  |
+   | vEthernet \(VMSTEST\) | Hyper-v 가상 이더넷 어댑터 #2 |  False  |
 
    ---
 
@@ -615,7 +615,7 @@ Hyper-v 스위치를 만들기 위한 준비에서는 위에서 설치한 VLAN �
    _**검색**_   
 
 
-   |        이름         |        인터페이스 설명         | ifIndex | Status |    Mac     | /%Linkspeed |
+   |        이름         |        인터페이스 설명         | ifIndex | 상태 |    Mac     | /%Linkspeed |
    |---------------------|-------------------------------------|---------|--------|-------------------|-----------|
    | vEthernet (VMSTEST) | Hyper-v 가상 이더넷 어댑터 #2 |   27    |   위쪽   | E4-1D-07-40-71 |  40 Gbps  |
 
@@ -634,7 +634,7 @@ Hyper-v 스위치를 만들기 위한 준비에서는 위에서 설치한 VLAN �
 
    |         이름          |        인터페이스 설명         | Enabled |
    |-----------------------|-------------------------------------|---------|
-   | vEthernet \(VMSTEST @ no__t-1 | Hyper-v 가상 이더넷 어댑터 #2 |  True   |
+   | vEthernet \(VMSTEST\) | Hyper-v 가상 이더넷 어댑터 #2 |  True   |
 
    ---
 
@@ -673,7 +673,7 @@ Hyper-v 스위치를 만들기 위한 준비에서는 위에서 설치한 VLAN �
     VERBOSE: RDMA traffic test SUCCESSFUL: RDMA traffic was sent to 192.168.1.5
    ```
 
-이 출력의 마지막 줄 "RDMA 트래픽 테스트가 성공 했습니다. RDMA 트래픽이 192.168.1.5로 전송 되었습니다. "는 어댑터에서 수렴 형 NIC를 성공적으로 구성 되었음을 보여 줍니다.
+이 출력의 마지막 줄 "RDMA 트래픽 테스트 성공: RDMA 트래픽이 192.168.1.5로 전송 되었습니다."는 어댑터에서 수렴 형 NIC를 성공적으로 구성 했음을 보여 줍니다.
 
 ## <a name="related-topics"></a>관련 항목
 - [수렴 형 NIC 팀 NIC 구성](cnic-datacenter.md)

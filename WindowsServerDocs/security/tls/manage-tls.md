@@ -39,7 +39,7 @@ TLS 암호 그룹 순서에 대 한 변경 내용은 다음 부팅에 적용 됩
 
 SSL 암호 그룹 순서 그룹 정책 설정을 사용 하 여 기본 TLS 암호 그룹 순서를 구성할 수 있습니다.
 
-1. 그룹 정책 관리 콘솔에서 **컴퓨터 구성** > **관리 템플릿** > 네트워크SSL > **구성 설정**으로 이동 합니다.
+1. 그룹 정책 관리 콘솔에서 **컴퓨터 구성** > **관리 템플릿** > **네트워크** > **SSL 구성 설정**으로 이동 합니다.
 2. **SSL 암호 그룹 순서**를 두 번 클릭 한 다음 **사용** 옵션을 클릭 합니다.
 3. **SSL 암호 그룹** 상자를 마우스 오른쪽 단추로 클릭 하 고 팝업 메뉴에서 **모두 선택** 을 선택 합니다.
 
@@ -123,8 +123,8 @@ Certutil.exe –deleteEccCurve curveName
 
 1.  Windows 10 및 Windows Server 2016에서는 **certutil.exe** 를 사용 하 여 windows에 등록 된 새 새 곡선을 추가 합니다.
 2.  동일한 컴퓨터에서 그룹 정책 관리 콘솔 (GPMC)를 열고 새 그룹 정책 개체를 만든 다음 편집 합니다.
-3.  **컴퓨터 구성으로 이동 | 기본 설정 | Windows 설정 | 레지스트리**.  **레지스트리**를 마우스 오른쪽 단추로 클릭 합니다. **새** 항목 위로 마우스를 이동 하 고 **컬렉션 항목**을 선택 합니다. 곡선의 이름과 일치 하도록 컬렉션 항목의 이름을 바꿉니다. *HKEY_LOCAL_MACHINE\CurrentControlSet\Control\Cryptography\ECCParameters*아래의 각 레지스트리 키에 대해 하나의 레지스트리 컬렉션 항목을 만듭니다.
-4.  *HKEY_LOCAL_MACHINE\CurrentControlSet\Control\Cryptography\ECCParameters @ no__t-2curveName]* 아래에 나열 된 각 레지스트리 값에 대 한 새 **레지스트리 항목** 을 추가 하 여 새로 만든 그룹 정책 기본 설정 레지스트리 컬렉션을 구성 합니다. .
+3.  **컴퓨터 구성으로 이동 | 기본 설정 | Windows 설정 | 레지스트리**.  **레지스트리**를 마우스 오른쪽 단추로 클릭 합니다. **새** 항목 위로 마우스를 이동 하 고 **컬렉션 항목**을 선택 합니다. 곡선의 이름과 일치 하도록 컬렉션 항목의 이름을 바꿉니다. *HKEY_LOCAL_MACHINE \currentcontrolset\control\cryptography\eccparameters*에서 각 레지스트리 키에 대해 하나의 레지스트리 컬렉션 항목을 만듭니다.
+4.  *HKEY_LOCAL_MACHINE \currentcontrolset\control\cryptography\eccparameters\[curveName]* 아래에 나열 된 각 레지스트리 값에 새 **레지스트리 항목** 을 추가 하 여 새로 만든 그룹 정책 기본 설정 레지스트리 컬렉션을 구성 합니다.
 5.  새 명명 된 곡선을 받아야 하는 Windows 10 및 Windows Server 2016 컴퓨터에 그룹 정책 레지스트리 컬렉션 항목을 포함 하는 그룹 정책 개체를 배포 합니다.
 
     ![GPP 분포 곡선](../media/Transport-Layer-Security-protocol/gpp-distribute-curves.png)

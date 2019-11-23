@@ -23,9 +23,9 @@ ms.locfileid: "71367318"
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-**참고:** Windows Server 2012에는 DirectAccess와 RRAS(Routing and Remote Access Service)가 단일 원격 액세스 역할로 통합되어 있습니다.  
+**참고:** Windows Server 2012 DirectAccess 및 라우팅 및 원격 액세스 서비스 (RRAS)를 단일 원격 액세스 역할로 결합 합니다.  
   
-이 항목에서는 IPv4 및 IPv6 혼합된 환경에서 단일 원격 액세스 서버를 사용 하는 고급 원격 액세스 배포에 필요한 인프라를 구성 하는 방법을 설명 합니다. 배포 단계를 시작 하기 전에 [Step 1에 설명 된 계획 단계를 완료 했는지 확인 합니다. 원격 액세스 인프라 @ no__t-0을 계획 합니다.  
+이 항목에서는 IPv4 및 IPv6 혼합된 환경에서 단일 원격 액세스 서버를 사용 하는 고급 원격 액세스 배포에 필요한 인프라를 구성 하는 방법을 설명 합니다. 에 설명 된 계획 단계를 완료 한 확인 배포 단계를 시작 하기 전에 [1 단계: 원격 액세스 인프라 계획](../plan/Step-1-Plan-the-Remote-Access-Infrastructure.md)합니다.  
   
 |태스크|설명|  
 |----|--------|  
@@ -118,7 +118,7 @@ ms.locfileid: "71367318"
 ### <a name="remote-access-traffic"></a>원격 액세스 트래픽  
 원격 액세스 트래픽에 대해 다음 내부 네트워크 방화벽 예외를 적용 합니다.  
   
--   ISATAP 프로토콜 41 인바운드 및 아웃 바운드  
+-   ISATAP: 프로토콜 41 인바운드 및 아웃 바운드  
   
 -   TCP/UDP-모든 IPv4 또는 IPv6 트래픽  
   
@@ -198,9 +198,9 @@ IP-HTTPS 인증에 사용되는 웹 사이트 인증서는 다음 요구 사항�
   
 ##### <a name="to-install-the-ip-https-certificate-from-an-internal-ca"></a>내부 CA의 IP-HTTPS 인증서를 설치하려면  
   
-1.  원격 액세스 서버에서 다음을 수행합니다. **시작** 화면에서**mmc.exe**를 입력 한 다음 enter 키를 누릅니다.  
+1.  원격 액세스 서버에서:에 **시작** 화면에서 입력**mmc.exe**, 한 다음 ENTER를 누릅니다.  
   
-2.  MMC 콘솔에서에 **파일** 메뉴 클릭 **스냅인 추가/제거**합니다.  
+2.  MMC 콘솔의 **파일** 메뉴에서 **스냅인 추가/제거**를 클릭합니다.  
   
 3.  에 **추가 / 제거 스냅인** 대화 상자, 클릭 **인증서**, 클릭 **추가**, 클릭 **컴퓨터 계정**, 클릭 **다음**, 클릭 **로컬 컴퓨터**, 클릭 **마침**, 클릭 하 고 **확인**합니다.  
   
@@ -231,7 +231,7 @@ IP-HTTPS 인증에 사용되는 웹 사이트 인증서는 다음 요구 사항�
   
 ### <a name="NLS_DNS"></a>네트워크 위치 서버 및 웹 검색을 추가 하려면  
   
-1.  내부 네트워크 DNS 서버에서 다음을 수행합니다. 에 **시작** 화면에서 입력**dnsmgmt.msc**, 한 다음 ENTER를 누릅니다.  
+1.  내부 네트워크 DNS 서버에서:에 **시작** 화면에서 입력**dnsmgmt.msc**, 한 다음 ENTER를 누릅니다.  
   
 2.  **DNS 관리자** 콘솔의 왼쪽 창에서 도메인에 대한 정방향 조회 영역을 확장합니다. 도메인을 마우스 오른쪽 단추로 클릭 하 고 클릭 **새 호스트 (A 또는 AAAA)** 합니다.  
   
@@ -370,7 +370,7 @@ Restart-Computer
   
 7.  **사용자, 연락처, 컴퓨터 또는 서비스 계정 선택** 대화 상자에서 DirectAccess에 사용할 클라이언트 컴퓨터를 선택하고 **확인**을 클릭합니다.  
   
-![Windows PowerShell](../../../../media/Step-1-Configure-the-Remote-Access-Infrastructure/PowerShellLogoSmall.gif)**windows powershell 해당 명령**  
+![Windows PowerShell](../../../../media/Step-1-Configure-the-Remote-Access-Infrastructure/PowerShellLogoSmall.gif)**Windows powershell 해당 명령**  
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
@@ -405,9 +405,9 @@ Add-ADGroupMember -Identity DirectAccess_clients_group_name -Members <computer_n
   
 #### <a name="to-install-the-network-location-server-certificate-from-an-internal-ca"></a>내부 CA의 네트워크 위치 서버 인증서를 설치하려면  
   
-1.  네트워크 위치 서버 웹 사이트를 호스트할 서버에서 다음을 수행합니다. **시작** 화면에서**mmc.exe**를 입력 한 다음 enter 키를 누릅니다.  
+1.  네트워크 위치 서버 웹 사이트를 호스팅하는 서버에서:에 **시작** 화면에서 입력**mmc.exe**, 한 다음 ENTER를 누릅니다.  
   
-2.  MMC 콘솔에서에 **파일** 메뉴 클릭 **스냅인 추가/제거**합니다.  
+2.  MMC 콘솔의 **파일** 메뉴에서 **스냅인 추가/제거**를 클릭합니다.  
   
 3.  에 **추가 / 제거 스냅인** 대화 상자, 클릭 **인증서**, 클릭 **추가**, 클릭 **컴퓨터 계정**, 클릭 **다음**, 클릭 **로컬 컴퓨터**, 클릭 **마침**, 클릭 하 고 **확인**합니다.  
   
@@ -455,5 +455,5 @@ Add-ADGroupMember -Identity DirectAccess_clients_group_name -Members <computer_n
   
 ## <a name="BKMK_Links"></a>참고 항목  
   
--   [2단계: 원격 액세스 서버 구성](Step-2-Configure-the-Remote-Access-Server.md)
+-   [2 단계: 원격 액세스 서버 구성](Step-2-Configure-the-Remote-Access-Server.md)
 

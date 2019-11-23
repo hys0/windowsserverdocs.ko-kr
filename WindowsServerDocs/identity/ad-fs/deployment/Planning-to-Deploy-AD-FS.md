@@ -19,7 +19,7 @@ ms.locfileid: "71359504"
 # <a name="planning-to-deploy-ad-fs"></a>AD FS 배포 계획
 
 
-사용자 환경에 대 한 정보를 수집 하 고 [Windows Server 2012의 AD FS 디자인 가이드](https://technet.microsoft.com/library/dd807036.aspx)에 있는 지침에 따라 Active Directory Federation Services \(AD FS @ no__t-1 디자인을 결정 한 후에는 배포 계획을 시작할 수 있습니다. 조직의 AD FS 설계. 이 항목의 완료 된 디자인과 정보를 사용 하 여 조직에 AD FS를 배포 하기 위해 수행할 작업을 결정할 수 있습니다.  
+사용자 환경에 대 한 정보를 수집 하 고 [Windows Server 2012의 AD FS 디자인 가이드](https://technet.microsoft.com/library/dd807036.aspx)에 있는 지침에 따라\) 디자인을 AD FS \(Active Directory Federation Services을 결정 한 후에는 조직의 AD FS 디자인 배포 계획을 시작할 수 있습니다. 이 항목의 완료 된 디자인과 정보를 사용 하 여 조직에 AD FS를 배포 하기 위해 수행할 작업을 결정할 수 있습니다.  
   
 ## <a name="reviewing-your-ad-fs-design"></a>AD FS 디자인 검토  
 조직에 대해 원래 AD FS 디자인을 생성 한 디자인 팀이 배포를 실제로 구현할 배포 팀과 다른 경우 배포 팀은 디자인 팀과 함께 최종 디자인을 검토 해야 합니다. 디자인에 대해 검토할 사항은 다음과 같습니다.  
@@ -34,6 +34,6 @@ ms.locfileid: "71359504"
   
     디자인 팀은 페더레이션 서버 또는 페더레이션 프록시 배치를 배포 팀에 맡길 수 있습니다. 이 경우 배포 팀은 서버의 실제 토폴로지를 문서화하고 구현하는 역할을 담당합니다.  
   
--   문서화된 AD FS 디자인 범위 내에서 조직이 클레임 공급자, 신뢰 당사자 또는 둘 다로 지정된 비즈니스 이유. 배포 팀의 구성원이 AD FS를 배포 하는 이유와 페더레이션 파트너 관계에 참여 하는 다른 회사나 조직을 이해 해야 합니다. 또한 배포 팀의 구성원은 다른 회사 또는 조직에 대해 존재 하는 제약 조건 (제한 된 하드웨어 @no__t, 엑스트라넷 환경 없음 등)을 이해 하 고 있습니다. 파트너 조직에 대한 자세한 내용은 [배포 계획](https://technet.microsoft.com/library/dd807083.aspx)을 참조하세요.  
+-   문서화된 AD FS 디자인 범위 내에서 조직이 클레임 공급자, 신뢰 당사자 또는 둘 다로 지정된 비즈니스 이유. 배포 팀의 구성원이 AD FS를 배포 하는 이유와 페더레이션 파트너 관계에 참여 하는 다른 회사나 조직을 이해 해야 합니다. 또한 배포 팀의 구성원은 다른 회사 또는 조직에 존재 하는 제약 조건 (제한 된 하드웨어 \(, 엑스트라넷 환경 없음 등)을 이해 하\) 고 다른 방식으로 디자인 범위를 제한할 수 있습니다. 파트너 조직에 대한 자세한 내용은 [배포 계획](https://technet.microsoft.com/library/dd807083.aspx)을 참조하세요.  
   
 디자인 팀과 배포 팀이 이러한 문제에 동의 하면 AD FS 설계 배포를 진행할 수 있습니다. 자세한 내용은 [AD FS 디자인 계획 구현](Implementing-Your-AD-FS-Design-Plan.md)을 참조하세요.  

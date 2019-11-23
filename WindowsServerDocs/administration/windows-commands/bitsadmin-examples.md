@@ -48,7 +48,7 @@ Created job {C775D194-090F-431F-B5FB-8334D00D1CB6}.
 
 **/Addfile** 스위치를 사용 하 여 작업에 파일을 추가 합니다. 추가 하려는 각 파일에 대 한이 호출을 반복 합니다. 여러 작업에서 myDownloadJob을 이름으로 사용 하는 경우 작업을 고유 하 게 식별 하려면 myDownloadJob을 작업 GUID로 바꾸어야 합니다.
 
-**bitsadmin/addfile myDownloadJob https://downloadsrv/10mb.zip c: @no__t 210mb .zip**
+**bitsadmin/addfile myDownloadJob https://downloadsrv/10mb.zip c:\\10mb. zip**
 
 전송 큐에서 작업을 활성화 하려면 **/resume 재개** 스위치를 사용 합니다.
 

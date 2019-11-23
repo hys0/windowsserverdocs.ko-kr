@@ -19,11 +19,11 @@ ms.locfileid: "71364704"
 ---
 # <a name="test-failover-should-be-attempted-after-initial-replication-is-complete"></a>테스트 장애 조치를 시도 하 여 초기 복제가 완료 된 후
 
->적용 대상: Windows Server 2016
+>적용 대상: Windows Server 2016
 
 모범 사례 분석기 및 검사에 대한 자세한 내용은 [모범 사례 분석기 검사 실행 및 검사 결과 관리](https://go.microsoft.com/fwlink/p/?LinkID=223177)를 참조하세요.  
   
-|속성|설명|  
+|속성|세부 정보|  
 |-|-|  
 |**운영 체제**|Windows Server 2016|  
 |**제품/기능**|Hyper-V|  
@@ -36,9 +36,9 @@ ms.locfileid: "71364704"
 *하나 이상의 월에 테스트 장애 조치 (failover)가 없습니다.*  
   
 ## <a name="impact"></a>영향  
-*은 계획 되거나 계획 되지 않은 장애 조치 (failover)가 성공 하거나 장애 조치 (failover) 후 작업을 계속 진행할 것인지 확인 하지 않습니다. 이는 다음과 같은 가상 컴퓨터에 영향을 줍니다.*  
+*계획 된 장애 조치 (failover) 또는 계획 되지 않은 장애 조치 (failover)가 성공 하거나 장애 조치 (failover) 후에 워크 로드 작업이 정상적으로 계속 이는 다음과 같은 가상 컴퓨터에 영향을 줍니다.*  
   
-@no__t-가상 머신 목록 >  
+가상 컴퓨터 \<목록 >  
   
 ## <a name="resolution"></a>해결 방법  
 *Hyper-v 관리자를 사용 하 여 테스트 장애 조치 (failover)를 수행 합니다.*  

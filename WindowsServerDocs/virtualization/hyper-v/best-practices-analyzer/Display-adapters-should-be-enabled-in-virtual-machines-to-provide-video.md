@@ -19,13 +19,13 @@ ms.locfileid: "71364912"
 ---
 # <a name="display-adapters-should-be-enabled-in-virtual-machines-to-provide-video-capabilities"></a>비디오 기능을 제공 하기 위해 가상 머신에서 표시 어댑터를 사용 하도록 설정 해야 합니다.
 
->적용 대상: Windows Server 2016
+>적용 대상: Windows Server 2016
 
 
   
 *모범 사례 및 검사에 대한 자세한 내용은* [모범 사례 분석기](https://go.microsoft.com/fwlink/?LinkId=122786)를 참조하세요.  
   
-|속성|설명|  
+|속성|세부 정보|  
 |-|-|  
 |**운영 체제**|Windows Server 2016|  
 |**제품/기능**|Hyper-V|  
@@ -44,7 +44,7 @@ Microsoft 가상 컴퓨터 버스 비디오 장치는 Hyper-v 가상 컴퓨터�
   
 *다음 가상 컴퓨터에 대 한 비디오 성능이 저하 됩니다.*  
   
-@no__t-가상 머신 이름의 목록 >  
+가상 컴퓨터 이름 목록 \<>  
   
 ## <a name="resolution"></a>해결 방법  
   

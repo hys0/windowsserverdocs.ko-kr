@@ -26,7 +26,7 @@ ms.locfileid: "71369254"
 복원이 완료 된 후 DNS 서버로 실행 되지 않는 복원 된 각 DC에 대해이 단계를 완료 합니다. 
 
 > [!NOTE]
-> 백업에서 복원한 DC가 Windows Server 2008 r 2를 실행 하는 경우 DNS 서버를 설치 하려면 격리 된 네트워크에 DC를 연결 해야 합니다. 그런 다음, 복원 된 각 DNS 서버를 상호 공유 격리 된 네트워크에 연결 합니다. Repadmin/replsum를 실행 하 여 복원 된 DNS 서버 간에 복제가 작동 하는지 확인 합니다. 복제를 확인 한 후에는 복원 된 Dc를 프로덕션 네트워크에 연결할 수 있습니다. DNS 서버 역할이 이미 설치 되어 있으면 서버가 네트워크에 연결 되어 있지 않은 상태에서 DNS 서버를 시작할 수 있도록 하는 핫픽스를 적용할 수 있습니다. 자동화 된 빌드 프로세스 중에 핫픽스를 운영 체제 설치 이미지에 통합 설치 해야 합니다. 핫픽스에 대 한 자세한 내용은 Microsoft 기술 자료 [문서 975654](https://go.microsoft.com/fwlink/?LinkId=184691) (https://go.microsoft.com/fwlink/?LinkId=184691) 을 참조 하십시오. 
+> 백업에서 복원한 DC가 Windows Server 2008 r 2를 실행 하는 경우 DNS 서버를 설치 하려면 격리 된 네트워크에 DC를 연결 해야 합니다. 그런 다음, 복원 된 각 DNS 서버를 상호 공유 격리 된 네트워크에 연결 합니다. Repadmin/replsum를 실행 하 여 복원 된 DNS 서버 간에 복제가 작동 하는지 확인 합니다. 복제를 확인 한 후에는 복원 된 Dc를 프로덕션 네트워크에 연결할 수 있습니다. DNS 서버 역할이 이미 설치 되어 있으면 서버가 네트워크에 연결 되어 있지 않은 상태에서 DNS 서버를 시작할 수 있도록 하는 핫픽스를 적용할 수 있습니다. 자동화 된 빌드 프로세스 중에 핫픽스를 운영 체제 설치 이미지에 통합 설치 해야 합니다. 핫픽스에 대 한 자세한 내용은 Microsoft 기술 자료 [문서 975654](https://go.microsoft.com/fwlink/?LinkId=184691) (https://go.microsoft.com/fwlink/?LinkId=184691)를 참조 하십시오. 
 
 아래 설치 및 구성 단계를 완료 합니다.
 
@@ -39,13 +39,13 @@ ms.locfileid: "71369254"
 5. **서버 역할** 화면에서 **DNS 서버**를 선택 하 고, 메시지가 표시 되 면 **기능 추가** 를 클릭 하 고 **다음**을 클릭 합니다.
 6. **기능** 화면에서 **다음**을 클릭 합니다.
 7. **DNS 서버** 페이지의 정보를 읽은 후 **다음**을 클릭 합니다.
-   ![DNS 서버 @ no__t-1  
+   DNS 서버 ![](media/AD-Forest-Recovery-Configure-DNS/dns1.png)  
 8. **확인** 페이지에서 DNS 서버 역할이 설치 되어 있는지 확인 한 다음 **설치**를 클릭 합니다. 
 
 ### <a name="to-configure-the-dns-server-service"></a>DNS 서버 서비스를 구성 하려면
 
 1. 서버 관리자 열고 **도구** 를 클릭 한 다음 **DNS**를 클릭 합니다.
-   ![DNS 서버 @ no__t-1
+   DNS 서버 ![](media/AD-Forest-Recovery-Configure-DNS/dns2.png)
 2. 중요 한 오작동 전에 DNS 서버에 호스트 된 동일한 DNS 도메인 이름에 대 한 DNS 영역을 만듭니다. 자세한 내용은 전방 조회 영역 추가 ([https://go.microsoft.com/fwlink/?LinkId=74574](https://go.microsoft.com/fwlink/?LinkId=74574))를 참조 하세요.
 3. 중요 한 오작동 이전의 DNS 데이터를 구성 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
 

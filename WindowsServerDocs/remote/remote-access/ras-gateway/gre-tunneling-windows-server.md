@@ -19,7 +19,7 @@ ms.locfileid: "71404672"
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-Windows Server 2016에서는 RAS 게이트웨이의 \(GRE @ no__t-1 터널 기능에 대 한 업데이트를 제공 합니다.  
+Windows Server 2016에서는 RAS 게이트웨이의 GRE\) 터널 기능 \(일반 라우팅 캡슐화에 대 한 업데이트를 제공 합니다.  
   
 GRE는 인터넷 프로토콜 네트워크를 통한 가상 지점 간 연결 내에서 다양한 네트워크 계층 프로토콜을 캡슐화할 수 있는 간단한 터널링 프로토콜입니다. Microsoft GRE 구현은 IPv4 및 IPv6을 캡슐화 할 수 있습니다.  
   
@@ -27,11 +27,11 @@ GRE 터널은 다음과 같은 다양 한 시나리오에서 유용 합니다.
   
 -   경량 이며 RFC 2890 호환 되므로 다양 한 공급 업체 장치와 상호 운용할 수 있습니다.  
   
--   Border Gateway Protocol \(BGP @ no__t-1을 사용 하 여 동적 라우팅을 수행할 수 있습니다.  
+-   Border Gateway Protocol \(BGP\)를 사용 하 여 동적 라우팅을 수행할 수 있습니다.  
   
--   소프트웨어 정의 네트워킹 \(SDN @ no__t-1과 함께 사용할 GRE 다중 테 넌 트 RAS 게이트웨이를 구성할 수 있습니다.
+-   소프트웨어 정의 네트워킹 \(SDN에 사용할 GRE 다중 테 넌 트 RAS 게이트웨이를 구성할 수 있습니다\)
   
--   System Center Virtual Machine Manager를 사용 하 여 GRE @ no__t-0based RAS 게이트웨이를 관리할 수 있습니다.
+-   System Center Virtual Machine Manager를 사용 하 여 GRE\-기반 RAS 게이트웨이를 관리할 수 있습니다.
   
 -   GRE RAS 게이트웨이로 구성 된 6 코어 가상 머신에서 최대 2.0 Gbps의 처리량을 달성할 수 있습니다.
   
@@ -104,7 +104,7 @@ GRE 터널 기능은 Microsoft 기술을 사용 하는 서비스 공급자를 �
   
 ## <a name="configuration-and-deployment"></a>구성 및 배포
 
-GRE 터널은 S2S 인터페이스 내에서 추가 프로토콜로 노출 됩니다. 이는 다음 네트워킹 블로그에서 설명 하는 IPSec S2S 터널과 비슷한 방식으로 구현 됩니다. [다중 테 넌 트 S2S (사이트 간) VPN Gateway Windows Server 2012 R2](https://blogs.technet.com/b/networking/archive/2013/09/29/multi-tenant-site-to-site-s2s-vpn-gateway-with-windows-server-2012-r2.aspx)  
+GRE 터널은 S2S 인터페이스 내에서 추가 프로토콜로 노출 됩니다. 이는 [Windows Server 2012 r 2를 사용 하 여 다중 테 넌 트 s2s (사이트 간) VPN Gateway](https://blogs.technet.com/b/networking/archive/2013/09/29/multi-tenant-site-to-site-s2s-vpn-gateway-with-windows-server-2012-r2.aspx) 와 비슷한 방식으로 구현 됩니다.  
   
 GRE 터널 게이트웨이를 비롯 하 여 게이트웨이를 배포 하는 예제는 다음 항목을 참조 하세요.  
   
@@ -118,7 +118,7 @@ S2S 게이트웨이를 배포 하는 방법에 대 한 자세한 내용은 다�
   
 -   [BGP &#40;Border Gateway Protocol&#41;](../bgp/Border-Gateway-Protocol-BGP.md)  
   
--   [New! Windows Server 2012 R2 RAS 다중 테 넌 트 게이트웨이 배포 가이드 @ no__t-0  
+-   [새로운! Windows Server 2012 R2 RAS 다중 테 넌 트 게이트웨이 배포 가이드](https://blogs.technet.com/b/wsnetdoc/archive/2014/03/26/new-windows-server-2012-r2-RAS-multitenant-gateway-deployment-guide.aspx)  
   
 -   [RAS 다중 테 넌 트 게이트웨이와 함께 BGP (Border Gateway Protocol) 배포](https://blogs.technet.com/b/wsnetdoc/archive/2014/04/03/deploy-border-gateway-protocol-bgp-with-the-RAS-multitenant-gateway.aspx)  
   

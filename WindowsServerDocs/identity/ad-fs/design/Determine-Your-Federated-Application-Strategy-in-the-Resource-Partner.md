@@ -18,15 +18,15 @@ ms.locfileid: "71359157"
 ---
 # <a name="determine-your-federated-application-strategy-in-the-resource-partner"></a>리소스 파트너의 페더레이션 응용 프로그램 전략 결정
 
-리소스 파트너 조직에서 새로운 Active Directory Federation Services \(AD FS @ no__t-1 인프라를 디자인 하는 중요 한 부분은 페더레이션에 참여 하는 데 사용 될 응용 프로그램 및 서비스의 전체 집합을 결정 하는 것입니다. 이러한 리소스의 수신자가 될 계정 파트너입니다. 페더레이션 응용 프로그램 및 서비스 전략을 디자인하기 전에 다음 질문을 고려합니다.  
+리소스 파트너 조직에서 새로운 Active Directory Federation Services \(AD FS\) 인프라를 디자인 하는 중요 한 부분은 페더레이션에 참여 하는 데 사용 되는 응용 프로그램 및 서비스의 전체 집합 및 해당 리소스의 수신자가 될 계정 파트너를 결정 하는 것입니다. 페더레이션 응용 프로그램 및 서비스 전략을 디자인하기 전에 다음 질문을 고려합니다.  
   
--   ASP.NET 응용 프로그램을 사용 하 여 배포 하 고 페더레이션을 위한 Windows Communication Foundation \(WCF @ no__t-1 서비스를 배포 하 시겠습니까?  
+-   페더레이션을 위해 ASP.NET 응용 프로그램 또는 WCF\) 서비스 \(Windows Communication Foundation을 사용 하도록 설정 하 고 배포할 예정 인가요?  
   
 -   회사 네트워크의 사용자가 Windows 통합 인증을 통해 페더레이션 응용 프로그램 또는 서비스에 액세스해야 하나요?  
   
 -   경계 네트워크의 사용자가 페더레이션 응용 프로그램 또는 서비스를 사용하나요? 사용한다면 Windows 통합 인증이 필요하나요?  
   
--   페더레이션 응용 프로그램을 호스트 하는 모든 웹 서버가 Windows Server 운영 체제를 실행 하 고 인터넷 정보 서비스 \(IIS @ no__t-1 입니까?  
+-   페더레이션 응용 프로그램을 호스트 하는 모든 웹 서버가 Windows Server 운영 체제를 실행 하 고 인터넷 정보 서비스 \(IIS\)있나요?  
   
 -   페더레이션 응용 프로그램 또는 서비스에서 리소스를 제공하는 대상은 누구인가요?  
   
@@ -38,8 +38,8 @@ ms.locfileid: "71359157"
   
 -   [다른 조직의 사용자에게 클레임 인식 애플리케이션 및 서비스에 대한 액세스 제공](Provide-Users-in-Another-Organization-Access-to-Your-Claims-Aware-Applications-and-Services.md)  
   
-클레임 @ no__t-0aware 응용 프로그램 또는 WCF 서비스를 만드는 방법에 대 한 자세한 내용은 [Windows Identity FOUNDATION SDK](https://go.microsoft.com/fwlink/?LinkId=122266)를 참조 하세요.  
+클레임\-인식 ASP.NET 응용 프로그램 또는 WCF 서비스를 만드는 방법에 대 한 자세한 내용은 [Windows Identity FOUNDATION SDK](https://go.microsoft.com/fwlink/?LinkId=122266)를 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 [Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)
 

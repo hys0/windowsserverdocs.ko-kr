@@ -19,11 +19,11 @@ ms.locfileid: "71366273"
 ---
 # <a name="configure-virtual-machines-running-windows-7-with-no-more-than-4-virtual-processors"></a>4 개 이하의 가상 프로세서와 함께 Windows 7을 실행 하는 가상 컴퓨터 구성
 
->적용 대상: Windows Server 2016
+>적용 대상: Windows Server 2016
 
 모범 사례 분석기 및 검사에 대한 자세한 내용은 [모범 사례 분석기 검사 실행 및 검사 결과 관리](https://go.microsoft.com/fwlink/p/?LinkID=223177)를 참조하세요.  
   
-|속성|설명|  
+|속성|세부 정보|  
 |-|-|  
 |**운영 체제**|Windows Server 2016|  
 |**제품/기능**|Hyper-V|  
@@ -38,7 +38,7 @@ ms.locfileid: "71366273"
 ## <a name="impact"></a>**식**  
 *Microsoft는 다음과 같은 가상 컴퓨터의 구성을 지원 하지 않습니다.*  
   
-@no__t-가상 머신 목록 >  
+가상 컴퓨터 \<목록 >  
   
 ## <a name="resolution"></a>**해결 방법**  
 *가상 컴퓨터를 종료 하 고 하나 이상의 가상 프로세서를 제거 합니다.*  

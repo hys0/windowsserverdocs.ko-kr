@@ -24,7 +24,7 @@ ms.locfileid: "71366216"
 
 1.  웹 브라우저를 사용 하 여 AD FS 페더레이션 메타 데이터 끝점으로 이동 합니다.  예를 들어  https://sts.contoso.com/FederationMetadata/2007-06/FederationMetadata.xml
 2. Xml 파일은 컴퓨터에 로컬로 다운로드 되어야 합니다.
-3. 이 파일을 열고 아래 내용은 유사한 정보가 포함 되어 있는지 확인 합니다. ![Passive @ no__t-1
+3. 이 파일을 열고 아래 내용은 비슷한 정보가 포함 되어 있는지 확인 합니다. ![Passive](media/ad-fs-tshoot-endpoints/meta2.png)
 
 ## <a name="ws-mex-test-active-test"></a>WS MEX 테스트 (활성 테스트)
 Ws-metadataexchange는 웹 서비스 프로토콜 이며 WS-FEDERATION 로드맵의 일부입니다.  SOAP 메시지를 사용 하 여 메타 데이터를 요청 합니다.  끝점을 테스트 하 여 AD FS 서버가 Ws-metadataexchange에 대 한 웹 요청에 응답 하는지 확인할 수 있습니다.  다음 절차를 사용 하 여 끝점을 테스트 합니다.

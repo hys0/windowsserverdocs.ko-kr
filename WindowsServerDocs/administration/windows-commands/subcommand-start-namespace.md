@@ -22,7 +22,7 @@ ms.locfileid: "71370752"
 ---
 # <a name="subcommand-start-namespace"></a>하위 명령: 시작-네임 스페이스
 
-> 적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012은 예약 된 캐스트 네임 스페이스를 시작 합니다.
+> 적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 예약 된 캐스트 네임 스페이스를 시작 합니다.
 > ## <a name="syntax"></a>구문
 > ```
 > wdsutil /start-Namespace /Namespace:<Namespace name> [/Server:<Server name>]
@@ -31,7 +31,7 @@ ms.locfileid: "71370752"
 > 
 > |          매개 변수          |                                                                                                                                                                                             설명                                                                                                                                                                                             |
 > |-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-> | /Namespace: <Namespace name> | 네임 스페이스의 이름을 지정합니다. Note 이름, 이것이 하 고 고유 해야 합니다.<br /><br />-   **배포 서버**: 네임 스페이스 이름에 대 한 구문은/Namspace: WDS: <Image group> @ no__t @ no__t @ no__t @ no__t-4입니다. 예를 들어 다음과 같은 가치를 제공해야 합니다. **WDS: ImageGroup1/install .wim/1**<br />-   **전송 서버**: 이 이름은 서버에서 만들 때 네임 스페이스에 지정 된 이름과 일치 해야 합니다. |
+> | /Namespace:<Namespace name> | 네임 스페이스의 이름을 지정합니다. Note 이름, 이것이 하 고 고유 해야 합니다.<br /><br />-   **배포 서버**: 네임 스페이스 이름에 대 한 구문은/Namspace: WDS:<Image group>/<Image name>/<Index>입니다. 예를 들어: **WDS:ImageGroup1/install.wim/1**<br />-   **전송 서버**:이 이름은 서버에서 만들 때 네임 스페이스에 지정 된 이름과 일치 해야 합니다. |
 > |   [/ 서버:<Server name>]   |                                                                                                           서버 이름을 지정합니다. 이 NetBIOS 이름 또는 정규화 된 도메인 이름 (FQDN) 수 있습니다. 서버 이름이 없는 지정 하는 경우 로컬 서버 사용 됩니다.                                                                                                           |
 > 
 > ## <a name="BKMK_examples"></a>예와

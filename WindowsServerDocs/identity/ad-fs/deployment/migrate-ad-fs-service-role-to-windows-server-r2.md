@@ -59,11 +59,11 @@ ms.locfileid: "71359392"
   
 |보낸 사람|Windows Server 2012 r 2와 함께 설치 된 AD FS|  
 |----------|----------------------------------------------------------------------------------------------|  
-|AD FS 2.0 페더레이션 서버가 Windows Server 2008 또는 Windows Server 2008 r 2에 설치 됨|동일 서버에서의 마이그레이션이 지원됩니다. 자세한 내용은 다음을 참조하세요.<br /><br /> [AD FS 페더레이션 서버 마이그레이션을 준비 하는 중](prepare-migrate-ad-fs-server-r2.md)<br /><br /> [AD FS 페더레이션 서버 마이그레이션](migrate-ad-fs-fed-server-r2.md)|  
+|AD FS 2.0 페더레이션 서버가 Windows Server 2008 또는 Windows Server 2008 r 2에 설치 됨|동일 서버에서의 마이그레이션이 지원됩니다. 참조 항목:<br /><br /> [AD FS 페더레이션 서버 마이그레이션을 준비 하는 중](prepare-migrate-ad-fs-server-r2.md)<br /><br /> [AD FS 페더레이션 서버 마이그레이션](migrate-ad-fs-fed-server-r2.md)|  
 |Windows Server 2012에 설치 된 AD FS 페더레이션 서버|동일 서버에서의 마이그레이션이 지원됩니다.  자세한 내용은 다음을 참조하세요.<br /><br /> [AD FS 페더레이션 서버 마이그레이션을 준비 하는 중](prepare-migrate-ad-fs-server-r2.md)<br /><br /> [AD FS 페더레이션 서버 마이그레이션](migrate-ad-fs-fed-server-r2.md)|  
   
 ## <a name="next-steps"></a>다음 단계
  [AD FS 페더레이션 서버 마이그레이션을 준비 하는 중](prepare-migrate-ad-fs-server-r2.md)   
  [AD FS 페더레이션 서버 마이그레이션](migrate-ad-fs-fed-server-r2.md)   
- [AD FS 페더레이션 서버 프록시 마이그레이션](migrate-fed-server-proxy-r2.md)   
+ [AD FS 페더레이션 서버 프록시  마이그레이션](migrate-fed-server-proxy-r2.md)  
  [Windows Server 2012 r 2로 AD FS 마이그레이션 확인](verify-ad-fs-migration.md)

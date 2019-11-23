@@ -21,9 +21,9 @@ ms.locfileid: "71405277"
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-이 항목에서는 Windows PowerShell 명령에 대 한 기술 참조 정보를 신속 하 게 찾는 방법에 대해 알아봅니다. \(RSS @ no__t-1 및 가상 RSS \(vRSS @ no__t-3.
+이 항목에서는 RSS\) 및 가상 RSS \(vRSS\)에 대 한 Windows PowerShell 명령에 대 한 기술 참조 정보를 신속 하 게 찾는 방법을 알아봅니다 \(.
 
-여러 프로세서나 여러 코어가 있는 물리적 컴퓨터에서 RSS를 구성 하려면 다음 RSS 명령을 사용 합니다. 동일한 명령을 사용 하 여 지원 되는 운영 체제를 실행 하는-0VM @ no__t-1 @no__t 가상 머신에서 vRSS를 구성할 수 있습니다. 자세한 내용은 [Windows PowerShell의 네트워크 어댑터 cmdlet](https://docs.microsoft.com/powershell/module/netadapter/?view=win10-ps)(영문)을 참조 하세요.
+여러 프로세서나 여러 코어가 있는 물리적 컴퓨터에서 RSS를 구성 하려면 다음 RSS 명령을 사용 합니다. 동일한 명령을 사용 하 여 지원 되는 운영 체제를 실행 하는 VM\) \(가상 머신에서 vRSS를 구성할 수 있습니다. 자세한 내용은 [Windows PowerShell의 네트워크 어댑터 cmdlet](https://docs.microsoft.com/powershell/module/netadapter/?view=win10-ps)(영문)을 참조 하세요.
 
 ## <a name="configure-vmq"></a>VMQ 구성
 
@@ -36,7 +36,7 @@ vRSS를 사용 하려면 VMQ를 사용 하도록 설정 하 고 구성 해야 �
 
 ## <a name="enable-and-configure-rss-on-a-native-host"></a>네이티브 호스트에서 RSS 사용 및 구성
 
-다음 PowerShell 명령을 사용 하 여 네이티브 호스트에서 RSS를 구성 하 고 VM 또는 호스트 가상 NIC (vNIC)의 RSS를 관리할 수 있습니다. 이러한 명령의 매개 변수 중 일부는 Hyper-v 호스트의 가상 머신 큐 \(VMQ @ no__t-1에도 영향을 줄 수 있습니다.  
+다음 PowerShell 명령을 사용 하 여 네이티브 호스트에서 RSS를 구성 하 고 VM 또는 호스트 가상 NIC (vNIC)의 RSS를 관리할 수 있습니다. 이러한 명령의 매개 변수 중 일부는 Hyper-v 호스트의 VMQ\) \(가상 머신 큐에도 영향을 줄 수 있습니다.  
 
 >[!IMPORTANT]
 >VM 또는 호스트 vNIC에서 RSS를 사용 하도록 설정 하는 것은 vRSS를 사용 하도록 설정 하 고 사용 하기 위한 필수 구성 요소입니다.
@@ -46,9 +46,9 @@ vRSS를 사용 하려면 VMQ를 사용 하도록 설정 하 고 구성 해야 �
 - [Set-netadapterrss](https://docs.microsoft.com/powershell/module/netadapter/get-netadapterrss?view=win10-ps)
 - [Set-netadapterrss](https://docs.microsoft.com/powershell/module/netadapter/Set-NetAdapterRss?view=win10-ps)
 
-## <a name="enable-vrss-on-the-hyper-v-virtual-switch-port"></a>하이퍼 @ no__t-0V 가상 스위치 포트에서 vRSS를 사용 하도록 설정
+## <a name="enable-vrss-on-the-hyper-v-virtual-switch-port"></a>하이퍼\-V 가상 스위치 포트에서 vRSS 사용
 
-VM에서 RSS를 사용 하도록 설정 하는 것 외에도 vRSS를 사용 하려면 Hyper-v 가상 스위치 포트에서 vRSS를 사용 하도록 설정 해야 합니다. 
+VM에서 RSS를 사용 하도록 설정 하는 것 외에도 vRSS를 사용 하려면 하이퍼\-V 가상 스위치 포트에서 vRSS를 사용 하도록 설정 해야 합니다. 
 
 VRSS에 대 한 현재 설정을 확인 하 고 VM에 대 한 기능을 사용 하거나 사용 하지 않도록 설정 합니다.
 

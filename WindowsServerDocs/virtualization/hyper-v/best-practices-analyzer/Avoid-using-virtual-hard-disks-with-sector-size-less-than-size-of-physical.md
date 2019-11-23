@@ -19,11 +19,11 @@ ms.locfileid: "71366412"
 ---
 # <a name="avoid-using-virtual-hard-disks-with-a-sector-size-less-than-the-sector-size-of-the-physical-storage-that-stores-the-virtual-hard-disk-file"></a>섹터 크기가 가상 하드 디스크 파일을 저장 하는 물리적 저장소의 섹터 크기 보다 작은 가상 하드 디스크를 사용 하지 마십시오
 
->적용 대상: Windows Server 2016
+>적용 대상: Windows Server 2016
 
 모범 사례 분석기 및 검사에 대한 자세한 내용은 [모범 사례 분석기 검사 실행 및 검사 결과 관리](https://go.microsoft.com/fwlink/p/?LinkID=223177)를 참조하세요.  
   
-|속성|설명|  
+|속성|세부 정보|  
 |-|-|  
 |**체제별** <br />**컴퓨터**|Windows Server 2016|  
 |**제품/기능**|Hyper-V|  
@@ -36,9 +36,9 @@ ms.locfileid: "71366412"
 *하나 이상의 가상 하드 디스크의 물리적 섹터 크기가 가상 하드 디스크 파일이 있는 저장소의 물리적 섹터 크기 보다 작습니다.*  
   
 ## <a name="impact"></a>**식**  
-가상 하드 디스크를 사용 하는 응용 프로그램 또는 가상 컴퓨터에서 *Performance 문제가 발생할 수 있습니다. 이는 다음과 같은 가상 컴퓨터에 영향을 줍니다.*  
+*가상 하드 디스크를 사용 하는 응용 프로그램 또는 가상 컴퓨터에서 성능 문제가 발생할 수 있습니다. 이는 다음과 같은 가상 컴퓨터에 영향을 줍니다.*  
   
-@no__t-가상 머신 목록 >  
+가상 컴퓨터 \<목록 >  
   
 ## <a name="resolution"></a>**해결 방법**  
 *다음 중 하나를 수행 합니다.*  

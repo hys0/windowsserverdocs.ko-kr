@@ -29,7 +29,7 @@ ms.locfileid: "71407475"
 
 1.  장치에 작업 공간 연결을 사용 하 여 장치를 연결 하는 회사 계정을 만들려면 장치에 Azure Authenticator 응용 프로그램을 설치 해야 합니다. 다음 URL에는 Android 장치에 Azure authenticator 앱을 설치 하 고 회사 계정을 추가 하는 방법에 대 한 지침이 포함 되어 있습니다. 회사 계정은 Android 장치를 신뢰할 수 있는 장치로 만들고 장치의 응용 프로그램에 SSO (Single Sign-on)를 제공 합니다. 신뢰할 수 있는 장치를 사용 하 여 IT 관리자가 권장 하는 대로 웹 응용 프로그램 및 최신 lob (기간 업무) 응용 프로그램에 액세스할 수 있습니다. 자세한 내용은 [Android 용 Azure Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to)를 참조 하세요.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 [회사 응용 프로그램 전체에서 SSO 및 원활한 두 번째 단계 인증을 위해 모든 장치에서 작업 공간에 연결](Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)
 [Azure Active Directory Device Registration 서비스를 사용 하 여 온-프레미스 조건부 액세스 설정](https://docs.microsoft.com/azure/active-directory/active-directory-device-registration-on-premises-setup)
 

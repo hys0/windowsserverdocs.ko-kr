@@ -22,7 +22,7 @@ ms.locfileid: "71407019"
 [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview) 은 온-프레미스와 클라우드 모두에서 Windows 서버 및 vm을 비롯 한 다양 한 리소스에서 원격 분석을 수집 하 고 분석 하 고 작동 하는 솔루션입니다. Azure Monitor는 Azure Vm 및 기타 Azure 리소스에서 데이터를 끌어올 것 이지만,이 문서에서는 Azure Monitor Windows 관리 센터에서 온-프레미스 서버와 Vm을 사용 하는 방법을 집중적으로 설명 합니다. Azure Monitor를 사용 하 여 하이퍼 수렴 형 클러스터에 대 한 전자 메일 경고를 가져오는 방법에 대 한 자세한 내용은 [Azure Monitor를 사용 하 여 상태 관리 서비스 오류에 대](https://docs.microsoft.com/windows-server/storage/storage-spaces/configure-azure-monitor)한 전자 메일 보내기를 참조 하세요.
 
 ## <a name="how-does-azure-monitor-work"></a>Azure Monitor 작동 방법
-온-프레미스 Windows 서버에서 생성 된 ![img @ no__t-1 데이터는 Azure Monitor의 Log Analytics 작업 영역에서 수집 됩니다. 작업 영역 내에서 특정 시나리오에 대 한 정보를 제공 하는 논리 집합 등 다양 한 모니터링 솔루션을 사용 하도록 설정할 수 있습니다. 예를 들어 Azure 업데이트 관리, Azure Security Center 및 VM용 Azure Monitor는 작업 영역 내에서 사용할 수 있는 모든 모니터링 솔루션입니다. 
+온-프레미스 Windows 서버에서 생성 된 img](../media/azure-monitor-diagram.png) 데이터 ![Azure Monitor의 Log Analytics 작업 영역에서 수집 됩니다. 작업 영역 내에서 특정 시나리오에 대 한 정보를 제공 하는 논리 집합 등 다양 한 모니터링 솔루션을 사용 하도록 설정할 수 있습니다. 예를 들어 Azure 업데이트 관리, Azure Security Center 및 VM용 Azure Monitor는 작업 영역 내에서 사용할 수 있는 모든 모니터링 솔루션입니다. 
 
 Log Analytics 작업 영역에서 모니터링 솔루션을 사용 하도록 설정 하면 해당 작업 영역에 보고 하는 모든 서버에서 해당 솔루션과 관련 된 데이터를 수집 하기 시작 하므로 솔루션이 작업 영역에 있는 모든 서버에 대 한 정보를 생성할 수 있습니다. 
 
@@ -51,7 +51,7 @@ WAC 내에서 동일한 서버의 다른 모니터링 솔루션을 추가 하려
 다른 서버에 연결 하지만 이미 Log Analytics 작업 영역을 설정 하는 경우 (예를 들어 WAC 또는 Azure Portal에서 수동으로) 서버에 MMA 에이전트를 설치 하 고 기존 작업 영역에 연결할 수도 있습니다. 서버를 작업 영역에 연결 하면 자동으로 데이터 수집을 시작 하 고 해당 작업 영역에 설치 된 솔루션에 대 한 보고를 시작 합니다.
 
 ## <a name="azure-monitor-for-virtual-machines-aka-virtual-machine-insights"></a>가상 컴퓨터에 대 한 Azure Monitor ( Virtual Machine insights)
->적용 대상: Windows Admin Center 미리 보기
+>적용 대상: Windows 관리 센터 미리 보기
 
 서버 설정에서 VM용 Azure Monitor를 설정 하는 경우 Windows 관리 센터에서 Virtual Machine insights 라고도 하는 VM용 Azure Monitor 솔루션을 사용 하도록 설정 합니다. 이 솔루션을 사용 하면 서버 상태 및 이벤트를 모니터링 하 고, 메일 경고를 만들고, 사용자 환경에서 서버 성능에 대 한 통합 보기를 가져오고, 지정 된 서버에 연결 된 앱, 시스템 및 서비스를 시각화할 수 있습니다.
 

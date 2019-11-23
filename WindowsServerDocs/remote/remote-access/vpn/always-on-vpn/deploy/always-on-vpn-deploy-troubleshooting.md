@@ -118,7 +118,7 @@ Always On VPN 설정에서 클라이언트를 내부 네트워크에 연결 하�
 
 ## <a name="nps-logs"></a>NPS 로그
 
-Nps가 NPS 계정 로그를 만들어 저장 합니다. 기본적으로이 파일은 no__t에 있는 파일에% SYSTEMROOT% \\System32 @-1Logfiles @ no__t-2에 저장*됩니다. 여기서* *xxxx* 는 파일이 만들어진 날짜입니다.
+Nps가 NPS 계정 로그를 만들어 저장 합니다. 기본적으로이 파일은*xxxx*.txt에 명명 된 파일에\\% SYSTEMROOT%\\System32\\Logfiles에 저장 됩니다. 여기서 *xxxx* 는 파일이 만들어진 날짜입니다.
 
 기본적으로 이러한 로그는 쉼표로 구분 된 값 형식 이지만 제목 행은 포함 되지 않습니다. 제목 행은 다음과 같습니다.
 
@@ -130,13 +130,13 @@ ComputerName,ServiceName,Record-Date,Record-Time,Packet-Type,User-Name,Fully-Qua
 
 NPS 로그는 정책 관련 문제를 진단 하는 데 유용할 수 있습니다. NPS 로그에 대 한 자세한 내용은 [Nps 데이터베이스 형식 로그 파일 해석](https://technet.microsoft.com/library/cc771748.aspx)을 참조 하세요.
 
-## <a name="vpn_profileps1-script-issues"></a>VPN_Profile 스크립트 문제
+## <a name="vpn_profileps1-script-issues"></a>VPN_Profile. p s 1 스크립트 문제
 
-VPN_ Profile. ps1 스크립트를 수동으로 실행 하는 경우 가장 일반적인 문제는 다음과 같습니다.
+VPN_ Profile. p s 1을 수동으로 실행 하는 경우 가장 일반적인 문제는 다음과 같습니다.
 
 - 원격 연결 도구를 사용 하나요?  사용자 로그인 검색 시 RDP 또는 다른 원격 연결 방법을 사용 하지 않도록 합니다.
 
-- 사용자가 해당 로컬 컴퓨터의 관리자 인가요?  VPN_Profile 스크립트를 실행 하는 동안 사용자에 게 관리자 권한이 있는지 확인 합니다.
+- 사용자가 해당 로컬 컴퓨터의 관리자 인가요?  VPN_Profile. p s 1을 실행 하는 동안 사용자에 게 관리자 권한이 있는지 확인 합니다.
 
 - 추가 PowerShell 보안 기능이 사용 하도록 설정 되어 있나요? PowerShell 실행 정책에서 스크립트를 차단 하지 않는지 확인 합니다. 설정 된 경우 스크립트를 실행 하기 전에 제한 된 언어 모드를 해제 하는 것을 고려할 수 있습니다. 스크립트가 성공적으로 완료 된 후 제한 된 언어 모드를 활성화할 수 있습니다.
 
@@ -146,7 +146,7 @@ VPN_ Profile. ps1 스크립트를 수동으로 실행 하는 경우 가장 일�
 
 1. 템플릿 컴퓨터가 외부적으로 연결 되어 있나요? **Whatismyip** 검색에는 사용자에 게 속하지 않는 공용 IP 주소가 표시 되어야 합니다.
 
-2. IP 주소에 대 한 원격 액세스/v m 서버 이름을 확인할 수 있나요? **제어판**네트워크 및인터넷 > 네트워크 연결에서 VPN 프로필에 대 한 속성을 엽니다. >  **일반** 탭의 값은 DNS를 통해 공개적으로 확인할 수 있어야 합니다.
+2. IP 주소에 대 한 원격 액세스/v m 서버 이름을 확인할 수 있나요? **제어판** 에서 **네트워크** 및 **인터넷** > **네트워크 연결** > VPN 프로필에 대 한 속성을 엽니다. **일반** 탭의 값은 DNS를 통해 공개적으로 확인할 수 있어야 합니다.
 
 3. 외부 네트워크에서 VPN 서버에 액세스할 수 있나요? 외부 인터페이스에 대 한 ICMP (Internet Control Message Protocol)를 열고 원격 클라이언트에서 이름을 ping 하는 것이 좋습니다. Ping이 성공적으로 완료 되 면 ICMP 허용 규칙을 제거할 수 있습니다.
 
@@ -170,14 +170,14 @@ VPN_ Profile. ps1 스크립트를 수동으로 실행 하는 경우 가장 일�
 
   - 사용자에 게 Azure AD에서 발급 하지 않은 유효한 클라이언트 인증 인증서가 개인 인증서 저장소에 있습니다.
 
-  - VPN profile \<\> TLSExtensions 섹션이 없거나 **\<EKUNameAAD조건부\<액세스/EKUNameEKUOID를포함\<하지 않습니다.\>\>\>1.3.6.1.4.1.311.87 </EKUOID\>\>\<\>EKUName > AAD 조건부 액세스 </EKUName EKUOID 1.3.6.1.4.1.311.87 </EKUOID\> \<** 항목. EKUName \<> 및 \<EKUOID > 항목은 vpn 클라이언트에 인증서를 vpn 서버에 전달할 때 사용자의 인증서 저장소에서 검색할 인증서를 알려 줍니다. 이를 사용 하지 않으면 VPN 클라이언트는 사용자의 인증서 저장소에 있는 유효한 클라이언트 인증 인증서를 사용 하 고 인증에 성공 합니다. 
+  - VPN 프로필 \<TLSExtensions\> 섹션이 없거나 **\<EKUName\>Aad 조건부 액세스\</EKUName\>\<EKUOID\>1.3.6.1.4.1.311.87 </EKUOID\>\<EKUName > AAD 조건부 액세스 </EKUName\>\<EKUOID\>1.3.6.1.4.1.311.87 </EKUOID\>** 항목을 포함 하지 않습니다. \<EKUName > 및 \<EKUOID > 항목은 vpn 클라이언트에 게 인증서를 VPN 서버에 전달할 때 사용자의 인증서 저장소에서 검색할 인증서를 알려 줍니다. 이를 사용 하지 않으면 VPN 클라이언트는 사용자의 인증서 저장소에 있는 유효한 클라이언트 인증 인증서를 사용 하 고 인증에 성공 합니다. 
 
   - RADIUS 서버 (NPS)가 **AAD 조건부 액세스** OID를 포함 하는 클라이언트 인증서만 허용 하도록 구성 되지 않았습니다.
 
 - **가능한 해결 방법입니다.** 이 루프를 이스케이프 하려면 다음을 수행 합니다.
 
   1. Windows PowerShell에서 **get-wmiobject** cmdlet을 실행 하 여 VPN 프로필 구성을 덤프 합니다. 
-  2. TLSExtensions > **, EKUName>\<** 및 **EKUOID > 섹션이 있는지 확인 하 고 올바른 이름과 OID를 표시 합니다. \<**  **\<**
+  2. **\<TLSExtensions >** , **\<EKUName >** 및 **\<EKUOID >** 섹션이 있는지 확인 하 고 올바른 이름과 OID를 표시 합니다.
       
       ```powershell
       PS C:\> Get-WmiObject -Class MDM_VPNv2_01 -Namespace root\cimv2\mdm\dmmap
@@ -277,9 +277,9 @@ VPN_ Profile. ps1 스크립트를 수동으로 실행 하는 경우 가장 일�
       Encryption test passed
      ```
      >[!NOTE]
-     >발급자 **CN = MICROSOFT VPN ROOT CA gen 1** 의 인증서가 사용자의 개인 저장소에 있지만, 사용자가 **X** 를 선택 하 여 해당 메시지를 닫은 후에는 CAPI2 이벤트 로그를 수집 하 여 인증에 사용 된 인증서가 인지 확인 합니다. Microsoft VPN 루트 CA에서 발급 되지 않은 유효한 클라이언트 인증 인증서입니다.
+     >발급자 **CN = MICROSOFT VPN ROOT CA gen 1** 의 인증서가 사용자의 개인 저장소에 있지만 사용자가 액세스 권한을 얻은 경우에는 사용자가 **X** 를 선택 하 여 해당 메시지를 닫고, CAPI2 이벤트 로그를 수집 하 여 인증에 사용 된 인증서가 Microsoft VPN 루트 CA에서 발급 되지 않은 유효한 클라이언트 인증 인증서 인지 확인 합니다.
 
-  4. 사용자의 개인 저장소에 유효한 클라이언트 인증 인증서가 있는 경우 사용자가 **X** 를 선택 하 고  **\<TLSExtensions >** ,  **\<EKUName >** 및 **인 경우 연결에 실패 합니다. EKUOID\<>** 섹션이 존재 하 고 올바른 정보를 포함 합니다.
+  4. 사용자의 개인 저장소에 유효한 클라이언트 인증 인증서가 있는 경우 사용자가 **X** 를 선택 하 고 **\<TLSExtensions >** , **\<EKUName >** 및 **\<EKUOID >** 섹션이 존재 하 고 올바른 정보를 포함 하는 경우 연결이 실패 합니다.
    
      "확장 가능한 인증 프로토콜에서 사용할 수 있는 인증서를 찾을 수 없습니다." 라는 오류 메시지가 나타납니다.
 

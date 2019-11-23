@@ -23,7 +23,7 @@ ms.locfileid: "71405836"
 이 항목에서는 서버 관리자를 사용 하 여 네트워크 컨트롤러 서버 역할을 설치 하는 방법에 지침을 제공 합니다.
 
 >[!IMPORTANT]
->실제 호스트에 네트워크 컨트롤러 서버 역할을 배포 하지 마십시오. 네트워크 컨트롤러를 배포 하려면 hyper-v 호스트에 설치 된 Hyper-v 가상 컴퓨터에 네트워크 컨트롤러 서버 역할을 설치 해야 합니다 \(VM @ no__t-1. 3 개의 서로 다른 Hyper-v 호스트의 Vm에 네트워크 컨트롤러를 설치한 후 Windows PowerShell을 사용 하 여 네트워크 컨트롤러에 호스트를 추가 하 여 소프트웨어 정의 네트워킹 \(SDN @ no__t-3에 대 한 하이퍼 @ no__t-1V 호스트를 사용 하도록 설정 해야 합니다. **NetworkControllerServer**명령입니다. 이렇게 하면 SDN 소프트웨어 Load Balancer 기능을 사용할 수 있습니다. 자세한 내용은 [NetworkControllerServer](https://technet.microsoft.com/itpro/powershell/windows/network-controller/new-networkcontrollerserver)를 참조 하세요.
+>실제 호스트에 네트워크 컨트롤러 서버 역할을 배포 하지 마십시오. 네트워크 컨트롤러를 배포 하려면 hyper-v 호스트에 설치 된 VM\) \(Hyper-v 가상 컴퓨터에 네트워크 컨트롤러 서버 역할을 설치 해야 합니다. 3 개의 서로 다른\-Hyper-v 호스트에 Vm에 네트워크 컨트롤러를 설치한 후 Windows PowerShell 명령 **NetworkControllerServer**를 사용 하 여 네트워크 컨트롤러에 호스트를 추가 하 여 소프트웨어 정의 네트워킹 \(SDN\)에 대 한 하이퍼\-V 호스트를 사용 하도록 설정 해야 합니다. 이렇게 하면 SDN 소프트웨어 Load Balancer 기능을 사용할 수 있습니다. 자세한 내용은 [NetworkControllerServer](https://technet.microsoft.com/itpro/powershell/windows/network-controller/new-networkcontrollerserver)를 참조 하세요.
   
 네트워크 컨트롤러를 설치한 후 추가 네트워크 컨트롤러 구성에 대 한 Windows PowerShell 명령을 사용 해야 합니다. 자세한 내용은 참조 [Windows PowerShell을 사용 하 여 네트워크 컨트롤러 배포](../../deploy/Deploy-Network-Controller-using-Windows-PowerShell.md)합니다.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "71405836"
   
     ![서버 관리자](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/nc_013.jpg)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [네트워크 컨트롤러](Network-Controller.md)  
   
 

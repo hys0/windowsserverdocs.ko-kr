@@ -39,5 +39,5 @@ set root=<RootServer>
 ## <a name="remarks"></a>설명
 - **세트 루트** 영향을 줌 하위 명령에서 **루트** 하위 명령입니다.
   ## <a name="additional-references"></a>추가 참조
-  [명령줄 구문 키](command-line-syntax-key.md) 
+  [명령줄 구문 키](command-line-syntax-key.md)
   [nslookup 루트](nslookup-root.md)

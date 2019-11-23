@@ -20,13 +20,13 @@ ms.locfileid: "71407804"
  
 사용자를 대신 하 여 다른 웹 API를 호출 하는 Web API를 빌드하는 방법에 대해 알아봅니다.  
  
-이 문서를 읽기 전에 [AD FS 개념과](../ad-fs-openid-connect-oauth-concepts.md) [온-Behalf_Of flow](../../overview/ad-fs-openid-connect-oauth-flows-scenarios.md#on-behalf-of-flow) 에 대해 잘 알고 있어야 합니다.
+이 문서를 읽기 전에 [AD FS 개념과](../ad-fs-openid-connect-oauth-concepts.md) [Behalf_Of 흐름](../../overview/ad-fs-openid-connect-oauth-flows-scenarios.md#on-behalf-of-flow) 에 대해 잘 알고 있어야 합니다.
 
 ## <a name="overview"></a>개요 
 
 
 - 클라이언트 (웹 앱)-아래 다이어그램에 표시 되지 않고 보호 된 웹 API를 호출 하 고 "Authorization" Http 헤더에 JWT 전달자 토큰을 제공 합니다. 
-- 보호 된 웹 API는 토큰의 유효성을 검사 하 고 MSAL [AcquireTokenOnBehalfOf](https://docs.microsoft.com/en-us/dotnet/api/microsoft.identitymodel.clients.activedirectory.authenticationcontext.acquiretokenasync?view=azure-dotnet#Microsoft_IdentityModel_Clients_ActiveDirectory_AuthenticationContext_AcquireTokenAsync_System_String_Microsoft_IdentityModel_Clients_ActiveDirectory_ClientCredential_Microsoft_IdentityModel_Clients_ActiveDirectory_UserAssertion_)  method를 사용 하 여 다른 토큰을 요청 (AD FS) 하 여 다른 토큰 자체를 호출 하 여 사용자 대신 두 번째 웹 api (다운스트림 웹 api)를 호출 합니다. 
+- 보호 된 웹 API는 토큰의 유효성을 검사 하 고 MSAL [AcquireTokenOnBehalfOf](https://docs.microsoft.com/en-us/dotnet/api/microsoft.identitymodel.clients.activedirectory.authenticationcontext.acquiretokenasync?view=azure-dotnet#Microsoft_IdentityModel_Clients_ActiveDirectory_AuthenticationContext_AcquireTokenAsync_System_String_Microsoft_IdentityModel_Clients_ActiveDirectory_ClientCredential_Microsoft_IdentityModel_Clients_ActiveDirectory_UserAssertion_) 메서드를 사용 하 여 다른 토큰을 요청 (AD FS) 하 여 사용자 대신 두 번째 웹 api (다운스트림 웹 api)를 호출할 수 있도록 합니다. 
 - 보호 된 웹 API는이 토큰을 사용 하 여 다운스트림 API를 호출 합니다. AcquireTokenSilentlater를 호출 하 여 다른 다운스트림 Api에 대 한 토큰을 요청할 수도 있습니다 (동일한 사용자를 대신 하 여). AcquireTokenSilent는 필요한 경우 토큰을 새로 고칩니다.  
  
      ![개요](media/adfs-msal-web-api-web-api/webapi1.png)
@@ -49,11 +49,11 @@ ADFS의 인증 시나리오를 대신 하 여를 구성 하는 방법을 더 잘
 
       ![앱 등록](media/adfs-msal-web-api-web-api/webapi2.png)
 
-  3. 복사는 **클라이언트 식별자** 값입니다. 이 파일은 나중에 응용 프로그램의 **app.config** 파일에서 **ClientId** 의 값으로 사용 됩니다. **리디렉션 URI:**  -  https://ToDoListClient 에 대해 다음을 입력 합니다. **추가**를 클릭합니다. **다음**을 클릭합니다. 
+  3. 복사는 **클라이언트 식별자** 값입니다. 이 파일은 나중에 응용 프로그램의 **app.config** 파일에서 **ClientId** 의 값으로 사용 됩니다. **리디렉션 URI:**  - https://ToDoListClient에 대해 다음을 입력 합니다. **추가**를 클릭합니다. **다음**을 클릭합니다. 
   
       ![앱 등록](media/adfs-msal-web-api-web-api/webapi3.png)
   
-  4. 웹 API 구성 화면에서 https://localhost:44321/ **식별자** 를 입력 합니다. **추가**를 클릭합니다. **다음**을 클릭합니다. 이 값은 응용 프로그램의 **app.config** 및 **web.config** 파일에서 나중에 사용 됩니다.  
+  4. 웹 API 구성 화면에서 https://localhost:44321/**식별자** 를 입력 합니다. **추가**를 클릭합니다. **다음**을 클릭합니다. 이 값은 응용 프로그램의 **app.config** 및 **web.config** 파일에서 나중에 사용 됩니다.  
  
       ![앱 등록](media/adfs-msal-web-api-web-api/webapi4.png)
 
@@ -61,7 +61,7 @@ ADFS의 인증 시나리오를 대신 하 여를 구성 하는 방법을 더 잘
   
       ![앱 등록](media/adfs-msal-web-api-web-api/webapi5.png)  
 
-  6. 응용 프로그램 사용 권한 구성 화면에서 **openid connect** and **user_impersonation**를 선택 합니다. **다음**을 클릭합니다.  
+  6. 응용 프로그램 사용 권한 구성 화면에서 **openid connect** 및 **user_impersonation**를 선택 합니다. **다음**을 클릭합니다.  
   
       ![앱 등록](media/adfs-msal-web-api-web-api/webapi6.png)  
 
@@ -82,7 +82,7 @@ ADFS의 인증 시나리오를 대신 하 여를 구성 하는 방법을 더 잘
   
       ![앱 Reg](media/adfs-msal-web-api-web-api/webapi9.png)
 
-  12. 서버 응용 프로그램 화면에서 https://localhost:44321/ 를 **클라이언트 식별자** 및 **리디렉션 URI**로 추가 합니다. 
+  12. 서버 응용 프로그램 화면에서 https://localhost:44321/를 **클라이언트 식별자** 및 **리디렉션 URI**로 추가 합니다. 
   
       ![앱 Reg](media/adfs-msal-web-api-web-api/webapi10.png)
 
@@ -106,7 +106,7 @@ ADFS의 인증 시나리오를 대신 하 여를 구성 하는 방법을 더 잘
   
       ![앱 Reg](media/adfs-msal-web-api-web-api/webapi14.png)  
 
-  19. 웹 API 구성에서 **식별자**로 https://localhost:44300 을 추가 합니다.  
+  19. 웹 API 구성에서 **식별자**로 https://localhost:44300을 추가 합니다.  
   
       ![앱 Reg](media/adfs-msal-web-api-web-api/webapi15.png)
 
@@ -143,11 +143,11 @@ ADFS의 인증 시나리오를 대신 하 여를 구성 하는 방법을 더 잘
   29. WebApiToWebApi – Web API 속성 화면에서 확인을 클릭 합니다.
 
   30. WebApiToWebApi 속성 화면에서 WebApiToWebApi – Web API 2를 선택 하 고 편집 ...을 클릭 합니다.</br> 
-   ![App Reg ](media/adfs-msal-web-api-web-api/webapi22.png)
+  ![앱 Reg](media/adfs-msal-web-api-web-api/webapi22.png)
 
   31. WebApiToWebApi – Web API 2 속성 화면에서 발급 변환 규칙 탭을 선택 하 고 규칙 추가 ...를 클릭 합니다. 
 
-  32. 변환 클레임 규칙 추가 마법사에서 dopdown의 사용자 지정 규칙을 사용 하 여 클레임 보내기를 선택 하 고 다음 ![App Reg를 클릭 ](media/adfs-msal-web-api-web-api/webapi23.png)
+  32. 변환 클레임 규칙 추가 마법사에서 dopdown의 사용자 지정 규칙을 사용 하 여 클레임 보내기를 선택 하 고 다음 ![앱 Reg를 클릭](media/adfs-msal-web-api-web-api/webapi23.png)
 
   33. 클레임 규칙 이름: 필드 및 **x: [] = > issue (클레임 = x),** **사용자 지정 규칙** 의 클레임 규칙: 필드에 PassAllClaims를 입력 하 고 **마침**을 클릭 합니다.  
    

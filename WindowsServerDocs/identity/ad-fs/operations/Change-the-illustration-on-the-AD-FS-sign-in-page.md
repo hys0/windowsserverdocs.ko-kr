@@ -21,7 +21,7 @@ ms.locfileid: "71358295"
 ## <a name="change-the-illustration"></a>그림을 변경 합니다.  
 
 
-그림을 변경 하려면 왼쪽에 있는 그래픽을 사용 하 여 sign @ no__t-0in 페이지에 표시 되는 다음 Windows PowerShell cmdlet 및 구문을 사용 합니다.  
+페이지의 부호\-에 표시 되는 왼쪽의 그림을 변경 하려면 다음 Windows PowerShell cmdlet 및 구문을 사용 합니다.  
 
 ![일러스트레이션 변경](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom2.png)
   

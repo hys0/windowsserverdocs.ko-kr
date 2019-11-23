@@ -33,9 +33,9 @@ Microsoft의 SDDC 구현에는 이 문서에 강조된 Windows Server 기술이 
 
 Windows Server 및 System Center에 기본 제공되는 기술은 Windows Server SDDC 환경의 주요 구성 요소입니다. 하지만 가상화된 플랫폼이라 해도 여전히 올바른 하드웨어가 필요합니다. **Windows Server 소프트웨어 정의 (WSSD) 솔루션** 및 **Azure Stack HCI Solutions** 프로그램에 참여 하는 Microsoft 파트너는 기업이 올바른 하드웨어를 획득 하 고 0 일에 실행 되도록 하는 데 도움이 될 수 있습니다.
 
-![](media/sddc/video.png) **[비디오를 시청 하 여 MICROSOFT의 SDDC에 대해 자세히 알아보세요](https://mva.microsoft.com/en-US/training-courses/whats-new-in-windows-server-2016-16457?l=YcsJR6sXC_1006218965) .**
+**[MICROSOFT의 SDDC에 대해 자세히 알아보려면 비디오를 시청](https://mva.microsoft.com/en-US/training-courses/whats-new-in-windows-server-2016-16457?l=YcsJR6sXC_1006218965) ![](media/sddc/video.png)**
 
-![](media/sddc/poster-ico.png) **[이 페이지의 포스터 크기 .pdf 파일을 다운로드 합니다.](https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs/media/sddc/sddc_poster_0801417_ANSI-E.pdf)**
+**[이 페이지의 포스터 크기 .Pdf 파일 다운로드](https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs/media/sddc/sddc_poster_0801417_ANSI-E.pdf) ![](media/sddc/poster-ico.png)**
 
 ![](media/sddc/spacer1.png)<a href="https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs//media/sddc/sddc_poster_0801417_ANSI-E.pdf"><img src="media/sddc/poster.png"></a>
 
@@ -47,7 +47,7 @@ Microsoft 파트너는 Windows Server 소프트웨어 정의 (WSSD) 프로그램
 
 ![](media/sddc/learn.png) **[Azure Stack HCI 솔루션에 대해 자세히 알아보세요](https://azure.microsoft.com/overview/azure-stack/hci) .**
 
-![](media/sddc/learn.png) **[Wssd 솔루션에 대 한 자세한 정보](https://www.microsoft.com/en-us/cloud-platform/software-defined-datacenter)**
+**[Wssd 솔루션에 대 한 자세한](https://www.microsoft.com/en-us/cloud-platform/software-defined-datacenter) 정보 ![](media/sddc/learn.png)**
 
 ## <a name="windows-server-virtualized-technologies"></a>Windows Server 가상화 기술 ##
 
@@ -63,7 +63,7 @@ Windows Server 가상화 기술은 보안, 확장성 및 안정성을 개선하�
 
 ![](media/sddc/spacer1.png)![](media/sddc/hyper-converged.png)
 
-![](media/sddc/learn.png) **[Windows Server에 대 한 자세한 정보, 하이퍼 수렴 형](https://docs.microsoft.com/windows-server/get-started/what-s-new-in-windows-server-2016#computevirtualizationvirtualizationmd)**
+**[Windows Server에 대 한 자세한 정보 ![](media/sddc/learn.png)하이퍼 수렴 형](https://docs.microsoft.com/windows-server/get-started/what-s-new-in-windows-server-2016#computevirtualizationvirtualizationmd)**
 
 ### <a name="hyper-v-hypervisor"></a>Hyper-v 하이퍼바이저
 
@@ -71,7 +71,7 @@ Hyper-V는 Windows를 위한 하이퍼바이저 기반 가상화 기술입니다
 
 ![](media/sddc/spacer1.png)![](media/sddc/hypervisor.png)
 
-![](media/sddc/learn.png) **[hyper-v 하이퍼바이저에 대 한 자세한 정보](https://www.microsoft.com/en-us/cloud-platform/server-virtualization)**
+**[hyper-v 하이퍼바이저에 대 한 자세한](https://www.microsoft.com/en-us/cloud-platform/server-virtualization) 정보 ![](media/sddc/learn.png)**
 
 ### <a name="guest-clustering-with-shared-vhdx"></a>공유 VHDX를 사용 하는 게스트 클러스터링
 
@@ -82,9 +82,9 @@ Hyper-V는 Windows를 위한 하이퍼바이저 기반 가상화 기술입니다
 ![](media/sddc/spacer1.png)![](media/sddc/cluster.png)
 
 - 공유 VHDX는 블록 저장소의 CSV(클러스터링된 공유 볼륨), 또는 SMB 파일 기반 저장소에 있을 수 있습니다.
-- 보호 공유 VHDX는 Hyper-v 복제본 및 호스트 수준 백업을 지원 합니다.
+- 보호: 공유 VHDX는 Hyper-V 복제본 및 호스트 수준 백업을 지원합니다.
 
-![](media/sddc/learn.png) **[공유 VHDX를 사용 하는 게스트 클러스터링에 대 한 자세한 정보](https://technet.microsoft.com/library/dn281956(v=ws.11).aspx)**
+**[공유 VHDX를 사용 하는 게스트 클러스터링에 대 한 자세한](https://technet.microsoft.com/library/dn281956(v=ws.11).aspx) 정보 ![](media/sddc/learn.png)**
 
 ### <a name="hyper-v-replica"></a>Hyper-V 복제본
 
@@ -98,7 +98,7 @@ Hyper-V는 Windows를 위한 하이퍼바이저 기반 가상화 기술입니다
 - 실시간 마이그레이션을 자동으로 처리합니다.
 - Hyper-V Manager, PowerShell 또는 Azure Site Recovery를 통한 단순한 구성 및 관리.
 
-![](media/sddc/learn.png) **[hyper-v 복제본에 대 한 자세한 정보](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/set-up-hyper-v-replica)**
+**[hyper-v 복제본에 대 한 자세한](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/set-up-hyper-v-replica) 정보 ![](media/sddc/learn.png)**
 
 ![](media/sddc/networking.png)
 
@@ -112,7 +112,7 @@ Hyper-V는 Windows를 위한 하이퍼바이저 기반 가상화 기술입니다
 
 관리자는 네트워크 컨트롤러를 직접 조작하는 관리 도구를 사용합니다. 네트워크 컨트롤러는 가상 및 실제 인프라를 포함한 네트워크 인프라에 관한 정보를 관리 도구에 제공합니다.
 
-![](media/sddc/learn.png) **[네트워크 컨트롤러에 대 한 자세한 정보](https://docs.microsoft.com/windows-server/networking/sdn/technologies/network-controller/network-controller)**
+**[네트워크 컨트롤러에 대 한 자세한](https://docs.microsoft.com/windows-server/networking/sdn/technologies/network-controller/network-controller) 정보 ![](media/sddc/learn.png)**
 
 ### <a name="datacenter-firewall"></a>데이터 센터 방화벽
 
@@ -124,7 +124,7 @@ Hyper-V는 Windows를 위한 하이퍼바이저 기반 가상화 기술입니다
 
 서비스 공급자 관리자 또는 테넌트 관리자는 네트워크 컨트롤러를 통해 데이터 센터 방화벽 정책을 관리할 수 있습니다.
 
-![](media/sddc/learn.png) **[데이터 센터 방화벽에 대 한 자세한 정보](https://docs.microsoft.com/windows-server/networking/sdn/technologies/network-function-virtualization/datacenter-firewall-overview)**
+**[데이터 센터 방화벽에 대 한 자세한 정보](https://docs.microsoft.com/windows-server/networking/sdn/technologies/network-function-virtualization/datacenter-firewall-overview) ![](media/sddc/learn.png)**
 
 ### <a name="switch-embedded-teaming"></a>스위치 포함 팀
 
@@ -134,7 +134,7 @@ SET(스위치 포함 팀)는 Hyper-V 및 [SDN(소프트웨어 정의 네트워�
 
 ![](media/sddc/spacer1.png)![](media/sddc/teaming.png)
 
-![](media/sddc/learn.png) **[스위치 포함 팀에 대 한 자세한](https://docs.microsoft.com/windows-server/networking/sdn/technologies/set-for-sdn) 정보**
+**[스위치 포함 팀에 대 한 자세한](https://docs.microsoft.com/windows-server/networking/sdn/technologies/set-for-sdn) 내용은 ![](media/sddc/learn.png).**
 
 ### <a name="software-load-balancing"></a>소프트웨어 부하 분산
 
@@ -144,7 +144,7 @@ SLB는 여러 서버에서 동일한 작업을 호스트할 수 있도록 하여
 
 ![](media/sddc/spacer1.png)![](media/sddc/balancer.png)
 
-![](media/sddc/learn.png) **[소프트웨어 부하 분산에 대 한 자세한 정보](https://docs.microsoft.com/windows-server/networking/sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn)**
+**[소프트웨어 부하 분산에 대 한 자세한](https://docs.microsoft.com/windows-server/networking/sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn) 정보 ![](media/sddc/learn.png)**
 
 
 ![](media/sddc/storage.png)
@@ -155,11 +155,11 @@ SLB는 여러 서버에서 동일한 작업을 호스트할 수 있도록 하여
 
 로컬 연결 드라이브가 있는 업계 표준 서버를 사용하는 저장소 공간 다이렉트는 기존의 SAN 또는 NAS 어레이에 비해 훨씬 저렴한 비용으로 확장성이 뛰어난 고가용성 소프트웨어 정의 저장소를 제공합니다. 아키텍처는 조달 및 배포를 크게 간소화합니다.
 
-![ 각 노드에는 클러스터 수준에서 풀링된 로컬에 연결 된 드라이브가 스토리지 공간 다이렉트 Csv @ no__t-1을 통해 Vm에서 액세스 됩니다.
+![각 노드에는 로컬로 연결 된 드라이브가 클러스터 수준에서 풀링된 스토리지 공간 다이렉트 Csv를 통해 Vm에서 액세스 됩니다](media/sddc/spacer1.png)![](media/sddc/ssd.png)
 
 저장소 공간 다이렉트는 새로운 소프트웨어 저장소 버스를 도입하고, 장애 조치(Failover) 클러스터링, CSVs(클러스터 공유 볼륨), SMB(서버 메시지 블록) 3, 저장소 공간을 비롯하여 오늘날 Windows Server에서 알려진 많은 기능을 활용합니다.
 
-![](media/sddc/learn.png) **[스토리지 공간 다이렉트에 대해 자세히 알아보세요](storage/storage-spaces/storage-spaces-direct-overview.md) .**
+![](media/sddc/learn.png) **[에 대 한 자세한 내용은 스토리지 공간 다이렉트](storage/storage-spaces/storage-spaces-direct-overview.md)**
 ### <a name="storage-quality-of-service"></a>저장소 서비스 품질 ###
 
 ![](media/sddc/storage-line.png)
@@ -170,7 +170,7 @@ Hyper-V 및 스케일 아웃 파일 서버 역할을 사용하여 가상 컴퓨�
 
 저장소 QoS(서비스 품질)는 SMB3 프로토콜을 사용하여 스케일 아웃 파일 서버 및 Hyper-V에서 제공되는 Microsoft 소프트웨어 정의 저장소 솔루션에 기본 제공됩니다. 새로운 정책 관리자는 중앙 저장소 성능 모니터링을 제공합니다.
 
-![](media/sddc/learn.png) **[저장소 QoS에 대 한 자세한 정보](https://docs.microsoft.com/windows-server/storage/storage-qos/storage-qos-overview)**
+**[저장소 QoS에 대 한 자세한](https://docs.microsoft.com/windows-server/storage/storage-qos/storage-qos-overview) 정보 ![](media/sddc/learn.png)**
 
 ### <a name="storage-replica"></a>저장소 복제본
 
@@ -190,9 +190,9 @@ Hyper-V 및 스케일 아웃 파일 서버 역할을 사용하여 가상 컴퓨�
 4. 원격 사이트에서 승인합니다.
 5. 응용 프로그램 쓰기가 승인됩니다.
 
-t & t1: 볼륨에 플러시된 데이터, 로그는 항상
+t 및 t1: 데이터가 볼륨에 플러시되고 로그가 항상 기록됨
 
-![](media/sddc/learn.png) **[저장소 복제본에 대 한 자세한 정보](https://docs.microsoft.com/windows-server/storage/storage-replica/storage-replica-overview)**
+**[저장소 복제본에 대 한 자세한](https://docs.microsoft.com/windows-server/storage/storage-replica/storage-replica-overview) 정보 ![](media/sddc/learn.png)**
 
 ![](media/sddc/security.png)
 
@@ -200,11 +200,11 @@ t & t1: 볼륨에 플러시된 데이터, 로그는 항상
 
 ![](media/sddc/security-line.png)
 
-클라우드 서비스 공급자 또는 엔터프라이즈 사설 클라우드 관리자로서 보호된 패브릭을 사용하여 VM에 대한 더욱 안전한 환경을 제공할 수 있습니다. 보호된 패브릭은 하나의 HGS(호스트 보호 서비스)(일반적으로 3노드의 클러스터)에 하나 이상의 보호된 호스트 및 보호된 가상 컴퓨터(VM) 세트로 구성됩니다.
+클라우드 서비스 공급 기업 또는 엔터프라이즈 프라이빗 클라우드 관리자로서 보호된 패브릭을 사용하여 VM에 대한 더욱 안전한 환경을 제공할 수 있습니다. 보호된 패브릭은 하나의 HGS(호스트 보호 서비스)(일반적으로 3노드의 클러스터)에 하나 이상의 보호된 호스트 및 보호된 가상 컴퓨터(VM) 세트로 구성됩니다.
 
 ![](media/sddc/spacer1.png)![](media/sddc/guarded-fabric.png)
 
-![](media/sddc/learn.png) **[보호 된 패브릭에 대 한 자세한](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms) 정보**
+**[보호 된 패브릭에 대 한 자세한](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms) 정보 ![](media/sddc/learn.png)**
 
 ### <a name="shielded-vms"></a>보호된 VM
 
@@ -218,7 +218,7 @@ t & t1: 볼륨에 플러시된 데이터, 로그는 항상
 - 보호된 VM은 BitLocker 또는 다른 수단에 의해 암호화되기 때문에 지정된 소유자만 이를 실행할 수 있습니다.
 - 실행 중인 VM은 보호된 상태로 변환될 수 있습니다.
 
-![](media/sddc/learn.png) **[보호 된 vm에](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms) 대해 자세히 알아보기**
+**[보호 된 vm에 대 한 자세한 정보](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms) ![](media/sddc/learn.png)**
 
 ### <a name="host-guardian-service"></a>호스트 보호 서비스
 
@@ -228,7 +228,7 @@ t & t1: 볼륨에 플러시된 데이터, 로그는 항상
 
 ![](media/sddc/spacer1.png)![](media/sddc/guardian.png)
 
-![](media/sddc/learn.png) **[호스트 보호자 서비스에 대해 자세히 알아보세요](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-manage-hgs) .**
+**[호스트 보호자 서비스에 대 한 자세한](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-manage-hgs) 내용은 ![](media/sddc/learn.png).**
 
 ### <a name="device-health-attestation"></a>디바이스 상태 증명
 
@@ -243,7 +243,7 @@ t & t1: 볼륨에 플러시된 데이터, 로그는 항상
 위에 표시된 하드웨어 신뢰 모드는 TPM v2.0 하드웨어 기반 신뢰 및 키 릴리스용 코드 무결성 정책이 포함된 규정 준수를 통해 가장 높은 수준의 보증을 제공합니다.
 
 
-![](media/sddc/learn.png) **[디바이스 상태 증명에 대해 자세히 알아보세요](https://docs.microsoft.com/windows-server/security/device-health-attestation) .**
+![](media/sddc/learn.png) **[에 대 한 자세한 내용은 디바이스 상태 증명](https://docs.microsoft.com/windows-server/security/device-health-attestation)**
 
 ![](media/sddc/management.png)
 
@@ -261,7 +261,7 @@ DSC는 "연속 배포"를 지원하므로 중단 없이 구성을 계속해서 �
 -  DSC는 온-프레미스, 공용 또는 개인 클라우드 환경에서 사용할 수 있습니다.
 -  대상 시스템에 PowerShell 스크립트를 실행할 수 있는 한 모든 Microsoft 또는 타사 솔루션과 DSC를 통합할 수 있습니다.
 
-![](media/sddc/learn.png) **[PowerShell DSC에 대 한 자세한 정보](https://docs.microsoft.com/powershell/dsc/overview)**
+**[PowerShell DSC에 대 한 자세한](https://docs.microsoft.com/powershell/dsc/overview) 정보 ![](media/sddc/learn.png)**
 
 
 ### <a name="system-center-vmm"></a>System Center VMM
@@ -272,10 +272,10 @@ Virtual Machine Manager는 온-프레미스, 서비스 공급자 및 Azure 클�
 
 ![](media/sddc/spacer1.png)![](media/sddc/vmm.png)
 
-- 데이터 센터 VMM에서 데이터 센터 구성 요소를 단일 패브릭에 구성 하 고 관리 합니다. 
-- 가상화 호스트: VMM은 Hyper-v 및 VMware 가상화 호스트 및 클러스터를 추가, 프로 비전 및 관리할 수 있습니다.
-- Lan VMM은 가상 네트워크 및 네트워크 게이트웨이를 만들고 관리 하는 기능을 포함 하 여 네트워크 가상화를 제공 합니다. 
-- 저장소: VMM에서는 로컬 및 원격 저장소를 검색, 분류, 프로 비전, 할당 및 할당할 수 있습니다.
+- 데이터 센터: 데이터 센터 구성 요소를 VMM의 단일 패브릭으로 구성 및 관리합니다. 
+- 가상화 호스트: VMM은 Hyper-V 및 VMware 가상화 호스트와 클러스터를 추가, 프로비전 및 관리할 수 있습니다.
+- 네트워킹: VMM은 가상 네트워크 및 네트워크 게이트웨이 생성 및 관리에 대한 지원을 포함하여 네트워크 가상화를 제공합니다. 
+- 저장소: VMM은 로컬 및 원격 저장소를 검색, 분류, 프로비전 및 할당할 수 있습니다.
 
 ![](media/sddc/learn.png) **[SYSTEM Center VMM에 대 한 자세한 정보](https://docs.microsoft.com/system-center/vmm/)**
 
@@ -289,4 +289,4 @@ Windows Admin Center는 Azure 또는 클라우드 종속성 없이 Windows Serve
 
 웹 서버를 DNS에 게시하고 회사 방화벽을 설정하면 공용 인터넷에서 Windows Admin Center에 액세스하여 Microsoft Edge 또는 Google Chrome으로 어디에서든 서버에 연결하여 관리할 수 있습니다.
 
-![](media/sddc/learn.png) **[Windows 관리 센터에 대 한 자세한 정보](manage/windows-admin-center/overview.md)**
+**[Windows 관리 센터에 대 한 자세한](manage/windows-admin-center/overview.md) 정보 ![](media/sddc/learn.png)**

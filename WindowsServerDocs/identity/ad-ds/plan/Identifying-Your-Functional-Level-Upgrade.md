@@ -55,7 +55,7 @@ Windows Server 2008 또는 2008 Windows server 2008 r 2에서 모든 포리스�
   
 -   포리스트에 새로 설치한 Windows Server 2008 기반 또는 Windows Server 2008 R2 기반 도메인 컨트롤러를 소개 하 고 Windows 2000를 실행 하는 모든 도메인 컨트롤러를 사용 중지 합니다.  
   
--   포리스트에서 Windows 2000를 실행 하는 기존의 모든 도메인 컨트롤러를 Windows Server 2003를 실행 하는 도메인 컨트롤러로 전체 업그레이드를 수행 합니다. 그런 다음 Windows Server 2008 또는 Windows Server 2008 r 2로 해당 도메인 컨트롤러의 전체 업그레이드를 수행 합니다. 자세한 내용은 [Active Directory 도메인을 Windows Server 2008 AD DS 도메인으로 업그레이드 \[LH @ no__t-2](assetId:///9c91be5f-df14-40b2-b176-2b1852a51e61)를 참조 하세요.  
+-   포리스트에서 Windows 2000를 실행 하는 기존의 모든 도메인 컨트롤러를 Windows Server 2003를 실행 하는 도메인 컨트롤러로 전체 업그레이드를 수행 합니다. 그런 다음 Windows Server 2008 또는 Windows Server 2008 r 2로 해당 도메인 컨트롤러의 전체 업그레이드를 수행 합니다. 자세한 내용은 [Active Directory 도메인을 Windows Server 2008 AD DS 도메인으로 업그레이드 \[LH\]](assetId:///9c91be5f-df14-40b2-b176-2b1852a51e61)를 참조 하세요.  
   
     > [!IMPORTANT]  
     >  Windows Server 2008 R2은 x64 기반 운영 체제입니다. 서버에서 Windows Server 2003의 x64 기반 버전을 실행 하는 경우이 컴퓨터의 운영 체제를 Windows Server 2008 r 2로 전체 업그레이드를 성공적으로 수행할 수 있습니다. 서버에서 x86 기반 버전의 Windows Server 2003를 실행 하는 경우이 컴퓨터를 Windows Server 2008 r 2로 업그레이드할 수 없습니다.  
@@ -67,7 +67,7 @@ Windows Server 2008 또는 2008 Windows server 2008 r 2에서 모든 포리스�
   
 포리스트의 모든 Windows 2000 기반 도메인 컨트롤러를 Windows Server 2008 또는 Windows Server 2008 r 2를 실행 하는 도메인 컨트롤러로 바꾸면 포리스트 기능 수준을 Windows Server 2008 또는 Windows Server 2008 r 2로 올릴 수 있습니다. 이렇게 하면 windows 2000 기본 이상으로 설정 된 포리스트에 있는 모든 도메인의 기능 수준이 Windows Server 2008 또는 Windows Server 2008 r 2로 자동으로 발생 합니다.  
   
-포리스트 및 도메인 기능 수준을 올리는 방법 및 이러한 작업을 수행 하는 절차에 대 한 자세한 내용은 [Windows Server 2008 포리스트 루트 도메인 배포 \[LH @ no__t-2](assetId:///92406e8d-dc1c-4740-a00a-2c4032896dd1)를 참조 하세요.  
+포리스트와 도메인 기능 수준을 올리는 방법 및 해당 작업을 수행 하는 절차에 대 한 자세한 내용은 [Windows Server 2008 포리스트 루트 도메인 배포 \[LH\]](assetId:///92406e8d-dc1c-4740-a00a-2c4032896dd1)를 참조 하세요.  
   
 ## <a name="upgrading-functional-levels-in-a-windows-server-2003-active-directory-forest"></a>Windows Server 2003 Active Directory 포리스트에서 기능 수준 업그레이드  
 Windows Server 2003 기반 도메인 컨트롤러만 구성 된 Windows Server 2003 환경에서는 기능 수준이 기본적으로 다음 수준으로 설정 되 고 수동으로 발생 시킬 때까지 이러한 수준으로 유지 됩니다.  
@@ -80,7 +80,7 @@ Windows Server 2008 또는 2008 Windows server 2008 r 2에서 모든 포리스�
   
 -   포리스트에 새로 설치한 Windows Server 2008 기반 또는 Windows Server 2008 R2 기반 도메인 컨트롤러를 소개 하 고 Windows Server 2003를 실행 하는 모든 도메인 컨트롤러를 사용 중지 하거나 windows server 2008 또는 Windows Server 2008 r 2로 업그레이드 합니다.  
   
--   Windows server 2003를 실행 하는 기존의 모든 도메인 컨트롤러에 대해 Windows server 2008 또는 Windows Server 2008 r 2를 실행 하는 도메인 컨트롤러로 전체 업그레이드를 수행 합니다. 자세한 내용은 [Active Directory 도메인을 Windows Server 2008 AD DS 도메인으로 업그레이드 \[LH @ no__t-2](assetId:///9c91be5f-df14-40b2-b176-2b1852a51e61)를 참조 하세요.  
+-   Windows server 2003를 실행 하는 기존의 모든 도메인 컨트롤러에 대해 Windows server 2008 또는 Windows Server 2008 r 2를 실행 하는 도메인 컨트롤러로 전체 업그레이드를 수행 합니다. 자세한 내용은 [Active Directory 도메인을 Windows Server 2008 AD DS 도메인으로 업그레이드 \[LH\]](assetId:///9c91be5f-df14-40b2-b176-2b1852a51e61)를 참조 하세요.  
   
 > [!IMPORTANT]  
 >  Windows Server 2008 R2은 x64 기반 운영 체제입니다. 서버에서 Windows Server 2003의 x64 기반 버전을 실행 하는 경우이 컴퓨터의 운영 체제를 Windows Server 2008 r 2로 전체 업그레이드를 성공적으로 수행할 수 있습니다. 서버에서 x86 기반 Windows Server 2003 버전을 실행 하는 경우이 컴퓨터를 업그레이드 하 여 Windows Server 2008 r 2를 실행할 수 없습니다.  
@@ -92,7 +92,7 @@ Windows Server 2008 또는 2008 Windows server 2008 r 2에서 모든 포리스�
   
 포리스트의 모든 Windows Server 2003 기반 도메인 컨트롤러를 Windows server 2008 또는 Windows server 2008 r 2로 업그레이드 한 후에는 포리스트 기능 수준을 Windows Server 2008 또는 Windows Server 2008 r 2로 올릴 수 있습니다. 이렇게 하면 Windows server 2003로 설정 된 포리스트에 있는 모든 도메인의 기능 수준이 windows server 2008 또는 Windows Server 2008 r 2로 자동으로 발생 합니다.  
   
-포리스트 및 도메인 기능 수준을 올리는 방법 및 이러한 작업을 수행 하는 절차에 대 한 자세한 내용은 [Windows Server 2008 포리스트 루트 도메인 배포 \[LH @ no__t-2](assetId:///92406e8d-dc1c-4740-a00a-2c4032896dd1)를 참조 하세요.  
+포리스트와 도메인 기능 수준을 올리는 방법 및 해당 작업을 수행 하는 절차에 대 한 자세한 내용은 [Windows Server 2008 포리스트 루트 도메인 배포 \[LH\]](assetId:///92406e8d-dc1c-4740-a00a-2c4032896dd1)를 참조 하세요.  
   
 ## <a name="upgrading-functional-levels-in-a-new-windows-server-2008-forest"></a>새 Windows Server 2008 포리스트에서 기능 수준 업그레이드  
 새 Windows Server 2008 포리스트에 첫 번째 도메인 컨트롤러를 설치 하면 기본적으로 기능 수준이 다음 수준으로 설정 되 고 수동으로 발생 시킬 때까지 이러한 수준으로 유지 됩니다.  
@@ -106,7 +106,7 @@ Windows Server 2008 또는 2008 Windows server 2008 r 2에서 모든 포리스�
 > [!IMPORTANT]  
 > 포리스트가 Windows Server 2008 기능 수준에서 작동 하 고 Windows Server 2003 기반 구성원 서버 또는 Windows 2000 기반 구성원 서버에 Active Directory를 설치 하려고 하면 설치가 실패 합니다.  
   
-포리스트 및 도메인 기능 수준을 올리는 방법 및 이러한 작업을 수행 하는 절차에 대 한 자세한 내용은 [Windows Server 2008 포리스트 루트 도메인 배포 \[LH @ no__t-2](assetId:///92406e8d-dc1c-4740-a00a-2c4032896dd1)를 참조 하세요.  
+포리스트와 도메인 기능 수준을 올리는 방법 및 해당 작업을 수행 하는 절차에 대 한 자세한 내용은 [Windows Server 2008 포리스트 루트 도메인 배포 \[LH\]](assetId:///92406e8d-dc1c-4740-a00a-2c4032896dd1)를 참조 하세요.  
   
 ## <a name="upgrading-functional-levels-in-a-new-windows-server-2008-r2-forest"></a>새 Windows Server 2008 R2 포리스트에서 기능 수준 업그레이드  
 새 Windows Server 2008 R2 포리스트에 첫 번째 도메인 컨트롤러를 설치 하는 경우 기본적으로 기능 수준이 다음 수준으로 설정 되 고 수동으로 발생 시킬 때까지 이러한 수준으로 유지 됩니다.  
@@ -120,10 +120,10 @@ Windows Server 2008 또는 2008 Windows server 2008 r 2에서 모든 포리스�
 > [!IMPORTANT]  
 > 포리스트가 Windows Server 2008 R2 기능 수준에서 작동 하 고 Windows Server 2008 기반 또는 Windows Server 2003 기반 구성원 서버 또는 Windows 2000 기반 구성원 서버에 Active Directory를 설치 하려고 하면 설치가 실패 합니다.  
   
-포리스트 및 도메인 기능 수준을 올리는 방법 및 이러한 작업을 수행 하는 절차에 대 한 자세한 내용은 [Windows Server 2008 포리스트 루트 도메인 배포 \[LH @ no__t-2](assetId:///92406e8d-dc1c-4740-a00a-2c4032896dd1)를 참조 하세요.  
+포리스트와 도메인 기능 수준을 올리는 방법 및 해당 작업을 수행 하는 절차에 대 한 자세한 내용은 [Windows Server 2008 포리스트 루트 도메인 배포 \[LH\]](assetId:///92406e8d-dc1c-4740-a00a-2c4032896dd1)를 참조 하세요.  
   
 > [!NOTE]  
-> Windows Server 2008에 ADMT v 3.1을 설치 해야 하지만 ADMT v 3.1을 사용 하 여 하나 이상의 Windows Server 2008 R2 도메인 컨트롤러에서 호스팅되는 도메인으로 개체를 마이그레이션할 수 있습니다. 자세한 내용은 Microsoft 기술 자료 [문서 976659](https://go.microsoft.com/fwlink/?LinkId=180398) (https://go.microsoft.com/fwlink/?LinkId=180398) 을 참조 하세요.  
+> Windows Server 2008에 ADMT v 3.1을 설치 해야 하지만 ADMT v 3.1을 사용 하 여 하나 이상의 Windows Server 2008 R2 도메인 컨트롤러에서 호스팅되는 도메인으로 개체를 마이그레이션할 수 있습니다. 자세한 내용은 Microsoft 기술 자료 [문서 976659](https://go.microsoft.com/fwlink/?LinkId=180398) (https://go.microsoft.com/fwlink/?LinkId=180398)를 참조 하세요.  
   
 
 

@@ -23,7 +23,7 @@ ms.locfileid: "71355654"
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-이 항목을 사용 하 여 네트워크 기능 가상화에 대해 자세히 알아볼 수 있습니다 .이를 통해 데이터 센터 방화벽, 다중 테 넌 트 RAS 게이트웨이, 소프트웨어 부하 분산 \(SLB @ no__t-1 멀티플렉서 \(MUX @ no_와 같은 가상 네트워킹 어플라이언스를 배포할 수 있습니다. _t-3.
+이 항목을 사용 하 여 네트워크 기능 가상화에 대해 자세히 알아볼 수 있습니다 .이를 통해 데이터 센터 방화벽, 다중 테 넌 트 RAS 게이트웨이, 소프트웨어 부하 분산 \(SLB\) 멀티플렉서 \(MUX\)와 같은 가상 네트워킹 어플라이언스를 배포할 수 있습니다.
   
 >[!NOTE]  
 >이 항목 외에 다음과 같은 네트워크 기능 가상화 설명서를 사용할 수 있습니다.  
@@ -90,7 +90,7 @@ Microsoft SDN에 대 한 자세한 내용은 참조 [소프트웨어 정의 네�
 ## <a name="why-microsoft-is-a-great-platform-for-virtual-appliances"></a>왜 Microsoft는 가상 장비에 대 한 훌륭한 플랫폼  
 ![가상 네트워크 스택](../../../media/Network-Function-Virtualization/Microsoft-Network-Function-Virtualization.png)  
   
-Microsoft 플랫폼이를 가상 장비 빌드하여 배포 훌륭한 플랫폼으로 설계 되었다는 점입니다. 이유는 다음과 같습니다.  
+Microsoft 플랫폼이를 가상 장비 빌드하여 배포 훌륭한 플랫폼으로 설계 되었다는 점입니다. 그 이유는 다음과 같습니다.  
   
 -   Microsoft은 Windows Server 2016 키 가상화 된 네트워크 기능을 제공합니다.  
   

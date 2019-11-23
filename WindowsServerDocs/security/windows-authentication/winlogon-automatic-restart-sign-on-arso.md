@@ -74,14 +74,14 @@ Windows 8 잠금 화면 앱을 도입 되었습니다.  이 실행 하 고 사�
   
     -   BitLocker가 활성화 하는 경우에 설정할 수 있습니다.  
   
-## <a name="group-policy-sign-in-last-interactive-user-automatically-after-a-system-initiated-restart"></a>그룹 정책: 시스템에서 시작한 다시 시작 후 자동으로 마지막 대화형 사용자 로그인  
+## <a name="group-policy-sign-in-last-interactive-user-automatically-after-a-system-initiated-restart"></a>그룹 정책: 로그인 마지막 대화형 사용자 시스템에서 시작한 다시 시작한 후에 자동으로  
 Windows 8.1에서 Windows Server 2012 R2, Windows Update 다시 시작 된 후에 잠금 화면 사용자의 자동 로그온 서버 Sku에 대해 옵트인 및 클라이언트 Sku에 대 한 참여 하지 않음 /.  
   
 **정책 위치:** 컴퓨터 구성 > 정책 > 관리 템플릿 > Windows 구성 요소 > Windows 로그온 옵션  
   
-**정책 이름:** 시스템에서 시작한 다시 시작 후 자동으로 마지막 대화형 사용자 로그인  
+**정책 이름:** 로그인 마지막 대화형 사용자 시스템에서 시작한 다시 시작한 후에 자동으로  
   
-**지원 되는 위치:** Windows Server 2012 R2, Windows 8.1 또는 Windows RT 8.1 이상  
+**지원:** 최소한 Windows Server 2012 R2, Windows 8.1 또는 Windows RT 8.1  
   
 **설명/도움말:**  
   
@@ -95,11 +95,11 @@ Windows 8.1에서 Windows Server 2012 R2, Windows Update 다시 시작 된 후�
   
 |값 이름|형식|data|  
 |-------|----|----|  
-|DisableAutomaticRestartSignOn|DWORD|0<br /><br />**예 들어**<br /><br />0 (사용)<br /><br />1 (사용 안 함)|  
+|DisableAutomaticRestartSignOn|DWORD|0<br /><br />**예제:**<br /><br />0 (사용)<br /><br />1 (사용 안 함)|  
   
 **정책 레지스트리 위치:** HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System  
   
-**유형:** DWORD  
+**형식:** DWORD  
   
 **레지스트리 이름:** DisableAutomaticRestartSignOn  
   
@@ -143,7 +143,7 @@ WinLogon를 자동으로 잠그는 경우에 WinLogon의 상태 추적 WinLogon 
 로그온 시간 및 자녀 보호 하지 못할 수 있습니다 새 사용자 세션이 만들어지지 않도록 합니다.  다시 시작이이 기간 동안 발생 한다면 사용자 하지 로그인 허용 됩니다.  잠금 또는 규정 준수 동작으로 로그 아웃 시키는 추가 정책이 있습니다.  이 유지 관리 기간이이 시간 동안 일반적으로 경우에 특히 평판 시간 사이의 절전, 계정 잠금 발생할 수 있는 많은 자식 경우 문제가 될 수 있습니다.  
   
 ## <a name="additional-resources"></a>추가 리소스  
-**Table SEQ 테이블 \\ @ no__t-2 아랍어 3: ARSO 용어집 @-0  
+**표 SEQ 테이블 \\\* 아랍어 3: ARSO 용어집**  
   
 |용어|정의|  
 |----|-------|  

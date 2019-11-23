@@ -31,9 +31,9 @@ HNV는 다음 영역에서 향상 된 지원을 제공 합니다.
   
 |기능|새로운 기능 또는 향상된 기능|설명|  
 |--------------------------|-------------------|---------------|  
-|[프로그래밍 가능 Hyper-v 스위치](../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md#SDN)|단추를 사용하여 새|HNV 정책은 Microsoft 네트워크 컨트롤러를 통해 프로그래밍할 수 있습니다.|  
-|[VXLAN 캡슐화 지원](../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md#VXLAN)|단추를 사용하여 새|HNV는 이제 VXLAN 캡슐화를 지원 합니다.|  
-|[SLB (Software Load Balancer) 상호 운용성](../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md#SLB)|단추를 사용하여 새|HNV는 Microsoft 소프트웨어 Load Balancer와 완전히 통합 됩니다.|  
+|[프로그래밍 가능 Hyper-v 스위치](../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md#SDN)|새로 만들기|HNV 정책은 Microsoft 네트워크 컨트롤러를 통해 프로그래밍할 수 있습니다.|  
+|[VXLAN 캡슐화 지원](../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md#VXLAN)|새로 만들기|HNV는 이제 VXLAN 캡슐화를 지원 합니다.|  
+|[SLB (Software Load Balancer) 상호 운용성](../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md#SLB)|새로 만들기|HNV는 Microsoft 소프트웨어 Load Balancer와 완전히 통합 됩니다.|  
 |[규격 IEEE 이더넷 헤더](../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md#L2)|향상된 기능|IEEE 이더넷 표준 준수|  
   
 ### <a name="SDN"></a>프로그래밍 가능 Hyper-v 스위치  
@@ -41,7 +41,7 @@ HNV는 Microsoft의 업데이트 된 SDN (소프트웨어 정의 네트워킹) �
   
 Microsoft의 새 네트워크 컨트롤러는 SouthBound Interface (SBI)로 Open vSwitch OVSDB (데이터베이스 관리 프로토콜)를 사용 하 여 각 호스트에서 실행 되는 호스트 에이전트로 HNV 정책을 푸시합니다. 호스트 에이전트는 [Vtep 스키마](https://github.com/openvswitch/ovs/blob/master/vtep/vtep.ovsschema) 의 사용자 지정을 사용 하 여이 정책을 저장 하 고 복잡 한 흐름 규칙을 hyper-v 스위치의 성능 흐름 엔진으로 프로그램 합니다.  
   
-Hyper-v 스위치 내의 흐름 엔진은 Microsoft Azure @ no__t-0에서 사용 되는 것과 동일한 엔진으로, Microsoft Azure 공용 클라우드의 hyper-v에서 검증 되었습니다. 또한 네트워크 컨트롤러를 통해 전체 SDN 스택과 네트워크 리소스 공급자 (세부 정보 제공 예정)는 Microsoft Azure 일치 하므로 Microsoft Azure 공용 클라우드의 강력한 기능을 엔터프라이즈 및 호스팅 서비스로 활용할 수 있습니다. 공급자 고객.  
+Hyper-v 스위치 내의 흐름 엔진은 Microsoft Azure&trade;에서 사용 되는 것과 동일한 엔진으로, Microsoft Azure 공용 클라우드의 하이퍼 규모에서 검증 되었습니다. 또한 네트워크 컨트롤러를 통해 전체 SDN 스택과 네트워크 리소스 공급자 (세부 정보 제공 예정)는 Microsoft Azure 일치 하므로 Microsoft Azure 공용 클라우드의 강력한 기능을 엔터프라이즈 및 호스팅 서비스로 활용할 수 있습니다. 공급자 고객.  
   
 > [!NOTE]  
 > OVSDB에 대 한 자세한 내용은 [RFC 7047](https://www.rfc-editor.org/info/rfc7047)을 참조 하세요.  
@@ -59,7 +59,7 @@ Windows Server 2016에는 가상 네트워크 트래픽 및 HNV와의 원활한 
 ### <a name="L2"></a>규격 IEEE 이더넷 헤더  
 HNV는 업계 표준 프로토콜을 사용 하는 타사 가상 및 물리적 어플라이언스와의 상호 운용성을 보장 하기 위해 올바른 L2 이더넷 헤더를 구현 합니다. Microsoft는이 상호 운용성을 보장 하기 위해 모든 전송 된 패킷이 모든 필드에서 호환 값을 갖도록 합니다. 또한 실제 L2 네트워크의 점보 프레임 (MTU > 1780)은 캡슐화 프로토콜 (NVGRE, VXLAN)에 의해 도입 된 패킷 오버 헤드를 고려 하는 데 필요 하며, 게스트 Virtual Machines HNV에 연결 된 상태를 유지 하 Virtual Network 1514 MTU.  
   
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
   
 -   [Hyper-V 네트워크 가상화 개요](hyperv-network-virtualization-overview-windows-server.md)  
   

@@ -10,14 +10,14 @@ ms.localizationpriority: medium
 ms.prod: windows-server
 ms.openlocfilehash: 20b311e9330880c2b26e2494aabe27bb04891868
 ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71407030"
 ---
 # <a name="configure-user-access-control-and-permissions"></a>사용자 Access Control 및 사용 권한 구성
 
-> 적용 대상: Windows Admin Center, Windows Admin Center 미리 보기
+> 적용 대상: Windows 관리 센터, Windows 관리 센터 미리 보기
 
 아직 사용 하지 않은 경우 [Windows 관리 센터에서 사용자 액세스 제어 옵션](../plan/user-access-options.md) 을 숙지 하세요.
 
@@ -33,7 +33,7 @@ Windows 관리 센터 게이트웨이 서비스에 액세스 하기 위한 두 �
 **게이트웨이 관리자** 는 액세스 권한을 받는 사용자 및 사용자가 게이트웨이에 인증 하는 방법을 구성할 수 있습니다. 게이트웨이 관리자만 Windows 관리 센터에서 액세스 설정을 보고 구성할 수 있습니다. 게이트웨이 컴퓨터의 로컬 관리자는 항상 Windows 관리 센터 게이트웨이 서비스의 관리자입니다.
 
 > [!NOTE]
-> 게이트웨이에 대 한 액세스는 게이트웨이에서 볼 수 있는 관리 되는 서버에 대 한 액세스를 암시 하지 않습니다. 대상 서버를 관리 하려면 연결 하는 사용자가 관리 액세스 권한이 있는 전달 된 Windows 자격 증명 또는 **관리** 작업을 사용 하 여 Windows 관리 센터 세션에 제공 된 자격 증명을 통해 자격 증명을 사용 해야 합니다. 대상 서버에 연결할 수 있습니다.
+> 게이트웨이에 대 한 액세스는 게이트웨이에서 볼 수 있는 관리 되는 서버에 대 한 액세스를 암시 하지 않습니다. 대상 서버를 관리 하려면 연결 하는 사용자가 해당 대상 서버에 대 한 관리 권한이 있는 전달 된 Windows 자격 증명 또는 **관리** 작업을 사용 하 여 Windows 관리 센터 세션에 제공 된 자격 증명을 통해 자격 증명을 사용 해야 합니다.
 
 ## <a name="active-directory-or-local-machine-groups"></a>Active Directory 또는 로컬 컴퓨터 그룹
 
@@ -41,7 +41,7 @@ Windows 관리 센터 게이트웨이 서비스에 액세스 하기 위한 두 �
 
 **사용자** 탭에서 게이트웨이 사용자로 Windows 관리 센터에 액세스할 수 있는 사용자를 제어할 수 있습니다. 기본적으로 보안 그룹을 지정 하지 않으면 게이트웨이 URL에 액세스 하는 모든 사용자에 게 액세스 권한이 있습니다. 하나 이상의 보안 그룹을 사용자 목록에 추가 하면 해당 그룹의 멤버로 액세스가 제한 됩니다.
 
-사용자 환경에서 Active Directory 도메인을 사용 하지 않는 경우 액세스는 Windows 관리 센터 게이트웨이 컴퓨터의 `Users` 및 @no__t 1 로컬 그룹에 의해 제어 됩니다.
+사용자 환경에서 Active Directory 도메인을 사용 하지 않는 경우 액세스는 Windows 관리 센터 게이트웨이 컴퓨터의 `Users` 및 `Administrators` 로컬 그룹에 의해 제어 됩니다.
 
 ### <a name="smartcard-authentication"></a>스마트 카드 인증
 
@@ -55,21 +55,21 @@ Windows 관리 센터 게이트웨이 서비스에 액세스 하기 위한 두 �
 
 ### <a name="accessing-windows-admin-center-when-azure-ad-authentication-is-enabled"></a>Azure AD 인증을 사용 하는 경우 Windows 관리 센터에 액세스
 
-사용 되는 브라우저에 따라, Azure AD 인증을 사용 하 여 Windows 관리 센터에 액세스 하는 일부 사용자는 **브라우저에서** 추가 프롬프트를 받게 됩니다. 여기에서 컴퓨터에 대 한 windows 계정 자격 증명을 제공 해야 합니다. Windows 관리 센터가 설치 되어 있습니다. 해당 정보를 입력 한 후에는 azure에서 azure AD 응용 프로그램에 대 한 액세스 권한이 부여 된 Azure 계정의 자격 증명이 필요한 추가 Azure Active Directory 인증 프롬프트가 표시 됩니다.
+사용 된 브라우저에 따라, Azure AD 인증을 사용 하 여 Windows 관리 센터에 액세스 하는 일부 사용자는 **브라우저에서** Windows 관리 센터를 설치 하는 컴퓨터에 대 한 windows 계정 자격 증명을 제공 해야 하는 추가 프롬프트를 받게 됩니다. 해당 정보를 입력 한 후에는 azure에서 azure AD 응용 프로그램에 대 한 액세스 권한이 부여 된 Azure 계정의 자격 증명이 필요한 추가 Azure Active Directory 인증 프롬프트가 표시 됩니다.
 
 > [!NOTE]
 > Windows 계정에는 게이트웨이 컴퓨터에 대 한 **관리자 권한이** 있는 사용자에 게는 Azure AD 인증에 대 한 메시지가 표시 되지 않습니다.
 
 ### <a name="configuring-azure-active-directory-authentication-for-windows-admin-center-preview"></a>Windows 관리 센터 미리 보기에 대 한 Azure Active Directory 인증 구성
 
-Windows 관리 센터 **설정** > **액세스** 로 이동 하 고 설정/해제 스위치를 사용 하 여 "Azure Active Directory 사용 하 여 게이트웨이에 보안 계층 추가"를 설정 합니다. Azure에 게이트웨이를 등록 하지 않은 경우 지금이 작업을 수행 하는 방법을 안내 합니다.
+Windows 관리 센터 **설정** > **Access** 로 이동 하 고, 토글 스위치를 사용 하 여 "Azure Active Directory를 사용 하 여 게이트웨이에 보안 계층 추가"를 설정 합니다. Azure에 게이트웨이를 등록 하지 않은 경우 지금이 작업을 수행 하는 방법을 안내 합니다.
 
 기본적으로 Azure AD 테 넌 트의 모든 구성원은 Windows 관리 센터 게이트웨이 서비스에 대 한 사용자 액세스 권한을 보유 합니다. 게이트웨이 컴퓨터의 로컬 관리자만 Windows 관리 센터 게이트웨이에 대 한 관리자 액세스 권한을 보유 합니다. 게이트웨이 컴퓨터에서 로컬 관리자의 권한은 제한할 수 없습니다. 로컬 관리자는 인증에 Azure AD를 사용 하는지 여부에 관계 없이 모든 작업을 수행할 수 있습니다.
 
 특정 Azure AD 사용자 또는 그룹에 Windows 관리 센터 서비스에 대 한 액세스 권한을 부여 하려면 다음을 수행 해야 합니다.
 
 1.  액세스 설정에 제공 된 하이퍼링크를 사용 하 여 Azure Portal의 Windows 관리 센터 Azure AD 응용 프로그램으로 이동 합니다. 참고이 하이퍼링크는 Azure Active Directory 인증을 사용 하는 경우에만 사용할 수 있습니다. 
-    -   또한 **Azure Active Directory** > **엔터프라이즈 응용**프로그램  > **모든 응용 프로그램** 을 검색 하 고 **windowsadmincenter** 를 검색 하 여 Azure Portal에서 응용 프로그램을 찾을 수 있습니다. Azure AD 앱은 다음과 같이 이름이 지정 됩니다. WindowsAdminCenter-<gateway name>). 검색 결과를 얻지 못한 경우 **Show** 가 **모든 응용 프로그램**으로 설정 되 고 **응용 프로그램 상태** 가 **any** 로 설정 되 고 적용을 클릭 한 다음 검색을 시도 합니다. 응용 프로그램을 찾았으면 **사용자 및 그룹** 으로 이동 합니다.
+    -   **모든 응용** 프로그램 >  > **엔터프라이즈 응용 프로그램** 을 **Azure Active Directory** 로 이동 하 고 **windowsadmincenter** 를 검색 하 여 Azure Portal에서 응용 프로그램을 찾을 수도 있습니다 (Azure AD 앱의 이름은 windowsadmincenter-<gateway name>). 검색 결과를 얻지 못한 경우 **Show** 가 **모든 응용 프로그램**으로 설정 되 고 **응용 프로그램 상태** 가 **any** 로 설정 되 고 적용을 클릭 한 다음 검색을 시도 합니다. 응용 프로그램을 찾았으면 **사용자 및 그룹** 으로 이동 합니다.
 2.  속성 탭에서 **사용자 할당 필요** 를 예로 설정 합니다.
     이 작업을 완료 한 후에는 **사용자 및 그룹** 탭에 나열 된 멤버만 Windows 관리 센터 게이트웨이에 액세스할 수 있습니다.
 3.  사용자 및 그룹 탭에서 **사용자 추가**를 선택 합니다. 추가 된 각 사용자/그룹에 대해 게이트웨이 사용자 또는 게이트웨이 관리자 역할을 할당 해야 합니다.
@@ -88,7 +88,7 @@ Azure AD 인증을 켜면 게이트웨이 서비스가 다시 시작 되 고 브
 
 1.  Azure Portal에서 SME Azure AD 응용 프로그램으로 이동 합니다. 
     -   **액세스 제어 변경** 을 클릭 하 고 Windows 관리 센터 액세스 설정에서 **Azure Active Directory** 를 선택 하는 경우 UI에 제공 된 하이퍼링크를 사용 하 여 Azure Portal에서 Azure AD 응용 프로그램에 액세스할 수 있습니다. 저장을 클릭 하 고 액세스 제어 id 공급자로 Azure AD를 선택한 후에도 액세스 설정에서이 하이퍼링크를 사용할 수 있습니다.
-    -   또한 **Azure Active Directory** > **엔터프라이즈 응용**프로그램  > **모든 응용 프로그램** 및 **SME** 검색으로 이동 하 여 Azure Portal에서 응용 프로그램을 찾을 수 있습니다 (Azure AD 앱의 이름은 @no__t SME-6). 검색 결과를 얻지 못한 경우 **Show** 가 **모든 응용 프로그램**으로 설정 되 고 **응용 프로그램 상태** 가 **any** 로 설정 되 고 적용을 클릭 한 다음 검색을 시도 합니다. 응용 프로그램을 찾았으면 **사용자 및 그룹** 으로 이동 합니다.
+    -   **모든 응용** 프로그램 >  > **엔터프라이즈 응용 프로그램** 을 **Azure Active Directory** 로 이동 하 고 **SME** 를 검색 하 여 Azure Portal에서 응용 프로그램을 찾을 수도 있습니다 (Azure AD 앱의 이름은 SME-<gateway>). 검색 결과를 얻지 못한 경우 **Show** 가 **모든 응용 프로그램**으로 설정 되 고 **응용 프로그램 상태** 가 **any** 로 설정 되 고 적용을 클릭 한 다음 검색을 시도 합니다. 응용 프로그램을 찾았으면 **사용자 및 그룹** 으로 이동 합니다.
 2.  속성 탭에서 **사용자 할당 필요** 를 예로 설정 합니다.
     이 작업을 완료 한 후에는 **사용자 및 그룹** 탭에 나열 된 멤버만 Windows 관리 센터 게이트웨이에 액세스할 수 있습니다.
 3.  사용자 및 그룹 탭에서 **사용자 추가**를 선택 합니다. 추가 된 각 사용자/그룹에 대해 게이트웨이 사용자 또는 게이트웨이 관리자 역할을 할당 해야 합니다.
@@ -144,7 +144,7 @@ RBAC를 설정 하는 작업은 대상 컴퓨터에 대 한 지원을 사용 하
 단일 컴퓨터 배포 모델은 관리할 컴퓨터가 많지 않은 간단한 환경에 적합 합니다.
 역할 기반 액세스 제어를 지 원하는 컴퓨터를 구성 하면 다음과 같이 변경 됩니다.
 
--   Windows 관리 센터에 필요한 기능을 포함 하는 PowerShell 모듈은 `C:\Program Files\WindowsPowerShell\Modules`에서 시스템 드라이브에 설치 됩니다. 모든 모듈은 **Microsoft. Sme로 시작 합니다.**
+-   Windows 관리 센터에 필요한 기능이 포함 된 PowerShell 모듈은 `C:\Program Files\WindowsPowerShell\Modules`의 시스템 드라이브에 설치 됩니다. 모든 모듈은 **Microsoft. Sme로 시작 합니다.**
 -   필요한 상태 구성에서는 **Sme**라는 컴퓨터에서 충분 한 관리 끝점을 구성 하는 일회성 구성을 실행 합니다. 이 끝점은 Windows 관리 센터에서 사용 되는 3 개의 역할을 정의 하 고 사용자가 연결할 때 임시 로컬 관리자로 실행 됩니다.
 -   3 새 로컬 그룹이 만들어지고 역할에 대 한 액세스 권한이 할당 된 사용자를 제어 합니다.
     -   Windows 관리 센터 관리자
@@ -196,12 +196,12 @@ Zip 보관 파일을 확장 하면 다음과 같은 폴더 구조가 표시 됩�
 - InstallJeaFeatures
 - JustEnoughAdministration (디렉터리)
 - 모듈 (디렉터리)
-    - SME \* (디렉터리)
+    - \* SME (디렉터리)
     - WindowsAdminCenter. Jea (디렉터리)
 
 노드에 대 한 역할 기반 액세스 제어 지원을 구성 하려면 다음 작업을 수행 해야 합니다.
 
-1.  JustEnoughAdministration, @no__t SME 및 WindowsAdminCenter. Jea 모듈을 대상 컴퓨터의 PowerShell 모듈 디렉터리에 복사 합니다. 일반적으로이는 `C:\Program Files\WindowsPowerShell\Modules`에 있습니다.
+1.  JustEnoughAdministration, SME를 복사 합니다.\*및 WindowsAdminCenter. j s j 모듈을 대상 컴퓨터의 PowerShell 모듈 디렉터리에 배치 합니다. 일반적으로이는 `C:\Program Files\WindowsPowerShell\Modules`에 있습니다.
 2.  **InstallJeaFeature** 파일을 업데이트 하 여 RBAC 끝점의 원하는 구성과 일치 시킵니다.
 3.  InstallJeaFeature를 실행 하 여 DSC 리소스를 컴파일합니다.
 4.  모든 컴퓨터에 DSC 구성을 배포 하 여 구성을 적용 합니다.
@@ -210,7 +210,7 @@ Zip 보관 파일을 확장 하면 다음과 같은 폴더 구조가 표시 됩�
 
 #### <a name="deploy-on-multiple-machines"></a>여러 컴퓨터에 배포
 
-여러 컴퓨터에 다운로드 한 구성을 배포 하려면 사용자 환경에 적절 한 보안 그룹을 포함 하도록 InstallJeaFeatures 스크립트를 업데이트 하 고, 각 컴퓨터에 파일을 복사 하 고,를 호출 합니다 **.** 구성 스크립트.
+여러 컴퓨터에 다운로드 한 구성을 배포 하려면 사용자 환경에 적절 한 보안 그룹을 포함 하도록 **InstallJeaFeatures** 스크립트를 업데이트 하 고, 각 컴퓨터에 파일을 복사 하 고, 구성 스크립트를 호출 해야 합니다.
 선호 하는 자동화 도구를 사용 하 여이를 수행할 수 있지만이 문서에서는 순수한 PowerShell 기반 접근 방식에 중점을 둡니다.
 
 기본적으로 구성 스크립트는 컴퓨터에 각 역할에 대 한 액세스를 제어 하는 로컬 보안 그룹을 만듭니다.
@@ -225,7 +225,7 @@ Zip 보관 파일을 확장 하면 다음과 같은 폴더 구조가 표시 됩�
     1.  "[Group] MS Readers-Group"
     2.  "[그룹] MS-hyper-v-관리자-그룹"
     3.  "[Group] MS-Administrators-Group"
-3.  JeaEndpoint **Roledefinitions** 속성의 그룹 이름을 원하는 보안 그룹으로 변경 합니다. 예를 들어 Windows 관리 센터 관리자 역할에 대 한 액세스 권한을 할당 해야 하는 보안 그룹 *CONTOSO\MyTrustedAdmins* 있는 경우 `'$env:COMPUTERNAME\Windows Admin Center Administrators'`을 `'CONTOSO\MyTrustedAdmins'`로 변경 합니다. 업데이트 해야 하는 세 가지 문자열은 다음과 같습니다.
+3.  JeaEndpoint **Roledefinitions** 속성의 그룹 이름을 원하는 보안 그룹으로 변경 합니다. 예를 들어 Windows 관리 센터 관리자 역할에 대 한 액세스 권한을 할당 해야 하는 보안 그룹 *CONTOSO\MyTrustedAdmins* 있는 경우 `'$env:COMPUTERNAME\Windows Admin Center Administrators'` `'CONTOSO\MyTrustedAdmins'`변경 합니다. 업데이트 해야 하는 세 가지 문자열은 다음과 같습니다.
     1.  ' $env: COMPUTERNAME\Windows 관리 센터 관리자 '
     2.  ' $env: COMPUTERNAME\Windows 관리 센터 Hyper-v 관리자 '
     3.  ' $env: COMPUTERNAME\Windows 관리 센터 독자 '

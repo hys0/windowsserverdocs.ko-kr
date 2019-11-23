@@ -153,5 +153,5 @@ adprep/forestprep를 실행하려면 스키마 마스터를 호스트하는 도�
 ## <a name="next-steps"></a>다음 단계
  [Active Directory Federation Services 역할 서비스를 Windows Server 2012 r 2로 마이그레이션](migrate-ad-fs-service-role-to-windows-server-r2.md)   
  [AD FS 페더레이션 서버 마이그레이션](migrate-ad-fs-fed-server-r2.md)   
- [AD FS 페더레이션 서버 프록시 마이그레이션](migrate-fed-server-proxy-r2.md)   
+ [AD FS 페더레이션 서버 프록시  마이그레이션](migrate-fed-server-proxy-r2.md)  
  [Windows Server 2012 r 2로 AD FS 마이그레이션 확인](verify-ad-fs-migration.md)

@@ -20,7 +20,7 @@ ms.locfileid: "71356070"
 
 >적용 대상: Windows Server, Windows Server 2016
 
-이 항목에서는 Windows Server @ no__t-0 2016에 대 한 핵심 네트워크 지침의 개요를 제공 하며 다음 섹션을 포함 합니다.  
+이 항목에서는 Windows Server&reg; 2016에 대 한 핵심 네트워크 지침의 개요를 제공 하며 다음 섹션을 포함 합니다.  
   
 -   [Windows Server Core 네트워크 소개](#bkmk_intro)  
   

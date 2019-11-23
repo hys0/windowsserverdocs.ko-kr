@@ -33,7 +33,7 @@ ms.locfileid: "71406893"
 
 이제 방금 만든 비어 있는 새 모듈에 iFrame을 추가 합니다.
 
-\Src\app @ no__t-0에서 모듈 폴더로 이동한 후 다음 명명 규칙을 사용 하 여 파일 ```{!module-name}.component.html```을 엽니다.
+\Src\app app에서 모듈 폴더로 이동한 후 다음 명명 규칙을 사용 하 여 파일 ```{!module-name}.component.html```를 엽니다.\,
 
 | 값 | 설명 | 예제 파일 이름 |
 | ----- | ----------- | ------- |

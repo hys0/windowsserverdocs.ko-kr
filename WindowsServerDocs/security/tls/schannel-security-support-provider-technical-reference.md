@@ -22,7 +22,7 @@ ms.locfileid: "71403400"
 ---
 # <a name="schannel-security-support-provider-technical-reference"></a>Schannel 보안 지원 공급자 기술 참조
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows 10
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows 10
 
 IT 전문가를 위한이 참조에는 TLS (전송 계층 보안) 프로토콜, SSL(Secure Sockets Layer) (SSL) 프로토콜 및 Schannel 보안 지원에 의해 구현 되는 DTLS (데이터 그램 전송 계층 보안) 프로토콜에 대 한 정보가 포함 되어 있습니다. 공급자 (SSP).
 
@@ -31,7 +31,8 @@ IT 전문가를 위한이 참조에는 TLS (전송 계층 보안) 프로토콜, 
 - [전송 계층 보안 프로토콜](transport-layer-security-protocol.md)
 - [데이터그램 전송 계층 보안 프로토콜](datagram-transport-layer-security-protocol.md)
 
-## <a name="see-also"></a>참조
-[Windows 인증](../windows-authentication/windows-authentication-overview.md)@no__t-[Kerberos 인증](../kerberos/kerberos-authentication-overview.md) 1 대
+## <a name="see-also"></a>참고 항목
+[Kerberos 인증](../kerberos/kerberos-authentication-overview.md)
+[Windows 인증](../windows-authentication/windows-authentication-overview.md)
 
 

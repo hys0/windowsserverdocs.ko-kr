@@ -168,7 +168,7 @@ netstat -anp tcp |findstr 6640
   TCP    10.127.132.153:50023   10.127.132.211:6640    ESTABLISHED
 ```
 #### <a name="check-host-agent-services"></a>호스트 에이전트 서비스를 확인 합니다.
-네트워크 컨트롤러는 Hyper-v 호스트의 두 호스트 에이전트 서비스와 통신 합니다. SLB 호스트 에이전트 및 NC 호스트 에이전트. 이러한 서비스 중 하나 또는 모두가 실행 하지는 것 같습니다. 상태를 확인 하 고 실행 되지 않는 경우 다시 시작 하십시오.
+네트워크 컨트롤러는 Hyper-v 호스트에 두 개의 호스트 에이전트 서비스와 통신: SLB 호스트 에이전트 및 NC 호스트 에이전트. 이러한 서비스 중 하나 또는 모두가 실행 하지는 것 같습니다. 상태를 확인 하 고 실행 되지 않는 경우 다시 시작 하십시오.
 
 ```none
 Get-Service SlbHostAgent
@@ -566,7 +566,7 @@ CA IP Address CA MAC Address    Virtual Subnet ID PA IP Address
 >[!NOTE]
 >Vsid가 참조 된 가상 서브넷 id. VXLAN의 경우는 VXLAN 네트워크 식별자 (vni) 또는입니다. 이 값은 **PACAMapping** cmdlet을 실행 하 여 찾을 수 있습니다.
 
-#### <a name="example"></a>예제
+#### <a name="example"></a>예
 
     $password = ConvertTo-SecureString -String "password" -AsPlainText -Force
     $cred = New-Object pscredential -ArgumentList (".\administrator", $password) 
@@ -668,7 +668,7 @@ VMM 배포는 기본적으로 네트워크 컨트롤러에 대 한 중앙 집중
 
 #### <a name="slbm-fabric-errors-hosting-service-provider-actions"></a>SLBM 패브릭 오류 (호스팅 서비스 공급자 동작)
 
-1.  SLBM (Software Load Balancer Manager)가 작동 하 고 오케스트레이션 계층이 서로 통신할 수 있는지 확인 합니다. SLBM-SLB Mux 및 SLBM > SLB 호스트 에이전트를 > 합니다. 실행 [DumpSlbRestState](https://github.com/Microsoft/SDN/blob/master/Diagnostics/DumpSlbRestState.ps1) 네트워크 컨트롤러 REST 끝점에 액세스할 수 있는 모든 노드에서 합니다.  
+1.  소프트웨어 부하 분산 장치 관리자 (SLBM) 작동 하 고 오케스트레이션 레이어가 서로 통신할 수 있는지 확인 하십시오: SLBM-SLB Mux > 하 고 SLBM SLB 호스트 에이전트. 실행 [DumpSlbRestState](https://github.com/Microsoft/SDN/blob/master/Diagnostics/DumpSlbRestState.ps1) 네트워크 컨트롤러 REST 끝점에 액세스할 수 있는 모든 노드에서 합니다.  
 2.  유효성 검사는 *SDNSLBMPerfCounters* 네트워크 컨트롤러 노드 Vm (가급적 주 네트워크 컨트롤러 노드-Get NetworkControllerReplica) 중 하나에서 성능 모니터에서:
     1.  부하 분산 장치 (LB) 엔진 SLBM에 연결 되어 있습니까? (*SLBM LBEngine 구성 총* > 0)  
     2.  SLBM 적어도 알 자체 끝점에 대 한? (*VIP 끝점 총* > = 2)  
@@ -683,12 +683,12 @@ VMM 배포는 기본적으로 네트워크 컨트롤러에 대 한 중앙 집중
 4.  유효성 검사는 *SlbMuxPerfCounters* 및 *SLBMUX* SLB Mux VM에는 PerfMon 카운터
 5.  구성 상태 및 소프트웨어 부하 분산 장치 관리자 리소스에 대 한 VIP 범위를 확인 합니다.  
     1.  Get NetworkControllerLoadBalancerConfiguration ConnectionUri < https://<FQDN or IP>| convertto json-8 깊이 (IP 풀의 VIP 범위 SLBM 자체 VIP를 확인 하십시오 (*LoadBalanacerManagerIPAddress*) 및 모든 테 넌 트 쪽 Vip는이 범위 내)  
-        1. "< 공개/개인 VIP 논리 네트워크 리소스 ID >" get NetworkControllerIpPool-NetworkId-SubnetId "< 공개/개인 VIP 논리 서브넷 리소스 ID >"-ResourceId "<IP Pool Resource Id>"-ConnectionUri $uri | convertto json-8 깊이 
+        1. "&lt; 공개/프라이빗 VIP 논리 네트워크 리소스 ID &gt;" get NetworkControllerIpPool-NetworkId-SubnetId "&lt; 공개/프라이빗 VIP 논리 서브넷 리소스 ID &gt;"-ResourceId "<IP Pool Resource Id>"-ConnectionUri $uri | convertto json-8 깊이 
     2.  디버그-NetworkControllerConfigurationState-  
 
 검사 실패 위의 경우에 실패 모드에 테 넌 트 SLB 상태 수도 있습니다.  
 
-**업데이트**   
+**수정**   
 제공 된 다음 진단 정보에 따릅니다, 다음 수정 합니다.  
 * SLB 멀티플렉서 연결 되도록  
   * 인증서 문제 해결  
@@ -706,7 +706,7 @@ VMM 배포는 기본적으로 네트워크 컨트롤러에 대 한 중앙 집중
     1.  DIP의 유효성을 검사 SLBM에 등록 되어 있는 끝점 LoadBalancer 백 엔드 주소 풀의 IP 구성에 해당 하는 테 넌 트 가상 컴퓨터를 호스트  
 3.  [호스터] DIP 끝점 발견 하지 않거나 연결 합니다.   
     1.  확인 *NetworkControllerConfigurationState 디버그*  
-        1.  @No__t-0을 사용 하 여 NC 및 SLB 호스트 에이전트가 네트워크 컨트롤러 이벤트 코디네이터에 성공적으로 연결 되었는지 확인 합니다.  
+        1.  ``netstat -anp tcp |findstr 6640)``를 사용 하 여 NC 및 SLB 호스트 에이전트가 네트워크 컨트롤러 이벤트 코디네이터에 성공적으로 연결 되었는지 확인 합니다.  
     2.  확인 *HostId* 에서 *nchostagent* 서비스 레지스트리 키 (참조 *HostNotConnected* 부록에 오류 코드) 해당 하는 서버 리소스의 인스턴스 Id와 일치 (``Get-NCServer |convertto-json -depth 8``)  
     3.  가상 컴퓨터 포트에 대 한 포트 프로필 id에 해당 가상 컴퓨터 NIC 리소스의 인스턴스 Id와 일치 확인   
 4.  [호스팅 공급자] 로그 수집   

@@ -22,10 +22,10 @@ ms.locfileid: "71362812"
 ---
 # <a name="using-the-remove-driverpackage-command"></a>제거 DriverPackage 명령을 사용 하 여
 
-> 적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 > 
 > 
-> 적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 서버에서 드라이버 패키지를 제거 합니다.
 ## <a name="syntax"></a>구문

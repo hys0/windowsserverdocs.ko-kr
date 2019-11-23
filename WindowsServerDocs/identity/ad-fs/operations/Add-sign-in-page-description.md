@@ -20,7 +20,7 @@ ms.locfileid: "71407740"
 
 
 ## <a name="to-add-sign-in-page-description"></a>추가 기호를\-페이지 설명  
-Sign @ no__t-0in 페이지 설명을 sign @ no__t-1in 페이지에 추가 하려면 다음 Windows PowerShell cmdlet 및 구문을 사용 합니다.  
+페이지 설명의 부호\-를 추가 하려면 페이지의 부호\-페이지에서 다음 Windows PowerShell cmdlet 및 구문을 사용 합니다.  
 
 ![설명에 기호를 추가 합니다.](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom2.png)
 

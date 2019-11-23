@@ -42,7 +42,7 @@ AD FS는 Schannel을 사용 하 여 보안 통신 상호 작용을 수행 합니
 
 Todays와 age에서 서버를 강화 하 고 이전 또는 취약 한 암호 그룹을 제거 하는 것은 많은 조직에서 중요 한 우선 순위를 갖습니다.  서버를 테스트 하 고 이러한 프로토콜 및 도구 모음에 대 한 자세한 정보를 제공 하는 소프트웨어 제품군을 사용할 수 있습니다.  규격을 유지 하거나 보안 등급을 확보 하기 위해 약한 프로토콜이 나 암호 그룹을 제거 하거나 사용 하지 않도록 설정 해야 합니다.  이 문서의 나머지 부분에서는 특정 프로토콜 및 암호 그룹을 사용 하거나 사용 하지 않도록 설정 하는 방법에 대 한 지침을 제공 합니다.
 
-아래 레지스트리 키는 동일한 위치에 있습니다.  HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols.  Regedit 또는 PowerShell을 사용 하 여 이러한 프로토콜 및 암호 그룹을 사용 하거나 사용 하지 않도록 설정 합니다.
+아래 레지스트리 키는 동일한 위치에 있습니다. HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols.  Regedit 또는 PowerShell을 사용 하 여 이러한 프로토콜 및 암호 그룹을 사용 하거나 사용 하지 않도록 설정 합니다.
 
 ![레지스트리 위치](media/Managing-SSL-Protocols-in-AD-FS/registry.png)
 
@@ -50,16 +50,16 @@ Todays와 age에서 서버를 강화 하 고 이전 또는 취약 한 암호 그
 SSL 2.0를 사용 하거나 사용 하지 않도록 설정 하려면 다음 레지스트리 키와 해당 값을 사용 합니다.
 
 ### <a name="enable-ssl-20"></a>SSL 2.0 사용
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ Server] "Enabled" = dword: 00000001
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ Server] "DisabledByDefault" = dword: 00000000
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ 클라이언트] "Enabled" = dword: 00000001
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ 클라이언트] "DisabledByDefault" = dword: 00000000 
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ Server] "Enabled" = dword: 00000001
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ Server] "DisabledByDefault" = dword: 00000000
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ 클라이언트] "Enabled" = dword: 00000001
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ 클라이언트] "DisabledByDefault" = dword: 00000000 
 
 ### <a name="disable-ssl-20"></a>SSL 2.0 사용 안 함
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ Server] "Enabled" = dword: 00000000
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ Server] "DisabledByDefault" = dword: 00000001 
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ 클라이언트] "Enabled" = dword: 00000000
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ 클라이언트] "DisabledByDefault" = dword: 00000001
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ Server] "Enabled" = dword: 00000000
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ Server] "DisabledByDefault" = dword: 00000001 
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ 클라이언트] "Enabled" = dword: 00000000
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ 클라이언트] "DisabledByDefault" = dword: 00000001
 
 ### <a name="using-powershell-to-disable-ssl-20"></a>PowerShell을 사용 하 여 SSL 2.0 사용 안 함
 
@@ -82,16 +82,16 @@ Write-Host 'SSL 2.0 has been disabled.'
 SSL 3.0를 사용 하거나 사용 하지 않도록 설정 하려면 다음 레지스트리 키와 해당 값을 사용 합니다.
 
 ### <a name="enable-ssl-30"></a>SSL 3.0 사용
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ Server] "Enabled" = dword: 00000001
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ Server] "DisabledByDefault" = dword: 00000000 
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ 클라이언트] "Enabled" = dword: 00000001
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ 클라이언트] "DisabledByDefault" = dword: 00000000 
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ Server] "Enabled" = dword: 00000001
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ Server] "DisabledByDefault" = dword: 00000000 
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ 클라이언트] "Enabled" = dword: 00000001
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ 클라이언트] "DisabledByDefault" = dword: 00000000 
 
 ### <a name="disable-ssl-30"></a>SSL 3.0 사용 안 함
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ Server] "Enabled" = dword: 00000000
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ Server] "DisabledByDefault" = dword: 00000001
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ 클라이언트] "Enabled" = dword: 00000000
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ 클라이언트] "DisabledByDefault" = dword: 00000001 
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ Server] "Enabled" = dword: 00000000
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ Server] "DisabledByDefault" = dword: 00000001
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ 클라이언트] "Enabled" = dword: 00000000
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ 클라이언트] "DisabledByDefault" = dword: 00000001 
 
 ### <a name="using-powershell-to-disable-ssl-30"></a>PowerShell을 사용 하 여 SSL 3.0 사용 안 함
 
@@ -119,16 +119,16 @@ TLS 1.0를 사용 하거나 사용 하지 않도록 설정 하려면 다음 레�
 
 
 ### <a name="enable-tls-10"></a>TLS 1.0 사용
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ Server] "Enabled" = dword: 00000001
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ Server] "DisabledByDefault" = dword: 00000000 
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ 클라이언트] "Enabled" = dword: 00000001
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ 클라이언트] "DisabledByDefault" = dword: 00000000 
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ Server] "Enabled" = dword: 00000001
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ Server] "DisabledByDefault" = dword: 00000000 
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ 클라이언트] "Enabled" = dword: 00000001
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ 클라이언트] "DisabledByDefault" = dword: 00000000 
 
 ### <a name="disable-tls-10"></a>TLS 1.0 사용 안 함
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ Server] "Enabled" = dword: 00000000
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ Server] "DisabledByDefault" = dword: 00000001
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ 클라이언트] "Enabled" = dword: 00000000
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ 클라이언트] "DisabledByDefault" = dword: 00000001 
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ Server] "Enabled" = dword: 00000000
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ Server] "DisabledByDefault" = dword: 00000001
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ 클라이언트] "Enabled" = dword: 00000000
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ 클라이언트] "DisabledByDefault" = dword: 00000001 
 
 ### <a name="using-powershell-to-disable-tls-10"></a>PowerShell을 사용 하 여 TLS 1.0 사용 안 함
 
@@ -152,16 +152,16 @@ TLS 1.0를 사용 하거나 사용 하지 않도록 설정 하려면 다음 레�
 TLS 1.1를 사용 하거나 사용 하지 않도록 설정 하려면 다음 레지스트리 키와 해당 값을 사용 합니다.
 
 ### <a name="enable-tls-11"></a>TLS 1.1 사용
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ Server] "Enabled" = dword: 00000001
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ Server] "DisabledByDefault" = dword: 00000000
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ 클라이언트] "Enabled" = dword: 00000001
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ 클라이언트] "DisabledByDefault" = dword: 00000000
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ Server] "Enabled" = dword: 00000001
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ Server] "DisabledByDefault" = dword: 00000000
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ 클라이언트] "Enabled" = dword: 00000001
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ 클라이언트] "DisabledByDefault" = dword: 00000000
 
 ### <a name="disable-tls-11"></a>TLS 1.1 사용 안 함
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ Server] "Enabled" = dword: 00000000
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ Server] "DisabledByDefault" = dword: 00000001
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ 클라이언트] "Enabled" = dword: 00000000
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ 클라이언트] "DisabledByDefault" = dword: 00000001 
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ Server] "Enabled" = dword: 00000000
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ Server] "DisabledByDefault" = dword: 00000001
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ 클라이언트] "Enabled" = dword: 00000000
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ 클라이언트] "DisabledByDefault" = dword: 00000001 
 
 ### <a name="using-powershell-to-disable-tls-11"></a>PowerShell을 사용 하 여 TLS 1.1 사용 안 함
 
@@ -185,16 +185,16 @@ TLS 1.1를 사용 하거나 사용 하지 않도록 설정 하려면 다음 레�
 TLS 1.2를 사용 하거나 사용 하지 않도록 설정 하려면 다음 레지스트리 키와 해당 값을 사용 합니다.
 
 ### <a name="enable-tls-12"></a>TLS 1.2 사용
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2 \server] "Enabled" = dword: 00000001
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2 \server] "DisabledByDefault" = dword: 00000000 
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2 \ 클라이언트] "Enabled" = dword: 00000001
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2 \ 클라이언트] "DisabledByDefault" = dword: 00000000
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2 \server] "Enabled" = dword: 00000001
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2 \server] "DisabledByDefault" = dword: 00000000 
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2 \ 클라이언트] "Enabled" = dword: 00000001
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2 \ 클라이언트] "DisabledByDefault" = dword: 00000000
 
 ### <a name="disable-tls-12"></a>TLS 1.2 사용 안 함
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2 \server] "Enabled" = dword: 00000000
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2 \server] "DisabledByDefault" = dword: 00000001
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2 \ 클라이언트] "Enabled" = dword: 00000000
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2 \ 클라이언트] "DisabledByDefault" = dword: 00000001
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2 \server] "Enabled" = dword: 00000000
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2 \server] "DisabledByDefault" = dword: 00000001
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2 \ 클라이언트] "Enabled" = dword: 00000000
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2 \ 클라이언트] "DisabledByDefault" = dword: 00000001
 
 ### <a name="using-powershell-to-disable-tls-12"></a>PowerShell을 사용 하 여 TLS 1.2 사용 안 함
 
@@ -217,7 +217,7 @@ TLS 1.2를 사용 하거나 사용 하지 않도록 설정 하려면 다음 레�
 
 RC4를 사용 하거나 사용 하지 않도록 설정 하려면 다음 레지스트리 키와 해당 값을 사용 합니다.  이 암호 그룹의 레지스트리 키는 다음 위치에 있습니다.
 
-- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\
+- HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\
 
 ![레지스트리 위치](media/Managing-SSL-Protocols-in-AD-FS/cipher.png)
 
@@ -225,15 +225,15 @@ RC4를 사용 하거나 사용 하지 않도록 설정 하려면 다음 레지�
 
 ### <a name="enable-rc4"></a>RC4 사용
 
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 128/128] "Enabled" = dword: 00000001
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 40/128] "Enabled" = dword: 00000001
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 56/128] "Enabled" = dword: 00000001 
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 128/128] "Enabled" = dword: 00000001
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 40/128] "Enabled" = dword: 00000001
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 56/128] "Enabled" = dword: 00000001 
 
 ### <a name="disable-rc4"></a>RC4 사용 안 함
 
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 128/128] "Enabled" = dword: 00000000
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 40/128] "Enabled" = dword: 00000000
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 56/128] "Enabled" = dword: 00000000 
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 128/128] "Enabled" = dword: 00000000
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 40/128] "Enabled" = dword: 00000000
+- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 56/128] "Enabled" = dword: 00000000 
 
 ### <a name="using-powershell"></a>PowerShell 사용
 
@@ -250,7 +250,7 @@ RC4를 사용 하거나 사용 하지 않도록 설정 하려면 다음 레지�
 
 ## <a name="enabling-or-disabling-additional-cipher-suites"></a>추가 암호 그룹 사용 또는 사용 안 함
 
-특정 암호화를 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Cryptography\Configuration\Local\SSL\00010002에서 제거 하 여 사용 하지 않도록 설정할 수 있습니다. 
+특정 암호화를 HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\Cryptography\Configuration\Local\SSL\00010002에서 제거 하 여 사용 하지 않도록 설정할 수 있습니다. 
 
 ![레지스트리 위치](media/Managing-SSL-Protocols-in-AD-FS/suites.png)
 
@@ -262,14 +262,14 @@ RC4를 사용 하거나 사용 하지 않도록 설정 하려면 다음 레지�
 .NET Framework 3.5/4.0/4.5. x 응용 프로그램은 SchUseStrongCrypto 레지스트리 키를 사용 하도록 설정 하 여 기본 프로토콜을 TLS 1.2로 전환할 수 있습니다.  이 레지스트리 키를 사용 하면 .NET 응용 프로그램에서 TLS 1.2을 강제로 사용 합니다.
 
 > [!IMPORTANT]
-> Windows Server 2016 및 Windows Server 2012 r 2에 대 한 AD FS .NET Framework 4.0/4.5. x 키를 사용 해야 합니다.  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft @ no__t-0. NETFramework\v4.0.30319
+> Windows Server 2016 및 Windows Server 2012 r 2에 대 한 AD FS .NET Framework 4.0/4.5. x 키: HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\\를 사용 해야 합니다. NETFramework\v4.0.30319
 
 
 .NET Framework 3.5의 경우 다음 레지스트리 키를 사용 합니다.
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft @ no__t-NETFramework\v2.0.50727] "SchUseStrongCrypto" = dword: 00000001
+[HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node\Microsoft\\입니다. NETFramework\v2.0.50727] "SchUseStrongCrypto" = dword: 00000001
 
-.NET Framework 4.0/4.5. x의 경우 다음 레지스트리 키를 사용 합니다. HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft @ no__t-NETFramework\v4.0.30319 "SchUseStrongCrypto" = dword: 00000001
+.NET Framework 4.0/4.5. x의 경우 다음 레지스트리 키를 사용 합니다. HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\\. NETFramework\v4.0.30319 "SchUseStrongCrypto" = dword: 00000001
 
 ![강력한 인증](media/Managing-SSL-Protocols-in-AD-FS/strongauth.png)
 

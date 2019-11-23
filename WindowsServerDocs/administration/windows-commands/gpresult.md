@@ -22,7 +22,7 @@ ms.locfileid: "71375660"
 ---
 # <a name="gpresult"></a>gpresult
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 원격 사용자 및 컴퓨터에 대 한 설정의 RSoP (정책 결과) 정보를 표시합니다.
 방화벽을 통해 원격으로 대상된 컴퓨터에 대 한 RSoP 보고를 사용 하려면 포트에서 인바운드 네트워크 트래픽을 허용 하는 방화벽 규칙이 있어야 합니다.
@@ -40,10 +40,10 @@ gpresult [/s <system> [/u <USERNAME> [/p [<PASSWOrd>]]]] [/user [<TARGETDOMAIN>\
 
 |                매개 변수                 |                                                                                                     설명                                                                                                      |
 |------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|              /s \<system @ no__t-1               |                                                  이름 또는 원격 컴퓨터의 IP 주소를 지정합니다. 백슬래시를 사용 하지 마십시오. 기본값은 로컬 컴퓨터입니다.                                                   |
-|             /u \<USERNAME @ no__t-1              |                                지정된 된 사용자의 자격 증명을 사용 하 여 명령을 실행 합니다. 기본 사용자는 사용자가 명령을 실행 하는 컴퓨터에 로그온입니다.                                 |
-|            /p [\<PASSWOrd @ no__t]             |            제공 되는 사용자 계정의 암호를 지정 된 **/u** 매개 변수. 경우 **/p** 를 생략 하면 **gpresult** 암호를 묻는 메시지를 표시 합니다. **/p** 함께 사용할 수 없습니다 **/x** 또는 **/h**합니다.            |
-| /user [\<TARGETDOMAIN @ no__t-1 @ no__t-2] \<TARGETUSER @ no__t-4 |                                                                            RSoP 데이터 표시 하는 원격 사용자를 지정 합니다.                                                                             |
+|              /s \<시스템\>               |                                                  이름 또는 원격 컴퓨터의 IP 주소를 지정합니다. 백슬래시를 사용 하지 마십시오. 기본값은 로컬 컴퓨터입니다.                                                   |
+|             /u \<사용자 이름\>              |                                지정된 된 사용자의 자격 증명을 사용 하 여 명령을 실행 합니다. 기본 사용자는 사용자가 명령을 실행 하는 컴퓨터에 로그온입니다.                                 |
+|            /p [\<암호\>]             |            제공 되는 사용자 계정의 암호를 지정 된 **/u** 매개 변수. 경우 **/p** 를 생략 하면 **gpresult** 암호를 묻는 메시지를 표시 합니다. **/p** 함께 사용할 수 없습니다 **/x** 또는 **/h**합니다.            |
+| /user [\<TARGETDOMAIN\>\\]\<TARGETDOMAIN\> |                                                                            RSoP 데이터 표시 하는 원격 사용자를 지정 합니다.                                                                             |
 |      {사용자 &#124; 컴퓨터} / 범위       |                                사용자 또는 컴퓨터에 대 한 RSoP 데이터를 표시합니다. 경우 **/범위** 를 생략 하면 **gpresult** 사용자와 컴퓨터 모두에 대 한 RSoP 데이터를 표시 합니다.                                 |
 |        [/x &#124; /h] <FILENAME>         | XML에서 보고서를 저장 ( **/x**) 또는 HTML ( **/h**) 위치에서 지정 된 파일 이름을 사용 하 여 형식은 *FILENAME* 매개 변수입니다. 함께 사용할 수 없습니다 **/u**, **/p**, **/r**, **/v**, 또는 **/z**합니다. |
 |                    /f                    |                                                           **gpresult** 가 **/x** 또는 **/h** 옵션에 지정 된 파일 이름을 덮어쓰도록 합니다.                                                           |
@@ -58,19 +58,19 @@ gpresult [/s <system> [/u <USERNAME> [/p [<PASSWOrd>]]]] [/user [<TARGETDOMAIN>\
 - 때문에 **/v** 및 **/z** 많은 생성의 정보를 유용 텍스트 파일에 출력을 리디렉션할 수 (예를 들어 **gpresult/z > policy.txt**).
 - **gpresult** 명령은 Windows Server 2012, Windows Server 2008 R2, Windows server 2008, Windows 8, Windows 7 및 Windows Vista에서 사용할 수 있습니다.
   ## <a name="examples"></a>예
-  다음 예에서는 원격 사용자에 대 한 RSoP 데이터를 검색 **targetusername** 컴퓨터의 **srvmain**, 만 사용자에 대 한 RSoP 데이터를 표시 합니다. **Maindom\hiropln**사용자의 자격 증명을 사용 하 여 명령이 실행 되 고 <strong>p@ssW23</strong> 가 해당 사용자의 암호로 입력 됩니다.
+  다음 예에서는 원격 사용자에 대 한 RSoP 데이터를 검색 **targetusername** 컴퓨터의 **srvmain**, 만 사용자에 대 한 RSoP 데이터를 표시 합니다. 명령은 사용자 **maindom\hiropln**의 자격 증명을 사용 하 여 실행 되 고 <strong>p@ssW23</strong> 은 해당 사용자의 암호로 입력 됩니다.
 
   ```
   gpresult /s srvmain /u maindom\hiropln /p p@ssW23 /user targetusername /scope user /r
   ```
   
-다음 예제에서는 원격 사용자에 대 한 그룹 정책에 대 한 사용 가능한 모든 정보를 저장 **targetusername** 컴퓨터의 **srvmain** 라는 파일에 **policy.txt**합니다. 데이터가 없는 컴퓨터에 대 한 포함 되어 있습니다. **Maindom\hiropln**사용자의 자격 증명을 사용 하 여 명령이 실행 되 고 <strong>p@ssW23</strong> 가 해당 사용자의 암호로 입력 됩니다.
+다음 예제에서는 원격 사용자에 대 한 그룹 정책에 대 한 사용 가능한 모든 정보를 저장 **targetusername** 컴퓨터의 **srvmain** 라는 파일에 **policy.txt**합니다. 데이터가 없는 컴퓨터에 대 한 포함 되어 있습니다. 명령은 사용자 **maindom\hiropln**의 자격 증명을 사용 하 여 실행 되 고 <strong>p@ssW23</strong> 은 해당 사용자의 암호로 입력 됩니다.
 
   ```
   gpresult /s srvmain /u maindom\hiropln /p p@ssW23 /user targetusername /z > policy.txt
   ```
   
-다음 예제에서는 컴퓨터에 대 한 RSoP 데이터를 표시 **srvmain** 및 로그온 한 사용자. 데이터는 사용자와 컴퓨터 모두에 대 한 포함 됩니다. **Maindom\hiropln**사용자의 자격 증명을 사용 하 여 명령이 실행 되 고 <strong>p@ssW23</strong> 가 해당 사용자의 암호로 입력 됩니다.
+다음 예제에서는 컴퓨터에 대 한 RSoP 데이터를 표시 **srvmain** 및 로그온 한 사용자. 데이터는 사용자와 컴퓨터 모두에 대 한 포함 됩니다. 명령은 사용자 **maindom\hiropln**의 자격 증명을 사용 하 여 실행 되 고 <strong>p@ssW23</strong> 은 해당 사용자의 암호로 입력 됩니다.
 
   ```
   gpresult /s srvmain /u maindom\hiropln /p p@ssW23 /r

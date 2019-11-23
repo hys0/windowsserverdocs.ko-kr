@@ -100,7 +100,7 @@ Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "AzureZoneScope
 
 AzureZoneScope, 레코드 www.contosogiftservices.com Azure 퍼블릭 클라우드에 있는 IP 주소, 192.68.31.44와 함께 추가 됩니다. 
 
-마찬가지로 -0contosogiftservices @ no__t-1 @no__t 기본 영역 범위에서 contosogiftservices @ no__t-3 @no__t 레코드는 시애틀 온-프레미스 데이터 센터에서 실행 되는 웹 서버의 IP 주소 192.68.30.2를 사용 하 여 추가 됩니다.
+마찬가지로 contosogiftservices.com\)\(기본 영역 범위에서 www.contosogiftservices.com\) \(레코드는 시애틀 온-프레미스 데이터 센터에서 실행 되는 웹 서버의 IP 주소 192.68.30.2를 사용 하 여 추가 됩니다.
 
 아래 두 번째 cmdlet – ZoneScope 매개 변수가 포함 되지 않습니다. 이 때문에 기본 ZoneScope 레코드가 추가 됩니다. 
 

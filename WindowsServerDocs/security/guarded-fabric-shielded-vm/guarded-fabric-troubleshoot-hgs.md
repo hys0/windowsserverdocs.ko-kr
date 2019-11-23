@@ -17,7 +17,7 @@ ms.locfileid: "71940818"
 ---
 # <a name="troubleshooting-the-host-guardian-service"></a>호스트 보호자 서비스 문제 해결
 
-> 적용 대상: Windows server 2019, Windows Server (반기 채널), Windows Server 2016
+> 적용 대상: Windows Server 2019, Windows Server (반기 채널), Windows Server 2016
 
 이 항목에서는 보호 된 패브릭에서 HGS (호스트 보호 서비스) 서버를 배포 하거나 작동할 때 발생 하는 일반적인 문제에 대 한 해결 방법을 설명 합니다.
 문제의 특성을 잘 모를 경우 먼저 HGS 서버 및 Hyper-v 호스트에서 보호 된 [패브릭 진단을](guarded-fabric-troubleshoot-diagnostics.md) 실행 하 여 잠재적인 원인을 좁혀 보세요.
@@ -143,7 +143,7 @@ Start-ScheduledTask -TaskPath \Microsoft\Windows\HGSServer -TaskName
 AttestationSignerCertRenewalTask
 ```
 
-또는 **작업 스케줄러** (taskschd)를 열고 **작업 스케줄러 라이브러리로 이동한 다음 > Microsoft > Windows >** 로 이동 하 고 라는 **작업을 실행 하 여 예약 된 작업을 수동으로 실행할 수 있습니다. AttestationSignerCertRenewalTask**.
+또는 **작업 스케줄러** (taskschd)를 열고 **작업 스케줄러 라이브러리 > Microsoft > Windows > HGSServer** 로 이동한 다음 **AttestationSignerCertRenewalTask**이라는 작업을 실행 하 여 예약 된 작업을 수동으로 실행할 수 있습니다.
 
 ## <a name="switching-attestation-modes"></a>증명 모드 전환
 
@@ -154,14 +154,14 @@ AttestationSignerCertRenewalTask
 **TPM에서 AD 모드로 전환할 때 발생 하는 알려진 문제**
 
 TPM 모드에서 HGS 클러스터를 초기화 하 고 나중에 Active Directory 모드로 전환 하는 경우 HGS 클러스터의 다른 노드가 새 증명 모드로 전환 되지 않도록 하는 알려진 문제가 있습니다.
-모든 HGS 서버에서 올바른 증명 모드를 적용 하 고 있는지 확인 하려면 HGS 클러스터의 **각 노드에서** `Set-HgsServer -TrustActiveDirectory`을 실행 합니다.
+모든 HGS 서버가 올바른 증명 모드를 적용 하 고 있는지 확인 하려면 HGS 클러스터의 **각 노드에서** `Set-HgsServer -TrustActiveDirectory`를 실행 합니다.
 TPM 모드에서 AD 모드로 전환 하 *고* 클러스터가 원래 ad 모드에서 설정 된 경우에는이 문제가 적용 되지 않습니다.
 
 [HgsServer](https://technet.microsoft.com/library/mt652162.aspx)를 실행 하 여 HGS 서버의 증명 모드를 확인할 수 있습니다.
 
 ## <a name="memory-dump-encryption-policies"></a>메모리 덤프 암호화 정책
 
-메모리 덤프 암호화 정책을 구성 하 고 기본 HGS 덤프 정책 (Hgs @ no__t-0NoDumps, Hgs @ no__t-1덤프 암호화 및 Hgs @ no__t-2DumpEncryptionKey) 또는 덤프 정책 cmdlet (추가 HgsAttestationDumpPolicy)이 표시 되지 않는 경우 최신 누적 업데이트가 설치 되어 있지 않을 가능성이 높습니다.
+메모리 덤프 암호화 정책을 구성 하 고 기본 HGS 덤프 정책 (Hgs\_NoDumps, Hgs\_덤프 암호화 및 Hgs\_DumpEncryptionKey) 또는 덤프 정책 cmdlet (HgsAttestationDumpPolicy)이 표시 되지 않는 경우 최신 누적 업데이트가 설치 되지 않은 것일 수 있습니다.
 이 문제를 해결 하려면 [HGS 서버](guarded-fabric-manage-hgs.md#patching-hgs) 를 최신 누적 Windows 업데이트로 업데이트 하 고 [새 증명 정책을 활성화](guarded-fabric-manage-hgs.md#updates-requiring-policy-activation)합니다.
 새 증명 정책을 활성화 하기 전에 Hyper-v 호스트를 동일한 누적 업데이트로 업데이트 해야 합니다. 새로운 암호화 기능이 설치 되지 않은 호스트는 HGS 정책이 활성화 되 면 증명에 실패할 가능성이 높습니다.
 
@@ -176,8 +176,8 @@ EKpub는 특정 TPM을 고유 하 게 식별 하 고, HGS가 보호 된 Vm을 �
 2. 플랫폼 식별자 파일에 인증 키 인증서가 포함 되어 있지만 해당 인증서를 시스템에서 **신뢰할 수 없습니다** .
 
 특정 TPM 제조업체의 TPM에 EKcerts 포함 되지 않습니다.
-TPM을 사용 하는 것으로 의심 되는 경우 사용자의 TPM에 EKcert이 없어야 하 고 `-Force` 플래그를 사용 하 여 수동으로 HGS에 호스트를 등록 해야 하는지 확인 합니다.
+TPM을 사용 하는 것으로 의심 되는 경우 사용자의 tpm에 EKcert이 없어야 하 고 `-Force` 플래그를 사용 하 여 수동으로 HGS에 호스트를 등록 해야 하는지 확인 합니다.
 TPM에 EKcert가 있어야 하지만 플랫폼 식별자 파일에서 찾을 수 없는 경우 호스트에서 [식별자](https://docs.microsoft.com/powershell/module/platformidentifier/get-platformidentifier) 를 실행할 때 관리자 (승격) PowerShell 콘솔을 사용 하 고 있는지 확인 합니다.
 
-EKcert를 신뢰할 수 없다는 오류를 받은 경우 각 HGS 서버에 [신뢰할 수 있는 TPM 루트 인증서 패키지를 설치](guarded-fabric-install-trusted-tpm-root-certificates.md) 하 고 tpm 공급 업체에 대 한 루트 인증서가 로컬 컴퓨터의 신뢰할 수 있는 **tpm @ no__에 있는지 확인 합니다. t-2RootCA** 저장소입니다. 모든 해당 중간 인증서는 로컬 컴퓨터의 **no__t-1IntermediateCA** 저장소에도 설치 해야 합니다.
-루트 및 중간 인증서를 설치한 후에 `Add-HgsAttestationTpmHost`을 성공적으로 실행할 수 있어야 합니다.
+EKcert를 신뢰할 수 없다는 오류를 받은 경우 각 HGS 서버에 [신뢰할 수 있는 tpm 루트 인증서 패키지를 설치](guarded-fabric-install-trusted-tpm-root-certificates.md) 하 고 tpm 공급 업체의 루트 인증서가 로컬 컴퓨터의 신뢰할 수 있는 **tpm\_rootca.cer** 저장소에 있는지 확인 합니다. 해당 하는 모든 중간 인증서를 로컬 컴퓨터의 **IntermediateCA tpm\_** 저장소에도 설치 해야 합니다.
+루트 및 중간 인증서를 설치한 후 `Add-HgsAttestationTpmHost` 성공적으로 실행할 수 있어야 합니다.

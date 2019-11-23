@@ -19,7 +19,7 @@ ms.locfileid: "71408432"
 # <a name="configure-name-resolution-for-a-federation-server-proxy-in-a-dns-zone-that-serves-only-the-perimeter-network"></a>경계 네트워크에서만 작동하는 DNS 영역에 페더레이션 서버 프록시에 대한 이름 확인 구성
 
 
-Active Directory Federation Services에서 페더레이션 서버에 대 한 이름 확인이 성공적으로 작동할 수 있도록 \(AD FS @ no__t 시나리오에서 하나 이상의 도메인 이름 시스템 \(DNS @ no__t-3 영역이 경계 네트워크만 제공 하는 시나리오는 다음과 같습니다. 작업을 완료 해야 합니다.  
+Active Directory Federation Services \(AD FS 페더레이션 서버에 대 한 이름 확인이 성공적으로 수행 될 수 있도록 DNS \(영역\) 하나 이상의 도메인 이름 시스템이 경계 네트워크만 제공 하는\) 시나리오는 다음 작업을 완료 해야 합니다.  
   
 -   페더레이션 서버의 IP 주소를 추가 하려면 호스트 파일에 페더레이션 서버 프록시를 업데이트 해야 합니다.  
   

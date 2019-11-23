@@ -19,7 +19,7 @@ ms.locfileid: "71407564"
 # <a name="customize-the-display-names-and-descriptions-for-authentication-methods"></a>표시 이름 및 인증 방법에 대 한 설명을 사용자 지정 
 
 
-인증 방법에 대한 표시 이름 및 설명을 사용자 지정하려면 `Set-AdfsAuthenticationProviderWebContent` PowerShell cmdlet을 사용하면 됩니다.  이 cmdlet을 사용하려면 먼저 사용자 지정하려는 인증 방법의 이름을 얻어야 합니다.  `Get-AdfsGlobalAuthenticationPolicy`를 사용하여 이 작업을 수행할 수 있습니다.  아래 예제에서는 sign @ no__t-0in 페이지에 다음이 표시 됩니다.  "X.509 인증서를 사용하여 로그인"  사용자의 경우 이 작업을 간소화할 수 있습니다.  
+인증 방법에 대한 표시 이름 및 설명을 사용자 지정하려면 `Set-AdfsAuthenticationProviderWebContent` PowerShell cmdlet을 사용하면 됩니다.  이 cmdlet을 사용하려면 먼저 사용자 지정하려는 인증 방법의 이름을 얻어야 합니다.  `Get-AdfsGlobalAuthenticationPolicy`를 사용하여 이 작업을 수행할 수 있습니다.  아래 예제에서는 있다는 것을 알, 우리의 기호\-다음 페이지에 표시 됩니다: "X.509 인증서를 사용 하 여 로그인"입니다.  사용자의 경우 이 작업을 간소화할 수 있습니다.  
   
 ![displayname을 사용자 지정](media/AD-FS-user-sign-in-customization/ADFS_Customize_Update1.PNG)  
   

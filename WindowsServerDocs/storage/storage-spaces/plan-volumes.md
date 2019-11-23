@@ -22,7 +22,7 @@ ms.locfileid: "71366895"
 
 이 항목에서는 파일 시스템, 복원력 유형 및 크기 선택을 포함하여 작업에 대한 성능 및 용량 요구 사항을 충족하기 위해 저장소 공간 다이렉트에서 볼륨을 계획하는 방법에 대한 지침을 제공합니다.
 
-## <a name="review-what-are-volumes"></a>검토용 볼륨 이란?
+## <a name="review-what-are-volumes"></a>검토: 볼륨이란?
 
 볼륨은 Hyper-v 가상 컴퓨터에 대 한 VHD 또는 VHDX 파일과 같이 워크 로드에 필요한 파일을 배치 하는 위치입니다. 볼륨은 저장소 풀의 드라이브를 결합하여 저장소 공간 다이렉트의 내결함성, 확장성 및 성능 이점을 도입합니다.
 
@@ -31,7 +31,7 @@ ms.locfileid: "71366895"
 
 ![볼륨이란?](media/plan-volumes/what-are-volumes.png)
 
-모든 볼륨은 클러스터에 있는 모든 서버에서 동시에 액세스할 수 있습니다. 만든 후에는 모든 서버의 **C:\clusterstorage @ no__t-1** 에 표시 됩니다.
+모든 볼륨은 클러스터에 있는 모든 서버에서 동시에 액세스할 수 있습니다. 만든 후에는 모든 서버의 **C:\clusterstorage\\** 에 표시 됩니다.
 
 ![csv-폴더-스크린샷](media/plan-volumes/csv-folder-screenshot.png)
 
@@ -41,7 +41,7 @@ ms.locfileid: "71366895"
 
 볼륨의 총 수를 다음으로 제한 하는 것이 좋습니다.
 
-| Windows Server 2016          | Windows Server 2019          |
+| Windows Server 2016          | Windows Server 2019          |
 |------------------------------|------------------------------|
 | 클러스터 당 최대 32 볼륨 | 클러스터 당 최대 64 볼륨 |
 
@@ -128,7 +128,7 @@ ReFS가 아직 지원하지 않는 기능이 작업에 필요한 경우 대신 N
 
 각 볼륨의 크기를 다음으로 제한 하는 것이 좋습니다.
 
-| Windows Server 2016 | Windows Server 2019 |
+| Windows Server 2016 | Windows Server 2019 |
 | ------------------- | ------------------- |
 | 최대 32 TB         | 최대 64 TB         |
 
@@ -195,11 +195,11 @@ ReFS가 아직 지원하지 않는 기능이 작업에 필요한 경우 대신 N
 
 편의상 이 예제에서는 1TB = 1,000,000,000,000바이트의 의미로 10진수(밑10)를 사용합니다. 그러나 Windows의 저장 용량은 2진수(밑 2)로 표시됩니다. 예를 들어 2TB 드라이브는 Windows에서 각각 1.82TiB로 표시됩니다. 마찬가지로, 128TB 저장소 풀은 116.41TiB로 표시됩니다. 이는 예정된 동작입니다.
 
-## <a name="usage"></a>사용법
+## <a name="usage"></a>사용
 
 [저장소 공간 다이렉트에서 볼륨 만들기](create-volumes.md)를 참조하세요.
 
-### <a name="see-also"></a>참조
+### <a name="see-also"></a>참고 항목
 
 - [스토리지 공간 다이렉트 개요](storage-spaces-direct-overview.md)
 - [스토리지 공간 다이렉트 드라이브 선택](choosing-drives.md)

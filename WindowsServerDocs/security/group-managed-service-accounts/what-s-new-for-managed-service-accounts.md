@@ -51,12 +51,12 @@ Windows Server 2012 또는 Windows 8을 실행 하는 컴퓨터에서 서비스 
 ### <a name="interoperability"></a>제거 되었거나 더 이상 사용 되지 않는 기능
 Windows Server 2012의 경우 Windows PowerShell cmdlet은 서버 관리 서비스 계정이 아닌 그룹 관리 서비스 계정을 기본적으로 관리 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 -   [그룹 관리 서비스 계정 개요](group-managed-service-accounts-overview.md)
 
 -   [Active Directory Domain Services 개요](active-directory-domain-services-overview.md)
 
--   [ 관리 서비스 계정: 이해, 구현, 모범 사례 및 문제 해결 @ no__t-0
+-   [관리 서비스 계정: 이해, 구현, 모범 사례 및 문제 해결](http://blogs.technet.com/b/askds/archive/20../managed-service-accounts-understanding-implementing-best-practices-and-troubleshooting.aspx)
 
 

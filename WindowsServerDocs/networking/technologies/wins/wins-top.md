@@ -21,7 +21,7 @@ ms.locfileid: "71405242"
 
 Windows 인터넷 이름 서비스(WINS)는 IP 주소에 NetBIOS 이름을 매핑하는 기존의 컴퓨터 이름 등록 및 확인 서비스입니다.
 
-네트워크에 WINS를 아직 배포 하지 않은 경우에는 WINS를 배포 하지 말고-0DNS @ no__t-1 @no__t 도메인 이름 시스템을 배포 합니다. DNS는 또한 컴퓨터 이름 등록 및 확인 서비스를 제공 하며, Active Directory Domain Services와의 통합과 같이 WINS에 비해 많은 추가 이점을 제공 합니다.
+네트워크에 WINS를 아직 배포 하지 않은 경우 WINS를 배포 하지 말고 DNS\)\(도메인 이름 시스템을 배포 합니다. DNS는 또한 컴퓨터 이름 등록 및 확인 서비스를 제공 하며, Active Directory Domain Services와의 통합과 같이 WINS에 비해 많은 추가 이점을 제공 합니다.
 
 자세한 내용은 [DNS (Domain Name System)](https://docs.microsoft.com/windows-server/networking/dns/dns-top) 를 참조 하세요.
 

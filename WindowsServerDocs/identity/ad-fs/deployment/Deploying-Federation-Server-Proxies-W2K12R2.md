@@ -18,7 +18,7 @@ ms.locfileid: "71359679"
 ---
 # <a name="deploying-federation-server-proxies"></a>페더레이션 서버 프록시 배포
 
-Windows Server 2012 r 2의 Active Directory Federation Services \(AD FS @ no__t-1에서 페더레이션 서버 프록시의 역할은 웹 응용 프로그램 프록시 라는 새 원격 액세스 역할 서비스에 의해 처리 됩니다. 회사 네트워크 외부에서의 접근성에 대 한 AD FS를 사용 하도록 설정 하려면 Windows Server 2012의 AD FS 2.0 및 AD FS와 같이 AD FS의 레거시 버전에서 페더레이션 서버 프록시를 배포 하기 위한 것입니다. D FS in Windows Server 2012 R2.  
+Windows Server 2012 r 2에서\) \(AD FS Active Directory Federation Services 페더레이션 서버 프록시의 역할은 웹 응용 프로그램 프록시 라는 새 원격 액세스 역할 서비스에 의해 처리 됩니다. 회사 네트워크 외부에서의 접근성에 대 한 AD FS를 사용 하도록 설정 하려면 Windows Server 2012의 AD FS 2.0 및 AD FS와 같이 AD FS의 레거시 버전에서 페더레이션 서버 프록시를 배포 하기 위한 것입니다. D FS in Windows Server 2012 R2.  
   
 AD FS 컨텍스트에서 웹 응용 프로그램 프록시는 AD FS 페더레이션 서버 프록시로 작동 합니다. 이 외에도 웹 응용 프로그램 프록시는 회사 네트워크 내부의 웹 응용 프로그램에 대해 역방향 프록시 기능을 제공하여 모든 장치의 사용자가 회사 네트워크 권역을 벗어나서도 해당 네트워크에 접근할 수 있습니다. 웹 응용 프로그램 프록시 역할 서비스에 대한 자세한 내용은 웹 응용 프로그램 프록시 개요를 참조하세요.  
   
@@ -35,7 +35,7 @@ AD FS 컨텍스트에서 웹 응용 프로그램 프록시는 AD FS 페더레이
 -   [웹 응용 프로그램 프록시 서버 설치 및 구성](https://technet.microsoft.com/library/dn383662.aspx)  
   
  
-## <a name="see-also"></a>관련 항목 
+## <a name="see-also"></a>참고 항목 
 
 [AD FS 배포](../../ad-fs/AD-FS-Deployment.md)  
 

@@ -19,7 +19,7 @@ ms.locfileid: "71405291"
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-다음 항목을 사용 하 여 서비스 품질 \(QoS @ no__t 정책을 시작할 수 있습니다.
+다음 항목을 사용 하 여 QoS (서비스 품질 \(QoS\) 정책을 시작할 수 있습니다.
 
 - [QoS 정책 작동 방법](qos-policy-works.md)
 - [QoS 정책 아키텍처](qos-policy-architecture.md)

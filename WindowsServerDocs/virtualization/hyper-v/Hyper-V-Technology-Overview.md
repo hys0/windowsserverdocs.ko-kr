@@ -90,7 +90,7 @@ Hyper-v에는 관리 및 연결 도구도 있습니다. Hyper-v 역할이 설치
 
 - Hyper-V 관리자
 - [Windows PowerShell 용 hyper-v 모듈](https://docs.microsoft.com/powershell/module/hyper-v/index)
-- [가상 컴퓨터 연결](https://docs.microsoft.com/windows-server/virtualization/hyper-v/learn-more/hyper-v-virtual-machine-connect) \(은 VMConnect @ no__t-2 라고도 합니다.
+- [가상 컴퓨터 연결](https://docs.microsoft.com/windows-server/virtualization/hyper-v/learn-more/hyper-v-virtual-machine-connect) \(VMConnect 라고도\)
 - [Windows PowerShell Direct](manage/Manage-Windows-virtual-machines-with-PowerShell-Direct.md)
 
 ## <a name="related-technologies"></a>관련 기술

@@ -228,7 +228,7 @@ Repadmin.exe는 사이트, 사이트 링크, 사이트 링크 브리지 및 연�
   
 예를 들어 다른 지점의 통합과 함께 새로운 지점의 급속한 확장 후 실제 위치, 네트워크 변경 사항 및 새로운 용량 요구 사항을 기반으로 100여 가지의 사이트 변경 작업을 수행해야 할 수 있습니다. 이 경우 Dssites.msc 및 Adsiedit.msc를 사용하여 변경하는 대신 자동화할 수 있습니다. 이는 네트워크 및 시설 팀에서 제공한 데이터 스프레드시트로 시작하는 경우에 특히 유용합니다.  
   
-**Get adreplication @ no__t-1*** cmdlet은 복제 토폴로지에 대 한 정보를 반환 하며, 대량으로 **집합 adreplication @ no__t-3*** cmdlet에 대 한 파이프라인에 유용 합니다. **Get** cmdlet은 데이터를 변경 하지 않고 데이터를 표시 하거나 **설정-adreplication @ no__t*** cmdlet으로 파이프라인 될 수 있는 Windows PowerShell 세션 개체를 만들기만 합니다. **New** 및 **Remove** cmdlet은 Active Directory 토폴로지 개체를 만들거나 제거하는 데 유용합니다.  
+**Get adreplication\\** * cmdlet은 복제 토폴로지에 대 한 정보를 반환 하 고, 대량으로 **집합 adreplication\\** * cmdlet에 파이프라인에 대 한 유용한 정보를 제공 합니다. **Get** cmdlet은 데이터를 변경 하지 않고 데이터를 표시 하거나 **설정-adreplication\\** * cmdlet으로 파이프라인 될 수 있는 Windows PowerShell 세션 개체를 만들기만 합니다. **New** 및 **Remove** cmdlet은 Active Directory 토폴로지 개체를 만들거나 제거하는 데 유용합니다.  
   
 예를 들어 CSV 파일을 사용하여 새 사이트를 만들 수 있습니다.  
   
@@ -267,7 +267,7 @@ get-adreplicationsite -filter * -property subnets | where-object {!$_.subnets -e
   
 ![powershell 사용 하 여 고급 관리](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSNewADReplSiteFiltrer.png)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [Windows PowerShell &#40;수준 100을 사용한 Active Directory 복제 및 토폴로지 관리 소개&#41;](../../../ad-ds/manage/powershell/Introduction-to-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-100-.md)  
   
 
