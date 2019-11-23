@@ -22,7 +22,7 @@ ms.locfileid: "71369872"
 ---
 # <a name="tsdiscon"></a>tsdiscon
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 원격 데스크톱 세션 호스트 (rd 세션 호스트) 서버에서 세션의 연결을 끊습니다.
 이 명령을 사용 하는 방법에 대 한 예는 [예제](#BKMK_examples)를 참조 하세요.
@@ -40,8 +40,8 @@ tsdiscon [<SessionID> | <SessionName>] [/server:<ServerName>] [/v]
 |매개 변수|설명|
 |-------|--------|
 |\<SessionId >|연결을 끊을 세션의 ID를 지정 합니다.|
-|\< 세션 이름 >|연결을 끊을 세션의 이름을 지정 합니다.|
-|/server: \<ServerName >|연결을 끊을 세션이 포함 된 터미널 서버를 지정 합니다. 그렇지 않으면 현재 rd 세션 호스트 서버가 사용 됩니다.|
+|\<세션 이름 >|연결을 끊을 세션의 이름을 지정 합니다.|
+|/server:\<ServerName >|연결을 끊을 세션이 포함 된 터미널 서버를 지정 합니다. 그렇지 않으면 현재 rd 세션 호스트 서버가 사용 됩니다.|
 |/v|수행 중인 작업에 대 한 정보를 표시 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
@@ -67,4 +67,4 @@ tsdiscon [<SessionID> | <SessionName>] [/server:<ServerName>] [/v]
   ```
   #### <a name="additional-references"></a>추가 참조
   [명령줄 구문 키](command-line-syntax-key.md)
-  [원격 데스크톱 서비스&#40; 터미널 서비스 및&#41; 명령 참조](remote-desktop-services-terminal-services-command-reference.md)
+  [원격 데스크톱 서비스 & #40; 터미널 서비스 및 #41; 명령 참조](remote-desktop-services-terminal-services-command-reference.md)

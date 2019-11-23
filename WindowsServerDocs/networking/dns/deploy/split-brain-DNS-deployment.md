@@ -15,16 +15,16 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71356020"
 ---
-# <a name="use-dns-policy-for-split-brain-dns-deployment"></a>분할 @ no__t-0Brain DNS 배포에 DNS 정책 사용
+# <a name="use-dns-policy-for-split-brain-dns-deployment"></a>분할\-두뇌 DNS 배포에 DNS 정책 사용
 
 >적용 대상: Windows Server 2016
 
 이 항목을 사용 하 여 Windows Server에서 DNS 정책을 구성 하는 방법을 알아봅니다&reg; 스플릿 브레인 DNS 배포의 경우 2016 있으면 다음 두 가지 버전의 단일 영역-인터넷에 있는 사용자는 일반적으로 외부 사용자에 대 한 조직 인트라넷에 내부 사용자에 대 한 합니다.
 
 >[!NOTE]
->분할 @ no__t에 DNS 정책을 사용 하는 방법에 대 한 자세한 내용은 Active Directory 통합 DNS 영역를 사용 하 여 dns 배포를 참조 [Active Directory](dns-sb-with-ad.md)하세요.
+>분할\-에 대 한 DNS 정책을 사용 하는 방법에 대 한 자세한 내용은 Active Directory 통합 DNS 영역를 사용 하 여 DNS 배포를 [Active Directory](dns-sb-with-ad.md)참조 하세요.
 
-이전에이 시나리오는 DNS 관리자가 서로 다른 두 DNS 서버, 내부 및 외부 사용자가 각 집합에 각 제공 서비스를 유지 하는 데 필요 합니다. 영역 내에 있는 소수의 레코드만 split @ no__t-0brained 이거나 영역 인스턴스 (내부 및 외부)가 모두 동일한 부모 도메인에 위임 된 경우이는 관리 난제. 
+이전에이 시나리오는 DNS 관리자가 서로 다른 두 DNS 서버, 내부 및 외부 사용자가 각 집합에 각 제공 서비스를 유지 하는 데 필요 합니다. 영역 내에 있는 소수의 레코드만 분할\-brained 또는 영역 인스턴스 (내부 및 외부)가 모두 동일한 부모 도메인에 위임 된 경우이는 관리 난제. 
 
 스플릿 브레인 배포 다른 구성 시나리오에는 DNS 이름 확인에 대 한 선택적 재귀 컨트롤입니다. 일부 환경에서는 엔터프라이즈 DNS 서버는 또한 해야, 외부 사용자에 대 한 신뢰할 수 있는 이름 서버 역할을 하 고 해당 재귀를 차단 하는 동안 내부 사용자에 대 한 인터넷을 통해 재귀 확인을 수행 해야 합니다. 
 

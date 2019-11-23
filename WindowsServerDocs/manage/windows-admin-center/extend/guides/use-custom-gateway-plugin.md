@@ -35,7 +35,7 @@ ms.locfileid: "71385233"
 
 ### <a name="create-pluginservicets"></a>플러그 인을 만듭니다. 서비스.
 
-위에서 만든 새 도구 모듈의 디렉터리 (```\src\app\{!Module-Name}```)로 변경 하 고-1 @no__t 새 파일을 만듭니다.
+위에서 만든 새 도구 모듈의 디렉터리 (```\src\app\{!Module-Name}```)로 변경 하 고 ```plugin.service.ts```새 파일을 만듭니다.
 
 앞에서 만든 파일에 다음 코드를 추가 합니다.
 ``` ts
@@ -61,14 +61,14 @@ export class PluginService {
 }
 ```
 
-@No__t-0 및 ```Sample%20Uno```에 대 한 참조를 해당 기능 이름으로 변경 합니다.
+```Sample Uno```에 대 한 참조와 기능 이름에 대 한 ```Sample%20Uno```를 적절 하 게 변경 합니다.
 
 [!WARNING]
-> 기본 제공 ```this.appContextService.node```은 사용자 지정 게이트웨이 플러그 인에 정의 된 API를 호출 하는 데 사용 하는 것이 좋습니다. 이렇게 하면 게이트웨이 플러그 인 내에 자격 증명이 필요한 경우 적절 하 게 처리 됩니다.
+> 기본 제공 ```this.appContextService.node```를 사용 하 여 사용자 지정 게이트웨이 플러그 인에 정의 된 API를 호출 하는 것이 좋습니다. 이렇게 하면 게이트웨이 플러그 인 내에 자격 증명이 필요한 경우 적절 하 게 처리 됩니다.
 
 ### <a name="modify-modulets"></a>모듈을 수정 합니다.
 
-이전에 만든 새 모듈의 ```module.ts``` 파일을 엽니다 (예: ```{!Module-Name}.module.ts```).
+이전에 만든 새 모듈의 ```module.ts``` 파일 (즉, ```{!Module-Name}.module.ts```)을 엽니다.
 
 다음 import 문을 추가 합니다.
 
@@ -91,7 +91,7 @@ import { PluginService } from './plugin.service';
 
 ### <a name="modify-componentts"></a>구성 요소를 수정 합니다.
 
-이전에 만든 새 모듈의 ```component.ts``` 파일을 엽니다 (예: ```{!Module-Name}.component.ts```).
+이전에 만든 새 모듈의 ```component.ts``` 파일 (즉, ```{!Module-Name}.component.ts```)을 엽니다.
 
 다음 import 문을 추가 합니다.
 
@@ -135,7 +135,7 @@ import { PluginService } from './plugin.service';
 
 ### <a name="modify-componenthtml"></a>구성 요소 html 수정 ###
 
-이전에 만든 새 모듈의 ```component.html``` 파일을 엽니다 (예: ```{!Module-Name}.component.html```).
+이전에 만든 새 모듈의 ```component.html``` 파일 (즉, ```{!Module-Name}.component.html```)을 엽니다.
 
 Html 파일에 다음 콘텐츠를 추가 합니다.
 ``` html

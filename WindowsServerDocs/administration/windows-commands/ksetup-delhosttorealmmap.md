@@ -36,14 +36,14 @@ ksetup /delhosttorealmmap <HostName> <RealmName>
 
 |매개 변수|설명|
 |---------|-----------|
-|\<HostName >|호스트 이름은 컴퓨터 이름이 며 컴퓨터의 정규화 된 도메인 이름으로 지정할 수 있습니다.|
-|@no__t 0RealmName >|영역 이름은 CORP. 같은 대문자는 DNS 이름으로 명시 CONTOSO.COM입니다.|
+|\<호스트 이름 >|호스트 이름은 컴퓨터 이름이 며 컴퓨터의 정규화 된 도메인 이름으로 지정할 수 있습니다.|
+|\<RealmName >|영역 이름은 CORP. 같은 대문자는 DNS 이름으로 명시 CONTOSO.COM입니다.|
 
 ## <a name="remarks"></a>설명
 
 영역에 대 한 호스트 (또는 영역에 대 한 여러 호스트) 매핑이 있는 경우이 명령은 해당 매핑을 제거 합니다.
 
-매핑은 **HKEY_LOCAL_MACHINE\SYSTEM\CurrentContolSet\Lsa\Kerberos\HostToRealm**의 레지스트리에 기록 됩니다. 이 명령을 사용한 후 레지스트리에서 매핑을 확인 해야 합니다.
+매핑은 **HKEY_LOCAL_MACHINE \system\currentcontolset\lsa\kerberos\hosttorealm**의 레지스트리에 기록 됩니다. 이 명령을 사용한 후 레지스트리에서 매핑을 확인 해야 합니다.
 
 ## <a name="BKMK_Examples"></a>예와
 

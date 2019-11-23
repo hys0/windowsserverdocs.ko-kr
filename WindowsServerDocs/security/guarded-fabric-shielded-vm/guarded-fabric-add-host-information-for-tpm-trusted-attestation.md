@@ -15,7 +15,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71386825"
 ---
->적용 대상: Windows server 2019, Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server 2019, Windows Server (반기 채널), Windows Server 2016
 
 ### <a name="add-host-information-for-tpm-trusted-attestation"></a>TPM에서 신뢰할 수 있는 증명에 대 한 호스트 정보 추가
 
@@ -39,9 +39,9 @@ TPM 모드의 경우 패브릭 관리자는 각각 HGS 구성에 추가 해야 �
     > 메모장과 같은 편집기에서 XML 파일을 열고 EKCert를 찾지 못했음을 나타내는 오류 메시지를 확인 하 여 EKCert이 누락 되었는지 확인할 수 있습니다.
     > 이 경우 컴퓨터의 TPM이 인증 된 것을 신뢰 하는 경우 `-Force` 플래그를 사용 하 여이 안전 검사를 재정의 하 고 호스트 식별자를 HGS에 추가할 수 있습니다.
 
-2. 패브릭 관리자가 호스트에 대해 만든 코드 무결성 정책을 이진 형식 (@no__t 64,)으로 가져옵니다. HGS 서버에 복사 합니다. 그런 후 다음 명령을 실행 합니다.
+2. 패브릭 관리자가 호스트에 대해 생성 한 코드 무결성 정책을 이진 형식 (\*. p7b)으로 가져옵니다. HGS 서버에 복사 합니다. 그런 후 다음 명령을 실행 합니다.
 
-    @No__t-0에 대해 적용 되는 호스트의 유형을 설명 하는 CI 정책 이름을 지정 합니다. 컴퓨터의 제조업체/모델과 해당 컴퓨터에서 실행 되는 특수 소프트웨어 구성의 이름을 지정 하는 것이 가장 좋습니다.<br>@No__t-0의 경우 코드 무결성 정책의 경로와 파일 이름을 지정 합니다.
+    `<PolicyName>`의 경우 적용 되는 호스트의 유형을 설명 하는 CI 정책 이름을 지정 합니다. 컴퓨터의 제조업체/모델과 해당 컴퓨터에서 실행 되는 특수 소프트웨어 구성의 이름을 지정 하는 것이 가장 좋습니다.<br>`<Path>`의 경우 코드 무결성 정책의 경로와 파일 이름을 지정 합니다.
 
     ```powershell
     Add-HgsAttestationCIPolicy -Path <Path> -Name '<PolicyName>'

@@ -22,7 +22,7 @@ ms.locfileid: "71371936"
 ---
 # <a name="qappsrv"></a>qappsrv
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 네트워크에서 모든 원격 데스크톱 세션 호스트 (RD 세션 호스트) 서버 목록을 표시합니다.
 
@@ -33,5 +33,6 @@ ms.locfileid: "71371936"
 이 명령은 같습니다는 **termserver 쿼리** 명령입니다.
 
 #### <a name="additional-references"></a>추가 참조
-[query termserver](query-termserver.md)@no__t 명령줄[구문 키](command-line-syntax-key.md)
+[query termserver](query-termserver.md)
+명령줄 [구문 키](command-line-syntax-key.md)
 [원격 데스크톱 서비스 &#40;터미널&#41; 서비스 명령 참조](remote-desktop-services-terminal-services-command-reference.md)

@@ -21,7 +21,7 @@ ms.locfileid: "71366874"
 
 이 항목을 사용 하 여 Hyper-v 가상 스위치 포트에서 VLAN (virtual Local Area Network) 설정을 구성 하 고 보는 방법에 대 한 모범 사례를 배울 수 있습니다.
 
-Hyper-v 가상 스위치 포트에서 VLAN 설정을 구성 하려는 경우 Windows @ no__t-0 Server 2016 Hyper-v 관리자 또는 System Center Virtual Machine Manager (VMM)를 사용할 수 있습니다.
+Hyper-v 가상 스위치 포트에서 VLAN 설정을 구성 하려는 경우 Windows&reg; Server 2016 Hyper-v 관리자 또는 System Center Virtual Machine Manager (VMM)를 사용할 수 있습니다.
 
 VMM을 사용 하는 경우 VMM에서 다음 Windows PowerShell 명령을 사용 하 여 스위치 포트를 구성 합니다.
 
@@ -48,8 +48,8 @@ VLAN 스위치 포트 설정을 구성 하 고 확인 하려면 다음을 수행
 
 이러한 지침을 따르지 않으면 다음과 같은 문제가 발생할 수 있습니다.
 
-- SDN을 배포 하 고 VMM, 네트워크 컨트롤러 또는 **VMNetworkAdapterIsolation** cmdlet을 사용 하 여 Hyper-v 가상 스위치 포트에서 VLAN 설정을 구성 하는 경우: Hyper-v 관리자 또는 **Get set-vmnetworkadaptervlan** 를 사용 하 여 구성 설정을 확인 하는 경우 명령 출력에 VLAN 설정이 표시 되지 않습니다. 대신 **VMNetworkIsolation** cmdlet을 사용 하 여 VLAN 설정을 확인 해야 합니다.
-- SDN을 배포 하지 않은 환경에서는 대신 Hyper-v 관리자 또는 **set-vmnetworkadaptervlan** cmdlet을 사용 하 여 Hyper-v 가상 스위치 포트에서 VLAN 설정을 구성 합니다. **VMNetworkIsolation** cmdlet을 사용 하 여 구성 설정을 확인 하는 경우 명령 출력에 VLAN 설정이 표시 되지 않습니다. 대신, VLAN 설정을 보려면 **Get set-vmnetworkadaptervlan** cmdlet을 사용 해야 합니다.
+- SDN을 배포 하 고 VMM, 네트워크 컨트롤러 또는 **VMNetworkAdapterIsolation** cmdlet을 사용 하 여 Hyper-v 가상 스위치 포트에서 VLAN 설정을 구성 하는 경우: hyper-v 관리자를 사용 하거나 **set-vmnetworkadaptervlan를 가져와서** 구성 설정을 볼 경우 명령 출력에 VLAN 설정이 표시 되지 않습니다. 대신 **VMNetworkIsolation** cmdlet을 사용 하 여 VLAN 설정을 확인 해야 합니다.
+- SDN을 배포 하지 않고 hyper-v 관리자 또는 **set-vmnetworkadaptervlan** cmdlet을 사용 하 여 Hyper-v 가상 스위치 포트에서 vlan 설정을 구성 하는 경우: **VMNetworkIsolation** cmdlet을 사용 하 여 구성 설정을 볼 경우 명령 출력에 VLAN 설정이 표시 되지 않습니다. 대신, VLAN 설정을 보려면 **Get set-vmnetworkadaptervlan** cmdlet을 사용 해야 합니다.
 
 또한 두 구성 방법 모두를 사용 하 여 동일한 스위치 포트 VLAN 설정을 구성 하지 않는 것이 중요 합니다. 이 작업을 수행 하는 경우 스위치 포트가 잘못 구성 되 고 결과는 네트워크 통신에 실패할 수 있습니다.
 

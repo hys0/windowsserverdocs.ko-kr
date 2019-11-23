@@ -19,11 +19,11 @@ ms.locfileid: "71364620"
 ---
 # <a name="the-wfp-virtual-switch-extension-should-be-enabled-if-it-is-required-by-third-party-extensions"></a>제 3 자 확장이 필요한 경우 WFP 가상 스위치 확장을 활성화 해야
 
->적용 대상: Windows Server 2016
+>적용 대상: Windows Server 2016
 
 모범 사례 분석기 및 검사에 대한 자세한 내용은 [모범 사례 분석기 검사 실행 및 검사 결과 관리](https://go.microsoft.com/fwlink/p/?LinkID=223177)를 참조하세요.  
   
-|속성|설명|  
+|속성|세부 정보|  
 |-|-|  
 |**운영 체제**|Windows Server 2016|  
 |**제품/기능**|Hyper-V|  
@@ -38,7 +38,7 @@ ms.locfileid: "71364620"
 ## <a name="impact"></a>**식**  
 *일부 타사 가상 스위치 확장이 다음 가상 스위치에서 제대로 작동 하지 않을 수 있습니다.*  
   
-@no__t-가상 머신 목록 >  
+가상 컴퓨터 \<목록 >  
   
 ## <a name="resolution"></a>**해결 방법**  
 *Windows PowerShell cmdlet VMSwitchExtension를 사용 하 여 타사 확장 프로그램에 필요한 경우 Windows 필터링 플랫폼을 사용 하도록 설정 합니다.*  
@@ -55,7 +55,7 @@ ms.locfileid: "71364620"
 Enable-VMSwitchExtension -VMSwitchName External -Name "Microsoft Windows Filtering Platform"  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [VMSwitchExtension](https://technet.microsoft.com/library/hh848541.aspx)  
   
 

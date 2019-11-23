@@ -19,11 +19,11 @@ ms.locfileid: "71366260"
 ---
 # <a name="configure-virtual-machines-to-use-sr-iov-only-when-supported-by-the-guest-operating-system"></a>게스트 운영 체제에서 지 원하는 경우에 SR-IOV를 사용 하 여 가상 컴퓨터 구성
 
->적용 대상: Windows Server 2016
+>적용 대상: Windows Server 2016
 
 모범 사례 분석기 및 검사에 대한 자세한 내용은 [모범 사례 분석기 검사 실행 및 검사 결과 관리](https://go.microsoft.com/fwlink/p/?LinkID=223177)를 참조하세요.  
   
-|속성|설명|  
+|속성|세부 정보|  
 |-|-|  
 |**운영 체제**|Windows Server 2016|  
 |**제품/기능**|Hyper-V|  
@@ -38,7 +38,7 @@ ms.locfileid: "71366260"
 ## <a name="impact"></a>영향  
 *SR-IOV 가상 함수는 다음 가상 컴퓨터에 할당 되지 않습니다.*  
   
-@no__t-가상 머신 목록 >  
+가상 컴퓨터 \<목록 >  
   
 ## <a name="resolution"></a>해결 방법  
 *SR-IOV를 지원 하지 않는 게스트 운영 체제를 실행 하는 모든 가상 머신에서 SR-IOV를 사용 하지 않도록 설정 합니다.*  

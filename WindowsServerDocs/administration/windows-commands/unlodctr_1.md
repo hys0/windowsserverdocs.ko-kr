@@ -22,7 +22,7 @@ ms.locfileid: "71363904"
 ---
 # <a name="unlodctr"></a>unlodctr
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 시스템 레지스트리에서 서비스 또는 장치 드라이버에 대 한 성능 카운터 이름 및 설명 텍스트를 제거 합니다.   
 
@@ -33,7 +33,7 @@ Unlodctr <DriverName>
 ### <a name="parameters"></a>매개 변수  
 |매개 변수|설명|  
 |-------|--------|  
-|@no__t 0DriverName >|Windows Server 2003 레지스트리에서 성능 카운터 이름 설정 및 드라이버 또는 서비스 <DriverName>에 대 한 설명 텍스트를 제거 합니다.|  
+|\<DriverName >|Windows Server 2003 레지스트리에서 드라이버 또는 서비스 <DriverName>에 대 한 성능 카운터 이름 설정 및 설명 텍스트를 제거 합니다.|  
 |/?|명령 프롬프트에 도움말을 표시합니다.|  
 
 ## <a name="remarks"></a>설명  

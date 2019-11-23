@@ -22,7 +22,7 @@ ms.locfileid: "71380123"
 ---
 # <a name="bootcfg-copy"></a>bootcfg copy
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 명령줄 옵션을 추가할 수 있는 있는 기존 부팅 항목의 복사본을 만듭니다.
 
@@ -35,14 +35,14 @@ bootcfg /copy [/s <computer> [/u <Domain>\<User> /p <Password>]] [/d <Descriptio
 |      매개 변수       |                                                                                             설명                                                                                             |
 |----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    /s <computer>     |                                         이름 또는 원격 컴퓨터의 IP 주소를 지정 합니다 (백슬래시를 사용 하지 않습니다). 기본값은 로컬 컴퓨터입니다.                                          |
-| /u <Domain> @ no__t-1 @ no__t-2  | @No__t-0 또는 <Domain> @ no__t @ no__t-3로 지정 된 사용자의 계정 권한으로 명령을 실행 합니다. 기본값은 현재 로그온 된 명령을 실행 하는 컴퓨터에서 사용자의 사용 권한. |
+| /u <Domain>\\<User>  | <User>또는 <Domain>\\<User>에 지정 된 사용자의 계정 권한으로 명령을 실행 합니다. 기본값은 현재 로그온 된 명령을 실행 하는 컴퓨터에서 사용자의 사용 권한. |
 |    /p <Password>     |                                                        에 지정 된 사용자 계정의 암호를 지정 된 **/u** 매개 변수입니다.                                                        |
 |   /d <Description>   |                                                                    새 운영 체제 항목에 대 한 설명을 지정 합니다.                                                                    |
 | /id <OSEntryLineNum> |         복사할 Boot.ini 파일의 [운영 체제] 섹션에 운영 체제 항목 줄 번호를 지정 합니다. [운영 체제] 섹션 헤더 후 첫 번째 줄은 1입니다.         |
 |          /?          |                                                                                명령 프롬프트에 도움말을 표시합니다.                                                                                 |
 
 ## <a name="BKMK_examples"></a>예와
-다음 예에서는 **bootcfg/copy** 명령을 사용 하 여 부팅 항목 1을 복사 하 고 설명으로 "\Abc Server @ no__t-1"을 입력 하는 방법을 보여 줍니다.
+다음 예에서는 **bootcfg/copy** 명령을 사용 하 여 부팅 항목 1을 복사 하 고 설명으로 "\Abc Server\\"을 입력 하는 방법을 보여 줍니다.
 ```
 bootcfg /copy /d "\ABC Server\" /id 1
 ```

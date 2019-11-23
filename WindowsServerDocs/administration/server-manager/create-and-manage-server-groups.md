@@ -22,7 +22,7 @@ ms.locfileid: "71383223"
 ---
 # <a name="create-and-manage-server-groups"></a>서버 그룹 만들기 및 관리
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 이 항목에서는 Windows 서버에서 서버 관리자의 사용자 지정, 사용자 정의 서버 그룹을 만드는 방법에 설명 합니다.
 
@@ -71,8 +71,9 @@ ms.locfileid: "71383223"
 
 3.  그룹 변경을 마쳤으면 **확인**을 클릭합니다.
 
-## <a name="see-also"></a>관련 항목
-[서버 관리자 @no__t에 서버 추가](add-servers-to-server-manager.md)-1[서버 관리자](server-manager.md)
+## <a name="see-also"></a>참고 항목
+[서버 관리자
+에 서버 추가](add-servers-to-server-manager.md) [서버 관리자](server-manager.md)
 
 
 

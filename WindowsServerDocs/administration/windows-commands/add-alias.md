@@ -38,8 +38,8 @@ add alias <AliasName> <AliasValue>
 
 |매개 변수|설명|
 |---------|-----------|
-|@no__t 0AliasName >|별칭의 이름을 지정합니다.|
-|@no__t 0AliasValue >|별칭 값을 지정합니다.|
+|\<AliasName >|별칭의 이름을 지정합니다.|
+|\<AliasValue >|별칭 값을 지정합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
 ## <a name="remarks"></a>설명

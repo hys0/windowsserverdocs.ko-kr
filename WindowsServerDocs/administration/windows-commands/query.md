@@ -22,7 +22,7 @@ ms.locfileid: "71371843"
 ---
 # <a name="query"></a>query
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 프로세스, 세션 및 원격 데스크톱 세션 호스트 (RD 세션 호스트) 서버에 대 한 정보를 표시합니다.
 
@@ -47,4 +47,4 @@ query user
 
 #### <a name="additional-references"></a>추가 참조
 [명령줄 구문 키](command-line-syntax-key.md)
-[원격 데스크톱 서비스&#40; 터미널 서비스 및&#41; 명령 참조](remote-desktop-services-terminal-services-command-reference.md)
+[원격 데스크톱 서비스 & #40; 터미널 서비스 및 #41; 명령 참조](remote-desktop-services-terminal-services-command-reference.md)

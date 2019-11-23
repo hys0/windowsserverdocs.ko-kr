@@ -37,23 +37,23 @@ Windows Server 2016, 2012 R2 또는 2012에 대 한 전체 서버 복구를 수�
   
 1. Windows 설치 프로그램 시작 하 고 언어, 시간 및 통화 형식 및 키보드 옵션을 지정한 후 **다음**을 클릭 합니다. 
 2. **컴퓨터 복구**를 클릭합니다.
-   ![Server Restore @ no__t-1
+   ![Server 복원](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore1.png)
 3. **문제 해결**을 클릭합니다.</br>
-   ![Server Restore @ no__t-1
+   ![Server 복원](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore2.png)
 4. **시스템 이미지 복구**를 클릭 합니다.</br>
-   ![Server Restore @ no__t-1
+   ![Server 복원](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore3.png)
 5. 클릭 **Windows Server 2016**합니다. 
-   ![Server Restore @ no__t-1
+   ![Server 복원](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore4.png)
 6. 가장 최근의 로컬 백업을 복원 하는 경우 사용 **가능한 최신 시스템 이미지 사용 (권장)** 을 클릭 하 고 **다음**을 클릭 합니다.
-   ![Server Restore @ no__t-1
+   ![Server 복원](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore5.png)
 7. 이제 다음 옵션이 제공 됩니다.
    -  디스크 포맷 및 다시 분할
    -  드라이버 설치
    -  자동으로 다시 시작 하 고 디스크 오류를 확인 하는 **고급** 기능을 선택 취소 합니다. 이러한 설정은 기본적으로 사용 하도록 설정 되어 있습니다.
-   ![Server Restore @ no__t-1
+   ![Server 복원](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore6.png)
 8. **다음**을 클릭합니다.
 9. **마침**을 클릭합니다. 계속 하 시겠습니까? 라는 메시지가 표시 됩니다. **예**를 클릭합니다. 
-   ![Server Restore @ no__t-1 
+   ![Server 복원](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore11.png) 
 10. 이 작업이 완료 되 면 [AD 포리스트 복구-DFSR 복제 sysvol의 신뢰할 수 있는 동기화 수행](AD-Forest-Recovery-Authoritative-Recovery-SYSVOL.md)에 설명 된 대로 SYSVOL의 정식 복원을 수행 합니다.
 
 ## <a name="perform-a-full-server-restore-with-any-image-local-or-remote"></a>로컬 또는 원격 이미지를 사용 하 여 전체 서버 복원 수행
@@ -64,11 +64,11 @@ Windows Server 2016, 2012 R2 또는 2012에 대 한 전체 서버 복구를 수�
 4. 가장 최근의 로컬 백업을 복원 하는 경우 **시스템 이미지 선택** 을 클릭 하 고 **다음**을 클릭 합니다.
 5. 이제 복원 하려는 백업의 위치를 선택할 수 있습니다. 로컬 이미지의 경우 목록에서 선택할 수 있습니다. 
 6. 이미지가 네트워크 공유에 있는 경우 **고급**을 선택 합니다. 드라이버를 설치 해야 하는 경우 **고급** 을 선택할 수도 있습니다.
-   ![Server Restore @ no__t-1
+   ![Server 복원](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore7.png)
 7. **고급** 을 클릭 한 후 네트워크에서 복원 하는 경우 **네트워크에서 시스템 이미지 검색**을 선택 합니다. 네트워크 연결을 복원 하 라는 메시지가 표시 될 수 있습니다. 확인을 선택 합니다. </br>
-   ![Server Restore @ no__t-1
-8. 백업 공유 위치의 UNC 경로 (예: \\ \ server1\backups)를 입력 하 고 **확인**을 클릭 합니다. @No__t-0 \ 192.168.1.3 \ 백업 같은 대상 서버의 IP 주소를 입력할 수도 있습니다. 
-   ![Server Restore @ no__t-1
+   ![Server 복원](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore8.png)
+8. 백업 공유 위치의 UNC 경로를 입력 하 고 (예: \\\server1\sta\\server\\\\\server1\\\\\\ \\\192.168.1.3\backups. 같은 대상 서버의 IP 주소를 입력할 수도 있습니다. 
+   ![Server 복원](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore9.png)
 9. 공유에 액세스 하는 데 필요한 자격 증명을 입력 하 고 확인을 클릭 합니다. 
 10. 이제 **복원할 시스템 이미지의 날짜와 시간을 선택** 하 고 **다음**을 클릭 합니다.
 11. 이제 다음 옵션이 제공 됩니다.
@@ -126,7 +126,7 @@ Windows Server 2016, 2012 R2 또는 2012에 대 한 전체 서버 복구를 수�
    set address "Local Area Connection" static 192.168.1.2 255.0.0.0 192.168.1.1 1  
    ```  
 
-   @No__t-0을 입력 하 여 명령 프롬프트로 돌아갑니다. @No__t-0을 입력 하 여 네트워크 어댑터에 IP 주소가 있는지 확인 하 고 연결을 확인 하기 위해 백업 공유를 호스팅하는 서버의 IP 주소를 ping 해 봅니다. 작업이 완료 되 면 명령 프롬프트를 닫습니다. 
+   `quit`를 입력 하 여 명령 프롬프트로 돌아갑니다. `ipconfig /all`를 입력 하 여 네트워크 어댑터에 IP 주소가 있는지 확인 하 고 연결을 확인 하기 위해 백업 공유를 호스팅하는 서버의 IP 주소를 ping 해 봅니다. 작업이 완료 되 면 명령 프롬프트를 닫습니다. 
 
 6. 네트워크 어댑터가 제대로 작동 하 고 있습니다. 위의 단계를 선택 하 여 복원을 완료 합니다.
 

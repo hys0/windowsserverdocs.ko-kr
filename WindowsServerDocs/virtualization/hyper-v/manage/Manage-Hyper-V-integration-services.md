@@ -98,7 +98,7 @@ Integration service가 완벽 하 게 작동 하려면 호스트에서 사용 �
 
 ### <a name="use-windows-services-to-start-or-stop-an-integration-service-within-a-windows-guest"></a>Windows 서비스를 사용 하 여 Windows 게스트 내에서 통합 서비스 시작 또는 중지
 
-1. 관리자 권한으로 ```services.msc```을 실행 하거나 제어판에서 서비스 아이콘을 두 번 클릭 하 여 서비스 관리자를 엽니다.
+1. 관리자 권한으로 ```services.msc```를 실행 하거나 제어판에서 서비스 아이콘을 두 번 클릭 하 여 서비스 관리자를 엽니다.
 
     ![Windows 서비스 창을 보여 주는 스크린샷](media/HVServices.png) 
 
@@ -137,9 +137,9 @@ Integration service가 완벽 하 게 작동 하려면 호스트에서 사용 �
 
 ## <a name="start-and-stop-an-integration-service-from-a-linux-guest"></a>Linux 게스트에서 통합 서비스 시작 및 중지 
 
-Linux 통합 서비스는 일반적으로 Linux 커널을 통해 제공됩니다. Linux integration services 드라이버의 이름은 **라고**입니다.
+Linux 통합 서비스는 일반적으로 Linux 커널을 통해 제공됩니다. Linux integration services 드라이버의 이름은 **hv_utils**입니다.
 
-1. **라고** 가 로드 되었는지 확인 하려면 다음 명령을 사용 합니다.
+1. **Hv_utils** 로드 되었는지 확인 하려면 다음 명령을 사용 합니다.
 
    ``` BASH
    lsmod | grep hv_utils
@@ -190,15 +190,15 @@ Linux 통합 서비스는 일반적으로 Linux 커널을 통해 제공됩니다
     ```
   
    나열 될 수 있는 Integration service 디먼는 다음과 같습니다. 이러한 항목이 없는 경우 시스템에서 지원 되지 않거나 설치 되지 않았을 수 있습니다. 자세한 내용은 [Windows에서 hyper-v에 대해 지원 되는 Linux 및 FreeBSD virtual machines](https://technet.microsoft.com/library/dn531030.aspx)를 참조 하세요.  
-   - **hv_vss_daemon**: 이 디먼은 라이브 Linux 가상 머신 백업을 만드는 데 필요 합니다.
-   - **hv_kvp_daemon**: 이 데몬에는 내장 및 외부 키 값 쌍을 설정 하 고 쿼리할 수 있습니다.
-   - **hv_fcopy_daemon**: 이 디먼은 호스트와 게스트 간에 서비스를 복사 하는 파일을 구현 합니다.  
+   - **hv_vss_daemon**:이 디먼은 라이브 Linux 가상 머신 백업을 만드는 데 필요 합니다.
+   - **hv_kvp_daemon**:이 데몬에는 내장 및 외부 키 값 쌍을 설정 하 고 쿼리할 수 있습니다.
+   - **hv_fcopy_daemon**:이 디먼은 호스트와 게스트 간에 서비스를 복사 하는 파일을 구현 합니다.  
 
 ### <a name="examples"></a>예
 
-이 예에서는 `hv_kvp_daemon` 이라는 KVP 디먼을 중지 하 고 시작 하는 방법을 보여 줍니다.
+이 예에서는 `hv_kvp_daemon`라는 KVP 디먼을 중지 하 고 시작 하는 방법을 보여 줍니다.
 
-1. 프로세스 ID \(PID @ no__t-1을 사용 하 여 디먼의 프로세스를 중지 합니다. PID를 찾으려면 출력의 두 번째 열을 확인 하거나 `pidof`을 사용 합니다. Hyper-v 디먼을 루트로 실행 하므로 루트 권한이 필요 합니다.
+1. 프로세스 ID \(PID\)를 사용 하 여 디먼의 프로세스를 중지 합니다. PID를 찾으려면 출력의 두 번째 열을 확인 하거나 `pidof`를 사용 합니다. Hyper-v 디먼을 루트로 실행 하므로 루트 권한이 필요 합니다.
 
     ``` BASH
     sudo kill -15 `pidof hv_kvp_daemon`
@@ -216,7 +216,7 @@ Linux 통합 서비스는 일반적으로 Linux 커널을 통해 제공됩니다
     sudo hv_kvp_daemon
     ``` 
 
-1. @No__t-0 프로세스가 새 프로세스 ID와 함께 나열 되는지 확인 하려면 다음을 실행 합니다.
+1. `hv_kvp_daemon` 프로세스가 새로운 프로세스 ID로 나열 되는지 확인 하려면 다음을 실행 합니다.
 
     ```
     ps -ef | hv
@@ -250,7 +250,7 @@ Linux 통합 서비스는 일반적으로 Linux 커널을 통해 제공됩니다
 | - | | |
 | Linux 게스트 | 패키지 관리자 | Linux 용 Integration services는 배포판에 기본 제공 되지만 선택적 업데이트를 사용할 수 있습니다. ******** |
 
-\* 데이터 교환 통합 서비스를 사용 하도록 설정할 수 없는 경우 [다운로드 센터](https://support.microsoft.com/kb/3071740) 에서 캐비닛 (cab) 파일로 해당 게스트에 대 한 통합 서비스를 사용할 수 있습니다. Cab 적용에 대 한 지침은이 [블로그 게시물](https://blogs.technet.com/b/virtualization/archive/2015/07/24/integration-components-available-for-virtual-machines-not-connected-to-windows-update.aspx)에서 확인할 수 있습니다.
+\* 데이터 교환 통합 서비스를 사용 하도록 설정할 수 없는 경우 [다운로드 센터](https://support.microsoft.com/kb/3071740) 에서 캐비닛 (cab) 파일로 이러한 게스트에 대 한 통합 서비스를 사용할 수 있습니다. Cab 적용에 대 한 지침은이 [블로그 게시물](https://blogs.technet.com/b/virtualization/archive/2015/07/24/integration-components-available-for-virtual-machines-not-connected-to-windows-update.aspx)에서 확인할 수 있습니다.
 
 **Windows 8.1 호스트에서 실행되는 가상 컴퓨터:**
 

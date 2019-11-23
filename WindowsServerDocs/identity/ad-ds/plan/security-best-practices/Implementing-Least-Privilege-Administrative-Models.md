@@ -83,7 +83,7 @@ ms.locfileid: "71367733"
 
 현재 기본 지원에에서는 Windows의 모든 버전에서는 기본적으로 계정을 사용할 수 없게 해시를 전달 및 기타 자격 증명 도난 공격에 대 한 로컬 관리자 계정이 비활성화 되어 있습니다. 그러나 이전 운영 체제를 포함 하는 도메인 또는 로컬 관리자 계정을 사용 하도록 설정에서 이러한 계정은 사용할 수 있는 앞에서 설명한 대로 구성원 서버 및 워크스테이션에 손상 된를 전파 합니다. 이러한 이유로 다음 컨트롤은 도메인에 가입 된 시스템에서 모든 로컬 관리자 계정에 대 한 것이 좋습니다.  
 
-이러한 컨트롤을 구현 하는 방법에 대 한 자세한 지침은 [Appendix H에서 제공 됩니다. 로컬 관리자 계정 및 그룹 보안 @ no__t-0. 이러한 설정은 구현 하기 전에 확인 합니다는 로컬 관리자 계정을 현재 사용 되지 않는 환경에서 컴퓨터에 서비스를 실행 하거나을 수행할 다른 작업을 이러한 계정을 사용할 수 없습니다. 이 설정을 프로덕션 환경에서 구현 하기 전에 철저히 테스트 합니다.  
+이러한 컨트롤을 구현 하기 위한 자세한 지침에 제공 됩니다 [부록 h: 보안 로컬 관리자 계정 및 그룹](../../../ad-ds/plan/security-best-practices/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups.md)합니다. 이러한 설정은 구현 하기 전에 확인 합니다는 로컬 관리자 계정을 현재 사용 되지 않는 환경에서 컴퓨터에 서비스를 실행 하거나을 수행할 다른 작업을 이러한 계정을 사용할 수 없습니다. 이 설정을 프로덕션 환경에서 구현 하기 전에 철저히 테스트 합니다.  
 
 #### <a name="controls-for-local-administrator-accounts"></a>로컬 관리자 계정에 대 한 제어
 
@@ -91,7 +91,7 @@ ms.locfileid: "71367733"
 
 ##### <a name="configuring-gpos-to-restrict-administrator-accounts-on-domain-joined-systems"></a>도메인에 가입 된 시스템에 대 한 관리자 권한을 제한 하는 Gpo를 구성 합니다.
 
-사용자가 만들고 각 도메인의 워크스테이션 및 구성원 서버 Ou에 연결 하는 하나 이상의 Gpo에서 관리자 계정을 **컴퓨터 Configuration\Policies\Windows 설정 \ 보안 설정 \ 로컬 정책 \ 사용자 권한에서 다음 사용자 권한으로 추가 합니다. 할당**:  
+사용자가 만들고 각 도메인의 워크스테이션 및 구성원 서버 Ou에 연결 하는 하나 이상의 Gpo에서 관리자 계정을 **컴퓨터 Configuration\Policies\Windows 설정 \ 로컬 정책 \ 사용자 권한 할당**의 다음 사용자 권한에 추가 합니다.  
 
 - 네트워크에서 이 컴퓨터 액세스 거부
 - 일괄 작업으로 로그온 거부
@@ -109,15 +109,15 @@ ms.locfileid: "71367733"
 
 ### <a name="securing-local-privileged-accounts-and-groups-in-active-directory"></a>Active Directory의 로컬 특권된 계정 및 그룹 보안
 
-*Law 번호 6: 컴퓨터는 관리자가 신뢰할 수 있는 경우에만 안전 합니다.* - [10 가지 불변 보안 법 (버전 2.0)](https://technet.microsoft.com/security/hh278941.aspx)  
+*법률 번호 6: 관리자가 신뢰할 수 있는 경우에만 컴퓨터가 안전 하 게 보호 됩니다.* - [10 가지 불변 보안 법 (버전 2.0)](https://technet.microsoft.com/security/hh278941.aspx)  
 
-여기에 제공 된 정보는 가장 높은 권한 기본 제공 계정 및 Active Directory의 그룹 보안을 위한 일반 지침을 제공 하는 데 사용 됩니다. 자세한 단계별 지침은 [Appendix D에도 제공 됩니다. Active Directory @ no__t에서 기본 제공 관리자 계정 보안 유지-0, [Appendix E: Active Directory @ no__t에서 엔터프라이즈 관리자 그룹 보안 유지-0, [Appendix F: Active Directory @ no__t-0에서 도메인 관리자 그룹 보안 설정-1Appendix-1Appendix G: Active Directory @ no__t에서 관리자 그룹을 보호 하 고 있습니다.  
+여기에 제공 된 정보는 가장 높은 권한 기본 제공 계정 및 Active Directory의 그룹 보안을 위한 일반 지침을 제공 하는 데 사용 됩니다. 자세한 단계별 지침에도 제공 되어 [부록 d: 보안 기본 제공 관리자 계정에 Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md), [부록 e: 보안 Enterprise Admins 그룹에 Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory.md), [부록 f: 보안 도메인 관리자 그룹에 Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory.md), 및 [부록 g: 보안 관리자가 Active Directory의에서 그룹](../../../ad-ds/plan/security-best-practices/Appendix-G--Securing-Administrators-Groups-in-Active-Directory.md)합니다.  
 
 이러한 설정 중 하나를 구현 하기 전에 철저 하 게 환경에 적합 한지 확인 하려면 모든 설정도 테스트 해야 합니다. 모든 조직은 이러한 설정을 구현 하려면 수 있을 것입니다.  
 
 #### <a name="securing-built-in-administrator-accounts-in-active-directory"></a>Active Directory에서 기본 제공 관리자 계정 보안
 
-Active Directory의 각 도메인의 관리자 계정이 도메인의 만들기의 일부로 만들어집니다. 이 계정은 기본적으로 Domain Admins 및 도메인 관리자 그룹의 멤버 이며 포리스트 루트 도메인의 도메인을 사용 하는 경우 계정이 Enterprise Admins 그룹의 멤버 이기도 합니다. 초기 빌드 활동 및 재해 복구 시나리오에 대해서만 사용 하 여 도메인의 로컬 관리자 계정의 예약 되어야 합니다. 다른 계정을 사용할 수는 복구에 적용할 기본 제공 관리자 계정을 사용할 수 있도록 되도록 하지는 포리스트의 모든 도메인 관리자 계정의 기본 멤버 자격을 변경 해야 합니다. 대신, 포리스트의 각 도메인의 관리자 계정을 보호 하기 위한 지침을 수행 해야 합니다. 이러한 컨트롤을 구현 하는 방법에 대 한 자세한 지침은 [Appendix D에서 제공 됩니다. Active Directory @ no__t에서 기본 제공 관리자 계정 보안 설정-0.  
+Active Directory의 각 도메인의 관리자 계정이 도메인의 만들기의 일부로 만들어집니다. 이 계정은 기본적으로 Domain Admins 및 도메인 관리자 그룹의 멤버 이며 포리스트 루트 도메인의 도메인을 사용 하는 경우 계정이 Enterprise Admins 그룹의 멤버 이기도 합니다. 초기 빌드 활동 및 재해 복구 시나리오에 대해서만 사용 하 여 도메인의 로컬 관리자 계정의 예약 되어야 합니다. 다른 계정을 사용할 수는 복구에 적용할 기본 제공 관리자 계정을 사용할 수 있도록 되도록 하지는 포리스트의 모든 도메인 관리자 계정의 기본 멤버 자격을 변경 해야 합니다. 대신, 포리스트의 각 도메인의 관리자 계정을 보호 하기 위한 지침을 수행 해야 합니다. 이러한 컨트롤을 구현 하기 위한 자세한 지침에 제공 됩니다 [부록 d: 보안 기본 제공 관리자 계정에 Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)합니다.  
 
 #### <a name="controls-for-built-in-administrator-accounts"></a>기본 제공 관리자 계정에 대 한 컨트롤
 
@@ -137,7 +137,7 @@ Active Directory의 각 도메인의 관리자 계정이 도메인의 만들기�
 
 도메인 관리자 계정을 사용 하지 않도록 설정 하면 계정을 효과적으로 사용할 수 없는 있지만 계정을 실수로 또는 악의적으로 사용 하는 경우 계정에 추가 제한 사항이 구현 해야 합니다. 이러한 컨트롤 수 궁극적으로 관리자 계정으로 되돌릴 수 있지만 목적은 공격자의 진행 속도 저하 있는 컨트롤을 만들려면 및 제한 계정 손상을 줄 수 있습니다.  
 
-사용자가 만들고 각 도메인의 워크스테이션 및 구성원 서버 Ou에 연결 하는 하나 이상의 Gpo에서 각 도메인의 관리자 계정을 **컴퓨터 Configuration\Policies\Windows 설정 \ 로컬 관리자 정책 \의 다음 사용자 권한에 추가 합니다. 사용자 권한 할당**:  
+사용자가 만들고 각 도메인의 워크스테이션 및 구성원 서버 Ou에 연결 하는 하나 이상의 Gpo에서 각 도메인의 관리자 계정을 **컴퓨터 Configuration\Policies\Windows 설정 \ 로컬 정책 \ 사용자 권한 할당**의 다음 사용자 권한에 추가 합니다.  
 
 - 네트워크에서 이 컴퓨터 액세스 거부  
 - 일괄 작업으로 로그온 거부  
@@ -151,7 +151,7 @@ Active Directory의 각 도메인의 관리자 계정이 도메인의 만들기�
 
 ##### <a name="configuring-gpos-to-restrict-administrator-accounts-on-domain-controllers"></a>도메인 컨트롤러에 대 한 관리자 권한을 제한 하는 Gpo를 구성 합니다.
 
-포리스트의 각 도메인에서 도메인 컨트롤러 OU에 연결 된 기본 도메인 컨트롤러 정책 또는 정책을 수정 하 여 **컴퓨터 Configuration\Policies\Windows 설정의 다음 사용자 권한에 각 도메인의 관리자 계정을 추가 해야 합니다. \Security 로컬 정책 \ 정책 \ 정책 권한 할당**:  
+포리스트의 각 도메인에서 도메인 컨트롤러 OU에 연결 된 기본 도메인 컨트롤러 정책 또는 정책을 수정 하 여 각 도메인의 관리자 계정을 **컴퓨터 Configuration\Policies\Windows 설정 \ 로컬 정책 \ 사용자 권한 할당**의 다음 사용자 권한에 추가 해야 합니다.  
 
 - 네트워크에서 이 컴퓨터 액세스 거부  
 - 일괄 작업으로 로그온 거부  
@@ -169,13 +169,13 @@ Active Directory의 각 도메인의 관리자 계정이 도메인의 만들기�
 
 #### <a name="securing-enterprise-admin-groups"></a>엔터프라이즈 관리자 그룹의 보안 설정
 
-포리스트 루트 도메인에 있는 Enterprise Admins 그룹은 매일 사용자를 포함 하지 않아야 하며, 도메인의 로컬 관리자 계정에 대 한 예외를 발생 시킬 수 있습니다 .이 경우에는 이전 및 [Appendix D에 설명 된 대로 보안이 유지 됩니다. Active Directory @ no__t에서 기본 제공 관리자 계정 보안 설정-0.  
+앞에서 설명한 대로 보안이 제공 및에 포리스트 루트 도메인에 들어, Enterprise Admins 그룹 도메인의 로컬 관리자 계정의 예외일 수 있음 일상적으로 사용자를 포함 해야 [부록 d: 보안 기본 제공 관리자 계정에 Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)합니다.  
 
-EA 액세스 해야 할 때 Enterprise Admins 그룹에 계정을 가진 EA 권한 및 사용 해야 하는 사용자를 일시적으로 배치 되어야 합니다. 하지만 사용자가 매우 강력한 권한의 계정을 사용 하는, 해당 활동을 감사 하 고 가급적 실수로 오용 또는 잘못 된 구성이 가능성을 최소화 하기 위해 변경 내용을 수행 하는 한 사용자 및 변경 되는 내용을 다른 사용자를 사용 하 여 수행 해야 합니다. 활동이 완료 되 면 하는 경우는 계정은 EA 그룹에서 제거 해야 합니다. 이 수동 절차를 통해 수행할 수 있습니다 및 프로세스, 타사 identity/액세스 권한을된 관리 (PIM/PAM) 소프트웨어 또는 둘의 조합을 설명 합니다. Active Directory에서 권한 있는 그룹의 멤버 자격을 제어 하는 데 사용할 수 있는 계정 만들기에 대 한 지침은 [자격 증명 도난에 대 한 매력적인 계정](../../../ad-ds/plan/security-best-practices/Attractive-Accounts-for-Credential-Theft.md) 에 제공 되며, [appendix I: Active Directory @ no__t에서 보호 된 계정 및 그룹에 대 한 관리 계정을 만드는 중입니다.  
+EA 액세스 해야 할 때 Enterprise Admins 그룹에 계정을 가진 EA 권한 및 사용 해야 하는 사용자를 일시적으로 배치 되어야 합니다. 하지만 사용자가 매우 강력한 권한의 계정을 사용 하는, 해당 활동을 감사 하 고 가급적 실수로 오용 또는 잘못 된 구성이 가능성을 최소화 하기 위해 변경 내용을 수행 하는 한 사용자 및 변경 되는 내용을 다른 사용자를 사용 하 여 수행 해야 합니다. 활동이 완료 되 면 하는 경우는 계정은 EA 그룹에서 제거 해야 합니다. 이 수동 절차를 통해 수행할 수 있습니다 및 프로세스, 타사 identity/액세스 권한을된 관리 (PIM/PAM) 소프트웨어 또는 둘의 조합을 설명 합니다. 제공 Active Directory의 권한 있는 그룹의 구성원 자격을 제어할 사용할 수 있는 계정 만들기에 대 한 지침 [매력적인 계정 자격 증명 도난에 대 한](../../../ad-ds/plan/security-best-practices/Attractive-Accounts-for-Credential-Theft.md) 에서 자세한 지침을 제공 하 고 [부록 i: 관리 계정 만들기 Active Directory의 보호 된 계정 및 그룹에 대 한](../../../ad-ds/manage/component-updates/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory.md)합니다.  
 
 엔터프라이즈 관리자는 기본적으로 포리스트의 각 도메인에 기본 제공 Administrators 그룹의 구성원입니다. 각 도메인의 관리자 그룹에서 Enterprise Admins 그룹을 제거는 포리스트 재해 복구 시나리오에서 발생할 경우 EA 권한이 필요할 수도 있으므로 부적절 한는 수정입니다. Enterprise Admins 그룹에는 포리스트에 있는 Administrators 그룹에서 제거한, 각 도메인의 관리자 그룹에 추가 되어야 하 고 다음과 같은 추가 컨트롤을 구현 해야 합니다.  
 
-- 앞에서 설명한 것 처럼 Enterprise Admins 그룹은 일상적인 사용자를 포함 하지 않아야 하며, 포리스트 루트 도메인의 관리자 계정에 대 한 예외를 발생 시킬 수 있습니다 .이는 [Appendix D에 설명 된 대로 보안을 유지 해야 합니다. Active Directory @ no__t에서 기본 제공 관리자 계정 보안 설정-0.  
+- Enterprise Admins 그룹에 설명 된 대로 보안을 유지 해야 하는 포리스트 루트 도메인 관리자 계정의 예외일 수 있음 일상적으로 사용자를 포함 해야 앞에서 설명한 대로 [부록 d: 보안 기본 제공 관리자 계정에 Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)합니다.  
 - 구성원 서버 및 워크스테이션 각 도메인에 포함 된 Ou에 연결 된 Gpo, EA 그룹 다음 사용자 권한을 추가 해야 합니다.  
    - 네트워크에서 이 컴퓨터 액세스 거부  
    - 일괄 작업으로 로그온 거부  
@@ -189,15 +189,15 @@ EA 액세스 해야 할 때 Enterprise Admins 그룹에 계정을 가진 EA 권�
   
 #### <a name="securing-domain-admins-groups"></a>도메인 관리자 그룹의 보안 설정
 
-Enterprise Admins 그룹의 경우 처럼 Domain Admins 그룹의 구성원 자격 빌드 또는 재해 복구 시나리오에만 받아야 합니다. 도메인에 대 한 로컬 관리자 계정을 제외 하 고 DA 그룹에 일 대 일 사용자 계정이 없어야 합니다 ([Appendix D에 설명 된 대로 보안 된 경우). Active Directory @ no__t에서 기본 제공 관리자 계정 보안 설정-0.  
+Enterprise Admins 그룹의 경우 처럼 Domain Admins 그룹의 구성원 자격 빌드 또는 재해 복구 시나리오에만 받아야 합니다. 있어야 일상적인 사용자 계정이 없는 도메인에 대 한 로컬 관리자 계정 제외 하 고 DA 그룹에 설명 된 대로 보안이 설정 되었을 경우 [부록 d: 보안 기본 제공 관리자 계정에 Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)합니다.  
   
-DA 액세스 해야 할 때 해당 도메인에 대 한 DA 그룹에이 수준의 액세스 권한 필요로 하는 계정을 일시적으로 배치 되어야 합니다. 사용자가 매우 강력한 권한의 계정을 사용 하는, 있지만 활동을 감사 하 고 가급적 실수로 오용 또는 잘못 된 구성이 가능성을 최소화 하기 위해 변경 내용을 수행 하는 한 사용자 및 변경 되는 내용을 다른 사용자를 사용 하 여 수행 해야 합니다. 활동이 완료 되 면 하는 경우는 계정은 Domain Admins 그룹에서 제거 해야 합니다. 이 수동 절차를 통해 수행할 수 있습니다 및 타사 identity/액세스 권한을된 관리 (PIM/PAM) 소프트웨어를 통해 프로세스 또는 둘의 조합을 설명 합니다. Active Directory에서 권한 있는 그룹의 멤버 자격을 제어 하는 데 사용할 수 있는 계정 만들기에 대 한 지침은 [Appendix I에서 제공 됩니다. Active Directory @ no__t에서 보호 된 계정 및 그룹에 대 한 관리 계정을 만드는 중입니다.  
+DA 액세스 해야 할 때 해당 도메인에 대 한 DA 그룹에이 수준의 액세스 권한 필요로 하는 계정을 일시적으로 배치 되어야 합니다. 사용자가 매우 강력한 권한의 계정을 사용 하는, 있지만 활동을 감사 하 고 가급적 실수로 오용 또는 잘못 된 구성이 가능성을 최소화 하기 위해 변경 내용을 수행 하는 한 사용자 및 변경 되는 내용을 다른 사용자를 사용 하 여 수행 해야 합니다. 활동이 완료 되 면 하는 경우는 계정은 Domain Admins 그룹에서 제거 해야 합니다. 이 수동 절차를 통해 수행할 수 있습니다 및 타사 identity/액세스 권한을된 관리 (PIM/PAM) 소프트웨어를 통해 프로세스 또는 둘의 조합을 설명 합니다. 제공 Active Directory의 권한 있는 그룹의 구성원 자격을 제어할 사용할 수 있는 계정 만들기에 대 한 지침 [부록 i: 관리 계정 만들기 Active Directory의 보호 된 계정 및 그룹에 대 한](../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory.md)합니다.  
   
-Domain Admins는 기본적으로 모든 구성원 서버 및 워크스테이션의 해당 도메인에 로컬 관리자 그룹의 구성원입니다. 이 기본 중첩 지원 가능성 및 재해 복구 옵션에 영향을 주므로 수정할 수 없습니다. Domain Admins 그룹 구성원 서버에서 로컬 관리자 그룹에서 제거 되었으면, 각 멤버 서버와 연결 된 Gpo의 제한 그룹 설정을 통해 도메인에 워크스테이션에서 관리자 그룹에 추가 되어야 합니다. @No__t-0Appendix F에 자세히 설명 되어 있는 다음과 같은 일반 컨트롤: Active Directory @ no__t에서 도메인 관리자 그룹을 보호 하는 것도 구현 해야 합니다.  
+Domain Admins는 기본적으로 모든 구성원 서버 및 워크스테이션의 해당 도메인에 로컬 관리자 그룹의 구성원입니다. 이 기본 중첩 지원 가능성 및 재해 복구 옵션에 영향을 주므로 수정할 수 없습니다. Domain Admins 그룹 구성원 서버에서 로컬 관리자 그룹에서 제거 되었으면, 각 멤버 서버와 연결 된 Gpo의 제한 그룹 설정을 통해 도메인에 워크스테이션에서 관리자 그룹에 추가 되어야 합니다. 다음과 같은 일반적인 컨트롤에서 자세히 설명 되어 있는 [부록 f: 보안 도메인 관리자 그룹에 Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory.md) 도 구현 해야 합니다.  
 
 포리스트의 각 도메인에서 Domain Admins 그룹:  
 
-1. 도메인에 대 한 기본 제공 관리자 계정을 제외 하 고 DA 그룹에서 모든 구성원을 제거 합니다 ([Appendix D에 설명 된 대로 보안 된 경우). Active Directory @ no__t에서 기본 제공 관리자 계정 보안 설정-0.  
+1. 에 설명 된 대로 보안이 설정 된 경우 DA 그룹은 도메인에 대 한 기본 제공 관리자 계정의 예외일 수 있음에서 모든 구성원을 제거 [부록 d: 보안 기본 제공 관리자 계정에 Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)합니다.  
 2. 구성원 서버 및 워크스테이션 각 도메인에 포함 된 Ou에 연결 된 Gpo, DA 그룹 다음 사용자 권한을 추가 해야 합니다.  
    - 네트워크에서 이 컴퓨터 액세스 거부  
    - 일괄 작업으로 로그온 거부  
@@ -211,13 +211,13 @@ Domain Admins는 기본적으로 모든 구성원 서버 및 워크스테이션�
 
 #### <a name="securing-administrators-groups-in-active-directory"></a>Active Directory에서 관리자 그룹의 보안 설정
 
-EA 및 DA 그룹의 경우 처럼 빌드 또는 재해 복구 시나리오에만 관리자 (BA) 그룹의 멤버 자격이 받아야 합니다. @No__t-0Appendix D에 설명 된 대로 보안 된 경우 도메인에 대 한 로컬 관리자 계정을 제외 하 고, Administrators 그룹에는 일상적인 사용자 계정이 없어야 합니다. Active Directory @ no__t에서 기본 제공 관리자 계정 보안 설정-0.  
+EA 및 DA 그룹의 경우 처럼 빌드 또는 재해 복구 시나리오에만 관리자 (BA) 그룹의 멤버 자격이 받아야 합니다. 있어야 일상적인 사용자 계정이 없는 도메인에 대 한 로컬 관리자 계정 제외 하 고 Administrators 그룹에 설명 된 대로 보안이 설정 되었을 경우 [부록 d: 보안 기본 제공 관리자 계정에 Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)합니다.  
 
 관리자가 액세스 해야 할 때 해당 도메인에 대 한 관리자 그룹에이 수준의 액세스 권한 필요로 하는 계정을 일시적으로 배치 되어야 합니다. 사용자가 매우 강력한 권한의 계정을 사용 하는, 있지만 활동 감사와, 가급적 실수로 오용 또는 잘못 된 구성이 가능성을 최소화 하기 위해 변경 내용을 수행 하는 사용자 및 변경 되는 내용을 다른 사용자를 사용 하 여 수행 합니다. 때 활동이 완료 되 면 계정은 관리자 그룹에서 즉시 제거 해야 합니다. 이 수동 절차를 통해 수행할 수 있습니다 및 타사 identity/액세스 권한을된 관리 (PIM/PAM) 소프트웨어를 통해 프로세스 또는 둘의 조합을 설명 합니다.  
 
-관리자는 기본적으로 대부분의 각 도메인의 AD DS 개체의 소유자입니다. 이 그룹의 멤버 소유권 또는 기능 개체의 소유권을 필요는 빌드 및 재해 복구 시나리오에 필요할 수 있습니다. 또한 DAs 및 EAs에는 다양 한 해당 권한 및 관리자 그룹의 해당 기본 멤버 자격을 통해 권한을 상속합니다. Active Directory의 권한 있는 그룹에 대 한 기본 그룹 중첩은 수정할 수 없으며, [Appendix G: Active Directory @ no__t에서 관리자 그룹 보안 설정 및 아래 일반적인 지침을 참조 하십시오.  
+관리자는 기본적으로 대부분의 각 도메인의 AD DS 개체의 소유자입니다. 이 그룹의 멤버 소유권 또는 기능 개체의 소유권을 필요는 빌드 및 재해 복구 시나리오에 필요할 수 있습니다. 또한 DAs 및 EAs에는 다양 한 해당 권한 및 관리자 그룹의 해당 기본 멤버 자격을 통해 권한을 상속합니다. Active Directory의 권한 있는 그룹을 수정 하지 않아야에 대 한 중첩 된 그룹으로 기본 지정 되며 각 도메인의 관리자 그룹에 설명 된 대로 보호 되어야 합니다 [부록 g: 보안 관리자가 Active Directory의에서 그룹](../../../ad-ds/plan/security-best-practices/Appendix-G--Securing-Administrators-Groups-in-Active-Directory.md), 및 일반 아래 지침에 나와 있습니다.  
 
-1. @No__t-0Appendix D에 설명 된 대로 보안 된 경우 도메인에 대 한 로컬 관리자 계정을 제외 하 고 Administrators 그룹에서 모든 구성원을 제거 합니다. Active Directory @ no__t에서 기본 제공 관리자 계정 보안 설정-0.  
+1. 에 설명 된 대로 보안이 설정 되었습니다 제공 관리자 그룹의 도메인에 대 한 로컬 관리자 계정의 예외일 수 있음에서 모든 구성원을 제거 [부록 d: 보안 기본 제공 관리자 계정에 Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)합니다.  
 2. 도메인의 관리자 그룹의 구성원은 구성원 서버 또는 워크스테이션에 로그온 할 필요는 없습니다. 워크스테이션 및 구성원 서버 각 도메인의 Ou에 연결 된 하나 이상의 Gpo, Administrators 그룹 다음 사용자 권한을 추가 해야 합니다.  
    - 네트워크에서 이 컴퓨터 액세스 거부  
    - 일괄 작업으로 로그온 거부  
@@ -257,9 +257,9 @@ EA 및 DA 그룹의 경우 처럼 빌드 또는 재해 복구 시나리오에만
 
 다른 경우에 "기본적으로" 기능을 제공 하는 타사 RBAC 소프트웨어 배포를 고려 하는 것이 좋습니다.이 수 있습니다. Active Directory, Windows 및 Windows가 아닌 디렉터리 및 운영 체제에 대 한 RBAC에 대 한 상용 되어 있어 (COTS) 솔루션은 여러 공급 업체에서 제공 됩니다. 네이티브 솔루션과 타사 제품을 선택할 때 다음과 같은 요소를 고려해 야 합니다.  
 
-1. 버짓 이미 소유 하 고 있는 소프트웨어 및 도구를 사용 하 여 RBAC 개발에 투자 하 여 솔루션 배포와 관련 된 소프트웨어 비용을 줄일 수 있습니다. 그러나 직원을 만들고 기본 RBAC 솔루션 배포 경험이 없다면 솔루션을 개발 하는 컨설팅 리소스를 연결 하는 데 할 수 있습니다. 신중 하 게 제한 된 예산 하는 경우에 특히 비용 "기본적으로" 솔루션을 배포 하는 사용자 지정 개발 솔루션에 대 한 예상된 비용을 평가 해야 합니다.  
-2. IT 환경의 컴퍼지션: 사용자 환경이 주로 Windows 시스템으로 구성 된 경우 또는 Windows가 아닌 시스템 및 계정 관리를 위해 이미 Active Directory를 활용 하는 경우 사용자 지정 기본 솔루션은 요구 사항에 적합 한 솔루션을 제공할 수 있습니다. Windows를 실행 하지 않는 및 Active Directory에서 관리 되지 않는 여러 시스템을 포함 하는 인프라, Active Directory 환경에서 별도로 비 Windows 시스템의 관리에 대 한 옵션을 고려해 야 할 수 있습니다.  
-3. 솔루션의 권한 모델: 제품이 Active Directory의 높은 권한 있는 그룹에 서비스 계정을 배치 하는 데 사용 되 고 과도 한 권한이 필요한 옵션을 RBAC 소프트웨어에 부여 하지 않은 경우에는 Active Directory 공격을 줄일 수 없습니다. surface 디렉터리에서 가장 권한 있는 그룹의 컴퍼지션을 변경 했습니다. 응용 프로그램 공급 업체 손상 및 악의적으로 사용 되는 계정의 확률을 최소화 하는 서비스 계정에 대 한 컨트롤을 제공할 수를 하지 않는 한 다른 옵션을 고려 하는 것이 좋습니다.  
+1. 예산: 소프트웨어 및 수를 이미 소유 하는 도구를 사용 하 여 rbac 개발에 투자를 하 여 솔루션을 배포 하는 데 필요한 소프트웨어 비용을 줄일 수 있습니다. 그러나 직원을 만들고 기본 RBAC 솔루션 배포 경험이 없다면 솔루션을 개발 하는 컨설팅 리소스를 연결 하는 데 할 수 있습니다. 신중 하 게 제한 된 예산 하는 경우에 특히 비용 "기본적으로" 솔루션을 배포 하는 사용자 지정 개발 솔루션에 대 한 예상된 비용을 평가 해야 합니다.  
+2. IT 환경의 구성: 경우 주로 Windows 시스템의 해당 환경이 구성 되어 또는 비 Windows 시스템 및 계정 관리에 대 한 Active Directory를 이미 활용 하 고, 경우 기본 사용자 지정 솔루션 요구 사항에 대 한 최적의 솔루션을 제공할 수 있습니다. Windows를 실행 하지 않는 및 Active Directory에서 관리 되지 않는 여러 시스템을 포함 하는 인프라, Active Directory 환경에서 별도로 비 Windows 시스템의 관리에 대 한 옵션을 고려해 야 할 수 있습니다.  
+3. 솔루션의 권한 모델: 제품이 Active Directory의 높은 권한 있는 그룹에 서비스 계정을 배치 하는 데 사용 되 고 과도 한 권한이 필요 하지 않은 옵션은 RBAC 소프트웨어에 부여 되지 않은 경우에는 축소 되지 않습니다. Active Directory 공격 노출 영역에서는 디렉터리에서 가장 권한 있는 그룹의 컴퍼지션을 변경 했습니다. 응용 프로그램 공급 업체 손상 및 악의적으로 사용 되는 계정의 확률을 최소화 하는 서비스 계정에 대 한 컨트롤을 제공할 수를 하지 않는 한 다른 옵션을 고려 하는 것이 좋습니다.  
 
 ### <a name="privileged-identity-management"></a>권위 있는 ID 관리
 
@@ -276,11 +276,11 @@ Id 관리 (PIM) 권한을 가진, 라고도를 권한 있는 계정으로 PAM (�
 
 권한 있는 계정 관리의 과제 중 하나는, 기본적으로 권한 있는 및 보호 된 계정을 관리할 수 있는 계정 및 그룹은 권한이 있는 계정을 보호 합니다. Active Directory 설치에 대 한 적절 한 RBAC 및 PIM 솔루션을 구현 하는 경우 솔루션 일시적 으로만 및 필요한 경우 그룹을 채우는 디렉터리에 가장 권한이 있는 그룹의 구성원을 효과적으로 내용을 수 있도록 하는 방법을 포함 될 수 있습니다.  
 
-하지만 네이티브 RBAC 및 PIM을 구현 하면 필요할 때 Active Directory에 권한이 없는 유일한 함수 채우기 및 권한이 해체에 그룹화 하는 계정을 만드는 고려해 야 합니다. [부록 I: Active Directory @ no__t에서 보호 된 계정 및 그룹에 대 한 관리 계정을 만들면이 용도로 계정을 만드는 데 사용할 수 있는 단계별 지침을 제공 합니다.  
+하지만 네이티브 RBAC 및 PIM을 구현 하면 필요할 때 Active Directory에 권한이 없는 유일한 함수 채우기 및 권한이 해체에 그룹화 하는 계정을 만드는 고려해 야 합니다. [부록 i: Active Directory의 보호 된 계정 및 그룹에 대해서는 만들기 관리 계정을](../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory.md) 이 목적을 위해 계정을 만드는 데 사용할 수 있는 단계별 지침을 제공 합니다.  
 
 ### <a name="implementing-robust-authentication-controls"></a>강력한 인증 제어 구현
 
-*Law 번호 6: 사용자가 암호를 추측 하려고 할 것입니다.* - [10 불변의 보안 관리 법칙](https://technet.microsoft.com/library/cc722488.aspx)  
+*법률 번호 6: 사용자가 암호를 추측 하려고 할 것입니다.* - [10 가지 불변의 보안 관리 법칙](https://technet.microsoft.com/library/cc722488.aspx)  
 
 해시를 전달 및 기타 자격 증명 도난 공격 Windows 운영 체제에 한정 되지 않는 하거나 새로운 않습니다. 1997 년의 첫 번째 해시를 전달 공격을 만들었습니다. 그러나 지금까지 이러한 공격 필수 사용자 지정 된 도구의 성공에 hit-or-miss 된와 필수 공격자가 상대적으로 높은 수준의 기술을 포함할 수 있습니다. 최근 몇 년 동안 수와 자격 증명 도난 공격의 성공에 매우 길어집니다 자격 증명을 고유 하 게 추출 하는 도구를 무료로 사용할 수 있는, 사용 하기 쉬운 도입이 되었습니다. 그러나 자격 증명 도난 공격은 유일한 메커니즘은 자격 증명이 대상으로 하 고 손상 있지는 않습니다.  
 
@@ -304,7 +304,7 @@ Multi-factor authentication을 구현 해도 해시 통과 공격 으로부터 �
 
 모든 관리 계정에 대 한 Active Directory를 통해는 **대화형 로그온에 스마트 카드 필요** 특성 및 변경 (최소한)에 대 한 감사 특성에 **계정** 관리 사용자 개체 (예: cn, 이름, sAMAccountName, userPrincipalName, 및 userAccountControl) 계정에 대 한 탭 합니다.  
 
-계정에 대 **한 대화형 로그온에 스마트 카드 필요** 를 설정 하는 것은 계정 암호를 120 문자 임의 값으로 다시 설정 하 고 대화형 로그온을 위해 스마트 카드를 요구 하지만, 권한이 있는 사용자가 특성을 덮어쓸 수 있습니다. 이렇게 하면 계정에 대 한 암호를 변경할 수 있으며,이 계정을 사용 하 여 사용자 이름 및 암호만 사용 하 여 비 대화형 로그온을 설정할 수 있습니다.  
+계정에 대 **한 대화형 로그온에 스마트 카드 필요** 를 설정 하는 경우 계정 암호를 120 문자 임의 값으로 다시 설정 하 고 대화형 로그온을 위해 스마트 카드를 요구 하지만, 계정에 대 한 암호를 변경할 수 있는 권한이 있는 사용자가 특성을 덮어쓸 수 있으며,이 계정은 사용자 이름과 암호만 사용 하 여 비 대화형 로그온을 설정 하는 데 사용할 수 있습니다.  
 
 다른 경우에서의 구성에 따라 계정을 Active Directory 인증서 서비스 (AD CS) 또는 제 3 자 PKI, 이름 UPN (사용자 계정)의 Active Directory 및 인증서 설정에 대 한 특성 관리 또는 VIP 계정을 여기에서 설명한 대로 특정 종류의 공격 대상이 될 수 있습니다.  
 

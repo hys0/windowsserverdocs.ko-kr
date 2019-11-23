@@ -33,19 +33,19 @@ ADCSAdministration Windows PowerShell 모듈은 Window Server 2012에서 도입 
 -   Restore-CARoleService  
   
 ## <a name="backup-caroleservice"></a>Backup-CARoleService  
-**Table SEQ 테이블 \\ @ no__t-2 아랍어 17: Windows PowerShell Cmdlet 백업 및 복원 @ no__t-0  
+**표 SEQ 테이블 \\\* 아랍어 17: Windows PowerShell Cmdlet 백업 및 복원**  
   
-**ADCSAdministration Cmdlet: Backup-CARoleService**  
+**ADCSAdministration Cmdlet: 백업-CARoleService**  
   
 |인수- **굵게** 인수가 필요|설명|  
 |------------------------------------------------|---------------|  
-|**-Path**|-문자열-백업을 저장할 위치<br />-이 유일한 매개 변수 이름을 지정 하지 않는<br />-위치 매개 변수<br /><br />**예 들어**<br /><br />백업-CARoleService.-경로 c:\adcsbackup1<br /><br />백업 CARoleService c:\adcsbackup2|  
-|-KeyOnly|--데이터베이스 없이 CA 인증서를 백업 하는 중<br /><br />**예 들어**<br /><br />백업 CARoleService c:\adcsbackup3 KeyOnly|  
-|-암호|- CA 인증서와 프라이빗 키를 보호하기 위한 암호를 지정합니다.<br />-보안 문자열 이어야 합니다.<br />-잘못 됨-DatabaseOnly 매개 변수<br /><br />예:<br /><br />백업 CARoleService c:\adcsbackup4-암호 (Read-host-프롬프트 "암호:"-AsSecureString)<br /><br />백업 CARoleService c:\adcsbackup5-암호 (Convertto-securestring "Pa55w0rd!" -AsPlainText-Force)|  
+|**-Path**|-문자열-백업을 저장할 위치<br />-이 유일한 매개 변수 이름을 지정 하지 않는<br />-위치 매개 변수<br /><br />**예제:**<br /><br />백업-CARoleService.-경로 c:\adcsbackup1<br /><br />백업 CARoleService c:\adcsbackup2|  
+|-KeyOnly|--데이터베이스 없이 CA 인증서를 백업 하는 중<br /><br />**예제:**<br /><br />백업 CARoleService c:\adcsbackup3 KeyOnly|  
+|-암호|- CA 인증서와 프라이빗 키를 보호하기 위한 암호를 지정합니다.<br />-보안 문자열 이어야 합니다.<br />-잘못 됨-DatabaseOnly 매개 변수<br /><br />예제:<br /><br />백업 CARoleService c:\adcsbackup4-암호 (Read-host-프롬프트 "암호:"-AsSecureString)<br /><br />백업 CARoleService c:\adcsbackup5-암호 (Convertto-securestring "Pa55w0rd!" -AsPlainText-Force)|  
 |-DatabaseOnly|-CA 인증서가 없는 데이터베이스를 백업 합니다.<br /><br />백업 CARoleService c:\adcsbackup6 DatabaseOnly|  
-|-Force|1.  지정 된 위치에 이미 백업을 덮어쓸 수 있습니다-Path 매개 변수에서<br /><br />백업 CARoleService c:\adcsbackup1-Force|  
+|-Force|1.-Path 매개 변수에 지정 된 위치에 사전 존재 하는 백업을 덮어쓸 수 있습니다.<br /><br />백업 CARoleService c:\adcsbackup1-Force|  
 |-증분|-증분 백업을 수행 합니다.<br /><br />백업 CARoleService c:\adcsbackup7-증분|  
-|-KeepLog|1.  로그 파일을 보관 하는 명령에 지시 합니다. 증분 시나리오에서를 제외 하 고 기본적으로 로그 파일 잘림 스위치가 지정 되지 않은 경우<br /><br />백업 CARoleService c:\adcsbackup7 KeepLog|  
+|-KeepLog|1. 로그 파일을 보관 하도록 명령을 지시 합니다. 증분 시나리오에서를 제외 하 고 기본적으로 로그 파일 잘림 스위치가 지정 되지 않은 경우<br /><br />백업 CARoleService c:\adcsbackup7 KeepLog|  
   
 ### <a name="-password-secure-string"></a>-Password <Secure String>  
 경우-암호 매개 변수는 사용, 제공 된 암호는 보안 문자열 이어야 합니다.  사용 하 여는 **Read-host** 보안 암호 항목에 대 한 대화형 프롬프트를 시작 하거나 사용 하 여 cmdlet는 **Convertto-securestring** cmdlet은 암호 인라인 지정을 사용 합니다.  
@@ -65,13 +65,13 @@ Backup-CARoleService c:\adcsbackup5 -Password (ConvertTo-SecureString "Pa55w0rd!
 ```  
   
 ## <a name="restore-caroleservice"></a>Restore-CARoleService  
-**ADCSAdministration Cmdlet: Restore-CARoleService**  
+**ADCSAdministration Cmdlet: 복원-CARoleService**  
   
 |인수- **굵게** 인수가 필요|설명|  
 |------------------------------------------------|---------------|  
-|**-Path**|-문자열-에서 백업을 복원 하는 위치<br />-이 유일한 매개 변수 이름을 지정 하지 않는<br />-위치 매개 변수<br /><br />**예 들어**<br /><br />복원-CARoleService.-경로 c:\adcsbackup1-Force<br /><br />복원 CARoleService c:\adcsbackup2-Force|  
-|-KeyOnly|--데이터베이스 없이 CA 인증서를 복원 하는 중<br />-사람은-KeyOnly 옵션으로 백업이 수행 된 경우<br /><br />**예 들어**<br /><br />복원 CARoleService c:\adcsbackup3 KeyOnly-Force|  
-|-암호|- CA 인증서와 프라이빗 키의 암호를 지정합니다.<br />-보안 문자열 이어야 합니다.<br /><br />**예 들어**<br /><br />복원 CARoleService c:\adcsbackup4-암호 (읽기-호스트-프롬프트 "암호:"-AsSecureString)-Force<br /><br />복원 CARoleService c:\adcsbackup5-암호 (Convertto-securestring "Pa55w0rd!" -AsPlainText-Force)-Force|  
+|**-Path**|-문자열-에서 백업을 복원 하는 위치<br />-이 유일한 매개 변수 이름을 지정 하지 않는<br />-위치 매개 변수<br /><br />**예제:**<br /><br />복원-CARoleService.-경로 c:\adcsbackup1-Force<br /><br />복원 CARoleService c:\adcsbackup2-Force|  
+|-KeyOnly|--데이터베이스 없이 CA 인증서를 복원 하는 중<br />-사람은-KeyOnly 옵션으로 백업이 수행 된 경우<br /><br />**예제:**<br /><br />복원 CARoleService c:\adcsbackup3 KeyOnly-Force|  
+|-암호|- CA 인증서와 프라이빗 키의 암호를 지정합니다.<br />-보안 문자열 이어야 합니다.<br /><br />**예제:**<br /><br />복원 CARoleService c:\adcsbackup4-암호 (읽기-호스트-프롬프트 "암호:"-AsSecureString)-Force<br /><br />복원 CARoleService c:\adcsbackup5-암호 (Convertto-securestring "Pa55w0rd!" -AsPlainText-Force)-Force|  
 |-DatabaseOnly|-CA 인증서가 없는 데이터베이스를 복원 합니다.<br /><br />복원 CARoleService c:\adcsbackup6 DatabaseOnly|  
 |-Force|-기존 키를 덮어쓸 수 있습니다.<br />-선택적 매개 변수 이지만 전체를 복원할 때 필요한 것<br /><br />복원 CARoleService c:\adcsbackup1-Force|  
   
@@ -80,24 +80,24 @@ Convertto-securestring 함수가 백업 CARoleService를 사용 하는 동안 �
   
 ![CA 백업 및 복원](media/CA-Backup-and-Restore-Windows-PowerShell-cmdlets/GTR_ADDS_BackupCARole.gif)  
   
-**Table SEQ 테이블 \\ @ no__t-2 아랍어 18: 일반적인 오류 @ no__t-0  
+**표 SEQ 테이블 \\\* 아랍어 18: 일반적인 오류**  
   
 |작업|Error|설명|  
 |----------|---------|-----------|  
-|**복원-CARoleService C:\ADCSBackup**|Restore-CARoleService : 다른 프로세스에서 사용 중 이므로 프로세스에서 파일에 액세스할 수 없습니다. (예외가 발생한 HRESULT:<br /><br />0x80070020)|복원 CARoleService cmdlet을 실행 하기 전에 Active Directory 인증서 서비스 서비스 중지|  
-|**복원-CARoleService C:\ADCSBackup**|Restore-CARoleService : 디렉터리가 비어 있지 않습니다. (예외가 발생한 HRESULT: 0x80070091)|사용 하 여 기존 키를 덮어쓰려면-Force 매개 변수|  
-|**Backup-CARoleService C:\ADCSBackup -Password (Read-Host -Prompt "Password:" -AsSecureString) -DatabaseOnly**|백업-CARoleService: 지정 된 명명 된 매개 변수를 사용 하 여 매개 변수 집합을 확인할 수 없습니다.|-암호 매개 변수는 프라이빗 키를 암호로 보호하는 데만 사용되므로 백업하지 않을 때는 유효하지 않습니다.|  
-|**복원-CARoleService C:\ADCSBack15-Password (읽기-호스트-프롬프트 "Password:"-AsSecureString)-DatabaseOnly**|Restore-CARoleService : 지정 된 명명 된 매개 변수를 사용 하 여 매개 변수 집합을 확인할 수 없습니다.|-암호 매개 변수는 프라이빗 키를 암호로 보호하는 데만 사용되므로 복원하지 않을 경우 유효하지 않습니다.|  
-|**Restore-CARoleService C:\ADCSBack14 -Password (Read-Host -Prompt "Password:" -AsSecureString)**|Restore-CARoleService : 시스템에서 지정한 파일을 찾을 수 없습니다. (예외가 발생한 HRESULT: 0x80070002)|지정 된 경로 유효한 데이터베이스 백업을 포함 되지 않습니다.  아마도 경로가 잘못 되었거나-KeysOnly 옵션으로 백업한?|  
+|**복원-CARoleService C:\ADCSBackup**|복원-CARoleService: 프로세스가 액세스할 수 없습니다 파일이 다른 프로세스에서 사용 되 고. (예외가 발생한 HRESULT:<br /><br />0x80070020)|복원 CARoleService cmdlet을 실행 하기 전에 Active Directory 인증서 서비스 서비스 중지|  
+|**복원-CARoleService C:\ADCSBackup**|복원-CARoleService: 디렉터리가 비어 있지 않습니다. (HRESULT의 예외: 0x80070091)|사용 하 여 기존 키를 덮어쓰려면-Force 매개 변수|  
+|**Backup-CARoleService C:\ADCSBackup -Password (Read-Host -Prompt "Password:" -AsSecureString) -DatabaseOnly**|백업-CARoleService: 매개 변수 집합 확인할 수 없으면 지정 된 명명 된 매개 변수입니다.|-암호 매개 변수는 프라이빗 키를 암호로 보호하는 데만 사용되므로 백업하지 않을 때는 유효하지 않습니다.|  
+|**복원-CARoleService C:\ADCSBack15-Password (읽기-호스트-프롬프트 "Password:"-AsSecureString)-DatabaseOnly**|복원-CARoleService: 매개 변수 집합 확인할 수 없으면 지정 된 명명 된 매개 변수입니다.|-암호 매개 변수는 프라이빗 키를 암호로 보호하는 데만 사용되므로 복원하지 않을 경우 유효하지 않습니다.|  
+|**Restore-CARoleService C:\ADCSBack14 -Password (Read-Host -Prompt "Password:" -AsSecureString)**|복원-CARoleService: 시스템이 지정 된 파일을 찾을 수 없습니다. (HRESULT의 예외: 0x80070002)|지정 된 경로 유효한 데이터베이스 백업을 포함 되지 않습니다.  아마도 경로가 잘못 되었거나-KeysOnly 옵션으로 백업한?|  
   
 ## <a name="additional-resources"></a>추가 리소스  
 [Active Directory 인증서 서비스 마이그레이션 가이드](https://technet.microsoft.com/library/ee126170(v=ws.10).aspx)  
   
-[CA 데이터베이스 및 개인 키 백업](https://technet.microsoft.com/library/ee126140(v=ws.10).aspx#BKMK_BackUpDB)  
+[CA 데이터베이스 및 프라이빗 키 백업](https://technet.microsoft.com/library/ee126140(v=ws.10).aspx#BKMK_BackUpDB)  
   
 [대상 서버에서 CA 데이터베이스 및 구성 복원](https://technet.microsoft.com/library/ee126140(v=ws.10).aspx#BKMK_RestoreCA)  
   
-## <a name="try-this-backup-the-ca-in-your-lab-using-windows-powershell"></a>다음을 시도 합니다. Windows PowerShell을 사용 하 여 랩에서 CA 백업  
+## <a name="try-this-backup-the-ca-in-your-lab-using-windows-powershell"></a>Windows PowerShell을 사용 하 여 랩에서 CA 백업 다음과 같이 해보십시오.  
   
 1.  이 단원의 명령을 사용하여 암호로 보호된 CA 데이터베이스 및 프라이빗 키를 백업합니다.  
   

@@ -22,7 +22,7 @@ ms.locfileid: "71379551"
 ---
 # <a name="change"></a>change
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 로그온, COM 포트 매핑 및 설치 모드에 대 한 원격 데스크톱 세션 호스트 (rd 세션 호스트) 서버 설정을 변경 합니다.
 > [!NOTE]
@@ -43,4 +43,4 @@ ms.locfileid: "71379551"
 > 
 > #### <a name="additional-references"></a>추가 참조
 > [명령줄 구문 키](command-line-syntax-key.md)
-> [원격 데스크톱 서비스&#40; 터미널 서비스 및&#41; 명령 참조](remote-desktop-services-terminal-services-command-reference.md)
+> [원격 데스크톱 서비스 & #40; 터미널 서비스 및 #41; 명령 참조](remote-desktop-services-terminal-services-command-reference.md)

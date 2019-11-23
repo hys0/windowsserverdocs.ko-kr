@@ -22,7 +22,7 @@ ms.locfileid: "71382454"
 ---
 # <a name="auditpol-backup"></a>auditpol 백업
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 시스템을 백업 정책 설정, 사용자 단위 감사 정책 설정을 모든 사용자 및 쉼표로 구분 된 값 (CSV) 텍스트 파일에 있는 모든 감사 옵션에 대 한 감사합니다.
 

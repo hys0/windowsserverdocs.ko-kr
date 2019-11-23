@@ -27,7 +27,7 @@ ms.locfileid: "71369884"
 그림 1에서는 Windows Server 2016를 사용 하는 다중 사이트 스트레치 장애 조치 (Failover) 클러스터 쿼럼 구성을 보여 줍니다. 이 예제 구성 (그림 1)에는 2 개의 데이터 센터 (사이트 라고 함)에 2 개의 노드가 있습니다. 클러스터가 2 개 이상의 데이터 센터에 걸쳐 있을 수 있습니다. 또한 각 데이터 센터에는 노드가 2 개 이상 있을 수 있습니다. 이 설정의 일반적인 클러스터 쿼럼 구성 (자동 장애 조치 (failover) SLA)은 각 노드에 투표를 제공 합니다. 데이터 센터 중 하나에서 정전을 경험 하는 경우에도 클러스터를 계속 실행할 수 있도록 쿼럼 감시에 대 한 추가 응답이 제공 됩니다. 수학은 단순 합니다. 5 개의 총 투표를 수행 하 고 클러스터에서 실행을 유지 하는 데 3 개의 투표를 해야 합니다.  
 
 2 개의 다른 사이트(media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_1.png "파일 공유 감시") ![에 2 개의 노드가 있는 세 번째 별도 사이트의 파일 공유 감시]  
-**그림 1: 쿼럼 감시로 파일 공유 감시 사용 @ no__t-0  
+**그림 1: 파일 공유 감시를 쿼럼 감시로 사용**  
 
 한 데이터 센터에서 정전이 발생 한 경우 다른 데이터 센터의 클러스터가 계속 실행 되도록 하려면 두 데이터 센터 이외의 위치에 쿼럼 감시를 호스트 하는 것이 좋습니다. 이는 일반적으로 쿼럼 감시 (파일 공유 감시)로 사용 되는 파일 공유를 지 원하는 파일 서버를 호스팅하는 세 번째 별도의 데이터 센터 (사이트)가 필요 함을 의미 합니다.  
 
@@ -42,8 +42,8 @@ ms.locfileid: "71369884"
 4. 저장소 계정에 대 한 매우 낮은 $cost (blob 파일당 매우 작은 데이터는 클러스터 노드의 상태가 변경 될 때 한 번만 업데이트 됨).  
 5. 기본 제공 클라우드 감시 리소스 유형입니다.  
 
-![Abhhhha 클라우드 감시를 쿼럼 미러링 모니터로 사용 하는 다중 사이트 확장 클러스터를 보여 주는 다이어그램 @ no__t-1  
-**그림 2: 쿼럼 미러링 모니터로 클라우드 감시를 사용 하는 다중 사이트 확장 클러스터 @ no__t-0  
+쿼럼 감시로 클라우드 감시를 사용 하는 다중 사이트 확장 클러스터를 보여 주는 ![다이어그램](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_2.png)  
+**그림 2: 쿼럼 감시로 클라우드 감시를 사용 하는 다중 사이트 확장 클러스터**  
 
 그림 2에 표시 된 것 처럼 별도의 세 번째 사이트가 필요 하지 않습니다. 다른 쿼럼 감시와 마찬가지로 클라우드 감시는 응답을 가져오고 쿼럼 계산에 참여할 수 있습니다.  
 
@@ -96,11 +96,11 @@ Microsoft Azure Storage 계정을 만들면 자동으로 생성 된 두 개의 �
 
 Azure Portal에서 저장소 계정으로 이동 하 고 **모든 설정** 을 클릭 한 다음 **액세스 키** 를 클릭 하 여 계정 액세스 키를 보고, 복사 하 고, 다시 생성 합니다. 액세스 키 블레이드에는 응용 프로그램에서 사용 하기 위해 복사할 수 있는 기본 키 및 보조 키를 사용 하 여 미리 구성 된 연결 문자열도 포함 되어 있습니다 (그림 4 참조).
 
-Microsoft Azure @ no__t의 액세스 키 관리 대화 상자에 대 한 ![Snapshot  
-**그림 4: 저장소 액세스 키 @ no__t-0
+Microsoft Azure의 액세스 키 관리 대화 ![스냅숏](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_4.png)  
+**그림 4: 저장소 액세스 키**
 
 ### <a name="view-and-copy-endpoint-url-links"></a>끝점 URL 링크 보기 및 복사  
-저장소 계정을 만들 때 다음 Url은 `https://<Storage Account Name>.<Storage Type>.<Endpoint>` 형식을 사용 하 여 생성 됩니다.  
+저장소 계정을 만들 때 다음 Url은 형식을 사용 하 여 생성 됩니다. `https://<Storage Account Name>.<Storage Type>.<Endpoint>`  
 
 클라우드 감시는 항상 **Blob** 을 저장소 유형으로 사용 합니다. Azure는 core.windows.net을 끝점으로 사용 **합니다.** 클라우드 감시를 구성 하는 경우 시나리오에 따라 다른 끝점을 사용 하 여 구성할 수 있습니다. 예를 들어 중국의 Microsoft Azure 데이터 센터에는 다른 끝점이 있습니다.  
 
@@ -110,8 +110,8 @@ Microsoft Azure @ no__t의 액세스 키 관리 대화 상자에 대 한 ![Snaps
 #### <a name="to-view-and-copy-endpoint-url-links"></a>끝점 URL 링크를 보고 복사 하려면
 Azure Portal에서 저장소 계정으로 이동 하 고 **모든 설정** 을 클릭 한 다음 **속성** 을 클릭 하 여 끝점 url을 보고 복사 합니다 (그림 5 참조).  
 
-![ 클라우드 감시 끝점 링크의 스냅숏 @ no__t-1  
-**그림 5: 클라우드 감시 끝점 URL 링크 @ no__t-0
+클라우드 감시 끝점 링크의 ![스냅숏](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_5.png)  
+**그림 5: 클라우드 감시 끝점 URL 링크**
 
 Azure Storage 계정을 만들고 관리 하는 방법에 대 한 자세한 내용은 [Azure Storage 계정 정보](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/) 를 참조 하세요.
 
@@ -120,18 +120,18 @@ Azure Storage 계정을 만들고 관리 하는 방법에 대 한 자세한 내�
 
 ### <a name="to-configure-cloud-witness-as-a-quorum-witness"></a>쿼럼 감시로 클라우드 감시를 구성 하려면
 1. 장애 조치(Failover) 클러스터 관리자를 시작 합니다.
-2. 클러스터 > **추가 작업**을 마우스 오른쪽 단추로 클릭  -> **클러스터 쿼럼 설정 구성** (그림 6 참조). 그러면 클러스터 쿼럼 구성 마법사가 시작 됩니다.  
-    장애 조치(Failover) 클러스터 관리자 UI @ no__t-1 @no__t의 Configue 클러스터 쿼럼 설정에 대 한 메뉴 경로의 **-2 그림 6. 클러스터 쿼럼 설정 @ no__t-0
+2. 클러스터 > **추가 작업** 을 마우스 오른쪽 단추로 클릭 하 -> **클러스터 쿼럼 설정 구성** (그림 6 참조). 그러면 클러스터 쿼럼 구성 마법사가 시작 됩니다.  
+    장애 조치(Failover) 클러스터 관리자 UI](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_7.png) 그림 6의 Configue 클러스터 쿼럼 설정에 대 한 메뉴 경로의 스냅숏 ![**합니다. 클러스터 쿼럼 설정**
 
 3. **쿼럼 구성 선택** 페이지에서 **쿼럼 감시 선택** 을 선택 합니다 (그림 7 참조).  
 
-    클러스터 쿼럼 마법사의 ' quotrum 미러링 모니터 서버 선택 ' 라디오 단추에 대 한 ![Snapshot @ no__t-1  
-    **Figure 7. 쿼럼 구성 선택 @ no__t-0
+    클러스터 쿼럼 마법사의 ' quotrum 미러링 모니터 서버 선택 ' 라디오 단추 ![스냅숏](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_8.png)  
+    **그림 7. 쿼럼 구성 선택**
 
 4. **쿼럼 감시 선택** 페이지에서 **클라우드 감시 구성** 을 선택 합니다 (그림 8 참조).  
 
-    클라우드 감시를 선택 하는 해당 라디오 단추의 ![ 스냅숏 @ no__t-1  
-    **Figure 8. 쿼럼 감시를 선택 합니다. @ no__t-0  
+    해당 라디오 단추의 스냅숏을 ![하 여 클라우드 감시를 선택](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_9.png)  
+    **그림 8. 쿼럼 감시를 선택 합니다.**  
 
 5. **클라우드 감시 구성** 페이지에서 다음 정보를 입력 합니다.  
    1. (필수 매개 변수) 계정 이름 Azure Storage 합니다.  
@@ -140,18 +140,18 @@ Azure Storage 계정을 만들고 관리 하는 방법에 대 한 자세한 내�
        2. 기본 액세스 키를 회전 하는 경우 보조 액세스 키를 사용 합니다 (그림 5 참조).  
    3. (선택적 매개 변수) 다른 Azure 서비스 끝점 (예: 중국의 Microsoft Azure 서비스)을 사용 하려는 경우 끝점 서버 이름을 업데이트 합니다.  
 
-      클러스터 쿼럼 마법사 @ no__t-1의 클라우드 감시 구성 창에 대 한 ![Snapshot  
-      **Figure 9: 클라우드 감시 구성 @ no__t-0
+      클러스터 쿼럼 마법사에서 클라우드 감시 구성 창의 스냅숏을 ![](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_10.png)  
+      **그림 9: 클라우드 감시 구성**
 
 6. 클라우드 미러링 모니터 서버가 성공적으로 구성 되 면 장애 조치(Failover) 클러스터 관리자 스냅인에서 새로 만든 감시 리소스를 볼 수 있습니다 (그림 10 참조).
 
-    클라우드 감시 @ no__t-1의 성공적인 구성 @no__t  
-    ** 그림 10: 클라우드 감시 @ no__t의 성공적인 구성
+    클라우드 감시](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_11.png) 성공적으로 구성 ![  
+    **그림 10: 클라우드 미러링 모니터 서버 구성 성공**
 
 ### <a name="configuring-cloud-witness-using-powershell"></a>PowerShell을 사용 하 여 클라우드 감시 구성  
 기존 집합-ClusterQuorum PowerShell 명령에는 클라우드 감시에 해당 하는 새로운 추가 매개 변수가 있습니다.  
 
-PowerShell 명령 다음에 [`Set-ClusterQuorum`](https://technet.microsoft.com/library/ee461013.aspx) 을 사용 하 여 클라우드 감시를 구성할 수 있습니다.  
+다음 PowerShell 명령을 [`Set-ClusterQuorum`](https://technet.microsoft.com/library/ee461013.aspx) 사용 하 여 클라우드 감시를 구성할 수 있습니다.  
 
 ```PowerShell
 Set-ClusterQuorum -CloudWitness -AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey>
@@ -172,5 +172,5 @@ Set-ClusterQuorum -CloudWitness -AccountName <StorageAccountName> -AccessKey <St
 ### <a name="proxy-considerations-with-cloud-witness"></a>클라우드 감시에 대 한 프록시 고려 사항  
 클라우드 감시는 HTTPS (기본 포트 443)를 사용 하 여 Azure blob service와의 통신을 설정 합니다. 네트워크 프록시를 통해 HTTPS 포트에 액세스할 수 있는지 확인 하십시오.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 - [Windows Server 장애 조치 (Failover) 클러스터링의 새로운 기능](whats-new-in-failover-clustering.md)

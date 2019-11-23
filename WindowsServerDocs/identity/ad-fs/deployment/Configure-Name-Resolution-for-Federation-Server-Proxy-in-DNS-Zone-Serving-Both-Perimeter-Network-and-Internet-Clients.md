@@ -19,7 +19,7 @@ ms.locfileid: "71359828"
 # <a name="configure-name-resolution-for-a-federation-server-proxy-in-a-dns-zone-that-serves-both-the-perimeter-network-and-internet-clients"></a>경계 네트워크 및 인터넷 클라이언트 모두에서 작동하는 DNS 영역에 페더레이션 서버 프록시에 대한 이름 확인 구성
 
 
-Active Directory Federation Services에서 페더레이션 서버 프록시에 대 한 이름 확인이 성공적으로 작동할 수 있도록 \(AD FS @ no__t 시나리오에서 하나 이상의 도메인 이름 시스템 \(DNS @ no__t-3 영역에서 경계 네트워크와 인터넷을 모두 제공 합니다. 클라이언트에서는 다음 작업을 완료 해야 합니다.  
+Active Directory Federation Services \(AD FS 페더레이션 서버 프록시에 대 한 이름 확인이 성공적으로 수행 될 수 있도록 하나 이상의 도메인 이름 시스템 \(DNS\) 영역이 경계 네트워크와 인터넷 클라이언트를 모두 제공 하는\) 시나리오는 다음 작업을 완료 해야 합니다.  
   
 -   AD FS에 대 한 모든 인터넷 클라이언트 요청에 호스트 이름을 페더레이션 서버 프록시를 해결 하려면 사용자가 제어 하는 인터넷 영역에서 DNS는 구성 합니다. 호스트를 추가 하면이를 위해 \(A\) 페더레이션 서버 프록시에 대 한 인터넷 DNS 영역에 리소스 레코드입니다.  
   

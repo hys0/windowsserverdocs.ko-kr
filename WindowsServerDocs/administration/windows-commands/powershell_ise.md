@@ -32,7 +32,7 @@ Windows PowerShell ISE (통합 스크립팅 환경)는 그래픽 지원 환경�
 
 ## <a name="using-powershell_iseexe"></a>PowerShell_ISE 사용
 
-**PowerShell_ISE** 를 사용 하 여 다음과 같이 Windows PowerShell 세션을 시작 하 고 종료할 수 있습니다.
+다음과 같이 **PowerShell_ISE** 를 사용 하 여 Windows PowerShell 세션을 시작 하 고 종료할 수 있습니다.
 - Windows PowerShell ISE 세션을 시작 하려면 Windows PowerShell의 명령 프롬프트 창에서 또는 시작 메뉴에서 다음을 입력 합니다.  
   ```
   PowerShell_Ise
@@ -65,5 +65,7 @@ Windows PowerShell은 Windows Server 운영 체제의 Server Core 설치 옵션�
 
 ## <a name="additional-references"></a>추가 참조
 
-[about_PowerShell_Ise](https://go.microsoft.com/fwlink/?LinkId=256512)
-[about_PowerShell](https://go.microsoft.com/fwlink/?LinkID=113439)@no__t[windows powershell을 사용 하 여](https://technet.microsoft.com/scriptcenter/dd742419) windows[powershell](https://go.microsoft.com/fwlink/?LinkID=107116)@no__t 5 스크립팅 참고 항목
+windows powershell을 사용 하는 [about_PowerShell_Ise](https://go.microsoft.com/fwlink/?LinkId=256512)
+[about_PowerShell .exe](https://go.microsoft.com/fwlink/?LinkID=113439) 를 [
+
+windows](https://go.microsoft.com/fwlink/?LinkID=107116) [powershell을 사용 하 여 스크립팅을](https://technet.microsoft.com/scriptcenter/dd742419) 참조 하세요.

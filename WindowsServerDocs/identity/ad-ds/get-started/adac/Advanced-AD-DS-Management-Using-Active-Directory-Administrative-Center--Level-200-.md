@@ -98,7 +98,7 @@ Active Directory 휴지통은 포리스트에서 삭제된 모든 개체를 유�
   
 **삭제된 개체** 컨테이너에는 해당 도메인 파티션의 복구 가능한 모든 개체가 표시됩니다. **msDS-deletedObjectLifetime** 보다 오래된 삭제된 개체를 재활용된 개체라고 합니다. Active Directory 관리 센터에는 재활용된 개체가 표시되지 않으므로 Active Directory 관리 센터를 사용하여 이러한 개체를 복원할 수 없습니다.  
   
-휴지통의 아키텍처 및 처리 @no__t 규칙에 대 한 자세한 설명은 AD 휴지통: 이해, 구현, 모범 사례 및 문제 해결 @ no__t-0.  
+휴지통의 아키텍처 및 처리 규칙에 대한 자세한 설명은 [AD 휴지통: 이해, 구현, 모범 사례 및 문제 해결](http://blogs.technet.com/b/askds/archive/2009/08/27/the-ad-recycle-bin-understanding-implementing-best-practices-and-troubleshooting.aspx)을 참조하세요.  
   
 Active Directory 관리 센터는 컨테이너에서 반환되는 기본 개체 수를 인위적으로 20,000개로 제한합니다. **관리** 메뉴를 클릭한 다음 **관리 목록 옵션**을 클릭하여 이 제한을 100,000개까지 늘릴 수 있습니다.  
   
@@ -202,7 +202,7 @@ Active Directory 관리 센터에서는 삭제된 개체의 중첩된 트리를 
   
 **Sales** OU에 자식 OU가 포함된 경우 먼저 이 자식 OU를 복원한 다음 해당 자식을 차례로 복원할 수 있습니다.  
   
-삭제 된 부모 컨테이너를 지정 하 여 중첩 된 모든 삭제 된 개체를 복원 하려면 [Appendix B: 여러 개의 삭제 된 Active Directory 개체 (샘플 스크립트)를 복원 ](https://technet.microsoft.com/library/dd379504(WS.10).aspx)입니다.  
+삭제된 부모 컨테이너를 지정하여 중첩된 모든 삭제된 개체를 복원하려면 [부록 B: 여러 개의 삭제된 Active Directory 개체 복원(예제 스크립트)](https://technet.microsoft.com/library/dd379504(WS.10).aspx)을 참조하세요.  
   
 삭제된 개체를 복원하는 Active Directory Windows PowerShell cmdlet은 다음과 같습니다.  
 
@@ -447,7 +447,7 @@ Active Directory 관리 센터는 필요한 코드 사용 및 모듈을 최소�
 
 사용 가능한 Active Directory 웹 서비스 인스턴스가 없는 경우에 표시되는 오류는 다음과 같습니다.  
   
-|오류|연산|
+|Error|작업|
 | --- | --- |  
 |"도메인에 연결할 수 없습니다. 연결되면 새로 고치거나 다시 시도해 보세요."|Active Directory 관리 센터 응용 프로그램을 시작할 때 표시됩니다.|
 |"에서 사용 가능한 서버를 찾을 수 없습니다는 *<NetBIOS domain name>* 는 웹 서비스 ADWS (Active Directory)를 실행 중인 도메인"|Active Directory 관리 센터 응용 프로그램에서 도메인 노드를 선택하려고 할 때 표시됩니다.|
@@ -470,7 +470,7 @@ Active Directory 관리 센터는 필요한 코드 사용 및 모듈을 최소�
    Netstat -anob > ports.txt  
    ```
 
-   ports.txt 파일을 검사하여 ADWS 서비스가 포트 9389에서 수신 대기 중인지 확인합니다. 예:  
+   ports.txt 파일을 검사하여 ADWS 서비스가 포트 9389에서 수신 대기 중인지 확인합니다. 예제:  
 
    ```
    TCP    0.0.0.0:9389    0.0.0.0:0    LISTENING    1828  
@@ -484,6 +484,6 @@ Active Directory 관리 센터는 필요한 코드 사용 및 모듈을 최소�
   
 4. Active Directory 관리 센터를 실행하는 컴퓨터와 NLTEST에서 반환된 도메인 컨트롤러에 NetMon 또는 다른 네트워크 캡처 유틸리티를 설치합니다. 두 컴퓨터 모두에서 동시 네트워크 캡처를 수집합니다. 이때 Active Directory 관리 센터를 시작하여 캡처를 중지하기 전에 오류를 확인합니다. 클라이언트가 TCP 포트 9389를 통해 도메인 컨트롤러와 데이터를 주고받을 수 있는지 확인합니다. 패킷이 전송되었지만 수신되지 않거나, 패킷이 수신되어 도메인 컨트롤러에서 응답했지만 클라이언트에 응답이 수신되지 않는 경우 네트워크의 컴퓨터 사이에 해당 포트의 패킷을 삭제하는 방화벽이 있을 수 있습니다. 이 방화벽은 소프트웨어 또는 하드웨어일 수 있으며, 타사 끝점 보호(바이러스 백신) 소프트웨어의 일부일 수도 있습니다.  
   
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 [AD 휴지통, 세분화된 암호 정책, PowerShell 기록](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md)  

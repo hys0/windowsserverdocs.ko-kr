@@ -35,7 +35,7 @@ Windows Server 2012 R2 블록 만들기를 실행 하는 도메인 컨트롤러�
   
 *Setspn.exe는 일반적으로 새 Spn을 만드는 데 사용 되 고 기능이 중복 검사를 추가 하는 Windows Server 2008과 함께 출시 된 버전으로 빌드된 합니다.  
   
-**Table SEQ 테이블 \\ @ no__t-2 아랍어 1: UPN 및 SPN 고유성 @ no__t-0  
+**표 SEQ 테이블 \\\* 아랍어 1: UPN 및 SPN 고유성**  
   
 |기능|설명|  
 |-----------|-----------|  
@@ -49,7 +49,7 @@ Upn 및 Spn에 대 한 고유성 요구 사항에 대 한 자세한 내용은 �
   
 -   Windows Server 2012 R2 DC에 의해 처리 쓰기  
   
-**Table SEQ 테이블 \\ @ no__t-2 아랍어 2: UPN 및 SPN 고유성 오류 코드 @ no__t-0  
+**표 SEQ 테이블 \\\* 아랍어 2: UPN 및 SPN 고유성 오류 코드**  
   
 |Decimal|Hex|바로 가기|문자열|  
 |-----------|-------|------------|----------|  
@@ -74,18 +74,18 @@ Upn 및 Spn에 대 한 고유성 요구 사항에 대 한 자세한 내용은 �
   
 ![SPN 및 UPN 고유성](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig03_DupUPNADAC.gif)  
   
-**그림 SEQ 그림 \\ @ no__t-2 아랍어 1 오류는 새 사용자 만들기가 중복 된 UPN으로 인해 실패 하는 경우 AD 관리 센터에 표시 됩니다.**  
+**그림 SEQ 그림 \\중복 된 UPN으로 인해 새 사용자 만들기가 실패 하는 경우 AD 관리 센터에 표시 되는 아랍어 1 오류 \***  
   
-### <a name="event-2974-source-activedirectory_domainservice"></a>이벤트 2974 원본: ActiveDirectory_DomainService  
+### <a name="event-2974-source-activedirectory_domainservice"></a>이벤트 2974 소스: ActiveDirectory_DomainService  
 ![SPN 및 UPN 고유성](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig04_Event2974.gif)  
   
-**그림 SEQ 그림 \\ @ no__t-2 아랍어 2 이벤트 ID 2974 (오류 8648)**  
+**그림 SEQ 그림 \\\* 아랍어 2 이벤트 ID 2974 (오류 8648)**  
   
-이벤트 2974 차단 된 값과 이미 해당 값을 포함 하는 10) (최대 하나 이상의 개체의 목록이 나열 합니다.  다음 그림에서는 두 개의 다른 개체에 UPN 특성 값 **<em>dhunt@blue.contoso.com</em>** 가 이미 있는 것을 볼 수 있습니다.  Windows Server 2012 r 2의 새로운 기능 이므로, 혼합된 환경에서 중복 된 UPN 및 Spn 실수로 생성 하위 Dc 쓰기 시도 처리 하는 경우 계속 발생 합니다.  
+이벤트 2974 차단 된 값과 이미 해당 값을 포함 하는 10) (최대 하나 이상의 개체의 목록이 나열 합니다.  다음 그림에서 UPN 특성 값 **<em>dhunt@blue.contoso.com</em>** 이미 네 개의 다른 개체에 이미 있는 것을 볼 수 있습니다.  Windows Server 2012 r 2의 새로운 기능 이므로, 혼합된 환경에서 중복 된 UPN 및 Spn 실수로 생성 하위 Dc 쓰기 시도 처리 하는 경우 계속 발생 합니다.  
   
 ![SPN 및 UPN 고유성](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig05_Event2974ShowAllDups.gif)  
   
-**그림 SEQ 그림 \\ @ no__t-2 아랍어 3 이벤트 2974는 중복 된 UPN을 포함 하는 모든 개체를 표시 합니다.**  
+**그림 SEQ 그림 \\\* 아랍어 3 이벤트 2974은 중복 된 UPN을 포함 하는 모든 개체를 표시 합니다.**  
   
 > [!TIP]  
 > 이벤트 ID 2974s에 정기적으로 검토 합니다.  
@@ -96,7 +96,7 @@ Upn 및 Spn에 대 한 고유성 요구 사항에 대 한 자세한 내용은 �
 8648 = "작업이 추가/수정에 제공 되는 UPN 값 포리스트 전체에서 고유 없기 때문에 실패 했습니다."  
   
 ### <a name="setspn"></a>SetSPN:  
-Setspn.exe 사용 하는 경우 Windows Server 2008 출시 후에 기본 제공 중복 SPN 검색에는 **"-S"** 옵션입니다.  그러나 사용 하 여 중복 SPN 검색을 무시할 수는 **"-A"** 옵션입니다.  SetSPN-A 옵션으로 사용 하 여 Windows Server 2012 R2 DC를 대상으로 할 때 중복 된 SPN 만들기 차단 됩니다.  표시 되는 오류 메시지는-S 옵션을 사용할 때 표시 되는 오류 메시지와 같습니다. "중복 된 SPN을 찾았습니다. 작업을 중단 하는 중입니다."  
+Setspn.exe 사용 하는 경우 Windows Server 2008 출시 후에 기본 제공 중복 SPN 검색에는 **"-S"** 옵션입니다.  그러나 사용 하 여 중복 SPN 검색을 무시할 수는 **"-A"** 옵션입니다.  SetSPN-A 옵션으로 사용 하 여 Windows Server 2012 R2 DC를 대상으로 할 때 중복 된 SPN 만들기 차단 됩니다.  표시 되는 오류 메시지-S 옵션을 사용 하는 경우 표시 된 것과 같습니다: "중복 작업을 중단 발견 SPN!"  
   
 ### <a name="adsiedit"></a>ADSIEDIT:  
   
@@ -108,7 +108,7 @@ The operation failed because UPN value provided for addition/modification is not
   
 ![SPN 및 UPN 고유성](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig06_ADSI21c8.gif)  
   
-**그림 SEQ 그림 \\ @ no__t-2 아랍어 4-중복 된 UPN 추가가 차단 될 때 ADSIEdit에 표시 되는 오류 메시지**  
+**그림 SEQ 그림 \\중복 된 UPN 추가가 차단 될 때 ADSIEdit에 표시 되는 아랍어 4 오류 메시지 \***  
   
 ### <a name="windows-powershell"></a>Windows PowerShell  
 Windows Server 2012 R2:  
@@ -123,11 +123,11 @@ Windows Server 2012 R2 DC를 대상으로 하는 Windows Server 2012에서 실�
   
 ![SPN 및 UPN 고유성](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig09_UserCreateError.gif)  
   
-**그림 SEQ 그림 @no__t windows Server 2012 R2 DC를 대상으로 하는 동안 Windows Server 2012 r 2에서-1 @ no__t-2 아랍어 5 DSAC 사용자 만들기 오류**  
+**그림 SEQ 그림 \\\* Windows Server 2012 R2 DC를 대상으로 하는 동안 Windows Server 2012 r 2에서 아랍어 5 DSAC 사용자 만들기 오류 발생**  
   
 ![SPN 및 UPN 고유성](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig10_UserModError.gif)  
   
-**그림 SEQ 그림 @no__t windows Server 2012 R2 DC를 대상으로 하는 동안 Windows Server 2012 r 2에서 Windows server r 2의 아랍어 6 DSAC 사용자 수정 오류가 발생 했습니다.**  
+**그림 SEQ 그림 \\windows Server 2012 R2 DC를 대상으로 하는 동안 Windows Server 2012 r 2가 아닌 \* 아랍어 6 DSAC 사용자 수정 오류**  
   
 ### <a name="restore-of-an-object-that-would-result-in-a-duplicate-upn-fails"></a>중복 된 UPN을 초래 하는 개체의 복원에 실패 합니다.  
 ![SPN 및 UPN 고유성](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig11_RestoreDupUPN.gif)  
@@ -210,7 +210,7 @@ Windows PowerShell을 사용 하 여 UserPrincipalName 특성 null로 설정 합
 ### <a name="duplicate-spn"></a>중복 된 SPN  
 ![SPN 및 UPN 고유성](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig16_DupSPN.gif)  
   
-**그림 SEQ 그림 \\ @ no__t-2 아랍어 8 오류 메시지가 ADSIEdit에 표시 되 고 중복 SPN이 차단 되는 경우**  
+**그림 SEQ 그림 \\중복 SPN 추가가 차단 될 때 ADSIEdit에 표시 되는 아랍어 8 오류 메시지 \***  
   
 디렉터리 서비스 이벤트 로그는 로그는 **ActiveDirectory_DomainService** 이벤트 ID **2974**합니다.  
   
@@ -224,9 +224,9 @@ servicePrincipalName Value=<SPN>
   
 ![SPN 및 UPN 고유성](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig17_DupSPN2974.gif)  
   
-**그림 SEQ 그림 \\ @ no__t-2 아랍어 9 오류는 중복 SPN 생성이 차단 될 때 기록 됩니다.**  
+**그림 SEQ 그림 \\중복 SPN의 생성이 차단 될 때 기록 되는 아랍어 9 오류 \***  
   
-### <a name="workflow"></a>워크플로  
+### <a name="workflow"></a>Workflow  
   
 -   **DC = = GC 인 경우**  
   
@@ -322,7 +322,7 @@ servicePrincipalName Value=<SPN>
   
 새 SPN 값 중 하나는 중복 하면 수정을 실패 합니다. 위의 목록에서의 중요 한 특성은 ATT_DNS_HOST_NAME (컴퓨터 이름) 및 ATT_SAM_ACCOUNT_NAME (SAM 계정 이름)입니다.  
   
-### <a name="try-this-exploring-spn-and-upn-uniqueness"></a>다음을 시도 합니다. SPN 및 UPN 고유성 탐색  
+### <a name="try-this-exploring-spn-and-upn-uniqueness"></a>SPN 및 UPN 고유성을 탐색 다음과 같이 해보십시오.  
 이 여러 가지 방법 중 첫 번째 "**이 작업을 수행할**" 모듈에는 활동입니다.  이 모듈에 대 한 별도 랩 가이드가 않습니다.  **이** 활동은 랩 환경에서 학습 자료를 탐색할 수 있는 자유 형식의 활동 기본적으로 합니다.  다음 프롬프트 또는 스크립트의 옵션 있고 고유한 활동을 제공 합니다.  
   
 > [!NOTE]  

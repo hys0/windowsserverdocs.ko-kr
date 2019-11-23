@@ -38,7 +38,7 @@ reg unload <KeyName>
 
 |매개 변수|설명|
 |---------|-----------|
-|\<KeyName >|언로드해야 하는 하위 키의 전체 경로 지정 합니다. 원격 컴퓨터를 지정 하려면 컴퓨터 이름을 *KeyName*의 일부로 \\ @ No__t-1computername @ no__t-2 형식으로 포함 합니다. @No__t를 생략 하면-0 @ no__t-1ComputerName \이 작업을 기본적으로 로컬 컴퓨터로 설정 합니다. *KeyName* 유효한 루트 키를 포함 해야 합니다. 로컬 컴퓨터에 대 한 유효한 루트 키 HKLM, HKCU, HKCR, HKU, 및 HKCC 됩니다. 원격 컴퓨터를 지정 하는 경우 HKLM 및 HKU 유효한 루트 키가 있습니다.|
+|\<KeyName >|언로드해야 하는 하위 키의 전체 경로 지정 합니다. 원격 컴퓨터를 지정 하려면 컴퓨터 이름을 *KeyName*의 일부로 \\\\ComputerName\) 형식으로 포함 합니다. ComputerName을 \\\\생략 하면 작업이 로컬 컴퓨터를 기본값으로 설정 됩니다. *KeyName* 유효한 루트 키를 포함 해야 합니다. 로컬 컴퓨터에 대 한 유효한 루트 키 HKLM, HKCU, HKCR, HKU, 및 HKCC 됩니다. 원격 컴퓨터를 지정 하는 경우 HKLM 및 HKU 유효한 루트 키가 있습니다.|
 |/?|에 대 한 도움말을 표시 **reg 언로드** 명령 프롬프트입니다.|
 
 ## <a name="remarks"></a>설명

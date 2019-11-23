@@ -66,7 +66,7 @@ HTTP.SYS에서 제공 하는 장점 중 하나는 커널 모드 캐시입니다.
 
     » 
 
--   **Urimaxuribytes** 기본값: 262144 바이트 (256 KB)
+-   **Urimaxuribytes** 기본값: 262144 바이트 (256 KB)
 
     커널 모드 캐시에 있는 항목의 최대 크기입니다. 이 보다 큰 응답 또는 조각은 캐시 되지 않습니다. 메모리가 충분 한 경우 제한을 늘립니다. 메모리가 제한적이 고 큰 항목이 작은 항목 crowding 경우 제한을 낮춰 주는 것이 도움이 될 수 있습니다.
 
@@ -119,7 +119,7 @@ Windows Server 2016에서 HTTP.SYS는 연결을 자동으로 관리 합니다. �
 
 이 섹션의 설정은 IISÂ 작업자 프로세스 동작에 영향을 줍니다. 이러한 설정은 대부분 다음 XML 구성 파일에서 찾을 수 있습니다.
 
-% SystemRoot% \\system32 @ no__t-1inetsrv @ no__t-2config @ no__t-3applicationHost
+% SystemRoot%\\system32\\inetsrv config administration.config\\config\\Applicationhost.config
 
 Appcmd.exe, IIS 10.0 관리 콘솔, WebAdministration 또는 IISAdministration PowerShell Cmdlet을 사용 하 여 변경 합니다. 대부분의 설정은 자동으로 검색 되며 IIS 10.0 작업자 프로세스 또는 웹 응용 프로그램 서버를 다시 시작 하지 않아도 됩니다. Applicationhost.config 파일에 대 한 자세한 내용은 [Applicationhost.config 소개](http://www.iis.net/learn/get-started/planning-your-iis-architecture/introduction-to-applicationhostconfig)를 참조 하십시오.
 
@@ -134,7 +134,7 @@ HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\InetInfo\Parameters\ThreadP
 
 이 기능을 사용 하도록 설정 하면 IIS 스레드 관리자는 현재 로드에 따라 모든 NUMA 노드의 모든 Cpu에서 IIS 스레드 풀 스레드를 균등 하 게 분산 하는 데 가장 적합 합니다. 일반적으로이 기본 설정은 NUMA 하드웨어에 대해 변경 되지 않은 상태로 유지 하는 것이 좋습니다.
 
-**참고**  이상적인 CPU 설정은 [응용 프로그램 풀의 cpu 설정](https://www.iis.net/configreference/system.applicationhost/applicationpools/add/cpu)에 도입 된 작업자 프로세스 NUMA 노드 할당 설정 (numaNodeAssignment 및 numaNodeAffinityMode)과 다릅니다. 이상적인 CPU 설정은 IIS에서 스레드 풀 스레드를 배포 하는 방법에 영향을 주며, 작업자 프로세스 NUMA 노드 할당 설정에 따라 작업자 프로세스가 시작 되는 NUMA 노드를 결정 합니다.
+이상적인 CPU 설정은 [응용 프로그램 풀의 Cpu 설정](https://www.iis.net/configreference/system.applicationhost/applicationpools/add/cpu)에 도입 된 작업자 프로세스 NUMA 노드 할당 설정 (NumaNodeAssignment 및 numaNodeAffinityMode)과 다릅니다 **. ** 이상적인 CPU 설정은 IIS에서 스레드 풀 스레드를 배포 하는 방법에 영향을 주며, 작업자 프로세스 NUMA 노드 할당 설정에 따라 작업자 프로세스가 시작 되는 NUMA 노드를 결정 합니다.
 
 ## <a name="user-mode-cache-behavior-settings"></a>사용자 모드 캐시 동작 설정
 
@@ -189,7 +189,7 @@ Applicationhost.config의 위치 태그 내에서 구성을 사용자 지정 하
 |특성|설명|기본값|
 |--- |--- |--- |
 |enabled|기본 문서를 사용 하도록 지정 합니다.|True|
-|&lt;files @ no__t-1 요소|기본 문서로 구성 된 파일 이름을 지정 합니다.|기본 목록은 default.htm, Default .asp, index.htm, index.htm, Iisstart 및 Default.aspx입니다 (기본값).|
+|&lt;files&gt; 요소|기본 문서로 구성 된 파일 이름을 지정 합니다.|기본 목록은 default.htm, Default .asp, index.htm, index.htm, Iisstart 및 Default.aspx입니다 (기본값).|
 
 ## <a name="central-binary-logging"></a>중앙 이진 로깅
 
@@ -226,13 +226,13 @@ CentralLogFileMode 특성을 CentralBinary로 설정 하 고 **enabled** 특성�
 
 |특성|설명|기본값|
 |--- |--- |--- |
-|Allowsubdirconfig 있어서|IIS가 현재 수준 (True) 보다 낮은 콘텐츠 디렉터리의 web.config 파일을 찾을 지 아니면 현재 수준 (False) 보다 낮은 콘텐츠 디렉터리의 web.config 파일을 찾을 수 없는지를 지정 합니다. 가상 디렉터리에만 구성을 허용 하는 간단한 제한 사항을 적용 하 여 IISÂ은 **/ @ no__t-2name&gt;.htm** 이 가상 디렉터리 일 경우를 제외 하 고는 구성 파일을 찾을 수 없다는 것을 알 수 있습니다. 추가 파일 작업을 건너뛰면 고정 콘텐츠를 임의로 액세스할 수 있는 웹 사이트의 성능이 크게 향상 될 수 있습니다.|True|
+|Allowsubdirconfig 있어서|IIS가 현재 수준 (True) 보다 낮은 콘텐츠 디렉터리의 web.config 파일을 찾을 지 아니면 현재 수준 (False) 보다 낮은 콘텐츠 디렉터리의 web.config 파일을 찾을 수 없는지를 지정 합니다. 가상 디렉터리에만 구성을 허용 하는 간단한 제한 사항을 적용 하 여 IISÂ은 **/&lt;이름&gt;** 를 사용 하는 경우를 제외 하 고 구성 파일을 찾을 수 없다는 것을 알 수 있습니다. 추가 파일 작업을 건너뛰면 고정 콘텐츠를 임의로 액세스할 수 있는 웹 사이트의 성능이 크게 향상 될 수 있습니다.|True|
 
 ## <a name="managing-iis-100-modules"></a>IIS 10.0 모듈 관리
 
 IIS 10.0는 모듈식 구조를 지원 하기 위해 여러 사용자 확장 가능 모듈로 구성 되어 있습니다. 이 인수분해에는 약간의 비용이 있습니다. 각 모듈에 대해 통합 파이프라인은 모듈과 관련 된 모든 이벤트에 대해 모듈을 호출 해야 합니다. 이는 모듈에서 작업을 수행 해야 하는지 여부에 관계 없이 발생 합니다. 특정 웹 사이트와 관련이 없는 모든 모듈을 제거 하 여 CPU 주기와 메모리를 절약할 수 있습니다.
 
-간단한 정적 파일용으로 조정 된 웹 서버에는 다음 5 개 모듈만 포함 될 수 있습니다. UriCacheModule, HttpCacheModule, StaticFileModule, AnonymousAuthenticationModule 및 HttpLoggingModule입니다.
+간단한 정적 파일용으로 튜닝 된 웹 서버에는 UriCacheModule, HttpCacheModule, StaticFileModule, AnonymousAuthenticationModule 및 HttpLoggingModule와 같은 5 개의 모듈만 포함 될 수 있습니다.
 
 Applicationhost.config에서 모듈을 제거 하려면 system.webserver/globalModules에서 모듈 선언을 제거 하는 것 외에도 system.web/처리기 및 system.webserver/modules 섹션에서 모듈에 대 한 모든 참조를 제거 합니다.
 
@@ -246,10 +246,10 @@ Applicationhost.config에서 모듈을 제거 하려면 system.webserver/globalM
 
 |특성|설명|기본값|
 |--- |--- |--- |
-|diskTemplateCacheDirectory|메모리 내 캐시가 오버플로될 때 ASP가 컴파일된 템플릿을 저장 하기 위해 사용 하는 디렉터리의 이름입니다.<br><br>권장 사항: 운영 체제, IIS 로그 또는 기타 자주 액세스 하는 콘텐츠와 공유 되지 않는 드라이브와 같이 많이 사용 되지 않는 디렉터리로 설정 합니다.|%SystemDrive%\inetpub\temp\ASP 컴파일된 템플릿|
-|maxDiskTemplateCacheFiles|디스크에 캐시할 수 있는 컴파일된 ASP 템플릿의 최대 수를 지정 합니다.<br><br>권장 사항: 0x7FFFFFFF의 최대값으로 설정 합니다.|2000|
-|scriptFileCacheSize|이 특성은 메모리에 캐시할 수 있는 컴파일된 ASP 템플릿의 최대 수를 지정 합니다.<br><br>권장 사항: 응용 프로그램 풀에서 처리 하는 자주 요청 된 ASP 스크립트 수 만큼 이상으로 설정 합니다. 가능 하면 메모리 한도가 허용 하는 만큼 ASP 템플릿으로 설정 합니다.|500|
-|scriptEngineCacheMax|메모리에 캐시 된 상태로 유지 되는 최대 스크립트 엔진 수를 지정 합니다.<br><br>권장 사항: 응용 프로그램 풀에서 처리 하는 자주 요청 된 ASP 스크립트 수 만큼 이상으로 설정 합니다. 가능 하면 메모리 제한에서 허용 하는 만큼의 스크립트 엔진으로 설정 합니다.|250|
+|diskTemplateCacheDirectory|메모리 내 캐시가 오버플로될 때 ASP가 컴파일된 템플릿을 저장 하기 위해 사용 하는 디렉터리의 이름입니다.<br><br>권장 사항: 과도 하 게 사용 되지 않는 디렉터리 (예: 운영 체제, IIS 로그 또는 기타 자주 액세스 하는 콘텐츠와 공유 되지 않음)로 설정 합니다.|%SystemDrive%\inetpub\temp\ASP 컴파일된 템플릿|
+|maxDiskTemplateCacheFiles|디스크에 캐시할 수 있는 컴파일된 ASP 템플릿의 최대 수를 지정 합니다.<br><br>권장 사항: 최 댓 값을 0x7FFFFFFF로 설정 합니다.|2000|
+|scriptFileCacheSize|이 특성은 메모리에 캐시할 수 있는 컴파일된 ASP 템플릿의 최대 수를 지정 합니다.<br><br>권장 사항: 응용 프로그램 풀에서 처리 하는 자주 요청 되는 ASP 스크립트 수 만큼 이상으로 설정 합니다. 가능 하면 메모리 한도가 허용 하는 만큼 ASP 템플릿으로 설정 합니다.|500|
+|scriptEngineCacheMax|메모리에 캐시 된 상태로 유지 되는 최대 스크립트 엔진 수를 지정 합니다.<br><br>권장 사항: 응용 프로그램 풀에서 처리 하는 자주 요청 되는 ASP 스크립트 수 만큼 이상으로 설정 합니다. 가능 하면 메모리 제한에서 허용 하는 만큼의 스크립트 엔진으로 설정 합니다.|250|
 
 **System.webserver/asp/limits**
 
@@ -277,7 +277,7 @@ Applicationhost.config에서 모듈을 제거 하려면 system.webserver/globalM
 
 다음 설정은 시스템에서 리소스를 완전히 사용 하는 데 유용 합니다.
 
--   **maxConcurrentRequestPerCpu** 기본값: 5,000
+-   **maxConcurrentRequestPerCpu** 기본값: 5000
 
     이 설정은 시스템에서 동시에 실행 되는 ASP.NET 요청의 최대 수를 제한 합니다. 기본값은 ASP.NET 응용 프로그램의 메모리 사용을 줄이기 위한 것입니다. 긴 동기 i/o 작업을 수행 하는 응용 프로그램을 실행 하는 시스템에서이 제한을 늘려야 합니다. 그렇지 않으면 기본 설정을 사용 하는 경우 높은 부하 상태에서 큐 제한 초과로 인 한 큐 또는 요청 실패로 인해 대기 시간이 길어질 수 있습니다.
 
@@ -306,7 +306,7 @@ IIS 작업자 프로세스를 재활용 하는 옵션을 구성 하 고, 사용�
 |메모리|가상 메모리 소비가 지정 된 한도 (kb)를 초과 하는 경우 프로세스 재활용을 사용 하도록 설정 합니다. 2gb 주소 공간이 작은 32 비트 컴퓨터의 경우이 설정을 유용 하 게 사용할 수 있습니다. 메모리 부족 오류로 인해 실패 한 요청을 방지 하는 데 도움이 될 수 있습니다.|0|
 |privateMemory|개인 메모리 할당이 지정 된 한도 (kb)를 초과 하는 경우 프로세스 재활용을 사용 하도록 설정 합니다.|0|
 |requests|특정 요청 수 후에 프로세스 재활용을 사용 하도록 설정 합니다.|0|
-|Time|지정 된 기간 후에 프로세스 재활용을 사용 하도록 설정 합니다.|29:00:00|
+|시간|지정 된 기간 후에 프로세스 재활용을 사용 하도록 설정 합니다.|29:00:00|
 
 
 ## <a name="dynamic-worker-process-page-out-tuning"></a>동적 작업자-프로세스 페이지 아웃 튜닝
@@ -317,7 +317,7 @@ Windows Server 2012 r 2부터 IIS는 시간 동안 유휴 상태가 된 후 (IIS
 
 자세히 설명 하기 전에 메모리 제약 조건이 없는 경우 일시 중단 또는 종료 하지 않도록 사이트를 설정 하는 것이 좋습니다. 그 후에는 thereâs가 컴퓨터에 유일한 값인 경우 작업자 프로세스를 종료 하는 것이 거의 없습니다.
 
-**참고** 은 메모리 누수가 있는 코드와 같이 불안정 한 코드를 실행 하거나 불안정 한 경우 사이트를 유휴 상태에서 종료 하도록 설정 하는 것이 코드 버그를 수정 하는 데 도움이 될 수 있습니다. 권장 사항이 아니지만 고속 처리에서이 기능을 정리 메커니즘으로 사용 하는 것이 좋지만, 보다 영구적인 솔루션이 작동 하는 경우에는이 기능을 사용 하는 것이 더 좋을 수 있습니다. \]
+**참고**  메모리 누수가 있는 코드와 같이 불안정 한 코드를 실행 하거나 불안정 한 경우 사이트를 유휴 상태에서 종료 하도록 설정 하는 것은 코드 버그를 수정 하는 데 도움이 될 수 있습니다. 권장 사항이 아니지만 고속 처리에서이 기능을 정리 메커니즘으로 사용 하는 것이 좋지만, 더 영구적인 솔루션이 작동 하는 것이 더 좋을 수 있습니다.\]
 
 » 
 
@@ -334,14 +334,14 @@ Windows Server 2012 r 2부터 IIS는 시간 동안 유휴 상태가 된 후 (IIS
 |1|/SourceSilverLight/Geosource.web/grosource.html|10:01||
 |2|/SourceSilverLight/Geosource.web/sliverlight.js|10:10|0:09|
 |3|/SourceSilverLight/Geosource.web/clientbin/geo/1.aspx|10:11|0:01|
-|4|/lClientAccessPolicy.xml|10:12|0:01|
+|추가를 클릭합니다.|/lClientAccessPolicy.xml|10:12|0:01|
 |5|/원본 Ilverlight/GeosourcewebService/Service .asmx|10:23|0:11|
 |6|/SourceSilverLight/Geosource. 웹/GeoSearchServer ...|11:50|1:27|
-|7|/rest/Services/CachedServices/Silverlight_load_la...|12:50|1:00|
-|8|/rest/Services/CachedServices/Silverlight_basemap....|12:51|0:01|
+|7|/rest/Services/CachedServices/Silverlight_load_la ...|12:50|1:00|
+|8|/rest/Services/CachedServices/Silverlight_basemap ...|12:51|0:01|
 |9|/rest/Services/DynamicService/Silverlight_basemap ...|12:59|0:08|
-|10|/rest/Services/CachedServices/Ortho_2004_cache.as...|13:40|0:41|
-|11|/rest/Services/CachedServices/Ortho_2005_cache.js|13:40|0:00|
+|10|/rest/Services/CachedServices/Ortho_2004_cache ...|13:40|0:41|
+|11|/rest/Services/CachedServices/Ortho_2005_cache|13:40|0:00|
 |12|/rest/Services/CachedServices/OrthoBaseEngine.aspx|13:41|0:01|
 
 그러나 하드 부분은 적용 하기 위해 적용 해야 하는 설정을 파악 하는 것입니다. 이 경우 사이트는 사용자 로부터 다양 한 요청을 가져오고 위의 표에 4 시간 동안 총 4 개의 고유 세션이 발생 했음을 보여 줍니다. 응용 프로그램 풀의 작업자 프로세스 일시 중단에 대 한 기본 설정을 사용 하 여 사이트는 기본 제한 시간 (20 분) 후에 종료 됩니다. 즉, 이러한 각 사용자는 사이트 스핀 주기를 경험 하 게 됩니다. 이를 통해 작업자 프로세스를 일시 중단 하는 것이 가장 좋습니다. 대부분의 시간에는 사이트가 유휴 상태 이므로이를 일시 중단 하면 리소스가 절약 되 고 사용자가 거의 즉시 사이트에 연결할 수 있습니다.
@@ -350,7 +350,7 @@ Windows Server 2012 r 2부터 IIS는 시간 동안 유휴 상태가 된 후 (IIS
 
 SSD를 사용 하는지 여부에 관계 없이 페이지 파일 크기를 수정 하 여 파일 크기 조정 없이 페이지 아웃 데이터를 해당 파일에 쓸 수 있도록 하는 것이 좋습니다. 페이지 파일 크기 조정은 운영 체제가 데이터를 페이지 파일에 저장 해야 하는 경우에 발생할 수 있습니다. 기본적으로 Windows는 필요에 따라 크기를 자동으로 조정 하도록 구성 되어 있기 때문입니다. 크기를 고정 하나로 설정 하면 크기 조정을 방지 하 고 성능을 크게 향상 시킬 수 있습니다.
 
-미리 고정 된 페이지 파일 크기를 구성 하려면 일시 중단 하는 사이트 수 및 사용 중인 메모리 크기에 따라 이상적인 크기를 계산 해야 합니다. 활성 작업자 프로세스에 대 한 평균이 200이 고 일시 중단할 서버에 500 사이트가 있는 경우 페이지 파일의 기본 크기 (200 \* 500)는 페이지 파일의 기본 크기 보다 커야 합니다 (이 예에서는 기본 + 100 GB).
+미리 고정 된 페이지 파일 크기를 구성 하려면 일시 중단 하는 사이트 수 및 사용 중인 메모리 크기에 따라 이상적인 크기를 계산 해야 합니다. 활성 작업자 프로세스에 대 한 평균이 200이 고 일시 중단할 서버에 500 사이트가 있는 경우 페이지 파일의 기본 크기 () 이상 (이 예제에서는 기본 + 100 GB) 이상으로 페이지 파일의 크기 (200 \* 500) 이상 이어야 합니다.
 
 **참고** 사이트가 일시 중단 되 면 각 사이트는 약 6gb를 사용 하므로,이 경우 모든 사이트를 일시 중단 하는 경우 메모리 사용량이 약 3gb가 됩니다. 그러나 실제로 youâre는 모두 동시에 일시 중단 된 것은 아닙니다.
 
@@ -402,6 +402,6 @@ IIS 성능에 영향을 줄 수 있는 문제는 다음과 같습니다.
 
     성능상의 이유로 IIS에서는 CGI 응용 프로그램을 사용 하 여 요청을 처리 하지 않는 것이 좋습니다. 자주 발생 하는 CGI 프로세스 만들기 및 삭제는 상당한 오버 헤드를 포함 합니다. 더 나은 대안은 FastCGI, ISAPI 응용 프로그램 스크립트 및 ASP 또는 ASP.NET 스크립트를 사용 하는 것입니다. 이러한 각 옵션에 대해 격리를 사용할 수 있습니다.
 
-# <a name="see-also"></a>참조
+# <a name="see-also"></a>참고 항목
 - [웹 서버 성능 조정](index.md) 
 - [HTTP 1.1/2 튜닝](http-performance.md)

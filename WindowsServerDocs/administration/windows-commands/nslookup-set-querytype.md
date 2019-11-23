@@ -22,7 +22,7 @@ ms.locfileid: "71372897"
 ---
 # <a name="nslookup-set-querytype"></a>nslookup set querytype
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 쿼리에 대 한 리소스 레코드 종류를 변경합니다.
 ## <a name="syntax"></a>구문
@@ -30,7 +30,7 @@ ms.locfileid: "71372897"
 set querytype=<ResourceRecordtype>
 ```
 ## <a name="parameters"></a>매개 변수
-<ResourceRecordtype>DNS 리소스 레코드 종류를 지정 합니다. 기본 리소스 레코드 종류는 A입니다. 다음 표에서이 명령에 대 한 유효한 값을 나열합니다.
+<ResourceRecordtype> DNS 리소스 레코드 종류를 지정 합니다. 기본 리소스 레코드 종류는 A입니다. 다음 표에서이 명령에 대 한 유효한 값을 나열합니다.
 
 | 값 |                                                   설명                                                   |
 |-------|-----------------------------------------------------------------------------------------------------------------|

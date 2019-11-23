@@ -41,8 +41,8 @@ regsvr32 [/u] [/s] [/n] [/i[:cmdline]] <DllName>
 |/u|서버 등록 취소합니다.|
 |/s|실행 **Regsvr32** 메시지를 표시 하지 않고 있습니다.|
 |/n|실행 **Regsvr32** 호출 하지 않고 **DllRegisterServer**합니다. (필요는 **/i** 매개 변수입니다.)|
-|/i: \<cmdline >|선택적 명령줄 문자열을 전달 (*명령줄*)를 **DllInstall**합니다. 와 함께에서이 매개 변수를 사용 하는 경우는 **/u** 호출 매개 변수를 **DllUninstall**합니다.|
-|@no__t 0DllName >|가 등록 하는.dll 파일의 이름입니다.|
+|/i:\<명령줄 >|선택적 명령줄 문자열을 전달 (*명령줄*)를 **DllInstall**합니다. 와 함께에서이 매개 변수를 사용 하는 경우는 **/u** 호출 매개 변수를 **DllUninstall**합니다.|
+|\<DllName >|가 등록 하는.dll 파일의 이름입니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
 ## <a name="BKMK_examples"></a>예와

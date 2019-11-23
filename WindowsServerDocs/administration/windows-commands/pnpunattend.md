@@ -35,9 +35,9 @@ PnPUnattend.exe auditSystem [/help] [/?] [/h] [/s] [/L]
 |매개 변수|설명|
 |---------|-----------|
 |auditSystem|온라인 드라이버 설치를 지정 합니다.</br>**Pnpunattend** 가 **/help** 또는 **/?** 를 사용 하 여 실행 되는 경우를 제외 하 고는 필수 항목입니다. 필요합니다.|
-|/s|(선택 사항) 를 설치 하지 않고 드라이버를 검색 하도록 지정 합니다.|
-|/L|(선택 사항) 명령 프롬프트에서이 명령에 대 한 로그 정보를 표시 하도록 지정 합니다.|
-|/?|(선택 사항) 명령 프롬프트에서이 명령에 대 한 도움말을 표시 합니다.|
+|/s|선택 사항. 를 설치 하지 않고 드라이버를 검색 하도록 지정 합니다.|
+|/L|선택 사항. 명령 프롬프트에서이 명령에 대 한 로그 정보를 표시 하도록 지정 합니다.|
+|/?|선택 사항. 명령 프롬프트에서이 명령에 대 한 도움말을 표시 합니다.|
 
 ## <a name="remarks"></a>설명
 
@@ -47,8 +47,8 @@ PnPUnattend.exe auditSystem [/help] [/?] [/h] [/s] [/L]
 2. 장치에 대 한 드라이버 패키지를 다운로드 하 고 압축을 풉니다. 운영 체제 버전의 INF 파일을 포함 하는 하위 폴더의 내용 및 만든 비디오 폴더의 하위 폴더를 복사 합니다. 예를 들어 비디오 드라이버 파일을 C:\vom\videos에 복사 합니다.
 3. 1 단계에서 만든 폴더에 시스템 환경 경로 변수를 추가 합니다 (예: **C:\vom\video**).
 4. 다음 레지스트리 키를 만든 다음 만든 **Driverpaths** 키에 대해 **값 데이터** 를 **1**로 설정 합니다.
-5. Windows® 7의 경우 레지스트리 경로를 탐색 합니다. **HKEY_LOCAL_Machine\Software\Microsoft\Windows NT\CurrentVersion @ no__t-1**을 차례로 클릭 한 다음 키를 만듭니다. **UnattendSettings\PnPUnattend\DriverPaths @ no__t-1**
-6. Windows Vista의 경우 레지스트리 경로로 이동 합니다. **HK_LM\Software\Microsoft\Windows NT\CurrentVersion @ no__t-1**을 지정한 후 keys = **\UnattendSettings\PnPUnattend\DriverPaths**를 만듭니다.
+5. Windows® 7 **HKEY_LOCAL_Machine \Software\microsoft\windows NT\CurrentVersion\\** 레지스트리 경로를 탐색 한 다음 키를 만듭니다. **UnattendSettings\PnPUnattend\DriverPaths\\**
+6. Windows Vista의 경우 레지스트리 경로 **HK_LM \Software\microsoft\windows NT\CurrentVersion\\** 으로 이동한 다음 keys = **\UnattendSettings\PnPUnattend\DriverPaths**를 만듭니다.
 
 ## <a name="examples"></a>예
 

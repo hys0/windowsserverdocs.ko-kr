@@ -22,7 +22,7 @@ ms.locfileid: "71382576"
 ---
 # <a name="attributes-volume"></a>특성 볼륨
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 표시 설정 하거나 볼륨의 특성을 지웁니다.  
   
@@ -41,7 +41,7 @@ attributes volume [{set | clear}] [{hidden | readonly | nodefaultdriveletter | s
 |집합|포커스가 있는 볼륨의 지정된 된 특성을 설정합니다.|  
 |clear|포커스가 있는 볼륨의 지정된 된 특성을 지웁니다.|  
 |읽기 전용|볼륨이 읽기 지정\-만 합니다.|  
-|hidden|볼륨 숨겨지는지를 지정 합니다.|  
+|숨김|볼륨 숨겨지는지를 지정 합니다.|  
 |nodefaultdriveletter|볼륨 기본적으로 드라이브 문자를 할당 하지 않는 것을 지정 합니다.|  
 |섀도 복사본|볼륨 섀도 복사본 볼륨 임을 지정 합니다.|  
 |noerr|스크립팅 전용입니다. 오류가 발생 하면 오류가 발생 하지 않은 경우에 따라 명령을 처리 하도록 DiskPart 계속 합니다. 이 매개 변수를 크기는 오류 코드를 수행 합니다.|  
@@ -50,7 +50,7 @@ attributes volume [{set | clear}] [{hidden | readonly | nodefaultdriveletter | s
   
 -   마스터 부트 레코드에서 \(MBR\) 디스크는 **숨겨진**, **readonly**, 및 **nodefaultdriveletter** 매개 변수는 디스크에 있는 모든 볼륨에 적용 합니다.  
   
--   기본 GUID 파티션 테이블 \(gpt @ no__t 디스크 및 동적 MBR 및 gpt 디스크에서 **hidden**, **readonly**및 **nodefaultdriveletter** 매개 변수는 선택한 볼륨에만 적용 됩니다.  
+-   기본 GUID 파티션 테이블 \(gpt\) 디스크 및 동적 MBR 및 gpt 디스크에서 **hidden**, **readonly**및 **nodefaultdriveletter** 매개 변수는 선택한 볼륨에만 적용 됩니다.  
   
 -   볼륨을 선택 해야는 **볼륨 특성** 명령을 성공적으로 합니다. 사용 하 여는 **볼륨 선택** 볼륨을 선택 하 고 포커스를 이동 하는 명령입니다.  
   

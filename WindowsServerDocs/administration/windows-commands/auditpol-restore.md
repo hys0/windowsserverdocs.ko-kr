@@ -1,6 +1,6 @@
 ---
 title: auditpol 복원
-description: '**Auditpol 복원** 에 대 한 Windows 명령 항목-시스템 감사 정책 설정, 모든 사용자에 대 한 사용자 단위 감사 정책 설정 및 쉼표로 구분 된 값 (CSV) 파일 형식과 구문적으로 일치 하는 파일의 모든 감사 옵션을 복원 합니다. /backup 옵션에 사용 됩니다.'
+description: '**Auditpol 복원** 에 대 한 Windows 명령 항목-시스템 감사 정책 설정, 모든 사용자에 대 한 사용자별 감사 정책 설정 및/backup 옵션에 사용 되는 쉼표로 구분 된 값 (CSV) 파일 형식과 구문적으로 일치 하는 파일의 모든 감사 옵션을 복원 합니다.'
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -22,7 +22,7 @@ ms.locfileid: "71382415"
 ---
 # <a name="auditpol-restore"></a>auditpol 복원
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 시스템 감사 정책 설정, 모든 사용자 및 모든 감사 옵션에 대 한 사용자 단위 감사 정책 설정을 차례로 사용 하는 쉼표로 구분 된 값 (CSV) 파일 형식을와 구문적으로 일치 하는 파일에서 복원 하는 옵션입니다.
 

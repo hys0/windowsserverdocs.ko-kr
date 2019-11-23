@@ -48,7 +48,7 @@ Get-StorageNode -Name <Name> | Get-StorageHealthReport -Count <Count>
 
 ### <a name="connect"></a>연결
 
-상태 관리 서비스를 쿼리하려면 클러스터로 **CimSession** 를 설정 해야 합니다. 이렇게 하려면 전체 .NET 에서만 사용할 수 있는 몇 가지 항목이 필요 합니다. 즉, 웹 또는 모바일 앱에서 바로이 작업을 수행할 수 없습니다. 이러한 코드 샘플은이 데이터 액세스 계층에 가장 간단한 선택 인 C @ no__t-0을 사용 합니다.
+상태 관리 서비스를 쿼리하려면 클러스터로 **CimSession** 를 설정 해야 합니다. 이렇게 하려면 전체 .NET 에서만 사용할 수 있는 몇 가지 항목이 필요 합니다. 즉, 웹 또는 모바일 앱에서 바로이 작업을 수행할 수 없습니다. 이러한 코드 샘플은이 데이터 액세스 계층에 가장 간단한 선택 인 C\#를 사용 합니다.
 
 ``` 
 ...
@@ -80,7 +80,7 @@ public CimSession Connect(string Domain = "...", string Computer = "...", string
 
 **CimSession** 가 설정 되 면 클러스터에서 WMI(WINDOWS MANAGEMENT INSTRUMENTATION) (WMI)를 쿼리할 수 있습니다.
 
-오류나 메트릭을 얻기 전에 여러 관련 개체의 인스턴스를 가져와야 합니다. 먼저 클러스터에서 스토리지 공간 다이렉트를 나타내는 **MSFT @ no__t-1StorageSubSystem** 입니다. 이를 사용 하 여 클러스터의 모든 **msft @ no__t-1StorageNode** 와 모든 **Msft @ no__t 볼륨**, 데이터 볼륨을 가져올 수 있습니다. 마지막으로, 상태 관리 서비스 **MSFT @ no__t-1StorageHealth**가 필요 합니다.
+오류나 메트릭을 얻기 전에 여러 관련 개체의 인스턴스를 가져와야 합니다. 먼저, **MSFT\_StorageSubSystem** 은 클러스터의 스토리지 공간 다이렉트를 나타냅니다. 이를 사용 하 여 클러스터의 모든 **msft\_StorageNode** 및 모든 **msft\_볼륨**, 데이터 볼륨을 가져올 수 있습니다. 마지막으로, 상태 관리 서비스 자체인 **MSFT\_StorageHealth**가 필요 합니다.
 
 ```
 CimInstance Cluster;
@@ -209,7 +209,7 @@ public void BeginStreamingMetrics(CimSession Session, CimInstance HealthService,
 
 메트릭의 모든 샘플은 개별 메트릭에 해당 하는 많은 "레코드"를 포함 하는 하나의 "보고서"입니다.
 
-전체 스키마의 경우 *storagewmi .mof*에서 **msft @ no__t-1StorageHealthReport** 및 **msft @ no__t-3HealthRecord** 클래스를 검사 합니다.
+전체 스키마의 경우 *Storagewmi*에서 **msft\_** 및 **msft\_HealthRecord** 클래스를 검사 합니다.
 
 각 메트릭에는이 테이블 당 세 가지 속성만 있습니다.
 
@@ -229,7 +229,7 @@ Windows Server 2016의 각 범위에 사용할 수 있는 메트릭은 다음과
 
 | **이름**                        | **단위** |
 |---------------------------------|-----------|
-| CPUUsage                        | 4         |
+| CPUUsage                        | 추가를 클릭합니다.         |
 | CapacityPhysicalPooledAvailable | 0         |
 | CapacityPhysicalPooledTotal     | 0         |
 | CapacityPhysicalTotal           | 0         |
@@ -253,7 +253,7 @@ Windows Server 2016의 각 범위에 사용할 수 있는 메트릭은 다음과
 
 | **이름**            | **단위** |
 |---------------------|-----------|
-| CPUUsage            | 4         |
+| CPUUsage            | 추가를 클릭합니다.         |
 | IOLatencyAverage    | 3         |
 | IOLatencyRead       | 3         |
 | IOLatencyWrite      | 3         |
@@ -282,6 +282,6 @@ Windows Server 2016의 각 범위에 사용할 수 있는 메트릭은 다음과
 | IOThroughputTotal   | 1         |
 | IOThroughputWrite   | 1         |
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Server 2016의 상태 관리 서비스](health-service-overview.md)

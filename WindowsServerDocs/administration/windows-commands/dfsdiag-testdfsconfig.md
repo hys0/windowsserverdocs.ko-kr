@@ -22,7 +22,7 @@ ms.locfileid: "71378425"
 ---
 # <a name="dfsdiag-testdfsconfig"></a>dfsdiag Testdfs 구성
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 분산 파일 시스템의 구성을 확인 \(DFS\) 다음 작업을 수행 하 여 네임 스페이스:  
   
@@ -50,7 +50,7 @@ dfsdiag /TestDFSConfig /DFSRoot:<namespace>
   
 |       매개 변수       |               설명               |
 |-----------------------|-----------------------------------------|
-| @no__t 0DFSRoot: <namespace> | 네임 스페이스 \(DFS 루트\) 를 진단 합니다. |
+| \/DFSRoot:<namespace> | 네임 스페이스 \(DFS 루트\) 를 진단 합니다. |
   
 ## <a name="BKMK_Examples"></a>예와  
 TBD를 입력 합니다.  

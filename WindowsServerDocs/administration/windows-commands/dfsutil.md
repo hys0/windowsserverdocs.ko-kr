@@ -22,7 +22,7 @@ ms.locfileid: "71377982"
 ---
 # <a name="dfsutil"></a>dfsutil
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Dfsutil 명령은 DFS 네임 스페이스, 서버 및 클라이언트를 관리 합니다. dfsutil 명령은 대부분의 명령에 대 한 설명으로 제공 된 업데이트 된 DFS 네임 스페이스 용어를 사용 하 여 원래 분산 파일 시스템 용어를 사용 합니다.
 
@@ -39,27 +39,27 @@ command </parameter> </param2>
 |매개 변수|설명|
 |-------|--------|
 |[dfsutil 루트](dfsutil-root.md)|네임 스페이스 루트를 표시, 생성, 제거, 가져오기 및 내보냅니다.|
-|[dfsutil 링크](dfsutil-link.md)|-0links @ no__t-1 @no__t 폴더를 표시, 생성, 제거 또는 이동 합니다.|
+|[dfsutil 링크](dfsutil-link.md)|\)링크 \(폴더를 표시, 생성, 제거 또는 이동 합니다.|
 |[dfsutil 대상](dfsutil-target.md)|폴더 대상 또는 네임 스페이스 서버를 표시, 만들기, 제거 합니다.|
 |[dfsutil 속성](dfsutil-property.md)|표시 하거나 폴더 대상 또는 네임 스페이스 서버를 수정 합니다.|
 |[dfsutil 클라이언트](dfsutil-client.md)|클라이언트 정보 또는 레지스트리 키를 표시 하거나 수정 합니다.|
 |[dfsutil 서버](dfsutil-server.md)|네임 스페이스 구성을 표시 하거나 수정 합니다.|
-|[dfsutil Diag](dfsutil-diag.md)|진단을 수행 하거나 dfsdirs @ no__t-0dfspath를 확인 합니다.|
-|[dfsutil 도메인](dfsutil-domain.md)|도메인의 모든 도메인 @ no__t-0based 네임 스페이스를 표시 합니다.|
+|[dfsutil Diag](dfsutil-diag.md)|진단을 수행 하거나 dfsdirs\/dfspath를 확인 합니다.|
+|[dfsutil 도메인](dfsutil-domain.md)|도메인의 모든 도메인\-기반 네임 스페이스를 표시 합니다.|
 |[dfsutil 캐시](dfsutil-cache.md)|클라이언트 캐시를 표시 하거나 플러시합니다.|
 |[dfsutil oldcli](dfsutil-oldcli.md)|Dfsutil \/oldcli 명령을 사용 하 여 원래 dfsutil 구문을 사용 합니다.|
 
 ## <a name="remarks-optional-section"></a>설명 <optional section>
-명령 끝에 네임 스페이스 서버 @ no__t-1과 같은 개체 @no__t를 지정 하는 경우 대부분의 명령은 추가 매개 변수 또는 명령을 요구 하지 않고 개체에 대 한 정보를 표시 합니다. 예를 들어 dfsutil Root 명령을 사용할 때 네임 스페이스 루트를 명령에 추가 하 여 루트에 대 한 정보를 볼 수 있습니다.
+명령 끝에 네임 스페이스 서버\)와 같은 개체 \(지정 하면 대부분의 명령에 추가 매개 변수 또는 명령을 요구 하지 않고 개체에 대 한 정보가 표시 됩니다. 예를 들어 dfsutil Root 명령을 사용할 때 네임 스페이스 루트를 명령에 추가 하 여 루트에 대 한 정보를 볼 수 있습니다.
 
 ## <a name="BKMK_Examples"></a>예와
-@no__t 여기에서 예제에 대 한 자세한 설명을 입력 합니다. &gt;
+여기 &lt;예제에 대 한 자세한 설명을 입력 합니다.&gt;
 
 ```
 This /is /the /example /of /calling /command /with /parameters
 ```
 
-@no__t-다른 예제에 대 한 자세한 설명을 입력 합니다. &gt;
+여기에서 다른 예제에 대 한 자세한 설명을 입력할 수 있습니다. &lt;&gt;
 
 ```
 This /is /a:different /example

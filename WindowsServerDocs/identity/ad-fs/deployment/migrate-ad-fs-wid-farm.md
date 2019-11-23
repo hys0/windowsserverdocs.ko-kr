@@ -39,7 +39,7 @@ WID 팜을 Windows Server 2012로 마이그레이션하려면 다음 절차를 �
 >  
 > 도달 하면 합니다 **페더레이션 서비스 이름 지정** 페이지에 "준비" WID 팜 마이그레이션에 기록한 SSL 인증서를 선택 해야 합니다 [AD FS 2.0 WID 팜 마이그레이션 준비](prepare-to-migrate-a-wid-farm.md).  
   
-5. 이 서버에서 AD FS 웹 페이지를 업데이트합니다. 마이그레이션을 준비 하는 동안 사용자 지정 AD FS 웹 페이지를 백업한 경우에는 백업 데이터를 사용 하 여 기본적으로 **%systemdrive%\inetpub\adfs\ls** 디렉터리에 생성 된 기본 AD FS 웹 페이지를 AD FS의 결과로 덮어써야 합니다. Windows Server 2012에 대 한 구성입니다.  
+5. 이 서버에서 AD FS 웹 페이지를 업데이트합니다. 마이그레이션을 준비 하는 동안 사용자 지정 된 AD FS 웹 페이지를 백업한 경우 Windows Server 2012의 AD FS 구성으로 인해 기본적으로 **%systemdrive%\inetpub\adfs\ls** 디렉터리에 생성 된 기본 AD FS 웹 페이지를 덮어쓰도록 백업 데이터를 사용 해야 합니다.  
   
 6. 방금 Windows Server 2012로 업그레이드 한 서버를 부하 분산 장치에 추가 합니다.  
   
@@ -65,7 +65,7 @@ WID 팜을 Windows Server 2012로 마이그레이션하려면 다음 절차를 �
 >  
 > 도달 하면 합니다 **페더레이션 서비스 이름 지정** 페이지에서 기록한 SSL 인증서를 선택 해야 합니다 [AD FS 2.0 WID 팜 마이그레이션 준비](prepare-to-migrate-a-wid-farm.md)합니다.  
   
-13. WID 팜의 이 마지막 서버에서 AD FS 웹 페이지를 업데이트합니다. 마이그레이션을 준비 하는 동안 사용자 지정 된 AD FS 웹 페이지를 백업한 경우 백업 데이터를 사용 하 여 기본적으로 **%systemdrive%\inetpub\adfs\ls** 디렉터리에 생성 된 기본 AD FS 웹 페이지를 AD FS의 결과로 덮어쓸 수 있습니다. Windows Server 2012에 대 한 구성입니다.  
+13. WID 팜의 이 마지막 서버에서 AD FS 웹 페이지를 업데이트합니다. 마이그레이션을 준비 하는 동안 사용자 지정 된 AD FS 웹 페이지를 백업한 경우 Windows Server 2012에 대 한 AD FS 구성의 결과로, 기본적으로 **%systemdrive%\inetpub\adfs\ls** 디렉터리에 생성 된 기본 AD FS 웹 페이지를 백업 데이터를 사용 하 여 덮어씁니다.  
   
 14. 방금 Windows Server 2012로 업그레이드 한 WID 팜의이 마지막 서버를 부하 분산 장치에 추가 합니다.  
   
@@ -73,7 +73,7 @@ WID 팜을 Windows Server 2012로 마이그레이션하려면 다음 절차를 �
   
 ## <a name="next-steps"></a>다음 단계
  [AD FS 2.0 페더레이션 서버 마이그레이션 준비](prepare-to-migrate-ad-fs-fed-server.md)   
- [AD FS 2.0 페더레이션 서버 프록시 @no__t 마이그레이션 준비](prepare-to-migrate-ad-fs-fed-proxy.md)-1  
+ [AD FS 2.0 페더레이션 서버 프록시  마이그레이션 준비](prepare-to-migrate-ad-fs-fed-proxy.md)  
  [AD FS 2.0 페더레이션 서버 마이그레이션](migrate-the-ad-fs-fed-server.md)   
- [AD FS 2.0 페더레이션 서버 프록시](migrate-the-ad-fs-2-fed-server-proxy.md) 을 마이그레이션합니다.  
+ [AD FS 2.0 페더레이션 서버 프록시  마이그레이션](migrate-the-ad-fs-2-fed-server-proxy.md)  
  [AD FS 1.1 웹 에이전트 마이그레이션](migrate-the-ad-fs-web-agent.md)

@@ -19,11 +19,11 @@ ms.locfileid: "71364732"
 ---
 # <a name="serial-ports-should-not-be-configured-on-generation-2-virtual-machines"></a>2 세대 가상 컴퓨터에서 직렬 포트를 구성 해야
 
->적용 대상: Windows Server 2016
+>적용 대상: Windows Server 2016
 
 모범 사례 분석기 및 검사에 대한 자세한 내용은 [모범 사례 분석기 검사 실행 및 검사 결과 관리](https://go.microsoft.com/fwlink/p/?LinkID=223177)를 참조하세요.  
   
-|속성|설명|  
+|속성|세부 정보|  
 |-|-|  
 |**운영 체제**|Windows Server 2016|  
 |**제품/기능**|Hyper-V|  
@@ -38,10 +38,10 @@ ms.locfileid: "71364732"
 ## <a name="impact"></a>**식**  
 *다음 가상 컴퓨터에 대 한 성능에 영향을 줄 수 있습니다.*  
   
-@no__t-가상 머신 목록 >  
+가상 컴퓨터 \<목록 >  
   
 ## <a name="resolution"></a>**해결 방법**  
-*이 의도적인 경우 추가 작업이 필요 하지 않습니다. 그렇지 않은 경우에는 Hyper-v 관리자 또는 Windows PowerShell을 사용 하 여 가상 컴퓨터의 직렬 포트에서 연결 문자열을 제거 하는 것이 좋습니다.*  
+*의도적인 경우 추가 작업이 필요 하지 않습니다. 그렇지 않은 경우에는 Hyper-v 관리자 또는 Windows PowerShell을 사용 하 여 가상 컴퓨터의 직렬 포트에서 연결 문자열을 제거 하는 것이 좋습니다.*  
   
 
 

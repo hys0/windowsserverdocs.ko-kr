@@ -19,11 +19,11 @@ ms.locfileid: "71366693"
 ---
 # <a name="a-virtual-san-should-be-associated-with-a-physical-host-bus-adapter"></a>가상 SAN 실제 호스트 버스 어댑터와 연결 되어야 합니다.
 
->적용 대상: Windows Server 2016
+>적용 대상: Windows Server 2016
 
 모범 사례 분석기 및 검사에 대한 자세한 내용은 [모범 사례 분석기 검사 실행 및 검사 결과 관리](https://go.microsoft.com/fwlink/p/?LinkID=223177)를 참조하세요.  
   
-|속성|설명|  
+|속성|세부 정보|  
 |-|-|  
 |**운영 체제**|Windows Server 2016|  
 |**제품/기능**|Hyper-V|  
@@ -37,10 +37,10 @@ ms.locfileid: "71366693"
 *HBA (호스트 버스 어댑터)에 연결 하지 않고 가상 SAN (저장 영역 네트워크)을 구성 했습니다.*  
   
 ## <a name="impact"></a>**식**  
-구성 된 가상 SAN에 연결 된 가상 파이버 채널 어댑터를 사용 하 여 구성 하는 경우 *A 가상 컴퓨터는 시작 되지 않습니다. 이는 다음과 같은 가상 San에 영향을 줍니다.*  
+*구성 된 가상 SAN에 연결 된 가상 파이버 채널 어댑터를 사용 하 여 가상 컴퓨터를 구성 하면 가상 컴퓨터가 시작 되지 않습니다. 이는 다음과 같은 가상 San에 영향을 줍니다.*  
   
   
-@no__t-가상 San의 목록 >  
+가상 San의 \<목록 >  
   
   
 ## <a name="resolution"></a>**해결 방법**  

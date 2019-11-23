@@ -38,7 +38,7 @@ ms.locfileid: "71392980"
 
 ### <a name="using-powershell"></a>PowerShell 사용
 
-관리자 권한으로 세션을 열고 \<vm name @ no__t-1 및 \<path @ no__t-3을 바꾼 후 다음과 같은 명령을 실행 합니다.
+관리자 권한으로 세션을 열고 \<vm 이름\> 및 \<경로\>를 바꾼 후 다음과 같은 명령을 실행 합니다.
 
 ```powershell
 Export-VM -Name \<vm name\> -Path \<path\>

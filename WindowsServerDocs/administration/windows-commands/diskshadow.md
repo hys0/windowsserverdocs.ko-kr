@@ -22,9 +22,9 @@ ms.locfileid: "71377773"
 ---
 # <a name="diskshadow"></a>diskshadow
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-diskshadow는 볼륨 섀도 복사본 서비스에서 제공 하는 기능을 제공 하는 도구입니다 \(VSS @ no__t-1. 기본적으로 diskshadow는 diskraid 또는 DiskPart와 유사한 대화형 명령 인터프리터를 사용 합니다. diskshadow에는 스크립트 가능한 모드도 포함 됩니다.  
+diskshadow는 VSS\)\(볼륨 섀도 복사본 서비스에서 제공 하는 기능을 제공 하는 도구입니다. 기본적으로 diskshadow는 diskraid 또는 DiskPart와 유사한 대화형 명령 인터프리터를 사용 합니다. diskshadow에는 스크립트 가능한 모드도 포함 됩니다.  
   
 > [!NOTE]  
 > Diskshadow를 실행 하려면 최소한 로컬 Administrators 그룹의 구성원 이거나이에 해당 하는 권한이 있어야 합니다.  
@@ -76,15 +76,15 @@ Diskshadow 명령 인터프리터 나 스크립트 파일을 통해 다음 명�
 -   섀도 복사본을 만들려면 최소한 **추가** 및 **만들기** 만 필요 합니다. 그러나 이렇게 하면 컨텍스트 및 옵션 설정이 상실 복사 백업이 되며 백업 실행 스크립트가 없는 섀도 복사본만 생성 됩니다.  
   
 ## <a name="BKMK_examples"></a>예와  
-백업에 대 한 섀도 복사본을 만드는 명령의 샘플 시퀀스입니다. 이 파일을 파일에 스크립트로 저장 하 고 diskshadow \/ 스크립트를 사용 하 여 실행할 수 있습니다.  
+백업에 대 한 섀도 복사본을 만드는 명령의 샘플 시퀀스입니다. 이 파일을 파일에 스크립트로 저장 하 고 diskshadow \/s 스크립트를 사용 하 여 실행할 수 있습니다.  
   
 다음을 가정 합니다.  
   
--   C: @no__t 0diskshadowdata 이라는 기존 디렉터리가 있습니다.  
+-   C:\\diskshadowdata 이라는 기존 디렉터리가 있습니다.  
   
 -   시스템 볼륨은 C:이 고 데이터 볼륨은 d:입니다.  
   
--   C: \\diskshadowdata에는 backupscript .cmd 파일이 있습니다.  
+-   C:\\diskshadowdata에는 backupscript .cmd 파일이 있습니다.  
   
 -   Backupscript .cmd 파일은 섀도 데이터 p: 및 q:를 백업 드라이브에 복사 하는 작업을 수행 합니다.  
   

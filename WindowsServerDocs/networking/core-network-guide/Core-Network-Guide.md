@@ -224,7 +224,7 @@ RFC 1918에 지정된 개인 IP 주소 범위를 사용할 때는 이 주소로 
 핵심 네트워크의 각 서버에 대해 컴퓨터 이름을 바꾸고 컴퓨터에 대해 고정 IPv4 주소 및 기타 TCP/IP 속성을 할당 및 구성해야 합니다.
 
 #### <a name="planning-naming-conventions-for-computers-and-devices"></a>컴퓨터 및 장치에 대한 명명 규칙 계획
-네트워크에서의 일관성을 유지하기 위해 서버, 프린터 및 기타 장치에 일관된 이름을 사용하는 것이 좋습니다. 컴퓨터 이름은 사용자와 관리자가 서버, 프린터 또는 기타 장치의 용도와 위치를 쉽게 파악하는 데 도움이 될 수 있습니다. 예를 들어 세 개의 DNS 서버 (샌프란시스코에 하나, 로스앤젤레스에 하나, 시카고에 하나)를 사용 하는 경우 명명 규칙 *서버 함수*-*location*-*number*를 사용할 수 있습니다.
+네트워크에서의 일관성을 유지하기 위해 서버, 프린터 및 기타 장치에 일관된 이름을 사용하는 것이 좋습니다. 컴퓨터 이름은 사용자와 관리자가 서버, 프린터 또는 기타 장치의 용도와 위치를 쉽게 파악하는 데 도움이 될 수 있습니다. 예를 들어 세 개의 DNS 서버가 샌프란시스코에 하나, 로스앤젤레스에 하나, 시카고에 하나씩 있는 경우 명명 규칙 *서버 함수*-*위치*-*번호*를 사용할 수 있습니다.
 
 -   DNS-DEN-01. 이 이름은 콜로라도, 덴버의 DNS 서버를 나타냅니다. 덴버에 DNS 서버가 더 추가되면 DNS-DEN-02 및 DNS-DEN-03과 같이 이름의 숫자 값을 늘릴 수 있습니다.
 
@@ -285,10 +285,10 @@ AD DS를 설치 하는 동안 사용할 포리스트 기능 수준을 선택 해
 |------------------------|-------------------|
 |전체 DNS 이름|예를 들면 다음과 같습니다.<br /><br />-corp.contoso.com<br />-example.com|
 |포리스트 기능 수준|-Windows Server 2008 <br />-Windows Server 2008 R2 <br />-Windows Server 2012 <br />-Windows Server 2012 R2 <br />-Windows Server 2016|
-|Active Directory Domain Services 데이터베이스 폴더 위치|E:\Configuration @ no__t-0<br /><br />또는 기본 위치를 적용합니다.|
-|Active Directory Domain Services 로그 파일 폴더 위치|E:\Configuration @ no__t-0<br /><br />또는 기본 위치를 적용합니다.|
-|Active Directory Domain Services SYSVOL 폴더 위치|E:\Configuration @ no__t-0<br /><br />또는 기본 위치를 적용합니다.|
-|디렉터리 복원 모드 관리자 암호|**J @ no__t-1p2leO4 $ F**|
+|Active Directory Domain Services 데이터베이스 폴더 위치|E:\Configuration\\<br /><br />또는 기본 위치를 적용합니다.|
+|Active Directory Domain Services 로그 파일 폴더 위치|E:\Configuration\\<br /><br />또는 기본 위치를 적용합니다.|
+|Active Directory Domain Services SYSVOL 폴더 위치|E:\Configuration\\<br /><br />또는 기본 위치를 적용합니다.|
+|디렉터리 복원 모드 관리자 암호|**J\*p2leO4 $ F**|
 |응답 파일 이름(옵션)|**AD DS_AnswerFile**|
 
 #### <a name="planning-dns-zones"></a>DNS 영역 계획
@@ -401,7 +401,7 @@ DHCP 서버에 대해 범위를 만들면 DHCP 서버가 컴퓨터 및 기타 �
 #### <a name="planning-tcpip-static-configuration"></a>TCP/IP 고정 구성 계획
 라우터, DHCP 서버 및 DNS 서버와 같은 특정 장치는 고정 IP 주소로 구성해야 합니다. 또한 프린터와 같이 항상 같은 IP 주소를 사용하는 것이 편리한 장치도 있습니다. 각 서브넷에 대해 정적으로 구성할 장치를 나열한 다음 고정적으로 구성된 장치의 IP 주소를 DHCP 서버에서 임대하지 않도록 하기 위해 DHCP 서버에서 사용할 제외 범위를 계획합니다. 제외 범위는 DHCP 서비스 제공에서 제외되는 범위로, 범위 내의 제한된 연속 IP 주소입니다. 제외 범위에 속하는 주소는 서버가 네트워크의 DHCP 클라이언트에 제공하지 않습니다.
 
-예를 들어 서브넷의 IP 주소 범위가 192.168.0.1 ~ 192.168.0.254이 고 고정 IP 주소를 사용 하 여 10 개의 장치를 구성 하려는 경우에는 192.168.0의 제외 범위를 만들 수 있습니다. IP 주소를 10 개 이상 포함 하는 *x* 범위: 192.168.0.1 ~ 192.168.0.15.
+예를 들어 서브넷에 대한 IP 주소 범위가 192.168.0.1부터 192.168.0.254까지이며 고정 IP 주소로 구성할 장치가 10개인 경우에는 10개 이상의 IP 주소가 포함된 192.168.0.*x* 범위에 대한 제외 범위(192.168.0.1 - 192.168.0.15)를 만들 수 있습니다.
 
 이 예제에서는 제외되는 IP 주소 중 10개를 고정 IP 주소를 가진 서버 및 기타 장치로 구성하고 나머지 5개의 주소는 향후에 추가할 수 있는 새 장치의 고정 구성을 위해 남겨둡니다. 이 제외 범위를 적용하면 DHCP 서버는 192.168.0.16부터 192.168.0.254까지의 주소 풀을 사용합니다.
 
@@ -412,7 +412,7 @@ DHCP 서버에 대해 범위를 만들면 DHCP 서버가 컴퓨터 및 기타 �
 |네트워크 연결 바인딩|이더넷|
 |DNS 서버 설정|DC1.corp.contoso.com|
 |기본 설정 DNS 서버 IP 주소|10.0.0.2|
-|범위 추가 대화 상자 값<br /><br />1.  범위 이름<br />2.  시작 IP 주소<br />3.  끝 IP 주소<br />4.  서브넷 마스크<br />5.  기본 게이트웨이(옵션)<br />6.  임대 기간|1.  주 서브넷<br />2.10.0.0.1<br />3.10.0.0.254<br />4.255.255.255.0<br />5.10.0.0.1<br />6.8 일|
+|범위 추가 대화 상자 값<br /><br />1. 범위 이름<br />2. 시작 IP 주소<br />3. 끝 IP 주소<br />4. 서브넷 마스크<br />5. 기본 게이트웨이 (옵션)<br />6. 임대 기간|1. 기본 서브넷<br />2.10.0.0.1<br />3.10.0.0.254<br />4.255.255.255.0<br />5.10.0.0.1<br />6.8 일|
 |IPv6 DHCP 서버 작동 모드|사용 안 함|
 
 ## <a name="BKMK_deployment"></a>핵심 네트워크 배포
@@ -501,7 +501,7 @@ Active Directory Domain Services 또는 DHCP와 같은 다른 기술을 설치�
 
 9. **대체 DNS 서버**에 대체 DNS 서버(있는 경우)의 IP 주소를 입력합니다. 로컬 컴퓨터를 대체 DNS 서버로 사용하려는 경우 로컬 컴퓨터의 IP 주소를 입력합니다.
 
-10. **확인**을 클릭하고 **닫기**를 클릭합니다.
+10. **확인**을 클릭한 다음 **닫기**를 클릭합니다.
 
 > [!NOTE]
 > 다른 Microsoft 운영 체제를 실행 하는 컴퓨터에서 고정 IP 주소를 구성 하는 방법에 대 한 자세한 내용은 [부록 B-고정 ip 주소 구성](#BKMK_B)을 참조 하세요.
@@ -702,7 +702,7 @@ Get-WindowsFeature
 
     선택 위치
 
-    -   **사용자 및 컴퓨터**/*도메인 노드*/*폴더를 포함 하는 폴더* Active Directory
+    -   **사용자 및 컴퓨터 Active Directory** *그룹을 포함 하는* *도메인 노드*/폴더/
 
 3.  세부 정보 창에서 사용자나 컴퓨터와 같이 그룹에 추가할 개체를 마우스 오른쪽 단추로 클릭한 후 **속성**을 클릭합니다. 개체의 **속성** 대화 상자가 열립니다. **소속 그룹** 탭을 클릭합니다.
 
@@ -1009,7 +1009,7 @@ DHCP(Dynamic Host Configuration Protocol) 서버 역할을 실행하는 컴퓨�
 #### <a name="BKMK_deployNPS1"></a>NPS1 배포
 NPS(네트워크 정책 서버) 서버는 VPN(가상 사설망) 서버, 무선 액세스 지점 및 802.1X 인증 스위치와 같은 다른 네트워크 액세스 기술을 배포하기 위한 준비 단계로 설치합니다.
 
-NPS (네트워크 정책 서버)를 사용 하면 다음과 같은 기능을 통해 네트워크 정책을 중앙에서 구성 하 고 관리할 수 있습니다. (RADIUS) 서버 및 RADIUS 프록시를 RADIUS(Remote Authentication Dial-In User Service) 합니다.
+NPS (네트워크 정책 서버)를 사용 하면 다음 기능을 사용 하 여 네트워크 정책을 중앙에서 구성 하 고 관리할 수 있습니다. RADIUS(Remote Authentication Dial-In User Service) (RADIUS) 서버 및 RADIUS 프록시.
 
 NPS는 핵심 네트워크의 선택적 구성 요소이지만 다음 중 한 가지라도 해당하는 경우에는 NPS를 설치해야 합니다.
 
@@ -1050,7 +1050,7 @@ NPS를 RADIUS(Remote Authentication Dial-In User Service) 서버로 사용하는
 역할 및 기능 추가 마법사를 사용 하 여 NPS (네트워크 정책 서버)를 설치 하려면이 절차를 사용할 수 있습니다. NPS는 네트워크 정책 및 액세스 서비스 서버 역할의 역할 서비스입니다.
 
 > [!NOTE]
-> 기본적으로 NPS는 설치된 모든 네트워크 어댑터의 포트 1812, 1813, 1645 및 1646에서 RADIUS 트래픽을 수신 대기합니다. NPS를 설치할 때 고급 보안이 포함 된 Windows 방화벽을 사용 하는 경우 인터넷 프로토콜 버전 6 \(IPv6 @ no__t-1 및 IPv4 트래픽 모두에 대 한 설치 프로세스 중에 이러한 포트에 대 한 방화벽 예외가 자동으로 생성 됩니다. 네트워크 액세스 서버가 이러한 기본값 이외의 포트를 통해 RADIUS 트래픽을 보내도록 구성 된 경우에는 NPS 설치 중에 고급 보안이 설정 된 Windows 방화벽에서 생성 된 예외를 제거 하 고에서 사용 하는 포트에 대 한 예외를 만듭니다. RADIUS 트래픽
+> 기본적으로 NPS는 설치된 모든 네트워크 어댑터의 포트 1812, 1813, 1645 및 1646에서 RADIUS 트래픽을 수신 대기합니다. NPS를 설치할 때 고급 보안이 포함 된 Windows 방화벽을 사용 하는 경우 인터넷 프로토콜 버전 6 \(IPv6\)와 IPv4 트래픽 모두에 대 한 설치 프로세스 중에 이러한 포트에 대 한 방화벽 예외가 자동으로 생성 됩니다. 네트워크 액세스 서버가 이러한 기본값 이외의 포트를 통해 RADIUS 트래픽을 보내도록 구성 된 경우에는 NPS 설치 중에 고급 보안이 설정 된 Windows 방화벽에서 생성 된 예외를 제거 하 고에서 사용 하는 포트에 대 한 예외를 만듭니다. RADIUS 트래픽
 
 **관리 자격 증명**
 
@@ -1162,15 +1162,15 @@ Windows Server 2016의 웹 서버 (IIS) 역할은 웹 사이트, 서비스 및 �
 
 -   [Windows Server 2016에 Active Directory Domain Services (AD DS)의 새로운 기능](https://technet.microsoft.com/library/mt163897.aspx)
 
--   [Active Directory Domain Services 개요](https://technet.microsoft.com/library/hh831484.aspx) https://technet.microsoft.com/library/hh831484.aspx.
+-   https://technet.microsoft.com/library/hh831484.aspx[개요를 Active Directory Domain Services](https://technet.microsoft.com/library/hh831484.aspx) 합니다.
 
--   @No__t-1의 [DNS (Domain Name System) 개요](https://technet.microsoft.com/library/hh831667.aspx)
+-   https://technet.microsoft.com/library/hh831667.aspx[DNS (Domain Name System) 개요](https://technet.microsoft.com/library/hh831667.aspx)
 
 -   [DNS 관리자 역할 구현](https://technet.microsoft.com/library/cc756152(WS.10).aspx)
 
 -   [DHCP (Dynamic Host Configuration Protocol) 개요](https://technet.microsoft.com/library/hh831825.aspx) https://technet.microsoft.com/library/hh831825.aspx.
 
--   [네트워크 정책 및 액세스 서비스 개요](https://technet.microsoft.com/library/hh831683.aspx) https://technet.microsoft.com/library/hh831683.aspx.
+-   https://technet.microsoft.com/library/hh831683.aspx에서 [네트워크 정책 및 액세스 서비스 개요](https://technet.microsoft.com/library/hh831683.aspx) 를 사용 합니다.
 
 -   [웹 서버 (IIS) 개요](https://technet.microsoft.com/library/hh831725.aspx) https://technet.microsoft.com/library/hh831725.aspx.
 
@@ -1264,7 +1264,7 @@ Windows Server 2016의 웹 서버 (IIS) 역할은 웹 사이트, 서비스 및 �
 
 10. **대체 DNS 서버**에 대체 DNS 서버(있는 경우)의 IP 주소를 입력합니다. 로컬 컴퓨터를 대체 DNS 서버로 사용하려는 경우 로컬 컴퓨터의 IP 주소를 입력합니다.
 
-11. **확인**을 클릭하고 **닫기**를 클릭합니다.
+11. **확인**을 클릭한 다음 **닫기**를 클릭합니다.
 
 ### <a name="bkmk_NetFndtn_Pln_CfgStatic08"></a>Windows Server 2008
 이 절차를 수행하려면 최소한 **Administrators** 그룹의 구성원이거나 이와 동등한 자격이 필요합니다.
@@ -1291,7 +1291,7 @@ Windows Server 2016의 웹 서버 (IIS) 역할은 웹 사이트, 서비스 및 �
 
 10. **대체 DNS 서버**에 대체 DNS 서버(있는 경우)의 IP 주소를 입력합니다. 로컬 컴퓨터를 대체 DNS 서버로 사용하려는 경우 로컬 컴퓨터의 IP 주소를 입력합니다.
 
-11. **확인**을 클릭하고 **닫기**를 클릭합니다.
+11. **확인**을 클릭한 다음 **닫기**를 클릭합니다.
 
 ## <a name="BKMK_C"></a>부록 C-도메인에 컴퓨터 가입
 이러한 절차를 사용 하 여 Windows Server 2008 R2, Windows 7, Windows Server 2008 및 Windows Vista를 실행 하는 컴퓨터를 도메인에 조인할 수 있습니다.
@@ -1437,9 +1437,9 @@ Windows Server 핵심 네트워크 배포 절차 [새 포리스트에 대한 AD 
 |-----------------------|------------------|----------|
 |전체 DNS 이름|corp.contoso.com||
 |포리스트 기능 수준|Windows Server 2003||
-|Active Directory Domain Services 데이터베이스 폴더 위치|E:\Configuration @ no__t-0<br /><br />또는 기본 위치를 적용합니다.||
-|Active Directory Domain Services 로그 파일 폴더 위치|E:\Configuration @ no__t-0<br /><br />또는 기본 위치를 적용합니다.||
-|Active Directory Domain Services SYSVOL 폴더 위치|E:\Configuration @ no__t-0<br /><br />또는 기본 위치를 적용합니다.||
+|Active Directory Domain Services 데이터베이스 폴더 위치|E:\Configuration\\<br /><br />또는 기본 위치를 적용합니다.||
+|Active Directory Domain Services 로그 파일 폴더 위치|E:\Configuration\\<br /><br />또는 기본 위치를 적용합니다.||
+|Active Directory Domain Services SYSVOL 폴더 위치|E:\Configuration\\<br /><br />또는 기본 위치를 적용합니다.||
 |디렉터리 복원 모드 관리자 암호|J*p2leO4$F||
 |응답 파일 이름(옵션)|AD DS_AnswerFile||
 

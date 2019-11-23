@@ -23,9 +23,9 @@ ms.locfileid: "71388322"
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-CLIENT2는 Windows Server 2016 서버에서 실행 되는 원격 액세스의 이전 버전과의 호환성을 보여 주는 데 사용 되는 Windows 7 @ no__t 컴퓨터입니다.  
+CLIENT2는 Windows Server 2016 서버에서 실행 되는 원격 액세스의 이전 버전과의 호환성을 보여 주는 데 사용 되는 Windows 7&reg; 컴퓨터입니다.  
   
-1. CLIENT2에 운영 체제를 설치 합니다. CLIENT2에 Windows @ no__t-0 7 Enterprise 또는 Windows @ no__t-1 7 Ultimate를 설치 합니다.  
+1. CLIENT2에 운영 체제를 설치 합니다. CLIENT2에 Windows&reg; 7 Enterprise 또는 Windows&reg; 7 Ultimate를 설치 합니다.  
   
 2. CLIENT2를 CORP 도메인에 가입 시킵니다. CLIENT2을 corp.contoso.com 도메인에 가입 시킵니다.  
   

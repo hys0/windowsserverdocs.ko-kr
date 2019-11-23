@@ -23,7 +23,7 @@ ms.locfileid: "71381574"
 
 BITS 전송 작업과 연결 된 [도우미 토큰](/windows/desktop/bits/helper-tokens-for-bits-transfer-jobs) 의 사용 플래그를 반환 합니다.
 
-**BITS 3.0 및 이전 버전**: 지원되지 않습니다.
+**BITS 3.0 및 이전 버전**: 지원 되지 않습니다.
 
 ## <a name="syntax"></a>구문
 

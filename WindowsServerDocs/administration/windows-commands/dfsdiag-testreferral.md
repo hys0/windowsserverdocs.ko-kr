@@ -22,19 +22,19 @@ ms.locfileid: "71378361"
 ---
 # <a name="dfsdiag-testreferral"></a>dfsdiag TestReferral
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 분산 파일 시스템 확인 \(DFS\) 다음 테스트를 수행 하 여 조회 합니다.  
   
 -   인수 없이 DFSpath 매개 변수를 사용 하는 경우이 명령은 조회 목록에 트러스트 된 도메인이 모두 포함 되는지 확인 합니다.  
   
--   도메인을 지정 하는 경우이 명령은 도메인 컨트롤러의 상태 검사를 수행 하 \(dfsdiag \/testdcs @ no__t-2를 수행 하 고 로컬 호스트의 사이트 연결 및 도메인 캐시를 테스트 합니다.  
+-   도메인을 지정 하는 경우이 명령은 도메인 컨트롤러의 상태 검사를 수행 하 \(dfsdiag \/testdcs\) 하 고 로컬 호스트의 사이트 연결 및 도메인 캐시를 테스트 합니다.  
   
--   도메인을 지정 하는 경우와 \\SYSvol 또는 \\NETS를 지정 하는 것 외에도,이 명령은 SYSvol 또는 NETLOGON 조회의 TTL (time To @no__t Live)이 다음의 기본값을 일치 하는지 확인 합니다. 900 초.  
+-   도메인을 지정 하 고 \\SYSvol 또는 \\NETLOGON을 지정 하는 것 외에도 도메인을 지정 하는 것과 동일한 상태 검사를 수행 하는 것 외에도,이 명령은 SYSvol 또는 NETLOGON 조회에 대 한 TTL (time To Live \(TTL\) 900 초의 기본값을 일치 하는지 확인 합니다.  
   
--   도메인을 지정 하는 경우와 동일한 상태 검사를 수행 하는 것 외에도 네임 스페이스 루트를 지정 하는 경우 명령은 0dfsdiag \/Testdfs Config @ no__t-2와 네임 스페이스 무결성 검사 @no__t-@no__ 3dfsdiag를 @no__t 합니다. t-4Testdfs 무결성 @ no__t-5  
+-   도메인을 지정 하는 경우와 동일한 상태 검사를 수행 하는 것 외에도 네임 스페이스 루트를 지정 하는 경우 명령은 dfsdiag \/Testdfs 구성\) \(DFS 구성 검사를 수행 하 고, 네임 스페이스 무결성 검사 \(dfsdiag \/Testdfs 무결성\)을 수행 합니다.  
   
--   네임 스페이스 루트를 지정 하는 경우와 같은 상태 검사를 수행 하는 것 외에도 DFS 폴더 \(link @ no__t-1을 지정 하는 경우 명령은 폴더 대상 \(dfsdiag \/testsites @ no__t-4의 사이트 구성에 대 한 유효성을 검사 하 고 유효성을 검사 합니다. 로컬 호스트의 사이트 연결입니다.  
+-   DFS 폴더 \(링크\)를 지정 하는 경우, 네임 스페이스 루트를 지정 하는 것과 동일한 상태 검사를 수행 하는 것 외에도, 명령은 \(dfsdiag \/testsites\) 폴더 대상에 대 한 사이트 구성의 유효성을 검사 하 고 로컬 호스트의 사이트 연결에 대 한 유효성을 검사 합니다.  
   
   
   
@@ -48,8 +48,8 @@ dfsdiag /TestReferral /DFSpath:<DFS path for getting referrals> [/Full]
   
 |매개 변수|설명|  
 |-------|--------|  
-|@no__t 0DFSpath: <path for getting referrals>|이 DFS 경로 다음 중 하나일 수 있습니다.<br /><br />-    @ no__t-1blank @ no__t-2: 트러스트 된 도메인을 테스트 합니다.<br />-    @ no__t-1 @ no__t-2Domain: 도메인 컨트롤러 조회<br />-    @ no__t-1 @ no__t-2Domain @ no__t-3SYSvol: SYSvol 조회.<br />-    @ no__t-1 @ no__t-2Domain @ no__t-3NETA: NETLOGON 조회.<br />-    @ no__t-1 @ no__t-2 @ no__t @ no__t-4 @ no__t-5: 네임 스페이스 루트 조회.<br />-    @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7: DFS 폴더 \(link @ no__t-1 개 조회|  
-|\/Full|도메인 및 루트 조회에만 적용 됩니다. 레지스트리 및 active directory 도메인 서비스 \(AD DS @ no__t-1 간의 사이트 연결 정보 일관성을 확인 합니다.|  
+|\/DFSpath:<path for getting referrals>|이 DFS 경로 다음 중 하나일 수 있습니다.<br /><br />-   \(빈\): 트러스트 된 도메인을 테스트 합니다.<br />-   \\\\도메인: 도메인 컨트롤러 조회<br />-   \\\\도메인\\sysvol: SYSvol 조회.<br />NETLOGON: NETLOGON 조회를 \\도메인\\-   \\합니다.<br />-   \\\\<Domain or server>\\<Namespace Root>: 네임 스페이스 루트 조회<br />-   \\\\<Domain or server>\\<Namespace root>\\<DFS folder>: DFS 폴더 \(링크\) 조회|  
+|\/전체|도메인 및 루트 조회에만 적용 됩니다. 레지스트리와 active directory 도메인 서비스 \(AD DS\)간에 사이트 연결 정보의 일관성을 확인 합니다.|  
   
 ## <a name="BKMK_Examples"></a>예와  
 TBD를 입력 합니다.  

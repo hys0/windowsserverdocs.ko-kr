@@ -36,7 +36,7 @@ bdehdcfg -target {default|unallocated|<DriveLetter> shrink|<DriveLetter> merge} 
 
 |매개 변수|설명|
 |---------|-----------|
-|@no__t 0DriveLetter >|지정 된 대상 드라이브에 할당할 드라이브 문자를 정의 합니다.|
+|\<r >|지정 된 대상 드라이브에 할당할 드라이브 문자를 정의 합니다.|
 
 ## <a name="remarks"></a>설명
 

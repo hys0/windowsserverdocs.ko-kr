@@ -39,7 +39,7 @@ Windows Server 2008 및 Windows Server 2008 r 2에 설치 하는 단계는 [Wind
 4. **서버 선택** 화면에서 **다음**을 클릭 합니다.
 5. **서버 역할** 화면에서 **다음**을 클릭 합니다.
 6. **기능** 화면에서 **Windows Server 백업** 를 선택 하 고 **다음**
-    @ no__t-4install Backup @ no__t-5를 클릭 합니다.
+   ![백업 설치를 클릭](media/AD-Forest-Recovery-Backing-up-a-Full-Server/fullbackup2.png)
 7. **설치**를 클릭합니다.
 8. 설치가 완료 되 면 **닫기**를 클릭 합니다.
 

@@ -22,7 +22,7 @@ ms.locfileid: "71381856"
 ---
 # <a name="bitsadmin-cache"></a>bitsadmin 캐시
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 ## <a name="syntax"></a>구문
 
@@ -43,7 +43,7 @@ bitsadmin /Cache /SetExpirationtime
 
 |매개 변수|설명|
 |-------|--------|
-|[bitsadmin cache and help](bitsadmin-cache-and-help.md)|@No__t-1Cache 스위치에 대 한 @ no__t-0line 사용법 명령을 표시 합니다.|
+|[bitsadmin cache and help](bitsadmin-cache-and-help.md)|\/캐시 스위치에 대 한 명령줄 사용법\-표시 합니다.|
 |[bitsadmin cache and clear](bitsadmin-cache-clear.md)|로컬 캐시를 제거 합니다.|
 |[bitsadmin cache and delete](bitsadmin-cache-and-delete.md)|캐시 엔트리를 삭제 합니다.|
 |[bitsadmin cache and deleteurl](bitsadmin-cache-and-deleteurl.md)|지정 된 URL에 대 한 모든 캐시 엔트리를 삭제 합니다.|

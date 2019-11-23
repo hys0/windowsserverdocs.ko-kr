@@ -36,12 +36,12 @@ ksetup /delkdc <RealmName> <KDCName>
 
 |매개 변수|설명|
 |---------|-----------|
-|@no__t 0RealmName >|영역 이름은 CORP와 같은 대문자 DNS 이름으로 명시 됩니다. CONTOSO.COM는 **ksetup** 가 실행 될 때 기본 영역으로 나열 됩니다. 이 영역에서 다른 KDC를 삭제 하려고 합니다.|
-|@no__t 0KDCName >|KDC 이름은 대/소문자를 구분 하지 않고 정규화 된 도메인 이름 (예: mitkdc.contoso.com)으로 명시 됩니다.|
+|\<RealmName >|영역 이름은 CORP와 같은 대문자 DNS 이름으로 명시 됩니다. CONTOSO.COM는 **ksetup** 가 실행 될 때 기본 영역으로 나열 됩니다. 이 영역에서 다른 KDC를 삭제 하려고 합니다.|
+|\<KDCName >|KDC 이름은 대/소문자를 구분 하지 않고 정규화 된 도메인 이름 (예: mitkdc.contoso.com)으로 명시 됩니다.|
 
 ## <a name="remarks"></a>설명
 
-이러한 매핑은 **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\LSA\Kerberos\Domains**의 레지스트리에 저장 됩니다. 여러 컴퓨터에서 영역 구성 데이터를 제거 하려면 개별 컴퓨터에서 명시적으로 **ksetup** 를 사용 하는 대신 보안 구성 템플릿 스냅인 및 정책 배포를 사용 합니다.
+이러한 매핑은 **HKEY_LOCAL_MACHINE \system\currentcontrolset\control\lsa\kerberos\domains**의 레지스트리에 저장 됩니다. 여러 컴퓨터에서 영역 구성 데이터를 제거 하려면 개별 컴퓨터에서 명시적으로 **ksetup** 를 사용 하는 대신 보안 구성 템플릿 스냅인 및 정책 배포를 사용 합니다.
 
 Windows 2000 Server SP1 (서비스 팩 1) 및 이전 버전을 실행 하는 컴퓨터에서 컴퓨터를 다시 시작 해야 변경 된 영역 설정 구성이 사용 됩니다.
 

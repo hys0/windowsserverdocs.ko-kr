@@ -36,8 +36,8 @@ manage-bde -changekey [<Drive>] [<PathToExternalKeyDirectory>] [-computername <N
 
 |매개 변수|설명|
 |---------|-----------|
-|\<Drive >|드라이브 문자를 뒤에 콜론을 나타냅니다.|
-|@no__t 0PathToExternalKeyDirectory >|드라이브를 잠금 해제를 사용할 수 있는 외부 시작 키 파일을 저장할 디렉터리 위치를 나타냅니다.|
+|\<드라이브 >|드라이브 문자를 뒤에 콜론을 나타냅니다.|
+|\<PathToExternalKeyDirectory >|드라이브를 잠금 해제를 사용할 수 있는 외부 시작 키 파일을 저장할 디렉터리 위치를 나타냅니다.|
 |-computername|다른 컴퓨터에서 BitLocker 보호를 수정 하려면 bde.exe 사용될지를 지정 합니다. 사용할 수도 있습니다 **-cn** 이 명령의 축약된 버전으로 합니다.|
 |\<이름 >|BitLocker 보호를 수정할 수 있는 컴퓨터의 이름을 나타냅니다. 사용 가능한 값에는 컴퓨터의 NetBIOS 이름 및 컴퓨터의 IP 주소 포함 됩니다.|
 |-? 또는 /?|도움말에 대 한 간단한 명령 프롬프트에 표시 됩니다.|

@@ -15,11 +15,11 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71365695"
 ---
-# <a name="remote-direct-memory-access-rdma-and-switch-embedded-teaming-set"></a>원격 직접 메모리 액세스 \(RDMA @ no__t-1 및 스위치 포함 된 팀 \(SET @ no__t-3
+# <a name="remote-direct-memory-access-rdma-and-switch-embedded-teaming-set"></a>RDMA\)를 \(원격 직접 메모리 액세스를 설정 하 고 포함 된 팀 \(집합을 전환\)
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-이 항목에서는 스위치 포함 팀 \(SET @ no__t-3에 대 한 정보 외에도 Windows Server 2016에서 Hyper-v를 사용 하 여 원격 직접 메모리 액세스 \(RDMA @ no__t-1 인터페이스를 구성 하는 방법에 대 한 정보를 제공 합니다.  
+이 항목에서는 Windows Server 2016에서 Hyper-v를 사용 하 여 RDMA\) 인터페이스 \(원격 직접 메모리 액세스를 구성 하는 방법에 대 한 정보를 제공 하 고,\)집합 \(스위치 포함 팀에 대 한 정보를 제공 합니다.  
 
 > [!NOTE]
 > 이 항목 외에 다음 스위치 포함 된 팀 콘텐츠를 사용할 수 있습니다. 
@@ -38,11 +38,11 @@ Windows Server 2016 집합 없이 RDMA를 사용 하는 동안 더 적은 수의
 
 ![아키텍처 자체가 변경](../media/RDMA-and-SET/rdma_over.jpg)
 
-다음 섹션에서는 Windows PowerShell 명령을 사용 하 여 DCB (데이터 센터 브리징)를 사용 하도록 설정 하 고, RDMA 가상 NIC를 사용 하 여 Hyper-v 가상 스위치 \(vNIC @ no__t-1을 사용 하 고, SET 및 RDMA vNICs를 사용 하 여 Hyper-v 가상 스위치를 만드는 방법에 대 한 지침을 제공 합니다.
+다음 섹션에서는 Windows PowerShell 명령을 사용 하 여 DCB (데이터 센터 브리징)를 사용 하도록 설정 하 고, RDMA 가상 NIC \(vNIC\)를 사용 하 여 Hyper-v 가상 스위치를 만들고, SET 및 RDMA vNICs를 사용 하 여 Hyper-v 가상 스위치를 만드는 방법에 대 한 지침을 제공 합니다.
 
-### <a name="enable-data-center-bridging-dcb"></a>데이터 센터 브리징 사용 \(DCB @ no__t-1
+### <a name="enable-data-center-bridging-dcb"></a>DCB\) \(데이터 센터 브리징 사용
 
-Rdma에서 수렴 된 이더넷 \(roce\) 버전의 rdma를 사용 하기 전에 DCB를 사용 하도록 설정 해야 합니다.  인터넷 광역 RDMA 프로토콜 \(iWARP @ no__t 네트워크에는 필요 하지 않지만, 테스트는 모든 이더넷 기반 RDMA 기술이 DCB에서 더 잘 작동 하는 것으로 확인 되었습니다. 이 때문에 DCB를 사용 하 여 iWARP RDMA 배포에 대해서도 고려해 야 합니다.
+수렴 된 이더넷 \(RoCE\) 버전의 RDMA를 통해 RDMA를 사용 하기 전에 DCB를 사용 하도록 설정 해야 합니다.  인터넷 광역 RDMA 프로토콜 \(iWARP\) 네트워크에는 필요 하지 않지만 테스트는 모든 이더넷 기반 RDMA 기술이 DCB 보다 잘 작동 하는 것으로 확인 되었습니다. 이 때문에 DCB를 사용 하 여 iWARP RDMA 배포에 대해서도 고려해 야 합니다.
 
 다음 Windows PowerShell 예제 명령은 SMB 다이렉트에 대해 DCB를 사용 하도록 설정 하 고 구성 하는 방법을 보여 줍니다.
 
@@ -96,7 +96,7 @@ RDMA 기능 확인:
 
 ###  <a name="bkmk_set-rdma"></a>SET 및 RDMA vNICs를 사용 하 여 Hyper-v 가상 스위치 만들기
 
-RDMA 팀을 지 원하는 Hyper-v 가상 스위치의 Hyper-v 호스트 가상 네트워크 @no__t 어댑터에서 RDMA 크롤러를 사용 하려면 다음 예제 Windows PowerShell 명령을 사용할 수 있습니다.
+RDMA 팀을 지 원하는 Hyper-v 가상 스위치에서 vNICs\) \(Hyper-v 호스트 가상 네트워크 어댑터에서 RDMA 크롤러를 사용 하려면 다음 예제 Windows PowerShell 명령을 사용할 수 있습니다.
 
     New-VMSwitch -Name SETswitch -NetAdapterName "SLOT 2","SLOT 3" -EnableEmbeddedTeaming $true
 
@@ -146,7 +146,7 @@ RDMA 기능 확인 기능이 0이 아닌지 확인 합니다.
 
 ## <a name="bkmk_over"></a>개요 설정
 
-SET은 Hyper-v를 포함 하는 환경에서 사용할 수 있는 대체 NIC 팀 솔루션으로, Windows Server 2016의 소프트웨어 정의 네트워킹 \(SDN @ no__t-1 스택입니다. 일부 NIC 팀 기능은 Hyper-v 가상 스위치에 통합 하는 설정 합니다.
+SET은 Hyper-v를 포함 하는 환경에서 사용할 수 있는 대체 NIC 팀 솔루션으로, Windows Server 2016에 SDN\) \(SDN이 포함 된 소프트웨어를 정의 합니다. 일부 NIC 팀 기능은 Hyper-v 가상 스위치에 통합 하는 설정 합니다.
 
 집합 하나 및 8 개의 실제 이더넷 네트워크 어댑터 간에 하나 이상의 소프트웨어 기반 가상 네트워크 어댑터에 그룹화 할 수 있습니다. 이 가상 네트워크 어댑터에는 빠른 성능과 네트워크 어댑터 오류 발생 시 내결함성을 제공합니다.
 
@@ -173,42 +173,42 @@ Hyper-v 및 SDN 스택을 포함 하는 모든 버전의 Windows Server 2016에�
 
 ## <a name="bkmk_nics"></a>집합에 대해 지원 되는 Nic
 
-Windows Server 2016의 집합 팀에서 Windows 하드웨어 자격 및 로고 \(WHQL @ no__t-1 테스트를 통과 한 모든 이더넷 NIC를 사용할 수 있습니다. SET 팀의 구성원 인 모든 네트워크 어댑터는 동일 해야 합니다. 즉, 동일한 제조업체, 동일한 모델, 동일한 펌웨어 및 드라이버 @ no__t-1을 사용 @no__t 해야 합니다. 하나 및 8 개의 네트워크 어댑터 팀에서 간에 집합을 지원 합니다.
+Windows 하드웨어 자격 및 로고가 전달 된 모든 이더넷 NIC를 사용 하 여 Windows Server 2016의 집합 팀에서 WHQL\) 테스트 \(수 있습니다. 을 설정 하려면 집합 팀의 구성원 인 모든 네트워크 어댑터가 동일 해야 합니다. 즉, 동일한 제조업체, 동일한 모델, 동일한 펌웨어 및 드라이버\)\(해야 합니다. 하나 및 8 개의 네트워크 어댑터 팀에서 간에 집합을 지원 합니다.
   
 ## <a name="bkmk_compat"></a>Windows Server 네트워킹 기술과의 호환성 설정
 
 집합은 Windows Server 2016의 다음 네트워킹 기술은 호환입니다.
 
-- 데이터 센터 브리징 \(DCB @ no__t-1
+- DCB\) \(데이터 센터 브리징
   
 - Hyper-v 네트워크 가상화-NV GRE 및 VxLAN는 모두 Windows Server 2016에서 지원 됩니다.  
-- 수신 측 체크섬 오프 로드 \(IPv4, IPv6, TCP @ no__t-1-설정 된 팀 멤버가이를 지 원하는 경우 지원 됩니다.
+- 수신 측 체크섬 오프 로드 \(IPv4, IPv6, TCP\)-설정 된 팀 멤버가이를 지 원하는 경우 지원 됩니다.
 
-- 원격 직접 메모리 액세스 \(RDMA @ no__t-1
+- RDMA\) \(원격 직접 메모리 액세스
 
-- 단일 루트 i/o 가상화 \(SR @ no__t-1
+- SR-IOV\) 단일 루트 i/o 가상화 \(
 
-- 전송 쪽 체크섬 오프 로드 \(IPv4, IPv6, TCP @ no__t-1-모든 집합 팀 멤버가 지원 하는 경우 지원 됩니다.
+- 전송 측 체크섬 오프 로드 \(IPv4, IPv6, TCP\)-모든 집합의 팀 멤버가 지원 하는 경우 지원 됩니다.
 
-- 가상 컴퓨터 큐 \(VMQ @ no__t-1
+- VMQ\) \(가상 머신 큐
 
-- 가상 수신측 배율 \(RSS @ no__t-1
+- RSS\) \(가상 수신측 배율
 
 집합은 Windows Server 2016의 다음 네트워킹 기술과 호환 되지 않습니다.
 
-- 802.1 x 인증. 802.1 x Extensible Authentication Protocol \(EAP @ no__t-1 패킷은 SET 시나리오의 Hyper-v 가상 스위치에 의해 자동으로 삭제 됩니다.
+- 802.1 x 인증. 802.1 x Extensible Authentication Protocol \(EAP\) 패킷이 SET 시나리오의\-Hyper-v 가상 스위치에 의해 자동으로 삭제 됩니다.
  
-- IPsec 작업 오프 로드 \(Ipsec을 @ no__t-1로 이는 대부분의 네트워크 어댑터에서 지원 되지 않는 레거시 기술 이며, 존재 하는 경우 기본적으로 사용 하지 않도록 설정 됩니다.
+- IPsec 작업 오프 로드는\)에 대 한 \(합니다. 이는 대부분의 네트워크 어댑터에서 지원 되지 않는 레거시 기술 이며, 존재 하는 경우 기본적으로 사용 하지 않도록 설정 됩니다.
 
-- 호스트 또는 네이티브 운영 체제에서 no__t @-1을 사용 하 여 @no__t QoS를 사용 합니다. 이러한 QoS 시나리오는 하이퍼 @ no__t-0V 시나리오가 아니므로 기술이 교차 하지 않습니다. 또한 QoS는 사용할 수 있지만 기본적으로 사용 하도록 설정 되어 있지 않습니다. QoS를 의도적으로 사용 하도록 설정 해야 합니다.
+- 호스트 또는 네이티브 운영 체제에서\) QoS \(를 사용 합니다. 이러한 QoS 시나리오는 하이퍼\-V 시나리오가 아니므로 기술이 교차 하지 않습니다. 또한 QoS는 사용할 수 있지만 기본적으로 사용 하도록 설정 되어 있지 않습니다. QoS를 의도적으로 사용 하도록 설정 해야 합니다.
 
-- 수신측 병합 \(RSC @ no__t-1. RSC는 하이퍼 @ no__t-0V 가상 스위치에 의해 자동으로 사용 하지 않도록 설정 됩니다.
+- RSC\)\(수신 측 통합. RSC는 하이퍼\-V 가상 스위치에 의해 자동으로 사용 하지 않도록 설정 됩니다.
 
-- 수신측 배율 \(RSS @ no__t-1. Hyper-v는 VMQ 및 VMMQ에 대 한 큐를 사용 하기 때문에 가상 스위치를 만들 때 RSS는 항상 사용 하지 않도록 설정 됩니다.
+- RSS\)\(수신 쪽 배율입니다. Hyper-v는 VMQ 및 VMMQ에 대 한 큐를 사용 하기 때문에 가상 스위치를 만들 때 RSS는 항상 사용 하지 않도록 설정 됩니다.
 
 - TCP Chimney 오프 로드. 이 기술은 기본적으로 사용 되지 않습니다.
 
-- 가상 컴퓨터 QoS \(VM-QoS @ no__t-1. VM QoS는 사용할 수 있지만 기본적으로 사용 하지 않도록 설정 되어 있습니다. 집합 환경에서 VM QoS를 구성 하면 QoS 설정으로 인해 예기치 않은 결과가 발생할 수 있습니다.
+- 가상 컴퓨터 QoS \(VM-QoS\). VM QoS는 사용할 수 있지만 기본적으로 사용 하지 않도록 설정 되어 있습니다. 집합 환경에서 VM QoS를 구성 하면 QoS 설정으로 인해 예기치 않은 결과가 발생할 수 있습니다.
 
 ## <a name="bkmk_modes"></a>모드 및 설정 설정
 
@@ -260,20 +260,20 @@ VMQ와는 함께 잘 작동 하며 Hyper-v를 사용 하 고을 설정할 때마
 > [!NOTE]
 > 팀 멤버를 모두 설정에서 사용할 수 있는 큐의 총 항상 표시를 설정 합니다. NIC 팀에서이 큐의 Sum 모드를 호출 됩니다.
 
-대부분의 네트워크 어댑터에는 수신측 배율 \(RSS @ no__t-1 또는 VMQ 중 하나에 사용할 수 있는 큐가 있지만 둘 다 동시에 사용할 수는 없습니다.
+대부분의 네트워크 어댑터에는 RSS\) 또는 VMQ \(수신 측 크기 조정에 사용할 수 있지만 둘 다 동시에 사용할 수 없는 큐가 있습니다.
   
-일부 VMQ 설정을 RSS 큐에 대 한 설정을 보이지만 실제로 기능에 따라 RSS 및 VMQ를 모두 사용 하 여 현재 사용 중인 일반 큐에 설정 합니다. 각 NIC의 고급 속성에는 `*RssBaseProcNumber` 및 `*MaxRssProcessors` 값이 있습니다.
+일부 VMQ 설정을 RSS 큐에 대 한 설정을 보이지만 실제로 기능에 따라 RSS 및 VMQ를 모두 사용 하 여 현재 사용 중인 일반 큐에 설정 합니다. 각 NIC에는 고급 속성의 `*RssBaseProcNumber` 및 `*MaxRssProcessors`값이 있습니다.
 
 다음은 시스템 성능을 향상 시키는 몇 가지 VMQ 설정입니다.
 
-- 이상적으로 각 NIC에는 두 개 이상의 짝수 (2) 보다 크거나 같은 @no__t 0으로 설정 되어 있어야 합니다. 이는 첫 번째 실제 프로세서 인 코어 0 \(logical 프로세서 0 및 1 @ no__t-1은 일반적으로이 실제 프로세서에서 네트워크 처리를 조정 수 있도록 대부분의 시스템 처리를 수행 하기 때문입니다. 
+- 이상적으로 각 NIC는 `*RssBaseProcNumber` 2 보다 크거나 같은 짝수로 설정 되어야 합니다. 이는 첫 번째 실제 프로세서 인 코어 0 \(논리 프로세서 0 및 1\)는 일반적으로 대부분의 시스템 처리를 수행 하므로이 실제 프로세서에서 네트워크 처리가 조정 됩니다. 
 
 >[!NOTE]
 >일부 컴퓨터 아키텍처에는 실제 프로세서 당 2 개의 논리 프로세서가 없으므로 이러한 컴퓨터의 경우 기본 프로세서가 1 보다 크거나 같아야 합니다. 확실 하지 않은 경우 호스트에서 실제 프로세서 아키텍처 당 2 개의 논리적 프로세서를 사용 한다고 가정 합니다.
 
-- 팀 멤버의 프로세서는 실용적이 고 겹치지 않는 범위에 속해야 합니다. 예를 들어 4 코어 호스트 \(8 10Gbps Nic 팀이 2 개의 Nic 팀을 사용 하는 경우 첫 번째는 2의 기본 프로세서를 사용 하 고 4 개 코어를 사용 하도록 설정할 수 있습니다. 두 번째는 기본 프로세서 6을 사용 하도록 설정 되 고 2 개 코어를 사용 하도록 설정 됩니다.
+- 팀 멤버의 프로세서는 실용적이 고 겹치지 않는 범위에 속해야 합니다. 예를 들어 4 코어 호스트 \(8 개의 논리적 프로세서를 사용 하 여 2 개의 10Gbps Nic 팀과\), 기본 프로세서 2를 사용 하 고 4 개 코어를 사용 하도록 첫 번째를 설정할 수 있습니다. 두 번째는 기본 프로세서 6을 사용 하도록 설정 되 고 2 개 코어를 사용 하도록 설정 됩니다.
 
-## <a name="bkmk_hnv"></a>설정 및 Hyper-v 네트워크 가상화 \(HNV @ no__t-2
+## <a name="bkmk_hnv"></a>설정 및 Hyper-v 네트워크 가상화 \(HNV\)
 
 집합은 Windows Server 2016에서 Hyper-v 네트워크 가상화와 완전히 호환 됩니다. HNV 관리 시스템에 따라 설정 된 HNV 트래픽을에 최적화 된 방식으로 네트워크 트래픽 부하를 분산 하는 집합 드라이버에 대 한 정보를 제공 합니다.
   
@@ -283,11 +283,11 @@ VMQ와는 함께 잘 작동 하며 Hyper-v를 사용 하 고을 설정할 때마
 
 ## <a name="bkmk_mac"></a>전송 된 패킷에 MAC 주소 사용
 
-동적 부하 분산을 사용 하 여 집합 팀을 구성 하는 경우 단일 VM @ no__t-1과 같은 단일 원본 @no__t의 패킷은 동시에 여러 팀 구성원에 게 분산 됩니다. 
+동적 부하 분산을 사용 하 여 집합 팀을 구성 하는 경우 단일 VM\) 같은 단일 원본 \(의 패킷은 동시에 여러 팀 멤버에 게 분산 됩니다. 
 
 스위치가 혼동 되지 않도록 방지 하 고 MAC 플 래핑 경보를 방지 하려면 SET은 원본 MAC 주소를 선호도가 설정 팀 멤버가 아닌 팀 멤버에서 전송 되는 프레임의 다른 MAC 주소로 바꿉니다. 이 때문에 각 팀 멤버에는 다른 MAC 주소를 사용 하 고 MAC 주소 충돌 하지 않는 한 및 오류가 발생할 때까지 실행할 수 없습니다.
 
-주 NIC에서 오류가 검색 되 면 팀 구성 소프트웨어는 임시 선호도가 설정 팀 구성원 \(aa. e .로 사용 하도록 선택 된 팀 구성원의 VM MAC 주소를 사용 하 여 시작 합니다. 이제 VM의 인터페이스 @ no_로 스위치에 표시 됩니다. _t-1.
+기본 NIC에서 오류가 검색 되 면 팀 구성 소프트웨어는 임시 선호도가 설정 팀 \(구성원으로 사용 하도록 선택 된 팀 구성원의 VM MAC 주소를 사용 하기 시작 합니다. 즉, 이제 VM의 인터페이스\)으로 스위치에 표시 됩니다.
 
 이 변경 된 보내려는 VM의 MAC 주소를 사용 하는 VM의 선호도 설정 된 팀 멤버에 해당 소스로 MAC 주소는 트래픽에 적용 됩니다. 다른 트래픽 어떤 원본 MAC 주소는 오류 전에 사용 되는 것으로 보내야 하는 계속 됩니다.
 
@@ -313,7 +313,7 @@ VMQ와는 함께 잘 작동 하며 Hyper-v를 사용 하 고을 설정할 때마
   
 ## <a name="bkmk_manage"></a>집합 팀 관리
 
-System Center Virtual Machine Manager \(VMM @ no__t-1을 사용 하 여 집합 팀을 관리 하는 것이 좋습니다. 그러나 Windows PowerShell을 사용 하 여 집합을 관리할 수도 있습니다. 다음 섹션에서는 Windows PowerShell 명령 집합을 관리 하에 사용할 수 있습니다.
+System Center Virtual Machine Manager \(VMM\)를 사용 하 여 집합 팀을 관리 하는 것이 좋지만 Windows PowerShell을 사용 하 여 집합을 관리할 수도 있습니다. 다음 섹션에서는 Windows PowerShell 명령 집합을 관리 하에 사용할 수 있습니다.
 
 VMM을 사용 하 여 집합 팀을 만드는 방법에 대 한 자세한 내용은 System Center VMM 라이브러리 항목 [논리 스위치 만들기](https://docs.microsoft.com/system-center/vmm/network-switch)의 "논리 스위치 설정" 섹션을 참조 하세요.
   
@@ -357,7 +357,7 @@ Remove-VMSwitch "SETvSwitch"
 
 ### <a name="changing-the-load-distribution-algorithm-for-a-set-team"></a>변경 집합 팀에 대 한 부하 분산 알고리즘
 
-**VMSwitchTeam** cmdlet에는 **LoadBalancingAlgorithm** 옵션이 있습니다. 이 옵션은 다음과 같은 두 가지 가능한 값 중 하나를 사용 합니다. **Hypervport** 또는 **동적**입니다. 를 설정 하거나 스위치 포함 된 팀을 위한 부하 분산 알고리즘을 변경 하려면이 옵션을 사용 합니다. 
+**VMSwitchTeam** cmdlet에는 **LoadBalancingAlgorithm** 옵션이 있습니다. 이 옵션은 다음 두 가지 가능한 값 중 하나를 사용 합니다. **Hypervport** 또는 **Dynamic**. 를 설정 하거나 스위치 포함 된 팀을 위한 부하 분산 알고리즘을 변경 하려면이 옵션을 사용 합니다. 
 
 다음 예제에서 **Teamedvswitch** 라는 VMSwitchTeam는 **동적** 부하 분산 알고리즘을 사용 합니다.  
 ```  
@@ -365,9 +365,9 @@ Set-VMSwitchTeam -Name TeamedvSwitch -LoadBalancingAlgorithm Dynamic
 ```  
 ### <a name="affinitizing-virtual-interfaces-to-physical-team-members"></a>물리적 팀 구성원에 게 가상 인터페이스 한
 
-집합을 사용 하면 가상 인터페이스 \(a. e., Hyper-v 가상 스위치 포트 @ no__t-1과 팀의 실제 Nic 중 하나 간에 선호도를 만들 수 있습니다. 
+집합을 사용 하면 가상 인터페이스 \((Hyper-v 가상 스위치 포트\), 팀의 실제 Nic 중 하나) 간에 선호도를 만들 수 있습니다. 
 
-예를 들어 [SET 및 RDMA vNICs를 사용 하 여 Hyper-v 가상 스위치 만들기](#bkmk_set-rdma)섹션에서와 같이 SMB @ No__t-0direct에 대해 두 개의 호스트 vnics를 만들 경우 두 vnics에서 다른 팀 멤버를 사용 하는지 확인할 수 있습니다. 
+예를 들어 SMB\-에 대해 두 개의 호스트 vNICs를 만들 경우 [설정 및 RDMA vNICs를 사용 하 여 Hyper-v 가상 스위치 만들기](#bkmk_set-rdma)섹션에서와 같이 두 vnics가 서로 다른 팀 구성원을 사용 하는지 확인할 수 있습니다. 
 
 해당 섹션의 스크립트에를 추가 하면 다음 Windows PowerShell 명령을 사용할 수 있습니다.
 

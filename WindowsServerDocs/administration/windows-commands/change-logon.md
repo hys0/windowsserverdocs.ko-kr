@@ -20,7 +20,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71379636"
 ---
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 # <a name="change-logon"></a>change logon
 또는 클라이언트 세션에서 로그온을 사용 하지 않도록 설정 하거나 현재 로그온 상태를 표시 합니다.
@@ -60,5 +60,6 @@ ms.locfileid: "71379636"
 >   change logon /disable
 >   ```
 >   #### <a name="additional-references"></a>추가 참조
->   [명령줄 구문 키](command-line-syntax-key.md)@no__t[변경](change.md)
->   [원격 데스크톱 서비스 &#40;터미널&#41; 서비스 명령 참조](remote-desktop-services-terminal-services-command-reference.md)
+>   명령줄 [구문 키](command-line-syntax-key.md)
+>   [변경](change.md)
+>   [원격 데스크톱 서비스 &#40;터미널 서비스&#41; 명령 참조](remote-desktop-services-terminal-services-command-reference.md)

@@ -22,7 +22,7 @@ ms.locfileid: "71383672"
 ---
 # <a name="tapicfg"></a>tapicfg
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 만듭니다, 그리고 제거 또는 TAPI 응용 프로그램 디렉터리 파티션을 표시 하거나 기본 TAPI 응용 프로그램 디렉터리 파티션을 설정 합니다. TAPI 3.1 클라이언트는이 응용 프로그램 디렉터리 파티션의 정보를 디렉터리 서비스 로케이터 서비스와 함께 사용 하 여 TAPI 디렉터리를 찾고 통신할 수 있습니다. 또한 **tapicfg** 를 사용 하 여 서비스 연결 지점은 생성 하거나 제거할 수 있습니다 .이를 통해 tapi 클라이언트는 도메인에서 tapi 응용 프로그램 디렉터리 파티션을 효율적으로 찾을 수 있습니다. 자세한 내용은 설명 부분을 참조 하십시오. 명령 구문을 보려면에서 명령을 클릭 합니다. 
 -   [tapicfg 설치](#BKMK_install)
@@ -42,8 +42,8 @@ tapicfg install /directory:<PartitionName> [/server:<DCName>] [/forcedefault]
 ### <a name="parameters"></a>매개 변수
 |매개 변수|설명|
 |-------|--------|
-|설치/디렉터리: \<PartitionName >|필수. TAPI 응용 프로그램 디렉터리 파티션 만들의 DNS 이름을 지정 합니다. 이 이름은 정규화 된 도메인 이름 이어야 합니다.|
-|/server: @no__t 0DCName >|TAPI 응용 프로그램 디렉터리 파티션을 생성 된 도메인 컨트롤러의 DNS 이름을 지정 합니다. 도메인 컨트롤러의 이름을 지정 하지 않으면 로컬 컴퓨터의 이름이 사용 됩니다.|
+|설치/디렉터리:\<PartitionName >|필수 요소. TAPI 응용 프로그램 디렉터리 파티션 만들의 DNS 이름을 지정 합니다. 이 이름은 정규화 된 도메인 이름 이어야 합니다.|
+|/server: \<DCName >|TAPI 응용 프로그램 디렉터리 파티션을 생성 된 도메인 컨트롤러의 DNS 이름을 지정 합니다. 도메인 컨트롤러의 이름을 지정 하지 않으면 로컬 컴퓨터의 이름이 사용 됩니다.|
 |/forcedefault|이 디렉터리는 도메인에 대 한 기본 TAPI 응용 프로그램 디렉터리 파티션을 지정 합니다. 도메인에 여러 TAPI 응용 프로그램 디렉터리 파티션이 있을 수 있습니다.<br /><br />이 디렉터리가 도메인에 생성 된 첫 번째 TAPI 응용 프로그램 디렉터리 파티션인 경우 **/forcedefault** 옵션을 사용 하는지 여부에 관계 없이 자동으로 기본값으로 설정 됩니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
@@ -57,7 +57,7 @@ tapicfg remove /directory:<PartitionName>
 ### <a name="parameters"></a>매개 변수
 |매개 변수|설명|
 |-------|--------|
-|/디렉터리 제거: \<PartitionName >|필수. 제거할 TAPI 응용 프로그램 디렉터리 파티션의 DNS 이름을 지정 합니다. 참고가이 이름은 정규화 된 도메인 이름을 이어야 합니다.|
+|제거/디렉터리:\<PartitionName >|필수 요소. 제거할 TAPI 응용 프로그램 디렉터리 파티션의 DNS 이름을 지정 합니다. 참고가이 이름은 정규화 된 도메인 이름을 이어야 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
 ## <a name="BKMK_publishscp"></a>tapicfg shscp
@@ -70,8 +70,8 @@ tapicfg publishscp /directory:<PartitionName> [/domain:<DomainName>] [/forcedefa
 ### <a name="parameters"></a>매개 변수
 |매개 변수|설명|
 |-------|--------|
-|작업 (scp)/디렉터리: \<PartitionName >|필수. 게시할 서비스 연결 지점 TAPI 응용 프로그램 디렉터리 파티션의 DNS 이름을 지정 합니다.|
-|/domain: \<DomainName >|서비스 연결 지점이 있는 도메인의 DNS 이름을 만들도록 지정 합니다. 도메인 이름을 지정 하지 않으면 로컬 도메인 이름이 사용 됩니다.|
+|작업 (scp)/디렉터리:\<PartitionName >|필수 요소. 게시할 서비스 연결 지점 TAPI 응용 프로그램 디렉터리 파티션의 DNS 이름을 지정 합니다.|
+|/domain:\<DomainName >|서비스 연결 지점이 있는 도메인의 DNS 이름을 만들도록 지정 합니다. 도메인 이름을 지정 하지 않으면 로컬 도메인 이름이 사용 됩니다.|
 |/forcedefault|이 디렉터리는 도메인에 대 한 기본 TAPI 응용 프로그램 디렉터리 파티션을 지정 합니다. 도메인에 여러 TAPI 응용 프로그램 디렉터리 파티션이 있을 수 있습니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
@@ -85,7 +85,7 @@ tapicfg removescp /directory:<PartitionName> [/domain:<DomainName>]
 ### <a name="parameters"></a>매개 변수
 |매개 변수|설명|
 |-------|--------|
-|removescp/directory: \<PartitionName >|필수. 서비스 연결 지점이 제거 되는 TAPI 응용 프로그램 디렉터리 파티션의 DNS 이름을 지정 합니다.|
+|removescp/directory:\<PartitionName >|필수 요소. 서비스 연결 지점이 제거 되는 TAPI 응용 프로그램 디렉터리 파티션의 DNS 이름을 지정 합니다.|
 |/domain: \<DomainName >|서비스 연결 지점 제거는 도메인의 DNS 이름을 지정 합니다. 도메인 이름을 지정 하지 않으면 로컬 도메인 이름이 사용 됩니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
@@ -113,7 +113,7 @@ tapicfg makedefault /directory:<PartitionName> [/domain:<DomainName>]
 ### <a name="parameters"></a>매개 변수
 |매개 변수|설명|
 |-------|--------|
-|makedefault/directory: \<PartitionName >|필수. TAPI 응용 프로그램 디렉터리 파티션에 도메인에 대 한 기본 파티션으로 설정의 DNS 이름을 지정 합니다. 참고가이 이름은 정규화 된 도메인 이름을 이어야 합니다. TAPI 응용 프로그램 디렉터리 파티션에 기본값으로 설정 된 도메인의 DNS 이름을 지정 합니다. 도메인 이름을 지정 하지 않으면 로컬 도메인 이름이 사용 됩니다.|
+|makedefault/directory:\<PartitionName >|필수 요소. TAPI 응용 프로그램 디렉터리 파티션에 도메인에 대 한 기본 파티션으로 설정의 DNS 이름을 지정 합니다. 참고가이 이름은 정규화 된 도메인 이름을 이어야 합니다. TAPI 응용 프로그램 디렉터리 파티션에 기본값으로 설정 된 도메인의 DNS 이름을 지정 합니다. 도메인 이름을 지정 하지 않으면 로컬 도메인 이름이 사용 됩니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
 ## <a name="remarks"></a>설명

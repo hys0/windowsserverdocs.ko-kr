@@ -36,11 +36,11 @@ ksetup /removerealm <RealmName>
 
 |매개 변수|설명|
 |---------|-----------|
-|@no__t 0RealmName >|영역 이름은 CORP와 같은 대문자 DNS 이름으로 명시 됩니다. CONTOSO.COM는 **ksetup** 가 실행 될 때 기본 영역으로 나열 됩니다.|
+|\<RealmName >|영역 이름은 CORP와 같은 대문자 DNS 이름으로 명시 됩니다. CONTOSO.COM는 **ksetup** 가 실행 될 때 기본 영역으로 나열 됩니다.|
 
 ## <a name="remarks"></a>설명
 
-영역 이름은 레지스트리의 두 위치에 저장 됩니다. **HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001** 및 **\CurrentControlSet\Control\Lsa\Kerberos**.
+영역 이름은 **HKEY_LOCAL_MACHINE \system\controlset001** 및 **\CurrentControlSet\Control\Lsa\Kerberos**레지스트리의 두 위치에 저장 됩니다.
 
 도메인 컨트롤러에서 기본 영역 이름을 제거할 수 없습니다. DNS 정보를 다시 설정 하 고 제거 하면 도메인 컨트롤러를 사용할 수 없게 될 수 있습니다.
 

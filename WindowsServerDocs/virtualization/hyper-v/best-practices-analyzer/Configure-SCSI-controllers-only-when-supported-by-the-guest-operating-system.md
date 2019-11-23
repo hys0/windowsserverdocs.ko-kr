@@ -19,11 +19,11 @@ ms.locfileid: "71366423"
 ---
 # <a name="configure-scsi-controllers-only-when-supported-by-the-guest-operating-system"></a>게스트 운영 체제에서 지 원하는 경우에 SCSI 컨트롤러를 구성 합니다.
 
->적용 대상: Windows Server 2016
+>적용 대상: Windows Server 2016
 
 
   
-|속성|설명|  
+|속성|세부 정보|  
 |-|-|  
 |**운영 체제**|Windows Server 2016|  
 |**제품/기능**|Hyper-V|  
@@ -38,13 +38,13 @@ ms.locfileid: "71366423"
   
 ## <a name="impact"></a>영향  
   
-*Virtual machines는 SCSI 컨트롤러에 연결 된 저장소를 사용할 수 없습니다. 이는 다음과 같은 가상 컴퓨터에 영향을 줍니다.*  
+*가상 컴퓨터는 SCSI 컨트롤러에 연결 된 저장소를 사용할 수 없습니다. 이는 다음과 같은 가상 컴퓨터에 영향을 줍니다.*  
   
-@no__t-가상 머신 목록 >  
+가상 컴퓨터 \<목록 >  
   
 ## <a name="resolution"></a>해결 방법  
   
-@no__t-가상 컴퓨터를 종료 하 고 Hyper-v 관리자를 사용 하 여 가상 컴퓨터에서 SCSI 컨트롤러를 제거 합니다. 그런 다음 가상 컴퓨터를 다시 시작 합니다. *  
+*가상 컴퓨터를 종료 하 고 Hyper-v 관리자를 사용 하 여 가상 컴퓨터에서 SCSI 컨트롤러를 제거 합니다. 그런 다음 가상 컴퓨터를 다시 시작 합니다.*  
   
 
 
