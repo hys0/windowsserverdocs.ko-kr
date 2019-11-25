@@ -26,13 +26,13 @@ ms.locfileid: "71405513"
 
 ##  <a name="bkmk_tuning"></a>클라이언트-서버 트래픽 도구
 
-클라이언트와 서버 간 트래픽 \(ctsTraffic @ no__t 도구는 네트워크 트래픽을 만들고 확인 하는 기능을 제공 합니다.
+클라이언트와 서버 간 트래픽 \(ctsTraffic\) 도구는 네트워크 트래픽을 만들고 확인 하는 기능을 제공 합니다.
 
 자세한 내용 및 도구를 다운로드 하려면 [ctsTraffic (클라이언트-서버 트래픽)](https://github.com/Microsoft/ctsTraffic)를 참조 하세요.
   
 ##  <a name="bkmk_size"></a>TCP/IP 창 크기
 
-1gb 어댑터의 경우에는 NTttcp가 연결에 대해 \(SO_RCVBUF @ no__t-1을 통해 기본 TCP 창 크기를 64 K로 설정 하기 때문에 이전 표에 나와 있는 설정이 적절 한 처리량을 제공 해야 합니다. 이는 대기 시간이 짧은 네트워크에서 좋은 성능을 제공 합니다.  
+어댑터 어댑터의 경우에는 NTttcp가 연결에 대 한 SO_RCVBUF\) \(특정 논리 프로세서 옵션을 통해 기본 TCP 창 크기를 64 K로 설정 하기 때문에 이전 표에 나와 있는 설정이 적절 한 처리량을 제공 해야 합니다. 이는 대기 시간이 짧은 네트워크에서 좋은 성능을 제공 합니다.  
 
 이와 대조적으로 대기 시간이 긴 네트워크 또는 10gb 어댑터의 경우에는 NTttcp의 기본 TCP 창 크기 값이 최적의 성능 보다 낮습니다. 두 경우 모두, 더 큰 대역폭 지연 제품을 허용 하도록 TCP 창 크기를 조정 해야 합니다.  
 
@@ -40,7 +40,7 @@ ms.locfileid: "71405513"
 
 ##  <a name="bkmk_advisor"></a>Microsoft Server Performance Advisor
 
-Microsoft Server Performance Advisor \(SPA @ no__t-1을 사용 하면 IT 관리자가 Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 또는에서 잠재적인 성능 문제를 식별 하 고, 비교 하 고, 진단 하는 메트릭을 수집할 수 있습니다. Windows Server 2008 배포. 
+Microsoft Server Performance Advisor \(SPA\)를 사용 하면 IT 관리자가 Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 또는 Windows Server 2008 배포에서 잠재적 성능 문제를 식별, 비교 및 진단 하는 메트릭을 수집할 수 있습니다. 
 
 SPA는 포괄적인 진단 보고서 및 차트를 생성 하 고, 문제를 신속 하 게 분석 하 고 정정 작업을 개발 하는 데 유용한 권장 사항을 제공 합니다.  
   

@@ -22,7 +22,7 @@ ms.locfileid: "71379862"
 ---
 # <a name="bootcfg-rmsw"></a>bootcfg rmsw
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 지정 된 운영 체제 항목에 대 한 운영 체제 로드 옵션을 제거 합니다.
 
@@ -35,9 +35,9 @@ bootcfg /rmsw [/s <computer> [/u <Domain>\<User> [/p <Password>]]] [/mm] [/bv] [
 |      매개 변수       |                                                                                                      설명                                                                                                       |
 |----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    /s <computer>     |                                                   이름 또는 원격 컴퓨터의 IP 주소를 지정 합니다 (백슬래시를 사용 하지 않습니다). 기본값은 로컬 컴퓨터입니다.                                                   |
-| /u <Domain> @ no__t-1 @ no__t-2  |          @No__t-0 또는 <Domain> @ no__t @ no__t-3로 지정 된 사용자의 계정 권한으로 명령을 실행 합니다. 기본값은 현재 로그온 된 명령을 실행 하는 컴퓨터에서 사용자의 사용 권한.          |
+| /u <Domain>\\<User>  |          <User> 또는 <Domain>\\<User>에 지정 된 사용자의 계정 권한으로 명령을 실행 합니다. 기본값은 현재 로그온 된 명령을 실행 하는 컴퓨터에서 사용자의 사용 권한.          |
 |    /p <Password>     |                                                                 에 지정 된 사용자 계정의 암호를 지정 된 **/u** 매개 변수입니다.                                                                  |
-|         /mm          |           지정 된 <OSEntryLineNum>에서/maxmem 옵션과 연결 된 최대 메모리 값을 제거 합니다. 운영 체제에서 사용할 수 있는 RAM의 최대 크기를 지정 하는 /maxmem 옵션입니다.            |
+|         /mm          |           지정 된 <OSEntryLineNum>에서/maxmem 옵션과 관련 된 최대 메모리 값을 제거 합니다. 운영 체제에서 사용할 수 있는 RAM의 최대 크기를 지정 하는 /maxmem 옵션입니다.            |
 |         /bv          |                     지정 된 <OSEntryLineNum>에서/basevideo 옵션을 제거 합니다. /Basevideo 옵션 설치 비디오 드라이버에 대 한 표준 VGA 모드를 사용 하 여 운영 체제에 지시 합니다.                     |
 |         /so          |                         지정 된 <OSEntryLineNum>에서/sos 옵션을 제거 합니다. 운영 체제가 로드 되는 장치 드라이버의 이름을 표시 하도록 지시 하는 동안 옵션입니다.                          |
 |         /ng          |                         지정 된 <OSEntryLineNum>에서/noguiboot 옵션을 제거 합니다. /Noguiboot 옵션은 CTRL + ALT + del 로그온 프롬프트 앞에 표시 되는 진행률 표시줄을 사용 하지 않도록 설정 합니다.                          |

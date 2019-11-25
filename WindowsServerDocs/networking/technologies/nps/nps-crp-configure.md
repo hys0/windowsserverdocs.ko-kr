@@ -21,7 +21,7 @@ ms.locfileid: "71405472"
 
 이 항목을 사용 하 여 로컬 NPS가 연결 요청을 처리 하거나 처리를 위해 원격 RADIUS 서버에 전달 하는지 여부를 지정 하는 연결 요청 정책을 만들고 구성할 수 있습니다.
 
-연결 요청 정책은 네트워크 관리자가 연결 요청에 대 한 인증 및 권한 부여를 수행 하는 RADIUS(Remote Authentication Dial-In User Service) (RADIUS) 서버를 지정 하는 데 사용할 수 있는 조건 및 설정 집합입니다. 네트워크 정책 서버를 실행 하는 서버 \(NPS @ no__t-1은 RADIUS 클라이언트에서 수신 합니다.
+연결 요청 정책은 네트워크 관리자가 RADIUS 클라이언트에서 수신\) 네트워크 정책 \(서버를 실행 하는 서버에서 수신 하는 연결 요청에 대 한 인증 및 권한 부여를 수행 하는 RADIUS(Remote Authentication Dial-In User Service) (RADIUS) 서버를 지정 하는 데 사용할 수 있는 조건 및 설정 집합입니다.
 
 기본 연결 요청 정책은 NPS를 RADIUS 서버로 사용 하 고 모든 인증 요청을 로컬로 처리 합니다.
 
