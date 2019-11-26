@@ -1,6 +1,6 @@
 ---
-title: Storage Migration Service overview
-description: Storage Migration Service makes it easier to migrate storage to Windows Server or to Azure. It provides a graphical tool that inventories data on Windows and Linux servers and then transfers the data to newer servers or to Azure virtual machines. Storage Migration Service also provides the option to transfer the identity of a server to the destination server so that apps and users can access their data without changing links or paths.
+title: Storage Migration Service 개요
+description: Storage Migration Service를 사용 하면 저장소를 Windows Server 또는 Azure로 쉽게 마이그레이션할 수 있습니다. Windows 및 Linux 서버에서 데이터를 인벤토리에 추가한 다음 최신 서버 또는 Azure virtual machines로 데이터를 전송 하는 그래픽 도구를 제공 합니다. Storage Migration Service는 앱 및 사용자가 링크나 경로를 변경 하지 않고도 데이터에 액세스할 수 있도록 대상 서버에 서버의 id를 전송 하는 옵션을 제공 합니다.
 author: jasongerend
 ms.author: jgerend
 manager: elizapo
@@ -15,73 +15,73 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74310379"
 ---
-# <a name="storage-migration-service-overview"></a>Storage Migration Service overview
+# <a name="storage-migration-service-overview"></a>Storage Migration Service 개요
 
->Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server (Semi-Annual Channel)
+>적용 대상: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server (반기 채널)
 
-Storage Migration Service makes it easier to migrate storage to Windows Server or to Azure. It provides a graphical tool that inventories data on Windows and Linux servers and then transfers the data to newer servers or to Azure virtual machines. Storage Migration Service also provides the option to transfer the identity of a server to the destination server so that apps and users can access their data without changing links or paths.
+Storage Migration Service를 사용 하면 저장소를 Windows Server 또는 Azure로 쉽게 마이그레이션할 수 있습니다. Windows 및 Linux 서버에서 데이터를 인벤토리에 추가한 다음 최신 서버 또는 Azure virtual machines로 데이터를 전송 하는 그래픽 도구를 제공 합니다. Storage Migration Service는 앱 및 사용자가 링크나 경로를 변경 하지 않고도 데이터에 액세스할 수 있도록 대상 서버에 서버의 id를 전송 하는 옵션을 제공 합니다.
 
-This topic discusses why you'd want to use Storage Migration Service, how the migration process works, and what the requirements are for source and destination servers.
+이 항목에서는 저장소 마이그레이션 서비스를 사용 하려는 이유와 마이그레이션 프로세스의 작동 방식 및 원본 및 대상 서버에 대 한 요구 사항에 대해 설명 합니다.
 
-## <a name="why-use-storage-migration-service"></a>Why use Storage Migration Service
+## <a name="why-use-storage-migration-service"></a>저장소 마이그레이션 서비스를 사용 하는 이유
 
-Use Storage Migration Service because you've got a server (or a lot of servers) that you want to migrate to newer hardware or virtual machines. Storage Migration Service is designed to help by doing the following:
+최신 하드웨어 또는 가상 컴퓨터로 마이그레이션할 서버 (또는 서버)가 많기 때문에 Storage Migration Service를 사용 합니다. Storage Migration Service는 다음 작업을 수행 하는 데 도움이 되도록 설계 되었습니다.
 
-- Inventory multiple servers and their data
-- Rapidly transfer files, file shares, and security configuration from the source servers
-- Optionally take over the identity of the source servers (also known as cutting over) so that users and apps don't have to change anything to access existing data
-- Manage one or multiple migrations from the Windows Admin Center user interface
+- 여러 서버 및 해당 데이터 인벤토리
+- 원본 서버에서 파일, 파일 공유 및 보안 구성을 빠르게 전송
+- 필요에 따라 사용자와 앱이 기존 데이터에 액세스 하기 위해 아무것도 변경 하지 않아도 되도록 원본 서버의 id를 사용 (절삭이 라고도 함) 할 수 있습니다.
+- Windows 관리 센터 사용자 인터페이스에서 하나 또는 여러 마이그레이션 관리
 
-![Diagram showing Storage Migration Service migrating files & configuration from source servers to destination servers, Azure VMs, or Azure File Sync.](media/overview/storage-migration-service-diagram.png)
+![원본 서버에서 대상 서버, Azure Vm 또는 Azure File Sync로 파일 & 구성을 마이그레이션하는 저장소 마이그레이션 서비스를 보여 주는 다이어그램입니다.](media/overview/storage-migration-service-diagram.png)
 
-**Figure 1: Storage Migration Service sources and destinations**
+**그림 1: 저장소 마이그레이션 서비스 원본 및 대상**
 
-## <a name="how-the-migration-process-works"></a>How the migration process works
+## <a name="how-the-migration-process-works"></a>마이그레이션 프로세스의 작동 방식
 
-Migration is a three-step process:
+마이그레이션은 세 단계로 진행 됩니다.
 
-1. **Inventory servers** to gather info about their files and configuration (shown in Figure 2).
-2. **Transfer (copy) data** from the source servers to the destination servers.
-3. **Cut over to the new servers** (optional).<br>The destination servers assume the source servers' former identities so that apps and users don't have to change anything. <br>The source servers enter a maintenance state where they still contain the same files they always have (we never remove files from the source servers) but are unavailable to users and apps. You can then decommission the servers at your convenience.
+1. 파일 및 구성에 대 한 정보를 수집 하는 **인벤토리 서버** (그림 2에 표시).
+2. 원본 서버에서 대상 서버로 **데이터를 전송 (복사)** 합니다.
+3. **새 서버로** 이동 합니다 (선택 사항).<br>대상 서버는 앱과 사용자가 아무것도 변경할 필요가 없도록 원본 서버의 이전 id를 가정 합니다. <br>원본 서버는 유지 관리 상태를 입력 합니다. 여기에는 항상 동일한 파일이 포함 되지만 (원본 서버에서는 파일을 제거 하지 않음) 사용자 및 앱에서 사용할 수 없습니다. 그런 다음 사용자의 편의를 위해 서버를 서비스 해제할 수 있습니다.
 
-![Screenshot showing a server ready to be scanned](media/migrate/inventory.png)
-**Figure 2: Storage Migration Service inventorying servers**
+스캔할 준비가 된 서버를 보여 주는 ![스크린샷](media/migrate/inventory.png)
+**그림 2: 저장소 마이그레이션 서비스 서버 인벤토리**
 
 ## <a name="requirements"></a>요구 사항
 
-To use Storage Migration Service, you need the following:
+저장소 마이그레이션 서비스를 사용 하려면 다음이 필요 합니다.
 
-- A **source server** or **failover cluster** to migrate files and data from
-- A **destination server** running Windows Server 2019 (clustered or standalone) to migrate to. Windows Server 2016 and Windows Server 2012 R2 work as well but are around 50% slower
-- An **orchestrator server** running Windows Server 2019 to manage the migration  <br>If you're migrating only a few servers and one of the servers is running Windows Server 2019, you can use that as the orchestrator. If you're migrating more servers, we recommend using a separate orchestrator server.
-- A **PC or server running [Windows Admin Center](../../manage/windows-admin-center/understand/windows-admin-center.md)** to run the Storage Migration Service user interface, unless you prefer using PowerShell to manage the migration. The Windows Admin Center and Windows Server 2019 version must both be at least version 1809.
+- **원본 서버** 또는 파일 및 데이터를 마이그레이션할 **장애 조치 (failover) 클러스터**
+- 로 마이그레이션할 Windows Server 2019 (클러스터 또는 독립 실행형)을 실행 하는 **대상 서버** 입니다. Windows Server 2016 및 Windows Server 2012 R2도 작동 하지만 50% 저하 됨
+- 마이그레이션을 관리 하기 위해 Windows Server 2019를 실행 하는 **orchestrator 서버**  <br>서버를 몇 대만 마이그레이션하고 서버 중 하나가 Windows Server 2019를 실행 하는 경우이를 orchestrator로 사용할 수 있습니다. 더 많은 서버를 마이그레이션하는 경우 별도의 orchestrator 서버를 사용 하는 것이 좋습니다.
+- PowerShell을 사용 하 여 마이그레이션을 관리 하지 않는 한,  **[Windows 관리 센터](../../manage/windows-admin-center/understand/windows-admin-center.md) 를 실행 하는 PC 또는 서버** 에서 Storage migration Service 사용자 인터페이스를 실행 합니다. Windows 관리 센터와 Windows Server 2019 버전은 모두 버전 1809 이상 이어야 합니다.
 
-We strongly recommend that the orchestrator and destination computers have at least two cores or two vCPUs, and at least 2 GB of memory. Inventory and transfer operations are significantly faster with more processors and memory.
+Orchestrator와 대상 컴퓨터에는 2 개 이상의 코어 또는 두 개의 vCPUs와 최소 2gb의 메모리가 있는 것이 좋습니다. 인벤토리 및 전송 작업은 프로세서 및 메모리를 더 많이 사용 하 여 훨씬 더 빠릅니다.
 
-### <a name="security-requirements-the-storage-migration-service-proxy-service-and-firewall-ports"></a>Security requirements, the Storage Migration Service proxy service, and firewall ports
+### <a name="security-requirements-the-storage-migration-service-proxy-service-and-firewall-ports"></a>보안 요구 사항, 저장소 마이그레이션 서비스 프록시 서비스 및 방화벽 포트
 
-- A migration account that is an administrator on the source computers and the orchestrator computer.
-- A migration account that is an administrator on the destination computers and the orchestrator computer.
-- The orchestrator computer must have the File and Printer Sharing (SMB-In) firewall rule enabled *inbound*.
-- The source and destination computers must have the following firewall rules enabled *inbound* (though you might already have them enabled):
+- 원본 컴퓨터와 orchestrator 컴퓨터의 관리자 인 마이그레이션 계정
+- 대상 컴퓨터와 orchestrator 컴퓨터의 관리자 인 마이그레이션 계정
+- Orchestrator 컴퓨터에는 *인바운드*를 사용 하는 파일 및 프린터 공유 (SMB 인) 방화벽 규칙이 있어야 합니다.
+- 원본 및 대상 컴퓨터에는 *인바운드* 를 사용 하도록 설정 된 다음 방화벽 규칙이 있어야 합니다 (이미 사용 하도록 설정 되어 있을 수 있음).
   - 파일 및 프린터 공유(SMB-In)
-  - Netlogon Service (NP-In)
-  - Windows Management Instrumentation (DCOM-In)
+  - Netlogon 서비스 (NP-IN)
+  - WMI(Windows Management Instrumentation) (DCOM-IN)
   - WMI(Windows Management Instrumentation)(WMI-In)
   
   > [!TIP]
-  > Installing the Storage Migration Service Proxy service on a Windows Server 2019 computer automatically opens the necessary firewall ports on that computer. To do so, connect to the destination server in Windows Admin Center and then go to **Server Manager** (in Windows Admin Center) > **Roles and features**, select **Storage Migration Service Proxy**, and then select **Install**.
+  > Windows Server 2019 컴퓨터에 Storage Migration Service 프록시 서비스를 설치 하면 해당 컴퓨터에 필요한 방화벽 포트가 자동으로 열립니다. 이렇게 하려면 Windows 관리 센터에서 대상 서버에 연결한 다음 **서버 관리자** (Windows 관리 센터) > **역할 및 기능**으로 이동 하 고 **저장소 마이그레이션 서비스 프록시**를 선택한 다음 **설치**를 선택 합니다.
 
 
-- If the computers belong to an Active Directory Domain Services domain, they should all belong to the same forest. The destination server must also be in the same domain as the source server if you want to transfer the source's domain name to the destination when cutting over. Cutover technically works across domains, but the fully-qualified domain name of the destination will be different from the source...
+- 컴퓨터가 Active Directory Domain Services 도메인에 속하는 경우 모두 동일한 포리스트에 속해 있어야 합니다. 또한 대상 서버는 원본 서버와 동일한 도메인에 있어야 합니다. 잘라낼 때 원본 도메인 이름을 대상으로 전송 하려는 경우에는 원본 서버와 동일한 도메인에 있어야 합니다. 는 기술적으로는 도메인 전체에서 작동 하지만 대상의 정규화 된 도메인 이름은 원본과 다릅니다.
 
-### <a name="requirements-for-source-servers"></a>Requirements for source servers
+### <a name="requirements-for-source-servers"></a>원본 서버에 대 한 요구 사항
 
-The source server must run one of the following operating systems:
+원본 서버는 다음 운영 체제 중 하나를 실행 해야 합니다.
 
 - Windows Server, 반기 채널
-- 시작
-- Windows Server 2016
+- Windows Server 2019
+- Windows Server 2016
 - Windows Server 2012 R2
 - Windows Server 2012
 - Windows Server 2008 R2
@@ -101,43 +101,43 @@ The source server must run one of the following operating systems:
 - Windows Storage Server 2012 R2
 - Windows Storage Server 2016
 
-Note: Windows Small Business Server and Windows Server Essentials are domain controllers. Storage Migration Service can't yet cut over from domain controllers, but can inventory and transfer files from them.   
+참고: Windows Small Business Server 및 Windows Server Essentials는 도메인 컨트롤러입니다. Storage Migration Service는 아직 도메인 컨트롤러에서 이동할 수 없지만 파일의 인벤토리 및 전송에는 사용할 수 있습니다.   
 
-You can migrate the following additional source types if the orchestrator is running Windows Server, version 1903 or later, or if the orchestrator is running an earlier version of Windows Server with [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) installed:
+Orchestrator가 Windows Server, 버전 1903 이상을 실행 하거나 orchestrator가 [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) 가 설치 된 이전 버전의 windows server를 실행 하는 경우 다음과 같은 추가 원본 유형을 마이그레이션할 수 있습니다.
 
 - 장애 조치(failover) 클러스터
-- Linux servers that use Samba. We've tested the following:
+- Samba를 사용 하는 Linux 서버. 다음 사항을 테스트 했습니다.
     - CentOS 7
     - Debian GNU/Linux 8
     - RedHat Enterprise Linux 7.6
     - SUSE Linux Enterprise Server (SLES) 11 SP4
-    - Ubuntu 16.04 LTS and 12.04.5 LTS
-    - Samba 4.8, 4.7, 4.3, 4.2, and 3.6
+    - Ubuntu 16.04 LTS 및 12.04.5 LTS
+    - Samba 4.8, 4.7, 4.3, 4.2 및 3.6
 
-### <a name="requirements-for-destination-servers"></a>Requirements for destination servers
+### <a name="requirements-for-destination-servers"></a>대상 서버에 대 한 요구 사항
 
-The destination server must run one of the following operating systems:
+대상 서버는 다음 운영 체제 중 하나를 실행 해야 합니다.
 
 - Windows Server, 반기 채널
-- 시작
-- Windows Server 2016
+- Windows Server 2019
+- Windows Server 2016
 - Windows Server 2012 R2
 
 > [!TIP]
-> Destination servers running Windows Server 2019 or Windows Server, Semi-Annual Channel or later have double the transfer performance of earlier versions of Windows Server. This performance boost is due to the inclusion of a built-in Storage Migration Service proxy service, which also opens the necessary firewall ports if they're not already open.
+> Windows server 2019 또는 Windows Server, 반기 채널 이상을 실행 하는 대상 서버는 이전 버전의 Windows Server의 전송 성능을 두 배로 향상 합니다. 이러한 성능 향상은 기본 제공 저장소 마이그레이션 서비스 프록시 서비스를 포함 하기 때문에 발생 합니다 .이 서비스는 아직 열려 있지 않은 경우에도 필요한 방화벽 포트를 엽니다.
 
-## <a name="whats-new-in-storage-migration-service"></a>What's new in Storage Migration Service
+## <a name="whats-new-in-storage-migration-service"></a>저장소 마이그레이션 서비스의 새로운 기능
 
-The following new features are available when running the Storage Migration Server orchestrator on Windows Server, version 1903 or later, or an earlier version of Windows Server with [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) installed:
+Windows Server, 버전 1903 이상 또는 [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) 가 설치 된 이전 버전의 windows Server에서 Storage Migration Server orchestrator를 실행 하는 경우 다음과 같은 새로운 기능을 사용할 수 있습니다.
 
 - 새 서버로 로컬 사용자 및 그룹 마이그레이션
-- Migrate storage from failover clusters, migrate to failover clusters, and migrate between standalone servers and failover clusters
+- 장애 조치 (failover) 클러스터에서 저장소 마이그레이션, 장애 조치 클러스터로 마이그레이션 및 독립 실행형 서버와 장애 조치 (failover) 클러스터 간 마이그레이션
 - 삼바를 사용하는 Linux 서버에서 스토리지 마이그레이션
 - Azure 파일 동기화를 사용하여 마이그레이션된 공유를 Azure에 쉽게 동기화
 - Azure와 같은 신규 네트워크로 마이그레이션
 
 ## <a name="see-also"></a>참고 항목
 
-- [Migrate a file server by using Storage Migration Service](migrate-data.md)
-- [Storage Migration Services frequently asked questions (FAQ)](faq.md)
-- [Storage Migration Service known issues](known-issues.md)
+- [저장소 마이그레이션 서비스를 사용 하 여 파일 서버 마이그레이션](migrate-data.md)
+- [Storage Migration Services FAQ (질문과 대답)](faq.md)
+- [저장소 마이그레이션 서비스의 알려진 문제](known-issues.md)

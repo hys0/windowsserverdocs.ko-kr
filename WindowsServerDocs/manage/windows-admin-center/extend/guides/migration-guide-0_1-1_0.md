@@ -1,6 +1,6 @@
 ---
-title: Migrate from Windows Admin Center SDK 0.1 to 1.0
-description: This guide will help you migrate from Windows Admin Center SDK version 0.1 to 1.0
+title: Windows 관리 센터 SDK 0.1에서 1.0로 마이그레이션
+description: 이 가이드는 Windows 관리 센터 SDK 버전 0.1에서 1.0로 마이그레이션하는 데 도움이 됩니다.
 ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
@@ -15,60 +15,60 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/25/2019
 ms.locfileid: "71357062"
 ---
-# <a name="migrate-from-windows-admin-center-sdk-01-to-10"></a>Migrate from Windows Admin Center SDK 0.1 to 1.0
+# <a name="migrate-from-windows-admin-center-sdk-01-to-10"></a>Windows 관리 센터 SDK 0.1에서 1.0로 마이그레이션
 
->Applies To: Windows Admin Center Preview
+>적용 대상: Windows 관리 센터 미리 보기
 
-This guide will help you migrate from Windows Admin Center SDK version 0.1 to 1.0.  
+이 가이드는 Windows 관리 센터 SDK 버전 0.1에서 1.0로 마이그레이션하는 데 도움이 됩니다.  
 
-## <a name="1-learn-about-new-controls-with-the-dev-guide-extension"></a>1. Learn about new controls with the Dev Guide extension
+## <a name="1-learn-about-new-controls-with-the-dev-guide-extension"></a>1. 개발자 가이드 확장을 사용 하 여 새 컨트롤에 대해 알아보기
 
-Windows Admin Center version 1902 and later includes the **Dev Guide** extension, which you can use to find examples of controls (including newly available controls) and scenarios to help you build your own extension.  Dev Guide replaces the **Developer Tools** extension from earlier versions of the SDK.
+Windows 관리 센터 버전 1902 이상에는 사용자 고유의 확장을 빌드하는 데 도움이 되는 컨트롤의 예 (새로 사용 가능한 컨트롤 포함) 및 시나리오를 찾는 데 사용할 수 있는 **개발자 가이드** 확장이 포함 되어 있습니다.  개발자 가이드는 이전 버전의 SDK에서 **개발자 도구** 확장을 대체 합니다.
 
-### <a name="use-the-dev-guide-in-windows-admin-center"></a>Use the Dev Guide in Windows Admin Center
+### <a name="use-the-dev-guide-in-windows-admin-center"></a>Windows 관리 센터에서 개발자 가이드 사용
 
-Dev Guide is available as a solution in Windows Admin Center version 1902 and later.  Dev Guide is pre-installed, but it needs to be enabled via settings.
+개발자 가이드는 Windows 관리 센터 버전 1902 이상에서 솔루션으로 사용할 수 있습니다.  개발자 가이드는 미리 설치 되어 있지만 설정을 통해 사용 하도록 설정 해야 합니다.
 
-**Enable Dev Guide in Windows Admin Center:**
+**Windows 관리 센터에서 개발자 가이드를 사용 하도록 설정 합니다.**
 
-* Open Windows Admin Center (version 1902 and later)
-* Click on the **Settings** icon in the top right corner of the window
-* Select the **Advanced** tab
-* Under *Experiment Keys*, click **Add**
-* Enter a new value ```msft.sme.shell.devguide``` in the empty field that was created by the previous step
-* Click **Save and Reload**
+* Windows 관리 센터 (버전 1902 이상) 열기
+* 창의 오른쪽 위 모퉁이에 있는 **설정** 아이콘을 클릭 합니다.
+* **고급** 탭을 선택 합니다.
+* *실험 키*에서 **추가** 를 클릭 합니다.
+* 이전 단계에서 만든 빈 필드에 ```msft.sme.shell.devguide``` 새 값을 입력 합니다.
+* **저장 후 다시 로드를** 클릭 합니다.
 
-**Open Dev Guide in Windows Admin Center:**
+**Windows 관리 센터에서 개발자 가이드를 엽니다.**
 
-* Open Windows Admin Center (version 1902 and later)
-* Click the drop-down in the top left to show all solution types
-* Select the **Dev Guide** solution 
-    * If you don't see the solution listed, make sure you have enabled the dev guide (see section above) and have reloaded Windows Admin Center.
-* Browse the content of Dev Guide by selecting one of the tabs
-    * **Landing:** Contains code samples for *Manage As* and *Notification* scenarios
-    * **Controls:** Contains examples of each available control in the SDK
-    * **Pipes:** Contains examples of available converter and formatter functions
-    * **Styles:** Contains examples of CSS styles available in the SDK
-    * **MsftSme:** Contains examples and guidance for advanced scenarios 
+* Windows 관리 센터 (버전 1902 이상) 열기
+* 모든 솔루션 유형을 표시 하려면 왼쪽 상단에 있는 드롭다운을 클릭 합니다.
+* **개발자 가이드** 솔루션 선택 
+    * 솔루션이 나열 되지 않으면 개발자 가이드 (위 섹션 참조)를 사용 하도록 설정 하 고 Windows 관리 센터를 다시 로드 했는지 확인 합니다.
+* 탭 중 하나를 선택 하 여 개발자 가이드의 내용 찾아보기
+    * **방문:** *관리* 및 *알림* 시나리오에 대 한 코드 샘플이 포함 되어 있습니다.
+    * **컨트롤:** SDK에서 사용 가능한 각 컨트롤의 예제를 포함 합니다.
+    * **파이프:** 사용 가능한 변환기 및 포맷터 함수의 예를 포함 합니다.
+    * **스타일:** SDK에서 사용할 수 있는 CSS 스타일의 예가 포함 되어 있습니다.
+    * **MsftSme:** 고급 시나리오에 대 한 예제 및 지침이 포함 되어 있습니다. 
 
-### <a name="browse-the-source-code-of-dev-guide-on-github"></a>Browse the source code of Dev Guide on GitHub
+### <a name="browse-the-source-code-of-dev-guide-on-github"></a>GitHub에서 개발자 가이드의 소스 코드 찾아보기
 
-You can browse the [source code](https://github.com/Microsoft/windows-admin-center-sdk/) of Dev Guide on GitHub to find example HTML, CSS, and TypeScript code samples.
+GitHub에서 개발자 가이드의 [소스 코드](https://github.com/Microsoft/windows-admin-center-sdk/) 를 검색 하 여 HTML, CSS 및 TypeScript 코드 샘플을 찾을 수 있습니다.
 
-## <a name="2-prepare-your-development-environment-for-the-latest-sdk"></a>2. Prepare your development environment for the latest SDK
+## <a name="2-prepare-your-development-environment-for-the-latest-sdk"></a>2. 최신 SDK에 대 한 개발 환경 준비
 
-Install or update node.js version [10.15.1 LTS or later](https://nodejs.org/en/).
+Node.js 버전 [10.15.1 LTS](https://nodejs.org/en/)이상을 설치 하거나 업데이트 합니다.
 
-Update the Windows Admin Center CLI to the latest version:
+Windows 관리 센터 CLI를 최신 버전으로 업데이트 합니다.
 
-[//]: # "npm uninstall -g windows-admin-center-cli@next"
+[//]: # "npm 제거-g windows-admin-center-cli@next"
 
 ``` cmd
 npm uninstall -g windows-admin-center-cli
 npm install -g windows-admin-center-cli
 ```
 
-Update your global dependencies to these versions:
+이러한 버전에 대 한 전역 종속성을 업데이트 합니다.
 
 ``` cmd
 npm install npm@6.4.1 -g
@@ -78,46 +78,46 @@ npm install typescript@3.1.6 -g
 npm install tslint@5.11.0 -g
 ```
 
-## <a name="3-create-a-new-project-with-the-latest-sdk"></a>3. Create a new project with the latest SDK
+## <a name="3-create-a-new-project-with-the-latest-sdk"></a>3. 최신 SDK를 사용 하 여 새 프로젝트 만들기
 
-Use the Windows Admin Center CLI to create a new project targeting the ```next``` version (SDK 1.0):
+Windows 관리 센터 CLI를 사용 하 여 ```next``` 버전 (SDK 1.0)을 대상으로 하는 새 프로젝트를 만듭니다.
 
-[//]: # "wac create --company 'Contoso Inc' --tool 'Manage Foo Works' --version experimental"
+[//]: # "wac create--company ' Contoso Inc. '--tool ' Foo Works 관리 '--버전 실험적"
 
 ``` cmd
 wac create --company "Contoso Inc" --tool "Manage Foo Works" --version next
 ```
 
-Next, change directory into the folder just created, then install required local dependencies by running ```npm install ```.
+그런 다음, 디렉터리를 앞에서 만든 폴더로 변경한 다음 ```npm install ```를 실행 하 여 필요한 로컬 종속성을 설치 합니다.
 
-## <a name="4-modify-an-existing-project-to-use-the-latest-sdk"></a>4. Modify an existing project to use the latest SDK
+## <a name="4-modify-an-existing-project-to-use-the-latest-sdk"></a>4. 최신 SDK를 사용 하도록 기존 프로젝트 수정
 
-IMPORTANT: Make a backup of your project before continuing.
+중요: 계속 하기 전에 프로젝트의 백업을 만드십시오.
 
-Modify the following line in ```package.json``` to target the ```next``` version (SDK 1.0):
+```next``` 버전 (SDK 1.0)을 대상으로 ```package.json```에서 다음 줄을 수정 합니다.
 
-[//]: # "'@microsoft/windows-admin-center-sdk': 'experimental'"
+[//]: # "'@microsoft/windows-admin-center-sdk': ' 실험적 '"
 
 ``` json
 "@microsoft/windows-admin-center-sdk": "next",
 ```
 
-Then run ```npm install``` to update references throughout your project.
+그런 다음 ```npm install```를 실행 하 여 프로젝트 전체에서 참조를 업데이트 합니다.
 
-## <a name="5-use-the-sdk-cli-to-fix-common-migration-issues"></a>5. Use the SDK CLI to fix common migration issues
+## <a name="5-use-the-sdk-cli-to-fix-common-migration-issues"></a>5. SDK CLI를 사용 하 여 일반적인 마이그레이션 문제 해결
 
-IMPORTANT: Make a backup of your project before continuing.
+중요: 계속 하기 전에 프로젝트의 백업을 만드십시오.
 
-From the root folder of your project, run the following CLI command on your project to fix common migration issues automatically:
+프로젝트의 루트 폴더에서 프로젝트에 대해 다음 CLI 명령을 실행 하 여 일반적인 마이그레이션 문제를 자동으로 해결 합니다.
 
 ``` cmd
 wac updateSeven --update
 ```
 
-This CLI command addresses the following issues automatically:
+이 CLI 명령은 다음 문제를 자동으로 해결 합니다.
 
-* Regenerate ```package-lock.json```
-* Update files in the angular compilation environment:
+* ```package-lock.json``` 다시 생성
+* 각도 컴파일 환경에서 파일을 업데이트 합니다.
     - ```.gitignore```
     - ```tslint.json```
     - ```tsconfig.json```
@@ -128,170 +128,170 @@ This CLI command addresses the following issues automatically:
     - ```src\tsconfig.lib.json```
     - ```src\tsconfig.spec.json```
 
-## <a name="6-use-the-sdk-cli-to-understand-common-migration-issues"></a>6. Use the SDK CLI to understand common migration issues
+## <a name="6-use-the-sdk-cli-to-understand-common-migration-issues"></a>6. SDK CLI를 사용 하 여 일반적인 마이그레이션 문제를 이해 합니다.
 
-From the root folder of your project, run the following CLI command to audit your project and find common migration issues that need to be addressed manually:
+프로젝트의 루트 폴더에서 다음 CLI 명령을 실행 하 여 프로젝트를 감사 하 고 수동으로 해결 해야 하는 일반적인 마이그레이션 문제를 찾습니다.
 
 ``` cmd
 wac updateSeven --audit
 ```
 
-This will find instances of the following issues in your project:
+이렇게 하면 프로젝트에서 다음 문제의 인스턴스가 검색 됩니다.
 
-### <a name="replace-usage-of-the-following-css-classes-with-these-sme-classes"></a>Replace usage of the following CSS classes with these sme classes:
+### <a name="replace-usage-of-the-following-css-classes-with-these-sme-classes"></a>다음 CSS 클래스의 사용을 다음 sme 클래스로 바꿉니다.
 
-| Old CSS class | New CSS class |
+| 이전 CSS 클래스 | 새 CSS 클래스 |
 | -- | -- |
-| .auto-flex-size |  .sme-position-flex-auto |
-| .border-all |  .sme-border-inset-sm AND .sme-border-color-base-90 |
-| .border-bottom |  .sme-border-bottom-sm AND .sme-border-bottom-color-base-90 |
-| .border-horizontal |  .sme-border-horizontal-sm AND .sme-border-horizontal-color-base-90 |
-| .border-left |  .sme-border-left-sm AND .sme-border-left-color-base-90 |
-| .border-right |  .sme-border-right-sm AND .sme-border-right-color-base-90 |
-| .border-top |  .sme-border-top-sm AND .sme-border-top-color-base-90 |
-| .border-vertical |  .sme-border-vertical-sm AND .sme-border-vertical-color-base-90 |
-| .break-word |  .sme-arrange-ws-wrap |
-| .btn |  .sme-button OR button |
-| .btn-primary |  .sme-button.sme-button-primary OR .button.sme-button-primary |
-| .color-dark |  .sme-color-alt |
-| .color-light |  .sme-color-base |
-| .color-light-gray |  .sme-color-base-90 |
-| .fixed-flex-size |  .sme-position-flex-none |
-| .flex-layout |  .sme-arrange-stack-h OR .sme-arrange-stack-v |
-| .font-bold |  .sme-font-emphasis1 |
-| .highlight |  .sme-background-color-yellow |
-| .horizontal |  .sme-arrange-stack-h |
-| .no-scroll |  .sme-position-flex-auto |
-| .nowrap |  .sme-arrange-stack-h OR .sme-arrange-stack-v |
-| .relative |  .sme-layout-relative |
-| .relative-center |  .sme-layout-absolute .sme-position-center |
-| .reverse |  .sme-arrange-stack-reversed |
-| .stretch-absolute |  .sme-layout-absolute .sme-position-inset-none |
-| .stretch-fixed |  .sme-layout-fixed .sme-position-inset-none |
-| .stretch-vertical |  .sme-position-stretch-v |
-| .stretch-width |  .sme-position-stretch-h |
-| .vertical |  .sme-arrange-stack-v |
-| .vertical-scroll-only |  .sme-arrange-overflow-hide-x sme-arrange-overflow-auto-y |
-| .wrap |  .sme-arrange-wrapstack-h OR .sme-arrange-wrapstack-v |
+| . 자동 플렉스 크기 |  . sme-자동 |
+| . 테두리-모두 |  . sme-sme-----90 |
+| . 테두리-아래쪽 |  . sme-sme-----밑-90 |
+| . 테두리-가로 |  . sme-sme-------90 |
+| . 왼쪽 테두리 |  . sme-sme------------90 |
+| . 테두리-오른쪽 |  . sme-sme-------90 |
+| . 테두리-위쪽 |  . sme-sme------------90 |
+| . 테두리-세로 |  . sme-sme-------90 |
+| . break 단어 |  . sme-ws-wrap |
+| .btn |  . sme-단추 또는 단추 |
+| . btn-기본 |  . sme-sme-button 또는. sme-기본 |
+| . 색-어둡게 |  sme |
+| . 색-밝게 |  sme |
+| . 색-연한 회색 |  sme-90 |
+| . 고정-플렉스 크기 |  . sme-없음 |
+| . flex-레이아웃 |  . sme 또는. sme--stack-v |
+| . font-size-굵게 |  sme-emphasis1 |
+| . 강조 표시 |  sme-노랑-배경색 |
+| . 가로 |  . sme-------------h |
+| . 없음-스크롤 |  . sme-자동 |
+| . nowrap |  . sme 또는. sme--stack-v |
+| . 상대 |  . sme-상대 |
+| . 상대-가운데 |  . sme-sme-위치-가운데 |
+| . 역방향 |  . sme-스택-반전 |
+| . 스트레치-절대 |  sme-sme-오목-없음 |
+| . 스트레치-고정 |  sme-sme-오목-없음 |
+| . 스트레치-세로 |  . sme-스트레치-v |
+| . 스트레치-너비 |  . sme--스트레치-h |
+| . 세로 |  . sme-stack-v |
+| . 세로 스크롤 전용 |  . sme-sme-hide-x-auto-y |
+| . wrap |  . sme-wrapstack-h 또는. sme-wrapstack-v |
 
-### <a name="replace-usage-of-the-following-components-with-these-sme-components"></a>Replace usage of the following components with these sme components:
+### <a name="replace-usage-of-the-following-components-with-these-sme-components"></a>다음 구성 요소의 사용을 다음 sme 구성 요소로 바꿉니다.
 
-| Old component | New component |
+| 이전 구성 요소 | 새 구성 요소 |
 | -- | -- |
-| .alert |  sme-alert |
-| .alert-danger |  sme-alert |
-| .breadCrumb |  sme-alert |
-| .checkbox |  sme-form-field[type="checkbox"] |
-| .combobox |  sme-form-field[type="select"] |
-| .dashboard |  sme-layout-content-zone-padded sme-arrange-stack-h |
-| .details-panel |  sme-property-grid |
-| .details-panel-container |  sme-property-grid |
-| .details-tab |  sme-property-grid OR sme-pivot |
-| .details-wrapper |  sme-property-grid |
-| .disabled |  sme-disabled |
-| .form-buttons | sme-form-field |
-| .form-control | sme-form-field |
-| .form-controls | sme-form-field |
-| .form-group | sme-form-field |
-| .form-group-label | sme-form-field |
-| .form-input | sme-form-field |
-| .form-stretch | sme-form-field |
-| .input-file | sme-form-field |
-| .nav-tabs |  sme-pivot |
-| .radio |  sme-form-field[type="radio"] |
-| .required-clue | sme-form-field |
-| .searchbox |  sme-form-field[type="search"] |
-| .toggle-switch |  sme-form-field[type="toggle-switch"] |
-| .tool-container |  sme-layout-content-zone OR sme-layout-content-zone-padded |
+| . 경고 |  sme-경고 |
+| . 경고-위험 |  sme-경고 |
+| . 이동 경로 |  sme-경고 |
+| . checkbox |  sme [type = "checkbox"] |
+| . combobox |  sme [type = "select"] |
+| . 대시보드 |  sme-sme-패딩-h-h |
+| . 세부 정보-패널 |  sme-속성-그리드 |
+| . 세부 정보-패널-컨테이너 |  sme-속성-그리드 |
+| . details-tab |  sme 또는 sme |
+| . 세부 정보-래퍼 |  sme-속성-그리드 |
+| . 사용 안 함 |  sme-사용 안 함 |
+| . 양식-단추 | sme-필드 |
+| . form-컨트롤 | sme-필드 |
+| . form-controls | sme-필드 |
+| . 양식-그룹 | sme-필드 |
+| . 양식-그룹-레이블 | sme-필드 |
+| . form-input | sme-필드 |
+| . 양식-스트레치 | sme-필드 |
+| . 입력 파일 | sme-필드 |
+| . 탐색 탭 |  sme |
+| . radio |  sme [type = "radio"] |
+| . 필수-단서 | sme-필드 |
+| . searchbox |  sme [type = "search"] |
+| . toggle 스위치 |  sme [type = "toggle 스위치"] |
+| . 도구-컨테이너 |  sme 또는 sme-채워짐-zone-채워짐 |
 
-### <a name="these-css-classes-are-deprecated-and-are-no-longer-supported"></a>These CSS classes are deprecated and are no longer supported:
+### <a name="these-css-classes-are-deprecated-and-are-no-longer-supported"></a>이러한 CSS 클래스는 더 이상 사용 되지 않으며 더 이상 지원 되지 않습니다.
 
-| Old class | 사용 중단 |
+| 이전 클래스 | 사용 중단 |
 | -- | -- |
-| .acceptable | (deprecated) |
-| .color-error | (deprecated) |
-| .color-info | (deprecated) |
-| .color-success | (deprecated) |
-| .color-warning | (deprecated) |
-| .delete-button | (deprecated) |
-| .details-content | (deprecated) |
-| .error-cover | (deprecated) |
-| .error-message | (deprecated) |
-| .guided-pane-button | (deprecated) |
-| .header-container | (deprecated) |
-| .icon-win | (deprecated) |
-| .indent | (deprecated) |
-| .invalid | (deprecated) |
-| .item-list | (deprecated) |
-| .modal-scrollable | (deprecated) |
-| .multi-section | (deprecated) |
-| .no-action-bar | (deprecated) |
-| .overflow-margins | (deprecated) |
-| .overflow-tool | (deprecated) |
-| .progress-cover | (deprecated) |
-| .right-panel | (deprecated) |
-| .rollup | (deprecated) |
-| .rollup-status | (deprecated) |
-| .rollup-title | (deprecated) |
-| .rollup-value | (deprecated) |
-| .searchbox-action-bar | (deprecated) |
-| .size-h-1 | (deprecated) |
-| .size-h-2 | (deprecated) |
-| .size-h-3 | (deprecated) |
-| .size-h-4 | (deprecated) |
-| .size-h-full | (deprecated) |
-| .size-h-half | (deprecated) |
-| .size-v-1 | (deprecated) |
-| .size-v-2 | (deprecated) |
-| .size-v-3 | (deprecated) |
-| .size-v-4 | (deprecated) |
-| .status-icon | (deprecated) |
-| .svg-16px | (deprecated) |
-| .table-indent | (deprecated) |
-| .table-sm | (deprecated) |
-| .thin | (deprecated) |
-| .tile | (deprecated) |
-| .tile-body | (deprecated) |
-| .tile-content | (deprecated) |
-| .tile-footer | (deprecated) |
-| .tile-header | (deprecated) |
-| .tile-layout | (deprecated) |
-| .tile-table | (deprecated) |
-| .toolbar | (deprecated) |
-| .tool-bar | (deprecated) |
-| .tool-header | (deprecated) |
-| .tool-header-box | (deprecated) |
-| .tool-pane | (deprecated) |
-| .usage-bar | (deprecated) |
-| .usage-bar-area | (deprecated) |
-| .usage-bar-background | (deprecated) |
-| .usage-bar-title | (deprecated) |
-| .usage-bar-value | (deprecated) |
-| .usage-chart | (deprecated) |
-| .usage-message | (deprecated) |
-| .usage-message-area | (deprecated) |
-| .usage-message-title | (deprecated) |
-| .warning | (deprecated) |
-| .white-space | (deprecated) |
+| . 허용 가능 | mapi |
+| . color-error | mapi |
+| . 색-정보 | mapi |
+| . 색-성공 | mapi |
+| . color-warning | mapi |
+| . 삭제-단추 | mapi |
+| . 세부 정보-콘텐츠 | mapi |
+| . 오류-커버 | mapi |
+| . 오류-메시지 | mapi |
+| . 단계별 창 단추 | mapi |
+| . 헤더-컨테이너 | mapi |
+| . 아이콘-win | mapi |
+| . 들여쓰기 | mapi |
+| . 잘못 됨 | mapi |
+| . 항목 목록 | mapi |
+| . 모달-스크롤 가능 | mapi |
+| . 다중 섹션 | mapi |
+| . 작업--작업 표시줄 | mapi |
+| . 넘침 여백 | mapi |
+| . 오버플로 도구 | mapi |
+| . 진행률-커버 | mapi |
+| . 오른쪽 패널 | mapi |
+| . rollup | mapi |
+| . rollup-상태 | mapi |
+| . rollup-제목 | mapi |
+| . rollup-값 | mapi |
+| . searchbox-작업 표시줄 | mapi |
+| . 크기-h-1 | mapi |
+| . 크기-h-2 | mapi |
+| . 크기-h-3 | mapi |
+| . 크기-h-4 | mapi |
+| . 크기-h-전체 | mapi |
+| . 크기-h-절반 | mapi |
+| . 크기-v-1 | mapi |
+| . 크기-v-2 | mapi |
+| . 크기-v-3 | mapi |
+| . 크기-v-4 | mapi |
+| . 상태-아이콘 | mapi |
+| node.js-16px | mapi |
+| . 테이블-들여쓰기 | mapi |
+| . 테이블-sm | mapi |
+| . 씬 | mapi |
+| . 타일 | mapi |
+| . 타일-본문 | mapi |
+| . 타일-콘텐츠 | mapi |
+| . 타일-바닥글 | mapi |
+| . 타일-헤더 | mapi |
+| . 타일-레이아웃 | mapi |
+| . 타일-테이블 | mapi |
+| . 도구 모음 | mapi |
+| . 도구 모음 | mapi |
+| . 도구-헤더 | mapi |
+| . 도구-헤더-상자 | mapi |
+| . 도구 창 | mapi |
+| . 사용-가로 막대형 | mapi |
+| . 사용-가로 막대형-영역 | mapi |
+| . 사용-가로 막대형-배경 | mapi |
+| . 사용-가로 막대형-제목 | mapi |
+| . 사용-가로-값 | mapi |
+| . 사용-차트 | mapi |
+| . 사용-메시지 | mapi |
+| . 사용법-메시지 영역 | mapi |
+| . 사용법-메시지 제목 | mapi |
+| . 경고 | mapi |
+| . 공백 | mapi |
 
-## <a name="7-understand-and-resolve-issues-with-observable-objects"></a>7. Understand and resolve issues with observable objects
+## <a name="7-understand-and-resolve-issues-with-observable-objects"></a>7. 관찰 가능한 개체와 관련 된 문제 이해 및 해결
 
-### <a name="update--rxjs-function-use-for-observable-objects"></a>Update  ```rxjs``` function use for observable objects
+### <a name="update--rxjs-function-use-for-observable-objects"></a>관찰 가능한 개체에 대 한 업데이트 ```rxjs``` 함수 사용
 
-These are some common function names that have been changed, there may be others in your project.
+이러한 이름 중 일부는 변경 된 것 이며 프로젝트에 다른 다른 함수가 있을 수 있습니다.
 
-* Update ```Observable.empty()``` to ```empty()```
-* Update ```Observable.of()``` to ```of()```
-* Update ```.switchMap()``` to ```.pipe(switchMap())```
-* Update ```.map()``` to ```.pipe(map())```
-* Update ```flatMap()``` to ```mergeMap()```
+* ```empty()``` ```Observable.empty()``` 업데이트
+* ```of()``` ```Observable.of()``` 업데이트
+* ```.pipe(switchMap())``` ```.switchMap()``` 업데이트
+* ```.pipe(map())``` ```.map()``` 업데이트
+* ```mergeMap()``` ```flatMap()``` 업데이트
 
 
-### <a name="resolve-runtime-issues-with-map-and-filter-functions-on-observable-objects"></a>Resolve runtime issues with ```.map()``` and ```.filter()``` functions on observable objects
+### <a name="resolve-runtime-issues-with-map-and-filter-functions-on-observable-objects"></a>관찰 가능한 개체의 ```.map()``` 및 ```.filter()``` 함수를 사용 하 여 런타임 문제 해결
 
-If the compiler cannot properly identify an ```observable``` object's type, ```.map()``` and ```.filter()``` functions from the ```array``` object might be mapped instead to your object, causing errors at runtime.  Make sure that your functions return an ```observable``` object specifying an explicit data type to avoid this issue.
+컴파일러가 ```observable``` 개체의 형식을 제대로 식별할 수 없는 경우 ```array``` 개체의 ```.map()``` 및 ```.filter()``` 함수가 개체에 대신 매핑될 수 있으므로 런타임에 오류가 발생 합니다.  함수에서이 문제를 방지 하기 위해 명시적 데이터 형식을 지정 하는 ```observable``` 개체를 반환 하는지 확인 합니다.
 
-```any``` and no return type can cause this problem, look for code with these patterns:
+```any``` 반환 형식으로 인해이 문제가 발생할 수 있습니다. 이러한 패턴을 사용 하 여 코드를 찾습니다.
 
 ``` ts
 public getMyObservable(): any { //any return type can cause issues
@@ -303,31 +303,31 @@ public getMyObservable() { //no return type can cause issues
 }
 ```
 
-## <a name="8-resolve-other-common-issues"></a>8. Resolve other common issues
+## <a name="8-resolve-other-common-issues"></a>8. 다른 일반적인 문제 해결
 
-These techniques will help resolve other common issues:
+이러한 기술은 다른 일반적인 문제를 해결 하는 데 도움이 됩니다.
 
-* Run ```ng lint --fix``` to fix common lint issues
-* Run ```gulp build``` repeatedly to incrementally fix issues that ```gulp build``` can resolve automatically
+* ```ng lint --fix```를 실행 하 여 일반적인 보풀이 문제 해결
+* ```gulp build```를 반복적으로 실행 하 ```gulp build``` 자동으로 해결 될 수 있는 문제를 증분 해결
 
-## <a name="9-build-and-serve-your-project"></a>9. Build and serve your project
+## <a name="9-build-and-serve-your-project"></a>9. 프로젝트를 빌드하고 제공 합니다.
 
-Run the following commands to build and serve your project with the latest version (SDK 1.0):
+다음 명령을 실행 하 여 최신 버전 (SDK 1.0)을 사용 하 여 프로젝트를 빌드하고 제공 합니다.
 
 ``` cmd
 gulp build
 gulp serve --port 4201
 ```
 
-## <a name="10-turn-on-dark-theme-in-windows-admin-center"></a>10. Turn on dark theme in Windows Admin Center
+## <a name="10-turn-on-dark-theme-in-windows-admin-center"></a>10. Windows 관리 센터에서 짙은 테마 켜기
 
-To turn on dark theme in Windows Admin Center version 1902 and later, follow these steps:
+Windows 관리 센터 버전 1902 이상에서 어두운 테마를 켜려면 다음 단계를 수행 합니다.
 
-* Open Windows Admin Center (version 1902 and later)
-* Click on the **Settings** icon in the top right corner of the window
-* Select the **Advanced** tab
-* Under *Experiment Keys*, click **Add**
-* Enter a new value ```msft.sme.shell.personalization``` in the empty field that was created by the previous step
-* Click **Save and Reload**
-* Settings will now have a new tab, **Personalization**.  Select this tab
-* Change **Colors** to **Dark mode (preview)**
+* Windows 관리 센터 (버전 1902 이상) 열기
+* 창의 오른쪽 위 모퉁이에 있는 **설정** 아이콘을 클릭 합니다.
+* **고급** 탭을 선택 합니다.
+* *실험 키*에서 **추가** 를 클릭 합니다.
+* 이전 단계에서 만든 빈 필드에 ```msft.sme.shell.personalization``` 새 값을 입력 합니다.
+* **저장 후 다시 로드를** 클릭 합니다.
+* 이제 설정에 새 탭, **개인 설정**이 있습니다.  이 탭을 선택 합니다.
+* **색** 을 **어둡게 모드로 변경 (미리 보기)**
