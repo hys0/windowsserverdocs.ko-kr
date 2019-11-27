@@ -1,6 +1,6 @@
 ---
 title: SDN 보안
-description: 이 섹션의 항목을 사용 하 여 Windows Server 2016 Datacenter의 소프트웨어 정의 네트워킹 \(SDN @ no__t-1의 보안에 대해 자세히 알아볼 수 있습니다.
+description: 이 섹션의 항목을 사용 하 여 Windows Server 2016 Datacenter에서 소프트웨어 정의 네트워킹 \(SDN\)의 보안에 대해 자세히 알아볼 수 있습니다.
 manager: brianlic
 ms.prod: windows-server
 ms.technology: networking-sdn
@@ -19,7 +19,7 @@ ms.locfileid: "71355723"
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-이 섹션의 항목을 사용 하 여 소프트웨어 정의 네트워킹 \(SDN @ no__t-1의 보안에 대해 자세히 알아볼 수 있습니다.
+이 섹션의 항목을 사용 하 여 소프트웨어 정의 네트워킹 \(SDN\)의 보안에 대해 알아볼 수 있습니다.
 
 >[!Note]
 >추가 소프트웨어 정의 네트워킹 설명서를 보려면 다음 라이브러리 섹션을 사용할 수 있습니다.

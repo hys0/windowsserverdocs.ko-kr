@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.date: 02/15/2019
-ms.openlocfilehash: 68b5c7b2c5bc8e93d653514b2664d96b97b07a9e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: fac17cd5975eeb699f205888edbe3f1c30b43394
+ms.sourcegitcommit: 1da993bbb7d578a542e224dde07f93adfcd2f489
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406843"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73567145"
 ---
 # <a name="get-started-with-windows-admin-center"></a>Windows 관리 센터 시작
 
@@ -56,9 +56,9 @@ Windows 관리 센터 설치를 완료 한 후에는 기본 개요 페이지에�
 
    ![](../media/launch/addserver0.png)
 
-2. 서버, 장애 조치 (Failover) 클러스터 또는 하이퍼 수렴 형 클러스터 연결을 추가 하도록 선택 합니다.
+2. 서버, 클러스터, Windows PC 또는 Azure VM을 추가 하도록 선택 합니다.
     
-   ![](../media/launch/addserver1.png)
+   ![](../media/launch/ChooseConnectionType.png)
 
 3. 관리할 서버 또는 클러스터의 이름을 입력 하 고 **제출**을 클릭 합니다. 서버 또는 클러스터가 개요 페이지의 연결 목록에 추가 됩니다.
 
@@ -99,7 +99,7 @@ Windows 관리 센터는 관리 되는 노드로 인증 하기 위한 여러 메
 
 **Windows Server에 서비스로 배포 된 경우 Single sign-on**
 
-Windows Server에 Windows 관리 센터를 설치한 경우에는 single sign-on에 대 한 추가 구성이 필요 합니다.  [위임할 환경 구성](../configure/user-access-control.md)
+Windows Server에 Windows 관리 센터를 설치한 경우 Single Sign-On 하려면 추가 구성이 필요 합니다.  [위임할 환경 구성](../configure/user-access-control.md)
 
 **--또는--**
 
@@ -117,7 +117,7 @@ Windows 관리 센터에서 windows Server의 서비스 모드로 실행 중이�
 
 **로컬 관리자 암호 솔루션 (LAPS)**
 
-환경에서 [LAPS](https://technet.microsoft.com/mt227395.aspx)를 사용 하 고 WINDOWS 10 PC에 Windows 관리 센터를 설치한 경우 LAPS 자격 증명을 사용 하 여 관리 되는 노드로 인증할 수 있습니다. **이 시나리오를 사용 하는 경우 다음을 참조 하세요** . [사용자 의견을 제공](http://aka.ms/WACFeedback)합니다.
+환경에서 [LAPS](https://technet.microsoft.com/mt227395.aspx)를 사용 하 고 WINDOWS 10 PC에 Windows 관리 센터를 설치한 경우 LAPS 자격 증명을 사용 하 여 관리 되는 노드로 인증할 수 있습니다. **이 시나리오를 사용 하는 경우 피드백을 제공 해 주세요** [](https://aka.ms/WACFeedback).
 
 ## <a name="using-tags-to-organize-your-connections"></a>태그를 사용 하 여 연결 구성
 
@@ -166,7 +166,7 @@ Import-Connection "https://wac.contoso.com" -fileName "WAC-connections.csv"
 
 ### <a name="csv-file-format-for-importing-connections"></a>연결을 가져오기 위한 CSV 파일 형식
 
-CSV 파일의 형식은 4 개의 제목 ```"name","type","tags","groupId"```으로 시작 하 고 그 다음에는 각 연결이 새 줄에 적용 됩니다.
+CSV 파일의 형식은 ```"name","type","tags","groupId"```4 개의 제목으로 시작 하 여 각 연결을 새 줄에 입력 합니다.
 
 **name** 은 연결의 FQDN입니다.
 
@@ -181,7 +181,7 @@ CSV 파일의 형식은 4 개의 제목 ```"name","type","tags","groupId"```으�
 
 **태그** 는 파이프로 구분 됩니다.
 
-**groupId** 는 공유 연결에 사용 됩니다. 이 열의 값 ```global``` 을 사용 하 여 공유 연결을 만듭니다.
+**groupId** 는 공유 연결에 사용 됩니다. 이 열에 ```global``` 값을 사용 하 여 공유 연결을 만듭니다.
 
 ### <a name="example-csv-file-for-importing-connections"></a>연결 가져오기에 대 한 예제 CSV 파일
 
