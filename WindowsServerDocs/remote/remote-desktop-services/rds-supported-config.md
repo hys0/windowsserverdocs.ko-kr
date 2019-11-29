@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: c925c7eb-6880-411f-8e59-bd0f57cc5fc3
 author: lizap
 manager: dongill
-ms.openlocfilehash: 7d4641e2bb40a9a70264c68d0268208a30f36a69
-ms.sourcegitcommit: 3262c5c7cece9f2adf2b56f06b7ead38754a451c
+ms.openlocfilehash: e501d550e5371c668f7e243f00106a0b79f694dc
+ms.sourcegitcommit: 214847318401cebdcb7f1924a731b4439c9d8a24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72812304"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74187879"
 ---
 # <a name="supported-configurations-for-remote-desktop-services"></a>원격 데스크톱 서비스에 지원되는 구성
 
@@ -57,7 +57,7 @@ Windows Server 2016은 Windows Server 2016을 실행하는 RDSH(원격 데스크
 
 원격 데스크톱 서비스는 GPU가 장착된 시스템을 지원합니다. 원격 연결을 통해 GPU가 필요한 애플리케이션을 사용할 수 있습니다. 또한 GPU 가속 렌더링 및 인코딩을 활성화하면 앱 성능과 확장성을 향상시킬 수 있습니다.
 
-단독 세션 클라이언트 운영 체제인 원격 데스크톱 서비스 세션 호스트는 [Azure GPU 최적화된 가상 머신 크기](/en-us/azure/virtual-machines/windows/sizes-gpu), 실제 RDSH 서버에 사용할 수 있는 GPU, RemoteFX vGPU(Windows Server 2016) 및 지원되는 하이퍼바이저를 통해 VM에 제공된 GPU 등 다양한 방식으로 운영 체제에 제공되는 실제 또는 가상 GPU를 활용할 수 있습니다.
+원격 데스크톱 서비스 세션 호스트 및 단독 세션 클라이언트 운영 체제는 [Azure GPU 최적화된 가상 머신 크기](/en-us/azure/virtual-machines/windows/sizes-gpu), 실제 RDSH 서버에 사용할 수 있는 GPU, RemoteFX vGPU(Windows Server 2016) 및 지원되는 하이퍼바이저를 통해 VM에 제공된 GPU 등 다양한 방식으로 운영 체제에 제공되는 실제 또는 가상 GPU를 활용할 수 있습니다.
 
 [나에게 적합한 그래픽 가상화 기술은 무엇일까요?](rds-graphics-virtualization.md)를 참조하여 필요한 것을 알아보세요. DDA에 대한 자세한 내용은 [개별 디바이스 할당 배포를 위한 계획](../../virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md)을 확인하세요.
 

@@ -8,12 +8,12 @@ ms.date: 08/27/2019
 ms.topic: article
 author: Heidilohr
 ms.localizationpriority: medium
-ms.openlocfilehash: 69beba2c59617da5b501dc55e2509e41ce4ee3fd
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6c37c28fded08ba68e46a10a534ee0269c714938
+ms.sourcegitcommit: 89aea00fe0e00fc8b1a6e20af36ad04df8c9fe5b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404113"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189469"
 ---
 # <a name="get-started-with-the-web-client"></a>웹 클라이언트 시작
 
@@ -58,6 +58,10 @@ ms.locfileid: "71404113"
 ## <a name="copy-and-paste-from-the-remote-desktop-web-client"></a>원격 데스크톱 웹 클라이언트에서 복사 및 붙여넣기
 
 웹 클라이언트는 현재 텍스트만 복사 및 붙여넣을 수 있도록 지원합니다. 파일은 웹 클라이언트에서 복사 또는 붙여넣을 수 없습니다. 또한 텍스트를 복사하고 붙여넣을 때는 **Ctrl+C** 및 **Ctrl+V**만 사용할 수 있습니다.
+
+## <a name="use-an-input-method-editor-ime-in-the-remote-session"></a>원격 세션에서 IME(입력기) 사용
+
+입력기를 사용하여 복잡한 문자를 원격 세션에 입력하려면 탐색 모음에서 톱니바퀴 아이콘을 선택하여 **설정** 측면 패널을 열고 **입력기 사용** 스위치를 **켜기**로 설정합니다. 입력기가 설치되었고 원격 세션에서 활성화되어 있어야 합니다. 
 
 ## <a name="get-help-with-the-web-client"></a>웹 클라이언트에 대한 도움 받기
 

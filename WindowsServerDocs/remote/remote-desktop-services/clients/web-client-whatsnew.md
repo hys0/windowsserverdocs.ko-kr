@@ -11,14 +11,14 @@ ms.topic: article
 author: heidilohr
 manager: daveba
 ms.author: helohr
-ms.date: 10/18/2019
+ms.date: 11/15/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: bcbd3292bcd4653a4568492a996d53c17f465aa8
-ms.sourcegitcommit: 9a6a692a7b2a93f52bb9e2de549753e81d758d28
+ms.openlocfilehash: 41f5bd7be03e61471683d5fc04df9ee10bc09e58
+ms.sourcegitcommit: 89aea00fe0e00fc8b1a6e20af36ad04df8c9fe5b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72591047"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189483"
 ---
 # <a name="whats-new-in-the-web-client"></a>웹 클라이언트의 새로운 기능
 
@@ -26,6 +26,14 @@ ms.locfileid: "72591047"
 
 > [!NOTE]
 > 웹 클라이언트에 대한 시스템 버전 관리를 변경했습니다. 1\.0.18.0 버전부터 모든 웹 클라이언트 릴리스 버전에는 숫자가 포함됩니다(“W.X.Y.Z” 형식의). 원격 데스크톱 웹 클라이언트에 대한 릴리스 번호는 항상 0으로 끝납니다(예: W.X.Y.0). 각 Windows Virtual Desktop 웹 클라이언트 릴리스는 다음 원격 데스크톱 웹 클라이언트가 릴리스될 때까지 마지막 숫자를 변경합니다(예: 1.0.18.1).
+
+## <a name="updates-for-version-10210"></a>1\.0.21.0 버전에 대한 업데이트
+*게시 날짜: 11/15/2019*
+
+- 복잡한 문자 입력을 위해 원격 세션에서 IME(입력기) 사용에 대한 지원이 추가되었습니다.
+- 사용자가 macOS 디바이스의 원격 세션으로 복사 및 붙여넣기를 수행할 수 없는 회귀를 수정했습니다.
+- 로컬 Windows 키가 Firefox의 원격 세션으로 전송되는 회귀가 수정되었습니다.
+- 관리자가 사용하도록 설정할 때 RDWeb 암호 변경에 대한 링크가 추가되었습니다.
 
 ## <a name="updates-for-version-10200"></a>버전 1.0.20.0 업데이트
 *게시 날짜: 2019/10/18*

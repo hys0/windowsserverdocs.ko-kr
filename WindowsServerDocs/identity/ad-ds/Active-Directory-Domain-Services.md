@@ -11,7 +11,7 @@ ms.prod: windows-server
 ms.technology: identity-adds
 ms.openlocfilehash: 52f77e2cb60be66d8be2e3927fe0f97c2c945994
 ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71391017"
@@ -25,7 +25,7 @@ ms.locfileid: "71391017"
 
 
 * [Active Directory Domain Services의 새로운 기능](../whats-new-active-directory-domain-services.md)  
-* [시작 하기 AD DS](../ad-ds/AD-DS-Getting-Started.md)   
+* [AD DS 시작](../ad-ds/AD-DS-Getting-Started.md)   
 * [AD DS 디자인 및 계획](../ad-ds/plan/AD-DS-Design-and-Planning.md)  
 * [AD DS 배포](../ad-ds/deploy/AD-DS-Deployment.md)  
 * [AD DS 작업](../ad-ds/manage/component-updates/AD-DS-Operations.md)   
