@@ -8,6 +8,8 @@
 ## [계획 및 디자인](rds-plan-and-design.md)
 ### [어디서나 빌드](rds-plan-build-anywhere.md)
 ### [다양한 종류의 사용자에게 제공](rds-plan-cater-to-users.md)
+### [원격 데스크톱 워크로드](remote-desktop-workloads.md)
+### [가상 머신 크기 조정](virtual-machine-recs.md)
 ### [어디서나 액세스](rds-plan-access-from-anywhere.md)
 ### [고가용성](rds-plan-high-availability.md)
 ### [다단계 인증](rds-plan-mfa.md)
