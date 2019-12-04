@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1fb0875c972f8259b47f48ef84ed486fc678d8b0
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 3e481048c23e634869b0238188d4a0ef8b49cb3e
+ms.sourcegitcommit: effbc183bf4b370905d95c975626c1ccde057401
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71370894"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74781310"
 ---
 # <a name="start"></a>start
 
@@ -31,7 +31,7 @@ ms.locfileid: "71370894"
 ## <a name="syntax"></a>구문
 
 ```
-start ["<Title>"] [/d <Path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/low | /normal | /high | /realtime | /abovenormal | belownormal}] [/affinity <HexAffinity>] [/wait] [/b {<Command> | <Program>} [<Parameters>]]
+start ["<Title>"] [/d <Path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/low | /normal | /high | /realtime | /abovenormal | belownormal}] [/affinity <HexAffinity>] [/wait] [/elevate] [/b {<Command> | <Program>} [<Parameters>]]
 ```
 
 ## <a name="parameters"></a>매개 변수
@@ -46,6 +46,7 @@ start ["<Title>"] [/d <Path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/lo
 |/slow \|/hv\| \|/low \| \|/abovenormal|지정 된 우선 순위 클래스에서 응용 프로그램을 시작 합니다. 유효한 우선 순위 클래스 값은 **낮은/** , **일반/** , **높은/** , **/realtime**, **/abovenormal**, 및 **/belownormal**합니다.|
 |/caffinity \<HexAffinity >|새 응용 프로그램 (16 진수 숫자로 표현 되는) 지정 된 프로세서 선호도 마스크를 적용 합니다.|
 |/wait|응용 프로그램을 시작 하 고 끝날 때까지 대기 합니다.|
+|/상승|응용 프로그램을 관리자 권한으로 실행 합니다.|
 |/b|새 명령 프롬프트 창을 열지 않고 응용 프로그램을 시작 합니다. CTRL + C 처리는 CTRL + C 처리 응용 프로그램을 사용 하지 않으면 무시 됩니다. 응용 프로그램을 중단 하려면 CTRL + BREAK를 사용 합니다.|
 |/b \<명령 > \| \<프로그램 >|명령이 나 프로그램 시작을 지정 합니다.|
 |\<매개 변수 >|명령이 나 프로그램에 전달할 매개 변수를 지정 합니다.|

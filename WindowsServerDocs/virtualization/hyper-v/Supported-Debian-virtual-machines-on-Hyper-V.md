@@ -11,16 +11,16 @@ ms.assetid: 3cc62c10-02a3-4633-960c-23bf91a45bd5
 author: shirgall
 ms.author: kathydav
 ms.date: 10/03/2016
-ms.openlocfilehash: 71b1985da522ef9ee2d7745bd19d2548e0241a2f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 60f2f3a6ed885f2da80b9beac51eeb703789ec91
+ms.sourcegitcommit: 4a03f263952c993dfdf339dd3491c73719854aba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71366770"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74791769"
 ---
 # <a name="supported-debian-virtual-machines-on-hyper-v"></a>Hyper-v에서 지원 되는 Debian 가상 컴퓨터
 
->적용 대상: Windows Server 2016, Hyper-v Server 2016, Windows Server 2012 R2, Hyper-v server 2012 R2, Windows Server 2012, Hyper-v Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
+>적용 대상: Windows Server 2016, Hyper-v Server 2016, Windows Server 2012 R2, Hyper-v Server 2012 R2, Windows Server 2012, Hyper-v Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
 
 다음과 같은 기능 배포 맵을 각 버전에 존재 하는 기능을 나타냅니다. 알려진된 문제 및 각 배포에 대 한 대안 표 다음에 나열 됩니다.
 
@@ -28,11 +28,11 @@ ms.locfileid: "71366770"
 
 * **기본 제공** -LIS이 Linux 배포판의 일부로 포함 됩니다. Microsoft에서 제공한 LIS 다운로드 패키지는 모듈을 설치 하지 않으면이 배포에 대해 작동 하지 않습니다. LIS에서 기본 제공에 대 한 커널 모듈 버전 번호 (볼 수 있듯이 **lsmod**, 예를 들어)는 Microsoft에서 제공한 LIS 다운로드 패키지에 버전 번호가 다릅니다. 불일치가는 LIS에서 작성 된 지 오래 된 나타내지 않습니다.
 
-* &#10004; -사용 가능한 기능
+* & #10004; -사용 가능한 기능
 
 * (*빈*)-기능을 사용할 수 없음
 
-| **기능**                                                                                                                                  | **Windows Server 운영 체제 버전** | **10 (buster)** | **9.0-9.6 (스트레치)** | **8.0-8.11 (jessie)** | **7.0-7.11 (wheezy)** |
+| **기능과**                                                                                                                                  | **Windows Server 운영 체제 버전** | **10 (buster)** | **9.0-9.6 (스트레치)** | **8.0-8.11 (jessie)** | **7.0-7.11 (wheezy)** |
 |----------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|-----------------------|-----------------------|-----------------------|-----------------------|
 | **가용성**                                                                                                                             |                                             | 기본 제공              | 기본 제공              | 기본 제공              | (참고 6)에 기본 제공     |
 | **[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**                                                   | 2019, 2016, 2012 R2, 2012, 2008 R2          | &#10004;              | &#10004;              | &#10004;              | &#10004;              |
@@ -46,9 +46,9 @@ ms.locfileid: "71366770"
 | TCP 조각화 및 체크섬 오프 로드                                                                                                       | 2019, 2016, 2012 R2, 2012, 2008 R2          | &#10004;참고 8       | &#10004;참고 8       |                       |                       |
 | SR-IOV                                                                                                                                       | 2019, 2016                                  | &#10004;참고 8       | &#10004;참고 8       |                       |                       |
 | **[저장할](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**                                             |                                             |                       |                       |                       |                       |
-| VHDX 크기 조정                                                                                                                                  | 2019, 2016, 2012 R2                         | &#10004; 참고 1       | &#10004; 참고 1       | &#10004; 참고 1       | &#10004; 참고 1       |
+| VHDX 크기 조정                                                                                                                                  | 2019, 2016, 2012 R2                         | & #10004; 참고 1       | & #10004; 참고 1       | & #10004; 참고 1       | & #10004; 참고 1       |
 | 가상 파이버 채널                                                                                                                        | 2019, 2016, 2012 R2                         |                       |                       |                       |                       |
-| 라이브 가상 머신 백업                                                                                                                  | 2019, 2016, 2012 R2                         | &#10004; 참고 4, 5     | &#10004; 참고 4, 5     | &#10004; 참고 4, 5     | &#10004; 참고 4       |
+| 라이브 가상 머신 백업                                                                                                                  | 2019, 2016, 2012 R2                         | & #10004; 참고 4, 5     | & #10004; 참고 4, 5     | & #10004; 참고 4, 5     | & #10004; 참고 4       |
 | TRIM 지원                                                                                                                                 | 2019, 2016, 2012 R2                         | &#10004;참고 8       | &#10004;참고 8       |                       |                       |
 | SCSI WWN                                                                                                                                     | 2019, 2016, 2012 R2                         | &#10004;참고 8       | &#10004;참고 8       |                       |                       |
 | **[Ram](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)**                                               |                                             |                       |                       |                       |                       |
@@ -60,15 +60,15 @@ ms.locfileid: "71366770"
 | **[화면이](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**                                                 |                                             |                       |                       |                       |                       |
 | Hyper-v 관련 비디오 장치                                                                                                                | 2019, 2016, 2012 R2, 2012, 2008 R2          | &#10004;              | &#10004;              | &#10004;              |                       |
 | **[기타](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)**                                 |                                             |                       |                       |                       |                       |
-| 키-값 쌍                                                                                                                               | 2019, 2016, 2012 R2, 2012, 2008 R2          | &#10004; 참고 4       | &#10004; 참고 4       | &#10004; 참고 4       |                       |
+| 키-값 쌍                                                                                                                               | 2019, 2016, 2012 R2, 2012, 2008 R2          | & #10004; 참고 4       | & #10004; 참고 4       | & #10004; 참고 4       |                       |
 | 마스크 불가능 인터럽트                                                                                                                       | 2019, 2016, 2012 R2                         | &#10004;              | &#10004;              | &#10004;              |                       |
-| 호스트에서 게스트로 파일 복사                                                                                                                 | 2019, 2016, 2012 R2                         | &#10004; 참고 4       | &#10004; 참고 4       | &#10004; 참고 4       |                       |
+| 호스트에서 게스트로 파일 복사                                                                                                                 | 2019, 2016, 2012 R2                         | & #10004; 참고 4       | & #10004; 참고 4       | & #10004; 참고 4       |                       |
 | lsvmbus 명령                                                                                                                              | 2019, 2016, 2012 R2, 2012, 2008 R2          |                       |                       |                       |                       |
 | Hyper-v 소켓                                                                                                                              | 2019, 2016                                  | &#10004;참고 8       | &#10004;참고 8       |                       |                       |
 | PCI 통과/DDA                                                                                                                          | 2019, 2016                                  | &#10004;참고 8       | &#10004;참고 8       |                       |                       |
 | **[2 세대 가상 컴퓨터](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines)** |                                             |                       |                       |                       |                       |
-| UEFI를 사용 하 여 부팅                                                                                                                              | 2019, 2016, 2012 R2                         | &#10004; 참고 7       | &#10004; 참고 7       | &#10004; 참고 7       |                       |
-| 보안 부팅                                                                                                                                  | 2019, 2016                                  |                       |                       |                       |                       |
+| UEFI를 사용 하 여 부팅                                                                                                                              | 2019, 2016, 2012 R2                         | & #10004; 참고 7       | & #10004; 참고 7       | & #10004; 참고 7       |                       |
+| 보안 부팅                                                                                                                                  | 2019, 2016                                  | &#10004;              |                       |                       |                       |
 
 
 ## <a name="BKMK_notes"></a>메모란
@@ -93,7 +93,7 @@ ms.locfileid: "71366770"
    ```
 8. 최신 업스트림 커널 기능은 커널에 포함 된 [Debian backports](https://wiki.debian.org/Backports)를 사용 하는 경우에만 사용할 수 있습니다.
 
-관련 항목
+참고 항목
 
 * [Hyper-v에서 지원 되는 CentOS 및 Red Hat Enterprise Linux 가상 컴퓨터](Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md)
 

@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e9840bc20ddf6193241fe36055698e2bd3222496
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f5096ab82ebbd01cb4f3a7dc0cf0b15e4b9fae8e
+ms.sourcegitcommit: effbc183bf4b370905d95c975626c1ccde057401
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71361882"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74781330"
 ---
 # <a name="wmic"></a>wmic
 
@@ -31,7 +31,7 @@ ms.locfileid: "71361882"
 ## <a name="syntax"></a>구문
 
 ```
-command </parameter>
+wmic </parameter>
 ```
 
 ## <a name="sub-commands"></a>하위 명령
@@ -41,17 +41,9 @@ command </parameter>
 |하위 명령|설명|
 |-----------|-----------|
 |class|클래스는 WMI 스키마에 직접 액세스 하는 WMIC의 기본 별칭 모드에서 나와 있습니다.|
-|path|WMI 스키마에 있는 인스턴스를 직접 액세스 하는 WMIC의 기본 별칭 모드에서 나와 있습니다.|
+|경로|WMI 스키마에 있는 인스턴스를 직접 액세스 하는 WMIC의 기본 별칭 모드에서 나와 있습니다.|
 |컨텍스트|모든 전역 스위치의 현재 값을 표시합니다.|
 |[종료 \| 종료]|종료는 WMIC 명령 셸.|
-
-## <a name="parameters"></a>매개 변수
-
-|매개 변수|설명|
-|---------|-----------|
-|</parameter>|\<Concise 설명, 동사로 시작 >|
-|</param2>|\<은 동사를 사용 하 여 시작 하는 간단한 설명입니다. >|
-
 
 ## <a name="BKMK_examples"></a>예와
 

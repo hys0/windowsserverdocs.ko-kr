@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: 8086ce329c532e07363fd22fe424a9a1dda04250
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 45fe605228189f49d40543e5da703f9afe0d962e
+ms.sourcegitcommit: 4a03f263952c993dfdf339dd3491c73719854aba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386890"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74791204"
 ---
 # <a name="getting-started-with-group-managed-service-accounts"></a>관리 서비스 계정 그룹 시작하기
 
@@ -48,7 +48,7 @@ ms.locfileid: "71386890"
 ## <a name="BKMK_Prereqs"></a>사전
 이 항목에서 [그룹 관리 서비스 계정에 대한 요구 사항](#BKMK_gMSA_Req)섹션을 참조하세요.
 
-## <a name="BKMK_Intro"></a>소개
+## <a name="BKMK_Intro"></a>간략하게
 클라이언트 컴퓨터가 NLB(네트워크 부하 분산) 또는 모든 서버가 클라이언트에 동일한 서비스로 표시되는 다른 방법을 사용하여 서버 팜에서 호스트되는 서비스에 연결한 경우, 서비스의 모든 인스턴스에서 동일한 보안 주체를 사용하지 않는 한 Kerberos와 같은 상호 인증을 지원하는 인증 프로토콜을 사용할 수 없습니다. 이는 각 서비스에서 동일한 암호/키를 사용하여 ID를 증명해야 함을 의미합니다.
 
 > [!NOTE]
@@ -56,14 +56,14 @@ ms.locfileid: "71386890"
 
 서비스에서 선택할 수 있는 보안 주체는 다음과 같으며, 각각 특정 제한 사항이 있습니다.
 
-|보안 주체|Scope|지원되는 서비스|암호 관리|
+|보안 주체|범위|지원되는 서비스|암호 관리|
 |-------|-----|-----------|------------|
-|Windows 시스템의 컴퓨터 계정|Domain|도메인 가입 서버 하나로 제한|컴퓨터에서 관리|
-|Windows 시스템이 없는 컴퓨터 계정|Domain|모든 도메인 가입 서버|없음|
+|Windows 시스템의 컴퓨터 계정|Domain(도메인)|도메인 가입 서버 하나로 제한|컴퓨터에서 관리|
+|Windows 시스템이 없는 컴퓨터 계정|Domain(도메인)|모든 도메인 가입 서버|없음|
 |가상 계정|로컬|서버 하나로 제한|컴퓨터에서 관리|
-|Windows 7 독립 실행형 관리 서비스 계정|Domain|도메인 가입 서버 하나로 제한|컴퓨터에서 관리|
-|사용자 계정|Domain|모든 도메인 가입 서버|없음|
-|그룹 관리 서비스 계정|Domain|모든 Windows Server 2012 도메인 가입 서버|도메인 컨트롤러에서 관리하고 호스트에서 검색|
+|Windows 7 독립 실행형 관리 서비스 계정|Domain(도메인)|도메인 가입 서버 하나로 제한|컴퓨터에서 관리|
+|사용자 계정|Domain(도메인)|모든 도메인 가입 서버|없음|
+|그룹 관리 서비스 계정|Domain(도메인)|모든 Windows Server 2012 도메인 가입 서버|도메인 컨트롤러에서 관리하고 호스트에서 검색|
 
 Windows 컴퓨터 계정이나 Windows 7 sMSA(독립 실행형 관리 서비스 계정) 또는 가상 계정은 여러 시스템에서 공유할 수 없습니다. 서버 팜의 서비스에서 공유할 계정 하나를 구성하려면 Windows 시스템과 별개인 사용자 계정 또는 컴퓨터 계정을 선택해야 합니다. 그러나 이러한 계정에는 단일 제어 지점 암호 관리 기능이 없습니다. 따라서 각 조직에서 Active Directory의 서비스에 대한 키를 업데이트하는 고가의 솔루션을 만든 다음 이러한 서비스의 모든 인스턴스에 배포해야 하는 문제가 있습니다.
 
@@ -142,7 +142,7 @@ gMSA 기능을 사용하는 서버 팜의 수명 주기에는 일반적으로 �
 
 -   암호 변경 간격(기본값은 30일)
 
-### <a name="BKMK_Step1"></a>1 단계: 그룹 관리 서비스 계정 프로비전
+### <a name="BKMK_Step1"></a>1 단계: 그룹 관리 서비스 계정 프로 비전
 포리스트 스키마가 Windows Server 2012로 업데이트 되 고 Active Directory의 마스터 루트 키가 배포 된 경우에만 gMSA를 만들 수 있으며, gMSA를 만들 도메인에 Windows Server 2012 DC가 하나 이상 있는 경우에만 만들 수 있습니다.
 
 다음 절차를 완료하려면 최소한 **Domain Admins** 또는 **Account Operators**의 구성원이거나 msDS-GroupManagedServiceAccount 개체를 만들 수 있는 권한이 있어야 합니다.
@@ -155,9 +155,9 @@ gMSA 기능을 사용하는 서버 팜의 수명 주기에는 일반적으로 �
 
     **Uninstall-adserviceaccount [-Name] <string>-DNSHostName <string> [-KerberosEncryptionType <ADKerberosEncryptionType>] [-ManagedPasswordIntervalInDays < Nullable [Int32] >] [-PrincipalsAllowedToRetrieveManagedPassword < ADPrincipal [] >]-SamAccountName <string>-ServicePrincipalNames < string [] >**
 
-    |매개 변수|문자열|예제|
+    |매개 변수|문자열|예|
     |-------|-----|------|
-    |이름|계정 이름|ITFarm1|
+    |Name(이름)|계정 이름|ITFarm1|
     |DNSHostName|서비스의 DNS 호스트 이름|ITFarm1.contoso.com|
     |KerberosEncryptionType|호스트 서버에서 지원되는 모든 암호화 종류|RC4, AES128, AES256|
     |ManagedPasswordIntervalInDays|암호 변경 간격(지정하지 않을 경우 기본값은 30일)|90|
@@ -172,9 +172,8 @@ gMSA 기능을 사용하는 서버 팜의 수명 주기에는 일반적으로 �
 
     서식 제약 조건으로 인해 명령이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 명령을 한 줄에 입력해야 합니다.
 
-    ```
-    New-ADServiceAccount ITFarm1 -DNSHostName ITFarm1.contoso.com -PrincipalsAllowedToRetrieveManagedPassword ITFarmHosts -KerberosEncryptionType RC4, AES128, AES256 -ServicePrincipalNames http/ITFarm1.contoso.com/contoso.com, http/ITFarm1.contoso.com/contoso, http/ITFarm1/contoso.com, http/ITFarm1/contoso
-
+    ```Powershell
+    New-ADServiceAccount ITFarm1 -DNSHostName ITFarm1.contoso.com -PrincipalsAllowedToRetrieveManagedPassword ITFarmHosts$ -KerberosEncryptionType RC4, AES128, AES256 -ServicePrincipalNames http/ITFarm1.contoso.com/contoso.com, http/ITFarm1.contoso.com/contoso, http/ITFarm1/contoso.com, http/ITFarm1/contoso
     ```
 
 다음 절차를 완료하려면 최소한 **Domain Admins** 또는 **Account Operators**의 구성원이거나 msDS-GroupManagedServiceAccount 개체를 만들 수 있는 권한이 있어야 합니다. 적절한 계정과 그룹 구성원 사용에 대한 자세한 내용은 [로컬 및 도메인 기본 그룹](https://technet.microsoft.com/library/dd728026(WS.10).aspx)을 참조하세요.
@@ -187,9 +186,9 @@ gMSA 기능을 사용하는 서버 팜의 수명 주기에는 일반적으로 �
 
     **Uninstall-adserviceaccount [-Name] <string>-RestrictToOutboundAuthenticationOnly [-ManagedPasswordIntervalInDays < Nullable [Int32] >] [-PrincipalsAllowedToRetrieveManagedPassword < ADPrincipal [] >]**
 
-    |매개 변수|문자열|예제|
+    |매개 변수|문자열|예|
     |-------|-----|------|
-    |이름|계정 이름|ITFarm1|
+    |Name(이름)|계정 이름|ITFarm1|
     |ManagedPasswordIntervalInDays|암호 변경 간격(지정하지 않을 경우 기본값은 30일)|75|
     |PrincipalsAllowedToRetrieveManagedPassword|구성원 호스트 또는 구성원 호스트가 속해 있는 보안 그룹의 컴퓨터 계정|ITFarmHosts|
 
@@ -198,12 +197,11 @@ gMSA 기능을 사용하는 서버 팜의 수명 주기에는 일반적으로 �
 
 **예제**
 
+```PowerShell
+New-ADServiceAccount ITFarm1 -RestrictToOutboundAuthenticationOnly - PrincipalsAllowedToRetrieveManagedPassword ITFarmHosts$
 ```
-New-ADServiceAccount ITFarm1 -RestrictToOutboundAuthenticationOnly - PrincipalsAllowedToRetrieveManagedPassword ITFarmHosts
 
-```
-
-### <a name="BKMK_ConfigureServiceIdentity"></a>2 단계: 서비스 ID 응용 프로그램 서비스 구성
+### <a name="BKMK_ConfigureServiceIdentity"></a>2 단계: 서비스 id 응용 프로그램 서비스 구성
 Windows Server 2012에서 서비스를 구성 하려면 다음 기능 설명서를 참조 하세요.
 
 -   IIS 응용 프로그램 풀
@@ -214,7 +212,7 @@ Windows Server 2012에서 서비스를 구성 하려면 다음 기능 설명서�
 
     자세한 내용은 [서비스](https://technet.microsoft.com/library/cc772408.aspx)를 참조하세요.
 
--   태스크
+-   작업
 
     자세한 내용은 [작업 스케줄러 개요](https://technet.microsoft.com/library/cc721871.aspx)를 참조하세요.
 
@@ -253,23 +251,21 @@ Windows Server 2012에서 서비스를 구성 하려면 다음 기능 설명서�
 
     **Uninstall-adserviceaccount [-Name] <string>-PrincipalsAllowedToRetrieveManagedPassword < ADPrincipal [] >**
 
-|매개 변수|문자열|예제|
+|매개 변수|문자열|예|
 |-------|-----|------|
-|이름|계정 이름|ITFarm1|
+|Name(이름)|계정 이름|ITFarm1|
 |PrincipalsAllowedToRetrieveManagedPassword|구성원 호스트 또는 구성원 호스트가 속해 있는 보안 그룹의 컴퓨터 계정|Host1, Host2, Host3|
 
 **예제**
 
 예를 들어 구성원 호스트를 추가하려면 다음 명령을 입력한 후 Enter 키를 누릅니다.
 
-```
+```PowerShell
 Get-ADServiceAccount [-Name] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword
-
 ```
 
-```
-Set-ADServiceAccount [-Name] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword Host1,Host2,Host3
-
+```PowerShell
+Set-ADServiceAccount [-Name] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword Host1$,Host2$,Host3$
 ```
 
 ## <a name="BKMK_Update_gMSA"></a>그룹 관리 서비스 계정 속성 업데이트
@@ -313,23 +309,21 @@ Windows PowerShell Active Directory 모듈을 열고 Set-ADServiceAccount cmdlet
 
     **Uninstall-adserviceaccount [-Name] <string>-PrincipalsAllowedToRetrieveManagedPassword < ADPrincipal [] >**
 
-|매개 변수|문자열|예제|
+|매개 변수|문자열|예|
 |-------|-----|------|
-|이름|계정 이름|ITFarm1|
+|Name(이름)|계정 이름|ITFarm1|
 |PrincipalsAllowedToRetrieveManagedPassword|구성원 호스트 또는 구성원 호스트가 속해 있는 보안 그룹의 컴퓨터 계정|Host1, Host3|
 
 **예제**
 
 예를 들어 구성원 호스트를 제거하려면 다음 명령을 입력한 후 Enter 키를 누릅니다.
 
-```
+```PowerShell
 Get-ADServiceAccount [-Name] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword
-
 ```
 
-```
-Set-ADServiceAccount [-Name] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword Host1,Host3
-
+```PowerShell
+Set-ADServiceAccount [-Name] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword Host1$,Host3$
 ```
 
 ### <a name="BKMK_RemoveGMSA"></a>2 단계: 시스템에서 그룹 관리 서비스 계정 제거
@@ -349,7 +343,7 @@ Set-ADServiceAccount [-Name] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword
 
     예를 들어 ITFarm1이라는 gMSA의 캐시된 자격 증명을 제거하려면 다음 명령을 입력한 후 Enter 키를 누릅니다.
 
-    ```
+    ```PowerShell
     Uninstall-ADServiceAccount ITFarm1
     ```
 
@@ -360,6 +354,3 @@ Uninstall-ADServiceAccount cmdlet에 대한 자세한 내용을 보려면 Window
 ## <a name="BKMK_Links"></a>참고 항목
 
 -   [그룹 관리 서비스 계정 개요](group-managed-service-accounts-overview.md)
-
-
-

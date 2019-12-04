@@ -12,18 +12,18 @@ ms.topic: article
 ms.assetid: 7ce84c9f-fd1f-4463-8fc7-d2f33344a2c9
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: db10f784f383938edb29b18d7e8febf869378abc
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 831f484db8325bf9a27e9065ac5cf74913d0805c
+ms.sourcegitcommit: 4a03f263952c993dfdf339dd3491c73719854aba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404564"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74791166"
 ---
 # <a name="identify-and-resolve-remote-access-server-operations-problems"></a>원격 액세스 서버 작업 문제 식별 및 해결
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-**참고:** Windows Server 2012에는 DirectAccess와 RRAS(Routing and Remote Access Service)가 단일 원격 액세스 역할로 통합되어 있습니다.  
+**참고:** Windows Server 2012 DirectAccess 및 라우팅 및 원격 액세스 서비스 (RRAS)를 단일 원격 액세스 역할로 결합 합니다.  
   
 다음 절차를 사용 하 여 원격 액세스 서버 작업 문제, 해당 근본 원인 및 문제를 해결 하는 데 필요한 해상도 식별 하는 것이 있습니다.  
   
@@ -64,7 +64,7 @@ IP 도우미 서비스를 해제 하면 원격 액세스 서버에서 심각한 
   
 4.  작업 상태를 나타내는 녹색 또는 빨간색 아이콘으로 구성 요소 목록이 표시 됩니다. 클릭 된 **IP-HTTPS** 목록의 행입니다. 행을 선택 하는 경우에 작업에 대 한 세부 정보에 표시 됩니다는 **세부 정보** 다음과 같이 창:  
   
-    **오류**  
+    **메시지가**  
   
     (IPHlpSvc) IP 도우미 서비스가 중지 되었습니다. DirectAccess 예상과 다르게 동작할 수 있습니다. IP 도우미 서비스의 연결, IPv6 전환 기술 플랫폼과 IP-HTTPS를 사용 하 여 터널 연결을 제공 합니다.  
   
@@ -76,7 +76,7 @@ IP 도우미 서비스를 해제 하면 원격 액세스 서버에서 심각한 
   
     **해결 방법**  
   
-    1.  서비스가 실행 되 고 있는지를 확인 하려면 다음을 입력 **Get-service iphlpsc** Windows PowerShell 프롬프트입니다.  
+    1.  서비스가 실행 되 고 있는지 확인 하려면 Windows PowerShell 프롬프트에서 **get-help iphlpsvc** 을 입력 합니다.  
   
     2.  서비스를 사용 하려면 입력 **Start-service iphlpsvc** 관리자 권한 Windows PowerShell 프롬프트에서.  
   
@@ -95,9 +95,6 @@ IP 도우미 서비스를 해제 하면 원격 액세스 서버에서 심각한 
   
 다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
   
-```  
+```PowerShell
 PS> Get-RemoteAccessHealth | Where-Object {$_.Component -eq "IP-HTTPS"} | Format-List -Property *  
-```  
-  
-
-
+```

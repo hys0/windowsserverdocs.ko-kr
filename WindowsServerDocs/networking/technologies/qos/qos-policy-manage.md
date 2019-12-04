@@ -8,12 +8,12 @@ ms.assetid: 04fdfa54-6600-43d4-8945-35f75e15275a
 manager: brianlic
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: ac717555d1ab751600527e294d32f10d1f05bfa5
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 4b8f10ab7b3da05fbefabb735ee2b8bb4ef1cb8a
+ms.sourcegitcommit: effbc183bf4b370905d95c975626c1ccde057401
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71395882"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74781350"
 ---
 # <a name="manage-qos-policy"></a>QoS 정책 관리
 
@@ -90,7 +90,7 @@ QoS 정책 마법사의 두 번째 페이지에서 모든 응용 프로그램, �
 
 - **모든 응용 프로그램** 은 QoS 정책 마법사의 첫 번째 페이지에 있는 트래픽 관리 설정이 모든 응용 프로그램에 적용 되도록 지정 합니다.
 
-- **이 실행 파일 이름이 있는 응용 프로그램만** QoS 정책 마법사의 첫 번째 페이지에 있는 트래픽 관리 설정이 특정 응용 프로그램에 대 한 것 임을 지정 합니다. 실행 파일 이름은 확장명이.exe로 끝나야 합니다.
+- **이 실행 파일 이름이 있는 응용 프로그램만** QoS 정책 마법사의 첫 번째 페이지에 있는 트래픽 관리 설정이 특정 응용 프로그램에 대 한 것 임을 지정 합니다. 실행 파일 이름은 .exe 파일 이름 확장명으로 끝나야 합니다.
 
 - **이 URL에 대 한 요청에 응답 하는 http 서버 응용** 프로그램만 QoS 정책 마법사의 첫 번째 페이지에 있는 트래픽 관리 설정이 특정 HTTP 서버 응용 프로그램에만 적용 되도록 지정 합니다.
 
@@ -188,7 +188,7 @@ QoS 정책 마법사의 네 번째 페이지에서 마법사의 첫 번째 페�
   
     -   정책 프로필  
   
-    -   Application Name  
+    -   응용 프로그램 이름  
   
     -   IP 주소  
   
@@ -253,9 +253,9 @@ QoS 정책을 사용 하는 목적은 기업의 네트워크에서 트래픽을 
   
 Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows Server 2008 및 Windows Vista 이전 버전의 windows에서 TCP 수신 창이 변경 되었습니다. 이전 버전의 Windows에서는 TCP 수신 측 기간이 최대 64 킬로바이트 (KB)로 제한 되는 반면, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows Server 2008 및 Windows Vista에서는 자동으로 수신 측 창의 크기를 최대 16mb (MB)로 제한 합니다. ). 인바운드 TCP 트래픽 제어에서 TCP 수신 창이 증가할 수 있는 최대값을 설정 하 여 인바운드 처리량 수준을 제어할 수 있습니다. 수준은 다음 최대값에 해당 합니다. 
   
-|인바운드 처리량 수준|최대값|  
+|인바운드 처리량 수준|최대|  
 |------------------------|-------|  
-|0|64KB|
+|0|64 KB|
 |1|256 KB|
 |2|1MB|
 |3|16mb|
@@ -280,7 +280,7 @@ DSCP 표시 재정의는 응용 프로그램의 기능을 지정 하 여 QoS 정
 
 ##### <a name="wireless-multimedia-and-dscp-values"></a>무선 멀티미디어 및 DSCP 값
 
-Wi-fi [동맹](https://go.microsoft.com/fwlink/?LinkId=160769) 은 wi-fi 무선 네트워크에서 전송 되는 네트워크 트래픽의 우선 순위를 정하는\) WMM_AC \(4 개의 액세스 범주를 정의 하는 무선 멀티미디어\) \(에 대 한 인증을 설정 했습니다.\- 액세스 범주에는 음성, 비디오, 최상의 작업 및 배경\)의 가장 높은 우선 순위에 \(포함 됩니다. 각각 .VO.MSECND.NET, VI, be 및 BK으로 축약 됩니다. WMM 사양은 네 가지 액세스 범주 각각에 해당 하는 DSCP 값을 정의 합니다.
+Wi-fi [동맹](https://go.microsoft.com/fwlink/?LinkId=160769) 은 wi-fi 무선 네트워크에서 전송 되는 네트워크 트래픽의 우선 순위를 정하는\) WMM_AC \(4 개의 액세스 범주를 정의 하는 무선 멀티미디어\) \(에 대 한 인증을 설정 했습니다. 액세스 범주에는 음성, 비디오, 최상의 작업 및 배경\)의 가장 높은 우선 순위에 \(포함 됩니다. 각각 .VO.MSECND.NET, VI, be 및 BK으로 축약 됩니다. WMM 사양은 네 가지 액세스 범주 각각에 해당 하는 DSCP 값을 정의 합니다.
   
 |DSCP 값|WMM 액세스 범주|
 |----------|-------------------|

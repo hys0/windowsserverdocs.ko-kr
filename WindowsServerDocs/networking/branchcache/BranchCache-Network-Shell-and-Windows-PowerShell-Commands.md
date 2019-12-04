@@ -12,12 +12,12 @@ ms.topic: article
 ms.assetid: a0726752-0a78-472b-9667-2f91636c1b3b
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 4673fcf369bdb95d3aa20028ee57f78ffbcaf9c9
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6128dfb4ab4f6bd29d66cf4823345817f2cb119c
+ms.sourcegitcommit: 4a03f263952c993dfdf339dd3491c73719854aba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71356701"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74791504"
 ---
 # <a name="branchcache-network-shell-and-windows-powershell-commands"></a>BranchCache 네트워크 셸 및 Windows PowerShell 명령
 
@@ -31,7 +31,7 @@ Windows PowerShell 및 netsh 명령에 대한 참조 자료는 다음 위치에�
   
 -   [Windows Server 2008 r 2의 BranchCache에 대 한 Netsh 명령](https://technet.microsoft.com/library/dd979561(v=ws.10))  
   
--   [Windows PowerShell의 BranchCache Cmdlet](https://technet.microsoft.com/library/hh848392.aspx) Windows server 2012.  
+-   [Windows PowerShell의 BranchCache Cmdlet](https://docs.microsoft.com/powershell/module/branchcache/?view=win10-ps)
   
 > [!TIP]  
 > Windows PowerShell 프롬프트에서 BranchCache용 Windows PowerShell 명령 목록을 보려면 Windows PowerShell 프롬프트에 `Get-Command -Module BranchCache`를 입력하고 Enter 키를 누르십시오.  

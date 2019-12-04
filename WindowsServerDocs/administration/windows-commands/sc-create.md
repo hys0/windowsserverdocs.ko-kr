@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8ea8f1c33472b7ac95ec0282a50d902a9d7cf84d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: ef1480a7c1ed9fb0aa7e42077565526e5c9f7540
+ms.sourcegitcommit: 4a03f263952c993dfdf339dd3491c73719854aba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71384366"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74791175"
 ---
 # <a name="sc-create"></a>Sc 만들기
 
@@ -31,7 +31,7 @@ ms.locfileid: "71384366"
 ## <a name="syntax"></a>구문
 
 ```
-sc [<ServerName>] create [<ServiceName>] [type= {own | share | kernel | filesys | rec | interact type= {own | share}}] [start= {boot | system | auto | demand | disabled}] [error= {normal | severe | critical | ignore}] [binpath= <BinaryPathName>] [group= <LoadOrderGroup>] [tag= {yes | no}] [depend= <dependencies>] [obj= {<AccountName> | <ObjectName>}] [displayname= <DisplayName>] [password= <Password>]
+sc [<ServerName>] create [<ServiceName>] [type= {own | share | kernel | filesys | rec | interact type= {own | share}}] [start= {boot | system | auto | demand | disabled | delayed-auto }] [error= {normal | severe | critical | ignore}] [binpath= <BinaryPathName>] [group= <LoadOrderGroup>] [tag= {yes | no}] [depend= <dependencies>] [obj= {<AccountName> | <ObjectName>}] [displayname= <DisplayName>] [password= <Password>]
 ```
 
 ## <a name="parameters"></a>매개 변수
@@ -41,7 +41,7 @@ sc [<ServerName>] create [<ServiceName>] [type= {own | share | kernel | filesys 
 |\<ServerName >|서비스 위치는 원격 서버의 이름을 지정 합니다. 이름은 UNC (범용 명명 규칙) 형식 (예: \\\\myserver)을 사용 해야 합니다. SC.exe를 로컬로 실행 하려면이 매개 변수를 생략 합니다.|
 |\<ServiceName >|반환 된 서비스 이름을 지정는 **getkeyname** 작업 합니다.|
 |type = {소유 \| 공유 \| kernel \| filesys \| rec \| 상호 작용 형식 = {자체 \| 공유}}|서비스 유형을 지정합니다. 기본 설정은 **유형 = 직접**합니다.</br>**직접** -서비스가 자체 프로세스에서 실행 되도록 지정 합니다. 다른 서비스와 함께 실행 파일을 공유 하지 않습니다. 이것이 기본 설정입니다.</br>**공유** -서비스를 공유 프로세스로 실행 되도록 지정 합니다. 다른 서비스와 함께 실행 파일을 공유 합니다.</br>**커널** -드라이버를 지정 합니다.</br>**filesys** -파일 시스템 드라이버를 지정 합니다.</br>**rec** -(컴퓨터에 사용 되는 파일 시스템 식별) 하는 파일 시스템 인식 드라이버를 지정 합니다.</br>**상호 작용** -서비스 사용자 로부터 입력을 받고 바탕 화면에서 상호 작용할 수 있음을 지정 합니다. 대화형 서비스는 LocalSystem 계정에서 실행 되어야 합니다. 이 형식은와 함께에서 사용 해야 **유형 = 자체** 또는 **유형 = 공유**합니다. 사용 하 여 **유형 = 상호 작용** 자체적으로 "매개 변수가 잘못 되었습니다" 오류를 생성 합니다.|
-|start = {boot \| system \| auto \| demand \| disabled}|서비스 시작 유형을 지정합니다. 기본 설정은 **시작 요청 =** 합니다.</br>**부팅** -부팅 로더에 의해 로드 된 장치 드라이버를 지정 합니다.</br>**시스템** -커널 초기화 중에 시작 되는 장치 드라이버를 지정 합니다.</br>**자동** -컴퓨터를 다시 시작 될 때마다 자동으로 시작 하는 서비스를 지정 합니다. 컴퓨터에 로그온 한 경우에 서비스가 실행 되는 참고 합니다.</br>**필요 시** -수동으로 시작 해야 하는 서비스를 지정 합니다. 이 기본값을 사용 하는 경우 **시작 =** 지정 되지 않았습니다.</br>**사용 하지 않도록 설정** -시작할 수 없는 서비스를 지정 합니다. 사용할 수 없는 서비스를 시작 하려면 시작 유형을 다른 값을 변경 합니다.|
+|start = {boot \| system \| auto \| demand \| disabled \| 지연-자동}|서비스 시작 유형을 지정합니다. 기본 설정은 **시작 요청 =** 합니다.</br>**부팅** -부팅 로더에 의해 로드 된 장치 드라이버를 지정 합니다.</br>**시스템** -커널 초기화 중에 시작 되는 장치 드라이버를 지정 합니다.</br>**자동** -컴퓨터를 다시 시작 될 때마다 자동으로 시작 하는 서비스를 지정 합니다. 컴퓨터에 로그온 한 경우에 서비스가 실행 되는 참고 합니다.</br>**필요 시** -수동으로 시작 해야 하는 서비스를 지정 합니다. 이 기본값을 사용 하는 경우 **시작 =** 지정 되지 않았습니다.</br>**사용 하지 않도록 설정** -시작할 수 없는 서비스를 지정 합니다. 사용할 수 없는 서비스를 시작 하려면 시작 유형을 다른 값을 변경 합니다.</br>**지연 된 자동** -다른 서비스 자동 시작 된 후 짧은 시간 자동으로 시작 되는 서비스를 지정 합니다.|
 |오류 = {normal \| 심각 \| 중요 \| 무시}|컴퓨터를 시작할 때 서비스가 실패 하는 경우 오류의 심각도 지정 합니다. 기본 설정은 **오류 일반 =** 합니다.</br>**일반** -지정 된 오류가 기록 됩니다. 서비스를 시작 하지 못했음을 알리는 메시지 상자가 표시 됩니다. 시작 프로세스를 계속 합니다. 이것이 기본 설정입니다.</br>**심각한** -오류 (가능한 경우) 기록 되는지 지정 합니다. 컴퓨터가는 마지막으로 성공한 구성으로 다시 시작 하려고 합니다. 이 컴퓨터를 다시 시작할 수 없게 될 수 있습니다 없지만 서비스 수 있습니다 하지 실행할 수 있습니다.</br>**critical** -가능한 경우 오류를 기록 하도록 지정 합니다. 컴퓨터가는 마지막으로 성공한 구성으로 다시 시작 하려고 합니다. 마지막으로 성공한 구성에 실패 하면 시작도 실패 하 고 부팅 프로세스 중지 오류를 중단 합니다.</br>**무시** -지정 하는 오류를 기록 하 고 시작을 계속 합니다. 이벤트 로그에 오류를 기록 하는 것 외에는 사용자에 게 알림이 제공 되지 않습니다.|
 |binpath = \<BinaryPathName >|서비스 이진 파일에 대 한 경로 지정합니다. 에 대 한 기본값이 없으면 **binpath =** , 이 문자열을 제공 해야 합니다.|
 |group = \<LoadOrderGroup >|이 서비스가 멤버인 그룹의 이름을 지정 합니다. 그룹 목록에서 레지스트리에 저장 된 **HKLM\System\CurrentControlSet\Control\ServiceGroupOrder** 하위 키입니다. 기본값은 null입니다.|
