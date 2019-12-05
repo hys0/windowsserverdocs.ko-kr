@@ -12,37 +12,34 @@ ms.assetid: 8d0893bd-e2b7-4494-9537-02b1cbbcd57a
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 32b2b37e0d0109b8ad2a991b9f7693139103734d
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 4629c0ba04cc7ee617a2fc6b6a73a19b9e45ada8
+ms.sourcegitcommit: 3d76683718ec6f38613f552f518ebfc6a5db5401
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66433715"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74829556"
 ---
 # <a name="before-you-install-windows-server-essentials"></a>Windows Server Essentials를 설치하기 전에
 
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-##  <a name="BKMK_BeforeYouBegin"></a> Windows Server Essentials의 설치를 시작 하기 전에 다음 작업을 수행 합니다.  
+##  <a name="BKMK_BeforeYouBegin"></a>Windows Server Essentials 설치를 시작 하기 전에 다음 작업을 수행 합니다.  
 
--   **컴퓨터가 최소 하드웨어 요구 사항을 충족하는지 확인합니다**. 여기에 추가 하드웨어가 필요한 경우를 결정 하 고 하드웨어에 대 한 드라이버를 Windows Server Essentials에서 지원 하는지 확인 합니다. 자세한 내용은 [Windows Server Essentials의 시스템 요구 사항에 대 한](../get-started/system-requirements.md)합니다.   
+-   **컴퓨터가 최소 하드웨어 요구 사항을 충족하는지 확인합니다**. 여기에는 추가 하드웨어가 필요한 지 확인 하 고 하드웨어 드라이버가 Windows Server Essentials에서 지원 되는지 확인 하는 작업이 포함 됩니다. 자세한 내용은 [Windows Server Essentials의 시스템 요구 사항](../get-started/system-requirements.md)을 참조 하세요.   
 
-
-~~~
 > [!IMPORTANT]
->  Before you install  Windows Server Essentials on a pre-existing computer, we recommend that you fully format and then repartition the hard disks of the pre-existing computer. By formatting and repartitioning the hard disks, you remove the possibility that hidden partitions remain on the hard disks.  
-~~~
+> 기존 컴퓨터에 Windows Server Essentials를 설치 하기 전에 기존 컴퓨터의 하드 디스크를 전체 포맷 한 후 다시 분할 하는 것이 좋습니다. 하드 디스크를 포맷하고 다시 분할하면 하드 디스크에 숨겨진 파티션이 남아 있을 가능성이 없어집니다.  
 
-- **네트워크 준비** Windows Server Essentials를 설치 하 여 네트워크를 준비 하려면 다음을 수행 합니다.  
+- **네트워크 준비** Windows Server Essentials를 설치 하기 위해 네트워크를 준비 하려면 다음을 수행 합니다.  
 
 
-  - **클라이언트 컴퓨터의 운영 체제 업그레이드** Windows Server Essentials는 다음 운영 체제를 지원 합니다.  Windows 8, Windows 7, Windows 10 및 Macintosh OS X Lion 이상. 이러한 운영 체제는 로컬 네트워크에 필요한 보안 기능, 안정성, 성능 및 기능을 제공합니다.  
+  - **클라이언트 컴퓨터에서 운영 체제 업그레이드**  Windows Server Essentials는 Windows 8, Windows 7, Windows 10 및 Macintosh OS X 사자 이상의 운영 체제를 지원 합니다. 이러한 운영 체제는 로컬 네트워크에 필요한 보안 기능, 안정성, 성능 및 기능을 제공합니다.  
 
   - **라우터 구성** 라우터가 다음과 같이 구성되어 있는지 확인합니다.  
 
     -   라우터에서 UPnP 프레임워크가 사용됩니다.  
 
-    -   LAN에 대한 DHCP(Dynamic Host Configuration Protocol) 서버 서비스를 사용하거나 사용하지 않도록 설정할 수 있습니다.  DHCP 서버와 라우터에서 동시에 실행 고 있지 않음을 확인 하는 Windows Server Essentials? 라우터에서 DHCP 사용 하는 경우 DHCP 사용 되지 않습니다 서버에서 설치 하는 동안.  
+    -   LAN에 대한 DHCP(Dynamic Host Configuration Protocol) 서버 서비스를 사용하거나 사용하지 않도록 설정할 수 있습니다.  Windows Server Essentials에서 DHCP가 서버와 라우터에서 모두 실행 되 고 있지 않은지 확인 합니다. 라우터에서 DHCP를 사용 하는 경우 설치 하는 동안 DHCP가 서버에서 사용 되지 않습니다.  
 
     -   라우터의 외부 인터페이스에 대한 IP 주소가 있으며 이 주소는 ISP(인터넷 서비스 공급자)에서 제공합니다. IP 주소는 ISP의 DHCP 서버 서비스에서 동적으로 할당될 수 있습니다. 아니면 라우터 관리 콘솔을 사용하여 수동으로 정적 IP 주소를 구성해야 합니다.  
 
@@ -52,15 +49,15 @@ ms.locfileid: "66433715"
 
     라우터가 UPnP 프레임워크를 지원하지 않는 경우 또는 설치 도중 라우터를 구성할 수 없는 경우 네트워크 설정을 사용하여 수동으로 라우터를 구성해야 합니다. 다음 포트가 열려 있으며 대상 서버의 IP 주소로 보내지는지 확인하세요.  
 
-  |포트 번호|애플리케이션|  
+  |포트 번호|Application|  
   |-----------------|-----------------|  
   |포트 80|HTTP 웹 트래픽|  
   |포트 443|HTTPS 웹 트래픽|  
 
 
-- **Windows Server Essentials 릴리스 문서를 읽을**합니다. 릴리스 문서를 적절히 설치 하 고 Windows Server Essentials 구성 중요할 수 있는 최신 정보를 포함 합니다. 참조를 확인 하거나 릴리스 문서를 인쇄 하려면 [Release Documentation for Windows Server Essentials](../get-started/release-notes.md)합니다.  
+- **Windows Server Essentials 릴리스 설명서를 참조**하세요. 릴리스 문서에는 Windows Server Essentials를 올바르게 설치 하 고 구성 하는 데 중요 한 최신 정보가 포함 되어 있습니다. 릴리스 문서를 보거나 인쇄 하려면 [Windows Server Essentials에 대 한 릴리스 설명서](../get-started/release-notes.md)를 참조 하세요.  
 
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
 
 -   [Windows Server Essentials 설치](Install-Windows-Server-Essentials.md)
 

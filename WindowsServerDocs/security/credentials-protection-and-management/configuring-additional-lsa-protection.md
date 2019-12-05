@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: eaebac19119525b659c09b5506c497afdbd9a263
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 40e489089fc0c15c3e6ebf7b654377f4d6f7e482
+ms.sourcegitcommit: 3d76683718ec6f38613f552f518ebfc6a5db5401
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386993"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74829626"
 ---
 # <a name="configuring-additional-lsa-protection"></a>추가 LSA 보호 구성
 
@@ -79,7 +79,7 @@ LSA 보호를 사용 하는 경우 사용자 지정 LSA 플러그 인을 디버�
 
 이벤트 3065 및 이벤트 3066의 결과를 분석합니다.
 
-그러면 이벤트 뷰어에서 다음 이벤트가 표시 될 수 있습니다. Microsoft-Codeintegrity/Operational:
+그러면 다음과 같은 이벤트 뷰어에서 이러한 이벤트가 표시 될 수 있습니다. Microsoft-Windows-Codeintegrity/Operational:
 
 -   **이벤트 3065**: 이 이벤트는 코드 무결성 확인에서 공유 섹션에 대한 보안 요구 사항을 충족하지 않는 특정 드라이버로 프로세스(일반적으로 lsass.exe)를 로드하려는 시도가 발견되었음을 기록합니다. 그러나 설정된 시스템 정책으로 인해 이미지는 로드가 허용됩니다.
 
@@ -112,7 +112,7 @@ LSA 보호를 사용 하는 경우 사용자 지정 LSA 플러그 인을 디버�
 
 9. **값 종류** 상자에서 **REG_DWORD**를 클릭하여 선택합니다.
 
-10. **값 데이터** 상자에 **00000008**를 입력 합니다.
+10. **값 데이터** 상자에 **00000008**을 입력합니다.
 
 11. **확인**을 클릭합니다.
 
@@ -126,7 +126,7 @@ LSA 보호를 사용 하는 경우 사용자 지정 LSA 플러그 인을 디버�
 
 이벤트 3033 및 이벤트 3063의 결과를 분석합니다.
 
-그러면 이벤트 뷰어에서 다음 이벤트가 표시 될 수 있습니다. Microsoft-Codeintegrity/Operational:
+그러면 다음과 같은 이벤트 뷰어에서 이러한 이벤트가 표시 될 수 있습니다. Microsoft-Windows-Codeintegrity/Operational:
 
 -   **이벤트 3033**: 이 이벤트는 코드 무결성 확인에서 Microsoft 서명 수준 요구 사항을 충족하지 않는 드라이버로 프로세스(일반적으로 lsass.exe)를 로드하려는 시도가 발견되었음을 기록합니다.
 
@@ -138,7 +138,7 @@ LSA 보호를 사용 하는 경우 사용자 지정 LSA 플러그 인을 디버�
 Windows 8.1를 실행 하는 장치 (보안 부팅 또는 UEFI 사용 여부에 상관 없음)에서는이 섹션에 설명 된 절차를 수행 하 여 구성할 수 있습니다. Windows RT 8.1를 실행 하는 장치의 경우 lsass.exe 보호가 항상 사용 되며 해제할 수 없습니다.
 
 ### <a name="on-x86-based-or-x64-based-devices-using-secure-boot-and-uefi-or-not"></a>보안 부팅 및 UEFI를 사용하거나 사용하지 않는 x86 기반 또는 x64 기반 장치
-보안 부팅 및 UEFI를 사용하는 x86 기반 또는 x64 기반 장치에서는 LSA 보호가 레지스트리 키를 사용하여 설정될 때 UEFI 변수가 UEFI 펌웨어에 설정됩니다. 이 설정이 펌웨어에 저장되면 레지스트리 키에서 UEFI 변수를 삭제하거나 변경할 수 없습니다. UEFI 변수를 다시 설정해야 합니다.
+보안 부팅 또는 UEFI를 사용 하는 x86 기반 또는 x64 기반 장치에서는 LSA 보호가 레지스트리 키를 사용 하 여 설정 된 경우 uefi 펌웨어에 UEFI 변수가 설정 됩니다. 이 설정이 펌웨어에 저장되면 레지스트리 키에서 UEFI 변수를 삭제하거나 변경할 수 없습니다. UEFI 변수를 다시 설정해야 합니다.
 
 UEFI를 지원하지 않거나 보안 부팅을 사용하지 않는 x86 기반 또는 x64 기반 장치는 LSA 보호 구성을 펌웨어에 저장할 수 없으며 레지스트리 키의 존재 여부만을 기반으로 합니다. 이 시나리오에서는 장치에 대한 원격 액세스를 사용하여 LSA 보호를 사용하지 않도록 설정할 수 있습니다.
 
@@ -146,7 +146,7 @@ UEFI를 지원하지 않거나 보안 부팅을 사용하지 않는 x86 기반 �
 
 ##### <a name="to-enable-lsa-protection-on-a-single-computer"></a>단일 컴퓨터에서 LSA 보호를 사용하도록 설정하려면
 
-1.  레지스트리 편집기(RegEdit.exe)를 열고 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa에 있는 레지스트리 키를 찾습니다.
+1.  레지스트리 편집기(RegEdit.exe)를 열고 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa에 있는 레지스트리 키로 이동합니다.
 
 2.  레지스트리 키 값을 "RunAsPPL"=dword:00000001 값을 삭제합니다.
 
@@ -178,7 +178,7 @@ UEFI를 지원하지 않거나 보안 부팅을 사용하지 않는 x86 기반 �
 
 ##### <a name="to-disable-lsa-protection"></a>LSA 보호를 사용하지 않도록 설정하려면
 
-1.  레지스트리 편집기(RegEdit.exe)를 열고 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa에 있는 레지스트리 키를 찾습니다.
+1.  레지스트리 편집기(RegEdit.exe)를 열고 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa에 있는 레지스트리 키로 이동합니다.
 
 2.  레지스트리 키에서 "RunAsPPL"=dword:00000001 값을 삭제합니다.
 
@@ -194,9 +194,9 @@ UEFI를 지원하지 않거나 보안 부팅을 사용하지 않는 x86 기반 �
 ### <a name="verifying-lsa-protection"></a>LSA 보호 확인
 Windows를 시작할 때 LSA가 보호 모드로 시작되었는지 확인하려면 **Windows 로그** 아래의 **시스템** 로그에서 다음 WinInit 이벤트를 검색합니다.
 
--   12: LSASS.exe가 다음 수준의 보호된 프로세스로 시작되었습니다. 4
+-   12: LSASS.exe가 4 수준의 보호된 프로세스로 시작되었습니다.
 
-## <a name="additional-resources"></a>추가 자료
+## <a name="additional-resources"></a>추가 리소스
 [자격 증명 보호 및 관리](credentials-protection-and-management.md)
 
 [LSA에 대 한 파일 서명 서비스](https://go.microsoft.com/fwlink/?LinkId=392590)

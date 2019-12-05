@@ -10,12 +10,12 @@ manager: dougkim
 ms.author: pashort
 author: shortpatti
 ms.localizationpriority: medium
-ms.openlocfilehash: ac6d9abf96348a596fbd2f886cb67b5d97f686e2
-ms.sourcegitcommit: cbf0c7c37797c22af989639fac82fc0eee94497f
+ms.openlocfilehash: f3b580b108677b391065ad83f61e52504fe9ac91
+ms.sourcegitcommit: 68483ee9284285f5643dd67dce06f5a102cb9469
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74700156"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74823842"
 ---
 # <a name="networking"></a>네트워킹
 
@@ -252,7 +252,7 @@ ms.locfileid: "74700156"
             </div>
         </div>
     </li>
-    <hr />
+   <hr />
     <li>
         <div class="cardSize">
             <div class="cardPadding">
@@ -263,7 +263,7 @@ ms.locfileid: "74700156"
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3><a href="dns/dns-top.md">DNS (Domain Name System)&quot;&gt;</a></h3>
+                        <h3><a href="dns/dns-top.md">DNS(Domain Name System)</a></h3>
                         <hr />
                         <p>도메인 이름 시스템 (DNS) TCP/IP를 구성 하는 프로토콜의 산업 표준 프로토콜 중 하나 이며 DNS 클라이언트와 DNS 서버 함께 컴퓨터와 사용자에 게 컴퓨터 이름-IP 주소 매핑 이름 확인 서비스를 제공 합니다.</p>
                     </div>
@@ -382,7 +382,7 @@ ms.locfileid: "74700156"
                         <p>Windows Server 2016의 네트워크 오프로드 및 최적화 기술에는 소프트웨어 전용(SO) 기능 및 기술과 소프트웨어 및 하드웨어(SH) 통합 기능 및 기술, 하드웨어 전용(HO) 기능 및 기술이 포함되어 있습니다.</p>
                         <p>다음과 같은 오프로드 및 최적화 기술 설명서를 사용할 수도 있습니다.<p>
                         <hr />
-                        <a href="technologies/conv-nic/cnic-top.md">고성능 네트워킹</a>
+                        <a href="technologies/conv-nic/cnic-top.md">수렴 형 NIC (네트워크 인터페이스 카드)</a>
                         <hr />
                         <a href="technologies/dcb/dcb-top.md">DCB (데이터 센터 브리징)</a>
                         <hr />
