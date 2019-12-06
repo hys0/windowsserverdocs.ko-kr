@@ -197,6 +197,7 @@
 
 ### [AD DS 문제 해결](ad-ds/manage/AD-DS-Troubleshooting.md)
 #### [문제 해결을 위한 컴퓨터 구성](ad-ds/manage/troubleshoot/Configuring-a-computer-for-Troubleshooting.md)
+#### [ETW를 사용하여 LDAP 연결 문제 해결](ad-ds/manage/troubleshoot/troubleshoot-ldap-using-etw.md)
 #### [Active Directory 복제 문제 해결](ad-ds/manage/troubleshoot/Troubleshooting-active-directory-Replication-Problems.md)
 ##### [추가 리소스](additional-Resources_12.md)
 
