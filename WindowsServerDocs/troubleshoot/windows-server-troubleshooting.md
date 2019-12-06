@@ -10,12 +10,12 @@ ms.date: 10/17/2019
 ms.topic: landing-page
 author: kaushika-msft
 ms.author: kaushika
-ms.openlocfilehash: 58f88dbe485860cf685e0cafc960f60af06fc911
-ms.sourcegitcommit: effbc183bf4b370905d95c975626c1ccde057401
+ms.openlocfilehash: 829ae15495d54aca8c476909988ea5a44ea487e7
+ms.sourcegitcommit: 8a017624682fe0172076f9169a9fa17aa972907f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74781584"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74852630"
 ---
 # <a name="troubleshooting-windows-server-components"></a>Windows Server 구성 요소 문제 해결
 
@@ -73,7 +73,7 @@ Microsoft에서는 Windows Server 용 업데이트를 정기적으로 모두 릴
 ## <a name="troubleshoot-directaccess"></a>DirectAccess 문제 해결
 - [DirectAccess 문제 해결](https://docs.microsoft.com/windows-server/remote/remote-access/directaccess/troubleshooting-directaccess)
 
-## <a name="troubleshoot-disk--management"></a>디스크 관리 문제 해결
+## <a name="troubleshoot-disk-management"></a>디스크 관리 문제 해결
 - [디스크 관리 문제 해결](https://docs.microsoft.com/windows-server/storage/disk-management/troubleshooting-disk-management)
 
 ## <a name="troubleshoot-dns"></a>DNS 문제 해결

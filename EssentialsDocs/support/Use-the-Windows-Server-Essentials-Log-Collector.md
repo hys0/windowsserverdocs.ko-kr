@@ -12,42 +12,42 @@ ms.assetid: c6985518-b42d-4cfb-9761-eaa75306b6d7
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: ba5c0de9d8689c63c95ea3410a74fc9a7289aeab
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: df467921f8a8f5633d2b0bd792885fe2c9ae2212
+ms.sourcegitcommit: a937eb17915a4a0e444a36ddb0fac9c9771cfbfa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66435996"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74877908"
 ---
 # <a name="use-the-windows-server-essentials-log-collector"></a>Windows Server Essentials 로그 수집기 사용
 
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-컴퓨터 문제를 해결 하는 경우 Microsoft 고객 서비스 및 지원 센터 담당자 서버, 네트워크 또는 Windows Server Essentials 로그 수집기를 사용 하 여 두 컴퓨터에서 로그를 수집 하도록 요청할 수 있습니다.  
+컴퓨터 문제를 해결할 때 Microsoft 고객 서비스 및 지원 담당자의 담당자가 Windows Server Essentials 로그 수집기를 사용 하 여 서버, 네트워크의 컴퓨터 또는 둘 다에서 로그를 수집 하도록 요청할 수 있습니다.  
   
  로그 수집기에서는 프로그램 로그, 이벤트 검토자 로그 및 관련된 환경 정보를 지정된 위치의 단일 zip 파일로 복사합니다. 컴퓨터에 대한 원격 연결을 사용하거나 서버 또는 네트워크의 컴퓨터에서 직접 로그 수집기를 실행할 수 있습니다.  
   
 > [!NOTE]
-> - 로그 수집기에서는 네트워크 문제를 분석하거나 서버 또는 네트워크의 컴퓨터를 변경하지 않습니다. 네트워크 문제를 해결하는 방법에 대한 자세한 내용은 서버 제품에 대한 도움말 문서를 참조하세요.  
->   -   이 가이드에서는 서버가 아닌 네트워크에서 컴퓨터에 네트워크 컴퓨터 라고 합니다.  
->   -   [Windows Server Essentials 로그 수집기 설치 패키지 다운로드](https://go.microsoft.com/fwlink/?LinkID=266341)합니다.  
+>로그 수집기에서는 네트워크 문제를 분석하거나 서버 또는 네트워크의 컴퓨터를 변경하지 않습니다. 네트워크 문제를 해결하는 방법에 대한 자세한 내용은 서버 제품에 대한 도움말 문서를 참조하세요.  
+>이 가이드에서는 서버가 아닌 네트워크의 컴퓨터를 네트워크 컴퓨터 라고 합니다.  
+>[Windows Server Essentials 로그 수집기 설치 패키지를 다운로드](https://www.microsoft.com/download/details.aspx?id=34821)합니다.  
   
  로그 수집기를 설치 및 실행하려면 다음 항목의 단계를 수행합니다.  
   
 
-1.  [로그 수집기 설치](Install-the-Windows-Server-Essentials-Log-Collector.md)  
+1. [로그 수집기 설치](Install-the-Windows-Server-Essentials-Log-Collector.md)  
   
-2.  [로그 수집기를 실행 합니다.](Run-the-Windows-Server-Essentials-Log-Collector.md)  
+2. [로그 수집기 실행](Run-the-Windows-Server-Essentials-Log-Collector.md)  
 
-1.  [로그 수집기 설치](../support/Install-the-Windows-Server-Essentials-Log-Collector.md)  
+3. [로그 수집기 설치](../support/Install-the-Windows-Server-Essentials-Log-Collector.md)  
   
-2.  [로그 수집기를 실행 합니다.](../support/Run-the-Windows-Server-Essentials-Log-Collector.md)  
+4. [로그 수집기 실행](../support/Run-the-Windows-Server-Essentials-Log-Collector.md)  
 
-  
+
 ## <a name="environment-information-collected"></a>수집된 환경 정보  
  로그 수집기에서는 지정되는 각 네트워크 컴퓨터 또는 서버에 대해 다음 환경 정보를 수집하고 로그 컬렉션 파일에 저장합니다.  
   
--   운영 체제 버전  
+-   Operating system version(운영 체제 버전)  
   
 -   CPU 제조업체 및 설명  
   
@@ -55,9 +55,9 @@ ms.locfileid: "66435996"
   
 -   TCP/IP에 바인딩되어 있는 네트워크 어댑터  
   
--   로캘  
+-   Locale  
   
--   프로세스  
+-   Processes  
   
 -   저장소 구성  
   
@@ -112,9 +112,9 @@ ms.locfileid: "66435996"
   
 ### <a name="server-logs-and-registry-information"></a>서버 로그 및 레지스트리 정보  
   
--   서버 제품 로그에서 < ProgramData\>\Microsoft\Windows Server\Logs  
+-   서버 제품 로그, < ProgramData\>\Microsoft\Windows Server\Logs  
   
--   예약형 작업  
+-   Scheduled tasks  
   
 -   설치 API 로그  
   
@@ -132,17 +132,17 @@ ms.locfileid: "66435996"
   
 -   레지스트리 키, 위치:  
   
-    -   \\\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Server\  
+    -   \\\ HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows Server \  
   
-    -   \\\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DevicesProviderSvc  
+    -   \\\ HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Services\DevicesProviderSvc  
   
-    -   \\\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DomainManagerProviderSvc  
+    -   \\\ HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Services\DomainManagerProviderSvc  
   
 ### <a name="network-computer-logs-and-registry-information"></a>네트워크 컴퓨터 로그 및 레지스트리 정보  
   
--   네트워크 컴퓨터 제품 로그 < ProgramData\>\Microsoft\Windows Server\Logs  
+-   < ProgramData\>\Microsoft\Windows Server\Logs에서 네트워크 컴퓨터 제품 로그  
   
--   상태 경고 파일 < ProgramData\>server\data  
+-   상태 경고 파일 < ProgramData\>\Microsoft\Windows Server\Data  
   
 -   Windows 업데이트 로그  
   
@@ -150,7 +150,7 @@ ms.locfileid: "66435996"
   
 -   예약형 작업 정보  
   
--   Registry keys from \\\HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows Server\  
+-   \\\ HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows Server의 레지스트리 키 \  
   
 ## <a name="logs-for-computers-that-do-not-run-a-version-of-the-windows-operating-system"></a>Windows 운영 체제 버전을 실행하지 않는 컴퓨터에 대한 로그  
  로그 수집기에서는 Windows 운영 체제 버전을 실행하지 않는 컴퓨터에서 로그 파일을 수집하지 않습니다. 비 Windows 컴퓨터의 경우 로그 수집기 파일을 저장하는 동일한 위치에 다음 로그 파일을 복사합니다.  
@@ -159,11 +159,11 @@ ms.locfileid: "66435996"
   
 -   Library/Logs/Windows Server.log  
   
--   Library/Logs/CrashReporter/LaunchPad-< nnn\> (모든 LaunchPad-복사 < nnn\>.crash 파일)  
+-   Library/Logs/CrashReporter/실행 패드-< nnn\> (모든 실행 패드-< nnn\>파일)를 복사 합니다.  
   
--   Library/Logs/DiagnosticReports/LaunchPad-< nnn\> (모든 LaunchPad-복사 < nnn\>.crash 파일)  
+-   Library/Logs/DiagnosticReports/실행 패드-< nnn\> (모든 실행 패드-< nnn\>파일)를 복사 합니다.  
   
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
   
 
 -   [로그 수집기 오류 문제 해결](Troubleshoot-Windows-Server-Essentials-Log-Collector-Errors.md)
