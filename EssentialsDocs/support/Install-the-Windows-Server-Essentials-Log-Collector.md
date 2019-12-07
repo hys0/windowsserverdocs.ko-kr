@@ -12,25 +12,25 @@ ms.assetid: d271c54f-1ffa-464e-afa5-27b8df61854e
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: ade18cec590392f35e7ad6b30d9a22ccdce44dcd
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: a1b1a5492a6e5dbc48899b3918314676884e0454
+ms.sourcegitcommit: 39244de670f712857a5fdd56630e95d57b7001a5
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59837034"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74897684"
 ---
 # <a name="install-the-windows-server-essentials-log-collector"></a>Windows Server Essentials 로그 수집기 설치
 
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-Windows Server Essentials 로그 수집기 설치 마법사를 실행 패드에서 추가 기능을 로그 수집기를 설치합니다. 네트워크 컴퓨터 또는 서버나 이 둘 모두에서 로그 수집기를 설치하고 사용할 수 있습니다. 설치하고 나면 로그 수집기가 대시보드에 표시됩니다.  
+Windows Server Essentials 로그 수집기 설치 마법사에서 로그 수집기를 실행 패드 추가 기능으로 설치 합니다. 네트워크 컴퓨터 또는 서버나 이 둘 모두에서 로그 수집기를 설치하고 사용할 수 있습니다. 설치하고 나면 로그 수집기가 대시보드에 표시됩니다.  
   
-###  <a name="BKMK_ToInstall"></a> 로그 수집기를 설치 하려면  
+###  <a name="BKMK_ToInstall"></a>로그 수집기를 설치 하려면  
   
 1.  로그 수집기 설치 패키지를 서버 또는 네트워크의 컴퓨터에 다운로드합니다.  
   
     > [!NOTE]
-    >  Microsoft에서 [로그 수집기 설치 패키지를 다운로드](https://go.microsoft.com/fwlink/p/?LinkId=255470) 할 수 있습니다.  
+    > [Windows Server Essentials 로그 수집기 설치 패키지를 다운로드](https://www.microsoft.com/download/details.aspx?id=34821)합니다.  
   
 2.  로그 수집기 아이콘을 두 번 클릭합니다.  
   
@@ -42,7 +42,7 @@ Windows Server Essentials 로그 수집기 설치 마법사를 실행 패드에�
   
 6.  **추가 기능 설치**를 클릭합니다.  
   
-###  <a name="BKMK_Reinstall"></a> 로그 수집기를 다시 설치  
+###  <a name="BKMK_Reinstall"></a>로그 수집기 다시 설치  
  로그 수집기를 다시 설치해야 한다면 서버 및 네트워크에 있는 네트워크 컴퓨터에서 로그 수집기를 제거하고 다시 설치해야 합니다. 대시보드를 통해 서버에서 로그 수집기를 제거하면 모든 네트워크 컴퓨터에서 로그 수집기가 자동으로 제거됩니다.  
   
 ##### <a name="to-uninstall-and-reinstall-the-log-collector"></a>로그 수집기를 제거하고 다시 설치하려면  
@@ -62,12 +62,12 @@ Windows Server Essentials 로그 수집기 설치 마법사를 실행 패드에�
   
 ##### <a name="to-manually-install-the-log-collector"></a>로그 수집기를 수동으로 설치하려면  
   
-1.  .Cab.wssx에서 다운로드 한 설치 파일의 확장명을 변경 합니다.  
+1.  다운로드 한 설치 파일의 확장명을 .wax에서 .cab로 바꿉니다.  
   
 2.  설치 파일 이름을 두 번 클릭합니다.  
   
 3.  메시지가 표시되면 **확인** 을 클릭합니다.  
   
-4.  ˜.msi로 끝나는 파일 이름을 두 번 클릭 하 고 추출 하기 위해 폴더를 선택 합니다.  
+4.  ' .Msi '로 끝나는 파일 이름을 두 번 클릭 하 고 파일을 추출할 폴더를 선택 합니다.  
   
 5.  추출된 파일이 포함된 폴더로 이동하고 설치 파일을 두 번 클릭하여 마법사를 통해 설치를 완료합니다.

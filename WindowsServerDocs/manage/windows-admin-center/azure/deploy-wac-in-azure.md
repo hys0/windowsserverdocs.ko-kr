@@ -8,12 +8,12 @@ ms.author: jeffrew
 ms.date: 04/12/2019
 ms.localizationpriority: medium
 ms.prod: windows-server
-ms.openlocfilehash: 42216375d1784a5bc853994a9de7cff72920088d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 1da4df284febbf18b5796322868451c45ab247ab
+ms.sourcegitcommit: 7c7fc443ecd0a81bff6ed6dbeeaf4f24582ba339
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71357316"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74903935"
 ---
 # <a name="deploy-windows-admin-center-in-azure"></a>Azure에서 Windows 관리 센터 배포
 
@@ -23,10 +23,10 @@ ms.locfileid: "71357316"
 
 [수동 배포 단계로 이동](#deploy-manually-on-an-existing-azure-virtual-machine)
 
-### <a name="prerequisites"></a>사전 요구 사항
+### <a name="prerequisites"></a>필수 구성 요소
 
 * [Azure Cloud Shell](https://shell.azure.com)에서 계정을 설정 합니다. Cloud Shell를 처음 사용 하는 경우 Cloud Shell를 사용 하 여 Azure storage 계정을 연결 하거나 만들지 묻는 메시지가 표시 됩니다.
-* **PowerShell** Cloud Shell에서 홈 디렉터리로 이동 합니다.```PS Azure:\> cd ~```
+* **PowerShell** Cloud Shell에서 홈 디렉터리로 이동 합니다. ```PS Azure:\> cd ~```
 * ```Deploy-WACAzVM.ps1``` 파일을 업로드 하려면 로컬 컴퓨터에서 Cloud Shell 창의 아무 곳에 나 끌어 놓습니다.
 
 사용자 고유의 인증서를 지정 하는 경우:
@@ -41,7 +41,7 @@ ms.locfileid: "71357316"
 
 * **자격 증명** -[PSCREDENTIAL] VM에 대 한 자격 증명을 지정 합니다.
 
-* **Msipath** -[String] 기존 VM에 Windows 관리 센터를 배포할 때 Windows 관리 센터 MSI의 로컬 경로를 지정 합니다. 생략 된 경우의 http://aka.ms/WACDownload 버전으로 기본 설정 됩니다.
+* **Msipath** -[String] 기존 VM에 Windows 관리 센터를 배포할 때 Windows 관리 센터 MSI의 로컬 경로를 지정 합니다. 생략 된 경우 기본값은 https://aka.ms/WACDownload 의 버전입니다.
 
 * **VaultName** -[String] 인증서를 포함 하는 키 자격 증명 모음의 이름을 지정 합니다.
 
@@ -89,7 +89,7 @@ $Image = "Win2016Datacenter"
 $Credential = Get-Credential
 ```
 
-#### <a name="example-1-use-the-script-to-deploy-wac-gateway-on-a-new-vm-in-a-new-virtual-network-and-resource-group-use-the-msi-from-akamswacdownload-and-a-self-signed-cert-from-the-msi"></a>예 1: 스크립트를 사용 하 여 새 가상 네트워크 및 리소스 그룹의 새 VM에 WAC gateway를 배포 합니다. Aka.ms/WACDownload의 MSI 및 MSI에서 자체 서명 된 인증서를 사용 합니다.
+#### <a name="example-1-use-the-script-to-deploy-wac-gateway-on-a-new-vm-in-a-new-virtual-network-and-resource-group-use-the-msi-from-akamswacdownload-and-a-self-signed-cert-from-the-msi"></a>예제 1: 스크립트를 사용 하 여 새 가상 네트워크 및 리소스 그룹의 새 VM에 WAC gateway를 배포 합니다. Aka.ms/WACDownload의 MSI 및 MSI에서 자체 서명 된 인증서를 사용 합니다.
 
 ```PowerShell
 $scriptParams = @{
@@ -103,7 +103,7 @@ $scriptParams = @{
 ./Deploy-WACAzVM.ps1 @scriptParams
 ```
 
-#### <a name="example-2-same-as-1-but-using-a-certificate-from-azure-key-vault"></a>예 2: #1와 동일 하지만 Azure Key Vault 인증서를 사용 합니다.
+#### <a name="example-2-same-as-1-but-using-a-certificate-from-azure-key-vault"></a>예제 2: #1와 동일 하지만 Azure Key Vault 인증서를 사용 합니다.
 
 ```PowerShell
 $scriptParams = @{
@@ -118,7 +118,7 @@ $scriptParams = @{
 ./Deploy-WACAzVM.ps1 @scriptParams
 ```
 
-#### <a name="example-3-using-a-local-msi-on-an-existing-vm-to-deploy-wac"></a>예제 3: 기존 VM에서 로컬 MSI를 사용 하 여 WAC 배포
+#### <a name="example-3-using-a-local-msi-on-an-existing-vm-to-deploy-wac"></a>예 3: 기존 VM에서 로컬 MSI를 사용 하 여 WAC 배포
 
 ```PowerShell
 $MsiPath = "C:\Users\<username>\Downloads\WindowsAdminCenter<version>.msi"
@@ -147,7 +147,7 @@ Set-AzNetworkSecurityGroup -NetworkSecurityGroup $newNSG
 ### <a name="requirements-for-managed-azure-vms"></a>관리 되는 Azure VM에 대 한 요구 사항
 
 포트 5985 (WinRM over HTTP)가 열려 있고 활성 수신기가 있어야 합니다.
-Azure Cloud Shell에서 아래 코드를 사용 하 여 관리 되는 노드를 업데이트할 수 있습니다. ```$ResourceGroupName```및 ```$Name``` 는 배포 스크립트와 동일한 변수를 사용 하지만 관리 중인 VM에 대 한 ```$Credential``` 특정를 사용 해야 합니다.
+Azure Cloud Shell에서 아래 코드를 사용 하 여 관리 되는 노드를 업데이트할 수 있습니다. ```$ResourceGroupName``` 및 ```$Name```은 배포 스크립트와 동일한 변수를 사용 하지만 관리 중인 VM과 관련 된 ```$Credential``` 사용 해야 합니다.
 
 ```powershell
 Enable-AzVMPSRemoting -ResourceGroupName $ResourceGroupName -Name $Name
@@ -166,7 +166,7 @@ Invoke-AzVMCommand -ResourceGroupName $ResourceGroupName -Name $Name -ScriptBloc
 
 2. VM에 대 한 원격 데스크톱 연결을 설정한 다음 로컬 컴퓨터에서 MSI를 복사 하 여 VM에 붙여넣습니다.
 
-3. MSI를 두 번 클릭 하 여 설치를 시작 하 고 마법사의 지시를 따릅니다. 다음에 유의 하세요.
+3. MSI를 두 번 클릭 하 여 설치를 시작 하 고 마법사의 지시를 따릅니다. 다음에 주의하세요.
 
    - 기본적으로 설치 관리자는 권장 포트 443 (HTTPS)를 사용 합니다. 다른 포트를 선택 하려면 방화벽 에서도 해당 포트를 열어야 합니다. 
 
@@ -190,10 +190,10 @@ Invoke-AzVMCommand -ResourceGroupName $ResourceGroupName -Name $Name -ScriptBloc
 이 시점에서 게이트웨이 VM의 DNS 이름으로 이동 하 여 로컬 컴퓨터의 최신 브라우저 (Edge 또는 Chrome)에서 Windows 관리 센터에 액세스할 수 있어야 합니다. 
 
 > [!NOTE]
-> 443 이외의 포트를 선택한 경우 VM\<\>의 https://DNS 이름으로 이동 하 여 Windows 관리 센터에 액세스할 수 있습니다.\<사용자 지정 포트\>
+> 443 이외의 포트를 선택한 경우 VM의 https://\<DNS 이름\>:\<사용자 지정 포트를 탐색 하 여 Windows 관리 센터에 액세스할 수 있습니다\>
 
 Windows 관리 센터에 액세스 하려고 하면 브라우저에서 Windows 관리 센터가 설치 된 가상 컴퓨터에 액세스 하기 위한 자격 증명을 묻는 메시지를 표시 합니다. 여기에서 가상 컴퓨터의 로컬 사용자 또는 로컬 관리자 그룹에 있는 자격 증명을 입력 해야 합니다. 
 
-VNet에서 다른 Vm을 추가 하려면 대상 VM에서 PowerShell 또는 명령 프롬프트에서 다음을 실행 하 여 WinRM이 대상 Vm에서 실행 중인지 확인 합니다.`winrm quickconfig`
+VNet에서 다른 Vm을 추가 하려면 대상 VM에서 PowerShell 또는 명령 프롬프트에서 다음을 실행 하 여 WinRM이 대상 Vm에서 실행 되 고 있는지 확인 합니다. `winrm quickconfig`
 
 Azure VM에 도메인에 가입 하지 않은 경우 VM은 작업 그룹의 서버 처럼 동작 하므로 [작업 그룹에서 Windows 관리 센터를 사용 하](../support/troubleshooting.md#using-windows-admin-center-in-a-workgroup)는 것을 고려해 야 합니다.

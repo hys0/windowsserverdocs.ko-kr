@@ -8,12 +8,12 @@ ms.author: jeffrew
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.date: 06/07/2019
-ms.openlocfilehash: 23943c9567f371f7598c7dcda6db434760cabeab
-ms.sourcegitcommit: 1da993bbb7d578a542e224dde07f93adfcd2f489
+ms.openlocfilehash: c05987360256f7b7ed58911c1ded86586fc8b3aa
+ms.sourcegitcommit: 7c7fc443ecd0a81bff6ed6dbeeaf4f24582ba339
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73567091"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74903905"
 ---
 # <a name="windows-admin-center-known-issues"></a>Windows Admin Center 알려진 문제
 
@@ -44,7 +44,7 @@ ms.locfileid: "73567091"
 
 - Windows 관리 센터 모듈에서 실행 되는 OSS 버전 번호 사이에는 약간의 차이가 있을 수 있으며 타사 소프트웨어 공지에 나열 됩니다.
 
-### <a name="extension-manager"></a>확장 관리자
+### <a name="extension-manager"></a>확장명 관리자
 
 - Windows 관리 센터를 업데이트할 때 확장을 다시 설치 해야 합니다.
 - 액세스할 수 없는 확장 피드를 추가 하는 경우에는 경고가 발생 하지 않습니다. [14412861]
@@ -53,7 +53,7 @@ ms.locfileid: "73567091"
 
 ### <a name="microsoft-edge"></a>Microsoft Edge
 
-- Windows 관리 센터를 서비스로 배포 하 고 Microsoft Edge를 브라우저로 사용 하는 경우 새 브라우저 창을 생성 한 후 게이트웨이를 Azure에 연결 하지 못할 수 있습니다. 게이트웨이의 https://login.microsoftonline.com , https://login.live.com 및 URL을 신뢰할 수 있는 사이트로 추가 하 고 클라이언트 쪽 브라우저에서 팝업 차단 설정에 허용 되는 사이트를 추가 하 여이 문제를 해결 해 보십시오. 이 문제를 해결 하는 방법에 대 한 자세한 내용은 [문제 해결 가이드를 참조](troubleshooting.md#azure-features-dont-work-properly-in-edge)하세요. [17990376]
+- Windows 관리 센터를 서비스로 배포 하 고 Microsoft Edge를 브라우저로 사용 하는 경우 새 브라우저 창을 생성 한 후 게이트웨이를 Azure에 연결 하지 못할 수 있습니다. 추가 하 여이 문제를 해결 하려고 https://login.microsoftonline.com , https://login.live.com ,으로 게이트웨이의 URL을 신뢰할 수 있는 사이트 및 클라이언트 쪽 브라우저에서 팝업 차단 설정에 대 한 허용 된 사이트 및 합니다. 이 문제를 해결 하는 방법에 대 한 자세한 내용은 [문제 해결 가이드를 참조](troubleshooting.md#azure-features-dont-work-properly-in-edge)하세요. [17990376]
 
 ### <a name="google-chrome"></a>Google Chrome
 
@@ -82,7 +82,7 @@ WMF가 설치되어 있는지, 그리고 버전이 5.1 이상인지 확인하려
 
 설치되어있지 않은 경우 [WMF 5.1을 다운로드하여 설치할](https://www.microsoft.com/en-us/download/details.aspx?id=54616)수 있습니다.
 
-## <a name="role-based-access-control-rbac"></a>RBAC (역할 기반 Access Control)
+## <a name="role-based-access-control-rbac"></a>RBAC(역할 기반 액세스 제어)
 
 - RBAC 배포가 Windows Defender Application Control(WDAC, 이전의 코드 무결성)을 사용하기 위해 구성된 컴퓨터에서 성공하지 않습니다. [16568455]
 
@@ -189,9 +189,9 @@ WMF가 설치되어 있는지, 그리고 버전이 5.1 이상인지 확인하려
 
 - Microsoft 계정 ([MSA](https://account.microsoft.com/account/))을 사용 하거나, AAD (Azure Active Directory)를 사용 하 여 Windows 10 컴퓨터에 로그온 하는 경우 "관리"를 사용 하 여 로컬 관리자 계정에 대 한 자격 증명을 제공 해야 합니다. [16568455]
 
-- 로컬 호스트를 관리하려고 할 때 게이트웨이 프로세스의 권한을 상승하라는 메시지가 나타납니다. 이 다음에 표시되는 사용자 계정 컨트롤 팝업에서 **아니요**를 클릭하면 Windows Admin Center는 이 메시지를 다시 표시하지 않습니다. 이 경우 시스템 트레이에서 Windows Admin Center 아이콘을 마우스 오른쪽 단추로 클릭하고 종료를 선택하여 게이트웨이 프로세스를 종료하고 시작 메뉴에서 Windows Admin Center를 다시 실행합니다.
+- 로컬 호스트를 관리하려고 할 때 게이트웨이 프로세스의 권한을 상승하라는 메시지가 나타납니다. 다음에 나오는 사용자 계정 컨트롤 팝업에서 **아니요** 를 클릭 하는 경우 연결 시도를 취소 하 고 다시 시작 해야 합니다.
 
-- 기본적으로 Windows 10에는 WinRM/PowerShell 원격 작업이 없음
+- Windows 10에는 기본적으로 WinRM/PowerShell 원격 기능이 설정 되어 있지 않습니다.
   
   - Windows 10 클라이언트의 관리를 사용하도록 설정하려면 관리자 권한 PowerShell 프롬프트에서 ```Enable-PSRemoting``` 명령을 실행해야 합니다.
 
@@ -226,4 +226,4 @@ Azure Active Directory 앱을 업데이트 하기 위해 다음 두 가지 중 �
 Azure Monitor, Azure 업데이트 관리 및 Azure Security Center를 포함 하는 azure 관리 서비스는 온-프레미스 서버에 대해 동일한 에이전트 (Microsoft Monitoring Agent)를 사용 합니다. Azure 업데이트 관리에는 지원 되는 지역 집합이 더 제한적 이며 Log Analytics 작업 영역을 Azure Automation 계정에 연결 해야 합니다. 이러한 제한으로 인해 Windows 관리 센터에서 여러 서비스를 설정 하려는 경우 먼저 Azure 업데이트 관리 설정 하 고 Azure Security Center 하거나 Azure Monitor 해야 합니다. Microsoft Monitoring Agent를 사용 하는 Azure 관리 서비스를 구성 하 고 Windows 관리 센터를 사용 하 여 Azure 업데이트 관리를 설정 하는 경우, Windows 관리 센터에서는 Azure 업데이트 관리 (기존 Microsoft Monitoring Agent에 연결 된 리소스는 Azure 업데이트 관리를 지원 합니다. 이 경우 두 가지 옵션이 있습니다.
 
 1. 제어판 > Microsoft Monitoring Agent으로 이동 하 여 [기존 Azure 관리 솔루션](https://docs.microsoft.com/azure/azure-monitor/platform/log-faq#q-how-do-i-stop-an-agent-from-communicating-with-log-analytics) (예: Azure Monitor 또는 Azure Security Center)에서 서버 연결을 끊습니다. 그런 다음 Windows 관리 센터에서 Azure 업데이트 관리를 설정 합니다. 그 후에는 문제 없이 Windows 관리 센터를 통해 다른 Azure 관리 솔루션을 설정 하는 데 다시 돌아갈 수 있습니다.
-2. [Azure 업데이트 관리에 필요한 azure 리소스를 수동으로 설정](https://docs.microsoft.com/azure/automation/automation-update-management) 하 고 Microsoft Monitoring Agent (Windows 관리 센터 외부)를 [수동으로 업데이트](https://docs.microsoft.com/azure/azure-monitor/platform/agent-manage#adding-or-removing-a-workspace) 하 여 업데이트 관리 솔루션에 해당 하는 새 작업 영역을 추가할 수 있습니다. 를 사용 하려고 합니다.
+2. [Azure 업데이트 관리에 필요한 azure 리소스를 수동으로 설정](https://docs.microsoft.com/azure/automation/automation-update-management) 하 고, Microsoft Monitoring Agent (Windows 관리 센터 외부)를 [수동으로 업데이트](https://docs.microsoft.com/azure/azure-monitor/platform/agent-manage#adding-or-removing-a-workspace) 하 여 사용 하려는 업데이트 관리 솔루션에 해당 하는 새 작업 영역을 추가할 수 있습니다.

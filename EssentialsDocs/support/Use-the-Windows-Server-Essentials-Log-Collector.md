@@ -12,12 +12,12 @@ ms.assetid: c6985518-b42d-4cfb-9761-eaa75306b6d7
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: df467921f8a8f5633d2b0bd792885fe2c9ae2212
-ms.sourcegitcommit: a937eb17915a4a0e444a36ddb0fac9c9771cfbfa
+ms.openlocfilehash: 3bc43b08df30d03f29d9f343b7d6ed4d63c85eda
+ms.sourcegitcommit: 39244de670f712857a5fdd56630e95d57b7001a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/06/2019
-ms.locfileid: "74877908"
+ms.locfileid: "74897668"
 ---
 # <a name="use-the-windows-server-essentials-log-collector"></a>Windows Server Essentials 로그 수집기 사용
 
@@ -30,6 +30,7 @@ ms.locfileid: "74877908"
 > [!NOTE]
 >로그 수집기에서는 네트워크 문제를 분석하거나 서버 또는 네트워크의 컴퓨터를 변경하지 않습니다. 네트워크 문제를 해결하는 방법에 대한 자세한 내용은 서버 제품에 대한 도움말 문서를 참조하세요.  
 >이 가이드에서는 서버가 아닌 네트워크의 컴퓨터를 네트워크 컴퓨터 라고 합니다.  
+>
 >[Windows Server Essentials 로그 수집기 설치 패키지를 다운로드](https://www.microsoft.com/download/details.aspx?id=34821)합니다.  
   
  로그 수집기를 설치 및 실행하려면 다음 항목의 단계를 수행합니다.  

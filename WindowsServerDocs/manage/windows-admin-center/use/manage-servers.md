@@ -5,15 +5,15 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 03/07/2019
+ms.date: 11/21/2019
 ms.localizationpriority: medium
 ms.prod: windows-server
-ms.openlocfilehash: c7f436ea9b2baa00294ccef52a5d7a27c7247e4a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9a116cc9d86dfe0bb4450efa0f18580a062af722
+ms.sourcegitcommit: 7c7fc443ecd0a81bff6ed6dbeeaf4f24582ba339
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406783"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74903722"
 ---
 # <a name="manage-servers-with-windows-admin-center"></a>Windows 관리 센터를 사용 하 여 서버 관리
 
@@ -51,25 +51,27 @@ Windows 관리 센터에 서버를 추가 하려면 다음을 수행 합니다.
 | ---- | ----------- |
 | [개요](#overview) | 서버 세부 정보 및 컨트롤 서버 상태 보기 |
 | [Active Directory](#active-directory-preview) | Active Directory 관리 |
-| [백](#backup) | Azure Backup 보기 및 구성 |  
+| [Backup](#backup) | Azure Backup 보기 및 구성 |  
 | [인증서](#certificates) | 인증서 보기 및 수정 |
-| [컨테이너가](#containers) | 컨테이너 보기 |
+| [SSIS 로그 구성](#containers) | 컨테이너 보기 |
 | [디바이스](#devices) | 장치 보기 및 수정 |
 | [DHCP](#dhcp) | DHCP 서버 구성 보기 및 관리 |
 | [DNS](#dns) | DNS 서버 구성 보기 및 관리 |
 | [이벤트](#events) | 이벤트 보기 |
 | [파일](#files) | 파일 및 폴더 찾아보기 |
-| [방화벽](#firewall) | 방화벽 규칙 보기 및 수정 |
+| [Firewall](#firewall) | 방화벽 규칙 보기 및 수정 |
 | [설치 된 앱](#installed-apps) | 설치 된 앱 보기 및 제거 |
 | [로컬 사용자 및 그룹](#local-users-and-groups) | 로컬 사용자 및 그룹 보기 및 수정 |
 | [Network](#network) | 네트워크 장치 보기 및 수정 |
+| [패킷 모니터링](https://aka.ms/wac1908) | 네트워크 패킷 모니터링 |
+| [성능 모니터](https://aka.ms/perfmon-blog) | 성능 카운터 및 보고서 보기 |
 | [PowerShell](#powershell) | PowerShell을 통해 서버와 상호 작용 |
-| [프로세스만](#processes) | 실행 중인 프로세스 보기 및 수정 |
-| [레지스트리](#registry) | 레지스트리 항목 보기 및 수정 |
+| [프로세스](#processes) | 실행 중인 프로세스 보기 및 수정 |
+| [Registry](#registry) | 레지스트리 항목 보기 및 수정 |
 | [원격 데스크톱](#remote-desktop) | 원격 데스크톱을 통해 서버와 상호 작용 |
 | [역할 및 기능](#roles-and-features) | 역할 및 기능 보기 및 수정 |
 | [예약 된 작업](#scheduled-tasks) | 예약 된 작업 보기 및 수정 |
-| [Services](#services) | 서비스 보기 및 수정 |
+| [서비스](#services) | 서비스 보기 및 수정 |
 | [설정](#settings) | 서비스 보기 및 수정 |
 | [저장소](#storage) | 저장 장치 보기 및 수정 |
 | [저장소 마이그레이션 서비스](#storage-migration-service) | Azure 또는 Windows Server 2019로 서버 및 파일 공유 마이그레이션 |
@@ -169,8 +171,8 @@ Windows 관리 센터에 서버를 추가 하려면 다음을 수행 합니다.
 장치에서 지원 되는 기능은 다음과 같습니다.
 
 - 장치 찾아보기 및 검색
-- 장치 세부 정보 보기
-- 장치 사용 안 함
+- 디바이스 세부 정보 보기
+- 디바이스 사용 안 함
 - 장치에서 드라이버 업데이트
 
 [**장치에 대 한 사용자 의견 및 제안 된 기능 보기**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BDevices%5D)
@@ -252,7 +254,7 @@ Windows 관리 센터에 서버를 추가 하려면 다음을 수행 합니다.
 - 나가는 방화벽 규칙 보기
 - 방화벽 규칙 검색
 - 방화벽 규칙 세부 정보 보기
-- 새 방화벽 규칙 만들기
+- 새 방화벽 규칙을 만듭니다.
 - 방화벽 규칙 사용 또는 사용 안 함
 - 방화벽 규칙 삭제
 - 방화벽 규칙의 속성 편집
@@ -277,7 +279,7 @@ Windows 관리 센터에 서버를 추가 하려면 다음을 수행 합니다.
 - 새 사용자 또는 그룹 만들기
 - 사용자의 그룹 구성원 자격 관리
 - 사용자 또는 그룹 삭제
-- 사용자 암호 변경
+- 사용자 암호를 변경합니다.
 - 사용자 또는 그룹의 속성 편집
 
 [**로컬 사용자 및 그룹에 대 한 사용자 의견 및 제안 된 기능 보기**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BLocal%20users%20and%20Groups%5D)
@@ -310,7 +312,7 @@ PowerShell에서 지원 되는 기능은 다음과 같습니다.
 
 [**PowerShell에 대 한 사용자 의견 및 제안 된 기능 보기**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BPowerShell%5D)
 
-## <a name="processes"></a>프로세스
+## <a name="processes"></a>Processes
 
 **프로세스** 를 사용 하 여 컴퓨터 또는 서버에서 실행 중인 프로세스를 관리할 수 있습니다.
 
@@ -415,7 +417,7 @@ PowerShell에서 지원 되는 기능은 다음과 같습니다.
 - 역할 기반 액세스 제어 설정 보기 및 수정
 - Hyper-v 호스트 설정 보기 및 수정 (해당 하는 경우)
 
-## <a name="storage"></a>스토리지
+## <a name="storage"></a>저장소
 
 **저장소** 를 사용 하면 컴퓨터 또는 서버에서 저장 장치를 관리할 수 있습니다.
 
@@ -438,7 +440,7 @@ PowerShell에서 지원 되는 기능은 다음과 같습니다.
 
 [**저장소에 대 한 사용자 의견 및 제안 된 기능 보기**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BStorage%5D)
 
-## <a name="storage-migration-service"></a>저장소 마이그레이션 서비스
+## <a name="storage-migration-service"></a>스토리지 마이그레이션 서비스
 
 **Storage Migration Service** 를 사용 하면 앱 또는 사용자가 아무것도 변경 하지 않고도 서버 및 파일 공유를 Azure 또는 Windows Server 2019로 마이그레이션할 수 있습니다.
 [Storage Migration Service 개요 보기](https://go.microsoft.com/fwlink/?linkid=2016155)
@@ -454,7 +456,7 @@ PowerShell에서 지원 되는 기능은 다음과 같습니다.
 ## <a name="system-insights"></a>시스템 인사이트
 
 **System Insights** 는 서버 작동에 대 한 통찰력을 향상 시킬 수 있도록 Windows server에 기본적으로 제공 되는 예측 분석을 도입 합니다.
-[시스템 정보에 대 한 개요 보기](http://aka.ms/systeminsights)
+[시스템 정보에 대 한 개요 보기](https://aka.ms/systeminsights)
 
 >[!NOTE]
 >시스템 정보를 사용 하려면 Windows Server 2019이 필요 합니다.
