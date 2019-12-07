@@ -9,12 +9,12 @@ ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: daveba
 ms.reviewer: mas
-ms.openlocfilehash: fb91ca583fd71a7fbe38369606d2dcc4a816d8aa
-ms.sourcegitcommit: 73898afec450fb3c2f429ca373f6b48a74b19390
+ms.openlocfilehash: 2625097c56e6b2121cbdac45e1cc5f86972e4898
+ms.sourcegitcommit: 68483ee9284285f5643dd67dce06f5a102cb9469
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71935012"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74823852"
 ---
 # <a name="privileged-access-workstations"></a>Privileged Access Workstation
 
@@ -516,7 +516,7 @@ Domain Admin, Enterprise Admin 또는 이와 동등한 계층 0 그룹(중첩 �
      Enterprise Admins
      Domain Admins
      Schema Admins
-     DOMAIN\Administrators
+     BUILTIN\Administrators
      Account Operators
      Backup Operators
      Print Operators
@@ -545,7 +545,7 @@ Domain Admin, Enterprise Admin 또는 이와 동등한 계층 0 그룹(중첩 �
      Enterprise Admins
      Domain Admins
      Schema Admins
-     DOMAIN\Administrators
+     BUILTIN\Administrators
      Account Operators
      Backup Operators
      Print Operators
@@ -575,7 +575,7 @@ Domain Admin, Enterprise Admin 또는 이와 동등한 계층 0 그룹(중첩 �
      Enterprise Admins
      Domain Admins
      Schema Admins
-     DOMAIN\Administrators
+     BUILTIN\Administrators
      Account Operators
      Backup Operators
      Print Operators
@@ -599,7 +599,7 @@ Domain Admin, Enterprise Admin 또는 이와 동등한 계층 0 그룹(중첩 �
      Enterprise Admins
      Domain Admins
      Schema Admins
-     DOMAIN\Administrators
+     BUILTIN\Administrators
      Account Operators
      Backup Operators
      Print Operators
@@ -623,7 +623,7 @@ Domain Admin, Enterprise Admin 또는 이와 동등한 계층 0 그룹(중첩 �
      Enterprise Admins
      Domain Admins
      Schema Admins
-     DOMAIN\Administrators
+     BUILTIN\Administrators
      Account Operators
      Backup Operators
      Print Operators
