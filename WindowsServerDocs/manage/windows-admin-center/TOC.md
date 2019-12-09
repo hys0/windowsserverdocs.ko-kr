@@ -23,6 +23,7 @@
 ### [사용자 액세스 제어 및 사용 권한](configure/user-access-control.md)
 ### [확장 사용](configure/using-extensions.md)
 ### [공유 연결](configure/shared-connections.md)
+### [PowerShell으로 자동화](configure/use-powershell.md)
 
 ## Windows Server Update Services와 함께
 ### [시작](use/get-started.md)
