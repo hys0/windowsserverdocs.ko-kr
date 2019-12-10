@@ -1,22 +1,22 @@
 ---
-title: 상태 및 작동 상태 스토리지 공간 다이렉트
+title: 저장소 공간 및 스토리지 공간 다이렉트 상태 및 작동 상태
 description: 스토리지 공간 다이렉트 및 저장소 공간의 다양 한 상태 및 작동 상태 (실제 디스크, 풀 및 가상 디스크 포함)와 그에 대 한 작업 상태를 찾고 이해 하는 방법입니다.
 keywords: 저장소 공간, 분리 됨, 가상 디스크, 실제 디스크, 성능 저하 됨
 author: jasongerend
 ms.author: jgerend
-ms.date: 10/17/2018
+ms.date: 12/06/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage-spaces
 manager: brianlic
-ms.openlocfilehash: 4b525555333a8aeee416e9ab55981c17137a52ea
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 40e820971f9d2ab0ba48fe30b100f07302ed7206
+ms.sourcegitcommit: e817a130c2ed9caaddd1def1b2edac0c798a6aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71365991"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74945276"
 ---
-# <a name="troubleshoot-storage-spaces-direct-health-and-operational-states"></a>상태 및 작동 상태 스토리지 공간 다이렉트 문제 해결
+# <a name="troubleshoot-storage-spaces-and-storage-spaces-direct-health-and-operational-states"></a>저장소 공간 및 스토리지 공간 다이렉트 상태 및 작동 상태 문제 해결
 
 > 적용 대상: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server (반기 채널), Windows 10, Windows 8.1
 
@@ -52,9 +52,9 @@ S2D on StorageSpacesDirect1 Read-only         Unknown      False        True
 
 ### <a name="pool-health-state-healthy"></a>풀 상태: 정상
 
-|작동 상태    |설명|
-|---------            |---------  |
-|확인|저장소 풀이 정상입니다.|
+| 작동 상태    | 설명 |
+| ---------            | ---------  |
+| 확인 | 저장소 풀이 정상입니다. |
 
 ### <a name="pool-health-state-warning"></a>풀 상태: 경고
 
@@ -70,7 +70,7 @@ S2D on StorageSpacesDirect1 Read-only         Unknown      False        True
 
 |작동 상태    |읽기 전용 이유 |설명|
 |---------            |---------       |--------   |
-|읽기 전용|안함|이는 저장소 풀이 [쿼럼을](understand-quorum.md)손실 하는 경우 발생할 수 있습니다. 즉, 풀의 대부분의 드라이브가 어떤 이유로 인해 실패 했거나 오프 라인 상태임을 의미 합니다. 풀이 쿼럼을 손실 하면 충분 한 드라이브를 다시 사용할 수 있을 때까지 저장소 공간이 자동으로 풀 구성을 읽기 전용으로 설정 합니다.<br><br>**조치** <br>1. 누락 된 드라이브를 다시 연결 하 고 스토리지 공간 다이렉트를 사용 하는 경우 모든 서버를 온라인 상태로 전환 합니다. <br>2. 관리자 권한으로 PowerShell 세션을 열고 다음을 입력 하 여 풀을 읽기/쓰기로 다시 설정 합니다.<br><br> <code>Get-StoragePool <PoolName> -IsPrimordial $False \| Set-StoragePool -IsReadOnly $false</code>|
+|읽기 전용|Befejezetlen|이는 저장소 풀이 [쿼럼을](understand-quorum.md)손실 하는 경우 발생할 수 있습니다. 즉, 풀의 대부분의 드라이브가 어떤 이유로 인해 실패 했거나 오프 라인 상태임을 의미 합니다. 풀이 쿼럼을 손실 하면 충분 한 드라이브를 다시 사용할 수 있을 때까지 저장소 공간이 자동으로 풀 구성을 읽기 전용으로 설정 합니다.<br><br>**조치** <br>1. 누락 된 드라이브를 다시 연결 하 고 스토리지 공간 다이렉트를 사용 하는 경우 모든 서버를 온라인 상태로 전환 합니다. <br>2. 관리자 권한으로 PowerShell 세션을 열고 다음을 입력 하 여 풀을 읽기/쓰기로 다시 설정 합니다.<br><br> <code>Get-StoragePool <PoolName> -IsPrimordial $False \| Set-StoragePool -IsReadOnly $false</code>|
 ||정책|관리자가 저장소 풀을 읽기 전용으로 설정 합니다.<br><br>**작업:** 장애 조치(Failover) 클러스터 관리자에서 클러스터 된 저장소 풀을 읽기/쓰기 액세스로 설정 하려면 **풀로 이동**하 고 풀을 마우스 오른쪽 단추로 클릭 한 다음 **온라인 상태로 만들기**를 선택 합니다.<br><br>다른 서버 및 Pc의 경우 관리자 권한으로 PowerShell 세션을 열고 다음을 입력 합니다.<br><br><code>Get-StoragePool <PoolName> \| Set-StoragePool -IsReadOnly $false</code><br><br> |
 ||시작 중|저장소 공간이 풀에서 연결 될 드라이브를 시작 하거나 대기 하는 중입니다. 이는 임시 상태 여야 합니다. 완전히 시작한 후에는 풀이 다른 작동 상태로 전환 되어야 합니다.<br><br>**작업:** 풀이 *시작* 상태를 유지 하는 경우 풀의 모든 드라이브가 제대로 연결 되어 있는지 확인 합니다.|
 
@@ -110,8 +110,8 @@ Volume2      Warning      {Degraded, Incomplete} None
 
 |작동 상태    |설명|
 |---------            |---------          |
-|서비스에서            |Windows에서 드라이브를 추가 하거나 제거 하는 등의 방법으로 가상 디스크를 복구 하 고 있습니다. 복구가 완료 되 면 가상 디스크가 정상 상태를 반환 해야 합니다.|
-|안함           |하나 이상의 드라이브가 실패 했거나 누락 되어 서 가상 디스크의 복원 력을 줄였습니다. 그러나 누락 된 드라이브는 데이터의 최신 복사본을 포함 합니다.<br><br> **작업**: <br>1. 누락 된 드라이브를 다시 연결 하 고, 실패 한 드라이브를 교체 하 고, 스토리지 공간 다이렉트를 사용 하는 경우 오프 라인 상태인 모든 서버를 온라인 상태로 전환 합니다. <br>2. 스토리지 공간 다이렉트을 사용 하지 않는 경우 다음에 [VirtualDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/repair-virtualdisk) cmdlet을 사용 하 여 가상 디스크를 복구 합니다.<br> 스토리지 공간 다이렉트는 드라이브를 다시 연결 하거나 교체 하 고 나 서 필요한 경우 자동으로 복구를 시작 합니다.|
+|Működik            |Windows에서 드라이브를 추가 하거나 제거 하는 등의 방법으로 가상 디스크를 복구 하 고 있습니다. 복구가 완료 되 면 가상 디스크가 정상 상태를 반환 해야 합니다.|
+|Befejezetlen           |하나 이상의 드라이브가 실패 했거나 누락 되어 서 가상 디스크의 복원 력을 줄였습니다. 그러나 누락 된 드라이브는 데이터의 최신 복사본을 포함 합니다.<br><br> **작업**: <br>1. 누락 된 드라이브를 다시 연결 하 고, 실패 한 드라이브를 교체 하 고, 스토리지 공간 다이렉트를 사용 하는 경우 오프 라인 상태인 모든 서버를 온라인 상태로 전환 합니다. <br>2. 스토리지 공간 다이렉트을 사용 하지 않는 경우 다음에 [VirtualDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/repair-virtualdisk) cmdlet을 사용 하 여 가상 디스크를 복구 합니다.<br> 스토리지 공간 다이렉트는 드라이브를 다시 연결 하거나 교체 하 고 나 서 필요한 경우 자동으로 복구를 시작 합니다.|
 |저하됨             |하나 이상의 드라이브가 실패 하거나 누락 되었으므로 가상 디스크의 복원 력이 줄어들고,이 드라이브에 오래 된 데이터 복사본이 있습니다. <br><br>**작업**: <br> 1. 누락 된 드라이브를 다시 연결 하 고, 실패 한 드라이브를 교체 하 고, 스토리지 공간 다이렉트를 사용 하는 경우 오프 라인 상태인 모든 서버를 온라인 상태로 전환 합니다. <br> 2. 스토리지 공간 다이렉트을 사용 하지 않는 경우 다음에 [VirtualDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/repair-virtualdisk) cmdlet을 사용 하 여 가상 디스크를 복구 합니다. <br>스토리지 공간 다이렉트는 드라이브를 다시 연결 하거나 교체 하 고 나 서 필요한 경우 자동으로 복구를 시작 합니다.|
 
 ### <a name="virtual-disk-health-state-unhealthy"></a>가상 디스크 상태: 비정상
@@ -130,8 +130,8 @@ Volume2      Warning      {Degraded, Incomplete} None
 |---------            |---------       |--------   |
 |Detached             |정책에 따라            |관리자가 가상 디스크를 오프 라인으로 설정 했거나 수동 첨부 파일이 필요 하도록 가상 디스크를 설정 합니다 .이 경우 Windows가 다시 시작 될 때마다 가상 디스크를 수동으로 연결 해야 합니다.<br><br>**작업**: 가상 디스크를 다시 온라인 상태로 전환 합니다. 이렇게 하려면 가상 디스크가 클러스터 된 저장소 풀에 있는 경우 장애 조치(Failover) 클러스터 관리자에서 **저장소** > **풀** > **가상 디스크**를 선택 하 고, **오프 라인** 상태를 표시 하는 가상 디스크를 선택한 다음 **온라인 상태로 만들기**를 선택 합니다. <br><br>클러스터에 있지 않을 때 가상 디스크를 다시 온라인 상태로 만들려면 관리자 권한으로 PowerShell 세션을 열고 다음 명령을 사용 하 여 시도 합니다.<br><br> <code>Get-VirtualDisk \| Where-Object -Filter { $_.OperationalStatus -eq "Detached" } \| Connect-VirtualDisk</code><br><br>Windows가 다시 시작 된 후 클러스터 되지 않은 모든 가상 디스크를 자동으로 연결 하려면 관리자 권한으로 PowerShell 세션을 열고 다음 명령을 사용 합니다.<br><br> <code>Get-VirtualDisk \| Set-VirtualDisk -ismanualattach $false</code>|
 |            |과반수 디스크가 비정상 상태임 |이 가상 디스크에서 사용 하는 드라이브가 너무 많거나, 누락 되었거나, 오래 된 데이터가 있습니다.   <br><br>**작업**: <br> 1. 누락 된 드라이브를 다시 연결 하 고 스토리지 공간 다이렉트를 사용 하는 경우 오프 라인 상태인 모든 서버를 온라인 상태로 전환 합니다. <br> 2. 모든 드라이브 및 서버가 온라인 상태 이면 실패 한 모든 드라이브를 바꿉니다. 자세한 내용은 [상태 관리 서비스](../../failover-clustering/health-service-overview.md) 를 참조 하세요. <br>스토리지 공간 다이렉트는 드라이브를 다시 연결 하거나 교체 하 고 나 서 필요한 경우 자동으로 복구를 시작 합니다.<br>3. 스토리지 공간 다이렉트을 사용 하지 않는 경우 다음에 [VirtualDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/repair-virtualdisk) cmdlet을 사용 하 여 가상 디스크를 복구 합니다.  <br><br>데이터의 복사본을 포함 하는 것 보다 많은 디스크가 실패 하 고 가상 디스크가 오류 간에 복구 되지 않은 경우 가상 디스크의 모든 데이터가 영구적으로 손실 됩니다. 이 경우 가상 디스크를 삭제 하 고 새 가상 디스크를 만든 다음 백업에서 복원 합니다.|
-|                     |안함 |드라이브가 부족 하 여 가상 디스크를 읽을 수 없습니다.    <br><br>**작업**: <br> 1. 누락 된 드라이브를 다시 연결 하 고 스토리지 공간 다이렉트를 사용 하는 경우 오프 라인 상태인 모든 서버를 온라인 상태로 전환 합니다. <br> 2. 모든 드라이브 및 서버가 온라인 상태 이면 실패 한 모든 드라이브를 바꿉니다. 자세한 내용은 [상태 관리 서비스](../../failover-clustering/health-service-overview.md) 를 참조 하세요. <br>스토리지 공간 다이렉트는 드라이브를 다시 연결 하거나 교체 하 고 나 서 필요한 경우 자동으로 복구를 시작 합니다.<br>3. 스토리지 공간 다이렉트을 사용 하지 않는 경우 다음에 [VirtualDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/repair-virtualdisk) cmdlet을 사용 하 여 가상 디스크를 복구 합니다.<br><br>데이터의 복사본을 포함 하는 것 보다 많은 디스크가 실패 하 고 가상 디스크가 오류 간에 복구 되지 않은 경우 가상 디스크의 모든 데이터가 영구적으로 손실 됩니다. 이 경우 가상 디스크를 삭제 하 고 새 가상 디스크를 만든 다음 백업에서 복원 합니다.|
-| |시간 제한|가상 디스크를 연결 하는 데 너무 오래 걸렸습니다. <br><br> **작업:** 이는 자주 발생 하지 않으므로 조건이 시간 경과 하는지 확인 하는 것이 좋습니다. 또는 [VirtualDisk](https://docs.microsoft.com/powershell/module/storage/disconnect-virtualdisk?view=win10-ps) cmdlet을 사용 하 여 가상 디스크의 연결을 끊은 다음 [VirtualDisk](https://docs.microsoft.com/powershell/module/storage/connect-virtualdisk?view=win10-ps) cmdlet을 사용 하 여 다시 연결할 수 있습니다. |
+|                     |Befejezetlen |드라이브가 부족 하 여 가상 디스크를 읽을 수 없습니다.    <br><br>**작업**: <br> 1. 누락 된 드라이브를 다시 연결 하 고 스토리지 공간 다이렉트를 사용 하는 경우 오프 라인 상태인 모든 서버를 온라인 상태로 전환 합니다. <br> 2. 모든 드라이브 및 서버가 온라인 상태 이면 실패 한 모든 드라이브를 바꿉니다. 자세한 내용은 [상태 관리 서비스](../../failover-clustering/health-service-overview.md) 를 참조 하세요. <br>스토리지 공간 다이렉트는 드라이브를 다시 연결 하거나 교체 하 고 나 서 필요한 경우 자동으로 복구를 시작 합니다.<br>3. 스토리지 공간 다이렉트을 사용 하지 않는 경우 다음에 [VirtualDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/repair-virtualdisk) cmdlet을 사용 하 여 가상 디스크를 복구 합니다.<br><br>데이터의 복사본을 포함 하는 것 보다 많은 디스크가 실패 하 고 가상 디스크가 오류 간에 복구 되지 않은 경우 가상 디스크의 모든 데이터가 영구적으로 손실 됩니다. 이 경우 가상 디스크를 삭제 하 고 새 가상 디스크를 만든 다음 백업에서 복원 합니다.|
+| |Timeout|가상 디스크를 연결 하는 데 너무 오래 걸렸습니다. <br><br> **작업:** 이는 자주 발생 하지 않으므로 조건이 시간 경과 하는지 확인 하는 것이 좋습니다. 또는 [VirtualDisk](https://docs.microsoft.com/powershell/module/storage/disconnect-virtualdisk?view=win10-ps) cmdlet을 사용 하 여 가상 디스크의 연결을 끊은 다음 [VirtualDisk](https://docs.microsoft.com/powershell/module/storage/connect-virtualdisk?view=win10-ps) cmdlet을 사용 하 여 다시 연결할 수 있습니다. |
 
 ## <a name="drive-physical-disk-states"></a>드라이브 (실제 디스크) 상태
 
@@ -142,7 +142,7 @@ Volume2      Warning      {Degraded, Incomplete} None
 |작동 상태    |설명|
 |---------            |---------          |
 |확인|드라이브가 정상입니다.|
-|서비스에서|드라이브가 내부 정리 작업을 수행 하 고 있습니다. 작업이 완료 되 면 드라이브가 *OK* 성능 상태로 돌아옵니다.|
+|Működik|드라이브가 내부 정리 작업을 수행 하 고 있습니다. 작업이 완료 되 면 드라이브가 *OK* 성능 상태로 돌아옵니다.|
 
 ### <a name="drive-health-state-warning"></a>드라이브 상태: 경고
 
@@ -167,7 +167,7 @@ Volume2      Warning      {Degraded, Incomplete} None
 |작동 상태    |설명|
 |---------            |---------          |
 |사용할 수 없음|이 드라이브는 저장소 공간에서 사용할 수 없습니다. 자세한 내용은 [스토리지 공간 다이렉트 하드웨어 요구 사항](storage-spaces-direct-hardware-requirements.md)을 참조 하세요. 스토리지 공간 다이렉트 사용 하지 않는 경우 [저장소 공간 개요](https://technet.microsoft.com/library/hh831739(v=ws.11).aspx#Requirements)를 참조 하세요.|
-|분리할|드라이브가 풀에서 분리 되었습니다.<br><br>**작업**: 드라이브를 다시 설정 하 고, 드라이브에서 모든 데이터를 지우고, 빈 드라이브로 다시 풀에 추가 합니다. 이렇게 하려면 관리자 권한으로 PowerShell 세션을 열고 [PhysicalDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/reset-physicaldisk) cmdlet을 실행 한 다음 [VirtualDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/repair-virtualdisk)를 실행 합니다. <br><br>이 드라이브에 대 한 자세한 진단 정보를 보려면 Windows 오류 보고 사용 하 여 문제 해결의 단계를 수행 > [실제 디스크를 온라인 상태로 만들지 못했습니다](../../failover-clustering/troubleshooting-using-wer-reports.md#physical-disk-failed-to-come-online).|
+|Split|드라이브가 풀에서 분리 되었습니다.<br><br>**작업**: 드라이브를 다시 설정 하 고, 드라이브에서 모든 데이터를 지우고, 빈 드라이브로 다시 풀에 추가 합니다. 이렇게 하려면 관리자 권한으로 PowerShell 세션을 열고 [PhysicalDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/reset-physicaldisk) cmdlet을 실행 한 다음 [VirtualDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/repair-virtualdisk)를 실행 합니다. <br><br>이 드라이브에 대 한 자세한 진단 정보를 보려면 Windows 오류 보고 사용 하 여 문제 해결의 단계를 수행 > [실제 디스크를 온라인 상태로 만들지 못했습니다](../../failover-clustering/troubleshooting-using-wer-reports.md#physical-disk-failed-to-come-online).|
 |오래 된 메타 데이터|저장소 공간에서 드라이브의 이전 메타 데이터를 찾았습니다.<br><br>**작업**: 임시 상태 여야 합니다. 드라이브가 다시 정상으로 전환 되지 않으면 [VirtualDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/repair-virtualdisk) 를 실행 하 여 영향을 받는 가상 디스크에서 복구 작업을 시작할 수 있습니다. 이렇게 해도 문제가 해결 되지 않으면 [PhysicalDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/reset-physicaldisk) cmdlet을 사용 하 여 드라이브를 다시 설정 하 고, 드라이브에서 모든 데이터를 초기화 한 후 [VirtualDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/repair-virtualdisk)를 실행할 수 있습니다.|
 |인식할 수 없는 메타 데이터|저장소 공간에서 드라이브의 인식할 수 없는 메타 데이터를 찾았습니다 .이는 일반적으로 드라이브에 다른 풀의 메타 데이터가 있음을 의미 합니다.<br><br>**작업**: 드라이브를 초기화 하 고 현재 풀에 추가 하려면 드라이브를 다시 설정 합니다. 드라이브를 다시 설정 하려면 관리자 권한으로 PowerShell 세션을 열고 [PhysicalDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/reset-physicaldisk) cmdlet을 실행 한 다음 [VirtualDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/repair-virtualdisk)를 실행 합니다.|
 |실패 한 미디어|드라이브가 실패 했으며 저장소 공간에서 더 이상 사용 되지 않습니다.<br><br>**작업**: 드라이브를 바꿉니다. <br><br>이 드라이브에 대 한 자세한 진단 정보를 보려면 Windows 오류 보고 사용 하 여 문제 해결의 단계를 수행 > [실제 디스크를 온라인 상태로 만들지 못했습니다](../../failover-clustering/troubleshooting-using-wer-reports.md#physical-disk-failed-to-come-online).|

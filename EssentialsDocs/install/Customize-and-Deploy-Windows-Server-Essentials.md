@@ -1,34 +1,30 @@
 ---
-title: 사용자 지정 및 Windows Server Essentials를 배포 합니다.
+title: Windows Server Essentials 사용자 지정 및 배포
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.custom: na
-ms.date: 09/2013/2016
+ms.date: 09/13/2016
 ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d1c70cf2-0db8-4b75-af46-73620b9e81c8
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: a02c624efa452b76fc404d58c25b94c310b93628
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c3d2a112544e6ffe13ad64351e5266e4f927e48f
+ms.sourcegitcommit: e817a130c2ed9caaddd1def1b2edac0c798a6aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59854934"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74945256"
 ---
-# <a name="customize-and-deploy-windows-server-essentials"></a>사용자 지정 및 Windows Server Essentials를 배포 합니다.
+# <a name="customize-and-deploy-windows-server-essentials"></a>Windows Server Essentials 사용자 지정 및 배포
 
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
   
- 사용자 지정 하 고 Windows Server Essentials를 배포의 정보를 사용 합니다 [Windows 평가 및 배포 키트 (Windows ADK)](https://www.microsoft.com/download/details.aspx?id=39982) 고 [WindowsServer2012R2에서WindowsServerEssentials를배포및사용자지정](https://technet.microsoft.com/library/dn293241.aspx).  
+ Windows Server Essentials를 사용자 지정 및 배포 하려면 windows [ADK (Windows 평가 및 배포 키트)](https://www.microsoft.com/download/details.aspx?id=39982) 의 정보를 사용 하 고 windows server 2012 r 2 [에서 Windows Server essentials 사용자 지정 및 배포](https://technet.microsoft.com/library/dn293241.aspx)를 사용 합니다.  
   
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
   
 -   [Windows 배포 도구 기술 참조](https://technet.microsoft.com/library/hh825039.aspx)  
   
--   [Windows ADK 사용 하 여 Windows 배포](https://technet.microsoft.com/library/hh824947.aspx)  
+-   [Windows ADK를 사용 하 여 windows 배포](https://technet.microsoft.com/library/hh824947.aspx)  
   
 -   [Windows Server Essentials-평가 및 배포 키트](Assessment-and-Deployment-Kit-for-Windows-Server-Essentials.md)

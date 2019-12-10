@@ -6,14 +6,14 @@ ms.topic: article
 manager: klaasl
 ms.author: jeffpatt
 author: JeffPatt24
-ms.date: 6/242017
+ms.date: 6/24/2017
 ms.assetid: 4a11ede0-b000-4188-8190-790971504e17
-ms.openlocfilehash: ff0c6d4a6e457947c063a7ea5c3ce6463e9c17bb
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 17adf89d3a26767bbc736a31da7b7b2b204570a2
+ms.sourcegitcommit: e817a130c2ed9caaddd1def1b2edac0c798a6aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71365754"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74945228"
 ---
 # <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-4-set-up-web-application-proxy"></a>AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포: 4단계, 웹 응용 프로그램 프록시 설치
 
@@ -51,7 +51,7 @@ ms.locfileid: "71365754"
   
 4.  **사용 가능한 스냅인** 목록에서 **인증서**를 선택한 다음 **추가**를 클릭합니다. 인증서 스냅인 마법사가 시작됩니다.  
   
-5.  **컴퓨터 계정**을 선택한 다음 **다음**을 클릭합니다.  
+5.  **컴퓨터 계정**을 선택하고 **다음**을 클릭합니다.  
   
 6.  **로컬 컴퓨터: (이 콘솔이 실행되고 있는 컴퓨터)** 를 선택하고 **마침**을 클릭합니다.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "71365754"
   
 6.  **역할 서비스** 페이지에서 **웹 응용 프로그램 프록시**를 선택하고, **기능 추가**를 클릭하고, **다음**을 클릭합니다.
 
-7.  **설치 선택 확인** 페이지에서 **설치**를 클릭합니다.  
+7.  **Confirm installation selections** 페이지에서 **Install**을 클릭합니다.  
   
 ## <a name="configure-web-application-proxy"></a>웹 응용 프로그램 프록시 구성  
 웹 응용 프로그램 프록시를 구성하려면 다음 단계를 따릅니다.  
@@ -103,7 +103,7 @@ ms.locfileid: "71365754"
   
 5.  **AD FS 프록시 인증서** 페이지에서 이전에 가져온 AD FS 인증서를 선택합니다. 테스트 예제에서는 **blueadfs.contoso.com**입니다. **다음**을 클릭합니다.  
   
-6.  확인 페이지에 서비스 구성을 실행하는 Windows PowerShell 명령이 표시됩니다. 클릭 **구성**합니다.  
+6.  확인 페이지에 서비스 구성을 실행하는 Windows PowerShell 명령이 표시됩니다. **구성**을 클릭합니다.  
   
 ## <a name="publish-the-work-folders-web-application"></a>클라우드 폴더 웹 응용 프로그램 게시  
 다음 단계는 클라이언트에 클라우드 폴더를 제공할 웹 응용 프로그램을 게시하는 것입니다. 클라우드 폴더 웹 응용 프로그램을 게시하려면 다음 단계를 따릅니다.  

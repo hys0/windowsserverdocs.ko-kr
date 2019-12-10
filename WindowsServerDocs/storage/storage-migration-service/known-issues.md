@@ -8,12 +8,12 @@ ms.date: 10/09/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: 46a1e2aa8c116f79c164448ab5644a7dda9607c8
-ms.sourcegitcommit: ac9946deb4fa70203a9b05e0386deb4244b8ca55
+ms.openlocfilehash: 9abe199399e577eb06044377c30d5a2dc0e35dd1
+ms.sourcegitcommit: e817a130c2ed9caaddd1def1b2edac0c798a6aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74310367"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74945236"
 ---
 # <a name="storage-migration-service-known-issues"></a>저장소 마이그레이션 서비스의 알려진 문제
 
@@ -68,7 +68,7 @@ Windows 관리 센터 또는 PowerShell을 사용 하 여 전송 작업에 대 �
 
 이 문제는 저장소 마이그레이션 서비스에서 허용 하는 기본 1 분 제한 시간 내에 필터링 할 수 없는 너무 많은 전송 된 파일에 의해 발생 합니다. 
 
-이 문제를 해결 하려면 다음을 수행 합니다.
+Megkerülő megoldás a problémára:
 
 1. Orchestrator 컴퓨터에서 Notepad.exe를 사용 하 여 *%SYSTEMROOT%\SMS\Microsoft.StorageMigration.Service.exe.config* 파일을 편집 하 여 "sendTimeout"를 1 분 기본값에서 10 분으로 변경 합니다.
 
@@ -313,6 +313,13 @@ Windows Server 2008 R2 클러스터 원본에서 잘라내기를 실행 하려�
   - 이미 중지 된 경우: 원본 컴퓨터에 로그온 하 고 DHCP 범위에서 해당 서브넷을 포함 하는지 확인 한 후 네트워크 인터페이스에서 DHCP를 사용 하도록 설정 합니다. 원본 컴퓨터가 DHCP 제공 IP 주소를 획득 하면 SMS는 정상적으로 중단을 계속 진행 합니다.
   
 두 가지 해결 방법 모두, 잘라내기 완료 후 이전 원본 컴퓨터에서 고정 IP 주소를 설정 하 고 DHCP 사용을 중지 하는 것을 볼 수 있습니다.   
+
+## <a name="slower-than-expected-re-transfer-performance"></a>예상 되는 다시 전송 성능 보다 느림
+
+전송을 완료 한 후 동일한 데이터를 다시 전송 하는 것을 실행 하면 원본 서버에서 데이터가 거의 변경 되지 않은 경우에도 전송 시간이 크게 향상 되지 않을 수 있습니다.
+
+이는 매우 많은 수의 파일과 중첩 된 폴더를 전송할 때 예상 되는 동작입니다. 데이터의 크기는 관련이 없습니다. 먼저 [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) 에서이 동작을 개선 하 고 전송 성능을 최적화 합니다. 성능을 더 조정 하려면 [인벤토리 최적화 및 전송 성능](https://docs.microsoft.com/windows-server/storage/storage-migration-service/faq#optimizing-inventory-and-transfer-performance)을 검토 하세요.
+
 
 ## <a name="see-also"></a>참고 항목
 

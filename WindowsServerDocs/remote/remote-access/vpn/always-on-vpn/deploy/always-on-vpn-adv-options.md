@@ -5,24 +5,24 @@ ms.assetid: 51a1ee61-3ffe-4f65-b8de-ff21903e1e74
 ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
-ms.date: 07/24/19
+ms.date: 07/24/2019
 ms.author: pashort, v-tea
 author: shortpatti
 ms.localizationpriority: medium
 ms.reviewer: deverette
-ms.openlocfilehash: aee2f14d0d99fd453fa6fb1f3147a515ca57abb1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d186946c0d4490201b7989ba8d418f9c667aa6e4
+ms.sourcegitcommit: e817a130c2ed9caaddd1def1b2edac0c798a6aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71366907"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74945315"
 ---
 # <a name="advanced-features-of-always-on-vpn"></a>Always On VPN의 고급 기능
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-- [**선행** Always On VPN 기술에 대해 알아보기](../always-on-vpn-technology-overview.md)
-- [**그런** Always On VPN 배포 계획 시작](always-on-vpn-deploy-planning.md)
+- [**이전:** Always On VPN 기술에 대해 알아보기](../always-on-vpn-technology-overview.md)
+- [**다음:** Always On VPN 배포 계획 시작](always-on-vpn-deploy-planning.md)
 
 제공 되는 배포 시나리오 외에도 다른 고급 VPN 기능을 추가 하 여 VPN 연결의 보안 및 가용성을 향상 시킬 수 있습니다. 예를 들어 VPN 서버는 이러한 기능을 사용 하 여 연결 하는 클라이언트가 연결을 허용 하기 전에 정상 상태 인지 확인할 수 있습니다.
 
@@ -33,7 +33,7 @@ ms.locfileid: "71366907"
 |옵션  |설명  |
 |---------|---------|
 |서버 복원 력 및 부하 분산     |고가용성이 필요 하거나 많은 수의 요청을 지 원하는 환경에서 NPS (네트워크 정책 서버)를 실행 하는 여러 서버 간에 부하 분산을 사용 하 고를 사용 하 여 원격 액세스의 성능 및 복원 력을 향상 시킬 수 있습니다. 원격 액세스 서버 클러스터링.<p>관련 문서:<ul><li>[NPS 프록시 서버 부하 분산](../../../../../networking/technologies/nps/nps-manage-proxy-lb.md)</li><li>[클러스터에 원격 액세스 배포](https://docs.microsoft.com/windows-server/remote/remote-access/ras/cluster/deploy-remote-access-in-cluster)</li></ul>        |
-|지리적 사이트 복원 력     |IP 기반 지리적 위치에 대해 Windows Server 2016에서 DNS와 함께 글로벌 Traffic Manager를 사용할 수 있습니다. 보다 강력한 지리적 부하 분산을 위해 Microsoft Azure Traffic Manager와 같은 글로벌 서버 부하 분산 솔루션을 사용할 수 있습니다.<p>관련 문서:<ul><li>[Traffic Manager 개요](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview)</li><li>[Microsoft Azure Traffic Manager](https://azure.microsoft.com/services/traffic-manager)</li></ul>         |
+|지리적 사이트 복원 력     |IP 기반 지리적 위치에 대해 Windows Server 2016에서 DNS와 함께 글로벌 Traffic Manager를 사용할 수 있습니다. 보다 강력한 지리적 부하 분산을 위해 Microsoft Azure Traffic Manager와 같은 글로벌 서버 부하 분산 솔루션을 사용할 수 있습니다.<p>관련 문서:<ul><li>[A Traffic Manager áttekintése](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview)</li><li>[Microsoft Azure Traffic Manager](https://azure.microsoft.com/services/traffic-manager)</li></ul>         |
 
 ## <a name="advanced-authentication"></a>고급 인증
 
@@ -41,8 +41,8 @@ ms.locfileid: "71366907"
 
 |옵션  |설명  |
 |---------|---------|
-|비즈니스용 Windows Hello     |Windows 10에서 비즈니스용 Windows Hello는 Pc 및 모바일 장치에서 강력한 2 단계 인증을 제공 하 여 암호를 바꿉니다. 이 인증은 장치에 연결 되 고 생체 인식 또는 PIN (개인 식별 번호)을 사용 하는 새로운 유형의 사용자 자격 증명으로 구성 됩니다.<p>Windows 10 VPN 클라이언트는 비즈니스용 Windows Hello와 호환 됩니다. 사용자가 제스처를 사용 하 여 로그인 한 후 VPN 연결은 인증서 기반 인증에 비즈니스용 Windows Hello 인증서를 사용 합니다.<p>관련 문서:<ul><li>[비즈니스용 Windows Hello](https://docs.microsoft.com/windows/access-protection/hello-for-business/hello-identity-verification)</li><li>기술 사례 연구: [Windows 10에서 비즈니스용 Windows Hello를 사용 하 여 원격 액세스를 사용 하도록 설정](https://msdn.microsoft.com/library/mt728163.aspx)</li></ul>         |
-|Azure MFA (다단계 인증)     |Azure MFA에는 Windows VPN 인증 메커니즘과 통합할 수 있는 클라우드 및 온-프레미스 버전이 있습니다.<p>이 메커니즘의 작동 방식에 대 한 자세한 내용은 [Azure Multi-factor Authentication 서버와 RADIUS 인증 통합](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-server-radius)을 참조 하세요.         |
+|비즈니스용 Windows Hello     |Windows 10에서 비즈니스용 Windows Hello는 Pc 및 모바일 장치에서 강력한 2 단계 인증을 제공 하 여 암호를 바꿉니다. 이 인증은 장치에 연결 되 고 생체 인식 또는 PIN (개인 식별 번호)을 사용 하는 새로운 유형의 사용자 자격 증명으로 구성 됩니다.<p>Windows 10 VPN 클라이언트는 비즈니스용 Windows Hello와 호환 됩니다. 사용자가 제스처를 사용 하 여 로그인 한 후 VPN 연결은 인증서 기반 인증에 비즈니스용 Windows Hello 인증서를 사용 합니다.<p>관련 문서:<ul><li>[Vállalati Windows Hello](https://docs.microsoft.com/windows/access-protection/hello-for-business/hello-identity-verification)</li><li>기술 사례 연구: [windows 10에서 비즈니스용 Windows Hello로 원격 액세스 사용](https://msdn.microsoft.com/library/mt728163.aspx)</li></ul>         |
+|Azure MFA (다단계 인증)     |Azure MFA에는 Windows VPN 인증 메커니즘과 통합할 수 있는 클라우드 및 온-프레미스 버전이 있습니다.<p>이 메커니즘의 작동 방식에 대 한 자세한 내용은 [Azure Multi-Factor Authentication 서버와 RADIUS 인증 통합](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-server-radius)을 참조 하세요.         |
 
 ## <a name="advanced-vpn-features"></a>고급 VPN 기능
 
@@ -50,9 +50,9 @@ ms.locfileid: "71366907"
 
 |옵션  |설명  |
 |---------|---------|
-|트래픽 필터링     |VPN 클라이언트가 액세스할 수 있는 응용 프로그램 선택을 적용 해야 하는 경우 VPN 트래픽 필터를 사용 하도록 설정할 수 있습니다.<p>자세한 내용은 [VPN 보안 기능](https://docs.microsoft.com/windows/access-protection/vpn/vpn-security-features)을 참조 하세요.         |
+|Forgalomszűrés     |VPN 클라이언트가 액세스할 수 있는 응용 프로그램 선택을 적용 해야 하는 경우 VPN 트래픽 필터를 사용 하도록 설정할 수 있습니다.<p>자세한 내용은 [VPN 보안 기능](https://docs.microsoft.com/windows/access-protection/vpn/vpn-security-features)을 참조 하세요.         |
 |앱 트리거 VPN     |특정 응용 프로그램이 나 응용 프로그램 유형을 시작할 때 자동으로 연결 되도록 VPN 프로필을 구성할 수 있습니다.<p>이 및 기타 트리거 옵션에 대 한 자세한 내용은 [VPN 자동 트리거 프로필 옵션](https://docs.microsoft.com/windows/access-protection/vpn/vpn-auto-trigger-profile)을 참조 하세요.         |
-|VPN 조건부 액세스   |조건부 액세스 및 장치 규정 준수는 VPN에 연결 하기 전에 관리 장치가 표준을 충족 하도록 요구할 수 있습니다. VPN 조건부 액세스에 대 한 고급 기능 중 하나를 사용 하 여 클라이언트 인증 인증서가 **1.3.6.1.4.1.311.87**의 "AAD 조건부 액세스" OID를 포함 하는 경우에만 vpn 연결을 제한할 수 있습니다.<p>VPN 연결을 제한 하려면 다음을 수행 해야 합니다.<ol><li>NPS 서버에서 **네트워크 정책 서버** 스냅인을 엽니다.</li><li>**정책** > **네트워크 정책**을 확장 합니다.</li><li>**VPN (가상 사설망) 연결** 네트워크 정책을 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.</li><li>**설정** 탭을 선택 합니다.</li><li>**공급 업체별**을 선택 하 고 **추가**를 선택 합니다.</li><li>**허용-인증서-OID** 옵션을 선택한 다음 **추가**를 선택 합니다.</li><li>**1.3.6.1.4.1.311.87** 의 AAD 조건부 액세스 OID를 특성 값으로 붙여넣은 다음 **확인** 을 두 번 선택 합니다.</li><li>**닫기**를 선택 하 고 **적용**을 선택 합니다.<p>이러한 단계를 수행한 후 VPN 클라이언트가 단기 클라우드 인증서 이외의 다른 인증서를 사용 하 여 연결 하려고 하면 연결이 실패 합니다.</li></ol>조건부 액세스에 대 한 자세한 내용은 [VPN 및 조건부 액세스](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access)를 참조 하세요.   |
+|VPN 조건부 액세스   |조건부 액세스 및 장치 규정 준수는 VPN에 연결 하기 전에 관리 장치가 표준을 충족 하도록 요구할 수 있습니다. VPN 조건부 액세스에 대 한 고급 기능 중 하나를 사용 하 여 클라이언트 인증 인증서가 **1.3.6.1.4.1.311.87**의 "AAD 조건부 액세스" OID를 포함 하는 경우에만 vpn 연결을 제한할 수 있습니다.<p>VPN 연결을 제한 하려면 다음을 수행 해야 합니다.<ol><li>NPS 서버에서 **네트워크 정책 서버** 스냅인을 엽니다.</li><li>**정책** > **네트워크 정책**을 확장 합니다.</li><li>**VPN (가상 사설망) 연결** 네트워크 정책을 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.</li><li>Válassza a **Settings** (Beállítások) fület.</li><li>**공급 업체별**을 선택 하 고 **추가**를 선택 합니다.</li><li>**허용-인증서-OID** 옵션을 선택한 다음 **추가**를 선택 합니다.</li><li>**1.3.6.1.4.1.311.87** 의 AAD 조건부 액세스 OID를 특성 값으로 붙여넣은 다음 **확인** 을 두 번 선택 합니다.</li><li>**닫기**를 선택 하 고 **적용**을 선택 합니다.<p>이러한 단계를 수행한 후 VPN 클라이언트가 단기 클라우드 인증서 이외의 다른 인증서를 사용 하 여 연결 하려고 하면 연결이 실패 합니다.</li></ol>조건부 액세스에 대 한 자세한 내용은 [VPN 및 조건부 액세스](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access)를 참조 하세요.   |
 
 
 ---
@@ -60,14 +60,14 @@ ms.locfileid: "71366907"
   
 업데이트를 설치한 후 RRAS 서버는 인증을 위해 IKEv2 및 컴퓨터 인증서를 사용 하는 Vpn (예: 장치 터널 항상 사용 Vpn)에 대해 인증서 해지를 적용할 수 있습니다. 즉, 이러한 Vpn의 경우 RRAS 서버가 해지 된 인증서를 사용 하려고 하는 클라이언트에 대 한 VPN 연결을 거부할 수 있습니다.
 
-**Availability**
+**가용성**
 
 다음 표에서는 각 버전의 Windows에 대 한 수정 프로그램이 포함 된 릴리스를 나열 합니다.
 
-|운영 체제 버전 |릴리스  |
+|Operating system version(운영 체제 버전) |릴리스  |
 |---------|---------|
 |Windows Server, 버전 1903  |[KB4501375](https://support.microsoft.com/help/4501375/windows-10-update-kb4501375) |
-|Windows Server 2019<br />Windows Server, 버전 1809  |[KB4505658](https://support.microsoft.com/help/4505658/windows-10-update-kb4505658)  |
+|시작<br />Windows Server, 버전 1809  |[KB4505658](https://support.microsoft.com/help/4505658/windows-10-update-kb4505658)  |
 |Windows Server, 버전 1803  |[KB4507466](https://support.microsoft.com/help/4507466/windows-10-update-kb4507466)  |
 |Windows Server, 버전 1709  |[KB4507465](https://support.microsoft.com/help/4507465/windows-10-update-kb4507465)  |
 |Windows Server 2016, 버전 1607  |[KB4503294](https://support.microsoft.com/help/4503294/windows-10-update-kb4503294) |
@@ -109,11 +109,11 @@ ms.locfileid: "71366907"
 1. 해지 된 인증서가 있는 클라이언트를 사용 하 여 VPN에 연결 해 봅니다. RRAS 서버에서 연결을 거부 하 고 "IKE 인증 자격 증명을 사용할 수 없습니다."와 같은 메시지를 표시 해야 합니다.
 1. RRAS 서버에서 이벤트 뷰어를 열고 **응용 프로그램 및 서비스 Logs/Microsoft/Windows/CAPI2**로 이동 합니다. 
 1. 다음 정보가 있는 이벤트를 검색 합니다.
-   * 로그 이름: **Microsoft-CAPI2/운영 CAPI2/Operational**
-   * 이벤트ID: **41** 
+   * 로그 이름: **microsoft-CAPI2/OPERATIONAL CAPI2/operational**
+   * 이벤트 ID: **41** 
    * 이 이벤트에는 다음 텍스트가 포함 됩니다. **subject = "*클라이언트 fqdn*"** (*클라이언트 fqdn* 은 해지 된 인증서가 있는 클라이언트의 정규화 된 도메인 이름을 나타냄) 
 
-   이벤트 **<Result>** 데이터의 필드에는 **인증서가 해지 됩니다 .가**포함 되어야 합니다. 예를 들어 이벤트에서 다음 발췌를 참조 하십시오.
+   이벤트 데이터의 **<Result>** 필드에는 **인증서가 해지 됩니다 .가**포함 되어야 합니다. 예를 들어 이벤트에서 다음 발췌를 참조 하십시오.
    ```xml
    Log Name:      Microsoft-Windows-CAPI2/Operational Microsoft-Windows-CAPI2/Operational  
    Source:        Microsoft-Windows-CAPI2  
@@ -144,23 +144,23 @@ Windows 10의 TPM 키 증명에 대 한 자세한 내용은 [Tpm 키 증명](htt
 
 ## <a name="next-step"></a>다음 단계
 
-[ALWAYS ON VPN 배포 계획을 시작 합니다](always-on-vpn-deploy-planning.md). VPN 서버로 사용할 컴퓨터에 원격 액세스 서버 역할을 설치 하기 전에 다음 작업을 수행 합니다. 적절 한 계획 후에 Always On VPN을 배포 하 고, 선택적으로 Azure AD를 사용 하 여 VPN 연결에 대 한 조건부 액세스를 구성할 수 있습니다.  
+[ALWAYS ON vpn 배포 계획 시작](always-on-vpn-deploy-planning.md): vpn 서버로 사용할 컴퓨터에 원격 액세스 서버 역할을 설치 하기 전에 다음 작업을 수행 합니다. 적절 한 계획 후에 Always On VPN을 배포 하 고, 선택적으로 Azure AD를 사용 하 여 VPN 연결에 대 한 조건부 액세스를 구성할 수 있습니다.  
 
 ## <a name="related-topics"></a>관련 항목
-- [NPS 프록시 서버 부하 분산](../../../../../networking/technologies/nps/nps-manage-proxy-lb.md): VPN (가상 사설망) 서버 및 무선 액세스 지점과 같은 네트워크 액세스 서버인 RADIUS (원격 인증 전화 접속 사용자 서비스) 클라이언트는 연결 요청을 만들고 NPS와 같은 RADIUS 서버에 보냅니다. 경우에 따라 NPS 서버에서 한 번에 너무 많은 연결 요청을 수신 하 여 성능이 저하 되거나 오버 로드 될 수 있습니다.
+- [Nps 프록시 서버 부하 분산](../../../../../networking/technologies/nps/nps-manage-proxy-lb.md): VPN (가상 사설망) 서버 및 무선 액세스 지점과 같은 네트워크 액세스 서버인 RADIUS(REMOTE AUTHENTICATION DIAL-IN USER SERVICE) (RADIUS) 클라이언트는 연결 요청을 만들고 NPS와 같은 radius 서버에 보냅니다. 경우에 따라 NPS 서버에서 한 번에 너무 많은 연결 요청을 수신 하 여 성능이 저하 되거나 오버 로드 될 수 있습니다.
 
-- [Traffic Manager 개요](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview): 이 항목에서는 서비스 끝점에 대 한 사용자 트래픽의 배포를 제어할 수 있는 Azure Traffic Manager의 개요를 제공 합니다. Traffic Manager는 DNS (Domain Name System)를 사용 하 여 트래픽 라우팅 메서드 및 끝점의 상태를 기준으로 클라이언트 요청을 가장 적절 한 끝점으로 보냅니다. 
+- [Traffic Manager 개요](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview):이 항목에서는 서비스 끝점에 대 한 사용자 트래픽의 배포를 제어할 수 있는 Azure Traffic Manager의 개요를 제공 합니다. Traffic Manager는 DNS (Domain Name System)를 사용 하 여 트래픽 라우팅 메서드 및 끝점의 상태를 기준으로 클라이언트 요청을 가장 적절 한 끝점으로 보냅니다. 
 
-- [비즈니스용 Windows Hello](https://docs.microsoft.com/windows/access-protection/hello-for-business/hello-identity-verification): 이 항목에서는 클라우드 전용 배포 및 하이브리드 배포와 같은 필수 구성 요소를 제공 합니다.  또한이 항목에서는 비즈니스용 Windows Hello에 대 한 질문과 대답을 제공 합니다.
+- [비즈니스용 Windows Hello](https://docs.microsoft.com/windows/access-protection/hello-for-business/hello-identity-verification):이 항목에서는 클라우드 전용 배포 및 하이브리드 배포와 같은 필수 구성 요소를 제공 합니다.  또한이 항목에서는 비즈니스용 Windows Hello에 대 한 질문과 대답을 제공 합니다.
 
-- [기술 사례 연구: Windows 10](https://msdn.microsoft.com/library/mt728163.aspx)에서 비즈니스용 windows Hello를 사용 하 여 원격 액세스를 사용 하도록 설정: 이 기술 사례 연구에서는 Microsoft에서 비즈니스용 Windows Hello를 사용 하 여 원격 액세스를 구현 하는 방법에 대해 알아봅니다.  비즈니스용 Windows Hello는 암호를 초과 하는 조직과 소비자를 위한 개인/공개 키 또는 인증서 기반 인증 방법입니다. 이 인증 형태는 암호를 대체 하 고 위반, thefts 및 피싱에 대 한 저항력이 있는 키 쌍 자격 증명에 의존 합니다. 
+- [기술 사례 연구: windows 10에서 비즈니스용 Windows hello를 사용 하 여 원격 액세스 설정](https://msdn.microsoft.com/library/mt728163.aspx):이 기술 사례 연구에서는 Microsoft에서 비즈니스용 windows hello를 사용 하 여 원격 액세스를 구현 하는 방법에 대해 알아봅니다.  비즈니스용 Windows Hello는 암호를 초과 하는 조직과 소비자를 위한 개인/공개 키 또는 인증서 기반 인증 방법입니다. 이 인증 형태는 암호를 대체 하 고 위반, thefts 및 피싱에 대 한 저항력이 있는 키 쌍 자격 증명에 의존 합니다. 
 
-- [Azure Multi-factor Authentication 서버와 RADIUS 인증 통합](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-server-radius): 이 항목에서는 Azure Multi-factor Authentication 서버를 사용 하 여 RADIUS 클라이언트 인증을 추가 하 고 구성 하는 과정을 안내 합니다. RADIUS는 인증 요청을 받고 해당 요청을 처리하는 표준 프로토콜입니다. Azure Multi-factor Authentication 서버는 RADIUS 서버 역할을 할 수 있습니다. 
+- [Azure Multi-Factor Authentication 서버와 radius 인증 통합](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-server-radius):이 항목에서는 azure Multi-Factor Authentication 서버를 사용 하 여 radius 클라이언트 인증을 추가 하 고 구성 하는 과정을 안내 합니다. RADIUS는 인증 요청을 받고 해당 요청을 처리하는 표준 프로토콜입니다. Az Azure Multi-Factor Authentication-kiszolgáló RADIUS-kiszolgálóként is használható. 
 
-- [VPN 보안 기능](https://docs.microsoft.com/windows/access-protection/vpn/vpn-security-features): 이 항목에서는 vpn 잠금, Windows Information Protection (WIP)와 VPN 통합 및 트래픽 필터에 대 한 VPN 보안 지침을 제공 합니다. 
+- [Vpn 보안 기능](https://docs.microsoft.com/windows/access-protection/vpn/vpn-security-features):이 항목에서는 잠금 VPN, WIP (Windows Information Protection)와 vpn 통합 및 트래픽 필터에 대 한 vpn 보안 지침을 제공 합니다. 
 
-- [VPN 자동 트리거 프로필 옵션](https://docs.microsoft.com/windows/access-protection/vpn/vpn-auto-trigger-profile): 이 항목에서는 앱 트리거, 이름 기반 트리거 및 Always On 같은 VPN 자동 트리거 프로필 옵션을 제공 합니다.
+- [Vpn 자동 트리거 프로필 옵션](https://docs.microsoft.com/windows/access-protection/vpn/vpn-auto-trigger-profile):이 항목에서는 앱 트리거, 이름 기반 트리거 및 ALWAYS ON 같은 vpn 자동 트리거 프로필 옵션을 제공 합니다.
 
-- [VPN 및 조건부 액세스](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access): 이 항목에서는 원격 클라이언트에 대 한 장치 준수 옵션을 제공 하기 위한 클라우드 기반 조건부 액세스 플랫폼의 개요를 제공 합니다. 조건부 액세스는 Azure AD(Azure Active Directory)에 연결된 응용 프로그램에 대한 액세스 규칙을 만드는 데 사용되는 정책 기반 평가 엔진입니다. 
+- [VPN 및 조건부 액세스](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access):이 항목에서는 원격 클라이언트에 대 한 장치 준수 옵션을 제공 하기 위한 클라우드 기반 조건부 액세스 플랫폼의 개요를 제공 합니다. 조건부 액세스는 Azure AD(Azure Active Directory)에 연결된 응용 프로그램에 대한 액세스 규칙을 만드는 데 사용되는 정책 기반 평가 엔진입니다. 
 
-- [TPM 키 증명](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/component-updates/tpm-key-attestation): 이 항목에서는 tpm (신뢰할 수 있는 플랫폼 모듈)에 대 한 개요와 TPM 키 증명을 배포 하는 단계를 제공 합니다. 문제 해결 정보 및 문제를 해결 하는 단계를 찾을 수도 있습니다.
+- [Tpm 키 증명](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/component-updates/tpm-key-attestation):이 항목에서는 tpm (신뢰할 수 있는 플랫폼 모듈)에 대 한 개요와 tpm 키 증명을 배포 하는 단계를 제공 합니다. 문제 해결 정보 및 문제를 해결 하는 단계를 찾을 수도 있습니다.
