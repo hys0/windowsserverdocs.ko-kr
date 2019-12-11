@@ -8,12 +8,12 @@ ms.assetid: ''
 author: kaushika-msft
 ms.author: kaushika-msft; v-tea
 ms.localizationpriority: medium
-ms.openlocfilehash: 26b107264c9dfaca16ef445760089b8ac0ae8e22
-ms.sourcegitcommit: 9855d6b59b1f8722f39ae74ad373ce1530da0ccf
+ms.openlocfilehash: d4d9a8917bf455d8ed84207e2f9ecc6d13d01c3d
+ms.sourcegitcommit: b18ee742662b24b25d29ef1079b1c49f220f1d57
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71960967"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74691871"
 ---
 # <a name="resolve-windows-activation-error-codes"></a>Windows 정품 인증 오류 코드 해결
 
@@ -22,11 +22,19 @@ ms.locfileid: "71960967"
 
 이 문서에서는 MAK(복수 정품 인증 키) 또는 KMS(키 관리 서비스)를 사용하여 하나 이상의 Windows 기반 컴퓨터에서 볼륨 정품 인증을 수행할 때 발생할 수 있는 오류 메시지에 대처할 수 있도록 문제 해결 정보를 제공합니다. 다음 표에서 오류 코드를 찾은 다음, 링크를 선택하여 해당 오류 코드에 대한 자세한 내용과 오류 해결 방법을 확인하세요.
 
-볼륨 정품 인증에 대한 자세한 내용은 [볼륨 정품 인증 계획](https://docs.microsoft.com/en-us/windows/deployment/volume-activation/plan-for-volume-activation-client)을 참조하세요.
+볼륨 정품 인증에 대한 자세한 내용은 [볼륨 정품 인증 계획](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client)을 참조하세요.
 
 현재 및 최신 버전 Windows의 볼륨 정품 인증에 대한 자세한 내용은 [볼륨 정품 인증[클라이언트]](https://docs.microsoft.com/windows/deployment/volume-activation/volume-activation-windows-10)을 참조하세요.
 
 이전 버전 Windows의 볼륨 정품 인증에 대한 자세한 내용은 KB 929712  [Windows Vista, Windows Server 2008, Windows Server 2008 R2 및 Windows 7의 볼륨 정품 인증 정보](https://support.microsoft.com/en-us/help/929712/volume-activation-information-for-windows-vista-windows-server-2008-wi)를 참조하세요.
+
+## <a name="diagnostic-tool"></a>진단 도구
+
+Microsoft SaRA(지원 및 복구 도우미)는 Windows KMS 정품 인증 문제 해결을 간소화합니다. [여기](https://aka.ms/SaRA-WindowsActivation)서 진단 도구를 다운로드하세요.
+
+이 도구는 Windows 정품 인증을 시도합니다. 정품 인증 오류 코드를 반환하는 경우 이 도구는 알려진 오류 코드에 대한 대상 솔루션이 표시됩니다.
+
+지원되는 오류 코드는 0xC004F038, 0xC004F039, 0xC004F041, 0xC004F074, 0xC004C008입니다.
 
 ## <a name="summary-of-error-codes"></a>오류 코드 요약
 

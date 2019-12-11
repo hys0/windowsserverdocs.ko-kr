@@ -11,18 +11,18 @@ ms.topic: article
 author: heidilohr
 manager: daveba
 ms.author: helohr
-ms.date: 11/12/2019
+ms.date: 11/18/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 2f786a1db0854ae89c1ceb23942793deb7f608e1
-ms.sourcegitcommit: 315f015102c42c6fa7694e76adecdfb448390391
+ms.openlocfilehash: e71aa2b1cccda85e0bf6f8a80ad68013346b30d4
+ms.sourcegitcommit: 3d76683718ec6f38613f552f518ebfc6a5db5401
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74019598"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74829616"
 ---
 # <a name="get-started-with-the-windows-desktop-client"></a>Windows 데스크톱 클라이언트 시작
 
->적용 대상: Windows 10 및 Windows 7
+>적용 대상: Windows 10, Windows 10 IoT Enterprise 및 Windows 7
 
 Windows 데스크톱용 원격 데스크톱 클라이언트를 사용하여 다른 Windows 디바이스에서 원격으로 Windows 앱 및 데스크톱에 액세스할 수 있습니다.
 
@@ -33,7 +33,7 @@ Windows 데스크톱용 원격 데스크톱 클라이언트를 사용하여 다�
 
 ## <a name="install-the-client"></a>클라이언트 설치
 
-Windows 버전과 일치하는 클라이언트를 선택합니다.
+Windows 버전과 일치하는 클라이언트를 선택합니다. 새 원격 데스크톱 클라이언트(MSRDC)는 Windows 10, Windows 10 IoT Enterprise 및 Windows 7 클라이언트 디바이스를 지원합니다. 
 
 - [Windows 64비트](https://go.microsoft.com/fwlink/?linkid=2068602)
 - [Windows 32비트](https://go.microsoft.com/fwlink/?linkid=2098960)

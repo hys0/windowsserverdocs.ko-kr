@@ -6,12 +6,12 @@ contributor: maertendMSFT
 author: maertendMSFT
 title: Windows용 OpenSSH 서버 구성
 ms.product: w10
-ms.openlocfilehash: ed9f3653c79f1329b1334f52fe14c1184bc99539
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: fa3d40617a04c092403d9d2e018bd2eb82d20cd9
+ms.sourcegitcommit: effbc183bf4b370905d95c975626c1ccde057401
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70866873"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74781320"
 ---
 # <a name="openssh-key-management"></a>OpenSSH 키 관리
 
@@ -135,7 +135,7 @@ ssh-add ~\.ssh\id_ed25519
 
 ## <a name="deploying-the-public-key"></a>공개 키 배포
 
-위에서 만든 사용자 키를 사용하려면 서버에서 users\username\ssh 아래의 *authorized_keys*라는 텍스트 파일에 공개 키를 배치해야 합니다. OpenSSH 도구에는 이를 돕기 위한 보안 파일 전송 유틸리티인 scp가 포함되어 있습니다.
+위에서 만든 사용자 키를 사용하려면 공개 키를 서버의 users\username\.ssh\.에 있는 *authorized_keys*라는 텍스트 파일에 배치해야 합니다. OpenSSH 도구에는 이를 돕기 위한 보안 파일 전송 유틸리티인 scp가 포함되어 있습니다.
 
 공개 키 콘텐츠(~\.ssh\id_ed25519.pub)를 ~\.ssh\ on your server/host의 authorized_keys라는 텍스트 파일로 이동합니다.
 

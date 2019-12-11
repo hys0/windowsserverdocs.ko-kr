@@ -6,14 +6,14 @@ ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.localizationpriority: medium
-ms.date: 06/07/2019
+ms.date: 12/02/2019
 ms.prod: windows-server
-ms.openlocfilehash: e443616b4fcae3e84cfd00b3c20a4ebbf72749ea
-ms.sourcegitcommit: 1da993bbb7d578a542e224dde07f93adfcd2f489
+ms.openlocfilehash: 6d04b641c56e9461f0134bfc4734fea36955106c
+ms.sourcegitcommit: 7c7fc443ecd0a81bff6ed6dbeeaf4f24582ba339
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73567113"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74904067"
 ---
 # <a name="windows-admin-center-frequently-asked-questions"></a>Windows Admin Center 질문과 대답
 
@@ -94,7 +94,7 @@ Windows Admin Center는 이제 Windows Server 2008 R2를 관리하는 **제한�
 
 ## <a name="which-web-browsers-are-supported-by-windows-admin-center"></a>Windows Admin Center는 어떤 웹 브라우저를 지원하나요?
 
-최신 버전의 Microsoft Edge(Windows 10 버전 1709 이상) 및 Google Chrome 브라우저가 Windows 10에서 테스트 및 지원됩니다. [브라우저 관련 알려진 문제를 확인하세요](../support/known-issues.md#browser-specific-issues). 다른 최신 웹 브라우저나 다른 플랫폼은 현재 Microsoft의 테스트 매트릭스에 포함되지 않으므로 공식적으로 지원되지 않습니다. 
+최신 버전의 Microsoft Edge(Windows 10 버전 1709 이상), Google Chrome 및 [Microsoft Edge Insider](https://microsoftedgeinsider.com)는 Windows 10에서 테스트되어 지원됩니다. [브라우저 관련 알려진 문제를 확인하세요](../support/known-issues.md#browser-specific-issues). 다른 최신 웹 브라우저나 다른 플랫폼은 현재 Microsoft의 테스트 매트릭스에 포함되지 않으므로 공식적으로 지원되지 않습니다. 
 
 ## <a name="how-does-windows-admin-center-handle-security"></a>Windows Admin Center가 보안을 어떻게 처리합니까?
 
