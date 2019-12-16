@@ -1,6 +1,6 @@
 ---
-title: Windows 관리 센터 시작
-description: Windows 관리 센터 시작
+title: Windows Admin Center 시작하기
+description: Windows Admin Center 시작하기
 ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.date: 02/15/2019
-ms.openlocfilehash: fac17cd5975eeb699f205888edbe3f1c30b43394
-ms.sourcegitcommit: 1da993bbb7d578a542e224dde07f93adfcd2f489
+ms.openlocfilehash: 1643568cd1a0cdbb693d773a8357d2c36b701fd3
+ms.sourcegitcommit: 7c7fc443ecd0a81bff6ed6dbeeaf4f24582ba339
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73567145"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74903983"
 ---
 # <a name="get-started-with-windows-admin-center"></a>Windows 관리 센터 시작
 
@@ -153,134 +153,7 @@ Windows 관리 센터에서 windows Server의 서비스 모드로 실행 중이�
 
 ## <a name="use-powershell-to-import-or-export-your-connections-with-tags"></a>PowerShell을 사용 하 여 연결 가져오기 또는 내보내기 (태그 포함)
 
-```powershell
-# Load the module
-Import-Module "$env:ProgramFiles\windows admin center\PowerShell\Modules\ConnectionTools"
-# Available cmdlets: Export-Connection, Import-Connection
-
-# Export connections (including tags) to .csv files
-Export-Connection "https://wac.contoso.com" -fileName "WAC-connections.csv"
-# Import connections (including tags) from .csv files
-Import-Connection "https://wac.contoso.com" -fileName "WAC-connections.csv"
-```
-
-### <a name="csv-file-format-for-importing-connections"></a>연결을 가져오기 위한 CSV 파일 형식
-
-CSV 파일의 형식은 ```"name","type","tags","groupId"```4 개의 제목으로 시작 하 여 각 연결을 새 줄에 입력 합니다.
-
-**name** 은 연결의 FQDN입니다.
-
-**유형** 은 연결 유형입니다. Windows 관리 센터에 포함 된 기본 연결의 경우 다음 중 하나를 사용 합니다.
-
-| 연결 형식 | 연결 문자열 |
-|------|-------------------------------|
-| Windows Server | sme-형식. 서버 |
-| Windows 10 PC | msft. sme-client |
-| 장애 조치(failover) 클러스터 | msft. sme. |
-| 하이퍼 수렴 형 클러스터 | msft. sme-수렴-클러스터 |
-
-**태그** 는 파이프로 구분 됩니다.
-
-**groupId** 는 공유 연결에 사용 됩니다. 이 열에 ```global``` 값을 사용 하 여 공유 연결을 만듭니다.
-
-### <a name="example-csv-file-for-importing-connections"></a>연결 가져오기에 대 한 예제 CSV 파일
-
-```
-"name","type","tags","groupId"
-"myServer.contoso.com","msft.sme.connection-type.server","hyperv"
-"myDesktop.contoso.com","msft.sme.connection-type.windows-client","hyperv"
-"teamcluster.contoso.com","msft.sme.connection-type.cluster","legacyCluster|WS2016","global"
-"myHCIcluster.contoso.com,"msft.sme.connection-type.hyper-converged-cluster","myHCIcluster|hyperv|JIT|WS2019"
-"teamclusterNode.contoso.com","msft.sme.connection-type.server","legacyCluster|WS2016","global"
-"myHCIclusterNode.contoso.com","msft.sme.connection-type.server","myHCIcluster|hyperv|JIT|WS2019"
-```
-
-## <a name="import-rdcman-connections"></a>RDCman 연결 가져오기
-
-다음 스크립트를 사용 하 여 [Rdcman](https://blogs.technet.microsoft.com/rmilne/2014/11/19/remote-desktop-connection-manager-download-rdcman-2-7/) 의 저장 된 연결을 파일로 내보냅니다. 그런 다음 태그를 사용 하 여 파일을 Windows 관리 센터에 가져와서 RDCMan 그룹화 계층 구조를 유지 관리할 수 있습니다. 사용해 보세요!
-
-1. 아래 코드를 복사 하 여 PowerShell 세션에 붙여 넣습니다.
-
-   ```powershell
-   #Helper function for RdgToWacCsv
-   function AddServers {
-    param (
-    [Parameter(Mandatory = $true)]
-    [Xml.XmlLinkedNode]
-    $node,
-    [Parameter()]
-    [String[]]
-    $tags,
-    [Parameter(Mandatory = $true)]
-    [String]
-    $csvPath
-    )
-    if ($node.LocalName -eq 'server') {
-        $serverName = $node.properties.name
-        $tagString = $tags -join "|"
-        Add-Content -Path $csvPath -Value ('"'+ $serverName + '","msft.sme.connection-type.server","'+ $tagString +'"')
-    } 
-    elseif ($node.LocalName -eq 'group' -or $node.LocalName -eq 'file') {
-        $groupName = $node.properties.name
-        $tags+=$groupName
-        $currNode = $node.properties.NextSibling
-        while ($currNode) {
-            AddServers -node $currNode -tags $tags -csvPath $csvPath
-            $currNode = $currNode.NextSibling
-        }
-    } 
-    else {
-        # Node type isn't relevant to tagging or adding connections in WAC
-    }
-    return
-   }
-
-   <#
-   .SYNOPSIS
-   Convert an .rdg file from Remote Desktop Connection Manager into a .csv that can be imported into Windows Admin Center, maintaining groups via server tags. This will not modify the existing .rdg file and will create a new .csv file
-
-    .DESCRIPTION
-    This converts an .rdg file into a .csv that can be imported into Windows Admin Center.
-
-    .PARAMETER RDGfilepath
-    The path of the .rdg file to be converted. This file will not be modified, only read.
-
-    .PARAMETER CSVdirectory
-    Optional. The directory you wish to export the new .csv file. If not provided, the new file is created in the same directory as the .rdg file.
-
-    .EXAMPLE
-    C:\PS> RdgToWacCsv -RDGfilepath "rdcmangroup.rdg"
-    #>
-   function RdgToWacCsv {
-    param(
-        [Parameter(Mandatory = $true)]
-        [String]
-        $RDGfilepath,
-        [Parameter(Mandatory = $false)]
-        [String]
-        $CSVdirectory
-    )
-    [xml]$RDGfile = Get-Content -Path $RDGfilepath
-    $node = $RDGfile.RDCMan.file
-    if (!$CSVdirectory){
-        $csvPath = [System.IO.Path]::GetDirectoryName($RDGfilepath) + [System.IO.Path]::GetFileNameWithoutExtension($RDGfilepath) + "_WAC.csv"
-    } else {
-        $csvPath = $CSVdirectory + [System.IO.Path]::GetFileNameWithoutExtension($RDGfilepath) + "_WAC.csv"
-    }
-    New-item -Path $csvPath
-    Add-Content -Path $csvPath -Value '"name","type","tags"'
-    AddServers -node $node -csvPath $csvPath
-    Write-Host "Converted $RDGfilepath `nOutput: $csvPath"
-   }
-   ```
-
-2. 을 만듭니다. CSV 파일에서 다음 명령을 실행 합니다.
-
-   ```powershell
-   RdgToWacCsv -RDGfilepath "path\to\myRDCManfile.rdg"
-   ```
-
-3. 결과를 가져옵니다. CSV 파일이 Windows 관리 센터에 있고 모든 RDCMan 그룹화 계층 구조가 연결 목록에서 태그로 표시 됩니다. 자세한 내용은 [PowerShell을 사용 하 여 연결 가져오기 또는 내보내기 (태그 사용)](#use-powershell-to-import-or-export-your-connections-with-tags)를 참조 하세요.
+[!INCLUDE [ps-connections](../includes/ps-connections.md)]
 
 ## <a name="view-powershell-scripts-used-in-windows-admin-center"></a>Windows 관리 센터에서 사용 되는 PowerShell 스크립트 보기
 
