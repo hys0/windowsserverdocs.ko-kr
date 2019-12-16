@@ -10,12 +10,12 @@ author: jasongerend
 ms.author: jgerend
 manager: dougkim
 ms.localizationpriority: medium
-ms.openlocfilehash: b3f531325c338224d7ac69e46a9d16c9d236ee87
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5e13886395040619a7509c3cf896112288c48115
+ms.sourcegitcommit: e817a130c2ed9caaddd1def1b2edac0c798a6aa2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71360362"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74945204"
 ---
 # <a name="features-removed-or-deprecated-in--windows-server-2016"></a>Windows Server 2016에서 제거되었거나 사용되지 않는 기능
 
@@ -79,7 +79,7 @@ Journal.dll은 Windows Server 2016에서 제거되었습니다. 대체 항목은
 
 -   **Scregedit.exe**가 더 이상 사용되지 않습니다. Scregedit.exe에 의존하는 스크립트가 있는 경우 Reg.exe 또는 Windows PowerShell 방법을 사용하도록 조정합니다.  
 
--   **Sconfig.exe**는 더 이상 사용되지 않습니다. 대신 Windows PowerShell을 사용합니다.  
+-   **Sconfig.exe**는 더 이상 사용되지 않습니다. 대신 [Sconfig.cmd](https://docs.microsoft.com/windows-server/get-started/sconfig-on-ws2016)를 사용합니다. 
 
 ### <a name="netcfg-custom-apis"></a>NetCfg 사용자 지정 API
 
