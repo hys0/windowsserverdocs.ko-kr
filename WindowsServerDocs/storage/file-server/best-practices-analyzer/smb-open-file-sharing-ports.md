@@ -1,5 +1,5 @@
 ---
-title: SMB 파일 및 프린터 공유 포트가 열려 있어야 합니다.
+title: 'SMB: 파일 및 프린터 공유 포트를 열어야 합니다.'
 TOCTitle: 'SMB: File and printer sharing ports should be open'
 ms.date: 07/02/2012
 ms.prod: windows-server
@@ -14,14 +14,14 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71385836"
 ---
-# <a name="smb-file-and-printer-sharing-ports-should-be-open"></a>SMB 파일 및 프린터 공유 포트가 열려 있어야 합니다.
+# <a name="smb-file-and-printer-sharing-ports-should-be-open"></a>SMB: 파일 및 프린터 공유 포트를 열어야 합니다.
 
 
-업데이트됨: 2011 2 월 2 일
+업데이트: 2 월 2 일, 2011
 
-적용 대상: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 및 Windows server 2012, Windows Server 2008 R2
+적용 대상: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 및 Windows Server 2012, Windows Server 2008 R2
 
-*이 항목은 모범 사례 분석기 검사에서 식별 한 특정 문제를 해결 하는 데 사용 됩니다. 이 항목의 정보는 파일 서비스 모범 사례 분석기 실행 되 고이 항목에서 다루는 문제가 발생 한 컴퓨터에만 적용 해야 합니다. 모범 사례 및 검사에 대 한 자세한 내용은 @ no__t-0 [모범 사례 분석기](http://go.microsoft.com/fwlink/?linkid=122786%0d%0a)를 참조 하세요.
+*이 항목에서는 모범 사례 분석기 검색에서 식별 한 특정 문제를 해결 하기 위한 것입니다. 이 항목의 정보는 파일 서비스 모범 사례 분석기 실행 되 고이 항목에서 다루는 문제가 발생 한 컴퓨터에만 적용 해야 합니다. 모범 사례 및 검사에 대 한 자세한 내용은 [모범 사례 분석기](http://go.microsoft.com/fwlink/?linkid=122786%0d%0a)를 참조* 하세요.
 
 
 <table>

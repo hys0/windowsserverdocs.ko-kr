@@ -19,11 +19,11 @@ ms.locfileid: "71364944"
 ---
 # <a name="configure-the-server-with-a-sufficient-amount-of-dynamic-mac-addresses"></a>동적 MAC 주소에 대 한 충분 한 양의로 서버 구성
 
->적용 대상: Windows Server 2016
+>적용 대상: Windows Server 2016
 
-*이 항목은 모범 사례 분석기 검사에서 식별 한 특정 문제를 해결 하는 데 사용 됩니다. 이 항목의 정보에 대해 실행 Hyper-v 모범 사례 분석기 했 고이 항목에서 다루는 문제가 발생 하는 컴퓨터에만 적용 해야 합니다. 모범 사례 및 검사에 대 한 자세한 내용은 @ no__t-0 [모범 사례 분석기](https://go.microsoft.com/fwlink/?LinkId=122786)를 참조 하세요.  
+*이 항목에서는 모범 사례 분석기 검색에서 식별 한 특정 문제를 해결 하기 위한 것입니다. 이 항목의 정보는 Hyper-v 모범 사례 분석기를 실행 하 고이 항목에서 다루는 문제가 발생 한 컴퓨터에만 적용 해야 합니다. 모범 사례 및 검사에 대 한 자세한 내용은 [모범 사례 분석기](https://go.microsoft.com/fwlink/?LinkId=122786)를 참조* 하세요.  
   
-|속성|설명|  
+|속성|세부 정보|  
 |-|-|  
 |**운영 체제**|Windows Server 2016|  
 |**제품/기능**|Hyper-V|  
