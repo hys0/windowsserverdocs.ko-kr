@@ -7,14 +7,14 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 08/19/2019
+ms.date: 12/20/2019
 description: IT 전문가를 위한 Windows Server에 대 한 온-프레미스 저장소 설명서의 새로운 항목 및 업데이트 된 항목입니다.
-ms.openlocfilehash: ce937dfb5c6c0b46c8085cbb202590567ea829d3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d50d4ca5b49b7f895fad3d3866226f95c55ae485
+ms.sourcegitcommit: bfe9c5f7141f4f2343a4edf432856f07db1410aa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71393932"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75352783"
 ---
 # <a name="change-history-for-storage-topics-in-windows-server"></a>Windows Server의 저장소 변경 기록 항목
 
@@ -24,7 +24,16 @@ ms.locfileid: "71393932"
 
 > Windows Server의 업데이트 기록을 찾고 있는 경우 [windows 10 및 Windows server 2019 업데이트 기록](https://support.microsoft.com/help/4464619) 또는 [windows server 2016 업데이트 기록](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history)을 참조 하세요.
 
-## <a name="august-2019"></a>8 월 2019
+## <a name="december-2019"></a>2019년 12월
+
+| 신규 항목 또는 변경된 항목                                        | 설명 |
+| ---                                                         | ---           |
+| [디스크 관리 문제 해결](disk-management/troubleshooting-disk-management.md)| 고객 요청을 기반으로 지침을 구체화 하기 위해 편집 되었습니다.|
+| [디스크 관리에서 볼륨 확장](disk-management/extend-a-basic-volume.md) | 고객 피드백에 대 한 응답으로 지침이 추가 되었습니다. |
+| [동적 디스크를 기본 디스크로 변경](disk-management/change-a-dynamic-disk-back-to-a-basic-disk.md) | 명령줄에서 오류를 수정 하 고 고객 피드백에 따라 몇 가지 정보를 추가 했습니다. |
+
+
+## <a name="august-2019"></a>2019년 8월
 
 | 신규 항목 또는 변경된 항목                                        | 설명 |
 | ---                                                         | ---           |
@@ -41,7 +50,7 @@ ms.locfileid: "71393932"
 
 |신규 항목 또는 변경된 항목                                        |설명|
 |---                                                         |---           |
-|[볼륨 삭제](storage-spaces/delete-volumes.md)| 단추를 사용하여 새        |
+|[볼륨 삭제](storage-spaces/delete-volumes.md)| 신규 항목        |
 |[볼륨 만들기](storage-spaces/create-volumes.md)| Windows 관리 센터에서 볼륨을 만들기 위한 단계와 비디오가 추가 되었습니다.|
 |[볼륨 확장](storage-spaces/resize-volumes.md)| Windows 관리 센터에서 볼륨 크기를 조정 하기 위한 단계와 비디오가 추가 되었습니다.|
 
@@ -49,9 +58,9 @@ ms.locfileid: "71393932"
 
 |신규 항목 또는 변경된 항목                                        |설명|
 |---                                                         |---           |
-| [Azure Monitor를 사용하여 모니터](storage-spaces/configure-azure-monitor.md) | 단추를 사용하여 새 |
-| [영구 메모리 이해 및 배포](storage-spaces/deploy-pmem.md) | 단추를 사용하여 새 |
-| [스토리지 공간 다이렉트 클러스터를 Windows Server 2019로 업그레이드](storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md)| 단추를 사용하여 새        |
+| [Azure Monitor를 사용하여 모니터](storage-spaces/configure-azure-monitor.md) | 신규 항목 |
+| [영구 메모리 이해 및 배포](storage-spaces/deploy-pmem.md) | 신규 항목 |
+| [스토리지 공간 다이렉트 클러스터를 Windows Server 2019로 업그레이드](storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md)| 신규 항목        |
 | [DFS 복제](dfs-replication/dfsr-overview.md)        | [이전 버전](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770278(v%3dws.11)) 라이브러리에서 마이그레이션|
 
 ## <a name="february-2019"></a>2019년 2월
@@ -66,7 +75,7 @@ ms.locfileid: "71393932"
 |---                                                         |---           |
 |[스토리지 다시 동기화 이해 및 모니터링](storage-spaces/understand-storage-resync.md)|신규 항목|
 
-## <a name="december-2018"></a>12 월 2018
+## <a name="december-2018"></a>2018년 12월
 
 |신규 항목 또는 변경된 항목                                        |설명|
 |---                                                         |---           |
@@ -81,9 +90,9 @@ ms.locfileid: "71393932"
 |---                                                         |---           |
 |[중첩된 복원력](storage-spaces/nested-resiliency.md)    | 신규 항목    |
 |[저장소 마이그레이션 서비스의 알려진 문제](storage-migration-service/known-issues.md)   | 신규 항목    |
-|[DFS 복제: FAQ(질문과 대답)](dfs-replication/dfsr-faq.md)|[이전 버전](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/) 라이브러리에서 마이그레이션|
+|[DFS 복제: FAQ (질문과 대답)](dfs-replication/dfsr-faq.md)|[이전 버전](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/) 라이브러리에서 마이그레이션|
 |[SYSVOL 복제를 DFS 복제로 마이그레이션](dfs-replication/migrate-sysvol-to-dfsr.md)|[이전 버전](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) 라이브러리에서 마이그레이션|
-|[SMB: 파일 및 프린터 공유 포트가 열려 있어야 함](file-server/best-practices-analyzer/smb-open-file-sharing-ports.md)|[이전 버전](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) 라이브러리에서 마이그레이션|
+|[SMB: 파일 및 프린터 공유 포트가 열려 있어야 합니다.](file-server/best-practices-analyzer/smb-open-file-sharing-ports.md)|[이전 버전](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) 라이브러리에서 마이그레이션|
 |[볼륨 섀도 복사본 서비스](file-server/volume-shadow-copy-service.md)|[이전 버전](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) 라이브러리에서 마이그레이션|
 
 ## <a name="october-2018"></a>2018년 10월
@@ -164,7 +173,7 @@ ms.locfileid: "71393932"
 |신규 항목 또는 변경된 항목|설명|
 |---|---|
 |[드라이브 문자 변경](disk-management/change-a-drive-letter.md)|신규 항목입니다.|
-|[디스크 관리 문제 해결](disk-management/troubleshooting-disk-management.md)|효율적인 [디스크의 상태가 초기화 되지 않았거나](disk-management/troubleshooting-disk-management.md#a-disks-status-is-not-initialized-or-the-disk-is-missing) , 고객 요청에 따라 광범위 한 문제 해결 단계를 추가 하려면 디스크가 완전히 누락 되었습니다.|
+|[디스크 관리 문제 해결](disk-management/troubleshooting-disk-management.md)|효율적인 [디스크의 상태가 초기화 되지 않았거나](disk-management/troubleshooting-disk-management.md#disks-that-are-missing-or-not-initialized-plus-general-troubleshooting-steps) , 고객 요청에 따라 광범위 한 문제 해결 단계를 추가 하려면 디스크가 완전히 누락 되었습니다.|
 |[새 디스크 초기화](disk-management/initialize-new-disks.md)|효율적인를 통해 고객 질문을 보다 쉽게 이해 하 고 해결할 수 있습니다.|
 |[스토리지 공간 다이렉트에서 볼륨 계획](storage-spaces/plan-volumes.md)|4 개 노드 및 더 큰 클러스터에서 사용할 수 있는 복원 력 유형을 요약 하는 테이블을 추가 했습니다.|
 |[ReFS 개요](refs/refs-overview.md)|미러 가속 패리티의 권장 워크 로드를 설명 하 고 ReFS 및 NTFS에 대해 지원 되는 파일 및 볼륨 크기를 수정 했습니다.|

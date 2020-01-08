@@ -8,12 +8,12 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 09/25/2019
-ms.openlocfilehash: 1ae6f881e1bd4b9b317e5622f18958f25f692eec
-ms.sourcegitcommit: de71970be7d81b95610a0977c12d456c3917c331
+ms.openlocfilehash: 26ff5e27494e2f42a0c8e4d28e2b9820f8d19e6a
+ms.sourcegitcommit: 471464a674a53c468a2f1e28575c91245ce9badf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71940800"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548183"
 ---
 # <a name="shielded-vms-for-tenants---creating-shielding-data-to-define-a-shielded-vm"></a>테 넌 트 용 보호 된 vm-보호 된 VM을 정의 하는 보호 데이터 만들기
 
@@ -77,7 +77,7 @@ VMM에서 서명 된 템플릿 디스크는 일반화 되므로 프로 비전 �
     | 대체 가능 요소 | 대체 문자열 |
     |-----------|-----------|
     | ComputerName        | @ComputerName@      |
-    | 표준            | @TimeZone@          |
+    | 표준 시간대            | @TimeZone@          |
     | ProductKey          | @ProductKey@        |
     | IPAddr4-1           | @IP4Addr-1@         |
     | IPAddr6-1           | @IP6Addr-1@         |
@@ -91,13 +91,13 @@ VMM에서 서명 된 템플릿 디스크는 일반화 되므로 프로 비전 �
 
     | 대체 문자열 | 예제 대체 |
     |---------------------|----------------------|
-    | @IP4Addr-1@         | 192.168.1.10         |
-    | @MACAddr-1@         | 이더넷             |
-    | @Prefix-1-1@        | 192.168.1.0/24       |
+    | @IP4Addr-1@         | 192.168.1.10/24      |
+    | @MACAddr-1@         | Ethernet             |
+    | @Prefix-1-1@        | 24                   |
     | @NextHop-1-1@       | 192.168.1.254        |
-    | @IP4Addr-2@         | 10.0.20.30           |
+    | @IP4Addr-2@         | 10.0.20.30/24        |
     | @MACAddr-2@         | 이더넷 2           |
-    | @Prefix-2-1@        | 10.0.20.0/24         |
+    | @Prefix-2-1@        | 24                   |
     | @NextHop-2-1@       | 10.0.20.1            |
 
 대체 문자열을 사용 하는 경우 VM 프로 비전 프로세스 중에 문자열이 채워지는지 확인 하는 것이 중요 합니다. @ProductKey@과 같은 문자열이 배포 시 제공 되지 않는 경우 무인 파일에 &lt;ProductKey&gt; 노드를 비워 두면 특수화 프로세스가 실패 하 고 VM에 연결할 수 없게 됩니다.

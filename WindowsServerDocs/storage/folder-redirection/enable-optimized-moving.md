@@ -8,29 +8,29 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 09/10/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 6c54fee98247b1ce0aa3ef3a2502cf18f314e763
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: edf714bc0d6b39dbe7c5e800e953d7820fe9abc5
+ms.sourcegitcommit: bfe9c5f7141f4f2343a4edf432856f07db1410aa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71394371"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75352606"
 ---
 # <a name="enable-optimized-moves-of-redirected-folders"></a>리디렉션된 폴더의 최적화 된 이동 사용
 
->적용 대상: Windows 10, Windows 8, Windows 8.1, Windows Server 2019, windows server 2016, windows server 2012 R2, Windows Server 2012, Windows Server (반기 채널)
+>적용 대상: Windows 10, Windows 8, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server (반기 채널)
 
 이 항목에서는 리디렉션된 폴더 (폴더 리디렉션)의 최적화 된 이동을 새 파일 공유로 수행 하는 방법에 대해 설명 합니다. 이 정책 설정을 사용 하도록 설정 하는 경우 관리자가 리디렉션된 폴더를 호스팅하는 파일 공유를 이동 하 고 그룹 정책에서 리디렉션된 폴더의 대상 경로를 업데이트할 때 캐시 된 콘텐츠는 지연 없이 로컬 오프라인 파일 캐시에서 이름이 변경 됩니다. 사용자에 대 한 잠재적인 데이터 손실
 
 이전에는 관리자가 그룹 정책에서 리디렉션된 폴더의 대상 경로를 변경 하 고 클라이언트 컴퓨터가 영향을 받는 사용자의 다음 로그인에서 파일을 복사 하 여 지연 된 로그인을 발생 시킬 수 있습니다. 또는 관리자가 파일 공유를 이동 하 고 그룹 정책에서 리디렉션된 폴더의 대상 경로를 업데이트할 수 있습니다. 그러나 이동 시작과 이동 후의 첫 번째 동기화 사이에 클라이언트 컴퓨터에서 로컬로 수행 되는 모든 변경 내용은 손실 됩니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>전제 조건
 
 최적화 된 이동에는 다음과 같은 요구 사항이 있습니다.
 
 - 폴더 리디렉션이 설정 되어 있어야 합니다. 자세한 내용은 [오프라인 파일를 사용 하 여 폴더 리디렉션 배포](deploy-folder-redirection.md)를 참조 하세요.
 - 클라이언트 컴퓨터는 Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 또는 Windows Server (반기 채널)를 실행 해야 합니다.
 
-## <a name="step-1-enable-optimized-move-in-group-policy"></a>1단계: 그룹 정책에서 최적화 된 이동 사용
+## <a name="step-1-enable-optimized-move-in-group-policy"></a>1 단계: 그룹 정책에서 최적화 된 이동 사용
 
 폴더 리디렉션 데이터의 재배치를 최적화 하려면 그룹 정책를 사용 하 여 적절 한 GPO (그룹 정책 개체)에 대 한 **폴더 리디렉션 서버 경로에서 오프라인 파일 캐시의 콘텐츠를 최적화** 하 여 변경 정책 설정을 사용 하도록 설정 합니다. 이 정책 설정을 **사용 안 함** 또는 **구성 되지 않음** 으로 구성 하면 클라이언트는 모든 폴더 리디렉션 내용을 새 위치에 복사한 다음 서버 경로가 변경 되 면 이전 위치에서 콘텐츠를 삭제 합니다.
 
@@ -41,9 +41,9 @@ ms.locfileid: "71394371"
 3. **폴더 리디렉션 서버 경로 변경에서 오프라인 파일 캐시의 최적화 된 콘텐츠 이동 사용**을 마우스 오른쪽 단추로 클릭 한 다음 **편집**을 선택 합니다.
 4. **사용**을 선택 하 고 **확인**을 선택 합니다.
 
-## <a name="step-2-relocate-the-file-share-for-redirected-folders"></a>2단계: 리디렉션된 폴더의 파일 공유 위치를 다시 배치 합니다.
+## <a name="step-2-relocate-the-file-share-for-redirected-folders"></a>2 단계: 리디렉션된 폴더에 대 한 파일 공유 위치 다시 배치
 
-사용자의 리디렉션된 폴더를 포함 하는 파일 공유를 이동 하는 경우 폴더의 위치가 올바르게 조정 되도록 예방 조치를 취하는 것입니다.
+사용자의 리디렉션된 폴더를 포함 하는 파일 공유를 이동할 때는 폴더의 위치가 올바르게 조정 되도록 예방 조치를 취해야 합니다.
 
 >[!IMPORTANT]
 >사용자 파일이 사용 중이거나 전체 파일 상태가 이동 시 유지 되지 않는 경우 네트워크를 통해 파일을 복사할 때, 오프라인 파일에서 생성 된 동기화 충돌 또는 데이터 손실이 발생할 때 성능이 저하 될 수 있습니다.
@@ -59,7 +59,7 @@ ms.locfileid: "71394371"
 
     사용자는 이동이 완료 될 때까지 오프라인 파일를 사용 하 여 오프 라인으로 작업 하 고 그룹 정책에서 업데이트 된 폴더 리디렉션 설정을 받게 됩니다.
 
-3. 백업 권한이 있는 계정을 사용 하 여 백업 및 복원 유틸리티와 같이 파일 타임 스탬프를 유지 하는 방법을 사용 하 여 파일 공유의 내용을 새 위치로 이동 합니다. **Robocopy** 명령을 사용 하려면 관리자 권한 명령 프롬프트를 열고 다음 명령을 입력 합니다. 여기서 ```<Source>``` 은 파일 공유의 현재 위치이 고 ```<Destination>``` 은 새 위치입니다.
+3. 백업 권한이 있는 계정을 사용 하 여 백업 및 복원 유틸리티와 같이 파일 타임 스탬프를 유지 하는 방법을 사용 하 여 파일 공유의 내용을 새 위치로 이동 합니다. **Robocopy** 명령을 사용 하려면 관리자 권한 명령 프롬프트를 열고 다음 명령을 입력 합니다. 여기서 ```<Source>```은 파일 공유의 현재 위치이 고 ```<Destination>```는 새 위치입니다.
 
     ```PowerShell
     Robocopy /B <Source> <Destination> /Copyall /MIR /EFSRAW
@@ -72,7 +72,7 @@ ms.locfileid: "71394371"
 
     사용자는 한 번 이상 모든 컴퓨터에 로그온 하 여 각 오프라인 파일 캐시에서 데이터가 올바르게 재배치 되도록 해야 합니다.
 
-## <a name="more-information"></a>자세한 정보
+## <a name="more-information"></a>추가 정보
 
 * [오프라인 파일를 사용 하 여 폴더 리디렉션 배포](deploy-folder-redirection.md)
 * [로밍 사용자 프로필 배포](deploy-roaming-user-profiles.md)

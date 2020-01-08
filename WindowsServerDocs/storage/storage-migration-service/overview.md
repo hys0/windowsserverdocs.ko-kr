@@ -8,12 +8,12 @@ ms.date: 10/25/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: 5963035846814f2ec3fd3417e629f71b146cc73e
-ms.sourcegitcommit: ac9946deb4fa70203a9b05e0386deb4244b8ca55
+ms.openlocfilehash: 968122612845a9be105ca7d3231edc0faa039e76
+ms.sourcegitcommit: bfe9c5f7141f4f2343a4edf432856f07db1410aa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74310379"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75352684"
 ---
 # <a name="storage-migration-service-overview"></a>Storage Migration Service 개요
 
@@ -66,7 +66,7 @@ Orchestrator와 대상 컴퓨터에는 2 개 이상의 코어 또는 두 개의 
 - 원본 및 대상 컴퓨터에는 *인바운드* 를 사용 하도록 설정 된 다음 방화벽 규칙이 있어야 합니다 (이미 사용 하도록 설정 되어 있을 수 있음).
   - 파일 및 프린터 공유(SMB-In)
   - Netlogon 서비스 (NP-IN)
-  - WMI(Windows Management Instrumentation) (DCOM-IN)
+  - Windows Management Instrumentation(DCOM-In)
   - WMI(Windows Management Instrumentation)(WMI-In)
   
   > [!TIP]
@@ -80,8 +80,8 @@ Orchestrator와 대상 컴퓨터에는 2 개 이상의 코어 또는 두 개의 
 원본 서버는 다음 운영 체제 중 하나를 실행 해야 합니다.
 
 - Windows Server, 반기 채널
-- Windows Server 2019
-- Windows Server 2016
+- 시작
+- Windows Server 2016
 - Windows Server 2012 R2
 - Windows Server 2012
 - Windows Server 2008 R2
@@ -96,7 +96,7 @@ Orchestrator와 대상 컴퓨터에는 2 개 이상의 코어 또는 두 개의 
 - Windows Server 2016 Essentials
 - Windows Server 2019 Essentials
 - Windows Storage Server 2008
-- Windows Storage Server 2008 R2
+- Windows Storage Server 2008 R2
 - Windows Storage Server 2012
 - Windows Storage Server 2012 R2
 - Windows Storage Server 2016
@@ -105,7 +105,7 @@ Orchestrator와 대상 컴퓨터에는 2 개 이상의 코어 또는 두 개의 
 
 Orchestrator가 Windows Server, 버전 1903 이상을 실행 하거나 orchestrator가 [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) 가 설치 된 이전 버전의 windows server를 실행 하는 경우 다음과 같은 추가 원본 유형을 마이그레이션할 수 있습니다.
 
-- 장애 조치(failover) 클러스터
+- Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019을 실행 하는 장애 조치 (Failover) 클러스터
 - Samba를 사용 하는 Linux 서버. 다음 사항을 테스트 했습니다.
     - CentOS 7
     - Debian GNU/Linux 8
@@ -119,8 +119,8 @@ Orchestrator가 Windows Server, 버전 1903 이상을 실행 하거나 orchestra
 대상 서버는 다음 운영 체제 중 하나를 실행 해야 합니다.
 
 - Windows Server, 반기 채널
-- Windows Server 2019
-- Windows Server 2016
+- 시작
+- Windows Server 2016
 - Windows Server 2012 R2
 
 > [!TIP]
