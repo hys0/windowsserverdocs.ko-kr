@@ -8,6 +8,7 @@
 ## [서비스 채널 비교](..\get-started-19\servicing-channels-19.md)
 ## [Windows Server 릴리스의 설치 및 업그레이드](Installation-and-Upgrade.md)
 ## [Windows Server 2008 및 Windows Server 2008 R2 업그레이드](modernize-windows-server-2008.md)
+### [Windows Server 2008/2008 R2 확장 보안 업데이트](extended-security-updates.md)
 ### [Windows Server 2008/2008 R2 특수 이미지를 Azure에 업로드](uploading-specialized-WS08-image-to-azure.md)
 ## [Windows Server 역할 및 기능 마이그레이션](Migrate-Roles-and-Features.md)
 ## [Windows Server 2016 시스템 요구 사항](System-Requirements.md)

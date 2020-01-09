@@ -5,14 +5,19 @@ ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
 author: phstee
-ms.author: NedPyle; Danlo; DKruse
-ms.date: 4/14/2017
-ms.openlocfilehash: 5f772d2333acb2d48bf27168aca42754013dd8be
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: NedPyle; Danlo; DKruse; v-tea
+ms.date: 12/12/2019
+ms.custom:
+- CI ID 111495
+- CSSTroubleshoot
+manager: dcscontentpm
+audience: Admin
+ms.openlocfilehash: 2e37282abd246c8f2da387deda5e8bf4b400a3d8
+ms.sourcegitcommit: bfe9c5f7141f4f2343a4edf432856f07db1410aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71370217"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75351634"
 ---
 # <a name="performance-tuning-for-file-servers"></a>파일 서버의 성능 조정
 
@@ -93,10 +98,24 @@ ms.locfileid: "71370217"
 
     기본값은 10초입니다. 디렉터리 캐시 시간 제한입니다.
 
-    > [!NOTE]
+    > [!NOTE]  
     > 이 매개 변수는 디렉터리 임대가 없을 때 디렉터리 메타데이터의 캐싱을 제어합니다.
      
-
+     > [!NOTE]  
+     > Windows 10, 버전 1803의 알려진 문제는 Windows 10의 대량의 디렉터리를 캐시하는 기능에 영향을 줍니다. 컴퓨터를 Windows 10, 버전 1803으로 업그레이드한 후, 수천 개의 파일과 폴더가 포함된 네트워크 공유에 액세스하여 해당 공유에 있는 문서를 엽니다. 이들 두 작업을 수행하는 동안 상당한 지연이 발생합니다.
+     >  
+     > 이 문제를 해결하려면 Windows 10, 버전 1809 이상을 설치합니다.
+     >  
+     > 이 문제를 해결하려면 **DirectoryCacheLifetime**을 **0**으로 설정합니다.
+     >  
+     > 이 문제는 다음 버전의 Windows 10에 영향을 줍니다.  
+     > - Windows 10 Enterprise, 버전 1803
+     > - Windows 10 Pro for Workstations, 버전 1803
+     > - Windows 10 Pro Education, 버전 1803
+     > - Windows 10 Professional, 버전 1803
+     > - Windows 10 Education, 버전 1803
+     > - Windows 10 Home, 버전 1803
+   
 -   **DirectoryCacheEntrySizeMax**
 
     ```
@@ -213,7 +232,7 @@ ms.locfileid: "71370217"
 
 클라이언트 컴퓨터의 일반 튜닝 매개 변수는 컴퓨터를 원격 파일 공유 액세스, 특히 대기 시간이 긴 일부 네트워크를 통한 액세스(예: 지사, 데이터 센터 간 통신, 홈 오피스, 모바일 광대역)에 적합하도록 최적화합니다. 이 설정이 모든 컴퓨터에서 최적이거나 적합한 것은 아닙니다. 이 설정을 적용하기 전에 개별 설정이 미치게 될 영향을 먼저 평가해야 합니다.
 
-| 매개 변수                   | 값 | 기본값 |
+| 매개 변수                   | Value | Default |
 |-----------------------------|-------|---------|
 | DisableBandwidthThrottling  | 1     | 0       |
 | FileInfoCacheEntriesMax     | 32768 | 64      |

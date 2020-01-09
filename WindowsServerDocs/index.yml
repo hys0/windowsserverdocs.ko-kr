@@ -1,21 +1,21 @@
 ### YamlMime:Hub
 title: Windows Server 설명서
-summary: Windows Server는 작업 그룹에서 데이터 센터까지 응용 프로그램, 네트워크 및 웹 서비스가 연결된 인프라를 구축하기 위한 플랫폼입니다.
+summary: Windows Server는 작업 그룹에서 데이터 센터까지 애플리케이션, 네트워크 및 웹 서비스가 연결된 인프라를 구축하기 위한 플랫폼입니다.
 metadata:
   title: Windows Server 설명서 | Microsoft Docs
-  description: Windows Server는 작업 그룹에서 데이터 센터까지 응용 프로그램, 네트워크 및 웹 서비스가 연결된 인프라를 구축하기 위한 플랫폼입니다.
+  description: Windows Server는 작업 그룹에서 데이터 센터까지 애플리케이션, 네트워크 및 웹 서비스가 연결된 인프라를 구축하기 위한 플랫폼입니다.
   author: eross-msft
   manager: daveba
   ms.service: windows-server-threshold
   ms.topic: hub-page
   ms.date: 06/06/2019
   ms.author: lizross
-  ms.openlocfilehash: b16b9235cbcb149ec7f10ce76b0cf594e9bb2a29
-  ms.sourcegitcommit: 30de12eebeb0fc79567d6bb6ab513692ea2415d3
+  ms.openlocfilehash: 77f017388af44a0365113e890b2ae04a9185a2c8
+  ms.sourcegitcommit: bfe9c5f7141f4f2343a4edf432856f07db1410aa
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74853578"
+  ms.lasthandoff: 12/25/2019
+  ms.locfileid: "75351575"
 highlightedContent:
   items:
   - title: Windows Server 2019의 새로운 기능
@@ -36,9 +36,9 @@ highlightedContent:
   - title: Windows Server 2016 시작
     itemType: how-to-guide
     url: /windows-server/get-started/server-basics
-  - title: Windows Server 2008 R2 및 Windows Server 2008 서비스 종료
-    itemType: overview
-    url: /windows-server/get-started/modernize-windows-server-2008
+  - title: Windows Server 2008 및 2008 R2 확장 보안 업데이트 사용
+    itemType: how-to-guide
+    url: /windows-server/get-started/extended-security-updates
   - title: 서버용 Windows 참가자 프로그램
     itemType: overview
     url: /windows-insider/at-work/
@@ -89,7 +89,7 @@ conceptualContent:
     footerLink:
       url: /windows-server/failover-clustering/failover-clustering-overview
       text: 자세한 내용
-  - title: Management
+  - title: 관리
     links:
     - url: /windows-server/manage/windows-admin-center/overview
       itemType: overview
@@ -117,7 +117,7 @@ conceptualContent:
     footerLink:
       url: /windows-server/networking/networking
       text: 자세한 내용
-  - title: 리모컨
+  - title: 원격
     links:
     - url: /windows-server/remote/remote-desktop-services/welcome-to-rds
       itemType: overview
@@ -145,11 +145,11 @@ conceptualContent:
     footerLink:
       url: /windows-server/security/security-and-assurance
       text: 자세한 내용
-  - title: 저장 공간
+  - title: 스토리지
     links:
     - url: /windows-server/storage/whats-new-in-storage
       itemType: whats-new
-      text: 저장소의 새로운 기능
+      text: 스토리지의 새로운 기능
     - url: /windows-server/storage/disk-management/overview-of-disk-management
       itemType: overview
       text: 디스크 관리 개요

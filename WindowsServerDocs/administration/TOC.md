@@ -2,8 +2,7 @@
 ## [Windows Admin Center를 사용하여 환경 관리(새로운 기능!)](../manage/windows-admin-center/overview.md)
 ## Windows Server 시스템 및 환경 관리
 ### [Windows Server 하이브리드 클라우드 인쇄 관리](hybrid-cloud-print/hybrid-cloud-print-overview.md)
-#### [사전 인증을 사용하여 Windows Server 하이브리드 클라우드 인쇄 배포](hybrid-cloud-print/hybrid-cloud-print-deploy.md)
-#### [통과 인증을 사용하여 Windows Server 하이브리드 클라우드 인쇄 배포](hybrid-cloud-print/hybrid-cloud-print-deploy-passthrough.md)
+#### [Windows Server 하이브리드 클라우드 인쇄 배포](hybrid-cloud-print/hybrid-cloud-print-deploy.md)
 ### [Server Core 설치 옵션으로 무엇이 있나요?](server-core/what-is-server-core.md)
 #### [Server Core 설치 옵션에 무엇이 포함되어 있나요?](server-core/server-core-roles-and-services.md)
 #### [Server Core의 기본 관리 작업](server-core/server-core-administer.md)
