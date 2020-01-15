@@ -11,40 +11,51 @@ ms.topic: article
 author: heidilohr
 manager: daveba
 ms.author: helohr
-ms.date: 09/11/2019
+ms.date: 12/13/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 0a13c7ccb7e1c72534ef63ba6d09f3055af174cb
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 1edc7c78e2abe5fe4e2bf9cd2c48a6a19d89dbdd
+ms.sourcegitcommit: bfe9c5f7141f4f2343a4edf432856f07db1410aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71387773"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75351827"
 ---
 # <a name="whats-new-in-the-ios-client"></a>iOS 클라이언트의 새로운 기능
 
-[iOS용 원격 데스크톱 클라이언트](remote-desktop-ios.md)를 정기적으로 업데이트하여 새로운 기능을 추가하고 문제를 수정합니다. 여기서 최신 업데이트를 찾을 수 있습니다.
+[iOS용 원격 데스크톱 클라이언트](remote-desktop-ios.md)를 정기적으로 업데이트하여 새로운 기능을 추가하고 문제를 수정합니다. 최신 업데이트는 이 페이지에서 찾을 수 있습니다.
 
-## <a name="remote-desktop-ios-beta-client"></a>원격 데스크톱 iOS 베타 클라이언트
+## <a name="updates-for-version-1000"></a>10.0.0 버전에 대한 업데이트
 
-*게시된 날짜: 02/20/2019*
+*게시 날짜: 2019년 12월 13일*
 
-[원격 데스크톱 iOS 베타 클라이언트](remote-desktop-ios.md#download-the-remote-desktop-ios-beta-client-from-apple-testflight)는 현재 TestFlight에서 사용할 수 있습니다. iOS 베타 클라이언트를 테스트하는 동안 새 iOS 클라이언트의 시험판 버전이므로 프로덕션 릴리스만큼 안정적이라고 보장할 수 없다는 사실에 유의합니다. 이 클라이언트를 새로운 기능 및 픽스로 정기적으로 계속 업데이트할 예정입니다. 아래에는 iOS 베타 클라이언트의 몇 가지 기능이 중점적으로 설명되어 있습니다.
+iOS용 원격 데스크톱 클라이언트를 마지막으로 업데이트한 지 1년이 훨씬 지났습니다. 그러나 이제 흥미로운 새 업데이트가 있으며, 앞으로는 더 많은 업데이트가 정기적으로 제공됩니다. 10.0.0 버전의 새로운 기능은 다음과 같습니다.
 
-- 최신 iOS 디바이스 환경 개선
-- Swiftpoint GT 및 ProPoint 실제 마우스 지원. iOS 베타 클라이언트에 대해서는 [지원되는 입력 디바이스 목록](remote-desktop-ios.md#supported-input-devices)을 참조하세요.
-- [Windows 가상 데스크톱](https://aka.ms/wvd) 지원
-- 마이크 및 iPhone 스토리지 리디렉션
-- AVC420 및 AVC444 지원
-- 메탈 HW 가속 지원
+- Windows Virtual Desktop 서비스 지원
+- 새 연결 센터 UI
+- 연결된 PC와 앱 간에 전환할 수 있는 새 세션 UI
+- 보조 화상 키보드의 새 레이아웃
+- 향상된 외부 키보드 지원
+- SwiftPoint Bluetooth 마우스 지원
+- 마이크 리디렉션 지원
+- 로컬 스토리지 리디렉션 지원
+- 카메라 리디렉션 지원(Windows 10, 버전 1809 이상에만 사용할 수 있음)
+- 새 iPhone 및 iPad 디바이스 지원
+- 어두운 테마 및 밝은 테마 지원
+- 원격 PC 또는 앱에 연결할 때 휴대폰을 잠글 수 있는지 여부를 제어합니다.
+- 이제 원격 데스크톱 로고 단추를 길게 누르면 세션 내 연결 표시줄을 접을 수 있습니다.
 
 ## <a name="updates-for-version-8142"></a>8\.1.42 버전에 대한 업데이트
 
-*게시된 날짜: 06/20/2018*
+*게시 날짜: 06/20/2018*
 
 - 버그 픽스 및 성능 향상
 
 ## <a name="updates-for-version-8141"></a>8\.1.41 버전에 대한 업데이트
 
-*게시된 날짜: 03/28/2018*
+*게시 날짜: 03/28/2018*
 
 - CVE-2018-0886에 설명된 CredSSP 암호화 오라클 수정을 해결하기 위해 업데이트됩니다.
+
+## <a name="how-to-report-issues"></a>문제를 보고하는 방법
+
+이 앱을 최대한 활용할 수 있도록 노력하고 있으며 사용자 의견을 소중하게 생각합니다. 발생한 문제는 클라이언트에서 **설정** > **문제 보고**로 차례로 이동하여 보고할 수 있습니다.

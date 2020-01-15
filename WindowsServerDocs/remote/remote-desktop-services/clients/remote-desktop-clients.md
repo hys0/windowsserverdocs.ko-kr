@@ -10,16 +10,16 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b7d8158c-aee1-4c60-8a46-40ce5595b8e8
 author: HeidiLohr
-manager: dougkim
+manager: daveba
 ms.author: helohr
-ms.date: 05/07/2018
+ms.date: 01/07/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: b96ec92fea067d6482baeb54f19a1ec07e2229a8
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b0b44eac6d76fb6d49c00dae0c0abe9450861026
+ms.sourcegitcommit: 28b71d779386cd31e1511217aa1a6f3ab186bf9b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404159"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75682434"
 ---
 # <a name="remote-desktop-clients"></a>원격 데스크톱 클라이언트
 
@@ -31,12 +31,13 @@ Microsoft 원격 데스크톱 클라이언트를 사용하여 어떤 디바이�
 
 사용할 수 있는 클라이언트 앱은 다음과 같습니다.
 
-| 장치   | 앱 가져오기                                                                                                     | 설치 지침                                                                |
-|----------|-----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| Windows  | [Microsoft Store의 Windows 10 클라이언트](https://go.microsoft.com/fwlink/?LinkID=616709)                      | [Windows에서 원격 데스크톱 클라이언트 시작](windows.md)                |
-| Android  | [Google Play의 Android 클라이언트](https://play.google.com/store/apps/details?id=com.microsoft.rdc.android)        | [Android에서 원격 데스크톱 클라이언트 시작](remote-desktop-android.md) |
-| iOS      | [iTunes 스토어의 iOS 클라이언트](https://itunes.apple.com/app/microsoft-remote-desktop/id714464092?mt=8)     | [iOS에서 원격 데스크톱 클라이언트 시작](remote-desktop-ios.md)         |
-| macOS    | [iTunes 스토어의 macOS 클라이언트](https://itunes.apple.com/app/microsoft-remote-desktop/id1295203466?mt=12) | [Mac에서 원격 데스크톱 클라이언트 시작](remote-desktop-mac.md)         |
+| 디바이스          | 앱 가져오기                                                                                                  | 설치 지침                                                                |
+|-----------------|-----------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
+| Windows 데스크톱 | [Windows 데스크톱 클라이언트](windowsdesktop.md#install-the-client)                                               | [Windows 데스크톱 클라이언트 시작](windowsdesktop.md) |
+| Windows 스토어   | [Microsoft Store의 Windows 10 클라이언트](https://go.microsoft.com/fwlink/?LinkID=616709)                   | [Windows 스토어 클라이언트 시작](windows.md)          |
+| Android         | [Google Play의 Android 클라이언트](https://play.google.com/store/apps/details?id=com.microsoft.rdc.android)     | [Android 클라이언트 시작](remote-desktop-android.md) |
+| iOS             | [iTunes 스토어의 iOS 클라이언트](https://itunes.apple.com/app/microsoft-remote-desktop/id714464092?mt=8)     | [iOS 클라이언트 시작](remote-desktop-ios.md)         |
+| macOS           | [iTunes 스토어의 macOS 클라이언트](https://itunes.apple.com/app/microsoft-remote-desktop/id1295203466?mt=12) | [macOS 클라이언트 시작](remote-desktop-mac.md)       |
 
 ## <a name="configuring-the-remote-pc"></a>원격 PC 구성
 

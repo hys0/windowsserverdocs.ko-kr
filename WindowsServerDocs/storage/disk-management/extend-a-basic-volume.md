@@ -1,59 +1,65 @@
 ---
 title: 기본 볼륨 확장
-description: 이 문서에서는 기본 및 논리 드라이브에 공간을 추가하고 기본 볼륨을 확장하는 방법을 설명합니다.
-ms.date: 06/07/2019
+description: 빈 공간에 볼륨이 없고(할당되어 있지 않음) 확장하려는 볼륨 바로 뒤에 다른 볼륨이 없는 경우에만 Windows에서 공간을 기존 볼륨에 추가하여 드라이브의 빈 공간으로 확장할 수 있습니다. 이 문서에서는 이 작업을 수행하는 방법을 설명합니다.
+ms.date: 12/19/2019
 ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: a98bd3553c3223716d70ed4329bd7e265e697b73
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: c72b242437c4c308da77a25e06f3d76e4c65f480
+ms.sourcegitcommit: bfe9c5f7141f4f2343a4edf432856f07db1410aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402098"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75351897"
 ---
 # <a name="extend-a-basic-volume"></a>기본 볼륨 확장
 
 > **적용 대상:** Windows 10, Windows 8.1, Windows Server(반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-기존 기본 파티션 및 논리 드라이브를 동일한 디스크의 할당되지 않은 인접 공간으로 확장하여 더 많은 공간을 추가할 수 있습니다. 기본 볼륨을 확장하려면 원시(파일 시스템으로 포맷되지 않음) 상태이거나 NTFS 파일 시스템으로 포맷된 상태여야 합니다. 확장된 파티션에 포함된 인접한 사용 가능한 공간 내에 논리 드라이브를 확장할 수 있습니다. 확장된 파티션의 사용 가능한 공간을 초과하여 논리 드라이브를 확장한 경우 확장된 파티션이 확장되어 논리 드라이브를 포함합니다.
+다음 이미지와 같이 빈 공간에 볼륨이 없고(할당되어 있지 않음) 확장하려는 볼륨 바로 뒤에 다른 볼륨이 없는 경우에만 디스크 관리를 사용하여 공간을 기존 볼륨에 추가하여 드라이브의 빈 공간으로 확장할 수 있습니다. 확장할 볼륨도 NTFS 또는 ReFS 파일 시스템으로 포맷해야 합니다.
 
-논리 드라이브 및 부트 또는 시스템 볼륨의 경우 볼륨을 인접한 공간으로만 확장할 수 있으며 디스크는 동적 디스크로만 업그레이드될 수 있습니다. 기타 볼륨의 경우 볼륨을 인접하지 않은 공간으로 확장할 수 있지만 디스크를 동적 디스크로 변환하라는 메시지가 표시됩니다.
+:::image type="content" source="media/extend-volume-space-highlighted.png" alt-text="볼륨이 확장될 수 있는 사용 가능한 공간을 보여 주는 디스크 관리":::
 
-## <a name="extending-a-basic-volume"></a>기본 볼륨 확장
+## <a name="to-extend-a-volume-by-using-disk-management"></a>디스크 관리를 사용하여 볼륨 확장
 
-#### <a name="to-extend-a-basic-volume-using-the-windows-interface"></a>Windows 인터페이스를 사용하여 기본 볼륨 확장
+드라이브의 볼륨 바로 뒤에 있는 빈 공간으로 볼륨을 확장하는 방법은 다음과 같습니다.
 
-1. 디스크 관리자에서 확장하려는 기본 볼륨을 마우스 오른쪽 단추로 클릭합니다.
+1. 디스크 관리를 관리자 권한으로 엽니다.
 
-2. **볼륨 확장**을 클릭합니다.
+   이 작업을 수행하는 쉬운 방법은 작업 표시줄의 검색 상자에서 **컴퓨터 관리**를 입력하고, **컴퓨터 관리**를 길게 누른(또는 마우스 오른쪽 단추로 클릭) 다음, **관리자 권한으로 실행** > **예**를 차례로 선택하는 것입니다. 컴퓨터 관리가 열리면 **스토리지** > **디스크 관리**로 차례로 이동합니다.
+2. 확장하려는 볼륨을 길게 누른(또는 마우스 오른쪽 단추로 클릭) 다음, **볼륨 확장**을 선택합니다.
 
-3. 화면상의 지침을 따릅니다.
+   **볼륨 확장**이 회색으로 표시되면 다음을 확인합니다.
+    - 디스크 관리 또는 컴퓨터 관리가 관리자 권한으로 열렸습니다.
+    - 위의 그림과 같이 볼륨 바로 뒤에 할당되지 않은 공간(오른쪽)이 있습니다. 할당되지 않은 공간과 확장하려는 볼륨 사이에 다른 볼륨이 있는 경우 볼륨과 이 볼륨의 모든 파일을 삭제하거나(중요한 파일은 먼저 백업하거나 이동해야 함!), 데이터를 삭제하지 않고 볼륨을 이동할 수 있는 타사 디스크 분할 앱을 사용하거나, 볼륨 확장을 건너뛰고 대신 할당되지 않은 공간에 별도의 볼륨을 만들 수 있습니다.
+    - 볼륨은 NTFS 또는 ReFS 파일 시스템으로 포맷됩니다. 다른 파일 시스템은 확장할 수 없으므로 볼륨의 파일을 이동하거나 백업한 다음, 볼륨을 NTFS 또는 ReFS 파일 시스템으로 포맷해야 합니다.
+    - 디스크가 2TB보다 큰 경우 GPT 파티션 구성표를 사용하고 있는지 확인합니다. 디스크에서 2TB를 초과하여 사용하려면 GPT 파티션 구성표를 사용하여 초기화해야 합니다. GPT로 변환하려면 [MBR 디스크를 GPT 디스크로 변경](change-an-mbr-disk-into-a-gpt-disk.md)을 참조하세요.
+    - 여전히 볼륨을 확장할 수 없는 경우 [Microsoft 커뮤니티 - 파일, 폴더 및 스토리지](https://answers.microsoft.com/en-us/windows/forum/windows_10-files?sort=lastreplydate&dir=desc&tab=All&status=all&mod=&modAge=&advFil=&postedAfter=&postedBefore=&threadType=all&isFilterExpanded=true&tm=1514405359639) 사이트 검색을 시도하고, 답변을 찾을 수 없는 경우 질문을 이 사이트에 게시하여 Microsoft 또는 커뮤니티 내 다른 구성원의 도움을 받으세요. [Microsoft 지원에 문의](https://support.microsoft.com/contactus/)하셔도 됩니다.
 
-#### <a name="to-extend-a-basic-volume-using-a-command-line"></a>명령줄을 사용하여 기본 볼륨을 확장하려면
+3. **다음**을 선택한 다음, 마법사의 **디스크 선택** 페이지(여기에 표시되어 있음)에서 볼륨을 확장할 크기를 지정합니다. 일반적으로 사용 가능한 공간을 모두 사용하는 기본값을 사용할 수 있지만, 볼륨을 사용 가능한 공간에 추가로 만들려는 경우 더 작은 값을 사용할 수 있습니다.
 
-1. 명령 프롬프트를 열고 `diskpart`를 입력합니다.
+   :::image type="content" source="media/extend-volume-wizard.png" alt-text="사용 가능한 공간을 모두 사용하도록 확장되는 볼륨을 보여 주는 볼륨 확장 마법사":::
 
-2. **DISKPART** 프롬프트에서 `list volume`을(를) 입력합니다. 확장하려는 기본 볼륨을 기록해둡니다.
+4. **다음**, **마침**을 차례로 선택하여 볼륨을 확장합니다.
 
-3. **DISKPART** 프롬프트에서 `select volume <volumenumber>`을(를) 입력합니다. 이를 통해 동일한 디스크의 인접한 비어 있는 공간으로 확장하고자 하는 기본 볼륨 *volumenumber*을 선택합니다.
+## <a name="to-extend-a-volume-by-using-powershell"></a>PowerShell을 사용하여 볼륨 확장
 
-4. **DISKPART** 프롬프트에서 `extend [size=<size>]`을(를) 입력합니다. 이를 통해 선택한 볼륨을 MB(메가바이트) *크기*로 확장합니다.
+1. [시작] 단추를 길게 누른(또는 마우스 오른쪽 단추로 클릭) 다음, [Windows PowerShell(관리자)]을 선택합니다.
+2. 다음 명령을 입력하여 확장하려는 볼륨을 최대 크기로 조정하고 이 볼륨의 드라이브 문자를 *$drive_letter* 변수로 지정합니다.
 
-| 값 | 설명 |
-| --- | --- |
-| **list volume** | 모든 디스크에 기본 및 동적 볼륨 목록을 표시합니다. |
-| **select volume** | 볼륨 번호가 <em>volumenumber</em>인 지정된 볼륨을 선택하고 포커스를 설정합니다. 지정된 볼륨이 없는 경우 **select** 명령이 포커스가 설정된 현재 볼륨 목록을 표시합니다. 번호, 드라이브 문자 또는 탑재 지점 경로로 볼륨을 지정할 수 있습니다. 기본 디스크에서 볼륨을 선택하면 해당 파티션에도 포커스를 설정합니다. |
-| **extend** | <ul><li>포커스가 설정된 볼륨을 다음으로 인접한 할당되지 않은 공간으로 확장합니다. 기본 볼륨의 경우 할당되지 않은 공간이 동일한 디스크에 있어야 하고, 포커스가 설정된 파티션보다 더 높은 섹터 오프셋이어야 합니다. 동적 단순 또는 스팬 볼륨은 모든 동적 디스크의 모든 빈 공간으로 확장될 수 있습니다. 이 명령을 사용하여 기존 볼륨을 새로 만든 공간으로 확장할 수 있습니다.</li ><li>이전에 파티션을 NTFS 파일 시스템으로 포맷한 경우 파일 시스템은 자동적으로 확장되어 더 큰 파티션을 차지합니다. 데이터는 손실되지 않습니다. 이전에 파티션을 NTFS 이외의 파일 시스템으로 포맷한 경우 명령은 실패하고 파티션은 변경되지 않습니다.</li></ul> |
-| **size=** <em>size</em> | 현재 파티션에 추가할 공간 크기(MB, 메가바이트)입니다. 크기를 지정하지 않는 경우 디스크가 확장되어 인접한 할당되지 않은 공간을 모두 차지합니다. |
+   ```PowerShell
+   # Variable specifying the drive you want to extend
+   $drive_letter = "C"
 
-## <a name="additional-considerations"></a>추가 고려 사항
+   # Script to get the partition sizes and then resize the volume
+   $size = (Get-PartitionSupportedSize -DriveLetter $drive_letter)
+   Resize-Partition -DriveLetter $drive_letter -Size $size.SizeMax
+   ```
 
--   디스크에 부팅 또는 시스템 파티션이 없는 경우 볼륨을 비부팅 또는 비시스템 디스크로 확장할 수 있지만 디스크는 동적 디스크로 변환됩니다(업그레이드될 수 있는 경우).
+## <a name="see-slso"></a>참고 항목
 
-## <a name="see-also"></a>참고 항목
-
--   [명령줄 구문 표기법](https://technet.microsoft.com/library/cc742449(v=ws.11).aspx)
+- [Resize-Partition](https://docs.microsoft.com/powershell/module/storage/resize-partition)
+- [Diskpart extend](https://docs.microsoft.com/windows-server/administration/windows-commands/extend)

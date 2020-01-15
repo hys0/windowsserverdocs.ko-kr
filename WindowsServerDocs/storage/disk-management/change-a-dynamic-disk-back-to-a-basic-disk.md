@@ -1,19 +1,19 @@
 ---
 title: 동적 디스크를 기본 디스크로 다시 변경
 description: 동적 디스크를 기본 디스크로 다시 변환하는 방법을 설명합니다.
-ms.date: 06/07/2019
+ms.date: 12/18/2019
 ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: c24935e1e1921c2a041ef307ebeb71d10e2a4fe2
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 8ad14225592d627b6ff88b9e2286b686aa549392
+ms.sourcegitcommit: bfe9c5f7141f4f2343a4edf432856f07db1410aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386013"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75351948"
 ---
 # <a name="change-a-dynamic-disk-back-to-a-basic-disk"></a>동적 디스크를 기본 디스크로 다시 변경
 
@@ -24,23 +24,19 @@ ms.locfileid: "71386013"
 > [!WARNING]
 > 동적 디스크를 기본 디스크로 변환하려면 디스크의 모든 볼륨을 삭제하여 디스크의 모든 데이터를 영구적으로 삭제해야 합니다. 진행하기 전에 보관하려는 모든 데이터를 백업해야 합니다.
 
-## <a name="changing-a-dynamic-disk-back-to-a-basic-disk"></a>동적 디스크를 기본 디스크로 다시 변경
-
--   [Windows 인터페이스 사용](#to-change-a-dynamic-disk-back-to-a-basic-disk-using-the-windows-interface)
--   [명령줄 사용](#to-change-a-dynamic-disk-back-to-a-basic-disk-using-a-command-line)
-
-> [!NOTE]
-> **Backup Operators** 또는 **Administrators** 그룹의 구성원이어야 이 단계를 완료할 수 있습니다.
-
-#### <a name="to-change-a-dynamic-disk-back-to-a-basic-disk-using-the-windows-interface"></a>Windows 인터페이스를 사용하여 동적 디스크를 기본 디스크로 변경
+## <a name="to-change-a-dynamic-disk-back-to-a-basic-disk-by-using-disk-management"></a>디스크 관리를 사용하여 동적 디스크를 기본 디스크로 다시 변경
 
 1.  동적에서 기본으로 변환하려는 디스크의 모든 볼륨을 백업합니다.
 
-2.  디스크 관리에서 기본 디스크로 변환하려는 동적 디스크에서 각 볼륨을 마우스 오른쪽 단추로 클릭한 다음, 디스크의 각 볼륨에 대하여 **볼륨 삭제**를 클릭합니다.
+2. 디스크 관리를 관리자 권한으로 엽니다.
+
+   이 작업을 수행하는 쉬운 방법은 작업 표시줄의 검색 상자에서 **컴퓨터 관리**를 입력하고, **컴퓨터 관리**를 길게 누른(또는 마우스 오른쪽 단추로 클릭) 다음, **관리자 권한으로 실행** > **예**를 차례로 선택하는 것입니다. 컴퓨터 관리가 열리면 **스토리지** > **디스크 관리**로 차례로 이동합니다.
+
+2.  디스크 관리에서 기본 디스크로 변환하려는 동적 디스크의 각 볼륨을 길게 누른(또는 마우스 오른쪽 단추로 클릭) 다음, **볼륨 삭제**를 클릭합니다.
 
 3.  디스크의 모든 볼륨이 삭제되었을 경우 디스크를 마우스 오른쪽 단추로 클릭한 다음, **기본 디스크로 변환**을 클릭합니다.
 
-#### <a name="to-change-a-dynamic-disk-back-to-a-basic-disk-using-a-command-line"></a>명령줄을 사용하여 동적 디스크를 기본 디스크로 변경
+## <a name="to-change-a-dynamic-disk-back-to-a-basic-disk-by-using-a-command-line"></a>명령줄을 사용하여 동적 디스크를 기본 디스크로 다시 변경
 
 1.  동적에서 기본으로 변환하려는 디스크의 모든 볼륨을 백업합니다.
 
@@ -50,7 +46,7 @@ ms.locfileid: "71386013"
 
 4.  **DISKPART** 프롬프트에서 `select disk <disknumber>`을(를) 입력합니다.
 
-5.  **DISKPART** 프롬프트에서 `detail disk <disknumber>`을(를) 입력합니다.
+5.  **DISKPART** 프롬프트에서 `detail disk`을(를) 입력합니다.
 
 6.  **DISKPART** 프롬프트에서 디스크의 각 볼륨에 대하여 `select volume= <volumenumber>`을(를) 입력한 다음, `delete volume`을(를) 입력합니다.
 
@@ -58,8 +54,7 @@ ms.locfileid: "71386013"
 
 8.  **DISKPART** 프롬프트에서 `convert basic`을(를) 입력합니다.
 
-
-| 값  | 설명 |
+| Value  | 설명 |
 | --- | --- |
 | **list disk**                         | 디스크의 목록과 크기, 사용 가능한 공간 크기, 기본 또는 동적 디스크 여부, 디스크의 MBR(마스터 부트 레코드) 또는 GPT(GUID 파티션 테이블) 파티션 스타일 사용 여부 등 정보를 표시합니다. 별표(*)가 표시된 디스크는 포커스가 설정됩니다. |
 | **select disk** <em>disknumber</em>   | 디스크 번호가 <em>disknumber</em>인 지정된 디스크를 선택하고 포커스를 설정합니다.  |

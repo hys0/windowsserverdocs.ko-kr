@@ -1,19 +1,19 @@
 ---
 title: 새 디스크 초기화
 description: 디스크 관리를 통해 새 디스크를 초기화하여 사용하도록 준비하는 방법입니다. 또한 문제 해결에 대한 링크도 포함되어 있습니다.
-ms.date: 06/07/2019
+ms.date: 12/20/2019
 ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: b38fd0b88cea3fcc386959c08af1169302ddaa1c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: c2cb88d5b30be28a8ab7709e3a3908ce82ae8408
+ms.sourcegitcommit: bfe9c5f7141f4f2343a4edf432856f07db1410aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71385901"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75352354"
 ---
 # <a name="initialize-new-disks"></a>새 디스크 초기화
 
@@ -22,13 +22,13 @@ ms.locfileid: "71385901"
 PC에 새 디스크를 추가했으나 파일 탐색기에 표시되지 않으면 사용하기 위해 [드라이브 문자를 추가](change-a-drive-letter.md)하거나 먼저 초기화해야 할 수 있습니다. 아직 포맷되지 않은 드라이브만 초기화할 수 있습니다. 디스크를 초기화하면 모든 내용이 Windows에서 사용할 준비가 됩니다. 그러면 디스크를 포맷한 후 파일을 저장할 수 있습니다.
 
 > [!WARNING]
-> 디스크에 관심이 있는 파일이 이미 있으면 초기화하지 않도록 합니다. 초기화하면 모든 파일을 잃게 됩니다. 대신, 디스크 문제를 해결하여 파일을 읽을 수 있는지 확인하는 것이 좋습니다. [디스크의 상태가 초기화되지 않음 또는 디스크가 완전히 누락됨](troubleshooting-disk-management.md#a-disks-status-is-not-initialized-or-the-disk-is-missing)을 참조하세요.
+> 디스크에 관심이 있는 파일이 이미 있으면 초기화하지 않도록 합니다. 초기화하면 모든 파일을 잃게 됩니다. 대신, 디스크 문제를 해결하여 파일을 읽을 수 있는지 확인하는 것이 좋습니다. [디스크의 상태가 초기화되지 않음 또는 디스크가 완전히 누락됨](troubleshooting-disk-management.md#disks-that-are-missing-or-not-initialized-plus-general-troubleshooting-steps)을 참조하세요.
 
 ## <a name="to-initialize-new-disks"></a>새 디스크 초기화
 
 디스크 관리를 사용하여 새 디스크를 초기화하는 방법은 다음과 같습니다. PowerShell을 사용하려는 경우 [initialize-disk](https://docs.microsoft.com/powershell/module/storage/initialize-disk) cmdlet을 대신 사용합니다.
 
-1. 디스크 관리를 관리자 권한으로 엽니다. 
+1. 디스크 관리를 관리자 권한으로 엽니다.
  
     이렇게 하려면 작업 표시줄의 검색 상자에 **디스크 관리**를 입력하고 **디스크 관리**를 길게 선택(또는 마우스 오른쪽 단추로 클릭)한 다음, **관리자 권한으로 실행** > **예**를 선택합니다. 관리자 권한으로 열 수 없으면 대신, **컴퓨터 관리**를 입력하고 **스토리지** > **디스크 관리**로 이동합니다.
 1. 디스크 관리에서 초기화하고자 하는 디스크를 마우스 오른쪽 단추로 클릭하고 **디스크 초기화**를 클릭합니다(그림 참조). 디스크가 *오프라인*으로 표시되면 먼저 마우스 오른쪽 단추로 클릭하고 **온라인**을 선택합니다.
@@ -38,9 +38,14 @@ PC에 새 디스크를 추가했으나 파일 탐색기에 표시되지 않으�
     ![디스크 초기화 바로 가기 메뉴와 포맷되지 않은 디스크를 보여 주는 디스크 관리 기능](media/uninitialized-disk.PNG)
 2. **디스크 초기화** 대화 상자(그림 참조)에서 올바른 디스크를 선택했는지 확인한 후 **확인**을 클릭하여 기본 파티션 스타일을 적용합니다. 파티션 스타일(MBR 또는 GPT)을 변경해야 할 경우 [파티션 스타일 정보 - GPT 및 MBR](#about-partition-styles---gpt-and-mbr)를 참조하세요.
 
-     디스크 상태가 **초기화**에서 **온라인** 상태로 바로 변경됩니다. 어떤 이유로든 초기화가 실패하는 경우 [디스크의 상태가 초기화되지 않음 또는 디스크가 완전히 누락됨](troubleshooting-disk-management.md#a-disks-status-is-not-initialized-or-the-disk-is-missing)을 참조하세요.
+     디스크 상태가 **초기화**에서 **온라인** 상태로 바로 변경됩니다. 어떤 이유로든 초기화가 실패하는 경우 [디스크의 상태가 초기화되지 않음 또는 디스크가 완전히 누락됨](troubleshooting-disk-management.md#disks-that-are-missing-or-not-initialized-plus-general-troubleshooting-steps)을 참조하세요.
 
     ![GPT 파티션 스타일이 선택된 디스크 초기화 대화 상자](media/initialize-disk.PNG)
+
+3. 드라이브에서 할당되지 않은 공간을 길게 누른(또는 마우스 오른쪽 단추로 클릭) 다음, **새 단순 볼륨**을 선택합니다.
+4. **다음**을 선택하고, 볼륨 크기를 지정하고(전체 드라이브를 사용하는 기본값을 그대로 유지할 수 있음), **다음**을 선택합니다.
+5. 볼륨에 할당하려는 드라이브 문자를 지정하고, **다음**을 선택합니다.
+6. 사용하려는 파일 시스템(일반적으로 NTFS)을 지정하고, **다음**, **마침**을 차례로 선택합니다.
 
 ## <a name="about-partition-styles---gpt-and-mbr"></a>파티션 스타일 정보 - GPT 및 MBR
 
