@@ -9,12 +9,12 @@ ms.topic: article
 author: kaushika-msft
 ms.date: 10/24/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: df9dac8c761a83a13fb937a99cba3697dce95201
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 19dcc1c57fe7c7eea74b003553a0b0a6ab5508aa
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402798"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950238"
 ---
 # <a name="storage-spaces-direct---frequently-asked-questions-faq"></a>스토리지 공간 다이렉트-질문과 대답 (FAQ)
 
@@ -22,7 +22,7 @@ ms.locfileid: "71402798"
 
 ## <a name="when-you-use-storage-spaces-direct-with-3-nodes-can-you-get-both-performance-and-capacity-tiers"></a>3 개 노드가 포함 된 스토리지 공간 다이렉트를 사용 하는 경우 성능 및 용량 계층을 모두 얻을 수 있나요?
 
-예, 2 노드 또는 3 노드 스토리지 공간 다이렉트 구성에서 성능 및 용량 계층을 모두 가져올 수 있습니다. 그러나 두 개의 용량 장치가 있는지 확인 해야 합니다. 즉, 다음과 같은 세 가지 유형의 장치를 모두 사용 해야 합니다. NVME, SSD 및 HDD.
+예, 2 노드 또는 3 노드 스토리지 공간 다이렉트 구성에서 성능 및 용량 계층을 모두 가져올 수 있습니다. 그러나 두 개의 용량 장치가 있는지 확인 해야 합니다. 즉, NVME, SSD 및 HDD의 세 가지 유형의 장치를 모두 사용 해야 합니다.
  
 ## <a name="refs-file-system-provides-real-time-tiaring-with-storage-spaces-direct-does-refs-provides-the-same-functionality-with-shared-storage-spaces-in-2016"></a>Refs 파일 시스템은 스토리지 공간 다이렉트를 실시간으로 tiaring을 제공 합니다. REFS는 2016의 공유 저장소 공간과 동일한 기능을 제공 하나요?
 
@@ -44,7 +44,7 @@ ms.locfileid: "71402798"
 
 아니요. 기본적으로 단일 장치 유형을 사용 하 여 풀을 만드는 경우 캐시 디스크가 구성 되지 않으며 모든 디스크가 용량에 사용 됩니다. 구성에 NVME 디스크를 추가할 수 있으며, NVME 디스크는 캐시에 대해 구성 됩니다.
  
-## <a name="i-have-configured-a-2-rack-fault-domain-rack-1-has-2-fault-domains-rack-2-has-1-fault-domain-each-server-has-4-capacity-100-gb-devices-can-i-use-all-1200-gb-of-space-from-the-pool"></a>2-랙 장애 도메인을 구성 했습니다. 랙 1에는 2 개의 장애 도메인이 있고, 랙 2에는 1 개의 장애 도메인이 있습니다. 각 서버에는 4 개의 용량 100 GB 장치가 있습니다. 풀에서 1200 GB의 공간을 모두 사용할 수 있나요?
+## <a name="i-have-configured-a-2-rack-fault-domain-rack-1-has-2-fault-domains-rack-2-has-1-fault-domain-each-server-has-4-capacity-100-gb-devices-can-i-use-all-1200-gb-of-space-from-the-pool"></a>2-랙 장애 도메인을 구성 했습니다. 랙 1에는 2 개의 장애 도메인이 있고, 랙 2에는 장애 도메인이 하나 있습니다. 각 서버에는 4 개의 용량 100 GB 장치가 있습니다. 풀에서 1200 GB의 공간을 모두 사용할 수 있나요?
 
 아니요, 800 GB만 사용할 수 있습니다. 랙 장애 도메인에서 각 처와 중복 된 땅이 서로 다른 랙에 있는 2 방향 미러 구성이 있는지 확인 해야 합니다.
  
@@ -58,7 +58,7 @@ ms.locfileid: "71402798"
  
 ## <a name="is-there-a-calculator-that-shows-the-exact-size-of-the-disks-that-are-being-set-aside-for-cache-capacity-and-resiliency-that-would-enable-me-to-plan-better"></a>더 나은 계획을 할 수 있는 캐시, 용량 및 복원 력을 위해 따로 설정 되는 디스크의 정확한 크기를 보여 주는 계산기가 있나요?
 
-저장소 공간 계산기를 사용 하 여 계획을 지원할 수 있습니다. 에서 http://aka.ms/s2dcalc 사용할 수 있습니다.
+저장소 공간 계산기를 사용 하 여 계획을 지원할 수 있습니다. https://aka.ms/s2dcalc 에서 사용할 수 있습니다.
  
 ## <a name="what-is-the-best-configuration-that-you-would-recommend-when-configuring-6-servers-and-3-racks"></a>6 대의 서버와 3 개의 랙을 구성할 때 권장 되는 구성은 무엇 인가요?
 
@@ -74,17 +74,17 @@ Get-PhysicalDisk -SerialNumber <SerialNumber> | Enable-StorageMaintenanceMode
 
 ## <a name="is-storage-spaces-direct-supported-on-my-hardware"></a>하드웨어에서 스토리지 공간 다이렉트 지원 되나요?
 
-하드웨어 공급 업체에 문의 하 여 지원을 확인 하는 것이 좋습니다. 하드웨어 공급 업체는 해당 하드웨어에서 솔루션을 테스트 하 고 지원 여부에 대 한 설명을 제공 합니다. 예를 들어,이 문서를 작성할 당시에는 R730/R730xd/R630와 같은 서버에서 드라이브 슬롯이 8 개를 초과 하는 서버는 SES를 지원할 수 있으며 스토리지 공간 다이렉트와 호환 됩니다. Dell은 스토리지 공간 다이렉트를 사용 하는 HBA330만 지원 합니다. R620는 SES를 지원 하지 않으며 스토리지 공간 다이렉트와 호환 되지 않습니다.
+하드웨어 공급 업체에 문의 하 여 지원을 확인 하는 것이 좋습니다. 하드웨어 공급 업체는 해당 하드웨어에서 솔루션을 테스트 하 고 지원 여부에 대 한 설명을 제공 합니다. For example, at the time of this writing, servers such as R730 / R730xd / R630 that have more than 8 drive slots can support SES and are compatible with Storage Spaces Direct. Dell supports only the HBA330 with Storage Spaces Direct. R620 does not support SES and is not compatible with Storage Spaces Direct.
 
-하드웨어 지원 정보에 대 한 자세한 내용을 보려면 다음 웹 사이트로 이동 하세요. Windows Server 카탈로그
+For more hardware support information, go to the following website: Windows Server Catalog
  
-## <a name="how-does-storage-spaces-direct-make-use-of-ses"></a>에서 SES를 사용 하 스토리지 공간 다이렉트 방법은 무엇 인가요?
+## <a name="how-does-storage-spaces-direct-make-use-of-ses"></a>How does Storage Spaces Direct make use of SES?
 
-스토리지 공간 다이렉트는 SES (SCSI 엔클로저 서비스) 매핑을 사용 하 여 데이터 줄임 및 메타 데이터가 장애 도메인 전체에 분산 되어 있는지 확인 합니다. 하드웨어에서 SES를 지원 하지 않는 경우 인클로저 매핑은 없으며 데이터 배치가 복원 되지 않습니다.
+Storage Spaces Direct uses SCSI Enclosure Services (SES) mapping to make sure that slabs of data and the metadata is spread across the fault domains in a resilient fashion. If the hardware does not support SES, there is no mapping of the enclosures, and the data placement is not resilient.
  
-## <a name="what-command-can-you-use-to-check-the-physical-extent-for-a-virtual-disk"></a>가상 디스크의 물리적 범위를 확인 하는 데 사용할 수 있는 명령은 무엇입니까?
+## <a name="what-command-can-you-use-to-check-the-physical-extent-for-a-virtual-disk"></a>What command can you use to check the physical extent for a virtual disk?
   
-이것:
+This one:
 
 ```powershell
 get-virtualdisk -friendlyname “xyz” | get-physicalextent

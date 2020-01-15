@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.date: 11/21/2019
 ms.localizationpriority: medium
 ms.prod: windows-server
-ms.openlocfilehash: 9a116cc9d86dfe0bb4450efa0f18580a062af722
-ms.sourcegitcommit: 7c7fc443ecd0a81bff6ed6dbeeaf4f24582ba339
+ms.openlocfilehash: ddc8eea67cde9d6677836af1201e169c911e77e0
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74903722"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950487"
 ---
 # <a name="manage-servers-with-windows-admin-center"></a>Windows 관리 센터를 사용 하 여 서버 관리
 
@@ -21,7 +21,7 @@ ms.locfileid: "74903722"
 
 > [!Tip]
 > Windows Admin Center를 처음 사용하시나요?
-> [Windows Admin Center에 대해 자세히 알아보거나](../understand/windows-admin-center.md)[지금 다운로드](https://aka.ms/windowsadmincenter)하세요.
+> [Windows 관리 센터에 대해 다운로드 하거나 자세히 알아보세요](../overview.md).
 
 ## <a name="managing-windows-server-machines"></a>Windows Server 컴퓨터 관리
 
@@ -53,13 +53,13 @@ Windows 관리 센터에 서버를 추가 하려면 다음을 수행 합니다.
 | [Active Directory](#active-directory-preview) | Active Directory 관리 |
 | [Backup](#backup) | Azure Backup 보기 및 구성 |  
 | [인증서](#certificates) | 인증서 보기 및 수정 |
-| [SSIS 로그 구성](#containers) | 컨테이너 보기 |
+| [컨테이너](#containers) | 컨테이너 보기 |
 | [디바이스](#devices) | 장치 보기 및 수정 |
 | [DHCP](#dhcp) | DHCP 서버 구성 보기 및 관리 |
 | [DNS](#dns) | DNS 서버 구성 보기 및 관리 |
 | [이벤트](#events) | 이벤트 보기 |
 | [파일](#files) | 파일 및 폴더 찾아보기 |
-| [Firewall](#firewall) | 방화벽 규칙 보기 및 수정 |
+| [방화벽](#firewall) | 방화벽 규칙 보기 및 수정 |
 | [설치 된 앱](#installed-apps) | 설치 된 앱 보기 및 제거 |
 | [로컬 사용자 및 그룹](#local-users-and-groups) | 로컬 사용자 및 그룹 보기 및 수정 |
 | [Network](#network) | 네트워크 장치 보기 및 수정 |
@@ -77,7 +77,7 @@ Windows 관리 센터에 서버를 추가 하려면 다음을 수행 합니다.
 | [저장소 마이그레이션 서비스](#storage-migration-service) | Azure 또는 Windows Server 2019로 서버 및 파일 공유 마이그레이션 |
 | [스토리지 복제본](#storage-replica) | 저장소 복제본을 사용 하 여 서버 간 저장소 복제 관리 |
 | [시스템 인사이트](#system-insights) | 시스템 정보를 통해 서버 작동에 대 한 통찰력을 높일 수 있습니다. |
-| [Updates](#updates) | 설치 된 보기 및 새 업데이트 확인 |
+| [업데이트](#updates) | 설치 된 보기 및 새 업데이트 확인 |
 | [Virtual Machines](manage-virtual-machines.md) | 가상 컴퓨터 보기 및 관리 |
 | [가상 스위치](#virtual-switches) | 가상 스위치 보기 및 관리 |
 
@@ -284,7 +284,7 @@ Windows 관리 센터에 서버를 추가 하려면 다음을 수행 합니다.
 
 [**로컬 사용자 및 그룹에 대 한 사용자 의견 및 제안 된 기능 보기**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BLocal%20users%20and%20Groups%5D)
 
-## <a name="network"></a>네트워크
+## <a name="network"></a>Network (네트워크)
 
 **네트워크** 를 사용 하면 컴퓨터 또는 서버에서 네트워크 장치 및 설정을 관리할 수 있습니다.
 

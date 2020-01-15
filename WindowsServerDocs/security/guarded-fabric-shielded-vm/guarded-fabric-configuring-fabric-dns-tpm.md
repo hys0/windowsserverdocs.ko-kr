@@ -8,23 +8,23 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: fb75bc182b0b40a57d7ebec0005b6557d08a8103
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 78e45ae752b6bae67d4fbace18150323ae956492
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386733"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949792"
 ---
->적용 대상: Windows server 2019, Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server 2019, Windows Server (반기 채널), Windows Server 2016
 
 [!INCLUDE [Configure fabric DNS](../../../includes/guarded-fabric-configure-fabric-dns.md)] 
 
-## <a name="next-step"></a>다음 단계
+# <a name="next-step"></a>다음 단계
 
 > [!div class="nextstepaction"]
 > [HTTPS 구성](guarded-fabric-configure-hgs-https.md)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [보호 되는 호스트가 될 Hyper-v 호스트의 구성 단계](guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts.md)
 - [보호 된 패브릭 및 보호 된 Vm에 대 한 배포 작업](guarded-fabric-deploying-hgs-overview.md#deployment-tasks-for-guarded-fabrics-and-shielded-vms)

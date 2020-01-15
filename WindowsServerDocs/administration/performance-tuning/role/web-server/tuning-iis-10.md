@@ -7,12 +7,12 @@ ms.topic: landing-page
 ms.author: DavSo; Ericam; YaShi
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 9563a3f3628851a0cf7b3cb79990db8c2141faa4
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 8b86bf779a4ea9d67f959dacf125a98a8e26a729
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71384954"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75947131"
 ---
 # <a name="tuning-iis-100"></a>IIS 10.0 조정
 
@@ -44,7 +44,7 @@ HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Http\Parameters
 
 **참고**  HTTP 서비스가 이미 실행 중인 경우 변경 내용을 적용 하려면 다시 시작 해야 합니다.
 
-» 
+Â 
 
 ## <a name="cache-management-settings"></a>캐시 관리 설정
 
@@ -64,7 +64,7 @@ HTTP.SYS에서 제공 하는 장점 중 하나는 커널 모드 캐시입니다.
 
     **참고** 크기를 지정 하면 최대값이 설정 되며, 시스템에서 캐시 크기를 최대 설정 크기로 늘릴 수 없습니다.
 
-    » 
+    Â 
 
 -   **Urimaxuribytes** 기본값: 262144 바이트 (256 KB)
 
@@ -142,9 +142,9 @@ HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\InetInfo\Parameters\ThreadP
 
 **System.webserver/캐싱**
 
-|특성|설명|기본값|
+|특성|설명|Default|
 |--- |--- |--- |
-|Enabled|**False**로 설정 된 경우 사용자 모드 IIS 캐시를 사용 하지 않도록 설정 합니다. 캐시 적중률이 매우 작은 경우 캐시 코드 경로와 관련 된 오버 헤드를 방지 하기 위해 캐시를 완전히 사용 하지 않도록 설정할 수 있습니다. 사용자 모드 캐시를 사용 하지 않도록 설정 해도 커널 모드 캐시가 사용 되지 않습니다.|True|
+|설정됨|**False**로 설정 된 경우 사용자 모드 IIS 캐시를 사용 하지 않도록 설정 합니다. 캐시 적중률이 매우 작은 경우 캐시 코드 경로와 관련 된 오버 헤드를 방지 하기 위해 캐시를 완전히 사용 하지 않도록 설정할 수 있습니다. 사용자 모드 캐시를 사용 하지 않도록 설정 해도 커널 모드 캐시가 사용 되지 않습니다.|True|
 |enableKernelCache|**False**로 설정 된 경우 커널 모드 캐시를 사용 하지 않도록 설정 합니다.|True|
 |maxCacheSize|IIS 사용자 모드 캐시 크기를 지정 된 크기 (Mb)로 제한 합니다. IIS는 사용 가능한 메모리에 따라 기본값을 조정 합니다. 자주 액세스 하는 파일 집합의 크기와 RAM 또는 IIS 프로세스 주소 공간의 크기를 기준으로 값을 신중 하 게 선택 합니다.|0|
 |maxResponseSize|지정 된 크기까지 파일을 캐시 합니다. 실제 값은 데이터 집합에 있는 가장 큰 파일의 수와 크기와 사용 가능한 RAM에 따라 달라 집니다. 자주 요청 되는 크고 많은 파일을 캐시 하면 CPU 사용량, 디스크 액세스 및 관련 대기 시간을 줄일 수 있습니다.|262144|
@@ -157,16 +157,16 @@ HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\InetInfo\Parameters\ThreadP
 
 **System.webserver/httpCompression**
 
-|특성|설명|기본값|
+|특성|설명|Default|
 |--- |--- |--- |
 |staticCompression-EnableCpuUsage<br><br>staticCompression-DisableCpuUsage<br><br>dynamicCompression-EnableCpuUsage<br><br>dynamicCompression-DisableCpuUsage|현재 백분율 CPU 사용량이 지정 된 제한 보다 높거나 낮은 경우 압축을 사용 하거나 사용 하지 않도록 설정 합니다.<br><br>IIS 7.0 부터는 안정적인 상태 CPU가 비활성화 임계값을 초과 하는 경우 압축이 자동으로 사용 하지 않도록 설정 됩니다. CPU가 사용 임계값 아래로 떨어지면 압축이 사용 됩니다.|50, 100, 50 및 90 각각|
-|디렉터리나|압축 된 버전의 정적 파일을 일시적으로 저장 하 고 캐시 하는 디렉터리를 지정 합니다. 자주 액세스 하는 경우이 디렉터리를 시스템 드라이브 밖으로 이동 하는 것이 좋습니다.|%SystemDrive%\inetpub\temp\IIS 임시 압축 파일|
+|디렉터리|압축 된 버전의 정적 파일을 일시적으로 저장 하 고 캐시 하는 디렉터리를 지정 합니다. 자주 액세스 하는 경우이 디렉터리를 시스템 드라이브 밖으로 이동 하는 것이 좋습니다.|%SystemDrive%\inetpub\temp\IIS 임시 압축 파일|
 |doDiskSpaceLimiting|모든 압축 파일이 차지할 수 있는 디스크 공간의 크기에 대 한 제한이 있는지 여부를 지정 합니다. 압축 된 파일은 **디렉터리** 특성으로 지정 된 압축 디렉터리에 저장 됩니다.|True|
 |maxDiskSpaceUsage|압축 된 파일이 압축 디렉터리에서 차지할 수 있는 디스크 공간의 바이트 수를 지정 합니다.<br><br>압축 된 모든 콘텐츠의 전체 크기가 너무 큰 경우이 설정을 늘려야 할 수 있습니다.|100MB|
 
 **System.webserver/urlCompression**
 
-|특성|설명|기본값|
+|특성|설명|Default|
 |--- |--- |--- |
 |doStaticCompression|정적 콘텐츠를 압축할지 여부를 지정 합니다.|True|
 |doDynamicCompression|동적 콘텐츠를 압축할지 여부를 지정 합니다.|True|
@@ -186,7 +186,7 @@ Applicationhost.config의 위치 태그 내에서 구성을 사용자 지정 하
 
 **System.webserver/defaultDocument**
 
-|특성|설명|기본값|
+|특성|설명|Default|
 |--- |--- |--- |
 |enabled|기본 문서를 사용 하도록 지정 합니다.|True|
 |&lt;files&gt; 요소|기본 문서로 구성 된 파일 이름을 지정 합니다.|기본 목록은 default.htm, Default .asp, index.htm, index.htm, Iisstart 및 Default.aspx입니다 (기본값).|
@@ -199,16 +199,16 @@ CentralLogFileMode 특성을 CentralBinary로 설정 하 고 **enabled** 특성�
 
 **system.webserver/log**
 
-|특성|설명|기본값|
+|특성|설명|Default|
 |--- |--- |--- |
 |centralLogFileMode|서버에 대 한 로깅 모드를 지정 합니다. 이 값을 CentralBinary로 변경 하 여 중앙 이진 로깅을 사용 하도록 설정 합니다.|사이트|
 
 **system.webserver/log/centralBinaryLogFile**
 
-|특성|설명|기본값|
+|특성|설명|Default|
 |--- |--- |--- |
 |enabled|중앙 이진 로깅을 사용할지 여부를 지정 합니다.|False|
-|디렉터리나|로그 항목이 기록 될 디렉터리를 지정 합니다.|%SystemDrive%\inetpub\logs\LogFiles|
+|디렉터리|로그 항목이 기록 될 디렉터리를 지정 합니다.|%SystemDrive%\inetpub\logs\LogFiles|
 
 
 ## <a name="application-and-site-tunings"></a>응용 프로그램 및 사이트 응용 프로그램
@@ -217,14 +217,14 @@ CentralLogFileMode 특성을 CentralBinary로 설정 하 고 **enabled** 특성�
 
 **system.webserver/applicationPools/applicationPoolDefaults**
 
-|특성|설명|기본값|
+|특성|설명|Default|
 |--- |--- |--- |
 |queueLength|이후 요청을 거부 하기 전에 응용 프로그램 풀에 대해 큐에 대기 중인 요청 수를 http.sys에 나타냅니다. 이 속성의 값이 초과 되 면 IIS에서 503 오류가 발생 한 이후의 요청을 거부 합니다.<br><br>503 오류가 관찰 되는 경우 대기 시간이 긴 백 엔드 데이터 저장소와 통신 하는 응용 프로그램에 대해이를 증가 시키는 것이 좋습니다.|1000|
 |enable32BitAppOnWin64|True로 설정 하면 64 비트 프로세서가 있는 컴퓨터에서 32 비트 응용 프로그램을 실행할 수 있습니다.<br><br>메모리 소비가 중요 한 경우 32 비트 모드를 사용 하도록 설정 하는 것이 좋습니다. 포인터 크기와 명령 크기가 작으므로 32 비트 응용 프로그램은 64 비트 응용 프로그램 보다 적은 메모리를 사용 합니다. 64 비트 컴퓨터에서 32 비트 응용 프로그램을 실행 하는 경우의 단점은 사용자 모드 주소 공간이 4gb로 제한 된다는 것입니다.|False|
 
 **system.webserver/sites/VirtualDirectoryDefault**
 
-|특성|설명|기본값|
+|특성|설명|Default|
 |--- |--- |--- |
 |Allowsubdirconfig 있어서|IIS가 현재 수준 (True) 보다 낮은 콘텐츠 디렉터리의 web.config 파일을 찾을 지 아니면 현재 수준 (False) 보다 낮은 콘텐츠 디렉터리의 web.config 파일을 찾을 수 없는지를 지정 합니다. 가상 디렉터리에만 구성을 허용 하는 간단한 제한 사항을 적용 하 여 IISÂ은 **/&lt;이름&gt;** 를 사용 하는 경우를 제외 하 고 구성 파일을 찾을 수 없다는 것을 알 수 있습니다. 추가 파일 작업을 건너뛰면 고정 콘텐츠를 임의로 액세스할 수 있는 웹 사이트의 성능이 크게 향상 될 수 있습니다.|True|
 
@@ -244,7 +244,7 @@ Applicationhost.config에서 모듈을 제거 하려면 system.webserver/globalM
 
 **System.webserver/asp/cache**
 
-|특성|설명|기본값|
+|특성|설명|Default|
 |--- |--- |--- |
 |diskTemplateCacheDirectory|메모리 내 캐시가 오버플로될 때 ASP가 컴파일된 템플릿을 저장 하기 위해 사용 하는 디렉터리의 이름입니다.<br><br>권장 사항: 과도 하 게 사용 되지 않는 디렉터리 (예: 운영 체제, IIS 로그 또는 기타 자주 액세스 하는 콘텐츠와 공유 되지 않음)로 설정 합니다.|%SystemDrive%\inetpub\temp\ASP 컴파일된 템플릿|
 |maxDiskTemplateCacheFiles|디스크에 캐시할 수 있는 컴파일된 ASP 템플릿의 최대 수를 지정 합니다.<br><br>권장 사항: 최 댓 값을 0x7FFFFFFF로 설정 합니다.|2000|
@@ -253,13 +253,13 @@ Applicationhost.config에서 모듈을 제거 하려면 system.webserver/globalM
 
 **System.webserver/asp/limits**
 
-|특성|설명|기본값|
+|특성|설명|Default|
 |--- |--- |--- |
-|processorThreadMax|ASP에서 만들 수 있는 프로세서당 최대 작업자 스레드 수를 지정 합니다. 현재 설정이 로드를 처리 하기에 충분 하지 않은 경우 증가 합니다 .이로 인해 요청을 처리 하는 동안 또는 CPU 리소스가 사용 되는 경우 오류가 발생할 수 있습니다.|25|
+|processorThreadMax|ASP에서 만들 수 있는 프로세서당 최대 작업자 스레드 수를 지정 합니다. 현재 설정이 로드를 처리 하기에 충분 하지 않은 경우 증가 합니다 .이로 인해 요청을 처리 하는 동안 또는 CPU 리소스가 사용 되는 경우 오류가 발생할 수 있습니다.|25일|
 
 **System.webserver/asp/comPlus**
 
-|특성|설명|기본값|
+|특성|설명|Default|
 |--- |--- |--- |
 |executeInMta|IIS에서 ASP 콘텐츠를 제공 하는 동안 오류 또는 오류가 검색 되는 경우 **True** 로 설정 합니다. 예를 들어 각 사이트가 자체 작업자 프로세스에서 실행 되는 여러 격리 된 사이트를 호스트 하는 경우이 문제가 발생할 수 있습니다. 오류는 일반적으로 이벤트 뷰어의 COM +에서 보고 됩니다. 이 설정은 ASP에서 다중 스레드 아파트 모델을 사용 하도록 설정 합니다.|False|
 
@@ -301,9 +301,9 @@ IIS 작업자 프로세스를 재활용 하는 옵션을 구성 하 고, 사용�
 
 **system.webserver/applicationPools/ApplicationPoolDefaults/재활용/periodicRestart**
 
-|특성|설명|기본값|
+|특성|설명|Default|
 |--- |--- |--- |
-|메모리|가상 메모리 소비가 지정 된 한도 (kb)를 초과 하는 경우 프로세스 재활용을 사용 하도록 설정 합니다. 2gb 주소 공간이 작은 32 비트 컴퓨터의 경우이 설정을 유용 하 게 사용할 수 있습니다. 메모리 부족 오류로 인해 실패 한 요청을 방지 하는 데 도움이 될 수 있습니다.|0|
+|memory|가상 메모리 소비가 지정 된 한도 (kb)를 초과 하는 경우 프로세스 재활용을 사용 하도록 설정 합니다. 2gb 주소 공간이 작은 32 비트 컴퓨터의 경우이 설정을 유용 하 게 사용할 수 있습니다. 메모리 부족 오류로 인해 실패 한 요청을 방지 하는 데 도움이 될 수 있습니다.|0|
 |privateMemory|개인 메모리 할당이 지정 된 한도 (kb)를 초과 하는 경우 프로세스 재활용을 사용 하도록 설정 합니다.|0|
 |requests|특정 요청 수 후에 프로세스 재활용을 사용 하도록 설정 합니다.|0|
 |시간|지정 된 기간 후에 프로세스 재활용을 사용 하도록 설정 합니다.|29:00:00|
@@ -319,7 +319,7 @@ Windows Server 2012 r 2부터 IIS는 시간 동안 유휴 상태가 된 후 (IIS
 
 **참고**  메모리 누수가 있는 코드와 같이 불안정 한 코드를 실행 하거나 불안정 한 경우 사이트를 유휴 상태에서 종료 하도록 설정 하는 것은 코드 버그를 수정 하는 데 도움이 될 수 있습니다. 권장 사항이 아니지만 고속 처리에서이 기능을 정리 메커니즘으로 사용 하는 것이 좋지만, 더 영구적인 솔루션이 작동 하는 것이 더 좋을 수 있습니다.\]
 
-» 
+Â 
 
 고려해 야 할 또 다른 요소는 사이트에서 많은 메모리를 사용 하는 경우 컴퓨터가 작업자 프로세스에서 사용 하는 데이터를 디스크에 써야 하기 때문에 일시 중단 프로세스 자체에서 부담을 취하는 것입니다. 작업자 프로세스에서 많은 메모리 청크를 사용 하는 경우 일시 중지 하는 것이 백업이 시작 될 때까지 대기 하는 것 보다 비용이 더 많이 들 수 있습니다.
 
@@ -329,7 +329,7 @@ Windows Server 2012 r 2부터 IIS는 시간 동안 유휴 상태가 된 후 (IIS
 
 특정 사용자가 사이트에 연결 되 면 일반적으로 최소한 한 번 이상 요청을 하 고 추가 요청을 수행 하므로 일일 요청 수를 계산 하는 것은 실제 트래픽 패턴을 정확 하 게 반영 하지 않을 수 있습니다. 보다 정확한 정보를 얻기 위해 Microsoft Excel과 같은 도구를 사용 하 여 요청 사이의 평균 시간을 계산할 수도 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
-||요청 URL|요청 시간|삼각|
+||요청 URL|요청 시간|Delta|
 |--- |--- |--- |--- |
 |1|/SourceSilverLight/Geosource.web/grosource.html|10:01||
 |2|/SourceSilverLight/Geosource.web/sliverlight.js|10:10|0:09|
@@ -402,6 +402,6 @@ IIS 성능에 영향을 줄 수 있는 문제는 다음과 같습니다.
 
     성능상의 이유로 IIS에서는 CGI 응용 프로그램을 사용 하 여 요청을 처리 하지 않는 것이 좋습니다. 자주 발생 하는 CGI 프로세스 만들기 및 삭제는 상당한 오버 헤드를 포함 합니다. 더 나은 대안은 FastCGI, ISAPI 응용 프로그램 스크립트 및 ASP 또는 ASP.NET 스크립트를 사용 하는 것입니다. 이러한 각 옵션에 대해 격리를 사용할 수 있습니다.
 
-# <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고 항목
 - [웹 서버 성능 조정](index.md) 
 - [HTTP 1.1/2 튜닝](http-performance.md)

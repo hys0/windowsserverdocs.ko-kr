@@ -7,16 +7,16 @@ ms.assetid: 392af37f-a02d-4d40-a25d-384211cbbfdd
 manager: dongill
 author: nirb-ms
 ms.technology: security-guarded-fabric
-ms.openlocfilehash: c439a53abea07041e69e50d5d5148dae95243265
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 255429960735d70ff3a4d260bd9090b95882b6bd
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386433"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949777"
 ---
 # <a name="guarded-fabric-and-shielded-vm-planning-guide-for-tenants"></a>테 넌 트 용 보호 된 패브릭 및 차폐 VM 계획 가이드
 
->적용 대상: Windows server 2019, Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server 2019, Windows Server (반기 채널), Windows Server 2016
 
 이 항목에서는 규정 준수 및 보안을 위해 Vm (가상 머신)을 보호 하려는 VM 소유자에 초점을 맞춘 것입니다. Vm 소유자는 호스팅 공급자의 보호 된 패브릭에서 실행 되는지 아니면 개인 보호 된 패브릭에서 실행 되는지에 관계 없이, VM 소유자는 보호 된 Vm의 보안 수준을 제어 해야 합니다. 여기에는 필요한 경우 암호를 해독 하는 기능이 유지 됩니다.
 
@@ -74,7 +74,7 @@ Vm이 보호 되는지, 아니면 암호화가 지원 되는지에 따라 VM을 
 
 **필요한 보호 데이터 파일 수는 몇 개입니까?** 단일 보호 데이터 파일을 사용 하 여 보호 된 모든 VM을 만들 수 있습니다. 그러나 지정 된 차폐 VM에서 4 개의 항목이 서로 다른 경우에는 추가 보호 데이터 파일이 필요 합니다. 예를 들어 해당 초기 관리자 암호 및 RDP 인증서가 다르기 때문에 IT 부서에 대 한 보호 데이터 파일 하 나와 HR 학과에 대 한 다른 보호 데이터 파일이 있을 수 있습니다.
 
-각 보호 된 VM에 대해 별도의 보호 데이터 파일을 사용 하는 것이 가능 하지만 적절 한 선택은 아니며 적절 한 이유로 수행 해야 합니다. 예를 들어 보호 된 모든 VM에 다른 관리자 암호가 필요한 경우 [Microsoft의 LAPS (로컬 관리자 암호 솔루션)](https://www.microsoft.com/en-us/download/details.aspx?id=46899)와 같은 암호 관리 서비스 또는 도구를 대신 사용 하는 것이 좋습니다.
+각 보호 된 VM에 대해 별도의 보호 데이터 파일을 사용 하는 것이 가능 하지만 적절 한 선택은 아니며 적절 한 이유로 수행 해야 합니다. 예를 들어 보호 된 모든 VM에 다른 관리자 암호가 필요한 경우 [Microsoft의 LAPS (로컬 관리자 암호 솔루션)](https://www.microsoft.com/download/details.aspx?id=46899)와 같은 암호 관리 서비스 또는 도구를 대신 사용 하는 것이 좋습니다.
 
 ## <a name="creating-a-shielded-vm-on-a-virtualization-fabric"></a>가상화 패브릭에서 보호 된 VM 만들기
 

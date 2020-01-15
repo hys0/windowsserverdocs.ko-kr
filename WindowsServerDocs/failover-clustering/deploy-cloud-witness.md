@@ -9,14 +9,14 @@ ms.topic: article
 author: JasonGerend
 ms.date: 01/18/2019
 description: Microsoft Azure를 사용 하 여 클라우드에서 Windows Server 장애 조치 (Failover) 클러스터에 대 한 미러링 모니터 서버를 호스트 하는 방법 즉, 클라우드 감시를 배포 하는 방법을 설명 합니다.
-ms.openlocfilehash: 1f38a1a436cfced8637b743817dc1b3d150f7fa6
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: ad5ff47a72319fee7650d1d9c0d0616cfaaa22d3
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71369884"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75948171"
 ---
-# <a name="deploy-a-cloud-witness-for-a-failover-cluster"></a>장애 조치(failover) 클러스터용 클라우드 감시 배포
+# <a name="deploy-a-cloud-witness-for-a-failover-cluster"></a>장애 조치 클러스터용 클라우드 감시 배포
 
 > 적용 대상: Windows Server 2019, Windows Server 2016
 
@@ -26,7 +26,7 @@ ms.locfileid: "71369884"
 
 그림 1에서는 Windows Server 2016를 사용 하는 다중 사이트 스트레치 장애 조치 (Failover) 클러스터 쿼럼 구성을 보여 줍니다. 이 예제 구성 (그림 1)에는 2 개의 데이터 센터 (사이트 라고 함)에 2 개의 노드가 있습니다. 클러스터가 2 개 이상의 데이터 센터에 걸쳐 있을 수 있습니다. 또한 각 데이터 센터에는 노드가 2 개 이상 있을 수 있습니다. 이 설정의 일반적인 클러스터 쿼럼 구성 (자동 장애 조치 (failover) SLA)은 각 노드에 투표를 제공 합니다. 데이터 센터 중 하나에서 정전을 경험 하는 경우에도 클러스터를 계속 실행할 수 있도록 쿼럼 감시에 대 한 추가 응답이 제공 됩니다. 수학은 단순 합니다. 5 개의 총 투표를 수행 하 고 클러스터에서 실행을 유지 하는 데 3 개의 투표를 해야 합니다.  
 
-2 개의 다른 사이트(media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_1.png "파일 공유 감시") ![에 2 개의 노드가 있는 세 번째 별도 사이트의 파일 공유 감시]  
+![2 개의 다른 사이트에 2 개의 노드가 있는 세 번째 별도 사이트의 파일 공유 감시](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_1.png "파일 공유 감시")  
 **그림 1: 파일 공유 감시를 쿼럼 감시로 사용**  
 
 한 데이터 센터에서 정전이 발생 한 경우 다른 데이터 센터의 클러스터가 계속 실행 되도록 하려면 두 데이터 센터 이외의 위치에 쿼럼 감시를 호스트 하는 것이 좋습니다. 이는 일반적으로 쿼럼 감시 (파일 공유 감시)로 사용 되는 파일 공유를 지 원하는 파일 서버를 호스팅하는 세 번째 별도의 데이터 센터 (사이트)가 필요 함을 의미 합니다.  
@@ -75,15 +75,15 @@ Windows Server 2012 R2부터 클러스터가 감시 응답을 자동으로 관�
 
 ### <a name="to-create-an-azure-storage-account"></a>Azure 저장소 계정을 만들려면
 
-1. [Azure Portal](http://portal.azure.com)에 로그인 합니다.
-2. 허브 메뉴에서 새로 만들기-> 데이터 + 저장소-> 저장소 계정을 선택 합니다.
+1. [Azure Portal](https://portal.azure.com)에 로그인합니다.
+2. 허브 메뉴에서 새로 만들기 -> 데이터 + 저장소 -> 저장소 계정을 선택합니다.
 3. 저장소 계정 만들기 페이지에서 다음을 수행 합니다.
-    1. 저장소 계정의 이름을 입력 합니다.
+    1. 스토리지 계정의 이름을 입력합니다.
     <br>Storage 계정 이름은 3자에서 24자 사이여야 하고 숫자 및 소문자만 포함할 수 있습니다. 저장소 계정 이름은 Azure 내에서 고유 해야 합니다.
         
     2. **계정 종류**에 대해 **범용**을 선택 합니다.
     <br>클라우드 감시에는 Blob storage 계정을 사용할 수 없습니다.
-    3. **성능**으로 **표준**을 선택 합니다.
+    3. **성능**은 **표준**을 선택합니다.
     <br>클라우드 감시에는 Azure Premium Storage를 사용할 수 없습니다.
     2. **복제**에 대해 **LRS (로컬 중복 저장소)** 를 선택 합니다.
     <br>장애 조치 (Failover) 클러스터링은 데이터를 읽을 때 일관성을 보장 해야 하는 조정 지점으로 blob 파일을 사용 합니다. 따라서 **복제** 유형의 경우 **로컬 중복 저장소** 를 선택 해야 합니다.

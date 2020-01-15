@@ -10,12 +10,12 @@ ms.author: pashort, v-tea
 author: shortpatti
 ms.localizationpriority: medium
 ms.reviewer: deverette
-ms.openlocfilehash: d186946c0d4490201b7989ba8d418f9c667aa6e4
-ms.sourcegitcommit: e817a130c2ed9caaddd1def1b2edac0c798a6aa2
+ms.openlocfilehash: 73d64cd143b7bbd13e0eb9bb5fadfbb1e7c65416
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74945315"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950444"
 ---
 # <a name="advanced-features-of-always-on-vpn"></a>Always On VPN의 고급 기능
 
@@ -33,7 +33,7 @@ ms.locfileid: "74945315"
 |옵션  |설명  |
 |---------|---------|
 |서버 복원 력 및 부하 분산     |고가용성이 필요 하거나 많은 수의 요청을 지 원하는 환경에서 NPS (네트워크 정책 서버)를 실행 하는 여러 서버 간에 부하 분산을 사용 하 고를 사용 하 여 원격 액세스의 성능 및 복원 력을 향상 시킬 수 있습니다. 원격 액세스 서버 클러스터링.<p>관련 문서:<ul><li>[NPS 프록시 서버 부하 분산](../../../../../networking/technologies/nps/nps-manage-proxy-lb.md)</li><li>[클러스터에 원격 액세스 배포](https://docs.microsoft.com/windows-server/remote/remote-access/ras/cluster/deploy-remote-access-in-cluster)</li></ul>        |
-|지리적 사이트 복원 력     |IP 기반 지리적 위치에 대해 Windows Server 2016에서 DNS와 함께 글로벌 Traffic Manager를 사용할 수 있습니다. 보다 강력한 지리적 부하 분산을 위해 Microsoft Azure Traffic Manager와 같은 글로벌 서버 부하 분산 솔루션을 사용할 수 있습니다.<p>관련 문서:<ul><li>[A Traffic Manager áttekintése](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview)</li><li>[Microsoft Azure Traffic Manager](https://azure.microsoft.com/services/traffic-manager)</li></ul>         |
+|지리적 사이트 복원 력     |IP 기반 지리적 위치에 대해 Windows Server 2016에서 DNS와 함께 글로벌 Traffic Manager를 사용할 수 있습니다. 보다 강력한 지리적 부하 분산을 위해 Microsoft Azure Traffic Manager와 같은 글로벌 서버 부하 분산 솔루션을 사용할 수 있습니다.<p>관련 문서:<ul><li>[Traffic Manager 개요](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview)</li><li>[Microsoft Azure Traffic Manager](https://azure.microsoft.com/services/traffic-manager)</li></ul>         |
 
 ## <a name="advanced-authentication"></a>고급 인증
 
@@ -41,7 +41,7 @@ ms.locfileid: "74945315"
 
 |옵션  |설명  |
 |---------|---------|
-|비즈니스용 Windows Hello     |Windows 10에서 비즈니스용 Windows Hello는 Pc 및 모바일 장치에서 강력한 2 단계 인증을 제공 하 여 암호를 바꿉니다. 이 인증은 장치에 연결 되 고 생체 인식 또는 PIN (개인 식별 번호)을 사용 하는 새로운 유형의 사용자 자격 증명으로 구성 됩니다.<p>Windows 10 VPN 클라이언트는 비즈니스용 Windows Hello와 호환 됩니다. 사용자가 제스처를 사용 하 여 로그인 한 후 VPN 연결은 인증서 기반 인증에 비즈니스용 Windows Hello 인증서를 사용 합니다.<p>관련 문서:<ul><li>[Vállalati Windows Hello](https://docs.microsoft.com/windows/access-protection/hello-for-business/hello-identity-verification)</li><li>기술 사례 연구: [windows 10에서 비즈니스용 Windows Hello로 원격 액세스 사용](https://msdn.microsoft.com/library/mt728163.aspx)</li></ul>         |
+|비즈니스용 Windows Hello     |Windows 10에서 비즈니스용 Windows Hello는 Pc 및 모바일 장치에서 강력한 2 단계 인증을 제공 하 여 암호를 바꿉니다. 이 인증은 장치에 연결 되 고 생체 인식 또는 PIN (개인 식별 번호)을 사용 하는 새로운 유형의 사용자 자격 증명으로 구성 됩니다.<p>Windows 10 VPN 클라이언트는 비즈니스용 Windows Hello와 호환 됩니다. 사용자가 제스처를 사용 하 여 로그인 한 후 VPN 연결은 인증서 기반 인증에 비즈니스용 Windows Hello 인증서를 사용 합니다.<p>관련 문서:<ul><li>[비즈니스용 Windows Hello](https://docs.microsoft.com/windows/access-protection/hello-for-business/hello-identity-verification)</li><li>기술 사례 연구: [windows 10에서 비즈니스용 Windows Hello로 원격 액세스 사용](https://msdn.microsoft.com/library/mt728163.aspx)</li></ul>         |
 |Azure MFA (다단계 인증)     |Azure MFA에는 Windows VPN 인증 메커니즘과 통합할 수 있는 클라우드 및 온-프레미스 버전이 있습니다.<p>이 메커니즘의 작동 방식에 대 한 자세한 내용은 [Azure Multi-Factor Authentication 서버와 RADIUS 인증 통합](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-server-radius)을 참조 하세요.         |
 
 ## <a name="advanced-vpn-features"></a>고급 VPN 기능
@@ -50,9 +50,9 @@ ms.locfileid: "74945315"
 
 |옵션  |설명  |
 |---------|---------|
-|Forgalomszűrés     |VPN 클라이언트가 액세스할 수 있는 응용 프로그램 선택을 적용 해야 하는 경우 VPN 트래픽 필터를 사용 하도록 설정할 수 있습니다.<p>자세한 내용은 [VPN 보안 기능](https://docs.microsoft.com/windows/access-protection/vpn/vpn-security-features)을 참조 하세요.         |
+|트래픽 필터링     |VPN 클라이언트가 액세스할 수 있는 응용 프로그램 선택을 적용 해야 하는 경우 VPN 트래픽 필터를 사용 하도록 설정할 수 있습니다.<p>자세한 내용은 [VPN 보안 기능](https://docs.microsoft.com/windows/access-protection/vpn/vpn-security-features)을 참조 하세요.         |
 |앱 트리거 VPN     |특정 응용 프로그램이 나 응용 프로그램 유형을 시작할 때 자동으로 연결 되도록 VPN 프로필을 구성할 수 있습니다.<p>이 및 기타 트리거 옵션에 대 한 자세한 내용은 [VPN 자동 트리거 프로필 옵션](https://docs.microsoft.com/windows/access-protection/vpn/vpn-auto-trigger-profile)을 참조 하세요.         |
-|VPN 조건부 액세스   |조건부 액세스 및 장치 규정 준수는 VPN에 연결 하기 전에 관리 장치가 표준을 충족 하도록 요구할 수 있습니다. VPN 조건부 액세스에 대 한 고급 기능 중 하나를 사용 하 여 클라이언트 인증 인증서가 **1.3.6.1.4.1.311.87**의 "AAD 조건부 액세스" OID를 포함 하는 경우에만 vpn 연결을 제한할 수 있습니다.<p>VPN 연결을 제한 하려면 다음을 수행 해야 합니다.<ol><li>NPS 서버에서 **네트워크 정책 서버** 스냅인을 엽니다.</li><li>**정책** > **네트워크 정책**을 확장 합니다.</li><li>**VPN (가상 사설망) 연결** 네트워크 정책을 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.</li><li>Válassza a **Settings** (Beállítások) fület.</li><li>**공급 업체별**을 선택 하 고 **추가**를 선택 합니다.</li><li>**허용-인증서-OID** 옵션을 선택한 다음 **추가**를 선택 합니다.</li><li>**1.3.6.1.4.1.311.87** 의 AAD 조건부 액세스 OID를 특성 값으로 붙여넣은 다음 **확인** 을 두 번 선택 합니다.</li><li>**닫기**를 선택 하 고 **적용**을 선택 합니다.<p>이러한 단계를 수행한 후 VPN 클라이언트가 단기 클라우드 인증서 이외의 다른 인증서를 사용 하 여 연결 하려고 하면 연결이 실패 합니다.</li></ol>조건부 액세스에 대 한 자세한 내용은 [VPN 및 조건부 액세스](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access)를 참조 하세요.   |
+|VPN 조건부 액세스   |조건부 액세스 및 장치 규정 준수는 VPN에 연결 하기 전에 관리 장치가 표준을 충족 하도록 요구할 수 있습니다. VPN 조건부 액세스에 대 한 고급 기능 중 하나를 사용 하 여 클라이언트 인증 인증서가 **1.3.6.1.4.1.311.87**의 "AAD 조건부 액세스" OID를 포함 하는 경우에만 vpn 연결을 제한할 수 있습니다.<p>VPN 연결을 제한 하려면 다음을 수행 해야 합니다.<ol><li>NPS 서버에서 **네트워크 정책 서버** 스냅인을 엽니다.</li><li>**정책** > **네트워크 정책**을 확장 합니다.</li><li>**VPN (가상 사설망) 연결** 네트워크 정책을 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.</li><li>**설정** 탭을 선택합니다.</li><li>**공급 업체별**을 선택 하 고 **추가**를 선택 합니다.</li><li>**허용-인증서-OID** 옵션을 선택한 다음 **추가**를 선택 합니다.</li><li>**1.3.6.1.4.1.311.87** 의 AAD 조건부 액세스 OID를 특성 값으로 붙여넣은 다음 **확인** 을 두 번 선택 합니다.</li><li>**닫기**를 선택 하 고 **적용**을 선택 합니다.<p>이러한 단계를 수행한 후 VPN 클라이언트가 단기 클라우드 인증서 이외의 다른 인증서를 사용 하 여 연결 하려고 하면 연결이 실패 합니다.</li></ol>조건부 액세스에 대 한 자세한 내용은 [VPN 및 조건부 액세스](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access)를 참조 하세요.   |
 
 
 ---
@@ -121,7 +121,7 @@ ms.locfileid: "74945315"
    Event ID:      41  
    ...  
    Event Xml:
-   <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+   <Event xmlns="https://schemas.microsoft.com/win/2004/08/events/event">
     <UserData>  
      <CertVerifyRevocation>  
       <Certificate fileRef="C97AE73E9823E8179903E81107E089497C77A720.cer" subjectName="client01.corp.contoso.com" />  
@@ -149,13 +149,13 @@ Windows 10의 TPM 키 증명에 대 한 자세한 내용은 [Tpm 키 증명](htt
 ## <a name="related-topics"></a>관련 항목
 - [Nps 프록시 서버 부하 분산](../../../../../networking/technologies/nps/nps-manage-proxy-lb.md): VPN (가상 사설망) 서버 및 무선 액세스 지점과 같은 네트워크 액세스 서버인 RADIUS(REMOTE AUTHENTICATION DIAL-IN USER SERVICE) (RADIUS) 클라이언트는 연결 요청을 만들고 NPS와 같은 radius 서버에 보냅니다. 경우에 따라 NPS 서버에서 한 번에 너무 많은 연결 요청을 수신 하 여 성능이 저하 되거나 오버 로드 될 수 있습니다.
 
-- [Traffic Manager 개요](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview):이 항목에서는 서비스 끝점에 대 한 사용자 트래픽의 배포를 제어할 수 있는 Azure Traffic Manager의 개요를 제공 합니다. Traffic Manager는 DNS (Domain Name System)를 사용 하 여 트래픽 라우팅 메서드 및 끝점의 상태를 기준으로 클라이언트 요청을 가장 적절 한 끝점으로 보냅니다. 
+- [Traffic Manager 개요](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview):이 항목에서는 서비스 끝점에 대 한 사용자 트래픽의 배포를 제어할 수 있는 Azure Traffic Manager의 개요를 제공 합니다. Traffic Manager는 DNS(Domain Name System)를 사용하여 클라이언트 요청을 트래픽 라우팅 방법 및 엔드포인트의 상태를 기준으로 가장 적절한 엔드포인트로 리디렉션합니다. 
 
 - [비즈니스용 Windows Hello](https://docs.microsoft.com/windows/access-protection/hello-for-business/hello-identity-verification):이 항목에서는 클라우드 전용 배포 및 하이브리드 배포와 같은 필수 구성 요소를 제공 합니다.  또한이 항목에서는 비즈니스용 Windows Hello에 대 한 질문과 대답을 제공 합니다.
 
-- [기술 사례 연구: windows 10에서 비즈니스용 Windows hello를 사용 하 여 원격 액세스 설정](https://msdn.microsoft.com/library/mt728163.aspx):이 기술 사례 연구에서는 Microsoft에서 비즈니스용 windows hello를 사용 하 여 원격 액세스를 구현 하는 방법에 대해 알아봅니다.  비즈니스용 Windows Hello는 암호를 초과 하는 조직과 소비자를 위한 개인/공개 키 또는 인증서 기반 인증 방법입니다. 이 인증 형태는 암호를 대체 하 고 위반, thefts 및 피싱에 대 한 저항력이 있는 키 쌍 자격 증명에 의존 합니다. 
+- [기술 사례 연구: windows 10에서 비즈니스용 Windows hello를 사용 하 여 원격 액세스 설정](https://msdn.microsoft.com/library/mt728163.aspx):이 기술 사례 연구에서는 Microsoft에서 비즈니스용 windows hello를 사용 하 여 원격 액세스를 구현 하는 방법에 대해 알아봅니다.  비즈니스용 Windows Hello는 조직과 소비자를 위한 보안 방법으로, 암호 수준을 넘어서는 프라이빗/공개 키 또는 인증서 기반 인증 방법입니다. 이 인증 방식은 암호를 대신할 수 있으며 위반, 도난 및 피싱에 강한 키 쌍 자격 증명에 의존합니다. 
 
-- [Azure Multi-Factor Authentication 서버와 radius 인증 통합](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-server-radius):이 항목에서는 azure Multi-Factor Authentication 서버를 사용 하 여 radius 클라이언트 인증을 추가 하 고 구성 하는 과정을 안내 합니다. RADIUS는 인증 요청을 받고 해당 요청을 처리하는 표준 프로토콜입니다. Az Azure Multi-Factor Authentication-kiszolgáló RADIUS-kiszolgálóként is használható. 
+- [Azure Multi-Factor Authentication 서버와 radius 인증 통합](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-server-radius):이 항목에서는 azure Multi-Factor Authentication 서버를 사용 하 여 radius 클라이언트 인증을 추가 하 고 구성 하는 과정을 안내 합니다. RADIUS는 인증 요청을 받고 해당 요청을 처리하는 표준 프로토콜입니다. Azure Multi-Factor Authentication 서버는 RADIUS 서버 역할을 할 수 있습니다. 
 
 - [Vpn 보안 기능](https://docs.microsoft.com/windows/access-protection/vpn/vpn-security-features):이 항목에서는 잠금 VPN, WIP (Windows Information Protection)와 vpn 통합 및 트래픽 필터에 대 한 vpn 보안 지침을 제공 합니다. 
 

@@ -13,12 +13,12 @@ author: brentfor
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bd8a26d158f53121074881ac8ff204287f9a19ad
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: a14233e01c19df650d1059e1b60cd5398b05709a
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71382970"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75946990"
 ---
 # <a name="manage-software-inventory-logging"></a>소프트웨어 인벤토리 로깅 관리
 
@@ -31,20 +31,20 @@ ms.locfileid: "71382970"
 - **Windows Server 2012 (Standard 또는 Datacenter Edition)** 
 
 > [!NOTE] 
-> 아래의 업데이트 패키지를 적용하기 전에 [WMF 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855)이 설치되어 있는지 확인하세요.
+> 아래의 업데이트 패키지를 적용하기 전에 [WMF 4.0](https://www.microsoft.com/download/details.aspx?id=40855)이 설치되어 있는지 확인하세요.
 
--  Windows Server 2012용 WMF 4.0 업데이트 패키지: [KB 3119938](https://support.microsoft.com/en-us/kb/3119938)
+-  Windows Server 2012용 WMF 4.0 업데이트 패키지: [KB 3119938](https://support.microsoft.com/kb/3119938)
 
 - **Windows Server 2008 R2 SP1**
 
 > [!NOTE] 
-> 아래의 업데이트 패키지를 적용하기 전에 [WMF 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855)이 설치되어 있는지 확인하세요.
+> 아래의 업데이트 패키지를 적용하기 전에 [WMF 4.0](https://www.microsoft.com/download/details.aspx?id=40855)이 설치되어 있는지 확인하세요.
 
 
-- [.NET Framework 4.5](https://www.microsoft.com/en-us/download/details.aspx?id=30653)필요
+- [.NET Framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653)필요
 
 
-- Windows Server 2008 R2용 WMF 4.0 업데이트 패키지: [KB 3109118](https://support.microsoft.com/en-us/kb/3109118)
+- Windows Server 2008 R2용 WMF 4.0 업데이트 패키지: [KB 3109118](https://support.microsoft.com/kb/3109118)
 
 
 이 기능을 사용하여 인벤토리를 만드는 방법에는 기본적으로 두 가지가 있습니다.  
@@ -90,7 +90,7 @@ SIL 로깅을 시작하려면 몇 가지 계획 및 예측이 필요하지만 �
 -   [KB 3000850 없이 Windows Server 2012 R2 Hyper-v 환경에서 소프트웨어 인벤토리 로깅 사용](manage-software-inventory-logging.md#BKMK_Step12)  
   
 > [!NOTE]  
-> 이 항목에는 설명한 절차의 일부를 자동화하는 데 사용할 수 있는 샘플 Windows PowerShell cmdlet이 포함되어 있습니다. 자세한 내용은 Cmdlet 사용을 참조 하세요.
+> 이 항목에는 설명한 절차의 일부를 자동화하는 데 사용할 수 있는 샘플 Windows PowerShell cmdlet이 포함되어 있습니다. 자세한 내용은 Cmdlet 사용을 참조하십시오.
 
   
 ## <a name="BKMK_Step1"></a>소프트웨어 인벤토리 로깅 시작 및 중지  

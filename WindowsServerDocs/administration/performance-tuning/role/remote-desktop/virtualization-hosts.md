@@ -7,12 +7,12 @@ ms.topic: article
 ms.author: HammadBu; VladmiS; denisgun
 author: phstee
 ms.date: 10/22/2019
-ms.openlocfilehash: dbdf211138ddcd553171f3c8ce9c2e915ccf0057
-ms.sourcegitcommit: 3262c5c7cece9f2adf2b56f06b7ead38754a451c
+ms.openlocfilehash: 1b66f6404df5debee2a4c52ffc9166c8eabb9f81
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72812277"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75947125"
 ---
 # <a name="performance-tuning-remote-desktop-virtualization-hosts"></a>원격 데스크톱 가상화 호스트 성능 조정
 
@@ -71,7 +71,7 @@ RD 가상화 호스트 서버에 대 한 서버 용량을 계획 하는 경우 �
 
 여러 논리 프로세서를 포함 하는 가상 프로세서와 함께 Windows 8 이상을 실행 하는 게스트 운영 체제에서는 메모리 사용을 최소화 하 고 동적 메모리를 해제 하 여 성능을 향상 시킬 수 있도록 동적 메모리와의 실행 간 균형을 고려 합니다. 컴퓨터 토폴로지에서 인식 되는 응용 프로그램입니다. 이러한 응용 프로그램은 토폴로지 정보를 활용 하 여 일정 예약 및 메모리 할당 결정을 내릴 수 있습니다.
 
-### <a name="tiered-storage"></a>계층화된 저장소
+### <a name="tiered-storage"></a>계층화된 스토리지
 
 RD 가상화 호스트는 가상 데스크톱 풀에 대해 계층화 된 저장소를 지원 합니다. 컬렉션 내의 풀링된 모든 가상 데스크톱에서 공유 하는 물리적 컴퓨터는 미러된 SSD (반도체 드라이브)와 같은 소형 고성능 저장소 솔루션을 사용할 수 있습니다. 풀링된 가상 데스크톱은 RAID 1 + 0과 같은 저렴 한 기존 저장소에 배치할 수 있습니다.
 
@@ -81,7 +81,7 @@ RD 가상화 호스트는 가상 데스크톱 풀에 대해 계층화 된 저장
 
 ### <a name="csv-cache"></a>CSV 캐시
 
-Windows Server 2012 이상에서 장애 조치 (Failover) 클러스터링은 CSV (클러스터 공유 볼륨)에 대 한 캐싱을 제공 합니다. 이는 대부분의 읽기 i/o가 관리 운영 체제에서 제공 되는 풀링된 가상 데스크톱 컬렉션에 매우 유용 합니다. CSV 캐시는 두 번 이상 읽은 블록을 캐시 하 고 시스템 메모리에서 배달 하므로 i/o를 줄일 수 있기 때문에 몇 가지 크기의 성능을 제공 합니다. CSV 캐시에 대 한 자세한 내용은 [Csv 캐시를 사용 하도록 설정 하는 방법](http://blogs.msdn.com/b/clustering/archive/2012/03/22/10286676.aspx)을 참조 하세요.
+Windows Server 2012 이상에서 장애 조치 (Failover) 클러스터링은 CSV (클러스터 공유 볼륨)에 대 한 캐싱을 제공 합니다. 이는 대부분의 읽기 i/o가 관리 운영 체제에서 제공 되는 풀링된 가상 데스크톱 컬렉션에 매우 유용 합니다. CSV 캐시는 두 번 이상 읽은 블록을 캐시 하 고 시스템 메모리에서 배달 하므로 i/o를 줄일 수 있기 때문에 몇 가지 크기의 성능을 제공 합니다. CSV 캐시에 대 한 자세한 내용은 [Csv 캐시를 사용 하도록 설정 하는 방법](https://blogs.msdn.com/b/clustering/archive/2012/03/22/10286676.aspx)을 참조 하세요.
 
 ### <a name="pooled-virtual-desktops"></a>풀링된 가상 데스크톱
 
@@ -93,7 +93,7 @@ Windows Server 2012 이상에서 장애 조치 (Failover) 클러스터링은 CSV
 
 광범위 한 배포 전에 각 특정 서비스를 적절 하 게 평가 해야 합니다. 다음은 몇 가지 초기 고려해 야 할 사항입니다.
 
-| 서비스                                      | 왜 그럴까요?                                                                                                                                                                                                      |
+| 서비스                                      | 이유는 무엇입니까?                                                                                                                                                                                                      |
 |----------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 자동 업데이트                                  | 풀링된 가상 데스크톱은 가상 데스크톱 템플릿을 다시 만들어 업데이트 됩니다.                                                                                                                          |
 | 오프 라인 파일                                | 가상 데스크톱은 항상 온라인 상태 이며 네트워킹 관점에서 연결 됩니다.                                                                                                                         |
@@ -106,7 +106,7 @@ Windows Server 2012 이상에서 장애 조치 (Failover) 클러스터링은 CSV
 | 인터넷 연결 공유                  | 소비자 중심 서비스                                                                                                                                                                                  |
 | Media Center 확장 서비스               | 소비자 중심 서비스                                                                                                                                                                                  |
 > [!NOTE]
-> 모든 변경 내용이 의도 된 목표 및 시나리오에 영향을 주므로이 목록은 전체 목록이 아닙니다. 자세한 내용은 [PFE!를 제공 하는 즉시 누름, 지금 가져오기, Windows 8 VDI 최적화 스크립트](http://blogs.technet.com/b/jeff_stokes/archive/2013/04/09/hot-off-the-presses-get-it-now-the-windows-8-vdi-optimization-script-courtesy-of-pfe.aspx)를 참조 하세요.
+> 모든 변경 내용이 의도 된 목표 및 시나리오에 영향을 주므로이 목록은 전체 목록이 아닙니다. 자세한 내용은 [PFE!를 제공 하는 즉시 누름, 지금 가져오기, Windows 8 VDI 최적화 스크립트](https://blogs.technet.com/b/jeff_stokes/archive/2013/04/09/hot-off-the-presses-get-it-now-the-windows-8-vdi-optimization-script-courtesy-of-pfe.aspx)를 참조 하세요.
 
 
 > [!NOTE]

@@ -1,28 +1,28 @@
 ---
-title: 'DFS 복제: FAQ(질문과 대답)'
+title: 'DFS 복제: 질문과 대답(FAQ)'
 ms.date: 06/18/2014
 ms.prod: windows-server
 ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: 92fe505c3ae7d76f7a8d5bd9d2ed0ce845159fde
-ms.sourcegitcommit: de71970be7d81b95610a0977c12d456c3917c331
+ms.openlocfilehash: e92ada07140b88ef4178a5aecdb263b825380c2d
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71940754"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950280"
 ---
-# <a name="dfs-replication-frequently-asked-questions-faq"></a>DFS 복제: FAQ(질문과 대답)
+# <a name="dfs-replication-frequently-asked-questions-faq"></a>DFS 복제: 질문과 대답(FAQ)
 
 
-업데이트됨: 2019 년 4 월 30 일
+업데이트: 4 월 30 일, 2019
 
 적용 대상: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 이 FAQ에서는 Windows Server 용 dfs (분산 파일 시스템) 복제 (DFS (R) 또는 DFSR이 라고도 함)에 대 한 질문에 답변 합니다.
 
-Dfs 네임 스페이스 [에 대 한 자세한 내용은 dfs 네임 스페이스: 질문과 대답](https://technet.microsoft.com/library/ee404780)
+DFS 네임 스페이스에 대 한 자세한 내용은 [Dfs 네임 스페이스: 질문과 대답](https://technet.microsoft.com/library/ee404780)을 참조 하세요.
 
 DFS 복제의 새로운 기능에 대 한 자세한 내용은 다음 항목을 참조 하세요.
 
@@ -47,38 +47,38 @@ DFS 복제의 새로운 기능에 대 한 자세한 내용은 다음 항목을 �
 
 예, DFS 복제 Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 또는 Windows Server 2008을 실행 하는 서버에서 SYSVOL 복제를 위해 FRS를 대체할 수 있습니다. Windows Server 2003 r 2를 실행 하는 서버는 DFS 복제을 사용 하 여 SYSVOL 폴더를 복제할 수 없습니다.
 
-DFS 복제를 사용 하 여 sysvol을 복제 하는 [방법에 대 한 자세한 내용은 sysvol 복제 마이그레이션 가이드를 참조 하세요. FRS를 DFS 복제](https://technet.microsoft.com/library/dd640019)합니다.
+DFS 복제를 사용 하 여 SYSVOL을 복제 하는 방법에 대 한 자세한 내용은 [Sysvol 복제 마이그레이션 가이드: FRS에서 DFS 복제](https://technet.microsoft.com/library/dd640019)를 참조 하세요.
 
 ### <a name="can-i-upgrade-from-frs-to-dfs-replication-without-losing-configuration-settings"></a>구성 설정을 잃지 않고 FRS에서 DFS 복제로 업그레이드할 수 있나요?
 
-예. FRS에서 DFS 복제로 복제를 마이그레이션하려면 다음 문서를 참조 하세요.
+그렇습니다. FRS에서 DFS 복제로 복제를 마이그레이션하려면 다음 문서를 참조 하세요.
 
-  - SYSVOL 폴더가 [아닌 폴더의 복제를 마이그레이션하려면 DFS 작업 가이드: Frs에서 DFS 복제](http://go.microsoft.com/fwlink/?linkid=192776) 및 [FRS2DFSR – frs에서 DFSR 마이그레이션 유틸리티](http://go.microsoft.com/fwlink/?linkid=195437) (http://go.microsoft.com/fwlink/?LinkID=195437) 로 마이그레이션  
+  - SYSVOL 폴더가 아닌 폴더의 복제를 마이그레이션하려면 [DFS 작업 가이드: frs에서 DFS 복제로 마이그레이션](https://go.microsoft.com/fwlink/?linkid=192776) 및 [FRS2DFSR – frs에서 DFSR로 마이그레이션 유틸리티](https://go.microsoft.com/fwlink/?linkid=195437) (https://go.microsoft.com/fwlink/?LinkID=195437) 를 참조 하세요.  
       
-  - Sysvol 폴더의 복제를 DFS 복제로 마이그레이션하려면 sysvol 복제 마이그레이션 [가이드를 참조 하세요. FRS를 DFS 복제](https://technet.microsoft.com/library/dd640019)합니다.  
+  - SYSVOL 폴더의 복제를 DFS 복제로 마이그레이션하려면 [Sysvol 복제 마이그레이션 가이드: FRS에서 DFS 복제를](https://technet.microsoft.com/library/dd640019)참조 하세요.  
       
 
 ### <a name="can-i-use-dfs-replication-in-a-mixed-windowsunix-environment"></a>혼합 된 Windows/UNIX 환경에서 DFS 복제를 사용할 수 있나요?
 
-예. DFS 복제는 Windows Server를 실행 하는 서버 간에만 콘텐츠 복제를 지원 하지만 UNIX 클라이언트는 Windows 서버의 파일 공유에 액세스할 수 있습니다. 이렇게 하려면 DFS 복제 서버에 NFS (네트워크 파일 시스템) 용 서비스를 설치 합니다.
+그렇습니다. DFS 복제는 Windows Server를 실행 하는 서버 간에만 콘텐츠 복제를 지원 하지만 UNIX 클라이언트는 Windows 서버의 파일 공유에 액세스할 수 있습니다. 이렇게 하려면 DFS 복제 서버에 NFS (네트워크 파일 시스템) 용 서비스를 설치 합니다.
 
-많은 UNIX 클라이언트에 포함 된 SMB/CIFS 클라이언트 기능을 사용 하 여 Windows 파일 공유에 직접 액세스할 수도 있습니다 .이 기능은 종종 제한적 이거나 Windows 환경에 대 한 수정이 필요 합니다 (예:를 사용 하 여 SMB 서명 사용 안 함). 그룹 정책).
+많은 UNIX 클라이언트에 포함 된 SMB/CIFS 클라이언트 기능을 사용 하 여 Windows 파일 공유에 직접 액세스할 수도 있습니다 .이 기능은 종종 제한적 이거나 Windows 환경 (예: 그룹 정책을 사용 하 여 SMB 서명 해제)을 수정 해야 합니다.
 
 DFS 복제는 Windows Server 운영 체제를 실행 하는 서버에서 NFS와 상호 운용할 수 있지만 NFS 탑재 지점을 복제할 수는 없습니다.
 
 ### <a name="can-i-use-the-volume-shadow-copy-service-with-dfs-replication"></a>DFS 복제에서 볼륨 섀도 복사본 서비스를 사용할 수 있나요?
 
-예. DFS 복제은 VSS (볼륨 섀도 복사본 서비스) 볼륨에서 지원 되며 이전 버전의 클라이언트를 사용 하 여 이전 스냅숏을 복원할 수 있습니다.
+그렇습니다. DFS 복제은 VSS (볼륨 섀도 복사본 서비스) 볼륨에서 지원 되며 이전 버전의 클라이언트를 사용 하 여 이전 스냅숏을 복원할 수 있습니다.
 
 ### <a name="can-i-use-windowsbackup-ntbackupexe-to-remotely-back-up-a-replicated-folder"></a>Windows 백업 (Ntbackup.exe)을 사용 하 여 복제 된 폴더를 원격으로 백업할 수 있나요?
 
 아니요, windows server 2003 또는 이전 버전을 실행 하는 컴퓨터에서 windows 백업 (Ntbackup.exe)을 사용 하 여 Windows Server 2012, Windows Server 2008 R2 또는 Windows Server 2008을 실행 하는 컴퓨터에서 복제 된 폴더의 콘텐츠를 백업 하는 것은 지원 되지 않습니다.
 
-복제 된 폴더에 저장 된 파일을 백업 하려면 Windows Server 백업 또는 Microsoft® System Center Data Protection Manager를 사용 합니다. Windows Server 2008 R2 및 Windows Server 2008의 백업 및 복구 기능에 대 한 자세한 내용은 [백업 및 복구](https://technet.microsoft.com/library/Cc754097)를 참조 하세요. 자세한 내용은 [System Center Data Protection Manager](http://go.microsoft.com/fwlink/?linkid=182261) (http://go.microsoft.com/fwlink/?LinkId=182261) 를 참조 하세요.
+복제 된 폴더에 저장 된 파일을 백업 하려면 Windows Server 백업 또는 Microsoft® System Center Data Protection Manager를 사용 합니다. Windows Server 2008 R2 및 Windows Server 2008의 백업 및 복구 기능에 대 한 자세한 내용은 [백업 및 복구](https://technet.microsoft.com/library/Cc754097)를 참조 하세요. 자세한 내용은 [System Center Data Protection Manager](https://go.microsoft.com/fwlink/?linkid=182261) (https://go.microsoft.com/fwlink/?LinkId=182261) 를 참조 하세요.
 
 ### <a name="do-file-system-policies-impact-dfs-replication"></a>파일 시스템 정책에 영향을 DFS 복제?
 
-예. 복제 된 폴더에 대해 파일 시스템 정책을 구성 하지 마십시오. 파일 시스템 정책은 모든 그룹 정책 새로 고침 간격 마다 NTFS 사용 권한을 다시 적용 합니다. 이 경우 파일을 닫을 때까지 열려 있는 파일이 복제 되지 않기 때문에 공유 위반이 발생할 수 있습니다.
+그렇습니다. 복제 된 폴더에 대해 파일 시스템 정책을 구성 하지 마십시오. 파일 시스템 정책은 모든 그룹 정책 새로 고침 간격 마다 NTFS 사용 권한을 다시 적용 합니다. 이 경우 파일을 닫을 때까지 열려 있는 파일이 복제 되지 않기 때문에 공유 위반이 발생할 수 있습니다.
 
 ### <a name="does-dfs-replication-replicate-mailboxes-hosted-on-microsoft-exchange-server"></a>Microsoft Exchange Server에서 호스트 되는 사서함을 복제할 DFS 복제 있나요?
 
@@ -86,7 +86,7 @@ DFS 복제는 Windows Server 운영 체제를 실행 하는 서버에서 NFS와 
 
 ### <a name="does-dfs-replication-support-file-screens-created-by-file-server-resource-manager"></a>파일 서버 리소스 관리자에서 만든 파일 차단을 지원 DFS 복제?
 
-예. 그러나 FSRM (파일 서버 리소스 관리자) 파일 차단 설정은 복제의 양쪽 끝에서 일치 해야 합니다. 또한 DFS 복제에는 복제에서 특정 파일 및 파일 형식을 제외 하는 데 사용할 수 있는 파일 및 폴더에 대 한 자체 필터 메커니즘이 있습니다.
+그렇습니다. 그러나 FSRM (파일 서버 리소스 관리자) 파일 차단 설정은 복제의 양쪽 끝에서 일치 해야 합니다. 또한 DFS 복제에는 복제에서 특정 파일 및 파일 형식을 제외 하는 데 사용할 수 있는 파일 및 폴더에 대 한 자체 필터 메커니즘이 있습니다.
 
 다음은 파일 화면 또는 할당량을 구현 하기 위한 모범 사례입니다.
 
@@ -101,7 +101,7 @@ DFS 복제는 Windows Server 운영 체제를 실행 하는 서버에서 NFS와 
 
 ### <a name="is-dfs-replication-cluster-aware"></a>DFS 복제 클러스터를 인식 하나요?
 
-예, DFS 복제 windows server 2012 R2, Windows Server 2012 및 Windows Server 2008 r 2의 경우 장애 조치 (failover) 클러스터를 복제 그룹의 구성원으로 추가할 수 있습니다. 자세한 내용은 [복제 그룹에 장애 조치 (Failover) 클러스터 추가](http://go.microsoft.com/fwlink/?linkid=155085) (http://go.microsoft.com/fwlink/?LinkId=155085) 를 참조 하세요. Windows Server 2008 R2 이전의 Windows 버전에 대 한 DFS 복제 서비스는 장애 조치 (failover) 클러스터와 조정 하도록 설계 되지 않았으므로 서비스가 다른 노드로 장애 조치 (failover) 되지 않습니다.
+예, DFS 복제 windows server 2012 R2, Windows Server 2012 및 Windows Server 2008 r 2의 경우 장애 조치 (failover) 클러스터를 복제 그룹의 구성원으로 추가할 수 있습니다. 자세한 내용은 [복제 그룹에 장애 조치 (Failover) 클러스터 추가](https://go.microsoft.com/fwlink/?linkid=155085) (https://go.microsoft.com/fwlink/?LinkId=155085) 를 참조 하세요. Windows Server 2008 R2 이전의 Windows 버전에 대 한 DFS 복제 서비스는 장애 조치 (failover) 클러스터와 조정 하도록 설계 되지 않았으므로 서비스가 다른 노드로 장애 조치 (failover) 되지 않습니다.
 
 
 > [!NOTE]
@@ -115,17 +115,17 @@ DFS 복제는 Windows Server 운영 체제를 실행 하는 서버에서 NFS와 
 
 ### <a name="is-dfs-replication-compatible-with-ris-and-wds"></a>DFS 복제 RIS 및 WDS와 호환 되나요?
 
-예. DFS 복제 SIS (단일 인스턴스 저장소)를 사용 하도록 설정 된 볼륨을 복제 합니다. SIS는 RIS (원격 설치 서비스), WDS (Windows 배포 서비스) 및 Windows Storage 서버에서 사용 됩니다.
+그렇습니다. DFS 복제 SIS (단일 인스턴스 저장소)를 사용 하도록 설정 된 볼륨을 복제 합니다. SIS는 RIS (원격 설치 서비스), WDS (Windows 배포 서비스) 및 Windows Storage 서버에서 사용 됩니다.
 
 ### <a name="is-it-possible-to-use-dfs-replication-with-offline-files"></a>오프라인 파일에서 DFS 복제를 사용할 수 있나요?
 
 한 번에 한 명의 사용자만 파일에 쓰는 경우 시나리오에서 DFS 복제 및 오프라인 파일를 안전 하 게 사용할 수 있습니다. 이는 두 지점 간에 이동 하는 사용자가 분기 또는 오프 라인에서 파일에 액세스할 수 있게 하려는 경우에 유용 합니다. 오프라인 파일 오프 라인에서 사용 하기 위해 파일을 로컬로 캐시 하 고 DFS 복제 각 지점 간에 데이터를 복제 합니다.
 
-DFS 복제는 분산 잠금 메커니즘 또는 파일 체크 아웃 기능을 제공 하지 않으므로 다중 사용자 환경에서 오프라인 파일와 함께 DFS 복제를 사용 하지 마세요. 두 사용자가 서로 다른 서버에서 동일한 파일을 동시에 수정 하는 경우 다음 복제 중에 DFS 복제 이전 파일\\을 복제 된 폴더의 로컬 경로 아래에 있는 DfsrPrivate ConflictandDeleted 폴더로 이동 합니다.
+DFS 복제는 분산 잠금 메커니즘 또는 파일 체크 아웃 기능을 제공 하지 않으므로 다중 사용자 환경에서 오프라인 파일와 함께 DFS 복제를 사용 하지 마세요. 두 사용자가 서로 다른 서버에서 동일한 파일을 동시에 수정 하는 경우 다음 복제 중에 DFS 복제 이전 파일을 복제 된 폴더의 로컬 경로 아래에 있는 DfsrPrivate\\ConflictandDeleted 폴더로 이동 합니다.
 
 ### <a name="what-antivirus-applications-are-compatible-with-dfs-replication"></a>DFS 복제와 호환 되는 바이러스 백신 응용 프로그램은 무엇 인가요?
 
-바이러스 백신 응용 프로그램은 검색 활동이 복제 된 폴더의 파일을 변경 하는 경우 과도 한 복제를 발생 시킬 수 있습니다. 자세한 내용은 [DFS 복제와의 바이러스 백신 응용 프로그램 상호 운용성 테스트](http://go.microsoft.com/fwlink/?linkid=73990) (http://go.microsoft.com/fwlink/?LinkId=73990).
+바이러스 백신 응용 프로그램은 검색 활동이 복제 된 폴더의 파일을 변경 하는 경우 과도 한 복제를 발생 시킬 수 있습니다. 자세한 내용은 [DFS 복제와 바이러스 백신 응용 프로그램 상호 운용성 테스트](https://go.microsoft.com/fwlink/?linkid=73990) (https://go.microsoft.com/fwlink/?LinkId=73990) 를 사용 하십시오.
 
 ### <a name="what-are-the-benefits-of-using-dfs-replication-instead-of-windows-sharepoint-services"></a>Windows SharePoint Services 대신 DFS 복제를 사용 하면 어떤 이점이 있나요?
 
@@ -135,7 +135,7 @@ Windows® SharePoint® 서비스는 DFS 복제 되지 않는 파일 체크 아�
 
 ### <a name="can-dfs-replication-replicate-between-branch-offices-without-a-vpn-connection"></a>VPN 연결을 사용 하지 않고 지점 간에 복제를 DFS 복제 수 있나요?
 
-예-지사를 연결 하는 WAN (광역 네트워크) 링크 (인터넷 아님)가 있다고 가정 합니다. 그러나 외부 방화벽에서 적절 한 포트를 열어야 합니다. DFS 복제는 RPC 끝점 매퍼 (포트 135) 및 임의로 할당 된 삭제 포트 1024을 사용 합니다. **Dfsrdiag** 명령줄 도구를 사용 하 여 임시 포트 대신 고정 포트를 지정할 수 있습니다. RPC 끝점 매퍼를 지정 하는 방법에 대 한 자세한 내용은 Microsoft 기술 자료 [문서 154596](http://go.microsoft.com/fwlink/?linkid=73991) (http://go.microsoft.com/fwlink/?LinkId=73991) 을 참조 하십시오.
+예-지사를 연결 하는 WAN (광역 네트워크) 링크 (인터넷 아님)가 있다고 가정 합니다. 그러나 외부 방화벽에서 적절 한 포트를 열어야 합니다. DFS 복제는 RPC 끝점 매퍼 (포트 135) 및 임의로 할당 된 삭제 포트 1024을 사용 합니다. **Dfsrdiag** 명령줄 도구를 사용 하 여 임시 포트 대신 고정 포트를 지정할 수 있습니다. RPC 끝점 매퍼를 지정 하는 방법에 대 한 자세한 내용은 Microsoft 기술 자료 [문서 154596](https://go.microsoft.com/fwlink/?linkid=73991) (https://go.microsoft.com/fwlink/?LinkId=73991) 를 참조 하십시오.
 
 ### <a name="can-dfs-replication-replicate-files-encrypted-with-the-encrypting-file-system"></a>파일 시스템 암호화로 암호화 된 파일을 복제할 DFS 복제 있습니다.
 
@@ -145,7 +145,7 @@ Windows® SharePoint® 서비스는 DFS 복제 되지 않는 파일 체크 아�
 
 Microsoft Outlook 개인 폴더 파일 (.pst) 및 Microsoft Access 파일은 보관 목적으로 저장 되 고 Outlook 또는 Access (.pst 또는 Access to open)와 같은 클라이언트를 사용 하 여 네트워크에서 액세스 되지 않는 경우에만 안전 하 게 복제할 수 있습니다. DFS 복제 파일, 먼저 로컬 저장 장치에 파일을 복사 합니다. 이에 대 한 이유는 다음과 같습니다.
 
-  - 네트워크 연결을 통해 .pst 파일을 열면 .pst 파일의 데이터가 손상 될 수 있습니다. 네트워크를 통해에서 .pst 파일에 안전 하 게 액세스할 수 없는 이유에 대 한 자세한 내용은 Microsoft 기술 자료 [문서 297019](http://go.microsoft.com/fwlink/?linkid=125363) (http://go.microsoft.com/fwlink/?LinkId=125363) 을 참조 하십시오.  
+  - 네트워크 연결을 통해 .pst 파일을 열면 .pst 파일의 데이터가 손상 될 수 있습니다. 네트워크를 통해에서 .pst 파일에 안전 하 게 액세스할 수 없는 이유에 대 한 자세한 내용은 Microsoft 기술 자료 [문서 297019](https://go.microsoft.com/fwlink/?linkid=125363) (https://go.microsoft.com/fwlink/?LinkId=125363) 를 참조 하십시오.  
       
   - .pst 및 Access 파일은 Outlook 또는 Office Access와 같은 클라이언트에서 액세스 하는 동안 오랫동안 열려 있는 상태를 유지 하는 경향이 있습니다. 이렇게 하면 DFS 복제 닫힐 때까지 이러한 파일을 복제할 수 없습니다.  
       
@@ -156,7 +156,7 @@ Microsoft Outlook 개인 폴더 파일 (.pst) 및 Microsoft Access 파일은 보
 
 ### <a name="can-more-than-one-folder-be-replicated-on-a-single-server"></a>단일 서버에서 두 개 이상의 폴더를 복제할 수 있습니까?
 
-예. DFS 복제는 서버 간에 다양 한 폴더를 복제할 수 있습니다. 복제 된 각 폴더가 고유한 루트 경로를 포함 하 고 중복 되지 않는지 확인 합니다. 예를 들어 d:\\sales 및 d:\\Accounting은 두 개의 복제 된 폴더에 대 한 루트 경로가 될 수\\있지만 d: sales\\및\\d: sales Reports는 두 개의 복제 된 폴더에 대 한 루트 경로가 될 수 없습니다.
+그렇습니다. DFS 복제는 서버 간에 다양 한 폴더를 복제할 수 있습니다. 복제 된 각 폴더가 고유한 루트 경로를 포함 하 고 중복 되지 않는지 확인 합니다. 예를 들어 D:\\Sales 및 D:\\Accounting은 두 개의 복제 된 폴더에 대 한 루트 경로가 될 수 있지만 D:\\Sales 및 D:\\Sales\\보고서는 두 개의 복제 된 폴더에 대 한 루트 경로가 될 수 없습니다.
 
 ### <a name="does-dfs-replication-require-dfs-namespaces"></a>DFS 네임 스페이스 DFS 복제 필요 한가요?
 
@@ -168,7 +168,7 @@ Microsoft Outlook 개인 폴더 파일 (.pst) 및 Microsoft Access 파일은 보
 
 ### <a name="does-dfs-replication-support-replicating-an-entire-volume"></a>전체 볼륨 복제를 지원할 DFS 복제 있나요?
 
-예. 그러나 Windows Server 2003 서비스 팩 2 또는 핫픽스를 먼저 설치 해야 합니다. 자세한 내용은 Microsoft 기술 자료 [문서 920335](http://go.microsoft.com/fwlink/?linkid=76776) (http://go.microsoft.com/fwlink/?LinkId=76776) 을 참조 하십시오. 또한 전체 볼륨을 복제 하면 다음과 같은 문제가 발생할 수 있습니다.
+그렇습니다. 그러나 Windows Server 2003 서비스 팩 2 또는 핫픽스를 먼저 설치 해야 합니다. 자세한 내용은 Microsoft 기술 자료 [문서 920335](https://go.microsoft.com/fwlink/?linkid=76776) (https://go.microsoft.com/fwlink/?LinkId=76776) 를 참조 하세요. 또한 전체 볼륨을 복제 하면 다음과 같은 문제가 발생할 수 있습니다.
 
   - 볼륨에 Windows 페이징 파일이 포함 되어 있으면 복제에 실패 하 고 시스템 이벤트 로그에서 DFSR 이벤트 4312을 기록 합니다.  
       
@@ -183,7 +183,7 @@ Microsoft Outlook 개인 폴더 파일 (.pst) 및 Microsoft Access 파일은 보
 
 ### <a name="does-dfs-replication-work-across-wireless-networks"></a>무선 네트워크에서 작동 DFS 복제 있나요?
 
-예. DFS 복제는 연결 형식과는 독립적입니다.
+그렇습니다. DFS 복제는 연결 형식과는 독립적입니다.
 
 ### <a name="does-dfs-replication-work-on-refs-or-fat-volumes"></a>ReFS 또는 FAT 볼륨에서 작동 DFS 복제?
 
@@ -191,21 +191,21 @@ Microsoft Outlook 개인 폴더 파일 (.pst) 및 Microsoft Access 파일은 보
 
 ### <a name="does-dfs-replication-work-with-sparse-files"></a>스파스 파일에 대 한 작업 DFS 복제?
 
-예. 스파스 파일을 복제할 수 있습니다. **스파스** 특성은 받는 멤버에서 유지 됩니다.
+그렇습니다. 스파스 파일을 복제할 수 있습니다. **스파스** 특성은 받는 멤버에서 유지 됩니다.
 
 ### <a name="do-i-need-to-log-in-as-administrator-to-replicate-files"></a>파일을 복제 하려면 관리자 권한으로 로그인 해야 하나요?
 
 아니요. DFS 복제는 로컬 시스템 계정으로 실행 되는 서비스 이므로 복제할 관리자 권한으로 로그인 할 필요가 없습니다. 그러나 DFS 복제 구성을 변경 하려면 영향을 받는 파일 서버의 도메인 관리자 또는 로컬 관리자 여야 합니다.
 
-자세한 내용은 [DFS 복제를 관리할 수 있는 기능 위임](http://go.microsoft.com/fwlink/?linkid=182294) (http://go.microsoft.com/fwlink/?LinkId=182294) 의 "DFS 복제 보안 요구 사항 및 위임"을 참조 하십시오.
+자세한 내용은 [DFS 복제를 관리할 수 있는 기능 위임](https://go.microsoft.com/fwlink/?linkid=182294) (https://go.microsoft.com/fwlink/?LinkId=182294) 의 "DFS 복제 보안 요구 사항 및 위임"을 참조 하십시오.
 
 ### <a name="how-can-i-upgrade-or-replace-a-dfs-replication-member"></a>DFS 복제 구성원을 업그레이드 하거나 교체 하려면 어떻게 해야 하나요?
 
-DFS 복제 구성원을 업그레이드 하거나 교체 하려면 디렉터리 서비스 팀 블로그에서 다음 블로그 게시물을 참조 하세요. [DFSR 구성원 하드웨어 또는 OS를 대체](http://blogs.technet.com/b/askds/archive/2010/09/10/series-wrap-up-and-downloads-replacing-dfsr-member-hardware-or-os.aspx)합니다.
+DFS 복제 구성원을 업그레이드 하거나 바꾸려면 디렉터리 서비스 팀 블로그에서 [DFSR 구성원 하드웨어 또는 OS 교체](https://blogs.technet.com/b/askds/archive/2010/09/10/series-wrap-up-and-downloads-replacing-dfsr-member-hardware-or-os.aspx)에 대 한 블로그 게시물을 참조 하세요.
 
 ### <a name="is-dfs-replication-suitable-for-replicating-roaming-profiles"></a>로밍 프로필을 복제 하는 데 적합 DFS 복제?
 
-예. 로밍 사용자 프로필을 복제 하는 경우 특정 시나리오가 지원 됩니다. 지원 되는 시나리오에 대 한 자세한 내용은 [복제 된 사용자 프로필 데이터에 대 한 Microsoft의 지원 명세서](http://go.microsoft.com/fwlink/?linkid=201282) (http://go.microsoft.com/fwlink/?LinkId=201282) 를 참조 하세요.
+그렇습니다. 로밍 사용자 프로필을 복제 하는 경우 특정 시나리오가 지원 됩니다. 지원 되는 시나리오에 대 한 자세한 내용은 [복제 된 사용자 프로필 데이터에 대 한 Microsoft의 지원 명세서](https://go.microsoft.com/fwlink/?linkid=201282) (https://go.microsoft.com/fwlink/?LinkId=201282) 를 참조 하세요.
 
 ### <a name="is-there-a-file-character-limit-or-limit-to-the-folder-depth"></a>파일 문자 제한이 있거나 폴더 깊이에 제한이 있나요?
 
@@ -228,7 +228,7 @@ Windows 및 DFS 복제는 최대 32000 자까지 폴더 경로를 지원 합니�
 
 
 > [!IMPORTANT]
-> 많은 수의 파일을 포함 하는 복제 그룹을 만들 때 데이터베이스 클론을 내보내고 초기 복제 기간을 최소화 하기 위해 사전 시드 기술을 사용 하는 것이 좋습니다. 자세한 내용은 Windows Server 2012 [r 2에서 DFS 복제 초기 동기화를 참조 하세요. 클론](https://techcommunity.microsoft.com/t5/Storage-at-Microsoft/DFS-Replication-Initial-Sync-in-Windows-Server-2012-R2-Attack-of/ba-p/424877)의 공격입니다. 
+> 많은 수의 파일을 포함 하는 복제 그룹을 만들 때 데이터베이스 클론을 내보내고 초기 복제 기간을 최소화 하기 위해 사전 시드 기술을 사용 하는 것이 좋습니다. 자세한 내용은 [Windows Server 2012 r 2의 초기 동기화 DFS 복제: 클론의 공격](https://techcommunity.microsoft.com/t5/Storage-at-Microsoft/DFS-Replication-Initial-Sync-in-Windows-Server-2012-R2-Attack-of/ba-p/424877)을 참조 하세요. 
 <br>
 
 
@@ -247,7 +247,7 @@ Windows 및 DFS 복제는 최대 32000 자까지 폴더 경로를 지원 합니�
 <br>
 
 
-Microsoft에서 Windows Server 2003 r 2 용으로 테스트 한 확장성 지침 목록은 [DFS 복제 확장성 지침](http://go.microsoft.com/fwlink/?linkid=75043) (http://go.microsoft.com/fwlink/?LinkId=75043) 을 참조 하세요.
+Microsoft에서 Windows Server 2003 r 2 용으로 테스트 한 확장성 지침 목록은 [DFS 복제 확장성 지침](https://go.microsoft.com/fwlink/?linkid=75043) (https://go.microsoft.com/fwlink/?LinkId=75043) 을 참조 하세요.
 
 ### <a name="when-should-i-not-use-dfs-replication"></a>DFS 복제를 사용 하지 않아야 하는 경우
 
@@ -257,15 +257,15 @@ Microsoft에서 Windows Server 2003 r 2 용으로 테스트 한 확장성 지침
 
 ### <a name="why-is-a-schema-update-required-for-dfs-replication"></a>DFS 복제에 스키마 업데이트가 필요한 이유는 무엇 인가요?
 
-DFS 복제은 Active Directory Domain Services의 도메인 명명 컨텍스트에서 새 개체를 사용 하 여 구성 정보를 저장 합니다. 이러한 개체는 Active Directory Domain Services 스키마를 업데이트할 때 생성 됩니다. 자세한 내용은 DFS 복제 (http://go.microsoft.com/fwlink/?LinkId=182264) ) [의 요구 사항 검토](http://go.microsoft.com/fwlink/?linkid=182264) 를 참조 하세요.
+DFS 복제은 Active Directory Domain Services의 도메인 명명 컨텍스트에서 새 개체를 사용 하 여 구성 정보를 저장 합니다. 이러한 개체는 Active Directory Domain Services 스키마를 업데이트할 때 생성 됩니다. 자세한 내용은 [DFS 복제에 대 한 요구 사항 검토](https://go.microsoft.com/fwlink/?linkid=182264) (https://go.microsoft.com/fwlink/?LinkId=182264) 를 참조 하세요.
 
 ## <a name="monitoring-and-management-tools"></a>모니터링 및 관리 도구
 
 ### <a name="can-i-automate-the-health-report-to-receive-warnings"></a>상태 보고서를 자동화 하 여 경고를 받을 수 있나요?
 
-예. 상태 보고서를 자동화 하는 방법에는 다음 세 가지가 있습니다.
+그렇습니다. 상태 보고서를 자동화 하는 방법에는 다음 세 가지가 있습니다.
 
-  - 예약 된 작업과 함께 Windows Server 2012 R2 또는 DfsrAdmin에 포함 된 DFSR Windows PowerShell 모듈을 사용 하 여 정기적으로 상태 보고서를 생성 합니다. 자세한 내용은 [DFS 복제 상태 보고서 자동화](http://go.microsoft.com/fwlink/?linkid=74010) (http://go.microsoft.com/fwlink/?LinkId=74010) 를 참조 하세요.  
+  - 예약 된 작업과 함께 Windows Server 2012 R2 또는 DfsrAdmin에 포함 된 DFSR Windows PowerShell 모듈을 사용 하 여 정기적으로 상태 보고서를 생성 합니다. 자세한 내용은 [DFS 복제 상태 보고서 자동화](https://go.microsoft.com/fwlink/?linkid=74010) (https://go.microsoft.com/fwlink/?LinkId=74010) 를 참조 하세요.  
       
   - System Center Operations Manager에 대 한 DFS 복제 관리 팩을 사용 하 여 지정 된 조건에 따라 경고를 만듭니다.  
       
@@ -274,17 +274,17 @@ DFS 복제은 Active Directory Domain Services의 도메인 명명 컨텍스트�
 
 ### <a name="can-i-use-microsoft-system-center-operations-manager-to-monitor-dfs-replication"></a>Microsoft System Center Operations Manager를 사용 하 여 DFS 복제를 모니터링할 수 있나요?
 
-예. 자세한 내용은 Microsoft 다운로드 센터 (http://go.microsoft.com/fwlink/?LinkId=182265) 에서 [System Center Operations Manager 2007에 대 한 DFS 복제 관리 팩](http://go.microsoft.com/fwlink/?linkid=182265) 을 참조 하세요.
+그렇습니다. 자세한 내용은 Microsoft 다운로드 센터 (https://go.microsoft.com/fwlink/?LinkId=182265) 에서 [System Center Operations Manager 2007에 대 한 DFS 복제 관리 팩](https://go.microsoft.com/fwlink/?linkid=182265) 을 참조 하세요.
 
 ### <a name="does-dfs-replication-support-remote-management"></a>원격 관리를 지원할 DFS 복제 있나요?
 
-예. DFS 복제는 DFS 관리 콘솔과 **복제 그룹 추가** 명령을 사용 하 여 원격 관리를 지원 합니다. 예를 들어 서버 A에서 서버 A와 B를 구성원으로 사용 하 여 포리스트에 정의 된 복제 그룹에 연결할 수 있습니다.
+그렇습니다. DFS 복제는 DFS 관리 콘솔과 **복제 그룹 추가** 명령을 사용 하 여 원격 관리를 지원 합니다. 예를 들어 서버 A에서 서버 A와 B를 구성원으로 사용 하 여 포리스트에 정의 된 복제 그룹에 연결할 수 있습니다.
 
 DFS 관리는 Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008 및 Windows Server 2003 r 2에 포함 되어 있습니다. 다른 버전의 Windows에서 DFS 복제를 관리 하려면 원격 데스크톱 또는 [windows 7 용 원격 서버 관리 도구](https://technet.microsoft.com/library/Ee449475)를 사용 합니다.
 
 
 > [!IMPORTANT]
-> 읽기 전용 복제 폴더 또는 장애 조치 (failover) 클러스터용 구성원을 포함 하는 복제 그룹을 보거나 관리 하려면 Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, 원격 서버에 포함 된 DFS 관리 버전을 사용 해야 합니다. <a href="http://go.microsoft.com/fwlink/p/?linkid=238560"> Windows 8 용 서버 관리 도구</a>또는 <a href="https://technet.microsoft.com/library/ee449475">windows 7에 대 한 원격 서버 관리 도구</a>입니다. 
+> 장애 조치 (failover) 클러스터인 읽기 전용 복제 폴더 또는 구성원이 포함 된 복제 그룹을 보거나 관리 하려면 windows Server 2012 R2, Windows Server 2012, Windows Server 원격 서버 관리 도구 2008 r 2에 포함 된 DFS 관리 버전을 사용 해야 합니다. windows <a href="https://go.microsoft.com/fwlink/p/?linkid=238560">8</a>의 경우에는 원격 서버 관리 도구이 고, windows <a href="https://technet.microsoft.com/library/ee449475">7의</a>경우에는를 사용 해야 합니다. 
 <br>
 
 
@@ -294,11 +294,11 @@ DFS 관리는 Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R
 
 ### <a name="how-can-files-be-recovered-from-the-conflictanddeleted-or-preexisting-folders"></a>ConflictAndDeleted 또는 기존 폴더에서 파일을 복구 하려면 어떻게 해야 하나요?
 
-손실 된 파일을 복구 하려면 파일 히스토리, 파일 탐색기의 **이전 버전 복원** 명령을 사용 하거나 백업에서 파일을 복원 하 여 파일 시스템 폴더 또는 공유 폴더에서 파일을 복원 합니다. ConflictAndDeleted 또는 기존 폴더에서 직접 파일을 복구 하려면 및 `Get-DfsrPreservedFiles` `Restore-DfsrPreservedFiles` windows PowerShell cmdlet (windows Server 2012 r 2의 DFSR 모듈에 포함) 또는 MSDN의 [RestoreDFSR](http://code.msdn.microsoft.com/restoredfsr) 샘플 스크립트를 사용 합니다. 코드 갤러리. 이 스크립트는 재해 복구 전용 이며 보증 없이 있는 그대로 제공 됩니다.
+손실 된 파일을 복구 하려면 파일 히스토리, 파일 탐색기의 **이전 버전 복원** 명령을 사용 하거나 백업에서 파일을 복원 하 여 파일 시스템 폴더 또는 공유 폴더에서 파일을 복원 합니다. ConflictAndDeleted 또는 기존 폴더에서 직접 파일을 복구 하려면 `Get-DfsrPreservedFiles`을 사용 하 고 Windows PowerShell cmdlet (Windows Server 2012 r 2의 DFSR 모듈에 포함) 또는 MSDN 코드 갤러리의 [RestoreDFSR](https://code.msdn.microsoft.com/restoredfsr) 샘플 스크립트를 `Restore-DfsrPreservedFiles` 합니다. 이 스크립트는 재해 복구 전용 이며 보증 없이 있는 그대로 제공 됩니다.
 
 ### <a name="is-there-a-way-to-know-the-state-of-replication"></a>복제 상태를 확인 하는 방법이 있나요?
 
-예. 복제를 모니터링 하는 방법에는 여러 가지가 있습니다.
+그렇습니다. 복제를 모니터링 하는 방법에는 여러 가지가 있습니다.
 
   - DFS 복제에는 사전 모니터링을 제공 하는 System Center Operations Manager에 대 한 관리 팩이 있습니다.  
       
@@ -331,7 +331,7 @@ DFS 복제는 전화 접속 속도에서 작동 하지만 복제할 변경 내�
 
 ### <a name="how-can-i-improve-replication-performance"></a>복제 성능을 향상 하려면 어떻게 해야 하나요?
 
-복제 성능 튜닝에 대 한 다양 한 방법에 대해 알아보려면 [디렉터리 서비스 팀 블로그](http://blogs.technet.com/b/askds/)를 참조 하 여 [DFSR에서 복제 성능 조정](http://blogs.technet.com/b/askds/archive/2010/03/31/tuning-replication-performance-in-dfsr-especially-on-win2008-r2.aspx) 을 참조 하세요.
+복제 성능 튜닝에 대 한 다양 한 방법에 대해 알아보려면 [디렉터리 서비스 팀 블로그](https://blogs.technet.com/b/askds/)를 참조 하 여 [DFSR에서 복제 성능 조정](https://blogs.technet.com/b/askds/archive/2010/03/31/tuning-replication-performance-in-dfsr-especially-on-win2008-r2.aspx) 을 참조 하세요.
 
 ### <a name="how-does-dfs-replication-avoid-saturating-a-connection"></a>에서 연결의 포화를 방지 하는 방법 DFS 복제
 
@@ -365,17 +365,17 @@ DFS 복제에서 사용 하는 디스크, 메모리 및 CPU 리소스는 파일�
 
 ### <a name="are-changes-compressed-before-being-replicated"></a>복제 전에 변경 내용을 압축 합니까?
 
-예. 파일의 변경 된 부분은 이미 압축 된 다음을 제외한 모든 파일 형식에 대해 전송 되기 전에 압축 됩니다. wma, .wmv, .zip, .jpg,. mpg,. m,. .m1v,. mp2,. mp3,, .cab, .wav,. snd, au, .asf, .asf, .avi, a-z, release.tar.gz,. tgz 및 frx입니다. 이러한 파일 형식에 대 한 압축 설정은 Windows Server 2003 r 2에서 구성할 수 없습니다.
+그렇습니다. 파일의 변경 된 부분은 이미 압축 된 다음을 제외한 모든 파일 형식에 대해 전송 되기 전에 압축 됩니다. wma, .wmv, .zip, .jpg,. mpg,. m,. .m1v,. mp2,. mp3,, .cab, .wav,. snd, au, .asf, .asf, .avi, a-z, release.tar.gz,. tgz 및 frx입니다. 이러한 파일 형식에 대 한 압축 설정은 Windows Server 2003 r 2에서 구성할 수 없습니다.
 
 ### <a name="can-an-administrator-turn-off-rdc-or-change-the-threshold"></a>관리자가 RDC를 끄거나 임계값을 변경할 수 있나요?
 
-예. 지정 된 연결의 속성 페이지를 통해 RDC를 해제할 수 있습니다. RDC를 사용 하지 않도록 설정 하면 대역폭 제약 조건이 없거나 64 미만의 파일을 주로 구성 하는 복제 그룹에 대 한 CPU 사용률 및 복제 대기 시간을 줄일 수 있습니다. 연결에서 RDC를 사용 하지 않도록 선택 하는 경우 변경 전후에 복제 효율성을 테스트 하 여 복제 성능이 개선 되었는지 확인 합니다.
+그렇습니다. 지정 된 연결의 속성 페이지를 통해 RDC를 해제할 수 있습니다. RDC를 사용 하지 않도록 설정 하면 대역폭 제약 조건이 없거나 64 미만의 파일을 주로 구성 하는 복제 그룹에 대 한 CPU 사용률 및 복제 대기 시간을 줄일 수 있습니다. 연결에서 RDC를 사용 하지 않도록 선택 하는 경우 변경 전후에 복제 효율성을 테스트 하 여 복제 성능이 개선 되었는지 확인 합니다.
 
 **Dfsradmin 연결 집합** 명령, DFS 복제 WMI 공급자 또는 구성 XML 파일을 수동으로 편집 하 여 RDC 크기 임계값을 변경할 수 있습니다.
 
 ### <a name="does-rdc-work-on-all-file-types"></a>RDC는 모든 파일 형식에서 작동 하나요?
 
-예. RDC는 파일 데이터 형식과 관계 없이 블록 수준에서 차이를 계산 합니다. 그러나 RDC는 Word 문서, PST 파일, VHD 이미지 등의 특정 파일 형식에서 보다 효율적으로 작동 합니다.
+그렇습니다. RDC는 파일 데이터 형식과 관계 없이 블록 수준에서 차이를 계산 합니다. 그러나 RDC는 Word 문서, PST 파일, VHD 이미지 등의 특정 파일 형식에서 보다 효율적으로 작동 합니다.
 
 ### <a name="how-does-rdc-work-on-a-compressed-file"></a>RDC는 압축 된 파일에서 어떻게 작동 하나요?
 
@@ -424,21 +424,21 @@ RDC (원격 차등 압축)는 제한 된 대역폭 네트워크를 통해 효율
 <tr class="header">
 <th>운영 체제 버전</th>
 <th>Standard Edition</th>
-<th>Enterprise Edition</th>
+<th>Enterprise 버전</th>
 <th>Datacenter Edition</th>
 </tr>
 </thead>
 <tbody>
 <tr class="even">
-<td><p>Windows Server 2012 R2</p></td>
+<td><p>Windows Server 2012 R2</p></td>
 <td><p>예<em></p></td>
-<td><p>제공되지 않음</p></td>
+<td><p>사용 불가능</p></td>
 <td><p>예</em></p></td>
 </tr>
 <tr class="odd">
 <td><p>Windows Server 2012</p></td>
 <td><p>예</p></td>
-<td><p>제공되지 않음</p></td>
+<td><p>사용 불가능</p></td>
 <td><p>예</p></td>
 </tr>
 <tr class="even">
@@ -450,19 +450,19 @@ RDC (원격 차등 압축)는 제한 된 대역폭 네트워크를 통해 효율
 <tr class="odd">
 <td><p>Windows Server 2008</p></td>
 <td><p>아니요</p></td>
-<td><p>사용자 계정 컨트롤</p></td>
+<td><p>예</p></td>
 <td><p>아니요</p></td>
 </tr>
 <tr class="even">
 <td><p>Windows Server 2003 R2</p></td>
 <td><p>아니요</p></td>
-<td><p>사용자 계정 컨트롤</p></td>
+<td><p>예</p></td>
 <td><p>아니요</p></td>
 </tr>
 </tbody>
 </table>
 
-\*필요에 따라 Windows Server 2012 r 2에서 파일 간 RDC를 사용 하지 않도록 설정할 수 있습니다.
+\* 필요에 따라 Windows Server 2012 r 2에서 파일 간 RDC를 사용 하지 않도록 설정할 수 있습니다.
 
 ## <a name="replication-details"></a>복제 세부 정보
 
@@ -474,19 +474,19 @@ RDC (원격 차등 압축)는 제한 된 대역폭 네트워크를 통해 효율
 
 아니요, DFS 복제 복제할 파일 특성을 구성할 수 없습니다.
 
-특성 값 및 해당 설명의 목록은 MSDN의 [파일 특성](http://go.microsoft.com/fwlink/?linkid=182268) (http://go.microsoft.com/fwlink/?LinkId=182268) 을 참조 하세요.
+특성 값 및 해당 설명의 목록은 MSDN의 [파일 특성](https://go.microsoft.com/fwlink/?linkid=182268) (https://go.microsoft.com/fwlink/?LinkId=182268) 을 참조 하세요.
 
-다음 특성 값은 `SetFileAttributes dwFileAttributes` 함수를 사용 하 여 설정 되며 DFS 복제에 의해 복제 됩니다. 이러한 특성 값을 변경 하면 특성 복제가 트리거됩니다. 내용이 변경 되는 경우를 제외 하 고 파일의 내용은 복제 되지 않습니다. 자세한 내용은 MSDN 라이브러리 (http://go.microsoft.com/fwlink/?LinkId=182269) 의 [setfileattributes 함수](http://go.microsoft.com/fwlink/?linkid=182269) 를 참조 하세요.
+다음 특성 값은 `SetFileAttributes dwFileAttributes` 함수를 사용 하 여 설정 되며 DFS 복제에 의해 복제 됩니다. 이러한 특성 값을 변경 하면 특성 복제가 트리거됩니다. 내용이 변경 되는 경우를 제외 하 고 파일의 내용은 복제 되지 않습니다. 자세한 내용은 MSDN 라이브러리 (https://go.microsoft.com/fwlink/?LinkId=182269) 의 [setfileattributes 함수](https://go.microsoft.com/fwlink/?linkid=182269) 를 참조 하세요.
 
-  - 파일\_특성\_숨김  
+  - 파일\_특성\_숨겨짐  
       
-  - 파일\_특성\_READONLY  
+  - READONLY\_파일\_특성  
       
-  - 파일\_특성\_시스템  
+  - 파일\_특성\_SYSTEM  
       
-  - 파일\_\_특성이\_콘텐츠인덱싱되지\_않음  
+  - 파일\_특성\_\_콘텐츠\_인덱싱되지 않음  
       
-  - 오프\_라인\_파일 특성  
+  - 오프 라인\_파일\_특성  
       
 
 다음 특성 값은 DFS 복제에 의해 복제 되지만 복제를 트리거하지 않습니다.
@@ -496,25 +496,25 @@ RDC (원격 차등 압축)는 제한 된 대역폭 네트워크를 통해 효율
   - 파일\_특성\_정상  
       
 
-다음 파일 특성 값도 `SetFileAttributes` 함수를 사용 하 여 설정할 수는 없지만 ( `GetFileAttributes` 함수를 사용 하 여 특성 값 보기) 복제를 트리거합니다.
+다음 파일 특성 값은 `SetFileAttributes` 함수를 사용 하 여 설정할 수 없지만 (`GetFileAttributes` 함수를 사용 하 여 특성 값 보기) 복제를 트리거합니다.
 
-  - 파일\_특성\_재분석지점\_  
+  - 파일\_특성\_재분석\_지점  
       
 
 > [!NOTE]
-> 재분석 태그가 IO_REPARSE_TAG_SYMLINK 않는 한 DFS 복제은 재분석 지점 특성 값을 복제 하지 않습니다. IO_REPARSE_TAG_DEDUP, IO_REPARSE_TAG_SIS 또는 IO_REPARSE_TAG_HSM 재분석 태그가 있는 파일은 일반 파일로 복제 됩니다. 그러나 재분석 지점은 로컬 시스템 에서만 작동 하므로 재분석 태그 및 재분석 데이터 버퍼는 다른 서버로 복제 되지 않습니다. 
+> 재분석 태그를 IO_REPARSE_TAG_SYMLINK 하지 않으면 DFS 복제 재분석 지점 특성 값을 복제 하지 않습니다. IO_REPARSE_TAG_DEDUP, IO_REPARSE_TAG_SIS 또는 IO_REPARSE_TAG_HSM 재분석 태그를 포함 하는 파일은 일반 파일로 복제 됩니다. 그러나 재분석 지점은 로컬 시스템 에서만 작동 하므로 재분석 태그 및 재분석 데이터 버퍼는 다른 서버로 복제 되지 않습니다. 
 <br>
 
-  - 압축\_된\_파일 특성  
+  - 압축\_파일\_특성  
       
-  - 암호화\_된\_파일 특성  
+  - 암호화\_파일\_특성  
       
 
 > [!NOTE]
-> DFS 복제는 EFS (파일 시스템 암호화)를 사용 하 여 암호화 된 파일을 복제 하지 않습니다. DFS 복제는 타사 소프트웨어를 사용 하 여 암호화 된 파일을 복제 하지만 파일에 FILE_ATTRIBUTE_ENCRYPTED 특성 값이 설정 되지 않은 경우에만이 파일을 복제 합니다. 
+> DFS 복제는 EFS (파일 시스템 암호화)를 사용 하 여 암호화 된 파일을 복제 하지 않습니다. DFS 복제는 타사 소프트웨어를 사용 하 여 암호화 된 파일을 복제 하지만 파일에 FILE_ATTRIBUTE_ENCRYPTED 특성 값을 설정 하지 않는 경우에만이 파일을 복제 합니다. 
 <br>
 
-  - 파일\_특성\_스파스파일\_  
+  - 스파스\_파일\_파일\_특성  
       
   - 파일\_특성\_디렉터리  
       
@@ -523,29 +523,29 @@ DFS 복제 파일\_특성\_임시 값을 복제 하지 않습니다.
 
 ### <a name="can-i-control-which-member-is-replicated"></a>복제할 멤버를 제어할 수 있나요?
 
-예. 복제 그룹을 만들 때 토폴로지를 선택할 수 있습니다. 또는 **토폴로지 없음** 을 선택 하 고 복제 그룹을 만든 후에 연결을 수동으로 구성할 수 있습니다.
+그렇습니다. 복제 그룹을 만들 때 토폴로지를 선택할 수 있습니다. 또는 **토폴로지 없음** 을 선택 하 고 복제 그룹을 만든 후에 연결을 수동으로 구성할 수 있습니다.
 
 ### <a name="can-i-seed-a-replication-group-member-with-data-prior-to-the-initial-replication"></a>초기 복제 전에 데이터를 사용 하 여 복제 그룹 구성원의 초기값을 지정할 수 있나요?
 
-예. DFS 복제는 초기 복제 전에 복제 그룹 구성원에 파일을 복사 하는 것을 지원 합니다. 이 "사전 준비"는 초기 복제 중에 복제 되는 데이터의 양을 크게 줄일 수 있습니다.
+그렇습니다. DFS 복제는 초기 복제 전에 복제 그룹 구성원에 파일을 복사 하는 것을 지원 합니다. 이 "사전 준비"는 초기 복제 중에 복제 되는 데이터의 양을 크게 줄일 수 있습니다.
 
-파일이 실제 특성 또는 타임 스탬프에 의해서만 다를 경우 초기 복제는 콘텐츠를 복제할 필요가 없습니다. 실제 특성은 Win32 함수 `SetFileAttributes`에서 설정할 수 있는 특성입니다. 자세한 내용은 MSDN 라이브러리 (http://go.microsoft.com/fwlink/?LinkId=182269) 의 [setfileattributes 함수](http://go.microsoft.com/fwlink/?linkid=182269) 를 참조 하세요. 두 파일이 압축과 같은 다른 특성에 따라 다르면 파일의 내용이 복제 됩니다.
+파일이 실제 특성 또는 타임 스탬프에 의해서만 다를 경우 초기 복제는 콘텐츠를 복제할 필요가 없습니다. 실제 특성은 `SetFileAttributes`Win32 함수에서 설정할 수 있는 특성입니다. 자세한 내용은 MSDN 라이브러리 (https://go.microsoft.com/fwlink/?LinkId=182269) 의 [setfileattributes 함수](https://go.microsoft.com/fwlink/?linkid=182269) 를 참조 하세요. 두 파일이 압축과 같은 다른 특성에 따라 다르면 파일의 내용이 복제 됩니다.
 
 복제 그룹 구성원을 사전 준비 하려면 대상 서버의 해당 폴더에 파일을 복사 하 고 복제 그룹을 만든 다음 주 구성원을 선택 합니다. 주 구성원의 내용이 "신뢰할 수 있는" 것으로 간주 되기 때문에 복제 하려는 최신 파일이 있는 구성원을 선택 합니다. 즉, 초기 복제 중에 주 구성원의 파일은 항상 복제 그룹의 다른 멤버에 있는 다른 버전의 파일을 덮어씁니다.
 
-DFSR 데이터베이스를 미리 시드해야 하 고 복제 하는 방법에 대 [한 자세한 내용은 Windows Server 2012 r 2에서 DFS 복제 초기 동기화를 참조 하세요. 클론](http://blogs.technet.com/b/filecab/archive/2013/08/21/dfs-replication-initial-sync-in-windows-server-2012-r2-attack-of-the-clones.aspx)의 공격입니다.
+DFSR 데이터베이스를 미리 시드해야 하 고 복제 하는 방법에 대 한 자세한 내용은 [Windows Server 2012 r 2의 초기 동기화 DFS 복제: 복제본의 공격](https://blogs.technet.com/b/filecab/archive/2013/08/21/dfs-replication-initial-sync-in-windows-server-2012-r2-attack-of-the-clones.aspx)을 참조 하세요.
 
 초기 복제에 대 한 자세한 내용은 [복제 그룹 만들기](https://technet.microsoft.com/library/cc725893)를 참조 하세요.
 
 ### <a name="does-dfs-replication-overcome-common-file-replication-service-issues"></a>일반적인 파일 복제 서비스 문제를 해결할 DFS 복제 있나요?
 
-예. DFS 복제 일반적인 세 가지 FRS 문제를 극복 합니다.
+그렇습니다. DFS 복제 일반적인 세 가지 FRS 문제를 극복 합니다.
 
-  - 저널 줄 바꿈: 저널에서 복구 하는 DFS 복제 즉시 래핑합니다. 복제를 다시 사용 하기 전에 각 기존 파일 또는 폴더가 journalWrap로 표시 되 고 파일 시스템에 대해 확인 됩니다. 복구 하는 동안에는 어느 방향으로도 복제에이 볼륨을 사용할 수 없습니다.  
+  - 저널 래핑: 저널에서 복구 하는 DFS 복제 즉시 래핑합니다. 복제를 다시 사용 하기 전에 각 기존 파일 또는 폴더가 journalWrap로 표시 되 고 파일 시스템에 대해 확인 됩니다. 복구 하는 동안에는 어느 방향으로도 복제에이 볼륨을 사용할 수 없습니다.  
       
   - 과도 한 복제: 과도 한 복제를 방지 하기 위해 DFS 복제 크레딧을 시스템을 사용 합니다.  
       
-  - 머프 폴더: 머프 폴더 이름을 방지 하기 위해 DFS 복제는 복제 된 폴더의 로컬 경로\\아래에 있는 숨겨진 DfsrPrivate ConflictandDeleted 폴더에 충돌 하는 데이터를 저장 합니다. 예를 들어 FRS를 사용 하 여 복제 된 다른 서버에서 동일한 이름을 사용 하 여 여러 폴더를 동시에 만들면 FRS에서 이전 폴더의 이름을 바꿉니다. DFS 복제 대신 이전 폴더를 로컬 충돌 및 삭제 된 폴더로 이동 합니다.  
+  - 머프 폴더: 머프 폴더 이름을 방지 하기 위해 DFS 복제는 복제 된 폴더의 로컬 경로 아래에 있는 숨겨진 DfsrPrivate\\ConflictandDeleted 폴더에 충돌 하는 데이터를 저장 합니다. 예를 들어 FRS를 사용 하 여 복제 된 다른 서버에서 동일한 이름을 사용 하 여 여러 폴더를 동시에 만들면 FRS에서 이전 폴더의 이름을 바꿉니다. DFS 복제 대신 이전 폴더를 로컬 충돌 및 삭제 된 폴더로 이동 합니다.  
       
 
 ### <a name="does-dfs-replication-replicate-files-in-chronological-order"></a>파일을 시간 순서 대로 복제 DFS 복제?
@@ -562,9 +562,9 @@ DFSR 데이터베이스를 미리 시드해야 하 고 복제 하는 방법에 �
       
   - Microsoft는 복제 된 폴더의 파일에 대 한 NTFS 하드 링크 생성을 지원 하지 않습니다. 이렇게 하면 영향을 받는 파일에서 복제 문제가 발생할 수 있습니다. 하드 링크 파일은 DFS 복제에서 무시 되 고 복제 되지 않습니다. 또한 연결 지점은 복제 되지 않으며 DFS 복제는 발생 하는 각 연결 지점에 대해 이벤트 4406을 기록 합니다.  
       
-  - DFS 복제에서 복제 하는 유일한 재분석 지점은 IO\_재분석\_태그\_SYMLINK 태그를 사용 하는 것 이지만 DFS 복제는 SYMLINK의 대상도 복제 되도록 보장 하지 않습니다. 자세한 내용은 [디렉터리 서비스 팀 블로그](http://blogs.technet.com/b/askds/archive/2011/09/30/friday-mail-sack-super-slo-mo-edition.aspx)를 참조 하세요.  
+  - DFS 복제에서 복제 하는 유일한 재분석 지점은 IO\_재분석\_태그\_SYMLINK 태그를 사용 하는 것입니다. 그러나 DFS 복제는 symlink의 대상도 복제 되도록 보장 하지 않습니다. 자세한 내용은 [디렉터리 서비스 팀 블로그](https://blogs.technet.com/b/askds/archive/2011/09/30/friday-mail-sack-super-slo-mo-edition.aspx)를 참조 하세요.  
       
-  - \_Io 재분석태그중복제거\_,\_io 재분석\_태그\_SIS 또는io\_재분석 태그 HSM 재분석 태그를 사용 하는 파일을 복제 합니다.\_\_\_ 일반 파일로 재분석 지점은 로컬 시스템 에서만 작동 하므로 재분석 태그 및 재분석 데이터 버퍼는 다른 서버로 복제 되지 않습니다. 따라서 Windows Server 2012 또는 SIS (단일 인스턴스 저장소)에서 데이터 중복 제거를 사용 하는 볼륨의 폴더를 복제할 수 있지만, 데이터 중복 제거 정보는 역할 서비스를 사용 하도록 설정 된 각 서버에서 별도로 유지 관리 됩니다. DFS 복제  
+  - IO\_재분석\_태그\_중복 제거, IO\_재분석\_태그\_SIS 또는 IO\_재분석\_\_HSM 재분석 태그가 있는 파일은 일반 파일로 복제 됩니다. 재분석 지점은 로컬 시스템 에서만 작동 하므로 재분석 태그 및 재분석 데이터 버퍼는 다른 서버로 복제 되지 않습니다. 따라서 Windows Server 2012 또는 SIS (단일 인스턴스 저장소)에서 데이터 중복 제거를 사용 하는 볼륨의 폴더를 복제할 수 있지만, 데이터 중복 제거 정보는 역할 서비스를 사용 하도록 설정 된 각 서버에서 별도로 유지 관리 됩니다. DFS 복제  
       
 
 ### <a name="does-dfs-replication-replicate-timestamp-changes-if-no-other-changes-are-made-to-the-file"></a>파일에 대 한 다른 변경 내용이 없는 경우 타임 스탬프 변경을 복제할 DFS 복제 있습니까?
@@ -573,7 +573,7 @@ DFSR 데이터베이스를 미리 시드해야 하 고 복제 하는 방법에 �
 
 ### <a name="does-dfs-replication-replicate-updated-permissions-on-a-file-or-folder"></a>파일이 나 폴더에 대 한 업데이트 된 사용 권한을 DFS 복제 복제 합니까?
 
-예. DFS 복제는 파일 및 폴더에 대 한 사용 권한 변경 내용을 복제 합니다. Access Control 목록 (ACL)과 연결 된 파일의 일부만 복제 되지만 DFS 복제는 여전히 전체 파일을 준비 영역으로 읽어야 합니다.
+그렇습니다. DFS 복제는 파일 및 폴더에 대 한 사용 권한 변경 내용을 복제 합니다. Access Control 목록 (ACL)과 연결 된 파일의 일부만 복제 되지만 DFS 복제는 여전히 전체 파일을 준비 영역으로 읽어야 합니다.
 
 
 > [!NOTE]
@@ -583,23 +583,23 @@ DFSR 데이터베이스를 미리 시드해야 하 고 복제 하는 방법에 �
 
 ### <a name="does-dfs-replication-support-merging-text-files-in-the-event-of-a-conflict"></a>충돌이 발생 한 경우 텍스트 파일 병합을 지원 DFS 복제?
 
-충돌이 발생 한 경우 DFS 복제는 파일을 병합 하지 않습니다. 그러나 충돌이 검색 된 컴퓨터의 hidden DfsrPrivate\\ConflictandDeleted 폴더에 있는 파일의 이전 버전을 유지 하려고 시도 합니다.
+충돌이 발생 한 경우 DFS 복제는 파일을 병합 하지 않습니다. 그러나 충돌이 검색 된 컴퓨터의 hidden DfsrPrivate\\ConflictandDeleted 폴더에 있는 파일의 이전 버전을 유지 하려고 합니다.
 
 ### <a name="does-dfs-replication-use-encryption-when-transmitting-data"></a>데이터를 전송할 때 암호화를 사용 DFS 복제?
 
-예. DFS 복제는 암호화로 RPC (원격 프로시저 호출) 연결을 사용 합니다.
+그렇습니다. DFS 복제는 암호화로 RPC (원격 프로시저 호출) 연결을 사용 합니다.
 
 ### <a name="is-it-possible-to-disable-the-use-of-encrypted-rpc"></a>암호화 된 RPC 사용을 사용 하지 않도록 설정할 수 있나요?
 
-아니요. DFS 복제 서비스는 TCP를 통해 RPC (원격 프로시저 호출)를 사용 하 여 데이터를 복제 합니다. 인터넷을 통해 데이터 전송을 보호 하기 위해 DFS 복제 서비스는 항상 인증 수준 상수인를 `RPC_C_AUTHN_LEVEL_PKT_PRIVACY`사용 하도록 설계 되었습니다. 이렇게 하면 인터넷을 통한 RPC 통신이 항상 암호화 됩니다. 따라서 DFS 복제 서비스에서 암호화 된 RPC 사용을 사용 하지 않도록 설정할 수 없습니다.
+아니요. DFS 복제 서비스는 TCP를 통해 RPC (원격 프로시저 호출)를 사용 하 여 데이터를 복제 합니다. 인터넷을 통해 데이터 전송을 보호 하기 위해 DFS 복제 서비스는 항상 `RPC_C_AUTHN_LEVEL_PKT_PRIVACY`인증 수준 상수를 사용 하도록 설계 되었습니다. 이렇게 하면 인터넷을 통한 RPC 통신이 항상 암호화 됩니다. 따라서 DFS 복제 서비스에서 암호화 된 RPC 사용을 사용 하지 않도록 설정할 수 없습니다.
 
 자세한 내용은 다음 Microsoft 웹 사이트를 참조 하십시오.
 
-  - [RPC 기술 참조](http://go.microsoft.com/fwlink/?linkid=182278)  
+  - [RPC 기술 참조](https://go.microsoft.com/fwlink/?linkid=182278)  
       
-  - [원격 차등 압축 정보](http://go.microsoft.com/fwlink/?linkid=182279)  
+  - [원격 차등 압축 정보](https://go.microsoft.com/fwlink/?linkid=182279)  
       
-  - [인증 수준 상수](http://go.microsoft.com/fwlink/?linkid=182280)  
+  - [인증 수준 상수](https://go.microsoft.com/fwlink/?linkid=182280)  
       
 
 ### <a name="how-are-simultaneous-replications-handled"></a>동시 복제는 어떻게 처리 되나요?
@@ -610,7 +610,7 @@ DFSR 데이터베이스를 미리 시드해야 하 고 복제 하는 방법에 �
 
 ### <a name="how-do-i-force-replication-or-polling"></a>강제로 복제 또는 폴링을 어떻게 할까요??
 
-[복제 일정 편집](https://technet.microsoft.com/library/Cc732278)에 설명 된 대로 DFS 관리를 사용 하 여 즉시 복제를 강제로 수행할 수 있습니다. Windows Server 2012 r 2에 도입 된 `Sync-DfsReplicationGroup` DFSR PowerShell 모듈 또는 **Dfsrdiag syncnow** 명령에 포함 된 cmdlet을 사용 하 여 강제로 복제할 수도 있습니다. `Update-DfsrConfigurationFromAD` Cmdlet 또는 **Dfsrdiag PollAD** 명령을 사용 하 여 강제 폴링을 수행할 수 있습니다.
+[복제 일정 편집](https://technet.microsoft.com/library/Cc732278)에 설명 된 대로 DFS 관리를 사용 하 여 즉시 복제를 강제로 수행할 수 있습니다. Windows Server 2012 r 2에 도입 된 DFSR PowerShell 모듈 또는 **Dfsrdiag SyncNow** 명령에 포함 된 `Sync-DfsReplicationGroup` cmdlet을 사용 하 여 강제로 복제할 수도 있습니다. `Update-DfsrConfigurationFromAD` cmdlet 또는 **Dfsrdiag PollAD** 명령을 사용 하 여 강제 폴링을 수행할 수 있습니다.
 
 ### <a name="is-it-possible-to-configure-a-quiet-time-between-replications-for-files-that-change-frequently"></a>자주 변경 되는 파일에 대 한 복제 간에 자동 시간을 구성할 수 있나요?
 
@@ -618,7 +618,7 @@ DFSR 데이터베이스를 미리 시드해야 하 고 복제 하는 방법에 �
 
 ### <a name="is-it-possible-to-configure-one-way-replication-with-dfs-replication"></a>DFS 복제를 사용 하 여 단방향 복제를 구성할 수 있나요?
 
-예. Windows Server 2012 또는 Windows Server 2008 r 2를 사용 하는 경우 단방향 연결을 통해 콘텐츠를 복제 하는 읽기 전용 복제 폴더를 만들 수 있습니다. 자세한 내용은 [특정 멤버에 대해 복제 된 폴더를 읽기](http://go.microsoft.com/fwlink/?linkid=156740) 전용으로 설정 (http://go.microsoft.com/fwlink/?LinkId=156740) 을 참조 하세요.
+그렇습니다. Windows Server 2012 또는 Windows Server 2008 r 2를 사용 하는 경우 단방향 연결을 통해 콘텐츠를 복제 하는 읽기 전용 복제 폴더를 만들 수 있습니다. 자세한 내용은 [특정 멤버에 대해 복제 된 폴더를 읽기](https://go.microsoft.com/fwlink/?linkid=156740) 전용으로 설정 (https://go.microsoft.com/fwlink/?LinkId=156740) 을 참조 하세요.
 
 Windows Server 2008 또는 Windows Server 2003 r 2에서 DFS 복제를 사용 하 여 단방향 복제 연결을 만들 수 없습니다. 이렇게 하면 상태 검사 토폴로지 오류, 준비 문제 및 DFS 복제 데이터베이스 관련 문제를 비롯 한 다양 한 문제가 발생할 수 있습니다.
 
@@ -649,7 +649,7 @@ Windows Server 2008 또는 Windows Server 2003 r 2를 사용 하는 경우 다�
 
 ### <a name="what-happens-if-the-replication-schedule-closes-while-a-file-is-being-replicated"></a>파일이 복제 되는 동안 복제 일정이 닫히면 어떻게 되나요?
 
-연결에서 RDC (원격 차등 압축)를 사용 하도록 설정 하는 경우 일정 종료 (또는 **대역폭 없음**) 직전에 복제를 시작 하는 64 보다 큰 파일의 인바운드 복제는 일정을 열 때 (또는 **대역폭**을 제외 하 고 다른 항목에 대 한 변경 내용입니다. 복제가 중지 되었을 때의 상태에서 복제가 계속 됩니다.
+연결에서 RDC (원격 차등 압축)를 사용 하도록 설정 하는 경우 일정 종료 (또는 대역폭 **없음**) 직전에 복제를 시작 하는 64 보다 큰 파일의 인바운드 복제는 일정을 열 때 (또는 **대역폭이 없는**다른 항목으로 변경) 계속 됩니다. 복제가 중지 되었을 때의 상태에서 복제가 계속 됩니다.
 
 RDC가 꺼져 있으면 DFS 복제에서 파일 전송을 완전히 다시 시작 합니다. 이는 수신 멤버에서 파일을 사용할 수 있을 때 지연 될 수 있습니다.
 
@@ -678,7 +678,7 @@ DFS 복제에서 충돌을 발견 하면 마지막으로 저장 된 파일 버�
 
 ### <a name="is-it-possible-to-change-the-location-of-the-staging-folder-with-the-dfs-management-tool"></a>DFS 관리 도구를 사용 하 여 준비 폴더의 위치를 변경할 수 있나요?
 
-예. 준비 폴더 위치는 복제 그룹의 각 구성원에 대 한 **속성** 대화 상자의 **고급** 탭에서 구성 됩니다.
+그렇습니다. 준비 폴더 위치는 복제 그룹의 각 구성원에 대 한 **속성** 대화 상자의 **고급** 탭에서 구성 됩니다.
 
 ### <a name="when-are-files-staged"></a>파일이 준비 된 시기
 
@@ -703,7 +703,7 @@ DFS 복제에서 충돌을 발견 하면 마지막으로 저장 된 파일 버�
 <tr class="even">
 <td><p>보내기 멤버</p></td>
 <td><p>64KB</p></td>
-<td><p>256 KB</p></td>
+<td><p>256KB</p></td>
 </tr>
 <tr class="odd">
 <td><p>수신 구성원</p></td>
@@ -717,7 +717,7 @@ DFS 복제에서 충돌을 발견 하면 마지막으로 저장 된 파일 버�
 
 파일의 일부를 이미 전송 중인 경우 DFS 복제는 전송을 계속 합니다. DFS 복제 파일 전송을 시작 하기 전에 파일이 변경 되 면 파일의 최신 버전이 전송 됩니다.
 
-## <a name="change-history"></a>변경 내역
+## <a name="change-history"></a>변경 내용
 
 
 <table>
@@ -728,9 +728,9 @@ DFS 복제에서 충돌을 발견 하면 마지막으로 저장 된 파일 버�
 </colgroup>
 <thead>
 <tr class="header">
-<th>Date</th>
+<th>날짜</th>
 <th>설명</th>
-<th>Reason</th>
+<th>이유</th>
 </tr>
 </thead>
 <tbody>
@@ -752,7 +752,7 @@ DFS 복제에서 충돌을 발견 하면 마지막으로 저장 된 파일 버�
 <tr class="even">
 <td><p>10 월 31 일, 2012</p></td>
 <td><p>DFS 복제에 대해 지원 되는 제한은 무엇 인가요? 항목을 입력 하 여 볼륨의 테스트 된 복제 파일 수를 늘립니다.</p></td>
-<td><p>고객 의견</p></td>
+<td><p>고객 피드백</p></td>
 </tr>
 <tr class="odd">
 <td><p>2012 년 8 월 15 일</p></td>
@@ -762,7 +762,7 @@ DFS 복제에서 충돌을 발견 하면 마지막으로 저장 된 파일 버�
 <tr class="even">
 <td><p>June 13, 2012</p></td>
 <td><p>편집 된 DFS 복제 ReFS 또는 FAT 볼륨에서 작동 하나요? ReFS에 대 한 설명을 추가할 항목입니다.</p></td>
-<td><p>고객 의견</p></td>
+<td><p>고객 피드백</p></td>
 </tr>
 <tr class="odd">
 <td><p>4 월 25 일, 2012</p></td>
@@ -778,12 +778,12 @@ DFS 복제에서 충돌을 발견 하면 마지막으로 저장 된 파일 버�
 <tr class="odd">
 <td><p>2011 년 1 월 26 일</p></td>
 <td><p>ConflictAndDeleted 또는 기존 폴더에서 파일을 복구 하는 방법을 추가 했습니까?</p></td>
-<td><p>고객 의견</p></td>
+<td><p>고객 피드백</p></td>
 </tr>
 <tr class="even">
 <td><p>10 월 20 일, 2010</p></td>
 <td><p>DFS 복제 멤버를 어떻게 업그레이드 하거나 바꿀 수 있나요?</p></td>
-<td><p>고객 의견</p></td>
+<td><p>고객 피드백</p></td>
 </tr>
 </tbody>
 </table>

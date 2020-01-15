@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: c902f9a438afd226dfb58dbde9f3c00d57b0ed58
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6cecf2edcb834a963c706fa4a63e7d15b13f7888
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408596"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949623"
 ---
 # <a name="audit-policy-recommendations"></a>감사 정책 권장 사항
 
@@ -34,19 +34,19 @@ ms.locfileid: "71408596"
 ## <a name="recommended-audit-policies-by-operating-system"></a>운영 체제별 권장 감사 정책  
 이 섹션에는 다음 운영 체제에 적용 되는 감사 설정 권장 사항을 나열 하는 표가 포함 되어 있습니다.  
 
--   Windows Server 2016 
+-   Windows Server 2016 
 
 -   Windows Server 2012  
 
--   Windows Server 2012 R2  
+-   Windows Server 2012 R2  
 
 -   Windows Server 2008  
 
--   Windows 10
+-   Windows 10
 
 -   Windows 8.1  
 
--   Windows 7  
+-   Windows 7  
 
 이러한 테이블에는 Windows 기본 설정, 기준선 권장 사항 및 이러한 운영 체제에 대 한 더 강력한 권장 사항이 포함 되어 있습니다.  
 
@@ -54,7 +54,7 @@ ms.locfileid: "71408596"
 
 |||  
 |-|-|  
-|**주석**|**권장**|  
+|**주석**|**추천 사항**|  
 |예|일반 시나리오에서 사용|  
 |아니요|일반 시나리오 **에서 사용 안 함**|  
 |IF|특정 시나리오에 필요한 경우 또는 감사를 원하는 역할이 나 기능이 컴퓨터에 설치 되어 있는 경우 사용|  
@@ -69,11 +69,11 @@ ms.locfileid: "71408596"
 |----------------------------------------|------------------------------------------|--------------------------------------------------|--------------------------------------------------|  
 |**계정 로그온**||||  
 |자격 증명 유효성 검사 감사|아니 아니요|예 아니요|네 네|  
-|Kerberos 인증 서비스 감사|||네 네|  
+|Kerberos 인증 오류 감사|||네 네|  
 |Kerberos 서비스 티켓 작업 감사|||네 네|  
 |기타 계정 로그온 이벤트 감사|||네 네|  
 |**계정 관리**||||  
-|응용 프로그램 그룹 관리 감사||||  
+|애플리케이션 그룹 관리 감사||||  
 |컴퓨터 계정 관리 감사||예 아니요|네 네|  
 |메일 그룹 관리 감사||||  
 |다른 계정 관리 이벤트 감사||예 아니요|네 네|  
@@ -101,7 +101,7 @@ ms.locfileid: "71408596"
 |기타 로그온/로그오프 이벤트 감사||||  
 |특수 로그온 감사|예 아니요|예 아니요|네 네|  
 |**개체 액세스**||||  
-|응용 프로그램 생성됨 감사||||  
+|애플리케이션 생성됨 감사||||  
 |인증 서비스 감사||||  
 |세부 파일 공유 감사||||  
 |파일 공유 감사||||  
@@ -126,7 +126,7 @@ ms.locfileid: "71408596"
 |중요하지 않은 권한 사용 감사||||  
 |기타 권한 사용 이벤트 감사||||  
 |중요한 권한 사용 감사||||  
-|**컴퓨터**||||  
+|**System**||||  
 |IPsec 드라이버 감사||네 네|네 네|  
 |기타 시스템 이벤트 감사|네 네|||  
 |보안 상태 변경 감사|예 아니요|네 네|네 네|  
@@ -147,11 +147,11 @@ ms.locfileid: "71408596"
 |----------------------------------------|------------------------------------------|--------------------------------------------------|--------------------------------------------------|  
 |**계정 로그온**||||  
 |자격 증명 유효성 검사 감사|아니 아니요|네 네|네 네|  
-|Kerberos 인증 서비스 감사|||네 네|  
+|Kerberos 인증 오류 감사|||네 네|  
 |Kerberos 서비스 티켓 작업 감사|||네 네|  
 |기타 계정 로그온 이벤트 감사|||네 네|  
 |**계정 관리**||||  
-|응용 프로그램 그룹 관리 감사||||  
+|애플리케이션 그룹 관리 감사||||  
 |컴퓨터 계정 관리 감사||예 DC|네 네|  
 |메일 그룹 관리 감사||||  
 |다른 계정 관리 이벤트 감사||네 네|네 네|  
@@ -179,7 +179,7 @@ ms.locfileid: "71408596"
 |기타 로그온/로그오프 이벤트 감사|||네 네|  
 |특수 로그온 감사|예 아니요|예 아니요|네 네|  
 |**개체 액세스**||||  
-|응용 프로그램 생성됨 감사||||  
+|애플리케이션 생성됨 감사||||  
 |인증 서비스 감사||||  
 |세부 파일 공유 감사||||  
 |파일 공유 감사||||  
@@ -204,7 +204,7 @@ ms.locfileid: "71408596"
 |중요하지 않은 권한 사용 감사||||  
 |기타 권한 사용 이벤트 감사||||  
 |중요한 권한 사용 감사||||  
-|**컴퓨터**||||  
+|**System**||||  
 |IPsec 드라이버 감사||네 네|네 네|  
 |기타 시스템 이벤트 감사|네 네|||  
 |보안 상태 변경 감사|예 아니요|네 네|네 네|  
@@ -285,13 +285,13 @@ ms.locfileid: "71408596"
 ## <a name="additional-information-for-monitoring-active-directory-domain-services"></a>모니터링에 대 한 추가 정보 Active Directory Domain Services  
 AD DS 모니터링에 대 한 자세한 내용은 다음 링크를 검토 하십시오.  
   
--   [전역 개체 액세스 감사는](http://blogs.technet.com/b/askds/archive/2011/03/10/global-object-access-auditing-is-magic.aspx) windows 7 및 windows Server 2008 r 2에 추가 된 고급 감사 정책 구성을 구성 하 고 사용 하는 방법에 대 한 정보를 제공 합니다.  
+-   [전역 개체 액세스 감사는](https://blogs.technet.com/b/askds/archive/2011/03/10/global-object-access-auditing-is-magic.aspx) windows 7 및 windows Server 2008 r 2에 추가 된 고급 감사 정책 구성을 구성 하 고 사용 하는 방법에 대 한 정보를 제공 합니다.  
 
--   [Windows 2008의 감사 변경 소개](http://blogs.technet.com/b/askds/archive/2007/10/19/introducing-auditing-changes-in-windows-2008.aspx) -windows 2008에서 적용 된 감사 변경 사항을 소개 합니다.  
+-   [Windows 2008의 감사 변경 소개](https://blogs.technet.com/b/askds/archive/2007/10/19/introducing-auditing-changes-in-windows-2008.aspx) -windows 2008에서 적용 된 감사 변경 사항을 소개 합니다.  
 
--   [Vista 및 2008의 쿨 감사 요령](http://blogs.technet.com/b/askds/archive/2007/11/16/cool-auditing-tricks-in-vista-and-2008.aspx) -문제를 해결 하거나 사용자 환경에서 발생 하는 상황을 확인 하는 데 사용할 수 있는 windows Vista 및 windows Server 2008의 감사에 대 한 흥미로운 새로운 기능을 설명 합니다.  
+-   [Vista 및 2008의 쿨 감사 요령](https://blogs.technet.com/b/askds/archive/2007/11/16/cool-auditing-tricks-in-vista-and-2008.aspx) -문제를 해결 하거나 사용자 환경에서 발생 하는 상황을 확인 하는 데 사용할 수 있는 windows Vista 및 windows Server 2008의 감사에 대 한 흥미로운 새로운 기능을 설명 합니다.  
 
--   Windows [server 2008 및 Windows vista의 감사에 대 한 원스톱 상점](http://blogs.technet.com/b/askds/archive/2008/03/27/one-stop-shop-for-auditing-in-windows-server-2008-and-windows-vista.aspx) -windows server 2008 및 windows vista에 포함 된 감사 기능 및 정보의 컴파일을 포함 합니다.  
+-   Windows [server 2008 및 Windows vista의 감사에 대 한 원스톱 상점](https://blogs.technet.com/b/askds/archive/2008/03/27/one-stop-shop-for-auditing-in-windows-server-2008-and-windows-vista.aspx) -windows server 2008 및 windows vista에 포함 된 감사 기능 및 정보의 컴파일을 포함 합니다.  
 
 -   [AD DS 감사 단계별 가이드](https://technet.microsoft.com/library/a9c25483-89e2-4202-881c-ea8e02b4b2a5.aspx) -Windows Server 2008의 새로운 Active Directory Domain Services (AD DS) 감사 기능에 대해 설명 합니다. 이 새로운 기능을 구현 하는 절차를 제공 합니다.  
 

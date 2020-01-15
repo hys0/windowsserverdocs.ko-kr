@@ -7,12 +7,12 @@ ms.assetid: 6e102c1f-df26-4eaa-bc7a-d0d55d3b82d5
 author: jasongerend
 ms.author: jgerend
 ms.date: 03/27/2018
-ms.openlocfilehash: f7d20a099f287d2ee05ae6e908c173e1eb3cfc66
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: fc1799db76f528a599ef70eec5093da0a76206a2
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71361836"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75948533"
 ---
 # <a name="cluster-operating-system-rolling-upgrade"></a>클러스터 운영 체제 롤링 업그레이드
 
@@ -52,7 +52,7 @@ ms.locfileid: "71361836"
 - 스토리지 공간 다이렉트 클러스터를 Windows Server로 업그레이드 하는 경우 1709 버전이 지원 되지 않습니다.
 - 클러스터 워크 로드가 Hyper-v Vm 또는 스케일 아웃 파일 서버 이면 가동 중지 시간이 0 인 업그레이드를 예측할 수 있습니다.
 - 다음 방법 중 하나를 사용 하 여 Hyper-v 노드에 SLAT (두 번째 수준 주소 지정 테이블)를 지 원하는 Cpu가 있는지 확인 합니다.  
-        -SLAT 호환 여부를 검토 합니다. [ WP8 SDK Tip 01](http://blogs.msdn.com/b/devfish/archive/2012/11/06/are-you-slat-compatible-wp8-sdk-tip-01.aspx) 문서 CPU가 SLATs을 지원 하는지 확인 하는 두 가지 방법을 설명 합니다.  
+        -SLAT 호환 여부를 검토 합니다. [ WP8 SDK Tip 01](https://blogs.msdn.com/b/devfish/archive/2012/11/06/are-you-slat-compatible-wp8-sdk-tip-01.aspx) 문서 CPU가 SLATs을 지원 하는지 확인 하는 두 가지 방법을 설명 합니다.  
         - [Coreinfo v 3.31](https://technet.microsoft.com/sysinternals/cc835722) 도구를 다운로드 하 여 CPU가 SLAT를 지원 하는지 확인 합니다.
 
 ## <a name="cluster-transition-states-during-cluster-os-rolling-upgrade"></a>클러스터 OS 롤링 업그레이드 중 클러스터 전환 상태
@@ -263,7 +263,7 @@ ClusterFunctionalLevelcmdlet가 실행 된 후 클러스터는 "4 단계"를 입
     예, PowerShell을 사용 하 여 자동화 되도록 클러스터 OS 롤링 업그레이드를 설계 했습니다.  
 
 **추가 워크 로드 및 장애 조치 (failover) 용량이 있는 대형 클러스터의 경우 여러 노드를 동시에 업그레이드할 수 있나요?**  
-    예. OS를 업그레이드 하기 위해 클러스터에서 노드 하나를 제거 하면 클러스터는 장애 조치 (failover)를 위해 하나의 노드를 포함 하므로 장애 조치 (failover) 용량이 줄어듭니다. 워크 로드 및 장애 조치 용량이 충분 한 대용량 클러스터의 경우 여러 노드를 동시에 업그레이드할 수 있습니다. 클러스터 노드를 클러스터에 일시적으로 추가 하 여 클러스터 OS 롤링 업그레이드 프로세스 중에 향상 된 워크 로드 및 장애 조치 (failover) 용량을 제공할 수 있습니다.  
+    그렇습니다. OS를 업그레이드 하기 위해 클러스터에서 노드 하나를 제거 하면 클러스터는 장애 조치 (failover)를 위해 하나의 노드를 포함 하므로 장애 조치 (failover) 용량이 줄어듭니다. 워크 로드 및 장애 조치 용량이 충분 한 대용량 클러스터의 경우 여러 노드를 동시에 업그레이드할 수 있습니다. 클러스터 노드를 클러스터에 일시적으로 추가 하 여 클러스터 OS 롤링 업그레이드 프로세스 중에 향상 된 워크 로드 및 장애 조치 (failover) 용량을 제공할 수 있습니다.  
 
 **[`Update-ClusterFunctionalLevel`](https://docs.microsoft.com/powershell/module/failoverclusters/Update-ClusterFunctionalLevel?view=win10-ps) 성공적으로 실행 된 후 클러스터에서 문제가 발견 되 면 어떻게 되나요?**  
     [`Update-ClusterFunctionalLevel`](https://docs.microsoft.com/powershell/module/failoverclusters/Update-ClusterFunctionalLevel?view=win10-ps)를 실행 하기 전에 시스템 상태 백업을 사용 하 여 클러스터 데이터베이스를 백업한 경우 Windows Server 2012 R2 클러스터 노드에서 정식 복원을 수행 하 고 원래 클러스터 데이터베이스 및 구성을 복원할 수 있습니다.  

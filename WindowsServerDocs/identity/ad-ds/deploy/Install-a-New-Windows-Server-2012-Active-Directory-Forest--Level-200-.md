@@ -9,18 +9,18 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: a9bdc3b237d0d0f44995f2c359cc3ef6ed8568a3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f87c383618bc1cef09652ea36e172fc634f5128e
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71400369"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75948811"
 ---
 # <a name="install-a-new-windows-server-2012-active-directory-forest-level-200"></a>새 Windows Server 2012 Active Directory 포리스트 설치(수준 200)
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-이 항목에서는 새 Windows Server 2012 Active Directory 도메인 서비스 도메인 컨트롤러 수준 올리기 기능을 소개 수준에서 설명합니다. Windows Server 2012의 AD DS에서는 Dcpromo 도구를 서버 관리자와 Windows PowerShell 기반 배포 시스템으로 대체합니다.  
+이 항목에서는 새 Windows Server 2012 Active Directory Domain Services 도메인 컨트롤러 수준 올리기 기능을 소개 수준에서 설명합니다. Windows Server 2012의 AD DS에서는 Dcpromo 도구를 서버 관리자와 Windows PowerShell 기반 배포 시스템으로 대체합니다.  
   
 -   [Active Directory Domain Services 단순화 된 관리](../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-.md#BKMK_SimplifiedAdmin)  
   
@@ -31,7 +31,7 @@ ms.locfileid: "71400369"
 -   [Windows PowerShell을 사용 하 여 포리스트 배포](../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-.md#BKMK_PSForest)  
   
 ## <a name="BKMK_SimplifiedAdmin"></a>Active Directory Domain Services 단순화 된 관리  
-Windows Server 2012에서는 차세대 Active Directory Domain Services 간소화된 관리 기능이 도입되었으며 Windows 2000 Server 이후 도메인이 가장 크게 변경되었습니다. AD DS 간소화된 관리에서는 12년 동안 Active Directory에서 얻은 교훈을 바탕으로 설계자와 관리자를 위한 보다 지원 가능하고 유연하며 직관적인 관리 환경을 제공합니다. 이는 기존 기술의 새 버전을 만들 수 있을 뿐만 아니라 Windows Server 2008 R2에서 릴리스된 구성 요소의 기능을 확장할 수도 있습니다.  
+Windows Server 2012에서는 차세대 Active Directory 도메인 서비스 간소화된 관리 기능이 도입되었으며 Windows 2000 Server 이후 도메인이 가장 크게 변경되었습니다. AD DS 간소화된 관리에서는 12년 동안 Active Directory에서 얻은 교훈을 바탕으로 설계자와 관리자를 위한 보다 지원 가능하고 유연하며 직관적인 관리 환경을 제공합니다. 이는 기존 기술의 새 버전을 만들 수 있을 뿐만 아니라 Windows Server 2008 R2에서 릴리스된 구성 요소의 기능을 확장할 수도 있습니다.  
   
 ### <a name="what-is-ad-ds-simplified-administration"></a>AD DS 간소화된 관리란?  
 AD DS 간소화된 관리는 도메인 배포의 새로운 디자인입니다. 이러한 기능의 예를 들면 다음과 같습니다.  
@@ -45,7 +45,7 @@ AD DS 간소화된 관리는 도메인 배포의 새로운 디자인입니다. �
 -   Windows Server 2012 포리스트 기능 수준에서 새로운 기능을 구현하지 않으며 도메인 기능 수준이 새로운 Kerberos 기능의 하위 집합에만 필요하므로 관리자에게 동종 도메인 컨트롤러 환경이 자주 필요하지 않습니다.  
   
 ### <a name="purpose-and-benefits"></a>목적 및 이점  
-이러한 변경 내용은 단순하지 않고 보다 복잡하게 보일 수도 있습니다. 하지만 AD DS 배포 프로세스를 다시 디자인하는 과정에서 많은 단계와 모범 사례를 보다 적고 간편한 작업으로 병합할 기회가 있었습니다. 예를 들어 새 복제본 도메인 컨트롤러의 그래픽 구성이 12개의 대화 상자에서 8개의 대화 상자로 줄었습니다. 도메인 이름이라는 *하나*의 인수를 사용하는 *단일* Windows PowerShell 명령만으로 새 Active Directory 포리스트를 만들 수 있습니다.  
+이러한 변경 내용은 단순하지 않고 보다 복잡하게 보일 수도 있습니다. 하지만 AD DS 배포 프로세스를 다시 디자인하는 과정에서 많은 단계와 모범 사례를 보다 적고 간편한 작업으로 병합할 기회가 있었습니다. 예를 들어 새 복제본 도메인 컨트롤러의 그래픽 구성이 12개의 대화 상자에서 8개의 대화 상자로 줄었습니다. 도메인 이름이라는 *하나* 의 인수를 사용하는 *단일* Windows PowerShell 명령만으로 새 Active Directory 포리스트를 만들 수 있습니다.  
   
 Windows Server 2012에서 Windows PowerShell을 이렇게 강조하는 이유는 무엇일까요? 분산 컴퓨팅이 진화함에 따라 Windows PowerShell은 그래픽 인터페이스와 명령줄 인터페이스에서 모두 구성 및 유지 관리에 단일 엔진을 사용하도록 지원합니다. Windows PowerShell을 통해 IT 전문가는 API에서 개발자에게 부여하는 동일한 권한으로 모든 구성 요소에 대해 모든 기능을 갖춘 스크립트를 작성할 수 있습니다. 클라우드 기반 컴퓨팅이 어디에나 존재하게 되면서 Windows PowerShell도 마침내 원격으로 서버를 관리할 수 있게 되었습니다. 그래픽 인터페이스가 없는 컴퓨터에도 모니터와 마우스를 갖춘 컴퓨터와 동일한 관리 기능이 있습니다.  
   
@@ -54,11 +54,11 @@ Windows Server 2012에서 Windows PowerShell을 이렇게 강조하는 이유는
 ## <a name="BKMK_TechOverview"></a>기술 개요  
   
 ### <a name="what-you-should-know-before-you-begin"></a>시작하기 전에 알아야 할 사항  
-이 항목에서는 이전 버전의 Active Directory 디렉터리 서비스를 잘 알고 있는 것으로 가정하므로 목적 및 기능에 대한 기초적인 정보를 제공하지 않습니다. AD DS에 대한 자세한 내용은 아래에 링크된 TechNet 포털 페이지를 참조하세요.  
+이 항목에서는 이전 버전의 Active Directory Domain Services를 잘 알고 있는 것으로 가정하므로 목적 및 기능에 대한 기초적인 정보를 제공하지 않습니다. AD DS에 대한 자세한 내용은 아래에 링크된 TechNet 포털 페이지를 참조하세요.  
   
 -   [Active Directory Domain Services Windows Server 2008 R2](https://technet.microsoft.com/library/dd378801(WS.10).aspx)  
   
--   [Windows Server 2008에 대 한 Active Directory Domain Services](https://technet.microsoft.com/library/dd378891(WS.10).aspx)  
+-   [Windows Server 2008용 Active Directory Domain Services](https://technet.microsoft.com/library/dd378891(WS.10).aspx)  
   
 -   [Windows Server 기술 참조](https://technet.microsoft.com/library/cc739127(WS.10).aspx)  
   
@@ -67,9 +67,9 @@ Windows Server 2012에서 Windows PowerShell을 이렇게 강조하는 이유는
 #### <a name="ad-ds-role-installation"></a>AD DS 역할 설치  
 ![새 포리스트 설치](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_SelectServerRoles.gif)  
   
-Active Directory Domain Services 설치에는 Windows Server 2012의 다른 모든 서버 역할 및 기능과 마찬가지로 서버 관리자 및 Windows PowerShell이 사용됩니다. Dcpromo.exe 프로그램에서는 더 이상 GUI 구성 옵션을 제공하지 않습니다.  
+Active Directory 도메인 서비스 설치에는 Windows Server 2012의 다른 모든 서버 역할 및 기능과 마찬가지로 서버 관리자 및 Windows PowerShell이 사용됩니다. Dcpromo.exe 프로그램에서는 더 이상 GUI 구성 옵션을 제공하지 않습니다.  
   
-로컬 설치와 원격 설치 모두에 서버 관리자의 그래픽 마법사 또는 Windows PowerShell용 ServerManager 모듈을 사용합니다. 이러한 마법사 또는 cmdlet의 여러 인스턴스를 실행하고 다양한 서버를 대상으로 지정하여 단일 콘솔에서 여러 도메인 컨트롤러에 AD DS를 동시에 배포할 수 있습니다. 이러한 새 기능은 Windows Server 2008 R2 이하의 이전 운영 체제와 호환되지 않지만, 이전의 명령줄에서 로컬 역할을 설치하는 데에는 Windows Server 2008 R2에 도입된 Dism.exe 응용 프로그램을 계속 사용할 수 있습니다.  
+로컬 설치와 원격 설치 모두에 서버 관리자의 그래픽 마법사 또는 Windows PowerShell용 ServerManager 모듈을 사용합니다. 이러한 마법사 또는 cmdlet의 여러 인스턴스를 실행하고 다양한 서버를 대상으로 지정하여 단일 콘솔에서 여러 도메인 컨트롤러에 AD DS를 동시에 배포할 수 있습니다. 이러한 새 기능은 Windows Server 2008 R2 이하의 이전 운영 체제와 호환되지 않지만, 이전의 명령줄에서 로컬 역할을 설치하는 데에는 Windows Server 2008 R2에 도입된 Dism.exe 애플리케이션을 계속 사용할 수 있습니다.  
   
 ![새 포리스트 설치](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_PSAddWindowsFeature.png)  
   
@@ -91,11 +91,11 @@ Dcpromo.exe는 명령줄 무인 설치용으로만 Windows Server 2012에서 지
 > [!IMPORTANT]
 > Dcpromo.exe는 더 이상 그래픽 마법사를 제공하지 않으며, 역할 또는 기능 이진 파일을 더 이상 설치하지 않습니다. Explorer 셸에서 Dcpromo.exe를 실행하려고 하면 다음 오류가 반환됩니다.  
 > 
-> "Active Directory 도메인 서비스 설치 마법사는 서버 관리자에서 재배치 됩니다. 자세한 내용은 <https://go.microsoft.com/fwlink/?LinkId=220921>을 참조 하세요.  
+> "Active Directory 도메인 서비스 설치 마법사는 서버 관리자에서 재배치 됩니다. 자세한 내용은 <https://go.microsoft.com/fwlink/?LinkId=220921>를 참조 하세요.  
 > 
 > Dcpromo.exe /unattend를 실행할 경우 여전히 이진 파일이 설치되지만 이전 운영 체제와 마찬가지로 다음 경고가 발생합니다.  
 > 
-> "Dcpromo 무인된 작업이 Windows PowerShell 용 ADDSDeployment 모듈에 의해 대체 됩니다. 자세한 내용은 <https://go.microsoft.com/fwlink/?LinkId=220924>을 참조 하세요.  
+> "Dcpromo 무인된 작업이 Windows PowerShell 용 ADDSDeployment 모듈에 의해 대체 됩니다. 자세한 내용은 <https://go.microsoft.com/fwlink/?LinkId=220924>를 참조 하세요.  
 > 
 > dcpromo.exe는 Windows Server 2012에서 더 이상 사용되지 않으며, 앞으로의 Windows 버전에 포함되지 않는 것은 물론 이 운영 체제에서도 더 이상 기능이 개선되지 않습니다. 관리자는 dcpromo.exe의 사용을 중단해야 하며, 명령줄에서 도메인 컨트롤러를 만들려는 경우 지원되는 Windows PowerShell 모듈로 전환해야 합니다.  
   
@@ -106,7 +106,7 @@ Dcpromo.exe는 명령줄 무인 설치용으로만 Windows Server 2012에서 지
 이 섹션에서는 그래픽 Windows Server 2012 컴퓨터에서 서버 관리자를 사용하여 포리스트 루트 도메인에 첫 번째 도메인 컨트롤러를 설치하는 방법에 대해 설명합니다.  
   
 ### <a name="server-manager-ad-ds-role-installation-process"></a>서버 관리자 AD DS 역할 설치 프로세스  
-아래의 다이어그램에서는 ServerManager.exe를 실행한 후 도메인 컨트롤러의 수준을 올리기 바로 전까지의 Active Directory 도메인 서비스 역할 설치 프로세스를 보여 줍니다.  
+아래의 다이어그램에서는 ServerManager.exe를 실행한 후 도메인 컨트롤러의 수준을 올리기 바로 전까지의 Active Directory Domain Services 역할 설치 프로세스를 보여 줍니다.  
   
 ![새 포리스트 설치](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/adds_servermanagerdeployment.png)  
   
@@ -117,7 +117,7 @@ Dcpromo.exe는 명령줄 무인 설치용으로만 Windows Server 2012에서 지
   
 -   대시보드 시작 타일에서 **관리할 다른 서버 추가** 클릭  
   
--   **관리** 메뉴를 클릭하고 **서버 추가** 선택  
+-   **관리** 메뉴를 클릭하고 **서버 추가**선택  
   
 -   **모든 서버** 를 마우스 오른쪽 단추로 클릭하고 **서버 추가**선택  
   
@@ -133,7 +133,7 @@ Dcpromo.exe는 명령줄 무인 설치용으로만 Windows Server 2012에서 지
   
 -   가져오기(CR/LF로 구분된 서버의 텍스트 파일 목록 사용)  
   
-**지금 찾기**를 클릭하여 컴퓨터가 가입된 동일한 Active Directory 도메인에서 서버 목록을 가져온 후 이 목록에서 하나 이상의 서버 이름을 클릭합니다. 오른쪽 화살표를 클릭하여 서버를 **선택됨** 목록에 추가합니다. 선택한 서버를 대시보드 역할 그룹에 추가하려면 **서버 추가** 를 사용합니다. 또는 **관리**를 클릭한 다음 **서버 그룹 만들기**를 클릭하거나, **서버 관리자 시작** 대시보드 타일에서 **서버 그룹 만들기**를 클릭하여 사용자 지정 서버 그룹을 만듭니다.  
+**지금 찾기** 를 클릭하여 컴퓨터가 가입된 동일한 Active Directory 도메인에서 서버 목록을 가져온 후 이 목록에서 하나 이상의 서버 이름을 클릭합니다. 오른쪽 화살표를 클릭하여 서버를 **선택됨** 목록에 추가합니다. 선택한 서버를 대시보드 역할 그룹에 추가하려면 **서버 추가** 를 사용합니다. 또는 **관리**를 클릭한 다음 **서버 그룹 만들기**를 클릭하거나, **서버 관리자 시작** 대시보드 타일에서 **서버 그룹 만들기** 를 클릭하여 사용자 지정 서버 그룹을 만듭니다.  
   
 > [!NOTE]  
 > 서버 추가 절차에서는 서버가 온라인 상태인지 또는 액세스 가능한지 확인하지 않습니다. 그러나 다음 새로 고침 시 서버 관리자의 관리 효율성 보기에 연결할 수 없는 모든 서버에 대한 플래그가 지정됩니다.  
@@ -155,7 +155,7 @@ Windows Server 2012 이전 운영 체제를 실행하는 서버는 완전하게 
 #### <a name="installation-type"></a>설치 유형  
 ![새 포리스트 설치](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_SelectInstallationType.png)  
   
-**설치 유형** 대화 상자에서는 Active Directory 도메인 서비스를 지원하지 않는 **원격 데스크톱 서비스 시나리오 기반 설치**옵션을 제공합니다. 이 옵션은 다중 서버 분산 작업에서 원격 데스크톱 서비스만 허용합니다. 이 옵션을 선택한 경우에는 AD DS를 설치할 수 없습니다.  
+**설치 유형** 대화 상자에서는 Active Directory 도메인 서비스를 지원하지 않는 **원격 데스크톱 서비스 시나리오 기반 설치**옵션을 제공합니다. 이 옵션은 다중 서버 분산 워크로드에서 원격 데스크톱 서비스만 허용합니다. 이 옵션을 선택한 경우에는 AD DS를 설치할 수 없습니다.  
   
 따라서 AD DS를 설치할 때는 항상 기본적으로 선택되어 있는 **역할 기반 또는 기능 기반 설치**를 그대로 두세요.  
   
@@ -169,7 +169,7 @@ Windows Server 2012 이전 운영 체제를 실행하는 서버는 완전하게 
 #### <a name="server-roles-and-features"></a>서버 역할 및 기능  
 ![새 포리스트 설치](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_SelectServerRoles.png)  
   
-도메인 카탈로그의 수준을 올리려면 **Active Directory Domain Services** 역할을 선택합니다. 그러면 모든 Active Directory 관리 기능 및 필요한 서비스가 자동으로 설치되며, 이는 해당 기능 및 서비스가 표면적으로 다른 역할의 일부이거나 서버 관리자 인터페이스에 선택된 것으로 표시되지 않은 경우에도 마찬가지입니다.  
+도메인 카탈로그의 수준을 올리려면 **Active Directory 도메인 서비스** 역할을 선택합니다. 그러면 모든 Active Directory 관리 기능 및 필요한 서비스가 자동으로 설치되며, 이는 해당 기능 및 서비스가 표면적으로 다른 역할의 일부이거나 서버 관리자 인터페이스에 선택된 것으로 표시되지 않은 경우에도 마찬가지입니다.  
   
 서버 관리자에서는 이 역할에서 암시적으로 설치하는 관리 기능이 표시된 정보 대화 상자도 제공합니다. 이는 **-IncludeManagementTools** 인수에 상응합니다.  
   
@@ -182,7 +182,7 @@ Windows Server 2012 이전 운영 체제를 실행하는 서버는 완전하게 
 #### <a name="active-directory-domain-services"></a>Active Directory 도메인 서비스  
 ![새 포리스트 설치](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_ADDSIntro.png)  
   
-**Active Directory Domain Services** 대화 상자에서는 요구 사항 및 모범 사례에 대한 제한된 정보를 제공합니다. 주로 역할을 하며 AD DS 역할을 선택 했음을 확인 "이이 화면이 표시 되지 않으면, 선택 하지 않은 AD DS 합니다.  
+**Active Directory 도메인 서비스** 대화 상자에서는 요구 사항 및 모범 사례에 대한 제한된 정보를 제공합니다. 주로 역할을 하며 AD DS 역할을 선택 했음을 확인 "이이 화면이 표시 되지 않으면, 선택 하지 않은 AD DS 합니다.  
   
 #### <a name="confirmation"></a>확인  
 ![새 포리스트 설치](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_Confirmation.png)  
@@ -220,7 +220,7 @@ AD DS 역할 설치가 끝나면 **이 서버를 도메인 컨트롤러로 승�
 ### <a name="uninstallingdisabling"></a>제거/사용 안 함  
 서버의 수준을 도메인 컨트롤러로 올렸는지 여부에 상관없이, 다른 모든 역할과 마찬가지로 AD DS 역할을 제거할 수 있습니다. 그러나 AD DS 역할을 제거한 경우 작업이 완료되면 다시 시작해야 합니다.  
   
-Active Directory 도메인 서비스 역할 제거는 도메인 컨트롤러의 수준을 내려야 완료된다는 점에서 설치와 다릅니다. 이는 포리스트의 적절한 메타데이터 정리 없이 도메인 컨트롤러에서 해당 역할 이진 파일을 제거하지 못하도록 하기 위해 필요합니다. 자세한 내용은 참조 [도메인 컨트롤러 수준 내리기 및 도메인 & #40; 200 수준 & #41;](../../ad-ds/deploy/Demoting-Domain-Controllers-and-Domains--Level-200-.md)합니다.  
+Active Directory Domain Services 역할 제거는 도메인 컨트롤러의 수준을 내려야 완료된다는 점에서 설치와 다릅니다. 이는 포리스트의 적절한 메타데이터 정리 없이 도메인 컨트롤러에서 해당 역할 이진 파일을 제거하지 못하도록 하기 위해 필요합니다. 자세한 내용은 참조 [도메인 컨트롤러 수준 내리기 및 도메인 & #40; 200 수준 & #41;](../../ad-ds/deploy/Demoting-Domain-Controllers-and-Domains--Level-200-.md)합니다.  
   
 > [!WARNING]  
 > 도메인 컨트롤러로 수준을 올린 후 Dism.exe 또는 Windows PowerShell DISM 모듈을 사용하여 AD DS 역할을 제거하는 작업은 지원되지 않으며, 이 작업을 수행할 경우 서버가 정상적으로 부팅되지 않습니다.  
@@ -237,7 +237,7 @@ Active Directory 도메인 서비스 역할 제거는 도메인 컨트롤러의 
   
 서버 관리자는 **배포 구성** 페이지에서 모든 도메인 컨트롤러 수준 올리기를 시작합니다. 선택한 배포 작업에 따라 이 페이지 및 다음 페이지에 표시되는 나머지 옵션 및 필수 필드가 바뀝니다.  
   
-새 Active Directory 포리스트를 만들려면 **새 포리스트 추가**를 클릭합니다. 올바른 루트 도메인 이름을 제공해야 합니다. 이름에 단일 레이블을 지정할 수 없으며(예: 이름은 *contoso*가 아니라 *contoso.com* 또는 이와 유사해야 함), 허용된 DNS 도메인 명명 요구 사항을 사용해야 합니다.  
+새 Active Directory 포리스트를 만들려면 **새 포리스트 추가**를 클릭합니다. 올바른 루트 도메인 이름을 제공해야 합니다. 이름에 단일 레이블을 지정할 수 없으며(예: 이름은 *contoso* 가 아니라 *contoso.com*또는 이와 유사해야 함), 허용된 DNS 도메인 명명 요구 사항을 사용해야 합니다.  
   
 올바른 도메인 이름에 대한 자세한 내용은 기술 자료 문서, [컴퓨터, 도메인, 사이트 및 OU에 대한 Active Directory의 명명 규칙](https://support.microsoft.com/kb/909264)을 참조하세요.  
   
@@ -251,20 +251,20 @@ Active Directory 도메인 서비스 역할 제거는 도메인 컨트롤러의 
 #### <a name="domain-controller-options"></a>도메인 컨트롤러 옵션  
 ![새 포리스트 설치](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_DCOptions_Forest.gif)  
   
-**도메인 컨트롤러 옵션**을 사용하여 새 포리스트 루트 도메인에 대해 **포리스트 기능 수준** 및 **도메인 기능 수준**을 구성할 수 있습니다. 기본적으로 이러한 설정은 새 포리스트 루트 도메인에서 Windows Server 2012입니다. Windows Server 2012 포리스트 기능 수준을 Windows Server 2008 R2 포리스트 기능 수준을 통해 모든 새 기능을 제공 하지 않습니다. Windows Server 2012 도메인 기능 수준이 새로운 Kerberos 설정인을 구현 하는 데에 필요는 "항상 클레임 제공" 및 "아머 링 되지 않은 인증 요청 실패 합니다." Windows Server 2012의 기능 수준에 대 한 기본 사용 허용 되는 최소 운영 체제 요구 사항을 충족 하는 도메인에 도메인 컨트롤러의 참여를 제한 하는 것입니다. 즉, Windows Server 2012 도메인 기능 수준 유일한 도메인 컨트롤러가 Windows Server 2012를 실행 하는 도메인을 호스트할 수를 지정할 수 있습니다.  이라는 새 도메인 컨트롤러 플래그를 구현 하는 Windows Server 2012 **DS_WIN8_REQUIRED** 에 **DSGetDcName** Windows Server 2012 도메인 컨트롤러는 NetLogon의 기능입니다. 이는 도메인 컨트롤러에서 실행할 수 있는 운영 체제 면에서 동종 또는 이기종 포리스트의 유연성을 더해 줍니다.  
+**도메인 컨트롤러 옵션** 을 사용하여 새 포리스트 루트 도메인에 대해 **포리스트 기능 수준** 및 **도메인 기능 수준** 을 구성할 수 있습니다. 기본적으로 이러한 설정은 새 포리스트 루트 도메인에서 Windows Server 2012입니다. Windows Server 2012 포리스트 기능 수준을 Windows Server 2008 R2 포리스트 기능 수준을 통해 모든 새 기능을 제공 하지 않습니다. Windows Server 2012 도메인 기능 수준이 새로운 Kerberos 설정인을 구현 하는 데에 필요는 "항상 클레임 제공" 및 "아머 링 되지 않은 인증 요청 실패 합니다." Windows Server 2012의 기능 수준에 대 한 기본 사용 허용 되는 최소 운영 체제 요구 사항을 충족 하는 도메인에 도메인 컨트롤러의 참여를 제한 하는 것입니다. 즉, Windows Server 2012 도메인 기능 수준 유일한 도메인 컨트롤러가 Windows Server 2012를 실행 하는 도메인을 호스트할 수를 지정할 수 있습니다.  이라는 새 도메인 컨트롤러 플래그를 구현 하는 Windows Server 2012 **DS_WIN8_REQUIRED** 에 **DSGetDcName** Windows Server 2012 도메인 컨트롤러는 NetLogon의 기능입니다. 이는 도메인 컨트롤러에서 실행할 수 있는 운영 체제 면에서 동종 또는 이기종 포리스트의 유연성을 더해 줍니다.  
   
-도메인 컨트롤러 위치에 대 한 자세한 내용은 [디렉터리 서비스 기능](https://msdn.microsoft.com/library/ms675900(VS.85).aspx)을 검토 하십시오.  
+도메인 컨트롤러 위치에 대 한 자세한 내용은 검토 [디렉터리 서비스 함수](https://msdn.microsoft.com/library/ms675900(VS.85).aspx)합니다.  
   
 구성 가능한 도메인 컨트롤러 기능은 DNS 서버 옵션뿐입니다. 분산된 환경의 고가용성을 위해 모든 도메인 컨트롤러에서 DNS 서비스를 제공하는 것이 좋습니다. 이러한 이유 때문에 어떤 모드 또는 도메인에서 도메인 컨트롤러를 설치하든 이 옵션이 기본적으로 선택되어 있습니다. 글로벌 카탈로그 및 읽기 전용 도메인 컨트롤러 옵션은 새 포리스트 루트 도메인을 만들 때 사용할 수 없습니다. 첫 번째 도메인 컨트롤러는 GC여야 하며 RODC(읽기 전용 도메인 컨트롤러)일 수 없기 때문입니다.  
   
-지정한 **디렉터리 서비스 복원 모드 암호**는 서버에 적용된 암호 정책을 준수해야 하는데, 이 정책에서는 기본적으로 강력한 암호를 요구하지 않으며 빈 암호만 아니면 됩니다. 항상 강력하고 복잡한 암호 또는 암호 문구를 선택하십시오.  
+지정한 **디렉터리 서비스 복원 모드 암호** 는 서버에 적용된 암호 정책을 준수해야 하는데, 이 정책에서는 기본적으로 강력한 암호를 요구하지 않으며 빈 암호만 아니면 됩니다. 항상 강력하고 복잡한 암호 또는 암호 문구를 선택하세요.  
   
 #### <a name="dns-options-and-dns-delegation-credentials"></a>DNS 옵션 및 DNS 위임 자격 증명  
 ![새 포리스트 설치](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_ForestDNSOptions.png)  
   
 **DNS 옵션** 페이지에서는 DNS 위임을 구성하고 대체 DNS 관리 자격 증명을 제공할 수 있습니다.  
   
-**도메인 컨트롤러 옵션** 페이지에서 **DNS 서버**를 선택하여 새 Active Directory 포리스트 루트 도메인을 설치할 때는 Active Directory 도메인 서비스 구성 마법사에서 DNS 옵션 또는 위임을 구성할 수 없습니다. **DNS 위임 만들기** 옵션은 기존 DNS 서버 인프라에 새 포리스트 루트 DNS 영역을 만들 때 사용할 수 있습니다. 이 옵션을 사용하면 DNS 영역을 업데이트할 권한이 있는 대체 DNS 관리 자격 증명을 제공할 수 있습니다.  
+**도메인 컨트롤러 옵션** 페이지에서 **DNS 서버** 를 선택하여 새 Active Directory 포리스트 루트 도메인을 설치할 때는 Active Directory 도메인 서비스 구성 마법사에서 DNS 옵션 또는 위임을 구성할 수 없습니다. **DNS 위임 만들기** 옵션은 기존 DNS 서버 인프라에 새 포리스트 루트 DNS 영역을 만들 때 사용할 수 있습니다. 이 옵션을 사용하면 DNS 영역을 업데이트할 권한이 있는 대체 DNS 관리 자격 증명을 제공할 수 있습니다.  
   
 DNS 위임을 업데이트해야 하는지 여부에 대한 자세한 내용은 [영역 위임 이해](https://technet.microsoft.com/library/cc771640.aspx)를 참조하세요.  
   
@@ -287,7 +287,7 @@ DNS 위임을 업데이트해야 하는지 여부에 대한 자세한 내용은 
   
 **옵션 검토** 페이지에서 설치를 시작하기 전에 설정을 확인하고 이러한 설정이 요구 사항을 충족하는지도 확인할 수 있습니다. 이것이 서버 관리자를 사용할 때 설치를 중지할 수 있는 마지막 기회는 아닙니다. 구성을 계속하기 전에 설정을 확인하는 옵션일 뿐입니다.  
   
-서버 관리자의 **옵션 검토** 페이지는 현재 ADDSDeployment 구성을 단일 Windows PowerShell 스크립트로 포함하는 유니코드 텍스트 파일을 만들 수 있도록 **스크립트 보기** 단추(선택 사항)도 제공합니다. 이 단추를 통해 서버 관리자 그래픽 인터페이스를 Windows PowerShell 배포 스튜디오로 사용할 수 있습니다. Active Directory 도메인 서비스 구성 마법사를 사용하여 옵션을 구성하고 구성을 내보낸 다음 마법사를 취소합니다. 이 프로세스를 통해 향후 수정을 위해 사용하거나 직접 사용하기 위한 유효하고 구문상으로 정확한 샘플이 만들어집니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+서버 관리자의 **옵션 검토** 페이지는 현재 ADDSDeployment 구성을 단일 Windows PowerShell 스크립트로 포함하는 유니코드 텍스트 파일을 만들 수 있도록 **스크립트 보기** 단추(선택 사항)도 제공합니다. 이 단추를 통해 서버 관리자 그래픽 인터페이스를 Windows PowerShell 배포 스튜디오로 사용할 수 있습니다. Active Directory Domain Services 구성 마법사를 사용하여 옵션을 구성하고 구성을 내보낸 다음 마법사를 취소합니다. 이 프로세스를 통해 향후 수정을 위해 사용하거나 직접 사용하기 위한 유효하고 구문상으로 정확한 샘플이 만들어집니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
   
 ```powershell 
 #  
@@ -316,13 +316,13 @@ Install-ADDSForest `
 #### <a name="prerequisites-check"></a>필수 구성 요소 확인  
 ![새 포리스트 설치](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_ForestPrereqCheck.png)  
   
-**필수 구성 요소 확인**은 AD DS 도메인 구성의 새로운 기능입니다. 이 새 단계에서는 서버 구성이 새 AD DS 포리스트를 지원할 수 있는지 확인합니다.  
+**필수 구성 요소 확인** 은 AD DS 도메인 구성의 새로운 기능입니다. 이 새 단계에서는 서버 구성이 새 AD DS 포리스트를 지원할 수 있는지 확인합니다.  
   
-새 포리스트 루트 도메인을 설치할 때 서버 관리자 Active Directory 도메인 서비스 구성 마법사는 일련의 모듈식 테스트를 호출합니다. 이러한 테스트에서는 제안된 복구 옵션을 알려 줍니다. 필요한 만큼 여러 번 테스트를 실행할 수 있습니다. 모든 필수 구성 요소 테스트를 통과해야만 도메인 컨트롤러 프로세스를 계속 진행할 수 있습니다.  
+새 포리스트 루트 도메인을 설치할 때 서버 관리자 Active Directory Domain Services 구성 마법사는 일련의 모듈식 테스트를 호출합니다. 이러한 테스트에서는 제안된 복구 옵션을 알려 줍니다. 필요한 만큼 여러 번 테스트를 실행할 수 있습니다. 모든 필수 구성 요소 테스트를 통과해야만 도메인 컨트롤러 프로세스를 계속 진행할 수 있습니다.  
   
-**필수 구성 요소 확인**에서는 이전 운영 체제에 영향을 주는 보안 변경 내용과 같은 관련 정보도 제공합니다.  
+**필수 구성 요소 확인** 에서는 이전 운영 체제에 영향을 주는 보안 변경 내용과 같은 관련 정보도 제공합니다.  
   
-특정 필수 구성 요소 검사에 대 한 자세한 내용은 참조 하십시오. [필수 구성 요소 확인](../../ad-ds/manage/AD-DS-Simplified-Administration.md#BKMK_PrereuisiteChecking)합니다.  
+특정 필수 구성 요소 확인에 대한 자세한 내용은 [Prerequisite Checking](../../ad-ds/manage/AD-DS-Simplified-Administration.md#BKMK_PrereuisiteChecking)을 참조하세요.  
   
 #### <a name="installation"></a>설치  
 ![새 포리스트 설치](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_ForestInstallation.png)  
@@ -347,7 +347,7 @@ Install-ADDSForest `
 ### <a name="windows-powershell-ad-ds-role-installation-process"></a>Windows PowerShell AD DS 역할 설치 프로세스  
 몇 가지 간단한 서버 관리자 배포 cmdlet을 배포 프로세스에 구현하여 AD DS 간소화된 관리의 비전을 더욱 확고하게 실현할 수 있습니다.  
   
-다음 그림에서는 **PowerShell.exe**를 실행한 후 도메인 컨트롤러의 수준을 올리기 바로 전까지의 Active Directory Domain Services 역할 설치 프로세스를 보여 줍니다.  
+다음 그림에서는 **PowerShell.exe** 를 실행한 후 도메인 컨트롤러의 수준을 올리기 바로 전까지의 Active Directory 도메인 서비스 역할 설치 프로세스를 보여 줍니다.  
   
 ![새 포리스트 설치](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/adds_servermanagerdeployment_powershell.png)  
   
@@ -361,7 +361,7 @@ Install-ADDSForest `
   
 서버 관리자 모듈은 Windows PowerShell용 새 DISM 모듈의 역할 설치, 상태 및 제거 부분을 노출합니다. 이렇게 계층화하면 대부분의 작업이 간소화되며, 강력한(그러나 잘못 사용할 경우 위험한) DISM 모듈을 직접 사용해야 할 필요성이 줄어듭니다.  
   
-**Get-Command**를 사용하여 서버 관리자에서 별칭 및 cmdlet을 내보낼 수 있습니다.  
+**Get-Command** 를 사용하여 서버 관리자에서 별칭 및 cmdlet을 내보낼 수 있습니다.  
   
 ```powershell  
 Get-Command -module ServerManager  
@@ -480,7 +480,7 @@ Install-ADDSForest
     Install-ADDSForest "DomainName corp.contoso.com  
     ```  
   
--   *값과 함께* 지정한 경우 값은 보안 문자열이어야 합니다. cmdlet을 대화형으로 실행할 경우 기본 설정된 사용법이 아닙니다.  
+-   *값과 함께*지정한 경우 값은 보안 문자열이어야 합니다. cmdlet을 대화형으로 실행할 경우 기본 설정된 사용법이 아닙니다.  
   
 예를 들어 **Read-Host** cmdlet을 사용하여 수동으로 암호를 물어 사용자에게 보안 문자열을 물을 수 있습니다.  
   
@@ -509,7 +509,7 @@ $pw | ConvertFrom-SecureString | Set-Content $file
 ```  
   
 > [!WARNING]  
-> 일반 또는 난독 처리된 텍스트 암호는 제공하거나 저장하지 않는 것이 좋습니다. 스크립트에서 이 명령을 실행하는 사용자나 어깨 너머로 보고 있는 다른 사용자가 해당 도메인 컨트롤러의 DSRM 암호를 알게 될 수 있습니다. 파일에 액세스할 수 있는 모든 사람이 난독 처리된 암호를 반전시킬 수 있습니다. 이 정보를 알면 DSRM에서 시작된 DC에 로그온하여 도메인 컨트롤러 자체를 가장함으로써 Active Directory 포리스트에서 가장 높은 수준으로 해당 권한을 상승시킬 수 있습니다. **System.Security.Cryptography**를 사용하여 텍스트 파일 데이터를 암호화하는 추가 단계를 수행하는 것이 좋지만 이러한 단계는 이 문서의 범위를 벗어납니다. 암호 저장을 완전히 피하는 것이 가장 좋습니다.  
+> 일반 또는 난독 처리된 텍스트 암호는 제공하거나 저장하지 않는 것이 좋습니다. 스크립트에서 이 명령을 실행하는 사용자나 어깨 너머로 보고 있는 다른 사용자가 해당 도메인 컨트롤러의 DSRM 암호를 알게 될 수 있습니다. 파일에 액세스할 수 있는 모든 사람이 난독 처리된 암호를 반전시킬 수 있습니다. 이 정보를 알면 DSRM에서 시작된 DC에 로그온하여 도메인 컨트롤러 자체를 가장함으로써 Active Directory 포리스트에서 가장 높은 수준으로 해당 권한을 상승시킬 수 있습니다. **System.Security.Cryptography** 를 사용하여 텍스트 파일 데이터를 암호화하는 추가 단계를 수행하는 것이 좋지만 이러한 단계는 이 문서의 범위를 벗어납니다. 암호 스토리지를 완전히 피하는 것이 가장 좋습니다.  
   
 ADDSDeployment cmdlet에서는 DNS 클라이언트 설정, 전달자 및 루트 힌트의 자동 구성을 건너뛸 수 있는 추가 옵션을 제공합니다. 서버 관리자를 사용할 때는 이 구성 옵션을 건너뛸 수 없습니다. 이 인수는 도메인 컨트롤러를 구성하기 전에 DNS 서버 역할을 설치한 경우에만 적용됩니다.  
   
@@ -557,7 +557,7 @@ ADDSDeployment cmdlet에서는 DNS 클라이언트 설정, 전달자 및 루트 
 > [!WARNING]  
 > 필수 구성 요소 확인을 건너뛰면 도메인 컨트롤러 수준 올리기가 부분적으로 완료되거나 AD DS 포리스트가 손상될 수 있으므로 건너뛰지 않는 것이 좋습니다.  
   
-서버 관리자와 마찬가지로 **Install-ADDSForest**에서도 수준 올리기 후 서버가 자동으로 다시 부팅됨을 미리 알려 줍니다.  
+서버 관리자와 마찬가지로 **Install-ADDSForest** 에서도 수준 올리기 후 서버가 자동으로 다시 부팅됨을 미리 알려 줍니다.  
   
 ![새 포리스트 설치](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_PSReboot.png)  
   
@@ -568,13 +568,13 @@ ADDSDeployment cmdlet에서는 DNS 클라이언트 설정, 전달자 및 루트 
 > [!WARNING]  
 > 다시 부팅을 무시하지 않는 것이 좋습니다. 도메인 컨트롤러가 올바르게 작동하려면 다시 부팅해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [Active Directory Domain Services (TechNet 포털)](https://technet.microsoft.com/library/cc770946(WS.10).aspx)  
 [Active Directory Domain Services Windows Server 2008 R2](https://technet.microsoft.com/library/dd378801(WS.10).aspx)  
-[Windows Server 2008에 대 한 Active Directory Domain Services](https://technet.microsoft.com/library/dd378891(WS.10).aspx)  
+[Windows Server 2008용 Active Directory Domain Services](https://technet.microsoft.com/library/dd378891(WS.10).aspx)  
 [Windows Server 기술 참조 (Windows Server 2003)](https://technet.microsoft.com/library/cc739127(WS.10).aspx)  
-[ Active Directory 관리 센터: 시작 (Windows Server 2008 R2) ](https://technet.microsoft.com/library/dd560651(WS.10).aspx)  
+[Active Directory 관리 센터: 시작 (Windows Server 2008 R2)](https://technet.microsoft.com/library/dd560651(WS.10).aspx)  
 [Windows PowerShell을 사용 하 여 Active Directory 관리 (Windows Server 2008 R2)](https://technet.microsoft.com/library/dd378937(WS.10).aspx)  
-[디렉터리 서비스 팀에 문의 (공식 Microsoft 상용 기술 지원 블로그)](http://blogs.technet.com/b/askds)  
+[디렉터리 서비스 팀에 문의 (공식 Microsoft 상용 기술 지원 블로그)](https://blogs.technet.com/b/askds)  
   
 

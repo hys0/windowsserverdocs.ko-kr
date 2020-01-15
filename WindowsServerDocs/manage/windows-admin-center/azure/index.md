@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.date: 05/31/2019
-ms.openlocfilehash: e76d1205c22d6ce484abc86ed5e3c74ac1010f29
-ms.sourcegitcommit: e817a130c2ed9caaddd1def1b2edac0c798a6aa2
+ms.openlocfilehash: b82d2eaa9283d99993102f1656262e2eda86cfff
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74945309"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950122"
 ---
 # <a name="connecting-windows-server-to-azure-hybrid-services"></a>Windows Server를 Azure 하이브리드 서비스에 연결
 
@@ -31,7 +31,7 @@ Windows Admin Center 내에서 Azure 하이브리드 서비스를 사용하면 �
 
 ## <a name="discover-integrated-services-in-the-azure-hybrid-services-tool"></a>Azure 하이브리드 서비스 도구에서 통합 서비스 검색
 
-[Windows Admin Center](../understand/windows-admin-center.md)의 Azure 하이브리드 서비스 도구는 통합된 모든 Azure 서비스를 중앙 집중식 허브로 통합합니다. 이 중앙 집중식 허브에서 온-프레미스 또는 하이브리드 환경에 가치를 제공하는 사용 가능한 모든 Azure 서비스를 쉽게 검색할 수 있습니다.  
+[Windows Admin Center](../overview.md)의 Azure 하이브리드 서비스 도구는 통합된 모든 Azure 서비스를 중앙 집중식 허브로 통합합니다. 이 중앙 집중식 허브에서 온-프레미스 또는 하이브리드 환경에 가치를 제공하는 사용 가능한 모든 Azure 서비스를 쉽게 검색할 수 있습니다.  
 
 ![Azure 하이브리드 서비스 도구를 보여 주는 Windows Admin Center 스크린샷](../media/azure-services/ahs-discover.png)
 

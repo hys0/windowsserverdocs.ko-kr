@@ -8,12 +8,12 @@ ms.date: 08/09/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: ff76a6dffd66296a02cffcbd79bc6dfadc91c14a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 8b27097ac64f981343c1d455c826fa1b9004133e
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407796"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949580"
 ---
 # <a name="scenario-native-app-calling-web-api"></a>시나리오: Web API를 호출 하는 네이티브 앱 
 >적용 대상: AD FS 2019 이상 
@@ -26,7 +26,7 @@ ms.locfileid: "71407796"
  
  ![개요](media/adfs-msal-native-app-web-api/native1.png)
 
-이 흐름에서는 네이티브 앱 (공용 클라이언트)에 인증을 추가 하 여 사용자를 로그인 하 고 Web API를 호출할 수 있습니다. 사용자를 로그인 하는 네이티브 앱에서 Web API를 호출 하려면 MSAL의 [AcquireTokenInteractive](https://docs.microsoft.com/en-us/dotnet/api/microsoft.identity.client.ipublicclientapplication.acquiretokeninteractive?view=azure-dotnet#Microsoft_Identity_Client_IPublicClientApplication_AcquireTokenInteractive_System_Collections_Generic_IEnumerable_System_String__) token 취득 메서드를 사용할 수 있습니다. 이 상호 작용을 사용 하도록 설정 하기 위해 MSAL은 웹 브라우저를 활용 합니다. 
+이 흐름에서는 네이티브 앱 (공용 클라이언트)에 인증을 추가 하 여 사용자를 로그인 하 고 Web API를 호출할 수 있습니다. 사용자를 로그인 하는 네이티브 앱에서 Web API를 호출 하려면 MSAL의 [AcquireTokenInteractive](https://docs.microsoft.com/dotnet/api/microsoft.identity.client.ipublicclientapplication.acquiretokeninteractive?view=azure-dotnet#Microsoft_Identity_Client_IPublicClientApplication_AcquireTokenInteractive_System_Collections_Generic_IEnumerable_System_String__) token 취득 메서드를 사용할 수 있습니다. 이 상호 작용을 설정하기 위해 MSAL은 웹 브라우저를 활용합니다. 
 
  
 액세스 토큰을 대화형으로 얻기 위해 ADFS에서 네이티브 앱을 구성 하는 방법을 더 잘 이해 하려면 [여기](https://github.com/microsoft/adfs-sample-msal-dotnet-native-to-webapi) 에 제공 된 샘플을 사용 하 고 앱 등록 및 코드 구성 단계를 연습 하겠습니다.  
@@ -45,15 +45,15 @@ ms.locfileid: "71407796"
 
   1. **AD FS 관리**에서 **응용 프로그램 그룹** 을 마우스 오른쪽 단추로 클릭 하 고 **응용 프로그램 그룹 추가**를 선택 합니다.   
   
-  2. 응용 프로그램 그룹 마법사에서 **이름** 에 **NativeAppToWebApi** 를 입력 하 고 **클라이언트-서버 응용 프로그램** 에서 **웹 API 템플릿에 액세스 하는 네이티브 응용 프로그램** 을 선택 합니다. **다음**을 클릭합니다.  
+  2. 응용 프로그램 그룹 마법사에서 **이름** 에 **NativeAppToWebApi** 를 입력 하 고 **클라이언트-서버 응용 프로그램** 에서 **웹 API 템플릿에 액세스 하는 네이티브 응용 프로그램** 을 선택 합니다. 클릭 하 여 **다음**.  
   
       ![앱 Reg](media/adfs-msal-native-app-web-api/native2.png)  
 
-  3. 복사는 **클라이언트 식별자** 값입니다. 이 파일은 나중에 응용 프로그램의 **app.config** 파일에서 **ClientId** 의 값으로 사용 됩니다. **리디렉션 URI** https://ToDoListClient 에 대해 다음을 입력 합니다. **추가**를 클릭합니다. **다음**을 클릭합니다.  
+  3. 복사는 **클라이언트 식별자** 값입니다. 이 파일은 나중에 응용 프로그램의 **app.config** 파일에서 **ClientId** 의 값으로 사용 됩니다. **리디렉션 URI:** https://ToDoListClient 에 대해 다음을 입력 합니다. **추가**를 클릭합니다. 클릭 하 여 **다음**.  
  
      ![앱 Reg](media/adfs-msal-native-app-web-api/native3.png) 
 
-  4. 웹 API 구성 화면에서 **식별자** https://localhost:44321/ 를 입력 합니다. **추가**를 클릭합니다. **다음**을 클릭합니다. 이 값은 응용 프로그램의 **app.config** 및 **web.config** 파일에서 나중에 사용 됩니다.
+  4. 웹 API 구성 화면에서 https://localhost:44321/**식별자** 를 입력 합니다. **추가**를 클릭합니다. 클릭 하 여 **다음**. 이 값은 응용 프로그램의 **app.config** 및 **web.config** 파일에서 나중에 사용 됩니다.
  
      ![앱 Reg](media/adfs-msal-native-app-web-api/native4.png)   
   
@@ -109,7 +109,7 @@ ms.locfileid: "71407796"
 
  4. Web.config 파일을 엽니다. 다음을 수정 합니다. 
     - ida: 대상-위의 AD FS 섹션에서 앱 등록의 #4에서 **식별자** 값을 입력 합니다. 
-    - ida AdfsMetadataEndpoint- https://[your AD FS hostname]/federationmetadata/2007-06/federationmetadata.xml를 입력 합니다. 
+    - ida: AdfsMetadataEndpoint-enter https://[your AD FS hostname]/federationmetadata/2007-06/federationmetadata.xml 
     
       ![코드 구성](media/adfs-msal-native-app-web-api/native13.png)
  

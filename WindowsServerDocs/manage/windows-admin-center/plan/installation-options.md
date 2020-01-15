@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.date: 12/02/2019
-ms.openlocfilehash: d4046cc10a5e0fdc12cfb9587eef10d4263c2ddd
-ms.sourcegitcommit: 7c7fc443ecd0a81bff6ed6dbeeaf4f24582ba339
+ms.openlocfilehash: 503cd64cac0673829fe21bc15e8ad9d6a83bbb15
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74904029"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950512"
 ---
 # <a name="what-type-of-installation-is-right-for-you"></a>나에게 적합한 유형의 설치는 무엇입니까?
 
@@ -54,7 +54,7 @@ Microsoft Edge ( [Microsoft edge insider](https://microsoftedgeinsider.com)포�
 
 Windows 관리 센터를 사용 하 여 다음 Windows 운영 체제를 **관리할** 수 있습니다.
 
-| 버전 | *서버 관리자* 를 통해 *노드* 관리 | *클러스터 관리자* 를 통해 관리 |
+| Version | *서버 관리자* 를 통해 *노드* 관리 | *클러스터 관리자* 를 통해 관리 |
 | ------------------------- |--------------- | ----- |
 | Windows 10 | 예 (컴퓨터 관리를 통해) | 해당 없음 |
 | Windows Server 반기 채널 | 예 | 예 |
@@ -71,7 +71,7 @@ Windows 관리 센터를 사용 하 여 다음 Windows 운영 체제를 **관리
 > 
 > WMF가 설치되어 있는지, 그리고 버전이 5.1 이상인지 확인하려면 PowerShell에 `$PSVersiontable`을 입력합니다. 
 > 
-> WMF를 설치 하지 않은 경우 [wmf 5.1를 다운로드할](https://www.microsoft.com/en-us/download/details.aspx?id=54616)수 있습니다.
+> WMF를 설치 하지 않은 경우 [wmf 5.1를 다운로드할](https://www.microsoft.com/download/details.aspx?id=54616)수 있습니다.
 
 ## <a name="high-availability"></a>고가용성
 

@@ -8,16 +8,16 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 06/21/2019
-ms.openlocfilehash: 35efca71278c288189819d6c9fc49ba8195d18a1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 923bc2c46f37cf7e631a744c9eae85c3dd7506dd
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386825"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949812"
 ---
 >적용 대상: Windows Server 2019, Windows Server (반기 채널), Windows Server 2016
 
-### <a name="add-host-information-for-tpm-trusted-attestation"></a>TPM에서 신뢰할 수 있는 증명에 대 한 호스트 정보 추가
+# <a name="add-host-information-for-tpm-trusted-attestation"></a>TPM에서 신뢰할 수 있는 증명에 대 한 호스트 정보 추가
 
 TPM 모드의 경우 패브릭 관리자는 각각 HGS 구성에 추가 해야 하는 세 가지 종류의 호스트 정보를 캡처합니다.
 

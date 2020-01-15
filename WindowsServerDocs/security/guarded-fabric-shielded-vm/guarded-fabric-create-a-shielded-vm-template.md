@@ -8,12 +8,12 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 01/29/2019
-ms.openlocfilehash: 70014c04bbb4425fe3c3fd0379f10cf00abe00ee
-ms.sourcegitcommit: 4b4ff8d9e18b2ddcd1916ffa2cd58fffbed8e7ef
+ms.openlocfilehash: 04fdd52544b69d2c41abcbee00dd00b31bf5f21c
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72986441"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949780"
 ---
 # <a name="create-a-windows-shielded-vm-template-disk"></a>Windows 차폐 VM 템플릿 디스크 만들기
 
@@ -59,7 +59,7 @@ Windows Server 2016, Windows 10 (원격 서버 관리 도구, RSAT가 설치 된
 
         Install-WindowsFeature RSAT-Shielded-VM-Tools -Restart
         
-    [Windows 10 원격 서버 관리 도구](https://www.microsoft.com/en-us/download/details.aspx?id=45520)가 설치 된 클라이언트 컴퓨터에서 서버를 관리할 수도 있습니다.
+    [Windows 10 원격 서버 관리 도구](https://www.microsoft.com/download/details.aspx?id=45520)가 설치 된 클라이언트 컴퓨터에서 서버를 관리할 수도 있습니다.
 
 3. 새 보호 된 Vm의 템플릿 디스크가 될 VHDX에 대 한 VSC를 서명할 인증서를 가져오거나 만듭니다. 이 인증서에 대 한 세부 정보는 해당 보호 데이터 파일을 만들고 신뢰할 수 있는 디스크에 권한을 부여 하는 경우 테 넌 트에 표시 됩니다. 따라서 사용자 및 사용자의 테 넌 트가 상호 신뢰 하는 인증 기관에서이 인증서를 얻어야 합니다. 호스터 및 테 넌 트 인 엔터프라이즈 시나리오에서는 PKI에서이 인증서를 발급 하는 것을 고려할 수 있습니다.
 
@@ -69,7 +69,7 @@ Windows Server 2016, Windows 10 (원격 서버 관리 도구, RSAT가 설치 된
 
 4. 시작 메뉴의 **관리 도구** 폴더에서 **템플릿 디스크 마법사** 를 시작 하거나 명령 프롬프트에 템플릿 **disk마법사나 .Exe** 를 입력 하 여 템플릿 디스크 마법사를 시작 합니다.
 
-5. **인증서** 페이지에서 **찾아보기** 를 클릭 하 여 인증서 목록을 표시 합니다. 디스크 템플릿을 준비 하는 데 사용할 인증서를 선택 합니다. **확인**을 클릭하고 **다음**을 클릭합니다.
+5. **인증서** 페이지에서 **찾아보기** 를 클릭 하 여 인증서 목록을 표시 합니다. 디스크 템플릿을 준비 하는 데 사용할 인증서를 선택 합니다. **확인** 을 클릭하고 **다음**을 클릭합니다.
 
 6. 가상 디스크 페이지에서 **찾아보기** 를 클릭 하 여 준비한 VHDX를 선택 하 고 **다음**을 클릭 합니다.
 

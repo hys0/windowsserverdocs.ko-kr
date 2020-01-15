@@ -11,12 +11,12 @@ ms.assetid: b5387444-595f-4f38-abb7-163a70ea1895
 author: szarkos
 ms.author: szark
 ms.date: 10/16/2017
-ms.openlocfilehash: 0627c38f15966948dd4bea91b66a96ee59ec89e5
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e32c11dac1d887ba0ae0192bb658f71ece77a42c
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71370447"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75947239"
 ---
 # <a name="linux-software-repository-for-microsoft-products"></a>Microsoft 제품에 대 한 Linux 소프트웨어 리포지토리
 
@@ -27,10 +27,10 @@ Microsoft의 Linux 소프트웨어 리포지토리는 여러 하위 리포지토
 
  - prod – 프로덕션 하위 리포지토리가 프로덕션에서 사용 하기 위한 패키지에 대해 지정 됩니다. Microsoft에서 제공 하는 해당 지원 계약 또는 프로그램의 조건에 따라 Microsoft에서 이러한 패키지를 상업적으로 지원 합니다.
 
- - mssql-server-Microsoft SQL Server on Linux에 대 한 패키지가 포함 되어 있습니다. 참고 항목: [SQL Server on Linux](https://www.microsoft.com/en-us/sql-server/sql-server-vnext-including-Linux).
+ - mssql-server-Microsoft SQL Server on Linux에 대 한 패키지를 포함 합니다. 참고 항목: [SQL Server on Linux](https://www.microsoft.com/sql-server/sql-server-vnext-including-Linux).
 
 > [!Note]
-> Linux 소프트웨어 리포지토리의 패키지에는 패키지에 있는 사용 조건이 적용 됩니다. 패키지를 사용 하기 전에 사용 조건을 읽어 보십시오. 패키지를 설치 하 고 사용 하면 이러한 조건에 동의 하는 것입니다. 사용 조건에 동의 하지 않는 경우 패키지를 사용 하지 마십시오.
+> Linux 소프트웨어 리포지토리의 패키지에는 패키지에 있는 사용 조건이 적용 됩니다. 패키지를 사용하기 전에 사용 조건을 읽어보시기 바랍니다. 패키지를 설치 및 사용하면 이러한 사용 조건에 동의하게 됩니다. 사용 조건에 동의하지 않는 경우, 패키지를 사용하지 마세요.
 
 
 ## <a name="configuring-the-repositories"></a>리포지토리 구성
@@ -91,11 +91,11 @@ Linux 배포 및 버전에 적용 되는 Linux 패키지를 설치 하 여 리�
 
 **패키지 및 리포지토리 서명 키**
 
- - Microsoft의 GPG 공개 키를 여기에서 다운로드할 수 있습니다.[https://packages.microsoft.com/keys/microsoft.asc](https://packages.microsoft.com/keys/microsoft.asc)
- - 공개 키 ID: Microsoft (릴리스 서명)<gpgsecurity@microsoft.com>
- - 공개 키 지문:`BC52 8686 B50D 79E3 39D3 721C EB3E 94AD BE12 29CF`
+ - Microsoft의 GPG 공개 키를 여기에서 다운로드할 수 있습니다. [https://packages.microsoft.com/keys/microsoft.asc](https://packages.microsoft.com/keys/microsoft.asc)
+ - 공개 키 ID: Microsoft (릴리스 서명) <gpgsecurity@microsoft.com>
+ - 공개 키 지문: `BC52 8686 B50D 79E3 39D3 721C EB3E 94AD BE12 29CF`
 
-### <a name="examples"></a>예를 들면 다음과 같습니다.
+### <a name="examples"></a>예:
 
  - RHEL/CentOS 7
 

@@ -10,19 +10,19 @@ ms.date: 10/17/2019
 ms.topic: landing-page
 author: kaushika-msft
 ms.author: kaushika
-ms.openlocfilehash: 829ae15495d54aca8c476909988ea5a44ea487e7
-ms.sourcegitcommit: 8a017624682fe0172076f9169a9fa17aa972907f
+ms.openlocfilehash: 5e6312075fffd62b599fb62f39cc94ca1f309a44
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74852630"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950168"
 ---
 # <a name="troubleshooting-windows-server-components"></a>Windows Server 구성 요소 문제 해결
 
 >- [!TIP]
 > 이전 버전의 Windows Server에 대한 정보를 찾으시나요? Docs.microsoft.com의 다른 [Windows Server 라이브러리](/previous-versions/windows/) 를 확인 하세요. [이 사이트](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) 에서 특정 정보를 검색할 수도 있습니다.
 
-Microsoft에서는 Windows Server 용 업데이트를 정기적으로 모두 릴리스 합니다. 서버가 보안 업데이트를 포함한 향후 업데이트를 받을 수 있도록 업데이트된 상태로 유지해야 합니다. 릴리스된 업데이트에 대 한 전체 목록은 [windows 10 및 Windows Server 2016 업데이트 기록](https://support.microsoft.com/en-us/help/4000825/windows-10-windows-server-2016-update-history) 을 참조 하세요.
+Microsoft에서는 Windows Server 용 업데이트를 정기적으로 모두 릴리스 합니다. 서버가 보안 업데이트를 포함한 향후 업데이트를 받을 수 있도록 업데이트된 상태로 유지해야 합니다. 릴리스된 업데이트에 대 한 전체 목록은 [windows 10 및 Windows Server 2016 업데이트 기록](https://support.microsoft.com/help/4000825/windows-10-windows-server-2016-update-history) 을 참조 하세요.
 
 이 섹션에서는 Windows Server의 문제를 해결 하는 데 도움이 되는 고급 문제 해결 항목 및 링크를 제공 합니다. 추가 항목이 사용 가능 해지면 추가 됩니다.
 

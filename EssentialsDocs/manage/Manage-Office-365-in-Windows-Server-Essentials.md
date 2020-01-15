@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 3f8485e4-e10f-4f38-8a5e-d5227abd0d84
 author: nnamuhcs
 ms.author: daveba
-ms.openlocfilehash: bd7787b853395bf461165802251de8b2be5d5a39
-ms.sourcegitcommit: 2082335e1260826fcbc3dccc208870d2d9be9306
+ms.openlocfilehash: ded26080ce59b48d7bbc3404684b3dbf926eceaa
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69980263"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75947461"
 ---
 # <a name="manage-office-365-in-windows-server-essentials"></a>Windows Server Essentials에서 Office 365 관리
 
@@ -25,7 +25,7 @@ Windows Server Essentials 서버를 Microsoft Office 365와 통합 하는 경우
 > [!IMPORTANT]
 >   Office 365 통합은 단일 도메인 컨트롤러 환경 에서만 지원 됩니다. 또한 Office 365 통합 마법사는 도메인 컨트롤러에서 실행 해야 합니다.  
   
-## <a name="in-this-topic"></a>항목 내용  
+## <a name="in-this-topic"></a>이 항목의 내용  
   
 -   [Office 365를 서버와 통합 해야 하는 이유는 무엇 인가요?](#BKMK_IntegrationOverview)  
   
@@ -65,11 +65,11 @@ Windows Server Essentials 서버를 Microsoft Office 365와 통합 하는 경우
   
 - Exchange Online을 구독 하는 경우 Office 365을 Windows Server Essentials 서버와 통합 하면 사용자가 회사 메일 서버에 연결 하는 데 사용 하는 모바일 장치를 관리할 수 있습니다.  
   
-  -   모바일 장치가 회사 메일 서버에 연결될 때 암호 보호가 필요합니다. 최소 암호 길이, 허용할 실패한 로그인 시도 수, 로그인 시도 사이에 필요한 최소 시간을 설정합니다.  
+  -   모바일 디바이스가 회사 메일 서버에 연결될 때 암호 보호가 필요합니다. 최소 암호 길이, 허용할 실패한 로그인 시도 수, 로그인 시도 사이에 필요한 최소 시간을 설정합니다.  
   
-  -   장치 모델의 보안 문제에 대해 알고 있으면 모바일 장치에서 Exchange Online에 연결하지 못하도록 합니다.  
+  -   디바이스 모델의 보안 문제에 대해 알고 있으면 모바일 디바이스에서 Exchange Online에 연결하지 못하도록 합니다.  
   
-  -   모바일 장치를 분실하거나 도난당하면 다음에 장치가 켜져 있을 때 장치를 지워서 모든 중요한 회사 데이터를 삭제합니다.  
+  -   모바일 디바이스를 분실하거나 도난당하면 다음에 디바이스가 켜져 있을 때 디바이스를 지워서 모든 중요한 회사 데이터를 삭제합니다.  
   
 - Office 365 통합은 Office 365 서비스 및 리소스에 연결 하는 새로운 방법을 제공 합니다.  
   
@@ -82,16 +82,16 @@ Windows Server Essentials 서버를 Microsoft Office 365와 통합 하는 경우
   
  다음 작업을 수행합니다.  
   
--   [1단계: Office 365 통합 요구 사항 확인](#BKMK_StepOne_VERIFY)  
+-   [1 단계: Office 365 통합 요구 사항 확인](#BKMK_StepOne_VERIFY)  
   
--   [2단계: 서버를 Microsoft Office 365와 통합](#BKMK_StepTwo)  
+-   [2 단계: Microsoft Office 365과 서버 통합](#BKMK_StepTwo)  
   
--   [3단계: Office 365에 조직의 인터넷 도메인 이름 연결 (선택 사항)](#BKMK_StepThree)  
+-   [3 단계: Office 365에 조직의 인터넷 도메인 이름 연결 (선택 사항)](#BKMK_StepThree)  
   
-###  <a name="BKMK_StepOne_VERIFY"></a> 1단계: Office 365 통합 요구 사항 확인  
+###  <a name="BKMK_StepOne_VERIFY"></a>1 단계: Office 365 통합 요구 사항 확인  
  시작하기 전에 서버가 이러한 요구 사항을 충족해야 합니다.  
   
--   서버에는 다음 운영 체제가 설치되어 있을 수 있습니다.  Windows server essentials, Windows Server Essentials 또는 windows server Essentials Experience 역할이 설치 된 windows server 2012 R2 Standard 또는 Windows Server 2012 R2 Datacenter 운영 체제  
+-   서버에는 windows server essentials, Windows Server Essentials 2012 또는 windows server Essentials Experience 역할이 설치 된 windows server 2008 R2 Standard 또는 Windows server 2012 r2 Datacenter 운영 체제와 같은 운영 체제가 있을 수 있습니다.  
   
 -   환경에는 도메인 컨트롤러가 하나만 있을 수 있으며 도메인 컨트롤러에서 Office 365 통합을 수행 해야 합니다.  
   
@@ -104,7 +104,7 @@ Windows Server Essentials 서버를 Microsoft Office 365와 통합 하는 경우
 > [!NOTE]
 >  Office 365을 미리 구독할 필요가 없습니다. Office 365 통합 중에 구독을 구매 하거나 무료 평가판에 등록할 수 있습니다. Office 365에 대 한 계획 및 가격 책정을 보려면 [비즈니스에 대 한 office 365 요금제를 비교](https://office.microsoft.com/compare-office-365-for-business-plans-FX102918419.aspx?CR_CC=200061904&WT.srch=1&WT.mc_ID=PS_bing_O365Comm_subscribe-to-office-365_Text)하세요.  
   
-###  <a name="BKMK_StepTwo"></a> 2단계: 서버를 Microsoft Office 365와 통합  
+###  <a name="BKMK_StepTwo"></a>2 단계: Microsoft Office 365과 서버 통합  
  도메인 컨트롤러에서 다음 절차를 수행 하 여 Windows Server Essentials 서버를 Office 365와 통합 합니다.  
   
 > [!NOTE]
@@ -132,7 +132,7 @@ Windows Server Essentials 서버를 Microsoft Office 365와 통합 하는 경우
   
 -   통합 및 Office 365 구독을 관리 하는 데 사용 되는 새로운 **office 365** 페이지가 있습니다.  
   
--   사용자 페이지 에서 사용자에 게 Office 365에 대 한 액세스 권한을 부여 하는 Microsoft online Services 계정을 만들고 관리할 수 있는 **온라인 계정** 탭이 표시 됩니다. Exchange Online을 사용 하는 경우 Windows Server Essentials 서버가 있으면 **메일 그룹** 탭도 표시 됩니다.  
+-   **사용자 페이지에서** 사용자에 게 Office 365에 대 한 액세스 권한을 부여 하는 Microsoft online Services 계정을 만들고 관리할 수 있는 **온라인 계정** 탭이 표시 됩니다. Exchange Online을 사용 하는 경우 Windows Server Essentials 서버가 있으면 **메일 그룹** 탭도 표시 됩니다.  
   
 -   Windows Server Essentials 서버의 **저장소** 페이지에는 sharepoint Online 라이브러리를 관리 하 고 팀 사이트에 대 한 사용 권한을 변경 하기 위한 **sharepoint 라이브러리** 탭이 있습니다. Office 365에 대 한 모든 비즈니스 계획에는 이러한 기본 SharePoint Online 기능이 포함 되어 있습니다.  
   
@@ -179,7 +179,7 @@ Windows Server Essentials 서버를 Microsoft Office 365와 통합 하는 경우
      마법사가 완료 되 고 나면 도메인 이름 등록 기관이 DNS 레코드를 확인 하는 동안 약간의 대기 시간입니다. 이는 자동으로 수행 됩니다. 아무것도 수행할 필요가 없습니다. 그러나 일반적으로는 약 1 시간 정도 걸리며 약간 더 긴 경우도 있습니다. 도메인 확인이 완료 되 면 **Office 365** 페이지에 조직의 도메인이 나열 됩니다.  
   
 ####  <a name="BKMK_ManuallyConfigureDNS"></a>Office 365 통합에 대 한 DNS 레코드를 수동으로 구성 하는 방법  
- Office 365에 도메인 연결 마법사에서 도메인 이름이 서버에서 관리되지 않음을 감지할 경우 구성을 완료하려면 필요한 DNS(도메인 이름 서버) 레코드를 수동으로 구성해야 합니다. 이 경우 **%username%\NewDNSRecords_ (n) .txt**에서 구성 해야 하는 DNS 레코드의 목록을 찾을 수 있습니다. 여기서 *(n)* 은 임의의 숫자입니다.  
+ Office 365에 도메인 연결 마법사에서 도메인 이름이 서버에서 관리되지 않음을 감지할 경우 구성을 완료하려면 필요한 DNS(도메인 이름 서버) 레코드를 수동으로 구성해야 합니다. 이 경우 **% username% \ NewDNSRecords_ (n) .txt**에서 구성 해야 하는 DNS 레코드의 목록을 찾을 수 있습니다. 여기서 *(n)* 은 임의의 숫자입니다.  
   
  다음 표에서는 추가해야 하는 DNS 레코드에 대해 설명합니다. 입력 방법은 도메인 이름 등록 기관에 따라 달라질 수 있습니다. 의문 사항이 있으면 도메인 이름 등록 기관에 도움을 요청하세요.  
   
@@ -188,8 +188,8 @@ Windows Server Essentials 서버를 Microsoft Office 365와 통합 하는 경우
 |서비스|필요한 DNS 레코드|용도|  
 |-------------|--------------------------|-------------|  
 |(여러 서비스)|MX| Office 365에서는이 레코드를 사용 하 여 특정 도메인 이름을 소유 하 고 있는지 확인 합니다. 이 MX 레코드는 메일 메시지 라우팅을 충돌하지 않습니다.|  
-|Exchange Online|MX|메일 메시지 라우팅을 제공합니다. **중요:**  전자 메일을 마이그레이션할 경우 새 MX 레코드에 기본 설정을 영(**0**)으로 할당하지 마세요. 레코드 값이 현재 MX 레코드에 할당된 값보다 큰지 확인합니다. 전자 메일 마이그레이션이 완료 되 고 메일 서버를 Office 365로 변경할 준비가 되 면 도메인 이름 등록 기관에서 새 MX 레코드의 기본 설정 값을 다시 설정 하도록 합니다.|  
-|Exchange Online|별칭(CNAME)|사용자가 Exchange Online과 Outlook 데스크톱 클라이언트 또는 모바일 전자 메일 클라이언트 사이의 연결을 손쉽게 설정하도록 도와주는 데 사용되는 자동 검색 레코드입니다. **참고:**  조직의 고유한 도메인 이름 (예 http://mail.contoso.com) https://outlook.com/owa/office365.com):)을 사용 하 여 Outlook 웹 액세스에 액세스 하려는 경우 별칭 (CName) 레코드를 다음과 같이 구성할 수 있습니다. **유형 = CNAME, TTL = 01:00:00, HostName = mail, Address = office365**|  
+|Exchange Online|MX|메일 메시지 라우팅을 제공합니다. **중요:**  전자 메일을 마이그레이션하는 경우 새 MX 레코드에 기본 설정 (**0**)을 할당 하지 마십시오. 레코드 값이 현재 MX 레코드에 할당된 값보다 큰지 확인합니다. 전자 메일 마이그레이션이 완료 되 고 메일 서버를 Office 365로 변경할 준비가 되 면 도메인 이름 등록 기관에서 새 MX 레코드의 기본 설정 값을 다시 설정 하도록 합니다.|  
+|Exchange Online|별칭(CNAME)|사용자가 Exchange Online과 Outlook 데스크톱 클라이언트 또는 모바일 메일 클라이언트 사이의 연결을 손쉽게 설정하도록 도와주는 데 사용되는 자동 검색 레코드입니다. **참고:**  조직의 고유한 도메인 이름 (http://mail.contoso.com) 예: https://outlook.com/owa/office365.com) 을 사용 하 여 Outlook 웹 액세스에 액세스 하려는 경우에는 **Type = cname, TTL = 01:00:00, HostName = mail, Address = office365** 와 같이 별칭 (cname) 레코드를 구성할 수 있습니다.|  
 |Exchange Online|TXT|Office 365 전자 메일 서버에서 사용 하는 도메인에 도메인 대신 전자 메일을 보낼 수 있는 권한이 outlook.com 지정 합니다. 이 레코드를 만들어 아웃바운드 메일에 스팸으로 플래그가 지정되지 않도록 합니다.|  
 |Lync Online|SRV|Windows Live 또는 Yahoo!와 같은 기타 인스턴트 메시징 서비스와의 페더레이션을 사용하도록 도와줍니다.|  
 |Lync Online|SRV|사용자가 Lync 데스크톱 클라이언트와 Microsoft Lync Online 사이의 연결을 손쉽게 설정하도록 도와주는 데 사용되는 자동 검색 레코드입니다.|  
@@ -211,7 +211,7 @@ Windows Server Essentials 서버를 Microsoft Office 365와 통합 하는 경우
   
 -   [Office 365 구독을 관리](#BKMK_ManageO365) 하 시겠습니까? 구독을 관리 하는 데 사용 하는 관리자 계정을 변경 합니다. Office 365 관리 대시보드를 열어 구독을 관리 합니다.  
   
--   [Office 365에 조직의 인터넷 도메인을 연결 합니다](#BKMK_StepThree) . 자신의 도메인에 주소가 지정 된 전자 메일을 보내고 받을 수 있도록 하려면 Office 365에 도메인을 연결 하면 됩니다. (앞 [에서 설명한 3 단계: Office 365](#BKMK_StepThree)에 조직의 도메인을 연결 합니다.  
+-   [Office 365에 조직의 인터넷 도메인을 연결 합니다](#BKMK_StepThree) . 자신의 도메인에 주소가 지정 된 전자 메일을 보내고 받을 수 있도록 하려면 Office 365에 도메인을 연결 하면 됩니다. 앞에서 [3 단계: Office 365에 조직의 도메인 연결](#BKMK_StepThree)에서 설명 했습니다.  
   
 -   [Office 365 통합을 사용 하지 않도록 설정](#BKMK_Disable) 하 시겠습니까? 대시보드에서 Office 365 서비스, 구독 및 온라인 계정을 관리 하지 않으려면 Office 365 통합을 사용 하지 않도록 설정할 수 있습니다. Office 365 포털에서 서비스를 계속 사용할 수 있습니다.  
   
@@ -254,7 +254,7 @@ Windows Server Essentials 서버를 Microsoft Office 365와 통합 하는 경우
 3.  지시에 따라 마법사를 완료합니다.  
   
 > [!NOTE]
->  Office 365 통합을 다시 사용 하도록 설정 하려면 대시보드 **홈** 페이지의 **서비스** 탭에서 **office 365와 통합** 작업을 사용 합니다. 자세한 내용은 2 단계: [ 이 항목의 앞부분에 나오는 Microsoft Office 365](#BKMK_StepTwo)와 Windows Server Essentials 서버를 통합 합니다.  
+>  Office 365 통합을 다시 사용 하도록 설정 하려면 대시보드 **홈** 페이지의 **서비스** 탭에서 **office 365와 통합** 작업을 사용 합니다. 자세한 내용은 이 항목의 앞부분에서 [2단계: Microsoft Office 365와 Windows Server Essentials 서버 통합](#BKMK_StepTwo)을 참조하세요.  
   
 ##  <a name="BKMK_Troubleshoot"></a>Office 365 통합 문제 해결  
  이 섹션에서는 Windows Server Essentials에서 Office 365 통합 기능을 사용 하는 경우 발생할 수 있는 일반적인 문제를 해결 하는 데 도움이 되는 정보를 제공 합니다.  
@@ -283,11 +283,11 @@ Windows Server Essentials 서버를 Microsoft Office 365와 통합 하는 경우
   
 2.  오류가 다시 발생하면 서버를 다시 시작하고 다시 시도합니다.  
   
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
   
--   [Windows Server Essentials에 대 한 서비스 통합 개요-1 부](http://blogs.technet.com/b/sbs/archive/2013/11/04/services-integration-overview-for-windows-server-2012-r2-essentials-part-1.aspx)  
+-   [Windows Server Essentials에 대 한 서비스 통합 개요-1 부](https://blogs.technet.com/b/sbs/archive/2013/11/04/services-integration-overview-for-windows-server-2012-r2-essentials-part-1.aspx)  
   
--   [Windows Server Essentials에 대 한 서비스 통합 개요-2 부](http://blogs.technet.com/b/sbs/archive/2013/11/06/services-integration-overview-for-windows-server-2012-r2-essentials-part-2.aspx)  
+-   [Windows Server Essentials에 대 한 서비스 통합 개요-2 부](https://blogs.technet.com/b/sbs/archive/2013/11/06/services-integration-overview-for-windows-server-2012-r2-essentials-part-2.aspx)  
   
 -   [Microsoft Office 365를 사용 빠른 시작 가이드](../use/Quick-Start-Guide-to-Using-Microsoft-Office-365-with-Windows-Server-Essentials.md)  
   

@@ -7,12 +7,12 @@ ms.assetid: 07691d5b-046c-45ea-8570-a0a85c3f2d22
 manager: dongill
 author: huu
 ms.technology: security-guarded-fabric
-ms.openlocfilehash: deeaa7eab01dd5da6d997dd6ec039a3319e5c2b7
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6db9ce1db139558bd1a7aa731cb12c1b227ead03
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386462"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949766"
 ---
 # <a name="troubleshooting-using-the-guarded-fabric-diagnostic-tool"></a>보호 된 패브릭 진단 도구를 사용 하 여 문제 해결
 
@@ -24,7 +24,7 @@ ms.locfileid: "71386462"
 
 [!INCLUDE [Guarded fabric diagnostics tool](../../../includes/guarded-fabric-diagnostics-tool.md)] 
 
-# <a name="quick-start"></a>빠른 시작
+## <a name="quick-start"></a>빠른 시작
 
 로컬 관리자 권한으로 Windows PowerShell 세션에서 다음을 호출 하 여 보호 된 호스트나 HGS 노드를 진단할 수 있습니다.
 ```PowerShell
@@ -57,7 +57,7 @@ Get-HgsTrace -RunDiagnostics -Detailed
 
 `-Diagnostic` 매개 변수를 사용 하 여 지정 된 진단을 운영 하는 데 필요한 추적 으로만 추적 컬렉션을 제한할 수 있습니다.  이렇게 하면 수집 되는 데이터의 양과 진단을 호출 하는 데 필요한 사용 권한이 줄어듭니다.
 
-### <a name="diagnosis"></a>진단할
+### <a name="diagnosis"></a>진단
 `-Path` 매개 변수를 통해 추적 위치 `Get-HgsTrace` 제공 하 고 `-RunDiagnostics` 스위치를 지정 하 여 수집 된 추적을 진단할 수 있습니다.  또한 `-RunDiagnostics` 스위치 및 추적 대상 목록을 제공 하 여 단일 패스에서 수집 및 진단을 수행할 수 `Get-HgsTrace`.  추적 대상이 제공 되지 않으면 현재 컴퓨터는 암시적 대상으로 사용 되며, 설치 된 Windows PowerShell 모듈을 검사 하 여 역할이 유추 됩니다.
 
 진단은 특정 실패를 담당 하는 추적 대상, 진단 집합 및 개별 진단을 나타내는 계층 형식으로 결과를 제공 합니다.  오류에는 다음에 수행 해야 할 작업에 대 한 결정을 할 수 있는 경우 수정 및 해결 권장 사항이 포함 됩니다.  기본적으로 전달 및 관련이 없는 결과는 숨겨집니다.  진단에서 테스트 된 모든 항목을 보려면 `-Detailed` 스위치를 지정 합니다.  이렇게 하면 상태에 관계 없이 모든 결과가 표시 됩니다.

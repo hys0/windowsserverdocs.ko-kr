@@ -1,5 +1,5 @@
 ---
-title: NTLM 개요
+title: NTLM Overview
 description: Windows Server 보안
 ms.custom: na
 ms.prod: windows-server
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: b8dec2877646fd2bfe00da9d5c9047e8edfd6f1d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 74e6e05df037041b6c80239e26b39b5566474326
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386264"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949754"
 ---
-# <a name="ntlm-overview"></a>NTLM 개요
+# <a name="ntlm-overview"></a>NTLM Overview
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 
@@ -50,14 +50,14 @@ Windows Server 2012에 대 한 NTLM에는 제거 되었거나 더 이상 사용 
 ## <a name="BKMK_LINKS"></a>참고 항목
 다음 표에서는 NTLM 및 기타 Windows 인증 기술 관련 리소스를 제공합니다.
 
-|콘텐츠 유형|참조|
+|콘텐츠 형식|참조|
 |--------|-------|
 |**제품 평가**|[NTLM 인증 제한 사항 소개](https://technet.microsoft.com/library/dd560653.aspx)<br /><br />[NTLM 인증의 변경 내용](https://technet.microsoft.com/library/dd566199.aspx)|
 |**계획**|[IT 인프라 위협 모델링 가이드](https://technet.microsoft.com/library/dd941826.aspx)<br /><br />[위협 및 대책: Windows Server 2003 및 Windows XP의 보안 설정](https://technet.microsoft.com/library/dd162275.aspx)<br /><br />[위협 및 대책 가이드: Windows Server 2008 및 Windows Vista의 보안 설정](https://technet.microsoft.com/library/dd349791.aspx)<br /><br />[위협 및 대책 가이드: Windows Server 2008 R2 및 Windows 7의 보안 설정](https://technet.microsoft.com/library/hh125921.aspx)|
 |**배포**|[인증에 대한 확장된 보호](https://support.microsoft.com/kb/968389)<br /><br />[NTLM 사용 가이드 감사 및 제한](https://technet.microsoft.com/library/jj865674(v=ws.10).aspx)<br /><br />[디렉터리 서비스 팀에 문의: NTLM 차단 및 사용자: Windows 7의 응용 프로그램 분석 및 감사 방법론](https://blogs.technet.com/askds/archive/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7.aspx)<br /><br />[Windows 인증 블로그](https://blogs.technet.com/authentication/)<br /><br />[인증을 통해\-NTLM 패스에 대 한 MaxConcurrentAPI 구성](https://social.technet.microsoft.com/wiki/contents/articles/9759.configuring-maxconcurrentapi-for-ntlm-pass-through-authentication.aspx)|
 |**개발**|[Microsoft NTLM \(Windows\)](https://msdn.microsoft.com/library/aa378749(VS.85).aspx)<br /><br />[\[MS\-NLMP\]: NT LAN Manager \(NTLM\) 인증 프로토콜 사양](https://msdn.microsoft.com/library/cc236621(PROT.10).aspx)<br /><br />[\[MS\-NNTP\]: NT LAN Manager \(NTLM\) 인증: 네트워크 뉴스 전송 프로토콜 \(NNTP\) 확장](https://msdn.microsoft.com/library/cc236774(PROT.10).aspx)<br /><br />[\[MS\-NTHT\]: NTLM Over HTTP 프로토콜 사양](https://msdn.microsoft.com/library/cc237488(PROT.10).aspx)|
 |**문제 해결**|아직 사용할 수 없음|
-|**커뮤니티 리소스**|[이 말은 아직 안 됨: NTLM 병목 현상 및 RPC 런타임](http://blogs.technet.com/b/askds/archive/2011/09/15/is-this-horse-dead-yet-ntlm-bottlenecks-and-the-rpc-runtime.aspx)|
+|**커뮤니티 리소스**|[이 말은 아직 안 됨: NTLM 병목 현상 및 RPC 런타임](https://blogs.technet.com/b/askds/archive/2011/09/15/is-this-horse-dead-yet-ntlm-bottlenecks-and-the-rpc-runtime.aspx)|
 
 
 

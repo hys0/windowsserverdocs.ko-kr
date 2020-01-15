@@ -8,12 +8,12 @@ ms.author: jol
 ms.date: 03/01/2019
 ms.localizationpriority: medium
 ms.prod: windows-server
-ms.openlocfilehash: d692251e1ba0fef43e4eeee6f259f26f4347f3c0
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6795464bfbadd12fc220e941ad2175eb83d0f050
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71356880"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949941"
 ---
 # <a name="manage-hyper-converged-infrastructure-with-windows-admin-center"></a>Windows 관리 센터를 사용 하 여 하이퍼 수렴 형 인프라 관리
 
@@ -27,11 +27,11 @@ ms.locfileid: "71356880"
 > 하이퍼 수렴 형 인프라를 획득 하 고 싶으십니까? Microsoft는 파트너의 이러한 [Windows Server 소프트웨어 정의](https://microsoft.com/wssd) 솔루션을 권장 합니다. 이러한 기능은 호환성 및 안정성을 보장 하기 위해 참조 아키텍처에 대해 디자인, 조합 및 유효성 검사를 수행 하므로 신속 하 게 시작 하 고 실행할 수 있습니다.
 
 > [!IMPORTANT]
-> 이 문서에서 설명 하는 일부 기능은 Windows 관리 센터 미리 보기 에서만 사용할 수 있습니다. [이 버전을 가져올 어떻게 할까요? 있나요?](http://aka.ms/windowsadmincenter)
+> 이 문서에서 설명 하는 일부 기능은 Windows 관리 센터 미리 보기 에서만 사용할 수 있습니다. [이 버전을 가져올 어떻게 할까요? 있나요?](https://aka.ms/windowsadmincenter)
 
-## <a name="what-is-windows-admin-center"></a>Windows Admin Center란
+## <a name="what-is-windows-admin-center"></a>Windows Admin Center란?
 
-[Windows 관리 센터](../understand/windows-admin-center.md) 는 windows Server를 위한 차세대 관리 도구로 서, 서버 관리자와 같은 기존의 후속 "도구"입니다. 무료 이며 인터넷 연결 없이 설치 하 고 사용할 수 있습니다. Windows 관리 센터를 사용 하 여 Windows Server 2016 또는 Windows Server 2019를 실행 하는 하이퍼 수렴 형 인프라를 관리 하 고 모니터링할 수 있습니다.
+[Windows 관리 센터](../overview.md) 는 windows Server를 위한 차세대 관리 도구로 서, 서버 관리자와 같은 기존의 후속 "도구"입니다. 무료 이며 인터넷 연결 없이 설치 하 고 사용할 수 있습니다. Windows 관리 센터를 사용 하 여 Windows Server 2016 또는 Windows Server 2019를 실행 하는 하이퍼 수렴 형 인프라를 관리 하 고 모니터링할 수 있습니다.
 
 ![하이퍼 수렴 형 클러스터 대시보드](../media/manage-hyper-converged/hci-dashboard-v1809.png)
 
@@ -46,7 +46,7 @@ ms.locfileid: "71356880"
 
 하이퍼 수렴 형 인프라의 Windows 관리 센터는 Microsoft에서 적극적으로 개발 하 고 있습니다. 기존 기능을 개선 하 고 새로운 기능을 추가 하는 빈번한 업데이트를 받습니다.
 
-## <a name="before-you-start"></a>시작하기 전 주의 사항
+## <a name="before-you-start"></a>시작하기 전 확인 사항
 
 Windows 관리 센터에서 클러스터를 하이퍼 수렴 형 인프라로 관리 하려면 Windows Server 2016 또는 Windows Server 2019를 실행 하 고 Hyper-v를 사용 하도록 설정 하 고 스토리지 공간 다이렉트를 사용 하도록 설정 해야 합니다. 필요에 따라 Windows 관리 센터를 통해 소프트웨어 정의 네트워킹을 사용 하도록 설정 하 고 관리할 수도 있습니다.
 
@@ -76,7 +76,7 @@ Windows 관리 센터에서 클러스터를 하이퍼 수렴 형 인프라로 �
 다음 단계로 SDN (소프트웨어 방식 네트워킹)을 사용 하도록 Windows Server 2016 또는 2019를 실행 하는 하이퍼 수렴 형 인프라를 구성할 수 있습니다.
 
 1. 하이퍼 수렴 형 인프라 호스트에 설치한 os와 동일한 OS의 VHD를 준비 합니다. 이 VHD는 모든 NC/SLB/GW Vm에 사용 됩니다.
-2. SDN Express에서 [https://github.com/Microsoft/SDN/tree/master/SDNExpress](https://github.com/Microsoft/SDN/tree/master/SDNExpress)모든 폴더와 파일을 다운로드 합니다.
+2. [https://github.com/Microsoft/SDN/tree/master/SDNExpress](https://github.com/Microsoft/SDN/tree/master/SDNExpress)에서 SDN Express 아래의 모든 폴더와 파일을 다운로드 합니다.
 3. 배포 콘솔을 사용 하 여 다른 VM을 준비 합니다. 이 VM은 SDN 호스트에 액세스할 수 있어야 합니다. 또한 VM에는 RSAT Hyper-v 도구가 설치 되어 있어야 합니다.
 4. SDN Express에 대해 다운로드 한 모든 항목을 배포 콘솔 VM에 복사 합니다. 및은이 **Sdnexpress** 폴더를 공유 합니다. 구성 파일 줄 8에서 정의한 대로 모든 호스트가 **Sdnexpress** 공유 폴더에 액세스할 수 있는지 확인 합니다.
    ```
@@ -92,7 +92,7 @@ Windows 관리 센터에서 클러스터를 하이퍼 수렴 형 인프라로 �
 
 배포에는 약 30 ~ 45 분이 소요 됩니다.
 
-## <a name="get-started"></a>시작
+## <a name="get-started"></a>시작하기
 
 하이퍼 수렴 형 인프라를 배포한 후에는 Windows 관리 센터를 사용 하 여 관리할 수 있습니다.
 
@@ -135,7 +135,7 @@ Windows 관리 센터에 클러스터를 추가 하려면 다음을 수행 합�
 
 ### <a name="are-there-differences-between-managing-windows-server-2016-and-windows-server-2019"></a>Windows Server 2016 및 Windows Server 2019를 관리 하는 데 차이가 있나요?
 
-예. 하이퍼 수렴 형 인프라를 위한 windows 관리 센터는 Windows Server 2016 및 Windows Server 2019의 환경을 개선 하는 빈번한 업데이트를 받습니다. 그러나 일부 새로운 기능은 Windows Server 2019에만 사용할 수 있습니다. 예를 들어, 중복 제거 및 압축을 위한 토글 스위치를 사용할 수 있습니다.
+그렇습니다. 하이퍼 수렴 형 인프라를 위한 windows 관리 센터는 Windows Server 2016 및 Windows Server 2019의 환경을 개선 하는 빈번한 업데이트를 받습니다. 그러나 일부 새로운 기능은 Windows Server 2019에만 사용할 수 있습니다. 예를 들어, 중복 제거 및 압축을 위한 토글 스위치를 사용할 수 있습니다.
 
 ### <a name="can-i-use-windows-admin-center-to-manage-storage-spaces-direct-for-other-use-cases-not-hyper-converged-such-as-converged-scale-out-file-server-sofs-or-microsoft-sql-server"></a>Windows 관리 센터를 사용 하 여 수렴 형 스케일 아웃 파일 서버 (SoFS) 또는 Microsoft SQL Server 같은 다른 사용 사례 (하이퍼 수렴 안 함)에 대 한 스토리지 공간 다이렉트를 관리할 수 있나요?
 
@@ -187,32 +187,32 @@ Windows 관리 센터는 Microsoft Azure 클라우드와 강력 하 고 편리�
 <table>
     <tr style="border: 0;">
         <td style="padding: 5px; border: 0;">
-            <strong>볼륨 만들기, 3 방향 미러</strong>
+            <strong>볼륨, 3 방향 미러를 만듭니다</strong>
             <iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/o66etKq70N8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
         </td>
         <td style="padding: 5px; border: 0;">
-            <strong>볼륨 만들기, 미러 가속 패리티</strong>
-            <iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/R72QHudqWpE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+            <strong>볼륨
+             미러 가속 패리티를 만듭니다</strong> .<iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/R72QHudqWpE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
         </td>
     </tr>
     <tr style="border: 0;">
         <td style="padding: 5px; border: 0;">
-            <strong>볼륨을 열고 파일 추가</strong>
+            <strong>볼륨을 열고 파일을 추가</strong>
             <iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/j59z7ulohs4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
         </td>
         <td style="padding: 5px; border: 0;">
-            <strong>중복 제거 및 압축 설정</strong>
-            <iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/PRibTacyKko" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+            <strong>중복 제거 및 압축
+             설정</strong><iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/PRibTacyKko" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
         </td>
     </tr>
     <tr style="border: 0;">
         <td style="padding: 5px; border: 0;">
-            <strong>볼륨 확장</strong>
-            <iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/hqyBzipBoTI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+            <strong>볼륨
+             확장</strong><iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/hqyBzipBoTI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
         </td>
         <td style="padding: 5px; border: 0;">
-            <strong>볼륨 삭제</strong>
-            <iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/DbjF8r2F6Jo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+            <strong>볼륨
+             삭제</strong><iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/DbjF8r2F6Jo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
         </td>
     </tr>
 </table>
@@ -278,17 +278,17 @@ Windows 관리 센터는 Microsoft Azure 클라우드와 강력 하 고 편리�
 
 ![SDN 인프라 모니터링](../media/manage-hyper-converged/sdn-monitoring.png)
 
-## <a name="feedback"></a>사용자 의견
+## <a name="feedback"></a>Feedback
 
 사용자 의견에 대 한 모든 것입니다. 자주 업데이트 하는 가장 중요 한 혜택은 작업 및 개선 해야 할 작업을 파악 하는 것입니다. 다음은 사용자가 생각 하는 내용을 알려 주는 몇 가지 방법입니다.
 
 - [UserVoice의 기능 요청 제출 및 투표](https://windowsserver.uservoice.com/forums/295071/category/319162?query=%5Bhci%5D)
 - [Microsoft 기술 커뮤니티의 Windows 관리 센터 포럼 참여](https://techcommunity.microsoft.com/t5/Windows-Server-Management/bd-p/WindowsServerManagement)
-- 트 윗`@servermgmt`
+- `@servermgmt` 트 윗
 
-### <a name="see-also"></a>참조
+### <a name="see-also"></a>참고 항목
 
-- [Windows Admin Center](../understand/windows-admin-center.md)
+- [Windows Admin Center](../overview.md)
 - [스토리지 공간 다이렉트](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
 - [Hyper-V](https://docs.microsoft.com/windows-server/virtualization/hyper-v/hyper-v-on-windows-server)
 - [소프트웨어 정의 네트워킹](https://docs.microsoft.com/windows-server/networking/sdn/software-defined-networking)

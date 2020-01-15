@@ -7,12 +7,12 @@ ms.topic: article
 ms.author: TimWi; ChrisRob; HerbertM; KenBrumf;  MLeary; ShawnRab
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: ba3c9e8792b425fd24d01ab997a5f7c2ac573814
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 66c6f94f1f3fee924ba0d9a3bfa0c712d62bb095
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71370254"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75947115"
 ---
 # <a name="proper-placement-of-domain-controllers-and-site-considerations"></a>도메인 컨트롤러 및 사이트 고려 사항에 대 한 적절 한 배치
 
@@ -34,7 +34,7 @@ Windows Server 2008부터 도메인 컨트롤러는 클라이언트에서 사용
 
 ## <a name="optimization-considerations-for-trusts"></a>트러스트에 대 한 최적화 고려 사항
 
-포리스트 간 시나리오에서 트러스트는 다음 도메인 계층 구조에 따라 처리 됩니다. 그랜드-자식 도메인-&gt; 자식 도메인-&gt; 포리스트 루트 도메인-&gt; 자식 도메인 &gt; 그랜드-자식 도메인입니다. 즉, 트러스트 계층의 Dc 전송을 인증 요청의 집계로 인해 포리스트 루트 및 각 부모의 보안 채널이 오버 로드 될 수 있습니다. 이로 인해 높은 지역 분산의 Active Directory에 대 한 지연이 발생할 수 있습니다 .이 경우에는 위의 흐름에 영향을 줄 수 있는 매우 잠재적인 링크를 전송 해야 합니다. 오버 로드는 포리스트 간 및 하위 수준 신뢰 시나리오에서 발생할 수 있습니다. 다음 권장 사항은 모든 시나리오에 적용 됩니다.
+포리스트 간 시나리오에서 트러스트는 다음 도메인 계층 구조에 따라 처리 됩니다. 도메인 계층 구조-자식 도메인&gt; 자식 도메인-&gt; 포리스트 루트 도메인-&gt; 자식 도메인-&gt;. 즉, 트러스트 계층의 Dc 전송을 인증 요청의 집계로 인해 포리스트 루트 및 각 부모의 보안 채널이 오버 로드 될 수 있습니다. 이로 인해 높은 지역 분산의 Active Directory에 대 한 지연이 발생할 수 있습니다 .이 경우에는 위의 흐름에 영향을 줄 수 있는 매우 잠재적인 링크를 전송 해야 합니다. 오버 로드는 포리스트 간 및 하위 수준 신뢰 시나리오에서 발생할 수 있습니다. 다음 권장 사항은 모든 시나리오에 적용 됩니다.
 
 -   보안 채널을 통한 부하를 지원 하도록 MaxConcurrentAPI를 적절히 조정 합니다. 자세한 내용은 [MaxConcurrentApi 설정을 사용 하 여 NTLM 인증에 대 한 성능 조정을 수행 하는 방법](https://support.microsoft.com/kb/2688798/EN-US)을 참조 하세요.
 
@@ -58,7 +58,7 @@ Windows Server 2008부터 도메인 컨트롤러는 클라이언트에서 사용
 
     -   DCLocator 작동 방식에 대 한 자세한 내용은 [가장 가까운 사이트에서 도메인 컨트롤러 찾기](https://technet.microsoft.com/library/cc978016.aspx)를 참조 하십시오.
 
-    -   동일한 위치의 도메인 컨트롤러를 반영 하도록 트러스트 된 도메인과 트러스팅 도메인 간에 사이트 이름을 수렴 합니다. 서브넷 및 IP 주소 매핑이 두 포리스트의 사이트에 제대로 연결 되어 있는지 확인 합니다. 자세한 내용은 [포리스트 트러스트를 통한 도메인 로케이터](http://blogs.technet.com/b/askds/archive/2008/09/24/domain-locator-across-a-forest-trust.aspx)를 참조 하세요.
+    -   동일한 위치의 도메인 컨트롤러를 반영 하도록 트러스트 된 도메인과 트러스팅 도메인 간에 사이트 이름을 수렴 합니다. 서브넷 및 IP 주소 매핑이 두 포리스트의 사이트에 제대로 연결 되어 있는지 확인 합니다. 자세한 내용은 [포리스트 트러스트를 통한 도메인 로케이터](https://blogs.technet.com/b/askds/archive/2008/09/24/domain-locator-across-a-forest-trust.aspx)를 참조 하세요.
 
     -   도메인 컨트롤러 위치에 대 한 DCLocator 요구 사항에 따라 포트가 열려 있는지 확인 합니다. 도메인 사이에 방화벽이 있는 경우 모든 트러스트에 대해 방화벽이 제대로 구성 되어 있는지 확인 합니다. 방화벽이 열려 있지 않은 경우 트러스팅 도메인 컨트롤러는 여전히 트러스트 된 도메인에 대 한 액세스를 시도 합니다. 어떤 이유로 든 통신이 실패 하는 경우 트러스팅 도메인 컨트롤러는 결국 트러스트 된 도메인 컨트롤러에 대 한 요청을 시간 초과 합니다. 그러나 이러한 시간 제한은 요청당 몇 초 정도 걸리며 들어오는 요청 볼륨이 높으면 트러스팅 도메인 컨트롤러의 네트워크 포트를 고갈 시킬 수 있습니다. 클라이언트는 중지 된 스레드로 도메인 컨트롤러에서 시간 초과가 발생 하 여 대기 중인 응용 프로그램 (응용 프로그램이 포그라운드 스레드에서 요청을 실행 하는 경우)으로 변환 될 수 있습니다. 자세한 내용은 [도메인 및 트러스트를 위한 방화벽을 구성 하는 방법](https://support.microsoft.com/kb/179442)을 참조 하세요.
 
@@ -76,7 +76,7 @@ Windows Server 2008부터 도메인 컨트롤러는 클라이언트에서 사용
 
 -   사용 가능한 모든 트러스트에서 NULL 도메인이 지정 된 인증 요청 전달을 사용 하지 않도록 설정 합니다. [Active Directory 도메인 컨트롤러에 외부 트러스트가 많은 경우 Lsass.exe 프로세스가 응답 하지 않을 수 있습니다.](https://support.microsoft.com/kb/923241/EN-US)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 - [성능 튜닝 Active Directory 서버](index.md)
 - [하드웨어 고려 사항](hardware-considerations.md)
 - [LDAP 고려 사항](ldap-considerations.md)

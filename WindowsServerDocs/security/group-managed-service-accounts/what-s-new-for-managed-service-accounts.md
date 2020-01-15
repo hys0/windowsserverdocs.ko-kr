@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: de4d64e3dbe4bc7c7cba32f066a696636632224d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 82d0ce962dfab0f7c9e5180e4b471894f507fb26
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403726"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950341"
 ---
 # <a name="what39s-new-for-managed-service-accounts"></a>관리&#39;서비스 계정의 새로운 기능
 
@@ -26,12 +26,12 @@ ms.locfileid: "71403726"
 
 IT 전문가를 위한이 항목에서는 Windows Server 2012 및 Windows 8에서 gMSA (그룹 관리 서비스 계정)를 도입 하 여 관리 서비스 계정에 대 한 기능의 변경 사항을 설명 합니다.
 
-관리 서비스 계정을 사용하면 Windows 서비스 및 IIS 응용 프로그램 풀과 같은 서비스 및 작업에서 자체 도메인 계정을 공유할 수 있을 뿐만 아니라, 관리자가 이러한 계정에 대한 암호를 수동으로 관리할 필요가 없습니다. 또한 관리 도메인 계정에서는 자동 암호 관리 기능을 제공합니다.
+관리 서비스 계정을 사용하면 Windows 서비스 및 IIS 애플리케이션 풀과 같은 서비스 및 작업에서 자체 도메인 계정을 공유할 수 있을 뿐만 아니라, 관리자가 이러한 계정에 대한 암호를 수동으로 관리할 필요가 없습니다. 또한 관리 도메인 계정에서는 자동 암호 관리 기능을 제공합니다.
 
 ## <a name="versions"></a>Windows Server 2012 및 Windows 8에서 관리 서비스 계정의 새로운 기능
 다음은 Windows Server 2012 및 Windows 8에서 MSA의 기능 변경 내용에 대 한 설명입니다.
 
-### <a name="group-managed-service-accounts"></a>그룹 관리 서비스 계정
+### <a name="group-managed-service-accounts"></a>Group Managed Service Accounts
 도메인의 서버에 대해 도메인 계정이 구성되어 있으면 클라이언트 컴퓨터가 해당 서비스에 인증 및 연결할 수 있습니다. 이전에는 두 가지 계정 유형만이 암호 관리를 요구하지 않고 ID를 제공했습니다. 그러나 이러한 계정 유형에는 다음과 같은 제한이 있습니다.
 
 -   컴퓨터 계정이 단일 도메인 서버로 제한되며 컴퓨터가 암호를 관리합니다.
@@ -46,7 +46,7 @@ IT 전문가를 위한이 항목에서는 Windows Server 2012 및 Windows 8에�
 
 **달라진 기능**
 
-Windows Server 2012 또는 Windows 8을 실행 하는 컴퓨터에서 서비스 제어 관리자를 통해 그룹 MSA를 만들고 관리할 수 있습니다. 그러면 서버 팜에 배포 된 것과 같은 서비스의 여러 인스턴스를 하나의 서버에서 관리할 수 있습니다. 이전에 관리 서비스 계정을 관리하기 위해 사용했던 IIS 응용 프로그램 풀 관리자 등의 도구 및 유틸리티를 그룹 관리 서비스 계정에도 사용할 수 있습니다. 도메인 관리자는 서비스 관리를 서비스 관리자에게 위임할 수 있으며, 서비스 관리자는 관리 서비스 계정 또는 그룹 관리 서비스 계정의 전체 수명 주기를 관리할 수 있습니다. 기존 클라이언트 컴퓨터는 인증 대상 서비스 인스턴스를 몰라도 해당 서비스에 대해 인증할 수 있습니다.
+Windows Server 2012 또는 Windows 8을 실행 하는 컴퓨터에서 서비스 제어 관리자를 통해 그룹 MSA를 만들고 관리할 수 있습니다. 그러면 서버 팜에 배포 된 것과 같은 서비스의 여러 인스턴스를 하나의 서버에서 관리할 수 있습니다. 이전에 관리 서비스 계정을 관리하기 위해 사용했던 IIS 애플리케이션 풀 관리자 등의 도구 및 유틸리티를 그룹 관리 서비스 계정에도 사용할 수 있습니다. 도메인 관리자는 서비스 관리를 서비스 관리자에게 위임할 수 있으며, 서비스 관리자는 관리 서비스 계정 또는 그룹 관리 서비스 계정의 전체 수명 주기를 관리할 수 있습니다. 기존 클라이언트 컴퓨터는 인증 대상 서비스 인스턴스를 몰라도 해당 서비스에 대해 인증할 수 있습니다.
 
 ### <a name="interoperability"></a>제거 되었거나 더 이상 사용 되지 않는 기능
 Windows Server 2012의 경우 Windows PowerShell cmdlet은 서버 관리 서비스 계정이 아닌 그룹 관리 서비스 계정을 기본적으로 관리 합니다.
@@ -57,6 +57,6 @@ Windows Server 2012의 경우 Windows PowerShell cmdlet은 서버 관리 서비�
 
 -   [Active Directory Domain Services 개요](active-directory-domain-services-overview.md)
 
--   [관리 서비스 계정: 이해, 구현, 모범 사례 및 문제 해결](http://blogs.technet.com/b/askds/archive/20../managed-service-accounts-understanding-implementing-best-practices-and-troubleshooting.aspx)
+-   [관리 서비스 계정: 이해, 구현, 모범 사례 및 문제 해결](https://blogs.technet.com/b/askds/archive/20../managed-service-accounts-understanding-implementing-best-practices-and-troubleshooting.aspx)
 
 

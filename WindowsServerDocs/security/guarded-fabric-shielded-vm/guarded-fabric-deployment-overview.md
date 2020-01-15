@@ -9,12 +9,12 @@ author: justinha
 ms.author: justinha
 ms.technology: security-guarded-fabric
 ms.date: 01/30/2019
-ms.openlocfilehash: 8359532113e04e2247b4af34effc7f5b89d36f34
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e2b8400fc7b7f0e01e000fcb2f6472bdb4059ac8
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402413"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949807"
 ---
 # <a name="quick-start-for-guarded-fabric-deployment"></a>보호 된 패브릭 배포에 대 한 빠른 시작
 
@@ -22,7 +22,7 @@ ms.locfileid: "71402413"
 
 이 항목에서는 보호 된 패브릭의 정의, 요구 사항 및 배포 프로세스에 대 한 요약을 설명 합니다. 자세한 배포 단계는 [보호 된 호스트 및 보호 된 vm에 대 한 호스트 보호자 서비스 배포](https://technet.microsoft.com/windows-server-docs/security/guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview)를 참조 하세요.
 
-동영상 버전을 보시겠습니까? [Windows Server 2016를 사용 하 여 보호 된 vm 및 보호 된 패브릭 배포](https://mva.microsoft.com/en-US/training-courses/deploying-shielded-vms-and-a-guarded-fabric-with-windows-server-2016-17131?l=WFLef7vUD_4604300474)Microsoft 가상 교육 과정을 참조 하세요.
+동영상 버전을 보시겠습니까? [Windows Server 2016를 사용 하 여 보호 된 vm 및 보호 된 패브릭 배포](https://mva.microsoft.com/training-courses/deploying-shielded-vms-and-a-guarded-fabric-with-windows-server-2016-17131?l=WFLef7vUD_4604300474)Microsoft 가상 교육 과정을 참조 하세요.
 
 ## <a name="what-is-a-guarded-fabric"></a>보호 된 패브릭 이란?
 

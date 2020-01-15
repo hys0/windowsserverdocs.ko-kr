@@ -6,12 +6,12 @@ ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: 19e07504dad49c5e23cc49630015529e2a746aa7
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f2e8d3bfb5ef907ffb522b5b7be31d1def3001c8
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71394452"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949688"
 ---
 # <a name="volume-shadow-copy-service"></a>볼륨 섀도 복사본 서비스
 
@@ -39,13 +39,13 @@ VSS는 백업할 데이터의 일관성 있는 섀도 복사본 (스냅숏 또�
 
 VSS를 사용 하는 Windows 기능 및 응용 프로그램은 다음과 같습니다.
 
-  - [Windows Server 백업](http://go.microsoft.com/fwlink/?linkid=180891) (http://go.microsoft.com/fwlink/?LinkId=180891)  
+  - [Windows Server 백업](https://go.microsoft.com/fwlink/?linkid=180891) (https://go.microsoft.com/fwlink/?LinkId=180891)  
       
-  - [공유 폴더의 섀도 복사본](http://go.microsoft.com/fwlink/?linkid=142874) (http://go.microsoft.com/fwlink/?LinkId=142874)  
+  - [공유 폴더의 섀도 복사본](https://go.microsoft.com/fwlink/?linkid=142874) (https://go.microsoft.com/fwlink/?LinkId=142874)  
       
-  - [System Center Data Protection Manager](http://go.microsoft.com/fwlink/?linkid=180892) (http://go.microsoft.com/fwlink/?LinkId=180892)  
+  - [System Center Data Protection Manager](https://go.microsoft.com/fwlink/?linkid=180892) (https://go.microsoft.com/fwlink/?LinkId=180892)  
       
-  - [시스템 복원](http://go.microsoft.com/fwlink/?linkid=180893) (http://go.microsoft.com/fwlink/?LinkId=180893)  
+  - [시스템 복원](https://go.microsoft.com/fwlink/?linkid=180893) (https://go.microsoft.com/fwlink/?LinkId=180893)  
       
 
 ## <a name="how-volume-shadow-copy-service-works"></a>볼륨 섀도 복사본 서비스 작동 방법
@@ -227,7 +227,7 @@ VSS를 사용 하는 Windows 기능 및 응용 프로그램은 다음과 같습�
 
 소프트웨어 공급자는 하드웨어 기반 공급자 보다 더 광범위 한 저장소 플랫폼에 적용 될 수 있으며 기본 디스크 또는 논리 볼륨에서 동일 하 게 작동 해야 합니다. 논리적 볼륨은 두 개 이상의 디스크에서 사용 가능한 공간을 결합 하 여 만든 볼륨입니다. 하드웨어 섀도 복사본과 달리 소프트웨어 공급자는 운영 체제 리소스를 사용 하 여 섀도 복사본을 유지 관리 합니다.
 
-기본 디스크에 대 한 자세한 내용은 [기본 디스크 및 볼륨 이란?](http://go.microsoft.com/fwlink/?linkid=180894) 을 참조 하세요. (TechNet의 http://go.microsoft.com/fwlink/?LinkId=180894).
+기본 디스크에 대 한 자세한 내용은 [기본 디스크 및 볼륨 이란?](https://go.microsoft.com/fwlink/?linkid=180894) 을 참조 하세요. (TechNet의 https://go.microsoft.com/fwlink/?LinkId=180894).
 
 ### <a name="system-provider"></a>시스템 공급자
 
@@ -247,11 +247,11 @@ Windows 운영 체제에는 다양 한 Windows 기능에 필요한 데이터의 
 
 이러한 작성자에 대 한 자세한 내용은 다음 Microsoft 웹 사이트를 참조 하십시오.
 
-  - [In BOX VSS writer](http://go.microsoft.com/fwlink/?linkid=180895) (http://go.microsoft.com/fwlink/?LinkId=180895)  
+  - [In BOX VSS writer](https://go.microsoft.com/fwlink/?linkid=180895) (https://go.microsoft.com/fwlink/?LinkId=180895)  
       
-  - [Windows Server 2008 및 Windows VISTA SP1](http://go.microsoft.com/fwlink/?linkid=180896) (http://go.microsoft.com/fwlink/?LinkId=180896)  
+  - [Windows Server 2008 및 Windows VISTA SP1](https://go.microsoft.com/fwlink/?linkid=180896) (https://go.microsoft.com/fwlink/?LinkId=180896)  
       
-  - [Windows Server 2008 R2 및 windows 7 용 새로운 기본 WINDOWS VSS 기록기](http://go.microsoft.com/fwlink/?linkid=180897) (http://go.microsoft.com/fwlink/?LinkId=180897)  
+  - [Windows Server 2008 R2 및 windows 7 용 새로운 기본 WINDOWS VSS 기록기](https://go.microsoft.com/fwlink/?linkid=180897) (https://go.microsoft.com/fwlink/?LinkId=180897)  
       
 
 ## <a name="how-shadow-copies-are-used"></a>섀도 복사본을 사용 하는 방법
@@ -298,7 +298,7 @@ Lun 다시 동기화는 LUN 스와핑과 다릅니다. LUN 교환은 Windows Ser
 
 공유 폴더용 섀도 복사본은 볼륨 섀도 복사본 서비스를 사용 하 여 파일 서버와 같은 공유 네트워크 리소스에 있는 파일의 지정 시간 복사본을 제공 합니다. 공유 폴더용 섀도 복사본를 통해 사용자는 네트워크에 저장 된 삭제 된 파일 또는 변경 된 파일을 신속 하 게 복구할 수 있습니다. 이러한 작업은 관리자의 도움 없이도 수행할 수 있으므로 생산성을 높이고 관리 비용을 줄일 수 공유 폴더용 섀도 복사본.
 
-[공유 폴더용 섀도 복사본](http://go.microsoft.com/fwlink/?linkid=180898)에 대한 자세한 내용은 http://go.microsoft.com/fwlink/?LinkId=180898)TechNet의 공유 폴더용 섀도 복사본(영문)를 참조하세요.
+[공유 폴더용 섀도 복사본](https://go.microsoft.com/fwlink/?linkid=180898)에 대한 자세한 내용은 https://go.microsoft.com/fwlink/?LinkId=180898) TechNet의 공유 폴더용 섀도 복사본(영문)를 참조하세요.
 
 ### <a name="data-mining-by-using-transportable-shadow-copies"></a>전송 가능한 섀도 복사본을 사용 하 여 데이터 마이닝
 
@@ -328,9 +328,9 @@ Lun 다시 동기화는 LUN 스와핑과 다릅니다. LUN 교환은 Windows Ser
 
 볼륨 섀도 복사본 서비스 전송은 Windows Server 2003 Enterprise Edition, Windows Server 2003 Datacenter Edition, Windows Server 2008 또는 Windows Server 2008 r 2를 실행 하는 컴퓨터에서 고급 솔루션입니다. 저장소 배열에 하드웨어 공급자가 있는 경우에만 작동 합니다. 섀도 복사본 전송은 테이프 백업, 데이터 마이닝 및 테스트를 비롯 한 다양 한 용도로 사용할 수 있습니다.
 
-## <a name="frequently-asked-questions"></a>질문과 대답
+## <a name="frequently-asked-questions"></a>FAQ
 
-이 FAQ는 시스템 관리자 용 VSS (볼륨 섀도 복사본 서비스)에 대 한 질문에 답변 합니다. VSS 응용 프로그램 프로그래밍 인터페이스에 대한 자세한 내용은 Windows 개발자 센터 라이브러리에서 [볼륨 섀도 복사본 서비스](http://go.microsoft.com/fwlink/?linkid=180899) (http://go.microsoft.com/fwlink/?LinkId=180899)영문)을 참조하세요.
+이 FAQ는 시스템 관리자 용 VSS (볼륨 섀도 복사본 서비스)에 대 한 질문에 답변 합니다. VSS 응용 프로그램 프로그래밍 인터페이스에 대한 자세한 내용은 Windows 개발자 센터 라이브러리에서 [볼륨 섀도 복사본 서비스](https://go.microsoft.com/fwlink/?linkid=180899) (https://go.microsoft.com/fwlink/?LinkId=180899) 영문)을 참조하세요.
 
 ### <a name="when-was-volume-shadow-copy-service-introduced-on-which-windows-operating-system-versions-is-it-available"></a>볼륨 섀도 복사본 서비스 도입 된 경우 사용할 수 있는 Windows 운영 체제 버전은 무엇 인가요?
 
@@ -362,9 +362,9 @@ Microsoft Management Console을 사용 하 여 볼륨 섀도 복사본 서비스
 
 자세한 내용은 다음 Microsoft TechNet 웹 사이트를 참조 하십시오.
 
-  - [시스템 복원](http://go.microsoft.com/fwlink/?linkid=157113) (http://go.microsoft.com/fwlink/?LinkID=157113)  
+  - [시스템 복원](https://go.microsoft.com/fwlink/?linkid=157113) (https://go.microsoft.com/fwlink/?LinkID=157113)  
       
-  - [Windows Server 백업](http://go.microsoft.com/fwlink/?linkid=180891) (http://go.microsoft.com/fwlink/?LinkID=180891)  
+  - [Windows Server 백업](https://go.microsoft.com/fwlink/?linkid=180891) (https://go.microsoft.com/fwlink/?LinkID=180891)  
       
 
 ### <a name="can-i-exclude-files-from-a-shadow-copy-to-save-space"></a>공간을 절약 하기 위해 섀도 복사본에서 파일을 제외할 수 있나요?
@@ -384,15 +384,15 @@ VSS는 전체 볼륨의 섀도 복사본을 만들도록 설계 되었습니다.
 > <LI>파일은 섀도 복사본에서 가장 효율적으로 삭제 됩니다. 즉, 삭제 되지 않을 수 있습니다.<BR><BR></LI></UL>
 
 
-자세한 내용은 MSDN의 http://go.microsoft.com/fwlink/?LinkId=180904) ( [섀도 복사본에서 파일 제외](http://go.microsoft.com/fwlink/?linkid=180904) ) (영문)를 참조 하십시오.
+자세한 내용은 MSDN의 https://go.microsoft.com/fwlink/?LinkId=180904) ( [섀도 복사본에서 파일 제외](https://go.microsoft.com/fwlink/?linkid=180904) ) (영문)를 참조 하십시오.
 
-### <a name="my-non-microsoft-backup-program-failed-with-a-vss-error-what-can-i-do"></a>Microsoft 이외의 백업 프로그램에서 VSS 오류가 발생 하 여 실패 했습니다. 무엇을 도와드릴까요?
+### <a name="my-non-microsoft-backup-program-failed-with-a-vss-error-what-can-i-do"></a>Microsoft 이외의 백업 프로그램에서 VSS 오류가 발생 하 여 실패 했습니다. 어떻게 해야 합니까?
 
 백업 프로그램을 만든 회사 웹 사이트의 제품 지원 섹션을 확인 하십시오. 문제를 해결 하기 위해 다운로드 하 여 설치할 수 있는 제품 업데이트가 있을 수 있습니다. 그렇지 않은 경우 회사의 기술 지원 부서에 문의 하십시오.
 
 시스템 관리자는 다음 Microsoft TechNet Library 웹 사이트의 VSS 문제 해결 정보를 사용 하 여 VSS 관련 문제에 대 한 진단 정보를 수집할 수 있습니다.
 
-자세한 내용은 [볼륨 섀도 복사본 서비스](http://go.microsoft.com/fwlink/?linkid=180905) (TechNet의 http://go.microsoft.com/fwlink/?LinkId=180905)를 참조 하세요.
+자세한 내용은 [볼륨 섀도 복사본 서비스](https://go.microsoft.com/fwlink/?linkid=180905) (TechNet의 https://go.microsoft.com/fwlink/?LinkId=180905) 를 참조 하세요.
 
 ### <a name="what-is-the-diff-area"></a>"Diff 영역" 이란?
 
@@ -417,7 +417,7 @@ VSS는 전체 볼륨의 섀도 복사본을 만들도록 설계 되었습니다.
 
 ### <a name="can-vss-create-shadow-copies-of-non-ntfs-volumes"></a>VSS에서 NTFS가 아닌 볼륨의 섀도 복사본을 만들 수 있나요?
 
-예. 그러나 NTFS 볼륨에 대해서만 영구적 섀도 복사본을 만들 수 있습니다. 또한 시스템에 탑재 된 하나 이상의 볼륨이 NTFS 볼륨 이어야 합니다.
+그렇습니다. 그러나 NTFS 볼륨에 대해서만 영구적 섀도 복사본을 만들 수 있습니다. 또한 시스템에 탑재 된 하나 이상의 볼륨이 NTFS 볼륨 이어야 합니다.
 
 ### <a name="whats-the-maximum-number-of-shadow-copies-i-can-create-at-one-time"></a>한 번에 만들 수 있는 최대 섀도 복사본 수는 얼마 인가요?
 
@@ -431,7 +431,7 @@ VSS는 전체 볼륨의 섀도 복사본을 만들도록 설계 되었습니다.
 
 **Vssadmin resize shadowstorage** 명령을 입력 합니다.
 
-자세한 내용은 [shadowstorage의 Vssadmin resize](http://go.microsoft.com/fwlink/?linkid=180906) (TechNet의 http://go.microsoft.com/fwlink/?LinkId=180906)을 참조 하세요.
+자세한 내용은 [shadowstorage의 Vssadmin resize](https://go.microsoft.com/fwlink/?linkid=180906) (TechNet의 https://go.microsoft.com/fwlink/?LinkId=180906) 을 참조 하세요.
 
 ### <a name="what-happens-when-i-run-out-of-space"></a>공간이 부족 하면 어떻게 되나요?
 
@@ -441,9 +441,9 @@ VSS는 전체 볼륨의 섀도 복사본을 만들도록 설계 되었습니다.
 
 Windows 운영 체제는 VSS를 사용 하기 위한 다음과 같은 도구를 제공 합니다.
 
-  - [DiskShadow](http://go.microsoft.com/fwlink/?linkid=180907) (http://go.microsoft.com/fwlink/?LinkId=180907)  
+  - [DiskShadow](https://go.microsoft.com/fwlink/?linkid=180907) (https://go.microsoft.com/fwlink/?LinkId=180907)  
       
-  - [VssAdmin](http://go.microsoft.com/fwlink/?linkid=84008) (http://go.microsoft.com/fwlink/?LinkId=84008)  
+  - [VssAdmin](https://go.microsoft.com/fwlink/?linkid=84008) (https://go.microsoft.com/fwlink/?LinkId=84008)  
       
 
 ### <a name="diskshadow"></a>DiskShadow
@@ -503,9 +503,9 @@ VSS에서 다음 레지스트리 키를 사용할 수 있습니다.
 
 자세한 내용은 MSDN 웹 사이트에서 다음 항목을 참조 하십시오.
 
-  - [작성자를 위한 보안 고려 사항](http://go.microsoft.com/fwlink/?linkid=157739) (http://go.microsoft.com/fwlink/?LinkId=157739)  
+  - [작성자를 위한 보안 고려 사항](https://go.microsoft.com/fwlink/?linkid=157739) (https://go.microsoft.com/fwlink/?LinkId=157739)  
       
-  - [요청자를 위한 보안 고려 사항](http://go.microsoft.com/fwlink/?linkid=180908) (http://go.microsoft.com/fwlink/?LinkId=180908)  
+  - [요청자를 위한 보안 고려 사항](https://go.microsoft.com/fwlink/?linkid=180908) (https://go.microsoft.com/fwlink/?LinkId=180908)  
       
 
 ### <a name="maxshadowcopies"></a>MaxShadowCopies
@@ -514,7 +514,7 @@ VSS에서 다음 레지스트리 키를 사용할 수 있습니다.
 
 자세한 내용은 MSDN 웹 사이트에서 다음 항목을 참조 하세요.
 
-**MaxShadowCopies** [백업 및 복원에 대 한 레지스트리 키 아래에](http://go.microsoft.com/fwlink/?linkid=180909) (http://go.microsoft.com/fwlink/?LinkId=180909)
+**MaxShadowCopies** [백업 및 복원에 대 한 레지스트리 키 아래에](https://go.microsoft.com/fwlink/?linkid=180909) (https://go.microsoft.com/fwlink/?LinkId=180909)
 
 ### <a name="mindiffareafilesize"></a>MinDiffAreaFileSize
 
@@ -522,7 +522,7 @@ VSS에서 다음 레지스트리 키를 사용할 수 있습니다.
 
 자세한 내용은 MSDN 웹 사이트에서 다음 항목을 참조 하세요.
 
-**MinDiffAreaFileSize** [백업 및 복원에 대 한 레지스트리 키 아래에](http://go.microsoft.com/fwlink/?linkid=180910) (http://go.microsoft.com/fwlink/?LinkId=180910)
+**MinDiffAreaFileSize** [백업 및 복원에 대 한 레지스트리 키 아래에](https://go.microsoft.com/fwlink/?linkid=180910) (https://go.microsoft.com/fwlink/?LinkId=180910)
 
 `##`# ' 지원 되는 운영 체제 버전
 
@@ -619,7 +619,7 @@ VSS에서 다음 레지스트리 키를 사용할 수 있습니다.
 </tr>
 <tr class="even">
 <td><p>백업을 사용 하는 동시에 최대 8 개의 복원 세션</p></td>
-<td><p>Windows 7</p></td>
+<td><p>Windows 7</p></td>
 <td><p>Windows Server 2003 R2</p></td>
 </tr>
 </tbody>

@@ -1,5 +1,5 @@
 ---
-title: 공유 저장소를 사용하여 확장 클러스터 복제
+title: 공유 스토리지를 사용하여 확장 클러스터 복제
 ms.prod: windows-server
 manager: eldenc
 ms.author: nedpyle
@@ -8,24 +8,24 @@ ms.topic: get-started-article
 author: nedpyle
 ms.date: 04/26/2019
 ms.assetid: 6c5b9431-ede3-4438-8cf5-a0091a8633b0
-ms.openlocfilehash: 654b4aea135c360f5fc5f59fdf85627fe8dd4cc2
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e6dbe6ef618f989ed158382ef6c8bd063548d281
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402968"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950070"
 ---
-# <a name="stretch-cluster-replication-using-shared-storage"></a>공유 저장소를 사용하여 확장 클러스터 복제
+# <a name="stretch-cluster-replication-using-shared-storage"></a>공유 스토리지를 사용하여 확장 클러스터 복제
 
 >적용 대상: Windows Server 2019, Windows Server 2016, Windows Server(반기 채널)
 
 이 평가 예제에서는 이러한 컴퓨터와 해당 저장소를 단일 확장 클러스터에서 구성합니다. 이 클러스터에서는 두 노드가 하나의 저장소 집합과 또 다른 저장소 집합을 공유한 다음 즉각적인 장애 조치(failover)가 가능하도록 복제에서 미러된 두 저장소 집합을 모두 클러스터에 유지합니다. 필수 사항은 아니지만 이러한 노드와 해당 저장소는 별도의 실제 사이트에 있어야 합니다. Hyper-V 및 파일 서버 클러스터를 샘플 시나리오로 만들기 위한 별도의 단계가 있습니다.  
 
 > [!IMPORTANT]  
-> 이 평가에서는 서로 다른 사이트의 서버가 네트워크를 통해 다른 서버와 통신할 수 있어야 하지만 다른 사이트의 공유 저장소에 실제로 연결되어 있을 필요는 없습니다. 이 시나리오에서는 저장소 공간 다이렉트를 사용하지 않습니다.  
+> 이 평가에서는 서로 다른 사이트의 서버가 네트워크를 통해 다른 서버와 통신할 수 있어야 하지만 다른 사이트의 공유 저장소에 실제로 연결되어 있을 필요는 없습니다. 이 시나리오에서는 스토리지 공간 다이렉트를 사용하지 않습니다.  
 
 ## <a name="terms"></a>용어  
-이 연습에서는 다음 환경을 예로 사용합니다.  
+이 연습에서는 다음 환경을 하나의 예로 사용합니다.  
 
 -   **SR-SRVCLUS**라는 단일 클러스터로 구성된 **SR-SRV01**, **SR-SRV02**, **SR-SRV03** 및 **SR-SRV04**라는 서버 4개  
 
@@ -38,8 +38,8 @@ ms.locfileid: "71402968"
 
 **그림 1: 확장 클러스터의 저장소 복제**  
 
-## <a name="prerequisites"></a>필수 구성 요소  
--   Active Directory 도메인 서비스 포리스트(Windows Server 2016을 실행하지 않아도 됨)  
+## <a name="prerequisites"></a>전제 조건  
+-   Active Directory Domain Services 포리스트(Windows Server 2016을 실행하지 않아도 됨).  
 -   2-64 Windows Server 2019 또는 Windows Server 2016, Datacenter Edition을 실행 하는 서버 Windows Server 2019를 실행 하는 경우 최대 2tb 크기의 단일 볼륨만 복제 하는 경우 Standard Edition을 대신 사용할 수 있습니다. 
 -   SAS JBOD(저장소 공간 등), 파이버 채널 SAN, 공유 VHDX 또는 iSCSI 대상을 사용하는 공유 저장소 집합 2개. 저장소는 HDD 및 SSD 미디어가 혼합되고 영구 예약을 지원해야 합니다. 각 저장소 집합을 두 개의 서버에만 사용할 수 있도록 설정합니다(비대칭).  
 -   각 저장소 집합에서 복제된 데이터용과 로그용으로 둘 이상의 가상 디스크를 만들 수 있어야 합니다. 실제 저장소의 섹터 크기는 모든 데이터 디스크의 섹터 크기와 동일해야 합니다. 실제 저장소의 섹터 크기는 모든 로그 디스크의 섹터 크기와 동일해야 합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "71402968"
 -   동기 복제를 위해 IO 쓰기 워크로드가 포함된 충분한 대역폭 및 평균 5ms 왕복 대기 시간을 지원하는 서버 간의 네트워크. 비동기 복제에는 권장 대기 시간이 없습니다.  
 -   복제된 저장소는 Windows 운영 체제 폴더가 포함된 드라이브에 있을 수 없습니다.
 
-이러한 요구 사항은 대부분 `Test-SRTopology` cmdlet을 사용하여 확인할 수 있습니다. 하나 이상의 서버에 저장소 복제본 또는 저장소 복제 관리 도구 기능을 설치한 경우 이 도구에 액세스할 수 있습니다. 이 도구를 사용하기 위해 저장소 복제본을 구성할 필요는 없으며 cmdlet을 설치하기만 하면 됩니다. 자세한 내용은 다음 단계에 포함되어 있습니다.  
+이러한 요구 사항은 대부분 `Test-SRTopology` cmdlet을 사용하여 확인할 수 있습니다. 하나 이상의 서버에 스토리지 복제본 또는 스토리지 복제 관리 도구 기능을 설치한 경우 이 도구에 액세스할 수 있습니다. 이 도구를 사용하기 위해 스토리지 복제본을 구성할 필요는 없으며 cmdlet을 설치하기만 하면 됩니다. 자세한 내용은 다음 단계에 포함되어 있습니다.  
 
 ## <a name="provision-operating-system-features-roles-storage-and-network"></a>운영 체제, 기능, 역할, 저장소 및 네트워크 프로비전  
 
@@ -61,9 +61,9 @@ ms.locfileid: "71402968"
     > [!NOTE]
     > 이제 가이드에서는 확장 클러스터에서 사용할 두 쌍의 서버가 있다고 가정합니다. WAN 또는 LAN 네트워크는 실제 또는 논리 사이트에 속한 서버를 구분합니다. 이 가이드에서는 **SR-SRV01** 및 **SR-SRV02**는 Redmond 사이트에 있고 **SR-SRV03** 및 **SR-SRV04**는 **Bellevue** 사이트에 있는 것으로 간주합니다.  
 
-3.  첫 번째 공유 JBOD 저장소 엔클로저, 공유 VHDX, iSCSI 대상 또는 FC SAN 집합을 **Redmond** 사이트에 연결합니다.  
+3.  첫 번째 공유 JBOD 스토리지 엔클로저, 공유 VHDX, iSCSI 대상 또는 FC SAN 집합을 **Redmond** 사이트에 연결합니다.  
 
-4.  두 번째 저장소 집합을 **Bellevue** 사이트의 서버에 연결합니다.  
+4.  두 번째 스토리지 집합을 **Bellevue** 사이트의 서버에 연결합니다.  
 
 5.  필요에 따라 4개의 노드 모두에 최신 공급업체 저장소와 엔클로저 펌웨어 및 드라이버, 최신 공급업체 HBA 드라이버, 최신 공급업체 BIOS/UEFI 펌웨어, 최신 공급업체 네트워크 드라이버 및 최신 마더보드 칩셋 드라이버를 설치합니다. 필요에 따라 노드를 다시 시작합니다.  
 
@@ -79,7 +79,7 @@ ms.locfileid: "71402968"
         **ServerManager.exe**를 실행하고 **관리** 및 **서버 추가**를 클릭하여 모든 서버 노드를 추가합니다.  
 
         > [!IMPORTANT]
-        > 각 노드에 **장애 조치(failover) 클러스터링** 및 **저장소 복제본** 역할 및 기능을 설치하고 다시 시작합니다. Hyper-V, 파일 서버 등의 다른 역할을 사용하려는 경우 이러한 역할도 지금 설치할 수 있습니다.  
+        > 각 노드에 **장애 조치(failover) 클러스터링** 및 **스토리지 복제본** 역할 및 기능을 설치하고 다시 시작합니다. Hyper-V, 파일 서버 등의 다른 역할을 사용하려는 경우 이러한 역할도 지금 설치할 수 있습니다.  
 
     -   **Windows PowerShell 방법 사용**  
 
@@ -114,13 +114,13 @@ ms.locfileid: "71402968"
 
         1.  각 쌍을 이루는 서버 노드 집합에서 해당 사이트의 저장소 엔클로저만(즉, 비대칭 저장소) 볼 수 있는지, 그리고 SAS 연결이 제대로 구성되어 있는지 확인합니다.  
 
-        2.  Windows PowerShell 또는 서버 관리자를 **사용하여 독립 실행형 서버에서 저장소 공간 배포에** 제공된 [1~3단계에](../storage-spaces/deploy-standalone-storage-spaces.md) 따라 저장소 공간을 사용하는 저장소를 프로비전합니다.  
+        2.  Windows PowerShell 또는 서버 관리자를 사용하여 [독립 실행형 서버에서 스토리지 공간 배포](../storage-spaces/deploy-standalone-storage-spaces.md)에 제공된 **1~3단계**에 따라 스토리지 공간을 사용하는 스토리지를 프로비전합니다.  
 
     -   **ISCSI 저장소:**  
 
         1.  각 쌍을 이루는 서버 노드 집합에서 해당 사이트의 저장소 엔클로저만(즉, 비대칭 저장소) 볼 수 있는지 확인합니다. iSCSI를 사용하는 경우 둘 이상의 단일 네트워크 어댑터를 사용해야 합니다.  
 
-        2.  공급업체 설명서를 사용하여 저장소를 프로비전합니다. Windows 기반 iSCSI 대상을 사용하는 경우 [iSCSI 대상 블록 저장소, 방법](../iscsi/iscsi-target-server.md)을 참조하세요.  
+        2.  공급업체 설명서를 사용하여 저장소를 프로비전합니다. Windows 기반 iSCSI 대상을 사용하는 경우 [iSCSI 대상 블록 스토리지, 방법](../iscsi/iscsi-target-server.md)을 참조하세요.  
 
     -   **FC SAN 저장소의 경우:**  
 
@@ -139,7 +139,7 @@ ms.locfileid: "71402968"
 >[!NOTE]
 > Hyper-V 클러스터가 아니라 파일 서버 클러스터를 만들려면 이 섹션을 건너뛰고 [범용 파일 서버 클러스터 구성](#BKMK_FileServer) 섹션으로 이동하세요.  
 
-이제 일반적인 장애 조치(failover) 클러스터를 만듭니다. 구성, 유효성 검사 및 테스트 후 저장소 복제본을 사용하여 확장합니다. 아래의 모든 단계를 클러스터 노드에서 직접 수행 하거나 Windows Server 원격 서버 관리 도구이 포함 된 원격 관리 컴퓨터에서 수행할 수 있습니다.  
+이제 일반적인 장애 조치(failover) 클러스터를 만듭니다. 구성, 유효성 검사 및 테스트 후 스토리지 복제본을 사용하여 확장합니다. 아래의 모든 단계를 클러스터 노드에서 직접 수행 하거나 Windows Server 원격 서버 관리 도구이 포함 된 원격 관리 컴퓨터에서 수행할 수 있습니다.  
 
 #### <a name="graphical-method"></a>그래픽 사용  
 
@@ -162,25 +162,25 @@ ms.locfileid: "71402968"
 
 5. [Windows Server 2012의 Hyper-V 클러스터에 대한 네트워크 권장 사항](https://technet.microsoft.com/library/dn550728.aspx)을 검토하여 클러스터 네트워킹을 가장 적절하게 구성했는지 확인합니다.  
 
-6. Redmond 사이트의 디스크 하나를 클러스터 CSV에 추가합니다. 이렇게 하려면 **저장소** 섹션의 **디스크** 노드에서 원본 디스크를 마우스 오른쪽 단추로 클릭한 다음 **클러스터 공유 볼륨에 추가**를 클릭합니다.  
+6. Redmond 사이트의 디스크 하나를 클러스터 CSV에 추가합니다. 이렇게 하려면 **스토리지** 섹션의 **디스크** 노드에서 원본 디스크를 마우스 오른쪽 단추로 클릭한 다음 **클러스터 공유 볼륨에 추가**를 클릭합니다.  
 
-7. 클러스터가 첫 번째 테스트 사이트의 저장소를 공유하는 두 노드 내에서 정상적으로 작동하는지 확인하기 위해 [Hyper-V 클러스터 배포](https://technet.microsoft.com/library/jj863389.aspx) 가이드를 사용하여 **Redmond** 사이트 내에서 7~10단계에 따라 테스트 가상 컴퓨터만 만듭니다.  
+7. 클러스터가 첫 번째 테스트 사이트의 스토리지를 공유하는 두 노드 내에서 정상적으로 작동하는지 확인하기 위해 [Hyper-V 클러스터 배포](https://technet.microsoft.com/library/jj863389.aspx) 가이드를 사용하여 **Redmond** 사이트 내에서 7~10단계에 따라 테스트 가상 머신만 만듭니다.  
 
-8. 2-노드 확장 클러스터를 만드는 경우 먼저 모든 저장소를 추가해야 합니다. 이렇게 하려면 클러스터 노드에서 관리자 권한으로 PowerShell 세션을 열고 다음 명령을 실행합니다. `Get-ClusterAvailableDisk -All | Add-ClusterDisk`
+8. 2노드 확장 클러스터를 만드는 경우 먼저 모든 스토리지를 추가해야 합니다. 이렇게 하려면 클러스터 노드에서 관리자 권한으로 PowerShell 세션을 열고 다음 명령을 실행합니다. `Get-ClusterAvailableDisk -All | Add-ClusterDisk`
 
    이것은 Windows Server 2016의 기본 동작입니다.
 
-9. Windows PowerShell을 시작하고 `Test-SRTopology` cmdlet을 사용하여 모든 저장소 복제본 요구 사항을 충족하는지 확인합니다.  
+9. Windows PowerShell을 시작하고 `Test-SRTopology` cmdlet을 사용하여 모든 스토리지 복제본 요구 사항을 충족하는지 확인합니다.  
 
     예를 들어 각각 **D:** 및 **E:** 볼륨이 있는 제안된 확장 클러스터 노드 중 2개의 유효성을 검사하고 30분 동안 테스트를 실행하려면 다음 작업을 수행합니다.
-   1. 사용 가능한 모든 저장소를 **SR-SRV01**로 이동합니다.
+   1. 사용 가능한 모든 스토리지를 **SR-SRV01**로 이동합니다.
    2. 장애 조치(Failover) 클러스터 관리자의 **역할** 섹션에서 **빈 역할 만들기**를 클릭합니다.
-   3. **새 역할**이라는 빈 역할에 온라인 저장소를 추가합니다.
-   4. 사용 가능한 모든 저장소를 **SR-SRV03**으로 이동합니다.
+   3. **새 역할**이라는 빈 역할에 온라인 스토리지를 추가합니다.
+   4. 사용 가능한 모든 스토리지를 **SR-SRV03**으로 이동합니다.
    5. 장애 조치(Failover) 클러스터 관리자의 **역할** 섹션에서 **빈 역할 만들기**를 클릭합니다.
    6. 빈 **새 역할(2)** 을 **SR-SRV03**으로 이동합니다.
-   7. **새 역할(2)** 이라는 빈 역할에 온라인 저장소를 추가합니다.
-   8. 드라이브 문자가 있는 모든 저장소를 탑재했으므로 이제 `Test-SRTopology`를 사용하여 클러스터를 평가할 수 있습니다.
+   7. **새 역할(2)** 이라는 빈 역할에 온라인 스토리지를 추가합니다.
+   8. 드라이브 문자가 있는 모든 스토리지를 탑재했으므로 이제 `Test-SRTopology`를 사용하여 클러스터를 평가할 수 있습니다.
 
        예를 들어 다음과 같은 가치를 제공해야 합니다.
 
@@ -192,15 +192,15 @@ ms.locfileid: "71402968"
       > 평가 기간 동안 지정된 원본 볼륨에 쓰기 IO 로드가 없는 테스트 서버를 사용하는 경우 워크로드를 추가하는 것이 좋습니다. 그렇지 않으면 Test-SRTopology에서 유용한 보고서를 생성하지 않습니다. 실제 숫자와 권장 로그 크기를 확인하기 위해 프로덕션과 유사한 워크로드로 테스트해야 합니다. 또는 테스트하거나 다운로드하는 동안 일부 파일을 원본 볼륨에 복사하고 DISKSPD를 실행하여 쓰기 IO를 생성합니다. 예를 들어 쓰기 IO 워크로드가 낮은 샘플로 D: 볼륨을 10분 동안 테스트하려면 다음을 실행합니다.   
        `Diskspd.exe -c1g -d600 -W5 -C5 -b4k -t2 -o2 -r -w5 -i100 d:\test.dat`  
 
-10. **TestSrTopologyReport-&lt; date &gt;.html** 보고서를 검사하여 저장소 복제본 요구 사항을 충족하는지 확인하고 초기 동기화 시간 예측 및 로그 권장 사항에 주의합니다.  
+10. **TestSrTopologyReport-&lt; date &gt;.html** 보고서를 검사하여 스토리지 복제본 요구 사항을 충족하는지 확인하고 초기 동기화 시간 예측 및 로그 권장 사항에 주의합니다.  
 
       ![복제 보고서를 보여 주는 화면](./media/Stretch-Cluster-Replication-Using-Shared-Storage/SRTestSRTopologyReport.png)
 
-11. 디스크를 사용 가능한 저장소로 되돌리고 임시 빈 역할을 제거합니다.
+11. 디스크를 사용 가능한 스토리지로 되돌리고 임시 빈 역할을 제거합니다.
 
-12. 충족되면 테스트 가상 컴퓨터를 제거합니다. 추가 평가에 필요한 모든 실제 테스트 가상 컴퓨터를 제안된 원본 노드에 추가합니다.  
+12. 충족되면 테스트 가상 머신을 제거합니다. 추가 평가에 필요한 모든 실제 테스트 가상 컴퓨터를 제안된 원본 노드에 추가합니다.  
 
-13. **SR-SRV01** 및 **SR-SRV02** 서버가 **Redmond** 사이트에 있고, **SR-SRV03** 및 **SR-SRV04** 서버가 **Bellevue**에 있으며, **Redmond**가 원본 저장소 및 VM의 노드 소유권에 대한 기본 설정이 되도록 확장 클러스터 사이트 인식을 구성합니다.  
+13. **SR-SRV01** 및 **SR-SRV02** 서버가 **Redmond** 사이트에 있고, **SR-SRV03** 및 **SR-SRV04** 서버가 **Bellevue**에 있으며, **Redmond**가 원본 스토리지 및 VM의 노드 소유권에 대한 기본 설정이 되도록 확장 클러스터 사이트 인식을 구성합니다.  
 
     ```PowerShell
     New-ClusterFaultDomain -Name Seattle -Type Site -Description "Primary" -Location "Seattle Datacenter"  
@@ -220,7 +220,7 @@ ms.locfileid: "71402968"
 
 14. **(선택 사항)** 보다 빠른 DNS 사이트 장애 조치(failover)를 위해 클러스터 네트워킹 및 Active Directory를 구성합니다. Hyper-V 소프트웨어 정의 네트워킹, 확장된 VLAN, 네트워크 추상화 장치, 낮은 DNS TTL 및 기타 일반적인 기술을 활용할 수 있습니다.
 
-    자세한 내용은 Microsoft Ignite 세션 [Windows Server vNext에서 장애 조치(Failover) 클러스터 확장 및 저장소 복제본 사용](http://channel9.msdn.com/Events/Ignite/2015/BRK3487) 및 [사이트 간에 변경 알림 사용 - 방법과 이유](http://blogs.technet.com/b/qzaidi/archive/2010/09/23/enable-change-notifications-between-sites-how-and-why.aspx) 블로그 게시물을 참조하세요.  
+    자세한 내용은 Microsoft Ignite 세션 [Windows Server vNext에서 장애 조치(failover) 클러스터 확장 및 스토리지 복제본 사용](https://channel9.msdn.com/Events/Ignite/2015/BRK3487) 및 [사이트 간에 변경 알림 사용 - 방법과 이유](https://blogs.technet.com/b/qzaidi/archive/2010/09/23/enable-change-notifications-between-sites-how-and-why.aspx) 블로그 게시물을 참조하세요.  
 
 15. **(선택 사항)** 노드 장애 중 게스트가 장시간 일시 중지하지 않도록 VM 복원력을 구성합니다. 대신, 게스트는 10초 이내에 새 복제 원본 저장소로 장애 조치(failover)됩니다.  
 
@@ -262,15 +262,15 @@ ms.locfileid: "71402968"
 
 4. [Windows Server 2012의 Hyper-V 클러스터에 대한 네트워크 권장 사항](https://technet.microsoft.com/library/dn550728.aspx)을 검토하여 클러스터 네트워킹을 가장 적절하게 구성했는지 확인합니다.  
 
-5. 2-노드 확장 클러스터를 만드는 경우 먼저 모든 저장소를 추가해야 합니다. 이렇게 하려면 클러스터 노드에서 관리자 권한으로 PowerShell 세션을 열고 다음 명령을 실행합니다. `Get-ClusterAvailableDisk -All | Add-ClusterDisk`
+5. 2노드 확장 클러스터를 만드는 경우 먼저 모든 스토리지를 추가해야 합니다. 이렇게 하려면 클러스터 노드에서 관리자 권한으로 PowerShell 세션을 열고 다음 명령을 실행합니다. `Get-ClusterAvailableDisk -All | Add-ClusterDisk`
 
    이것은 Windows Server 2016의 기본 동작입니다.
 
-6. 클러스터가 첫 번째 테스트 사이트의 저장소를 공유하는 두 노드 내에서 정상적으로 작동하는지 확인하기 위해 [Hyper-V 클러스터 배포](https://technet.microsoft.com/library/jj863389.aspx) 가이드를 사용하여 **Redmond** 사이트 내에서 7~10단계에 따라 테스트 가상 컴퓨터만 만듭니다.  
+6. 클러스터가 첫 번째 테스트 사이트의 스토리지를 공유하는 두 노드 내에서 정상적으로 작동하는지 확인하기 위해 [Hyper-V 클러스터 배포](https://technet.microsoft.com/library/jj863389.aspx) 가이드를 사용하여 **Redmond** 사이트 내에서 7~10단계에 따라 테스트 가상 머신만 만듭니다.  
 
 7. 충족되면 테스트 VM을 제거합니다. 추가 평가에 필요한 모든 실제 테스트 가상 컴퓨터를 제안된 원본 노드에 추가합니다.  
 
-8. **SR-SRV01** 및 **SR-SRV02** 서버가 **Redmond** 사이트에 있고, **SR-SRV03** 및 **SR-SRV04** 서버가 **Bellevue**에 있으며, **Redmond**가 원본 저장소 및 가상 컴퓨터의 노드 소유권에 대한 기본 설정이 되도록 확장 클러스터 사이트 인식을 구성합니다.  
+8. **SR-SRV01** 및 **SR-SRV02** 서버가 **Redmond** 사이트에 있고, **SR-SRV03** 및 **SR-SRV04** 서버가 **Bellevue**에 있으며, **Redmond**가 원본 스토리지 및 가상 컴퓨터의 노드 소유권에 대한 기본 설정이 되도록 확장 클러스터 사이트 인식을 구성합니다.  
 
    ```PowerShell  
    New-ClusterFaultDomain -Name Seattle -Type Site -Description "Primary" -Location "Seattle Datacenter"  
@@ -287,7 +287,7 @@ ms.locfileid: "71402968"
 
 9. **(선택 사항)** 보다 빠른 DNS 사이트 장애 조치(failover)를 위해 클러스터 네트워킹 및 Active Directory를 구성합니다. Hyper-V 소프트웨어 정의 네트워킹, 확장된 VLAN, 네트워크 추상화 장치, 낮은 DNS TTL 및 기타 일반적인 기술을 활용할 수 있습니다.  
 
-   자세한 내용은 Microsoft Ignite 세션 [Windows Server vNext에서 장애 조치(Failover) 클러스터 확장 및 저장소 복제본 사용](http://channel9.msdn.com/Events/Ignite/2015/BRK3487) 및 [사이트 간에 변경 알림 사용 - 방법과 이유](http://blogs.technet.com/b/qzaidi/archive/2010/09/23/enable-change-notifications-between-sites-how-and-why.aspx)를 참조하세요.  
+   자세한 내용은 Microsoft Ignite 세션 [Windows Server vNext에서 장애 조치(failover) 클러스터 확장 및 스토리지 복제본 사용](https://channel9.msdn.com/Events/Ignite/2015/BRK3487) 및 [사이트 간에 변경 알림 사용 - 방법과 이유](https://blogs.technet.com/b/qzaidi/archive/2010/09/23/enable-change-notifications-between-sites-how-and-why.aspx)를 참조하세요.  
 
 10. **(선택 사항)** 노드 장애 중 게스트가 장시간 일시 중지하지 않도록 VM 복원력을 구성합니다. 대신, 게스트는 10초 이내에 새 복제 원본 저장소로 장애 조치(failover)됩니다.  
 
@@ -305,7 +305,7 @@ ms.locfileid: "71402968"
 >[!NOTE]
 > [Hyper-V 장애 조치(failover) 클러스터 구성](#BKMK_HyperV)에 설명된 대로 Hyper-V 장애 조치(failover) 클러스터를 이미 구성한 경우에는 이 섹션을 건너뜁니다.  
 
-이제 일반적인 장애 조치(failover) 클러스터를 만듭니다. 구성, 유효성 검사 및 테스트 후 저장소 복제본을 사용하여 확장합니다. 아래의 모든 단계를 클러스터 노드에서 직접 수행 하거나 Windows Server 원격 서버 관리 도구이 포함 된 원격 관리 컴퓨터에서 수행할 수 있습니다.  
+이제 일반적인 장애 조치(failover) 클러스터를 만듭니다. 구성, 유효성 검사 및 테스트 후 스토리지 복제본을 사용하여 확장합니다. 아래의 모든 단계를 클러스터 노드에서 직접 수행 하거나 Windows Server 원격 서버 관리 도구이 포함 된 원격 관리 컴퓨터에서 수행할 수 있습니다.  
 
 #### <a name="graphical-method"></a>그래픽 사용  
 
@@ -322,7 +322,7 @@ ms.locfileid: "71402968"
    >[!NOTE]
    >  쿼럼 구성에 대한 자세한 내용은 [Windows Server2012 장애 조치(failover) 클러스터에서 쿼럼 구성 및 관리 가이드의 감시 구성](https://technet.microsoft.com/library/jj612870.aspx)을 참조하세요. Set-ClusterQuorum cmdlet에 대한 자세한 내용은 [Set-ClusterQuorum](https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterquorum)을 참조하세요. 
 
-5. 2-노드 확장 클러스터를 만드는 경우 먼저 모든 저장소를 추가해야 합니다. 이렇게 하려면 클러스터 노드에서 관리자 권한으로 PowerShell 세션을 열고 다음 명령을 실행합니다. `Get-ClusterAvailableDisk -All | Add-ClusterDisk`
+5. 2노드 확장 클러스터를 만드는 경우 먼저 모든 스토리지를 추가해야 합니다. 이렇게 하려면 클러스터 노드에서 관리자 권한으로 PowerShell 세션을 열고 다음 명령을 실행합니다. `Get-ClusterAvailableDisk -All | Add-ClusterDisk`
 
    이것은 Windows Server 2016의 기본 동작입니다.
 
@@ -366,7 +366,7 @@ ms.locfileid: "71402968"
 
 16. (선택 사항) 보다 빠른 DNS 사이트 장애 조치(failover)를 위해 클러스터 네트워킹 및 Active Directory를 구성합니다. 확장된 VLAN, 네트워크 추상화 장치, 낮은 DNS TTL 및 기타 일반적인 기술을 활용할 수 있습니다.  
 
-자세한 내용은 Microsoft Ignite 세션 [Windows Server vNext에서 장애 조치(Failover) 클러스터 확장 및 저장소 복제본 사용](http://channel9.msdn.com/events/ignite/2015/brk3487) 및 블로그 게시물 [사이트 간에 변경 알림 사용 - 방법과 이유](http://blogs.technet.com/b/qzaidi/archive/2010/09/23/enable-change-notifications-between-sites-how-and-why.aspx)를 참조하세요.    
+자세한 내용은 Microsoft Ignite 세션 [Windows Server vNext에서 장애 조치(failover) 클러스터 확장 및 스토리지 복제본 사용](https://channel9.msdn.com/events/ignite/2015/brk3487) 및 블로그 게시물 [사이트 간에 변경 알림 사용 - 방법과 이유](https://blogs.technet.com/b/qzaidi/archive/2010/09/23/enable-change-notifications-between-sites-how-and-why.aspx)를 참조하세요.    
 
 #### <a name="powershell-method"></a>PowerShell 사용
 
@@ -401,7 +401,7 @@ ms.locfileid: "71402968"
 
    쿼럼 구성에 대 한 자세한 내용은 [클러스터 및 풀 쿼럼 이해](../storage-spaces/understand-quorum.md)를 참조 하세요. Set-ClusterQuorum cmdlet에 대한 자세한 내용은 [Set-ClusterQuorum](https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterquorum)을 참조하세요.
 
-4.  2-노드 확장 클러스터를 만드는 경우 먼저 모든 저장소를 추가해야 합니다. 이렇게 하려면 클러스터 노드에서 관리자 권한으로 PowerShell 세션을 열고 다음 명령을 실행합니다. `Get-ClusterAvailableDisk -All | Add-ClusterDisk`
+4.  2노드 확장 클러스터를 만드는 경우 먼저 모든 스토리지를 추가해야 합니다. 이렇게 하려면 클러스터 노드에서 관리자 권한으로 PowerShell 세션을 열고 다음 명령을 실행합니다. `Get-ClusterAvailableDisk -All | Add-ClusterDisk`
 
     이것은 Windows Server 2016의 기본 동작입니다.
 
@@ -435,7 +435,7 @@ ms.locfileid: "71402968"
 
 8.  (선택 사항) 보다 빠른 DNS 사이트 장애 조치(failover)를 위해 클러스터 네트워킹 및 Active Directory를 구성합니다. 확장된 VLAN, 네트워크 추상화 장치, 낮은 DNS TTL 및 기타 일반적인 기술을 활용할 수 있습니다.  
     
-    자세한 내용은 Microsoft Ignite 세션 [Windows Server vNext에서 장애 조치(Failover) 클러스터 확장 및 저장소 복제본 사용](http://channel9.msdn.com/events/ignite/2015/brk3487) 및 블로그 게시물 [사이트 간에 변경 알림 사용 - 방법과 이유](http://blogs.technet.com/b/qzaidi/archive/2010/09/23/enable-change-notifications-between-sites-how-and-why.aspx)를 참조하세요.
+    자세한 내용은 Microsoft Ignite 세션 [Windows Server vNext에서 장애 조치(failover) 클러스터 확장 및 스토리지 복제본 사용](https://channel9.msdn.com/events/ignite/2015/brk3487) 및 블로그 게시물 [사이트 간에 변경 알림 사용 - 방법과 이유](https://blogs.technet.com/b/qzaidi/archive/2010/09/23/enable-change-notifications-between-sites-how-and-why.aspx)를 참조하세요.
 
 ### <a name="configure-a-stretch-cluster"></a>확장 클러스터를 구성합니다.  
 이제 장애 조치(Failover) 클러스터 관리자 또는 Windows PowerShell을 사용하여 확장 클러스터를 구성합니다. 아래의 모든 단계를 클러스터 노드에서 직접 수행 하거나 Windows Server 원격 서버 관리 도구이 포함 된 원격 관리 컴퓨터에서 수행할 수 있습니다.  
@@ -451,7 +451,7 @@ ms.locfileid: "71402968"
 
 3.  적절한 대상 데이터 볼륨을 선택하고 **다음**을 클릭합니다. 표시되는 대상 디스크에 선택한 원본 디스크와 같은 크기의 볼륨이 생성됩니다. 이러한 마법사 대화 상자 간에 이동할 때 사용 가능한 저장소가 자동으로 이동하며 필요에 따라 백그라운드에서 온라인 상태로 전환됩니다.  
 
-    ![저장소 복제본 구성 마법사의 대상 디스크 선택 페이지를 보여 주는 화면](./media/Stretch-Cluster-Replication-Using-Shared-Storage/Storage_SR_SelectDestinationDataDisk2.png)  
+    ![스토리지 복제본 구성 마법사의 대상 디스크 선택 페이지를 보여 주는 화면](./media/Stretch-Cluster-Replication-Using-Shared-Storage/Storage_SR_SelectDestinationDataDisk2.png)  
 
 4.  적절한 원본 로그 디스크를 선택하고 **다음**을 클릭합니다. 원본 로그 볼륨은 회전 디스크가 아니라 SSD 또는 유사한 속도의 미디어를 사용하는 디스크에 있어야 합니다.  
 
@@ -464,11 +464,11 @@ ms.locfileid: "71402968"
 
 9.  **다음**을 클릭하여 복제 및 확장 클러스터 형성을 구성합니다.  
 
-    ![저장소 복제본 구성 마법사의 확인 선택 페이지를 보여 주는 화면](./media/Stretch-Cluster-Replication-Using-Shared-Storage/Storage_SR_ConfigureSR2.png)  
+    ![스토리지 복제본 구성 마법사의 확인 선택 페이지를 보여 주는 화면](./media/Stretch-Cluster-Replication-Using-Shared-Storage/Storage_SR_ConfigureSR2.png)  
 
 10. 요약 화면에서 완료 대화 상자 결과를 확인합니다. 웹 브라우저에서 보고서를 볼 수 있습니다.  
 
-11. 이제 절반의 두 클러스터 간에 저장소 복제본 파트너 관계를 구성했지만 복제는 계속 진행 중입니다. 그래픽 도구를 통해 복제 상태를 볼 수 있는 여러 가지 방법이 있습니다.  
+11. 이제 절반의 두 클러스터 간에 스토리지 복제본 파트너 관계를 구성했지만 복제는 계속 진행 중입니다. 그래픽 도구를 통해 복제 상태를 볼 수 있는 여러 가지 방법이 있습니다.  
 
     1.  **복제 역할** 열과 **복제** 탭을 사용합니다. 초기 동기화가 완료되면 원본 및 대상 디스크의 복제 상태가 **지속적으로 복제 중**이 됩니다.   
 
@@ -476,9 +476,9 @@ ms.locfileid: "71402968"
 
     2.  **eventvwr.exe**를 시작합니다.  
 
-        1.  원본 서버에서 **응용 프로그램 및 서비스\Microsoft\Windows\저장소 복제본\관리**로 이동하여 이벤트 5015, 5002, 5004, 1237, 5001 및 2200을 검토합니다.  
+        1.  원본 서버에서 **애플리케이션 및 서비스\Microsoft\Windows\스토리지 복제본\관리**로 이동하여 이벤트 5015, 5002, 5004, 1237, 5001 및 2200을 검토합니다.  
 
-        2.  대상 서버에서 **응용 프로그램 및 서비스\Microsoft\Windows\저장소 복제본\운영**으로 이동하여 이벤트 1215를 기다립니다. 이 이벤트는 복사한 바이트 수와 걸린 시간을 알려 줍니다. 예제:  
+        2.  대상 서버에서 **애플리케이션 및 서비스\Microsoft\Windows\스토리지 복제본\운영**으로 이동하여 이벤트 1215를 기다립니다. 이 이벤트는 복사한 바이트 수와 걸린 시간을 알려 줍니다. 예:  
 
             ```  
             Log Name:      Microsoft-Windows-StorageReplica/Operational  
@@ -505,7 +505,7 @@ ms.locfileid: "71402968"
             Elapsed Time (ms): 140  
             ```  
 
-        3.  대상 서버에서 **응용 프로그램 및 서비스\Microsoft\Windows\저장소 복제본\관리**로 이동하여 이벤트 5009, 1237, 5001, 5015, 5005 및 2200을 통해 진행 상황을 파악합니다. 이 시퀀스에서는 오류 경고가 없어야 합니다. 여러 개의 1237 이벤트가 있습니다. 이는 진행률을 나타냅니다.  
+        3.  대상 서버에서 **애플리케이션 및 서비스\Microsoft\Windows\스토리지 복제본\관리**로 이동하여 이벤트 5009, 1237, 5001, 5015, 5005 및 2200을 통해 진행 상황을 파악합니다. 이 시퀀스에는 오류 경고가 없어야 합니다. 여러 개의 1237 이벤트가 있습니다. 이는 진행률을 나타냅니다.  
 
             > [!WARNING]
             > 초기 동기화가 완료될 때까지 CPU 및 메모리 사용량이 평소보다 높을 수 있습니다.  
@@ -578,7 +578,7 @@ ms.locfileid: "71402968"
         Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica -max 20  
         ```  
 
-    2.  대상 서버에서 다음 명령을 실행하여 파트너 관계 생성을 표시하는 저장소 복제본 이벤트를 확인합니다. 이 이벤트는 복사한 바이트 수와 걸린 시간을 알려 줍니다. 예제:  
+    2.  대상 서버에서 다음 명령을 실행하여 파트너 관계 생성을 표시하는 스토리지 복제본 이벤트를 확인합니다. 이 이벤트는 복사한 바이트 수와 걸린 시간을 알려 줍니다. 예:  
 
             Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica | Where-Object {$_.ID -eq "1215"} | fl  
 
@@ -598,7 +598,7 @@ ms.locfileid: "71402968"
                Number of Bytes Recovered: 68583161856  
                Elapsed Time (ms): 140  
 
-    3.  대상 서버에서 다음 명령을 실행하고 5009, 1237, 5001, 5015, 5005 및 2200 이벤트를 확인하여 처리 진행률을 이해합니다. 이 시퀀스에서는 오류 경고가 없어야 합니다. 여러 개의 1237 이벤트가 있습니다. 이는 진행률을 나타냅니다.  
+    3.  대상 서버에서 다음 명령을 실행하고 5009, 1237, 5001, 5015, 5005 및 2200 이벤트를 확인하여 처리 진행률을 이해합니다. 이 시퀀스에는 오류 경고가 없어야 합니다. 여러 개의 1237 이벤트가 있습니다. 이는 진행률을 나타냅니다.  
 
         ```PowerShell  
         Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica | FL  
@@ -640,21 +640,21 @@ ms.locfileid: "71402968"
 
     1.  대상 노드에서 다음을 수행합니다.  
 
-        1.  데이터 볼륨에 대한 모든 성능 카운터가 포함된 **저장소 복제본 통계** 개체를 추가합니다.  
+        1.  데이터 볼륨에 대한 모든 성능 카운터가 포함된 **스토리지 복제본 통계** 개체를 추가합니다.  
 
         2.  결과를 확인합니다.  
 
     2.  원본 노드에서 다음을 수행합니다.  
 
-        1.  데이터 볼륨에 대한 모든 성능 카운터가 포함된 **저장소 복제본 통계** 및 **저장소 복제본 파티션 I/O 통계** 개체를 추가합니다(후자는 현재 원본 서버의 데이터에만 사용할 수 있음).  
+        1.  데이터 볼륨에 대한 모든 성능 카운터가 포함된 **스토리지 복제본 통계** 및 **스토리지 복제본 파티션 I/O 통계** 개체를 추가합니다(후자는 현재 원본 서버의 데이터에만 사용할 수 있음).  
 
         2.  결과를 확인합니다.  
 
 3.  확장 클러스터 내에서 복제 원본 및 대상을 변경하려면 다음 방법을 사용합니다.  
 
-    1.  동일한 사이트의 노드 간에 원본 복제를 이동하려면 원본 CSV를 마우스 오른쪽 단추로 클릭하고 **저장소 이동**, **노드 선택**을 차례로 클릭한 다음 동일한 사이트에 있는 노드를 선택합니다. 역할 할당 디스크에 CSV가 아닌 저장소를 사용하는 경우 역할을 이동합니다.  
+    1.  동일한 사이트의 노드 간에 원본 복제를 이동하려면 원본 CSV를 마우스 오른쪽 단추로 클릭하고 **스토리지 이동**, **노드 선택**을 차례로 클릭한 다음 동일한 사이트에 있는 노드를 선택합니다. 역할 할당 디스크에 CSV가 아닌 저장소를 사용하는 경우 역할을 이동합니다.  
 
-    2.  사이트 간에 원본 복제를 이동하려면 원본 CSV를 마우스 오른쪽 단추로 클릭하고 **저장소 이동**, **노드 선택**을 차례로 클릭한 다음 다른 사이트에 있는 노드를 선택합니다. 기본 설정 사이트를 구성한 경우 가장 적합한 노드를 사용하여 언제든지 원본 저장소를 기본 설정 사이트의 노드로 이동할 수 있습니다. 역할 할당 디스크에 CSV가 아닌 저장소를 사용하는 경우 역할을 이동합니다.  
+    2.  사이트 간에 원본 복제를 이동하려면 원본 CSV를 마우스 오른쪽 단추로 클릭하고 **스토리지 이동**, **노드 선택**을 차례로 클릭한 다음 다른 사이트에 있는 노드를 선택합니다. 기본 설정 사이트를 구성한 경우 가장 적합한 노드를 사용하여 언제든지 원본 저장소를 기본 설정 사이트의 노드로 이동할 수 있습니다. 역할 할당 디스크에 CSV가 아닌 저장소를 사용하는 경우 역할을 이동합니다.  
 
     3.  사이트 간에 계획된 복제 방향 장애 조치(failover)를 수행하려면 **ServerManager.exe** 또는 **SConfig**를 사용하여 하나의 사이트에서 두 노드를 모두 종료합니다.  
 
@@ -685,7 +685,7 @@ ms.locfileid: "71402968"
     3.  필요에 따라 추가 테스트를 위해 CSV에서 저장소를 제거하고 사용 가능한 저장소로 반환합니다.  
 
         > [!NOTE]  
-        > 사용 가능한 저장소로 반환한 후 **DiskMgmt.msc** 또는 **ServerManager.exe**를 사용하여 볼륨에 드라이브 문자를 다시 추가해야 할 수도 있습니다.  
+        > 사용 가능한 스토리지로 반환한 후 **DiskMgmt.msc** 또는 **ServerManager.exe**를 사용하여 볼륨에 드라이브 문자를 다시 추가해야 할 수도 있습니다.  
 
 #### <a name="windows-powershell-method"></a>Windows PowerShell 사용  
 

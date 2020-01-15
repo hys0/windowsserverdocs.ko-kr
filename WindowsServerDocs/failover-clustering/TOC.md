@@ -13,7 +13,7 @@
 ### [하드웨어 요구 사항](clustering-requirements.md)
 ### [CSV(클러스터 공유 볼륨) 사용](failover-cluster-csvs.md)
 ### [게스트 VM 클러스터 사용](../storage/storage-spaces/storage-spaces-direct-in-vm.md)
-## 배포
+## 배포 게스트 클러스터에
 ### [장애 조치 클러스터 만들기](create-failover-cluster.md)
 ### [2노드 파일 서버 배포](deploy-two-node-clustered-file-server.md)
 ### [AD DS에서 클러스터 미리 준비](prestage-cluster-adds.md)
@@ -36,4 +36,5 @@
 #### [설정](health-service-settings.md)
 ### [클러스터 도메인 마이그레이션](cluster-domain-migration.md)
 ### [Windows 오류 보고를 사용하여 문제 해결 중](troubleshooting-using-WER-reports.md)
+### [클러스터 시스템 로그 이벤트](system-events.md)
 ## [장애 조치 클러스터링 항목에 대한 변경 기록](clustering-change-history.md)

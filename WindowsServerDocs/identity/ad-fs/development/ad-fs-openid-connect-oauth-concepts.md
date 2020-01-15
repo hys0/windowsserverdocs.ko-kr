@@ -8,12 +8,12 @@ ms.date: 08/09/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 0e680e07ce1ee27a73791e310a71b85ad76d6318
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 26c1635d4218c7d33377b6b8a90bc96ea4ad37b3
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71358764"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75948788"
 ---
 # <a name="ad-fs-openid-connectoauth-concepts"></a>AD FS Openid connect Connect/OAuth 개념
 AD FS 2016 이상에 적용 됩니다.
@@ -36,8 +36,8 @@ AD FS 2016 이상에 적용 됩니다.
 
 |응용 프로그램 종류|설명|역할|
 |-----|-----|-----|
-|네이티브 응용 프로그램|**공용 클라이언트**라고도 하는이는 사용자가 상호 작용 하는 pc 또는 장치에서 실행 되는 클라이언트 앱이 될 수 있습니다.|리소스에 대 한 사용자 액세스 권한 부여 서버 (AD FS)의 토큰을 요청 합니다. HTTP 헤더와 토큰을 사용 하는 보호 된 리소스에 HTTP 요청을 보냅니다.| 
-|서버 응용 프로그램 (웹 앱)|웹 응용 프로그램 서버에서 실행 되며 일반적으로 브라우저를 통해 사용자가 액세스할 수 있습니다. 자체 클라이언트 ' 암호 ' 또는 자격 증명을 유지할 수 있으므로 **기밀 클라이언트**라고도 합니다. |리소스에 대 한 사용자 액세스 권한 부여 서버 (AD FS)의 토큰을 요청 합니다. 토큰을 요청 하기 전에 클라이언트 (웹 앱)는 암호를 사용 하 여 인증 해야 합니다. | 
+|네이티브 애플리케이션|**공용 클라이언트**라고도 하는이는 사용자가 상호 작용 하는 pc 또는 장치에서 실행 되는 클라이언트 앱이 될 수 있습니다.|리소스에 대 한 사용자 액세스 권한 부여 서버 (AD FS)의 토큰을 요청 합니다. HTTP 헤더와 토큰을 사용 하는 보호 된 리소스에 HTTP 요청을 보냅니다.| 
+|서버 응용 프로그램 (웹 앱)|웹 애플리케이션 서버에서 실행 되며 일반적으로 브라우저를 통해 사용자가 액세스할 수 있습니다. 자체 클라이언트 ' 암호 ' 또는 자격 증명을 유지할 수 있으므로 **기밀 클라이언트**라고도 합니다. |리소스에 대 한 사용자 액세스 권한 부여 서버 (AD FS)의 토큰을 요청 합니다. 토큰을 요청 하기 전에 클라이언트 (웹 앱)는 암호를 사용 하 여 인증 해야 합니다. | 
 |Web API|최종 리소스는 사용자에 액세스 합니다. 이러한 "신뢰 당사자"의 새 표현으로 간주 합니다.|클라이언트에서 가져온 전달자 액세스 토큰을 사용 합니다.| 
 
 ## <a name="application-group"></a>응용 프로그램 그룹 
@@ -51,13 +51,13 @@ AD FS로 구성 된 모든 OAuth 클라이언트 (네이티브 또는 웹 앱) �
 - **access_token**: 권한 부여 서버 (AD FS)에서 발급 하 고 리소스에서 사용 하기 위한 JWT 토큰입니다. 이 토큰의 'aud' 또는 대상 그룹 클레임 리소스 또는 웹 API의 식별자를 일치 해야 합니다.  
 - **refresh_token**: 클라이언트에서 id_token 및 access_token를 새로 고쳐야 할 때 사용할 수 있도록 AD FS에서 발급 한 토큰입니다. 토큰은 클라이언트에 불투명 하며 AD FS만 사용할 수 있습니다.  
 
-## <a name="scopes"></a>영역 
+## <a name="scopes"></a>범위 
  
 AD FS에서 리소스를 등록 하는 동안 AD FS 특정 작업을 수행할 수 있도록 범위를 구성할 수 있습니다. 범위를 구성 하는 것 외에도 작업을 수행 하는 AD FS에 대 한 요청에 범위 값을 전송 해야 합니다. 예를 들어, 관리자는 리소스 등록 중에 openid connect로 범위를 구성 해야 하 고, 응용 프로그램 (클라이언트)이 AD FS에 대 한 인증 요청에서 범위 = openid connect를 발급 ID 토큰으로 보내야 합니다. AD FS에서 사용할 수 있는 범위에 대 한 자세한 내용은 아래에 나와 있습니다. 
  
 - aza- [Broker 클라이언트에 OAuth 2.0 프로토콜 확장](https://docs.microsoft.com/openspecs/windows_protocols/ms-oapxbc/2f7d8875-0383-4058-956d-2fb216b44706) 을 사용 하는 경우 하 고 범위 매개 변수에 "aza" 범위가 포함 되어 있으면 서버가 새 주 새로 고침 토큰을 발급 하 고 응답의 refresh_token 필드에 설정 하 고, 적용 되는 경우 새 주 새로 고침 토큰의 수명으로 refresh_token_expires_in 필드를 설정 합니다. 
 - openid connect-응용 프로그램에서 Openid connect Connect 권한 부여 프로토콜의 사용을 요청할 수 있습니다. 
-- logon_cert-logon_cert 범위를 통해 응용 프로그램은 인증 된 사용자를 대화형으로 로그온 하는 데 사용할 수 있는 로그온 인증서를 요청할 수 있습니다. AD FS 서버는 응답에서 access_token 매개 변수를 생략 하 고 대신 b a s e 64로 인코딩된 CMS 인증서 체인 또는 CMC 전체 PKI 응답을 제공 합니다. 자세한 내용은 [여기](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-oapx/32ce8878-7d33-4c02-818b-6c9164cc731e)에 있습니다.
+- logon_cert-logon_cert 범위를 통해 응용 프로그램은 인증 된 사용자를 대화형으로 로그온 하는 데 사용할 수 있는 로그온 인증서를 요청할 수 있습니다. AD FS 서버는 응답에서 access_token 매개 변수를 생략 하 고 대신 b a s e 64로 인코딩된 CMS 인증서 체인 또는 CMC 전체 PKI 응답을 제공 합니다. 자세한 내용은 [여기](https://docs.microsoft.com/openspecs/windows_protocols/ms-oapx/32ce8878-7d33-4c02-818b-6c9164cc731e)에 있습니다.
 - user_impersonation-AD FS에서 온-의 액세스 토큰을 성공적으로 요청 하려면 user_impersonation 범위가 필요 합니다. 이 범위를 사용 하는 방법에 대 한 자세한 내용은 AD FS 2016를 사용 하 여 OAuth를 사용 하 여 [(OBO)를 사용 하는 다중 계층 응용 프로그램 빌드](ad-fs-on-behalf-of-authentication-in-windows-server.md)를 참조 하세요. 
 - allatclaims – allatclaims 범위를 사용 하면 응용 프로그램에서 액세스 토큰의 클레임을 ID 토큰에 추가 하도록 요청할 수도 있습니다.   
 - vpn_cert-vpn_cert 범위를 통해 응용 프로그램은 EAP-TLS 인증을 사용 하 여 VPN 연결을 설정 하는 데 사용할 수 있는 VPN 인증서를 요청할 수 있습니다. 이는 더 이상 지원 되지 않습니다. 
@@ -66,9 +66,9 @@ AD FS에서 리소스를 등록 하는 동안 AD FS 특정 작업을 수행할 �
 
 ## <a name="claims"></a>클레임 
  
-AD FS에서 발급 하는 보안 토큰 (액세스 및 ID 토큰)에는 인증 된 주체에 대 한 클레임 또는 정보 어설션이 포함 됩니다. 응용 프로그램은 다음을 비롯 한 다양 한 작업에 대해 클레임을 사용할 수 있습니다. 
-- 토큰의 유효성을 검사 합니다. 
-- 주체의 디렉터리 테 넌 트를 식별 합니다. 
+AD FS에서 발급 하는 보안 토큰 (액세스 및 ID 토큰)에는 인증 된 주체에 대 한 클레임 또는 정보 어설션이 포함 됩니다. 애플리케이션은 다음을 포함한 다양한 작업에 대한 클레임을 사용할 수 있습니다. 
+- 토큰 유효성 검사 
+- 주체의 디렉터리 테넌트 식별 
 - 사용자 정보 표시 
 - 주체의 권한 부여 확인 지정 된 보안 토큰에 있는 클레임은 토큰 유형, 사용자를 인증 하는 데 사용 되는 자격 증명 유형, 응용 프로그램 구성에 따라 달라 집니다.  
  
@@ -108,7 +108,7 @@ AD FS에서 발급 하는 보안 토큰 (액세스 및 ID 토큰)에는 인증 �
 AD FS에는 두 가지 유형의 라이브러리가 사용 됩니다. 
 - **클라이언트 라이브러리**: 네이티브 클라이언트 및 서버 앱은 클라이언트 라이브러리를 사용 하 여 Web API와 같은 리소스를 호출 하기 위한 액세스 토큰을 가져옵니다. MSAL (Microsoft 인증 라이브러리)은 AD FS 2019를 사용할 때 사용 되는 최신 클라이언트 라이브러리입니다. Active Directory 인증 라이브러리 (ADAL) AD FS 2016에 권장 됩니다.  
 
-- **서버 미들웨어 라이브러리**: 웹 앱은 사용자 로그인에 서버 미들웨어 라이브러리를 사용 합니다. 웹 Api는 서버 미들웨어 라이브러리를 사용 하 여 네이티브 클라이언트 또는 다른 서버에서 보낸 토큰의 유효성을 검사 합니다. OWIN (Open Web Interface for .NET)은 권장 되는 미들웨어 라이브러리입니다. 
+- **서버 미들웨어 라이브러리**: 웹 앱은 사용자 로그인에 서버 미들웨어 라이브러리를 사용 합니다. 웹 API는 서버 미들웨어 라이브러리를 사용하여 네이티브 클라이언트 또는 다른 서버에서 전송되는 토큰의 유효성을 검사합니다. OWIN (Open Web Interface for .NET)은 권장 되는 미들웨어 라이브러리입니다. 
 
 ## <a name="customize-id-token-additional-claims-in-id-token"></a>ID 토큰 사용자 지정 (ID 토큰의 추가 클레임)
  

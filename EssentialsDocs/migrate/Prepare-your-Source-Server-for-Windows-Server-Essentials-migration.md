@@ -1,5 +1,5 @@
 ---
-title: Windows Server Essentials에 대 한 원본 서버 준비 migration1
+title: Windows Server Essentials migration1에 대 한 원본 서버 준비
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
@@ -12,14 +12,14 @@ ms.assetid: f5861ae9-77cb-4d37-b4c5-8f0757213385
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 93f5bdb615adf56b81a1c4c93f802f6da4e48c1b
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: d09ad4b66029c40c840ff5764fdaa2705b44bac2
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66432615"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75947442"
 ---
-# <a name="prepare-your-source-server-for-windows-server-essentials-migration1"></a>Windows Server Essentials에 대 한 원본 서버 준비 migration1
+# <a name="prepare-your-source-server-for-windows-server-essentials-migration1"></a>Windows Server Essentials migration1에 대 한 원본 서버 준비
 
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
@@ -36,7 +36,7 @@ ms.locfileid: "66432615"
   
 4.  [원본 서버에서 마이그레이션 준비 도구 실행](Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_MPT)  
   
-5.  [기간 업무 응용 프로그램 마이그레이션 계획 수립](Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_PlanToMigrateLineOfBusinessApplications)  
+5.  [Lob (기간 업무) 응용 프로그램 마이그레이션 계획 만들기](Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_PlanToMigrateLineOfBusinessApplications)  
 
 1.  [원본 서버 백업](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_BackUpYourSourceServerToPrepareForMigration)  
   
@@ -46,22 +46,22 @@ ms.locfileid: "66432615"
   
 4.  [원본 서버에서 마이그레이션 준비 도구 실행](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_MPT)  
   
-5.  [기간 업무 응용 프로그램 마이그레이션 계획 수립](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_PlanToMigrateLineOfBusinessApplications)  
+5.  [Lob (기간 업무) 응용 프로그램 마이그레이션 계획 만들기](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_PlanToMigrateLineOfBusinessApplications)  
 
   
-###  <a name="BKMK_BackUpYourSourceServerToPrepareForMigration"></a> 원본 서버 백업  
+###  <a name="BKMK_BackUpYourSourceServerToPrepareForMigration"></a>원본 서버 백업  
  마이그레이션 프로세스를 시작하기 전에 원본 서버를 백업합니다. 백업을 생성하면 마이그레이션 중 복구할 수 없는 오류가 발생할 경우 데이터가 손실되는 것을 방지할 수 있습니다.  
   
 ##### <a name="to-back-up-the-source-server"></a>원본 서버를 백업하려면  
   
-1.  원본 서버에 대해 전체 백업을 수행합니다. Windows Small Business Server 2011 Essentials 백업에 대 한 자세한 내용은 참조 하십시오 [서버 백업 설정에 대해 자세히 알아보려면](https://technet.microsoft.com/library/server-backup-support-1.aspx)합니다.  
+1.  원본 서버에 대해 전체 백업을 수행합니다. Windows Small Business Server 2011 Essentials를 백업 하는 방법에 대 한 자세한 내용은 [서버 백업 설정에 대 한 자세한](https://technet.microsoft.com/library/server-backup-support-1.aspx)정보를 참조 하세요.  
   
 2.  백업이 성공적으로 실행되었는지 확인합니다. 백업의 무결성을 테스트하려면 백업에서 임의 파일을 선택하여 대체 위치에 복원한 후 복원된 파일이 원본 파일과 같은지 확인합니다.  
   
-###  <a name="BKMK_InstallTheMostRecentServicePacksToPrepareForMigration"></a> 최신 서비스 팩 설치  
+###  <a name="BKMK_InstallTheMostRecentServicePacksToPrepareForMigration"></a>최신 서비스 팩 설치  
  마이그레이션을 수행하려면 먼저 원본 서버에 최신 업데이트와 서비스 팩을 설치해야 합니다.  
   
-###  <a name="BKMK_UseWindowsBestPracticeAnalyzer"></a> 원본 서버의 상태 평가  
+###  <a name="BKMK_UseWindowsBestPracticeAnalyzer"></a>원본 서버의 상태 평가  
  마이그레이션을 시작하기 전에 원본 서버의 상태를 평가해야 합니다. 다음 절차를 사용하여 업데이트가 최신 상태인지 확인하고 시스템 상태 보고서를 생성하고 Windows Server Solutions BPA(모범 사례 분석기)를 실행합니다.  
   
 #### <a name="download-and-install-critical-and-security-updates"></a>중요 업데이트와 보안 업데이트 다운로드 및 설치  
@@ -89,7 +89,7 @@ ms.locfileid: "66432615"
   
 ###### <a name="to-use-the-windows-server-solutions-bpa-to-analyze-your-source-server"></a>Windows Server Solutions BPA를 사용하여 원본 서버를 분석하려면  
   
-1. Microsoft 다운로드 센터에서 [Windows Server Solutions 모범 사례 분석기](https://www.microsoft.com/en-us/download/details.aspx?id=15556)를 다운로드하고 설치하세요.  
+1. Microsoft 다운로드 센터에서 [Windows Server Solutions 모범 사례 분석기](https://www.microsoft.com/download/details.aspx?id=15556)를 다운로드하고 설치하세요.  
   
 2. 다운로드가 완료되면 **시작**을 클릭하고 **모든 프로그램**을 가리키고 나서 **SBS 모범 사례 분석기 도구**를 클릭합니다.  
   
@@ -110,28 +110,28 @@ ms.locfileid: "66432615"
 |트리 보고서|계층형 목록의 보고서를 표시합니다.|  
 |기타 보고서|실행 시간 로그와 같은 보고서를 표시합니다.|  
   
- 문제에 대한 설명 및 해결 방법을 보려면 보고서에서 해당 문제를 클릭합니다. 마이그레이션에 영향을 Windows SBS 2011 Essentials BPA에서 보고 하는 문제 중 일부만 하지만 성공적으로 마이그레이션 되었는지 확인 하려면 가능한 한 많은 문제를 해결 해야 합니다.  
+ 문제에 대한 설명 및 해결 방법을 보려면 보고서에서 해당 문제를 클릭합니다. Windows SBS 2011 Essentials BPA에서 보고 하는 모든 문제가 마이그레이션에 영향을 주는 것은 아니지만 마이그레이션에 성공 하려면 가능한 한 많은 문제를 해결 해야 합니다.  
   
-####  <a name="BKMK_SynchronizeTheSourceServerTimeWithAnExternalTimeSource"></a> 외부 시간 원본을 사용 하 여 원본 서버 시간 동기화  
- 원본 서버의 시간과 대상 서버의 시간은 5분 이내로 설정해야 하며 날짜 및 시간대는 두 서버에서 동일해야 합니다. 원본 서버가 가상 머신에서 실행 중인 경우, 호스트 서버의 날짜, 시간 및 시간대는 원본 서버 및 대상 서버의 설정과 일치해야 합니다. Windows Server Essentials를 성공적으로 설치 되어 있는지 확인 하려면 원본 서버 시간을 인터넷에서 시간 NTP (Network Protocol) 서버를 동기화 해야 합니다.  
+####  <a name="BKMK_SynchronizeTheSourceServerTimeWithAnExternalTimeSource"></a>원본 서버 시간을 외부 시간 원본과 동기화  
+ 원본 서버의 시간과 대상 서버의 시간은 5분 이내로 설정해야 하며 날짜 및 시간대는 두 서버에서 동일해야 합니다. 원본 서버가 가상 머신에서 실행 중인 경우, 호스트 서버의 날짜, 시간 및 시간대는 원본 서버 및 대상 서버의 설정과 일치해야 합니다. Windows Server Essentials가 성공적으로 설치 되도록 하려면 원본 서버 시간을 인터넷의 NTP (Network Time Protocol) 서버와 동기화 해야 합니다.  
   
 ###### <a name="to-synchronize-the-source-server-time-with-the-ntp-server"></a>원본 서버 시간을 NTP 서버와 동기화하려면  
   
 1.  도메인 관리자 계정과 암호를 사용하여 원본 서버에 로그온합니다.  
   
-2.  **시작**, **실행**을 차례로 클릭하고 텍스트 상자에 **cmd**를 입력한 다음 Enter 키를 누릅니다.  
+2.  **시작**, **실행**을 차례로 클릭하고 텍스트 상자에 **cmd** 를 입력한 다음 Enter 키를 누릅니다.  
   
-3.  명령 프롬프트에서 w32tm /config /syncfromflags: 신뢰할 수 있는 /: 없고 /update, 한 다음 ENTER 키를 누릅니다.  
+3.  명령 프롬프트에 w32tm /config /syncfromflags:domhier /reliable:no /update를 입력하고 Enter 키를 누릅니다.  
   
-4.  명령 프롬프트에서 net stop w32time을 입력 하 고 enter 키를 누릅니다.  
+4.  명령 프롬프트에 net stop w32time을 입력하고 Enter 키를 누릅니다.  
   
-5.  명령 프롬프트에서 net start w32time를 입력 하 고 enter 키를 누릅니다.  
+5.  명령 프롬프트에 net start w32time을 입력하고 Enter 키를 누릅니다.  
   
 > [!IMPORTANT]
->  Windows Server Essentials를 설치 하는 동안 필요한 경우 대상 서버에서 시간을 확인 및 변경할 수를 검토할을 수 있습니다. 시간이 원본 서버에 설정된 시간의 5분 이내인지 확인합니다. 설치가 끝나면 대상 서버가 NTP와 동기화됩니다. 원본 서버를 포함하여 도메인에 가입된 모든 컴퓨터가 PDC(주 도메인 컨트롤러) 에뮬레이터 마스터 역할을 하는 대상 서버에 동기화됩니다.  
+>  Windows Server Essentials를 설치 하는 동안 대상 서버에서 시간을 확인 하 고 필요한 경우 변경할 수 있습니다. 시간이 원본 서버에 설정된 시간의 5분 이내인지 확인합니다. 설치가 끝나면 대상 서버가 NTP와 동기화됩니다. 원본 서버를 포함하여 도메인에 가입된 모든 컴퓨터가 PDC(주 도메인 컨트롤러) 에뮬레이터 마스터 역할을 하는 대상 서버에 동기화됩니다.  
   
-###  <a name="BKMK_MPT"></a> 원본 서버에서 마이그레이션 준비 도구 실행  
- 먼저 원본 서버에서 마이그레이션 준비 도구를 실행해야 마이그레이션 모드 설치를 수행할 수 있습니다. 이 도구는 Windows Server Essentials로 마이그레이션할 원본 서버와 도메인을 준비 하도록 설계 되었습니다.  
+###  <a name="BKMK_MPT"></a>원본 서버에서 마이그레이션 준비 도구 실행  
+ 먼저 원본 서버에서 마이그레이션 준비 도구를 실행해야 마이그레이션 모드 설치를 수행할 수 있습니다. 이 도구는 Windows Server Essentials로 마이그레이션할 원본 서버와 도메인을 준비 하기 위해 설계 되었습니다.  
   
 > [!IMPORTANT]
 >  마이그레이션 준비 도구를 실행하기 전에 원본 서버를 백업해야 합니다. 마이그레이션 준비 도구가 스키마에 대해 수행하는 모든 변경 내용은 되돌릴 수 없습니다. 마이그레이션 중 문제가 발생하는 경우, 원본 서버를 마이그레이션 준비 도구를 실행하기 이전 상태로 되돌리는 유일한 방법은 시스템 백업에서 서버를 복원하는 것입니다.  
@@ -158,17 +158,17 @@ ms.locfileid: "66432615"
   
    Windows Update 에이전트 최신 버전을 사용하여 서버 업데이트 프로세스가 올바르게 작동하는지 확인할 수 있습니다.  
   
-   원본 서버에서 Windows Update 에이전트를 설치 하려면, 먼저 Windows PowerShell 2.0 및 Microsoft Baseline Configuration Analyzer 2.0를 설치 합니다.  
+   원본 서버에 Windows 업데이트 Agent를 설치 하려면 먼저 Windows PowerShell 2.0 및 Microsoft 기준선 구성 분석기 2.0를 설치 해야 합니다.  
   
--   참조를 다운로드 하 고 Windows PowerShell 2.0을 설치 [968929 문서](https://go.microsoft.com/fwlink/p/?LinkId=241483) Microsoft 기술 자료에서 합니다.  
+-   Windows PowerShell 2.0을 다운로드 하 고 설치 하려면 Microsoft 기술 자료 [문서 968929](https://go.microsoft.com/fwlink/p/?LinkId=241483) 를 참조 하십시오.  
   
--   참조를 다운로드 하 고 Microsoft Baseline Configuration Analyzer 2.0을 설치 합니다 [Microsoft Baseline Configuration Analyzer 2.0](https://go.microsoft.com/fwlink/p/?LinkId=241484) Microsoft 다운로드 센터에서.  
+-   Microsoft 기준선 구성 분석기 2.0을 다운로드 하 고 설치 하려면 microsoft 다운로드 센터에서 [Microsoft 기준선 구성 분석기 2.0](https://go.microsoft.com/fwlink/p/?LinkId=241484) 를 참조 하세요.  
   
 -   Windows 업데이트 에이전트의 최신 버전을 다운로드하고 설치하려면 Microsoft 기술 자료에서 [문서 949104](https://go.microsoft.com/fwlink/p/?LinkId=237493)를 참조하세요.  
   
 ##### <a name="to-install-and-run-the-migration-preparation-tool-on-the-source-server"></a>원본 서버에서 마이그레이션 준비 도구를 설치하려면  
   
-1. 원본 서버의 DVD 드라이브에 Windows Server Essentials dvd1을 넣습니다를 삽입 합니다.  
+1. 원본 서버의 DVD 드라이브에 Windows Server Essentials DVD1을 삽입 합니다.  
   
 2. Windows 탐색기를 열고 DVD의 **\support\tools** 폴더로 이동하고 나서 **sourcetool.msi** 파일을 두 번 클릭합니다.  
   
@@ -181,15 +181,15 @@ ms.locfileid: "66432615"
 3. 마이그레이션 준비 도구에서 **백업이 있으며 계속할 준비가 되었습니다.** 를 선택한 후 **다음**을 클릭합니다.  
   
    > [!WARNING]
-   >  핫픽스 설치와 관련 된 오류 메시지를 나타나면 메서드 2를 참조 하십시오. Catroot2 폴더 이름 바꾸기 [문서 822798](https://go.microsoft.com/FWLink/p/?LinkID=118672) Microsoft 기술 자료에서 합니다.  
+   >  핫픽스 설치와 관련 된 오류 메시지가 표시 되 면 방법 2: Microsoft 기술 자료 [문서 822798](https://go.microsoft.com/FWLink/p/?LinkID=118672) 에서 Catroot2 폴더 이름 바꾸기를 참조 하세요.  
   
     마이그레이션 준비 도구가 Active Directory 스키마를 확장함으로써 마이그레이션을 위해 원본 도메인을 준비합니다. 작업이 완료되면 **다음**을 클릭하여 계속하세요.  
   
 4. 원본 도메인의 준비를 마친 후 마이그레이션 준비 도구가 2가지 유형의 잠재적 문제를 확인하기 위해 원본 서버를 검사합니다.  
   
-   - **오류** 마이그레이션을 차단 하거나 마이그레이션 실패를 일으킬 수 있는 원본 서버에서 발견 된 문제입니다. 오류 메시지의 지침을 따라 문제를 해결한 후 **다시 검사**를 클릭합니다.  
+   - **오류** 마이그레이션을 차단 하거나 마이그레이션을 실패할 수 있는 원본 서버에서 문제가 발생 했습니다. 오류 메시지의 지침을 따라 문제를 해결한 후 **다시 검사**를 클릭합니다.  
   
-   - **경고** 마이그레이션하는 동안 작동 문제가 발생할 수 있는 원본 서버에서 발견 된 문제입니다. 오류 메시지의 지침을 따라 마이그레이션 진행 전에 문제를 해결하는 것이 좋습니다.  
+   - **경고** 마이그레이션 중에 기능 문제를 일으킬 수 있는 원본 서버에서 발견 된 문제입니다. 오류 메시지의 지침을 따라 마이그레이션 진행 전에 문제를 해결하는 것이 좋습니다.  
   
      모든 문제를 해결하거나 확인한 후 **다음**을 클릭합니다.  
   
@@ -198,13 +198,13 @@ ms.locfileid: "66432615"
 6. 마이그레이션 준비 도구가 완료 되 면 Windows Server Essentials로 마이그레이션을 시작 하기 전에 원본 서버를 다시 시작 하 라는 메시지가 표시 될 수 있습니다.  
   
 > [!NOTE]
->  실행을 성공적으로 마이그레이션 준비 도구가 원본 서버에서 대상 서버에서 Windows Server Essentials를 설치한 후 2 주 내에서 완료 해야 합니다. 그렇지 않으면 대상 서버의 Windows Server Essentials 설치 차단 됩니다. 이 경우 원본 서버에서 마이그레이션 준비 도구를 다시 실행해야 합니다.  
+>  대상 서버에 Windows Server Essentials를 설치한 후 2 주 이내에 원본 서버에서 마이그레이션 준비 도구를 성공적으로 실행 해야 합니다. 그렇지 않으면 대상 서버에 Windows Server Essentials 설치가 차단 됩니다. 이 경우 원본 서버에서 마이그레이션 준비 도구를 다시 실행해야 합니다.  
   
-###  <a name="BKMK_PlanToMigrateLineOfBusinessApplications"></a> 기간 업무 응용 프로그램 마이그레이션 계획 수립  
- LOB(기간 업무) 응용 프로그램은 업무 수행에 필수적인 중요한 컴퓨터 응용 프로그램입니다. LOB 응용 프로그램에는 회계, 공급망 관리 및 리소스 계획 응용 프로그램이 포함됩니다.  
+###  <a name="BKMK_PlanToMigrateLineOfBusinessApplications"></a>Lob (기간 업무) 응용 프로그램 마이그레이션 계획 만들기  
+ LOB(기간 업무) 애플리케이션은 업무 수행에 필수적인 중요한 컴퓨터 애플리케이션입니다. LOB 애플리케이션에는 회계, 공급망 관리 및 리소스 계획 애플리케이션이 포함됩니다.  
   
- LOB(기간 업무) 응용 프로그램을 마이그레이션하려는 경우 기간 업무 응용 프로그램 공급자와 상의하여 응용 프로그램 마이그레이션에 대한 적합한 방법을 결정합니다. 또한, 대상 서버에 LOB(기간 업무) 응용 프로그램을 설치하는 데 사용되는 미디어 위치를 지정해야 합니다.  
+ LOB(기간 업무) 애플리케이션을 마이그레이션하려는 경우 기간 업무 애플리케이션 공급자와 상의하여 애플리케이션 마이그레이션에 대한 적합한 방법을 결정합니다. 또한, 대상 서버에 LOB(기간 업무) 애플리케이션을 설치하는 데 사용되는 미디어 위치를 지정해야 합니다.  
   
 > [!NOTE]
->  개발 하는 Windows Small Business Server 2011 Essentials SDK를 사용 하는 경우 사용자 지정된 시스템 상태 또는 경고 추가 기능 및 있습니다 계속 Windows Server Essentials를 사용 하 여 추가 기능에서 사용 하려면, 또한 추가 기능을 업데이트 하 고 대상 서버에 배포 해야 합니다.  
+>  Windows Small Business Server 2011 Essentials SDK를 사용 하 여 사용자 지정 된 시스템 상태 또는 경고 추가 기능을 개발 했 고 Windows Server Essentials에서 추가 기능을 계속 사용 하려는 경우 추가 기능을 업데이트 하 고 대상 서버에 배포 해야 합니다.  
   

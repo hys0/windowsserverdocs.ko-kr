@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server
-ms.openlocfilehash: c5c87be882a32958946198eb6ff1b9d7000577e7
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 3a93a1105862ffbf4fcbd1d23b15d9bcaa6010dc
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71385294"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950506"
 ---
 # <a name="install-extension-payload-on-a-managed-node"></a>관리 노드에 확장 페이로드 설치
 
@@ -25,7 +25,7 @@ ms.locfileid: "71385294"
 
 Windows 관리 센터에 대 한 [도구 확장](../develop-tool.md) 을 아직 만들지 않은 경우 만듭니다. 이 작업을 완료 한 후에는 확장을 만들 때 사용 된 값을 기록해 둡니다.
 
-| 값 | 설명 | 예 |
+| Value | 설명 | 예 |
 | ----- | ----------- | ------- |
 | ```{!Company Name}``` | 회사 이름 (공백 포함) | ```Contoso``` |
 | ```{!Tool Name}``` | 도구 이름 (공백 포함) | ```InstallOnNode``` |
@@ -140,11 +140,11 @@ export class DefaultModule { }
 > [!IMPORTANT]
 > 이 확장에 대 한 nuspec 파일에서 ```<id>``` 값이 프로젝트 ```manifest.json```의 이름과 일치 하 고 ```<version>``` ```\src\app\default.component.ts```에 추가 된 항목과 일치 하는 것이 중요 합니다. 또한 ```<files>```아래에 항목을 추가 합니다. 
 > 
-> ```<file src="Node\**\*.*" target="Node" />```을 참조하십시오.
+> ```<file src="Node\**\*.*" target="Node" />```을 차례로 클릭합니다.
 
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="https://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>contoso.install-on-node</id>
     <version>1.0.0</version>

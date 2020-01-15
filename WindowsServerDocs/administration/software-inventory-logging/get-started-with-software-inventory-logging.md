@@ -13,12 +13,12 @@ author: brentfor
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a38c984b2d81fc4db980a969ef0312109950b867
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: add11bf51570e3cafa2bd03ee3585de89f3eecab
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71383004"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75946964"
 ---
 # <a name="get-started-with-software-inventory-logging"></a>소프트웨어 인벤토리 로깅 시작
 
@@ -27,7 +27,7 @@ ms.locfileid: "71383004"
  소프트웨어 인벤토리 로깅은 서버 별로 Microsoft 소프트웨어 인벤토리 데이터를 수집 합니다. 소프트웨어 인벤토리 로깅을 Windows Server 2012 r 2와 함께 사용 하기 전에 인벤토리에 포함 되는 각 시스템에 [kb 3000850](https://support.microsoft.com/kb/3000850) 및 [kb 3060681](https://support.microsoft.com/kb/3060681) Windows 업데이트 설치 되어 있는지 확인 합니다. Windows Server 2016에 Windows 업데이트 필요 하지 않습니다. 또한 SIL의 기능을 사용 하 여 데이터를 집계 서버로 전달 하려면 네트워크에 대해 SSL 인증서가 유효한 지를 알고 있어야 합니다.
 
 ## <a name="BKMK_OVER"></a>기능 설명
-Windows Server의 소프트웨어 인벤토리 로깅은 서버 관리자가 서버에 설치된 Microsoft 소프트웨어 목록을 검색하는 데 도움이 되는 간단한 PowerShell cmdlet 집합이 포함된 기능입니다. 또한 이 데이터를 수집하고 집계를 위해 HTTPS 프로토콜을 사용하여 네트워크를 통해 정기적으로 대상 웹 서버에 전달하는 기능을 제공합니다. 주로 시간별 수집 및 전달을 위한 기능 관리도 PowerShell 명령을 통해 수행됩니다.
+Windows Server의 소프트웨어 인벤토리 로깅은 서버 관리자가 서버에 설치된 Microsoft 소프트웨어 목록을 검색하는 데 도움이 되는 간단한 PowerShell cmdlet 집합이 포함된 기능입니다. 또한 이러한 데이터를 수집하고 집계를 위해 HTTPS 프로토콜을 사용하여 네트워크를 통해 정기적으로 대상 웹 서버로 전달하는 기능도 제공합니다. 주로 시간별 수집 및 전달을 위한 기능 관리도 PowerShell 명령을 통해 수행됩니다.
 
 > [!NOTE]
 > 웹 서비스를 실행하는 집계 서버는 별도로 구성될 수 있습니다. [소프트웨어 인벤토리 로깅 집계](software-inventory-logging-aggregator.md)에 대해 자세히 알아봅니다.
@@ -49,5 +49,5 @@ Windows Server의 소프트웨어 인벤토리 로깅은 서버 관리자가 서
 [소프트웨어 인벤토리 로깅 관리](manage-software-inventory-logging.md)<br>
 [Windows PowerShell의 소프트웨어 인벤토리 로깅 Cmdlet](https://technet.microsoft.com/library/dn283390.aspx)<br>
 [Microsoft 평가 및 계획 도구 키트](https://www.microsoft.com/download/en/details.aspx?id=7826)
-[볼륨 정품 인증 관리 도구](http://blogs.technet.com/b/volume-licensing/)
+[볼륨 정품 인증 관리 도구](https://blogs.technet.com/b/volume-licensing/)
 

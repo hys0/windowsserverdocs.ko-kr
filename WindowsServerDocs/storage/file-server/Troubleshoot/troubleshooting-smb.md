@@ -7,12 +7,12 @@ audience: ITPro
 ms.topic: article
 ms.author: delhan
 ms.date: 12/25/2019
-ms.openlocfilehash: 88f707cc02514dc13c212c6462c47e4d3a94b5f5
-ms.sourcegitcommit: 8cf04db0bc44fd98f4321dca334e38c6573fae6c
+ms.openlocfilehash: 433221f9846e9e071557b5537974b5739131742b
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75654584"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949691"
 ---
 # <a name="advanced-troubleshooting-server-message-block-smb"></a>SMB (서버 메시지 블록) 고급 문제 해결
 
@@ -158,7 +158,7 @@ TCP/IP가 이러한 문제를 경험 하는지 확인 합니다.
 
 ## <a name="smb-related-system-files"></a>SMB 관련 시스템 파일
 
-이 섹션에서는 SMB 관련 시스템 파일을 나열 합니다. 시스템 파일을 업데이트 된 상태로 유지 하려면 최신 [업데이트 롤업이](https://support.microsoft.com/en-us/help/4498140/windows-10-update-history) 설치 되어 있는지 확인 합니다.
+이 섹션에서는 SMB 관련 시스템 파일을 나열 합니다. 시스템 파일을 업데이트 된 상태로 유지 하려면 최신 [업데이트 롤업이](https://support.microsoft.com/help/4498140/windows-10-update-history) 설치 되어 있는지 확인 합니다.
 
 **% Windir%\\system32\\드라이버**에 나열 된 SMB 클라이언트 이진 파일:
 

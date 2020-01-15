@@ -8,12 +8,12 @@ ms.author: jgerend
 manager: daveba
 ms.technology: storage-spaces
 ms.date: 06/20/2019
-ms.openlocfilehash: 20bc60abc747e6bab0ef59f38d0a392f18d75abe
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 0646922f409d4ea8abb85c927a329013e32016de
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71379380"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75947581"
 ---
 # <a name="cleanmgr"></a>cleanmgr
 
@@ -61,7 +61,7 @@ cleanmgr [/d <driveletter>] [/sageset:n]  [/sagerun:n] [/TUNEUP:n] [/LOWDISK] [/
 
 - 오프 라인 파일 **오프라인 파일** 네트워크에서 연결을 끊은 후 사용할 수 있도록 오프 라인으로 사용할 수 있도록 하려는 네트워크 파일의 로컬 복사본입니다. 파일 보기 단추를 클릭 하면 오프라인 파일 폴더가 열립니다.
 
-- **이전 파일 압축** -Windows는 최근에 사용 하지 않은 파일을 압축할 수 있습니다. 파일을 압축 하면 디스크 공간이 절약 되지만 파일을 계속 사용할 수 있습니다. 파일이 삭제 되지 않습니다. 파일이 서로 다른 속도로 압축 되므로 표시 되는 디스크 공간의 크기는 대략적으로 표시 됩니다. 옵션 단추를 사용 하면 디스크 정리가 사용 하지 않는 파일을 압축 하기 전까지 대기 하는 기간 (일)을 지정할 수 있습니다.
+- **이전 파일 압축** -Windows는 최근에 사용 하지 않은 파일을 압축할 수 있습니다. 파일을 압축 하면 디스크 공간이 절약 되지만 파일을 계속 사용할 수 있습니다. 파일은 삭제되지 않습니다. 파일이 서로 다른 속도로 압축 되므로 표시 되는 디스크 공간의 크기는 대략적으로 표시 됩니다. 옵션 단추를 사용 하면 디스크 정리가 사용 하지 않는 파일을 압축 하기 전까지 대기 하는 기간 (일)을 지정할 수 있습니다.
 
 - **콘텐츠 인덱서의 카탈로그 파일** -인덱싱 서비스는 디스크에 있는 파일의 인덱스를 유지 관리 하 여 파일 검색 속도를 향상 시키고 향상 시킵니다. 이러한 카탈로그 파일은 이전 인덱싱 작업에서 유지 되며 안전 하 게 삭제할 수 있습니다. **참고:** 카탈로그 파일 은% SystemRoot% 뿐만 아니라 둘 이상의 드라이브에 나타날 수 있습니다.
 
@@ -89,4 +89,4 @@ cleanmgr /tuneup:1
 
 ## <a name="additional-references"></a>추가 참조
 
-[Windows 10에서 드라이브 공간 확보](https://support.microsoft.com/en-us/help/12425/windows-10-free-up-drive-space)
+[Windows 10에서 드라이브 공간 확보](https://support.microsoft.com/help/12425/windows-10-free-up-drive-space)

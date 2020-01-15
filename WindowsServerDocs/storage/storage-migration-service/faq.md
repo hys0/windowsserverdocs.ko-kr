@@ -8,12 +8,12 @@ ms.date: 08/19/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: 6895c4b5f74beb237378060f82135d6f578986b7
-ms.sourcegitcommit: e92a78f8d307200e64617431a701b9112a9b4e48
+ms.openlocfilehash: b7a6dd37cfc054ead153d274ffa7f0d13844305e
+ms.sourcegitcommit: 10331ff4f74bac50e208ba8ec8a63d10cfa768cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71973858"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75953027"
 ---
 # <a name="storage-migration-service-frequently-asked-questions-faq"></a>Storage Migration Service 질문과 대답 (FAQ)
 
@@ -42,7 +42,7 @@ Storage Migration Service는 누적 업데이트 [KB4513534](https://support.mic
 
 ## <a name="is-domain-controller-migration-supported"></a>도메인 컨트롤러 마이그레이션이 지원 되나요?
 
-저장소 마이그레이션 서비스는 현재 Windows Server 2019에서 도메인 컨트롤러를 마이그레이션하지 않습니다. 한 가지 해결 방법으로, Active Directory 도메인에 도메인 컨트롤러가 두 개 이상 있는 한 도메인 컨트롤러를 마이그레이션한 후에 도메인 컨트롤러의 수준을 내린 후 이동이 완료 되 면 대상의 수준을 올립니다.
+저장소 마이그레이션 서비스는 현재 Windows Server 2019에서 도메인 컨트롤러를 마이그레이션하지 않습니다. 한 가지 해결 방법으로, Active Directory 도메인에 도메인 컨트롤러가 두 개 이상 있는 한 도메인 컨트롤러를 마이그레이션한 후에 도메인 컨트롤러의 수준을 내린 후 이동이 완료 되 면 대상의 수준을 올립니다. 도메인 컨트롤러 원본 또는 대상을 마이그레이션하도록 선택 하는 경우에는 이동할 수 없습니다. 에서 도메인 컨트롤러로 마이그레이션할 때는 사용자 및 그룹을 마이그레이션하지 않아야 합니다.
 
 ## <a name="what-attributes-are-migrated-by-the-storage-migration-service"></a>저장소 마이그레이션 서비스에서 마이그레이션되는 특성은 무엇 인가요?
 
@@ -62,13 +62,13 @@ Storage Migration Service는 SMB 공유의 모든 플래그, 설정 및 보안�
     - 데이터 암호화
     - Id 원격
     - 인프라
-    - 이름
+    - Name(이름)
     - 경로
-    - 범위
+    - Scoped
     - 범위 이름
     - 보안 설명자
     - 섀도 복사본
-    - 고유한
+    - 특수
     - 임시
 
 ## <a name="can-i-consolidate-multiple-servers-into-one-server"></a>여러 서버를 하나의 서버로 통합할 수 있나요?
@@ -89,9 +89,9 @@ Storage Migration Service는 저장소 마이그레이션 서비스 프록시 �
 
 - **대상 운영 체제에 Windows Server 2019를 사용 합니다.** Windows Server 2019에는 저장소 마이그레이션 서비스 프록시 서비스가 포함 되어 있습니다. 이 기능을 설치 하 고 Windows Server 2019 대상으로 마이그레이션하는 경우 모든 전송은 원본 및 대상 간의 직접적인 시야로 작동 합니다. 대상 컴퓨터가 Windows Server 2012 R2 또는 Windows Server 2016 인 경우이 서비스는 전송 하는 동안 orchestrator에서 실행 되며,이는 이중 홉을 전송 하 고 훨씬 더 느립니다. Windows Server 2012 R2 또는 Windows Server 2016 대상으로 실행 되는 여러 작업이 있는 경우 오 케 스트레이 터가 병목 상태가 됩니다. 
 
-- **기본 전송 스레드를 변경 합니다.** 저장소 마이그레이션 서비스 프록시 서비스는 지정 된 작업에서 동시에 8 개의 파일을 복사 합니다. 저장소 마이그레이션 서비스 프록시를 실행 하는 모든 노드에서 다음 레지스트리 REG_DWORD 값 이름을 decimal로 조정 하 여 동시 복사 스레드 수를 늘릴 수 있습니다.
+- **기본 전송 스레드를 변경 합니다.** 저장소 마이그레이션 서비스 프록시 서비스는 지정 된 작업에서 동시에 8 개의 파일을 복사 합니다. 저장소 마이그레이션 서비스 프록시를 실행 하는 모든 노드에서 다음 레지스트리 REG_DWORD 값 이름을 10 진수로 조정 하 여 동시 복사 스레드 수를 늘릴 수 있습니다.
 
-    HKEY_Local_Machine\Software\Microsoft\SMSProxy
+    HKEY_Local_Machine \Software\Microsoft\SMSProxy
     
     FileTransferThreadCount
 
@@ -110,7 +110,7 @@ Storage Migration Service는 저장소 마이그레이션 서비스 프록시 �
    - NIC 팀을 사용 하 여 구성 된 네트워크 어댑터 중 하나
    - RDMA를 지원하는 하나 이상의 네트워크 어댑터
 
-- **드라이버를 업데이트 합니다.** 해당 하는 경우, 최신 공급 업체 저장소와 엔클로저 펌웨어 및 드라이버, 최신 공급 업체 HBA 드라이버, 최신 공급 업체 BIOS/UEFI 펌웨어, 최신 공급 업체 네트워크 드라이버 및 원본, 대상 및 orchestrator의 최신 마더보드 칩셋 드라이버를 설치 합니다. 서버용. 필요에 따라 노드를 다시 시작합니다. 공유 저장소 및 네트워킹 하드웨어 구성은 하드웨어 공급업체 설명서를 참조하세요.
+- **드라이버를 업데이트 합니다.** 필요에 따라 원본, 대상 및 오 케 스트레이 터 서버에 최신 공급 업체 저장소와 엔클로저 펌웨어 및 드라이버, 최신 공급 업체 HBA 드라이버, 최신 공급 업체 BIOS/UEFI 펌웨어, 최신 공급 업체 네트워크 드라이버 및 최신 마더보드 칩셋 드라이버를 설치 합니다. 필요에 따라 노드를 다시 시작합니다. 공유 저장소 및 네트워킹 하드웨어 구성은 하드웨어 공급업체 설명서를 참조하세요.
 
 - **고성능 처리를 사용 합니다.** 서버의 BIOS/UEFI 설정이 고성능을 지원하는지 확인합니다(예: C-상태 사용 안 함, QPI 속도 설정, NUMA 사용, 가장 높은 메모리 주파수 설정 등). Windows Server의 전원 관리가 고성능으로 설정 되어 있는지 확인 합니다. 필요에 따라 다시 시작합니다. 마이그레이션을 완료 한 후에는 이러한 상태를 적절 한 상태로 되돌리는 것을 잊지 마세요. 
 
@@ -129,12 +129,12 @@ Windows Server 2019에 제공 된 Storage Migration Service 버전은 NTFS에서
 Storage Migration Service는 기본적으로 hidden c:\programdata\microsoft\storagemigrationservice 폴더에 설치 된 ESE (extensible Storage engine) 데이터베이스를 사용 합니다. 이 데이터베이스는 작업이 추가 되 고 전송이 완료 되 면 증가 하며, 작업을 삭제 하지 않을 경우 수백만 개의 파일을 마이그레이션한 후에는 상당한 드라이브 공간을 사용할 수 있습니다. 데이터베이스를 이동 해야 하는 경우 다음 단계를 수행 합니다.
 
 1. Orchestrator 컴퓨터에서 "Storage Migration Service" 서비스를 중지 합니다.
-2. @No__t-0 폴더의 소유권 가져오기
+2. `%programdata%/Microsoft/StorageMigrationService` 폴더의 소유권 가져오기
 3. 해당 공유 및 모든 파일 및 하위 폴더에 대 한 모든 권한을 보유 하는 사용자 계정을 추가 합니다.
 4. Orchestrator 컴퓨터의 다른 드라이브로 폴더를 이동 합니다.
 5. 다음 레지스트리 REG_SZ 값을 설정 합니다.
 
-    HKEY_Local_Machine\Software\Microsoft\SMS DatabasePath = *다른 볼륨의 새 데이터베이스 폴더에* 대 한 경로입니다. 
+    HKEY_Local_Machine \Software\Microsoft\SMS DatabasePath = *다른 볼륨의 새 데이터베이스 폴더에* 대 한 경로입니다. 
 6. 시스템에 해당 폴더의 모든 파일 및 하위 폴더에 대 한 모든 권한이 있는지 확인 합니다.
 7. 자신의 계정 사용 권한을 제거 합니다.
 8. "Storage Migration Service" 서비스를 시작 합니다.
@@ -145,7 +145,7 @@ Storage Migration Service에 대 한 피드백을 제공 하려면:
 
 - Windows 10에 포함 된 피드백 허브 도구를 사용 하 여 "기능 제안"을 클릭 하 고 "Windows Server" 범주 및 "저장소 마이그레이션"의 하위 범주를 지정 합니다.
 - [Windows Server UserVoice](https://windowsserver.uservoice.com) 사이트 사용
-- 전자 메일 smsfeed@microsoft.com
+- 메일 smsfeed@microsoft.com
 
 파일 버그:
 
@@ -158,6 +158,6 @@ Storage Migration Service에 대 한 피드백을 제공 하려면:
  - [Windows Server 2019 Technet 포럼](https://social.technet.microsoft.com/Forums/en-US/home?forum=ws2019&filter=alltypes&sort=lastpostdesc) 에 게시 
  - [Microsoft 지원](https://support.microsoft.com) 를 통해 지원 사례를 엽니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Storage Migration Service 개요](overview.md)

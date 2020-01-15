@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 27cf04e8745aeab5cd1f2ce379c8506be642fea2
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e5c28d8e970bd7db896073bf8cddb168ffe9deff
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71381609"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75946841"
 ---
 # <a name="bitsadmin-getfilestotal"></a>bitsadmin getfilestotal
 
@@ -38,13 +38,13 @@ bitsadmin /GetFilesTotal <Job>
 |---------|-----------|
 |작업|작업의 표시 이름 또는 GUID|
 
-## <a name="BKMK_examples"></a>예와
+## <a name="BKMK_examples"></a>예제
 
 다음 예제에서는 명명 된 작업에 포함 된 파일의 수를 검색 *Mydownloadjob*합니다.
 ```
 C:\>bitsadmin /GetFilesTotal myDownloadJob
 ```
 
-# #
+## <a name="see-also"></a>참고 항목
 
-[명령줄 구문 키](command-line-syntax-key.md) 참고 항목
+[명령줄 구문 키](command-line-syntax-key.md)

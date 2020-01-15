@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: b0d6133a6fb43b8624dc1329db632fb5dd4aa070
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 4f5d2cfa8383bcf3c0813b272f8c4828473b8df9
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71358446"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75948603"
 ---
 # <a name="client-access-control-policies-in-ad-fs-20"></a>AD FS 2.0의 클라이언트 Access Control 정책
 Active Directory Federation Services 2.0의 클라이언트 액세스 정책을 사용 하 여 리소스에 대 한 액세스를 제한 하거나 사용자에 게 부여할 수 있습니다.  이 문서에서는 AD FS 2.0에서 클라이언트 액세스 정책을 사용 하도록 설정 하는 방법 및 가장 일반적인 시나리오를 구성 하는 방법을 설명 합니다.
@@ -25,7 +25,7 @@ Active Directory Federation Services 2.0의 클라이언트 액세스 정책을 
 
 ### <a name="step-1-install-the-update-rollup-2-for-ad-fs-20-package-on-your-ad-fs-servers"></a>1 단계: AD FS 서버에 AD FS 2.0 패키지에 대 한 업데이트 롤업 2 설치
 
-[Active Directory Federation Services (AD FS) 2.0 용 업데이트 롤업 2](https://support.microsoft.com/en-us/help/2681584/description-of-update-rollup-2-for-active-directory-federation-services-ad-fs-2.0) 패키지를 다운로드 하 고 모든 페더레이션 서버 및 페더레이션 서버 프록시에 설치 합니다.
+[Active Directory Federation Services (AD FS) 2.0 용 업데이트 롤업 2](https://support.microsoft.com/help/2681584/description-of-update-rollup-2-for-active-directory-federation-services-ad-fs-2.0) 패키지를 다운로드 하 고 모든 페더레이션 서버 및 페더레이션 서버 프록시에 설치 합니다.
 
 ### <a name="step-2-add-five-claim-rules-to-the-active-directory-claims-provider-trust"></a>2 단계: 클레임 공급자 트러스트 Active Directory 5 개 클레임 규칙 추가
 
@@ -45,7 +45,7 @@ Active Directory 된 클레임 공급자 트러스트에서 새로운 각 요청
 5. 규칙 구성 페이지의 클레임 규칙 이름에이 규칙에 대 한 표시 이름을 입력 합니다. 들어오는 클레임 형식에 다음 클레임 유형 URL을 입력 하 고 모든 클레임 값 통과를 선택 합니다.</br>
         `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip`</br>
 6. 규칙을 확인 하려면 목록에서 규칙을 선택 하 고 규칙 편집을 클릭 한 다음 규칙 언어 보기를 클릭 합니다. 클레임 규칙 언어는 다음과 같이 표시 되어야 합니다. `c:[Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip"] => issue(claim = c);`
-7. 마침을 클릭 합니다.
+7. 마침을 클릭합니다.
 8. 클레임 규칙 편집 대화 상자에서 확인을 클릭 하 여 규칙을 저장 합니다.
 9. 2 ~ 6 단계를 반복 하 여 5 개의 규칙을 모두 만들 때까지 아래에 표시 된 나머지 4 개의 클레임 유형에 대해 추가 클레임 규칙을 만듭니다.
 
@@ -83,7 +83,7 @@ Active Directory 된 클레임 공급자 트러스트에서 새로운 각 요청
     NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip",
     Value=~"customer-provided public ip address regex"])
     => issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = "true");` 
-6. 마침을 클릭 합니다. 새 규칙이 발급 권한 부여 규칙 목록의 모든 사용자에 게 액세스 허용 규칙 바로 아래에 표시 되는지 확인 합니다.
+6. 마침을 클릭합니다. 새 규칙이 발급 권한 부여 규칙 목록의 모든 사용자에 게 액세스 허용 규칙 바로 아래에 표시 되는지 확인 합니다.
 7. 규칙을 저장 하려면 클레임 규칙 편집 대화 상자에서 확인을 클릭 합니다.
 
 >[!NOTE]
@@ -110,7 +110,7 @@ Active Directory 된 클레임 공급자 트러스트에서 새로운 각 요청
     NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip",
     Value=~"customer-provided public ip address regex"])
     => issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = "true");`
-6. 마침을 클릭 합니다. 새 규칙이 발급 권한 부여 규칙 목록의 모든 사용자에 게 액세스 허용 규칙 바로 아래에 표시 되는지 확인 합니다.
+6. 마침을 클릭합니다. 새 규칙이 발급 권한 부여 규칙 목록의 모든 사용자에 게 액세스 허용 규칙 바로 아래에 표시 되는지 확인 합니다.
 7. 규칙을 저장 하려면 클레임 규칙 편집 대화 상자에서 확인을 클릭 합니다.
 
 >[!NOTE]
@@ -136,7 +136,7 @@ Active Directory 된 클레임 공급자 트러스트에서 새로운 각 요청
     Value=~"customer-provided public ip address regex"]) &&
     NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path", Value == "/adfs/ls/"])
     => issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = "true");`
-6. 마침을 클릭 합니다. 새 규칙이 발급 권한 부여 규칙 목록의 모든 사용자에 게 액세스 허용 규칙 바로 아래에 표시 되는지 확인 합니다.
+6. 마침을 클릭합니다. 새 규칙이 발급 권한 부여 규칙 목록의 모든 사용자에 게 액세스 허용 규칙 바로 아래에 표시 되는지 확인 합니다.
 7. 규칙을 저장 하려면 클레임 규칙 편집 대화 상자에서 확인을 클릭 합니다.
 
 ### <a name="scenario-4-block-all-external-access-to-office-365-for-designated-active-directory-groups"></a>시나리오 4: 지정 된 Active Directory 그룹에 대해 Office 365에 대 한 모든 외부 액세스 차단
@@ -156,7 +156,7 @@ Active Directory 된 클레임 공급자 트러스트에서 새로운 각 요청
     NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip",
     Value=~"customer-provided public ip address regex"])
     => issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = "true");`
-6. 마침을 클릭 합니다. 새 규칙이 발급 권한 부여 규칙 목록의 모든 사용자에 게 액세스 허용 규칙 바로 아래에 표시 되는지 확인 합니다.
+6. 마침을 클릭합니다. 새 규칙이 발급 권한 부여 규칙 목록의 모든 사용자에 게 액세스 허용 규칙 바로 아래에 표시 되는지 확인 합니다.
 7. 규칙을 저장 하려면 클레임 규칙 편집 대화 상자에서 확인을 클릭 합니다.
 
 
@@ -195,7 +195,7 @@ Vpn 또는 da의 구성에 따라 VPN 또는 Microsoft DirectAccess (DA)를 통�
 Exchange Online 인프라와 관련 된 IP 주소가 목록에 표시 되지 않습니다.
 
 
-#### <a name="regular-expressions"></a>정규식
+#### <a name="regular-expressions"></a>정규식을 참조하세요.
 
 IP 주소 범위와 일치 해야 하는 경우 비교를 수행 하는 정규식을 생성 해야 합니다. 다음 일련의 단계에서는 다음 주소 범위와 일치 하도록 이러한 식을 구성 하는 방법에 대 한 예제를 제공 합니다. 공용 IP 범위와 일치 하도록 이러한 예제를 변경 해야 합니다.
 

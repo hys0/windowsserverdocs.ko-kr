@@ -9,37 +9,37 @@ ms.date: 03/16/2018
 ms.topic: article
 author: kaushika-msft
 ms.author: elizapo
-ms.openlocfilehash: 1ef9d511f8946452c5f9f05628c67c5908c53a55
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 61c10f25ac97934f73c4f393e2c91c9b36fc59fd
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402765"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950171"
 ---
 # <a name="top-support-solutions-for-windows-server-2016"></a>Windows Server 2016을 위한 상위 지원 솔루션
 
-Microsoft는 Windows Server에 대한 업데이트 및 솔루션을 정기적으로 릴리스합니다. 서버가 보안 업데이트를 포함한 향후 업데이트를 받을 수 있도록 업데이트된 상태로 유지해야 합니다. 릴리스된 업데이트의 전체 목록은 [Windows 10 및 Windows Server 2016 업데이트 기록](https://support.microsoft.com/en-us/help/4000825/windows-10-windows-server-2016-update-history)을 확인하세요.
+Microsoft는 Windows Server에 대한 업데이트 및 솔루션을 정기적으로 릴리스합니다. 서버가 보안 업데이트를 포함한 향후 업데이트를 받을 수 있도록 업데이트된 상태로 유지해야 합니다. 릴리스된 업데이트의 전체 목록은 [Windows 10 및 Windows Server 2016 업데이트 기록](https://support.microsoft.com/help/4000825/windows-10-windows-server-2016-update-history)을 확인하세요.
 
 Windows Server 2016을 사용할 때 경험하는 가장 일반적인 문제에 대한 최고의 Microsoft 지원 해결 방법입니다. 아래 링크는 참조 자료 문서, 업데이트 및 라이브러리 문서에 대한 링크를 포함합니다.
 
 >[!TIP]
-> 이전 버전의 Windows Server에 대한 자세한 내용이 궁금하십니까? docs.microsoft.com에서 다른 [Windows Server 라이브러리](/previous-versions/windows/)를 확인할 수 있습니다. 또한 특정 정보에 대해 [이 사이트를 검색](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions)할 수 있습니다.
+> 이전 버전의 Windows Server에 대한 정보를 찾으시나요? docs.microsoft.com에서 다른 [Windows Server 라이브러리](/previous-versions/windows/)를 확인하세요. [이 사이트에서 특정 정보를 검색](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions)할 수도 있습니다.
 
 ## <a name="solutions-for-installing-or-upgrading-windows-server"></a>Windows Server 설치 또는 업그레이드 솔루션
 
 - [Windows 10 업그레이드 오류 해결: IT 전문가를 위한 기술 정보](https://docs.microsoft.com/windows/deployment/upgrade/resolve-windows-10-upgrade-errors)
-- [Windows 10 버전 1607 및 Windows Server 2016의 서비스 스택 업데이트: 2017 년 8 월 8 일](https://support.microsoft.com/en-US/help/4035631)
-- [Windows 10 버전 1607 및 Windows Server 2016로 업그레이드에 대 한 호환성 업데이트: 2017 년 8 월 3 일](https://support.microsoft.com/en-US/help/4033524)
-- [Windows 기반 Azure Vm에서는 내부 시스템 업그레이드가 지원 되지 않습니다.](https://support.microsoft.com/en-US/help/4014997)
-- [Windows Server 2016에 대 한 업그레이드 및 변환 옵션](../get-started/supported-upgrade-paths.md)
+- [Windows 10 버전 1607 및 Windows Server 2016 용 서비스 스택 업데이트: 8 월 8 일, 2017](https://support.microsoft.com/help/4035631)
+- [Windows 10 버전 1607 및 Windows Server 2016로 업그레이드에 대 한 호환성 업데이트: 2017 년 8 월 3 일](https://support.microsoft.com/help/4033524)
+- [Windows 기반 Azure Vm에서는 내부 시스템 업그레이드가 지원 되지 않습니다.](https://support.microsoft.com/help/4014997)
+- [Windows Server 2016용 업그레이드 및 변환 옵션](../get-started/supported-upgrade-paths.md)
 - [Windows Server 2016에 대 한 서버 역할 업그레이드 및 마이그레이션 매트릭스](../get-started/server-role-upgradeability-table.md)
 - [Windows Server 설치 및 업그레이드](../get-started/installation-and-upgrade.md)
-- [릴리스 정보: Windows Server 2016의 중요한 이슈](../get-started/windows-server-2016-ga-release-notes.md)
+- [릴리스 정보: Windows Server 2016의 중요 한 문제](../get-started/windows-server-2016-ga-release-notes.md)
 - [Windows Server 2016으로 전환 시 권장 사항](../get-started/recommendations-moving-to-server2016.md)
 
 ## <a name="solutions-for-volume-activation"></a>볼륨 정품 인증 솔루션
 - [Windows Server 2016 정품 인증](../get-started/server-2016-activation.md)
-- [활성화 방법 검토 및 선택](https://technet.microsoft.com/library/jj134256(ws.11).aspx)
+- [정품 인증 방법 검토 및 선택](https://technet.microsoft.com/library/jj134256(ws.11).aspx)
 - [볼륨 정품 인증에 대 한 정품 인증 오류 코드](https://technet.microsoft.com/library/dn502528.aspx)
 - [KMS (키 관리 서비스) 문제를 해결 하는 방법](https://technet.microsoft.com/library/ee939272.aspx)
 - [볼륨 정품 인증 문제 해결](https://technet.microsoft.com/library/ff793439.aspx)
@@ -56,7 +56,7 @@ Windows Server 2016을 사용할 때 경험하는 가장 일반적인 문제에 
 - [AD DS 설치 및 제거에 대 한 알려진 문제](https://technet.microsoft.com/library/cc754463(v=ws.10).aspx)
 
 ## <a name="solutions-for-active-directory-federation-services-ad-fs"></a>AD FS(Active Directory Federation Services)에 대한 해결 방법
-- [Azure Active Directory를 사용 하 여 Windows 도메인 가입 장치의 자동 등록을 구성 하는 방법](/azure/active-directory/active-directory-conditional-access-automatic-device-registration-setup)
+- [Windows 도메인 조인 디바이스의 Azure Active Directory 자동 등록을 구성하는 방법](/azure/active-directory/active-directory-conditional-access-automatic-device-registration-setup)
 - [클레임 발급 설정](/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup#step-2-setup-issuance-of-claims)
 - [LDAP 디렉터리에 저장된 사용자를 인증하도록 AD FS 구성](../identity/ad-fs/operations/configure-ad-fs-to-authenticate-users-stored-in-ldap-directories.md)
 - [인증서 인증의 대체 호스트 이름 바인딩에 대한 AD FS 지원](../identity/ad-fs/operations/ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication.md)
@@ -70,7 +70,7 @@ Windows Server 2016을 사용할 때 경험하는 가장 일반적인 문제에 
 
 - [Active Directory 복제 문제 해결](../identity/ad-ds/manage/troubleshoot/troubleshooting-active-directory-replication-problems.md)
 - [Microsoft 다운로드 센터에서 Active Directory 복제 상태 도구 다운로드](https://www.microsoft.com/en-in/download/details.aspx?id=30005)
-- [e2e 일반적인 Active Directory 복제 오류 문제를 해결 하는 방법](https://support.microsoft.com/kb/3108513)
+- [e2e: 일반적인 Active Directory 복제 오류 문제를 해결 하는 방법](https://support.microsoft.com/kb/3108513)
 - [AD 복제 오류 8606: 개체를 만들기 위해 지정 된 특성이 부족 합니다.](https://support.microsoft.com/kb/2028495)
 - [Windows 2000 Server 및 Windows Server 2003에서 Active Directory의 인바운드 복제 중에 이벤트 ID 2108 및 이벤트 ID 1084이 발생 합니다.](https://support.microsoft.com/kb/837932)
 - [AD 복제 오류 8451: 복제 작업에서 데이터베이스 오류가 발생 했습니다.](https://support.microsoft.com/kb/2645996)

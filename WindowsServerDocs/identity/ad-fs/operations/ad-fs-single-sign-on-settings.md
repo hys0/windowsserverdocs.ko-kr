@@ -1,6 +1,6 @@
 ---
 ms.assetid: 1a443181-7ded-4912-8e40-5aa447faf00c
-title: AD FS 2016 Single Sign On 설정
+title: AD FS 2016 Single Sign-On 설정
 description: ''
 author: billmath
 ms.author: billmath
@@ -9,12 +9,12 @@ ms.date: 08/17/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 311789fdec160faeeeba0ecf26491d1e0cd6105d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 76c34dc518f4578b4ae2ead3459f1d79c191b3d7
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407390"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949194"
 ---
 # <a name="ad-fs-single-sign-on-settings"></a>Single Sign-on 설정 AD FS
 
@@ -46,9 +46,9 @@ AD FS는 여러 유형의 Single Sign-on 환경을 지원 합니다.
   
  위에서 설명한 대로, 영구 SSO를 사용 하지 않는 한 등록 된 장치의 사용자는 항상 영구 SSO를 가져옵니다. 등록 되지 않은 장치의 경우 "로그인 유지" (KMSI) 기능을 사용 하도록 설정 하 여 영구 SSO를 구현할 수 있습니다. 
  
- Windows Server 2012 r 2의 경우 "로그인 유지" 시나리오에 대해 PSSO를 사용 하도록 설정 하려면 [WINDOWS RT 8.1, Windows 8.1 및 Windows Server 2012 r 2 용 8 월 2014 업데이트 롤업](https://support.microsoft.com/en-us/kb/2975719)의 일부인이 [핫픽스](https://support.microsoft.com/en-us/kb/2958298/) 를 설치 해야 합니다.   
+ Windows Server 2012 r 2의 경우 "로그인 유지" 시나리오에 대해 PSSO를 사용 하도록 설정 하려면 [WINDOWS RT 8.1, Windows 8.1 및 Windows Server 2012 r 2 용 8 월 2014 업데이트 롤업](https://support.microsoft.com/kb/2975719)의 일부인이 [핫픽스](https://support.microsoft.com/kb/2958298/) 를 설치 해야 합니다.   
 
-태스크 | PowerShell | 설명
+작업 | PowerShell | 설명
 ------------ | ------------- | -------------
 영구 SSO 사용/사용 안 함 | ```` Set-AdfsProperties –EnablePersistentSso <Boolean> ````| 영구 SSO는 기본적으로 사용 하도록 설정 되어 있습니다. 사용 하지 않도록 설정 된 경우 PSSO 쿠키가 작성 되지 않습니다.
 "로그인 유지/사용 안 함" | ```` Set-AdfsProperties –EnableKmsi <Boolean> ```` | "로그인 유지" 기능은 기본적으로 사용 하지 않도록 설정 되어 있습니다. 사용 하도록 설정 된 경우 최종 사용자에 게 AD FS 로그인 페이지에 "로그인 유지" 선택이 표시 됩니다.
@@ -127,18 +127,18 @@ Set-AdfsProperties -PersistentSsoCutoffTime <DateTime>
 ```
   
 ## <a name="enable-psso-for-office-365-users-to-access-sharepoint-online"></a>Office 365 사용자가 SharePoint Online에 액세스할 수 있도록 PSSO 사용  
- PSSO를 사용 하도록 설정 하 고 AD FS에서 구성한 후에는 사용자가 인증 된 후 영구 쿠키를 작성 AD FS. 다음에 사용자가 들어올 때 영구 쿠키가 여전히 유효한 경우 사용자는 다시 인증을 위해 자격 증명을 제공할 필요가 없습니다. AD FS에서 다음 두 클레임 규칙을 구성 하 여 Microsoft Azure AD 및 SharePoint Online에서 지 속성을 트리거하는 방법으로 Office 365 및 SharePoint Online 사용자에 대 한 추가 인증 프롬프트를 방지할 수도 있습니다.  Office 365 사용자가 SharePoint online에 액세스할 수 있도록 PSSO를 사용 하도록 설정 하려면이 [핫픽스](https://support.microsoft.com/en-us/kb/2958298/) 를 설치 해야 합니다 .이 핫픽스는 [windows RT 8.1, Windows 8.1 및 windows Server 2012 r 2 용 8 월 2014 업데이트 롤업](https://support.microsoft.com/en-us/kb/2975719)의 일부 이기도 합니다.  
+ PSSO를 사용 하도록 설정 하 고 AD FS에서 구성한 후에는 사용자가 인증 된 후 영구 쿠키를 작성 AD FS. 다음에 사용자가 들어올 때 영구 쿠키가 여전히 유효한 경우 사용자는 다시 인증을 위해 자격 증명을 제공할 필요가 없습니다. AD FS에서 다음 두 클레임 규칙을 구성 하 여 Microsoft Azure AD 및 SharePoint Online에서 지 속성을 트리거하는 방법으로 Office 365 및 SharePoint Online 사용자에 대 한 추가 인증 프롬프트를 방지할 수도 있습니다.  Office 365 사용자가 SharePoint online에 액세스할 수 있도록 PSSO를 사용 하도록 설정 하려면이 [핫픽스](https://support.microsoft.com/kb/2958298/) 를 설치 해야 합니다 .이 핫픽스는 [windows RT 8.1, Windows 8.1 및 windows Server 2012 r 2 용 8 월 2014 업데이트 롤업](https://support.microsoft.com/kb/2975719)의 일부 이기도 합니다.  
   
  InsideCorporateNetwork 클레임을 통과 하는 발급 변환 규칙  
   
 ```  
 @RuleTemplate = "PassThroughClaims"  
 @RuleName = "Pass through claim - InsideCorporateNetwork"  
-c:[Type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork"]  
+c:[Type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork"]  
 => issue(claim = c);   
 A custom Issuance Transform rule to pass through the persistent SSO claim  
 @RuleName = "Pass Through Claim - Psso"  
-c:[Type == "http://schemas.microsoft.com/2014/03/psso"]  
+c:[Type == "https://schemas.microsoft.com/2014/03/psso"]  
 => issue(claim = c);  
   
 ```
@@ -163,23 +163,23 @@ c:[Type == "http://schemas.microsoft.com/2014/03/psso"]
     <th>예</th>
   </tr>
  <tr align="center">
-    <td>SSO =&gt;새로 고침 토큰 설정 =&gt;</td>
+    <td>SSO =&gt;set Refresh Token =&gt;</td>
     <td>8 시간</td>
-    <td>해당 사항 없음</td>
-    <td>해당 사항 없음</td>
+    <td>해당 없음</td>
+    <td>해당 없음</td>
     <th></th>
     <td>8 시간</td>
-    <td>해당 사항 없음</td>
-    <td>해당 사항 없음</td>
+    <td>해당 없음</td>
+    <td>해당 없음</td>
   </tr>
 
  <tr align="center">
-    <td>Pss\=&gt;set Refresh Token =&gt;</td>
-    <td>해당 사항 없음</td>
+    <td>PSSO =&gt;set Refresh Token =&gt;</td>
+    <td>해당 없음</td>
     <td>24 시간</td>
-    <td>7 일</td>
+    <td>7일</td>
     <th></th>
-    <td>해당 사항 없음</td>
+    <td>해당 없음</td>
     <td>24 시간</td>
     <td>최대 90 일 동안 14 일 기간</td>
   </tr>
