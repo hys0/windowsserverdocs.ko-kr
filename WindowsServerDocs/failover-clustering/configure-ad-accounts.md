@@ -6,12 +6,12 @@ ms.technology: storage-failover-clustering
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: 8a540361cdd07f6adfc1c929d77c510ef8433d6d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 47f3a515379eb79f628a0ee97ef2c7965c4d8d50
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71369886"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75948152"
 ---
 # <a name="configuring-cluster-accounts-in-active-directory"></a>Active Directory에서 클러스터 계정 구성하는 중
 
@@ -59,7 +59,7 @@ Windows Server에서 장애 조치 (failover) 클러스터를 만들고 클러�
 <tr class="even">
 <td><p>클러스터 이름 계정 (클러스터 자체의 컴퓨터 계정)</p></td>
 <td><p>클러스터 만들기 마법사가 실행 되 면 도메인의 컴퓨터 계정에 사용 되는 기본 컨테이너에 클러스터 이름 계정이 만들어집니다. 기본적으로 클러스터 이름 계정 (예: 다른 컴퓨터 계정)은 도메인에 최대 10 개의 컴퓨터 계정을 만들 수 있습니다.</p>
-<p>클러스터를 만들기 전에 클러스터 이름 계정 (클러스터 이름 개체)을 만드는 경우 (즉, 계정 사전 준비) 컴퓨터에 사용 되는 컨테이너의 <strong>컴퓨터 개체 만들기</strong> 및 <strong>모든 속성 읽기</strong> 권한을 부여 해야 합니다. 도메인의 계정입니다. 또한 계정을 사용 하지 않도록 설정 하 고 클러스터를 설치 하는 관리자가 사용할 계정에 대 한 <strong>모든</strong> 권한을 부여 해야 합니다. 자세한 내용은이 가이드의 뒷부분에 나오는 <a href="#steps-for-prestaging-the-cluster-name-account" data-raw-source="[Steps for prestaging the cluster name account](#steps-for-prestaging-the-cluster-name-account)">클러스터 이름 계정을 사전 준비 하는 단계</a>를 참조 하세요.</p></td>
+<p>클러스터를 만들기 전에 클러스터 이름 계정 (클러스터 이름 개체)을 만드는 경우 (즉, 계정 사전 준비) 도메인의 컴퓨터 계정에 사용 되는 컨테이너의 <strong>컴퓨터 개체 만들기</strong> 및 <strong>모든 속성 읽기</strong> 권한을 부여 해야 합니다. 또한 계정을 사용 하지 않도록 설정 하 고 클러스터를 설치 하는 관리자가 사용할 계정에 대 한 <strong>모든</strong> 권한을 부여 해야 합니다. 자세한 내용은이 가이드의 뒷부분에 나오는 <a href="#steps-for-prestaging-the-cluster-name-account" data-raw-source="[Steps for prestaging the cluster name account](#steps-for-prestaging-the-cluster-name-account)">클러스터 이름 계정을 사전 준비 하는 단계</a>를 참조 하세요.</p></td>
 </tr>
 <tr class="odd">
 <td><p>클러스터 된 서비스 또는 응용 프로그램의 컴퓨터 계정</p></td>
@@ -89,7 +89,7 @@ Windows Server에서 장애 조치 (failover) 클러스터를 만들고 클러�
 
 ![](media/configure-ad-accounts/Cc731002.beecc4f7-049c-4945-8fad-2cceafd6a4a5(WS.10).gif)
 
-다이어그램에 표시 되는 문제 유형이 발생 하면 특정 이벤트 (1193, 1194, 1206 또는 1207)가 이벤트 뷰어에 기록 됩니다. 이러한 이벤트에 대 한 자세한 내용은을 [http://go.microsoft.com/fwlink/?LinkId=118271](http://go.microsoft.com/fwlink/?linkid=118271)참조 하십시오.
+다이어그램에 표시 되는 문제 유형이 발생 하면 특정 이벤트 (1193, 1194, 1206 또는 1207)가 이벤트 뷰어에 기록 됩니다. 이러한 이벤트에 대 한 자세한 내용은 [https://go.microsoft.com/fwlink/?LinkId=118271](https://go.microsoft.com/fwlink/?linkid=118271)를 참조 하세요.
 
 클러스터 된 서비스 또는 응용 프로그램에 대 한 계정을 만드는 경우와 유사한 문제가 발생 하는 것은 컴퓨터 개체를 만드는 도메인 전체 할당량 (기본적으로 10)에 도달 하는 경우에 발생할 수 있습니다. 이 경우 도메인 전체 설정 이지만 신중한 고려 후에만 변경 해야 하며, 앞의 다이어그램에는이를 확인 한 후에만 변경 해야 합니다. 상황을 설명 합니다. 자세한 내용은이 가이드의 뒷부분에 나오는 [클러스터 관련 Active Directory 계정 변경으로 인해 발생 하는 문제를 해결 하는 단계](#steps-for-troubleshooting-problems-caused-by-changes-in-cluster-related-active-directory-accounts)를 참조 하세요.
 
@@ -97,7 +97,7 @@ Windows Server에서 장애 조치 (failover) 클러스터를 만들고 클러�
 
 앞의 세 섹션에서 설명한 것 처럼 장애 조치 (failover) 클러스터에서 클러스터링 된 서비스 및 응용 프로그램을 성공적으로 구성 하기 전에 특정 요구 사항을 충족 해야 합니다. 가장 기본적인 요구 사항은 클러스터 노드 (단일 도메인 내)의 위치와 클러스터를 설치 하는 사용자 계정의 사용 권한 수준에 영향을 주는 것입니다. 이러한 요구 사항을 충족 하는 경우 클러스터에 필요한 다른 계정은 장애 조치 (failover) 클러스터 마법사에서 자동으로 만들 수 있습니다. 다음 목록에서는 이러한 기본 요구 사항에 대해 자세히 설명 합니다.
 
-  - **노드에** 모든 노드는 동일한 Active Directory 도메인에 있어야 합니다. 도메인은 Active Directory를 포함 하지 않는 Windows NT 4.0을 기반으로 할 수 없습니다.  
+  - **노드:** 모든 노드는 동일한 Active Directory 도메인에 있어야 합니다. 도메인은 Active Directory를 포함 하지 않는 Windows NT 4.0을 기반으로 할 수 없습니다.  
       
   - **클러스터를 설치 하는 사람의 계정:** 클러스터를 설치 하는 사용자는 다음과 같은 특징을 가진 계정을 사용 해야 합니다.  
       
@@ -118,13 +118,13 @@ Windows Server에서 장애 조치 (failover) 클러스터를 만들고 클러�
 
 클러스터를 설치 하는 사용자의 계정은 클러스터 자체에 대 한 컴퓨터 계정이 생성 되는 기반을 제공 하기 때문에 중요 합니다.
 
-다음 절차를 완료 하는 데 필요한 최소 그룹 구성원 자격은 도메인 계정을 만들고 도메인에서 필요한 사용 권한을 할당 하 고 있는지, 아니면 다른 사람이 만든 계정만 장애 조치 (failover) 클러스터의 노드가 될 서버의 로컬 **관리자** 그룹 이 절차를 완료 하려면 이전에 **Account Operators** 또는 이와 동등한 멤버 자격이 최소한 필요 합니다. 후자의 경우 장애 조치 (failover) 클러스터의 노드가 될 서버에서 로컬 **관리자** 그룹의 구성원 이거나 이와 동등한 자격이 모두 필요 합니다. 에서 [http://go.microsoft.com/fwlink/?LinkId=83477](http://go.microsoft.com/fwlink/?linkid=83477)적절 한 계정 및 그룹 멤버 자격 사용에 대 한 세부 정보를 검토 합니다.
+다음 절차를 완료 하는 데 필요한 최소 그룹 구성원 자격은 도메인 계정을 만들고, 도메인에서 필요한 사용 권한을 할당 하 고 있는지 여부 또는 장애 조치 (failover) 클러스터의 노드가 될 서버의 로컬 **관리자** 그룹에 다른 사용자가 만든 계정만 배치 하는지 여부에 따라 달라 집니다. 이 절차를 완료 하려면 이전에 **Account Operators** 또는 이와 동등한 멤버 자격이 최소한 필요 합니다. 후자의 경우 장애 조치 (failover) 클러스터의 노드가 될 서버에서 로컬 **관리자** 그룹의 구성원 이거나 이와 동등한 자격이 모두 필요 합니다. [https://go.microsoft.com/fwlink/?LinkId=83477](https://go.microsoft.com/fwlink/?linkid=83477)에서 적절 한 계정 및 그룹 멤버 자격 사용에 대 한 세부 정보를 검토 합니다.
 
 #### <a name="to-configure-the-account-for-the-person-who-installs-the-cluster"></a>클러스터를 설치 하는 사용자에 대 한 계정을 구성 하려면
 
 1.  클러스터를 설치 하는 사용자에 대 한 도메인 계정을 만들거나 가져옵니다. 이 계정은 도메인 사용자 계정 또는 **계정 운영자** 계정일 수 있습니다. 표준 사용자 계정을 사용 하는 경우이 절차의 뒷부분에서 추가 권한을 부여 해야 합니다.
 
-2.  1 단계에서 만들거나 가져온 계정이 도메인에 있는 컴퓨터의 로컬 **관리자** 그룹에 자동으로 포함 되지 않는 경우 해당 계정을 장애 조치 (failover)의 노드로 사용할 서버의 로컬 **관리자** 그룹에 추가 합니다. 클러스터
+2.  1 단계에서 만들어지거나 가져온 계정이 도메인에 있는 컴퓨터의 로컬 **관리자** 그룹에 자동으로 포함 되지 않는 경우 해당 계정은 장애 조치 (failover) 클러스터의 노드가 될 서버의 로컬 **관리자** 그룹에 추가 합니다.
     
     1.  **시작**, **관리 도구**, **서버 관리자**를 차례로 클릭합니다.  
           
@@ -163,7 +163,7 @@ Windows Server에서 장애 조치 (failover) 클러스터를 만들고 클러�
 
 클러스터 이름 계정을 사전 준비 하지 않고 클러스터 만들기 마법사를 실행할 때 계정을 자동으로 만들고 구성 하도록 허용 하는 것이 일반적으로 더 간단 합니다. 그러나 조직의 요구 사항으로 인해 클러스터 이름 계정을 사전 준비 해야 하는 경우에는 다음 절차를 따르십시오.
 
-이 절차를 완료하려면 최소한 **Domain Admins** 그룹의 구성원이거나 이와 동등한 자격을 갖추고 있어야 합니다. 에서 [http://go.microsoft.com/fwlink/?LinkId=83477](http://go.microsoft.com/fwlink/?linkid=83477)적절 한 계정 및 그룹 멤버 자격 사용에 대 한 세부 정보를 검토 합니다. 클러스터를 만들 때와 동일한 계정을 사용 하 여이 절차를 수행할 수 있습니다.
+이 절차를 완료하려면 최소한 **Domain Admins** 그룹의 구성원이거나 이와 동등한 자격을 갖추고 있어야 합니다. [https://go.microsoft.com/fwlink/?LinkId=83477](https://go.microsoft.com/fwlink/?linkid=83477)에서 적절 한 계정 및 그룹 멤버 자격 사용에 대 한 세부 정보를 검토 합니다. 클러스터를 만들 때와 동일한 계정을 사용 하 여이 절차를 수행할 수 있습니다.
 
 #### <a name="to-prestage-a-cluster-name-account"></a>클러스터 이름 계정을 사전 준비 하려면
 
@@ -215,7 +215,7 @@ Windows Server에서 장애 조치 (failover) 클러스터를 만들고 클러�
 
 일반적으로 클러스터 된 서비스 또는 응용 프로그램에 대 한 컴퓨터 계정을 사전 준비 하지 않고 고가용성 마법사를 실행할 때 계정을 자동으로 만들고 구성 하도록 허용 하는 것이 더 간단 합니다. 그러나 조직의 요구 사항으로 인해 계정을 사전 준비 해야 하는 경우에는 다음 절차를 따르십시오.
 
-이 절차를 완료 하려면 최소한 **Account Operators** 그룹의 구성원 이거나 이와 동등한 자격이 있어야 합니다. 에서 [http://go.microsoft.com/fwlink/?LinkId=83477](http://go.microsoft.com/fwlink/?linkid=83477)적절 한 계정 및 그룹 멤버 자격 사용에 대 한 세부 정보를 검토 합니다.
+이 절차를 완료 하려면 최소한 **Account Operators** 그룹의 구성원 이거나 이와 동등한 자격이 있어야 합니다. [https://go.microsoft.com/fwlink/?LinkId=83477](https://go.microsoft.com/fwlink/?linkid=83477)에서 적절 한 계정 및 그룹 멤버 자격 사용에 대 한 세부 정보를 검토 합니다.
 
 #### <a name="to-prestage-an-account-for-a-clustered-service-or-application"></a>클러스터 된 서비스 또는 응용 프로그램에 대 한 계정을 사전 준비 하려면
 
@@ -262,7 +262,7 @@ Windows Server에서 장애 조치 (failover) 클러스터를 만들고 클러�
 
 클러스터 관리자가 필요에 따라 다음 절차를 수행할 수 있는 올바른 권한을 보유 하 고 있는지 확인 하는 방법에 대 한 자세한 내용은이 가이드의 앞부분에 나오는 암호 재설정 및 기타 계정 유지 관리에 대 한 미리 계획
 
-로컬의 멤버 자격이 **관리자** 그룹 또는 그에 해당 하는이 절차를 완료 하는 데 필요한 최소입니다. 또한 계정이 **Domain Admins** 계정이 아니거나 클러스터 이름 계정의 작성자 소유자 인 경우를 제외 하 고는 클러스터 이름 계정에 대 한 **암호 다시 설정** 권한을 계정에 부여 해야 합니다. 이 절차에는 클러스터를 설치한 사용자가 사용 하는 계정을 사용할 수 있습니다. 에서 [http://go.microsoft.com/fwlink/?LinkId=83477](http://go.microsoft.com/fwlink/?linkid=83477)적절 한 계정 및 그룹 멤버 자격 사용에 대 한 세부 정보를 검토 합니다.
+로컬의 멤버 자격이 **관리자** 그룹 또는 그에 해당 하는이 절차를 완료 하는 데 필요한 최소입니다. 또한 계정이 **Domain Admins** 계정이 아니거나 클러스터 이름 계정의 작성자 소유자 인 경우를 제외 하 고는 클러스터 이름 계정에 대 한 **암호 다시 설정** 권한을 계정에 부여 해야 합니다. 이 절차에는 클러스터를 설치한 사용자가 사용 하는 계정을 사용할 수 있습니다. [https://go.microsoft.com/fwlink/?LinkId=83477](https://go.microsoft.com/fwlink/?linkid=83477)에서 적절 한 계정 및 그룹 멤버 자격 사용에 대 한 세부 정보를 검토 합니다.
 
 #### <a name="to-troubleshoot-password-problems-with-the-cluster-name-account"></a>클러스터 이름 계정으로 암호 문제를 해결 하려면
 
@@ -276,9 +276,9 @@ Windows Server에서 장애 조치 (failover) 클러스터를 만들고 클러�
 
 ### <a name="steps-for-troubleshooting-problems-caused-by-changes-in-cluster-related-active-directory-accounts"></a>클러스터 관련 Active Directory 계정 변경으로 인해 발생 하는 문제를 해결 하는 단계
 
-클러스터 이름 계정을 삭제 하거나 사용 권한을 벗어난 경우 새 클러스터 된 서비스 또는 응용 프로그램을 구성 하려고 하면 문제가 발생 합니다. 이로 인해 발생할 수 있는 문제를 해결 하려면 Active Directory 사용자 및 컴퓨터 스냅인을 사용 하 여 클러스터 이름 계정 및 기타 관련 계정을 보거나 변경 하십시오. 이러한 유형의 문제가 발생할 때 기록 되는 이벤트 (이벤트 1193, 1194, 1206 또는 1207)에 대 한 자세한 내용은을 참조 [http://go.microsoft.com/fwlink/?LinkId=118271](http://go.microsoft.com/fwlink/?linkid=118271)하십시오.
+클러스터 이름 계정을 삭제 하거나 사용 권한을 벗어난 경우 새 클러스터 된 서비스 또는 응용 프로그램을 구성 하려고 하면 문제가 발생 합니다. 이로 인해 발생할 수 있는 문제를 해결 하려면 Active Directory 사용자 및 컴퓨터 스냅인을 사용 하 여 클러스터 이름 계정 및 기타 관련 계정을 보거나 변경 하십시오. 이러한 유형의 문제가 발생할 때 기록 되는 이벤트 (이벤트 1193, 1194, 1206 또는 1207)에 대 한 자세한 내용은 [https://go.microsoft.com/fwlink/?LinkId=118271](https://go.microsoft.com/fwlink/?linkid=118271)를 참조 하십시오.
 
-이 절차를 완료하려면 최소한 **Domain Admins** 그룹의 구성원이거나 이와 동등한 자격을 갖추고 있어야 합니다. 에서 [http://go.microsoft.com/fwlink/?LinkId=83477](http://go.microsoft.com/fwlink/?linkid=83477)적절 한 계정 및 그룹 멤버 자격 사용에 대 한 세부 정보를 검토 합니다.
+이 절차를 완료하려면 최소한 **Domain Admins** 그룹의 구성원이거나 이와 동등한 자격을 갖추고 있어야 합니다. [https://go.microsoft.com/fwlink/?LinkId=83477](https://go.microsoft.com/fwlink/?linkid=83477)에서 적절 한 계정 및 그룹 멤버 자격 사용에 대 한 세부 정보를 검토 합니다.
 
 #### <a name="to-troubleshoot-problems-caused-by-changes-in-cluster-related-active-directory-accounts"></a>클러스터 관련 Active Directory 계정 변경으로 인해 발생 하는 문제를 해결 하려면
 
@@ -312,7 +312,7 @@ Windows Server에서 장애 조치 (failover) 클러스터를 만들고 클러�
 
 10. **Active Directory 사용자 및 컴퓨터** 스냅인으로 돌아 올 때까지 **확인** 을 클릭 합니다.
 
-11. 컴퓨터 계정 (개체) 만들기와 관련 된 도메인 정책 (해당 하는 경우 도메인 관리자에 게 문의)을 검토 합니다. 클러스터 된 서비스 또는 응용 프로그램을 구성할 때마다 클러스터 이름 계정으로 컴퓨터 계정을 만들 수 있는지 확인 합니다. 예를 들어, 도메인 관리자가 기본 **컴퓨터** 컨테이너가 아닌 특수 컨테이너에서 모든 새 컴퓨터 계정을 만들도록 설정 하는 설정을 구성한 경우 이러한 설정으로 인해 클러스터 이름 계정을 사용할 수 있는지 확인 해야 합니다. 해당 컨테이너에 새 컴퓨터 계정도 만듭니다.
+11. 컴퓨터 계정 (개체) 만들기와 관련 된 도메인 정책 (해당 하는 경우 도메인 관리자에 게 문의)을 검토 합니다. 클러스터 된 서비스 또는 응용 프로그램을 구성할 때마다 클러스터 이름 계정으로 컴퓨터 계정을 만들 수 있는지 확인 합니다. 예를 들어, 도메인 관리자가 기본 **컴퓨터** 컨테이너가 아닌 특수 컨테이너에서 모든 새 컴퓨터 계정을 만들도록 하는 설정을 구성한 경우 이러한 설정으로 인해 클러스터 이름 계정에서 해당 컨테이너에 새 컴퓨터 계정도 만들 수 있는지 확인 해야 합니다.
 
 12. 기본 **컴퓨터** 컨테이너 또는 클러스터링 된 서비스 또는 응용 프로그램 중 하나에 대 한 컴퓨터 계정이 있는 컨테이너를 확장 합니다.
 

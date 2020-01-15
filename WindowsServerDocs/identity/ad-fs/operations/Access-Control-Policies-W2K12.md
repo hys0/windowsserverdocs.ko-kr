@@ -9,12 +9,12 @@ ms.date: 06/05/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 517582661374c388d44362538da6933a916b0039
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 7ae66fd47953017652ed1e753279e344e0a6c478
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407757"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949417"
 ---
 # <a name="access-control-policies-in-windows-server-2012-r2-and-windows-server-2012-ad-fs"></a>Windows Server 2012 R2 및 Windows Server 2012의 Access Control 정책 AD FS
 
@@ -41,11 +41,11 @@ Windows 10 도메인 가입 및 로그온에 필요한 AD FS 끝점
 
 예를 들어 다음과 같은 규칙이 있습니다.
 
-`c1:[Type == "http://custom/ipoutsiderange", Value == "true"] && c2:[Type == "http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path", Value != "/adfs/ls/"] => issue(Type = "http://schemas.microsoft.com/authorization/claims/deny", Value = " DenyUsersWithClaim");`  
+`c1:[Type == "http://custom/ipoutsiderange", Value == "true"] && c2:[Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path", Value != "/adfs/ls/"] => issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = " DenyUsersWithClaim");`  
 
 다음과 같이 업데이트 됩니다.
 
-`c1:[Type == "http://custom/ipoutsiderange", Value == "true"] && c2:[Type == "http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path", Value != "(/adfs/ls/)|(/adfs/services/trust/2005/windowstransport)|(/adfs/services/trust/13/windowstransport)|(/adfs/services/trust/2005/usernamemixed)|(/adfs/services/trust/13/usernamemixed)|(/adfs/services/trust/2005/certificatemixed)|(/adfs/services/trust/13/certificatemixed)"] => issue(Type = "http://schemas.microsoft.com/authorization/claims/deny", Value = " DenyUsersWithClaim");`
+`c1:[Type == "http://custom/ipoutsiderange", Value == "true"] && c2:[Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path", Value != "(/adfs/ls/)|(/adfs/services/trust/2005/windowstransport)|(/adfs/services/trust/13/windowstransport)|(/adfs/services/trust/2005/usernamemixed)|(/adfs/services/trust/13/usernamemixed)|(/adfs/services/trust/2005/certificatemixed)|(/adfs/services/trust/13/certificatemixed)"] => issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = " DenyUsersWithClaim");`
 
 
 
@@ -80,10 +80,10 @@ Windows 10 도메인 가입 및 로그온에 필요한 AD FS 끝점
 4.  **규칙 템플릿 선택** 페이지의 **클레임 규칙 템플릿**에서 **사용자 지정 규칙을 사용 하 여 클레임 보내기**를 선택 하 고 **다음**을 클릭 합니다.  
 
 5.  **규칙 구성** 페이지의 **클레임 규칙 이름**에이 규칙에 대 한 표시 이름을 입력 합니다 (예: "원하는 범위 밖에 있는 IP 클레임이 있는 경우 거부"). **사용자 지정 규칙**에서 다음 클레임 규칙 언어 구문을 입력 하거나 붙여 넣습니다. "x m-------ip"의 경우 위의 값을 유효한 ip 식으로 바꿉니다.  
-`c1:[Type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] && c2:[Type == "http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip", Value =~ "^(?!192\.168\.1\.77|10\.83\.118\.23)"] => issue(Type = "http://schemas.microsoft.com/authorization/claims/deny", Value = " DenyUsersWithClaim");` </br>
+`c1:[Type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] && c2:[Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip", Value =~ "^(?!192\.168\.1\.77|10\.83\.118\.23)"] => issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = " DenyUsersWithClaim");` </br>
 6.  **마침**을 클릭합니다. 기본적으로 **모든 사용자에 대 한 액세스 허용** 규칙에 앞서 발급 권한 부여 규칙 목록에 새 규칙이 표시 되는지 확인 합니다 (목록에서 이전에 표시 된 경우에도 거부 규칙이 우선적으로 적용 됨).  기본 허용 액세스 규칙이 없는 경우 다음과 같이 클레임 규칙 언어를 사용 하 여 목록의 끝에 하나를 추가할 수 있습니다.  </br>
 
-    `c:[] => issue(Type = "http://schemas.microsoft.com/authorization/claims/permit", Value = "true"); ` 
+    `c:[] => issue(Type = "https://schemas.microsoft.com/authorization/claims/permit", Value = "true"); ` 
 
 7.  새 규칙을 저장 하려면 **클레임 규칙 편집** 대화 상자에서 **확인**을 클릭 합니다. 결과 목록은 다음과 같습니다.  
 
@@ -104,7 +104,7 @@ Windows 10 도메인 가입 및 로그온에 필요한 AD FS 끝점
 
 5.  **규칙 구성** 페이지의 **클레임 규칙 이름**에이 규칙에 대 한 표시 이름을 입력 합니다. 예를 들어 원하는 범위 밖에 있는 IP 클레임이 있는 경우 ipoutsiderange 클레임을 발급 합니다. **사용자 지정 규칙**에서 다음 클레임 규칙 언어 구문을 입력 하거나 붙여 넣습니다. "x m-------ip"의 경우 위의 값을 유효한 ip 식으로 바꿉니다.  
 
-    `c1:[Type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] && c2:[Type == "http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip", Value =~ "^(?!192\.168\.1\.77|10\.83\.118\.23)"] => issue(Type = "http://custom/ipoutsiderange", Value = "true");`  
+    `c1:[Type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] && c2:[Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip", Value =~ "^(?!192\.168\.1\.77|10\.83\.118\.23)"] => issue(Type = "http://custom/ipoutsiderange", Value = "true");`  
 
 6.  **마침**을 클릭합니다. 새 규칙이 **발급 권한 부여 규칙** 목록에 나타나는지 확인 합니다.  
 
@@ -116,7 +116,7 @@ Windows 10 도메인 가입 및 로그온에 필요한 AD FS 끝점
 
 
 ~~~
-`c1:[Type == "http://custom/ipoutsiderange", Value == "true"] && c2:[Type == "http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application", Value != "Microsoft.Exchange.ActiveSync"] => issue(Type = "http://schemas.microsoft.com/authorization/claims/deny", Value = "DenyUsersWithClaim");`  
+`c1:[Type == "http://custom/ipoutsiderange", Value == "true"] && c2:[Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application", Value != "Microsoft.Exchange.ActiveSync"] => issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = "DenyUsersWithClaim");`  
 ~~~
 
 10. **마침**을 클릭합니다. 새 규칙이 **발급 권한 부여 규칙** 목록에 나타나는지 확인 합니다.  
@@ -128,7 +128,7 @@ Windows 10 도메인 가입 및 로그온에 필요한 AD FS 끝점
 13. **규칙 구성** 페이지의 **클레임 규칙 이름**에이 규칙에 대 한 표시 이름 (예: "응용 프로그램 클레임이 있는지 확인")을 입력 합니다. **사용자 지정 규칙**에서 다음 클레임 규칙 언어 구문을 입력 하거나 붙여 넣습니다.  
 
    ```  
-   NOT EXISTS([Type == "http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application"]) => add(Type = "http://custom/xmsapplication", Value = "fail");  
+   NOT EXISTS([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application"]) => add(Type = "http://custom/xmsapplication", Value = "fail");  
    ```  
 
 14. **마침**을 클릭합니다. 새 규칙이 **발급 권한 부여 규칙** 목록에 나타나는지 확인 합니다.  
@@ -139,8 +139,8 @@ Windows 10 도메인 가입 및 로그온에 필요한 AD FS 끝점
 
 17. **규칙 구성** 페이지의 **클레임 규칙 이름**에이 규칙에 대 한 표시 이름을 입력 합니다 (예: "ipoutsiderange true 및 응용 프로그램을 사용 하지 않는 사용자 거부"). **사용자 지정 규칙**에서 다음 클레임 규칙 언어 구문을 입력 하거나 붙여 넣습니다.  
 
-`c1:[Type == "http://custom/ipoutsiderange", Value == "true"] && c2:[Type == "http://custom/xmsapplication", Value == "fail"] => issue(Type = "http://schemas.microsoft.com/authorization/claims/deny", Value = "DenyUsersWithClaim");`</br>  
-18. **마침**을 클릭합니다. 새 규칙이 이전 규칙 바로 아래에 표시 되 고, 발급 권한 부여 규칙 목록의 모든 사용자에 게 기본적으로 액세스 허용 규칙 이전에 표시 되는지 확인 합니다 (목록에서 이전에 표시 되는 경우에도 거부 규칙이 우선적으로 적용 됨).  </br>기본 허용 액세스 규칙이 없는 경우 다음과 같이 클레임 규칙 언어를 사용 하 여 목록의 끝에 하나를 추가할 수 있습니다.</br></br>      `c:[] => issue(Type = "http://schemas.microsoft.com/authorization/claims/permit", Value = "true");`</br></br>
+`c1:[Type == "http://custom/ipoutsiderange", Value == "true"] && c2:[Type == "http://custom/xmsapplication", Value == "fail"] => issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = "DenyUsersWithClaim");`</br>  
+18. **마침**을 클릭합니다. 새 규칙이 이전 규칙 바로 아래에 표시 되 고, 발급 권한 부여 규칙 목록의 모든 사용자에 게 기본적으로 액세스 허용 규칙 이전에 표시 되는지 확인 합니다 (목록에서 이전에 표시 되는 경우에도 거부 규칙이 우선적으로 적용 됨).  </br>기본 허용 액세스 규칙이 없는 경우 다음과 같이 클레임 규칙 언어를 사용 하 여 목록의 끝에 하나를 추가할 수 있습니다.</br></br>      `c:[] => issue(Type = "https://schemas.microsoft.com/authorization/claims/permit", Value = "true");`</br></br>
 19. 새 규칙을 저장 하려면 **클레임 규칙 편집** 대화 상자에서 확인을 클릭 합니다. 결과 목록은 다음과 같습니다.  
 
     ![발급 권한 부여 규칙](media/Access-Control-Policies-W2K12/clientaccess2.png )  
@@ -158,7 +158,7 @@ Windows 10 도메인 가입 및 로그온에 필요한 AD FS 끝점
 4.  **규칙 템플릿 선택** 페이지의 **클레임 규칙 템플릿**에서 **사용자 지정 규칙을 사용 하 여 클레임 보내기**를 선택 하 고 **다음**을 클릭 합니다.  
 
 5.  **규칙 구성** 페이지의 **클레임 규칙 이름**에이 규칙에 대 한 표시 이름을 입력 합니다. 예를 들어 원하는 범위 밖에 있는 IP 클레임이 있는 경우 ipoutsiderange 클레임을 발급 합니다. **사용자 지정 규칙**에서 다음 클레임 규칙 언어 구문을 입력 하거나 붙여 넣습니다. "x m-------ip"의 경우 위의 값을 유효한 ip 식으로 바꿉니다.  </br>
-`c1:[Type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] && c2:[Type == "http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip", Value =~ "^(?!192\.168\.1\.77|10\.83\.118\.23)"] => issue(Type = "http://custom/ipoutsiderange", Value = "true");`   
+`c1:[Type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] && c2:[Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip", Value =~ "^(?!192\.168\.1\.77|10\.83\.118\.23)"] => issue(Type = "http://custom/ipoutsiderange", Value = "true");`   
 6.  **마침**을 클릭합니다. 새 규칙이 **발급 권한 부여 규칙** 목록에 나타나는지 확인 합니다.  
 
 7.  그런 다음 **클레임 규칙 편집** 대화 상자의 **발급 권한 부여 규칙** 탭에서 **규칙 추가** 를 클릭 하 여 클레임 규칙 마법사를 다시 시작 합니다.  
@@ -169,12 +169,12 @@ Windows 10 도메인 가입 및 로그온에 필요한 AD FS 끝점
 
 
 ~~~
-`c1:[Type == "http://custom/ipoutsiderange", Value == "true"] && c2:[Type == "http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path", Value != "/adfs/ls/"] => issue(Type = "http://schemas.microsoft.com/authorization/claims/deny", Value = " DenyUsersWithClaim");`  
+`c1:[Type == "http://custom/ipoutsiderange", Value == "true"] && c2:[Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path", Value != "/adfs/ls/"] => issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = " DenyUsersWithClaim");`  
 ~~~
 
 10. **마침**을 클릭합니다. 기본적으로 **모든 사용자에 대 한 액세스 허용** 규칙에 앞서 발급 권한 부여 규칙 목록에 새 규칙이 표시 되는지 확인 합니다 (목록에서 이전에 표시 된 경우에도 거부 규칙이 우선적으로 적용 됨).  </br></br> 기본 허용 액세스 규칙이 없는 경우 다음과 같이 클레임 규칙 언어를 사용 하 여 목록의 끝에 하나를 추가할 수 있습니다.  
 
-   `c:[] => issue(Type = "http://schemas.microsoft.com/authorization/claims/permit", Value = "true");`
+   `c:[] => issue(Type = "https://schemas.microsoft.com/authorization/claims/permit", Value = "true");`
 
 11. 새 규칙을 저장 하려면 **클레임 규칙 편집** 대화 상자에서 **확인**을 클릭 합니다. 결과 목록은 다음과 같습니다.  
 
@@ -197,7 +197,7 @@ Windows 10 도메인 가입 및 로그온에 필요한 AD FS 끝점
 
 
 ~~~
-`c1:[Type == "http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip", Value =~ "^(?!192\.168\.1\.77|10\.83\.118\.23)"] && c2:[Type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] => issue(Type = "http://custom/ipoutsiderange", Value = "true");`  
+`c1:[Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip", Value =~ "^(?!192\.168\.1\.77|10\.83\.118\.23)"] && c2:[Type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] => issue(Type = "http://custom/ipoutsiderange", Value = "true");`  
 ~~~
 
 6. **마침**을 클릭합니다. 새 규칙이 **발급 권한 부여 규칙** 목록에 나타나는지 확인 합니다.  
@@ -208,7 +208,7 @@ Windows 10 도메인 가입 및 로그온에 필요한 AD FS 끝점
 
 9. **규칙 구성** 페이지의 **클레임 규칙 이름**에이 규칙에 대 한 표시 이름 (예: "확인 그룹 SID")을 입력 합니다. **사용자 지정 규칙**에서 다음 클레임 규칙 언어 구문을 입력 하거나 붙여 넣습니다 ("groupsid"를 사용 중인 AD 그룹의 실제 SID로 바꿈).  
 
-    `NOT EXISTS([Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value == "S-1-5-32-100"]) => add(Type = "http://custom/groupsid", Value = "fail");`  
+    `NOT EXISTS([Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value == "S-1-5-32-100"]) => add(Type = "http://custom/groupsid", Value = "fail");`  
 
 10. **마침**을 클릭합니다. 새 규칙이 **발급 권한 부여 규칙** 목록에 나타나는지 확인 합니다.  
 
@@ -218,11 +218,11 @@ Windows 10 도메인 가입 및 로그온에 필요한 AD FS 끝점
 
 13. **규칙 구성** 페이지의 **클레임 규칙 이름**에이 규칙에 대 한 표시 이름을 입력 합니다 (예: "ipoutsiderange true 및 groupsid가 있는 사용자 거부"). **사용자 지정 규칙**에서 다음 클레임 규칙 언어 구문을 입력 하거나 붙여 넣습니다.  
 
-   `c1:[Type == "http://custom/ipoutsiderange", Value == "true"] && c2:[Type == "http://custom/groupsid", Value == "fail"] => issue(Type = "http://schemas.microsoft.com/authorization/claims/deny", Value = "DenyUsersWithClaim");`  
+   `c1:[Type == "http://custom/ipoutsiderange", Value == "true"] && c2:[Type == "http://custom/groupsid", Value == "fail"] => issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = "DenyUsersWithClaim");`  
 
 14. **마침**을 클릭합니다. 새 규칙이 이전 규칙 바로 아래에 표시 되 고, 발급 권한 부여 규칙 목록의 모든 사용자에 게 기본적으로 액세스 허용 규칙 이전에 표시 되는지 확인 합니다 (목록에서 이전에 표시 되는 경우에도 거부 규칙이 우선적으로 적용 됨).  </br></br>기본 허용 액세스 규칙이 없는 경우 다음과 같이 클레임 규칙 언어를 사용 하 여 목록의 끝에 하나를 추가할 수 있습니다.  
 
-   `c:[] => issue(Type = "http://schemas.microsoft.com/authorization/claims/permit", Value = "true");`  
+   `c:[] => issue(Type = "https://schemas.microsoft.com/authorization/claims/permit", Value = "true");`  
 
 15. 새 규칙을 저장 하려면 **클레임 규칙 편집** 대화 상자에서 확인을 클릭 합니다. 결과 목록은 다음과 같습니다.  
 
@@ -246,7 +246,7 @@ Windows 10 도메인 가입 및 로그온에 필요한 AD FS 끝점
 > 1. 클라이언트 IP 주소와 요청을 전달한 각 프록시의 주소를 나타내는 여러 IP 주소가 쉼표로 구분 됩니다.  
 >    2. Exchange Online 인프라와 관련 된 IP 주소는 목록에 없습니다.  
 
-### <a name="regular-expressions"></a>정규식  
+### <a name="regular-expressions"></a>정규식을 참조하세요.  
  IP 주소 범위와 일치 해야 하는 경우 비교를 수행 하는 정규식을 생성 해야 합니다. 다음 일련의 단계에서는 다음 주소 범위와 일치 하도록 이러한 식을 구성 하는 방법에 대 한 예제를 제공 합니다. 공용 IP 범위와 일치 하도록 이러한 예제를 변경 해야 합니다.  
 
 - 192.168.1.1 – 192.168.1.25  
@@ -296,7 +296,7 @@ Windows 10 도메인 가입 및 로그온에 필요한 AD FS 끝점
  Windows Server 2012 r 2의 AD FS는 다음 클레임 유형을 사용 하 여 요청 컨텍스트 정보를 제공 합니다.  
 
 ### <a name="x-ms-forwarded-client-ip"></a>X-MS 전달-클라이언트-IP  
- 클레임 유형: `http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip`  
+ 클레임 유형: `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip`  
 
  이 AD FS 클레임은 요청을 수행 하는 사용자의 IP 주소 (예: Outlook 클라이언트)를 확인의 "최상의 시도"를 나타냅니다. 이 클레임은 요청을 전달한 모든 프록시의 주소를 포함 하 여 여러 IP 주소를 포함할 수 있습니다.  이 클레임은 HTTP에서 채워집니다. 클레임의 값은 다음 중 하나일 수 있습니다.  
 
@@ -318,7 +318,7 @@ Windows 10 도메인 가입 및 로그온에 필요한 AD FS 끝점
 >  Exchange Online은 현재 IPV4 주소만 지원 합니다. IPV6 주소는 지원 하지 않습니다.  
 
 ### <a name="x-ms-client-application"></a>X-y-클라이언트 응용 프로그램  
- 클레임 유형: `http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application`  
+ 클레임 유형: `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application`  
 
  이 AD FS 클레임은 사용 중인 응용 프로그램에 느슨하게 해당 하는 최종 클라이언트에서 사용 하는 프로토콜을 나타냅니다.  이 클레임은 현재 Exchange Online 에서만 설정 되는 HTTP 헤더에서 채워지며, AD FS에 인증 요청을 전달할 때 헤더를 채웁니다. 응용 프로그램에 따라이 클레임의 값은 다음 중 하나가 됩니다.  
 
@@ -345,7 +345,7 @@ Windows 10 도메인 가입 및 로그온에 필요한 AD FS 끝점
     -   Microsoft Exchange. Imap  
 
 ### <a name="x-ms-client-user-agent"></a>X-y-사용자-에이전트  
- 클레임 유형: `http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-user-agent`  
+ 클레임 유형: `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-user-agent`  
 
  이 AD FS 클레임은 클라이언트에서 서비스에 액세스 하는 데 사용 하는 장치 유형을 나타내는 문자열을 제공 합니다. 고객이 특정 유형의 스마트폰 등 특정 장치에 대 한 액세스를 차단 하려는 경우에 사용할 수 있습니다.  이 클레임에 대 한 값 예에는 아래 값이 포함 됩니다 (이에 국한 되지 않음).  
 
@@ -368,19 +368,19 @@ Windows 10 도메인 가입 및 로그온에 필요한 AD FS 끝점
   이 값이 비어 있을 수도 있습니다.  
 
 ### <a name="x-ms-proxy"></a>X-MS 프록시  
- 클레임 유형: `http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy`  
+ 클레임 유형: `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy`  
 
  이 AD FS 클레임은 요청이 웹 응용 프로그램 프록시를 통해 전달 되었음을 나타냅니다.  이 클레임은 페더레이션 서비스 백 엔드에 인증 요청을 전달할 때 헤더를 채우는 웹 응용 프로그램 프록시를 통해 채워집니다. 그런 다음 AD FS 클레임으로 변환 합니다.  
 
  클레임의 값은 요청을 전달 하는 웹 응용 프로그램 프록시의 DNS 이름입니다.  
 
 ### <a name="insidecorporatenetwork"></a>InsideCorporateNetwork  
- 클레임 유형: `http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork`  
+ 클레임 유형: `https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork`  
 
  위의 x-ms 프록시 클레임 형식과 마찬가지로이 클레임 유형은 요청이 웹 응용 프로그램 프록시를 통과 했는지 여부를 나타냅니다. Insidecorporatenetwork은 x-y와 달리, 회사 네트워크 내부에서 페더레이션 서비스에 직접 요청을 나타내는 True를 포함 하는 부울 값입니다.  
 
 ### <a name="x-ms-endpoint-absolute-path-active-vs-passive"></a>X-y-절대 경로 (활성 vs 수동)  
- 클레임 유형: `http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path`  
+ 클레임 유형: `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path`  
 
  이 클레임 유형은 "active" (리치) 클라이언트와 "passive" (웹 브라우저 기반) 클라이언트에서 시작 되는 요청을 확인 하는 데 사용할 수 있습니다. 이렇게 하면 Microsoft Outlook과 같은 리치 클라이언트에서 들어오는 요청이 차단 되는 동안 Outlook 웹 액세스, SharePoint Online 또는 Office 365 포털과 같은 브라우저 기반 응용 프로그램의 외부 요청이 허용 됩니다.  
 

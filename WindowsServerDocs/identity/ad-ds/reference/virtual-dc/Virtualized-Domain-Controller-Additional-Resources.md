@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 16f77e4c6f6f3253cf32d0545815623b1f7277cd
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 97300b53cae3200721e8e6566da18466fce85610
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408601"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949551"
 ---
 # <a name="virtualized-domain-controller-additional-resources"></a>가상화된 도메인 컨트롤러 추가 리소스
 
@@ -33,7 +33,7 @@ ms.locfileid: "71408601"
   
 -   [Windows Server 2012의 hyper-v](https://technet.microsoft.com/library/hh831531.aspx)  
   
--   [디렉터리 서비스 팀에 문의 (공식 Microsoft 상용 기술 지원 블로그)](http://blogs.technet.com/b/askds)  
+-   [디렉터리 서비스 팀에 문의 (공식 Microsoft 상용 기술 지원 블로그)](https://blogs.technet.com/b/askds)  
   
 
 

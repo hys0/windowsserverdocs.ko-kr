@@ -8,14 +8,14 @@ ms.date: 08/09/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 870dbb4303d216f05bc372610f3121ff08fc8c25
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f28e5feccb7544046104658585ab3f739f659957
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407841"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949502"
 ---
-# <a name="scenario-web-app-server-app-calling-web-api"></a>시나리오: 웹 앱 (서버 앱) 웹 API 호출 
+# <a name="scenario-web-app-server-app-calling-web-api"></a>시나리오: web API를 호출 하는 웹 앱 (서버 앱) 
 >적용 대상: AD FS 2019 이상 
  
 [Msal library](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki) 를 사용 하 여 웹 api를 호출 하는 AD FS 2019에서 인증 된 웹 앱 로그인 사용자를 빌드하는 방법에 대해 알아봅니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "71407841"
  
 ![Web api를 호출 하는 웹 앱 개요](media/adfs-msal-web-app-web-api/webapp1.png)
 
-이 흐름에서는 웹 앱 (서버 앱)에 인증을 추가 하 여 사용자를 로그인 하 고 web API를 호출할 수 있습니다. 웹 앱에서 Web API를 호출 하려면 MSAL의 [AcquireTokenByAuthorizationCode](https://docs.microsoft.com/en-us/dotnet/api/microsoft.identity.client.acquiretokenbyauthorizationcodeparameterbuilder?view=azure-dotnet) token 취득 메서드를 사용 합니다. 토큰 캐시에 획득 된 토큰을 저장 하는 권한 부여 코드 흐름을 사용 합니다. 그러면 컨트롤러는 필요할 때 캐시에서 자동으로 토큰을 획득 합니다. 필요한 경우 MSAL에서 토큰을 새로 고칩니다. 
+이 흐름에서는 웹 앱 (서버 앱)에 인증을 추가 하 여 사용자를 로그인 하 고 web API를 호출할 수 있습니다. 웹 앱에서 Web API를 호출 하려면 MSAL의 [AcquireTokenByAuthorizationCode](https://docs.microsoft.com/dotnet/api/microsoft.identity.client.acquiretokenbyauthorizationcodeparameterbuilder?view=azure-dotnet) token 취득 메서드를 사용 합니다. 획득한 토큰을 토큰 캐시에 저장하고 권한 부여 코드 흐름을 사용합니다. 그러면 컨트롤러는 필요할 때 캐시에서 자동으로 토큰을 획득합니다. 필요한 경우 MSAL에서 토큰을 새로 고칩니다. 
 
 웹 Api를 호출 하는 Web Apps: 
 
@@ -47,19 +47,19 @@ ADFS에서 웹 앱을 등록 하 고 웹 API를 호출 하는 토큰을 획득 �
 이 섹션에서는 AD FS에서 RP (신뢰 당사자)로 웹 앱을 기밀 클라이언트 및 Web API로 등록 하는 방법을 보여 줍니다. 
 
   1. AD FS 관리에서 **응용 프로그램 그룹** 을 마우스 오른쪽 단추로 클릭 하 고 **응용 프로그램 그룹 추가**를 선택 합니다.  
-  2. 응용 프로그램 그룹 마법사에서 **이름** 에 **WebAppToWebApi** 를 입력 하 고 **클라이언트-서버 응용 프로그램** 에서 **웹 API 템플릿에 액세스 하는 서버 응용 프로그램** 을 선택 합니다. **다음**을 클릭합니다.  
+  2. 응용 프로그램 그룹 마법사에서 **이름** 에 **WebAppToWebApi** 를 입력 하 고 **클라이언트-서버 응용 프로그램** 에서 **웹 API 템플릿에 액세스 하는 서버 응용 프로그램** 을 선택 합니다. 클릭 하 여 **다음**.  
   
       ![응용 프로그램 그룹 추가](media/adfs-msal-web-app-web-api/webapp2.png)
   
-  3. 복사는 **클라이언트 식별자** 값입니다. 나중에 응용 프로그램 **web.config** 파일에서 **ida: ClientId** 의 값으로 사용 됩니다. **리디렉션 URI** - 에대해다음을입력합니다. https://localhost:44326 추가를 클릭합니다. **다음**을 클릭합니다. 
+  3. 복사는 **클라이언트 식별자** 값입니다. 나중에 응용 프로그램 **web.config** 파일에서 **ida: ClientId** 의 값으로 사용 됩니다. **리디렉션 URI:**  - https://localhost:44326 에 대해 다음을 입력 합니다. 추가를 클릭합니다. 클릭 하 여 **다음**. 
   
       ![응용 프로그램 그룹 추가](media/adfs-msal-web-app-web-api/webapp3.png)
   
-  4. 응용 프로그램 자격 증명 구성 화면에서 체크 인을 선택 하 여 **공유 암호를 생성** 하 고 암호를 복사 합니다. 이는 나중에 응용 프로그램 **web.config** 파일에서 **ida: ClientSecret** 의 값으로 사용 됩니다. **다음**을 클릭합니다.  
+  4. 응용 프로그램 자격 증명 구성 화면에서 체크 인을 선택 하 여 **공유 암호를 생성** 하 고 암호를 복사 합니다. 이는 나중에 응용 프로그램 **web.config** 파일에서 **ida: ClientSecret** 의 값으로 사용 됩니다. 클릭 하 여 **다음**.  
   
       ![응용 프로그램 그룹 추가](media/adfs-msal-web-app-web-api/webapp4.png)
   
-  5. 웹 API 구성 화면에서 **식별자** https://webapi 를 입력 합니다. **추가**를 클릭합니다. **다음**을 클릭합니다. 이 값은 나중에 응용 프로그램 **web.config** 파일에서 **Ida: graphresourceid** 에 사용 됩니다. 
+  5. 웹 API 구성 화면에서 https://webapi**식별자** 를 입력 합니다. **추가**를 클릭합니다. 클릭 하 여 **다음**. 이 값은 나중에 응용 프로그램 **web.config** 파일에서 **Ida: graphresourceid** 에 사용 됩니다. 
   
       ![응용 프로그램 그룹 추가](media/adfs-msal-web-app-web-api/webapp5.png)
   

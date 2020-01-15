@@ -6,12 +6,12 @@ ms.topic: article
 ms.date: 09/25/2017
 ms.author: nirb
 author: nirb-ms
-ms.openlocfilehash: 506cd5cb44d93c9d7d221917505f76a2c5625baa
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 51768dc65128f27dcbf78cbfc776500ac3832615
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70870553"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949831"
 ---
 # <a name="beginning-your-general-data-protection-regulation-gdpr-journey-for-windows-server"></a>Windows Server에 대 한 GDPR (일반 데이터 보호 규정) 여행 시작 
 
@@ -28,7 +28,7 @@ Microsoft와 고객은 이제 GDPR의 개인 정보 보호 목표를 달성하�
 
 Microsoft의 최고 정보 보호 책임자(Chief Privacy Officer)인 [Brendon Lynch](https://blogs.microsoft.com/on-the-issues/author/brendonlynch/)의 블로그 게시물인 [Microsoft 클라우드로 GDPR 규정 준수](https://blogs.microsoft.com/on-the-issues/2017/02/15/get-gdpr-compliant-with-the-microsoft-cloud/#hv52B68OZTwhUj2c.99)와 Microsoft의 부사장 겸 법무 부서 부책임자(Vice President & Deputy General Counsel)인 [Rich Sauer](https://blogs.microsoft.com/on-the-issues/author/rsauer/)의 블로그 게시물인 [일반 데이터 보호 규정에 대한 계약상의 약속을 통한 신뢰 확보](https://blogs.microsoft.com/on-the-issues/2017/04/17/earning-trust-contractual-commitments-general-data-protection-regulation/#6QbqoGWXCLavGM63.99)에서 GDPR에 대한 Microsoft의 약속과 고객을 지원하는 방법을 설명했습니다.
 
-GDPR 규정 준수를 향한 여정이 어려울 수도 있지만 Microsoft가 도와드립니다. GDPR에 관한 특정 정보, Microsoft의 약속과 여정을 시작하는 방법은 [Microsoft Trust Center의 GDPR 섹션](https://www.microsoft.com/en-us/trustcenter/privacy/gdpr)을 참조하세요.
+GDPR 규정 준수를 향한 여정이 어려울 수도 있지만 Microsoft가 도와드립니다. GDPR에 관한 특정 정보, Microsoft의 약속과 여정을 시작하는 방법은 [Microsoft Trust Center의 GDPR 섹션](https://www.microsoft.com/trustcenter/privacy/gdpr)을 참조하세요.
 
 ## <a name="gdpr-and-its-implications"></a>GDPR과 그 영향
 GDPR은 개인 정보 수집, 사용 및 관리 방법에 있어 큰 변화가 필요할 수도 있는 복잡한 규정입니다. Microsoft는 오랫동안 고객이 복잡한 규정을 준수하는 데 도움을 제공했고, GDPR 대비에 있어서도 여정의 파트너가 되겠습니다.
@@ -53,7 +53,7 @@ GDPR은 유전자 데이터 (예: 개인의 gene 시퀀스) 및 생체 인식 �
 ### <a name="examples-of-info-relating-to-an-identified-or-identifiable-natural-person-data-subject"></a>식별된 또는 식별 가능한 자연인(데이터 주체)와 연관이 있는 정보의 예
 이 목록은 GDPR의 규제 대상인 여러 유형의 정보 예입니다. 이 목록은 완전한 목록이 아닙니다.
 
--   이름
+-   Name(이름)
 
 -   식별 번호(예: SSN)
 
@@ -80,7 +80,7 @@ GDPR 규정 준수와 얼마나 연관이 있는지에 따라 규정 집행이 �
 
     ![4개의 주요 GDPR 단계가 함께 작용하는 방법에 관한 다이어그램](../media/GDPR-Windows-Server-Overview/gdpr-steps-diagram.png)
 
-각 단계마다 요구 사항을 해결하는 데 도움이 될 수 있는 예시 도구, 리소스 및 다양한 Microsoft 솔루션의 기능을 설명합니다. 이 문서는 포괄적인 "방법" 가이드는 아니지만 자세한 정보를 확인할 수 있는 링크를 포함 하 고 있습니다. 자세한 내용은 [Microsoft 보안 센터의 Gdpr 섹션](https://www.microsoft.com/en-us/trustcenter/privacy/gdpr)에서 확인할 수 있습니다.
+각 단계마다 요구 사항을 해결하는 데 도움이 될 수 있는 예시 도구, 리소스 및 다양한 Microsoft 솔루션의 기능을 설명합니다. 이 문서는 포괄적인 "방법" 가이드는 아니지만 자세한 정보를 확인할 수 있는 링크를 포함 하 고 있습니다. 자세한 내용은 [Microsoft 보안 센터의 Gdpr 섹션](https://www.microsoft.com/trustcenter/privacy/gdpr)에서 확인할 수 있습니다.
 
 ## <a name="windows-server-security-and-privacy"></a>Windows Server 보안 및 개인 정보
 GDPR에서는 개인 데이터 및 처리 시스템을 보호 하기 위해 적절 한 기술 및 조직 보안 조치를 구현 해야 합니다. GDPR의 컨텍스트에서 실제 및 가상 서버 환경은 잠재적으로 개인 데이터와 중요 한 데이터를 처리 하 고 있습니다. 처리는 데이터 수집, 저장 및 검색과 같은 작업 또는 작업 집합을 의미할 수 있습니다.
@@ -135,7 +135,7 @@ Windows Server를 사용 하 여 데이터 위반을 초래할 수 있는 공격
 
 GDPR 내에서 키 프로 비전은 설계 및 기본적으로 데이터 보호 기능을 제공 하며,이 프로 비전을 충족 하는 기능은 BitLocker 장치 암호화와 같은 Windows 10의 기능을 지원 합니다. BitLocker는 하드웨어 기반의 보안 관련 기능을 제공 하는 TPM (신뢰할 수 있는 플랫폼 모듈) 기술을 사용 합니다. 이 암호화 프로세서 칩은 변조 방지를 위해 여러 물리적 보안 메커니즘을 포함 하며 악성 소프트웨어는 TPM의 보안 기능을 조작할 수 없습니다.
 
-칩에는 변조를 방지하는 여러 가지 실제 보안 메커니즘이 포함되어 있으며, 악성 소프트웨어가 TPM의 보안 기능을 변조할 수 없습니다. TPM 기술을 사용하는 주요 이점 중 일부는 다음과 같습니다.
+변조를 확인 하는 여러 물리적 보안 메커니즘을 포함 하는 해당 칩 이며 악성 소프트웨어는 TPM의 보안 기능에 손상을 입힐 수 없습니다. TPM 기술을 사용하는 주요 이점 중 일부는 다음과 같습니다.
 
 -   암호화 키를 생성, 저장 및 사용을 제한합니다.
 
@@ -185,11 +185,11 @@ DNS 관리자가 서버 중 하나를 업데이트 해야 하는 경우 Microsof
 
 DNS 관리자의 자격 증명을 도난당 한 경우이 시나리오를 상상해 보세요. 첫째, 자격 증명에는 관리자 권한이 연결 되어 있지 않으므로 공격자는 DNS 서버 또는 다른 시스템에 대 한 액세스 권한을 획득 하 여 변경 작업을 수행할 수 없습니다. 공격자가 DNS 서버에 대 한 권한을 요청 하려고 하면 두 번째 단계 인증에서 해당 id를 확인 하도록 요청 합니다. 공격자가 DNS 관리자의 휴대폰을 가질 가능성이 없기 때문에 인증이 실패 합니다. 그러면 시스템에서 공격자가 잠기고 자격 증명이 손상 된 것으로 IT 조직에 경고할 수 있습니다.
 
-또한 대부분의 조직에서는 무료 [LAPS (로컬 관리자 암호 솔루션)](http://aka.ms/laps) 를 해당 서버 및 클라이언트 시스템에 대해 간단 하면서도 강력한 JIT 관리 메커니즘으로 사용 합니다. LAPS 기능을 통해 도메인에 가입 된 컴퓨터의 로컬 계정 암호를 관리할 수가 있습니다. 암호는 AD (Active Directory) 및 ACL (Access Control 목록)에 저장 되므로 적격 사용자만이 파일을 읽거나 다시 설정을 요청할 수 있습니다.
+또한 대부분의 조직에서는 무료 [LAPS (로컬 관리자 암호 솔루션)](https://aka.ms/laps) 를 해당 서버 및 클라이언트 시스템에 대해 간단 하면서도 강력한 JIT 관리 메커니즘으로 사용 합니다. LAPS 기능을 통해 도메인에 가입 된 컴퓨터의 로컬 계정 암호를 관리할 수가 있습니다. 암호는 AD (Active Directory) 및 ACL (Access Control 목록)에 저장 되므로 적격 사용자만이 파일을 읽거나 다시 설정을 요청할 수 있습니다.
 
-[Windows 자격 증명 도난 완화 가이드](https://www.microsoft.com/en-us/download/confirmation.aspx?id=54095)에 나와 있는 것 처럼 
+[Windows 자격 증명 도난 완화 가이드](https://www.microsoft.com/download/confirmation.aspx?id=54095)에 나와 있는 것 처럼 
 
-> "_범죄자는 자격 증명 도난 및 재사용 공격을 방지 하는 데 사용 하는 도구와 기술 들이 더 쉽게 목표를 달성 하는 데 도움이 됩니다. 자격 증명 도난은 종종 운영 관행 또는 사용자 자격 증명 노출에 의존 하므로 효과적으로 완화 하려면 사람, 프로세스 및 기술을 해결 하는 전체적인 접근 방식이 필요 합니다. 또한 이러한 공격은 시스템을 손상 시켜 액세스를 확장 하거나 유지 한 후 공격자가 자격 증명을 도용 하는 데 의존 하므로, 조직에서 공격자가 자유롭게 이동 하 고 검색 하지 못할 수 있는 전략을 구현 하 여 손상 된 네트워크입니다._ "
+> "_범죄자는 자격 증명 도난 및 재사용 공격을 방지 하는 데 사용 하는 도구와 기술 들이 더 쉽게 목표를 달성 하는 데 도움이 됩니다. 자격 증명 도난은 종종 운영 관행 또는 사용자 자격 증명 노출에 의존 하므로 효과적으로 완화 하려면 사람, 프로세스 및 기술을 해결 하는 전체적인 접근 방식이 필요 합니다. 또한 이러한 공격은 시스템을 확장 하거나 액세스를 유지 한 후 공격자에 게 자격 증명을 도용 하는 데 의존 하므로, 공격자가 손상 된 네트워크에서 자유롭게 이동 하 고 검색 하지 못할 수 있는 전략을 구현 하 여 조직에 신속 하 게 위반을 포함 해야 합니다._ "
 
 Windows Server에 대 한 중요 한 설계 고려 사항은 자격 증명 도난 (특히 파생 된 자격 증명)을 완화 하는 것입니다. Credential Guard는 Windows에서 상당한 아키텍처 변경을 구현 하 여 파생 된 자격 증명 도난 및 재사용에 대해 크게 향상 된 보안을 제공 합니다. 방어 합니다.
 
@@ -302,11 +302,11 @@ Windows Server 2016는 가상 컴퓨터의 TPM을 지원 합니다 .이를 통�
 가상화 된 환경에서 보호를 개선 하는 한 가지 방법은 Vm이 작동 하는 데 필요한 특정 시스템에만 통신할 수 있도록 하는 방식으로 네트워크를 분할 하는 것입니다. 예를 들어 응용 프로그램이 인터넷에 연결 하지 않아도 되는 경우이를 분할 하 여 외부 공격자의 대상으로 해당 시스템을 제거할 수 있습니다. Windows Server 2016의 SDN (소프트웨어 정의 네트워킹)에는 네트워크 내부 또는 외부에서 들어오는 공격 으로부터 응용 프로그램을 보호할 수 있는 보안 정책을 동적으로 만들 수 있도록 하는 분산 네트워크 방화벽이 포함 되어 있습니다. 이 분산 된 네트워크 방화벽은 네트워크에서 응용 프로그램을 격리할 수 있도록 하 여 보안에 계층을 추가 합니다. 가상 네트워크 인프라의 모든 위치에 정책을 적용 하 여 VM 간 트래픽, VM 간 트래픽 격리 또는 필요한 경우 vm 간 트래픽 격리 (즉, 손상 되거나 프로그래밍 방식으로 발생 한 개별 시스템의 경우) 여러 서브넷. Windows Server 2016 소프트웨어 정의 네트워킹 기능을 사용 하면 들어오는 트래픽을 타사 가상 어플라이언스로 라우팅하거나 미러링할 수도 있습니다. 예를 들어 추가 스팸 필터링 보호를 위해 Barracuda 가상 어플라이언스를 통해 모든 전자 메일 트래픽을 전송 하도록 선택할 수 있습니다. 이를 통해 온-프레미스 또는 클라우드에서 추가 보안을 쉽게 계층화 할 수 있습니다.
 
 ### <a name="other-gdpr-considerations-for-servers"></a>서버에 대 한 다른 GDPR 고려 사항
-GDPR에는 개인 데이터 위반이 발생 하는 위반 알림에 대 한 명시적 요구 사항이 포함 되어 있습니다. 즉, "_우발적 또는 불법적인 소멸에 대 한 보안 위반, 손실, 변경, 무단 공개 또는 액세스, 개인 데이터에 대 한 액세스를 제공 합니다. 전송 되 고, 저장 되거나, 처리 되지 않습니다._ "  첫 번째 위치에서 위반을 검색할 수 없는 경우 72 시간 이내에 엄격한 GDPR 알림 요구 사항을 충족 하기 위해 앞으로 이동할 수 없습니다.
+GDPR에는 개인 데이터 위반이 발생 하는 위반 알림에 대 한 명시적 요구 사항이 포함 되어 있습니다. 여기에는 "_우발적 또는 불법적인 소멸에 대 한 보안 위반, 손실, 변경, 무단 공개 또는 액세스, 개인 데이터 전송, 저장 또는 달리 처리_됨"이 포함 됩니다.  첫 번째 위치에서 위반을 검색할 수 없는 경우 72 시간 이내에 엄격한 GDPR 알림 요구 사항을 충족 하기 위해 앞으로 이동할 수 없습니다.
 
-Windows Security Center 백서 [에 설명 된 대로 위반 후: 고급 위협 처리](http://wincom.blob.core.windows.net/documents/Post_Breach_Dealing_with_Advanced_Threats_Whitepaper.pdf)
+Windows Security Center 백서에서 설명한 대로 [위반 후 고급 위협 처리](http://wincom.blob.core.windows.net/documents/Post_Breach_Dealing_with_Advanced_Threats_Whitepaper.pdf)
 
-> "_사후 위반이 발생 하는 것과 달리, 위반이 이미 발생 했다고 가정 합니다 .이는 항공편 레코더 및 범죄 조사 기 (CSI)로 작동 합니다. 사후 위반은 레이더를 검색 하 고 조사 하 고 공격에 대응 하는 데 필요한 정보 및 도구 집합을 보안 팀에 제공 합니다._ "
+> "_사후 위반이 발생 하는 것과 달리, 위반이 이미 발생 했다고 가정 합니다 .이는 항공편 레코더 및 범죄 조사 기 (CSI)로 작동 합니다. 사후 위반은 공격을 식별 하 고 조사 하 고이에 대응 하는 데 필요한 정보 및 도구 집합을 보안 팀에 제공 합니다._
 
 이 섹션에서는 Windows Server가 GDPR 위반 알림 의무를 충족 하는 데 어떤 도움이 되는지 살펴봅니다. 이를 위해 Microsoft에서 제공 하는 기본 위협 데이터를 이해 하기 시작 합니다. 이러한 데이터는 Windows Defender ATP (Advanced Threat Protection)를 통해 데이터에 중요 한 영향을 얻기 위해 수집 되 고 분석 됩니다.
 
@@ -317,7 +317,7 @@ Microsoft는 거의 두 년간의 플랫폼을 요새화 하 고 고객을 보�
 
 ![Microsoft Intelligence 보안 그래프](../media/GDPR-Windows-Server-Overview/gdpr-intelligent-security-graph.png)
 
-Microsoft의 위협 인텔리전스 범위는 문자 그대로, 수십억 억 개의 데이터 요소로 확장 됩니다. 350억 메시지는 매달 검색 되 고, 기업 및 소비자 세그먼트에서 200 개 이상의 클라우드 서비스에 액세스 하는 경우에 10억는 매일, 140억 인증은 매일 수행 됩니다. 이러한 모든 데이터는 Microsoft가 사용자를 대신 하 여 Microsoft가 사용자를 대신 하 여, 안전 하 게 유지 하 고, 생산성을 유지 하 고, GDPR의 요구 사항을 충족 하는 동적 방식으로 front 도어를 보호 하는 데 도움이 되는 Intelligent Security Graph을 만듭니다.
+Microsoft의 위협 인텔리전스 범위, 문자 그대로, 수십억 개의 데이터 요소: 350억 개 메시지, 기업 및 소비자 세그먼트에서 200 개 이상의 클라우드 서비스에 액세스 하는 10억 고객 및 140억 인증이 수행 됨 매일. 이러한 모든 데이터는 Microsoft가 사용자를 대신 하 여 Microsoft가 사용자를 대신 하 여, 안전 하 게 유지 하 고, 생산성을 유지 하 고, GDPR의 요구 사항을 충족 하는 동적 방식으로 front 도어를 보호 하는 데 도움이 되는 Intelligent Security Graph을 만듭니다.
 
 #### <a name="detecting-attacks-and-forensic-investigation"></a>공격 감지 및 법적 조사
 최고의 끝점 방어라 해도 결국은 침해될 수 있습니다. 사이버 공격은 점점 더 정교하게 대상을 노리기 때문입니다. Windows Defender ATP (Advanced Threat Protection) 및 Microsoft ATA (Advanced Threat Analytics) 라는 두 가지 기능을 사용 하 여 잠재적인 위반 감지를 지원할 수 있습니다.
@@ -341,9 +341,9 @@ ATA는 조직의 id 손상을 감지 하는 데 도움이 되는 온-프레미�
 
 |공격 유형 |설명 |
 |---------|---------|
-|악의적인 공격 |이러한 공격은 다음과 같은 알려진 공격 유형 목록에서 공격을 검색 하 여 검색 됩니다.<ul><li>티켓 전달 (PtT)</li><li>패스-해시 (PtH)</li><li>과도 한 통과-해시</li><li>위조 PAC (MS14-068)</li><li>골든 티켓</li><li>악의적인 복제</li><li>정찰</li><li>무차별 암호 대입</li><li>원격 실행</li></ul>검색할 수 있는 악의적인 공격의 전체 목록 및 해당 설명에 대 한 자세한 내용은 ATA에서 검색할 수 있는 [의심 스러운 활동은 무엇 인가요?](https://docs.microsoft.com/advanced-threat-analytics/understand-explore/ata-threats)를 참조 하세요.|
-|비정상 동작 |이러한 공격은 동작 분석을 사용 하 고 machine learning을 사용 하 여 다음을 비롯 한 의심 스러운 활동을 식별 하 여 검색 됩니다.<ul><li>비정상적인 로그인</li><li>알 수 없는 위협</li><li>암호 공유</li><li>측면 이동</li></ul>|
-|보안 문제 및 위험 |다음을 포함 하 여 현재 네트워크 및 시스템 구성을 살펴보면 이러한 공격을 감지할 수 있습니다.<ul><li>손상 된 트러스트</li><li>약한 프로토콜</li><li>알려진 프로토콜 취약점</li></ul>|
+|악의적인 공격 |이러한 공격은 다음과 같은 알려진 공격 유형 목록에서 공격을 검색 하 여 검색 됩니다.<ul><li>PtT(Pass-the-Ticket)</li><li>PtH(Pass-the-Hash)</li><li>Overpass-the-Hash</li><li>위조된 PAC(MS14-068)</li><li>골든 티켓</li><li>악의적인 복제</li><li>정찰</li><li>무차별 암호 대입(Brute force)</li><li>원격 실행</li></ul>검색할 수 있는 악의적인 공격의 전체 목록 및 해당 설명에 대 한 자세한 내용은 ATA에서 검색할 수 있는 [의심 스러운 활동은 무엇 인가요?](https://docs.microsoft.com/advanced-threat-analytics/understand-explore/ata-threats)를 참조 하세요.|
+|비정상적인 동작 |이러한 공격은 동작 분석을 사용 하 고 machine learning을 사용 하 여 다음을 비롯 한 의심 스러운 활동을 식별 하 여 검색 됩니다.<ul><li>비정상적인 로그인</li><li>알 수 없는 위협</li><li>암호 공유</li><li>측면 확대</li></ul>|
+|보안 문제 및 위험 |다음을 포함 하 여 현재 네트워크 및 시스템 구성을 살펴보면 이러한 공격을 감지할 수 있습니다.<ul><li>손상된 신뢰</li><li>약한 프로토콜</li><li>알려진 프로토콜 취약점</li></ul>|
 
 ATA를 사용 하 여 권한 있는 id를 손상 시키려는 공격자를 검색할 수 있습니다. ATA 배포에 대 한 자세한 내용은 [Advanced Threat Analytics 설명서](https://docs.microsoft.com/advanced-threat-analytics/)의 계획, 디자인 및 배포 항목을 참조 하세요.
 

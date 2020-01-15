@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: ee1416a00fc0d347b7e05cb12c83f3d3532d693f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d3d08e954b7a2a9ce58eb61dec54f2848ab68c12
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71360145"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949168"
 ---
 # <a name="planning-for-compromise"></a>손상 계획
 
@@ -108,7 +108,7 @@ Active Directory 환경에서 업무상 중요 한 사용자, 시스템, 응용 
   
 그러나 SID 기록 유지 관리는 사용자의 액세스 토큰을 현재 및 과거 Sid로 채워 토큰이 너무 많은 환경에서 문제가 발생 한 것으로 입증 되었습니다. 토큰 팽창은 사용자의 액세스 토큰에 저장 해야 하는 Sid 수가 토큰에서 사용 가능한 공간 크기를 사용 하거나 초과 하는 문제입니다.  
   
-토큰 크기를 제한 된 범위로 늘릴 수 있지만, 토큰 확장에 대 한 궁극적인 해결 방법은 사용자 계정에 연결 된 Sid의 수를 줄이는 것입니다 .이는 가져가지 그룹 멤버 자격, SID 기록 제거 또는 둘 다의 조합을 사용 하는 것입니다. 토큰에 대 한 자세한 내용은 [Maxtokensize 및 Kerberos 토큰 팽창](http://blogs.technet.com/b/shanecothran/archive/2010/07/16/maxtokensize-and-kerberos-token-bloat.aspx)을 참조 하세요.  
+토큰 크기를 제한 된 범위로 늘릴 수 있지만, 토큰 확장에 대 한 궁극적인 해결 방법은 사용자 계정에 연결 된 Sid의 수를 줄이는 것입니다 .이는 가져가지 그룹 멤버 자격, SID 기록 제거 또는 둘 다의 조합을 사용 하는 것입니다. 토큰에 대 한 자세한 내용은 [Maxtokensize 및 Kerberos 토큰 팽창](https://blogs.technet.com/b/shanecothran/archive/2010/07/16/maxtokensize-and-kerberos-token-bloat.aspx)을 참조 하세요.  
   
 SID 기록을 사용 하 여 레거시 환경 (특히 그룹 구성원 자격 및 SID 기록이 손상 될 수 있음)에서 사용자를 마이그레이션하는 대신 SID 기록을 사용 하지 않고 "마이그레이션" 사용자에 게 메타 디렉터리 응용 프로그램을 활용 하는 것이 좋습니다. 새 포리스트로. 사용자 계정이 새 포리스트에 생성 되 면 메타 디렉터리 응용 프로그램을 사용 하 여 계정을 레거시 포리스트의 해당 계정에 매핑할 수 있습니다.  
   
@@ -119,7 +119,7 @@ SID 기록을 사용 하 여 레거시 환경 (특히 그룹 구성원 자격 �
 ### <a name="servers-and-workstations"></a>서버 및 워크스테이션  
 한 Active Directory 포리스트에서 다른 포리스트로의 기존 마이그레이션에서는 컴퓨터를 마이그레이션하는 것은 사용자, 그룹 및 응용 프로그램을 마이그레이션하는 것과 비교 하 여 비교적 간단 합니다. 컴퓨터 역할에 따라 새 포리스트로 마이그레이션하는 것은 이전 도메인을 disjoining 하 고 새 도메인에 가입 하는 것 처럼 간단할 수 있습니다. 그러나 컴퓨터 계정을 초기 포리스트에 그대로 마이그레이션하는 것은 새 환경을 만드는 목적을 무효화 합니다. 새 포리스트에 대 한 컴퓨터 계정을 마이그레이션 (잠재적으로 손상, 잘못 구성 또는 오래 된) 하는 대신 새 환경에서 서버 및 워크스테이션을 새로 설치 해야 합니다. 레거시 포리스트의 시스템에서 초기 포리스트의 시스템으로 데이터를 마이그레이션할 수 있지만 데이터를 보관 하는 시스템은 마이그레이션할 수 없습니다.  
   
-### <a name="applications"></a>애플리케이션  
+### <a name="applications"></a>Applications  
 
 응용 프로그램은 한 포리스트에서 다른 포리스트로 마이그레이션하는 데 가장 중요 한 문제를 제공할 수 있지만, "nonmigratory" 마이그레이션의 경우에는 초기 포리스트의 응용 프로그램이 최신 이어야 합니다. 지원 되 고 새로 설치 됩니다. 가능 하면 이전 포리스트의 응용 프로그램 인스턴스에서 데이터를 마이그레이션할 수 있습니다. 초기 포리스트에서 응용 프로그램을 "다시 만들 수 없는" 경우에는 다음 섹션에 설명 된 대로 레거시 응용 프로그램의 창의적인 소멸 또는 격리와 같은 접근 방식을 고려해 야 합니다.  
   
@@ -144,7 +144,7 @@ Creative 소멸은 이전 주문을 파괴 하 여 만든 경제 개발을 설�
   
 예를 들어, 보안 워크스테이션을 사용 하 여 중요 한 데이터 및 시스템에 액세스 하는 데 사용 하는 임원 및 기타 Vip가 중요 한 데이터에 액세스 하는 데 다른 장치를 사용할 수 있도록 하는 정책을 정의할 수 있습니다. 이는 사용자가 기억할 수 있는 간단한 원칙 이지만 방법을 적용 하는 데 도움이 되는 여러 백 엔드 컨트롤을 구현할 수 있습니다.  
 
-[인증 메커니즘 보증](https://technet.microsoft.com/library/dd391847(v=WS.10).aspx) 을 사용 하면 사용자가 스마트 카드를 사용 하 여 보안 시스템에 로그온 한 경우에만 중요 한 데이터에 액세스할 수 있으며, IPsec 및 사용자 권한 제한을 사용 하 여 중요 한 데이터 리포지토리에 연결할 수 있는 시스템을 제어할 수 있습니다. [Microsoft 데이터 분류 도구 키트](https://www.microsoft.com/download/details.aspx?id=27123) 를 사용 하 여 강력한 파일 분류 인프라를 구축할 수 있으며, [동적 Access Control](http://blogs.technet.com/b/windowsserver/archive/2012/05/22/introduction-to-windows-server-2012-dynamic-access-control.aspx) 구현 하 여 액세스 시도의 특징에 따라 데이터에 대 한 액세스를 제한 하 고 비즈니스 규칙을 기술 컨트롤로 변환할 수 있습니다.  
+[인증 메커니즘 보증](https://technet.microsoft.com/library/dd391847(v=WS.10).aspx) 을 사용 하면 사용자가 스마트 카드를 사용 하 여 보안 시스템에 로그온 한 경우에만 중요 한 데이터에 액세스할 수 있으며, IPsec 및 사용자 권한 제한을 사용 하 여 중요 한 데이터 리포지토리에 연결할 수 있는 시스템을 제어할 수 있습니다. [Microsoft 데이터 분류 도구 키트](https://www.microsoft.com/download/details.aspx?id=27123) 를 사용 하 여 강력한 파일 분류 인프라를 구축할 수 있으며, [동적 Access Control](https://blogs.technet.com/b/windowsserver/archive/2012/05/22/introduction-to-windows-server-2012-dynamic-access-control.aspx) 구현 하 여 액세스 시도의 특징에 따라 데이터에 대 한 액세스를 제한 하 고 비즈니스 규칙을 기술 컨트롤로 변환할 수 있습니다.  
   
 사용자의 관점에서, 보안 시스템에서 중요 한 데이터에 액세스 하는 것은 "작동" 하 고 보안 되지 않은 시스템에서이 작업을 수행 하려고 시도 하는 것입니다. " 그러나 환경 모니터링 및 관리 측면에서 볼 때 사용자가 중요 한 데이터 및 시스템에 액세스 하는 방법에 식별할 수 있는 패턴을 만들어 비정상적인 액세스 시도를 더 쉽게 검색할 수 있습니다.  
   

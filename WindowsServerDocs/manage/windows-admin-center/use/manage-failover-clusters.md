@@ -8,12 +8,12 @@ ms.author: jol
 ms.date: 06/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server
-ms.openlocfilehash: 16e758f0a8746d41adcdafb2bc1be2d91a3fc29c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b7f015ac4c9906447069501bf0922b36306a51d7
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406803"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950490"
 ---
 # <a name="manage-failover-clusters-with-windows-admin-center"></a>Windows 관리 센터를 사용 하 여 장애 조치 (Failover) 클러스터 관리
 
@@ -21,12 +21,12 @@ ms.locfileid: "71406803"
 
 > [!Tip]
 > Windows Admin Center를 처음 사용하시나요?
-> [Windows Admin Center에 대해 자세히 알아보거나](../understand/windows-admin-center.md)[지금 다운로드](https://aka.ms/windowsadmincenter)하세요.
+> [Windows 관리 센터에 대해 다운로드 하거나 자세히 알아보세요](../overview.md).
 
 ## <a name="managing-failover-clusters"></a>장애 조치 (failover) 클러스터 관리
-[장애 조치 (Failover) 클러스터링](https://docs.microsoft.com/windows-server/failover-clustering/failover-clustering-overview) 은 여러 서버를 장애 조치 (Failover) 클러스터로 그룹화 하 여 스케일 아웃 파일 서버, hyper-v 등의 응용 프로그램 및 서비스의 가용성과 확장성을 향상 시킬 수 있는 Windows Server 기능입니다. Microsoft SQL Server.
+[장애 조치 (Failover) 클러스터링](https://docs.microsoft.com/windows-server/failover-clustering/failover-clustering-overview) 은 여러 서버를 장애 조치 (Failover) 클러스터로 그룹화 하 여 스케일 아웃 파일 서버, hyper-v 및 Microsoft SQL Server와 같은 응용 프로그램 및 서비스의 가용성과 확장성을 향상 시킬 수 있는 Windows Server 기능입니다.
 
-장애 조치 (failover) 클러스터 노드를 Windows 관리 센터에서 [서버 연결](manage-servers.md) 로 추가 하 여 개별 서버로 관리할 수 있지만 클러스터 리소스, 저장소, 네트워크, 노드, 역할, 가상 서버를 보고 관리 하는 장애 조치 (failover) 클러스터로 추가할 수도 있습니다. 컴퓨터 및 가상 스위치.
+장애 조치 (failover) 클러스터 노드를 Windows 관리 센터에서 [서버 연결](manage-servers.md) 로 추가 하 여 해당 노드를 개별 서버로 관리할 수도 있지만 장애 조치 (failover) 클러스터로 추가 하 여 클러스터 리소스, 저장소, 네트워크, 노드, 역할, 가상 컴퓨터 및 가상 스위치를 보고 관리할 수도 있습니다.
 
 ![장애 조치 (Failover) 클러스터 개요 화면](../media/manage-failover-clusters/fcm-overview.png)
 

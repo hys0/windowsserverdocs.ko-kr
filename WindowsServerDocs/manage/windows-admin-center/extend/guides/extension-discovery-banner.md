@@ -8,12 +8,12 @@ ms.author: jol
 ms.date: 06/06/2019
 ms.localizationpriority: medium
 ms.prod: windows-server
-ms.openlocfilehash: fb549d84f565feeea348d2f50a9188218e7638d1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d761ba61ae5680373c334889799e82e5d092a0d4
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71357081"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950105"
 ---
 # <a name="enabling-the-extension-discovery-banner"></a>확장 검색 배너 사용
 
@@ -29,7 +29,7 @@ Windows 관리 센터를 시작 하면 등록 된 확장 피드에 연결 되 �
 
 ## <a name="how-to-implement-the-extension-discovery-banner"></a>확장 검색 배너를 구현 하는 방법
 
-Nuspec 파일의 "tags" 메타 데이터는 확장에서 지 원하는 하드웨어 제조업체 및/또는 모델을 선언 하는 데 사용 됩니다. 태그는 공백으로 구분 되며 제조업체 또는 모델 태그를 추가 하거나 둘 다를 추가 하 여 지원 되는 제조업체 및/또는 모델을 선언할 수 있습니다. 태그 형식은 ``"[value type]_[value condition]"``입니다. 여기서 [값 유형]은 "제조업체" 또는 "모델" (대/소문자 구분)이 고 [값 조건]은 제조업체 또는 모델 문자열을 정의 하는 [Javascript 정규식](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) 이며 [value type] 및 [value condition]은 밑줄로 구분 됩니다. 그런 다음 URI 인코딩을 사용 하 여이 문자열을 인코딩하고. nuspec "tags" 메타 데이터 문자열에 추가 합니다.
+Nuspec 파일의 "tags" 메타 데이터는 확장에서 지 원하는 하드웨어 제조업체 및/또는 모델을 선언 하는 데 사용 됩니다. 태그는 공백으로 구분 되며 제조업체 또는 모델 태그를 추가 하거나 둘 다를 추가 하 여 지원 되는 제조업체 및/또는 모델을 선언할 수 있습니다. 태그 형식은 ``"[value type]_[value condition]"``입니다. 여기서 [값 유형]은 "제조업체" 또는 "모델" (대/소문자 구분)이 고 [값 조건]은 제조업체 또는 모델 문자열을 정의 하는 [Javascript 정규식](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions) 이며 [value type] 및 [value condition]은 밑줄로 구분 됩니다. 그런 다음 URI 인코딩을 사용 하 여이 문자열을 인코딩하고. nuspec "tags" 메타 데이터 문자열에 추가 합니다.
 
 ### <a name="example"></a>예
 

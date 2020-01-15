@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 07/09/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 7221d3ea94ff9f2d7fca8e95cee66597e2dc6270
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d7b96574dcfc2a4417aa36780d7bd87c2556f61f
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402066"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950267"
 ---
 # <a name="smb-security-enhancements"></a>SMB 보안 강화
 
@@ -78,7 +78,7 @@ Set-SmbServerConfiguration –RejectUnencryptedAccess $false
 >[!NOTE]
 >* SMB 암호화는 AES (AES(Advanced Encryption Standard))-CCM 알고리즘을 사용 하 여 데이터를 암호화 하 고 해독 합니다. 또한 AES-CCM은 SMB 서명 설정에 관계 없이 암호화 된 파일 공유에 대 한 데이터 무결성 유효성 검사 (서명)를 제공 합니다. 암호화 하지 않고 SMB 서명을 사용 하도록 설정 하려는 경우이 작업을 계속할 수 있습니다. 자세한 내용은 [SMB 서명의 기본 사항](https://blogs.technet.microsoft.com/josebda/2010/12/01/the-basics-of-smb-signing-covering-both-smb1-and-smb2/)을 참조 하세요.
 >* 조직에서 WAN (광역 네트워크) 가속 어플라이언스를 사용 하는 경우 파일 공유 또는 서버에 액세스 하려고 하면 문제가 발생할 수 있습니다.
->* 기본 구성 (암호화 된 파일 공유에 대 한 암호화 되지 않은 액세스 허용 안 함)을 사용 하는 경우 SMB 3.0을 지원 하지 않는 클라이언트가 암호화 된 파일 공유에 액세스 하려고 하면 이벤트 ID 1003가 SmbServer/Operational 이벤트 로그에 기록 됩니다. 클라이언트는 **액세스 거부** 오류 메시지를 받게 됩니다.
+>* 암호화 된 파일 공유에 대 한 암호화 되지 않은 액세스 권한이 있는 기본 구성을 사용 하는 경우 SMB 3.0을 지원 하지 않는 클라이언트가 암호화 된 파일 공유에 액세스 하는 경우 이벤트 ID 1003이 SmbServer/Operational 이벤트 로그에 기록 되 고 클라이언트는 **액세스 거부** 오류 메시지를 받게 됩니다.
 >* NTFS 파일 시스템의 SMB 암호화와 파일 시스템 암호화 (EFS)는 관련이 없으며 SMB 암호화에는 EFS 사용이 필요 하지 않습니다.
 >* SMB 암호화와 BitLocker 드라이브 암호화는 관련이 없으며 SMB 암호화에는 BitLocker 드라이브 암호화 사용이 필요 하지 않습니다.
 
@@ -86,11 +86,11 @@ Set-SmbServerConfiguration –RejectUnencryptedAccess $false
 
 SMB 3.0은 SMB 2.0 또는 SMB 3.0 프로토콜 또는 클라이언트와 서버가 협상 하는 기능을 다운 그레이드 하려고 하는 메시지 가로채기 (man-in-the-middle) 공격을 검색할 수 있습니다. 이러한 공격이 클라이언트 또는 서버에서 검색 되 면 연결이 끊어지고 이벤트 ID 1005이 SmbServer/Operational 이벤트 로그에 기록 됩니다. 보안 언어 협상은 SMB 2.0 또는 3.0에서 SMB 1.0로 다운 그레이드을 검색 하거나 방지할 수 없습니다. 따라서 SMB 암호화의 전체 기능을 활용 하려면 SMB 1.0 서버를 사용 하지 않도록 설정 하는 것이 좋습니다. 자세한 내용은 [SMB 1.0을 사용 하지 않도록 설정](#disabling-smb-10)을 참조 하세요.
 
-다음 섹션에서 설명 하는 보안 언어 협상 기능을 사용 하면 메시지 가로채기 (man-in-the-middle) 공격이 SMB 3에서 SMB 2로의 연결을 다운 그레이드 (암호화 되지 않은 액세스 사용) 할 수 없습니다. 그러나 SMB 1로 다운 그레이드를 방지 하는 것이 아니라 암호화 되지 않은 액세스도 발생 합니다. SMB의 이전 비 Windows 구현과 관련 된 잠재적인 문제에 대 한 자세한 내용은 [Microsoft 기술 자료](http://support.microsoft.com/kb/2686098)를 참조 하십시오.
+다음 섹션에서 설명 하는 보안 언어 협상 기능을 사용 하면 메시지 가로채기 (man-in-the-middle) 공격이 SMB 3에서 SMB 2로의 연결을 다운 그레이드 (암호화 되지 않은 액세스 사용) 할 수 없습니다. 그러나 SMB 1로 다운 그레이드를 방지 하는 것이 아니라 암호화 되지 않은 액세스도 발생 합니다. SMB의 이전 비 Windows 구현과 관련 된 잠재적인 문제에 대 한 자세한 내용은 [Microsoft 기술 자료](https://support.microsoft.com/kb/2686098)를 참조 하십시오.
 
 ## <a name="new-signing-algorithm"></a>새 서명 알고리즘
 
-SMB 3.0은 서명에 최신 암호화 알고리즘을 사용 합니다. AES (AES(Advanced Encryption Standard))-CMAC (암호화 기반 메시지 인증 코드). SMB 2.0는 이전 HMAC-SHA256 암호화 알고리즘을 사용 했습니다. Aes-CMAC 및 AES-CCM은 AES 지침이 지원 되는 대부분의 최신 Cpu에서 데이터 암호화를 크게 가속화할 수 있습니다. 자세한 내용은 [SMB 서명의 기본 사항](https://blogs.technet.microsoft.com/josebda/2010/12/01/the-basics-of-smb-signing-covering-both-smb1-and-smb2/)을 참조 하세요.
+SMB 3.0는 서명에 대 한 최신 암호화 알고리즘을 사용 합니다. AES (AES(Advanced Encryption Standard))-CMAC (암호 기반 메시지 인증 코드)입니다. SMB 2.0는 이전 HMAC-SHA256 암호화 알고리즘을 사용 했습니다. Aes-CMAC 및 AES-CCM은 AES 지침이 지원 되는 대부분의 최신 Cpu에서 데이터 암호화를 크게 가속화할 수 있습니다. 자세한 내용은 [SMB 서명의 기본 사항](https://blogs.technet.microsoft.com/josebda/2010/12/01/the-basics-of-smb-signing-covering-both-smb1-and-smb2/)을 참조 하세요.
 
 ## <a name="disabling-smb-10"></a>SMB 1.0 사용 안 함
 
@@ -117,7 +117,7 @@ Set-SmbServerConfiguration –EnableSMB1Protocol $false
 >[!NOTE]
 >SMB 1.0를 실행 하는 서버가 사용 하지 않도록 설정 되었기 때문에 SMB 클라이언트 연결이 거부 된 경우 SmbServer/Operational 이벤트 로그에 이벤트 ID 1001가 기록 됩니다.
 
-## <a name="more-information"></a>자세한 정보
+## <a name="more-information"></a>추가 정보
 
 다음은 Windows Server 2012의 SMB 및 관련 기술에 대 한 몇 가지 추가 리소스입니다.
 

@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: ba67a5fcc127bbe6ffce9454ff98fd3bc3725e55
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e51b7ea151db1ca5d53a8cacef3b042e345175de
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71367714"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949629"
 ---
 # <a name="monitoring-active-directory-for-signs-of-compromise"></a>손상 징후에 대한 Active Directory 모니터링
 
@@ -32,10 +32,10 @@ ms.locfileid: "71367714"
 
 Microsoft 공식 기업 지원 블로그에 대 한 링크는 다음과 같습니다. 조언, 지침 및 권장 되는 감사에 대 한 Active Directory 인프라의 보안 강화에 도움이 되 고 감사 정책을 설계할 때 중요 한 리소스는 이러한 블로그 콘텐츠를 제공 합니다.  
   
-* [Magic은 전역 개체 액세스 감사](http://blogs.technet.com/b/askds/archive/2011/03/10/global-object-access-auditing-is-magic.aspx) -고급 감사 정책 구성에 추가 된 Windows 7 및 Windows Server 2008 R2 수 있게 해 주는 어떤 유형의 데이터가 하려는 쉽게 감사 하 고 스크립트 및 auditpol.exe 하지 기간이 설정 이라고 하는 제어 메커니즘에 설명 합니다.  
-* [Windows 2008에서 변경 된 감사 소개](http://blogs.technet.com/b/askds/archive/2007/10/19/introducing-auditing-changes-in-windows-2008.aspx) -Windows Server 2008에서 감사 변경 사항을 소개 합니다.  
-* [Vista 및 2008에 대 한 감사 트릭 냉각](http://blogs.technet.com/b/askds/archive/2007/11/16/cool-auditing-tricks-in-vista-and-2008.aspx) -문제 해결 하거나 사용자 환경에서 일어나는 표시에 사용할 수 있는 Windows Server 2008 및 Windows Vista의 흥미로운 감사 기능에 설명 합니다.  
-* [Windows Server 2008 및 Windows Vista의 감사에 대 한 원스톱 상점](http://blogs.technet.com/b/askds/archive/2008/03/27/one-stop-shop-for-auditing-in-windows-server-2008-and-windows-vista.aspx) -컴파일 감사 기능 및 Windows Server 2008 및 Windows Vista에 포함 된 정보를 포함 합니다.  
+* [Magic은 전역 개체 액세스 감사](https://blogs.technet.com/b/askds/archive/2011/03/10/global-object-access-auditing-is-magic.aspx) -고급 감사 정책 구성에 추가 된 Windows 7 및 Windows Server 2008 R2 수 있게 해 주는 어떤 유형의 데이터가 하려는 쉽게 감사 하 고 스크립트 및 auditpol.exe 하지 기간이 설정 이라고 하는 제어 메커니즘에 설명 합니다.  
+* [Windows 2008에서 변경 된 감사 소개](https://blogs.technet.com/b/askds/archive/2007/10/19/introducing-auditing-changes-in-windows-2008.aspx) -Windows Server 2008에서 감사 변경 사항을 소개 합니다.  
+* [Vista 및 2008에 대 한 감사 트릭 냉각](https://blogs.technet.com/b/askds/archive/2007/11/16/cool-auditing-tricks-in-vista-and-2008.aspx) -문제 해결 하거나 사용자 환경에서 일어나는 표시에 사용할 수 있는 Windows Server 2008 및 Windows Vista의 흥미로운 감사 기능에 설명 합니다.  
+* [Windows Server 2008 및 Windows Vista의 감사에 대 한 원스톱 상점](https://blogs.technet.com/b/askds/archive/2008/03/27/one-stop-shop-for-auditing-in-windows-server-2008-and-windows-vista.aspx) -컴파일 감사 기능 및 Windows Server 2008 및 Windows Vista에 포함 된 정보를 포함 합니다.  
   
 다음 링크는 Windows Server 2008에서 감사 향상 된 Windows 8 및 Windows Server 2012에서 감사 하는 Windows에 대 한 정보 및 AD DS에 대 한 정보를 제공 합니다.  
   
@@ -114,7 +114,7 @@ Windows Server 2012, Windows Server 2008 R2 또는 Windows 2008을 실행 하는
 ![AD 모니터링](media/Monitoring-Active-Directory-for-Signs-of-Compromise/SAD_5.gif)  
   
 > [!NOTE]  
-> Auditpol.exe 없지만 그룹 정책 설정 된 모든 감사 정책 상태를 항상 정확 하 게 보고 하지 않습니다. 참조 [Windows 7 및 2008 r 2에서 실제 감사 정책 가져오기](http://blogs.technet.com/b/askds/archive/2011/03/11/getting-the-effective-audit-policy-in-windows-7-and-2008-r2.aspx) 대 한 자세한 내용은 합니다.  
+> Auditpol.exe 없지만 그룹 정책 설정 된 모든 감사 정책 상태를 항상 정확 하 게 보고 하지 않습니다. 참조 [Windows 7 및 2008 r 2에서 실제 감사 정책 가져오기](https://blogs.technet.com/b/askds/archive/2011/03/11/getting-the-effective-audit-policy-in-windows-7-and-2008-r2.aspx) 대 한 자세한 내용은 합니다.  
   
 각 기본 범주에는 여러 하위 범주에 있습니다. 다음은 범주, 해당 하위 범주 및 해당 기능에 대 한 설명을의 목록입니다.  
   
@@ -162,8 +162,8 @@ Windows Server 2012, Windows Server 2008 R2 또는 Windows 2008을 실행 하는
 ##### <a name="distribution-group-management"></a>메일 그룹 관리  
 이 하위 멤버를 추가 또는 메일 그룹에서 제거할 때 또는 메일 그룹을 생성, 변경 또는 삭제 등의 메일 그룹 관리의 각 이벤트를 보고 합니다. 이 감사 정책 설정을 사용 하는 경우 관리자는 악의적이 고, 실수로 인 한 권한 있는 그룹 계정 생성을 검색 이벤트 추적 수 있습니다.  
   
-##### <a name="application-group-management"></a>응용 프로그램 그룹 관리  
-이 하위 멤버를 추가 또는 응용 프로그램 그룹에서 제거할 때 또는 응용 프로그램 그룹 생성, 변경 또는 삭제와 같은 컴퓨터에서 응용 프로그램 그룹 관리의 각 이벤트를 보고 합니다. 이 감사 정책 설정을 사용 하는 경우 관리자는 추적 이벤트를 응용 프로그램 그룹 계정의 악의적이 고, 실수로 인 한 권한 있는 생성 수 있습니다.  
+##### <a name="application-group-management"></a>애플리케이션 그룹 관리  
+이 하위 멤버를 추가 또는 애플리케이션 그룹에서 제거할 때 또는 애플리케이션 그룹 생성, 변경 또는 삭제와 같은 컴퓨터에서 애플리케이션 그룹 관리의 각 이벤트를 보고 합니다. 이 감사 정책 설정을 사용 하는 경우 관리자는 추적 이벤트를 애플리케이션 그룹 계정의 악의적이 고, 실수로 인 한 권한 있는 생성 수 있습니다.  
   
 ##### <a name="other-account-management-events"></a>다른 계정 관리 이벤트  
 이 하위 다른 계정 관리 이벤트를 보고합니다.  
@@ -177,7 +177,7 @@ Windows Server 2012, Windows Server 2008 R2 또는 Windows 2008을 실행 하는
 이 하위 프로세스가 종료 될 때 보고 합니다.  
   
 ##### <a name="dpapi-activity"></a>DPAPI 활동  
-이 하위 암호화 하거나 암호 해독 데이터 보호 응용 프로그래밍 인터페이스 (DPAPI)로 호출을 보고 합니다. DPAPI는 저장 된 암호와 같은 기밀 정보 및 키 정보를 보호 하는 데 사용 됩니다.  
+이 하위 암호화 하거나 암호 해독 데이터 보호 애플리케이션 프로그래밍 인터페이스 (DPAPI)로 호출을 보고 합니다. DPAPI는 저장 된 암호와 같은 기밀 정보 및 키 정보를 보호 하는 데 사용 됩니다.  
   
 ##### <a name="rpc-events"></a>RPC 이벤트  
 이 하위 보고서 원격 프로시저 호출 (RPC) 연결 이벤트입니다.  
@@ -248,7 +248,7 @@ Windows Server 2012, Windows Server 2008 R2 또는 Windows 2008을 실행 하는
 #### <a name="privilege-use"></a>권한 사용  
   
 ##### <a name="sensitive-privilege-use"></a>중요 한 권한 사용  
-이 하위 때 보고 합니다. 사용자 계정 또는 서비스에는 중요 한 권한을 사용 하 여 합니다. 다음 사용자 권한이 포함 하는 중요 한 권한: 운영 체제의 일부로 작동, 파일 및 디렉터리를 백업, 토큰 개체 만들기, 프로그램을 디버깅, 컴퓨터 및 사용자 계정을 위임용으로 신뢰할 수, 보안 감사 생성, 인증 후 클라이언트 가장, 로드 및 언로드 장치 드라이버, 감사 관리 및 보안 로그 사용, 펌웨어 환경 값 수정, 프로세스 수준 토큰 바꾸기 파일 및 디렉터리를 복원 하 고 파일 또는 다른 개체의 소유권을 합니다. 이 하위 감사 이벤트의 대용량을 만들어집니다.  
+이 하위 때 보고 합니다. 사용자 계정 또는 서비스에는 중요 한 권한을 사용 하 여 합니다. 다음 사용자 권한이 포함 하는 중요 한 권한: 운영 체제의 일부로 작동, 파일 및 디렉터리를 백업, 토큰 개체 만들기, 프로그램을 디버깅, 컴퓨터 및 사용자 계정을 위임용으로 신뢰할 수, 보안 감사 생성, 인증 후 클라이언트 가장, 로드 및 언로드 디바이스 드라이버, 감사 관리 및 보안 로그 사용, 펌웨어 환경 값 수정, 프로세스 수준 토큰 바꾸기 파일 및 디렉터리를 복원 하 고 파일 또는 다른 개체의 소유권을 합니다. 이 하위 감사 이벤트의 대용량을 만들어집니다.  
   
 ##### <a name="nonsensitive-privilege-use"></a>Nonsensitive 권한 사용  
 이 하위 때 보고 합니다. 사용자 계정 또는 서비스 nonsensitive 권한을 사용 합니다. Nonsensitive 권한 다음 사용자 권한이 포함: 신뢰할 수 있는 호출자로 자격 증명 관리자에 액세스, 네트워크에서이 컴퓨터 액세스, 도메인에 워크스테이션 추가, 프로세스에 대 한 메모리 할당량 조정, 로컬 로그온 허용, 원격 데스크톱 서비스를 통한 로그온 허용, 트래버스 검사 무시, 시스템 시간 변경, 페이지 파일 만들기, 전역 개체 만들기, 영구 공유 개체 만들기, 기호화 된 링크를 만들 네트워크에서이 컴퓨터 액세스 거부, 일괄 작업으로 로그온 거부, 서비스로 로그온 거부, 로컬 로그온 거부, 원격 데스크톱 서비스를 통한 로그온 거부, 원격 시스템에서 강제 종료, 프로세스 작업 집합 향상, 예약 우선 순위 증가, 메모리의 페이지 잠금, 일괄 처리 작업으로 로그온, 서비스로 로그온, 개체 레이블 수정 볼륨 유지 관리 작업, 단일 프로세스 프로필, 시스템 성능 프로필을 수행, 도킹 스테이션에서 컴퓨터를 제거, 시스템, 종료 및 디렉터리 서비스 데이터를 동기화 합니다. 이 하위 감사 매우 많은 양의 이벤트 만들어집니다.  
@@ -275,8 +275,8 @@ Windows Server 2012, Windows Server 2008 R2 또는 Windows 2008을 실행 하는
 ##### <a name="certification-services"></a>인증 서비스  
 이 하위 인증 서비스 작업을 수행할 때 보고 합니다.  
   
-##### <a name="application-generated"></a>생성 된 응용 프로그램  
-이 하위 응용 프로그램은 Windows 응용 프로그래밍 인터페이스 (Api)를 감사를 사용 하 여 감사 이벤트를 생성 하려고 할 때 보고 합니다.  
+##### <a name="application-generated"></a>생성 된 애플리케이션  
+이 하위 애플리케이션은 Windows 애플리케이션 프로그래밍 인터페이스 (Api)를 감사를 사용 하 여 감사 이벤트를 생성 하려고 할 때 보고 합니다.  
   
 ##### <a name="handle-manipulation"></a>조작 처리  
 이 하위 개체에 대 한 핸들 열리거나 닫힐 때 보고 합니다. Sacl 사용 하 여 개체에만 생성 되며 작업을 시도한 핸들 SACL 항목을 일치 하는 경우에 이러한 이벤트를 발생 합니다. 핸들 조작 이벤트는 해당 개체 액세스 하위 범주 (예, 파일 시스템 또는 레지스트리)에 설정 되는 개체 유형에 생성 됩니다.  
@@ -309,7 +309,7 @@ IPsec 드라이버
 이 하위 인터넷 프로토콜 보안 (IPsec) 드라이버의 활동을 보고합니다.  
   
 ##### <a name="other-system-events"></a>기타 시스템 이벤트  
-이 하위 시스템 이벤트를 보고 합니다.  
+이 하위 기타 시스템 이벤트를 보고합니다.  
   
 하위 범주 설명에 대 한 자세한 내용은 참조는 [도구 Microsoft Security Compliance Manager](https://technet.microsoft.com/library/cc677002.aspx)합니다.  
   
@@ -355,7 +355,7 @@ Auditpol.exe 구문 예제:
 
 Microsoft에서 제공 된 [샘플 스크립트](https://support.microsoft.com/kb/921469) 각 auditpol.exe 명령에 직접 입력 하지 않고 스크립트를 사용 하 여 고급 감사 정책 설정 하려는 관리자에 대 한 합니다.  
   
-**참고** auditpol.exe 없지만 그룹 정책 항상 정확 하 게 설정 된 모든 감사 정책 상태를 보고 하지는 않습니다. 참조 [Windows 7 및 Windows 2008 r 2에서 실제 감사 정책 가져오기](http://blogs.technet.com/b/askds/archive/2011/03/11/getting-the-effective-audit-policy-in-windows-7-and-2008-r2.aspx) 대 한 자세한 내용은 합니다.  
+**참고** auditpol.exe 없지만 그룹 정책 항상 정확 하 게 설정 된 모든 감사 정책 상태를 보고 하지는 않습니다. 참조 [Windows 7 및 Windows 2008 r 2에서 실제 감사 정책 가져오기](https://blogs.technet.com/b/askds/archive/2011/03/11/getting-the-effective-audit-policy-in-windows-7-and-2008-r2.aspx) 대 한 자세한 내용은 합니다.  
   
 #### <a name="other-auditpol-commands"></a>다른 Auditpol 명령
 
@@ -369,7 +369,7 @@ Microsoft에서 제공 된 [샘플 스크립트](https://support.microsoft.com/k
   
 `auditpol /<get/set> /option:<CrashOnAuditFail> /<enable/disable>`-이 감사 정책 설정을 사용 하는 경우 어떤 이유로 든 보안 감사를 로그할 수 없는 경우 시스템이 즉시 중지 됩니다 (STOP: C0000244 {Audit Failed} message). 보안 감사 로그가 꽉 차고 보안 로그에 대해 지정 된 보존 메서드는 로그에 이벤트 실패 하는 일반적으로 **이벤트 덮어쓰지 않음** 또는 **이벤트 덮어쓰기**합니다. 일반적으로 로그온 하는 보안 로그를 더 높은 보증 해야 하는 환경에 의해 활성화만 됩니다. 설정 된 경우 관리자가 보안 로그 크기를 시청 고 필요에 따라 로그 회전 밀접 하 게 해야 합니다. 또한 설정할 수 있습니다 그룹 정책 보안 옵션을 수정 하 여 **감사: 보안 감사를 로그할 수 없는 경우 즉시 시스템 종료** (기본값 = 사용 안 함).  
   
-`auditpol /<get/set> /option:<AuditBaseObjects> /<enable/disable>`-이 감사 정책 설정은 글로벌 시스템 개체의 액세스 감사 여부를 결정 합니다. 이 정책 옵션을 사용 하면 뮤텍스, 이벤트, 세마포 및 기본 시스템 액세스 제어 목록 (SACL)를 사용 하 여 만들어집니다 DOS 장치 등의 시스템 개체입니다. 대부분의 관리자가 너무 "심하거"를 글로벌 시스템 개체를 감사 하 고 악의적인 해킹 의심 되 면만 로드할 수 있습니다. 명명 된 개체만 SACL이 제공 됩니다. 감사 개체 액세스 감사 정책 (또는 커널 개체 감사 하위 범주)도 사용 하는 경우 이러한 시스템 개체에 대 한 액세스 감사 됩니다. 이 보안 설정을 구성할 때 변경 내용이 적용 되지 않습니다 Windows를 다시 시작 해야 합니다. 이 정책을 설정할 수 있으며 그룹 정책을 사용 하 여 글로벌 시스템 개체에 대 한 액세스 감사 보안 옵션을 수정 하 여 (기본값 = 사용 안 함).  
+`auditpol /<get/set> /option:<AuditBaseObjects> /<enable/disable>`-이 감사 정책 설정은 글로벌 시스템 개체의 액세스 감사 여부를 결정 합니다. 이 정책 옵션을 사용 하면 뮤텍스, 이벤트, 세마포 및 기본 시스템 액세스 제어 목록 (SACL)를 사용 하 여 만들어집니다 DOS 디바이스 등의 시스템 개체입니다. 대부분의 관리자가 너무 "심하거"를 글로벌 시스템 개체를 감사 하 고 악의적인 해킹 의심 되 면만 로드할 수 있습니다. 명명 된 개체만 SACL이 제공 됩니다. 감사 개체 액세스 감사 정책 (또는 커널 개체 감사 하위 범주)도 사용 하는 경우 이러한 시스템 개체에 대 한 액세스 감사 됩니다. 이 보안 설정을 구성할 때 변경 내용이 적용 되지 않습니다 Windows를 다시 시작 해야 합니다. 이 정책을 설정할 수 있으며 그룹 정책을 사용 하 여 글로벌 시스템 개체에 대 한 액세스 감사 보안 옵션을 수정 하 여 (기본값 = 사용 안 함).  
   
 `auditpol /<get/set> /option:<AuditBaseDirectories> /<enable/disable>`-이 감사 정책 설정은 명명 된 커널 개체 (예: 뮤텍스 및 세마포)를 만들 때 Sacl을 지정 하도록 지정 합니다. AuditBaseDirectories는 AuditBaseObjects 다른 개체를 포함할 수 없는 개체를 적용 하는 동안 컨테이너 개체를 영향을 줍니다.  
   

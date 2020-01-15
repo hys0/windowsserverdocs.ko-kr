@@ -8,12 +8,12 @@ ms.author: jgerend
 manager: daveba
 ms.technology: storage-spaces
 ms.date: 06/20/2019
-ms.openlocfilehash: 2de3452a3528122beb26f403fb0c73d7ff13efd7
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: bb93ec15fd138ee65797c9d27413552c3a1759a6
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402115"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949677"
 ---
 # <a name="using-disk-cleanup-on-windows-server"></a>Windows Server에서 디스크 정리 사용
 
@@ -29,7 +29,7 @@ ms.locfileid: "71402115"
 
 역할 및 기능 추가 마법사를 사용 하 여 Windows Server 2012 R2 또는 이전 버전을 실행 하는 서버에 데스크톱 환경을 설치 하는 경우 다음 단계를 수행 하 여 디스크 정리도 설치 합니다.
 
-1. 서버 관리자가 이미 열려 있으면 다음 단계로 이동합니다. 서버 관리자가 아직 열려 있지 않으면 다음 중 하나를 수행하여 엽니다.
+1. 서버 관리자가 이미 열려 있으면 다음 단계로 이동합니다. 서버 관리자가 이미 열려 있지 않으면 다음 중 하나를 수행하여 엽니다.
 
    - Windows 바탕 화면에서 Windows 작업 표시줄의 **서버 관리자**를 클릭하여 서버 관리자를 시작합니다.
 
@@ -63,8 +63,8 @@ Cleanmgr를 사용 하려면 앞에서 설명한 대로 데스크톱 경험을 �
 
 | 운영 체제  | 아키텍처  | 파일 위치  |
 | ----------------- | -------------- | --------------- |
-| Windows Server 2008 R2 | 64비트 | C:\Windows\winsxs\amd64_microsoft-windows-cleanmgr_31bf3856ad364e35_6.1.7600.16385_none_c9392808773cd7da\cleanmgr.exe 
-| Windows Server 2008 R2 | 64비트 | C:\Windows\winsxs\amd64_microsoft-windows-cleanmgr.resources_31bf3856ad364e35_6.1.7600.16385_en-us_b9cb6194b257cc63\cleanmgr.exe.mui |
+| Windows Server 2008 R2 | 64비트 | C:\Windows\winsxs\ amd64_microsoft 1.7600 cleanmgr_31bf3856ad364e35_6.16385_none_c9392808773cd7da \cleanmgr.exe 
+| Windows Server 2008 R2 | 64비트 | C:\Windows\winsxs\ amd64_microsoft cleanmgr resources_31bf3856ad364e35_6.16385_en-us_b9cb6194b257cc63 \cleanmgr.exe.mui |
 
 Cleanmgr를 찾아 파일을 **%systemroot%\System32**로 이동 합니다.
 
@@ -76,6 +76,6 @@ Cleanmgr를 찾아 파일을 **%systemroot%\System32\en-US**로 이동 합니다
 
 ## <a name="additional-references"></a>추가 참조
 
-[Windows 10에서 드라이브 공간 확보](https://support.microsoft.com/en-us/help/12425/windows-10-free-up-drive-space)
+[Windows 10에서 드라이브 공간 확보](https://support.microsoft.com/help/12425/windows-10-free-up-drive-space)
 
 [cleanmgr](../../administration/windows-commands/cleanmgr.md)

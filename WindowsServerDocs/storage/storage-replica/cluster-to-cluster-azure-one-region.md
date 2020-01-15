@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: storage-replica
 manager: mchad
-ms.openlocfilehash: 55d9c600c86b6b64efdb5c7d4437697539f887ae
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 3e620b5597a2d25a7bb02daf80c5812d25f6a987
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402942"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950031"
 ---
 # <a name="cluster-to-cluster-storage-replica-within-the-same-region-in-azure"></a>Azure의 동일한 지역 내에서 클러스터에서 저장소 복제본으로 클러스터
 
@@ -25,10 +25,10 @@ Azure의 동일한 지역 내에서 클러스터를 클러스터로 구성할 �
 프로세스에 대 한 전체 연습을 보려면 아래 비디오를 시청 하세요.
 
 1 부
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE26f2Y]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE26f2Y]
 
 2 부
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE269Pq]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE269Pq]
 
 ![아키텍처 다이어그램은 동일한 지역 내의 Azure에서 클러스터 간 저장소 복제본을 보여주는 합니다.](media/Cluster-to-cluster-azure-one-region/architecture.png)
 > [!IMPORTANT]
@@ -76,16 +76,16 @@ Azure의 동일한 지역 내에서 클러스터를 클러스터로 구성할 �
 11. 각 클러스터에 대 한 내부 표준 SKU [Load Balancer](https://ms.portal.azure.com/#create/Microsoft.LoadBalancer-ARM) (**azlbr1**,**azlbr2**)를 만듭니다. 
    
     부하 분산 장치에 대 한 정적 개인 IP 주소로 클러스터 IP 주소를 제공 합니다.
-    - azlbr1 = > 프런트 엔드 IP: 10.3.0.100 (가상 네트워크 (**az2az**) 서브넷에서 사용 하지 않는 IP 주소 선택)
+    - azlbr1 = > 프런트 엔드 IP: 10.3.0.100 (가상 네트워크 (**az2az-Vnet**) 서브넷에서 사용 하지 않는 Ip 주소 선택)
     - 각 부하 분산 장치에 대 한 백 엔드 풀을 만듭니다. 연결 된 클러스터 노드를 추가 합니다.
     - 상태 프로브 만들기: 포트 59999
-    - 부하 분산 규칙 만들기: 사용 되는 부동 IP를 사용 하는 HA 포트를 허용 합니다. 
+    - 부하 분산 규칙 만들기: 사용 하도록 설정 된 부동 IP를 사용 하 여 HA 포트를 허용 합니다. 
    
     부하 분산 장치에 대 한 정적 개인 IP 주소로 클러스터 IP 주소를 제공 합니다.
-    - azlbr2 = > 프런트 엔드 IP: 10.3.0.101 (가상 네트워크 (**az2az**) 서브넷에서 사용 하지 않는 IP 주소 선택)
+    - azlbr2 = > 프런트 엔드 IP: 10.3.0.101 (가상 네트워크 (**az2az-Vnet**) 서브넷에서 사용 하지 않는 Ip 주소 선택)
     - 각 부하 분산 장치에 대 한 백 엔드 풀을 만듭니다. 연결 된 클러스터 노드를 추가 합니다.
     - 상태 프로브 만들기: 포트 59999
-    - 부하 분산 규칙 만들기: 사용 되는 부동 IP를 사용 하는 HA 포트를 허용 합니다. 
+    - 부하 분산 규칙 만들기: 사용 하도록 설정 된 부동 IP를 사용 하 여 HA 포트를 허용 합니다. 
    
 12. 각 클러스터 노드에서 포트 59999 (상태 프로브)을 엽니다. 
    
@@ -133,13 +133,13 @@ Azure의 동일한 지역 내에서 클러스터를 클러스터로 구성할 �
 
 16. 다음 단계로 이동 하기 전에 [클러스터 유효성 검사 테스트](../../failover-clustering/create-failover-cluster.md#validate-the-configuration) 를 실행 합니다.
 
-17. Windows PowerShell을 시작하고 [Test-SRTopology](https://docs.microsoft.com/powershell/module/storagereplica/test-srtopology?view=win10-ps) cmdlet을 사용하여 모든 저장소 복제본 요구 사항을 충족하는지 확인합니다. 장기 실행 성능 평가 모드 뿐만 아니라 빠른 테스트에 대 한 요구 사항 전용 모드에서 cmdlet을 사용할 수 있습니다.
+17. Windows PowerShell을 시작하고 [Test-SRTopology](https://docs.microsoft.com/powershell/module/storagereplica/test-srtopology?view=win10-ps) cmdlet을 사용하여 모든 스토리지 복제본 요구 사항을 충족하는지 확인합니다. 장기 실행 성능 평가 모드 뿐만 아니라 빠른 테스트에 대 한 요구 사항 전용 모드에서 cmdlet을 사용할 수 있습니다.
 
 18. 클러스터 간 저장소 복제본을 구성 합니다.
    
     두 방향으로 한 클러스터에서 다른 클러스터로의 액세스 권한 부여:
 
-    예제:
+    이 예제에서는 다음과 같습니다.
 
     ```PowerShell
       Grant-SRAccess -ComputerName az2az1 -Cluster SRAZC2

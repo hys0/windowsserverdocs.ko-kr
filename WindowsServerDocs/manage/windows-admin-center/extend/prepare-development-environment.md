@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.localizationpriority: medium
 ms.date: 09/18/2018
 ms.prod: windows-server
-ms.openlocfilehash: 2aff8c0e43c6813c543511e643471c9cd9bcc292
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 67bd2a476cedd6d522daeaae54081b02fd893fbd
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71357038"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949972"
 ---
 # <a name="prepare-your-development-environment"></a>개발 환경 준비
 
@@ -31,7 +31,7 @@ Windows 관리 센터 SDK를 사용 하 여 확장 개발을 시작 해 보겠�
 SDK를 사용하여 개발을 시작하려면 다음과 같은 필수 구성 요소를 다운로드하고 설치합니다.
 
 * [Windows 관리 센터](https://aka.ms/WACDownloadPage) (GA 또는 preview 버전)
-* Visual Studio 또는 [Visual Studio Code](http://code.visualstudio.com)
+* Visual Studio 또는 [Visual Studio Code](https://code.visualstudio.com)
 * [노드 패키지 관리자](https://npmjs.com/get-npm) (8.12.0 이상)
 * [Nuget](https://www.nuget.org/downloads)(확장 게시용)
 
@@ -58,7 +58,7 @@ npm install -g windows-admin-center-cli
 ```
 
 >[!NOTE]
->최신 버전의 @angular/cli를 설치할 수 있지만 1.6.5 보다 큰 버전을 설치 하는 경우 gulp 빌드 단계에서 로컬 cli 버전이 설치 된 버전과 일치 하지 않는다는 경고가 표시 됩니다.
+>최신 버전의 @angular/cli를 설치할 수 있지만 1.6.5 보다 큰 버전을 설치 하는 경우 gulp 빌드 단계 중에 로컬 cli 버전이 설치 된 버전과 일치 하지 않는다는 경고가 표시 됩니다.
 
 ## <a name="next-steps"></a>다음 단계
 

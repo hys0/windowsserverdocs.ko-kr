@@ -10,12 +10,12 @@ ms.date: 10/11/2017
 ms.assetid: 5e1d7ecc-e22e-467f-8142-bad6d82fc5d0
 description: 미러링 및 패리티를 포함하는 저장소 공간 다이렉트의 복원력 옵션에 대한 설명.
 ms.localizationpriority: medium
-ms.openlocfilehash: d2220584c0021352110b27c3107d1113eb17ef59
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 2e60a715ffa0097f3f5c615792da3aa0a291d6bd
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71393813"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950039"
 ---
 # <a name="fault-tolerance-and-storage-efficiency-in-storage-spaces-direct"></a>저장소 공간 다이렉트의 내결함성 및 저장소 효율성
 
@@ -56,7 +56,7 @@ Windows Server 2016에서 저장소 공간은 '양방향'과 '3방향'의 두 �
 
 ## <a name="parity"></a>패리티
 
-'이레이저 코딩'이라고도 하는 패리티 인코딩은 [매우 복잡해질 수 있는](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/LRC12-cheng20webpage.pdf) 비트 산술 연산을 사용하여 내결함성을 제공합니다. 이 유형은 미러링에 비해 작동 방식이 명료하지 않으며 많은 온라인 리소스(예: 타사 자료인 [Dummies Guide to Erasure Coding](http://smahesh.com/blog/2012/07/01/dummies-guide-to-erasure-coding/)(초보자를 위한 이레이저 코딩 가이드))를 통해 개념을 파악할 수 있습니다. 여기서는 내결함성의 저하 없이 저장소 효율성이 더 높다는 점만 이해하는 것으로 충분합니다.
+'이레이저 코딩'이라고도 하는 패리티 인코딩은 [매우 복잡해질 수 있는](https://www.microsoft.com/research/wp-content/uploads/2016/02/LRC12-cheng20webpage.pdf) 비트 산술 연산을 사용하여 내결함성을 제공합니다. 이 유형은 미러링에 비해 작동 방식이 명료하지 않으며 많은 온라인 리소스(예: 타사 자료인 [Dummies Guide to Erasure Coding](http://smahesh.com/blog/2012/07/01/dummies-guide-to-erasure-coding/)(초보자를 위한 이레이저 코딩 가이드))를 통해 개념을 파악할 수 있습니다. 여기서는 내결함성의 저하 없이 저장소 효율성이 더 높다는 점만 이해하는 것으로 충분합니다.
 
 Windows Server 2016에서 저장소 공간은 '단일' 패리티와 '이중' 패리티의 두 가지 패리티 유형을 제공합니다. 이중 패리티는 '로컬 재구성 코드'라고 하는 고급 기술을 더 큰 규모로 채용합니다.
 
@@ -102,7 +102,7 @@ Windows Server 2016부터는 저장소 공간 다이렉트 볼륨이 일부는 �
 > [!IMPORTANT]
 > 성능이 가장 중요한 워크로드에 대한 미러링을 사용하는 것이 좋습니다. 워크로드에 따라 성능과 용량의 균형을 맞추는 방법에 관한 자세한 내용은 [볼륨 계획](plan-volumes.md#choosing-the-resiliency-type)을 참조하세요.
 
-## <a name="summary"></a>정리
+## <a name="summary"></a>요약
 
 이 섹션에서는 저장소 공간 다이렉트에서 사용 가능한 복원력 유형, 각 유형을 사용하기 위한 최소 크기 요구 사항, 각 유형에서 내결함성을 가지는 오류 횟수 및 해당 저장소 효율성을 요약했습니다.
 
@@ -121,8 +121,8 @@ Windows Server 2016부터는 저장소 공간 다이렉트 볼륨이 일부는 �
 |------------------------|-------------------------------------|
 |    양방향 미러      |    2                                |
 |    3방향 미러    |    3                                |
-|    이중 패리티         |    4                                |
-|    혼합               |    4                                |
+|    이중 패리티         |    추가를 클릭합니다.                                |
+|    혼합               |    추가를 클릭합니다.                                |
 
    >[!TIP]
    > [섀시 또는 랙 내결함성](../../failover-clustering/fault-domains.md)을 사용 중인 경우 이외에는 오류 도메인 수는 서버 수를 가리킵니다. 저장소 공간 다이렉트의 최소 요구 사항이 충족되는 경우에는 각 서버의 드라이브 수가 사용 가능한 복원력 유형에 영향을 미치지 않습니다. 
@@ -131,11 +131,11 @@ Windows Server 2016부터는 저장소 공간 다이렉트 볼륨이 일부는 �
 
 이 표에서는 하드 디스크 드라이브(HDD)와 반도체 드라이브(SSD)가 모두 포함된 하이브리드 배포에서 각 규모별 이중 패리티 및 로컬 재구성 코드의 저장소 효율성을 보여 줍니다.
 
-|    오류 도메인      |    레이아웃           |    효율성   |
+|    오류 도메인      |    레이아웃           |    효율   |
 |-----------------------|---------------------|-----------------|
 |    2                  |    –                |    –            |
 |    3                  |    –                |    –            |
-|    4                  |    RS 2+2           |    50.0%        |
+|    추가를 클릭합니다.                  |    RS 2+2           |    50.0%        |
 |    5                  |    RS 2+2           |    50.0%        |
 |    6                  |    RS 2+2           |    50.0%        |
 |    7                  |    RS 4+2           |    66.7%        |
@@ -146,18 +146,18 @@ Windows Server 2016부터는 저장소 공간 다이렉트 볼륨이 일부는 �
 |    12                 |    LRC(8, 2, 1)    |    72.7%        |
 |    13                 |    LRC(8, 2, 1)    |    72.7%        |
 |    14                 |    LRC(8, 2, 1)    |    72.7%        |
-|    15                 |    LRC(8, 2, 1)    |    72.7%        |
+|    15일                 |    LRC(8, 2, 1)    |    72.7%        |
 |    16                 |    LRC(8, 2, 1)    |    72.7%        |
 
 ### <a name="dual-parity-efficiency-for-all-flash-deployments"></a>플래시 전용 배포에서 이중 패리티 효율
 
 이 표에서는 반도체 드라이브(SSD)만 포함된 플래시 전용 배포에서 각 규모별 이중 패리티 및 로컬 재구성 코드의 저장소 효율성을 보여 줍니다. 패리티 레이아웃은 플래시 전용 구성에서 더 큰 그룹 크기를 사용하고 더 높은 저장소 효율성을 달성할 수 있습니다.
 
-|    오류 도메인      |    레이아웃           |    효율성   |
+|    오류 도메인      |    레이아웃           |    효율   |
 |-----------------------|---------------------|-----------------|
 |    2                  |    –                |    –            |
 |    3                  |    –                |    –            |
-|    4                  |    RS 2+2           |    50.0%        |
+|    추가를 클릭합니다.                  |    RS 2+2           |    50.0%        |
 |    5                  |    RS 2+2           |    50.0%        |
 |    6                  |    RS 2+2           |    50.0%        |
 |    7                  |    RS 4+2           |    66.7%        |
@@ -168,10 +168,10 @@ Windows Server 2016부터는 저장소 공간 다이렉트 볼륨이 일부는 �
 |    12                 |    RS 6+2           |    75.0%        |
 |    13                 |    RS 6+2           |    75.0%        |
 |    14                 |    RS 6+2           |    75.0%        |
-|    15                 |    RS 6+2           |    75.0%        |
+|    15일                 |    RS 6+2           |    75.0%        |
 |    16                 |    LRC(12, 2, 1)   |    80.0%        |
 
-## <a name="examples"></a>예와
+## <a name="examples"></a>예제
 
 서버가 두 대만 있는 경우 이외에는 더 높은 내결함성을 제공하므로 3방향 미러링 및/또는 이중 패리티를 사용하는 것이 좋습니다. 특히 두 개의 오류 도메인(저장소 공간 다이렉트 사용 시 두 개의 서버를 의미)이 동시 오류의 영향을 받더라도 모든 데이터가 안전하고 액세스 가능한 상태를 유지합니다.
 
@@ -179,18 +179,18 @@ Windows Server 2016부터는 저장소 공간 다이렉트 볼륨이 일부는 �
 
 이러한 여섯 개의 예제는 3방향 미러링 및/또는 이중 패리티로 허용 **가능한** 항목을 보여 줍니다.
 
-- **1.**    한 드라이브가 손실 됩니다 (캐시 드라이브 포함).
-- **2.**    한 서버 손실
+- **1.**    하나의 드라이브 손실(캐시 드라이브 포함)
+- **2.**    하나의 서버 손실
 
 ![fault-tolerance-examples-1-and-2](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-12.png)
 
-- **3.**    한 대의 서버와 하나의 드라이브가 손실 됩니다.
-- **3-4.**    다른 서버에서 두 드라이브가 손실 됨
+- **3.**    하나의 서버와 하나의 드라이브 손실
+- **4.**    서로 다른 서버의 두 드라이브 손실
 
 ![fault-tolerance-examples-3-and-4](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-34.png)
 
-- **5.**    최대 두 개의 서버가 영향을 받는 경우에는 두 개 이상의 드라이브가 손실 됩니다.
-- **6.**    두 서버 손실
+- **5.**    최대 두 개의 서버가 영향을 받는 경우 두 개를 초과하는 드라이브 손실
+- **6.**    두 개의 서버 손실
 
 ![fault-tolerance-examples-5-and-6](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-56.png)
 
@@ -200,23 +200,23 @@ Windows Server 2016부터는 저장소 공간 다이렉트 볼륨이 일부는 �
 
 저장소 공간은 시간이 충분하다면 오류가 각각의 오류 발생 후 완전한 복원력으로 복원되므로 제한 없는 수의 오류를 허용할 수 있습니다. 하지만 특정 시점에 최대 두 개의 오류 도메인이 영향을 받는 경우에만 안전합니다. 따라서 다음은 3방향 미러링 및/또는 이중 패리티에서 허용 **불가능한** 항목의 예제입니다.
 
-- **일.** 한 번에 세 개 이상의 서버에서 분실 된 드라이브
-- **20cm(8.** 한 번에 세 개 이상의 서버 손실
+- **7.**    한 번에 세 개 이상의 서버에서 드라이브 손실
+- **8.** 한 번에 세 개 이상의 서버 손실
 
 ![fault-tolerance-examples-7-and-8](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-78.png)
 
-## <a name="usage"></a>사용법
+## <a name="usage"></a>사용 패턴
 
 [저장소 공간 다이렉트에서 볼륨 만들기](create-volumes.md)를 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 아래의 모든 링크는 이 항목의 본문에 포함되어 있습니다.
 
 - [Windows Server 2016의 스토리지 공간 다이렉트](storage-spaces-direct-overview.md)
 - [Windows Server 2016의 장애 도메인 인식](../../failover-clustering/fault-domains.md)
-- [Microsoft Research에서 Azure의 코딩 지우기](https://www.microsoft.com/en-us/research/publication/erasure-coding-in-windows-azure-storage/)
+- [Microsoft Research에서 Azure의 코딩 지우기](https://www.microsoft.com/research/publication/erasure-coding-in-windows-azure-storage/)
 - [로컬 재구성 코드 및 가속화 패리티 볼륨](https://blogs.technet.microsoft.com/filecab/2016/09/06/volume-resiliency-and-efficiency-in-storage-spaces-direct/)
 - [저장소 관리 API의 볼륨](https://blogs.technet.microsoft.com/filecab/2016/08/29/deep-dive-volumes-in-spaces-direct/)
 - [Microsoft Ignite 2016의 저장소 효율성 데모](https://www.youtube.com/watch?v=-LK2ViRGbWs&t=36m55s)
-- [스토리지 공간 다이렉트에 대 한 용량 계산기 미리 보기](http://aka.ms/s2dcalc)
+- [스토리지 공간 다이렉트에 대 한 용량 계산기 미리 보기](https://aka.ms/s2dcalc)

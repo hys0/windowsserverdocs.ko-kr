@@ -6,4 +6,4 @@
 ## [Windows Admin Center](../manage/windows-admin-center/overview.md)
 ## [Azure 연결](../azure-hybrid-services/index.md)
 ## [Azure Stack HCI](https://docs.microsoft.com/azure-stack/operator/azure-stack-hci-overview)
-## [WSSD(Windows Server 소프트웨어 정의)](https://www.microsoft.com/en-us/cloud-platform/software-defined-datacenter)
+## [WSSD(Windows Server 소프트웨어 정의)](https://www.microsoft.com/cloud-platform/software-defined-datacenter)

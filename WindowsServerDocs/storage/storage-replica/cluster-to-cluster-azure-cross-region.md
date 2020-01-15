@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: storage-replica
 manager: mchad
-ms.openlocfilehash: 26eba76c836d1157f4d4c10d7a989a3a7dcc1538
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 806857d5de067c0f4640344ed80338b474dd758e
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71393831"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950066"
 ---
 # <a name="cluster-to-cluster-storage-replica-cross-region-in-azure"></a>Azure의 교차 지역 클러스터 간 저장소 복제
 
@@ -23,7 +23,7 @@ ms.locfileid: "71393831"
 Azure에서 지역 간 응용 프로그램에 대 한 저장소 복제본을 클러스터로 구성할 수 있습니다. 아래 예제에서는 2 개 노드 클러스터를 사용 하지만 클러스터에서 클러스터로의 저장소 복제본은 2 개 노드 클러스터로 제한 되지 않습니다. 아래 그림은 서로 통신할 수 있고, 동일한 도메인에 있고, 지역 간 인 2 노드 저장소 공간 다이렉트 클러스터입니다.
 
 프로세스에 대 한 전체 연습을 보려면 아래 비디오를 시청 하세요.
-> [!video https://www.microsoft.com/en-us/videoplayer/embed/RE26xeW]
+> [!video https://www.microsoft.com/videoplayer/embed/RE26xeW]
 
 ![아키텍처 다이어그램 보여주는 C2C SR in Azure 트 내의 동일한 지역.](media/Cluster-to-cluster-azure-cross-region/architecture.png)
 > [!IMPORTANT]
@@ -38,7 +38,7 @@ Azure에서 지역 간 응용 프로그램에 대 한 저장소 복제본을 클
     - 가용성 집합 (**az2azAS1**) (**AZ2AZ**)
     - 가용성 집합 (**azcross**) IN (**azcross**)
 
-3. 두 개의 가상 네트워크 만들기
+3. 두 가상 네트워크 만들기
    - 하나의 서브넷과 하나의 게이트웨이 서브넷이 있는 첫 번째 리소스 그룹 (**az2az**)에 [가상 네트워크](https://ms.portal.azure.com/#create/Microsoft.VirtualNetwork-ARM) (**az2az**)를 만듭니다.
    - 하나의 서브넷과 하나의 게이트웨이 서브넷이 있는 두 번째 리소스 그룹 (**azcross**)에 [가상 네트워크](https://ms.portal.azure.com/#create/Microsoft.VirtualNetwork-ARM) (**azcross**)를 만듭니다.
 
@@ -59,7 +59,7 @@ Azure에서 지역 간 응용 프로그램에 대 한 저장소 복제본을 클
       - 각 컴퓨터에 두 개 이상의 관리 디스크 추가
       - 장애 조치 (Failover) 클러스터링 및 저장소 복제본 기능 설치
 
-   가용성 집합 (**AZCROSS**)에서 가상 네트워크 (**AZCROSS**) 및 네트워크 보안 그룹 (**AZCROSS-nsg**)을 사용 하 여 리소스 그룹 (**azcross1**, **azcross2**)에 두 개의 가상 컴퓨터 (**AZCROSS**)를 만듭니다. . 생성 하는 동안 각 가상 머신에 표준 공용 IP 주소 할당
+   가용성 집합 (**AZCROSS**)에서 가상 네트워크 (**AZCROSS**) 및 네트워크 보안 그룹 (**AZCROSS-nsg**)을 사용 하 여 리소스 그룹 (**azcross1**, **azcross2**)에 두 개의 가상 컴퓨터 (**AZCROSS**)를 만듭니다. 생성 하는 동안 각 가상 머신에 표준 공용 IP 주소 할당
       - 각 컴퓨터에 두 개 이상의 관리 디스크 추가
       - 장애 조치 (Failover) 클러스터링 및 저장소 복제본 기능 설치
 
@@ -93,16 +93,16 @@ Azure에서 지역 간 응용 프로그램에 대 한 저장소 복제본을 클
 8. 각 클러스터에 대 한 내부 표준 SKU [Load Balancer](https://ms.portal.azure.com/#create/Microsoft.LoadBalancer-ARM) (**azlbr1**, **azlbazcross**)를 만듭니다.
 
    부하 분산 장치에 대 한 정적 개인 IP 주소로 클러스터 IP 주소를 제공 합니다.
-      - azlbr1 = > 프런트 엔드 IP: 10.3.0.100 (가상 네트워크 (**az2az**) 서브넷에서 사용 하지 않는 IP 주소 선택)
+      - azlbr1 = > 프런트 엔드 IP: 10.3.0.100 (가상 네트워크 (**az2az-Vnet**) 서브넷에서 사용 하지 않는 Ip 주소 선택)
       - 각 부하 분산 장치에 대 한 백 엔드 풀을 만듭니다. 연결 된 클러스터 노드를 추가 합니다.
       - 상태 프로브 만들기: 포트 59999
-      - 부하 분산 규칙 만들기: 사용 되는 부동 IP를 사용 하는 HA 포트를 허용 합니다.
+      - 부하 분산 규칙 만들기: 사용 하도록 설정 된 부동 IP를 사용 하 여 HA 포트를 허용 합니다.
 
    부하 분산 장치에 대 한 정적 개인 IP 주소로 클러스터 IP 주소를 제공 합니다. 
-      - azlbazcross = > 프런트 엔드 IP: 10.0.0.10 (가상 네트워크 (**azcross**) 서브넷에서 사용 하지 않는 IP 주소 선택)
+      - azlbazcross = > 프런트 엔드 IP: 10.0.0.10 (가상 네트워크 (**azcross-VNET**) 서브넷에서 사용 하지 않는 Ip 주소 선택)
       - 각 부하 분산 장치에 대 한 백 엔드 풀을 만듭니다. 연결 된 클러스터 노드를 추가 합니다.
       - 상태 프로브 만들기: 포트 59999
-      - 부하 분산 규칙 만들기: 사용 되는 부동 IP를 사용 하는 HA 포트를 허용 합니다. 
+      - 부하 분산 규칙 만들기: 사용 하도록 설정 된 부동 IP를 사용 하 여 HA 포트를 허용 합니다. 
 
 9. Vnet 간 연결에 대 한 [가상 네트워크 게이트웨이](https://ms.portal.azure.com/#create/Microsoft.VirtualNetworkGateway-ARM) 를 만듭니다.
 
@@ -166,7 +166,7 @@ Azure에서 지역 간 응용 프로그램에 대 한 저장소 복제본을 클
 
 14. 다음 단계로 이동 하기 전에 [클러스터 유효성 검사 테스트](../../failover-clustering/create-failover-cluster.md#validate-the-configuration) 를 실행 합니다.
 
-15. Windows PowerShell을 시작하고 [Test-SRTopology](https://docs.microsoft.com/powershell/module/storagereplica/test-srtopology?view=win10-ps) cmdlet을 사용하여 모든 저장소 복제본 요구 사항을 충족하는지 확인합니다. 장기 실행 성능 평가 모드뿐만 아니라 빠른 테스트를 위해 요구 사항 전용 모드에서 cmdlet을 사용할 수 있습니다.
+15. Windows PowerShell을 시작하고 [Test-SRTopology](https://docs.microsoft.com/powershell/module/storagereplica/test-srtopology?view=win10-ps) cmdlet을 사용하여 모든 스토리지 복제본 요구 사항을 충족하는지 확인합니다. 장기 실행 성능 평가 모드뿐만 아니라 빠른 테스트를 위해 요구 사항 전용 모드에서 cmdlet을 사용할 수 있습니다.
  
 16. 클러스터 간 저장소 복제본을 구성 합니다.
     두 방향으로 한 클러스터에서 다른 클러스터로의 액세스 권한 부여:
@@ -190,7 +190,7 @@ Azure에서 지역 간 응용 프로그램에 대 한 저장소 복제본을 클
       - 볼륨 위치:-c:\ClusterStorage\DataDiskCross
       - 로그 위치:-g:
 
-다음 명령을 실행 합니다.
+다음 명령을 실행합니다.
 
 ```powershell
 PowerShell

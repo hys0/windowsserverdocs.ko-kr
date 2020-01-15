@@ -10,12 +10,12 @@ author: stevenek
 ms.date: 06/07/2019
 description: Windows Server의 스토리지 공간 다이렉트를 사용 하 여 하이퍼 수렴 형 인프라 또는 수렴 형 (세분화 된) 인프라가 있는 소프트웨어 정의 저장소를 배포 하는 단계별 지침을 참조 하세요.
 ms.localizationpriority: medium
-ms.openlocfilehash: 0ab96f737f7700e202c9d0382c06859c4ea84118
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 60b29cbebb19cd8f1ce364d1eb7e920759375285
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402820"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950028"
 ---
 # <a name="deploy-storage-spaces-direct"></a>저장소 공간 다이렉트 배포
 
@@ -102,7 +102,7 @@ PS 세션을 입력하고 서버 이름 또는 연결하려는 노드의 IP 주�
 Add-Computer -NewName "Server01" -DomainName "contoso.com" -Credential "CONTOSO\User" -Restart -Force  
 ```
 
-저장소 관리자 계정이 Domain Admins 그룹의 구성원이 아닌 경우 각 노드의 로컬 관리자 그룹에 저장소 관리자 계정을 추가 합니다. 또는 더 나은 저장소 관리자에 사용 하는 그룹을 추가 합니다. 다음 명령을 사용 하거나 Windows PowerShell 함수를 작성 하 여 수행할 수 있습니다. 자세한 내용은 [PowerShell을 사용 하 여 로컬 그룹에 도메인 사용자 추가](http://blogs.technet.com/b/heyscriptingguy/archive/2010/08/19/use-powershell-to-add-domain-users-to-a-local-group.aspx) 를 참조 하세요.
+저장소 관리자 계정이 Domain Admins 그룹의 구성원이 아닌 경우 각 노드의 로컬 관리자 그룹에 저장소 관리자 계정을 추가 합니다. 또는 더 나은 저장소 관리자에 사용 하는 그룹을 추가 합니다. 다음 명령을 사용 하거나 Windows PowerShell 함수를 작성 하 여 수행할 수 있습니다. 자세한 내용은 [PowerShell을 사용 하 여 로컬 그룹에 도메인 사용자 추가](https://blogs.technet.com/b/heyscriptingguy/archive/2010/08/19/use-powershell-to-add-domain-users-to-a-local-group.aspx) 를 참조 하세요.
 
 ```
 Net localgroup Administrators <Domain\Account> /add
@@ -155,7 +155,7 @@ Windows Server 2016에서는 Hyper-v 가상 스위치 내에 스위치 포함 �
 
 스토리지 공간 다이렉트에 대 한 네트워킹을 설정 하는 지침은 [Windows Server 2016 수렴 형 NIC 및 게스트 RDMA 배포 가이드](https://github.com/Microsoft/SDN/blob/master/Diagnostics/S2D%20WS2016_ConvergedNIC_Configuration.docx)를 참조 하세요.
 
-## <a name="step-3-configure-storage-spaces-direct"></a>3단계: 저장소 공간 다이렉트 구성
+## <a name="step-3-configure-storage-spaces-direct"></a>3단계: 스토리지 공간 다이렉트 구성
 
 다음 단계는 구성 중인 서버와 동일한 버전의 관리 시스템에서 수행됩니다. 다음 단계는 PowerShell 세션을 사용 하 여 원격으로 실행 해서는 안 되며, 대신 관리 시스템의 로컬 PowerShell 세션에서 관리 권한을 사용 하 여 실행 해야 합니다.
 
@@ -204,9 +204,9 @@ Count Name                          PSComputerName
 
 ### <a name="step-32-validate-the-cluster"></a>3\.2 단계: 클러스터 유효성 검사
 
-이 단계에서는 클러스터 유효성 검사 도구를 실행 하 여 스토리지 공간 다이렉트를 사용 하 여 클러스터를 만들도록 서버 노드가 올바르게 구성 되어 있는지 확인 합니다. 클러스터를 만들기 전에 클러스터 유효성 검사 (`Test-Cluster`)를 실행 하면 구성이 장애 조치 (failover) 클러스터로 정상적으로 작동 하는 데 적합 한 것으로 표시 되는지 확인 하는 테스트를 실행 합니다. 아래 예제에서는 `-Include` 매개 변수를 사용한 다음 테스트의 특정 범주를 지정 합니다. 이렇게 하면 저장소 공간 다이렉트 관련 테스트가 유효성 검사에 포함됩니다.
+이 단계에서는 클러스터 유효성 검사 도구를 실행 하 여 스토리지 공간 다이렉트를 사용 하 여 클러스터를 만들도록 서버 노드가 올바르게 구성 되어 있는지 확인 합니다. 클러스터를 만들기 전에 클러스터 유효성 검사 (`Test-Cluster`)를 실행 하면 구성이 장애 조치 (failover) 클러스터로 정상적으로 작동 하는 데 적합 한 것으로 표시 되는지 확인 하는 테스트를 실행 합니다. 아래 예제에서는 `-Include` 매개 변수를 사용한 다음 테스트의 특정 범주를 지정 합니다. 이렇게 하면 스토리지 공간 다이렉트 관련 테스트가 유효성 검사에 포함됩니다.
 
-다음 PowerShell 명령을 사용하여 저장소 공간 다이렉트 클러스터로 사용할 서버 집합의 유효성을 검사할 수 있습니다.
+다음 PowerShell 명령을 사용하여 스토리지 공간 다이렉트 클러스터로 사용할 서버 집합의 유효성을 검사할 수 있습니다.
 
 ```PowerShell
 Test-Cluster –Node <MachineName1, MachineName2, MachineName3, MachineName4> –Include "Storage Spaces Direct", "Inventory", "Network", "System Configuration"
@@ -216,7 +216,7 @@ Test-Cluster –Node <MachineName1, MachineName2, MachineName3, MachineName4> �
 
 이 단계에서는 다음 PowerShell cmdlet을 사용 하 여 이전 단계에서 클러스터 만들기에 대해 유효성을 검사 한 노드를 사용 하 여 클러스터를 만듭니다.
 
-클러스터를 만들 때 "클러스터 된 역할을 만드는 동안 문제가 발생 하 여 시작 하지 못할 수 있습니다." 라는 경고가 표시 됩니다. 자세한 내용은 아래의 보고서 파일을 확인하십시오."라는 경고가 나타납니다. 이 경고를 안전 하 게 무시할 수 있습니다. 클러스터 쿼럼에 사용할 수 있는 디스크가 없기 때문에 나타나는 것입니다. 클러스터를 만든 후 파일 공유 감시 또는 클라우드 감시를 구성하는 것이 좋습니다.
+클러스터를 만들 때 "클러스터 된 역할을 만드는 동안 문제가 발생 하 여 시작 하지 못할 수 있습니다." 라는 경고가 표시 됩니다. 자세한 내용은 아래의 보고서 파일을 확인하십시오."라는 경고가 나타납니다. 이 경고는 무시해도 됩니다. 클러스터 쿼럼에 사용할 수 있는 디스크가 없기 때문에 나타나는 것입니다. 클러스터를 만든 후 파일 공유 감시 또는 클라우드 감시를 구성하는 것이 좋습니다.
 
 > [!Note]
 > 서버에서 고정 IP 주소를 사용하는 경우 다음 매개 변수를 추가하고 IP 주소 -StaticAddress &lt;X.X.X.X&gt;를 지정하여 고정 IP 주소를 반영하도록 다음 명령을 수정합니다.
@@ -236,13 +236,13 @@ Test-Cluster –Node <MachineName1, MachineName2, MachineName3, MachineName4> �
 - [쿼럼 구성 및 관리](../../failover-clustering/manage-cluster-quorum.md)
 - [장애 조치 (Failover) 클러스터용 클라우드 감시 배포](../../failover-clustering/deploy-cloud-witness.md)
 
-### <a name="step-35-enable-storage-spaces-direct"></a>3\.5단계: 저장소 공간 다이렉트 사용
+### <a name="step-35-enable-storage-spaces-direct"></a>3\.5단계: 스토리지 공간 다이렉트 사용
 
 클러스터를 만든 후 `Enable-ClusterStorageSpacesDirect` PowerShell cmdlet을 사용 합니다 .이 cmdlet은 저장소 시스템을 스토리지 공간 다이렉트 모드로 전환 하 고 다음을 자동으로 수행 합니다.
 
 -   **풀 만들기:** "S2D on Cluster1"과 같은 이름을 가진 대규모 단일 풀을 만듭니다.
 
--   **저장소 공간 다이렉트 캐시 구성:** 저장소 공간 다이렉트에 사용할 수 있는 미디어(드라이브) 유형이 2개 이상인 경우 가장 빠른 캐시 장치로 사용할 수 있습니다(대부분의 경우 읽기 및 쓰기).
+-   **스토리지 공간 다이렉트 캐시 구성:** 스토리지 공간 다이렉트에 사용할 수 있는 미디어(드라이브) 유형이 2개 이상인 경우 가장 빠른 캐시 디바이스로 사용할 수 있습니다(대부분의 경우 읽기 및 쓰기).
 
 -   **계층:** 두 계층을 기본 계층으로 만듭니다. 하나는 "Capacity"이고 다른 하나는 "Performance"입니다. Cmdlet은 장치를 분석한 후 장치 유형과 복원력을 조합하여 각 계층을 구성합니다.
 
@@ -252,7 +252,7 @@ Test-Cluster –Node <MachineName1, MachineName2, MachineName3, MachineName4> �
 Enable-ClusterStorageSpacesDirect –CimSession <ClusterName>
 ```
 
-위 명령을 통해 저장소 공간 다이렉트를 사용하려는 경우 클러스터 이름 대신 노드 이름을 사용할 수도 있습니다. 노드 이름을 사용하면 새로 만든 클러스터 이름에서 발생할 수 있는 DNS 복제 지연으로 인해 보다 안정적일 수 있습니다.
+위 명령을 통해 스토리지 공간 다이렉트를 사용하려는 경우 클러스터 이름 대신 노드 이름을 사용할 수도 있습니다. 노드 이름을 사용하면 새로 만든 클러스터 이름에서 발생할 수 있는 DNS 복제 지연으로 인해 보다 안정적일 수 있습니다.
 
 몇 분 후 이 명령이 완료되면 시스템이 볼륨을 만들 수 있도록 준비됩니다.
 
@@ -307,7 +307,7 @@ Write-Output "$ClusterName CSV cache size: $CSVCurrentCacheSize MB"
 4. **클라이언트 액세스 지점** 페이지에서 스케일 아웃 파일 서버의 이름을 입력 합니다.
 5. 그림 1에 나와 있는 것 **처럼 역할로 이동 하 고** **상태** 열이 만든 클러스터 된 파일 서버 역할 옆의 **실행 중** 으로 표시 되는지 확인 하 여 역할이 성공적으로 설정 되었는지 확인 합니다.
 
-   (media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/SOFS_in_FCM.png "스케일 아웃 파일 서버를 표시 하 장애 조치(Failover) 클러스터 관리자") ![스케일 아웃 파일 서버를 보여 주는 장애 조치(Failover) 클러스터 관리자의 스크린샷]
+   ![스케일 아웃 파일 서버를 보여 주는 장애 조치(Failover) 클러스터 관리자의 스크린샷](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/SOFS_in_FCM.png "스케일 아웃 파일 서버를 표시 하 장애 조치(Failover) 클러스터 관리자")
 
     **그림 1** 실행 상태가 스케일 아웃 파일 서버를 표시 하 장애 조치(Failover) 클러스터 관리자
 
@@ -329,14 +329,14 @@ Add-ClusterScaleOutFileServerRole -Name SOFS -Cluster FSCLUSTER
 
 가상 디스크를 만들고 Csv에 추가한 후에는 가상 디스크당 CSV 당 하나의 파일 공유에서 파일 공유를 만들 수 있습니다. System Center Virtual Machine Manager (VMM)은 사용자에 대 한 권한을 처리 하기 때문에이 작업을 수행 하는 handiest입니다. 하지만 환경에 없는 경우 Windows PowerShell을 사용 하 여 배포를 부분적으로 자동화할 수 있습니다.
 
-[Hyper-v 작업에 대 한 SMB 공유 구성](http://gallery.technet.microsoft.com/SMB-Share-Configuration-4a36272a) 에 포함 된 스크립트를 사용 합니다 .이 스크립트는 그룹 및 공유 만들기 프로세스를 부분적으로 자동화 합니다. Hyper-v 작업에 맞게 작성 되었으므로 다른 작업을 배포 하는 경우에는 공유를 만든 후 설정을 수정 하거나 추가 단계를 수행 해야 할 수 있습니다. 예를 들어 Microsoft SQL Server를 사용 하는 경우 SQL Server 서비스 계정에 공유 및 파일 시스템에 대 한 모든 권한을 부여 해야 합니다.
+[Hyper-v 작업에 대 한 SMB 공유 구성](https://gallery.technet.microsoft.com/SMB-Share-Configuration-4a36272a) 에 포함 된 스크립트를 사용 합니다 .이 스크립트는 그룹 및 공유 만들기 프로세스를 부분적으로 자동화 합니다. Hyper-v 작업에 맞게 작성 되었으므로 다른 작업을 배포 하는 경우에는 공유를 만든 후 설정을 수정 하거나 추가 단계를 수행 해야 할 수 있습니다. 예를 들어 Microsoft SQL Server를 사용 하는 경우 SQL Server 서비스 계정에 공유 및 파일 시스템에 대 한 모든 권한을 부여 해야 합니다.
 
 > [!NOTE]
 >  System Center Virtual Machine Manager를 사용 하 여 공유를 만들지 않는 한 클러스터 노드를 추가할 때 그룹 멤버 자격을 업데이트 해야 합니다.
 
 PowerShell 스크립트를 사용 하 여 파일 공유를 만들려면 다음을 수행 합니다.
 
-1. [Hyper-v 작업에 대 한 SMB 공유 구성](http://gallery.technet.microsoft.com/SMB-Share-Configuration-4a36272a) 에 포함 된 스크립트를 파일 서버 클러스터의 노드 중 하나에 다운로드 합니다.
+1. [Hyper-v 작업에 대 한 SMB 공유 구성](https://gallery.technet.microsoft.com/SMB-Share-Configuration-4a36272a) 에 포함 된 스크립트를 파일 서버 클러스터의 노드 중 하나에 다운로드 합니다.
 2. 관리 시스템에서 도메인 관리자 자격 증명을 사용 하 여 Windows PowerShell 세션을 열고 다음 스크립트를 사용 하 여 Hyper-v 컴퓨터 개체에 대 한 Active Directory 그룹을 만들고 해당 변수의 값을 개발
 
     ```PowerShell
@@ -371,7 +371,7 @@ PowerShell 스크립트를 사용 하 여 파일 공유를 만들려면 다음�
 
 ### <a name="step-43-enable-kerberos-constrained-delegation"></a>4\.3 단계 Kerberos 제한 된 위임 사용
 
-저장소 클러스터 노드 중 하나에서 원격 시나리오 관리에 대해 Kerberos 제한 위임을 설정 하 고 실시간 마이그레이션 보안을 강화 하려면 [Hyper-v 작업에 대 한 SMB 공유 구성](http://gallery.technet.microsoft.com/SMB-Share-Configuration-4a36272a)에 포함 된 KCDSetup 스크립트를 사용 합니다. 스크립트에 대 한 간단한 래퍼는 다음과 같습니다.
+저장소 클러스터 노드 중 하나에서 원격 시나리오 관리에 대해 Kerberos 제한 위임을 설정 하 고 실시간 마이그레이션 보안을 강화 하려면 [Hyper-v 작업에 대 한 SMB 공유 구성](https://gallery.technet.microsoft.com/SMB-Share-Configuration-4a36272a)에 포함 된 KCDSetup 스크립트를 사용 합니다. 스크립트에 대 한 간단한 래퍼는 다음과 같습니다.
 
 ```PowerShell
 $HyperVClusterName = "Compute01"

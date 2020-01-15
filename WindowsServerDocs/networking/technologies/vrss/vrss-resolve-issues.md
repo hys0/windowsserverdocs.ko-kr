@@ -10,14 +10,14 @@ manager: dougkim
 ms.author: pashort
 author: shortpatti
 ms.date: 09/04/2018
-ms.openlocfilehash: 850aa376e8cd0060992573561a0c32af563b88ad
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 3bbb70657cb009ce760ccfe273b24c6df17d3ca7
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405157"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949908"
 ---
-## <a name="resolve-vrss-issues"></a>VRSS 문제 해결
+# <a name="resolve-vrss-issues"></a>VRSS 문제 해결
 
 모든 준비 단계를 완료 했 고 여전히 VM LPs에 대 한 vRSS 부하 분산 트래픽이 표시 되지 않는 경우 가능한 여러 가지 문제가 있습니다.
 
@@ -34,7 +34,7 @@ ms.locfileid: "71405157"
 
    **현재 설정 보기:** 
 
-   Vm\(의 vRSS\) 용 vm 또는 호스트 vNIC vrss\)의 호스트 \(에서 다음 PowerShell cmdlet을 실행 합니다.
+   Vm\)의 vRSS에 대 한 VM\(또는 host vNIC vRSS\)에 대 한 호스트 \(에서 다음 PowerShell cmdlet을 실행 합니다.
 
    ```PowerShell
    Get-NetAdapterRss
@@ -48,7 +48,7 @@ ms.locfileid: "71405157"
    Enable-NetAdapterRss *
    ```
    
-   RSS를 구성 하는 다른 시스템 차원의 방법은 netsh를 사용 하는 것입니다. 이후 
+   RSS를 구성 하는 다른 시스템 차원의 방법은 netsh를 사용 하는 것입니다. 기본 수학에는 
    
     ```cmd
    netsh int tcp show global

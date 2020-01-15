@@ -12,12 +12,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 06/04/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 75a565eb9e26e03c1aad221059b327943485c81c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6490bd9a6cb7b305ba9746a357a8c909c7b84555
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403895"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950461"
 ---
 # <a name="windows-server-software-defined-datacenter"></a>Windows Server 소프트웨어 정의 데이터 센터
 
@@ -33,7 +33,7 @@ Microsoft의 SDDC 구현에는 이 문서에 강조된 Windows Server 기술이 
 
 Windows Server 및 System Center에 기본 제공되는 기술은 Windows Server SDDC 환경의 주요 구성 요소입니다. 하지만 가상화된 플랫폼이라 해도 여전히 올바른 하드웨어가 필요합니다. **Windows Server 소프트웨어 정의 (WSSD) 솔루션** 및 **Azure Stack HCI Solutions** 프로그램에 참여 하는 Microsoft 파트너는 기업이 올바른 하드웨어를 획득 하 고 0 일에 실행 되도록 하는 데 도움이 될 수 있습니다.
 
-**[MICROSOFT의 SDDC에 대해 자세히 알아보려면 비디오를 시청](https://mva.microsoft.com/en-US/training-courses/whats-new-in-windows-server-2016-16457?l=YcsJR6sXC_1006218965) ![](media/sddc/video.png)**
+**[MICROSOFT의 SDDC에 대해 자세히 알아보려면 비디오를 시청](https://mva.microsoft.com/training-courses/whats-new-in-windows-server-2016-16457?l=YcsJR6sXC_1006218965) ![](media/sddc/video.png)**
 
 **[이 페이지의 포스터 크기 .Pdf 파일 다운로드](https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs/media/sddc/sddc_poster_0801417_ANSI-E.pdf) ![](media/sddc/poster-ico.png)**
 
@@ -47,7 +47,7 @@ Microsoft 파트너는 Windows Server 소프트웨어 정의 (WSSD) 프로그램
 
 ![](media/sddc/learn.png) **[Azure Stack HCI 솔루션에 대해 자세히 알아보세요](https://azure.microsoft.com/overview/azure-stack/hci) .**
 
-**[Wssd 솔루션에 대 한 자세한](https://www.microsoft.com/en-us/cloud-platform/software-defined-datacenter) 정보 ![](media/sddc/learn.png)**
+**[Wssd 솔루션에 대 한 자세한](https://www.microsoft.com/cloud-platform/software-defined-datacenter) 정보 ![](media/sddc/learn.png)**
 
 ## <a name="windows-server-virtualized-technologies"></a>Windows Server 가상화 기술 ##
 
@@ -71,7 +71,7 @@ Hyper-V는 Windows를 위한 하이퍼바이저 기반 가상화 기술입니다
 
 ![](media/sddc/spacer1.png)![](media/sddc/hypervisor.png)
 
-**[hyper-v 하이퍼바이저에 대 한 자세한](https://www.microsoft.com/en-us/cloud-platform/server-virtualization) 정보 ![](media/sddc/learn.png)**
+**[hyper-v 하이퍼바이저에 대 한 자세한](https://www.microsoft.com/cloud-platform/server-virtualization) 정보 ![](media/sddc/learn.png)**
 
 ### <a name="guest-clustering-with-shared-vhdx"></a>공유 VHDX를 사용 하는 게스트 클러스터링
 
@@ -149,7 +149,7 @@ SLB는 여러 서버에서 동일한 작업을 호스트할 수 있도록 하여
 
 ![](media/sddc/storage.png)
 
-### <a name="storage-spaces-direct"></a>저장소 공간 다이렉트
+### <a name="storage-spaces-direct"></a>직접 액세스 저장소 공간
 
 ![](media/sddc/storage-line.png)
 
@@ -160,7 +160,7 @@ SLB는 여러 서버에서 동일한 작업을 호스트할 수 있도록 하여
 저장소 공간 다이렉트는 새로운 소프트웨어 저장소 버스를 도입하고, 장애 조치(Failover) 클러스터링, CSVs(클러스터 공유 볼륨), SMB(서버 메시지 블록) 3, 저장소 공간을 비롯하여 오늘날 Windows Server에서 알려진 많은 기능을 활용합니다.
 
 ![](media/sddc/learn.png) **[에 대 한 자세한 내용은 스토리지 공간 다이렉트](storage/storage-spaces/storage-spaces-direct-overview.md)**
-### <a name="storage-quality-of-service"></a>저장소 서비스 품질 ###
+### <a name="storage-quality-of-service"></a>스토리지 서비스 품질 ###
 
 ![](media/sddc/storage-line.png)
 
@@ -184,11 +184,11 @@ Hyper-V 및 스케일 아웃 파일 서버 역할을 사용하여 가상 컴퓨�
 
 동기 복제
 
-1. 응용 프로그램이 데이터를 씁니다.
+1. 애플리케이션이 데이터를 씁니다.
 2. 로그 데이터가 기록되고 데이터가 원격 사이트에 복제됩니다.
 3. 로그 데이터가 원격 사이트에 기록됩니다.
 4. 원격 사이트에서 승인합니다.
-5. 응용 프로그램 쓰기가 승인됩니다.
+5. 애플리케이션 쓰기가 승인됩니다.
 
 t 및 t1: 데이터가 볼륨에 플러시되고 로그가 항상 기록됨
 
@@ -230,7 +230,7 @@ t 및 t1: 데이터가 볼륨에 플러시되고 로그가 항상 기록됨
 
 **[호스트 보호자 서비스에 대 한 자세한](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-manage-hgs) 내용은 ![](media/sddc/learn.png).**
 
-### <a name="device-health-attestation"></a>디바이스 상태 증명
+### <a name="device-health-attestation"></a>장치 상태 증명
 
 ![](media/sddc/security-line.png)
 
@@ -247,7 +247,7 @@ t 및 t1: 데이터가 볼륨에 플러시되고 로그가 항상 기록됨
 
 ![](media/sddc/management.png)
 
-### <a name="powershell-desired-state-configuration"></a>PowerShell 필요한 상태 구성
+### <a name="powershell-desired-state-configuration"></a>PowerShell Desired State Configuration
 
 ![](media/sddc/management-line.png)
 

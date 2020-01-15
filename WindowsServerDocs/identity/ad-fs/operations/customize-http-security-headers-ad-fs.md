@@ -9,19 +9,19 @@ ms.date: 02/19/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 0685e0935a031b2f73474d59b025b70fc735902d
-ms.sourcegitcommit: 73898afec450fb3c2f429ca373f6b48a74b19390
+ms.openlocfilehash: 7fd06c06a2ea7af93b87c471f77b788ac51bddac
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71935041"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949210"
 ---
 # <a name="customize-http-security-response-headers-with-ad-fs-2019"></a>AD FS 2019를 사용 하 여 HTTP 보안 응답 헤더 사용자 지정 
  
-일반적인 보안 취약점을 방지 하 고 관리자에 게 최신 버전의 브라우저 기반 보호 메커니즘을 활용할 수 있는 기능을 제공 하는 기능을 제공 하 AD FS 2019에는 HTTP 보안 응답 헤더를 사용자 지정 하는 기능이 추가 되었습니다. AD FS에서 보냅니다. 이 작업은 두 개의 새로운 cmdlet 인 및 `Get-AdfsResponseHeaders` `Set-AdfsResponseHeaders`를 도입 하 여 수행 됩니다.  
+일반적인 보안 취약점을 방지 하 고 관리자에 게 최신 버전의 브라우저 기반 보호 메커니즘을 활용할 수 있는 기능을 제공 하는 기능을 제공 하 AD FS 2019에는 HTTP 보안 응답 헤더를 사용자 지정 하는 기능이 추가 되었습니다. AD FS에서 보냅니다. 이 작업은 두 개의 새로운 cmdlet 인 `Get-AdfsResponseHeaders`와 `Set-AdfsResponseHeaders`를 도입 하 여 수행 됩니다.  
 
 >[!NOTE]
->Cmdlet `Get-AdfsResponseHeaders` 을 사용 하 여 HTTP 보안 응답 헤더 (CORS 헤더 제외)를 사용자 지정 하 `Set-AdfsResponseHeaders` 는 기능 및 AD FS 2016으로 포팅 되었습니다. [KB4493473](https://support.microsoft.com/en-us/help/4493473/windows-10-update-kb4493473) 및 [KB4507459](https://support.microsoft.com/en-us/help/4507459/windows-10-update-kb4507459)를 설치 하 여 AD FS 2016에 기능을 추가할 수 있습니다. 
+>Cmdlet을 사용 하 여 HTTP 보안 응답 헤더 (CORS 헤더 제외)를 사용자 지정 하는 기능 (`Get-AdfsResponseHeaders` 및 `Set-AdfsResponseHeaders`은 AD FS 2016으로 포팅 되었습니다. [KB4493473](https://support.microsoft.com/help/4493473/windows-10-update-kb4493473) 및 [KB4507459](https://support.microsoft.com/help/4507459/windows-10-update-kb4507459)를 설치 하 여 AD FS 2016에 기능을 추가할 수 있습니다. 
 
 이 문서에서는 AD FS 2019에서 보낸 헤더를 사용자 지정 하는 방법을 보여 주기 위해 일반적으로 사용 되는 보안 응답 헤더에 대해 설명 합니다.   
  
@@ -40,11 +40,11 @@ ms.locfileid: "71935041"
 
  
 ## <a name="http-security-response-headers"></a>HTTP 보안 응답 헤더 
-응답 헤더는 AD FS에서 보내는 HTTP 응답에 웹 브라우저에 포함 됩니다. 아래와 같이 cmdlet을 `Get-AdfsResponseHeaders` 사용 하 여 헤더를 나열할 수 있습니다.  
+응답 헤더는 AD FS에서 보내는 HTTP 응답에 웹 브라우저에 포함 됩니다. 헤더는 아래와 같이 `Get-AdfsResponseHeaders` cmdlet을 사용 하 여 나열할 수 있습니다.  
 
 ![헤더 응답](media/customize-http-security-headers-ad-fs/header1.png)
 
-위의 `ResponseHeaders` 스크린 샷에서 특성은 모든 HTTP 응답에서 AD FS에 포함 될 보안 헤더를 식별 합니다. 응답 헤더는가 (기본값)로 `ResponseHeadersEnabled` 설정 된 경우 `True` 에만 전송 됩니다. HTTP 응답의 보안 헤더를 `False` 포함 하 AD FS을 방지 하기 위해 값을로 설정할 수 있습니다. 그러나이 방법은 권장 되지 않습니다.  이렇게 하려면 다음을 사용 합니다.
+위의 스크린 샷에서 `ResponseHeaders` 특성은 모든 HTTP 응답에 AD FS에 포함 될 보안 헤더를 식별 합니다. 응답 헤더는 `ResponseHeadersEnabled`이 `True` (기본값)로 설정 된 경우에만 전송 됩니다. 값을 `False` 설정 하 여 HTTP 응답의 보안 헤더를 포함 하 AD FS를 방지할 수 있습니다. 그러나이 방법은 권장 되지 않습니다.  이렇게 하려면 다음을 사용 합니다.
 
 ```PowerShell
 Set-AdfsResponseHeaders -EnableResponseHeaders $false
@@ -55,11 +55,11 @@ HSTS는 HTTP 및 HTTPS 끝점을 모두 포함 하는 서비스에 대해 프로
  
 웹 인증 트래픽에 대 한 모든 AD FS 끝점은 HTTPS를 통해서만 열 수 있습니다. 결과적으로 http 엄격한 전송 보안 정책 메커니즘이 제공 하는 위협을 효과적으로 완화 하는 AD FS (HTTP에 수신기가 없기 때문에 기본적으로 HTTP에 다운 그레이드는 없습니다). 다음 매개 변수를 설정 하 여 헤더를 사용자 지정할 수 있습니다.
  
-- **max-age =&lt;만료 시간&gt;**  – 만료 시간 (초)은 HTTPS를 사용 하 여 사이트에 액세스 해야 하는 기간을 지정 합니다. 기본값 및 권장 값은 31536000 초 (1 년)입니다.  
+- **최대 사용 기간 =&lt;만료 시간&gt;** – 만료 시간 (초)은 HTTPS를 사용 하 여 사이트에 액세스 하는 기간을 지정 합니다. 기본값 및 권장 값은 31536000 초 (1 년)입니다.  
 - **Includesubdomains 도메인** – 선택적 매개 변수입니다. 지정 된 경우 HSTS 규칙은 모든 하위 도메인에도 적용 됩니다.  
  
 #### <a name="hsts-customization"></a>HSTS 사용자 지정 
-기본적으로 헤더는 사용 하도록 설정 되 `max-age` 고 1 년으로 설정 됩니다. 그러나 관리자는 `max-age` 를 수정할 수 있습니다 (최대 보존 기간 값 낮추기 권장 되지 않음) 또는 `Set-AdfsResponseHeaders` cmdlet을 통해 하위 도메인에 hsts를 사용 하도록 설정 합니다.  
+기본적으로 헤더가 활성화 되 고 `max-age` 1 년으로 설정 됩니다. 그러나 관리자는 `max-age`를 수정할 수 있습니다 (최대 보존 기간 값 낮추기 권장 되지 않음) 또는 `Set-AdfsResponseHeaders` cmdlet을 통해 하위 도메인에 HSTS를 사용 하도록 설정 합니다.  
  
 ```PowerShell
 Set-AdfsResponseHeaders -SetHeaderName "Strict-Transport-Security" -SetHeaderValue "max-age=<seconds>; includeSubDomains" 
@@ -71,7 +71,7 @@ Set-AdfsResponseHeaders -SetHeaderName "Strict-Transport-Security" -SetHeaderVal
 Set-AdfsResponseHeaders -SetHeaderName "Strict-Transport-Security" -SetHeaderValue "max-age=31536000; includeSubDomains" 
  ```
 
-기본적으로 헤더는 `ResponseHeaders` 특성에 포함 되지만 관리자는 `Set-AdfsResponseHeaders` cmdlet을 통해 헤더를 제거할 수 있습니다.  
+기본적으로 헤더는 `ResponseHeaders` 특성에 포함 됩니다. 그러나 관리자는 `Set-AdfsResponseHeaders` cmdlet을 통해 헤더를 제거할 수 있습니다.  
  
 ```PowerShell
 Set-AdfsResponseHeaders -RemoveHeaders "Strict-Transport-Security" 
@@ -82,11 +82,11 @@ Set-AdfsResponseHeaders -RemoveHeaders "Strict-Transport-Security"
  
 그러나 드문 경우 지만 iFrame 가능 대화형 AD FS 로그인 페이지가 필요한 특정 응용 프로그램을 신뢰할 수 있습니다. 이 용도로는 ' X-프레임-옵션 ' 헤더가 사용 됩니다.  
  
-이 HTTP 보안 응답 헤더는 &lt;프레임&gt;/&lt;iframe&gt;에서 페이지를 렌더링할 수 있는지 여부를 브라우저에 전달 하는 데 사용 됩니다. 헤더는 다음 값 중 하나로 설정할 수 있습니다. 
+이 HTTP 보안 응답 헤더는 브라우저에 전달 하는 데 사용 됩니다 &lt;iframe&gt;/&gt;&lt;프레임에서 페이지를 렌더링할 수 있는지 여부입니다. 헤더는 다음 값 중 하나로 설정할 수 있습니다. 
  
-- **deny** – 프레임의 페이지는 표시 되지 않습니다. 기본 설정 및 권장 설정입니다.  
+- **deny** – 프레임의 페이지는 표시 되지 않습니다. 이 값은 기본값이며 권장 설정입니다.  
 - **sameorigin** – 원본이 웹 페이지의 원본과 동일한 경우에만 페이지를 프레임에 표시 합니다. 이 옵션은 모든 상위 항목이 동일한 원점에도 있는 경우에만 유용 합니다.  
-- 허용-원본 (예: .")인경우에만페이지가프레임에표시됩니다. https://www **<specified origin>** com)는 헤더의 특정 원본과 일치 합니다. 
+- **허용 <specified origin>** -페이지는 원본 (예: https://www. "인 경우에만 프레임에 표시 됩니다. com)는 헤더의 특정 원본과 일치 합니다. 
 
 #### <a name="x-frame-options-customization"></a>X 프레임-옵션 사용자 지정  
 기본적으로 헤더는 거부로 설정 됩니다. 그러나 관리자는 `Set-AdfsResponseHeaders` cmdlet을 통해 값을 수정할 수 있습니다.  
@@ -100,7 +100,7 @@ Set-AdfsResponseHeaders -SetHeaderName "X-Frame-Options" -SetHeaderValue "<deny/
 Set-AdfsResponseHeaders -SetHeaderName "X-Frame-Options" -SetHeaderValue "allow-from https://www.example.com" 
  ```
 
-기본적으로 헤더는 `ResponseHeaders` 특성에 포함 되지만 관리자는 `Set-AdfsResponseHeaders` cmdlet을 통해 헤더를 제거할 수 있습니다.  
+기본적으로 헤더는 `ResponseHeaders` 특성에 포함 됩니다. 그러나 관리자는 `Set-AdfsResponseHeaders` cmdlet을 통해 헤더를 제거할 수 있습니다.  
 
 ```PowerShell
 Set-AdfsResponseHeaders -RemoveHeaders "X-Frame-Options" 
@@ -111,7 +111,7 @@ Set-AdfsResponseHeaders -RemoveHeaders "X-Frame-Options"
  
 - **0** – XSS 필터링을 사용 하지 않도록 설정 합니다. 이 옵션은 사용하지 않는 것이 좋습니다.  
 - **1** – XSS 필터링을 사용 합니다. XSS 공격이 감지 되 면 브라우저는 페이지를 삭제 합니다.   
-- **1; mode = block** – XSS 필터링을 사용 합니다. XSS 공격이 감지 되 면 브라우저에서 페이지 렌더링을 방지 합니다. 기본 설정 및 권장 설정입니다.  
+- **1; mode = block** – XSS 필터링을 사용 합니다. XSS 공격이 감지 되 면 브라우저에서 페이지 렌더링을 방지 합니다. 이 값은 기본값이며 권장 설정입니다.  
 
 #### <a name="x-xss-protection-customization"></a>X-XSS-보호 사용자 지정 
 기본적으로 헤더는 1로 설정 됩니다. mode = block; 그러나 관리자는 `Set-AdfsResponseHeaders` cmdlet을 통해 값을 수정할 수 있습니다.  
@@ -126,7 +126,7 @@ Set-AdfsResponseHeaders -SetHeaderName "X-XSS-Protection" -SetHeaderValue "<0/1/
 Set-AdfsResponseHeaders -SetHeaderName "X-XSS-Protection" -SetHeaderValue "1" 
  ```
 
-기본적으로 헤더는 `ResponseHeaders` 특성에 포함 되지만 관리자는 `Set-AdfsResponseHeaders` cmdlet을 통해 헤더를 제거할 수 있습니다. 
+기본적으로 헤더는 `ResponseHeaders` 특성에 포함 됩니다. 그러나 관리자는 `Set-AdfsResponseHeaders` cmdlet을 통해 헤더를 제거할 수 있습니다. 
 
 ```PowerShell
 Set-AdfsResponseHeaders -RemoveHeaders "X-XSS-Protection" 
@@ -205,7 +205,7 @@ Set-AdfsResponseHeaders -SetHeaderName "Content-Security-Policy" -SetHeaderValue
 - ' unsafe-inline ' – 정책에이를 지정 하면 인라인 JavaScript 및 CSS를 사용할 수 있습니다. 
 - ' unsafe-eval ' – 정책에이를 지정 하면 eval 같은 JavaScript 메커니즘에 텍스트를 사용할 수 있습니다. 
 - ' 없음 ' –이를 지정 하면 모든 원본의 콘텐츠가 로드 됩니다. 
-- 데이터:-데이터를 지정 합니다. Uri를 사용 하면 콘텐츠 작성자가 문서에 작은 파일을 인라인으로 포함할 수 있습니다. 사용 하지 않는 것이 좋습니다.  
+- 데이터:-데이터 지정: Uri를 사용 하면 콘텐츠 작성자가 문서에 작은 파일을 인라인으로 포함할 수 있습니다. 사용 하지 않는 것이 좋습니다.  
  
 >[!NOTE]
 >AD FS는 인증 프로세스에서 JavaScript를 사용 하므로 기본 정책에 ' unsafe-inline ' 및 ' unsafe-eval ' 원본을 포함 하 여 JavaScript를 사용 하도록 설정 합니다.  
@@ -230,11 +230,11 @@ Set-AdfsResponseHeaders -SetHeaderName "TestHeader" -SetHeaderValue "TestHeaderV
 |-----|-----|
 |HTTP Strict-Transport-보안 (HSTS)|[HSTS 브라우저 호환성](https://developer.mozilla.org/docs/Web/HTTP/Headers/Strict-Transport-Security#Browser_compatibility)|
 |X 프레임-옵션|[X 프레임-옵션 브라우저 호환성](https://developer.mozilla.org/docs/Web/HTTP/Headers/X-Frame-Options#Browser_compatibility)| 
-|X-XSS-보호|[X-XSS-보호 브라우저 호환성](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection#Browser_compatibility)| 
+|X-XSS-보호|[X-XSS-보호 브라우저 호환성](https://developer.mozilla.org/docs/Web/HTTP/Headers/X-XSS-Protection#Browser_compatibility)| 
 |CORS (원본 간 리소스 공유)|[CORS 브라우저 호환성](https://developer.mozilla.org/docs/Web/HTTP/CORS#Browser_compatibility) 
 |CSP (콘텐츠 보안 정책)|[CSP 브라우저 호환성](https://developer.mozilla.org/docs/Web/HTTP/CSP#Browser_compatibility) 
 
-## <a name="next"></a>다음
+## <a name="next"></a>다음을 탭하거나 클릭한 후
 
 - [AD FS 도움말을 사용 하 여 문제 해결 가이드](https://aka.ms/adfshelp/troubleshooting )
 - [AD FS 문제 해결](../../ad-fs/troubleshooting/ad-fs-tshoot-overview.md)

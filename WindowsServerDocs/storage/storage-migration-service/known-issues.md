@@ -8,12 +8,12 @@ ms.date: 10/09/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: 9abe199399e577eb06044377c30d5a2dc0e35dd1
-ms.sourcegitcommit: e817a130c2ed9caaddd1def1b2edac0c798a6aa2
+ms.openlocfilehash: dccbfd7d3ff6d95615e9efecf840a840b42d0d27
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74945236"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949640"
 ---
 # <a name="storage-migration-service-known-issues"></a>저장소 마이그레이션 서비스의 알려진 문제
 
@@ -64,11 +64,11 @@ Windows 관리 센터를 사용 하 여 [Windows server 2019 Evaluation 릴리�
 
 Windows 관리 센터 또는 PowerShell을 사용 하 여 전송 작업에 대 한 자세한 오류 전용 CSV 로그를 다운로드 하는 경우 오류 메시지가 표시 됩니다.
 
- >   전송 로그-방화벽에서 파일 공유를 사용할 수 있는지 확인 하세요. :이 요청 작업이 net.tcp:/localhost: 28940/sms/service/1/transfer에서 구성 된 시간 제한 (00:01:00) 내에 회신을 받지 못했습니다. 이 작업에 할당 된 시간이 보다 긴 시간 제한의 일부일 수 있습니다. 서비스가 작업을 계속 처리 하 고 있거나 서비스에서 회신 메시지를 보낼 수 없기 때문일 수 있습니다. 채널/프록시를 IContextChannel로 캐스팅 하 고 OperationTimeout 속성을 설정 하 여 작업 시간 제한을 늘리고 서비스가 클라이언트에 연결할 수 있는지 확인 하세요.
+ >   전송 로그-방화벽에서 파일 공유를 사용할 수 있는지 확인 하세요. :이 요청 작업이 net.tcp:/localhost: 28940/sms/service/1/transfer에서 구성 된 시간 제한 (00:01:00) 내에 회신을 받지 못했습니다. 이 작업에 할당된 시간이 보다 긴 시간 제한의 일부일 수 있습니다. 서비스가 아직 작업을 처리 중이거나 서비스가 회신 메시지를 보낼 수 없었기 때문일 수 있습니다. 채널/프록시를 IContextChannel로 캐스팅 하 고 OperationTimeout 속성을 설정 하 여 작업 시간 제한을 늘리고 서비스가 클라이언트에 연결할 수 있는지 확인 하세요.
 
 이 문제는 저장소 마이그레이션 서비스에서 허용 하는 기본 1 분 제한 시간 내에 필터링 할 수 없는 너무 많은 전송 된 파일에 의해 발생 합니다. 
 
-Megkerülő megoldás a problémára:
+이 문제를 해결하려면:
 
 1. Orchestrator 컴퓨터에서 Notepad.exe를 사용 하 여 *%SYSTEMROOT%\SMS\Microsoft.StorageMigration.Service.exe.config* 파일을 편집 하 여 "sendTimeout"를 1 분 기본값에서 10 분으로 변경 합니다.
 
@@ -90,7 +90,7 @@ Megkerülő megoldás a problémára:
 7. "WcfOperationTimeoutInMinutes"을 마우스 오른쪽 단추로 클릭 한 다음 수정을 클릭 합니다. 
 8. 기본 데이터 상자에서 "10 진수"를 클릭 합니다.
 9. 값 데이터 상자에 "10"을 입력 한 다음 확인을 클릭 합니다.
-10. 레지스트리 편집기를 종료 합니다.
+10. 레지스트리 편집기를 종료합니다.
 11. 오류 전용 CSV 파일 다운로드를 다시 시도 합니다. 
 
 이후 버전의 Windows Server 2019에서이 동작을 변경 하려고 합니다.  
@@ -320,6 +320,35 @@ Windows Server 2008 R2 클러스터 원본에서 잘라내기를 실행 하려�
 
 이는 매우 많은 수의 파일과 중첩 된 폴더를 전송할 때 예상 되는 동작입니다. 데이터의 크기는 관련이 없습니다. 먼저 [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) 에서이 동작을 개선 하 고 전송 성능을 최적화 합니다. 성능을 더 조정 하려면 [인벤토리 최적화 및 전송 성능](https://docs.microsoft.com/windows-server/storage/storage-migration-service/faq#optimizing-inventory-and-transfer-performance)을 검토 하세요.
 
+## <a name="data-does-not-transfer-user-renamed-when-migrating-to-or-from-a-domain-controller"></a>데이터가 전송 되지 않고 도메인 컨트롤러에서 또는 도메인 컨트롤러에서 마이그레이션할 때 사용자 이름이 바뀜
+
+도메인 컨트롤러로의 전송을 시작한 후 다음을 수행 합니다.
+
+ 1. 데이터가 마이그레이션되지 않으며 대상에 공유가 생성 되지 않습니다.
+ 2. Windows 관리 센터에 오류 메시지가 표시 되지 않은 빨간색 오류 기호가 표시 됩니다.
+ 3. 하나 이상의 AD 사용자 및 도메인 로컬 그룹의 이름 및/또는 Windows 2000 이전 로그온 특성이 변경 되었습니다.
+ 4. SMS orchestrator에서 이벤트 3509이 표시 됩니다.
+ 
+ 로그 이름: Microsoft-Windows-StorageMigrationService/Admin Source: Microsoft-Windows-StorageMigrationService 날짜: 1/10/2020 2:53:48 PM 이벤트 ID: 3509 작업 범주: 없음 수준: 오류 키워드:      
+ 사용자: 네트워크 서비스 컴퓨터: orc2019-rtm.corp.contoso.com 설명: 컴퓨터에 대 한 저장소를 전송할 수 없습니다.
+
+ 작업: dctest3 컴퓨터: dc02-2019.corp.contoso.com 대상 컴퓨터: dc03-2019.corp.contoso.com 상태: 실패 한 오류: 53251 오류 메시지: 로컬 계정을 마이그레이션하지 못했습니다. 오류 시스템:-2147467259 StorageMigration MigrateSecurity (IDeviceRecord sourceDeviceRecord, IDeviceRecord destinationDeviceRecord, 전송자 구성 구성, Guid proxyId, CancellationToken cancelToken)
+
+이는 저장소 마이그레이션 서비스를 사용 하 여 도메인 컨트롤러에서 마이그레이션하려는 경우와 "사용자 및 그룹 마이그레이션" 옵션을 사용 하 여 계정의 이름을 바꾸거나 계정을 다시 사용 하는 경우에 예상 되는 동작입니다. "사용자 및 그룹을 전송 하지 않음"을 선택 하는 대신 [저장소 마이그레이션 서비스에서는 DC 마이그레이션이 지원 되지 않습니다](faq.md). DC에는 로컬 사용자 및 그룹이 포함 되지 않기 때문에 저장소 마이그레이션 서비스는 두 구성원 서버 간에 마이그레이션하는 경우 처럼 이러한 보안 주체를 처리 하 고, 오류 및 손상 되거나 복사 된 계정에 따라 Acl을 조정 하려고 시도 합니다. 
+
+이미 전송을 한 번 더 실행 한 경우:
+
+ 1. DC에 대해 다음 AD PowerShell 명령을 사용 하 여 수정 된 모든 사용자 또는 그룹을 찾습니다 (도메인 dinstringuished 이름에 맞게 SearchBase 변경). 
+
+    ```PowerShell
+    Get-ADObject -Filter 'Description -like "*storage migration service renamed*"' -SearchBase 'DC=<domain>,DC=<TLD>' | ft name,distinguishedname
+    ```
+   
+ 2. 원래 이름으로 반환 되는 모든 사용자에 대해 "사용자 로그온 이름 (Windows 이전 2000)"을 편집 하 여이 내용가 로그온 할 수 있도록 저장소 마이그레이션 서비스에서 추가 된 임의 문자 접미사를 제거 합니다.
+ 3. 원래 이름으로 반환 되는 모든 그룹에 대해 "그룹 이름 (Windows 이전 2000)"을 편집 하 여 저장소 마이그레이션 서비스에 의해 추가 된 임의 문자 접미사를 제거 합니다.
+ 4. 저장소 마이그레이션 서비스에서 추가 된 접미사를 포함 하는 사용 하지 않도록 설정 된 사용자 또는 그룹의 경우 이러한 계정을 삭제할 수 있습니다. 사용자 계정에는 도메인 사용자 그룹만 포함 되 고 저장소 마이그레이션 서비스 전송 시작 시간과 일치 하는 날짜/시간이 만들어지므로 사용자 계정이 나중에 추가 되었는지 확인할 수 있습니다.
+ 
+ 전송 목적으로 도메인 컨트롤러에서 저장소 마이그레이션 서비스를 사용 하려는 경우 Windows 관리 센터의 전송 설정 페이지에서 항상 "사용자 및 그룹을 전송 하지 않음"을 선택 해야 합니다.
 
 ## <a name="see-also"></a>참고 항목
 

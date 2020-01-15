@@ -9,12 +9,12 @@ ms.date: 07/17/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: active-directory-federation-services
-ms.openlocfilehash: 442aef6daccda2ab3e95690a82f43f642e5a3f73
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 96659164a9eea1784cb529c47dd58be70d546f80
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71358752"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75948729"
 ---
 # <a name="build-a-native-client-application-using-oauth-public-clients-with-ad-fs-2016-or-later"></a>AD FS 2016 이상에서 OAuth 공용 클라이언트를 사용 하 여 네이티브 클라이언트 응용 프로그램 빌드
 
@@ -41,13 +41,13 @@ ms.locfileid: "71358752"
 
 1. AD FS 관리에서 **응용 프로그램 그룹** 을 마우스 오른쪽 단추로 클릭 하 고 **응용 프로그램 그룹 추가**를 선택 합니다.
 
-2. 응용 프로그램 그룹 마법사에서 이름에 대해 원하는 이름을 입력 합니다 (예: NativeToDoListAppGroup). **웹 API 템플릿에 액세스 하는 네이티브 응용 프로그램** 을 선택 합니다. **다음**을 클릭합니다.
- ![응용 프로그램 그룹 추가](media/native-client-with-ad-fs-2016/addapplicationgroup1.png)
+2. 응용 프로그램 그룹 마법사에서 이름에 대해 원하는 이름을 입력 합니다 (예: NativeToDoListAppGroup). **웹 API 템플릿에 액세스 하는 네이티브 응용 프로그램** 을 선택 합니다. 클릭 하 여 **다음**.
+ 응용 프로그램 그룹 추가 ![](media/native-client-with-ad-fs-2016/addapplicationgroup1.png)
 
-3. **네이티브 응용 프로그램** 페이지에서 AD FS에 의해 생성 된 식별자를 확인 합니다. AD FS에서 공용 클라이언트 앱을 인식 하는 데 사용 하는 id입니다. 복사는 **클라이언트 식별자** 값입니다. 나중에 응용 프로그램 코드에서 **ida: ClientId** 의 값으로 사용 됩니다. 원하는 경우 여기에서 사용자 지정 식별자를 제공할 수 있습니다. 리디렉션 URI는 임의의 값입니다. 예를 들어 네이티브 https://ToDoListClient 앱을 배치 ![ 합니다.](media/native-client-with-ad-fs-2016/addapplicationgroup2.png)
+3. **네이티브 응용 프로그램** 페이지에서 AD FS에 의해 생성 된 식별자를 확인 합니다. AD FS에서 공용 클라이언트 앱을 인식 하는 데 사용 하는 id입니다. 복사는 **클라이언트 식별자** 값입니다. 나중에 응용 프로그램 코드에서 **ida: ClientId** 의 값으로 사용 됩니다. 원하는 경우 여기에서 사용자 지정 식별자를 제공할 수 있습니다. 리디렉션 URI는 임의의 값입니다. 예를 들어 https://ToDoListClient ![ 네이티브 앱에 저장](media/native-client-with-ad-fs-2016/addapplicationgroup2.png)
 
 4. **웹 Api 구성** 페이지에서 web api에 대 한 식별자 값을 설정 합니다. 이 예제에서이 값은 웹 앱이 실행 되 고 있는 **SSL URL** 의 값 이어야 합니다. 솔루션에서 TooListServer 프로젝트의 속성을 클릭 하 여이 값을 가져올 수 있습니다. 이는 나중에 native client 응용 프로그램의 **app.config** 파일에서 **todo: TodoListResourceId** 값으로 사용 되 고 **todo: TodoListBaseAddress**로도 사용 됩니다.
-![웹 API](media/native-client-with-ad-fs-2016/addapplicationgroup3.png)
+![Web API](media/native-client-with-ad-fs-2016/addapplicationgroup3.png)
 
 5. 기본 값을 사용 하 여 **Access Control 정책 적용** 및 **응용 프로그램 구성 권한** 을 참조 하세요. 요약 페이지는 다음과 같습니다.
 ![요약](media/native-client-with-ad-fs-2016/addapplicationgroupsummary.png)
@@ -59,13 +59,13 @@ ms.locfileid: "71358752"
 클레임 규칙을 구성 하려면 앞서 만든 응용 프로그램 그룹을 열고 Web API를 두 번 클릭 합니다. 발급 변환 규칙 탭을 선택한 다음 규칙 추가 단추를 클릭 합니다. 클레임 규칙 유형에서 사용자 지정 클레임 규칙을 선택 하 고 아래와 같이 클레임 규칙을 추가 합니다.
 
 ```  
-c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname", Issuer == "AD AUTHORITY"]
+c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname", Issuer == "AD AUTHORITY"]
  => issue(store = "Active Directory", types = ("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"), query = ";givenName;{0}", param = c.Value);
 ```
 
 ![NameIdentifier 클레임 규칙](media/native-client-with-ad-fs-2016/addnameidentifierclaimrule.png)
 
-### <a name="modify-the-application-code"></a>응용 프로그램 코드 수정
+### <a name="modify-the-application-code"></a>애플리케이션 코드 수정
 
 이 섹션에서는 웹 API 샘플을 다운로드 하 고 Visual Studio에서 수정 하는 방법을 설명 합니다.   Azure AD 된 샘플을 사용 합니다 [여기](https://github.com/Azure-Samples/active-directory-dotnet-native-desktop)합니다.  
 
@@ -88,11 +88,11 @@ Native client 응용 프로그램에 위의 정보를 가져오기 위해 다음
 
 **App.config**
 
-* AD FS 서비스를 나타내는 값을 사용 하 여 **ida: Authority** 키를 추가 합니다. 예를 들어 IPv4 주소를 사용하는 경우 https://fs.contoso.com/adfs/
+* AD FS 서비스를 나타내는 값을 사용 하 여 **ida: Authority** 키를 추가 합니다. 예를 들면 https://fs.contoso.com/adfs/ 과 같습니다.
 * AD FS에서 응용 프로그램 그룹을 만드는 동안 **네이티브 응용 프로그램** 페이지의 **클라이언트 식별자** 값을 사용 하 여 **ida: ClientId** 키를 수정 합니다. 예: 3f07368b-6efd-4f50-a330-d93853f4c855
-* AD FS에서 응용 프로그램 그룹을 만드는 동안 **웹 API 구성** 페이지에서 **식별자** 의 값으로 **todo: todo: TodoListResourceId** 를 수정 합니다. 예를 들어 IPv4 주소를 사용하는 경우 https://localhost:44321/
-* AD FS에서 응용 프로그램 그룹을 만드는 동안 **웹 API 구성** 페이지에서 **식별자** 의 값으로 **todo: TodoListBaseAddress** 을 수정 합니다. 예를 들어 IPv4 주소를 사용하는 경우 https://localhost:44321/
-* AD FS에서 응용 프로그램 그룹을 만드는 동안 **네이티브 응용 프로그램** 페이지에서 **리디렉션 uri** 값을 사용 하 여 **ida: redirecturi** 값을 설정 합니다. 예를 들어 IPv4 주소를 사용하는 경우 https://ToDoListClient
+* AD FS에서 응용 프로그램 그룹을 만드는 동안 **웹 API 구성** 페이지에서 **식별자** 의 값으로 **todo: todo: TodoListResourceId** 를 수정 합니다. 예를 들면 https://localhost:44321/ 과 같습니다.
+* AD FS에서 응용 프로그램 그룹을 만드는 동안 **웹 API 구성** 페이지에서 **식별자** 의 값으로 **todo: TodoListBaseAddress** 을 수정 합니다. 예를 들면 https://localhost:44321/ 과 같습니다.
+* AD FS에서 응용 프로그램 그룹을 만드는 동안 **네이티브 응용 프로그램** 페이지에서 **리디렉션 uri** 값을 사용 하 여 **ida: redirecturi** 값을 설정 합니다. 예를 들면 https://ToDoListClient 과 같습니다.
 * 쉽게 읽을 수 있도록 **ida: Tenant** 및 **ida: AADInstance**의 키를 제거/주석으로 처리 하면 됩니다.
 
   ![앱 구성](media/native-client-with-ad-fs-2016/app_configfile.PNG)
@@ -126,9 +126,9 @@ Native client 응용 프로그램에 위의 정보를 가져오기 위해 다음
 **Web.config**
 
 * 키 **ida: 테 넌 트** 를 주석으로 처리 합니다.
-* 페더레이션 서비스의 FQDN (예:)을 나타내는 값이 포함 된 **ida: Authority** 의 키를 추가 합니다. https://fs.contoso.com/adfs/
+* 페더레이션 서비스의 FQDN (https://fs.contoso.com/adfs/ 예:)을 나타내는 값이 **ida: Authority** 의 키를 추가 합니다.
 * Modify key **ida: 대상 사용자** 는 응용 프로그램 그룹 추가 중에 **웹 api 구성** 페이지에서 지정한 웹 api 식별자의 값을 사용 하 여 AD FS 합니다.
-* **Ida: AdfsMetadataEndpoint** AD FS의 페더레이션 메타 데이터 URL에 해당 하는 값을 포함 하는 키를 추가 합니다 (예: https://fs.contoso.com/federationmetadata/2007-06/federationmetadata.xml
+* **Ida: AdfsMetadataEndpoint** 의 페더레이션 메타 데이터 AD FS URL에 해당 하는 값을 포함 하는 키를 추가 합니다 (예: https://fs.contoso.com/federationmetadata/2007-06/federationmetadata.xml
 
 ![웹 구성](media/native-client-with-ad-fs-2016/webconfig.PNG)
 
@@ -153,10 +153,10 @@ ConfigureAuth 함수를 아래와 같이 수정 합니다.
     }
 
 기본적으로 AD FS를 사용 하도록 인증을 구성 하 고 AD FS 메타 데이터에 대 한 정보를 추가로 제공 하 고, 토큰의 유효성을 검사 하기 위해 대상 클레임은 Web API에서 예상 하는 값 이어야 합니다.
-응용 프로그램 실행
+애플리케이션 실행
 
 1. 솔루션 NativeClient에서 마우스 오른쪽 단추를 클릭 하 고 속성으로 이동 합니다. 아래와 같이 시작 프로젝트를 여러 개의 시작 프로젝트로 변경 하 고 TodoListClient 및 TodoListService를 모두 시작으로 설정 합니다.
-![솔루션 속성](media/native-client-with-ad-fs-2016/solutionproperties.png)
+솔루션 속성을 ![](media/native-client-with-ad-fs-2016/solutionproperties.png)
 
 2.  F5 단추를 누르거나 메뉴 모음에서 디버그 > 계속을 선택 합니다. 이렇게 하면 네이티브 응용 프로그램과 WebAPI 모두 시작 됩니다. 네이티브 응용 프로그램에서 로그인 단추를 클릭 하면 AD AL에서 대화형 로그온이 팝업 되 고 AD FS 서비스로 리디렉션됩니다. 유효한 사용자의 자격 증명을 입력 합니다.
 ![로그인](media/native-client-with-ad-fs-2016/sign-in.png)

@@ -8,12 +8,12 @@ manager: alanth
 author: justinha
 ms.technology: security-crdential-protection-and-management
 ms.date: 11/09/2016
-ms.openlocfilehash: 64018f7f118086f3d290cb1ffa9b8d2b3e81c27c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 21c2d3d79653bd02fea9d2ac0d09bd18690a388f
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386272"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949742"
 ---
 # <a name="preventing-kerberos-change-password-that-uses-rc4-secret-keys"></a>Kerberos가 RC4 비밀 키를 사용하는 암호를 변경하지 못하도록 설정
 
@@ -31,13 +31,13 @@ RFC 4757에 따라 Kerberos 암호 변경 교환 중에 사용자의 암호 파�
 
     [!NOTE]
     RC4를 사용 하지 않도록 설정 하면 시스템이 다시 시작 될 수 있는 알려진 문제가 발생 합니다. 다음 핫픽스를 참조 하세요.
-    - [Windows Server 2012 R2](https://support.microsoft.com/en-us/kb/3038261)
-    - [Windows Server 2012](https://support.microsoft.com/en-us/kb/3086213)
+    - [Windows Server 2012 R2](https://support.microsoft.com/kb/3038261)
+    - [Windows Server 2012](https://support.microsoft.com/kb/3086213)
     - 이전 버전의 Windows Server에는 핫픽스를 사용할 수 없습니다.
 
 - Windows Server 2012 R2 도메인 기능 수준 이상으로 설정 된 도메인을 배포 하 고 사용자를 보호 된 사용자 보안 그룹의 구성원으로 구성 합니다. 이 기능은 Kerberos 프로토콜의 RC4 사용 보다 많은 것을 중단 하기 때문에 다음 [참고](#see-also) 항목 섹션의 리소스를 참조 하세요.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 - Windows Server 2012 R2 도메인에서 RC4 암호화 유형을 사용 하는 것을 방지 하는 방법에 대 한 자세한 내용은 [보호 된 사용자 보안 그룹](/../credentials-protection-and-management/protected-users-security-group.md)및 [보호 된 계정을 구성 하는 방법](/../credentials-protection-and-management/how-to-configure-protected-accounts.md)을 참조 하세요.
 

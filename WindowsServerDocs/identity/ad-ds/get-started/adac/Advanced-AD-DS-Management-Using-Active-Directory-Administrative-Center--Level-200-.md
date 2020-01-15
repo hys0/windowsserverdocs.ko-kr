@@ -9,12 +9,12 @@ ms.date: 08/07/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 00e307da35911189114257eea88ccaf90ceab1ae
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6ec8ac4936889356ef92e82c0c89491e5c853a95
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71390721"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949332"
 ---
 # <a name="advanced-ad-ds-management-using-active-directory-administrative-center-level-200"></a>Advanced AD DS Management Using Active Directory Administrative Center (Level 200)
 
@@ -46,7 +46,7 @@ ms.locfileid: "71390721"
   
 ## <a name="BKMK_EnableRecycleBin"></a>Active Directory 관리 센터를 사용 하 여 Active Directory 휴지통 사용 및 관리  
   
-### <a name="capabilities"></a>기능  
+### <a name="capabilities"></a>접근 권한 값  
   
 - Windows Server 2012 이상 Active Directory 관리 센터를 사용 하면 포리스트의 모든 도메인 파티션에 대해 Active Directory 휴지통을 구성 하 고 관리할 수 있습니다. 이제 Windows PowerShell 또는 Ldp.exe를 사용하여 Active Directory 휴지통을 활성화하거나 도메인 파티션에 개체를 복원하기 위한 요구 사항이 없습니다.
 - Active Directory 관리 센터에서는 의도적으로 삭제된 개체가 많은 대규모 환경에서 특정 대상을 보다 쉽게 복원할 수 있는 고급 필터링 조건을 제공합니다.
@@ -68,7 +68,7 @@ Active Directory 휴지통을 활성화하려면 **Active Directory 관리 센�
   
 ![고급 AD DS 관리](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_EnableRecycleBin.png)  
   
-Active Directory 관리 센터에 **휴지통 사용 확인** 대화 상자가 표시됩니다. 이 대화 상자에는 휴지통을 활성화한 후 되돌릴 수 없음을 알리는 경고 메시지가 표시되어 있습니다. **확인**을 클릭하여 Active Directory 휴지통을 활성화합니다. Active Directory 관리 센터에는 모든 도메인 컨트롤러가 구성 변경 사항을 복제할 때까지 Active Directory 휴지통이 완전하게 작동하지 않음을 알리는 또 다른 대화 상자도 표시됩니다.  
+Active Directory 관리 센터에 **휴지통 사용 확인** 대화 상자가 표시됩니다. 이 대화 상자에는 휴지통을 활성화한 후 되돌릴 수 없음을 알리는 경고 메시지가 표시되어 있습니다. **확인** 을 클릭하여 Active Directory 휴지통을 활성화합니다. Active Directory 관리 센터에는 모든 도메인 컨트롤러가 구성 변경 사항을 복제할 때까지 Active Directory 휴지통이 완전하게 작동하지 않음을 알리는 또 다른 대화 상자도 표시됩니다.  
   
 > [!IMPORTANT]  
 > 다음에 해당하는 경우 Active Directory 휴지통을 활성화하는 옵션을 사용할 수 없습니다.  
@@ -82,7 +82,7 @@ Active Directory 관리 센터에 **휴지통 사용 확인** 대화 상자가 �
 Enable-ADOptionalFeature  
 ```
 
-Windows PowerShell을 사용하여 Active Directory 휴지통을 활성화하는 방법에 대한 자세한 내용은 [Active Directory 휴지통 단계별 가이드](https://docs.microsoft.com/windows-server/identity/ad-ds/get-started/adac/introduction-to-active-directory-administrative-center-enhancements--level-100-#active-directory-recycle-bin-step-by-step)를 참조하세요.  
+Active Directory 휴지통을 사용 하도록 설정 하려면 Windows PowerShell을 사용 하는 방법에 대 한 자세한 내용은 참조는 [Active Directory 휴지통 단계별 가이드](https://docs.microsoft.com/windows-server/identity/ad-ds/get-started/adac/introduction-to-active-directory-administrative-center-enhancements--level-100-#active-directory-recycle-bin-step-by-step)합니다.  
   
 ### <a name="managing-active-directory-recycle-bin-using-active-directory-administrative-center"></a>Active Directory 관리 센터를 사용하여 Active Directory 휴지통 관리
 
@@ -90,7 +90,7 @@ Windows PowerShell을 사용하여 Active Directory 휴지통을 활성화하는
   
 ![고급 AD DS 관리](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_EnableRecycleBinExampleOU.png)  
   
-#### <a name="storage-and-filtering"></a>저장소 및 필터링
+#### <a name="storage-and-filtering"></a>스토리지 및 필터링
 
 Active Directory 휴지통은 포리스트에서 삭제된 모든 개체를 유지합니다. 기본적으로 포리스트의 **tombstoneLifetime** 특성과 일치하도록 설정된 **msDS-deletedObjectLifetime** 특성에 따라 이러한 개체를 저장합니다. Windows Server 2003 SP1 이상을 사용하여 만든 모든 포리스트에서 **tombstoneLifetime** 값은 기본적으로 180일로 설정됩니다. Windows 2000에서 업그레이드되거나 Windows Server 2003(서비스 팩 없음)과 함께 설치된 모든 포리스트에는 기본 tombstoneLifetime 특성이 설정되지 않으므로 Windows에서 내부 기본값인 60일을 사용합니다. 이 모든 값을 구성할 수 있습니다. Active Directory 관리 센터를 사용하여 포리스트의 도메인 파티션에서 삭제된 모든 개체를 복원할 수 있습니다. 다른 파티션에서 삭제된 개체(예: 구성)를 복원하려면 계속 **Restore-ADObject** cmdlet을 사용해야 합니다. Active Directory 휴지통을 활성화하면 Active Directory 관리 센터에서 모든 도메인 파티션 아래에 **삭제된 개체** 컨테이너가 표시됩니다.  
   
@@ -98,7 +98,7 @@ Active Directory 휴지통은 포리스트에서 삭제된 모든 개체를 유�
   
 **삭제된 개체** 컨테이너에는 해당 도메인 파티션의 복구 가능한 모든 개체가 표시됩니다. **msDS-deletedObjectLifetime** 보다 오래된 삭제된 개체를 재활용된 개체라고 합니다. Active Directory 관리 센터에는 재활용된 개체가 표시되지 않으므로 Active Directory 관리 센터를 사용하여 이러한 개체를 복원할 수 없습니다.  
   
-휴지통의 아키텍처 및 처리 규칙에 대한 자세한 설명은 [AD 휴지통: 이해, 구현, 모범 사례 및 문제 해결](http://blogs.technet.com/b/askds/archive/2009/08/27/the-ad-recycle-bin-understanding-implementing-best-practices-and-troubleshooting.aspx)을 참조하세요.  
+휴지통의 아키텍처 및 처리 규칙에 대한 자세한 설명은 [AD 휴지통: 이해, 구현, 모범 사례 및 문제 해결](https://blogs.technet.com/b/askds/archive/2009/08/27/the-ad-recycle-bin-understanding-implementing-best-practices-and-troubleshooting.aspx)을 참조하세요.  
   
 Active Directory 관리 센터는 컨테이너에서 반환되는 기본 개체 수를 인위적으로 20,000개로 제한합니다. **관리** 메뉴를 클릭한 다음 **관리 목록 옵션**을 클릭하여 이 제한을 100,000개까지 늘릴 수 있습니다.  
   
@@ -119,12 +119,12 @@ Active Directory 관리 센터에서는 강력한 조건 및 필터링 옵션을
 - *ANR (모호한 이름 확인-메뉴에는 표시 되지 않지만 * * * * * * * * * 상자에를 입력할 때 사용 되는 항목)*  
 - 지정한 날짜 사이에 마지막으로 수정된 개체  
 - 개체는 사용자/조직 구성원/컴퓨터/그룹/조직 구성 단위  
-- 이름  
+- Name(이름)  
 - 삭제된 날짜  
 - 마지막으로 알려진 부모  
-- 형식  
+- 작업 표시줄의 검색 상자에  
 - 설명  
-- City  
+- 구/군/시  
 - 국가/지역  
 - 부서  
 - 직원 ID  
@@ -143,14 +143,14 @@ Active Directory 관리 센터에서는 강력한 조건 및 필터링 옵션을
   
 ![고급 AD DS 관리](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_ColumnHeaders.png)  
   
-모호한 이름 확인에 대 한 자세한 내용은 참조 [ANR 특성](https://msdn.microsoft.com/library/ms675092(VS.85).aspx)합니다.  
+모호한 이름 확인에 대한 자세한 내용은 [ANR 특성](https://msdn.microsoft.com/library/ms675092(VS.85).aspx)을 참조하세요.  
   
 ##### <a name="single-object"></a>단일 개체
 
 삭제된 개체를 복원하는 작업은 항상 단일 작업이었습니다.  Active Directory 관리 센터에서 이 작업을 보다 쉽게 수행할 수 있습니다. 단일 사용자와 같은 삭제된 개체를 복원하려면 다음을 수행합니다.  
   
 1. Active Directory 관리 센터의 탐색 창에서 도메인 이름을 클릭합니다.  
-2. 관리 목록에서 **삭제된 개체**를 두 번 클릭합니다.  
+2. 관리 목록에서 **삭제된 개체** 를 두 번 클릭합니다.  
 3. 개체를 마우스 오른쪽 단추로 클릭하고 **복원**을 클릭하거나, **작업** 창에서 **복원** 을 클릭합니다.  
   
 개체가 원래 위치로 복원됩니다.  
@@ -163,7 +163,7 @@ Active Directory 관리 센터에서는 강력한 조건 및 필터링 옵션을
   
 ##### <a name="multiple-peer-objects"></a>여러 개의 피어 개체
 
-OU의 모든 사용자와 같은 피어 수준의 여러 개체를 복원할 수 있습니다. Ctrl 키를 누른 채 복원할 삭제된 개체를 하나 이상 클릭합니다. 작업 창에서 **복원**을 클릭합니다. Ctrl 키와 A 키를 눌러 표시된 모든 개체를 선택하거나, Shift 키를 누르고 클릭하여 개체 범위를 선택할 수도 있습니다.  
+OU의 모든 사용자와 같은 피어 수준의 여러 개체를 복원할 수 있습니다. Ctrl 키를 누른 채 복원할 삭제된 개체를 하나 이상 클릭합니다. 작업 창에서 **복원** 을 클릭합니다. Ctrl 키와 A 키를 눌러 표시된 모든 개체를 선택하거나, Shift 키를 누르고 클릭하여 개체 범위를 선택할 수도 있습니다.  
   
 ![고급 AD DS 관리](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RestorePeers.png)  
   
@@ -202,7 +202,7 @@ Active Directory 관리 센터에서는 삭제된 개체의 중첩된 트리를 
   
 **Sales** OU에 자식 OU가 포함된 경우 먼저 이 자식 OU를 복원한 다음 해당 자식을 차례로 복원할 수 있습니다.  
   
-삭제된 부모 컨테이너를 지정하여 중첩된 모든 삭제된 개체를 복원하려면 [부록 B: 여러 개의 삭제된 Active Directory 개체 복원(예제 스크립트)](https://technet.microsoft.com/library/dd379504(WS.10).aspx)을 참조하세요.  
+삭제 된 부모 컨테이너를 지정 하 여 중첩 된 모든 삭제 된 개체를 복원 하려면 참조 [부록 b: 복원 여러 개의 삭제 된 Active Directory 개체 (예제 스크립트)](https://technet.microsoft.com/library/dd379504(WS.10).aspx)합니다.  
   
 삭제된 개체를 복원하는 Active Directory Windows PowerShell cmdlet은 다음과 같습니다.  
 
@@ -217,7 +217,7 @@ Restore-adobject
 중간 규모 및 대규모 기업의 경우 시간이 지남에 따라 삭제된 개체 컨테이너에 20,000개(또는 심지어 100,000개)가 넘는 개체가 누적되어 모든 개체를 표시하기가 어려워집니다. Active Directory 관리 센터의 필터 메커니즘은 클라이언트 쪽 필터링을 기반으로 하므로 이러한 추가 개체를 표시할 수 없습니다. 이 제한을 해결하려면 다음 단계를 사용하여 서버 쪽 검색을 수행하세요.  
   
 1. **삭제된 개체** 컨테이너를 마우스 오른쪽 단추로 클릭한 다음 **이 노드에서 검색**을 클릭합니다.  
-2. 펼침 단추를 클릭하여 **+조건 추가** 메뉴를 표시하고 **지정한 날짜 사이에 마지막으로 수정된 개체**를 선택하여 추가합니다. 마지막 수정 시간(**whenChanged** 특성)은 삭제 시간의 근사치이며, 대부분의 환경에서 동일합니다. 이 쿼리는 서버 쪽 검색을 수행합니다.  
+2. 펼침 단추를 클릭하여 **+조건 추가** 메뉴를 표시하고 **지정한 날짜 사이에 마지막으로 수정된 개체**를 선택하여 추가합니다. 마지막 수정 시간( **whenChanged** 특성)은 삭제 시간의 근사치이며, 대부분의 환경에서 동일합니다. 이 쿼리는 서버 쪽 검색을 수행합니다.  
 3. 결과에서 추가 표시 필터링, 정렬 등을 사용하여 복원할 삭제된 개체를 찾은 후 정상적으로 복원합니다.  
   
 ## <a name="BKMK_FGPP"></a>Active Directory 관리 센터를 사용 하 여 세분화 암호 정책 구성 및 관리  
@@ -226,7 +226,7 @@ Restore-adobject
 
 Active Directory 관리 센터에서 FGPP(세분화된 암호 정책) 개체를 만들고 관리할 수 있습니다. Windows Server 2008에서 FGPP 기능이 도입되었지만 이 기능을 위한 그래픽 관리 인터페이스는 Windows Server 2012에서 처음 제공되었습니다. 도메인 수준에서 세분화된 암호 정책을 적용하여 Windows Server 2003에 필요한 단일 도메인 암호를 재정의할 수 있습니다. 서로 다른 설정으로 여러 FGPP를 만들어 도메인의 개별 사용자 또는 그룹에 서로 다른 암호 정책을 적용할 수 있습니다.  
   
-세분화된 암호 정책에 대한 자세한 내용은 [AD DS 세분화된 암호 및 계정 잠금 정책 단계별 가이드(Windows Server 2008 R2)](https://technet.microsoft.com/library/cc770842(WS.10).aspx)를 참조하세요.  
+세분화 된 암호 정책에 대 한 정보를 참조 하십시오. [AD DS 세분화 된 암호 및 계정 잠금 정책 단계별 가이드 (Windows Server 2008 R2)](https://technet.microsoft.com/library/cc770842(WS.10).aspx)합니다.  
   
 탐색 창에서 트리 보기와 도메인을 차례로 클릭하고, **시스템**, **암호 설정 컨테이너**를 클릭한 다음, 작업 창에서 **새로 만들기** 및 **암호 설정**을 클릭합니다.  
   
@@ -447,10 +447,10 @@ Active Directory 관리 센터는 필요한 코드 사용 및 모듈을 최소�
 
 사용 가능한 Active Directory 웹 서비스 인스턴스가 없는 경우에 표시되는 오류는 다음과 같습니다.  
   
-|Error|작업|
+|오류|작업|
 | --- | --- |  
-|"도메인에 연결할 수 없습니다. 연결되면 새로 고치거나 다시 시도해 보세요."|Active Directory 관리 센터 응용 프로그램을 시작할 때 표시됩니다.|
-|"에서 사용 가능한 서버를 찾을 수 없습니다는 *<NetBIOS domain name>* 는 웹 서비스 ADWS (Active Directory)를 실행 중인 도메인"|Active Directory 관리 센터 응용 프로그램에서 도메인 노드를 선택하려고 할 때 표시됩니다.|
+|"도메인에 연결할 수 없습니다. 연결되면 새로 고치거나 다시 시도해 보세요."|Active Directory 관리 센터 애플리케이션을 시작할 때 표시됩니다.|
+|"에서 사용 가능한 서버를 찾을 수 없습니다는 *<NetBIOS domain name>* 는 웹 서비스 ADWS (Active Directory)를 실행 중인 도메인"|Active Directory 관리 센터 애플리케이션에서 도메인 노드를 선택하려고 할 때 표시됩니다.|
   
 이 문제를 해결하려면 다음 단계를 사용합니다.  
   
@@ -470,7 +470,7 @@ Active Directory 관리 센터는 필요한 코드 사용 및 모듈을 최소�
    Netstat -anob > ports.txt  
    ```
 
-   ports.txt 파일을 검사하여 ADWS 서비스가 포트 9389에서 수신 대기 중인지 확인합니다. 예제:  
+   ports.txt 파일을 검사하여 ADWS 서비스가 포트 9389에서 수신 대기 중인지 확인합니다. 예:  
 
    ```
    TCP    0.0.0.0:9389    0.0.0.0:0    LISTENING    1828  
@@ -482,7 +482,7 @@ Active Directory 관리 센터는 필요한 코드 사용 및 모듈을 최소�
 
    수신 대기 중이면 Windows 방화벽 규칙의 유효성을 검사하고 9389 TCP 인바운드를 허용하는지 확인합니다. 기본적으로 도메인 컨트롤러는 "Active Directory 웹 서비스(TCP-In)" 방화벽 규칙을 사용합니다. 수신 대기 중이지 않으면 서비스가 이 서버에서 실행되고 있는지 다시 확인한 후 서비스를 다시 시작합니다. 다른 프로세스가 포트 9389에서 이미 수신 대기 중인지 확인합니다.  
   
-4. Active Directory 관리 센터를 실행하는 컴퓨터와 NLTEST에서 반환된 도메인 컨트롤러에 NetMon 또는 다른 네트워크 캡처 유틸리티를 설치합니다. 두 컴퓨터 모두에서 동시 네트워크 캡처를 수집합니다. 이때 Active Directory 관리 센터를 시작하여 캡처를 중지하기 전에 오류를 확인합니다. 클라이언트가 TCP 포트 9389를 통해 도메인 컨트롤러와 데이터를 주고받을 수 있는지 확인합니다. 패킷이 전송되었지만 수신되지 않거나, 패킷이 수신되어 도메인 컨트롤러에서 응답했지만 클라이언트에 응답이 수신되지 않는 경우 네트워크의 컴퓨터 사이에 해당 포트의 패킷을 삭제하는 방화벽이 있을 수 있습니다. 이 방화벽은 소프트웨어 또는 하드웨어일 수 있으며, 타사 끝점 보호(바이러스 백신) 소프트웨어의 일부일 수도 있습니다.  
+4. Active Directory 관리 센터를 실행하는 컴퓨터와 NLTEST에서 반환된 도메인 컨트롤러에 NetMon 또는 다른 네트워크 캡처 유틸리티를 설치합니다. 두 컴퓨터 모두에서 동시 네트워크 캡처를 수집합니다. 이때 Active Directory 관리 센터를 시작하여 캡처를 중지하기 전에 오류를 확인합니다. 클라이언트가 TCP 포트 9389를 통해 도메인 컨트롤러와 데이터를 주고받을 수 있는지 확인합니다. 패킷이 전송되었지만 수신되지 않거나, 패킷이 수신되어 도메인 컨트롤러에서 응답했지만 클라이언트에 응답이 수신되지 않는 경우 네트워크의 컴퓨터 사이에 해당 포트의 패킷을 삭제하는 방화벽이 있을 수 있습니다. 이 방화벽은 소프트웨어 또는 하드웨어일 수 있으며, 타사 엔드포인트 보호(바이러스 백신) 소프트웨어의 일부일 수도 있습니다.  
   
 ## <a name="see-also"></a>참고 항목
 

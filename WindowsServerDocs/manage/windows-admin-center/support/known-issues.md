@@ -8,12 +8,12 @@ ms.author: jeffrew
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.date: 06/07/2019
-ms.openlocfilehash: c05987360256f7b7ed58911c1ded86586fc8b3aa
-ms.sourcegitcommit: 7c7fc443ecd0a81bff6ed6dbeeaf4f24582ba339
+ms.openlocfilehash: 59c659041c7553d8e97a3bfbefbc3bde24098ef2
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74903905"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949933"
 ---
 # <a name="windows-admin-center-known-issues"></a>Windows Admin Center 알려진 문제
 
@@ -80,7 +80,7 @@ Windows Admin Center에서 원격 데스크톱, PowerShell 및 이벤트 모듈�
 
 WMF가 설치되어 있는지, 그리고 버전이 5.1 이상인지 확인하려면 PowerShell에 `$PSVersiontable`을 입력합니다.
 
-설치되어있지 않은 경우 [WMF 5.1을 다운로드하여 설치할](https://www.microsoft.com/en-us/download/details.aspx?id=54616)수 있습니다.
+설치되어있지 않은 경우 [WMF 5.1을 다운로드하여 설치할](https://www.microsoft.com/download/details.aspx?id=54616)수 있습니다.
 
 ## <a name="role-based-access-control-rbac"></a>RBAC(역할 기반 액세스 제어)
 

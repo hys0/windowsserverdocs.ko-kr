@@ -8,12 +8,12 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 130204ef7e4b36beb1e1f06dccdc1e1df8058129
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 52b88dde5a273d64ad2428965754f714fe2392d0
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403739"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950399"
 ---
 # <a name="deploying-the-host-guardian-service"></a>호스트 보호자 서비스 배포 
 
@@ -23,7 +23,7 @@ ms.locfileid: "71403739"
 
 ## <a name="video-deploying-a-guarded-fabric"></a>비디오: 보호 된 패브릭 배포 
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/dcd8e99f-36f1-4bc8-b3d2-9576da38d9f1?autoplay=false]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/dcd8e99f-36f1-4bc8-b3d2-9576da38d9f1?autoplay=false]
 
 ## <a name="deployment-tasks-for-guarded-fabrics-and-shielded-vms"></a>보호 된 패브릭 및 보호 된 Vm에 대 한 배포 작업
 

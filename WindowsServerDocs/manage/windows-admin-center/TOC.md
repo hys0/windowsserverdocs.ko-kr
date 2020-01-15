@@ -1,18 +1,16 @@
 # [Windows Admin Center](overview.md)
 
 ## 이해
-### [안녕하세요, Windows Admin Center입니다!](understand/windows-admin-center.md)
 ### [Windows Admin Center란?](understand/what-is.md)
 ### [FAQ](understand/faq.md)
 ### [사례 연구](understand/case-studies.md)
 ### [관련 관리 제품](understand/related-management.md)
-### [동영상](understand/videos.md)
 
 ## 계획
 ### [나에게 적합한 설치 유형은 무엇인가요?](plan/installation-options.md)
 ### [사용자 액세스 옵션](plan/user-access-options.md)
 
-## 배포
+## 배포 게스트 클러스터에
 ### [환경 준비](deploy/prepare-environment.md)
 ### [Windows Admin Center 설치](deploy/install.md)
 ### [고가용성](deploy/high-availability.md)
@@ -34,7 +32,6 @@
 ### [Hyper-V 가상 머신 관리](use/manage-virtual-machines.md)
 ### [로깅](use/logging.md)
 
-
 ## Azure 연결
 ### [Azure 하이브리드 서비스](azure/index.md)
 #### [Azure Backup](azure/azure-backup.md)
@@ -46,7 +43,8 @@
 ### [Azure에서 Windows Admin Center 배포](azure/deploy-wac-in-azure.md)
 ### [Windows Admin Center를 사용하여 Azure VM 관리](azure/manage-azure-vms.md)
 
-## 지원
+## Support(지원)
+### [릴리스 기록](support/release-history.md)
 ### [지원 정책](support/index.md)
 ### [일반적인 문제 해결 단계](support/troubleshooting.md)
 ### [알려진 문제](support/known-issues.md)

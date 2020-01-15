@@ -8,14 +8,14 @@ manager: dongill
 author: JasonGerend
 ms.author: jgerend
 ms.date: 10/18/2018
-ms.openlocfilehash: 26417f0fdbe2c4c8c374b3a1b8955c6297865397
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 40342f43f7afbf020ba20f27586650767218fe83
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71360826"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75948036"
 ---
-# <a name="whats-new-in-failover-clustering"></a>장애 조치(failover) 클러스터링의 새로운 기능
+# <a name="whats-new-in-failover-clustering"></a>장애 조치 클러스터링의 새로운 기능
 
 > 적용 대상: Windows Server 2019, Windows Server 2016
 
@@ -72,11 +72,11 @@ ms.locfileid: "71360826"
 
 **이와 같은 변경을 통해 더해지는 가치**  
 
-Hyper-v 또는 스케일 아웃 파일 서버 클러스터를 Windows Server 2012 r 2에서 Windows Server 2016로 업그레이드 하는 데 더 이상 가동 중지 시간이 필요 하지 않습니다. 클러스터의 모든 노드가 Windows Server 2016를 실행할 때까지 클러스터는 Windows Server 2012 R2 수준에서 계속 작동 합니다. Windows PowerShell cmdlet `Update-ClusterFunctionalLevel`을 사용 하 여 클러스터 기능 수준이 Windows Server 2016로 업그레이드 됩니다. 
+Hyper-v 또는 스케일 아웃 파일 서버 클러스터를 Windows Server 2012 r 2에서 Windows Server 2016로 업그레이드 하는 데 더 이상 가동 중지 시간이 필요 하지 않습니다. 클러스터의 모든 노드가 Windows Server 2016를 실행할 때까지 클러스터는 Windows Server 2012 R2 수준에서 계속 작동 합니다. Windows PowerShell cmdlet `Update-ClusterFunctionalLevel`를 사용 하 여 클러스터 기능 수준이 Windows Server 2016로 업그레이드 됩니다. 
 
 > [!WARNING]  
 > -   클러스터 기능 수준을 업데이트 한 후에는 Windows Server 2012 R2 클러스터 기능 수준으로 돌아갈 수 없습니다. 
-> -   @No__t-0 cmdlet이 실행 될 때까지 프로세스를 되돌릴 수 있으며 Windows server 2012 R2 노드를 추가 하 고 Windows Server 2016 노드를 제거할 수 있습니다. 
+> -   `Update-ClusterFunctionalLevel` cmdlet이 실행 될 때까지 프로세스를 되돌릴 수 있으며 Windows server 2012 R2 노드를 추가 하 고 Windows Server 2016 노드를 제거할 수 있습니다. 
 
 **달라진 기능**  
 
@@ -90,7 +90,7 @@ Hyper-v 또는 스케일 아웃 파일 서버 클러스터를 Windows Server 201
 -   이 시점에서 클러스터 노드가 Windows Server 2012 R2 또는 Windows Server 2016를 실행 하 고 있기 때문에 클러스터는 혼합 모드로 실행 되 고 있다고 합니다. 
 -   클러스터 기능 수준은 Windows Server 2012 r 2에서 유지 됩니다. 이 기능 수준에서는 이전 버전의 운영 체제와의 호환성에 영향을 주는 Windows Server 2016의 새로운 기능을 사용할 수 없습니다. 
 -   결국 모든 노드가 Windows Server 2016로 업그레이드 됩니다. 
--   그러면 Windows PowerShell cmdlet `Update-ClusterFunctionalLevel`을 사용 하 여 클러스터 기능 수준이 Windows Server 2016로 변경 됩니다. 이제 Windows Server 2016 기능을 활용할 수 있습니다. 
+-   그런 다음 Windows PowerShell cmdlet `Update-ClusterFunctionalLevel`를 사용 하 여 클러스터 기능 수준이 Windows Server 2016로 변경 됩니다. 이제 Windows Server 2016 기능을 활용할 수 있습니다. 
 
 자세한 내용은 [클러스터 운영 체제 롤링 업그레이드](cluster-operating-system-rolling-upgrade.md)를 참조 하세요. 
 
@@ -123,11 +123,11 @@ Hyper-v 또는 스케일 아웃 파일 서버 클러스터를 Windows Server 201
 
 -   지원 가능성, 성능 메트릭 및 진단 기능을 제공합니다. 
 
-자세한 내용은 [Windows Server 2016의 저장소 복제본](../storage/storage-replica/storage-replica-overview.md)을 참조하세요. 
+자세한 내용은 [Windows Server 2016의 스토리지 복제본](../storage/storage-replica/storage-replica-overview.md)을 참조하세요. 
 
 
 ### <a name="BKMK_CloudWitness"></a>클라우드 감시  
-클라우드 감시는 중재 지점으로 Microsoft Azure를 활용하는 Windows Server 2016에서 새로운 유형의 장애 조치 클러스터 쿼럼 감시 기능입니다. 다른 쿼럼 감시와 마찬가지로 클라우드 감시는 응답을 가져오고 쿼럼 계산에 참여할 수 있습니다. 클러스터 쿼럼 구성 마법사를 사용하여 쿼럼 감시로 클라우드 감시를 구성할 수 있습니다. 
+클라우드 감시는 중재 지점으로 Microsoft Azure를 활용하는 Windows Server 2016에서 새로운 유형의 장애 조치 클러스터 쿼럼 감시 기능입니다. 다른 쿼럼 감시와 마찬가지로 클라우드 감시는 응답을 가져오고 쿼럼 계산에 참여할 수 있습니다. 클러스터 쿼럼 구성 마법사를 사용하여 쿼럼 감시로 클라우드 감시를 구성할 수 있습니다. 
 
 **이와 같은 변경을 통해 더해지는 가치**  
 
@@ -158,7 +158,7 @@ Hyper-v 또는 스케일 아웃 파일 서버 클러스터를 Windows Server 201
 
 -   **비정상 노드의 격리:** 비정상 노드는 격리 되 고 더 이상 클러스터에 조인할 수 없습니다. 이렇게 하면 플 래핑 노드가 다른 노드와 전체 클러스터를 부정적으로 주는 수 없습니다. 
 
-가상 컴퓨터 계산 복원 력 워크플로 및 노드가 격리 또는 격리에 배치 되는 방식을 제어 하는 노드 격리 설정에 대 한 자세한 내용은 [Windows Server 2016의 가상 컴퓨터 계산 복원](http://blogs.msdn.com/b/clustering/archive/2015/06/03/10619308.aspx)기능을 참조 하세요. 
+가상 컴퓨터 계산 복원 력 워크플로 및 노드가 격리 또는 격리에 배치 되는 방식을 제어 하는 노드 격리 설정에 대 한 자세한 내용은 [Windows Server 2016의 가상 컴퓨터 계산 복원](https://blogs.msdn.com/b/clustering/archive/2015/06/03/10619308.aspx)기능을 참조 하세요. 
 
 **저장소 복원 력** Windows Server 2016에서는 임시 저장소 오류에 대 한 가상 컴퓨터의 복원 력이 향상 되었습니다. 향상 된 가상 컴퓨터 복원 력을 통해 저장소 중단이 발생 하는 경우 테 넌 트 가상 컴퓨터 세션 상태를 유지 하는 데 도움이 됩니다. 이는 저장소 인프라 문제에 대 한 지능형 및 빠른 가상 머신 응답을 통해 달성 됩니다. 
 
@@ -169,12 +169,12 @@ Windows Server 2016에서는 게스트 클러스터에 대 한 가상 머신 저
 ### <a name="BKMK_Diagnostics"></a>장애 조치 (Failover) 클러스터링의 진단 개선 사항  
 장애 조치 (failover) 클러스터 문제를 진단 하는 데 도움이 되도록 Windows Server 2016에는 다음이 포함 됩니다.  
 
--   에서 수행 하는 클러스터 로그 파일 (예: 표준 시간대 정보 및 DiagnosticVerbose 로그)에 대 한 몇 가지 향상 된 기능은 장애 조치 (failover) 클러스터링 문제 해결을 용이 하 게 자세한 내용은 [Windows Server 2016 장애 조치 (Failover) 클러스터 문제 해결 향상-클러스터 로그](http://blogs.msdn.com/b/clustering/archive/2015/05/15/10614930.aspx)를 참조 하세요. 
+-   에서 수행 하는 클러스터 로그 파일 (예: 표준 시간대 정보 및 DiagnosticVerbose 로그)에 대 한 몇 가지 향상 된 기능은 장애 조치 (failover) 클러스터링 문제 해결을 용이 하 게 자세한 내용은 [Windows Server 2016 장애 조치 (Failover) 클러스터 문제 해결 향상-클러스터 로그](https://blogs.msdn.com/b/clustering/archive/2015/05/15/10614930.aspx)를 참조 하세요. 
 
--   가상 컴퓨터에 할당 된 대부분의 메모리 페이지를 필터링 하 여 memory.dmp를 훨씬 더 작고 저장 하거나 복사할 수 있도록 하는 **활성 메모리 덤프**의 새 덤프 유형입니다. 자세한 내용은 [Windows Server 2016 장애 조치 (Failover) 클러스터 문제 해결 향상-활성 덤프](http://blogs.msdn.com/b/clustering/archive/2015/05/18/10615526.aspx)를 참조 하세요. 
+-   가상 컴퓨터에 할당 된 대부분의 메모리 페이지를 필터링 하 여 memory.dmp를 훨씬 더 작고 저장 하거나 복사할 수 있도록 하는 **활성 메모리 덤프**의 새 덤프 유형입니다. 자세한 내용은 [Windows Server 2016 장애 조치 (Failover) 클러스터 문제 해결 향상-활성 덤프](https://blogs.msdn.com/b/clustering/archive/2015/05/18/10615526.aspx)를 참조 하세요. 
 
 ### <a name="BKMK_SiteAware"></a>사이트 인식 장애 조치 (Failover) 클러스터  
-Windows Server 2016에는 물리적 위치 (사이트)에 따라 스트레치 된 클러스터의 그룹 노드를 사용 하도록 설정 하는 사이트 인식 장애 조치 (failover) 클러스터가 포함 되어 있습니다. 클러스터 사이트 인식은 장애 조치 (failover) 동작, 배치 정책, 노드 간 하트 비트 및 쿼럼 동작과 같은 클러스터 수명 주기 중에 주요 작업을 향상 시킵니다. 자세한 내용은 [Windows Server 2016의 사이트 인식 장애 조치 (Failover) 클러스터](http://blogs.msdn.com/b/clustering/archive/2015/08/19/10636304.aspx)를 참조 하세요. 
+Windows Server 2016에는 물리적 위치 (사이트)에 따라 스트레치 된 클러스터의 그룹 노드를 사용 하도록 설정 하는 사이트 인식 장애 조치 (failover) 클러스터가 포함 되어 있습니다. 클러스터 사이트 인식은 장애 조치 (failover) 동작, 배치 정책, 노드 간 하트 비트 및 쿼럼 동작과 같은 클러스터 수명 주기 중에 주요 작업을 향상 시킵니다. 자세한 내용은 [Windows Server 2016의 사이트 인식 장애 조치 (Failover) 클러스터](https://blogs.msdn.com/b/clustering/archive/2015/08/19/10636304.aspx)를 참조 하세요. 
 
 ### <a name="BKMK_multidomainclusters"></a>작업 그룹 및 다중 도메인 클러스터  
 Windows Server 2012 R2 및 이전 버전에서는 동일한 도메인에 가입 된 구성원 노드 간에만 클러스터를 만들 수 있습니다. Windows Server 2016에는 이러한 장벽을 허물고 Active Directory 종속성 없이 장애 조치(failover) 클러스터를 만들 수 있는 기능이 도입되었습니다. 이제 다음 구성으로 장애 조치 (failover) 클러스터를 만들 수 있습니다.  
@@ -185,7 +185,7 @@ Windows Server 2012 R2 및 이전 버전에서는 동일한 도메인에 가입 
 
 -   **작업 그룹 클러스터.** 구성원 서버/작업 그룹 (도메인에 가입 되지 않음) 인 노드가 있는 클러스터 
 
-자세한 내용은 [Windows Server 2016의 작업 그룹 및 다중 도메인 클러스터](http://blogs.msdn.com/b/clustering/archive/2015/08/17/10635825.aspx) 를 참조 하세요.  
+자세한 내용은 [Windows Server 2016의 작업 그룹 및 다중 도메인 클러스터](https://blogs.msdn.com/b/clustering/archive/2015/08/17/10635825.aspx) 를 참조 하세요.  
 ### <a name="BKMK_VMLoadBalancing"></a>가상 컴퓨터 부하 분산  
 가상 컴퓨터 부하 분산은 장애 조치 (Failover) 클러스터링의 새로운 기능으로, 클러스터의 노드 전체에서 가상 컴퓨터의 원활한 부하 분산을 용이 하 게 합니다. 오버 커밋된 노드는 노드의 가상 컴퓨터 메모리와 CPU 사용률을 기반으로 식별 됩니다. 그런 다음 가상 컴퓨터는 오버 커밋된 노드에서 사용 가능한 대역폭이 있는 노드 (해당 하는 경우)로 이동 (실시간 마이그레이션) 됩니다. 최적의 클러스터 성능과 사용률을 보장 하기 위해 분산의 강도를 튜닝할 수 있습니다. 부하 분산은 Windows Server 2016 Technical Preview에서 기본적으로 사용 하도록 설정 되어 있습니다. 그러나 SCVMM 동적 최적화를 사용 하도록 설정한 경우에는 부하 분산이 사용 되지 않습니다. 
 
@@ -197,6 +197,6 @@ Windows Server 2012 R2 및 이전 버전에서는 동일한 도메인에 가입 
 
 자세한 내용은 [간소화 된 SMB 다중 채널 및 다중 NIC 클러스터 네트워크](smb-multichannel.md)를 참조 하세요.
 
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 * [저장소](../storage/storage.md)  
 * [Windows Server 2016에서 제공 되는 저장소의 새로운 기능](../storage/whats-new-in-storage.md)  

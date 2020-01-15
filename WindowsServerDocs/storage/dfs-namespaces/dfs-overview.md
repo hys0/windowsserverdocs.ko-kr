@@ -8,12 +8,12 @@ ms.topic: article
 author: jasongerend
 ms.date: 06/07/2019
 description: 이 항목에서는 다른 서버에 있는 여러 공유 폴더를 하나 이상의 논리적으로 구성된 네임스페이스로 그룹화할 수 있도록 하는 Windows Server의 역할 서비스인 DFS 네임스페이스에 대해 설명합니다.
-ms.openlocfilehash: 33fe25d2298d210ee37f9193a50fa77ed39bd2b4
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f4ff1bc394ddb57a290e5ffab1a89f596fc48d05
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402226"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949721"
 ---
 # <a name="dfs-namespaces-overview"></a>DFS 네임스페이스 개요
 
@@ -26,9 +26,9 @@ DFS 네임스페이스는 다른 서버에 있는 공유 폴더를 하나 이상
 DFS 네임스페이스를 구성하는 요소에 대한 설명:
 
 - **네임스페이스 서버** - 네임스페이스를 호스팅하는 네임스페이스 서버입니다. 네임스페이스 서버는 구성원 서버 또는 도메인 컨트롤러일 수 있습니다.
-- **네임스페이스 루트** - 네임스페이스 루트는 네임스페이스의 시작점입니다. 위의 그림에서 루트의 이름은 public이 고 네임 스페이스 경로 \\ \\는 Contoso\\public입니다. 이 형식의 네임 스페이스는 도메인 이름 (예: Contoso)으로 시작 하 고 해당 메타 데이터가 Active Directory Domain Services (AD DS)에 저장 되기 때문에 도메인 기반 네임 스페이스입니다. 이전 그림에는 하나의 네임스페이스 서버만 표시되었지만, 도메인 기반 네임스페이스는 네임스페이스의 가용성을 늘리기 위해 여러 네임스페이스 서버에서 호스팅할 수 있습니다.
+- **네임스페이스 루트** - 네임스페이스 루트는 네임스페이스의 시작점입니다. 위의 그림에서 루트의 이름은 공용이 고 네임 스페이스 경로는 Contoso\\Public \\\\됩니다. 이 형식의 네임 스페이스는 도메인 이름 (예: Contoso)으로 시작 하 고 해당 메타 데이터가 Active Directory Domain Services (AD DS)에 저장 되기 때문에 도메인 기반 네임 스페이스입니다. 이전 그림에는 하나의 네임스페이스 서버만 표시되었지만, 도메인 기반 네임스페이스는 네임스페이스의 가용성을 늘리기 위해 여러 네임스페이스 서버에서 호스팅할 수 있습니다.
 - **폴더** - 폴더 대상이 없는 폴더는 네임스페이스에 구조와 계층을 추가하고, 폴더 대상이 있는 폴더는 사용자에게 실제 콘텐츠를 제공합니다. 사용자가 네임스페이스에서 폴더 대상이 있는 폴더를 찾을 경우, 클라이언트 컴퓨터는 폴더 대상 중 하나로 투명하게 리디렉션되는 추천을 받습니다.
-- **폴더 대상** - 폴더 대상은 공유 폴더의 UNC 경로이거나 네임스페이스의 폴더와 연결된 다른 네임스페이스입니다. 폴더 대상은 데이터와 콘텐츠가 저장되는 곳입니다. 이전 그림에서, Tools라는 폴더에는 런던과 뉴욕에 각각 하나씩, 두 개의 폴더 대상이 있으며 Training Guides라는 폴더에는 뉴욕에 하나의 폴더 대상이 있습니다. \\ \\ \\Contoso \\공용 소프트웨어 도구를 탐색 하는 사용자는 공유 폴더인LDN\\도구에 투명 하 게 리디렉션됩니다.\\\\\\ NYC-01\\도구는 사용자가 현재 있는 사이트에 따라 달라 집니다. \\ \\
+- **폴더 대상** - 폴더 대상은 공유 폴더의 UNC 경로이거나 네임스페이스의 폴더와 연결된 다른 네임스페이스입니다. 폴더 대상은 데이터와 콘텐츠가 저장되는 곳입니다. 이전 그림에서, Tools라는 폴더에는 런던과 뉴욕에 각각 하나씩, 두 개의 폴더 대상이 있으며 Training Guides라는 폴더에는 뉴욕에 하나의 폴더 대상이 있습니다. 사용자가 현재 있는 사이트에 따라 \\\\Contoso\\공용\\소프트웨어\\도구를 검색 하는 사용자는 공유 폴더 \\\\LDN\\도구 또는 \\\\NYC\\도구에 투명 하 게 리디렉션됩니다.
 
 이 항목에서는 DFS 설치 방법, 새로운 기능 및 평가 및 배포 정보를 찾을 수 있는 위치에 대해 설명 합니다.
 
@@ -42,9 +42,9 @@ DFS 관리 실행 또는 DFS 네임스페이스 사용을 위한 추가 하드�
 
 다음 운영 체제를 실행하는 서버는 여러 도메인 기반 네임스페이스와 하나의 독립 실행형 네임스페이스를 호스팅할 수 있습니다. 
 
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2
+- 시작
+- Windows Server 2016
+- Windows Server 2012 R2
 - Windows Server 2012
 - Windows Server 2008 R2 Datacenter 및 Enterprise Edition
 - Windows Server(반기 채널)
@@ -63,7 +63,7 @@ DFS 관리 실행 또는 DFS 네임스페이스 사용을 위한 추가 하드�
 
 ## <a name="installing-dfs-namespaces"></a>DFS 네임스페이스 설치
 
-DFS 네임스페이스 및 DFS 복제는 파일 및 저장소 서비스 역할의 일부입니다. DFS 관리 도구(DFS 관리, Windows PowerShell용 DFS 네임스페이스 모듈 및 명령줄 도구)는 원격 서버 관리 도구의 일부로 별도로 설치됩니다.
+DFS 네임스페이스 및 DFS 복제는 파일 및 스토리지 서비스 역할의 일부입니다. DFS 관리 도구(DFS 관리, Windows PowerShell용 DFS 네임스페이스 모듈 및 명령줄 도구)는 원격 서버 관리 도구의 일부로 별도로 설치됩니다.
 
 다음 섹션에 설명 된 대로 [Windows 관리 센터](../../manage/windows-admin-center/understand/windows-admin-center.md), 서버 관리자 또는 PowerShell을 사용 하 여 DFS 네임 스페이스를 설치 합니다.
 
@@ -71,7 +71,7 @@ DFS 네임스페이스 및 DFS 복제는 파일 및 저장소 서비스 역할�
 
 1. 서버 관리자를 열고 **관리**, **역할 및 기능 추가**를 차례로 클릭합니다. 역할 및 기능 추가 마법사가 나타납니다.
 
-2. **서버 선택** 페이지에서 DFS를 설치할 오프라인 가상 컴퓨터의 서버 또는 VHD(가상 하드 디스크)를 선택합니다.
+2. **서버 선택** 페이지에서 DFS를 설치할 오프라인 가상 머신의 서버 또는 VHD(가상 하드 디스크)를 허용하려면.
 
 3. 설치할 역할 서비스 및 기능을 선택합니다.
 
@@ -79,17 +79,17 @@ DFS 네임스페이스 및 DFS 복제는 파일 및 저장소 서비스 역할�
 
     - DFS 관리 도구만 설치하려면 **기능** 페이지에서 **원격 서버 관리 도구**, **원격 관리 도구**, **파일 서비스 도구**를 차례로 확장하고 **DFS 관리 도구**를 선택합니다.
 
-         **DFS 관리 도구** 는 DFS 관리 스냅인, Windows PowerShell용 DFS 네임스페이스 모듈 및 명령줄 도구를 설치하지만 DFS 서비스를 서버에 설치하지는 않습니다.
+         **DFS 관리 도구**는 DFS 관리 스냅인, Windows PowerShell용 DFS 네임스페이스 모듈 및 명령줄 도구를 설치하지만 DFS 서비스를 서버에 설치하지는 않습니다.
 
 ### <a name="to-install-dfs-by-using-windows-powershell"></a>Windows PowerShell을 사용하여 DFS를 설치하려면
 
-관리자 권한으로 Windows PowerShell 세션을 열고 다음 명령을 입력 합니다. 여기서 < name\> 은 설치 하려는 역할 서비스 또는 기능입니다. 관련 역할 서비스 또는 기능 이름 목록은 다음 표를 참조 하세요.
+관리자 권한으로 Windows PowerShell 세션을 열고 다음 명령을 입력 합니다. 여기서 < name\>은 설치 하려는 역할 서비스 또는 기능입니다. 관련 역할 서비스 또는 기능 이름 목록은 다음 표를 참조 하세요.
 
 ```PowerShell
 Install-WindowsFeature <name>
 ```
 
-| 역할 서비스 또는 기능 | 이름 |
+| 역할 서비스 또는 기능 | Name(이름) |
 | ----------------------- | ---- |
 | DFS 네임스페이스          | `FS-DFS-Namespace` |
 | DFS 관리 도구    | `RSAT-DFS-Mgmt-Con` |
@@ -116,16 +116,16 @@ Microsoft Azure의 가상 컴퓨터에서 DFS 네임스페이스 사용이 테�
 
 Azure 가상 컴퓨터를 시작하는 방법에 대해 자세히 알아보려면 [Azure 가상 컴퓨터 문서](https://docs.microsoft.com/azure/virtual-machines/)를 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-자세한 내용은 다음 리소스를 참조하십시오.
+자세한 내용은 다음 리소스를 참조하세요.
 
 | 콘텐츠 형식        | 참조 |
 | ------------------  | ----------------|
 | **제품 평가** | [Windows Server에서 제공 하는 DFS 네임 스페이스 및 DFS 복제의 새로운 기능](https://technet.microsoft.com/library/dn281957(v=ws.11).aspx) |
-| **배포**    | [DFS 네임 스페이스 확장성 고려 사항](http://blogs.technet.com/b/filecab/archive/2012/08/26/dfs-namespace-scalability-considerations.aspx) |
-| **작업**    | [DFS 네임 스페이스: 질문과 대답](https://technet.microsoft.com/library/ee404780.aspx) |
+| **배포**    | [DFS 네임 스페이스 확장성 고려 사항](https://blogs.technet.com/b/filecab/archive/2012/08/26/dfs-namespace-scalability-considerations.aspx) |
+| **작업**    | [DFS 네임스페이스: 질문과 대답](https://technet.microsoft.com/library/ee404780.aspx) |
 | **커뮤니티 리소스** | [파일 서비스 및 저장소 TechNet 포럼](https://social.technet.microsoft.com/forums/winserverfiles/threads/) |
-| **프로토콜**        | [Windows Server의 파일 서비스 프로토콜](https://msdn.microsoft.com/library/cc239318.aspx) Mapi |
+| **프로토콜**        | [Windows Server의 파일 서비스 프로토콜](https://msdn.microsoft.com/library/cc239318.aspx) (사용 되지 않음) |
 | **관련 기술** | [장애 조치(failover) 클러스터링](../../failover-clustering/failover-clustering-overview.md)|
 | **지원** | [Windows IT 전문가 지원](https://www.microsoft.com/itpro/windows/support)|

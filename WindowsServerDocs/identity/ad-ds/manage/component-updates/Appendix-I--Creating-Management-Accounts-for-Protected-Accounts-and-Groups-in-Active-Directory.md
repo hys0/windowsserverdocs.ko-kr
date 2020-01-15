@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 8880f26acd8b32a4ab8a32ede067d158f2d6aed1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 834aa2611ff2b965c9184524fa6782fb4477a4cd
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71369207"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949131"
 ---
 # <a name="appendix-i-creating-management-accounts-for-protected-accounts-and-groups-in-active-directory"></a>부록 I: Active Directory의 보호된 계정 및 그룹에 대한 관리 계정 만들기
 
@@ -56,7 +56,7 @@ ms.locfileid: "71369207"
   
     ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_115.png)  
   
-2.  에 **새 개체-그룹** 대화 상자에서 그룹의 이름을 입력 합니다. 이 그룹 "모든 관리 계정 포리스트에서 활성화"을 사용 하려는 경우 유니버설 보안 그룹을 확인 합니다. 단일 도메인 포리스트가 있는 경우 각 도메인에서 그룹을 만들려는 경우에 글로벌 보안 그룹을 만들 수 있습니다. **확인**을 클릭하여 그룹을 만듭니다.  
+2.  에 **새 개체-그룹** 대화 상자에서 그룹의 이름을 입력 합니다. 이 그룹 "모든 관리 계정 포리스트에서 활성화"을 사용 하려는 경우 유니버설 보안 그룹을 확인 합니다. 단일 도메인 포리스트가 있는 경우 각 도메인에서 그룹을 만들려는 경우에 글로벌 보안 그룹을 만들 수 있습니다. **확인** 을 클릭하여 그룹을 만듭니다.  
   
     ![관리 계정 만들기](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_116.png)  
   
@@ -144,7 +144,7 @@ Active Directory 설치의 권한 있는 그룹의 멤버 자격을 관리 하�
    >
    > 호스트에 대 한 보다 안전한 암호화 종류를 구현 하는 경우에 자격 증명 도난 공격 완화 되지 않습니다, 하지만 적절 한 사용 및 보안 호스트의 구성에서는 않습니다. 컴퓨터의 전반적인 공격 노출을 줄입니다만 권한 있는 계정에서 사용 되는 호스트에 대 한 더 강력한 암호화 유형을 설정 합니다.  
    >
-   > 시스템 및 계정에서 암호화 종류를 구성 하는 방법에 대 한 자세한 내용은 참조 [Kerberos 지원 암호화 유형에 대 한 Windows 구성](http://blogs.msdn.com/b/openspecification/archive/2011/05/31/windows-configurations-for-kerberos-supported-encryption-type.aspx)합니다.  
+   > 시스템 및 계정에서 암호화 종류를 구성 하는 방법에 대 한 자세한 내용은 참조 [Kerberos 지원 암호화 유형에 대 한 Windows 구성](https://blogs.msdn.com/b/openspecification/archive/2011/05/31/windows-configurations-for-kerberos-supported-encryption-type.aspx)합니다.  
    >
    > 이러한 설정은 Windows Server 2012, Windows Server 2008 R2, Windows 8 또는 Windows 7을 실행 하는 컴퓨터 에서만 지원 됩니다.  
   
@@ -239,7 +239,7 @@ Active Directory 설치의 권한 있는 그룹의 멤버 자격을 관리 하�
 
 최소한 계정에 대 한 모든 쓰기를 기록 하려면 계정에 대 한 감사를 구성 해야 합니다. 이 성공적으로 계정을 사용 하도록 설정 하 고 권한이 부여 된 사용 중 하지만 식별 하는 데도 권한이 없는 사용자가 조작 하려고 계정 암호 재설정 식별 뿐만 아니라 수 있습니다. 실패 한 쓰기는 계정에 보안 정보 및 이벤트 모니터링 SIEM () 시스템에 해당 하는 경우, 캡처하고 잠재적인 단점을 조사 하는 일을 담당 직원에 게 알림을 제공 하는 경고를 트리거해야 합니다.  
   
-메뉴 및 도구 모음을 SIEM 솔루션 관련 된 보안 원본 (예를 들어: 이벤트 로그, 응용 프로그램 데이터, 네트워크 스트림, 맬웨어 방지 제품 및 침입 검색 원본)에서 이벤트 정보를 가져올 데이터를 정렬할 지능형 보기와 자동 관리 작업을 확인 하려고 합니다. 많은 상용 SIEM 솔루션이 있으며 많은 기업이 프라이빗 구현을 만듭니다. 보안 모니터링 및 문제 대응 기능 하도록 설계 되 고 적절 하 게 구현 된 SIEM 대폭 향상 시킬 수 있습니다. 그러나 기능과 정확도 다릅니다 단시간 솔루션입니다. 이 문서의 범위를 벗어나는으로 SIEMs 하지만 모든 SIEM 구현자에 의해 포함 된 특정 이벤트 권장 사항을 고려해 야 합니다.  
+메뉴 및 도구 모음을 SIEM 솔루션 관련 된 보안 원본 (예를 들어: 이벤트 로그, 애플리케이션 데이터, 네트워크 스트림, 맬웨어 방지 제품 및 침입 검색 원본)에서 이벤트 정보를 가져올 데이터를 정렬할 지능형 보기와 자동 관리 작업을 확인 하려고 합니다. 많은 상용 SIEM 솔루션 이며 대부분의 기업에서는 개인 구현을 만듭니다. 보안 모니터링 및 문제 대응 기능 하도록 설계 되 고 적절 하 게 구현 된 SIEM 대폭 향상 시킬 수 있습니다. 그러나 기능과 정확도 다릅니다 단시간 솔루션입니다. 이 문서의 범위를 벗어나는으로 SIEMs 하지만 모든 SIEM 구현자에 의해 포함 된 특정 이벤트 권장 사항을 고려해 야 합니다.  
   
 도메인 컨트롤러에 대 한 권장된 감사 구성 설정에 대 한 자세한 내용은 참조 [손상의 기호에 대 한 Active Directory 모니터링](../../../ad-ds/plan/security-best-practices/Monitoring-Active-Directory-for-Signs-of-Compromise.md)합니다. 도메인 컨트롤러 관련 구성 설정에 제공 된 [손상의 기호에 대 한 Active Directory 모니터링](../../../ad-ds/plan/security-best-practices/Monitoring-Active-Directory-for-Signs-of-Compromise.md)합니다.  
   
