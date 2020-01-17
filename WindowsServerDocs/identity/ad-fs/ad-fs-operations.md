@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 99167850ff9ee193aca888d34d98503ea0554c30
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 2db9cd83ed08673835a38e443e90c5eb092f43ac
+ms.sourcegitcommit: b649047f161cb605df084f18b573f796a584753b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408558"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76162484"
 ---
 # <a name="ad-fs-operations"></a>AD FS 작업
 
@@ -29,7 +29,8 @@ ms.locfileid: "71408558"
 - [특성 저장소 추가](../ad-fs/operations/Add-an-Attribute-Store.md)
 - [AD FS 2019를 사용 하 여 HTTP 보안 응답 헤더 사용자 지정](../ad-fs/operations/customize-http-security-headers-ad-fs.md)
 - [관리자가 아닌 사용자에게 AD FS Powershell Commandlet 액세스 위임](../ad-fs/operations/delegate-ad-fs-pshell-access.md)
-- [SQL 및 주소 대기 시간 미세 조정](../ad-fs/operations/adfs-sql-latency.md) 
+- [SQL 및 주소 대기 시간 미세 조정](../ad-fs/operations/adfs-sql-latency.md)
+- [AlwaysOn 가용성 그룹](../ad-fs/operations/ad-fs-always-on.md) 
 
 
 ## <a name="authentication-configuration"></a>인증 구성
@@ -83,9 +84,9 @@ ms.locfileid: "71408558"
 - [조건부 액세스 제어를 사용하여 위험 관리](../ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md)
 - [AD FS 실습 환경 설정](../ad-fs/operations/Set-up-an-AD-FS-lab-environment.md)
 - [연습 가이드: 중요 한 응용 프로그램에 대 한 추가 Multi-Factor Authentication로 위험 관리](../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
-- [연습 가이드: 조건부 액세스 제어를 사용하여 위험 관리](../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
-- [연습: Windows 디바이스를 사용하여 작업 공간 연결](../ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
-- [연습: iOS 디바이스를 사용하여 작업 공간 연결](../ad-fs/operations/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
+- [연습 가이드: 조건부 Access Control를 사용 하 여 위험 관리](../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
+- [연습: Windows 장치를 사용 하 여 Workplace Join](../ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
+- [연습: iOS 장치를 사용 하 여 Workplace Join](../ad-fs/operations/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
 
   
 
