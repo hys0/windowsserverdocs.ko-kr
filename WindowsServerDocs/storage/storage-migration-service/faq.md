@@ -8,12 +8,12 @@ ms.date: 08/19/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: b7a6dd37cfc054ead153d274ffa7f0d13844305e
-ms.sourcegitcommit: 10331ff4f74bac50e208ba8ec8a63d10cfa768cc
+ms.openlocfilehash: 02829919c53e3488ad7f229ad8bee0d3ead14c9a
+ms.sourcegitcommit: 3f54036c74c5a67799fbc06a8a18a078ccb327f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75953027"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76124901"
 ---
 # <a name="storage-migration-service-frequently-asked-questions-faq"></a>Storage Migration Service 질문과 대답 (FAQ)
 
@@ -138,6 +138,10 @@ Storage Migration Service는 기본적으로 hidden c:\programdata\microsoft\sto
 6. 시스템에 해당 폴더의 모든 파일 및 하위 폴더에 대 한 모든 권한이 있는지 확인 합니다.
 7. 자신의 계정 사용 권한을 제거 합니다.
 8. "Storage Migration Service" 서비스를 시작 합니다.
+
+## <a name="does-the-storage-migration-service-migrate-locally-installed-applications-from-the-source-computer"></a>저장소 마이그레이션 서비스가 원본 컴퓨터에서 로컬로 설치 된 응용 프로그램을 마이그레이션 하나요?
+
+아니요, 저장소 마이그레이션 서비스는 로컬로 설치 된 응용 프로그램을 마이그레이션하지 않습니다. 마이그레이션을 완료 한 후에는 원본 컴퓨터에서 실행 중인 대상 컴퓨터에 응용 프로그램을 다시 설치 합니다. 사용자 또는 해당 응용 프로그램을 다시 구성할 필요가 없습니다. 저장소 마이그레이션 서비스는 서버를 클라이언트에 표시 하지 않도록 설계 되었습니다. 
 
 ## <a name="give-feedback"></a>사용자 의견을 제공 하거나, 버그를 제공 하거나, 지원을 받을 수 있는 옵션은 무엇 인가요?
 

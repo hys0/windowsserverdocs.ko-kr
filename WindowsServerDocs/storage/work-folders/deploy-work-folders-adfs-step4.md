@@ -6,14 +6,14 @@ ms.topic: article
 manager: klaasl
 ms.author: jeffpatt
 author: JeffPatt24
-ms.date: 6/24/2017
+ms.date: 06/24/2017
 ms.assetid: 4a11ede0-b000-4188-8190-790971504e17
-ms.openlocfilehash: 17adf89d3a26767bbc736a31da7b7b2b204570a2
-ms.sourcegitcommit: e817a130c2ed9caaddd1def1b2edac0c798a6aa2
+ms.openlocfilehash: f0222226191719fd11e68def8970c0e83529f801
+ms.sourcegitcommit: 8771a9f5b37b685e49e2dd03c107a975bf174683
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74945228"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76145909"
 ---
 # <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-4-set-up-web-application-proxy"></a>AD FS 및 웹 응용 프로그램 프록시를 사용하여 클라우드 폴더 배포: 4단계, 웹 응용 프로그램 프록시 설치
 
@@ -101,7 +101,7 @@ ms.locfileid: "74945228"
   
 4.  페더레이션 서버의 로컬 관리자 계정 자격 증명을 입력합니다. 도메인 자격 증명(예: contoso\administrator)이 아니라 로컬 자격 증명(예: 관리자)을 입력해야 합니다.  
   
-5.  **AD FS 프록시 인증서** 페이지에서 이전에 가져온 AD FS 인증서를 선택합니다. 테스트 예제에서는 **blueadfs.contoso.com**입니다. **다음**을 클릭합니다.  
+5.  **AD FS 프록시 인증서** 페이지에서 이전에 가져온 AD FS 인증서를 선택합니다. 테스트 예제에서는 **blueadfs.contoso.com**입니다. 클릭 하 여 **다음**.  
   
 6.  확인 페이지에 서비스 구성을 실행하는 Windows PowerShell 명령이 표시됩니다. **구성**을 클릭합니다.  
   

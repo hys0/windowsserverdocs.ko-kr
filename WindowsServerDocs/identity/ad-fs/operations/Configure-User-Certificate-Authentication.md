@@ -9,12 +9,12 @@ ms.date: 01/18/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: b5f2202313c225d57b29997753b090e10b9c2e6c
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: c36555a8bca7882125451b2c86a0707e3de9b2db
+ms.sourcegitcommit: 8771a9f5b37b685e49e2dd03c107a975bf174683
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75949289"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76145929"
 ---
 # <a name="configuring-ad-fs-for-user-certificate-authentication"></a>사용자 인증서 인증을 위한 AD FS 구성
 
@@ -54,7 +54,7 @@ Chrome에 대해이를 구성 하는 방법에 대 한 자세한 내용은이 [�
 이 문서에서는 AD FS 사용자에 대 한 인증서 인증을 구성할 때 발생 하는 일반적인 문제를 해결 하는 데 중점을 설명 합니다. 
 
 ### <a name="check-if-certificate-trusted-issuers-is-configured-properly-in-all-the-ad-fswap-servers"></a>모든 AD FS/WAP 서버에서 인증서 신뢰 발급자가 올바르게 구성 되어 있는지 확인 합니다.
-*일반적인 증상: HTTP 204 "https의 콘텐츠 없음\://certuath.adfs.contoso.com"*
+*일반적인 증상: HTTP 204 "https의 콘텐츠 없음\://certauth.adfs.contoso.com"*
 
 AD FS는 기본 windows 운영 체제를 사용 하 여 사용자 인증서의 소유를 증명 하 고 인증서 신뢰 체인 유효성 검사를 수행 하 여 신뢰할 수 있는 발급자와 일치 하는지 확인 합니다. 신뢰할 수 있는 발급자와 일치 시키려면 모든 루트 및 중간 기관이 로컬 컴퓨터 인증 기관 저장소에서 신뢰할 수 있는 발급자로 구성 되었는지 확인 해야 합니다. 자동으로 유효성을 검사 하려면 [AD FS 진단 분석기 도구](https://adfshelp.microsoft.com/DiagnosticsAnalyzer/Analyze)를 사용 하세요. 이 도구는 모든 서버를 쿼리하고 올바른 인증서가 올바르게 프로 비전 되는지 확인 합니다. 
 1)  위의 링크에 제공 된 지침에 따라 도구를 다운로드 하 여 실행 합니다.

@@ -8,12 +8,12 @@ ms.date: 10/09/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: dccbfd7d3ff6d95615e9efecf840a840b42d0d27
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 0f549310d568142f819e22422d41a72d38b306e2
+ms.sourcegitcommit: 8771a9f5b37b685e49e2dd03c107a975bf174683
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75949640"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76145939"
 ---
 # <a name="storage-migration-service-known-issues"></a>저장소 마이그레이션 서비스의 알려진 문제
 
@@ -25,7 +25,7 @@ Storage Migration Service는 Windows Server의 서비스와 Windows 관리 센�
 
 ## <a name="collecting-logs"></a>Microsoft 지원 작업할 때 로그 파일을 수집 하는 방법
 
-저장소 마이그레이션 서비스에는 Orchestrator 서비스와 프록시 서비스에 대 한 이벤트 로그가 포함 되어 있습니다. Urchestrator 서버는 항상 두 이벤트 로그를 모두 포함 하 고 프록시 서비스를 설치한 대상 서버는 프록시 로그를 포함 합니다. 이러한 로그는 다음 위치에 있습니다.
+저장소 마이그레이션 서비스에는 Orchestrator 서비스와 프록시 서비스에 대 한 이벤트 로그가 포함 되어 있습니다. Orchestrator 서버는 항상 두 이벤트 로그를 모두 포함 하 고 프록시 서비스를 설치한 대상 서버는 프록시 로그를 포함 합니다. 이러한 로그는 다음 위치에 있습니다.
 
 - 응용 프로그램 및 서비스 로그 \ Microsoft \ Windows \ StorageMigrationService
 - 응용 프로그램 및 서비스 로그 \ Microsoft \ Windows \ StorageMigrationService-프록시
