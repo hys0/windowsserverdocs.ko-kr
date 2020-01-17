@@ -392,6 +392,7 @@
 ##### [Windows Server 2012 R2용 AD FS의 액세스 제어 정책](ad-fs/operations/Access-Control-Policies-W2K12.md)
 ##### [AD FS 2.0의 액세스 제어 정책](ad-fs/operations/Access-Control-Policies-in-AD-FS-2.md)
 #### [AD FS 2019의 추가 인증 방법](ad-fs/operations/Additional-Authentication-Methods-AD-FS.md)
+#### [AlwaysOn 가용성 그룹](ad-fs/operations/ad-fs-always-on.md)
 #### [AD FS 프롬프트 로그인 매개 변수 지원](ad-fs/operations/AD-FS-Prompt-Login.md)
 #### [AD FS 페이지 지정된 로그인](ad-fs/operations/AD-FS-paginated-sign-in.md)
 #### [AD FS 2016 Single Sign On 설정](ad-fs/operations/AD-FS-Single-Sign-On-Settings.md)
