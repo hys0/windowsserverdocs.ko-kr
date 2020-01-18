@@ -8,12 +8,12 @@ ms.date: 09/19/2019
 ms.topic: article
 author: Heidilohr
 ms.localizationpriority: medium
-ms.openlocfilehash: 38f54548e8e68a0ee693c5d8ec80e67057b3d5b7
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 864a15d7336abb56572ddc783ce41a35d6fc13bf
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71387662"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950418"
 ---
 # <a name="set-up-the-remote-desktop-web-client-for-your-users"></a>사용자에 대한 원격 데스크톱 웹 클라이언트 설정
 
@@ -28,7 +28,7 @@ ms.locfileid: "71387662"
 
 * [원격 데스크톱 배포](../rds-deploy-infrastructure.md)에 Windows Server 2016 또는 2019에서 실행되는 RD 게이트웨이, RD 연결 브로커 및 RD 웹 액세스가 있는지 확인합니다.
 * 배포가 디바이스 단위 라이선스 CAL(클라이언트 액세스 라이선스)이 아니라 [사용자 단위 CAL](../rds-client-access-license.md)로 구성되어 있는지 확인합니다. 그렇지 않으면 모든 라이선스가 사용됩니다.
-* RD 게이트웨이에 [Windows 10 KB4025334 업데이트](https://support.microsoft.com/en-us/help/4025334/windows-10-update-kb4025334)를 설치합니다. 이 KB(기술 자료)는 나중에 누적 업데이트에 이미 포함되어 있을 수 있습니다.
+* RD 게이트웨이에 [Windows 10 KB4025334 업데이트](https://support.microsoft.com/help/4025334/windows-10-update-kb4025334)를 설치합니다. 이 KB(기술 자료)는 나중에 누적 업데이트에 이미 포함되어 있을 수 있습니다.
 * 신뢰할 수 있는 공용 인증서가 RD 게이트웨이 및 RD 웹 액세스 역할로 구성되어 있는지 확인합니다.
 * 사용자가 연결할 모든 컴퓨터에서 다음 OS 버전 중 하나를 실행하고 있는지 확인합니다.
   * Windows 10
@@ -300,7 +300,7 @@ RD 웹 액세스 역할에서 신뢰할 수 있는 인증서를 사용하고 있
 사용자가 나열된 리소스를 볼 수 있지만 웹 클라이언트에 연결할 수 없다고 보고하는 경우 다음 사항을 확인합니다.
 
 * RD 게이트웨이 역할이 신뢰할 수 있는 공용 인증서를 사용하도록 제대로 구성되어 있나요?
-* RD 게이트웨이 서버에 필요한 업데이트가 설치되어 있나요? 서버에는 [KB4025334 업데이트](https://support.microsoft.com/en-us/help/4025334/windows-10-update-kb4025334)가 설치되어 있어야 합니다.
+* RD 게이트웨이 서버에 필요한 업데이트가 설치되어 있나요? 서버에는 [KB4025334 업데이트](https://support.microsoft.com/help/4025334/windows-10-update-kb4025334)가 설치되어 있어야 합니다.
 
 사용자가 연결하려고 할 때 "예기치 않은 서버 인증 인증서를 받았습니다" 오류 메시지가 표시되면 이 메시지에서 인증서의 지문을 표시합니다. 올바른 인증서를 찾기 위해 해당 지문을 사용하여 RD 브로커 서버의 인증서 관리자를 검색합니다. 인증서를 원격 데스크톱 배포 속성 페이지의 RD 브로커 역할에 사용하도록 구성되어 있는지 확인합니다. 인증서가 만료되지 않았는지 확인한 후, .cer 파일 형식의 인증서를 RD 웹 액세스 서버에 복사하고, 다음 명령에서 괄호로 묶은 값을 인증서의 파일 경로로 바꾼 후에 해당 명령을 RD 웹 액세스 서버에서 실행합니다.
 

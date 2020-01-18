@@ -12,12 +12,12 @@ ms.assetid: d54a1f5e-af68-497e-99be-97775769a7a7
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dansimp
-ms.openlocfilehash: 121914f721cda7cbf0a117527b69568032d5541b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e8e8206531e0939a1b6d6dfd17f5c5dd59947c81
+ms.sourcegitcommit: 51e0b575ef43cd16b2dab2db31c1d416e66eebe8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71387094"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76259138"
 ---
 # <a name="remote-server-administration-tools"></a>원격 서버 관리 도구
 
@@ -35,7 +35,7 @@ RSAT를 통해 IT 관리자는 windows 10 PC에서 Windows Server 역할 및 기
 원격 서버 관리 도구에는 원격 서버에서 실행 되는 역할 및 기능을 관리 하는 데 사용할 수 있는 Windows PowerShell cmdlet 모듈이 포함 되어 있습니다. Windows PowerShell 원격 관리는 Windows Server 2016에서 기본적으로 활성화 되어, 있지만 Windows 10에서 기본적으로 사용 되지 않습니다. 원격 서버에 대 한 원격 서버 관리 도구의 일부인 cmdlet을 실행 하려면 원격 서버 관리 도구를 설치한 후 Windows 클라이언트 컴퓨터에서 관리자 권한 (관리자 권한으로 실행)으로 연 Windows PowerShell 세션에서 `Enable-PSremoting`를 실행 합니다.
 
 ## <a name="BKMK_Thresh"></a>Windows 10에 대 한 원격 서버 관리 도구
-원격 서버 관리 도구에 대 한 Windows 10을 사용 하 여 제한 된 경우, Windows Server 2012 또는 Windows Server 2008 r 2에서 Windows Server 2016, Windows Server 2012 r 2를 실행 하는 컴퓨터에 특정 기술을 관리할 수 있습니다.
+Windows 10 용 원격 서버 관리 도구를 사용 하 여 Windows Server 2019, Windows Server 2016, Windows Server 2012 r 2 2008 2012를 실행 하는 컴퓨터에서 특정 기술을 관리할 수 있습니다.
 
 원격 서버 관리 도구에 대 한 Windows 10에는 Server Core 설치 옵션 또는 최소 서버 인터페이스 구성 Windows Server 2012 R2, Windows Server 2016 및 제한 된 경우, Windows Server 2012의 Server Core 설치 옵션을 실행 하는 컴퓨터의 원격 관리에 대 한 지원이 포함 됩니다. 그러나 원격 서버 관리 도구에 대 한 Windows 10은 모든 버전의 Windows Server 운영 체제에 설치할 수 없습니다.
 
@@ -43,7 +43,7 @@ RSAT를 통해 IT 관리자는 windows 10 PC에서 Windows Server 역할 및 기
 Windows 10에 대 한 원격 서버 관리 도구에서 사용할 수 있는 도구 목록은 [windows 운영 체제용 RSAT (원격 서버 관리 도구)](https://support.microsoft.com/help/2693643/remote-server-administration-tools-rsat-for-windows-operating-systems)의 표를 참조 하세요.
 
 ### <a name="system-requirements"></a>시스템 요구 사항
-원격 서버 관리 도구에 대 한 Windows 10은 Windows 10을 실행 중인 컴퓨터에만 설치할 수 있습니다. 원격 서버 관리 도구는 Windows RT 8.1 또는 기타 시스템-온칩 장치를 실행 하는 컴퓨터에 설치할 수 없습니다.
+원격 서버 관리 도구에 대 한 Windows 10은 Windows 10을 실행 중인 컴퓨터에만 설치할 수 있습니다. 원격 서버 관리 도구는 Windows RT 8.1 또는 기타 시스템-온칩 디바이스를 실행 하는 컴퓨터에 설치할 수 없습니다.
 
 Windows 10에 대 한 원격 서버 관리 도구은 Windows 10의 x86 기반 버전과 x64 기반 버전에서 모두 실행 됩니다.
 
@@ -62,7 +62,7 @@ Windows 10 10 월 2018 업데이트부터 RSAT는 Windows 10에서 바로 **주�
 
 [ **주문형 기능을**통해 제공 되는 RSAT 도구 목록을](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-non-language-fod#remote-server-administration-tools-rsat)참조 하세요. 그래픽 **설정** 앱을 통해 설치 하는 것 외에도 [**DISM/Add-Capability**](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities#using-dism-add-capability-to-add-or-remove-fods)을 사용 하 여 명령줄 또는 자동화를 통해 특정 RSAT 도구를 설치할 수 있습니다.
 
-주문형 기능의 한 가지 장점으로는 설치 된 기능이 Windows 10 버전 업그레이드에도 유지 됩니다.
+주문형 기능의 장점 중 하나는 설치 된 기능이 Windows 10 버전 업그레이드에 유지 된다는 것입니다.
 
 #### <a name="to-uninstall-specific-rsat-tools-on-windows-10-october-2018-update-or-later-after-installing-with-fod"></a>Windows 10 10 월 2018 업데이트 이상에서 특정 RSAT 도구를 제거 하려면 (with d를 사용 하 여 설치한 후)
 
@@ -85,7 +85,7 @@ Windows 10에서 **설정** 앱을 열고, **선택적 기능 관리**로 이동
 1.  원격 서버 관리 도구에 대 한 Windows 10 패키지를 다운로드는 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkID=404281)합니다. 다운로드 센터 웹 사이트에서 설치 프로그램을 실행하거나 다운로드 패키지를 로컬 컴퓨터 또는 공유에 저장합니다.
 
     > [!IMPORTANT]
-    > Windows 10을 실행 중인 컴퓨터에서 원격 서버 관리 도구에 대 한 Windows 10만 설치할 수 있습니다. 원격 서버 관리 도구는 Windows RT 8.1 또는 기타 시스템-온칩 장치를 실행 하는 컴퓨터에 설치할 수 없습니다.
+    > Windows 10을 실행 중인 컴퓨터에서 원격 서버 관리 도구에 대 한 Windows 10만 설치할 수 있습니다. 원격 서버 관리 도구는 Windows RT 8.1 또는 기타 시스템-온칩 디바이스를 실행 하는 컴퓨터에 설치할 수 없습니다.
 
 2.  다운로드 패키지를 로컬 컴퓨터나 공유에 저장한 경우 도구를 설치하려는 컴퓨터의 아키텍처에 따라 **WindowsTH-KB2693643-x64.msu** 또는 **WindowsTH-KB2693643-x86.msu**설치 프로그램을 두 번 클릭합니다.
 

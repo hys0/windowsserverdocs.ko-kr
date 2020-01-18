@@ -9,16 +9,16 @@ ms.tgt_pltfrm: na
 ms.topic: troubleshooting
 ms.assetid: ''
 author: kaushika-msft
-manager: ''
+manager: dcscontentpm
 ms.author: delhan
 ms.date: 07/24/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 007668d1c0f8f2a6701813385b0e0bb7a09b29a0
-ms.sourcegitcommit: f6503e503d8f08ba8000db9c5eda890551d4db37
+ms.openlocfilehash: 0932bbbb87c6fcae9dc0b871bd605302acdb25cc
+ms.sourcegitcommit: c5709021aa98abd075d7a8f912d4fd2263db8803
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68529953"
+ms.lasthandoff: 01/18/2020
+ms.locfileid: "76265915"
 ---
 # <a name="remote-desktop-client-disconnects-and-cant-reconnect-to-the-same-session"></a>원격 데스크톱 클라이언트의 연결이 끊어지고 동일한 세션에 다시 연결할 수 없음
 
@@ -40,7 +40,7 @@ ms.locfileid: "68529953"
 
 > [!NOTE]  
 >  - 클라이언트와 RD 세션 호스트 서버 간의 통신에 가장 높은 수준의 암호화가 필요하면 FIPS 규격 암호화를 사용합니다.
->  - 그룹 정책에서 구성하는 암호화 수준 설정은 원격 데스크톱 서비스 구성 도구를 사용하여 구성한 설정을 재정의합니다. 또한 [시스템 암호화: 암호화, 해시, 서명에 FIPS 규격 알고리즘 사용](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/system-cryptography-use-fips-compliant-algorithms-for-encryption-hashing-and-signing) 정책을 사용하면 이 설정이 **클라이언트 연결 암호화 수준 설정** 정책을 재정의합니다. 시스템 암호화 정책은 **컴퓨터 구성\\Windows 설정\\보안 설정\\로컬 정책\\보안 옵션** 폴더에 있습니다.
+>  - 그룹 정책에서 구성하는 암호화 수준 설정은 원격 데스크톱 서비스 구성 도구를 사용하여 구성한 설정을 재정의합니다. 또한 [시스템 암호화: 암호화, 해시, 서명에 FIPS 규격 알고리즘 사용](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/system-cryptography-use-fips-compliant-algorithms-for-encryption-hashing-and-signing) 정책을 사용하면 이 설정이 **클라이언트 연결 암호화 수준 설정** 정책을 재정의합니다. 시스템 암호화 정책은 **컴퓨터 구성\\Windows 설정\\보안 설정\\로컬 정책\\보안 옵션** 폴더에 있습니다.
 >  - 암호화 수준을 변경하면 다음 번에 사용자가 로그인할 때 새 암호화 수준이 적용됩니다. 서버에 여러 암호화 수준이 필요한 경우 네트워크 어댑터를 여러 개 설치하고 각 어댑터를 별도로 구성합니다.
 >  - 인증서에 해당 프라이빗 키가 있는지 확인하려면 [원격 데스크톱 서비스 구성]으로 이동하여 마우스 오른쪽 단추로 해당 인증서를 확인하려는 연결을 클릭하고, **일반**을 선택한 다음, **편집**을 선택합니다. 그런 다음, **인증서 보기**를 선택합니다. **일반** 탭으로 이동하여 키가 있으면 "사용자가 이 인증서와 일치하는 프라이빗 키를 갖고 있습니다"라는 문장이 표시됩니다. 이 정보는 인증서 스냅인을 사용하여 볼 수도 있습니다.
 >  - FIPS 규격 암호화(**시스템 암호화: 암호화, 해시, 서명에 FIPS 규격 알고리즘 사용** 정책 또는 원격 데스크톱 서버 구성의 **FIPS 규격** 설정)는 Microsoft 암호화 모듈을 사용하는 FIPS(Federal Information Processing Standard) 140-1 암호화 알고리즘을 통해 서버와 클라이언트 간에 보내는 데이터를 암호화하고 해독합니다. 자세한 내용은 [FIPS 140 유효성 검사](https://docs.microsoft.com/windows/security/threat-protection/fips-140-validation)를 참조하세요.

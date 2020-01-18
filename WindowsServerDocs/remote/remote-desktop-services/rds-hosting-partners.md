@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: 9a3cb426-fb39-40c5-ae07-26dbe9e3aed9
 author: lizap
 manager: dongill
-ms.openlocfilehash: 8433aa50d585300df03222b78cf0823985237aa5
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 4d9a6d4885566204bf9fc29cd9513d25d1b39deb
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403969"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949850"
 ---
 # <a name="remote-desktop-services-hosting-partners-and-assessment"></a>원격 데스크톱 서비스 호스팅 파트너 및 평가
 
@@ -29,7 +29,7 @@ Microsoft 파트너이며 평가를 통과한 파트너 목록에 포함되려�
 1. 아직 [Microsoft 파트너](https://partner.microsoft.com/)가 아닌 경우 파트너가 됩니다.
 2. [Azure에서 원격 데스크톱 서비스를 사용하여 Windows 및 애플리케이션 호스트](https://mspartnerlp.partner.microsoft.com/LearningPath/LearningPath/DLPaths?trackId=2915&rowId=3603)를 참조하세요.
 3. [기술 평가](https://mspartnerlp.partner.microsoft.com/LearningPath/LearningPath/DLPaths?trackId=1660&rowId=2220&trackPathId=9871)를 받습니다.
-4. [클라우드 플랫폼 역량 요구 사항](https://partner.microsoft.com/en-us/membership/cloud-platform-competency)을 충족하는지 확인합니다.
+4. [클라우드 플랫폼 역량 요구 사항](https://partner.microsoft.com/membership/cloud-platform-competency)을 충족하는지 확인합니다.
 
 이미 Microsoft 파트너이며 질문이 있나요? <rdhostingpartners@microsoft.com>의 원격 데스크톱 팀에 문의하세요.  
 

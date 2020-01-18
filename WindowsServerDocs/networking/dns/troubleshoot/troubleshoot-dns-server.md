@@ -1,19 +1,19 @@
 ---
 title: DNS 서버 문제 해결
 description: 이 문서에서는 서버 쪽에서 DNS 문제를 해결 하는 방법을 소개 합니다.
-manager: willchen
+manager: dcscontentpm
 ms.prod: ''
 ms.technology: networking-dns
 ms.topic: article
 ms.author: delhan
 ms.date: 8/8/2019
 author: Deland-Han
-ms.openlocfilehash: b0547436cfa0f07ba9cbc4e3dd1825f8d33bc093
-ms.sourcegitcommit: 0e3c2473a54f915d35687d30d1b4b1ac2bae4068
+ms.openlocfilehash: 23e51adafa5ab6da0a9317a1b0fad88bd3901073
+ms.sourcegitcommit: c5709021aa98abd075d7a8f912d4fd2263db8803
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68917770"
+ms.lasthandoff: 01/18/2020
+ms.locfileid: "76265805"
 ---
 # <a name="troubleshooting-dns-servers"></a>DNS 서버 문제 해결
 
@@ -21,7 +21,7 @@ ms.locfileid: "68917770"
 
 ## <a name="check-ip-configuration"></a>IP 구성 확인
 
-1. 명령 `ipconfig /all` 프롬프트에서를 실행 하 고 IP 주소, 서브넷 마스크 및 기본 게이트웨이를 확인 합니다.
+1. 명령 프롬프트에서 `ipconfig /all`를 실행 하 고 IP 주소, 서브넷 마스크 및 기본 게이트웨이를 확인 합니다.
 
 2. DNS 서버가 조회 중인 이름에 대해 권한이 있는지 확인 합니다. 그렇다면 [신뢰할 수 있는 데이터에 대 한 문제 확인](#checking-for-problems-with-authoritative-data)을 참조 하세요.
 
@@ -30,7 +30,7 @@ ms.locfileid: "68917770"
    ```cmd
    nslookup <name> <IP address of the DNS server>
    ```
-   이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다. 
+   예를 들어 다음과 같은 가치를 제공해야 합니다. 
    ```cmd
    nslookup app1 10.0.0.1
    ```
@@ -54,7 +54,7 @@ ms.locfileid: "68917770"
 
 다음 로그를 확인 하 여 기록 된 오류가 있는지 여부를 확인 합니다.
 
-- 애플리케이션
+- Application
 
 - 시스템
 
@@ -107,7 +107,7 @@ net start DNS
    dnscmd /zonerefresh <zone name>
    ```
   
-   예를 들어 영역이 corp.contoso.com 인 경우을 입력 `dnscmd /zonerefresh corp.contoso.com`합니다.
+   예를 들어 영역이 corp.contoso.com 인 경우 `dnscmd /zonerefresh corp.contoso.com`를 입력 합니다.
   
 4. 보조 서버를 다시 검사 하 여 영역이 올바르게 전송 되었는지 여부를 확인 합니다. 그렇지 않은 경우에는 영역 전송 문제가 있을 수 있습니다. 자세한 내용은 [영역 전송 문제](#zone-transfer-problems)를 참조 하세요.
 

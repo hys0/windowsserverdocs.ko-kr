@@ -8,12 +8,12 @@ ms.sitesec: library
 author: jasongerend
 ms.author: jgerend
 ms.date: 10/22/2019
-ms.openlocfilehash: 68edc1f0aaa857d0342f963e19964f5c9e389ed0
-ms.sourcegitcommit: 3262c5c7cece9f2adf2b56f06b7ead38754a451c
+ms.openlocfilehash: c3c948e447d060d1ce733778c3362d83ad116708
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72812324"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75948208"
 ---
 # <a name="features-removed-or-planned-for-replacement-starting-with-windows-server-version-1803"></a>Windows Server, 버전 1803부터 제거되었거나 교체 예정인 기능
 
@@ -33,7 +33,7 @@ Windows Server 버전 1803에서 설치된 제품 이미지에서 다음과 같�
 
 | 기능    | 대체 기능 |
 | ----------- | -------------------- |
-| [파일 복제 서비스](https://support.microsoft.com/en-us/help/4025991/windows-server-version-1709-no-longer-supports-frs)|Windows Server 2003 R2에서 도입된 파일 복제 서비스가 DFS 복제로 대체되었습니다. [SYSVOL을 사용하여 FRS를 사용하는 모든 도메인 컨트롤러를 DFS 복제로 마이그레이션](https://blogs.technet.microsoft.com/filecab/2014/06/25/streamlined-migration-of-frs-to-dfsr-sysvol/)해야 합니다. |
+| [파일 복제 서비스](https://support.microsoft.com/help/4025991/windows-server-version-1709-no-longer-supports-frs)|Windows Server 2003 R2에서 도입된 파일 복제 서비스가 DFS 복제로 대체되었습니다. [SYSVOL을 사용하여 FRS를 사용하는 모든 도메인 컨트롤러를 DFS 복제로 마이그레이션](https://blogs.technet.microsoft.com/filecab/2014/06/25/streamlined-migration-of-frs-to-dfsr-sysvol/)해야 합니다. |
 | Hyper-V 네트워크 가상화(HNV)|이제 [네트워크 가상화](../networking/sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md)가 네트워크 컨트롤러, 소프트웨어 부하 분산, 사용자 정의 라우팅 및 액세스 제어 목록 또한 포함하는 [소프트웨어 정의 네트워킹](../networking/sdn/software-defined-networking.md)(SDN) 솔루션의 일부로 Windows Server에 포함됩니다. |
 
 ## <a name="features-were-no-longer-developing"></a>더 이상 개발하지 않는 기능
@@ -55,5 +55,5 @@ Windows Server 버전 1803에서 설치된 제품 이미지에서 다음과 같�
 | [RemoteFX 3D 비디오 어댑터(vGPU)](../remote/remote-desktop-services/rds-remotefx-vgpu.md)|가상화된 환경에 대한 새 그래픽 가속 옵션을 개발하고 있습니다. 대신 [개별 디바이스 할당(DDA)](../virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md)을 사용할 수도 있습니다. |
 | 그룹 정책의 [소프트웨어 제한 정책](../identity/software-restriction-policies/software-restriction-policies.md)|사용자가 액세스할 수 있는 앱과 커널에서 실행할 수 있는 코드를 제어하기 위해 그룹 정책을 통해 소프트웨어 제한 정책을 사용하는 대신 [AppLocker](https://docs.microsoft.com/windows/security/threat-protection/applocker/applocker-overview) 또는 [Windows Defender Application Control](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control)을 사용할 수 있습니다. |
 | SAS 패브릭을 사용하는 공유 구성의 스토리지 공간|대신 [스토리지 공간 다이렉트](../storage/storage-spaces/storage-spaces-direct-overview.md)를 배포합니다. [스토리지 공간 다이렉트 하드웨어 요구 사항](../storage/storage-spaces/storage-spaces-direct-hardware-requirements.md)에 설명된 대로 스토리지 공간 다이렉트는 비공유 구성에서 HLK 인증 SAS 엔클로저의 사용을 지원합니다. |
-| Windows Server 필수 패키지 환경|Windows Server Standard 또는 Windows Server Datacenter SKU에 대해 더 이상 Essentials 환경 역할을 개발하지 않습니다. 중소 규모 기업을 위해 사용하기 쉬운 서버 솔루션을 필요로 하는 경우 이 새로운 [Microsoft 365 Business](https://www.microsoft.com/microsoft-365/business) 솔루션을 확인하거나 [Windows Server 2016 Essentials](https://docs.microsoft.com/windows-server-essentials/get-started/get-started)를 사용하세요. |
+| Windows Server Essentials Experience|Windows Server Standard 또는 Windows Server Datacenter SKU에 대해 더 이상 Essentials 환경 역할을 개발하지 않습니다. 중소 규모 기업을 위해 사용하기 쉬운 서버 솔루션을 필요로 하는 경우 이 새로운 [Microsoft 365 Business](https://www.microsoft.com/microsoft-365/business) 솔루션을 확인하거나 [Windows Server 2016 Essentials](https://docs.microsoft.com/windows-server-essentials/get-started/get-started)를 사용하세요. |
 

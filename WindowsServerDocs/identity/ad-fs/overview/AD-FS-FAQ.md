@@ -10,12 +10,12 @@ ms.topic: article
 ms.custom: it-pro
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 0a2bbeeb459fd364db728579dc20015a2474fd25
-ms.sourcegitcommit: e5df3fd267352528eaab5546f817d64d648b297f
+ms.openlocfilehash: 48d93f515a5f3e5f8ce2c3ff9a1b40f300ca57ed
+ms.sourcegitcommit: c5709021aa98abd075d7a8f912d4fd2263db8803
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74163096"
+ms.lasthandoff: 01/18/2020
+ms.locfileid: "76265745"
 ---
 # <a name="ad-fs-frequently-asked-questions-faq"></a>AD FS FAQ (질문과 대답)
 
@@ -48,7 +48,7 @@ Windows Server 2016에는 HTTP/2 지원이 추가 되었지만 클라이언트 �
 예,이 구성은 지원 되지만 새로운 AD FS 2016 기능이이 구성에서 지원 되지 않습니다.  이 구성은 AD FS 2012 R2에서 AD FS 2016로의 마이그레이션 단계 중에 일시적인 것 이며 장기간 배포 해서는 안 됩니다.
 
 ### <a name="is-it-possible-to-deploy-ad-fs-for-office-365-without-publishing-a-proxy-to-office-365"></a>Office 365에 프록시를 게시 하지 않고 Office 365에 대 한 AD FS를 배포할 수 있나요?
-예, 지원 됩니다. 그러나 의도 하지 않은 결과
+예, 지원됩니다. 그러나 의도 하지 않은 결과
 
 1. Azure AD는 페더레이션 메타 데이터에 액세스할 수 없으므로 수동으로 토큰 서명 인증서 업데이트를 관리 해야 합니다. 토큰 서명 인증서를 수동으로 업데이트 하는 방법에 대 한 자세한 내용은 [Office 365 및 Azure Active Directory에 대 한 페더레이션 인증서 갱신](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-o365-certs) 을 참조 하세요.
 2. 레거시 인증 흐름을 활용할 수 없습니다 (예: ExO 프록시 인증 흐름).
@@ -307,4 +307,7 @@ AD FS 2016에서 토큰 바인딩이 자동으로 사용 하도록 설정 되 �
 `Set-AdfsProperties -IgnoreTokenBinding $true`
 
 ### <a name="i-have-upgraded-my-farm-from-ad-fs-in-windows-server-2016-to-ad-fs-in-windows-server-2019-the-farm-behavior-level-for-the-ad-fs-farm-has-been-successfully-raised-to-2019-but-the-web-application-proxy-configuration-is-still-displayed-as-windows-server-2016"></a>내 팜을 windows Server 2016의 AD FS에서 Windows Server 2019의 AD FS로 업그레이드 했습니다. AD FS 팜에 대 한 팜 동작 수준이 2019에 성공적으로 발생 했지만 웹 응용 프로그램 프록시 구성이 Windows Server 2016로 계속 표시 되나요?
-Windows Server 2019로 업그레이드 한 후에는 웹 응용 프로그램 프록시의 구성 버전이 Windows Server 2016로 계속 표시 됩니다. 웹 응용 프로그램 프록시에는 Windows Server 2019에 대 한 새로운 버전 관련 기능이 없으며, 팜 동작 수준이 AD FS에서 성공적으로 발생 한 경우에는 웹 응용 프로그램 프록시가 디자인을 통해 Windows Server 2016로 계속 표시 됩니다. 
+Windows Server 2019로 업그레이드 한 후에는 웹 응용 프로그램 프록시의 구성 버전이 Windows Server 2016로 계속 표시 됩니다. 웹 응용 프로그램 프록시에는 Windows Server 2019에 대 한 새로운 버전 관련 기능이 없으며, 팜 동작 수준이 AD FS에서 성공적으로 발생 한 경우에는 웹 응용 프로그램 프록시가 디자인을 통해 Windows Server 2016로 계속 표시 됩니다.
+
+### <a name="can-i-estimate-the-size-of-the-adfsartifactstore-before-enabling-esl"></a>ESL을 사용 하도록 설정 하기 전에 ADFSArtifactStore 크기를 예측할 수 있나요?
+ESL를 사용 하도록 설정 하면 AD FS ADFSArtifactStore 데이터베이스의 사용자에 대 한 계정 작업 및 알려진 위치를 추적 합니다. 이 데이터베이스는 추적 된 사용자 및 알려진 위치의 수를 기준으로 크기를 조정 합니다. ESL를 사용 하도록 계획 하는 경우 ADFSArtifactStore 데이터베이스의 크기를 추정 하 여 10만 명의 사용자 당 최대 1GB의 속도로 확장할 수 있습니다. AD FS 팜이 WID (Windows 내부 데이터베이스)를 사용 하는 경우 데이터베이스 파일의 기본 위치는 C:\dom\datad입니다. 이 드라이브를 채우지 않도록 하려면 ESL를 사용 하기 전에 최소 5GB의 사용 가능한 저장소가 있는지 확인 하세요. 디스크 저장소 외에도 50만 이하의 사용자 인구에 대 한 추가 RAM을 사용 하도록 설정한 후 증가 하는 총 프로세스 메모리를 계획 합니다.

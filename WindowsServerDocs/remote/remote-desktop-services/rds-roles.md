@@ -7,13 +7,13 @@ ms.author: helohr
 ms.date: 07/06/2018
 ms.topic: article
 author: heidilohr
-manager: dougkim
-ms.openlocfilehash: f26f75b8ce3f5438362c15b84aeca9339b95ebbc
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+manager: lizross
+ms.openlocfilehash: 44b98b485b69720a1459f052b68d15617954bffe
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71387197"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949822"
 ---
 # <a name="remote-desktop-services-roles"></a>원격 데스크톱 서비스 역할
 
@@ -101,4 +101,4 @@ RD 웹 액세스를 구성하는 방법에 대한 자세한 내용은 다음 문
 * [CAL(클라이언트 액세스 라이선스)로 RDS 배포 라이선싱](rds-client-access-license.md)
 * [원격 데스크톱 서비스 라이선스 서버 활성화](rds-activate-license-server.md)
 * [RDS CAL(원격 데스크톱 서비스 클라이언트 액세스 라이선스) 추적](rds-track-cals.md)
-* [Microsoft 볼륨 라이선싱: 서비스 공급자를 위한 라이선싱 옵션](https://www.microsoft.com/en-us/Licensing/licensing-programs/spla-program.aspx)
+* [Microsoft 볼륨 라이선싱: 서비스 공급자를 위한 라이선싱 옵션](https://www.microsoft.com/Licensing/licensing-programs/spla-program.aspx)

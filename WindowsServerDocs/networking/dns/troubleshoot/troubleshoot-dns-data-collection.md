@@ -1,19 +1,19 @@
 ---
 title: DNS (Domain Name System) 문제 해결
 description: 이 문서에서는 DNS 문제가 발생 했을 때 데이터를 수집 하는 방법을 소개 합니다.
-manager: willchen
+manager: dcscontentpm
 ms.prod: ''
 ms.technology: networking-dns
 ms.topic: article
 ms.author: delhan
 ms.date: 8/8/2019
 author: Deland-Han
-ms.openlocfilehash: a86b1f34c3b21f5bcde710e2a98323492ea51b62
-ms.sourcegitcommit: 0e3c2473a54f915d35687d30d1b4b1ac2bae4068
+ms.openlocfilehash: 11c52b3beca3afcc0a6bfc8cecee2143dce0f023
+ms.sourcegitcommit: c5709021aa98abd075d7a8f912d4fd2263db8803
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68917780"
+ms.lasthandoff: 01/18/2020
+ms.locfileid: "76265835"
 ---
 # <a name="troubleshooting-domain-name-system-dns-issues"></a>DNS (Domain Name System) 문제 해결
  
@@ -23,7 +23,7 @@ ms.locfileid: "68917780"
 
 - [DNS 서버 문제 해결](troubleshoot-dns-server.md)
  
-## <a name="data-collection"></a>데이터 컬렉션
+## <a name="data-collection"></a>데이터 수집
  
 문제가 발생 하는 경우 클라이언트와 서버 쪽 모두에서 동시에 데이터를 수집 하는 것이 좋습니다. 그러나 실제 문제에 따라 DNS 클라이언트 또는 DNS 서버에서 단일 데이터 집합으로 컬렉션을 시작할 수 있습니다.
  

@@ -12,12 +12,12 @@ author: jaimeo
 ms.author: jaimeo
 ms.date: 09/06/2017
 ms.localizationpriority: medium
-ms.openlocfilehash: 80d6cdd3056d9c7e0a0815ce5856f961d79fcc34
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 434b79508dbf88a90348840573255c3084d6e989
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391777"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75948449"
 ---
 # <a name="developing-powershell-cmdlets-for-nano-server"></a>Nano Server용 PowerShell Cmdlet 개발
 
@@ -110,7 +110,7 @@ At line:1 char:1
 가상 컴퓨터 또는 물리적 컴퓨터에 Nano Server를 설치하기 위한 빠른 시작 및 세부 단계는 이 토픽의 상위 토픽인 [Nano Server 설치](Getting-Started-with-Nano-Server.md)에 나와 있습니다.  
   
 > [!NOTE]  
-> Nano 서버에 대한 개발 작업의 경우 New-NanoServerImage의 -Development 매개 변수를 사용하여 Nano 서버를 설치하는 것이 유용합니다. 그러면 서명되지 않은 드라이버를 설치하고, 디버거 이진 파일을 복사하고, 디버깅을 위한 포트를 열고, 테스트 서명을 사용하고, 개발자 라이선스 없이 AppX 패키지를 설치할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+> Nano 서버에 대한 개발 작업의 경우 New-NanoServerImage의 -Development 매개 변수를 사용하여 Nano 서버를 설치하는 것이 유용합니다. 그러면 서명되지 않은 드라이버를 설치하고, 디버거 이진 파일을 복사하고, 디버깅을 위한 포트를 열고, 테스트 서명을 사용하고, 개발자 라이선스 없이 AppX 패키지를 설치할 수 있습니다. 예:  
 >  
 >`New-NanoServerImage -DeploymentType Guest -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -Development`  
   
@@ -138,7 +138,7 @@ PowerShell은 다양한 cmdlet 구현 형식을 지원하며, 사용자가 사�
 ### <a name="building-c-for-nano-server"></a>Nano 서버용 C++ 작성  
 C++ DLL이 Nano 서버에서 작동하게 하려면 특정 버전이 아닌 Nano 서버에 대해 컴파일해야 합니다.  
   
-Nano 서버에서 C++를 개발하기 위한 필수 조건 및 연습은 [Nano 서버에서 네이티브 앱 개발](http://blogs.technet.com/b/nanoserver/archive/2016/04/27/developing-native-apps-on-nano-server.aspx)을 참조하세요.  
+Nano 서버에서 C++를 개발하기 위한 필수 조건 및 연습은 [Nano 서버에서 네이티브 앱 개발](https://blogs.technet.com/b/nanoserver/archive/2016/04/27/developing-native-apps-on-nano-server.aspx)을 참조하세요.  
   
   
 ## <a name="porting-net-cmdlets"></a>.NET cmdlet 이식  
@@ -151,7 +151,7 @@ Nano 서버에서 C++를 개발하기 위한 필수 조건 및 연습은 [Nano �
   
 PowerShell Core SDK 모듈은 올바른 CoreCLR 및 PowerShell Core 참조 어셈블리를 설치하고, Visual Studio 2015에서 이러한 참조 어셈블리를 대상으로 하는 C# 프로젝트를 만들고, 개발자가 Nano 서버에서 실행되는 .NET cmdlet을 Visual Studio 2015에서 원격으로 디버깅할 수 있도록 Nano 서버 컴퓨터에 원격 디버거를 설치하는 cmdlet을 표시합니다.  
   
-PowerShell Core SDK 모듈에는 Visual Studio 2015 업데이트 2가 필요합니다. 아직 Visual Studio 2015를 설치하지 않았으면 [Visual Studio Community 2015](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx)를 설치할 수 있습니다.  
+PowerShell Core SDK 모듈에는 Visual Studio 2015 업데이트 2가 필요합니다. 아직 Visual Studio 2015를 설치하지 않았으면 [Visual Studio Community 2015](https://www.visualstudio.com/products/visual-studio-community-vs.aspx)를 설치할 수 있습니다.  
   
 또한 SDK 모듈은 다음 기능을 사용하여 Visual Studio 2015에 설치됩니다.  
   

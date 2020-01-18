@@ -1,19 +1,19 @@
 ---
 title: DNS 클라이언트 문제 해결
 description: 이 문서에서는 클라이언트 쪽에서 DNS 문제를 해결 하는 방법을 소개 합니다.
-manager: willchen
+manager: dcscontentpm
 ms.prod: ''
 ms.technology: networking-dns
 ms.topic: article
 ms.author: delhan
 ms.date: 8/8/2019
 author: Deland-Han
-ms.openlocfilehash: 1f18159d6232bd9e7864b13419b3648c12b9f44f
-ms.sourcegitcommit: 0e3c2473a54f915d35687d30d1b4b1ac2bae4068
+ms.openlocfilehash: dd34fae73cdcb20a896750e20d4a28f8777a378a
+ms.sourcegitcommit: c5709021aa98abd075d7a8f912d4fd2263db8803
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68917820"
+ms.lasthandoff: 01/18/2020
+ms.locfileid: "76265775"
 ---
 # <a name="troubleshooting-dns-clients"></a>DNS 클라이언트 문제 해결
 
@@ -37,7 +37,7 @@ ms.locfileid: "68917820"
 
 클라이언트에 유효한 TCP/IP 구성이 없는 경우 다음 방법 중 하나를 사용 합니다.
 
-* 동적으로 구성 된 클라이언트의 경우 `ipconfig /renew` 명령을 사용 하 여 클라이언트가 DHCP 서버에서 IP 주소 구성을 갱신 하도록 수동으로 강제 합니다.
+* 동적으로 구성 된 클라이언트의 경우 `ipconfig /renew` 명령을 사용 하 여 클라이언트가 DHCP 서버를 사용 하 여 IP 주소 구성을 갱신 하도록 수동으로 강제 합니다.
 
 * 정적으로 구성 된 클라이언트의 경우 유효한 구성 설정을 사용 하도록 클라이언트 TCP/IP 속성을 수정 하거나 네트워크에 대 한 DNS 구성을 완료 합니다.
 
@@ -57,7 +57,7 @@ ping 10.0.0.1
 
 ### <a name="dns-query-tests"></a>DNS 쿼리 테스트
 
-Dns 클라이언트가 dns 서버 컴퓨터를 ping 할 수 있는 경우 다음 `nslookup` 명령을 사용 하 여 서버가 dns 클라이언트에 응답할 수 있는지 여부를 테스트 하십시오. Nslookup은 클라이언트의 DNS 캐시를 사용 하지 않으므로 이름 확인은 클라이언트의 구성 된 DNS 서버를 사용 합니다.
+Dns 클라이언트가 dns 서버 컴퓨터를 ping 할 수 있는 경우 다음 `nslookup` 명령을 사용 하 여 서버가 DNS 클라이언트에 응답할 수 있는지 여부를 테스트 하십시오. Nslookup은 클라이언트의 DNS 캐시를 사용 하지 않으므로 이름 확인은 클라이언트의 구성 된 DNS 서버를 사용 합니다.
 
 #### <a name="test-a-client"></a>클라이언트 테스트
 
@@ -119,14 +119,14 @@ nslookup app1.corp.contoso.com
 nslookup <external name>
 ```
 
-이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다. 
+예를 들어 다음과 같은 가치를 제공해야 합니다. 
 ```cmd
 nslookup bing.com
 ```
 
-이러한 테스트 중 4 개에 모두 성공한 경우를 `ipconfig /displaydns` 실행 하 고 실패 한 이름에 대 한 출력을 확인 합니다. 실패 한 이름에 "이름이 없습니다."가 표시 되 면 DNS 서버에서 부정 응답이 반환 되었고 클라이언트에 캐시 되었습니다. 
+이러한 테스트 중 네 가지 모두 성공 하면 `ipconfig /displaydns`를 실행 하 고 실패 한 이름에 대 한 출력을 확인 합니다. 실패 한 이름에 "이름이 없습니다."가 표시 되 면 DNS 서버에서 부정 응답이 반환 되었고 클라이언트에 캐시 되었습니다. 
 
-이 문제를 해결 하려면를 실행 `ipconfig /flushdns`하 여 캐시를 지웁니다.
+이 문제를 해결 하려면 `ipconfig /flushdns`를 실행 하 여 캐시를 지웁니다.
 
 ## <a name="next-step"></a>다음 단계
 

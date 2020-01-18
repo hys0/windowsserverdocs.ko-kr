@@ -9,12 +9,12 @@ ms.date: 11/05/2018
 ms.assetid: 8fe1c810-4599-4493-b4b8-73fa9aa18535
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: ba0b3969695611385fb0a0bdc6df900eeab85254
-ms.sourcegitcommit: 4a03f263952c993dfdf339dd3491c73719854aba
+ms.openlocfilehash: 2b9f1e01073f6ef8fdfe89623a383e26f8559977
+ms.sourcegitcommit: 51e0b575ef43cd16b2dab2db31c1d416e66eebe8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74791133"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76259118"
 ---
 # <a name="always-on-vpn-features-and-functionalities"></a>Always On VPN 기능 및 기능
 
@@ -53,7 +53,7 @@ ms.locfileid: "74791133"
 |                                       IPv4 및 IPv6 둘 다에 대 한 지원.                                        |                                                                                                                                                                 Always On VPN을 사용 하면 사용자가 회사 네트워크에서 IPv4 및 IPv6 리소스에 모두 액세스할 수 있습니다. Always On VPN 클라이언트는 i p v 6에 특별히 의존 하지 않는 이중 스택 방법을 사용 하거나, VPN 게이트웨이에서 NAT64 또는 DNS64 변환 서비스를 제공 해야 합니다.                                                                                                                                                                  |
 |                                2 단계 또는 OTP 인증을 지원 합니다.                                 |                    Always On VPN 플랫폼은 인증 워크플로의 일부로 다양 한 Microsoft 및 타사 EAP 유형을 사용할 수 있도록 하는 EAP를 기본적으로 지원 합니다. Always On VPN은 2 단계 인증 요구 사항을 충족 하기 위해 특히 스마트 카드 (실제 및 가상)와 비즈니스용 Windows Hello 인증서를 지원 합니다. 또한 Always On VPN은 EAP-TLS를 통해 OTP를 지원 합니다 (기본적으로 지원 되지 않으며, 타사 플러그인 에서만 지원 됨).<p><p>다음을 사용 하 여 정의:<br>**VPNv2/ProfileName/NativeProfile/Authentication**                    |
 |                                  여러 도메인 및 포리스트 지원.                                   |                                   Always On VPN 플랫폼은 VPN 클라이언트를 도메인에 가입 시킬 필요가 없기 때문에 Active Directory Domain Services (AD DS) 포리스트 또는 도메인 토폴로지 (또는 관련 기능/스키마 수준)에 종속 되지 않습니다. 따라서 클라이언트 구성 중에는 사용 하지 않으므로 VPN 프로필 설정을 정의 하는 종속성이 그룹 정책 않습니다. Active Directory 권한 부여 통합이 필요한 경우 EAP 인증 및 권한 부여 프로세스의 일부로 RADIUS를 통해 구현할 수 있습니다.                                   |
-|              인터넷/인트라넷 트래픽 분리를 위해 분할 및 강제 터널을 모두 지원 합니다.               |                                                                                               강제 터널 (기본 운영 모드) 및 분할 터널을 모두 지원 하도록 Always On VPN을 구성할 수 있습니다. Always On VPN은 응용 프로그램별 라우팅 정책에 대 한 추가 세분성을 제공 합니다.<p><p>***참고:***<br>사용자 터널 에서만 지원 됩니다.<p><p>다음을 사용 하 여 정의:<p> **VPNv2/ProfileName/NativeProfile/RoutingPolicyType**<br>**VPNv2/ProfileName/Trafficfilterlist의/App/RoutingPolicyType**                                                                                               |
+|              인터넷/인트라넷 트래픽 분리를 위해 분할 및 강제 터널을 모두 지원 합니다.               |                                                                                               강제 터널 (기본 운영 모드) 및 분할 터널을 모두 지원 하도록 Always On VPN을 구성할 수 있습니다. Always On VPN은 응용 프로그램별 라우팅 정책에 대 한 추가 세분성을 제공 합니다.<p><p>***참고:***<br>강제 터널은 사용자 터널 에서만 지원 됩니다. 다른 VPN 터널은 강제 터널 사용자 터널에 병렬로 활성화 될 수 없습니다.<p><p>다음을 사용 하 여 정의:<p> **VPNv2/ProfileName/NativeProfile/RoutingPolicyType**<br>**VPNv2/ProfileName/Trafficfilterlist의/App/RoutingPolicyType**                                                                                               |
 |                                          여러 프로토콜 지원.                                          |                                                                                                                                                                            IKEv2에서 SSL(Secure Sockets Layer) 대체가 필요한 경우 기본적으로 SSTP를 지원 하도록 Always On VPN을 구성할 수 있습니다.<p><p>***참고:***<br>사용자 터널은 SSTP 및 i k e v 2를 지원 하 고, 장치 터널은 SSTP 대체를 지원 하지 않고 IKEv2만 지원 합니다.                                                                                                                                                                            |
 |                       회사 연결 상태를 제공 하는 연결 길잡이                       |                                                                                                            Always On VPN은 기본 네트워크 연결 길잡이와 완전히 통합 되며 모든 네트워크 보기 인터페이스에서 연결 상태를 제공 합니다. Windows 10 크리에이터 업데이트 (버전 1703)의 출현으로 사용자 터널에 대 한 vpn 연결 상태와 VPN 연결 제어는 이제 네트워크 플라이 아웃 (Windows 기본 제공 VPN 클라이언트의 경우)을 통해 사용할 수 있습니다.                                                                                                            |
 | 약식 이름, FQDN (정규화 된 도메인 이름) 및 DNS 접미사를 사용 하 여 회사 리소스의 이름을 확인 합니다. | Always On VPN은 VPN 연결 및 IP 주소 할당 프로세스의 일부로 하나 이상의 DNS 접미사를 고유 하 게 정의할 수 있습니다. 여기에는 짧은 이름, Fqdn 또는 전체 DNS 네임 스페이스에 대 한 회사 리소스 이름 확인이 포함 됩니다. 또한 Always On VPN은 이름 확인 정책 테이블을 사용 하 여 네임 스페이스로 한정 된 해상도 세분성을 제공할 수 있도록 지원 합니다.<p><p>***참고:***<br>이름 확인 정책 테이블을 사용할 때 짧은 이름 resolution을 방해 하므로 전역 접미사를 사용 하지 않도록 합니다.<p><p>다음을 사용 하 여 정의:<br>**VPNv2/ProfileName/DnsSuffix**<br>**VPNv2/ProfileName/DomainNameInformationList** |

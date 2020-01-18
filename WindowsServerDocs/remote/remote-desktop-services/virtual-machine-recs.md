@@ -11,13 +11,13 @@ ms.date: 12/02/2019
 ms.tgt_pltfrm: na
 ms.topic: article
 author: Heidilohr
-manager: daveba
-ms.openlocfilehash: 964dba2fc1a3cc1cf0e9cfe2392d40b9ea8f5ece
-ms.sourcegitcommit: cbf0c7c37797c22af989639fac82fc0eee94497f
+manager: lizross
+ms.openlocfilehash: 9564643e02a0b659914736c4047a8d723816976f
+ms.sourcegitcommit: 76469d1b7465800315eaca3e0c7f0438fc3939ed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74700912"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919932"
 ---
 # <a name="virtual-machine-sizing-guidance"></a>가상 머신 크기 조정 지침
 
@@ -29,10 +29,10 @@ ms.locfileid: "74700912"
 
 | 워크로드 유형 | vCPU당 최대 사용자 수 | 최소 vCPU/RAM/OS 스토리지 구성 | Azure 인스턴스 예제 | 최소 프로필 컨테이너 스토리지 크기 |
 | --- | --- | --- | --- | --- |
-| 밝게 | 6 | 2개 vCPU, 8GB RAM, 16GB 스토리지 | D2s_v3, F2s_v2 | 30GB |
-| 미디어 | 4 | 4개 vCPU, 16GB RAM, 32GB 스토리지 | D4s_v3, F4s_v2 | 30GB |
+| Light | 6 | 2개 vCPU, 8GB RAM, 16GB 스토리지 | D2s_v3, F2s_v2 | 30GB |
+| 보통 | 4 | 4개 vCPU, 16GB RAM, 32GB 스토리지 | D4s_v3, F4s_v2 | 30GB |
 | Heavy | 2 | 4개 vCPU, 16GB RAM, 32GB 스토리지 | D4s_v3, F4s_v2 | 30GB |
-| 전원 | 1 | 6개 vCPU, 56GB RAM, 340GB 스토리지 | D4s_v3, F4s_v2, NV6 | 30GB |
+| 고급 | 1 | 6개 vCPU, 56GB RAM, 340GB 스토리지 | D4s_v3, F4s_v2, NV6 | 30GB |
 
 ## <a name="single-session-recommendations"></a>단일 세션 추천 사항
 

@@ -8,12 +8,12 @@ author: lizap
 ms.author: elizapo
 ms.localizationpriority: medium
 ms.date: 12/18/2018
-ms.openlocfilehash: bcc4bf7b3fbdbff1aed2c8dd07b90346fe9eebab
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 577014f6fd7e3a3eb58567b1a644d44360f9e498
+ms.sourcegitcommit: 51e0b575ef43cd16b2dab2db31c1d416e66eebe8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71383427"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76259051"
 ---
 # <a name="administer-a-server-core-server"></a>Server Core 서버 관리
 
@@ -41,7 +41,7 @@ Server Core 서버를 설치 하는 경우 기본적으로 DHCP 주소가 포함
    New-NetIPaddress -InterfaceIndex 12 -IPAddress 192.0.2.2 -PrefixLength 24 -DefaultGateway 192.0.2.1
    ```
 
-   각 항목이 나타내는 의미는 다음과 같습니다.
+   각 항목은 다음을 의미합니다.
    - **InterfaceIndex** 는 2 단계의 **IfIndex** 값입니다. (이 예제에서는 12)
    - **IPAddress** 는 설정 하려는 고정 IP 주소입니다. (이 예제에서는 191.0.2.2)
    - **PrefixLength** 는 설정 중인 IP 주소에 대 한 접두사 길이 (서브넷 마스크의 또 다른 형태)입니다. (이 예제에서는 24)
@@ -52,7 +52,7 @@ Server Core 서버를 설치 하는 경우 기본적으로 DHCP 주소가 포함
    Set-DNSClientServerAddress –InterfaceIndex 12 -ServerAddresses 192.0.2.4
    ```
    
-   각 항목이 나타내는 의미는 다음과 같습니다.
+   각 항목은 다음을 의미합니다.
    - **InterfaceIndex** 는 2 단계의 IfIndex 값입니다.
    - **ServerAddresses** 는 DNS 서버의 IP 주소입니다.
 5. 여러 DNS 서버를 추가 하려면 다음 cmdlet을 실행 합니다. 
@@ -109,10 +109,10 @@ Windows PowerShell cmdlet 및 스크립트를 사용하여 Server Core 컴퓨터
 
 ### <a name="configuration-and-installation"></a>구성 및 설치
 
-|                             태스크                              |                                                                                                                                                                                                                 명령                                                                                                                                                                                                                 |
+|                             작업                              |                                                                                                                                                                                                                 명령                                                                                                                                                                                                                 |
 |---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |             로컬 관리자 암호 설정             |                                                                                                                                                                                                      **net 사용자 관리자** \*                                                                                                                                                                                                      |
-|                  도메인에 컴퓨터 가입                  |                                                                                                                                                       **netdom join% computername%** **/domain:\<domain\>/userd:\<domain\\username\>/passwordd:** \* <br> 컴퓨터를 다시 시작합니다.                                                                                                                                                        |
+|                  도메인에 컴퓨터를 가입                  |                                                                                                                                                       **netdom join% computername%** **/domain:\<domain\>/userd:\<domain\\username\>/passwordd:** \* <br> 컴퓨터를 다시 시작합니다.                                                                                                                                                        |
 |              도메인 변경 여부 확인              |                                                                                                                                                                                                                 **set**                                                                                                                                                                                                                 |
 |                도메인에서 컴퓨터 제거                |                                                                                                                                                                                                   **netdom \<computername\> 제거**                                                                                                                                                                                                    |
 |         로컬 관리자 그룹에 사용자 추가          |                                                                                                                                                                                       **net localgroup Administrators/add \<도메인\\사용자 이름\>**                                                                                                                                                                                       |
@@ -124,7 +124,7 @@ Windows PowerShell cmdlet 및 스크립트를 사용하여 Server Core 컴퓨터
 |         작업 그룹의 컴퓨터 이름 변경         |                                                                                                                                                                **netdom renamecomputer \<currentcomputername\>/NewName:\<newcomputername\>** <br>컴퓨터를 다시 시작합니다.                                                                                                                                                                 |
 |                페이징 파일 관리 사용 안 함                 |                                                                                                                                                                        **wmic computersystem 이름 = "\<computername\>" set 자동 Managed파일 이름 = False**                                                                                                                                                                         |
 |                   페이징 파일 구성                   |                                                            **wmic pagefileset where name = "\<경로/파일 이름\>" set InitialSize =\<InitialSize\>, MaximumSize =\<maxsize\>** <br>여기서 *path/filename* 은 페이징 파일의 경로 및 이름입니다. *initialsize* 는 페이징 파일의 시작 크기 (바이트)이 고 *maxsize* 는 페이지 파일의 최대 크기 (바이트)입니다.                                                             |
-|                 고정 IP 주소로 변경                 | **ipconfig/all** <br>관련 정보를 기록 하거나 텍스트 파일로 리디렉션합니다 (**ipconfig/all > ipconfig .txt**).<br>**netsh 인터페이스 ipv4 표시 인터페이스**<br>인터페이스 목록이 있는지 확인 합니다.<br>**netsh interface ipv4 설정 주소 이름 \<ID를 인터페이스 목록\> 원본 = 고정 주소 =\<기본 설정 IP 주소\> 게이트웨이 =\<게이트웨이 주소\>**<br>**Ipconfig/all** 을 실행 하 여 DHCP Enabled가 **No**로 설정 되어 있는지 확인 합니다. |
+|                 고정 IP 주소로 변경                 | **ipconfig/all** <br>관련 정보를 기록 하거나 텍스트 파일로 리디렉션합니다 (**ipconfig/all > ipconfig .txt**).<br>**netsh 인터페이스 ipv4 표시 인터페이스**<br>인터페이스 목록이 있는지 확인 합니다.<br>**netsh interface ipv4 set address \<Name ID from interface list\> source = 고정 address =\<기본 설정 IP 주소\> 게이트웨이 =\<게이트웨이 주소\>**<br>**Ipconfig/all** 을 실행 하 여 DHCP Enabled가 **No**로 설정 되어 있는지 확인 합니다. |
 |                   정적 DNS 주소를 설정 합니다.                   |   <strong>netsh interface ipv4 add dnsserver name = 네트워크 인터페이스 카드의\<이름 또는 ID\> 주소 =\<주 DNS 서버의 IP 주소\> 인덱스 = 1 <br></strong>netsh interface ipv4 add dnsserver name =\<name of 보조 DNS 서버\> address =\<보조 DNS 서버의 IP 주소\> 인덱스 = 2\*\* <br> 서버를 더 추가 하려면 적절 하 게 반복 합니다.<br>**Ipconfig/all** 을 실행 하 여 주소가 올바른지 확인 합니다.   |
 | 고정 IP 주소에서 DHCP 제공 IP 주소로 변경 |                                                                                                                                      **netsh interface ipv4 set address name = local system\> source = DHCP의\<IP 주소** <br>**Ipconfig/all** 을 실행 하 여 DCHP Enabled가 **Yes**로 설정 되었는지 확인 합니다.                                                                                                                                      |
 |                      제품 키 입력                      |                                                                                                                                                                                                   **slmgr.vbs – ipk \<제품 키\>**                                                                                                                                                                                                    |
@@ -133,14 +133,14 @@ Windows PowerShell cmdlet 및 스크립트를 사용하여 Server Core 컴퓨터
 
 ### <a name="networking-and-firewall"></a>네트워킹 및 방화벽
 
-|태스크|명령| 
+|작업|명령| 
 |----|-------|
 |프록시 서버를 사용 하도록 서버 구성|**netsh Winhttp set proxy \<servername\>:\<포트 번호\>** <br>**참고:** Server Core 설치는 연결을 허용 하기 위해 암호가 필요한 프록시를 통해 인터넷에 액세스할 수 없습니다.|
 |인터넷 주소에 프록시를 사용 하지 않도록 서버 구성|**netsh winhttp set proxy \<servername\>:\<포트 번호\> 바이패스 목록 = "\<local\>"**| 
 |IPSEC 구성 표시 또는 수정|**netsh ipsec**| 
 |NAP 구성 표시 또는 수정|**netsh nap**| 
 |IP를 실제 주소 변환에 표시 하거나 수정 합니다.|**arp**| 
-|로컬 라우팅 테이블을 표시 하거나 구성 합니다.|**경로**| 
+|로컬 라우팅 테이블을 표시 하거나 구성 합니다.|**route**| 
 |DNS 서버 설정 보기 또는 구성|**nslookup**| 
 |프로토콜 통계 및 현재 TCP/IP 네트워크 연결 표시|**netstat**| 
 |NBT (NetBIOS over TCP/IP)를 사용 하 여 프로토콜 통계 및 현재 TCP/IP 연결을 표시 합니다.|**nbtstat**| 
@@ -152,7 +152,7 @@ Windows PowerShell cmdlet 및 스크립트를 사용하여 Server Core 컴퓨터
 
 ### <a name="updates-error-reporting-and-feedback"></a>업데이트, 오류 보고 및 피드백
 
-|                               태스크                                |                                                                                                                               명령                                                                                                                                |
+|                               작업                                |                                                                                                                               명령                                                                                                                                |
 |-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |                         업데이트 설치                         |                                                                                                                    **wusa \<업데이트\>.msu/quiet**                                                                                                                    |
 |                      설치된 업데이트 나열                       |                                                                                                                            **systeminfo**                                                                                                                            |
@@ -163,18 +163,18 @@ Windows PowerShell cmdlet 및 스크립트를 사용하여 Server Core 컴퓨터
 
 ### <a name="services-processes-and-performance"></a>서비스, 프로세스 및 성능
 
-|                               태스크                               |                                                                                                                                                                                                             명령                                                                                                                                                                                                              |
+|                               작업                               |                                                                                                                                                                                                             명령                                                                                                                                                                                                              |
 |------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |                    실행 중인 서비스 나열                     |                                                                                                                                                                                                  **sc 쿼리** 또는 **net start**                                                                                                                                                                                                   |
 |                         서비스 시작                          |                                                                                                                                                                                 **sc start \<서비스 이름\>** 또는 **net start \<서비스 이름\>**                                                                                                                                                                                  |
 |                          서비스 중지                          |                                                                                                                                                                                  **sc stop \<서비스 이름\>** 또는 **net stop \<서비스 이름\>**                                                                                                                                                                                   |
-| 실행 중인 응용 프로그램 목록 및 관련 프로세스 검색 |                                                                                                                                                                                                           **tasklist**                                                                                                                                                                                                           |
+| 실행 중인 애플리케이션 목록 및 관련 프로세스 검색 |                                                                                                                                                                                                           **tasklist**                                                                                                                                                                                                           |
 |                        작업 관리자 시작                        |                                                                                                                                                                                                           **taskmgr->networking**                                                                                                                                                                                                            |
 |    이벤트 추적 세션 및 성능 로그 만들기 및 관리    | 카운터, 추적, 구성 데이터 컬렉션 또는 API를 만들려면: **logman 만들기** <br>데이터 수집기 속성을 쿼리하려면: **logman query** <br>데이터 수집을 시작 하거나 중지 하려면: **logman start\|stop** <br>수집기를 삭제 하려면: **logman delete** <br> 수집기의 속성을 업데이트 하려면: **logman update** <br>XML 파일에서 데이터 수집기 집합을 가져오거나 XML 파일로 내보내려면: **logman 가져오기\|내보내기** |
 
 ### <a name="event-logs"></a>이벤트 로그
 
-|태스크|명령| 
+|작업|명령| 
 |----|-------|
 |이벤트 로그 나열|**wevtutil el**| 
 |지정 된 로그의 쿼리 이벤트|**wevtutil qe/f: 텍스트 \<로그 이름\>**| 
@@ -184,7 +184,7 @@ Windows PowerShell cmdlet 및 스크립트를 사용하여 Server Core 컴퓨터
 
 ### <a name="disk-and-file-system"></a>디스크 및 파일 시스템
 
-|                   태스크                   |                        명령                        |
+|                   작업                   |                        명령                        |
 |------------------------------------------|-------------------------------------------------------|
 |          디스크 파티션 관리          | 전체 명령 목록을 보려면 **diskpart/?** 를 실행 하십시오.  |
 |           소프트웨어 RAID 관리           | 명령의 전체 목록을 보려면 **diskraid/?** 를 실행 하십시오.  |
@@ -199,7 +199,7 @@ Windows PowerShell cmdlet 및 스크립트를 사용하여 Server Core 컴퓨터
  
 ### <a name="hardware"></a>하드웨어
 
-|태스크|명령| 
+|작업|명령| 
 |----|-------|
-|새 하드웨어 장치의 드라이버 추가|% Homedrive%\\\<드라이버 폴더\>폴더에 드라이버를 복사 합니다. **Pnputil-i-a% homedrive%\\\<driver 폴더\>\\\<드라이버\>.inf를 실행 합니다.**|
-|하드웨어 장치의 드라이버 제거|로드 된 드라이버 목록을 보려면 **sc query type = driver**를 실행 합니다. 그런 다음 **sc delete \<service_name** 를 실행\>|
+|새 하드웨어 디바이스의 드라이버 추가|% Homedrive%\\\<드라이버 폴더\>폴더에 드라이버를 복사 합니다. **Pnputil-i-a% homedrive%\\\<driver 폴더\>\\\<드라이버\>.inf를 실행 합니다.**|
+|하드웨어 디바이스의 드라이버 제거|로드 된 드라이버 목록을 보려면 **sc query type = driver**를 실행 합니다. 그런 다음 **sc delete \<service_name** 를 실행\>|

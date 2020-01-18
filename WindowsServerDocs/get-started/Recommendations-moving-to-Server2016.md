@@ -14,24 +14,24 @@ author: jaimeo
 ms.author: jaimeo
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: 379808e861f087bdda800ae6877c73c02d242a7b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: be63880e8a07e71aa6811f3a6979eb6e2fcd8eba
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391626"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75947802"
 ---
 # <a name="recommendations-for-moving-to-windows-server-2016"></a>Windows Server 2016으로 이동하기 위한 권장 사항
 
 >적용 대상: Windows Server 2016
 
 
-|실행 중인 버전|Windows Server 2012 R2 또는 Windows Server 2012|Windows Server 2008 R2 또는 Windows Server 2008|  
+|실행 중인 버전|Windows Server 2012 R2 또는 Windows Server 2012|Windows Server 2008 R2 또는 Windows Server 2008|  
 |-------------------|----------|--------------|--------------|---------------------------------------|  
-|**Windows Server 역할 인프라**|[특정 역할 지침](https://technet.microsoft.com/windowsserver/jj554790)에 따라 업그레이드 또는 마이그레이션을 선택합니다.|- Windows Server 2016의 새 기능을 활용하려면 기존 호스트에 가상 컴퓨터에서 새 하드웨어를 배포하거나 Windows Server 2016을 설치합니다. 일부 새 기능은 Hyper-V를 실행하는 Windows Server 2016 물리적 호스트에서 가장 잘 작동합니다. <br>- [특정 역할 지침](https://technet.microsoft.com/windowsserver/jj554790)을 따릅니다.|
-|**Microsoft 서버 관리 및 애플리케이션 작업**|- 응용 프로그램 업그레이드에는 Windows Server 2016으로의 *마이그레이션*이 포함되어야 합니다. [호환성 목록](Server-Application-Compatibility.md)을 참조하세요. <br>- Windows Server 2016으로의 업그레이드만(즉, 애플리케이션은 업그레이드하지 않음) 애플리케이션 관련 지침을 사용해야 합니다.|- Windows Server 2016의 새 기능을 활용하려면 기존 호스트에 가상 컴퓨터에서 새 하드웨어를 배포하거나 Windows Server 2016을 설치합니다. 일부 새 기능은 Hyper-V를 실행하는 Windows Server 2016 물리적 호스트에서 가장 잘 작동합니다. 가능한 경우 마이그레이션 가이드를 따르세요. <br>- 또는 현재 OS를 그대로 유지하고 Windows Server 2016 호스트 또는 Microsoft Azure에서 실행되는 가상 머신에서 실행합니다. [Software Assurance](https://www.microsoft.com/en-us/Licensing/licensing-programs/software-assurance-default.aspx)를 통한 확장 지원 옵션에 대해 알아보려면 EA 대리점, TAM 또는 Microsoft에 문의하세요.|
-|**ISV 애플리케이션 작업**|- Windows Server 2016으로의 업그레이드에는 응용 프로그램 관련 지침을 사용해야 합니다. <br>- 타사 애플리케이션과 Windows Server 호환성에 대한 자세한 내용을 보려면 [Windows Server 로고 인증 포털](https://msdn.microsoft.com/enterprisecloudcertified)을 방문하세요.|- Windows Server 2016의 새 기능을 활용하려면 기존 호스트에 가상 컴퓨터에서 새 하드웨어를 배포하거나 Windows Server 2016을 설치합니다. 일부 새 기능은 Hyper-V를 실행하는 Windows Server 2016 물리적 호스트에서 가장 잘 작동합니다. 가능한 경우 마이그레이션 가이드를 따르세요. <br>- 또는 현재 OS를 그대로 유지하고 Windows Server 2016 호스트 또는 Microsoft Azure에서 실행되는 가상 머신에서 실행합니다. [Software Assurance](https://www.microsoft.com/en-us/Licensing/licensing-programs/software-assurance-default.aspx)를 통한 확장 지원 옵션에 대해 알아보려면 EA 대리점, TAM 또는 Microsoft에 문의하세요.|
-|**사용자 지정 애플리케이션 작업**|- Windows Server 2016의 호환성 및 업그레이드 지침에 대해서는 응용 프로그램 개발자에게 문의하세요. <br>- 전환하기 전에 Microsoft Azure를 활용하여 Windows Server 2016에서 애플리케이션을 테스트하세요. <br>- 다음 섹션의 전체 옵션을 참조하세요.|- Windows Server 2016의 호환성 및 업그레이드 지침에 대해서는 애플리케이션 개발자에게 문의하세요. <br>- 전환하기 전에 Microsoft Azure를 활용하여 Windows Server 2016에서 애플리케이션을 테스트하세요. <br>Windows Server 2016의 새 기능을 활용하려면 기존 호스트의 가상 머신에서 새 하드웨어를 배포하거나 Windows Server 2016을 설치합니다. 일부 새 기능은 Hyper-V를 실행하는 Windows Server 2016 물리적 호스트에서 가장 잘 작동합니다. <br>- 다음 섹션의 전체 옵션을 참조하세요.|
+|**Windows Server 역할 인프라**|[특정 역할 지침](https://technet.microsoft.com/windowsserver/jj554790)에 따라 업그레이드 또는 마이그레이션을 선택합니다.|Windows Server 2016의 새 기능을 활용하려면 기존 호스트의 가상 머신에서 새 하드웨어를 배포하거나 Windows Server 2016을 설치합니다. 일부 새 기능은 Hyper-V를 실행하는 Windows Server 2016 물리적 호스트에서 가장 잘 작동합니다. <br>- [특정 역할 지침](https://technet.microsoft.com/windowsserver/jj554790)을 따릅니다.|
+|**Microsoft 서버 관리 및 애플리케이션 작업**|- 애플리케이션 업그레이드에는 Windows Server 2016으로의 *마이그레이션*이 포함되어야 합니다. [호환성 목록](Server-Application-Compatibility.md)을 참조하세요. <br>- Windows Server 2016으로의 업그레이드만(즉, 애플리케이션은 업그레이드하지 않음) 애플리케이션 관련 지침을 사용해야 합니다.|Windows Server 2016의 새 기능을 활용하려면 기존 호스트의 가상 머신에서 새 하드웨어를 배포하거나 Windows Server 2016을 설치합니다. 일부 새 기능은 Hyper-V를 실행하는 Windows Server 2016 물리적 호스트에서 가장 잘 작동합니다. 가능한 경우 마이그레이션 가이드를 따르세요. <br>- 또는 현재 OS를 그대로 유지하고 Windows Server 2016 호스트 또는 Microsoft Azure에서 실행되는 가상 머신에서 실행합니다. [Software Assurance](https://www.microsoft.com/Licensing/licensing-programs/software-assurance-default.aspx)를 통한 확장 지원 옵션에 대해 알아보려면 EA 대리점, TAM 또는 Microsoft에 문의하세요.|
+|**ISV 애플리케이션 작업**|- Windows Server 2016으로의 업그레이드에는 애플리케이션 관련 지침을 사용해야 합니다. <br>- 타사 애플리케이션과 Windows Server 호환성에 대한 자세한 내용을 보려면 [Windows Server 로고 인증 포털](https://msdn.microsoft.com/enterprisecloudcertified)을 방문하세요.|Windows Server 2016의 새 기능을 활용하려면 기존 호스트의 가상 머신에서 새 하드웨어를 배포하거나 Windows Server 2016을 설치합니다. 일부 새 기능은 Hyper-V를 실행하는 Windows Server 2016 물리적 호스트에서 가장 잘 작동합니다. 가능한 경우 마이그레이션 가이드를 따르세요. <br>- 또는 현재 OS를 그대로 유지하고 Windows Server 2016 호스트 또는 Microsoft Azure에서 실행되는 가상 머신에서 실행합니다. [Software Assurance](https://www.microsoft.com/Licensing/licensing-programs/software-assurance-default.aspx)를 통한 확장 지원 옵션에 대해 알아보려면 EA 대리점, TAM 또는 Microsoft에 문의하세요.|
+|**사용자 지정 애플리케이션 작업**|- Windows Server 2016의 호환성 및 업그레이드 지침에 대해서는 애플리케이션 개발자에게 문의하세요. <br>- 전환하기 전에 Microsoft Azure를 활용하여 Windows Server 2016에서 애플리케이션을 테스트하세요. <br>- 다음 섹션의 전체 옵션을 참조하세요.|- Windows Server 2016의 호환성 및 업그레이드 지침에 대해서는 애플리케이션 개발자에게 문의하세요. <br>- 전환하기 전에 Microsoft Azure를 활용하여 Windows Server 2016에서 애플리케이션을 테스트하세요. <br>Windows Server 2016의 새 기능을 활용하려면 기존 호스트의 가상 머신에서 새 하드웨어를 배포하거나 Windows Server 2016을 설치합니다. 일부 새 기능은 Hyper-V를 실행하는 Windows Server 2016 물리적 호스트에서 가장 잘 작동합니다. <br>- 다음 섹션의 전체 옵션을 참조하세요.|
 
 ## <a name="complete-options-for-moving-servers-running-custom-or-in-house-applications-on-older-versions-of-windows-server-to-windows-server-2016"></a>이전 버전의 Windows Server에서 사용자 지정 또는 “내부” 애플리케이션을 실행하는 서버를 Windows Server 2016으로 전환하기 위한 전체 옵션
 
@@ -49,7 +49,7 @@ ms.locfileid: "71391626"
 
     - Windows Server용 Software Assurance가 이미 있는 경우 [Azure 하이브리드 사용 혜택](https://azure.microsoft.com/pricing/hybrid-use-benefit/)을 통해 배포하면 비용을 절감할 수 있습니다. 
 
-- Windows Server용 [Software Assurance](https://www.microsoft.com/en-us/Licensing/licensing-programs/software-assurance-default.aspx) 프로그램은 새로운 버전 권한 혜택을 제공합니다. 기타 혜택 목록 외에도, Software Assurance가 있는 서버는 시기가 적절한 경우 새 라이선스를 구입하지 않고도 최신 버전의 Window Server로 업그레이드할 수 있습니다. 
+- Windows Server용 [Software Assurance](https://www.microsoft.com/Licensing/licensing-programs/software-assurance-default.aspx) 프로그램은 새로운 버전 권한 혜택을 제공합니다. 기타 혜택 목록 외에도, Software Assurance가 있는 서버는 시기가 적절한 경우 새 라이선스를 구입하지 않고도 최신 버전의 Window Server로 업그레이드할 수 있습니다. 
 
 ## <a name="additional-resources"></a>추가 리소스
 

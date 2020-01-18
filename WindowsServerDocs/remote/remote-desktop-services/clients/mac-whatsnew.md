@@ -9,16 +9,16 @@ ms.technology: remote-desktop-services
 ms.tgt_pltfrm: na
 ms.topic: article
 author: heidilohr
-manager: daveba
+manager: lizross
 ms.author: helohr
 ms.date: 01/06/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 614962cacbc29a26b0db246812ad17e24fc9859e
-ms.sourcegitcommit: fdb3412a6139ca62913606fa18036a91c093cd51
+ms.openlocfilehash: ef2a9966da7046a14fb1d9d4562f0ef9b1a09a45
+ms.sourcegitcommit: 76469d1b7465800315eaca3e0c7f0438fc3939ed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75688118"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919856"
 ---
 # <a name="whats-new-in-the-macos-client"></a>macOS 클라이언트의 새로운 기능
 

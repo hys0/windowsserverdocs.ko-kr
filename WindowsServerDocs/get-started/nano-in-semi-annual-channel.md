@@ -11,18 +11,18 @@ ms.date: 05/21/2019
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: a270334d-42a7-46ff-8eed-d8656a276544
-ms.openlocfilehash: c12ca84826a92fa045eb84b55e7406392161280b
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 2fb0e7f8f84addf6528fe9832735e3dd0f7b93cd
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66452797"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75947614"
 ---
 # <a name="changes-to-nano-server-in-windows-server-semi-annual-channel"></a>Windows Server 반기 채널의 Nano 서버 변경 사항
 
 >적용 대상: Windows Server, 반기 채널
 
-이미 Nano 서버, [Window Server 반기 채널](../get-started-19/servicing-channels-19.md)을 실행 중인 경우 CBB(비즈니스용 현재 분기) 모델에서 이전에 서비스되었으므로 이 서비스 모델은 친숙할 것입니다. Windows Server 반기 채널은 같은 모델의 새 이름일 뿐입니다. 이 모델에서는 Nano 서버의 기능 업데이트 릴리스가 1년에 2~3회로 예상됩니다.
+이미 Nano 서버, [Window Server 반기 채널](../get-started-19/servicing-channels-19.md)을 실행 중인 경우 CBB(비즈니스용 현재 분기) 모델에서 이전에 서비스되었으므로 이 서비스 모델은 친숙할 것입니다. Windows Server 반기 채널은 같은 모델의 새 이름일 뿐입니다. 이 모델에서는 Nano Server의 기능 업데이트 릴리스가 1년에 2~3회로 예상됩니다.
 
 그러나 Windows Server, 버전 1803부터 **컨테이너 기본 OS 이미지**로만 Nano 서버를 사용할 수 있습니다. Windows Server의 Server Core 설치와 같은 컨테이너 호스트의 컨테이너로만 Nano 서버를 실행해야 합니다. 이 릴리스에서 Nano 서버를 기반으로 컨테이너를 실행하는 작업은 다음과 같은 방법으로 이전 버전과 다릅니다.
 
@@ -35,5 +35,5 @@ ms.locfileid: "66452797"
 
 ## <a name="related-topics"></a>관련 항목
 
-- [Windows 컨테이너 설명서](http://aka.ms/windowscontainers)
+- [Windows 컨테이너 설명서](https://aka.ms/windowscontainers)
 - [Windows Server 반기 채널 개요](../get-started-19/servicing-channels-19.md)

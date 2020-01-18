@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: fd7857251b0b6a943f2eea33f56732ec57e7e8d1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e8518fffc4f271369b13899e149ebd30145726b8
+ms.sourcegitcommit: 51e0b575ef43cd16b2dab2db31c1d416e66eebe8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71375485"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76259030"
 ---
 # <a name="if"></a>if
 
@@ -48,19 +48,19 @@ if defined <Variable> <Command> [else <Expression>]
 |-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |           not           |                                                                                                                                                                              명령이 실행 되도록 조건이 false 인 경우에 지정 합니다.                                                                                                                                                                              |
 |  errorlevel \<Number >   |                                                                                                                                                      보다 크거나 같은 Cmd.exe 실행 이전 프로그램에서 종료 코드를 반환 하는 경우에 참인 조건을 지정 *번호*합니다.                                                                                                                                                       |
-|       \<Command >        |                                                                                                                                                                            앞의 조건을 충족 하는 경우 실행 되도록 하는 명령을 지정 합니다.                                                                                                                                                                             |
-|  \<String1 > = = <String2>  |                                                                                                             경우에만 true 조건 지정 *String1* 및 *String2* 동일 합니다. 이러한 값은 리터럴 문자열이 나 일괄 처리 변수 (예: %1) 수 있습니다. 리터럴 문자열을 따옴표로 묶습니다 필요가 없습니다.                                                                                                              |
-|    \< 파일 이름 >    |                                                                                                                                                                                       지정 된 파일 이름이 있는 경우 참인 조건을 지정 합니다.                                                                                                                                                                                        |
+|       \<명령 >        |                                                                                                                                                                            앞의 조건을 충족 하는 경우 실행 되도록 하는 명령을 지정 합니다.                                                                                                                                                                             |
+|  \<String1 > = =<String2>  |                                                                                                             경우에만 true 조건 지정 *String1* 및 *String2* 동일 합니다. 이러한 값은 리터럴 문자열이 나 일괄 처리 변수 (예: %1) 수 있습니다. 리터럴 문자열을 따옴표로 묶습니다 필요가 없습니다.                                                                                                              |
+|    파일 이름 \<있습니다 >    |                                                                                                                                                                                       지정 된 파일 이름이 있는 경우 참인 조건을 지정 합니다.                                                                                                                                                                                        |
 |      \<CompareOp >       |                                                                               세 문자로 비교 연산자를 지정합니다. 다음은 유효한 값을 나타내는 *CompareOp*:</br>**EQU** 같음</br>**NEQ** 같지 않음</br>**LSS** 미만</br>**LEQ** 값 보다 작거나 같음</br>**GTR** 보다 큼</br>**GEQ** 보다 크거나 같은 경우                                                                                |
 |           /i            |                                                            강제로 문자열 대/소문자를 비교 합니다.  사용할 수 있습니다 **/i** 에 <em>String1</em> **==** <em>String2</em> 형태의 **경우**합니다. 이러한 비교는 일반, 있는 경우 두 *String1* 및 *String2* 자리 숫자 이루어져 있습니다만, 문자열을 숫자로 변환 됩니다 및 숫자 비교를 수행 합니다.                                                            |
 | cmdextversion \<Number > | 내부 버전 번호를 지정 된 숫자 보다 크거나 연결 Cmd.exe의 기능은 같은 명령 확장 된 경우에만 참이 지정 합니다. 첫 번째 버전은 1입니다. 명령 확장에 중요 한 향상 된 기능을 추가할 때 1 씩 증가 합니다. **cmdextversion** 조건부가 true 되지 명령을 경우 (기본적으로 확장을 사용 하는 명령) 확장을 사용할 수 있습니다. |
-|   정의 된 \<Variable >   |                                                                                                                                                                                            경우에 true 조건을 지정 *변수* 정의 됩니다.                                                                                                                                                                                            |
-|      \<Expression >      |                                                                                                                                                                   명령에 전달 되는 명령줄 명령 및 매개 변수를 지정 된 **다른** 절.                                                                                                                                                                   |
+|   정의 된 \<변수 >   |                                                                                                                                                                                            경우에 true 조건을 지정 *변수* 정의 됩니다.                                                                                                                                                                                            |
+|      \<식 >      |                                                                                                                                                                   명령에 전달 되는 명령줄 명령 및 매개 변수를 지정 된 **다른** 절.                                                                                                                                                                   |
 |           /?            |                                                                                                                                                                                                    명령 프롬프트에 도움말을 표시합니다.                                                                                                                                                                                                    |
 
 ## <a name="remarks"></a>설명
 
--   조건에 지정 된 경우는 **경우** 절 true 이면 조건이 다음에 나오는 명령이 실행 됩니다. 조건이 false 인 경우 명령에는 경우 절이 무시 되 고 명령에 지정 된 모든 명령이 실행는 **다른** 절.
+-   **If** 절에 지정 된 조건이 true 이면 조건 다음에 오는 명령이 수행 됩니다. 조건이 false 이면 **if** 절의 명령이 무시 되 고 명령이 **else** 절에 지정 된 명령을 실행 합니다.
 -   프로그램이 중지 되 면 종료 코드를 반환 합니다. 종료 코드를 조건으로 사용 하려면 **errorlevel**합니다.
 -   사용 하는 경우 **정의**, 다음과 같은 세 개의 변수는 환경에 추가 됩니다: **%errorlevel%** , **%cmdcmdline%** , 및 **%cmdextversion%** 합니다.  
     -   **%errorlevel%** ERRORLEVEL 환경 변수의 현재 값의 문자열 표현으로 확장 됩니다. 이 있다고 가정 하지 ERRORLEVEL 이름의 기존 환경 변수-없는 경우, 받습니다 ERRORLEVEL 값을 대신 합니다.
@@ -68,7 +68,7 @@ if defined <Variable> <Command> [else <Expression>]
     -   **%cmdextversion%** 의 현재 값의 문자열 표현으로 확장 **cmdextversion**합니다. 이 있다고 가정 하지 CMDEXTVERSION 이름의 기존 환경 변수-없는 경우, 받습니다 CMDEXTVERSION 값 대신 합니다.
 -   사용 해야는 **다른** 절 뒤의 명령과 동일한 줄에는 **경우**합니다.
 
-## <a name="BKMK_examples"></a>예와
+## <a name="BKMK_examples"></a>예제
 
 메시지를 표시 하려면 "데이터 파일을 찾을 수 없습니다" 파일 Product.dat을 찾을 수 없는 입력 합니다.
 ```
@@ -102,9 +102,10 @@ echo The Product.dat file is missing.
 > ```
 > goto answer%errorlevel%
 > :answer1
-> echo Program had return code 1
+> echo The program returned error level 1
+> goto end
 > :answer0
-> echo Program had return code 0
+> echo The program returned error level 0
 > goto end
 > :end
 > echo Done! 
@@ -118,6 +119,6 @@ echo The Product.dat file is missing.
 
 [명령줄 구문 키](command-line-syntax-key.md)
 
-[때](if.md)
+[If](if.md)
 
 [Goto](goto.md)

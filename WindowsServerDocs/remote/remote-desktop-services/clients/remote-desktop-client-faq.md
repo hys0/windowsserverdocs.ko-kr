@@ -14,12 +14,12 @@ manager: dongill
 ms.author: elizapo
 ms.date: 07/16/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 54ed455955053ebb234864f827759385ecf3d3c5
-ms.sourcegitcommit: 73898afec450fb3c2f429ca373f6b48a74b19390
+ms.openlocfilehash: 8ab42d7781c547d516a51c89e9c8ecba0ff72ad6
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71935031"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950438"
 ---
 # <a name="frequently-asked-questions-about-the-remote-desktop-clients"></a>원격 데스크톱 클라이언트에 대한 질문과 대답
 
@@ -67,7 +67,7 @@ Windows 10에 대해 다음을 수행 합니다.
 특정 사용자에게 이 PC에 액세스할 수 있는 권한을 부여할 수 있습니다. 그러려면 **이 PC에 원격으로 액세스할 수 있는 사용자 선택**을 클릭합니다.
 관리자 그룹의 구성원에게는 자동으로 액세스 권한이 부여됩니다.
 
-Windows 8.1에서 원격 연결을 허용 하도록 지침을 따릅니다 [원격 데스크톱 연결을 사용 하 여 다른 데스크톱에 연결](https://support.microsoft.com/en-us/help/17463/windows-7-connect-to-another-computer-remote-desktop-connection#1TC=windows-8)합니다.
+Windows 8.1에서 원격 연결을 허용 하도록 지침을 따릅니다 [원격 데스크톱 연결을 사용 하 여 다른 데스크톱에 연결](https://support.microsoft.com/help/17463/windows-7-connect-to-another-computer-remote-desktop-connection#1TC=windows-8)합니다.
 
 
 
@@ -214,7 +214,7 @@ Mac 자판 배열을 키보드 (예를 들어 프랑스어)의 Mac 버전으로 
 2. 사용 하려는 언어를 추가 합니다. 지역 및 언어 창을 닫습니다.
 3. 이제 원격 세션에서 언어 간을 전환 하는 기능이 표시 됩니다. (오른쪽에서 시계 근처 원격 세션의.) 언어를 전환 하려면 클릭 (예: **Eng**).
 
-닫고 적용 되려면 바로 변경 내용에 대 한 현재 사용 중인 응용 프로그램을 다시 시작 해야 합니다.
+닫고 적용 되려면 바로 변경 내용에 대 한 현재 사용 중인 애플리케이션을 다시 시작 해야 합니다.
 
 
 ## <a name="specific-errors"></a>특정 오류

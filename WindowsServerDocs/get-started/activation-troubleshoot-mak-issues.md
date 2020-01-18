@@ -9,12 +9,12 @@ author: Teresa-Motiv
 ms.author: v-tea
 manager: dcscontentpm
 ms.localizationpriority: medium
-ms.openlocfilehash: 25fa6d32571597136580afe062aa8d9c7e2d82b7
-ms.sourcegitcommit: 9855d6b59b1f8722f39ae74ad373ce1530da0ccf
+ms.openlocfilehash: 5ed934e52b11db5b83948ba995eaf31e9ff2cce3
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71962989"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75947622"
 ---
 # <a name="mak-activation-known-issues"></a>MAK 정품 인증: 알려진 문제
 
@@ -26,7 +26,7 @@ ms.locfileid: "71962989"
 
 ## <a name="the-computer-does-not-activate-over-the-internet"></a>컴퓨터가 인터넷을 통해 활성화되지 않습니다.
 
-필요한 포트가 방화벽에 열려 있는지 확인합니다. 포트 목록은 [볼륨 정품 인증 배포 가이드](http://go.microsoft.com/fwlink/?linkid=150083)를 참조하세요.
+필요한 포트가 방화벽에 열려 있는지 확인합니다. 포트 목록은 [볼륨 정품 인증 배포 가이드](https://go.microsoft.com/fwlink/?linkid=150083)를 참조하세요.
 
 ## <a name="internet-and-telephone-activation-fail"></a>인터넷 및 전화 정품 인증 실패
 

@@ -7,16 +7,16 @@ ms.topic: landing-page
 ms.author: DavSo; Ericam; YaShi
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 8b86bf779a4ea9d67f959dacf125a98a8e26a729
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 5658a101371cf3b865dec04ac76716b536792602
+ms.sourcegitcommit: c5709021aa98abd075d7a8f912d4fd2263db8803
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75947131"
+ms.lasthandoff: 01/18/2020
+ms.locfileid: "76265705"
 ---
 # <a name="tuning-iis-100"></a>IIS 10.0 조정
 
-인터넷 정보 서비스 (IIS) 10.0는 Windows ServerÂ 2016에 포함 되어 있습니다. IIS 8.5 및 IIS 7.0와 유사한 프로세스 모델을 사용 합니다. 커널 모드 웹 드라이버 (http.sys)는 HTTP 요청을 받아서 라우팅합니다. 응답 캐시의 요청을 충족 합니다. 작업자 프로세스는 URL 하위 공간을 등록 하 고 http.sys는 해당 프로세스 (또는 응용 프로그램 풀에 대 한 프로세스 집합)로 요청을 라우팅합니다.
+인터넷 정보 서비스 (IIS) 10.0는 Windows Server 2016에 포함 되어 있습니다. IIS 8.5 및 IIS 7.0와 유사한 프로세스 모델을 사용 합니다. 커널 모드 웹 드라이버 (http.sys)는 HTTP 요청을 받아서 라우팅합니다. 응답 캐시의 요청을 충족 합니다. 작업자 프로세스는 URL 하위 공간을 등록 하 고 http.sys는 해당 프로세스 (또는 응용 프로그램 풀에 대 한 프로세스 집합)로 요청을 라우팅합니다.
 
 Http.sys는 연결 관리 및 요청 처리를 담당 합니다. 요청은 http.sys 캐시에서 제공 되거나 추가 처리를 위해 작업자 프로세스로 전달 될 수 있습니다. 여러 작업자 프로세스를 구성 하 여 비용을 줄일 수 있습니다. 요청 처리의 작동 방식에 대 한 자세한 내용은 다음 그림을 참조 하세요.
 

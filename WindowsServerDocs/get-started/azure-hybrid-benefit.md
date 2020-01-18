@@ -8,12 +8,12 @@ ms.topic: article
 author: greg-lindsay
 ms.author: greg-lindsay
 ms.localizationpriority: high
-ms.openlocfilehash: 187abe06b469abe511d4bbbfb0aac9237d3c650a
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 946c1266f1c2cdc78cedac6794abb9f8d26696cd
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70868516"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75947705"
 ---
 # <a name="azure-hybrid-benefit-for-windows-server"></a>Windows Server의 Azure 하이브리드 혜택
 
@@ -84,7 +84,7 @@ Windows Server에 대한 Azure 하이브리드 혜택 구독을 통해 배포된
 
 라이선스 위치에 대한 포괄적인 보기를 생성하려면 소유하고 있는 각 구독마다 인벤토리를 수행해야 합니다.
 
-[Azure 하이브리드 혜택 WS SA 개수 도구](http://download.microsoft.com/download/7/1/2/712FEFF0-155C-4ABF-96C0-CE4EC4DB0516/Azure_Hybrid_Benefit_Windows_Server_SA_Count_Tool.xlsx)
+[Azure 하이브리드 혜택 WS SA 개수 도구](https://download.microsoft.com/download/7/1/2/712FEFF0-155C-4ABF-96C0-CE4EC4DB0516/Azure_Hybrid_Benefit_Windows_Server_SA_Count_Tool.xlsx)
 
 위와 같이 인벤토리를 수행하고 실행 중인 Azure 하이브리드 혜택 인스턴스의 수에 대해 완전히 사용 허가를 받았음을 확인한 경우에는 더 이상의 추가 조치가 필요하지 않습니다. VM 수를 늘려가며 이 혜택을 적용할 수 있음을 확인했다면 전체 비용을 지불하기 보다 혜택이 적용 중인 인스턴스로 전환하여 추가적으로 비용을 최적화하고 싶을 수 있습니다.
 
@@ -95,7 +95,7 @@ Windows Server Software Assurance 및 구독은 다음과 같은 Microsoft 라�
 | 채널                      | 열기     | OVS      | 선택/추가 선택  | MPSA       | EA/EAS   |
 |------------------------------|----------|----------|-----------------------|-----------|----------|
 | 일반적인 크기(디바이스 수)  | 5-250    | 5-250    | >250                  | >250      | >500     |
-| SA/구독            | 선택 사항 | 포함 | 선택 사항              | 선택 사항  | 포함 |
+| SA/구독            | 선택 | 포함 | 선택              | 선택  | 포함 |
 
 Microsoft는 Azure 하이브리드 혜택 사용량의 적격 여부를 확인하기 위해 언제든 최종 고객을 감사할 수 있는 권리가 있습니다. 
 

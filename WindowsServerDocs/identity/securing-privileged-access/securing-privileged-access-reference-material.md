@@ -9,12 +9,12 @@ ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: daveba
 ms.reviewer: mas
-ms.openlocfilehash: 56e1c028a9b18db7b23e8f04e943e4113837b66b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 16d711a288843163b134b0226ed4b8513d7070eb
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407223"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950051"
 ---
 # <a name="active-directory-administrative-tier-model"></a>Active Directory 관리 계층 모델
 
@@ -113,7 +113,7 @@ IT 인프라 및 ID 시스템의 경우 시스템이 설치된 하드웨어, 시
    - 가능한 경우 별도의 인터넷 연결을 통해 보안 관계가 없는(동일한 도메인에 있지 않고 동일한 도구로 관리되지 않는) 두 개의 호스트에 다운로드합니다.
    - certutil과 같은 유틸리티를 사용하여 다운로드한 파일을 비교합니다. `certutil -hashfile <filename>`
 
-가능한 경우 응용 프로그램 설치 관리자 및 도구와 같은 모든 응용 프로그램 소프트웨어는 디지털로 서명되어야 하며, 해지 확인과 함께 [Windows Sysinternals](https://www.microsoft.com/sysinternals) 도구인 *sigcheck.exe*를 통해 Windows Authenticode를 사용하여 확인해야 합니다. 공급업체에서 이러한 종류의 디지털 서명을 제공하지 않는 경우 일부 소프트웨어가 필요할 수 있습니다.
+가능한 경우 애플리케이션 설치 관리자 및 도구와 같은 모든 애플리케이션 소프트웨어는 디지털로 서명되어야 하며, 해지 확인과 함께 [Windows Sysinternals](https://www.microsoft.com/sysinternals) 도구인 *sigcheck.exe*를 통해 Windows Authenticode를 사용하여 확인해야 합니다. 공급업체에서 이러한 종류의 디지털 서명을 제공하지 않는 경우 일부 소프트웨어가 필요할 수 있습니다.
 
 ### <a name="software-storage-and-transfer"></a>소프트웨어 스토리지 및 전송
 
@@ -139,7 +139,7 @@ Active Directory와 같은 ID 시스템에 종속된 자산이 많기 때문에 
 
 ![Active Directory 및 도메인 컨트롤러가 종속된 시스템 수를 최소화해야 함을 보여 주는 다이어그램](../media/securing-privileged-access-reference-material/PAW_RM_Fig010.JPG)
 
-Active Directory의 주요 위험 강화에 대한 자세한 내용은 [이 페이지](http://aka.ms/hardenAD)를 참조하세요.
+Active Directory의 주요 위험 강화에 대한 자세한 내용은 [이 페이지](https://aka.ms/hardenAD)를 참조하세요.
 
 ## <a name="operational-standards-based-on-clean-source-principle"></a>클린 소스 원칙을 기반으로 하는 운영 표준
 
@@ -168,12 +168,12 @@ Active Directory의 주요 위험 강화에 대한 자세한 내용은 [이 페�
 - 관리할 모든 워크스테이션이 Windows 7 이상을 실행하고 RDP RestrictedAdmin 모드를 사용하도록 설정되어 있습니다.
 
    > [!NOTE]
-   > RDP RestrictedAdmin 모드를 사용하도록 설정하려면 [이 페이지](http://aka.ms/RDPRA)를 참조하세요.
+   > RDP RestrictedAdmin 모드를 사용하도록 설정하려면 [이 페이지](https://aka.ms/RDPRA)를 참조하세요.
 
 - 스마트 카드를 사용할 수 있으며 모든 관리 계정에 발급되어 있습니다.
 - 각 도메인에 대한 *Builtin\Administrator*가 응급 액세스 계정으로 지정되어 있습니다.
 - 엔터프라이즈 ID 관리 솔루션이 배포되어 있습니다.
-- 로컬 관리자 계정 암호를 관리할 서버 및 워크스테이션 [LAPS](http://aka.ms/laps)가 배포되어 있습니다.
+- 로컬 관리자 계정 암호를 관리할 서버 및 워크스테이션 [LAPS](https://aka.ms/laps)가 배포되어 있습니다.
 - Microsoft Identity Manager와 같은 권한 있는 액세스 관리 솔루션이 있거나 도입할 계획이 있습니다.
 - 보안 경고를 모니터링하고 응답할 직원이 할당되어 있습니다.
 - Microsoft 보안 업데이트를 신속하게 적용할 수 있는 기술을 사용할 수 있습니다.
@@ -314,7 +314,7 @@ CAB(변경 자문 위원회)는 조직의 보안 프로필에 영향을 줄 수 
 > [!NOTE]
 > 대화형으로 호스트에 로그온하면 해당 호스트의 자격 증명에 대한 제어 권한이 부여되기 때문입니다.
 >
-> 로그온 유형, 일반 관리 도구 및 자격 증명 노출에 대한 자세한 내용은 [관리 도구 및 로그온 유형](http://aka.ms/admintoolsecurity)을 참조하세요.
+> 로그온 유형, 일반 관리 도구 및 자격 증명 노출에 대한 자세한 내용은 [관리 도구 및 로그온 유형](https://aka.ms/admintoolsecurity)을 참조하세요.
 
 ##### <a name="use-of-approved-support-technology-and-methods"></a>승인된 지원 기술 및 방법 사용
 
@@ -330,7 +330,7 @@ CAB(변경 자문 위원회)는 조직의 보안 프로필에 영향을 줄 수 
 이 시나리오에는 다음 방식을 적용해야 합니다.
 
 - **원격 서버 지원** - 서버에 원격으로 액세스할 때 계층 0 관리자는 다음 지침을 따라야 합니다.
-  - **기본(도구)** - 네트워크 로그온(유형 3)을 사용하는 원격 도구입니다. 자세한 내용은 [관리 도구 및 로그온 유형](http://aka.ms/admintoolsecurity)을 참조하세요.
+  - **기본(도구)** - 네트워크 로그온(유형 3)을 사용하는 원격 도구입니다. 자세한 내용은 [관리 도구 및 로그온 유형](https://aka.ms/admintoolsecurity)을 참조하세요.
   - **기본(대화형)** - 관리 워크스테이션에서 도메인 계정으로 RDP RestrictedAdmin 또는 표준 RDP 세션을 사용합니다.
 
     > [!NOTE]
@@ -366,7 +366,7 @@ CAB(변경 자문 위원회)는 조직의 보안 프로필에 영향을 줄 수 
    - **기본** - 도구 없이 "자격 증명 입력" 지원을 제공할 수 있습니다.
    - **사용할 수 없음** - 이 시나리오에서는 도메인 계정 관리 자격 증명으로 로그온할 수 없습니다. 관리 권한이 필요한 경우 데스크 측 워크스테이션 지원으로 전환합니다.
 - **원격 사용자 지원** - 계층 2 지원 담당자가 실제로 사용자에게 원격으로 연결됩니다.
-   - **기본** - 원격 지원, 비즈니스용 Skype 또는 유사한 사용자 화면 공유를 사용할 수 있습니다. 자세한 내용은 [Windows 원격 지원이란?](https://windows.microsoft.com/en-us/windows/what-is-windows-remote-assistance)을 참조하세요.
+   - **기본** - 원격 지원, 비즈니스용 Skype 또는 유사한 사용자 화면 공유를 사용할 수 있습니다. 자세한 내용은 [Windows 원격 지원이란?](https://windows.microsoft.com/windows/what-is-windows-remote-assistance)을 참조하세요.
    - **사용할 수 없음** - 이 시나리오에서는 도메인 계정 관리 자격 증명으로 로그온할 수 없습니다. 관리 권한이 필요한 경우 워크스테이션 지원으로 전환합니다.
 - **워크스테이션 지원** - 워크스테이션 유지 관리를 수행하거나 로그 확인, 소프트웨어 설치, 드라이버 업데이트 등을 위해 시스템에 액세스해야 하는 문제 해결 작업을 수행합니다.
    - **데스크 측 워크스테이션 지원** - 계층 2 지원 담당자가 실제로 사용자의 워크스테이션에 있습니다.
@@ -489,7 +489,7 @@ Microsoft Azure 및 Office 365와 같은 클라우드 서비스에서 관리 권
 
 - **워크스테이션 강화** - [PAW(Privileged Access Workstation)](../securing-privileged-access/privileged-access-workstations.md)를 사용하여 관리 워크스테이션을 구축(3단계)하되, 도메인 구성원 자격을 프로덕션 환경 대신 관리 포리스트로 변경합니다.
 - **서버 및 DC 강화** - 관리 포리스트의 모든 도메인 컨트롤러 및 서버에 대해 다음을 수행합니다.
-   - [설치 미디어에 대한 클린 소스](http://aka.ms/cleansource)의 지침을 사용하여 모든 미디어의 유효성을 검사해야 합니다.
+   - [설치 미디어에 대한 클린 소스](https://aka.ms/cleansource)의 지침을 사용하여 모든 미디어의 유효성을 검사해야 합니다.
    - 관리 포리스트 서버에 최신 운영 체제가 설치되어 있어야 합니다(프로덕션에서는 가능하지 않음).
    - 관리 포리스트 호스트는 보안 업데이트로 자동 업데이트해야 합니다.
 
@@ -523,7 +523,7 @@ Microsoft Azure 및 Office 365와 같은 클라우드 서비스에서 관리 권
    - 공격 노출 영역 분석을 통해 새 소프트웨어 설치 중에 Windows에 새로운 공격 벡터가 발생하지 않도록 합니다.
 
       > [!NOTE]
-      > [ASA(Attack Surface Analyzer)](https://www.microsoft.com/en-us/download/details.aspx?id=24487)와 같은 도구를 사용하면 호스트의 구성 설정을 평가하고 소프트웨어 또는 구성 변경으로 인해 공격 벡터를 식별하는 데 도움이 됩니다.
+      > [ASA(Attack Surface Analyzer)](https://www.microsoft.com/download/details.aspx?id=24487)와 같은 도구를 사용하면 호스트의 구성 설정을 평가하고 소프트웨어 또는 구성 변경으로 인해 공격 벡터를 식별하는 데 도움이 됩니다.
 
 - 계정 강화
    - 하나의 계정을 제외하고 관리 포리스트의 모든 계정에 대해 다단계 인증을 구성해야 합니다. 다단계 인증 프로세스가 중단된 경우 액세스가 작동하도록 최소 하나의 관리 계정은 암호를 기반으로 해야 합니다. 이 계정은 엄격한 물리적 제어 프로세스에 의해 보호되어야 합니다.
@@ -575,25 +575,25 @@ Microsoft Azure 및 Office 365와 같은 클라우드 서비스에서 관리 권
 |RUNAS/네트워크|새 자격 증명|v|로컬 액세스를 위해 현재 LSA 세션을 복제하지만 네트워크 리소스에 연결할 때 새 자격 증명을 사용합니다.|
 |원격 데스크톱(성공)|원격 대화형|v|원격 데스크톱 클라이언트가 로컬 서비스 및 리소스를 공유하도록 구성된 경우 해당 로컬 서비스 및 리소스도 손상될 수 있습니다.|
 |원격 데스크톱(실패- 로그온 유형 거부)|원격 대화형|-|기본적으로 RDP 로그온에 실패한 경우 자격 증명은 잠깐 동안만 저장됩니다. 컴퓨터가 손상된 경우에는 그렇지 않을 수 있습니다.|
-|Net use * \\\SERVER|네트워크|-||
-|Net use * \\\SERVER /u:user|네트워크|-||
-|원격 컴퓨터에 대한 MMC 스냅인|네트워크|-|예제: 컴퓨터 관리, 이벤트 뷰어, 디바이스 관리자, 서비스|
-|PowerShell WinRM|네트워크|-|예제: Enter-PSSession 서버|
+|Net use * \\\SERVER|Network (네트워크)|-||
+|Net use * \\\SERVER /u:user|Network (네트워크)|-||
+|원격 컴퓨터에 대한 MMC 스냅인|Network (네트워크)|-|예제: 컴퓨터 관리, 이벤트 뷰어, 디바이스 관리자, 서비스|
+|PowerShell WinRM|Network (네트워크)|-|예제: Enter-PSSession 서버|
 |CredSSP 사용 PowerShell WinRM|네트워크 일반 텍스트|v|New-PSSession 서버<br />-Authentication Credssp<br />-Credential cred|
-|PsExec(명시적 자격 증명 사용 안 함)|네트워크|-|예제: PsExec \\\server cmd|
+|PsExec(명시적 자격 증명 사용 안 함)|Network (네트워크)|-|예제: PsExec \\\server cmd|
 |PsExec(명시적 자격 증명 사용)|네트워크 + 대화형|v|PsExec \\\server -u user -p pwd cmd<br />여러 로그온 세션을 만듭니다.|
-|원격 레지스트리|네트워크|-||
-|원격 데스크톱 게이트웨이|네트워크|-|원격 데스크톱 게이트웨이를 인증합니다.|
+|원격 레지스트리|Network (네트워크)|-||
+|원격 데스크톱 게이트웨이|Network (네트워크)|-|원격 데스크톱 게이트웨이를 인증합니다.|
 |예약된 작업|Batch (배치)|v|암호가 디스크에 LSA 암호로도 저장됩니다.|
 |서비스로 도구 실행|서비스|v|암호가 디스크에 LSA 암호로도 저장됩니다.|
-|취약점 스캐너|네트워크|-|대부분의 스캐너는 기본적으로 네트워크 로그온을 사용하지만 일부 공급업체는 비 네트워크 로그온을 구현하여 자격 증명 도난 위험을 증가시킬 수 있습니다.|
+|취약점 스캐너|Network (네트워크)|-|대부분의 스캐너는 기본적으로 네트워크 로그온을 사용하지만 일부 공급업체는 비 네트워크 로그온을 구현하여 자격 증명 도난 위험을 증가시킬 수 있습니다.|
 
 웹 인증의 경우 아래 표의 참조를 사용합니다.
 
 |연결 방법|로그온 유형|대상에서 자격 증명 재사용 가능|설명|
 |-----------|-------|--------------------|------|
 |IIS "기본 인증"|네트워크 일반 텍스트<br />(IIS 6.0 이상)<br /><br />Interactive (대화형)<br />(IIS 6.0 이전)|v||
-|IIS "Windows 통합 인증"|네트워크|-|NTLM 및 Kerberos 공급자입니다.|
+|IIS "Windows 통합 인증"|Network (네트워크)|-|NTLM 및 Kerberos 공급자입니다.|
 
 열 정의:
 
@@ -615,7 +615,7 @@ Windows 기반 컴퓨터에서는 사용되는 인증 프로토콜 또는 인증
 |로그온 유형|#|허용되는 인증자|LSA 세션에서 다시 사용할 수 있는 자격 증명|예|
 |-------|---|--------------|--------------------|------|
 |대화형(즉, 로컬로 로그온)|2|암호, 스마트 카드,<br />기타|예|콘솔 로그온<br />RUNAS;<br />하드웨어 원격 제어 솔루션(예: 네트워크 KVM 또는 원격 액세스/서버의 Lights-Out 카드)<br />IIS 기본 인증(IIS 6.0 이전)|
-|네트워크|3|암호,<br />NT 해시,<br />Kerberos 티켓|아니요(단, 위임이 사용되는 경우 Kerberos 티켓이 있음)|NET USE<br />RPC 호출<br />원격 레지스트리<br />IIS Windows 통합 인증<br />SQL Windows 인증|
+|Network (네트워크)|3|암호,<br />NT 해시,<br />Kerberos 티켓|아니요(단, 위임이 사용되는 경우 Kerberos 티켓이 있음)|NET USE<br />RPC 호출<br />원격 레지스트리<br />IIS Windows 통합 인증<br />SQL Windows 인증|
 |Batch (배치)|4|암호(일반적으로 LSA 암호로 저장됨)|예|예약형 작업|
 |서비스|5|암호(일반적으로 LSA 암호로 저장됨)|예|Windows 서비스|
 |네트워크 일반 텍스트|8|암호|예|IIS 기본 인증(IIS 6.0 이상)<br />Windows PowerShell(CredSSP 사용)|

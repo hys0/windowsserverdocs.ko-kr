@@ -14,12 +14,12 @@ author: jaimeo
 ms.author: jaimeo
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: 155e828c77670c7c489b334ec3e7c49aa0809d4d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9e8b0c04137ff3b11cdaa7aba3c7899ca6300848
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391621"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75947747"
 ---
 # <a name="system-requirements"></a>시스템 요구 사항
 
@@ -35,7 +35,7 @@ ms.locfileid: "71391621"
 
 
 ## <a name="review-system-requirements"></a>시스템 요구 사항 검토  
-다음은 Windows Server 2016 설치를 위한 예상되는 시스템 요구 사항입니다. 컴퓨터의 사양이 "최소" 요구 사항보다 낮으면 이 제품을 제대로 설치할 수 없습니다. 실제 요구 사항은 사용자가 설치하는 응용 프로그램과 기능 및 시스템 구성에 따라 달라질 수 있습니다.
+다음은 Windows Server 2016 설치를 위한 예상되는 시스템 요구 사항입니다. 컴퓨터의 사양이 "최소" 요구 사항보다 낮으면 이 제품을 제대로 설치할 수 없습니다. 실제 요구 사항은 사용자가 설치하는 애플리케이션과 기능 및 시스템 구성에 따라 달라질 수 있습니다.
 
 달리 지정되지 않는 경우 이러한 최소 시스템 요구 사항은 모든 설치 옵션(Server Core, 데스크톱 환경 포함 서버, Nano 서버)과 Standard 및 Datacenter 버전에 적용됩니다.  
 
@@ -46,7 +46,7 @@ ms.locfileid: "71391621"
 ## <a name="processor"></a>프로세서  
 프로세서 성능은 프로세서의 클록 주파수뿐만 아니라 프로세서 코어의 수와 프로세서 캐시의 크기에 따라 달라집니다. 다음은 이 제품을 설치하기 위한 프로세서 요구 사항입니다.  
 
-**최소**:  
+**최소 요구 사항**:  
 - 1.4GHz 64비트 프로세서  
 - X64 호환 명령 집합  
 - NX 및 DEP 지원  
@@ -58,7 +58,7 @@ ms.locfileid: "71391621"
 ## <a name="ram"></a>RAM  
 다음은 이 제품 설치를 위해 예상되는 RAM 관련 요구 사항입니다.  
 
-**최소**:  
+**최소 요구 사항**:  
 - 512MB(데스크톱 환경 포함 서버 설치 옵션인 경우 2GB)
 - ECC(오류 수정 코드) 형식 또는 유사한 기술  
 
@@ -70,12 +70,12 @@ ms.locfileid: "71391621"
 > -   이 릴리스를 설치하려는 가상 머신에 800MB를 초과하는 RAM을 할당합니다. 설치가 완료되면 실제 서버 구성에 따라 할당 크기를 512MB RAM 정도로 변경할 수 있습니다.  
 > -   Shift+F10을 사용하여 가상 머신에서 이 릴리스의 부팅 프로세스를 중단합니다. 명령 프롬프트가 열리면 Diskpart.exe를 사용하여 설치 파티션을 만들고 포맷합니다. **Wpeutil createpagefile /path=C:\pf.sys** 를 실행합니다(만든 설치 파티션이 C:인 경우 예제). 명령 프롬프트를 닫고 설치를 계속 진행합니다.  
 
-## <a name="storage-controller-and-disk-space-requirements"></a>저장소 컨트롤러 및 디스크 공간 요구 사항  
+## <a name="storage-controller-and-disk-space-requirements"></a>스토리지 컨트롤러 및 디스크 공간 요구 사항  
 Windows Server 2016을 실행하는 컴퓨터에는 PCI Express 아키텍처 사양과 호환되는 스토리지 어댑터가 포함되어 있어야 합니다. 서버에서 하드 디스크 드라이브로 분류된 영구 스토리지 디바이스는 PATA가 아니어야 합니다. Windows Server 2016에서는 부팅, 페이지 또는 데이터 드라이브에 ATA/PATA/IDE/EIDE를 사용할 수 없습니다.  
 
 다음은 시스템 파티션을 위한 **최소** 예상 디스크 공간 요구 사항입니다.  
 
-**최소**: 32GB  
+**최소 요구 사항**: 32GB  
 
 > [!NOTE]
 > 32GB는 성공적인 설치의 *최소 절대*값으로 간주됩니다. 이 최소 설치를 사용하여 웹 서비스(IIS) 서버 역할을 포함하는 Server Core 모드에서 Windows Server 2016을 설치할 수 있습니다. Server Core 모드의 서버는 GUI 포함 서버 모드의 동일한 서버보다 약 4GB 작습니다. 
@@ -122,10 +122,10 @@ Windows Server 2016을 실행하는 컴퓨터에는 PCI Express 아키텍처 사
 > - TPM을 해제하는 UEFI 옵션은 요구 사항이 아닙니다.  
 
 ## <a name="installation-of-nano-server"></a>Nano Server 설치  
-Windows Server 2016을 Nano 서버로 설치하는 자세한 단계는 [Nano 서버 설치](Getting-Started-with-Nano-Server.md)를 참조하세요.
+Windows Server 2016을 Nano Server로 설치하는 자세한 단계는 [Nano Server 설치](Getting-Started-with-Nano-Server.md)를 참조하세요.
 
 ## <a name="additional-resources"></a>추가 리소스
 - [Windows 프로세서 요구 사항](https://docs.microsoft.com/windows-hardware/design/minimum/windows-processor-requirements)
 - [Windows Server 2016 Standard Edition과 Datacenter Edition의 비교](https://docs.microsoft.com/windows-server/get-started/2016-edition-comparison)
 - [Windows 10 시스템 요구 사항](https://www.microsoft.com/windows/windows-10-specifications#system-specifications)
-- [Windows Server 2016 라이선스 데이터 시트 다운로드](http://download.microsoft.com/download/7/2/9/7290EA05-DC56-4BED-9400-138C5701F174/WS2016LicensingDatasheet.pdf)
+- [Windows Server 2016 라이선스 데이터 시트 다운로드](https://download.microsoft.com/download/7/2/9/7290EA05-DC56-4BED-9400-138C5701F174/WS2016LicensingDatasheet.pdf)

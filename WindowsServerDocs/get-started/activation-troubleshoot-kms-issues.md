@@ -9,12 +9,12 @@ author: Teresa-Motiv
 ms.author: v-tea
 manager: dcscontentpm
 ms.localizationpriority: medium
-ms.openlocfilehash: dab8294837a5f9116328e59364de9beb139a4b77
-ms.sourcegitcommit: 9855d6b59b1f8722f39ae74ad373ce1530da0ccf
+ms.openlocfilehash: 110e3a685293c447d03158eac57d38fedd28b0cd
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71963009"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75948311"
 ---
 # <a name="kms-activation-known-issues"></a>KMS 정품 인증: 알려진 문제
 
@@ -35,7 +35,7 @@ KMS 클라이언트 컴퓨터에서 **시스템** 제어판을 열고, **Windows
 
 ## <a name="the-kms-client-computer-does-not-activate"></a>KMS 클라이언트 컴퓨터가 정품 인증되지 않음
 
-KMS 정품 인증 임계값이 충족되었는지 확인합니다. KMS 호스트 컴퓨터에서 Slmgr.vbs를 실행하고, **/dli** 명령줄 옵션을 사용하여 호스트의 현재 개수를 확인합니다. KMS 호스트의 개수가 25개일 때까지 Windows 7 클라이언트 컴퓨터를 정품 인증할 수 없습니다. Windows Server 2008 R2 KMS 클라이언트를 정품 인증하려면 KMS 수가 5여야 합니다. KMS 요구 사항에 대한 자세한 내용은 [볼륨 정품 인증 계획 가이드](http://go.microsoft.com/fwlink/?linkid=155926)를 참조하세요. 
+KMS 정품 인증 임계값이 충족되었는지 확인합니다. KMS 호스트 컴퓨터에서 Slmgr.vbs를 실행하고, **/dli** 명령줄 옵션을 사용하여 호스트의 현재 개수를 확인합니다. KMS 호스트의 개수가 25개일 때까지 Windows 7 클라이언트 컴퓨터를 정품 인증할 수 없습니다. Windows Server 2008 R2 KMS 클라이언트를 정품 인증하려면 KMS 수가 5여야 합니다. KMS 요구 사항에 대한 자세한 내용은 [볼륨 정품 인증 계획 가이드](https://go.microsoft.com/fwlink/?linkid=155926)를 참조하세요. 
 
 KMS 클라이언트 컴퓨터의 애플리케이션 이벤트 로그에서 12289 이벤트 ID를 확인합니다. 이 이벤트에서 다음 정보를 확인합니다.
 
@@ -86,4 +86,4 @@ KMS 키는 KMS 클라이언트가 아니라 KMS 호스트에만 설치해야 합
 
 KMS 호스트에서 오류가 발생하면 KMS 호스트 키를 새 호스트에 설치한 다음, 해당 호스트를 정품 인증해야 합니다. 새 KMS 호스트의 DNS 데이터베이스에 SRV RR이 있는지 확인합니다. 오류가 발생한 KMS 호스트와 동일한 컴퓨터 이름과 IP 주소를 사용하여 새 KMS 호스트를 설치하는 경우 새 KMS 호스트에서 오류가 발생한 호스트의 DNS SRV 레코드를 사용할 수 있습니다. 새 호스트의 컴퓨터 이름이 다른 경우 오류가 발생한 호스트의 DNS SRV RR을 수동으로 제거하거나, DNS에서 자동으로 제거하도록 할 수 있습니다(DNS에서 청소 기능을 사용하도록 설정한 경우). 네트워크에서 DDNS를 사용하는 경우 새 KMS 호스트에서 새 SRV RR을 DNS 서버에 자동으로 만듭니다. 그러면 새 KMS 호스트에서 클라이언트 갱신 요청 수집을 시작하고, KMS 정품 인증 임계값이 충족되는 즉시 클라이언트 정품 인증을 시작합니다.
 
-KMS 클라이언트에서 자동 검색을 사용하는 경우 원래 KMS 호스트에서 갱신 요청에 응답하지 않으면 다른 KMS 호스트를 자동으로 선택합니다. 클라이언트에서 자동 검색을 사용하지 않는 경우 **slmgr.vbs /skms**를 실행하여 오류가 발생한 KMS 호스트에 할당된 KMS 클라이언트 컴퓨터를 수동으로 업데이트해야 합니다. 이 시나리오를 방지하려면 자동 검색을 사용하도록 KMS 클라이언트를 구성합니다. 자세한 내용은 [볼륨 정품 인증 배포 가이드](http://go.microsoft.com/fwlink/?linkid=150083)를 참조하세요.
+KMS 클라이언트에서 자동 검색을 사용하는 경우 원래 KMS 호스트에서 갱신 요청에 응답하지 않으면 다른 KMS 호스트를 자동으로 선택합니다. 클라이언트에서 자동 검색을 사용하지 않는 경우 **slmgr.vbs /skms**를 실행하여 오류가 발생한 KMS 호스트에 할당된 KMS 클라이언트 컴퓨터를 수동으로 업데이트해야 합니다. 이 시나리오를 방지하려면 자동 검색을 사용하도록 KMS 클라이언트를 구성합니다. 자세한 내용은 [볼륨 정품 인증 배포 가이드](https://go.microsoft.com/fwlink/?linkid=150083)를 참조하세요.

@@ -14,12 +14,12 @@ manager: dongill
 ms.author: elizapo
 ms.date: 08/27/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 1512589315489f5bc351ff105a56694e0947463b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e73511709bfbee69a6dcbaaff4341c8b067079f3
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404133"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949861"
 ---
 # <a name="get-started-with-the-macos-client"></a>macOS 클라이언트 시작
 
@@ -169,7 +169,7 @@ Windows Server 2012 r 2에는 새 인증 방법, 원격 데스크톱 게이트�
 > [!IMPORTANT]
 > Windows 8.1 하기 전에 사용자 지정 인증 및 권한 부여 모델 위의 문서를 설명 하 고 있지만 지원 되지 않습니다.
 
-이 기능에 대해 자세히 알아보려면 [http://aka.ms/paa-sample](http://aka.ms/paa-sample)을 확인하세요.
+이 기능에 대해 자세히 알아보려면 [https://aka.ms/paa-sample](https://aka.ms/paa-sample)을 확인하세요.
 
 
 > [!TIP]

@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 428e35524fbcfe5177b544e1c6cc6fa32ec32056
-ms.sourcegitcommit: 4a03f263952c993dfdf339dd3491c73719854aba
+ms.openlocfilehash: ebcc679b2bc5ab3c6d7c70c9e84ba45697c80165
+ms.sourcegitcommit: c5709021aa98abd075d7a8f912d4fd2263db8803
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74791373"
+ms.lasthandoff: 01/18/2020
+ms.locfileid: "76265595"
 ---
 # <a name="upgrading-to-ad-fs-in-windows-server-2016-using-a-wid-database"></a>WID 데이터베이스를 사용하여 Windows Server 2016에서 AD FS로 업그레이드
 
@@ -101,6 +101,7 @@ Set-AdfsSyncProperties -Role SecondaryComputer -PrimaryComputerName {FQDN}
 ![업그레이드](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_8.png)
 
 8. 이제 Windows Server 2016 서버에서 PowerShell을 열고 다음 cmdlet을 실행 합니다.
+
 
 > [!NOTE]
 > 다음 단계를 실행 하기 전에 팜에서 모든 2012 R2 서버를 제거 해야 합니다.

@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: abbc9cf76056af4ac421d9a38381bd8d8f666e4c
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: b96a66c9e28454752fd4999fcfe74cbb15a3ae7d
+ms.sourcegitcommit: c5709021aa98abd075d7a8f912d4fd2263db8803
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75949537"
+ms.lasthandoff: 01/18/2020
+ms.locfileid: "76265815"
 ---
 # <a name="best-practices-for-securing-active-directory-federation-services"></a>Active Directory Federation Services 보안에 대 한 모범 사례
 
@@ -26,6 +26,9 @@ ms.locfileid: "75949537"
 온-프레미스 환경에 배포 하는 경우 DMZ 또는 엑스트라넷 네트워크에 하나 이상의 WAP (웹 응용 프로그램 프록시) 서버를 사용 하 여 내부 회사 네트워크에서 하나 이상의 AD FS 서버로 구성 된 표준 배포 토폴로지를 사용 하는 것이 좋습니다.  각 계층, AD FS 및 WAP에서 하드웨어 또는 소프트웨어 부하 분산 장치는 서버 팜 앞에 배치 되 고 트래픽 라우팅을 처리 합니다.  방화벽은 각 (FS 및 프록시) 팜 앞에 있는 부하 분산 장치의 외부 IP 주소 앞에 필요에 따라 배치 됩니다.
 
 ![AD FS 표준 토폴로지](media/Best-Practices-Securing-AD-FS/adfssec1.png)
+
+>[!NOTE]
+> AD FS 읽기 전용 도메인 컨트롤러와는 달리 완전히 쓰기 가능한 도메인 컨트롤러가 필요 합니다. 계획 된 토폴로지에 읽기 전용 도메인 컨트롤러가 포함 된 경우 읽기 전용 도메인 컨트롤러를 인증에 사용할 수 있지만 LDAP 클레임 처리에는 쓰기 가능한 도메인 컨트롤러에 대 한 연결이 필요 합니다.
 
 ## <a name="ports-required"></a>필요한 포트
 아래 다이어그램은 AD FS 및 WAP 배포의 구성 요소 간에 사용 하도록 설정 해야 하는 방화벽 포트를 나타냅니다.  배포에 Azure AD/Office 365이 포함 되지 않은 경우 동기화 요구 사항을 무시 해도 됩니다.

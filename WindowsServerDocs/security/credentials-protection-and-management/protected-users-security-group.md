@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: 227d66dafffd67b0b2e4f67158498cf43c7b59f8
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 10234611904a4ed5b58939d3fd5ca341221c073c
+ms.sourcegitcommit: 51e0b575ef43cd16b2dab2db31c1d416e66eebe8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950365"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76259148"
 ---
 # <a name="protected-users-security-group"></a>보호된 사용자 보안 그룹
 
@@ -115,7 +115,7 @@ Windows Server 2012 R2 도메인을 인증 하는 보호 된 사용자 그룹의
 자세한 내용은 [How to Configure Protected Accounts](how-to-configure-protected-accounts.md)를 참조하세요.
 
 ## <a name="troubleshooting"></a>문제 해결
-보호된 사용자와 관련된 이벤트 문제를 해결하는 데 도움이 되는 두 가지 작업 관리 로그가 있습니다. 이러한 새 로그는 이벤트 뷰어에서 볼 수 있으며, 기본적으로 사용하지 않도록 설정되고 **Applications and Services Logs\Microsoft\Windows\Microsoft\Authentication**에 저장됩니다.
+보호된 사용자와 관련된 이벤트 문제를 해결하는 데 도움이 되는 두 가지 작업 관리 로그가 있습니다. 이러한 새 로그는 이벤트 뷰어에 있으며, 기본적으로 사용 하지 않도록 설정 되어 있으며, **응용 프로그램 및 서비스 Logs\Microsoft\Windows\Authentication**아래에 있습니다.
 
 |이벤트 ID 및 로그|설명|
 |----------|--------|

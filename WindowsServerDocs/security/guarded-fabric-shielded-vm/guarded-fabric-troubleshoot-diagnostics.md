@@ -5,14 +5,15 @@ ms.prod: windows-server
 ms.topic: article
 ms.assetid: 07691d5b-046c-45ea-8570-a0a85c3f2d22
 manager: dongill
-author: huu
+author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.openlocfilehash: 6db9ce1db139558bd1a7aa731cb12c1b227ead03
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.date: 01/14/2020
+ms.openlocfilehash: c69fc70282ff61ecce25f6413244d7ba3a5ba3bc
+ms.sourcegitcommit: c5709021aa98abd075d7a8f912d4fd2263db8803
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75949766"
+ms.lasthandoff: 01/18/2020
+ms.locfileid: "76265825"
 ---
 # <a name="troubleshooting-using-the-guarded-fabric-diagnostic-tool"></a>보호 된 패브릭 진단 도구를 사용 하 여 문제 해결
 
@@ -20,21 +21,24 @@ ms.locfileid: "75949766"
 
 이 항목에서는 보호 된 Fabric 진단 도구를 사용 하 여 보호 된 패브릭 인프라의 배포, 구성 및 진행 중인 작업에서 일반적인 오류를 식별 하 고 수정 하는 방법을 설명 합니다. 여기에는 HGS (호스트 보호 서비스), 모든 보호 된 호스트 및 지원 서비스 (예: DNS 및 Active Directory)가 포함 됩니다. 진단 도구를 사용 하 여 장애 조치 (failover) 된 패브릭의 심사를 통해 첫 번째 단계를 수행 하 여 중단을 해결 하 고 잘못 구성 된 자산을 식별할 수 있는 시작 지점을 관리자에 게 제공할 수 있습니다. 이 도구는 보호 된 패브릭을 운영 하는 소리를 대체 하지 않으며 일상적인 작업 중에 발생 하는 가장 일반적인 문제를 신속 하 게 확인 하는 데에만 사용 됩니다.
 
-이 항목에 사용 된 cmdlet에 대 한 설명서는 [TechNet](https://technet.microsoft.com/library/mt718834.aspx)에서 찾을 수 있습니다.
+이 문서에 사용 된 cmdlet에 대 한 전체 설명서는 [HgsDiagnostics 모듈 참조](https://docs.microsoft.com/powershell/module/hgsdiagnostics/?view=win10-ps)에서 찾을 수 있습니다.
 
-[!INCLUDE [Guarded fabric diagnostics tool](../../../includes/guarded-fabric-diagnostics-tool.md)] 
+[!INCLUDE [Guarded fabric diagnostics tool](../../../includes/guarded-fabric-diagnostics-tool.md)]
 
 ## <a name="quick-start"></a>빠른 시작
 
 로컬 관리자 권한으로 Windows PowerShell 세션에서 다음을 호출 하 여 보호 된 호스트나 HGS 노드를 진단할 수 있습니다.
+
 ```PowerShell
 Get-HgsTrace -RunDiagnostics -Detailed
 ```
+
 그러면 현재 호스트의 역할이 자동으로 검색 되어 자동으로 검색 될 수 있는 관련 문제를 진단 합니다.  이 프로세스 중에 생성 된 모든 결과는 `-Detailed` 스위치가 있기 때문에 표시 됩니다.
 
 이 항목의 나머지 부분에서는 여러 호스트를 한 번에 진단 하 고 복잡 한 노드 간 구성 오류를 검색 하는 등의 작업을 수행 하기 위한 `Get-HgsTrace`의 고급 사용에 대 한 자세한 연습을 제공 합니다.
 
 ## <a name="diagnostics-overview"></a>진단 개요
+
 보호 된 패브릭 진단은 Server Core를 실행 하는 호스트를 포함 하 여 보호 된 가상 머신 관련 도구 및 기능이 설치 된 모든 호스트에서 사용할 수 있습니다.  현재 진단은 다음과 같은 기능/패키지에 포함 되어 있습니다.
 
 1. 호스트 보호자 서비스 역할
@@ -49,6 +53,7 @@ Get-HgsTrace -RunDiagnostics -Detailed
 관리자는 `Get-HgsTrace`를 실행 하 여 모든 진단 작업을 시작할 수 있습니다.  이 명령은 런타임에 제공 되는 스위치 (추적 수집 및 진단)를 기반으로 하는 두 가지 기능을 수행 합니다.  이러한 두 가지 조합은 보호 된 패브릭 진단 도구 전체를 구성 합니다.  명시적으로 필수는 아니지만 대부분의 유용한 진단에는 추적 대상의 관리자 자격 증명만 수집할 수 있는 추적이 필요 합니다.  추적 수집을 실행 하는 사용자가 충분 한 권한을 보유 하지 않는 경우 권한 상승이 필요한 추적이 실패 하 고 다른 모든 사용자가 통과 하 게 됩니다.  이를 통해 권한 있는 운영자가 심사를 수행 하는 경우 부분 진단을 수행할 수 있습니다. 
 
 ### <a name="trace-collection"></a>추적 컬렉션
+
 기본적으로 `Get-HgsTrace`는 추적만 수집 하 여 임시 폴더에 저장 합니다.  추적은 대상 호스트 이름 뒤에 이름이 지정 된 폴더 형식을 사용 하 여 호스트 구성 방법을 설명 하는 특수 형식의 파일로 채워집니다.  추적에는 추적을 수집 하기 위해 진단이 호출 된 방법을 설명 하는 메타 데이터도 포함 됩니다.  이 데이터는 진단에서 수동 진단을 수행할 때 호스트에 대 한 정보를 리하이드레이션 하는 데 사용 됩니다.
 
 필요한 경우 추적을 수동으로 검토할 수 있습니다.  모든 형식은 사람이 읽을 수 있는 (XML) 이거나 표준 도구 (예: X509 인증서 및 Windows Crypto Shell 확장)를 사용 하 여 쉽게 검사할 수 있습니다.  그러나 추적은 수동 진단을 위해 설계 되지 않으며 `Get-HgsTrace`진단 기능을 사용 하 여 추적을 처리 하는 것이 항상 효과적입니다.
@@ -58,6 +63,7 @@ Get-HgsTrace -RunDiagnostics -Detailed
 `-Diagnostic` 매개 변수를 사용 하 여 지정 된 진단을 운영 하는 데 필요한 추적 으로만 추적 컬렉션을 제한할 수 있습니다.  이렇게 하면 수집 되는 데이터의 양과 진단을 호출 하는 데 필요한 사용 권한이 줄어듭니다.
 
 ### <a name="diagnosis"></a>진단
+
 `-Path` 매개 변수를 통해 추적 위치 `Get-HgsTrace` 제공 하 고 `-RunDiagnostics` 스위치를 지정 하 여 수집 된 추적을 진단할 수 있습니다.  또한 `-RunDiagnostics` 스위치 및 추적 대상 목록을 제공 하 여 단일 패스에서 수집 및 진단을 수행할 수 `Get-HgsTrace`.  추적 대상이 제공 되지 않으면 현재 컴퓨터는 암시적 대상으로 사용 되며, 설치 된 Windows PowerShell 모듈을 검사 하 여 역할이 유추 됩니다.
 
 진단은 특정 실패를 담당 하는 추적 대상, 진단 집합 및 개별 진단을 나타내는 계층 형식으로 결과를 제공 합니다.  오류에는 다음에 수행 해야 할 작업에 대 한 결정을 할 수 있는 경우 수정 및 해결 권장 사항이 포함 됩니다.  기본적으로 전달 및 관련이 없는 결과는 숨겨집니다.  진단에서 테스트 된 모든 항목을 보려면 `-Detailed` 스위치를 지정 합니다.  이렇게 하면 상태에 관계 없이 모든 결과가 표시 됩니다.
@@ -78,13 +84,17 @@ Get-HgsTrace -RunDiagnostics -Detailed
 암시적 로컬 대상은 역할 유추를 사용 하 여 보호 된 패브릭에서 현재 호스트가 재생 하는 역할을 결정 합니다.  이는 시스템에 설치 된 기능과 거의 일치 하는 설치 된 Windows PowerShell 모듈을 기반으로 합니다.  `HgsServer` 모듈이 있으면 추적 대상이 `HostGuardianService` 역할을 수행 하 고 `HgsClient` 모듈이 있으면 추적 대상이 `GuardedHost`역할을 수행 하 게 됩니다.  지정 된 호스트에 두 모듈이 모두 있을 수 있으며,이 경우에는 `HostGuardianService`와 `GuardedHost`모두 처리 됩니다.
 
 따라서 로컬에서 추적을 수집 하기 위한 진단의 기본 호출은 다음과 같습니다.
+
 ```PowerShell
 Get-HgsTrace
 ```
+
 ... 는 다음과 같습니다.
+
 ```PowerShell
 New-HgsTraceTarget -Local | Get-HgsTrace
 ```
+
 > [!TIP]
 > 파이프라인을 통해 대상을 허용 하거나 `-Target` 매개 변수를 통해 직접 `Get-HgsTrace` 수 있습니다.  두 운영상 간에는 차이가 없습니다.
 
@@ -159,6 +169,7 @@ Get-HgsTrace -Target $hgs01,$hgs02,$gh01,$gh02 -RunDiagnostics
    ```PowerShell
    Get-HgsTrace -Path C:\Traces -Diagnostic Networking,BestPractices
    ```
+
 2. 각 호스트 관리자가 결과 추적 폴더를 패키지 하 고 사용자에 게 보내도록 요청 합니다.  이 프로세스는 전자 메일, 파일 공유 또는 조직에서 설정한 운영 정책 및 절차를 기반으로 하는 다른 메커니즘을 통해 제어할 수 있습니다.
 
 3. 모든 수신 된 추적을 다른 내용 또는 폴더 없이 단일 폴더에 병합 합니다.
@@ -197,3 +208,15 @@ Get-HgsTrace -RunDiagnostics -Target $hgs03 -Path .\FabricTraces
 ``` 
 
 진단 cmdlet은 모든 미리 수집 된 호스트 및 추적 해야 하는 추가 호스트 하나를 식별 하 고 필요한 추적을 수행 합니다.  그러면 모든 미리 수집 된 추적 및 새로 수집 된 추적의 합계가 진단 됩니다.  결과 추적 폴더에는 이전 추적과 새 추적이 모두 포함 됩니다.
+
+## <a name="known-issues"></a>알려진 문제
+
+보호 된 패브릭 진단 모듈에는 Windows Server 2019 또는 Windows 10 버전 1809 이상 버전에서 실행할 때 알려진 제한 사항이 있습니다.
+다음 기능을 사용 하면 잘못 된 결과가 발생할 수 있습니다.
+
+* 호스트 키 증명
+* 증명 전용 HGS 구성 (SQL Server Always Encrypted 시나리오)
+* 증명 정책 기본값이 v2 인 HGS 서버에서 v1 정책 아티팩트 사용
+
+이러한 기능을 사용 하는 경우 `Get-HgsTrace`에 오류가 발생 하는 경우에는 HGS 서버 또는 보호 된 호스트가 잘못 구성 되었음을 나타내는 것은 아닙니다.
+보호 된 호스트에서 `Get-HgsClientConfiguration` 같은 다른 진단 도구를 사용 하 여 호스트가 증명을 통과 했는지 테스트 합니다.

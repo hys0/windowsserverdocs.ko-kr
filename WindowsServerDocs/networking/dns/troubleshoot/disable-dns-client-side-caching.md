@@ -1,19 +1,19 @@
 ---
 title: DNS 클라이언트에서 DNS 클라이언트 쪽 캐싱을 사용 하지 않도록 설정
 description: 이 문서에서는 DNS 클라이언트에서 DNS 클라이언트 쪽 캐싱을 사용 하지 않도록 설정 하는 방법을 소개 합니다.
-manager: willchen
+manager: dcscontentpm
 ms.prod: ''
 ms.technology: networking-dns
 ms.topic: article
 ms.author: delhan
 ms.date: 8/8/2019
 author: Deland-Han
-ms.openlocfilehash: 3aeb7cb06f82b6f2220e42866682ce918389bf1d
-ms.sourcegitcommit: b17ccf7f81e58e8f4dd844be8acf784debbb20ae
+ms.openlocfilehash: 51a9dbfd05402a9d018aec3bfea8a5c89e9e5d5e
+ms.sourcegitcommit: c5709021aa98abd075d7a8f912d4fd2263db8803
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69023894"
+ms.lasthandoff: 01/18/2020
+ms.locfileid: "76265845"
 ---
 # <a name="disable-dns-client-side-caching-on-dns-clients"></a>DNS 클라이언트에서 DNS 클라이언트 쪽 캐싱을 사용 하지 않도록 설정
 
@@ -47,16 +47,16 @@ Ipconfig 도구를 사용 하 여 DNS 확인자 캐시를 보고 플러시할 �
 ipconfig /displaydns 
 ```
 
-이 명령은 호스트 파일에서 미리 로드 된 DNS 리소스 레코드와 시스템에서 확인 한 최근에 쿼리 된 이름을 포함 하 여 DNS 확인자 캐시의 내용을 표시 합니다. 잠시 후 확인자는 캐시에서 레코드를 삭제 합니다. 기간은 DNS 리소스 레코드와 연결 된 **TTL (time To Live)** 값으로 지정 됩니다. 캐시를 수동으로 플러시할 수도 있습니다. 캐시를 플러시한 후 컴퓨터에서 이전에 컴퓨터에서 확인 한 DNS 리소스 레코드에 대 한 DNS 서버를 다시 쿼리해야 합니다. DNS 확인자 캐시의 항목을 삭제 하려면 명령 프롬프트에서 `ipconfig /flushdns` 를 실행 합니다.
+이 명령은 호스트 파일에서 미리 로드 된 DNS 리소스 레코드와 시스템에서 확인 한 최근에 쿼리 된 이름을 포함 하 여 DNS 확인자 캐시의 내용을 표시 합니다. 잠시 후 확인자는 캐시에서 레코드를 삭제 합니다. 기간은 DNS 리소스 레코드와 연결 된 **TTL (time To Live)** 값으로 지정 됩니다. 캐시를 수동으로 플러시할 수도 있습니다. 캐시를 플러시한 후 컴퓨터에서 이전에 컴퓨터에서 확인 한 DNS 리소스 레코드에 대 한 DNS 서버를 다시 쿼리해야 합니다. DNS 확인자 캐시의 항목을 삭제 하려면 명령 프롬프트에서 `ipconfig /flushdns`를 실행 합니다.
 
 ## <a name="using-the-registry-to-control-the-caching-time"></a>레지스트리를 사용 하 여 캐싱 시간 제어
 
 > [!IMPORTANT]  
-> 이 섹션의 단계를 주의 깊게 따르십시오. 레지스트리를 잘못 수정하면 심각한 문제가 발생할 수 있으므로 수정하기 전에, 문제가 발생할 경우를 대비하여 [복원을 위해 레지스트리를 백업](https://support.microsoft.com/help/322756)해 두세요.
+> 이 섹션의 단계를 신중하게 따릅니다. 레지스트리를 잘못 수정할 경우 심각한 문제가 발생할 수 있습니다. 수정하기 전에, 문제가 발생할 경우를 대비하여 [복원을 위해 레지스트리를 백업](https://support.microsoft.com/help/322756)해 두세요.
 
 긍정 또는 부정 응답을 캐시 하는 기간은 다음 레지스트리 키의 항목 값에 따라 달라 집니다.
 
-**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DNSCache\Parameters**
+**HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Services\DNSCache\Parameters**
 
 긍정 응답의 TTL은 다음 값 중 작은 값입니다. 
 
@@ -76,7 +76,7 @@ ipconfig /displaydns
 
 2. 레지스트리에서 다음 키를 찾아 클릭 합니다.
 
-   **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters**
+   **HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Services\Dnscache\Parameters**
 
 3. 편집 메뉴에서 새로 만들기를 가리키고 DWORD 값을 클릭 한 후 다음 레지스트리 값을 추가 합니다.
 
@@ -84,7 +84,7 @@ ipconfig /displaydns
 
      데이터 형식: REG_DWORD
 
-     방법 2 기본값은 86400 초입니다. 
+     값 데이터: 기본값은 86400 초입니다. 
      
      클라이언트의 DNS 캐시에서 최대 TTL 값을 1 초로 낮추면 클라이언트 쪽 DNS 캐시가 사용 하지 않도록 설정 되었음을 알 수 있습니다.    
 
@@ -92,7 +92,7 @@ ipconfig /displaydns
 
      데이터 형식: REG_DWORD
 
-     방법 2 기본값은 900 초입니다. 
+     값 데이터: 기본값은 900 초입니다. 
      
      음수 응답이 캐시 되지 않도록 하려면 값을 0으로 설정 합니다.
 
