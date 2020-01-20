@@ -1,4 +1,4 @@
-# [디스크 관리](overview-of-disk-management.md)
+# [디스크의 관리](overview-of-disk-management.md)
 ## [디스크 관리](manage-disks.md)
 ### [새 디스크 초기화](initialize-new-disks.md)
 ### [디스크를 다른 컴퓨터로 이동](move-disks-to-another-computer.md)
@@ -11,4 +11,4 @@
 ### [탑재 지점 폴더 경로를 드라이브에 할당](assign-a-mount-point-folder-path-to-a-drive.md)
 ### [기본 볼륨 확장](extend-a-basic-volume.md)
 ### [기본 볼륨 축소](shrink-a-basic-volume.md)
-## [디스크 관리 문제 해결](troubleshooting-disk-management.md)
+## [디스크의 관리 문제 해결](troubleshooting-disk-management.md)
