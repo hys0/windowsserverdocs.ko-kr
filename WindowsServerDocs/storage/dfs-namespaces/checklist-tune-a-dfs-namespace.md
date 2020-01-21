@@ -21,7 +21,7 @@ ms.locfileid: "71402191"
 
 네임 스페이스를 만들고 폴더 및 대상을 추가한 후에는 다음 검사 목록을 사용 하 여 DFS 네임 스페이스에서 조회를 처리 하 고 업데이트 된 네임 스페이스 데이터에 대 한 Active Directory Domain Services (AD DS)를 폴링합니다.
 
--   사용자가 액세스 권한이 없는 네임스페이스의 폴더를 보지 못하게 합니다. [네임 스페이스에 대 한 액세스 기반 열거 사용](enable-access-based-enumeration-on-a-namespace.md) 
+-   사용자가 액세스 권한이 없는 네임스페이스의 폴더를 볼 수 없도록 합니다. [네임 스페이스에 대 한 액세스 기반 열거 사용](enable-access-based-enumeration-on-a-namespace.md) 
 -   사용자가 네임스페이스의 폴더에 액세스할 때 네임스페이스나 폴더 대상에 조회하게 하거나 조회하지 못하게 합니다. [조회 및 클라이언트 장애 복구 사용 또는 사용 안 함](enable-or-disable-referrals-and-client-failback.md) 
 -   새 조회를 요청하기 전에 클라이언트가 조회를 캐시하는 기간을 조정합니다. [클라이언트에서 조회를 캐시 하는 시간 변경](change-the-amount-of-time-that-clients-cache-referrals.md)
 -   네임스페이스 서버가 AD DS를 폴링하여 최신 네임스페이스 데이터를 가져오는 방식을 최적화합니다. [네임스페이스 폴링 최적화](optimize-namespace-polling.md)
