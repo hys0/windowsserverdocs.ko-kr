@@ -9,12 +9,12 @@ ms.author: iainfou
 ms.topic: get-started-article
 ms.localizationpriority: high
 ms.date: 12/16/2019
-ms.openlocfilehash: a5af1ad5a730f1dc90111734a9b8b1aacc91201b
-ms.sourcegitcommit: bfe9c5f7141f4f2343a4edf432856f07db1410aa
+ms.openlocfilehash: 83ab3663b2c03017ba1bf613a49c394be0511002
+ms.sourcegitcommit: b649047f161cb605df084f18b573f796a584753b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75466346"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76162504"
 ---
 # <a name="how-to-use-windows-server-2008-and-2008-r2-extended-security-updates-esu"></a>Windows Server 2008 및 2008 R2 ESU(Extended Security Updates)를 사용하는 방법
 
@@ -49,6 +49,17 @@ Windows Server의 ESU(Extended Security Updates)는 2020년 1월 14일 이후 �
 
 > [!NOTE]
 > Azure에서 Windows Server 2008 / 2008 R2 VM을 실행하는 경우 다음 단계를 수행할 필요가 없습니다. 확장 보안 업데이트를 위해 Azure VM이 자동으로 활성화됩니다. 확장 보안 업데이트 리소스 및 키를 만들 필요가 없으며 Azure VM에서 확장 보안 업데이트를 사용하는 데 대한 추가 비용이 없습니다.
+
+> [!NOTE]
+> 아래 단계를 수행하기 전에 허용 목록에 대한 승인을 위해 이 정보와 함께 [winsvresuchamps@microsoft.com](mailto:winsvresuchamps@microsoft.com)으로 이메일을 보내주세요.
+> * 고객 이름:
+> * Azure 구독:
+> * EA 계약 번호(ESU의 경우):
+> * ESU 서버 수:
+> 
+> 팀은 제공된 정보를 검토하고 사용자/구독을 허용 목록에 추가합니다.
+> 
+> 요청자가 허용 목록에 없는 경우 다음과 같은 오류가 발생할 수 있습니다. [네임스페이스 'Microsoft.WindowsESU'에서 리소스 종류를 찾을 수 없습니다.](https://social.msdn.microsoft.com/Forums/office/94b16a89-3149-43da-865d-abf7dba7b977/the-resource-type-could-not-be-found-in-the-namespace-microsoftwindowsesu-for-api-version)
 
 확장 보안 업데이트를 위해 비 Azure VM을 등록하고 키를 만들려면 Azure Portal에서 다음 단계를 완료합니다.
 

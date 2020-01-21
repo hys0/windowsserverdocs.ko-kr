@@ -30,7 +30,6 @@
 ####### [HGS DNS 및 단방향 트러스트 구성](guarded-fabric-shielded-vm/guarded-fabric-configure-dns-forwarding-and-trust.md)
 ##### [HTTPS 구성](guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https.md)
 ##### [노드 추가](guarded-fabric-shielded-vm/guarded-fabric-configure-additional-hgs-nodes.md)
-##### [구성 확인](guarded-fabric-shielded-vm/guarded-fabric-verify-hgs-configuration.md)
 #### [보호된 호스트 배포](guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts.md)
 ##### [필수 구성 요소](guarded-fabric-shielded-vm/guarded-fabric-guarded-host-prerequisites.md)
 ##### [TPM 모드](guarded-fabric-shielded-vm/guarded-fabric-tpm-trusted-attestation-capturing-hardware.md)

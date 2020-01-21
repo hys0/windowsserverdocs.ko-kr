@@ -5,37 +5,49 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 09/18/2019
+ms.date: 01/07/2020
 ms.localizationpriority: high
 ms.prod: windows-server
-ms.openlocfilehash: 37be666643dee4e5b9051ae29562a86b23fb71f7
-ms.sourcegitcommit: 7c7fc443ecd0a81bff6ed6dbeeaf4f24582ba339
+ms.openlocfilehash: 7b3a75258086a73fbd618c2e8221454d7e616556
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74903965"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949997"
 ---
 # <a name="windows-admin-center"></a>Windows Admin Center
 
 > 적용 대상: Windows Admin Center, Windows Admin Center 미리 보기
 
-**Windows Admin Center**(이전 코드명 **Project Honolulu**)는 Windows Server 기본 제공 관리 도구의 혁신입니다. 로컬 및 원격 서버 관리의 모든 측면을 통합하는 단일 창입니다. 로컬로 배포되는 브라우저 기반 관리 환경이므로 인터넷 연결과 Azure를 사용할 필요가 없습니다. Windows Admin Center를 통해 인터넷에 연결되지 않은 개인 네트워크를 포함하여 배포의 모든 측면을 완전히 제어할 수 있습니다.
+Windows Admin Center는 Windows 서버, 클러스터, 하이퍼 컨버지드 인프라는 물론 Windows 10 PC를 관리하기 위해 로컬로 배포된 브라우저 기반 앱입니다. Windows 이외의 추가 비용 없이 제공되며 프로덕션 환경에서 사용할 준비가 되었습니다.
 
-## <a name="introduction"></a>소개
+새로운 기능을 알아보려면 [릴리스 기록](support/release-history.md)을 참조하세요.
 
->[!VIDEO https://www.youtube.com/embed/PcQj6ZklmK0]
+## <a name="download-now"></a>지금 다운로드
 
-![Windows Admin Center 정보 그래픽](media/WAC1910Poster_thumb.PNG)
+Microsoft Evaluation Center에서 **[Windows Admin Center](https://www.microsoft.com/evalcenter/evaluate-windows-admin-center)를 다운로드합니다.** 비록 "평가 시작"이라고 하지만, 이는 일반적으로 Windows 또는 Windows Server 라이선스의 일부로 제공되는 프로덕션용 버전입니다.
+
+설치에 대한 도움말은 [설치](deploy/install.md)를 참조하세요. Windows Admin Center 시작에 대한 팁은 [시작](use/get-started.md)을 참조하세요.
+
+Microsoft 업데이트를 사용하거나 Windows Admin Center를 수동으로 다운로드하여 설치하여 비 미리 보기 Windows Admin Center 버전을 업데이트할 수 있습니다. 미리 보기가 아닌 Windows Admin Center 버전은 각각 미리 보기가 아닌 다음 버전이 출시된 후 30일까지 지원됩니다. 자세한 내용은 [지원 정책](support/index.md)을 참조하세요.
+
+## <a name="windows-admin-center-scenarios"></a>Windows Admin Center 시나리오
+
+다음은 Windows Admin Center를 사용할 수 있는 몇 가지 방법입니다.
+
+|     |     |
+| --- | --- |
+| ![](media/simple-icon.png)| **서버 관리 간소화** <br/> 서버 매니저와 같은 친숙한 도구의 현대화된 버전으로 서버와 클러스터를 관리합니다. 환경에서 바로 5분 내에 설치하고 관리하며 대상 구성이 필요하지 않습니다. 자세한 내용은 [Windows Admin Center란?](understand/what-is.md)을 참조하세요. |
+| ![](media/future-icon.png)| **하이브리드 솔루션 작업** <br/> Azure와 통합하면 선택적으로 온-프레미스 서버를 관련 클라우드 서비스와 선택적으로 연결할 수 있습니다. 자세한 내용은 [Azure 하이브리드 서비스](azure/index.md)를 참조하세요. |
+| ![](media/secure-icon.png)| **하이퍼 컨버지드 관리 간소화** <br/> Azure Stack HCI 또는 Windows Server 하이퍼 컨버지드 클러스터의 관리를 간소화합니다. 간소화된 워크로드를 사용하여 VM, 스토리지 공간 다이렉트 볼륨, 소프트웨어 정의 네트워킹 등을 생성하고 관리합니다. 자세한 내용은 [Windows Admin Center를 사용하여 하이퍼 컨버지드 인프라 관리](use/manage-hyper-converged.md)를 참조하세요.|
+
+다음은 개요를 보여주는 비디오와 이어서 자세한 정보를 제공하는 포스터입니다.
+>[!VIDEO https://www.youtube.com/embed/WCWxAp27ERk]
+
+[![Windows Admin Center 포스터](media/WAC1910Poster_thumb_small.PNG)](media/WAC1910Poster_thumb.png)
 
 [PDF 다운로드](https://github.com/MicrosoftDocs/windowsserverdocs/raw/master/WindowsServerDocs/manage/windows-admin-center/media/WindowsAdminCenter1910Poster.pdf)
 
-## <a name="quick-start"></a>빠른 시작
-
-몇 분만에 자신의 환경에 Windows Admin Center를 구축 및 가동할 수 있습니다.
-
-1. [다운로드](https://aka.ms/windowsadmincenter)
-2. [설치](deploy/install.md)
-3. [시작](use/get-started.md)
 
 ## <a name="contents-at-a-glance"></a>개념 개요
 
@@ -49,7 +61,6 @@ ms.locfileid: "74903965"
             <li><a href="understand/faq.md">FAQ</a>
             <li><a href="understand/case-studies.md">사례 연구</a>
             <li><a href="understand/related-management.md">관련 관리 제품</a>
-            <li><a href="understand/videos.md">동영상</a>
             </ul>
         </td>
         <td style="vertical-align: top;">
@@ -63,7 +74,7 @@ ms.locfileid: "74903965"
     </tr>
     <tr>
         <td style="vertical-align: top;">
-            <h3>배포</h3>
+            <h3>배포 게스트 클러스터에</h3>
             <ul>
             <li><a href="deploy/prepare-environment.md">사용자 환경 준비</a>
             <li><a href="deploy/install.md">Windows Admin Center 설치</a>
@@ -106,8 +117,9 @@ ms.locfileid: "74903965"
     </tr>
     <tr>
             <td style="vertical-align: top;">
-            <h3>지원</h3>
+            <h3>Support(지원)</h3>
             <ul>
+            <li><a href="support/release-history.md">릴리스 기록</a>
             <li><a href="support/index.md">지원 정책</a>
             <li><a href="support/troubleshooting.md">일반적인 문제 해결 단계</a>
             <li><a href="support/known-issues.md">알려진 문제</a>
@@ -127,35 +139,51 @@ ms.locfileid: "74903965"
 
 </table>
 
-## <a name="release-history"></a>릴리스 기록
+## <a name="video-based-learning"></a>비디오 기반 학습
 
-최신 출시된 기능에 대해 자세히 알아보세요.
+다음은 Microsoft Ignite 2019 세션의 일부 비디오입니다.
 
-- 버전 [1910](https://aka.ms/wac1910)은 몇 가지 새로운 Azure 하이브리드 서비스를 도입하고 이전에 미리 보기에 있던 기능을 GA 채널에 가져온 최신 GA 릴리스입니다.
-- 버전 [1909](https://aka.ms/wac1909)에서는 Azure VM 관련 연결 유형을 소개하고 기존 장애 조치(failover) 클러스터 및 HCI 클러스터에 대한 연결 유형을 통합합니다.
-- 버전 [1908](https://aka.ms/wac1908)에는 시각적 업데이트, Packetmon, FlowLog Audit, 클러스터용 Azure Monitor 온보딩 및 HTTPS를 통한 WinRM 지원(포트 5986)이 추가되었습니다.
-- 버전 [1907](https://aka.ms/wac1907)은 Azure 비용 추정 링크를 추가하고 가상 머신의 가져오기/내보내기 및 태그 지정을 개선했습니다.
-- 버전 [1906](https://aka.ms/wac1906)에는 VM 가져오기/내보내기, Azure 계정 전환, Azure에서 연결 추가, 연결 설정 실험, 성능 개선 및 성능 프로파일링 도구가 추가되었습니다.
-- 버전 1904.1은 게이트웨이 플러그 인 안정성 개선을 위한 유지 관리 업데이트입니다.
-- 버전 [1904](https://aka.ms/wac1904)는 Azure Hybrid Services 도구를 도입하고, 이전에 미리 보기에 있던 기능을 GA 채널에 가져온 GA 릴리스였습니다.
-- 버전 [1903](https://aka.ms/wac1903)에는 Azure Monitor의 이메일 알림, Active Directory에서 서버 또는 PC 연결을 추가하는 기능, Active Directory, DHCP, DNS를 관리하는 새로운 도구가 추가되었습니다.
-- 버전 [1902](https://aka.ms/wac1902)에는 공유 연결 목록과 소프트웨어 정의 네트워크(SDN) 관리에 대한 개선 사항(ACL, 게이트웨이 연결 및 논리 네트워크를 관리하는 새로운 SDN 도구 포함)이 추가되었습니다.
-- 버전 [1812](https://aka.ms/wac1812)에는 어두운 테마(미리 보기), 전원 구성 설정, BMC 정보, [확장](./configure/using-extensions.md#manage-extensions-with-powershell) 및 [연결](./use/get-started.md#use-powershell-to-import-or-export-your-connections-with-tags)을 관리하는 PowerShell 지원이 추가되었습니다.
-- 버전 [1809.5](https://aka.ms/wac1809.5) 는 플랫폼 전반에 걸쳐 다양한 품질 및 기능 향상과 버그 수정 및 하이퍼 컨버지드 인프라 관리 솔루션의 몇 가지 새로운 기능을 포함하는 GA 누적 업데이트였습니다.
-- 버전 [1809](https://cloudblogs.microsoft.com/windowsserver/2018/09/20/windows-admin-center-1809-and-sdk-now-generally-available/)는 이전에 미리 보기에 있던 기능을 GA 채널에 가져온 GA 버전이었습니다.
-- 버전 [1808](https://aka.ms/WACPreview1808-InsiderBlog)에는 설치된 앱 도구, 여러 개선 사항 및 미리 보기 SDK에 대한 주요 업데이트가 추가되었습니다.
-- 버전 [1807](https://aka.ms/WACPreview1807-InsiderBlog)에는 간소화된 Azure 연결 경험, VM 인벤토리 페이지 개선, 파일 공유 기능, Azure 업데이트 관리 통합 등이 추가되었습니다. 
-- 버전 [1806](https://aka.ms/WACPreview1806-InsiderBlog)에는 PowerShell 스크립트, SDN 관리, 2008 R2 연결, SDN, 예약된 작업 및 기타 여러 개선 사항이 추가되었습니다.
-- 버전 1804.25 - 완전한 오프라인 환경에서 Windows Admin Center를 설치하는 사용자를 지원하기 위한 유지 관리 업데이트입니다.
-- 버전 [1804](https://cloudblogs.microsoft.com/windowsserver/2018/04/12/announcing-windows-admin-center-our-reimagined-management-experience/) - Project Honolulu가 Windows Admin Center로 변경되었으며 보안 기능 및 역할 기반 액세스 제어가 추가되었습니다. 첫 번째 GA 릴리스입니다.
-- 버전 [1803](https://blogs.windows.com/windowsexperience/2018/03/13/announcing-project-honolulu-technical-preview-1803-and-rsat-insider-preview-for-windows-10)에는 Azure AD 액세스 제어, 자세한 로깅, 크기를 조정할 수 있는 콘텐츠 및 다양한 도구 개선에 대한 지원이 추가되었습니다.
-- 버전 [1802](https://blogs.windows.com/windowsexperience/2018/02/13/announcing-windows-server-insider-preview-build-17093-project-honolulu-technical-preview-1802)에는 접근성, 지역화, 고가용성 배포, 태그 지정, Hyper-V 호스트 설정 및 게이트웨이 인증에 대한 지원이 추가되었습니다.
-- 버전 [1712](https://blogs.windows.com/windowsexperience/2017/12/19/announcing-project-honolulu-technical-preview-1712-build-05002)에는 더 많은 가상 머신 기능과 도구 전체 성능 향상 기능이 추가되었습니다.
-- 버전 [1711](https://cloudblogs.microsoft.com/windowsserver/2017/12/01/1711-update-to-project-honolulu-technical-preview-is-now-available/)에는 요구가 높았던 도구(원격 데스크톱 및 PowerShell) 및 기타 개선 사항이 추가되었습니다.
-- 버전 [1709](https://cloudblogs.microsoft.com/windowsserver/2017/09/22/project-honolulu-technical-preview-is-now-available-for-download/)는 최초 공용 미리 보기 릴리스로 시작했습니다.
+- [Windows Admin Center: Azure Hybrid 가치 발견](https://aka.ms/WAC-BRK3165)
+- [Windows Admin Center: 새로운 기능 및 다음 단계](https://aka.ms/WAC-BRK2048)
+- [Windows Admin Center를 사용하여 Azure로부터 온-프레미스 서버를 자동으로 모니터링, 보안 및 업데이트](https://aka.ms/WAC-THR2146)
+- [Windows Admin Center 타사 확장을 사용하여 더 많은 작업 수행](https://aka.ms/WAC-THR2140)
+- [Windows Admin Center 전문가 되기: 배포, 구성 및 보안에 대한 모범 사례](https://aka.ms/WAC-THR2135)
+- [Windows Admin Center: System Center 및 Microsoft Azure 조합으로 성능 개선](https://aka.ms/WAC-THR2176)
+- [Windows Admin Center 및 Windows Server와 함께 Microsoft Azure 하이브리드 서비스를 사용하는 방법](https://aka.ms/WAC-THR2073)
+- [라이브 Q&A: Windows Admin Center를 사용하여 하이브리드 서버 환경 관리](https://aka.ms/WAC-MLS1055)
+- [학습 경로: 하이브리드 관리 기술](https://aka.ms/WAC-HybridMgmtTech)
+- [실습 교육: Windows Admin Center 및 하이브리드](https://aka.ms/WAC-HOL2019)
+
+다음은 Windows Server Summit 2019 세션의 일부 비디오입니다.
+
+- [Windows Admin Center를 사용하여 하이브리드로 전환](https://aka.ms/WAC-WSS2019-GoHybridWAC)
+- [Windows Admin Center v1904의 새로운 기능](https://aka.ms/WAC-WSS2019-WhatsNewv1904)
+
+다음은 몇 가지 추가 리소스입니다.
+
+- [새로워진 Windows Admin Center 서버 관리](https://aka.ms/WAC-ServerMgmtReimagined)
+- [Windows Admin Center를 사용하여 어디서나 서버 및 가상 머신 관리](https://aka.ms/WAC-Webinar2019)
+- [Windows Admin Center를 시작하는 방법](https://www.youtube.com/embed/PcQj6ZklmK0)
+
+## <a name="see-how-customers-are-benefitting-from-windows-admin-center"></a>Windows Admin Center에서 고객이 혜택을 얻는 방법을 확인하세요.
+
+|     |
+| --- |
+| "[Windows Admin Center]를 사용하여 관리 시스템을 관리하는 시간/노력이 75% 이상 줄어들었습니다."<br> *- Rand Morimoto, 사장, Convergent Computing* |
+| "[Windows Admin Center] 덕분에 문제 없이 HTML5 포털에서 고객을 원격으로 관리할 수 있으며 Azure Active Directory와 완벽하게 통합되어 Multi-Factor Authentication 덕분에 보안을 향상시킬 수 있습니다."<br/> *- Silvio Di Benedetto, 설립자이자 수석 컨설턴트, Inside Technologies* |
+| "보다 효과적인 방법으로 [Server Core] SKU를 배포하여 자원 효율성, 보안 및 자동화를 개선하는 동시에 여전히 좋은 수준의 생산성을 실현하고 스크립팅에만 의존하는 경우 발생할 수 있는 오류를 줄일 수 있었습니다." <br/> *- Guglielmo Mengora, 창립자 및 CEO, VaiSulWeb* |
+| "[Windows Admin Center]를 통해 이제 고객은 특히 SMB 시장에서 내부 인프라를 관리하는 사용하기 쉬운 도구를 갖추게 되었습니다. 이를 통해 노력을 최소화하고 시간을 많이 단축했습니다. 또한 제일 좋은 것은 [Windows Admin Center]에 대한 추가 라이선스 비용이 없다는 점입니다!" <br/> *- Helmut Otto, 관리 이사, SecureGUARD* |
+
+[프로덕션 환경에서 Windows Admin Center를 사용하는 회사에 대해 자세히 알아보세요.](understand/case-studies.md)
+
+## <a name="related-products"></a>관련 제품
+
+Windows Admin Center는 단일 서버 또는 클러스터를 관리하기 위해 설계되었습니다. 이는 RSAT(원격 서버 관리 도구), System Center, Intune, 또는 Azure Stack 등 기존의 Microsoft 모니터링 및 관리 솔루션을 기능을 보완하지만 대체하지 않습니다.
+
+[Windows Admin Center가 다른 Microsoft 관리 솔루션을 보완하는 방법에 대해 알아봅니다.](understand/related-management.md)
 
 ## <a name="stay-updated"></a>최근 소식 받기
 
-![ ](//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR)[Twitter에서 Microsoft 팔로우](https://twitter.com/servermgmt)
+![](//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR)[Twitter에서 Microsoft 팔로우](https://twitter.com/servermgmt)
 
-![ ](//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw)[블로그 읽기](https://blogs.technet.microsoft.com/servermanagement/)
+![](//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw)[블로그 읽기](https://blogs.technet.microsoft.com/servermanagement/)

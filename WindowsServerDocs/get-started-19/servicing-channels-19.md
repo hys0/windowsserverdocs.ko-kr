@@ -8,12 +8,12 @@ author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: high
 ms.date: 05/21/2019
-ms.openlocfilehash: 814bcf3e989e9aa9b83ba447d07c45ee95309a5a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 3d443ff123cc041196f59d93d156415c34bdf70f
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391980"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75947878"
 ---
 # <a name="windows-server-servicing-channels-ltsc-and-sac"></a>Windows Server 서비스 채널: LTSC 및 SAC
 
@@ -36,7 +36,7 @@ Windows Server 고객, 장기 서비스 채널 및 반기 채널에 사용할 �
 
 반기 채널에 도입된 대부분의 기능은 Windows Server의 차기 LTSC 릴리스로 롤업됩니다. 버전, 기능 및 지원 내용은 고객 피드백에 따라 릴리스마다 달라질 수 있습니다.
 
-반기 채널은 [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx)가 포함된 볼륨 라이선스 고객에게 제공되며, Azure Marketplace 또는 기타 클라우드/호스팅 서비스 공급자와 Visual Studio 구독과 같은 구독 프로그램을 통해서도 이용할 수 있습니다.
+반기 채널은 [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx)가 포함된 볼륨 라이선스 고객에게 제공되며, Azure Marketplace 또는 기타 클라우드/호스팅 서비스 공급자와 Visual Studio 구독과 같은 구독 프로그램을 통해서도 이용할 수 있습니다.
 
 > [!Note]  
 > **현재 반기 채널 릴리스는 Windows Server 버전 1903입니다**. 이 채널에 서버를 배치하려는 경우 Server Core 모드에서 또는 컨테이너에서 Nano 서버 실행으로 설치할 수 있는 Windows Server 버전 1903을 설치해야 합니다. 장기 서비스 채널 릴리스는 **여러 릴리스 채널**에 있기 때문에 현재 위치 업그레이드가 지원되지 않습니다. 반기 채널 릴리스는 업데이트가 아니며, 반기 채널의 다음 Windows Server 릴리스입니다.
@@ -57,7 +57,7 @@ Windows Server 고객, 장기 서비스 채널 및 반기 채널에 사용할 �
 |-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
 | 권장 시나리오 | 범용 파일 서버, Microsoft 및 비 Microsoft 워크로드, 기존 앱, 인프라 역할, 소프트웨어 정의 데이터 센터 및 하이퍼 컨버지드 인프라 | 더 빠른 혁신을 통해 혜택을 얻는 컨테이너화된 애플리케이션, 컨테이너 호스트 및 애플리케이션 시나리오 |
 |     새 릴리스      |                                                                               2~3년마다                                                                                |                                              6개월마다                                              |
-|        지원        |                                                       일반 지원 5년 + 연장 지원 5년                                                        |                                                18개월                                                 |
+|        Support(지원)        |                                                       일반 지원 5년 + 연장 지원 5년                                                        |                                                18개월                                                 |
 |       버전        |                                                                    모든 Windows Server 버전 사용 가능                                                                     |                                     Standard 및 Datacenter 버전                                     |
 |      사용할 수 있는 사람      |                                                                      모든 채널을 통한 모든 고객                                                                      |                               Software Assurance 및 클라우드 고객만                                |
 | 설치 옵션  |                                                                Server Core 및 데스크톱 환경 포함 서버                                                                |                 컨테이너 호스트 및 이미지 및 Nano 서버 컨테이너 이미지용 Server Core                 |
@@ -84,9 +84,9 @@ IT 전문가가 Windows Server를 서비스하는 데 사용할 수 있는 도�
 
 반기 채널 릴리스는 새로 설치로 설치되어야 합니다.
 
-- VLSC(볼륨 라이선스 서비스 센터): [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx)를 사용하는 볼륨 라이선스 고객은 [볼륨 라이선싱 서비스 센터](https://www.microsoft.com/Licensing/servicecenter/default.aspx)로 이동하고 **로그인**을 클릭하여 이 릴리스를 받을 수 있습니다. 그런 다음, **다운로드 및 키**를 클릭하고 이 릴리스를 검색합니다. 
+- VLSC(볼륨 라이선스 서비스 센터): [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx)를 사용하는 볼륨 라이선스 고객은 [볼륨 라이선싱 서비스 센터](https://www.microsoft.com/Licensing/servicecenter/default.aspx)로 이동하고 **로그인**을 클릭하여 이 릴리스를 받을 수 있습니다. 그런 다음, **다운로드 및 키**를 클릭하고 이 릴리스를 검색합니다. 
 
-- 반기 채널 릴리스도 [Microsoft Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/Microsoft.WindowsServer?tab=Overview)에서 사용할 수 있습니다.
+- 반기 채널 릴리스도 [Microsoft Azure](https://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.WindowsServer?tab=Overview)에서 사용할 수 있습니다.
 
 - Visual Studio 구독: Visual Studio 구독자는 [Visual Studio 구독자 다운로드 페이지](https://my.visualstudio.com/downloads?pid=2347)에서 반기 채널 릴리스를 다운로드할 수 있습니다. 이미 구독자가 아닌 경우 [Visual Studio 구독](https://www.visualstudio.com/subscriptions/) 페이지로 이동하고 가입한 다음, 위와 같이 [Visual Studio 구독자 다운로드 페이지](https://my.visualstudio.com/downloads?pid=2347)로 이동합니다. Visual Studio 구독을 통해 얻은 릴리스는 개발 및 테스트용으로만 사용됩니다.
 
