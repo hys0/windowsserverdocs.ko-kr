@@ -9,12 +9,12 @@ ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: daveba
 ms.reviewer: mas
-ms.openlocfilehash: 2625097c56e6b2121cbdac45e1cc5f86972e4898
-ms.sourcegitcommit: 68483ee9284285f5643dd67dce06f5a102cb9469
+ms.openlocfilehash: 03f62fd8d9a95c4f0b83e64d672a3c1134833cae
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74823852"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950552"
 ---
 # <a name="privileged-access-workstations"></a>Privileged Access Workstation
 
@@ -34,7 +34,7 @@ PAW(Privileged Access Workstation)는 인터넷 공격 및 위협 벡터로부�
 > [!NOTE]
 > Windows 10 Enterprise에 액세스할 수 없는 조직에서는 신뢰할 수 있는 부팅, BitLocker, 원격 데스크톱 등 PAW에 중요한 많은 기본 기술이 포함된 Windows 10 Pro를 사용해도 됩니다.  교육 기관 고객은 Windows 10 Education을 사용할 수 있습니다.  Windows 10 Home을 PAW에 사용해서는 안 됩니다.
 >
-> Windows 10의 다양한 에디션에 대한 비교 표는 [이 문서](https://www.microsoft.com/en-us/WindowsForBusiness/Compare)를 참조하세요.
+> Windows 10의 다양한 에디션에 대한 비교 표는 [이 문서](https://www.microsoft.com/WindowsForBusiness/Compare)를 참조하세요.
 
 PAW 보안 제어는 손상에 따른 높은 영향과 높은 확률 위험을 완화하는 데 중점을 둡니다. 여기에는 환경에 대한 공격 및 시간 경과에 따라 PAW 제어의 효과를 저하시킬 수 있는 위험에 대한 완화가 포함됩니다.
 
@@ -50,7 +50,7 @@ PAW 보안 제어는 손상에 따른 높은 영향과 높은 확률 위험을 �
 >
 > 대응 및 복구 지침에 대한 자세한 내용은 [Pass-the-Hash 및 기타 자격 증명 도난 완화](https://aka.ms/pth) 버전 2의 "의심스러운 활동 대응" 및 "위반 복구" 섹션을 참조하세요.
 >
-> 자세한 내용은 [Microsoft의 사고 대응 및 복구 서비스](https://www.microsoft.com/en-us/microsoftservices/campaigns/cybersecurity-protection.aspx) 페이지를 참조하세요.
+> 자세한 내용은 [Microsoft의 사고 대응 및 복구 서비스](https://www.microsoft.com/microsoftservices/campaigns/cybersecurity-protection.aspx) 페이지를 참조하세요.
 
 ### <a name="paw-hardware-profiles"></a>PAW 하드웨어 프로필
 
@@ -59,7 +59,7 @@ PAW 보안 제어는 손상에 따른 높은 영향과 높은 확률 위험을 �
 보안의 필요성과 생산성의 필요성에 대한 균형을 유지하려면 다음 PAW 하드웨어 프로필 중 하나를 사용하는 것이 좋습니다.
 
 * **전용 하드웨어** - 사용자 작업과 관리 작업을 위한 별도의 전용 디바이스
-* **동시 사용** - OS 또는 프레젠테이션 가상화를 활용하여 사용자 작업과 관리 작업을 동시에 실행할 수 있는 단일 장치
+* **동시 사용** - OS 또는 프레젠테이션 가상화를 활용하여 사용자 작업과 관리 작업을 동시에 실행할 수 있는 단일 디바이스
 
 조직에서는 하나의 프로필만 사용하거나 두 프로필을 모두 사용할 수 있습니다. 하드웨어 프로필 간에 상호 운용성 문제는 없으므로 조직에서는 지정된 관리자의 상황 및 특정 요구 사항에 맞게 하드웨어 프로필을 유연하게 선택할 수 있습니다.
 
@@ -88,15 +88,15 @@ PAW 보안 제어는 손상에 따른 높은 영향과 높은 확률 위험을 �
 물리적 하드웨어는 로컬로 다음 두 운영 체제를 실행합니다.
 
 * **관리자 OS** - 물리적 호스트는 관리 작업용으로 PAW 호스트에서 Windows 10을 실행합니다.
-* **사용자 OS** - Windows 10 client Hyper-V 가상 컴퓨터 게스트는 회사 이미지를 실행합니다.
+* **사용자 OS** - Windows 10 client Hyper-V 가상 머신 게스트는 회사 이미지를 실행합니다.
 
 Windows 10 Hyper-V를 사용하면 게스트 가상 머신(Windows 10도 실행함)에서 소리, 비디오 및 인터넷 통신 애플리케이션(예: 비즈니스용 Skype)과 같은 풍부한 사용자 환경을 갖출 수 있습니다.
 
-이 구성에서 관리 권한이 필요 없는 일상적인 작업은 일반 회사 Windows 10 이미지를 포함하고 PAW 호스트에 적용되는 제한 사항이 없는 사용자 OS 가상 컴퓨터에서 수행됩니다. 모든 관리 작업은 관리자 OS에서 수행됩니다.
+이 구성에서 관리 권한이 필요 없는 일상적인 작업은 일반 회사 Windows 10 이미지를 포함하고 PAW 호스트에 적용되는 제한 사항이 없는 사용자 OS 가상 머신에서 수행됩니다. 모든 관리 작업은 관리자 OS에서 수행됩니다.
 
 이렇게 구성하려면 PAW 호스트에 대한 이 지침의 설명에 따라 클라이언트 Hyper-V 기능을 추가하고 사용자 VM을 만든 다음 사용자 VM에 Windows 10 회사 이미지를 설치합니다.
 
-이 기능에 대한 자세한 내용은 [클라이언트 Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/index) 문서를 참조하세요. 게스트 가상 컴퓨터의 운영 체제는 [여기](https://download.microsoft.com/download/9/8/D/98D6A56C-4D79-40F4-8462-DA3ECBA2DC2C/Licensing_Windows_Desktop_OS_for_Virtual_Machines.pdf)에 설명된 대로 [Microsoft 제품 라이선스](https://www.microsoft.com/en-us/Licensing/product-licensing/products.aspx)에 따라 라이선스를 받아야 합니다.
+이 기능에 대한 자세한 내용은 [클라이언트 Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/index) 문서를 참조하세요. 게스트 가상 컴퓨터의 운영 체제는 [여기](https://download.microsoft.com/download/9/8/D/98D6A56C-4D79-40F4-8462-DA3ECBA2DC2C/Licensing_Windows_Desktop_OS_for_Virtual_Machines.pdf)에 설명된 대로 [Microsoft 제품 라이선스](https://www.microsoft.com/Licensing/product-licensing/products.aspx)에 따라 라이선스를 받아야 합니다.
 
 #### <a name="simultaneous-use---adding-remoteapp-rdp-or-a-vdi"></a>동시 사용 - RemoteApp, RDP 또는 VDI 추가
 
@@ -152,7 +152,7 @@ ESAE 관리 포리스트에 대한 자세한 내용은 [권한 있는 액세스 
 
 조직의 현재 위협 환경은 정교한 피싱 및 기타 인터넷에 노출된 계정과 워크스테이션에 대한 지속적인 보안 침해 위험을 초래하는 인터넷 공격으로 가득 차 있습니다.
 
-이 위협 환경에서는 조직에서 관리자 계정 및 중요한 비즈니스 자산과 같은 고부가가치 자산에 대한 보호를 설계할 때 "위반 가정" 보안 상태를 채택해야 합니다. 이러한 중요 자산은 직접적인 인터넷 위협뿐만 아니라 환경 내 다른 워크스테이션, 서버 및 장치에서 탑재되는 공격으로부터 모두 보호되어야 합니다.
+이 위협 환경에서는 조직에서 관리자 계정 및 중요한 비즈니스 자산과 같은 고부가가치 자산에 대한 보호를 설계할 때 "위반 가정" 보안 상태를 채택해야 합니다. 이러한 중요 자산은 직접적인 인터넷 위협뿐만 아니라 환경 내 다른 워크스테이션, 서버 및 디바이스에서 탑재되는 공격으로부터 모두 보호되어야 합니다.
 
 ![공격자가 중요한 자격 증명이 사용되는 사용자 워크스테이션에 대한 제어 권한을 획득한 경우 관리되는 자산에 대한 위험을 보여 주는 그림](../media/privileged-access-workstations/PAWFig2.JPG)
 
@@ -235,7 +235,7 @@ PAW 아키텍처에서는 사용자 워크스테이션에서 관리 VM을 호스
 
 #### <a name="privilege-management-solutions"></a>권한 관리 솔루션
 
-권한 관리 솔루션은 특정 권한 또는 권한 있는 계정에 대한 임시 액세스를 제공하는 응용 프로그램입니다. 권한 관리 솔루션은 권한 있는 액세스의 보안을 유지하고 관리 작업의 중요한 가시성 및 책임감을 제공하기 위한 전체 전략의 매우 중요한 구성 요소입니다.
+권한 관리 솔루션은 특정 권한 또는 권한 있는 계정에 대한 임시 액세스를 제공하는 애플리케이션입니다. 권한 관리 솔루션은 권한 있는 액세스의 보안을 유지하고 관리 작업의 중요한 가시성 및 책임감을 제공하기 위한 전체 전략의 매우 중요한 구성 요소입니다.
 
 이러한 솔루션은 일반적으로 유연한 워크플로를 사용하여 액세스 권한을 부여하며, 대부분 서비스 계정 암호 관리 및 관리 점프 서버와의 통합과 같은 추가 보안 기능을 갖추고 있습니다. 권한 관리 기능을 제공하는 솔루션은 시중에 많이 있으며, 그 중 하나가 MIM(Microsoft Identity Manager) PAM(Privileged Access Management)입니다.
 
@@ -270,16 +270,16 @@ MIM(Microsoft Identity Manager) PAM(Privileged Access Management)을 배포하�
 |Azure IaaS 및 PaaS 서비스 관리자 - 계층 0 또는 계층 1(범위 및 디자인 고려 사항 참조)|예|2단계에서 제공된 지침에 따라 구축된 PAW면 이 역할에 충분합니다.<br /><br />-   최소한 전역 관리자 및 구독 비용 청구 관리자에게 PAW를 사용해야 합니다. 중요하거나 민감한 서버의 위임된 관리자에게도 PAW를 사용해야 합니다.<br />-   [Azure AD Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect/) 및 ADFS(Active Directory Federation Services)와 같은 클라우드 서비스를 위해 디렉터리 동기화 및 ID 페더레이션을 제공하는 운영 체제 및 애플리케이션을 관리하는 데 PAW를 사용해야 합니다.<br />-   아웃바운드 네트워크 제한에서 2단계의 지침을 사용하는 권한 있는 클라우드 서비스에 대한 연결만 허용해야 합니다. 공개 인터넷 액세스는 PAW에서 허용되어서는 안 됩니다.<br />-   Windows Defender Exploit Guard는 워크스테이션에서 구성해야 합니다. **참고:**     도메인 컨트롤러 또는 다른 계층 0 호스트가 구독에 있는 경우 해당 구독은 포리스트의 계층 0으로 간주됩니다. Azure에서 호스트되는 계층 0 서버가 없는 경우 구독은 계층 1입니다.|
 |Office 365 테넌트 관리자 <br />- 계층 1|예|2단계에서 제공된 지침에 따라 구축된 PAW면 이 역할에 충분합니다.<br /><br />-   최소한 구독 비용 청구 관리자, 전역 관리자, Exchange 관리자, SharePoint 관리자 및 사용자 관리 관리자 역할에 PAW를 사용해야 합니다. 또한 매우 중요하거나 민감한 데이터의 위임된 관리자에게도 PAW를 사용하는 것이 좋습니다.<br />-   Windows Defender Exploit Guard는 워크스테이션에서 구성해야 합니다.<br />-   아웃바운드 네트워크 제한에서 2단계의 지침을 사용하는 Microsoft 서비스에 대한 연결만 허용해야 합니다. 공개 인터넷 액세스는 PAW에서 허용되어서는 안 됩니다.|
 |다른 IaaS 또는 PaaS 클라우드 서비스 관리자<br />- 계층 0 또는 계층 1(범위 및 디자인 고려 사항 참조)|예|2단계에서 제공된 지침에 따라 구축된 PAW면 이 역할에 충분합니다.<br /><br />-   에이전트 설치 권한, 하드 디스크 파일 내보내기 권한, 운영 체제, 민감한 데이터 또는 비즈니스에 중요한 데이터가 저장된 스토리지 액세스 권한 등 클라우드 호스트된 VM에 대한 관리 권한을 가진 모든 역할에 PAW를 사용해야 합니다.<br />-   아웃바운드 네트워크 제한에서 2단계의 지침을 사용하는 Microsoft 서비스에 대한 연결만 허용해야 합니다. 공개 인터넷 액세스는 PAW에서 허용되어서는 안 됩니다.<br />-   Windows Defender Exploit Guard는 워크스테이션에서 구성해야 합니다. **참고:** 도메인 컨트롤러 또는 다른 계층 0 호스트가 구독에 있는 경우 해당 구독은 포리스트의 계층 0입니다. Azure에서 호스트되는 계층 0 서버가 없는 경우 구독은 계층 1입니다.|
-|가상화 관리자<br />- 계층 0 또는 계층 1(범위 및 디자인 고려 사항 참조)|예|2단계에서 제공된 지침에 따라 구축된 PAW면 이 역할에 충분합니다.<br /><br />-   에이전트 설치 권한, 가상 하드 디스크 파일 내보내기 권한, 게스트 운영 체제 정보, 민감한 데이터 또는 비즈니스에 중요한 데이터가 저장된 저장소 액세스 권한 등 VM에 대한 관리 권한을 가진 모든 역할에 PAW를 사용해야 합니다. **참고:** 도메인 컨트롤러 또는 다른 계층 0 호스트가 구독에 있는 경우 가상화 시스템(및 해당 관리자)은 포리스트의 계층 0으로 간주됩니다. 가상화 시스템에서 호스트되는 계층 0 서버가 없는 경우 구독은 계층 1입니다.|
+|가상화 관리자<br />- 계층 0 또는 계층 1(범위 및 디자인 고려 사항 참조)|예|2단계에서 제공된 지침에 따라 구축된 PAW면 이 역할에 충분합니다.<br /><br />-   에이전트 설치 권한, 가상 하드 디스크 파일 내보내기 권한, 게스트 운영 체제 정보, 민감한 데이터 또는 비즈니스에 중요한 데이터가 저장된 스토리지 액세스 권한 등 VM에 대한 관리 권한을 가진 모든 역할에 PAW를 사용해야 합니다. **참고:** 도메인 컨트롤러 또는 다른 계층 0 호스트가 구독에 있는 경우 가상화 시스템(및 해당 관리자)은 포리스트의 계층 0으로 간주됩니다. 가상화 시스템에서 호스트되는 계층 0 서버가 없는 경우 구독은 계층 1입니다.|
 |서버 유지 관리 관리자<br />- 계층 1|예|2단계에서 제공된 지침에 따라 구축된 PAW면 이 역할에 충분합니다.<br /><br />-   Windows Server, Linux 및 기타 운영 체제를 실행하는 엔터프라이즈 서버 및 응용 프로그램에 대해 업데이트, 패치, 문제 해결 등을 수행하는 관리자에게 PAW를 사용해야 합니다.<br />-   PAW에서 보다 대규모의 관리자를 처리하려면 전용 관리 도구를 추가해야 할 수도 있습니다.|
-|사용자 워크스테이션 관리자 <br />- 계층 2|예|2단계에서 제공된 지침에 따라 구축된 PAW면 최종 사용자 디바이스(예: 지원 센터 및 데스크 측 지원 역할)에 대한 관리 권한이 있는 역할에 충분합니다.<br /><br />-   티켓 관리 및 기타 지원 기능을 사용하려면 PAW에 추가 응용 프로그램을 설치해야 할 수도 있습니다.<br />-   Windows Defender Exploit Guard는 워크스테이션에서 구성해야 합니다.<br />    PAW에서 보다 대규모의 관리자를 처리하려면 전용 관리 도구를 추가해야 할 수도 있습니다.|
+|사용자 워크스테이션 관리자 <br />- 계층 2|예|2단계에서 제공된 지침에 따라 구축된 PAW면 최종 사용자 디바이스(예: 지원 센터 및 데스크 측 지원 역할)에 대한 관리 권한이 있는 역할에 충분합니다.<br /><br />-   티켓 관리 및 기타 지원 기능을 사용하려면 PAW에 추가 애플리케이션을 설치해야 할 수도 있습니다.<br />-   Windows Defender Exploit Guard는 워크스테이션에서 구성해야 합니다.<br />    PAW에서 보다 대규모의 관리자를 처리하려면 전용 관리 도구를 추가해야 할 수도 있습니다.|
 |SQL, SharePoint 또는 LOB(기간 업무) 관리자<br />- 계층 1|예|2단계 지침에 따라 구축한 PAW면 이 역할에 충분합니다.<br /><br />-   관리자가 서버에 연결하지 않고도 원격 데스크톱을 사용하여 애플리케이션을 관리할 수 있도록 하려면 PAW에 추가 관리 도구를 설치해야 할 수도 있습니다.|
-|소셜 미디어 현재 상태를 관리하는 사용자|부분적으로|2단계에서 제공된 지침에 따라 구축한 PAW를 시작점으로 사용하여 이러한 역할에 대한 보안을 제공할 수 있습니다.<br /><br />-   소셜 미디어 계정에 대한 액세스를 공유, 보호 및 추적하는 데 AAD(Azure Active Directory)를 사용하여 소셜 미디어 계정을 보호하고 관리합니다.<br />    이 기능에 대한 자세한 내용은 [이 블로그 게시물](http://blogs.technet.com/b/ad/archive/2015/02/20/azure-ad-automated-password-roll-over-for-facebook-twitter-and-linkedin-now-in-preview.aspx)을 참조하세요.<br />-   아웃바운드 네트워크 제한에서 이러한 서비스에 대한 연결을 허용해야 합니다. 공개 인터넷 연결을 허용(많은 PAW 보증을 부정하므로 보안 위험이 훨씬 높음)하거나 서비스에 필요한 DNS 주소만 허용(가져오기 어려울 수 있음)하면 됩니다.|
-|표준 사용자|아니오|많은 강화 단계를 표준 사용자에게 사용할 수 있지만 PAW는 대부분의 사용자가 작업에 필요한 공개 인터넷 액세스로부터 계정을 격리하도록 설계되었습니다.|
-|게스트 VDI/키오스크|아니오|많은 강화 단계를 게스트용 키오스크 시스템에 사용할 수 있지만 PAW 아키텍처는 민감도가 높은 계정에는 높은 보안을 제공하고 민감도가 낮은 계정에는 낮은 보안을 제공하도록 설계되었습니다.|
-|VIP 사용자(임원, 연구원 등)|부분적으로|2단계에서 제공된 지침에 따라 구축한 PAW는 이러한 역할에 대한 보안을 제공하기 위한 시작점으로 사용할 수 있습니다.<br /><br />-   이 시나리오는 표준 사용자 데스크톱과 유사하지만 일반적으로 응용 프로그램 프로필이 더 작고 단순하며 잘 알려져 있습니다. 이 시나리오에서는 일반적으로 중요한 데이터, 서비스 및 애플리케이션(데스크톱에 설치되거나 설치되지 않은)을 검색하고 보호해야 합니다.<br />-   이러한 역할에는 일반적으로 높은 보안 수준과 매우 높은 유용성 수준이 필요하므로 사용자 요구 사항을 충족하려면 디자인 변경이 필요합니다.|
+|소셜 미디어 현재 상태를 관리하는 사용자|부분적으로|2단계에서 제공된 지침에 따라 구축한 PAW를 시작점으로 사용하여 이러한 역할에 대한 보안을 제공할 수 있습니다.<br /><br />-   소셜 미디어 계정에 대한 액세스를 공유, 보호 및 추적하는 데 AAD(Azure Active Directory)를 사용하여 소셜 미디어 계정을 보호하고 관리합니다.<br />    이 기능에 대한 자세한 내용은 [이 블로그 게시물](https://blogs.technet.com/b/ad/archive/2015/02/20/azure-ad-automated-password-roll-over-for-facebook-twitter-and-linkedin-now-in-preview.aspx)을 참조하세요.<br />-   아웃바운드 네트워크 제한에서 이러한 서비스에 대한 연결을 허용해야 합니다. 공개 인터넷 연결을 허용(많은 PAW 보증을 부정하므로 보안 위험이 훨씬 높음)하거나 서비스에 필요한 DNS 주소만 허용(가져오기 어려울 수 있음)하면 됩니다.|
+|표준 사용자|아니요|많은 강화 단계를 표준 사용자에게 사용할 수 있지만 PAW는 대부분의 사용자가 작업에 필요한 공개 인터넷 액세스로부터 계정을 격리하도록 설계되었습니다.|
+|게스트 VDI/키오스크|아니요|많은 강화 단계를 게스트용 키오스크 시스템에 사용할 수 있지만 PAW 아키텍처는 민감도가 높은 계정에는 높은 보안을 제공하고 민감도가 낮은 계정에는 낮은 보안을 제공하도록 설계되었습니다.|
+|VIP 사용자(임원, 연구원 등)|부분적으로|2단계에서 제공된 지침에 따라 구축한 PAW는 이러한 역할에 대한 보안을 제공하기 위한 시작점으로 사용할 수 있습니다.<br /><br />-   이 시나리오는 표준 사용자 데스크톱과 유사하지만 일반적으로 애플리케이션 프로필이 더 작고 단순하며 잘 알려져 있습니다. 이 시나리오에서는 일반적으로 중요한 데이터, 서비스 및 애플리케이션(데스크톱에 설치되거나 설치되지 않은)을 검색하고 보호해야 합니다.<br />-   이러한 역할에는 일반적으로 높은 보안 수준과 매우 높은 유용성 수준이 필요하므로 사용자 요구 사항을 충족하려면 디자인 변경이 필요합니다.|
 |산업용 제어 시스템(예: SCADA, PCN 및 DC)|부분적으로|대부분의 ICS 콘솔(SCADA 및 PCN과 같은 일반적인 표준 포함)에서는 공개 인터넷을 검색하고 전자 메일을 확인할 필요가 없으므로 2단계에서 제공된 지침에 따라 구축한 PAW를 시작점으로 사용하여 이러한 역할에 대한 보안을 제공할 수 있습니다.<br /><br />-   물리적 머신을 제어하는 데 사용되는 애플리케이션은 통합하고, 호환성을 테스트하고, 적절히 보호해야 합니다.|
-|임베디드 운영 체제|아니오|PAW의 많은 강화 단계를 임베디드 운영 체제에 사용할 수 있지만 이 시나리오의 강화를 위해서는 사용자 지정 솔루션을 개발해야 합니다.|
+|임베디드 운영 체제|아니요|PAW의 많은 강화 단계를 임베디드 운영 체제에 사용할 수 있지만 이 시나리오의 강화를 위해서는 사용자 지정 솔루션을 개발해야 합니다.|
 
 > [!NOTE]
 > **조합 시나리오** 일부 직원에게 여러 시나리오에 걸친 관리 책임이 있을 수 있습니다.
@@ -290,7 +290,7 @@ MIM(Microsoft Identity Manager) PAM(Privileged Access Management)을 배포하�
 
 이 지침에는 위 시나리오와 관련된 PAW 구성의 자세한 지침이 포함되어 있습니다. 다른 시나리오에 대한 요구 사항이 있는 경우 이 지침을 기반으로 하는 지침을 직접 도입하거나 Microsoft와 같은 전문 서비스 조직의 지원을 받을 수 있습니다.
 
-사용자 환경에 맞춤화된 PAW를 디자인하기 위해 Microsoft 서비스를 참여시키는 방법에 대한 자세한 내용은 Microsoft 담당자에게 문의하거나 [이 페이지](https://www.microsoft.com/en-us/microsoftservices/campaigns/cybersecurity-protection.aspx)를 방문하세요.
+사용자 환경에 맞춤화된 PAW를 디자인하기 위해 Microsoft 서비스를 참여시키는 방법에 대한 자세한 내용은 Microsoft 담당자에게 문의하거나 [이 페이지](https://www.microsoft.com/microsoftservices/campaigns/cybersecurity-protection.aspx)를 방문하세요.
 
 ## <a name="paw-phased-implementation"></a>단계별 PAW 구현
 
@@ -345,11 +345,11 @@ PAW는 관리를 위한 안전하고 신뢰할 수 있는 토대를 제공하므
 4. **필요한 Windows 10 Enterprise Edition 및 애플리케이션 소프트웨어를 획득하고 유효성을 검사합니다**. PAW에 필요한 소프트웨어를 구입하고 [설치 미디어에 대한 클린 소스](https://aka.ms/cleansource)의 지침에 따라 유효성을 검사합니다.
 
    * Windows 10 Enterprise Edition
-   * Windows 10용 [원격 서버 관리 도구](https://www.microsoft.com/en-us/download/details.aspx?id=45520)
+   * Windows 10용 [원격 서버 관리 도구](https://www.microsoft.com/download/details.aspx?id=45520)
    * [Windows 10 보안 기준](https://aka.ms/win10baselines)
 
       > [!NOTE]
-      > Microsoft에서는 모든 운영 체제 및 응용 프로그램에 대한 MD5 해시를 MSDN에 게시하지만 일부 소프트웨어 공급업체는 이와 유사한 설명서를 제공하지 않습니다.  이 경우 다른 전략이 필요합니다.  소프트웨어 유효성 검사에 대한 자세한 내용은 설치 미디어에 대한 [클린 소스](https://aka.ms/cleansource)를 참조하세요.
+      > Microsoft에서는 모든 운영 체제 및 애플리케이션에 대한 MD5 해시를 MSDN에 게시하지만 일부 소프트웨어 공급업체는 이와 유사한 설명서를 제공하지 않습니다.  이 경우 다른 전략이 필요합니다.  소프트웨어 유효성 검사에 대한 자세한 내용은 설치 미디어에 대한 [클린 소스](https://aka.ms/cleansource)를 참조하세요.
 
 5. **인트라넷에서 사용 가능한 WSUS 서버가 있는지 확인합니다**. PAW에 대한 업데이트를 다운로드하고 설치하려면 인트라넷에 WSUS 서버가 필요합니다. Windows 10에 대한 모든 보안 업데이트를 자동으로 승인하도록 이 WSUS 서버를 구성하거나, 관리 직원이 소프트웨어 업데이트를 신속하게 승인하는 책임을 맡아야 합니다.
 
@@ -660,7 +660,7 @@ Domain Admin, Enterprise Admin 또는 이와 동등한 계층 0 그룹(중첩 �
 2. 로컬 관리자 계정의 고유하고 복잡한 암호를 설정합니다.  환경에서 다른 계정에 사용된 암호를 사용하지 마세요.
 
    > [!NOTE]
-   > [LAPS(Local Administrator Password Solution)](https://www.microsoft.com/en-us/download/details.aspx?id=46899)를 사용하여 PAW를 비롯한 모든 워크스테이션의 로컬 관리자 암호를 관리하는 것이 좋습니다.  LAPS를 사용하는 경우 PAW Maintenance 그룹에만 PAW의 LAPS 관리되는 암호를 읽을 수 있는 권한을 부여해야 합니다.
+   > [LAPS(Local Administrator Password Solution)](https://www.microsoft.com/download/details.aspx?id=46899)를 사용하여 PAW를 비롯한 모든 워크스테이션의 로컬 관리자 암호를 관리하는 것이 좋습니다.  LAPS를 사용하는 경우 PAW Maintenance 그룹에만 PAW의 LAPS 관리되는 암호를 읽을 수 있는 권한을 부여해야 합니다.
 
 3. 클린 소스 설치 미디어를 사용하여 Windows 10용 원격 서버 관리 도구를 설치합니다.
 4. Windows Defender Exploit Guard를 구성합니다.
@@ -679,7 +679,7 @@ Domain Admin, Enterprise Admin 또는 이와 동등한 계층 0 그룹(중첩 �
    > [ESAE 관리 포리스트](https://aka.ms/esae)(1단계의 계층 0 관리자용) 또는 [MIM(Microsoft Identity Manager) PAM(Privileged Access Management)](https://aka.ms/mimpamdeploy)(2단계의 계층 1 및 2 관리자용)을 배포한 경우 프로덕션 도메인 대신 이 환경의 도메인의 PAW를 가입합니다.
 
 7. 다른 소프트웨어(관리 도구, 에이전트 등)를 설치하기 전에 모든 중요한 Windows 업데이트를 적용합니다.
-8. 그룹 정책 응용 프로그램을 강제 적용합니다.
+8. 그룹 정책 애플리케이션을 강제 적용합니다.
    1. 관리자 권한 명령 프롬프트를 열고, `Gpupdate /force /sync` 명령을 입력합니다.
    2. 컴퓨터를 다시 시작합니다.
 
@@ -705,7 +705,7 @@ Domain Admin, Enterprise Admin 또는 이와 동등한 계층 0 그룹(중첩 �
 
        2. 또한 **로컬 사용자 및 그룹 편집**을 사용하여 다음 그룹에 구성원이 없는지 확인합니다. Backup Operators, Cryptographic Operators Hyper-V Administrators, Network Configuration Operators, Power Users, Remote Desktop Users, Replicators
 
-12. (선택 사항) 조직에서 SIEM(보안 정보 및 이벤트 관리) 솔루션을 사용하는 경우, PAW가 [WEF(Windows 이벤트 전달)를 사용하여 이벤트를 시스템에 전달하도록 구성](http://blogs.technet.com/b/jepayne/archive/2015/11/24/monitoring-what-matters-windows-event-forwarding-for-everyone-even-if-you-already-have-a-siem.aspx)되었거나 SIEM이 PAW로부터 이벤트와 정보를 적극적으로 받을 수 있도록 솔루션에 등록되어 있는지 확인합니다.  이 작업의 세부 정보는 SIEM 솔루션에 따라 크게 다릅니다.
+12. (선택 사항) 조직에서 SIEM(보안 정보 및 이벤트 관리) 솔루션을 사용하는 경우, PAW가 [WEF(Windows 이벤트 전달)를 사용하여 이벤트를 시스템에 전달하도록 구성](https://blogs.technet.com/b/jepayne/archive/2015/11/24/monitoring-what-matters-windows-event-forwarding-for-everyone-even-if-you-already-have-a-siem.aspx)되었거나 SIEM이 PAW로부터 이벤트와 정보를 적극적으로 받을 수 있도록 솔루션에 등록되어 있는지 확인합니다.  이 작업의 세부 정보는 SIEM 솔루션에 따라 크게 다릅니다.
 
     > [!NOTE]
     > SIEM에 PAW의 시스템 또는 로컬 관리 계정으로 실행되는 에이전트가 필요한 경우 SIEM이 도메인 컨트롤러 및 ID 시스템과 동일한 신뢰 수준으로 관리되는지 확인합니다.
@@ -716,7 +716,7 @@ Domain Admin, Enterprise Admin 또는 이와 동등한 계층 0 그룹(중첩 �
 
 ### <a name="phase-2-extend-paw-to-all-administrators"></a>2단계: 모든 관리자로 PAW 확장
 
-범위: 중요 업무용 애플리케이션 및 종속성에 대한 관리자 권한이 있는 모든 사용자.  여기에는 최소한 응용 프로그램 서버, 작업 상태 및 보안 모니터링 솔루션, 가상화 솔루션, 저장소 시스템 및 네트워크 장치의 관리자가 포함되어야 합니다.
+범위: 중요 업무용 애플리케이션 및 종속성에 대한 관리자 권한이 있는 모든 사용자.  여기에는 최소한 애플리케이션 서버, 작업 상태 및 보안 모니터링 솔루션, 가상화 솔루션, 스토리지 시스템 및 네트워크 디바이스의 관리자가 포함되어야 합니다.
 
 > [!NOTE]
 > 이 단계의 지침에서는 1단계가 완전히 완료된 것으로 가정합니다.  1단계의 모든 단계를 완료할 때까지 2단계를 시작하지 마세요.
@@ -778,7 +778,7 @@ Domain Admin, Enterprise Admin 또는 이와 동등한 계층 0 그룹(중첩 �
 
          > [!NOTE]
          > 다운로드 후 *proxy.pac* 파일을 업데이트해야 완전한 최신 상태로 유지됩니다.  
-         > 모든 최신 Office 365 및 Azure URL은 Office [지원 센터](https://support.office.com/en-us/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2?ui=en-US&rs=en-US&ad=US)에 게시됩니다. 이러한 지침에서는 Office 365, Azure 및 기타 클라우드 서비스의 관리를 위해 Internet Explorer(또는 Microsoft Edge)를 사용하는 것으로 가정합니다. 관리에 필요한 모든 타사 브라우저에 대해서도 유사한 제한을 구성하는 것이 좋습니다. PAW의 웹 브라우저는 클라우드 서비스를 관리하는 데에만 사용해야 합니다. 일반적인 웹 검색에 사용해서는 안 됩니다.
+         > 모든 최신 Office 365 및 Azure URL은 Office [지원 센터](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2?ui=en-US&rs=en-US&ad=US)에 게시됩니다. 이러한 지침에서는 Office 365, Azure 및 기타 클라우드 서비스의 관리를 위해 Internet Explorer(또는 Microsoft Edge)를 사용하는 것으로 가정합니다. 관리에 필요한 모든 타사 브라우저에 대해서도 유사한 제한을 구성하는 것이 좋습니다. PAW의 웹 브라우저는 클라우드 서비스를 관리하는 데에만 사용해야 합니다. 일반적인 웹 검색에 사용해서는 안 됩니다.
          >
          > 다른 IaaS 공급자를 위해 이 목록에 다른 유효한 인터넷 대상을 추가해야 할 수도 있겠지만 생산성, 엔터테인먼트, 뉴스 또는 검색 사이트는 이 목록에 추가하지 마세요.
          >
@@ -800,7 +800,7 @@ Domain Admin, Enterprise Admin 또는 이와 동등한 계층 0 그룹(중첩 �
             6. 값 데이터: http:// 및 파일 이름을 포함하여 *proxy.pac* 파일에 대한 전체 URL을 입력합니다(예: http://proxy.fabrikam.com/proxy.pac ).  URL은 단일 레이블 URL일 수도 있습니다(예: http://proxy/proxy.pac ).
 
                > [!NOTE]
-               > file://server.fabrikan.com/share/proxy.pac 구문을 사용하여 파일 공유에서 PAC 파일을 호스트할 수도 있지만 그러려면 file:// 프로토콜을 허용해야 합니다. 필요한 레지스트리 값을 구성하는 방법에 대한 자세한 내용은 이 [웹 프록시 구성 이해](http://blogs.msdn.com/b/ieinternals/archive/2013/10/11/web-proxy-configuration-and-ie11-changes.aspx) 블로그의 "참고: File:// 기반 프록시 스크립트 사용 중지" 섹션을 참조하세요.
+               > file://server.fabrikan.com/share/proxy.pac 구문을 사용하여 파일 공유에서 PAC 파일을 호스트할 수도 있지만 그러려면 file:// 프로토콜을 허용해야 합니다. 필요한 레지스트리 값을 구성하는 방법에 대한 자세한 내용은 이 [웹 프록시 구성 이해](https://blogs.msdn.com/b/ieinternals/archive/2013/10/11/web-proxy-configuration-and-ie11-changes.aspx) 블로그의 "참고: File:// 기반 프록시 스크립트 사용 중지" 섹션을 참조하세요.
 
             7. **일반** 탭을 클릭하고 **이 항목을 더 이상 적용하지 않을 때 제거**를 선택합니다.
             8. **일반** 탭에서 **항목 수준 대상**을 선택하고 **대상**을 클릭합니다.
@@ -853,12 +853,12 @@ Domain Admin, Enterprise Admin 또는 이와 동등한 계층 0 그룹(중첩 �
          > "SCM Windows 10 - Domain Security" GPO는 PAW와 독립적으로 도메인에 연결할 수 있지만 전체 도메인에 영향을 줍니다.
 
 6. (선택 사항) Tier 1 Admins에 필요한 추가 도구를 설치합니다. 작업을 수행하는 데 필요한 다른 도구 또는 스크립트를 설치합니다. PAW에 추가하기 전에 모두 도구에 대해 대상 컴퓨터에서 자격 증명 노출 위험을 평가해야 합니다. 관리 도구 및 연결 방법에 대해 자격 증명 노출 위험을 평가하는 방법에 대한 자세한 내용은 [이 페이지](https://aka.ms/logontypes)를 참조하세요. 설치 미디어에 대한 클린 소스의 지침에 따라 모든 설치 미디어를 가져와야 합니다.
-7. 관리에 필요한 소프트웨어 및 애플리케이션을 식별하고 안전하게 가져오기.  이는 1단계에서 수행한 작업과 유사하지만 보안을 유지해야 하는 응용 프로그램, 서비스 및 시스템 수가 증가했기 때문에 범위가 더 넓습니다.
+7. 관리에 필요한 소프트웨어 및 애플리케이션을 식별하고 안전하게 가져오기.  이는 1단계에서 수행한 작업과 유사하지만 보안을 유지해야 하는 애플리케이션, 서비스 및 시스템 수가 증가했기 때문에 범위가 더 넓습니다.
 
    > [!NOTE]
    > Windows Defender Exploit Guard에서 제공하는 보호로 옵트인하여 이러한 새 애플리케이션(웹 브라우저 포함)을 보호해야 합니다.
 
-   추가 소프트웨어 및 응용 프로그램의 예:
+   추가 소프트웨어 및 애플리케이션의 예:
 
       * Microsoft Azure PowerShell
       * Office 365 PowerShell(Microsoft Online Services 모듈이라고도 함)
@@ -922,11 +922,11 @@ Domain Admin, Enterprise Admin 또는 이와 동등한 계층 0 그룹(중첩 �
    * **가상 스마트 카드**:  가상 스마트 카드는 물리적 스마트 카드와 동일한 보안 이점을 제공하며, 특정 하드웨어에 연결되는 추가적인 이점도 있습니다.  배포 및 하드웨어 요구 사항에 대한 자세한 내용은 [가상 스마트 카드 개요](https://technet.microsoft.com/library/dn593708.aspx) 및 [가상 스마트 카드 시작: 연습 가이드](https://technet.microsoft.com/library/dn579260.aspx)를 참조하세요.
    * **비즈니스용 Windows Hello**: 비즈니스용 Windows Hello를 사용하면 사용자가 Microsoft 계정, Active Directory 계정, Microsoft Azure AD(Azure Active Directory) 계정 또는 FIDO(Fast ID Online) 인증을 지원하는 타사 서비스를 인증할 수 있습니다. 비즈니스용 Windows Hello 등록 중에 초기 2단계 인증을 수행하면 비즈니스용 Windows Hello가 사용자의 디바이스에 설정되고, 사용자는 Windows Hello 또는 PIN이 될 수 있는 제스처를 설정합니다. 비즈니스용 Windows Hello 자격 증명은 TPM(신뢰할 수 있는 플랫폼 모듈)의 격리된 환경 내에서 생성될 수 있는 비대칭 키 쌍입니다.
       비즈니스용 Windows Hello에 대한 자세한 내용은 [비즈니스용 Windows Hello](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification) 문서를 참조하세요.
-   * **Azure 다단계 인증**:  Azure MFA(다단계 인증)는 두 번째 확인 요소의 보안을 제공할 뿐만 아니라 모니터링 및 기계 학습 기반 분석을 통해 향상된 보호도 제공합니다.  Azure MFA는 Azure 관리자는 물론, 웹 응용 프로그램, Azure Active Directory, 온-프레미스 솔루션(예: 원격 액세스 및 원격 데스크톱) 등 다른 많은 솔루션의 보안도 유지할 수 있습니다.  Azure 다단계 인증에 대한 자세한 내용은 [다단계 인증](https://azure.microsoft.com/services/multi-factor-authentication)을 참조하세요.
+   * **Azure 다단계 인증**:  Azure MFA(다단계 인증)는 두 번째 확인 요소의 보안을 제공할 뿐만 아니라 모니터링 및 기계 학습 기반 분석을 통해 향상된 보호도 제공합니다.  Azure MFA는 Azure 관리자는 물론, 웹 애플리케이션, Azure Active Directory, 온-프레미스 솔루션(예: 원격 액세스 및 원격 데스크톱) 등 다른 많은 솔루션의 보안도 유지할 수 있습니다.  Azure 다단계 인증에 대한 자세한 내용은 [다단계 인증](https://azure.microsoft.com/services/multi-factor-authentication)을 참조하세요.
 
-2. **Windows Defender Application Control 및/또는 AppLocker를 사용하여 신뢰할 수 있는 애플리케이션을 허용 목록에 추가합니다**.  신뢰할 수 없거나 서명되지 않은 코드를 PAW에서 실행할 수 있는 권한을 제한하면 악의적인 활동 및 손상의 가능성을 더욱 줄일 수 있습니다.  Windows에서는 응용 프로그램 제어에 대한 두 가지 기본 옵션을 제공합니다.
+2. **Windows Defender Application Control 및/또는 AppLocker를 사용하여 신뢰할 수 있는 애플리케이션을 허용 목록에 추가합니다**.  신뢰할 수 없거나 서명되지 않은 코드를 PAW에서 실행할 수 있는 권한을 제한하면 악의적인 활동 및 손상의 가능성을 더욱 줄일 수 있습니다.  Windows에서는 애플리케이션 제어에 대한 두 가지 기본 옵션을 제공합니다.
 
-   * **AppLocker**:  AppLocker를 사용하면 관리자가 지정된 시스템에서 실행될 수 있는 애플리케이션을 제어할 수 있습니다.  AppLocker는 그룹 정책을 통해 중앙에서 제어하고 특정 사용자 또는 그룹(PAW 사용자를 대상으로 하는 응용 프로그램의 경우)에 적용할 수 있습니다.  AppLocker에 대한 자세한 내용은 [AppLocker 개요](https://technet.microsoft.com/library/hh831440.aspx) TechNet 문서를 참조하세요.
+   * **AppLocker**:  AppLocker를 사용하면 관리자가 지정된 시스템에서 실행될 수 있는 애플리케이션을 제어할 수 있습니다.  AppLocker는 그룹 정책을 통해 중앙에서 제어하고 특정 사용자 또는 그룹(PAW 사용자를 대상으로 하는 애플리케이션의 경우)에 적용할 수 있습니다.  AppLocker에 대한 자세한 내용은 [AppLocker 개요](https://technet.microsoft.com/library/hh831440.aspx) TechNet 문서를 참조하세요.
    * **Windows Defender Application Control**: 새 Windows Defender Application Control 기능은 AppLocker와 달리 영향을 받는 디바이스에서 재정의할 수 없는 향상된 하드웨어 기반 애플리케이션 제어를 제공합니다.  AppLocker와 마찬가지로 Windows Defender Application Control은 그룹 정책을 통해 제어하고 특정 사용자를 대상으로 할 수 있습니다.  Windows Defender Application Control을 사용하여 애플리케이션 사용을 제한하는 방법에 대한 자세한 내용은 [Windows Defender Application Control 배포 가이드](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)를 참조하세요.
 
 3. **보호된 사용자, 인증 정책 및 인증 사일로를 사용하여 권한 있는 계정을 추가로 보호합니다**.  보호된 사용자의 구성원에게는 LSA(로컬 보안 에이전트)에 저장된 자격 증명을 보호하고 자격 증명 도난 및 재사용의 위험을 최소화하는 추가적인 보안 정책이 적용됩니다.  인증 정책 및 사일로는 권한 있는 사용자가 도메인의 리소스에 액세스할 수 있는 방법을 제어합니다.  종합적으로 이러한 보호는 권한 있는 사용자의 계정 보안을 크게 강화합니다.  이러한 기능에 대한 자세한 내용은 [보호된 계정을 구성하는 방법](https://technet.microsoft.com/library/dn518179.aspx) 웹 문서를 참조하세요.
@@ -1070,7 +1070,7 @@ New-ShieldingDataFile -Policy Shielded -BindToHostTpm [...]
 
 ## <a name="related-topics"></a>관련 항목
 
-[Microsoft Cybersecurity Services 참여](https://www.microsoft.com/en-us/microsoftservices/campaigns/cybersecurity-protection.aspx)
+[Microsoft Cybersecurity Services 참여](https://www.microsoft.com/microsoftservices/campaigns/cybersecurity-protection.aspx)
 
 [Taste of Premier: Pass-the-Hash 및 기타 형태의 자격 증명 탈취를 완화하는 방법](https://channel9.msdn.com/Blogs/Taste-of-Premier/Taste-of-Premier-How-to-Mitigate-Pass-the-Hash-and-Other-Forms-of-Credential-Theft)
 
@@ -1084,13 +1084,13 @@ New-ShieldingDataFile -Policy Shielded -BindToHostTpm [...]
 
 [Windows 10의 격리된 사용자 모드 - Dave Probert(채널 9)](https://channel9.msdn.com/Blogs/Seth-Juarez/Isolated-User-Mode-in-Windows-10-with-Dave-Probert)
 
-[Windows 10의 격리된 사용자 모드 프로세스 및 기능 - Logan Gabriel(채널 9)](http://channel9.msdn.com/Blogs/Seth-Juarez/Isolated-User-Mode-Processes-and-Features-in-Windows-10-with-Logan-Gabriel)
+[Windows 10의 격리된 사용자 모드 프로세스 및 기능 - Logan Gabriel(채널 9)](https://channel9.msdn.com/Blogs/Seth-Juarez/Isolated-User-Mode-Processes-and-Features-in-Windows-10-with-Logan-Gabriel)
 
 [Windows 10 격리된 사용자 모드의 프로세스와 기능에 대한 자세한 내용 - Dave Probert(채널 9)](https://channel9.msdn.com/Blogs/Seth-Juarez/More-on-Processes-and-Features-in-Windows-10-Isolated-User-Mode-with-Dave-Probert)
 
 [Windows 10 격리된 사용자 모드를 사용하여 자격 증명 탈취 완화(채널 9)](https://channel9.msdn.com/Blogs/Seth-Juarez/Mitigating-Credential-Theft-using-the-Windows-10-Isolated-User-Mode)
 
-[Windows Kerberos에서 엄격한 KDC 유효성 검사 사용](https://www.microsoft.com/en-us/download/details.aspx?id=6382)
+[Windows Kerberos에서 엄격한 KDC 유효성 검사 사용](https://www.microsoft.com/download/details.aspx?id=6382)
 
 [Windows Server 2012용 Kerberos 인증의 새로운 기능](https://technet.microsoft.com/library/hh831747.aspx)
 

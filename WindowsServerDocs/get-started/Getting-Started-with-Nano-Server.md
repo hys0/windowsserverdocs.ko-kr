@@ -12,12 +12,12 @@ ms.assetid: 2c2fa45b-6f3b-4663-b421-2da6ecc463bf
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: d395c72a1e21cd8eda043eebf3b72bbd5c9a13e8
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f94e2c083f0bc05231543c15120818481afbabb0
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391796"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75947854"
 ---
 # <a name="install-nano-server"></a>Nano 서버 설치
 
@@ -26,11 +26,11 @@ ms.locfileid: "71391796"
 > [!IMPORTANT]
 > Windows Server, 버전 1709부터 [컨테이너 기본 OS 이미지](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image)로만 Nano 서버를 사용할 수 있습니다. [Nano 서버 변경 사항](nano-in-semi-annual-channel.md)을 확인하여 그 의미를 알아보세요. 
 
-Windows Server 2016은 새로운 설치 옵션인 Nano 서버를 제공합니다. Nano 서버는 프라이빗 클라우드 및 데이터 센터에 최적화된 원격 관리 서버 운영 체제입니다. Server Core 모드의 Windows Server와 유사하지만 훨씬 작고 로컬 로그온 기능이 없으며 64비트 응용 프로그램, 도구 및 에이전트에만 지원합니다. Windows Server보다 훨씬 적은 디스크 공간을 차지하고, 훨씬 빠르게 설치되며, 필요한 업데이트 및 다시 시작 횟수가 훨씬 적습니다. 다시 시작 속도가 훨씬 빠릅니다. Nano 서버 설치 옵션은 Windows Server 2016 Standard 및 Datacenter 버전에 제공됩니다.  
+Windows Server 2016은 새로운 설치 옵션인 Nano 서버를 제공합니다. Nano 서버는 프라이빗 클라우드 및 데이터 센터에 최적화된 원격 관리 서버 운영 체제입니다. Server Core 모드의 Windows Server와 유사하지만 훨씬 작고 로컬 로그온 기능이 없으며 64비트 애플리케이션, 도구 및 에이전트에만 지원합니다. Windows Server보다 훨씬 적은 디스크 공간을 차지하고, 훨씬 빠르게 설치되며, 필요한 업데이트 및 다시 시작 횟수가 훨씬 적습니다. 다시 시작 속도가 훨씬 빠릅니다. Nano 서버 설치 옵션은 Windows Server 2016 Standard 및 Datacenter 버전에 제공됩니다.  
 
 Nano 서버는 다음과 같은 다양한 시나리오에 이상적입니다.  
   
--   클러스터에 있든 그렇지 않든, Hyper-V 가상 컴퓨터의 "컴퓨팅" 호스트  
+-   클러스터에 있든 그렇지 않든, Hyper-V 가상 머신의 "컴퓨팅" 호스트  
   
 -   스케일 아웃 파일 서버의 스토리지 호스트.  
   
@@ -38,7 +38,7 @@ Nano 서버는 다음과 같은 다양한 시나리오에 이상적입니다.
   
 -   IIS(인터넷 정보 서비스)를 실행하는 웹 서버  
   
--   클라우드 응용 프로그램 패턴을 사용하여 개발되어 컨테이너 또는 가상 컴퓨터 게스트 운영 체제에서 실행되는 응용 프로그램의 호스트  
+-   클라우드 애플리케이션 패턴을 사용하여 개발되어 컨테이너 또는 가상 머신 게스트 운영 체제에서 실행되는 애플리케이션의 호스트  
   
 ## <a name="important-differences-in-nano-server"></a>Nano Server의 중요한 차이점
 
@@ -48,17 +48,17 @@ Nano Server는 컨테이너 및 마이크로서비스를 기반으로 하는 "�
 - 64비트 애플리케이션, 도구 및 에이전트만 지원됩니다.
 - Nano Server는 Active Directory 도메인 컨트롤러로 작동할 수 없습니다.
 - 그룹 정책은 지원되지 않습니다. 그렇지만 [원하는 상태 구성](https://msdn.microsoft.com/powershell/dsc/nanoDsc)을 사용하여 대규모로 설정을 적용할 수 있습니다.
-- Nano 서버는 프록시 서버를 사용하여 인터넷에 액세스하도록 구성할 수 없습니다.
-- NIC 팀(부하 분산과 장애 조치(failover), LBFO)은 지원되지 않습니다. 대신 SET(Switch-embedded teaming)가 지원됩니다.
+- Nano Server는 프록시 서버를 사용하여 인터넷에 액세스하도록 구성할 수 없습니다.
+- NIC 팀(특히 부하 분산과 장애 조치(failover) 또는 LBFO)은 지원되지 않습니다. 대신 SET(Switch-embedded teaming)가 지원됩니다.
 - System Center Configuration Manager 및 System Center Data Protection Manager는 지원되지 않습니다.
 - BPA(모범 사례 분석기) cmdlet 및 서버 관리자와의 BPA 통합은 지원되지 않습니다.
 - Nano 서버는 가상 HBA(호스트 버스 어댑터)를 지원하지 않습니다.
 - Nano 서버는 제품 키로 정품 인증할 필요가 없습니다. Hyper-V 호스트로 작동하는 경우 Nano 서버는 [자동 가상 머신 정품 인증](https://technet.microsoft.com/library/dn303421%28v=ws.11%29.aspx)(AVMA)을 지원하지 않습니다. Nano 서버 호스트에서 실행되는 가상 머신은 일반 볼륨 라이선스 키를 통한 [키 관리 서비스](https://technet.microsoft.com/library/jj612867(v=ws.11).aspx)(KMS) 또는 [Active Directory 기반 정품 인증](https://technet.microsoft.com/library/dn502534(v=ws.11).aspx)을 사용하여 정품 인증할 수 있습니다.
-- Nano 서버와 함께 제공되는 Windows PowerShell 버전에는 중요한 차이점이 있습니다. 자세한 내용은 [Nano Server의 PowerShell](PowerShell-on-Nano-Server.md)을 참조하세요.
+- Nano Server와 함께 제공되는 Windows PowerShell 버전에는 중요한 차이점이 있습니다. 자세한 내용은 [Nano Server의 PowerShell](PowerShell-on-Nano-Server.md)을 참조하세요.
 - Nano Server는 CBB(비즈니스용 현재 분기) 모델에서만 지원되며, 현재는 Nano Server의 LTSB(장기 서비스 분기) 릴리스가 없습니다. 자세한 내용은 다음 하위 섹션을 참조하세요.
 
 ### <a name="current-branch-for-business"></a>비즈니스용 현재 분기
-Nano Server는 빠른 개발 주기를 사용하여 "클라우드 주기"에 따라 이동하는 고객을 지원하기 위해 CBB(비즈니스용 현재 분기)라고 하는 좀 더 활성화된 모델로 제공됩니다. 이 모델에서는 Nano Server의 기능 업데이트 릴리스가 1년에 2~3회로 예상됩니다. 또한 프로덕션에 배포되고 작동되는 Nano Server에 대한 [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx)가 필요합니다. 지원을 유지하려면 관리자가 CBB 릴리스를 2개까지 유지해야 합니다. 그러나 이러한 릴리스는 기존 배포를 자동으로 업데이트하지 않습니다. 따라서 관리자가 필요 시 새 CBB 릴리스를 수동으로 설치합니다. 추가 정보에 대해서는 [Windows Server 2016의 새 비즈니스용 현재 분기 서비스 옵션](https://blogs.technet.microsoft.com/windowsserver/2016/07/12/windows-server-2016-new-current-branch-for-business-servicing-option/)을 참조하세요.
+Nano Server는 빠른 개발 주기를 사용하여 "클라우드 주기"에 따라 이동하는 고객을 지원하기 위해 CBB(비즈니스용 현재 분기)라고 하는 좀 더 활성화된 모델로 제공됩니다. 이 모델에서는 Nano Server의 기능 업데이트 릴리스가 1년에 2~3회로 예상됩니다. 또한 프로덕션에 배포되고 작동되는 Nano Server에 대한 [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx)가 필요합니다. 지원을 유지하려면 관리자가 CBB 릴리스를 2개까지 유지해야 합니다. 그러나 이러한 릴리스는 기존 배포를 자동으로 업데이트하지 않습니다. 따라서 관리자가 필요 시 새 CBB 릴리스를 수동으로 설치합니다. 추가 정보에 대해서는 [Windows Server 2016의 새 비즈니스용 현재 분기 서비스 옵션](https://blogs.technet.microsoft.com/windowsserver/2016/07/12/windows-server-2016-new-current-branch-for-business-servicing-option/)을 참조하세요.
 
 Server Core 및 데스크톱 환경 포함 서버 설치 옵션은 5년 간의 주요 지원과 5년 간의 연장 지원으로 구성된 [LTSB(장기 서비스 분기) 모델](https://support.microsoft.com/lifecycle#gp%2Fgp_msl_policy)에 따라 계속 제공됩니다.
 

@@ -6,12 +6,12 @@ contributor: maertendMSFT
 ms.product: w10
 author: maertendMSFT
 title: Windows용 OpenSSH 서버 구성
-ms.openlocfilehash: ed424c33c4cd2c19a9b5e985ab6083bcbcb9fbdc
-ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
+ms.openlocfilehash: 5eb3d86950d169fd01512d330f0c04669beeffae
+ms.sourcegitcommit: 51e0b575ef43cd16b2dab2db31c1d416e66eebe8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69546266"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76259046"
 ---
 # <a name="openssh-server-configuration-for-windows-10-1809-and-server-2019"></a>Windows 10 1809 및 Server 2019용 OpenSSH 서버 구성
 
@@ -84,7 +84,7 @@ Windows OpenSSH의 경우 사용 가능한 유일한 인증 방법은 "password"
 
 ### <a name="hostkey"></a>HostKey
 
-기본값은 %programdata%/ssh/ssh_host_ecdsa_key, %programdata%/ssh/ssh_host_ed25519_key 및 %programdata%/ssh/ssh_host_rsa_key입니다. 기본값이 제공되지 않았으면 sshd가 서비스 시작 시에 값을 자동으로 생성합니다.
+기본값은 %programdata%/ssh/ssh_host_ecdsa_key, %programdata%/ssh/ssh_host_ed25519_key, %programdata%/ssh/ssh_host_dsa_key 및 %programdata%/ssh/ssh_host_rsa_key입니다. 기본값이 제공되지 않았으면 sshd가 서비스 시작 시에 값을 자동으로 생성합니다.
 
 ### <a name="match"></a>일치
 

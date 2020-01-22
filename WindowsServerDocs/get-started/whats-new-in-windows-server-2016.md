@@ -1,6 +1,6 @@
 ---
 title: Windows Server 2016의 새로운 기능
-description: 계산, ID, 관리, 자동화, 네트워킹, 보안, 저장소의 새로운 기능입니다.
+description: 컴퓨팅, ID, 관리, 자동화, 네트워킹, 보안, 스토리지의 새로운 기능입니다.
 ms.prod: windows-server
 ms.date: 05/21/2019
 ms.technology: server-general
@@ -10,12 +10,12 @@ author: jasongerend
 ms.author: jgerend
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: 76cfd0f0cca18fb072883a9e14fae420516bd329
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: afcda1d3f94c5f6fa7524317ac21c5540c07895c
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391364"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75948259"
 ---
 # <a name="whats-new-in-windows-server-2016"></a>Windows Server 2016의 새로운 기능
 
@@ -27,7 +27,7 @@ ms.locfileid: "71391364"
 
 가상화 영역에는 IT 전문가가 Windows Server를 디자인, 배포 및 유지 관리하는 데 유용한 가상화 제품 및 기능이 포함됩니다.  
 
-### <a name="general"></a>일반 사항  
+### <a name="general"></a>일반  
 Win32 시간 및 Hyper-V 시간 동기화 서비스의 향상된 기능으로 인해 실제 및 가상 컴퓨터에서 보다 뛰어난 시간 정확도를 활용할 수 있습니다. 이제 Windows Server에서 UTC 기준 1밀리초 정확도를 요구하는 향후 규정을 준수하는 서비스를 호스트할 수 있습니다.  
 
 ### <a name="hyper-v"></a>Hyper-V  
@@ -35,15 +35,15 @@ Win32 시간 및 Hyper-V 시간 동기화 서비스의 향상된 기능으로 �
 
 -   [Windows 컨테이너](https://msdn.microsoft.com/virtualization/windowscontainers/containers_welcome):  Windows Server 2016 컨테이너 지원은 Windows 10에서 성능 향상, 간소화된 네트워크 관리 및 Windows 컨테이너에 대한 지원을 추가합니다. 컨테이너에 대한 몇 가지 추가 정보는 [컨테이너: Docker, 창 및 추세](https://azure.microsoft.com/blog/2015/08/17/containers-docker-windows-and-trends/)를 참조하세요.  
 
-### <a name="nano-server"></a>Nano 서버  
-[Nano Server](getting-started-with-nano-server.md)의 새로운 기능. Nano 서버에는 실제 호스트와 게스트 가상 컴퓨터의 추가 분리 기능 및 다양한 Windows Server 버전 지원을 포함하여 Nano Server 이미지 빌드를 위한 업데이트된 모듈이 제공됩니다.   
+### <a name="nano-server"></a>Nano Server  
+[Nano Server](getting-started-with-nano-server.md)의 새로운 기능. Nano 서버에는 실제 호스트와 게스트 가상 머신의 추가 분리 기능 및 다양한 Windows Server 버전 지원을 포함하여 Nano Server 이미지 빌드를 위한 업데이트된 모듈이 제공됩니다.   
 
 또한 인바운드 및 아웃바운드 방화벽 규칙 분리, WinRM 구성 복구 기능 등 복구 콘솔도 향상되었습니다.  
 
 ### <a name="shielded-virtual-machines"></a>보호된 가상 컴퓨터  
 Windows Server 2016에서는 손상된 패브릭에서 모든 2세대 가상 머신을 보호하는 새로운 Hyper-V 기반 보호된 가상 머신을 제공합니다. Windows Server 2016에 도입된 기능은 다음과 같습니다.  
 
-- 일반 가상 컴퓨터보다는 강력하고 "보호됨" 모드보다는 약한 보호를 제공하며, 가상 컴퓨터 콘솔 연결 및 Powershell Direct와 같은 직접 패브릭 관리 편의성을 포함하여 vTPM, 디스크 암호화, 실시간 마이그레이션 트래픽 암호화 등의 기능을 여전히 지원하는 새로운 "암호화 지원됨" 모드가 추가되었습니다.  
+- 일반 가상 머신보다는 강력하고 "보호됨" 모드보다는 약한 보호를 제공하며, 가상 머신 콘솔 연결 및 Powershell Direct와 같은 직접 패브릭 관리 편의성을 포함하여 vTPM, 디스크 암호화, 실시간 마이그레이션 트래픽 암호화 등의 기능을 여전히 지원하는 새로운 "암호화 지원됨" 모드가 추가되었습니다.  
 
 - 자동화된 디스크 암호화를 포함하여 기존의 보호되지 않는 2세대 가상 컴퓨터를 보호된 가상 컴퓨터로 변환하는 작업을 완벽하게 지원합니다.
 
@@ -60,7 +60,7 @@ Windows Server 2016에서는 손상된 패브릭에서 모든 2세대 가상 머
 보호된 가상 컴퓨터 작업에 대한 지침은 [Windows Server 2016(TPM)에 대한 보호된 VM 및 보호된 패브릭 유효성 검사 가이드](https://aka.ms/shieldedvms)를 참조하세요.  
 
 ## <a name="identity-and-accessidentityidentity-and-accessmd"></a>[ID 및 액세스](../identity/Identity-and-Access.md)  
-ID의 새로운 기능은 조직에서 Active Directory 환경을 보호하고 클라우드 전용 배포 및 하이브리드 배포(일부 응용 프로그램 및 서비스는 클라우드에서 호스트되고 다른 응용 프로그램 및 서비스는 온-프레미스에서 호스트됨)로 마이그레이션할 수 있는 기능을 개선합니다.  
+ID의 새로운 기능은 조직에서 Active Directory 환경을 보호하고 클라우드 전용 배포 및 하이브리드 배포(일부 애플리케이션 및 서비스는 클라우드에서 호스트되고 다른 애플리케이션 및 서비스는 온-프레미스에서 호스트됨)로 마이그레이션할 수 있는 기능을 개선합니다.  
 
 ### <a name="active-directory-certificate-services"></a>Active Directory 인증서 서비스  
 Windows Server 2016의 AD CS(Active Directory 인증서 서비스)는 TPM 키 증명에 대한 지원을 강화합니다. 이제 키 증명에 스마트 카드 KSP를 사용할 수 있으며, 도메인에 가입되지 않은 디바이스에서 NDES 등록을 사용하여 TPM에서 키를 증명할 수 있는 인증서를 가져올 수 있습니다.  
@@ -68,10 +68,10 @@ Windows Server 2016의 AD CS(Active Directory 인증서 서비스)는 TPM 키 �
 ### <a name="active-directory-domain-services"></a>Active Directory 도메인 서비스  
 Active Directory Domain Services에는 조직이 Active Directory 환경의 보안을 설정하고 회사 및 개인 디바이스에 향상된 ID 관리 환경을 제공하는 데 도움을 주는 개선 사항이 포함되어 있습니다. 자세한 내용은 [Windows Server 2016에서 AD DS(Active Directory Domain Services)의 새로운 기능](../identity/whats-new-active-directory-domain-services.md)을 참조하세요.   
 
-### <a name="active-directory-federation-services"></a>AD FS(Active Directory Federation Services)  
+### <a name="active-directory-federation-services"></a>ADFS(Active Directory Federation Services)  
 Active Directory Federation Services의 새로운 기능 Windows Server 2016의 AD FS(Active Directory Federation Services)에서는 LDAP(Lightweight Directory Access Protocol) 디렉터리에 저장된 사용자를 인증하도록 AD FS를 구성할 수 있는 새로운 기능을 제공합니다. 자세한 내용은 [Windows Server 2016용 AD FS의 새로운 기능](../identity/ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md)을 참조하세요.  
 
-### <a name="web-application-proxy"></a>웹 응용 프로그램 프록시  
+### <a name="web-application-proxy"></a>웹 애플리케이션 프록시  
 최신 버전의 웹 애플리케이션 프록시는 더 많은 애플리케이션 및 향상된 사용자 환경의 게시 및 사전 인증을 사용할 수 있는 새로운 기능에 초점을 맞춥니다. SharePoint 앱을 더 쉽게 게시할 수 있도록 Exchange ActiveSync 및 와일드카드 도메인과 같은 다양한 클라이언트 앱에 대한 사전 인증을 포함하는 새로운 기능의 전체 목록을 확인하세요. 자세한 내용은 [Windows Server 2016의 웹 애플리케이션 프록시](../remote/remote-access/web-application-proxy/web-application-proxy-windows-server.md)를 참조하세요.  
 
 ##  <a name="administrationadministrationmanage-windows-servermd"></a>[관리](../administration/manage-windows-server.md)  
@@ -132,17 +132,17 @@ Device Guard는 서버에서 어떤 코드를 실행할 수 있는지를 지정�
 제어 흐름 보호(CFG)는 메모리 손상 취약점에 대처하기 위해 만든 플랫폼 보안 기능입니다. 자세한 내용은 [제어 흐름 보호](https://msdn.microsoft.com/library/windows/desktop/mt637065(v=vs.85).aspx)를 참조하세요.
 
 
-## <a name="storagestoragestoragemd"></a>[저장소](../storage/storage.md)
+## <a name="storagestoragestoragemd"></a>[스토리지](../storage/storage.md)
 
-Windows Server 2016의 저장소에는 소프트웨어 정의 저장소와 기존의 파일 서버에 대한 새로운 기능과 향상된 기능이 포함됩니다. 몇 가지 새로운 기능은 다음과 같으며 향상된 기능 및 추가 정보는 [Windows Server 2016에서 제공되는 스토리지의 새로운 기능](../storage/whats-new-in-storage.md)을 참조하세요.
+Windows Server 2016의 스토리지에는 소프트웨어 정의 스토리지와 기존의 파일 서버에 대한 새로운 기능과 향상된 기능이 포함됩니다. 몇 가지 새로운 기능은 다음과 같으며 향상된 기능 및 추가 정보는 [Windows Server 2016에서 제공되는 스토리지의 새로운 기능](../storage/whats-new-in-storage.md)을 참조하세요.
 
-### <a name="storage-spaces-direct"></a>저장소 공간 다이렉트
+### <a name="storage-spaces-direct"></a>직접 스토리지 공간
 
 스토리지 공간 다이렉트는 로컬 스토리지가 있는 서버를 사용하여 확장 가능한 고가용성 스토리지를 구축하도록 지원합니다. 이는 소프트웨어 정의 스토리지 시스템의 배포 및 관리를 간소화하고 SATA SSD 및 NVMe 디스크 디바이스와 같이 이전에 공유 디스크를 사용하는 클러스터형 스토리지 공간에서는 불가능했던 새로운 등급의 디스크 디바이스를 사용합니다.
 
 자세한 내용은 [스토리지 공간 다이렉트](../storage/storage-spaces/storage-spaces-direct-overview.md)를 참조하세요.
 
-### <a name="storage-replica"></a>저장소 복제본
+### <a name="storage-replica"></a>스토리지 복제본
 
 스토리지 복제본을 통해 사이트 간에 장애 조치(failover) 클러스터를 확장할 뿐만 아니라 재해 복구를 위해 서버 또는 클러스터 간에 스토리지에 상관없는 블록 수준의 동기 복제를 사용할 수 있습니다. 동기 복제를 사용하면 파일 시스템 수준에서 데이터가 손실되지 않고 크래시 일관성이 있는 볼륨을 사용하여 실제 사이트의 데이터를 미러링할 수 있습니다. 비동기 복제는 대도시 범위를 넘어 사이트를 확장합니다(데이터가 손실될 수도 있음).
 
@@ -152,7 +152,7 @@ Windows Server 2016의 저장소에는 소프트웨어 정의 저장소와 기�
 
 이제 스토리지 QoS(서비스 품질)를 사용하여 중앙에서 엔드투엔드 스토리지 성능을 모니터링하고 Windows Server 2016의 Hyper-V 및 CSV 클러스터를 통해 관리 정책을 만들 수 있습니다.
 
-자세한 내용은 [저장소 서비스 품질](../storage/storage-qos/storage-qos-overview.md)을 참조하세요.
+자세한 내용은 [스토리지 서비스 품질](../storage/storage-qos/storage-qos-overview.md)을 참조하세요.
 
 ## <a name="failover-clusteringfailover-clusteringwhats-new-in-failover-clusteringmd"></a>[장애 조치(failover) 클러스터링](../failover-clustering/whats-new-in-failover-clustering.md)
 
@@ -176,7 +176,7 @@ Windows Server 2016에는 여러 새로운 기능과 장애 조치(failover) 클
 
 자세한 내용은 [상태 관리 서비스](../failover-clustering/health-service-overview.md)를 참조하세요.
 
-## <a name="application-development"></a>응용 프로그램 개발
+## <a name="application-development"></a>애플리케이션 개발
 
 ### <a name="internet-information-services-iis-100"></a>IIS(인터넷 정보 서비스) 10.0
 Windows Server 2016의 IIS 10.0 웹 서버에서 제공하는 새로운 기능은 다음과 같습니다.
@@ -195,7 +195,7 @@ Microsoft Windows 10 및 Windows Server 2016에 다음과 같은 새로운 기�
 
 - DSN 이름 제한은 256바이트에서 3072바이트로 확대됩니다. 자세한 내용은 [IDtcToXaHelperFactory::Create](https://msdn.microsoft.com/library/ms686861(v=vs.85).aspx), [IDtcToXaHelperSinglePipe::XARMCreate](https://msdn.microsoft.com/library/ms679248(v=vs.85).aspx) 또는 [IDtcToXaMapper::RequestNewResourceManager](https://msdn.microsoft.com/library/ms680310(v=vs.85).aspx)를 참조하세요.
 
-- 추적 로그 파일 이름에 이미지 파일 경로를 포함하도록 레지스트리 키를 설정하여 어떤 추적 로그 파일을 확인할지 파악할 수 있는 기능이 개선되었습니다. MSDTC 추적 구성에 대한 자세한 내용은 [Windows 기반 컴퓨터에서 MS DTC에 대한 진단 추적을 활성화하는 방법](https://support.microsoft.com/en-us/kb/926099)을 참조하세요.
+- 추적 로그 파일 이름에 이미지 파일 경로를 포함하도록 레지스트리 키를 설정하여 어떤 추적 로그 파일을 확인할지 파악할 수 있는 기능이 개선되었습니다. MSDTC 추적 구성에 대한 자세한 내용은 [Windows 기반 컴퓨터에서 MS DTC에 대한 진단 추적을 활성화하는 방법](https://support.microsoft.com/kb/926099)을 참조하세요.
 
 
 

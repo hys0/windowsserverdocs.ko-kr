@@ -5,12 +5,12 @@ keywords: OpenSSH, SSH, SSHD, 설치, 설정
 contributor: maertendMSFT
 author: maertendMSFT
 title: Windows용 OpenSSH 설치
-ms.openlocfilehash: 3c742e20432d20ea3c402af66f19a803ea1f3a56
-ms.sourcegitcommit: 73898afec450fb3c2f429ca373f6b48a74b19390
+ms.openlocfilehash: 9cf87229f5ebde6f0ff52a4e9b1b11b6e3ed4f0a
+ms.sourcegitcommit: 8771a9f5b37b685e49e2dd03c107a975bf174683
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71934933"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76145919"
 ---
 # <a name="installation-of-openssh-for-windows-server-2019-and-windows-10"></a>Windows Server 2019 및 Windows 10용 OpenSSH 설치 #
 
@@ -18,7 +18,7 @@ OpenSSH 클라이언트 및 OpenSSH 서버는 Windows Server 2019 및 Windows 10
 이러한 Windows 버전 사용자는 지침에 따라 OpenSSH를 설치하고 구성해야 합니다. 
 
 > [!NOTE] 
-> PowerShell Github 리포지토리(https://github.com/PowerShell/OpenSSH-Portable) 에서 OpenSSH를 가져온 사용자는 이 지침을 __따르는 대신__ 해당 지침을 따라야 합니다. 
+> PowerShell GitHub 리포지토리(https://github.com/PowerShell/OpenSSH-Portable) 에서 OpenSSH를 가져온 사용자는 이 지침을 __따르는 대신__ 해당 지침을 따라야 합니다. 
 
 
 ## <a name="installing-openssh-from-the-settings-ui-on-windows-server-2019-or-windows-10-1809"></a>Windows Server 2019 또는 Windows 10 1809의 설정 UI에서 OpenSSH 설치

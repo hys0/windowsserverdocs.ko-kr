@@ -14,12 +14,12 @@ manager: dongill
 ms.author: elizapo
 date: 08/27/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 700d419d06c0b007ed05be4f82137828f52143e1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 8361d1171c2526e701a5418696761a8400c47ca3
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404144"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949877"
 ---
 # <a name="get-started-with-the-ios-client"></a>iOS 클라이언트 시작
 
@@ -84,7 +84,7 @@ PC에 대한 원격 연결을 만들려면 다음을 수행합니다.
 
 ### <a name="download-the-remote-desktop-client-from-the-ios-store"></a>원격 데스크톱 클라이언트를 iOS 스토어에서 다운로드
 
-IOS 장치에서 원격 데스크톱에 등록 하려면 다음이 단계를 수행 합니다.
+IOS 디바이스에서 원격 데스크톱에 등록 하려면 다음이 단계를 수행 합니다.
 
 1. Microsoft 원격 데스크톱 클라이언트 다운로드 [iTunes](https://itunes.apple.com/app/microsoft-remote-desktop/id714464092?mt=8)합니다.
 2. [원격 연결을 허용하도록 PC를 설정합니다](remote-desktop-client-faq.md#how-do-i-set-up-a-pc-for-remote-desktop).
@@ -101,7 +101,7 @@ IOS 장치에서 원격 데스크톱에 등록 하려면 다음이 단계를 수
 3. 또한 다음과 같은 추가 옵션을 설정할 수 있습니다.
    - **친숙 한 이름 (선택 사항)** –에 연결 하는 PC에 대 한 기억 하기 쉬운 이름. 모든 문자열을 사용할 수 있지만 이름을 지정 하지 않는 경우 PC 이름이 표시 됩니다.
    - **(선택 사항) 게이트웨이** – 가상 데스크톱, RemoteApp 프로그램 및 세션 기반 데스크톱에 회사 내부 네트워크에 연결 하는 데 사용할 원격 데스크톱 게이트웨이. 시스템 관리자 로부터 게이트웨이에 대 한 정보를 가져옵니다.
-   - **소리** -오디오에 대 한 원격 세션 중 사용 하 여 디바이스를 선택 합니다. 로컬 장치, 원격 장치에서 또는 전혀 사용 하지 않을 소리를 재생할 수도 있습니다.
+   - **소리** -오디오에 대 한 원격 세션 중 사용 하 여 디바이스를 선택 합니다. 로컬 디바이스, 원격 디바이스에서 또는 전혀 사용 하지 않을 소리를 재생할 수도 있습니다.
    - **마우스 단추 스왑** 마우스 제스처와 마우스 왼쪽된 단추와 명령을 보낼 때마다 – 대신 마우스 오른쪽 단추를 사용 하 여 동일한 명령을 보냅니다. 이 원격 PC 왼쪽 마우스 모드로 구성 된 경우 필요 합니다.
    - **관리자 모드** -Windows Server 2003 이상을 실행 하는 서버의 관리 세션에 연결 합니다.
 4. 누르기 **저장**합니다.
@@ -200,9 +200,9 @@ IOS 장치에서 원격 데스크톱에 등록 하려면 다음이 단계를 수
 클라이언트는 표준 터치 제스처를 사용합니다. 또한 원격 데스크톱에서 마우스 동작을 복제 하려면 터치 제스처를 사용할 수 있습니다. 사용할 수 있는 마우스 모드는 아래 테이블에 정의 됩니다.
 
 > [!NOTE]
-> Windows 8과 상호 작용 또는 최신 네이티브 터치 제스처 직접 터치 모드에서 지원 됩니다. Windows 8 제스처에 대한 자세한 내용은 [터치: 살짝 밀기, 탭 등](https://windows.microsoft.com/en-US/windows-8/touch-swipe-tap-beyond)을 참조하세요.
+> Windows 8과 상호 작용 또는 최신 네이티브 터치 제스처 직접 터치 모드에서 지원 됩니다. Windows 8 제스처에 대한 자세한 내용은 [터치: 살짝 밀기, 탭 등](https://windows.microsoft.com/windows-8/touch-swipe-tap-beyond)을 참조하세요.
 
-| 마우스 모드    | 마우스 작업      | 제스처                                                    |
+| 마우스 모드.    | 마우스 작업      | 제스처                                                    |
 |---------------|----------------------|------------------------------------------------------------|
 | 직접 터치  | 마우스 왼쪽 단추 클릭           | 1 손가락 탭                                               |
 | 직접 터치  | 마우스 오른쪽 단추로 클릭          | 1 손가락 누르고                                      |
@@ -211,7 +211,7 @@ IOS 장치에서 원격 데스크톱에 등록 하려면 다음이 단계를 수
 | 마우스 포인터 | 마우스 오른쪽 단추로 클릭          | 2 손가락 탭                                               |
 | 마우스 포인터 | 마우스 오른쪽 단추로 클릭 하 고 끌어 | 2 손가락 두 번 누르면 길게 누르기, 다음 끕니다.                    |
 | 마우스 포인터 | 마우스 휠          | 2 손가락 및 적용 되는 누르고 위로 또는 아래로 끌어 옵니다.                |
-| 마우스 포인터 | Zoom                 | 2 손가락을 확대 하거나 축소 하려면 2 손가락 확산 축소 |
+| 마우스 포인터 | 확대/축소                 | 2 손가락을 확대 하거나 축소 하려면 2 손가락 확산 축소 |
 
 ## <a name="supported-input-devices"></a>지원되는 입력 디바이스
 
@@ -233,7 +233,7 @@ OS의 제한으로 인해 Ctrl, Option 및 Function과 같은 특수 키가 Blue
 - 커서 키
 - Tab: Tab은 작동하지만, Shift + Tab은 작동하지 않습니다.
 - Home / Pos1: Alt+Left = Home
-- 끝: Alt+Right = End
+- 종료: Alt+Right = End
 - 한 페이지 위로: Alt+Up = 한 페이지 위로
 - 한 페이지 아래로: Alt+Down = 한 페이지 아래로
 - 모두 선택: 명령 + A = Ctrl + A(대부분의 프로그램에서 모두 선택)

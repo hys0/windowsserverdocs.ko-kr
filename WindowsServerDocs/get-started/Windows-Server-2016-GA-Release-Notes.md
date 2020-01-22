@@ -12,12 +12,12 @@ ms.topic: article
 ms.assetid: 134aab85-664f-4d44-87ef-9e5fd389071f
 author: jaimeo
 ms.author: jaimeo
-ms.openlocfilehash: 4e2f7cbaed42dd1c1b1884438467cf59f1529f0c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 64c0daa8ecc2d6b196d4305e3246dadeebf7075a
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391542"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75948346"
 ---
 # <a name="release-notes-important-issues-in-windows-server-2016"></a>릴리스 정보: Windows Server 2016의 주요 문제점
 
@@ -42,7 +42,7 @@ Server Core 설치 옵션을 사용하여 Windows Server 2016을 설치하면 �
 ## <a name="containers"></a>컨테이너
 
 [comment]: # (ID: 371; Submitter: taylorb; state: signed off)
-- 컨테이너를 사용하기 전에 [Windows 10 버전 1607에 대한 서비스 스택 업데이트: 2016년 8월 23일](https://support.microsoft.com/en-us/kb/3176936) 또는 그 이후에 나온 업데이트(제공되는 경우)를 설치합니다. 그렇지 않으면 컨테이너 빌드, 시작 또는 실행과 관련된 오류를 비롯하여 여러 문제가 발생할 수 있으며 "Win32에서 CreateProcess 실패: RPC 서버를 사용할 수 없습니다."와 유사한 오류가 발생할 수 있습니다.
+- 컨테이너를 사용하기 전에 [Windows 10 버전 1607에 대한 서비스 스택 업데이트: 2016년 8월 23일](https://support.microsoft.com/kb/3176936) 또는 그 이후에 나온 업데이트(제공되는 경우)를 설치합니다. 그렇지 않으면 컨테이너 빌드, 시작 또는 실행과 관련된 오류를 비롯하여 여러 문제가 발생할 수 있으며 "Win32에서 CreateProcess 실패: RPC 서버를 사용할 수 없습니다."와 유사한 오류가 발생할 수 있습니다.
 
 [comment]: # (ID: 373; Submitter: plang; state: signed off)
 - Windows 컨테이너에서 NanoServerPackage OneGet 공급자가 작동하지 않습니다. 이를 해결하려면 서로 다른 컴퓨터(컨테이너 아님)에서 Find-NanoServerPackage 및 Save-NanoServerPackage를 사용하여 필요한 패키지를 다운로드합니다. 그런 다음 패키지를 컨테이너에 복사한 후 설치합니다.
@@ -50,12 +50,12 @@ Server Core 설치 옵션을 사용하여 Windows Server 2016을 설치하면 �
 ## <a name="device-guard"></a>Device Guard
 
 [comment]: # (ID: 369; Submitter: nirb; state: signed off)
-코드 무결성의 가상화 기반 보호 또는 보호된 가상 컴퓨터(코드 무결성의 가상화 기반 보호를 사용하는)를 사용하는 경우 이러한 기술이 일부 디바이스 및 응용 프로그램과 호환되지 않을 수 있음을 알고 있어야 합니다. 프로덕션 시스템에서 기능을 사용하도록 설정하기 전에 이러한 구성을 랩에서 테스트해야 합니다. 테스트하지 않을 경우 예기치 않은 데이터 손실 또는 중지 오류가 발생할 수 있습니다.
+코드 무결성의 가상화 기반 보호 또는 보호된 가상 머신(코드 무결성의 가상화 기반 보호 사용)을 사용하는 경우 이러한 기술이 일부 디바이스 및 애플리케이션과 호환되지 않을 수 있음을 알고 있어야 합니다. 프로덕션 시스템에서 기능을 사용하도록 설정하기 전에 이러한 구성을 랩에서 테스트해야 합니다. 테스트하지 않을 경우 예기치 않은 데이터 손실 또는 중지 오류가 발생할 수 있습니다.
 
 ## <a name="microsoft-exchange"></a>Microsoft Exchange
 
 [comment]: # (ID: 375; Submitter: wgries; state: signed off)
-Windows Server 2016에서 Microsoft Exchange 2016 CU3를 실행하려고 하면 IIS 호스트 프로세스 W3WP.exe에서 오류가 발생합니다. 현재로서는 해결 방법이 없습니다. 지원되는 픽스가 제공될 때까지 Windows Server 2016에서의 Exchange 2016 CU3 배포를 연기해야 합니다.
+Windows Server 2016에서 Microsoft Exchange 2016 CU3를 실행하려고 하면 IIS 호스트 프로세스 W3WP.exe에서 오류가 발생합니다. 현재로서는 해결 방법이 없습니다. 지원되는 해결 방법을 사용할 수 있을 때까지 Windows Server 2016에서의 Exchange 2016 CU3 배포를 연기해야 합니다.
 
 ## <a name="remote-server-administration-tools-rsat"></a>RSAT(원격 서버 관리 도구)
 
@@ -67,9 +67,9 @@ Windows 10 1주년 업데이트 이전의 버전을 실행하고 가상 신뢰�
 ## <a name="shielded-virtual-machines"></a>실드 된 가상 컴퓨터
 
 [comment]: # (ID: 369; Submitter: nirb; state: signed off)  
-- 프로덕션 환경에서 보호된 가상 컴퓨터를 배포하기 전에 사용 가능한 모든 업데이트를 설치해야 합니다.
+- 프로덕션 환경에서 보호된 가상 머신을 배포하기 전에 사용 가능한 모든 업데이트를 설치해야 합니다.
 
-- 코드 무결성의 가상화 기반 보호 또는 보호된 가상 컴퓨터(코드 무결성의 가상화 기반 보호를 사용하는)를 사용하는 경우 이러한 기술이 일부 디바이스 및 응용 프로그램과 호환되지 않을 수 있음을 알고 있어야 합니다. 프로덕션 시스템에서 기능을 사용하도록 설정하기 전에 이러한 구성을 랩에서 테스트해야 합니다. 테스트하지 않을 경우 예기치 않은 데이터 손실 또는 중지 오류가 발생할 수 있습니다.
+- 코드 무결성의 가상화 기반 보호 또는 보호된 가상 머신(코드 무결성의 가상화 기반 보호 사용)을 사용하는 경우 이러한 기술이 일부 디바이스 및 애플리케이션과 호환되지 않을 수 있음을 알고 있어야 합니다. 프로덕션 시스템에서 기능을 사용하도록 설정하기 전에 이러한 구성을 랩에서 테스트해야 합니다. 테스트하지 않을 경우 예기치 않은 데이터 손실 또는 중지 오류가 발생할 수 있습니다.
 
 ## <a name="start-menu"></a>시작 메뉴
 
@@ -88,7 +88,7 @@ Windows 10 1주년 업데이트 이전의 버전을 실행하고 가상 신뢰�
 
 이 문서는 "있는 그대로" 제공됩니다. URL 및 다른 인터넷 웹 사이트 참조를 포함한 이 문서의 내용과 관점은 예고 없이 변경될 수 있습니다.  
 
-이 문서는 귀하에게 Microsoft 제품의 지적 재산에 대한 어떠한 법적 권리도 제공하지 않습니다. 개인적인 목적과 참조용으로만 이 문서를 복사하고 사용할 수 있습니다.  
+이 문서는 귀하에게 Microsoft 제품의 지적 재산에 대한 어떠한 법적 권리도 제공하지 않습니다. 내부 참조용으로 이 문서의 사본을 만들 수 있습니다.  
 
 &copy; 2016 Microsoft Corporation. All rights reserved.  
 

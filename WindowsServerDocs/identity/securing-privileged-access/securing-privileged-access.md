@@ -9,12 +9,12 @@ ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: daveba
 ms.reviewer: mas
-ms.openlocfilehash: e6ff22d0563fa11aa633004966b2cd2648ba5877
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d60ba6ffd661aeb284a2ade775e14b9108cbb6c9
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71357697"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950529"
 ---
 # <a name="securing-privileged-access"></a>권한 있는 액세스 보안
 
@@ -90,7 +90,7 @@ Microsoft 권장 로드맵은 다음과 같은 3단계로 구성됩니다.
 
 ### <a name="2-just-in-time-local-admin-passwords"></a>2. Just-in-time 로컬 관리자 암호
 
-공격자가 로컬 SAM 데이터베이스에서 로컬 관리자 계정 암호 해시를 훔쳐서 다른 컴퓨터를 공격하는 데 사용하는 위험을 완화하기 위해, 조직에서는 모든 머신에 고유한 로컬 관리자 암호가 있는지 확인해야 합니다. LAPS(로컬 관리자 암호 솔루션) 도구는 각 워크스테이션과 서버에서 고유한 임의의 암호를 구성하여 ACL로 보호되는 AD(Active Directory)에 저장할 수 있습니다. 권한 있는 적격 사용자만이 이러한 로컬 관리자 계정 암호를 읽거나 재설정을 요청할 수 있습니다. 워크스테이션 및 서버에 사용할 LAPS는 [Microsoft 다운로드 센터](http://Aka.ms/LAPS)에서 받을 수 있습니다.
+공격자가 로컬 SAM 데이터베이스에서 로컬 관리자 계정 암호 해시를 훔쳐서 다른 컴퓨터를 공격하는 데 사용하는 위험을 완화하기 위해, 조직에서는 모든 머신에 고유한 로컬 관리자 암호가 있는지 확인해야 합니다. LAPS(로컬 관리자 암호 솔루션) 도구는 각 워크스테이션과 서버에서 고유한 임의의 암호를 구성하여 ACL로 보호되는 AD(Active Directory)에 저장할 수 있습니다. 권한 있는 적격 사용자만이 이러한 로컬 관리자 계정 암호를 읽거나 재설정을 요청할 수 있습니다. 워크스테이션 및 서버에 사용할 LAPS는 [Microsoft 다운로드 센터](https://aka.ms/LAPS)에서 받을 수 있습니다.
 
 LAPS 및 PAW를 사용하여 환경을 운영하는 방법에 대한 추가 지침은 [클린 소스 원칙을 기반으로 하는 운영 표준](securing-privileged-access-reference-material.md#operational-standards-based-on-clean-source-principle) 섹션에서 찾을 수 있습니다.
 

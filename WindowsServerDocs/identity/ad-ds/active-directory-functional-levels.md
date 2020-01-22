@@ -11,12 +11,12 @@ ms.prod: windows-server
 ms.custom: it-pro
 ms.reviewer: maheshu
 ms.technology: identity-adds
-ms.openlocfilehash: 7f16d58eb6c5074c75f49ba7936c4d312a3dbda4
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 53793fc62b1bc1444c567f92c9f18642245fded9
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71390982"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75948181"
 ---
 # <a name="forest-and-domain-functional-levels"></a>포리스트 및 도메인 기능 수준
 
@@ -28,9 +28,9 @@ AD DS를 배포할 때 도메인 및 포리스트 기능 수준을 현재 환경
 
 Windows 2003의 수명이 끝나면 Windows 2003 DC(도메인 컨트롤러)를 Windows Server 2008, 2008R2, 2012, 2012R2, 2016 또는 2019로 업데이트해야 합니다. 결과적으로, Windows Server 2003을 실행 하는 도메인 컨트롤러가 도메인에서 제거 해야 합니다.
 
-Windows Server 2008 및 더 높은 도메인 기능 수준에서 서비스 DFS (분산 파일) 복제 도메인 컨트롤러 간에 SYSVOL 폴더 내용을 복제 하는 데 사용 됩니다. Windows Server 2008 도메인 기능 수준 이상의 새 도메인을 만들면 DFS 복제 SYSVOL을 복제 하는 데 자동으로 사용 됩니다. 더 낮은 기능 수준에서 도메인을 만든 경우 FRS를 사용 하 여 SYSVOL에 대 한 DFS 복제에서 마이그레이션할 해야 합니다. 마이그레이션 단계 중 하나에 따라 수는 [technet 프로시저](https://technet.microsoft.com/library/dd640019(v=WS.10).aspx) 또는를 참조할 수 있는 [저장소 팀 파일 캐비닛 블로그 단계를 간소화](http://blogs.technet.com/b/filecab/archive/2014/06/25/streamlined-migration-of-frs-to-dfsr-sysvol.aspx).
+Windows Server 2008 및 더 높은 도메인 기능 수준에서 서비스 DFS (분산 파일) 복제 도메인 컨트롤러 간에 SYSVOL 폴더 내용을 복제 하는 데 사용 됩니다. Windows Server 2008 도메인 기능 수준 이상의 새 도메인을 만들면 DFS 복제 SYSVOL을 복제 하는 데 자동으로 사용 됩니다. 더 낮은 기능 수준에서 도메인을 만든 경우 FRS를 사용 하 여 SYSVOL에 대 한 DFS 복제에서 마이그레이션할 해야 합니다. 마이그레이션 단계의 경우 [TechNet의 프로시저](https://technet.microsoft.com/library/dd640019(v=WS.10).aspx)를 따르거나 [스토리지 팀 파일 캐비닛 블로그의 간소화된 단계 집합](https://blogs.technet.com/b/filecab/archive/2014/06/25/streamlined-migration-of-frs-to-dfsr-sysvol.aspx)을 참조할 수 있습니다.
 
-## <a name="windows-server-2019"></a>Windows Server 2019
+## <a name="windows-server-2019"></a>시작
 
 이 릴리스에는 새로운 포리스트 또는 도메인 기능 수준이 추가되지 않았습니다.
 
@@ -40,7 +40,7 @@ Windows Server 2019 도메인 컨트롤러를 추가하기 위한 최소 요구 
 
 지원되는 도메인 컨트롤러 운영 체제:
 
-* Windows Server 2019
+* 시작
 * Windows Server 2016
 
 ### <a name="windows-server-2016-forest-functional-level-features"></a>Windows Server 2016 포리스트 기능 수준 기능
@@ -61,9 +61,9 @@ Windows Server 2019 도메인 컨트롤러를 추가하기 위한 최소 요구 
 
 지원되는 도메인 컨트롤러 운영 체제:
 
-* Windows Server 2019
+* 시작
 * Windows Server 2016
-* Windows Server 2012 R2
+* Windows Server 2012 R2
 
 ### <a name="windows-server-2012r2-forest-functional-level-features"></a>Windows Server 2012R2 포리스트 기능 수준 기능
 
@@ -86,9 +86,9 @@ Windows Server 2019 도메인 컨트롤러를 추가하기 위한 최소 요구 
 
 지원되는 도메인 컨트롤러 운영 체제:
 
-* Windows Server 2019
+* 시작
 * Windows Server 2016
-* Windows Server 2012 R2
+* Windows Server 2012 R2
 * Windows Server 2012
 
 ### <a name="windows-server-2012-forest-functional-level-features"></a>Windows Server 2012 포리스트 기능 수준 기능
@@ -104,9 +104,9 @@ Windows Server 2019 도메인 컨트롤러를 추가하기 위한 최소 요구 
 
 지원되는 도메인 컨트롤러 운영 체제:
 
-* Windows Server 2019
+* 시작
 * Windows Server 2016
-* Windows Server 2012 R2
+* Windows Server 2012 R2
 * Windows Server 2012
 * Windows Server 2008 R2
 
@@ -125,9 +125,9 @@ Windows Server 2019 도메인 컨트롤러를 추가하기 위한 최소 요구 
 
 지원되는 도메인 컨트롤러 운영 체제:
 
-* Windows Server 2019
+* 시작
 * Windows Server 2016
-* Windows Server 2012 R2
+* Windows Server 2012 R2
 * Windows Server 2012
 * Windows Server 2008 R2
 * Windows Server 2008
@@ -165,7 +165,7 @@ Windows Server 2019 도메인 컨트롤러를 추가하기 위한 최소 요구 
 
 지원되는 도메인 컨트롤러 운영 체제:
 
-* Windows Server 2012 R2
+* Windows Server 2012 R2
 * Windows Server 2012
 * Windows Server 2008 R2
 * Windows Server 2008

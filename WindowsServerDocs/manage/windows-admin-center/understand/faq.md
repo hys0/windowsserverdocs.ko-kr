@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.localizationpriority: medium
 ms.date: 12/02/2019
 ms.prod: windows-server
-ms.openlocfilehash: 6d04b641c56e9461f0134bfc4734fea36955106c
-ms.sourcegitcommit: 7c7fc443ecd0a81bff6ed6dbeeaf4f24582ba339
+ms.openlocfilehash: 4ce42420430e9a12dd6123ec18c9ded25abc97bb
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74904067"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949968"
 ---
 # <a name="windows-admin-center-frequently-asked-questions"></a>Windows Admin Center 질문과 대답
 
@@ -86,7 +86,7 @@ Active Directory, DHCP, DNS, IIS 등의 역할이 아직 Windows Admin Center에
 
 ## <a name="are-there-any-plans-for-windows-admin-center-to-manage-windows-server-2008-r2-or-earlier"></a>Windows Admin Center가 Windows Server 2008 R2 또는 이전 버전을 관리할 계획이 있습니까?
 
-Windows Admin Center는 이제 Windows Server 2008 R2를 관리하는 **제한된** 기능을 지원합니다. Windows Admin Center는 Windows Server 2008 R2 및 이전에서는 존재하지 않는 PowerShell 기능 및 플랫폼 기술에 의존하므로 완전한 지원은 불가능합니다. Windows Server 2008/2008 R2는 2020년 1월에 지원이 종료되므로 Microsoft는 고객에게 [Azure로 전환하거나 최신 버전의 Windows Server로 업그레이드](https://www.microsoft.com/en-us/cloud-platform/windows-server-2008)할 것을 권장합니다.
+Windows Admin Center는 이제 Windows Server 2008 R2를 관리하는 **제한된** 기능을 지원합니다. Windows Admin Center는 Windows Server 2008 R2 및 이전에서는 존재하지 않는 PowerShell 기능 및 플랫폼 기술에 의존하므로 완전한 지원은 불가능합니다. Windows Server 2008/2008 R2는 2020년 1월에 지원이 종료되므로 Microsoft는 고객에게 [Azure로 전환하거나 최신 버전의 Windows Server로 업그레이드](https://www.microsoft.com/cloud-platform/windows-server-2008)할 것을 권장합니다.
 
 ## <a name="are-there-any-plans-for-windows-admin-center-to-manage-linux-connections"></a>Windows Admin Center가 Linux 연결을 관리할 계획이 있습니까?
 
@@ -150,7 +150,7 @@ Windows Admin Center는 두 버전으로 다운로드할 수 있습니다.
 ### <a name="windows-admin-center-preview"></a>Windows Admin Center 미리 보기
 
 * 일반 흐름에서 최신 및 최고의 기능을 원하는 IT 관리자에게 이 버전이 적합합니다. 한 달 정도의 주기로 업데이트 릴리스를 제공하려고 합니다. 핵심 플랫폼은 계속해서 프로덕션을 지원하며 라이선스는 프로덕션 사용권을 제공합니다. 그러나 미리 보기로 명확하게 표시된 평가 및 테스트에 적합한 새로운 도구와 기능이 도입될 것입니다.
-* 최신 Insider Preview 버전을 가져오려면 등록된 참가자는 [Windows Server Insider Preview 다운로드 페이지](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver)에서 추가 다운로드 드롭다운 아래에서 직접 Windows Admin Center 미리 보기를 다운로드할 수 있습니다. 아직 참가자로 등록하지 않은 경우 Windows 비즈니스용 참가자 포털에서 [Windows Server 시작](https://insider.windows.com/en-us/for-business-getting-started-server/)을 참조하세요.
+* 최신 Insider Preview 버전을 가져오려면 등록된 참가자는 [Windows Server Insider Preview 다운로드 페이지](https://www.microsoft.com/software-download/windowsinsiderpreviewserver)에서 추가 다운로드 드롭다운 아래에서 직접 Windows Admin Center 미리 보기를 다운로드할 수 있습니다. 아직 참가자로 등록하지 않은 경우 Windows 비즈니스용 참가자 포털에서 [Windows Server 시작](https://insider.windows.com/en-us/for-business-getting-started-server/)을 참조하세요.
 
 ## <a name="why-was-windows-admin-center-chosen-as-the-final-name-for-project-honolulu"></a>"Windows Admin Center"가 "Project Honolulu"의 최종 이름으로 선택된 이유는 무엇입니까?
 
@@ -162,7 +162,7 @@ Windows Admin Center는 "Project Honolulu"의 공식 제품 이름이며 다양�
 
 ## <a name="what-is-the-version-history-of-windows-admin-center"></a>Windows Admin Center의 버전 기록은 무엇인가요?
 
-[버전 기록은 여기를 참조하세요.](../overview.md#release-history)
+[버전 기록은 여기를 참조하세요.](../support/release-history.md)
 
 ## <a name="im-having-an-issue-with-windows-admin-center-where-can-i-get-help"></a>Windows Admin Center와 관련하여 문제가 있습니다. 어디에서 도움을 얻을 수 있습니까?
 

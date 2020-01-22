@@ -14,12 +14,12 @@ manager: dongill
 ms.author: elizapo
 ms.date: 06/05/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a875f8bddd934ac9fb70ca9c0b86772d9fa63b7
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: de08101ed1d4d4527242778d657778f1a16b3dad
+ms.sourcegitcommit: 5b055fc1d73375f68149c214152f1d63396dd6ca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404178"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76248405"
 ---
 # <a name="remote-desktop---allow-access-to-your-pc"></a>원격 데스크톱 - PC 액세스 허용
 
@@ -28,7 +28,7 @@ ms.locfileid: "71404178"
 [Microsoft 원격 데스크톱 클라이언트](remote-desktop-clients.md)(Windows, iOS, macOS 맟 Android에서 사용 가능)를 사용하면 원격 디바이스에서 원격 데스크톱을 통해 PC에 연결하고 제어할 수 있습니다. PC에 대한 원격 연결을 허용하면 다른 디바이스를 사용하여 PC에 연결하고, 책상에 앉아 있는 것처럼 모든 앱, 파일 및 네트워크 리소스에 액세스할 수 있습니다.  
 
 > [!NOTE]
-> 원격 데스크톱을 사용하여 Windows 10 Pro/Enteprise, Windows 8.1 및 8 Enterprise/Pro, Windows 7 Professional/Enterprise/Ultimate, Windows Server 2008 이후 버전의 Windows Server에 연결할 수 있습니다. Home 버전(예: Windows 10 Home)을 실행 중인 컴퓨터에는 연결할 수 없습니다. 
+> 원격 데스크톱을 사용하여 Windows 10 Pro/Enterprise, Windows 8.1 및 8 Enterprise/Pro, Windows 7 Professional/Enterprise/Ultimate, Windows Server 2008 이후 버전의 Windows Server에 연결할 수 있습니다. Home 버전(예: Windows 10 Home)을 실행 중인 컴퓨터에는 연결할 수 없습니다. 
 
 원격 PC에 연결하려면 컴퓨터가 켜져 있고, 네트워크에 연결되어 있어야 하며, 원격 데스크톱이 사용 설정되어 있고, 사용자에게 원격 컴퓨터에 대한 네트워크(인터넷) 액세스 권한과 연결 권한이 있어야 합니다. 사용자 목록에 있는 사용자에게 연결 권한이 있습니다. 연결을 시작하기 전에 연결할 컴퓨터의 이름을 조회하고 방화벽을 통해 원격 데스크톱 연결이 허용되는지 확인하는 것이 좋습니다.
 
@@ -39,7 +39,7 @@ ms.locfileid: "71404178"
 ### <a name="windows-10-fall-creator-update-1709-or-later"></a>Windows 10 Fall Creator Update(1709) 이상
 
 몇 가지 간단한 단계를 통해 PC의 원격 액세스를 구성할 수 있습니다.
-1. 연결하려는 디바이스에서 **시작**을 선택하고 왼쪽에서 **설정** 아이콘을 클릭합니다.
+1. 연결하려는 디바이스에서 **시작**을 선택한 다음, 왼쪽에서 **설정** 아이콘을 클릭합니다.
 2. **시스템** 그룹, [**원격 데스크톱**](ms-settings:remotedesktop) 항목을 차례로 선택합니다.
 3. 원격 데스크톱을 사용하도록 설정하려면 슬라이더를 사용하세요.
 4. 또한 원활한 연결을 위해 PC의 절전 모드를 해제하고 검색 가능하게 유지하는 것이 좋습니다. **설정 표시**를 클릭하여 활성화합니다.
@@ -57,7 +57,7 @@ PC의 원격 액세스를 구성하려면 [Microsoft 원격 데스크톱 도우�
 
 ## <a name="should-i-enable-remote-desktop"></a>원격 데스크톱을 사용하도록 설정해야 하나요?
 
-실제로 PC 앞에 앉아 있을 때만 PC에 액세스하려는 경우에는 원격 데스크톱을 사용하도록 설정할 필요가 없습니다. 원격 데스크톱을 사용하도록 설정하면 로컬 네트워크에 표시되는 PC의 포트가 열립니다. 신뢰할 수 있는 네트워크(예: 집)의 원격 데스크톱만 사용하도록 설정해야 합니다. 또한 액세스가 엄격하게 제어되는 PC에서는 원격 데스크톱을 사용하도록 설정하지 않는 것이 좋습니다.
+PC를 실제로 사용할 때만 PC에 액세스하려는 경우에는 원격 데스크톱을 사용하도록 설정할 필요가 없습니다. 원격 데스크톱을 사용하도록 설정하면 로컬 네트워크에 표시되는 PC의 포트가 열립니다. 신뢰할 수 있는 네트워크(예: 집)의 원격 데스크톱만 사용하도록 설정해야 합니다. 또한 액세스가 엄격하게 제어되는 PC에서는 원격 데스크톱을 사용하도록 설정하지 않는 것이 좋습니다.
 
 원격 데스크톱에 대한 액세스를 사용하도록 설정할 때는 관리자 그룹의 모든 사용자와 선택된 추가 사용자에게 컴퓨터의 계정에 원격으로 액세스할 수 있는 권한을 부여해야 합니다.
 

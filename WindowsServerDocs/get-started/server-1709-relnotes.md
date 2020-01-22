@@ -14,12 +14,12 @@ author: jaimeo
 ms.author: jaimeo
 manager: dougkim
 ms.localizationpriority: medium
-ms.openlocfilehash: 7d5f899964414c10350cc22a594a959c940a1514
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: dcd50b287ad0f3dd49a0df3c1fe531379bd4078e
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391525"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75948234"
 ---
 # <a name="release-notes-important-issues-in-windows-server-version-1709"></a>릴리스 정보: Windows Server 버전 1709의 중요한 이슈
 
@@ -29,7 +29,7 @@ ms.locfileid: "71391525"
 
 이 문서는 계속해서 업데이트됩니다. 해결 방법이 필요한 중요한 문제가 발견되면 그 내용이 추가되고 새로운 해결 방법 및 수정 사항이 제공됩니다.  
   
-## <a name="storage-spaces-direct"></a>저장소 공간 다이렉트
+## <a name="storage-spaces-direct"></a>직접 스토리지 공간
 [comment]: # (ID: unknown; Submitter: stevenek; state: signed off)  
 스토리지 공간 다이렉트는 Windows Server, 버전 1709에 포함되지 않습니다. *Enable-ClusterStorageSpacesDirect* 또는 그 별칭인 *Enable-ClusterS2D*를 호출하는 경우 Windows Server, 버전 1709를 실행하는 서버에서 "요청한 작업이 지원되지 않습니다"라는 메시지와 함께 오류가 표시됩니다.
 
@@ -41,4 +41,4 @@ Windows Server 반기 채널은 더 빠른 혁신을 통해 혜택을 얻는 컨
 
 스토리지 공간 다이렉트는 Windows Server 2016에 도입되었고, 하이퍼 컨버지드 플랫폼의 기초입니다. Microsoft 하이퍼 컨버지드 플랫폼의 성공적인 도입에 매우 기쁘며, 고객을 위해 최선을 다하고 있습니다.
 
-사용자 피드백을 듣고 하이퍼 컨버지드 플랫폼을 위한 [차세대 혁신](https://blogs.technet.microsoft.com/windowsserver/2017/09/07/sneak-peek-2-windows-server-version-1709-hyper-converged-infrastructure/)을 제공해왔습니다. 이러한 기능은 현재 [Windows 참가자](https://insider.windows.com/for-business/) 빌드에서 이용 가능하니 한 번 시험해 보고 피드백을 공유하세요. 유효성 검사가 완료된 하이퍼 컨버지드 솔루션을 찾는 고객의 경우 [Windows Server 소프트웨어 정의](http://microsoft.com/wssd) 프로그램을 권장합니다.
+사용자 피드백을 듣고 하이퍼 컨버지드 플랫폼을 위한 [차세대 혁신](https://blogs.technet.microsoft.com/windowsserver/2017/09/07/sneak-peek-2-windows-server-version-1709-hyper-converged-infrastructure/)을 제공해왔습니다. 이러한 기능은 현재 [Windows 참가자](https://insider.windows.com/for-business/) 빌드에서 이용 가능하니 한 번 시험해 보고 피드백을 공유하세요. 유효성 검사가 완료된 하이퍼 컨버지드 솔루션을 찾는 고객의 경우 [Windows Server 소프트웨어 정의](https://microsoft.com/wssd) 프로그램을 권장합니다.

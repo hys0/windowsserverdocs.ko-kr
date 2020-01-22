@@ -9,16 +9,16 @@ ms.technology: remote-desktop-services
 ms.tgt_pltfrm: na
 ms.topic: article
 author: heidilohr
-manager: daveba
+manager: lizross
 ms.author: helohr
-ms.date: 12/04/2019
+ms.date: 01/14/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 5526d401ba26cabcaccfc0b88df9b0e69f8149a5
-ms.sourcegitcommit: 3d76683718ec6f38613f552f518ebfc6a5db5401
+ms.openlocfilehash: f1f4d6b32b8b7d717d2d424e0a60c5edc96f4cac
+ms.sourcegitcommit: 10331ff4f74bac50e208ba8ec8a63d10cfa768cc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74829605"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75953068"
 ---
 # <a name="whats-new-in-the-windows-desktop-client"></a>Windows 데스크톱 클라이언트의 새로운 기능
 
@@ -28,10 +28,23 @@ Windows 데스크톱 클라이언트에 대한 자세한 내용은 [Windows 데�
 
 클라이언트는 서로 다른 [ 사용자 그룹](windowsdesktop-admin.md#configure-user-groups)에 대해 구성할 수 있습니다. 다음 표에는 각 사용자 그룹에 사용할 수 있는 현재 버전이 나와 있습니다.
 
-|사용자 그룹 |버전  |
+|사용자 그룹 |Version  |
 |-----------|---------|
-|Public     |1.2.535  |
-|Windows 참가자 프로그램    |1.2.535  |
+|공용     |1.2.535  |
+|참가자    |1.2.594  |
+
+## <a name="updates-for-version-12594"></a>1\.2.594 버전에 대한 업데이트
+
+*게시 날짜: 2020/01/14*
+
+다운로드: [Windows 64비트](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4o4cC), [Windows 32비트](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4o4cI), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4oh9C)
+
+- 이제 데스크톱 연결에 사용할 디스플레이를 선택할 수 있습니다. 이 설정을 변경하려면 데스크톱 연결의 아이콘을 마우스 오른쪽 단추로 클릭하고 **설정**을 선택합니다.
+- 연결 설정에서 사용 가능한 배율 인수가 올바르게 표시되지 않는 문제가 해결되었습니다.
+- 연결을 시작하는 동안 내레이터가 표시된 대화 상자를 읽을 수 없는 문제가 해결되었습니다.
+- Azure Active Directory와 Active Directory 이름이 일치하지 않을 때 잘못된 사용자 이름이 표시되는 문제가 해결되었습니다.
+- 네트워크에 연결되지 않은 상태에서 연결을 시작할 때 클라이언트가 응답하지 않는 문제가 해결되었습니다.
+- 헤드셋을 연결할 때 클라이언트가 응답하지 않는 문제가 해결되었습니다.
 
 ## <a name="updates-for-version-12535"></a>1\.2.535 버전에 대한 업데이트
 

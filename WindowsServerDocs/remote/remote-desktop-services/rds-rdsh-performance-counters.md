@@ -10,12 +10,12 @@ ms.topic: article
 author: lizap
 manager: dougkim
 ms.localizationpriority: medium
-ms.openlocfilehash: b59d93d576967ee83b3efecc2630034eab919bf2
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 7b222104abd5b0b964bac748c3be15049075191d
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403907"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950422"
 ---
 # <a name="use-performance-counters-to-diagnose-app-performance-problems-on-remote-desktop-session-hosts"></a>성능 카운터를 사용하여 원격 데스크톱 세션 호스트에서 앱 성능 문제 진단
 
@@ -140,7 +140,7 @@ CPU 스파이크와 사용자 입력 지연 사이에 상관 관계가 있는 �
 
 ## <a name="download-windows-server-insider-software"></a>Windows Server Insider 소프트웨어 다운로드
 
-등록된 참가자는 [Windows Server Insider Preview 다운로드 페이지](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver)로 직접 이동하여 최신 Insider 소프트웨어 다운로드를 받을 수 있습니다.  참가자를 등록하는 방법을 알아보려면 [Server 시작](https://insider.windows.com/en-us/for-business-getting-started-server/)을 참조하세요.
+등록된 참가자는 [Windows Server Insider Preview 다운로드 페이지](https://www.microsoft.com/software-download/windowsinsiderpreviewserver)로 직접 이동하여 최신 Insider 소프트웨어 다운로드를 받을 수 있습니다.  참가자를 등록하는 방법을 알아보려면 [Server 시작](https://insider.windows.com/en-us/for-business-getting-started-server/)을 참조하세요.
 
 ## <a name="share-your-feedback"></a>피드백 공유
 

@@ -12,12 +12,12 @@ ms.assetid: 9f109c91-7c2e-4065-856c-ce9e2e9ce558
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: 34cb9a50fad7ea64cd8af5b893f5fbd5217a95e1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 92c27884475beb83000fb7aac15339135e3f2109
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391852"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75948462"
 ---
 # <a name="deploy-nano-server"></a>Nano 서버 배포
 
@@ -32,9 +32,9 @@ ms.locfileid: "71391852"
 
 Nano 서버 이미지 작성기는 그래픽 인터페이스의 도움을 받아 사용자 지정 Nano 서버 이미지 및 부팅 가능 USB 미디어를 만들 수 있는 도구입니다. 이 도구는 사용자의 입력을 기반으로, Windows Server 2016 Datacenter 또는 Standard 버전을 실행하는 Nano 서버의 설치를 간단하게 일관적으로 자동화할 수 있는 재사용 가능 PowerShell 스크립트를 생성합니다.
 
-[다운로드 센터](https://www.microsoft.com/en-us/download/details.aspx?id=54065)에서 도구를 다운로드합니다. 
+[다운로드 센터](https://www.microsoft.com/download/details.aspx?id=54065)에서 도구를 다운로드합니다. 
 
-이 도구를 사용하려면 [Windows ADK(Assessment and Deployment Kit)](https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit)가 필요합니다.
+이 도구를 사용하려면 [Windows ADK(Assessment and Deployment Kit)](https://developer.microsoft.comwindows/hardware/windows-assessment-deployment-kit)가 필요합니다.
 
 
 Nano 서버 이미지 작성기는 사용자 지정 Nano 서버 이미지를 VHD, VHDX 또는 ISO 형식으로 만들며, Nano 서버를 배포하거나 서버의 하드웨어 구성을 감지하는 부팅 가능 USB 미디어를 만들 수 있습니다. 뿐만 아니라 다음과 같은 일을 할 수 있습니다.
@@ -62,25 +62,25 @@ Windows Server 2016의 경우 Nano 서버가 물리적 미디어에 배포되며
 
 PackageManagement(OneGet) PowerShell 모듈의 NanoServerPackage 공급 기업을 사용하여 이러한 패키지를 찾아서 설치할 수도 있습니다. 이 토픽의 "온라인으로 역할 및 기능 설치" 섹션을 참조하세요.  
 
-다음 테이블은 이 Nano 서버 릴리스에 제공되는 역할 및 기능, 그리고 패키지를 설치하는 Windows PowerShell 옵션을 보여 줍니다. 일부 패키지는 -Compute 같은 고유의 Windows PowerShell 스위치를 통해 직접 설치되고, 나머지 패키지는 사용자가 -Package 매개 변수에 패키지 이름을 전달하여 설치하며, 쉼표로 구분된 목록에 결합할 수 있습니다. Get-NanoServerPackage cmdlet을 사용하여 사용 가능한 패키지를 동적으로 나열할 수 있습니다.  
+다음 테이블은 이 Nano 서버 릴리스에 제공되는 역할 및 기능, 그리고 패키지를 설치하는 Windows PowerShell 옵션을 보여 줍니다. -Compute 같은 일부 패키지는 고유의 Windows PowerShell 스위치를 통해 직접 설치되고, 나머지 패키지는 사용자가 -Package 매개 변수에 패키지 이름을 전달하여 설치하며, 쉼표로 구분된 목록에 결합할 수 있습니다. Get-NanoServerPackage cmdlet을 사용하여 사용 가능한 패키지를 동적으로 나열할 수 있습니다.  
 
 
-|                                                                             역할 또는 기능                                                                             |                                                                                                                                                                                                          옵션                                                                                                                                                                                                           |
+|                                                                             역할이나 기능                                                                             |                                                                                                                                                                                                          옵션                                                                                                                                                                                                           |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |                                                                     Hyper-V 역할(NetQoS 포함)                                                                     |                                                                                                                                                                                                         -Compute                                                                                                                                                                                                          |
-|                                                   장애 조치(Failover) 클러스터링 및 기타 구성 요소(이 표 다음에 자세히 설명)                                                   |                                                                                                                                                                                                        -Clustering                                                                                                                                                                                                        |
+|                                                   장애 조치(failover) 클러스터링 및 기타 구성 요소(이 표 다음에 자세히 설명)                                                   |                                                                                                                                                                                                        -Clustering                                                                                                                                                                                                        |
 | 다양한 네트워크 어댑터 및 스토리지 컨트롤러를 위한 기본 드라이버. Windows Server 2016의 Server Core 설치에 포함된 드라이버와 동일합니다. |                                                                                                                                                                                                        -OEMDrivers                                                                                                                                                                                                        |
-|                                                파일 서버 역할 및 기타 저장소 구성 요소(이 표 다음에 자세히 설명)                                                 |                                                                                                                                                                                                         -Storage                                                                                                                                                                                                          |
+|                                                파일 서버 역할 및 기타 스토리지 구성 요소(이 표 다음에 자세히 설명)                                                 |                                                                                                                                                                                                         -Storage                                                                                                                                                                                                          |
 |                                                          Windows Defender(기본 서명 파일 포함)                                                           |                                                                                                                                                                                                         -Defender                                                                                                                                                                                                         |
 |                         애플리케이션 호환성을 위한 역방향 전달자. Ruby, Node.js 등 일반 애플리케이션 프레임워크를 예로 들 수 있습니다.                         |                                                                                                                                                                                                  이제는 기본적으로 포함됩니다.                                                                                                                                                                                                  |
 |                                                                             DNS 서버 역할                                                                             |                                                                                                                                                                                         -Package Microsoft-NanoServer-DNS-Package                                                                                                                                                                                         |
-|                                                              PowerShell DSC(필요한 상태 구성)                                                               |                                                                                                                               -Package Microsoft-NanoServer-DSC-Package<br />**참고:** 자세한 내용은 [Nano 서버에서 DSC 사용](https://msdn.microsoft.com/powershell/dsc/nanoDsc)을 참조하세요.                                                                                                                               |
+|                                                              PowerShell DSC(Desired State Configuration)                                                               |                                                                                                                               -Package Microsoft-NanoServer-DSC-Package<br />**참고:** 자세한 내용은 [Nano 서버에서 DSC 사용](https://msdn.microsoft.com/powershell/dsc/nanoDsc)을 참조하세요.                                                                                                                               |
 |                                                                    IIS(인터넷 정보 서버)                                                                    |                                                                                                                                       -Package Microsoft-NanoServer-IIS-Package<br />**참고:** IIS 작업에 대한 자세한 내용은 [Nano 서버의 IIS](IIS-on-Nano-Server.md)를 참조하세요.                                                                                                                                        |
 |                                                                   Windows 컨테이너에 대한 호스트 지원                                                                   |                                                                                                                                                                                                        -Containers                                                                                                                                                                                                        |
 |                                                               System Center Virtual Machine Manager 에이전트                                                               | -Package Microsoft-NanoServer-SCVMM-Package<br />-Package Microsoft-NanoServer-SCVMM-Compute-Package<br />**참고:** SCVMM 컴퓨팅 패키지는 Hyper-V를 모니터링하는 경우에만 사용하세요. VMM에서 하이퍼 수렴형 배포를 수행하는 경우에도 -Storage 매개 변수를 지정해야 합니다. 자세한 내용은 [VMM 설명서](https://technet.microsoft.com/system-center-docs/vmm/manage/manage-compute-add-nano-hyper-v)를 참조하세요. |
-|                                                                 System Center Operations Manager 에이전트                                                                  |                                                                                                                 별도 설치되었습니다. 자세한 내용은 https://technet.microsoft.com/system-center-docs/om/manage/install-agent-on-nano-server 에서 System Center Operations Manager 설명서를 참조하세요.                                                                                                                 |
+|                                                                 System Center Operations Manager 에이전트                                                                  |                                                                                                                 별도로 설치되었습니다. 자세한 내용은 https://technet.microsoft.com/system-center-docs/om/manage/install-agent-on-nano-server 에서 System Center Operations Manager 설명서를 참조하세요.                                                                                                                 |
 |                                                                 데이터 센터 브리징(DCBQoS 포함)                                                                 |                                                                                                                                                                                         -Package Microsoft-NanoServer-DCB-Package                                                                                                                                                                                         |
-|                                                                     가상 컴퓨터에 배포                                                                      |                                                                                                                                                                                        -Package Microsoft-NanoServer-Guest-Package                                                                                                                                                                                        |
+|                                                                     가상 머신에 배포                                                                      |                                                                                                                                                                                        -Package Microsoft-NanoServer-Guest-Package                                                                                                                                                                                        |
 |                                                                     물리적 컴퓨터에 배포                                                                     |                                                                                                                                                                                        - Package Microsoft-NanoServer-Host-Package                                                                                                                                                                                        |
 |     BitLocker, TPM(신뢰할 수 있는 플랫폼 모듈), 볼륨 암호화, 플랫폼 식별, 암호화 공급자 및 기타 보안 시작과 관련된 기능     |                                                                                                                                                                                    -Package Microsoft-NanoServer-SecureStartup-Package                                                                                                                                                                                    |
 |                                                                    보호된 VM에 대한 Hyper-V 지원                                                                     |                                                                                                                                         -Package Microsoft-NanoServer-ShieldedVM-Package<br />**참고:** 이 패키지는 Nano 서버 Datacenter 버전에만 제공됩니다.                                                                                                                                         |
@@ -93,28 +93,28 @@ PackageManagement(OneGet) PowerShell 모듈의 NanoServerPackage 공급 기업�
 > [!NOTE]  
 > -Storage 매개 변수를 사용하여 파일 서비스를 설치하는 경우 파일 서비스는 실제로 사용할 수 없습니다. 서버 관리자를 사용하여 원격 컴퓨터에서 이 기능을 사용하도록 설정해야 합니다. 
 
-### <a name="failover-clustering-items-installed-by-the--clustering-parameter"></a>-Clustering 매개 변수로 설치된 장애 조치(Failover) 클러스터링 항목
+### <a name="failover-clustering-items-installed-by-the--clustering-parameter"></a>-Clustering 매개 변수로 설치된 장애 조치(failover) 클러스터링 항목
 
-- 장애 조치(Failover) 클러스터링 역할
-- VM 장애 조치(Failover) 클러스터링
-- 저장소 공간 다이렉트(S2D)
-- 저장소 서비스 품질
+- 장애 조치(failover) 클러스터링 역할
+- VM 장애 조치(failover) 클러스터링
+- 스토리지 공간 다이렉트(S2D)
+- 스토리지 서비스 품질
 - 볼륨 복제 클러스터링
 - SMB 감시 서비스
 
 
-### <a name="file-and-storage-items-installed-by-the--storage-parameter"></a>-Storage 매개 변수로 설치된 파일 및 저장소 항목
+### <a name="file-and-storage-items-installed-by-the--storage-parameter"></a>-Storage 매개 변수로 설치된 파일 및 스토리지 항목
 
 - 파일 서버 역할
 - 데이터 중복 제거
-- MSDSM(Microsoft 장치별 모듈) 드라이버를 포함한 다중 경로 I/O
+- MSDSM(Microsoft 디바이스별 모듈) 드라이버를 포함한 다중 경로 I/O
 - ReFS(v1 및 v2)
 - iSCSI 초기자(iSCSI 대상은 아님)
-- 저장소 복제본
-- SMI-S를 지원하는 저장소 관리 서비스
+- 스토리지 복제본
+- SMI-S를 지원하는 Storage Management Service
 - SMB 감시 서비스
 - 동적 볼륨
-- Windows 저장소 관리를 위한 기본 Windows 저장소 공급자
+- Windows Storage Management를 위한 기본 Windows 스토리지 공급자
 
 
 
@@ -144,7 +144,7 @@ PackageManagement(OneGet) PowerShell 모듈의 NanoServerPackage 공급 기업�
 
 이 모든 작업의 결과로 .\FirstStepsNano.vhdx 이미지가 생성됩니다.  
 
-이 cmdlet은 실행되면서 로그를 생성하고 실행이 완료되면 사용자에게 로그 위치를 알려 줍니다. 도우미 스크립트를 통해 수행된 WIM-VHD 변환은 %TEMP%\Convert-WindowsImage\\\<GUID&gt;에 고유의 로그를 생성합니다(\<GUID&gt;는 변환 세션별 고유 식별자).  
+이 cmdlet은 실행되면서 로그를 생성하고 실행이 완료되면 사용자에게 로그 위치를 알려 줍니다. 도우미 스크립트를 통해 수행된 WIM-VHD 변환은 %TEMP%\Convert-WindowsImage\\\<GUID>에 고유의 로그를 생성합니다(\<GUID>는 변환 세션별 고유 식별자).  
 
 동일한 기본 경로를 사용하는 한, 이 cmdlet을 실행할 때마다 미디어 경로 매개 변수를 생략할 수 있습니다. 이 cmdlet은 기본 경로의 캐시된 파일을 사용하기 때문입니다. 기본 경로를 지정하지 않으면 이 cmdlet은 TEMP 폴더에 기본 경로를 생성합니다. 다른 원본 미디어를 사용하고 싶지만 기본 경로가 같으면 미디어 경로 매개 변수를 지정해야 합니다.  
 
@@ -205,7 +205,7 @@ DVD 미디어 또는 USB 드라이브를 제거하고 **Wpeutil.exe Reboot** 명
 
 ## <a name="BKMK_online"></a>온라인으로 역할 및 기능 설치  
 > [!NOTE]
-> 미디어 또는 온라인 저장소에서 선택적 Nano 서버 패키지를 설치하는 경우에는 최근 보안 픽스가 포함되지 않습니다. 옵션 패키지와 기본 운영 체제 간의 버전 불일치를 방지하기 위해 옵션 패키지를 설치하는 즉시 [최신 누적 업데이트](https://technet.microsoft.com/windows-server-docs/get-started/update-nano-server)를 설치한 **후** 서버를 다시 시작해야 합니다.
+> 미디어 또는 온라인 리포지토리에서 선택적 Nano 서버 패키지를 설치하는 경우에는 최근 보안 픽스가 포함되지 않습니다. 옵션 패키지와 기본 운영 체제 간의 버전 불일치를 방지하기 위해 옵션 패키지를 설치하는 즉시 [최신 누적 업데이트](https://technet.microsoft.com/windows-server-docs/get-started/update-nano-server)를 설치한 **후** 서버를 다시 시작해야 합니다.
 
 ### <a name="installing-roles-and-features-from-a-package-repository"></a>패키지 리포지토리에서 역할 및 기능 설치  
 PackageManagement PowerShell 모듈의 NanoServerPackage 공급자를 사용하여 온라인 패키지 리포지토리에서 Nano 서버 패키지를 찾아 설치할 수 있습니다. 이 공급자를 설치하려면 다음 cmdlet을 사용합니다.
@@ -231,7 +231,7 @@ Save-NanoServerPackage
 Install-NanoServerPackage
 ```  
 
-또한 일반 PackageManagement cmdlet을 사용하여 NanoServerPackage 공급자를 지정할 수도 있습니다.
+일반 PackageManagement cmdlet을 사용하여 NanoServerPackage 공급자를 지정할 수도 있습니다.
 
 ```powershell
 Find-Package -ProviderName NanoServerPackage
@@ -254,7 +254,7 @@ Find-NanoServerPackage
 미국 영어와 같은 특정 로캘 버전이 필요한 경우 `Find-NanoServerPackage -Culture en-us` 또는  
 `Find-Package -ProviderName NanoServerPackage -Culture en-us` 또는 `Find-Package -Culture en-us -DisplayCulture`.
 
-패키지 이름으로 특정 패키지를 찾으려면 -Name 매개 변수를 사용합니다. 이 매개 변수에는 와일드카드도 사용할 수 있습니다. 예를 들어 이름에 VMM이 포함된 모든 패키지를 찾으려면 `Find-NanoServerPackage -Name *VMM*` 또는 `Find-Package -ProviderName NanoServerPackage -Name *VMM*`을 사용합니다.
+패키지 이름으로 특정 패키지를 찾으려면 -Name 매개 변수를 사용합니다. 이 매개 변수는 와일드카드도 허용합니다. 예를 들어 이름에 VMM이 포함된 모든 패키지를 찾으려면 `Find-NanoServerPackage -Name *VMM*` 또는 `Find-Package -ProviderName NanoServerPackage -Name *VMM*`을 사용합니다.
 
 -RequiredVersion, -MinimumVersion 또는 -MaximumVersion 매개 변수를 사용하여 특정 버전을 찾을 수 있습니다. 사용 가능한 모든 버전을 찾으려면 -AllVersions를 사용합니다. 그렇지 않으면 최신 버전만 반환됩니다. 예를 들면 `Find-NanoServerPackage -Name *VMM* -RequiredVersion 10.0.14393.0`와 같습니다. 또는 모든 버전을 찾으려면: `Find-Package -ProviderName NanoServerPackage -Name *VMM* -AllVersions`
 
@@ -267,11 +267,11 @@ Find-NanoServerPackage
 
 `Install-NanoServerPackage -Name Microsoft-NanoServer-DCB-Package -Culture de-de -RequiredVersion 10.0.14393.0 -ToVhd C:\MyNanoVhd.vhd`
 
-또는
+또는:
 
 `Install-Package -Name Microsoft-NanoServer-DCB-Package -Culture de-de -RequiredVersion 10.0.14393.0 -ToVhd C:\MyNanoVhd.vhd`
 
-다음은 파이프라인을 통한 패키지 검색 결과를 설치 cmdlet으로 전송하는 몇 가지 예입니다.  
+다음은 패키지 검색 결과를 설치 cmdlet으로 전송하는 몇 가지 예입니다.  
 
 `Find-NanoServerPackage *dcb* | Install-NanoServerPackage`는 이름에 "dcb"가 포함된 패키지를 찾아서 설치합니다.
 
@@ -285,7 +285,7 @@ Find-NanoServerPackage
 
 `Save-NanoServerPackage` 또는 `Save-Package`를 사용하면 패키지를 다운로드하여 설치하지 않고 저장할 수 있습니다. 두 cmdlet은 모두 파이프라인으로부터 입력을 받아들입니다.
 
-예를 들어 Nano 서버 패키지를 다운로드하고 와일드카드 경로와 일치하는 디렉터리에 저장하려면 `Save-NanoServerPackage -Name Microsoft-NanoServer-DNS-Package -Path C:\`를 사용합니다. 이 예에서는 -Culture가 지정되지 않았기 때문에 로컬 컴퓨터의 문화권이 사용됩니다. 버전을 지정하지 않아 최신 버전이 저장됩니다.
+예를 들어 Nano 서버 패키지를 다운로드하고 와일드카드 경로와 일치하는 디렉터리에 저장하려면 `Save-NanoServerPackage -Name Microsoft-NanoServer-DNS-Package -Path C:\`를 사용합니다. 이 예제에서는 -Culture가 지정되지 않았기 때문에 로컬 머신의 문화권이 사용됩니다. 버전을 지정하지 않아 최신 버전이 저장됩니다.
 
 `Save-Package -ProviderName NanoServerPackage -Name Microsoft-NanoServer-IIS-Package -Path C:\ -Culture it-IT -MinimumVersion 10.0.14393.0`은 특정 버전을 이탈리아 언어 및 로캘로 저장합니다.
 
@@ -293,12 +293,12 @@ Find-NanoServerPackage
 
 `Find-NanoServerPackage -Name *containers* -MaximumVersion 10.2 -MinimumVersion 1.0 -Culture es-ES | Save-NanoServerPackage -Path C:\`
 
-또는
+를 실행하거나
 
 `Find-Package -ProviderName NanoServerPackage -Name *shield* -Culture es-ES | Save-Package -Path`
 
 ### <a name="inventory-installed-packages"></a>인벤토리가 설치된 패키지
-`Get-Package`를 사용하여 어떤 Nano 서버 패키지가 설치되었는지 검색할 수 있습니다. 예를 들어 `Get-Package -ProviderName NanoserverPackage`로 Nano 서버에 어떤 패키지가 있는지 살펴볼 수 있습니다.
+`Get-Package`를 사용하여 설치된 Nano 서버 패키지를 검색할 수 있습니다. 예를 들어 `Get-Package -ProviderName NanoserverPackage`로 Nano 서버에 어떤 패키지가 있는지 살펴볼 수 있습니다.
 
 예를 들어 오프라인 이미지에 설치된 Nano 서버 패키지를 확인하려면 `Get-Package -ProviderName NanoserverPackage -FromVhd C:\MyNanoVhd.vhd`를 실행합니다.
 
@@ -402,7 +402,7 @@ Nano 서버는 다양한 네트워크 어댑터 및 스토리지 컨트롤러를
 > 드라이버를 보관하는 폴더에 SYS 파일과 해당하는 INF 파일이 모두 있어야 합니다. 또한 Nano 서버는 서명된 64\-비트 드라이버만 지원합니다. 
 
 ### <a name="injecting-drivers"></a>드라이버 삽입  
-Nano 서버는 다양한 네트워크 어댑터 및 저장소 컨트롤러를 위한 기본 드라이버가 포함된 패키지를 제공합니다. 하지만 사용자의 네트워크 어댑터에 필요한 드라이버가 없을 수도 있습니다. 이 구문을 사용하여 New-NanoServerImage가 사용 가능한 드라이버의 디렉터리를 검색하여 Nano 서버 이미지에 삽입하도록 만들 수 있습니다.  
+Nano 서버는 다양한 네트워크 어댑터 및 스토리지 컨트롤러를 위한 기본 드라이버가 포함된 패키지를 제공합니다. 하지만 사용자의 네트워크 어댑터에 필요한 드라이버가 없을 수도 있습니다. 이 구문을 사용하여 New-NanoServerImage가 사용 가능한 드라이버의 디렉터리를 검색하여 Nano 서버 이미지에 삽입하도록 만들 수 있습니다.  
 
 `New-NanoServerImage -DeploymentType Host -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\InjectingDrivers.vhdx -DriverPath .\Extra\Drivers`  
 
@@ -446,7 +446,7 @@ setupcomplete.cmd의 일부로 사용자 지정 명령을 실행하려면 -Setup
 
 
 ### <a name="support-for-development-scenarios"></a>개발 시나리오 지원
-Nano 서버에서 개발 및 테스트하려는 경우 -Development를 사용할 수 있습니다. 그러면 PowerShell을 기본 로컬 셸로 설정하고, 서명되지 않은 드라이버를 설치하고, 디버거 이진 파일을 복사하고, 디버깅을 위한 포트를 열고, 테스트 서명을 사용하고, 개발자 라이선스 없이 AppX 패키지를 설치할 수 있습니다.
+Nano 서버를 개발 및 테스트하려는 경우 -Development를 사용할 수 있습니다. 그러면 PowerShell을 기본 로컬 셸로 설정하고, 서명되지 않은 드라이버를 설치하고, 디버거 이진 파일을 복사하고, 디버깅을 위한 포트를 열고, 테스트 서명을 사용하고, 개발자 라이선스 없이 AppX 패키지를 설치할 수 있습니다.
 
 `New-NanoServerImage -DeploymentType Guest -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -Development`
 
@@ -474,7 +474,7 @@ Nano 서버에서 개발 및 테스트하려는 경우 -Development를 사용할
 ## <a name="installing-apps-and-drivers"></a>앱 및 드라이버 설치
 [comment]: # (Xumin Sun에서 버그 #68620.)  
 
-### <a name="windows-server-app-installer"></a>Windows Server 앱 설치 관리자
+### <a name="windows-server-app-installer"></a>Windows Server 응용 프로그램 설치 관리자
 WSA(Windows Server 응용 프로그램) 설치 관리자는 Nano 서버를 안정적으로 설치할 수 있는 옵션을 제공합니다. MSI(Windows Installer)는 Nano 서버에서 지원되지 않으므로 Microsoft 이외 제품에 사용할 수 있는 유일한 설치 기술은 WSA입니다. WSA는 선언적 매니페스트를 사용하여 애플리케이션을 안전하고 안정적으로 설치 및 운영하도록 설계된 Windows 앱 패키지 기술을 활용합니다. WSA는 Windows Server 관련 확장을 지원하도록 Windows 앱 패키지 설치 관리자를 확장하며, WSA가 드라이버 설치를 지원하지 않는 제한이 있습니다.
 
 WSA 패키지를 만들어서 Nano 서버에 설치하려면 게시자와 패키지 소비자 양쪽의 개입이 필요합니다.
@@ -488,8 +488,8 @@ WSA 패키지를 만들어서 Nano 서버에 설치하려면 게시자와 패키
 
 다음으로 패키지 소비자는 다음 단계를 수행해야 합니다.
 
-1. [  *Import-Certificate*](https://technet.microsoft.com/library/hh848630) PowerShell cmdlet을 실행하여 위의 4단계에서 만든 게시자의 인증서를 Nano 서버의 certStoreLocation인 “Cert:\LocalMachine\TrustedPeople”로 가져옵니다. 예를 들면 다음과 같습니다. `Import-Certificate -FilePath ".\xyz.cer" -CertStoreLocation "Cert:\LocalMachine\TrustedPeople"`
-2. [  **Add-AppxPackage**](https://technet.microsoft.com/library/mt575516(v=wps.620).aspx) PowerShell cmdlet을 실행하여 Nano 서버에 응용 프로그램을 설치하고 Nano 서버에 WSA 패키지를 설치합니다. 예를 들면 다음과 같습니다. `Add-AppxPackage wsaSample.appx`
+1. [*Import-Certificate*](https://technet.microsoft.com/library/hh848630) PowerShell cmdlet을 실행하여 위의 4단계에서 만든 게시자의 인증서를 Nano 서버의 certStoreLocation인 "Cert:\LocalMachine\TrustedPeople"로 가져옵니다. 예를 들면 다음과 같습니다. `Import-Certificate -FilePath ".\xyz.cer" -CertStoreLocation "Cert:\LocalMachine\TrustedPeople"`
+2. [**Add-AppxPackage**](https://technet.microsoft.com/library/mt575516(v=wps.620).aspx) PowerShell cmdlet을 실행하여 Nano 서버에 응용 프로그램을 설치하고 Nano 서버에 WSA 패키지를 설치합니다. 예를 들면 다음과 같습니다. `Add-AppxPackage wsaSample.appx`
 
 #### <a name="additional-resources-for-creating-apps"></a>앱 만들기에 대한 추가 리소스
 WSA는 Microsoft Store에 호스트되지는 않지만 Windows 앱 패키지 기술의 서버 확장입니다. WSA를 사용하여 앱을 게시하려는 경우 다음 토픽이 앱 패키지 파이프라인을 익히는 데 도움을 줄 것입니다.
@@ -593,7 +593,7 @@ PnP 드라이버 패키지는 [PnpUtil](https://msdn.microsoft.com/library/windo
 
 **dism\dismmedia:.\mountdir /Apply-Unattend:.\unattend.xml**  
 
-"Panther" 폴더를 만들고(설치하는 동안 Windows 시스템에서 파일을 저장하는 데 사용하며, 자세한 내용은 [Windows 7, Windows Server 2008 R2 및 Windows Vista 설치 로그 파일 위치](https://support.microsoft.com/en-us/kb/927521) 참조), 이 폴더에 Unattend.xml 파일을 복사하고, 다음 명령을 사용하여 VHD를 탑재 해제합니다.  
+"Panther" 폴더를 만들고(설치하는 동안 Windows 시스템에서 파일을 저장하는 데 사용하며, 자세한 내용은 [Windows 7, Windows Server 2008 R2 및 Windows Vista 설치 로그 파일 위치](https://support.microsoft.com/kb/927521) 참조), 이 폴더에 Unattend.xml 파일을 복사하고, 다음 명령을 사용하여 VHD를 탑재 해제합니다.  
 
 **md .\mountdir\windows\panther**  
 
@@ -633,9 +633,9 @@ Hyper-V는 Windows Server의 Server Core 모드에서 작동하는 것과 똑같
 
 제한된 위임은 이전 릴리스와 정확히 동일한 방식으로 작동합니다. 자세한 내용은 다음 문서를 참조하세요.  
 
--   [Hyper-V 원격 관리를 사용하도록 설정 - SMB 및 항상 사용 가능한 SMB에 대해 제한된 위임 구성](http://blogs.msdn.com/b/taylorb/archive/2012/03/20/enabling-hyper-v-remote-management-configuring-constrained-delegation-for-smb-and-highly-available-smb.aspx)  
+-   [Hyper-V 원격 관리를 사용하도록 설정 - SMB 및 항상 사용 가능한 SMB에 대해 제한된 위임 구성](https://blogs.msdn.com/b/taylorb/archive/2012/03/20/enabling-hyper-v-remote-management-configuring-constrained-delegation-for-smb-and-highly-available-smb.aspx)  
 
--   [Hyper-V 원격 관리를 사용하도록 설정 - 클러스터링되지 않은 실시간 마이그레이션에 대해 제한된 위임 구성](http://blogs.msdn.com/b/taylorb/archive/2012/03/20/enabling-hyper-v-remote-management-configuring-constrained-delegation-for-non-clustered-live-migration.aspx)  
+-   [Hyper-V 원격 관리를 사용하도록 설정 - 클러스터링되지 않은 실시간 마이그레이션에 대해 제한된 위임 구성](https://blogs.msdn.com/b/taylorb/archive/2012/03/20/enabling-hyper-v-remote-management-configuring-constrained-delegation-for-non-clustered-live-migration.aspx)  
 
 **CredSSP**  
 

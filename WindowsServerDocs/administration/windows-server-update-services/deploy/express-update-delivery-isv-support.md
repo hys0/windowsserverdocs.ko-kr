@@ -11,12 +11,12 @@ author: sakitong
 ms.author: coreyp
 manager: lizapo
 ms.date: 10/16/2017
-ms.openlocfilehash: a4880a1a66d9c722cfda9e194c4eff38c5058674
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 13568bb320a3d70bfd6a70d2b9731b460be6f346
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71361717"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75948497"
 ---
 # <a name="express-update-delivery-isv-support"></a>Express 업데이트 배달 ISV 지원
 
@@ -53,7 +53,7 @@ ISV는 WSUS 및 WU 클라이언트를 사용하여 Express 업데이트 배달�
 3.  [**WU 클라이언트 작업 지시를 위한 ISV 클라이언트 에이전트 설정**](#BKMK_3)
 
 >[!NOTE]
->2017 1월 또는 그 이후의 Windows 10 버전 1607 릴리스용 누적 업데이트([KB3213986 (OS Build 14393.693)](https://support.microsoft.com/en-us/help/4009938/january-10-2017-kb3213986-os-build-14393-693)를 설치해야 합니다.
+>2017 1월 또는 그 이후의 Windows 10 버전 1607 릴리스용 누적 업데이트([KB3213986 (OS Build 14393.693)](https://support.microsoft.com/help/4009938/january-10-2017-kb3213986-os-build-14393-693)를 설치해야 합니다.
     
    - ISV 클라이언트 에이전트가 승인할 업데이트 및 업데이트 다운로드/설치 시간을 결정합니다.
    - WU 클라이언트는 다운로드할 바이트 범위를 결정하고 다운로드 요청을 시작합니다.

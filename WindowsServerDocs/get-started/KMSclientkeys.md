@@ -9,12 +9,12 @@ ms.author: jgerend
 ms.localizationpriority: medium
 ms.date: 11/12/2019
 ms.topic: get-started-article
-ms.openlocfilehash: e2879c56b1dd41b8d357959cca473dd69da77d10
-ms.sourcegitcommit: b9ec35416a06854c1bc875a2b731d42a436fe313
+ms.openlocfilehash: f2320b80fb372a227098f952dc8e7f0758420f34
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73956078"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75947824"
 ---
 # <a name="kms-client-setup-keys"></a>KMS 클라이언트 설정 키
 
@@ -32,9 +32,9 @@ Windows Server, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows 8, Wind
 | 수행할 작업…    | …사용할 리소스   |
 |--------------------|------------------------|
 | 볼륨 활성화 시나리오 외부에서 Windows를 활성화하면(Windows 일반 정품 버전을 활성화하려고 시도) **이러한 키가 작동하지 않습니다**. | Windows 일반 정품 버전에 다음 링크를 사용합니다. |
-| Windows 8.1, Windows Server 2012 R2 또는 최신 시스템을 정품 인증할 때 표시되는 다음 오류를 해결합니다. "오류: 0xC004F050 소프트웨어 라이선스 서비스에서 제품 키가 잘못되었다고 보고했습니다."… | Windows 8.1, Windows Server 2012 R2, Windows 8 또는 Windows Server 2012를 실행하고 있으면 KMS 호스트에[이 업데이트를 설치합니다](https://support.microsoft.com/en-us/help/3172614/july-2016-update-rollup-for-windows-8-1-and-windows-server-2012-r2) . |
+| Windows 8.1, Windows Server 2012 R2 또는 최신 시스템을 정품 인증할 때 표시되는 다음 오류를 해결합니다. “오류: 0xC004F050 소프트웨어 라이선스 서비스에서 제품 키가 잘못되었다고 보고했습니다.”… | Windows 8.1, Windows Server 2012 R2, Windows 8 또는 Windows Server 2012를 실행하고 있으면 KMS 호스트에[이 업데이트를 설치합니다](https://support.microsoft.com/help/3172614/july-2016-update-rollup-for-windows-8-1-and-windows-server-2012-r2) . |
 
--   [Windows 10 다운로드](https://www.microsoft.com/en-us/windows/get-windows-10)
+-   [Windows 10 다운로드](https://www.microsoft.com/windows/get-windows-10)
 
 -   [새 Windows 제품 키 얻기](https://support.microsoft.com/help/10749/windows-product-key)
 
@@ -54,7 +54,7 @@ Windows Server, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows 8, Wind
 
 ## <a name="windows-server-ltscltsb-versions"></a>Windows Server LTSC/LTSB 버전
 
-### <a name="windows-server-2019"></a>Windows Server 2019
+### <a name="windows-server-2019"></a>시작
 | 운영 체제 버전       | KMS 클라이언트 설정 키          |
 |--------------------------------|-------------------------------|
 | Windows Server 2019 Datacenter | WMDGN-G9PQG-XVVXX-R3X43-63DFG  | 
@@ -66,12 +66,12 @@ Windows Server, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows 8, Wind
 | 운영 체제 버전       | KMS 클라이언트 설정 키          |
 |--------------------------------|-------------------------------|
 | Windows Server 2016 Datacenter | CB7KF-BWN84-R7R2Y-793K2-8XDDG |
-| Windows Server 2016 Standard   | WC2BQ-8NRM3-FDDYY-2BFGV-KHKQY |
+| Windows Server 2016 Standard   | WC2BQ-8NRM3-FDDYY-2BFGV-KHKQY |
 | Windows Server 2016 Essentials | JCKRF-N37P4-C2D82-9YXRT-4M63B |
 
 ## <a name="windows-10-all-supported-semi-annual-channel-versions"></a>Windows 10, 지원되는 모든 반기 채널 버전
 
-지원되는 버전 및 서비스 종료 날짜에 대한 내용은 [Windows 수명 주기 팩트 시트](https://support.microsoft.com/en-us/help/13853/windows-lifecycle-fact-sheet)를 참조하세요.
+지원되는 버전 및 서비스 종료 날짜에 대한 내용은 [Windows 수명 주기 팩트 시트](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet)를 참조하세요.
 
 | 운영 체제 버전          | KMS 클라이언트 설정 키          |
 |-----------------------------------|-------------------------------|
@@ -79,7 +79,7 @@ Windows Server, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows 8, Wind
 |Windows 10 Pro N|MH37W-N47XK-V7XM9-C7227-GCQG9|
 |Windows 10 Pro for Workstations|NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J|
 |Windows 10 Pro for Workstations N|9FNHH-K3HBT-3W4TD-6383H-6XYWF|
-|Windows 10 Pro Education|6TP4R-GNPTD-KYYHQ-7B7DP-J447Y|
+|Windows 10 Pro Education|6TP4R-GNPTD-KYYHQ-7B7DP-J447Y|
 |Windows 10 Pro Education N|YVWGF-BXNMC-HTQYQ-CPQ99-66QFC|
 |Windows 10 Education|NW6C2-QMPVW-D7KKK-3GKT6-VCFB2|
 |Windows 10 Education KN |2WH4N-8QGBV-H22JP-CT43Q-MDWWJ|
@@ -127,7 +127,7 @@ Windows Server, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows 8, Wind
 | Windows Server Datacenter | 6Y6KB-N82V8-D8CQV-23MJW-BWTG6  | 
 | Windows Server Standard   | DPCNP-XQFKJ-BJF7R-FRC8D-GF6G4  |
 
-### <a name="windows-server-2012-r2"></a>Windows Server 2012 R2
+### <a name="windows-server-2012-r2"></a>Windows Server 2012 R2
 
 | 운영 체제 버전               | KMS 클라이언트 설정 키          |
 |----------------------------------------|-------------------------------|
@@ -146,7 +146,7 @@ Windows Server, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows 8, Wind
 | Windows Server 2012 Server Standard     | XC9B7-NBPP2-83J2H-RHMBY-92BT4 |
 | Windows Server 2012 MultiPoint Standard | HM7DN-YVMH3-46JC3-XYTG7-CYQJJ |
 | Windows Server 2012 MultiPoint Premium  | XNH6W-2V9GX-RGJ4K-Y8X6F-QGJ2G |
-| Windows Server2012 Datacenter          | 48HP8-DN98B-MYWDG-T2DCC-8W83P |
+| Windows Server 2012 Datacenter          | 48HP8-DN98B-MYWDG-T2DCC-8W83P |
 
 
 ### <a name="windows-server-2008-r2"></a>Windows Server 2008 R2
@@ -156,8 +156,8 @@ Windows Server, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows 8, Wind
 | Windows Server 2008 R2 Web                       | 6TPJF-RBVHG-WBW2R-86QPH-6RTM4 |
 | Windows Server 2008 R2 HPC 버전               | TT8MH-CG224-D3D7Q-498W2-9QCTX |
 | Windows Server 2008 R2 Standard                  | YC6KT-GKW9T-YTKYR-T4X34-R7VHC |
-| Windows Server 2008 R2 Enterprise                | 489J6-VHDMP-X63PK-3K798-CPX3Y |
-| Windows Server 2008 R2 Datacenter                | 74YFP-3QFB3-KQT8W-PMXWJ-7M648 |
+| Windows Server 2008 R2 Enterprise                | 489J6-VHDMP-X63PK-3K798-CPX3Y |
+| Windows Server 2008 R2 Datacenter                | 74YFP-3QFB3-KQT8W-PMXWJ-7M648 |
 | Windows Server 2008 R2 for Itanium-based Systems | GT63C-RJFQ3-4GMB6-BRFB9-CB83V |
 
 ### <a name="windows-server-2008"></a>Windows Server 2008
@@ -176,7 +176,7 @@ Windows Server, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows 8, Wind
 
 ## <a name="earlier-versions-of-windows"></a>이전 버전 Windows
 
-### <a name="windows-81"></a>Windows 8.1
+### <a name="windows-81"></a>Windows 8.1
 
 | 운영 체제 버전               | KMS 클라이언트 설정 키          |
 |----------------------------------------|-------------------------------|
@@ -189,7 +189,7 @@ Windows Server, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows 8, Wind
 
 | 운영 체제 버전                | KMS 클라이언트 설정 키          |
 |-----------------------------------------|-------------------------------|
-| Windows 8 Pro                  | NG4HW-VH26C-733KW-K6F98-J8CK4 |
+| Windows 8 Pro                  | NG4HW-VH26C-733KW-K6F98-J8CK4 |
 | Windows 8 Pro N                | XCVCF-2NXM9-723PB-MHCB7-2RYQQ |
 | Windows 8 Enterprise                    | 32JNW-9KQ84-P47T8-D8GGY-CWCK7 |
 | Windows 8 Enterprise N                  | JMNMF-RHW7P-DMY6X-RF3DR-X2BQT |
@@ -199,10 +199,10 @@ Windows Server, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows 8, Wind
 
 | 운영 체제 버전                         | KMS 클라이언트 설정 키          |
 |--------------------------------------------------|-------------------------------|
-| Windows 7 Professional                           | FJ82H-XT6CR-J8D7P-XQJJ2-GPDD4 |
+| Windows 7 Professional                           | FJ82H-XT6CR-J8D7P-XQJJ2-GPDD4 |
 | Windows 7 Professional KN                         | MRPKT-YTG23-K7D7T-X2JMM-QY7MG |
 | Windows 7 Professional E                         | W82YF-2Q76Y-63HXB-FGJG9-GF7QX |
-| Windows 7 Enterprise                             | 33PXH-7Y6KF-2VJC9-XBBR8-HVTHH |
+| Windows 7 Enterprise                             | 33PXH-7Y6KF-2VJC9-XBBR8-HVTHH |
 | Windows 7 Enterprise N                           | YDRBP-3D83W-TY26F-D46B2-XCKRJ |
 | Windows 7 Enterprise E                           | C29WB-22CC8-VJ326-GHFJW-H9DH4 |
 

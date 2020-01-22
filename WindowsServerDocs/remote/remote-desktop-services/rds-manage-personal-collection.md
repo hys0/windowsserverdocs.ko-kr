@@ -12,18 +12,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
 manager: dongill
-ms.openlocfilehash: 6bf0ad3a2cd35c9794fd13631ed29df94725685c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 7be6b2bfe1105357811927f5da7092e8c16c3446
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71387411"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949845"
 ---
-## <a name="manage-your-personal-desktop-session-collections"></a>개인 데스크톱 세션 컬렉션 관리
+# <a name="manage-your-personal-desktop-session-collections"></a>개인 데스크톱 세션 컬렉션 관리
 
 다음 정보를 사용하여 원격 데스크톱 서비스에서 개인 데스크톱 세션 컬렉션을 관리합니다.
 
-### <a name="manually-assign-a-user-to-a-personal-session-host"></a>개인 세션 호스트에 사용자를 수동으로 할당
+## <a name="manually-assign-a-user-to-a-personal-session-host"></a>개인 세션 호스트에 사용자를 수동으로 할당
 **Set-RDPersonalSessionDesktopAssignment** cmdlet을 사용하여 컬렉션의 개인 세션 호스트 서버에 수동으로 사용자를 할당합니다. 이 cmdlet은 다음 매개 변수를 지원합니다.
 
 -CollectionName \<string\>
@@ -49,7 +49,7 @@ ms.locfileid: "71387411"
 
 **–Path** 가져올 파일의 경로 및 파일 이름을 지정합니다.
  
-### <a name="removing-a-user-assignment-from-a-personal-session-host"></a>개인 세션 호스트에서 사용자 할당 제거
+## <a name="removing-a-user-assignment-from-a-personal-session-host"></a>개인 세션 호스트에서 사용자 할당 제거
 **Remove-RDPersonalSessionDesktopAssignment** cmdlet을 사용하여 개인 세션 데스크톱과 사용자 간 연결을 제거합니다. 이 cmdlet은 다음 매개 변수를 지원합니다.
 
 -CollectionName \<string\>
@@ -64,7 +64,7 @@ ms.locfileid: "71387411"
 
 **–Force** 사용자 확인을 요청하지 않고 명령을 강제 실행합니다.
 
-### <a name="query-user-assignments"></a>사용자 할당 쿼리
+## <a name="query-user-assignments"></a>사용자 할당 쿼리
 **Get-RDPersonalSessionDesktopAssignment** cmdlet을 사용하여 개인 세션 데스크톱 및 연결된 사용자 계정 목록을 가져옵니다. 이 cmdlet은 다음 매개 변수를 지원합니다.
 
 -CollectionName \<string\>

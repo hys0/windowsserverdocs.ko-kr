@@ -14,12 +14,12 @@ author: jaimeo
 ms.author: jaimeo
 manager: dougkim
 ms.localizationpriority: medium
-ms.openlocfilehash: 9dd12a7858a24457251d8354a2df49632b5960c5
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 1354d89ba2c9169b302dca10ae52bad34ef80b43
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391608"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75947761"
 ---
 # <a name="windows-server-2016-activation"></a>Windows Server 2016 정품 인증
 
@@ -33,13 +33,13 @@ Windows 10 또는 Windows 8.1에서 실행되는 KMS 호스트는 클라이언�
 다음 표에서는 Windows Server 2016 및 Windows 10 클라이언트를 포함하는 네트워크에 대한 KMS 호스트 및 클라이언트 요구 사항을 요약합니다.
 
 > [!NOTE]
-> **참고:**  업데이트는 이러한 최신 클라이언트의 활성화를 지원하도록 KMS 서버가 필요할 수 있습니다. 활성화 오류가 발생하면 이 테이블에 나열된 적합한 업데이트가 있는지 확인합니다.
+> 업데이트는 이러한 최신 클라이언트의 활성화를 지원하도록 KMS 서버가 필요할 수 있습니다. 활성화 오류가 발생하면 이 테이블에 나열된 적합한 업데이트가 있는지 확인합니다.
 
 |제품 키 그룹|KMS가 호스트될 수 있는 Windows 버전|이 KMS 호스트에 의해 정품 인증되는 Windows 버전|  
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------|  
-|Windows Server 2016용 볼륨 라이선스|Windows Server 2012<br /><br />Windows Server 2012 R2<br /><br />Windows Server 2016<br /><br />|Windows Server 반기 채널 <br><br>Windows Server 2016(모든 버전)<br /><br />Windows 10 LTSB(2015 및 2016)<br /><br />Windows 10 Professional<br /><br />Windows 10 Enterprise<br /><br />Windows 10 Pro for Workstations<br><br>Windows 10 Education<br><br>Windows Server 2012 R2(모든 버전)<br /><br />Windows 8.1 Professional<br /><br />Windows 8.1 Enterprise<br /><br />Windows Server 2012(모든 버전)<br /><br />Windows Server 2008 R2(모든 버전)<br /><br />Windows Server 2008(모든 버전)<br /><br />Windows 7 Professional<br /><br />Windows 7 Enterprise| 
-|Windows 10용 볼륨 라이선스|Windows 7<br /><br />Windows 8.1<br /><br /> Windows 10|Windows 10 Professional<br /><br /> Windows 10 Professional KN<br /><br /> Windows 10 Enterprise<br /><br /> Windows 10 Enterprise KN<br /><br /> Windows 10 Education<br /><br /> Windows 10 Education KN<br /><br /> Windows 10 Enterprise LTSB(2015)<br /><br /> Windows 10 Enterprise LTSB N(2015)<br /><br /> Windows 10 Pro for Workstations<br><br>Windows 8.1 Professional<br /><br /> Windows 8.1 Enterprise<br /><br /> Windows 7 Professional<br /><br /> Windows 7 Enterprise<br /><br />|  
-|"Windows 10용 Windows Server 2012 R2"에 대한 볼륨 라이선스|Windows Server 2008 R2<br /><br /> Windows Server2012 Standard<br /><br /> Windows Server2012 Datacenter<br /><br /> Windows Server 2012 R2 Standard<br /><br />Windows Server 2012 R2 Datacenter|Windows 10 Professional<br /><br /> Windows 10 Enterprise<br /><br />Windows 10 Enterprise LTSB(2015)<br><br>Windows 10 Pro for Workstations<br><br>Windows 10 Education<br><br> Windows Server 2012 R2(모든 버전)<br /><br /> Windows 8.1 Professional<br /><br /> Windows 8.1 Enterprise<br /><br /> Windows Server 2012(모든 버전)<br /><br /> Windows Server 2008 R2(모든 버전)<br /><br />Windows Server 2008(모든 버전)<br /><br /> Windows 7 Professional<br /><br /> Windows 7 Enterprise|
+|Windows Server 2016용 볼륨 라이선스|Windows Server 2012<br /><br />Windows Server 2012 R2<br /><br />Windows Server 2016<br /><br />|Windows Server 반기 채널 <br><br>Windows Server 2016(모든 버전)<br /><br />Windows 10 LTSB(2015 및 2016)<br /><br />Windows 10 Professional<br /><br />Windows 10 Enterprise<br /><br />Windows 10 Pro for Workstations<br><br>Windows 10 Education<br><br>Windows Server 2012 R2(모든 버전)<br /><br />Windows 8.1 Professional<br /><br />Windows 8.1 Enterprise<br /><br />Windows Server 2012(모든 버전)<br /><br />Windows Server 2008 R2(모든 버전)<br /><br />Windows Server 2008(모든 버전)<br /><br />Windows 7 Professional<br /><br />Windows 7 Enterprise| 
+|Windows 10용 볼륨 라이선스|Windows 7<br /><br />Windows 8.1<br /><br /> Windows 10|Windows 10 Professional<br /><br /> Windows 10 Professional KN<br /><br /> Windows 10 Enterprise<br /><br /> Windows 10 Enterprise KN<br /><br /> Windows 10 Education<br /><br /> Windows 10 Education KN<br /><br /> Windows 10 Enterprise LTSB(2015)<br /><br /> Windows 10 Enterprise LTSB N(2015)<br /><br /> Windows 10 Pro for Workstations<br><br>Windows 8.1 Professional<br /><br /> Windows 8.1 Enterprise<br /><br /> Windows 7 Professional<br /><br /> Windows 7 Enterprise<br /><br />|  
+|"Windows 10용 Windows Server 2012 R2"에 대한 볼륨 라이선스|Windows Server 2008 R2<br /><br /> Windows Server 2012 Standard<br /><br /> Windows Server 2012 Datacenter<br /><br /> Windows Server 2012 R2 Standard<br /><br />Windows Server 2012 R2 Datacenter|Windows 10 Professional<br /><br /> Windows 10 Enterprise<br /><br />Windows 10 Enterprise LTSB(2015)<br><br>Windows 10 Pro for Workstations<br><br>Windows 10 Education<br><br> Windows Server 2012 R2(모든 버전)<br /><br /> Windows 8.1 Professional<br /><br /> Windows 8.1 Enterprise<br /><br /> Windows Server 2012(모든 버전)<br /><br /> Windows Server 2008 R2(모든 버전)<br /><br />Windows Server 2008(모든 버전)<br /><br /> Windows 7 Professional<br /><br /> Windows 7 Enterprise|
 
 > [!NOTE]  
 > KMS 서버에서 실행하는 운영 체제 또는 활성화하려는 운영 체제에 따라 다음 업데이트 중 하나 이상을 설치해야 할 수 있습니다.
@@ -50,14 +50,14 @@ Windows 10 또는 Windows 8.1에서 실행되는 KMS 호스트는 클라이언�
 
 KMS 호스트는 단 한 개로도 무한히 많은 KMS 클라이언트를 지원할 수 있습니다. 클라이언트가 50개를 초과한다면 KMS 호스트 중 하나를 사용할 수 없게 될 경우를 대비하여 KMS 호스트를 두 개 이상 보유할 것을 권장합니다. 대부분의 조직에서는 KMS 호스트 두 개만으로 전체 인프라를 호스트할 수 있습니다.
 
-# <a name="addressing-kms-operational-requirements"></a>KMS 운영 요구 사항 충족
+## <a name="addressing-kms-operational-requirements"></a>KMS 운영 요구 사항 충족
 KMS는 물리적 및 가상 컴퓨터를 정품 인증할 수 있지만 KMS 정품 인증을 정규화하려면 네트워크는 컴퓨터를 최소 수량으로 갖추어야 합니다(정품 인증 임계값이라 불림). KMS 클라이언트는 이 임계값이 충족된 다음에만 정품 인증됩니다. 정품 인증 임계값이 충족되었는지 확인하기 위해 KMS 호스트는 네트워크에서 정품 인증을 요청하는 컴퓨터의 수량을 셉니다.
 
 KMS 호스트는 가장 최근의 연결 수를 셉니다. 클라이언트 또는 서버가 KMS 호스트에 연결되면 호스트는 컴퓨터 ID를 해당 개수에 추가한 다음 해당 응답에서 현재 개수 값을 반환합니다. 개수가 충분히 크면 클라이언트 또는 서버가 정품 인증됩니다. 클라이언트의 수가 25 이상이면 정품 인증됩니다. Microsoft Office 제품의 서버 및 볼륨 버전 개수가 5 이상이면 정품 인증됩니다. KMS는 지난 30일간의 고유한 연결 수만을 세고 최근 50개의 연락처만 저장합니다.
 
 KMS 정품 인증은 정품 인증 유효 간격으로 알려진 180일 동안 유효합니다. KMS 클라이언트는 정품 인증 상태를 유지하기 위해 최소 180일에 한 번씩 KMS 호스트에 연결하여 정품 인증을 갱신해야 합니다. 기본적으로 KMS 클라이언트 컴퓨터는 7일마다 정품 인증 갱신을 수행합니다. 클라이언트의 정품 인증이 갱신되면 정품 인증 유효 기간 간격이 다시 시작됩니다.
 
-# <a name="addressing-kms-functional-requirements"></a>KMS 기능 요구 사항 충족
+## <a name="addressing-kms-functional-requirements"></a>KMS 기능 요구 사항 충족
 
 KMS 정품 인증에는 TCP/IP 연결이 필요합니다. KMS 호스트 및 클라이언트는 기본적으로 DNS(Domain Name System)을 사용하도록 구성됩니다. 기본적으로 KMS 호스트는 KMS 클라이언트가 검색 및 연결해야 하는 정보를 자동으로 게시하기 위해 DNS 동적 업데이트를 사용합니다. 기본 설정을 수락하거나 네트워크 및 보안 구성 요구 사항이 특별히 있는 경우 KMS 호스트와 클라이언트를 수동으로 구성할 수 있습니다.
 
@@ -70,4 +70,4 @@ KMS 정품 인증에는 TCP/IP 연결이 필요합니다. KMS 호스트 및 클�
 
 Windows 10, Windows Server 2016, Windows 8.1, Windows Server 2012 R2, Windows Server 2012, Windows 7, Windows Server 2008 R2의 볼륨 라이선스 버전을 실행하는 컴퓨터는 기본적으로 추가 구성이 필요 없는 KMS 클라이언트입니다.
 
-컴퓨터를 KMS 호스트, MAK 또는 Windows 정품 버전에서 KMS 클라이언트로 변환하는 경우 해당하는 KMS 클라이언트 설정 키를 설치합니다. 자세한 내용은 [KMS 클라이언트 설정 키](KMSclientkeys.md)를 참조하세요. 
+컴퓨터를 KMS 호스트, MAK 또는 Windows 정품 버전에서 KMS 클라이언트로 변환하는 경우 해당하는 KMS 클라이언트 설정 키를 설치합니다. 자세한 내용은 [KMS 클라이언트 설정 키](KMSclientkeys.md)를 참조하세요.
