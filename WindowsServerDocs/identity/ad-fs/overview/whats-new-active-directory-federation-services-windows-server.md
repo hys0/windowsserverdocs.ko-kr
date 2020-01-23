@@ -1,20 +1,20 @@
 ---
 ms.assetid: aa892a85-f95a-4bf1-acbb-e3c36ef02b0d
-title: Windows Server 2016용 AD FS(Active Directory Federation Services)의 새로운 기능
+title: Active Directory 페더레이션 서비스에 대 한 Windows Server 2016의 새로운 기능
 description: ''
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 04/23/2019
+ms.date: 01/22/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 6294c7b6ead0a9fa338f8b2cc8134b750f7e3e8f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: adce37d8d06399d3a00221a12f3449244720ade7
+ms.sourcegitcommit: 840d1d8851f68936db3934c80796fb8722d3c64a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71385552"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76519485"
 ---
 # <a name="whats-new-in-active-directory-federation-services"></a>Active Directory Federation Services의 새로운 기능
 
@@ -87,9 +87,8 @@ AD FS 2019에서는 다음과 같은 로그인 SSO 기능이 향상 되었습니
  
 서버 2019에서 AD FS를 사용 하 여 이제 범위 매개 변수에 포함 된 리소스 값을 전달할 수 있습니다. 이는 Azure AD에 대 한 인증을 수행할 수 있는 방법과 일치 합니다. 
 
-이제 범위 매개 변수를 공백으로 구분 된 목록으로 구성할 수 있습니다. 여기서 각 항목은 리소스/범위의 구조입니다. 예를 들면 다음과 같습니다.  
+이제 범위 매개 변수를 공백으로 구분 된 목록으로 구성할 수 있습니다. 여기서 각 항목은 리소스/범위의 구조입니다. 
 
-**< 올바른 샘플 요청을 만듭니다 >**
 > [!NOTE]
 > 인증 요청에는 리소스를 하나만 지정할 수 있습니다. 요청에 둘 이상의 리소스가 포함 된 경우 AD FS에서 오류를 반환 하 고 인증에 실패 합니다. 
 
@@ -102,28 +101,28 @@ AD FS 2019에서는 다음과 같은 로그인 SSO 기능이 향상 되었습니
 
 A. 클라이언트는 "code_verifier" 이라는 암호를 만들고 기록 하며, 변환 메서드 "t_m"와 함께 OAuth 2.0 권한 부여 요청에서 전송 되는 변환 된 버전 "t (code_verifier)" ("code_challenge" 이라고 함)을 파생 합니다. 
 
-2\. 권한 부여 끝점은 일반적인 방법으로 응답 하지만 "t (code_verifier)" 및 변환 메서드를 기록 합니다. 
+B. 권한 부여 끝점은 일반적인 방법으로 응답 하지만 "t (code_verifier)" 및 변환 메서드를 기록 합니다. 
 
-3\. 그러면 클라이언트는 일반적인 방식으로 액세스 토큰 요청에 인증 코드를 전송 하지만 (A)에서 생성 된 "code_verifier" 암호를 포함 합니다. 
+C. 그러면 클라이언트는 일반적인 방식으로 액세스 토큰 요청에 인증 코드를 전송 하지만 (A)에서 생성 된 "code_verifier" 암호를 포함 합니다. 
 
 4\. AD FS "code_verifier"를 변환 하 고 (B)에서 "t (code_verifier)"와 비교 합니다.  같지 않은 경우 액세스가 거부 됩니다. 
 
 #### <a name="faq"></a>FAQ 
-**대답.** Azure AD에 대 한 요청이 수행 되는 방법과 같이 범위 값의 일부로 리소스 값을 전달할 수 있나요? 
-</br>**은.** 서버 2019에서 AD FS를 사용 하 여 이제 범위 매개 변수에 포함 된 리소스 값을 전달할 수 있습니다. 이제 범위 매개 변수를 공백으로 구분 된 목록으로 구성할 수 있습니다. 여기서 각 항목은 리소스/범위의 구조입니다. 예를 들면 다음과 같습니다.  
+**Q.** Azure AD에 대 한 요청이 수행 되는 방법과 같이 범위 값의 일부로 리소스 값을 전달할 수 있나요? 
+</br>**A.** 서버 2019에서 AD FS를 사용 하 여 이제 범위 매개 변수에 포함 된 리소스 값을 전달할 수 있습니다. 이제 범위 매개 변수를 공백으로 구분 된 목록으로 구성할 수 있습니다. 여기서 각 항목은 리소스/범위의 구조입니다. 예를 들면 다음과 같습니다.  
 **< 올바른 샘플 요청을 만듭니다 >**
 
-**대답.** PKCE 확장을 지원할 AD FS 있나요?
-</br>**은.** Server 2019의 AD FS는 OAuth 인증 코드 부여 흐름에 대 한 PKCE (코드 교환에 대 한 증명 키)를 지원 합니다. 
+**Q.** PKCE 확장을 지원할 AD FS 있나요?
+</br>**A.** Server 2019의 AD FS는 OAuth 인증 코드 부여 흐름에 대 한 PKCE (코드 교환에 대 한 증명 키)를 지원 합니다. 
 
-## <a name="whats-new-in-active-directory-federation-services-for-windows-server-2016"></a>Windows Server 2016용 AD FS(Active Directory Federation Services)의 새로운 기능   
+## <a name="whats-new-in-active-directory-federation-services-for-windows-server-2016"></a>Active Directory 페더레이션 서비스에 대 한 Windows Server 2016의 새로운 기능   
 이전 버전의 AD FS에 대 한 정보를 찾고 다음 문서를 참조 합니다.  
  [Windows Server 2012 또는 2012 r 2에서 ADFS](https://technet.microsoft.com/library/hh831502.aspx) 및 [AD FS 2.0](https://technet.microsoft.com/library/adfs2.aspx)  
 
- Single sign-on 간에 다양 한 Office 365, 클라우드를 비롯 한 응용 프로그램을 기반으로 SaaS 응용 프로그램을 회사 네트워크에 있는 응용 프로그램 및 active Directory Federation Services 액세스 제어를 제공 합니다.  
-* IT 조직에 대 한 수 있습니다 로그온 제공 액세스 제어 및 현대적이 고 레거시 응용 프로그램을 온-프레미스와 클라우드에서 자격 증명 및 정책의 같은 집합 기반으로 합니다.    
+ Single sign-on 간에 다양 한 Office 365, 클라우드를 비롯 한 애플리케이션을 기반으로 SaaS 애플리케이션을 회사 네트워크에 있는 애플리케이션 및 active Directory Federation Services 액세스 제어를 제공 합니다.  
+* IT 조직에 대 한 수 있습니다 로그온 제공 액세스 제어 및 현대적이 고 레거시 애플리케이션을 온-프레미스와 클라우드에서 자격 증명 및 정책의 같은 집합 기반으로 합니다.    
 * 사용자를 동일 하 고 친숙 한 계정 자격 증명을 사용 하 여 원활 하 게 기호를 제공 합니다.  
-* 개발자를 위한 응용 프로그램, 하지 인증 또는 identity에 노력을 집중할 수 있도록 id가 조직 디렉터리에 거주 하는 사용자를 인증 하는 간편한 방법을 제공 합니다.  
+* 개발자를 위한 애플리케이션, 하지 인증 또는 identity에 노력을 집중할 수 있도록 id가 조직 디렉터리에 거주 하는 사용자를 인증 하는 간편한 방법을 제공 합니다.  
 
 이 문서에서는 Windows Server 2016 (AD FS 2016)에서 AD FS의 새로운 기능을 설명 합니다.  
 
@@ -134,7 +133,7 @@ AD FS 2016 수 있도록 세 가지 새로운 옵션을 암호를 네트워크�
 AD FS 2016 기반으로 다단계 인증 (MFA) 기능 Windows Server 2012 r 2에서 AD fs는 Azure MFA 코드를 사용 하 여 사용자 이름 및 암호를 먼저 입력 하지 않으면 로그온을 허용 하 여 합니다.
 
 * 기본 인증 방법으로 Azure MFA를 사용 하 여 사용자가 자신의 사용자 이름 및 Azure Authenticator 앱에서 OTP 코드에 대 한 입력 합니다.  
-* 보조 또는 추가 인증 방법으로 Azure MFA를 사용 하 여 OTP Azure MFA 로그인을 기반으로 기본 인증 (Windows 통합 인증, 사용자 이름 및 암호, 스마트 카드 또는 사용자 또는 장치 인증서 사용) 하는 자격 증명 한 다음 텍스트를 음성에 대 한 프롬프트를 표시 하거나 사용자가 제공 합니다.  
+* 보조 또는 추가 인증 방법으로 Azure MFA를 사용 하 여 OTP Azure MFA 로그인을 기반으로 기본 인증 (Windows 통합 인증, 사용자 이름 및 암호, 스마트 카드 또는 사용자 또는 디바이스 인증서 사용) 하는 자격 증명 한 다음 텍스트를 음성에 대 한 프롬프트를 표시 하거나 사용자가 제공 합니다.  
 * 새 기본 제공 Azure MFA 어댑터와 함께 설치 및 구성 AD FS와 Azure MFA에 대 한 적이 더 간단 합니다.
 * 조직에서는 Azure MFA는 온-프레미스 Azure MFA 서버에 대 한 필요 없이 활용을 걸릴 수 있습니다.
 * 인트라넷 또는 엑스트라넷의 일부 또는 모든 액세스 제어 정책 azure MFA는 구성할 수 있습니다.
@@ -142,34 +141,38 @@ AD FS 2016 기반으로 다단계 인증 (MFA) 기능 Windows Server 2012 r 2에
 AD FS와 Azure MFA에 대 한 자세한 내용은
 *  [AD FS 2016 및 Azure MFA 구성](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configure-ad-fs-and-azure-mfa)  
 
-### <a name="password-less-access-from-compliant-devices"></a>호환 장치에서 암호 없이 액세스
-에 로그인 할 수 있도록 하려면 이전 장치 등록 기능을 기반으로 하는 AD FS 2016 및 액세스 제어 장치 준수 상태를 기반으로 합니다. 사용자가 장치 자격 증명을 사용 하 여 로그온 할 수 있습니다 하 고 규정 준수는 재평가 장치 특성이 변경 될 때 정책이 적용 되는 항상 확인할 수 있도록 합니다.  와 같은 정책을 사용 하면이
+### <a name="password-less-access-from-compliant-devices"></a>호환 디바이스에서 암호 없이 액세스
+에 로그인 할 수 있도록 하려면 이전 디바이스 등록 기능을 기반으로 하는 AD FS 2016 및 액세스 제어 디바이스 준수 상태를 기반으로 합니다. 사용자가 디바이스 자격 증명을 사용 하 여 로그온 할 수 있습니다 하 고 규정 준수는 재평가 디바이스 특성이 변경 될 때 정책이 적용 되는 항상 확인할 수 있도록 합니다.  와 같은 정책을 사용 하면이
 
-* 관리 되는 및/또는 호환 되는 장치 에서만에서 액세스를 사용 하도록 설정  
-* 엑스트라넷 액세스 관리 및/또는 호환 되는 장치 에서만에서 사용 하도록 설정  
+* 관리 되는 및/또는 호환 되는 디바이스 에서만에서 액세스를 사용 하도록 설정  
+* 엑스트라넷 액세스 관리 및/또는 호환 되는 디바이스 에서만에서 사용 하도록 설정  
 * 관리 되는 준수 또는 미준수 있지 않은 컴퓨터에 대 한 다단계 인증을 요구 합니다.  
 
-AD FS는 하이브리드 시나리오에서 조건부 액세스 정책의 온-프레미스 구성 요소를 제공합니다. 클라우드 리소스에 대 한 조건부 액세스에 대 한 Azure AD에 장치를 등록할 때 AD FS 정책도에 대 한 장치 id는 사용할 수 있습니다.
+AD FS는 하이브리드 시나리오에서 조건부 액세스 정책의 온-프레미스 구성 요소를 제공합니다. 클라우드 리소스에 대 한 조건부 액세스에 대 한 Azure AD에 디바이스를 등록할 때 AD FS 정책도에 대 한 디바이스 id는 사용할 수 있습니다.
 
 ![새로운 기능](media/whats-new-in-active-directory-federation-services-for-windows-server-2016/ADFS_ITPRO4.png)  
 
- 장치를 사용 하는 방법에 대 한 자세한 내용은 기반 클라우드에서 조건부 액세스   
- *  [조건부 액세스 Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access/)
+ 디바이스를 사용 하는 방법에 대 한 자세한 내용은 기반 클라우드에서 조건부 액세스   
+ *  [Azure Active Directory 조건부 액세스](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access/)
 
-장치를 사용 하는 방법에 대 한 자세한 내용은 AD FS 사용 하 여 조건부 액세스 기반
+디바이스를 사용 하는 방법에 대 한 자세한 내용은 AD FS 사용 하 여 조건부 액세스 기반
 *  [AD FS를 사용 하 여 장치 기반 조건부 액세스 계획](../../ad-fs/deployment/Plan-Device-based-Conditional-Access-on-Premises.md)  
 * [AD FS Access Control 정책](../../ad-fs/operations/Access-Control-Policies-in-AD-FS.md)  
 
-### <a name="sign-in-with-windows-hello-for-business"></a>비즈니스용 Windows Hello로 로그인   
+### <a name="sign-in-with-windows-hello-for-business"></a>비즈니스용 Windows Hello로 로그인  
+
+> [!NOTE]
+> 현재 Google Chrome 및 [새 Microsoft Edge 기반 Chromium](https://www.microsoft.com/edge?form=MB110A&OCID=MB110A) 오픈 소스 프로젝트 브라우저는 Microsoft Windows Hello for Business를 사용 하 여 브라우저 기반 sso (single sign-on)에 대해 지원 되지 않습니다. Internet Explorer 또는 이전 버전의 Microsoft Edge를 사용 하세요.  
+
 Windows 10 장치는 비즈니스용 windows Hello 및 Windows Hello를 소개 하 고 사용자의 제스처로 보호 하는 강력한 장치 바인딩된 사용자 자격 증명으로 사용자 암호를 대체 합니다 (PIN, 지문 같은 생체 인식 제스처 또는 얼굴 인식). AD FS 2016은 사용자가 암호를 제공할 필요 없이 인트라넷 또는 엑스트라넷에서 AD FS 응용 프로그램에 로그인 할 수 있도록 이러한 새로운 Windows 10 기능을 지원 합니다.
 
 Microsoft Windows Hello 비즈니스에 대 한 조직에서 사용 하는 방법에 대 한 자세한 내용은
 *  [조직에서 비즈니스용 Windows Hello 사용](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-passport-deployment/)
 
-## <a name="secure-access-to-applications"></a>응용 프로그램에 대 한 보안 액세스
+## <a name="secure-access-to-applications"></a>애플리케이션에 대 한 보안 액세스
 
 ### <a name="modern-authentication"></a>최신 인증
-AD FS 2016 Windows 10으로 최신 iOS 및 Android 장치 및 응용 프로그램에 대 한 더 나은 사용자 환경을 제공 하는 최신 최신 프로토콜을 지원 합니다.  
+AD FS 2016 Windows 10으로 최신 iOS 및 Android 디바이스 및 응용 프로그램에 대 한 더 나은 사용자 환경을 제공 하는 최신 최신 프로토콜을 지원 합니다.  
 
 자세한 내용은 참조 [개발자를 위한 AD FS 시나리오](../../ad-fs/overview/ad-fs-openid-connect-oauth-flows-scenarios.md)  
 
@@ -180,7 +183,7 @@ AD FS 2016 Windows 10으로 최신 iOS 및 Android 장치 및 응용 프로그�
 * 모든 사용자 허용 또는 엑스트라넷에서 MFA를 요구
 * 모든 사용자 허용 및 특정 그룹에서 MFA를 요구
 
-예외 또는 추가 정책 규칙을 추가 하려면 프로세스를 구동 하는 마법사를 사용 하 여 사용자 지정 하기 템플릿과 일치 정책 적용에 대 한 하나 이상의 응용 프로그램에 적용할 수 있습니다.
+예외 또는 추가 정책 규칙을 추가 하려면 프로세스를 구동 하는 마법사를 사용 하 여 사용자 지정 하기 템플릿과 일치 정책 적용에 대 한 하나 이상의 애플리케이션에 적용할 수 있습니다.
 
 자세한 내용은 참조 [AD FS에서 액세스 제어 정책입니다.](../../ad-fs/operations/Access-Control-Policies-in-AD-FS.md)  
 
@@ -193,10 +196,10 @@ AD FS 2016 Windows 10으로 최신 iOS 및 Android 장치 및 응용 프로그�
 자세한 내용은 참조 [LDAP 디렉터리에 저장 된 사용자를 인증 하도록 AD FS 구성 합니다.](../../ad-fs/operations/Configure-AD-FS-to-authenticate-users-stored-in-LDAP-directories.md)  
 
 ## <a name="better-sign-in-experience"></a>더 나은 로그인 환경
-### <a name="customize-sign-in-experience-for-ad-fs-applications"></a>로그인 환경 AD FS 응용 프로그램에 대 한 사용자 지정  
-이 많았습니다 사용자에 게 서 각 응용 프로그램에 대 한 로그온 환경을 사용자 지정 하는 기능에 여러 개의 서로 다른 회사 또는 브랜드를 나타내는 응용 프로그램에 대 한 기호를 제공 하는 조직에 특히 유용한 유용성 개선, 것입니다.  
+### <a name="customize-sign-in-experience-for-ad-fs-applications"></a>로그인 환경 AD FS 애플리케이션에 대 한 사용자 지정  
+이 많았습니다 사용자에 게 서 각 애플리케이션에 대 한 로그온 환경을 사용자 지정 하는 기능에 여러 개의 서로 다른 회사 또는 브랜드를 나타내는 애플리케이션에 대 한 기호를 제공 하는 조직에 특히 유용한 유용성 개선, 것입니다.  
 
-이전에 Windows Server 2012 r 2에서 AD FS 모든 신뢰 당사자 응용 프로그램에 대 한 경험에 공용 기호를 제공, 텍스트의 하위 집합을 사용자 지정할 수 있는 응용 프로그램별 콘텐츠를 기반으로 합니다. Windows Server 2016 뿐만 아니라 메시지를 하지만 이미지, 응용 프로그램별 로고 및 웹 테마를 지정할 수 있습니다. 또한 새로 만들고, 사용자 지정 웹 테마 하 고 적용 당 신뢰 당사자입니다.  
+이전에 Windows Server 2012 r 2에서 AD FS 모든 신뢰 당사자 애플리케이션에 대 한 경험에 공용 기호를 제공, 텍스트의 하위 집합을 사용자 지정할 수 있는 애플리케이션별 콘텐츠를 기반으로 합니다. Windows Server 2016 뿐만 아니라 메시지를 하지만 이미지, 애플리케이션별 로고 및 웹 테마를 지정할 수 있습니다. 또한 새로 만들고, 사용자 지정 웹 테마 하 고 적용 당 신뢰 당사자입니다.  
 
 자세한 내용은 참조 [AD FS 사용자 지정 로그인 합니다.](../../ad-fs/operations/AD-FS-user-sign-in-customization.md)  
 
@@ -217,7 +220,7 @@ AD FS 2016 여러 엔터티를 포함 하는 메타 데이터에 따라 트러�
 자세한 내용은 참조 [SAML 2.0와의 상호 운용성을 개선 합니다.](../../ad-fs/operations/Improved-interoperability-with-SAML-2.0.md)  
 
 ### <a name="simplified-password-management-for-federated-o365-users"></a>간소화 된 암호 관리에 대 한 페더레이션 O365 사용자  
-Active Directory Federation Services (AD FS) 암호 만료 클레임을 보내도록 AD FS로 보호 되는 신뢰 당사자 트러스트 (응용 프로그램)를 구성할 수 있습니다. 이러한 클레임을 사용 하는 방법을 응용 프로그램에 따라 달라 집니다. 예를 들어, 신뢰 당사자로 Office 365를 통해 업데이트 하도록 구현 Exchange 및 Outlook 곧에-수-만료 된 암호의 페더레이션된 사용자에 게 알려야 합니다.  
+Active Directory Federation Services (AD FS) 암호 만료 클레임을 보내도록 AD FS로 보호 되는 신뢰 당사자 트러스트 (애플리케이션)를 구성할 수 있습니다. 이러한 클레임을 사용 하는 방법을 애플리케이션에 따라 달라 집니다. 예를 들어, 신뢰 당사자로 Office 365를 통해 업데이트 하도록 구현 Exchange 및 Outlook 곧에-수-만료 된 암호의 페더레이션된 사용자에 게 알려야 합니다.  
 
 자세한 내용은 참조 [암호 만료 클레임을 보내도록 AD FS 구성 합니다.](../../ad-fs/operations/Configure-AD-FS-to-Send-Password-Expiry-Claims.md)  
 

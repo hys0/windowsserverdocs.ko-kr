@@ -4,16 +4,16 @@ description: Storage Migration Service를 사용 하면 저장소를 Windows Ser
 author: jasongerend
 ms.author: jgerend
 manager: elizapo
-ms.date: 10/25/2019
+ms.date: 01/17/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: 968122612845a9be105ca7d3231edc0faa039e76
-ms.sourcegitcommit: bfe9c5f7141f4f2343a4edf432856f07db1410aa
+ms.openlocfilehash: 1a98de21e91fc7bdc431e7413c44089ce750bc05
+ms.sourcegitcommit: 840d1d8851f68936db3934c80796fb8722d3c64a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75352684"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76519475"
 ---
 # <a name="storage-migration-service-overview"></a>Storage Migration Service 개요
 
@@ -46,6 +46,10 @@ Storage Migration Service를 사용 하면 저장소를 Windows Server 또는 Az
 
 스캔할 준비가 된 서버를 보여 주는 ![스크린샷](media/migrate/inventory.png)
 **그림 2: 저장소 마이그레이션 서비스 서버 인벤토리**
+
+저장소 마이그레이션 서비스를 사용 하 여 현재 지원 되지 않는 Windows Server 2008 R2 서버와 같은 서버를 사용 하 고 저장소를 최신 서버로 이동 하는 방법을 보여 주는 비디오는 다음과 같습니다.
+
+> [!VIDEO https://www.youtube.com/embed/h-Xc9j1w144]
 
 ## <a name="requirements"></a>요구 사항
 

@@ -9,12 +9,12 @@ ms.date: 07/26/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 89a1f745e1e928a5e5bd79adb94e41fd9da399d9
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: a7cfc80a1e137a4184afa0e8b33a488f1e35dcfa
+ms.sourcegitcommit: 840d1d8851f68936db3934c80796fb8722d3c64a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75948542"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76519455"
 ---
 # <a name="configure-additional-authentication-methods-for-ad-fs"></a>AD FS에 대한 추가 인증 방법 구성
 
@@ -33,6 +33,7 @@ Windows Server 2012 r 2의 AD FS에서 Microsoft 및 타사 인증 방법을 구
 |공급자|제품|세부 정보 링크|
 |-|-|-| 
 |aPersona|Microsoft ADFS SSO에 대 한 aPersona 적응 Multi-Factor Authentication|[aPersona ASM ADFS 어댑터](https://www.apersona.com/adfs)|
+|Cyphercor i n c.|AD FS에 대 한 LoginTC Multi-Factor Authentication|[LoginTC AD FS 커넥터](https://www.logintc.com/docs/connectors/adfs.html)|
 |Duo Security|AD FS 용 Duo MFA 어댑터|[AD FS에 대 한 Duo 인증](https://duo.com/docs/adfs)|
 |Futurae|AD FS에 대 한 Futurae Authentication Suite|[Futurae 강력한 인증](https://futurae.com)|
 |Gemalto|Gemalto Identity & Security Services|[http://www.gemalto.com/identity](http://www.gemalto.com/identity)|
