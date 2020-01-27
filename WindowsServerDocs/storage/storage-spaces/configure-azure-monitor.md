@@ -3,20 +3,18 @@ title: Azure Monitor 이해 및 구성
 description: Windows Server 2016 및 2019에서 저장소 공간 다이렉트 클러스터에 대 한 전자 메일 및 sms 경고를 구성 하는 방법 및 Azure Monitor에 대 한 자세한 설정 정보를 제공 합니다.
 keywords: 스토리지 공간 다이렉트, azure monitor, 알림, 전자 메일, sms
 ms.assetid: ''
-ms.prod: ''
+ms.prod: windows-server-threshold
 ms.author: adagashe
 ms.technology: storage-spaces
 ms.topic: article
 author: adagashe
-ms.date: 3/26/2019
-ms.localizationpriority: ''
-ms.openlocfilehash: 4a11ad670bdd26cdc771bb5ae357db4928995bb8
-ms.sourcegitcommit: bfe9c5f7141f4f2343a4edf432856f07db1410aa
+ms.date: 01/10/2020
+ms.openlocfilehash: 933a22dad76f80b8ff76f604089bfd7c9bf3e207
+ms.sourcegitcommit: 76469d1b7465800315eaca3e0c7f0438fc3939ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75352619"
----
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919975"
 ---
 # <a name="use-azure-monitor-to-send-emails-for-health-service-faults"></a>Azure Monitor를 사용 하 여 상태 관리 서비스 오류에 대 한 전자 메일 보내기
 
@@ -26,6 +24,14 @@ Azure Monitor는 클라우드 및 온-프레미스 환경에서 원격 분석 �
 
 이는 온-프레미스 하이퍼 수렴 형 클러스터에 특히 유용 합니다. Azure Monitor 통합을 사용 하면 클러스터에 문제가 있을 때 (또는 수집 된 데이터를 기반으로 다른 작업에 플래그를 지정 하려는 경우) 전자 메일, 텍스트 (SMS) 및 기타 경고를 구성 하 여 ping 할 수 있습니다. 아래에서는 Azure Monitor 작동 방법, Azure Monitor를 설치 하는 방법 및 알림을 보내도록 구성 하는 방법을 간략하게 설명 합니다.
 
+System Center를 사용 하는 경우 Windows Server 2019 및 Windows Server 2016 스토리지 공간 다이렉트 클러스터를 모두 모니터링 하는 [스토리지 공간 다이렉트 관리 팩](https://www.microsoft.com/download/details.aspx?id=100782) 을 확인 합니다.
+
+이 관리 팩에는 다음과 같은 내용이 포함되어 있습니다.
+
+* 실제 디스크 상태 및 성능 모니터링
+* 저장소 노드 상태 및 성능 모니터링
+* 저장소 풀 상태 및 성능 모니터링
+* 볼륨 복원 력 유형 및 중복 제거 상태
 
 ## <a name="understanding-azure-monitor"></a>Azure Monitor 이해
 
@@ -127,7 +133,7 @@ Windows용 Microsoft Monitoring Agent를 설치하기 전에 Log Analytics 작�
 8. **설치 준비** 페이지에서 선택 항목을 검토한 다음 **설치**를 클릭합니다.
 9. **구성 완료** 페이지에서 **마침**을 클릭합니다.
 
-완료되면 Microsoft Monitoring Agent 가 제어판의 단계를 수행하여 에이전트를 설치합니다. 구성을 검토하고 에이전트가 Log Analytics에 연결되었는지 확인할 수 있습니다. 연결되면 **Azure Log Analytics** 탭에서 에이전트에 **Microsoft Monitoring Agent가 Microsoft Operations Management Suite 서비스에 성공적으로 연결되었습니다.** 와 같은 메시지가 표시됩니다. 
+완료되면 **Microsoft Monitoring Agent** 가 **제어판**의 단계를 수행하여 에이전트를 설치합니다. 구성을 검토하고 에이전트가 Log Analytics에 연결되었는지 확인할 수 있습니다. 연결되면 **Azure Log Analytics** 탭에서 에이전트에 **Microsoft Monitoring Agent가 Microsoft Operations Management Suite 서비스에 성공적으로 연결되었습니다.** 와 같은 메시지가 표시됩니다. 
 
 ![Log Analytics에 대한 MMA 연결 상태](media/configure-azure-monitor/log-analytics-mma-laworkspace-status.png)
 
@@ -234,11 +240,11 @@ Event | where (EventLevelName == "Error")
 10. **확인**을 클릭하여 작업 그룹을 완료합니다. 
 11. **경고 규칙 만들기**를 클릭하여 경고 규칙을 완료합니다. 그 즉시 실행이 시작됩니다.<br><br> ![새 경고 규칙 만들기 완료](media/configure-azure-monitor/alert-rule-01.png)<br> 
 
-## <a name="see-alerts"></a>경고 참조
+### <a name="example-alert"></a>경고 예제
 
 참조를 위해 Azure에서 예제 경고는 다음과 같습니다.
 
-![Azure에서 경고의 Gif "](media/configure-azure-monitor/alert.gif)
+![Azure에 있는 경고의 Gif](media/configure-azure-monitor/alert.gif)
 
 다음은 Azure Monitor에서 전송 하는 전자 메일의 예입니다.
 

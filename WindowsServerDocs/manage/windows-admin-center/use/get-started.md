@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.date: 02/15/2019
-ms.openlocfilehash: 1643568cd1a0cdbb693d773a8357d2c36b701fd3
-ms.sourcegitcommit: 7c7fc443ecd0a81bff6ed6dbeeaf4f24582ba339
+ms.openlocfilehash: fc8e6ffa39320cfc73bf3f5bd0a5bc765ded24b4
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74903983"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950522"
 ---
 # <a name="get-started-with-windows-admin-center"></a>Windows 관리 센터 시작
 
@@ -21,7 +21,7 @@ ms.locfileid: "74903983"
 
 > [!Tip]
 > Windows Admin Center를 처음 사용하시나요?
-> [Windows Admin Center에 대해 자세히 알아보거나](../understand/windows-admin-center.md)[지금 다운로드](https://aka.ms/windowsadmincenter)하세요.
+> [Windows Admin Center에 대해 자세히 알아보거나](../overview.md)[지금 다운로드](https://aka.ms/windowsadmincenter)하세요.
 
 ## <a name="windows-admin-center-installed-on-windows-10"></a>Windows 10에 설치 된 windows 관리 센터
 
@@ -97,7 +97,7 @@ Windows 관리 센터는 관리 되는 노드로 인증 하기 위한 여러 메
 
 현재 Windows 자격 증명을 사용 하 여 관리 되는 노드에 인증할 수 있습니다. 이는 기본값 이며, Windows 관리 센터에서 서버를 추가할 때 로그온을 시도 합니다. 
 
-**Windows Server에 서비스로 배포 된 경우 Single sign-on**
+**Windows Server에 서비스로 배포된 경우의 Single Sign-On**
 
 Windows Server에 Windows 관리 센터를 설치한 경우 Single Sign-On 하려면 추가 구성이 필요 합니다.  [위임할 환경 구성](../configure/user-access-control.md)
 
@@ -117,7 +117,7 @@ Windows 관리 센터에서 windows Server의 서비스 모드로 실행 중이�
 
 **로컬 관리자 암호 솔루션 (LAPS)**
 
-환경에서 [LAPS](https://technet.microsoft.com/mt227395.aspx)를 사용 하 고 WINDOWS 10 PC에 Windows 관리 센터를 설치한 경우 LAPS 자격 증명을 사용 하 여 관리 되는 노드로 인증할 수 있습니다. **이 시나리오를 사용 하는 경우 피드백을 제공 해 주세요** [](https://aka.ms/WACFeedback).
+환경에서 [LAPS](https://technet.microsoft.com/mt227395.aspx)를 사용 하 고 WINDOWS 10 PC에 Windows 관리 센터를 설치한 경우 LAPS 자격 증명을 사용 하 여 관리 되는 노드로 인증할 수 있습니다. **이 시나리오를 사용 하는 경우** [피드백을 제공 해 주세요 ](https://aka.ms/WACFeedback).
 
 ## <a name="using-tags-to-organize-your-connections"></a>태그를 사용 하 여 연결 구성
 
@@ -151,7 +151,7 @@ Windows 관리 센터에서 windows Server의 서비스 모드로 실행 중이�
 * "Or", "and" 또는 "not"을 선택 하 여 선택한 태그의 필터 동작을 수정할 수 있습니다.
 ![](../media/launch/tags-8.png)
 
-## <a name="use-powershell-to-import-or-export-your-connections-with-tags"></a>PowerShell을 사용 하 여 연결 가져오기 또는 내보내기 (태그 포함)
+## <a name="use-powershell-to-import-or-export-your-connections-with-tags"></a>PowerShell을 사용하여 연결 가져오기 또는 내보내기(tags 사용)
 
 [!INCLUDE [ps-connections](../includes/ps-connections.md)]
 

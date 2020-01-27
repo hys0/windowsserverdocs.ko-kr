@@ -9,15 +9,14 @@ ms.date: 3/29/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 31f6c00f829569586630629d2fa18c1fb65cd1d6
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 0850145c9281c769c5a2b6532ccb56615abd11b3
+ms.sourcegitcommit: ff0db5ca093a31034ccc5e9156f5e9b45b69bae5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75949462"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725788"
 ---
 # <a name="required-updates-for-active-directory-federation-services-ad-fs-and-web-application-proxy-wap"></a>Active Directory Federation Services (AD FS) 및 웹 응용 프로그램 프록시 (WAP)에 필요한 업데이트
-
 
 2016 년 10 월 까지는 Windows Server의 모든 구성 요소에 대 한 모든 업데이트가 WU (Windows 업데이트)를 통해서만 릴리스됩니다.  핫픽스 또는 개별 다운로드가 더 이상 없습니다.
 이는 Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 및 Windows Server 2008 R2 s p 1에 적용 됩니다.
@@ -29,12 +28,12 @@ Windows Server 2016에 대 한 업데이트는 Windows 업데이트를 통해 �
 
 |50 # |설명|출시 날짜
 |----- | ----- |-----
-|[CVE-2019-1126](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1126) | 이 보안 업데이트는 공격자가 엑스트라넷 잠금 정책을 우회 하는 데 사용할 수 있는 Active Directory Federation Services (AD FS)의 취약성을 해결 합니다. |2019년 7월|
-|[4489889 (OS 빌드 14393.2879)](https://support.microsoft.com/help/4489889/windows-10-update-kb4489889) | Active Directory Federation Services (AD FS)에서 중복 된 신뢰 당사자 트러스트를 AD FS 관리 콘솔에 표시 하는 문제를 해결 합니다. 이는 AD FS 관리 콘솔을 사용 하 여 신뢰 당사자 트러스트를 만들거나 볼 때 발생 합니다.</br></br> 2016 AD FS에서 엑스트라넷 스마트 잠금 (ESL)을 사용 하는 동안 발생 하는 높은 Active Directory Federation Services (ADFS) 웹 응용 프로그램 프록시 (WAP) 대기 시간 문제 (10, 000ms 이상)를 해결 합니다. 이 보안 업데이트는 [CVE-2018-16794](https://nvd.nist.gov/vuln/detail/CVE-2018-16794)에 설명 된 취약성을 해결 합니다. |2019년 3월|
+|[CVE-2019-1126](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1126) | 이 보안 업데이트는 공격자가 엑스트라넷 잠금 정책을 우회 하는 데 사용할 수 있는 Active Directory Federation Services (AD FS)의 취약성을 해결 합니다. |2019 年 7 月|
+|[4489889 (OS 빌드 14393.2879)](https://support.microsoft.com/help/4489889/windows-10-update-kb4489889) | Active Directory Federation Services (AD FS)에서 중복 된 신뢰 당사자 트러스트를 AD FS 관리 콘솔에 표시 하는 문제를 해결 합니다. 이는 AD FS 관리 콘솔을 사용 하 여 신뢰 당사자 트러스트를 만들거나 볼 때 발생 합니다.</br></br> 2016 AD FS에서 엑스트라넷 스마트 잠금 (ESL)을 사용 하는 동안 발생 하는 높은 Active Directory Federation Services (ADFS) 웹 응용 프로그램 프록시 (WAP) 대기 시간 문제 (10, 000ms 이상)를 해결 합니다. 이 보안 업데이트는 [CVE-2018-16794](https://nvd.nist.gov/vuln/detail/CVE-2018-16794)에 설명 된 취약성을 해결 합니다. |2019 年 3 月|
 |[4487006 (OS 빌드 14393.2828)](https://support.microsoft.com/help/4487006/windows-10-update-kb4487006) | PowerShell 또는 AD FS (Active Directory Federation Services) 관리 콘솔을 사용 하는 경우 신뢰 당사자 트러스트에 대 한 업데이트가 실패 하는 문제를 해결 합니다. 이 문제는 둘 이상의 PassiveRequestorEndpoint을 게시 하는 온라인 메타 데이터 URL을 사용 하도록 신뢰 당사자 트러스트를 구성 하는 경우에 발생 합니다. "MSIS7615: 신뢰 당사자 트러스트에 지정 된 신뢰할 수 있는 끝점은 신뢰 당사자 트러스트에 대해 고유 해야 합니다." 라는 오류입니다.  </br></br>Azure 암호 보호 정책으로 인해 외부 복잡성 암호 변경에 대 한 특정 오류 메시지를 표시 하는 문제를 해결 합니다. |2019년 2월|
 |[4462928 (OS 빌드 14393.2580)](https://support.microsoft.com/help/4462928/windows-10-update-kb4462928)|Active Directory Federation Services (ADFS) 엑스트라넷 스마트 잠금 (ESL)과 대체 로그인 ID 간의 상호 운용 문제를 해결 합니다. 대체 로그인 ID를 사용 하도록 설정 하면 AD FS Powershell cmdlet AdfsAccountActivity 및 AdfsAccountLockout를 호출 하 여 "계정을 찾을 수 없음" 오류가 반환 됩니다. AdfsAccountActivity가 호출 되 면 기존 항목을 편집 하는 대신 새 항목이 추가 됩니다.|2018년 10월|
 |[4343884 (OS 빌드 14393.2457)](https://support.microsoft.com/help/4343884/windows-10-update-kb4343884)|사용자 지정 문화권 정의를 사용 하는 모바일 장치에서 Multi-Factor Authentication 제대로 작동 하지 않는 Active Directory Federation Services (AD FS) 문제를 해결 합니다. </br></br>새 사용자 등록에서 상당한 지연 (15 초)이 발생 하는 비즈니스용 Windows Hello의 문제를 해결 합니다. 이 문제는 RA (ADFS 등록 기관) 인증서를 저장 하는 데 하드웨어 보안 모듈을 사용 하는 경우에 발생 합니다.|2018년 8월|
-|[4338822 (OS 빌드 14393.2395)](https://support.microsoft.com/help/4338822/windows-10-update-kb4338822)|콘솔에서 신뢰 당사자 트러스트를 만들거나 볼 때 AD FS 관리 콘솔에서 중복 신뢰 당사자 트러스트를 표시 하는 AD FS 문제를 해결 합니다.</br></br>에서는 비즈니스용 Windows Hello가 실패 하 게 하는 ADFS의 문제를 해결 합니다. 두 클레임 공급자가 있는 경우이 문제가 발생 합니다. PIN 등록은 "400 내부 서버 오류: 장치 식별자를 가져올 수 없습니다."와 함께 실패 합니다.</br></br> 종료 되지 않는 비활성 연결과 관련 된 WAP 문제를 해결 합니다. 이로 인해 시스템 리소스 누수 (예: 메모리 누수) 및 더 이상 응답 하지 않는 WAP 서비스가 발생 합니다. 사용자가 다른 로그인 옵션을 선택할 수 없도록 하는 AD FS 문제를 해결 합니다. 이는 사용자가 인증서 기반 인증을 사용 하 여 로그인 하도록 선택 했지만 구성 되지 않은 경우에 발생 합니다. 사용자가 인증서 기반 인증을 선택한 다음 다른 로그인 옵션을 선택 하는 경우에도이 오류가 발생 합니다. 이런 경우 사용자는 브라우저를 닫을 때까지 인증서 기반 인증 페이지로 리디렉션됩니다.|2018 년 7 월|
+|[4338822 (OS 빌드 14393.2395)](https://support.microsoft.com/help/4338822/windows-10-update-kb4338822)|콘솔에서 신뢰 당사자 트러스트를 만들거나 볼 때 AD FS 관리 콘솔에서 중복 신뢰 당사자 트러스트를 표시 하는 AD FS 문제를 해결 합니다.</br></br>에서는 비즈니스용 Windows Hello가 실패 하 게 하는 ADFS의 문제를 해결 합니다. 두 클레임 공급자가 있는 경우이 문제가 발생 합니다. PIN 등록은 "400 내부 서버 오류: 장치 식별자를 가져올 수 없습니다."와 함께 실패 합니다.</br></br> 종료 되지 않는 비활성 연결과 관련 된 WAP 문제를 해결 합니다. 이로 인해 시스템 리소스 누수 (예: 메모리 누수) 및 더 이상 응답 하지 않는 WAP 서비스가 발생 합니다. 사용자가 다른 로그인 옵션을 선택할 수 없도록 하는 AD FS 문제를 해결 합니다. 이는 사용자가 인증서 기반 인증을 사용 하 여 로그인 하도록 선택 했지만 구성 되지 않은 경우에 발생 합니다. 사용자가 인증서 기반 인증을 선택한 다음 다른 로그인 옵션을 선택 하는 경우에도이 오류가 발생 합니다. 이런 경우 사용자는 브라우저를 닫을 때까지 인증서 기반 인증 페이지로 리디렉션됩니다.|2018 年 7 月|
 |[4103720 (OS 빌드 14393.2273)](https://support.microsoft.com/help/4103720/windows-10-update-kb4103720)|PreventTokenReplays를 사용 하는 경우 SAML 신뢰 당사자에 대 한 IdP 시작 로그인이 실패 하 게 하는 ADFS와 관련 된 문제를 해결 합니다. </br></br>OAUTH가 장치 또는 브라우저 응용 프로그램에서 인증 될 때 발생 하는 ADFS 문제를 해결 합니다. 사용자 암호 변경으로 인해 오류가 발생 하 고 사용자가 응용 프로그램 또는 브라우저를 종료 하 여 로그인 해야 합니다. </br></br>UTC + 1 이상 (유럽 및 아시아)에서 엑스트라넷 스마트 잠금을 사용 하도록 설정 하지 못한 문제를 해결 합니다. 또한 다음과 같은 오류와 함께 일반적인 엑스트라넷 잠금이 실패 합니다. AdfsAccountActivity: UTC로 변환 될 때 Int32.maxvalue 보다 크거나 datetime. MinValue 보다 작은 DateTime 값을 JSON으로 직렬화 할 수 없습니다.</br></br>새 사용자가 자신의 PIN을 프로 비전 할 수 없는 ADFS Windows Hello for business 문제를 해결 합니다. 이는 MFA 공급자가 구성 되지 않은 경우에 발생 합니다.|2018년 5월|
 |[4093120 (OS 빌드 14393.2214)](https://support.microsoft.com/help/4093120/windows-10-update-kb4093120)| 처리 되지 않은 새로 고침 토큰 유효성 검사 문제를 해결 합니다. 다음 오류를 생성 합니다. "IdentityServer. OAuthInvalidRefreshTokenException: MSIS9312: 잘못 된 OAuth 새로 고침 토큰을 받았습니다. 토큰에 허용 된 시간 보다 빨리 새로 고침 토큰이 수신 되었습니다. " |2018년 4월|
 |[4077525 (OS 빌드 14393.2097)](https://support.microsoft.com/help/4077525/windows-10-update-kb4077525)|ADFS 팜에 WID (Windows 내부 데이터베이스)를 사용 하는 서버가 두 대 이상 있을 때 HTTP 500 오류가 발생 하는 문제를 해결 합니다. 이 시나리오에서는 WAP (웹 응용 프로그램 프록시) 서버에서 HTTP 기본 사전 인증이 일부 사용자를 인증 하지 못합니다. 오류가 발생 하면 WAP 이벤트 로그에 Microsoft Windows 웹 응용 프로그램 프록시 경고 이벤트 ID 13039이 표시 될 수도 있습니다. 설명은 "웹 응용 프로그램 프록시가 사용자를 인증 하지 못했습니다. 사전 인증은 ' 리치 클라이언트의 ADFS '입니다. 지정 된 사용자에 게 지정 된 신뢰 당사자에 액세스할 수 있는 권한이 없습니다. 대상 신뢰 당사자 또는 WAP 신뢰 당사자의 권한 부여 규칙을 수정 해야 합니다. "</br></br>인증 하는 동안 AD FS에서 더 이상 prompt = login을 무시 하지 않을 수 있는 문제를 해결 합니다. 암호 인증을 사용 하지 않는 시나리오를 지원 하기 위해 사용 하지 않도록 설정 된 옵션이 추가 되었습니다. 자세한 내용은 Windows Server 2016 RTM에서 인증 하는 동안 "prompt = login" 매개 변수를 무시 AD FS를 참조 하세요.</br></br>인증 옵션으로 인증서를 선택 하는 권한 있는 고객 (신뢰 당사자)이 연결 되지 않는 AD FS의 문제를 해결 합니다. WIA (Windows 통합 인증)를 사용 하도록 설정 하 고 요청에서 WIA를 수행할 수 있는 경우 prompt = login을 사용 하면 오류가 발생 합니다.</br></br>IDP (id 공급자)가 OAuth 그룹의 RP (신뢰 당사자)와 연결 된 경우 HRD (홈 영역 검색) 페이지를 잘못 표시 하는 문제 AD FS를 해결 합니다. 여러 IDPs가 OAuth 그룹의 RP와 연결 되어 있지 않으면 사용자에 게 HRD 페이지가 표시 되지 않습니다. 대신, 사용자는 인증을 위해 연결 된 IDP로 직접 이동 합니다.|2018년 2월|
@@ -51,7 +50,7 @@ Windows Server 2016에 대 한 업데이트는 Windows 업데이트를 통해 �
 
 |50 # |설명|출시 날짜
 |----- | ----- |-----
-|[4507448](https://support.microsoft.com/help/4507448/windows-8-1-update-kb4507448)| 이 보안 업데이트는 공격자가 엑스트라넷 잠금 정책을 우회 하는 데 사용할 수 있는 Active Directory Federation Services (AD FS)의 취약성을 해결 합니다. |2019년 7월
+|[4507448](https://support.microsoft.com/help/4507448/windows-8-1-update-kb4507448)| 이 보안 업데이트는 공격자가 엑스트라넷 잠금 정책을 우회 하는 데 사용할 수 있는 Active Directory Federation Services (AD FS)의 취약성을 해결 합니다. |2019 年 7 月
 |[4041685](https://support.microsoft.com/kb/4041685)|요청 헤더의 MSISConext 쿠키가 결국 헤더 크기 제한을 오버플로 하 고 HTTP 상태 코드 400 "잘못 된 요청-헤더 너무 깁니다."로 인해 실패 하는 경우 발생 하는 문제를 AD FS 해결 했습니다.</br></br>ADFS가 인증 중에 "prompt = login"을 더 이상 무시할 수 없는 문제를 해결 했습니다. 암호 없는 인증을 사용 하는 경우 복원 시나리오에 "사용 안 함" 옵션이 추가 되었습니다.|10 월 2017 업데이트 롤업 미리 보기
 |[4019217](https://support.microsoft.com/kb/4019217)|Server 2012 R2 AD FS Server를 사용 하는 경우 token broker를 사용 하는 클라우드 폴더 클라이언트가 작동 하지 않음|2017 년 5 월 미리 보기 업데이트 롤업
 |[4015550](https://support.microsoft.com/kb/4015550)|요청을 전달 하는 데 임의로 실패 하는 외부 사용자 및 AD FS WAP를 인증 하지 AD FS 문제 해결|4 월 2017 업데이트 롤업
@@ -80,7 +79,7 @@ Windows Server 2016에 대 한 업데이트는 Windows 업데이트를 통해 �
 |[3020773](https://support.microsoft.com/kb/3020773)|Windows Server 2012 r 2에서 디바이스 등록 서비스의 초기 배포 후 시간 초과 오류|2015 년 1 월
 |[3018886](https://support.microsoft.com/kb/3018886)|메시지가 표시 되는 사용자 이름 및 암호를 두 번 인트라넷에서 Windows Server 2012 R2 AD FS 서버에 액세스할 때|2015 년 1 월
 |[3013769](https://support.microsoft.com/kb/3013769)|Windows Server 2012 R2 업데이트 롤업|2014 년 12 월
-|[3000850](https://support.microsoft.com/kb/3000850)|Windows Server 2012 R2 업데이트 롤업|2014년 11월
+|[3000850](https://support.microsoft.com/kb/3000850)|Windows Server 2012 R2 업데이트 롤업|2014 年 11 月
 |[2975719](https://support.microsoft.com/kb/2975719)|Windows Server 2012 R2 업데이트 롤업|2014 년 8 월
 |[2967917](https://support.microsoft.com/kb/2967917)|Windows Server 2012 R2 업데이트 롤업|2014 년 7 월
 |[2962409](https://support.microsoft.com/kb/2962409)|Windows Server 2012 R2 업데이트 롤업|2014 년 6 월
@@ -97,7 +96,7 @@ Windows Server 2016에 대 한 업데이트는 Windows 업데이트를 통해 �
 |[3094446](https://support.microsoft.com/kb/3094446)|Windows Server 2012 또는 Windows Server 2008 R2 s p 1에서 프록시를 통해 인증 실패|2015 년 9 월|AD FS 2.0 및 2.1
 |[3070078](https://support.microsoft.com/kb/3070078)|2\.1 AD FS Windows Server 2012에서 암호화 인증서에 대해 인증할 때 예외를 throw 합니다.|2015 년 7 월|AD FS 2.1
 |[3062577](https://support.microsoft.com/kb/3062577)|MS15-062: Active Directory 페더레이션 서비스의 취약점으로 권한 상승 문제점|2015 년 6 월|AD FS 2.0 / 2.1
-|[3003381](https://support.microsoft.com/kb/3003381)|M s 14-077: Active Directory 페더레이션 서비스의 취약점으로 정보 공개: 2015 년 4 월 14 일|2014년 11월|AD FS 2.0 / 2.1
+|[3003381](https://support.microsoft.com/kb/3003381)|M s 14-077: Active Directory 페더레이션 서비스의 취약점으로 정보 공개: 2015 년 4 월 14 일|2014 年 11 月|AD FS 2.0 / 2.1
 |[2987843](https://support.microsoft.com/kb/2987843)|많은 사용자가 Windows Server 2012에서 웹 애플리케이션에 로그온 하는 경우 AD FS 페더레이션 서버의 메모리 사용량은 계속 증가|2014 년 7 월|AD FS 2.1
 |[2957619](https://support.microsoft.com/kb/2957619)|위임 된 토큰에 대 한 AD FS를 요청 하는 경우 중지 됩니다. AD FS에서 신뢰 당사자 트러스트|2014 년 5 월|AD FS 2.1
 |[2926658](https://support.microsoft.com/kb/2926658)|SQL 권한이 없을 경우 ADFS SQL 팜 배포 실패|2014년 10월|AD FS 2.1
