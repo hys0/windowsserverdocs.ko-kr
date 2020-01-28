@@ -8,13 +8,13 @@ author: iainfoulds
 ms.author: iainfou
 ms.topic: get-started-article
 ms.localizationpriority: high
-ms.date: 12/16/2019
-ms.openlocfilehash: 83ab3663b2c03017ba1bf613a49c394be0511002
-ms.sourcegitcommit: b649047f161cb605df084f18b573f796a584753b
+ms.date: 01/23/2020
+ms.openlocfilehash: 0f3ea0dacc200adaaec5064d19754ad6de0042a6
+ms.sourcegitcommit: ff0db5ca093a31034ccc5e9156f5e9b45b69bae5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76162504"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725778"
 ---
 # <a name="how-to-use-windows-server-2008-and-2008-r2-extended-security-updates-esu"></a>Windows Server 2008 및 2008 R2 ESU(Extended Security Updates)를 사용하는 방법
 
@@ -43,23 +43,38 @@ Windows Server의 ESU(Extended Security Updates)는 2020년 1월 14일 이후 �
 
 자세한 내용은 [확장 보안 업데이트 FAQ(질문과 대답)](https://www.microsoft.com/cloud-platform/extended-security-updates)를 참조하세요.
 
+## <a name="how-to-use-extended-security-updates"></a>확장 보안 업데이트 사용 방법
+
+Azure에서 Windows Server 2008/2008 R2 VM을 실행하는 경우 확장 보안 업데이트가 자동으로 사용하도록 설정됩니다. 어느 것도 구성할 필요가 없으며 Azure VM에서 확장 보안 업데이트를 사용하는 데 대한 추가 비용이 없습니다. 확장 보안 업데이트는 업데이트를 수신하도록 구성된 Azure VM에 자동으로 배달됩니다.
+
+온-프레미스 VM 또는 물리적 서버와 같은 다른 환경의 경우에는 확장 보안 업데이트를 수동으로 요청하고 구성해야 합니다. EA(기업계약), EAS(기업계약 구독), EES(교육 솔루션 등록), SCE(서버 및 클라우드 등록)와 같은 볼륨 라이선싱 프로그램을 통해 사용할 수 있는 확장 보안 업데이트를 이미 구매한 경우 다음 단계 중 하나를 사용하여 활성화 키를 가져올 수 있습니다.
+
+* 활성화 키를 보고 가져오려면 [Microsoft 볼륨 라이선싱 서비스 센터](https://www.microsoft.com/Licensing/servicecenter/default.aspx)에 로그인합니다.
+* Azure Portal에서 확장 보안 업데이트를 등록하여 Windows Server 2008/R2 활성화 키를 가져옵니다.
+    * 이 프로세스를 완료하는 방법에 대한 설명은 이 문서의 다음 단계를 참조하세요.
+
 ## <a name="register-for-extended-security-updates"></a>확장 보안 업데이트 등록
 
 확장 보안 업데이트를 사용하려면 MAK(복수 정품 인증 키)를 만들어 Windows Server 2008 및 2008 R2 컴퓨터에 적용합니다. 이 키는 Windows Update 서버가 보안 업데이트를 계속 받을 수 있음을 알려줍니다. 온-프레미스 컴퓨터만 사용하더라도 확장 보안 업데이트를 등록하고 Azure Portal을 사용하여 이 키를 관리합니다.
 
 > [!NOTE]
-> Azure에서 Windows Server 2008 / 2008 R2 VM을 실행하는 경우 다음 단계를 수행할 필요가 없습니다. 확장 보안 업데이트를 위해 Azure VM이 자동으로 활성화됩니다. 확장 보안 업데이트 리소스 및 키를 만들 필요가 없으며 Azure VM에서 확장 보안 업데이트를 사용하는 데 대한 추가 비용이 없습니다.
+>
+> Azure VM에서 Windows Server 2008 및 2008 R2를 실행 중인 경우 확장 보안 업데이트를 등록할 필요가 없습니다. 온-프레미스 VM 또는 물리적 서버와 같은 다른 환경의 경우에는 [확장 보안 업데이트를 구매](https://www.microsoft.com/licensing/how-to-buy/how-to-buy)한 후에 등록하고 사용해야 합니다.
 
-> [!NOTE]
-> 아래 단계를 수행하기 전에 허용 목록에 대한 승인을 위해 이 정보와 함께 [winsvresuchamps@microsoft.com](mailto:winsvresuchamps@microsoft.com)으로 이메일을 보내주세요.
+> [!IMPORTANT]
+>
+> 볼륨 라이선싱 프로그램을 통해 확장 보안 업데이트를 구매하려면 이전 단계를 수행했는지 확인합니다. 아래 단계를 수행하기 전에 [winsvresuchamps@microsoft.com](mailto:winsvresuchamps@microsoft.com)으로 다음 정보가 포함된 이메일을 보내 기능 사용 승인을 받으세요.
+>
 > * 고객 이름:
 > * Azure 구독:
 > * EA 계약 번호(ESU의 경우):
 > * ESU 서버 수:
-> 
-> 팀은 제공된 정보를 검토하고 사용자/구독을 허용 목록에 추가합니다.
-> 
-> 요청자가 허용 목록에 없는 경우 다음과 같은 오류가 발생할 수 있습니다. [네임스페이스 'Microsoft.WindowsESU'에서 리소스 종류를 찾을 수 없습니다.](https://social.msdn.microsoft.com/Forums/office/94b16a89-3149-43da-865d-abf7dba7b977/the-resource-type-could-not-be-found-in-the-namespace-microsoftwindowsesu-for-api-version)
+>
+> 담당 팀이 제공된 정보를 검토하고 사용자/구독을 승인된 목록에 추가합니다.
+>
+> 요청자가 승인되지 않은 경우 다음과 같은 오류가 발생할 수 있습니다.
+>
+> [네임스페이스 'Microsoft.WindowsESU'에서 리소스 종류를 찾을 수 없습니다.](https://social.msdn.microsoft.com/Forums/office/94b16a89-3149-43da-865d-abf7dba7b977/the-resource-type-could-not-be-found-in-the-namespace-microsoftwindowsesu-for-api-version)
 
 확장 보안 업데이트를 위해 비 Azure VM을 등록하고 키를 만들려면 Azure Portal에서 다음 단계를 완료합니다.
 
