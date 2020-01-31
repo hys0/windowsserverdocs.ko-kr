@@ -8,12 +8,12 @@ ms.author: jeffrew
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.date: 06/07/2019
-ms.openlocfilehash: 59c659041c7553d8e97a3bfbefbc3bde24098ef2
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 4a91d09d6824795a21a9a7cdc7695c407aa70756
+ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75949933"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76822706"
 ---
 # <a name="windows-admin-center-known-issues"></a>Windows Admin Center 알려진 문제
 
@@ -44,7 +44,7 @@ ms.locfileid: "75949933"
 
 - Windows 관리 센터 모듈에서 실행 되는 OSS 버전 번호 사이에는 약간의 차이가 있을 수 있으며 타사 소프트웨어 공지에 나열 됩니다.
 
-### <a name="extension-manager"></a>확장명 관리자
+### <a name="extension-manager"></a>확장 관리자
 
 - Windows 관리 센터를 업데이트할 때 확장을 다시 설치 해야 합니다.
 - 액세스할 수 없는 확장 피드를 추가 하는 경우에는 경고가 발생 하지 않습니다. [14412861]
@@ -82,7 +82,7 @@ WMF가 설치되어 있는지, 그리고 버전이 5.1 이상인지 확인하려
 
 설치되어있지 않은 경우 [WMF 5.1을 다운로드하여 설치할](https://www.microsoft.com/download/details.aspx?id=54616)수 있습니다.
 
-## <a name="role-based-access-control-rbac"></a>RBAC(역할 기반 액세스 제어)
+## <a name="role-based-access-control-rbac"></a>RBAC (역할 기반 Access Control)
 
 - RBAC 배포가 Windows Defender Application Control(WDAC, 이전의 코드 무결성)을 사용하기 위해 구성된 컴퓨터에서 성공하지 않습니다. [16568455]
 
@@ -201,7 +201,7 @@ WMF가 설치되어 있는지, 그리고 버전이 5.1 이상인지 확인하려
 
 - 클러스터(하이퍼 컨버지드 또는 기존)를 관리하는 경우 **셸을 찾을 수 없음** 오류가 발생할 수 있습니다. 이런 경우 브라우저를 다시 로드하거나 다른 도구로 이동한 다음 되돌아옵니다. [13882442]
 
-- 완전히 구성하지 않은 하위 수준(Windows Server 2012 또는 2012 R2) 클러스터를 관리할 때 문제가 발생할 수 있습니다. 이 문제를 해결하는 방법은 Windows 기능 **RSAT-클러스터링-PowerShell**이 설치되어 클러스터의 **각 구성원 노드**에서 사용하도록 설정되었는지 확인하는 것입니다. PowerShell로 이 작업을 수행하려면 모든 클러스터 노드에서 `Install-WindowsFeature -Name RSAT-Windows-PowerShell` 명령을 입력합니다. [12524664]
+- 완전히 구성하지 않은 하위 수준(Windows Server 2012 또는 2012 R2) 클러스터를 관리할 때 문제가 발생할 수 있습니다. 이 문제를 해결하는 방법은 Windows 기능 **RSAT-클러스터링-PowerShell**이 설치되어 클러스터의 **각 구성원 노드**에서 사용하도록 설정되었는지 확인하는 것입니다. PowerShell로 이 작업을 수행하려면 모든 클러스터 노드에서 `Install-WindowsFeature -Name RSAT-Clustering-PowerShell` 명령을 입력합니다. [12524664]
 
 - 클러스터를 올바르게 검색하려면 전체 FQDN으로 추가해야 할 수 있습니다.
 

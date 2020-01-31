@@ -10,12 +10,12 @@ author: jasongerend
 ms.author: jgerend
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: afcda1d3f94c5f6fa7524317ac21c5540c07895c
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 0c140c61a5887cc63b2a9d0b468f8d1daf02cd76
+ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75948259"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76822716"
 ---
 # <a name="whats-new-in-windows-server-2016"></a>Windows Server 2016의 새로운 기능
 
@@ -86,7 +86,7 @@ Windows Server 2016에 대한 새로운 추가 사항으로는 Nano 서버에서
 ### <a name="powershell-desired-state-configuration-dsc-in-windows-management-framework-wmf-5"></a>Windows WMF(Management Framework) 5의 PowerShell DSC(필요한 상태 구성)
 Windows Management Framework 5는 Windows PowerShell DSC(필요한 상태 구성), WinRM(Windows Remote Management) 및 WMI(Windows Management Instrumentation)의 업데이트를 포함하고 있습니다.
 
-Windows Management Framework 5의 DSC 기능 테스트에 대한 자세한 내용은 [PowerShell DSC 기능의 유효성 검사](https://blogs.msdn.microsoft.com/powershell/2015/07/06/validate-features-of-powershell-dsc/)에서 언급한 블로그 게시물을 참조하세요. 다운로드 방법은 [Windows Management Framework 5.1](https://docs.microsoft.com/powershell/wmf/5.1/install-configure)을 참조하세요.
+Windows Management Framework 5의 DSC 기능 테스트에 대한 자세한 내용은 [PowerShell DSC 기능의 유효성 검사](https://blogs.msdn.microsoft.com/powershell/2015/07/06/validate-features-of-powershell-dsc/)에서 언급한 블로그 게시물을 참조하세요. 다운로드 방법은 [Windows Management Framework 5.1](https://docs.microsoft.com/powershell/scripting/wmf/setup/install-configure)을 참조하세요.
 
 ### <a name="packagemanagement-unified-package-management-for-software-discovery-installation-and-inventory"></a>소프트웨어 검색, 설치 및 재고에 대한 PackageManagement 통합 패키지 관리
 Windows Server 2016 및 Windows 10에는 IT 전문가 및 개발 운영자가 설치 관리자 기술 및 소프트웨어 위치에 상관없이 로컬 또는 원격으로 SDII(소프트웨어 검색, 설치 및 인벤토리)를 자동화할 수 있도록 해주는 새로운 PackageManagement 기능(이전의 OneGet)이 포함되어 있습니다. 
@@ -201,4 +201,3 @@ Microsoft Windows 10 및 Windows Server 2016에 다음과 같은 새로운 기�
 
 ## <a name="see-also"></a>참고 항목  
 -   [릴리스 정보: Windows Server 2016의 중요한 이슈](Windows-Server-2016-GA-Release-Notes.md)  
-

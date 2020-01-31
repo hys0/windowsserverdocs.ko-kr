@@ -8,12 +8,12 @@ ms.date: 10/09/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: 0f549310d568142f819e22422d41a72d38b306e2
-ms.sourcegitcommit: 8771a9f5b37b685e49e2dd03c107a975bf174683
+ms.openlocfilehash: e5832843dce05832a231ed3a4d7e20cf90f1d183
+ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76145939"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76822596"
 ---
 # <a name="storage-migration-service-known-issues"></a>저장소 마이그레이션 서비스의 알려진 문제
 
@@ -64,11 +64,11 @@ Windows 관리 센터를 사용 하 여 [Windows server 2019 Evaluation 릴리�
 
 Windows 관리 센터 또는 PowerShell을 사용 하 여 전송 작업에 대 한 자세한 오류 전용 CSV 로그를 다운로드 하는 경우 오류 메시지가 표시 됩니다.
 
- >   전송 로그-방화벽에서 파일 공유를 사용할 수 있는지 확인 하세요. :이 요청 작업이 net.tcp:/localhost: 28940/sms/service/1/transfer에서 구성 된 시간 제한 (00:01:00) 내에 회신을 받지 못했습니다. 이 작업에 할당된 시간이 보다 긴 시간 제한의 일부일 수 있습니다. 서비스가 아직 작업을 처리 중이거나 서비스가 회신 메시지를 보낼 수 없었기 때문일 수 있습니다. 채널/프록시를 IContextChannel로 캐스팅 하 고 OperationTimeout 속성을 설정 하 여 작업 시간 제한을 늘리고 서비스가 클라이언트에 연결할 수 있는지 확인 하세요.
+ >   전송 로그-방화벽에서 파일 공유를 사용할 수 있는지 확인 하세요. :이 요청 작업이 net.tcp:/localhost: 28940/sms/service/1/transfer에서 구성 된 시간 제한 (00:01:00) 내에 회신을 받지 못했습니다. 이 작업에 할당 된 시간이 보다 긴 시간 제한의 일부일 수 있습니다. 서비스가 작업을 계속 처리 하 고 있거나 서비스에서 회신 메시지를 보낼 수 없기 때문일 수 있습니다. 채널/프록시를 IContextChannel로 캐스팅 하 고 OperationTimeout 속성을 설정 하 여 작업 시간 제한을 늘리고 서비스가 클라이언트에 연결할 수 있는지 확인 하세요.
 
 이 문제는 저장소 마이그레이션 서비스에서 허용 하는 기본 1 분 제한 시간 내에 필터링 할 수 없는 너무 많은 전송 된 파일에 의해 발생 합니다. 
 
-이 문제를 해결하려면:
+이 문제를 해결 하려면 다음을 수행 합니다.
 
 1. Orchestrator 컴퓨터에서 Notepad.exe를 사용 하 여 *%SYSTEMROOT%\SMS\Microsoft.StorageMigration.Service.exe.config* 파일을 편집 하 여 "sendTimeout"를 1 분 기본값에서 10 분으로 변경 합니다.
 
@@ -90,7 +90,7 @@ Windows 관리 센터 또는 PowerShell을 사용 하 여 전송 작업에 대 �
 7. "WcfOperationTimeoutInMinutes"을 마우스 오른쪽 단추로 클릭 한 다음 수정을 클릭 합니다. 
 8. 기본 데이터 상자에서 "10 진수"를 클릭 합니다.
 9. 값 데이터 상자에 "10"을 입력 한 다음 확인을 클릭 합니다.
-10. 레지스트리 편집기를 종료합니다.
+10. 레지스트리 편집기를 종료 합니다.
 11. 오류 전용 CSV 파일 다운로드를 다시 시도 합니다. 
 
 이후 버전의 Windows Server 2019에서이 동작을 변경 하려고 합니다.  
@@ -220,7 +220,7 @@ StorageMigration ()에서 StorageMigration ()을 (를) 확인 합니다. Transfe
    ```
 ## <a name="error-dll-was-not-found-when-running-inventory-from-a-cluster-node"></a>클러스터 노드에서 인벤토리를 실행 하는 동안 "Dll을 찾을 수 없습니다" 오류가 발생 함
 
-Windows Server 2019 장애 조치 (failover) 클러스터 노드에 설치 된 Storage Migration Service orchestrator를 사용 하 여 인벤토리를 실행 하 고 Windows Server 장애 조치 (failover) 클러스터를 대상으로 하는 경우 파일 서버 원본을 일반적으로 사용 합니다.
+저장소 마이그레이션 서비스를 사용 하 여 인벤토리를 실행 하 고 Windows Server 장애 조치 (failover) 클러스터를 대상으로 지정 하는 경우 파일 서버 원본을 일반적으로 사용 하는 경우 다음 오류가 표시 됩니다.
 
     DLL not found
     [Error] Failed device discovery stage VolumeInfo with error: (0x80131524) Unable to load DLL 'Microsoft.FailoverClusters.FrameworkSupport.dll': The specified module could not be found. (Exception from HRESULT: 0x8007007E)   

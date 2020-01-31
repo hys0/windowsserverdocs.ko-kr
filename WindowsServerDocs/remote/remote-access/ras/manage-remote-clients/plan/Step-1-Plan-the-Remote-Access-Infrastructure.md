@@ -12,12 +12,12 @@ ms.topic: article
 ms.assetid: a1ce7af5-f3fe-4fc9-82e8-926800e37bc1
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: c8db30d3c5512fc72648c7894d66b715850fb619
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 71a6d38b9c77b3b8c24b28f78114daa63f5bd527
+ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71367311"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76822536"
 ---
 # <a name="step-1-plan-the-remote-access-infrastructure"></a>1 단계 원격 액세스 인프라 계획
 
@@ -28,7 +28,7 @@ ms.locfileid: "71367311"
   
 이 항목에서는 DirectAccess 클라이언트의 원격 관리를 위해 단일 원격 액세스 서버를 설정 하는 데 사용할 수 있는 인프라를 계획 하는 단계에 대해 설명 합니다. 다음 표에서는 이러한 단계를 나열 하지만 이러한 계획 작업은 특정 순서 대로 수행할 필요가 없습니다.  
   
-|태스크|설명|  
+|작업|설명|  
 |----|--------|  
 |[네트워크 토폴로지 및 서버 설정 계획](#plan-network-topology-and-settings)|원격 액세스 서버의 위치 (NAT (네트워크 주소 변환) 장치 또는 방화벽)를 결정 하 고 IP 주소 지정 및 라우팅을 계획 합니다.|  
 |[방화벽 요구 사항 계획](#plan-firewall-requirements)|원격 액세스가 경계면 방화벽을 통과하도록 허용할 계획을 수립합니다.|  
@@ -154,13 +154,13 @@ ISATAP는 DirectAccessclients를 원격으로 관리 하는 데 필요 하므로
   
 -   CRL을 항상 사용할 수 있도록 공용 CA를 사용하는 것이 좋습니다.  
   
--   주체 필드에 원격 액세스 서버 인터넷 어댑터의 IPv4 주소를 지정 하거나 IP-HTTPS URL (ConnectTo 주소)의 FQDN을 지정 합니다. 원격 액세스 서버가 NAT 장치 뒤에 있는 경우에는 NAT 장치의 공개 이름 또는 주소를 지정해야 합니다.  
+-   주체 필드에 원격 액세스 서버 인터넷 어댑터의 IPv4 주소를 지정 하거나 IP-HTTPS URL (ConnectTo 주소)의 FQDN을 지정 합니다. 원격 액세스 서버가 NAT 디바이스 뒤에 있는 경우에는 NAT 디바이스의 공개 이름 또는 주소를 지정해야 합니다.  
   
 -   인증서의 일반 이름이 IP-HTTPS 사이트의 이름과 일치해야 합니다.  
   
 -   에 대 한는 **향상 된 키 용도** 필드의 경우는 서버 인증 OID (개체 식별자)를 사용 합니다.  
   
--   **CRL 배포 지점** 필드의 경우 인터넷에 연결된 DirectAccess 클라이언트에서 액세스할 수 있는 CRL 배포 지점을 지정합니다.  
+-   에 대 한는 **CRL 배포 지점** 필드에서 인터넷에 연결 된 DirectAccess 클라이언트에서 액세스할 수 있는 CRL 배포 지점을 지정 합니다.  
   
     > [!NOTE]  
     > 이는 Windows 7을 실행 하는 클라이언트에만 필요 합니다.  
@@ -174,7 +174,7 @@ ISATAP는 DirectAccessclients를 원격으로 관리 하는 데 필요 하므로
 #### <a name="plan-website-certificates-for-the-network-location-server"></a>네트워크 위치 서버용 웹 사이트 인증서 계획  
 네트워크 위치 서버 웹 사이트를 계획할 때 다음 사항을 고려 하세요.  
   
--   **주체** 필드에 네트워크 위치 서버의 인트라넷 인터페이스 IP 주소 또는 네트워크 위치 URL의 FQDN을 지정합니다.  
+-   에 **주체** 필드에 네트워크 위치 URL의 FQDN 또는 네트워크 위치 서버의 인트라넷 인터페이스의 IP 주소를 지정 합니다.  
   
 -   확장 된 **키 사용** 필드의 경우 서버 인증 OID를 사용 합니다.  
   
@@ -275,9 +275,9 @@ HTTP 또는 PING을 통해 다른 웹 주소를 사용 하 여 추가 연결 검
 스플릿 브레인이 아닌 DNS 환경에서는 인터넷 네임스페이스가 인트라넷 네임스페이스와 다릅니다. 예를 들어 인터넷의 네임스페이스는 Contoso Corporation uses contoso.com이고 인트라넷의 네임스페이스는 corp.contoso.com인 경우를 살펴보겠습니다. 모든 인트라넷 리소스는 corp.contoso.com DNS 접미사를 사용하므로 corp.contoso.com에 대한 NRPT 규칙에 따라 인트라넷 리소스에 대한 모든 DNS 이름 쿼리가 인트라넷 DNS 서버로 라우팅됩니다. Contoso.com 접미사가 있는 이름에 대 한 DNS 쿼리는 NRPT의 corp.contoso.com 인트라넷 네임 스페이스 규칙과 일치 하지 않으므로 인터넷 DNS 서버로 전송 됩니다. 스플릿 브레인이 아닌 DNS 환경에서는 인트라넷 리소스와 인터넷 리소스의 FQDN이 중복되지 않으므로 NRPT에 대한 추가 구성이 필요 없습니다. DirectAccess 클라이언트는 조직의 인터넷 리소스와 인트라넷 리소스 모두에 액세스할 수 있습니다.  
   
 ##### <a name="plan-local-name-resolution-behavior-for-directaccess-clients"></a>DirectAccess 클라이언트에 대 한 로컬 이름 확인 동작 계획  
-DNS로 이름을 확인할 수 없는 경우 Windows Server 2012, Windows 8, Windows Server 2008 R2 및 Windows 7의 DNS 클라이언트 서비스는 로컬 서브넷에서 이름을 확인 하기 위해 LLMNR (링크-로컬 멀티 캐스트 이름 확인) 및 NetBIOS over TCP/IP 프로토콜을 사용 하 여 로컬 이름 확인을 사용할 수 있습니다. 로컬 이름 확인은 컴퓨터가 단일 서브넷 홈 네트워크와 같은 프라이빗 네트워크에 있는 경우 일반적으로 피어-투-피어 연결에 필요합니다.  
+DNS로 이름을 확인할 수 없는 경우 Windows Server 2012, Windows 8, Windows Server 2008 R2 및 Windows 7의 DNS 클라이언트 서비스는 로컬 서브넷에서 이름을 확인 하기 위해 LLMNR (링크-로컬 멀티 캐스트 이름 확인) 및 NetBIOS over TCP/IP 프로토콜을 사용 하 여 로컬 이름 확인을 사용할 수 있습니다. 로컬 이름 확인은 컴퓨터가 단일 서브넷 홈 네트워크와 같은 개인 네트워크에 있는 경우 일반적으로 피어-투-피어 연결에 필요합니다.  
   
-DNS 클라이언트 서비스에서 인트라넷 서버 이름에 대 한 로컬 이름 확인을 수행 하 고 컴퓨터가 인터넷의 공유 서브넷에 연결 되어 있으면 악의적인 사용자가 LLMNR 및 NetBIOS over TCP/IP 메시지를 캡처하여 인트라넷 서버 이름을 확인할 수 있습니다. 인프라 서버 설치 마법사의 DNS 페이지에서 인트라넷 DNS 서버 로부터 받은 응답 유형에 따라 로컬 이름 확인 동작을 구성할 수 있습니다. 사용할 수 있는 옵션은 다음과 같습니다.  
+DNS 클라이언트 서비스에서 인트라넷 서버 이름에 대 한 로컬 이름 확인을 수행 하 고 컴퓨터가 인터넷의 공유 서브넷에 연결 되어 있으면 악의적인 사용자가 LLMNR 및 NetBIOS over TCP/IP 메시지를 캡처하여 인트라넷 서버 이름을 확인할 수 있습니다. 인프라 서버 설치 마법사의 DNS 페이지에서 인트라넷 DNS 서버 로부터 받은 응답 유형에 따라 로컬 이름 확인 동작을 구성할 수 있습니다. 다음 옵션을 사용할 수 있습니다.  
   
 -   **DNS에 이름이 없는 경우 로컬 이름 확인 사용**:이 옵션은 DirectAccess 클라이언트가 인트라넷 DNS 서버에서 확인할 수 없는 서버 이름에 대해서만 로컬 이름 확인을 수행 하기 때문에 가장 안전 합니다. 인트라넷 DNS 서버에 연결할 수 있는 경우 인트라넷 서버의 이름이 확인됩니다. 인트라넷 DNS 서버에 연결할 수 없거나 다른 유형의 DNS 오류가 있는 경우에는 인트라넷 서버 이름이 로컬 이름 확인을 통해 서브넷에 유출되지 않습니다.  
   
@@ -286,7 +286,7 @@ DNS 클라이언트 서비스에서 인트라넷 서버 이름에 대 한 로컬
 -   **모든 종류의 DNS 확인 오류 (가장 안전 하지 않음)에 대해 로컬 이름 확인 사용**: 로컬 이름 확인을 통해 로컬 서브넷에 대해 인트라넷 네트워크 서버 이름이 유출 될 수 있으므로 보안 수준이 가장 낮은 옵션입니다.  
   
 #### <a name="plan-the-network-location-server-configuration"></a>네트워크 위치 서버 구성 계획  
-네트워크 위치 서버는 DirectAccess 클라이언트가 회사 네트워크에 있는지 여부를 검색 하는 데 사용 되는 웹 사이트입니다. 회사 네트워크의 클라이언트는 DirectAccess를 사용 하 여 내부 리소스에 연결 하지 않습니다. 대신 직접 연결 합니다.  
+네트워크 위치 서버는 DirectAccess 클라이언트가 회사 네트워크에 있는지 검색하는 데 사용되는 웹 사이트입니다. 회사 네트워크의 클라이언트는 DirectAccess를 사용 하 여 내부 리소스에 연결 하지 않습니다. 대신 직접 연결 합니다.  
   
 네트워크 위치 서버 웹 사이트는 원격 액세스 서버 또는 조직의 다른 서버에서 호스팅될 수 있습니다. 원격 액세스 서버에서 네트워크 위치 서버를 호스트 하는 경우 원격 액세스를 배포할 때 웹 사이트가 자동으로 만들어집니다. Windows 운영 체제를 실행 하는 다른 서버에서 네트워크 위치 서버를 호스트 하는 경우 해당 서버에 인터넷 정보 서비스 (IIS)가 설치 되어 있고 웹 사이트가 만들어졌는지 확인 해야 합니다. 원격 액세스는 네트워크 위치 서버에서 설정을 구성 하지 않습니다.  
   
@@ -323,9 +323,9 @@ DirectAccess 클라이언트는 Windows 업데이트 및 바이러스 백신 업
   
 -   도메인 컨트롤러: 클라이언트 컴퓨터를 포함 하는 도메인 및 원격 액세스 서버와 동일한 포리스트에 있는 모든 도메인에 대해 도메인 컨트롤러 자동 검색이 수행 됩니다.  
   
--   System Center Configuration Manager 서버  
+-   Microsoft 끝점 Configuration Manager 서버  
   
-도메인 컨트롤러 및 System Center Configuration Manager 서버는 DirectAccess가 처음 구성 될 때 자동으로 검색 됩니다. 검색 된 도메인 컨트롤러는 콘솔에 표시 되지 않지만 Windows PowerShell cmdlet을 사용 하 여 설정을 검색할 수 있습니다. 도메인 컨트롤러 또는 System Center Configuration Manager 서버가 수정 된 경우 콘솔에서 **업데이트 관리 서버** 를 클릭 하면 관리 서버 목록이 새로 고쳐집니다.  
+도메인 컨트롤러 및 Configuration Manager 서버는 DirectAccess가 처음 구성 될 때 자동으로 검색 됩니다. 검색 된 도메인 컨트롤러는 콘솔에 표시 되지 않지만 Windows PowerShell cmdlet을 사용 하 여 설정을 검색할 수 있습니다. 도메인 컨트롤러 또는 Configuration Manager 서버가 수정 된 경우 콘솔에서 **업데이트 관리 서버** 를 클릭 하면 관리 서버 목록이 새로 고쳐집니다.  
   
 **관리 서버 요구 사항**  
   
@@ -419,7 +419,7 @@ Gpo를 구성할 때 다음 경고를 고려 하십시오.
   
 -   클라이언트 및 응용 프로그램 서버 Gpo를 만들 때 위치는 단일 도메인으로 설정 됩니다. GPO 이름은 각 도메인에서 조회 되 고 도메인은 DirectAccess 설정 (있는 경우)으로 채워집니다.  
   
--   연결 대상은 GPO가 만들어진 도메인의 루트로 설정됩니다. GPO는 클라이언트 컴퓨터 또는 응용 프로그램 서버가 포함된 각 도메인에 만들어지며 각 도메인의 루트에 연결됩니다.  
+-   연결 대상은 GPO가 만들어진 도메인의 루트로 설정됩니다. GPO는 클라이언트 컴퓨터 또는 애플리케이션 서버가 포함된 각 도메인에 만들어지며 각 도메인의 루트에 연결됩니다.  
   
 자동으로 만들어진 Gpo를 사용 하 여 DirectAccess 설정을 적용 하는 경우 원격 액세스 서버 관리자에 게 다음 권한이 필요 합니다.  
   

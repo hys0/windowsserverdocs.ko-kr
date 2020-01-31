@@ -1,1 +1,1 @@
-**클라이언트에서 DirectAccess 구성을 제거 합니다.** Microsoft System Center Configuration Manager 또는 Microsoft Intune 성공적인 VPN 구성 배포를 모니터링 합니다. 그런 다음 장치 할당 정보를 확인 하 고 각 사용자에 게 속한 장치 검색에 보고를 사용 합니다. 사용자가 성공적으로 마이그레이션할 때 장치 그룹에서 제거는 DirectAccess 보안 환경에서 DirectAccess를 제거할 수 있도록 합니다.
+**클라이언트에서 DirectAccess 구성을 제거 합니다.** 성공적인 VPN 구성 배포를 위해 Microsoft 끝점 Configuration Manager 또는 Microsoft Intune를 모니터링 합니다. 그런 다음 보고를 사용 하 여 장치 할당 정보를 확인 하 고 각 사용자에 게 속한 장치를 검색 합니다. 사용자가 성공적으로 마이그레이션하면 사용자 환경에서 DirectAccess를 제거할 수 있도록 DirectAccess 보안 그룹에서 장치를 제거 합니다.

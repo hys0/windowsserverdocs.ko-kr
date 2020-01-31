@@ -11,12 +11,12 @@ ms.author: pashort
 author: shortpatti
 ms.localizationpriority: medium
 ms.reviewer: deverette
-ms.openlocfilehash: 67d361db7a2dd3f2879e8beb924075dae68d52a3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 60be590d0d133f00817018018af42cfc23f1bee5
+ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404317"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76822396"
 ---
 # <a name="step-74-deploy-conditional-access-root-certificates-to-on-premises-ad"></a>7\.4단계. 온-프레미스 AD에 조건부 액세스 루트 인증서 배포
 
@@ -59,4 +59,4 @@ ms.locfileid: "71404317"
 
 ## <a name="next-steps"></a>다음 단계
 
-[7.5 단계. Windows 10 장치에 대 한 OMA-URI 기반 VPNv2 프로필 만들기](vpn-create-oma-dm-based-vpnv2-profiles.md):이 단계에서는 Intune을 사용 하 여 VPN 장치 구성 정책을 배포 하는 OMA dm 기반 VPNv2 프로필을 만들 수 있습니다. SCCM 또는 PowerShell 스크립트로 VPNv2 프로필을 만들려면 [VPNV2 CSP 설정](https://docs.microsoft.com/windows/client-management/mdm/vpnv2-csp) 에서 자세한 내용을 참조 하세요.
+[7.5 단계. Windows 10 장치에 대 한 OMA-URI 기반 VPNv2 프로필 만들기](vpn-create-oma-dm-based-vpnv2-profiles.md):이 단계에서는 Intune을 사용 하 여 VPN 장치 구성 정책을 배포 하는 OMA dm 기반 VPNv2 프로필을 만들 수 있습니다. Microsoft Endpoint Configuration Manager 또는 PowerShell 스크립트를 사용 하 여 VPNv2 프로필을 만들려면 [VPNV2 CSP 설정](https://docs.microsoft.com/windows/client-management/mdm/vpnv2-csp) 에서 자세한 내용을 참조 하세요.

@@ -9,19 +9,19 @@ ms.localizationpriority: medium
 ms.author: pashort
 author: shortpatti
 ms.date: 06/11/2018
-ms.openlocfilehash: 326f1e8d52dc34ad433e8cc3bd4c4e84508026b7
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: aa7658587b8434bfbaa6874498215a6b2c9213be
+ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71388083"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76822666"
 ---
 # <a name="step-5-configure-dns-and-firewall-settings"></a>5단계. DNS 및 방화벽 설정 구성
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-- [**선행** 4단계. NPS 서버 설치 및 구성](vpn-deploy-nps.md)
-- [**그런** 6단계. Windows 10 클라이언트 Always On VPN 연결 구성](vpn-deploy-client-vpn-connections.md)
+- [**이전:** 4 단계. NPS 서버 설치 및 구성](vpn-deploy-nps.md)
+- [**다음:** 6 단계. Windows 10 클라이언트 Always On VPN 연결 구성](vpn-deploy-client-vpn-connections.md)
 
 이 단계에서는 VPN 연결에 대 한 DNS 및 방화벽 설정을 구성 합니다.
 
@@ -84,4 +84,4 @@ NPS 배포에서 기본 RADIUS 포트를 사용 하지 않는 경우 사용 중�
 
 ## <a name="next-steps"></a>다음 단계
 
-[6단계. Windows 10 클라이언트 Always On VPN 연결](vpn-deploy-client-vpn-connections.md)구성: 이 단계에서는 VPN 연결을 사용 하 여 해당 인프라와 통신 하도록 Windows 10 클라이언트 컴퓨터를 구성 합니다. 여러 기술을 사용 하 여 Windows PowerShell, System Center Configuration Manager 및 Intune을 비롯 한 Windows 10 VPN 클라이언트를 구성할 수 있습니다. 세 가지 모두 적절 한 VPN 설정을 구성 하려면 XML VPN 프로필이 필요 합니다.
+[6 단계. Windows 10 클라이언트 Always On VPN 연결 구성](vpn-deploy-client-vpn-connections.md):이 단계에서는 vpn 연결을 사용 하 여 해당 인프라와 통신 하도록 windows 10 클라이언트 컴퓨터를 구성 합니다. 여러 기술을 사용 하 여 Windows PowerShell, Microsoft 끝점 Configuration Manager 및 Intune을 비롯 한 Windows 10 VPN 클라이언트를 구성할 수 있습니다. 세 가지 모두 적절 한 VPN 설정을 구성 하려면 XML VPN 프로필이 필요 합니다.

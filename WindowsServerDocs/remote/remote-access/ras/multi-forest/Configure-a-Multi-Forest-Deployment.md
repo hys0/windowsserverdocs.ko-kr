@@ -12,12 +12,12 @@ ms.topic: article
 ms.assetid: 3c8feff2-cae1-4376-9dfa-21ad3e4d5d99
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 41c4de30482ff09cb0db8a113fa324b7299af43d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 08bd945bf808843286d390a089d9ac070b9a8813
+ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404541"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76822686"
 ---
 # <a name="configure-a-multi-forest-deployment"></a>Configure a Multi-Forest Deployment
 
@@ -177,9 +177,9 @@ DNS 접미사 검색 목록을 사용하면 클라이언트가 FQDN 대신 짧�
   
 2.  **네트워크 위치 서버** 페이지에서 **다음**을 클릭합니다.  
   
-3.  **DNS** 페이지에 표시된 테이블에 Forest 2의 회사 네트워크 중 일부인 추가 이름 접미사를 입력합니다. **DNS 서버 주소**에 서버 주소를 수동으로 입력하거나 **감지**를 클릭합니다. 주소를 입력 하지 않으면 새 항목이 NRPT 예외로 적용 됩니다. 그리고 **다음**을 클릭합니다.  
+3.  **DNS** 페이지에 표시된 테이블에 Forest 2의 회사 네트워크 중 일부인 추가 이름 접미사를 입력합니다. **DNS 서버 주소**에 서버 주소를 수동으로 입력하거나 **감지**를 클릭합니다. 주소를 입력 하지 않으면 새 항목이 NRPT 예외로 적용 됩니다. **Next**를 클릭합니다.  
   
-4.  옵션: **DNS 접미사 검색 목록** 페이지에서 **새 접미사** 상자에 기타 다른 DNS 접미사를 추가하고 **추가**를 클릭합니다. 그리고 **다음**을 클릭합니다.  
+4.  옵션: **DNS 접미사 검색 목록** 페이지에서 **새 접미사** 상자에 기타 다른 DNS 접미사를 추가하고 **추가**를 클릭합니다. **Next**를 클릭합니다.  
   
 5.  **관리** 페이지에서 **마침**을 클릭합니다.  
   
@@ -202,7 +202,7 @@ DNS 접미사 검색 목록을 사용하면 클라이언트가 FQDN 대신 짧�
   
 2.  원격 액세스 설정 마법사에서 **접두사 구성**을 클릭합니다.  
   
-3.  **접두사 구성** 페이지의 **내부 네트워크 IPv6 접두사**에 세미콜론으로 구분된 기타 다른 IPv6 접두사를 추가합니다. 예를 들면 2001:db8:1::/64;2001:db8:2::/64와 같습니다. 그리고 **다음**을 클릭합니다.  
+3.  **접두사 구성** 페이지의 **내부 네트워크 IPv6 접두사**에 세미콜론으로 구분된 기타 다른 IPv6 접두사를 추가합니다. 예를 들면 2001:db8:1::/64;2001:db8:2::/64와 같습니다. **Next**를 클릭합니다.  
   
 4.  **인증** 페이지에서 **마침**을 클릭합니다.  
   
@@ -221,7 +221,7 @@ Forest2의 Windows 8 클라이언트 컴퓨터에서 DirectAccess를 통해 리�
   
 2.  DirectAccess 클라이언트 설정 마법사에서 **그룹 선택**을 클릭한 다음 **그룹 선택** 페이지에서 **추가**를 클릭합니다.  
   
-3.  **그룹 선택** 대화 상자에서 DirectAccess 클라이언트 컴퓨터를 포함한 보안 그룹을 선택합니다. 그리고 **다음**을 클릭합니다.  
+3.  **그룹 선택** 대화 상자에서 DirectAccess 클라이언트 컴퓨터를 포함한 보안 그룹을 선택합니다. **Next**를 클릭합니다.  
   
 4.  **네트워크 연결 길잡이** 페이지에서 **마침**을 클릭합니다.  
   
@@ -236,7 +236,7 @@ Forest2의 Windows 8 클라이언트 컴퓨터에서 DirectAccess를 통해 리�
 ### <a name="RefreshMgmtServers"></a>관리 서버 목록 새로 고침  
 원격 액세스는 DirectAccess 구성 GPO를 포함하는 모든 포리스트에서 인프라 서버를 자동으로 검색합니다. DirectAccess를 Forest1의 서버에 배포했다면 서버 GPO가 Forest1의 해당 도메인에 작성됩니다. Forest2의 클라이언트가 DirectAccess에 액세스할 수 있도록 설정한 경우 Forest2의 도메인에 클라이언트 GPO가 작성됩니다.  
   
-DirectAccess를 통해 도메인 컨트롤러 및 System Center Configuration Manager에 액세스하도록 설정하려면 인프라 서버의 자동 검색 프로세스가 필요합니다. 검색 프로세스는 수동으로 시작해야 합니다.  
+도메인 컨트롤러 및 Microsoft 끝점 Configuration Manager에 대 한 DirectAccess를 통해 액세스를 허용 하려면 인프라 서버의 자동 검색 프로세스가 필요 합니다. 검색 프로세스는 수동으로 시작해야 합니다.  
   
 ##### <a name="to-refresh-the-management-servers-list"></a>관리 서버 목록을 새로 고치려면  
   

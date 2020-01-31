@@ -8,12 +8,12 @@ ms.date: 02/13/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: 4da69087ab1df6200394b36c938cb05ec5185045
-ms.sourcegitcommit: 3f54036c74c5a67799fbc06a8a18a078ccb327f9
+ms.openlocfilehash: 20aa5fbc40efc5a3a439361dadfac0f47f4b41d8
+ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76124891"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76822626"
 ---
 # <a name="use-storage-migration-service-to-migrate-a-server"></a>Storage Migration Service를 사용 하 여 서버 마이그레이션
 
@@ -25,24 +25,25 @@ ms.locfileid: "76124891"
 
 1. [저장소 마이그레이션 서비스 요구 사항을](overview.md#requirements) 확인 하 고 PC 또는 관리 서버에 [Windows 관리 센터](../../manage/windows-admin-center/understand/windows-admin-center.md) 를 설치 합니다 (아직 설치 하지 않은 경우). 도메인에 가입 된 원본 컴퓨터를 마이그레이션하는 경우 원본 컴퓨터와 동일한 도메인 또는 포리스트에 가입 된 서버에서 저장소 마이그레이션 서비스를 설치 하 고 실행 해야 합니다.
 2. Windows 관리 센터에서 Windows Server 2019를 실행 하는 orchestrator 서버에 연결 합니다. <br>저장소 마이그레이션 서비스를 설치 하 고 마이그레이션을 관리 하는 데 사용 하는 서버입니다. 서버를 하나만 마이그레이션하는 경우에는 Windows Server 2019를 실행 하는 동안 대상 서버를 사용할 수 있습니다. 다중 서버 마이그레이션에는 별도의 오케스트레이션 서버를 사용 하는 것이 좋습니다.
-1. **서버 관리자** (Windows 관리 센터) > **storage migration service** 로 이동 하 고 **설치** 를 선택 하 여 저장소 마이그레이션 서비스와 필수 구성 요소 (그림 1에 표시 됨)를 설치 합니다.
+3. **서버 관리자** (Windows 관리 센터) > **storage migration service** 로 이동 하 고 **설치** 를 선택 하 여 저장소 마이그레이션 서비스와 필수 구성 요소 (그림 1에 표시 됨)를 설치 합니다.
     설치 단추를 표시 하는 Storage Migration Service 페이지의 ![스크린샷](media/migrate/install.png) **그림 1: Storage Migration Service 설치**
-1. Windows Server 2019를 실행 하는 모든 대상 서버에 저장소 마이그레이션 서비스 프록시를 설치 합니다. 그러면 대상 서버에 설치 될 때 전송 속도가 두 배가 됩니다. <br>이렇게 하려면 Windows 관리 센터에서 대상 서버에 연결한 다음 **서버 관리자** (Windows 관리 센터) > **역할 및 기능**으로 이동 하 고 **저장소 마이그레이션 서비스 프록시**를 선택한 다음 **설치**를 선택 합니다.
-1. Windows 관리 센터에서 모든 원본 서버와 Windows Server 2012 R2 또는 Windows Server 2016를 실행 하는 대상 서버에서 각 서버에 연결 하 고 **서버 관리자** (Windows 관리 센터) > **방화벽** > **들어오는 규칙**으로 이동한 후 다음 규칙을 사용 하도록 설정 했는지 확인 합니다.
+4. Windows Server 2019를 실행 하는 모든 대상 서버에 저장소 마이그레이션 서비스 프록시를 설치 합니다. 그러면 대상 서버에 설치 될 때 전송 속도가 두 배가 됩니다. <br>이렇게 하려면 Windows 관리 센터에서 대상 서버에 연결한 다음 **서버 관리자** (Windows 관리 센터)에서 **역할 및 기능**> 하 고 > **기능**으로 이동한 후 **저장소 마이그레이션 서비스 프록시**를 선택 하 고 **설치**를 선택 합니다. 
+5. Windows 장애 조치 (Failover) 클러스터에서 또는로 마이그레이션하려면 orchestrator 서버에 장애 조치 (Failover) 클러스터링 도구를 설치 합니다. <br>이렇게 하려면 Windows 관리 센터에서 orchestrator 서버에 연결한 다음 **서버 관리자** (Windows 관리 센터)로 이동 하 여 **역할 및 기능**> > **기능**, > **원격 서버 관리 도구**> **기능 관리 도구**를 선택한 다음 **장애 조치 (Failover) 클러스터링 도구**를 선택 하 고 **설치**를 선택 합니다. 
+6. Windows 관리 센터에서 모든 원본 서버와 Windows Server 2012 R2 또는 Windows Server 2016를 실행 하는 대상 서버에서 각 서버에 연결 하 고 **서버 관리자** (Windows 관리 센터) > **방화벽** > **들어오는 규칙**으로 이동한 후 다음 규칙을 사용 하도록 설정 했는지 확인 합니다.
     - 파일 및 프린터 공유(SMB-In)
     - Netlogon 서비스 (NP-IN)
-    - Windows Management Instrumentation(DCOM-In)
+    - WMI(Windows Management Instrumentation) (DCOM-IN)
     - WMI(Windows Management Instrumentation)(WMI-In)
 
    타사 방화벽을 사용 하는 경우 열 인바운드 포트 범위는 TCP/445 (SMB), TCP/135 (RPC/DCOM 엔드포인트 매퍼) 및 TCP 1025-65535 (RPC/DCOM 임시 포트)입니다. Storage Migration service 포트는 Orchestrator (TCP/28940) 및 TCP/28941 (프록시)입니다.
 
-1. Orchestrator 서버를 사용 하 여 마이그레이션을 관리 하 고 전송 하는 데이터에 대 한 로그 나 이벤트를 다운로드 하려는 경우 해당 서버 에서도 파일 및 프린터 공유 (SMB In) 방화벽 규칙이 사용 되는지 확인 합니다.
+7. Orchestrator 서버를 사용 하 여 마이그레이션을 관리 하 고 전송 하는 데이터에 대 한 로그 나 이벤트를 다운로드 하려는 경우 해당 서버 에서도 파일 및 프린터 공유 (SMB In) 방화벽 규칙이 사용 되는지 확인 합니다.
 
 ## <a name="step-1-create-a-job-and-inventory-your-servers-to-figure-out-what-to-migrate"></a>1 단계: 마이그레이션할 항목을 확인 하기 위해 작업 만들기 및 서버 인벤토리
 
 이 단계에서는 마이그레이션할 서버를 지정한 다음 해당 서버를 검색 하 여 파일 및 구성에 대 한 정보를 수집 합니다.
 
-1. **새 작업**을 선택 하 고 작업 이름을 지정한 다음, Samba를 사용 하는 Windows 서버 및 클러스터 또는 Linux 서버를 마이그레이션할지 여부를 선택 합니다. 그런 다음, **확인**을 선택합니다.
+1. **새 작업**을 선택 하 고 작업 이름을 지정한 다음, Samba를 사용 하는 Windows 서버 및 클러스터 또는 Linux 서버를 마이그레이션할지 여부를 선택 합니다. 그런 다음 **확인을**선택 합니다.
 2. **자격 증명 입력** 페이지에서 마이그레이션하려는 서버에서 작동 하는 관리자 자격 증명을 입력 하 고 **다음**을 선택 합니다. <br>Linux 서버에서 마이그레이션하는 경우 대신, **Samba 자격 증명** 및 **linux 자격** 증명 페이지에 SSH 암호나 개인 키를 포함 한 자격 증명을 입력 합니다. 
 
 3. **장치 추가**를 선택 하 고, 원본 서버 이름 또는 클러스터 된 파일 서버의 이름을 입력 한 다음, **확인**을 선택 합니다. <br>인벤토리에 추가할 다른 서버에 대해이를 반복 합니다.
@@ -105,7 +106,7 @@ Azure와 파일을 동기화 하는 것이 목표 라면 파일 전송 후 또�
 3. **가공선 구성** 페이지에서 원본에 있는 각 어댑터의 설정을 사용 하 여 대상의 네트워크 어댑터를 지정 합니다. 이렇게 하면 원본 서버에 새 DHCP 또는 고정 IP 주소를 지정 하 여 원본에서 대상으로 IP 주소를 이동 합니다. 모든 네트워크 마이그레이션 또는 특정 인터페이스를 건너뛸 수 있는 옵션이 있습니다. 
 4. 해당 주소를 대상으로 이동한 후에 원본 서버에 사용할 IP 주소를 지정 합니다. DHCP 또는 고정 주소를 사용할 수 있습니다. 정적 주소를 사용 하는 경우 새 서브넷은 이전 서브넷과 동일 해야 합니다. 그렇지 않으면 사용 하지 않습니다.
     원본 서버와 해당 IP 주소 및 컴퓨터 이름을 보여 주는 ![스크린샷 및](media/migrate/cutover.png) **그림 4: 원본 서버와 대상으로 이동 하는 방법**
-5. 대상 서버에서 이름을 사용한 후 원본 서버의 이름을 바꾸는 방법을 지정 합니다. 임의로 생성 된 이름을 사용 하거나 직접 입력할 수 있습니다. **다음**을 선택합니다.
+5. 대상 서버에서 이름을 사용한 후 원본 서버의 이름을 바꾸는 방법을 지정 합니다. 임의로 생성 된 이름을 사용 하거나 직접 입력할 수 있습니다. 그런 후 **다음**을 선택 합니다.
 6. **설정 반복 설정** 페이지에서 **다음** 을 선택 합니다.
 7. **원본 및 대상 장치 유효성 검사** 페이지에서 **유효성 검사** 를 선택 하 고 **다음**을 선택 합니다.
 8. 이 조치를 수행할 준비가 되 면 **시작 시작**을 선택 합니다. <br>사용자 및 앱은 주소와 이름이 이동 되 고 서버가 각각 여러 번 다시 시작 되는 동안 중단 될 수 있지만, 그렇지 않은 경우 마이그레이션의 영향을 받지 않습니다. 대기 시간은 서버를 다시 시작 하는 속도와 Active Directory 및 DNS 복제 시간에 따라 달라 집니다.
@@ -114,4 +115,4 @@ Azure와 파일을 동기화 하는 것이 목표 라면 파일 전송 후 또�
 
 - [Storage Migration Service 개요](overview.md)
 - [Storage Migration Services FAQ (질문과 대답)](faq.md)
-- [Azure 파일 동기화 배포에 대한 계획](https://docs.microsoft.com/azure/storage/files/storage-sync-files-planning)
+- [Azure File Sync 배포 계획](https://docs.microsoft.com/azure/storage/files/storage-sync-files-planning)

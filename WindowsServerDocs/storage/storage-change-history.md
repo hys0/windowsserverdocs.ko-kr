@@ -7,14 +7,14 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 12/20/2019
+ms.date: 1/16/2019
 description: IT 전문가를 위한 Windows Server에 대 한 온-프레미스 저장소 설명서의 새로운 항목 및 업데이트 된 항목입니다.
-ms.openlocfilehash: d50d4ca5b49b7f895fad3d3866226f95c55ae485
-ms.sourcegitcommit: bfe9c5f7141f4f2343a4edf432856f07db1410aa
+ms.openlocfilehash: eb0e4f5cd357718be298290930bdf6fb9f7f041f
+ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75352783"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76822606"
 ---
 # <a name="change-history-for-storage-topics-in-windows-server"></a>Windows Server의 저장소 변경 기록 항목
 
@@ -24,11 +24,17 @@ ms.locfileid: "75352783"
 
 > Windows Server의 업데이트 기록을 찾고 있는 경우 [windows 10 및 Windows server 2019 업데이트 기록](https://support.microsoft.com/help/4464619) 또는 [windows server 2016 업데이트 기록](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history)을 참조 하세요.
 
+## <a name="january-2020"></a>1 월 2020
+
+| 신규 항목 또는 변경된 항목 | 설명 |
+| --- | --- |
+|[영구 메모리 이해 및 배포](storage-spaces/deploy-pmem.md) | 알려진 하드웨어 문제를 추가 했습니다. |
+
 ## <a name="december-2019"></a>2019년 12월
 
 | 신규 항목 또는 변경된 항목                                        | 설명 |
 | ---                                                         | ---           |
-| [디스크 관리 문제 해결](disk-management/troubleshooting-disk-management.md)| 고객 요청을 기반으로 지침을 구체화 하기 위해 편집 되었습니다.|
+| [디스크의 관리 문제 해결](disk-management/troubleshooting-disk-management.md)| 고객 요청을 기반으로 지침을 구체화 하기 위해 편집 되었습니다.|
 | [디스크 관리에서 볼륨 확장](disk-management/extend-a-basic-volume.md) | 고객 피드백에 대 한 응답으로 지침이 추가 되었습니다. |
 | [동적 디스크를 기본 디스크로 변경](disk-management/change-a-dynamic-disk-back-to-a-basic-disk.md) | 명령줄에서 오류를 수정 하 고 고객 피드백에 따라 몇 가지 정보를 추가 했습니다. |
 
@@ -75,7 +81,7 @@ ms.locfileid: "75352783"
 |---                                                         |---           |
 |[스토리지 다시 동기화 이해 및 모니터링](storage-spaces/understand-storage-resync.md)|신규 항목|
 
-## <a name="december-2018"></a>2018년 12월
+## <a name="december-2018"></a>12 월 2018
 
 |신규 항목 또는 변경된 항목                                        |설명|
 |---                                                         |---           |
@@ -173,7 +179,7 @@ ms.locfileid: "75352783"
 |신규 항목 또는 변경된 항목|설명|
 |---|---|
 |[드라이브 문자 변경](disk-management/change-a-drive-letter.md)|신규 항목입니다.|
-|[디스크 관리 문제 해결](disk-management/troubleshooting-disk-management.md)|효율적인 [디스크의 상태가 초기화 되지 않았거나](disk-management/troubleshooting-disk-management.md#disks-that-are-missing-or-not-initialized-plus-general-troubleshooting-steps) , 고객 요청에 따라 광범위 한 문제 해결 단계를 추가 하려면 디스크가 완전히 누락 되었습니다.|
+|[디스크의 관리 문제 해결](disk-management/troubleshooting-disk-management.md)|효율적인 [디스크의 상태가 초기화 되지 않았거나](disk-management/troubleshooting-disk-management.md#disks-that-are-missing-or-not-initialized-plus-general-troubleshooting-steps) , 고객 요청에 따라 광범위 한 문제 해결 단계를 추가 하려면 디스크가 완전히 누락 되었습니다.|
 |[새 디스크 초기화](disk-management/initialize-new-disks.md)|효율적인를 통해 고객 질문을 보다 쉽게 이해 하 고 해결할 수 있습니다.|
 |[스토리지 공간 다이렉트에서 볼륨 계획](storage-spaces/plan-volumes.md)|4 개 노드 및 더 큰 클러스터에서 사용할 수 있는 복원 력 유형을 요약 하는 테이블을 추가 했습니다.|
 |[ReFS 개요](refs/refs-overview.md)|미러 가속 패리티의 권장 워크 로드를 설명 하 고 ReFS 및 NTFS에 대해 지원 되는 파일 및 볼륨 크기를 수정 했습니다.|

@@ -9,12 +9,12 @@ ms.assetid: 158b7a62-2c52-448b-9467-c00d5018f65b
 ms.author: pashort
 author: shortpatti
 ms.localizationpriority: medium
-ms.openlocfilehash: a216c490c92461e07fd5093783ec2c3049e8accb
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b5be8827cee22b35fb31bf08d1c960b150dcad84
+ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71388035"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76822656"
 ---
 # <a name="configure-vpn-device-tunnels-in-windows-10"></a>Windows 10에서 VPN 장치 터널 구성
 
@@ -46,9 +46,9 @@ Set-VpnAuthProtocol -UserAuthProtocolAccepted Certificate, EAP -RootCertificateN
 
 ## <a name="vpn-device-tunnel-configuration"></a>VPN 장치 터널 구성
 
-아래 샘플 프로필 XML은 장치 터널을 통해 클라이언트에서 시작한 가져오기만 필요한 시나리오에 적합 한 지침을 제공 합니다.  트래픽 필터를 활용 하 여 장치 터널을 관리 트래픽으로만 제한할 수 있습니다.  이 구성은 Windows 업데이트, 일반 그룹 정책 (GP) 및 System Center Configuration Manager (SCCM) 업데이트 시나리오 뿐만 아니라 캐시 된 자격 증명이 없는 첫 번째 로그온을 위한 VPN 연결 또는 암호 다시 설정 시나리오에 적합 합니다. 
+아래 샘플 프로필 XML은 장치 터널을 통해 클라이언트에서 시작한 가져오기만 필요한 시나리오에 적합 한 지침을 제공 합니다.  트래픽 필터를 활용 하 여 장치 터널을 관리 트래픽으로만 제한할 수 있습니다.  이 구성은 Windows 업데이트, 일반 그룹 정책 (GP) 및 Microsoft 끝점 Configuration Manager 업데이트 시나리오 뿐만 아니라 캐시 된 자격 증명이 없는 첫 번째 로그온을 위한 VPN 연결 또는 암호 다시 설정 시나리오에 적합 합니다. 
 
-Windows 원격 관리 (WinRM), 원격 GPUpdate 및 원격 SCCM 업데이트 시나리오와 같은 서버에서 시작 된 푸시 사례의 경우 장치 터널에서 인바운드 트래픽을 허용 해야 하므로 트래픽 필터를 사용할 수 없습니다.  장치 터널 프로필에서 트래픽 필터를 켜면 장치 터널에서 인바운드 트래픽을 거부 합니다.  이 제한은 이후 릴리스에서 제거 될 예정입니다.
+Windows 원격 관리 (WinRM), 원격 GPUpdate 및 원격 Configuration Manager 업데이트 시나리오와 같은 서버에서 시작 된 푸시 사례의 경우에는 장치 터널에서 인바운드 트래픽을 허용 해야 하므로 트래픽 필터를 사용할 수 없습니다.  장치 터널 프로필에서 트래픽 필터를 켜면 장치 터널에서 인바운드 트래픽을 거부 합니다.  이 제한은 이후 릴리스에서 제거 될 예정입니다.
 
 
 ### <a name="sample-vpn-profilexml"></a>샘플 VPN 프로 파일링 Exml
@@ -173,7 +173,7 @@ VPN 배포에 도움이 되는 추가 리소스는 다음과 같습니다.
 
 VPN 클라이언트 구성 리소스는 다음과 같습니다.
 
-- [System Center Configuration Manager에서 VPN 프로필을 만드는 방법](https://docs.microsoft.com/sccm/protect/deploy-use/create-vpn-profiles)
+- [Configuration Manager에서 VPN 프로필을 만드는 방법](https://docs.microsoft.com/configmgr/protect/deploy-use/create-vpn-profiles)
 - [Windows 10 클라이언트 Always On VPN 연결 구성](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)
 - [VPN 프로필 옵션](https://docs.microsoft.com/windows/access-protection/vpn/vpn-profile-options)
 

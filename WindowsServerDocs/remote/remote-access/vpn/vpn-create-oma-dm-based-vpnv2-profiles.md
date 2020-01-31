@@ -15,12 +15,12 @@ ms.author: pashort
 author: shortpatti
 ms.localizationpriority: medium
 ms.reviewer: deverette
-ms.openlocfilehash: 016d9d2dcc26572f8d248ef2f4a922da2e456b83
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 804b7314054691fa0abc19f1cc4e4bffbd6457cf
+ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75949892"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76822446"
 ---
 # <a name="step-75-create-oma-dm-based-vpnv2-profiles-to-windows-10-devices"></a>7\.5단계. Windows 10 장치에 대 한 OMA DM 기반 VPNv2 프로필 만들기
 
@@ -29,13 +29,13 @@ ms.locfileid: "75949892"
 - [**이전:** 7.4 단계. 온-프레미스 AD에 조건부 액세스 루트 인증서 배포](vpn-deploy-cond-access-root-cert-to-on-premise-ad.md)
 - [**다음:** VPN에 대 한 조건부 액세스가 작동 하는 방법 알아보기](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access)
 
-이 단계에서는 Intune을 사용 하 여 VPN 장치 구성 정책을 배포 하는 OMA DM 기반 VPNv2 프로필을 만들 수 있습니다. SCCM 또는 PowerShell 스크립트를 사용 하 여 VPNv2 프로필을 만들려면 [VPNV2 CSP 설정](https://docs.microsoft.com/windows/client-management/mdm/vpnv2-csp) 에서 자세한 내용을 참조 하세요. 
+이 단계에서는 Intune을 사용 하 여 VPN 장치 구성 정책을 배포 하는 OMA DM 기반 VPNv2 프로필을 만들 수 있습니다. Microsoft Endpoint Configuration Manager 또는 PowerShell 스크립트를 사용 하 여 VPNv2 프로필을 만들려면 [VPNV2 CSP 설정](https://docs.microsoft.com/windows/client-management/mdm/vpnv2-csp) 에서 자세한 내용을 참조 하세요. 
 
 ## <a name="managed-deployment-using-intune"></a>Intune을 사용 하 여 관리 되는 배포
 
 이 섹션에서 설명 하는 모든 내용은 조건부 액세스를 사용 하 여 VPN 작업을 수행 하는 데 필요한 최소입니다. 또한 분할 터널링, WIP를 사용 하 여 사용자 지정 Intune 장치 구성 프로필을 만들어 AutoVPN 작동 또는 SSO에 대해 다루지 않습니다. 아래 설정을 5 단계에서 만든 VPN 프로필에 통합 합니다 [. Windows 10 클라이언트 Always On VPN 연결을 구성](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)합니다.  이 예제에서는 [Intune 정책을 사용 하 여 VPN 클라이언트 구성](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md#configure-the-vpn-client-by-using-intune) 에 통합 합니다. 
 
-**필수 구성 요소:**
+**인지**
 
 Windows 10 클라이언트 컴퓨터는 이미 Intune을 사용 하 여 VPN 연결로 구성 되었습니다.   
 
@@ -90,7 +90,7 @@ VPN 프로필이 클라이언트 장치에 표시 되지 않는 경우 설정\\�
 
 Azure AD 조건부 액세스를 사용 하도록 VPN 프로필을 구성 하는 작업을 완료 했습니다. 
 
-|원하는 기능  |다음을 참조 하세요.  |
+|원하는 경우  |다음을 참조 하세요.  |
 |---------|---------|
 |Vpn을 사용 하 여 조건부 액세스의 작동 방식에 대 한 자세한 정보  |[Vpn 및 조건부 액세스](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access):이 페이지에서는 vpn에서 조건부 액세스가 작동 하는 방식에 대 한 자세한 정보를 제공 합니다.      |
 |고급 VPN 기능에 대 한 자세한 정보  |[고급 Vpn 기능](always-on-vpn/deploy/always-on-vpn-adv-options.md#advanced-vpn-features):이 페이지에서는 Vpn 트래픽 필터를 사용 하도록 설정 하는 방법, 앱 트리거를 사용 하 여 자동 vpn 연결을 구성 하는 방법 및 Azure AD에서 발급 한 인증서를 사용 하 여 클라이언트에서 vpn 연결만 허용 하도록 NPS를 구성 하는 방법을 설명 합니다.        |

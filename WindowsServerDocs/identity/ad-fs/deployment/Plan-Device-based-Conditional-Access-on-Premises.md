@@ -1,6 +1,6 @@
 ---
 ms.assetid: c5eb3fa0-550c-4a2f-a0bc-698b690c4199
-title: 온-프레미스 장치 기반 조건부 액세스 계획
+title: 온-프레미스 디바이스 기반 조건부 액세스 계획
 description: ''
 author: billmath
 ms.author: billmath
@@ -9,14 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 79dfc7fbf9e2dcc753829cc53d914f374010f925
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 00a7edf9529e1f116d951fd69d3bfa381d6d413a
+ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408333"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76822756"
 ---
-# <a name="plan-device-based-conditional-access-on-premises"></a>온-프레미스 장치 기반 조건부 액세스 계획
+# <a name="plan-device-based-conditional-access-on-premises"></a>온-프레미스 디바이스 기반 조건부 액세스 계획
 
 
 이 문서에서는 온-프레미스 디렉터리가 Azure AD Connect를 사용 하 여 Azure AD에 연결 되는 하이브리드 시나리오의 장치를 기반으로 하는 조건부 액세스 정책에 대해 설명 합니다.     
@@ -34,10 +34,10 @@ AD FS는 하이브리드 시나리오에서 조건부 액세스 정책의 온-�
 | --- | --- |--- | --- |
 |설명    |  사용자는 회사 또는 학교 계정을 BYOD 장치에 대화형으로 추가 합니다.  **참고:** 회사 또는 학교 계정 추가는 Windows 8/8.1의 Workplace Join에 대 한 대체 항목입니다.       | 사용자는 Windows 10 작업 장치를 Azure AD에 연결 합니다.|Windows 10 도메인 가입 장치는 Azure AD에 자동으로 등록 됩니다.|           
 |사용자가 장치에 로그인 하는 방법     |  회사 또는 학교 계정으로 Windows에 로그인 하지 않습니다.  Microsoft 계정를 사용 하 여 로그인 합니다.       |   장치를 등록 한 (회사 또는 학교) 계정으로 Windows에 로그인 합니다.      |     AD 계정을 사용 하 여 로그인 합니다.|      
-|장치를 관리 하는 방법    |      MDM 정책 (추가 Intune 등록 포함)   | MDM 정책 (추가 Intune 등록 포함)        |   그룹 정책, System Center Configuration Manager (SCCM) |
+|장치를 관리 하는 방법    |      MDM 정책 (추가 Intune 등록 포함)   | MDM 정책 (추가 Intune 등록 포함)        |   그룹 정책, Configuration Manager |
 |Azure AD 트러스트 유형|작업 공간 연결 됨|Azure AD 조인 됨|도메인 가입  |     
 |W10 설정 위치    | 계정 > 계정 > 회사 또는 학교 계정을 추가 하 > 설정        | 설정 > 시스템 > Azure AD 가입 >       |   도메인 >에 대 한 > 시스템 > 설정 |       
-|또한 iOS 및 Android 장치에서 사용할 수 있습니까?   |    예     |       아니오  |   아니요   |   
+|또한 iOS 및 Android 디바이스에서 사용할 수 있습니까?   |    예     |       아니요  |   아니요   |   
 
   
 
@@ -46,10 +46,10 @@ AD FS는 하이브리드 시나리오에서 조건부 액세스 정책의 온-�
 * [회사에 대 한 Windows 10 장치 설정](https://jairocadena.com/2016/01/18/setting-up-windows-10-devices-for-work-domain-join-azure-ad-join-and-add-work-or-school-account/)  
 [Azure Active Directory에 Windows 10 Mobile 연결](https://technet.microsoft.com/itpro/windows/manage/join-windows-10-mobile-to-azure-active-directory)  
 
-### <a name="how-windows-10-user-and-device-sign-on-is-different-from-previous-versions"></a>Windows 10 사용자 및 장치 Sign on와 다른 점은 이전 버전  
+### <a name="how-windows-10-user-and-device-sign-on-is-different-from-previous-versions"></a>Windows 10 사용자 및 디바이스 Sign on와 다른 점은 이전 버전  
 Windows 10 및 AD FS 2016의 경우 사용자가 알아야 하는 장치 등록 및 인증에는 몇 가지 새로운 측면이 있습니다 (특히, 이전 릴리스의 장치 등록과 "작업 공간 연결"에 대해 잘 알고 있는 경우).  
 
-첫째, Windows 10 및 Windows Server 2016에서 AD FS에서 장치 등록 및 인증 더 이상 오로지 기반는 X509 인증서 사용자입니다.  더 나은 보안과 보다 원활한 사용자 환경을 제공 하는 새롭고 강력한 프로토콜이 있습니다.  중요 한 차이점은 Windows 10 도메인 조인과 Azure AD 조인의 경우 X509 컴퓨터 인증서와 PRT 라는 새 자격 증명이 있습니다.  [여기 및](https://jairocadena.com/2016/01/18/how-domain-join-is-different-in-windows-10-with-azure-ad/) [여기](https://jairocadena.com/2016/02/01/azure-ad-join-what-happens-behind-the-scenes/)에서 모든 정보를 읽을 수 있습니다.  
+첫째, Windows 10 및 Windows Server 2016에서 AD FS에서 디바이스 등록 및 인증 더 이상 오로지 기반는 X509 인증서 사용자입니다.  더 나은 보안과 보다 원활한 사용자 환경을 제공 하는 새롭고 강력한 프로토콜이 있습니다.  중요 한 차이점은 Windows 10 도메인 조인과 Azure AD 조인의 경우 X509 컴퓨터 인증서와 PRT 라는 새 자격 증명이 있습니다.  [여기 및](https://jairocadena.com/2016/01/18/how-domain-join-is-different-in-windows-10-with-azure-ad/) [여기](https://jairocadena.com/2016/02/01/azure-ad-join-what-happens-behind-the-scenes/)에서 모든 정보를 읽을 수 있습니다.  
 
 둘째로, Windows 10 및 AD FS 2016는 [여기](https://jairocadena.com/2016/03/09/azure-ad-and-microsoft-passport-for-work-in-windows-10/) 와 [여기](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-passport-deployment/)에서 읽을 수 있는 Microsoft Passport for Work를 사용 하 여 사용자 인증을 지원 합니다.  
 
@@ -84,12 +84,12 @@ AD FS 액세스 제어 정책 구성에 대 한 자세한 내용은 [AD FS의 �
 #### <a name="devices-compliant-with-mdm-or-group-policies"></a>장치 호환 (MDM 또는 그룹 정책 사용)  
 규격 장치는 MDM에 등록 되었지만 MDM 정책과 호환 되는 등록 된 장치입니다. 준수 정보는 MDM을 사용 하 여 시작 되며 Azure AD에 기록 됩니다.  
 
-호환 장치 갖습니다는 **isCompliant** AD FS 클레임 값을 가진 **TRUE**합니다.    
+호환 디바이스 갖습니다는 **isCompliant** AD FS 클레임 값을 가진 **TRUE**합니다.    
 
 AD FS 2016 장치 및 조건부 액세스 클레임의 전체 목록은 [참조](#reference)를 참조 하세요.  
 
 
-## <a name="reference"></a>참조  
+## <a name="reference"></a>참고자료  
 #### <a name="complete-list-of-new-ad-fs-2016-and-device-claims"></a>새 AD FS 2016 및 장치 클레임의 전체 목록  
 
 * https://schemas.microsoft.com/ws/2014/01/identity/claims/anchorclaimtype  
