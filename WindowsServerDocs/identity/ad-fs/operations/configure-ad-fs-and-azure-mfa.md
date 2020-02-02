@@ -9,12 +9,12 @@ ms.date: 01/28/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: d00092ee2cd4e6cc74d48e08ad5c316c2b309ab4
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: a4f9d8fa71671c4ad4651008729d4cee53c8ee2f
+ms.sourcegitcommit: 74107a32efe1e53b36c938166600739a79dd0f51
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71357870"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76918255"
 ---
 # <a name="configure-azure-mfa-as-authentication-provider-with-ad-fs"></a>AD FS를 사용 하 여 Azure MFA를 인증 공급자로 구성
 
@@ -25,10 +25,10 @@ Windows Server 2012 r 2의 AD FS와 달리 AD FS 2016 Azure MFA 어댑터는 Azu
 
 ## <a name="registering-users-for-azure-mfa-with-ad-fs"></a>AD FS를 사용 하 여 Azure MFA에 사용자 등록
 
-AD FS는 전화 번호 또는 &#34;모바일 앱&#34;과 같은 Azure MFA 보안 확인 정보를 인라인 증명 또는 등록 하는 기능을 지원 하지 않습니다. 즉, 사용자는 [https://account.activedirectory.windowsazure.com/Proofup.aspx](https://account.activedirectory.windowsazure.com/Proofup.aspx) Azure MFA를 사용 하 여 AD FS 응용 프로그램에 인증 하기 전에 proofed을 받아야 합니다. Azure AD에서 아직 proofed 되지 않은 사용자가 AD FS에서 Azure MFA를 사용 하 여 인증 하려고 하면 AD FS 오류가 발생 합니다.  AD FS 관리자는이 오류 환경을 사용자 지정 하 여 사용자가 대신 검사 페이지를 안내할 수 있습니다.  이 작업은 onload 사용자 지정을 사용 하 여 AD FS 페이지 내의 오류 메시지 문자열을 검색 하 고 사용자에 게 방문할 [https://aka.ms/mfasetup](https://aka.ms/mfasetup)수 있는 새 메시지를 표시 한 다음 인증을 다시 시도할 수 있습니다. 자세한 지침은이 문서 아래에 있는 "사용자에 게 MFA 확인 방법 등록을 안내 하는 AD FS 웹 페이지 사용자 지정"을 참조 하세요.
+AD FS는 전화 번호 또는 &#34;모바일 앱&#34;과 같은 Azure MFA 보안 확인 정보를 인라인 증명 또는 등록 하는 기능을 지원 하지 않습니다. 즉, 사용자는 Azure MFA를 사용 하 여 AD FS 응용 프로그램에 인증 하기 전에 [https://account.activedirectory.windowsazure.com/Proofup.aspx](https://account.activedirectory.windowsazure.com/Proofup.aspx) 를 방문 하 여 proofed을 받아야 합니다. Azure AD에서 아직 proofed 되지 않은 사용자가 AD FS에서 Azure MFA를 사용 하 여 인증 하려고 하면 AD FS 오류가 발생 합니다.  AD FS 관리자는이 오류 환경을 사용자 지정 하 여 사용자가 대신 검사 페이지를 안내할 수 있습니다.  이 작업은 onload 사용자 지정을 사용 하 여 AD FS 페이지 내의 오류 메시지 문자열을 검색 하 고 새 메시지를 표시 하 여 사용자가 [https://aka.ms/mfasetup](https://aka.ms/mfasetup)를 방문한 다음 인증을 다시 시도할 수 있도록 안내 합니다. 자세한 지침은이 문서 아래에 있는 "사용자에 게 MFA 확인 방법 등록을 안내 하는 AD FS 웹 페이지 사용자 지정"을 참조 하세요.
 
 >[!NOTE]
-> 이전에는 사용자가 등록을 위해 MFA를 사용 하 여 [https://account.activedirectory.windowsazure.com/Proofup.aspx](https://account.activedirectory.windowsazure.com/Proofup.aspx)인증 해야 했습니다 (예: [https://aka.ms/mfasetup](https://aka.ms/mfasetup)바로 가기를 통해 방문).  이제 아직 MFA 확인 정보를 등록 하지 않은 AD FS 사용자는 기본 인증 (예:&#34;Windows 통합 인증 또는 AD를 [https://aka.ms/mfasetup](https://aka.ms/mfasetup) 통해 사용자 이름 및 암호)만 사용 하 여 바로 가기를 통해 Azure ad s 검사 페이지에 액세스할 수 있습니다. FS 웹 페이지).  사용자에 게 구성 된 확인 방법이 없는 경우 Azure AD는 사용자에 게 추가 보안 확인 &#34;&#34;을 위해이 계정을 설정 해야 한다는 메시지가 표시 되는 인라인 등록을 수행 합니다. 그러면 사용자는 다음을 수행할 수 있습니다. 지금&#34;설정 &#34;하려면 선택 합니다.
+> 이전에는 사용자가 등록을 위해 MFA를 사용 하 여 인증 해야 했습니다 (예: 바로 가기 [https://aka.ms/mfasetup](https://aka.ms/mfasetup)를 통해 [https://account.activedirectory.windowsazure.com/Proofup.aspx](https://account.activedirectory.windowsazure.com/Proofup.aspx)).  이제 아직 MFA 확인 정보를 등록 하지 않은 AD FS 사용자는 기본 인증 (예:&#34;Windows 통합 인증 또는 AD FS 웹 페이지를 통해 사용자 이름 및 암호)만 사용 하 여 바로 가기 [https://aka.ms/mfasetup](https://aka.ms/mfasetup) 를 통해 Azure AD s 검사 페이지에 액세스할 수 있습니다.  사용자에 게 확인 방법이 구성 되어 있지 않은 경우 Azure AD는 사용자가 &#34;추가 보안 확인&#34;을 위해이 계정을 설정 하는 데 필요한 메시지를 표시 하는 인라인 등록을 수행 하 고, 사용자는 지금 &#34;&#34;설정 하도록 선택할 수 있습니다.
 > 이미 하나 이상의 MFA 확인 방법을 구성 하는 사용자에 게는 검사 페이지를 방문할 때 MFA를 제공 하 라는 메시지가 표시 됩니다.
 
 ## <a name="recommended-deployment-topologies"></a>권장 배포 토폴로지
@@ -44,7 +44,7 @@ AD FS를 사용 하 여 기본 인증으로 Azure MFA를 사용 하는 몇 가�
 
 이제 온-프레미스에서 MFA를 수행 하도록 Azure AD 도메인 설정을 구성 하 여이 작업을 &#34;수행할 수 있습니다&#34; ($True supportsmfa 설정).  이 구성에서는 Azure AD에서이를 요구 하는 조건부 액세스 시나리오에 대 &#34;한 추가&#34; 인증 또는 진정한 MFA를 수행 하 라는 메시지를 AD FS 수 있습니다.  
 
-위에서 설명한 것 처럼 아직 등록 하지 않은 모든 AD FS 사용자 (MFA 확인 정보 구성)를 방문 [https://aka.ms/mfasetup](https://aka.ms/mfasetup) 하 여 확인 정보를 구성 하 고 로그인을 다시 AD FS 시도 하려면 사용자 지정 된 AD FS 오류 페이지를 통해 메시지를 표시 해야 합니다.  
+위에서 설명한 것 처럼, 아직 등록 하지 않은 모든 AD FS 사용자 (MFA 확인 정보 구성)를 사용 [https://aka.ms/mfasetup](https://aka.ms/mfasetup) 하 여 사용자 지정 된 AD FS 오류 페이지를 통해 확인 정보를 구성한 다음 로그인 AD FS 다시 시도 하 라는 메시지가 표시 되어야 합니다.  
 Azure MFA는 단일 요소로 간주 되므로 초기 구성 후 사용자는 Azure AD에서 인증 정보를 관리 또는 업데이트 하는 추가 요소를 제공 하거나 MFA를 요구 하는 다른 리소스에 액세스 해야 합니다.
 
 >[!NOTE]
@@ -58,14 +58,14 @@ Set-AdfsClaimsProviderTrust -AnchorClaimType "http://schemas.xmlsoap.org/ws/2005
 
 이전에는 Office 365 또는 기타 신뢰 당사자에 대 한 AD FS에서 Azure MFA를 추가 인증 방법으로 사용할 수 있도록 하는 것이 가장 좋습니다. 복합 MFA를 수행 하도록 Azure AD를 구성 하는 것입니다 .이는 기본 인증이 AD FS에서 온-프레미스에서 수행 되 고 MFA는 tr입니다. Azure AD의 iggered 이제 도메인 지원 Smfa 설정이 $True으로 설정 된 경우 AD FS에서 Azure MFA를 추가 인증으로 사용할 수 있습니다.  
 
-위에서 설명한 것 처럼 아직 등록 하지 않은 모든 AD FS 사용자 (MFA 확인 정보 구성)를 방문 [https://aka.ms/mfasetup](https://aka.ms/mfasetup) 하 여 확인 정보를 구성 하 고 로그인을 다시 AD FS 시도 하려면 사용자 지정 된 AD FS 오류 페이지를 통해 메시지를 표시 해야 합니다.  
+위에서 설명한 것 처럼, 아직 등록 하지 않은 모든 AD FS 사용자 (MFA 확인 정보 구성)를 사용 [https://aka.ms/mfasetup](https://aka.ms/mfasetup) 하 여 사용자 지정 된 AD FS 오류 페이지를 통해 확인 정보를 구성한 다음 로그인 AD FS 다시 시도 하 라는 메시지가 표시 되어야 합니다.  
 
 ## <a name="pre-requisites"></a>필수 구성 요소
 
 AD fs 인증을 위해 Azure MFA를 사용 하는 경우 다음 필수 조건이 필요 합니다.  
   
 - [Azure Active Directory와 Azure 구독](https://azure.microsoft.com/pricing/free-trial/)합니다.  
-- [Azure Multi-factor Authentication](https://azure.microsoft.com/documentation/articles/multi-factor-authentication/) 
+- [Azure Multi-Factor Authentication](https://azure.microsoft.com/documentation/articles/multi-factor-authentication/) 
 
 
 > [!NOTE]
@@ -78,8 +78,8 @@ AD fs 인증을 위해 Azure MFA를 사용 하는 경우 다음 필수 조건이
 - 온-프레미스 환경이 [Azure AD와 페더레이션 합니다.](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-get-started-custom/#configuring-federation-with-ad-fs)  
 - [Windows PowerShell 용 Windows Azure Active Directory 모듈](https://docs.microsoft.com/powershell/module/Azuread/?view=azureadps-2.0)합니다.  
 - Azure AD PowerShell을 사용 하 여 구성에 Azure AD 인스턴스를 전역 관리자 권한이 있습니다.  
-- Azure MFA에 대 한 AD FS 팜을 구성 하려면 엔터프라이즈 관리자 자격 증명입니다.  
-  
+- Azure MFA에 대 한 AD FS 팜을 구성 하려면 엔터프라이즈 관리자 자격 증명입니다.
+
 ## <a name="configure-the-ad-fs-servers"></a>AD FS 서버를 구성 합니다.
 
 AD FS에 대 한 Azure MFA에 대 한 구성을 완료 하기 위해 설명 된 단계를 사용 하 여 각 AD FS 서버를 구성 해야 합니다. 
@@ -87,7 +87,7 @@ AD FS에 대 한 Azure MFA에 대 한 구성을 완료 하기 위해 설명 된 
 >[!NOTE]
 >이 단계에서 수행 되는 확인 **모든** 팜의 AD FS 서버입니다. 팜에 여러 AD FS 서버가 있는 경우 Azure AD PowerShell을 사용 하 여 필요한 구성을 원격으로 수행할 수 있습니다.  
 
-### <a name="step-1-generate-a-certificate-for-azure-mfa-on-each-ad-fs-server-using-the-new-adfsazuremfatenantcertificate-cmdlet"></a>1단계: Cmdlet을 사용 하 여 각 AD FS 서버에서 Azure MFA에 `New-AdfsAzureMfaTenantCertificate` 대 한 인증서를 생성 합니다.
+### <a name="step-1-generate-a-certificate-for-azure-mfa-on-each-ad-fs-server-using-the-new-adfsazuremfatenantcertificate-cmdlet"></a>1 단계: `New-AdfsAzureMfaTenantCertificate` cmdlet을 사용 하 여 각 AD FS 서버에서 Azure MFA에 대 한 인증서 생성
 
 가장 먼저 해야 할 인증서를 사용 하 여 Azure MFA에 대 한 생성 됩니다.  이렇게 하려면 PowerShell을 사용 합니다.  로컬 컴퓨터 인증서 저장소에 생성 된 인증서를 찾을 수 및 Azure AD 디렉터리의 TenantID를 포함 하는 주체 이름으로 표시 되어 있습니다.
 
@@ -98,12 +98,12 @@ TenantID Azure AD에서 디렉터리의 이름의 않음을 유의 하십시오.
 
 ![AD FS와 MFA](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA1.PNG)  
   
-### <a name="step-2-add-the-new-credentials-to-the-azure-multi-factor-auth-client-service-principal"></a>2단계: Azure Multi-factor Auth 클라이언트 서비스 주체에 새 자격 증명 추가
+### <a name="step-2-add-the-new-credentials-to-the-azure-multi-factor-auth-client-service-principal"></a>2 단계: Azure Multi-factor Auth 클라이언트 서비스 주체에 새 자격 증명 추가
 
 AD FS 서버가 Azure Multi-factor Auth 클라이언트와 통신할 수 있도록 하려면 Azure Multi-factor Auth 클라이언트에 대 한 서비스 주체에 자격 증명을 추가 해야 합니다. 사용 하 여 생성 된 인증서는 `New-AdfsAzureMFaTenantCertificate` cmdlet이 자격이 증명으로 사용 합니다. PowerShell을 사용 하 여 Azure Multi-factor Auth 클라이언트 서비스 주체에 새 자격 증명을 추가 하려면 다음을 수행 합니다.  
 
 > [!NOTE]
-> 이 단계를 완료 하려면를 사용 하 여 `Connect-MsolService`PowerShell을 통해 Azure AD의 인스턴스에 연결 해야 합니다.  이 단계에서는 PowerShell을 통해 이미 연결 되어 가정 합니다.  자세한 내용은를 [ `Connect-MsolService`참조 하십시오.](https://msdn.microsoft.com/library/dn194123.aspx)  
+> 이 단계를 완료 하려면 `Connect-MsolService`을 사용 하 여 PowerShell을 사용 하 여 Azure AD의 인스턴스에 연결 해야 합니다.  이 단계에서는 PowerShell을 통해 이미 연결 되어 가정 합니다.  자세한 내용은`Connect-MsolService`를 참조 [하세요.](https://msdn.microsoft.com/library/dn194123.aspx)  
 
 **Azure Multi-factor Auth 클라이언트에 대 한 새 자격 증명으로 인증서를 설정 합니다.**  
 
@@ -117,19 +117,34 @@ AD FS 서버가 Azure Multi-factor Auth 클라이언트와 통신할 수 있도�
   
 ## <a name="configure-the-ad-fs-farm"></a>AD FS 팜 구성  
   
-각 AD FS 서버에서 이전 섹션을 완료 한 후 실행 해야 합니다는 `Set-AdfsAzureMfaTenant` cmdlet입니다.  
-  
-이 cmdlet은 AD FS 팜에 대해 한 번만 실행 해야 합니다.  PowerShell을 사용 하 여이 단계를 완료 합니다.
-  
-> [!NOTE]  
-> 이러한 변경 내용이 적용 되기 전에 팜의 각 서버에서 AD FS 서비스를 다시 시작 해야 합니다.  
-  
-    Set-AdfsAzureMfaTenant -TenantId <tenant ID> -ClientId 981f26a1-7f43-403b-a875-f8b09b8cd720  
+각 AD FS 서버에서 이전 섹션을 완료 한 후에는 [AdfsAzureMfaTenant](https://docs.microsoft.com/powershell/module/adfs/export-adfsauthenticationproviderconfigurationdata) cmdlet을 사용 하 여 Azure 테 넌 트 정보를 설정 합니다. 이 cmdlet은 AD FS 팜에 대해 한 번만 실행 해야 합니다.
 
-![AD FS와 MFA](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA5.png)  
-  
-그런 다음 Azure MFA를 인트라넷 및 엑스트라넷 사용에 대 한 기본 인증 방법으로 사용할 수 있는지 표시 됩니다.    
-  
+PowerShell 프롬프트를 열고 [AdfsAzureMfaTenant](https://docs.microsoft.com/powershell/module/adfs/export-adfsauthenticationproviderconfigurationdata) cmdlet을 사용 하 여 사용자 고유의 *tenantId* 를 입력 합니다. Microsoft Azure Government 클라우드를 사용 하는 고객의 경우 `-Environment USGov` 매개 변수를 추가 합니다.
+
+> [!NOTE]
+> 이러한 변경 내용을 적용 하려면 팜의 각 서버에서 AD FS 서비스를 다시 시작 해야 합니다. 최소 영향을 위해 각 AD FS 서버를 NLB 회전에서 한 번에 하나씩 가져와 모든 연결이 드레이닝 될 때까지 기다립니다.
+
+```powershell
+Set-AdfsAzureMfaTenant -TenantId <tenant ID> -ClientId 981f26a1-7f43-403b-a875-f8b09b8cd720
+```
+
+![AD FS와 MFA](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA5.png)
+
+최신 Service Pack 없는 Windows Server는 [AdfsAzureMfaTenant](https://docs.microsoft.com/powershell/module/adfs/export-adfsauthenticationproviderconfigurationdata) cmdlet에 대 한 `-Environment` 매개 변수를 지원 하지 않습니다. Azure Government 클라우드를 사용 하 고 이전 단계에서 `-Environment` 매개 변수가 누락 되어 Azure 테 넌 트를 구성 하지 못한 경우 다음 단계를 완료 하 여 레지스트리 항목을 수동으로 만듭니다. 이전 cmdlet이 테 넌 트 정보를 올바르게 등록 했거나 Azure Government 클라우드에 있지 않은 경우 다음 단계를 건너뜁니다.
+
+1. AD FS 서버에서 **레지스트리 편집기** 를 엽니다.
+1. `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ADFS`으로 이동합니다. 다음 레지스트리 키 값을 만듭니다.
+
+    | 레지스트리 키       | Value |
+    |--------------------|-----------------------------------|
+    | SasUrl             | https://adnotifications.windowsazure.us/StrongAuthenticationService.svc/Connector |
+    | StsUrl             | https://login.microsoftonline.us |
+    | ResourceUri        | https://adnotifications.windowsazure.us/StrongAuthenticationService.svc/Connector |
+
+1. 팜의 각 서버에서 AD FS 서비스를 다시 시작 해야 변경 내용이 적용 됩니다. 최소 영향을 위해 각 AD FS 서버를 NLB 회전에서 한 번에 하나씩 가져와 모든 연결이 드레이닝 될 때까지 기다립니다.
+
+그런 다음 Azure MFA를 인트라넷 및 엑스트라넷 사용에 대 한 기본 인증 방법으로 사용할 수 있는지 표시 됩니다.
+
 ![AD FS와 MFA](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA6.png)  
 
 ## <a name="renew-and-manage-ad-fs-azure-mfa-certificates"></a>AD FS Azure MFA 인증서 갱신 및 관리
@@ -153,13 +168,13 @@ PS C:\> $newcert = New-AdfsAzureMfaTenantCertificate -TenantId <tenant id such a
 
 ### <a name="configure-each-new-ad-fs-azure-mfa-certificate-in-the-azure-ad-tenant"></a>Azure AD 테 넌 트에서 새로운 새 AD FS Azure MFA 인증서를 구성 합니다.
 
-Azure ad PowerShell 모듈을 사용 하 여 각 AD FS 서버의 새 인증서에 대해 다음과 같이 azure ad 테 넌 트 설정을 업데이트 합니다 (참고: 다음 명령을 실행 하려면 먼저를 사용 하 여 `Connect-MsolService` 테 넌 트에 연결 해야 함).
+Azure AD PowerShell 모듈을 사용 하 여 각 AD FS 서버의 새 인증서에 대해 다음과 같이 Azure AD 테 넌 트 설정을 업데이트 합니다 (참고: 다음 명령을 실행 하려면 먼저 `Connect-MsolService`를 사용 하 여 테 넌 트에 연결 해야 함).
 
 ```
 PS C:/> New-MsolServicePrincipalCredential -AppPrincipalId 981f26a1-7f43-403b-a875-f8b09b8cd720 -Type Asymmetric -Usage Verify -Value $newcert
 ```
 
-`$certbase64`새 인증서입니다.  Base64 인코딩 인증서는 개인 키가 없는 인증서를 DER로 인코딩된 파일로 내보내고 메모장에서 연 다음 PowerShell 세션에 복사/붙여넣기 하 고 변수에 `$certbase64`할당 하 여 가져올 수 있습니다.
+새 인증서가 `$certbase64` 됩니다.  Base64 인코딩 인증서는 개인 키 없이 인증서를 DER로 인코딩된 파일로 내보내고 메모장에서 연 다음 PowerShell 세션에 복사/붙여넣기 하 고 변수 `$certbase64`에 할당 하 여 가져올 수 있습니다.
 
 ### <a name="verify-that-the-new-certificates-will-be-used-for-azure-mfa"></a>새 인증서가 Azure MFA에 사용 되는지 확인 합니다.
 
@@ -274,7 +289,7 @@ New expiration date: 2/27/2020 2:16:07 AM.
     //End Custom Code
     ```
     > [!IMPORTANT]
-    > "< YOUR_DOMAIN_NAME_HERE >"를 변경 해야 합니다. 도메인 이름을 사용 합니다. 예: `var domain_hint = "contoso.com";`
+    > "< YOUR_DOMAIN_NAME_HERE >";을 (를) 변경 해야 합니다. 도메인 이름을 사용 합니다. 예를 들면 다음과 같습니다. `var domain_hint = "contoso.com";`
     
 5. Onload 파일 저장
 6. 다음 Windows PowerShell 명령을 입력 하 여 사용자 지정 테마로 onload 파일을 가져옵니다.

@@ -9,12 +9,12 @@ manager: jgerend
 ms.date: 01/28/2020
 ms.localizationpriority: medium
 ms.prod: windows-server
-ms.openlocfilehash: 551f97d257b7ea3d05cdded73421d2e5c088171e
-ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
+ms.openlocfilehash: 1a31fac97a6697909774a084045ad5746b7241f3
+ms.sourcegitcommit: 74107a32efe1e53b36c938166600739a79dd0f51
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76830619"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76918266"
 ---
 # <a name="deploy-azure-virtual-machines-from-within-windows-admin-center"></a>Windows 관리 센터 내에서 Azure virtual machines 배포
 
@@ -48,14 +48,19 @@ Azure VM 배포 단계와 마법사는 시나리오에 따라 달라 집니다. 
 
 ### <a name="deploying-azure-vms-as-part-of-storage-migration-service"></a>저장소 마이그레이션 서비스의 일부로 Azure Vm 배포
 
-Windows 관리 센터 내의 *Storage Migration Service* 도구에서 하나 이상의 원본 서버에 대 한 인벤토리를 수행 합니다. *데이터 전송* 단계를 완료 한 후 *대상 지정* 페이지에서 **새 Azure vm 만들기** 를 선택 하 고 **VM 만들기**를 클릭 합니다. 이는 Windows Server 2012 R2, Windows Server 2016 또는 Windows Server 2019 Azure VM을 마이그레이션의 대상으로 선택 하는 단계별 만들기 도구를 시작 합니다. Storage Migration Service는 원본과 일치 하도록 권장 되는 VM 크기를 제공 하지만, **모든 크기 보기**를 클릭 하 여 재정의할 수 있습니다. 또한 원본 서버 데이터는 새 Azure VM을 Active Directory 도메인에 가입 하는 것 뿐만 아니라 관리 디스크와 해당 파일 시스템을 자동으로 구성 하는 데 사용 됩니다. VM이 Windows Server 2019 (권장) 인 경우 Windows 관리 센터에서 저장소 마이그레이션 서비스 프록시 기능을 설치 합니다. Azure VM을 만든 후에는 Windows 관리 센터에서 일반 저장소 마이그레이션 서비스 전송 워크플로로 돌아갑니다.  
-
+1. Windows 관리 센터 내의 *Storage Migration Service* 도구에서 하나 이상의 원본 서버에 대 한 인벤토리를 수행 합니다.
+2. *데이터 전송* 단계를 완료 한 후 *대상 지정* 페이지에서 **새 Azure vm 만들기** 를 선택 하 고 **VM 만들기**를 클릭 합니다.<br><br>
+이는 Windows Server 2012 R2, Windows Server 2016 또는 Windows Server 2019 Azure VM을 마이그레이션의 대상으로 선택 하는 단계별 만들기 도구를 시작 합니다. Storage Migration Service는 원본과 일치 하도록 권장 되는 VM 크기를 제공 하지만, **모든 크기 보기**를 클릭 하 여 재정의할 수 있습니다.
+<br><br>또한 원본 서버 데이터는 새 Azure VM을 Active Directory 도메인에 가입 하는 것 뿐만 아니라 관리 디스크와 해당 파일 시스템을 자동으로 구성 하는 데 사용 됩니다. VM이 Windows Server 2019 (권장) 인 경우 Windows 관리 센터에서 저장소 마이그레이션 서비스 프록시 기능을 설치 합니다. Azure VM을 만든 후에는 Windows 관리 센터에서 일반 저장소 마이그레이션 서비스 전송 워크플로로 돌아갑니다.  
 
 ### <a name="deploying-azure-vms-as-part-of-storage-replica"></a>저장소 복제본의 일부로 Azure Vm 배포
 
-Windows 관리 센터 내의 *저장소 복제본* 도구 *파트너 관계* 탭에서 **새로 만들기** 를 클릭 한 다음 *다른 서버와 복제* 에서 **새 Azure VM 사용** 을 클릭 하 고 **다음**을 클릭 합니다. 원본 서버 정보 및 복제 그룹 이름을 지정 하 고 **다음**을 클릭 합니다. 그러면 Windows Server 2016 또는 Windows Server 2019 Azure VM을 마이그레이션 원본의 대상으로 자동으로 선택 하는 프로세스가 시작 됩니다. Storage Migration Service는 원본에 맞게 VM 크기를 권장 하지만 **모든 크기 보기**를 선택 하 여이를 재정의할 수 있습니다. 인벤토리 데이터는 새 Azure VM을 Active Directory 도메인에 가입 하는 것 뿐만 아니라 관리 디스크와 해당 파일 시스템을 자동으로 구성 하는 데 사용 됩니다. Windows 관리 센터에서 Azure VM을 만든 후 복제 그룹 이름을 제공 하 고 **만들기**를 클릭 합니다. 그러면 Windows 관리 센터에서 일반 저장소 복제본 초기 동기화 프로세스를 시작 하 여 데이터 보호를 시작 합니다.
-
+1. Windows 관리 센터 내의 *저장소 복제본* 도구 *파트너 관계* 탭에서 **새로 만들기** 를 선택한 다음 *다른 서버와 복제* 에서 **새 Azure VM 사용** 을 선택 하 고 **다음**을 선택 합니다.
+2. 원본 서버 정보 및 복제 그룹 이름을 지정 하 고 **다음**을 선택 합니다.<br><br>
+그러면 Windows Server 2016 또는 Windows Server 2019 Azure VM을 마이그레이션 원본의 대상으로 자동으로 선택 하는 프로세스가 시작 됩니다. Storage Migration Service는 원본에 맞게 VM 크기를 권장 하지만 **모든 크기 보기**를 선택 하 여이를 재정의할 수 있습니다. 인벤토리 데이터는 새 Azure VM을 Active Directory 도메인에 가입 하는 것 뿐만 아니라 관리 디스크와 해당 파일 시스템을 자동으로 구성 하는 데 사용 됩니다. 
+3. Windows 관리 센터에서 Azure VM을 만든 후 복제 그룹 이름을 제공 하 고 **만들기**를 선택 합니다. 그러면 Windows 관리 센터에서 일반 저장소 복제본 초기 동기화 프로세스를 시작 하 여 데이터 보호를 시작 합니다.
 
 ### <a name="deploying-a-new-standalone-azure-vm"></a>새 독립 실행형 Azure VM 배포
 
-Windows Admin Center 내의 *모든 연결* 페이지에서 **추가**로 이동하여 **Azure VM** 아래에서 **새로 만들기**를 선택합니다. 이를 통해 Windows Server 2012 R2, Windows Server 2016 또는 Windows Server 2019 Azure VM을 선택 하 고, 크기를 선택 하 고, 관리 디스크를 추가 하 고, 선택적으로 Active Directory 도메인에 가입할 수 있는 단계별 작성 도구를 시작 합니다.
+1. Windows 관리 센터의 *모든 연결* 페이지에서 **추가**를 선택 합니다.
+2. *AZURE VM* 섹션에서 **새로 만들기**를 선택 합니다.<br><br> 이를 통해 Windows Server 2012 R2, Windows Server 2016 또는 Windows Server 2019 Azure VM을 선택 하 고, 크기를 선택 하 고, 관리 디스크를 추가 하 고, 선택적으로 Active Directory 도메인에 가입할 수 있는 단계별 작성 도구를 시작 합니다.

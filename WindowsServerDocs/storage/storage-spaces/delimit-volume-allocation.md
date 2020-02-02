@@ -6,12 +6,12 @@ ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 03/29/2018
-ms.openlocfilehash: faf9547833764e9075e86515d1f486a5a3f61ff8
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 19e5a38ca406878b7dbc5a187b0057e97e4fe2d1
+ms.sourcegitcommit: 74107a32efe1e53b36c938166600739a79dd0f51
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70872084"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76918299"
 ---
 # <a name="delimit-the-allocation-of-volumes-in-storage-spaces-direct"></a>스토리지 공간 다이렉트 볼륨의 할당을 구분 합니다.
 > 적용 대상: Windows Server 2019
@@ -21,7 +21,7 @@ Windows Server 2019에는 스토리지 공간 다이렉트 볼륨의 할당을 �
    > [!IMPORTANT]
    > 이 기능은 Windows Server 2019에 새로 있습니다. Windows Server 2016에서는 사용할 수 없습니다. 
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>전제 조건
 
 ### <a name="green-checkmark-iconmediadelimit-volume-allocationsupportedpng-consider-using-this-option-if"></a>![녹색 확인 표시 아이콘입니다.](media/delimit-volume-allocation/supported.png) 다음 경우에이 옵션을 사용 하는 것이 좋습니다.
 
@@ -53,17 +53,12 @@ Windows Server 2019에는 스토리지 공간 다이렉트 볼륨의 할당을 �
 
 ### <a name="new-delimited-allocation"></a>새: 구분 된 할당
 
-구분 된 할당을 사용 하 여 사용할 서버의 하위 집합을 지정 합니다 (3 방향 미러의 경우 3 개 이상). 이 볼륨은 이전과 같이 세 번 복사 된 줄임로 나뉩니다. 하지만 모든 서버에서 할당 하는 대신 **줄임는 지정한 서버의 하위 집합에만 할당 됩니다**.
+구분 된 할당을 사용 하 여 사용할 서버의 하위 집합을 지정 합니다 (최소 4 개). 이 볼륨은 이전과 같이 세 번 복사 된 줄임로 나뉩니다. 하지만 모든 서버에서 할당 하는 대신 **줄임는 지정한 서버의 하위 집합에만 할당 됩니다**.
 
-![3 개의 줄임 스택으로 나뉘어 6 대의 서버에만 배포 되는 볼륨을 보여 주는 다이어그램입니다.](media/delimit-volume-allocation/delimited-allocation.png)
+예를 들어 8 개 노드 클러스터 (노드 1 ~ 8)가 있는 경우 노드 1, 2, 3, 4의 디스크에만 위치할 볼륨을 지정할 수 있습니다.
+#### <a name="advantages"></a>이점
 
-#### <a name="advantages"></a>장점
-
-이 할당을 사용 하는 경우 볼륨은 3 개의 동시 오류를 계속 유지 합니다. 즉,이 경우에는 유지 확률이 0% (일반 할당 사용)에서 95% (구분 된 할당 사용)로 증가할 수 있습니다. 이는 서버 4, 5 또는 6에 의존 하지 않기 때문에 오류가 발생 해도 영향을 받지 않기 때문입니다.
-
-위의 예에서 서버 1, 3, 5는 동시에 실패 합니다. 구분 된 할당은 서버 2에 모든 슬 래 브의 복사본이 포함 되어 있음을 확인 했으므로 모든 슬 래 브는 복사본을 갖고 있으며 볼륨은 온라인 상태를 유지 하 고 액세스할 수 있습니다.
-
-![빨간색으로 강조 표시 된 6 개의 서버를 보여 주는 다이어그램 이지만 전체 볼륨은 녹색입니다.](media/delimit-volume-allocation/delimited-does-survive.png)
+예제 할당을 사용 하는 경우 볼륨은 3 개의 동시 오류를 존속 시킬 가능성이 높습니다. 노드 1, 2, 6이 다운 되 면 볼륨의 데이터 복사본 3 개를 포함 하는 노드 2 개만 다운 되 고 볼륨이 온라인 상태로 유지 됩니다.
 
 유지 확률은 서버 수 및 기타 요인에 따라 달라 집니다. 자세한 내용은 [분석](#analysis) 을 참조 하세요.
 
@@ -79,7 +74,7 @@ Windows Server 2019에는 스토리지 공간 다이렉트 볼륨의 할당을 �
 
 ## <a name="usage-in-powershell"></a>PowerShell에서 사용
 
-`New-Volume` Cmdlet을 사용 하 여 스토리지 공간 다이렉트에서 볼륨을 만들 수 있습니다.
+`New-Volume` cmdlet을 사용 하 여 스토리지 공간 다이렉트에서 볼륨을 만들 수 있습니다.
 
 예를 들어 일반 3 방향 미러 볼륨을 만들려면 다음을 수행 합니다.
 
@@ -91,7 +86,7 @@ New-Volume -FriendlyName "MyRegularVolume" -Size 100GB
 
 3 방향 미러 볼륨을 만들고 해당 할당을 구분 하려면 다음을 수행 합니다.
 
-1. 먼저 클러스터의 서버를 변수에 `$Servers`할당 합니다.
+1. 먼저 클러스터의 서버를 `$Servers`변수에 할당 합니다.
 
     ```PowerShell
     $Servers = Get-StorageFaultDomain -Type StorageScaleUnit | Sort FriendlyName
@@ -100,36 +95,36 @@ New-Volume -FriendlyName "MyRegularVolume" -Size 100GB
    > [!TIP]
    > 스토리지 공간 다이렉트에서 ' 저장소 배율 단위 ' 라는 용어는 직접 연결 된 드라이브 및 드라이브와 직접 연결 된 외부 인클로저를 포함 하 여 한 서버에 연결 된 모든 원시 저장소를 나타냅니다. 이 컨텍스트에서는 ' server '와 같습니다.
 
-2. 새 `-StorageFaultDomainsToUse` 매개 변수와 함께 사용할 서버를 지정 하 고를로 `$Servers`인덱싱합니다. 예를 들어 첫 번째, 두 번째 및 세 번째 서버 (인덱스 0, 1, 2)에 대 한 할당을 구분 하려면 다음을 수행 합니다.
+2. 새 `-StorageFaultDomainsToUse` 매개 변수와 함께 사용할 서버를 지정 하 고 `$Servers`에 인덱싱을 지정 합니다. 예를 들어 첫 번째, 두 번째, 세 번째 및 네 번째 서버 (인덱스 0, 1, 2, 3)에 대 한 할당을 구분 하려면 다음을 수행 합니다.
 
     ```PowerShell
-    New-Volume -FriendlyName "MyVolume" -Size 100GB -StorageFaultDomainsToUse $Servers[0,1,2]
+    New-Volume -FriendlyName "MyVolume" -Size 100GB -StorageFaultDomainsToUse $Servers[0,1,2,3]
     ```
 
 ### <a name="see-a-delimited-allocation"></a>구분 된 할당 보기
 
-*Myvolume* 을 할당 `Get-VirtualDiskFootprintBySSU.ps1` 하는 방법을 확인 하려면 [부록](#appendix):
+*Myvolume* 을 할당 하는 방법을 확인 하려면 [부록](#appendix)에서 `Get-VirtualDiskFootprintBySSU.ps1` 스크립트를 사용 합니다.
 
 ```PowerShell
 PS C:\> .\Get-VirtualDiskFootprintBySSU.ps1
 
 VirtualDiskFriendlyName TotalFootprint Server1 Server2 Server3 Server4 Server5 Server6
 ----------------------- -------------- ------- ------- ------- ------- ------- -------
-MyVolume                300 GB         100 GB  100 GB  100 GB  0       0       0      
+MyVolume                300 GB         100 GB  100 GB  100 GB  100 GB  0       0      
 ```
 
-Server1, Server2 및 Server3는 *Myvolume*의 줄임 포함 합니다.
+Server1, Server2, Server3 및 Server4만 *Myvolume*의 줄임를 포함 합니다.
 
 ### <a name="change-a-delimited-allocation"></a>구분 된 할당 변경
 
-새 `Add-StorageFaultDomain` 및`Remove-StorageFaultDomain` cmdlet을 사용 하 여 할당을 구분 하는 방법을 변경할 수 있습니다.
+새 `Add-StorageFaultDomain` 및 `Remove-StorageFaultDomain` cmdlet을 사용 하 여 할당을 구분 하는 방법을 변경할 수 있습니다.
 
 예를 들어 *Myvolume* 을 한 서버에서 이동 하려면 다음을 수행 합니다.
 
-1. 네 번째 서버가 *Myvolume*의 줄임을 저장할 **수** 있도록 지정 합니다.
+1. 다섯 번째 서버가 *Myvolume*의 줄임을 저장할 **수** 있도록 지정 합니다.
 
     ```PowerShell
-    Get-VirtualDisk MyVolume | Add-StorageFaultDomain -StorageFaultDomains $Servers[3]
+    Get-VirtualDisk MyVolume | Add-StorageFaultDomain -StorageFaultDomains $Servers[4]
     ```
 
 2. 첫 번째 서버가 *Myvolume*의 줄임을 저장할 **수** 없도록 지정 합니다.
@@ -144,66 +139,48 @@ Server1, Server2 및 Server3는 *Myvolume*의 줄임 포함 합니다.
     Get-StoragePool S2D* | Optimize-StoragePool
     ```
 
-![서버 1, 2, 3에서 서버 2, 3, 4로의 줄임 마이그레이션 집단를 보여 주는 다이어그램입니다.](media/delimit-volume-allocation/move.gif)
+`Get-StorageJob`를 사용 하 여 리 밸런스의 진행률을 모니터링할 수 있습니다.
 
-를 사용 `Get-StorageJob`하 여 리 밸런스의 진행률을 모니터링할 수 있습니다.
-
-완료 되 면 *myvolume* 이를 실행 `Get-VirtualDiskFootprintBySSU.ps1` 하 여 이동 되었는지 확인 합니다.
+완료 되 면 `Get-VirtualDiskFootprintBySSU.ps1`를 다시 실행 하 여 *Myvolume* 이 이동 했는지 확인 합니다.
 
 ```PowerShell
 PS C:\> .\Get-VirtualDiskFootprintBySSU.ps1
 
 VirtualDiskFriendlyName TotalFootprint Server1 Server2 Server3 Server4 Server5 Server6
 ----------------------- -------------- ------- ------- ------- ------- ------- -------
-MyVolume                300 GB         0       100 GB  100 GB  100 GB  0       0      
+MyVolume                300 GB         0       100 GB  100 GB  100 GB  100 GB  0      
 ```
 
-S e r v e r 1에 *Myvolume* 의 줄임이 더 이상 포함 되지 않습니다. 대신 Server04이 수행 합니다.
+S e r v e r 1에 *Myvolume* 의 줄임이 더 이상 포함 되지 않습니다. 대신 Server5이 수행 합니다.
 
-## <a name="best-practices"></a>모범 사례
+## <a name="best-practices"></a>최선의 구현 방법
 
 구분 된 볼륨 할당을 사용할 때 따라야 할 모범 사례는 다음과 같습니다.
 
-### <a name="choose-three-servers"></a>3 개 서버 선택
+### <a name="choose-four-servers"></a>4 대의 서버 선택
 
-3 방향 미러 볼륨을 세 개의 서버로 구분 합니다.
+3 방향 미러 볼륨을 각각 4 개의 서버로 구분 합니다.
 
 ### <a name="balance-storage"></a>저장소 잔액
 
 각 서버에 할당 된 저장소의 크기를 조정 하 여 볼륨 크기를 고려 합니다.
 
-### <a name="every-delimited-allocation-unique"></a>고유 하 게 구분 된 모든 할당
+### <a name="stagger-delimited-allocation-volumes"></a>분리 된 할당 볼륨
 
-내결함성을 최대화 하려면 각 볼륨의 할당을 고유 하 게 지정 합니다. 즉, *모든* 서버를 다른 볼륨과 공유 하지 않습니다. 즉, 일부 중복이 보장 됩니다. N 개 서버를 사용 하는 경우 "N 선택 3" 고유 조합이 있습니다. 몇 가지 일반적인 클러스터 크기를 의미 합니다.
+내결함성을 최대화 하려면 각 볼륨의 할당을 고유 하 게 지정 합니다. 즉, *모든* 서버를 다른 볼륨과 공유 하지 않습니다. 즉, 일부 중복이 보장 됩니다. 
 
-| 서버 수 (N) | 고유 하 게 구분 된 할당 수 (N 선택 3) |
-|-----------------------|-----------------------------------------------------|
-| 6                     | 20                                                  |
-| 8                     | 56                                                  |
-| 12                    | 220                                                 |
-| 16                    | 560                                                 |
+예를 들어 8 개 노드 시스템: 볼륨 1: 서버 1, 2, 3, 4 볼륨 2: 서버 5, 6, 7, 8 볼륨 3: 서버 3, 4, 5, 6 볼륨 4: 서버 1, 2, 7, 8
 
-   > [!TIP]
-   > 이러한 combinatorics에 대 한 유용한 검토 [를 고려 하 고 표기법을 선택](https://betterexplained.com/articles/easy-permutations-and-combinations/)합니다.
-
-내결함성을 최대화 하는 예제는 다음과 같습니다. 모든 볼륨에는 고유한 구분 된 할당이 있습니다.
-
-![고유 할당](media/delimit-volume-allocation/unique-allocation.png)
-
-반대로, 다음 예에서 처음 3 개 볼륨은 동일 하 게 분리 된 할당 (서버 1, 2, 3)을 사용 하 고 마지막 3 개 볼륨은 동일 하 게 분리 된 할당 (서버 4, 5, 6)을 사용 합니다. 이 경우 내결함성이 최대화 되지 않습니다. 3 개의 서버가 실패 하면 여러 볼륨이 오프 라인으로 전환 되어 한 번에 액세스할 수 없게 됩니다.
-
-![고유 하지 않은 할당](media/delimit-volume-allocation/non-unique-allocation.png)
-
-## <a name="analysis"></a>분석
+## <a name="analysis"></a>분석과
 
 이 섹션에서는 오류가 발생 한 횟수와 클러스터 크기의 기능으로 볼륨이 온라인 상태가 되 고 온라인 상태를 유지 하 고 액세스할 수 있는 전체 저장소의 예상 비율에 액세스할 수 있는 수학적 확률을 파생 합니다.
 
    > [!NOTE]
-   > 이 섹션은 선택적으로 읽을 수 있습니다. 수학을 keen 하는 경우에는를 읽어 보세요. 그러나 그렇지 않은 경우 걱정 하지 마세요. [PowerShell](#usage-in-powershell) 및 [모범 사례](#best-practices) 를 사용 하는 것은 분리 된 할당을 성공적으로 구현 하는 데 필요 합니다.
+   > 이 섹션은 선택적으로 읽을 수 있습니다. 수학을 keen 하는 경우에는를 읽어 보세요. 그러나 그렇지 않은 경우에는 걱정 하지 마세요. [PowerShell의 사용량과](#usage-in-powershell) [모범 사례](#best-practices) 는 모두 구분 된 할당을 성공적으로 구현 해야 한다는 것입니다.
 
 ### <a name="up-to-two-failures-is-always-okay"></a>최대 2 개의 실패는 항상 정상입니다.
 
-3 방향 미러 볼륨의 경우에는 할당에 관계 없이 [이러한 예제](storage-spaces-fault-tolerance.md#examples) 에서 보여 주는 것 처럼 동시에 최대 두 번의 장애를 발생 시킬 수 있습니다. 두 드라이브에 오류가 발생 하거나 두 개의 서버에서 오류가 발생 하거나, 두 서버 중 하나에서 오류가 발생 하는 경우 모든 3 방향 미러 볼륨은 온라인 상태를 유지 하 고 일반 할당을 통해 액세스할 수 있습니다
+3 방향 미러 볼륨은 할당에 관계 없이 동시에 최대 두 번의 오류를 발생 시킬 수 있습니다. 두 드라이브에 오류가 발생 하거나 두 개의 서버에서 오류가 발생 하거나, 두 서버 중 하나에서 오류가 발생 하는 경우 모든 3 방향 미러 볼륨은 온라인 상태를 유지 하 고 일반 할당을 통해 액세스할 수 있습니다
 
 ### <a name="more-than-half-the-cluster-failing-is-never-okay"></a>클러스터 실패의 절반 이상이 충분 하지 않음
 
@@ -211,65 +188,19 @@ S e r v e r 1에 *Myvolume* 의 줄임이 더 이상 포함 되지 않습니다.
 
 ### <a name="what-about-in-between"></a>어디에 있나요?
 
-한 번에 세 개 이상의 오류가 발생 했지만 서버와 드라이브 중 절반 이상이 계속 작동 하는 경우 오류가 발생 한 서버에 따라 분리 된 할당이 있는 볼륨이 온라인 상태 이며 액세스할 수 있습니다. 숫자를 실행 하 여 정확한 비를 확인 합니다.
-
-간단 하 게 하기 위해 위의 모범 사례에 따라 볼륨이 독립적이 고 동일 하 게 분산 (IID) 되 고, 모든 볼륨 할당이 고유 하도록 충분 한 고유한 조합을 사용할 수 있다고 가정 합니다. 지정 된 볼륨의 생존 확률은 예상 되는 선형성의 영향을 받은 전체 저장소의 예상 된 비율 이기도 합니다. 
-
-**N** 개 서버에 오류가 **있는 경우** -및 전용으로 **3** **개에** 할당 된 볼륨이 오프 라인으로 **전환 됩니다.** **F** 오류가 발생할 수 있는 **(N 선택 f)** 방법이 있습니다 **(f 선택 3)** . 그러면 볼륨이 오프 라인으로 전환 되 고 액세스할 수 없게 됩니다. 확률은 다음과 같이 표현 될 수 있습니다.
-
-![P_offline = Fc3/NcF](media/delimit-volume-allocation/probability-volume-offline.png)
-
-다른 모든 경우에는 볼륨이 온라인 상태를 유지 하 고 액세스할 수 있습니다.
-
-![P_online = 1 – (Fc3/NcF)](media/delimit-volume-allocation/probability-volume-online.png)
-
-다음 표에서는 몇 가지 일반적인 클러스터 크기와 최대 5 개의 오류에 대 한 확률을 평가 하 여 구분 된 할당으로 인해 고려 되는 모든 경우의 일반 할당과 비교 하 여 내결함성이 높아집니다.
-
-### <a name="with-6-servers"></a>서버 6 대
-
-| 할당                           | 1 개 오류가 남아 있을 확률 | 2 개 오류가 남아 있을 확률 | 3 개의 실패 발생 확률 | 최대 4 개의 오류 발생 확률 | 5 개 오류가 남아 있을 확률 |
-|--------------------------------------|------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|
-| 일반 (6 개 서버 전체에 분산) | 100%                               | 100%                                | 0                                  | 0                                  | 0                                  |
-| 서버 3 대만로 구분          | 100%                               | 100%                                | 95.0%                               | 0                                  | 0                                  |
-
-   > [!NOTE]
-   > 6 대의 총 서버에서 3 개 이상의 오류가 발생 하면 클러스터가 쿼럼을 손실 합니다.
-
-### <a name="with-8-servers"></a>8 개 서버 사용
-
-| 할당                           | 1 개 오류가 남아 있을 확률 | 2 개 오류가 남아 있을 확률 | 3 개의 실패 발생 확률 | 최대 4 개의 오류 발생 확률 | 5 개 오류가 남아 있을 확률 |
-|--------------------------------------|------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|
-| 일반 (8 개 서버에 걸쳐 분산) | 100%                               | 100%                                | 0                                  | 0                                  | 0                                  |
-| 서버 3 대만로 구분          | 100%                               | 100%                                | 98.2%                               | 94.3%                               | 0                                  |
-
-   > [!NOTE]
-   > 총 8 개 서버에서 4 개 이상의 오류가 발생 하면 클러스터가 쿼럼을 손실 합니다.
-
-### <a name="with-12-servers"></a>12 개 서버 사용
-
-| 할당                            | 1 개 오류가 남아 있을 확률 | 2 개 오류가 남아 있을 확률 | 3 개의 실패 발생 확률 | 최대 4 개의 오류 발생 확률 | 5 개 오류가 남아 있을 확률 |
-|---------------------------------------|------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|
-| 일반 (12 개 서버 전체에 분산) | 100%                               | 100%                                | 0                                  | 0                                  | 0                                  |
-| 서버 3 대만로 구분           | 100%                               | 100%                                | 99.5%                               | 99.2%                               | 98.7%                               |
-
-### <a name="with-16-servers"></a>서버 16 대
-
-| 할당                            | 1 개 오류가 남아 있을 확률 | 2 개 오류가 남아 있을 확률 | 3 개의 실패 발생 확률 | 최대 4 개의 오류 발생 확률 | 5 개 오류가 남아 있을 확률 |
-|---------------------------------------|------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|
-| 일반, 모든 16 개 서버에 분산 | 100%                               | 100%                                | 0                                  | 0                                  | 0                                  |
-| 서버 3 대만로 구분           | 100%                               | 100%                                | 99.8%                               | 99.8%                               | 99.8%                               |
+한 번에 세 개 이상의 오류가 발생 하지만 서버와 드라이브 중 절반 이상이 계속 작동 하는 경우 오류가 발생 한 서버에 따라 분리 된 할당이 있는 볼륨이 온라인 상태로 유지 되 고 액세스할 수 있습니다.
 
 ## <a name="frequently-asked-questions"></a>질문과 대답
 
 ### <a name="can-i-delimit-some-volumes-but-not-others"></a>일부 볼륨을 구분할 수 있나요?
 
-예. 할당을 구분할 지 여부에 따라 볼륨별를 선택할 수 있습니다.
+그렇습니다. 할당을 구분할 지 여부에 따라 볼륨별를 선택할 수 있습니다.
 
 ### <a name="does-delimited-allocation-change-how-drive-replacement-works"></a>구분 된 할당을 통해 드라이브 교체가 어떻게 작동 하나요?
 
 아니요, 일반 할당과 동일 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [스토리지 공간 다이렉트 개요](storage-spaces-direct-overview.md)
 - [스토리지 공간 다이렉트의 내결함성](storage-spaces-fault-tolerance.md)
@@ -278,7 +209,7 @@ S e r v e r 1에 *Myvolume* 의 줄임이 더 이상 포함 되지 않습니다.
 
 이 스크립트는 볼륨을 할당 하는 방법을 확인 하는 데 도움이 됩니다.
 
-위에서 설명한 대로이를 사용 하려면 복사/붙여넣기 및 다른 이름 `Get-VirtualDiskFootprintBySSU.ps1`으로 저장을 사용 합니다.
+위에서 설명한 대로 사용 하려면 복사/붙여넣기 및 다른 이름으로 저장을 `Get-VirtualDiskFootprintBySSU.ps1`합니다.
 
 ```PowerShell
 Function ConvertTo-PrettyCapacity {
