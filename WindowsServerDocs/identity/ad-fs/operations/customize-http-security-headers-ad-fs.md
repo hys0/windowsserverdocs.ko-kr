@@ -106,10 +106,10 @@ Set-AdfsResponseHeaders -SetHeaderName "X-Frame-Options" -SetHeaderValue "allow-
 Set-AdfsResponseHeaders -RemoveHeaders "X-Frame-Options" 
 ```
 
-### <a name="x-xss-protection"></a>X-XSS-Protection 
+### <a name="x-xss-protection"></a>X-XSS-보호 
 이 HTTP 보안 응답 헤더는 브라우저에서 XSS (교차 사이트 스크립팅) 공격을 감지 하는 경우 웹 페이지 로드를 중지 하는 데 사용 됩니다. 이를 XSS 필터링 이라고 합니다. 헤더는 다음 값 중 하나로 설정할 수 있습니다.
  
-- **0** – XSS 필터링을 사용 하지 않도록 설정 합니다. 권장 되지 않습니다.  
+- **0** – XSS 필터링을 사용 하지 않도록 설정 합니다. 권장되지 않습니다.  
 - **1** – XSS 필터링을 사용 합니다. XSS 공격이 감지 되 면 브라우저는 페이지를 삭제 합니다.   
 - **1; mode = block** – XSS 필터링을 사용 합니다. XSS 공격이 감지 되 면 브라우저에서 페이지 렌더링을 방지 합니다. 기본 설정 및 권장 설정입니다.  
 
@@ -133,7 +133,7 @@ Set-AdfsResponseHeaders -RemoveHeaders "X-XSS-Protection"
 ```
 
 ### <a name="cross-origin-resource-sharing-cors-headers"></a>CORS (원본 간 리소스 공유) 헤더 
-웹 브라우저 보안은 웹 페이지에서 스크립트 내에서 원본 간 요청을 시작할 수 없도록 합니다. 그러나 다른 원본 (도메인)에 있는 리소스에 액세스 하려는 경우가 있습니다. CORS는 서버에서 동일한 원본 정책을 완화할 수 있게 해 주는 W3C 표준입니다. 使用 CORS，服务器可以在显式允许某些跨域请求时拒绝其他跨域请求。  
+웹 브라우저 보안은 웹 페이지에서 스크립트 내에서 원본 간 요청을 시작할 수 없도록 합니다. 그러나 다른 원본 (도메인)에 있는 리소스에 액세스 하려는 경우가 있습니다. CORS는 서버에서 동일한 원본 정책을 완화할 수 있게 해 주는 W3C 표준입니다. CORS를 사용하면 서버가 명시적으로 특정 교차 원본 요청만 허용하고, 다른 요청은 거부할 수 있습니다.  
  
 CORS 요청을 보다 잘 이해 하려면 SPA (단일 페이지 응용 프로그램)가 다른 도메인을 사용 하 여 web API를 호출 해야 하는 시나리오를 연습 하겠습니다. 또한 SPA 및 API가 모두 ADFS 2019에 구성 되어 AD FS CORS를 사용 하도록 설정 되어 있습니다 AD FS. 즉, HTTP 요청에서 CORS 헤더를 식별 하 고, 헤더 값의 유효성을 검사 하 고, 적절 한 CORS 헤더를 응답에 포함할 수 있습니다 (및을 사용 하도록 설정 하는 방법에 대 한 자세한 내용 아래 CORS 사용자 지정 섹션의 AD FS 2019에서 CORS를 구성 합니다. 샘플 흐름: 
 
@@ -230,11 +230,11 @@ Set-AdfsResponseHeaders -SetHeaderName "TestHeader" -SetHeaderValue "TestHeaderV
 |-----|-----|
 |HTTP Strict-Transport-보안 (HSTS)|[HSTS 브라우저 호환성](https://developer.mozilla.org/docs/Web/HTTP/Headers/Strict-Transport-Security#Browser_compatibility)|
 |X 프레임-옵션|[X 프레임-옵션 브라우저 호환성](https://developer.mozilla.org/docs/Web/HTTP/Headers/X-Frame-Options#Browser_compatibility)| 
-|X-XSS-Protection|[X-XSS-보호 브라우저 호환성](https://developer.mozilla.org/docs/Web/HTTP/Headers/X-XSS-Protection#Browser_compatibility)| 
+|X-XSS-보호|[X-XSS-보호 브라우저 호환성](https://developer.mozilla.org/docs/Web/HTTP/Headers/X-XSS-Protection#Browser_compatibility)| 
 |CORS (원본 간 리소스 공유)|[CORS 브라우저 호환성](https://developer.mozilla.org/docs/Web/HTTP/CORS#Browser_compatibility) 
 |CSP (콘텐츠 보안 정책)|[CSP 브라우저 호환성](https://developer.mozilla.org/docs/Web/HTTP/CSP#Browser_compatibility) 
 
-## <a name="next"></a>다음을 탭하거나 클릭한 후
+## <a name="next"></a>다음
 
 - [AD FS 도움말을 사용 하 여 문제 해결 가이드](https://aka.ms/adfshelp/troubleshooting )
 - [AD FS 문제 해결](../../ad-fs/troubleshooting/ad-fs-tshoot-overview.md)
