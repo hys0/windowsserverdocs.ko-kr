@@ -8,12 +8,12 @@ author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: high
 ms.date: 05/21/2019
-ms.openlocfilehash: 3d443ff123cc041196f59d93d156415c34bdf70f
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 06f92e0a2f74ed229b42e936583a7f75d4584234
+ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75947878"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76822116"
 ---
 # <a name="windows-server-servicing-channels-ltsc-and-sac"></a>Windows Server 서비스 채널: LTSC 및 SAC
 
@@ -76,9 +76,9 @@ IT 전문가가 Windows Server를 서비스하는 데 사용할 수 있는 도�
 
 - **Windows 업데이트(독립 실행형)** : 이 옵션은 인터넷에 연결되어 있고 Windows 업데이트를 사용하도록 설정된 서버에만 사용할 수 있습니다.
 - **WSUS(Windows Server Update Services)** 는 Windows 10 및 Windows Server 업데이트에 대한 포괄적인 제어를 제공하며 Windows Server 운영 체제에서 기본적으로 사용 가능합니다. 업데이트 지연 기능 외에도 조직에서는 업데이트의 승인 계층을 추가하고 준비될 때마다 특정 컴퓨터나 컴퓨터 그룹에 업데이트를 배포하도록 선택할 수 있습니다.
-- **System Center Configuration Manager**는 서비스에 대한 최상의 컨트롤을 제공합니다. IT 전문가가 업데이트를 지연하고 승인할 수 있으며, 배포의 대상을 지정하고 대역폭 사용 및 배포 시간을 관리하는 여러 옵션이 있습니다.
+- **Microsoft Endpoint Configuration Manager**는 서비스에 대한 최상의 컨트롤을 제공합니다. IT 전문가가 업데이트를 지연하고 승인할 수 있으며, 배포의 대상을 지정하고 대역폭 사용 및 배포 시간을 관리하는 여러 옵션이 있습니다.
 
-아마도 이미 리소스, 직원 및 전문성에 따라 이러한 옵션 중 하나를 사용하도록 선택했을 것입니다. 반기 채널 릴리스에도 같은 프로세스를 계속 사용할 수 있습니다. 예를 들어 이미 System Center Configuration Manager를 사용하여 업데이트를 관리한다면, 계속 사용할 수 있습니다. 마찬가지로 WSUS를 사용한다면, 계속 사용하면 됩니다.
+아마도 이미 리소스, 직원 및 전문성에 따라 이러한 옵션 중 하나를 사용하도록 선택했을 것입니다. 반기 채널 릴리스에도 같은 프로세스를 계속 사용할 수 있습니다. 예를 들어 이미 Configuration Manager를 사용하여 업데이트를 관리한다면, 계속 사용할 수 있습니다. 마찬가지로 WSUS를 사용한다면, 계속 사용하면 됩니다.
 
 ## <a name="where-to-obtain-semi-annual-channel-releases"></a>반기 채널 릴리스를 받을 수 있는 곳
 
