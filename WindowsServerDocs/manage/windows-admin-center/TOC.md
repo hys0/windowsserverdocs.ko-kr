@@ -41,6 +41,7 @@
 #### [Azure 업데이트 관리](azure/azure-update-management.md)
 ### [Azure에 Windows Admin Center 연결](azure/azure-integration.md)
 ### [Azure에서 Windows Admin Center 배포](azure/deploy-wac-in-azure.md)
+### [Windows Admin Center를 사용하여 Azure VM 만들기](azure/create-azure-vms.md)
 ### [Windows Admin Center를 사용하여 Azure VM 관리](azure/manage-azure-vms.md)
 
 ## Support(지원)

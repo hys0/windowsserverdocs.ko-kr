@@ -184,7 +184,7 @@
 #### [원격 RADIUS 서버 그룹 구성](technologies/nps/nps-crp-rrsg-configure.md)
 #### [NPS와 함께 사용되는 인증서 관리](technologies/nps/nps-manage-certificates.md)
 ##### [PEAP 및 EAP 요구 사항에 대한 인증서 템플릿 구성](technologies/nps/nps-manage-cert-requirements.md)
-#### [NPS를 관리](technologies/nps/nps-manage-servers.md)
+#### [NPS 관리](technologies/nps/nps-manage-servers.md)
 ##### [멀티홈 컴퓨터에서 NPS 구성](technologies/nps/nps-multihomed-configure.md)
 ##### [NPS UDP 포트 정보 구성](technologies/nps/nps-udp-ports-configure.md)
 ##### [NAS 알림 전달 사용 안 함](technologies/nps/nps-disable-nas-notifications.md)
@@ -253,7 +253,7 @@
 ### [SDN 계획](sdn/plan/Plan-a-Software-Defined-Network-Infrastructure.md)
 #### [네트워크 컨트롤러를 배포하기 위한 설치 및 준비 요구 사항](sdn/plan/Installation-and-Preparation-Requirements-for-Deploying-Network-Controller.md)
 
-### [SDN 배포](sdn/deploy/Deploy-Software-Defined-Networking.md)
+### SDN 배포
 #### [SDN 인프라 배포](sdn/deploy/Deploy-a-Software-Defined-Network-Infrastructure.md)
 ##### [스크립트를 사용하여 SDN 인프라 배포](sdn/deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md)
 #### [Windows PowerShell을 사용하여 SDN 기술 배포](sdn/deploy/Deploy-Software-Defined-Network-Technologies-using-Windows-powershell.md)
