@@ -9,12 +9,12 @@ ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: b3a30c081731de97e1bdf9abe711a5ef6460be0f
-ms.sourcegitcommit: 74107a32efe1e53b36c938166600739a79dd0f51
+ms.openlocfilehash: 70281f581974493d3182fb6fdd8f35cb37bed4bf
+ms.sourcegitcommit: 3f9bcd188dda12dc5803defb47b2c3a907504255
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76918305"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77001908"
 ---
 # <a name="build-a-multi-tiered-application-using-on-behalf-of-obo-using-oauth-with-ad-fs-2016-or-later"></a>AD FS 2016 이상에서 OAuth를 사용 하 여 OBO ()를 사용 하는 다중 계층 응용 프로그램 빌드
 
@@ -222,14 +222,13 @@ ToDoListResourceId 및 ToDoListBaseAddress의 올바른 값을 읽는 코드를 
 
 ![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO3.PNG)
 
-* 적절 한 컨트롤러 이름을 제공 합니다.
+* 컨트롤러에 적절 한 이름을 지정 합니다.
 
 ![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO13.PNG)
 
-* 컨트롤러에서 다음 코드를 추가 합니다.
+* 컨트롤러에 다음 코드를 추가 합니다.
 
-
-~~~
+```cs
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -238,15 +237,16 @@ ToDoListResourceId 및 ToDoListBaseAddress의 올바른 값을 읽는 코드를 
     using System.Web.Http;
     namespace WebAPIOBO.Controllers
     {
+        [Authorize]
         public class WebAPIOBOController : ApiController
         {
             public IHttpActionResult Get()
             {
-                return Ok("WebAPI via OBO");
+                return Ok($"WebAPI via OBO (user: {User.Identity.Name}");
             }
         }
     }
-~~~
+```
 
 이 코드는 WebAPI WebAPIOBO에 대 한 Get 요청을 전환할 누구 든 지 때 문자열 반환 단순히
 

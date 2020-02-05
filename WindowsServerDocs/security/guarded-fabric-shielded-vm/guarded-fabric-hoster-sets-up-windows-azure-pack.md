@@ -8,12 +8,12 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: d388da2b7416543c307bd931636902b4a7543e1e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 7336637bd3186f885db6d94eeffd0d2311edf3ac
+ms.sourcegitcommit: 3f9bcd188dda12dc5803defb47b2c3a907504255
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403657"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77001842"
 ---
 # <a name="shielded-vms---hosting-service-provider-sets-up-windows-azure-pack"></a>보호된 VM - 호스팅 서비스 공급자가 Microsoft Azure 팩 설정
 
@@ -48,7 +48,7 @@ ms.locfileid: "71403657"
 
 1.  [WAP 시스템 요구 사항을](https://technet.microsoft.com/library/dn296442.aspx) 검토 하 고 [필수 구성 요소 소프트웨어](https://technet.microsoft.com/library/dn469335.aspx)를 설치 합니다.
 
-2.  [웹 플랫폼 설치 관리자](https://www.microsoft.com/web/downloads/platform.aspx)를 다운로드 하 여 설치 합니다. 컴퓨터가 인터넷에 연결 되어 있지 않은 경우 [오프 라인 설치 지침](http://www.iis.net/learn/install/web-platform-installer/web-platform-installer-v4-command-line-webpicmdexe-rtw-release)을 따르세요.
+2.  [웹 플랫폼 설치 관리자](https://www.microsoft.com/web/downloads/platform.aspx)를 다운로드 하 여 설치 합니다. 컴퓨터가 인터넷에 연결 되어 있지 않은 경우 [오프 라인 설치 지침](https://www.iis.net/learn/install/web-platform-installer/web-platform-installer-v4-command-line-webpicmdexe-rtw-release)을 따르세요.
 
 3.  웹 플랫폼 설치 관리자를 열고 **제품** 탭 아래에서 **Windows Azure 팩: 포털 및 API Express** 를 찾습니다. **추가**를 클릭 한 다음 창 맨 아래에서 **설치** 를 클릭 합니다.
 

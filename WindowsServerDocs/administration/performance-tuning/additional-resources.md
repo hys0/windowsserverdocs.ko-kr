@@ -7,19 +7,19 @@ ms.topic: article
 ms.author: phstee
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: ee14a2bd9290dbaa5653640a80528d163635142d
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 3c011d3c6e75fb1d5212d9b1ec3c6e6c69fac5d6
+ms.sourcegitcommit: 3f9bcd188dda12dc5803defb47b2c3a907504255
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75947209"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77001868"
 ---
 # <a name="additional-performance-tuning-resources"></a>추가 성능 튜닝 리소스
 
 이 항목의 링크를 사용 하 여이 튜닝 가이드에 설명 된 개념에 대해 자세히 알아보세요.
 
 ## <a name="microsoft-windows-server-websites"></a>Microsoft Windows Server Websites
--   [Windows Server 카탈로그](http://www.windowsservercatalog.com/)
+-   [Windows Server 카탈로그](https://www.windowsservercatalog.com/)
 
 -   [Windows Sysinternals](https://technet.microsoft.com/sysinternals/default.aspx)
 

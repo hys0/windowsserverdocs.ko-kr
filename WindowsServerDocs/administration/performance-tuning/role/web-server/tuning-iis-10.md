@@ -7,12 +7,12 @@ ms.topic: landing-page
 ms.author: DavSo; Ericam; YaShi
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 5658a101371cf3b865dec04ac76716b536792602
-ms.sourcegitcommit: c5709021aa98abd075d7a8f912d4fd2263db8803
+ms.openlocfilehash: 2f4d309de073e84aa0a1c568c7cfc5f31ee88d83
+ms.sourcegitcommit: 3f9bcd188dda12dc5803defb47b2c3a907504255
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2020
-ms.locfileid: "76265705"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77001878"
 ---
 # <a name="tuning-iis-100"></a>IIS 10.0 조정
 
@@ -44,7 +44,7 @@ HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Http\Parameters
 
 **참고**  HTTP 서비스가 이미 실행 중인 경우 변경 내용을 적용 하려면 다시 시작 해야 합니다.
 
-Â 
+» 
 
 ## <a name="cache-management-settings"></a>캐시 관리 설정
 
@@ -64,7 +64,7 @@ HTTP.SYS에서 제공 하는 장점 중 하나는 커널 모드 캐시입니다.
 
     **참고** 크기를 지정 하면 최대값이 설정 되며, 시스템에서 캐시 크기를 최대 설정 크기로 늘릴 수 없습니다.
 
-    Â 
+    » 
 
 -   **Urimaxuribytes** 기본값: 262144 바이트 (256 KB)
 
@@ -121,7 +121,7 @@ Windows Server 2016에서 HTTP.SYS는 연결을 자동으로 관리 합니다. �
 
 % SystemRoot%\\system32\\inetsrv config administration.config\\config\\Applicationhost.config
 
-Appcmd.exe, IIS 10.0 관리 콘솔, WebAdministration 또는 IISAdministration PowerShell Cmdlet을 사용 하 여 변경 합니다. 대부분의 설정은 자동으로 검색 되며 IIS 10.0 작업자 프로세스 또는 웹 응용 프로그램 서버를 다시 시작 하지 않아도 됩니다. Applicationhost.config 파일에 대 한 자세한 내용은 [Applicationhost.config 소개](http://www.iis.net/learn/get-started/planning-your-iis-architecture/introduction-to-applicationhostconfig)를 참조 하십시오.
+Appcmd.exe, IIS 10.0 관리 콘솔, WebAdministration 또는 IISAdministration PowerShell Cmdlet을 사용 하 여 변경 합니다. 대부분의 설정은 자동으로 검색 되며 IIS 10.0 작업자 프로세스 또는 웹 응용 프로그램 서버를 다시 시작 하지 않아도 됩니다. Applicationhost.config 파일에 대 한 자세한 내용은 [Applicationhost.config 소개](https://www.iis.net/learn/get-started/planning-your-iis-architecture/introduction-to-applicationhostconfig)를 참조 하십시오.
 
 
 ## <a name="ideal-cpu-setting-for-numa-hardware"></a>NUMA 하드웨어에 대해 이상적인 CPU 설정
@@ -160,7 +160,7 @@ HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\InetInfo\Parameters\ThreadP
 |특성|설명|Default|
 |--- |--- |--- |
 |staticCompression-EnableCpuUsage<br><br>staticCompression-DisableCpuUsage<br><br>dynamicCompression-EnableCpuUsage<br><br>dynamicCompression-DisableCpuUsage|현재 백분율 CPU 사용량이 지정 된 제한 보다 높거나 낮은 경우 압축을 사용 하거나 사용 하지 않도록 설정 합니다.<br><br>IIS 7.0 부터는 안정적인 상태 CPU가 비활성화 임계값을 초과 하는 경우 압축이 자동으로 사용 하지 않도록 설정 됩니다. CPU가 사용 임계값 아래로 떨어지면 압축이 사용 됩니다.|50, 100, 50 및 90 각각|
-|디렉터리|압축 된 버전의 정적 파일을 일시적으로 저장 하 고 캐시 하는 디렉터리를 지정 합니다. 자주 액세스 하는 경우이 디렉터리를 시스템 드라이브 밖으로 이동 하는 것이 좋습니다.|%SystemDrive%\inetpub\temp\IIS 임시 압축 파일|
+|디렉터리나|압축 된 버전의 정적 파일을 일시적으로 저장 하 고 캐시 하는 디렉터리를 지정 합니다. 자주 액세스 하는 경우이 디렉터리를 시스템 드라이브 밖으로 이동 하는 것이 좋습니다.|%SystemDrive%\inetpub\temp\IIS 임시 압축 파일|
 |doDiskSpaceLimiting|모든 압축 파일이 차지할 수 있는 디스크 공간의 크기에 대 한 제한이 있는지 여부를 지정 합니다. 압축 된 파일은 **디렉터리** 특성으로 지정 된 압축 디렉터리에 저장 됩니다.|True|
 |maxDiskSpaceUsage|압축 된 파일이 압축 디렉터리에서 차지할 수 있는 디스크 공간의 바이트 수를 지정 합니다.<br><br>압축 된 모든 콘텐츠의 전체 크기가 너무 큰 경우이 설정을 늘려야 할 수 있습니다.|100MB|
 
@@ -208,7 +208,7 @@ CentralLogFileMode 특성을 CentralBinary로 설정 하 고 **enabled** 특성�
 |특성|설명|Default|
 |--- |--- |--- |
 |enabled|중앙 이진 로깅을 사용할지 여부를 지정 합니다.|False|
-|디렉터리|로그 항목이 기록 될 디렉터리를 지정 합니다.|%SystemDrive%\inetpub\logs\LogFiles|
+|디렉터리나|로그 항목이 기록 될 디렉터리를 지정 합니다.|%SystemDrive%\inetpub\logs\LogFiles|
 
 
 ## <a name="application-and-site-tunings"></a>응용 프로그램 및 사이트 응용 프로그램
@@ -319,7 +319,7 @@ Windows Server 2012 r 2부터 IIS는 시간 동안 유휴 상태가 된 후 (IIS
 
 **참고**  메모리 누수가 있는 코드와 같이 불안정 한 코드를 실행 하거나 불안정 한 경우 사이트를 유휴 상태에서 종료 하도록 설정 하는 것은 코드 버그를 수정 하는 데 도움이 될 수 있습니다. 권장 사항이 아니지만 고속 처리에서이 기능을 정리 메커니즘으로 사용 하는 것이 좋지만, 더 영구적인 솔루션이 작동 하는 것이 더 좋을 수 있습니다.\]
 
-Â 
+» 
 
 고려해 야 할 또 다른 요소는 사이트에서 많은 메모리를 사용 하는 경우 컴퓨터가 작업자 프로세스에서 사용 하는 데이터를 디스크에 써야 하기 때문에 일시 중단 프로세스 자체에서 부담을 취하는 것입니다. 작업자 프로세스에서 많은 메모리 청크를 사용 하는 경우 일시 중지 하는 것이 백업이 시작 될 때까지 대기 하는 것 보다 비용이 더 많이 들 수 있습니다.
 
@@ -329,7 +329,7 @@ Windows Server 2012 r 2부터 IIS는 시간 동안 유휴 상태가 된 후 (IIS
 
 특정 사용자가 사이트에 연결 되 면 일반적으로 최소한 한 번 이상 요청을 하 고 추가 요청을 수행 하므로 일일 요청 수를 계산 하는 것은 실제 트래픽 패턴을 정확 하 게 반영 하지 않을 수 있습니다. 보다 정확한 정보를 얻기 위해 Microsoft Excel과 같은 도구를 사용 하 여 요청 사이의 평균 시간을 계산할 수도 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
-||요청 URL|요청 시간|Delta|
+||요청 URL|요청 시간|삼각|
 |--- |--- |--- |--- |
 |1|/SourceSilverLight/Geosource.web/grosource.html|10:01||
 |2|/SourceSilverLight/Geosource.web/sliverlight.js|10:10|0:09|

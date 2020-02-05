@@ -8,12 +8,12 @@ ms.date: 10/09/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: e5832843dce05832a231ed3a4d7e20cf90f1d183
-ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
+ms.openlocfilehash: a98c560306debc0e10c2c0ac44b41e12141b6e9f
+ms.sourcegitcommit: 3f9bcd188dda12dc5803defb47b2c3a907504255
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76822596"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77001888"
 ---
 # <a name="storage-migration-service-known-issues"></a>저장소 마이그레이션 서비스의 알려진 문제
 
@@ -123,7 +123,7 @@ Windows Server 2019 대상 컴퓨터에 저장소 마이그레이션 서비스 �
 
 ## <a name="dfsr-hashes-mismatch-when-using-storage-migration-service-to-preseed-data"></a>저장소 마이그레이션 서비스를 사용 하 여 데이터를 사전 시드 하는 경우 DFSR 해시가 일치 하지 않음
 
-저장소 마이그레이션 서비스를 사용 하 여 파일을 새 대상으로 전송 하는 경우, 해당 데이터를 미리 시드 된 복제 또는 DFSR 데이터베이스 복제를 통해 기존 DFSR 서버와 복제 하도록 DFS 복제 (DFSR)을 구성 합니다. 모든 파일은 해시를 experiemce 합니다. 불일치 및가 다시 복제 됩니다. SMS를 사용 하 여 전송 하 고 나면 데이터 스트림, 보안 스트림, 크기 및 특성이 모두 정확히 일치 하는 것으로 나타납니다. ICACLS 또는 DFSR 데이터베이스 복제 디버그 로그를 사용 하 여 파일을 검사 하면 다음과 같은 결과가 나타납니다.
+저장소 마이그레이션 서비스를 사용 하 여 파일을 새 대상으로 전송 하는 경우, 미리 시드 된 복제 또는 DFSR 데이터베이스 복제를 통해 기존 DFSR 서버와 해당 데이터를 복제 하도록 DFSR (DFS 복제)을 구성 하면 모든 파일에서 해시가 발생 합니다. 불일치 및가 다시 복제 됩니다. SMS를 사용 하 여 전송 하 고 나면 데이터 스트림, 보안 스트림, 크기 및 특성이 모두 정확히 일치 하는 것으로 나타납니다. ICACLS 또는 DFSR 데이터베이스 복제 디버그 로그를 사용 하 여 파일을 검사 하면 다음과 같은 결과가 나타납니다.
 
 원본 파일:
 

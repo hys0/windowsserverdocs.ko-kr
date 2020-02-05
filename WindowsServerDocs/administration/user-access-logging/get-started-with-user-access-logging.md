@@ -13,26 +13,26 @@ author: brentfor
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 15906e8cc1e5e85a471f1b8725435eb60852f6f5
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f69a1fe4f3c17123f91ade3b6aebdb5f7bab9982
+ms.sourcegitcommit: 3f9bcd188dda12dc5803defb47b2c3a907504255
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71382871"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77001788"
 ---
 # <a name="get-started-with-user-access-logging"></a>사용자 액세스 로깅 시작
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 UAL (사용자 액세스 로깅)은 로컬 서버의 역할 및 제품별로 클라이언트 사용 현황 데이터를 집계 하는 Windows Server의 기능입니다. Windows server 관리자가 로컬 서버의 역할 및 서비스에 대 한 클라이언트 컴퓨터의 요청을 수량화 하는 데 도움이 됩니다.  
   
-UAL은 기본적으로 설치 및 사용 하도록 설정 되며 거의 실시간으로 데이터를 수집 합니다. UAL을 사용하거나 사용하지 않도록 설정할 수는 있지만 그 외의 관리자 구성은 수행하지 않아도 됩니다. 자세한 내용은 [Manage User Access Logging](Manage-User-Access-Logging.md)를 참조하세요. 사용자 액세스 로깅 서비스는 역할 및 제품별로 클라이언트 사용 현황 데이터를 로컬 데이터베이스 파일에 집계 합니다.  IT 관리자는 나중에 WMI(Windows Management Instrumentation) 또는 Windows PowerShell cmdlet을 사용하여 서버 역할(또는 소프트에어 제품), 사용자, 장치, 로컬 서버, 날짜를 기준으로 수량과 인스턴스를 검색할 수 있습니다.  
+UAL은 기본적으로 설치 및 사용 하도록 설정 되며 거의 실시간으로 데이터를 수집 합니다. UAL을 사용하거나 사용하지 않도록 설정할 수는 있지만 그 외의 관리자 구성은 수행하지 않아도 됩니다. 자세한 내용은 [Manage User Access Logging](Manage-User-Access-Logging.md)를 참조하세요. 사용자 액세스 로깅 서비스는 역할 및 제품별로 클라이언트 사용 현황 데이터를 로컬 데이터베이스 파일에 집계 합니다.  IT 관리자는 나중에 WMI(Windows Management Instrumentation) 또는 Windows PowerShell cmdlet을 사용하여 서버 역할(또는 소프트에어 제품), 사용자, 디바이스, 로컬 서버, 날짜를 기준으로 수량과 인스턴스를 검색할 수 있습니다.  
   
 > [!NOTE]  
 > UAL은 [Microsoft Assessment and Planning Toolkit](https://go.microsoft.com/fwlink/?LinkID=111000)(영문)을 지원합니다.  
   
 ## <a name="BKMK_APP"></a>실용적인 응용 프로그램  
-UAL은 로컬 데이터베이스에 기록 되는 고유한 클라이언트 장치 및 사용자 요청 이벤트를 집계 합니다. 이렇게 레코드는 서버 관리자가 쿼리를 통해 서버 역할, 사용자, 장치, 로컬 서버 및 날짜를 기준으로 수량과 인스턴스를 검색하는 데 사용할 수 있습니다.  또한 UAL은 타사 소프트웨어 개발자가 Windows Server를 통해 집계할 UAL 이벤트를 계측할 수 있도록 확장 되었습니다.  
+UAL은 로컬 데이터베이스에 기록 되는 고유한 클라이언트 장치 및 사용자 요청 이벤트를 집계 합니다. 이러한 레코드는 서버 관리자가 쿼리를 통해 서버 역할, 사용자, 디바이스, 로컬 서버 및 날짜를 기준으로 수량과 인스턴스를 검색하는 데 사용할 수 있습니다.  또한 UAL은 타사 소프트웨어 개발자가 Windows Server를 통해 집계할 UAL 이벤트를 계측할 수 있도록 확장 되었습니다.  
   
 UAL은 다음 작업을 수행할 수 있습니다.  
   
@@ -54,12 +54,12 @@ UAL에서 지원할 수 있는 서버 역할 및 서비스는 다음과 같습�
   
 -   BranchCache  
   
--   DNS(Domain Name System)  
+-   Domain Name System (DNS)  
   
     > [!NOTE]  
     > UAL은 24시간마다 DNS 데이터를 수집하며, 이 시나리오에 사용할 수 있는 별도의 UAL cmdlet이 있습니다.  
   
--   DHCP(동적 호스트 구성 프로토콜)  
+-   Dynamic Host Configuration Protocol (DHCP)  
   
 -   팩스 서버  
   
@@ -75,13 +75,13 @@ UAL에서 지원할 수 있는 서버 역할 및 서비스는 다음과 같습�
 -   웹 서버(IIS)  
   
     > [!WARNING]  
-    > IIS에서 UAL을 사용하려면 iisual.exe를 사용해야 합니다. 자세한 내용은 [IIS 사용자 액세스 로깅을 사용하여 클라이언트 사용량 현황 데이터 분석](http://www.iis.net/learn/manage/configuring-security/analyzing-client-usage-data-with-iis-user-access-logging)(영문)을 참조하세요.  
+    > IIS에서 UAL을 사용하려면 iisual.exe를 사용해야 합니다. 자세한 내용은 [IIS 사용자 액세스 로깅을 사용하여 클라이언트 사용량 현황 데이터 분석](https://www.iis.net/learn/manage/configuring-security/analyzing-client-usage-data-with-iis-user-access-logging)(영문)을 참조하세요.  
   
 -   MSMQ(Microsoft Message Queue) 서비스  
   
--   네트워크 정책 및 액세스 서비스  
+-   Network Policy and Access Services  
   
--   인쇄 및 문서 서비스  
+-   Print and Document Services  
   
 -   RRAS(라우팅 및 원격 액세스 서비스)  
   
@@ -95,7 +95,7 @@ UAL에서 지원할 수 있는 서버 역할 및 서비스는 다음과 같습�
 ## <a name="BKMK_NEW"></a>중요 한 기능  
 다음 표에서는 UAL의 주요 기능 및 사용 가능한 값에 대해 설명합니다.  
   
-|기능|값|  
+|기능|Value|  
 |-----------------|---------|  
 |클라이언트 요청 이벤트 데이터를 거의 실시간으로 수집 및 집계합니다.|최대 3년 동안의 데이터를 저장할 수 있습니다. **중요:** 관리자는 조직의 개인 정보 취급 방침 및 현지 규정에 의해 수집 된 데이터 및 데이터 보존 기간을 준수 하도록 적용 해야 합니다.|  
 |WMI 또는 Windows PowerShell 인터페이스를 사용하여 UAL을 쿼리하여 로컬 또는 원격 서버에서 클라이언트 요청 데이터를 검색합니다.|UAL에서는 시간의 경과에 따른 사용량 현황 데이터를 하나의 보기에서 확인할 수 있습니다. 서버 및 엔터프라이즈 관리자는 이 데이터를 검색한 다음 비즈니스 관리자와 협력하여 볼륨 소프트웨어 라이선스 사용을 최적화할 수 있습니다.|  
@@ -104,7 +104,7 @@ UAL에서 지원할 수 있는 서버 역할 및 서비스는 다음과 같습�
 ## <a name="data-logged-with-ual"></a>UAL을 통해 기록되는 데이터  
 다음과 같은 사용자 관련 데이터가 UAL에서 기록됩니다.  
   
-|data|설명|  
+|데이터|설명|  
 |--------|---------------|  
 |**UserName**|설치된 역할과 제품에서 UAL 항목을 포함하는 클라이언트의 사용자 이름(해당하는 경우)입니다.|  
 |**ActivityCount**|특정 사용자가 역할이나 서비스에 액세스한 횟수입니다.|  
@@ -115,12 +115,12 @@ UAL에서 지원할 수 있는 서버 역할 및 서비스는 다음과 같습�
 |**RoleName**|UAL 데이터를 제공하는 역할, 구성 요소 또는 하위 제품의 이름입니다. ProductName 및 RoleGUID와도 관련되어 있습니다.|  
 |**TenantIdentifier**|설치된 역할의 테넌트 클라이언트 또는 UAL 데이터를 포함하는 제품의 고유한 GUID(해당하는 경우)입니다.|  
   
-다음과 같은 장치 관련 데이터가 UAL에서 기록됩니다.  
+다음과 같은 디바이스 관련 데이터가 UAL에서 기록됩니다.  
   
-|data|설명|  
+|데이터|설명|  
 |--------|---------------|  
-|**IPAddress**|역할 또는 서비스에 액세스하는 데 사용되는 클라이언트 장치의 IP 주소입니다.|  
-|**ActivityCount**|특정 장치가 역할이나 서비스에 액세스한 횟수입니다.|  
+|**IPAddress**|역할 또는 서비스에 액세스하는 데 사용되는 클라이언트 디바이스의 IP 주소입니다.|  
+|**ActivityCount**|특정 디바이스가 역할이나 서비스에 액세스한 횟수입니다.|  
 |**FirstSeen**|IP 주소가 처음으로 역할 또는 서비스에 액세스하는 데 사용된 날짜와 시간입니다.|  
 |**LastSeen**|IP 주소가 마지막으로 역할 또는 서비스에 액세스하는 데 사용된 날짜와 시간입니다.|  
 |**제품**|UAL 데이터를 제공하는 상위 소프트웨어 제품의 이름(예: Windows)입니다.|  
@@ -131,7 +131,7 @@ UAL에서 지원할 수 있는 서버 역할 및 서비스는 다음과 같습�
 ## <a name="BKMK_SOFT"></a>소프트웨어 요구 사항  
 UAL은 windows server 2012 이후 버전의 Windows Server를 실행 하는 모든 컴퓨터에서 사용할 수 있습니다.  
   
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
 MSDN의[사용자 액세스 로깅](https://msdn.microsoft.com/library/windows/desktop/hh437528(v=vs.85).aspx)  
 [사용자 액세스 로깅 관리](Manage-User-Access-Logging.md)  
   
