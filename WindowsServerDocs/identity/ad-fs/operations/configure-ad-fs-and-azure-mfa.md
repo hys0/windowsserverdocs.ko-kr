@@ -9,12 +9,12 @@ ms.date: 01/28/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: a4f9d8fa71671c4ad4651008729d4cee53c8ee2f
-ms.sourcegitcommit: 74107a32efe1e53b36c938166600739a79dd0f51
+ms.openlocfilehash: c3a7e7c420ef63adc906e6558ed7aff6819e983c
+ms.sourcegitcommit: a33404f92867089bb9b0defcd50960ff231eef3f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76918255"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77013058"
 ---
 # <a name="configure-azure-mfa-as-authentication-provider-with-ad-fs"></a>AD FS를 사용 하 여 Azure MFA를 인증 공급자로 구성
 
@@ -135,7 +135,7 @@ Set-AdfsAzureMfaTenant -TenantId <tenant ID> -ClientId 981f26a1-7f43-403b-a875-f
 1. AD FS 서버에서 **레지스트리 편집기** 를 엽니다.
 1. `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ADFS`으로 이동합니다. 다음 레지스트리 키 값을 만듭니다.
 
-    | 레지스트리 키       | Value |
+    | 레지스트리 키       | 값 |
     |--------------------|-----------------------------------|
     | SasUrl             | https://adnotifications.windowsazure.us/StrongAuthenticationService.svc/Connector |
     | StsUrl             | https://login.microsoftonline.us |
@@ -174,7 +174,7 @@ Azure AD PowerShell 모듈을 사용 하 여 각 AD FS 서버의 새 인증서�
 PS C:/> New-MsolServicePrincipalCredential -AppPrincipalId 981f26a1-7f43-403b-a875-f8b09b8cd720 -Type Asymmetric -Usage Verify -Value $newcert
 ```
 
-새 인증서가 `$certbase64` 됩니다.  Base64 인코딩 인증서는 개인 키 없이 인증서를 DER로 인코딩된 파일로 내보내고 메모장에서 연 다음 PowerShell 세션에 복사/붙여넣기 하 고 변수 `$certbase64`에 할당 하 여 가져올 수 있습니다.
+새 인증서가 `$newcert` 됩니다. Base64 인코딩 인증서는 개인 키 없이 인증서를 DER로 인코딩된 파일로 내보내고 메모장에서 연 다음 PowerShell 세션에 복사/붙여넣기 하 고 변수 `$newcert`에 할당 하 여 가져올 수 있습니다.
 
 ### <a name="verify-that-the-new-certificates-will-be-used-for-azure-mfa"></a>새 인증서가 Azure MFA에 사용 되는지 확인 합니다.
 
