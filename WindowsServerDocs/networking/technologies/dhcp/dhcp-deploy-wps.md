@@ -8,12 +8,12 @@ ms.assetid: 7110ad21-a33e-48d5-bb3c-129982913bc8
 manager: brianlic
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 1e750a72ac8d47f99ea3382d076b8854acc24576
-ms.sourcegitcommit: 3f9bcd188dda12dc5803defb47b2c3a907504255
-ms.translationtype: HT
+ms.openlocfilehash: 16900809c2c6b877d2b5c45f1c3ca26e55c6bea9
+ms.sourcegitcommit: 7df2bd3a7d07a50ace86477335ed6fbfb2dac373
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77001898"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77027949"
 ---
 # <a name="deploy-dhcp-using-windows-powershell"></a>Windows PowerShell을 사용하여 DHCP 배포
 
@@ -335,8 +335,8 @@ Restart-Computer
 
 이러한 명령에 대 한 자세한 내용은 다음 항목을 참조 하십시오.
 
-- [이름 바꾸기-컴퓨터](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/rename-computer)
-- [Restart-Computer](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/restart-computer)
+- [이름 바꾸기-컴퓨터](https://docs.microsoft.com/powershell/module/microsoft.powershell.management/rename-computer)
+- [Restart-Computer](https://docs.microsoft.com/powershell/module/microsoft.powershell.management/restart-computer)
 
 ### <a name="join-the-computer-to-the-domain-optional"></a>도메인 \(옵션\)에 컴퓨터를 연결 합니다.
 
@@ -455,8 +455,8 @@ Set-DhcpServerDnsCredential -Credential $Credential -ComputerName "DHCP1.corp.co
 
 이러한 명령에 대 한 자세한 내용은 다음 항목을 참조 하십시오.
 
-- [DhcpServerv4DnsSetting](https://docs.microsoft.com/en-us/powershell/module/dhcpserver/set-dhcpserverv4dnssetting)
-- [DhcpServerDnsCredential](https://docs.microsoft.com/en-us/powershell/module/dhcpserver/set-dhcpserverdnscredential)
+- [DhcpServerv4DnsSetting](https://docs.microsoft.com/powershell/module/dhcpserver/set-dhcpserverv4dnssetting)
+- [DhcpServerDnsCredential](https://docs.microsoft.com/powershell/module/dhcpserver/set-dhcpserverdnscredential)
 
 ### <a name="configure-the-corpnet-scope"></a>Corpnet 범위 구성
 
@@ -508,7 +508,7 @@ Dhcp 서버가 DHCP 클라이언트에 IP 주소를 동적으로 할당 하 고 
 > [!NOTE]
 > Windows server 2012 r 2에서는 Windows Server 2016 명령을 사용할 수 없습니다.
 
-- [DhcpServer 모듈](https://docs.microsoft.com/en-us/powershell/module/dhcpserver/)
+- [DhcpServer 모듈](https://docs.microsoft.com/powershell/module/dhcpserver/)
 
 다음 참조에서는 Windows Server 2012 r 2 용 모든 DHCP 서버 Windows PowerShell 명령에 대 한 명령 설명 및 구문을 제공 합니다. 항목은 **Get** 또는 **Set**와 같이 명령의 시작 부분에 있는 동사에 따라 사전순으로 명령을 나열 합니다.
 
