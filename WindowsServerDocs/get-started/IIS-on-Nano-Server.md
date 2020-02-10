@@ -12,12 +12,12 @@ ms.assetid: 16984724-2d77-4d7b-9738-3dff375ed68c
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: 04c2d7eab2f149505758ab21f08cd6b8bdb74b85
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 96a5e5f23ad3cdfc829fd141c3c90f6c200f06c9
+ms.sourcegitcommit: 3f9bcd188dda12dc5803defb47b2c3a907504255
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71360297"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77001808"
 ---
 # <a name="iis-on-nano-server"></a>Nano Server의 IIS
 
@@ -56,7 +56,7 @@ Microsoft-NanoServer-IIS-Package와 함께 -Package 매개 변수를 사용하�
 |URL 권한 부여||  
 |Windows 인증||  
 |**애플리케이션 개발**||  
-|응용 프로그램 초기화||  
+|애플리케이션 초기화||  
 |CGI||  
 |ISAPI 확장||  
 |ISAPI 필터||  
@@ -65,7 +65,7 @@ Microsoft-NanoServer-IIS-Package와 함께 -Package 매개 변수를 사용하�
 |**관리 도구**||  
 |Windows PowerShell용 IIS 관리 모듈|x|  
 
-IIS의 다른 구성(예: ASP.NET, PHP 및 Java 사용)과 기타 관련 콘텐츠에 대한 문서는 [http://iis.net/learn](http://iis.net/learn)에 게시되어 있습니다.  
+IIS의 다른 구성(예: ASP.NET, PHP 및 Java 사용)과 기타 관련 콘텐츠에 대한 문서는 [http://iis.net/learn](https://iis.net/learn)에 게시되어 있습니다.  
 
 ## <a name="installing-iis-on-nano-server"></a>Nano 서버에 IIS 설치  
 이 서버 역할을 오프라인으로(Nano 서버를 끄고) 설치할 수도 있고 온라인으로(Nano 서버가 실행 중인 상태로) 설치할 수도 있지만 오프라인 설치를 권장합니다.  
@@ -191,7 +191,7 @@ IIS 하위 기능 전체 집합은 이 토픽의 부록 1에 포함되어 있고
 
 **가상 디렉터리 만들기**  
 
-Get-IISServerManager 매개 변수가 반환하는 IISServerManager 개체를 사용하여 가상 디렉터리를 만들 수 있습니다. 이 개체는 .NET Microsoft.Web.Administration.ServerManager API를 노출합니다. 이 예제에서, 다음 명령은 사이트 컬렉션의 "기본 웹 사이트" 요소 및 애플리케이션 섹션의 루트 애플리케이션 요소("/")에 액세스합니다. 그런 다음 해당 응용 프로그램 요소에 대한 VirtualDirectories 컬렉션의 Add() 메서드를 호출하여 새 디렉터리를 만듭니다.  
+Get-IISServerManager 매개 변수가 반환하는 IISServerManager 개체를 사용하여 가상 디렉터리를 만들 수 있습니다. 이 개체는 .NET Microsoft.Web.Administration.ServerManager API를 노출합니다. 이 예제에서, 다음 명령은 사이트 컬렉션의 "기본 웹 사이트" 요소 및 애플리케이션 섹션의 루트 애플리케이션 요소("/")에 액세스합니다. 그런 다음 해당 애플리케이션 요소에 대한 VirtualDirectories 컬렉션의 Add() 메서드를 호출하여 새 디렉터리를 만듭니다.  
 
 ```  
 PS C:\> $sm = Get-IISServerManager  
@@ -202,7 +202,7 @@ PS C:\> $sm.CommitChanges()
 
 **애플리케이션 풀 만들기**  
 
-마찬가지로 Get-IISServerManager를 사용하여 응용 프로그램 풀을 만들 수 있습니다.  
+마찬가지로 Get-IISServerManager를 사용하여 애플리케이션 풀을 만들 수 있습니다.  
 
 ```  
 PS C:\> $sm = Get-IISServerManager  
@@ -242,7 +242,7 @@ Nano 서버에서 웹 사이트에 대한 HTTPS를 구성하는 방법을 보여
     $sm.CommitChanges()  
     ```  
 
-    또한 다음 구문을 통해 특정 호스트 이름으로 SNI(서버 이름 표시)를 사용할 수 있습니다. `$sm.Sites["Default Web Site"].Bindings.Add("*:443:www.foo.bar.com", $hash, "My", "Sni".`  
+    또한 다음 구문을 통해 특정 호스트 이름으로 SNI(서버 이름 표시)를 사용할 수 있습니다. `$sm.Sites["Default Web Site"].Bindings.Add("*:443: www.foo.bar.com", $hash, "My", "Sni".`  
 
 ## <a name="appendix-1-list-of-iis-sub-features"></a>부록 1: IIS 하위 기능 목록
 
@@ -445,7 +445,7 @@ IIS의 각 기능은 구성 요소 집합으로 존재합니다. 이 부록에�
 |`<modules>`|`<add name="WindowsAuthenticationModule" lockItem="true" />`|  
 |`<windowsAuthentication>`|`<windowsAuthentication enabled="false" authPersistNonNTLM\="true"><br />    <providers><br />        <add value="Negotiate" /><br />        <add value="NTLM" /><br />    <\providers><br /><\windowsAuthentication><windowsAuthentication enabled="false" authPersistNonNTLM\="true"><br />    <providers><br />        <add value="Negotiate" /><br />        <add value="NTLM" /><br />    <\/providers><br /><\/windowsAuthentication>`|  
 
-### <a name="application-development"></a>응용 프로그램 개발  
+### <a name="application-development"></a>애플리케이션 개발  
 **애플리케이션 초기화**  
 
 |섹션|구성 요소|  
