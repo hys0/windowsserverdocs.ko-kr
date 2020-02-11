@@ -12,22 +12,22 @@ author: msjimwu
 ms.author: coreyp
 manager: dongill
 ms.date: 3/15/2018
-ms.openlocfilehash: c756aaeb293f9e6822e979e0f305f0c4f98adf72
-ms.sourcegitcommit: bfe9c5f7141f4f2343a4edf432856f07db1410aa
+ms.openlocfilehash: 77462ab74ee63677362b779615376e831c71de00
+ms.sourcegitcommit: eca5bb75d1db20ac07232cea759b6b542626c02f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75352086"
+ms.lasthandoff: 02/10/2020
+ms.locfileid: "77114532"
 ---
 # <a name="deploy-windows-server-hybrid-cloud-print"></a>Windows Server 하이브리드 클라우드 인쇄 배포
 
->적용 대상: Windows Server 2016
+>적용 대상: Windows Server 2016
 
 IT 관리자를 위한이 항목에서는 Microsoft의 HCP (하이브리드 클라우드 인쇄) 솔루션의 종단 간 배포에 대해 설명 합니다. 이 솔루션은 인쇄 서버로 실행 되는 기존 Windows Server를 기반으로 계층을 만들고,이를 통해 Azure AD (Azure AD) 가입 및 MDM 관리 장치를 사용 하 여 조직 관리 프린터를 검색 하 고 인쇄할 Azure Active Directory 수 있습니다.
 
 ## <a name="pre-requisites"></a>필수 구성 요소
 
-이 설치를 시작 하기 전에 획득 해야 하는 여러 구독, 서비스 및 컴퓨터가 있습니다. 보기는 다음과 같습니다.
+이 설치를 시작 하기 전에 획득 해야 하는 여러 구독, 서비스 및 컴퓨터가 있습니다. 이러한 속성은 다음과 같습니다.
 
 - Azure AD premium 구독.
 
@@ -107,8 +107,8 @@ HCP 서비스와 인증 된 통신을 사용 하도록 설정 하려면 3 개의
 
     ![AAD 노출 API 5](../media/hybrid-cloud-print/AAD-AppRegistration-ECP-ExposeAPI-ScopeName.png)
 
-3. API 사용 권한 추가
-    - 앱 등록 블레이드로 돌아갑니다. 네이티브 앱을 클릭 하 고 API 권한을 선택 합니다. **권한 추가**를 클릭합니다.
+3. API 권한 추가
+    - 앱 등록 블레이드로 돌아갑니다. 네이티브 앱을 클릭 하 고 API 권한을 선택 합니다. **권한 추가**를 클릭 합니다.
 
     ![AAD API 권한 1](../media/hybrid-cloud-print/AAD-AppRegistration-APIPermission.png)
 
@@ -178,7 +178,7 @@ HCP 서비스와 인증 된 통신을 사용 하도록 설정 하려면 3 개의
 1. 인쇄 서버에 사용할 수 있는 Windows 업데이트 모두 설치 되어 있는지 확인 합니다. 참고: 빌드 17763.165 이상에서 서버 2019을 패치 해야 합니다.
     - 다음 서버 역할을 설치 합니다.
         - 인쇄 서버 역할
-        - IIS(인터넷 정보 서비스)
+        - IIS (인터넷 정보 서비스)
     - 서버 역할을 설치 하는 방법에 대 한 자세한 내용은 역할 [및 기능 추가 마법사를 사용 하 여 역할, 역할 서비스 및 기능 설치](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#BKMK_installarfw) 를 참조 하세요.
 
     ![인쇄 서버 역할](../media/hybrid-cloud-print/PrintServer-Roles.png)
@@ -199,7 +199,7 @@ HCP 서비스와 인증 된 통신을 사용 하도록 설정 하려면 3 개의
 
         `"C:\Program Files\WindowsPowerShell\Modules\PublishCloudPrinter\1.0.0.0"`
 
-    - 를 실행합니다.
+    - 실행
 
         `.\CloudPrintDeploy.ps1 -AzureTenant <Azure Active Directory domain name> -AzureTenantGuid <Azure Active Directory ID>`
 
@@ -215,9 +215,9 @@ HCP 서비스와 인증 된 통신을 사용 하도록 설정 하려면 3 개의
 
     ![인쇄 서버 클라우드 인쇄 배포](../media/hybrid-cloud-print/PrintServer-CloudPrintDeploy.png)
 
-    - 로그 파일을 확인 하 여 오류가 있는지 확인 합니다. `C:\Program Files\WindowsPowerShell\Modules\PublishCloudPrinter\1.0.0.0>notepad CloudPrintDeploy.log`
+    - 로그 파일을 확인 하 여 오류가 있는지 확인 합니다. `C:\Program Files\WindowsPowerShell\Modules\PublishCloudPrinter\1.0.0.0\CloudPrintDeploy.log`
 
-4. 관리자 권한 명령 프롬프트에서 RegitEdit를 엽니다. Computer \ HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows\CurrentVersion\CloudPrint\EnterpriseCloudPrintService.로 이동 합니다.
+4. 관리자 권한 명령 프롬프트에서 **Regitedit** 를 실행 합니다. Computer \ HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows\CurrentVersion\CloudPrint\EnterpriseCloudPrintService.로 이동 합니다.
     - AzureAudience Enterprise Cloud 인쇄 앱의 응용 프로그램 ID URI로 설정 되었는지 확인 합니다.
     - AzureTenant이 Azure AD 도메인 이름으로 설정 되어 있는지 확인 합니다.
 
@@ -238,7 +238,7 @@ HCP 서비스와 인증 된 통신을 사용 하도록 설정 하려면 3 개의
     - 타사 공급자에 도메인을 등록 하는 경우 SSL 인증서를 사용 하 여 IIS 끝점을 구성 해야 합니다. 자세한 내용은이 [가이드](https://www.sslsupportdesk.com/microsoft-server-2016-iis-10-10-5-ssl-installation/) 를 참조 하세요.
 
 8. SQLite 패키지를 설치 합니다.
-   - 관리자 권한으로 PowerShell 명령 프롬프트를 엽니다.
+   - 관리자 권한 PowerShell 명령 프롬프트를 엽니다.
    - 다음 명령을 실행 하 여 시스템. SQLite nuget 패키지를 다운로드 합니다.
 
         `Register-PackageSource -Name nuget.org -ProviderName NuGet -Location https://www.nuget.org/api/v2/ -Trusted -Force`
@@ -332,7 +332,7 @@ HCP 서비스와 인증 된 통신을 사용 하도록 설정 하려면 3 개의
     - Azure Portal에서 **Azure Active Directory** > **Enterprise applications** > **모든 응용 프로그램**으로 이동 합니다.
     - MopriaDiscoveryService 앱을 선택 합니다.
     - **응용 프로그램 프록시**로 이동 합니다. 사전 인증 방법을 **Azure Active Directory**로 변경 합니다.
-    - **Single Sign-On**으로 이동합니다. Single Sign-On 방법으로 "Windows 통합 인증"을 선택 합니다.
+    - **Single sign-on**으로 이동 합니다. Single Sign-On 방법으로 "Windows 통합 인증"을 선택 합니다.
     - **내부 응용 프로그램 spn** 을 인쇄 서버 컴퓨터의 spn으로 설정 합니다.
     - **위임 된 로그인 id** 를 "사용자 계정 이름"으로 설정 합니다.
     - EntperiseCloudPrint 앱에 대해 반복 합니다.
@@ -384,7 +384,7 @@ HCP 서비스와 인증 된 통신을 사용 하도록 설정 하려면 3 개의
 4. 변경 내용을 저장 하 고 프린터 속성 창을 닫습니다.
 5. Windows 10이 하 버전의 생성자 업데이트를 준비 합니다. 컴퓨터를 Azure AD에 가입 하 고 온-프레미스 Active Directory와 동기화 된 사용자로 로그인 하 고 MopriaDeviceDb. db 파일에 대 한 적절 한 사용 권한이 부여 되었습니다.
 6. Windows 10 컴퓨터에서 관리자 권한 Windows PowerShell 명령 프롬프트를 엽니다.
-    - 다음 명령을 실행합니다.
+    - 다음 명령을 실행 합니다.
         - 컴퓨터가 PowerShell 갤러리에 도달할 수 있는지 확인 `find-module -Name "PublishCloudPrinter"` (PSGallery)
         - `install-module -Name "PublishCloudPrinter"`
 
@@ -403,7 +403,7 @@ HCP 서비스와 인증 된 통신을 사용 하도록 설정 하려면 3 개의
 
         - Sddl = 프린터에 대 한 권한을 나타내는 SDDL 문자열입니다.
             - 인쇄 서버에 관리자로 로그온 한 후 게시할 프린터에 대해 다음 PowerShell 명령을 실행 합니다. `(Get-Printer PrinterName -full).PermissionSDDL`합니다.
-            - 위의 명령에서 결과에 **O:ba** 를 접두사로 추가 합니다. 예: 이전 명령에서 반환 된 문자열이 "G:DUD: (A; OICI; FA;;;) 인 경우 WD) ", 다음 SDDL =" O:BAG: DUD: (A; O:BAG; FA;;; WD) ".
+            - 위의 명령에서 결과에 **O:ba** 를 접두사로 추가 합니다. 예를 들어 이전 명령에서 반환 된 문자열이 "G:DUD: (A; OICI; FA;;;) 인 경우 WD) ", 다음 SDDL =" O:BAG: DUD: (A; O:BAG; FA;;; WD) ".
         - DiscoveryEndpoint = Azure Portal에 로그인 한 다음 엔터프라이즈 응용 프로그램에서 문자열을 가져옵니다. > Mopria 검색 서비스 앱 > 응용 프로그램 프록시 > 외부 URL입니다. 후행 "/"를 생략 합니다.
         - PrintServerEndpoint = Azure Portal에 로그인 한 다음 엔터프라이즈 응용 프로그램 > 엔터프라이즈 클라우드 인쇄 앱 > 응용 프로그램 프록시 > 외부 URL에서 문자열을 가져옵니다. 후행 "/"를 생략 합니다.
         - AzureClientId = 등록 된 네이티브 응용 프로그램의 응용 프로그램 ID입니다.
@@ -414,7 +414,7 @@ HCP 서비스와 인증 된 통신을 사용 하도록 설정 하려면 3 개의
 
         `Publish-CloudPrinter -Printer <string> -Manufacturer <string> -Model <string> -OrgLocation <string> -Sddl <string> -DiscoveryEndpoint <string> -PrintServerEndpoint <string> -AzureClientId <string> -AzureTenantGuid <string> -DiscoveryResourceId <string>`
 
-        명령 샘플:
+        샘플 명령:
 
         `Publish-CloudPrinter -Printer HcpTestPrinter -Manufacturer Manufacturer1 -Model Model1 -OrgLocation '{"attrs": [{"category":"country", "vs":"USA", "depth":0}, {"category":"organization", "vs":"MyCompany", "depth":1}, {"category":"site", "vs":"MyCity, State", "depth":2}, {"category":"building", "vs":"Building 1", "depth":3}, {"category":"floor_name", "vs":1, "depth":4}, {"category":"room_name", "vs":"1111", "depth":5}]}' -Sddl "O:BAG:DUD:(A;OICI;FA;;;WD)" -DiscoveryEndpoint "https://mopriadiscoveryservice-contoso.msappproxy.net/mcs" -PrintServerEndpoint "https://enterprisecloudprint-contoso.msappproxy.net/ecp" -AzureClientId "dbe4feeb-cb69-40fc-91aa-73272f6d8fe1" -AzureTenantGuid "8de6a14a-5a23-4c1c-9ae4-1481ce356034" -DiscoveryResourceId "https://mopriadiscoveryservice-contoso.msappproxy.net/mcs/"`
 
@@ -422,14 +422,14 @@ HCP 서비스와 인증 된 통신을 사용 하도록 설정 하려면 3 개의
 
         `Publish-CloudPrinter -Query -DiscoveryEndpoint <string> -AzureClientId <string> -AzureTenantGuid <string> -DiscoveryResourceId <string>`
 
-        명령 샘플:
+        샘플 명령:
 
         `Publish-CloudPrinter -Query -DiscoveryEndpoint "https://mopriadiscoveryservice-contoso.msappproxy.net/mcs" -AzureClientId "dbe4feeb-cb69-40fc-91aa-73272f6d8fe1" -AzureTenantGuid "8de6a14a-5a23-4c1c-9ae4-1481ce356034" -DiscoveryResourceId "https://mopriadiscoveryservice-contoso.msappproxy.net/mcs/"`
 
 ## <a name="verify-the-deployment"></a>배포 확인
 
 MDM 정책이 구성 된 Azure AD 조인 장치에서 다음을 수행 합니다.
-- 웹 브라우저를 *열고 https://mopriadiscoveryservice- msappproxy.net/mcs/services*로 이동 합니다.
+- 웹 브라우저를 *열고 https://mopriadiscoveryservice-msappproxy.net/mcs/services*로 이동 합니다.
 - 이 끝점의 기능 집합을 설명 하는 JSON 텍스트가 표시 되어야 합니다.
 - **설정** > **장치** > **프린터 & 스캐너**로 이동 합니다.
     - **프린터 또는 스캐너 추가**를 클릭 합니다.
@@ -445,17 +445,19 @@ MDM 정책이 구성 된 Azure AD 조인 장치에서 다음을 수행 합니다
 
 ## <a name="troubleshooting"></a>문제 해결
 
-오류를 해결 하는 데 도움이 되는 다양 한 로그가 있습니다.
-- Windows 10 클라이언트에서
-    - 피드백 허브를 사용 하 여 새 피드백을 추가 합니다.
-        - **시작** 을 클릭 하 고 "피드백 허브"를 입력 합니다.
-        - 범주 아래에서 **문제**, **장치 및 드라이버**를 선택 하 고 **인쇄**를 선택 합니다.
-        - 자세한 내용을 추가 하는 방법에 대 한 섹션에서 **기록 시작** 단추를 클릭 합니다.
-        - 실패 한 인쇄 작업을 다시 시도 합니다.
-        - 피드백 허브로 돌아가서 **기록 중지** 단추를 클릭 합니다.
-        - **제출을** 클릭 하 여 피드백을 제출 합니다.
-    - 이벤트 뷰어를 사용 하 여 Azure AD 작업 로그를 확인 합니다. **시작** 을 클릭 하 고 "이벤트 뷰어"을 입력 합니다. Microsoft > Windows > AAD > 작업 > 응용 프로그램 및 서비스 로그로 이동 합니다.
-- 커넥터 서버에 있습니다.
-    - 이벤트 뷰어를 사용 하 여 응용 프로그램 프록시의 로그를 확인 합니다. **시작** 을 클릭 하 고 "이벤트 뷰어"을 입력 합니다. 응용 프로그램 및 서비스 로그 > Microsoft > AadApplicationProxy > 커넥터 > 관리자로 이동 합니다.
-- 인쇄 서버에 있습니다.
-    - Moapp.config에 대 한 로그 검색 서비스 앱 및 엔터프라이즈 클라우드 인쇄 앱은 C:\inetpub\logs\LogFiles\W3SVC1.에서 찾을 수 있습니다.
+다음은 HCP 배포 중에 발생 하는 일반적인 문제입니다.
+
+|오류 |권장 단계 |
+|------|------|
+|CloudPrintDeploy PowerShell 스크립트 실패 | <ul><li>Windows Server에 최신 업데이트가 있는지 확인 합니다.</li><li>WSUS (Windows Server Update Services)를 사용 하는 경우 [wsus/SCCM을 사용 하는 경우 필요에 따라 기능을 설정 하 고 언어 팩을 사용 하도록 설정 하는 방법](https://docs.microsoft.com/windows/deployment/update/fod-and-lang-packs)을 참조 하세요.</li></ul> |
+|SQLite를 설치 하지 못했습니다. 메시지: ' System.web ' 패키지에 대 한 종속성 루프가 검색 되었습니다. | Install-Package system.object-providername nuget-SkipDependencies<br>EF6-providername nuget-SkipDependencies을 설치 합니다.<br>설치-패키지 시스템. n a m.<br><br>패키지를 성공적으로 다운로드 한 후에는 모두 동일한 버전 인지 확인 합니다. 그렇지 않으면-requiredversion 매개 변수를 위의 명령에 추가 하 고 동일한 버전으로 설정 합니다. |
+|프린터를 게시 하지 못했습니다. | <ul><li>통과 인증 인증의 경우 프린터를 게시 하는 사용자에 게 게시 데이터베이스에 대 한 적절 한 권한이 부여 되었는지 확인 합니다.</li><li>Azure AD 사전 인증의 경우 IIS에서 Windows 인증이 사용 되도록 설정 되어 있는지 확인 합니다. 5\.3 단계를 참조 하세요. 또한 먼저 통과 인증을 시도 합니다. 통과 인증 인증을 사용할 경우 응용 프로그램 프록시와 관련 된 문제일 수 있습니다. [응용 프로그램 프록시 문제 및 오류 메시지 문제 해결을](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-troubleshoot)참조 하세요. 통과로 전환 하면 Single Sign-On 설정이 다시 설정 됩니다. 5 단계를 다시 방문 하 여 Azure AD 사전 인증을 다시 설정 합니다.</li></ul> |
+|인쇄 작업이 "프린터로 전송" 상태로 유지 됩니다. | <ul><li>커넥터 서버에서 TLS 1.2를 사용 하도록 설정 했는지 확인 합니다. 2\.1 단계에서 연결 된 문서를 참조 하세요.</li><li>커넥터 서버에서 HTTP2이 사용 되지 않도록 설정 되어 있는지 확인 합니다. 2\.1 단계에서 연결 된 문서를 참조 하세요.</li></ul> |
+
+다음은 문제 해결에 도움이 될 수 있는 로그의 위치입니다.
+
+|구성 요소 |로그 위치 |
+|------|------|
+|Windows 10 클라이언트 | <ul><li>이벤트 뷰어를 사용 하 여 Azure AD 작업 로그를 확인 합니다. **시작** 을 클릭 하 고 "이벤트 뷰어"을 입력 합니다. Microsoft > Windows > AAD > 작업 > 응용 프로그램 및 서비스 로그로 이동 합니다.</li><li>피드백 허브를 사용 하 여 로그를 수집 합니다. [피드백 허브 앱을 사용 하 여 Microsoft로 사용자 의견 보내기](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app) 를 참조 하세요.</li></ul> |
+|커넥터 서버 | 이벤트 뷰어를 사용 하 여 응용 프로그램 프록시의 로그를 확인 합니다. **시작** 을 클릭 하 고 "이벤트 뷰어"을 입력 합니다. 응용 프로그램 및 서비스 로그 > Microsoft > AadApplicationProxy > 커넥터 > 관리자로 이동 합니다. |
+|인쇄 서버 | Moapp.config에 대 한 로그 검색 서비스 앱 및 엔터프라이즈 클라우드 인쇄 앱은 C:\inetpub\logs\LogFiles\W3SVC1.에서 찾을 수 있습니다. |
