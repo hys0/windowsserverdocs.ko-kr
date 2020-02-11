@@ -8,12 +8,12 @@ ms.date: 08/19/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: 02829919c53e3488ad7f229ad8bee0d3ead14c9a
-ms.sourcegitcommit: 3f54036c74c5a67799fbc06a8a18a078ccb327f9
+ms.openlocfilehash: a28b25c55b9ad66cd16f3d9e370fec22ec0f2a5d
+ms.sourcegitcommit: f0fcfee992b76f1ad5dad460d4557f06ee425083
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76124901"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77125144"
 ---
 # <a name="storage-migration-service-frequently-asked-questions-faq"></a>Storage Migration Service 질문과 대답 (FAQ)
 
@@ -27,6 +27,10 @@ Storage Migration Service는 Windows 작업에 방해가 될 수 있는 파일 �
 - $Recycle. bin, Recycler, 재활용, 시스템 볼륨 정보, $UpgDrv $, $SysReset, $Windows $Windows BT,. ~ LS, Windows 이전, 부팅, 복구, 문서 및 설정
 - 파일 시스템, hiberfil, 스왑 파일, winpepge.sys, config.sys, bootsect, bootmgr, bootnxt
 - 대상에서 제외 된 폴더와 충돌 하는 원본 서버의 파일 또는 폴더입니다. <br>예를 들어 원본에 N:\Windows 폴더가 있는 경우이 폴더는 C:\에 매핑됩니다. 대상의 볼륨은 대상의 C:\Windows 시스템 폴더에 방해가 되기 때문에 포함 된 항목에 관계 없이 전송 되지 않습니다.
+
+## <a name="are-locked-files-migrated"></a>잠긴 파일이 마이그레이션 됩니까?
+
+Storage Migration Service는 응용 프로그램이 독점적으로 잠그는 파일을 마이그레이션하지 않습니다. 서비스는 시도 사이에 60 초 지연 시간을 사용 하 여 자동으로 다시 시도 하며 시도 횟수와 지연 시간을 제어할 수 있습니다. 또한 전송을 다시 실행 하 여 공유 위반으로 인해 이전에 건너뛴 파일만 복사할 수 있습니다.
 
 ## <a name="are-domain-migrations-supported"></a>도메인 마이그레이션이 지원 되나요?
 
@@ -62,9 +66,9 @@ Storage Migration Service는 SMB 공유의 모든 플래그, 설정 및 보안�
     - 데이터 암호화
     - Id 원격
     - 인프라
-    - Name(이름)
+    - 이름
     - 경로
-    - Scoped
+    - 범위
     - 범위 이름
     - 보안 설명자
     - 섀도 복사본
@@ -143,13 +147,21 @@ Storage Migration Service는 기본적으로 hidden c:\programdata\microsoft\sto
 
 아니요, 저장소 마이그레이션 서비스는 로컬로 설치 된 응용 프로그램을 마이그레이션하지 않습니다. 마이그레이션을 완료 한 후에는 원본 컴퓨터에서 실행 중인 대상 컴퓨터에 응용 프로그램을 다시 설치 합니다. 사용자 또는 해당 응용 프로그램을 다시 구성할 필요가 없습니다. 저장소 마이그레이션 서비스는 서버를 클라이언트에 표시 하지 않도록 설계 되었습니다. 
 
+## <a name="what-happens-with-existing-files-on-the-destination-server"></a>대상 서버에서 기존 파일은 어떻게 되나요?
+
+전송 작업을 수행할 때 Storage Migration Service는 원본 서버에서 데이터를 미러링합니다. 대상 서버는 데이터를 덮어쓸 수 있으므로 프로덕션 데이터 나 연결 된 사용자를 포함 해서는 안 됩니다. 기본적으로 첫 번째 전송은 대상 서버에 있는 모든 데이터의 백업 복사본을 안전 하 게 만듭니다. 모든 후속 전송에서 기본적으로 저장소 마이그레이션 서비스는 데이터를 대상으로 미러링합니다. 즉, 새 파일을 추가 하는 것 뿐만 아니라 모든 기존 파일을 임의로 덮어쓰고 원본에 없는 모든 파일을 삭제 합니다. 이 동작은 의도적인 것 이며 원본 컴퓨터에 완벽 한 충실도를 제공 합니다. 
+
+## <a name="what-do-the-error-numbers-mean-in-the-transfer-csv"></a>전송 CSV에서 오류 번호는 무엇을 의미 하나요?
+
+전송 CSV 파일에서 발견 되는 대부분의 오류는 Windows 시스템 오류 코드입니다. [Win32 오류 코드 설명서](https://docs.microsoft.com/windows/win32/debug/system-error-codes)를 검토 하 여 각 오류가 무엇을 의미 하는지 확인할 수 있습니다. 
+
 ## <a name="give-feedback"></a>사용자 의견을 제공 하거나, 버그를 제공 하거나, 지원을 받을 수 있는 옵션은 무엇 인가요?
 
 Storage Migration Service에 대 한 피드백을 제공 하려면:
 
 - Windows 10에 포함 된 피드백 허브 도구를 사용 하 여 "기능 제안"을 클릭 하 고 "Windows Server" 범주 및 "저장소 마이그레이션"의 하위 범주를 지정 합니다.
 - [Windows Server UserVoice](https://windowsserver.uservoice.com) 사이트 사용
-- 메일 smsfeed@microsoft.com
+- 전자 메일 smsfeed@microsoft.com
 
 파일 버그:
 
@@ -162,6 +174,6 @@ Storage Migration Service에 대 한 피드백을 제공 하려면:
  - [Windows Server 2019 Technet 포럼](https://social.technet.microsoft.com/Forums/en-US/home?forum=ws2019&filter=alltypes&sort=lastpostdesc) 에 게시 
  - [Microsoft 지원](https://support.microsoft.com) 를 통해 지원 사례를 엽니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [Storage Migration Service 개요](overview.md)

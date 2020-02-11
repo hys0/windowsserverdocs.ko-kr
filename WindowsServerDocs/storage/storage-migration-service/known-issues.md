@@ -4,16 +4,16 @@ description: Microsoft 지원에 대 한 로그를 수집 하는 방법과 같�
 author: nedpyle
 ms.author: nedpyle
 manager: siroy
-ms.date: 10/09/2019
+ms.date: 02/10/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: a98c560306debc0e10c2c0ac44b41e12141b6e9f
-ms.sourcegitcommit: 3f9bcd188dda12dc5803defb47b2c3a907504255
+ms.openlocfilehash: 77a23e5787283aa93d6f2f303cf45b461ccf52dd
+ms.sourcegitcommit: f0fcfee992b76f1ad5dad460d4557f06ee425083
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77001888"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77125114"
 ---
 # <a name="storage-migration-service-known-issues"></a>저장소 마이그레이션 서비스의 알려진 문제
 
@@ -64,11 +64,11 @@ Windows 관리 센터를 사용 하 여 [Windows server 2019 Evaluation 릴리�
 
 Windows 관리 센터 또는 PowerShell을 사용 하 여 전송 작업에 대 한 자세한 오류 전용 CSV 로그를 다운로드 하는 경우 오류 메시지가 표시 됩니다.
 
- >   전송 로그-방화벽에서 파일 공유를 사용할 수 있는지 확인 하세요. :이 요청 작업이 net.tcp:/localhost: 28940/sms/service/1/transfer에서 구성 된 시간 제한 (00:01:00) 내에 회신을 받지 못했습니다. 이 작업에 할당 된 시간이 보다 긴 시간 제한의 일부일 수 있습니다. 서비스가 작업을 계속 처리 하 고 있거나 서비스에서 회신 메시지를 보낼 수 없기 때문일 수 있습니다. 채널/프록시를 IContextChannel로 캐스팅 하 고 OperationTimeout 속성을 설정 하 여 작업 시간 제한을 늘리고 서비스가 클라이언트에 연결할 수 있는지 확인 하세요.
+ >   전송 로그-방화벽에서 파일 공유를 사용할 수 있는지 확인 하세요. :이 요청 작업이 net.tcp:/localhost: 28940/sms/service/1/transfer에서 구성 된 시간 제한 (00:01:00) 내에 회신을 받지 못했습니다. 이 작업에 할당된 시간이 보다 긴 시간 제한의 일부일 수 있습니다. 서비스가 아직 작업을 처리 중이거나 서비스가 회신 메시지를 보낼 수 없었기 때문일 수 있습니다. 채널/프록시를 IContextChannel로 캐스팅 하 고 OperationTimeout 속성을 설정 하 여 작업 시간 제한을 늘리고 서비스가 클라이언트에 연결할 수 있는지 확인 하세요.
 
 이 문제는 저장소 마이그레이션 서비스에서 허용 하는 기본 1 분 제한 시간 내에 필터링 할 수 없는 너무 많은 전송 된 파일에 의해 발생 합니다. 
 
-이 문제를 해결 하려면 다음을 수행 합니다.
+이 문제를 해결하려면
 
 1. Orchestrator 컴퓨터에서 Notepad.exe를 사용 하 여 *%SYSTEMROOT%\SMS\Microsoft.StorageMigration.Service.exe.config* 파일을 편집 하 여 "sendTimeout"를 1 분 기본값에서 10 분으로 변경 합니다.
 
@@ -85,7 +85,7 @@ Windows 관리 센터 또는 PowerShell을 사용 하 여 전송 작업에 대 �
 
    `HKEY_LOCAL_MACHINE\Software\Microsoft\SMSPowershell`
 
-5. 편집 메뉴에서 새로 만들기를 가리킨 후 DWORD 값을 클릭합니다. 
+5. 편집 메뉴에서 새로 만들기를 가리키고 DWORD 값을 클릭합니다. 
 6. DWORD 이름에 "WcfOperationTimeoutInMinutes"를 입력 한 다음 ENTER 키를 누릅니다.
 7. "WcfOperationTimeoutInMinutes"을 마우스 오른쪽 단추로 클릭 한 다음 수정을 클릭 합니다. 
 8. 기본 데이터 상자에서 "10 진수"를 클릭 합니다.
@@ -349,7 +349,66 @@ Windows Server 2008 R2 클러스터 원본에서 잘라내기를 실행 하려�
  4. 저장소 마이그레이션 서비스에서 추가 된 접미사를 포함 하는 사용 하지 않도록 설정 된 사용자 또는 그룹의 경우 이러한 계정을 삭제할 수 있습니다. 사용자 계정에는 도메인 사용자 그룹만 포함 되 고 저장소 마이그레이션 서비스 전송 시작 시간과 일치 하는 날짜/시간이 만들어지므로 사용자 계정이 나중에 추가 되었는지 확인할 수 있습니다.
  
  전송 목적으로 도메인 컨트롤러에서 저장소 마이그레이션 서비스를 사용 하려는 경우 Windows 관리 센터의 전송 설정 페이지에서 항상 "사용자 및 그룹을 전송 하지 않음"을 선택 해야 합니다.
+ 
+ ## <a name="error-53-failed-to-inventory-all-specified-devices-when-running-inventory"></a>인벤토리를 실행 하는 경우 오류 53, "지정 된 모든 장치를 인벤토리 하지 못했습니다." 
 
-## <a name="see-also"></a>참고 항목
+인벤토리를 실행 하려고 할 때 다음을 수신 합니다.
+
+    Failed to inventory all specified devices 
+    
+    Log Name:      Microsoft-Windows-StorageMigrationService/Admin
+    Source:        Microsoft-Windows-StorageMigrationService
+    Date:          1/16/2020 8:31:17 AM
+    Event ID:      2516
+    Task Category: None
+    Level:         Error
+    Keywords:      
+    User:          NETWORK SERVICE
+    Computer:      ned.corp.contoso.com
+    Description:
+    Couldn't inventory files on the specified endpoint.
+    Job: ned1
+    Computer: ned.corp.contoso.com
+    Endpoint: hithere
+    State: Failed
+    File Count: 0
+    File Size in KB: 0
+    Error: 53
+    Error Message: Endpoint scan failed
+    Guidance: Check the detailed error and make sure the inventory requirements are met. This could be because of missing permissions on the source computer.
+
+    Log Name:      Microsoft-Windows-StorageMigrationService-Proxy/Debug
+    Source:        Microsoft-Windows-StorageMigrationService-Proxy
+    Date:          1/16/2020 8:31:17 AM
+    Event ID:      10004
+    Task Category: None
+    Level:         Critical
+    Keywords:      
+    User:          NETWORK SERVICE
+    Computer:      ned.corp.contoso.com
+    Description:
+    01/16/2020-08:31:17.031 [Crit] Consumer Task failed with error:The network path was not found.
+    . StackTrace=   at Microsoft.Win32.RegistryKey.Win32ErrorStatic(Int32 errorCode, String str)
+       at Microsoft.Win32.RegistryKey.OpenRemoteBaseKey(RegistryHive hKey, String machineName, RegistryView view)
+       at Microsoft.StorageMigration.Proxy.Service.Transfer.FileDirUtils.GetEnvironmentPathFolders(String ServerName, Boolean IsServerLocal)
+       at Microsoft.StorageMigration.Proxy.Service.Discovery.ScanUtils.<ScanSMBEndpoint>d__3.MoveNext()
+       at Microsoft.StorageMigration.Proxy.EndpointScanOperation.Run()
+       at Microsoft.StorageMigration.Proxy.Service.Discovery.EndpointScanRequestHandler.ProcessRequest(EndpointScanRequest scanRequest, Guid operationId)
+       at Microsoft.StorageMigration.Proxy.Service.Discovery.EndpointScanRequestHandler.ProcessRequest(Object request)
+       at Microsoft.StorageMigration.Proxy.Common.ProducerConsumerManager`3.Consume(CancellationToken token)    
+       
+    01/16/2020-08:31:10.015 [Erro] Endpoint Scan failed. Error: (53) The network path was not found.
+    Stack trace:
+       at Microsoft.Win32.RegistryKey.Win32ErrorStatic(Int32 errorCode, String str)
+       at Microsoft.Win32.RegistryKey.OpenRemoteBaseKey(RegistryHive hKey, String machineName, RegistryView view)
+
+이 단계에서 저장소 마이그레이션 서비스 오 케 스트레이 터가 원격 레지스트리 읽기를 시도 하 여 원본 컴퓨터 구성을 확인 하 고 있지만 레지스트리 경로가 존재 하지 않는다는 것을 원본 서버에서 거부 하 고 있습니다. 다음과 같은 문제가 원인일 수 있습니다.
+
+ - 원본 컴퓨터에서 원격 레지스트리 서비스가 실행 되 고 있지 않습니다.
+ - 방화벽에서 Orchestrator의 원본 서버에 대 한 원격 레지스트리 연결을 허용 하지 않습니다.
+ - 원본 컴퓨터에 연결할 수 있는 원격 레지스트리 권한이 원본 마이그레이션 계정에 없습니다.
+ - 원본 컴퓨터의 레지스트리 내에서 "HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows NT\CurrentVersion" 또는 "HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Services\에 있는 원본 마이그레이션 계정에 읽기 권한이 없습니다. LanmanServer
+
+## <a name="see-also"></a>참고자료
 
 - [Storage Migration Service 개요](overview.md)

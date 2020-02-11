@@ -14,17 +14,17 @@ ms.date: 1/24/2020
 ms.topic: landing-page
 author: kaushika-msft
 ms.author: kaushika
-ms.openlocfilehash: 593fc4abbdce3ed53fa8d7ef73d529558b100bcc
-ms.sourcegitcommit: 3f9bcd188dda12dc5803defb47b2c3a907504255
+ms.openlocfilehash: cd4e61a9fac5b1a1f6a1b66309e514ef75b1e4db
+ms.sourcegitcommit: f0fcfee992b76f1ad5dad460d4557f06ee425083
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77001798"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77125134"
 ---
 # <a name="troubleshooting-windows-server-components"></a>Windows Server 구성 요소 문제 해결
 
 > [!TIP]
-> 이전 버전의 Windows Server에 대한 정보를 찾으시나요? docs.microsoft.com에서 다른 [Windows Server 라이브러리](/previous-versions/windows/)를 확인하세요.  
+> 이전 버전의 Windows Server에 대한 자세한 내용이 궁금하십니까? docs.microsoft.com에서 다른 [Windows Server 라이브러리](/previous-versions/windows/)를 확인하세요.  
 >   
 > [이 사이트에서 특정 정보를 검색](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions)할 수도 있습니다.
 
@@ -46,17 +46,17 @@ Microsoft에서는 Windows Server 용 업데이트를 정기적으로 모두 릴
 
 ## <a name="troubleshoot-startup-and-restart"></a>시작 및 다시 시작 문제 해결
 
-- [Windows 시작에 대 한 고급 문제 해결](https://docs.microsoft.com/windows/client-management/troubleshoot-windows-startup.md)
-- [How to determine the appropriate page file size for 64-bit versions of Windows](https://docs.microsoft.com/windows/client-management/determine-appropriate-page-file-size.md)(Windows 64비트 버전에 적절한 페이지 파일 크기를 결정하는 방법)
-- [커널 또는 전체 크래시 덤프 생성](https://docs.microsoft.com/windows/client-management/generate-kernel-or-complete-crash-dump.md)
-- [페이지 파일 소개](https://docs.microsoft.com/windows/client-management/introduction-page-file.md)
-- [Windows에서 시스템 오류 및 복구 옵션 구성](https://docs.microsoft.com/windows/client-management/system-failure-recovery-options.md)
-- [Windows 부팅 문제에 대 한 고급 문제 해결](https://docs.microsoft.com/windows/client-management/advanced-troubleshooting-boot-problems.md)
-- [Windows 기반 컴퓨터 중지에 대 한 고급 문제 해결](https://docs.microsoft.com/windows/client-management/troubleshoot-windows-freeze.md)
-- [중지 오류 또는 블루 스크린 오류에 대 한 고급 문제 해결](https://docs.microsoft.com/windows/client-management/troubleshoot-stop-errors.md)
-- [중지 오류 7B 또는 Inaccessible_Boot_Device에 대 한 고급 문제 해결](https://docs.microsoft.com/windows/client-management/troubleshoot-inaccessible-boot-device.md)
-- [이벤트 ID 41에 대 한 고급 문제 해결 "시스템을 처음부터 종료 하지 않고 다시 부팅 했습니다."](https://docs.microsoft.com/windows/client-management/troubleshoot-event-id-41-restart.md)
-- [기본 Broadcom 네트워크 어댑터 드라이버를 업데이트할 때 중지 오류가 발생 합니다.](https://docs.microsoft.com/windows/client-management/troubleshoot-stop-error-on-broadcom-driver-update.md)
+- [Windows 시작에 대 한 고급 문제 해결](https://docs.microsoft.com/windows/client-management/troubleshoot-windows-startup)
+- [64 비트 버전의 Windows에서 적절 한 페이지 파일 크기를 확인 하는 방법](https://docs.microsoft.com/windows/client-management/determine-appropriate-page-file-size)
+- [커널 또는 전체 크래시 덤프 생성](https://docs.microsoft.com/windows/client-management/generate-kernel-or-complete-crash-dump)
+- [페이지 파일 소개](https://docs.microsoft.com/windows/client-management/introduction-page-file)
+- [Windows에서 시스템 오류 및 복구 옵션 구성](https://docs.microsoft.com/windows/client-management/system-failure-recovery-options)
+- [Windows 부팅 문제에 대 한 고급 문제 해결](https://docs.microsoft.com/windows/client-management/advanced-troubleshooting-boot-problems)
+- [Windows 기반 컴퓨터 중지에 대 한 고급 문제 해결](https://docs.microsoft.com/windows/client-management/troubleshoot-windows-freeze)
+- [중지 오류 또는 블루 스크린 오류에 대 한 고급 문제 해결](https://docs.microsoft.com/windows/client-management/troubleshoot-stop-errors)
+- [중지 오류 7B 또는 Inaccessible_Boot_Device에 대 한 고급 문제 해결](https://docs.microsoft.com/windows/client-management/troubleshoot-inaccessible-boot-device)
+- [이벤트 ID 41에 대 한 고급 문제 해결 "시스템을 처음부터 종료 하지 않고 다시 부팅 했습니다."](https://docs.microsoft.com/windows/client-management/troubleshoot-event-id-41-restart)
+- [기본 Broadcom 네트워크 어댑터 드라이버를 업데이트할 때 중지 오류가 발생 합니다.](https://docs.microsoft.com/windows/client-management/troubleshoot-stop-error-on-broadcom-driver-update)
 
 ## <a name="troubleshoot-ad-forest-recovery"></a>AD 포리스트 복구 문제 해결
 
