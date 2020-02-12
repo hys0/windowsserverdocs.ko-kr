@@ -9,12 +9,12 @@ ms.date: 01/28/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: c3a7e7c420ef63adc906e6558ed7aff6819e983c
-ms.sourcegitcommit: a33404f92867089bb9b0defcd50960ff231eef3f
+ms.openlocfilehash: b658644d1ba7cec1b02a2a51331cd7b7152efc77
+ms.sourcegitcommit: 75e611fd5de8b8aa03fc26c2a3d5dbf8211b8ce3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77013058"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77145490"
 ---
 # <a name="configure-azure-mfa-as-authentication-provider-with-ad-fs"></a>AD FS를 사용 하 여 Azure MFA를 인증 공급자로 구성
 
@@ -160,11 +160,14 @@ Set-AdfsAzureMfaTenant -TenantId <tenant ID> -ClientId 981f26a1-7f43-403b-a875-f
 
 인증서의 유효 기간이 끝에 가까워지면 각 AD FS 서버에서 새 Azure MFA 인증서를 생성 하 여 갱신 프로세스를 시작 합니다. PowerShell 명령 창에서 다음 cmdlet을 사용 하 여 각 AD FS 서버에 새 인증서를 생성 합니다.
 
+> [!CAUTION]
+> 인증서가 이미 만료 된 경우에는 `-Renew $true` 매개 변수를 다음 명령에 추가 하지 마세요. 이 시나리오에서는 기존의 만료 된 인증서가 그대로 유지 되 고 추가 인증서를 생성 하는 대신 새 인증서로 바뀝니다.
+
 ```
 PS C:\> $newcert = New-AdfsAzureMfaTenantCertificate -TenantId <tenant id such as contoso.onmicrosoft.com> -Renew $true
 ```
 
-이 cmdlet의 결과로, 향후 2 일에서 2 년까지 유효한 새 인증서가 생성 됩니다.  AD FS 및 Azure MFA 작업은이 cmdlet 또는 새 인증서의 영향을 받지 않습니다. (참고: 2 일 지연은 의도적인 것 이며, Azure MFA에 대 한 사용을 시작 AD FS 하기 전에 테 넌 트에서 새 인증서를 구성 하기 위해 다음 단계를 실행 하는 시간을 제공 합니다.)
+인증서가 아직 만료 되지 않은 경우 2 일 이후 2 일 동안 유효한 새 인증서가 생성 됩니다. AD FS 및 Azure MFA 작업은이 cmdlet 또는 새 인증서의 영향을 받지 않습니다. (참고: 2 일 지연은 의도적인 것 이며, Azure MFA에 대 한 사용을 시작 AD FS 하기 전에 테 넌 트에서 새 인증서를 구성 하기 위해 다음 단계를 실행 하는 시간을 제공 합니다.)
 
 ### <a name="configure-each-new-ad-fs-azure-mfa-certificate-in-the-azure-ad-tenant"></a>Azure AD 테 넌 트에서 새로운 새 AD FS Azure MFA 인증서를 구성 합니다.
 
@@ -174,7 +177,7 @@ Azure AD PowerShell 모듈을 사용 하 여 각 AD FS 서버의 새 인증서�
 PS C:/> New-MsolServicePrincipalCredential -AppPrincipalId 981f26a1-7f43-403b-a875-f8b09b8cd720 -Type Asymmetric -Usage Verify -Value $newcert
 ```
 
-새 인증서가 `$newcert` 됩니다. Base64 인코딩 인증서는 개인 키 없이 인증서를 DER로 인코딩된 파일로 내보내고 메모장에서 연 다음 PowerShell 세션에 복사/붙여넣기 하 고 변수 `$newcert`에 할당 하 여 가져올 수 있습니다.
+이전 인증서가 이미 만료 된 경우 AD FS 서비스를 다시 시작 하 여 새 인증서를 선택 합니다. 인증서가 만료 되기 전에 갱신 된 경우 AD FS 서비스를 다시 시작할 필요가 없습니다.
 
 ### <a name="verify-that-the-new-certificates-will-be-used-for-azure-mfa"></a>새 인증서가 Azure MFA에 사용 되는지 확인 합니다.
 
