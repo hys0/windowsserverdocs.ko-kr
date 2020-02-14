@@ -1,6 +1,6 @@
 ---
-title: SMB 다이렉트를 사용 하 여 파일 서버의 성능 향상
-description: Windows Server 2012 R2, Windows Server 2012 및 Windows Server 2016의 SMB 다이렉트 기능에 대해 설명 합니다.
+title: SMB 다이렉트를 사용하여 파일 서버의 성능 향상
+description: Windows Server 2012 R2, Windows Server 2012 및 Windows Server 2016의 SMB 다이렉트 기능에 대해 설명합니다.
 ms.prod: windows-server
 ms.topic: article
 author: JasonGerend
@@ -10,7 +10,7 @@ ms.date: 04/05/2018
 ms.localizationpriority: medium
 ms.openlocfilehash: 41126aa0d054607449d57928c1777679e5087e73
 ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71394462"
@@ -19,13 +19,13 @@ ms.locfileid: "71394462"
 
 >적용 대상: Windows Server 2012 R2, Windows Server 2012, Windows Server 2016
 
-Windows Server 2012 R2, Windows Server 2012 및 Windows Server 2016에는 RDMA (원격 직접 메모리 액세스) 기능이 있는 네트워크 어댑터를 사용할 수 있도록 지 원하는 SMB 다이렉트 라는 기능이 포함 되어 있습니다. RDMA 기능이 있는 네트워크 어댑터는 대기 시간이 매우 짧으면서 최대 속도로 작동할 수 있는 동시에 CPU 사용량은 매우 적습니다. Hyper-V 또는 Microsoft SQL Server 등의 워크로드에 이 기능을 사용하면 원격 파일 서버가 로컬 저장소와 비슷한 역할을 할 수 있습니다. SMB 다이렉트의 기능은 다음과 같습니다.
+Windows Server 2012 R2, Windows Server 2012 및 Windows Server 2016에는 RDMA(원격 직접 메모리 액세스) 기능이 있는 네트워크 어댑터 사용을 지원하는 SMB 다이렉트라는 기능이 포함되어 있습니다. RDMA 기능이 있는 네트워크 어댑터는 대기 시간이 매우 짧으면서 최대 속도로 작동할 수 있는 동시에 CPU 사용량은 매우 적습니다. Hyper-V 또는 Microsoft SQL Server 등의 워크로드에 이 기능을 사용하면 원격 파일 서버가 로컬 스토리지와 비슷한 역할을 할 수 있습니다. SMB 다이렉트의 기능은 다음과 같습니다.
 
-- 향상된 처리량: 네트워크 어댑터가 회선 속도로 대량의 데이터 전송을 조정 하는 고속 네트워크의 전체 처리량을 활용 합니다.
-- 낮은 대기 시간: 는 네트워크 요청에 대해 매우 빠른 응답을 제공 하며, 따라서 원격 파일 저장소가 직접 연결 된 블록 저장소 처럼 느낌을 줍니다.
-- 낮은 CPU 사용률: 는 네트워크를 통해 데이터를 전송할 때 더 작은 CPU 주기를 사용 하므로 서버 응용 프로그램에서 더 많은 전원을 사용할 수 있습니다.
+- 향상된 처리량: 네트워크 어댑터가 회선 속도로 대량의 데이터 전송을 조정하는 고속 네트워크의 최대 처리량을 활용합니다.
+- 낮은 대기 시간: 네트워크 요청에 대해 매우 빠른 응답을 제공하므로 원격 파일 스토리지가 직접 연결된 블록 스토리지처럼 느껴집니다.
+- 낮은 CPU 사용률: 네트워크를 통해 데이터를 전송할 때 적은 CPU 주기를 사용하므로 서버 애플리케이션에서 더 많은 전원을 사용할 수 있습니다.
 
-SMB 다이렉트는 Windows Server 2012 R2 및 Windows Server 2012에 의해 자동으로 구성 됩니다.
+SMB 다이렉트는 Windows Server 2012 R2 및 Windows Server 2012에 의해 자동으로 구성됩니다.
 
 ## <a name="smb-multichannel-and-smb-direct"></a>SMB 다중 채널 및 SMB 다이렉트
 
@@ -41,20 +41,20 @@ SMB 다중 채널이 있는 경우 SMB는 네트워크 어댑터에 RDMA 기능�
 
 SMB 다이렉트에는 다음이 필요합니다.
 
-- Windows Server 2012 R2 또는 Windows Server 2012를 실행 하는 두 대 이상의 컴퓨터
+- Windows Server 2012 R2 또는 Windows Server 2012를 실행하는 두 대 이상의 컴퓨터
 - RDMA 기능이 있는 하나 이상의 네트워크 어댑터
 
 ### <a name="considerations-when-using-smb-direct"></a>SMB 다이렉트 사용 시 고려 사항
 
 - 장애 조치(failover) 클러스터에서 SMB 다이렉트를 사용할 수는 있지만 클라이언트 액세스에 사용되는 클러스터 네트워크가 SMB 다이렉트에 적절한지 확인해야 합니다. 장애 조치(failover) 클러스터링은 RSS(수신측 배율) 가능 및 RDMA 가능인 네트워크 어댑터와 함께 클라이언트 액세스에 여러 네트워크를 사용하는 것을 지원합니다.
-- Hyper-V 관리 운영 체제에서 SMB 다이렉트를 사용하여 SMB를 통한 Hyper-V 사용을 지원하고, Hyper-V 저장소 스택을 사용하는 가상 컴퓨터에 저장소를 제공할 수 있습니다. 그러나 RDMA 가능 네트워크 어댑터는 Hyper-V 클라이언트에 직접 표시되지 않습니다. RDMA 가능 네트워크 어댑터를 가상 스위치에 연결하는 경우 해당 스위치의 가상 네트워크 어댑터는 RDMA 가능이 아닙니다.
+- Hyper-V 관리 운영 체제에서 SMB 다이렉트를 사용하여 SMB를 통한 Hyper-V 사용을 지원하고, Hyper-V 스토리지 스택을 사용하는 가상 머신에 스토리지를 제공할 수 있습니다. 그러나 RDMA 가능 네트워크 어댑터는 Hyper-V 클라이언트에 직접 표시되지 않습니다. RDMA 가능 네트워크 어댑터를 가상 스위치에 연결하는 경우 해당 스위치의 가상 네트워크 어댑터는 RDMA 가능이 아닙니다.
 - SMB 다중 채널을 사용하지 않도록 설정하면 SMB 다이렉트도 사용하지 않도록 설정됩니다. SMB 다중 채널은 네트워크 어댑터 기능을 검색하여 네트워크 어댑터가 RDMA 가능인지를 확인하므로 SMB 다중 채널이 사용하지 않도록 설정된 경우 클라이언트가 SMB 다이렉트를 사용할 수 없습니다.
-- SMB 다이렉트는 Windows RT에서 지원 되지 않습니다. SMB 다이렉트를 사용 하려면 RDMA 가능 네트워크 어댑터에 대 한 지원이 필요 합니다 .이 기능은 Windows Server 2012 R2 및 Windows Server 2012 에서만 사용할 수 있습니다.
-- SMB 다이렉트는 버전이 낮은 Windows Server에서는 지원되지 않습니다. Windows Server 2012 R2 및 Windows Server 2012 에서만 지원 됩니다.
+- SMB 다이렉트는 Windows RT에서 지원되지 않습니다. SMB 다이렉트는 Windows Server 2012 R2 및 Windows Server 2012에서만 제공되는 RDMA 지원 네트워크 어댑터에 대한 지원이 필요합니다.
+- SMB 다이렉트는 버전이 낮은 Windows Server에서는 지원되지 않습니다. Windows Server 2012 R2 및 Windows Server 2012에서만 지원됩니다.
 
 ## <a name="enabling-and-disabling-smb-direct"></a>SMB 다이렉트 사용 및 사용 안 함
 
-SMB 다이렉트는 Windows Server 2012 R2 또는 Windows Server 2012이 설치 될 때 기본적으로 사용 하도록 설정 됩니다. 적절한 구성이 식별된 경우 SMB 클라이언트는 자동으로 여러 네트워크 연결을 검색하고 사용합니다.
+SMB 다이렉트는 Windows Server 2012 R2 또는 Windows Server 2012가 설치되면 기본적으로 실행됩니다. 적절한 구성이 식별된 경우 SMB 클라이언트는 자동으로 여러 네트워크 연결을 검색하고 사용합니다.
 
 ### <a name="disable-smb-direct"></a>SMB 다이렉트 사용 안 함
 
@@ -72,7 +72,7 @@ Disable-NetAdapterRdma <name>
 Set-NetOffloadGlobalSetting -NetworkDirect Disabled
 ```
 
-클라이언트나 서버 어느 한쪽에서 RDMA를 사용하지 않도록 설정하면 시스템에서 RDMA를 사용할 수 없습니다. *Network Direct* 는 RDMA 인터페이스에 대 한 windows Server 2012 R2 및 windows server 2012 기본 네트워킹 지원의 내부 이름입니다.
+클라이언트나 서버 어느 한쪽에서 RDMA를 사용하지 않도록 설정하면 시스템에서 RDMA를 사용할 수 없습니다. *네트워크 다이렉트*는 RDMA 인터페이스에 대한 Windows Server 2012 R2 및 Windows Server 2012 기본 네트워킹 지원의 내부 이름입니다.
 
 ### <a name="re-enable-smb-direct"></a>SMB 다이렉트 다시 사용
 
@@ -98,7 +98,7 @@ RDMA를 다시 사용하려면 클라이언트와 서버 둘 다에서 RDMA를 �
 
 ### <a name="compare-a-file-copy-with-and-without-using-smb-direct"></a>SMB 다이렉트를 사용한 경우와 사용하지 않은 경우의 파일 복사 비교
 
-SMB 다이렉트의 향상 된 처리량을 측정 하는 방법은 다음과 같습니다.
+SMB 다이렉트의 향상된 처리량을 측정하는 방법은 다음과 같습니다.
 
 1. SMB 다이렉트를 구성합니다.
 2. SMB 다이렉트를 사용하여 큰 파일 복사를 실행하는 데 걸리는 시간을 측정합니다.
@@ -112,7 +112,7 @@ SMB 다이렉트의 향상 된 처리량을 측정 하는 방법은 다음과 �
 
 ### <a name="fail-one-of-multiple-network-adapters-during-a-file-copy-with-smb-direct"></a>SMB 다이렉트를 사용하여 파일 복사를 수행하는 동안 여러 네트워크 어댑터 중 하나에서 오류 발생
 
-SMB 다이렉트의 장애 조치 (failover) 기능을 확인 하는 방법은 다음과 같습니다.
+SMB 다이렉트의 장애 조치(failover) 기능을 확인하는 방법은 다음과 같습니다.
 
 1. SMB 다이렉트가 여러 네트워크 어댑터 구성에서 작동하고 있는지 확인합니다.
 2. 큰 파일 복사를 실행합니다. 복사가 실행되고 있는 동안 케이블 중 하나를 분리하거나 네트워크 어댑터 중 하나를 사용하지 않도록 설정하여 네트워크 경로 중 하나에서 오류를 시뮬레이트합니다.
@@ -123,6 +123,6 @@ SMB 다이렉트의 장애 조치 (failover) 기능을 확인 하는 방법은 �
 
 ## <a name="more-information"></a>자세한 정보
 
-- [서버 메시지 블록 개요](file-server-smb-overview.md)
-- 서버, 저장소 및 네트워크 가용성을 [Increasing. 시나리오 개요](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831437(v%3dws.11)>)
-- [SMB를 통한 Hyper-v 배포](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>)
+- [Server Message Block 개요](file-server-smb-overview.md)
+- [서버, 스토리지 및 네트워크 가용성 증가: 시나리오 개요](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831437(v%3dws.11)>)
+- [SMB를 통한 Hyper-V 배포](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>)

@@ -13,12 +13,12 @@ manager: lizross
 ms.author: helohr
 ms.date: 09/16/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 2195c3bafaa01a1b1c16c17889d5e04d7213a5b6
-ms.sourcegitcommit: 76469d1b7465800315eaca3e0c7f0438fc3939ed
+ms.openlocfilehash: c0a9f11aea9e24cc1a2bab275aae8dc0a81e9cba
+ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75919701"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76822364"
 ---
 # <a name="windows-desktop-client-for-admins"></a>관리자용 Windows 데스크톱 클라이언트
 
@@ -28,7 +28,7 @@ ms.locfileid: "75919701"
 
 ## <a name="installation-options"></a>설치 옵션
 
-사용자가 클라이언트를 다운로드하는 즉시 설치할 수 있지만, 여러 디바이스에 배포하는 경우 클라이언트를 다른 방법으로 배포할 수도 있습니다. 그룹 정책 또는 System Center Configuration Manager를 사용하여 배포하면 명령줄을 사용하여 설치 관리자를 자동으로 실행할 수 있습니다. 다음 명령을 실행하여 클라이언트를 디바이스 단위 또는 사용자 단위로 배포합니다.
+사용자가 클라이언트를 다운로드하는 즉시 설치할 수 있지만, 여러 디바이스에 배포하는 경우 클라이언트를 다른 방법으로 배포할 수도 있습니다. 그룹 정책 또는 Microsoft Endpoint Configuration Manager를 사용하여 배포하면 명령줄을 통해 설치 관리자를 자동으로 실행할 수 있습니다. 다음 명령을 실행하여 클라이언트를 디바이스 단위 또는 사용자 단위로 배포합니다.
 
 ### <a name="per-device-installation"></a>디바이스 단위 설치
 

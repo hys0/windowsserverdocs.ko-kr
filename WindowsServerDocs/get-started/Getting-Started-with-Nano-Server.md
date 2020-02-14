@@ -12,12 +12,12 @@ ms.assetid: 2c2fa45b-6f3b-4663-b421-2da6ecc463bf
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: f94e2c083f0bc05231543c15120818481afbabb0
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 09f031c19c8f6d1105d47b9f22d52db30e9c57ef
+ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75947854"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76822156"
 ---
 # <a name="install-nano-server"></a>Nano 서버 설치
 
@@ -50,7 +50,7 @@ Nano Server는 컨테이너 및 마이크로서비스를 기반으로 하는 "�
 - 그룹 정책은 지원되지 않습니다. 그렇지만 [원하는 상태 구성](https://msdn.microsoft.com/powershell/dsc/nanoDsc)을 사용하여 대규모로 설정을 적용할 수 있습니다.
 - Nano Server는 프록시 서버를 사용하여 인터넷에 액세스하도록 구성할 수 없습니다.
 - NIC 팀(특히 부하 분산과 장애 조치(failover) 또는 LBFO)은 지원되지 않습니다. 대신 SET(Switch-embedded teaming)가 지원됩니다.
-- System Center Configuration Manager 및 System Center Data Protection Manager는 지원되지 않습니다.
+- Microsoft Endpoint Configuration Manager 및 System Center Data Protection Manager는 지원되지 않습니다.
 - BPA(모범 사례 분석기) cmdlet 및 서버 관리자와의 BPA 통합은 지원되지 않습니다.
 - Nano 서버는 가상 HBA(호스트 버스 어댑터)를 지원하지 않습니다.
 - Nano 서버는 제품 키로 정품 인증할 필요가 없습니다. Hyper-V 호스트로 작동하는 경우 Nano 서버는 [자동 가상 머신 정품 인증](https://technet.microsoft.com/library/dn303421%28v=ws.11%29.aspx)(AVMA)을 지원하지 않습니다. Nano 서버 호스트에서 실행되는 가상 머신은 일반 볼륨 라이선스 키를 통한 [키 관리 서비스](https://technet.microsoft.com/library/jj612867(v=ws.11).aspx)(KMS) 또는 [Active Directory 기반 정품 인증](https://technet.microsoft.com/library/dn502534(v=ws.11).aspx)을 사용하여 정품 인증할 수 있습니다.

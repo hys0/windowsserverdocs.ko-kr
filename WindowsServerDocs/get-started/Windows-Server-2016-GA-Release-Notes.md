@@ -12,12 +12,12 @@ ms.topic: article
 ms.assetid: 134aab85-664f-4d44-87ef-9e5fd389071f
 author: jaimeo
 ms.author: jaimeo
-ms.openlocfilehash: 64c0daa8ecc2d6b196d4305e3246dadeebf7075a
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: f4568e1781dbe385d8abe8a96f07841391506738
+ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75948346"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76822166"
 ---
 # <a name="release-notes-important-issues-in-windows-server-2016"></a>릴리스 정보: Windows Server 2016의 주요 문제점
 
@@ -29,7 +29,7 @@ ms.locfileid: "75948346"
 
 ## <a name="express-updates-available-starting-in-november-2018-new"></a>2018년 11월부터 제공되는 Express 업데이트(신규)
 
-2018년 11월 "화요일 업데이트"부터 Windows는 Windows Server 2016용 [Express 업데이트](express-updates.md)를 다시 게시할 예정입니다. WSUS 및 SCCM(System Center Configuration Manager)을 사용하는 경우 Windows Server 2016 업데이트의 패키지 2개, 즉 전체 업데이트와 Express 업데이트가 다시 제공될 예정입니다. 서버 환경을 위해 Express를 사용하려는 경우 서버에 2017년 11월 이후 전체 업데이트(KB# 4048953)를 받아 Express 업데이트가 올바르게 설치되도록 해야 합니다. 2017 11B 업데이트(KB# 4048953) 이후로 업데이트되지 않은 서버에 Express 업데이트를 시도하는 경우 무한 루프에서 대역폭 및 CPU 리소스를 사용하는 반복되는 오류가 표시됩니다. 이 시나리오가 나타나면 Express 업데이트 푸시를 중지하고 대신 오류 루프를 중지하는 최신 전체 업데이트를 푸시합니다.
+2018년 11월 "화요일 업데이트"부터 Windows는 Windows Server 2016용 [Express 업데이트](express-updates.md)를 다시 게시할 예정입니다. WSUS 및 Configuration Manager를 사용하는 경우 Windows Server 2016 업데이트의 패키지 2개, 즉 전체 업데이트와 Express 업데이트가 다시 표시됩니다. 서버 환경을 위해 Express를 사용하려는 경우 서버에 2017년 11월 이후 전체 업데이트(KB# 4048953)를 받아 Express 업데이트가 올바르게 설치되도록 해야 합니다. 2017 11B 업데이트(KB# 4048953) 이후로 업데이트되지 않은 서버에 Express 업데이트를 시도하는 경우 무한 루프에서 대역폭 및 CPU 리소스를 사용하는 반복되는 오류가 표시됩니다. 이 시나리오가 나타나면 Express 업데이트 푸시를 중지하고 대신 오류 루프를 중지하는 최신 전체 업데이트를 푸시합니다.
 
 ## <a name="server-core-installation-option"></a>Server Core 설치 옵션
 

@@ -14,12 +14,12 @@ author: jaimeo
 ms.author: jaimeo
 manager: ''
 ms.localizationpriority: medium
-ms.openlocfilehash: cec3b81beaee7dab7259345c56e79c05739b5dad
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: e41d8fefa662120170b5e76e4f27d8f64fa538d7
+ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75948413"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76822176"
 ---
 # <a name="windows-server-2016-and-microsoft-server-application-compatibility"></a>Windows Server 2016 및 Microsoft Server Application 호환성
 
@@ -37,7 +37,7 @@ ms.locfileid: "75948413"
 |Microsoft System Center Virtual Machine Manager 2016|  예|    [System Center의 새로운 기능](https://technet.microsoft.com/system-center-docs/get-started/what-s-new-in-system-center)|
 |Microsoft System Center Operations Manager 2016|   예|    [System Center의 새로운 기능](https://technet.microsoft.com/system-center-docs/get-started/what-s-new-in-system-center)|
 |Microsoft System Center Data Protection Manager 2016|  예|    [System Center의 새로운 기능](https://technet.microsoft.com/system-center-docs/get-started/what-s-new-in-system-center)|
-|Microsoft System Center Configuration Manager(버전 1606)|  예|    [System Center Configuration Manager 버전 1606의 새로운 기능](https://technet.microsoft.com/library/mt752488.aspx)|  
+|Configuration Manager(버전 1606)|  예|    [Configuration Manager 1606 버전의 새로운 기능](https://technet.microsoft.com/library/mt752488.aspx)|  
 |SharePoint Server 2016|    예|    [SharePoint Server 2016에 대한 하드웨어 및 소프트웨어 요구 사항](https://technet.microsoft.com/library/cc262485(v=office.16).aspx)|
 |Project Server 2016|   예|    [Project Server 2016에 대한 소프트웨어 요구 사항](https://technet.microsoft.com/library/ee683978(v=office.16).aspx)|
 |Exchange Server 2016|  예|    [Exchange 2016에 대한 업데이트](https://technet.microsoft.com/library/jj907309(v=exchg.160).aspx)| 
