@@ -1,7 +1,7 @@
 ---
 ms.assetid: e34622ff-b2d0-4f81-8d00-dacd5d6c215e
 title: Windows 시간 서비스에 대 한 기술 참조
-description: W32Time 서비스는 광범위 한 구성이 필요 없는 컴퓨터에 대 한 네트워크 클록 동기화를 제공 합니다. W32Time 서비스는 Kerberos V5 인증을 성공적으로 수행 하는 데 필수적 이며, 따라서 AD DS 기반 인증을 수행 하는 데 필요 합니다.
+description: W32Time 서비스는 광범위한 구성 없이도 컴퓨터에 네트워크 클록 동기화를 제공합니다. W32Time 서비스는 Kerberos V5 인증을 성공적으로 수행하고 AD DS 기반 인증을 수행하는 데 필수적입니다.
 author: shortpatti
 ms.author: dacuo
 ms.date: 05/08/2018
@@ -10,7 +10,7 @@ ms.prod: windows-server
 ms.technology: networking
 ms.openlocfilehash: 04d39f222fbbc7943cc2074a857a76f38832935d
 ms.sourcegitcommit: 76469d1b7465800315eaca3e0c7f0438fc3939ed
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/13/2020
 ms.locfileid: "75919876"
@@ -18,52 +18,52 @@ ms.locfileid: "75919876"
 # <a name="windows-time-service-technical-reference"></a>Windows 시간 서비스에 대 한 기술 참조
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10 이상
 
-W32Time 서비스는 광범위 한 구성이 필요 없는 컴퓨터에 대 한 네트워크 클록 동기화를 제공 합니다. W32Time 서비스는 Kerberos V5 인증을 성공적으로 수행 하는 데 필수적 이며, 따라서 AD DS 기반 인증을 수행 하는 데 필요 합니다. 대부분의 보안 서비스를 비롯 한 모든 Kerberos 인식 응용 프로그램은 인증 요청에 참여 하는 컴퓨터 간의 시간 동기화에 의존 합니다. AD DS 도메인 컨트롤러에는 정확한 데이터 복제를 위해 동기화 된 클록도 있어야 합니다.
+W32Time 서비스는 광범위한 구성 없이도 컴퓨터에 네트워크 클록 동기화를 제공합니다. W32Time 서비스는 Kerberos V5 인증을 성공적으로 수행하고 AD DS 기반 인증을 수행하는 데 필수적입니다. 대부분의 보안 서비스를 비롯한 모든 Kerberos 인식 애플리케이션은 인증 요청에 참여하는 컴퓨터 간의 시간 동기화에 의존합니다. AD DS 도메인 컨트롤러에는 정확한 데이터 복제를 위해 동기화된 클록도 있어야 합니다.
 
 > [!NOTE]  
-> Windows Server 2003 및 Microsoft Windows 2000 Server 디렉터리 서비스를 이름은 Active Directory 디렉터리 서비스입니다. Windows Server 2008 R2 및 Windows Server 2008에서 디렉터리 서비스의 이름은 Active Directory Domain Services (AD DS)입니다. 이 항목의 나머지 부분에서는 AD DS을 참조 하지만 Windows Server 2016의 Active Directory Domain Services에도 해당 정보를 적용할 수 있습니다.
+> Windows Server 2003 및 Microsoft Windows 2000 Server 디렉터리 서비스를 이름은 Active Directory 디렉터리 서비스입니다. Windows Server 2008 R2 및 Windows Server 2008에서 디렉터리 서비스의 이름은 AD DS(Active Directory Domain Services)입니다. 이 항목의 나머지 부분에서는 AD DS에 대해 설명하지만, 이 정보는 Windows Server 2016의 Active Directory Domain Services에도 적용됩니다.
 
-W32Time 서비스는 **%Systemroot%\System32**에서 기본적으로 설치 되는 w32time 이라는 동적 연결 라이브러리에서 구현 됩니다. W32Time은 원래 Windows 2000 서버에서 네트워크에 대 한 클록을 요구 하는 Kerberos V5 인증 프로토콜의 사양을 지원 하기 위해 개발 되었습니다. Windows Server 2003부터 Windows Server 2000 운영 체제를 통한 네트워크 클록 동기화의 정확성이 향상 되었습니다. 또한 Windows Server 2003에서 W32Time은 시간 공급자를 사용 하 여 다양 한 하드웨어 장치 및 네트워크 시간 프로토콜을 지원 합니다.
+W32Time 서비스는 W32Time.dll이라는 동적 연결 라이브러리에서 구현되며 기본적으로 **%Systemroot%\System32**에 설치됩니다. W32Time.dll은 원래 네트워크의 시계를 동기화해야 하는 Kerberos V5 인증 프로토콜에 의한 사양을 지원하기 위해 Windows 2000 서버용으로 개발되었습니다. Windows Server 2003부터 W32Time.dll을 통해 Windows Server 2000 운영 체제에서 네트워크 클록 동기화의 정확성이 향상되었습니다. 또한 Windows Server 2003에서 W32Time.dll은 시간 공급자를 사용하여 다양한 하드웨어 디바이스와 NTP(Network Time Protocol)를 지원했습니다.
 
-원래는 Kerberos 인증에 대 한 클록 동기화를 제공 하도록 설계 되었지만 대부분의 현재 응용 프로그램에서는 타임 스탬프를 사용 하 여 트랜잭션 일관성을 유지 하 고 중요 한 이벤트의 시간을 기록 하며 비즈니스에 중요 한 시간을 구분 합니다. 내용을.  이러한 응용 프로그램은 Windows 시간 서비스에서 제공 하는 컴퓨터 간의 시간 동기화를 활용 합니다.
+원래는 Kerberos 인증에 대한 시계 동기화를 제공하도록 설계되었지만 대부분의 현재 애플리케이션은 트랜잭션 일관성을 보장하고, 중요한 이벤트의 시간 및 업무상 중요하고 시간이 중요한 정보를 기록하기 위해 타임스탬프를 사용합니다.  이러한 애플리케이션은 Windows 시간 서비스에서 제공하는 컴퓨터 간의 시간 동기화를 활용합니다.
 
 ## <a name="importance-of-time-protocols"></a>시간 프로토콜의 중요도
-시간 프로토콜은 두 컴퓨터 간에 통신 하 여 시간 정보를 교환 한 다음 해당 정보를 사용 하 여 시계를 동기화 합니다. 클라이언트는 Windows 시간 서비스 시간 프로토콜을 사용 하 여 서버에서 시간 정보를 요청 하 고 수신 된 정보에 따라 시계를 동기화 합니다.
+시간 프로토콜은 두 컴퓨터 간에 통신하여 시간 정보를 교환한 다음, 해당 정보를 사용하여 시계를 동기화합니다. 클라이언트는 Windows 시간 서비스 시간 프로토콜을 사용하여 서버에서 시간 정보를 요청하고 수신된 정보에 따라 시계를 동기화합니다.
   
-Windows 시간 서비스는 NTP를 사용 하 여 네트워크를 통해 시간을 동기화 합니다. NTP 시계를 동기화 하는 데 필요한 분야 알고리즘을 포함 하는 인터넷 시간 프로토콜입니다. NTP는 일부 버전의 Windows에서 사용 되는 SNTP (Simple Network Time Protocol) 보다 더 정확한 시간 프로토콜입니다. 그러나 W32Time은 Windows 2000와 같은 SNTP 기반 시간 서비스를 실행 하는 컴퓨터와 이전 버전과의 호환성을 지원 하기 위해 계속 해 서 SNTP를 지원 합니다.
+Windows 시간 서비스는 NTP를 사용하여 네트워크를 통해 시간을 동기화하는 데 도움이 됩니다. NTP 시계를 동기화 하는 데 필요한 분야 알고리즘을 포함 하는 인터넷 시간 프로토콜입니다. NTP는 일부 버전의 Windows에서 사용되는 SNTP(Simple Network Time Protocol)보다 정확한 시간 프로토콜입니다. 그러나 W32Time은 Windows 2000과 같은 SNTP 기반 시간 서비스를 실행하는 컴퓨터와 이전 버전과의 호환성을 지원하기 위해 계속해서 SNTP를 지원합니다.
 ## <a name="where-to-find-windows-time-service-configuration-related-information"></a>Windows 시간 서비스 구성 관련 정보를 찾을 수 있는 위치  
-이 가이드에서는 Windows 시간 서비스를 구성 하는 방법에 대해서는 설명 **하지** 않습니다. Microsoft TechNet 및 Microsoft 기술 자료에는 Windows 시간 서비스를 구성 하는 절차를 설명 하는 여러 가지 항목이 있습니다. 구성 정보를 요구 하는 경우 다음 항목을 참조 하 여 적절 한 정보를 찾을 수 있습니다.  
--   포리스트 루트 PDC (주 도메인 컨트롤러) 에뮬레이터에 대 한 Windows 시간 서비스를 구성 하려면 다음을 참조 하세요.
+이 가이드에서는 Windows 시간 서비스 구성에 대해서는 설명하지 **않습니다**. Microsoft TechNet 및 Microsoft 기술 자료에는 Windows 시간 서비스를 구성하는 절차를 설명하는 여러 가지 항목이 있습니다. 구성 정보가 필요한 경우 다음 항목을 참조하여 적절한 정보를 찾을 수 있습니다.  
+-   포리스트 루트 PDC(주 도메인 컨트롤러) 에뮬레이터에 대한 Windows 시간 서비스를 구성하려면 다음을 참조하세요.
   
     -   [포리스트 루트 도메인의 PDC 에뮬레이터에서 Windows 시간 서비스 구성](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731191%28v=ws.10%29) 
   
-    -   [포리스트에 대 한 시간 원본 구성](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc794823%28v%3dws.10%29) 
+    -   [포리스트에 대한 시간 소스 구성](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc794823%28v%3dws.10%29) 
   
-    -   Microsoft 기술 자료 문서 816042, windows server 2008 R2, Windows Server 2008, Windows Server 2003 및 Windows Server 2003 r 2를 실행 하는 컴퓨터의 구성 설정을 설명 하는 [Windows server에서 신뢰할 수 있는 시간 서버를 구성 하는 방법을](https://go.microsoft.com/fwlink/?LinkID=60402)설명 합니다.  
+    -   Microsoft 기술 자료 문서 816042, [Windows Server에서 신뢰할 수 있는 시간 서버를 구성하는 방법](https://go.microsoft.com/fwlink/?LinkID=60402), Windows Server 2008 R2, Windows Server 2008, Windows Server 2003 및 Windows Server 2003 R2를 실행하는 컴퓨터의 구성 설정에 대해 설명합니다.  
   
--   도메인 구성원 클라이언트나 서버 또는 포리스트 루트 PDC 에뮬레이터로 구성 되지 않은 도메인 컨트롤러에서 Windows 시간 서비스를 구성 하려면 [자동 도메인 시간 동기화를 위해 클라이언트 컴퓨터 구성](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc816884%28v%3dws.10%29)을 참조 하세요.  
+-   도메인 구성원 클라이언트나 서버 또는 포리스트 루트 PDC 에뮬레이터로 구성되지 않은 도메인 컨트롤러에서 Windows 시간 서비스를 구성하려면 [자동 도메인 시간 동기화를 위해 클라이언트 컴퓨터 구성](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc816884%28v%3dws.10%29)을 참조하세요.  
   
     > [!WARNING]  
-    > 일부 응용 프로그램의 경우 컴퓨터의 정확도가 높은 시간 서비스를 필요로 할 수 있습니다. 이 경우 수동 시간 원본을 구성 하도록 선택할 수 있지만, Windows 시간 서비스는 매우 정확한 시간 원본으로 작동 하도록 설계 되지 않았습니다. Microsoft 기술 자료 문서 939322에 설명 된 대로 정확도가 뛰어난 시간 환경에 대 한 지원 제한이 있는지 확인 하 고, [높은 정확도 환경에 대해 Windows 시간 서비스를 구성 하는 지원 경계](support-boundary.md)를 확인 합니다.  
+    > 일부 애플리케이션은 높은 정확도의 시간 서비스가 컴퓨터에 필요할 수 있습니다. 이 경우 수동 시간 소스를 구성하도록 선택할 수 있지만 Windows 시간 서비스는 매우 정확한 시간 소스로 작동하도록 설계되지 않았습니다. Microsoft 기술 자료 문서 939322, [정확도가 높은 환경에 맞게 Windows 시간 서비스를 구성할 수 있는 지원 범위](support-boundary.md)에 설명된 대로 정확도가 뛰어난 시간 환경에 대한 지원 제한 사항을 알고 있어야 합니다.  
   
--   도메인 구성원이 아닌 작업 그룹 구성원으로 구성 된 Windows 기반 클라이언트 또는 서버 컴퓨터에서 Windows 시간 서비스를 구성 하려면 [선택한 클라이언트 컴퓨터의 수동 시간 원본 구성](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc816656%28v%3dws.10%29)을 참조 하세요.  
+-   도메인 구성원이 아닌 작업 그룹 구성원으로 구성된 Windows 기반 클라이언트 또는 서버 컴퓨터에서 Windows 시간 서비스를 구성하려면 [선택한 클라이언트 컴퓨터의 수동 시간 소스 구성](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc816656%28v%3dws.10%29)을 참조하세요.  
   
--   가상 환경을 실행 하는 호스트 컴퓨터에서 Windows 시간 서비스를 구성 하려면 Microsoft 기술 자료 문서 816042, [Windows server에서 신뢰할 수 있는 시간 서버를 구성 하는 방법](https://go.microsoft.com/fwlink/?LinkID=60402)을 참조 하십시오. 타사 가상화 제품을 사용 하는 경우 해당 제품에 대 한 공급 업체의 설명서를 참조 하세요.  
+-   가상 환경을 실행하는 호스트 컴퓨터에서 Windows 시간 서비스를 구성하려면 Microsoft 기술 자료 문서 816042, [Windows Server에서 권한을 보유한 시간 서버를 구성하는 방법](https://go.microsoft.com/fwlink/?LinkID=60402)을 참조하세요. 타사 가상화 제품을 사용하는 경우 해당 제품에 대한 공급 업체의 설명서를 참조하세요.  
   
--   가상 컴퓨터에서 실행 되는 도메인 컨트롤러에서 Windows 시간 서비스를 구성 하려면 도메인 컨트롤러 역할을 하는 호스트 시스템과 게스트 운영 체제 간의 시간 동기화를 부분적으로 사용 하지 않도록 설정 하는 것이 좋습니다. 이를 통해 게스트 도메인 컨트롤러는 도메인 계층 구조에 대 한 시간을 동기화 할 수 있지만 저장 된 상태에서 복원 되는 경우에는 시간 오차를 갖지 않도록 보호할 수 있습니다. 자세한 내용은 Microsoft 기술 자료 문서 976924, [가상화 된 도메인 컨트롤러에 대 한 배포 고려 사항](https://go.microsoft.com/fwlink/?LinkID=192235)및 [hyper-v를 사용 하 여 windows Server 2008 기반 호스트 서버에서 실행 되는 가상화 된 도메인 컨트롤러에서 windows 시간 서비스 이벤트 id 24, 29 및 38](https://go.microsoft.com/fwlink/?LinkID=192236) 를 참조 하세요.  
+-   가상 머신에서 실행되는 도메인 컨트롤러에서 Windows 시간 서비스를 구성하려면 도메인 컨트롤러 역할을 하는 호스트 시스템과 게스트 운영 체제 간의 시간 동기화를 부분적으로 사용하지 않도록 설정하는 것이 좋습니다. 이를 통해 게스트 도메인 컨트롤러는 도메인 계층 구조에 대한 시간을 동기화할 수 있지만 저장된 상태에서 복원되는 경우에는 시간 오차를 갖지 않도록 보호할 수 있습니다. 자세한 내용은 Microsoft 기술 자료 문서 976924, [Hyper-V를 사용하여 Windows Server 2008 기반 호스트 서버에서 실행되는 가상화된 도메인 컨트롤러에서 Windows 시간 서비스 이벤트 ID 24, 29 및 38을 수신](https://go.microsoft.com/fwlink/?LinkID=192236) 및 [가상화된 도메인 컨트롤러에 대한 배포 고려 사항](https://go.microsoft.com/fwlink/?LinkID=192235)을 참조하세요.  
   
--   가상 컴퓨터에서 실행 중인 포리스트 루트 PDC 에뮬레이터 역할을 하는 도메인 컨트롤러에서 Windows 시간 서비스를 구성 하려면 [포리스트 루트 도메인의 PDC 에뮬레이터에서 Windows 시간 서비스 구성](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731191%28v=ws.10%29)에 설명 된 대로 물리적 컴퓨터에 대 한 동일한 지침을 따릅니다.  
+-   가상 컴퓨터에서 실행되는 포리스트 루트 PDC 에뮬레이터 역할을 하는 도메인 컨트롤러에서 Windows 시간 서비스를 구성하려면 [포리스트 루트 도메인의 PDC 에뮬레이터에서 Windows 시간 서비스 구성](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731191%28v=ws.10%29)에 설명된 대로 물리적 컴퓨터에 대한 동일한 지침을 따릅니다.  
   
--   가상 컴퓨터로를 실행 하는 구성원 서버에서 Windows 시간 서비스를 구성 하려면 [자동 도메인 시간 동기화를 위해 클라이언트 컴퓨터 구성](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc816884%28v%3dws.10%29)에 설명 된 대로 도메인 시간 계층 구조를 사용 합니다.
+-   가상 컴퓨터로 실행하는 구성원 서버에서 Windows 시간 서비스를 구성하려면 [자동 도메인 시간 동기화를 사용하도록 클라이언트 컴퓨터 구성](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc816884%28v%3dws.10%29)에 설명된 대로 도메인 시간 계층 구조를 사용합니다.
 
 
 > [!IMPORTANT]  
-> Windows Server 2016 이전에는 W32Time 서비스가 시간이 중요 한 응용 프로그램 요구 사항을 충족 하도록 설계 되지 않았습니다.  그러나 이제 Windows Server 2016에 대 한 업데이트를 통해 도메인의 1ms 정확도에 대 한 솔루션을 구현할 수 있습니다.  에 대 한 자세한 내용은 [windows 2016 정확한 시간](accurate-time.md) 및 [지원 경계](support-boundary.md) (영문)를 참조 하세요.
+> Windows Server 2016 이전에 W32Time 서비스는 시간이 중요한 애플리케이션 요구 사항을 충족하도록 설계되지 않았습니다.  그러나 이제 Windows Server 2016에 대한 업데이트를 통해 도메인에서 1밀리초의 정확도에 대한 솔루션을 구현할 수 있습니다.  자세한 내용은 [Windows 2016 정확한 시간](accurate-time.md) 및 [정확도가 높은 환경에 맞게 Windows 시간 서비스를 구성할 수 있는 지원 범위](support-boundary.md)를 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
 - [Windows 2016 정확한 시간](accurate-time.md)
-- [Windows Server 2016에 대 한 시간 정확도 향상](windows-server-2016-improvements.md)  
+- [Windows Server 2016의 시간 정확도 향상](windows-server-2016-improvements.md)  
 - [Windows 시간 서비스의 작동 원리](How-the-Windows-Time-Service-Works.md)  
 - [Windows 시간 서비스 도구 및 설정](Windows-Time-Service-Tools-and-Settings.md)  
-- [정확도 높은 환경에 대한 Windows 시간 서비스를 구성하도록 경계 지원](support-boundary.md)
+- [정확도가 높은 환경에 맞게 Windows 시간 서비스를 구성할 수 있는 지원 범위](support-boundary.md)
 - [Microsoft 기술 자료 문서 902229](https://go.microsoft.com/fwlink/?LinkId=186066)
