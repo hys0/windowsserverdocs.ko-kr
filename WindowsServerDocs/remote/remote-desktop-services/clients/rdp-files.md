@@ -13,12 +13,12 @@ manager: dongill
 ms.author: helohr
 ms.date: 05/20/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 43cffc007970245ab9bd96c7cae9bb5137a8030b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6a596bcd29fdb80f8b2b0fa86ee808755dd09f43
+ms.sourcegitcommit: f0fcfee992b76f1ad5dad460d4557f06ee425083
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71387805"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77125095"
 ---
 # <a name="supported-remote-desktop-rdp-file-settings"></a>지원되는 원격 데스크톱 RDP 파일 설정
 
@@ -40,6 +40,7 @@ PowerShell을 사용하여 호스트 풀의 RDP 속성을 사용자 지정하는
 | desktop size id:i:value | 미리 정의된 옵션 세트 중에서 원격 세션 데스크톱의 크기를 지정합니다. 이 설정은 desktopheight 또는 desktopwidth가 지정된 경우 무시됩니다.| -0: 640×480<br>- 1: 800×600<br>- 2: 1024×768<br>- 3: 1280×1024<br>- 4: 1600×1200 | 0 | x | x | x |
 | desktopheight:i:value | 원격 데스크톱 연결을 사용하여 연결할 때 원격 컴퓨터의 해상도 높이(픽셀 단위)를 결정합니다. 이 설정은 RDC의 옵션 아래 디스플레이 탭에 있는 디스플레이 구성 슬라이더의 선택 항목에 해당합니다. | 200에서 2048 사이의 숫자 값 | 기본값은 로컬 컴퓨터의 해상도로 설정됨 | x | x | x |
 | desktopwidth:i:value | 원격 데스크톱 연결을 사용하여 연결할 때 원격 컴퓨터의 해상도 너비(픽셀 단위)를 결정합니다. 이 설정은 RDC의 옵션 아래 디스플레이 탭에 있는 디스플레이 구성 슬라이더의 선택 항목에 해당합니다. | 200과 4096 사이의 숫자 값 | 기본값은 로컬 컴퓨터의 해상도로 설정됨 | x | x | x |
+| devicestoredirect:s:value | 클라이언트 컴퓨터에서 어떤 디바이스를 리디렉션하고 원격 세션에서 사용할 수 있을지를 결정합니다. | - *: 지원되는 모든 디바이스를 리디렉션(나중에 연결되는 디바이스 포함)<br> - 하나 이상의 디바이스에 유효한 하드웨어 ID | | x | x | x |
 | disableconnectionsharing:i:value | RemoteApp 또는 데스크톱이 시작될 때 원격 데스크톱 클라이언트가 열려 있는 기존 연결에 다시 연결할지 아니면 새 연결을 시작할지 결정합니다. | - 0: 기존 세션에 다시 연결<br>- 1: 새 연결 시작 | 0 | x | x | x |
 | domain:s:value | 원격 컴퓨터에 로그인할 때 사용할 사용자 계정이 있는 도메인의 이름을 지정합니다. | 유효한 도메인 이름(예: "CONTOSO") | 기본값 없음 | x | x | x |
 | drivestoredirect:s:value | 클라이언트 컴퓨터의 로컬 디스크 드라이브 중 어떤 드라이브를 리디렉션하고 원격 세션에서 사용할 수 있을지를 결정합니다. | - 지정된 값 없음: 드라이브를 리디렉션하지 않음<br>- * : 모든 디스크 드라이브를 리디렉션(나중에 연결되는 드라이브 포함)<br>- DynamicDrives: 나중에 연결된 모든 드라이브 리디렉션<br>- 드라이브 및 하나 이상의 드라이브에 대한 레이블(예: "drivestoredirect:s:C:;E:;"): 지정된 드라이브 리디렉션| 지정된 값 없음 : 드라이브를 리디렉션하지 않음 | x | x    | |

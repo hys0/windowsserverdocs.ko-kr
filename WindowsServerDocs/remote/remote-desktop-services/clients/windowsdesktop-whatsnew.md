@@ -11,14 +11,14 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 01/29/2020
+ms.date: 02/11/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: b2d5215c7089ce1aadbeae68890dca1a0ae1c294
-ms.sourcegitcommit: 9077469e372d2aafcad890cbc4e4a24c58a3838c
+ms.openlocfilehash: 3f8b035eef5bb956012627b5e2c7c59adaa8cd32
+ms.sourcegitcommit: 5797a2e67211651070404a5893f5c0a91c63e960
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2020
-ms.locfileid: "76889447"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77155387"
 ---
 # <a name="whats-new-in-the-windows-desktop-client"></a>Windows 데스크톱 클라이언트의 새로운 기능
 
@@ -31,7 +31,20 @@ Windows 데스크톱 클라이언트에 대한 자세한 내용은 [Windows 데�
 |사용자 그룹 |Version  |
 |-----------|---------|
 |공용     |1.2.605  |
-|참가자    |1.2.605  |
+|참가자    |1.2.673  |
+
+## <a name="updates-for-version-12673"></a>1\.2.673 버전에 대한 업데이트
+
+*게시 날짜: 2020/02/11*
+
+다운로드: [Windows 64비트](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4pPJm), [Windows 32비트](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4pFbw), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4pN07)
+
+- RDP 파일에 서명이 없거나 signscope 속성 중 하나가 수정된 경우 Windows 가상 데스크톱에 대한 연결이 차단됩니다.
+- 작업 영역이 비어 있거나 제거되면 연결 센터가 더 이상 비어있는 것으로 나타나지 않습니다.
+- 문제 해결을 개선하기 위해 연결 해제 메시지에 활동 ID와 오류 코드를 추가했습니다. **Ctrl+C**를 사용하여 대화 상자 메시지를 복사할 수 있습니다.
+- 데스크톱 연결 설정이 디스플레이를 감지하지 못하게 하는 문제를 수정했습니다.
+- 클라이언트를 업데이트해도 더 이상 PC가 자동으로 다시 시작되지 않습니다.
+- 창 없는 아이콘이 작업 표시줄에 더 이상 나타나지 않습니다.
 
 ## <a name="updates-for-version-12605"></a>1\.2.605 버전에 대한 업데이트
 

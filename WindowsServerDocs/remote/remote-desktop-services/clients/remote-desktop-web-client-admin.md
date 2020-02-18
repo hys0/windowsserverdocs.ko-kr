@@ -8,12 +8,12 @@ ms.date: 09/19/2019
 ms.topic: article
 author: Heidilohr
 ms.localizationpriority: medium
-ms.openlocfilehash: 864a15d7336abb56572ddc783ce41a35d6fc13bf
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: a8521eae302ade84904e3ba09c001eac21fffd6a
+ms.sourcegitcommit: f0fcfee992b76f1ad5dad460d4557f06ee425083
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950418"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77125154"
 ---
 # <a name="set-up-the-remote-desktop-web-client-for-your-users"></a>사용자에 대한 원격 데스크톱 웹 클라이언트 설정
 
@@ -170,10 +170,12 @@ Windows Server 2016(이상) 및 Windows 10(버전 1611 이상)에 연결하면 �
 
 [원격 데스크톱 웹 클라이언트를 게시하는 방법](remote-desktop-web-client-admin.md#how-to-publish-the-remote-desktop-web-client)의 지침에 따라 4단계와 5단계를 다음 단계로 바꿉니다.
 
-4. 로컬 폴더에서 원격 데스크톱 웹 클라이언트 관리 PowerShell 모듈을 가져옵니다.
-    ```PowerShell
-    Import-Module -Name "C:\WebClient\"
-    ```
+4. 최신 웹 클라이언트 관리 PowerShell 모듈을 검색하는 옵션은 두 가지입니다.
+    - 원격 데스크톱 웹 클라이언트 관리 PowerShell 모듈을 가져옵니다.
+      ```PowerShell
+      Import-Module -Name RDWebClientManagement
+      ```
+    - 다운로드한 RDWebClientManagement 폴더를 **$env:psmodulePath** 아래에 나열된 로컬 PowerShell 모듈 폴더 중 하나에 복사하거나 다운로드한 파일이 있는 폴더의 경로를 **$env:psmodulePath**에 추가합니다.
 
 5. 로컬 폴더에서 최신 버전의 원격 데스크톱 웹 클라이언트를 배포합니다(해당 zip 파일로 바꿈).
     ```PowerShell
