@@ -10,12 +10,12 @@ ms.topic: article
 author: adagashe
 ms.date: 10/24/2018
 ms.localizationpriority: ''
-ms.openlocfilehash: 67f35e3afa8e9eafabe7b22eb60cc85c7be6cb23
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 0d64e6188b24b5a1ec45242c3d99366fdde5a623
+ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402881"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77465217"
 ---
 # <a name="collect-diagnostic-data-with-storage-spaces-direct"></a>스토리지 공간 다이렉트를 사용 하 여 진단 데이터 수집
 
@@ -23,11 +23,11 @@ ms.locfileid: "71402881"
 
 스토리지 공간 다이렉트 및 장애 조치 (Failover) 클러스터 문제를 해결 하는 데 필요한 데이터를 수집 하는 데 사용할 수 있는 다양 한 진단 도구가 있습니다. 이 문서에서는 클러스터를 진단 하는 데 도움이 되는 모든 관련 정보를 수집 하는 **SDDCDiagnosticInfo** -a touch tool에 초점을 둡니다.
 
-**SDDCDiagnosticInfo** 하는 로그 및 기타 정보가 조밀한 경우 아래에 표시 된 문제 해결에 대 한 정보는 에스컬레이션 된 고급 문제를 해결 하는 데 도움이 되며, 데이터를 전송 해야 할 수도 있습니다. Microsoft에서 심사를 담당 합니다.
+**SDDCDiagnosticInfo** 에 대 한 로그 및 기타 정보가 조밀한 경우 아래에 표시 된 문제 해결에 대 한 정보는 에스컬레이션 된 고급 문제를 해결 하는 데 유용 하며, 심사를 위해 데이터를 Microsoft로 전송 해야 할 수 있습니다.
 
 ## <a name="installing-get-sddcdiagnosticinfo"></a>SDDCDiagnosticInfo 설치
 
-**SDDCDiagnosticInfo** PowerShell cmdlet ( **PCStorageDiagnosticInfo**, 이전에는 **테스트-storagehealth**)를 사용 하 여에 대 한 로그를 수집 하 고 장애 조치 (Failover) 클러스터링에 대 한 상태 검사를 수행할 수 있습니다 (클러스터, 리소스, 네트워크, 노드), 저장소 공간 (실제 디스크, 인클로저, 가상 디스크), 클러스터 공유 볼륨, SMB 파일 공유 및 중복 제거입니다. 
+**SDDCDiagnosticInfo** PowerShell cmdlet ( **PCStorageDiagnosticInfo**(이전에는 **테스트-storagehealth**)를 사용 하 여에 대 한 로그를 수집 하 고 장애 조치 (Failover) 클러스터링 (클러스터, 리소스, 네트워크, 노드), 저장소 공간 (실제 디스크, 엔클로저, 가상 디스크), 클러스터 공유 볼륨, SMB 파일 공유 및 중복 제거에 대 한 상태 검사를 수행할 수 있습니다. 
 
 스크립트를 설치 하는 방법에는 다음 두 가지가 있습니다.
 
@@ -35,12 +35,15 @@ ms.locfileid: "71402881"
 
 [PowerShell 갤러리](https://www.powershellgallery.com/packages/PrivateCloud.DiagnosticInfo) 은 GitHub 리포지토리의 스냅숏입니다. PowerShell 갤러리에서 항목을 설치 하려면 Windows 10, WMF (Windows Management Framework) 5.0 또는 MSI 기반 설치 관리자 (PowerShell 3 및 4 용)에서 사용할 수 있는 PowerShellGet 모듈의 최신 버전이 필요 합니다.
 
+SDDCDiagnosticInfo이이를 사용 하므로이 프로세스 중에 최신 버전의 [Microsoft 네트워킹 진단 도구](https://www.powershellgallery.com/packages/MSFT.Network.Diag) 를 설치 합니다. 이 매니페스트 모듈은 Microsoft Core 네트워킹 제품 그룹에서 유지 관리 되는 네트워크 진단 및 문제 해결 도구를 포함 합니다.
+
 관리자 권한으로 PowerShell에서 다음 명령을 실행 하 여 모듈을 설치할 수 있습니다.
 
 ``` PowerShell
 Install-PackageProvider NuGet -Force
 Install-Module PrivateCloud.DiagnosticInfo -Force
 Import-Module PrivateCloud.DiagnosticInfo -Force
+Install-Module -Name MSFT.Network.Diag
 ```
 
 모듈을 업데이트 하려면 PowerShell에서 다음 명령을 실행 합니다.
@@ -51,7 +54,7 @@ Update-Module PrivateCloud.DiagnosticInfo
 
 ### <a name="github"></a>GitHub
 
-[GitHub 리포지토리](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/) 는이 모듈의 최신 버전으로, 계속 해 서 반복 하 고 있습니다. GitHub에서 모듈을 설치 하려면 [보관](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/archive/master.zip) 에서 최신 모듈을 다운로드 하 고 PrivateCloud DiagnosticInfo 디렉터리를 ```$env:PSModulePath```이 가리키는 올바른 PowerShell 모듈 경로로 추출 합니다.
+[GitHub 리포지토리](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/) 는이 모듈의 최신 버전으로, 계속 해 서 반복 하 고 있습니다. GitHub에서 모듈을 설치 하려면 [보관 파일](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/archive/master.zip) 에서 최신 모듈을 다운로드 하 고 PrivateCloud DiagnosticInfo 디렉터리를 ```$env:PSModulePath```가 가리키는 올바른 PowerShell 모듈 경로로 추출 합니다.
 
 ``` PowerShell
 # Allowing Tls12 and Tls11 -- e.g. github now requires Tls12
@@ -161,7 +164,7 @@ Windows 관리 센터 (버전 1812 이상)에서이를 보려면 *진단* 탭으
 ### <a name="health-summary-report"></a>상태 요약 보고서
 
 상태 요약 보고서는 다음과 같이 저장 됩니다.
-- 0_CloudHealthSummary
+- 0_CloudHealthSummary .log
 
 이 파일은 수집 된 모든 데이터를 구문 분석 한 후에 생성 되며 시스템에 대 한 간략 한 요약을 제공 하기 위한 것입니다. 다음을 포함 합니다.
 

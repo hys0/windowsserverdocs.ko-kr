@@ -9,12 +9,12 @@ ms.prod: windows-server-hyper-v
 ms.technology: virtualization
 ms.localizationpriority: low
 ms.assetid: 6cb13f84-cb50-4e60-a685-54f67c9146be
-ms.openlocfilehash: c7c2de8354d067faf0dcf1787c3e178421e2ac03
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 8ba413b831c7b11780113ee2ffd3cce598781a44
+ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70872033"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77465577"
 ---
 # <a name="managing-hyper-v-hypervisor-scheduler-types"></a>Hyper-v 하이퍼바이저 스케줄러 형식 관리
 
@@ -66,7 +66,7 @@ Windows Server 2016부터 Hyper-v 하이퍼바이저는 기본 논리 프로세�
 
 클래식 스케줄러는 Windows Server 2016 Hyper-v를 포함 하 여 처음부터 모든 버전의 Windows Hyper-v 하이퍼바이저에 대 한 기본값입니다. 클래식 스케줄러는 게스트 가상 프로세서에 대해 공평 하 게 공유 되 고 선점형 라운드 로빈 예약 모델을 제공 합니다.
 
-클래식 스케줄러 형식은 사설 클라우드, 호스팅 공급자 등에 대해 기존의 Hyper-v 사용에 가장 적합 합니다. 성능 특징을 잘 이해 하 고 VPs에 대 한 과도 한 구독, 여러 다른 유형의 Vm 및 워크 로드를 동시에 실행 하는 등 광범위 한 가상화 시나리오를 지원 하도록 최적화 되어 있으며, 더 큰 확장성을 실행 합니다. 성능 Vm-제한 없이 Hyper-v의 전체 기능 집합을 지원 합니다.
+클래식 스케줄러 형식은 사설 클라우드, 호스팅 공급자 등에 대해 기존의 Hyper-v 사용에 가장 적합 합니다. 성능 특징을 잘 이해 하 고 VPs에 대 한 과도 한 구독, 여러 유형의 Vm 및 워크 로드를 동시에 실행 하는 등 광범위 한 가상화 시나리오를 지원 하도록 최적화 되어 있으며, 더 큰 확장성을 실행 합니다. 성능 Vm-제한 없이 Hyper-v의 전체 기능 집합을 지원 합니다.
 
 ### <a name="the-core-scheduler"></a>핵심 스케줄러
 
@@ -122,8 +122,8 @@ Windows 10 버전 1803부터 루트 스케줄러는 기본적으로 클라이언
 Set-VMProcessor -VMName <VMName> -HwThreadCountPerCore <n>
 ```
 
-여기서 <n> 는 게스트 VM에 표시 되는 코어 당 SMT 스레드 수입니다.  
-<n> = 0은 HwThreadCountPerCore 값을 코어 값 당 호스트의 SMT 스레드 수와 일치 하도록 설정 합니다.
+여기서 <n>는 게스트 VM에 표시 되는 코어 당 SMT 스레드 수입니다.  
+<n> = 0은 HwThreadCountPerCore 값을 코어 당 호스트의 SMT 스레드 수 값과 일치 하도록 설정 합니다.
 
 >[!NOTE] 
 >HwThreadCountPerCore = 0 설정은 Windows Server 2019부터 지원 됩니다.
@@ -153,7 +153,7 @@ Windows Server 2016 Hyper-v에서는 기본적으로 클래식 하이퍼바이�
 |Windows Server 2016 | 1607 | 2018.07 C | [KB4338822](https://support.microsoft.com/help/4338822/windows-10-update-kb4338822) |
 |Windows Server 2016 | 1703 | 2018.07 C | [KB4338827](https://support.microsoft.com/help/4338827/windows-10-update-kb4338827) |
 |Windows Server 2016 | 1709 | 2018.07 C | [KB4338817](https://support.microsoft.com/help/4338817/windows-10-update-kb4338817) |
-|Windows Server 2019 | 1804 | 없음 | 없음 |
+|시작 | 1804 | 없음 | 없음 |
 
 ## <a name="selecting-the-hypervisor-scheduler-type-on-windows-server"></a>Windows Server에서 하이퍼바이저 스케줄러 유형 선택
 
@@ -165,7 +165,7 @@ Windows Server 2016 Hyper-v에서는 기본적으로 클래식 하이퍼바이�
      bcdedit /set hypervisorschedulertype type
 ```
 
-여기서 `type` 은 다음 중 하나입니다.
+여기서 `type`은 다음 중 하나입니다.
 
 * 클래식
 * Core

@@ -9,12 +9,12 @@ ms.date: 10/16/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: manage
-ms.openlocfilehash: 6a6ccedeeb007b9d3ab32c308fae991deb526442
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 3b29a7e10cc6a862873516b9adc16182d64dd926
+ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71383093"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77465467"
 ---
 # <a name="server-performance-advisor-users-guide"></a>서버 성능 관리자 사용자 가이드
 
@@ -28,7 +28,7 @@ SPA는 다음과 같은 작업을 수 있습니다.
 
 * 일반적인 구성 및 성능 문제에 대 한 데이터 보고서 및 권장 사항을 제공 합니다.
 
-* 수집 된 데이터를 기반으로 최상의 pratice 권장 사항을 제공 합니다.
+* 수집 된 데이터에 따라 모범 사례 권장 사항을 제공 합니다.
 
 > [!NOTE]
 > SPA 콘솔 서버에 변경 내용을 만들지 않습니다.
@@ -346,7 +346,7 @@ Advisor 팩 이름 옆에 있는 서버에서 실행 되는 최신 분석의 상
 
 * 경고 아이콘 잠재적 문제가 있는지 여부를 나타냅니다.
 
-* 규칙 이름입니다. 예를 들어 **네트워크 수신 패킷 삭제** 은 규칙 세부 정보 페이지를 가리키는 링크에 설명 된 대로 [advisor 팩 관리](#bkmk-manageadvisorpacks)합니다.
+* 규칙의 이름입니다. 예를 들어 **네트워크 수신 패킷 삭제** 은 규칙 세부 정보 페이지를 가리키는 링크에 설명 된 대로 [advisor 팩 관리](#bkmk-manageadvisorpacks)합니다.
 
 * 잠재적인 문제에 대 한 간단한 설명입니다.
 
@@ -508,7 +508,7 @@ advisor 팩을 변경 하 고 작성 하는 방법에 대 한 자세한 내용�
 
 ### <a name="sharing-thresholds"></a>임계값을 공유
 
-비슷한 상황에서 서버를 관리 하는 경우 동일한 임계값 집합을 사용 하도록 선택할 수 있습니다. **구성** 메뉴를 사용 하 여 특정 advisor 팩에 대 한 임계값을 내보내고 가져올 수 있습니다. 특정 관리자 팩을 선택 하 고 클릭 **구성**합니다. 내보낸된 임계값 파일이 XML 형식입니다.
+비슷한 상황에서 서버를 관리 하는 경우 동일한 임계값 집합을 사용 하도록 선택할 수 있습니다. 내보내고를 사용 하 여 특정 advisor 팩에 대 한 임계값을 가져올 수는 **구성** 메뉴. 특정 관리자 팩을 선택 하 고 클릭 **구성**합니다. 내보낸된 임계값 파일이 XML 형식입니다.
 
 임계값을 가져올 때 SPA XML 파일 형식의 유효성을 검사 하 고 파일에 선택한 advisor 팩와 일치 하는지 확인 합니다. 이 연결이 성공 하면 SPA는를 현재 프로젝트 데이터베이스에 있는 모든 값을 임계값 파일에서 가져옵니다. 이전 변경 임계값 시나리오와 마찬가지로 모든 임계값 변경 내용이 나중에 생성 되는 보고서에만 적용 됩니다. 기존 보고서 영향을 받지 않습니다.
 
@@ -759,7 +759,7 @@ ETW 이벤트 손실 PLA 일반적 이기 때문에 생성 되는 데이터 요�
 
 데이터 수집기 결과에 ETW 추적 손실 이외의 불완전 한 데이터가 포함 되어 있고 advisor 팩 개발자가 ETW 이벤트 손실 알림에 대 한 지원을 추가 하는 경우 단일 보고서의 맨 위에 정보 표시줄이 표시 되어 잠재적으로 사용자에 게 알립니다. 데이터 손실로 인해 일관 되지 않은 보고서가 발생 했습니다. 자세한 데이터 손실 정보는 readme.txt 파일에서 찾을 수 있습니다.
 
-## <a name="glossary"></a>용어 설명
+## <a name="glossary"></a>용어집
 
 
 다음은 일부의 SPA를 사용한 용어입니다.

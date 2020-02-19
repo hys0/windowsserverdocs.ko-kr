@@ -8,12 +8,12 @@ ms.date: 06/13/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: active-directory-federation-services
-ms.openlocfilehash: d54c33e092204f208590bd15db0d3c7fe7f852f3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f4973da0d9e0c347cff8fc910f96277055b66dec
+ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407893"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77465547"
 ---
 # <a name="build-a-single-page-web-application-using-oauth-and-adaljs-with-ad-fs-2016-or-later"></a>OAuth 및 ADAL을 사용 하 여 단일 페이지 웹 응용 프로그램을 빌드합니다. AD FS 2016 이상 버전
 
@@ -43,9 +43,9 @@ ADAL이 인증에 대 한 트리거를 발견 하면 응용 프로그램에서 �
 ## <a name="setting-up-the-environment"></a>환경 설정
 이 연습에서는의 기본 설정을 사용 합니다.
 
-1.  DC AD FS를 호스팅할 도메인의 도메인 컨트롤러입니다.
-2.  AD FS 서버: 도메인에 대 한 AD FS 서버
-3.  개발 컴퓨터: Visual Studio가 설치 되 고 샘플을 개발 하는 컴퓨터
+1.  DC: AD FS를 호스팅할 도메인의 도메인 컨트롤러입니다.
+2.  AD FS Server: 도메인의 AD FS 서버
+3.  개발 컴퓨터: Visual Studio를 설치 하 고 샘플을 개발 하는 컴퓨터
 
 사용할 수 있습니다, 원하는 경우 컴퓨터가 두 대만. 하나는 DC/AD FS이 고 다른 하나는 샘플을 개발 하는 데 사용할입니다.
 
@@ -77,7 +77,7 @@ Azure AD를 AngularJS 단일 페이지 앱에 통합 하기 위해 만든 샘플
 **Startup.Auth.cs** -전달자 인증을 위해 Active Directory 페더레이션 서비스를 사용 하는 WebAPI에 대 한 구성을 포함 합니다.
 
 ## <a name="registering-the-public-client-in-ad-fs"></a>AD FS에서 공용 클라이언트 등록
-이 샘플에서 WebAPI는 https://localhost:44326/ 에서 수신 하도록 구성 됩니다. **웹 응용 프로그램에 액세스 하** 는 응용 프로그램 그룹 웹 브라우저는 암시적 허용 흐름 응용 프로그램을 구성 하는 데 사용할 수 있습니다.
+이 샘플에서 WebAPI는 https://localhost:44326/수신 대기 하도록 구성 됩니다. **웹 응용 프로그램에 액세스 하** 는 응용 프로그램 그룹 웹 브라우저는 암시적 허용 흐름 응용 프로그램을 구성 하는 데 사용할 수 있습니다.
 
 1. AD FS management console을 열고 **응용 프로그램 그룹 추가**를 클릭 합니다. **응용 프로그램 그룹 추가 마법사** 에서 응용 프로그램의 이름을 입력 하 고 아래와 같이 **클라이언트-서버 응용 프로그램** 섹션에서 **웹 응용 프로그램 템플릿에 액세스 하는 웹 브라우저** 를 선택 합니다.
 
@@ -110,11 +110,11 @@ ADAL JS 구성
         $httpProvider
         );
 
-|Configuration|설명|
+|구성|설명|
 |--------|--------|
-|instance|STS URL (예: https://fs.contoso.com/ )|
+|instance|STS URL (예: https://fs.contoso.com/|
 |테넌트(tenant)|' Adfs '로 유지|
-|ClientID|단일 페이지 응용 프로그램에 대 한 공용 클라이언트를 구성 하는 동안 지정한 클라이언트 ID입니다.|
+|clientID|단일 페이지 응용 프로그램에 대 한 공용 클라이언트를 구성 하는 동안 지정한 클라이언트 ID입니다.|
 
 ## <a name="configure-webapi-to-use-ad-fs"></a>AD FS를 사용 하도록 WebAPI 구성
 샘플에서 **Startup.Auth.cs** 파일을 열고 시작 부분에 다음을 추가 합니다.

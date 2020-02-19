@@ -8,12 +8,12 @@ ms.topic: get-started-article
 author: nedpyle
 ms.date: 4/26/2019
 ms.assetid: e9b18e14-e692-458a-a39f-d5b569ae76c5
-ms.openlocfilehash: 620ab75fc5f44af7cd754847e3e5b717eece5057
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d95feb67001dc7b5eff68a0062d5f944672bad80
+ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71393824"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77465232"
 ---
 # <a name="storage-replica-overview"></a>저장소 복제본 개요
 
@@ -75,7 +75,7 @@ ms.locfileid: "71393824"
 
 * **고성능 초기 동기화**. 저장소 복제본은 데이터 하위 집합이 이전 복사본, 백업 또는 함께 제공된 드라이브의 대상에 이미 존재하는 시드된 초기 동기화를 지원합니다. 초기 복제는 서로 다른 블록을 복사 하 여 초기 동기화 시간을 단축 하 고 데이터가 제한 된 대역폭을 사용 하는 것을 방지할 수 있습니다. 저장소 복제본은 체크섬 계산 및 집계를 차단하므로 초기 동기화 성능이 저장소 및 네트워크의 속도에 의해서만 제한됩니다.  
 
-* **일관성 그룹**. 쓰기 순서 지정은 Microsoft SQL Server 같은 응용 프로그램이 여러 복제 된 볼륨에 쓸 수 있고 데이터가 대상 서버에서 순차적으로 쓰여진는 지 확인 합니다.  
+* **일관성 그룹**. 쓰기 순서를 지정 하면 Microsoft SQL Server 같은 응용 프로그램이 여러 복제 된 볼륨에 쓸 수 있으며 데이터가 대상 서버에 순차적으로 기록 되는 것을 알 수 있습니다.  
 
 * **사용자 위임**. 복제된 노드의 기본 제공 Administrators 그룹의 구성원이 아닌 사용자에게 복제 관리 권한을 위임할 수 있으므로 관련 없는 영역에 대한 액세스를 제한할 수 있습니다.  
 
@@ -88,8 +88,8 @@ ms.locfileid: "71393824"
 | 기능 | 세부 정보 |
 | ----------- | ----------- |  
 | 형식 | 호스트 기반 |
-| 동기 | 예 |
-| 비동기 | 예 |
+| Synchronous | 예 |
+| Asynchronous | 예 |
 | 저장소 하드웨어에 독립적 | 예 |
 | 복제 단위 | 볼륨(파티션) |
 | Windows Server stretch cluster 만들기 | 예 |

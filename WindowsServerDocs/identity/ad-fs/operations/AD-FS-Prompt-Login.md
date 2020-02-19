@@ -9,12 +9,12 @@ ms.topic: article
 ms.custom: it-pro
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: cb91bb61adf97fee6f157ca44eb657e20670a1e7
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: a80678f5d2773e3fcd7a95032853249dc36d5616
+ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75948679"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77465527"
 ---
 # <a name="active-directory-federation-services-promptlogin-parameter-support"></a>Active Directory Federation Services 프롬프트 = 로그인 매개 변수 지원
 
@@ -49,7 +49,7 @@ ms.locfileid: "75948679"
 Azure AD PowerShell 모듈을 사용 하 여 설정을 구성 합니다.
 
 > [!NOTE]
-> `PromptLoginBehavior` 속성에서 사용 하는 기능은 현재 AzureADPowershell 모듈의 [버전1.0에서만 `prompt=login`사용할수있습니다. ](https://connect.microsoft.com/site1164/Downloads/DownloadDetails.aspx?DownloadID=59185)이모듈의cmdlet에는get-msoldomainfederationsettings와같이"msol"이포함된 이름이 있습니다.  현재 cmdlet의 이름이 "AzureAD\*"와 같은 Azure AD PowerShell 모듈의 ' 버전 2.0 '를 통해 사용할 수 없습니다.
+> `PromptLoginBehavior` 속성에서 사용 하는 `prompt=login` 기능은 현재 [AZURE AD Powershell 모듈의 버전 1.0](https://connect.microsoft.com/site1164/Downloads/DownloadDetails.aspx?DownloadID=59185)에서만 사용할 수 있습니다 .이 모듈에는 cmdlet에 "msol" (예: get-msoldomainfederationsettings)이 포함 된 이름이 있습니다.  현재 cmdlet의 이름이 "AzureAD\*"와 같은 Azure AD PowerShell 모듈의 ' 버전 2.0 '를 통해 사용할 수 없습니다.
 
 1. 먼저 다음 PowerShell 명령을 실행 하 여 페더레이션된 도메인에 대 한 `PreferredAuthenticationProtocol`, `SupportsMfa`및 `PromptLoginBehavior`의 현재 값을 가져옵니다.
 
@@ -63,7 +63,7 @@ Azure AD PowerShell 모듈을 사용 하 여 설정을 구성 합니다.
 ![Get-MsolDomainFederationSettings](media/AD-FS-Prompt-Login/GetMsol.png)
 
 > [!NOTE]
-> `PreferredAuthenticationMethod` 속성이 비어 있으면 (`$null`) `TranslateToFreshPasswordAuth`의 기본 동작을 의미 합니다.
+> 속성 `PromptLoginBehavior`의 값이 비어 있으면 (`$null`) `TranslateToFreshPasswordAuth` 동작이 사용 됩니다.
 
 2. 다음 명령을 실행 하 여 원하는 `PromptLoginBehavior` 값을 구성 합니다.
 

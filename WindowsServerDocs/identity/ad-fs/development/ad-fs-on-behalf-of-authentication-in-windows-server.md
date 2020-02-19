@@ -9,12 +9,12 @@ ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 70281f581974493d3182fb6fdd8f35cb37bed4bf
-ms.sourcegitcommit: 3f9bcd188dda12dc5803defb47b2c3a907504255
+ms.openlocfilehash: 028396bffff6449a296e2922846fe2fc379fe624
+ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77001908"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77465617"
 ---
 # <a name="build-a-multi-tiered-application-using-on-behalf-of-obo-using-oauth-with-ad-fs-2016-or-later"></a>AD FS 2016 이상에서 OAuth를 사용 하 여 OBO ()를 사용 하는 다중 계층 응용 프로그램 빌드
 
@@ -96,7 +96,7 @@ WebAPI-OnBehalfOf-DotNet 솔루션을 열면 바로 솔루션에 두 개의 프�
 
 **응용 프로그램 그룹 만들기**
 
-AD FS 관리 MMC를 열고 새 애플리케이션 그룹을 추가 합니다. WebAPI-네이티브-애플리케이션 템플릿을 선택 합니다.
+AD FS 관리 MMC를 열고 새 애플리케이션 그룹을 추가 합니다. WebAPI-네이티브-응용 프로그램 템플릿을 선택 합니다.
 
 ![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO2.PNG)
 
@@ -116,7 +116,7 @@ AD FS 관리 MMC를 열고 새 애플리케이션 그룹을 추가 합니다. We
 
 ![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO1.PNG)
 
-다음에 클릭 하 고 구성 애플리케이션 사용 권한 페이지 나타납니다. 이 페이지에서는 openid (기본적으로 선택 됨) 및 user_impersonation으로 허용 된 범위를 선택 합니다. 범위 'user_impersonation' 성공적으로 AD FS에서 대 한 대리 액세스 토큰을 요청할 수 있게 하는 데 필요한입니다.
+다음에 클릭 하 고 구성 응용 프로그램 사용 권한 페이지 나타납니다. 이 페이지에서는 openid (기본적으로 선택 됨) 및 user_impersonation으로 허용 된 범위를 선택 합니다. 범위 'user_impersonation' 성공적으로 AD FS에서 대 한 대리 액세스 토큰을 요청할 수 있게 하는 데 필요한입니다.
 
 ![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO12.PNG)
 
@@ -156,7 +156,7 @@ AD FS 관리 MMC를 열고 새 애플리케이션 그룹을 추가 합니다. We
 
 ### <a name="modifying-the-todolistclient-code"></a>ToDoListClient 코드 수정
 
-#### <a name="modify-the-application-config"></a>애플리케이션 구성 수정
+#### <a name="modify-the-application-config"></a>응용 프로그램 구성 수정
 
 이동 하면 WebAPI-영문 솔루션의 ToDoListClient 프로젝트 된 것입니다. App.config 파일을 열고 다음과 같이 수정
 
@@ -207,7 +207,7 @@ ToDoListResourceId 및 ToDoListBaseAddress의 올바른 값을 읽는 코드를 
 한 대리 ToDoListService에 액세스 하는 백 엔드 리소스를 만들 필요가 대 한 대리 흐름을 완료 하려면 인증된 된 사용자입니다. 백엔드 리소스의 선택은 요구 사항에 따라 달라질 수 있지만이 샘플에서는 기본 WebAPI를 만들 수 있습니다.
 
 * 솔루션 탐색기에서 ' WebAPI-영문 ' 솔루션을 마우스 오른쪽 단추로 클릭 하 고 추가 선택-> 새 프로젝트
-* ASP.NET 웹 애플리케이션 템플릿을 선택 합니다.
+* ASP.NET 웹 응용 프로그램 템플릿을 선택 합니다.
 
 ![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO4.PNG)
 
@@ -274,7 +274,7 @@ MySampleGroup 애플리케이션 그룹을 엽니다. 추가 애플리케이션 
 * Web.config 파일을 열으십시오
 * 다음 키를 수정 합니다.
 
-| 키                      | Value                                                                                                                                                                                                                   |
+| Key                      | 값                                                                                                                                                                                                                   |
 |:-------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ida: 대상             | ToDoListService WebAPI를 구성 하는 동안 AD FS에 지정 된 ToDoListService의 ID (예: https://localhost:44321/                                                                                         |
 | ida: ClientID             | ToDoListService WebAPI를 구성 하는 동안 AD FS에 지정 된 ToDoListService의 ID (예: <https://localhost:44321/> </br>**Ida: 대상 그룹과 ida: ClientID는 서로 일치 해야 합니다.** |
@@ -494,7 +494,7 @@ AD FS에서 Nmae 클레임을 실행 하는 것 하지만 하지 NameIdentifier 
 ![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO27.PNG)
 
 또한 Fiddler에 자세한 추적을 볼 수 있습니다. Fiddler를 시작 하 고 HTTPS 암호 해독을 설정 합니다. /Adfs/oautincludes 엔드포인트에 두 개의 요청을 수행할 것을 볼 수 있습니다.
-첫 번째 상호 작용에서 토큰 끝점에 대 한 액세스 코드를 제공 하 고 https://localhost:44321/ ![ AD FS OBO에 대 한 액세스 토큰을 가져옵니다](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO22.PNG)
+첫 번째 상호 작용에서 토큰 끝점에 대 한 액세스 코드를 제공 하 고 https://localhost:44321/ ![AD FS OBO에 대 한 액세스 토큰을 가져옵니다](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO22.PNG)
 
 두 번째 토큰 끝점과의 상호 작용에서 **on_behalf_of** 로 설정 된 **requested_token_use** 를 확인 하 고, 중간 계층 웹 서비스에 대해 획득 한 액세스 토큰 (예:)을 사용 하 여 토큰을 사용 하 여 토큰을 가져올 수 있습니다 https://localhost:44321/.
 ![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO23.PNG)

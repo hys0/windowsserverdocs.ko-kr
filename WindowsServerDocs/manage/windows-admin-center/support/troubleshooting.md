@@ -8,12 +8,12 @@ ms.author: jeffrew
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.date: 06/07/2019
-ms.openlocfilehash: 0b4e02e6759bdb91ea51b5dcf5e1d0ae307d13b4
-ms.sourcegitcommit: 1da993bbb7d578a542e224dde07f93adfcd2f489
+ms.openlocfilehash: 5df216d8c7b829a6c60db4e5d771824a7bacdb47
+ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73567095"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77465327"
 ---
 # <a name="troubleshooting-windows-admin-center"></a>Windows Admin Center 문제 해결
 
@@ -165,8 +165,10 @@ Windows Admin Center를 설치할 때 Windows Admin Center가 게이트웨이의
 
    > [!TIP]
    > 한번에 모든 TrustedHosts를 설정하는 간단한 방법은 와일드카드를 사용하는 것입니다.
-   > 
-   >     Set-Item WSMan:\localhost\Client\TrustedHosts -Value '*'
+   >
+   > ```powershell
+   > Set-Item WSMan:\localhost\Client\TrustedHosts -Value '*'
+   > ```
 
 4. 테스트가 완료되면 관리자 권한 PowerShell 세션에서 다음 명령을 발급하여 TrustedHosts 설정을 지울 수 있습니다.
 
@@ -191,14 +193,14 @@ netsh http delete urlacl url=https://+:443/
 
 ## <a name="azure-features-dont-work-properly-in-edge"></a>Edge에서 Azure 기능이 제대로 작동 하지 않음
 
-Edge에는 Windows 관리 센터의 Azure 로그인에 영향을 주는 보안 영역과 관련 된 [알려진 문제가](https://github.com/AzureAD/azure-activedirectory-library-for-js/wiki/Known-issues-on-Edge) 있습니다. Edge를 사용할 때 Azure 기능을 사용 하는 데 문제가 있는 경우 https://login.microsoftonline.com , https://login.live.com 및 게이트웨이의 URL을 신뢰할 수 있는 사이트로 추가 하 고 클라이언트 쪽 브라우저에서 Edge 팝업 차단 설정에 허용 된 사이트에 추가 해 보세요. 
+Edge에는 Windows 관리 센터의 Azure 로그인에 영향을 주는 보안 영역과 관련 된 [알려진 문제가](https://github.com/AzureAD/azure-activedirectory-library-for-js/wiki/Known-issues-on-Edge) 있습니다. Edge를 사용할 때 Azure 기능을 사용 하는 데 문제가 있는 경우 https://login.microsoftonline.com, https://login.live.com 및 게이트웨이의 URL을 신뢰할 수 있는 사이트로 추가 하 고 클라이언트 쪽 브라우저에서 Edge 팝업 차단 설정에 허용 된 사이트에 추가 해 보세요. 
 
-이렇게 하려면 다음을 수행합니다.
+이렇게 하려면 다음과 같이 하십시오.
 1. Windows 시작 메뉴에서 **인터넷 옵션** 을 검색 합니다.
 2. **보안** 탭으로 이동 합니다.
-3. **신뢰할 수 있는 사이트** 옵션에서 **사이트** 단추를 클릭 하 고 열리는 대화 상자에 url을 추가 합니다. 게이트웨이 URL 뿐만 아니라 https://login.microsoftonline.com 및 https://login.live.com 를 추가 해야 합니다.
+3. **신뢰할 수 있는 사이트** 옵션에서 **사이트** 단추를 클릭 하 고 열리는 대화 상자에 url을 추가 합니다. 게이트웨이 URL 뿐만 아니라 https://login.microsoftonline.com 및 https://login.live.com를 추가 해야 합니다.
 4. **개인 정보** 탭으로 이동
-5. **팝업 차단** 섹션 아래에서 **설정** 단추를 클릭 하 고 열리는 대화 상자에 url을 추가 합니다. 게이트웨이 URL 뿐만 아니라 https://login.microsoftonline.com 및 https://login.live.com 를 추가 해야 합니다.
+5. **팝업 차단** 섹션 아래에서 **설정** 단추를 클릭 하 고 열리는 대화 상자에 url을 추가 합니다. 게이트웨이 URL 뿐만 아니라 https://login.microsoftonline.com 및 https://login.live.com를 추가 해야 합니다.
 
 ## <a name="having-an-issue-with-an-azure-related-feature"></a>Azure 관련 기능을 사용 하는 데 문제가 있나요?
 
@@ -231,9 +233,9 @@ Edge에는 Windows 관리 센터의 Azure 로그인에 영향을 주는 보안 �
 * 기본 포트 설정을 사용하여 설치했습니까?
     * 그렇지 않은 경우 어떤 포트를 지정했습니까?
 * Windows Admin Center가 **설치된** 컴퓨터가 도메인에 가입되어 있습니까?
-* Windows Admin Center가 **설치된** Windows [버전](#check-the-windows-version):
+* Windows Admin Center가 [설치된](#check-the-windows-version) Windows **버전**:
 * **관리하려는** 컴퓨터가 도메인에 가입되었습니까?
-* **관리하려는** 컴퓨터의 Windows [버전](#check-the-windows-version):
+* [관리하려는](#check-the-windows-version) 컴퓨터의 Windows **버전**:
 * 어떤 브라우저를 사용하고 있습니까?
     * Google Chrome을 사용하는 경우 버전은 무엇입니까? (도움말 > Google Chrome 정보)
 

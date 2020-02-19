@@ -8,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 44fb4c02421a431edb502daecaa38f00fb4dd2ad
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e0c581a29db92cfb73e4225c72e7e1c2bad4ca68
+ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407532"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77465281"
 ---
 # <a name="managing-ssltls-protocols-and-cipher-suites-for-ad-fs"></a>AD FS에 대 한 SSL/TLS 프로토콜 및 암호 그룹 관리
 다음 설명서에서는에서 사용 되는 특정 TLS/SSL 프로토콜 및 암호 그룹을 사용 하지 않도록 설정 하 고 사용 하도록 설정 하는 방법에 대 한 정보를 제공 AD FS
@@ -34,13 +34,13 @@ AD FS는 Schannel을 사용 하 여 보안 통신 상호 작용을 수행 합니
 
 ## <a name="managing-the-tlsssl-protocols-and-cipher-suites"></a>TLS/SSL 프로토콜 및 암호 그룹 관리
 > [!IMPORTANT]
-> 이 섹션에는 레지스트리를 수정 하는 방법을 설명 하는 단계가 포함 되어 있습니다. 그러나 레지스트리를 잘못 수정 하면 심각한 문제가 발생할 수 있습니다. 따라서 이러한 단계를 신중 하 게 수행 해야 합니다. 
+> 이 섹션에는 레지스트리를 수정 하는 방법을 설명 하는 단계가 포함 되어 있습니다. 그러나 레지스트리를 잘못 수정하면 심각한 문제가 발생할 수 있습니다. 따라서 이 단계를 신중하게 수행해야 합니다. 
 > 
 > SCHANNEL의 기본 보안 설정을 변경 하면 특정 클라이언트와 서버 간의 통신을 중단 하거나 차단할 수 있습니다.  이 문제는 보안 통신이 필요 하며 통신을 협상 하는 프로토콜이 없는 경우에 발생 합니다.
 > 
 > 이러한 변경 내용을 적용 하는 경우 팜의 모든 AD FS 서버에 적용 해야 합니다.  이러한 변경 내용을 적용 한 후에는 다시 부팅이 필요 합니다.
 
-Todays와 age에서 서버를 강화 하 고 이전 또는 취약 한 암호 그룹을 제거 하는 것은 많은 조직에서 중요 한 우선 순위를 갖습니다.  서버를 테스트 하 고 이러한 프로토콜 및 도구 모음에 대 한 자세한 정보를 제공 하는 소프트웨어 제품군을 사용할 수 있습니다.  규격을 유지 하거나 보안 등급을 확보 하기 위해 약한 프로토콜이 나 암호 그룹을 제거 하거나 사용 하지 않도록 설정 해야 합니다.  이 문서의 나머지 부분에서는 특정 프로토콜 및 암호 그룹을 사용 하거나 사용 하지 않도록 설정 하는 방법에 대 한 지침을 제공 합니다.
+오늘날의 일 및 연령에서 서버를 강화 하 고 이전 또는 취약 한 암호 그룹을 제거 하는 것은 많은 조직에서 중요 한 우선 순위를 갖습니다.  서버를 테스트 하 고 이러한 프로토콜 및 도구 모음에 대 한 자세한 정보를 제공 하는 소프트웨어 제품군을 사용할 수 있습니다.  규격을 유지 하거나 보안 등급을 확보 하기 위해 약한 프로토콜이 나 암호 그룹을 제거 하거나 사용 하지 않도록 설정 해야 합니다.  이 문서의 나머지 부분에서는 특정 프로토콜 및 암호 그룹을 사용 하거나 사용 하지 않도록 설정 하는 방법에 대 한 지침을 제공 합니다.
 
 아래 레지스트리 키는 동일한 위치에 있습니다. HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols.  Regedit 또는 PowerShell을 사용 하 여 이러한 프로토콜 및 암호 그룹을 사용 하거나 사용 하지 않도록 설정 합니다.
 

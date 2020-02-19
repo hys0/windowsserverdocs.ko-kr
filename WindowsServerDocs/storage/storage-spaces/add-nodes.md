@@ -10,12 +10,12 @@ author: cosmosdarwin
 ms.date: 11/06/2017
 description: 스토리지 공간 다이렉트 클러스터에 서버 또는 드라이브를 추가 하는 방법
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d5949b8fce7253371ee7ecea5118596f713f037
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f5fb9da903bb76de3a075fa7feeeaba468d802c2
+ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71393776"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77465627"
 ---
 # <a name="adding-servers-or-drives-to-storage-spaces-direct"></a>저장소 공간 다이렉트에 서버 또는 드라이브 추가
 
@@ -25,13 +25,13 @@ ms.locfileid: "71393776"
 
 ## <a name="adding-servers"></a>서버 추가
 
-규모 확장이라고도 하는 서버 추가는 저장소 용량을 추가하고, 저장소 성능을 개선하고, 저장소 효율성을 더욱 높입니다. 하이퍼 수렴형 배포인 경우 서버를 추가하면 워크로드에 더 많은 계산 리소스가 제공됩니다.
+규모 확장이라고도 하는 서버 추가는 스토리지 용량을 추가하고, 스토리지 성능을 개선하고, 스토리지 효율성을 더욱 높입니다. 하이퍼 수렴형 배포인 경우 서버를 추가하면 워크로드에 더 많은 컴퓨팅 리소스가 제공됩니다.
 
 ![4 개 노드 클러스터에 서버를 추가 하는 애니메이션](media/add-nodes/Scaling-Out.gif)
 
 일반적인 배포는 서버를 추가하여 간단하게 확장하는 것입니다. 두 단계만 수행하면 됩니다.
 
-1. 장애 조치(Failover) 클러스터 스냅인을 사용하거나 PowerShell에서 **Test-Cluster** cmdlet을 사용하여(관리자 권한으로 실행) [클러스터 유효성 검사 마법사](https://technet.microsoft.com/library/cc732035(v=ws.10).aspx)를 실행합니다. 추가하려는 새 서버 *\<NewNode>* 를 포함합니다.
+1. 장애 조치(Failover) 클러스터 스냅인을 사용하거나 PowerShell에서 [Test-Cluster](https://technet.microsoft.com/library/cc732035(v=ws.10).aspx) cmdlet을 사용하여(관리자 권한으로 실행) **클러스터 유효성 검사 마법사**를 실행합니다. 추가하려는 새 서버 *\<NewNode>* 를 포함합니다.
 
    ```PowerShell
    Test-Cluster -Node <Node>, <Node>, <Node>, <NewNode> -Include "Storage Spaces Direct", Inventory, Network, "System Configuration"
@@ -81,7 +81,7 @@ New-Volume -FriendlyName <Name> -FileSystem CSVFS_ReFS -StoragePoolFriendlyName 
 
 #### <a name="option-3"></a>옵션 3
 
-*Capacity*라는 **StorageTier** 템플릿에서 **PhysicalDiskRedundancy = 2**를 설정한 다음 계층을 참조하여 볼륨을 만듭니다.
+**Capacity**라는 **StorageTier** 템플릿에서 *PhysicalDiskRedundancy = 2*를 설정한 다음 계층을 참조하여 볼륨을 만듭니다.
 
 ```PowerShell
 Set-StorageTier -FriendlyName Capacity -PhysicalDiskRedundancy 2 
@@ -93,7 +93,7 @@ New-Volume -FriendlyName <Name> -FileSystem CSVFS_ReFS -StoragePoolFriendlyName 
 
 ![3 개 노드 클러스터에 네 번째 서버 추가](media/add-nodes/Scaling-3-to-4.png)
 
-서버가 네 개인 경우 삭제 코딩(erasure coding)이라고도 하는 이중 패리티를 사용할 수 있습니다(분산형 RAID-6과 비교). 이 경우 3방향 미러링과 동일한 내결함성이 제공되지만 저장소 효율성은 더 높습니다. 자세한 내용은 [내결함성 및 저장소 효율성](storage-spaces-fault-tolerance.md)을 참조하세요.
+서버가 네 개인 경우 삭제 코딩(erasure coding)이라고도 하는 이중 패리티를 사용할 수 있습니다(분산형 RAID-6과 비교). 이 경우 3방향 미러링과 동일한 내결함성이 제공되지만 스토리지 효율성은 더 높습니다. 자세한 내용은 [내결함성 및 저장소 효율성](storage-spaces-fault-tolerance.md)을 참조하세요.
 
 더 작은 배포를 살펴보면 이중 패리티 볼륨을 만들기 시작할 때 사용할 수 있는 몇 가지 유용한 옵션이 있습니다. 원하는 옵션을 사용하면 됩니다.
 
@@ -117,11 +117,11 @@ New-Volume -FriendlyName <Name> -FileSystem CSVFS_ReFS -StoragePoolFriendlyName 
 
 서버가 네 개인 경우 미러-가속 패리티를 사용할 수 있습니다. 여기서 개별 볼륨은 부분 미러 및 부분 패리티입니다.
 
-이 경우 *Performance* 계층과 *Capacity* 계층을 모두 포함하도록 **StorageTier** 템플릿을 업데이트해야 합니다. 이 두 계층은 네 개의 서버에서 **Enable-ClusterS2D**를 처음 실행한 경우에만 생성되기 때문입니다. 구체적으로, 두 계층에는 용량 장치(예: SSD 또는 HDD)의 **MediaType** 및 **PhysicalDiskRedundancy = 2**가 있어야 합니다. *Performance* 계층은 **ResiliencySettingName = Mirror**, *Capacity* 계층은 **ResiliencySettingName = Parity**여야 합니다.
+이 경우 **Performance** 계층과 *Capacity* 계층을 모두 포함하도록 *StorageTier* 템플릿을 업데이트해야 합니다. 이 두 계층은 네 개의 서버에서 **Enable-ClusterS2D**를 처음 실행한 경우에만 생성되기 때문입니다. 구체적으로, 두 계층에는 용량 장치(예: SSD 또는 HDD)의 **MediaType** 및 **PhysicalDiskRedundancy = 2**가 있어야 합니다. *Performance* 계층은 **ResiliencySettingName = Mirror**, *Capacity* 계층은 **ResiliencySettingName = Parity**여야 합니다.
 
 #### <a name="option-3"></a>옵션 3
 
-기존 계층 템플릿을 제거하고 두 계층 템플릿을 새로 만드는 것이 가장 쉬울 수 있습니다. 이 계층 템플릿을 참조하여 만든 기존 볼륨은 영향을 받지 않습니다. 템플릿이기 때문입니다.
+기존 계층 템플릿을 제거하고 두 계층 템플릿을 새로 만드는 것이 가장 쉬울 수 있습니다. 계층 템플릿을 참조 하 여 만든 기존 볼륨에는 영향을 주지 않습니다. 단지 템플릿입니다.
 
 ```PowerShell
 Remove-StorageTier -FriendlyName Capacity
@@ -168,10 +168,10 @@ New-Volume -FriendlyName "Sir-Mix-A-Lot" -FileSystem CSVFS_ReFS -StoragePoolFrie
 
 ## <a name="adding-drives"></a>드라이브 추가
 
-드라이브 추가(강화라고도 함)는 저장소 용량을 추가하고 성능도 향상할 수 있습니다. 사용 가능한 슬롯이 있는 경우 서버를 추가하지 않고 각 서버에 드라이브를 추가하여 저장소 용량을 확장할 수 있습니다. 캐시 드라이브 또는 용량 드라이브를 언제든지 독립적으로 추가할 수 있습니다.
+드라이브 추가(강화라고도 함)는 스토리지 용량을 추가하고 성능도 향상할 수 있습니다. 사용 가능한 슬롯이 있는 경우 서버를 추가하지 않고 각 서버에 드라이브를 추가하여 스토리지 용량을 확장할 수 있습니다. 캐시 드라이브 또는 용량 드라이브를 언제든지 독립적으로 추가할 수 있습니다.
 
    >[!IMPORTANT]
-   > 모든 서버를 동일한 저장소 구성으로 구성하는 것이 좋습니다.
+   > 모든 서버를 동일한 스토리지 구성으로 구성하는 것이 좋습니다.
 
 ![디스크를 시스템과 함께 추가 하는 애니메이션](media/add-nodes/Scale-Up.gif)
 

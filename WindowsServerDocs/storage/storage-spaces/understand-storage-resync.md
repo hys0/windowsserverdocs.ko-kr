@@ -9,12 +9,12 @@ ms.topic: article
 author: adagashe
 ms.date: 01/14/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 53f48421bddd416d24c5f46e53652cc89c10c785
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d271d92a14278e52a6020c60f96f48b1c8b35871
+ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402848"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77465307"
 ---
 # <a name="understand-and-monitor-storage-resync"></a>저장소 재 동기화 이해 및 모니터링
 
@@ -112,7 +112,7 @@ Regeneration          00:01:19              Running               50            
 
 이 보기는 나열 된 저장소 작업이 볼륨당, 실행 중인 작업의 목록을 볼 수 있으며, 개별 진행 상황을 추적할 수 있으므로이 보기는 훨씬 더 세부적입니다. 이 cmdlet은 Windows Server 2016 및 2019 모두에서 작동 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [유지 관리를 위해 서버를 오프라인으로 전환](maintain-servers.md)
 - [스토리지 공간 다이렉트 개요](storage-spaces-direct-overview.md)

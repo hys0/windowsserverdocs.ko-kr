@@ -8,16 +8,16 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 09/25/2019
-ms.openlocfilehash: 0479309efe629d204bdc98fe11a7ccb4447a7369
-ms.sourcegitcommit: de71970be7d81b95610a0977c12d456c3917c331
+ms.openlocfilehash: ec885670ca6808e89c63848781c4ff3dc27799b8
+ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71940723"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77465607"
 ---
 # <a name="troubleshooting-guarded-hosts"></a>보호 된 호스트 문제 해결
 
-> 적용 대상: Windows server 2019, Windows Server (반기 채널), Windows Server 2016
+> 적용 대상: Windows Server 2019, Windows Server (반기 채널), Windows Server 2016
 
 이 항목에서는 보호 된 패브릭에서 보호 된 Hyper-v 호스트를 배포 하거나 작동할 때 발생 하는 일반적인 문제에 대 한 해결 방법을 설명 합니다.
 문제의 특성을 잘 모를 경우 먼저 Hyper-v 호스트에서 [보호 된 패브릭 진단을](guarded-fabric-troubleshoot-diagnostics.md) 실행 하 여 잠재적인 원인을 좁혀 보세요.
@@ -51,7 +51,7 @@ AttestationStatus         | 설명
 만료됨                   | 호스트가 이전에 증명을 통과 했지만 발급 된 상태 인증서가 만료 되었습니다. 호스트 및 HGS 시간이 동기화 되었는지 확인 합니다.
 InsecureHostConfiguration | 호스트가 HGS에 구성 된 증명 정책을 준수 하지 않아 증명을 통과 하지 못했습니다. 자세한 내용은 AttestationSubStatus 테이블을 참조 하세요.
 NotConfigured             | 호스트가 증명 및 키 보호를 위해 HGS를 사용 하도록 구성 되어 있지 않습니다. 대신 로컬 모드로 구성 됩니다. 이 호스트가 보호 된 패브릭에 있는 경우 [get-hgsclientconfiguration](https://technet.microsoft.com/library/dn914494.aspx) 를 사용 하 여 HGS 서버에 대 한 url을 제공 합니다.
-성공한                    | 호스트가 증명을 통과 했습니다.
+통과                    | 호스트가 증명을 통과 했습니다.
 TransientError            | 네트워킹, 서비스 또는 기타 임시 오류로 인해 마지막 증명 시도가 실패 했습니다. 마지막 작업을 다시 시도 합니다.
 TpmError                  | 호스트에서 TPM 오류로 인해 마지막 증명 시도를 완료할 수 없습니다. 자세한 내용은 TPM 로그를 참조 하십시오.
 UnauthorizedHost          | 보호 된 Vm을 실행할 수 있는 권한이 없어 호스트가 증명을 통과 하지 못했습니다. 호스트가 보호 된 Vm을 실행 하기 위해 HGS에서 신뢰 하는 보안 그룹에 속하는지 확인 합니다.
@@ -71,7 +71,7 @@ FullBoot                   | 호스트가 절전 모드 또는 최대 절전 모
 HibernationEnabled         | 호스트는 최대 절전 모드 파일을 암호화 하지 않고 최대 절전 모드를 허용 하도록 구성 되어 있으며,이는 HGS 정책에서 허용 되지 않습니다. 최대 절전 모드를 해제 하 고 호스트를 다시 시작 하거나 [덤프 암호화를 구성](https://technet.microsoft.com/windows-server-docs/virtualization/hyper-v/manage/about-dump-encryption)합니다.
 HypervisorEnforcedCodeIntegrityPolicy | 호스트가 하이퍼바이저 적용 코드 무결성 정책을 사용 하도록 구성 되어 있지 않습니다. 하이퍼바이저에서 코드 무결성을 사용 하도록 설정 하 고 구성 하 고 적용 했는지 확인 합니다. 자세한 내용은 [Device Guard 배포 가이드](https://technet.microsoft.com/itpro/windows/keep-secure/deploy-device-guard-deploy-code-integrity-policies) 를 참조 하세요.
 없거나                      | 호스트의 가상화 기반 보안 기능은 HGS 정책에서 요구 하는 대로 직접 메모리 액세스 공격 으로부터 보호 하기 위해 IOMMU 장치를 요구 하도록 구성 되어 있지 않습니다. 호스트에 IOMMU가 있는지 확인 하 고, 사용 하도록 설정 되어 있으며, 장치 가드가 VBS를 시작할 때 [DMA 보호를 요구 하도록 구성](https://technet.microsoft.com/itpro/windows/keep-secure/deploy-device-guard-enable-virtualization-based-security#enable-virtualization-based-security-vbs-and-device-guard) 되어 있는지 확인 합니다.
-PagefileEncryption         | 호스트에서 페이지 파일 암호화를 사용할 수 없습니다. 이 문제를 해결 하려면 `fsutil behavior set encryptpagingfile 1`을 실행 하 여 페이지 파일 암호화를 사용 하도록 설정 합니다. 자세한 내용은 [fsutil behavior](https://technet.microsoft.com/library/cc785435.aspx)를 참조 하세요.
+PagefileEncryption         | 호스트에서 페이지 파일 암호화를 사용할 수 없습니다. 이 문제를 해결 하려면 `fsutil behavior set encryptpagingfile 1`를 실행 하 여 페이지 파일 암호화를 사용 하도록 설정 합니다. 자세한 내용은 [fsutil behavior](https://technet.microsoft.com/library/cc785435.aspx)를 참조 하세요.
 SecureBoot                 | 보안 부팅이이 호스트에서 사용 하도록 설정 되지 않았거나 Microsoft 보안 부팅 템플릿을 사용 하지 않습니다. Microsoft 보안 부팅 템플릿을 사용 하 여 [보안 부팅을 사용 하도록 설정](https://msdn.microsoft.com/windows/hardware/commercialize/manufacture/desktop/disabling-secure-boot#enable_secure_boot) 하면이 문제를 해결할 수 있습니다.
 SecureBootSettings         | 이 호스트의 TPM 기준이 HGS에서 신뢰 하는 기준과 일치 하지 않습니다. 새 하드웨어나 소프트웨어를 설치 하 여 UEFI 시작 기관, .DBX 변수, 디버그 플래그 또는 사용자 지정 보안 부팅 정책을 변경 하는 경우 발생할 수 있습니다. 이 컴퓨터의 현재 하드웨어, 펌웨어 및 소프트웨어 구성을 신뢰 하는 경우 [새 TPM 기준선을 캡처하고](guarded-fabric-tpm-trusted-attestation-capturing-hardware.md#capture-the-tpm-baseline-for-each-unique-class-of-hardware) [HGS에 등록할](guarded-fabric-manage-hgs.md#authorizing-new-guarded-hosts)수 있습니다.
 TcgLogVerification         | TCG 로그 (TPM 기준)를 얻거나 확인할 수 없습니다. 이는 호스트의 펌웨어, TPM 또는 기타 하드웨어 구성 요소에 문제가 있음을 나타낼 수 있습니다. Windows를 부팅 하기 전에 PXE 부팅을 시도 하도록 호스트를 구성한 경우 오래 된 NBP (네트워크 부팅 프로그램) 에서도이 오류가 발생할 수 있습니다. PXE 부팅을 사용 하는 경우 모든 NBPs가 최신 상태 인지 확인 합니다.

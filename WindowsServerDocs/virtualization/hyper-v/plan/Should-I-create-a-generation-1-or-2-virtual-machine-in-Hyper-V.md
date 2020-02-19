@@ -11,19 +11,19 @@ ms.assetid: 02e31413-6140-4723-a8d6-46c7f667792d
 author: KBDAzure
 ms.author: kathydav
 ms.date: 12/05/2016
-ms.openlocfilehash: bd0b50534096bc06edb41390ef2c4ec3554d8406
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: fce9b45f538b0d506b621b888d413c99590b1362
+ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71364085"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77465557"
 ---
 # <a name="should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v"></a>1 또는 2 세대 가상 컴퓨터를 Hyper-v에서 만들어야 하나요?
 
 >적용 대상: Windows 10, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
 
 > [!NOTE]
-> 온-프레미스에서 Microsoft Azure로 Windows VM (가상 머신)을 업로드할 계획인 경우 VHD 파일 형식의 1 세대 및 2 세대 Vm이 고정 크기의 디스크가 지원 됩니다. Azure에서 지원 되는 2 세대 기능에 대해 자세히 알아보려면 [azure의 2 세대 vm](https://docs.microsoft.com/azure/virtual-machines/windows/generation-2) 을 참조 하세요. Windows VHD 또는 VHDX를 업로드 하는 방법에 대 한 자세한 내용은 [Azure에 업로드할 WINDOWS vhd 또는 Vhdx 준비](https://docs.microsoft.com/azure/virtual-machines/windows/prepare-for-upload-vhd-image)를 참조 하세요.
+> 온-프레미스에서 Microsoft Azure로 Windows Vm (가상 머신)을 업로드할 계획인 경우 VHD 파일 형식의 1 세대 및 2 세대 Vm이 고정 크기의 디스크가 지원 됩니다. Azure에서 지원 되는 2 세대 기능에 대해 자세히 알아보려면 [azure의 2 세대 vm](https://docs.microsoft.com/azure/virtual-machines/windows/generation-2) 을 참조 하세요. Windows VHD 또는 VHDX를 업로드 하는 방법에 대 한 자세한 내용은 [Azure에 업로드할 WINDOWS vhd 또는 Vhdx 준비](https://docs.microsoft.com/azure/virtual-machines/windows/prepare-for-upload-vhd-image)를 참조 하세요.
 
 1 세대 또는 2 세대 가상 컴퓨터를 만드는 사용자가 선택한 설치 및 가상 컴퓨터를 배포 하는 데 사용할 부팅 메서드를 원하는 게스트 운영 체제에 따라 다릅니다. 다음 문 중 하나는 경우에 보안 부팅 등의 기능을 이용 하려면 2 세대 가상 컴퓨터를 만드는 것이 좋습니다.  
 
@@ -59,7 +59,7 @@ ms.locfileid: "71364085"
 
 |64 비트 버전의 Windows|1세대|2세대|  
 |-------------------------------|----------------|----------------|  
-| Windows Server 2019 |&#10004;|&#10004;|  
+| 시작 |&#10004;|&#10004;|  
 | Windows Server 2016 |&#10004;|&#10004;|  
 | Windows Server 2012 R2 |&#10004;|&#10004;|  
 | Windows Server 2012 |&#10004;|&#10004;|  
@@ -179,26 +179,26 @@ ms.locfileid: "71364085"
 
   2 세대 가상 컴퓨터와 가상 컴퓨터 부팅 및 설치 시간이 약간 향상을 확인할 수도 있습니다.
 
-## <a name="whats-the-difference-in-device-support"></a>장치 지원의 차이점은 무엇입니까?
+## <a name="whats-the-difference-in-device-support"></a>디바이스 지원의 차이점은 무엇입니까?
 
-다음 표에서 1 세대 및 2 세대 가상 컴퓨터 간에 사용 가능한 장치를 비교 합니다.  
+다음 표에서 1 세대 및 2 세대 가상 컴퓨터 간에 사용 가능한 디바이스를 비교 합니다.  
 
 |1세대 장치|2세대 교체|2세대 개선|  
 |-----------------------|----------------------------|-----------------------------|  
 |IDE 컨트롤러|가상 SCSI 컨트롤러|.vhdx에서 부팅(최대 크기 64TB, 온라인 크기 조정 기능)|  
-|IDE CD-ROM|가상 SCSI CD-ROM|SCSI 컨트롤러당 최대 64개의 SCSI DVD 장치 지원|  
+|IDE CD-ROM|가상 SCSI CD-ROM|SCSI 컨트롤러당 최대 64개의 SCSI DVD 디바이스 지원|  
 |레거시 BIOS|UEFI 펌웨어|보안 부팅|  
 |레거시 네트워크 어댑터|가상 네트워크 어댑터|IPv4 및 IPv6을 사용한 네트워크 부팅|  
-|플로피 컨트롤러 및 DMA 컨트롤러|플로피 컨트롤러 지원 안 함|해당 없음|  
+|플로피 컨트롤러 및 DMA 컨트롤러|플로피 컨트롤러 지원 안 함|N/A|  
 |COM 포트용 UART(범용 비동기 수신기/송신기)|디버깅에 대한 선택적 UART|보다 빠르고 안정적|  
 |i8042 키보드 컨트롤러|소프트웨어 기반 입력|에뮬레이션이 없으므로 더 적은 리소스를 사용하며, 게스트 운영 체제의 공격 취약점 감소|  
 |PS/2 키보드|소프트웨어 기반 키보드|에뮬레이션이 없으므로 더 적은 리소스를 사용하며, 게스트 운영 체제의 공격 취약점 감소|  
 |PS/2 마우스|소프트웨어 기반 마우스|에뮬레이션이 없으므로 더 적은 리소스를 사용하며, 게스트 운영 체제의 공격 취약점 감소|  
 |S3 비디오|소프트웨어 기반 비디오|에뮬레이션이 없으므로 더 적은 리소스를 사용하며, 게스트 운영 체제의 공격 취약점 감소|  
-|PCI 버스|더 이상 필요 없음|해당 없음|  
-|PIC(프로그램 가능 인터럽트 컨트롤러)|더 이상 필요 없음|해당 없음|  
-|PIT(프로그램 가능 간격 타이머)|더 이상 필요 없음|해당 없음|  
-|Super I/O 장치|더 이상 필요 없음|해당 없음|  
+|PCI 버스|더 이상 필요 없음|N/A|  
+|PIC(프로그램 가능 인터럽트 컨트롤러)|더 이상 필요 없음|N/A|  
+|PIT(프로그램 가능 간격 타이머)|더 이상 필요 없음|N/A|  
+|Super I/O 디바이스|더 이상 필요 없음|N/A|  
 
 ## <a name="more-about-generation-2-virtual-machines"></a>2 세대 가상 컴퓨터에 대 한 자세한
 
@@ -213,7 +213,7 @@ ms.locfileid: "71364085"
 
 - 보안 부팅 또는 UEFI 펌웨어는 실제 Hyper-v 호스트에 필요한 되지 않습니다. Hyper-v 가상 컴퓨터에 Hyper-v 호스트에는 무엇이 상관 없는 가상 펌웨어를 제공 합니다.
 - 2 세대 가상 컴퓨터의 UEFI 펌웨어는 보안 부팅에 대 한 설치 모드를 지원 하지 않습니다.
-- 2 세대 가상 컴퓨터에 UEFI 셸 또는 다른 UEFI 응용 프로그램을 실행 중인 지원 되지 않습니다. 타사 UEFI 셸 또는 UEFI 응용 프로그램을 사용하는 것은 소스에서 직접 컴파일된 경우 기술적으로 가능합니다. 이러한 응용 프로그램은 적절 하 게 디지털 서명이 없는 경우 가상 컴퓨터에 대 한 보안 부팅을 해제 해야 합니다.
+- 2 세대 가상 컴퓨터에 UEFI 셸 또는 다른 UEFI 애플리케이션을 실행 중인 지원 되지 않습니다. 타사 UEFI 셸 또는 UEFI 애플리케이션을 사용하는 것은 소스에서 직접 컴파일된 경우 기술적으로 가능합니다. 이러한 애플리케이션은 적절 하 게 디지털 서명이 없는 경우 가상 컴퓨터에 대 한 보안 부팅을 해제 해야 합니다.
 
 ### <a name="work-with-vhdx-files"></a>VHDX 파일 작업
 
@@ -251,8 +251,8 @@ COM 포트를 추가 하려면:
 > [!NOTE]  
 > 구성 된 COM 포트는 Hyper-v 관리자의 가상 머신 설정에 나열 되지 않습니다.
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
 
-- [Hyper-v의 Linux 및 FreeBSD Virtual Machines](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)
+- [Linux 및 Hyper-V의 FreeBSD Virtual Machines](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)
 - [VMConnect를 사용 하 여 Hyper-v 가상 머신에서 로컬 리소스 사용](../learn-more/Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md)
 - [Windows Server 2016의 Hyper-v 확장성 계획](Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md)

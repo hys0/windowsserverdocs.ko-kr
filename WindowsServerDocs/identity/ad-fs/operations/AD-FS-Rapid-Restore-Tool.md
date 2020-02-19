@@ -9,12 +9,12 @@ ms.date: 07/02/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 8b47cdc4770b1ed6478d1502ed5264164e99352b
-ms.sourcegitcommit: a33404f92867089bb9b0defcd50960ff231eef3f
+ms.openlocfilehash: 2570aae52da2925a62dd6c9262af325fb5461fff
+ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77013048"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77465267"
 ---
 # <a name="ad-fs-rapid-restore-tool"></a>AD FS 신속 복원 도구
 
@@ -29,6 +29,9 @@ ms.locfileid: "77013048"
     - 온라인 AD FS 서버 대신 신속 하 게 배포할 수 있는 AD FS의 콜드 대기 설치를 만드는 도구를 사용 합니다.
 2. 동일한 테스트 및 프로덕션 환경에 배포
     - 신속 하 게 테스트 환경에서 프로덕션 AD FS의 정확한 복사본을 만들려면 또는 신속 하 게 유효성을 검사 하는 테스트 구성을 프로덕션에 배포 하는 도구를 사용 하 여
+3. SQL 기반 구성에서 WID로 또는 그 반대로 마이그레이션
+    - 도구를 사용 하 여 SQL 기반 팜 구성에서 WID로 이동 하거나 그 반대로 이동 합니다. 
+
 
 >[!NOTE] 
 >SQL 병합 복제 또는 Always on 가용성 그룹을 사용 하는 경우 빠른 복원 도구가 지원 되지 않습니다. 대신 SQL 기반 백업과 SSL 인증서의 백업을 사용 하는 것이 좋습니다.
@@ -39,7 +42,7 @@ ms.locfileid: "77013048"
 - AD FS 구성 데이터베이스 (SQL 또는 WID)
 - 구성 파일 (AD FS 폴더에 있음)
 - 토큰 서명 및 인증서와 프라이빗 키 (에서 Active Directory DKM 컨테이너)를 암호 해독을 자동으로 생성
-- SSL 인증서와 외부에서 등록 한 인증서 (토큰 서명, 토큰 암호 해독 및 서비스 통신)와 해당 프라이빗 키 (참고: 프라이빗 키를 내보낼 수 있어야 하 고 스크립트를 실행 하는 사용자에 대 한 액세스 권한이 있어야 합니다.)
+- SSL 인증서와 외부에서 등록한 인증서 (토큰 서명, 토큰 암호 해독 및 서비스 통신)와 해당 프라이빗 키(참고: 프라이빗 키를 내보낼 수 있어야 하고 스크립트를 실행하는 사용자에 대한 액세스 권한이 있어야 합니다.)
 - 사용자 지정 인증 공급자, 특성 저장소 및 로컬 클레임 공급자의 목록이 설치 되어 있는 것을 신뢰 합니다.
 
 ## <a name="how-to-use-the-tool"></a>이 도구를 사용 하는 방법
@@ -76,15 +79,15 @@ Cmdlet은 다음 매개 변수를 사용 합니다.
 
 - **BackupDKM** -기본 구성 (자동으로 생성 된 토큰 서명 및 인증서를 암호 해독)에서 AD FS 키를 포함 하는 Active Directory DKM 컨테이너를 백업 합니다. 이는 ad 도구 ' ldifde '를 사용 하 여 AD 컨테이너와 해당 하위 트리를 모두 내보냅니다.
 
-- -**Storagetype &lt;문자열&gt;** -사용자가 사용 하려는 저장소의 유형입니다. "FileSystem"은 사용자가 로컬 또는 "Azure" 네트워크에서 해당 파일을 저장 하려는 경우 사용자가 백업을 수행할 때 사용자가 Azure Storage 컨테이너에 저장 하려는 경우 백업 위치 (파일 시스템 또는 pnrp. 사용할 Azure의 경우 Azure 스토리지 자격 증명을 cmdlet으로 전달해야 합니다. 스토리지 자격 증명의 계정 이름 및 키를 포함합니다. 또한이 컨테이너 이름에 전달 합니다. 컨테이너가 존재 하지 않는 경우 백업 중에 생성 됩니다. 사용할 파일 시스템에 대한 스토리지 경로를 제공합니다. 해당 디렉터리에 각 백업에 대해 새 디렉터리가 생성 됩니다. 만든 각 디렉터리에는 백업된 파일이 포함 됩니다. 
+- -**Storagetype &lt;문자열&gt;** -사용자가 사용 하려는 저장소의 유형입니다. "FileSystem"은 사용자가 로컬 또는 "Azure" 네트워크에서 해당 파일을 저장 하려는 경우 사용자가 백업을 수행할 때 사용자가 Azure Storage 컨테이너에 저장 하려는 경우 백업 위치 (파일 시스템 또는 pnrp. 사용할 Azure에 대 한 Azure 저장소 자격 증명을 cmdlet으로 전달 되어야 합니다. 저장소 자격 증명의 계정 이름 및 키를 포함 합니다. 또한이 컨테이너 이름에 전달 합니다. 컨테이너가 존재 하지 않는 경우 백업 중에 생성 됩니다. 사용할 파일 시스템에 대 한 저장소 경로 제공 합니다. 해당 디렉터리에 각 백업에 대해 새 디렉터리가 생성 됩니다. 만든 각 디렉터리에는 백업된 파일이 포함 됩니다. 
 
 - **EncryptionPassword &lt;문자열&gt;** -백업된 된 모든 파일을 저장 하기 전에 암호화 하는 데 사용 될 것 이라고 암호
 
-- **AzureConnectionCredentials &lt;pscredential&gt;** - 계정 이름 및 Azure 스토리지 계정에 대한 키
+- **AzureConnectionCredentials &lt;pscredential&gt;** -계정 이름 및 Azure 저장소 계정에 대 한 키
 
-- **AzureStorageContainer &lt;문자열&gt;** - 백업이 Azure에 저장될 스토리지 컨테이너
+- **AzureStorageContainer &lt;문자열&gt;** -백업이 Azure에 저장 될 저장소 컨테이너
 
-- **StoragePath &lt;문자열&gt;** - 백업이 저장될 위치
+- **StoragePath &lt;문자열&gt;** -위치에 백업을 저장 됩니다
 
 - **Serviceaccountcredential &lt;pscredential&gt;** -현재 실행 중인 AD FS 서비스에 사용 되는 서비스 계정을 지정 합니다. 이 매개 변수는 사용자가 DKM을 백업 하 고 도메인 관리자가 아니거나 컨테이너의 콘텐츠에 대 한 액세스 권한이 없는 경우에만 필요 합니다. 
 
@@ -134,16 +137,16 @@ Cmdlet은 다음 매개 변수를 사용 합니다.
 
 ### <a name="detailed-description"></a>자세한 설명
 
-- **StorageType &lt;문자열&gt;** - 사용자가 사용하려는 스토리지 유형입니다.
+- **StorageType &lt;문자열&gt;** -사용자가 사용 하려는 저장소 유형입니다.
  "FileSystem"은 사용자가 로컬 또는 "Azure" 네트워크에 저장 하려는 사용자가 Azure Storage 컨테이너에 저장 하려고 함을 나타냅니다.
 
 - **DecryptionPassword &lt;문자열&gt;** -백업된 된 모든 파일 암호화에 사용 된 암호 
 
-- **AzureConnectionCredentials &lt;pscredential&gt;** - 계정 이름 및 Azure 스토리지 계정에 대한 키
+- **AzureConnectionCredentials &lt;pscredential&gt;** -계정 이름 및 Azure 저장소 계정에 대 한 키
 
-- **AzureStorageContainer &lt;문자열&gt;** - 백업이 Azure에 저장될 스토리지 컨테이너
+- **AzureStorageContainer &lt;문자열&gt;** -백업이 Azure에 저장 될 저장소 컨테이너
 
-- **StoragePath &lt;문자열&gt;** - 백업이 저장될 위치
+- **StoragePath &lt;문자열&gt;** -위치에 백업을 저장 됩니다
 
 - **ADFSName &lt; 문자열 &gt;** -백업 및 복원 하려고 하는 페더레이션의 이름입니다. 이 제공 되지 않았고는 하나의 페더레이션 서비스 이름 다음에 사용 됩니다. 있는 경우에 둘 이상의 페더레이션 서비스 위치에 백업 후 사용자는 페더레이션 서비스 백업 중 하나를 선택 하 라는 메시지가 표시 됩니다.
 
