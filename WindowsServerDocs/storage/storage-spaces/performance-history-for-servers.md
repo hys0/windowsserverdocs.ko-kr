@@ -6,7 +6,7 @@ ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 02/05/2018
-Keywords: 직접 액세스 저장소 공간
+Keywords: 저장소 공간 다이렉트
 ms.localizationpriority: medium
 ms.openlocfilehash: bbfc92f7926b93f5f6716514e64672f4aa304c0f
 ms.sourcegitcommit: e817a130c2ed9caaddd1def1b2edac0c798a6aa2
@@ -28,22 +28,22 @@ ms.locfileid: "74945245"
 
 이러한 계열은 모든 적격 서버에 대해 수집 됩니다.
 
-| Sorozat                           | Unit    |
+| 계열                           | 단위    |
 |----------------------------------|---------|
-| `clusternode.cpu.usage`          | 수익률 |
-| `clusternode.cpu.usage.guest`    | 수익률 |
-| `clusternode.cpu.usage.host`     | 수익률 |
-| `clusternode.memory.total`       | bájt   |
-| `clusternode.memory.available`   | bájt   |
-| `clusternode.memory.usage`       | bájt   |
-| `clusternode.memory.usage.guest` | bájt   |
-| `clusternode.memory.usage.host`  | bájt   |
+| `clusternode.cpu.usage`          | percent |
+| `clusternode.cpu.usage.guest`    | percent |
+| `clusternode.cpu.usage.host`     | percent |
+| `clusternode.memory.total`       | 바이트   |
+| `clusternode.memory.available`   | 바이트   |
+| `clusternode.memory.usage`       | 바이트   |
+| `clusternode.memory.usage.guest` | 바이트   |
+| `clusternode.memory.usage.host`  | 바이트   |
 
 또한 `physicaldisk.size.total`와 같은 드라이브 시리즈는 서버에 연결 된 모든 적격 드라이브에 대해 집계 되며, `networkadapter.bytes.total`와 같은 네트워크 어댑터 시리즈는 서버에 연결 된 모든 적격 네트워크 어댑터에 대해 집계 됩니다.
 
 ## <a name="how-to-interpret"></a>해석 방법
 
-| Sorozat                           | 해석 방법                                                      |
+| 계열                           | 해석 방법                                                      |
 |----------------------------------|-----------------------------------------------------------------------|
 | `clusternode.cpu.usage`          | 유휴 상태가 아닌 프로세서 시간 비율입니다.                        |
 | `clusternode.cpu.usage.guest`    | 게스트 (가상 컴퓨터) 수요에 사용 되는 프로세서 시간의 비율입니다. |
@@ -60,7 +60,7 @@ ms.locfileid: "74945245"
 
 Hyper-v를 사용 하는 경우:
 
-| Sorozat                           | 원본 카운터 |
+| 계열                           | 원본 카운터 |
 |----------------------------------|----------------|
 | `clusternode.cpu.usage`          | `Hyper-V Hypervisor Logical Processor` > `_Total` > `% Total Run Time`      |
 | `clusternode.cpu.usage.guest`    | `Hyper-V Hypervisor Virtual Processor` > `_Total` > `% Total Run Time`      |
@@ -70,10 +70,10 @@ Hyper-v를 사용 하는 경우:
 
 Hyper-v를 사용할 수 없는 경우:
 
-| Sorozat                           | 원본 카운터 |
+| 계열                           | 원본 카운터 |
 |----------------------------------|----------------|
 | `clusternode.cpu.usage`          | `Processor` > `_Total` > `% Processor Time` |
-| `clusternode.cpu.usage.guest`    | *zero* |
+| `clusternode.cpu.usage.guest`    | *반환* |
 | `clusternode.cpu.usage.host`     | *총 사용량과 동일* |
 
 도 불구 아직까지 완벽 synchronization `clusternode.cpu.usage` 항상 `clusternode.cpu.usage.host` 및 `clusternode.cpu.usage.guest`입니다.
