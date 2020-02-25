@@ -8,12 +8,12 @@ ms.assetid: a6615411-83d9-495f-8a6a-1ebc8b12f164
 manager: brianlic
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: cf93e6f91f4a1c21050c7ad1cb4de43258be1a65
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9271cf4e5f50adf93f421e830a226507034ac454
+ms.sourcegitcommit: 1c75e4b3f5895f9fa33efffd06822dca301d4835
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71401853"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77517478"
 ---
 # <a name="choosing-a-network-adapter"></a>네트워크 어댑터 선택
 
@@ -24,33 +24,33 @@ ms.locfileid: "71401853"
 네트워크를 많이 사용 하는 응용 프로그램에는 고성능 네트워크 어댑터가 필요 합니다. 이 섹션에서는 네트워크 어댑터를 선택 하기 위한 몇 가지 고려 사항 뿐만 아니라 최적의 네트워크 성능을 얻기 위해 다양 한 네트워크 어댑터 설정을 구성 하는 방법을 살펴봅니다.
 
 > [!TIP]
->  Windows PowerShell을 사용 하 여 네트워크 어댑터 설정을 구성할 수 있습니다. 자세한 내용은 [Windows PowerShell의 네트워크 어댑터 cmdlet](https://technet.microsoft.com/library/jj134956.aspx)(영문)을 참조 하세요.
+>  Windows PowerShell을 사용 하 여 네트워크 어댑터 설정을 구성할 수 있습니다. 자세한 내용은 [Windows PowerShell의 네트워크 어댑터 cmdlet](https://docs.microsoft.com/powershell/module/netadapter)(영문)을 참조 하세요.
 
 ##  <a name="bkmk_offload"></a>오프 로드 기능
 
-중앙 처리 장치 \(CPU\) 에서 네트워크 어댑터로 작업을 오프 로드 하면 서버에서 cpu 사용량을 줄일 수 있으며이로 인해 전체 시스템 성능이 향상 됩니다.
+중앙 처리 장치 \(CPU\)에서 네트워크 어댑터로 작업을 오프 로드 하면 서버에서 CPU 사용량을 줄일 수 있으며이로 인해 전체 시스템 성능이 향상 됩니다.
 
 Microsoft 제품의 네트워크 스택은 적절 한 오프 로드 기능이 있는 네트워크 어댑터를 선택 하는 경우 하나 이상의 작업을 네트워크 어댑터로 오프 로드할 수 있습니다. 다음 표에서는 Windows Server 2016에서 사용할 수 있는 여러 오프 로드 기능에 대해 간략히 설명 합니다.
   
 |오프 로드 유형|설명|
 |------------------|-----------------|  
-|TCP에 대 한 체크섬 계산|네트워크 스택은 송신 및 수신 코드 경로에서 전송 제어 프로토콜 \(TCP\) 체크섬의 계산과 유효성 검사를 오프 로드할 수 있습니다. 송신 및 수신 코드 경로에서 IPv4 및 IPv6 체크섬의 계산과 유효성 검사를 오프 로드할 수도 있습니다.|  
-|UDP에 대 한 체크섬 계산 |네트워크 스택은 송신 및 수신 코드 경로에서 사용자 데이터 그램 프로토콜 \(UDP\) 체크섬의 계산과 유효성 검사를 오프 로드할 수 있습니다.|
+|TCP에 대 한 체크섬 계산|네트워크 스택은 송신 및 수신 코드 경로에서 TCP\) 체크섬 \(전송 제어 프로토콜의 계산과 유효성 검사를 오프 로드할 수 있습니다. 송신 및 수신 코드 경로에서 IPv4 및 IPv6 체크섬의 계산과 유효성 검사를 오프 로드할 수도 있습니다.|  
+|UDP에 대 한 체크섬 계산 |네트워크 스택은 송신 및 수신 코드 경로에서 UDP\) 체크섬 \(사용자 데이터 그램 프로토콜의 계산과 유효성 검사를 오프 로드할 수 있습니다.|
 |IPv4에 대 한 체크섬 계산 |네트워크 스택은 송신 및 수신 코드 경로에서 IPv4 체크섬의 계산과 유효성 검사를 오프 로드할 수 있습니다. |
 |IPv6에 대 한 체크섬 계산 |네트워크 스택은 송신 및 수신 코드 경로에서 IPv6 체크섬의 계산과 유효성 검사를 오프 로드할 수 있습니다. | 
 |대량 TCP 패킷 조각화|TCP/IP 전송 계층은 LSOv2 (Large Send Offload) v2를 지원 합니다. LSOv2를 사용 하면 TCP/IP 전송 계층이 네트워크 어댑터에 대 한 대량 TCP 패킷의 조각화를 오프 로드할 수 있습니다.|  
-|수신측 배율 \(RSS\)|RSS는 다중 프로세서 시스템의 여러 Cpu에서 네트워크 수신 처리를 효율적으로 배포할 수 있게 해 주는 네트워크 드라이버 기술입니다. RSS에 대 한 자세한 내용은이 항목의 뒷부분에 제공 됩니다.|  
-|수신 세그먼트 병합 \(RSC\)|RSC는 호스트를 수행 하는 데 필요한 헤더 처리를 최소화 하기 위해 패킷을 그룹화 하는 기능입니다. 최대 64 KB의 수신 된 페이로드는 처리를 위해 하나의 큰 패킷으로 결합 될 수 있습니다. RSC에 대 한 자세한 내용은이 항목의 뒷부분에 제공 됩니다.|  
+|RSS\) \(수신측 배율|RSS는 다중 프로세서 시스템의 여러 Cpu에서 네트워크 수신 처리를 효율적으로 배포할 수 있게 해 주는 네트워크 드라이버 기술입니다. RSS에 대 한 자세한 내용은이 항목의 뒷부분에 제공 됩니다.|  
+|RSC\) \(수신 세그먼트 통합|RSC는 호스트를 수행 하는 데 필요한 헤더 처리를 최소화 하기 위해 패킷을 그룹화 하는 기능입니다. 최대 64 KB의 수신 된 페이로드는 처리를 위해 하나의 큰 패킷으로 결합 될 수 있습니다. RSC에 대 한 자세한 내용은이 항목의 뒷부분에 제공 됩니다.|  
   
 ###  <a name="bkmk_rss"></a>수신측 배율
 
-Windows server 2016, windows server 2012, windows server 2012 R2, windows server 2008 R2 및 windows server 2008은 수신측 크기 조정 \(RSS\)를 지원 합니다. 
+Windows Server 2016, Windows Server 2012, Windows Server 2012 R2, Windows Server 2008 R2 및 Windows Server 2008에서는 RSS\)\(수신측 크기 조정을 지원 합니다. 
 
-일부 \(서버는 실제 코어\) 와 같은 하드웨어 리소스를 공유 하 고 동시 다중 스레딩 \(SMT\) 피어로 처리 되는 여러 논리 프로세서를 사용 하 여 구성 됩니다. Intel 하이퍼 스레딩 기술은 예입니다. RSS는 네트워크 처리를 코어 당 최대 하나의 논리적 프로세서로 보냅니다. 예를 들어 Intel 하이퍼 스레딩, 4 코어 및 8 개의 논리적 프로세서가 있는 서버에서 RSS는 네트워크 처리를 위해 논리적 프로세서를 4 개 이하로 사용 합니다.  
+일부 서버는 물리적 코어\)와 같은 \(하드웨어 리소스를 공유 하는 여러 논리 프로세서로 구성 되며, 동시에 다중 스레딩 \(SMT\) 피어로 처리 됩니다. Intel 하이퍼 스레딩 기술은 예입니다. RSS는 네트워크 처리를 코어 당 최대 하나의 논리적 프로세서로 보냅니다. 예를 들어 Intel 하이퍼 스레딩, 4 코어 및 8 개의 논리적 프로세서가 있는 서버에서 RSS는 네트워크 처리를 위해 논리적 프로세서를 4 개 이하로 사용 합니다.  
 
 RSS는 들어오는 네트워크 i/o 패킷을 논리적 프로세서 간에 분산 하 여 동일한 TCP 연결에 속하는 패킷이 동일한 논리 프로세서에서 처리 되도록 하 여 순서를 유지 합니다. 
 
-또한 RSS는 UDP 유니캐스트 및 멀티 캐스트 트래픽의 부하를 분산 하 고, \(원본 및 대상 주소\) 를 동일한 논리 프로세서에 해시 하 여 관련 된 도착 한의 순서를 유지 함으로써 결정 되는 관련 흐름을 라우팅합니다. 이를 통해 적합 한 논리 프로세서를 사용 하는 것 보다 네트워크 어댑터가 더 작은 서버에 대 한 수신 집약적 시나리오의 확장성 및 성능을 향상 시킬 수 있습니다. 
+또한 RSS는 UDP 유니캐스트 및 멀티 캐스트 트래픽의 부하를 분산 하 고, 관련 된 도착 한의 순서를 유지 하면서 원본 및 대상 주소를 동일한 논리 프로세서에\) 해시 하 여 결정 되는 관련 흐름 \(를 라우팅합니다. 이를 통해 적합 한 논리 프로세서를 사용 하는 것 보다 네트워크 어댑터가 더 작은 서버에 대 한 수신 집약적 시나리오의 확장성 및 성능을 향상 시킬 수 있습니다. 
 
 #### <a name="configuring-rss"></a>RSS 구성
 
@@ -65,13 +65,13 @@ Windows Server 2016에서는 Windows PowerShell cmdlet 및 RSS 프로필을 사�
 >[!NOTE]
 >구문 및 매개 변수를 포함 하 여 각 cmdlet에 대 한 자세한 명령 참조를 보려면 다음 링크를 클릭 하십시오. 또한 Windows PowerShell 프롬프트에서 cmdlet 이름을 **get-help** 에 전달 하 여 각 명령에 대 한 자세한 내용을 확인할 수 있습니다.  
 
-- [Set-netadapterrss를 사용 하지](https://technet.microsoft.com/library/jj130892)않습니다. 이 명령은 지정한 네트워크 어댑터에서 RSS를 사용 하지 않도록 설정 합니다.
+- [Set-netadapterrss를 사용 하지](https://docs.microsoft.com/powershell/module/netadapter/Disable-NetAdapterRss)않습니다. 이 명령은 지정한 네트워크 어댑터에서 RSS를 사용 하지 않도록 설정 합니다.
 
-- [Set-netadapterrss를 사용](https://technet.microsoft.com/library/jj130859)합니다. 이 명령은 지정한 네트워크 어댑터에서 RSS를 사용 하도록 설정 합니다.
+- [Set-netadapterrss를 사용](https://docs.microsoft.com/powershell/module/netadapter/Enable-NetAdapterRss)합니다. 이 명령은 지정한 네트워크 어댑터에서 RSS를 사용 하도록 설정 합니다.
   
-- [Set-netadapterrss](https://technet.microsoft.com/library/jj130912). 이 명령은 지정한 네트워크 어댑터의 RSS 속성을 검색 합니다.
+- [Set-netadapterrss](https://docs.microsoft.com/powershell/module/netadapter/Get-NetAdapterRss). 이 명령은 지정한 네트워크 어댑터의 RSS 속성을 검색 합니다.
   
-- [Set-netadapterrss를 설정](https://technet.microsoft.com/library/jj130863)합니다. 이 명령은 지정한 네트워크 어댑터에서 RSS 속성을 설정 합니다.  
+- [Set-netadapterrss를 설정](https://docs.microsoft.com/powershell/module/netadapter/Set-NetAdapterRss)합니다. 이 명령은 지정한 네트워크 어댑터에서 RSS 속성을 설정 합니다.  
 
 #### <a name="rss-profiles"></a>RSS 프로필
 
@@ -98,31 +98,31 @@ RSS를 구성 하는 데 사용할 수 있는 추가 **set-netadapterrss** 매�
 >[!NOTE]
 >아래 각 매개 변수에 대 한 예제 구문에서 네트워크 어댑터 이름 **이더넷** 은 **Set-netadapterrss** 명령의 **– name** 매개 변수에 대 한 예제 값으로 사용 됩니다. Cmdlet을 실행할 때 사용 하는 네트워크 어댑터 이름이 사용자 환경에 적합 한지 확인 합니다.
 
-- **Maxprocessors\*** : 사용할 RSS 프로세서의 최대 수를 설정 합니다. 이렇게 하면 응용 프로그램 트래픽이 지정 된 인터페이스의 최대 프로세서 수에 바인딩됩니다. 구문 예:
+- **\* maxprocessors**: 사용할 RSS 프로세서의 최대 수를 설정 합니다. 이렇게 하면 응용 프로그램 트래픽이 지정 된 인터페이스의 최대 프로세서 수에 바인딩됩니다. 구문 예:
 
      `Set-NetAdapterRss –Name “Ethernet” –MaxProcessors <value>`
 
-- **BaseProcessorGroup\*** : NUMA 노드의 기본 프로세서 그룹을 설정 합니다. 이는 RSS에서 사용 되는 프로세서 배열에 영향을 줍니다. 구문 예:
+- **\* BaseProcessorGroup**: NUMA 노드의 기본 프로세서 그룹을 설정 합니다. 이는 RSS에서 사용 되는 프로세서 배열에 영향을 줍니다. 구문 예:
 
      `Set-NetAdapterRss –Name “Ethernet” –BaseProcessorGroup <value>`
   
-- **MaxProcessorGroup\*** : NUMA 노드의 최대 프로세서 그룹을 설정 합니다. 이는 RSS에서 사용 되는 프로세서 배열에 영향을 줍니다. 이렇게 설정 하면 부하 분산이 k 그룹 내에 정렬 되도록 최대 프로세서 그룹이 제한 됩니다. 구문 예:
+- **\* MaxProcessorGroup**: NUMA 노드의 최대 프로세서 그룹을 설정 합니다. 이는 RSS에서 사용 되는 프로세서 배열에 영향을 줍니다. 이렇게 설정 하면 부하 분산이 k 그룹 내에 정렬 되도록 최대 프로세서 그룹이 제한 됩니다. 구문 예:
 
      `Set-NetAdapterRss –Name “Ethernet” –MaxProcessorGroup <value>`
 
-- **BaseProcessorNumber\*** : NUMA 노드의 기본 프로세서 번호를 설정 합니다. 이는 RSS에서 사용 되는 프로세서 배열에 영향을 줍니다. 이렇게 하면 네트워크 어댑터 간에 프로세서를 분할할 수 있습니다. 각 어댑터에 할당 되는 RSS 프로세서 범위의 첫 번째 논리 프로세서입니다. 구문 예:
+- **\* BaseProcessorNumber**: NUMA 노드의 기본 프로세서 번호를 설정 합니다. 이는 RSS에서 사용 되는 프로세서 배열에 영향을 줍니다. 이렇게 하면 네트워크 어댑터 간에 프로세서를 분할할 수 있습니다. 각 어댑터에 할당 되는 RSS 프로세서 범위의 첫 번째 논리 프로세서입니다. 구문 예:
 
      `Set-NetAdapterRss –Name “Ethernet” –BaseProcessorNumber <Byte Value>`
 
-- **NumaNode\*** : 각 네트워크 어댑터에서 메모리를 할당할 수 있는 NUMA 노드입니다. 이는 k 그룹 내에 있거나 다른 k 그룹에 있을 수 있습니다. 구문 예:
+- **\* NumaNode**: 각 네트워크 어댑터에서 메모리를 할당할 수 있는 NUMA 노드입니다. 이는 k 그룹 내에 있거나 다른 k 그룹에 있을 수 있습니다. 구문 예:
 
      `Set-NetAdapterRss –Name “Ethernet” –NumaNodeID <value>`
 
-- **NumberofReceiveQueues\*** : 논리 프로세서가 수신 트래픽에 \(대해 미달 사용 되는 것 처럼 보이는 경우, 예를 들어 작업 관리자\)에서 볼 수 있듯이 RSS 큐의 수를 기본값인 2에서 네트워크 어댑터에 의해 지원 되는 최대 값으로 늘릴 수 있습니다. . 네트워크 어댑터에는 드라이버의 일부로 RSS 큐의 수를 변경 하는 옵션이 있을 수 있습니다. 구문 예:
+- **\* NumberofReceiveQueues**: 논리 프로세서가 수신 \(트래픽에 대해 미달 사용 되는 것 처럼 보이는 경우, 예를 들어 작업 관리자\)에서 볼 수 있듯이 RSS 큐의 수를 기본값인 2에서 네트워크 어댑터에서 지 원하는 최대 수로 늘릴 수 있습니다. 네트워크 어댑터에는 드라이버의 일부로 RSS 큐의 수를 변경 하는 옵션이 있을 수 있습니다. 구문 예:
 
      `Set-NetAdapterRss –Name “Ethernet” –NumberOfReceiveQueues <value>`
 
-자세한 내용을 보려면 다음 링크를 클릭 하 여 확장 [가능한 네트워킹을 다운로드 하세요. 수신 처리 병목 현상 제거-Word 형식](https://download.microsoft.com/download/5/D/6/5D6EAF2B-7DDF-476B-93DC-7CF0072878E6/NDIS_RSS.doc) 으로 RSS를 소개 합니다.
+자세한 내용을 보려면 다음 링크를 클릭 하 여 [확장 가능한 네트워킹을 다운로드 하세요. 수신 처리 병목 현상 제거-](https://download.microsoft.com/download/5/D/6/5D6EAF2B-7DDF-476B-93DC-7CF0072878E6/NDIS_RSS.doc) Word 형식으로 RSS를 소개 합니다.
   
 #### <a name="understanding-rss-performance"></a>RSS 성능 이해
 
@@ -160,11 +160,11 @@ NIC 팀을 사용 하 여 다른 네트워크 인터페이스 카드와 팀으�
   
 ###  <a name="bkmk_rsc"></a>RSC (수신 세그먼트 통합)
 
-수신 세그먼트 병합 \(RSC\) 는 지정 된 크기의 수신 된 데이터에 대해 처리 되는 IP 헤더의 수를 줄여 성능을 향상 시킵니다. 더 작은 패킷을 그룹화 \(하거나 더 큰 단위로 결합\) 하 여 수신 된 데이터의 성능을 확장 하는 데 사용 해야 합니다.
+지정 된 용량의 수신 데이터에 대해 처리 되는 IP 헤더의 수를 줄여 \(RSC\)의 수신 세그먼트 병합을 사용할 수 있습니다. 이를 사용 하 여 \(를 그룹화 하거나 더 작은 패킷\) 더 큰 단위로 결합 하 여 수신 된 데이터의 성능을 확장할 수 있습니다.
 
 이 접근 방식은 처리량 향상에 주로 표시 되는 이점 때문에 대기 시간에 영향을 줄 수 있습니다. RSC는 받은 작업량이 많은 워크 로드에 대 한 처리량을 늘리는 것이 좋습니다. RSC를 지 원하는 네트워크 어댑터를 배포 하는 것이 좋습니다. 
 
-이러한 네트워크 어댑터에서 특정 \(워크 로드가 \(없는 경우 (예: 낮은 대기 시간\), 낮은 처리량 네트워킹\) 을 통해 rsc의 혜택을 표시 하는 경우)에는이 설정이 기본 설정 인지 확인 합니다. .
+이러한 네트워크 어댑터에는 rsc의 혜택을 표시 하는 낮은 대기 시간, 낮은 처리량 네트워킹\)와 같이 특정 워크 로드 \(없는 한,\)기본 설정인 RSC가 \(되어 있는지 확인 합니다.
 
 #### <a name="understanding-rsc-diagnostics"></a>RSC 진단 이해
 
@@ -204,7 +204,7 @@ CoalescingExceptions : 0
 
 RSC는 호스트 네트워크 어댑터가 Hyper-v 가상 스위치에 바인딩되지 않은 경우에만 실제 호스트에서 지원 됩니다. 호스트가 Hyper-v 가상 스위치에 바인딩된 경우 운영 체제에서 RSC를 사용 하지 않도록 설정 합니다. 또한 가상 네트워크 어댑터는 RSC를 지원 하지 않기 때문에 가상 머신은 RSC의 이점을 얻을 수 없습니다.
 
-단일 루트 입/출력 가상화 \(sr-iov\) 를 사용 하는 경우 가상 머신에 대해 RSC를 사용 하도록 설정할 수 있습니다. 이 경우 가상 함수는 RSC 기능을 지원 합니다. 따라서 virtual machines에는 RSC의 이점도 제공 됩니다.
+단일 루트 입/출력 가상화 \(SR-IOV\) 사용 하도록 설정 된 경우 가상 머신에 RSC를 사용 하도록 설정할 수 있습니다. 이 경우 가상 함수는 RSC 기능을 지원 합니다. 따라서 virtual machines에는 RSC의 이점도 제공 됩니다.
 
 ##  <a name="bkmk_resources"></a>네트워크 어댑터 리소스
 
@@ -212,28 +212,28 @@ RSC는 호스트 네트워크 어댑터가 Hyper-v 가상 스위치에 바인딩
 
 다음 Windows PowerShell cmdlet을 사용 하 여 네트워크 어댑터 리소스를 간단 하 게 구성할 수 있습니다.
 
-- [NetAdapterAdvancedProperty](https://technet.microsoft.com/library/jj130901.aspx)
+- [NetAdapterAdvancedProperty](https://docs.microsoft.com/powershell/module/netadapter/Get-NetAdapterAdvancedProperty)
 
-- [NetAdapterAdvancedProperty](https://technet.microsoft.com/library/jj130894.aspx)
+- [NetAdapterAdvancedProperty](https://docs.microsoft.com/powershell/module/netadapter/Set-NetAdapterAdvancedProperty)
 
-- [Get-netadapter](https://technet.microsoft.com/library/jj130876.aspx)
+- [Get-netadapter](https://docs.microsoft.com/powershell/module/netadapter/Enable-NetAdapte)
 
-- [NetAdapterBinding](https://technet.microsoft.com/library/jj130913.aspx)
+- [NetAdapterBinding](https://docs.microsoft.com/powershell/module/netadapter/Enable-NetAdapterBinding)
 
-- [NetAdapterChecksumOffload](https://technet.microsoft.com/library/jj130918.aspx)
+- [NetAdapterChecksumOffload](https://docs.microsoft.com/powershell/module/netadapter/Enable-NetAdapterChecksumOffload)
 
-- [NetAdapterIPSecOffload](https://technet.microsoft.com/library/jj130890.aspx)
+- [NetAdapterIPSecOffload](https://docs.microsoft.com/powershell/module/netadapter/Enable-NetAdapterChecksumOffload)
 
-- [NetAdapterLso](https://technet.microsoft.com/library/jj130922.aspx)
+- [NetAdapterLso](https://docs.microsoft.com/powershell/module/netadapter/Enable-NetAdapterLso)
 
-- [NetAdapterPowerManagement](https://technet.microsoft.com/library/jj130907.aspx)
+- [NetAdapterPowerManagement](https://docs.microsoft.com/powershell/module/netadapter/Enable-NetAdapterPowerManagement)
 
-- [Get-netadapterqos](https://technet.microsoft.com/library/jj130866.aspx)
+- [Get-netadapterqos](https://docs.microsoft.com/powershell/module/netadapter/Enable-NetAdapterQos)
 
-- [NetAdapterRDMA](https://technet.microsoft.com/library/jj130909.aspx)
+- [NetAdapterRDMA](https://docs.microsoft.com/powershell/module/netadapter/Enable-NetAdapterRDMA)
 
-- [이렇게 하려면 get-netadaptersriov](https://technet.microsoft.com/library/jj130899.aspx)
+- [이렇게 하려면 get-netadaptersriov](https://docs.microsoft.com/powershell/module/netadapter/Enable-NetAdapterSriov)
 
-자세한 내용은 [Windows PowerShell의 네트워크 어댑터 cmdlet](https://technet.microsoft.com/library/jj134956.aspx)(영문)을 참조 하세요.
+자세한 내용은 [Windows PowerShell의 네트워크 어댑터 cmdlet](https://docs.microsoft.com/powershell/module/netadapter)(영문)을 참조 하세요.
 
 이 가이드의 모든 항목에 대 한 링크는 [네트워크 하위 시스템 성능 튜닝](net-sub-performance-top.md)을 참조 하세요.

@@ -9,12 +9,12 @@ ms.date: 01/18/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: c36555a8bca7882125451b2c86a0707e3de9b2db
-ms.sourcegitcommit: 8771a9f5b37b685e49e2dd03c107a975bf174683
+ms.openlocfilehash: 6c8a3b30a337c164227bf344b5704cc7e782461a
+ms.sourcegitcommit: 1c75e4b3f5895f9fa33efffd06822dca301d4835
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76145929"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77517518"
 ---
 # <a name="configuring-ad-fs-for-user-certificate-authentication"></a>사용자 인증서 인증을 위한 AD FS 구성
 
@@ -23,7 +23,7 @@ ms.locfileid: "76145929"
 * 사용자가 모바일 장치에 프로 비전 된 인증서를 사용 하 고 있습니다.
 
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>필수 조건
 1) [이 문서](ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication.md) 에서 설명 하는 모드 중 하나를 사용 하 여 사용 하도록 설정할 AD FS 사용자 인증서 인증 모드를 결정 합니다.
 2) 모든 중간 인증 기관을 포함 하 여 모든 AD FS 및 WAP 서버에서 신뢰할 수 & 사용자 인증서 신뢰 체인이 설치 되어 있는지 확인 합니다. 일반적으로이 작업은 AD FS/WAP 서버에서 GPO를 통해 수행 됩니다.
 3)  사용자 인증서의 신뢰 체인에 대 한 루트 인증서가의 NTAuth 저장소에 있는지 확인 하십시오 Active Directory
@@ -39,8 +39,10 @@ AD FS 관리 콘솔 또는 PowerShell cmdlet `Set-AdfsGlobalAuthenticationPolicy
 Azure AD 인증서 인증에 대 한 AD FS를 구성 하는 경우 [AZURE ad 설정](https://docs.microsoft.com/azure/active-directory/active-directory-certificate-based-authentication-get-started#step-2-configure-the-certificate-authorities) 및 인증서 발급자와 일련 번호에 [필요한 AD FS 클레임 규칙](https://docs.microsoft.com/azure/active-directory/active-directory-certificate-based-authentication-ios#requirements) 을 구성 했는지 확인 합니다.
 
 또한 몇 가지 선택적 측면이 있습니다.
-- EKU (클레임 유형 https://schemas.microsoft.com/2012/12/certificatecontext/extension/eku) 를 비롯 하 여 인증서 필드 및 확장에 기반 하는 클레임을 사용 하려는 경우 Active Directory 클레임 공급자 트러스트에 대 한 추가 클레임 통과 규칙을 구성 합니다.  사용 가능한 인증서 클레임의 전체 목록은 아래를 참조 하십시오.  
+- EKU (클레임 유형 https://schemas.microsoft.com/2012/12/certificatecontext/extension/eku)를 비롯 하 여 인증서 필드 및 확장에 기반 하는 클레임을 사용 하려는 경우 Active Directory 클레임 공급자 트러스트에 대 한 추가 클레임 통과 규칙을 구성 합니다.  사용 가능한 인증서 클레임의 전체 목록은 아래를 참조 하십시오.  
 - 인증서의 형식에 따라 액세스를 제한 해야 하는 경우에는 응용 프로그램에 대 한 AD FS 발급 권한 부여 규칙에서 인증서에 대 한 추가 속성을 사용할 수 있습니다. 일반적인 시나리오는 "MDM 공급자가 프로 비전 한 인증서만 허용" 또는 "스마트 카드 인증서만 허용"입니다.
+>[!IMPORTANT]
+> 인증을 위해 장치 코드 흐름을 사용 하 고 Azure AD 이외의 IDP (예: AD FS)를 사용 하 여 장치 인증을 수행 하는 고객은 Azure AD 리소스에 대 한 장치 기반 액세스 (예: 타사 MDM 서비스를 사용 하는 관리 장치만 허용)를 적용할 수 없습니다. Azure AD의 회사 리소스에 대 한 액세스를 보호 하 고 데이터 누출을 방지 하기 위해 고객은 Azure AD 장치 기반 조건부 액세스를 구성 해야 합니다 (예: "Azure AD 조건부 액세스에서 장치를 준수로 표시 해야 함).
 - [이 문서](https://technet.microsoft.com/library/dn786429(v=ws.11).aspx)에서 "클라이언트 인증에 대 한 신뢰할 수 있는 발급자 관리"의 지침에 따라 클라이언트 인증서에 대해 허용 된 발급 인증 기관을 구성 합니다.
 - 인증서 인증을 수행할 때 최종 사용자의 요구에 맞게 로그인 페이지를 수정 하는 것을 고려해 볼 수 있습니다. 일반적인 사례는 (a) ' X509 인증서를 사용 하 여 로그인 '을 더 많은 최종 사용자에 게 친숙 하 게 변경 하는 것입니다.
 
@@ -90,7 +92,7 @@ AD FS에는 클라이언트 장치 (또는 브라우저)와 SNI를 지 원하는
     *   `netsh http add sslcert ipport=0.0.0.0:{your_certauth_port} certhash={your_certhash} appid={your_applicaitonGUID}` 입력
 
 ### <a name="check-if-the-client-device-has-been-provisioned-with-the-certificate-correctly"></a>클라이언트 장치가 인증서를 사용 하 여 올바르게 프로 비전 되었는지 확인 합니다.
-일부 장치가 제대로 작동 하지만 다른 장치는 제대로 작동 하지 않는 것을 알 수 있습니다. 이 경우 일반적으로 사용자 인증서가 클라이언트 장치에서 올바르게 프로 비전 되지 않기 때문입니다. 아래 단계를 따르세요. 
+일부 장치가 제대로 작동 하지만 다른 장치는 제대로 작동 하지 않는 것을 알 수 있습니다. 이 경우 일반적으로 사용자 인증서가 클라이언트 장치에서 올바르게 프로 비전 되지 않기 때문입니다. 다음 단계를 수행 합니다. 
 1)  문제가 Android 장치에만 해당 되는 경우 가장 일반적인 문제는 Android 장치에서 인증서 체인이 완전히 신뢰 되지 않는 것입니다.  MDM 공급 업체에 문의 하 여 인증서가 올바르게 프로 비전 되었으며 전체 체인이 Android 장치에서 완전히 신뢰할 수 있는지 확인 하세요. 
 2)  문제가 Windows 장치에만 해당 되는 경우 Windows 인증서 저장소에서 로그인 한 사용자 (시스템/컴퓨터 아님)를 확인 하 여 인증서가 올바르게 프로 비전 되었는지 확인 합니다.
 3)  클라이언트 사용자 인증서를 .cer 파일로 내보내고 ' certutil-f-urlfetch-verify certificatefilename .cer ' 명령을 실행 합니다.
@@ -106,16 +108,16 @@ AD FS에는 클라이언트 장치 (또는 브라우저)와 SNI를 지 원하는
 
 자세한 내용은 [이 링크](ad-fs-prompt-login.md)를 참조 하세요. 
 
-### <a name="additional-troubleshooting"></a>추가적인 문제 해결
+### <a name="additional-troubleshooting"></a>추가 문제 해결
 드물게 발생 합니다.
-1)  CRL 목록이 매우 긴 경우 다운로드를 시도할 때 시간이 초과 될 수 있습니다. 이 경우에는 ' MaxFieldLength ' 및 ' Maxfieldlength '를 https://support.microsoft.com/help/820129/http-sys-registry-settings-for-windows 를 기준으로 업데이트 해야 합니다.
+1)  CRL 목록이 매우 긴 경우 다운로드를 시도할 때 시간이 초과 될 수 있습니다. 이 경우에는 ' MaxFieldLength ' 및 ' Maxfieldlength '를 https://support.microsoft.com/help/820129/http-sys-registry-settings-for-windows를 기준으로 업데이트 해야 합니다.
 
 
 
 
 ## <a name="reference-complete-list-of-user-certificate-claim-types-and-example-values"></a>참조: 사용자 인증서 클레임 유형 및 예제 값의 전체 목록
 
-|                                         클레임 유형                                         |                              예제 값                               |
+|                                         클레임 형식                                         |                              예제 값                               |
 |--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
 |         https://schemas.microsoft.com/2012/12/certificatecontext/field/x509version         |                                    3                                     |
 |     https://schemas.microsoft.com/2012/12/certificatecontext/field/signaturealgorithm      |                                sha256RSA                                 |

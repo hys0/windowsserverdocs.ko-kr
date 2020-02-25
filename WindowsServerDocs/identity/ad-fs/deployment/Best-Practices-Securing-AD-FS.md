@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: b96a66c9e28454752fd4999fcfe74cbb15a3ae7d
-ms.sourcegitcommit: c5709021aa98abd075d7a8f912d4fd2263db8803
+ms.openlocfilehash: 717308a157d7f4a5f54e3aef2e829fbed9f12152
+ms.sourcegitcommit: 1c75e4b3f5895f9fa33efffd06822dca301d4835
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2020
-ms.locfileid: "76265815"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77517548"
 ---
 # <a name="best-practices-for-securing-active-directory-federation-services"></a>Active Directory Federation Services 보안에 대 한 모범 사례
 
@@ -41,30 +41,30 @@ ms.locfileid: "76265815"
 > 포트 808 (Windows Server 2012R2) 또는 포트 1501 (Windows Server 2016 +)은 로컬 WCF 끝점에서 서비스 프로세스 및 Powershell로 구성 데이터를 전송 하는 데 사용 하는 Net.tcp 포트 AD FS입니다. 이 포트는 Set-adfsproperties |를 실행 하 여 볼 수 있습니다. NetTcpPort를 선택 합니다. 방화벽에서 열 필요는 없지만 포트 검색에 표시 되는 로컬 포트입니다. 
 
 ### <a name="azure-ad-connect-and-federation-serverswap"></a>Azure AD Connect 및 페더레이션 서버/WAP
-이 테이블은 Azure AD Connect 서버 및 페더레이션 서버/WAP 서버 간의 통신에 필요한 포트와 프로토콜에 대해 설명합니다.  
+이 표에서는 Azure AD Connect 서버와 페더레이션/WAP 서버 간의 통신에 필요한 포트와 프로토콜에 대해 설명 합니다.  
 
-프로토콜 |Ports(포트) |설명
+프로토콜 |포트 |설명
 --------- | --------- |---------
-HTTP|80(TCP/UDP)|CRL(인증서 해지 목록)를 다운로드하여 SSL 인증서를 확인하는 데 사용합니다.
-HTTPS|443(TCP/UDP)|Azure AD와 동기화하는 데 사용합니다.
+HTTP|80 (TCP/UDP)|SSL 인증서를 확인 하기 위해 Crl (인증서 해지 목록)을 다운로드 하는 데 사용 됩니다.
+HTTPS|443 (TCP/UDP)|Azure AD와 동기화 하는 데 사용 됩니다.
 WinRM|5985| WinRM 수신기
 
 ### <a name="wap-and-federation-servers"></a>WAP 및 페더레이션 서버
-이 테이블은 페더레이션 서버 및 WAP 서버 간의 통신에 필요한 포트와 프로토콜에 대해 설명합니다.
+이 표에서는 페더레이션 서버와 WAP 서버 간의 통신에 필요한 포트와 프로토콜에 대해 설명 합니다.
 
-프로토콜 |Ports(포트) |설명
+프로토콜 |포트 |설명
 --------- | --------- |---------
-HTTPS|443(TCP/UDP)|인증에 사용합니다.
+HTTPS|443 (TCP/UDP)|인증에 사용 됩니다.
 
 ### <a name="wap-and-users"></a>WAP 및 사용자
-이 테이블은 사용자 및 WAP 서버 간의 통신에 필요한 포트와 프로토콜에 대해 설명합니다.
+이 표에서는 사용자와 WAP 서버 간의 통신에 필요한 포트와 프로토콜에 대해 설명 합니다.
 
-프로토콜 |Ports(포트) |설명
+프로토콜 |포트 |설명
 --------- | --------- |--------- |
-HTTPS|443(TCP/UDP)|디바이스 인증에 사용합니다.
-TCP|49443(TCP)|인증서 인증에 사용합니다.
+HTTPS|443 (TCP/UDP)|장치 인증에 사용 됩니다.
+TCP|49443 (TCP)|인증서 인증에 사용 됩니다.
 
-하이브리드 배포에 필요한 포트 및 프로토콜에 대 한 자세한 내용은 [여기](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-ports/)문서를 참조 하세요.
+하이브리드 배포에 필요한 포트 및 프로토콜에 대 한 자세한 내용은 [여기](https://docs.microsoft.com/azure/active-directory/hybrid/reference-connect-ports)문서를 참조 하세요.
 
 Azure AD 및 Office 365 배포에 필요한 포트 및 프로토콜에 대 한 자세한 내용은 [여기](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2?ui=en-US&rs=en-US&ad=US)문서를 참조 하세요.
 
@@ -76,7 +76,7 @@ AD FS 및 WAP가 설치 되 면 페더레이션 서비스 및 프록시에서 �
 Azure AD 및 Office 365 시나리오에 대 한 AD FS 및 WAP만 배포 하는 조직은 최소한의 공격 노출 영역을 얻기 위해 프록시에 사용 되는 AD FS 끝점의 수를 제한할 수 있습니다.
 다음은 이러한 시나리오에서 프록시를 사용 하도록 설정 해야 하는 끝점 목록입니다.
 
-|끝점|용도
+|엔드포인트|용도
 |-----|-----
 |/adfs/ls|브라우저 기반 인증 흐름 및 현재 버전의 Microsoft Office Azure AD 및 Office 365 인증에이 끝점을 사용 합니다.
 |/adfs/services/trust/2005/usernamemixed|Office 2013 이전 버전의 Office 클라이언트에서 Exchange Online에 사용 되는 2015 업데이트 일 수 있습니다.  이후 클라이언트는 passive \adfs\ls 끝점을 사용 합니다.
@@ -90,7 +90,7 @@ Azure AD 및 Office 365 시나리오에 대 한 AD FS 및 WAP만 배포 하는 �
     
     PS:\>Set-AdfsEndpoint -TargetAddressPath <address path> -Proxy $false
 
-예를 들어 다음과 같은 가치를 제공해야 합니다.
+예를 들면 다음과 같습니다.
     
     PS:\>Set-AdfsEndpoint -TargetAddressPath /adfs/services/trust/13/certificatemixed -Proxy $false
     
@@ -103,7 +103,7 @@ Azure AD 및 Office 365 시나리오에 대 한 AD FS 및 WAP만 배포 하는 �
     
    `PS:\>Get-ADFSProperties`
 
-속성은 `ExtendedProtectionTokenCheck`합니다.  기본 설정은 허용 이므로 기능을 지원 하지 않는 브라우저와의 호환성 문제 없이 보안 이점을 얻을 수 있습니다.  
+속성이 `ExtendedProtectionTokenCheck`입니다.  기본 설정은 허용 이므로 기능을 지원 하지 않는 브라우저와의 호환성 문제 없이 보안 이점을 얻을 수 있습니다.  
 
 ### <a name="congestion-control-to-protect-the-federation-service"></a>페더레이션 서비스를 보호 하는 정체 제어
 페더레이션 서비스 프록시 (WAP의 일부)는 정체 제어를 제공 하 여 많은 요청에서 AD FS 서비스를 보호 합니다.  웹 응용 프로그램 프록시는 웹 응용 프로그램 프록시와 페더레이션 서버 간의 대기 시간으로 검색 된 대로 페더레이션 서버가 오버 로드 되는 경우 외부 클라이언트 인증 요청을 거부 합니다.  이 기능은 기본적으로 권장 되는 대기 시간 임계값 수준으로 구성 됩니다.
@@ -112,7 +112,7 @@ Azure AD 및 Office 365 시나리오에 대 한 AD FS 및 WAP만 배포 하는 �
 1.  웹 응용 프로그램 프록시 컴퓨터에서 관리자 권한 명령 창을 시작합니다.
 2.  %WINDIR%\adfs\config.에서 ADFS 디렉터리로 이동 합니다.
 3.  정체 제어 설정을 기본값에서 '<congestionControl latencyThresholdInMSec="8000" minCongestionWindowSize="64" enabled="true" />'로 변경 합니다.
-4.  파일을 저장한 후 닫습니다.
+4.  파일을 저장하고 닫습니다.
 5.  ' Net stop adfssrv ' 및 ' net start adfssrv '를 실행 하 여 AD FS 서비스를 다시 시작 합니다.
 참조용으로이 기능에 대 한 지침은 [여기](https://msdn.microsoft.com/library/azure/dn528859.aspx )에서 찾을 수 있습니다.
 
@@ -162,7 +162,7 @@ AD FS에는 프록시를 통해 인터넷에서 들어오는 로컬, 회사 네�
 
     PS:\>Install-AdfsFarm -CertificateThumbprint <String> -DecryptionCertificateThumbprint <String> -FederationServiceName <String> -ServiceAccountCredential <PSCredential> -SigningCertificateThumbprint <String>
 
-각 항목은 다음을 의미합니다.
+각 항목이 나타내는 의미는 다음과 같습니다.
 
 
 - SSL 인증서 `CertificateThumbprint`

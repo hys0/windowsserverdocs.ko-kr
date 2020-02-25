@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 29a87f9f07c25a0c671e47550e0a054d8308f747
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 7345c1ad59a4209e607245db1b2a79055ffcb5fe
+ms.sourcegitcommit: 1c75e4b3f5895f9fa33efffd06822dca301d4835
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71384423"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77517289"
 ---
 # <a name="rundll32"></a>rundll32
 
@@ -34,15 +34,15 @@ ms.locfileid: "71384423"
 Rundll32 <DLLname>
 ```
 
-## <a name="commands"></a>명령
+## <a name="commands"></a>Commands
 
 |매개 변수|설명|
 |---------|-----------|
 |[Rundll32.exe printui.dll, PrintUIEntry](rundll32-printui.md)|프린터 사용자 인터페이스를 표시합니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-만 Rundll32 Rundll32 호출 하도록 명시적으로 작성 된 DLL에서 함수를 호출할 수 있습니다. Rundll32.exe 요구 사항에 대 한 자세한 내용은 Microsoft 기술 자료 [문서 164787](https://go.microsoft.com/fwlink/?LinkID=165773) (https://go.microsoft.com/fwlink/?LinkID=165773) 을 참조 하세요.
+Rundll32.exe는 Rundll32.exe에 의해 호출 되도록 명시적으로 작성 된 DLL 에서만 함수를 호출할 수 있습니다.
 
 #### <a name="additional-references"></a>추가 참조
 

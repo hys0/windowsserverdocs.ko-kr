@@ -8,12 +8,12 @@ ms.date: 02/10/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: 77a23e5787283aa93d6f2f303cf45b461ccf52dd
-ms.sourcegitcommit: f0fcfee992b76f1ad5dad460d4557f06ee425083
+ms.openlocfilehash: 92742929e3826fca3cf87cb84341d3aecec0d55d
+ms.sourcegitcommit: 1c75e4b3f5895f9fa33efffd06822dca301d4835
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77125114"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77517498"
 ---
 # <a name="storage-migration-service-known-issues"></a>저장소 마이그레이션 서비스의 알려진 문제
 
@@ -110,12 +110,25 @@ Windows Server 2019 대상 컴퓨터에 저장소 마이그레이션 서비스 �
 
 원본 컴퓨터에서 대상 컴퓨터로 파일을 인벤토리 또는 전송 하는 경우 사용자가 관리자 그룹 권한을 제거 하는 파일은 마이그레이션하지 못합니다. 저장소 마이그레이션 서비스 검사-프록시 디버그는 다음을 보여 줍니다.
 
-  로그 이름: Microsoft-Windows-StorageMigrationService-프록시/디버그 원본: Microsoft-Windows-StorageMigrationService-프록시 날짜: 2/26/2019 9:00:04 AM 이벤트 ID: 1만 작업 범주: 없음 수준: 오류 키워드:      
-  사용자: 네트워크 서비스 컴퓨터: srv1.contoso.com 설명:
+    Log Name:      Microsoft-Windows-StorageMigrationService-Proxy/Debug
+    Source:        Microsoft-Windows-StorageMigrationService-Proxy
+    Date:          2/26/2019 9:00:04 AM
+    Event ID:      10000
+    Task Category: None
+    Level:         Error
+    Keywords:      
+    User:          NETWORK SERVICE
+    Computer:      srv1.contoso.com
+    Description:
 
-  02/26/2019-09:00:04.860 [오류] \\srv1에 대 한 전송 오류입니다. com\public\indy.png: (5) 액세스가 거부 되었습니다.
-스택 추적: StorageMigration. FileDirUtils. System.windows.forms.openfiledialog.openfile (String fileName, DesiredAccess desiredAccess, ShareMode shareMode, CreationDisposition creationDisposition, FlagsAndAttributes flagsAndAttributes) at StorageMigration. FileDirUtils... FileDirUtils 파일 (FileInfo 파일)에 있는 (FileInfo 파일 (FileInfo 파일))에 있습니다. StorageMigration () at FileTransfer () ()에 있는 InitializeSourceFileInfo ()를 (를) (으)로 변환 합니다. StorageMigration () [d:\os\src\base\dms\proxy\transfer\transferproxy\FileTransfer.cs:: FileTransfer () :: Trtransfer:: 55]
-
+    02/26/2019-09:00:04.860 [Error] Transfer error for \\srv1.contoso.com\public\indy.png: (5) Access is denied.
+    Stack Trace:
+     at Microsoft.StorageMigration.Proxy.Service.Transfer.FileDirUtils.OpenFile(String fileName, DesiredAccess desiredAccess, ShareMode shareMode, CreationDisposition creationDisposition, FlagsAndAttributes flagsAndAttributes)
+     at Microsoft.StorageMigration.Proxy.Service.Transfer.FileDirUtils.GetTargetFile(String path)
+     at Microsoft.StorageMigration.Proxy.Service.Transfer.FileDirUtils.GetTargetFile(FileInfo file)
+     at Microsoft.StorageMigration.Proxy.Service.Transfer.FileTransfer.InitializeSourceFileInfo()
+     at Microsoft.StorageMigration.Proxy.Service.Transfer.FileTransfer.Transfer()
+     at Microsoft.StorageMigration.Proxy.Service.Transfer.FileTransfer.TryTransfer()   
 
 이 문제는 저장소 마이그레이션 서비스에서 백업 권한이 호출 되지 않은 코드 오류로 인해 발생 합니다. 
 
@@ -137,11 +150,19 @@ Windows Server 2019 대상 컴퓨터에 저장소 마이그레이션 서비스 �
 
 DFSR 디버그 로그:
 
-  20190308 10:18:53.116 3948 DBCL 4045 [WARN] Dbcl:: IDTableImportUpdate 불일치 레코드가 발견 되었습니다. 
+    20190308 10:18:53.116 3948 DBCL  4045 [WARN] DBClone::IDTableImportUpdate Mismatch record was found. 
 
-  로컬 ACL hash: 1BCDFE03-A18BCE01-D1AE9859-23A0A5F6 LastWriteTime: 20190308 18:09:44.876 FileSizeLow: 1131654 FileSizeHigh: 0 특성: 32 
+    Local ACL hash:1BCDFE03-A18BCE01-D1AE9859-23A0A5F6 
+    LastWriteTime:20190308 18:09:44.876 
+    FileSizeLow:1131654 
+    FileSizeHigh:0 
+    Attributes:32 
 
-  복제 ACL hash:**DDC4FCE4-DDF329C4-977CED6D-F4D72A5B** LastWriteTime: 20190308 18:09:44.876 FileSizeLow: 1131654 FileSizeHigh: 0 특성: 32 
+    Clone ACL hash:**DDC4FCE4-DDF329C4-977CED6D-F4D72A5B** 
+    LastWriteTime:20190308 18:09:44.876 
+    FileSizeLow:1131654 
+    FileSizeHigh:0 
+    Attributes:32 
 
 이 문제는 [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) 업데이트에 의해 해결 됩니다.
 
@@ -149,8 +170,8 @@ DFSR 디버그 로그:
 
 Windows Server 2008 R2 원본 컴퓨터에서 데이터를 전송 하려고 할 때 데이터를 전송 하지 않고 오류를 수신 합니다.  
 
-  끝점에서 저장소를 전송할 수 없습니다.
-0x9044
+    Couldn't transfer storage on any of the endpoints.
+    0x9044
 
 이 오류는 Windows Server 2008 R2 컴퓨터가 Windows 업데이트의 모든 중요 및 중요 업데이트를 사용 하 여 완전히 패치 되지 않은 경우에 발생 합니다. 저장소 마이그레이션 서비스와 관계 없이, 운영 체제에 최신 버전의 Windows Server에 대 한 보안 향상 기능이 포함 되어 있지 않기 때문에 보안을 위해 Windows Server 2008 R2 컴퓨터에 패치를 적용 하는 것이 좋습니다.
 
@@ -158,26 +179,30 @@ Windows Server 2008 R2 원본 컴퓨터에서 데이터를 전송 하려고 할 
 
 원본 컴퓨터에서 데이터를 전송 하려고 하면 일부 또는 모든 공유가 전송 되지 않고 요약 오류가 발생 합니다.
 
-   끝점에서 저장소를 전송할 수 없습니다.
-0x9044
+    Couldn't transfer storage on any of the endpoints.
+    0x9044
 
 SMB 전송 세부 정보를 검사 하면 오류가 표시 됩니다.
 
-   원본 장치가 온라인 상태 인지 확인 합니다. 액세스할 수 없습니다.
+    Check if the source device is online - we couldn't access it.
 
 StorageMigrationService/Admin 이벤트 로그를 검사 하면 다음이 표시 됩니다.
 
-   저장소를 전송할 수 없습니다.
+    Couldn't transfer storage.
 
-   작업: Job1 ID:  
-   상태: 실패 한 오류: 36931 오류 메시지: 
+    Job: Job1
+    ID:  
+    State: Failed
+    Error: 36931
+    Error Message: 
 
    지침: 자세한 오류를 확인 하 고 전송 요구 사항이 충족 되는지 확인 합니다. 전송 작업에서 원본 및 대상 컴퓨터를 전송할 수 없습니다. 이는 방화벽 규칙 또는 권한 누락으로 인해 오 케 스트레이 터 컴퓨터가 원본 또는 대상 컴퓨터에 연결할 수 없기 때문일 수 있습니다.
 
 StorageMigrationService-프록시/디버그 로그를 검사 하면 다음이 표시 됩니다.
 
-   07/02/2019-13:35:57.231 [오류] 전송 유효성 검사에 실패 했습니다. ErrorCode: 40961, 소스 끝점에 연결할 수 없거나, 원본 자격 증명이 잘못 되었거나, 인증 된 사용자에 게 액세스 권한이 없습니다.
-StorageMigration ()에서 StorageMigration ()을 (를) 확인 합니다. TransferRequestHandler (FileTransferRequest fileTransferRequest, Guid operationId)를 확인 합니다.    [d:\os\src\base\dms\proxy\transfer\transferproxy\TransferRequestHandler.cs::
+    07/02/2019-13:35:57.231 [Error] Transfer validation failed. ErrorCode: 40961, Source endpoint is not reachable, or doesn't exist, or source credentials are invalid, or authenticated user doesn't have sufficient permissions to access it.
+    at Microsoft.StorageMigration.Proxy.Service.Transfer.TransferOperation.Validate()
+    at Microsoft.StorageMigration.Proxy.Service.Transfer.TransferRequestHandler.ProcessRequest(FileTransferRequest fileTransferRequest, Guid operationId)    
 
 이는 마이그레이션 계정에 SMB 공유에 대 한 최소한의 읽기 권한이 없는 경우에 매니페스트 되는 코드 오류 였습니다. 이 문제는 누적 업데이트 [4520062](https://support.microsoft.com/help/4520062/windows-10-update-kb4520062)에서 처음으로 수정 되었습니다. 
 
@@ -185,15 +210,55 @@ StorageMigration ()에서 StorageMigration ()을 (를) 확인 합니다. Transfe
 
 [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) 를 설치 하 고 인벤토리 실행을 시도한 후 인벤토리가 실패 하 고 오류가 발생 합니다.
 
-  HRESULT의 예외: 0x80005000
+    EXCEPTION FROM HRESULT: 0x80005000
   
-  로그 이름: Microsoft-Windows-StorageMigrationService/Admin Source: Microsoft-Windows-StorageMigrationService 날짜: 9/9/2019 5:21:42 PM 이벤트 ID: 2503 작업 범주: 없음 수준: 오류 키워드:      
-  사용자: 네트워크 서비스 컴퓨터: FS02. TailwindTraders.net 설명: 컴퓨터를 인벤토리에 만들지 못했습니다.
-작업: foo2 ID: 20ac3f75-4945-41d1-9a79-d11dbb57798b State: 실패 오류: 36934 오류 메시지: 모든 장치에 대 한 인벤토리 실패 지침: 자세한 오류를 확인 하 고 인벤토리 요구 사항이 충족 되었는지 확인 합니다. 작업에서 지정 된 원본 컴퓨터를 인벤토리에 만들지 못했습니다. 이는 방화벽 규칙 또는 권한 누락으로 인해 오 케 스트레이 터 컴퓨터가 네트워크를 통해 연결할 수 없기 때문일 수 있습니다.
+    Log Name:      Microsoft-Windows-StorageMigrationService/Admin
+    Source:        Microsoft-Windows-StorageMigrationService
+    Date:          9/9/2019 5:21:42 PM
+    Event ID:      2503
+    Task Category: None
+    Level:         Error
+    Keywords:      
+    User:          NETWORK SERVICE
+    Computer:      FS02.TailwindTraders.net
+    Description:
+    Couldn't inventory the computers.
+    Job: foo2
+    ID: 20ac3f75-4945-41d1-9a79-d11dbb57798b
+    State: Failed
+    Error: 36934
+    Error Message: Inventory failed for all devices
+    Guidance: Check the detailed error and make sure the inventory requirements are met. The job couldn't inventory any of the specified source computers. This could be because the orchestrator computer couldn't reach it over the network, possibly due to a firewall rule or missing permissions.
   
-  로그 이름: Microsoft-Windows-StorageMigrationService/Admin Source: Microsoft-Windows-StorageMigrationService 날짜: 9/9/2019 5:21:42 PM 이벤트 ID: 2509 작업 범주: 없음 수준: 오류 키워드:      
-  사용자: 네트워크 서비스 컴퓨터: FS02. TailwindTraders.net 설명: 컴퓨터를 인벤토리에 만들지 못했습니다.
-작업: foo2 컴퓨터: FS01. TailwindTraders.net 상태: 실패 오류:-2147463168 오류 메시지: 지침: 자세한 오류를 확인 하 고 인벤토리 요구 사항이 충족 되었는지 확인 하십시오. 인벤토리에 지정 된 원본 컴퓨터의 모든 측면을 확인할 수 없습니다. 원본 또는 차단 된 방화벽 포트에 대 한 권한이 없거나 권한이 없기 때문일 수 있습니다.
+    Log Name:      Microsoft-Windows-StorageMigrationService/Admin
+    Source:        Microsoft-Windows-StorageMigrationService
+    Date:          9/9/2019 5:21:42 PM
+    Event ID:      2509
+    Task Category: None
+    Level:         Error
+    Keywords:      
+    User:          NETWORK SERVICE
+    Computer:      FS02.TailwindTraders.net
+    Description:
+    Couldn't inventory a computer.
+    Job: foo2
+    Computer: FS01.TailwindTraders.net
+    State: Failed
+    Error: -2147463168
+    Error Message: 
+    Guidance: Check the detailed error and make sure the inventory requirements are met. The inventory couldn't determine any aspects of the specified source computer. This could be because of missing permissions or privileges on the source or a blocked firewall port.
+  
+    Log Name:      Microsoft-Windows-StorageMigrationService-Proxy/Debug
+    Source:        Microsoft-Windows-StorageMigrationService-Proxy
+    Date:          2/14/2020 1:18:21 PM
+    Event ID:      10000
+    Task Category: None
+    Level:         Error
+    Keywords:      
+    User:          NETWORK SERVICE
+    Computer:      2019-rtm-orc.ned.contoso.com
+    Description:
+    02/14/2020-13:18:21.097 [Erro] Failed device discovery stage SystemInfo with error: (0x80005000) Unknown error (0x80005000)   
   
 이 오류는 'meghan@contoso.com'와 같은 UPN (사용자 계정 이름) 형식으로 마이그레이션 자격 증명을 제공 하는 경우 저장소 마이그레이션 서비스의 코드 오류로 인해 발생 합니다. 저장소 마이그레이션 서비스 오 케 스트레이 터 서비스에서이 형식을 올바르게 구문 분석 하지 못했습니다. 그러면 KB4512534 및 19H1의 클러스터 마이그레이션 지원에 추가 된 도메인 조회에 실패 하 게 됩니다.
 
@@ -203,8 +268,9 @@ StorageMigration ()에서 StorageMigration ()을 (를) 확인 합니다. Transfe
 
 클러스터 된 파일 서버에 대해 데이터를 전송 하려고 하면 다음과 같은 오류가 표시 됩니다. 
 
-   프록시 서비스가 설치 되어 실행 중인지 확인 한 후 다시 시도 하십시오. 프록시를 현재 사용할 수 없습니다.
-0x9006 ServiceError0x9006, StorageMigration. UnregisterSmsProxyCommand
+    Make sure the proxy service is installed and running, and then try again. The proxy isn't currently available.
+    0x9006
+    ServiceError0x9006,Microsoft.StorageMigration.Commands.UnregisterSmsProxyCommand
 
 파일 서버 리소스가 원래 Windows Server 2019 클러스터 소유자 노드에서 새 노드로 이동 하 고 저장소 마이그레이션 서비스 프록시 기능이 해당 노드에 설치 되지 않은 경우이 오류가 발생 합니다.
 
@@ -329,10 +395,25 @@ Windows Server 2008 R2 클러스터 원본에서 잘라내기를 실행 하려�
  3. 하나 이상의 AD 사용자 및 도메인 로컬 그룹의 이름 및/또는 Windows 2000 이전 로그온 특성이 변경 되었습니다.
  4. SMS orchestrator에서 이벤트 3509이 표시 됩니다.
  
- 로그 이름: Microsoft-Windows-StorageMigrationService/Admin Source: Microsoft-Windows-StorageMigrationService 날짜: 1/10/2020 2:53:48 PM 이벤트 ID: 3509 작업 범주: 없음 수준: 오류 키워드:      
- 사용자: 네트워크 서비스 컴퓨터: orc2019-rtm.corp.contoso.com 설명: 컴퓨터에 대 한 저장소를 전송할 수 없습니다.
+        Log Name:      Microsoft-Windows-StorageMigrationService/Admin
+        Source:        Microsoft-Windows-StorageMigrationService
+        Date:          1/10/2020 2:53:48 PM
+        Event ID:      3509
+        Task Category: None
+        Level:         Error
+        Keywords:      
+        User:          NETWORK SERVICE
+        Computer:      orc2019-rtm.corp.contoso.com
+        Description:
+        Couldn't transfer storage for a computer.
 
- 작업: dctest3 컴퓨터: dc02-2019.corp.contoso.com 대상 컴퓨터: dc03-2019.corp.contoso.com 상태: 실패 한 오류: 53251 오류 메시지: 로컬 계정을 마이그레이션하지 못했습니다. 오류 시스템:-2147467259 StorageMigration MigrateSecurity (IDeviceRecord sourceDeviceRecord, IDeviceRecord destinationDeviceRecord, 전송자 구성 구성, Guid proxyId, CancellationToken cancelToken)
+        Job: dctest3
+        Computer: dc02-2019.corp.contoso.com
+        Destination Computer: dc03-2019.corp.contoso.com
+        State: Failed
+        Error: 53251
+        Error Message: Local accounts migration failed with error System.Exception: -2147467259
+           at Microsoft.StorageMigration.Service.DeviceHelper.MigrateSecurity(IDeviceRecord sourceDeviceRecord, IDeviceRecord destinationDeviceRecord, TransferConfiguration config, Guid proxyId, CancellationToken cancelToken)
 
 이는 저장소 마이그레이션 서비스를 사용 하 여 도메인 컨트롤러에서 마이그레이션하려는 경우와 "사용자 및 그룹 마이그레이션" 옵션을 사용 하 여 계정의 이름을 바꾸거나 계정을 다시 사용 하는 경우에 예상 되는 동작입니다. "사용자 및 그룹을 전송 하지 않음"을 선택 하는 대신 [저장소 마이그레이션 서비스에서는 DC 마이그레이션이 지원 되지 않습니다](faq.md). DC에는 로컬 사용자 및 그룹이 포함 되지 않기 때문에 저장소 마이그레이션 서비스는 두 구성원 서버 간에 마이그레이션하는 경우 처럼 이러한 보안 주체를 처리 하 고, 오류 및 손상 되거나 복사 된 계정에 따라 Acl을 조정 하려고 시도 합니다. 
 
@@ -409,6 +490,6 @@ Windows Server 2008 R2 클러스터 원본에서 잘라내기를 실행 하려�
  - 원본 컴퓨터에 연결할 수 있는 원격 레지스트리 권한이 원본 마이그레이션 계정에 없습니다.
  - 원본 컴퓨터의 레지스트리 내에서 "HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows NT\CurrentVersion" 또는 "HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Services\에 있는 원본 마이그레이션 계정에 읽기 권한이 없습니다. LanmanServer
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [Storage Migration Service 개요](overview.md)

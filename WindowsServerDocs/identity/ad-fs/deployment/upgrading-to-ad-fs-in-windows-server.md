@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: ebcc679b2bc5ab3c6d7c70c9e84ba45697c80165
-ms.sourcegitcommit: c5709021aa98abd075d7a8f912d4fd2263db8803
+ms.openlocfilehash: 913e45e52c5c6c137d2bf798bb5b86a65f9d1caa
+ms.sourcegitcommit: 1c75e4b3f5895f9fa33efffd06822dca301d4835
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2020
-ms.locfileid: "76265595"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77517578"
 ---
 # <a name="upgrading-to-ad-fs-in-windows-server-2016-using-a-wid-database"></a>WID 데이터베이스를 사용하여 Windows Server 2016에서 AD FS로 업그레이드
 
@@ -34,7 +34,7 @@ Windows Server 2016에 대 한 AD FS에서 팜 동작 수준 (FBL)이 도입 되
 | ------------- | ------------- | ------------- |
 | 2012 R2  | 1  | AdfsConfiguration |
 | 2016  | 3  | AdfsConfigurationV3 |
-| 2019  | 추가를 클릭합니다.  | AdfsConfigurationV4 |
+| 2019  | 4  | AdfsConfigurationV4 |
 
 > [!NOTE]
 > FBL를 업그레이드 하면 새 AD FS 구성 데이터베이스가 만들어집니다.  각 Windows Server AD FS version 및 FBL 값에 대 한 구성 데이터베이스의 이름은 위의 표를 참조 하세요.
@@ -63,11 +63,11 @@ Windows Server 2016에 대 한 AD FS에서 팜 동작 수준 (FBL)이 도입 되
 
 2. AD FS 구성 마법사를 사용 하 여 새 Windows Server 2019 서버를 기존 AD FS 팜에 가입 시킵니다.
 
-![업그레이드](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_1.png)
+![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_1.png)
 
 3. Windows Server 2019 페더레이션 서버에서 AD FS 관리를 엽니다. 이 페더레이션 서버는 주 서버가 아니므로 관리 기능을 사용할 수 없습니다.
 
-![업그레이드](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_3.png)
+![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_3.png)
 
 4. Windows Server 2019 서버에서 관리자 권한 PowerShell 명령 창을 열고 다음 cmdlet을 실행 합니다.
 
@@ -75,7 +75,7 @@ Windows Server 2016에 대 한 AD FS에서 팜 동작 수준 (FBL)이 도입 되
 Set-AdfsSyncProperties -Role PrimaryComputer
 ```
 
-![업그레이드](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_4.png)
+![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_4.png)
 
 5. 이전에 기본으로 구성 된 AD FS 서버에서 관리자 권한 PowerShell 명령 창을 열고 다음 cmdlet을 실행 합니다.
 
@@ -83,22 +83,22 @@ Set-AdfsSyncProperties -Role PrimaryComputer
 Set-AdfsSyncProperties -Role SecondaryComputer -PrimaryComputerName {FQDN}
 ```
 
-![업그레이드](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_5.png)
+![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_5.png)
 
 6. 이제 Windows Server 2016 페더레이션 서버에서 AD FS 관리를 엽니다. 이제 주 역할이이 서버로 전송 되었으므로 모든 관리 기능이 표시 됩니다.
 
-![업그레이드](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_6.png)
+![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_6.png)
 
 7. AD FS 2012 R2 팜을 2016 또는 2019로 업그레이드 하는 경우 팜 업그레이드를 수행 하려면 AD 스키마가 수준 85 이상 이어야 합니다.  Windows Server 2016 설치 미디어를 사용 하 여 스키마를 업그레이드 하려면 명령 프롬프트를 열고 support\adprep 디렉터리로 이동 합니다. 다음을 실행 합니다. `adprep /forestprep`
 
-![업그레이드](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_7.png)
+![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_7.png)
 
 완료 되 면 실행 `adprep/domainprep`
 
 > [!NOTE]
 > 다음 단계를 실행 하기 전에 설정에서 Windows 업데이트를 실행 하 여 Windows Server가 최신 상태 인지 확인 합니다. 업데이트가 더 이상 필요하지 않을 때까지 이 프로세스를 계속합니다.
 
-![업그레이드](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_8.png)
+![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_8.png)
 
 8. 이제 Windows Server 2016 서버에서 PowerShell을 열고 다음 cmdlet을 실행 합니다.
 
@@ -110,19 +110,19 @@ Set-AdfsSyncProperties -Role SecondaryComputer -PrimaryComputerName {FQDN}
 Invoke-AdfsFarmBehaviorLevelRaise
 ```
 
-![업그레이드](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_9.png)
+![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_9.png)
 
 9. 메시지가 표시 되 면 Y를 입력 합니다. 그러면 수준이 시작 됩니다. 이 작업이 완료 되 면 FBL 성공적으로 발생 합니다.
 
-![업그레이드](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_10.png)
+![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_10.png)
 
 10. 이제 AD FS 관리로 이동 하면 이후 AD FS 버전에 대 한 새로운 기능이 추가 된 것을 확인할 수 있습니다.
 
-![업그레이드](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_12.png)
+![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_12.png)
 
 11. 마찬가지로 `Get-AdfsFarmInformation` PowerShell cmdlet을 사용 하 여 현재 FBL을 표시할 수 있습니다.
 
-![업그레이드](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_13.png)
+![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_13.png)
 
 12. WAP 서버를 최신 수준으로 업그레이드 하려면 각 웹 응용 프로그램 프록시에서 관리자 권한 창에서 다음 PowerShell cmdlet을 실행 하 여 WAP를 다시 구성 합니다.
 
@@ -149,3 +149,16 @@ Set-WebApplicationProxyConfiguration -UpgradeConfigurationVersion
 ```
 
 그러면 WAP 서버 업그레이드를 완료 합니다.
+
+
+> [!NOTE] 
+> 하이브리드 인증서 신뢰를 사용 하는 비즈니스용 Windows Hello가 수행 되는 경우 AD FS 2019에 알려진 PRT 문제가 있습니다. ADFS 관리자 이벤트 로그에서 잘못 된 Oauth 요청을 수신 했습니다. 오류가 발생할 수 있습니다. ' ' 이름 ' 클라이언트는 ' ugs ' 범위를 사용 하 여 리소스에 액세스할 수 없습니다. 이 오류를 해결 하려면: 
+> 1. AD FS management console을 시작 합니다. Brose "서비스 > 범위 설명"으로
+> 2. "범위 설명"을 마우스 오른쪽 단추로 클릭 하 고 "범위 설명 추가"를 선택 합니다.
+> 3. 이름 아래에서 "ugs"를 입력 하 고 적용을 클릭 > 합니다.
+> 4. 관리자 권한으로 Powershell 시작
+> 5. "AdfsApplicationPermission" 명령을 실행 합니다. ClientRoleIdentifier가 있는 ScopeNames: {openid connect, aza}을 찾습니다. ObjectIdentifier를 적어 둡니다.
+> 6. 5 단계 >-AddScope ' ugs '에서 "AdfsApplicationPermission-TargetIdentifier < ObjectIdentifier 명령을 실행 합니다.
+> 7. ADFS 서비스를 다시 시작 합니다.
+> 8. 클라이언트에서: 클라이언트를 다시 시작 합니다. 사용자에 게 WHFB를 프로 비전 하 라는 메시지가 표시 되어야 합니다.
+> 9. 프로 비전 창이 팝업 되지 않으면 NGC 추적 로그를 수집 하 고 추가로 문제를 해결 해야 합니다.
