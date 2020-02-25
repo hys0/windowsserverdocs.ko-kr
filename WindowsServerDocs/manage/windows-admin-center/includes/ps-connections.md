@@ -7,7 +7,7 @@ Import-Module "$env:ProgramFiles\windows admin center\PowerShell\Modules\Connect
 Export-Connection "https://wac.contoso.com" -fileName "WAC-connections.csv"
 # Import connections (including tags) from a .csv file
 Import-Connection "https://wac.contoso.com" -fileName "WAC-connections.csv"
-# Import connections (including tags) from .csv files, and remove any connections that are not explictly in the imported file using the -prune switch parameter 
+# Import connections (including tags) from .csv files, and remove any connections that are not explicitly in the imported file using the -prune switch parameter 
 Import-Connection "https://wac.contoso.com" -fileName "WAC-connections.csv" -prune
 ```
 ### <a name="csv-file-format-for-importing-connections"></a>연결을 가져오기 위한 CSV 파일 형식
@@ -18,7 +18,7 @@ CSV 파일의 형식은 네 개의 제목(```"name","type","tags","groupId"```)�
 
 **type**은 연결 형식입니다. Windows Admin Center에 포함된 기본 연결의 경우 다음 중 하나를 사용합니다.
 
-| 연결 형식 | 연결 문자열 |
+| 연결 유형 | 연결 문자열 |
 |------|-------------------------------|
 | Windows Server | msft.sme.connection-type.server |
 | Windows 10 PC | msft.sme.connection-type.windows-client |
