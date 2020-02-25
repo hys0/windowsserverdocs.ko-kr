@@ -60,6 +60,7 @@
 ## [실행 및 튜닝](rds-run-and-tune.md)
 ### [개인 데스크톱 세션 컬렉션 관리](rds-manage-personal-collection.md)
 ### [추천되는 VDI 데스크톱 구성](rds-vdi-recommendations.md)
+### [VDI(가상 데스크톱 인프라)를 위한 Windows 10 버전 1909 최적화](rds_vdi-recommendations-1909.md)
 ### [VDI(가상 데스크톱 인프라)를 위한 Windows 10 버전 1803 최적화](rds-vdi-recommendations-1803.md)
 ### [RDS 컬렉션의 사용자 관리](rds-user-management.md)
 ### [Windows Server에서 PowerShell을 사용하여 "작업 리소스" RDS 제목 사용자 지정](rds-work-resources.md)
