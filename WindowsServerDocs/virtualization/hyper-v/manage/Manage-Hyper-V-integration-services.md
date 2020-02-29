@@ -10,14 +10,14 @@ ms.topic: article
 ms.prod: windows-server
 ms.service: na
 ms.assetid: 9cafd6cb-dbbe-4b91-b26c-dee1c18fd8c2
-ms.openlocfilehash: 39d57afbd8c4df78764c5975d4cc3d48848475c1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: bcf8109530043f5e0a6d141c484233c4364fb307
+ms.sourcegitcommit: 9687d3eb221b89061a48bf1e73fb3b25bee69f9a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392769"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78169573"
 ---
->적용 대상: Windows 10, Windows Server 2016, Windows Server 2019
+>적용 대상: Windows 10, Windows Server 2012, Windows Server 2012R2, Windows Server 2016, Windows Server 2019
 
 # <a name="manage-hyper-v-integration-services"></a>Hyper-v Integration Services 관리
 
@@ -226,50 +226,50 @@ Linux 통합 서비스는 일반적으로 Linux 커널을 통해 제공됩니다
 
 가상 컴퓨터에 대 한 최상의 성능과 최신 기능을 얻으려면 통합 서비스를 최신 상태로 유지 하는 것이 좋습니다. 이는 Windows 업데이트에서 중요 한 업데이트를 가져오도록 설정 된 경우 대부분의 Windows 게스트에 대해 기본적으로 발생 합니다. 현재 커널을 사용 하는 Linux 게스트는 커널을 업데이트할 때 최신 통합 구성 요소를 받게 됩니다.
 
-**Windows 10 호스트에서 실행되는 가상 컴퓨터:**
+**Windows 10/Windows Server 2016/2019 호스트에서 실행 되는 가상 컴퓨터:**
 
 > [!NOTE]
-> 이미지 파일 vmguest .iso는 더 이상 필요 하지 않기 때문에 Windows 10의 Hyper-v에 포함 되지 않습니다.
+> 이미지 파일 vmguest .iso는 더 이상 필요 하지 않으므로 Windows 10/Windows Server 2016/2019에 Hyper-v에 포함 되지 않습니다.
 
 | 게스트  | 업데이트 메커니즘 | 참고 |
 |:---------|:---------|:---------|
-| Windows 10 | Windows 업데이트 | |
-| Windows 8.1 | Windows 업데이트 | |
-| Windows 8 | Windows 업데이트 | 데이터 교환 통합 서비스가 필요합니다.* |
-| Windows 7 | Windows 업데이트 | 데이터 교환 통합 서비스가 필요합니다.* |
-| Windows Vista(SP 2) | Windows 업데이트 | 데이터 교환 통합 서비스가 필요합니다.* |
+| Windows 10 | Windows Update | |
+| Windows 8.1 | Windows Update | |
+| Windows 8 | Windows Update | 데이터 교환 통합 서비스가 필요합니다.* |
+| Windows 7 | Windows Update | 데이터 교환 통합 서비스가 필요합니다.* |
+| Windows Vista(SP 2) | Windows Update | 데이터 교환 통합 서비스가 필요합니다.* |
 | - | | |
-| Windows Server 2016 | Windows 업데이트 | |
-| Windows Server, 반기 채널 | Windows 업데이트 | |
-| Windows Server 2012 R2 | Windows 업데이트 | |
-| Windows Server 2012 | Windows 업데이트 | 데이터 교환 통합 서비스가 필요합니다.* |
-| Windows Server 2008 R2(SP 1) | Windows 업데이트 | 데이터 교환 통합 서비스가 필요합니다.* |
-| Windows Server 2008(SP 2) | Windows 업데이트 | 확장 지원은 Windows Server 2016 에서만 지원 됩니다 ([자세히 읽기](https://support.microsoft.com/lifecycle?p1=12925)). |
-| Windows Home Server 2011 | Windows 업데이트 | 는 Windows Server 2016에서 지원 되지 않습니다 ([자세한 내용은 참조](https://support.microsoft.com/lifecycle?p1=15820)). |
-| Windows Small Business Server 2011 | Windows 업데이트 | 일반 지원에는 포함되지 않습니다([자세히 알아보기](https://support.microsoft.com/lifecycle?p1=15817)). |
+| Windows Server 2016 | Windows Update | |
+| Windows Server, 반기 채널 | Windows Update | |
+| Windows Server 2012 R2 | Windows Update | |
+| Windows Server 2012 | Windows Update | 데이터 교환 통합 서비스가 필요합니다.* |
+| Windows Server 2008 R2(SP 1) | Windows Update | 데이터 교환 통합 서비스가 필요합니다.* |
+| Windows Server 2008(SP 2) | Windows Update | 확장 지원은 Windows Server 2016 에서만 지원 됩니다 ([자세히 읽기](https://support.microsoft.com/lifecycle?p1=12925)). |
+| Windows Home Server 2011 | Windows Update | 는 Windows Server 2016에서 지원 되지 않습니다 ([자세한 내용은 참조](https://support.microsoft.com/lifecycle?p1=15820)). |
+| Windows Small Business Server 2011 | Windows Update | 일반 지원에는 포함되지 않습니다([자세히 알아보기](https://support.microsoft.com/lifecycle?p1=15817)). |
 | - | | |
 | Linux 게스트 | 패키지 관리자 | Linux 용 Integration services는 배포판에 기본 제공 되지만 선택적 업데이트를 사용할 수 있습니다. ******** |
 
-\* 데이터 교환 통합 서비스를 사용 하도록 설정할 수 없는 경우 [다운로드 센터](https://support.microsoft.com/kb/3071740) 에서 캐비닛 (cab) 파일로 이러한 게스트에 대 한 통합 서비스를 사용할 수 있습니다. Cab 적용에 대 한 지침은이 [블로그 게시물](https://blogs.technet.com/b/virtualization/archive/2015/07/24/integration-components-available-for-virtual-machines-not-connected-to-windows-update.aspx)에서 확인할 수 있습니다.
+\* 데이터 교환 통합 서비스를 사용 하도록 설정할 수 없는 경우 [다운로드 센터](https://support.microsoft.com/kb/3071740) 에서 캐비닛 (cab) 파일로 이러한 게스트에 대 한 통합 서비스를 사용할 수 있습니다. Cab 적용에 대 한 지침은이 [블로그 게시물](https://techcommunity.microsoft.com/t5/virtualization/integration-components-available-for-virtual-machines-not/ba-p/382247)에서 확인할 수 있습니다.
 
-**Windows 8.1 호스트에서 실행되는 가상 컴퓨터:**
+**Windows 8.1/Windows Server 2012R2 호스트에서 실행 되는 가상 컴퓨터의 경우:**
 
 | 게스트  | 업데이트 메커니즘 | 참고 |
 |:---------|:---------|:---------|
-| Windows 10 | Windows 업데이트 | |
-| Windows 8.1 | Windows 업데이트 | |
+| Windows 10 | Windows Update | |
+| Windows 8.1 | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
 | Windows 8 | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
 | Windows 7 | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
 | Windows Vista(SP 2) | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
 | Windows XP(SP 2, SP 3) | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
 | - | | |
-| Windows Server 2016 | Windows 업데이트 | |
-| Windows Server, 반기 채널 | Windows 업데이트 | |
-| Windows Server 2012 R2 | Windows 업데이트 | |
+| Windows Server 2016 | Windows Update | |
+| Windows Server, 반기 채널 | Windows Update | |
+| Windows Server 2012 R2 | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
 | Windows Server 2012 | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
 | Windows Server 2008 R2 | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
 | Windows Server 2008(SP 2) | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
-| Windows Home Server 2011 | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
+| Windows Home Server 2011 | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
 | Windows Small Business Server 2011 | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
 | Windows Server 2003 R2(SP 2) | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
 | Windows Server 2003(SP 2) | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
@@ -277,21 +277,21 @@ Linux 통합 서비스는 일반적으로 Linux 커널을 통해 제공됩니다
 | Linux 게스트 | 패키지 관리자 | Linux 용 Integration services는 배포판에 기본 제공 되지만 선택적 업데이트를 사용할 수 있습니다. ** |
 
 
-**Windows 8 호스트에서 실행되는 가상 컴퓨터:**
+**Windows 8/Windows Server 2012 호스트에서 실행 되는 가상 컴퓨터:**
 
 | 게스트  | 업데이트 메커니즘 | 참고 |
 |:---------|:---------|:---------|
-| Windows 8.1 | Windows 업데이트 | |
+| Windows 8.1 | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
 | Windows 8 | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
 | Windows 7 | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
 | Windows Vista(SP 2) | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
 | Windows XP(SP 2, SP 3) | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
 | - | | |
-| Windows Server 2012 R2 | Windows 업데이트 | |
+| Windows Server 2012 R2 | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
 | Windows Server 2012 | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
 | Windows Server 2008 R2 | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요.|
 | Windows Server 2008(SP 2) | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
-| Windows Home Server 2011 | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
+| Windows Home Server 2011 | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
 | Windows Small Business Server 2011 | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
 | Windows Server 2003 R2(SP 2) | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
 | Windows Server 2003(SP 2) | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
@@ -302,14 +302,20 @@ Linux 게스트에 대 한 자세한 내용은 [Windows에서 hyper-v에 대해 
 
 ## <a name="install-or-update-integration-services"></a>Integration services 설치 또는 업데이트
 
-Windows Server 2016 및 Windows 10 이전 호스트의 경우 게스트 운영 체제에서 통합 서비스를 수동으로 설치 하거나 업데이트 해야 합니다. 
-  
+> [!NOTE]
+> Windows Server 2016 및 Windows 10 이전 호스트의 경우 게스트 운영 체제에서 통합 서비스를 **수동으로 설치 하거나 업데이트** 해야 합니다. 
+
+Integration services를 수동으로 설치 또는 업데이트 하는 절차는 다음과 같습니다.
+
 1.  Hyper-V 관리자를 엽니다. 서버 관리자 도구 메뉴에서 **Hyper-v 관리자**를 클릭 합니다.  
   
 2.  가상 컴퓨터에 연결합니다. 가상 머신을 마우스 오른쪽 단추로 클릭 하 고 **연결**을 클릭 합니다.  
   
-3.  가상 컴퓨터 연결의 작업 메뉴에서 **통합 서비스 설치 디스크 삽입**을 클릭합니다. 이렇게 하면 DVD 드라이브에 설치 디스크가 로드됩니다. 게스트 운영 체제에 따라 수동으로 설치를 시작 해야 할 수도 있습니다.  
+3.  가상 컴퓨터 연결의 동작 메뉴에서 **통합 서비스 설치 디스크 삽입**을 클릭합니다. 이렇게 하면 DVD 드라이브에 설치 디스크가 로드됩니다. 게스트 운영 체제에 따라 수동으로 설치를 시작 해야 할 수도 있습니다.  
   
 4.  설치를 마치고 나면 모든 통합 서비스를 사용할 수 있습니다.
 
-이러한 단계는 온라인 가상 컴퓨터에 대 한 Windows PowerShell 세션 내에서 자동화 하거나 완료할 수 없습니다. 오프 라인 VHDX 이미지에 적용할 수 있습니다. [이 블로그 게시물을 참조](https://blogs.technet.microsoft.com/virtualization/2013/04/18/how-to-install-integration-services-when-the-virtual-machine-is-not-running/)하세요.
+> [!NOTE]
+> 이러한 단계는 **온라인** 가상 컴퓨터에 대 한 Windows PowerShell 세션 내에서 자동화 하거나 완료할 **수 없습니다** .
+> **오프 라인** VHDX 이미지에 적용할 수 있습니다. [가상 컴퓨터가 실행 되 고 있지 않을 때 integration services를 설치 하는 방법을](https://docs.microsoft.com/virtualization/community/team-blog/2013/20130418-how-to-install-integration-services-when-the-virtual-machine-is-not-running)참조 하세요.
+> Vm을 **온라인**으로 **Configuration Manager** 를 통해 integration services 배포를 자동화할 수도 있지만 설치가 끝날 때 vm을 다시 시작 해야 합니다. [Config Manager 및 DISM을 사용 하 여 vm에 hyper-v Integration Services 배포를](https://docs.microsoft.com/archive/blogs/manageabilityguys/deploying-hyper-v-integration-services-to-vms-using-config-manager-and-dism) 참조 하세요.

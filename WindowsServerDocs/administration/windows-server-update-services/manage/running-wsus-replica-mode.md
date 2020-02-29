@@ -12,16 +12,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5323210962298ff3f2d0b159cba7726adfbb89d1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b7da68fa9cbe71f8a67e74671d64d11908ae4654
+ms.sourcegitcommit: 9687d3eb221b89061a48bf1e73fb3b25bee69f9a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71361617"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78169563"
 ---
 # <a name="running-wsus-replica-mode"></a>WSUS 복제본 모드 실행
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 복제 모드에서 실행 되는 WSUS 서버는 관리 서버에 만들어진 컴퓨터 그룹 및 업데이트 승인을 상속 합니다. 복제 모드를 사용 하는 시나리오에서 일반적으로 단일 관리 서버가 고 하나 이상의 하위 복제 WSUS 서버, 사이트 또는 조직 지형에 따라 조직 전반에 걸쳐 분산 됩니다. 업데이트를 승인 하 고 복제 모드 서버에서 미러 다음 관리 서버의 컴퓨터 그룹을 만듭니다. WSUS 설치 중에 복제 모드 서버를 설정할 수 있습니다 하 고이 시나리오를 구현 하기 호스팅되고 업데이트 승인 하는 조직에서 중요 한 있기 때문에 컴퓨터 그룹을 중앙에서 관리 합니다.
 
