@@ -8,22 +8,22 @@ author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: high
 ms.date: 06/04/2019
-ms.openlocfilehash: 13eed225dfc144d5e7e59be13dbed14d4de8bb01
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: dd8cd6700323075a380aa062bfa1d208b3e30f83
+ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71360783"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77465497"
 ---
 # <a name="whats-new-in-windows-server-2019"></a>Windows Server 2019의 새로운 기능
 
-> 적용 대상: Windows Server 2019
+> 적용 대상: 시작
 
 이 항목에서는 Windows Server 2019의 새로운 기능 몇 가지를 설명합니다. Windows Server 2019는 Windows Server 2016의 강력한 파운데이션을 기반으로 빌드되고 다음 네 가지 주요 테마를 여러 방면으로 혁신합니다. 하이브리드 클라우드, 보안, 애플리케이션 플랫폼 및 하이퍼 컨버지드 인프라(HCI)
 
 Windows Server 반기 채널 릴리스의 새로운 기능을 알아보려면 [Windows Server의 새로운 기능](../get-started/whats-new-in-windows-server.md)을 참조하세요.
 
-## <a name="general"></a>일반 사항
+## <a name="general"></a>일반
 
 ### <a name="windows-admin-center"></a>Windows Admin Center
 
@@ -107,7 +107,7 @@ SDN의 새 기능에 대한 전체 목록은 [Windows Server 2019용 SDN의 새�
 
 - 기본 TCP 정체 공급 기업을 Cubic으로 변경하여 더 많은 처리량을 제공합니다!
 
-## <a name="storage"></a>저장 공간
+## <a name="storage"></a>스토리지
 
 Windows Server 2019의 스토리지에 대한 변경 사항은 다음과 같습니다. 자세한 내용은 [스토리지의 새로운 기능](../storage/whats-new-in-storage.md)을 참조하세요.
 
@@ -115,7 +115,7 @@ Windows Server 2019의 스토리지에 대한 변경 사항은 다음과 같습�
 
 스토리지 마이그레이션 서비스는 서버를 Windows Server의 최신 버전으로 쉽게 마이그레이션할 수 있는 새로운 기술입니다. 서버의 데이터를 인벤토리화하는 그래픽 도구를 제공하며, 데이터 및 구성을 최신 서버로 전송한 다음, 선택적으로 이전 서버의 ID를 새로운 서버로 이동하여 앱 및 사용자가 아무 것도 변경할 필요가 없도록 합니다. 자세한 내용은 [스토리지 마이그레이션 서비스](../storage/storage-migration-service/overview.md)를 참조하세요.
 
-### <a name="storage-spaces-direct"></a>저장소 공간 다이렉트
+### <a name="storage-spaces-direct"></a>직접 스토리지 공간
 
 스토리지 공간 다이렉트의 새로운 기능 목록은 다음과 같습니다. 자세한 내용은 [스토리지 공간 다이렉트의 새로운 기능](../storage/whats-new-in-storage.md#storage-spaces-direct)을 참조하세요. 또한 유효성 검사된 스토리지 공간 다이렉트 시스템 획득에 대한 정보는 [Azure Stack HCI](https://docs.microsoft.com/azure-stack/operator/azure-stack-hci-overview)를 참조하세요.
 
@@ -130,7 +130,7 @@ Windows Server 2019의 스토리지에 대한 변경 사항은 다음과 같습�
 - **드라이브 대기 시간 아웃라이어 감지**
 - **내결함성을 강화하기 위해 수동으로 볼륨의 할당을 구분**
 
-### <a name="storage-replica"></a>저장소 복제본
+### <a name="storage-replica"></a>스토리지 복제본
 
 스토리지 복제본의 새로운 기능은 다음과 같습니다. 자세한 내용은 [스토리지 복제본의 새로운 기능](../storage/whats-new-in-storage.md#storage-replica)을 참조하세요.
 
@@ -157,7 +157,7 @@ Windows Server 2019의 스토리지에 대한 변경 사항은 다음과 같습�
 
 ### <a name="linux-containers-on-windows"></a>Windows의 Linux 컨테이너
 
-이제 동일한 Docker 데몬을 사용하여 동일한 컨테이너 호스트에서 Windows 및 Linux 기반 컨테이너를 실행할 수 있습니다. 이를 통해 애플리케이션 개발자에게 유연성을 제공하면서 다른 유형의 컨테이너 호스트 환경을 보유할 수 있습니다.
+이제 동일한 Docker 데몬을 사용하여 동일한 컨테이너 호스트에서 Windows 및 Linux 기반 컨테이너를 실행할 수 있습니다. 이를 통해 애플리케이션 개발자에게 유연성을 제공하면서 다른 유형의 컨테이너 호스트 환경을 유지할 수 있습니다.
 
 ### <a name="built-in-support-for-kubernetes"></a>Kubernetes에 대한 기본 제공 지원
 
