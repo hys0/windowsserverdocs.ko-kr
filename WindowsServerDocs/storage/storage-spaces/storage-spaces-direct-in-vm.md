@@ -9,12 +9,12 @@ author: eldenchristensen
 ms.date: 10/25/2017
 description: '가상 컴퓨터 게스트 클러스터에 스토리지 공간 다이렉트를 배포 하는 방법 (예: Microsoft Azure)'
 ms.localizationpriority: medium
-ms.openlocfilehash: ab0ce792c5a948e763a48493a78ccdac7a6fe74c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 34241183a56cdb9be4690e1edd68b56320cc01de
+ms.sourcegitcommit: a6ec589a39ef104ec2be958cd09d2f679816a5ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71366052"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78261922"
 ---
 # <a name="using-storage-spaces-direct-in-guest-virtual-machine-clusters"></a>게스트 가상 컴퓨터 클러스터에서 스토리지 공간 다이렉트 사용
 
@@ -49,7 +49,7 @@ Azure [템플릿이](https://github.com/robotechredmond/301-storage-spaces-direc
 
     -   Hyper-v – Vm에서 AntiAffinityClassNames를 구성 하 여 노드 간에 Vm을 분리 합니다.
 
-    -   VMware – ESX 호스트 간에 Vm을 분리 하는 ' 별도 Virtual Machines "형식의 DRS 규칙을 만들어 VM-VM 선호도 방지 규칙을 구성 합니다. 스토리지 공간 다이렉트와 함께 사용 하기 위해 제공 되는 디스크는 PARAVIRTUAL (Paravirtual SCSI) 어댑터를 사용 해야 합니다. Windows Server에서 PARAVIRTUAL을 지원 하려면 https://kb.vmware.com/s/article/1010398 을 참조 하세요.
+    -   VMware – ESX 호스트 간에 Vm을 분리 하는 ' 별도 Virtual Machines "형식의 DRS 규칙을 만들어 VM-VM 선호도 방지 규칙을 구성 합니다. 스토리지 공간 다이렉트와 함께 사용 하기 위해 제공 되는 디스크는 PARAVIRTUAL (Paravirtual SCSI) 어댑터를 사용 해야 합니다. Windows Server에서 PARAVIRTUAL을 지원 하려면 https://kb.vmware.com/s/article/1010398를 참조 하세요.
 
 -   낮은 대기 시간/고성능 저장소 활용-Azure Premium Storage 관리 디스크가 필요 합니다.
 
@@ -65,10 +65,6 @@ Azure [템플릿이](https://github.com/robotechredmond/301-storage-spaces-direc
     Get-storagesubsystem clus* | set-storagehealthsetting -name “System.Storage.PhysicalDisk.AutoReplace.Enabled” -value “False”
     ```
 
--   지원되지 않는 운영 체제: 호스트 수준 가상 디스크 스냅숏/복원
-
-    대신 기존 게스트 수준 백업 솔루션을 사용 하 여 스토리지 공간 다이렉트 볼륨의 데이터를 백업 하 고 복원 합니다.
-
 -   게스트 클러스터에서 가능한 VHD/VHDX/.VMDK 저장소 대기 시간에 대해 더 큰 복원 력을 제공 하려면 저장소 공간 i/o 시간 제한 값을 늘립니다.
 
     `HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\spaceport\\Parameters\\HwTimeout`
@@ -77,7 +73,17 @@ Azure [템플릿이](https://github.com/robotechredmond/301-storage-spaces-direc
 
     16 진수 3만 7530에 해당 하는 10 진수는 30 초입니다. 기본값은 1770 16 진수 또는 6000 10 진수입니다 .이 값은 6 초입니다.
 
-## <a name="see-also"></a>참조
+## <a name="not-supported"></a>지원되지 않음
+
+-   호스트 수준 가상 디스크 스냅숏/복원
+
+    대신 기존 게스트 수준 백업 솔루션을 사용 하 여 스토리지 공간 다이렉트 볼륨의 데이터를 백업 하 고 복원 합니다.
+
+-   호스트 수준 가상 디스크 크기 변경
+
+    가상 컴퓨터를 통해 노출 되는 가상 디스크는 동일한 크기와 특성을 유지 해야 합니다. 저장소 풀에 더 많은 용량을 추가 하는 것은 각 가상 컴퓨터에 가상 디스크를 추가 하 고 풀에 추가 하 여 수행할 수 있습니다. 현재 가상 디스크와 동일한 크기 및 특성의 가상 디스크를 사용 하는 것이 좋습니다.
+
+## <a name="see-also"></a>참고 항목
 
 [스토리지 공간 다이렉트, 비디오 및 단계별 가이드를 배포 하기 위한 추가 Azure IAAS VM 템플릿입니다](https://techcommunity.microsoft.com/t5/Failover-Clustering/Deploying-IaaS-VM-Guest-Clusters-in-Microsoft-Azure/ba-p/372126).
 
