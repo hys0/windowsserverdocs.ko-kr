@@ -204,6 +204,7 @@
 ### [Netsh(네트워크 셸) 예제 배치 파일](technologies/netsh/netsh-wins.md)
 ### [Netsh http 명령](technologies/netsh/netsh-http.md)
 ### [Netsh 인터페이스 portproxy 명령](technologies/netsh/netsh-interface-portproxy.md)
+### [Netsh mbn 명령](technologies/netsh/netsh-mbn.md)
 
 ## [네트워크 하위 시스템 성능 튜닝](technologies/network-subsystem/net-sub-performance-top.md)
 ### [네트워크 어댑터 선택](technologies/network-subsystem/net-sub-choose-nic.md)
