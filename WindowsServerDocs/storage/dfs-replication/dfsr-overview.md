@@ -6,12 +6,12 @@ ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: 22f9e25763217cbbfdfd8a4ab099344f23138344
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: c17fd78a2cf726ab156d3eda09b9c0e2d4ed6a75
+ms.sourcegitcommit: aaae95cb05c44232099ec46b04a127c77a3f486e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75949711"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77520359"
 ---
 # <a name="dfs-replication-overview"></a>DFS 복제 개요
 
@@ -51,9 +51,9 @@ DFS 복제를 배포하려면 다음과 같이 서버를 구성해야 합니다.
 Azure의 가상 머신에서 DFS 복제 사용이 Windows Server에서 테스트되었지만 몇 가지 제한 사항 및 요구 사항을 따라야 합니다.
 
 - SYSVOL 폴더 외 모든 것을 복제하기 위해 DFS 복제를 실행하는 서버를 복원하는 데 스냅샷 또는 저장된 상태를 사용하면 DFS 복제가 실패할 수 있는데, 이 경우 특별한 데이터베이스 복구 단계가 필요합니다. 마찬가지로, 가상 머신을 내보내거나, 복제 또는 복사하지 마세요. 자세한 내용은 Microsoft 기술 자료 문서 [2517913](https://support.microsoft.com/kb/2517913) 및 [안전하게 DFSR 가상화](https://blogs.technet.microsoft.com/filecab/2013/04/05/safely-virtualizing-dfsr/)를 참조하세요.
-- 가상 머신에서 호스트된 복제된 폴더에 데이터를 백업할 때 게스트 가상 머신 내에서 백업 소프트웨어를 사용해야 합니다.
+- 가상 머신에 있는 복제된 폴더의 데이터를 백업하는 경우, 게스트 가상 머신 내에서 백업 소프트웨어를 사용해야 합니다.
 - DFS 복제를 사용하려면 물리적 또는 가상화된 도메인 컨트롤러에 액세스해야 합니다. DFS 복제는 직접 Azure AD와 통신할 수 없습니다.
-- DFS 복제를 사용하려면 온-프레미스 복제 그룹 구성원과 Azure VM에서 호스트된 구성원 간의 VPN 연결이 필요합니다. 또한 RPC 엔드포인트 매퍼(포트 135) 및 49152와 65535 사이에 임의로 할당된 포트를 VPN 연결을 통해 전달할 수 있도록 온-프레미스 라우터(예: Forefront Threat Management Gateway)를 구성해야 합니다. Set-DfsrMachineConfiguration cmdlet 또는 Dfsrdiag 명령줄 도구를 사용하여 임의 포트 대신 고정 포트를 지정할 수 있습니다. DFS 복제에 고정 포트를 지정하는 방법에 대한 자세한 내용은 [Set-DfsrServiceConfiguration](https://docs.microsoft.com/powershell/module/dfsr/set-dfsrserviceconfiguration)을 참조하세요. Windows Server를 관리하기 위해 열려는 관련 포트에 대한 자세한 내용은 Microsoft 기술 자료 문서 [832017](https://support.microsoft.com/kb/832017) 을 참조하세요.
+- DFS 복제에는 온-프레미스 복제 그룹 구성원과 Azure VM에서 호스트팅되는 구성원 간에 VPN 연결이 필요합니다. 또한 RPC 엔드포인트 매퍼(포트 135) 및 49152와 65535 사이에 임의로 할당된 포트가 VPN 연결을 통과할 수 있도록 온-프레미스 라우터(예: Forefront Threat Management Gateway)를 구성해야 합니다. Set-DfsrMachineConfiguration cmdlet 또는 Dfsrdiag 명령줄 도구를 사용하여 임의 포트 대신 고정 포트를 지정할 수 있습니다. DFS 복제에 고정 포트를 지정하는 방법에 대한 자세한 내용은 [Set-DfsrServiceConfiguration](https://docs.microsoft.com/powershell/module/dfsr/set-dfsrserviceconfiguration)을 참조하세요. Windows Server를 관리하기 위해 열려는 관련 포트에 대한 자세한 내용은 Microsoft 기술 자료 문서 [832017](https://support.microsoft.com/kb/832017) 을 참조하세요.
 
 Azure 가상 컴퓨터를 시작하는 방법에 대해 자세히 알아보려면 [Microsoft Azure 웹 사이트](https://docs.microsoft.com/azure/virtual-machines/)를 방문하세요.
 

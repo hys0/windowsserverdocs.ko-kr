@@ -12,12 +12,12 @@ ms.assetid: 9f109c91-7c2e-4065-856c-ce9e2e9ce558
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: 92c27884475beb83000fb7aac15339135e3f2109
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 8b0276b70f3899fe1f3e56aebd87ea087ea91fee
+ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75948462"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77465487"
 ---
 # <a name="deploy-nano-server"></a>Nano 서버 배포
 
@@ -492,7 +492,7 @@ WSA 패키지를 만들어서 Nano 서버에 설치하려면 게시자와 패키
 2. [**Add-AppxPackage**](https://technet.microsoft.com/library/mt575516(v=wps.620).aspx) PowerShell cmdlet을 실행하여 Nano 서버에 응용 프로그램을 설치하고 Nano 서버에 WSA 패키지를 설치합니다. 예를 들면 다음과 같습니다. `Add-AppxPackage wsaSample.appx`
 
 #### <a name="additional-resources-for-creating-apps"></a>앱 만들기에 대한 추가 리소스
-WSA는 Microsoft Store에 호스트되지는 않지만 Windows 앱 패키지 기술의 서버 확장입니다. WSA를 사용하여 앱을 게시하려는 경우 다음 토픽이 앱 패키지 파이프라인을 익히는 데 도움을 줄 것입니다.
+WSA는 Microsoft Store에 호스트되지는 않지만 Windows 앱 패키지 기술의 서버 확장입니다. WSA를 사용하여 앱을 게시하려는 경우 다음 항목을 참조하여 앱 패키지 파이프라인을 숙지할 수 있습니다.
 
 - [기본 패키지 매니페스트를 만드는 방법](https://msdn.microsoft.com/library/windows/desktop/br211475.aspx)
 - [앱 패키지 작성 도구(MakeAppx.exe)](https://msdn.microsoft.com/library/windows/desktop/hh446767(v=vs.85).aspx)

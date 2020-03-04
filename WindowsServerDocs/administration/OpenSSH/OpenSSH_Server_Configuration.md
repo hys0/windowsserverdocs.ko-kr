@@ -6,12 +6,12 @@ contributor: maertendMSFT
 ms.product: w10
 author: maertendMSFT
 title: Windows용 OpenSSH 서버 구성
-ms.openlocfilehash: 5eb3d86950d169fd01512d330f0c04669beeffae
-ms.sourcegitcommit: 51e0b575ef43cd16b2dab2db31c1d416e66eebe8
+ms.openlocfilehash: 61e6e24e6682802fd07e70dcb49aa0f382e1638e
+ms.sourcegitcommit: 9687d3eb221b89061a48bf1e73fb3b25bee69f9a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76259046"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78169593"
 ---
 # <a name="openssh-server-configuration-for-windows-10-1809-and-server-2019"></a>Windows 10 1809 및 Server 2019용 OpenSSH 서버 구성
 
@@ -76,7 +76,7 @@ Windows OpenSSH의 경우 사용 가능한 유일한 인증 방법은 "password"
 
 ### <a name="authorizedkeysfile"></a>AuthorizedKeysFile 
 
-기본값은 ".ssh/authorized_keys .ssh/authorized_keys2"입니다. 경로가 절대 경로가 아니면 사용자의 홈 디렉터리(또는 프로필 이미지 경로)를 기준으로 합니다. 예: c:\users\user.
+기본값은 ".ssh/authorized_keys .ssh/authorized_keys2"입니다. 경로가 절대 경로가 아니면 사용자의 홈 디렉터리(또는 프로필 이미지 경로)를 기준으로 합니다. 예: c:\users\user. 사용자가 관리자 그룹에 속한 경우 %programdata%/ssh/administrators_authorized_keys가 대신 사용됩니다.
 
 ### <a name="chrootdirectory-support-added-in-v7700"></a>ChrootDirectory(v7.7.0.0에 지원 추가됨)
 

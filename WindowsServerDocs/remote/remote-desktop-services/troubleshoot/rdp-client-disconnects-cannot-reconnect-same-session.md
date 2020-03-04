@@ -13,16 +13,16 @@ manager: dcscontentpm
 ms.author: delhan
 ms.date: 07/24/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 0932bbbb87c6fcae9dc0b871bd605302acdb25cc
-ms.sourcegitcommit: c5709021aa98abd075d7a8f912d4fd2263db8803
+ms.openlocfilehash: 2c54442a5ce1322f4157de5dbf82d1c662c6f91d
+ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2020
-ms.locfileid: "76265915"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77465597"
 ---
 # <a name="remote-desktop-client-disconnects-and-cant-reconnect-to-the-same-session"></a>원격 데스크톱 클라이언트의 연결이 끊어지고 동일한 세션에 다시 연결할 수 없음
 
-원격 데스크톱 클라이언트에서 원격 데스크톱과의 연결이 끊어지면 해당 클라이언트에서 즉시 다시 연결할 수 없습니다. 사용자는 다음 오류 메시지 중 하나를 받습니다.
+원격 데스크톱 클라이언트에서 원격 데스크톱과의 연결이 끊어지면 해당 클라이언트에서 즉시 다시 연결할 수 없습니다. 사용자에게 다음 오류 메시지 중 하나가 나타납니다.
 
   - 보안 오류로 인해 클라이언트에서 터미널 서버에 연결할 수 없습니다. 네트워크에 로그인했는지 확인한 다음, 다시 연결하세요.
   - 원격 데스크톱 연결이 끊어졌습니다. 보안 오류로 인해 클라이언트가 원격 컴퓨터에 연결할 수 없습니다. 네트워크에 로그온되어 있는지 확인하고 다시 연결하세요.

@@ -8,12 +8,12 @@ ms.author: harowl
 ms.date: 06/07/2019
 ms.localizationpriority: medium
 ms.prod: windows-server
-ms.openlocfilehash: 96e47a94cb0139e42960baac6d07dbcb61750555
-ms.sourcegitcommit: 7c7fc443ecd0a81bff6ed6dbeeaf4f24582ba339
+ms.openlocfilehash: 39af45506ff7023cebe437992e90f6d4ec051333
+ms.sourcegitcommit: da6c4fa55a6a72924ac363753d04c5b682cee55b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74903915"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77624897"
 ---
 # <a name="configure-user-access-control-and-permissions"></a>사용자 액세스 제어 및 권한 구성
 
@@ -111,7 +111,7 @@ Windows Admin Center 일반 설정의 **Azure** 탭을 사용하면 현재 로�
 
 Windows Admin Center를 Windows 10에 설치하면 Single Sign-On을 사용할 수 있습니다. 그러나 Windows Server에서 Windows Admin Center를 사용하려면 Single Sign-On을 사용하기 전에 먼저 사용자 환경에서 특정 형태의 Kerberos 위임을 설정해야 합니다. 위임은 게이트웨이 컴퓨터를 대상 노드에 위임하도록 신뢰할 수 있는 것으로 구성합니다. 
 
-사용자 환경에서 [리소스 기반 제한 위임](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview)을 구성하려면 다음 PowerShell 예제를 사용합니다. 이 예제에서는 contoso.com 도메인의 [wac.contoso.com] Windows Admin Center 게이트웨이에서 위임을 수락하도록 [node01.contoso.com] Windows Server를 구성하는 방법을 보여 줍니다.
+사용자 환경에서 [리소스 기반 제한 위임](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview)을 구성하려면 다음 PowerShell 예제를 사용합니다. 이 예제에서는 contoso.com 도메인의 Windows Admin Center 게이트웨이 [wac.contoso.com]에서 위임을 수락하도록 Windows Server [node01.contoso.com]을 구성하는 방법을 보여줍니다.
 
 ```powershell
 Set-ADComputer -Identity (Get-ADComputer node01) -PrincipalsAllowedToDelegateToAccount (Get-ADComputer wac)

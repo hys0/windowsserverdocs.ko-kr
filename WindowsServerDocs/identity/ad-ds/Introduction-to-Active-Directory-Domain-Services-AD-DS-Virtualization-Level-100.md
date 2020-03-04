@@ -9,12 +9,12 @@ manager: mtillman
 ms.date: 03/22/2019
 ms.technology: identity-adds
 ms.assetid: 7a3114c8-bda8-49bb-83a8-4e04340ab221
-ms.openlocfilehash: 67e35a47467b1f5f66bfd073c6f9db06094ea3f9
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 25a5c2222f50b37bff2bcfe41184d6d9fa35995c
+ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391032"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77465507"
 ---
 # <a name="safely-virtualizing-active-directory-domain-services-ad-ds"></a>AD DS(Active Directory Domain Services)를 안전하게 가상화
 
@@ -28,13 +28,13 @@ Windows Server 2012부터 AD DS는 가상화 안전 기능을 도입하여 도�
 
 AD DS 복제에서는 각 도메인 컨트롤러에서 InvocationID 및 USN을 사용하여 다른 도메인 컨트롤러에 복제해야 하는 변경 내용을 확인합니다. 도메인 컨트롤러에서 도메인 컨트롤러의 인식 시간에 롤백되고 USN이 완전히 다른 트랜잭션에 다시 사용 됩니다, 다른 도메인 컨트롤러가 해당 InvocationID의 컨텍스트에서 재사용된 USN와 관련 된 업데이트 이미 받은 생각 됩니다 때문에 복제는 수렴 되지 않습니다.
 
-예를 들어 다음 그림에서는 VDC2, 즉 가상 컴퓨터에서 실행되는 대상 도메인 컨트롤러에서 USN 롤백이 감지된 경우 Windows Server 2008 R2 이하 운영 체제에서 발생하는 이벤트의 순서를 보여 줍니다. 이 그림에서는 VDC2 VDC2의 데이터베이스에 롤백되는 시간에 부적절 하 게 나타내는 복제 파트너에 게 이전에 표시 하는 최신 USN 값을 전송한는 복제 파트너를 감지할 때 VDC2에서 USN 롤백이 감지 발생 합니다.
+예를 들어 다음 그림에서는 VDC2, 즉 가상 머신에서 실행되는 대상 도메인 컨트롤러에서 USN 롤백이 감지된 경우 Windows Server 2008 R2 이하 운영 체제에서 발생하는 이벤트의 순서를 보여줍니다. 이 그림에서는 VDC2 VDC2의 데이터베이스에 롤백되는 시간에 부적절 하 게 나타내는 복제 파트너에 게 이전에 표시 하는 최신 USN 값을 전송한는 복제 파트너를 감지할 때 VDC2에서 USN 롤백이 감지 발생 합니다.
 
 ![USN 롤백이 감지될 때의 이벤트 순서](../media/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-/ADDS_Exampleofhowreplicationcanbecomeinconsistent.png)
 
-가상 컴퓨터 (VM) 쉽게 롤백할 수는 도메인 컨트롤러의 Usn (논리적 클록), 여 하이퍼바이저 관리자에 대 한 예를 들어, 도메인 컨트롤러의 인식 스냅샷을 적용 합니다. USN 및 USN 하는 방법에 대 한 자세한 내용은 롤백, USN 롤백이 감지 되지 않은 인스턴스를 설명 하기 위해 다른 그림을 포함 하 여 참조 [USN 및 USN 롤백](https://technet.microsoft.com/library/virtual_active_directory_domain_controller_virtualization_hyperv(WS.10).aspx#usn_and_usn_rollback)합니다.
+가상 머신 (VM) 쉽게 롤백할 수는 도메인 컨트롤러의 Usn (논리적 클록), 여 하이퍼바이저 관리자에 대한 예를 들어, 도메인 컨트롤러의 인식 스냅샷을 적용합니다. USN 및 USN 하는 방법에 대 한 자세한 내용은 롤백, USN 롤백이 감지 되지 않은 인스턴스를 설명 하기 위해 다른 그림을 포함 하 여 참조 [USN 및 USN 롤백](https://technet.microsoft.com/library/virtual_active_directory_domain_controller_virtualization_hyperv(WS.10).aspx#usn_and_usn_rollback)합니다.
 
-Windows Server 2012부터, Vm-generation ID 라는 식별자를 노출하는 하이퍼바이저 플랫폼에서 호스트 되는 AD DS 가상 도메인 컨트롤러 수 감지 하고 적용할 롤백되는 경우 가상 머신은 시간에 VM 스냅샷의 애플리케이션에서 AD DS 환경을 보호하는데 필요한 안전 조치합니다. VM-생성 ID 설계에서는 하이퍼바이저 공급업체에 독립적인 메커니즘을 사용하여 이 식별자를 게스트 가상 컴퓨터의 주소 공간에 표시하므로 VM-생성 ID를 지원하는 모든 하이퍼바이저에서 안전한 가상화 환경을 일관되게 사용할 수 있습니다. 가상 컴퓨터 내에서 실행되는 서비스 및 응용 프로그램을 통해 이 식별자를 샘플링하여 가상 컴퓨터가 제시간에 롤백되었는지 감지할 수 있습니다.
+Windows Server 2012부터, Vm-generation ID 라는 식별자를 노출하는 하이퍼바이저 플랫폼에서 호스트 되는 AD DS 가상 도메인 컨트롤러 수 감지 하고 적용할 롤백되는 경우 가상 머신은 시간에 VM 스냅샷의 애플리케이션에서 AD DS 환경을 보호하는데 필요한 안전 조치합니다. VM-생성 ID 설계에서는 하이퍼바이저 공급업체에 독립적인 메커니즘을 사용하여 이 식별자를 게스트 가상 머신의 주소 공간에 표시하므로 VM-생성 ID를 지원하는 모든 하이퍼바이저에서 안전한 가상화 환경을 일관되게 사용할 수 있습니다. 가상 머신 내에서 실행되는 서비스 및 애플리케이션을 통해 이 식별자를 샘플링하여 가상 머신이 제시간에 롤백되었는지 감지할 수 있습니다.
 
 ## <a name="effects-of-usn-rollback"></a>USN 롤백 효과
 
@@ -67,7 +67,7 @@ Active Directory에 대한 고유한 원래 업데이트가 잘못 복원된 도
 
 이러한 이벤트는 Directory Service 이벤트 로그에서 캡처될 수 있습니다. 하지만 관리자에 의해 관측되기 전에 겹쳐 쓰여질 수 있습니다.
 
-USN 롤백이 발생했다고 의심되지만, 이벤트 로그에서 해당 이벤트를 찾을 수 없으면 레지스트리에서 DSA Not Writable 항목을 확인하세요. 이 항목은 USN 롤백이 발생했음을 보여주는 포렌식 증거를 제공합니다.
+USN 롤백이 발생한 것으로 의심되지만, 이벤트 로그에 해당 이벤트가 표시되지 않는 경우 레지스트리에서 DSA Not Writable 항목을 확인하세요. 이 항목은 USN 롤백이 발생했음을 보여주는 포렌식 증거를 제공합니다.
 
 ```
 HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters
@@ -82,7 +82,7 @@ Value: 0x4
 
 ## <a name="virtualization-based-safeguards"></a>가상화 기반 보안
 
-도메인 컨트롤러를 설치 하는 동안 AD DS 도메인 컨트롤러의 컴퓨터 개체 (디렉터리 정보 트리 또는 DIT 라고도 함)는 데이터베이스에 대 한 Msds-generationid 특성의 일부로 VM 생성 Id 식별자 처음 저장 합니다. VM 생성 ID는 가상 컴퓨터 내 Windows 드라이버를 통해 독립적으로 추적됩니다.
+도메인 컨트롤러를 설치 하는 동안 AD DS 도메인 컨트롤러의 컴퓨터 개체 (디렉터리 정보 트리 또는 DIT 라고도 함)는 데이터베이스에 대 한 Msds-generationid 특성의 일부로 VM 생성 Id 식별자 처음 저장 합니다. VM 생성 ID는 가상 머신 내 Windows 드라이버를 통해 독립적으로 추적됩니다.
 
 관리자가 이전 스냅샷에서 가상 머신을 복원하면 가상 머신 드라이버의 현재 VM 생성 ID 값이 DIT의 값과 비교됩니다.
 
@@ -98,7 +98,7 @@ Value: 0x4
 
 Windows Server 2012에서 AD DS는 VM-GenerationID 인식 하이퍼바이저에서 호스팅되는 가상 도메인 컨트롤러에 보안을 적용하고 실수로 인한 스냅샷 적용 또는 가상 머신 상태를 롤백할 수 있는 이러한 하이퍼바이저 지원 메커니즘이 AD DS 환경을 중단하지 않도록 합니다(USN 버블 또는 느린 개체와 같은 복제 문제 방지).
 
-그러나 가상 머신 스냅샷을 적용하여 도메인 컨트롤러를 복원하는 것은 도메인 컨트롤러 백업의 대체 메커니즘으로 권장되지 않습니다. Windows Server 백업 또는 기타 VSS 기록기 기반 백업 솔루션을 계속 사용하는 것이 좋습니다.
+그러나 가상 머신 스냅샷을 적용하여 도메인 컨트롤러를 복원하는 것은 도메인 컨트롤러 백업의 대체 메커니즘으로 권장되지 않습니다. Windows Server Backup 또는 기타 VSS 기록기 기반 백업 솔루션을 계속 사용하는 것이 좋습니다.
 
 > [!CAUTION]
 > 프로덕션 환경에서 도메인 컨트롤러가 실수로 스냅샷으로 되돌려진 애플리케이션 공급 업체에 문의 하고 스냅샷 이후에 이러한 프로그램의 상태를 확인에 대한 지침은 해당 가상 머신에서 호스팅되는 서비스 복원 것이 좋습니다.
@@ -131,5 +131,5 @@ USN에서 복구를 위해서는 두 가지 접근 방식이 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-* 가상화된 도메인 컨트롤러에 대한 추가 문제 해결 정보는 [가상화된 도메인 컨트롤러 문제 해결](../ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md)을 참조하십시오.
+* 가상화 된 도메인 컨트롤러에 대 한 자세한 문제 해결 정보를 참조 하십시오. [가상화 된 도메인 컨트롤러 문제 해결](../ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md)합니다.
 * [Windows 시간 서비스(W32Time)에 대한 세부 정보](../../networking/windows-time-service/windows-time-service-top.md)

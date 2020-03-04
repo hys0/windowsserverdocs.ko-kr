@@ -9,12 +9,12 @@ ms.date: 03/06/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: c8ab160699bc6a961f4fbed6c58cf072a395a313
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: a2f4c9ac05e72083fab3e3a926dbdd2876214a7b
+ms.sourcegitcommit: 1c75e4b3f5895f9fa33efffd06822dca301d4835
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407427"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77517538"
 ---
 # <a name="ad-fs-requirements"></a>AD FS 요구 사항
 
@@ -206,7 +206,7 @@ SQL Server AD FS 구성 데이터베이스를 사용 하는 가장 기본적인 
   
 웹 애플리케이션 프록시 및 페더레이션 서버 팜 및 클라이언트와 웹 애플리케이션 프록시 간의 방화벽 사이 있는 두 방화벽에는 TCP 포트 443을 사용할 수 있어야 합니다. 인바운드 합니다.  
   
-또한 클라이언트 사용자 인증서 인증 하는 경우 \(clientTLS 인증 X509를 사용 하 여 사용자 인증서\) 필요 certauth 엔드포인트 포트 443에서 사용 가능 하지, AD FS 2016 TCP 포트 49443을 설정 하는 것이 필요 하 고 클라이언트와 웹 애플리케이션 프록시 간의 방화벽에 인바운드 합니다. 이 웹 애플리케이션 프록시와 페더레이션 서버 간의 방화벽에 필요 하지 않습니다\)합니다. 
+또한 클라이언트 사용자 인증서 인증 하는 경우 \(clientTLS 인증 X509를 사용 하 여 사용자 인증서\) 필요 certauth 엔드포인트 포트 443에서 사용 가능 하지, AD FS 2016 TCP 포트 49443을 설정 하는 것이 필요 하 고 클라이언트와 웹 애플리케이션 프록시 간의 방화벽에 인바운드 합니다. 웹 애플리케이션 프록시와 페더레이션 서버 간의 방화벽에는 필요하지 않습니다. 
 
 하이브리드 포트 요구 사항에 대한 자세한 내용은 [하이브리드 ID 포트 및 프로토콜](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-ports)을 참조하세요. 
 

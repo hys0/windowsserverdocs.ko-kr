@@ -12,16 +12,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a01d8881e8f0f7ca6feff691938f926a12460db0
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f8ebe1f82cd6f616d42521729c5efc14821c20fa
+ms.sourcegitcommit: 9687d3eb221b89061a48bf1e73fb3b25bee69f9a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71361657"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78169583"
 ---
 # <a name="step-4-configure-group-policy-settings-for-automatic-updates"></a>4단계: 자동 업데이트를 위한 그룹 정책 설정 구성
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Active Directory 환경에서는 그룹 정책을 사용하여 컴퓨터 및 사용자(이 문서에서는 WSUS 클라이언트라고 부름)가 Windows 업데이트를 사용하여 WSUS(Windows Server Update Services)에서 자동 업데이트를 가져오는 방법을 정의할 수 있습니다.
 
@@ -94,7 +94,7 @@ GPME에서 컴퓨터 기반 구성을 위한 Windows 업데이트 정책은 다�
 
 |지원 됩니다.|제외:|
 |---------|-------|
-|안에서 중인 Windows 운영 체제의 [Microsoft 제품 지원 기간](https://support.microsoft.com/gp/lifeselect)합니다.|null|
+|안에서 중인 Windows 운영 체제의 [Microsoft 제품 지원 기간](https://support.microsoft.com/gp/lifeselect)합니다.|Null|
 
 > [!NOTE]
 > "자동 업데이트 구성" 정책 설정이 **비활성화**된 경우, 이 정책이 적용되지 않습니다.
@@ -154,12 +154,12 @@ GPME에서 컴퓨터 기반 구성을 위한 Windows 업데이트 정책은 다�
 
 **옵션:** 이 설정은 옵션이 없습니다.
 
-#### <a name="always-automatically-restart-at-the-scheduled-time"></a>Always automatically restart at the scheduled time(항상 예약된 시간에 자동으로 다시 시작)
+#### <a name="always-automatically-restart-at-the-scheduled-time"></a>예약된 된 시간에 항상 자동으로 다시 시작
 먼저 최소 2일 동안 로그인 화면에서 사용자에게 알림을 표시하는 대신 Windows 업데이트가 중요한 업데이트를 설치한 후 항상 다시 시작 타이머를 즉시 시작할지 여부를 지정합니다.
 
 |지원 됩니다.|제외:|
 |---------|-------|
-|안에서 중인 Windows 운영 체제의 [Microsoft 제품 지원 기간](https://support.microsoft.com/gp/lifeselect)합니다.|null|
+|안에서 중인 Windows 운영 체제의 [Microsoft 제품 지원 기간](https://support.microsoft.com/gp/lifeselect)합니다.|Null|
 
 > [!NOTE]
 > "예약된 자동 업데이트 설치 시 로그온한 사용자로 자동 다시 시작 사용 안 함" 정책이 사용하도록 설정되면 이 정책이 적용되지 않습니다.
@@ -220,7 +220,7 @@ Windows 사용 가능한 업데이트를 확인 하기 전에 대기할 시간�
 
 |지원 됩니다.|제외:|
 |---------|-------|
-|안에서 중인 Windows 운영 체제의 [Microsoft 제품 지원 기간](https://support.microsoft.com/gp/lifeselect)합니다.|null|
+|안에서 중인 Windows 운영 체제의 [Microsoft 제품 지원 기간](https://support.microsoft.com/gp/lifeselect)합니다.|Null|
 
 > [!NOTE]
 > 이 정책은 자동 업데이트가 업데이트의 예약 된 설치를 수행 하도록 구성 된 경우에 적용 됩니다. "자동 업데이트 구성" 정책 설정을 사용 하지 않으면이 정책에 영향을 주지 않습니다.
@@ -239,7 +239,7 @@ Windows 사용 가능한 업데이트를 확인 하기 전에 대기할 시간�
 
 |지원 됩니다.|제외:|
 |---------|-------|
-|안에서 중인 Windows 운영 체제의 [Microsoft 제품 지원 기간](https://support.microsoft.com/gp/lifeselect)합니다.|null|
+|안에서 중인 Windows 운영 체제의 [Microsoft 제품 지원 기간](https://support.microsoft.com/gp/lifeselect)합니다.|Null|
 
 > [!NOTE]
 > *PolicyName* > **컴퓨터 구성** > **정책** > **관리 템플릿** > **Windows 구성 요소** > **Windows 업데이트** > **Windows 종료 대화 상자에서 "업데이트 설치 및 종료" 옵션 표시 안 함** 정책 설정이 사용 설정되었으면 이 정책 설정이 적용되지 않습니다.
@@ -260,7 +260,7 @@ Windows 업데이트가 인트라넷 업데이트 서비스로부터 업데이�
 
 |지원 됩니다.|제외:|
 |---------|-------|
-|Windows Server 2012 R2, Windows 8.1 또는 Windows RT 8.1부터 시작하여 [Microsoft 제품 지원 주기](https://support.microsoft.com/gp/lifeselect) 내에 있는 Windows 운영 체제.|null|
+|Windows Server 2012 R2, Windows 8.1 또는 Windows RT 8.1부터 시작하여 [Microsoft 제품 지원 주기](https://support.microsoft.com/gp/lifeselect) 내에 있는 Windows 운영 체제.|Null|
 
 > [!NOTE]
 > 이 정책은 컴퓨터가 "인트라넷 Microsoft 업데이트 서비스 위치 지정" 정책 설정을 사용 하 여 인트라넷 업데이트 서비스에 연결 하도록 구성 된 경우에 적용 됩니다.
@@ -279,7 +279,7 @@ Windows 업데이트가 인트라넷 업데이트 서비스로부터 업데이�
 
 |지원 됩니다.|제외:|
 |---------|-------|
-|안에서 중인 Windows 운영 체제의 [Microsoft 제품 지원 기간](https://support.microsoft.com/gp/lifeselect)합니다.|null|
+|안에서 중인 Windows 운영 체제의 [Microsoft 제품 지원 기간](https://support.microsoft.com/gp/lifeselect)합니다.|Null|
 
 |||
 |-|-|
@@ -321,7 +321,7 @@ Windows Update에서 자동으로 설치를 위한 예약 된 업데이트가 �
 
 |지원 됩니다.|제외:|
 |---------|-------|
-|Windows Vista 및 Windows Server 2008(Windows 7)부터 시작하여 [Microsoft 제품 지원 기간](https://support.microsoft.com/gp/lifeselect) 내에 있는 Windows 운영 체제.|null|
+|Windows Vista 및 Windows Server 2008(Windows 7)부터 시작하여 [Microsoft 제품 지원 기간](https://support.microsoft.com/gp/lifeselect) 내에 있는 Windows 운영 체제.|Null|
 
 |||
 |-|-|
@@ -337,7 +337,7 @@ Windows Update에서 자동으로 설치를 위한 예약 된 업데이트가 �
 
 |지원 됩니다.|제외:|
 |---------|-------|
-|안에서 중인 Windows 운영 체제의 [Microsoft 제품 지원 기간](https://support.microsoft.com/gp/lifeselect)합니다.|null|
+|안에서 중인 Windows 운영 체제의 [Microsoft 제품 지원 기간](https://support.microsoft.com/gp/lifeselect)합니다.|Null|
 
 > [!NOTE]
 > 이 정책은 자동 업데이트가 업데이트의 예약 된 설치를 수행 하도록 구성 된 경우에 적용 됩니다. "자동 업데이트 구성" 정책 설정을 사용 하지 않으면이 정책에 영향을 주지 않습니다.
@@ -351,7 +351,7 @@ Windows Update에서 자동으로 설치를 위한 예약 된 업데이트가 �
 
 **옵션:** 이 설정은 옵션이 없습니다.
 
-#### <a name="re-prompt-for-restart-with-scheduled-installations"></a>예약 설치 후 다시 시작하기 전에 다시 확인
+#### <a name="re-prompt-for-restart-with-scheduled-installations"></a>예약 된 설치를 다시 시작 하기 전에 다시 확인
 자동 업데이트 예약 된 다시 시작 하 여 시작 알림 다시 표시 하기 전에 대기할 시간을 지정 합니다.
 
 |지원 됩니다.|제외:|
@@ -380,7 +380,7 @@ Windows Update에서 자동으로 설치를 위한 예약 된 업데이트가 �
 
 |지원 됩니다.|제외:|
 |---------|-------|
-|안에서 중인 Windows 운영 체제의 [Microsoft 제품 지원 기간](https://support.microsoft.com/gp/lifeselect)합니다.|null|
+|안에서 중인 Windows 운영 체제의 [Microsoft 제품 지원 기간](https://support.microsoft.com/gp/lifeselect)합니다.|Null|
 
 > [!NOTE]
 > 이 정책은 자동 업데이트가 업데이트의 예약 된 설치를 수행 하도록 구성 된 경우에 적용 됩니다. "자동 업데이트 구성" 정책 설정을 사용 하지 않으면이 정책에 영향을 주지 않습니다.
@@ -431,7 +431,7 @@ Microsoft Update에서 업데이트를 호스트 하도록 인트라넷 서버�
 
 |지원 됩니다.|제외:|
 |---------|-------|
-|Windows Vista부터 시작하여 아직 [Microsoft 제품 지원 주기](https://support.microsoft.com/gp/lifeselect) 내에 있는 Windows 운영 체제.|null|
+|Windows Vista부터 시작하여 아직 [Microsoft 제품 지원 주기](https://support.microsoft.com/gp/lifeselect) 내에 있는 Windows 운영 체제.|Null|
 
 |||
 |-|-|
@@ -451,7 +451,7 @@ Microsoft 업데이트 서비스를 사용 중이 아니면 "소프트웨어 알
 
 |지원 됩니다.|제외:|
 |---------|-------|
-|Windows Server 2008(Windows Vista) 및 Windows 7부터 시작하여, 아직 [Microsoft 제품 지원 주기](https://support.microsoft.com/gp/lifeselect) 내에 있는 Windows 운영 체제.|null|
+|Windows Server 2008(Windows Vista) 및 Windows 7부터 시작하여, 아직 [Microsoft 제품 지원 주기](https://support.microsoft.com/gp/lifeselect) 내에 있는 Windows 운영 체제.|Null|
 
 > [!NOTE]
 > 기본적으로이 정책 설정은 사용할 수 없습니다.
@@ -459,9 +459,9 @@ Microsoft 업데이트 서비스를 사용 중이 아니면 "소프트웨어 알
 |||
 |-|-|
 |**정책 설정 상태**|**동작**|
-|**구성되지 않음**|Windows 7을 실행 하는 컴퓨터의 사용자가 선택적 응용 프로그램에 대 한 메시지에 제공 되지 않습니다. Windows Vista를 실행 하는 컴퓨터의 사용자가 선택적 애플리케이션 또는 업데이트에 대 한 메시지에 제공 되지 않습니다. 로컬 관리자 제어판 또는 로컬 정책을 사용 하 여이 설정을 변경할 수 있습니다.|
-|**사용**|이 정책 설정을 사용 설정하면 특별 소프트웨어가 제공될 때 알림 메시지가 사용자의 컴퓨터에 표시됩니다. Windows Update를 열 및 소프트웨어에 대 한 자세한 정보 또는 설치 알림을 클릭할 수 있습니다. 사용자 클릭할 수도 **이 메시지를 닫은** 또는 **표시에 me** 지연 알림 적절 하 게 합니다.<br /><br />이 정책 설정은 Windows 7의 선택적 애플리케이션에 대 한 자세한 알림 제어 됩니다. Windows Vista에서는이 정책 설정은 선택적 응용 프로그램 및 업데이트에 대 한 자세한 알림을 제어합니다.|
-|**사용 안 함**|Windows 7을 실행 하는 사용자가 선택적 응용 프로그램에 대 한 자세한 알림 메시지 제공 되지 않으며, Windows Vista를 실행 하는 사용자가 선택적 응용 프로그램 또는 선택적 업데이트에 대 한 자세한 알림 메시지 제공 되지 것입니다를 지정 합니다.|
+|**구성되지 않음**|Windows 7을 실행 하는 컴퓨터의 사용자가 선택적 애플리케이션에 대 한 메시지에 제공 되지 않습니다. Windows Vista를 실행 하는 컴퓨터의 사용자가 선택적 애플리케이션 또는 업데이트에 대 한 메시지에 제공 되지 않습니다. 로컬 관리자 제어판 또는 로컬 정책을 사용 하 여이 설정을 변경할 수 있습니다.|
+|**사용**|이 정책 설정을 사용 설정하면 특별 소프트웨어가 제공될 때 알림 메시지가 사용자의 컴퓨터에 표시됩니다. Windows Update를 열 및 소프트웨어에 대 한 자세한 정보 또는 설치 알림을 클릭할 수 있습니다. 사용자 클릭할 수도 **이 메시지를 닫은** 또는 **표시에 me** 지연 알림 적절 하 게 합니다.<br /><br />이 정책 설정은 Windows 7의 선택적 애플리케이션에 대 한 자세한 알림 제어 됩니다. Windows Vista에서는이 정책 설정은 선택적 애플리케이션 및 업데이트에 대 한 자세한 알림을 제어합니다.|
+|**사용 안 함**|Windows 7을 실행 하는 사용자가 선택적 애플리케이션에 대 한 자세한 알림 메시지 제공 되지 않으며, Windows Vista를 실행 하는 사용자가 선택적 애플리케이션 또는 선택적 업데이트에 대 한 자세한 알림 메시지 제공 되지 것입니다를 지정합니다.|
 
 **옵션:** 이 설정은 옵션이 없습니다.
 
@@ -481,7 +481,7 @@ Microsoft 업데이트 서비스를 사용 중이 아니면 "소프트웨어 알
 
 |지원 됩니다.|제외:|
 |---------|-------|
-|안에서 중인 Windows 운영 체제의 [Microsoft 제품 지원 기간](https://support.microsoft.com/gp/lifeselect)합니다.|null|
+|안에서 중인 Windows 운영 체제의 [Microsoft 제품 지원 기간](https://support.microsoft.com/gp/lifeselect)합니다.|Null|
 
 > [!NOTE]
 > 이 설정은 옵션 4에는 관련이 **자동 업데이트 구성**합니다. 옵션 4 선택 하지 않은 경우 **자동 업데이트 구성**, 이 설정을 구성할 필요는 없습니다.
@@ -500,7 +500,7 @@ Microsoft 업데이트 서비스를 사용 중이 아니면 "소프트웨어 알
 
 |지원 됩니다.|제외:|
 |---------|-------|
-|안에서 중인 Windows 운영 체제의 [Microsoft 제품 지원 기간](https://support.microsoft.com/gp/lifeselect)합니다.|null|
+|안에서 중인 Windows 운영 체제의 [Microsoft 제품 지원 기간](https://support.microsoft.com/gp/lifeselect)합니다.|Null|
 
 > [!NOTE]
 > 이 설정은 옵션 4에는 관련이 **자동 업데이트 구성**합니다. 옵션 4 선택 하지 않은 경우 **자동 업데이트 구성**, 이 설정을 구성할 필요는 없습니다.
@@ -521,7 +521,7 @@ Microsoft 업데이트 서비스를 사용 중이 아니면 "소프트웨어 알
 
 |지원 됩니다.|제외:|
 |---------|-------|
-|안에서 중인 Windows 운영 체제의 [Microsoft 제품 지원 기간](https://support.microsoft.com/gp/lifeselect)합니다.|null|
+|안에서 중인 Windows 운영 체제의 [Microsoft 제품 지원 기간](https://support.microsoft.com/gp/lifeselect)합니다.|Null|
 
 > [!NOTE]
 > 작동 컴퓨터의 절전 모드 해제 정책이 명시적으로 비활성화되었으면 이 설정이 적용되지 않습니다.
@@ -558,7 +558,7 @@ GPMC에서 자동 컴퓨터 업데이트를 위한 사용자 설정은 *PolicyNa
 
 |지원 됩니다.|제외:|
 |---------|-------|
-|안에서 중인 Windows 운영 체제의 [Microsoft 제품 지원 기간](https://support.microsoft.com/gp/lifeselect)합니다.|null|
+|안에서 중인 Windows 운영 체제의 [Microsoft 제품 지원 기간](https://support.microsoft.com/gp/lifeselect)합니다.|Null|
 
 |||
 |-|-|
@@ -574,7 +574,7 @@ GPMC에서 자동 컴퓨터 업데이트를 위한 사용자 설정은 *PolicyNa
 
 |지원 됩니다.|제외:|
 |---------|-------|
-|안에서 중인 Windows 운영 체제의 [Microsoft 제품 지원 기간](https://support.microsoft.com/gp/lifeselect)합니다.|null|
+|안에서 중인 Windows 운영 체제의 [Microsoft 제품 지원 기간](https://support.microsoft.com/gp/lifeselect)합니다.|Null|
 
 > [!NOTE]
 > *PolicyName* > **사용자 구성** > **정책** > **관리 템플릿** > **Windows 구성 요소** > **Windows 업데이트** > **Windows 종료 대화 상자에 "업데이트 설치 및 종료" 옵션 표시 안 함**이 사용 설정되어 있으면 이 정책 설정이 적용되지 않습니다.
@@ -593,7 +593,7 @@ GPMC에서 자동 컴퓨터 업데이트를 위한 사용자 설정은 *PolicyNa
 
 |지원 됩니다.|제외:|
 |---------|-------|
-|안에서 중인 Windows 운영 체제의 [Microsoft 제품 지원 기간](https://support.microsoft.com/gp/lifeselect)합니다.|null|
+|안에서 중인 Windows 운영 체제의 [Microsoft 제품 지원 기간](https://support.microsoft.com/gp/lifeselect)합니다.|Null|
 
 |||
 |-|-|

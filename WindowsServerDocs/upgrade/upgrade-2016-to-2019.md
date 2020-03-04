@@ -7,12 +7,12 @@ ms.topic: upgrade
 author: RobHindman
 ms.author: robhind
 ms.date: 09/16/2019
-ms.openlocfilehash: 62fe4f00cef121e6241a403ee339047cda9488b5
-ms.sourcegitcommit: 9a6a692a7b2a93f52bb9e2de549753e81d758d28
+ms.openlocfilehash: 8510b37c652dc7dfa95569a64dff8b1b75372a2d
+ms.sourcegitcommit: 1c75e4b3f5895f9fa33efffd06822dca301d4835
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72591084"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77517568"
 ---
 # <a name="upgrade-windows-server-2016-to-windows-server-2019"></a>Windows Server 2016을 Windows Server 2019로 업그레이드
 
@@ -22,7 +22,7 @@ ms.locfileid: "72591084"
 
 Windows Server 업그레이드를 시작하기 전에 진단 및 문제 해결을 위해 디바이스에서 일부 정보를 수집하는 것이 좋습니다. 이 정보는 업그레이드가 실패하는 경우에만 사용할 수 있으므로 디바이스에서 정보를 가져올 수 있는 위치에 저장해야 합니다.
 
-### <a name="to-collect-your-info"></a>정보를 수집하려면
+### <a name="to-collect-your-info"></a>정보를 수집하려면 다음을 수행합니다.
 
 1. 명령 프롬프트를 열고 `c:\Windows\system32`로 이동한 다음, **systeminfo.exe**를 입력합니다.
 
@@ -32,7 +32,7 @@ Windows Server 업그레이드를 시작하기 전에 진단 및 문제 해결�
 
 4. 레지스트리 편집기를 열고 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion` 키로 이동한 다음, Windows Server **BuildLabEx**(버전) 및 **EditionID**(버전)를 위와 동일한 위치에 복사하여 붙여넣습니다.
 
-Windows Server 관련 정보를 모두 수집한 후에는 운영 체제, 앱 및 가상 머신을 백업하는 것이 좋습니다. 또한 서버에서 현재 실행 중인 모든 가상 머신을 **종료**하고, **빠른 마이그레이션** 또는 **실시간 마이그레이션**을 수행해야 합니다. 전체 업그레이드 중에는 가상 머신을 실행할 수 없습니다.
+Windows Server 관련 정보를 모두 수집한 후에는 운영 체제, 앱 및 가상 머신을 백업하는 것이 좋습니다. 또한 서버에서 현재 실행 중인 모든 가상 머신을 **종료**하고, **빠른 마이그레이션** 또는 **실시간 마이그레이션**을 수행해야 합니다. 현재 위치 업그레이드 중에는 가상 머신을 실행할 수 없습니다.
 
 ## <a name="to-perform-the-upgrade"></a>업그레이드를 수행하려면
 
@@ -56,13 +56,13 @@ Windows Server 관련 정보를 모두 수집한 후에는 운영 체제, 앱 �
 
 7. 설치하려는 Windows Server 2019 버전을 선택한 후, **다음**을 선택합니다.
 
-    ![설치할 Windows Server 2016 버전을 선택하는 화면](media/upgrade-2016-2019/select-os-edition.png)
+    ![설치할 Windows Server 2019 버전을 선택하는 화면](media/upgrade-2016-2019/select-os-edition.png)
 
 8. 배포 채널(예: 일반 정품, 볼륨 라이선스, OEM, ODM 등)에 따라 사용권 계약 조건에 동의하려면 **수락**을 선택합니다.
 
     ![사용권 계약에 동의하는 화면](media/upgrade-2016-2019/license-terms.png)
 
-9. 전체 업그레이드를 수행하려면 **개인 파일 및 앱 유지**를 선택한 후, **다음**을 선택합니다.
+9. 현재 위치 업그레이드를 수행하려면 **개인 파일 및 앱 유지**를 선택한 다음, **다음**을 선택합니다.
 
     ![설치 유형을 선택하는 화면](media/upgrade-2016-2019/choose-install-upgrade.png)
 
@@ -70,7 +70,7 @@ Windows Server 관련 정보를 모두 수집한 후에는 운영 체제, 앱 �
 
     ![업그레이드를 시작할 준비가 되었음을 보여주는 화면](media/upgrade-2016-2019/ready-to-install.png)
 
-    전체 업그레이드가 시작되고 진행 상태와 함께 **Windows 업그레이드 중** 화면이 표시됩니다. 업그레이드가 완료되면 서버가 다시 시작됩니다.
+    현재 위치 업그레이드가 시작되고 진행 상태와 함께 **Windows 업그레이드 중** 화면이 표시됩니다. 업그레이드가 완료되면 서버가 다시 시작됩니다.
 
     ![업그레이드 진행률을 보여주는 화면](media/upgrade-2016-2019/upgrading-windows-with-progress.png)
 

@@ -11,14 +11,14 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 02/11/2020
+ms.date: 02/25/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 3f8b035eef5bb956012627b5e2c7c59adaa8cd32
-ms.sourcegitcommit: 5797a2e67211651070404a5893f5c0a91c63e960
+ms.openlocfilehash: f435892f0a200056c08094cac1831c710a47a6be
+ms.sourcegitcommit: 92e0e4224563106adc9a7f1e90f27da468859d90
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "77155387"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77608790"
 ---
 # <a name="whats-new-in-the-windows-desktop-client"></a>Windows 데스크톱 클라이언트의 새로운 기능
 
@@ -30,14 +30,14 @@ Windows 데스크톱 클라이언트에 대한 자세한 내용은 [Windows 데�
 
 |사용자 그룹 |Version  |
 |-----------|---------|
-|공용     |1.2.605  |
-|참가자    |1.2.673  |
+|공용     |1.2.675  |
+|참가자    |1.2.675  |
 
-## <a name="updates-for-version-12673"></a>1\.2.673 버전에 대한 업데이트
+## <a name="updates-for-version-12675"></a>1\.2.675 버전에 대한 업데이트
 
-*게시 날짜: 2020/02/11*
+*게시 날짜: 2020/02/25*
 
-다운로드: [Windows 64비트](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4pPJm), [Windows 32비트](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4pFbw), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4pN07)
+다운로드: [Windows 64비트](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4qeak), [Windows 32비트](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4qm7h), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4qm7g)
 
 - RDP 파일에 서명이 없거나 signscope 속성 중 하나가 수정된 경우 Windows 가상 데스크톱에 대한 연결이 차단됩니다.
 - 작업 영역이 비어 있거나 제거되면 연결 센터가 더 이상 비어있는 것으로 나타나지 않습니다.

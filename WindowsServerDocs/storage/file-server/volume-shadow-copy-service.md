@@ -6,12 +6,12 @@ ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: f2e8d3bfb5ef907ffb522b5b7be31d1def3001c8
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 1ab941e25da7171349bb24762940af3bf886c165
+ms.sourcegitcommit: a4b489d0597b6a73c905d3448d5bc332efd6191b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75949688"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77675364"
 ---
 # <a name="volume-shadow-copy-service"></a>볼륨 섀도 복사본 서비스
 
@@ -19,34 +19,34 @@ ms.locfileid: "75949688"
 
 중요한 비즈니스 데이터의 백업 및 복원은 다음과 같은 문제로 인해 매우 복잡할 수 있습니다.
 
-  - 일반적으로 데이터를 생성하는 애플리케이션이 계속 실행되는 동안 데이터를 백업해야 합니다. 즉, 일부 데이터 파일이 열려 있거나 일관성 없는 상태일 수 있습니다.  
-      
-  - 데이터 세트가 클 경우 한 번에 모두 백업하기가 어려울 수 있습니다.  
-      
+  - 일반적으로 데이터를 생성하는 애플리케이션이 계속 실행되는 동안 데이터를 백업해야 합니다. 즉, 일부 데이터 파일이 열려 있거나 일관성 없는 상태일 수 있습니다.
+
+  - 데이터 세트가 클 경우 한 번에 모두 백업하기가 어려울 수 있습니다.
+
 
 백업 및 복원 작업을 올바르게 수행하려면 백업 애플리케이션, 백업 중인 LOB(기간 업무) 애플리케이션, 스토리지 관리 하드웨어 및 소프트웨어 간에 긴밀하게 조정해야 합니다. Windows Server® 2003에 도입된 VSS(볼륨 섀도 복사본 서비스)를 사용하면 이러한 구성 요소 간의 대화를 통해 쉽게 더 효율적으로 작동할 수 있습니다. 모든 구성 요소에서 VSS를 지원하는 경우 애플리케이션을 오프라인으로 전환하지 않고도 애플리케이션 데이터를 백업하는 데 사용할 수 있습니다.
 
 VSS는 백업할 데이터의 일관성 있는 섀도 복사본(스냅샷 또는 특정 시점 복사본이라고도 함)을 만드는 데 필요한 작업을 조정합니다. 섀도 복사본은 있는 그대로 사용하거나 다음과 같은 시나리오에서 사용할 수 있습니다.
 
-  - 다른 하드 디스크 드라이브, 테이프 또는 다른 이동식 미디어에 데이터를 보관하는 것을 포함하여 애플리케이션 데이터 및 시스템 상태 정보를 백업하려고 합니다.  
-      
-  - 데이터 마이닝입니다.  
-      
-  - 디스크-디스크 백업을 수행합니다.  
-      
-  - 데이터를 원본 LUN 또는 실패한 원본 LUN을 대체하는 완전히 새로운 LUN으로 복원하여 데이터 손실을 빠르게 복구해야 합니다.  
-      
+  - 다른 하드 디스크 드라이브, 테이프 또는 다른 이동식 미디어에 데이터를 보관하는 것을 포함하여 애플리케이션 데이터 및 시스템 상태 정보를 백업하려고 합니다.
+
+  - 데이터 마이닝입니다.
+
+  - 디스크-디스크 백업을 수행합니다.
+
+  - 데이터를 원본 LUN 또는 실패한 원본 LUN을 대체하는 완전히 새로운 LUN으로 복원하여 데이터 손실을 빠르게 복구해야 합니다.
+
 
 VSS를 사용하는 Windows 기능 및 애플리케이션은 다음과 같습니다.
 
-  - [Windows Server 백업](https://go.microsoft.com/fwlink/?linkid=180891)(https://go.microsoft.com/fwlink/?LinkId=180891)  
-      
-  - [공유 폴더의 섀도 복사본](https://go.microsoft.com/fwlink/?linkid=142874)(https://go.microsoft.com/fwlink/?LinkId=142874)  
-      
-  - [System Center Data Protection Manager](https://go.microsoft.com/fwlink/?linkid=180892)(https://go.microsoft.com/fwlink/?LinkId=180892)  
-      
-  - [시스템 복원](https://go.microsoft.com/fwlink/?linkid=180893)(https://go.microsoft.com/fwlink/?LinkId=180893)  
-      
+  - [Windows Server 백업](https://go.microsoft.com/fwlink/?linkid=180891)(https://go.microsoft.com/fwlink/?LinkId=180891)
+
+  - [공유 폴더의 섀도 복사본](https://go.microsoft.com/fwlink/?linkid=142874)(https://go.microsoft.com/fwlink/?LinkId=142874)
+
+  - [System Center Data Protection Manager](https://go.microsoft.com/fwlink/?linkid=180892)(https://go.microsoft.com/fwlink/?LinkId=180892)
+
+  - [시스템 복원](https://go.microsoft.com/fwlink/?linkid=180893)(https://go.microsoft.com/fwlink/?LinkId=180893)
+
 
 ## <a name="how-volume-shadow-copy-service-works"></a>볼륨 섀도 복사본 서비스의 작동 방식
 
@@ -76,31 +76,31 @@ VSS를 사용하는 Windows 기능 및 애플리케이션은 다음과 같습니
 
 섀도 복사본을 만들려면 요청자, 기록기 및 공급자에서 다음 작업을 수행합니다.
 
-1.  요청자에서 볼륨 섀도 복사본 서비스에 기록기를 열거하고, 기록기 메타데이터를 수집하고. 섀도 복사본 만들기를 준비하도록 요청합니다.  
-      
-2.  각 기록기에서 백업해야 하는 구성 요소 및 데이터 저장소에 대한 XML 설명을 만들고, 이를 볼륨 섀도 복사본 서비스에 제공합니다. 또한 기록기는 모든 구성 요소에 사용되는 복원 방법을 정의합니다. 볼륨 섀도 복사본 서비스에서 백업할 구성 요소를 선택하는 요청자에 기록기의 설명을 제공합니다.  
-      
-3.  볼륨 섀도 복사본 서비스에서 섀도 복사본을 만들기 위해 데이터를 준비하도록 모든 기록기에 알립니다.  
-      
-4.  각 기록기에서 모든 열린 트랜잭션을 완료하고, 트랜잭션 로그를 롤링하며, 캐시를 플러시하는 등 데이터를 적절하게 준비합니다. 데이터를 섀도 복사할 준비가 되면 기록기에서 볼륨 섀도 복사본 서비스에 알립니다.  
-      
-5.  볼륨 섀도 복사본 서비스에서 하나 이상의 볼륨에 대한 섀도 복사본을 만드는 데 필요한 애플리케이션 쓰기 I/O 요청(읽기 I/O 요청도 여전히 가능)을 몇 초 동안 일시적으로 고정하도록 요청자에게 지시합니다. 애플리케이션을 고정하는 데 걸리는 시간은 최대 60초입니다. 볼륨 섀도 복사본 서비스는 파일 시스템 버퍼를 플러시한 다음, 파일 시스템을 고정하여 파일 시스템 메타데이터가 올바르게 기록되고 섀도 복사할 데이터가 일관된 순서로 기록되도록 합니다.  
-      
-6.  볼륨 섀도 복사본 서비스에서 섀도 복사본을 만들도록 공급자에 지시합니다. 섀도 복사본 만들기 기간은 10초 이하로 지속되며, 이 기간 동안 파일 시스템에 대한 모든 쓰기 I/O 요청이 고정된 상태로 유지됩니다.  
-      
-7.  볼륨 섀도 복사본 서비스에서 파일 시스템 쓰기 I/O 요청을 해제합니다.  
-      
-8.  VSS에서 애플리케이션 쓰기 I/O 요청을 해제하도록 기록기에 지시합니다. 이 시점에서 애플리케이션은 섀도 복사되는 디스크에 데이터를 쓰는 작업을 다시 시작할 수 있습니다.  
-      
+1.  요청자에서 볼륨 섀도 복사본 서비스에 기록기를 열거하고, 기록기 메타데이터를 수집하고. 섀도 복사본 만들기를 준비하도록 요청합니다.
+
+2.  각 기록기에서 백업해야 하는 구성 요소 및 데이터 저장소에 대한 XML 설명을 만들고, 이를 볼륨 섀도 복사본 서비스에 제공합니다. 또한 기록기는 모든 구성 요소에 사용되는 복원 방법을 정의합니다. 볼륨 섀도 복사본 서비스에서 백업할 구성 요소를 선택하는 요청자에 기록기의 설명을 제공합니다.
+
+3.  볼륨 섀도 복사본 서비스에서 섀도 복사본을 만들기 위해 데이터를 준비하도록 모든 기록기에 알립니다.
+
+4.  각 기록기에서 모든 열린 트랜잭션을 완료하고, 트랜잭션 로그를 롤링하며, 캐시를 플러시하는 등 데이터를 적절하게 준비합니다. 데이터를 섀도 복사할 준비가 되면 기록기에서 볼륨 섀도 복사본 서비스에 알립니다.
+
+5.  볼륨 섀도 복사본 서비스에서 하나 이상의 볼륨에 대한 섀도 복사본을 만드는 데 필요한 애플리케이션 쓰기 I/O 요청(읽기 I/O 요청도 여전히 가능)을 몇 초 동안 일시적으로 고정하도록 요청자에게 지시합니다. 애플리케이션을 고정하는 데 걸리는 시간은 최대 60초입니다. 볼륨 섀도 복사본 서비스는 파일 시스템 버퍼를 플러시한 다음, 파일 시스템을 고정하여 파일 시스템 메타데이터가 올바르게 기록되고 섀도 복사할 데이터가 일관된 순서로 기록되도록 합니다.
+
+6.  볼륨 섀도 복사본 서비스에서 섀도 복사본을 만들도록 공급자에 지시합니다. 섀도 복사본 만들기 기간은 10초 이하로 지속되며, 이 기간 동안 파일 시스템에 대한 모든 쓰기 I/O 요청이 고정된 상태로 유지됩니다.
+
+7.  볼륨 섀도 복사본 서비스에서 파일 시스템 쓰기 I/O 요청을 해제합니다.
+
+8.  VSS에서 애플리케이션 쓰기 I/O 요청을 해제하도록 기록기에 지시합니다. 이 시점에서 애플리케이션은 섀도 복사되는 디스크에 데이터를 쓰는 작업을 다시 시작할 수 있습니다.
+
 
 > [!NOTE]
-> 기록기를 60초 이상 고정 상태로 유지하거나 공급자에서 섀도 복사본을 커밋하는 데 10초 넘게 걸리는 경우 섀도 복사본 만들기가 중단될 수 있습니다. 
+> 기록기를 60초 이상 고정 상태로 유지하거나 공급자에서 섀도 복사본을 커밋하는 데 10초 넘게 걸리는 경우 섀도 복사본 만들기가 중단될 수 있습니다.
 <br>
 
-9. 요청자에서 프로세스를 다시 시도하거나(1단계로 돌아가기) 나중에 다시 시도하도록 관리자에게 알릴 수 있습니다.  
-      
-10. 섀도 복사본이 성공적으로 만들어지면 볼륨 섀도 복사본 서비스에서 섀도 복사본의 위치 정보를 요청자에 반환합니다. 경우에 따라 섀도 복사본을 일시적으로 읽기-쓰기 볼륨으로 사용할 수 있으므로 섀도 복사본이 완료되기 전에 VSS 및 하나 이상의 애플리케이션에서 섀도 복사본의 콘텐츠를 변경할 수 있습니다. VSS와 애플리케이션에서 이러한 변경을 수행하면 섀도 복사본이 읽기 전용으로 설정됩니다. 이 단계를 자동 복구라고 하며, 이는 섀도 복사본을 만들기 전에 완료되지 않은 섀도 복사본 볼륨에서 파일 시스템 또는 애플리케이션 트랜잭션을 실행 취소하는 데 사용됩니다.  
-      
+9. 요청자에서 프로세스를 다시 시도하거나(1단계로 돌아가기) 나중에 다시 시도하도록 관리자에게 알릴 수 있습니다.
+
+10. 섀도 복사본이 성공적으로 만들어지면 볼륨 섀도 복사본 서비스에서 섀도 복사본의 위치 정보를 요청자에 반환합니다. 경우에 따라 섀도 복사본을 일시적으로 읽기-쓰기 볼륨으로 사용할 수 있으므로 섀도 복사본이 완료되기 전에 VSS 및 하나 이상의 애플리케이션에서 섀도 복사본의 콘텐츠를 변경할 수 있습니다. VSS와 애플리케이션에서 이러한 변경을 수행하면 섀도 복사본이 읽기 전용으로 설정됩니다. 이 단계를 자동 복구라고 하며, 이는 섀도 복사본을 만들기 전에 완료되지 않은 섀도 복사본 볼륨에서 파일 시스템 또는 애플리케이션 트랜잭션을 실행 취소하는 데 사용됩니다.
+
 
 ### <a name="how-the-provider-creates-a-shadow-copy"></a>공급자에서 섀도 복사본을 만드는 방법
 
@@ -116,10 +116,10 @@ VSS를 사용하는 Windows 기능 및 애플리케이션은 다음과 같습니
 
 완전한 복사는 일반적으로 다음과 같이 "분할된 미러"를 수행하여 만듭니다.
 
-1.  원본 볼륨과 섀도 복사본 볼륨은 미러된 볼륨 세트입니다.  
-      
-2.  섀도 복사본 볼륨은 원본 볼륨과 분리되어 있습니다. 이렇게 하면 미러 연결이 끊어집니다.  
-      
+1. 원본 볼륨과 섀도 복사본 볼륨은 미러된 볼륨 세트입니다.
+
+2. 섀도 복사본 볼륨은 원본 볼륨과 분리되어 있습니다. 이렇게 하면 미러 연결이 끊어집니다.
+
 
 미러 연결이 끊어지면 원본 볼륨과 섀도 복사본 볼륨이 독립적으로 유지됩니다. 원본 볼륨은 모든 변경 내용(쓰기 I/O 요청)을 계속 받아들이지만, 섀도 복사본 볼륨은 연결이 끊긴 시점의 원본 데이터에 대한 정확한 읽기 전용 복사본으로 유지됩니다.
 
@@ -245,25 +245,21 @@ VSS를 사용하는 Windows 기능 및 애플리케이션은 다음과 같습니
 
 Windows 운영 체제에는 다양한 Windows 기능에 필요한 데이터를 열거해야 하는 일단의 VSS 기록기가 포함되어 있습니다.
 
-이러한 기록기에 대한 자세한 내용은 다음 Microsoft 웹 사이트를 참조하세요.
+이러한 기록기에 대한 자세한 내용은 다음 Microsoft Docs 웹 페이지를 참조하세요.
 
-  - [기본 제공 VSS 기록기](https://go.microsoft.com/fwlink/?linkid=180895)(https://go.microsoft.com/fwlink/?LinkId=180895)  
-      
-  - [Windows Server 2008 및 Windows Vista SP1용 기본 제공 VSS 기록기](https://go.microsoft.com/fwlink/?linkid=180896)(https://go.microsoft.com/fwlink/?LinkId=180896)  
-      
-  - [새로운 Windows Server 2008 R2 및 Windows 7용 기본 제공 VSS 기록기](https://go.microsoft.com/fwlink/?linkid=180897)(https://go.microsoft.com/fwlink/?LinkId=180897)  
-      
+- [기본 제공 VSS 기록기](https://docs.microsoft.com/windows/win32/vss/in-box-vss-writers)(https://docs.microsoft.com/windows/win32/vss/in-box-vss-writers)
+
 
 ## <a name="how-shadow-copies-are-used"></a>섀도 복사본을 사용하는 방법
 
 섀도 복사본은 애플리케이션 데이터 및 시스템 상태 정보를 백업하는 것 외에도 다음을 포함한 다양한 용도로 사용할 수 있습니다.
 
-  - LUN 복원(LUN 다시 동기화 및 LUN 교환)  
-      
-  - 개별 파일 복원(공유 폴더용 섀도 복사본)  
-      
-  - 전송 가능한 섀도 복사본을 사용하여 데이터 마이닝  
-      
+  - LUN 복원(LUN 다시 동기화 및 LUN 교환)
+
+  - 개별 파일 복원(공유 폴더용 섀도 복사본)
+
+  - 전송 가능한 섀도 복사본을 사용하여 데이터 마이닝
+
 
 ### <a name="restoring-luns-lun-resynchronization-and-lun-swapping"></a>LUN 복원(LUN 다시 동기화 및 LUN 교환)
 
@@ -273,7 +269,7 @@ Windows Server 2008 R2 및 Windows 7에서 VSS 요청자는 LUN 다시 동기화
 
 
 > [!NOTE]
-> 섀도 복사본은 전송 가능한 하드웨어 섀도 복사본이어야 합니다. 
+> 섀도 복사본은 전송 가능한 하드웨어 섀도 복사본이어야 합니다.
 <br>
 
 
@@ -281,16 +277,15 @@ Windows Server 2008 R2 및 Windows 7에서 VSS 요청자는 LUN 다시 동기화
 
 LUN 다시 동기화는 LUN 교환과 다릅니다. LUN 교환은 Windows Server 2003 SP1 이후 VSS에서 지원한 빠른 복구 시나리오입니다. LUN 교환에서는 섀도 복사본을 가져온 다음, 읽기-쓰기 볼륨으로 변환합니다. 변환은 되돌릴 수 없는 작업이며, 그 이후에는 VSS API를 사용하여 해당 볼륨 및 기본 LUN을 제어할 수 없습니다. 다음 목록에서는 LUN 다시 동기화와 LUN 교환을 비교하는 방법을 설명합니다.
 
-  - LUN 다시 동기화에서 섀도 복사본은 변경되지 않으므로 여러 번 사용할 수 있습니다. LUN 교환에서 섀도 복사본은 복구에 한 번만 사용할 수 있습니다. 이는 안전에 가장 민감한 관리자에게 중요합니다. LUN 다시 동기화를 사용할 때 문제가 처음 발생하는 경우 요청자는 전체 복원 작업을 다시 시도할 수 있습니다.  
-      
-  - LUN 교환이 완료되면 섀도 복사본 LUN이 프로덕션 I/O 요청에 사용됩니다. 이러한 이유로 복구 작업 후 성능에 영향을 주지 않도록 섀도 복사본 LUN에서 원본 프로덕션 LUN과 동일한 품질의 스토리지를 사용해야 합니다. LUN 다시 동기화를 대신 사용하는 경우 하드웨어 공급자는 프로덕션 품질 스토리지보다 저렴한 스토리지에서 섀도 복사본을 유지할 수 있습니다.  
-      
-  - 대상 LUN을 사용할 수 없고 다시 만들어야 하는 경우 대상 LUN이 필요하지 않으므로 LUN 교환이 더 경제적일 수 있습니다.  
-      
+  - LUN 다시 동기화에서 섀도 복사본은 변경되지 않으므로 여러 번 사용할 수 있습니다. LUN 교환에서 섀도 복사본은 복구에 한 번만 사용할 수 있습니다. 이는 안전에 가장 민감한 관리자에게 중요합니다. LUN 다시 동기화를 사용할 때 문제가 처음 발생하는 경우 요청자는 전체 복원 작업을 다시 시도할 수 있습니다.
+
+  - LUN 교환이 완료되면 섀도 복사본 LUN이 프로덕션 I/O 요청에 사용됩니다. 이러한 이유로 복구 작업 후 성능에 영향을 주지 않도록 섀도 복사본 LUN에서 원본 프로덕션 LUN과 동일한 품질의 스토리지를 사용해야 합니다. LUN 다시 동기화를 대신 사용하는 경우 하드웨어 공급자는 프로덕션 품질 스토리지보다 저렴한 스토리지에서 섀도 복사본을 유지할 수 있습니다.
+
+  - 대상 LUN을 사용할 수 없고 다시 만들어야 하는 경우 대상 LUN이 필요하지 않으므로 LUN 교환이 더 경제적일 수 있습니다.
 
 
 > [!WARNING]
-> 나열된 모든 작업은 LUN 수준 작업입니다. LUN 다시 동기화를 사용하여 특정 볼륨을 복구하려는 경우 자신도 모르게 해당 LUN을 공유하는 다른 모든 볼륨도 되돌릴 수 있습니다. 
+> 나열된 모든 작업은 LUN 수준 작업입니다. LUN 다시 동기화를 사용하여 특정 볼륨을 복구하려는 경우 자신도 모르게 해당 LUN을 공유하는 다른 모든 볼륨도 되돌릴 수 있습니다.
 <br>
 
 
@@ -320,7 +315,7 @@ LUN 다시 동기화는 LUN 교환과 다릅니다. LUN 교환은 Windows Server
 
 
 > [!NOTE]
-> Windows Server 2003에서 만든 전송 가능한 섀도 복사본은 Windows Server 2008 또는 Windows Server 2008 R2를 실행하는 서버로 가져올 수 없습니다. Windows Server 2008 또는 Windows Server 2008 R2에서 만든 전송 가능한 섀도 복사본은 Windows Server 2003을 실행하는 서버로 가져올 수 없습니다. 그러나 Windows Server 2008에서 만든 섀도 복사본은 Windows Server 2008 R2를 실행하는 서버로 가져올 수 있으며, 그 반대의 경우도 마찬가지입니다. 
+> Windows Server 2003에서 만든 전송 가능한 섀도 복사본은 Windows Server 2008 또는 Windows Server 2008 R2를 실행하는 서버로 가져올 수 없습니다. Windows Server 2008 또는 Windows Server 2008 R2에서 만든 전송 가능한 섀도 복사본은 Windows Server 2003을 실행하는 서버로 가져올 수 없습니다. 그러나 Windows Server 2008에서 만든 섀도 복사본은 Windows Server 2008 R2를 실행하는 서버로 가져올 수 있으며, 그 반대의 경우도 마찬가지입니다.
 <br>
 
 
@@ -362,10 +357,10 @@ Microsoft Management Console을 사용하여 볼륨 섀도 복사본 서비스�
 
 자세한 내용은 다음 Microsoft TechNet 웹 사이트를 방문하세요.
 
-  - [시스템 복원](https://go.microsoft.com/fwlink/?linkid=157113)(https://go.microsoft.com/fwlink/?LinkID=157113)  
-      
-  - [Windows Server 백업](https://go.microsoft.com/fwlink/?linkid=180891)(https://go.microsoft.com/fwlink/?LinkID=180891)  
-      
+- [시스템 복원](https://go.microsoft.com/fwlink/?linkid=157113)(https://go.microsoft.com/fwlink/?LinkID=157113)
+
+- [Windows Server 백업](https://go.microsoft.com/fwlink/?linkid=180891)(https://go.microsoft.com/fwlink/?LinkID=180891)
+
 
 ### <a name="can-i-exclude-files-from-a-shadow-copy-to-save-space"></a>공간을 절약하기 위해 섀도 복사본에서 파일을 제외할 수 있나요?
 
@@ -406,14 +401,14 @@ VSS는 전체 볼륨의 섀도 복사본을 만들도록 설계되었습니다. 
 
 차등 영역 위치를 결정하기 위해 다음 기준이 순서대로 평가됩니다.
 
-  - 기존 섀도 복사본이 볼륨에 이미 있는 경우 해당 위치가 사용됩니다.  
-      
-  - 원본 볼륨과 섀도 복사본 볼륨의 위치 간에 미리 구성된 수동 연결이 있는 경우 해당 위치가 사용됩니다.  
-      
-  - 앞의 두 기준에서 위치를 제공하지 않는 경우 섀도 복사본 서비스에서 사용 가능한 공간에 따라 위치를 선택합니다. 둘 이상의 볼륨이 섀도 복사되는 경우 섀도 복사본 서비스에서 사용 가능한 공간의 크기에 따라 가능한 스냅샷 위치 목록을 내림차순으로 만듭니다. 제공되는 위치의 수는 섀도 복사되는 볼륨의 수와 같습니다.  
-      
-  - 섀도 복사되는 볼륨이 가능한 위치 중 하나인 경우 로컬 연결이 만들어집니다. 그렇지 않으면 사용 가능한 공간이 가장 많은 볼륨과의 연결이 만들어집니다.  
-      
+  - 기존 섀도 복사본이 볼륨에 이미 있는 경우 해당 위치가 사용됩니다.
+
+  - 원본 볼륨과 섀도 복사본 볼륨의 위치 간에 미리 구성된 수동 연결이 있는 경우 해당 위치가 사용됩니다.
+
+  - 앞의 두 기준에서 위치를 제공하지 않는 경우 섀도 복사본 서비스에서 사용 가능한 공간에 따라 위치를 선택합니다. 둘 이상의 볼륨이 섀도 복사되는 경우 섀도 복사본 서비스에서 사용 가능한 공간의 크기에 따라 가능한 스냅샷 위치 목록을 내림차순으로 만듭니다. 제공되는 위치의 수는 섀도 복사되는 볼륨의 수와 같습니다.
+
+  - 섀도 복사되는 볼륨이 가능한 위치 중 하나인 경우 로컬 연결이 만들어집니다. 그렇지 않으면 사용 가능한 공간이 가장 많은 볼륨과의 연결이 만들어집니다.
+
 
 ### <a name="can-vss-create-shadow-copies-of-non-ntfs-volumes"></a>VSS에서 NTFS가 아닌 볼륨의 섀도 복사본을 만들 수 있나요?
 
@@ -441,25 +436,25 @@ VSS는 전체 볼륨의 섀도 복사본을 만들도록 설계되었습니다. 
 
 Windows 운영 체제에서 VSS 작업을 위해 제공하는 도구는 다음과 같습니다.
 
-  - [DiskShadow](https://go.microsoft.com/fwlink/?linkid=180907)(https://go.microsoft.com/fwlink/?LinkId=180907)  
-      
-  - [VssAdmin](https://go.microsoft.com/fwlink/?linkid=84008)(https://go.microsoft.com/fwlink/?LinkId=84008)  
-      
+  - [DiskShadow](https://go.microsoft.com/fwlink/?linkid=180907)(https://go.microsoft.com/fwlink/?LinkId=180907)
+
+  - [VssAdmin](https://go.microsoft.com/fwlink/?linkid=84008)(https://go.microsoft.com/fwlink/?LinkId=84008)
+
 
 ### <a name="diskshadow"></a>DiskShadow
 
 DiskShadow는 시스템에서 사용할 수 있는 모든 하드웨어 및 소프트웨어 스냅샷을 관리하는 데 사용할 수 있는 VSS 요청자입니다. DiskShadow에 포함된 명령은 다음과 같습니다.
 
-  - **list**: VSS 기록기, VSS 공급자 및 섀도 복사본을 나열합니다.  
-      
-  - **create**: 새 섀도 복사본을 만듭니다.  
-      
-  - **import**: 전송 가능한 섀도 복사본을 가져옵니다.  
-      
-  - **expose**: 영구 섀도 복사본을 공개합니다(예: 드라이브 문자로).  
-      
-  - **revert**: 볼륨을 지정된 섀도 복사본으로 되돌립니다.  
-      
+  - **list**: VSS 기록기, VSS 공급자 및 섀도 복사본을 나열합니다.
+
+  - **create**: 새 섀도 복사본을 만듭니다.
+
+  - **import**: 전송 가능한 섀도 복사본을 가져옵니다.
+
+  - **expose**: 영구 섀도 복사본을 공개합니다(예: 드라이브 문자로).
+
+  - **revert**: 볼륨을 지정된 섀도 복사본으로 되돌립니다.
+
 
 이 도구는 IT 전문가를 위한 것이지만, 개발자가 VSS 기록기 또는 VSS 공급자를 테스트하는 경우에도 유용할 수 있습니다.
 
@@ -471,16 +466,16 @@ VssAdmin은 섀도 복사본에 대한 정보를 만들고, 삭제하고, 나열
 
 VssAdmin에 포함된 명령은 다음과 같습니다.
 
-  - **create shadow**: 새 섀도 복사본을 만듭니다.  
-      
-  - **delete shadows**: 섀도 복사본을 삭제합니다.  
-      
-  - **list providers**: 모든 등록된 VSS 공급자를 나열합니다.  
-      
-  - **list writers**: 모든 구독된 VSS 기록기를 나열합니다.  
-      
-  - **resize shadowstorage**: 섀도 복사본 저장 영역의 최대 크기를 변경합니다.  
-      
+  - **create shadow**: 새 섀도 복사본을 만듭니다.
+
+  - **delete shadows**: 섀도 복사본을 삭제합니다.
+
+  - **list providers**: 모든 등록된 VSS 공급자를 나열합니다.
+
+  - **list writers**: 모든 구독된 VSS 기록기를 나열합니다.
+
+  - **resize shadowstorage**: 섀도 복사본 저장 영역의 최대 크기를 변경합니다.
+
 
 VssAdmin은 시스템 소프트웨어 공급자에서 만든 섀도 복사본을 관리하는 데만 사용할 수 있습니다.
 
@@ -490,12 +485,12 @@ VssAdmin은 Windows 클라이언트 및 Windows Server 운영 체제 버전에�
 
 VSS에서 사용할 수 있는 레지스트리 키는 다음과 같습니다.
 
-  - **VssAccessControl**  
-      
-  - **MaxShadowCopies**  
-      
-  - **MinDiffAreaFileSize**  
-      
+  - **VssAccessControl**
+
+  - **MaxShadowCopies**
+
+  - **MinDiffAreaFileSize**
+
 
 ### <a name="vssaccesscontrol"></a>VssAccessControl
 
@@ -503,10 +498,10 @@ VSS에서 사용할 수 있는 레지스트리 키는 다음과 같습니다.
 
 자세한 내용은 MSDN 웹 사이트에서 다음 항목을 참조하세요.
 
-  - [기록기에 대한 보안 고려 사항](https://go.microsoft.com/fwlink/?linkid=157739)(https://go.microsoft.com/fwlink/?LinkId=157739)  
-      
-  - [요청자에 대한 보안 고려 사항](https://go.microsoft.com/fwlink/?linkid=180908)(https://go.microsoft.com/fwlink/?LinkId=180908)  
-      
+  - [기록기에 대한 보안 고려 사항](https://go.microsoft.com/fwlink/?linkid=157739)(https://go.microsoft.com/fwlink/?LinkId=157739)
+
+  - [요청자에 대한 보안 고려 사항](https://go.microsoft.com/fwlink/?linkid=180908)(https://go.microsoft.com/fwlink/?LinkId=180908)
+
 
 ### <a name="maxshadowcopies"></a>MaxShadowCopies
 
@@ -524,7 +519,7 @@ VSS에서 사용할 수 있는 레지스트리 키는 다음과 같습니다.
 
 **MinDiffAreaFileSize**([백업 및 복원 레지스트리 키](https://go.microsoft.com/fwlink/?linkid=180910)(https://go.microsoft.com/fwlink/?LinkId=180910) 아래)
 
-`##`# 지원되는 운영 체제 버전
+### <a name="supported-operating-system-versions"></a>지원되는 운영 체제 버전
 
 다음 표에는 VSS 기능에 지원되는 최소 운영 체제 버전이 나와 있습니다.
 

@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 01/10/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 416145a8c4ec20eaf46cf4b5ac88a0cdf38bdf33
-ms.sourcegitcommit: 76469d1b7465800315eaca3e0c7f0438fc3939ed
+ms.openlocfilehash: aafcfcd4d0f2f14836c5b7dee2bdbccbf99fa887
+ms.sourcegitcommit: 9687d3eb221b89061a48bf1e73fb3b25bee69f9a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75919883"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78169623"
 ---
 # <a name="overview-of-file-sharing-using-the-smb-3-protocol-in-windows-server"></a>Windows Server에서 SMB 3 프로토콜을 사용하여 파일 공유 개요
 
