@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 06/05/2018
-ms.openlocfilehash: 0e5f9f2b0102c12ee0925bb434fdeddde85e34cd
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 89097ec5d3711b3d8831f8c33b3778ed0752246f
+ms.sourcegitcommit: ee8fa8e1293f29229b5ce1b0f3d4a07ba99568f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71379722"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280194"
 ---
 # <a name="call"></a>전화
 
@@ -78,9 +78,9 @@ call [Drive:][Path]<FileName> [<BatchParameters>] [:<Label> [<Arguments>]]
 |% ~ dp$ 경로: 1|에 대 한 PATH 환경 변수에 나열 되는 디렉터리 검색 **%1**, 을 드라이브 문자와 찾을 수 있는 첫 번째 디렉터리의 경로를 확장 하 여 합니다.|
 |% ~ ftza1|확장 **%1** 유사한 출력을 표시 하는 **dir** 명령입니다.|
 
-위의 예제에서 **%1** 경로 다른 유효한 값으로 대체 될 수 있습니다. <strong>%~</strong>  구문에 유효한 인수가 숫자 종료 됩니다. <strong>%~</strong> 한정자는 **%\\\*** 와 함께 사용할 수 없습니다.
+위의 예제에서 **%1** 경로 다른 유효한 값으로 대체 될 수 있습니다. <strong>%~</strong>  구문에 유효한 인수가 숫자 종료 됩니다. <strong>%~</strong> 한정자는 **%\*** 와 함께 사용할 수 없습니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 -   일괄 처리 매개 변수 사용
 
@@ -98,7 +98,7 @@ call [Drive:][Path]<FileName> [<BatchParameters>] [:<Label> [<Arguments>]]
 
     명령 확장을 사용 하는 경우 호출의 대상으로 허용 *레이블을* **호출** 합니다. 올바른 구문은 다음과 같습니다.
 
-    `call :\<Label> <Arguments>`
+    `call :<Label> <Arguments>`
 
 ## <a name="BKMK_examples"></a>예와
 
