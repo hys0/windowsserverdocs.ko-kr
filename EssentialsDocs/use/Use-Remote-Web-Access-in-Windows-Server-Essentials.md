@@ -13,11 +13,11 @@ author: nnamuhcs
 ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: f6a5d6fd42c5cd7e92821e1157748054c741ef04
-ms.sourcegitcommit: 0e3c2473a54f915d35687d30d1b4b1ac2bae4068
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68914682"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78371179"
 ---
 # <a name="use-remote-web-access-in-windows-server-essentials"></a>Windows Server Essentials에서 원격 웹 액세스 사용
 
@@ -60,7 +60,7 @@ ms.locfileid: "68914682"
   
 ##### <a name="to-log-on-to-remote-web-access-from-a-network-computer"></a>네트워크 컴퓨터에서 원격 웹 액세스에 로그온하려면  
   
-1.  웹 브라우저를 열고 주소 표시줄에 **https://** _<\>서버 이름_ **/remote** 를 입력 한 다음 enter 키를 누릅니다.  
+1.  웹 브라우저를 열고 주소 표시줄에 **https://** _< 서버 이름\>_ **/Remote** 를 입력 한 다음 enter 키를 누릅니다.  
   
     > [!NOTE]
     >  S가 https에 포함 되어 있는지 확인 합니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "68914682"
   
 ##### <a name="to-log-on-to-remote-web-access-from-a-remote-computer"></a>원격 컴퓨터에서 원격 웹 액세스에 로그온하려면  
   
-1.  웹 브라우저를 열고 주소 표시줄에 **https://** _<\>_ **/remote** 를 입력 한 다음 enter 키를 누릅니다.  
+1.  웹 브라우저를 열고 주소 표시줄에 **https://** _</remote domainname\>_ 를 입력 한 다음 enter 키를 누릅니다.  
   
     > [!NOTE]
     >  도메인 이름 정보에 대해서는 네트워크 관리자에게 문의하세요. S가 https에 포함 되어 있는지 확인 합니다.  
@@ -123,7 +123,7 @@ ms.locfileid: "68914682"
 -   컴퓨터에서 Windows Server Essentials로 파일을 업로드(전송)할 수 있습니다.  
   
     > [!NOTE]
-    >  원격 웹 액세스에 폴더가 아니라 파일만 업로드할 수 있습니다. 서버의 **공유 폴더**에 컴퓨터와 같은 파일 및 폴더 계층 구조를 포함하려면 원격 웹 액세스에서 서버에 폴더를 만들고 만든 폴더에 파일을 업로드해야 합니다. 서버 폴더를 만드는 방법에 대한 자세한 내용은 [Add or move a server folder](../manage/Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_5)을 참조하세요.  
+    >  원격 웹 액세스에 폴더가 아니라 파일만 업로드할 수 있습니다. 서버의 **공유 폴더**에 컴퓨터와 같은 파일 및 폴더 계층 구조를 포함하려면 원격 웹 액세스에서 서버에 폴더를 만들고 만든 폴더에 파일을 업로드해야 합니다. 서버 폴더를 만드는 방법에 대한 자세한 내용은 [서버 폴더 추가 또는 이동](../manage/Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_5)을 참조하세요.  
   
 -   Windows Server Essentials에서 컴퓨터로 파일과 폴더를 다운로드(수신)합니다.  
   
@@ -252,7 +252,7 @@ ms.locfileid: "68914682"
  원격 웹 액세스를 사용하여 기존 공유 폴더에 새 폴더를 만들고, 파일 및 폴더 이름을 바꾸고, 파일과 폴더를 이동 및 복사하고, 서버에서 파일과 폴더를 삭제할 수 있습니다.  
   
 > [!NOTE]
->  Windows Server Essentials를 실행하는 서버에서 새 공유 폴더를 추가하려면 대시보드를 사용해야 합니다. 원격 웹 액세스에서 서버 콘솔에 연결하려면 **컴퓨터** 탭에서 서버 이름을 클릭하고 **연결**을 클릭한 다음 서버 로그온 지침에 따릅니다. 정책을 만드는 방법에 대한 자세한 내용은 [Add or move a server folder](../manage/Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_5)을 참조하세요.  
+>  Windows Server Essentials를 실행하는 서버에서 새 공유 폴더를 추가하려면 대시보드를 사용해야 합니다. 원격 웹 액세스에서 서버 콘솔에 연결하려면 **컴퓨터** 탭에서 서버 이름을 클릭하고 **연결**을 클릭한 다음 서버 로그온 지침에 따릅니다. 공유 폴더를 만드는 방법에 대한 자세한 내용은 [서버 폴더 추가 또는 이동](../manage/Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_5)을 참조하세요.  
   
 ##### <a name="to-create-a-new-folder"></a>새 폴더를 만들려면  
   
@@ -312,30 +312,30 @@ ms.locfileid: "68914682"
 > [!NOTE]
 >  [Windows Phone Marketplace](http://www.windowsphone.com/apps/6c2f98d5-6fcf-4e1d-b8b1-cde62ea1a94a) 에서 Windows Server Essentials용 My Server 앱을 다운로드하고 사용하여 서버에 저장된 공유 폴더와 미디어 파일에 액세스할 수도 있습니다.  
   
-##### <a name="to-log-on-to-remote-web-access-from-a-mobile-device"></a>모바일 장치에서 원격 웹 액세스에 로그온하려면  
+##### <a name="to-log-on-to-remote-web-access-from-a-mobile-device"></a>모바일 디바이스에서 원격 웹 액세스에 로그온하려면  
   
-1.  웹 브라우저를 열고 주소 표시줄에 **https://** _< 도메인\>이름_ **/remote** 을 입력 합니다.  S가 https에 포함 되어 있는지 확인 합니다.  
+1.  웹 브라우저를 열고 주소 표시줄에 **https://** _</remote domainname\>_ 을 입력 합니다.  S가 https에 포함 되어 있는지 확인 합니다.  
   
 2.  원격 웹 액세스 로그온 페이지에서 텍스트 상자에 사용자 이름과 암호를 입력 한 다음 화살표를 클릭 합니다. 원격 웹 액세스의 모바일 버전에 로그온됩니다.  
   
 ##### <a name="to-switch-to-the-desktop-version-of-remote-web-access"></a>원격 웹 액세스의 데스크톱 버전으로 전환하려면  
   
-1.  웹 브라우저를 열고 주소 표시줄에 **https://** _< 도메인\>이름_ **/remote** 을 입력 합니다.  S가 https에 포함 되어 있는지 확인 합니다.  
+1.  웹 브라우저를 열고 주소 표시줄에 **https://** _</remote domainname\>_ 을 입력 합니다.  S가 https에 포함 되어 있는지 확인 합니다.  
   
 2.  원격 웹 액세스 로그온 페이지에서 텍스트 상자에 사용자 이름과 암호를 입력 하 고 **데스크톱 버전 보기**를 클릭 한 다음 화살표를 클릭 합니다. 원격 웹 액세스의 데스크톱 버전에 로그온됩니다.  
   
 ##### <a name="to-return-to-the-mobile-version-of-remote-web-access"></a>원격 웹 액세스의 모바일 버전으로 돌아가려면  
   
-1. 로그 오프 합니다.  
+1. 로그오프합니다.  
   
-2. 웹 브라우저를 열고 주소 표시줄에 **https://** _<\>_ 를 입력 합니다. S가 https에 포함 되어 있는지 확인 합니다.  
+2. 웹 브라우저를 열고 주소 표시줄에 **https://** _< 해당 domainname\>_ **/remote/m** 을 입력 합니다. S가 https에 포함 되어 있는지 확인 합니다.  
   
 3. 원격 웹 액세스의 모바일 버전이 표시 됩니다. 원격 웹 액세스 로그온 페이지에서 텍스트 상자에 사용자 이름과 암호를 입력 한 다음 화살표를 클릭 합니다. 원격 웹 액세스의 모바일 버전에 로그온 되어 있습니다.  
   
    서버의 공유 폴더에서 파일과 폴더를 검색할 수 있습니다.  
   
 ###  <a name="BKMK_9"></a>모바일 장치에 대해 지원 되는 웹 브라우저  
- 모바일 장치에 대해 지원되는 웹 브라우저는 다음과 같습니다.  
+ 모바일 디바이스에 대해 지원되는 웹 브라우저는 다음과 같습니다.  
   
 -   Internet Explorer Mobile 6.0 이상  
   
@@ -351,7 +351,7 @@ ms.locfileid: "68914682"
   
 -   Firefox  
   
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
   
 -   [원격 웹 액세스 관리](../manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md)  
   
