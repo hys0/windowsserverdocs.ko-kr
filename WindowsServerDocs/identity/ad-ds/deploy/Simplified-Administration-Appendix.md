@@ -10,11 +10,11 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
 ms.openlocfilehash: ffc2849fa5e18f7984814d6187cf83d68566409b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71369645"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78371551"
 ---
 # <a name="simplified-administration-appendix"></a>관리 간소화 부록
 
@@ -81,7 +81,7 @@ Get-Module -ListAvailable
   
 ```  
   
-**Import-module** 명령을 사용 하는 경우의 주요 사례는 "AD:"에 액세스 해야 하는 경우입니다. Windows PowerShell 가상 드라이브 외에도 모듈이 이미 로드 되지 않았습니다. 예를 들어, 다음 명령을 사용 합니다.  
+사용 하기 위한 기본 사례는 **모듈 가져오기** 명령에 액세스 해야 하는 경우입니다는 "AD:" Windows PowerShell 가상 드라이브와 겉가 이미 로드 된 모듈입니다. 예를 들어, 다음 명령을 사용 합니다.  
   
 ```  
 import-module activedirectory  
