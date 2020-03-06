@@ -8,11 +8,11 @@ ms.author: jol
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.openlocfilehash: 7c1a70e36dfac9b23ded8f920ffcc8cccbfff023
-ms.sourcegitcommit: 7c7fc443ecd0a81bff6ed6dbeeaf4f24582ba339
-ms.translationtype: HT
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74903952"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78371121"
 ---
 # <a name="install-and-manage-extensions"></a>확장 설치 및 관리
 
@@ -86,4 +86,4 @@ Windows Admin Center 미리 보기에는 게이트웨이 확장을 관리하는 
 
 [!INCLUDE [ps-extensions](../includes/ps-extensions.md)]
 
-### <a name="learn-more-about-building-an-extension-with-the-windows-admin-center-sdkextendextensibility-overviewmd"></a>[Windows Admin Center SDK를 사용하여 확장을 빌드하는 방법에 대해 자세히 알아보세요](../extend/extensibility-overview.md).
+### <a name="learn-more-about-building-an-extension-with-the-windows-admin-center-sdk"></a>[Windows Admin Center SDK를 사용하여 확장을 빌드하는 방법에 대해 자세히 알아보세요](../extend/extensibility-overview.md).

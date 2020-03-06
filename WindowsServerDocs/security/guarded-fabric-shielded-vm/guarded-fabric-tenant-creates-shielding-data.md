@@ -9,11 +9,11 @@ author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 09/25/2019
 ms.openlocfilehash: 26ff5e27494e2f42a0c8e4d28e2b9820f8d19e6a
-ms.sourcegitcommit: 471464a674a53c468a2f1e28575c91245ce9badf
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75548183"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78370757"
 ---
 # <a name="shielded-vms-for-tenants---creating-shielding-data-to-define-a-shielded-vm"></a>테 넌 트 용 보호 된 vm-보호 된 VM을 정의 하는 보호 데이터 만들기
 
@@ -78,7 +78,7 @@ VMM에서 서명 된 템플릿 디스크는 일반화 되므로 프로 비전 �
     |-----------|-----------|
     | ComputerName        | @ComputerName@      |
     | 표준 시간대            | @TimeZone@          |
-    | ProductKey          | @ProductKey@        |
+    | 제품 키          | @ProductKey@        |
     | IPAddr4-1           | @IP4Addr-1@         |
     | IPAddr6-1           | @IP6Addr-1@         |
     | MACAddr-1           | @MACAddr-1@         |
@@ -92,7 +92,7 @@ VMM에서 서명 된 템플릿 디스크는 일반화 되므로 프로 비전 �
     | 대체 문자열 | 예제 대체 |
     |---------------------|----------------------|
     | @IP4Addr-1@         | 192.168.1.10/24      |
-    | @MACAddr-1@         | Ethernet             |
+    | @MACAddr-1@         | 이더넷             |
     | @Prefix-1-1@        | 24                   |
     | @NextHop-1-1@       | 192.168.1.254        |
     | @IP4Addr-2@         | 10.0.20.30/24        |
