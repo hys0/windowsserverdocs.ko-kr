@@ -10,15 +10,15 @@ ms.prod: windows-server
 ms.technology: identity-adfs
 ms.author: billmath
 ms.openlocfilehash: ef38b0280a5753b0995e85d0809de6b632fa3afc
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71358122"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78371261"
 ---
 # <a name="configure-authentication-policies"></a>인증 정책 구성
 
-Windows Server 2012 r 2에서 AD FS에 모두 액세스 제어 및 사용자, 장치, 위치 및 인증 데이터를 포함 하는 다중 요소 인증 메커니즘 개선 됩니다. 사용자 인터페이스를 통해 또는 AD FS에 대 한 액세스 권한 부여의 위험을 관리 하려면 Windows PowerShell을 통해 이러한 향상 된 기능,\-다중을 통해 응용 프로그램 보안\-액세스 제어 및 다중 팩터링\-사용자 id 또는 그룹 멤버 자격, 네트워크 위치, 작업 공간에 연결 하는 장치 데이터를 기반으로 하는 요소 인증\-조인 인증 상태 및 다중\-요소 인증 \(MFA\) 수행 되었습니다.  
+Windows Server 2012 r 2에서 AD FS에 모두 액세스 제어 및 사용자, 디바이스, 위치 및 인증 데이터를 포함 하는 다중 요소 인증 메커니즘 개선 됩니다. 사용자 인터페이스를 통해 또는 AD FS에 대 한 액세스 권한 부여의 위험을 관리 하려면 Windows PowerShell을 통해 이러한 향상 된 기능,\-다중을 통해 응용 프로그램 보안\-액세스 제어 및 다중 팩터링\-사용자 id 또는 그룹 멤버 자격, 네트워크 위치, 작업 공간에 연결 하는 장치 데이터를 기반으로 하는 요소 인증\-조인 인증 상태 및 다중\-요소 인증 \(MFA\) 수행 되었습니다.  
 
 MFA 및 다중 하는 방법에 대 한 자세한 내용은\-Active Directory Federation Services에서 액세스 제어를 팩터링 \(AD FS\) Windows Server 2012 r 2에서는 다음 항목을 참조 합니다.  
 
@@ -32,7 +32,7 @@ MFA 및 다중 하는 방법에 대 한 자세한 내용은\-Active Directory Fe
 ## <a name="configure-authentication-policies-via-the-ad-fs-management-snap-in"></a>AD FS 관리 스냅인을 통해 인증 정책을 구성\-에서  
 로컬 컴퓨터에서 이러한 절차를 완료하기 위해서는 최소한 **관리자** 또는 이와 동등한 자격이 있어야 합니다.  적절 한 계정을 사용 하는 방법에 대 한 세부 정보를 검토 하 고 그룹 구성원 자격 [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477)합니다.   
 
-Windows Server 2012 r 2에서 AD FS에서 모든 응용 프로그램 및 AD FS에서 보안이 유지 되는 서비스에 적용 되는 전역 범위의 인증 정책을 지정할 수 있습니다. 또한 특정 응용 프로그램 및 당사자 트러스트에 의존 하며 AD FS를 통해 보호 되는 서비스에 대 한 인증 정책을 설정할 수 있습니다. 신뢰 당 특정 응용 프로그램에 대 한 인증 정책을 지정 당사자 트러스트 전역 인증 정책을 재정의 하지 않습니다. 전역 또는 신뢰 당 경우 당사자 트러스트 인증 정책에서 MFA를 MFA 요구는 사용자가이 신뢰 당사자 트러스트에 인증 하려고 하는 경우 트리거됩니다. 전역 인증 정책은 응용 프로그램 및 특정 구성 된 인증 정책을 포함 하지 않는 서비스에 대 한 신뢰 당사자 트러스트에 대 한 대체 (fallback)입니다. 
+Windows Server 2012 r 2에서 AD FS에서 모든 애플리케이션 및 AD FS에서 보안이 유지 되는 서비스에 적용 되는 전역 범위의 인증 정책을 지정할 수 있습니다. 또한 특정 애플리케이션 및 당사자 트러스트에 의존 하며 AD FS를 통해 보호 되는 서비스에 대 한 인증 정책을 설정할 수 있습니다. 신뢰 당 특정 애플리케이션에 대 한 인증 정책을 지정 당사자 트러스트 전역 인증 정책을 재정의 하지 않습니다. 전역 또는 신뢰 당 경우 당사자 트러스트 인증 정책에서 MFA를 MFA 요구는 사용자가이 신뢰 당사자 트러스트에 인증 하려고 하는 경우 트리거됩니다. 전역 인증 정책은 애플리케이션 및 특정 구성 된 인증 정책을 포함 하지 않는 서비스에 대 한 신뢰 당사자 트러스트에 대 한 대체 (fallback)입니다. 
 
 ## <a name="to-configure-primary-authentication-globally-in-windows-server-2012-r2"></a>Windows Server 2012 r 2에서 기본 인증을 전역적으로 구성 하려면 
 
@@ -47,7 +47,7 @@ Windows Server 2012 r 2에서 AD FS에서 모든 응용 프로그램 및 AD FS�
 
     -   기본 인증에 사용할 인증 방법입니다. 아래에서 사용할 수 있는 인증 방법을 선택할 수는 **익스트라넷** 및 **인트라넷**합니다.  
 
-    -   장치 인증을 통해는 **장치 인증 사용** 확인란입니다. 자세한 내용은 [SSO 및 원활한 두 번째 단계 인증에서 회사 응용 프로그램에 대 한 모든 장치에서 작업 공간 가입](../../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)합니다.  
+    -   장치 인증을 통해는 **장치 인증 사용** 확인란입니다. 자세한 내용은 [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)를 참조하세요.  
 ![인증 정책](media/Configure-Authentication-Policies/authpolicy2.png)  
 
 ## <a name="to-configure-primary-authentication-per-relying-party-trust"></a>신뢰 당 기본 인증을 구성 하려면 신뢰 당사자  
@@ -77,7 +77,7 @@ Windows Server 2012 r 2에서 AD FS에서 모든 응용 프로그램 및 AD FS�
 
     -   설정 또는 MFA에 대 한 조건에서 사용할 수 있는 옵션을 통해는 **사용자\/그룹**, **장치**, 및 **위치** 섹션입니다.  
 
-    -   이러한 설정에 대 한 MFA를 사용 하려면 하나 이상의 추가 인증 방법을 선택 해야 합니다. **인증서 인증** 사용할 수 있는 기본 옵션입니다. 또한 다른 사용자 지정 추가 인증 방법, 예를 들어 Windows Azure 활성 인증을 구성할 수 있습니다. 자세한 내용은 [연습 가이드: 중요 한 응용 프로그램](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)에 대 한 추가 Multi-Factor Authentication로 위험 관리  
+    -   이러한 설정에 대 한 MFA를 사용 하려면 하나 이상의 추가 인증 방법을 선택 해야 합니다. **인증서 인증** 사용할 수 있는 기본 옵션입니다. 또한 다른 사용자 지정 추가 인증 방법, 예를 들어 Windows Azure 활성 인증을 구성할 수 있습니다. 자세한 내용은 참조 [연습 가이드: 중요 한 응용 프로그램에 대 한 Multi-factor Authentication 사용 하 여 위험 관리](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)합니다.  
 
 > [!WARNING]  
 > 추가 인증 방법은 전역적 으로만 구성할 수 있습니다.  
@@ -98,7 +98,7 @@ Windows Server 2012 r 2에서 AD FS에서 모든 응용 프로그램 및 AD FS�
 ## <a name="configure-authentication-policies-via-windows-powershell"></a>Windows PowerShell을 통해 인증 정책 구성  
 Windows PowerShell을 사용 하는 액세스 제어의 다양 한 요소를 사용 하 여 유연성 및 인증 정책 및 권한 부여를 구성 하려면 Windows Server 2012 r 2에서 AD FS에서 사용할 수 있는 인증 메커니즘 하는 AD FS에 대 한 조건부 액세스를 구현 하는 데 필요한 규칙 \-보안 리소스입니다.  
 
-관리자 또는 로컬 컴퓨터에서 해당 그룹의 멤버 자격이 이러한 절차를 완료 하기 위해서는 최소한 합니다.  [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477) \(에서 적절 한 계정 및 그룹 구성원 자격 사용에 대 한 자세한 내용은\/http\/: go.microsoft.com fwlink?를 참조 하세요.\/\/ LinkId\=83477\).   
+로컬 컴퓨터에서 이러한 절차를 완료하기 위해서는 최소한 관리자 또는 이와 동등한 자격이 있어야 합니다.  [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477) 에서 적절 한 계정 및 그룹 구성원 자격 사용에 대 한 세부 정보를 검토 \(http:\/\/go.microsoft.com\/fwlink\/? LinkId\=83477\).   
 
 ### <a name="to-configure-an-additional-authentication-method-via-windows-powershell"></a>Windows PowerShell을 통해 추가 인증 방법을 구성 하려면  
 
@@ -111,9 +111,9 @@ Windows PowerShell을 사용 하는 액세스 제어의 다양 한 요소를 사
 
 
 > [!WARNING]  
-> 이 명령이 성공적으로 실행 되었는지 확인 하려면 `Get-AdfsGlobalAuthenticationPolicy` 명령을 실행 하면 됩니다.  
+> 이 명령이 성공적으로 실행되었는지 확인하려면 `Get-AdfsGlobalAuthenticationPolicy` 명령을 실행하면 됩니다.  
 
-### <a name="to-configure-mfa-per-relying-party-trust-that-is-based-on-a-users-group-membership-data"></a>사용자의 그룹 구성원\-자격 데이터를 기반으로 하는 신뢰 당사자 트러스트 당 MFA를 구성 하려면  
+### <a name="to-configure-mfa-per-relying-party-trust-that-is-based-on-a-users-group-membership-data"></a>사용자의 그룹 구성원 자격 데이터를 기반으로 하는\-신뢰 당사자 트러스트 당 MFA를 구성 하려면  
 
 1.  페더레이션 서버에서 Windows PowerShell 명령 창을 열고 다음 명령을 실행합니다.  
 
@@ -213,7 +213,7 @@ Set-AdfsAdditionalAuthenticationRule "c:[Type == `"https://schemas.microsoft.com
 > [!NOTE]  
 > 교체 해야 *< 그룹\_SID >* 그룹 SID 값을 가진 및 *< true\_또는\_false >* 하나로 `true` 또는 `false`, 엑스트라넷에서 액세스 요청 하는 여부에 따라 특정 규칙 조건에 따라 또는 인트라넷 합니다.  
 
-### <a name="to-grant-access-to-an-application-based-on-user-data-via-windows-powershell"></a>Windows PowerShell을 통해 사용자 데이터를 기반으로 하는 응용 프로그램에 대 한 액세스 권한을 부여 하려면  
+### <a name="to-grant-access-to-an-application-based-on-user-data-via-windows-powershell"></a>Windows PowerShell을 통해 사용자 데이터를 기반으로 하는 애플리케이션에 대 한 액세스 권한을 부여 하려면  
 
 1.  페더레이션 서버에서 Windows PowerShell 명령 창을 열고 다음 명령을 실행 합니다.  
 
@@ -304,7 +304,7 @@ c:[Type == `"https://schemas.microsoft.com/2012/01/devicecontext/claims/isregist
 
    ```  
 
-### <a name="to-grant-extranet-access-to-an-application-secured-by-ad-fs-only-if-the-access-request-comes-from-a-user-whose-identity-has-been-validated-with-mfa"></a>Mfa id 유효성을 확인 된 사용자 로부터 액세스 요청 하는 경우에 AD FS에서 보호 되는 응용 프로그램에 대 한 엑스트라넷 액세스 권한을 부여 하려면  
+### <a name="to-grant-extranet-access-to-an-application-secured-by-ad-fs-only-if-the-access-request-comes-from-a-user-whose-identity-has-been-validated-with-mfa"></a>Mfa id 유효성을 확인 된 사용자 로부터 액세스 요청 하는 경우에 AD FS에서 보호 되는 애플리케이션에 대 한 엑스트라넷 액세스 권한을 부여 하려면  
 
 1.  페더레이션 서버에서 Windows PowerShell 명령 창을 열고 다음 명령을 실행 합니다.  
 

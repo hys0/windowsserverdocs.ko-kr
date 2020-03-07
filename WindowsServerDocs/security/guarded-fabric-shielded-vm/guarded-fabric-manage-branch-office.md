@@ -7,11 +7,11 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.openlocfilehash: 5a07553e6662fd79230d566ba2049c5e8997f4d6
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403576"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78371375"
 ---
 # <a name="branch-office-considerations"></a>지점 고려 사항
 
@@ -24,7 +24,7 @@ ms.locfileid: "71403576"
 Windows Server 버전 1709부터 기본 HGS가 응답 하지 않을 때 사용할 Hyper-v 호스트에서 호스트 보호자 서비스 Url의 추가 집합을 구성할 수 있습니다.
 이렇게 하면 로컬 서버가 다운 된 경우 회사 데이터 센터의 HGS로 대체 하는 기능을 통해 기본 서버로 사용 되는 로컬 HGS 클러스터를 실행할 수 있습니다.
 
-대체 (fallback) 옵션을 사용 하려면 두 개의 HGS 서버를 설정 해야 합니다. Windows Server 2019 또는 Windows Server 2016를 실행 하 고 동일한 클러스터 또는 다른 클러스터의 일부가 될 수 있습니다. 서로 다른 클러스터 인 경우 두 서버 간에 증명 정책이 동기화 되도록 운영 관행을 설정 하는 것이 좋습니다. 둘 다 Hyper-v 호스트에 보호 된 Vm을 실행 하는 데 필요한 권한을 올바르게 부여 하 고 보호 된 Vm을 시작 하는 데 필요한 주요 자료를 제공할 수 있어야 합니다. 두 클러스터 간에 공유 암호화 및 서명 인증서의 쌍을 갖도록 선택 하거나, 별도의 인증서를 사용 하 고, 보호 데이터의 보호자 (암호화/서명 인증서 쌍)를 둘 다 인증 하도록 HGS 차폐 VM을 구성할 수 있습니다. 파일과.
+대체 (fallback) 옵션을 사용 하려면 두 개의 HGS 서버를 설정 해야 합니다. Windows Server 2019 또는 Windows Server 2016를 실행 하 고 동일한 클러스터 또는 다른 클러스터의 일부가 될 수 있습니다. 서로 다른 클러스터 인 경우 두 서버 간에 증명 정책이 동기화 되도록 운영 관행을 설정 하는 것이 좋습니다. 둘 다 Hyper-v 호스트에 보호 된 Vm을 실행 하는 데 필요한 권한을 올바르게 부여 하 고 보호 된 Vm을 시작 하는 데 필요한 주요 자료를 제공할 수 있어야 합니다. 두 클러스터 간에 공유 암호화 및 서명 인증서의 쌍을 갖도록 선택 하거나, 별도의 인증서를 사용 하 고, 보호 데이터 파일에서 보호자 (암호화/서명 인증서 쌍)를 둘 다 인증 하도록 HGS 차폐 VM을 구성할 수 있습니다.
 
 그런 다음 Hyper-v 호스트를 Windows Server 버전 1709 또는 Windows Server 2019로 업그레이드 하 고 다음 명령을 실행 합니다.
 ```powershell
