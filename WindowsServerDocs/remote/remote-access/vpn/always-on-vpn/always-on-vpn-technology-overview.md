@@ -9,18 +9,18 @@ ms.author: pashort
 author: shortpatti
 ms.localizationpriority: medium
 ms.openlocfilehash: 31d0d5c12760fc627ce93972f4a70e85f61dd178
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404362"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78371898"
 ---
 # <a name="always-on-vpn-technology-overview"></a>Always On VPN 기술 개요
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-- [**선행** Always On VPN 개선 사항에 대 한 자세한 정보](always-on-vpn-enhancements.md)
-- [**그런** Always On VPN의 고급 기능에 대 한 자세한 정보](deploy/always-on-vpn-adv-options.md)
+- [**이전:** Always On VPN 개선 사항에 대 한 자세한 정보](always-on-vpn-enhancements.md)
+- [**다음:** Always On VPN의 고급 기능에 대 한 자세한 정보](deploy/always-on-vpn-adv-options.md)
 
 이 배포의 경우 Windows Server 2016를 실행 하는 새 원격 액세스 서버를 설치 하 고 배포를 위해 기존 인프라의 일부를 수정 해야 합니다.
 
@@ -84,7 +84,7 @@ NPS를 사용 하면 연결 요청 인증 및 권한 부여에 대 한 조직 �
 
 CA (인증 기관) 서버는 Active Directory 인증서 서비스를 실행 하는 인증 기관입니다. VPN 구성에는 Active Directory 기반 PKI (공개 키 인프라)가 필요 합니다.
 
-조직에서는 사람, 장치 또는 서비스의 id는 해당 공개 키에 바인딩하여 보안을 강화 하기 위해 AD CS를 사용할 수 있습니다. AD CS에는 인증서 등록 및 해지 다양 한 확장 가능한 환경에서에서 관리할 수 있는 기능이 포함 되어 있습니다. 자세한 내용은 참조 [Active Directory 인증서 서비스 개요](https://technet.microsoft.com/library/hh831740.aspx) 및 [공개 키 인프라 디자인 지침](https://social.technet.microsoft.com/wiki/contents/articles/2901.public-key-infrastructure-design-guidance.aspx)합니다.
+조직에서는 사람, 디바이스 또는 서비스의 id는 해당 공개 키에 바인딩하여 보안을 강화 하기 위해 AD CS를 사용할 수 있습니다. AD CS에는 인증서 등록 및 해지 다양 한 확장 가능한 환경에서에서 관리할 수 있는 기능이 포함 되어 있습니다. 자세한 내용은 참조 [Active Directory 인증서 서비스 개요](https://technet.microsoft.com/library/hh831740.aspx) 및 [공개 키 인프라 디자인 지침](https://social.technet.microsoft.com/wiki/contents/articles/2901.public-key-infrastructure-design-guidance.aspx)합니다.
 
 배포를 완료 하는 동안 CA에서 다음 인증서 템플릿을 구성 합니다.
 
@@ -122,11 +122,11 @@ CA (인증 기관) 서버는 Active Directory 인증서 서비스를 실행 하�
 
 3. 인증서 키를 컴퓨터 네트워크의 컴퓨터, 사용자 또는 장치 계정에 연결 하 여 인증 합니다.
 
-자세한 내용은 [AD CS 단계별 가이드: 2 단계 PKI 계층 구조](https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx)배포.
+자세한 내용은 [AD CS 단계별 가이드: 2 계층 PKI 계층 배포](https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx)를 참조 하세요.
 
 ## <a name="active-directory-domain-services-ad-ds"></a>AD DS(Active Directory 도메인 서비스)
 
-AD DS에서는 디렉터리 사용 응용 프로그램의 네트워크 리소스와 응용 프로그램별 데이터에 대한 정보를 저장하고 관리하는 분산 데이터베이스를 제공합니다. 관리자는 AD DS를 이용해 사용자, 컴퓨터 및 다른 장치와 같은 네트워크 요소를 계층적 포함 구조로 구성할 수 있습니다. 계층적 포함 구조에는 Active Directory 포리스트, 포리스트의 도메인 및 각 도메인의 OU(조직 구성 단위)가 포함되어 있습니다. AD DS를 실행하고 있는 서버를 도메인 컨트롤러라고 합니다.
+AD DS에서는 디렉터리 사용 애플리케이션의 네트워크 리소스와 애플리케이션별 데이터에 대한 정보를 저장하고 관리하는 분산 데이터베이스를 제공합니다. 관리자는 AD DS를 이용해 사용자, 컴퓨터 및 다른 디바이스와 같은 네트워크 요소를 계층적 포함 구조로 구성할 수 있습니다. 계층적 포함 구조에는 Active Directory 포리스트, 포리스트의 도메인 및 각 도메인의 OU(조직 구성 단위)가 포함되어 있습니다. AD DS를 실행하고 있는 서버를 도메인 컨트롤러라고 합니다.
 
 AD DS에는 사용자 자격 증명을 인증 하 고 VPN 연결 요청에 대 한 권한 부여를 평가 하기 위해 PEAP (Protected Extensible Authentication Protocol)에 필요한 사용자 계정, 컴퓨터 계정 및 계정 속성이 포함 되어 있습니다. AD DS를 배포 하는 방법에 대 한 자세한 내용은 Windows Server 2016 [Core 네트워크 가이드](../../../../networking/core-network-guide/Core-Network-Guide.md)를 참조 하세요.
 
@@ -144,7 +144,7 @@ AD DS에는 사용자 자격 증명을 인증 하 고 VPN 연결 요청에 대 �
 
 Active Directory 사용자 및 컴퓨터는 컴퓨터, 사용자 또는 보안 그룹을 같은 실제 엔터티를 나타내는 계정을 포함 하는 AD DS의 구성 요소입니다. 보안 그룹은 관리자가 단일 단위로 관리할 수 있는 사용자 또는 컴퓨터 계정의 모음입니다. 특정 그룹에 속하는 사용자 및 컴퓨터 계정을 그룹 구성원 이라고 합니다.
 
-Active Directory 사용자 및 컴퓨터의 사용자 계정에는 nps 네트워크 정책을 통해 액세스를 제어 하도록 사용자 계정의 **네트워크 액세스 권한** 속성이 설정 되지 않은 경우 권한 부여 프로세스 중 nps에서 평가 하는 전화 접속 속성이 있습니다.. 모든 사용자 계정에 대 한 기본 설정입니다. 그러나 경우에 따라이 설정에는 사용자가 VPN을 사용 하 여 연결 하지 못하도록 차단 하는 다른 구성이 있을 수 있습니다. 이러한 가능성을 방지 하기 위해 사용자 계정 전화 접속 속성을 무시 하도록 NPS 서버를 구성할 수 있습니다.
+Active Directory 사용자 및 컴퓨터의 사용자 계정에는 nps **네트워크 정책을 통해 액세스를 제어**하도록 사용자 계정의 **네트워크 액세스 권한** 속성이 설정 되지 않은 경우 권한 부여 프로세스 중 nps에서 평가 하는 전화 접속 속성이 있습니다. 모든 사용자 계정에 대 한 기본 설정입니다. 그러나 경우에 따라이 설정에는 사용자가 VPN을 사용 하 여 연결 하지 못하도록 차단 하는 다른 구성이 있을 수 있습니다. 이러한 가능성을 방지 하기 위해 사용자 계정 전화 접속 속성을 무시 하도록 NPS 서버를 구성할 수 있습니다.
 
 자세한 내용은 [사용자 계정 전화 접속을 무시 하도록 NPS 구성 속성](../../../../networking/technologies/nps/nps-np-configure.md#configure-nps-to-ignore-user-account-dial-in-properties)을 참조 하세요.
 
@@ -161,7 +161,7 @@ Active Directory 사용자 및 컴퓨터의 사용자 계정에는 nps 네트워
 
 Windows 10 VPN 클라이언트는 매우 쉽게 구성할 수 있으며 다양 한 옵션을 제공 합니다. 이 시나리오에서 사용 하는 특정 기능을 보다 잘 설명 하기 위해 표 1은이 배포에서 참조 하는 VPN 기능 범주 및 특정 구성을 식별 합니다. 이 배포의 뒷부분에 설명 된 VPNv2 CSP (구성 서비스 공급자)를 사용 하 여 이러한 기능에 대 한 개별 설정을 구성 합니다. 
 
-표 1. 이 배포에 설명 되어 있는 VPN 기능 및 구성
+테이블 1. 이 배포에 설명 되어 있는 VPN 기능 및 구성
 
 | VPN 기능     |     배포 시나리오 구성         |
 |-----------------|-----------------------------------------------|
@@ -192,20 +192,20 @@ Windows 10에서는 많은 Csp를 제공 하지만이 배포에서는 VPNv2 CSP�
 
 ## <a name="related-topics"></a>관련 항목
 
-- [Microsoft Azure 가상 컴퓨터에 대 한 Microsoft 서버 소프트웨어 지원](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines): 이 문서에서는 Microsoft Azure 가상 컴퓨터 환경 (infrastructure as a service)에서 Microsoft 서버 소프트웨어를 실행 하기 위한 지원 정책에 대해 설명 합니다.
+- [Microsoft Azure 가상 컴퓨터에 대 한 microsoft 서버 소프트웨어 지원](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines):이 문서에서는 Microsoft Azure 가상 컴퓨터 환경에서 microsoft 서버 소프트웨어를 실행 하는 데 필요한 지원 정책 (infrastructure as a service)에 대해 설명 합니다.
 
-- [원격 액세스](../../Remote-Access.md): 이 항목에서는 Windows Server 2016의 원격 액세스 서버 역할에 대 한 개요를 제공 합니다.
+- [원격 액세스](../../Remote-Access.md):이 항목에서는 Windows server 2016의 원격 액세스 서버 역할에 대 한 개요를 제공 합니다.
 
-- [Windows 10 VPN 기술 가이드](https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide): 이 가이드에서는 엔터프라이즈 VPN 솔루션의 Windows 10 클라이언트에 대해 결정 하는 결정과 배포를 구성 하는 방법을 안내 합니다. 이 가이드에서는 VPNv2 CSP (구성 서비스 공급자)를 참조 하 고 Microsoft Intune 및 Windows 10 용 VPN 프로필 템플릿을 사용 하 여 MDM (모바일 장치 관리) 구성 지침을 제공 합니다.
+- [Windows 10 Vpn 기술 가이드](https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide):이 가이드에서는 엔터프라이즈 vpn 솔루션의 windows 10 클라이언트에 대해 결정 하는 사항 및 배포를 구성 하는 방법을 안내 합니다. 이 가이드에서는 VPNv2 CSP (구성 서비스 공급자)를 참조 하 고 Microsoft Intune 및 Windows 10 용 VPN 프로필 템플릿을 사용 하 여 MDM (모바일 장치 관리) 구성 지침을 제공 합니다.
 
-- [핵심 네트워크 가이드](../../../../networking/core-network-guide/Core-Network-Guide.md): 이 가이드에서는 완벽 하 게 작동 하는 네트워크와 새 포리스트의 새 Active Directory 도메인에 필요한 핵심 구성 요소를 계획 하 고 배포 하는 방법에 대 한 지침을 제공 합니다.
+- [핵심 네트워크 가이드](../../../../networking/core-network-guide/Core-Network-Guide.md):이 가이드에서는 완벽 하 게 작동 하는 네트워크와 새 포리스트의 새 Active Directory 도메인에 필요한 핵심 구성 요소를 계획 하 고 배포 하는 방법에 대 한 지침을 제공 합니다.
 
-- [DNS (Domain Name System)](../../../../networking/dns/dns-top.md): 이 항목에서는 DNS (도메인 이름 시스템)에 대 한 개요를 제공 합니다. Windows Server 2016에서 DNS는 서버 관리자 또는 Windows PowerShell 명령을 사용 하 여 설치할 수 있는 서버 역할입니다. 새 Active Directory 포리스트 및 도메인을 설치 하는 경우 DNS 자동으로 설치 됩니다 Active directory 포리스트 및 도메인에 대 한 글로벌 카탈로그 서버입니다.
+- [Dns (Domain Name System)](../../../../networking/dns/dns-top.md):이 항목에서는 Dns (도메인 이름 시스템)의 개요를 제공 합니다. Windows Server 2016에서 DNS는 서버 관리자 또는 Windows PowerShell 명령을 사용 하 여 설치할 수 있는 서버 역할입니다. 새 Active Directory 포리스트 및 도메인을 설치 하는 경우 DNS 자동으로 설치 됩니다 Active directory 포리스트 및 도메인에 대 한 글로벌 카탈로그 서버입니다.
 
-- [Active Directory 인증서 서비스 개요](https://technet.microsoft.com/library/hh831740.aspx): 이 문서에서는 Windows Server® 2012의 Active Directory 인증서 서비스 (AD CS)에 대해 간략하게 설명 합니다. AD CS는 서버 역할로서 이를 이용하면 조직을 위해 PKI(공개 키 인프라)를 구축할 수 있고 공개 키 암호화, 디지털 인증서, 디지털 서명 기능을 제공할 수 있습니다.
+- [Active Directory 인증서 서비스 개요](https://technet.microsoft.com/library/hh831740.aspx):이 문서에서는 Windows Server® 2012에 있는 Active Directory 인증서 서비스 (AD CS)의 개요를 제공 합니다. AD CS는 서버 역할로서 이를 이용하면 조직을 위해 PKI(공개 키 인프라)를 구축할 수 있고 공개 키 암호화, 디지털 인증서, 디지털 서명 기능을 제공할 수 있습니다.
 
-- [공개 키 인프라 디자인 지침](https://social.technet.microsoft.com/wiki/contents/articles/2901.public-key-infrastructure-design-guidance.aspx):  이 wiki는 Pki (공개 키 인프라) 디자인에 대 한 지침을 제공 합니다. PKI 및 CA (인증 기관) 계층 구조를 구성 하기 전에 조직의 보안 정책 및 CPS (인증서 약관)를 알고 있어야 합니다.
+- [공개 키 인프라 디자인 지침](https://social.technet.microsoft.com/wiki/contents/articles/2901.public-key-infrastructure-design-guidance.aspx):이 Wiki는 Pki (공개 키 인프라) 디자인에 대 한 지침을 제공 합니다. PKI 및 CA (인증 기관) 계층 구조를 구성 하기 전에 조직의 보안 정책 및 CPS (인증서 약관)를 알고 있어야 합니다.
 
-- [AD CS 단계별 가이드: 2 단계 PKI 계층 구조](https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx)배포: 이 단계별 가이드에서는 랩 환경에서 AD CS (Active Directory® 인증서 서비스)의 기본 구성을 설정 하는 데 필요한 단계에 대해 설명 합니다. Windows Server® 2008 r 2의 AD CS는 공개 키 기술을 사용 하는 소프트웨어 보안 시스템에서 사용 되는 공개 키 인증서를 만들고 관리 하기 위한 사용자 지정 가능한 서비스를 제공 합니다.
+- [AD cs 단계별 가이드: 2 단계 PKI 계층 구조 배포](https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx):이 단계별 가이드에서는 랩 환경에서 ad CS (Active Directory® 인증서 서비스)의 기본 구성을 설정 하는 데 필요한 단계에 대해 설명 합니다. Windows Server® 2008 r 2의 AD CS는 공개 키 기술을 사용 하는 소프트웨어 보안 시스템에서 사용 되는 공개 키 인증서를 만들고 관리 하기 위한 사용자 지정 가능한 서비스를 제공 합니다.
 
-- [NPS (네트워크 정책 서버)](../../../../networking/technologies/nps/nps-top.md): 이 항목에서는 Windows Server 2016의 네트워크 정책 서버에 대 한 개요를 제공 합니다. 네트워크 정책 서버(NPS)를 사용하면 연결 요청 인증 및 권한 부여를 위해 조직 전체의 네트워크 액세스 정책을 생성하여 적용할 수 있습니다.
+- [NPS (네트워크 정책 서버)](../../../../networking/technologies/nps/nps-top.md):이 항목에서는 Windows Server 2016의 네트워크 정책 서버에 대 한 개요를 제공 합니다. 네트워크 정책 서버(NPS)를 사용하면 연결 요청 인증 및 권한 부여를 위해 조직 전체의 네트워크 액세스 정책을 생성하여 적용할 수 있습니다.
