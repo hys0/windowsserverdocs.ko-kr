@@ -13,17 +13,17 @@ author: nnamuhcs
 ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: 48eb7009215e484fb00e704c7b328340240321d2
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70865161"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78371231"
 ---
 # <a name="manage-devices-in-windows-server-essentials"></a>Windows Server Essentials에서 장치 관리
 
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
  
- 다음 섹션에서는 서버의 장치 관리 기능에 대해 설명하고 네트워크에서 장치를 설정 및 사용하는 방법을 설명합니다.  
+ 다음 섹션에서는 서버의 디바이스 관리 기능에 대해 설명하고 네트워크에서 디바이스를 설정 및 사용하는 방법을 설명합니다.  
   
 -   [대시보드를 사용 하 여 장치 관리](Manage-Devices-in-Windows-Server-Essentials.md#BKMK_1)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "70865161"
   
 -   선택한 컴퓨터에 대한 추가 정보가 있는 세부 정보 창  
   
--   컴퓨터 속성 및 경고 보기, 컴퓨터 백업 설정, 백업에서 파일 및 폴더 복원과 같은 일련의 장치 관리 작업이 포함된 작업 창  
+-   컴퓨터 속성 및 경고 보기, 컴퓨터 백업 설정, 백업에서 파일 및 폴더 복원과 같은 일련의 디바이스 관리 작업이 포함된 작업 창  
   
 #### <a name="to-view-the-status-of-network-computers"></a>네트워크 컴퓨터의 상태를 보려면  
   
@@ -127,17 +127,17 @@ ms.locfileid: "70865161"
   
 2.  탐색 모음에서 **장치**를 클릭합니다.  
   
-3.  Windows Server Essentials의 경우: 전역 **사용자 작업** 창에서 **그룹 정책 구현**을 참조하세요.  
+3.  Windows Server Essentials의 경우: 전역 **사용자 작업** 창에서 **그룹 정책 구현**을 클릭 합니다.  
   
-     Windows Server Essentials의 경우: 전역 **장치 작업** 창에서 **그룹 정책 구현**을 참조하세요.  
+     Windows Server Essentials의 경우: 전역 **장치 작업** 창에서 **그룹 정책 구현**을 클릭 합니다.  
   
 4.  그룹 정책 구현 마법사가 열립니다.  
   
 5.  마법사의 **폴더 리디렉션 그룹 정책 사용** 페이지에서 리디렉션할 사용자 폴더를 선택할 수 있습니다.  
   
-6.  마법사의 **보안 정책 설정 사용** 페이지에서 **Windows 업데이트**, **Windows Defender**및 **네트워크 방화벽**에 대한 그룹 정책 설정을 사용하도록 설정할 수 있습니다.  
+6.  마법사의 **보안 정책 설정 사용** 페이지에서 **Windows 업데이트**, **Windows Defender** 및 **네트워크 방화벽**에 대한 그룹 정책 설정을 사용하도록 설정할 수 있습니다.  
   
-7.  **마침** 을 클릭하여 그룹 정책 설정을 구현합니다.  
+7.  **마침**을 클릭하여 그룹 정책 설정을 구현합니다.  
   
 ##  <a name="BKMK_7"></a>원격 데스크톱 세션을 사용 하 여 네트워크 컴퓨터에 연결  
  사무실을 비울 때 Windows Server Essentials 네트워크 컴퓨터에 원격으로 액세스 하려면 웹 브라우저를 사용 하 여 조직의 원격 웹 액세스 웹 사이트에 로그온 하 고 컴퓨터 탭에서 컴퓨터 이름을 클릭 **합니다.**  
@@ -175,13 +175,13 @@ ms.locfileid: "70865161"
   
 1.  컴퓨터 목록에서 속성을 보거나 변경할 계정을 선택합니다.  
   
-2.  **Computername\> < 작업** 창에서 **컴퓨터 속성 보기**를 클릭 합니다. 컴퓨터에 대한 **속성** 페이지가 나타납니다.  
+2.  **< Computername\> 작업** 창에서 **컴퓨터 속성 보기**를 클릭 합니다. 컴퓨터에 대한 **속성** 페이지가 나타납니다.  
   
 3.  탭을 클릭하여 해당 컴퓨터에 대한 속성을 표시합니다.  
   
 4.  컴퓨터 속성의 모든 변경 사항을 저장하려면 **적용**을 클릭합니다.  
   
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
   
 -   [원격 웹 액세스 관리](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md)  
   
