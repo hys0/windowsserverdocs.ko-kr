@@ -10,11 +10,11 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
 ms.openlocfilehash: a0d32edd7ebc23fa724439710c6511642d9c49a3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407640"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78371494"
 ---
 # <a name="create-a-relying-party-trust"></a>신뢰 당사자 트러스트 추가
 
@@ -25,7 +25,7 @@ ms.locfileid: "71407640"
 
 AD FS 관리 스냅인을 사용 하 여 새 신뢰 당사자 트러스트를 추가 하려면\-수동으로 설정을 구성, 페더레이션 서버에서 다음 절차를 수행 합니다.  
 
-로컬 컴퓨터에서 이 절차를 완료하기 위해서는 최소한 **관리자** 또는 이와 동등한 자격이 있어야 합니다.  적절 한 계정을 사용 하는 방법에 대 한 세부 정보를 검토 하 고 그룹 구성원 자격 [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477)합니다.
+이 절차를 완료하려면 최소한 로컬 컴퓨터의 **Administrators** 구성원 자격 또는 동급의 권한이 필요합니다.  적절 한 계정을 사용 하는 방법에 대 한 세부 정보를 검토 하 고 그룹 구성원 자격 [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477)합니다.
   
 1. 서버 관리자에서 클릭 **도구**, 를 선택한 다음 **AD FS 관리**합니다.  
   
@@ -57,7 +57,7 @@ AD FS 관리 스냅인을 사용 하 여 새 신뢰 당사자 트러스트를 �
 9.  에 **액세스 제어 정책 선택** 정책을 선택 하 고 클릭 **다음**합니다.  액세스 제어 정책에 대 한 자세한 내용은 참조 [AD FS에서 액세스 제어 정책](Access-Control-Policies-in-AD-FS.md)합니다. 
 ![신뢰 당사자](media/Create-a-Relying-Party-Trust/addtrust9.PNG)
 
-10. **트러스트 추가 준비 완료** 페이지에서 설정을 검토한 후 **다음** 을 클릭하여 신뢰 당사자 트러스트 정보를 저장합니다.  
+10. **트러스트 추가 준비 완료** 페이지에서 설정을 검토한 후 **다음**을 클릭하여 신뢰 당사자 트러스트 정보를 저장합니다.  
    ![신뢰 당사자](media/Create-a-Relying-Party-Trust/addtrust10.PNG) 
 11. **Finish(마침)** 페이지에서 **Close(닫기)** 를 클릭합니다. 이 작업을 통해 **클레임 규칙 편집** 대화 상자가 자동으로 표시됩니다.  
 ![신뢰 당사자](media/Create-a-Relying-Party-Trust/addtrust11.PNG) 
@@ -69,7 +69,7 @@ AD FS 관리 스냅인을 사용 하 여 새 신뢰 당사자 트러스트를 �
 >[!NOTE]
 >일반적으로 https://myserver와 같이 정규화 되지 않은 호스트 이름으로 인증서를 사용 하는 것이 일반적 이지만 이러한 인증서에는 보안 값이 없으며 공격자가 페더레이션 메타 데이터를 게시 하는 페더레이션 서비스를 가장할 수 있습니다. 따라서 페더레이션 메타 데이터를 쿼리 하는 경우 https://myserver.contoso.com같은 정규화 된 도메인 이름만 사용 해야 합니다.
 
-로컬 컴퓨터에서 이 절차를 완료하기 위해서는 최소한 **관리자** 또는 이와 동등한 자격이 있어야 합니다.  적절 한 계정을 사용 하는 방법에 대 한 세부 정보를 검토 하 고 그룹 구성원 자격 [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477)합니다.
+이 절차를 완료하려면 최소한 로컬 컴퓨터의 **Administrators** 구성원 자격 또는 동급의 권한이 필요합니다.  적절 한 계정을 사용 하는 방법에 대 한 세부 정보를 검토 하 고 그룹 구성원 자격 [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477)합니다.
 
 
 1. 서버 관리자에서 클릭 **도구**, 를 선택한 다음 **AD FS 관리**합니다.  
@@ -89,10 +89,10 @@ AD FS 관리 스냅인을 사용 하 여 새 신뢰 당사자 트러스트를 �
 
 7. 트러스트 추가 페이지를 준비에서 설정을 검토 한 다음 클릭 **다음** 신뢰 당사자를 저장 하려면 정보를 신뢰 합니다.
 
-8. 마침 페이지에서 클릭 **닫기**합니다. 이 작업에는 클레임 규칙 편집 대화 상자를 사용 하 여 자동으로 표시 됩니다. 이 신뢰 당사자 트러스트에 대한 클레임 규칙을 추가하는 방법에 대한 자세한 내용은 추가 참조 섹션을 참조하세요.
+8. 마침 페이지에서 클릭 **닫기**합니다. 이 작업을 통해 클레임 규칙 편집 대화 상자가 자동으로 표시됩니다. 이 신뢰 당사자 트러스트에 대한 클레임 규칙을 추가하는 방법에 대한 자세한 내용은 추가 참조 섹션을 참조하세요.
 
 
 
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
 [AD FS 작업](../../ad-fs/AD-FS-2016-Operations.md) 
