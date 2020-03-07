@@ -10,11 +10,11 @@ author: cosmosdarwin
 ms.date: 06/28/2019
 ms.localizationpriority: medium
 ms.openlocfilehash: 52c600068d5dd447ff9faa7c40788664e222a83a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71366895"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78370745"
 ---
 # <a name="planning-volumes-in-storage-spaces-direct"></a>저장소 공간 다이렉트에서 볼륨 계획
 
@@ -41,7 +41,7 @@ ms.locfileid: "71366895"
 
 볼륨의 총 수를 다음으로 제한 하는 것이 좋습니다.
 
-| Windows Server 2016          | Windows Server 2019          |
+| Windows Server 2016          | 시작          |
 |------------------------------|------------------------------|
 | 클러스터 당 최대 32 볼륨 | 클러스터 당 최대 64 볼륨 |
 
@@ -128,7 +128,7 @@ ReFS가 아직 지원하지 않는 기능이 작업에 필요한 경우 대신 N
 
 각 볼륨의 크기를 다음으로 제한 하는 것이 좋습니다.
 
-| Windows Server 2016 | Windows Server 2019 |
+| Windows Server 2016 | 시작 |
 | ------------------- | ------------------- |
 | 최대 32 TB         | 최대 64 TB         |
 
@@ -151,7 +151,7 @@ ReFS가 아직 지원하지 않는 기능이 작업에 필요한 경우 대신 N
 
 서버당 하나의 용량 드라이브씩 최대 4개의 드라이브를 예약하는 것이 좋습니다. 사용자의 재량에 따라 더 예약할 수 있습니다. 하지만 이 최소 권장 사항은 드라이브의 장애 발생 이후 현재 위치의 즉각적인 병렬 복구를 보장합니다.
 
-![예약](media/plan-volumes/reserve.png)
+![reserve](media/plan-volumes/reserve.png)
 
 예를 들어 서버가 두 개 있고 1TB 용량 드라이브를 사용하는 경우 풀에서 2 x 1 = 2TB를 예약합니다. 서버가 세 개 있고 1TB 용량 드라이브를 사용하는 경우 3 x 1 = 3TB를 예약합니다. 서버가 네 개 있고 1TB 용량 드라이브를 사용하는 경우 4 x 1 = 4TB를 예약합니다.
 
@@ -188,14 +188,14 @@ ReFS가 아직 지원하지 않는 기능이 작업에 필요한 경우 대신 N
 
 네 개의 볼륨은 풀에서 사용할 수 있는 물리적 저장소 용량과 정확하게 일치합니다. 좋습니다!
 
-![예제](media/plan-volumes/example.png)
+![예](media/plan-volumes/example.png)
 
    >[!TIP]
    > 모든 볼륨을 즉시 만들 필요는 없습니다. 언제든 볼륨을 확장하거나 나중에 새로운 볼륨을 만들 수 있습니다.
 
 편의상 이 예제에서는 1TB = 1,000,000,000,000바이트의 의미로 10진수(밑10)를 사용합니다. 그러나 Windows의 저장 용량은 2진수(밑 2)로 표시됩니다. 예를 들어 2TB 드라이브는 Windows에서 각각 1.82TiB로 표시됩니다. 마찬가지로, 128TB 저장소 풀은 116.41TiB로 표시됩니다. 이는 예정된 동작입니다.
 
-## <a name="usage"></a>사용
+## <a name="usage"></a>사용법
 
 [저장소 공간 다이렉트에서 볼륨 만들기](create-volumes.md)를 참조하세요.
 
