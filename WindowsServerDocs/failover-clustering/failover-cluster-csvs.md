@@ -9,11 +9,11 @@ ms.technology: storage-failover-clustering
 ms.date: 06/07/2019
 ms.localizationpriority: medium
 ms.openlocfilehash: da0f541c34c7f8687822bec365364fdd406fa3c3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71369739"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78370715"
 ---
 # <a name="use-cluster-shared-volumes-in-a-failover-cluster"></a>장애 조치 (failover) 클러스터에서 클러스터 공유 볼륨 사용
 
@@ -79,7 +79,7 @@ CSV를 지원하는 네트워크를 구성할 때 고려할 사항은 다음과 
 - **파일 시스템 리디렉션** 리디렉션이 볼륨 단위로 발생합니다(예: CSV 볼륨이 리디렉션된 I/O 모드에 수동으로 배치되었을 때 백업 응용 프로그램에서 CSV 스냅샷을 만드는 경우).
 - **블록 리디렉션** 리디렉션이 파일 블록 수준에서 발생합니다(예: 볼륨의 저장소 연결이 끊어진 경우). 블록 리디렉션은 파일 시스템 리디렉션보다 훨씬 빠릅니다.
 
-Windows Server 2012 r 2에서는 노드 단위로 CSV 볼륨의 상태를 볼 수 있습니다. 예를 들어 I/O가 직접인지, 리디렉션되었는지 또는 CSV 볼륨을 사용할 수 없는지 여부 등을 확인할 수 있습니다. CSV 볼륨이 리디렉션된 I/O 모드에 있으면 이유를 확인할 수도 있습니다. Windows PowerShell cmdlet **Get-ClusterSharedVolumeState** 를 사용하여 이 정보를 볼 수 있습니다.
+Windows Server 2012 r 2에서는 노드 단위로 CSV 볼륨의 상태를 볼 수 있습니다. 예를 들어 I/O가 직접인지, 리디렉션되었는지 또는 CSV 볼륨을 사용할 수 없는지 여부 등을 확인할 수 있습니다. CSV 볼륨이 리디렉션된 I/O 모드에 있으면 이유를 확인할 수도 있습니다. Windows PowerShell cmdlet **Get-ClusterSharedVolumeState**을 사용하여 이 정보를 볼 수 있습니다.
 
 > [!NOTE]
 > * Windows Server 2012에서 CSV 디자인의 향상 된 기능으로 인해 CSV는 Windows Server 2008 r 2에서 발생 한 것 보다 직접 i/o 모드에서 더 많은 작업을 수행 합니다.
@@ -110,7 +110,7 @@ CSV에 대한 저장소 요구 사항은 저장소 공급업체에서 제공하�
 CSV를 사용하려면 노드가 다음 요구 사항을 충족해야 합니다.
 
 - **시스템 디스크의 드라이브 문자**. 모든 노드에서 시스템 디스크의 드라이브 문자는 동일해야 합니다.
-- **인증 프로토콜**. 모든 노드에서 NTLM 프로토콜을 사용하도록 설정해야 합니다. 이 기능은 기본적으로 사용됩니다.
+- **인증 프로토콜**. 모든 노드에서 NTLM 프로토콜을 사용하도록 설정해야 합니다. 기본적으로 사용하도록 설정됩니다.
 
 ## <a name="plan-to-use-csv-in-a-failover-cluster"></a>장애 조치(failover) 클러스터에서 CSV 사용 계획
 
@@ -163,7 +163,7 @@ CSV 기능은 장애 조치(failover) 클러스터링에서 기본적으로 사�
 
 #### <a name="windows-powershell-equivalent-commands-add-a-disk-to-available-storage"></a>Windows PowerShell 해당 명령 (사용 가능한 저장소에 디스크 추가)
 
-다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.
+다음 Windows PowerShell cmdlet은 이전 절차와 동일한 기능을 수행합니다. 서식 조건 때문에 각 cmdlet이 여러 줄로 자동 줄 바꿈되어 표시되더라도 한 줄에 입력합니다.
 
 다음 예제에서는 클러스터에 추가할 준비가 된 디스크를 식별하여 **사용 가능한 저장소** 그룹에 추가합니다.
 
@@ -183,7 +183,7 @@ Get-ClusterAvailableDisk | Add-ClusterDisk
 
 #### <a name="windows-powershell-equivalent-commands-add-a-disk-to-csv"></a>Windows PowerShell 해당 명령 (CSV에 디스크 추가)
 
-다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.
+다음 Windows PowerShell cmdlet은 이전 절차와 동일한 기능을 수행합니다. 서식 조건 때문에 각 cmdlet이 여러 줄로 자동 줄 바꿈되어 표시되더라도 한 줄에 입력합니다.
 
 다음 예제에서는 *사용 가능한 저장소*의 **Cluster Disk 1**을 로컬 클러스터의 CSV에 추가합니다.
 
@@ -207,12 +207,12 @@ CSV 캐시는 시스템 메모리(RAM)를 쓰기 캐시로 할당하여 버퍼�
 | BlockCacheSize                   | SharedVolumeBlockCacheSizeInMB       | 클러스터의 각 노드에서 CSV 캐시용으로 예약할 메모리의 크기(MB)를 정의할 수 있는 클러스터의 공용 속성입니다. 예를 들어 값이 512로 정의된 경우 512MB의 시스템 메모리가 각 노드에 예약됩니다. 많은 클러스터에서 권장 되는 값은 512입니다. 기본 설정은 0 (사용 안 함)입니다. |
 | EnableBlockCache                 | CsvEnableBlockCache                  | 클러스터 실제 디스크 리소스의 프라이빗 속성입니다. 이 속성을 통해 CSV에 추가된 개별 디스크에서 CSV 캐시를 사용하도록 설정할 수 있습니다. Windows Server 2012에서 기본 설정은 0 (사용 안 함)입니다. 디스크에서 CSV 캐시를 사용하려면 값을 1로 구성합니다. 기본적으로 Windows Server 2012 r 2에서는이 설정이 사용 됩니다. |
 
-**클러스터 CSV 볼륨 캐시**아래에 카운터를 추가하여 성능 모니터에서 CSV 캐시를 모니터링할 수 있습니다.
+**클러스터 CSV 볼륨 캐시** 아래에 카운터를 추가하여 성능 모니터에서 CSV 캐시를 모니터링할 수 있습니다.
 
 #### <a name="configure-the-csv-cache"></a>CSV 캐시 구성
 
 1. 관리자 권한으로 Windows PowerShell을 시작 합니다.
-2. 각 노드에서 예약할 *512* MB의 캐시를 정의하려면 다음을 입력합니다.
+2. 각 노드에서 예약할 *512*MB의 캐시를 정의하려면 다음을 입력합니다.
 
     - Windows Server 2012 R2 이상:
 
@@ -220,7 +220,7 @@ CSV 캐시는 시스템 메모리(RAM)를 쓰기 캐시로 할당하여 버퍼�
         (Get-Cluster).BlockCacheSize = 512  
         ```
 
-    - Windows Server 2012의 경우:
+    - Windows Server 2012의 경우:
 
         ```PowerShell
         (Get-Cluster).SharedVolumeBlockCacheSizeInMB = 512  
@@ -257,5 +257,5 @@ CSV 캐시는 시스템 메모리(RAM)를 쓰기 캐시로 할당하여 버퍼�
 
 ## <a name="more-information"></a>자세한 정보
 
-- [장애 조치(failover) 클러스터링](failover-clustering.md)
+- [장애 조치 클러스터링](failover-clustering.md)
 - [클러스터 된 저장소 공간 배포](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj822937(v%3dws.11)>)

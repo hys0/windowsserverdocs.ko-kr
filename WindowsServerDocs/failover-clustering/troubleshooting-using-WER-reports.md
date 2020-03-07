@@ -10,11 +10,11 @@ author: vpetter
 ms.date: 03/27/2018
 ms.localizationpriority: ''
 ms.openlocfilehash: 46c633af8cf82ac43d2a787a7193685d88ad0ecc
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71361013"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78371785"
 ---
 # <a name="troubleshooting-a-failover-cluster-using-windows-error-reporting"></a>Windows 오류 보고를 사용 하 여 장애 조치 (Failover) 클러스터 문제 해결 
 
@@ -255,7 +255,7 @@ DynamicSig[29].Name=FailureTime
 DynamicSig[29].Value=2017//12//12-22:38:05.485
 ```
 
-리소스를 온라인 상태로 만들지 못했기 때문에 덤프가 수집 되지 않았지만 Windows 오류 보고 보고서에서 로그를 수집 했습니다. Microsoft Message Analyzer를 사용 하 여 모든 **.evtx** 파일을 여는 경우 시스템 채널, 응용 프로그램 채널, 장애 조치 (failover) 클러스터 진단 채널 등을 통해 다음 쿼리를 사용 하 여 수집 된 모든 정보를 볼 수 있습니다. 일반 채널.
+리소스를 온라인 상태로 만들지 못했기 때문에 덤프가 수집 되지 않았지만 Windows 오류 보고 보고서에서 로그를 수집 했습니다. Microsoft Message Analyzer를 사용 하 여 모든 **.evtx** 파일을 여는 경우 시스템 채널, 응용 프로그램 채널, 장애 조치 (failover) 클러스터 진단 채널 및 몇 가지 다른 일반 채널을 통해 다음 쿼리를 사용 하 여 수집 된 모든 정보를 볼 수 있습니다.
 
 ```powershell
 PS C:\Windows\system32> (Get-ClusterResourceType -Name "Physical Disk").DumpLogQuery
@@ -302,7 +302,7 @@ PS C:\Windows\system32> (Get-ClusterResourceType -Name "Physical Disk").DumpLogQ
 
 ![공급자 별로 그룹화 된 로그](media/troubleshooting-using-WER-reports/logs-grouped-by-providers.png)
 
-디스크가 실패 한 이유를 확인 하려면 **FailoverClustering/진단** 및 **FailoverClustering/DiagnosticVerbose**아래의 이벤트로 이동 합니다. 다음 쿼리를 실행 합니다. **EventData ["LogString"]에는 "Cluster Disk 10"이 포함 되어**있습니다.  그러면 다음과 같은 출력을 제공 합니다.
+디스크가 실패 한 이유를 확인 하려면 **FailoverClustering/진단** 및 **FailoverClustering/DiagnosticVerbose**아래의 이벤트로 이동 합니다. 그런 후에 다음 쿼리를 실행 합니다. **EventData ["LogString"]에 "Cluster Disk 10"이 포함 되어**있습니다.  그러면 다음과 같은 출력을 제공 합니다.
 
 ![실행 중인 로그 쿼리 출력](media/troubleshooting-using-WER-reports/output-of-running-log-query.png)
 
@@ -400,7 +400,7 @@ DynamicSig[29].Value=10008
 
 덤프에서 수집 하는 서비스 및 프로세스 목록은 다음 속성에 의해 제어 됩니다. **PS C:\system32 > (Get-ClusterResourceType-Name "실제 디스크"). 로 호스트**
 
-중단이 발생 한 이유를 확인 하려면 dum 파일을 엽니다. 다음 쿼리를 실행 합니다. **EventData ["LogString"]에 "Cluster Disk 10"이 포함 되어 있습니다.**  그러면 다음과 같은 출력을 제공 합니다.
+중단이 발생 한 이유를 확인 하려면 dum 파일을 엽니다. 그런 후에 다음 쿼리를 실행 합니다. **EventData ["LogString"]에 "Cluster Disk 10"이 포함 되어 있으면** 다음과 같은 출력을 제공 합니다.
 
 ![실행 중인 로그 쿼리 2의 출력](media/troubleshooting-using-WER-reports/output-of-running-log-query-2.png)
 

@@ -14,11 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ms.openlocfilehash: bb5e56fe541a06b1100de2f25fc10f4db46b8d24
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407155"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78371739"
 ---
 # <a name="work-with-software-restriction-policies-rules"></a>소프트웨어 제한 정책 규칙 사용
 
@@ -108,7 +108,7 @@ ms.locfileid: "71407155"
 
 5.  **그룹 정책 개체 찾아보기**에서 해당 도메인, 사이트 또는 조직 구성 단위에 있는 그룹 정책 개체 (GPO)를 선택 하거나 새 개체 (GPO)를 만든 후 **마침**을 클릭 합니다.
 
-6.  **닫기**를 클릭한 다음 **확인**을 클릭합니다.
+6.  **닫기**, **확인**을 차례로 클릭합니다.
 
 7.  콘솔 트리에서 *Grouppolicyobject* [*ComputerName*] 정책/컴퓨터 구성/w i n d o w s 설정/보안 설정/로컬 정책/아래에 있는 **보안 옵션** 을 클릭 합니다.
 
@@ -164,7 +164,7 @@ ms.locfileid: "71407155"
 > 인증서 규칙을 적용하기 전에 이 절차를 수행해야 합니다.
 
 ### <a name="set-trusted-publisher-options"></a>신뢰할 수 있는 게시자 옵션 설정
-점점 더 많은 소프트웨어 게시자 및 응용 프로그램 개발자가 응용 프로그램의 원본을 신뢰할 수 있는지 확인하기 위해 소프트웨어 서명을 사용하고 있습니다. 그러나 대부분의 사용자는 설치한 응용 프로그램과 관련된 인증서 서명에 대해 이해하지 못하거나 거의 관심이 없습니다.
+점점 더 많은 소프트웨어 게시자 및 애플리케이션 개발자가 애플리케이션의 원본을 신뢰할 수 있는지 확인하기 위해 소프트웨어 서명을 사용하고 있습니다. 그러나 대부분의 사용자는 설치한 애플리케이션과 관련된 인증서 서명에 대해 이해하지 못하거나 거의 관심이 없습니다.
 
 인증서 경로 유효성 검사 정책의 **신뢰할 수 있는 게시자** 탭에 있는 정책 설정을 통해 관리자는 신뢰할 수 있는 게시자에서 제공된 것으로 허용할 수 있는 인증서를 제어할 수 있습니다.
 

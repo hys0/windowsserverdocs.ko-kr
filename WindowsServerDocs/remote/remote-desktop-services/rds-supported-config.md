@@ -14,11 +14,11 @@ ms.assetid: c925c7eb-6880-411f-8e59-bd0f57cc5fc3
 author: lizap
 manager: dongill
 ms.openlocfilehash: e501d550e5371c668f7e243f00106a0b79f694dc
-ms.sourcegitcommit: 214847318401cebdcb7f1924a731b4439c9d8a24
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74187879"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78370689"
 ---
 # <a name="supported-configurations-for-remote-desktop-services"></a>원격 데스크톱 서비스에 지원되는 구성
 
@@ -31,7 +31,7 @@ ms.locfileid: "74187879"
 > [!NOTE]
 > [Windows Server 2016의 시스템 요구 사항](../../get-started/system-requirements.md) 및 [Windows Server 2019의 시스템 요구 사항](../../get-started-19/sys-reqs-19.md)을 살펴보세요.
 
-## <a name="best-practices"></a>모범 사례
+## <a name="best-practices"></a>최선의 구현 방법
 
 - 원격 데스크톱 인프라(웹 액세스, 게이트웨이, 연결 브로커 및 라이선스 서버)에 Windows Server 2019를 사용합니다. Windows Server 2019는 이러한 구성 요소와 역호환됩니다. 즉, Windows Server 2016 또는 Windows Server 2012 R2 RD 세션 호스트는 2019 RD 연결 브로커에 연결할 수 있지만 그 반대로는 연결할 수 없습니다.
 
@@ -49,8 +49,8 @@ Windows Server 2016은 Windows Server 2016을 실행하는 RDSH(원격 데스크
 
 |HA의 연결 브로커 3개 이상|RDSH 또는 RDVH 2019|RDSH 또는 RDVH 2016|RDSH 또는 RDVH 2012 R2|
 |---|---|---|---|
- |Windows Server 2019 연결 브로커|지원함|지원함|지원함|
- |Windows Server 2016 연결 브로커|해당 없음|지원함|지원함|
+ |Windows Server 2019 연결 브로커|지원 여부|지원 여부|지원 여부|
+ |Windows Server 2016 연결 브로커|해당 없음|지원 여부|지원 여부|
  |Windows Server 2012 R2 연결 브로커|해당 없음|해당 없음|지원되지 않음|
 
 ## <a name="support-for-graphics-processing-unit-gpu-acceleration"></a>GPU(그래픽 처리 장치) 가속 지원
@@ -69,32 +69,32 @@ GPU 공급업체는 RDSH 시나리오에 대해 별도의 라이선싱 체계를
 
 다음 표는 다양한 버전의 RDSH 호스트에서 지원되는 시나리오를 보여줍니다.
 
-|기능|Windows Server 2008 R2|Windows Server 2012 R2|Windows Server 2016|Windows Server 2019|
+|기능|Windows Server 2008 R2|Windows Server 2012 R2|Windows Server 2016|시작|
 |---|---|---|---|---|
-|모든 RDP 세션에 하드웨어 GPU 사용|아니오|예|예|예|
-|H.264/AVC 하드웨어 인코딩(GPU에서 지원되는 경우)|아니오|아니오|예|예|
-|OS에 제공되는 여러 GPU 간의 부하 분산|아니오|아니오|아니오|예|
-|대역폭 사용을 최소화하기 위한 H.264/AVC 인코딩 최적화|아니오|아니오|아니오|예|
-|4K 해상도를 위한 H.264/AVC 지원|아니오|아니오|아니오|예|
+|모든 RDP 세션에 하드웨어 GPU 사용|아니요|예|예|예|
+|H.264/AVC 하드웨어 인코딩(GPU에서 지원되는 경우)|아니요|아니요|예|예|
+|OS에 제공되는 여러 GPU 간의 부하 분산|아니요|아니요|아니요|예|
+|대역폭 사용을 최소화하기 위한 H.264/AVC 인코딩 최적화|아니요|아니요|아니요|예|
+|4K 해상도를 위한 H.264/AVC 지원|아니요|아니요|아니요|예|
 
 ### <a name="vdi-support-for-gpus"></a>GPU를 위한 VDI 지원
 
 다음 표는 클라이언트 OS의 GPU 시나리오에 대한 지원을 보여줍니다.
 
-|기능|Windows 7 SP1|Windows 8.1|Windows 10|
+|기능|Windows 7 SP1|Windows 8.1|Windows 10|
 |---|---|---|---|
-|모든 RDP 세션에 하드웨어 GPU 사용|아니오|예|예|
-|H.264/AVC 하드웨어 인코딩(GPU에서 지원되는 경우)|아니오|아니오|Windows 10 1703 이상|
-|OS에 제공되는 여러 GPU 간의 부하 분산|아니오|아니오|Windows 10 1803 이상|
-|대역폭 사용을 최소화하기 위한 H.264/AVC 인코딩 최적화|아니오|아니오|Windows 10 1803 이상|
-|4K 해상도를 위한 H.264/AVC 지원|아니오|아니오|Windows 10 1803 이상|
+|모든 RDP 세션에 하드웨어 GPU 사용|아니요|예|예|
+|H.264/AVC 하드웨어 인코딩(GPU에서 지원되는 경우)|아니요|아니요|Windows 10 1703 이상|
+|OS에 제공되는 여러 GPU 간의 부하 분산|아니요|아니요|Windows 10 1803 이상|
+|대역폭 사용을 최소화하기 위한 H.264/AVC 인코딩 최적화|아니요|아니요|Windows 10 1803 이상|
+|4K 해상도를 위한 H.264/AVC 지원|아니요|아니요|Windows 10 1803 이상|
 
 ### <a name="remotefx-3d-video-adapter-vgpu-support"></a>RemoteFX 3D 비디오 어댑터(vGPU) 지원
 
 VM이 Windows Server 2012 R2 또는 Windows Server 2016에서 Hyper-V 게스트로 실행되는 경우 원격 데스크톱 서비스는 RemoteFX vGPU를 지원합니다. 다음 게스트 운영 체제는 RemoteFX vGPU를 지원합니다.
 
 - Windows 7 SP1
-- Windows 8.1
+- Windows 8.1
 - Windows 10 1703 이상
 - 단일 세션 배포에서만 Windows Server 2016
 - 단일 세션 배포에서만 Windows Server 2019

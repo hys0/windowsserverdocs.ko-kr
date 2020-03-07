@@ -13,19 +13,19 @@ author: nnamuhcs
 ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: 04d09574046474da5bee4437628ade9646cf58ca
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70866939"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78371228"
 ---
 # <a name="get-connected-in-windows-server-essentials"></a>Windows Server Essentials에서 연결
 
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
- Connector 소프트웨어를 사용하여 컴퓨터를 Windows Server Essentials에 연결할 수 있습니다. Connector 소프트웨어는 서버에 컴퓨터 연결 마법사를 사용하여 서버에 컴퓨터를 연결할 때 설치됩니다. **Http:/\>/< servername/connect**를 입력 하 여이 마법사를 시작할 수 있습니다. 여기서 **< servername\>**  은 서버 이름입니다.  
+ Connector 소프트웨어를 사용하여 컴퓨터를 Windows Server Essentials에 연결할 수 있습니다. Connector 소프트웨어는 서버에 컴퓨터 연결 마법사를 사용하여 서버에 컴퓨터를 연결할 때 설치됩니다. **Http://< servername\>/connect**를 입력 하 여이 마법사를 시작할 수 있습니다. 여기서 **< servername\>** 는 서버의 이름입니다.  
 
- 항목 내용  
+ 항목 내용:  
 
 
 -   [서버에 컴퓨터 연결 준비](Get-Connected-in-Windows-Server-Essentials.md#BKMK_A)  
@@ -90,7 +90,7 @@ ms.locfileid: "70866939"
 -   Windows Server Essentials 설치가 완료되고 서버가 실행 중입니다. Connector 소프트웨어에서는 서버와 통신할 수 없으면 설치를 종료합니다.  
 
 
--   클라이언트 컴퓨터에서 지원되는 운영 체제를 실행 중입니다. 자세한 내용은 [클라이언트 컴퓨터에 대해 지원 되는 운영 체제](Get-Connected-in-Windows-Server-Essentials.md#BKMK_4)를 참조하세요.
+-   클라이언트 컴퓨터에서 지원되는 운영 체제를 실행 중입니다. 자세한 내용은 [클라이언트 컴퓨터에 대해 지원되는 운영 체제](Get-Connected-in-Windows-Server-Essentials.md#BKMK_4)를 참조하세요.
 
 
 -   클라이언트 컴퓨터는 인터넷에 올바르게 연결되어 있어야 합니다.  
@@ -101,9 +101,9 @@ ms.locfileid: "70866939"
 
 -   클라이언트 컴퓨터가 다음 최소 시스템 요구 사항을 충족합니다.  
 
-    -   1.4GHz 이상 프로세서  
+    -   1.4GHz 이상의 프로세서  
 
-    -   RAM 1GB 이상  
+    -   1GB RAM 이상  
 
     -   사용 가능한 하드 드라이브 공간 1GB(설치 후에는 이 공간 부분이 사용 가능하게 됨)  
 
@@ -121,11 +121,11 @@ ms.locfileid: "70866939"
 
 > [!NOTE]
 > 
->  Windows server essentials 또는 Windows Server Essentials에 대 한 온-프레미스 클라이언트 배포에서는 컴퓨터를 Windows Server Essentials 도메인에 추가 하지 않고 서버에 연결할 수 있습니다. 이 방법은 모든 지원되는 클라이언트 운영 체제에서 사용할 수 있는 것은 아니며 그룹 정책 및 VPN(가상 사설망)과 같이 컴퓨터를 도메인에 연결해야 하는 기능은 사용할 수 없습니다. 요구 사항 및 지침은 [도메인에 가입 하지 않고 Windows Server Essentials 서버에 컴퓨터 연결](Get-Connected-in-Windows-Server-Essentials.md#BKMK_10)을 참조하세요.  
+>  Windows server essentials 또는 Windows Server Essentials에 대 한 온-프레미스 클라이언트 배포에서는 컴퓨터를 Windows Server Essentials 도메인에 추가 하지 않고 서버에 연결할 수 있습니다. 이 방법은 모든 지원되는 클라이언트 운영 체제에서 사용할 수 있는 것은 아니며 그룹 정책 및 VPN(가상 사설망)과 같이 컴퓨터를 도메인에 연결해야 하는 기능은 사용할 수 없습니다. 요구 사항과 지침에 대해서는 [도메인에 가입하지 않고 Windows Server Essentials 서버에 컴퓨터 연결](Get-Connected-in-Windows-Server-Essentials.md#BKMK_10)을 참조하세요.  
 
  Windows Server Essentials를 실행하는 서버에 컴퓨터를 연결하기 위한 단계별 지침은 [서버에 컴퓨터 연결](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)을 참조하세요.  
 
->  Windows server essentials 또는 Windows Server Essentials에 대 한 온-프레미스 클라이언트 배포에서는 컴퓨터를 Windows Server Essentials 도메인에 추가 하지 않고 서버에 연결할 수 있습니다. 이 방법은 모든 지원되는 클라이언트 운영 체제에서 사용할 수 있는 것은 아니며 그룹 정책 및 VPN(가상 사설망)과 같이 컴퓨터를 도메인에 연결해야 하는 기능은 사용할 수 없습니다. 요구 사항 및 지침은 [도메인에 가입 하지 않고 Windows Server Essentials 서버에 컴퓨터 연결](Get-Connected-in-Windows-Server-Essentials.md#BKMK_10)을 참조하세요.  
+>  Windows server essentials 또는 Windows Server Essentials에 대 한 온-프레미스 클라이언트 배포에서는 컴퓨터를 Windows Server Essentials 도메인에 추가 하지 않고 서버에 연결할 수 있습니다. 이 방법은 모든 지원되는 클라이언트 운영 체제에서 사용할 수 있는 것은 아니며 그룹 정책 및 VPN(가상 사설망)과 같이 컴퓨터를 도메인에 연결해야 하는 기능은 사용할 수 없습니다. 요구 사항과 지침에 대해서는 [도메인에 가입하지 않고 Windows Server Essentials 서버에 컴퓨터 연결](Get-Connected-in-Windows-Server-Essentials.md#BKMK_10)을 참조하세요.  
 
  Windows Server Essentials를 실행하는 서버에 컴퓨터를 연결하기 위한 단계별 지침은 [서버에 컴퓨터 연결](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)을 참조하세요.  
 
@@ -143,9 +143,9 @@ ms.locfileid: "70866939"
 
 -   컴퓨터가 다음 최소 시스템 요구 사항을 충족하는지 확인합니다.  
 
-    -   1.4GHz 이상 프로세서  
+    -   1.4GHz 이상의 프로세서  
 
-    -   RAM 1GB 이상  
+    -   1GB RAM 이상  
 
     -   사용 가능한 하드 드라이브 공간 1GB(설치 후에는 이 공간 부분이 사용 가능하게 됨)  
 
@@ -188,7 +188,7 @@ ms.locfileid: "70866939"
 
 - Windows 8.1 Pro  
 
-- Windows 8.1 Enterprise  
+- Windows 8.1 Enterprise  
 
   **Windows 10 운영 체제**  
 
@@ -282,7 +282,7 @@ ms.locfileid: "70866939"
 
     -   서버를 통해 백업 작업을 관리하는 서비스를 설치합니다.  
 
-    -   파일 및 폴더를 복원하는 동안 사용되는 가상 장치 드라이버를 설치합니다.  
+    -   파일 및 폴더를 복원하는 동안 사용되는 가상 디바이스 드라이버를 설치합니다.  
 
 -   상태 에이전트를 설치하여 문제를 감지하고 해당하는 경고 알림을 만듭니다.  
 
@@ -307,13 +307,13 @@ ms.locfileid: "70866939"
  서버 관리자는 대시보드의 **사용자** 탭에서 사용자 계정을 추가하여 네트워크 자격 증명을 만들 수 있습니다. 사용자 계정에 대한 자세한 내용은 [대시보드를 사용하여 사용자 계정 관리](../manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage8)를 참조하세요.  
 
 ###  <a name="BKMK_7"></a>서버 관리자 계정  
- Connector 소프트웨어를 설치하려면 네트워크 관리자 계정 이름 및 암호를 제공할 수 있어야 합니다. 네트워크 관리자 계정을 사용하면 사용자가 조직에 대한 LAN을 관리하고 스위치 및 라우터와 같은 네트워크 장치를 관리 및 유지 관리할 수 있습니다.  
+ Connector 소프트웨어를 설치하려면 네트워크 관리자 계정 이름 및 암호를 제공할 수 있어야 합니다. 네트워크 관리자 계정을 사용하면 사용자가 조직에 대한 LAN을 관리하고 스위치 및 라우터와 같은 네트워크 디바이스를 관리 및 유지 관리할 수 있습니다.  
 
  네트워크 관리자 계정을 사용하여 수행할 수 있는 작업은 다음과 같습니다.  
 
-- 네트워크로 연결된 응용 프로그램 및 기타 소프트웨어 설치  
+- 네트워크로 연결된 애플리케이션 및 기타 소프트웨어 설치  
 
-- 서버에서 저장소 관리  
+- 서버에서 스토리지 관리  
 
 - 소프트웨어 업데이트 배포  
 
@@ -396,9 +396,9 @@ ms.locfileid: "70866939"
 
 > [!NOTE]
 > 
->  Windows server essentials 또는 Windows Server Essentials에 대 한 온-프레미스 클라이언트 배포에서는 컴퓨터를 Windows Server Essentials 도메인에 추가 하지 않고 서버에 연결할 수 있습니다. 이 방법은 모든 지원되는 클라이언트 운영 체제에서 사용할 수 있는 것은 아니며 그룹 정책 및 VPN(가상 사설망)과 같이 컴퓨터를 도메인에 연결해야 하는 기능은 사용할 수 없습니다. 요구 사항 및 지침은 [도메인에 가입 하지 않고 Windows Server Essentials 서버에 컴퓨터 연결](Get-Connected-in-Windows-Server-Essentials.md#BKMK_10)을 참조하세요.  
+>  Windows server essentials 또는 Windows Server Essentials에 대 한 온-프레미스 클라이언트 배포에서는 컴퓨터를 Windows Server Essentials 도메인에 추가 하지 않고 서버에 연결할 수 있습니다. 이 방법은 모든 지원되는 클라이언트 운영 체제에서 사용할 수 있는 것은 아니며 그룹 정책 및 VPN(가상 사설망)과 같이 컴퓨터를 도메인에 연결해야 하는 기능은 사용할 수 없습니다. 요구 사항과 지침에 대해서는 [도메인에 가입하지 않고 Windows Server Essentials 서버에 컴퓨터 연결](Get-Connected-in-Windows-Server-Essentials.md#BKMK_10)을 참조하세요.  
 > 
->  Windows server essentials 또는 Windows Server Essentials에 대 한 온-프레미스 클라이언트 배포에서는 컴퓨터를 Windows Server Essentials 도메인에 추가 하지 않고 서버에 연결할 수 있습니다. 이 방법은 모든 지원되는 클라이언트 운영 체제에서 사용할 수 있는 것은 아니며 그룹 정책 및 VPN(가상 사설망)과 같이 컴퓨터를 도메인에 연결해야 하는 기능은 사용할 수 없습니다. 요구 사항 및 지침은 [도메인에 가입 하지 않고 Windows Server Essentials 서버에 컴퓨터 연결](Get-Connected-in-Windows-Server-Essentials.md#BKMK_10)을 참조하세요.  
+>  Windows server essentials 또는 Windows Server Essentials에 대 한 온-프레미스 클라이언트 배포에서는 컴퓨터를 Windows Server Essentials 도메인에 추가 하지 않고 서버에 연결할 수 있습니다. 이 방법은 모든 지원되는 클라이언트 운영 체제에서 사용할 수 있는 것은 아니며 그룹 정책 및 VPN(가상 사설망)과 같이 컴퓨터를 도메인에 연결해야 하는 기능은 사용할 수 없습니다. 요구 사항과 지침에 대해서는 [도메인에 가입하지 않고 Windows Server Essentials 서버에 컴퓨터 연결](Get-Connected-in-Windows-Server-Essentials.md#BKMK_10)을 참조하세요.  
 
 
 ##### <a name="to-connect-a-client-computer-to-the-server"></a>서버에 클라이언트 컴퓨터를 연결하려면  
@@ -410,10 +410,10 @@ ms.locfileid: "70866939"
 
 2.  Internet Explorer와 같은 인터넷 브라우저를 엽니다.  
 
-3.  주소 표시줄에 **http://\>< servername/Connect**를 입력 한 다음 enter 키를 누릅니다.  
+3.  주소 표시줄에 **http://< servername\>/Connect**를 입력 한 다음 enter 키를 누릅니다.  
 
     > [!NOTE]
-    >  컴퓨터가 Windows server Essentials 네트워크 외부의 원격 위치에 있는 경우 서버에 컴퓨터 연결 마법사를 실행 하려면 웹 브라우저의 주소 표시줄에 **http://\>< domainname/connect** 을 입력 합니다 (여기서 < 도메인\> 은 조직의 도메인 이름입니다. 도메인 이름 정보에 대해서는 네트워크 관리자에게 문의하세요.  
+    >  컴퓨터가 Windows Server Essentials 네트워크 외부의 원격 위치에 있는 경우 서버에 컴퓨터 연결 마법사를 실행 하려면 웹 브라우저의 주소 표시줄에 **http://< domainname\>/connect** 를 입력 합니다. 여기서 < 도메인\>은 조직의 도메인 이름입니다. 도메인 이름 정보에 대해서는 네트워크 관리자에게 문의하세요.  
 
 4.  **서버에 컴퓨터 연결** 페이지가 나타납니다. 다음 작업 중 하나를 수행합니다.  
 
@@ -446,7 +446,7 @@ ms.locfileid: "70866939"
 8.  컴퓨터를 네트워크에 연결한 후 새 사용자 이름과 암호를 사용하여 컴퓨터에 로그온합니다.  
 
     > [!NOTE]
-    >  Windows 8을 실행하는 컴퓨터를 서버에 연결한 후 네트워크 계정을 사용하여 처음 로그온하면 이전 사용자 계정에서 파일 및 응용 프로그램을 마이그레이션하는 방법에 대한 지침이 표시됩니다. **이전 사용자 계정에서 파일 및 응용 프로그램을 마이그레이션하는 방법** 페이지의 안내에 따라 모든 파일 및 응용 프로그램을 네트워크 사용자 계정으로 마이그레이션합니다.  
+    >  Windows 8을 실행하는 컴퓨터를 서버에 연결한 후 네트워크 계정을 사용하여 처음 로그온하면 이전 사용자 계정에서 파일 및 애플리케이션을 마이그레이션하는 방법에 대한 지침이 표시됩니다. **이전 사용자 계정에서 파일 및 응용 프로그램을 마이그레이션하는 방법** 페이지의 안내에 따라 모든 파일 및 응용 프로그램을 네트워크 사용자 계정으로 마이그레이션합니다.  
 
 9. 컴퓨터가 서버에 성공적으로 연결 되 면 커넥터 TrayApp 및 서버 대시보드에 대 한 바로 가기가 시작 메뉴에 표시 됩니다 .이 메뉴에는 다음과 같이 사용할 수 있습니다. 컴퓨터에서 Windows 8, Windows 8.1 또는 Windows 10, 대시보드 및 커넥터를 실행 하는 경우에 사용할 수 있습니다. TrayApp는 컴퓨터의 시작 화면에서 사용할 수 있습니다.):  
 
@@ -470,7 +470,7 @@ ms.locfileid: "70866939"
 
 -   오프-프레미스 컴퓨터를 서버에 연결하는 데 이 방법을 사용할 수 없습니다.  
 
-#### <a name="prerequisites"></a>사전 요구 사항  
+#### <a name="prerequisites"></a>필수 조건  
 
 -   컴퓨터는 로컬 네트워크에 실제로 연결되어 있어야 합니다.  
 
@@ -483,7 +483,7 @@ ms.locfileid: "70866939"
     -    Windows 7 Professional (x86 및 x64), Windows 7 Enterprise (x86 및 x64), Windows 7 Ultimate (x86 및 x64)  
 
 
--   컴퓨터는 Windows Server Essentials의 클라이언트 컴퓨터에 대한 모든 요구 사항을 충족해야 합니다. 자세한 내용은 [서버에 컴퓨터를 연결 하기 위한 필수 구성 요소](Get-Connected-in-Windows-Server-Essentials.md#BKMK_2)를 참조하세요.  
+-   컴퓨터는 Windows Server Essentials의 클라이언트 컴퓨터에 대한 모든 요구 사항을 충족해야 합니다. 자세한 내용은 [서버에 컴퓨터를 연결하기 위한 필수 구성 요소](Get-Connected-in-Windows-Server-Essentials.md#BKMK_2)를 참조하세요.  
 
 
 -   도메인에 가입하지 않고 연결을 사용하도록 설정하려면 로컬 관리자 그룹의 구성원인 계정으로 컴퓨터에 로그온해야 합니다.  
@@ -503,7 +503,7 @@ ms.locfileid: "70866939"
 
 2.  관리자 권한으로 명령 프롬프트를 엽니다.  
 
-    -   Windows 10에서 **시작** 단추를 클릭 하 고 **모든 앱** -> **Windows 시스템 도구** -> **명령 프롬프트**를 마우스 오른쪽 단추로 클릭 한 다음 **관리자 권한으로 실행**을 클릭 합니다.  
+    -   Windows 10에서 **시작** 단추를 클릭 하 고 **모든 앱** -> **Windows 시스템 도구** -> **명령 프롬프트**를 선택 하 고 명령 프롬프트를 마우스 오른쪽 단추로 클릭 한 다음 **관리자 권한으로 실행**을 클릭 합니다.  
 
     -   Windows 8의 **시작** 페이지에서 **command** 를 입력 한 다음 enter 키를 누릅니다. 결과에서 **명령 프롬프트**를 마우스 오른쪽 단추로 클릭하고 **관리자 권한으로 실행**을 클릭합니다.  
 
@@ -525,13 +525,13 @@ ms.locfileid: "70866939"
 
 1.  Windows Server Essentials 네트워크에 연결할 서버에 로그온합니다.  
 
-2.  인터넷 브라우저를 열고 주소 표시줄에 **http:/\>/< servername/Connect**를 입력 한 다음 enter 키를 누릅니다. 여기서 *< servername\>*  은 Windows server Essentials를 실행 하는 서버의 이름입니다.  
+2.  인터넷 브라우저를 열고 주소 표시줄에 **http://< servername\>/Connect**를 입력 합니다. 여기서 *< Servername\>* 은 Windows server Essentials를 실행 하는 서버의 이름입니다 .를 입력 한 다음 enter 키를 누릅니다.  
 
 3.  Windows Server Essentials 네트워크에 연결하려는 서버에서 Internet Explorer 보안 강화 구성이 사용하도록 설정되어 있으면 다음을 완료하고, 그렇지 않으면 이 단계를 건너뜁니다.  
 
     1.  차단 메시지를 허용하려면 **닫기**를 클릭합니다.  
 
-    2.  다음과 같이 신뢰할 수 있는 웹 사이트에 **http://\>< servername/Connect** 웹 사이트를 추가 합니다.  
+    2.  다음과 같이 신뢰할 수 있는 웹 사이트에 **http://< servername\>/Connect** 웹 사이트를 추가 합니다.  
 
         1.  브라우저 탐색 창에서 **도구**, **인터넷 옵션**을 차례로 클릭합니다.  
 
@@ -541,7 +541,7 @@ ms.locfileid: "70866939"
 
         4.  웹 사이트가 **영역에 웹 사이트 추가** 필드에 표시되어야 합니다. **추가**를 클릭합니다.  
 
-        5.  **닫기**를 클릭한 다음 **확인**을 클릭합니다.  
+        5.  **닫기**, **확인**을 차례로 클릭합니다.  
 
     3.  웹 페이지를 새로 고칩니다.  
 
@@ -582,10 +582,10 @@ ms.locfileid: "70866939"
 - 두 번째 서버의 그룹 정책 상태는 **해당 없음**으로 표시 됩니다.  
 
 ###  <a name="BKMK_11"></a>Connector 소프트웨어 설치  
- Windows Server Essentials의 Connector 소프트웨어는 서버에 컴퓨터 연결 마법사를 사용하여 서버에 컴퓨터를 연결할 때 설치됩니다. 웹 브라우저의 주소 표시줄에 **http://< ServerName\>/connect** 를 입력 하 여이 마법사를 시작할 수 있습니다. 여기서 *< servername\>*  은 서버 이름입니다.  
+ Windows Server Essentials의 Connector 소프트웨어는 서버에 컴퓨터 연결 마법사를 사용하여 서버에 컴퓨터를 연결할 때 설치됩니다. 웹 브라우저의 주소 표시줄에 **http://< ServerName\>/connect** 를 입력 하 여이 마법사를 시작할 수 있습니다. 여기서 *< servername\>* 은 서버의 이름입니다.  
 
 > [!NOTE]
->  컴퓨터가 원격 위치에 있는 경우 서버에 컴퓨터 연결 마법사를 실행 하려면 웹 브라우저의 주소 표시줄에 **http://< domainname\>/connect** 을 입력 합니다. 여기서 *< 도메인\>*  은의 도메인 이름입니다. 조직). 도메인 이름 정보에 대해서는 네트워크 관리자에게 문의하세요.  
+>  컴퓨터가 원격 위치에 있는 경우 서버에 컴퓨터 연결 마법사를 실행 하려면 웹 브라우저의 주소 표시줄에 **http://< domainname\>/connect** 를 입력 합니다. 여기서 *< 도메인\>* 은 조직의 도메인 이름입니다. 도메인 이름 정보에 대해서는 네트워크 관리자에게 문의하세요.  
 
  Connector 소프트웨어에서는 다음을 수행합니다.  
 
@@ -635,28 +635,28 @@ ms.locfileid: "70866939"
 > - Connector 소프트웨어를 제거해도 대시보드의 **장치** 탭에 표시되는 컴퓨터 목록에서 컴퓨터가 제거되지 않습니다. 대시보드에서 컴퓨터를 제거하려면 [서버에서 컴퓨터 제거](../manage/Manage-Devices-in-Windows-Server-Essentials.md#BKMK_3)를 참조하세요.  
 >   -   Connector 소프트웨어를 제거해도 서버에 매핑된 클라이언트 컴퓨터의 공유 폴더가 삭제되지 않습니다. 서버에 매핑된 공유 폴더를 수동으로 삭제해야 합니다.  
 > 
-> -   Connector 소프트웨어를 제거해도 컴퓨터가 원래 도메인에서 가입 해제되지 않습니다. 컴퓨터를 도메인에서 수동으로 가입 해제해야 합니다. 지침은 [Remove a computer from a Windows domain](Get-Connected-in-Windows-Server-Essentials.md#BKMK_8)항목을 참조하세요.  
+> -   Connector 소프트웨어를 제거해도 컴퓨터가 원래 도메인에서 가입 해제되지 않습니다. 컴퓨터를 도메인에서 수동으로 가입 해제해야 합니다. 자세한 내용은 [Windows 도메인에서 컴퓨터 제거](Get-Connected-in-Windows-Server-Essentials.md#BKMK_8)를 참조하세요.  
 
 
 ###  <a name="BKMK_14"></a>서버에서 컴퓨터 연결 끊기 또는 서버에 컴퓨터 다시 연결  
  서버에서 컴퓨터의 연결을 끊으려면 다음 단계를 완료해야 합니다.  
 
 
-1. 제어판을 사용하여 컴퓨터에서 Connector 소프트웨어를 제거합니다. 단계별 지침에 대해서는 [Connector 소프트웨어 제거](Get-Connected-in-Windows-Server-Essentials.md#BKMK_13)항목을 참조하세요.   
+1. 제어판을 사용하여 컴퓨터에서 Connector 소프트웨어를 제거합니다. 단계별 지침은 [Connector 소프트웨어 제거](Get-Connected-in-Windows-Server-Essentials.md#BKMK_13)를 참조하세요.   
 
 
 2. Windows Server Essentials 도메인에서 컴퓨터를 가입 해제하고 작업 그룹에 연결합니다. Windows를 작업 그룹에 연결하는 방법에 대한 단계별 지침은 [작업 그룹 연결 또는 만들기](https://windows.microsoft.com/windows7/Join-or-create-a-workgroup)를 참조하세요.  
 
-3. 대시보드를 사용하여 서버에서 컴퓨터를 제거합니다. 단계별 지침에 대해서는 [서버에서 컴퓨터 제거](../manage/Manage-Devices-in-Windows-Server-Essentials.md#BKMK_3)항목을 참조하세요.  
+3. 대시보드를 사용하여 서버에서 컴퓨터를 제거합니다. 단계별 지침은 [서버에서 컴퓨터 제거](../manage/Manage-Devices-in-Windows-Server-Essentials.md#BKMK_3)를 참조하세요.  
 
    이전에 Windows Server Essentials 서버 네트워크에서 연결이 끊어진 서버에 컴퓨터를 다시 연결하려면 다음 단계를 완료해야 합니다.  
 
 
-4. 제어판을 사용하여 컴퓨터에서 Connector 소프트웨어를 제거합니다. 단계별 지침에 대해서는 [Connector 소프트웨어 제거](Get-Connected-in-Windows-Server-Essentials.md#BKMK_13)항목을 참조하세요.  
+4. 제어판을 사용하여 컴퓨터에서 Connector 소프트웨어를 제거합니다. 단계별 지침은 [Connector 소프트웨어 제거](Get-Connected-in-Windows-Server-Essentials.md#BKMK_13)를 참조하세요.  
 
 5. Windows Server Essentials 도메인에서 컴퓨터를 가입 해제하고 작업 그룹에 연결합니다. Windows를 작업 그룹에 연결하는 방법에 대한 단계별 지침은 [작업 그룹 연결 또는 만들기](https://windows.microsoft.com/windows7/Join-or-create-a-workgroup)를 참조하세요.  
 
-6. 컴퓨터 연결 마법사를 사용하여 서버에 컴퓨터를 연결합니다. 단계별 지침에 대해서는 [서버에 컴퓨터 연결](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)항목을 참조하세요.  
+6. 컴퓨터 연결 마법사를 사용하여 서버에 컴퓨터를 연결합니다. 단계별 지침은 [서버에 컴퓨터 연결](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)을 참조하세요.  
 
 ###  <a name="BKMK_Sleep"></a>백업이 절전 모드 및 최대 절전 모드에서 작동 하는 방식  
  서버에 컴퓨터를 연결할 때 **Wake This Computer for Backup** 옵션을 선택하면 컴퓨터를 백업할 수 있도록 매일 백업 일정에 지정된 대로 컴퓨터의 절전 또는 최대 절전 모드가 자동으로 해제됩니다. 백업이 완료되면 전원 관리 설정에 따라 컴퓨터가 절전 또는 최대 절전 모드로 돌아갑니다. 이 옵션을 선택하지 않으면 컴퓨터가 절전 또는 최대 절전 모드에 있을 경우 컴퓨터가 백업되지 않습니다. 자세한 내용은 [클라이언트 백업 관리](../manage/Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md)를 참조 하세요.  
@@ -668,7 +668,7 @@ ms.locfileid: "70866939"
 
 -   [Mac 컴퓨터에서 실행 패드 사용](../manage/Overview-of-the-Launchpad-in-Windows-Server-Essentials.md#BKMK_Mac)  
 
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
 
 -   [서버에 컴퓨터 연결 문제 해결](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md)  
 
