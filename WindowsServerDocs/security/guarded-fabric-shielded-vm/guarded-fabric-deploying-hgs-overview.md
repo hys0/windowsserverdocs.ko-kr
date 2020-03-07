@@ -9,17 +9,17 @@ author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 01/14/2020
 ms.openlocfilehash: e66e7f365553f3aa106abbebf372492e0cc08386
-ms.sourcegitcommit: c5709021aa98abd075d7a8f912d4fd2263db8803
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2020
-ms.locfileid: "76265945"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78371469"
 ---
 # <a name="deploying-the-host-guardian-service"></a>호스트 보호자 서비스 배포 
 
 >적용 대상: Windows Server 2019, Windows Server (반기 채널), Windows Server 2016
 
-호스트 된 환경을 제공 하는 가장 중요 한 목표 중 하나는 환경에서 실행 되는 가상 컴퓨터의 보안을 보장 하는 것입니다. 클라우드 서비스 공급 기업 또는 엔터프라이즈 프라이빗 클라우드 관리자로서 보호된 패브릭을 사용하여 VM에 대한 더욱 안전한 환경을 제공할 수 있습니다. 보호된 패브릭은 하나의 HGS(호스트 보호 서비스)(일반적으로 3노드의 클러스터)에 하나 이상의 보호된 호스트 및 보호된 가상 컴퓨터(VM) 세트로 구성됩니다.
+호스트 된 환경을 제공 하는 가장 중요 한 목표 중 하나는 환경에서 실행 되는 가상 컴퓨터의 보안을 보장 하는 것입니다. 클라우드 서비스 공급자 또는 엔터프라이즈 사설 클라우드 관리자로서 보호된 패브릭을 사용하여 VM에 대한 더욱 안전한 환경을 제공할 수 있습니다. 보호된 패브릭은 하나의 HGS(호스트 보호 서비스)(일반적으로 3노드의 클러스터)에 하나 이상의 보호된 호스트 및 보호된 가상 컴퓨터(VM) 세트로 구성됩니다.
 
 ## <a name="video-deploying-a-guarded-fabric"></a>비디오: 보호 된 패브릭 배포 
 
