@@ -3,17 +3,17 @@ title: 저장소 마이그레이션 서비스의 알려진 문제
 description: Microsoft 지원에 대 한 로그를 수집 하는 방법과 같은 저장소 마이그레이션 서비스에 대 한 알려진 문제 및 문제 해결 지원.
 author: nedpyle
 ms.author: nedpyle
-manager: siroy
+manager: tiaascs
 ms.date: 02/10/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: 92742929e3826fca3cf87cb84341d3aecec0d55d
-ms.sourcegitcommit: 1c75e4b3f5895f9fa33efffd06822dca301d4835
+ms.openlocfilehash: a9759f0ea8835c8e07bcd298b75024e3ee29c9ed
+ms.sourcegitcommit: b5c12007b4c8fdad56076d4827790a79686596af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77517498"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856347"
 ---
 # <a name="storage-migration-service-known-issues"></a>저장소 마이그레이션 서비스의 알려진 문제
 
@@ -295,13 +295,15 @@ StorageMigrationService-프록시/디버그 로그를 검사 하면 다음이 �
 
 ## <a name="error-there-are-no-more-endpoints-available-from-the-endpoint-mapper-when-running-inventory-against-a-windows-server-2003-source-computer"></a>Windows Server 2003 원본 컴퓨터에 대해 인벤토리를 실행 하는 경우 "끝점 매퍼에서 사용할 수 있는 끝점이 더 이상 없습니다." 오류가 발생 합니다.
 
-[KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) 누적 업데이트 이상으로 패치 된 저장소 마이그레이션 서비스 orchestrator 서버를 사용 하 여 인벤토리를 실행 하려고 할 때 다음과 같은 오류가 표시 됩니다.
+Windows Server 2003 원본 컴퓨터에 대해 저장소 마이그레이션 서비스 orchestrator를 사용 하 여 인벤토리를 실행 하려고 할 때 다음과 같은 오류가 표시 됩니다.
 
     There are no more endpoints available from the endpoint mapper  
 
-이 문제를 해결 하려면 저장소 마이그레이션 서비스 오 케 스트레이 터 컴퓨터에서 KB4512534 누적 업데이트 및이를 대체 하는 업데이트를 임시로 제거 합니다. 마이그레이션이 완료 되 면 최신 누적 업데이트를 다시 설치 합니다.  
+이 문제는 [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818) 업데이트에서 해결 됩니다.
 
-경우에 따라 KB4512534를 제거 하거나 대체 하는 업데이트를 제거 하면 저장소 마이그레이션 서비스가 더 이상 시작 되지 않을 수 있습니다. 이 문제를 해결 하기 위해 Storage Migration Service 데이터베이스를 백업 및 삭제할 수 있습니다.
+## <a name="uninstalling-a-cumulutative-update-prevents-storage-migration-service-from-starting"></a>Cumulutative 업데이트를 제거 하면 저장소 마이그레이션 서비스를 시작할 수 없습니다.
+
+Windows Server 누적 업데이트를 제거 하면 저장소 마이그레이션 서비스가 시작 되지 않을 수 있습니다. 이 문제를 해결 하기 위해 Storage Migration Service 데이터베이스를 백업 및 삭제할 수 있습니다.
 
 1.  관리자가 저장소 마이그레이션 서비스 orchestrator 서버에서 관리자의 구성원 인 관리자 권한 cmd 프롬프트를 열고 다음을 실행 합니다.
 
@@ -343,7 +345,7 @@ Windows Server 2008 R2 클러스터 원본에서 잘라내기를 실행 하려�
 
 이 문제는 이전 버전의 Windows Server에서 API 누락으로 인해 발생 합니다. 현재 Windows Server 2008 및 Windows Server 2003 클러스터를 마이그레이션할 수 있는 방법은 없습니다. 인벤토리를 수행 하 고 Windows Server 2008 R2 클러스터에서 문제 없이 전송 한 다음 수동으로 클러스터의 원본 파일 서버 리소스 (netname 및 IP 주소)를 변경 하 고 대상 클러스터 netname 및 IP를 변경 하 여 수동으로 조치를 수행할 수 있습니다. 원본 원본과 일치 하는 주소입니다. 
 
-## <a name="cutover-hangs-on-38-mapping-network-interfaces-on-the-source-computer"></a>"38% 매핑 네트워크 인터페이스를 원본 컴퓨터에서 중단" 하는 방법 " 
+## <a name="cutover-hangs-on-38-mapping-network-interfaces-on-the-source-computer-when-using-dhcp"></a>"38% 매핑 네트워크 인터페이스를 원본 컴퓨터에서 중단" 하는 방법 " DHCP를 사용 하는 경우 
 
 원본 컴퓨터의 전환을 실행 하려고 할 때 하나 이상의 네트워크 인터페이스에서 새 정적 (DHCP 아님) IP 주소를 사용 하도록 원본 컴퓨터를 설정 하 고, 이동이 중단 되는 것은 "38% 원본에서 네트워크 인터페이스 매핑 ..." 단계에서 중단 됩니다. SMS 이벤트 로그에 다음과 같은 오류가 표시 됩니다.
 
@@ -372,13 +374,7 @@ Windows Server 2008 R2 클러스터 원본에서 잘라내기를 실행 하려�
 
 새 고정 IP 주소, 서브넷 및 게이트웨이를 지정 하는 경우에만 Windows 관리 센터 "구성에서 구성" 화면에서 "DHCP 사용"을 선택한 경우에는이 문제가 발생 하지 않습니다. 
 
-이 문제는 [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) 업데이트의 재발으로 인해 발생 합니다. 현재이 문제에 대 한 두 가지 해결 방법이 있습니다.
-
-  - 잘라내기 전에: 새 고정 IP 주소를 설정 하는 대신, "DHCP 사용"을 선택 하 고 DHCP 범위에서 해당 서브넷을 포함 하는지 확인 합니다. SMS는 원본 컴퓨터 인터페이스에서 DHCP를 사용 하도록 원본 컴퓨터를 구성 하 고,이는 정상적으로 진행 됩니다. 
-  
-  - 이미 중지 된 경우: 원본 컴퓨터에 로그온 하 고 DHCP 범위에서 해당 서브넷을 포함 하는지 확인 한 후 네트워크 인터페이스에서 DHCP를 사용 하도록 설정 합니다. 원본 컴퓨터가 DHCP 제공 IP 주소를 획득 하면 SMS는 정상적으로 중단을 계속 진행 합니다.
-  
-두 가지 해결 방법 모두, 잘라내기 완료 후 이전 원본 컴퓨터에서 고정 IP 주소를 설정 하 고 DHCP 사용을 중지 하는 것을 볼 수 있습니다.   
+이 문제는 [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818) 업데이트에서 해결 됩니다.
 
 ## <a name="slower-than-expected-re-transfer-performance"></a>예상 되는 다시 전송 성능 보다 느림
 
@@ -489,6 +485,48 @@ Windows Server 2008 R2 클러스터 원본에서 잘라내기를 실행 하려�
  - 방화벽에서 Orchestrator의 원본 서버에 대 한 원격 레지스트리 연결을 허용 하지 않습니다.
  - 원본 컴퓨터에 연결할 수 있는 원격 레지스트리 권한이 원본 마이그레이션 계정에 없습니다.
  - 원본 컴퓨터의 레지스트리 내에서 "HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows NT\CurrentVersion" 또는 "HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Services\에 있는 원본 마이그레이션 계정에 읽기 권한이 없습니다. LanmanServer
+ 
+ ## <a name="cutover-hangs-on-38-mapping-network-interfaces-on-the-source-computer"></a>"38% 매핑 네트워크 인터페이스를 원본 컴퓨터에서 중단" 하는 방법 " 
+
+원본 컴퓨터에 대 한 잘라내기를 실행 하려고 할 때 잘라내기는 "38% 원본에서의 네트워크 인터페이스 매핑 ..." 단계에서 중단 됩니다. SMS 이벤트 로그에 다음과 같은 오류가 표시 됩니다.
+
+    Log Name:      Microsoft-Windows-StorageMigrationService-Proxy/Admin
+    Source:        Microsoft-Windows-StorageMigrationService-Proxy
+    Date:          1/11/2020 8:51:14 AM
+    Event ID:      20505
+    Task Category: None
+    Level:         Error
+    Keywords:      
+    User:          NETWORK SERVICE
+    Computer:      nedwardo.contosocom
+    Description:
+    Couldn't establish a CIM session with the computer.
+
+    Computer: 172.16.10.37
+    User Name: nedwardo\MsftSmsStorMigratSvc
+    Error: 40970
+    Error Message: Unknown error (0xa00a)
+
+    Guidance: Confirm that the Netlogon service on the computer is reachable through RPC and that the credentials provided are correct.
+
+이 문제는 원본 컴퓨터에서 다음 레지스트리 값을 설정 하는 그룹 정책에 의해 발생 합니다.
+
+ "HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System LocalAccountTokenFilterPolicy = 0"
+ 
+이 설정은 표준 그룹 정책의 일부가 아니므로 [Microsoft Security 준수 도구 키트](https://www.microsoft.com/download/details.aspx?id=55319)를 사용 하 여 구성 된 추가 기능입니다.
+ 
+ - Windows Server 2012 R2: "컴퓨터 구성 \ Templates\SCM: 네트워크 로그온 시 로컬 계정에 해시 Mitigations\Apply UAC 제한 사항 전달"
+ - Widows Server 2016: "Computer Templates\MS Security Guide\Apply network 로그온의 로컬 계정에 대 한 UAC 제한 사항"
+ 
+사용자 지정 레지스트리 설정을 사용 하 여 그룹 정책 기본 설정을 사용 하 여 설정할 수도 있습니다. GPRESULT 도구를 사용 하 여이 설정을 원본 컴퓨터에 적용 하는 정책을 확인할 수 있습니다.
+
+Storage Migration Service는 중지 프로세스의 일부로 일시적으로 [LocalAccountTokenFilterPolicy](https://support.microsoft.com/help/951016/description-of-user-account-control-and-remote-restrictions-in-windows) 를 사용 하도록 설정 하 고 완료 되 면 제거 합니다. 그룹 정책 충돌 하는 GPO (그룹 정책 개체)를 적용 하면 저장소 마이그레이션 서비스를 재정의 하 여 이동 하지 않습니다.
+
+이 문제를 해결 하려면 다음 옵션 중 하나를 사용 합니다.
+
+1. 이 충돌 하는 GPO를 적용 하는 Active Directory OU에서 원본 컴퓨터를 임시로 이동 합니다. 
+2. 이 충돌 정책을 적용 하는 GPO를 일시적으로 사용 하지 않도록 설정 합니다.
+3. 이 설정을 사용 안 함으로 설정 하 고 원본 서버의 특정 OU에 적용 되는 새 GPO를 일시적으로 만들어 다른 Gpo 보다 우선 순위가 높습니다.
 
 ## <a name="see-also"></a>참고 항목
 

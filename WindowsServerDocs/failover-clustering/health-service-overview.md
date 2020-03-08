@@ -9,11 +9,11 @@ ms.assetid: 5bc71e71-920e-454f-8195-afebd2a23725
 author: cosmosdarwin
 ms.date: 02/09/2018
 ms.openlocfilehash: 158681e2038e3d8015933771d06d3bfb24d31586
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.sourcegitcommit: b5c12007b4c8fdad56076d4827790a79686596af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75948475"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865402"
 ---
 # <a name="health-service-in-windows-server"></a>Windows Server의 상태 관리 서비스
 
@@ -21,19 +21,19 @@ ms.locfileid: "75948475"
 
 상태 관리 서비스는 스토리지 공간 다이렉트를 실행 하는 클러스터에 대 한 일상적인 모니터링 및 운영 환경을 개선 하는 Windows Server 2016의 새로운 기능입니다.
 
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>필수 조건  
 
-상태 관리 서비스는 스토리지 공간 다이렉트에서 기본적으로 사용됩니다. 설정하거나 시작하기 위해 필요한 추가 작업이 없습니다. 스토리지 공간 다이렉트에 대 한 자세한 내용은 [Windows Server 2016의 스토리지 공간 다이렉트](../storage/storage-spaces/storage-spaces-direct-overview.md)를 참조 하세요.  
+상태 관리 서비스는 저장소 공간 다이렉트에서 기본적으로 사용됩니다. 설정하거나 시작하기 위해 필요한 추가 작업이 없습니다. 스토리지 공간 다이렉트에 대 한 자세한 내용은 [Windows Server 2016의 스토리지 공간 다이렉트](../storage/storage-spaces/storage-spaces-direct-overview.md)를 참조 하세요.  
 
-## <a name="reports"></a>보고
+## <a name="reports"></a>보고서
 
 [상태 관리 서비스 보고서](health-service-reports.md)를 참조 하세요.
 
-## <a name="faults"></a>오류
+## <a name="faults"></a>폴트
 
 [상태 관리 서비스 오류](health-service-faults.md)를 참조 하세요.
 
-## <a name="actions"></a>조치
+## <a name="actions"></a>작업
 
 [상태 관리 서비스 작업](health-service-actions.md)을 참조 하세요.
 
@@ -56,7 +56,7 @@ ms.locfileid: "75948475"
 -   응답 없음: 실제 디스크에서 1시간 이내에 5.0초 이상의 대기 시간이 3번 이상 발생한 경우입니다.  
 
 >[!NOTE]
-> 여러 실제 디스크에 대한 연결이 한 번에 끊어졌거나 전체 노드 또는 스토리지 엔클로저에 대한 연결이 끊어진 경우 이러한 디스크는 근본 문제가 아니므로 상태 관리 서비스에서 이러한 디스크를 사용 중지하지 *않습니다*.  
+> 여러 실제 디스크에 대한 연결이 한 번에 끊어졌거나 전체 노드 또는 저장소 엔클로저에 대한 연결이 끊어진 경우 이러한 디스크는 근본 문제가 아니므로 상태 관리 서비스에서 이러한 디스크를 사용 중지하지 *않습니다*.  
 
 사용 중지된 디스크가 다른 여러 실제 디스크의 캐시 역할을 하는 경우 다른 캐시 디스크에 자동으로 다시 할당됩니다(사용 가능한 경우). 사용자 작업이 필요하지 않습니다.  
 
@@ -82,7 +82,7 @@ ms.locfileid: "75948475"
 
 교체 디스크가 삽입 되 면 지원 되는 구성 요소 문서에 대해 확인 됩니다 (다음 섹션 참조).
 
-#### <a name="pooling"></a>풀링  
+#### <a name="pooling"></a>Pooling  
 
 허용되는 경우 대체 디스크는 이전 디스크의 풀에 자동으로 대체되므로 바로 사용할 수 있습니다. 이때 시스템은 완전한 상태의 초기 상태로 되돌아가므로 오류가 사라집니다.  
 
@@ -90,7 +90,7 @@ ms.locfileid: "75948475"
 
 상태 관리 서비스는 관리자 또는 솔루션 공급 업체에서 제공 하는 지원 되는 구성 요소 문서에 스토리지 공간 다이렉트에 사용 되는 구성 요소를 제한 하는 적용 메커니즘을 제공 합니다. 이를 통해 사용자 또는 다른 사람이 실수로 지원되지 않는 하드웨어를 사용하는 것을 방지할 수 있으며, 이는 보증 또는 지원 계약을 준수하는 데 도움이 될 수 있습니다. 이 기능은 현재 Ssd, Hdd 및 NVMe 드라이브를 비롯 한 실제 디스크 장치로 제한 됩니다. 지원 되는 구성 요소 문서는 모델, 제조업체 (선택 사항) 및 펌웨어 버전 (선택 사항)을 제한할 수 있습니다.
 
-### <a name="usage"></a>사용 패턴  
+### <a name="usage"></a>사용법  
 
 지원 되는 구성 요소 문서에서는 XML로 구성 된 구문을 사용 합니다. 사용 가능한 [Visual Studio Code](https://code.visualstudio.com/) 또는 메모장과 같은 원하는 텍스트 편집기를 사용 하 여 저장 하 고 다시 사용할 수 있는 XML 문서를 만드는 것이 좋습니다.
 
@@ -105,7 +105,7 @@ ms.locfileid: "75948475"
 >[!IMPORTANT]
 > 지원 되는 구성 요소 문서는 이미 풀링 되어 사용 중인 드라이브에 소급 적용 되지 않습니다.  
 
-#### <a name="example"></a>예
+#### <a name="example"></a>예제
 
 ```XML
 <Components>
