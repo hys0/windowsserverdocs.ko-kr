@@ -9,15 +9,15 @@ ms.localizationpriority: medium
 ms.date: 12/02/2019
 ms.prod: windows-server
 ms.openlocfilehash: 4ce42420430e9a12dd6123ec18c9ded25abc97bb
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
-ms.translationtype: HT
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75949968"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78371693"
 ---
 # <a name="windows-admin-center-frequently-asked-questions"></a>Windows Admin Center 질문과 대답
 
-> 적용 대상: Windows Admin Center, Windows Admin Center 미리 보기
+> 적용 대상: Windows 관리 센터, Windows 관리 센터 미리 보기
 
 다음은 Windows Admin Center에 대한 가장 일반적인 질문에 대한 답변입니다.
 
@@ -37,11 +37,11 @@ Windows Admin Center는 Windows 이외에 추가 비용이 들지 않습니다. 
 
 ## <a name="what-versions-of-windows-server-can-i-manage-with-windows-admin-center"></a>Windows Admin Center를 통해 관리할 수 있는 Windows Server 버전은 무엇입니까?
 
-Windows Admin Center는 Windows Server 2019 릴리스의 주요 테마, 특히 하이브리드 클라우드 시나리오 및 하이퍼 컨버지드 인프라 관리를 사용하도록 Windows Server 2019에 최적화되어 있습니다. Windows Admin Center는 Windows Server 2019와 가장 잘 작동하지만 고객이 이미 사용하는 다양한 버전 관리를 지원합니다. Windows Server 2012 이상은 완전히 지원됩니다. Windows Server 2008 R2를 관리하는 제한된 기능도 있습니다.
+Windows Admin Center는 Windows Server 2019 릴리스의 주요 테마, 특히 하이브리드 클라우드 시나리오 및 하이퍼 컨버지드 인프라 관리를 사용하도록 Windows Server 2019에 최적화되어 있습니다. Windows 관리 센터는 windows Server 2019에서 가장 잘 작동 하지만 고객이 이미 사용 하 고 있는 다양 한 버전의 관리를 지원 합니다. Windows Server 2012 이상이 완전히 지원 됩니다. Windows Server 2008 R2를 관리하는 제한된 기능도 있습니다.
 
 ## <a name="is-windows-admin-center-a-complete-replacement-for-all-traditional-in-box-and-rsat-tools"></a>Windows Admin Center가 모든 기존의 기본 제공 및 RSAT 도구를 대체할 수 있나요?
 
-아니요. Windows Admin Center는 여러 일반적인 시나리오를 관리할 수는 있지만 기존의 모든 MMC(Microsoft Management Console) 도구를 완전히 대신하지 않습니다. Windows Admin Center에 포함된 도구에 대한 자세한 정보는 설명서에 나와 있는 [서버 관리](../use/manage-servers.md)를 더 읽어 보십시오. Windows Admin Center는 해당 서버 관리자 솔루션에서 다음과 같은 주요 기능이 있습니다.
+No. Windows Admin Center는 여러 일반적인 시나리오를 관리할 수는 있지만 기존의 모든 MMC(Microsoft Management Console) 도구를 완전히 대신하지 않습니다. Windows Admin Center에 포함된 도구에 대한 자세한 정보는 설명서에 나와 있는 [서버 관리](../use/manage-servers.md)를 더 읽어 보십시오. Windows Admin Center는 해당 서버 관리자 솔루션에서 다음과 같은 주요 기능이 있습니다.
 
 * 리소스 및 리소스 사용률 표시
 * 인증서 관리
@@ -94,7 +94,7 @@ Windows Admin Center는 이제 Windows Server 2008 R2를 관리하는 **제한�
 
 ## <a name="which-web-browsers-are-supported-by-windows-admin-center"></a>Windows Admin Center는 어떤 웹 브라우저를 지원하나요?
 
-최신 버전의 Microsoft Edge(Windows 10 버전 1709 이상), Google Chrome 및 [Microsoft Edge Insider](https://microsoftedgeinsider.com)는 Windows 10에서 테스트되어 지원됩니다. [브라우저 관련 알려진 문제를 확인하세요](../support/known-issues.md#browser-specific-issues). 다른 최신 웹 브라우저나 다른 플랫폼은 현재 Microsoft의 테스트 매트릭스에 포함되지 않으므로 공식적으로 지원되지 않습니다. 
+최신 버전의 Microsoft Edge(Windows 10 버전 1709 이상), Google Chrome 및 [Microsoft Edge Insider](https://microsoftedgeinsider.com)는 Windows 10에서 테스트되어 지원됩니다. [브라우저 관련 알려진 문제를 확인하세요](../support/known-issues.md#browser-specific-issues). 다른 최신 웹 브라우저나 다른 플랫폼은 현재 Microsoft의 테스트 매트릭스에 포함되지 않으므로 공식적으로 지원되지 않습니다.
 
 ## <a name="how-does-windows-admin-center-handle-security"></a>Windows Admin Center가 보안을 어떻게 처리합니까?
 
@@ -131,7 +131,7 @@ Windows Admin Center에는 누구나 직접 확장 프로그램을 작성할 수
 
 ## <a name="does-windows-admin-center-require-system-center"></a>Windows Admin Center에 System Center가 필요합니까?
 
-아니요. Windows Admin Center는 System Center를 보완하지만 System Center가 필요하지는 않습니다. [Windows Admin Center 및 System Center에 대해 자세히 알아보세요](related-management.md#system-center).
+No. Windows Admin Center는 System Center를 보완하지만 System Center가 필요하지는 않습니다. [Windows Admin Center 및 System Center에 대해 자세히 알아보세요](related-management.md#system-center).
 
 ## <a name="can-windows-admin-center-replace-system-center-virtual-machine-manager-scvmm"></a>Windows Admin Center가 SCVMM(System Center Virtual Machine Manager)을 대체할 수 있습니까?
 

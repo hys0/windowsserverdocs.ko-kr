@@ -8,15 +8,15 @@ author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
 ms.openlocfilehash: ace6eb30ae6df2dc29aacc05eb7852e03145df4f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386864"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78370657"
 ---
 # <a name="guarded-fabric-and-shielded-vms-overview"></a>보호된 패브릭 및 보호된 VM 개요
 
->적용 대상: Windows server 2019, Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server 2019, Windows Server (반기 채널), Windows Server 2016
 
 ## <a name="overview-of-the-guarded-fabric"></a>보호된 패브릭 개요
 
@@ -34,7 +34,7 @@ ms.locfileid: "71386864"
 
 ![보호된 호스트 패브릭](../media/Guarded-Fabric-Shielded-VM/Guarded-Host-Overview-Diagram.png)
 
-## <a name="video-introduction-to-shielded-virtual-machines"></a>비디오: 차폐 가상 컴퓨터 소개 
+## <a name="video-introduction-to-shielded-virtual-machines"></a>비디오: 차폐 가상 머신 소개 
 
 <iframe src="https://channel9.msdn.com/Shows/Mechanics/Introduction-to-Shielded-Virtual-Machines-in-Windows-Server-2016/player" width="650" height="440" allowFullScreen frameBorder="0"></iframe>
 
@@ -49,7 +49,7 @@ HGS는 보호 된 패브릭에 대해 다양 한 증명 모드를 지원 합니�
 
 | **호스트에 대해 선택 하는 증명 모드**                                            | **호스트 보증** |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|**TPM에서 신뢰할 수 있는 증명:** 는 가장 강력한 보호 기능을 제공 하지만 더 많은 구성 단계가 필요 합니다. 호스트 하드웨어 및 펌웨어는 보안 부팅이 사용 하도록 설정 된 TPM 2.0 및 UEFI 2.3.1을 포함 해야 합니다. | 보호 된 호스트는 해당 TPM id, 측정 된 부팅 시퀀스 및 코드 무결성 정책에 따라 승인 된 코드만 실행 되도록 승인 됩니다.| 
+|**TPM에서 신뢰할 수 있는 증명:** 가능한 가장 강력한 보호를 제공하지만 추가 구성 단계가 필요합니다. 호스트 하드웨어 및 펌웨어는 보안 부팅이 사용 하도록 설정 된 TPM 2.0 및 UEFI 2.3.1을 포함 해야 합니다. | 보호 된 호스트는 해당 TPM id, 측정 된 부팅 시퀀스 및 코드 무결성 정책에 따라 승인 된 코드만 실행 되도록 승인 됩니다.| 
 | **호스트 키 증명:** TPM 2.0을 사용할 수 없는 기존 호스트 하드웨어를 지원 하기 위한 것입니다. 필요한 구성 단계가 적고 일반적인 서버 하드웨어와 호환됩니다. | 보호 된 호스트는 키의 소유에 따라 승인 됩니다. | 
 
 **관리자가 신뢰할 수 있는 증명** 이라는 다른 모드는 Windows Server 2019부터 사용 되지 않습니다. 이 모드는 지정 된 Active Directory Domain Services (AD DS) 보안 그룹의 보호 된 호스트 멤버 자격을 기반으로 합니다. 호스트 키 증명은 유사한 호스트 id를 제공 하며 설정 하기가 더 쉽습니다. 
@@ -99,7 +99,7 @@ HGS는 보호된 VM을 만드는 방법과 함께 다음 보증을 제공합니�
 
 다음 표에는 암호화 지원 및 보호 된 Vm 간의 차이점이 요약 되어 있습니다.
 
-| 기능        | 2세대 암호화 지원     | 2세대 보호         |
+| Capability        | 2세대 암호화 지원     | 2세대 보호         |
 |----------|--------------------|----------------|
 |보안 부팅        | 예, 필수이지만 구성 가능        | 예, 필수 및 적용    |
 |Vtpm               | 예, 필수이지만 구성 가능        | 예, 필수 및 적용    |
@@ -113,7 +113,7 @@ HGS는 보호된 VM을 만드는 방법과 함께 다음 보증을 제공합니�
 
 보호된 VM과 암호화 지원 VM 모두 실시간 마이그레이션, Hyper-V 복제본, VM 검사점 등 일반적인 패브릭 관리 기능을 계속 지원합니다.
 
-## <a name="the-host-guardian-service-in-action-how-a-shielded-vm-is-powered-on"></a>작동 중인 호스트 보호자 서비스: 차폐 VM의 전원이 켜진 방법
+## <a name="the-host-guardian-service-in-action-how-a-shielded-vm-is-powered-on"></a>작동 중인 호스트 보호 서비스: 보호된 VM의 전원이 켜는 방법
 
 ![보호 데이터 파일](../media/Guarded-Fabric-Shielded-VM/shielded-vms-how-a-shielded-vm-is-powered-on.png)
 
@@ -125,7 +125,7 @@ HGS는 보호된 VM을 만드는 방법과 함께 다음 보증을 제공합니�
 
     보호된 호스트가 증명을 요청합니다. 증명 모드는 호스트 보호 서비스에 의해 결정됩니다.
 
-    **TPM에서 신뢰할 수 있는 증명**: Hyper-v 호스트는 다음을 포함 하는 정보를 보냅니다.
+    **TPM에서 신뢰할 수 있는 증명**: hyper-v 호스트는 다음을 포함 하는 정보를 보냅니다.
 
        - TPM 식별 정보(해당 인증 키)
        - 가장 최근의 부팅 시퀀스 중에 시작된 프로세스에 대한 정보(TCG 로그)
@@ -133,9 +133,9 @@ HGS는 보호된 VM을 만드는 방법과 함께 다음 보증을 제공합니�
 
        Attestation happens when the host starts and every 8 hours thereafter. If for some reason a host doesn't have an attestation certificate when a VM tries to start, this also triggers attestation.
 
-    **호스트 키 증명**: Hyper-v 호스트는 키 쌍의 공개 절반을 보냅니다. HGS는 호스트 키가 등록 되어 있는지 확인 합니다. 
+    **호스트 키 증명**: hyper-v 호스트는 키 쌍의 공개 절반을 보냅니다. HGS는 호스트 키가 등록 되어 있는지 확인 합니다. 
     
-    **관리자가 신뢰할 수 있는 증명**: Hyper-v 호스트는 호스트가 속한 보안 그룹을 식별 하는 Kerberos 티켓을 보냅니다. HGS는 호스트가 이전에 신뢰할 수 있는 HGS 관리자에 의해 구성된 보안 그룹에 속해 있는지 확인합니다.
+    **관리자가 신뢰할 수 있는 증명**: Hyper-V 호스트는 해당 호스트가 속한 보안 그룹을 식별하는 Kerberos 티켓을 보냅니다. HGS는 호스트가 이전에 신뢰할 수 있는 HGS 관리자에 의해 구성된 보안 그룹에 속해 있는지 확인합니다.
 
 3. 증명에 성공(또는 실패)합니다.
 
@@ -176,9 +176,9 @@ HGS는 보호된 VM을 만드는 방법과 함께 다음 보증을 제공합니�
 | VBS(가상화 기반 보안) | 관리자 로부터 보호 되는 Hyper-v 기반 처리 및 저장소 환경입니다. 가상 보안 모드는 시스템에 운영 체제 관리자에게 표시되지 않는 운영 체제 키를 저장할 수 있는 권한을 제공합니다.|
 | 가상 TPM | 가상화된 버전의 TPM(신뢰할 수 있는 플랫폼 모듈)입니다. Windows Server 2016의 Hyper-v부터 물리적 TPM이 물리적 컴퓨터를 암호화할 수 있도록 하는 것 처럼 가상 컴퓨터를 암호화할 수 있도록 가상 TPM 2.0 장치를 제공할 수 있습니다.|
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [보호된 패브릭 및 보호된 VM](guarded-fabric-and-shielded-vms-top-node.md)
-- 치거나 [데이터 센터 및 사설 클라우드 보안 블로그](https://blogs.technet.microsoft.com/datacentersecurity/)
+- 블로그: [데이터 센터 및 사설 클라우드 보안 블로그](https://blogs.technet.microsoft.com/datacentersecurity/)
 - 비디오: [차폐 Virtual Machines 소개](https://channel9.msdn.com/Shows/Mechanics/Introduction-to-Shielded-Virtual-Machines-in-Windows-Server-2016)
-- 비디오: [Windows Server 2016 Hyper-v를 사용 하 여 보호 된 Vm에 대해 알아보기](https://channel9.msdn.com/events/Ignite/2016/BRK3124)
+- 비디오: [Windows Server 2016 hyper-v를 사용 하 여 보호 된 vm에 대해](https://channel9.msdn.com/events/Ignite/2016/BRK3124) 알아보기
