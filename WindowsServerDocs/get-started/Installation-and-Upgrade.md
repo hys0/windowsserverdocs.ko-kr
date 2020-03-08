@@ -11,11 +11,11 @@ ms.author: jgerend
 manager: dougkim
 ms.localizationpriority: medium
 ms.openlocfilehash: 140f67a9dab5cf1f10cdb0c5c51a031a0dfb9dd3
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66443556"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78371593"
 ---
 # <a name="windows-server-installation-and-upgrade"></a>Windows Server 설치 및 업그레이드
 
@@ -71,7 +71,7 @@ Windows Server 마이그레이션 설명서는 Windows Server를 실행하는 �
 
 |현재 실행 중인 버전:|업그레이드 가능한 버전:|
 |--------------------------------|---------------------------------------|
-|Windows Server2012 Standard|Windows Server 2016 Standard 또는 Datacenter|
+|Windows Server 2012 Standard|Windows Server 2016 Standard 또는 Datacenter|
 |Windows Server 2012 Datacenter|Windows Server 2016 Datacenter|
 |Windows Server 2012 R2 Standard|Windows Server 2016 Standard 또는 Datacenter|
 |Windows Server 2012 R2 Datacenter|Windows Server 2016 Datacenter|
@@ -102,8 +102,8 @@ Windows Server 2016 Datacenter 평가판을 Windows Server 2016 Datacenter 일�
 |Windows Server 2008 R2 Enterprise SP1|Windows Server 2012 R2 Standard 또는 Windows Server 2012 R2 Datacenter|
 |Windows Server 2008 R2 Standard SP1|Windows Server 2012 R2 Standard 또는 Windows Server 2012 R2 Datacenter|
 |Windows Web Server 2008 R2 SP1|Windows Server 2012 R2 Standard|
-|Windows Server2012 Datacenter|Windows Server 2012 R2 Datacenter|
-|Windows Server2012 Standard|Windows Server 2012 R2 Standard 또는 Windows Server 2012 R2 Datacenter|
+|Windows Server 2012 Datacenter|Windows Server 2012 R2 Datacenter|
+|Windows Server 2012 Standard|Windows Server 2012 R2 Standard 또는 Windows Server 2012 R2 Datacenter|
 |Hyper-V Server 2012|Hyper-V Server 2012 R2|
 
 ### <a name="license-conversion"></a>라이선스 변환
@@ -122,10 +122,10 @@ Windows Server 2012 Standard 평가판을 Windows Server 2012 Standard(일반 �
 |--------------------------|--------------------------|
 |Windows Server 2008 Standard SP2 또는 Windows Server 2008 Enterprise SP2|Windows Server 2012 Standard, Windows Server 2012 Datacenter|
 |Windows Server 2008 Datacenter SP2|Windows Server 2012 Datacenter|
-|Windows Web Server 2008|Windows Server2012 Standard|
+|Windows Web Server 2008|Windows Server 2012 Standard|
 |Windows Server 2008 R2 Standard SP1 또는 Windows Server 2008 R2 Enterprise SP1|Windows Server 2012 Standard, Windows Server 2012 Datacenter|
-|Windows Server 2008 R2 Datacenter SP1|Windows Server2012 Datacenter|
-|Windows Web Server 2008 R2|Windows Server2012 Standard|
+|Windows Server 2008 R2 Datacenter SP1|Windows Server 2012 Datacenter|
+|Windows Web Server 2008 R2|Windows Server 2012 Standard|
 
 ### <a name="license-conversion"></a>라이선스 변환
 Windows Server 2012 Standard 일반 정품 버전을 Windows Server 2012 Datacenter 일반 정품 버전으로 변환할 수 있습니다.

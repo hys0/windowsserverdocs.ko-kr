@@ -14,11 +14,11 @@ ms.author: helohr
 ms.date: 09/16/2019
 ms.localizationpriority: medium
 ms.openlocfilehash: c0a9f11aea9e24cc1a2bab275aae8dc0a81e9cba
-ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76822364"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78371815"
 ---
 # <a name="windows-desktop-client-for-admins"></a>관리자용 Windows 데스크톱 클라이언트
 
