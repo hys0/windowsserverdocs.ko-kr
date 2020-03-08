@@ -10,11 +10,11 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
 ms.openlocfilehash: 4f12b1e88414a17c8fb82a707bd4399505df4c6c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71369452"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78371521"
 ---
 # <a name="ad-ds-simplified-administration"></a>AD DS 간소화된 관리
 
@@ -66,7 +66,7 @@ Adprep 및 이전 운영 체제 포리스트 준비에 대 한 정보를 참조 
   
 Active Directory 도메인 서비스는 이러한 허브 역할 중 하나 도메인 컨트롤러 또는 Windows 8에서 원격 서버 관리 도구에서 서버 관리자를 실행 하 여 포리스트의 도메인 컨트롤러에서 최근의 중요 한 문제를 참조 합니다.  
   
-이러한 보기에는 다음이 포함됩니다.  
+지원되는 보기는 다음과 같습니다.  
   
 - 서버 가용성  
 - 높은 CPU 및 메모리 사용량에 대한 성능 모니터 경고  
@@ -195,7 +195,7 @@ ADDSDeployment Windows PowerShell 관리 코드에 기본 제공되는 필수 �
 
 ||||  
 |-|-|-|  
-|테스트 이름|프로토콜<br /><br />프로토콜|설명 및 참고 사항|  
+|테스트 이름|프로토콜<br /><br />used|설명 및 참고 사항|  
 |VerifyAdminTrusted<br /><br />ForDelegationProvider|LDAP|기존 파트너 도메인 컨트롤러에 대한 "위임 시 컴퓨터 및 사용자 계정을 신뢰할 수 있도록 설정"(SeEnableDelegationPrivilege) 권한이 있는지 확인합니다. 그러려면 생성된 tokenGroups 특성에 액세스할 수 있어야 합니다.<br /><br />Windows Server 2003 도메인 컨트롤러에 연결할 때는 사용되지 않습니다. 수준을 올리기 전에 이 권한을 수동으로 확인해야 합니다.|  
 |VerifyADPrep<br /><br />Prerequisites(포리스트)|LDAP|rootDSE namingContexts 특성 및 스키마 명명 컨텍스트 fsmoRoleOwner 특성을 사용하여 스키마 마스터를 검색하고 연결합니다. AD DS 설치에 필요한 준비 작업(forestprep, domainprep 또는 rodcprep)을 확인합니다. 스키마 objectVersion과 해당 추가 확장이 필요한지 확인합니다.|  
 |VerifyADPrep<br /><br />Prerequisites(도메인 및 RODC)|LDAP|rootDSE namingContexts 특성 및 인프라 컨테이너 fsmoRoleOwner 특성을 사용하여 인프라 마스터를 검색하고 연결합니다. RODC 설치의 경우 이 테스트는 도메인 명명 마스터를 검색하고 온라인 상태인지 확인합니다.|  
@@ -205,9 +205,9 @@ ADDSDeployment Windows PowerShell 관리 코드에 기본 제공되는 필수 �
 |CheckRODCPrep<br /><br />GroupMembership|LDAP,<br /><br />RPC over SMB(LSARPC)|사용자가 Enterprise Admins 그룹의 구성원이고 기존 도메인 컨트롤러에 대한 감사 및 보안 이벤트 로그 관리(SesScurityPrivilege) 권한이 있는지 확인합니다.|  
 |VerifyInitSync<br /><br />AfterReboot|LDAP|rootDSE 특성 becomeSchemaMaster에서 더미 값을 설정하여 스키마 마스터가 다시 시작된 이후 한 번 이상 복제되었는지 확인합니다.|  
 |VerifySFUHotFix<br /><br />Applied|LDAP|기존 포리스트 스키마에 OID가 1.2.840.113556.1.4.7000.187.102인 UID 특성에 대한 SFU2 확장 관련 알려진 문제가 없는지<br /><br />([https://support.microsoft.com/kb/821732](https://support.microsoft.com/kb/821732))|  
-|VerifyExchange<br /><br />SchemaFixed|LDAP, WMI, DCOM, RPC|기존 포리스트 스키마의 유효성을 검사 하는 데 문제가 Exchange 2000 확장명 ms-Exch-Name, ms Exch-LabeledURI 및 ms-Exch-Id ([https://support.microsoft.com/kb/314649](https://support.microsoft.com/kb/314649))에 아직 포함 되지 않았습니다.|  
+|VerifyExchange<br /><br />SchemaFixed|LDAP, WMI, DCOM, RPC|기존 포리스트 스키마의 유효성을 검사 하는 데 문제가 Exchange 2000 확장명이 아직 포함 되지 않음-이름, ms-Exch-LabeledURI 및 ms-Exch-집-식별자 ([https://support.microsoft.com/kb/314649](https://support.microsoft.com/kb/314649))|  
 |VerifyWin2KSchema<br /><br />일관성|LDAP|기존 포리스트 스키마에 일관된(타사에서 잘못 수정하지 않은) 핵심 특성 및 클래스가 있는지 확인합니다.|  
 |DCPromo|DRSR over RPC,<br /><br />LDAP,<br /><br />DNS<br /><br />RPC over SMB(SAMR)|수준 올리기 코드로 전달된 명령줄 구문의 유효성을 검사하고 수준 올리기를 테스트합니다. 포리스트 또는 도메인을 새로 만드는 경우 이미 존재하지 않는지 확인합니다.|  
 |VerifyOutbound<br /><br />ReplicationEnabled|LDAP, DRSR over SMB, RPC over SMB(LSARPC)|NTDS 설정 개체의 옵션 특성에서 NTDSDSA_OPT_DISABLE_OUTBOUND_REPL(0x00000004)을 확인하여 복제 파트너로 지정된 기존 도메인 컨트롤러에 아웃바운드 복제가 사용하도록 설정되어 있는지 확인합니다.|  
-|VerifyMachineAdmin<br /><br />암호|DRSR over RPC,<br /><br />LDAP,<br /><br />DNS<br /><br />RPC over SMB(SAMR)|DSRM에 대해 설정된 안전 모드 암호가 도메인 복잡성 요구 사항을 충족하는지 확인합니다.|  
+|VerifyMachineAdmin<br /><br />Password|DRSR over RPC,<br /><br />LDAP,<br /><br />DNS<br /><br />RPC over SMB(SAMR)|DSRM에 대해 설정된 안전 모드 암호가 도메인 복잡성 요구 사항을 충족하는지 확인합니다.|  
 |VerifySafeModePassword|*해당 없음*|설정된 로컬 관리자 암호가 컴퓨터 보안 정책 복잡성 요구 사항을 충족하는지 확인합니다.|  

@@ -9,11 +9,11 @@ author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
 ms.openlocfilehash: 2aea6c8416a0f3af04ad6056c5d09a4d07708eaa
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386647"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78371795"
 ---
 # <a name="create-a-host-key-and-add-it-to-hgs"></a>호스트 키를 만들어 HGS에 추가
 
@@ -66,6 +66,6 @@ Add-HgsAttestationHostKey -Name MyHost01 -Path "C:\temp\MyHost01-HostKey.cer"
 > [!div class="nextstepaction"]
 > [호스트가 성공적으로 증명 될 수 있는지 확인](guarded-fabric-confirm-hosts-can-attest-successfully.md)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [보호 된 호스트 및 보호 된 Vm에 대 한 호스트 보호자 서비스 배포](guarded-fabric-deploying-hgs-overview.md)

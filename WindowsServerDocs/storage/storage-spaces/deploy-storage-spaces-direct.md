@@ -11,11 +11,11 @@ ms.date: 06/07/2019
 description: Windows Server의 스토리지 공간 다이렉트를 사용 하 여 하이퍼 수렴 형 인프라 또는 수렴 형 (세분화 된) 인프라가 있는 소프트웨어 정의 저장소를 배포 하는 단계별 지침을 참조 하세요.
 ms.localizationpriority: medium
 ms.openlocfilehash: 60b29cbebb19cd8f1ce364d1eb7e920759375285
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950028"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78371775"
 ---
 # <a name="deploy-storage-spaces-direct"></a>저장소 공간 다이렉트 배포
 
@@ -155,7 +155,7 @@ Windows Server 2016에서는 Hyper-v 가상 스위치 내에 스위치 포함 �
 
 스토리지 공간 다이렉트에 대 한 네트워킹을 설정 하는 지침은 [Windows Server 2016 수렴 형 NIC 및 게스트 RDMA 배포 가이드](https://github.com/Microsoft/SDN/blob/master/Diagnostics/S2D%20WS2016_ConvergedNIC_Configuration.docx)를 참조 하세요.
 
-## <a name="step-3-configure-storage-spaces-direct"></a>3단계: 스토리지 공간 다이렉트 구성
+## <a name="step-3-configure-storage-spaces-direct"></a>3단계: 저장소 공간 다이렉트 구성
 
 다음 단계는 구성 중인 서버와 동일한 버전의 관리 시스템에서 수행됩니다. 다음 단계는 PowerShell 세션을 사용 하 여 원격으로 실행 해서는 안 되며, 대신 관리 시스템의 로컬 PowerShell 세션에서 관리 권한을 사용 하 여 실행 해야 합니다.
 
@@ -204,9 +204,9 @@ Count Name                          PSComputerName
 
 ### <a name="step-32-validate-the-cluster"></a>3\.2 단계: 클러스터 유효성 검사
 
-이 단계에서는 클러스터 유효성 검사 도구를 실행 하 여 스토리지 공간 다이렉트를 사용 하 여 클러스터를 만들도록 서버 노드가 올바르게 구성 되어 있는지 확인 합니다. 클러스터를 만들기 전에 클러스터 유효성 검사 (`Test-Cluster`)를 실행 하면 구성이 장애 조치 (failover) 클러스터로 정상적으로 작동 하는 데 적합 한 것으로 표시 되는지 확인 하는 테스트를 실행 합니다. 아래 예제에서는 `-Include` 매개 변수를 사용한 다음 테스트의 특정 범주를 지정 합니다. 이렇게 하면 스토리지 공간 다이렉트 관련 테스트가 유효성 검사에 포함됩니다.
+이 단계에서는 클러스터 유효성 검사 도구를 실행 하 여 스토리지 공간 다이렉트를 사용 하 여 클러스터를 만들도록 서버 노드가 올바르게 구성 되어 있는지 확인 합니다. 클러스터를 만들기 전에 클러스터 유효성 검사 (`Test-Cluster`)를 실행 하면 구성이 장애 조치 (failover) 클러스터로 정상적으로 작동 하는 데 적합 한 것으로 표시 되는지 확인 하는 테스트를 실행 합니다. 아래 예제에서는 `-Include` 매개 변수를 사용한 다음 테스트의 특정 범주를 지정 합니다. 이렇게 하면 저장소 공간 다이렉트 관련 테스트가 유효성 검사에 포함됩니다.
 
-다음 PowerShell 명령을 사용하여 스토리지 공간 다이렉트 클러스터로 사용할 서버 집합의 유효성을 검사할 수 있습니다.
+다음 PowerShell 명령을 사용하여 저장소 공간 다이렉트 클러스터로 사용할 서버 집합의 유효성을 검사할 수 있습니다.
 
 ```PowerShell
 Test-Cluster –Node <MachineName1, MachineName2, MachineName3, MachineName4> –Include "Storage Spaces Direct", "Inventory", "Network", "System Configuration"
@@ -216,7 +216,7 @@ Test-Cluster –Node <MachineName1, MachineName2, MachineName3, MachineName4> �
 
 이 단계에서는 다음 PowerShell cmdlet을 사용 하 여 이전 단계에서 클러스터 만들기에 대해 유효성을 검사 한 노드를 사용 하 여 클러스터를 만듭니다.
 
-클러스터를 만들 때 "클러스터 된 역할을 만드는 동안 문제가 발생 하 여 시작 하지 못할 수 있습니다." 라는 경고가 표시 됩니다. 자세한 내용은 아래의 보고서 파일을 확인하십시오."라는 경고가 나타납니다. 이 경고는 무시해도 됩니다. 클러스터 쿼럼에 사용할 수 있는 디스크가 없기 때문에 나타나는 것입니다. 클러스터를 만든 후 파일 공유 감시 또는 클라우드 감시를 구성하는 것이 좋습니다.
+클러스터를 만들 때 "클러스터 된 역할을 만드는 동안 문제가 발생 하 여 시작 하지 못할 수 있습니다." 라는 경고가 표시 됩니다. 자세한 내용은 아래의 보고서 파일을 확인하십시오."라는 경고가 나타납니다. 이 경고는 무시해도 괜찮습니다. 클러스터 쿼럼에 사용할 수 있는 디스크가 없기 때문에 나타나는 것입니다. 클러스터를 만든 후 파일 공유 감시 또는 클라우드 감시를 구성하는 것이 좋습니다.
 
 > [!Note]
 > 서버에서 고정 IP 주소를 사용하는 경우 다음 매개 변수를 추가하고 IP 주소 -StaticAddress &lt;X.X.X.X&gt;를 지정하여 고정 IP 주소를 반영하도록 다음 명령을 수정합니다.
@@ -236,15 +236,15 @@ Test-Cluster –Node <MachineName1, MachineName2, MachineName3, MachineName4> �
 - [쿼럼 구성 및 관리](../../failover-clustering/manage-cluster-quorum.md)
 - [장애 조치 (Failover) 클러스터용 클라우드 감시 배포](../../failover-clustering/deploy-cloud-witness.md)
 
-### <a name="step-35-enable-storage-spaces-direct"></a>3\.5단계: 스토리지 공간 다이렉트 사용
+### <a name="step-35-enable-storage-spaces-direct"></a>3\.5단계: 저장소 공간 다이렉트 사용
 
 클러스터를 만든 후 `Enable-ClusterStorageSpacesDirect` PowerShell cmdlet을 사용 합니다 .이 cmdlet은 저장소 시스템을 스토리지 공간 다이렉트 모드로 전환 하 고 다음을 자동으로 수행 합니다.
 
 -   **풀 만들기:** "S2D on Cluster1"과 같은 이름을 가진 대규모 단일 풀을 만듭니다.
 
--   **스토리지 공간 다이렉트 캐시 구성:** 스토리지 공간 다이렉트에 사용할 수 있는 미디어(드라이브) 유형이 2개 이상인 경우 가장 빠른 캐시 디바이스로 사용할 수 있습니다(대부분의 경우 읽기 및 쓰기).
+-   **저장소 공간 다이렉트 캐시 구성:** 저장소 공간 다이렉트에 사용할 수 있는 미디어(드라이브) 유형이 2개 이상인 경우 가장 빠른 캐시 장치로 사용할 수 있습니다(대부분의 경우 읽기 및 쓰기).
 
--   **계층:** 두 계층을 기본 계층으로 만듭니다. 하나는 "Capacity"이고 다른 하나는 "Performance"입니다. Cmdlet은 장치를 분석한 후 장치 유형과 복원력을 조합하여 각 계층을 구성합니다.
+-   **계층:** 두 계층을 기본 계층으로 만듭니다. 하나는 "Capacity"이고 다른 하나는 "Performance"입니다. Cmdlet은 디바이스를 분석한 후 디바이스 유형과 복원력을 조합하여 각 계층을 구성합니다.
 
 관리 시스템에서 관리자 권한으로 PowerShell 명령 창을 열고 다음 명령을 시작합니다. 클러스터 이름은 이전 단계에서 만든 클러스터의 이름입니다. 이 명령을 노드 중 하나에서 로컬로 실행하면 -CimSession 매개 변수가 필요 없습니다.
 
@@ -252,7 +252,7 @@ Test-Cluster –Node <MachineName1, MachineName2, MachineName3, MachineName4> �
 Enable-ClusterStorageSpacesDirect –CimSession <ClusterName>
 ```
 
-위 명령을 통해 스토리지 공간 다이렉트를 사용하려는 경우 클러스터 이름 대신 노드 이름을 사용할 수도 있습니다. 노드 이름을 사용하면 새로 만든 클러스터 이름에서 발생할 수 있는 DNS 복제 지연으로 인해 보다 안정적일 수 있습니다.
+위 명령을 통해 저장소 공간 다이렉트를 사용하려는 경우 클러스터 이름 대신 노드 이름을 사용할 수도 있습니다. 노드 이름을 사용하면 새로 만든 클러스터 이름에서 발생할 수 있는 DNS 복제 지연으로 인해 보다 안정적일 수 있습니다.
 
 몇 분 후 이 명령이 완료되면 시스템이 볼륨을 만들 수 있도록 준비됩니다.
 

@@ -10,11 +10,11 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
 ms.openlocfilehash: 52199ab8ca6f82443e78e72c6980746fa561363a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408306"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78371675"
 ---
 # <a name="set-up-the-lab-environment-for-ad-fs-in-windows-server-2012-r2"></a>Windows Server 2012 R2의 AD FS에 대한 랩 환경 설정
 
@@ -98,21 +98,21 @@ SSL 인증서를 설정하는 방법에 대한 자세한 내용은 [엔터프라
 
 1. 도메인 관리자 계정 administrator@contoso.com를 사용 하 여 서버에 로그온 합니다.
 
-2. 서버 관리자를 시작합니다. 서버 관리자를 시작하려면 Windows **시작** 화면에서 **서버 관리자** 를 클릭하거나 Windows 바탕 화면의 Windows 작업 표시줄에서 **서버 관리자** 를 클릭합니다. **대시보드** 페이지의 **시작** 타일에 있는 **빠른 시작** 탭에서 **역할 및 기능 추가**를 클릭합니다. 또는 **관리** 메뉴에서 **역할 및 기능 추가**를 클릭해도 됩니다.
+2. 서버 관리자를 시작합니다. 서버 관리자를 시작하려면 Windows **시작** 화면에서 **서버 관리자**를 클릭하거나 Windows 바탕 화면의 Windows 작업 표시줄에서 **서버 관리자**를 클릭합니다. **대시보드** 페이지의 **시작** 타일에 있는 **빠른 시작** 탭에서 **역할 및 기능 추가**를 클릭합니다. **관리** 메뉴에서 **역할 및 기능 추가**를 클릭해도 됩니다.
 
-3. **시작하기 전** 페이지에서 **다음**을 클릭합니다.
+3. **시작하기 전에** 페이지에서 **다음**을 클릭합니다.
 
 4. **설치 유형 선택** 페이지에서 **역할 기반 또는 기능 기반 설치**를 클릭한 다음 **다음**을 클릭합니다.
 
 5. **대상 서버 선택** 페이지에서 **서버 풀에서 서버 선택**을 클릭하고 대상 컴퓨터가 선택되어 있는지 확인한 후 **다음**을 클릭합니다.
 
-6. **서버 역할 선택** 페이지에서 **Active Directory Federation Services**를 클릭한 후 **다음**을 클릭합니다.
+6. **서버 역할 선택** 페이지에서 **Active Directory Federation Services**를 클릭하고 **다음**을 클릭합니다.
 
 7. **기능 선택** 페이지에서 **다음**을 클릭합니다.
 
-8. **AD FS(Active Directory Federation Service)** 페이지에서 **다음**을 클릭합니다.
+8. **AD FS(Active Directory Federation Services)** 페이지에서 **다음**을 클릭합니다.
 
-9. **설치 선택 확인** 페이지에서 정보를 확인한 후 **필요한 경우 자동으로 대상 서버 다시 시작** 확인란을 선택하고 **설치**를 클릭합니다.
+9. **설치 선택 확인** 페이지의 정보를 확인하고 **필요한 경우 자동으로 대상 서버 다시 시작** 확인란을 선택한 후에 **설치**를 클릭합니다.
 
 10. **설치 진행률** 페이지에서 모든 항목이 올바르게 설치되었는지 확인하고 **닫기**를 클릭합니다.
 
@@ -121,9 +121,9 @@ SSL 인증서를 설정하는 방법에 대한 자세한 내용은 [엔터프라
 
 ##### <a name="to-configure-the-federation-server"></a>페더레이션 서버를 구성하려면
 
-1.  서버 관리자 **대시보드** 페이지에서 **알림** 플래그를 클릭한 다음 **이 서버에 페더레이션 서비스를 구성하십시오.** 을 클릭합니다.
+1.  서버 관리자 **대시보드** 페이지에서 **알림** 플래그를 클릭한 다음 **이 서버에 페더레이션 서비스를 구성하세요.** 을 클릭합니다.
 
-    **Active Directory Federation Service 구성 마법사** 가 열립니다.
+    **Active Directory Federation Service 구성 마법사**가 열립니다.
 
 2.  **시작** 페이지에서 **페더레이션 서버 팜에 첫 번째 페더레이션 서버를 만듭니다.** 를 선택하고 **다음**을 클릭합니다.
 
@@ -137,7 +137,7 @@ SSL 인증서를 설정하는 방법에 대한 자세한 내용은 [엔터프라
 
     -   페더레이션 서비스의 표시 이름을 제공하기 위해 **Contoso Corporation**을 입력합니다.
 
-5.  **서비스 계정 지정** 페이지에서 **기존 도메인 사용자 계정 또는 그룹 관리 서비스 계정 사용**을 선택하고 도메인 컨트롤러를 만들 때 만든 GMSA 계정 **fsgmsa** 를 지정합니다.
+5.  **서비스 계정 지정** 페이지에서 **기존 도메인 사용자 계정 또는 그룹 관리 서비스 계정 사용**을 선택하고 도메인 컨트롤러를 만들 때 만든 GMSA 계정 **fsgmsa**를 지정합니다.
 
 6.  **구성 데이터베이스 지정** 페이지에서 **Windows 내부 데이터베이스를 사용하여 이 서버에 데이터베이스를 만듭니다.** 를 선택하고 **다음**을 클릭합니다.
 
@@ -169,12 +169,12 @@ SSL 인증서를 설정하는 방법에 대한 자세한 내용은 [엔터프라
     Enable-AdfsDeviceRegistration
     ```
 
-2.  ADFS1 서버의 **AD FS 관리** 콘솔에서 **인증 정책**으로 이동합니다. **전역 기본 인증 편집**을 선택합니다. **장치 인증 사용**옆의 확인란을 선택하고 **확인**을 클릭합니다.
+2.  ADFS1 서버의 **AD FS 관리** 콘솔에서 **인증 정책**으로 이동합니다. **전역 기본 인증 편집**을 선택합니다. **장치 인증 사용** 옆의 확인란을 선택하고 **확인**을 클릭합니다.
 
 ### <a name="add-host-a-and-alias-cname-resource-records-to-dns"></a>DNS에 호스트(A) 및 별칭(CNAME) 리소스 레코드 추가
 DC1에서 다음 DNS(Domain Name System) 레코드가 Device Registration Service에 대해 만들어졌는지 확인해야 합니다.
 
-|항목|형식|주소|
+|항목|형식|Address|
 |---------|--------|-----------|
 |adfs1|호스트(A)|AD FS 서버의 IP 주소|
 |enterpriseregistration|별칭(CNAME)|adfs1.contoso.com|
@@ -189,7 +189,7 @@ DC1에서 다음 DNS(Domain Name System) 레코드가 Device Registration Servic
 
 2.  콘솔 트리에서 DC1과 **정방향 조회 영역**을 확장하고 **contoso.com**을 마우스 오른쪽 단추로 클릭한 후 **새 호스트(A 또는 AAAA)** 를 클릭합니다.
 
-3.  **이름** 에 AD FS 팜에 사용할 이름을 입력합니다. 이 연습에서는 **adfs1**을 입력합니다.
+3.  **이름**에 AD FS 팜에 사용할 이름을 입력합니다. 이 연습에서는 **adfs1**을 입력합니다.
 
 4.  **IP 주소**에 ADFS1 서버의 IP 주소를 입력합니다. **호스트 추가**를 클릭합니다.
 
@@ -205,11 +205,11 @@ DC1에서 다음 DNS(Domain Name System) 레코드가 Device Registration Servic
 ## <a name="BKMK_5"></a>3 단계: 웹 서버 (WebServ1) 및 샘플 클레임 기반 응용 프로그램 구성
 Windows Server 2012 R2 운영 체제를 설치 하 고 도메인 **contoso.com**에 연결 하 여 가상 컴퓨터 (WebServ1)를 설정 합니다. 도메인에 가입한 후에는 웹 서버 역할 설치 및 구성을 계속 진행할 수 있습니다.
 
-이 항목의 앞부분에 언급된 연습을 완료하려면 페더레이션 서버(ADFS1)로 보호된 예제 응용 프로그램이 있어야 합니다.
+이 항목의 앞부분에 언급된 연습을 완료하려면 페더레이션 서버(ADFS1)로 보호된 예제 애플리케이션이 있어야 합니다.
 
 샘플 클레임 기반 응용 프로그램을 포함 하는 Windows Identity Foundation SDK ([https://www.microsoft.com/download/details.aspx?id=4451](https://www.microsoft.com/download/details.aspx?id=4451)를 다운로드할 수 있습니다.
 
-이 예제 클레임 기반 응용 프로그램으로 웹 서버를 설정하려면 다음 단계를 완료해야 합니다.
+이 예제 클레임 기반 애플리케이션으로 웹 서버를 설정하려면 다음 단계를 완료해야 합니다.
 
 > [!NOTE]
 > 이러한 단계는 Windows Server 2012 R2 운영 체제를 실행 하는 웹 서버에서 테스트 되었습니다.
@@ -229,9 +229,9 @@ Windows Server 2012 R2 운영 체제를 설치 하 고 도메인 **contoso.com**
 
    <strong>administrator@contoso.com</strong> 및 암호 <strong>pass@word1</strong>를 사용 하 여 WebServ1에 로그온 합니다.
 
-2. 서버 관리자 **대시보드** 페이지의 **시작** 타일에 있는 **빠른 시작** 탭에서 **역할 및 기능 추가**를 클릭합니다. 또는 **관리** 메뉴에서 **역할 및 기능 추가**를 클릭해도 됩니다.
+2. 서버 관리자 **대시보드** 페이지의 **시작** 타일에 있는 **빠른 시작** 탭에서 **역할 및 기능 추가**를 클릭합니다. **관리** 메뉴에서 **역할 및 기능 추가**를 클릭해도 됩니다.
 
-3. **시작하기 전** 페이지에서 **다음**을 클릭합니다.
+3. **시작하기 전에** 페이지에서 **다음**을 클릭합니다.
 
 4. **설치 유형 선택** 페이지에서 **역할 기반 또는 기능 기반 설치**를 클릭한 다음 **다음**을 클릭합니다.
 
@@ -257,9 +257,9 @@ Windows Server 2012 R2 운영 체제를 설치 하 고 도메인 **contoso.com**
 
 2.  C:\Program Files (x86)\Windows Identity Foundation SDK\v3.5\Samples\Quick Start\Web Application\PassiveRedirectBasedClaimsAwareWebApp의 내용을 C:\Inetpub\Claimapp에 복사합니다.
 
-3.  클레임 필터링이 발생하지 않도록 **Default.aspx.cs** 파일을 편집합니다. 이 단계는 예제 응용 프로그램이 페더레이션 서버에서 발급한 모든 클레임을 표시하도록 하기 위해 수행됩니다. 다음을 수행합니다.
+3.  클레임 필터링이 발생하지 않도록 **Default.aspx.cs** 파일을 편집합니다. 이 단계는 예제 애플리케이션이 페더레이션 서버에서 발급한 모든 클레임을 표시하도록 하기 위해 수행됩니다. 다음을 수행합니다.
 
-    1.  텍스트 편집기에서 **Default.aspx.cs** 를 엽니다.
+    1.  텍스트 편집기에서 **Default.aspx.cs**를 엽니다.
 
     2.  파일에서 `ExpectedClaims`의 두 번째 인스턴스를 검색합니다.
 
@@ -294,11 +294,11 @@ Windows Server 2012 R2 운영 체제를 설치 하 고 도메인 **contoso.com**
 
     2.  **응용 프로그램 풀**로 이동하여 **DefaultAppPool**을 마우스 오른쪽 단추로 클릭하고 **고급 설정**을 선택합니다. **사용자 프로필 로드**를 **True**로 설정하고 **확인**을 클릭합니다.
 
-    3.  **DefaultAppPool** 을 마우스 오른쪽 단추로 클릭하고 **기본 설정**을 선택합니다. **.NET CLR 버전** 을 **.NET CLR Version v2.0.50727**로 변경합니다.
+    3.  **DefaultAppPool**을 마우스 오른쪽 단추로 클릭하고 **기본 설정**을 선택합니다. **.NET CLR 버전**을 **.NET CLR Version v2.0.50727**로 변경합니다.
 
-    4.  **기본 웹 사이트** 를 마우스 오른쪽 단추로 클릭하여 **바인딩 편집**을 선택합니다.
+    4.  **기본 웹 사이트**를 마우스 오른쪽 단추로 클릭하여 **바인딩 편집**을 선택합니다.
 
-    5.  설치한 SSL 인증서를 사용하는 포트 **443** 에 **HTTPS** 바인딩을 추가합니다.
+    5.  설치한 SSL 인증서를 사용하는 포트 **443**에  **HTTPS** 바인딩을 추가합니다.
 
     6.  **기본 웹 사이트**를 마우스 오른쪽 단추로 클릭하여 **응용 프로그램 추가**를 선택합니다.
 
@@ -316,9 +316,9 @@ Windows Server 2012 R2 운영 체제를 설치 하 고 도메인 **contoso.com**
 
     5.  **암호화 없음**을 선택하고 **다음**을 클릭합니다. **제공된 클레임** 페이지에서 **다음**을 클릭합니다.
 
-    6.  **매일 WS-Federation 메타데이터 업데이트를 수행하도록 작업 예약**옆의 확인란을 선택합니다. **마침**을 클릭합니다.
+    6.  **매일 WS-Federation 메타데이터 업데이트를 수행하도록 작업 예약** 옆의 확인란을 선택합니다. **마침**을 클릭합니다.
 
-    7.  이제 예제 응용 프로그램이 구성되었습니다. **https://webserv1.contoso.com/claimapp** 응용 프로그램 URL을 테스트 하면 페더레이션 서버로 리디렉션됩니다. 신뢰 당사자 트러스트를 구성하지 않았으므로 페더레이션 서버에 오류 메시지가 표시됩니다. 즉, AD FS 하 여이 테스트 응용 프로그램을 보호 하지 않았습니다.
+    7.  이제 예제 애플리케이션이 구성되었습니다. **https://webserv1.contoso.com/claimapp** 응용 프로그램 URL을 테스트 하면 페더레이션 서버로 리디렉션됩니다. 신뢰 당사자 트러스트를 구성하지 않았으므로 페더레이션 서버에 오류 메시지가 표시됩니다. 즉, AD FS 하 여이 테스트 응용 프로그램을 보호 하지 않았습니다.
 
 이제 AD FS를 사용 하 여 웹 서버에서 실행 되는 샘플 응용 프로그램의 보안을 유지 해야 합니다. 이렇게 하려면 페더레이션 서버(ADFS1)에서 신뢰 당사자 트러스트를 추가하면 됩니다. 비디오는 [Active Directory Federation Services How-To Video Series: Add a Relying Party Trust(Active Directory Federation Services 방법 비디오 시리즈: 신뢰 당사자 트러스트 추가)](https://technet.microsoft.com/video/adfs-how-to-add-a-relying-party-trust)를 참조하세요.
 
@@ -357,7 +357,7 @@ Windows Server 2012 R2 운영 체제를 설치 하 고 도메인 **contoso.com**
 
 Microsoft 계정을 설정하고 이를 사용하여 Client1에 로그온해야 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 
 - [Active Directory Federation Services 방법 비디오 시리즈: AD FS 서버 팜 설치](https://technet.microsoft.com/video/dn469436)

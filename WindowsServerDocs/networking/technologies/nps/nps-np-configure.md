@@ -9,11 +9,11 @@ ms.assetid: fe77655a-e2be-4949-92e1-aaaa215d86ea
 ms.author: pashort
 author: shortpatti
 ms.openlocfilehash: a2bde42ba9b9489ddcd8fb3673ec5ddf1fd4d970
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71396353"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78371897"
 ---
 # <a name="configure-network-policies"></a>네트워크 정책 구성
 
@@ -46,7 +46,7 @@ NPS가 연결 요청과 일치 하는 네트워크 정책을 찾지 못한 경�
 
 Active Directory&reg; 도메인 서비스\)AD DS \(에서 사용자 계정 전화 접속 속성에 의해 액세스 권한이 결정 되도록 하려면 **사용자 전화 접속 속성** 확인란을 선택 합니다.
 
-**Domain Admins**의 구성원이거나 이에 준하는 자격이 있어야 이 절차를 완료할 수 있습니다.
+이 절차를 완료하려면 적어도 **Domain Admins** 그룹 구성원이거나 이에 해당하는 권한이 있어야 합니다.
 
 ### <a name="to-add-a-network-policy"></a>네트워크 정책을 추가 하려면 
 
@@ -74,7 +74,7 @@ Active Directory&reg; 도메인 서비스\)AD DS \(에서 사용자 계정 전�
 
 새 전화 접속 또는 VPN (가상 사설망) 연결 마법사를 실행 하는 것은 NPS에서 RADIUS 클라이언트로 전화 접속 또는 VPN 서버를 배포 하는 데 필요한 유일한 단계가 아닙니다. 두 네트워크 액세스 방법을 사용 하려면 추가 하드웨어 및 소프트웨어 구성 요소를 배포 해야 합니다.
 
-**Domain Admins**의 구성원이거나 이에 준하는 자격이 있어야 이 절차를 완료할 수 있습니다.
+이 절차를 완료하려면 적어도 **Domain Admins** 그룹 구성원이거나 이에 해당하는 권한이 있어야 합니다.
 
 ### <a name="to-create-policies-for-dial-up-or-vpn-with-a-wizard"></a>마법사를 사용 하 여 전화 접속 또는 VPN에 대 한 정책을 만들려면
 
@@ -101,7 +101,7 @@ Active Directory&reg; 도메인 서비스\)AD DS \(에서 사용자 계정 전�
 
 새 IEEE 802.1 X 보안 유선 및 무선 연결 마법사를 실행 하는 것은 802.1 X 인증 스위치 및 무선 액세스 포인트를 NPS에 RADIUS 클라이언트로 배포 하는 데 필요한 유일한 단계가 아닙니다. 두 네트워크 액세스 방법을 사용 하려면 추가 하드웨어 및 소프트웨어 구성 요소를 배포 해야 합니다.
 
-**Domain Admins**의 구성원이거나 이에 준하는 자격이 있어야 이 절차를 완료할 수 있습니다.
+이 절차를 완료하려면 적어도 **Domain Admins** 그룹 구성원이거나 이에 해당하는 권한이 있어야 합니다.
 
 ### <a name="to-create-policies-for-8021x-wired-or-wireless-with-a-wizard"></a>마법사를 사용 하 여 802.1 X 유선 또는 무선에 대 한 정책을 만들려면
 

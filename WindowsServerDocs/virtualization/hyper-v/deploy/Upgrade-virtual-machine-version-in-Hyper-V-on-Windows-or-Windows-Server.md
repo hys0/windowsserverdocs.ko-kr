@@ -12,11 +12,11 @@ author: jasongerend
 ms.author: jgerend
 ms.date: 05/22/2019
 ms.openlocfilehash: 96678dfab2a3d5b6f503d8ce9d00850a3c437b35
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392936"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78370607"
 ---
 # <a name="upgrade-virtual-machine-version-in-hyper-v-on-windows-10-or-windows-server"></a>Windows 10 또는 Windows Server에서 Hyper-v의 가상 머신 버전 업그레이드
 
@@ -30,7 +30,7 @@ ms.locfileid: "71392936"
 
 자세한 내용은 [클러스터 운영 체제 롤링 업그레이드](../../../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md) 및 [VMM에서 hyper-v 호스트 클러스터의 롤링 업그레이드 수행](https://docs.microsoft.com/system-center/vmm/hyper-v-rolling-upgrade)을 참조 하세요.
 
-## <a name="step-1-check-the-virtual-machine-configuration-versions"></a>1단계: 가상 컴퓨터 구성 버전 확인
+## <a name="step-1-check-the-virtual-machine-configuration-versions"></a>1 단계: 가상 컴퓨터 구성 버전 확인
 
 1. Windows 데스크톱에서 시작 단추를 클릭하고 **Windows PowerShell** 이름의 일부를 입력합니다.
 2. Windows PowerShell을 마우스 오른쪽 단추로 클릭 하 고 선택 **관리자 권한으로 실행**합니다.
@@ -42,7 +42,7 @@ Get-VM * | Format-Table Name, Version
 
 가상 컴퓨터를 선택 하 고 **요약** 탭에서 hyper-v 관리자의 구성 버전을 볼 수도 있습니다.
 
-## <a name="step-2-upgrade-the-virtual-machine-configuration-version"></a>2단계: 가상 컴퓨터 구성 버전 업그레이드
+## <a name="step-2-upgrade-the-virtual-machine-configuration-version"></a>2 단계: 가상 머신 구성 버전 업그레이드
 
 1. Hyper-v 관리자에서 가상 컴퓨터를 종료 합니다.
 2. 구성 버전 업그레이드 > 작업을 선택 합니다. 가상 컴퓨터에 대해이 옵션을 사용할 수 없는 경우 Hyper-v 호스트에서 지 원하는 가장 높은 구성 버전에 이미 있는 것입니다.
@@ -76,7 +76,7 @@ New-VM -Name "WindowsCV5" -Version 5.0
 
 | Hyper-v 호스트 Windows 버전 | 9.1 | 9.0 | 8.3 | 8.2 | 8.1 | 8.0 | 7.1 | 7.0 | 6.2 | 5.0 |
 | --- |---|---|---|---|---|---|---|---|---|---|
-|Windows Server 2019|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|시작|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Windows 10 Enterprise LTSC 2019|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Windows Server 2016|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Windows 10 Enterprise 2016 LTSB|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
@@ -104,14 +104,14 @@ New-VM -Name "WindowsCV5" -Version 5.0
 
 Windows Server 2019, Windows Server 2016 또는 Windows 10에서 Hyper-v를 실행 하는 컴퓨터로 가상 컴퓨터를 이동 하거나 가져오는 경우 가상 컴퓨터의 구성이 자동으로 업데이트 되지 않습니다. 즉, 이전 버전의 Windows 또는 Windows Server를 실행 하는 Hyper-v 호스트에 가상 컴퓨터를 다시 이동할 수 있습니다. 그러나이는 구성 버전을 수동으로 업데이트할 때까지 새 가상 컴퓨터 기능 중 일부를 사용할 수 없음을 의미 하기도 합니다. 업그레이드 한 후에는 가상 머신 구성 버전을 다운 그레이드할 수 없습니다.
 
-가상 머신 구성 버전은 가상 머신의 구성, 저장 된 상태 및 스냅숏 파일과 Hyper-v 버전의 호환성을 나타냅니다. 구성 버전을 업데이트 하는 경우 가상 머신 구성 및 검사점 파일을 저장 하는 데 사용 되는 파일 구조를 변경 합니다. 또한 구성 버전을 해당 Hyper-v 호스트에서 지 원하는 최신 버전으로 업데이트 합니다. 업그레이드 된 가상 컴퓨터는 가상 컴퓨터 구성 데이터 읽기 및 쓰기의 효율성을 높이기 위해 설계된 새 구성 파일 형식을 사용합니다. 또한 업그레이드는 저장소 오류 발생 시 데이터 손상 가능성을 줄입니다.
+가상 머신 구성 버전은 가상 머신의 구성, 저장 된 상태 및 스냅숏 파일과 Hyper-v 버전의 호환성을 나타냅니다. 구성 버전을 업데이트 하는 경우 가상 머신 구성 및 검사점 파일을 저장 하는 데 사용 되는 파일 구조를 변경 합니다. 또한 구성 버전을 해당 Hyper-v 호스트에서 지 원하는 최신 버전으로 업데이트 합니다. 업그레이드 된 가상 컴퓨터는 가상 컴퓨터 구성 데이터 읽기 및 쓰기의 효율성을 높이기 위해 설계된 새 구성 파일 형식을 사용합니다. 또한 업그레이드는 스토리지 오류 발생 시 데이터 손상 가능성을 줄입니다.
 
 다음 표에는 새 가상 컴퓨터 또는 업그레이드 된 가상 컴퓨터에 사용 되는 각 파일 형식에 대 한 설명, 파일 이름 확장명 및 기본 위치가 나와 있습니다.
 
  |가상 컴퓨터 파일 형식 | 설명|
  |---|---|
-|Configuration |이진 파일 형식으로 저장 된 가상 컴퓨터 구성 정보입니다. <br /> 파일 이름 확장명:. vmcx <br /> 기본 위치: C:\ProgramData\Microsoft\Windows\Hyper-V\가상 컴퓨터|
- |런타임 상태|이진 파일 형식으로 저장 된 가상 컴퓨터 런타임 상태 정보입니다. <br />파일 이름 확장명:. vmrs 및 vmrs <br />기본 위치: C:\ProgramData\Microsoft\Windows\Hyper-V\가상 컴퓨터|
+|구성 |이진 파일 형식으로 저장 된 가상 컴퓨터 구성 정보입니다. <br /> 파일 이름 확장명:. vmcx <br /> 기본 위치: C:\ProgramData\Microsoft\Windows\Hyper-V\Virtual Machines|
+ |런타임 상태|이진 파일 형식으로 저장 된 가상 컴퓨터 런타임 상태 정보입니다. <br />파일 이름 확장명:. vmrs 및 vmrs <br />기본 위치: C:\ProgramData\Microsoft\Windows\Hyper-V\Virtual Machines|
 |가상 하드 디스크|가상 컴퓨터의 가상 하드 디스크를 저장 합니다. <br /> 파일 이름 확장명: .vhd 또는 .vhdx <br />기본 위치: 하드 디스크 C:\ProgramData\Microsoft\Windows\Hyper-V\Virtual|
  |자동 가상 하드 디스크 |가상 컴퓨터 검사점에 사용 되는 차이점 보관용 디스크 파일입니다. <br /> 파일 이름 확장명:. .avhdx <br /> 기본 위치: 하드 디스크 C:\ProgramData\Microsoft\Windows\Hyper-V\Virtual|
  |검사점|검사점은 여러 검사점 파일에 저장됩니다. 각 검사점은 구성 파일 및 런타임 상태 파일을 만듭니다. <br /> 파일 이름 확장명:. vmrs 및 vmrs <br />기본 위치: C:\ProgramData\Microsoft\Windows\Snapshots|
