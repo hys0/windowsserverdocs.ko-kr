@@ -10,11 +10,11 @@ author: cosmosdarwin
 ms.date: 09/19/2019
 ms.localizationpriority: medium
 ms.openlocfilehash: 21ba41f636c95660d16055908f6bef857b0f3608
-ms.sourcegitcommit: 73898afec450fb3c2f429ca373f6b48a74b19390
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71934990"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78370727"
 ---
 # <a name="choosing-drives-for-storage-spaces-direct"></a>저장소 공간 다이렉트용 드라이브 선택
 
@@ -74,7 +74,7 @@ ms.locfileid: "71934990"
 3. **모든 SSD.** NVMe 전용과 마찬가지로 드라이브가 모두 같은 모델일 경우 캐시가 없습니다. 내구성이 높은 NVMe 모델과 낮은 MVMe 모델을 혼용할 경우, 내구성이 높은 모델이 낮은 모델에 대한 쓰기를 캐싱하도록 구성할 수도 있습니다([설정 필요](understand-the-cache.md#manual-configuration)).
 
    >[!NOTE]
-   > 캐시 없이 NVMe 전용 또는 SSD 전용을 사용할 경우 모든 드라이브에서 사용 가능한 저장소 용량을 확보할 수 있다는 이점이 있습니다. 캐싱에 "소모"되는 용량이 없으므로 규모가 작은 경우에 적합합니다.
+   > 캐시 없이 NVMe 전용 또는 SSD 전용을 사용할 경우 모든 드라이브에서 사용 가능한 스토리지 용량을 확보할 수 있다는 이점이 있습니다. 캐싱에 "소모"되는 용량이 없으므로 규모가 작은 경우에 적합합니다.
 
 ## <a name="option-2--balancing-performance-and-capacity"></a>옵션 2 – 성능과 용량의 균형
 
@@ -114,9 +114,9 @@ ms.locfileid: "71934990"
 
 ### <a name="general"></a>일반
 
-서버당 총 저장소 용량을 약 400 테라바이트 (TB)로 제한 하는 것이 좋습니다. 서버당 저장소 용량이 클수록 소프트웨어 업데이트를 적용하는 경우 등에 가동 중지 시간이나 다시 부팅 후 데이터를 다시 동기화하는 데 필요한 시간이 더 길어집니다. 저장소 풀 당 현재 최대 크기는 Windows Server 2019의 경우 4 페타바이트 (PB) (4000 TB)이 고 Windows Server 2016의 경우 1 페타바이트입니다.
+서버당 총 저장소 용량을 약 400 테라바이트 (TB)로 제한 하는 것이 좋습니다. 서버당 스토리지 용량이 클수록 소프트웨어 업데이트를 적용하는 경우 등에 가동 중지 시간이나 다시 부팅 후 데이터를 다시 동기화하는 데 필요한 시간이 더 길어집니다. 저장소 풀 당 현재 최대 크기는 Windows Server 2019의 경우 4 페타바이트 (PB) (4000 TB)이 고 Windows Server 2016의 경우 1 페타바이트입니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [스토리지 공간 다이렉트 개요](storage-spaces-direct-overview.md)
 - [스토리지 공간 다이렉트 캐시 이해](understand-the-cache.md)
