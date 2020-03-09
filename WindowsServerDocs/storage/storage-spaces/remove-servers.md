@@ -11,11 +11,11 @@ description: Windows Server의 저장소 공간 다이렉트 클러스터에서 
 ms.date: 2/5/2017
 ms.localizationpriority: medium
 ms.openlocfilehash: ce8caef2b51279c97cc012045750b7a73d97a4ba
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402804"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78370744"
 ---
 # <a name="removing-servers-in-storage-spaces-direct"></a>저장소 공간 다이렉트에서 서버 제거
 
@@ -79,6 +79,6 @@ Windows에서 해당 서버에 저장된 모든 데이터를 클러스터의 다
    >[!NOTE]
    > 장애 발생 또는 유지 관리 등 특정 시점에 잠시 동안 서버 수를 줄이는 것이 좋습니다. 그러나 볼륨을 완전히 정상적인 상태로 되돌리려면 위에 나열된 최소 서버 수가 있어야 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [스토리지 공간 다이렉트 개요](storage-spaces-direct-overview.md)
