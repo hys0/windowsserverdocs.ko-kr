@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: e1e0235e50945fadd09fe9dd5ffeaf6d7119e482
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 875edcf191596d181ec0d70a83f9f3c20f5d5f4a
+ms.sourcegitcommit: a6ec589a39ef104ec2be958cd09d2f679816a5ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71385597"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78261942"
 ---
 # <a name="ad-fs-openid-connectoauth-flows-and-application-scenarios"></a>AD FS OpenID Connect/OAuth 흐름 및 애플리케이션 시나리오
 적용 대상: AD FS 2016 이상
@@ -292,7 +292,7 @@ OAuth 2.0 OBO(On-Behalf-Of) 흐름은 애플리케이션에서 서비스/웹 API
 
   1. 클라이언트 애플리케이션은 토큰 A를 사용하여 API A에 요청을 합니다.  
   참고: AD FS에서 OBO 흐름을 구성하는 동안 `user_impersonation` 범위가 선택되고 클라이언트가 요청에서 `user_impersonation` 범위를 요청합니다. 
-  2. API A에서 AD FS 토큰 발급 엔드포인트를 인증하고 API B에 액세스하기 위한 토큰을 요청합니다. 참고: AD FS에서 이 흐름을 구성하는 동안 API A의 리소스 ID와 동일한 값이 있는 clientID를 사용하여 API A가 서버 애플리케이션으로 등록되었는지도 확인합니다. 자세한 내용은 [여기에 On-Behalf Of 샘플 추가] 링크를 참조하세요.  
+  2. API A에서 AD FS 토큰 발급 엔드포인트를 인증하고 API B에 액세스하기 위한 토큰을 요청합니다. 참고: AD FS에서 이 흐름을 구성하는 동안 API A도 API A의 리소스 ID와 동일한 값이 있는 clientID를 사용하는 서버 애플리케이션으로 등록되어 있어야 합니다.
   3. AD FS 토큰 발급 엔드포인트에서 토큰 A를 사용하여 API A의 자격 증명에 대한 유효성을 검사하고, API B(토큰 B)에 대한 액세스 토큰을 발급합니다. 
   4. 토큰 B가 API B에 대한 요청의 권한 부여 헤더에 설정됩니다. 
   5. API B에서 보안 리소스의 데이터를 반환합니다. 
