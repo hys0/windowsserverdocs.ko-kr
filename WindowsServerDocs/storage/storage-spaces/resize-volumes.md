@@ -7,18 +7,21 @@ author: cosmosdarwin
 ms.author: cosdar
 manager: eldenc
 ms.technology: storage-spaces
-ms.date: 05/07/2019
-ms.openlocfilehash: 20482fe1728b12d4fe56dcfa397352fbb4b4f981
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.date: 03/10/2020
+ms.openlocfilehash: 4ce41da1da3dc90f698008902170d7cc1541619c
+ms.sourcegitcommit: bb2eb0b12f2a32113899a59aa5644bc6e8cab3d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71366086"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79089354"
 ---
 # <a name="extending-volumes-in-storage-spaces-direct"></a>저장소 공간 다이렉트에서 볼륨 확장
 > 적용 대상: Windows Server 2019, Windows Server 2016
 
 이 항목에서는 Windows 관리 센터를 사용 하 여 [스토리지 공간 다이렉트](storage-spaces-direct-overview.md) 클러스터의 볼륨 크기를 조정 하는 지침을 제공 합니다.
+
+> [!WARNING]
+> **지원 되지 않음: 스토리지 공간 다이렉트에서 사용 하는 기본 저장소의 크기를 조정 합니다.** Azure에서를 포함 하 여 가상화 된 저장소 환경에서 스토리지 공간 다이렉트를 실행 하는 경우 가상 컴퓨터에 사용 되는 저장 장치의 특성 크기 조정 또는 변경이 지원 되지 않으며 데이터에 액세스할 수 없게 됩니다. 대신, [서버 또는 드라이브 추가](add-nodes.md) 섹션의 지침에 따라 볼륨을 확장 하기 전에 용량을 더 추가 합니다.
 
 볼륨 크기를 조정 하는 방법에 대 한 빠른 비디오를 시청 하세요.
 
@@ -50,7 +53,7 @@ ms.locfileid: "71366086"
 
 이러한 개체에 대해 알아보려면 PowerShell에서 해당하는 명사를 사용하여 **Get-** 을 실행해 보세요.
 
-예를 들어 다음과 같은 가치를 제공해야 합니다.
+예를 들면 다음과 같습니다.
 
 ```PowerShell
 Get-VirtualDisk
@@ -139,7 +142,7 @@ $Partition | Resize-Partition -Size ($Partition | Get-PartitionSupportedSize).Si
 > [!TIP]
 > **Get-Volume**을 실행하여 볼륨이 새로운 크기인지 확인할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Server 2016의 스토리지 공간 다이렉트](storage-spaces-direct-overview.md)
 - [스토리지 공간 다이렉트에서 볼륨 계획](plan-volumes.md)
