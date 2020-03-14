@@ -14,11 +14,11 @@ author: evaseydl
 manager: scottman
 ms.author: evas
 ms.openlocfilehash: 7b8f757d552bf54cd7f4eed0783ba8e0062b9d30
-ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78371825"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79322805"
 ---
 # <a name="multipoint--stations"></a>MultiPoint 스테이션
 MultiPoint 서비스 시스템 환경에서는 *스테이션* MultiPoint Service를 실행 하는 컴퓨터에 연결 하기 위한 사용자 엔드포인트입니다. 각 스테이션은 사용자에 게 독립적인 Windows 10 환경을 제공 합니다. 다음 스테이션 유형이 지원 됩니다.  

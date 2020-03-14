@@ -13,11 +13,11 @@ author: nnamuhcs
 ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: 0c46d19f4f172786e0ffe7f3b9dd7ac1d8f4fcf0
-ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78371178"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79322235"
 ---
 # <a name="manage-server-folders-in-windows-server-essentials"></a>Windows Server Essentials에서 서버 폴더 관리
 
@@ -160,7 +160,7 @@ ms.locfileid: "78371178"
 >  기본적으로 네트워크에 사용자 계정을 추가하면 서버의 **사용자** 폴더 아래에 사용자에 대한 하위 폴더가 생성됩니다. 사용자 또는 관리자만 네트워크 컴퓨터에서 하위 폴더에 액세스할 수 있습니다. 사용 권한은 **사용자** 아래의 각 하위 폴더에 대해 설정되므로 최상위 **사용자** 폴더에 대한 일반적인 액세스 권한은 없습니다.  
   
 > [!NOTE]
->  **파일 히스토리 백업**, **폴더 리디렉션**및 **사용자** 서버 폴더에 대한 공유 권한은 수정할 수 없습니다. 또한 이러한 서버 폴더의 폴더 속성에는 **공유** 탭이 포함되지 않습니다.  
+>  **파일 히스토리 백업**, **폴더 리디렉션** 및 **사용자** 서버 폴더에 대한 공유 권한은 수정할 수 없습니다. 또한 이러한 서버 폴더의 폴더 속성에는 **공유** 탭이 포함되지 않습니다.  
   
 ###  <a name="BKMK_10"></a>서버 폴더 속성 보기 또는 수정  
  대시보드 **서버 폴더** 탭의 **폴더 속성 보기** 작업을 통해 서버 폴더 이름, 해당 설명을 수정하고 서버 폴더에 대한 액세스 권한이 있는 사용자 계정을 정의할 수 있습니다.  
@@ -239,7 +239,7 @@ ms.locfileid: "78371178"
   
 -   공유 폴더가 포함된 폴더  
   
--   **이동식 저장소가 있는 장치**아래에 있는 하드 드라이브  
+-   **이동식 스토리지가 있는 디바이스** 아래에 있는 하드 드라이브  
   
 -   하드 드라이브의 루트 디렉터리 (예: C:\\, D:\\, E:\\)  
   

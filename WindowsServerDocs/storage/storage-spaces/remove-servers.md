@@ -11,11 +11,11 @@ description: Windows Server의 저장소 공간 다이렉트 클러스터에서 
 ms.date: 2/5/2017
 ms.localizationpriority: medium
 ms.openlocfilehash: ce8caef2b51279c97cc012045750b7a73d97a4ba
-ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78370744"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79322315"
 ---
 # <a name="removing-servers-in-storage-spaces-direct"></a>저장소 공간 다이렉트에서 서버 제거
 

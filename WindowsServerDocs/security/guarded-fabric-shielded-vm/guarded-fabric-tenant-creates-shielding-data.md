@@ -9,11 +9,11 @@ author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 09/25/2019
 ms.openlocfilehash: 26ff5e27494e2f42a0c8e4d28e2b9820f8d19e6a
-ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78370757"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79322465"
 ---
 # <a name="shielded-vms-for-tenants---creating-shielding-data-to-define-a-shielded-vm"></a>테 넌 트 용 보호 된 vm-보호 된 VM을 정의 하는 보호 데이터 만들기
 
@@ -92,7 +92,7 @@ VMM에서 서명 된 템플릿 디스크는 일반화 되므로 프로 비전 �
     | 대체 문자열 | 예제 대체 |
     |---------------------|----------------------|
     | @IP4Addr-1@         | 192.168.1.10/24      |
-    | @MACAddr-1@         | 이더넷             |
+    | @MACAddr-1@         | Ethernet             |
     | @Prefix-1-1@        | 24                   |
     | @NextHop-1-1@       | 192.168.1.254        |
     | @IP4Addr-2@         | 10.0.20.30/24        |

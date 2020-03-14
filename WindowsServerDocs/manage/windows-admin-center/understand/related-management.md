@@ -8,11 +8,11 @@ ms.author: harowl
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.openlocfilehash: d681e5007cd3ae3c14de774df0bc85abc23b51d7
-ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
-ms.translationtype: MT
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78371692"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79323535"
 ---
 # <a name="windows-admin-center-and-related-management-solutions-from-microsoft"></a>Windows Admin Center 및 Microsoft의 관련 관리 솔루션
 
@@ -28,7 +28,7 @@ ms.locfileid: "78371692"
 
 [Intune](https://www.microsoft.com/cloud-platform/microsoft-intune)은 정책 세트를 기준으로 iOS, Android, Windows 및 macOS 디바이스를 관리할 수 있는 클라우드 기반 엔터프라이즈 이동성 관리 서비스입니다. Intune는 직원이 정보를 액세스 및 공유하는 방법을 제어하여 회사 정보를 보호할 수 있도록 지원하는 데 중점을 둡니다. 반면, Windows Admin Center는 정책 기반 기능이 아니며, 원격 PowerShell 및 WinRM을 통한 WMI를 사용하여 Windows 10 및 Windows Server 시스템의 임시 관리를 사용하도록 설정합니다.
 
-## <a name="azure-stack"></a>Azure Stack
+## <a name="azure-stack"></a>Azure 스택
 
 [Azure Stack](https://azure.microsoft.com/overview/azure-stack/)은 데이터 센터에서 Azure 서비스를 제공할 수 있는 하이브리드 클라우드 플랫폼입니다. Azure Stack은 PowerShell 또는 기존 Azure 서비스를 액세스 및 관리하는 데 사용되는 기존 Azure Portal과 비슷한 관리자 포털을 사용하여 관리됩니다. Windows Admin Center는 Azure Stack 인프라를 관리하기 위한 기능이 아니며, [Azure IaaS 가상 머신](../azure/manage-azure-vms.md)(Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012 실행)을 관리하거나 Azure Stack 환경에 배포된 개별 물리적 서버의 문제를 해결하는 데 사용할 수 있습니다.
 
@@ -45,6 +45,6 @@ ms.locfileid: "78371692"
 |**개별** 2~4 노드 **HCI** 클러스터의 관리 최적화, Hyper-V, 직접 스토리지 공간 및 SDN 통합|SCVMM을 사용하여 **완전 복구**에서 **데이터 센터 규모의**  Hyper-V, Windows Server 클러스터 배포 및 관리|
 |**HCI에서 모니터링** 기능만 지원, 클러스터 상태 서비스에 내역 저장. 자사 및 타사 **관리 도구 확장**을 위한 확장 가능 플랫폼|경고, 알림, 모니터링, 타사 워크로드 모니터링 기능을 포함하는 SCOM의 **포괄적이면서** & **확장 가능한 모니터링** 플랫폼, 기록을 위한 SQL|
 |**하이브리드**에 대한 가장 쉬운 브리지. 데이터 보호, 복제, 업데이트 등에 대한 다양한 Azure 서비스 등록 및 사용|**기본 제공** 데이터 보호, 복제, 업데이트(DPM/VMM/SCCM). Log Analytics와 서비스 맵의 하이브리드 통합|
-|Windows Server의 **플랫폼 기능** 강화: Storage Migration Service, storage Replica, System Insights 등|**추가 플랫폼**: ORCHESTRATOR/SMA의 자동화 SCSM & 기타 서비스 관리 도구와 통합|
+|Windows Server의 **주요 플랫폼 기능**: 스토리지 마이그레이션 서비스, 스토리지 복제본, 시스템 인사이트 등|**추가 플랫폼**: Orchestrator/SMA의 자동화. SCSM 및 다른 서비스 관리 도구와의 통합|
 
 #### <a name="each-delivers-targeted-value-independently-better-together-with-complementary-capabilities"></a>각각이 독립적으로 목표 값 전달, 보완 기능으로 **시너지 효과 발생**

@@ -9,11 +9,11 @@ ms.assetid: 68c35b64-4d24-42be-90c9-184f2b5f19be
 ms.author: pashort
 author: shortpatti
 ms.openlocfilehash: b39cac842f115a1828c666eec52f17f80971510c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71365695"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79322715"
 ---
 # <a name="remote-direct-memory-access-rdma-and-switch-embedded-teaming-set"></a>RDMA\)를 \(원격 직접 메모리 액세스를 설정 하 고 포함 된 팀 \(집합을 전환\)
 
@@ -161,7 +161,7 @@ SET은 Hyper-v를 포함 하는 환경에서 사용할 수 있는 대체 NIC 팀
 
 ![집합 아키텍처](../media/RDMA-and-SET/set_architecture.jpg)
 
-집합은 Hyper-v 가상 스위치에 통합, 가상 컴퓨터 (VM) 내부에서 SET를 사용할 수 없습니다. 그러나 Vm 내에서 NIC 팀을 사용할 수 있습니다.
+SET는 Hyper-v 가상 스위치에 통합되기 때문에 가상 머신(VM) 내부에서 SET를 사용할 수 없습니다. 그러나 Vm 내에서 NIC 팀을 사용할 수 있습니다.
 
 자세한 내용은 참조 [가상 컴퓨터 (Vm)의 NIC 팀](https://docs.microsoft.com/windows-server/networking/technologies/nic-teaming/nict-vms)합니다.
 
@@ -237,11 +237,11 @@ Vm은 Hyper-v 가상 스위치에서 포트에 연결 됩니다. 집합 팀을 �
 > [!NOTE]
 > 집합 패킷 직접 팀 모드와 함께에서 사용 하는 경우  **독립 스위치** 및 부하 분산 모드 **Hyper-v 포트** 필요 합니다.
 
-인접 스위치가 항상 특정 MAC 주소는 해당된 포트에서을 인식 하기 때문에 스위치에서 MAC 주소가 있는 포트를 수신 부하 (트래픽 스위치에서 호스트에)를 배포 합니다. 특히 유용 가상 컴퓨터 큐 (Vmq)를 사용 하는 큐 트래픽이 도착 하는 데 필요한 특정 NIC에 배치할 수 있으므로 합니다.
+인접 스위치가 항상 특정 MAC 주소는 해당된 포트에서을 인식 하기 때문에 스위치에서 MAC 주소가 있는 포트를 수신 부하 (트래픽 스위치에서 호스트에)를 배포 합니다. 트래픽이 도착할 것으로 예상되는 특정 NIC에 대기열을 배치할 수 있기 때문에 VMQ (VMQ)가 사용될 때 특히 유용합니다.
 
 그러나 호스트에 몇 가지 Vm만 있는 경우이 모드는 균형이 분포를 달성 하기 위해 충분히 세부적인 아닐 수도 있습니다. 이 모드는 항상 단일 인터페이스에서 사용할 수 있는 대역폭을 단일 VM (즉, 단일 스위치 포트에서 트래픽)를 제한 합니다.
 
-**Dynamic**
+**비동적**
 
 이 부하 분산 모드는 다음과 같은 이점이 있습니다.
 

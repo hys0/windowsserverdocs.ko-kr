@@ -14,11 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ms.openlocfilehash: 293239c9f746f939b06d45d6e8c1a50b59e2bc43
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407133"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79322965"
 ---
 # <a name="software-restriction-policies-technical-overview"></a>소프트웨어 제한 정책 기술 개요
 
@@ -27,7 +27,7 @@ ms.locfileid: "71407133"
 이 항목에서는 소프트웨어 제한 정책, 기능 사용 방법 및 방법, 이전 릴리스에 구현 된 변경 내용 및 Windows에서 시작 하 여 소프트웨어 제한 정책을 만들고 배포 하는 데 도움이 되는 추가 리소스에 대 한 링크를 제공 합니다. 서버 2008 및 Windows Vista.
 
 ## <a name="introduction"></a>소개
-소프트웨어 제한 정책은 관리자에 게 소프트웨어를 식별 하 고 로컬 컴퓨터에서 실행 하는 기능을 제어 하는 그룹 정책 기반 메커니즘을 제공 합니다. 이러한 정책을 사용 하 여 Microsoft Windows 운영 체제 (Windows Server 2003 및 Windows XP Professional부터)를 실행 하는 컴퓨터에서 알려진 충돌을 방지 하 고 악성 바이러스와 같은 보안 위협 으로부터 컴퓨터를 보호할 수 있습니다. 및 트로이 목마 프로그램. 또한 소프트웨어 제한 정책을 사용하여 명확하게 식별된 응용 프로그램만 실행할 수 있도록 고도로 제한된 컴퓨터 구성을 만들 수 있습니다. 소프트웨어 제한 정책은 Microsoft Active Directory 및 그룹 정책에 통합되어 있습니다. 독립 실행형 컴퓨터에 소프트웨어 제한 정책을 만들 수도 있습니다.
+소프트웨어 제한 정책은 관리자에 게 소프트웨어를 식별 하 고 로컬 컴퓨터에서 실행 하는 기능을 제어 하는 그룹 정책 기반 메커니즘을 제공 합니다. 이러한 정책을 사용 하 여 Microsoft Windows 운영 체제 (Windows Server 2003 및 Windows XP Professional부터)를 실행 하는 컴퓨터에서 알려진 충돌을 방지 하 고 악성 바이러스와 같은 보안 위협 으로부터 컴퓨터를 보호할 수 있습니다. 및 트로이 목마 프로그램. 또한 소프트웨어 제한 정책을 사용하여 명확하게 식별된 애플리케이션만 실행할 수 있도록 고도로 제한된 컴퓨터 구성을 만들 수 있습니다. 소프트웨어 제한 정책은 Microsoft Active Directory 및 그룹 정책에 통합되어 있습니다. 독립 실행형 컴퓨터에 소프트웨어 제한 정책을 만들 수도 있습니다.
 
 소프트웨어 제한 정책은 완전히 신뢰할 수 없는 스크립트와 기타 코드를 실행하지 못하도록 제한하기 위해 관리자가 만든 규정으로 구성된 신뢰할 수 있는 정책입니다. 로컬 그룹 정책 편집기에 대 한 소프트웨어 제한 정책 확장은 로컬 컴퓨터 또는 도메인 전체에서 응용 프로그램 사용을 제한 하는 설정을 관리할 수 있는 단일 사용자 인터페이스를 제공 합니다.
 
@@ -58,7 +58,7 @@ IT 조직 및 사용자는 실행 하기에 안전 하 고 그렇지 않은 소�
 
 -   스크립트, 실행 파일 및 ActiveX 컨트롤을 규제할 수 있는 유연한 그룹 정책 설계
 
-소프트웨어 제한 정책은 소프트웨어 제한 정책을 준수하는 응용 프로그램(예: 스크립팅 응용 프로그램) 및 운영 체제에서 강제 적용됩니다.
+소프트웨어 제한 정책은 소프트웨어 제한 정책을 준수하는 애플리케이션(예: 스크립팅 애플리케이션) 및 운영 체제에서 강제 적용됩니다.
 
 관리자는 특히 다음과 같은 목적으로 소프트웨어 제한 정책을 사용할 수 있습니다.
 
@@ -75,7 +75,7 @@ IT 조직 및 사용자는 실행 하기에 안전 하 고 그렇지 않은 소�
 ## <a name="BKMK_Diffs_Changes"></a>기능의 차이점 및 변경 내용
 Windows Server 2012 및 Windows 8의 SRP에는 기능이 변경 되지 않았습니다.
 
-**지원 되는 버전**
+**지원되는 버전**
 
 소프트웨어 제한 정책은 windows Server 2012 및 windows 8을 포함 하 여 windows XP 이상을 실행 하는 windows Server 2003 이상을 실행 하는 컴퓨터에만 구성 하 고 적용할 수 있습니다.
 
@@ -86,9 +86,9 @@ Windows Server 2012 및 Windows 8의 SRP에는 기능이 변경 되지 않았습
 
 다음 표에서는 SRP (소프트웨어 제한 정책) 기능 및 AppLocker의 기능과 기능을 비교 합니다.
 
-|응용 프로그램 제어 기능|SRP|AppLocker|
+|애플리케이션 제어 기능|SRP|AppLocker|
 |----------------|----|-------|
-|Scope|SRP 정책은 Windows XP 및 Windows Server 2003부터 모든 Windows 운영 체제에 적용할 수 있습니다.|AppLocker 정책은 Windows Server 2008 R2, Windows Server 2012, Windows 7 및 Windows 8에만 적용 됩니다.|
+|범위|SRP 정책은 Windows XP 및 Windows Server 2003부터 모든 Windows 운영 체제에 적용할 수 있습니다.|AppLocker 정책은 Windows Server 2008 R2, Windows Server 2012, Windows 7 및 Windows 8에만 적용 됩니다.|
 |정책 만들기|SRP 정책은 그룹 정책를 통해 유지 관리 되며 GPO의 관리자만 SRP 정책을 업데이트할 수 있습니다. 로컬 컴퓨터의 관리자는 로컬 GPO에 정의 된 SRP 정책을 수정할 수 있습니다.|AppLocker 정책은 그룹 정책를 통해 유지 관리 되며 GPO의 관리자만 정책을 업데이트할 수 있습니다. 로컬 컴퓨터의 관리자는 로컬 GPO에 정의 된 AppLocker 정책을 수정할 수 있습니다.<br /><br />AppLocker를 사용할 경우 사용자를 지원 웹 페이지로 안내하기 위해 오류 메시지를 사용자 지정할 수 있습니다.|
 |정책 유지 관리|SRP 정책은 로컬 보안 정책 스냅인 (정책이 로컬로 생성 된 경우) 또는 그룹 정책 관리 콘솔 (GPMC)를 사용 하 여 업데이트 해야 합니다.|AppLocker 정책은 로컬 보안 정책 스냅인 (정책이 로컬로 생성 된 경우) 또는 GPMC 또는 Windows PowerShell AppLocker cmdlet을 사용 하 여 업데이트할 수 있습니다.|
 |정책 응용 프로그램|SRP 정책은 그룹 정책를 통해 배포 됩니다.|AppLocker 정책은 그룹 정책를 통해 배포 됩니다.|
@@ -97,7 +97,7 @@ Windows Server 2012 및 Windows 8의 SRP에는 기능이 변경 되지 않았습
 |지정 된 파일 형식|SRP는 실행 가능한 것으로 간주 되는 파일 형식의 확장 가능 목록을 지원 합니다. 관리자는 실행 파일을 고려해 야 하는 파일에 대 한 확장을 추가할 수 있습니다.|AppLocker는이 기능을 지원 하지 않습니다. AppLocker는 현재 다음 파일 확장명을 지원 합니다.<br /><br />-실행 파일 (.exe, .com)<br />-Dll (.ocx, .dll)<br />-Scripts (.vbs, .js, ps1, .cmd, .bat)<br />-Windows Installer (.msi, .mst, .msp)<br />-패키지 된 앱 설치 관리자 (.appx)|
 |규칙 유형|SRP는 다음 네 가지 유형의 규칙을 지원 합니다.<br /><br />-Hash<br />-경로<br />-서명<br />-인터넷 영역|AppLocker는 다음 세 가지 유형의 규칙을 지원 합니다.<br /><br />-Hash<br />-경로<br />-게시자|
 |해시 값 편집|SRP를 사용 하면 관리자가 사용자 지정 해시 값을 제공할 수 있습니다.|AppLocker는 해시 값 자체를 계산 합니다. 내부적으로 이식 가능한 실행 파일 (Exe 및 Dll) 및 Windows 설치 관리자에 SHA1 Authenticode 해시를 사용 하 고 나머지에는 SHA1 플랫 파일 해시를 사용 합니다.|
-|다른 보안 수준에 대 한 지원|SRP 관리자는 앱을 실행할 수 있는 권한을 지정할 수 있습니다. 따라서 관리자는 메모장에서 항상 제한 된 권한으로 실행 되 고 관리자 권한으로 실행 되지 않도록 하는 규칙을 구성할 수 있습니다.<br /><br />Windows Vista 및 이전 버전의 SRP는 여러 보안 수준을 지원 했습니다. Windows 7에서는 목록에 두 가지 수준만 있습니다. 허용 안 함 및 무제한 (Basic 사용자는 허용 되지 않음)으로 변환 됩니다.|AppLocker는 보안 수준을 지원 하지 않습니다.|
+|다른 보안 수준에 대 한 지원|SRP 관리자는 앱을 실행할 수 있는 권한을 지정할 수 있습니다. 따라서 관리자는 메모장에서 항상 제한 된 권한으로 실행 되 고 관리자 권한으로 실행 되지 않도록 하는 규칙을 구성할 수 있습니다.<br /><br />Windows Vista 및 이전 버전의 SRP는 여러 보안 수준을 지원 했습니다. Windows 7의 경우 목록에 허용 되지 않음 및 무제한 (기본 사용자로 변환)이 허용 되지 않습니다.|AppLocker는 보안 수준을 지원 하지 않습니다.|
 |패키지 된 앱 및 패키지 된 앱 설치 관리자 관리|수 없습니다|.appx는 AppLocker에서 관리할 수 있는 올바른 파일 형식입니다.|
 |사용자 또는 사용자 그룹에 대 한 규칙 대상 지정|SRP 규칙은 특정 컴퓨터의 모든 사용자에 게 적용 됩니다.|AppLocker 규칙은 특정 사용자나 사용자 그룹을 대상으로 지정할 수 있습니다.|
 |규칙 예외 지원|SRP는 규칙 예외를 지원 하지 않습니다.|AppLocker 규칙은 관리자가 "Regedit.exe를 제외 하 고 Windows의 모든 항목 허용"과 같은 규칙을 만들 수 있도록 하는 예외를 포함할 수 있습니다.|
@@ -173,9 +173,9 @@ Srp 아키텍처에 대 한 자세한 내용, SRP에서 규칙, 프로세스 및
 
 -   다른 도메인 또는 사이트의 GPO에 연결 하면 성능이 저하 될 수 있습니다.
 
-## <a name="additional-resources"></a>추가 자료
+## <a name="additional-resources"></a>추가 리소스
 
-|콘텐츠 형식|참조|
+|콘텐츠 유형|참조|
 |--------|-------|
 |**계획**|[소프트웨어 제한 정책 기술 참조](https://technet.microsoft.com/library/cc728085(v=WS.10).aspx)|
 |**작업**|[소프트웨어 제한 정책 관리](administer-software-restriction-policies.md)|

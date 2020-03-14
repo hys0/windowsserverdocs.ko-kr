@@ -10,11 +10,11 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
 ms.openlocfilehash: 4f12b1e88414a17c8fb82a707bd4399505df4c6c
-ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78371521"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79323165"
 ---
 # <a name="ad-ds-simplified-administration"></a>AD DS 간소화된 관리
 
@@ -30,7 +30,7 @@ AD DS 간소화된 관리는 도메인 배포의 새로운 디자인입니다.
 - AD DS 배포 및 구성 엔진이 이제 Windows PowerShell이며, 이는 새로운 AD DS 구성 마법사를 사용하는 경우에도 마찬가지입니다.  
 - 스키마 확장, 포리스트 준비 및 도메인 준비가 도메인 컨트롤러 수준 올리기 프로세스의 일부로 자동으로 수행되므로 더 이상 스키마 마스터와 같은 특정 서버에서 별도의 작업을 수행할 필요가 없습니다.  
 - 이제 수준 올리기에 새 도메인 컨트롤러에 대한 포리스트 및 도메인 준비 상태를 확인하는 필수 구성 요소 확인이 포함되어 있어 수준 올리기에 실패할 가능성이 낮아졌습니다.  
-- 이제 Windows PowerShell용 Active Directory 모듈에 복제 토폴로지 관리, 동적 액세스 제어 및 기타 작업을 위한 cmdlet이 포함되어 있습니다.  
+- 이제 Windows PowerShell용 Active Directory 모듈에 복제 토폴로지 관리, 동적 Access Control 및 기타 작업을 위한 cmdlet이 포함되어 있습니다.  
 - Windows Server 2012 포리스트 기능 수준에서 새로운 기능을 구현하지 않으며 도메인 기능 수준이 새로운 Kerberos 기능의 하위 집합에만 필요하므로 관리자에게 동종 도메인 컨트롤러 환경이 자주 필요하지 않습니다.  
 - 자동화된 배포 및 롤백 보호를 포함하도록 가상화된 도메인 컨트롤러에 대한 완벽한 지원 기능이 추가되었습니다.  
    - 가상화 된 도메인 컨트롤러에 대 한 자세한 내용은 참조 [Active Directory 도메인 서비스 및 #40; 도입 AD DS & #41; 가상화 & #40입니다. 수준 100 & #41;](../../ad-ds/Introduction-to-Active-Directory-Domain-Services-AD-DS-Virtualization-Level-100.md)합니다.
@@ -120,9 +120,9 @@ Windows Server 2012는 1999년에 최초의 Active Directory 도메인을 만든
 - 관리자가 RID 풀을 무효화한 경우 이벤트가 로깅됩니다.  
 - 이제 RID 정책 RID 블록 크기에 대한 최대 한도가 적용됩니다.  
 - 이제 인공 RID 최대값이 적용되며 전역 RID 공간이 적은 경우 로깅되므로 관리자가 전역 공간이 소진되기 전에 조치를 취할 수 있습니다.
-- 이제 전역 RID 공간을 1비트 증가시켜 크기를 두 배(2<sup>31</sup>, 즉 2,147,483,648개의 SID)로 늘릴 수 있습니다.  
+- 이제 전역 RID 공간을 1비트 증가시켜 크기를 두 배(2<sup>31</sup> , 즉 2,147,483,648개의 SID)로 늘릴 수 있습니다.  
 
-RID 및 RID 마스터에 대한 자세한 내용은 [보안 식별자 작동 방식](https://technet.microsoft.com/library/cc778824(WS.10).aspx)을 참조하세요.  
+Rid 및 RID 마스터에 대 한 자세한 내용은 검토 [보안 식별자 작동](https://technet.microsoft.com/library/cc778824(WS.10).aspx)합니다.  
   
 ## <a name="ad-ds-role-deployment-and-management-architecture"></a>AD DS 역할 배포 및 관리 아키텍처
 

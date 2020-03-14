@@ -9,11 +9,11 @@ ms.author: pashort
 author: shortpatti
 ms.localizationpriority: medium
 ms.openlocfilehash: 31d0d5c12760fc627ce93972f4a70e85f61dd178
-ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78371898"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79322555"
 ---
 # <a name="always-on-vpn-technology-overview"></a>Always On VPN 기술 개요
 
@@ -84,7 +84,7 @@ NPS를 사용 하면 연결 요청 인증 및 권한 부여에 대 한 조직 �
 
 CA (인증 기관) 서버는 Active Directory 인증서 서비스를 실행 하는 인증 기관입니다. VPN 구성에는 Active Directory 기반 PKI (공개 키 인프라)가 필요 합니다.
 
-조직에서는 사람, 디바이스 또는 서비스의 id는 해당 공개 키에 바인딩하여 보안을 강화 하기 위해 AD CS를 사용할 수 있습니다. AD CS에는 인증서 등록 및 해지 다양 한 확장 가능한 환경에서에서 관리할 수 있는 기능이 포함 되어 있습니다. 자세한 내용은 참조 [Active Directory 인증서 서비스 개요](https://technet.microsoft.com/library/hh831740.aspx) 및 [공개 키 인프라 디자인 지침](https://social.technet.microsoft.com/wiki/contents/articles/2901.public-key-infrastructure-design-guidance.aspx)합니다.
+조직에서는 사람, 장치 또는 서비스의 id는 해당 공개 키에 바인딩하여 보안을 강화 하기 위해 AD CS를 사용할 수 있습니다. AD CS에는 인증서 등록 및 해지 다양 한 확장 가능한 환경에서에서 관리할 수 있는 기능이 포함 되어 있습니다. 자세한 내용은 참조 [Active Directory 인증서 서비스 개요](https://technet.microsoft.com/library/hh831740.aspx) 및 [공개 키 인프라 디자인 지침](https://social.technet.microsoft.com/wiki/contents/articles/2901.public-key-infrastructure-design-guidance.aspx)합니다.
 
 배포를 완료 하는 동안 CA에서 다음 인증서 템플릿을 구성 합니다.
 
@@ -126,7 +126,7 @@ CA (인증 기관) 서버는 Active Directory 인증서 서비스를 실행 하�
 
 ## <a name="active-directory-domain-services-ad-ds"></a>AD DS(Active Directory 도메인 서비스)
 
-AD DS에서는 디렉터리 사용 애플리케이션의 네트워크 리소스와 애플리케이션별 데이터에 대한 정보를 저장하고 관리하는 분산 데이터베이스를 제공합니다. 관리자는 AD DS를 이용해 사용자, 컴퓨터 및 다른 디바이스와 같은 네트워크 요소를 계층적 포함 구조로 구성할 수 있습니다. 계층적 포함 구조에는 Active Directory 포리스트, 포리스트의 도메인 및 각 도메인의 OU(조직 구성 단위)가 포함되어 있습니다. AD DS를 실행하고 있는 서버를 도메인 컨트롤러라고 합니다.
+AD DS에서는 디렉터리 사용 애플리케이션의 네트워크 리소스와 애플리케이션별 데이터에 대한 정보를 저장하고 관리하는 분산 데이터베이스를 제공합니다. 관리자는 AD DS를 이용해 사용자, 컴퓨터 및 다른 장치와 같은 네트워크 요소를 계층적 포함 구조로 구성할 수 있습니다. 계층적 포함 구조에는 Active Directory 포리스트, 포리스트의 도메인 및 각 도메인의 OU(조직 구성 단위)가 포함되어 있습니다. AD DS를 실행하고 있는 서버를 도메인 컨트롤러라고 합니다.
 
 AD DS에는 사용자 자격 증명을 인증 하 고 VPN 연결 요청에 대 한 권한 부여를 평가 하기 위해 PEAP (Protected Extensible Authentication Protocol)에 필요한 사용자 계정, 컴퓨터 계정 및 계정 속성이 포함 되어 있습니다. AD DS를 배포 하는 방법에 대 한 자세한 내용은 Windows Server 2016 [Core 네트워크 가이드](../../../../networking/core-network-guide/Core-Network-Guide.md)를 참조 하세요.
 

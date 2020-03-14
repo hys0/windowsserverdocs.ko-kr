@@ -8,11 +8,11 @@ author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
 ms.openlocfilehash: 8a9273eef906130b11b98148cf1e84f7e18812b0
-ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78371465"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79322495"
 ---
 # <a name="prerequisites-for-guarded-hosts"></a>보호 된 호스트에 대 한 필수 구성 요소
 

@@ -9,15 +9,15 @@ ms.date: 06/07/2019
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.openlocfilehash: 39af45506ff7023cebe437992e90f6d4ec051333
-ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
-ms.translationtype: MT
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78371715"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79323595"
 ---
 # <a name="configure-user-access-control-and-permissions"></a>사용자 액세스 제어 및 권한 구성
 
-> 적용 대상: Windows 관리 센터, Windows 관리 센터 미리 보기
+> 적용 대상: Windows Admin Center, Windows Admin Center 미리 보기
 
 아직 익숙하지 않은 경우 [Windows Admin Center의 사용자 액세스 제어 옵션](../plan/user-access-options.md)을 숙지하세요.
 
@@ -45,7 +45,7 @@ Active Directory 또는 로컬 머신 그룹은 기본적으로 게이트웨이 
 
 ### <a name="smartcard-authentication"></a>스마트 카드 인증
 
-스마트 카드 기반 보안 그룹에 **필요한** 추가 그룹을 지정하여 _스마트 카드 인증_을 적용할 수 있습니다. 스마트 카드 기반 보안 그룹이 추가되면 사용자가 보안 그룹 및 사용자 목록에 포함된 스마트 카드 그룹 모두의 멤버인 경우에만 Windows Admin Center 서비스에 액세스할 수 있습니다.
+스마트 카드 기반 보안 그룹에 _필요한_ 추가 그룹을 지정하여 **스마트 카드 인증**을 적용할 수 있습니다. 스마트 카드 기반 보안 그룹이 추가되면 사용자가 보안 그룹 및 사용자 목록에 포함된 스마트 카드 그룹 모두의 멤버인 경우에만 Windows Admin Center 서비스에 액세스할 수 있습니다.
 
 게이트웨이 관리자는 **관리자** 탭에서 Windows Admin Center에 액세스할 수 있는 사용자를 제어할 수 있습니다. 컴퓨터의 로컬 관리자 그룹은 항상 모든 관리자 액세스 권한을 가지고 있으며, 목록에서 제거할 수 없습니다. 보안 그룹이 추가되면 해당 그룹의 멤버에게 Windows Admin Center 게이트웨이 설정을 변경할 수 있는 권한을 부여합니다. 관리자 목록은 보안 그룹 및 스마트 카드 그룹에 대한 AND 조건을 사용하여 사용자 목록과 동일한 방식으로 스마트 카드 인증을 지원합니다.
 
@@ -111,7 +111,7 @@ Windows Admin Center 일반 설정의 **Azure** 탭을 사용하면 현재 로�
 
 Windows Admin Center를 Windows 10에 설치하면 Single Sign-On을 사용할 수 있습니다. 그러나 Windows Server에서 Windows Admin Center를 사용하려면 Single Sign-On을 사용하기 전에 먼저 사용자 환경에서 특정 형태의 Kerberos 위임을 설정해야 합니다. 위임은 게이트웨이 컴퓨터를 대상 노드에 위임하도록 신뢰할 수 있는 것으로 구성합니다. 
 
-사용자 환경에서 [리소스 기반 제한 위임](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview)을 구성하려면 다음 PowerShell 예제를 사용합니다. 이 예제에서는 contoso.com 도메인의 Windows 관리 센터 게이트웨이 [wac.contoso.com]에서 위임을 허용 하도록 Windows Server [node01.contoso.com]를 구성 하는 방법을 보여 줍니다.
+사용자 환경에서 [리소스 기반 제한 위임](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview)을 구성하려면 다음 PowerShell 예제를 사용합니다. 이 예제에서는 contoso.com 도메인의 Windows Admin Center 게이트웨이 [wac.contoso.com]에서 위임을 수락하도록 Windows Server [node01.contoso.com]을 구성하는 방법을 보여줍니다.
 
 ```powershell
 Set-ADComputer -Identity (Get-ADComputer node01) -PrincipalsAllowedToDelegateToAccount (Get-ADComputer wac)

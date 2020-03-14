@@ -10,11 +10,11 @@ ms.author: wgries
 ms.date: 05/09/2017
 description: Windows Server에 데이터 중복 제거를 설치하는 방법, 워크로드가 중복 제거 대상인지 확인하는 방법, 볼륨에서 중복 제거를 사용하도록 설정하는 방법을 설명합니다.
 ms.openlocfilehash: 36c9894fd8916643340134698f36af3bd50c34d8
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402319"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79322425"
 ---
 # <a name="install-and-enable-data-deduplication"></a>데이터 중복 제거 설치 및 사용
 > 적용 대상: Windows Server(반기 채널), Windows Server 2016
@@ -31,7 +31,7 @@ ms.locfileid: "71402319"
 ### <a id="install-dedup-via-server-manager"></a>서버 관리자를 사용 하 여 데이터 중복 제거 설치
 1. 역할 및 기능 추가 마법사에서 **서버 역할**을 선택하고 **데이터 중복 제거**를 선택합니다.  
 서버 관리자를 통해 데이터 중복 제거 ![설치: 서버 역할에서 데이터 중복 제거를 선택](media/install-dedup-via-server-manager-1.png)
-2. **설치** 단추가 활성화될 때까지 **다음** 을 클릭한 후 **설치**를 클릭합니다.  
+2. **설치** 단추가 활성화될 때까지 **다음**을 클릭한 후 **설치**를 클릭합니다.  
 서버 관리자를 통해 데이터 중복 제거를 설치 ![: 설치를 클릭](media/install-dedup-via-server-manager-2.png)
 
 ### <a id="install-dedup-via-powershell"></a>PowerShell을 사용 하 여 데이터 중복 제거 설치
@@ -41,7 +41,7 @@ ms.locfileid: "71402319"
 Nano Server 설치에 데이터 중복 제거를 설치하려면
 
 1. [Nano Server 시작](../../get-started/getting-started-with-nano-server.md)에 설명된 대로 설치된 저장소를 사용하여 Nano Server 설치를 만듭니다.
-2. Nano Server가 아닌 다른 모드에서 Windows Server 2016을 실행하는 서버 또는 RSAT([원격 서버 관리 도구](https://www.microsoft.com/download/details.aspx?id=45520))가 설치된 Windows PC에서 Nano Server 인스턴스를 명확히 참조('MyNanoServer'를 Nano Server 인스턴스의 실제 이름으로 바꿈)하여 데이터 중복 제거를 설치합니다.  
+2. Nano Server가 아닌 다른 모드에서 Windows Server 2016을 실행하는 서버 또는 RSAT([원격 서버 관리 도구](https://www.microsoft.com/download/details.aspx?id=45520))가 설치된 Windows PC에서 Nano Server 인스턴스를 명확히 참조('MyNanoServer'를 Nano Server 인스턴스의 실제 이름으로 바꿈)하여 데이터 중복 제거를 설치합니다.  
     ```PowerShell
     Install-WindowsFeature -ComputerName <MyNanoServer> -Name FS-Data-Deduplication
     ```  
@@ -151,7 +151,7 @@ Nano Server 설치에 데이터 중복 제거를 설치하려면
 [데이터 중복 제거와 상호 운용되지 않는 것으로 알려진](interop.md) 워크로드 외에는 모든 워크로드에서 데이터 중복 제거의 데이터 무결성이 완전히 지원됩니다. Microsoft는 성능을 위해 권장 워크로드도 지원합니다. 다른 워크로드의 성능은 서버에서 수행하고 있는 작업에 따라 크게 달라집니다. 워크로드에 대한 데이터 중복 제거가 성능에 미치는 영향, 이 워크로드에 대한 중복 제거 허용 여부를 결정해야 합니다.
 
 **중복 제거 된 볼륨에 대 한 볼륨 크기 조정 요구 사항은 무엇 인가요?**  
-Windows Server 2012 및 Windows Server 2012 R2에서는 데이터 중복 제거가 볼륨의 변동을 따를 수 있도록 볼륨 크기를 신중하게 조정해야 했습니다. 이는 일반적으로 변동률이 높은 워크로드에 대한 중복 제거된 볼륨의 평균 최대 크기는 1~2TB이고, 권장되는 절대 최대 크기는 10TB였음을 의미합니다. Windows Server 2016에서는 이러한 제한 사항이 제거되었습니다. 자세한 내용은 [데이터 중복 제거의 새로운 기능](whats-new.md#large-volume-support)을 참조하세요.
+Windows Server 2012 및 Windows Server 2012 R2에서는 데이터 중복 제거가 볼륨의 변동을 따를 수 있도록 볼륨 크기를 신중하게 조정해야 했습니다. 이는 일반적으로 변동률이 높은 워크로드에 대한 중복 제거된 볼륨의 평균 최대 크기는 1~2TB이고, 권장되는 절대 최대 크기는 10TB였음을 의미합니다. Windows Server 2016에서는 이러한 제한 사항이 제거되었습니다. 자세한 내용은 [데이터 중복 제거의 새로운 기능](whats-new.md#large-volume-support)을 참조하세요.
 
 **권장 워크 로드에 대 한 일정 또는 다른 데이터 중복 제거 설정을 수정 해야 하나요?**  
 아니요. 제공된 [사용 유형](understand.md#usage-type)은 권장 워크로드에 적합한 기본값을 제공하기 위해 만든 것입니다.
@@ -162,4 +162,4 @@ Windows Server 2012 및 Windows Server 2012 R2에서는 데이터 중복 제거�
 최적의 경우, 데이터 중복 제거에는 논리 데이터 1TB당 1GB의 메모리가 있어야 합니다. 예를 들어 10TB 볼륨을 최적화하는 경우 데이터 중복 제거에 10GB의 메모리를 할당하는 것이 가장 적절합니다(`1 GB * 10`). 이 비율을 유지하면 데이터 중복 제거 작업의 성능이 극대화됩니다.
 
 **데이터 중복 제거에 대 한 저장소 요구 사항은 무엇 인가요?**  
-Windows Server 2016에서는 데이터 중복 제거에서 최대 64TB의 볼륨 크기를 지원할 수 있습니다. 자세한 내용은 [데이터 중복 제거의 새로운 기능](whats-new.md#large-volume-support)을 참조하세요.
+Windows Server 2016에서는 데이터 중복 제거에서 최대 64TB의 볼륨 크기를 지원할 수 있습니다. 자세한 내용은 [데이터 중복 제거의 새로운 기능](whats-new.md#large-volume-support)을 참조하세요.

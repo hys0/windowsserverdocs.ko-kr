@@ -9,11 +9,11 @@ ms.localizationpriority: medium
 ms.prod: windows-server
 ms.date: 05/31/2019
 ms.openlocfilehash: b82d2eaa9283d99993102f1656262e2eda86cfff
-ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
-ms.translationtype: MT
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78371755"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79323325"
 ---
 # <a name="connecting-windows-server-to-azure-hybrid-services"></a>Windows Server를 Azure 하이브리드 서비스에 연결
 

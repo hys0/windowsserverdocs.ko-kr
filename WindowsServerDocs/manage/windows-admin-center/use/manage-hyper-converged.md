@@ -9,11 +9,11 @@ ms.date: 03/01/2019
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.openlocfilehash: 6795464bfbadd12fc220e941ad2175eb83d0f050
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75949941"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79322865"
 ---
 # <a name="manage-hyper-converged-infrastructure-with-windows-admin-center"></a>Windows 관리 센터를 사용 하 여 하이퍼 수렴 형 인프라 관리
 
@@ -29,7 +29,7 @@ ms.locfileid: "75949941"
 > [!IMPORTANT]
 > 이 문서에서 설명 하는 일부 기능은 Windows 관리 센터 미리 보기 에서만 사용할 수 있습니다. [이 버전을 가져올 어떻게 할까요? 있나요?](https://aka.ms/windowsadmincenter)
 
-## <a name="what-is-windows-admin-center"></a>Windows Admin Center란?
+## <a name="what-is-windows-admin-center"></a>Windows Admin Center란
 
 [Windows 관리 센터](../overview.md) 는 windows Server를 위한 차세대 관리 도구로 서, 서버 관리자와 같은 기존의 후속 "도구"입니다. 무료 이며 인터넷 연결 없이 설치 하 고 사용할 수 있습니다. Windows 관리 센터를 사용 하 여 Windows Server 2016 또는 Windows Server 2019를 실행 하는 하이퍼 수렴 형 인프라를 관리 하 고 모니터링할 수 있습니다.
 
@@ -92,7 +92,7 @@ Windows 관리 센터에서 클러스터를 하이퍼 수렴 형 인프라로 �
 
 배포에는 약 30 ~ 45 분이 소요 됩니다.
 
-## <a name="get-started"></a>시작하기
+## <a name="get-started"></a>시작
 
 하이퍼 수렴 형 인프라를 배포한 후에는 Windows 관리 센터를 사용 하 여 관리할 수 있습니다.
 
@@ -135,7 +135,7 @@ Windows 관리 센터에 클러스터를 추가 하려면 다음을 수행 합�
 
 ### <a name="are-there-differences-between-managing-windows-server-2016-and-windows-server-2019"></a>Windows Server 2016 및 Windows Server 2019를 관리 하는 데 차이가 있나요?
 
-그렇습니다. 하이퍼 수렴 형 인프라를 위한 windows 관리 센터는 Windows Server 2016 및 Windows Server 2019의 환경을 개선 하는 빈번한 업데이트를 받습니다. 그러나 일부 새로운 기능은 Windows Server 2019에만 사용할 수 있습니다. 예를 들어, 중복 제거 및 압축을 위한 토글 스위치를 사용할 수 있습니다.
+예. 하이퍼 수렴 형 인프라를 위한 windows 관리 센터는 Windows Server 2016 및 Windows Server 2019의 환경을 개선 하는 빈번한 업데이트를 받습니다. 그러나 일부 새로운 기능은 Windows Server 2019에만 사용할 수 있습니다. 예를 들어, 중복 제거 및 압축을 위한 토글 스위치를 사용할 수 있습니다.
 
 ### <a name="can-i-use-windows-admin-center-to-manage-storage-spaces-direct-for-other-use-cases-not-hyper-converged-such-as-converged-scale-out-file-server-sofs-or-microsoft-sql-server"></a>Windows 관리 센터를 사용 하 여 수렴 형 스케일 아웃 파일 서버 (SoFS) 또는 Microsoft SQL Server 같은 다른 사용 사례 (하이퍼 수렴 안 함)에 대 한 스토리지 공간 다이렉트를 관리할 수 있나요?
 
@@ -161,11 +161,11 @@ Windows Admin Center는 Windows 이외에 추가 비용이 들지 않습니다.
 
 ### <a name="does-windows-admin-center-require-system-center"></a>Windows Admin Center에 System Center가 필요합니까?
 
-아니요.
+No.
 
 ### <a name="does-it-require-an-internet-connection"></a>인터넷 연결이 필요 한가요?
 
-아니요.
+No.
 
 Windows 관리 센터는 Microsoft Azure 클라우드와 강력 하 고 편리한 통합 기능을 제공 하지만 하이퍼 수렴 형 인프라의 핵심 관리 및 모니터링 환경은 완전히 온-프레미스입니다. 인터넷 연결 없이 설치 하 고 사용할 수 있습니다.
 

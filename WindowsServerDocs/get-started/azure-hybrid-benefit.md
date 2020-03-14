@@ -5,15 +5,14 @@ ms.prod: windows-server
 ms.date: 11/10/2017
 ms.technology: server-general
 ms.topic: article
-author: greg-lindsay
-ms.author: greg-lindsay
+ms.author: chrisrin
 ms.localizationpriority: high
-ms.openlocfilehash: 946c1266f1c2cdc78cedac6794abb9f8d26696cd
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 9b6c7742428d278de363f561211018b77d6a3ddf
+ms.sourcegitcommit: 5197a87e659589bcc8d2a32069803ae736b02892
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75947705"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79376270"
 ---
 # <a name="azure-hybrid-benefit-for-windows-server"></a>Windows Server의 Azure 하이브리드 혜택
 

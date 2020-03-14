@@ -14,11 +14,11 @@ ms.author: delhan
 ms.date: 07/24/2019
 ms.localizationpriority: medium
 ms.openlocfilehash: b934a585b3058cc2eec642cdb1234c8c9a015544
-ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78370767"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79323345"
 ---
 # <a name="general-remote-desktop-connection-troubleshooting"></a>일반 원격 데스크톱 연결 문제 해결
 

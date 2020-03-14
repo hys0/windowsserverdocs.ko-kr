@@ -13,11 +13,11 @@ author: nnamuhcs
 ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: f6a5d6fd42c5cd7e92821e1157748054c741ef04
-ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78371179"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79322105"
 ---
 # <a name="use-remote-web-access-in-windows-server-essentials"></a>Windows Server Essentials에서 원격 웹 액세스 사용
 
@@ -326,7 +326,7 @@ ms.locfileid: "78371179"
   
 ##### <a name="to-return-to-the-mobile-version-of-remote-web-access"></a>원격 웹 액세스의 모바일 버전으로 돌아가려면  
   
-1. 로그오프합니다.  
+1. 로그 오프 합니다.  
   
 2. 웹 브라우저를 열고 주소 표시줄에 **https://** _< 해당 domainname\>_ **/remote/m** 을 입력 합니다. S가 https에 포함 되어 있는지 확인 합니다.  
   

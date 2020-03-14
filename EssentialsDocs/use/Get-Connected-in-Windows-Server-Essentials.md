@@ -13,11 +13,11 @@ author: nnamuhcs
 ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: 04d09574046474da5bee4437628ade9646cf58ca
-ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78371228"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79322125"
 ---
 # <a name="get-connected-in-windows-server-essentials"></a>Windows Server Essentials에서 연결
 
@@ -446,7 +446,7 @@ ms.locfileid: "78371228"
 8.  컴퓨터를 네트워크에 연결한 후 새 사용자 이름과 암호를 사용하여 컴퓨터에 로그온합니다.  
 
     > [!NOTE]
-    >  Windows 8을 실행하는 컴퓨터를 서버에 연결한 후 네트워크 계정을 사용하여 처음 로그온하면 이전 사용자 계정에서 파일 및 애플리케이션을 마이그레이션하는 방법에 대한 지침이 표시됩니다. **이전 사용자 계정에서 파일 및 응용 프로그램을 마이그레이션하는 방법** 페이지의 안내에 따라 모든 파일 및 응용 프로그램을 네트워크 사용자 계정으로 마이그레이션합니다.  
+    >  Windows 8을 실행하는 컴퓨터를 서버에 연결한 후 네트워크 계정을 사용하여 처음 로그온하면 이전 사용자 계정에서 파일 및 애플리케이션을 마이그레이션하는 방법에 대한 지침이 표시됩니다. **이전 사용자 계정에서 파일 및 애플리케이션을 마이그레이션하는 방법** 페이지의 안내에 따라 모든 파일 및 애플리케이션을 네트워크 사용자 계정으로 마이그레이션합니다.  
 
 9. 컴퓨터가 서버에 성공적으로 연결 되 면 커넥터 TrayApp 및 서버 대시보드에 대 한 바로 가기가 시작 메뉴에 표시 됩니다 .이 메뉴에는 다음과 같이 사용할 수 있습니다. 컴퓨터에서 Windows 8, Windows 8.1 또는 Windows 10, 대시보드 및 커넥터를 실행 하는 경우에 사용할 수 있습니다. TrayApp는 컴퓨터의 시작 화면에서 사용할 수 있습니다.):  
 
@@ -571,7 +571,7 @@ ms.locfileid: "78371228"
 
 - TrayApp, 실행 패드 및 대시보드 클라이언트에 대한 진입점이 없습니다.  
 
-- 두 번째 서버는 **장치** 탭의 **서버** 그룹에 나열됩니다.  
+- 두 번째 서버는 **디바이스** 탭의 **서버** 그룹에 나열됩니다.  
 
 - 두 번째 서버에 대한 클라이언트 컴퓨터 백업이 지원되지 않으므로 백업 상태는 **지원되지 않음**으로 표시됩니다. 또한 두 번째 서버를 선택하고 마우스 오른쪽 단추를 클릭하면 두 번째 서버에 대한 백업 및 복원 관련 작업이 표시되지 않습니다.  
 
@@ -629,10 +629,10 @@ ms.locfileid: "78371228"
 
 5.  Windows Server Essentials에서 실행 패드를 닫도록 제안 하는 Windows Server Essentials Connector 페이지가 나타나면 **확인**을 클릭 합니다.  
 
-6.  프로그램이 제거될 때까지 기다립니다. 소프트웨어가 제거되고 나면 설치된 프로그램 또는 업데이트 목록에 **Windows Server Essentials Connector**가 더 이상 나타나지 않습니다. 또한 실행 패드 및 대시보드의 바로 가기가 더 이상 컴퓨터 바탕 화면에 표시 되지 않습니다.  
+6.  프로그램이 제거될 때까지 기다립니다. 소프트웨어가 제거되고 나면 설치된 프로그램 또는 업데이트 목록에 **Windows Server Essentials Connector** 가 더 이상 나타나지 않습니다. 또한 실행 패드 및 대시보드의 바로 가기가 더 이상 컴퓨터 바탕 화면에 표시 되지 않습니다.  
 
 > [!NOTE]
-> - Connector 소프트웨어를 제거해도 대시보드의 **장치** 탭에 표시되는 컴퓨터 목록에서 컴퓨터가 제거되지 않습니다. 대시보드에서 컴퓨터를 제거하려면 [서버에서 컴퓨터 제거](../manage/Manage-Devices-in-Windows-Server-Essentials.md#BKMK_3)를 참조하세요.  
+> - Connector 소프트웨어를 제거해도 대시보드의 **디바이스** 탭에 표시되는 컴퓨터 목록에서 컴퓨터가 제거되지 않습니다. 대시보드에서 컴퓨터를 제거하려면 [서버에서 컴퓨터 제거](../manage/Manage-Devices-in-Windows-Server-Essentials.md#BKMK_3)를 참조하세요.  
 >   -   Connector 소프트웨어를 제거해도 서버에 매핑된 클라이언트 컴퓨터의 공유 폴더가 삭제되지 않습니다. 서버에 매핑된 공유 폴더를 수동으로 삭제해야 합니다.  
 > 
 > -   Connector 소프트웨어를 제거해도 컴퓨터가 원래 도메인에서 가입 해제되지 않습니다. 컴퓨터를 도메인에서 수동으로 가입 해제해야 합니다. 자세한 내용은 [Windows 도메인에서 컴퓨터 제거](Get-Connected-in-Windows-Server-Essentials.md#BKMK_8)를 참조하세요.  

@@ -14,11 +14,11 @@ author: evaseydl
 manager: scottman
 ms.author: evas
 ms.openlocfilehash: 744e49f47f7144dac82dbe68c885060b0c08490d
-ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78371878"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79322795"
 ---
 # <a name="multipoint-services-site-planning"></a>MultiPoint 서비스 사이트 계획
 MultiPoint 서비스를 실행 하는 하나 이상의 컴퓨터와 연결 된 스테이션이 배포 될 위치를 고려해 야 합니다.  
@@ -148,7 +148,7 @@ LAN 클라이언트에 대 한 실제 거리 제한은 없습니다. LAN에 있�
   
 **강의 실** 이 설정에서 스테이션은 행으로 설정 됩니다. 이 설정의 장점은 모든 학생이 강사에 게 직면 한다는 것입니다.  
   
-![강당으로 구성된 강의실](./media/WMS_LectureRoom.gif)  
+![구성된 강의실](./media/WMS_LectureRoom.gif)  
   
 **활동 센터** 이 설치 프로그램은 책상에 대 한 기존 강의 공간 레이아웃으로 구성 되며 연결 된 스테이션을 사용 하 여 MultiPoint 서비스를 실행 하는 단일 컴퓨터와 별도의 영역이 있습니다.  
   

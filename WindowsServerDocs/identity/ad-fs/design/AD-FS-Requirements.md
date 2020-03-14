@@ -10,11 +10,11 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
 ms.openlocfilehash: b299ddc823b3fbbd5818f96202e3c01faf0762d7
-ms.sourcegitcommit: 9687d3eb221b89061a48bf1e73fb3b25bee69f9a
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78169603"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79323105"
 ---
 # <a name="ad-fs-requirements"></a>AD FS 요구 사항
 
@@ -340,7 +340,7 @@ AD FS 디바이스 연결 하는 최종 사용자 작업을 하는 작업 하는
 |TripleDES – Default 192 \(지원 되는 192 – 256\) \- [http:\/\/www.w3.org\/2001\/04\/xmlenc\#TripleDES\-cbc](http://www.w3.org/2001/04/xmlenc#tripledes-cbc)|>\= 192|보안 토큰의 암호를 해독 하는 데 지원 되는 알고리즘입니다. 이 알고리즘을 사용 하 여 보안 토큰을 암호화 하는 것은 지원 되지 않습니다.|  
 |AES128 \- [http:\/\/www.w3.org\/2001\/04\/xmlenc\#AES128\-cbc](http://www.w3.org/2001/04/xmlenc#aes128-cbc)|128|보안 토큰의 암호를 해독 하는 데 지원 되는 알고리즘입니다. 이 알고리즘을 사용 하 여 보안 토큰을 암호화 하는 것은 지원 되지 않습니다.|  
 |AES192 \- [http:\/\/www.w3.org\/2001\/04\/xmlenc\#AES192\-cbc](http://www.w3.org/2001/04/xmlenc#aes192-cbc)|192|보안 토큰의 암호를 해독 하는 데 지원 되는 알고리즘입니다. 이 알고리즘을 사용 하 여 보안 토큰을 암호화 하는 것은 지원 되지 않습니다.|  
-|AES256 \- [http:\/\/www.w3.org\/2001\/04\/xmlenc\#AES256\-cbc](http://www.w3.org/2001/04/xmlenc#aes256-cbc)|256|**기본**합니다. 보안 토큰을 암호화 하는 데 지원 되는 알고리즘입니다.|  
+|AES256 \- [http:\/\/www.w3.org\/2001\/04\/xmlenc\#AES256\-cbc](http://www.w3.org/2001/04/xmlenc#aes256-cbc)|256|**기본값**. 보안 토큰을 암호화 하는 데 지원 되는 알고리즘입니다.|  
 |TripleDESKeyWrap \- [http:\/\/www.w3.org\/2001\/04\/xmlenc\#kw\-tripledes](http://www.w3.org/2001/04/xmlenc#kw-tripledes)|.NET 4.0에서 지 원하는 모든 키 크기\+|보안 토큰을 암호화 하는 대칭 키를 암호화 하는 데 지원 되는 알고리즘입니다.|  
 |AES128KeyWrap \- [http:\/\/www.w3.org\/2001\/04\/xmlenc\#kw\-aes128](http://www.w3.org/2001/04/xmlenc#kw-aes128)|128|보안 토큰을 암호화 하는 대칭 키를 암호화 하는 데 지원 되는 알고리즘입니다.|  
 |AES192KeyWrap \- [http:\/\/www.w3.org\/2001\/04\/xmlenc\#kw\-aes192](http://www.w3.org/2001/04/xmlenc#kw-aes192)|192|보안 토큰을 암호화 하는 대칭 키를 암호화 하는 데 지원 되는 알고리즘입니다.|  

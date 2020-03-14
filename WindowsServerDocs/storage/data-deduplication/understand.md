@@ -9,15 +9,15 @@ manager: klaasl
 ms.author: wgries
 ms.date: 09/15/2016
 ms.openlocfilehash: e26d285f1802e78b2cbf84e38407ff134e7b7035
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403230"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79322395"
 ---
 # <a name="understanding-data-deduplication"></a>데이터 중복 제거 이해
 
-> 적용 대상:  Windows Server 2019, Windows Server 2016, Windows Server(반기 채널)
+> 적용 대상: Windows Server 2019, Windows Server 2016, Windows Server (반기 채널)
 
 이 문서에서는 [데이터 중복 제거](overview.md) 작동 방식을 설명합니다.
 
@@ -75,7 +75,7 @@ Windows Server의 데이터 중복 제거는 다음 두 가지 원칙으로 만�
 |------|------------|
 | <a id="dedup-term-chunk"></a>장이나 | 청크는 다른 유사한 파일에서도 발견될 가능성이 있어 데이터 중복 제거 청크 알고리즘에 의해 선택된 파일의 섹션입니다. |
 | <a id="dedup-term-chunk-store"></a>청크 저장소 | 청크 저장소는 데이터 중복 제거에서 청크를 고유하게 저장하는 데 사용하는 시스템 볼륨 정보 폴더에 구성된 일련의 컨테이너 파일입니다. |
-| <a id="dedup-term-dedup"></a>페이징된 | PowerShell, Windows Server API 및 구성 요소, Windows Server 커뮤니티에서 일반적으로 사용되는 데이터 중복 제거(Data Deduplication)의 약어입니다. |
+| <a id="dedup-term-dedup"></a>페이징된 | PowerShell, Windows Server API 및 구성 요소, Windows Server 커뮤니티에서 일반적으로 사용되는 데이터 중복 제거(Data Deduplication)의 약어입니다. |
 | <a id="dedup-term-file-metadata"></a>파일 메타 데이터 | 모든 파일에는 파일의 주요 내용에 상관없이 파일에 대한 흥미로운 속성을 설명하는 메타데이터가 포함되어 있습니다. 예를 들어 만든 날짜, 마지막으로 읽은 날짜, 만든 이 등이 여기에 해당합니다. |
 | <a id="dedup-term-file-stream"></a>파일 스트림 | 파일 스트림은 파일의 주요 내용입니다. 이는 데이터 중복 제거에서 최적화하는 부분입니다. |
 | <a id="dedup-term-file-system"></a>파일 시스템 | 파일 시스템은 운영 체제가 저장소 미디어에 파일을 저장하기 위해 사용하는 소프트웨어 및 디스크 상의 데이터 구조입니다. 데이터 중복 제거는 NTFS로 포맷된 볼륨에서 지원됩니다. |
@@ -94,7 +94,7 @@ Windows Server의 데이터 중복 제거는 다음 두 가지 원칙으로 만�
 데이터 중복 제거와 다른 일반 저장소 최적화 제품 간에는 몇 가지 중요한 차이점이 있습니다.
 
 * *데이터 중복 제거는 단일 인스턴스 저장소와 어떻게 다릅니까?*  
-    SIS(단일 인스턴스 저장소)는 이전의 데이터 중복 제거 기술로 Windows Storage Server 2008 R2에 처음 도입되었습니다. 단일 인스턴스 저장소는 볼륨을 최적화하기 위해 완전히 동일한 파일을 식별하여 SIS 일반 저장소에 저장된 파일의 단일 복사본에 대한 논리적 링크로 대체했습니다. 단일 인스턴스 저장소와 달리, 데이터 중복 제거는 동일하지 않지만 많은 일반 패턴을 공유하는 파일 및 자체적으로 많은 반복 패턴을 포함하는 파일에서 공간을 확보할 수 있습니다. 단일 인스턴스 저장소는 Windows Server 2012 R2부터 사용 중단되었으며 Windows Server 2016에서 제거되고 데이터 중복 제거로 대체되었습니다.
+    SIS(단일 인스턴스 저장소)는 이전의 데이터 중복 제거 기술로 Windows Storage Server 2008 R2에 처음 도입되었습니다. 단일 인스턴스 저장소는 볼륨을 최적화하기 위해 완전히 동일한 파일을 식별하여 SIS 일반 저장소에 저장된 파일의 단일 복사본에 대한 논리적 링크로 대체했습니다. 단일 인스턴스 저장소와 달리, 데이터 중복 제거는 동일하지 않지만 많은 일반 패턴을 공유하는 파일 및 자체적으로 많은 반복 패턴을 포함하는 파일에서 공간을 확보할 수 있습니다. 단일 인스턴스 저장소는 Windows Server 2012 R2부터 사용 중단되었으며 Windows Server 2016에서 제거되고 데이터 중복 제거로 대체되었습니다.
 
 * *데이터 중복 제거는 NTFS 압축과 어떻게 다릅니까?*  
     NTFS 압축은 볼륨 수준에서 선택적으로 사용할 수 있는 NTFS 기능입니다. NTFS 압축을 사용하면 각 파일이 쓰기 시 압축을 통해 개별적으로 최적화됩니다. NTFS 압축을 달리, 데이터 중복 제거는 볼륨의 모든 파일에서 공간을 확보할 수 있습니다. 파일에는 내부 중복(NTFS 압축으로 해결됨)과 볼륨에 있는 다른 파일과의 유사성(NTFS 압축으로 해결되지 않음)이 <u>모두</u> 있을 수 있으므로 데이터 중복 제거는 NTFS 압축보다 유리합니다. 또한 데이터 중복 제거는 사후 처리 모델입니다. 즉, 새 파일 또는 수정된 파일이 최적화되지 않은 상태로 디스크에 기록되고 나중에 데이터 중복 제거에 의해 최적화됩니다.

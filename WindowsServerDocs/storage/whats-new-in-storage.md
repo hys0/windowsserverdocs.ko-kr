@@ -9,11 +9,11 @@ ms.topic: article
 author: jasongerend
 ms.date: 05/29/2019
 ms.openlocfilehash: ffcff036a7e30018e523def055ce3aeb8d30c225
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71365843"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79322335"
 ---
 # <a name="whats-new-in-storage-in-windows-server"></a>Windows Server에서 제공 되는 저장소의 새로운 기능
 
@@ -143,13 +143,13 @@ Windows Server 2019에는 다양 한 스토리지 공간 다이렉트 향상 된
 
 ### <a name="smb"></a>SMB
 
-- **SMB1 및 게스트 인증 제거**: Windows Server는 기본적으로 SMB1 클라이언트 및 서버를 더 이상 설치 하지 않습니다. 추가로 SMB2 이상의 게스트 인증 기능이 기본적으로 해제됩니다. 자세한 내용은 [SMBv1이 Windows 10, 버전 1709 및 Windows Server, 버전 1709에 기본적으로 설치되지 않음](https://support.microsoft.com/help/4034314/smbv1-is-not-installed-by-default-in-windows-10-rs3-and-windows-server)을 검토하세요. 
+- **Smb1 및 게스트 인증 제거**: Windows Server는 기본적으로 SMB1 클라이언트 및 서버를 더 이상 설치 하지 않습니다. 추가로 SMB2 이상의 게스트 인증 기능이 기본적으로 해제됩니다. 자세한 내용은 [SMBv1이 Windows 10, 버전 1709 및 Windows Server, 버전 1709에 기본적으로 설치되지 않음](https://support.microsoft.com/help/4034314/smbv1-is-not-installed-by-default-in-windows-10-rs3-and-windows-server)을 검토하세요. 
 
-- **SMB2/SMB3 보안 및 호환성**: 클라이언트로부터 연결당 기본 서명 필요 또는 암호화는 물론 레거시 애플리케이션을 위한 SMB2+의 oplock을 사용하지 않도록 설정하는 기능을 포함한 보안 및 애플리케이션 호환성을 위한 추가 옵션이 추가되었습니다. 자세한 내용은 SMBShare PowerShell 모듈 도움말을 검토하세요.
+- **SMB2/SMB3 보안 및 호환성**: 클라이언트로부터 연결당 기본 서명 필요 또는 암호화는 물론 레거시 응용 프로그램을 위한 SMB2+의 oplock을 사용하지 않도록 설정하는 기능을 포함한 보안 및 응용 프로그램 호환성을 위한 추가 옵션이 추가되었습니다. 자세한 내용은 SMBShare PowerShell 모듈 도움말을 검토하세요.
 
 ### <a name="data-deduplication"></a>데이터 중복 제거
 
-- **이제 데이터 중복 제거에 ReFS가 지원됨**: 더 이상 ReFS가 포함된 최신 파일 시스템의 이점과 데이터 중복 제거 사이에서 선택해야 할 필요가 없습니다. 이제 ReFS를 사용하도록 설정할 수 있는 곳 어디에서나 데이터 중복 제거를 사용하도록 설정할 수 있습니다. ReFS를 통해 저장소 효율이 95% 증가합니다.
+- **데이터 중복 제거가 이제 ReFS에서 지원**: 더 이상 ReFS가 포함된 최신 파일 시스템의 이점과 데이터 중복 제거 사이에서 선택해야 할 필요가 없습니다. 이제 ReFS를 사용하도록 설정할 수 있는 곳 어디에서나 데이터 중복 제거를 사용하도록 설정할 수 있습니다. ReFS를 통해 저장소 효율이 95% 증가합니다.
 - **중복 제거된 볼륨으로의 최적화된 송/수신을 위한 DataPort API**: 이제 개발자는 데이터를 효율적으로 저장하여 볼륨, 서버 및 클러스터 사이에서 데이터를 효율적으로 이동하는 방법에 관한 데이터 중복 제거의 지식을 활용할 수 있습니다.
 
 ### <a name="file-server-resource-manager"></a>파일 서버 리소스 관리자
@@ -173,7 +173,7 @@ Windows Server, 버전 1709은 반기 채널의 첫 번째 Windows Server 릴리
 저장소 복제본을 통해 추가 된 재해 복구 보호는 이제 다음을 포함 하도록 확장 됩니다.
 
 - **테스트 장애 조치**: 대상 저장소를 탑재하는 옵션이 이제 테스트 장애 조치 기능을 통해 이용 가능합니다. 테스트 및 백업을 목적으로 대상 노드에 있는 복제된 저장소의 스냅숏을 일시적으로 탑재할 수 있습니다. Microsoft 업데이트에 대한 자세한 내용은 [저장소 복제본 관련 질문과 대답](https://aka.ms/srfaq)을 참조하세요.
-- **Windows 관리 센터 지원**: 이제 서버 관리자 도구를 통해 Windows 관리 센터에서 복제의 그래픽 관리를 지원할 수 있습니다. 서버 간 복제, 클러스터 간 복제 및 확장 클러스터 복제도 포함 됩니다.
+- **Windows 관리 센터 지원**: 이제 서버 관리자 도구를 통해 Windows 관리 센터에서 복제에 대 한 그래픽 관리 지원을 사용할 수 있습니다. 서버 간 복제, 클러스터 간 복제 및 확장 클러스터 복제도 포함 됩니다.
 
 저장소 복제본에는 다음과 같은 향상 된 기능도 포함 되어 있습니다.
 
@@ -184,11 +184,11 @@ Windows Server, 버전 1709은 반기 채널의 첫 번째 Windows Server 릴리
 
 - **SMB1 및 게스트 인증 제거**: Windows Server, 버전 1709에서는 더 이상 SMB1 클라이언트 및 서버를 기본적으로 설치하지 않습니다. 추가로 SMB2 이상의 게스트 인증 기능이 기본적으로 해제됩니다. 자세한 내용은 [SMBv1이 Windows 10, 버전 1709 및 Windows Server, 버전 1709에 기본적으로 설치되지 않음](https://support.microsoft.com/help/4034314/smbv1-is-not-installed-by-default-in-windows-10-rs3-and-windows-server)을 검토하세요. 
 
-- **SMB2/SMB3 보안 및 호환성**: 클라이언트로부터 연결당 기본 서명 필요 또는 암호화는 물론 레거시 애플리케이션을 위한 SMB2+의 oplock을 사용하지 않도록 설정하는 기능을 포함한 보안 및 애플리케이션 호환성을 위한 추가 옵션이 추가되었습니다. 자세한 내용은 SMBShare PowerShell 모듈 도움말을 검토하세요.
+- **SMB2/SMB3 보안 및 호환성**: 클라이언트로부터 연결당 기본 서명 필요 또는 암호화는 물론 레거시 응용 프로그램을 위한 SMB2+의 oplock을 사용하지 않도록 설정하는 기능을 포함한 보안 및 응용 프로그램 호환성을 위한 추가 옵션이 추가되었습니다. 자세한 내용은 SMBShare PowerShell 모듈 도움말을 검토하세요.
 
 ### <a name="data-deduplication"></a>데이터 중복 제거
 
-- **이제 데이터 중복 제거에 ReFS가 지원됨**: 더 이상 ReFS가 포함된 최신 파일 시스템의 이점과 데이터 중복 제거 사이에서 선택해야 할 필요가 없습니다. 이제 ReFS를 사용하도록 설정할 수 있는 곳 어디에서나 데이터 중복 제거를 사용하도록 설정할 수 있습니다. ReFS를 통해 저장소 효율이 95% 증가합니다.
+- **데이터 중복 제거가 이제 ReFS에서 지원**: 더 이상 ReFS가 포함된 최신 파일 시스템의 이점과 데이터 중복 제거 사이에서 선택해야 할 필요가 없습니다. 이제 ReFS를 사용하도록 설정할 수 있는 곳 어디에서나 데이터 중복 제거를 사용하도록 설정할 수 있습니다. ReFS를 통해 저장소 효율이 95% 증가합니다.
 - **중복 제거된 볼륨으로의 최적화된 송/수신을 위한 DataPort API**: 이제 개발자는 데이터를 효율적으로 저장하여 볼륨, 서버 및 클러스터 사이에서 데이터를 효율적으로 이동하는 방법에 관한 데이터 중복 제거의 지식을 활용할 수 있습니다.
 
 ## <a name="whats-new-in-storage-in-windows-server-2016"></a>Windows Server 2016에서 제공되는 저장소의 새로운 기능
@@ -253,9 +253,9 @@ Windows Server, 버전 1709은 반기 채널의 첫 번째 Windows Server 릴리
 |---------------|----------------|-------------|
 | [대용량 볼륨에 대 한 지원](data-deduplication/whats-new.md#large-volume-support) | 업데이트됨 | Windows Server 2016 이전에는 특별히 예상되는 변동에 대비해 볼륨의 크기를 조정해야 했으며, 10TB가 넘는 볼륨은 중복 제거에 적합하지 않았습니다. Windows Server 2016에서는 데이터 중복 제거 기능이 **최대 64TB**의 볼륨 크기를 지원합니다. |
 | [큰 파일 보고서에 대 한 지원](data-deduplication/whats-new.md#large-file-support) | 업데이트됨 | Windows Server 2016 이전에는 크기가 1TB에 가까운 파일은 중복 제거에 적합하지 않았습니다. Windows Server 2016에서 **최대 1TB**의 파일이 완벽하게 지원됩니다. |
-| [Nano Server에 대 한 지원](data-deduplication/whats-new.md#nano-server-support) | 단추를 사용하여 새 | 데이터 중복 제거는 Windows Server 2016의 새로운 Nano Server 배포 옵션에서 사용할 수 있으며 완전히 지원됩니다. |
-| [간소화 된 백업 지원](data-deduplication/whats-new.md#simple-backup-support) | 단추를 사용하여 새 | Windows Server 2012 R2에서는 Microsoft의 [Data Protection Manager](https://technet.microsoft.com/library/hh758173.aspx)와 같은 가상화된 백업 응용 프로그램이 일련의 수동 구성 단계를 통해 지원되었습니다. Windows Server 2016에서는 가상화된 백업 응용 프로그램에 대한 중복 제거의 원활한 배포를 위해 새로운 기본 사용 유형인 "백업"이 추가되었습니다. |
-| [클러스터 OS 롤링 업그레이드 지원](data-deduplication/whats-new.md#cluster-upgrade-support) | 단추를 사용하여 새 | 데이터 중복 제거는 Windows Server 2016의 [클러스터 OS 롤링 업그레이드](..//failover-clustering/cluster-operating-system-rolling-upgrade.md) 기능을 완전히 지원합니다. |
+| [Nano Server에 대 한 지원](data-deduplication/whats-new.md#nano-server-support) | 새로 만들기 | 데이터 중복 제거는 Windows Server 2016의 새로운 Nano Server 배포 옵션에서 사용할 수 있으며 완전히 지원됩니다. |
+| [간소화 된 백업 지원](data-deduplication/whats-new.md#simple-backup-support) | 새로 만들기 | Windows Server 2012 R2에서는 Microsoft의 [Data Protection Manager](https://technet.microsoft.com/library/hh758173.aspx)와 같은 가상화된 백업 응용 프로그램이 일련의 수동 구성 단계를 통해 지원되었습니다. Windows Server 2016에서는 가상화된 백업 응용 프로그램에 대한 중복 제거의 원활한 배포를 위해 새로운 기본 사용 유형인 "백업"이 추가되었습니다. |
+| [클러스터 OS 롤링 업그레이드 지원](data-deduplication/whats-new.md#cluster-upgrade-support) | 새로 만들기 | 데이터 중복 제거는 Windows Server 2016의 [클러스터 OS 롤링 업그레이드](..//failover-clustering/cluster-operating-system-rolling-upgrade.md) 기능을 완벽하게 지원합니다. |
 
 ### <a name="smb-hardening-improvements"></a>SYSVOL 및 NETLOGON 연결에 대 한 SMB 강화 기능 향상  
 Active Directory 도메인 서비스에 연결된 Windows 10 및 Windows Server 2016 클라이언트에서는 도메인 컨트롤러의 기본 SYSVOL 및 NETLOGON 공유에 SMB 서명 및 상호 인증(예: Kerberos)이 필요합니다.   
@@ -269,7 +269,7 @@ SMB 서명 및 상호 인증을 사용할 수 없는 경우 Windows 10 또는 Wi
 > [!NOTE]  
 > 이러한 설정에 대한 레지스트리 값은 기본적으로 존재하지 않지만 그룹 정책 또는 다른 레지스트리 값으로 재정의될 때까지 강화 규칙은 계속 적용됩니다.  
 
-이러한 향상 된 보안 기능에 대 한 자세한 내용은 (UNC 강화 라고도 함) Microsoft 기술 자료 문서 [3000483](https://support.microsoft.com/kb/3000483) 및 [MS15-011 & MS15-014를 참조 하세요. 그룹 정책](https://blogs.technet.microsoft.com/srd/2015/02/10/ms15-011-ms15-014-hardening-group-policy)강화  
+이러한 향상된 보안 기능(UNC 강화라고도 함)에 대한 자세한 내용은 Microsoft 기술 자료 문서 [3000483](https://support.microsoft.com/kb/3000483) 및 [MS15-011 및 MS15-014: 그룹 정책 강화](https://blogs.technet.microsoft.com/srd/2015/02/10/ms15-011-ms15-014-hardening-group-policy)를 참조하세요.  
 
 ### <a name="work-folders"></a>클라우드 폴더
 클라우드 폴더 서버가 Windows Server 2016를 실행 하 고 작업 폴더 클라이언트가 Windows 10 인 경우 변경 알림이 개선 되었습니다.
@@ -297,5 +297,5 @@ ReFS로 향상되는 기능은 다음과 같습니다.
 **달라진 기능**<br>
 Windows Server 2016에서 처음으로 제공하는 기능입니다. 
 
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
 * [Windows Server 2016의 새로운 기능](../get-started/what-s-new-in-windows-server-2016.md)  

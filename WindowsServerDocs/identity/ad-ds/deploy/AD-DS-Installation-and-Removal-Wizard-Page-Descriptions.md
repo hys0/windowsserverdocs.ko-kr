@@ -10,11 +10,11 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
 ms.openlocfilehash: 3563c30e86c53435c10cafc840a71c7b8c526943
-ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78371569"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79323255"
 ---
 # <a name="ad-ds-installation-and-removal-wizard-page-descriptions"></a>AD DS 설치 및 제거 마법사 페이지 설명
 
@@ -80,7 +80,7 @@ ms.locfileid: "78371569"
   
 -   자식 도메인: 단일 레이블로 구성된 유효한 자식 도메인 이름을 제공합니다. 이름은 DNS 도메인 이름 요구 사항을 사용해야 합니다.  
   
--   현재 자격 증명이 도메인 범위에 속하지 않는 경우 Active Directory 도메인 서비스 구성 마법사에 도메인 자격 증명을 제공하라는 메시지가 표시됩니다. **변경**을 클릭하여 도메인 자격 증명을 제공합니다.  
+-   현재 자격 증명이 도메인 범위에 속하지 않는 경우 Active Directory Domain Services 구성 마법사에 도메인 자격 증명을 제공하라는 메시지가 표시됩니다. **변경**을 클릭하여 도메인 자격 증명을 제공합니다.  
   
 도메인을 만드는 방법에 대 한 자세한 내용은 참조 [는 새 Windows Server 2012 Active Directory 자식 또는 트리 도메인 및 #40; 설치 200 수준 & #41;](../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md)합니다.  
   
@@ -225,7 +225,7 @@ Adprep.exe에 대 한 자세한 내용은 참조 [Adprep.exe 통합](../../ad-ds
   
 -   **옵션 검토** 페이지에서 설치를 시작하기 전에 설정을 확인하고 이러한 설정이 요구 사항을 충족하는지도 확인할 수 있습니다. 서버 관리자를 사용하여 설치를 중지할 수 있는 마지막 기회는 아닙니다. 이 페이지에서는 단지 구성을 계속하기 전에 설정을 검토하고 확인합니다.  
   
--   서버 관리자의 **옵션 검토** 페이지는 현재 ADDSDeployment 구성을 단일 Windows PowerShell 스크립트로 포함하는 유니코드 텍스트 파일을 만들 수 있도록 **스크립트 보기** 단추(선택 사항)도 제공합니다. 이 단추를 통해 서버 관리자 그래픽 인터페이스를 Windows PowerShell 배포 스튜디오로 사용할 수 있습니다. Active Directory 도메인 서비스 구성 마법사를 사용하여 옵션을 구성하고 구성을 내보낸 다음 마법사를 취소합니다. 이 프로세스를 통해 향후 수정을 위해 사용하거나 직접 사용하기 위한 유효하고 구문상으로 정확한 샘플이 만들어집니다.  
+-   서버 관리자의 **옵션 검토** 페이지는 현재 ADDSDeployment 구성을 단일 Windows PowerShell 스크립트로 포함하는 유니코드 텍스트 파일을 만들 수 있도록 **스크립트 보기** 단추(선택 사항)도 제공합니다. 이 단추를 통해 서버 관리자 그래픽 인터페이스를 Windows PowerShell 배포 스튜디오로 사용할 수 있습니다. Active Directory Domain Services 구성 마법사를 사용하여 옵션을 구성하고 구성을 내보낸 다음 마법사를 취소합니다. 이 프로세스를 통해 향후 수정을 위해 사용하거나 직접 사용하기 위한 유효하고 구문상으로 정확한 샘플이 만들어집니다.  
   
 ## <a name="BKMK_PrerqCheckPage"></a>필수 조건 확인  
 ![AD DS 설치](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_SMI_PrerequisitesCheck.gif)  
@@ -290,7 +290,7 @@ AD DS를 제거 하는 방법에 대 한 자세한 내용은 참조 [Active Dire
   
 -   이 Active Directory 도메인 컨트롤러의 모든 애플리케이션 디렉터리 파티션은 제거됩니다. 도메인 컨트롤러에 하나 이상의 애플리케이션 디렉터리 파티션에 대한 마지막 복제본이 있더라도 제거 작업을 완료하면 해당 파티션이 더 이상 존재하지 않게 됩니다.  
   
-도메인의 마지막 도메인 컨트롤러에서 Active Directory 도메인 서비스를 제거하고 나면 도메인이 더 이상 존재하지 않게 됩니다.  
+도메인의 마지막 도메인 컨트롤러에서 Active Directory Domain Services를 제거하고 나면 도메인이 더 이상 존재하지 않게 됩니다.  
   
 도메인 컨트롤러가 DNS 영역을 호스트하도록 위임된 DNS 서버일 경우 다음 페이지에 DNS 영역 위임에서 DNS 서버를 제거하는 옵션이 제공됩니다.  
   

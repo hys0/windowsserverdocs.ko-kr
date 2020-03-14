@@ -11,11 +11,11 @@ ms.date: 06/07/2019
 description: Windows Server의 스토리지 공간 다이렉트를 사용 하 여 하이퍼 수렴 형 인프라 또는 수렴 형 (세분화 된) 인프라가 있는 소프트웨어 정의 저장소를 배포 하는 단계별 지침을 참조 하세요.
 ms.localizationpriority: medium
 ms.openlocfilehash: 60b29cbebb19cd8f1ce364d1eb7e920759375285
-ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78371775"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79323295"
 ---
 # <a name="deploy-storage-spaces-direct"></a>저장소 공간 다이렉트 배포
 
@@ -244,7 +244,7 @@ Test-Cluster –Node <MachineName1, MachineName2, MachineName3, MachineName4> �
 
 -   **저장소 공간 다이렉트 캐시 구성:** 저장소 공간 다이렉트에 사용할 수 있는 미디어(드라이브) 유형이 2개 이상인 경우 가장 빠른 캐시 장치로 사용할 수 있습니다(대부분의 경우 읽기 및 쓰기).
 
--   **계층:** 두 계층을 기본 계층으로 만듭니다. 하나는 "Capacity"이고 다른 하나는 "Performance"입니다. Cmdlet은 디바이스를 분석한 후 디바이스 유형과 복원력을 조합하여 각 계층을 구성합니다.
+-   **계층:** 두 계층을 기본 계층으로 만듭니다. 하나는 "Capacity"이고 다른 하나는 "Performance"입니다. Cmdlet은 장치를 분석한 후 장치 유형과 복원력을 조합하여 각 계층을 구성합니다.
 
 관리 시스템에서 관리자 권한으로 PowerShell 명령 창을 열고 다음 명령을 시작합니다. 클러스터 이름은 이전 단계에서 만든 클러스터의 이름입니다. 이 명령을 노드 중 하나에서 로컬로 실행하면 -CimSession 매개 변수가 필요 없습니다.
 

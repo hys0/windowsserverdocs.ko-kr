@@ -9,11 +9,11 @@ ms.localizationpriority: medium
 ms.prod: windows-server
 ms.date: 02/15/2019
 ms.openlocfilehash: fc8e6ffa39320cfc73bf3f5bd0a5bc765ded24b4
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950522"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79322875"
 ---
 # <a name="get-started-with-windows-admin-center"></a>Windows 관리 센터 시작
 
@@ -117,7 +117,7 @@ Windows 관리 센터에서 windows Server의 서비스 모드로 실행 중이�
 
 **로컬 관리자 암호 솔루션 (LAPS)**
 
-환경에서 [LAPS](https://technet.microsoft.com/mt227395.aspx)를 사용 하 고 WINDOWS 10 PC에 Windows 관리 센터를 설치한 경우 LAPS 자격 증명을 사용 하 여 관리 되는 노드로 인증할 수 있습니다. **이 시나리오를 사용 하는 경우** [피드백을 제공 해 주세요 ](https://aka.ms/WACFeedback).
+환경에서 [LAPS](https://technet.microsoft.com/mt227395.aspx)를 사용 하 고 WINDOWS 10 PC에 Windows 관리 센터를 설치한 경우 LAPS 자격 증명을 사용 하 여 관리 되는 노드로 인증할 수 있습니다. **이 시나리오를 사용 하는 경우 피드백을 제공 해 주세요** [provide feedback](https://aka.ms/WACFeedback).
 
 ## <a name="using-tags-to-organize-your-connections"></a>태그를 사용 하 여 연결 구성
 

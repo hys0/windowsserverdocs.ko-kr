@@ -9,11 +9,11 @@ ms.localizationpriority: medium
 ms.prod: windows-server
 ms.date: 06/07/2019
 ms.openlocfilehash: 4a91d09d6824795a21a9a7cdc7695c407aa70756
-ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76822706"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79322925"
 ---
 # <a name="windows-admin-center-known-issues"></a>Windows Admin Center 알려진 문제
 
@@ -53,7 +53,7 @@ ms.locfileid: "76822706"
 
 ### <a name="microsoft-edge"></a>Microsoft Edge
 
-- Windows 관리 센터를 서비스로 배포 하 고 Microsoft Edge를 브라우저로 사용 하는 경우 새 브라우저 창을 생성 한 후 게이트웨이를 Azure에 연결 하지 못할 수 있습니다. 추가 하 여이 문제를 해결 하려고 https://login.microsoftonline.com , https://login.live.com ,으로 게이트웨이의 URL을 신뢰할 수 있는 사이트 및 클라이언트 쪽 브라우저에서 팝업 차단 설정에 대 한 허용 된 사이트 및 합니다. 이 문제를 해결 하는 방법에 대 한 자세한 내용은 [문제 해결 가이드를 참조](troubleshooting.md#azure-features-dont-work-properly-in-edge)하세요. [17990376]
+- Windows 관리 센터를 서비스로 배포 하 고 Microsoft Edge를 브라우저로 사용 하는 경우 새 브라우저 창을 생성 한 후 게이트웨이를 Azure에 연결 하지 못할 수 있습니다. 게이트웨이의 https://login.microsoftonline.com, https://login.live.com및 URL을 신뢰할 수 있는 사이트로 추가 하 고 클라이언트 쪽 브라우저에서 팝업 차단 설정에 허용 되는 사이트를 추가 하 여이 문제를 해결 해 보십시오. 이 문제를 해결 하는 방법에 대 한 자세한 내용은 [문제 해결 가이드를 참조](troubleshooting.md#azure-features-dont-work-properly-in-edge)하세요. [17990376]
 
 ### <a name="google-chrome"></a>Google Chrome
 
@@ -104,7 +104,7 @@ WMF가 설치되어 있는지, 그리고 버전이 5.1 이상인지 확인하려
 
   - 이 문제를 해결 하려면 게이트웨이 컴퓨터의 관리자 권한 명령 프롬프트에서 다음 명령을 사용 합니다. ```winrm set winrm/config @{MaxEnvelopeSizekb="8192"}```
 
-### <a name="files"></a>파일
+### <a name="files"></a>Files
 
 - 대용량 파일 업로드 또는 다운로드는 아직 지원하지 않습니다. (\~100mb 제한) [12524234]
 
@@ -152,7 +152,7 @@ WMF가 설치되어 있는지, 그리고 버전이 5.1 이상인지 확인하려
 
 - 자동으로 다시 부팅을 선택하는 경우 상태가 100%로 업데이트되기 전에 다시 부팅됩니다. [13098852]
 
-### <a name="storage"></a>저장소
+### <a name="storage"></a>스토리지
 
 - 하위 수준: DVD/CD/플로피 드라이브가 하위 수준에서 볼륨으로 표시되지 않습니다.
 
@@ -171,7 +171,7 @@ WMF가 설치되어 있는지, 그리고 버전이 5.1 이상인지 확인하려
     4. ' 암호화 서비스 ' 서비스를 다시 시작 합니다.
     5. Windows 관리 센터를 사용 하 여 업데이트 관리 설정 반복
 
-### <a name="virtual-machines"></a>가상 머신
+### <a name="virtual-machines"></a>가상 컴퓨터
 
 - Windows Server 2012 호스트에서 가상 컴퓨터를 관리 하는 경우 브라우저 내 VM 연결 도구는 VM에 연결 되지 않습니다. VM에 연결 하기 위한 .rdp 파일 다운로드는 계속 작동 해야 합니다. [20258278]
 

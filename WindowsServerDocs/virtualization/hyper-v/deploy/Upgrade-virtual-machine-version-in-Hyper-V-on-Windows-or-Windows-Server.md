@@ -12,11 +12,11 @@ author: jasongerend
 ms.author: jgerend
 ms.date: 05/22/2019
 ms.openlocfilehash: 96678dfab2a3d5b6f503d8ce9d00850a3c437b35
-ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78370607"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79322725"
 ---
 # <a name="upgrade-virtual-machine-version-in-hyper-v-on-windows-10-or-windows-server"></a>Windows 10 또는 Windows Server에서 Hyper-v의 가상 머신 버전 업그레이드
 
@@ -53,7 +53,7 @@ Windows PowerShell을 사용 하 여 가상 머신 구성 버전을 업그레이
 Update-VMVersion <vmname>
 ```
 
-## <a name="supported-virtual-machine-configuration-versions"></a>지원 되는 가상 컴퓨터 구성 버전
+## <a name="supported-virtual-machine-configuration-versions"></a>지원 되는 가상 머신 구성 버전
 
 PowerShell cmdlet [VMHostSupportedVersion](https://docs.microsoft.com/powershell/module/hyper-v/get-vmhostsupportedversion) 를 실행 하 여 hyper-v 호스트가 지 원하는 가상 컴퓨터 구성 버전을 확인 합니다. 가상 컴퓨터를 만들 때 기본 구성 버전으로 만들어집니다. 기본값을 보려면 다음 명령을 실행 합니다.
 
@@ -76,7 +76,7 @@ New-VM -Name "WindowsCV5" -Version 5.0
 
 | Hyper-v 호스트 Windows 버전 | 9.1 | 9.0 | 8.3 | 8.2 | 8.1 | 8.0 | 7.1 | 7.0 | 6.2 | 5.0 |
 | --- |---|---|---|---|---|---|---|---|---|---|
-|시작|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|Windows Server 2019|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Windows 10 Enterprise LTSC 2019|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Windows Server 2016|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Windows 10 Enterprise 2016 LTSB|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|

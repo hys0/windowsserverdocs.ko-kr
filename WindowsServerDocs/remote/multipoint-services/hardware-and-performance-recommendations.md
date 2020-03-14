@@ -14,11 +14,11 @@ author: evaseydl
 manager: scottman
 ms.author: evas
 ms.openlocfilehash: 284131028b308ee86389f25102d934390ba2f16d
-ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78371877"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79322085"
 ---
 # <a name="hardware-requirements-and-performance-recommendations"></a>하드웨어 요구 사항 및 성능 권장 사항
 이 항목에서는 MultiPoint 서비스 시스템을 실행 하 고 사용자 응용 프로그램 시나리오를 지 원하는 데 필요한 하드웨어에 대해 설명 합니다. 사용자 시나리오는 CPU, RAM 및 네트워크 대역폭 요구 사항에 직접적인 영향을 줍니다.  

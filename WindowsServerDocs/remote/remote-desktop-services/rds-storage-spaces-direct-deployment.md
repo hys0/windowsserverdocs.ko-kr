@@ -13,12 +13,12 @@ author: haley-rowland
 ms.author: harowl
 ms.date: 07/17/2018
 manager: scottman
-ms.openlocfilehash: 2d82379dfbc03d28ec174e66862f130f2a3c50a6
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e320f0eb04e81d80f7288d4d7b20b5369e209932
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71387127"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79319987"
 ---
 # <a name="deploy-a-two-node-storage-spaces-direct-scale-out-file-server-for-upd-storage-in-azure"></a>Azure에서 UPD 스토리지용 2-노드 직접 스토리지 공간 스케일 아웃 파일 서버 배포
 
@@ -29,7 +29,7 @@ ms.locfileid: "71387127"
 > [!NOTE] 
 > Microsoft는 최근에 [직접 스토리지 공간 스케일 아웃 파일 서버를 배포하기 위한 Azure 템플릿](https://azure.microsoft.com/documentation/templates/301-storage-spaces-direct/)을 게시했습니다. 이 템플릿을 사용하여 배포를 만들거나, 이 문서의 단계를 사용할 수 있습니다. 
 
-DS 시리즈 Vm 및 프리미엄 저장소 데이터 디스크를 사용 하 여 프로그램 SOFS를 배포 하는 것이 좋습니다 없는 동일한 수와 각 VM에 데이터 디스크의 크기입니다. 최소 두 개의 스토리지 계정이 필요합니다. 
+DS 시리즈 VM 및 프리미엄 스토리지 데이터 디스크를 사용하여 프로그램 SOFS를 배포하는 것이 좋습니다. 동일한 수와 각 VM에 대한 데이터 디스크의 크기입니다. 최소 두 개의 스토리지 계정이 필요합니다. 
 
 소규모 배포에 대 한 볼륨 2 복사본과 미러된 여기서 클라우드 미러링 모니터가 있는 2 노드 클러스터를 권장 합니다. 데이터 디스크를 추가 하 여 소규모 배포를 확장 합니다. 대규모 배포 (Vm) 노드를 추가 하 여 증가 합니다. 
 
@@ -61,7 +61,7 @@ DS 시리즈 Vm 및 프리미엄 저장소 데이터 디스크를 사용 하 여
       - [새 AD 포리스트를 사용 하 여 Azure VM 만들기](https://azure.microsoft.com/documentation/templates/active-directory-new-domain/)
       - [도메인 컨트롤러 2와 새 AD 도메인을 만듭니다](https://azure.microsoft.com/documentation/templates/active-directory-new-domain-ha-2-dc/) (고가용성)에 대 한
    - 수동으로 [포리스트 배포](https://azure.microsoft.com/documentation/articles/active-directory-new-forest-virtual-machine/) 다음 구성을 사용 합니다.
-      - 저장소 계정으로 동일한 리소스 그룹에 가상 네트워크를 만듭니다.
+      - 스토리지 계정으로 동일한 리소스 그룹에 가상 네트워크를 만듭니다.
       - 권장 크기: DS2(도메인 컨트롤러가 더 많은 도메인 개체를 호스트할 경우 크기를 늘림)
       - 자동으로 생성 된 VNet을 사용 합니다.
       - AD DS를 설치 하는 단계를 수행 합니다.
@@ -85,7 +85,7 @@ DS 시리즈 Vm 및 프리미엄 저장소 데이터 디스크를 사용 하 여
    1. 리소스 그룹에서 VM을 선택 하 고 클릭 한 다음 **네트워크 인터페이스** (아래 **설정을**). 표시 되는 네트워크 인터페이스를 선택 하 고 클릭 한 다음 **IP 구성을**합니다. 나열 된 IP 구성을 선택, 선택 **정적**, 를 클릭 하 고 **저장**합니다.
    2. 도메인 컨트롤러 내-dc (예를 들어) 개인 IP 주소 (10.x.x.x) note 합니다.
 9. 내 dc 서버에 클러스터 노드 Vm의 Nic에 기본 DNS 서버 주소를 설정 합니다. VM을 선택한 다음 클릭 **네트워크 인터페이스 > DNS 서버 > 사용자 지정 DNS**합니다. 위에서 적어 둔 개인 IP 주소를 입력한 후 **저장**을 클릭합니다.
-10. 만들기는 [Azure 저장소 계정을 클라우드 감시](https://docs.microsoft.com/windows-server/failover-clustering/deploy-cloud-witness)합니다. (링크 된 지침을 사용 하는 경우 중지 됨 "구성 클라우드 미러링 모니터 서버와 장애 조치 클러스터 관리자 GUI"에 도달할 때 해당 단계 아래 작업을 수행 합니다.)
+10. [Azure 스토리지 계정 클라우드 감시](https://docs.microsoft.com/windows-server/failover-clustering/deploy-cloud-witness)를 만듭니다. (링크 된 지침을 사용 하는 경우 중지 됨 "구성 클라우드 미러링 모니터 서버와 장애 조치 클러스터 관리자 GUI"에 도달할 때 해당 단계 아래 작업을 수행 합니다.)
 11. 직접 스토리지 공간 파일 서버를 설정합니다. 노드 VM에 연결한 다음 Windows PowerShell cmdlet을 실행 합니다.
     1. 두 개의 파일 서버 클러스터 노드 Vm에 장애 조치 클러스터링 기능 및 파일 서버 기능을 설치 합니다.
 
@@ -105,7 +105,7 @@ DS 시리즈 Vm 및 프리미엄 저장소 데이터 디스크를 사용 하 여
        ```powershell
        Set-ClusterQuorum –CloudWitness –AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey> 
        ```
-    4. 저장소 공간을 직접 사용 하도록 설정 합니다.
+    4. 스토리지 공간을 직접 사용하도록 설정합니다.
 
        ```powershell
        Enable-ClusterS2D 
@@ -131,8 +131,8 @@ DS 시리즈 Vm 및 프리미엄 저장소 데이터 디스크를 사용 하 여
     7. SOFS 클러스터에서 새로운 SMB 파일 공유를 만듭니다.
 
        ```powershell
-       New-Item -Path C:\ClusterStorage\Volume1\Data -ItemType Directory
-       New-SmbShare -Name UpdStorage -Path C:\ClusterStorage\Volume1\Data
+       New-Item -Path C:\ClusterStorage\VDisk01\Data -ItemType Directory
+       New-SmbShare -Name UpdStorage -Path C:\ClusterStorage\VDisk01\Data
        ```
 
 이제 공유가 `\\my-sofs1\UpdStorage`에 저장되었으며, 사용자를 위해 [UPD를 사용하도록 설정](https://social.technet.microsoft.com/wiki/contents/articles/15304.installing-and-configuring-user-profile-disks-upd-in-windows-server-2012.aspx)하면 UPD 스토리지에 해당 공유를 사용할 수 있습니다. 

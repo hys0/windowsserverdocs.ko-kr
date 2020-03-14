@@ -10,11 +10,11 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
 ms.openlocfilehash: 52199ab8ca6f82443e78e72c6980746fa561363a
-ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78371675"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79323125"
 ---
 # <a name="set-up-the-lab-environment-for-ad-fs-in-windows-server-2012-r2"></a>Windows Server 2012 R2의 AD FS에 대한 랩 환경 설정
 
@@ -351,7 +351,7 @@ Windows Server 2012 R2 운영 체제를 설치 하 고 도메인 **contoso.com**
 10. **마침**을 클릭한 다음 **확인**을 클릭합니다.
 
 ## <a name="BKMK_10"></a>4 단계: 클라이언트 컴퓨터 (Client1) 구성
-다른 가상 컴퓨터를 설정 하 고 Windows 8.1를 설치 합니다. 이 가상 컴퓨터는 다른 컴퓨터와 동일한 가상 네트워크에 있어야 합니다. 이 컴퓨터는 Contoso 도메인에 가입되지 않아야 합니다.
+다른 가상 컴퓨터를 설정 하 고 Windows 8.1를 설치 합니다. 이 가상 머신은 다른 컴퓨터와 동일한 가상 네트워크에 있어야합니다. 이 컴퓨터는 Contoso 도메인에 가입되지 않아야 합니다.
 
 클라이언트는 [Step 2: Configure the federation server (ADFS1) with Device Registration Service](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_4)에서 설정한 페더레이션 서버(ADFS1)에 사용된 SSL 인증서를 신뢰해야 합니다. 또한 인증서에 대한 인증서 해지 정보의 유효성을 검사할 수 있어야 합니다.
 

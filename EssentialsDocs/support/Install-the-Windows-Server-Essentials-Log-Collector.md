@@ -13,11 +13,11 @@ author: nnamuhcs
 ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: a1b1a5492a6e5dbc48899b3918314676884e0454
-ms.sourcegitcommit: 39244de670f712857a5fdd56630e95d57b7001a5
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74897684"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79322095"
 ---
 # <a name="install-the-windows-server-essentials-log-collector"></a>Windows Server Essentials 로그 수집기 설치
 
@@ -49,12 +49,12 @@ Windows Server Essentials 로그 수집기 설치 마법사에서 로그 수집�
   
 1.  대시보드를 엽니다.  
   
-2.  **추가 기능** 탭을 클릭하고 목록에서 **로그 수집기** 를 선택한 다음 **제거**를 클릭합니다.  
+2.  **추가 기능** 탭을 클릭하고 목록에서 **로그 수집기**를 선택한 다음 **제거**를 클릭합니다.  
   
 
-3.  이전 절차인 [To install the Log Collector](Install-the-Windows-Server-Essentials-Log-Collector.md#BKMK_ToInstall)의 단계를 수행하여 로그 수집기를 다운로드하고 설치합니다.  
+3.  이전 절차 [로그 수집기를 설치하려면](Install-the-Windows-Server-Essentials-Log-Collector.md#BKMK_ToInstall)의 단계를 수행하여 로그 수집기를 다운로드하고 설치합니다.  
 
-3.  이전 절차인 [To install the Log Collector](../support/Install-the-Windows-Server-Essentials-Log-Collector.md#BKMK_ToInstall)의 단계를 수행하여 로그 수집기를 다운로드하고 설치합니다.  
+3.  이전 절차 [로그 수집기를 설치하려면](../support/Install-the-Windows-Server-Essentials-Log-Collector.md#BKMK_ToInstall)의 단계를 수행하여 로그 수집기를 다운로드하고 설치합니다.  
 
   
 ### <a name="manually-install-the-log-collector"></a>수동으로 로그 수집기 설치  
@@ -66,7 +66,7 @@ Windows Server Essentials 로그 수집기 설치 마법사에서 로그 수집�
   
 2.  설치 파일 이름을 두 번 클릭합니다.  
   
-3.  메시지가 표시되면 **확인** 을 클릭합니다.  
+3.  메시지가 표시되면 **확인**을 클릭합니다.  
   
 4.  ' .Msi '로 끝나는 파일 이름을 두 번 클릭 하 고 파일을 추출할 폴더를 선택 합니다.  
   

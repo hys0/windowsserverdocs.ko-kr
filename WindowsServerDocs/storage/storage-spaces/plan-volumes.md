@@ -10,11 +10,11 @@ author: cosmosdarwin
 ms.date: 06/28/2019
 ms.localizationpriority: medium
 ms.openlocfilehash: 52c600068d5dd447ff9faa7c40788664e222a83a
-ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78370745"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79322785"
 ---
 # <a name="planning-volumes-in-storage-spaces-direct"></a>저장소 공간 다이렉트에서 볼륨 계획
 
@@ -41,7 +41,7 @@ ms.locfileid: "78370745"
 
 볼륨의 총 수를 다음으로 제한 하는 것이 좋습니다.
 
-| Windows Server 2016          | 시작          |
+| Windows Server 2016          | Windows Server 2019          |
 |------------------------------|------------------------------|
 | 클러스터 당 최대 32 볼륨 | 클러스터 당 최대 64 볼륨 |
 
@@ -128,7 +128,7 @@ ReFS가 아직 지원하지 않는 기능이 작업에 필요한 경우 대신 N
 
 각 볼륨의 크기를 다음으로 제한 하는 것이 좋습니다.
 
-| Windows Server 2016 | 시작 |
+| Windows Server 2016 | Windows Server 2019 |
 | ------------------- | ------------------- |
 | 최대 32 TB         | 최대 64 TB         |
 
