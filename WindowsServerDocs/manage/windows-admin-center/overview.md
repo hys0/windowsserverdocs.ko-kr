@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.date: 01/07/2020
 ms.localizationpriority: high
 ms.prod: windows-server
-ms.openlocfilehash: 7b3a75258086a73fbd618c2e8221454d7e616556
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: bb2f6d7fcbf18ef9bc67534982d1a98fdc5172a1
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75949997"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79320037"
 ---
 # <a name="windows-admin-center"></a>Windows Admin Center
 
@@ -37,7 +37,7 @@ Microsoft 업데이트를 사용하거나 Windows Admin Center를 수동으로 �
 
 |     |     |
 | --- | --- |
-| ![](media/simple-icon.png)| **서버 관리 간소화** <br/> 서버 매니저와 같은 친숙한 도구의 현대화된 버전으로 서버와 클러스터를 관리합니다. 환경에서 바로 5분 내에 설치하고 관리하며 대상 구성이 필요하지 않습니다. 자세한 내용은 [Windows Admin Center란?](understand/what-is.md)을 참조하세요. |
+| ![](media/simple-icon.png)| **서버 관리 간소화** <br/> 서버 매니저와 같은 친숙한 도구의 현대화된 버전으로 서버와 클러스터를 관리합니다. 환경에서 서버를 5분 내에 바로 설치하고 관리하며, 추가 구성이 필요하지 않습니다. 자세한 내용은 [Windows Admin Center란?](understand/what-is.md)을 참조하세요. |
 | ![](media/future-icon.png)| **하이브리드 솔루션 작업** <br/> Azure와 통합하면 선택적으로 온-프레미스 서버를 관련 클라우드 서비스와 선택적으로 연결할 수 있습니다. 자세한 내용은 [Azure 하이브리드 서비스](azure/index.md)를 참조하세요. |
 | ![](media/secure-icon.png)| **하이퍼 컨버지드 관리 간소화** <br/> Azure Stack HCI 또는 Windows Server 하이퍼 컨버지드 클러스터의 관리를 간소화합니다. 간소화된 워크로드를 사용하여 VM, 스토리지 공간 다이렉트 볼륨, 소프트웨어 정의 네트워킹 등을 생성하고 관리합니다. 자세한 내용은 [Windows Admin Center를 사용하여 하이퍼 컨버지드 인프라 관리](use/manage-hyper-converged.md)를 참조하세요.|
 

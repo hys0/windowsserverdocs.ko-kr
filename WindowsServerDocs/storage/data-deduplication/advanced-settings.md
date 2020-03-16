@@ -9,11 +9,11 @@ manager: klaasl
 ms.author: wgries
 ms.date: 09/15/2016
 ms.openlocfilehash: 1d0677cec134ddeb4c706d0f1231f2c26b39967e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403219"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79322645"
 ---
 # <a name="advanced-data-deduplication-settings"></a>고급 데이터 중복 제거 설정
 
@@ -26,10 +26,10 @@ ms.locfileid: "71403219"
 
 ### <a id="modifying-job-schedules-change-schedule"></a>데이터 중복 제거 일정 변경
 데이터 중복 제거 작업은 Windows 작업 스케줄러를 통해 예약되며 Microsoft\Windows\Deduplication 경로 아래에서 보고 편집할 수 있습니다. 데이터 중복 제거에는 예약을 도와주는 여러 cmdlet이 포함되어 있습니다.
-* [`Get-DedupSchedule`](https://technet.microsoft.com/library/hh848446.aspx) 현재 예약 된 작업을 표시 합니다.
-* [`New-DedupSchedule`](https://technet.microsoft.com/library/hh848445.aspx) 새 예약 된 작업을 만듭니다.
-* [`Set-DedupSchedule`](https://technet.microsoft.com/library/hh848447.aspx) 기존 예약 된 작업을 수정 합니다.
-* [`Remove-DedupSchedule`](https://technet.microsoft.com/library/hh848451.aspx) 예약 된 작업을 제거 합니다.
+* [`Get-DedupSchedule`](https://technet.microsoft.com/library/hh848446.aspx) 현재 예약된 작업을 보여 줍니다.
+* [`New-DedupSchedule`](https://technet.microsoft.com/library/hh848445.aspx) 새 예약된 작업을 만듭니다.
+* [`Set-DedupSchedule`](https://technet.microsoft.com/library/hh848447.aspx) 기존 예약된 작업을 수정합니다.
+* [`Remove-DedupSchedule`](https://technet.microsoft.com/library/hh848451.aspx) 예약된 작업을 제거합니다.
 
 데이터 중복 제거 작업을 실행하는 시점을 변경하는 가장 주된 이유는 유휴 시간에 실행하기 위한 것입니다. 다음 단계별 예에서는 *주간* 시나리오(하이퍼 수렴형 Hyper-V 호스트가 평일 오후 7시 이후와 주말에는 유휴 상태임)에 대한 데이터 중복 제거 일정을 수정하는 방법을 보여 줍니다. 일정을 변경하려면 관리자 컨텍스트에서 다음 PowerShell cmdlet을 실행합니다.
 
@@ -88,19 +88,19 @@ ms.locfileid: "71403219"
             <td>이 값은 예약해야 하는 작업 유형이기 때문에 필요합니다. 작업을 예약한 후에는 이 값을 변경할 수 없습니다.</td>
         </tr>
         <tr>
-            <td>우선 순위</td>
+            <td>Priority</td>
             <td>예약된 작업의 시스템 우선 순위</td>
             <td>
                 <ul>
                     <li>높음</li>
-                    <li>보통</li>
+                    <li>중간</li>
                     <li>낮음</li>
                 </ul>
             </td>
             <td>이 값은 시스템에서 CPU 시간을 할당하는 방법을 결정하도록 도와줍니다. <em>High</em>는 사용하는 CPU 시간이 많고 <em>low</em>는 적습니다.</td>
         </tr>
         <tr>
-            <td>요일</td>
+            <td>일</td>
             <td>작업이 예약된 요일</td>
             <td>요일을 나타내는 정수 0~6의 배열:<ul>
                 <li>0 = 일요일</li>
@@ -114,7 +114,7 @@ ms.locfileid: "71403219"
             <td>하루에 한 번 이상 실행해야 하는 예약된 작업</td>
         </tr>
         <tr>
-            <td>Cores</td>
+            <td>코어</td>
             <td>작업에서 사용해야 하는 시스템의 코어 비율</td>
             <td>정수 0~100(백분율을 나타냄)</td>
             <td>작업이 시스템의 계산 리소스에 미치는 영향력 제어</td>
@@ -126,7 +126,7 @@ ms.locfileid: "71403219"
             <td>작업을 유휴 시간 외 시간에&#39;실행 하지 못하게 하려면</td>
         </tr>
         <tr>
-            <td>Enabled</td>
+            <td>사용</td>
             <td>작업의 실행 여부</td>
             <td>True/false</td>
             <td>작업을 제거하지 않고 사용하지 않도록 설정</td>
@@ -152,7 +152,7 @@ ms.locfileid: "71403219"
         <tr>
             <td>이름</td>
             <td>예약된 작업의 이름</td>
-            <td>문자열</td>
+            <td>String</td>
             <td>작업에는 고유하게 식별 가능한 이름이 있어야 합니다.</td>
         </tr>
         <tr>
@@ -162,7 +162,7 @@ ms.locfileid: "71403219"
             <td>디스크의 불량 섹션에 있는 파일을 수동으로 복원할 수 있습니다.</td>
         </tr>
         <tr>
-            <td>Start</td>
+            <td>시작</td>
             <td>작업을 시작해야 하는 시간을 지정합니다.</td>
             <td><code>System.DateTime</code></td>
             <td><em>시작</em> 에 제공 된 <code>System.Datetime</code>의&#39; <em>날짜</em> 부분은 이전에는 관련이 없지만 <em>시간</em> 부분은 작업이 시작 되는 시기를 지정 합니다.</td>
