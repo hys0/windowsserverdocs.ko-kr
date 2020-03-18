@@ -12,14 +12,14 @@ ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 12/02/2019
+ms.date: 03/12/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: cb0fa7009c4a8fe53810f8b5f058e659c2391dc1
-ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
+ms.openlocfilehash: d4ef08107c816aebf6563e57e5e76b12b793d472
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78370691"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79323425"
 ---
 # <a name="get-started-with-the-android-client"></a>Android 클라이언트 시작
 
@@ -185,7 +185,7 @@ RD 게이트웨이를 삭제하려면,
 ### <a name="start-a-remote-desktop-connection"></a>원격 데스크톱 연결 시작
 
 1. **원격 데스크톱 연결 이름**을 탭하여 세션을 시작합니다.
-2. 원격 데스크톱에 대한 인증서를 확인하도록 요구하는 메시지가 표시되면 **연결**을 탭합니다. 또한 기본적으로 인증서를 항상 수락하도록 **이 컴퓨터에 연결 시 다시 묻지 않음**을 선택할 수도 있습니다.
+2. 원격 데스크톱에 대한 인증서를 확인하도록 요구하는 메시지가 표시되면 **연결**을 탭합니다. 또한 기본적으로 인증서를 항상 수락하도록 **이 컴퓨터로의 연결을 다시 묻지 않음**을 선택할 수도 있습니다.
 
 ### <a name="connection-bar"></a>연결 표시줄
 
@@ -229,3 +229,11 @@ RD 게이트웨이를 삭제하려면,
 | 마우스 포인터 | 그런 다음          | 두 손가락으로 탭하기                                                    |
 | 마우스 포인터 | 마우스 오른쪽 단추로 클릭 후 끌기 | 두 손가락으로 두 번 길게 탭한 후 끌기                         |
 | 마우스 포인터 | 마우스 휠          | 두 손가락으로 두 번 길게 탭한 후 위/아래로 끌기                     |
+
+## <a name="join-the-beta-channel"></a>베타 채널 조인
+
+다른 사용자보다 먼저 최신 기능에 액세스하거나 새 버전이 릴리스되기 전에 문제를 식별하려면 베타 채널이 적합합니다. 또한 베타 채널은 엔터프라이즈 관리자가 환경의 사용자를 위해 새 버전의 Android 클라이언트에 대한 유효성을 검사할 수 있는 좋은 방법입니다.
+
+베타에 조인하려면 미리 보기 버전에 액세스하고 클라이언트를 다운로드하는 데 동의하면 됩니다. Google Play 스토어를 통해 미리 보기 버전을 직접 받을 수 있습니다.
+
+[베타 조인](https://play.google.com/apps/testing/com.microsoft.rdc.androidx)

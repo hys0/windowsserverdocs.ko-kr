@@ -14,12 +14,12 @@ manager: dongill
 ms.author: elizapo
 ms.date: 08/27/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: ca68087ad238cbbd06c56e41dd65f318adae5222
-ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
+ms.openlocfilehash: 1b2ea23e95796f6cce90a1dc90de896c2242084a
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77465477"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79319997"
 ---
 # <a name="get-started-with-the-macos-client"></a>macOS 클라이언트 시작
 
@@ -164,7 +164,7 @@ Mac 자판 배열 Windows 자판 배열에서 다릅니다.
 
 ## <a name="support-for-remote-desktop-gateway-pluggable-authentication-and-authorization"></a>원격 데스크톱 게이트웨이 플러그 가능 인증 및 권한 부여에 대 한 지원
 
-Windows Server 2012 r 2에는 새 인증 방법, 원격 데스크톱 게이트웨이 플러그 가능 인증 및 사용자 지정 인증 루틴에 대 한 유연성을 제공 하는 권한 부여에 대 한 지원이 추가 되었습니다. 수행할 수 있습니다이 인증 모델 Mac 클라이언트입니다. 
+Windows Server 2012 r 2에는 새 인증 방법, 원격 데스크톱 게이트웨이 플러그 가능 인증 및 사용자 지정 인증 루틴에 대 한 유연성을 제공 하는 권한 부여에 대 한 지원이 추가 되었습니다. 이 인증 모델은 이제 Mac 클라이언트에서 사용해 볼 수 있습니다. 
 
 > [!IMPORTANT]
 > Windows 8.1 하기 전에 사용자 지정 인증 및 권한 부여 모델 위의 문서를 설명 하 고 있지만 지원 되지 않습니다.
@@ -174,4 +174,3 @@ Windows Server 2012 r 2에는 새 인증 방법, 원격 데스크톱 게이트�
 
 > [!TIP]
 > 질문이 나 의견은 언제나 환영 합니다. 그러나 게시 하지 마십시오이 문서의 끝에서 주석 기능을 사용 하 여 문제 해결 도움말에 대 한 요청입니다. 대신, 이동 하려면는 [원격 데스크톱 클라이언트 포럼](https://social.technet.microsoft.com/forums/windowsserver/en-us/home?forum=winrdc) 하 고 새 스레드를 시작 합니다. 기능 제안할 사항이 있으시면 알려 고 [클라이언트 사용자 의견 포럼](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android)합니다.
-
