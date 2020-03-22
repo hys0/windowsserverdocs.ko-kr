@@ -8,12 +8,12 @@ ms.date: 01/17/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: 1a98de21e91fc7bdc431e7413c44089ce750bc05
-ms.sourcegitcommit: 840d1d8851f68936db3934c80796fb8722d3c64a
+ms.openlocfilehash: 70ce4ebca35e071cf6e27fe429d3c4e6f67d342c
+ms.sourcegitcommit: 8b801bd86e2ddf8255899b11f547daa920e5f651
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519475"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80110676"
 ---
 # <a name="storage-migration-service-overview"></a>Storage Migration Service 개요
 
@@ -85,8 +85,8 @@ Orchestrator와 대상 컴퓨터에는 2 개 이상의 코어 또는 두 개의 
 
 - Windows Server, 반기 채널
 - 시작
-- Windows Server 2016
-- Windows Server 2012 R2
+- Windows Server 2016
+- Windows Server 2012 R2
 - Windows Server 2012
 - Windows Server 2008 R2
 - Windows Server 2008
@@ -95,13 +95,13 @@ Orchestrator와 대상 컴퓨터에는 2 개 이상의 코어 또는 두 개의 
 - Windows Small Business Server 2003 R2
 - Windows Small Business Server 2008
 - Windows Small Business Server 2011
-- Windows Server 2012 Essentials
+- Windows  Server  2012  Essentials
 - Windows Server 2012 R2 Essentials
 - Windows Server 2016 Essentials
 - Windows Server 2019 Essentials
 - Windows Storage Server 2008
-- Windows Storage Server 2008 R2
-- Windows Storage Server 2012
+- Windows Storage Server 2008 R2
+- Windows  Storage  Server  2012
 - Windows Storage Server 2012 R2
 - Windows Storage Server 2016
 
@@ -124,11 +124,15 @@ Orchestrator가 Windows Server, 버전 1903 이상을 실행 하거나 orchestra
 
 - Windows Server, 반기 채널
 - 시작
-- Windows Server 2016
-- Windows Server 2012 R2
+- Windows Server 2016
+- Windows Server 2012 R2
 
 > [!TIP]
 > Windows server 2019 또는 Windows Server, 반기 채널 이상을 실행 하는 대상 서버는 이전 버전의 Windows Server의 전송 성능을 두 배로 향상 합니다. 이러한 성능 향상은 기본 제공 저장소 마이그레이션 서비스 프록시 서비스를 포함 하기 때문에 발생 합니다 .이 서비스는 아직 열려 있지 않은 경우에도 필요한 방화벽 포트를 엽니다.
+
+## <a name="azure-vm-migration"></a>Azure VM 마이그레이션
+
+Windows 관리 센터 버전 1910을 사용 하 여 Azure 가상 컴퓨터를 배포할 수 있습니다. 이렇게 하면 VM 배포가 Storage Migration Service에 통합 됩니다. 워크 로드를 배포 하기 전에 직접 Azure Portal에서 새 서버 및 Vm을 구축 하는 대신, 필요한 단계 및 구성이 누락 될 수 있습니다. Windows 관리 센터에서 Azure VM을 배포 하 고, 저장소를 구성 하 고, 도메인에 가입 하 고, 역할을 설치 하 고, 그런 다음 분산 시스템을 설정 합니다. 
 
 ## <a name="whats-new-in-storage-migration-service"></a>저장소 마이그레이션 서비스의 새로운 기능
 

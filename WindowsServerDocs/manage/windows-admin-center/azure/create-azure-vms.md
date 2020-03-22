@@ -9,12 +9,12 @@ manager: jgerend
 ms.date: 01/28/2020
 ms.localizationpriority: medium
 ms.prod: windows-server
-ms.openlocfilehash: 1a31fac97a6697909774a084045ad5746b7241f3
-ms.sourcegitcommit: 74107a32efe1e53b36c938166600739a79dd0f51
+ms.openlocfilehash: 08135ed3454bb22db1c2b0fa3a14a8342fbc2dab
+ms.sourcegitcommit: 8b801bd86e2ddf8255899b11f547daa920e5f651
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76918266"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80110666"
 ---
 # <a name="deploy-azure-virtual-machines-from-within-windows-admin-center"></a>Windows 관리 센터 내에서 Azure virtual machines 배포
 
@@ -42,7 +42,7 @@ Windows 관리 센터 내에서 새 Azure VM을 만들려면 다음이 필요 �
 - 기존 [Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) 및 서브넷.
 - 가상 네트워크 및 서브넷에 연결 된 azure [Express 경로](https://azure.microsoft.com/services/expressroute/) 또는 azure [VPN 솔루션](https://azure.microsoft.com/services/vpn-gateway/) 은 azure vm에서 온-프레미스 클라이언트, 도메인 컨트롤러, Windows 관리 센터 컴퓨터 및이 VM과의 통신을 요구 하는 모든 서버에 연결 하 여 작업 배포의 일부로 사용할 수 있습니다. 예를 들어 저장소 마이그레이션 서비스를 사용 하 여 저장소를 Azure VM으로 마이그레이션하려면 orchestrator 컴퓨터와 원본 컴퓨터가 둘 다 마이그레이션할 대상 Azure VM에 연결할 수 있어야 합니다.
 
-## <a name="usage"></a>사용 패턴
+## <a name="usage"></a>사용법
 
 Azure VM 배포 단계와 마법사는 시나리오에 따라 달라 집니다. 전반적인 시나리오에 대 한 자세한 내용은 워크 로드 설명서를 참조 하세요.
 
@@ -60,7 +60,15 @@ Azure VM 배포 단계와 마법사는 시나리오에 따라 달라 집니다. 
 그러면 Windows Server 2016 또는 Windows Server 2019 Azure VM을 마이그레이션 원본의 대상으로 자동으로 선택 하는 프로세스가 시작 됩니다. Storage Migration Service는 원본에 맞게 VM 크기를 권장 하지만 **모든 크기 보기**를 선택 하 여이를 재정의할 수 있습니다. 인벤토리 데이터는 새 Azure VM을 Active Directory 도메인에 가입 하는 것 뿐만 아니라 관리 디스크와 해당 파일 시스템을 자동으로 구성 하는 데 사용 됩니다. 
 3. Windows 관리 센터에서 Azure VM을 만든 후 복제 그룹 이름을 제공 하 고 **만들기**를 선택 합니다. 그러면 Windows 관리 센터에서 일반 저장소 복제본 초기 동기화 프로세스를 시작 하 여 데이터 보호를 시작 합니다.
 
+저장소 복제본을 사용 하 여 Azure Vm으로 마이그레이션하는 방법을 보여 주는 비디오는 다음과 같습니다.
+
+> [!VIDEO https://www.youtube-nocookie.com/embed/_VqD7HjTewQ] 
+
 ### <a name="deploying-a-new-standalone-azure-vm"></a>새 독립 실행형 Azure VM 배포
 
 1. Windows 관리 센터의 *모든 연결* 페이지에서 **추가**를 선택 합니다.
 2. *AZURE VM* 섹션에서 **새로 만들기**를 선택 합니다.<br><br> 이를 통해 Windows Server 2012 R2, Windows Server 2016 또는 Windows Server 2019 Azure VM을 선택 하 고, 크기를 선택 하 고, 관리 디스크를 추가 하 고, 선택적으로 Active Directory 도메인에 가입할 수 있는 단계별 작성 도구를 시작 합니다.
+
+Windows 관리 센터를 사용 하 여 Azure Vm을 만드는 방법을 보여 주는 비디오는 다음과 같습니다.
+
+> [!VIDEO https://www.youtube-nocookie.com/embed/__A8J9aC_Jk] 
