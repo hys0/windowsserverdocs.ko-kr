@@ -11,14 +11,14 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 01/29/2020
+ms.date: 03/04/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 1753780474332a6d5786a5804fc1b4fe5e3d8883
-ms.sourcegitcommit: 9077469e372d2aafcad890cbc4e4a24c58a3838c
+ms.openlocfilehash: 8b7aefa169fe2121c5a2da1f913714d23d989d16
+ms.sourcegitcommit: 056d355516f199e8a505c32b9aa685d0cde89e44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2020
-ms.locfileid: "76889437"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79518738"
 ---
 # <a name="get-started-with-the-windows-desktop-client"></a>Windows 데스크톱 클라이언트 시작
 
@@ -134,5 +134,6 @@ Windows 버전과 일치하는 클라이언트를 선택합니다. 새 원격 �
 
 클라이언트 로그를 검색하려면,
 
-1. **파일 탐색기**를 엽니다.
-2. **%temp%\DiagOutputDir\RdClientAutoTrace** 폴더로 이동합니다.
+1. 시스템 트레이에서 **원격 데스크톱** 아이콘을 마우스 오른쪽 단추로 클릭하고 **모든 세션의 연결 끊기**를 선택하여 활성 상태의 세션이 없고 클라이언트 프로세스가 백그라운드에서 실행되고 있지 않은지 확인합니다.
+2. **파일 탐색기**를 엽니다.
+3. **%temp%\DiagOutputDir\RdClientAutoTrace** 폴더로 이동합니다.
