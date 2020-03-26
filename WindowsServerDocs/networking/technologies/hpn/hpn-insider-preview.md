@@ -9,14 +9,14 @@ ms.date: 09/12/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: networking
-ms.openlocfilehash: 7098e81f486a5b0b4974c19b47e2d48c6f98832b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: bca603344047ea5cc890bf9976ca5a6c79514136
+ms.sourcegitcommit: 9feb093a0acb8834c9ef3c066667c7062d85e6e1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71355368"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80289798"
 ---
-# <a name="insider-preview"></a>Insider Preview
+# <a name="new-hpn-features-in-windows-server-2019"></a>Windows Server 2019의 새로운 HPN 기능
 
 
 ## <a name="dynamic-vrss-and-vmmq"></a>동적 vRSS 및 VMMQ
@@ -27,7 +27,7 @@ ms.locfileid: "71355368"
 
 Windows Server 2019에서는 필요에 따라 네트워크 작업의 처리를 동적으로 분산 하 고 조정 하 여 이러한 최적화를 개선 합니다. Windows Server 2019는 최고 효율성을 보장 하 고 IT 관리자의 구성 부담을 제거 합니다.
 
-자세한 내용은 다음을 참조하세요.
+참조 항목:
 
 -   [발표 블로그](https://blogs.technet.microsoft.com/networking/2018/08/22/netperf4vw/)
 
@@ -43,7 +43,7 @@ VSwitch의 RSC (수신 세그먼트 통합)는 vSwitch를 통과 하는 데이�
 
 기본적으로 vSwitch의 RSC는 외부 가상 스위치에서 사용 하도록 설정 됩니다.
 
-자세한 내용은 다음을 참조하세요.
+참조 항목:
 
 -  [발표 블로그](https://blogs.technet.microsoft.com/networking/2018/08/22/netperf4vw/)
 

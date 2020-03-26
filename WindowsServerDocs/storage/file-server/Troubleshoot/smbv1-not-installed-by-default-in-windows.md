@@ -7,12 +7,12 @@ audience: ITPro
 ms.topic: article
 ms.author: delhan
 ms.date: 12/25/2019
-ms.openlocfilehash: 9a6e9778e0ce1e50a70e68832390321fb2d9f971
-ms.sourcegitcommit: 8cf04db0bc44fd98f4321dca334e38c6573fae6c
+ms.openlocfilehash: 27869820e49257d059d124bac3f515ac91fef7b0
+ms.sourcegitcommit: 30afd51d74cb6472720fb13ec47d80cf42b20c27
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75654364"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80272319"
 ---
 # <a name="smbv1-is-not-installed-by-default-in-windows-10-version-1709-windows-server-version-1709-and-later-versions"></a>SMBv1는 Windows 10 버전 1709, Windows Server 버전 1709 이상 버전에서 기본적으로 설치 되지 않습니다.
 
@@ -114,7 +114,7 @@ The client has SMB1 disabled or uninstalled. For more information: https://go.mi
 > [!NOTE]
 > Windows 10, 버전 1709을 "가를 크리에이터 업데이트" 라고도 합니다.   
 
-## <a name="more-information"></a>자세한 정보
+## <a name="more-information"></a>자세한 내용
 
 이 문제를 해결 하려면 SMBv1만 지 원하는 제품의 제조업체에 문의 하 고 SMBv 2.02 이상 버전을 지 원하는 소프트웨어 또는 펌웨어 업데이트를 요청 하십시오. 알려진 공급 업체의 최신 목록과 SMBv1 요구 사항은 다음 Windows 및 Windows Server Storage 엔지니어링 팀 블로그 문서를 참조 하세요. 
 
@@ -146,7 +146,21 @@ Oplock 또는 임대를 사용 하지 않고 공유를 지정 하 여 레거시 
 이러한 해결 방법을 사용할 수 없거나 응용 프로그램 제조업체에서 지원 되는 버전의 SMB를 제공할 수 없는 경우 [Windows에서 SMBv1, SMBv2 및 SMBv3를 검색, 사용 및 사용 하지 않도록 설정 하는 방법](detect-enable-and-disable-smbv1-v2-v3.md)의 단계에 따라 SMBv1을 수동으로 다시 사용 하도록 설정할 수 있습니다.
 
 > [!IMPORTANT]
-> SMBv1를 다시 설치 하지 않는 것이 좋습니다. 이는 이전 프로토콜에 랜 섬 웨어 및 기타 맬웨어에 대 한 알려진 보안 문제가 있기 때문입니다.   
+> SMBv1를 다시 설치 하지 않는 것이 좋습니다. 이는 이전 프로토콜에 랜 섬 웨어 및 기타 맬웨어에 대 한 알려진 보안 문제가 있기 때문입니다.  
+
+#### <a name="windows-server-best-practices-analyzer-messaging"></a>Windows Server 모범 사례 분석기 메시징
+
+Windows Server 2012 이상 서버 운영 체제에는 파일 서버용 BPA (모범 사례 분석기)가 포함 되어 있습니다. SMB1을 제거 하기 위한 올바른 온라인 지침을 수행한 경우이 BPA를 실행 하면 모순 되는 경고 메시지가 반환 됩니다.
+
+    Title: The SMB 1.0 file sharing protocol should be enabled
+    Severity: Warning
+    Date: 3/25/2020 12:38:47 PM
+    Category: Configuration
+    Problem: The Server Message Block 1.0 (SMB 1.0) file sharing protocol is disabled on this file server.
+    Impact: SMB not in a default configuration, which could lead to less than optimal behavior.
+    Resolution: Use Registry Editor to enable the SMB 1.0 protocol.
+
+이 특정 BPA 규칙의 지침을 무시 해야 합니다. 사용 되지 않습니다. 반복: SMB 1.0을 사용 하지 않습니다.
 
 ## <a name="references"></a>참조
 
