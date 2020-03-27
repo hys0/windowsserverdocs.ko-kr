@@ -3,7 +3,7 @@ title: Windows Server Essentials에서 사용자 계정 관리
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: 0d115697-532b-48c2-a659-9f889e235326
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 069cbbdf499ce86586390b1031b6fea71f4f2b2a
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: 86feb7168aa53837c4bef514e8a9b6724c0e5682
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79322225"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80311041"
 ---
 # <a name="manage-user-accounts-in-windows-server-essentials"></a>Windows Server Essentials에서 사용자 계정 관리
 
@@ -26,7 +26,7 @@ ms.locfileid: "79322225"
 Windows Server Essentials 대시보드의 사용자 페이지에서는 소규모 기업 네트워크에서 사용자 계정 관리를 도와주는 정보와 작업을 중앙화합니다. 사용자 대시보드의 개요는 [대시보드 개요](Overview-of-the-Dashboard-in-Windows-Server-Essentials.md)를 참조 하세요.  
   
   
-##  <a name="BKMK_ManageAccounts"></a>사용자 계정 관리  
+##  <a name="managing-user-accounts"></a><a name="BKMK_ManageAccounts"></a>사용자 계정 관리  
  다음 항목에서는 Windows Server Essentials 대시보드를 사용하여 서버에서 사용자 계정을 관리하는 방법을 설명합니다.  
   
 -   [사용자 계정 추가](Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage1)  
@@ -45,7 +45,7 @@ Windows Server Essentials 대시보드의 사용자 페이지에서는 소규모
   
 -   [대시보드를 사용 하 여 사용자 계정 관리](Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage8)  
   
-###  <a name="BKMK_Manage1"></a>사용자 계정 추가  
+###  <a name="add-a-user-account"></a><a name="BKMK_Manage1"></a>사용자 계정 추가  
  사용자 계정을 추가하면 할당된 사용자가 네트워크에 로그온할 수 있고 사용자에게 공유 폴더 및 원격 웹 액세스 사이트와 같은 네트워크 리소스에 액세스할 권한을 제공할 수 있습니다. Windows Server Essentials에는 다음 작업을 도와주는 사용자 계정 추가 마법사가 포함되어 있습니다.  
   
 -   사용자 계정의 이름과 암호를 제공합니다.  
@@ -76,7 +76,7 @@ Windows Server Essentials 대시보드의 사용자 페이지에서는 소규모
   
 4.  지시에 따라 마법사를 완료합니다.  
   
-###  <a name="BKMK_Remove"></a>사용자 계정 제거  
+###  <a name="remove-a-user-account"></a><a name="BKMK_Remove"></a>사용자 계정 제거  
  서버에서 사용자 계정을 제거하도록 선택하면 선택한 계정이 삭제됩니다. 이 때문에 네트워크에 로그온하거나 네트워크 리소스에 액세스하는 데 더 이상 계정을 사용할 수 없습니다. 필요하면 계정을 제거하면서 사용자 계정에 대한 파일을 삭제할 수도 있습니다. 사용자 계정을 영구적으로 제거하지 않으려면 네트워크 리소스에 대한 액세스를 일시 중단하지 않고 사용자 계정을 비활성화할 수 있습니다.  
   
 > [!IMPORTANT]
@@ -101,7 +101,7 @@ Windows Server Essentials 대시보드의 사용자 페이지에서는 소규모
 >   
 >  통합된 메일 공급자가 있으면 사용자 계정에 할당된 메일 계정도 제거됩니다.  
   
-###  <a name="BKMK_Manage3"></a>사용자 계정 보기  
+###  <a name="view-user-accounts"></a><a name="BKMK_Manage3"></a>사용자 계정 보기  
  Windows Server Essentials 대시보드의 **사용자** 섹션에는 네트워크 사용자 계정 목록이 표시됩니다. 목록에서는 각 계정에 대한 추가 정보도 제공합니다.  
   
 ##### <a name="to-view-a-list-of-user-accounts"></a>사용자 계정 목록을 보려면  
@@ -122,7 +122,7 @@ Windows Server Essentials 대시보드의 사용자 페이지에서는 소규모
   
 4.  사용자 계정 속성의 모든 변경 사항을 저장하려면 **적용**을 클릭합니다.  
   
-###  <a name="BKMK_Manage4"></a>사용자 계정에 대 한 표시 이름 변경  
+###  <a name="change-the-display-name-for-the-user-account"></a><a name="BKMK_Manage4"></a>사용자 계정에 대 한 표시 이름 변경  
  표시 이름은 대시보드 **사용자** 페이지의 **이름** 열에 나타나는 이름입니다. 표시 이름을 변경해도 사용자 계정에 대한 로그온 또는 로그인 이름은 변경되지 않습니다.  
   
 ##### <a name="to-change-the-display-name-for-a-user-account"></a>사용자 계정에 대한 표시 이름을 변경하려면  
@@ -139,7 +139,7 @@ Windows Server Essentials 대시보드의 사용자 페이지에서는 소규모
   
      사용자 계정 목록에 새로운 표시 이름이 나타납니다.  
   
-###  <a name="BKMK_Manage5"></a>사용자 계정 활성화  
+###  <a name="activate-a-user-account"></a><a name="BKMK_Manage5"></a>사용자 계정 활성화  
  사용자 계정을 활성화하면 할당된 사용자가 네트워크에 로그온하고 계정에 사용 권한이 있는 공유 폴더 및 원격 웹 액세스 사이트와 같은 네트워크 리소스에 액세스할 수 있습니다.  
   
 > [!NOTE]
@@ -162,7 +162,7 @@ Windows Server Essentials 대시보드의 사용자 페이지에서는 소규모
 >   
 >  통합된 전자 메일 공급자가 있으면 사용자 계정에 할당된 전자 메일 계정도 활성화됩니다.  
   
-###  <a name="BKMK_Manage6"></a>사용자 계정 비활성화  
+###  <a name="deactivate-a-user-account"></a><a name="BKMK_Manage6"></a>사용자 계정 비활성화  
  사용자 계정을 비활성화하면 서버에 대한 계정 액세스가 일시적으로 중단됩니다. 이 때문에 할당된 사용자는 계정을 활성화할 때까지 공유 폴더 또는 원격 웹 액세스 사이트와 같은 네트워크 리소스에 액세스하는 데 해당 계정을 사용할 수 없습니다.  
   
  사용자 계정에 Microsoft 온라인 계정이 할당되어 있으면 온라인 계정도 비활성화됩니다. 사용자는 Office 365의 리소스 및 구독 하는 다른 온라인 서비스를 사용할 수 없지만 전자 메일을 포함 한 사용자 데이터는 Microsoft Online Services에서 유지 됩니다.  
@@ -187,7 +187,7 @@ Windows Server Essentials 대시보드의 사용자 페이지에서는 소규모
 >   
 >  통합된 전자 메일 공급자가 있으면 사용자 계정에 할당된 전자 메일 계정도 비활성화됩니다.  
   
-###  <a name="BKMK_Manage7"></a>사용자 계정 이해  
+###  <a name="understand-user-accounts"></a><a name="BKMK_Manage7"></a>사용자 계정 이해  
  사용자 계정은 개별 사용자가 서버에 저장된 정보에 액세스하는 데 사용되는 중요한 정보를 Windows Server Essentials에 제공하고 사용자 계정을 통해 개별 사용자가 파일과 설정을 만들고 관리할 수 있습니다. 사용자는 Windows Server Essentials 사용자 계정이 있고 컴퓨터에 액세스할 권한이 있으면 네트워크의 모든 컴퓨터에 로그온할 수 있습니다. 사용자는 사용자 이름과 암호를 사용하여 사용자 계정에 액세스합니다.  
   
  사용자 계정에는 두 가지 기본 유형이 있습니다. 각 유형은 사용자에게 컴퓨터에 대한 서로 다른 수준의 제어 권한을 부여합니다.  
@@ -196,7 +196,7 @@ Windows Server Essentials 대시보드의 사용자 페이지에서는 소규모
   
 -   **관리자** 계정을 사용하면 컴퓨터 네트워크를 가장 완벽하게 제어할 수 있습니다. 필요한 경우에만 관리자 계정 유형을 할당해야 합니다.  
   
-###  <a name="BKMK_Manage8"></a>대시보드를 사용 하 여 사용자 계정 관리  
+###  <a name="manage-user-accounts-using-the-dashboard"></a><a name="BKMK_Manage8"></a>대시보드를 사용 하 여 사용자 계정 관리  
  Windows Server Essentials에서는 Windows Server Essentials 대시보드를 사용하여 일반적인 관리 작업을 수행할 수 있습니다. 기본적으로 대시보드의 **사용자** 페이지에는 **사용자** 및 **사용자 그룹**의 두 탭이 있습니다.  
   
 > [!NOTE]
@@ -254,7 +254,7 @@ Windows Server Essentials 대시보드의 사용자 페이지에서는 소규모
 |파일 히스토리 설정 변경|백업 빈도 또는 백업 기간 등의 파일 히스토리 설정을 변경할 수 있습니다.<br /><br /> 이 작업은 Windows Server Essentials에 적용 됩니다.|  
 |모든 원격 연결 내보내기|최근 30일 동안 발생한 서버에 대한 모든 원격 연결의 .CSV 형식 파일을 만듭니다.|  
   
-##  <a name="BKMK_ManageAccess"></a>암호 및 액세스 관리  
+##  <a name="managing-passwords-and-access"></a><a name="BKMK_ManageAccess"></a>암호 및 액세스 관리  
  다음 항목에서는 Windows Server Essentials 대시보드를 사용하여 서버에서 사용자 계정 암호와 공유 폴더에 대한 사용자 액세스 권한을 관리하는 방법을 설명합니다.  
   
 -   [사용자 계정에 대 한 암호 변경 또는 다시 설정](Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Access1)  
@@ -281,7 +281,7 @@ Windows Server Essentials 대시보드의 사용자 페이지에서는 소규모
   
 -   [사용자 계정이 컴퓨터에 대 한 원격 데스크톱 세션을 설정 하도록 허용](Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Access13)  
   
-###  <a name="BKMK_Access1"></a>사용자 계정에 대 한 암호 변경 또는 다시 설정  
+###  <a name="change-or-reset-the-password-for-a-user-account"></a><a name="BKMK_Access1"></a>사용자 계정에 대 한 암호 변경 또는 다시 설정  
  사용자 계정 암호를 변경하거나 다시 설정하려면 다음 단계를 수행합니다.  
   
 ##### <a name="to-reset-the-password-for-a-user-account"></a>사용자 계정에 대한 암호를 다시 설정하려면  
@@ -305,7 +305,7 @@ Windows Server Essentials 대시보드의 사용자 페이지에서는 소규모
    >   -   비 ASCII 문자는 Azure AD에서 지원 되지 않습니다. 따라서 서버를 Azure AD와 통합 하는 경우 암호에 비 ASCII 문자를 사용 하지 마세요.  
    >   -   Microsoft 온라인 계정 (Windows Server Essentials에서 Office 365 계정으로 알려짐)이 사용자에 게 할당 된 경우 암호는 온라인 계정 암호와 동기화 됩니다. 사용자는 새 암호를 사용하여 서버 또는 Office 365에 로그인합니다. 자세한 내용은 [사용자에 대 한 온라인 계정 관리](Manage-Online-Accounts-for-Users.md)를 참조 하세요.  
   
-###  <a name="BKMK_Access3"></a>암호 정책에 대해 알아야 할 사항  
+###  <a name="what-you-should-know-about-password-policies"></a><a name="BKMK_Access3"></a>암호 정책에 대해 알아야 할 사항  
  암호 정책은 사용자가 암호를 만들고 사용하는 방법을 정의하는 규칙 집합입니다. 정책을 사용하여 서버에 저장된 사용자 데이터와 기타 정보에 대한 무단 액세스를 방지할 수 있습니다. 암호 정책은 네트워크에 액세스하는 모든 사용자 계정에 적용됩니다.  
   
  Windows Server Essentials 암호 정책은 다음과 같이 세 가지 기본 요소로 구성됩니다.  
@@ -336,7 +336,7 @@ Windows Server Essentials 대시보드의 사용자 페이지에서는 소규모
   
   기본적으로 서버를 설치하면 기본 암호 정책이 **강함** 옵션으로 설정됩니다.  
   
-###  <a name="BKMK_Access4"></a>암호 정책 변경  
+###  <a name="change-the-password-policy"></a><a name="BKMK_Access4"></a>암호 정책 변경  
  다음 절차에 따라 암호 정책을 미리 정의된 정책 프로필의 하나로 설정하거나 변경합니다.  
   
 ##### <a name="to-change-the-password-policy"></a>암호 정책을 변경하려면  
@@ -354,7 +354,7 @@ Windows Server Essentials 대시보드의 사용자 페이지에서는 소규모
   
 4.  **정책 변경**을 클릭합니다.  
   
-###  <a name="BKMK_Access5"></a>공유 폴더에 대 한 액세스 수준  
+###  <a name="level-of-access-to-shared-folders"></a><a name="BKMK_Access5"></a>공유 폴더에 대 한 액세스 수준  
  사용자가 필요한 작업을 수행할 수 있게 하는 가장 제한적인 사용 권한을 할당하는 것이 좋습니다.  
   
  서버의 공유 폴더에 대한 세 가지 액세스 권한 설정을 사용할 수 있습니다.  
@@ -365,7 +365,7 @@ Windows Server Essentials 대시보드의 사용자 페이지에서는 소규모
   
 -   **권한 없음**.  사용자 계정이 공유 폴더의 모든 파일에 액세스할 수 없게 하려면 이 설정을 선택합니다.  
   
-###  <a name="BKMK_Access6"></a>제거 되는 사용자 계정에 대 한 파일 액세스 권한 유지 및 관리  
+###  <a name="retain-and-manage-access-to-files-for-removed-user-accounts"></a><a name="BKMK_Access6"></a>제거 되는 사용자 계정에 대 한 파일 액세스 권한 유지 및 관리  
  네트워크 관리자는 사용자 계정을 제거 하 고 나중에 사용할 수 있도록 사용자의 파일을 유지 하도록 선택할 수 있습니다. 이 시나리오에서 제거된 사용자 계정은 더 이상 네트워크에 로그인하는 데 사용되지 않지만, 이 사용자에 대한 파일은 공유 폴더에 저장되어 다른 사용자와 공유할 수 있습니다.  
   
 > [!IMPORTANT]
@@ -393,7 +393,7 @@ Windows Server Essentials 대시보드의 사용자 페이지에서는 소규모
   
 1.  Windows Server Essentials 대시보드를 엽니다.  
   
-2.  탐색 모음에서 **스토리지**, **서버 폴더** 탭을 차례로 클릭합니다.  
+2.  탐색 모음에서 **저장소**, **서버 폴더** 탭을 차례로 클릭합니다.  
   
 3.  폴더 목록에서 **사용자** 폴더를 선택합니다.  
   
@@ -407,7 +407,7 @@ Windows Server Essentials 대시보드의 사용자 페이지에서는 소규모
   
 8.  사용자 계정에 포함할 **사용 권한 수준**을 선택하고 **공유**를 클릭합니다.  
   
-###  <a name="BKMK_Access7"></a>DSRM 암호를 네트워크 관리자 암호와 동기화  
+###  <a name="synchronize-the-dsrm-password-with-the-network-administrator-password"></a><a name="BKMK_Access7"></a>DSRM 암호를 네트워크 관리자 암호와 동기화  
  DSRM(디렉터리 서비스 복원 모드)은 Active Directory를 복구하기 위한 특수 부팅 모드입니다. Active Directory가 실패하거나 복원되어야 하면 운영 체제에서는 DSRM을 사용하여 컴퓨터에 로그온합니다. 네트워크 관리자 암호와 DSRM 암호가 다르면 DSRM이 로드되지 않습니다.  
   
  Windows Server Essentials을 처음 새로 설치하는 동안 프로그램에서는 설정 중에 지정하거나 마이그레이션 응답 파일에서 지정한 네트워크 관리자 계정 암호로 DSRM 암호를 설정합니다. (권장된 대로 서버 보안 강화를 위해 일반적으로 60일마다) 네트워크 관리자 암호를 변경해도 암호 변경이 DSRM에 전달되지 않습니다. 이 때문에 암호가 일치하지 않습니다. 이 경우 다음 해결 방법을 사용 하 여 네트워크 관리자 암호를 DSRM 암호와 수동으로 또는 자동으로 동기화 할 수 있습니다.  
@@ -426,9 +426,9 @@ Windows Server Essentials 대시보드의 사용자 페이지에서는 소규모
   
 ##### <a name="to-automatically-synchronize-the-dsrm-password-to-a-network-administrator-account"></a>DSRM 암호를 네트워크 관리자 계정에 자동으로 동기화하려면  
   
-1.  서버에서 **관리 도구**를 열고 **작업 Scheduler**를 두 번 클릭합니다.  
+1.  서버에서 **관리 도구**를 열고 **작업 스케줄러**를 두 번 클릭합니다.  
   
-2.  작업 Scheduler **작업** 창에서 **작업 만들기**를 클릭합니다.  
+2.  작업 스케줄러 **작업** 창에서 **작업 만들기**를 클릭합니다.  
   
 3.  **이름** 텍스트 상자에 작업 이름(예: **AutoSync DSRM Password**)을 입력하고 **가장 높은 수준의 권한으로 실행** 옵션을 선택합니다.  
   
@@ -453,7 +453,7 @@ Windows Server Essentials 대시보드의 사용자 페이지에서는 소규모
   
 6.  **확인**을 두 번 클릭하여 작업을 저장하고 **작업 만들기** 대화 상자를 닫습니다. 새 작업이 **작업 일정**의 **활성 작업** 섹션에 나타납니다.  
   
-###  <a name="BKMK_Access8"></a>사용자 계정에 원격 데스크톱 권한 부여  
+###  <a name="give-user-accounts-remote-desktop-permission"></a><a name="BKMK_Access8"></a>사용자 계정에 원격 데스크톱 권한 부여  
  Windows Server Essentials의 기본 설치에서 네트워크 사용자는 네트워크의 컴퓨터 또는 기타 리소스에 대한 원격 연결을 설정할 권한이 없습니다.  
   
  네트워크 사용자가 네트워크 리소스에 대한 원격 연결을 설정할 수 있으려면 먼저 원격 액세스를 설정해야 합니다. 원격 액세스를 설정하고 나면 사용자가 인터넷 연결을 통해 위치에 관계없이 장치에서 사무실 네트워크의 파일, 응용 프로그램 및 컴퓨터에 액세스할 수 있습니다.  
@@ -470,7 +470,7 @@ Windows Server Essentials 대시보드의 사용자 페이지에서는 소규모
   
   원격 액세스에 대 한 자세한 내용은 [원격 액세스 관리](Manage-Anywhere-Access-in-Windows-Server-Essentials.md)를 참조 하세요.  
   
-###  <a name="BKMK_Access9"></a>사용자가 서버의 리소스에 액세스할 수 있도록 설정  
+###  <a name="enable-users-to-access-resources-on-the-server"></a><a name="BKMK_Access9"></a>사용자가 서버의 리소스에 액세스할 수 있도록 설정  
   이 섹션은 windows server essentials 또는 Windows Server Essentials를 실행 하는 서버 또는 windows Server Essentials Experience 역할이 설치 된 windows Server 2012 R2 Standard 또는 Windows Server 2012 R2 Datacenter를 실행 하는 서버에 적용 됩니다.  
   
  사용자가 원격 액세스를 사용하고 개별 사용자 계정을 보유하도록 하려면 컴퓨터를 서버에 연결하고 나서 대시보드를 사용하여 서버에서 네트워크로 연결된 컴퓨터 사용자에 대한 새 네트워크 사용자 계정을 만들 수 있습니다. 사용자 계정을 만드는 방법에 대한 자세한 내용은 [사용자 계정 추가](Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage1)를 참조하세요. 사용자 계정을 만들고 나서 클라이언트 컴퓨터의 사용자가 실행 패드를 사용하여 서버의 리소스에 액세스할 수 있도록 해당 사용자에게 네트워크 사용자 이름 및 암호 정보를 제공해야 합니다.  
@@ -529,7 +529,7 @@ Windows Server Essentials 대시보드의 사용자 페이지에서는 소규모
   
     4.  **컴퓨터 액세스** 탭에서 사용자에게 액세스를 허용할 네트워크 컴퓨터를 선택합니다.  
   
-###  <a name="BKMK_Access10"></a>사용자 계정에 대 한 원격 액세스 권한 변경  
+###  <a name="change-remote-access-permissions-for-a-user-account"></a><a name="BKMK_Access10"></a>사용자 계정에 대 한 원격 액세스 권한 변경  
  사용자는 VPN(가상 사설망), 원격 웹 액세스 또는 기타 웹 서비스 애플리케이션을 사용하여 원격 위치에서 서버에 있는 리소스에 액세스할 수 있습니다. 기본적으로 원격 액세스 권한은 대시보드를 사용하여 Windows Server Essentials에서 원격 액세스를 구성할 때 네트워크 사용자에 대해 켜집니다.  
   
 ##### <a name="to-change-remote-access-permissions-for-a-user-account"></a>사용자 계정에 대한 원격 액세스 권한을 변경하려면  
@@ -550,7 +550,7 @@ Windows Server Essentials 대시보드의 사용자 페이지에서는 소규모
   
 6.  **적용**을 클릭한 다음 **확인**을 클릭합니다.  
   
-###  <a name="BKMK_Access11"></a>사용자 계정에 대 한 가상 개인 네트워크 사용 권한 변경  
+###  <a name="change-virtual-private-network-permissions-for-a-user-account"></a><a name="BKMK_Access11"></a>사용자 계정에 대 한 가상 개인 네트워크 사용 권한 변경  
  VPN(가상 사설망)을 사용하여 Windows Server Essentials에 연결하고 서버에 저장된 모든 리소스에 액세스할 수 있습니다. 이 기능은 특히 VPN 연결을 통해 호스트된 Windows Server Essentials 서버에 연결하는 데 사용할 수 있는 네트워크 계정으로 설정되는 클라이언트 컴퓨터가 있는 경우 유용합니다. 호스트된 Windows Server Essentials 서버에서 새로 만든 모든 사용자 계정은 처음에 VPN을 사용하여 클라이언트 컴퓨터에 로그온해야 합니다.  
   
 ##### <a name="to-change-vpn-permissions-for-network-users"></a>네트워크 사용자에 대한 VPN 사용 권한을 변경하려면  
@@ -569,7 +569,7 @@ Windows Server Essentials 대시보드의 사용자 페이지에서는 소규모
   
 7.  **적용**을 클릭한 다음 **확인**을 클릭합니다.  
   
-###  <a name="BKMK_Access12"></a>사용자 계정에 대 한 내부 공유 폴더에 대 한 액세스 변경  
+###  <a name="change-access-to-internal-shared-folders-for-a-user-account"></a><a name="BKMK_Access12"></a>사용자 계정에 대 한 내부 공유 폴더에 대 한 액세스 변경  
  대시보드의 **서버 폴더** 탭에 있는 작업을 사용하여 서버에 있는 모든 공유 폴더에 대한 액세스 권한을 관리할 수 있습니다. 기본적으로 Windows Server Essentials를 설치할 때 다음 서버 폴더가 생성됩니다.  
   
 -   **클라이언트 컴퓨터 백업**.  Windows Server 백업에서 생성된 클라이언트 컴퓨터 백업을 저장하는 데 사용됩니다. 이 서버 폴더는 공유되지 않습니다.  
@@ -603,9 +603,9 @@ Windows Server Essentials 대시보드의 사용자 페이지에서는 소규모
 5.  **< FolderName\> 속성**에서 **공유**를 클릭 하 고 나열 된 사용자 계정에 대 한 적절 한 사용자 액세스 수준을 선택한 다음 **적용**을 클릭 합니다.  
   
     > [!NOTE]
-    >  **파일 히스토리 백업**, **폴더 리디렉션** 및 **사용자** 서버 폴더에 대한 공유 권한은 수정할 수 없습니다. 또한 이러한 서버 폴더의 폴더 속성에는 **공유** 탭이 포함되지 않습니다.  
+    >  **파일 히스토리 백업**, **폴더 리디렉션**및 **사용자** 서버 폴더에 대한 공유 권한은 수정할 수 없습니다. 또한 이러한 서버 폴더의 폴더 속성에는 **공유** 탭이 포함되지 않습니다.  
   
-###  <a name="BKMK_Access13"></a>사용자 계정이 컴퓨터에 대 한 원격 데스크톱 세션을 설정 하도록 허용  
+###  <a name="allow-user-accounts-to-establish-a-remote-desktop-session-to-their-computer"></a><a name="BKMK_Access13"></a>사용자 계정이 컴퓨터에 대 한 원격 데스크톱 세션을 설정 하도록 허용  
   이 섹션은 windows server essentials 또는 Windows Server Essentials를 실행 하는 서버 또는 windows Server Essentials Experience 역할이 설치 된 windows Server 2012 R2 Standard 또는 Windows Server 2012 R2 Datacenter를 실행 하는 서버에 적용 됩니다.  
   
  네트워크 관리자는 원격 위치에서 네트워크 컴퓨터에 액세스할 수 있게 하는 사용 권한을 네트워크 사용자에게 부여할 수 있습니다.  

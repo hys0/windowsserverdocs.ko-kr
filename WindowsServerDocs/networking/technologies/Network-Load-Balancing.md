@@ -6,15 +6,15 @@ ms.prod: windows-server
 ms.technology: networking-nlb
 ms.topic: article
 ms.assetid: 244a4b48-06e5-4796-8750-a50e4f88ac72
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 09/13/2018
-ms.openlocfilehash: 4d79b6f29fbe64633bf04604ad586aff3dd86edf
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 80dae16442041e3b46babaca6d163095c1c5e475
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405848"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80309693"
 ---
 # <a name="network-load-balancing"></a>네트워크 부하 분산
 
@@ -152,8 +152,8 @@ Windows PowerShell을 사용 하 여 NLB를 설치 하려면 다음 명령을 �
   
 |콘텐츠 유형|참조|  
 |----------------|--------------|  
-|배포|[네트워크 부하 분산 배포 가이드](https://technet.microsoft.com/library/cc754833(WS.10).aspx) &#124; [네트워크 부하 분산 된 터미널 서비스 구성](https://technet.microsoft.com/library/cc771300(v=WS.10).aspx)|  
-|작업|[네트워크 부하 분산 클러스터 관리](https://technet.microsoft.com/library/cc753954(WS.10).aspx) &#124; [네트워크 로드 균형 조정 매개 변수를 설정](https://technet.microsoft.com/library/cc731619(WS.10).aspx) &#124; [네트워크 부하 분산 클러스터에서 호스트 제어](https://technet.microsoft.com/library/cc770870(WS.10).aspx)|  
+|배포|[네트워크 부하 분산 배포 가이드](https://technet.microsoft.com/library/cc754833(WS.10).aspx) & #124; [네트워크 부하 분산 된 터미널 서비스 구성](https://technet.microsoft.com/library/cc771300(v=WS.10).aspx)|  
+|작업|[네트워크 부하 분산 클러스터 관리](https://technet.microsoft.com/library/cc753954(WS.10).aspx) & #124; [네트워크 로드 균형 조정 매개 변수를 설정](https://technet.microsoft.com/library/cc731619(WS.10).aspx) & #124; [네트워크 부하 분산 클러스터에서 호스트 제어](https://technet.microsoft.com/library/cc770870(WS.10).aspx)|  
 |문제 해결|[네트워크 부하 분산 클러스터 문제 해결](https://technet.microsoft.com/library/cc732592(WS.10).aspx) & #124; [NLB 클러스터 이벤트 및 오류](https://technet.microsoft.com/library/cc731678(WS.10).aspx)|
 |도구 및 설정|[네트워크 부하 분산 Windows PowerShell cmdlet](https://go.microsoft.com/fwlink/p/?LinkId=238123)|
 |커뮤니티 리소스|[고가용성 \(클러스터링\) 포럼](https://go.microsoft.com/fwlink/p/?LinkId=230641)

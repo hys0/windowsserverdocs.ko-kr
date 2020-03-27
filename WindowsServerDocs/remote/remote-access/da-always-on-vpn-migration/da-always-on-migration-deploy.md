@@ -6,15 +6,15 @@ ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: eeca4cf7-90f0-485d-843c-76c5885c54b0
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 06/07/2018
-ms.openlocfilehash: 2bcbc7030d54e96b4ac120b943cc1adc0513feca
-ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
+ms.openlocfilehash: 9f78edf0e48dc914b09a5e6f2d054e0fafba62e3
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76822644"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80309299"
 ---
 # <a name="migrate-to-always-on-vpn-and-decommission-directaccess"></a>Always On VPN 마이그레이션 및 DirectAccess 해제
 
@@ -120,9 +120,9 @@ VPN 클라이언트가 해당 인증서를 사용 하지 않고 연결을 시도
 4. Always On VPN 구성을 배포 합니다. VPN 인증 인증서를 발급 하 고 **Getusers Withcert.** p s 1 스크립트를 실행 하면 사용자가 Vpn 배포 준비 보안 그룹에 추가 됩니다.
 
 
-| 다음을 사용 하는 경우 ...  | 발생하는 결과 |
+| 다음을 사용 하는 경우 ...  | 결과 |
 | ---- | ---- |
-| Configuration Manager | 해당 보안 그룹의 멤버 자격을 기반으로 사용자 컬렉션을 만듭니다.<br><br>![](../../media/DA-to-AlwaysOnVPN/b38723b3ffcfacd697b83dd41a177f66.png)\!|
+| 구성 관리자 | 해당 보안 그룹의 멤버 자격을 기반으로 사용자 컬렉션을 만듭니다.<br><br>![](../../media/DA-to-AlwaysOnVPN/b38723b3ffcfacd697b83dd41a177f66.png)!|
 | Intune | 동기화 된 후에는 보안 그룹을 직접 대상으로 합니다. |
 |
     
