@@ -1,5 +1,5 @@
 ---
-title: Windows PowerShell을 사용한 네트워크 컨트롤러 배포
+title: Windows PowerShell을 사용하여 네트워크 컨트롤러 배포
 description: 이 항목에서는 하나 이상의 컴퓨터 또는 Windows Server 2016를 실행 하는 가상 컴퓨터 (Vm)에서 네트워크 컨트롤러를 배포 하려면 Windows PowerShell을 사용 하 여 설명 합니다.
 manager: dougkim
 ms.custom: na
@@ -10,17 +10,17 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 2448d381-55aa-4c14-997a-202c537c6727
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 08/23/2018
-ms.openlocfilehash: 294466ef70a9ffc230953b48bb292938be519eac
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: ee3aa93c02419667b05a987f548ef4d14285231d
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406114"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80313077"
 ---
-# <a name="deploy-network-controller-using-windows-powershell"></a>Windows PowerShell을 사용한 네트워크 컨트롤러 배포
+# <a name="deploy-network-controller-using-windows-powershell"></a>Windows PowerShell을 사용하여 네트워크 컨트롤러 배포
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 
@@ -29,7 +29,7 @@ ms.locfileid: "71406114"
 >[!IMPORTANT]
 >실제 호스트에 네트워크 컨트롤러 서버 역할을 배포 하지 마십시오. 네트워크 컨트롤러를 배포 하려면 hyper-v 호스트에 설치 된 VM\) \(Hyper-v 가상 컴퓨터에 네트워크 컨트롤러 서버 역할을 설치 해야 합니다. 3 개의 서로 다른\-Hyper-v 호스트에 Vm에 네트워크 컨트롤러를 설치한 후 Windows PowerShell 명령 **NetworkControllerServer**를 사용 하 여 네트워크 컨트롤러에 호스트를 추가 하 여 소프트웨어 정의 네트워킹 \(SDN\)에 대 한 하이퍼\-V 호스트를 사용 하도록 설정 해야 합니다. 이렇게 하면 SDN 소프트웨어 Load Balancer 기능을 사용할 수 있습니다. 자세한 내용은 [NetworkControllerServer](https://technet.microsoft.com/itpro/powershell/windows/network-controller/new-networkcontrollerserver)를 참조 하세요.
 
-이 항목에는 다음 섹션이 수록되어 있습니다.
+이 항목에는 다음과 같은 섹션이 포함되어 있습니다.
 
 - [네트워크 컨트롤러 서버 역할 설치](#install-the-network-controller-server-role)
 
@@ -67,7 +67,7 @@ Windows PowerShell을 사용 하 여 네트워크 컨트롤러를 설치 하려�
 
 ## <a name="configure-the-network-controller-cluster"></a>네트워크 컨트롤러 클러스터 구성
 
-네트워크 컨트롤러 클러스터 높은 가용성과 네트워크 컨트롤러 응용 프로그램에 클러스터를 만든 후 구성할 수 있으며, 이렇게 클러스터 위에 호스팅되는 확장성을 제공 합니다.
+네트워크 컨트롤러 클러스터 높은 가용성과 네트워크 컨트롤러 애플리케이션에 클러스터를 만든 후 구성할 수 있으며, 이렇게 클러스터 위에 호스팅되는 확장성을 제공 합니다.
 
 >[!NOTE]
 >네트워크 컨트롤러를 설치한 VM에서 직접 다음 섹션의 절차를 수행 하거나 Windows Server 2016에 대 한 원격 서버 관리 도구를 사용 하 여를 실행 하는 원격 컴퓨터에서 절차를 수행할 수 있습니다. Windows Server 2016 또는 Windows 10 또한의 멤버 자격이 **관리자**, 또는 이와 동등한이 절차를 수행 하는 데 필요한 최소입니다. 네트워크 컨트롤러를 설치한 VM 또는 컴퓨터 도메인에 가입 된, 사용자 계정에 속해야 **도메인 사용자**합니다.
@@ -89,7 +89,7 @@ New-NetworkControllerNodeObject -Name <string> -Server <String> -FaultDomain <st
 |매개 변수|설명|
 |-------------|---------------|
 |이름|**이름** 매개 변수는 클러스터에 추가 하려는 서버의 이름을 지정 합니다.|
-|서버|**서버** 매개 변수는 호스트 이름, 완벽 하 게 정규화 된 도메인 이름 (FQDN), 또는 클러스터에 추가 하려는 서버의 IP 주소를 지정 합니다. 도메인에 가입 된 컴퓨터에 대 한 FQDN이 필요 합니다.|
+|Server|**서버** 매개 변수는 호스트 이름, 완벽 하 게 정규화 된 도메인 이름 (FQDN), 또는 클러스터에 추가 하려는 서버의 IP 주소를 지정 합니다. 도메인에 가입 된 컴퓨터에 대 한 FQDN이 필요 합니다.|
 |FaultDomain|**FaultDomain** 매개 변수는 클러스터에 추가 하는 서버에 대 한 오류 도메인을 지정 합니다. 이 매개 변수는 클러스터에 추가 하는 서버와 동시에 오류를 경험할 수 있는 서버를 정의 합니다. 이 오류는 전력 및 네트워킹 소스와 같은 공유 물리적 종속성 때문일 수 있습니다. 일반적으로 오류 도메인 공유 종속성 오류 도메인 트리에 있는 높은 지점에서 함께 실패할 가능성이 더 많은 서버와 관련 된 계층 구조를 나타냅니다. 런타임 중에, 네트워크 컨트롤러는 클러스터의 장애 도메인을 고려 하 고 분산 된 네트워크 컨트롤러 서비스 별도 오류 도메인에 있도록 하려고 합니다. 이 프로세스 사용 하면, 어떤 하나씩 오류 도메인 오류가 발생 한 경우 상태 및 해당 서비스의 가용성을 손상 되지 않습니다. 오류 도메인 계층 구조 형식에 지정 됩니다. 예: "Fd: / DC1/Rack1/Host1" 여기서 d c 1은 데이터 센터 이름, Rack1 랙 이름 고 Host1 노드를 배치할 호스트의 이름입니다.|
 |RestInterface|**RestInterface** 매개 변수 REPRESENTATIONAL State Transfer () 통신을 종료 하는 노드에서 인터페이스의 이름을 지정 합니다. 이 네트워크 컨트롤러 인터페이스에서 네트워크의 관리 계층 Northbound API 요청을 수신합니다.|
 |NodeCertificate|**NodeCertificate** 매개 변수는 네트워크 컨트롤러 컴퓨터 인증을 위해 사용 하는 인증서를 지정 합니다. 인증서가 필요한; 클러스터 내에서 통신에 대 한 인증서 기반 인증을 사용 하는 경우 인증서는 또한 네트워크 컨트롤러 서비스 간의 트래픽을 암호화에 사용 됩니다. 인증서 주체 이름은 노드의 DNS 이름으로 동일 해야 합니다.|
@@ -112,15 +112,15 @@ Install-NetworkControllerCluster -Node <NetworkControllerNode[]> -ClusterAuthent
 |DiagnosticLogLocation|**DiagnosticLogLocation** 매개 변수 진단 로그는 주기적으로 업로드 있는 공유 위치를 지정 합니다. 이 매개 변수 값을 지정 하지 않으면 로그는 각 노드에 로컬로 저장 됩니다. 로그 폴더 %systemdrive%\Windows\tracing\SDNDiagnostics 로컬로 저장 됩니다. 클러스터 로그 폴더 %systemdrive%\ProgramData\Microsoft\Service Fabric\log\Traces에에서 로컬로 저장 됩니다.|
 |LogLocationCredential|**LogLocationCredential** 매개 변수는 로그를 저장할 공유 위치에 액세스 하는 데 필요한 자격 증명을 지정 합니다.|
 |CredentialEncryptionCertificate|**CredentialEncryptionCertificate** 네트워크 컨트롤러를 사용 하 여 네트워크 컨트롤러 이진 파일에 액세스 하는 데 사용 되는 자격 증명을 암호화 인증서를 지정 하는 매개 변수 및 **LogLocationCredential**, 지정 된 경우. 이 명령을 실행 하기 전에 네트워크 컨트롤러 노드를 모두에 인증서를 프로 비전 해야 하 고 모든 클러스터 노드 중에서 동일한 인증서를 등록 해야 합니다. 이 매개 변수를 사용 하 여 네트워크 컨트롤러 이진 파일 및 로그를 보호 하기 위해 프로덕션 환경에서는 좋습니다. 이 매개 변수가 없으면 자격 증명은 일반 텍스트로 저장 되 고 권한이 없는 사용자가 악용할 수 있습니다.|
-|자격 증명|이 매개 변수는이 명령은 원격 컴퓨터에서 실행 하는 경우에 필요 합니다. **자격 증명** 매개 변수는 대상 컴퓨터에이 명령을 실행할 수 있는 권한을 가진 사용자 계정을 지정 합니다.|
+|Credential|이 매개 변수는이 명령은 원격 컴퓨터에서 실행 하는 경우에 필요 합니다. **자격 증명** 매개 변수는 대상 컴퓨터에이 명령을 실행할 수 있는 권한을 가진 사용자 계정을 지정 합니다.|
 |CertificateThumbprint|이 매개 변수는이 명령은 원격 컴퓨터에서 실행 하는 경우에 필요 합니다. **CertificateThumbprint** 디지털 공개 키 인증서 (X509) 대상 컴퓨터에서이 명령을 실행할 수 있는 권한이 있는 사용자 계정의 매개 변수를 지정 합니다.|
 |UseSSL|이 매개 변수는이 명령은 원격 컴퓨터에서 실행 하는 경우에 필요 합니다. **UseSSL** 매개 변수는 원격 컴퓨터에 대 한 연결을 설정 하는 데 사용 되는 Secure Sockets Layer (SSL) 프로토콜을 지정 합니다. 기본적으로 SSL은 사용되지 않습니다.|
 |ComputerName|**ComputerName** 매개 변수는이 명령을 실행 되는 네트워크 컨트롤러 노드를 지정 합니다. 이 매개 변수 값을 지정 하지 않으면 경우 로컬 컴퓨터는 기본적으로 사용 됩니다.|
 |LogSizeLimitInMBs|이 매개 변수 (mb) 네트워크 컨트롤러를 저장할 수 있는 최대 로그 크기를 지정 합니다. 로그는 순환 방식으로 저장 됩니다. DiagnosticLogLocation를 제공 하는 경우이 매개 변수의 기본값은 40GB입니다. DiagnosticLogLocation 제공 되지 않은 경우 로그는 네트워크 컨트롤러 노드에 저장 됩니다 하 고이 매개 변수의 기본값은 15 GB입니다.|
 |LogTimeLimitInDays|이 매개 변수 로그 저장 됩니다 일 기간 제한을 지정 합니다. 로그는 순환 방식으로 저장 됩니다. 이 매개 변수의 기본값은 3 일입니다.|
 
-## <a name="configure-the-network-controller-application"></a>네트워크 컨트롤러 응용 프로그램 구성
-네트워크 컨트롤러 응용 프로그램을 구성 하려면 Windows PowerShell 명령 프롬프트에서 다음 명령을 입력 한 다음 ENTER 키를 누릅니다. 추가한 각 매개 변수에 대 한 배포에 대 한 적절 한 값을 확인 합니다.
+## <a name="configure-the-network-controller-application"></a>네트워크 컨트롤러 애플리케이션 구성
+네트워크 컨트롤러 애플리케이션을 구성 하려면 Windows PowerShell 명령 프롬프트에서 다음 명령을 입력 한 다음 ENTER 키를 누릅니다. 추가한 각 매개 변수에 대 한 배포에 대 한 적절 한 값을 확인 합니다.
 
 ```
 Install-NetworkController -Node <NetworkControllerNode[]> -ClientAuthentication <ClientAuthentication>  [-ClientCertificateThumbprint <string[]>]  [-ClientSecurityGroup <string>] -ServerCertificate <X509Certificate2> [-RESTIPAddress <String>] [-RESTName <String>] [-Credential <PSCredential>][-CertificateThumbprint <String> ] [-UseSSL]
@@ -137,11 +137,11 @@ Install-NetworkController -Node <NetworkControllerNode[]> -ClientAuthentication 
 |RESTIPAddress|에 대 한 값을 지정할 필요가 없습니다 **RESTIPAddress** 네트워크 컨트롤러의 단일 노드 배포 합니다. 다중 노드 배포는 **RESTIPAddress** 매개 변수는 CIDR 표기법에서 REST 끝점의 IP 주소를 지정 합니다. 예를 들어 192.168.1.10/24 합니다. 주체 이름 값 **못했기** 의 값을 확인 해야 합니다는 **RESTIPAddress** 매개 변수입니다. 이 매개 변수는 동일한 서브넷에 있는 모든 노드의 경우 모든 다중 노드 네트워크 컨트롤러 배포에 대해 지정 되어야 합니다. 사용 해야 노드는 서로 다른 서브넷에 있는 경우는 **RestName** 매개 변수를 사용 하 여 대신 **RESTIPAddress**합니다.|
 |RestName|에 대 한 값을 지정할 필요가 없습니다 **RestName** 네트워크 컨트롤러의 단일 노드 배포 합니다. 에 값을 지정 해야 **RestName** 다중 노드 배포는 서로 다른 서브넷에 있는 노드가 포함 된 경우. 다중 노드 배포는 **RestName** 매개 변수는 네트워크 컨트롤러 클러스터에 대 한 FQDN을 지정 합니다.|
 |ClientSecurityGroup|**ClientSecurityGroup** 매개 변수 멤버는 네트워크 컨트롤러 클라이언트는 Active Directory 보안 그룹의 이름을 지정 합니다. 에 대 한 Kerberos 인증을 사용 하는 경우에이 매개 변수는 필수 **ClientAuthentication**합니다. 보안 그룹에는 REST Api 액세스 되는 계정 이어야 하며 보안 그룹을 만들고이 명령을 실행 하기 전에 구성원을 추가 해야 합니다.|
-|자격 증명|이 매개 변수는이 명령은 원격 컴퓨터에서 실행 하는 경우에 필요 합니다. **자격 증명** 매개 변수는 대상 컴퓨터에이 명령을 실행할 수 있는 권한을 가진 사용자 계정을 지정 합니다.|
+|Credential|이 매개 변수는이 명령은 원격 컴퓨터에서 실행 하는 경우에 필요 합니다. **자격 증명** 매개 변수는 대상 컴퓨터에이 명령을 실행할 수 있는 권한을 가진 사용자 계정을 지정 합니다.|
 |CertificateThumbprint|이 매개 변수는이 명령은 원격 컴퓨터에서 실행 하는 경우에 필요 합니다. **CertificateThumbprint** 디지털 공개 키 인증서 (X509) 대상 컴퓨터에서이 명령을 실행할 수 있는 권한이 있는 사용자 계정의 매개 변수를 지정 합니다.|
 |UseSSL|이 매개 변수는이 명령은 원격 컴퓨터에서 실행 하는 경우에 필요 합니다. **UseSSL** 매개 변수는 원격 컴퓨터에 대 한 연결을 설정 하는 데 사용 되는 Secure Sockets Layer (SSL) 프로토콜을 지정 합니다. 기본적으로 SSL은 사용되지 않습니다.|
 
-네트워크 컨트롤러 응용 프로그램의 구성을 완료 한 후 네트워크 컨트롤러의 배포가 완료 되었습니다.
+네트워크 컨트롤러 애플리케이션의 구성을 완료 한 후 네트워크 컨트롤러의 배포가 완료 되었습니다.
 
 ## <a name="network-controller-deployment-validation"></a>네트워크 컨트롤러 배포 유효성 검사
 
@@ -190,21 +190,21 @@ Install-NetworkController -Node <NetworkControllerNode[]> -ClientAuthentication 
 
 네트워크 컨트롤러를 배포한 후 관리 및 배포를 수정 하려면 Windows PowerShell 명령을 사용할 수 있습니다. 다음은 배포에 적용할 수 있는 변경 내용 중 일부입니다.
 
-- 네트워크 컨트롤러 노드, 클러스터 및 응용 프로그램 설정 수정
+- 네트워크 컨트롤러 노드, 클러스터 및 애플리케이션 설정 수정
 
-- 네트워크 컨트롤러 클러스터 및 응용 프로그램을 제거 합니다.
+- 네트워크 컨트롤러 클러스터 및 애플리케이션을 제거 합니다.
 
 - 네트워크 컨트롤러 클러스터 노드를 추가, 제거, 활성화 및 노드를 사용 하지 않도록 설정 등을 관리 합니다.
 
 다음 표에서 이러한 작업 수행을 위해 사용할 수 있는 Windows PowerShell에 대 한 구문의 명령을 제공 합니다.
 
-|태스크|명령|구문|
+|작업|명령|구문|
 |--------|-------|----------|
 |네트워크 컨트롤러 클러스터 설정 수정|집합 NetworkControllerCluster|`Set-NetworkControllerCluster [-ManagementSecurityGroup <string>][-Credential <PSCredential>] [-computerName <string>][-CertificateThumbprint <String> ] [-UseSSL]`
-|네트워크 컨트롤러 응용 프로그램 설정 수정|집합 NetworkController|`Set-NetworkController [-ClientAuthentication <ClientAuthentication>] [-Credential <PSCredential>] [-ClientCertificateThumbprint <string[]>] [-ClientSecurityGroup <string>] [-ServerCertificate <X509Certificate2>] [-RestIPAddress <String>] [-ComputerName <String>][-CertificateThumbprint <String> ] [-UseSSL]`
+|네트워크 컨트롤러 애플리케이션 설정 수정|집합 NetworkController|`Set-NetworkController [-ClientAuthentication <ClientAuthentication>] [-Credential <PSCredential>] [-ClientCertificateThumbprint <string[]>] [-ClientSecurityGroup <string>] [-ServerCertificate <X509Certificate2>] [-RestIPAddress <String>] [-ComputerName <String>][-CertificateThumbprint <String> ] [-UseSSL]`
 |네트워크 컨트롤러 노드 설정 수정|집합 NetworkControllerNode|`Set-NetworkControllerNode -Name <string> > [-RestInterface <string>] [-NodeCertificate <X509Certificate2>] [-Credential <PSCredential>] [-ComputerName <string>][-CertificateThumbprint <String> ] [-UseSSL]`
 |네트워크 컨트롤러 진단 설정 수정|집합 NetworkControllerDiagnostic|`Set-NetworkControllerDiagnostic [-LogScope <string>] [-DiagnosticLogLocation <string>] [-LogLocationCredential <PSCredential>] [-UseLocalLogLocation] >] [-LogLevel <loglevel>][-LogSizeLimitInMBs <uint32>] [-LogTimeLimitInDays <uint32>] [-Credential <PSCredential>] [-ComputerName <string>][-CertificateThumbprint <String> ] [-UseSSL]`
-|네트워크 컨트롤러 응용 프로그램 제거|NetworkController 제거|`Uninstall-NetworkController [-Credential <PSCredential>][-ComputerName <string>] [-CertificateThumbprint <String> ] [-UseSSL]`
+|네트워크 컨트롤러 애플리케이션 제거|NetworkController 제거|`Uninstall-NetworkController [-Credential <PSCredential>][-ComputerName <string>] [-CertificateThumbprint <String> ] [-UseSSL]`
 |네트워크 컨트롤러 클러스터 제거|NetworkControllerCluster 제거|`Uninstall-NetworkControllerCluster [-Credential <PSCredential>][-ComputerName <string>][-CertificateThumbprint <String> ] [-UseSSL]`
 |네트워크 컨트롤러 클러스터에 노드 추가|추가 NetworkControllerNode|`Add-NetworkControllerNode -FaultDomain <String> -Name <String> -RestInterface <String> -Server <String> [-CertificateThumbprint <String> ] [-ComputerName <String> ] [-Credential <PSCredential> ] [-Force] [-NodeCertificate <X509Certificate2> ] [-PassThru] [-UseSsl]`
 |네트워크 컨트롤러 클러스터 노드를 사용 하지 않도록 설정|NetworkControllerNode 사용 안 함|`Disable-NetworkControllerNode -Name <String> [-CertificateThumbprint <String> ] [-ComputerName <String> ] [-Credential <PSCredential> ] [-PassThru] [-UseSsl]`
@@ -216,7 +216,7 @@ Install-NetworkController -Node <NetworkControllerNode[]> -ClientAuthentication 
 
 ## <a name="sample-network-controller-configuration-script"></a>네트워크 컨트롤러 구성 스크립트 예제
 
-다음 샘플 구성 스크립트에는 네트워크 컨트롤러 다중 노드 클러스터를 만들고 네트워크 컨트롤러 응용 프로그램을 설치 하는 방법을 보여 줍니다. 또한 $cert 변수 주체 이름 문자열 "networkController.contoso.com"와 일치 하는 로컬 컴퓨터 인증서 저장소에서 인증서를 선택 합니다.
+다음 샘플 구성 스크립트에는 네트워크 컨트롤러 다중 노드 클러스터를 만들고 네트워크 컨트롤러 애플리케이션을 설치 하는 방법을 보여 줍니다. 또한 $cert 변수 주체 이름 문자열 "networkController.contoso.com"와 일치 하는 로컬 컴퓨터 인증서 저장소에서 인증서를 선택 합니다.
 
 ```
 $a = New-NetworkControllerNodeObject -Name Node1 -Server NCNode1.contoso.com -FaultDomain fd:/rack1/host1 -RestInterface Internal

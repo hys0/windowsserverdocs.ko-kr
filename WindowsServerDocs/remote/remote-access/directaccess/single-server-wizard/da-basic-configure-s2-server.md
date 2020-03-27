@@ -10,14 +10,14 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 82bf5fed-93b3-4fa6-8e71-522146eccdb1
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: a21e5799824c968b29c719585ca16b6b45a9ef37
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 6faa40428df424f60637fb206641d8bae2774c79
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404920"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80308931"
 ---
 # <a name="step-2-configure-the-basic-directaccess-server"></a>2 단계 기본 DirectAccess 서버 구성
 
@@ -25,16 +25,16 @@ ms.locfileid: "71404920"
 
 이 항목에서는 기본 DirectAccess 배포에 필요한 클라이언트 및 서버 설정을 구성하는 방법에 대해 설명합니다. 에 설명 된 계획 단계를 완료 한 확인 배포 단계를 시작 하기 전에 [기본 DirectAccess 배포 계획](Plan-a-Basic-DirectAccess-Deployment.md)합니다.  
   
-|태스크|설명|  
+|작업|설명|  
 |----|--------|  
 |원격 액세스 역할 설치|원격 액세스 역할을 설치합니다.|  
 |시작 마법사를 사용하여 DirectAccess 구성|새로운 시작 마법사는 매우 간결한 구성 환경을 제공합니다. 이 마법사는 DirectAccess의 복잡성을 마스크하여 간단한 몇 가지 단계를 거쳐 자동으로 설정될 수 있도록 합니다. 또한 내부적으로 PKI를 배포할 필요가 없도록 Kerberos 프록시를 자동으로 구성하여 관리자에게 원활한 환경을 제공합니다.|  
 |DirectAccess 구성으로 클라이언트 업데이트|DirectAccess 설정을 받으려면 클라이언트는 인트라넷에 연결된 상태에서 그룹 정책을 업데이트해야 합니다.|  
   
 > [!NOTE]  
-> 이 항목에는 설명한 절차의 일부를 자동화하는 데 사용할 수 있는 샘플 Windows PowerShell cmdlet이 포함되어 있습니다. 자세한 내용은 참조 [Cmdlet를 사용 하 여](https://go.microsoft.com/fwlink/p/?linkid=230693)합니다.  
+> 이 항목에는 설명된 일부 절차를 자동화하는 데 사용할 수 있는 예제 Windows PowerShell cmdlet이 포함되어 있습니다. 자세한 내용은 참조 [Cmdlet를 사용 하 여](https://go.microsoft.com/fwlink/p/?linkid=230693)합니다.  
   
-## <a name="BKMK_Role"></a>원격 액세스 역할 설치  
+## <a name="install-the-remote-access-role"></a><a name="BKMK_Role"></a>원격 액세스 역할 설치  
 원격 액세스를 배포하려면 조직에서 원격 액세스 서버로 사용할 서버에 원격 액세스 역할을 설치해야 합니다.  
   
 #### <a name="to-install-the-remote-access-role"></a>원격 액세스 역할을 설치하려면  
@@ -51,7 +51,7 @@ ms.locfileid: "71404920"
   
 6.  클릭 **기능 추가**, 클릭 **다음**, 를 클릭 하 고 **설치**합니다.  
   
-7.  **설치 진행률** 대화 상자에서 설치가 완료되었는지 확인하고 **닫기**를 클릭합니다.  
+7.  **설치 진행률** 대화 상자에서 설치가 정상적으로 완료되었는지 확인하고 **닫기**를 클릭합니다.  
   
 ![Windows PowerShell](../../../media/Step-2-Configure-the-DirectAccess-Server/PowerShellLogoSmall.gif)***<em>windows powershell 해당 명령</em>***  
   
@@ -117,11 +117,11 @@ ms.locfileid: "71404920"
   
 5.  **Get-NCSIPolicyConfiguration**을 입력하고 **Enter** 키를 누릅니다. 마법사에서 배포된 네트워크 연결 상태 표시기 설정이 표시됩니다. DomainLocationDeterminationURL의 값에 주목합니다. 클라이언트는 이 네트워크 위치 서버 URL에 액세스할 수 있을 때면 언제나 클라이언트가 회사 네트워크 내부에 있는 것으로 판단하여 NRPT 설정이 적용되지 않습니다.  
   
-6.  형식 **Get-daconnectionstatus** 누릅니다 **ENTER**합니다. 상태가으로 표시 됩니다 클라이언트가 네트워크 위치 서버 URL에 연결할 수 있으므로 **ConnectedLocally**합니다.  
+6.  **Get-DAConnectionStatus**를 입력하고 **Enter** 키를 누릅니다. 상태가으로 표시 됩니다 클라이언트가 네트워크 위치 서버 URL에 연결할 수 있으므로 **ConnectedLocally**합니다.  
   
-## <a name="BKMK_Links"></a>이전 단계  
+## <a name="previous-step"></a><a name="BKMK_Links"></a>이전 단계  
   
--   [1단계: DirectAccess 인프라 구성](Step-1-Configure-the-DirectAccess-Infrastructure.md)  
+-   [1 단계: DirectAccess 인프라 구성](Step-1-Configure-the-DirectAccess-Infrastructure.md)  
   
 ## <a name="next-step"></a>다음 단계  
   

@@ -6,23 +6,23 @@ ms.technology: networking-ras
 ms.topic: article
 ms.assetid: ''
 ms.localizationpriority: medium
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 08/30/2018
 ms.reviewer: deverette
-ms.openlocfilehash: c7e2c4172621416048fa9e82bbd12f5b1717d490
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: a7d1c451989d69f45f02571de4854b0f0f4e12f5
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404296"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80307822"
 ---
 # <a name="step-2-configure-the-server-infrastructure"></a>2단계. 서버 인프라 구성
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-- [**선행** 1단계. Always On VPN 배포 계획](always-on-vpn-deploy-planning.md)
-- [**그런** 3단계. Always On VPN에 대한 원격 액세스 서버 구성](vpn-deploy-ras.md)
+- [**이전:** 1 단계. Always On VPN 배포 계획](always-on-vpn-deploy-planning.md)
+- [**다음:** 3 단계. Always On VPN에 대 한 원격 액세스 서버 구성](vpn-deploy-ras.md)
 
 이 단계에서는 VPN을 지 원하는 데 필요한 서버 쪽 구성 요소를 설치 하 고 구성 합니다. 서버 쪽 구성 요소에는 사용자, VPN 서버 및 NPS 서버에서 사용 하는 인증서를 배포 하도록 PKI를 구성 하는 작업이 포함 됩니다.  또한 RRAS를 구성 하 여 VPN 연결에 대 한 권한 부여를 수행 하는 IKEv2 연결 및 NPS 서버를 지원 합니다.
 
@@ -114,7 +114,7 @@ RRAS 서버가 도메인에 가입 되어 있지 않으므로 VPN 게이트웨�
 
 12. 다음 속성을 사용 하 여 RRAS 서버에 대 한 올바른 인증서가 있는지 확인 합니다.
 
-    - **용도:** 서버 인증, IP 보안 IKE 중간 
+    - 용도 **:** 서버 인증, IP 보안 IKE 중간 
 
     - **인증서 템플릿:** [_Customer_] VPN 서버
 
@@ -205,7 +205,7 @@ _continue_ = "dns=vpn.contoso.com&"
 이 절차에서는 사용자 지정 클라이언트-서버 인증 템플릿을 구성 합니다. 이 템플릿은 업그레이드 된 호환성 수준을 선택 하 고 Microsoft 플랫폼 암호화 공급자를 선택 하 여 인증서의 전반적인 보안을 향상 시킬 수 있기 때문에 필요 합니다. 이 마지막 변경을 통해 클라이언트 컴퓨터에서 TPM을 사용 하 여 인증서를 보호할 수 있습니다. TPM에 대 한 개요는 [신뢰할 수 있는 플랫폼 모듈 기술 개요](https://docs.microsoft.com/windows/device-security/tpm/trusted-platform-module-overview)를 참조 하세요.
 
 >[!IMPORTANT] 
->Microsoft Platform Crypto Provider "에는 VM을 실행 하는 경우 TPM 칩이 필요 하며, 다음과 같은 오류가 발생 합니다. 인증서를 수동으로 등록 하려고 할 때 "로컬 컴퓨터에서 유효한 CSP를 찾을 수 없습니다" 라는 메시지가 표시 되 면 인증서의 암호화 탭에서 "microsoft 플랫폼 암호화 공급자"를 확인 하 여 "microsoft 플랫폼 암호화 공급자"를 확인 해야 합니다. 정보의.
+>Microsoft Platform Crypto Provider "에는 TPM 칩이 필요 하며, VM을 실행 하는 경우" Microsoft 소프트웨어 키 저장소를 확인 하는 데 필요한 인증서를 수동으로 등록 하려고 할 때 "로컬 컴퓨터에서 유효한 CSP를 찾을 수 없습니다" 라는 오류 메시지가 표시 됩니다. "인증서 속성의 암호화 탭에서" Microsoft Platform Crypto Provider "다음에" Microsoft Platform Crypto Provider "를 두 번째로 차례로 제공 합니다.
 
 **여기서**
 
@@ -278,7 +278,7 @@ _continue_ = "dns=vpn.contoso.com&"
 >[!IMPORTANT]
 >VPN 클라이언트는 공용 인터넷에서이 서버에 액세스 하기 때문에 주체와 대체 이름이 내부 서버 이름과 다릅니다. 따라서 VPN 서버에서이 인증서를 자동으로 등록할 수 없습니다.
 
-**사전 요구 사항:**
+**사전**
 
 도메인에 가입 된 VPN 서버
 
@@ -300,7 +300,7 @@ _continue_ = "dns=vpn.contoso.com&"
 
     3. **응용 프로그램 정책 추가** 대화 상자에서 **IP 보안 IKE 중간**을 선택 하 고 **확인**을 선택 합니다.
    
-        IP 보안 IKE 중간을 EKU에 추가 하면 둘 이상의 서버 인증 인증서가 VPN 서버에 있는 시나리오에서 도움이 됩니다. IP 보안 IKE 중간이 있는 경우 IPSec은 EKU 옵션이 모두 있는 인증서만 사용 합니다. 이를 사용 하지 않으면 IKEv2 인증에 실패할 수 13801 오류가 발생 합니다. IKE 인증 자격 증명은 허용 되지 않습니다.
+        IP 보안 IKE 중간을 EKU에 추가 하면 둘 이상의 서버 인증 인증서가 VPN 서버에 있는 시나리오에서 도움이 됩니다. IP 보안 IKE 중간이 있는 경우 IPSec은 EKU 옵션이 모두 있는 인증서만 사용 합니다. 이를 사용 하지 않으면 IKEv2 인증에 실패할 수 있습니다. 오류 13801: IKE 인증 자격 증명은 허용 되지 않습니다.
 
     4. **확인** 을 선택 하 여 **새 템플릿의 속성** 대화 상자로 돌아갑니다.
 
@@ -438,7 +438,7 @@ Net Start "certsvc"
 
 7. **등록**을 선택 합니다.
 
-8. **마침**을 선택 합니다.
+8. **마침**을 선택합니다.
 
 9. 인증서 스냅인의 **개인**에서 **인증서**를 선택 합니다.
     
@@ -474,4 +474,4 @@ Net Start "certsvc"
 
 ## <a name="next-steps"></a>다음 단계
 
-[3 단계: Always On VPN](vpn-deploy-ras.md)에 대 한 원격 액세스 서버를 구성 합니다. 이 단계에서는 원격 액세스 VPN을 구성 하 여 IKEv2 VPN 연결을 허용 하 고, 다른 VPN 프로토콜의 연결을 거부 하 고, 권한 있는 VPN 클라이언트를 연결 하기 위해 IP 주소를 발급 하는 고정 IP 주소 풀을 할당 합니다.
+[3 단계. Always On VPN에 대 한 원격 액세스 서버 구성](vpn-deploy-ras.md):이 단계에서는 IKEV2 vpn 연결을 허용 하 고, 다른 VPN 프로토콜에서 연결을 거부 하 고, 권한 있는 vpn 클라이언트를 연결 하기 위해 IP 주소를 발급 하는 고정 ip 주소 풀을 할당 하도록 원격 액세스 VPN을 구성 합니다.

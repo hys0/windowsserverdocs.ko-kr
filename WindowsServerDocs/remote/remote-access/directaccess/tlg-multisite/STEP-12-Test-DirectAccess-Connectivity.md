@@ -10,14 +10,14 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 65ac1c23-3a47-4e58-888d-9dde7fba1586
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: bd0f8ba10536a28479269abafadaaacaffd3d0a8
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 3f67ef0131d5fc765c3fe99fdff85d93e869902e
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71388376"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80308837"
 ---
 # <a name="step-12-test-directaccess-connectivity"></a>12 단계 DirectAccess 연결 테스트
 
@@ -29,16 +29,16 @@ ms.locfileid: "71388376"
   
 - EDGE1를 통해 인터넷에서 DirectAccess 연결 테스트  
   
-- CLIENT2을 Win7_Clients_Site2 보안 그룹으로 이동  
+- Win7_Clients_Site2 보안 그룹으로 CLIENT2 이동  
   
 - EDGE1을 통해 인터넷에서 DirectAccess 연결 테스트  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 조건  
 두 클라이언트 컴퓨터를 모두 Corpnet 네트워크에 연결한 후 두 클라이언트 컴퓨터를 모두 다시 시작 합니다.  
   
-## <a name="policy"></a>클라이언트에 올바른 그룹 정책이 있는지 확인  
+## <a name="verify-clients-have-the-correct-group-policy"></a><a name="policy"></a>클라이언트에 올바른 그룹 정책이 있는지 확인  
   
-1.  CLIENT1에서 **시작**을 클릭 하 고 **powershell**을 입력 한 다음 **powershell**을 마우스 오른쪽 단추로 클릭 하 고 **고급**을 클릭 한 다음 **관리자 권한으로 실행**을 클릭 합니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
+1.  CLIENT1에서 **시작**을 클릭 하 고 **powershell**을 입력 한 다음 **powershell**을 마우스 오른쪽 단추로 클릭 하 고 **고급**을 클릭 한 다음 **관리자 권한으로 실행**을 클릭 합니다. **사용자 계정 컨트롤** 대화 상자가 표시되면 원하는 작업이 표시되어 있는지 확인하고 **예**를 클릭합니다.  
   
 2.  Windows PowerShell 창에서 **ipconfig** 를 입력 하 고 enter 키를 누릅니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "71388376"
   
 4.  다음 절차를 수행 하려면 Windows PowerShell 창을 열어 둡니다.  
   
-5.  CLIENT2에서 **시작**, **모든 프로그램**, **보조 프로그램**, **Windows PowerShell**을 차례로 클릭 하 고 **windows powershell**을 마우스 오른쪽 단추로 클릭 한 다음 **관리자 권한으로 실행**을 클릭 합니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
+5.  CLIENT2에서 **시작**, **모든 프로그램**, **보조 프로그램**, **Windows PowerShell**을 차례로 클릭 하 고 **windows powershell**을 마우스 오른쪽 단추로 클릭 한 다음 **관리자 권한으로 실행**을 클릭 합니다. **사용자 계정 컨트롤** 대화 상자가 표시되면 원하는 작업이 표시되어 있는지 확인하고 **예**를 클릭합니다.  
   
 6.  Windows PowerShell 창에서 **ipconfig** 를 입력 하 고 enter 키를 누릅니다.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "71388376"
   
 8.  다음 절차를 수행 하려면 Windows PowerShell 창을 열어 둡니다.  
   
-## <a name="EDGE1"></a>EDGE1를 통해 인터넷에서 DirectAccess 연결 테스트  
+## <a name="test-directaccess-connectivity-from-the-internet-through-edge1"></a><a name="EDGE1"></a>EDGE1를 통해 인터넷에서 DirectAccess 연결 테스트  
   
 1. 2-인터넷 네트워크에서 EDGE1를 분리 합니다.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "71388376"
   
 7. EDGE1을 통해 연결 되었는지 확인 합니다. **Netsh interface httpstunnel show interface** 를 입력 하 고 enter 키를 누릅니다.  
   
-   출력에는 https://edge1.contoso.com:443/IPHTTPS URL이 포함 되어야 합니다.  
+   출력은 URL: https://edge1.contoso.com:443/IPHTTPS를 포함 해야 합니다.  
   
    > [!TIP]  
    > CLIENT1에서 다음 Windows PowerShell 명령을 실행할 수도 있습니다. **NetIPHTTPSConfiguration**. 출력은 사용 가능한 서버 URL 연결 및 현재 활성 프로필을 표시 합니다.  
@@ -103,17 +103,17 @@ ms.locfileid: "71388376"
   
     APP2는 APP2이 IPv4 전용 리소스 이므로 NAT64/DNS64를 사용 하 여 연결을 설정할 수 있음을 나타내므로 ping을 ping 할 수 있습니다.  
   
-11. Internet Explorer를 열고 Internet Explorer 주소 표시줄에 **https://app1/** 을 입력 한 다음 enter 키를 누릅니다. APP1의 기본 IIS 웹 사이트가 표시됩니다.  
+11. Internet Explorer를 열고 Internet Explorer 주소 표시줄에 **https://app1/** 를 입력 한 다음 enter 키를 누릅니다. APP1의 기본 IIS 웹 사이트가 표시됩니다.  
   
-12. Internet Explorer 주소 표시줄에 **https://2-app1/** 을 입력 하 고 enter 키를 누릅니다. 2-APP1에 기본 웹 사이트가 표시 됩니다.  
+12. Internet Explorer 주소 표시줄에 **https://2-app1/** 를 입력 하 고 enter 키를 누릅니다. 2-APP1에 기본 웹 사이트가 표시 됩니다.  
   
-13. Internet Explorer 주소 표시줄에 **https://app2/** 을 입력 하 고 enter 키를 누릅니다. APP2의 기본 IIS 웹 사이트가 표시됩니다.  
+13. Internet Explorer 주소 표시줄에 **https://app2/** 를 입력 하 고 enter 키를 누릅니다. APP2의 기본 IIS 웹 사이트가 표시됩니다.  
   
-14. **시작** 화면에서<strong>\\ \ 2-App1\Files</strong>을 입력 한 다음 enter 키를 누릅니다. 예제 텍스트 파일을 두 번 클릭 합니다.  
+14. **시작** 화면에서<strong>\\\2-App1\Files</strong>를 입력 한 다음 enter 키를 누릅니다. 예제 텍스트 파일을 두 번 클릭 합니다.  
   
     이는 EDGE1를 통해 연결 된 경우 corp2.corp.contoso.com 도메인의 파일 서버에 연결할 수 있음을 보여 줍니다.  
   
-15. **시작** 화면에서<strong>\\ \ App2\Files</strong>를 입력 한 다음 enter 키를 누릅니다. 새 텍스트 문서 파일을 두 번 클릭합니다.  
+15. **시작** 화면에서<strong>\\\App2\Files</strong>를 입력 한 다음 enter 키를 누릅니다. 새 텍스트 문서 파일을 두 번 클릭합니다.  
   
     이는 SMB를 사용 하 여 리소스 도메인의 리소스를 가져오는 IPv4 전용 서버에 연결할 수 있음을 보여 줍니다.  
   
@@ -121,13 +121,13 @@ ms.locfileid: "71388376"
   
 17. **고급 보안이 포함 된 Windows 방화벽** 콘솔에서 **공개 프로필만** 활성화 됨을 확인 합니다. DirectAccess가 제대로 작동 하려면 Windows 방화벽이 사용 하도록 설정 되어 있어야 합니다. Windows 방화벽을 사용 하지 않도록 설정 된 경우 DirectAccess 연결이 작동 하지 않습니다.  
   
-18. 콘솔의 왼쪽 창에서 **모니터링** 노드를 확장 하 고 **연결 보안 규칙** 노드를 클릭 합니다. 활성 연결 보안 규칙이 표시 되어야 합니다. **Directaccess 정책-ClientToCorp**, **Directaccess 정책-ClientToDNS64NAT64PrefixExemption**, **Directaccess 정책-ClientToInfra**및 **directaccess 정책-ClientToNlaExempt**. 가운데 창을 오른쪽으로 스크롤하여 **첫 번째 인증 방법과** **두 번째 인증 방법** 열을 표시 합니다. 첫 번째 규칙 (ClientToCorp)은 Kerberos V5를 사용 하 여 인트라넷 터널을 설정 하 고 세 번째 규칙 (ClientToInfra)은 NTLMv2를 사용 하 여 인프라 터널을 설정 합니다.  
+18. 콘솔의 왼쪽 창에서 **모니터링** 노드를 확장 하 고 **연결 보안 규칙** 노드를 클릭 합니다. 활성 연결 보안 규칙: **Directaccess 정책-ClientToCorp**, **Directaccess 정책-ClientToDNS64NAT64PrefixExemption**, **Directaccess 정책-ClientToInfra**및 **directaccess 정책-ClientToNlaExempt**이 표시 됩니다. 가운데 창을 오른쪽으로 스크롤하여 **첫 번째 인증 방법과** **두 번째 인증 방법** 열을 표시 합니다. 첫 번째 규칙 (ClientToCorp)은 Kerberos V5를 사용 하 여 인트라넷 터널을 설정 하 고 세 번째 규칙 (ClientToInfra)은 NTLMv2를 사용 하 여 인프라 터널을 설정 합니다.  
   
 19. 콘솔의 왼쪽 창에서 **보안 연결** 노드를 확장 하 고 **주 모드** 노드를 클릭 합니다. Kerberos V5를 사용 하는 인트라넷 터널 보안 연결 및 NTLMv2를 사용 하는 인프라 터널 보안 연결을 확인 합니다. **사용자 (Kerberos V5)** 를 표시 하는 항목을 **두 번째 인증 방법** 으로 마우스 오른쪽 단추로 클릭 하 고 **속성**을 클릭 합니다. **일반** 탭에서 **두 번째 인증 로컬 ID** 는 **CORP\User1**입니다 .이는 u s e r 2가 회사 도메인에 Kerberos를 사용 하 여 성공적으로 인증할 수 있음을 나타냅니다.  
   
 20. CLIENT2의 3 단계에서이 절차를 반복 합니다.  
   
-## <a name="secgroup"></a>CLIENT2을 Win7_Clients_Site2 보안 그룹으로 이동  
+## <a name="move-client2-to-the-win7_clients_site2-security-group"></a><a name="secgroup"></a>Win7_Clients_Site2 보안 그룹으로 CLIENT2 이동  
   
 1.  DC1에서 **시작**을 클릭 하 고 **dsa.msc**를 입력 한 다음 enter 키를 누릅니다.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "71388376"
   
     -   nls.corp.contoso.com-이러한 설정은 이름 nls.corp.contoso.com에 대 한 예외가 있음을 의미 합니다.  
   
-## <a name="DAConnect"></a>EDGE1을 통해 인터넷에서 DirectAccess 연결 테스트  
+## <a name="test-directaccess-connectivity-from-the-internet-through-2-edge1"></a><a name="DAConnect"></a>EDGE1을 통해 인터넷에서 DirectAccess 연결 테스트  
   
 1. 2-EDGE1를 인터넷 네트워크에 연결 합니다.  
   
@@ -163,7 +163,7 @@ ms.locfileid: "71388376"
   
 5. 2-EDGE1을 통해 연결 되었는지 확인 합니다. **Netsh interface httpstunnel show interface** 를 입력 하 고 enter 키를 누릅니다.  
   
-   출력에는 https://2-edge1.contoso.com:443/IPHTTPS URL이 포함 되어야 합니다.  
+   출력은 URL: https://2-edge1.contoso.com:443/IPHTTPS를 포함 해야 합니다.  
   
    > [!TIP]  
    > CLIENT1에서 다음 명령을 실행할 수도 있습니다. **NetIPHTTPSConfiguration**. 출력은 사용 가능한 서버 URL 연결 및 현재 활성 프로필을 표시 합니다.  
@@ -179,17 +179,17 @@ ms.locfileid: "71388376"
   
    APP2는 APP2이 IPv4 전용 리소스 이므로 NAT64/DNS64를 사용 하 여 연결을 설정할 수 있음을 나타내므로 ping을 ping 할 수 있습니다.  
   
-9. Internet Explorer를 열고 Internet Explorer 주소 표시줄에 **https://app1/** 을 입력 한 다음 enter 키를 누릅니다. APP1의 기본 IIS 웹 사이트가 표시됩니다.  
+9. Internet Explorer를 열고 Internet Explorer 주소 표시줄에 **https://app1/** 를 입력 한 다음 enter 키를 누릅니다. APP1의 기본 IIS 웹 사이트가 표시됩니다.  
   
-10. Internet Explorer 주소 표시줄에 **https://2-app1/** 을 입력 하 고 enter 키를 누릅니다. APP2의 기본 IIS 웹 사이트가 표시됩니다.  
+10. Internet Explorer 주소 표시줄에 **https://2-app1/** 를 입력 하 고 enter 키를 누릅니다. APP2의 기본 IIS 웹 사이트가 표시됩니다.  
   
-11. Internet Explorer 주소 표시줄에 **https://app2/** 을 입력 하 고 enter 키를 누릅니다. APP3에 기본 웹 사이트가 표시 됩니다.  
+11. Internet Explorer 주소 표시줄에 **https://app2/** 를 입력 하 고 enter 키를 누릅니다. APP3에 기본 웹 사이트가 표시 됩니다.  
   
-12. **시작** 화면에서<strong>\\ \ App1\Files</strong>를 입력 한 다음 enter 키를 누릅니다. 예제 텍스트 파일을 두 번 클릭 합니다.  
+12. **시작** 화면에서<strong>\\\App1\Files</strong>를 입력 한 다음 enter 키를 누릅니다. 예제 텍스트 파일을 두 번 클릭 합니다.  
   
     이는 2-EDGE1를 통해 연결 된 경우 corp.contoso.com 도메인의 파일 서버에 연결할 수 있음을 보여 줍니다.  
   
-13. **시작** 화면에서<strong>\\ \ App2\Files</strong>를 입력 한 다음 enter 키를 누릅니다. 새 텍스트 문서 파일을 두 번 클릭합니다.  
+13. **시작** 화면에서<strong>\\\App2\Files</strong>를 입력 한 다음 enter 키를 누릅니다. 새 텍스트 문서 파일을 두 번 클릭합니다.  
   
     이는 SMB를 사용 하 여 리소스 도메인의 리소스를 가져오는 IPv4 전용 서버에 연결할 수 있음을 보여 줍니다.  
   

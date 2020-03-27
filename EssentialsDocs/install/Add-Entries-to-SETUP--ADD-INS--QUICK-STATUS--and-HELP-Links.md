@@ -3,7 +3,7 @@ title: 설정, 추가 기능, 빠른 상태 및 도움말 링크에 항목 추�
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: c0a8f10d-fd85-4c8d-b9bb-176cb1db1f46
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: f0a66d0d36a3012369a9bc26c513dad069235ad8
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 074e4e638a1fe96bedf2c8340ec71848a8fa4ac4
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66433788"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80310275"
 ---
 # <a name="add-entries-to-setup-add-ins-quick-status-and-help-links"></a>설정, 추가 기능, 빠른 상태 및 도움말 링크에 항목 추가
 
@@ -37,13 +37,13 @@ ms.locfileid: "66433788"
   
 2. **파일**, **새로 만들기**를 차례로 클릭한 다음 **프로젝트**를 클릭합니다.  
   
-3. **템플릿** 창에서 **클래스 라이브러리**를 클릭하고 **이름** 상자에 **OEMHomePageContent** 를 입력한 다음 **확인**을 클릭합니다.  
+3. **템플릿** 창에서 **클래스 라이브러리**를 클릭하고 **이름** 상자에 **OEMHomePageContent**를 입력한 다음 **확인**을 클릭합니다.  
   
 4. Class1.cs 파일을 삭제합니다.  
   
 5. 새 프로젝트를 마우스 오른쪽 단추로 클릭하고, **추가**를 클릭한 다음 **새 항목**을 클릭합니다.  
   
-6. **템플릿** 창에서 **XML 파일**을 클릭하고 **이름** 상자에 **OEMHomePageContent.home** 을 입력한 다음 **추가**를 클릭합니다.  
+6. **템플릿** 창에서 **XML 파일**을 클릭하고 **이름** 상자에 **OEMHomePageContent.home**을 입력한 다음 **추가**를 클릭합니다.  
   
    > [!NOTE]
    >  XML 파일을 리소스 파일 없이 설치하는 경우 파일 이름이 OEMHomePageContent.home이어야 합니다. 어셈블리에 포함된 경우 확장자가 .home이면 어떤 이름을 설정해도 됩니다.  
@@ -99,23 +99,23 @@ ms.locfileid: "66433788"
   
     각 항목이 나타내는 의미는 다음과 같습니다.  
   
-   |attribute|설명|  
+   |특성|설명|  
    |---------------|-----------------|  
    |Name (Task)|목록에서 작업에 대해 표시되는 이름입니다. 포함 리소스 파일을 만들 경우 이 특성 값이 문자열 리소스가 됩니다.|  
    |description (Task)|작업에 대한 설명입니다. 포함 리소스 파일을 만들 경우 이 특성 값이 문자열 리소스가 됩니다.|  
-   |id (Task)|작업의 식별자입니다. 이 식별자는 GUID여야 합니다. **exe** 작업에 대해 새 GUID를 만들지만 **글로벌** 작업의 경우 하위 탭의 작업 창에서 작업을 정의할 때 만든 GUID를 사용합니다. GUID 만들기에 대 한 자세한 내용은 참조 하세요. [Guid 만들기 (guidgen.exe)](https://go.microsoft.com/fwlink/?LinkId=116098)합니다.|  
+   |id (Task)|작업 식별자입니다. 이 식별자는 GUID여야 합니다. **Exe** 태스크에 대 한 새 guid를 만들지만 **글로벌** 작업의 경우 하위 탭의 작업 창에 대 한 작업을 정의할 때 만든 guid를 사용 합니다. GUID를 만드는 방법에 대 한 자세한 내용은 [Guid 만들기 (guidgen.exe)](https://go.microsoft.com/fwlink/?LinkId=116098)를 참조 하세요.|  
    |image|이 필드를 무시합니다.|  
    |Name (Action)|작업 이름을 표시합니다.|  
-   |Type (Action)|작업 유형을 설명합니다. 작업은 **전역** 작업, **exe** 또는 URL 작업 중 하나가 될 수 있습니다. **전역** 작업은 하위 탭의 작업 창에서 작업을 정의할 때 만든 것과 동일한 전역 작업입니다. 하위 탭의 두 작업 창과 홈페이지의 시작 작업 또는 일반 작업 목록에 사용할 수 있는 전역 작업을 만드는 방법에 대 한 자세한 내용은 지원 클래스를 참조 하십시오 œCreating? œHow에: 하위 탭 만들기 [Windows Server Solutions SDK](https://go.microsoft.com/fwlink/?LinkID=248648)합니다. **exe** 작업은 시작 작업 또는 일반 작업 목록에서 응용 프로그램을 실행하는 데 사용할 수 있습니다.|  
-   |exelocation|작업과 관련된 응용 프로그램 경로입니다. 이 특성은 **exe** 작업에 대해서만 사용됩니다.|  
+   |Type (Action)|작업 유형을 설명합니다. 작업은 **전역** 작업, **exe** 또는 URL 작업 중 하나가 될 수 있습니다. **전역** 작업은 하위 탭의 작업 창에 대 한 작업을 정의할 때 만든 것과 동일한 전역 작업입니다. 하위 탭의 작업 창과 홈 페이지의 시작 작업 또는 일반 작업 목록 모두에서 사용할 수 있는 전역 작업을 만드는 방법에 대 한 자세한 내용은 œCreating the support class?를 참조 하세요. 방법 to: 하위 탭 만들기 [Windows Server SOLUTIONS SDK](https://go.microsoft.com/fwlink/?LinkID=248648)의 **exe** 작업은 시작 작업 또는 일반 작업 목록에서 응용 프로그램을 실행하는 데 사용할 수 있습니다.|  
+   |exelocation|작업과 관련된 애플리케이션 경로입니다. 이 특성은 **exe** 작업에 대해서만 사용됩니다.|  
    |replaceid|이 작업으로 바꿀 작업의 식별자입니다.|  
-   |어셈블리(assembly)|빠른 상태 쿼리를 구현할 클래스를 제공하는 어셈블리의 어셈블리 이름입니다. 어셈블리 Program files\ windows server\bin에 위치 해야\\합니다.|  
+   |어셈블리(assembly)|빠른 상태 쿼리를 구현할 클래스를 제공하는 어셈블리의 어셈블리 이름입니다. 어셈블리는 Program files\ windows server\bin\\에 있어야 합니다.|  
    |class|클래스의 이름은 빠른 상태 쿼리를 구현합니다. 클래스는 **ITaskStatusQuery** 인터페이스를 구현해야 합니다.|  
    |Title (link)|링크에 대해 표시되는 텍스트입니다. 포함 리소스 파일을 만들 경우 이 특성 값이 문자열 리소스가 됩니다.|  
    |Description (link)|링크 대상에 대한 설명입니다. 포함 리소스 파일을 만들 경우 이 특성 값이 문자열 리소스가 됩니다.|  
-   |ShellExecPath|응용 프로그램 또는 URL 경로입니다.<br /><br /> **참고:** 환경 변수는 ShellExecPath 특성에서 지원됩니다.|  
+   |ShellExecPath|애플리케이션 또는 URL 경로입니다.<br /><br /> **참고:** 환경 변수는 ShellExecPath 특성에서 지원 됩니다.|  
   
-    다음 코드 예제에서는 응용 프로그램에 대한 링크를 정의하는 방법을 보여 줍니다.  
+    다음 코드 예제에서는 애플리케이션에 대한 링크를 정의하는 방법을 보여 줍니다.  
   
    ```  
    <Links>  
@@ -142,7 +142,7 @@ ms.locfileid: "66433788"
 #### <a name="change-the-status-of-a-setupadd-ins-task"></a>설정/추가 기능 작업 상태 변경  
  설정 및 추가 기능에 열거된 작업은 완료된 상태(추가 기능으로 구성됨) 및 완료되지 않은 상태(추가 기능으로 구성되지 않음)로 토글할 수 있습니다.  
   
- 새 작업과 연결된 응용 프로그램을 정의할 때는 Microsoft.WindowsServerSolutions.Administration.ObjectModel.TaskStatusHelper 네임스페이스의 SetTaskStatus 메서드를 사용하여 작업 상태를 변경할 수 있습니다. 이 메서드는 Windows Server Solutions에 포함되어 있기는 하지만 SDK에 설명되어 있지는 않습니다. 예를 들어 TaskStatus.Complete 열거 값(SetTaskStatus(id, TaskStatus.Complete))을 사용해 SetTaskStatus 메서드를 호출하여 확인 표시를 회색에서 녹색으로 변경할 수 있습니다. 여기서 **id**는 작업의 식별자입니다. 사용할 수 있는 열거 값은 TaskStatus.Complete, TaskStatus.Incomplete 또는 TaskStatus.Hidden입니다.  
+ 새 작업과 연결된 애플리케이션을 정의할 때는 Microsoft.WindowsServerSolutions.Administration.ObjectModel.TaskStatusHelper 네임스페이스의 SetTaskStatus 메서드를 사용하여 작업 상태를 변경할 수 있습니다. 이 메서드는 Windows Server Solutions에 포함되어 있기는 하지만 SDK에 설명되어 있지는 않습니다. 예를 들어 TaskStatus.Complete 열거 값(SetTaskStatus(id, TaskStatus.Complete))을 사용해 SetTaskStatus 메서드를 호출하여 확인 표시를 회색에서 녹색으로 변경할 수 있습니다. 여기서 **id**는 작업의 식별자입니다. 사용할 수 있는 열거 값은 TaskStatus.Complete, TaskStatus.Incomplete 또는 TaskStatus.Hidden입니다.  
   
 ##### <a name="replace-tasks"></a>작업 대체  
  작업 정의의 replaceid 특성에 작업에 대한 GUID를 추가하여 시작 작업 또는 일반 작업 목록에 미리 정의된 작업을 바꿀 수 있습니다. 다음 표에는 대시보드에서 바꿀 수 있는 작업과 해당 식별자가 나열되어 있습니다.  
@@ -163,7 +163,7 @@ ms.locfileid: "66433788"
 |컴퓨터 - 빠른 상태|7966A974-D52D-4F5D-B37F-05C1B73CEEF3|  
   
 ##### <a name="optional-create-the-resource-file"></a>(옵션) 리소스 파일 만들기  
- 시작 작업, 일반 작업 및 커뮤니티 링크를 추가 하는 작업에서 텍스트를 지역화 하려면 만들어야.home 파일을 포함 하는 어셈블리 및. 텍스트 문자열을 정의 하는.home.resx 파일.  
+ 시작 작업, 일반 작업 및 커뮤니티 링크에 추가하는 작업에서 텍스트를 지역화하려면 텍스트 문자열을 정의하는 .home 파일과 .home.resx 파일을 포함한 어셈블리를 만들어야 합니다.  
   
 ###### <a name="to-create-the-resource-file"></a>리소스 파일을 만들려면  
   
@@ -201,7 +201,7 @@ ms.locfileid: "66433788"
   
 5.  OEMHomePageContent.home.resx 파일을 저장하고 솔루션을 빌드합니다.  
   
-#####  <a name="BKMK_SignAssembly"></a> Authenticode 서명으로 어셈블리 서명  
+#####  <a name="sign-the-assembly-with-an-authenticode-signature"></a><a name="BKMK_SignAssembly"></a>Authenticode 서명을 사용 하 여 어셈블리 서명  
  어셈블리를 운영 체제에서 사용할 수 있으려면 반드시 Authenticode 서명이 필요합니다. 어셈블리 서명에 대한 자세한 내용은 [Authenticode를 사용하여 코드 서명 및 확인](https://msdn.microsoft.com/library/ms537364\(VS.85\).aspx#SignCode)을 참조하세요.  
   
 ##### <a name="install-the-task-files"></a>작업 파일 설치  
@@ -211,10 +211,10 @@ ms.locfileid: "66433788"
   
 1.  솔루션이 오류 없이 빌드되는지 확인합니다.  
   
-2.  포함 리소스 파일을 만들지 않은 경우 OEMHomePageContent.home 파일을 서버의 **%ProgramFiles%\Windows Server\Bin\Addins\Home** 에 복사합니다. 포함 리소스 파일을 만든 경우 OEMHomePageContent.dll 파일을 서버의 **%ProgramFiles%\Windows Server\Bin\Addins\Home**에 복사합니다.  
+2.  포함 리소스 파일을 만들지 않은 경우 OEMHomePageContent.home 파일을 서버의 **%ProgramFiles%\Windows Server\Bin\Addins\Home**에 복사합니다. 포함 리소스 파일을 만든 경우 OEMHomePageContent.dll 파일을 서버의 **%ProgramFiles%\Windows Server\Bin\Addins\Home**에 복사합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [만들기 및 이미지를 사용자 지정](Creating-and-Customizing-the-Image.md)   
+ [이미지  만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)  
  [추가 사용자 지정](Additional-Customizations.md)   
- [배포용 이미지 준비](Preparing-the-Image-for-Deployment.md)   
+ [배포할 이미지를 준비 하는 중](Preparing-the-Image-for-Deployment.md)   
  [사용자 환경 테스트](Testing-the-Customer-Experience.md)

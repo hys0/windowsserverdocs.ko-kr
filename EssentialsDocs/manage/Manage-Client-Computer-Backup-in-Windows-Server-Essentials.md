@@ -3,7 +3,7 @@ title: Windows Server Essentials에서 클라이언트 컴퓨터 백업 관리
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: 1b4776e8-9504-4b98-ae80-11da797d9819
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 4249273c42e07fea980af3e97ae59b31db243e56
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 30c99c67644cad359d13fe351fe406b837819840
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66433345"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80311324"
 ---
 # <a name="manage-client-computer-backup-in-windows-server-essentials"></a>Windows Server Essentials에서 클라이언트 컴퓨터 백업 관리
 
@@ -31,37 +31,37 @@ ms.locfileid: "66433345"
   
 -   [클라이언트 컴퓨터에 대 한 백업 설정](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_3)  
   
--   [실행 되도록 예약 된 백업 시간 변경](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_4)  
+-   [백업이 실행 되도록 예약 된 시간 변경](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_4)  
   
 -   [컴퓨터 백업 보존 정책 변경](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_5)  
   
--   [백업 기본 설정으로 다시 설정](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_6)  
+-   [기본 설정으로 백업 다시 설정](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_6)  
   
--   [복구 도구 사용](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_7)  
+-   [복구 및 복구 도구 사용](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_7)  
   
--   [백업 데이터베이스 복구](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_8)  
+-   [백업 데이터베이스를 복구 합니다.](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_8)  
   
--   [컴퓨터에 대 한 백업을 사용 하지 않도록 설정](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_9)  
+-   [컴퓨터에 대해 백업 사용 안 함](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_9)  
   
 -   [백업 정리 작업 실행](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_10)  
   
--   [클라이언트 컴퓨터에서 작업 표시줄에서 경고 보기](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_11)  
+-   [클라이언트 컴퓨터의 작업 표시줄에서 경고 보기](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_11)  
   
 -   [실행 패드에서 백업 상태 보기](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_12)  
   
--   [실행 패드에서 진행 중인 백업을 중지합니다](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_13)  
+-   [실행 패드에서 진행 중인 백업 중지](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_13)  
   
 -   [실행 패드에서 백업 시작](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_14)  
   
--   [컴퓨터 백업 작동 방식](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_15)  
+-   [컴퓨터 백업 작동 방법](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_15)  
   
--   [클라이언트 백업 데이터베이스의 손상으로 인 한 데이터 손실을 방지 하기 위한 팁](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_16)  
+-   [클라이언트 백업 데이터베이스의 손상으로 인 한 데이터 손실을 방지 하는 데 유용한 팁](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_16)  
   
 -   [클라이언트 컴퓨터 백업에서 파일 또는 폴더 복원](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_17)  
   
--   [파일 히스토리 이해](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_FileHistory)  
+-   [파일 기록 이해](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_FileHistory)  
   
-##  <a name="BKMK_1"></a> 백업 데이터베이스 복구 마법사의 작동 원리  
+##  <a name="how-the-repair-the-backup-database-wizard-works"></a><a name="BKMK_1"></a>백업 데이터베이스 복구 마법사의 작동 원리  
  Windows Server Essentials에서는 백업 데이터베이스에서 오류를 감지하면 상태 알림을 보내고 경고 상태가 위험 상태를 나타내는 빨간색으로 변경됩니다.  
   
  Windows Server Essentials 대시보드에서 경고 상태 아이콘을 클릭하여 백업 데이터베이스 오류 알림을 확인합니다. 알림에는 백업 데이터베이스 복구 마법사를 시작하는 **복구** 단추가 포함됩니다. 마법사를 완료하는 데 몇 시간이 걸릴 수 있습니다.  
@@ -71,14 +71,14 @@ ms.locfileid: "66433345"
 > [!CAUTION]
 >  데이터베이스 복구를 시도하기 전에 데이터베이스를 백업해야 합니다. 백업 데이터베이스에 있는 오류 유형에 따라 일부 백업을 복구하지 못할 수 있습니다. 일부 또는 모든 백업이 영구적으로 손실될 수 있습니다.  
   
-##  <a name="BKMK_2"></a> 컴퓨터 백업 설정 이해  
+##  <a name="understand-the-computer-backup-settings"></a><a name="BKMK_2"></a>컴퓨터 백업 설정 이해  
  클라이언트 컴퓨터에 대한 백업이 구성되고 나서 백업이 수행되는 다른 기간을 지정할 수 있습니다. 마찬가지로 기본값보다 더 길거나 더 짧은 백업 보존 시간을 지정할 수 있습니다.  
   
  **기본값으로 복원** 옵션을 통해 초기 백업 구성 중에 제공된 기본값으로 백업 기간 및 보존 정책을 다시 설정할 수 있습니다.  
   
  기본값은 다음과 같습니다.  
   
-|백업 설정|기본값|설명|  
+|백업 설정|기본|설명|  
 |--------------------|-------------|-----------------|  
 |시작 시간|오후 6시|매일 백업을 시작하는 시간을 지정합니다. 사용자가 컴퓨터를 사용하고 있지 않은 시간으로 설정하는 것이 좋습니다.|  
 |종료 시간|오전 9시|백업이 완료되어야 하는 시간을 지정합니다. 백업에 지정된 기간이 필요하지 않으면 컴퓨터를 성공적으로 백업하는 데 필요한 시간만 사용됩니다.|  
@@ -86,14 +86,14 @@ ms.locfileid: "66433345"
 |주별 백업 보존 기간|4주|해당 주의 마지막 백업이 유지되는 기간(주)을 지정합니다. 예를 들어 기본 설정을 사용하면 주별 백업 4개가 유지됩니다. 5번째 주와 그 이후 매주 가장 오래된 주별 백업이 삭제됩니다.|  
 |월별 백업 보존 기간|6개월|해당 월의 마지막 백업이 유지되는 기간(월)을 지정합니다. 예를 들어 기본 설정을 사용하면 6개월 간 백업이 유지됩니다. 7번째 달과 그 이후 매월 가장 오래된 월별 백업이 삭제됩니다.|  
   
-##  <a name="BKMK_3"></a> 클라이언트 컴퓨터에 대 한 백업 설정  
+##  <a name="set-up-backup-for-a-client-computer"></a><a name="BKMK_3"></a>클라이언트 컴퓨터에 대 한 백업 설정  
  백업이 사용하지 않도록 설정되어 있으면 대시보드에서 컴퓨터에 대한 백업을 설정할 수 있습니다. 컴퓨터에 대한 백업을 설정할 때 컴퓨터에서 모든 항목을 백업하도록 선택하거나 백업할 볼륨 및 폴더를 선택할 수 있습니다.  
   
 > [!NOTE]
 >  백업을 설정하려면 컴퓨터가 온라인 상태여야 합니다.  
   
 > [!IMPORTANT]
->   Windows Server Essentials를 백업 및 복원 클라이언트 컴퓨터에서 동적 디스크를 지원 하지 않습니다.  
+>   Windows Server Essentials에서는 클라이언트 컴퓨터의 동적 디스크 백업 및 복원을 지원 하지 않습니다.  
   
 #### <a name="to-set-up-backup-for-a-client-computer"></a>클라이언트 컴퓨터에 대한 백업을 설정하려면  
   
@@ -106,10 +106,10 @@ ms.locfileid: "66433345"
   
 3.  백업 설정 마법사에서 모든 폴더를 백업하도록 선택하거나 백업할 특정 폴더를 선택할 수 있습니다. 마법사의 지시를 따릅니다.  
   
-4.  컴퓨터에 대한 백업이 설정되면 **닫기** 를 클릭합니다.  
+4.  컴퓨터에 대한 백업이 설정되면 **닫기**를 클릭합니다.  
   
 ### <a name="critical-system-files"></a>중요 시스템 파일  
- Windows 운영 체제를 설치할 때 시스템에서 시작 및 실행에 필요한 파일을 저장할 폴더가 시스템 드라이브에 생성됩니다. 중요 시스템 파일에는 파일 확장명이 .dll, .exe, .ocx, .sys인 파일이 포함됩니다. 이러한 파일의 일부는 True Type 글꼴입니다. 또한 시스템 레지스트리와 같은 시스템 상태 파일은 제대로 실행 하려면 운영 체제가 필요 합니다.  
+ Windows 운영 체제를 설치할 때 시스템에서 시작 및 실행에 필요한 파일을 저장할 폴더가 시스템 드라이브에 생성됩니다. 중요 시스템 파일에는 파일 확장명이 .dll, .exe, .ocx, .sys인 파일이 포함됩니다. 이러한 파일의 일부는 True Type 글꼴입니다. 또한 운영 체제가 제대로 실행 되는 데 시스템의 레지스트리와 같은 시스템 상태 파일이 필요 합니다.  
   
 ### <a name="find-the-file-you-are-looking-for"></a>원하는 파일 찾기  
  기존 백업에서 컴퓨터의 모든 폴더, 여러 파일과 폴더 또는 단일 파일이나 폴더를 복원할 수 있습니다.  
@@ -117,7 +117,7 @@ ms.locfileid: "66433345"
  복원에 사용할 백업을 선택하고 나면 백업 파일을 읽고 모든 파일과 폴더가 표시됩니다. 최상위 폴더를 두 번 클릭하고 원하는 파일을 찾을 때까지 폴더 계층 구조를 드릴다운하여 복원할 특정 파일 또는 폴더를 드릴다운할 수 있습니다.  
   
 ### <a name="why-am-i-unable-to-select-some-items"></a>일부 항목을 선택할 수 없는 이유  
- **백업할 항목 선택 페이지** 의 선택 메뉴에 있는 확인란은 각 폴더에 대해 서로 다른 상태를 표시할 수 있습니다. 확인란 표시 상태:  
+ **백업할 항목 선택 페이지**의 선택 메뉴에 있는 확인란은 각 폴더에 대해 서로 다른 상태를 표시할 수 있습니다. 확인란 표시 상태:  
   
 - **선택됨**, 관련 폴더 및 폴더 콘텐츠가 백업하도록 선택됩니다.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "66433345"
 > [!IMPORTANT]
 >  VSS(볼륨 섀도 복사본 서비스)에서는 같은 스냅샷 집합에서 가상 볼륨 및 호스트 볼륨의 섀도 복사본을 만드는 기능을 지원하지 않습니다. VSS는 가상 볼륨 백업이 필요할 경우 VHD(가상 하드 디스크)에서 볼륨의 스냅샷을 만드는 기능을 지원합니다. 자세한 내용은 [Servicing and Backing Up Virtual Hard Disks(가상 하드 디스크 서비스 및 백업)](https://go.microsoft.com/fwlink/p/?LinkId=256577)를 참조하세요.  
   
-##  <a name="BKMK_4"></a> 실행 되도록 예약 된 백업 시간 변경  
+##  <a name="change-the-time-that-backup-is-scheduled-to-run"></a><a name="BKMK_4"></a>백업이 실행 되도록 예약 된 시간 변경  
  가능하면 네트워크로 연결된 컴퓨터를 사용하는 사용자가 거의 없는 시간에 백업 프로세스를 예약해야 합니다. 일반적으로 늦은 저녁이나 이른 아침 시간입니다. 기본 백업 시간은 오후 6시부터 오전 9시까지입니다. 서버에서는 예약된 기간에만 클라이언트 컴퓨터를 백업하려고 합니다.  
   
  그러나 이런 일반적으로 바쁘지 않은 시간에 비즈니스가 활발하다면 이러한 기본 설정을 변경할 수 있습니다.  
@@ -146,13 +146,13 @@ ms.locfileid: "66433345"
 2.  **장치 작업**에서 **컴퓨터 백업 및 파일 히스토리 설정 사용자 지정**을 클릭합니다.  
   
     > [!NOTE]
-    >  Windows Server Essentials에서이 작업 바뀌었습니다 **클라이언트 컴퓨터 백업 작업**합니다.  
+    >  Windows Server Essentials에서이 작업의 이름이 **클라이언트 컴퓨터 백업 작업**으로 바뀌었습니다.  
   
 3.  **클라이언트 컴퓨터 백업 설정 및 도구**의 **컴퓨터 백업** 탭에서 요구 사항에 맞게 시작 및 종료 시간을 변경할 수 있습니다.  
   
-4.  **적용**, **확인**을 차례로 클릭합니다.  
+4.  **적용**을 클릭한 다음 **확인**을 클릭합니다.  
   
-##  <a name="BKMK_5"></a> 컴퓨터 백업 보존 정책 변경  
+##  <a name="change-the-computer-backup-retention-policy"></a><a name="BKMK_5"></a>컴퓨터 백업 보존 정책 변경  
  모든 컴퓨터의 일별 백업은 시간이 지나면서 서버에 누적됩니다. 이러한 백업 관리를 도와주기 위한 Windows Server Essentials를 사용하여 컴퓨터 백업의 데이터베이스를 관리할 수 있습니다. 모든 컴퓨터에 대해 유지할 백업 수를 구성할 수 있습니다.  
   
  백업 보존 정책에 따라 백업 정리 프로세스에서 삭제하기 전에 백업을 유지하는 기간이 결정됩니다. 백업 정리는 매주 토요일 오후 11시 59분에 실행됩니다. 백업 보존 정책에 해당하지 않는 모든 백업이 삭제됩니다. 백업 보존 정책의 기본값은 다음과 같습니다.  
@@ -172,7 +172,7 @@ ms.locfileid: "66433345"
 3.  **장치 작업** 창에서 **컴퓨터 백업 및 파일 기록 설정 사용자 지정**을 클릭합니다.  
   
     > [!NOTE]
-    >  Windows Server Essentials에서이 작업 바뀌었습니다 **클라이언트 컴퓨터 백업 작업**합니다.  
+    >  Windows Server Essentials에서이 작업의 이름이 **클라이언트 컴퓨터 백업 작업**으로 바뀌었습니다.  
   
 4.  **클라이언트 컴퓨터 백업 설정 및 도구**의 **클라이언트 컴퓨터 백업 보존 정책** 섹션에서 보존 정책을 요구 사항에 맞게 변경합니다.  
   
@@ -181,7 +181,7 @@ ms.locfileid: "66433345"
     > [!NOTE]
     >  업데이트된 보존 정책은 백업하도록 구성된 네트워크의 모든 클라이언트 컴퓨터에 적용됩니다.  
   
-##  <a name="BKMK_6"></a> 백업 기본 설정으로 다시 설정  
+##  <a name="reset-backup-to-default-settings"></a><a name="BKMK_6"></a>기본 설정으로 백업 다시 설정  
  클라이언트 컴퓨터에 대한 백업이 구성되고 나서 네트워크 관리자가 다른 기간을 지정했을 수 있습니다. 마찬가지로 관리자가 기본값보다 더 길거나 더 짧은 백업 보존 시간을 지정했을 수 있습니다. **기본값으로 다시 설정** 단추를 사용하여 초기 백업 구성 중에 제공된 기본값으로 백업 기간 및 보존 정책을 다시 설정할 수 있습니다.  
   
  기본값은 다음과 같습니다.  
@@ -194,7 +194,7 @@ ms.locfileid: "66433345"
   
 -   해당 주의 마지막 백업이 유지되는 기간(주): 4주  
   
--   해당 월의 마지막 백업이 유지되는 기간(월): 6개월  
+-   해당 월의 마지막 백업이 유지되는 기간(월): 6월  
   
 #### <a name="to-reset-computer-backup-to-the-default-settings"></a>컴퓨터 백업을 기본 설정으로 다시 설정하려면  
   
@@ -203,16 +203,16 @@ ms.locfileid: "66433345"
 2.  **장치 작업**에서 **컴퓨터 백업 및 파일 히스토리 설정 사용자 지정**을 클릭합니다.  
   
     > [!NOTE]
-    >  Windows Server Essentials에서 클릭 **클라이언트 컴퓨터 백업 작업**합니다.  
+    >  Windows Server Essentials에서 **클라이언트 컴퓨터 백업 작업**을 클릭 합니다.  
   
 3.  **클라이언트 컴퓨터 및 백업 설정 및 도구** 페이지의 **컴퓨터 백업** 탭에서 **기본값으로 다시 설정**을 클릭합니다.  
   
     > [!NOTE]
     >  기본 설정으로 다시 설정하면 사용자 지정된 일정 및 보존 정책 설정이 제거되므로 설정을 적어 두는 것이 좋습니다.  
   
-4.  **적용**, **확인**을 차례로 클릭합니다.  
+4.  **적용**을 클릭한 다음 **확인**을 클릭합니다.  
   
-##  <a name="BKMK_7"></a> 복구 도구 사용  
+##  <a name="use-repair-and-recovery-tools"></a><a name="BKMK_7"></a>복구 및 복구 도구 사용  
  **백업 복구:** 컴퓨터 백업 데이터베이스가 어떤 이유로 손상되거나 사용할 수 없게 되면 백업 데이터베이스 복구 마법사를 사용하여 데이터베이스 복구를 시도할 수 있습니다. 마법사에서는 백업 파일을 분석하여 복구할 수 있는 문제가 있는지 확인합니다. 그런 다음 발견된 문제를 모두 수정하려고 합니다.  
   
 > [!WARNING]
@@ -220,7 +220,7 @@ ms.locfileid: "66433345"
   
  **컴퓨터 복구:** 기존 백업에서 컴퓨터를 복원하는 데 사용할 부팅 가능한 USB 플래시 드라이브를 만들 수 있습니다. 1GB 이상 USB 플래시 드라이브를 사용해야 합니다. 부팅 가능한 USB 플래시 드라이브를 만들고 나서 복원할 컴퓨터에 삽입하고 USB 플래시 드라이브로 부팅하여 전체 시스템 복원 프로세스를 시작합니다.  
   
-##  <a name="BKMK_8"></a> 백업 데이터베이스 복구  
+##  <a name="repair-the-backup-database"></a><a name="BKMK_8"></a>백업 데이터베이스를 복구 합니다.  
  컴퓨터 백업 데이터베이스에 문제가 있음을 알리는 경고가 표시되면 백업 데이터베이스를 복구할 수 있습니다.  
   
 #### <a name="to-repair-the-backup-database"></a>백업 데이터베이스를 복구하려면  
@@ -232,7 +232,7 @@ ms.locfileid: "66433345"
 3.  **장치 작업** 창에서 **컴퓨터 백업 및 파일 기록 설정 사용자 지정**을 클릭합니다.  
   
     > [!NOTE]
-    >  Windows Server Essentials에서 클릭 **클라이언트 컴퓨터 백업 작업**합니다.  
+    >  Windows Server Essentials에서 **클라이언트 컴퓨터 백업 작업**을 클릭 합니다.  
   
 4.  **클라이언트 컴퓨터 백업 설정 및 도구**에서 **도구** 탭을 클릭합니다.  
   
@@ -243,7 +243,7 @@ ms.locfileid: "66433345"
 7.  백업 데이터베이스 크기에 따라 데이터베이스 복구에 몇 시간이 걸릴 수 있습니다. **닫기**, **확인**을 차례로 클릭하여 **컴퓨터 백업 및 파일 기록 설정 사용자 지정** 페이지를 닫습니다.  
   
     > [!NOTE]
-    >  Windows Server Essentials에서 클릭 **클라이언트 컴퓨터 백업 설정 및 도구**합니다.  
+    >  Windows Server Essentials에서 **클라이언트 컴퓨터 백업 설정 및 도구**를 클릭 합니다.  
   
 #### <a name="to-review-the-results-of-the-backup-database-repair"></a>백업 데이터베이스 복구의 결과를 검토하려면  
   
@@ -254,13 +254,13 @@ ms.locfileid: "66433345"
 3.  **장치 작업** 창에서 **컴퓨터 백업 및 파일 기록 설정 사용자 지정**을 클릭합니다.  
   
     > [!NOTE]
-    >  Windows Server Essentials에서 클릭 **클라이언트 컴퓨터 백업 작업**합니다.  
+    >  Windows Server Essentials에서 **클라이언트 컴퓨터 백업 작업**을 클릭 합니다.  
   
 4.  **클라이언트 컴퓨터 백업 설정 및 도구**에서 **도구** 탭을 클릭합니다.  
   
 5.  결과는 **백업 복구** 섹션에 표시됩니다.  
   
-##  <a name="BKMK_9"></a> 컴퓨터에 대 한 백업을 사용 하지 않도록 설정  
+##  <a name="disable-backup-for-a-computer"></a><a name="BKMK_9"></a>컴퓨터에 대해 백업 사용 안 함  
  대시보드를 사용하여 네트워크의 컴퓨터에 대한 백업을 사용하지 않도록 손쉽고 빠르게 설정할 수 있습니다.  
   
 #### <a name="to-disable-backup-for-a-computer"></a>컴퓨터에 대한 백업을 사용하지 않도록 설정하려면  
@@ -277,16 +277,16 @@ ms.locfileid: "66433345"
   
 6. **변경 내용 저장**, **닫기**를 차례로 클릭합니다.  
   
-   백업을 사용하지 않도록 설정된 컴퓨터에 대해 백업을 사용하도록 설정하는 방법에 대한 자세한 내용은 [Set up backup for a client computer](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_3)을 참조하세요.  
+   백업을 사용하지 않도록 설정된 컴퓨터에 대해 백업을 사용하도록 설정하는 방법에 대한 자세한 내용은 [클라이언트 컴퓨터에 대한 백업 설정](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_3)을 참조하세요.  
   
-##  <a name="BKMK_10"></a> 백업 정리 작업 실행  
+##  <a name="run-the-backup-cleanup-task"></a><a name="BKMK_10"></a>백업 정리 작업 실행  
  클라이언트 컴퓨터 백업 정리 작업은 모든 백업이 완료되고 나서 매주 토요일 오후 11시 59분에 실행되도록 예약되어 있습니다. 정리 작업을 수행하면 백업 보존 정책에 따라 클라이언트 컴퓨터 백업 데이터베이스에서 백업이 삭제됩니다. 백업 보존 정책의 기본 설정은 다음과 같습니다.  
   
 - 일별 백업이 유지되는 기간(일): 5일  
   
 - 해당 주의 마지막 백업이 유지되는 기간(주): 4주  
   
-- 해당 월의 마지막 백업이 유지되는 기간(월): 6개월  
+- 해당 월의 마지막 백업이 유지되는 기간(월): 6월  
   
   백업 보존 정책을 변경하는 방법에 대한 자세한 내용은 [컴퓨터 백업 보존 정책 변경](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_5)을 참조하세요.  
   
@@ -298,9 +298,9 @@ ms.locfileid: "66433345"
   
 3.  작업 Scheduler에서 **작업 Scheduler 라이브러리**, **Microsoft**, **Windows**를 차례로 확장하고 **Windows Server Essentials**를 클릭합니다.  
   
-4.  **백업 정리** 작업을 클릭하고 **작업** 창에서 **실행**을 클릭합니다. 상태는 작업이 완료될 때까지 **실행 중** 으로 변경됩니다.  
+4.  **백업 정리** 작업을 클릭하고 **작업** 창에서 **실행**을 클릭합니다. 상태는 작업이 완료될 때까지 **실행 중**으로 변경됩니다.  
   
-##  <a name="BKMK_11"></a> 클라이언트 컴퓨터에서 작업 표시줄에서 경고 보기  
+##  <a name="view-alerts-in-the-task-bar-on-a-client-computer"></a><a name="BKMK_11"></a>클라이언트 컴퓨터의 작업 표시줄에서 경고 보기  
  다음과 같은 경우에 컴퓨터의 작업 표시줄에 백업 알림이 표시될 수 있습니다.  
   
 -   백업이 시작된 경우.  
@@ -309,9 +309,9 @@ ms.locfileid: "66433345"
   
 -   최근에 성공한 백업이 없는 경우. 마지막으로 성공한 백업 이후 경과된 일수가 알림에 포함됩니다.  
   
--    Windows Server Essentials에만 해당: 새 볼륨이 컴퓨터에 추가되는 경우. 네트워크 관리자는 백업 사용자 지정 마법사를 실행하여 향후 백업을 위해 볼륨을 포함하거나 제외해야 합니다.  
+-    Windows Server Essentials에만 해당: 새 볼륨이 컴퓨터에 추가 됩니다. 네트워크 관리자는 백업 사용자 지정 마법사를 실행하여 향후 백업을 위해 볼륨을 포함하거나 제외해야 합니다.  
   
-##  <a name="BKMK_12"></a> 실행 패드에서 백업 상태 보기  
+##  <a name="view-backup-status-from-the-launchpad"></a><a name="BKMK_12"></a>실행 패드에서 백업 상태 보기  
  실행 패드를 사용하여 컴퓨터에 대한 빠른 백업 상태를 확인합니다.  
   
 > [!TIP]
@@ -334,7 +334,7 @@ ms.locfileid: "66433345"
     -   **연결할 수 없음**: 백업이 Windows Server Client Computer Backup Provider Service에 연결할 수 없습니다.  
   
         > [!NOTE]
-        >  이 서비스를 Windows Server Essentials에서 Windows Server Essentials Client Computer Management Service를 변경 합니다.  
+        >  Windows Server Essentials에서는이 서비스의 이름이 Windows Server Essentials Client Computer Management Service로 바뀌었습니다.  
   
     -   **백업 진행 중**: 완료된 백업 비율을 표시합니다.  
   
@@ -348,7 +348,7 @@ ms.locfileid: "66433345"
   
 4.  **확인**을 클릭하여 **백업 속성** 대화 상자를 닫습니다.  
   
-##  <a name="BKMK_13"></a> 실행 패드에서 진행 중인 백업을 중지합니다  
+##  <a name="stop-a-backup-in-progress-from-the-launchpad"></a><a name="BKMK_13"></a>실행 패드에서 진행 중인 백업 중지  
  진행 중인 백업을 쉽게 중지할 수 있습니다.  
   
 #### <a name="to-stop-a-backup-in-progress"></a>진행 중인 백업을 중지하려면  
@@ -360,13 +360,13 @@ ms.locfileid: "66433345"
   
 2.  **백업**을 클릭합니다.  
   
-3.  백업이 진행 중이면 **백업 속성** 대화 상자의 **백업 상태** 섹션에서 **백업 시작** 단추가 **백업 중지** 로 변경됩니다. **백업 중지**를 클릭하고 **예** 를 클릭하여 확인합니다. 백업은 **예**를 클릭할 때까지 계속 실행됩니다.  
+3.  백업이 진행 중이면 **백업 속성** 대화 상자의 **백업 상태** 섹션에서 **백업 시작** 단추가 **백업 중지** 로 변경됩니다. **백업 중지**를 클릭하고 **예**를 클릭하여 확인합니다. 백업은 **예**를 클릭할 때까지 계속 실행됩니다.  
   
 4.  진행 중인 백업을 중지하면 상태가 **백업이 취소됨** 으로 변경되고 백업이 시작된 날짜 및 시간이 표시됩니다. **성공**, **완료 안 됨** 또는 **실패** 상태가 표시되면 마지막 백업이 이미 완료된 것입니다.  
   
 5.  **확인**을 클릭하여 **백업 속성** 대화 상자를 닫습니다.  
   
-##  <a name="BKMK_14"></a> 실행 패드에서 백업 시작  
+##  <a name="start-a-backup-from-the-launchpad"></a><a name="BKMK_14"></a>실행 패드에서 백업 시작  
  서버에서 설정된 정기적으로 예약된 백업 시간 전에 파일과 폴더를 백업하려는 경우가 있을 수 있습니다. 실행 패드를 사용하여 컴퓨터 백업을 수동으로 시작할 수 있습니다.  
   
 #### <a name="to-start-a-backup"></a>백업을 시작하려면  
@@ -388,7 +388,7 @@ ms.locfileid: "66433345"
   
 7.  **확인**을 클릭하여 **백업 속성** 대화 상자를 닫습니다.  
   
-##  <a name="BKMK_15"></a> 컴퓨터 백업 작동 방식  
+##  <a name="how-computer-backup-works"></a><a name="BKMK_15"></a>컴퓨터 백업 작동 방법  
  매일 백업하는 동안 다음 작업이 수행됩니다.  
   
 -   네트워크 컴퓨터가 차례로 백업됩니다.  
@@ -402,12 +402,12 @@ ms.locfileid: "66433345"
 > [!IMPORTANT]
 >  VSS(볼륨 섀도 복사본 서비스)에서는 같은 스냅샷 집합에서 가상 볼륨 및 호스트 볼륨의 섀도 복사본을 만드는 기능을 지원하지 않습니다. VSS는 가상 볼륨 백업이 필요할 경우 VHD(가상 하드 디스크)에서 볼륨의 스냅샷을 만드는 기능을 지원합니다. 자세한 내용은 [Servicing and Backing Up Virtual Hard Disks(가상 하드 디스크 서비스 및 백업)](https://go.microsoft.com/fwlink/p/?LinkId=256577)를 참조하세요.  
   
-##  <a name="BKMK_16"></a> 클라이언트 백업 데이터베이스의 손상으로 인 한 데이터 손실을 방지 하기 위한 팁  
+##  <a name="tips-to-help-prevent-data-loss-due-to-corruption-of-the-client-backup-database"></a><a name="BKMK_16"></a>클라이언트 백업 데이터베이스의 손상으로 인 한 데이터 손실을 방지 하는 데 유용한 팁  
  클라이언트 백업 데이터베이스가 손상되면 중요한 데이터가 손실될 수 있습니다.  
   
  클라이언트 백업 데이터베이스의 손상으로 인한 데이터 손실을 방지하려면 다음을 고려합니다.  
   
--   클라이언트 백업 데이터베이스를 백업하는 다른 방법을 추가로 사용하도록 설정합니다. 예를 들어,를 실행 하는 Windows Server essentials 버전에 따라 사용 하 여 Microsoft Azure Backup Server 백업, 온라인 백업 데이터베이스를 백업 하 합니다.  
+-   클라이언트 백업 데이터베이스를 백업하는 다른 방법을 추가로 사용하도록 설정합니다. 예를 들어 실행 중인 Windows Server Essentials 버전에 따라 서버 백업, 온라인 백업 또는 Microsoft Azure Backup를 사용 하 여 데이터베이스를 백업 합니다.  
   
     > [!IMPORTANT]
     >  **클라이언트 컴퓨터 백업** 폴더의 모든 파일을 백업하도록 선택해야 합니다.  
@@ -416,13 +416,13 @@ ms.locfileid: "66433345"
   
 -   클라이언트 백업 데이터베이스를 정리하거나 복원하기 전에 현재 진행 중인 모든 클라이언트 백업을 중지해야 합니다.  
   
-     Windows Server Essentials를 실행 하는 경우 Windows Server Client Computer Backup Service 및 Windows Server Client Computer Backup Provider Service도 중지 해야 합니다.  
+     Windows Server Essentials를 실행 하는 경우 windows Server Client computer Backup Service 및 Windows Server Client Computer Backup Provider Service도 중지 해야 합니다.  
   
      Windows Server Essentials를 실행 하는 경우 Windows Server Computer Backup Service도 중지 해야 합니다.  
   
      복원 작업을 완료하고 나서 서비스를 다시 시작합니다.  
   
-##  <a name="BKMK_17"></a> 클라이언트 컴퓨터 백업에서 파일 또는 폴더 복원  
+##  <a name="restore-files-or-folders-from-a-client-computer-backup"></a><a name="BKMK_17"></a>클라이언트 컴퓨터 백업에서 파일 또는 폴더 복원  
  백업에서 개별 파일과 폴더를 찾아서 복원할 수 있습니다.  
   
 > [!NOTE]
@@ -433,7 +433,7 @@ ms.locfileid: "66433345"
   
 #### <a name="to-restore-files-and-folders"></a>파일과 폴더를 복원하려면  
   
-1.  클라이언트 컴퓨터에서 **대시보드** 를 엽니다.  
+1.  클라이언트 컴퓨터에서 **대시보드**를 엽니다.  
   
 2.  **장치** 탭을 클릭합니다.  
   
@@ -441,27 +441,27 @@ ms.locfileid: "66433345"
   
 4.  마법사의 지시를 따릅니다.  
   
-##  <a name="BKMK_FileHistory"></a> 파일 히스토리 이해  
+##  <a name="understanding-file-history"></a><a name="BKMK_FileHistory"></a>파일 기록 이해  
  Windows Server Essentials의 파일 히스토리 기능을 사용하면 파일 히스토리 기능이 있는 네트워크 컴퓨터의 라이브러리, 연락처, 바탕 화면 및 즐겨찾기 폴더에 있는 파일이 자동으로 백업됩니다. 원본이 손실되거나 손상되거나 삭제된 경우 원본을 복원할 수 있습니다. 특정 시점의 다양한 파일 버전을 찾을 수도 있습니다. 시간이 지나면서 전체 파일 히스토리를 보유하게 됩니다.  
   
- Windows Server essentials에서에서 파일 히스토리 설정을 사용자 지정할 수는 **파일 히스토리** 페이지 **클라이언트 컴퓨터 백업 설정 및 도구**합니다.  
+ Windows Server Essentials에서 **클라이언트 컴퓨터 백업 설정 및 도구**의 **파일 히스토리** 페이지에서 파일 히스토리 설정을 사용자 지정할 수 있습니다.  
   
- Windows Server Essentials를 사용자 지정할 수 있습니다 파일 기록 설정으로 이동 하 여 합니다 **사용자** 탭을 선택 하는 **파일 히스토리 설정 변경** 작업 합니다.  
+ Windows Server Essentials에서는 **사용자** 탭으로 이동 하 고 **파일 히스토리 설정 변경** 작업을 선택 하 여 파일 히스토리 설정을 사용자 지정할 수 있습니다.  
   
  파일 히스토리 페이지에서는 다음 옵션을 제공합니다.  
   
-|백업 설정|기본값|설명|  
+|백업 설정|기본|설명|  
 |--------------------|-------------|-----------------|  
 |켜기/끄기|켜짐|Windows Server Essentials를 설치하면 파일 히스토리가 기본적으로 켜집니다.|  
-|백업 데이터|문서 및 바탕 화면|다양한 백업 솔루션을 지정할 수 있는 미리 구성된 세 가지 설정이 제공됩니다. 다음 옵션 중 하나를 선택할 수 있습니다.<br /><br /> -문서 및 데스크톱<br /><br /> -모든 라이브러리, 데스크톱, 연락처 및 즐겨찾기<br /><br /> -라이브러리, 데스크톱, 연락처 및 즐겨찾기 음악, 동영상 및 사진 라이브러리의 데이터를 제외한의 모든 데이터|  
-|백업 빈도|1시간마다|파일 히스토리에서 선택한 데이터의 백업을 만드는 빈도를 지정합니다. 10분마다에서 매일에 이르는 여러 옵션 중에서 선택할 수 있습니다.|  
+|백업 데이터|문서 및 바탕 화면|다양한 백업 솔루션을 지정할 수 있는 미리 구성된 세 가지 설정이 제공됩니다. 다음 옵션 중 하나를 선택할 수 있습니다.<br /><br /> -문서 및 바탕 화면<br /><br /> -모든 라이브러리, 바탕 화면, 연락처 및 즐겨찾기<br /><br /> -음악, 비디오 및 사진 라이브러리의 데이터를 제외한 라이브러리, 데스크톱, 연락처 및 즐겨찾기에 있는 모든 데이터|  
+|백업 빈도|매시간|파일 히스토리에서 선택한 데이터의 백업을 만드는 빈도를 지정합니다. 10분마다에서 매일에 이르는 여러 옵션 중에서 선택할 수 있습니다.|  
 |복사본 유지 기간|1년|파일 히스토리에서 백업 복사본을 유지할 시간을 지정합니다.|  
   
  파일 히스토리 문제에 대한 자세한 내용은 [파일 히스토리 문제 해결](../support/Troubleshoot-File-History-in-Windows-Server-Essentials.md)을 참조하세요.  
   
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
   
--   [백업 관리 및 복원](Manage-Backup-and-Restore-in-Windows-Server-Essentials.md)  
+-   [백업 및 복원 관리](Manage-Backup-and-Restore-in-Windows-Server-Essentials.md)  
   
 -   [Windows Server Essentials 관리](Manage-Windows-Server-Essentials.md)  
   

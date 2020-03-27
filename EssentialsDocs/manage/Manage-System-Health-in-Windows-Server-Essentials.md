@@ -3,7 +3,7 @@ title: Windows Server Essentials에서 시스템 상태 관리
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: 3043f83b-389c-4f37-a1ff-85afe99314fa
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: d9002a1530e114f490ddf1cfb0e5706ddec52431
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: bbe05c0564e706ef0227e723a52bd10b2f774756
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79322135"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80311072"
 ---
 # <a name="manage-system-health-in-windows-server-essentials"></a>Windows Server Essentials에서 시스템 상태 관리
 
@@ -44,7 +44,7 @@ ms.locfileid: "79322135"
   
 -   [잠재적인 컴퓨터 경고](Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Potential)  
   
-##  <a name="BKMK_AddIn"></a>상태 보고서 추가 기능 정보  
+##  <a name="about-the-health-report-add-in"></a><a name="BKMK_AddIn"></a>상태 보고서 추가 기능 정보  
  Windows Server Essentials에 대한 상태 보고서 추가 기능은 Windows Server Essentials 네트워크에 대한 통합 정보를 확인하고 다른 사용자에게 배포할 수 있습니다. 이 정보는 대시보드의 **보고서** 탭에서 볼 수 있습니다. **보고서** 탭을 통해 다음을 수행할 수 있습니다.  
   
 -   [요청 시 또는 일정에 따라 보고서 생성](Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Generate)  
@@ -58,19 +58,19 @@ ms.locfileid: "79322135"
 >   
 >  **Windows Server Essentials:** 기본적으로 상태 보고서 추가 기능은 windows server Essentials Experience 역할이 설치 된 windows Server Essentials 또는 Windows Server 2012 r 2와 통합 되 고 상태 보고서는 대시보드 **홈** 페이지의 **상태 보고서** 탭에 표시 됩니다.  
   
-###  <a name="BKMK_Generate"></a>요청 시 또는 일정에 따라 보고서 생성  
+###  <a name="generate-a-report-on-demand-or-on-schedule"></a><a name="BKMK_Generate"></a>요청 시 또는 일정에 따라 보고서 생성  
  상태 보고서 추가 기능을 설치하고 대시보드를 다시 시작하고 나면 **보고서** 탭이 대시보드에 추가됩니다. **보고서** 탭에서 **상태 보고서 생성** 작업을 클릭하여 필요할 때 언제든지 상태 보고서를 생성할 수 있습니다.  
   
  상태 보고서가 생성되고 나면 새 항목이 목록 창에 생성되고 보고서가 생성된 날짜와 시간별로 식별됩니다. 항목을 열려면 목록 창에서 항목을 두 번 클릭하거나 항목을 선택한 다음 작업 창에서 **상태 보고서 열기**를 클릭합니다. 보고서는 새 창에 HTML 형식으로 표시됩니다.  
   
  보고서는 수동으로 생성할 뿐만 아니라 매일 또는 매시간 일정에 따라 자동으로 생성할 수도 있습니다. 이렇게 하려면 작업 창에서 **상태 보고서 설정 사용자 지정**을 클릭 한 다음 **일정 및 전자 메일** 탭을 클릭 합니다. **일정** 기능은 기본적으로 해제 되어 있으며 **예약 된 시간에 상태 보고서 생성** 확인란을 선택 하 여 설정할 수 있습니다.  
   
-###  <a name="BKMK_Customize"></a>보고서 콘텐츠 사용자 지정  
+###  <a name="customize-the-content-of-the-report"></a><a name="BKMK_Customize"></a>보고서 콘텐츠 사용자 지정  
  상태 보고서에는 다음이 포함됩니다.  
   
 - **중요한 알림 및 경고** 대시보드의 경고 뷰어에 표시되는 중요한 알림과 경고와 일치합니다. 정보 경고는 상태 보고서에 포함되지 않습니다.  
   
-- **이벤트 로그에 있는 중대 오류** 애플리케이션과 서비스 로그가 검색되고 최근 24시간 동안 기록된 오류가 보고서의 **세부 정보** 섹션에 제공됩니다.  
+- **이벤트 로그에 있는 중대 오류** 응용 프로그램과 서비스 로그가 검색되고 최근 24시간 동안 기록된 오류가 보고서의 **세부 정보** 섹션에 제공됩니다.  
   
 - **서버 백업** 마지막 서버 백업에 대한 정보가 보고서의 **세부 정보** 섹션에 제공됩니다.  
   
@@ -78,20 +78,20 @@ ms.locfileid: "79322135"
   
 - **업데이트** **세부 정보** 섹션에서 서버 및 모든 클라이언트 컴퓨터의 업데이트 상태를 확인할 수 있습니다.  
   
-- **스토리지** 드라이브 및 해당 용량 목록이 **세부 정보** 섹션에 제공됩니다.  
+- **저장소** 드라이브 및 해당 용량 목록이 **세부 정보** 섹션에 제공됩니다.  
   
   상태 보고서에서 먼저 **요약**을 확인하고 빨간색 오류 아이콘이나 노란색 경고 아이콘이 있는 항목에 대해 같은 행에서 **세부 정보** 링크를 클릭하여 항목에 대한 세부 정보를 확인합니다.  
   
   기본적으로 보고서에 포함 되는 데이터 요소 중 일부에 관심이 없으면 작업 창에서 **상태 보고서 설정 사용자 지정** 을 클릭 하 고 **콘텐츠** 탭을 클릭 하 여 보고서의 내용을 사용자 지정할 수 있습니다. 보고서에 표시 하지 않을 콘텐츠의 확인란을 선택 취소 합니다. 예를 들어 고유한 서버 백업 계획이 있고 서버 백업에 대 한 경고를 표시 하지 않으려면 서버 **백업** 확인란의 선택을 취소 하 여 보고서에서 서버 백업을 제외할 수 있습니다.  
   
-###  <a name="BKMK_emailreport"></a>보고서를 전자 메일로 보내기  
+###  <a name="email-the-report"></a><a name="BKMK_emailreport"></a>보고서를 전자 메일로 보내기  
  보고서를 읽으려고 대시보드에 로그온해야 하는 것은 특히 관리할 서버가 두 대 이상 있는 관리자에게 불편한 일입니다. 전자 메일 기능이 켜져 있으면 보고서가 생성되고 나서 보고서 콘텐츠가 포함된 전자 메일이 지정된 전자 메일 주소 목록으로 발송됩니다. 관리자는 모든 장치 또는 클라이언트 응용 프로그램에서 이 보고서를 손쉽게 보고 서버가 최적 상태로 실행 중인지 확인할 수 있습니다.  
   
  **상태 보고서 설정 사용자 지정** 대화 상자에서 메일을 사용하도록 설정하고 SMTP 설정을 변경하고 메일 받는 사람 목록을 지정하고 나면 작업 창에 새 작업 **상태 보고서를 메일로 보내기**가 표시됩니다. SMTP 설정에 대한 자세한 내용은 [경고에 대한 전자 메일 알림 설정](Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Email)을 참조하세요.  
   
  기존 보고서를 선택하고 **상태 보고서를 전자 메일로 보내기**를 클릭합니다. 새 보고서를 생성하고 받은 편지함에 자동으로 전송되도록 설정할 수도 있습니다. 보고서를 자동으로 생성할 일정을 구성하면 보고서가 일정에 따라 매일(또는 매시간) 생성되고 나서 받은 편지함으로 자동으로 배달됩니다.  
   
-##  <a name="BKMK_View"></a>경고 뷰어를 사용 하 여 경고 보기  
+##  <a name="view-alerts-by-using-the-alert-viewer"></a><a name="BKMK_View"></a>경고 뷰어를 사용 하 여 경고 보기  
  이 섹션에서는 대시보드나 실행 패드를 통해 경고 뷰어를 열어 서버 네트워크에 있는 모든 컴퓨터의 상태를 보는 방법을 설명합니다.  
   
 #### <a name="to-open-the-alert-viewer-by-using-the-dashboard"></a>대시보드를 사용하여 경고 뷰어를 열려면  
@@ -106,7 +106,7 @@ ms.locfileid: "79322135"
   
 2.  실행 패드 아래쪽에서 표시된 경고 아이콘(위험, 경고 및 정보)을 클릭하여 경고 뷰어를 열고 경고 뷰어 세부 정보 창의 지침에 따라 경고를 해결합니다.  
   
-##  <a name="BKMK_Organize"></a>경고 뷰어에서 경고 구성  
+##  <a name="organize-alerts-in-the-alert-viewer"></a><a name="BKMK_Organize"></a>경고 뷰어에서 경고 구성  
  경고 뷰어에서 경고를 구성하고 심각도(위험, 경고 또는 정보)에 따라 또는 컴퓨터 이름에 따라 표시되도록 설정할 수 있습니다.  
   
 #### <a name="to-organize-alerts-in-the-alert-viewer"></a>경고 뷰어에서 경고를 구성하려면  
@@ -121,7 +121,7 @@ ms.locfileid: "79322135"
   
     2.  **경고 유형별 필터링**을 선택하고 경고를 보려는 경고 유형(위험, 경고 또는 정보)을 클릭합니다. 경고 뷰어에 선택한 경고 유형만 표시됩니다.  
   
-##  <a name="BKMK_Respond"></a>경고에 응답  
+##  <a name="respond-to-alerts"></a><a name="BKMK_Respond"></a>경고에 응답  
  경고가 발생하면 다음의 하나를 수행하도록 선택할 수 있습니다.  
   
 -   [경고 해결](Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Resolve)  
@@ -132,10 +132,10 @@ ms.locfileid: "79322135"
   
 -   [경고 삭제](Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_4)  
   
-###  <a name="BKMK_Resolve"></a>경고 해결  
+###  <a name="resolve-an-alert"></a><a name="BKMK_Resolve"></a>경고 해결  
  경고 뷰어의 해결 지침에 따라 경고를 해결합니다. 경고는 해결되고 나서도 새로 고칠 때까지 경고 뷰어에 표시됩니다.  
   
-###  <a name="BKMK_3"></a>경고 무시  
+###  <a name="ignore-an-alert"></a><a name="BKMK_3"></a>경고 무시  
  경고에 나중에 응답하려면 경고를 무시하도록 선택할 수 있습니다. 경고를 무시하면 경고가 경고 뷰어에 계속 나열되지만 사용하지 않도록 설정되고 흐리게 표시됩니다. 무시한 경고는 컴퓨터의 전체 상태 평가에 포함되지 않습니다. 무시된 경고를 해결하려면 먼저 경고를 사용하도록 설정해야 합니다.  
   
 ##### <a name="to-ignore-an-alert"></a>경고를 무시하려면  
@@ -148,7 +148,7 @@ ms.locfileid: "79322135"
   
    사용되지 않는 경고에 응답하려면 먼저 경고를 사용하도록 설정해야 합니다.  
   
-###  <a name="BKMK_5"></a>경고 사용  
+###  <a name="enable-an-alert"></a><a name="BKMK_5"></a>경고 사용  
  이전에 무시하도록 선택한 경고를 사용하도록 선택할 수 있습니다. 경고를 사용하도록 설정하고 나서 필요에 따라 경고를 해결하거나 삭제할 수 있습니다. 경고는 무시하도록 표시되면 사용 안 함으로 나타납니다. 이전에 사용하지 않도록 설정한 경고를 사용하도록 설정하면 경고가 활성화되고 컴퓨터의 전체 상태 평가에 다시 포함됩니다.  
   
 ##### <a name="to-enable-an-alert"></a>경고를 설정하려면 다음을 수행하십시오.  
@@ -159,7 +159,7 @@ ms.locfileid: "79322135"
   
 3.  경고 뷰어에서 사용하도록 설정할 경고를 마우스 오른쪽 단추로 클릭하고 **경고를 사용하도록 설정합니다.** 를 클릭합니다.  
   
-###  <a name="BKMK_4"></a>경고 삭제  
+###  <a name="delete-an-alert"></a><a name="BKMK_4"></a>경고 삭제  
  경고를 해결하거나 무시하지 않고 삭제할 수도 있습니다. 실행 패드에서 경고 뷰어를 사용하여 컴퓨터에 대해 생성된 경고를 삭제할 수 있습니다. 경고를 삭제하고 서버에서 다음 네트워크 상태 평가 주기에 문제를 다시 발견하면 새 경고가 생성됩니다.  
   
 ##### <a name="to-delete-an-alert"></a>경고를 삭제하려면  
@@ -170,14 +170,14 @@ ms.locfileid: "79322135"
   
 3.  경고 뷰어에서 삭제할 경고를 마우스 오른쪽 단추로 클릭하고 **경고를 삭제합니다.** 를 클릭합니다.  
   
-##  <a name="BKMK_Email"></a>경고에 대 한 전자 메일 알림 설정  
+##  <a name="set-up-email-notifications-for-alerts"></a><a name="BKMK_Email"></a>경고에 대 한 전자 메일 알림 설정  
  전자 메일을 통해 경고 발생에 대해 알리도록 서버를 구성할 수 있습니다. 이러한 경고에 대한 전자 메일 알림에는 네트워크 문제 및 해결 단계에 대한 정보가 포함되고, 이 정보는 경고 뷰어에 표시되는 정보와 동일합니다. 일부 네트워크 상태 평가는 프로그래밍 방식으로 이루어집니다.  
   
  전자 메일로 경고 알림을 보내도록 서버를 구성하면 네트워크 상태 평가 중에 발견된 경고에 대한 전자 메일 알림이 전송됩니다. 그러나 경고 뷰어에 보고된 일부 경고는 전자 메일로 보고되지 않습니다.  
   
  30분마다 네트워크에 경고가 있는지 평가하는 경고 전자 메일 평가 작업이 서버에서 실행됩니다. 전자 메일 알림을 보내도록 설정된 경고가 발생하면 전자 메일 알림이 전송됩니다. 해당 경고가 다음 평가 주기에도 계속 활성 상태이면 사서함 넘침을 방지하도록 두 번째 전자 메일이 전송되지 않습니다. 그러나 미래 경고 평가 주기 안에 새 경고가 발견되면 새 경고와 이전 경고를 포함하는 전자 메일 알림이 전송됩니다.  
   
-###  <a name="BKMK_list"></a>전자 메일 알림을 생성 하는 경고  
+###  <a name="alerts-that-result-in-email-notifications"></a><a name="BKMK_list"></a>전자 메일 알림을 생성 하는 경고  
  경고 뷰어의 다음 경고는 경고에 대한 전자 메일 알림을 보내도록 서버를 설정할 때 전자 메일 알림이 생성됩니다.  
   
 -   클라이언트 컴퓨터 백업에 오류가 있습니다.  
@@ -224,7 +224,7 @@ ms.locfileid: "79322135"
   
 -   라이선스 오류: 적용 로드 정책입니다.  
   
--   라이선스 오류: Active Directory Domain Services입니다.  
+-   라이선스 오류: Active Directory 도메인 서비스입니다.  
   
 -   Office 365 구독이 만료되었습니다.  
   
@@ -260,7 +260,7 @@ ms.locfileid: "79322135"
   
 -   드라이브 하나 이상이 작동하지 않고 오프라인 상태입니다.  
   
-###  <a name="BKMK_SMTP"></a>Windows Server Essentials에서 전자 메일로 경고 알림을 보내도록 서버의 SMTP 구성  
+###  <a name="configuring-smtp-on-your-server-to-send-alert-notifications-by-email-in-windows-server-essentials"></a><a name="BKMK_SMTP"></a>Windows Server Essentials에서 전자 메일로 경고 알림을 보내도록 서버의 SMTP 구성  
  이 섹션에서는 경고에 대한 전자 메일 알림을 보내도록 서버를 구성하는 방법을 설명합니다.  
   
 > [!NOTE]
@@ -352,7 +352,7 @@ ms.locfileid: "79322135"
   
 7.  전자 메일을 통해 상태 보고서를 보내도록 SMTP 서버 설정을 제대로 구성했는지 확인하려면 대시보드의 상태 보고서 탭에서 보고서를 선택하고 작업 창에서 **상태 보고서를 전자 메일로 보내기**를 클릭합니다.  
   
-##  <a name="BKMK_Potential"></a>잠재적인 컴퓨터 경고  
+##  <a name="potential-computer-alerts"></a><a name="BKMK_Potential"></a>잠재적인 컴퓨터 경고  
  이 섹션에서는 서버에 연결되고 컴퓨터의 실행 패드에 나타나는 컴퓨터와 관련된 경고 및 이 경고를 관리하는 방법에 대해 설명합니다.  
   
  다음 표에는 컴퓨터에 적용할 수 있는 경우 경고 뷰어에서 생성 및 표시될 수 있는 일부 컴퓨터 경고가 나열됩니다.  
@@ -360,8 +360,8 @@ ms.locfileid: "79322135"
 |경고 제목|경고 영향 및 해결|  
 |-----------------|---------------------------------|  
 |네트워크 방화벽의 현재 상태에서는 이 컴퓨터에 대한 보호가 약화됩니다.|Windows 방화벽이 꺼져 있으면 인증되지 않은 사용자나 소프트웨어가 이 컴퓨터에 액세스할 수 있습니다.|  
-|바이러스 보호가 꺼져 있거나 설치되지 않았거나 최신 버전이 아닙니다.|**바이러스 방지** 보안 설정이 꺼져 있거나 업데이트되지 않으면 컴퓨터의 데이터가 위험에 노출됩니다. [To protect your computer](Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Protect)표시된 단계를 수행합니다.|  
-|스파이웨어 및 사용자 동의 없이 설치된 소프트웨어 보호가 꺼져 있거나 설치되어 있지 않거나 최신 버전이 아닙니다.|**스파이웨어 및 사용자 동의 없이 설치된 소프트웨어 방지**가 꺼져 있거나 업데이트되지 않으면 컴퓨터의 데이터가 위험에 노출됩니다. [To protect your computer](Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Protect)표시된 단계를 수행합니다.|  
+|바이러스 보호가 꺼져 있거나 설치되지 않았거나 최신 버전이 아닙니다.|**바이러스 방지** 보안 설정이 꺼져 있거나 업데이트되지 않으면 컴퓨터의 데이터가 위험에 노출됩니다. [컴퓨터를 보호하려면](Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Protect) 표시된 단계를 수행합니다.|  
+|스파이웨어 및 사용자 동의 없이 설치된 소프트웨어 보호가 꺼져 있거나 설치되어 있지 않거나 최신 버전이 아닙니다.|**스파이웨어 및 사용자 동의 없이 설치된 소프트웨어 방지**가 꺼져 있거나 업데이트되지 않으면 컴퓨터의 데이터가 위험에 노출됩니다. [컴퓨터를 보호하려면](Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Protect) 표시된 단계를 수행합니다.|  
 |Windows 업데이트가 꺼져 있습니다.|Windows 업데이트가 켜져 있어야 새로운 기능과 수정된 기능을 사용할 수 있습니다. Windows 업데이트를 켜려면 경고 뷰어에서 **Windows 업데이트 열기**를 클릭합니다.<br /><br /> **Windows 업데이트 열기** 작업이 표시되지 않으면 경고가 발생한 컴퓨터에 로그온되지 않은 것입니다. 경고 뷰어에서 이 작업을 실행하려면 경고가 발생한 컴퓨터에 로그온해야 합니다.|  
 |중요 업데이트를 설치해야 합니다.|Windows 업데이트가 켜져 있어야 새로운 기능과 수정된 기능을 사용할 수 있습니다. Windows 업데이트를 켜려면 경고 뷰어에서 **Windows 업데이트 열기**를 클릭합니다.<br /><br /> **Windows 업데이트 열기** 작업이 표시되지 않으면 경고가 발생한 컴퓨터에 로그온되지 않은 것입니다. 경고 뷰어에서 이 작업을 실행하려면 경고가 발생한 컴퓨터에 로그온해야 합니다.|  
 |업데이트를 적용하려면 컴퓨터를 다시 시작합니다.|업데이트를 적용할 때까지 업데이트의 새로운 기능과 수정된 기능을 사용할 수 없습니다. 모든 데이터를 저장하고 컴퓨터를 다시 시작하여 업데이트를 적용합니다.|  
@@ -371,7 +371,7 @@ ms.locfileid: "79322135"
 |Windows 암호를 변경합니다.||  
 |Microsoft Office 365 암호가 Windows 암호와 다릅니다.||  
   
-###  <a name="BKMK_Protect"></a>컴퓨터를 보호 하려면  
+###  <a name="to-protect-your-computer"></a><a name="BKMK_Protect"></a>컴퓨터를 보호 하려면  
   
 1.  보안 센터를 엽니다.  
   

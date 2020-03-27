@@ -10,14 +10,14 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b211a9ca-1208-4e1f-a0fe-26a610936c30
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 8ccb91973dfb3493b534bdbc8fc4e2bcb26b26b8
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 4e6c8379f225dbeefd7c97ac96b9a0047dfd4a0b
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404955"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80309214"
 ---
 # <a name="deploy-a-single-directaccess-server-with-advanced-settings"></a>고급 설정을 사용하여 단일 DirectAccess 서버 배포
 
@@ -32,16 +32,16 @@ DirectAccess를 배포 하기 전에 다음 항목을 사용 하 여 필수 구�
   
 -   [DirectAccess를 배포하기 위한 필수 조건](../../../remote-access/directaccess/Prerequisites-for-Deploying-DirectAccess.md)  
   
-## <a name="BKMK_OVER"></a>시나리오 설명  
+## <a name="scenario-description"></a><a name="BKMK_OVER"></a>시나리오 설명  
 이 시나리오에서는 Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012를 실행 하는 단일 컴퓨터가 고급 설정을 사용 하 여 DirectAccess 서버로 구성 됩니다.  
   
 > [!NOTE]  
-> 간단한 설정 만으로 기본 배포를 구성 하려는 경우 참조 [시작 마법사를 사용 하 여 단일 DirectAccess 서버 배포](../../../remote-access/directaccess/single-server-wizard/Deploy-a-Single-DirectAccess-Server-Using-the-Getting-Started-Wizard.md)합니다. 간단한 시나리오에서는 DirectAccess가 CA(인증 기관) 또는 Active Directory 보안 그룹과 같은 인프라 설정 구성 없이 마법사를 사용하여 기본 설정으로 설치됩니다.  
+> 간단한 설정만으로 기본 배포를 구성하려면 [Deploy a Single DirectAccess Server Using the Getting Started Wizard](../../../remote-access/directaccess/single-server-wizard/Deploy-a-Single-DirectAccess-Server-Using-the-Getting-Started-Wizard.md)를 참조하세요. 간단한 시나리오에서는 DirectAccess가 CA(인증 기관) 또는 Active Directory 보안 그룹과 같은 인프라 설정 구성 없이 마법사를 사용하여 기본 설정으로 설치됩니다.  
   
 ## <a name="in-this-scenario"></a>이 시나리오의 내용  
 고급 설정을 사용하여 단일 DirectAccess 서버를 설정하려면 몇 가지 계획 및 배포 단계를 완료해야 합니다.  
   
-### <a name="prerequisites"></a>사전 요구 사항  
+### <a name="prerequisites"></a>필수 조건  
 시작하기 전에 다음 요구 사항을 검토할 수 있습니다.  
   
 -   모든 프로필에서 Windows 방화벽을 사용해야 합니다.  
@@ -71,24 +71,24 @@ DirectAccess를 배포 하기 전에 다음 항목을 사용 하 여 필수 구�
   
 3.  **배포 확인**. 이 단계에는 DirectAccess 배포를 확인하는 단계가 포함됩니다.  
   
-자세한 배포 단계는 [Install and Configure Advanced DirectAccess](../../../remote-access/directaccess/single-server-advanced/Install-and-Configure-Advanced-DirectAccess.md)을 참조하세요.  
+자세한 배포 단계는 [고급 DirectAccess 설치 및 구성](../../../remote-access/directaccess/single-server-advanced/Install-and-Configure-Advanced-DirectAccess.md)을 참조하세요.  
   
-## <a name="BKMK_APP"></a>실용적인 응용 프로그램  
+## <a name="practical-applications"></a><a name="BKMK_APP"></a>실용적인 응용 프로그램  
 단일 DirectAccess 서버를 배포하면 다음과 같은 이점이 있습니다.  
   
 -   **편리한 액세스**. Windows 10, Windows 8.1, Windows 8 및 Windows 7을 실행 하는 관리 클라이언트 컴퓨터를 DirectAccess 클라이언트 컴퓨터로 구성할 수 있습니다. 이러한 클라이언트는 인터넷에 있는 동안 언제든지 VPN 연결에 로그인할 필요 없이 DirectAccess를 통해 내부 네트워크 리소스에 액세스할 수 있습니다. 이러한 운영 체제 중 하나가 실행되지 않는 클라이언트 컴퓨터는 VPN을 통해 내부 네트워크에 연결할 수 있습니다.  
   
 -   **편리한 관리**. 인터넷에 있는 DirectAccess 클라이언트 컴퓨터가 내부 회사 네트워크에 없는 경우에도 원격 액세스 관리자가 DirectAccess를 통해 원격으로 관리할 수 있습니다. 회사 요구 사항을 충족하지 않는 클라이언트 컴퓨터를 관리 서버에서 자동으로 업데이트할 수 있습니다. DirectAccess와 VPN은 모두 동일한 콘솔에서 동일한 마법사 집합으로 관리됩니다. 또한 하나 이상의 DirectAccess 서버를 단일 원격 액세스 관리 콘솔에서 관리할 수 있습니다.  
   
-## <a name="BKMK_NEW"></a>이 시나리오에 필요한 역할 및 기능  
+## <a name="roles-and-features-required-for-this-scenario"></a><a name="BKMK_NEW"></a>이 시나리오에 필요한 역할 및 기능  
 다음 표에는 이 시나리오에 필요한 역할 및 기능이 나와 있습니다.  
   
 |역할/기능|이 시나리오를 지원하는 방법|  
 |---------|-----------------|  
-|원격 액세스 역할|이 역할은 서버 관리자 콘솔이나 Windows PowerShell을 사용하여 설치 및 제거됩니다. 이 역할에는 DirectAccess와 RRAS(라우팅 및 원격 액세스 서비스)가 둘 다 포함됩니다. 원격 액세스 역할은 다음의 두 가지 구성 요소로 구성됩니다.<br/><br/>1.  DirectAccess 및 RRAS VPN. DirectAccess와 VPN은 원격 액세스 관리 콘솔에서 함께 관리 됩니다.<br/>2.  RRAS 라우팅. RRAS 라우팅 기능은 레거시 라우팅 및 원격 액세스 콘솔에서 관리 됩니다.<br /><br />원격 액세스 서버 역할은 다음과 같은 서버 역할/기능에 종속됩니다.<br/><br/> -인터넷 정보 서비스 (IIS) 웹 서버-이 기능은 DirectAccess 서버의 네트워크 위치 서버와 기본 웹 프로브를 구성 하는 데 필요 합니다.<br/> -Windows 내부 데이터베이스 DirectAccess 서버의 로컬 계정에 사용 됩니다.|  
-|원격 액세스 관리 도구 기능|이 기능은 다음과 같이 설치 됩니다.<br /><br />-원격 액세스 역할이 설치 될 때 DirectAccess 서버에 기본적으로 설치 되며, 원격 관리 콘솔 사용자 인터페이스 및 Windows PowerShell cmdlet을 지원 합니다.<br />-선택적으로 DirectAccess 서버 역할을 실행 하지 않는 서버에 설치 될 수 있습니다. 이 경우 이 기능은 DirectAccess 및 VPN을 실행하는 원격 액세스 컴퓨터를 원격으로 관리하는 데 사용됩니다.<br /><br />원격 액세스 관리 도구 기능의 구성 요소는 다음과 같습니다.<br /><br />-원격 액세스 GUI (그래픽 사용자 인터페이스)<br />-Windows PowerShell 용 원격 액세스 모듈<br /><br />이 기능은 다음 요소에 종속됩니다.<br /><br />그룹 정책 관리 콘솔<br />RAS 연결 관리자 관리 키트 (CMAK)<br />Windows PowerShell 3.0<br />-그래픽 관리 도구 및 인프라|  
+|원격 액세스 역할|이 역할은 서버 관리자 콘솔이나 Windows PowerShell을 사용하여 설치 및 제거됩니다. 이 역할에는 DirectAccess와 RRAS(라우팅 및 원격 액세스 서비스)가 둘 다 포함됩니다. 원격 액세스 역할은 다음의 두 가지 구성 요소로 구성됩니다.<br/><br/>1. DirectAccess 및 RRAS VPN. DirectAccess와 VPN은 원격 액세스 관리 콘솔에서 함께 관리 됩니다.<br/>2. RRAS 라우팅. RRAS 라우팅 기능은 레거시 라우팅 및 원격 액세스 콘솔에서 관리 됩니다.<br /><br />원격 액세스 서버 역할은 다음과 같은 서버 역할/기능에 종속됩니다.<br/><br/> -인터넷 정보 서비스 (IIS) 웹 서버-이 기능은 DirectAccess 서버의 네트워크 위치 서버와 기본 웹 프로브를 구성 하는 데 필요 합니다.<br/> -Windows 내부 데이터베이스 DirectAccess 서버의 로컬 계정에 사용 됩니다.|  
+|원격 액세스 관리 도구 기능|이 기능은 다음과 같이 설치됩니다.<br /><br />-원격 액세스 역할이 설치 될 때 DirectAccess 서버에 기본적으로 설치 되며, 원격 관리 콘솔 사용자 인터페이스 및 Windows PowerShell cmdlet을 지원 합니다.<br />-선택적으로 DirectAccess 서버 역할을 실행 하지 않는 서버에 설치 될 수 있습니다. 이 경우 이 기능은 DirectAccess 및 VPN을 실행하는 원격 액세스 컴퓨터를 원격으로 관리하는 데 사용됩니다.<br /><br />원격 액세스 관리 도구 기능의 구성 요소는 다음과 같습니다.<br /><br />-원격 액세스 GUI (그래픽 사용자 인터페이스)<br />-Windows PowerShell 용 원격 액세스 모듈<br /><br />이 기능은 다음 요소에 종속됩니다.<br /><br />그룹 정책 관리 콘솔<br />RAS 연결 관리자 관리 키트 (CMAK)<br />Windows PowerShell 3.0<br />-그래픽 관리 도구 및 인프라|  
   
-## <a name="BKMK_HARD"></a>하드웨어 요구 사항  
+## <a name="hardware-requirements"></a><a name="BKMK_HARD"></a>하드웨어 요구 사항  
 이 시나리오의 하드웨어 요구 사항은 다음과 같습니다.  
   
 -   서버 요구 사항:  
@@ -110,7 +110,7 @@ DirectAccess를 배포 하기 전에 다음 항목을 사용 하 여 필수 구�
     -   클라이언트 컴퓨터는 Windows 10, Windows 8 또는 Windows 7을 실행 해야 합니다.  
   
         > [!NOTE]  
-        > 다음 운영 체제를 DirectAccess 클라이언트로 사용할 수 있습니다. Windows 10, Windows Server 2012 R2, Windows Server 2012, Windows 8 Enterprise, Windows 7 Enterprise 또는 Windows 7 Ultimate  
+        > Windows 10, Windows Server 2012 R2, Windows Server 2012, Windows 8 Enterprise, Windows 7 Enterprise 또는 Windows 7 Ultimate와 같은 운영 체제를 DirectAccess 클라이언트로 사용할 수 있습니다.  
   
 -   인프라 및 관리 서버 요구 사항:  
   
@@ -120,7 +120,7 @@ DirectAccess를 배포 하기 전에 다음 항목을 사용 하 여 필수 구�
   
     -   VPN이 사용하도록 설정되어 있으면 고정 주소 풀이 사용되지 않는 경우 IP 주소를 VPN 클라이언트에 자동으로 할당하기 위해 DHCP 서버가 필요합니다.  
   
-## <a name="BKMK_SOFT"></a>소프트웨어 요구 사항  
+## <a name="software-requirements"></a><a name="BKMK_SOFT"></a>소프트웨어 요구 사항  
 이 시나리오에 필요한 요구 사항은 다음과 같이 다양합니다.  
   
 -   서버 요구 사항:  
@@ -143,10 +143,10 @@ DirectAccess를 배포 하기 전에 다음 항목을 사용 하 여 필수 구�
         > [!IMPORTANT]  
         > DirectAccess 배포에서 Teredo를 사용 하도록 설정 하 고 Windows 7 클라이언트에 대 한 액세스를 제공 하려는 경우 클라이언트를 Windows 7 s p 1로 업그레이드 해야 합니다. Windows 7 RTM을 사용 하는 클라이언트는 Teredo를 통해 연결할 수 없습니다. 그러나 여전히 IP HTTPS를 통해 회사 네트워크에 연결할 수는 있습니다.  
   
-## <a name="BKMK_LINKS"></a>참고 항목  
+## <a name="see-also"></a><a name="BKMK_LINKS"></a>참고 항목  
 다음 표에는 추가 리소스에 대한 링크가 나와 있습니다.  
   
-|콘텐츠 형식|참조|  
+|콘텐츠 유형|참조|  
 |--------|-------|  
 |**배포**|[Windows Server의 DirectAccess 배포 경로](../../../remote-access/directaccess/DirectAccess-Deployment-Paths-in-Windows-Server.md)<br /><br />[시작 마법사를 사용 하 여 단일 DirectAccess 서버 배포](../../../remote-access/directaccess/single-server-wizard/Deploy-a-Single-DirectAccess-Server-Using-the-Getting-Started-Wizard.md)|  
 |**도구 및 설정**|[원격 액세스 PowerShell cmdlet](https://technet.microsoft.com/library/hh918399.aspx)|  

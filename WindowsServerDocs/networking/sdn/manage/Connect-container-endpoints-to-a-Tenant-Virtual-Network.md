@@ -1,5 +1,5 @@
 ---
-title: 테넌트 가상 네트워크에 컨테이너 끝점 연결
+title: 테넌트 가상 네트워크에 컨테이너 엔드포인트 연결
 description: 이 항목에서는 SDN을 통해 만든 기존 테 넌 트 가상 네트워크에 컨테이너 끝점을 연결 하는 방법을 보여 줍니다. Docker 용 Windows l2bridge (및 선택적으로 l2tunnel) 네트워크 드라이버를 사용 하 여 테 넌 트 VM에 컨테이너 네트워크를 만들 수 있습니다.
 manager: ravirao
 ms.custom: na
@@ -10,25 +10,25 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f7af1eb6-d035-4f74-a25b-d4b7e4ea9329
-ms.author: pashort
+ms.author: lizross
 author: jmesser81
 ms.date: 08/24/2018
-ms.openlocfilehash: 83996f7ffb82d01c9f36945efa022f0dd0b9825b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5673cb6f808f37fb7737e22cf93c3984073e4f48
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71355823"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80309833"
 ---
-# <a name="connect-container-endpoints-to-a-tenant-virtual-network"></a>테넌트 가상 네트워크에 컨테이너 끝점 연결
+# <a name="connect-container-endpoints-to-a-tenant-virtual-network"></a>테넌트 가상 네트워크에 컨테이너 엔드포인트 연결
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 이 항목에서는 SDN을 통해 만든 기존 테 넌 트 가상 네트워크에 컨테이너 끝점을 연결 하는 방법을 보여 줍니다. Docker 용 Windows *l2bridge* (및 선택적으로 *l2tunnel*) 네트워크 드라이버를 사용 하 여 테 넌 트 VM에 컨테이너 네트워크를 만들 수 있습니다.
 
-[컨테이너 네트워크 드라이버](https://docs.microsoft.com/virtualization/windowscontainers/container-networking/network-drivers-topologies) 항목에서는 Windows에서 Docker를 통해 사용할 수 있는 여러 네트워크 드라이버에 대해 설명 했습니다. SDN의 경우 *l2bridge* 및 *l2tunnel* 드라이버를 사용 합니다. 두 드라이버 각 컨테이너 끝점은 컨테이너 (테 넌 트) 호스트 가상 컴퓨터와 동일한 가상 서브넷에 있습니다. 
+[컨테이너 네트워크 드라이버](https://docs.microsoft.com/virtualization/windowscontainers/container-networking/network-drivers-topologies) 항목에서는 Windows에서 Docker를 통해 사용할 수 있는 여러 네트워크 드라이버에 대해 설명 했습니다. SDN의 경우 *l2bridge* 및 *l2tunnel* 드라이버를 사용 합니다. 두 드라이버 각 컨테이너 엔드포인트은 컨테이너 (테 넌 트) 호스트 가상 컴퓨터와 동일한 가상 서브넷에 있습니다. 
 
-사설 클라우드 플러그 인을 통해 HNS (호스트 네트워킹 서비스)는 컨테이너 끝점의 IP 주소를 동적으로 할당 합니다. 컨테이너 끝점을 고유 IP 주소가 있지만 계층 2 주소 변환으로 인해 컨테이너 (테 넌 트) 호스트 가상 컴퓨터의 같은 MAC 주소를 공유 합니다. 
+사설 클라우드 플러그 인을 통해 HNS (호스트 네트워킹 서비스)는 컨테이너 끝점의 IP 주소를 동적으로 할당 합니다. 컨테이너 엔드포인트을 고유 IP 주소가 있지만 계층 2 주소 변환으로 인해 컨테이너 (테 넌 트) 호스트 가상 컴퓨터의 같은 MAC 주소를 공유 합니다. 
 
 이러한 컨테이너 끝점에 대 한 네트워크 정책 (Acl, 캡슐화 및 QoS)은 네트워크 컨트롤러에서 받아서 상위 계층 관리 시스템에 정의 된 실제 Hyper-v 호스트에 적용 됩니다. 
 
@@ -45,7 +45,7 @@ ms.locfileid: "71355823"
 >이러한 네트워킹 모드는 Azure 공용 클라우드의 테 넌 트 가상 네트워크에 windows 컨테이너 끝점을 연결 하는 데 작동 하지 않습니다.
 
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>필수 조건
 -  네트워크 컨트롤러를 사용 하 여 배포 된 SDN 인프라
 -  테 넌 트 가상 네트워크를 만들었습니다.
 -  Windows 컨테이너 기능이 사용 하도록 설정 되 고 Docker가 설치 되었으며 Hyper-v 기능이 활성화 된 배포 된 테 넌 트 가상 컴퓨터입니다. L2bridge 및 l2tunnel 네트워크용 이진 파일을 여러 개 설치 하려면 Hyper-v 기능이 필요 합니다.

@@ -10,14 +10,14 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 36255d80-a13e-4af7-a5c0-ab4c8f302622
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: ecfbd6dc09f251d5197a16b166aa76e6a37b933a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: a0e717b75e1d973f1594b254e1ea5c4eb55536b8
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71367302"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80308233"
 ---
 # <a name="manage-directaccess-clients-remotely"></a>DirectAccess 클라이언트 원격 관리
 
@@ -27,7 +27,7 @@ ms.locfileid: "71367302"
   
 **참고:** Windows Server 2016에서는 DirectAccess 및 원격 액세스 서비스 (RAS)를 단일 원격 액세스 역할로 결합 합니다.  
   
-## <a name="in-this-guide"></a>이 가이드의 내용  
+## <a name="in-this-guide"></a>설명서의 내용  
 이 문서에는 DirectAccess 관리 콘솔 및 원격 액세스 서버 역할의 일부로 제공되는 해당 Windows PowerShell cmdlet을 사용하여 원격 액세스의 모니터링 기능을 활용하는 방법에 대한 지침이 수록되어 있습니다.  
   
 이 문서에 설명된 모니터링 및 계정 시나리오는 다음과 같습니다.  

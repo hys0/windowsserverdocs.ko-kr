@@ -10,15 +10,15 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 16359b15-a0e4-4f42-9d70-6ef0d851d219
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 08/26/2018
-ms.openlocfilehash: 0d90c9d5f03be5ae69b0f781d8acb51876dc4f8d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9518bab68b2d2f24f6c05c46e064035cc08d777f
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406077"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80312983"
 ---
 # <a name="manage-tenant-workloads"></a>테넌트 워크로드 관리
 
@@ -26,7 +26,7 @@ ms.locfileid: "71406077"
 
 이 항목에는 테 넌 트 Vm (가상 머신)을 추가 하 고, 네트워크 가상 어플라이언스를 사용 하 고, 소프트웨어 부하 분산을 구성 하 여 테 넌 트 작업을 관리할 수 있는 설명서의 링크가 포함 되어 있습니다.
 
-이 섹션에는 다음 항목이 포함됩니다.
+이 섹션에서는 다음 항목을 다룹니다.
 
 - [VM 만들기 및 테 넌 트 Virtual Network 또는 VLAN에 연결](Create-a-Tenant-VM.md)
 - [테 넌 트 VM 네트워크 어댑터에 대 한 QoS (서비스 품질) 구성](Configure-QoS-for-Tenant-VM-Network-Adapter.md)

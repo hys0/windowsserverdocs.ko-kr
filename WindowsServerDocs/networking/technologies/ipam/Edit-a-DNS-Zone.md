@@ -10,14 +10,14 @@ ms.technology: networking-ipam
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a35164e1-11ad-47c8-9843-580d30c70d07
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 2175cf9c740d7b727ba017922a77c94d4379c891
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: b2fa8ff6742dc393a5a2cc962c7f849049b5ef31
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71355281"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80312427"
 ---
 # <a name="edit-a-dns-zone"></a>DNS 영역 편집
 
@@ -49,7 +49,7 @@ ms.locfileid: "71355281"
   
     ![DNS 영역 편집](../../media/Edit-a-DNS-Zone/ipam_EditZone_02.jpg)  
   
-6.  **일반** 페이지가 선택 된 상태에서 **DNS 영역 편집** 대화 상자가 열립니다. 필요한 경우 일반 영역 속성을 편집 합니다. **DNS 서버**, **영역 범주**및 **영역 유형을 입력**한 다음 **적용** 을 클릭 하거나, 편집이 완료 되 면 **확인**을 클릭 합니다.  
+6.  **일반** 페이지가 선택 된 상태에서 **DNS 영역 편집** 대화 상자가 열립니다. 필요한 경우 일반 영역 속성 ( **DNS 서버**, **영역 범주**및 **영역 유형**)을 편집한 다음 **적용** 을 클릭 하거나, 편집이 완료 되 면 **확인**을 클릭 합니다.  
   
     ![영역 속성 편집 및 저장](../../media/Edit-a-DNS-Zone/ipam_EditZone_03a.jpg)  
   

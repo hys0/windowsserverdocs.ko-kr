@@ -10,14 +10,14 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3bba28d4-23e2-449f-8319-7d2190f68d56
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: b093c4cbf5ceb06e84d5e07c8735106797932bc1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 8269fee952e60aa53facec95ab3070b906383ad2
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404923"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80309057"
 ---
 # <a name="step-2-plan-advanced-directaccess-deployments"></a>2 단계 고급 DirectAccess 배포 계획
 
@@ -25,7 +25,7 @@ ms.locfileid: "71404923"
 
 IPv4 및 IPv6을 사용하는 단일 서버에 고급 DirectAccess를 배포하는 단계에서 DirectAccess 인프라를 계획한 후에는 원격 액세스 설치 마법사에 대한 설정을 계획해야 합니다.  
   
-|태스크|설명|  
+|작업|설명|  
 |----|--------|  
 |[2.1 클라이언트 배포 계획](#21-plan-for-client-deployment)|클라이언트 컴퓨터에서 DirectAccess를 사용하여 연결하도록 허용할 방법을 계획합니다. DirectAccess 클라이언트로 구성할 관리되는 컴퓨터를 결정하고, 클라이언트 컴퓨터에 네트워크 연결 길잡이를 배포할지 또는 DirectAccess 연결 길잡이를 배포할지 계획합니다.|  
 |[2.2 DirectAccess 서버 배포 계획](#22-plan-for-directaccess-server-deployment)|DirectAccess 서버를 배포할 방법을 계획합니다.|  
@@ -138,7 +138,7 @@ DirectAccess 클라이언트와 선택한 내부 애플리케이션 서버 간�
 ## <a name="25-plan-directaccess-and-third-party-vpn-clients"></a>2.5 DirectAccess 및 타사 VPN 클라이언트 계획  
 일부 타사 VPN 클라이언트는 네트워크 연결 폴더에 연결을 만들지 않습니다. 이로 인해 VPN 연결이 설정되고 인트라넷 연결이 존재할 때 DirectAccess에서 인트라넷 연결이 없는 것으로 확인할 수 있습니다. 이는 타사 VPN 클라이언트가 자체를 NDIS(네트워크 장치 인터페이스 규격) 끝점 형식으로 정의하여 해당 인터페이스를 등록한 경우에 발생합니다. DirectAccess 클라이언트에서 다음 레지스트리 값을 1로 설정하여 이러한 유형의 VPN 클라이언트와의 공존을 지원할 수 있습니다.  
   
-**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\NlaSvc\Parameters\ShowDomainEndpointInterfaces (REG_DWORD)**  
+**HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\services\NlaSvc\Parameters\ShowDomainEndpointInterfaces (REG_DWORD)**  
   
 일부 타사 VPN 클라이언트는 VPN 클라이언트 컴퓨터에서 VPN 연결을 통해 인트라넷으로 트래픽을 보낼 필요 없이 인터넷에 직접 액세스하도록 허용하는 분할 터널링 구성을 사용합니다.  
   
@@ -146,7 +146,7 @@ DirectAccess 클라이언트와 선택한 내부 애플리케이션 서버 간�
   
 VPN 연결에 해당 기본 게이트웨이가 비어 있거나 모두 0(0.0.0.0)인 것으로 나열되면 VPN 클라이언트가 이 방식으로 구성된 것입니다. 기본적으로 DirectAccess 클라이언트는 분할 터널링 구성을 식별하지 않습니다. 이러한 유형의 VPN 클라이언트 구성을 검색하고 함께 사용되도록 DirectAccess 클라이언트를 구성하려면 다음 레지스트리 설정을 1로 설정합니다.  
   
-**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\NlaSvc\Parameters\Internet\ EnableNoGatewayLocationDetection (REG_DWORD)**  
+**REG_DWORD (HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\services\NlaSvc\Parameters\Internet\ EnableNoGatewayLocationDetection)**  
   
 ## <a name="previous-step"></a>이전 단계  
   

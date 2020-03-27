@@ -10,14 +10,14 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 88ffd598-2fde-402c-bd12-be790f84dc96
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 764fd6d272a498898bbdb1f1da68e0d41c39cf84
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 943ec8d386d5fe9910b4415a2ab2525d23efc32e
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404617"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80308260"
 ---
 # <a name="plan-a-remote-access-cluster-deployment"></a>원격 액세스 클러스터 배포 계획
 
@@ -31,7 +31,7 @@ ms.locfileid: "71404617"
   
 -   [3 단계 부하 분산 된 클러스터 배포를 계획](Step-3-Plan-a-Load-Balanced-Cluster-Deployment.md)합니다.  
   
--   4단계: 원격 액세스 고급 배포에 대 한 계획 결정을 기록 합니다. 배포 단계를 완료하는 데 참여하는 모든 사람은 이 기록을 작업 보조 자료로 활용할 수 있습니다.  
+-   4 단계: 원격 액세스 고급 배포에 대 한 계획 결정을 기록 합니다. 배포 단계를 완료하는 데 참여하는 모든 사람은 이 기록을 작업 보조 자료로 활용할 수 있습니다.  
   
 이러한 계획 단계를 완료 한 후에 [는 원격 액세스 클러스터 구성](../configure/Configure-a-Remote-Access-Cluster.md)을 참조 하세요. 
 

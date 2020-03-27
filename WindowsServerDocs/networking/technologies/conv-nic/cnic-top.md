@@ -6,15 +6,15 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: d7642338-9b33-4dce-8100-8b2c38d7127a
 manager: dougkim
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 09/13/2018
-ms.openlocfilehash: d791e0d51278d1f83f344250d38b1c7005c1a14a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 8824a6c6189a447f97f285052af8e5c13a66e766
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71355438"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80312815"
 ---
 # <a name="converged-network-interface-card-nic-configuration-guidance"></a>NIC\) 구성 지침을 \(수렴 형 네트워크 인터페이스 카드
 
@@ -34,7 +34,7 @@ Windows Server 2016 Hyper-v 호스트와 Hyper-v 가상 스위치를 사용 하 
 이 가이드에서는 서버가 단일 네트워크 어댑터를 설치 하는 배포에 대 한 두 가지 지침 집합을 제공 하며,이는 수렴 NIC의 기본 배포입니다. 서버에 두 개 이상의 네트워크 어댑터가 설치 되어 있는 다른 지침 집합을 사용할 수 있습니다 .이는 스위치 포함 된 팀을 통해 수렴 형 NIC를 배포 \(설정\) RDMA\-지원 네트워크 어댑터를 팀으로 설정 합니다.
 
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>필수 조건
 
 다음은 수렴 형 NIC의 기본 및 데이터 센터 배포를 위한 필수 구성 요소입니다.
 

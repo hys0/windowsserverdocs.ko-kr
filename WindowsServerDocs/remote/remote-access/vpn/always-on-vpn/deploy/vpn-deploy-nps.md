@@ -6,22 +6,22 @@ ms.technology: networking-ras
 ms.topic: article
 ms.assetid: ''
 ms.localizationpriority: medium
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 08/30/2018
-ms.openlocfilehash: 5cb0d342afec9c28259efb7a2e15666358f3cb5b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 18fa85189b082a4a88a8a0bc0d6df11e21e7c97d
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404256"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80307693"
 ---
 # <a name="step-4-install-and-configure-the-network-policy-server-nps"></a>4단계. NPS (네트워크 정책 서버) 설치 및 구성
 
 > 적용 대상: Windows Server 2019, Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-- [**그런** 3단계. Always On VPN에 대한 원격 액세스 서버 구성](vpn-deploy-ras.md)
-- [**그런** 5단계. DNS 및 방화벽 설정 구성](vpn-deploy-dns-firewall.md)
+- [**다음:** 3 단계. Always On VPN에 대 한 원격 액세스 서버 구성](vpn-deploy-ras.md)
+- [**다음:** 5 단계. DNS 및 방화벽 설정 구성](vpn-deploy-dns-firewall.md)
 
 이 단계에서는 VPN 서버에서 전송 하는 연결 요청을 처리 하기 위해 NPS (네트워크 정책 서버)를 설치 합니다.
 
@@ -179,7 +179,7 @@ NPS를 등록 하는 다른 방법은 [ACTIVE DIRECTORY 도메인 Nps 서버 등
 
     2. 확장할 수 있는 **인증 프로토콜** 확인란을 선택 하 여 선택 합니다.
 
-    3. 형식 (액세스 및 네트워크 구성 방법에 따라)에서 Microsoft를 선택 **합니다. PEAP (보호 된 EAP**)를 선택 하 고 **구성**을 선택 합니다.
+    3. 형식 (액세스 및 네트워크 구성 방법에 따라)에서 **Microsoft: PROTECTED EAP (PEAP)** 를 선택 하 고 **구성**을 선택 합니다.
       
         보호 된 EAP 속성 편집 대화 상자가 열립니다.
 
@@ -228,4 +228,4 @@ NPS를 등록 하는 다른 방법은 [ACTIVE DIRECTORY 도메인 Nps 서버 등
 
 ## <a name="next-steps"></a>다음 단계
 
-[5단계. Always On VPN](vpn-deploy-dns-firewall.md)에 대 한 DNS 및 방화벽 설정 구성: 이 단계에서는 Windows PowerShell 또는 서버 관리자 역할 및 기능 추가 마법사를 사용 하 여 NPS (네트워크 정책 서버)를 설치 합니다. 또한 VPN 서버에서 받는 연결 요청에 대 한 모든 인증, 권한 부여 및 계정 의무를 처리 하도록 NPS를 구성 합니다.
+[5 단계. Always On VPN에 대 한 DNS 및 방화벽 설정 구성](vpn-deploy-dns-firewall.md):이 단계에서는 Windows PowerShell 또는 서버 관리자 역할 및 기능 추가 마법사를 사용 하 여 NPS (네트워크 정책 서버)를 설치 합니다. 또한 VPN 서버에서 받는 연결 요청에 대 한 모든 인증, 권한 부여 및 계정 의무를 처리 하도록 NPS를 구성 합니다.

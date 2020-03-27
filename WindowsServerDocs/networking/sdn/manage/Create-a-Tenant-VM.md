@@ -10,15 +10,15 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3c62f533-1815-4f08-96b1-dc271f5a2b36
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 08/24/2018
-ms.openlocfilehash: 3e0678fb204e0895bf4429e8bb877a3f1c0e7a97
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: ef588cfc93216f13490ef3196ec0990b9e7f48d3
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71355859"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80309792"
 ---
 # <a name="create-a-vm-and-connect-to-a-tenant-virtual-network-or-vlan"></a>VM 만들기 및 테넌트 가상 네트워크 또는 VLAN에 연결
 
@@ -31,7 +31,7 @@ ms.locfileid: "71355859"
 이 항목의 섹션에는 많은 매개 변수에 대 한 예제 값을 포함 하는 예제 Windows PowerShell 명령이 포함 되어 있습니다. 이러한 명령에 대 한 예제 값은 다음이 명령을 실행 하기 전에 배포에 적합 한 값으로 바꾸는 것을 확인 합니다. 
 
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 조건
 
 1. VM의 수명 동안 정적 MAC 주소를 사용 하 여 만든 VM 네트워크 어댑터입니다.<p>VM 수명 동안 MAC 주소가 변경 되 면 네트워크 컨트롤러는 네트워크 어댑터에 필요한 정책을 구성할 수 없습니다. 네트워크에 대 한 정책을 구성 하지 않으면 네트워크 어댑터가 네트워크 트래픽을 처리할 수 없으며 네트워크와의 모든 통신이 실패 합니다.  
 

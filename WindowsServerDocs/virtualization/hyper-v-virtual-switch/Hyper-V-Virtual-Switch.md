@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking-hv-switch
 ms.topic: article
 ms.assetid: 398440ac-5988-41ce-b91e-eab343a255d3
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: c508005af67e9dd5b0c9a22693aca25eb19e8e48
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: fb2ebf485b5004e457558fc16d8535662c0c5ff2
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71366834"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80307988"
 ---
 # <a name="hyper-v-virtual-switch"></a>Hyper-V 가상 스위치
 
@@ -57,7 +57,7 @@ Hyper-v 가상 스위치 기능을 통해 테 넌 트 격리를 적용 하 고, 
 >[!NOTE]
 > Windows Server 2016에서는 가상 NIC를 사용 하는 VM에 가상 NIC의 최대 처리량이 정확 하 게 표시 됩니다. **네트워크 연결**의 가상 nic 속도를 확인 하려면 원하는 가상 nic 아이콘을 마우스 오른쪽 단추로 클릭 한 다음 **상태**를 클릭 합니다. 가상 NIC **상태** 대화 상자가 열립니다. **연결**에서 **속도** 값은 서버에 설치 된 실제 NIC의 속도와 일치 합니다.
   
-## <a name="bkmk_apps"></a>Hyper-v 가상 스위치에 사용
+## <a name="uses-for-hyper-v-virtual-switch"></a><a name="bkmk_apps"></a>Hyper-v 가상 스위치에 사용
 
 다음은 Hyper-v 가상 스위치에 대 한 몇 가지 사용 사례 시나리오입니다.
 
@@ -69,7 +69,7 @@ Hyper-v 가상 스위치 기능을 통해 테 넌 트 격리를 적용 하 고, 
   
 **전달 확장이 VLAN ID를 관리**합니다. 주요 스위치 회사는 네트워킹에 모든 정책을 적용 하는 전달 확장을 구축 하 고 있습니다. 관리되는 한 가지 요소는 VLAN(Virtual Local Area Network) ID입니다. 가상 스위치는 VLAN에 대한 제어를 전달 확장으로 넘깁니다. 스위치 회사의 설치 프로그램은 투명성을 설정 하 여 Hyper-v 가상 스위치를 전달 하 고 VLAN 태그에 대해 아무 작업도 수행 하지 않도록 하는 WMI (WMI(Windows Management Instrumentation)) API (응용 프로그래밍 인터페이스)를 프로그래밍 방식으로 호출 합니다.  
   
-## <a name="bkmk_func"></a>Hyper-v 가상 스위치 기능
+## <a name="hyper-v-virtual-switch-functionality"></a><a name="bkmk_func"></a>Hyper-v 가상 스위치 기능
  
 몇 가지 주요 기능이 다음 Hyper-V 가상 스위치에 포함되어 있습니다.  
   

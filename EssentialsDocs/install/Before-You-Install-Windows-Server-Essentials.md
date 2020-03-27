@@ -3,7 +3,7 @@ title: Windows Server Essentials를 설치하기 전에
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,18 +12,18 @@ ms.assetid: 8d0893bd-e2b7-4494-9537-02b1cbbcd57a
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 4629c0ba04cc7ee617a2fc6b6a73a19b9e45ada8
-ms.sourcegitcommit: 3d76683718ec6f38613f552f518ebfc6a5db5401
+ms.openlocfilehash: 7268ebbfffd034780635e693cd6aa6380f30dd91
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74829556"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80310102"
 ---
 # <a name="before-you-install-windows-server-essentials"></a>Windows Server Essentials를 설치하기 전에
 
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-##  <a name="BKMK_BeforeYouBegin"></a>Windows Server Essentials 설치를 시작 하기 전에 다음 작업을 수행 합니다.  
+##  <a name="before-you-begin-your-installation-of--windows-server-essentials-perform-the-following-tasks"></a><a name="BKMK_BeforeYouBegin"></a>Windows Server Essentials 설치를 시작 하기 전에 다음 작업을 수행 합니다.  
 
 -   **컴퓨터가 최소 하드웨어 요구 사항을 충족하는지 확인합니다**. 여기에는 추가 하드웨어가 필요한 지 확인 하 고 하드웨어 드라이버가 Windows Server Essentials에서 지원 되는지 확인 하는 작업이 포함 됩니다. 자세한 내용은 [Windows Server Essentials의 시스템 요구 사항](../get-started/system-requirements.md)을 참조 하세요.   
 
@@ -49,7 +49,7 @@ ms.locfileid: "74829556"
 
     라우터가 UPnP 프레임워크를 지원하지 않는 경우 또는 설치 도중 라우터를 구성할 수 없는 경우 네트워크 설정을 사용하여 수동으로 라우터를 구성해야 합니다. 다음 포트가 열려 있으며 대상 서버의 IP 주소로 보내지는지 확인하세요.  
 
-  |포트 번호|Application|  
+  |포트 번호|응용 프로그램|  
   |-----------------|-----------------|  
   |포트 80|HTTP 웹 트래픽|  
   |포트 443|HTTPS 웹 트래픽|  

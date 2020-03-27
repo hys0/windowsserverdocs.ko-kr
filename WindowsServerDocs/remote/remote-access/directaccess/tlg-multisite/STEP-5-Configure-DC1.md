@@ -10,14 +10,14 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 70357156-fcb0-4346-a61e-4ea963e3ffb0
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: aa251ccc0cc48e3805667a247047711c2ae4fcf6
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 698bc250b428fe5efc4d111f8783483005d48dc5
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71388298"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80308674"
 ---
 # <a name="step-5-configure-dc1"></a>5 단계 DC1 구성
 
@@ -64,7 +64,7 @@ DC1은 corp.contoso.com 도메인에 대 한 도메인 컨트롤러, DNS 서버 
   
 3.  **새 개체-그룹** 대화 상자의 **그룹 이름**아래에 **Win7_Clients_Site1**을 입력 합니다.  
   
-4.  아래에서 **그룹 범위**, 클릭 **Global**, 아래에서 **그룹 종류**, 클릭 **보안**, 를 클릭 하 고 **확인**합니다.  
+4.  **그룹 범위** 아래에서 **전역**을 클릭하고 **그룹 종류**에서 **보안**을 클릭한 다음 **확인**을 클릭합니다.  
   
 5.  **Win7_Clients_Site1** 보안 그룹을 두 번 클릭 하 고 **Win7_Clients_Site1 속성** 대화 상자에서 **구성원** 탭을 클릭 합니다.  
   
@@ -78,7 +78,7 @@ DC1은 corp.contoso.com 도메인에 대 한 도메인 컨트롤러, DNS 서버 
   
 10. **새 개체-그룹** 대화 상자의 **그룹 이름**아래에 **Win7_Clients_Site2**을 입력 합니다.  
   
-11. 아래에서 **그룹 범위**, 클릭 **Global**, 아래에서 **그룹 종류**, 클릭 **보안**, 를 클릭 하 고 **확인**합니다.  
+11. **그룹 범위** 아래에서 **전역**을 클릭하고 **그룹 종류**에서 **보안**을 클릭한 다음 **확인**을 클릭합니다.  
   
 12. **Active Directory 사용자 및 컴퓨터** 콘솔을 닫습니다.  
   

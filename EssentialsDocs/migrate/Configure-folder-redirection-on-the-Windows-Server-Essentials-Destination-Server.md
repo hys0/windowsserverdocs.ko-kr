@@ -3,7 +3,7 @@ title: Windows Server Essentials 대상 서버에서 폴더 리디렉션 구성
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: fe77ba67-128c-4fc3-9361-30fa6af42516
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 6709aa2a342efd5837cf340b645961499baff6a5
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 44fb54a654689285c5db6d178e6d1c714779b91b
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66433015"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80310599"
 ---
 # <a name="configure-folder-redirection-on-the-windows-server-essentials-destination-server"></a>Windows Server Essentials 대상 서버에서 폴더 리디렉션 구성
 
@@ -31,7 +31,7 @@ ms.locfileid: "66433015"
   
 1. 대상 서버에서 **그룹 정책 관리** 관리 도구를 엽니다.  
   
-2. **그룹 정책 관리**, 확장 **포리스트:** <em>YourNetworkDomainName</em>를 확장 하 고 **도메인**, 확장  *YourNetworkDomainName*을 펼친 다음 **그룹 정책 개체**합니다.  
+2. **그룹 정책 관리**에서 **포리스트: 해당**<em>networkdomainname</em>, **도메인**을 차례로 확장 하 고 해당 *networkdomainname*을 확장 한 다음 **그룹 정책 개체**를 확장 합니다.  
   
 3. **SBS 그룹 정책 폴더 리디렉션**을 마우스 오른쪽 단추로 클릭하고 **삭제**를 클릭합니다.  
   

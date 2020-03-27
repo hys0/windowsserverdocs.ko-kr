@@ -4,16 +4,16 @@ description: 검색 엔진 결과의 항목에 대 한 간략 한 설명
 author: jasongerend
 ms.author: jgerend
 manager: elizapo
-ms.date: 02/13/2019
+ms.date: 03/25/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: 20aa5fbc40efc5a3a439361dadfac0f47f4b41d8
-ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
+ms.openlocfilehash: cb1ac2fc1c7d4ed0a7f57bbe95cb9989bc85e99e
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76822626"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80310556"
 ---
 # <a name="use-storage-migration-service-to-migrate-a-server"></a>Storage Migration Service를 사용 하 여 서버 마이그레이션
 
@@ -32,7 +32,7 @@ ms.locfileid: "76822626"
 6. Windows 관리 센터에서 모든 원본 서버와 Windows Server 2012 R2 또는 Windows Server 2016를 실행 하는 대상 서버에서 각 서버에 연결 하 고 **서버 관리자** (Windows 관리 센터) > **방화벽** > **들어오는 규칙**으로 이동한 후 다음 규칙을 사용 하도록 설정 했는지 확인 합니다.
     - 파일 및 프린터 공유(SMB-In)
     - Netlogon 서비스 (NP-IN)
-    - WMI(Windows Management Instrumentation) (DCOM-IN)
+    - Windows Management Instrumentation(DCOM-In)
     - WMI(Windows Management Instrumentation)(WMI-In)
 
    타사 방화벽을 사용 하는 경우 열 인바운드 포트 범위는 TCP/445 (SMB), TCP/135 (RPC/DCOM 엔드포인트 매퍼) 및 TCP 1025-65535 (RPC/DCOM 임시 포트)입니다. Storage Migration service 포트는 Orchestrator (TCP/28940) 및 TCP/28941 (프록시)입니다.
@@ -60,12 +60,15 @@ ms.locfileid: "76822626"
 1. **데이터 전송** > **자격 증명을 입력 하세요** . 페이지에서 마이그레이션할 대상 서버에서 작동 하는 관리자 자격 증명을 입력 하 고 **다음**을 선택 합니다.
 2. **대상 장치 및 매핑 추가** 페이지에서 첫 번째 원본 서버가 나열 됩니다. 마이그레이션할 서버 또는 클러스터 된 파일 서버의 이름을 입력 하 고 **장치 검색**을 선택 합니다. 도메인에 가입 된 원본 컴퓨터에서 마이그레이션하는 경우 대상 서버는 동일한 도메인에 가입 되어 있어야 합니다. "새 Azure VM 만들기"를 클릭 한 다음 마법사를 사용 하 여 Azure에서 새 대상 서버를 배포할 수도 있습니다. 그러면 자동으로 VM 크기를 조정 하 고, 저장소를 프로 비전 하 고, 디스크를 포맷 하 고, 도메인에 가입 하 고, Windows Server 2019 대상에 저장소 마이그레이션 서비스 프록시를 추가 합니다. 모든 크기의 windows Server 2019 (권장), Windows Server 2016 및 Windows Server 2012 R2 Vm 중에서 선택할 수 있으며 관리 디스크를 사용할 수 있습니다.   
 
- > [!NOTE]
-   > "새 Azure VM 만들기"를 사용 하려면 다음이 필요 합니다.
-   > - 유효한 Azure 구독.
-   > - 만들기 권한이 있는 기존 Azure Compute 리소스 그룹입니다.
-   > - 기존 Azure Virtual Network 및 서브넷. 
-   > - 이 Azure IaaS VM에서 온-프레미스 클라이언트, 도메인 컨트롤러, Storage Migration Service orchestrator 컴퓨터, Windows 관리 센터 컴퓨터와의 연결을 허용 하는 Azure Express 경로 또는 VPN 솔루션을 Virtual Network 및 서브넷에 연결 합니다. 마이그레이션할 원본 컴퓨터를 지정할 수 있습니다.
+    > [!NOTE]
+    > "새 Azure VM 만들기"를 사용 하려면 다음이 필요 합니다.
+    > - 유효한 Azure 구독.
+    > - 만들기 권한이 있는 기존 Azure Compute 리소스 그룹입니다.
+    > - 기존 Azure Virtual Network 및 서브넷. 
+    > - 이 Azure IaaS VM에서 온-프레미스 클라이언트, 도메인 컨트롤러, Storage Migration Service orchestrator 컴퓨터, Windows 관리 센터 컴퓨터와의 연결을 허용 하는 Azure Express 경로 또는 VPN 솔루션을 Virtual Network 및 서브넷에 연결 합니다. 마이그레이션할 원본 컴퓨터를 지정할 수 있습니다.
+   
+    Storage Migration Service를 사용 하 여 Azure Vm으로 마이그레이션하는 방법을 보여 주는 비디오는 다음과 같습니다.
+    > [!VIDEO https://www.youtube-nocookie.com/embed/k8Z9LuVL0xQ] 
 
 3. 원본 볼륨을 대상 볼륨에 매핑하고, 전송 하지 않으려는 모든 공유에 대 한 **포함** 확인란의 선택을 취소 하 고 (Windows 시스템 폴더에 있는 모든 관리 공유 포함) **다음**을 선택 합니다.
    원본 서버 및 해당 볼륨 및 공유를 보여 주는 ![스크린샷](media/migrate/transfer.png) **그림 3: 원본 서버와 해당 저장소가 전송** 되는 위치

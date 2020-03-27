@@ -3,7 +3,7 @@ title: 부팅 가능 USB 플래시 드라이브 만들기
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 05/04/2018
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,22 +12,22 @@ ms.assetid: 2fe8e35c-69f9-40b3-a270-22e2402510d8
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: cb62a460c09fdb2874bcc051176a05e88cee19e7
-ms.sourcegitcommit: 7cb939320fa2613b7582163a19727d7b77debe4b
+ms.openlocfilehash: 88ae4bc7b560b0571ca339138cb99843c2d078c8
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65621274"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80312126"
 ---
 # <a name="create-a-bootable-usb-flash-drive"></a>부팅 가능 USB 플래시 드라이브 만들기
 
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-Windows Server Essentials를 배포 하는 데 부팅 가능 USB 플래시 드라이브를 만들 수 있습니다. 첫 번째 단계는 명령줄 유틸리티인 DiskPart를 사용하여 USB 플래시 드라이브를 준비하는 것입니다. DiskPart에 관한 자세한 내용은 [DiskPart 명령줄 옵션](https://go.microsoft.com/fwlink/?LinkId=207073)을 참조하세요.  
+Windows Server Essentials를 배포 하는 데 사용할 부팅 가능 USB 플래시 드라이브를 만들 수 있습니다. 첫 번째 단계는 명령줄 유틸리티인 DiskPart를 사용하여 USB 플래시 드라이브를 준비하는 것입니다. DiskPart에 관한 자세한 내용은 [DiskPart 명령줄 옵션](https://go.microsoft.com/fwlink/?LinkId=207073)을 참조하세요.  
 
 
 > [!TIP]
-> 참조 사용에 대 한 부팅 가능 USB 플래시 드라이브를 복구 하거나 서버를 대신 하는 PC에 Windows를 다시 설치를 만들려면 [복구 드라이브를 만들어](https://support.microsoft.com/help/4026852/windows-create-a-recovery-drive)합니다.
+> 서버 대신 PC에서 Windows를 복구 하거나 다시 설치 하는 데 사용할 부팅 가능 USB 플래시 드라이브를 만들려면 [복구 드라이브 만들기](https://support.microsoft.com/help/4026852/windows-create-a-recovery-drive)를 참조 하세요.
   
  부팅 가능 USB 플래시 드라이브를 만들거나 사용할 수 있는 추가적인 시나리오는 다음 항목을 참조하세요.  
   
@@ -67,16 +67,16 @@ Windows Server Essentials를 배포 하는 데 부팅 가능 USB 플래시 드�
   
 ## <a name="see-also"></a>관련 항목  
 
- [Windows Server Essentials ADK 시작 하기](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
- [만들기 및 이미지를 사용자 지정](Creating-and-Customizing-the-Image.md)   
+ [Windows Server ESSENTIALS ADK를 사용 하 여 시작](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
+ [이미지  만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)  
  [추가 사용자 지정](Additional-Customizations.md)   
- [배포용 이미지 준비](Preparing-the-Image-for-Deployment.md)   
+ [배포할 이미지를 준비 하는 중](Preparing-the-Image-for-Deployment.md)   
  [사용자 환경 테스트](Testing-the-Customer-Experience.md)   
 
- [Windows Server Essentials ADK 시작 하기](../install/Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
- [만들기 및 이미지를 사용자 지정](../install/Creating-and-Customizing-the-Image.md)   
+ [Windows Server ESSENTIALS ADK를 사용 하 여 시작](../install/Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
+ [이미지  만들기 및 사용자 지정](../install/Creating-and-Customizing-the-Image.md)  
  [추가 사용자 지정](../install/Additional-Customizations.md)   
- [배포용 이미지 준비](../install/Preparing-the-Image-for-Deployment.md)   
+ [배포할 이미지를 준비 하는 중](../install/Preparing-the-Image-for-Deployment.md)   
  [사용자 환경 테스트](../install/Testing-the-Customer-Experience.md)   
 
- [어떻게 도와 드릴까요 있습니다?](https://windows.microsoft.com/windows/support)
+ [어떻게 도와 드릴 수 있나요?](https://windows.microsoft.com/windows/support)

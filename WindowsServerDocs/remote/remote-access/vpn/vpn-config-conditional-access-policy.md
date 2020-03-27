@@ -11,16 +11,16 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: article
 ms.date: 05/25/2018
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.localizationpriority: medium
 ms.reviewer: deverette
-ms.openlocfilehash: 22983c085f2b9d9e7e16810e25c6fa50111f9fa6
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 479c9fe4895f4181f8a776f024a7ff3c047fbc0e
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404346"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80307812"
 ---
 # <a name="step-73-configure-the-conditional-access-policy"></a>7\.3단계. 조건부 액세스 정책 구성
 
@@ -62,7 +62,7 @@ VPN 사용자 그룹에 할당 된 조건부 액세스 정책을 만들고 **클
 
     c. **선택** 페이지에서 **VPN 사용자** 그룹을 선택한 다음 **선택**을 선택 합니다.
 
-    d. **사용자 및 그룹** 페이지에서 **완료**를 선택 합니다.
+    . **사용자 및 그룹** 페이지에서 **완료**를 선택 합니다.
 
 5. **새로 만들기** 페이지에서 다음 단계를 수행 합니다.
 
@@ -72,7 +72,7 @@ VPN 사용자 그룹에 할당 된 조건부 액세스 정책을 만들고 **클
 
     b. **클라우드 앱** 페이지에서 **앱 선택**을 선택 합니다.
 
-    d. **VPN 서버**를 선택 합니다.
+    . **VPN 서버**를 선택 합니다.
 
 6.  **새** 페이지에서 **권한 부여** 페이지를 열려면 **제어** 섹션에서 **부여**를 선택 합니다.
 

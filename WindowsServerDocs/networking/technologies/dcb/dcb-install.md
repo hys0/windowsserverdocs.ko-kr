@@ -6,14 +6,14 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: b89213d8-143a-45f3-a609-bc6a7027204c
 manager: brianlic
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 5ecb6ef072dd2328a0a45d57d181dca9c2928a30
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: edca8269178d9e1de9f8d57abac04400da0ac5c1
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405787"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80312799"
 ---
 # <a name="install-data-center-bridging-dcb-in-windows-server-2016-or-windows-10"></a>Windows Server 2016 또는 Windows 10에서 데이터 센터 브리징 \(DCB\) 설치
 
@@ -77,7 +77,7 @@ Windows PowerShell을 사용 하 여 DCB을 설치 하려면 다음 절차를 �
 3. **설치 유형 선택**에서 **역할 기반 또는 기능 기반 설치**가 선택되어 있는지 확인하고 **다음**을 클릭합니다.
 4. **대상 서버 선택**에서 **서버 풀에서 서버 선택**이 선택되어 있는지 확인합니다. **서버 풀**에서 로컬 컴퓨터가 선택되어 있는지 확인합니다. **다음**을 클릭합니다.
 5. **서버 역할 선택**에서 **다음**을 클릭합니다.
-6. **기능 선택**의 **기능**에서 **데이터 센터 브리징**을 클릭 합니다. DCB 필요한 기능을 추가할 것인지 묻는 대화 상자가 열립니다. 클릭 **기능 추가**합니다.
+6. **기능 선택**의 **기능**에서 **데이터 센터 브리징**을 클릭 합니다. DCB 필요한 기능을 추가할 것인지 묻는 대화 상자가 열립니다. **기능 추가**를 클릭합니다.
 7. **기능 선택**, 클릭 **다음**합니다. 
 8. 7.In **설치 선택 확인**에서 **설치**를 클릭 합니다. 설치 **진행률** 페이지에는 설치 과정 중에 상태가 표시 됩니다. 설치가 완료 되었다는 메시지가 표시 되 면 **닫기**를 클릭 합니다.
 
@@ -100,7 +100,7 @@ Windows 10 컴퓨터에서 다음 절차를 수행할 수 있습니다.
 1. **시작**을 클릭 하 고 아래로 스크롤하여 **Windows 시스템**을 클릭 합니다.
 2. **제어판**을 클릭합니다. **제어판** 대화 상자가 열립니다.
 3. **제어판**에서 **보기 기준**을 클릭 한 다음 **크게 아이콘** 또는 **작은 아이콘**중 하나를 클릭 합니다.
-4. **프로그램 및 기능**을 클릭 합니다. 프로그램 및 기능 대화 상자가 열립니다.
+4. **프로그램 및 기능**을 클릭합니다. 프로그램 및 기능 대화 상자가 열립니다.
 5. **프로그램 및 기능**의 왼쪽 창에서 **Windows 기능 사용/사용 안 함**을 클릭 합니다. **Windows 기능** 대화 상자가 열립니다.
 6. **Windows 기능**에서 **데이터 센터 브리징**을 클릭 한 다음 **확인**을 클릭 합니다.
 

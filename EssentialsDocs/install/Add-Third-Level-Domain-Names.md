@@ -3,7 +3,7 @@ title: 세 번째 수준의 도메인 이름 추가
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: e5b4a362-1881-4024-ae4e-cc3b05e50103
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 64bf24e45155fdd981e2061b3de7ebce1c53b36c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 5608fb5417b9e958b45d150879daccc3b7767e59
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59833324"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80310230"
 ---
 # <a name="add-third-level-domain-names"></a>세 번째 수준의 도메인 이름 추가
 
@@ -28,17 +28,17 @@ ms.locfileid: "59833324"
 ## <a name="create-a-provider-of-third-level-domain-names"></a>세 번째 수준의 도메인 이름 공급자 만들기  
  마법사에 세 번째 수준의 도메인 이름을 제공하는 코드 어셈블리를 만들고 설치하여 해당 도메인 이름을 사용할 수 있습니다. 이렇게 하려면 다음 작업을 수행합니다.  
   
--   [어셈블리에 IDomainSignupProvider 인터페이스 구현 추가](Add-Third-Level-Domain-Names.md#BKMK_DomainSignup)  
+-   [어셈블리에 IDomainSignupProvider 인터페이스의 구현을 추가 합니다.](Add-Third-Level-Domain-Names.md#BKMK_DomainSignup)  
   
--   [어셈블리에 IDomainMaintenanceProvider 인터페이스 구현 추가](Add-Third-Level-Domain-Names.md#BKMK_DomainMaintenance)  
+-   [IDomainMaintenanceProvider 인터페이스의 구현을 어셈블리에 추가 합니다.](Add-Third-Level-Domain-Names.md#BKMK_DomainMaintenance)  
   
--   [Authenticode 서명으로 어셈블리 서명](Add-Third-Level-Domain-Names.md#BKMK_SignAssembly)  
+-   [Authenticode 서명을 사용 하 여 어셈블리 서명](Add-Third-Level-Domain-Names.md#BKMK_SignAssembly)  
   
--   [참조 컴퓨터에서 어셈블리를 설치 합니다.](Add-Third-Level-Domain-Names.md#BKMK_InstallAssembly)  
+-   [참조 컴퓨터에 어셈블리 설치](Add-Third-Level-Domain-Names.md#BKMK_InstallAssembly)  
   
--   [Windows Server 도메인 이름 관리 서비스를 다시 시작](Add-Third-Level-Domain-Names.md#BKMK_RestartService)  
+-   [Windows Server 도메인 이름 관리 서비스를 다시 시작 합니다.](Add-Third-Level-Domain-Names.md#BKMK_RestartService)  
   
-###  <a name="BKMK_DomainSignup"></a> 어셈블리에 IDomainSignupProvider 인터페이스 구현 추가  
+###  <a name="add-an-implementation-of-the-idomainsignupprovider-interface-to-the-assembly"></a><a name="BKMK_DomainSignup"></a>어셈블리에 IDomainSignupProvider 인터페이스의 구현을 추가 합니다.  
  IDomainSignupProvider 인터페이스는 마법사에 도메인 제품을 추가하는 데 사용됩니다.  
   
 ##### <a name="to-add-the-idomainsignupprovider-code-to-the-assembly"></a>어셈블리에 IDomainSignupProvider 코드를 추가하려면  
@@ -47,7 +47,7 @@ ms.locfileid: "59833324"
   
 2.  **파일**, **새로 만들기**를 차례로 클릭한 다음 **프로젝트**를 클릭합니다.  
   
-3.  **새 프로젝트** 대화 상자에서 **Visual C#**, **클래스 라이브러리**를 차례로 클릭하고 솔루션 이름을 입력한 다음 **확인**을 클릭합니다.  
+3.  **새 프로젝트** 대화 상자에서 **Visual C#** , **클래스 라이브러리**를 차례로 클릭하고 솔루션 이름을 입력한 다음 **확인**을 클릭합니다.  
   
 4.  Class1.cs 파일의 이름을 바꿉니다. 예를 들면 MyDomainNameProvider.cs입니다.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "59833324"
 8.  클래스에 Initialize 메서드와 필요한 변수를 추가합니다. 이 클래스는 마법사에 나타나는 제품을 정의합니다.  
   
     > [!NOTE]
-    >  Initialize 메서드는 고유해야 하는 도메인 공급자의 식별자를 정의합니다. 이 작업을 수행하는 일반적인 방법은 GUID를 식별자로 정의하는 것입니다. GUID 만들기에 대 한 자세한 내용은 참조 하세요. [Guid 만들기 (guidgen.exe)](https://go.microsoft.com/fwlink/?LinkId=116098)합니다.  
+    >  Initialize 메서드는 고유해야 하는 도메인 공급자의 식별자를 정의합니다. 이 작업을 수행하는 일반적인 방법은 GUID를 식별자로 정의하는 것입니다. GUID 만들기에 대한 자세한 내용은 [GUID 만들기(guidgen.exe)](https://go.microsoft.com/fwlink/?LinkId=116098)를 참조하세요.  
   
      다음 코드 예제는 초기화 메서드를 보여줍니다.  
   
@@ -278,7 +278,7 @@ ms.locfileid: "59833324"
   
 21. 해당 프로젝트를 저장하지만 그 다음 절차에서 프로젝트에 추가해야 하므로 닫지는 마세요. 다음 절차를 완료해야 프로젝트를 빌드할 수 있습니다.  
   
-###  <a name="BKMK_DomainMaintenance"></a> 어셈블리에 IDomainMaintenanceProvider 인터페이스 구현 추가  
+###  <a name="add-an-implementation-of-the-idomainmaintenanceprovider-interface-to-the-assembly"></a><a name="BKMK_DomainMaintenance"></a>IDomainMaintenanceProvider 인터페이스의 구현을 어셈블리에 추가 합니다.  
  IDomainMaintenanceProvider는 도메인을 만든 후 유지 관리하는 데 사용됩니다.  
   
 ##### <a name="to-add-the-idomainmaintenanceprovider-code-to-the-assembly"></a>어셈블리에 IDomainMaintenanceProvider 코드를 추가하려면  
@@ -517,10 +517,10 @@ ms.locfileid: "59833324"
   
 14. 솔루션을 저장하고 빌드합니다.  
   
-###  <a name="BKMK_SignAssembly"></a> Authenticode 서명으로 어셈블리 서명  
+###  <a name="sign-the-assembly-with-an-authenticode-signature"></a><a name="BKMK_SignAssembly"></a>Authenticode 서명을 사용 하 여 어셈블리 서명  
  어셈블리를 운영 체제에서 사용할 수 있으려면 반드시 Authenticode 서명이 필요합니다. 어셈블리 서명에 대한 자세한 내용은 [Authenticode를 사용하여 코드 서명 및 확인](https://msdn.microsoft.com/library/ms537364\(VS.85\).aspx#SignCode)을 참조하세요.  
   
-###  <a name="BKMK_InstallAssembly"></a> 참조 컴퓨터에서 어셈블리를 설치 합니다.  
+###  <a name="install-the-assembly-on-the-reference-computer"></a><a name="BKMK_InstallAssembly"></a>참조 컴퓨터에 어셈블리 설치  
  폴더의 어셈블리를 참조 컴퓨터에 배치합니다. 그 다음 단계에서 레지스트리에 입력할 예정이므로 폴더 경로를 확인합니다.  
   
 ### <a name="add-a-key-to-the-registry"></a>레지스트리에 키를 추가합니다.  
@@ -528,17 +528,17 @@ ms.locfileid: "59833324"
   
 ##### <a name="to-add-a-key-to-the-registry"></a>레지스트리에 키를 추가하려면  
   
-1.  참조 컴퓨터에서 **시작**을 클릭하고 **regedit**를 입력한 다음 **Enter**키를 누릅니다.  
+1.  참조 컴퓨터에서 **시작**을 클릭하고 **regedit**을 입력한 다음 **Enter** 키를 누릅니다.  
   
 2.  왼쪽 창에서 **HKEY_LOCAL_MACHINE**, **소프트웨어**, **Microsoft**, **Windows Server**, **도메인 관리자**를 차례로 확장한 다음 **공급자**를 확장합니다.  
   
 3.  **공급자**를 마우스 오른쪽 단추로 클릭하고 **새로 만들기**를 가리킨 다음 **키**를 클릭합니다.  
   
-4.  키 이름으로 공급자에 대한 식별자를 입력합니다. 식별자는 [어셈블리에 IDomainSignupProvider 인터페이스 구현 추가](Add-Third-Level-Domain-Names.md#BKMK_DomainSignup)의 8단계에서 공급자에 대해 정의된 GUID입니다.  
+4.  키 이름으로 공급자에 대한 식별자를 입력합니다. 식별자는 [어셈블리에 IDomainSignupProvider 인터페이스 구현 추가](Add-Third-Level-Domain-Names.md#BKMK_DomainSignup)의 8단계에서 공급자에 대해 정의한 GUID입니다.  
   
 5.  방금 만든 키를 마우스 오른쪽 단추로 클릭한 다음 **문자열 값**을 클릭합니다.  
   
-6.  문자열 이름에 **어셈블리** 를 입력한 다음 **Enter**키를 누릅니다.  
+6.  문자열 이름에 **어셈블리**를 입력한 다음 **Enter** 키를 누릅니다.  
   
 7.  오른쪽 창에서 새 **어셈블리** 문자열을 마우스 오른쪽 단추로 클릭한 다음 **수정**을 클릭합니다.  
   
@@ -554,18 +554,18 @@ ms.locfileid: "59833324"
   
 13. 키를 다시 마우스 오른쪽 단추로 클릭하고 **문자열 값**을 클릭합니다.  
   
-14. 문자열 이름에 **Type** 을 입력한 다음 **Enter**키를 누릅니다.  
+14. 문자열 이름에 **Type**을 입력한 다음 **Enter** 키를 누릅니다.  
   
 15. 오른쪽 창에서 새 **Type** 문자열을 마우스 오른쪽 단추로 클릭한 다음 **수정**을 클릭합니다.  
   
 16. 어셈블리에서 정의한 공급자의 전체 클래스 이름을 입력한 다음 **확인**을 클릭합니다.  
   
-###  <a name="BKMK_RestartService"></a> Windows Server 도메인 이름 관리 서비스를 다시 시작  
+###  <a name="restart-the-windows-server-domain-name-management-service"></a><a name="BKMK_RestartService"></a>Windows Server 도메인 이름 관리 서비스를 다시 시작 합니다.  
  운영 체제에서 공급자를 사용 가능할 수 있도록 Windows Server 도메인 관리 서비스를 다시 시작해야 합니다.  
   
-##### <a name="restart-the-service"></a>서비스를 다시 시작합니다.  
+##### <a name="restart-the-service"></a>서비스 다시 시작  
   
-1.  **시작**을 클릭하고 **mmc**를 입력한 다음 **Enter**키를 누릅니다.  
+1.  **시작**을 클릭하고 **mmc**를 입력한 다음 **Enter** 키를 누릅니다.  
   
 2.  콘솔에 서비스 스냅인이 나열되어 있지 않으면 다음 단계를 완료하여 추가합니다.  
   
@@ -580,7 +580,7 @@ ms.locfileid: "59833324"
 3.  **서비스**를 두 번 클릭하고 **Windows Server 도메인 관리**로 스크롤하여 선택한 다음 **서비스 다시 시작**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [만들기 및 이미지를 사용자 지정](Creating-and-Customizing-the-Image.md)   
+ [이미지  만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)  
  [추가 사용자 지정](Additional-Customizations.md)   
- [배포용 이미지 준비](Preparing-the-Image-for-Deployment.md)   
+ [배포할 이미지를 준비 하는 중](Preparing-the-Image-for-Deployment.md)   
  [사용자 환경 테스트](Testing-the-Customer-Experience.md)

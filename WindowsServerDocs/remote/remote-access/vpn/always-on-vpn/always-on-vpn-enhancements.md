@@ -5,16 +5,16 @@ ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: ''
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 11/05/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a79e590a273d7d7ccb673e5043bed2fcd1aeace
-ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
+ms.openlocfilehash: 8ebdceedbe793eba545e57fd991114158cb647be
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76822676"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80313377"
 ---
 # <a name="always-on-vpn-enhancements"></a>Always On VPN 기능 향상
 

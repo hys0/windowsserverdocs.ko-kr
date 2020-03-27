@@ -3,7 +3,7 @@ title: Windows Server Essentials에서 장치 관리
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: f5fe1088-ebe7-4799-a47d-075b0048dea1
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 48eb7009215e484fb00e704c7b328340240321d2
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: cd43826579bff16e4bdf50bba956f19a39fec5e6
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79322325"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80311312"
 ---
 # <a name="manage-devices-in-windows-server-essentials"></a>Windows Server Essentials에서 장치 관리
 
@@ -37,7 +37,7 @@ ms.locfileid: "79322325"
   
 -   [컴퓨터 속성 보기](Manage-Devices-in-Windows-Server-Essentials.md#BKMK_8)  
   
-##  <a name="BKMK_1"></a>대시보드를 사용 하 여 장치 관리  
+##  <a name="manage-devices-by-using-the-dashboard"></a><a name="BKMK_1"></a>대시보드를 사용 하 여 장치 관리  
  Windows Server Essentials에서는 Windows Server Essentials 대시보드를 사용하여 일반적인 관리 작업을 수행할 수 있습니다. 대시보드의 **장치** 페이지에서는 다음을 제공합니다.  
   
 -   다음을 표시하는 네트워크 컴퓨터 목록:  
@@ -89,7 +89,7 @@ ms.locfileid: "79322325"
 |서버에 컴퓨터를 연결하는 방법|컴퓨터를 네트워크에 연결하려고 수행하는 단계에 대해 설명하는 도움말 항목을 엽니다.|  
 |그룹 정책 구현|도메인에 가입된 Windows 8 및 Windows 7 컴퓨터에 정책 설정을 적용합니다.|  
   
-##  <a name="BKMK_2"></a>사용자 계정에 특정 네트워크 컴퓨터에 로그온 할 수 있는 권한 할당  
+##  <a name="assign-user-accounts-permission-to-log-on-to-specific-network-computers"></a><a name="BKMK_2"></a>사용자 계정에 특정 네트워크 컴퓨터에 로그온 할 수 있는 권한 할당  
  사용자가 원격 위치에서 Windows Server Essentials 네트워크에 액세스할 때 특정 네트워크 컴퓨터에만 로그온할 수 있도록 사용자 계정에 사용 권한을 할당할 수 있습니다.  
   
 #### <a name="to-change-the-computer-access-for-a-user-account"></a>사용자 계정에 대한 컴퓨터 액세스 권한을 변경하려면  
@@ -104,7 +104,7 @@ ms.locfileid: "79322325"
   
 5.  **컴퓨터 액세스** 탭에서 사용자가 원격으로 액세스할 수 있는 컴퓨터를 선택하고 **확인**을 클릭합니다.  
   
-##  <a name="BKMK_3"></a>서버에서 컴퓨터 제거  
+##  <a name="remove-a-computer-from-the-server"></a><a name="BKMK_3"></a>서버에서 컴퓨터 제거  
  대시보드를 사용하여 Windows Server Essentials를 실행 중인 서버에서 컴퓨터를 제거하면 컴퓨터가 더 이상 서버에서 관리되지 않습니다. 따라서 서버에서는 컴퓨터 백업 만들기를 중지하거나 컴퓨터가 네트워크에서 제거되고 난 후의 상태를 모니터링합니다.  
   
 > [!NOTE]
@@ -118,7 +118,7 @@ ms.locfileid: "79322325"
   
 3.  컴퓨터 목록에서, 네트워크에서 제거할 컴퓨터를 마우스 오른쪽 단추로 클릭하고 **컴퓨터 제거**를 클릭합니다.  
   
-##  <a name="BKMK_5"></a>폴더 리디렉션 및 보안에 대 한 그룹 정책 설정 구성  
+##  <a name="configure-group-policy-settings-for-folder-redirection-and-security"></a><a name="BKMK_5"></a>폴더 리디렉션 및 보안에 대 한 그룹 정책 설정 구성  
  Windows Server Essentials 대시보드를 사용하여 그룹 정책을 구성하고 Windows Server Essentials 네트워크의 컴퓨터에 배포할 수 있습니다. Windows Server Essentials의 그룹 정책에는 Windows 업데이트, Windows Defender 및 네트워크 방화벽에 영향을 미치는 폴더 리디렉션 및 보안에 대한 설정이 포함됩니다.  
   
 #### <a name="to-configure-group-policy-in-windows-server-essentials"></a>Windows Server Essentials에서 그룹 정책을 구성하려면  
@@ -139,7 +139,7 @@ ms.locfileid: "79322325"
   
 7.  **마침**을 클릭하여 그룹 정책 설정을 구현합니다.  
   
-##  <a name="BKMK_7"></a>원격 데스크톱 세션을 사용 하 여 네트워크 컴퓨터에 연결  
+##  <a name="connect-to-a-network-computer-by-using-a-remote-desktop-session"></a><a name="BKMK_7"></a>원격 데스크톱 세션을 사용 하 여 네트워크 컴퓨터에 연결  
  사무실을 비울 때 Windows Server Essentials 네트워크 컴퓨터에 원격으로 액세스 하려면 웹 브라우저를 사용 하 여 조직의 원격 웹 액세스 웹 사이트에 로그온 하 고 컴퓨터 탭에서 컴퓨터 이름을 클릭 **합니다.**  
   
  **상태** 열에는 네트워크의 컴퓨터에 연결할 수 있는지가 표시되고 다음 값이 포함될 수 있습니다.  
@@ -160,7 +160,7 @@ ms.locfileid: "79322325"
   
      컴퓨터 연결이 방화벽으로 차단되거나 원격 데스크톱이 컴퓨터 또는 그룹 정책에서 사용 안 함으로 설정되었습니다. 변경 사항이 있으면 서버에서 이 상태가 업데이트되는 데 최대 6시간이 걸릴 수 있습니다.  
   
-##  <a name="BKMK_8"></a>컴퓨터 속성 보기  
+##  <a name="view-computer-properties"></a><a name="BKMK_8"></a>컴퓨터 속성 보기  
  Windows Server Essentials 대시보드의 **장치** 섹션에는 네트워크 컴퓨터 목록이 표시됩니다. 목록에서는 각 컴퓨터에 대한 추가 정보도 제공합니다.  
   
 #### <a name="to-view-a-list-of-computers"></a>컴퓨터 목록을 보려면  

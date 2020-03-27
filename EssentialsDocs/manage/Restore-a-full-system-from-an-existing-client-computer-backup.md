@@ -3,7 +3,7 @@ title: 기존 클라이언트 컴퓨터 백업에서 전체 시스템 복원
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: 47e498a6-1b71-47de-88f6-8c13c221d108
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: c78a2a2d950c8542bcf56005eb340ec78619acdb
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: b9629f41c4e8eb707b19914a297d9d8b88c6aead
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66433095"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80310652"
 ---
 # <a name="restore-a-full-system-from-an-existing-client-computer-backup"></a>기존 클라이언트 컴퓨터 백업에서 전체 시스템 복원
 
@@ -29,49 +29,49 @@ ms.locfileid: "66433095"
   
 -   [컴퓨터 전체 시스템 복원 이란?](Restore-a-full-system-from-an-existing-client-computer-backup.md#BKMK_WhatIs)  
   
--   [시스템 복원 환경을 어떻게 작동 하나요?](Restore-a-full-system-from-an-existing-client-computer-backup.md#BKMK_HowDoes)  
+-   [시스템 복원 환경은 어떻게 작동 하나요?](Restore-a-full-system-from-an-existing-client-computer-backup.md#BKMK_HowDoes)  
   
--   [클라이언트 컴퓨터를 복원 하려면 부팅 가능 USB 플래시 드라이브 만들기](Restore-a-full-system-from-an-existing-client-computer-backup.md#BKMK_CreateBootable)  
+-   [부팅 가능한 USB 플래시 드라이브를 만들어 클라이언트 컴퓨터 복원](Restore-a-full-system-from-an-existing-client-computer-backup.md#BKMK_CreateBootable)  
   
--   [전체 시스템 복원 마법사를 사용 하 여](Restore-a-full-system-from-an-existing-client-computer-backup.md#BKMK_Using)  
+-   [전체 시스템 복원 마법사 사용](Restore-a-full-system-from-an-existing-client-computer-backup.md#BKMK_Using)  
   
--   [하드웨어 드라이버는 어디서 찾을 수 있습니까?](Restore-a-full-system-from-an-existing-client-computer-backup.md#BKMK_FindDrivers)  
+-   [하드웨어에 대 한 드라이버는 어디서 찾을 수 있나요?](Restore-a-full-system-from-an-existing-client-computer-backup.md#BKMK_FindDrivers)  
   
-##  <a name="BKMK_WhatIs"></a> 컴퓨터 전체 시스템 복원 이란?  
+##  <a name="what-is-computer-full-system-restore"></a><a name="BKMK_WhatIs"></a>컴퓨터 전체 시스템 복원 이란?  
  하드 디스크 드라이브를 교체하거나 컴퓨터에 오류가 발생하여 컴퓨터를 사용하거나 시작할 수 없게 되면 컴퓨터의 이전 백업을 사용하여 시스템을 복원할 수 있습니다. 전체 시스템 복원은 시스템을 백업 당시의 상태로 되돌립니다.  
   
 > [!IMPORTANT]
 >  교체 대상 컴퓨터 하드웨어와는 다른 시스템 보드 등의 컴퓨터 하드웨어에 대해서는 전체 시스템 복원을 수행할 수 없습니다. 설치된 운영 체제는 컴퓨터의 기본 하드웨어와 밀접하게 관련되어 있습니다. 그러나 크기가 교체 대상 하드 드라이브보다 큰 하드 드라이브에 대해서는 전체 시스템 복원을 수행할 수 있습니다.  
   
- 전체 시스템 복원을 수행할 때는 시스템 오류, 재해 또는 도난 발생 이전에 일상적으로 사용했던 모든 응용 프로그램, 구성 및 설정이 포함된 상태의 특정 컴퓨터 백업을 사용하여 시스템을 복원하도록 선택할 수 있습니다. 복원할 볼륨을 선택할 수도 있습니다.  
+ 전체 시스템 복원을 수행할 때는 시스템 오류, 재해 또는 도난 발생 이전에 일상적으로 사용했던 모든 애플리케이션, 구성 및 설정이 포함된 상태의 특정 컴퓨터 백업을 사용하여 시스템을 복원하도록 선택할 수 있습니다. 복원할 볼륨을 선택할 수도 있습니다.  
   
  전체 시스템을 네트워크 컴퓨터로 복원할 계획을 세우거나 준비를 할 때 다음을 고려하세요.  
   
 ### <a name="windows-preinstallation-environment"></a>Windows 사전 설치 환경  
- Windows PE(사전 설치 환경)은 Windows 설치를 위해 컴퓨터를 준비하도록 고안된 최소 운영 체제입니다. Windows Server Essentials를 실행 하는 서버에 대 한 Windows PE는 복원할 컴퓨터에 복원 미디어를 삽입 하면 자동으로 설치 됩니다. Windows Server Essentials를 실행 하는 서버에 대 한 Windows PE USB 플래시 드라이브 또는 클라이언트 복원 서비스를 사용 하 여 컴퓨터를 시작할 때 자동으로 설치 됩니다.  
+ Windows PE(사전 설치 환경)은 Windows 설치를 위해 컴퓨터를 준비하도록 고안된 최소 운영 체제입니다. Windows Server Essentials를 실행 하는 서버의 경우 Windows PE는 복원할 컴퓨터에 복원 미디어를 삽입 하면 자동으로 설치 됩니다. Windows Server Essentials를 실행 하는 서버의 경우 Windows PE는 클라이언트 복원 서비스 또는 USB 플래시 드라이브를 사용 하 여 컴퓨터를 시작할 때 자동으로 설치 됩니다.  
   
  Windows PE는 무선 연결을 지원하지 않습니다. 따라서 복원되는 컴퓨터가 회사 네트워크에 연결되어 있어야 합니다.  
   
 ### <a name="bitlocker"></a>BitLocker  
  BitLocker 드라이브 암호화 (BitLocker)는 일부 버전의 Windows Vista, Windows 7 및 Windows 8에서 사용할 수 있는 데이터 보호 기능입니다. BitLocker는 분실했거나 도난당한 컴퓨터에서 데이터 도용 또는 노출을 방지하며 컴퓨터를 더 이상 사용하지 않으려는 경우에는 데이터를 보다 안전하게 삭제하는 기능을 제공합니다.  
   
- **Windows Server essentials의 경우:** 복원해야 하는 컴퓨터가 BitLocker를 사용하여 암호화된 경우(운영 체제 드라이브만 암호화 또는 운영 체제 드라이브와 단일 드라이브 또는 기타 여러 고정 드라이브를 함께 암호화)에도 서버와 함께 제공된 CD에 들어 있는 전체 시스템 복원 미디어 및 전체 시스템 복원 마법사를 통해 운영 체제를 비롯한 하드 디스크 드라이브 이미지를 백업에서 다시 설치하고 데이터를 새 컴퓨터 또는 복구된 컴퓨터에 복원할 수 있습니다.  
+ **Windows Server Essentials의 경우:** 복원 해야 하는 컴퓨터가 BitLocker를 사용 하 여 암호화 된 경우 (운영 체제 드라이브 또는 운영 체제 드라이브와 단일 또는 여러 다른 고정 드라이브 였는 지 여부에 관계 없이) 서버와 함께 제공 되는 CD에 포함 된 전체 시스템 복원 미디어를 사용 하 고 전체 시스템 복원 마법사에서 운영 체제를 포함 하 여 하드 드라이브 이미지를 백업에서 다시 설치 하 고 데이터를 새 컴퓨터 또는 복구 된 컴퓨터에 복원할 수 있습니다.  
   
- **Windows Server essentials의 경우:** 복원해야 하는 컴퓨터가 BitLocker를 사용하여 암호화된 경우(운영 체제 드라이브만 암호화 또는 운영 체제 드라이브와 단일 드라이브 또는 기타 여러 고정 드라이브를 함께 암호화)에도 전체 시스템 복원 마법사를 통해 운영 체제를 비롯한 하드 디스크 드라이브 이미지를 백업에서 다시 설치하고 데이터를 새 컴퓨터 또는 복구된 컴퓨터에 복원할 수 있습니다.  
+ **Windows Server Essentials의 경우:** 복원 해야 하는 컴퓨터가 BitLocker를 사용 하 여 암호화 된 경우 (운영 체제 드라이브 또는 운영 체제 드라이브와 단일 또는 여러 다른 고정 드라이브 였는 지 여부에 관계 없이) 전체 시스템 복원 마법사를 사용 하 여 운영 체제를 포함 한 하드 드라이브 이미지를 백업에서 다시 설치 하 고 데이터를 새 컴퓨터 또는 복구 된 컴퓨터에 복원할 수 있습니다.  
   
  서버가 드라이브, 폴더, 파일을 백업할 때 암호화된 버전이 서버에 저장됩니다. 전체 시스템 복원 중에는 이 암호화되지 않은 버전이 컴퓨터에 복사됩니다.  
   
 > [!NOTE]
 >  전체 시스템 복원이 정상적으로 완료되고 나면 컴퓨터에서 BitLocker를 다시 활성화해야 합니다.  
 >   
->  Windows 8을 실행 하는 컴퓨터에서 BitLocker를 사용 하는 방법에 대 한 지침은 [BitLocker: BitLocker를 사용 하도록 설정 하는 방법을](https://go.microsoft.com/fwlink/p/?LinkID=254918)합니다.  
+>  Windows 8을 실행 하는 컴퓨터에서 BitLocker를 사용 하도록 설정 하는 방법에 대 한 지침은 [bitlocker: bitlocker를 사용 하도록 설정 하는 방법](https://go.microsoft.com/fwlink/p/?LinkID=254918)을 참조 하세요.  
 >   
->  Windows 7을 실행 하는 컴퓨터에서 BitLocker를 활성화 하는 방법에 대 한 지침은 [BitLocker 드라이브 암호화 단계별 가이드에 대 한 Windows 7](https://go.microsoft.com/fwlink/p/?LinkId=140225)합니다.  
+>  Windows 7을 실행 하는 컴퓨터에서 BitLocker를 사용 하도록 설정 하는 방법에 대 한 지침은 [windows 7에 대 한 단계별 가이드 BitLocker 드라이브 암호화](https://go.microsoft.com/fwlink/p/?LinkId=140225)를 참조 하세요.  
   
  BitLocker 드라이브 암호화에 대한 기본 정보는 [BitLocker FAQ(질문과 대답)](https://go.microsoft.com/fwlink/p/?LinkID=254917)를 참조하세요.  
   
 ### <a name="encrypting-file-system-encrypted-files"></a>파일 시스템 암호화 파일 암호화  
- Windows의 EFS(파일 시스템 암호화) 기능을 사용하면 같은 컴퓨터를 여러 명이 사용하는 경우 서로 다른 보안 수준에 사용할 수 있는 사용자 기반 파일 수준 암호화가 추가적으로 제공됩니다. BitLocker 암호화 드라이브와는 달리 EFS 암호화 폴더 및 파일은 모든 컴퓨터 백업에서 암호화된 상태로 유지됩니다. EFS는 Windows XP Home Edition, Windows Vista Starter, Windows Vista Home Basic, Windows Vista Home Premium, Windows 7 Starter, Windows 7 Home Basic, Windows 7 Home Premium, 또는 Windows 8에서 사용할 수 없습니다. Windows 8 Pro에서만 사용할 수 있습니다.  
+ Windows의 EFS(파일 시스템 암호화) 기능을 사용하면 같은 컴퓨터를 여러 명이 사용하는 경우 서로 다른 보안 수준에 사용할 수 있는 사용자 기반 파일 수준 암호화가 추가적으로 제공됩니다. BitLocker 암호화 드라이브와는 달리 EFS 암호화 폴더 및 파일은 모든 컴퓨터 백업에서 암호화된 상태로 유지됩니다. EFS는 Windows XP Home Edition, Windows Vista Starter, Windows Vista Home Basic, Windows Vista Home Premium, Windows 7 Starter, Windows 7 Home Basic, Windows 7 Home Premium 또는 Windows 8에서 사용할 수 없습니다. Windows 8 Pro에서만 사용할 수 있습니다.  
   
 > [!WARNING]
 >  BitLocker와는 달리 EFS로 보호된 파일은 해당 파일을 암호화된 운영 체제 내에서만 액세스할 수 있습니다.  
@@ -90,8 +90,8 @@ ms.locfileid: "66433095"
 ### <a name="raid-and-dynamic-disks"></a>RAID 및 동적 디스크  
  RAID(Redundant Array of Independent Disks) 및 동적 디스크는 백업할 수 없습니다.  
   
-##  <a name="BKMK_HowDoes"></a> 시스템 복원 환경을 어떻게 작동 하나요?  
- Windows ServerÂ® 2012 Essentials를 사용 하 여 제공 된 시스템 복원 미디어는 컴퓨터의 Windows Preinstallation Environment (Windows PE)를 설치 합니다. Windows PE는 MS-DOS 환경을 대체하며 Windows를 위한 핵심 프로그램 파일을 포함하고 있습니다. Windows Server essentials에서는 두 가지 지원 되는 시스템을 복원할: 클라이언트 복원 서비스를 사용 하는 USB를 사용 하 여 플래시 드라이브 또는 네트워크를 사용 하 고 미디어에 의존 하지 않습니다.  
+##  <a name="how-does-the-system-restore-environment-work"></a><a name="BKMK_HowDoes"></a>시스템 복원 환경은 어떻게 작동 하나요?  
+ Windows ServerÂ 2012 Essentials에 제공 된 시스템 복원 미디어는 컴퓨터에 Windows 사전 설치 환경 (Windows PE)를 설치 합니다. Windows PE는 MS-DOS 환경을 대체하며 Windows를 위한 핵심 프로그램 파일을 포함하고 있습니다. Windows Server Essentials에는 네트워크를 사용 하 고 미디어에 의존 하지 않는 클라이언트 복원 서비스를 사용 하거나 USB 플래시 드라이브를 사용 하 여 시스템을 복원 하는 데 지원 되는 두 가지 방법이 있습니다.  
   
 > [!NOTE]
 >  Windows PE는 무선 연결을 지원하지 않습니다. 따라서 복원되는 컴퓨터가 회사 네트워크에 연결되어 있어야 합니다.  
@@ -100,10 +100,10 @@ ms.locfileid: "66433095"
   
  사전 설치 환경이 설치되면 전체 시스템 복원 마법사가 시작됩니다. 마법사를 통해 이전 백업에서 컴퓨터를 복원할 수 있습니다. 시스템 복원 환경을 사용하여 유사한 하드웨어를 가진 새로운 컴퓨터로 백업을 복원할 수 있습니다.  
   
- 대부분의 경우 시스템 복원 환경에 포함된 프로그램 파일과 드라이버만으로 새 컴퓨터 또는 복원된 컴퓨터를 다시 시작할 수 있습니다. 새 컴퓨터 또는 복원된 컴퓨터의 하드웨어에 따라 시스템 복원 환경에는 새 컴퓨터 또는 복원된 컴퓨터를 다시 시작하는 데 필요한 일부 저장소 및 네트워크 어댑터 드라이버가 포함되지 않을 수 있습니다. 전체 시스템 복원 마법사를 사용하면 필요한 경우 사용자가 드라이버를 설치할 수 있습니다. 하드웨어 드라이버를 찾는 방법에 대한 자세한 내용은 [하드웨어 드라이버용 드라이버를 찾을 수 있는 위치](Restore-a-full-system-from-an-existing-client-computer-backup.md#BKMK_FindDrivers)를 참조하세요. 시스템 복원 미디어 사용 방법에 대한 자세한 내용은 [전체 시스템 복원 마법사 사용](Restore-a-full-system-from-an-existing-client-computer-backup.md#BKMK_Using)을 참조하세요.  
+ 대부분의 경우 시스템 복원 환경에 포함된 프로그램 파일과 드라이버만으로 새 컴퓨터 또는 복원된 컴퓨터를 다시 시작할 수 있습니다. 새 컴퓨터 또는 복원된 컴퓨터의 하드웨어에 따라 시스템 복원 환경에는 새 컴퓨터 또는 복원된 컴퓨터를 다시 시작하는 데 필요한 일부 스토리지 및 네트워크 어댑터 드라이버가 포함되지 않을 수 있습니다. 전체 시스템 복원 마법사를 사용하면 필요한 경우 사용자가 드라이버를 설치할 수 있습니다. 하드웨어 드라이버를 찾는 방법에 대한 자세한 내용은 [하드웨어 드라이버용 드라이버를 찾을 수 있는 위치](Restore-a-full-system-from-an-existing-client-computer-backup.md#BKMK_FindDrivers)를 참조하세요. 시스템 복원 미디어 사용 방법에 대한 자세한 내용은 [전체 시스템 복원 마법사 사용](Restore-a-full-system-from-an-existing-client-computer-backup.md#BKMK_Using)을 참조하세요.  
   
-##  <a name="BKMK_CreateBootable"></a> 클라이언트 컴퓨터를 복원 하려면 부팅 가능 USB 플래시 드라이브 만들기  
- 클라이언트 복원 서비스 (Windows Server Essentials)에서 서버에 설정 하지 않으려는 경우 또는 기존 클라이언트 컴퓨터 백업 하지만 (in Windows Server Essentials) 서버와 함께 제공 된 복원 CD를 찾을 수 없습니다. 복원 하는 경우 부팅 가능 USB 플래시 드라이브를 만들 수 있습니다. 그런 다음 USB 플래시 드라이브를 사용하여 클라이언트 컴퓨터를 시작하고 시스템을 복구할 수 있습니다. 사용하는 USB 플래시 드라이브는 1GB 이상이어야 합니다.  
+##  <a name="create-a-bootable-usb-flash-drive-to-restore-a-client-computer"></a><a name="BKMK_CreateBootable"></a>부팅 가능한 USB 플래시 드라이브를 만들어 클라이언트 컴퓨터 복원  
+ 기존 백업에서 클라이언트 컴퓨터를 복원 해야 하지만 서버와 함께 제공 되는 복원 CD를 찾을 수 없는 경우 (Windows Server Essentials) 또는 서버에서 클라이언트 복원 서비스를 설정 하지 않으려면 (Windows Server Essentials) 에서 부팅 가능한 USB 플래시 드라이브를 만들 수 있습니다. 그런 다음 USB 플래시 드라이브를 사용하여 클라이언트 컴퓨터를 시작하고 시스템을 복구할 수 있습니다. 사용하는 USB 플래시 드라이브는 1GB 이상이어야 합니다.  
   
 #### <a name="to-create-a-bootable-usb-flash-drive"></a>부팅 가능 USB 플래시 드라이브를 만들려면  
   
@@ -114,7 +114,7 @@ ms.locfileid: "66433095"
 3.  **작업** 창에서 **컴퓨터 백업 및 파일 기록 설정 사용자 지정**을 클릭합니다.  
   
     > [!NOTE]
-    >  Windows Server Essentials에서 클릭 **클라이언트 컴퓨터 백업 작업**합니다.  
+    >  Windows Server Essentials에서 **클라이언트 컴퓨터 백업 작업**을 클릭 합니다.  
   
 4.  **도구** 탭을 클릭한 다음 **컴퓨터 복구** 섹션에서 **키 만들기**를 클릭합니다. 컴퓨터 복구 키 만들기 마법사가 열립니다.  
   
@@ -123,41 +123,41 @@ ms.locfileid: "66433095"
     > [!CAUTION]
     >  USB 플래시 드라이브의 모든 데이터가 삭제됩니다.  
   
-##  <a name="BKMK_Using"></a> 전체 시스템 복원 마법사를 사용 하 여  
+##  <a name="using-the-full-system-restore-wizard"></a><a name="BKMK_Using"></a>전체 시스템 복원 마법사 사용  
  복원 미디어, 클라이언트 복원 서비스 또는 USB 플래시 드라이브를 사용하여 컴퓨터를 정상적으로 시작하고 모든 하드웨어 드라이버가 복원된 클라이언트 컴퓨터 또는 새 클라이언트 컴퓨터에서 로드되었음을 확인하고 나면 전체 시스템 복원 마법사가 나타납니다. 이 마법사를 통해 서버, 컴퓨터 백업 및 컴퓨터에 복원하려는 원본 볼륨에 액세스하여 실제 복원 프로세스를 수행할 수 있습니다.  
   
 > [!NOTE]
->   Windows Server Essentials에는 다음 복원 시나리오를 지원 하지 않습니다.  
+>   Windows Server Essentials는 다음 복원 시나리오를 지원 하지 않습니다.  
 > 
-> - 마스터 부트 레코드 (MBR) 디스크를 UEFI Unified Extensible Firmware Interface 기반 컴퓨터로 복원합니다.  
+> - MBR (마스터 부트 레코드) 디스크를 UEFI (UEFI(Unified Extensible Firmware Interface)) 기반 컴퓨터로 복원 합니다.  
 >   -   UEFI/GPT 백업을 BIOS 시스템으로 복원합니다.  
 > 
 >   이러한 시나리오 중 하나로 데이터를 복원하는 경우 시스템을 부팅할 수 없습니다. 또한 용량이 2테라바이트 이상인 하드 드라이브를 사용할 수 없습니다.  
   
- **사전 요구 사항:**  
+ **사전**  
   
 -   전체 시스템 복원 과정을 시작하기 전에 네트워크 케이블(유선 연결)을 사용하여 컴퓨터를 서버와 같은 네트워크에 연결합니다. 클라이언트 컴퓨터의 모든 하드 드라이브에 액세스할 수 있는지 확인하세요.  
   
     > [!WARNING]
     >  네트워크에 무선으로 연결되는 컴퓨터에서는 전체 시스템 복원을 수행하지 마세요.  
   
--   컴퓨터에 중요한 네트워크 또는 저장 장치 드라이버가 없는 경우에는 전체 시스템 복원 프로세스를 시작하기 전에 해당 드라이버를 찾아서 플래시 드라이브에 복사해야 합니다. Windows Server essentials의 경우: CD로 제공된 전체 시스템 복원 미디어를 사용하는 경우 전체 시스템 복원 과정 초반에 해당 CD가 드라이브에 들어 있어야 합니다. 따라서 두 번째 CD/DVD 드라이브가 없다면 누락된 드라이버를 CD나 DVD에 복사하지 마세요. 대신 누락된 드라이버를 USB 플래시 드라이브에 복사합니다.  
+-   컴퓨터에 중요한 네트워크 또는 저장 장치 드라이버가 없는 경우에는 전체 시스템 복원 프로세스를 시작하기 전에 해당 드라이버를 찾아서 플래시 드라이브에 복사해야 합니다. Windows Server Essentials의 경우: CD에 제공 된 전체 시스템 복원 미디어를 사용 하는 경우 전체 시스템 복원 프로세스의 시작 부분에서 해당 CD가 드라이브에 남아 있어야 합니다. 따라서 두 번째 CD/DVD 드라이브가 없다면 누락된 드라이버를 CD나 DVD에 복사하지 마세요. 대신 누락된 드라이버를 USB 플래시 드라이브에 복사합니다.  
   
      컴퓨터용 드라이버를 찾는 방법에 대한 자세한 내용은 [하드웨어용 드라이버를 찾을 수 있는 위치](Restore-a-full-system-from-an-existing-client-computer-backup.md#BKMK_FindDrivers)를 참조하세요.  
   
--   Windows Server essentials의 경우: Windows Server Essentials 복원 CD를 찾을 수 없는 경우 부팅 가능 USB 플래시 드라이브를 만들 수 있습니다. 자세한 내용은 [Create a bootable USB flash drive to restore a client computer](Restore-a-full-system-from-an-existing-client-computer-backup.md#BKMK_CreateBootable)를 참조하세요.  
+-   Windows Server Essentials의 경우: Windows Server Essentials Restore CD를 찾을 수 없는 경우 부팅 가능 USB 플래시 드라이브를 만들 수 있습니다. 자세한 정보는 [클라이언트 컴퓨터 복원을 위한 부팅 가능 USB 플래시 드라이브 작성](Restore-a-full-system-from-an-existing-client-computer-backup.md#BKMK_CreateBootable)을 참조하세요.  
   
 #### <a name="to-use-the-full-system-restore-wizard"></a>전체 시스템 복원 마법사를 사용하려면  
   
-1. 다음 중 하나를 수행합니다.  
+1. 다음 작업 중 하나를 수행합니다.  
   
-   -   Windows Server Essentials의 경우: 복원할 클라이언트 컴퓨터를 켜고 복원 미디어를 삽입한 다음 컴퓨터를 끕니다.  
+   -   Windows Server Essentials: 복원 하려는 클라이언트 컴퓨터를 켜고 복원 미디어를 삽입 한 다음 컴퓨터를 끕니다.  
   
         컴퓨터를 다시 켜고 POST(Power-On Self Test) 중에 해당하는 기능 키(F-키)를 눌러 부팅 장치 메뉴에 액세스한 다음 CD/DVD 드라이브를 선택합니다. Windows 부팅 관리자를 시작합니다.  
   
-   -   Windows Server Essentials의 경우: 클라이언트 복원 서비스를 사용 중이면 **네트워크에서 부팅** 옵션을 사용하여 컴퓨터를 다시 시작합니다. 그렇지 않으면 USB 키를 사용하여 컴퓨터를 시작합니다.  
+   -   Windows Server Essentials: 클라이언트 복원 서비스를 사용 하는 경우 **네트워크에서 부팅** 옵션을 사용 하 여 컴퓨터를 다시 시작 합니다. 그렇지 않으면 USB 키를 사용하여 컴퓨터를 시작합니다.  
   
-        컴퓨터를 다시 켜고 POST(Power-On Self Test) 중에 해당하는 기능 키(F-키)를 눌러 부팅 장치 메뉴에 액세스한 다음 **네트워크에서 부팅** 을 선택합니다(또는 USB 키에서 부팅하도록 선택할 수 있음). Windows 부팅 관리자를 시작합니다.  
+        컴퓨터를 다시 켜고 POST(Power-On Self Test) 중에 해당하는 기능 키(F-키)를 눌러 부팅 장치 메뉴에 액세스한 다음 **네트워크에서 부팅**을 선택합니다(또는 USB 키에서 부팅하도록 선택할 수 있음). Windows 부팅 관리자를 시작합니다.  
   
    > [!NOTE]
    >  부팅 장치 메뉴에 액세스하는 데 사용하는 기능 키는 컴퓨터 제조업체의 설명서에서 확인할 수 있습니다.  
@@ -168,13 +168,13 @@ ms.locfileid: "66433095"
   
 4. 이 컴퓨터에서 사용할 적절한 **시간 및 통화 형식**과 **키보드 또는 입력 방법**을 선택합니다. **계속**을 클릭합니다.  
   
-5. 드라이버가 없는 경우 복원 프로세스에서 드라이버를 확인할 수 없습니다. 메시지가 표시 됩니다. **닫기**를 클릭한 다음 시작 대화 상자에서 **드라이버 로드**를 클릭합니다.  
+5. 드라이버가 없는 경우 복원 프로세스에서 드라이버가 표시 되었는지 확인할 수 없습니다. 메시지가 표시 됩니다. **닫기**를 클릭한 다음 시작 대화 상자에서 **드라이버 로드**를 클릭합니다.  
   
-   1.  **하드웨어 검색** 대화 상자에서 **드라이버 설치**를 클릭합니다.  
+   1.  **하드웨어  검색** 대화 상자에서  **드라이버 설치**를 클릭합니다.  
   
    2.  하드웨어 드라이버가 들어 있는 USB 플래시 드라이브를 삽입하고 **드라이버 설치** 대화 상자에서 **검색**을 클릭합니다.  
   
-   3.  드라이버가 검색되면 **드라이버 설치** 대화 상자에서 **확인** 을 클릭합니다.  
+   3.  드라이버가 검색되면 **드라이버 설치** 대화 상자에서 **확인**을 클릭합니다.  
   
    4.  **하드웨어 검색** 대화 상자에서 **계속**을 클릭합니다.  
   
@@ -188,14 +188,14 @@ ms.locfileid: "66433095"
   
    2.  여러 서버가 검색되면 하나를 선택하라는 메시지가 나타납니다.  
   
-   3.  서버를 찾으면 합니다 **에 로그온 < 서버 이름\>**  페이지가 표시 됩니다.  
+   3.  서버가 있는 경우 **< 서버 이름\>에 로그온** 페이지가 표시 됩니다.  
   
-9. 에 **에 로그온 < 찾으면\>**  페이지에서 입력 *< 이름\>*  에 **사용자 이름** 텍스트 상자 및 관리자 계정 암호를 **암호** 텍스트 상자를 클릭 한 다음 **다음**합니다.  
+9. **< 서버 이름\>에 로그온** 페이지에서 **사용자 이름** 텍스트 상자에 *< 관리자 accountname\>* 를 입력 하 고 **암호** 텍스트 상자에 관리자 계정 암호를 입력 한 후 **다음**을 클릭 합니다.  
   
     > [!IMPORTANT]
     >  영어로 만들어진 관리자 계정을 사용해야 합니다. 이와 같은 관리자 계정이 없으면 새 관리자 계정을 만들어야 합니다. 이렇게 하려면 먼저 서버 대시보드에서 **사용자** 탭을 열고 키보드 언어 형식을 영어로 설정한 다음 **사용자 계정 추가** 작업을 실행하여 관리자 계정을 만듭니다. 다음으로 새 관리자 계정을 사용하여 클라이언트 컴퓨터를 계속 복원합니다.  
   
-10. **복원할 컴퓨터 선택** 페이지에서 복원할 컴퓨터를 선택한 후 **다음**을 클릭합니다. 선택할 수 있습니다 **< 컴퓨터 이름\>: (이 컴퓨터)**  하거나 다른 컴퓨터에서 네트워크를 선택 합니다 **다른 컴퓨터로** 드롭다운 목록입니다.  
+10. **복원할 컴퓨터 선택** 페이지에서 복원할 컴퓨터를 선택한 후 **다음**을 클릭합니다. **< ComputerName\>: (이 컴퓨터)** 를 선택 하거나 **다른 컴퓨터** 드롭다운 목록에서 네트워크의 다른 컴퓨터를 선택할 수 있습니다.  
   
     > [!NOTE]
     >  새 컴퓨터 또는 용도를 변경한 컴퓨터와 같이 서버에서 인식할 수 없는 컴퓨터의 경우에는 **이 컴퓨터** 옵션이 표시되지 않습니다.  
@@ -240,14 +240,14 @@ ms.locfileid: "66433095"
        1. **디스크 관리자 실행(고급)** 을 클릭하고 시스템의 예약 볼륨과 크기가 같은 새 볼륨을 만듭니다.  
   
           > [!NOTE]
-          >  클라이언트 컴퓨터는 UEFI Unified Extensible Firmware Interface 기반 하는 경우 사용 해야 합니다 **diskpart** 시스템 디스크를 초기화 하는 도구입니다. 이렇게 하려면 명령 창(WinPE 환경에서 5초 동안 Ctrl+Alt+Shift를 누름)을 열고 **diskpart.exe**를 실행한 후 다음 diskpart 명령을 실행합니다.  
+          >  클라이언트 컴퓨터가 UEFI (UEFI(Unified Extensible Firmware Interface))를 기반으로 하는 경우에는 **diskpart** 도구를 사용 하 여 시스템 디스크를 초기화 해야 합니다. 이렇게 하려면 명령 창(WinPE 환경에서 5초 동안 Ctrl+Alt+Shift를 누름)을 열고 **diskpart.exe**를 실행한 후 다음 diskpart 명령을 실행합니다.  
           > 
-          > 1. **DISKPART > 디스크 목록**  
-          >    2. **DISKPART > 선택 디스크 #** *< 디스크\>*  
+          > 1. **DISKPART > 목록 디스크**  
+          >    2. **DISKPART > 디스크 #** *< 디스크* 를 선택\>  
           >    3. **DISKPART > 정리**  
-          >    4. **DISKPART > gpt를 변환 합니다.**  
-          >    5. **DISKPART > 만들 파티션 efi 크기 =** *100* (여기서 *100* MB 단위의 예제 파티션 크기를 원본 파티션과 같아야)  
-          >    6. **DISKPART > 만들 파티션 msr 크기 =** *128* (여기서 *128* MB 단위의 예제 파티션 크기를 원본 파티션과 같아야)  
+          >    4. **DISKPART > gpt 변환**  
+          >    5. **DISKPART > create partition efi size =** *100* (여기서 *100* 은 크기의 예제 파티션 크기 (MB)이 고 원본 파티션과 같아야 함)  
+          >    6. **DISKPART > create partition msr size =** *128* (여기서 *128* 은 크기의 예제 파티션 크기 (MB)이 고 원본 파티션과 같아야 함)  
           >    7. **DISKPART > 종료**  
   
        2. *(선택적)* **드라이브 문자 또는 드라이브 경로를 할당하지 않음** 옵션을 선택합니다.  
@@ -256,7 +256,7 @@ ms.locfileid: "66433095"
   
        4. 포맷이 완료되면 새 시스템 볼륨을 마우스 오른쪽 단추로 클릭하고 **파티션을 활성 파티션으로 표시**를 클릭합니다.  
   
-       5. 백업에 있는 다른 볼륨에 해당하는 볼륨이 추가로 필요한 경우에는 *b* - *d* 단계를 반복하여 볼륨을 더 만들어 활성화한 다음 **디스크 관리**를 닫습니다.  
+       5. 백업에 있는 다른 볼륨에 해당하는 볼륨이 추가로 필요한 경우에는 *b*-*d*단계를 반복하여 볼륨을 더 만들어 활성화한 다음 **디스크 관리**를 닫습니다.  
   
        6. **복원할 볼륨 선택** 페이지에서 백업 원본의 시스템 예약 볼륨을 *e*단계에서 만든 같은 크기의 볼륨에 매핑합니다.  
   
@@ -266,15 +266,15 @@ ms.locfileid: "66433095"
   
 16. **복원할 볼륨 확인** 페이지에서 매핑을 검토하고 **확인**을 클릭합니다. 변경이 필요한 경우에는 **뒤로**를 클릭하고 14단계를 반복합니다.  
   
-17. 합니다 **Restoring < 컴퓨터 이름\> 에서 < 백업의 시간과 날짜\>**  페이지 복원 프로세스의 진행률을 보고 합니다.  
+17. 복원 **< ComputerName\> 백업\>페이지 <에서** 복원 프로세스의 진행 상황을 보고 합니다.  
   
 18. **복원을 성공적으로 마쳤습니다.** 페이지가 표시되면 복원 미디어를 제거하고 **마침**을 클릭합니다. 컴퓨터가 다시 시작됩니다.  
   
     > [!IMPORTANT]
     >  복원 전에 컴퓨터에서 BitLocker 드라이브 암호화를 사용하도록 설정한 경우에는 컴퓨터가 다시 시작된 후에 BitLocker를 수동으로 사용하도록 설정해야 합니다.  
   
-##  <a name="BKMK_FindDrivers"></a> 하드웨어 드라이버는 어디서 찾을 수 있습니까?  
- 새 컴퓨터 또는 복원된 컴퓨터의 하드웨어에 따라 복원 미디어에는 복원된 컴퓨터를 다시 시작하는 데 필요한 일부 저장소 및 네트워크 어댑터 드라이버가 포함되지 않을 수 있습니다. 드라이버 누락, 찾은 드라이버만 기존 미디어 나 제조업체 웹 사이트에, 플래시 드라이브를 복사한 다음 새 플래시 드라이브에서 복사 하거나 전체 시스템 복원 마법사를 실행 하면 컴퓨터를 복원 결정 해야 합니다.  
+##  <a name="where-can-i-find-the-drivers-for-my-hardware"></a><a name="BKMK_FindDrivers"></a>하드웨어에 대 한 드라이버는 어디서 찾을 수 있나요?  
+ 새 컴퓨터 또는 복원된 컴퓨터의 하드웨어에 따라 복원 미디어에는 복원된 컴퓨터를 다시 시작하는 데 필요한 일부 스토리지 및 네트워크 어댑터 드라이버가 포함되지 않을 수 있습니다. 누락 된 드라이버를 확인 하 고, 기존 미디어 나 제조업체 웹 사이트에서 해당 드라이버를 찾아 플래시 드라이브에 복사한 다음, 전체 시스템 복원 마법사를 실행할 때 플래시 드라이브에서 새 컴퓨터 또는 복원 된 컴퓨터로 복사 해야 합니다.  
   
  컴퓨터를 백업할 때는 컴퓨터의 드라이브가 백업에 저장됩니다. 복구 미디어에 필요한 드라이버 중 일부가 포함되지 않은 경우에는 해당 컴퓨터의 백업을 열어서 드라이버를 USB 플래시 드라이브에 복사할 수 있습니다.  
   
@@ -299,8 +299,8 @@ ms.locfileid: "66433095"
   
    USB 플래시 드라이브를 사용하여 컴퓨터를 복원할 때 컴퓨터용 드라이브를 설치할 수 있습니다. 파일 또는 폴더 복원 마법사에서는 전체 시스템 복원 마법사를 사용하는 동안 이 USB 플래시 드라이브에서 추가 드라이버를 찾습니다. 필요할 가능성이 가장 높은 드라이버는 네트워크 어댑터 드라이버와 저장 장치 드라이버입니다.  
   
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
   
--   [백업 관리 및 복원](Manage-Backup-and-Restore-in-Windows-Server-Essentials.md)  
+-   [백업 및 복원 관리](Manage-Backup-and-Restore-in-Windows-Server-Essentials.md)  
   
 -   [Windows Server Essentials 관리](Manage-Windows-Server-Essentials.md)

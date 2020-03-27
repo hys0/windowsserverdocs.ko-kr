@@ -10,14 +10,14 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: d46e4e91-ece0-41da-a812-af8ab153edc4
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 7b3bd47052e482b562e84d5c44b928c0744b223c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 91d8081261d3cbc5e2da61cc2b5a9737e76a0dc7
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405917"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80309801"
 ---
 # <a name="ras-gateway-deployment-architecture"></a>RAS 게이트웨이 배포 아키텍처
 
@@ -29,7 +29,7 @@ ms.locfileid: "71405917"
   
 또한 새 테 넌 트 추가 프로세스, 경로 동기화 및 데이터 평면 라우팅, 게이트웨이 및 경로 리플렉터 장애 조치 (failover) 등의 정보를 포함 하는 배포 예가 제공 됩니다.  
   
-이 항목에는 다음 섹션이 수록되어 있습니다.  
+이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   
 -   [RAS 게이트웨이 새 기능을 사용 하 여 배포 디자인](#bkmk_new)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "71405917"
   
 -   [새 RAS 게이트웨이 기능 사용의 이점](#bkmk_advantages)  
   
-## <a name="bkmk_new"></a>RAS 게이트웨이 새 기능을 사용 하 여 배포 디자인  
+## <a name="using-ras-gateway-new-features-to-design-your--deployment"></a><a name="bkmk_new"></a>RAS 게이트웨이 새 기능을 사용 하 여 배포 디자인  
 RAS Gateway에는 데이터 센터에서 게이트웨이 인프라를 배포 하는 방법을 변경 하 고 개선 하는 여러 가지 새로운 기능이 포함 되어 있습니다.  
   
 ### <a name="bgp-route-reflector"></a>BGP 경로 리플렉터  
@@ -51,22 +51,22 @@ RAS Gateway에는 데이터 센터에서 게이트웨이 인프라를 배포 하
   
 자세한 내용은 [RAS 게이트웨이의 새로운 기능](../../../sdn/technologies/network-function-virtualization/What-s-New-in-RAS-Gateway.md)을 참조 하세요.  
   
-### <a name="bkmk_pools"></a>게이트웨이 풀  
+### <a name="gateway-pools"></a><a name="bkmk_pools"></a>게이트웨이 풀  
 Windows Server 2016에서는 여러 유형의 게이트웨이 풀을 여러 개 만들 수 있습니다. 게이트웨이 풀 RAS 게이트웨이의 여러 인스턴스를 포함 하 고 실제 및 가상 네트워크 간에 네트워크 트래픽을 라우팅합니다.  
   
 자세한 내용은 [Ras 게이트웨이의 새로운 기능](../../../sdn/technologies/network-function-virtualization/What-s-New-in-RAS-Gateway.md) 및 [ras 게이트웨이 고가용성](../../../sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md)을 참조 하세요.  
   
-### <a name="bkmk_gps"></a>게이트웨이 풀 확장성  
+### <a name="gateway-pool-scalability"></a><a name="bkmk_gps"></a>게이트웨이 풀 확장성  
 쉽게 확장할 수 있습니다 게이트웨이 풀 위로 또는 아래로 추가 하거나 풀에서 게이트웨이 Vm을 제거 합니다. 게이트웨이 추가 또는 제거는 풀에서 제공 되는 서비스를 방해 하지 않도록 합니다. 또한 추가 및 게이트웨이 전체 풀을 제거할 수 있습니다.  
   
 자세한 내용은 [Ras 게이트웨이의 새로운 기능](../../../sdn/technologies/network-function-virtualization/What-s-New-in-RAS-Gateway.md) 및 [ras 게이트웨이 고가용성](../../../sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md)을 참조 하세요.  
   
-### <a name="bkmk_m"></a>M + N 게이트웨이 풀 중복성  
+### <a name="mn-gateway-pool-redundancy"></a><a name="bkmk_m"></a>M + N 게이트웨이 풀 중복성  
 모든 게이트웨이 풀은 M + N 중복입니다. 즉, ' N ' 개의 활성 게이트웨이 Vm이 대기 게이트웨이 Vm의 ' N ' 개를 백업 합니다. M + N 중복 RAS 게이트웨이 배포할 때 필요한 안정성 수준을 결정 하는 데 더 많은 융통성을 제공 합니다.  
   
 자세한 내용은 [Ras 게이트웨이의 새로운 기능](../../../sdn/technologies/network-function-virtualization/What-s-New-in-RAS-Gateway.md) 및 [ras 게이트웨이 고가용성](../../../sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md)을 참조 하세요.  
   
-## <a name="bkmk_example"></a>배포 예  
+## <a name="example-deployment"></a><a name="bkmk_example"></a>배포 예  
 다음 그림에서는 두 테 넌 트, Contoso 및 Woodgrove와 Fabrikam CSP 데이터 센터 간에 구성 된 사이트 간 VPN 연결을 통해 eBGP 피어 링을 사용 하는 예제를 제공 합니다.  
   
 ![사이트 간 VPN을 통한 eBGP 피어 링](../../../media/RAS-Gateway-Deployment-Architecture/ras_gateway_architecture.png)  
@@ -82,7 +82,7 @@ GW2 및 GW3 게이트웨이는 모두 CSP가 Contoso 및 Woodgrove 테 넌 트�
   
 네트워크 컨트롤러는 Hyper-v 네트워크 가상화 정책을 Contoso 및 Woodgrove 가상 네트워크에 푸시하여 ras 게이트웨이 및 소프트웨어 부하 분산으로 구성 된 멀티플렉서 (MUXes)에 대 한 부하 분산 정책에 대 한 RAS 정책을 푸시합니다. pool.  
   
-## <a name="bkmk_tenant"></a>새 테 넌 트 및 CA (고객 주소) 공간 eBGP 피어 링 추가  
+## <a name="adding-new-tenants-and-customer-address-ca-space-ebgp-peering"></a><a name="bkmk_tenant"></a>새 테 넌 트 및 CA (고객 주소) 공간 eBGP 피어 링 추가  
 새 고객을 서명 하 고 고객을 데이터 센터에 새 테 넌 트로 추가 하는 경우 다음 프로세스를 사용할 수 있습니다 .이 프로세스는 대부분 네트워크 컨트롤러 및 RAS 게이트웨이 eBGP 라우터에 의해 자동으로 수행 됩니다.  
   
 1.  테 넌 트의 요구 사항에 따라 새 가상 네트워크 및 워크 로드를 프로 비전 합니다.  
@@ -103,7 +103,7 @@ GW2 및 GW3 게이트웨이는 모두 CSP가 Contoso 및 Woodgrove 테 넌 트�
   
 6.  CA 공간 BGP 라우팅을 사용 하면 엔터프라이즈 사이트와 CSP RAS 게이트웨이 경로 리플렉터 간의 eBGP 피어 링도 설정 됩니다.  
   
-## <a name="bkmk_route"></a>경로 동기화 및 데이터 평면 라우팅  
+## <a name="route-synchronization-and-data-plane-routing"></a><a name="bkmk_route"></a>경로 동기화 및 데이터 평면 라우팅  
 엔터프라이즈 사이트와 CSP RAS 게이트웨이 경로 리플렉터 사이에서 eBGP 피어 링이 설정 되 면 경로 리플렉터는 동적 BGP 라우팅을 사용 하 여 모든 엔터프라이즈 경로를 학습 합니다. 경로 리플렉터는 모든 경로 리플렉터 클라이언트 간에 이러한 경로를 동기화 하므로 모두 동일한 경로 집합을 사용 하 여 구성 됩니다.  
   
 경로 리플렉터는 또한 경로 동기화를 사용 하 여 이러한 통합 경로를 네트워크 컨트롤러에 업데이트 합니다. 그런 다음 네트워크 컨트롤러는 경로를 Hyper-v 네트워크 가상화 정책으로 변환 하 고 패브릭 네트워크를 구성 하 여 종단 간 데이터 경로 라우팅이 프로 비전 되도록 합니다. 이 프로세스를 통해 테 넌 트 엔터프라이즈 사이트에서 테 넌 트 가상 네트워크에 액세스할 수 있습니다.  
@@ -114,7 +114,7 @@ GW2 및 GW3 게이트웨이는 모두 CSP가 Contoso 및 Woodgrove 테 넌 트�
   
 또한. 테 넌 트 가상 네트워크에서 원격 테 넌 트 엔터프라이즈 사이트로의 트래픽을 반환 하면 DSR (Direct Server Return) 이라는 프로세스 인 SLBs가 무시 됩니다.  
   
-## <a name="bkmk_failover"></a>네트워크 컨트롤러가 RAS 게이트웨이 및 경로 리플렉터 장애 조치 (Failover)에 응답 하는 방법  
+## <a name="how-network-controller-responds-to-ras-gateway-and-route-reflector-failover"></a><a name="bkmk_failover"></a>네트워크 컨트롤러가 RAS 게이트웨이 및 경로 리플렉터 장애 조치 (Failover)에 응답 하는 방법  
 다음은 두 가지 구성에서 Vm에 대 한 장애 조치 (failover)를 처리 하는 방법에 대 한 정보를 포함 하는 RAS 게이트웨이 경로 리플렉터 클라이언트 및 RAS 게이트웨이 경로 반영자에 대 한 두 가지 가능한 장애 조치 시나리오  
   
 ### <a name="vm-failure-of-a-ras-gateway-bgp-route-reflector-client"></a>RAS 게이트웨이 BGP 경로 리플렉터 클라이언트의 VM 오류  
@@ -146,7 +146,7 @@ GW2 및 GW3 게이트웨이는 모두 CSP가 Contoso 및 Woodgrove 테 넌 트�
   
 -   BGP 경로를 선택 하면 RAS 게이트웨이 BGP 경로 리플렉터는 데이터 센터에서 테 넌 트 경로 리플렉터 클라이언트를 업데이트 하 고, 네트워크 컨트롤러와 경로를 동기화 하 여 테 넌 트 트래픽에 대해 종단 간 데이터 경로를 사용할 수 있도록 합니다.  
   
-## <a name="bkmk_advantages"></a>새 RAS 게이트웨이 기능 사용의 이점  
+## <a name="advantages-of-using-new-ras-gateway-features"></a><a name="bkmk_advantages"></a>새 RAS 게이트웨이 기능 사용의 이점  
 다음은 RAS 게이트웨이 배포를 설계할 때 이러한 새로운 RAS 게이트웨이 기능을 사용 하는 몇 가지 이점입니다.  
   
 **RAS 게이트웨이 확장성**  

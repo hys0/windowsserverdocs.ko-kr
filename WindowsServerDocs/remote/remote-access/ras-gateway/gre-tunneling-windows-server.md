@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: df2023bf-ba64-481e-b222-6f709edaa5c1
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: be57bc0ce1b509c49f269618765c79f380fd3b12
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: d246f0e56681f75e4336ed225d1557a0e05c581b
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404672"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80308551"
 ---
 # <a name="gre-tunneling-in-windows-server-2016"></a>Windows Server 2016의 GRE 터널링
 
@@ -64,19 +64,19 @@ GRE 터널 기능은 Microsoft 기술을 사용 하는 서비스 공급자를 �
 
 다음은 GRE 터널 기능에서 다루는 주요 시나리오입니다.  
   
-### <a name="BKMK_Access"></a>테 넌 트 가상 네트워크에서 테 넌 트 실제 네트워크에 액세스
+### <a name="access-from-tenant-virtual-networks-to-tenant-physical-networks"></a><a name="BKMK_Access"></a>테 넌 트 가상 네트워크에서 테 넌 트 실제 네트워크에 액세스
 
 이 시나리오에서는 테 넌 트 가상 네트워크에서 호스팅 서비스 공급자 온-프레미스에 있는 테 넌 트 실제 네트워크에 액세스할 수 있도록 하는 확장성 있는 방법을 제공 합니다. GRE 터널 끝점은 다중 테 넌 트 게이트웨이에서 설정 되 고 다른 GRE 터널 끝점은 실제 네트워크의 타사 장치에 설정 됩니다. 계층 3 트래픽은 가상 네트워크의 가상 컴퓨터와 실제 네트워크의 타사 장치 간에 라우팅됩니다.  
   
 ![호스팅 서비스 공급자 실제 네트워크 및 테 넌 트 가상 네트워크를 연결 하는 GRE 터널](../../media/gre-tunneling-in-windows-server/GRE_.png)  
   
-### <a name="BKMK_Speed"></a>고속 연결
+### <a name="high-speed-connectivity"></a><a name="BKMK_Speed"></a>고속 연결
 
 이 시나리오에서는 테 넌 트 온-프레미스 네트워크에서 호스팅 서비스 공급자 네트워크에 있는 가상 네트워크로 고속 연결을 제공 하는 확장 가능한 방법을 사용할 수 있습니다. 테 넌 트는 MPLS (멀티 프로토콜 레이블 전환)를 통해 서비스 공급자 네트워크에 연결 합니다. 여기서 GRE 터널은 호스팅 서비스 공급자의에 지 라우터와 다중 테 넌 트 게이트웨이 간에 테 넌 트의 가상 네트워크로 설정 됩니다.  
   
 ![테 넌 트 엔터프라이즈 MPLS 네트워크 및 테 넌 트 가상 네트워크를 연결 하는 GRE 터널](../../media/gre-tunneling-in-windows-server/GRE-.png)  
   
-### <a name="BKMK_Integration"></a>VLAN 기반 격리와의 통합
+### <a name="integration-with-vlan-based-isolation"></a><a name="BKMK_Integration"></a>VLAN 기반 격리와의 통합
 
 이 시나리오에서는 VLAN 기반 격리를 Hyper-v 네트워크 가상화와 통합할 수 있습니다. 호스트 공급자 네트워크의 실제 네트워크에는 VLAN 기반 격리를 사용 하는 부하 분산 장치가 있습니다. 다중 테 넌 트 게이트웨이는 실제 네트워크의 부하 분산 장치와 가상 네트워크의 다중 테 넌 트 게이트웨이 간에 GRE 터널을 설정 합니다.  
   
@@ -84,7 +84,7 @@ GRE 터널 기능은 Microsoft 기술을 사용 하는 서비스 공급자를 �
   
 ![다중 테 넌 트 가상 네트워크를 연결 하는 다중 GRE 터널](../../media/gre-tunneling-in-windows-server/GRE-VLANIsolation.png)  
   
-### <a name="BKMK_Shared"></a>공유 리소스 액세스
+### <a name="access-shared-resources"></a><a name="BKMK_Shared"></a>공유 리소스 액세스
 
 이 시나리오에서는 호스팅 공급자 네트워크에 있는 실제 네트워크의 공유 리소스에 액세스할 수 있습니다.  
   
@@ -96,7 +96,7 @@ GRE 터널 기능은 Microsoft 기술을 사용 하는 서비스 공급자를 �
   
 ![여러 터널을 사용 하 여 여러 가상 네트워크를 연결 하는 단일 테 넌 트 게이트웨이](../../media/gre-tunneling-in-windows-server/GRE-SharedResource.png)  
   
-### <a name="BKMK_thirdparty"></a>테 넌 트에 대 한 타사 장치 서비스
+### <a name="services-of-third-party-devices-to-tenants"></a><a name="BKMK_thirdparty"></a>테 넌 트에 대 한 타사 장치 서비스
 
 이 시나리오는 타사 장치 (예: 하드웨어 부하 분산 장치)를 테 넌 트 가상 네트워크 트래픽 흐름에 통합 하는 데 사용할 수 있습니다. 예를 들어 엔터프라이즈 사이트에서 시작 되는 트래픽은 S2S 터널을 통해 다중 테 넌 트 게이트웨이로 전달 됩니다. 트래픽은 GRE 터널을 통해 부하 분산 장치로 라우팅됩니다. 부하 분산 장치는 조직의 가상 네트워크에 있는 여러 가상 컴퓨터로 트래픽을 라우팅합니다. 가상 네트워크에서 잠재적으로 IP 주소가 겹칠 수 있는 다른 테 넌 트의 경우에도 마찬가지입니다. 네트워크 트래픽은 Vlan을 사용 하 여 부하 분산 장치에서 격리 되며 Vlan을 지 원하는 모든 계층 3 장치에 적용 됩니다.  
   

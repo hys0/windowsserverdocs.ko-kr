@@ -10,14 +10,14 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b9b77cfd-8dd4-476b-a118-f3d6bf59e7b1
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 9cce81998c6041aea223da29979a53d6069f599c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: c9bc2b54927905346c980ef2b14d65310ca930b8
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404742"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80308582"
 ---
 # <a name="step-6-test-directaccess-connectivity-from-the-homenet-subnet"></a>6 단계 Ho, 서브넷에서 DirectAccess 연결 테스트
 
@@ -29,13 +29,13 @@ ms.locfileid: "71404742"
   
 1. C l i e n t 1에서 **User1**으로 로그온 했는지 확인 합니다.  
   
-2. **시작** 화면에서**powershell**을 입력 하 고 **powershell**을 마우스 오른쪽 단추로 클릭 한 다음 **고급**을 클릭 하 고 **관리자 권한으로 실행**을 클릭 합니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
+2. **시작** 화면에서**powershell**을 입력 하 고 **powershell**을 마우스 오른쪽 단추로 클릭 한 다음 **고급**을 클릭 하 고 **관리자 권한으로 실행**을 클릭 합니다. **사용자 계정 컨트롤** 대화 상자가 표시되면 원하는 작업이 표시되어 있는지 확인하고 **예**를 클릭합니다.  
   
 3. Windows PowerShell 창에서 **gpupdate/force**를 입력 하 고 enter 키를 누릅니다.  
   
 4. Corpnet 서브넷에서 CLIENT1을 분리 하 고이를 Ho Et 서브넷에 연결 합니다.  
   
-5. C l i e n t 1에서 Internet Explorer를 열고 주소 표시줄에 **https://app1.corp.contoso.com/** 을 입력 한 다음 enter 키를 누릅니다. F5 키를 누릅니다.  
+5. C l i e n t 1에서 Internet Explorer를 열고 주소 표시줄에 **https://app1.corp.contoso.com/** 를 입력 한 다음 enter 키를 누릅니다. F5 키를 누릅니다.  
   
    사이트가 열리지 않습니다.  
   
@@ -51,15 +51,15 @@ ms.locfileid: "71404742"
   
 11. 이전에 복사한 8 자리 토큰을 붙여넣은 다음 **확인**을 클릭 합니다. 인증이 완료 될 때까지 기다립니다. 이제 DirectAccess 작업 공간 연결 상태가 **연결**됨으로 나타납니다.  
   
-12. Internet Explorer의 주소 표시줄에 **https://app1.corp.contoso.com/** 을 입력 하 고 enter 키를 누릅니다. F5 키를 누릅니다. APP1의 기본 IIS 웹 사이트가 표시됩니다.  
+12. Internet Explorer의 주소 표시줄에 **https://app1.corp.contoso.com/** 를 입력 하 고 enter 키를 누릅니다. F5 키를 누릅니다. APP1의 기본 IIS 웹 사이트가 표시됩니다.  
   
-13. Internet Explorer 주소 표시줄에 **https://app2.corp.contoso.com/** 을 입력 하 고 enter 키를 누릅니다. F5 키를 누릅니다. APP2의 기본 IIS 웹 사이트가 표시 됩니다.  
+13. Internet Explorer 주소 표시줄에 **https://app2.corp.contoso.com/** 를 입력 하 고 enter 키를 누릅니다. F5 키를 누릅니다. APP2의 기본 IIS 웹 사이트가 표시 됩니다.  
   
-14. **시작** 화면에서<strong>\\ \ app1\files</strong>를 입력 하 고 enter 키를 누릅니다.  
+14. **시작** 화면에서<strong>\\\app1\files</strong>를 입력 하 고 enter 키를 누릅니다.  
   
 15. **파일** 공유 폴더 창에서 **Example .txt** 파일을 두 번 클릭 합니다. 예 .txt 파일의 내용이 표시 됩니다.  
   
-16. **시작** 화면에서<strong>\\ \ app2\files</strong>를 입력 하 고 enter 키를 누릅니다.  
+16. **시작** 화면에서<strong>\\\app2\files</strong>를 입력 하 고 enter 키를 누릅니다.  
   
 17. **파일** 공유 폴더 창에서 **새 텍스트 문서 .txt** 파일을 두 번 클릭 합니다. 새 텍스트 문서 .txt 파일의 내용이 표시 됩니다.  
   

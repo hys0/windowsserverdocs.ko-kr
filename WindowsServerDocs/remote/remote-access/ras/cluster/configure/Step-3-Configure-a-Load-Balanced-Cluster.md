@@ -10,14 +10,14 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f000066e-7cf8-4085-82a3-4f4fe1cb3c5c
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: fb7dca9a0f7875936cbb30cbc9c5e9e0a7473237
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 19a87762e19dd763376f50c7c5b04da3f2187874
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404641"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80308358"
 ---
 # <a name="step-3-configure-a-load-balanced-cluster"></a>3 단계 부하 분산 된 클러스터를 구성 합니다.
 
@@ -25,7 +25,7 @@ ms.locfileid: "71404641"
 
 서버 클러스터에 대 한 준비 된 후 단일 서버에 부하 분산을 구성, 필요한 인증서를 구성 하 고 클러스터를 배포 합니다.  
   
-|태스크|설명|  
+|작업|설명|  
 |----|--------|  
 |[3.1 IPv6 접두사 구성](#BKMK_Prefix)|회사 환경은 IPv6 + IPv4, IPv6 전용 또는 다음 단일 원격 액세스 서버에 DirectAccess 클라이언트 컴퓨터에 할당 된 IPv6 접두사 모든 클러스터의 서버에 충분히 큰지 확인 하십시오.|  
 |[3.2 부하 분산 사용](#BKMK_NLB)|단일 원격 액세스 서버에 부하 분산을 사용 하도록 설정 합니다.|  
@@ -41,11 +41,11 @@ ms.locfileid: "71404641"
 > [!NOTE]  
 > 이 네트워크에서 다른 컴퓨터에 이미 있는 DIP를 사용 해야 합니다.  
   
-## <a name="BKMK_Prefix"></a>3.1 IPv6 접두사 구성  
+## <a name="31-configure-the-ipv6-prefix"></a><a name="BKMK_Prefix"></a>3.1 IPv6 접두사 구성  
   
-### <a name="configDA"></a>접두사를 구성 하려면  
+### <a name="to-configure-the-prefix"></a><a name="configDA"></a>접두사를 구성 하려면  
   
-1.  원격 액세스 서버에서 **시작**, 를 클릭 하 고 **원격 액세스 관리**합니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
+1.  원격 액세스 서버에서 **시작**, 를 클릭 하 고 **원격 액세스 관리**합니다. **사용자 계정 컨트롤** 대화 상자가 표시되면 원하는 작업이 표시되어 있는지 확인하고 **예**를 클릭합니다.  
   
 2.  원격 액세스 관리 콘솔에서 **구성**을 클릭합니다.  
   
@@ -57,11 +57,11 @@ ms.locfileid: "71404641"
   
 6.  에 **원격 액세스 검토** 대화 상자에서 구성 설정을 검토 하 고 클릭 한 다음 **적용**합니다. **원격 액세스 설정 마법사 설정 적용** 대화 상자에서 **닫기**를 클릭합니다.  
   
-## <a name="BKMK_NLB"></a>3.2 부하 분산 사용  
+## <a name="32-enable-load-balancing"></a><a name="BKMK_NLB"></a>3.2 부하 분산 사용  
   
 #### <a name="to-enable-load-balancing"></a>부하 분산을 사용 하도록 설정 하려면  
   
-1.  구성 된 DirectAccess 서버에서 **시작**, 를 클릭 하 고 **원격 액세스 관리**합니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
+1.  구성 된 DirectAccess 서버에서 **시작**, 를 클릭 하 고 **원격 액세스 관리**합니다. **사용자 계정 컨트롤** 대화 상자가 표시되면 원하는 작업이 표시되어 있는지 확인하고 **예**를 클릭합니다.  
   
 2.  왼쪽된 창에서 원격 액세스 관리 콘솔에서 클릭 **구성**, 한 다음는 **작업** 창에서 클릭 **로드 균형 조정 사용**합니다.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "71404641"
   
 ![Windows PowerShell](../../../../media/Step-3-Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)***<em>windows powershell 해당 명령</em>***  
   
-다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
+다음 Windows PowerShell cmdlet은 이전 절차와 동일한 기능을 수행합니다. 서식 조건 때문에 각 cmdlet이 여러 줄로 자동 줄 바꿈되어 표시되더라도 한 줄에 입력합니다.  
   
 에 계획 단계에서 Windows NLB를 사용 하도록 선택한 경우 다음을 실행 합니다.  
   
@@ -119,12 +119,12 @@ Set-RemoteAccessLoadBalancer -InternetDedicatedIPAddress "2.1.1.20/255.255.255.0
 > [!NOTE]  
 > 준비 Gpo를 사용 하는 경우 다른 설정으로 변경 하 여 부하 분산 장치 설정의 변경 사항을 포함 하지 않도록 좋습니다. 부하 분산 장치 설정에 변경 내용을 먼저 적용 해야 하 고 다른 구성을 변경 수 있어야 합니다. 또한 새로운 DirectAccess 서버의 부하 분산 장치를 구성한 후 허용 IP 변경 내용을 적용 하 고 새 클러스터에 관련 된 다른 DirectAccess 설정을 변경 하기 전에 엔터프라이즈의 DNS 서버에 걸쳐 복제 하려면 몇 시간.  
   
-## <a name="BKMK_InstallIPHTTP"></a>3.3 IP-HTTPS 인증서 설치  
-로컬의 멤버 자격이 **관리자** 그룹 또는 그에 해당 하는이 절차를 완료 하는 데 필요한 최소입니다.  
+## <a name="33-install-the-ip-https-certificate"></a><a name="BKMK_InstallIPHTTP"></a>3.3 IP-HTTPS 인증서 설치  
+로컬 **관리자** 그룹의 멤버십 또는 이에 상당하는 멤버십은 이 절차를 완료하기 위해 필요한 최소 기준입니다.  
   
-### <a name="IPHTTPSCert"></a>IP-HTTPS 인증서를 설치 하려면  
+### <a name="to-install-the-ip-https-certificate"></a><a name="IPHTTPSCert"></a>IP-HTTPS 인증서를 설치 하려면  
   
-1.  구성 된 원격 액세스 서버에서 **시작**, 형식 **mmc** ENTER 키를 누릅니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
+1.  구성 된 원격 액세스 서버에서 **시작**, 형식 **mmc** ENTER 키를 누릅니다. **사용자 계정 컨트롤** 대화 상자가 표시되면 원하는 작업이 표시되어 있는지 확인하고 **예**를 클릭합니다.  
   
 2.  MMC 콘솔의 **파일** 메뉴에서 **스냅인 추가/제거**를 클릭합니다.  
   
@@ -134,7 +134,7 @@ Set-RemoteAccessLoadBalancer -InternetDedicatedIPAddress "2.1.1.20/255.255.255.0
   
 5.  **인증서 내보내기 마법사 시작** 페이지에서 **다음**을 클릭합니다.  
   
-6.  **프라이빗 키 내보내기** 페이지에서 **예, 프라이빗 키를 내보냅니다.** 를 클릭한 후, **다음**을 클릭합니다.  
+6.  **개인 키 내보내기** 페이지에서 **예, 개인 키를 내보냅니다.** 를 클릭하고 **다음**을 클릭합니다.  
   
 7.  에 **파일 내보내기 형식** 페이지에서 클릭 **개인 정보 교환-PKCS #12 (합니다. PFX)** , 를 클릭 하 고 **다음**합니다.  
   
@@ -148,7 +148,7 @@ Set-RemoteAccessLoadBalancer -InternetDedicatedIPAddress "2.1.1.20/255.255.255.0
   
 12. 클러스터 구성원으로 만들 수는 모든 서버에 인증서를 복사 합니다.  
   
-13. 새로운 DirectAccess 서버에서 **시작**, 형식 **mmc** ENTER 키를 누릅니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
+13. 새로운 DirectAccess 서버에서 **시작**, 형식 **mmc** ENTER 키를 누릅니다. **사용자 계정 컨트롤** 대화 상자가 표시되면 원하는 작업이 표시되어 있는지 확인하고 **예**를 클릭합니다.  
   
 14. MMC 콘솔의 **파일** 메뉴에서 **스냅인 추가/제거**를 클릭합니다.  
   
@@ -170,12 +170,12 @@ Set-RemoteAccessLoadBalancer -InternetDedicatedIPAddress "2.1.1.20/255.255.255.0
   
 23. 클러스터 구성원으로 만들 수 있는 모든 서버에서 13-22 단계를 반복 합니다.  
   
-## <a name="BKMK_NLS"></a>3.4 네트워크 위치 서버 인증서 설치  
-로컬의 멤버 자격이 **관리자** 그룹 또는 그에 해당 하는이 절차를 완료 하는 데 필요한 최소입니다.  
+## <a name="34-install-the-network-location-server-certificate"></a><a name="BKMK_NLS"></a>3.4 네트워크 위치 서버 인증서 설치  
+로컬 **관리자** 그룹의 멤버십 또는 이에 상당하는 멤버십은 이 절차를 완료하기 위해 필요한 최소 기준입니다.  
   
 #### <a name="to-install-a-certificate-for-network-location"></a>네트워크 위치에 대 한 인증서를 설치 하려면  
   
-1.  원격 액세스 서버에서 **시작**, 형식 **mmc**, 한 다음 ENTER를 누릅니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
+1.  원격 액세스 서버에서 **시작**, 형식 **mmc**, 한 다음 ENTER를 누릅니다. **사용자 계정 컨트롤** 대화 상자가 표시되면 원하는 작업이 표시되어 있는지 확인하고 **예**를 클릭합니다.  
   
 2.  클릭 **파일**, 를 클릭 하 고 **추가/제거 스냅인**합니다.  
   
@@ -185,7 +185,7 @@ Set-RemoteAccessLoadBalancer -InternetDedicatedIPAddress "2.1.1.20/255.255.255.0
   
 5.  **인증서**를 마우스 오른쪽 단추로 클릭하고 **모든 작업**을 가리킨 다음 **새 인증서 요청**을 클릭합니다.  
   
-6.  **다음** 을 두 번 클릭합니다.  
+6.  **다음**을 두 번 클릭합니다.  
   
 7.  에 **인증서 요청** 페이지, 웹 서버 인증서 템플릿을 클릭 한 다음 클릭 **이 인증서를 등록 하려면 추가 정보가 필요**합니다.  
   
@@ -195,7 +195,7 @@ Set-RemoteAccessLoadBalancer -InternetDedicatedIPAddress "2.1.1.20/255.255.255.0
   
 9. **값**, 네트워크 위치 서버 웹 사이트 (예를 들어 nls.corp.contoso.com)의 인트라넷 이름에 대 한 정규화 된 도메인 이름 (FQDN)을 입력 하 고 클릭 한 다음 **추가**합니다.  
   
-10. 클릭 **확인**, 클릭 **등록**, 를 클릭 하 고 **마침**합니다.  
+10. **확인**, **등록**을 차례로 클릭한 다음 **마침**을 클릭합니다.  
   
 11. 인증서 스냅인의 세부 정보 창에서 FQDN으로 새 인증서가 등록을 확인 **용도** 의 **서버 인증**합니다.  
   
@@ -208,12 +208,12 @@ Set-RemoteAccessLoadBalancer -InternetDedicatedIPAddress "2.1.1.20/255.255.255.0
   
 14. 클러스터 구성원으로 만들 수 있는 모든 서버에서이 절차를 반복 합니다.  
   
-## <a name="BKMK_Add"></a>3.5 클러스터에 서버 추가  
+## <a name="35-add-servers-to-the-cluster"></a><a name="BKMK_Add"></a>3.5 클러스터에 서버 추가  
  
   
 #### <a name="to-add-servers-to-the-cluster"></a>서버 클러스터를 추가 하려면  
   
-1.  구성 된 DirectAccess 서버에서 **시작**, 를 클릭 하 고 **원격 액세스 관리**합니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
+1.  구성 된 DirectAccess 서버에서 **시작**, 를 클릭 하 고 **원격 액세스 관리**합니다. **사용자 계정 컨트롤** 대화 상자가 표시되면 원하는 작업이 표시되어 있는지 확인하고 **예**를 클릭합니다.  
   
 2.  원격 액세스 관리 콘솔에서 **구성**을 클릭합니다. 에 **작업** 창 아래에서 **부하 분산 된 클러스터**, 클릭 **추가 / 제거 서버**합니다.  
   
@@ -239,7 +239,7 @@ Set-RemoteAccessLoadBalancer -InternetDedicatedIPAddress "2.1.1.20/255.255.255.0
   
 8.  에 **요약** 페이지에서 클릭 **추가**합니다.  
   
-9. 에 **완료** 페이지에서 클릭 **닫기**합니다.  
+9. **완료** 페이지에서 **닫기**를 클릭합니다.  
   
 10. 클러스터에 추가할 모든 원격 액세스 서버에 대해이 절차를 반복 합니다.  
   
@@ -249,7 +249,7 @@ Set-RemoteAccessLoadBalancer -InternetDedicatedIPAddress "2.1.1.20/255.255.255.0
   
 ![Windows PowerShell](../../../../media/Step-3-Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)***<em>windows powershell 해당 명령</em>***  
   
-다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
+다음 Windows PowerShell cmdlet은 이전 절차와 동일한 기능을 수행합니다. 서식 조건 때문에 각 cmdlet이 여러 줄로 자동 줄 바꿈되어 표시되더라도 한 줄에 입력합니다.  
   
 ```  
 Add-RemoteAccessLoadBalancerNode -RemoteAccessServer <server name>  
@@ -258,12 +258,12 @@ Add-RemoteAccessLoadBalancerNode -RemoteAccessServer <server name>
 > [!NOTE]  
 > 부하 분산 된 클러스터에서 VPN을 사용할 수 있는, 경우 Windows PowerShell cmdlet을 사용 하 여 클러스터에 새 서버를 추가할 때 모든 VPN 주소 범위 제공 하지 않아야 합니다. 하면 실수로, 클러스터에서 서버를 제거 하 고 다시 추가 클러스터에 VPN 주소 범위를 지정 하지 않고 있습니다.  
   
-## <a name="BKMK_remove"></a>3.6 클러스터에서 서버를 제거 합니다.  
+## <a name="36-remove-a-server-from-the-cluster"></a><a name="BKMK_remove"></a>3.6 클러스터에서 서버를 제거 합니다.  
  
   
 #### <a name="to-remove-a-server-from-the-cluster"></a>클러스터에서 서버를 제거 하려면  
   
-1.  구성 된 원격 액세스 서버에서 **시작**, 를 클릭 하 고 **원격 액세스 관리**합니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
+1.  구성 된 원격 액세스 서버에서 **시작**, 를 클릭 하 고 **원격 액세스 관리**합니다. **사용자 계정 컨트롤** 대화 상자가 표시되면 원하는 작업이 표시되어 있는지 확인하고 **예**를 클릭합니다.  
   
 2.  원격 액세스 관리 콘솔에서 **구성**을 클릭합니다. 에 **작업** 창 아래에서 **부하 분산 된 클러스터**, 클릭 **추가 / 제거 서버**합니다.  
   
@@ -279,18 +279,18 @@ Add-RemoteAccessLoadBalancerNode -RemoteAccessServer <server name>
   
 ![Windows PowerShell](../../../../media/Step-3-Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)***<em>windows powershell 해당 명령</em>***  
   
-다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
+다음 Windows PowerShell cmdlet은 이전 절차와 동일한 기능을 수행합니다. 서식 조건 때문에 각 cmdlet이 여러 줄로 자동 줄 바꿈되어 표시되더라도 한 줄에 입력합니다.  
   
 ```  
 Remove-RemoteAccessLoadBalancerNode -RemoteAccessServer <server name>  
 ```  
   
-## <a name="BKBK_disable"></a>3.7 부하 분산 사용 안 함  
+## <a name="37-disable-load-balancing"></a><a name="BKBK_disable"></a>3.7 부하 분산 사용 안 함  
 [Windows PowerShell을 사용 하 여이 단계 수행](assetId:///7a817ca0-2b4a-4476-9d28-9a63ff2453f9)  
   
 #### <a name="to-disable-load-balancing"></a>부하 분산을 사용 하지 않도록 설정 하려면  
   
-1.  구성 된 DirectAccess 서버에서 **시작**, 를 클릭 하 고 **원격 액세스 관리**합니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
+1.  구성 된 DirectAccess 서버에서 **시작**, 를 클릭 하 고 **원격 액세스 관리**합니다. **사용자 계정 컨트롤** 대화 상자가 표시되면 원하는 작업이 표시되어 있는지 확인하고 **예**를 클릭합니다.  
   
 2.  원격 액세스 관리 콘솔에서 **구성**을 클릭합니다. 에 **작업** 창 아래에서 **부하 분산 된 클러스터**, 클릭 **부하 분산 사용 안 함**합니다.  
   
@@ -300,7 +300,7 @@ Remove-RemoteAccessLoadBalancerNode -RemoteAccessServer <server name>
   
 ![Windows PowerShell](../../../../media/Step-3-Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)***<em>windows powershell 해당 명령</em>***  
   
-다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
+다음 Windows PowerShell cmdlet은 이전 절차와 동일한 기능을 수행합니다. 서식 조건 때문에 각 cmdlet이 여러 줄로 자동 줄 바꿈되어 표시되더라도 한 줄에 입력합니다.  
   
 ```  
 set-RemoteAccessLoadBalancer -disable  
@@ -315,7 +315,7 @@ set-RemoteAccessLoadBalancer -disable
 > -   사용한 후의 **집합 RemoteAccessLoadBalancer** cmdlet을 다른 cmdlet을 실행 하기 전에 2 분, 부하 분산을 사용 하지 않도록 설정 합니다. 또한 이렇게 해야 후 다른 cmdlet을 실행 하는 스크립트에는 **집합 RemoteAccessLoadBalancer-사용 하지 않도록 설정** cmdlet입니다.  
 > -   부하 분산 변경에 전용된 IP 주소를 클러스터의 가상 IP 주소를 비활성화 합니다. 결과적으로, 서버 이름에 대 한 쿼리 하는 모든 작업은 서버에서 캐시 된 DNS 항목은 만료 될 때까지 실패 합니다. 부하 분산 서버에서 캐시 만료를 해제 한 후 모든 원격 액세스 PowerShell cmdlet을 실행 하지 않으면 있는지 확인 합니다. 이 문제는 다른 도메인에 있는 다른 컴퓨터에서 컴퓨터에 부하 분산을 사용 하지 않도록 설정 하려는 경우에 더 일반적입니다. 부하 분산 원격 액세스 관리 콘솔에서 사용 하지 않도록 설정 하 고 구성을 로드 되지에서 않을 경우에 발생 합니다. 캐시 만료 되었거나 플러시된 후 구성을 로드 합니다.  
   
-## <a name="BKMK_Links"></a>참고 항목  
+## <a name="see-also"></a><a name="BKMK_Links"></a>참고 항목  
   
 -   [4 단계: 클러스터 확인](Step-4-Verify-the-Cluster.md)  
   

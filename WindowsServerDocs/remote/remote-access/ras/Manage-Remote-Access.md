@@ -10,14 +10,14 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1459819a-b1b6-4800-8770-4a85d02c7a2b
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 2b9065b2d4541063c8cd6f09d47f48a9ba7833e1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 6437a7aa5a535352ad4f6c6be8fbac2162b6feea
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404656"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80308437"
 ---
 # <a name="manage-remote-access"></a>원격 액세스 관리
 
@@ -33,7 +33,7 @@ Windows Server 2016 및 Windows Server 2012에서는 DirectAccess 및 RRAS (라�
 > -   [원격 액세스 모니터링 및 계정 사용](monitoring-and-accounting/Use-Remote-Access-Monitoring-and-Accounting.md)  
 > -   [DirectAccess 클라이언트 원격 관리](manage-remote-clients/Manage-DirectAccess-Clients-Remotely.md)  
   
-## <a name="BKMK_OVER"></a>시나리오 설명  
+## <a name="scenario-description"></a><a name="BKMK_OVER"></a>시나리오 설명  
 DirectAccess 클라이언트 컴퓨터는 사용자가 컴퓨터에 로그인했는지 여부에 관계없이 인터넷에 연결될 때마다 인트라넷에 연결됩니다. 따라서 인트라넷 리소스로 관리할 수 있으며 그룹 정책 변경, 운영 체제 업데이트, 맬웨어 방지 업데이트 및 기타 조직 구성 변경을 통해 최신 상태로 유지할 수 있습니다.  
   
 일부 경우에는 인트라넷 서버 또는 컴퓨터에서 DirectAccess 클라이언트에 대한 연결을 시작해야 합니다. 예를 들어 지원 기술자는 원격 데스크톱 연결을 사용하여 원격 DirectAccess 클라이언트에 연결하고 이 클라이언트의 문제를 해결할 수 있습니다. 이 시나리오를 사용하면 기존의 원격 액세스 솔루션은 사용자 연결용으로 그대로 유지하면서 DirectAccess는 원격 관리용으로 사용할 수 있습니다.  
@@ -47,7 +47,7 @@ DirectAccess는 DirectAccess 클라이언트의 원격 관리를 지 원하는 �
 DirectAccess 원격 클라이언트 관리 배포 시나리오는 다음과 같은 계획 및 구성 단계로 구성됩니다.  
   
 ### <a name="plan-the-deployment"></a>배포 계획  
-이 시나리오를 계획하는 데 필요한 컴퓨터 및 네트워크 요구 사항은 다음의 몇 가지에 불과합니다. 해당 기능은 아래와 같습니다.  
+이 시나리오를 계획하는 데 필요한 컴퓨터 및 네트워크 요구 사항은 다음의 몇 가지에 불과합니다. 여기에는 다음이 포함됩니다.  
   
 -   **네트워크 및 서버 토폴로지**: DirectAccess를 사용하면 원격 액세스 서버를 인트라넷의 경계면 또는 NAT(네트워크 주소 변환) 장치나 방화벽의 뒤에 배치할 수 있습니다.  
   
@@ -64,7 +64,7 @@ DirectAccess 원격 클라이언트 관리 배포 시나리오는 다음과 같�
   
 2.  **원격 액세스 서버 및 네트워크 설정 구성**: 네트워크 어댑터, IP 주소 및 라우팅을 구성합니다.  
   
-3.  **인증서 설정 구성**: 이 배포 시나리오에서는 시작 마법사가 자체 서명 된 인증서를 만들므로 고급 인증서 인프라를 구성할 필요가 없습니다.  
+3.  **인증서 설정 구성**:이 배포 시나리오에서는 시작 마법사가 자체 서명 된 인증서를 만들므로 고급 인증서 인프라를 구성할 필요가 없습니다.  
   
 4.  **네트워크 위치 서버 구성**:  이 시나리오에서는 네트워크 위치 서버가 원격 액세스 서버에 설치됩니다.  
   
@@ -74,22 +74,22 @@ DirectAccess 원격 클라이언트 관리 배포 시나리오는 다음과 같�
   
 7.  **배포 확인**: 클라이언트를 테스트하여 DirectAccess로 내부 네트워크 및 인터넷에 연결할 수 있는지 확인합니다.  
   
-## <a name="BKMK_APP"></a>실용적인 응용 프로그램  
+## <a name="practical-applications"></a><a name="BKMK_APP"></a>실용적인 응용 프로그램  
 DirectAccess 클라이언트를 관리하기 위해 단일 원격 액세스 서버를 배포하면 다음과 같은 이점이 있습니다.  
   
--   **편리한 액세스**: Windows 8 또는 Windows 7을 실행 하는 관리 클라이언트 컴퓨터를 DirectAccess 클라이언트 컴퓨터로 구성할 수 있습니다. 이러한 클라이언트는 VPN 연결에 로그인할 필요 없이 인터넷에 연결되어 있는 동안 언제든지 DirectAccess를 통해 내부 네트워크 리소스에 액세스할 수 있습니다. 이러한 운영 체제 중 하나가 실행되지 않는 클라이언트 컴퓨터는 VPN을 통해 내부 네트워크에 연결할 수 있습니다. DirectAccess와 VPN은 모두 동일한 콘솔에서 동일한 마법사 집합으로 관리됩니다.  
+-   **편리한 액세스**: windows 8 또는 windows 7을 실행 하는 관리 클라이언트 컴퓨터를 DirectAccess 클라이언트 컴퓨터로 구성할 수 있습니다. 이러한 클라이언트는 VPN 연결에 로그인할 필요 없이 인터넷에 연결되어 있는 동안 언제든지 DirectAccess를 통해 내부 네트워크 리소스에 액세스할 수 있습니다. 이러한 운영 체제 중 하나가 실행되지 않는 클라이언트 컴퓨터는 VPN을 통해 내부 네트워크에 연결할 수 있습니다. DirectAccess와 VPN은 모두 동일한 콘솔에서 동일한 마법사 집합으로 관리됩니다.  
   
 -   **편리한 관리**: 인터넷에 연결된 DirectAccess 클라이언트 컴퓨터는 회사 내부 네트워크에 없는 경우에도 원격 액세스 관리자가 DirectAccess를 사용하여 원격으로 관리할 수 있습니다. 회사 요구 사항을 충족하지 않는 클라이언트 컴퓨터를 관리 서버에서 자동으로 업데이트할 수 있습니다. 또한 하나 이상의 원격 액세스 서버를 단일 원격 액세스 관리 콘솔에서 관리할 수 있습니다.  
   
-## <a name="BKMK_NEW"></a>이 시나리오에 포함 된 역할 및 기능  
+## <a name="roles-and-features-included-in-this-scenario"></a><a name="BKMK_NEW"></a>이 시나리오에 포함 된 역할 및 기능  
 다음 표에는 시나리오에 필요한 역할 및 기능이 나와 있습니다.  
   
 |역할 또는 기능|이 시나리오를 지원하는 방법|  
 |----------|-----------------|  
-|*원격 액세스 역할*|이 역할은 서버 관리자 콘솔이나 Windows PowerShell을 사용하여 설치 및 제거됩니다. 이 역할에는 DirectAccess(이전의 Windows Server 2008 R2 기능)와 라우팅 및 원격 액세스 서비스(이전의 NPAS(네트워크 정책 및 액세스 서비스) 서버 역할의 역할 서비스)가 포함되어 있습니다. 원격 액세스 역할은 다음의 두 가지 구성 요소로 구성됩니다.<br /><br />1.  DirectAccess와 RRAS(라우팅 및 원격 액세스 서비스) VPN: DirectAccess와 VPN은 원격 액세스 관리 콘솔에서 관리됩니다.<br />2.  RRAS 기능은 라우팅 및 원격 액세스 콘솔에서 관리됩니다.<br /><br />원격 액세스 서버 역할은 다음과 같은 기능에 종속됩니다.<br /><br />-웹 서버 (IIS): 네트워크 위치 서버와 기본 웹 프로브를 구성해야 합니다.<br />-Windows 내부 데이터베이스: 원격 액세스 서버의 로컬 계정에 사용됩니다.|  
-|원격 액세스 관리 도구 기능|이 기능은 다음과 같이 설치 됩니다.<br /><br />-기본적으로 원격 액세스 역할이 설치 될 때 원격 액세스 서버에서 원격 관리 콘솔 사용자 인터페이스를 지원 합니다.<br />-원격 액세스 서버 역할을 실행 하지 않는 서버에서 옵션으로 사용할 수 있습니다. 이 경우 원격 액세스 서버의 원격 관리에 사용됩니다.<br /><br />이 기능은 다음과 같은 항목으로 구성되어 있습니다.<br /><br />-원격 액세스 GUI 및 명령줄 도구<br />-Windows PowerShell 용 원격 액세스 모듈<br /><br />이 기능은 다음 요소에 종속됩니다.<br /><br />그룹 정책 관리 콘솔<br />RAS 연결 관리자 관리 키트 (CMAK)<br />Windows PowerShell 3.0<br />-그래픽 관리 도구 및 인프라|  
+|*원격 액세스 역할*|이 역할은 서버 관리자 콘솔이나 Windows PowerShell을 사용하여 설치 및 제거됩니다. 이 역할에는 DirectAccess(이전의 Windows Server 2008 R2 기능)와 라우팅 및 원격 액세스 서비스(이전의 NPAS(네트워크 정책 및 액세스 서비스) 서버 역할의 역할 서비스)가 포함되어 있습니다. 원격 액세스 역할은 다음의 두 가지 구성 요소로 구성됩니다.<br /><br />1. DirectAccess 및 RRAS (라우팅 및 원격 액세스 서비스) VPN: DirectAccess와 VPN은 원격 액세스 관리 콘솔에서 관리 됩니다.<br />2. RRAS: 기능은 라우팅 및 원격 액세스 콘솔에서 관리 됩니다.<br /><br />원격 액세스 서버 역할은 다음과 같은 기능에 종속됩니다.<br /><br />-웹 서버 (IIS): 네트워크 위치 서버와 기본 웹 프로브를 구성 하는 데 필요 합니다.<br />-Windows 내부 데이터베이스: 원격 액세스 서버의 로컬 계정에 사용 됩니다.|  
+|원격 액세스 관리 도구 기능|이 기능은 다음과 같이 설치됩니다.<br /><br />-기본적으로 원격 액세스 역할이 설치 될 때 원격 액세스 서버에서 원격 관리 콘솔 사용자 인터페이스를 지원 합니다.<br />-원격 액세스 서버 역할을 실행 하지 않는 서버에서 옵션으로 사용할 수 있습니다. 이 경우 원격 액세스 서버의 원격 관리에 사용됩니다.<br /><br />이 기능은 다음과 같은 항목으로 구성되어 있습니다.<br /><br />-원격 액세스 GUI 및 명령줄 도구<br />-Windows PowerShell 용 원격 액세스 모듈<br /><br />이 기능은 다음 요소에 종속됩니다.<br /><br />그룹 정책 관리 콘솔<br />RAS 연결 관리자 관리 키트 (CMAK)<br />Windows PowerShell 3.0<br />-그래픽 관리 도구 및 인프라|  
   
-## <a name="BKMK_HARD"></a>하드웨어 요구 사항  
+## <a name="hardware-requirements"></a><a name="BKMK_HARD"></a>하드웨어 요구 사항  
 이 시나리오의 하드웨어 요구 사항은 다음과 같습니다.  
   
 ### <a name="server-requirements"></a>서버 요구 사항  
@@ -114,7 +114,7 @@ DirectAccess 클라이언트를 관리하기 위해 단일 원격 액세스 서�
   
 -   Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 또는 Windows Server 2008 SP2를 실행 하는 DNS 서버가 필요 합니다.  
   
-## <a name="BKMK_SOFT"></a>소프트웨어 요구 사항  
+## <a name="software-requirements"></a><a name="BKMK_SOFT"></a>소프트웨어 요구 사항  
 이 시나리오의 소프트웨어 요구 사항은 다음과 같습니다.  
   
 ### <a name="server-requirements"></a>서버 요구 사항  

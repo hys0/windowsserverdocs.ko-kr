@@ -10,14 +10,14 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: dc20b1a0-540d-4531-a176-50b87c071600
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 0c6bff2acc15b7ff90731e0113ae0d5a429c635c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 3cd73f1a5e2612f4551be1f16e49e9645c5e12c0
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404795"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80308740"
 ---
 # <a name="step-2-install-and-configure-router1"></a>2 단계 ROUTER1 설치 및 구성
 
@@ -112,7 +112,7 @@ ms.locfileid: "71404795"
   
 5.  **고급 보안이 설정 된 Windows 방화벽** 대화 상자의 **공용 프로필** 탭에 있는 **방화벽 상태**에서 **끄기**를 클릭 한 다음 **확인**을 클릭 합니다.  
   
-6.  고급 보안이 포함 된 Windows 방화벽을 닫습니다.  
+6.  고급 보안이 설정된 Windows 방화벽을 닫습니다.  
   
 ## <a name="configure-routing-and-forwarding"></a>라우팅 및 전달 구성  
 Corpnet 및 2 Corpnet 서브넷 간에 라우팅 및 전달 서비스를 제공 하려면 네트워크 인터페이스에서 전달을 사용 하도록 설정 하 고 서브넷 간에 고정 경로를 구성 해야 합니다.  

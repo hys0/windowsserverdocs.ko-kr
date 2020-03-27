@@ -10,14 +10,14 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3d66901a-c40b-474c-9948-f989f399cfea
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 4c7a8243922f58f9705a85cd30b2a68cf4d876c6
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 558c99c187ab01f3084621410964f3a01c0dace8
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404791"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80308661"
 ---
 # <a name="step-6-install-and-configure-2-dc1"></a>6 단계 설치 및 구성 2-DC1
 
@@ -181,13 +181,13 @@ CORP2 도메인의 컴퓨터는 APP1의 인증 기관에서 컴퓨터 인증서�
   
 6.  **선택할 개체 이름을 입력**하십시오 .에 Domain Admins를 입력 합니다 **. 도메인 컴퓨터** 를 클릭 한 다음 **확인을**클릭 합니다.  
   
-7.  **클라이언트-서버 인증 속성** 대화 상자의 **그룹 또는 사용자 이름**에서 **domain admins (CORP2\Domain Admins)** 를 클릭 하 고 **도메인 관리자에 대 한 사용 권한**의 **허용** 열에서 **쓰기** 를 선택 합니다. 를 **등록**합니다.  
+7.  **클라이언트-서버 인증 속성** 대화 상자의 **그룹 또는 사용자 이름**에서 **domain admins (CORP2\Domain Admins)** 를 클릭 하 고 **도메인 관리자에 대 한 사용 권한**의 **허용** 열에서 **쓰기** 및 **등록**을 선택 합니다.  
   
 8.  **그룹 또는 사용자 이름**에서 **도메인 컴퓨터 (CORP2\Domain computers)** 를 클릭 하 고 **도메인 컴퓨터의 사용 권한**에서 **허용** 열에서 **등록** 및 **자동 등록**을 선택 하 고 **확인**을 클릭 합니다.  
   
 9. 인증서 템플릿 콘솔을 닫습니다.  
   
-## <a name="replication"></a>DC1과 2의 DC1 간 강제 복제  
+## <a name="force-replication-between-dc1-and-2-dc1"></a><a name="replication"></a>DC1과 2의 DC1 간 강제 복제  
 EDGE1에서 인증서를 등록 하려면 먼저 d c 2에서 DC1으로 설정 복제를 적용 해야 합니다. 이 작업은 DC1에서 수행 해야 합니다.  
   
 ### <a name="to-force-replication"></a>강제로 복제 하려면  
@@ -200,7 +200,7 @@ EDGE1에서 인증서를 등록 하려면 먼저 d c 2에서 DC1으로 설정 �
   
 4.  **DEFAULTIPSITELINK 속성** 대화 상자의 **비용**에서 **1**을 입력 하 고 **복제 간격**에 **15**를 입력 한 다음 **확인**을 클릭 합니다. 복제가 완료 될 때까지 15 분 동안 기다립니다.  
   
-5.  콘솔 트리에서 지금 복제를 강제로 수행 하려면 **Sits\default-fi-site-mc\dc\dc1\ntds 설정**을 확장 하 고 세부 정보 창에서 **<automatically generated>** 를 마우스 오른쪽 단추로 클릭 한 다음 **지금 복제**를 클릭 하 고 **지금 복제** 대화 상자를 클릭 합니다. **확인을**클릭 합니다.  
+5.  콘솔 트리에서 지금 복제를 강제로 수행 하려면 **Sits\default-fi-site-bservers\dc1\ntds 설정**을 확장 하 고 세부 정보 창에서 **<automatically generated>** 을 마우스 오른쪽 단추로 클릭 한 다음 **지금 복제**를 클릭 하 고 **지금 복제** 대화 상자에서 **확인**을 클릭 합니다.  
   
 6.  복제가 성공적으로 완료 되었는지 확인 하려면 다음을 수행 합니다.  
   

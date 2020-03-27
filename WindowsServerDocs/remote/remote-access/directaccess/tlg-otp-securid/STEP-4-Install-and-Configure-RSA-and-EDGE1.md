@@ -10,14 +10,14 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d46ede6f-1a21-414d-b8c3-6b5c87344b9d
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 3519e9d6e89b26a733b6b0178334f86e284bddfb
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 1a2244422c8b625f5641fb775a2e503b096b07b5
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404755"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80308611"
 ---
 # <a name="step-4-install-and-configure-rsa-and-edge1"></a>4 단계 RSA 및 EDGE1 설치 및 구성
 
@@ -49,7 +49,7 @@ RSA는 RADIUS 및 otp 서버 이며 RADIUS 및 OTP를 구성 하기 전에 설�
   
 11. OTP 인증을 지원 하도록 EDGE1을 구성 합니다. DirectAccess에 대해 OTP를 구성 하 고 구성을 확인 합니다.  
   
-## <a name="InstallOS"></a>RSA 서버에 운영 체제 설치  
+## <a name="install-the-operating-system-on-the-rsa-server"></a><a name="InstallOS"></a>RSA 서버에 운영 체제 설치  
   
 1.  RSA에서 Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012 설치를 시작 합니다.  
   
@@ -59,7 +59,7 @@ RSA는 RADIUS 및 otp 서버 이며 RADIUS 및 OTP를 구성 하기 전에 설�
   
 4.  RSA를 Corpnet 서브넷에 연결 합니다.  
   
-## <a name="TCP"></a>RSA에서 TCP/IP 구성  
+## <a name="configure-tcpip-on-rsa"></a><a name="TCP"></a>RSA에서 TCP/IP 구성  
   
 1.  초기 구성 작업에서 **네트워킹 구성**을 클릭 합니다.  
   
@@ -77,7 +77,7 @@ RSA는 RADIUS 및 otp 서버 이며 RADIUS 및 OTP를 구성 하기 전에 설�
   
 8.  **네트워크 연결** 창을 닫습니다.  
   
-## <a name="copyinstfiles"></a>RSA 서버에 인증 관리자 설치 파일 복사  
+## <a name="copy-authentication-manager-installation-files-to-the-rsa-server"></a><a name="copyinstfiles"></a>RSA 서버에 인증 관리자 설치 파일 복사  
   
 1.  RSA 서버에서 C:\RSA 설치 폴더를 만듭니다.  
   
@@ -87,7 +87,7 @@ RSA는 RADIUS 및 otp 서버 이며 RADIUS 및 OTP를 구성 하기 전에 설�
   
 4.  RSA 라이선스 파일을 C:\RSA 설치 \ 라이선스 및 토큰에 복사 합니다.  
   
-## <a name="JoinDomain"></a>RSA 서버를 CORP 도메인에 가입 시킵니다.  
+## <a name="join-the-rsa-server-to-the-corp-domain"></a><a name="JoinDomain"></a>RSA 서버를 CORP 도메인에 가입 시킵니다.  
   
 1.  **내 컴퓨터**를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 클릭 합니다.  
   
@@ -107,7 +107,7 @@ RSA는 RADIUS 및 otp 서버 이며 RADIUS 및 OTP를 구성 하기 전에 설�
   
 9. 컴퓨터가 다시 시작 되 면 **User1** 및 암호를 입력 **하 고 로그온:** 드롭다운 목록에서 CORP를 선택 하 고 **확인**을 클릭 합니다.  
   
-## <a name="BKMK_Firewall"></a>RSA에서 Windows 방화벽 사용 안 함  
+## <a name="disable-windows-firewall-on-rsa"></a><a name="BKMK_Firewall"></a>RSA에서 Windows 방화벽 사용 안 함  
   
 1.  **시작**, **제어판**, **시스템 및 보안**, **Windows 방화벽**을 차례로 클릭 합니다.  
   
@@ -117,7 +117,7 @@ RSA는 RADIUS 및 otp 서버 이며 RADIUS 및 OTP를 구성 하기 전에 설�
   
 4.  **확인** 을 클릭 하 고 Windows 방화벽을 닫습니다.  
   
-## <a name="install"></a>Rsa 서버에 RSA 인증 관리자 설치  
+## <a name="install-rsa-authentication-manager-on-the-rsa-server"></a><a name="install"></a>Rsa 서버에 RSA 인증 관리자 설치  
   
 1.  이 프로세스 중에 언제 든 지 보안 경고 메시지가 표시 되 면 **실행** 을 클릭 하 여 계속 합니다.  
   
@@ -145,7 +145,7 @@ RSA는 RADIUS 및 otp 서버 이며 RADIUS 및 OTP를 구성 하기 전에 설�
   
 13. 설치가 완료 되 면 **마침**을 클릭 합니다.  
   
-## <a name="confiauthmgr"></a>RSA 인증 관리자 구성  
+## <a name="configure-rsa-authentication-manager"></a><a name="confiauthmgr"></a>RSA 인증 관리자 구성  
   
 1.  RSA 보안 콘솔이 자동으로 열리지 않으면 RSA 컴퓨터 바탕 화면에서 "RSA 보안 콘솔"을 두 번 클릭 합니다.  
   
@@ -257,13 +257,13 @@ RSA는 RADIUS 및 otp 서버 이며 RADIUS 및 OTP를 구성 하기 전에 설�
   
     7.  RSA 인증 관리자 미디어 복사본 \ auth_mgr \windows-x86_64 \am\rsa-ace_nsload \win32-5.0-x86\ agent_nsload를 C:\RSA 설치로 복사 합니다.  
   
-## <a name="BKMK_DAProbeUser"></a>DAProbeUser 만들기  
+## <a name="create-daprobeuser"></a><a name="BKMK_DAProbeUser"></a>DAProbeUser 만들기  
   
 1.  **RSA 보안 콘솔** 에서 **id** 탭을 클릭 하 고 **사용자**를 클릭 한 다음 **새로 추가**를 클릭 합니다.  
   
 2.  **Last Name:** 섹션에서 **Probe**를 입력 하 고 **사용자 ID:** 섹션에 **DAProbeUser**를 입력 합니다. **암호:** 및 **암호 확인:** 섹션에 강력한 암호를 입력 합니다. **' 다음 로그온 할 때 사용자에 게 암호를 변경 해야 함 '** 확인란의 선택을 취소 하 고 **저장**을 클릭 합니다.  
   
-## <a name="InstToken"></a>C l i e n t 1에 RSA SecurID 소프트웨어 토큰 설치  
+## <a name="install-rsa-securid-software-token-on-client1"></a><a name="InstToken"></a>C l i e n t 1에 RSA SecurID 소프트웨어 토큰 설치  
 이 절차를 사용 하 여 CLIENT1에 SecurID 소프트웨어 토큰을 설치할 수 있습니다.  
   
 #### <a name="install-securid-software-token"></a>SecurID 소프트웨어 토큰 설치  
@@ -278,7 +278,7 @@ RSA는 RADIUS 및 otp 서버 이며 RADIUS 및 OTP를 구성 하기 전에 설�
   
 5.  **설치 유형** 대화 상자에서 **일반**을 선택 하 고 **다음**을 클릭 한 후 **설치**를 클릭 합니다.  
   
-6.  **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
+6.  **사용자 계정 컨트롤** 대화 상자가 표시되면 원하는 작업이 표시되어 있는지 확인하고 **예**를 클릭합니다.  
   
 7.  **RSA SecurID 소프트웨어 토큰 시작** 확인란을 선택 하 고 **마침**을 클릭 합니다.  
   
@@ -288,7 +288,7 @@ RSA는 RADIUS 및 otp 서버 이며 RADIUS 및 OTP를 구성 하기 전에 설�
   
 10. **확인** 을 두 번 클릭합니다.  
   
-## <a name="configAuthAgt"></a>EDGE1를 RSA 인증 에이전트로 구성  
+## <a name="configure-edge1-as-an-rsa-authentication-agent"></a><a name="configAuthAgt"></a>EDGE1를 RSA 인증 에이전트로 구성  
 RSA 인증을 수행 하도록 EDGE1을 구성 하려면 다음 절차를 따르십시오.  
   
 #### <a name="configure-the-rsa-authentication-agent"></a>RSA 인증 에이전트 구성  
@@ -311,7 +311,7 @@ RSA 인증을 수행 하도록 EDGE1을 구성 하려면 다음 절차를 따르
   
 7. C:\Windows\SysWOW64\securid을 C:\Windows\System32.에 복사 합니다.  
   
-## <a name="configOTP"></a>OTP 인증을 지원 하도록 EDGE1 구성  
+## <a name="configure-edge1-to-support-otp-authentication"></a><a name="configOTP"></a>OTP 인증을 지원 하도록 EDGE1 구성  
 DirectAccess에 대해 OTP를 구성 하 고 구성을 확인 하려면 다음 절차를 따르십시오.  
   
 #### <a name="configure-otp-for-directaccess"></a>DirectAccess에 대해 OTP 구성  
@@ -341,7 +341,7 @@ DirectAccess에 대해 OTP를 구성 하 고 구성을 확인 하려면 다음 �
   
 11. **원격 액세스 검토** 대화 상자에서 **적용**을 클릭 하 고, DirectAccess 정책이 업데이트 될 때까지 기다린 후 **닫기**를 클릭 합니다.  
   
-12. **시작** 화면에서**powershell**을 입력 하 고 **powershell**을 마우스 오른쪽 단추로 클릭 한 다음 **고급**을 클릭 하 고 **관리자 권한으로 실행**을 클릭 합니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
+12. **시작** 화면에서**powershell**을 입력 하 고 **powershell**을 마우스 오른쪽 단추로 클릭 한 다음 **고급**을 클릭 하 고 **관리자 권한으로 실행**을 클릭 합니다. **사용자 계정 컨트롤** 대화 상자가 표시되면 원하는 작업이 표시되어 있는지 확인하고 **예**를 클릭합니다.  
   
 13. Windows PowerShell 창에서 **gpupdate/force** 를 입력 하 고 enter 키를 누릅니다.  
   

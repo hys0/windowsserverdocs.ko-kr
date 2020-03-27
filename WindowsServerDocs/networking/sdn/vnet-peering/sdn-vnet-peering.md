@@ -6,15 +6,15 @@ ms.prod: windows-server
 ms.technology: networking-hv-switch
 ms.topic: get-started-article
 ms.assetid: ''
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 08/08/2018
-ms.openlocfilehash: ccdcbb953939345ef5e9a45dff87fc7af62eb7bf
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 01c768aefa685b688c2ed3f777c44a4665b5e4a7
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71355493"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80309682"
 ---
 # <a name="virtual-network-peering"></a>가상 네트워크 피어링
 
@@ -83,14 +83,14 @@ ms.locfileid: "71355493"
 
 다음 상태 중 하나일 수 있는 피어 링 연결의 상태를 모니터링할 수 있습니다.
 
--   **단방향** 첫 번째 가상 네트워크에서 두 번째 가상 네트워크로의 피어 링을 만들 때 표시 됩니다.
+-   **시작 됨:** 첫 번째 가상 네트워크에서 두 번째 가상 네트워크로의 피어 링을 만들 때 표시 됩니다.
 
--   **연결** 두 번째 가상 네트워크에서 첫 번째 가상 네트워크로의 피어 링을 만든 후에 표시 됩니다. 첫 번째 가상 네트워크의 피어 링 상태가 시작 됨에서 연결 됨으로 변경 됩니다. 가상 네트워크 피어 링을 성공적으로 설정 하기 전에 두 가상 네트워크의 상태가 연결 됨 이어야 합니다.
+-   **연결 됨:** 두 번째 가상 네트워크에서 첫 번째 가상 네트워크로의 피어 링을 만든 후에 표시 됩니다. 첫 번째 가상 네트워크의 피어 링 상태가 시작 됨에서 연결 됨으로 변경 됩니다. 가상 네트워크 피어 링을 성공적으로 설정 하기 전에 두 가상 네트워크의 상태가 연결 됨 이어야 합니다.
 
--   **연결이 끊긴** 한 가상 네트워크를 다른 가상 네트워크에서 연결을 끊으면 표시 됩니다.
+-   **연결 끊김:** 한 가상 네트워크를 다른 가상 네트워크에서 연결을 끊으면 표시 됩니다.
 
 [상태의 infographic]
 
 ## <a name="next-steps"></a>다음 단계
-[가상 네트워크 피어 링을 구성 합니다](sdn-configure-vnet-peering.md). 이 절차에서는 Windows PowerShell을 사용 하 여 HNV 공급자 논리 네트워크를 찾고 각각 하나의 서브넷이 있는 두 개의 가상 네트워크를 만듭니다. 또한 두 가상 네트워크 간에 피어 링을 구성 합니다.
+[가상 네트워크 피어 링 구성](sdn-configure-vnet-peering.md):이 절차에서는 Windows PowerShell을 사용 하 여 hnv 공급자 논리 네트워크를 찾고 각각 하나의 서브넷이 있는 두 개의 가상 네트워크를 만듭니다. 또한 두 가상 네트워크 간에 피어 링을 구성 합니다.
 

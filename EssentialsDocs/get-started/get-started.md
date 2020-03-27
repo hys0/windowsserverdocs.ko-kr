@@ -2,7 +2,7 @@
 title: Windows Server Essentials 시작
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
-ms.prod: windows-server-2019-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -11,12 +11,12 @@ ms.assetid: 2d0eb084-09dd-4d85-a41a-5d449cc3b504
 author: nnamuhcs
 ms.author: coreyp
 manager: jasgro
-ms.openlocfilehash: 807ea32a466b6717f61423e58d621a0050047586
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: bafcd95abf24cb93ed0ae0bd83090d224666a5bd
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75946857"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80310453"
 ---
 # <a name="get-started-with-windows-server-essentials"></a>Windows Server Essentials 시작 
 
@@ -24,7 +24,7 @@ ms.locfileid: "75946857"
 
 **Windows Server Essentials** edition은 최대 25 명의 사용자와 50 장치를 갖춘 중소기업을 위해 설계 된 클라우드로 연결 된 첫 번째 서버입니다. 그러나 Windows Server Essentials의 모든 버전을 설치 하는 것을 고려 하는 경우 **Microsoft 365**를 고려 하는 것이 좋습니다. Windows Server Essentials 이상에서 Microsoft 365로 이동 하는 방법에 대 한 자세한 내용은 [Windows server 2019 Essentials의 새로운 기능](what-s-new-19.md)을 참조 하세요.
   
-## <a name="in-this-library"></a>이 라이브러리의 내용  
+## <a name="in-this-library"></a>이 라이브러리의 항목  
  Windows Server Essentials의 설치, 구성, 관리, 사용 및 문제 해결에 대한 자세한 내용은 다음 문서를 참조하세요.  
   
 

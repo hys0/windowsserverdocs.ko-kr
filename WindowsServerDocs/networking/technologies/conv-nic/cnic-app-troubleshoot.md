@@ -6,14 +6,14 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 0bc6746f-2adb-43d8-a503-52f473833164
 manager: brianlic
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 297044397088bfb64b51e1553d3f69d5b933e81b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: c20c21c39e44d7eb3da812bbe71f175d0688d6c0
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405894"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80309653"
 ---
 # <a name="troubleshooting-converged-nic-configurations"></a>수렴 형 NIC 구성 문제 해결
 
@@ -82,7 +82,7 @@ RDMA 구성을 확인 하는 추가 단계로 Hyper-v 서버에서 다음 Window
 
 ## <a name="get-netadapterqos"></a>Get-netadapterqos
 
-다음 Windows PowerShell 명령을 실행 하 여 서비스 \(QoS\) 구성의 네트워크 어댑터 품질을 확인할 수 있습니다.
+다음 Windows PowerShell 명령을 실행 하 여 QoS\) 구성 \(QoS (네트워크 어댑터 품질)를 볼 수 있습니다.
 
     Get-NetAdapterQos
 
@@ -96,14 +96,14 @@ RDMA 구성을 확인 하는 추가 단계로 Hyper-v 서버에서 다음 Window
 
 예기치 않은 결과가 발생 하면 다음 단계를 수행 합니다.
 
-1. 실제 네트워크 어댑터가 데이터 센터 브리징 \(DCB\) 및 QoS를 지원 하는지 확인 합니다.
+1. 실제 네트워크 어댑터가 DCB\) 및 QoS \(데이터 센터 브리징을 지원 하는지 확인 합니다.
 2. 네트워크 어댑터 드라이버가 최신 상태 인지 확인 합니다.
 
 --- 
 
 ## <a name="get-smbmultichannelconnection"></a>SmbMultiChannelConnection
 
-다음 Windows PowerShell 명령을 사용 하 여 원격 노드의 IP 주소가 RDMA\-지원 인지 확인할 수 있습니다.
+다음 Windows PowerShell 명령을 사용 하 여 원격 노드의 IP 주소가 RDMA\-지원 되는지 확인할 수 있습니다.
 
     Get-SmbMultiChannelConnection
 
@@ -125,7 +125,7 @@ RDMA 구성을 확인 하는 추가 단계로 Hyper-v 서버에서 다음 Window
 
 ## <a name="get-smbclientnetworkinterface"></a>SmbClientNetworkInterface
 
-다음 명령을 사용 하 여 rdma에 대해 사용 하도록 설정한 가상 NIC가 SMB에서 지 원하는 rdma\-로 보고 되는지 확인할 수 있습니다.
+다음 명령을 사용 하 여 RDMA에 대해 사용 하도록 설정한 가상 NIC가 SMB에서 지 원하는 RDMA\-보고 되는지 확인할 수 있습니다.
 
     Get-SmbClientNetworkInterface
 
@@ -147,7 +147,7 @@ RDMA에 대해 사용 하도록 설정 된 가상 NIC는 SMB에서 지 원하는
 
 ## <a name="vstat-mellanox-specific"></a>vstat \(Mellanox 특정\)
 
-Mellanox 네트워크 어댑터를 사용 하는 경우 **vstat** 명령을 사용 하 여 hyper-v 노드에서 수렴 된 이더넷 \(roce\) 버전을 통해 RDMA를 확인할 수 있습니다.
+Mellanox 네트워크 어댑터를 사용 하는 경우 **vstat** 명령을 사용 하 여 Hyper-v 노드에서 수렴 된 이더넷 \(roce\) 버전을 통해 RDMA를 확인할 수 있습니다.
 
 ### <a name="vstat-expected-results"></a>vstat 예상 결과
 

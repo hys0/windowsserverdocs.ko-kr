@@ -3,7 +3,7 @@ title: Windows Server Essentials에서 서버 폴더 관리
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: 090cf1b8-7b9b-48b9-ae85-b98477b8d7cc
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 0c46d19f4f172786e0ffe7f3b9dd7ac1d8f4fcf0
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: 6ba5dd5e5978687c9d80a6d34e5e622aaa37c4b9
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79322235"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80311120"
 ---
 # <a name="manage-server-folders-in-windows-server-essentials"></a>Windows Server Essentials에서 서버 폴더 관리
 
@@ -39,7 +39,7 @@ ms.locfileid: "79322235"
   
 -   [섀도 복사본 이해](Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_Shadow)  
   
-##  <a name="BKMK_2"></a>대시보드를 사용 하 여 서버 폴더 관리  
+##  <a name="manage-server-folders-using-the-dashboard"></a><a name="BKMK_2"></a>대시보드를 사용 하 여 서버 폴더 관리  
  Windows Server Essentials에서는 대시보드를 사용하여 일반적인 관리 작업을 수행할 수 있습니다. 대시보드의 **서버 폴더** 페이지에서는 다음을 제공합니다.  
   
 - 다음을 표시하는 서버 폴더 목록:  
@@ -72,7 +72,7 @@ ms.locfileid: "79322235"
 |폴더 추가|새 서버 폴더를 만들고 각 사용자 계정에 대해 허용되는 액세스 수준을 할당할 수 있습니다.|  
 |서버 폴더 이해|서버 폴더의 사용과 기능에 대해 설명하는 인터넷의 도움말 항목을 엽니다.|  
   
-##  <a name="BKMK_1"></a>서버 폴더에 대 한 액세스 관리  
+##  <a name="manage-access-to-server-folders"></a><a name="BKMK_1"></a>서버 폴더에 대 한 액세스 관리  
  Windows Server Essentials에서는 서버 폴더를 사용하여 클라이언트 컴퓨터에 있는 파일을 중앙 위치에 저장할 수 있습니다. 파일을 서버 폴더에 저장하면 파일은 항상 각 클라이언트에서 안전하게 파일에 액세스할 수 있는 위치에 저장됩니다.  
   
  서버 폴더를 사용하여 파일을 저장하면 다음을 수행할 수 있습니다.  
@@ -105,7 +105,7 @@ ms.locfileid: "79322235"
   
 -   [서버 폴더 속성 보기 또는 수정](Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_10)  
   
-###  <a name="BKMK_Hide"></a>서버 폴더 숨기기  
+###  <a name="hide-server-folders"></a><a name="BKMK_Hide"></a>서버 폴더 숨기기  
  네트워크 관리자는 이러한 서버 폴더를 숨기도록 선택하여 원격 웹 액세스 웹 사이트나 웹 서비스 응용 프로그램(예: 내 서버)에 표시되지 않게 할 수 있습니다.  
   
 > [!NOTE]
@@ -123,7 +123,7 @@ ms.locfileid: "79322235"
   
 5.  **< FolderName\> 속성**에서 **공유**를 클릭 하 고 **원격 웹 액세스 및 웹 서비스 응용 프로그램에서이 폴더 숨기기**를 선택한 다음 **적용**을 클릭 합니다.  
   
-###  <a name="BKMK_Perms"></a>서버 폴더에 대 한 사용 권한 설정  
+###  <a name="set-permissions-to-server-folders"></a><a name="BKMK_Perms"></a>서버 폴더에 대 한 사용 권한 설정  
  대시보드를 사용하여 서버에서 추가할 서버 폴더에 대해 세 가지 액세스 권한 설정을 선택할 수 있습니다.  
   
 -   **읽기/쓰기**  
@@ -160,9 +160,9 @@ ms.locfileid: "79322235"
 >  기본적으로 네트워크에 사용자 계정을 추가하면 서버의 **사용자** 폴더 아래에 사용자에 대한 하위 폴더가 생성됩니다. 사용자 또는 관리자만 네트워크 컴퓨터에서 하위 폴더에 액세스할 수 있습니다. 사용 권한은 **사용자** 아래의 각 하위 폴더에 대해 설정되므로 최상위 **사용자** 폴더에 대한 일반적인 액세스 권한은 없습니다.  
   
 > [!NOTE]
->  **파일 히스토리 백업**, **폴더 리디렉션** 및 **사용자** 서버 폴더에 대한 공유 권한은 수정할 수 없습니다. 또한 이러한 서버 폴더의 폴더 속성에는 **공유** 탭이 포함되지 않습니다.  
+>  **파일 히스토리 백업**, **폴더 리디렉션**및 **사용자** 서버 폴더에 대한 공유 권한은 수정할 수 없습니다. 또한 이러한 서버 폴더의 폴더 속성에는 **공유** 탭이 포함되지 않습니다.  
   
-###  <a name="BKMK_10"></a>서버 폴더 속성 보기 또는 수정  
+###  <a name="view-or-modify-server-folder-properties"></a><a name="BKMK_10"></a>서버 폴더 속성 보기 또는 수정  
  대시보드 **서버 폴더** 탭의 **폴더 속성 보기** 작업을 통해 서버 폴더 이름, 해당 설명을 수정하고 서버 폴더에 대한 액세스 권한이 있는 사용자 계정을 정의할 수 있습니다.  
   
 > [!NOTE]
@@ -183,7 +183,7 @@ ms.locfileid: "79322235"
     > [!NOTE]
     >  Windows server Essentials Experience 역할이 설치 된 windows Server Essentials 및 Windows Server 2012 R2에서 서버 폴더가 지정 된 크기에 도달할 때 경고 메시지를 제공 하는 폴더 할당량을 수정할 수도 있습니다.  
   
-##  <a name="BKMK_5"></a>서버 폴더 추가 또는 이동  
+##  <a name="add-or-move-a-server-folder"></a><a name="BKMK_5"></a>서버 폴더 추가 또는 이동  
  설치 중에 생성되는 기본 서버 폴더 이외에 서버에 파일을 저장할 **서버 폴더를 추가**할 수 있습니다. Windows Server Essentials를 실행하는 주 서버 또는 구성원 서버에서 서버 폴더를 추가할 수 있습니다.  
   
  폴더 이동 마법사를 사용하여 필요한 경우 다른 하드 드라이브로 Windows Server Essentials를 실행하는 주 서버에 있고 대시보드의 **서버 폴더** 탭에 표시되는 **서버 폴더를 이동**할 수 있습니다. 다음과 같은 경우 서버 폴더를 다른 하드 드라이브 위치 주소로 이동할 수 있습니다.  
@@ -226,7 +226,7 @@ ms.locfileid: "79322235"
   
 - 할당량  
   
-###  <a name="BKMK_6"></a>서버 폴더를 추가 하거나 이동할 위치  
+###  <a name="where-to-add-or-move-a-server-folder"></a><a name="BKMK_6"></a>서버 폴더를 추가 하거나 이동할 위치  
  일반적으로 서버 폴더는 최대한의 사용 가능한 공간이 포함된 하드 드라이브에 추가하거나 이동해야 합니다. 운영 체제와 해당 업데이트에 필요한 드라이브 공간을 소모할 수 있으므로 공유 폴더를 시스템 드라이브(예: C:)에 추가하거나 이동하지 마세요. 또한 쉽게 연결이 끊어질 수 있고 이 때문에 파일에 액세스하지 못할 수 있으므로 서버 폴더를 외부 하드 드라이브에 추가하거나 이동하지 마세요. 대신 내부 드라이브에서 폴더를 만드는 것이 좋습니다.  
   
  서버 폴더를 다음 위치에 추가하거나 이동할 수 없고 추가 또는 이동을 위해 이러한 위치를 선택하면 오류가 발생합니다.  
@@ -239,7 +239,7 @@ ms.locfileid: "79322235"
   
 -   공유 폴더가 포함된 폴더  
   
--   **이동식 스토리지가 있는 디바이스** 아래에 있는 하드 드라이브  
+-   **이동식 저장소가 있는 장치**아래에 있는 하드 드라이브  
   
 -   하드 드라이브의 루트 디렉터리 (예: C:\\, D:\\, E:\\)  
   
@@ -278,7 +278,7 @@ ms.locfileid: "79322235"
   
 5.  지시에 따라 마법사를 완료합니다.  
   
-##  <a name="BKMK_9"></a>누락 된 서버 폴더 추가  
+##  <a name="add-a-missing-server-folder"></a><a name="BKMK_9"></a>누락 된 서버 폴더 추가  
  서버에서 미리 정의 된 서버 폴더를 검색 하면 회사, 사용자, 클라이언트 컴퓨터 백업, 파일 히스토리 백업 또는 폴더 리디렉션?이 더 이상 공유 되지 않습니다. (어떤 이유로 또는 다른 이유로) 사용자에 게이 문제를 해결 하는 방법을 안내 하는 경고가 생성 됩니다. 서버 백업에서 폴더를 복원해 보는 것이 좋습니다. 그러나 서버가 백업되지 않았으면 누락된 폴더를 선택하고 **누락된 폴더 다시 만들기**를 클릭하여 서버 폴더의 위치를 다시 구성합니다.  
   
 > [!NOTE]
@@ -288,10 +288,10 @@ ms.locfileid: "79322235"
   
  서버 백업에서 파일을 복원 하는 방법에 대 한 자세한 내용은 [백업 및 복원 관리](Manage-Backup-and-Restore-in-Windows-Server-Essentials.md)항목에서 파일 및 폴더 복원에 대 한 자세한 정보 섹션을 참조 하세요.  
   
-##  <a name="BKMK_11"></a>공유 폴더 이해  
+##  <a name="understand-shared-folders"></a><a name="BKMK_11"></a>공유 폴더 이해  
  서버에 연결된 장치에서 다양한 방법으로 Windows Server Essentials의 공유 폴더에 액세스할 수 있습니다. 자세한 내용은 [공유 폴더 사용](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md)항목을 참조 하세요.  
   
-##  <a name="BKMK_Shadow"></a>섀도 복사본 이해  
+##  <a name="understand-shadow-copies"></a><a name="BKMK_Shadow"></a>섀도 복사본 이해  
  서버 섀도 복사본을 사용하면 공유 파일 및 폴더를 과거 시점에 존재하던 대로 볼 수 있습니다. 사용자가 다음을 수행할 때 파일의 이전 버전 또는 섀도 복사본에 액세스하는 것이 유용합니다.  
   
 1. **실수로 삭제된 파일을 복구합니다**. 파일을 실수로 삭제하면 이전 버전을 열고 안전한 위치로 복사할 수 있습니다.  

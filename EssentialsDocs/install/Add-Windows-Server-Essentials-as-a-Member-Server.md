@@ -3,7 +3,7 @@ title: Windows Server Essentials를 구성원 서버로 추가
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: d09dd82f-f7d2-47ce-862d-fd9869f2021c
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 09943f9708af3839ff21717316853fab9ba0283b
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 4b87c066885ed2bf0ac6dfa29496317310b062d9
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70865053"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80310173"
 ---
 # <a name="add-windows-server-essentials-as-a-member-server"></a>Windows Server Essentials를 구성원 서버로 추가
 
@@ -28,7 +28,7 @@ ms.locfileid: "70865053"
 > [!NOTE]
 >   Windows Server Essentials는 도메인 컨트롤러로만 배포할 수 있습니다. 이 문서에서 Windows Server Essentials는 Windows Server Essentials를 포함 하지 않습니다.  
   
- Windows Server Essentials는 Windows 도메인 내에서 주 서버일 필요가 없습니다. Windows Server Essentials를 기존 Active Directory 도메인 환경에 구성원 서버로 추가하여 이러한 환경에서 제공되는 단순한 데이터 보호, 보안된 원격 액세스 및 클라우드 통합 기능을 활용할 수 있습니다. 또한 Windows Server Essentials를 기존 Active Directory 환경에 도메인 컨트롤러로 사용하지 않고 배포할 수 있습니다. 따라서 저장소를 확장하거나 로컬 저장소 및 관리에 지점을 사용할 수 있습니다.  
+ Windows Server Essentials는 Windows 도메인 내에서 주 서버일 필요가 없습니다. Windows Server Essentials를 기존 Active Directory 도메인 환경에 구성원 서버로 추가하여 이러한 환경에서 제공되는 단순한 데이터 보호, 보안된 원격 액세스 및 클라우드 통합 기능을 활용할 수 있습니다. 또한 Windows Server Essentials를 기존 Active Directory 환경에 도메인 컨트롤러로 사용하지 않고 배포할 수 있습니다. 따라서 스토리지를 확장하거나 로컬 스토리지 및 관리에 지점을 사용할 수 있습니다.  
   
  다음과 같은 시나리오에서 Windows Server Essentials를 추가할 수 있습니다.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "70865053"
   
 7.  바탕 화면에서 대시보드 아이콘을 클릭하여 서버 대시보드를 시작합니다. 홈 페이지에서 **설치** 탭에 나열된 **시작** 작업을 완료합니다.  
   
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
   
 
 -   [Windows Server Essentials 설치](Install-Windows-Server-Essentials.md)

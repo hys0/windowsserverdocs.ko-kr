@@ -6,15 +6,15 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: eed5c184-fa55-43a8-a879-b1610ebc70ca
 manager: dougkim
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 09/14/2018
-ms.openlocfilehash: 2ad7592fd9faf1e92893e6271daabdad907d3aaa
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5a088df043190de9e7f1df4dccdc2fc832751093
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405795"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80309628"
 ---
 # <a name="converged-nic-configuration-with-a-single-network-adapter"></a>단일 네트워크 어댑터를 사용 하 여 수렴 형 NIC 구성
 
@@ -40,9 +40,9 @@ ms.locfileid: "71405795"
    _**검색**_  
 
 
-   | 이름 |    인터페이스 설명     | ifIndex | 상태 |    Mac     | /%Linkspeed |
+   | 이름 |    인터페이스 설명     | ifIndex | 상태 |    MacAddress     | /%Linkspeed |
    |------|-----------------------------|---------|--------|-------------------|-----------|
-   |  M 1  | Mellanox Connectx-3-3 Pro ... |    추가를 클릭합니다.    |   위쪽   | 7C-FE-90-8F-A1 |  40 Gbps  |
+   |  M 1  | Mellanox Connectx-3-3 Pro ... |    4    |   위로   | 7C-FE-90-8F-A1 |  40 Gbps  |
 
    ---
 
@@ -209,9 +209,9 @@ ms.locfileid: "71405795"
    _**검색**_
 
 
-   | 이름 |          인터페이스 설명           | ifIndex | 상태 |    Mac     | /%Linkspeed |
+   | 이름 |          인터페이스 설명           | ifIndex | 상태 |    MacAddress     | /%Linkspeed |
    |------|-----------------------------------------|---------|--------|-------------------|-----------|
-   |  M 1  | Mellanox Connectx-3 Pro 이더넷 Ada ... |    추가를 클릭합니다.    |   위쪽   | 7C-FE-90-8F-A1 |  40 Gbps  |
+   |  M 1  | Mellanox Connectx-3 Pro 이더넷 Ada ... |    4    |   위로   | 7C-FE-90-8F-A1 |  40 Gbps  |
 
    ---
 
@@ -274,13 +274,13 @@ ms.locfileid: "71405795"
    _**검색**_
 
 
-   | 우선 순위 | Enabled | PolicySet | ifIndex | IfAlias |
+   | Priority | 사용 | PolicySet | ifIndex | IfAlias |
    |----------|---------|-----------|---------|---------|
    |    0     |  False  |  전역   | &nbsp;  | &nbsp;  |
    |    1     |  False  |  전역   | &nbsp;  | &nbsp;  |
    |    2     |  False  |  전역   | &nbsp;  | &nbsp;  |
    |    3     |  True   |  전역   | &nbsp;  | &nbsp;  |
-   |    추가를 클릭합니다.     |  False  |  전역   | &nbsp;  | &nbsp;  |
+   |    4     |  False  |  전역   | &nbsp;  | &nbsp;  |
    |    5     |  False  |  전역   | &nbsp;  | &nbsp;  |
    |    6     |  False  |  전역   | &nbsp;  | &nbsp;  |
    |    7     |  False  |  전역   | &nbsp;  | &nbsp;  |
@@ -330,9 +330,9 @@ ms.locfileid: "71405795"
    _**OperationalClassifications:**_  
 
 
-   | 프로토콜  | 포트/유형 | 우선 순위 |
+   | 프로토콜  | 포트/유형 | Priority |
    |-----------|-----------|----------|
-   |  기본값  |  &nbsp;   |    0     |
+   |  기본  |  &nbsp;   |    0     |
    | NetDirect |    445    |    3     |
 
    ---
@@ -348,7 +348,7 @@ ms.locfileid: "71405795"
    _**검색**_
 
 
-   | 이름 | 알고리즘 | 대역폭 (%) | 우선 순위 | PolicySet | ifIndex | IfAlias |
+   | 이름 | 알고리즘 | 대역폭 (%) | Priority | PolicySet | ifIndex | IfAlias |
    |------|-----------|--------------|----------|-----------|---------|---------|
    | SMB  |    요소가    |      30      |    3     |  전역   | &nbsp;  | &nbsp;  |
 
@@ -363,9 +363,9 @@ ms.locfileid: "71405795"
    _**검색**_
 
 
-   |   이름    | 알고리즘 | 대역폭 (%) | 우선 순위 | PolicySet | ifIndex | IfAlias |
+   |   이름    | 알고리즘 | 대역폭 (%) | Priority | PolicySet | ifIndex | IfAlias |
    |-----------|-----------|--------------|----------|-----------|---------|---------|
-   | 기본 |    요소가    |      70      | 0-2, 4-7  |  전역   | &nbsp;  | &nbsp;  |
+   | [기본값] |    요소가    |      70      | 0-2, 4-7  |  전역   | &nbsp;  | &nbsp;  |
    |    SMB    |    요소가    |      30      |    3     |  전역   | &nbsp;  | &nbsp;  |
 
    ---
@@ -394,7 +394,7 @@ VSwitch를 만들고 RDMA (수렴 형 NIC)로 전환 하기 전에 패브릭이 
    _**검색**_
 
 
-   | 이름 |           인터페이스 설명           | Enabled |
+   | 이름 |           인터페이스 설명           | 사용 |
    |------|------------------------------------------|---------|
    |  M 1  | Mellanox Connectx-3 Pro 이더넷 어댑터 |  True   |
 
@@ -463,7 +463,7 @@ Hyper-v 스위치를 만들기 위한 준비에서는 위에서 설치한 VLAN �
    ```  
 
 
-## <a name="step-8-create-a-hyper-v-vswitch-on-your-hyper-v-hosts"></a>8단계: Hyper-v 호스트에서 Hyper-v vSwitch 만들기
+## <a name="step-8-create-a-hyper-v-vswitch-on-your-hyper-v-hosts"></a>8단계. Hyper-v 호스트에서 Hyper-v vSwitch 만들기
 
 다음 이미지는 vSwitch를 사용 하는 Hyper-v 호스트 1을 보여 줍니다.
 
@@ -493,9 +493,9 @@ Hyper-v 스위치를 만들기 위한 준비에서는 위에서 설치한 VLAN �
    _**검색**_
 
 
-   |         이름          |        인터페이스 설명         | ifIndex | 상태 |    Mac     | /%Linkspeed |
+   |         이름          |        인터페이스 설명         | ifIndex | 상태 |    MacAddress     | /%Linkspeed |
    |-----------------------|-------------------------------------|---------|--------|-------------------|-----------|
-   | vEthernet \(VMSTEST\) | Hyper-v 가상 이더넷 어댑터 #2 |   27    |   위쪽   | E4-1D-07-40-71 |  40 Gbps  |
+   | vEthernet \(VMSTEST\) | Hyper-v 가상 이더넷 어댑터 #2 |   27    |   위로   | E4-1D-07-40-71 |  40 Gbps  |
 
    ---
 
@@ -511,7 +511,7 @@ Hyper-v 스위치를 만들기 위한 준비에서는 위에서 설치한 VLAN �
    _**검색**_
 
 
-   |         이름         | IsManagementOs |        VMName        |  SwitchName  | Mac | 상태 | IPAddresses |
+   |         이름         | IsManagementOs |        VMName        |  SwitchName  | MacAddress | 상태 | IPAddresses |
    |----------------------|----------------|----------------------|--------------|------------|--------|-------------|
    | CORP-외부 전환 |      True      | CORP-외부 전환 | 001B785768AA |    확인을    | &nbsp; |             |
    |       VMSTEST        |      True      |       VMSTEST        | E41D2D074071 |    확인을    | &nbsp; |             |
@@ -547,7 +547,7 @@ Hyper-v 스위치를 만들기 위한 준비에서는 위에서 설치한 VLAN �
 
    | VMName | VMNetworkAdapterName |  모드  | VlanList |
    |--------|----------------------|--------|----------|
-   | &nbsp; |       VMSTEST        | 액세스 |   101    |
+   | &nbsp; |       VMSTEST        | Access |   101    |
 
    ---  
 
@@ -568,7 +568,7 @@ Hyper-v 스위치를 만들기 위한 준비에서는 위에서 설치한 VLAN �
     PingReplyDetails (RTT) : 0 ms
    ```
 
-## <a name="step-9-test-hyper-v-virtual-switch-rdma-mode-2"></a>9단계: Hyper-v 가상 스위치 RDMA 테스트 (모드 2)
+## <a name="step-9-test-hyper-v-virtual-switch-rdma-mode-2"></a>9단계. Hyper-v 가상 스위치 RDMA 테스트 (모드 2)
 
 다음 이미지는 hyper-v 호스트 1의 vSwitch를 비롯 하 여 Hyper-v 호스트의 현재 상태를 보여 줍니다.
 
@@ -596,7 +596,7 @@ Hyper-v 스위치를 만들기 위한 준비에서는 위에서 설치한 VLAN �
    _**검색**_
 
 
-   |         이름          |        인터페이스 설명         | Enabled |
+   |         이름          |        인터페이스 설명         | 사용 |
    |-----------------------|-------------------------------------|---------|
    | vEthernet \(VMSTEST\) | Hyper-v 가상 이더넷 어댑터 #2 |  False  |
 
@@ -615,9 +615,9 @@ Hyper-v 스위치를 만들기 위한 준비에서는 위에서 설치한 VLAN �
    _**검색**_   
 
 
-   |        이름         |        인터페이스 설명         | ifIndex | 상태 |    Mac     | /%Linkspeed |
+   |        이름         |        인터페이스 설명         | ifIndex | 상태 |    MacAddress     | /%Linkspeed |
    |---------------------|-------------------------------------|---------|--------|-------------------|-----------|
-   | vEthernet (VMSTEST) | Hyper-v 가상 이더넷 어댑터 #2 |   27    |   위쪽   | E4-1D-07-40-71 |  40 Gbps  |
+   | vEthernet (VMSTEST) | Hyper-v 가상 이더넷 어댑터 #2 |   27    |   위로   | E4-1D-07-40-71 |  40 Gbps  |
 
    ---
 
@@ -632,7 +632,7 @@ Hyper-v 스위치를 만들기 위한 준비에서는 위에서 설치한 VLAN �
    _**검색**_
 
 
-   |         이름          |        인터페이스 설명         | Enabled |
+   |         이름          |        인터페이스 설명         | 사용 |
    |-----------------------|-------------------------------------|---------|
    | vEthernet \(VMSTEST\) | Hyper-v 가상 이더넷 어댑터 #2 |  True   |
 

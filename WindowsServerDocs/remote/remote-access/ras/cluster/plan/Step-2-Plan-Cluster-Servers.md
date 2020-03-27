@@ -10,14 +10,14 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 673c5bfb-b590-4932-8e54-ca0a466d90cc
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 17aadbb789052be7f33822ce49f3b797f2211d55
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 608bc4b2805639e2638ac12f74b712c812ce165f
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71367383"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80308242"
 ---
 # <a name="step-2-plan-cluster-servers"></a>2 단계 클러스터 서버 계획
 
@@ -25,16 +25,16 @@ ms.locfileid: "71367383"
 
 단일 원격 액세스 서버를 배포한 후 클러스터에 서버를 추가 하도록 계획 합니다.  
   
-|태스크|설명|  
+|작업|설명|  
 |----|--------|  
 |[2.1 역할 및 기능 설치](#BKMK_Install)|클러스터에 추가 될 각 서버에 대해 원격 액세스 역할 및 Windows NLB 기능 (필요한 경우)의 설치를 계획 하 고 토폴로지, IP 주소 지정, 라우팅 및 전달을 계획 합니다.|  
 |[2.2 서버 설정 구성](#BKMK_Config)|클러스터에 추가할 각 서버에 대 한 설정을 구성 합니다. 가상 컴퓨터를 사용 하 여 서버에 대 한 부하 분산 클러스터를 구성할 수 있습니다. 라우팅 및 연결이 제대로 작동 하려면 MAC 주소 스푸핑을 사용 하도록 가상 컴퓨터를 구성 해야 합니다.|  
   
-## <a name="BKMK_Install"></a>2.1 역할 및 기능 설치  
+## <a name="21-installing-roles-and-features"></a><a name="BKMK_Install"></a>2.1 역할 및 기능 설치  
 클러스터에 가입 하려는 각 서버에 대해 원격 액세스 역할을 설치 합니다. 또한 Windows NLB를 사용 하 여 클러스터에 대 한 트래픽 부하를 분산 하려면 NLB (네트워크 부하 분산) 기능을 설치 하는 계획을 세워야 합니다. 자세한 내용은 [네트워크 부하 분산](https://technet.microsoft.com/windows-server-docs/networking/technologies/network-load-balancing)을 참조 하세요.  
   
-## <a name="BKMK_Config"></a>2.2 서버 설정 구성  
-클러스터에 추가 될 각 서버에 대해 IP 주소 및 도메인 설정을 계획 합니다. 다음에 유의하세요.  
+## <a name="22-configure-server-settings"></a><a name="BKMK_Config"></a>2.2 서버 설정 구성  
+클러스터에 추가 될 각 서버에 대해 IP 주소 및 도메인 설정을 계획 합니다. 유의 사항은 다음과 같습니다.  
   
 1.  클러스터의 서버는 모두 동일한 도메인에 속해야 합니다.  
   

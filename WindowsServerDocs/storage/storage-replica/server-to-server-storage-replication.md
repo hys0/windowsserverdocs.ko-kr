@@ -7,14 +7,14 @@ ms.author: nedpyle
 ms.technology: storage-replica
 ms.topic: get-started-article
 author: nedpyle
-ms.date: 04/26/2019
+ms.date: 03/26/2020
 ms.assetid: 61881b52-ee6a-4c8e-85d3-702ab8a2bd8c
-ms.openlocfilehash: a21000e857d702846703deb4f55380e1a998f6d2
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9873378d62ccc7b53dcc6fc629651df2aa1c6708
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402953"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80308114"
 ---
 # <a name="server-to-server-storage-replication-with-storage-replica"></a>저장소 복제본을 사용 하 여 서버 간 저장소 복제
 
@@ -28,7 +28,7 @@ Windows 관리 센터에서 저장소 복제본을 사용 하는 개요 비디�
 > [!video https://www.microsoft.com/videoplayer/embed/3aa09fd4-867b-45e9-953e-064008468c4b?autoplay=false]
 
 
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 조건  
 
 * Active Directory Domain Services 포리스트 (Windows Server 2016를 실행할 필요가 없음)  
 * Windows Server 2019 또는 Windows Server 2016, Datacenter Edition을 실행 하는 두 대의 서버 Windows Server 2019를 실행 하는 경우 최대 2tb 크기의 단일 볼륨만 복제 하는 경우 Standard Edition을 대신 사용할 수 있습니다.  
@@ -50,9 +50,9 @@ Windows 관리 센터에서 저장소 복제본을 사용 하는 개요 비디�
 
 저장소 복제본과 Windows 관리 센터를 함께 사용 하려면 다음이 필요 합니다.
 
-| 시스템                        | 운영 체제                                            | 소프트웨어가 사용되는 구성 요소     |
+| System                        | 운영 체제                                            | 소프트웨어가 사용되는 구성 요소     |
 |-------------------------------|-------------------------------------------------------------|------------------|
-| 서버2대 <br>(Azure Vm을 포함 한 온-프레미스 하드웨어, Vm 및 클라우드 Vm의 모든 혼합)| Windows Server 2019, Windows Server 2016 또는 Windows Server (반기 채널) | 저장소 복제본  |
+| 서버 2대 <br>(Azure Vm을 포함 한 온-프레미스 하드웨어, Vm 및 클라우드 Vm의 모든 혼합)| Windows Server 2019, Windows Server 2016 또는 Windows Server (반기 채널) | 저장소 복제본  |
 | 단일 PC                     | Windows 10                                                  | Windows Admin Center |
 
 > [!NOTE]
@@ -69,12 +69,12 @@ Windows 관리 센터에서 저장소 복제본을 사용 하는 개요 비디�
 
 **그림 1: 서버 간 복제**  
 
-## <a name="step-1-install-and-configure-windows-admin-center-on-your-pc"></a>1단계: PC에서 Windows 관리 센터 설치 및 구성
+## <a name="step-1-install-and-configure-windows-admin-center-on-your-pc"></a>1 단계: PC에서 Windows 관리 센터 설치 및 구성
 
 Windows 관리 센터를 사용 하 여 저장소 복제본을 관리 하는 경우 다음 단계를 사용 하 여 저장소 복제본을 관리 하기 위한 PC를 준비 합니다.
 1. [Windows 관리 센터](../../manage/windows-admin-center/overview.md)를 다운로드 하 여 설치 합니다.
 2. [원격 서버 관리 도구](https://www.microsoft.com/download/details.aspx?id=45520)를 다운로드 하 여 설치 합니다.
-    - Windows 10 버전 1809 이상을 사용 하는 경우 "RSAT: Windows PowerShell 용 저장소 복제본 모듈은 주문형 기능에서 제공 됩니다.
+    - Windows 10 버전 1809 이상을 사용 하는 경우 주문형 기능에서 "RSAT: Storage Replica Module for Windows PowerShell"을 설치 합니다.
 3. **시작** 단추를 선택 하 고 **powershell**을 입력 한 다음 **Windows powershell** 을 마우스 오른쪽 단추로 클릭 하 고 **관리자 권한으로 실행**을 선택 하 여 관리자 권한으로 powershell 세션을 엽니다.
 4. 다음 명령을 입력 하 여 로컬 컴퓨터에서 WS 관리 프로토콜을 사용 하도록 설정 하 고 클라이언트에서 원격 관리를 위한 기본 구성을 설정 합니다.
 
@@ -84,11 +84,14 @@ Windows 관리 센터를 사용 하 여 저장소 복제본을 관리 하는 경
 
 5. WinRM 서비스를 사용 하도록 설정 하 고 WinRM 방화벽 예외를 사용 하도록 설정 하려면 **Y** 를 입력 합니다.
 
-## <a name="provision-os"></a>2 단계: 운영 체제, 기능, 역할, 저장소 및 네트워크 프로비전
+## <a name="step-2-provision-operating-system-features-roles-storage-and-network"></a><a name="provision-os"></a>2 단계: 운영 체제, 기능, 역할, 저장소 및 네트워크 프로 비전
 
 1.  Windows server 설치 유형 **(데스크톱 환경)** 을 사용 하 여 두 서버 노드 모두에 windows server를 설치 합니다. 
  
     Express 경로를 통해 네트워크에 연결 된 Azure VM을 사용 하려면 Express 경로를 [통해 네트워크에 연결 된 AZURE Vm 추가](#add-azure-vm-expressroute)를 참조 하세요.
+    
+    > [!NOTE]
+    > Windows 관리 센터 버전 1910부터 Azure에서 자동으로 대상 서버를 구성할 수 있습니다. 이 옵션을 선택 하는 경우 원본 서버에 Windows Server를 설치한 다음 [3 단계: 서버 간 복제 설정](#step-3-set-up-server-to-server-replication)으로 건너뜁니다. 
 
 3.  네트워크 정보를 추가 하 고, Windows 10 관리 PC와 동일한 도메인에 서버를 가입한 다음 (사용 중인 경우) 서버를 다시 시작 합니다.  
 
@@ -111,7 +114,7 @@ Windows 관리 센터를 사용 하 여 저장소 복제본을 관리 하는 경
     -   **Windows 관리 센터 메서드**
         1. Windows 관리 센터에서 서버 관리자으로 이동한 후 서버 중 하나를 선택 합니다.
         2. **역할 & 기능**으로 이동 합니다.
-        3. **기능** > **저장소 복제본**을 선택 하 고 **설치**를 클릭 합니다.
+        3. **저장소 복제본** > **기능** 을 선택 하 고 **설치**를 클릭 합니다.
         4. 다른 서버에서 반복 합니다.
     -   **서버 관리자 메서드**  
 
@@ -149,7 +152,7 @@ Windows 관리 센터를 사용 하 여 저장소 복제본을 관리 하는 경
 
         1.  각 서버에서 해당 사이트의 저장소 엔클로저만 볼 수 있는지, 그리고 SAS 연결이 제대로 구성되어 있는지 확인합니다.  
 
-        2.  Windows PowerShell 또는 서버 관리자를 [사용하여 독립 실행형 서버에서 저장소 공간 배포에](../storage-spaces/deploy-standalone-storage-spaces.md) 제공된 **1~3단계에** 따라 저장소 공간을 사용하는 저장소를 프로비전합니다.  
+        2.  Windows PowerShell 또는 서버 관리자를 **사용하여 독립 실행형 서버에서 저장소 공간 배포에** 제공된 [1~3단계에](../storage-spaces/deploy-standalone-storage-spaces.md) 따라 저장소 공간을 사용하는 저장소를 프로비전합니다.  
 
     - **ISCSI 저장소:**  
 
@@ -190,7 +193,7 @@ Windows 관리 센터를 사용 하 여 저장소 복제본을 관리 하는 경
 
     **그림 2: 저장소 복제 토폴로지 보고서**
 
-## <a name="step-3-set-up-server-to-server-replication"></a>3단계: 서버 간 복제 설정
+## <a name="step-3-set-up-server-to-server-replication"></a>3 단계: 서버 간 복제 설정
 ### <a name="using-windows-admin-center"></a>Windows 관리 센터 사용
 
 1. 원본 서버를 추가 합니다.
@@ -199,9 +202,18 @@ Windows 관리 센터를 사용 하 여 저장소 복제본을 관리 하는 경
     3. 서버 이름을 입력 한 다음 **제출**을 선택 합니다.
 2. **모든 연결** 페이지에서 원본 서버를 선택 합니다.
 3. 도구 패널에서 **저장소 복제본** 을 선택 합니다.
-4. 새로 **만들기를 선택 하** 여 새 파트너 관계를 만듭니다.
-5. 파트너 관계의 세부 정보를 입력 한 다음 **만들기**를 선택 합니다. <br>
-   ![8gb 로그 크기와 같은 파트너 관계 세부 정보를 보여 주는 새 파트너 관계 화면입니다.](media/Storage-Replica-UI/Honolulu_SR_Create_Partnership.png)
+4. 새로 **만들기를 선택 하** 여 새 파트너 관계를 만듭니다. 파트너 관계의 대상으로 사용할 새 Azure VM을 만들려면 다음을 수행 합니다.
+   
+    1. **다른 서버를 사용 하 여 복제** 에서 **새 Azure VM 사용** 을 선택 하 고 **다음**을 선택 합니다. 이 옵션이 표시 되지 않으면 Windows 관리 센터 버전 1910 이상 버전을 사용 하 고 있는지 확인 합니다.
+    2. 원본 서버 정보 및 복제 그룹 이름을 지정 하 고 **다음**을 선택 합니다.<br><br>그러면 Windows Server 2019 또는 Windows Server 2016 Azure VM을 마이그레이션 원본의 대상으로 자동으로 선택 하는 프로세스가 시작 됩니다. Storage Migration Service는 원본에 맞게 VM 크기를 권장 하지만 **모든 크기 보기**를 선택 하 여이를 재정의할 수 있습니다. 인벤토리 데이터는 새 Azure VM을 Active Directory 도메인에 가입 하는 것 뿐만 아니라 관리 디스크와 해당 파일 시스템을 자동으로 구성 하는 데 사용 됩니다.
+    3. Windows 관리 센터에서 Azure VM을 만든 후 복제 그룹 이름을 제공 하 고 **만들기**를 선택 합니다. 그러면 Windows 관리 센터에서 일반 저장소 복제본 초기 동기화 프로세스를 시작 하 여 데이터 보호를 시작 합니다.
+    
+    저장소 복제본을 사용 하 여 Azure Vm으로 마이그레이션하는 방법을 보여 주는 비디오는 다음과 같습니다.
+
+    > [!VIDEO https://www.youtube-nocookie.com/embed/_VqD7HjTewQ] 
+
+5. 파트너 관계에 대 한 세부 정보를 제공한 다음 **만들기** 를 선택 합니다 (그림 3 참조). <br>
+   8gb 로그 크기와 같은 파트너 관계 정보를 보여주는 새 파트너 관계 화면을 ![합니다.](media/Storage-Replica-UI/Honolulu_SR_Create_Partnership.png)
 
     **그림 3: 새 파트너 관계 만들기**
 
@@ -287,9 +299,9 @@ Windows 관리 센터를 사용 하 여 저장소 복제본을 관리 하는 경
         ```  
 
         > [!NOTE]
-        > 저장소 복제본은 대상 볼륨과 해당 드라이브 문자 또는 탑재 지점을 분리합니다. 이것은 의도적입니다.  
+        > 저장소 복제본은 대상 볼륨과 해당 드라이브 문자 또는 탑재 지점을 분리합니다. 이것은 정상적인 현상입니다.  
 
-    3.  또는 복제본의 대상 서버 그룹은 복사할 남은 바이트 수를 알려 주며 PowerShell을 통해 쿼리할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+    3.  또는 복제본의 대상 서버 그룹은 복사할 남은 바이트 수를 알려 주며 PowerShell을 통해 쿼리할 수 있습니다. 예를 들면 다음과 같습니다.  
 
         ```PowerShell  
         (Get-SRGroup).Replicas | Select-Object numofbytesremaining  
@@ -428,10 +440,10 @@ Windows 관리 센터를 사용 하 여 저장소 복제본을 관리 하는 경
    > [!NOTE]
    > 재해 복구 계획은 복잡한 사안이므로 세부 사항에 주의해야 합니다. Runbook을 만들고 매년 라이브 장애 조치(failover) 드릴을 수행하는 것이 좋습니다. 실제 재해가 발생하면 혼란스러운 상황에서 숙련된 직원을 활용하지 못하게 될 수도 있습니다.  
 
-## <a name="add-azure-vm-expressroute"></a>Express 경로를 통해 네트워크에 연결 된 Azure VM 추가
+## <a name="adding-an-azure-vm-connected-to-your-network-via-expressroute"></a><a name="add-azure-vm-expressroute"></a>Express 경로를 통해 네트워크에 연결 된 Azure VM 추가
 
 1. [Azure Portal에서 express](https://docs.microsoft.com/azure/expressroute/expressroute-howto-circuit-portal-resource-manager)경로를 만듭니다.<br>Express 경로를 승인한 후에는 리소스 그룹이 구독에 추가 되 고, **리소스 그룹** 으로 이동 하 여이 새 그룹을 볼 수 있습니다. 가상 네트워크 이름을 기록해 둡니다.
-![Express 경로를 사용 하 여 추가 된 리소스 그룹을 보여 주는 Azure Portal](media/Server-to-Server-Storage-Replication/express-route-resource-group.png)
+Express 경로를 사용 하 여 추가 된 리소스 그룹을 보여 주는 Azure Portal ![](media/Server-to-Server-Storage-Replication/express-route-resource-group.png)
     
     **그림 4: Express 경로와 연결 된 리소스-가상 네트워크 이름을 적어둡니다.**
 1. [새 리소스 그룹을 만듭니다](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal).
@@ -439,17 +451,17 @@ Windows 관리 센터를 사용 하 여 저장소 복제본을 관리 하는 경
 <br><br>네트워크 보안 그룹에 필요한 인바운드 및 아웃 바운드 보안 규칙을 추가 합니다. 예를 들어 VM에 대 한 원격 데스크톱 액세스를 허용할 수 있습니다.
 1. 다음 설정을 사용 하 여 [AZURE VM을 만듭니다](https://docs.microsoft.com/azure/virtual-machines/windows/quick-create-portal) (그림 5에 표시).
     - **공용 IP 주소**: 없음
-    - **가상 네트워크**: Express 경로를 사용 하 여 추가 된 리소스 그룹에서 기록해 둔 가상 네트워크를 선택 합니다.
+    - **가상 네트워크**: express 경로를 사용 하 여 추가 된 리소스 그룹에서 기록해 둔 가상 네트워크를 선택 합니다.
     - **네트워크 보안 그룹 (방화벽)** : 이전에 만든 네트워크 보안 그룹을 선택 합니다.
-    ![Express 경로 네트워크 설정을](media/Server-to-Server-Storage-Replication/azure-vm-express-route.png)
-    **표시 하는 가상 머신 만들기 그림 5: Express 경로 네트워크 설정을 선택 하는 동안 VM 만들기**
-1. VM을 만든 [후에는 2 단계: 운영 체제, 기능, 역할, 저장소 및 네트워크](#provision-os)를 프로 비전 합니다.
+    Express 경로 네트워크 설정을 표시 하는 가상 컴퓨터 만들기 ![**그림 5: express 경로 네트워크 설정을 선택 하는 동안 VM 만들기**](media/Server-to-Server-Storage-Replication/azure-vm-express-route.png)
+    
+1. VM을 만든 후에는 [2 단계: 운영 체제, 기능, 역할, 저장소 및 네트워크 프로 비전](#provision-os)을 참조 하세요.
 
 
 ## <a name="related-topics"></a>관련 항목  
 - [저장소 복제본 개요](storage-replica-overview.md)  
 - [공유 저장소를 사용 하 여 확장 클러스터 복제](stretch-cluster-replication-using-shared-storage.md)  
 - [클러스터 간 저장소 복제](cluster-to-cluster-storage-replication.md)
-- [스토리지 복제본: 알려진 문제](storage-replica-known-issues.md)  
-- [스토리지 복제본: 질문과 대답](storage-replica-frequently-asked-questions.md)
+- [저장소 복제본: 알려진 문제](storage-replica-known-issues.md)  
+- [저장소 복제본: 질문과 대답](storage-replica-frequently-asked-questions.md)
 - [Windows Server 2016의 스토리지 공간 다이렉트](../storage-spaces/storage-spaces-direct-overview.md)  

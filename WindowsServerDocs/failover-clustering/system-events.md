@@ -1,18 +1,18 @@
 ---
 title: 장애 조치 (Failover) 클러스터링 시스템 로그 이벤트
 description: Windows Server 시스템 로그의 장애 조치 (Failover) 클러스터링 이벤트 목록입니다. 이러한 이벤트를 사용 하 여 클러스터 문제를 해결할 수 있습니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 ms.technology: storage-failover-clustering
 ms.date: 01/14/2020
-ms.openlocfilehash: 5c2606b96b42d08cc66da2e19596240c21bf4b88
-ms.sourcegitcommit: 10331ff4f74bac50e208ba8ec8a63d10cfa768cc
+ms.openlocfilehash: 0346b56ad2fe8a60ab84b7e6ab43e0558ed1c85b
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75956455"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80310057"
 ---
 # <a name="failover-clustering-system-log-events"></a>장애 조치 (Failover) 클러스터링 시스템 로그 이벤트
 

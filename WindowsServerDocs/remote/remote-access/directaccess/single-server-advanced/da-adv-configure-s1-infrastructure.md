@@ -10,14 +10,14 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 43abc30a-300d-4752-b845-10a6b9f32244
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 30705a9aa55cdc652280c27c327cf865a47c5a11
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: c5ab8e089d3cf5fd8f9ed53f7f67cc47a8c17f70
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404937"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80309187"
 ---
 # <a name="step-1-configure-advanced-directaccess-infrastructure"></a>1 단계 고급 DirectAccess 인프라 구성
 
@@ -25,7 +25,7 @@ ms.locfileid: "71404937"
 
 이 항목에서는 IPv4 및 IPv6 혼합 환경에서 단일 DirectAccess 서버를 사용하는 고급 원격 액세스 배포에 필요한 인프라를 구성하는 방법에 대해 설명합니다. 에 설명 된 계획 단계를 완료 한 배포 단계를 시작 하기 전에 확인 [고급 DirectAccess 배포 계획](../../../remote-access/directaccess/single-server-advanced/Plan-an-Advanced-DirectAccess-Deployment.md)합니다.  
   
-|태스크|설명|  
+|작업|설명|  
 |----|--------|  
 |1.1 서버 네트워크 설정 구성|DirectAccess 서버에서 서버 네트워크 설정을 구성합니다.|  
 |1.2 강제 터널링 구성|강제 터널링을 구성합니다.|  
@@ -39,10 +39,10 @@ ms.locfileid: "71404937"
 |1.10 네트워크 위치 서버 구성|네트워크 위치 서버 웹 사이트 인증서 설치를 포함하여 네트워크 위치 서버를 구성합니다.|  
   
 > [!NOTE]  
-> 이 항목에는 설명한 절차의 일부를 자동화하는 데 사용할 수 있는 샘플 Windows PowerShell cmdlet이 포함되어 있습니다. 자세한 내용은 참조 [Cmdlet를 사용 하 여](https://go.microsoft.com/fwlink/p/?linkid=230693)합니다.  
+> 이 항목에는 설명된 일부 절차를 자동화하는 데 사용할 수 있는 예제 Windows PowerShell cmdlet이 포함되어 있습니다. 자세한 내용은 참조 [Cmdlet를 사용 하 여](https://go.microsoft.com/fwlink/p/?linkid=230693)합니다.  
   
-## <a name="ConfigNetworkSettings"></a>1.1 서버 네트워크 설정 구성  
-IPv4 및 IPv6을 사용하는 환경에 단일 서버를 배포하려면 다음 네트워크 인터페이스 설정이 필요합니다. 모든 IP 주소를 사용 하 여 구성 된 **어댑터 설정 변경** 에 **Windows 네트워크 및 공유 센터**합니다.  
+## <a name="11-configure-server-network-settings"></a><a name="ConfigNetworkSettings"></a>1.1 서버 네트워크 설정 구성  
+IPv4 및 IPv6을 사용하는 환경에 단일 서버를 배포하려면 다음 네트워크 인터페이스 설정이 필요합니다. 모든 IP 주소는 **Windows 네트워크 및 공유 센터**에서 **어댑터 설정 변경**을 사용하여 구성합니다.  
   
 **Edge 토폴로지**  
   
@@ -75,14 +75,14 @@ IPv4 및 IPv6을 사용하는 환경에 단일 서버를 배포하려면 다음 
 >     Save-NetGPO "GPOSession $gposession  
 >     ```  
   
-## <a name="BKMK_forcetunnel"></a>1.2 강제 터널링 구성  
+## <a name="12-configure-force-tunneling"></a><a name="BKMK_forcetunnel"></a>1.2 강제 터널링 구성  
 원격 액세스 설치 마법사를 통해 강제 터널링을 구성할 수 있습니다. 강제 터널링은 원격 클라이언트 구성 마법사에 확인란으로 표시됩니다. 이 설정은 DirectAccess 클라이언트에만 영향을 줍니다. VPN을 사용하는 경우 VPN 클라이언트는 기본적으로 강제 터널링을 사용합니다. 관리자는 클라이언트 프로필에서 VPN 클라이언트에 대한 설정을 변경할 수 있습니다.  
   
 강제 터널링에 대한 확인란을 선택하면 다음 작업이 수행됩니다.  
   
 -   DirectAccess 클라이언트에서 강제 터널링이 사용하도록 설정됩니다.  
   
--   추가 **모든** 항목에는 이름 확인 정책 NRPT (테이블) DirectAccess 클라이언트에 대 한 해당 모든 DNS 트래픽이 내부 네트워크 DNS 서버에 이동 의미  
+-   DirectAccess 클라이언트에 대한 NRPT(이름 확인 정책 테이블)에 **Any** 항목이 추가됩니다. 이는 모든 DNS 트래픽이 내부 네트워크 DNS 서버로 전달됨을 의미합니다.  
   
 -   항상 IP-HTTPS 전환 기술을 사용하도록 DirectAccess 클라이언트가 구성됩니다.  
   
@@ -96,16 +96,16 @@ Set-DAClientDNSConfiguration "DNSSuffix "." "ProxyServer <Name of the proxy serv
 > 같은 서버에서 DirectAccess와 VPN을 둘 다 사용하는 경우 VPN이 강제 터널 모드에 있고 서버가 에지 토폴로지 또는 NAT 장치 뒤 토폴로지(네트워크 어댑터 두 개가 각각 도메인과 프라이빗 네트워크에 하나씩 연결)에 배포되면 DirectAccess 서버의 외부 인터페이스를 통해 VPN 인터넷 트래픽을 전달할 수 없습니다. 이 시나리오를 지원하려면 조직에서 단일 네트워크 어댑터 토폴로지의 방화벽 뒤에 있는 서버에 원격 액세스를 배포해야 합니다. 또는 내부 네트워크에서 별도의 프록시 서버를 사용하여 VPN 클라이언트의 인터넷 트래픽을 전달할 수 있습니다.  
   
 > [!NOTE]  
-> 조직에서 DirectAccess 클라이언트가 인터넷 리소스에 액세스할 수 있도록 웹 프록시를 사용하는 경우 회사 프록시에서 내부 네트워크 리소스를 처리할 수 없으면 인트라넷 외부에 있는 DirectAccess 클라이언트에서 내부 리소스에 액세스할 수 없습니다. 이러한 시나리오에서 DirectAccess 클라이언트가 내부 리소스에 액세스할 수 있도록 하려면 인프라 마법사의 DNS 페이지를 사용 하 여 내부 네트워크 접미사에 대 한 NRPT 항목을 수동으로 만듭니다. 이러한 NRPT 접미사에 프록시 설정을 적용해서는 안 됩니다. 접미사가 기본 DNS 서버 항목으로 채워져야 합니다.  
+> 조직에서 DirectAccess 클라이언트가 인터넷 리소스에 액세스할 수 있도록 웹 프록시를 사용하는 경우 회사 프록시에서 내부 네트워크 리소스를 처리할 수 없으면 인트라넷 외부에 있는 DirectAccess 클라이언트에서 내부 리소스에 액세스할 수 없습니다. 이 시나리오에서 DirectAccess 클라이언트가 내부 리소스에 액세스할 수 있도록 하려면 인프라 마법사의 DNS 페이지를 사용하여 내부 네트워크 접미사에 대한 NRPT 항목을 수동으로 만들어야 합니다. 이러한 NRPT 접미사에 프록시 설정을 적용해서는 안 됩니다. 접미사가 기본 DNS 서버 항목으로 채워져야 합니다.  
   
-## <a name="ConfigRouting"></a>1.3 회사 네트워크에서 라우팅 구성  
+## <a name="13-configure-routing-in-the-corporate-network"></a><a name="ConfigRouting"></a>1.3 회사 네트워크에서 라우팅 구성  
 다음과 같이 회사 네트워크의 라우팅을 구성합니다.  
   
 -   조직에 기본 IPv6이 배포된 경우 내부 네트워크의 라우터가 DirectAccess 서버를 통해 IPv6 트래픽을 다시 라우팅할 수 있도록 경로를 추가합니다.  
   
 -   수동으로 조직 "s IPv4 및 IPv6 경로 구성 DirectAccess 서버에 있습니다. 조직(/48) IPv6 접두사가 있는 모든 트래픽이 내부 네트워크로 전달되도록 게시된 경로를 추가합니다. IPv4 트래픽의 경우 내부 네트워크로 IPv4 트래픽이 전달되도록 명시적인 경로를 추가합니다.  
   
-## <a name="ConfigFirewalls"></a>1.4 방화벽 구성  
+## <a name="14-configure-firewalls"></a><a name="ConfigFirewalls"></a>1.4 방화벽 구성  
 배포에서 추가 방화벽을 사용하는 경우 DirectAccess 서버가 IPv4 인터넷에 있으면 원격 액세스 트래픽에 대해 다음 인터넷 연결 방화벽 예외를 적용합니다.  
   
 -   Teredo 트래픽 "사용자 데이터 그램 프로토콜 (UDP) 대상 포트 3544 인바운드, UDP 원본 포트 3544 아웃 바운드입니다.  
@@ -136,7 +136,7 @@ Set-DAClientDNSConfiguration "DNSSuffix "." "ProxyServer <Name of the proxy serv
   
 -   ICMP - 모든 IPv4/IPv6 트래픽  
   
-## <a name="ConfigCAs"></a>1.5 Ca 및 인증서 구성  
+## <a name="15-configure-cas-and-certificates"></a><a name="ConfigCAs"></a>1.5 Ca 및 인증서 구성  
 Windows Server 2012의 원격 액세스를 사용 하면 컴퓨터 인증용 인증서를 사용 또는 사용 하 여 기본 제공 Kerberos 프록시 사용자 이름 및 암호를 사용 하 여 인증 하는 중에 선택할 수 있습니다. 또한 DirectAccess 서버에서 IP-HTTPS 인증서를 구성해야 합니다.  
   
 자세한 내용은 참조 [Active Directory 인증서 서비스](https://technet.microsoft.com/library/cc770357.aspx)합니다.  
@@ -155,7 +155,7 @@ DirectAccess 서버와 IPsec 인증을 사용하는 모든 DirectAccess 클라�
   
 3.  필요한 경우 자동 등록되도록 인증서 템플릿을 구성합니다. 자세한 내용은 참조 [인증서 자동 등록 구성](https://technet.microsoft.com/library/cc731522.aspx)합니다.  
   
-### <a name="ConfigCertTemp"></a>1.5.2 인증서 템플릿 구성  
+### <a name="152-configure-certificate-templates"></a><a name="ConfigCertTemp"></a>1.5.2 인증서 템플릿 구성  
 내부 CA를 사용하여 인증서를 발급하는 경우 IP-HTTPS 인증서 및 네트워크 위치 서버 웹 사이트 인증서용 인증서 템플릿을 구성해야 합니다.  
   
 ##### <a name="to-configure-a-certificate-template"></a>인증서 템플릿을 구성하려면  
@@ -208,9 +208,9 @@ IP-HTTPS 인증에 사용되는 웹 사이트 인증서는 다음 요구 사항�
   
 ##### <a name="to-install-the-ip-https-certificate-from-an-internal-ca"></a>내부 CA의 IP-HTTPS 인증서를 설치하려면  
   
-1.  DirectAccess 서버에서 다음을 수행합니다. **시작** 화면에서**mmc.exe**를 입력 한 다음 enter 키를 누릅니다.  
+1.  DirectAccess 서버에서:에 **시작** 화면에서 입력**mmc.exe**, 한 다음 ENTER를 누릅니다.  
   
-2.  MMC 콘솔에서에 **파일** 메뉴 클릭 **스냅인 추가/제거**합니다.  
+2.  MMC 콘솔의 **파일** 메뉴에서 **스냅인 추가/제거**를 클릭합니다.  
   
 3.  에 **추가 / 제거 스냅인** 대화 상자, 클릭 **인증서**, 클릭 **추가**, 클릭 **컴퓨터 계정**, 클릭 **다음**, 클릭 **로컬 컴퓨터**, 클릭 **마침**, 클릭 하 고 **확인**합니다.  
   
@@ -218,15 +218,15 @@ IP-HTTPS 인증에 사용되는 웹 사이트 인증서는 다음 요구 사항�
   
 5.  **인증서**를 마우스 오른쪽 단추로 클릭하고 **모든 작업**을 가리킨 다음 **새 인증서 요청**을 클릭합니다.  
   
-6.  **다음** 을 두 번 클릭합니다.  
+6.  **다음**을 두 번 클릭합니다.  
   
 7.  에 **인증서 요청** 페이지 (자세한 내용은 참조 1.5.2 인증서 템플릿 구성)에 대 한 이전에 만든 인증서 템플릿에 대 한 확인란을 선택 합니다. 필요한 경우 **이 인증서를 등록하려면 추가 정보가 필요합니다. 설정을 구성하려면 여기를 클릭하십시오.** 를 클릭합니다.  
   
-8.  에 **인증서 속성** 대화 상자의 **주체** 탭에 **주체 이름** 영역에서 **형식**, 선택, **일반 이름**.  
+8.  **인증서 속성** 대화 상자의 **주체** 탭에 있는 **주체 이름** 영역 내 **유형**에서 **일반 이름**을 선택합니다.  
   
 9. **값**에서 DirectAccess 서버 외부 연결 어댑터의 IPv4 주소 또는 IP-HTTPS URL의 FQDN을 지정하고 **추가**를 클릭합니다.  
   
-10. 에 **대체 이름** 영역에서 **형식**, 선택, **DNS**합니다.  
+10. **대체 이름** 영역의 **유형**에서 **DNS**를 선택합니다.  
   
 11. **값**에서 DirectAccess 서버 외부 연결 어댑터의 IPv4 주소 또는 IP-HTTPS URL의 FQDN을 지정하고 **추가**를 클릭합니다.  
   
@@ -234,16 +234,16 @@ IP-HTTPS 인증에 사용되는 웹 사이트 인증서는 다음 요구 사항�
   
 13. **확장** 탭에서 **확장된 키 사용** 옆에 있는 화살표를 클릭하고 **서버 인증**이 **선택한 옵션** 목록에 표시되는지 확인합니다.  
   
-14. 클릭 **확인**, 클릭 **등록**, 를 클릭 하 고 **마침**합니다.  
+14. **확인**, **등록**을 차례로 클릭한 다음 **마침**을 클릭합니다.  
   
 15. 인증서 스냅인의 세부 정보 창에서 새 인증서가 서버 인증 용도로 등록되었는지 확인합니다.  
   
-## <a name="ConfigDNS"></a>1.6 DNS 서버 구성  
+## <a name="16-configure-the-dns-server"></a><a name="ConfigDNS"></a>1.6 DNS 서버 구성  
 배포의 내부 네트워크에 대한 네트워크 위치 서버 웹 사이트의 DNS 항목을 수동으로 구성해야 합니다.  
   
-### <a name="NLS_DNS"></a>네트워크 위치 서버를 만들려면  
+### <a name="to-create-the-network-location-server"></a><a name="NLS_DNS"></a>네트워크 위치 서버를 만들려면  
   
-1.  내부 네트워크 DNS 서버에서 다음을 수행합니다. 에 **시작** 화면에서 입력**dnsmgmt.msc**, 한 다음 ENTER를 누릅니다.  
+1.  내부 네트워크 DNS 서버에서:에 **시작** 화면에서 입력**dnsmgmt.msc**, 한 다음 ENTER를 누릅니다.  
   
 2.  **DNS 관리자** 콘솔의 왼쪽 창에서 도메인에 대한 정방향 조회 영역을 확장합니다. 도메인을 마우스 오른쪽 단추로 클릭하고 **새 호스트(A 또는 AAAA)** 를 클릭합니다.  
   
@@ -255,17 +255,17 @@ IP-HTTPS 인증에 사용되는 웹 사이트 인증서는 다음 요구 사항�
   
 4.  **새 호스트** 대화 상자에서 다음을 수행합니다.  
   
-    -   에 **이름 (부모 도메인 이름 사용 비어 있는 경우)** 상자 웹 검색 DNS 이름을 입력 합니다 (기본 웹 검색의 이름은 **directaccess webprobehost**).  
+    -   **이름(입력하지 않으면 부모 도메인 이름 사용)** 상자에 웹 검색의 DNS 이름(기본 웹 검색의 이름은 **directaccess-webprobehost**)을 입력합니다.  
   
     -   **IP 주소** 상자에 웹 검색의 IPv4 또는 IPv6 주소를 입력하고 **호스트 추가**를 클릭합니다.  
   
-    -   이 프로세스를 반복 **directaccess corpconnectivityhost** 및 모든 수동으로 만든된 연결 검증 도구입니다.  
+    -   **directaccess-corpconnectivityhost** 및 수동으로 만든 모든 연결 검증 도구에 대해 이 프로세스를 반복합니다.  
   
-5.  에 **DNS** 대화 상자에서 클릭 **확인**, 를 클릭 하 고 **수행**합니다.  
+5.  **DNS** 대화 상자에서 **확인**을 클릭한 다음 **완료**를 클릭합니다.  
   
 ![Windows PowerShell](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>windows powershell 해당 명령</em>***  
   
-다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
+다음 Windows PowerShell cmdlet은 이전 절차와 동일한 기능을 수행합니다. 서식 조건 때문에 각 cmdlet이 여러 줄로 자동 줄 바꿈되어 표시되더라도 한 줄에 입력합니다.  
   
 ```  
 Add-DnsServerResourceRecordA -Name <network_location_server_name> -ZoneName <DNS_zone_name> -IPv4Address <network_location_server_IPv4_address>  
@@ -286,7 +286,7 @@ Add-DnsServerResourceRecordAAAA -Name <network_location_server_name> -ZoneName <
   
     ISATAP(Intrasite Automatic Tunnel Addressing Protocol)에서는 터널링을 사용하여 IPv4 헤더 내에 IPv6 패킷을 캡슐화함으로써 DirectAccess 클라이언트에서 IPv4 인터넷을 통해 DirectAccess 서버에 연결하도록 지원합니다. ISATAP는 원격 액세스에서 인트라넷을 통해 ISATAP 호스트에 IPv6 연결을 제공하는 데 사용됩니다. 기본이 아닌 IPv6 네트워크 환경에서는 DirectAccess 서버가 자동으로 ISATAP 라우터로 구성됩니다. ISATAP 이름에 대한 확인 지원이 필요합니다.  
   
-## <a name="ConfigAD"></a>1.7 Active Directory 구성  
+## <a name="17-configure-active-directory"></a><a name="ConfigAD"></a>1.7 Active Directory 구성  
 DirectAccess 서버와 모든 DirectAccess 클라이언트 컴퓨터는 Active Directory 도메인에 가입되어 있어야 합니다. DirectAccess 클라이언트 컴퓨터에는 다음 도메인 유형 중 하나의 구성원이어야 합니다.  
   
 -   DirectAccess 서버와 동일한 포리스트에 속한 도메인  
@@ -301,11 +301,11 @@ DirectAccess 서버와 모든 DirectAccess 클라이언트 컴퓨터는 Active D
   
 2.  **시스템 속성** 대화 상자에서 **컴퓨터 이름** 탭, **변경**을 차례로 클릭합니다.  
   
-3.  **컴퓨터 이름**에 컴퓨터 이름을 입력합니다(서버를 도메인에 가입시킬 때 컴퓨터 이름을 변경하려는 경우). 아래에서 **소속**, 클릭 **도메인**, 다음 서버 (예: corp.contoso.com)을 연결을 클릭 한 다음 원하는 도메인의 이름을 입력 하 고 **확인**합니다.  
+3.  **컴퓨터 이름**에 컴퓨터 이름을 입력합니다(서버를 도메인에 가입시킬 때 컴퓨터 이름을 변경하려는 경우). **소속 그룹**에서 **도메인**을 클릭하고 서버를 가입시킬 도메인 이름(예: corp.contoso.com)을 입력한 다음 **확인**을 클릭합니다.  
   
 4.  사용자 이름 및 암호를 묻는 메시지가 나타나면 컴퓨터를 도메인에 가입시킬 권한이 있는 사용자의 사용자 이름 및 암호를 입력한 다음 **확인**을 클릭합니다.  
   
-5.  도메인 시작 한다는 내용의 대화 상자가 나타나면 클릭 **확인**합니다.  
+5.  도메인 시작 대화 상자가 표시되면 **확인**을 클릭합니다.  
   
 6.  컴퓨터를 다시 시작해야 한다는 메시지가 표시되면 **확인**을 클릭합니다.  
   
@@ -323,11 +323,11 @@ DirectAccess 서버와 모든 DirectAccess 클라이언트 컴퓨터는 Active D
   
 4.  **시스템 속성** 대화 상자의 **컴퓨터 이름** 탭에서 **변경**을 클릭합니다.  
   
-5.  **컴퓨터 이름**, 서버를 도메인에 가입 하는 경우에 컴퓨터 이름을 변경 하려는 경우 컴퓨터의 이름을 입력 합니다. 아래에서 **소속**, 클릭 **도메인**, 다음 서버 (예: corp.contoso.com)을 연결을 클릭 한 다음 원하는 도메인의 이름을 입력 하 고 **확인**합니다.  
+5.  **컴퓨터 이름**, 서버를 도메인에 가입 하는 경우에 컴퓨터 이름을 변경 하려는 경우 컴퓨터의 이름을 입력 합니다. **소속 그룹**에서 **도메인**을 클릭하고 서버를 가입시킬 도메인 이름(예: corp.contoso.com)을 입력한 다음 **확인**을 클릭합니다.  
   
 6.  사용자 이름 및 암호를 묻는 메시지가 나타나면 컴퓨터를 도메인에 가입시킬 권한이 있는 사용자의 사용자 이름 및 암호를 입력한 다음 **확인**을 클릭합니다.  
   
-7.  도메인 시작 한다는 내용의 대화 상자가 나타나면 클릭 **확인**합니다.  
+7.  도메인 시작 대화 상자가 표시되면 **확인**을 클릭합니다.  
   
 8.  컴퓨터를 다시 시작해야 한다는 메시지가 표시되면 **확인**을 클릭합니다.  
   
@@ -337,7 +337,7 @@ DirectAccess 서버와 모든 DirectAccess 클라이언트 컴퓨터는 Active D
   
 ![Windows PowerShell](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>windows powershell 해당 명령</em>***  
   
-다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
+다음 Windows PowerShell cmdlet은 이전 절차와 동일한 기능을 수행합니다. 서식 조건 때문에 각 cmdlet이 여러 줄로 자동 줄 바꿈되어 표시되더라도 한 줄에 입력합니다.  
   
 > [!NOTE]  
 > 다음 **Add-Computer** 명령을 입력할 때는 도메인 자격 증명을 제공해야 합니다.  
@@ -347,14 +347,14 @@ Add-Computer -DomainName <domain_name>
 Restart-Computer  
 ```  
   
-## <a name="ConfigGPOs"></a>1.8 Gpo 구성  
+## <a name="18-configure-gpos"></a><a name="ConfigGPOs"></a>1.8 Gpo 구성  
 두 개의 그룹 정책 개체의 최소 함께 원격 액세스 배포 해야 합니다.  
   
 -   DirectAccess 서버에 대한 설정을 포함하는 GPO  
   
 -   DirectAccess 클라이언트 컴퓨터에 대한 설정을 포함하는 GPO  
   
-원격 액세스를 구성 하는 경우 마법사는 자동으로 필요한 그룹 정책 개체를 만듭니다. 그러나 조직에서 명명 규칙을 적용하는 경우 원격 액세스 관리 콘솔의 GPO 대화 상자에 이름을 입력할 수 있습니다. 자세한 내용은 2.7을 참조 하십시오. 구성 요약 및 대체 Gpo 사용 권한을 만든 경우 GPO가 만들어집니다. GPO를 만드는 데 필요한 권한이 없는 경우 원격 액세스를 구성하기 전에 만들어야 합니다.  
+원격 액세스를 구성 하는 경우 마법사는 자동으로 필요한 그룹 정책 개체를 만듭니다. 그러나 조직에서 명명 규칙을 적용하는 경우 원격 액세스 관리 콘솔의 GPO 대화 상자에 이름을 입력할 수 있습니다. 자세한 내용은 2.7. 구성 요약 및 대체 GPO를 참조하세요. 사용 권한을 만든 경우 GPO가 만들어집니다. GPO를 만드는 데 필요한 권한이 없는 경우 원격 액세스를 구성하기 전에 만들어야 합니다.  
   
 그룹 정책 개체를 만들려면 참조 [만들고 그룹 정책 개체 편집](https://technet.microsoft.com/library/cc754740.aspx)합니다.  
   
@@ -372,7 +372,7 @@ Restart-Computer
 ### <a name="181-configure-remote-access-gpos-with-limited-permissions"></a>1.8.1 제한된 권한으로 원격 액세스 GPO 구성  
 준비 및 프로덕션 GPO를 사용하는 배포에서 도메인 관리자는 다음을 수행해야 합니다.  
   
-1.  원격 액세스 관리자로부터 원격 액세스 배포에 필요한 GPO 목록을 가져옵니다. 자세한 내용은 1.8 그룹 정책 개체 계획을 참조 하십시오.  
+1.  원격 액세스 관리자로부터 원격 액세스 배포에 필요한 GPO 목록을 가져옵니다. 자세한 내용은 1.8 그룹 정책 개체 계획을 참조하세요.  
   
 2.  원격 액세스 관리자가 요청한 각 GPO에 대해 이름이 다른 GPO 쌍을 만듭니다. 첫 번째 GPO는 준비 GPO로 사용되고 두 번째 GPO는 프로덕션 GPO로 사용됩니다.  
   
@@ -393,11 +393,11 @@ Restart-Computer
   
 ##### <a name="to-copy-settings-to-the-production-gpos"></a>프로덕션 GPO에 설정을 복사하려면  
   
-1.  원격 액세스 배포의 모든 준비 GPO가 도메인의 모든 도메인 컨트롤러에 복제되었는지 확인합니다. 이는 가장 최신 구성을 프로덕션 GPO로 가져왔는지 확인하기 위해 필요합니다. 자세한 내용은 그룹 정책 인프라 상태 확인을 참조 하십시오.  
+1.  원격 액세스 배포의 모든 준비 GPO가 도메인의 모든 도메인 컨트롤러에 복제되었는지 확인합니다. 이는 가장 최신 구성을 프로덕션 GPO로 가져왔는지 확인하기 위해 필요합니다. 자세한 내용은 그룹 정책 인프라 상태 확인을 참조하세요.  
   
-2.  원격 액세스 배포에서 모든 준비 GPO를 백업하여 설정을 내보냅니다. 자세한 내용은 다시를 그룹 정책 개체를 참조 하십시오.  
+2.  원격 액세스 배포에서 모든 준비 GPO를 백업하여 설정을 내보냅니다. 자세한 내용은 see 그룹 정책 개체 백업을 참조하세요.  
   
-3.  각 프로덕션 GPO에 대해 해당 준비 GPO의 보안 필터와 일치하도록 보안 필터를 변경합니다. 자세한 내용은 필터를 사용 하 여 보안 그룹을 참조 하십시오.  
+3.  각 프로덕션 GPO에 대해 해당 준비 GPO의 보안 필터와 일치하도록 보안 필터를 변경합니다. 자세한 내용은 보안 그룹을 사용하여 필터링을 참조하세요.  
   
     > [!NOTE]  
     > 이는 **설정 가져오기**에서 원본 GPO의 보안 필터를 복사하기 때문에 필요합니다.  
@@ -406,9 +406,9 @@ Restart-Computer
   
     1.  GPMC 그룹 정책 관리 콘솔 (), 포리스트 및 프로덕션 그룹 정책 개체에는 설정을 가져올 수 있는 도메인 그룹 정책 개체 노드를 확장 합니다.  
   
-    2.  GPO를 마우스 오른쪽 단추로 클릭 하 고 클릭 **설정 가져오기**합니다.  
+    2.  GPO를 마우스 오른쪽 단추로 클릭하고 **설정 가져오기**를 클릭합니다.  
   
-    3.  에 **설정 가져오기 마법사**, 에 **시작** 페이지에서 클릭 **다음**합니다.  
+    3.  **설정 가져오기 마법사**의 **시작** 페이지에서 **다음**을 클릭합니다.  
   
     4.  **GPO 백업** 페이지에서 **백업**을 클릭합니다.  
   
@@ -420,13 +420,13 @@ Restart-Computer
   
     8.  에 **백업 위치** 페이지는 **백업 폴더** 상자는 해당 준비 GPO의 백업을 2 단계에서에서 저장 된 위치에 대 한 경로 입력 하거나 클릭 **찾아보기** 폴더를 찾은 다음 클릭을 **다음**합니다.  
   
-    9. **원본 GPO** 페이지에서 **각 GPO의 최신 버전만 표시** 확인란을 선택하여 이전 백업을 숨기고 해당 준비 GPO를 선택합니다. 클릭 **설정 보기** 프로덕션 GPO에 적용 하기 전에 원격 액세스 설정을 검토 한 다음 클릭 **다음**합니다.  
+    9. **원본 GPO** 페이지에서 **각 GPO의 최신 버전만 표시** 확인란을 선택하여 이전 백업을 숨기고 해당 준비 GPO를 선택합니다. **보기 설정**을 클릭하여 프로덕션 GPO에 적용하기 전에 원격 액세스 설정을 검토하고 **다음**을 클릭합니다.  
   
     10. 에 **백업 검사** 페이지에서 클릭 **다음**, 를 클릭 하 고 **마침**합니다.  
   
 ![Windows PowerShell](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>windows powershell 해당 명령</em>***  
   
-다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
+다음 Windows PowerShell cmdlet은 이전 절차와 동일한 기능을 수행합니다. 서식 조건 때문에 각 cmdlet이 여러 줄로 자동 줄 바꿈되어 표시되더라도 한 줄에 입력합니다.  
   
 -   백업 폴더에 도메인 "corp.contoso.com"에서 준비 클라이언트 GPO "DirectAccess Client Settings-Staging"를 백업 하려면 "C:\Backups\":  
   
@@ -452,33 +452,33 @@ Restart-Computer
     Import-GPO "BackupId $backup.Id "Path $backup.BackupDirectory "TargetName 'DirectAccess Client Settings - Production' "Domain 'corp.contoso.com'  
     ```  
   
-## <a name="ConfigSGs"></a>1.9 보안 그룹 구성  
+## <a name="19-configure-security-groups"></a><a name="ConfigSGs"></a>1.9 보안 그룹 구성  
 클라이언트 컴퓨터 그룹 정책 개체에에서 포함 된 DirectAccess 설정은 원격 액세스를 구성할 때 지정 하는 보안 그룹의 구성원 인 컴퓨터에만 적용 됩니다. 또한 보안 그룹을 사용하여 응용 프로그램 서버를 관리하는 경우 이러한 서버의 보안 그룹을 만듭니다.  
   
-### <a name="Sec_Group"></a>DirectAccess 클라이언트에 대 한 보안 그룹을 만들려면  
+### <a name="to-create-a-security-group-for-directaccess-clients"></a><a name="Sec_Group"></a>DirectAccess 클라이언트에 대 한 보안 그룹을 만들려면  
   
 1.  에 **시작** 화면에서 입력**dsa.msc**, 한 다음 ENTER를 누릅니다. 에 **Active Directory 사용자 및 컴퓨터** 보안 그룹에 포함 되 면 마우스 오른쪽 단추로 클릭 하는 도메인을 확장 하는 콘솔의 왼쪽된 창에서 **사용자**, 가리킨 **새로**, 클릭 하 고 **그룹**합니다.  
   
-2.  에 **새 개체-그룹** 대화 상자의 **그룹 이름**, 보안 그룹의 이름을 입력 합니다.  
+2.  **새 개체 - 그룹** 대화 상자의 **그룹 이름**에 보안 그룹의 이름을 입력합니다.  
   
 3.  **그룹 범위** 아래에서 **전역**을 클릭하고 **그룹 종류**에서 **보안**을 클릭한 다음 **확인**을 클릭합니다.  
   
-4.  DirectAccess 클라이언트 컴퓨터 보안 그룹을 두 번 클릭 하 고 속성 대화 상자에서 클릭 된 **멤버** 탭 합니다.  
+4.  DirectAccess 클라이언트 컴퓨터 보안 그룹을 두 번 클릭하고 속성 대화 상자에서 **구성원** 탭을 클릭합니다.  
   
 5.  **구성원** 탭에서 **추가**를 클릭합니다.  
   
 6.  **사용자, 연락처, 컴퓨터 또는 서비스 계정 선택** 대화 상자에서 DirectAccess에 사용할 클라이언트 컴퓨터를 선택하고 **확인**을 클릭합니다.  
   
-![Windows PowerShell](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)**windows powershell 해당 명령**  
+![Windows PowerShell](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)**Windows powershell 해당 명령**  
   
-다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
+다음 Windows PowerShell cmdlet은 이전 절차와 동일한 기능을 수행합니다. 서식 조건 때문에 각 cmdlet이 여러 줄로 자동 줄 바꿈되어 표시되더라도 한 줄에 입력합니다.  
   
 ```  
 New-ADGroup -GroupScope global -Name <DirectAccess_clients_group_name>  
 Add-ADGroupMember -Identity DirectAccess_clients_group_name -Members <computer_name>  
 ```  
   
-## <a name="ConfigNLS"></a>1.10 네트워크 위치 서버 구성  
+## <a name="110-configure-the-network-location-server"></a><a name="ConfigNLS"></a>1.10 네트워크 위치 서버 구성  
 네트워크 위치 서버는 항상 사용 가능한 서버여야 하며, DirectAccess 클라이언트에서 신뢰할 수 있는 유효한 SSL 인증서가 있어야 합니다. 네트워크 위치 서버 인증서에 대한 인증서 옵션에는 다음 두 가지가 있습니다.  
   
 -   **개인 인증서**  
@@ -501,9 +501,9 @@ Add-ADGroupMember -Identity DirectAccess_clients_group_name -Members <computer_n
   
 #### <a name="to-install-the-network-location-server-certificate-from-an-internal-ca"></a>내부 CA의 네트워크 위치 서버 인증서를 설치하려면  
   
-1.  네트워크 위치 서버 웹 사이트를 호스트할 서버에서 다음을 수행합니다. **시작** 화면에서**mmc.exe**를 입력 한 다음 enter 키를 누릅니다.  
+1.  네트워크 위치 서버 웹 사이트를 호스팅하는 서버에서:에 **시작** 화면에서 입력**mmc.exe**, 한 다음 ENTER를 누릅니다.  
   
-2.  MMC 콘솔에서에 **파일** 메뉴 클릭 **스냅인 추가/제거**합니다.  
+2.  MMC 콘솔의 **파일** 메뉴에서 **스냅인 추가/제거**를 클릭합니다.  
   
 3.  에 **추가 / 제거 스냅인** 대화 상자, 클릭 **인증서**, 클릭 **추가**, 클릭 **컴퓨터 계정**, 클릭 **다음**, 클릭 **로컬 컴퓨터**, 클릭 **마침**, 클릭 하 고 **확인**합니다.  
   
@@ -511,21 +511,21 @@ Add-ADGroupMember -Identity DirectAccess_clients_group_name -Members <computer_n
   
 5.  **인증서**를 마우스 오른쪽 단추로 클릭하고 **모든 작업**을 가리킨 다음 **새 인증서 요청**을 클릭합니다.  
   
-6.  **다음** 을 두 번 클릭합니다.  
+6.  **다음**을 두 번 클릭합니다.  
   
 7.  에 **인증서 요청** 페이지에서 확인란의 1.5.2의 지침에 따라 만든 인증서 템플릿에 대 한 인증서 템플릿을 구성 합니다. 필요한 경우 **이 인증서를 등록하려면 추가 정보가 필요합니다. 설정을 구성하려면 여기를 클릭하십시오.** 를 클릭합니다.  
   
-8.  에 **인증서 속성** 대화 상자의 **주체** 탭에 **주체 이름** 영역에서 **형식**, 선택, **일반 이름**.  
+8.  **인증서 속성** 대화 상자의 **주체** 탭에 있는 **주체 이름** 영역 내 **유형**에서 **일반 이름**을 선택합니다.  
   
-9. **값**, 네트워크 위치 서버 웹 사이트의 FQDN을 입력 하 고 클릭 한 다음 **추가**합니다.  
+9. **값**에 네트워크 위치 서버 웹 사이트의 FQDN을 입력하고 **추가**를 클릭합니다.  
   
-10. 에 **대체 이름** 영역에서 **형식**, 선택, **DNS**합니다.  
+10. **대체 이름** 영역의 **유형**에서 **DNS**를 선택합니다.  
   
-11. **값**, 네트워크 위치 서버 웹 사이트의 FQDN을 입력 하 고 클릭 한 다음 **추가**합니다.  
+11. **값**에 네트워크 위치 서버 웹 사이트의 FQDN을 입력하고 **추가**를 클릭합니다.  
   
 12. **일반** 탭의 **이름**에 인증서를 식별하는 데 도움이 되는 이름을 입력할 수 있습니다.  
   
-13. 클릭 **확인**, 클릭 **등록**, 를 클릭 하 고 **마침**합니다.  
+13. **확인**, **등록**을 차례로 클릭한 다음 **마침**을 클릭합니다.  
   
 14. 인증서 스냅인의 세부 정보 창에서 새 인증서가 서버 인증 용도로 등록되었는지 확인합니다.  
   
@@ -553,9 +553,9 @@ Add-ADGroupMember -Identity DirectAccess_clients_group_name -Members <computer_n
   
 4.  내부 네트워크의 DirectAccess 클라이언트가 네트워크 위치 서버의 이름을 확인할 수 있는지 확인합니다. 또한 인터넷의 DirectAccess 클라이언트가 이름을 확인할 수 없는지 확인합니다.  
   
-## <a name="BKMK_Links"></a>다음 단계  
+## <a name="next-step"></a><a name="BKMK_Links"></a>다음 단계  
   
--   [2단계: 고급 DirectAccess 서버 구성](da-adv-configure-s2-servers.md)  
+-   [2 단계: 고급 DirectAccess 서버 구성](da-adv-configure-s2-servers.md)  
   
 
 

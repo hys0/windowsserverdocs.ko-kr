@@ -6,21 +6,21 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: f01546f8-c495-4055-8492-8806eee99862
 manager: dougkim
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 09/17/2018
-ms.openlocfilehash: e4c305a7c8c4c4618b0df1e1b2a646356d8f821f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 54471446fb9eab6dc5dc20043c7cb651766a59a9
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71356114"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80309641"
 ---
 # <a name="converged-nic-in-a-teamed-nic-configuration-datacenter"></a>팀으로 구성 된 NIC 구성 (데이터 센터)에서 수렴 형 NIC
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-이 항목에서는 스위치 포함 팀 \(집합\)을 사용 하 여 팀으로 구성 된 nic 구성에서 수렴 형 nic를 배포 하기 위한 지침을 제공 합니다. 
+이 항목에서는 스위치 포함 된 팀 \(\)설정 하 여 팀으로 구성 된 NIC 구성에서 수렴 형 NIC를 배포 하기 위한 지침을 제공 합니다. 
 
 이 항목의 예제 구성은 hyper-v 호스트 **1** 및 **hyper-v 호스트 2**의 hyper-v 호스트 2 개에 대해 설명 합니다. 두 호스트에는 두 개의 네트워크 어댑터가 있습니다. 각 호스트에서 하나의 어댑터는 192.168.1/24 서브넷에 연결 되 고, 하나의 어댑터는 192.168.2/24 서브넷에 연결 됩니다.
 
@@ -28,7 +28,7 @@ ms.locfileid: "71356114"
 
 ## <a name="step-1-test-the-connectivity-between-source-and-destination"></a>1단계. 원본 및 대상 간의 연결 테스트
 
-실제 NIC가 대상 호스트에 연결할 수 있는지 확인 합니다.  이 테스트는 계층 3 \(L3\) 또는 IP 계층과 계층 2 \(L2\) 가상 lan \(VLAN\)을 사용 하 여 연결을 보여 줍니다.
+실제 NIC가 대상 호스트에 연결할 수 있는지 확인 합니다.  이 테스트는 계층 3 \(L3\) 또는 IP 계층을 사용 하 여 연결을 보여 주며, 계층 2 \(L2\) 가상 로컬 영역 네트워크 \(VLAN\)을 사용 합니다.
 
 1. 첫 번째 네트워크 어댑터 속성을 봅니다.
 
@@ -39,9 +39,9 @@ ms.locfileid: "71356114"
    _**검색**_
 
 
-   |    이름    |           인터페이스 설명           | ifIndex | Status |    Mac     | /%Linkspeed |
+   |    이름    |           인터페이스 설명           | ifIndex | 상태 |    MacAddress     | /%Linkspeed |
    |------------|------------------------------------------|---------|--------|-------------------|-----------|
-   | 40G-1 | Mellanox Connectx-3 Pro 이더넷 어댑터 |   11    |   위쪽   | E4-1D-2D-07-43-D0 |  40 Gbps  |
+   | 40G-1 | Mellanox Connectx-3 Pro 이더넷 어댑터 |   11    |   위로   | E4-1D-2D-07-43-D0 |  40 Gbps  |
 
    ---
 
@@ -61,7 +61,7 @@ ms.locfileid: "71356114"
    | InterfaceIndex |     11      |
    | InterfaceAlias | 40G-1  |
    | AddressFamily  |    IPv4     |
-   |      type      |   유니캐스트   |
+   |      형식      |   유니캐스트   |
    |  PrefixLength  |     24      |
 
    ---
@@ -75,9 +75,9 @@ ms.locfileid: "71356114"
    _**검색**_
 
 
-   |    이름    |          인터페이스 설명           | ifIndex | Status |    Mac     | /%Linkspeed |
+   |    이름    |          인터페이스 설명           | ifIndex | 상태 |    MacAddress     | /%Linkspeed |
    |------------|-----------------------------------------|---------|--------|-------------------|-----------|
-   | 40G-2 | Mellanox Connectx-3 Pro 이더넷 A ... #2 |   13    |   위쪽   | E4-1D-07-40-70 |  40 Gbps  |
+   | 40G-2 | Mellanox Connectx-3 Pro 이더넷 A ... #2 |   13    |   위로   | E4-1D-07-40-70 |  40 Gbps  |
 
    ---
 
@@ -97,12 +97,12 @@ ms.locfileid: "71356114"
    | InterfaceIndex |     13      |
    | InterfaceAlias | 40G-2  |
    | AddressFamily  |    IPv4     |
-   |      type      |   유니캐스트   |
+   |      형식      |   유니캐스트   |
    |  PrefixLength  |     24      |
 
    ---
 
-5. 다른 NIC 팀 또는 SET 구성원 pNICs에 유효한 IP 주소가 있는지 확인 합니다.<p>별도의 서브넷 xxx.xxx을 \(사용 합니다. **2**. xxx vs xxx.xxx. **1**. xxx\)-이 어댑터에서 대상으로 쉽게 보낼 수 있습니다. 그렇지 않고 동일한 서브넷에서 pNICs를 둘 다 찾은 경우 Windows TCP/IP 스택 부하는 인터페이스 간에 부하를 분산 하 고 간단한 유효성 검사는 더 복잡해 집니다.
+5. 다른 NIC 팀 또는 SET 구성원 pNICs에 유효한 IP 주소가 있는지 확인 합니다.<p>별도의 서브넷 \(xxx.xxx를 사용 합니다. **2**. xxx vs xxx.xxx. **1**. xxx\)이 어댑터에서 대상으로 쉽게 보낼 수 있습니다. 그렇지 않고 동일한 서브넷에서 pNICs를 둘 다 찾은 경우 Windows TCP/IP 스택 부하는 인터페이스 간에 부하를 분산 하 고 간단한 유효성 검사는 더 복잡해 집니다.
 
 
 ## <a name="step-2-ensure-that-source-and-destination-can-communicate"></a>2단계. 원본 및 대상이 통신할 수 있는지 확인 합니다.
@@ -182,9 +182,9 @@ ms.locfileid: "71356114"
 
 많은 네트워크 구성에서 Vlan을 사용 하며, 네트워크에서 Vlan을 사용 하려는 경우 Vlan을 구성 하 여 이전 테스트를 반복 해야 합니다.
 
-이 단계에서는 Nic가 **액세스** 모드입니다. 그러나이 가이드의 뒷부분에서 hyper-v 가상 스위치 \(vSwitch\) 를 만들 때 VLAN 속성은 vSwitch 포트 수준에서 적용 됩니다. 
+이 단계에서는 Nic가 **액세스** 모드입니다. 그러나이 가이드의 뒷부분에서 Hyper-v 가상 스위치 \(vSwitch\)를 만들 때 VLAN 속성은 vSwitch 포트 수준에서 적용 됩니다. 
 
-스위치는 여러 vlan을 호스트할 수 있으므로, 랙 \(\) 연결 물리적 스위치의 상단에 호스트가 트렁크 모드에서 구성 된 포트를 갖도록 해야 합니다.
+스위치는 여러 Vlan을 호스트할 수 있으므로, 랙 \(에\) 물리적 스위치를 설정 하 여 호스트가 트렁크 모드에서 구성 된 포트를 갖도록 해야 합니다.
 
 >[!NOTE]
 >스위치에서 트렁크 모드를 구성 하는 방법에 대 한 지침은 해당 하는 스위치 설명서를 참조 하세요.
@@ -195,7 +195,7 @@ ms.locfileid: "71356114"
 
 
 >[!TIP]
->전기 \(및 전자 제품 엔지니어의 협회 IEEE\) 네트워킹 표준에 따라 실제 NIC의 서비스 \(QoS\) 속성의 품질은 포함 된 802.1 p 헤더에 적용 됩니다. vlan ID를 구성할 \(때\) 802.1 q vlan 헤더 내에 있습니다.
+>IEEE\) 네트워킹 표준 \(전기 및 전자 제품 엔지니어의 협회에 따라 실제 NIC의 QoS (서비스 품질 \(\) QoS) 속성은 VLAN ID를 구성할 때 802.1 Q \(VLAN\) 헤더 내에 포함 된 802.1 p 헤더에 대해 작동 합니다.
 
 1. 첫 번째 NIC 인 40G-1에서 VLAN ID를 구성 합니다.
 
@@ -228,9 +228,9 @@ ms.locfileid: "71356114"
    _**검색**_
 
 
-   |    이름    |          인터페이스 설명           | ifIndex | Status |    Mac     | /%Linkspeed |
+   |    이름    |          인터페이스 설명           | ifIndex | 상태 |    MacAddress     | /%Linkspeed |
    |------------|-----------------------------------------|---------|--------|-------------------|-----------|
-   | 40G-1 | Mellanox Connectx-3 Pro 이더넷 Ada ... |   11    |   위쪽   | E4-1D-2D-07-43-D0 |  40 Gbps  |
+   | 40G-1 | Mellanox Connectx-3 Pro 이더넷 Ada ... |   11    |   위로   | E4-1D-2D-07-43-D0 |  40 Gbps  |
 
    ---
 
@@ -265,9 +265,9 @@ ms.locfileid: "71356114"
    _**검색**_
 
 
-   |    이름    |          인터페이스 설명           | ifIndex | Status |    Mac     | /%Linkspeed |
+   |    이름    |          인터페이스 설명           | ifIndex | 상태 |    MacAddress     | /%Linkspeed |
    |------------|-----------------------------------------|---------|--------|-------------------|-----------|
-   | 40G-2 | Mellanox Connectx-3 Pro 이더넷 Ada ... |   11    |   위쪽   | E4-1D-2D-07-43-D1 |  40 Gbps  |
+   | 40G-2 | Mellanox Connectx-3 Pro 이더넷 Ada ... |   11    |   위로   | E4-1D-2D-07-43-D1 |  40 Gbps  |
 
    ---
 
@@ -325,15 +325,15 @@ ms.locfileid: "71356114"
    ![서비스 품질 구성](../../media/Converged-NIC/3-datacenter-configure-qos.jpg)
 
 
-## <a name="step-4-configure-quality-of-service-qos"></a>4단계. 서비스 \(품질 QoS 구성\)
+## <a name="step-4-configure-quality-of-service-qos"></a>4단계. QoS\) 서비스 품질 \(구성
 
 >[!NOTE]
 >서로 통신 하는 모든 호스트에서 다음 DCB 및 QoS 구성 단계를 모두 수행 해야 합니다.
 
-1. 각 hyper-v 호스트에 \(데이터\) 센터 브리징 DCB를 설치 합니다.
+1. 각 Hyper-v 호스트에 데이터 센터 브리징 \(DCB\)를 설치 합니다.
 
    - IWarp를 사용 하는 네트워크 구성의 경우 **선택 사항** 입니다.
-   - RDMA 서비스\) 의 경우 roce \(를 사용 하는 네트워크 구성에 **필요** 합니다.
+   - RoCE를 사용 하는 네트워크 구성 \(RDMA 서비스용 모든 버전\) **필요** 합니다.
 
    ```PowerShell
    Install-WindowsFeature Data-Center-Bridging
@@ -342,16 +342,16 @@ ms.locfileid: "71356114"
    _**검색**_
 
 
-   | Success | 다시 시작 필요 | 종료 코드 |     기능 결과     |
+   | 성공 | 다시 시작 필요 | 종료 코드 |     기능 결과     |
    |---------|----------------|-----------|------------------------|
-   |  True   |       아니요       |  Success  | {데이터 센터 브리징} |
+   |  True   |       아니요       |  성공  | {데이터 센터 브리징} |
 
    ---
 
 2. SMB 다이렉트에 대 한 QoS 정책을 설정 합니다.
 
    - IWarp를 사용 하는 네트워크 구성의 경우 **선택 사항** 입니다.
-   - RDMA 서비스\) 의 경우 roce \(를 사용 하는 네트워크 구성에 **필요** 합니다.
+   - RoCE를 사용 하는 네트워크 구성 \(RDMA 서비스용 모든 버전\) **필요** 합니다.
 
    아래 예제 명령에서 값 "3"은 임의입니다. QoS 정책 구성에서 동일한 값을 일관 되 게 사용 하는 한 1에서 7 사이의 모든 값을 사용할 수 있습니다.
 
@@ -365,7 +365,7 @@ ms.locfileid: "71356114"
    |   매개 변수    |          값           |
    |----------------|--------------------------|
    |      이름      |           SMB            |
-   |     소유자      | 그룹 정책 \(컴퓨터\) |
+   |     소유자      | 그룹 정책 \(Machine\) |
    | NetworkProfile |           모두            |
    |   우선 순위   |           127            |
    |   JobObject    |          &nbsp;          |
@@ -386,10 +386,10 @@ ms.locfileid: "71356114"
    |   매개 변수    |          값           |
    |----------------|--------------------------|
    |      이름      |         DEFAULT          |
-   |     소유자      | 그룹 정책 \(컴퓨터\) |
+   |     소유자      | 그룹 정책 \(Machine\) |
    | NetworkProfile |           모두            |
    |   우선 순위   |           127            |
-   |    템플릿    |         기본값          |
+   |    템플릿    |         기본          |
    |   JobObject    |          &nbsp;          |
    | PriorityValue  |            0             |
 
@@ -405,7 +405,7 @@ ms.locfileid: "71356114"
    _**검색**_
 
 
-   | 우선 순위 | Enabled | PolicySet | ifIndex | IfAlias |
+   | Priority | 사용 | PolicySet | ifIndex | IfAlias |
    |----------|---------|-----------|---------|---------|
    |    0     |  False  |  전역   | &nbsp;  | &nbsp;  |
    |    1     |  False  |  전역   | &nbsp;  | &nbsp;  |
@@ -452,7 +452,7 @@ ms.locfileid: "71356114"
 
    | 간체 |  TSA의   | 대역 | 우선순위 |
    |----|--------|-----------|------------|
-   | 0  | 높음 |  &nbsp;   |    0-7     |
+   | 0  | Strict |  &nbsp;   |    0-7     |
 
    ---
 
@@ -463,9 +463,9 @@ ms.locfileid: "71356114"
    _**OperationalClassifications**:_  
 
 
-   | Protocol  | 포트/유형 | 우선 순위 |
+   | 프로토콜  | 포트/유형 | Priority |
    |-----------|-----------|----------|
-   |  기본값  |  &nbsp;   |    0     |
+   |  기본  |  &nbsp;   |    0     |
    | NetDirect |    445    |    3     |
 
    ---
@@ -496,7 +496,7 @@ ms.locfileid: "71356114"
 
    | 간체 |  TSA의   | 대역 | 우선순위 |
    |----|--------|-----------|------------|
-   | 0  | 높음 |  &nbsp;   |    0-7     |
+   | 0  | Strict |  &nbsp;   |    0-7     |
 
    ---
 
@@ -507,15 +507,15 @@ ms.locfileid: "71356114"
    _**OperationalClassifications**:_  
 
 
-   | Protocol  | 포트/유형 | 우선 순위 |
+   | 프로토콜  | 포트/유형 | Priority |
    |-----------|-----------|----------|
-   |  기본값  |  &nbsp;   |    0     |
+   |  기본  |  &nbsp;   |    0     |
    | NetDirect |    445    |    3     |
 
    ---
 
 
-7. SMB 다이렉트 \(RDMA에 대역폭 절반을 예약 합니다.\)
+7. SMB 다이렉트 \(RDMA에 대역폭 절반을 예약\)
 
    ```PowerShell
    New-NetQosTrafficClass "SMB" -priority 3 -bandwidthpercentage 50 -algorithm ETS
@@ -524,7 +524,7 @@ ms.locfileid: "71356114"
    _**검색**_  
 
 
-   | 이름 | 알고리즘 | 대역폭 (%) | 우선 순위 | PolicySet | ifIndex | IfAlias |
+   | 이름 | 알고리즘 | 대역폭 (%) | Priority | PolicySet | ifIndex | IfAlias |
    |------|-----------|--------------|----------|-----------|---------|---------|
    | SMB  |    요소가    |      50      |    3     |  전역   | &nbsp;  | &nbsp;  |
 
@@ -539,9 +539,9 @@ ms.locfileid: "71356114"
    _**검색**_  
 
 
-   |   이름    | 알고리즘 | 대역폭 (%) | 우선 순위 | PolicySet | ifIndex | IfAlias |
+   |   이름    | 알고리즘 | 대역폭 (%) | Priority | PolicySet | ifIndex | IfAlias |
    |-----------|-----------|--------------|----------|-----------|---------|---------|
-   | 기본 |    요소가    |      50      | 0-2, 4-7  |  전역   | &nbsp;  | &nbsp;  |
+   | [기본값] |    요소가    |      50      | 0-2, 4-7  |  전역   | &nbsp;  | &nbsp;  |
    |    SMB    |    요소가    |      50      |    3     |  전역   | &nbsp;  | &nbsp;  |
 
    ---
@@ -558,7 +558,7 @@ ms.locfileid: "71356114"
    _**검색**_
 
 
-   | 이름 | 알고리즘 | 대역폭 (%) | 우선 순위 | PolicySet | ifIndex | IfAlias |
+   | 이름 | 알고리즘 | 대역폭 (%) | Priority | PolicySet | ifIndex | IfAlias |
    |------|-----------|--------------|----------|-----------|---------|---------|
    | I P 1  |    요소가    |      10      |    1     |  전역   | &nbsp;  | &nbsp;  |
 
@@ -571,7 +571,7 @@ ms.locfileid: "71356114"
    _**검색**_
 
 
-   | 이름 | 알고리즘 | 대역폭 (%) | 우선 순위 | PolicySet | ifIndex | IfAlias |
+   | 이름 | 알고리즘 | 대역폭 (%) | Priority | PolicySet | ifIndex | IfAlias |
    |------|-----------|--------------|----------|-----------|---------|---------|
    | IP2  |    요소가    |      10      |    2     |  전역   | &nbsp;  | &nbsp;  |
 
@@ -586,9 +586,9 @@ ms.locfileid: "71356114"
     _**검색**_
 
 
-    |   이름    | 알고리즘 | 대역폭 (%) | 우선 순위 | PolicySet | ifIndex | IfAlias |
+    |   이름    | 알고리즘 | 대역폭 (%) | Priority | PolicySet | ifIndex | IfAlias |
     |-----------|-----------|--------------|----------|-----------|---------|---------|
-    | 기본 |    요소가    |      30      |  0, 4-7   |  전역   | &nbsp;  | &nbsp;  |
+    | [기본값] |    요소가    |      30      |  0, 4-7   |  전역   | &nbsp;  | &nbsp;  |
     |    SMB    |    요소가    |      50      |    3     |  전역   | &nbsp;  | &nbsp;  |
     |    I P 1    |    요소가    |      10      |    1     |  전역   | &nbsp;  | &nbsp;  |
     |    IP2    |    요소가    |      10      |    2     |  전역   | &nbsp;  | &nbsp;  |
@@ -610,9 +610,9 @@ ms.locfileid: "71356114"
     1
     ```
 
-## <a name="step-5-verify-the-rdma-configuration-mode-1"></a>5단계. RDMA 구성 \(모드 1 확인\) 
+## <a name="step-5-verify-the-rdma-configuration-mode-1"></a>5단계. RDMA 구성 \(모드 1을 확인\) 
 
-VSwitch를 만들고 RDMA \(모드 2\)로 전환 하기 전에 패브릭이 올바르게 구성 되어 있는지 확인 하려고 합니다.
+VSwitch를 만들고 RDMA \(Mode 2\)로 전환 하기 전에 패브릭이 올바르게 구성 되었는지 확인 하려고 합니다.
 
 다음 이미지는 Hyper-v 호스트의 현재 상태를 보여 줍니다.
 
@@ -628,7 +628,7 @@ VSwitch를 만들고 RDMA \(모드 2\)로 전환 하기 전에 패브릭이 올�
    _**검색**_
 
 
-   |    이름    |        인터페이스 설명        | Enabled |
+   |    이름    |        인터페이스 설명        | 사용 |
    |------------|------------------------------------|---------|
    | 40G-1 | Mellanox Connectx-3-4 VPI 어댑터 #2 |  True   |
    | 40G-2 |  Mellanox Connectx-3-4 VPI 어댑터   |  True   |
@@ -651,9 +651,9 @@ VSwitch를 만들고 RDMA \(모드 2\)로 전환 하기 전에 패브릭이 올�
 
    ---
 
-3. [Diskspd .exe 유틸리티](https://aka.ms/diskspd) 를 다운로드 하 여 C:\TEST로 압축을 풉니다.\.
+3. [Diskspd .exe 유틸리티](https://aka.ms/diskspd) 를 다운로드 하 고 C:\TEST로 압축을 풉니다\.
 
-4. [테스트 RDMA PowerShell 스크립트](https://github.com/Microsoft/SDN/blob/master/Diagnostics/Test-Rdma.ps1) 를 로컬 드라이브의 테스트 폴더 (예: C:\TEST)에 다운로드 합니다.\.
+4. [테스트 RDMA PowerShell 스크립트](https://github.com/Microsoft/SDN/blob/master/Diagnostics/Test-Rdma.ps1) 를 로컬 드라이브의 테스트 폴더 (예: C:\TEST\.에 다운로드 합니다.
 
 5. **Test-Rdma** PowerShell 스크립트를 실행 하 여 ifIndex 값을 동일한 VLAN에 있는 첫 번째 원격 어댑터의 IP 주소와 함께 스크립트에 전달 합니다.<p>이 예제에서 스크립트는 원격 네트워크 어댑터 IP 주소 192.168.1.5에 **ifIndex** 값 14를 전달 합니다.
 
@@ -761,9 +761,9 @@ VSwitch를 만들고 RDMA \(모드 2\)로 전환 하기 전에 패브릭이 올�
    _**검색**_
 
 
-   |        이름         |        인터페이스 설명         | ifIndex | Status |    Mac     | /%Linkspeed |
+   |        이름         |        인터페이스 설명         | ifIndex | 상태 |    MacAddress     | /%Linkspeed |
    |---------------------|-------------------------------------|---------|--------|-------------------|-----------|
-   | vEthernet (VMSTEST) | Hyper-v 가상 이더넷 어댑터 #2 |   28    |   위쪽   | E4-1D-07-40-71 |  80 Gbps  |
+   | vEthernet (VMSTEST) | Hyper-v 가상 이더넷 어댑터 #2 |   28    |   위로   | E4-1D-07-40-71 |  80 Gbps  |
 
    ---
 
@@ -776,7 +776,7 @@ VSwitch를 만들고 RDMA \(모드 2\)로 전환 하기 전에 패브릭이 올�
    _**검색**_
 
 
-   |  이름   | IsManagementOs | VMName  |  SwitchName  | Mac | Status | IPAddresses |
+   |  이름   | IsManagementOs | VMName  |  SwitchName  | MacAddress | 상태 | IPAddresses |
    |---------|----------------|---------|--------------|------------|--------|-------------|
    | VMSTEST |      True      | VMSTEST | E41D2D074071 |    확인을    | &nbsp; |             |
 
@@ -848,7 +848,7 @@ VSwitch를 만들고 RDMA \(모드 2\)로 전환 하기 전에 패브릭이 올�
    PingReplyDetails (RTT) : 0 ms
    ```
 
-   >**중요** 결과가 예제 결과와 비슷하며 ping이 실패 하 고 "경고: 192.168.1.5에 Ping을 수행 하지 못했습니다.-상태: DestinationHostUnreachable 수 없음, "" vEthernet (VMSTEST) "에 적절 한 IP 주소가 있는지 확인 합니다.
+   >**중요** 결과가 예제 결과와 유사 하지 않고 ping에서 "경고: Ping to 192.168.1.5 failed--Status: DestinationHostUnreachable 수 없습니다." 라는 메시지와 함께 ping이 실패 한 경우 "vEthernet (VMSTEST)"에 적절 한 IP 주소가 있는지 확인 합니다.
    >
    >```PowerShell
    >Get-NetIPAddress -InterfaceAlias "vEthernet (VMSTEST)"
@@ -885,7 +885,7 @@ VSwitch를 만들고 RDMA \(모드 2\)로 전환 하기 전에 패브릭이 올�
    _**검색**_ 
 
 
-   |         이름         | IsManagementOs | VMName |      SwitchName      |  Mac  | Status | IPAddresses |
+   |         이름         | IsManagementOs | VMName |      SwitchName      |  MacAddress  | 상태 | IPAddresses |
    |----------------------|----------------|--------|----------------------|--------------|--------|-------------|
    | CORP-외부 전환 |      True      | &nbsp; | CORP-외부 전환 | 001B785768AA |  확인을  |   &nbsp;    |
    |         관리          |      True      | &nbsp; |       VMSTEST        | E41D2D074071 |  확인을  |   &nbsp;    |
@@ -901,13 +901,13 @@ VSwitch를 만들고 RDMA \(모드 2\)로 전환 하기 전에 패브릭이 올�
    _**검색**_
 
 
-   |      이름       |        인터페이스 설명         | ifIndex | Status |    Mac     | /%Linkspeed |
+   |      이름       |        인터페이스 설명         | ifIndex | 상태 |    MacAddress     | /%Linkspeed |
    |-----------------|-------------------------------------|---------|--------|-------------------|-----------|
-   | vEthernet (MGT) | Hyper-v 가상 이더넷 어댑터 #2 |   28    |   위쪽   | E4-1D-07-40-71 |  80 Gbps  |
+   | vEthernet (MGT) | Hyper-v 가상 이더넷 어댑터 #2 |   28    |   위로   | E4-1D-07-40-71 |  80 Gbps  |
 
    ---
 
-## <a name="step-8-test-hyper-v-vswitch-rdma"></a>8단계: Hyper-v vSwitch RDMA 테스트
+## <a name="step-8-test-hyper-v-vswitch-rdma"></a>8단계. Hyper-v vSwitch RDMA 테스트
 
 다음 이미지는 hyper-v 호스트 1의 vSwitch를 포함 하 여 Hyper-v 호스트의 현재 상태를 보여 줍니다.
 
@@ -922,8 +922,8 @@ VSwitch를 만들고 RDMA \(모드 2\)로 전환 하기 전에 패브릭이 올�
 
    _**검색**_  
 
-   이름의 관리  
-   IeeePriorityTag:  켜짐  
+   이름: MGT  
+   IeeePriorityTag: On  
 
 2. RDMA에 대해 두 개의 호스트 vNICs를 만들고 vSwitch VMSTEST에 연결 합니다.
 
@@ -941,7 +941,7 @@ VSwitch를 만들고 RDMA \(모드 2\)로 전환 하기 전에 패브릭이 올�
    _**검색**_ 
 
 
-   |         이름         | IsManagementOs |        VMName        |  SwitchName  | Mac | Status | IPAddresses |
+   |         이름         | IsManagementOs |        VMName        |  SwitchName  | MacAddress | 상태 | IPAddresses |
    |----------------------|----------------|----------------------|--------------|------------|--------|-------------|
    | CORP-외부 전환 |      True      | CORP-외부 전환 | 001B785768AA |    확인을    | &nbsp; |             |
    |         관리          |      True      |       VMSTEST        | E41D2D074071 |    확인을    | &nbsp; |             |
@@ -950,7 +950,7 @@ VSwitch를 만들고 RDMA \(모드 2\)로 전환 하기 전에 패브릭이 올�
 
    ---
 
-## <a name="step-9-assign-an-ip-address-to-the-smb-host-vnics-vethernet-smb1-and-vethernet-smb2"></a>9단계: SMB 호스트 vnics vethernet \(SMB1\) 및 vethernet \(SMB2에 IP 주소 할당\)
+## <a name="step-9-assign-an-ip-address-to-the-smb-host-vnics-vethernet-smb1-and-vethernet-smb2"></a>9단계. SMB 호스트 vNICs vEthernet \(SMB1\) 및 vEthernet \(SMB2에 IP 주소를 할당 합니다\)
 
 40G-1 및 40G 2 실제 어댑터에는 여전히 액세스 VLAN 101 및 102이 구성 되어 있습니다. 이로 인해 어댑터는 트래픽 태그를 만들고 ping이 성공 합니다. 이전에는 pNIC VLAN Id를 모두 0으로 구성한 다음 VMSTEST vSwitch를 VLAN 101으로 설정 했습니다. 그 후에는 MGT vNIC를 사용 하 여 원격 VLAN 101 어댑터를 ping 할 수 있었지만 현재는 VLAN 102 구성원이 없습니다.
 
@@ -997,7 +997,7 @@ VSwitch를 만들고 RDMA \(모드 2\)로 전환 하기 전에 패브릭이 올�
    PingReplyDetails (RTT) : 0 ms
    ```
 
-3. Vethernet \(SMB2\)인터페이스에 대 한 새 IP 주소를 추가 합니다.
+3. VEthernet \(SMB2\)인터페이스에 대 한 새 IP 주소를 추가 합니다.
 
    ```PowerShell
    New-NetIPAddress -InterfaceAlias "vEthernet (SMB2)" -IPAddress 192.168.2.222 -PrefixLength 24 
@@ -1136,7 +1136,7 @@ VSwitch를 만들고 RDMA \(모드 2\)로 전환 하기 전에 패브릭이 올�
     ```
 
 
-11. 두 호스트 vnics는 동일한 서브넷에 있고 VLAN ID \(102\)이 동일 하기 때문에 원격 시스템에서 연결을 테스트 합니다.
+11. 두 호스트 vNICs는 동일한 서브넷에 있고 동일한 VLAN ID \(102\)있으므로 원격 시스템에서 연결을 테스트 합니다.
 
     ```PowerShell 
     Test-NetConnection 192.168.2.111
@@ -1223,9 +1223,9 @@ VSwitch를 만들고 RDMA \(모드 2\)로 전환 하기 전에 패브릭이 올�
     vEthernet (MGT)   Hyper-V Virtual Ethernet Adapter #2  False
     ```
 
-## <a name="step-10-validate-the-rdma-functionality"></a>10 단계. RDMA 기능의 유효성을 검사 합니다.
+## <a name="step-10-validate-the-rdma-functionality"></a>10단계. RDMA 기능의 유효성을 검사 합니다.
 
-Vswitch 집합 팀의 두 멤버 모두에 대해 원격 시스템에서 vSwitch를 포함 하는 로컬 시스템으로 RDMA 기능의 유효성을 검사 하려고 합니다.<p>호스트 vnics \(SMB1 및 SMB2\) 는 vlan 102에 할당 되기 때문에 원격 시스템에서 vlan 102 어댑터를 선택할 수 있습니다. <p>이 예에서 NIC 40G-2는 SMB1 (192.168.2.111) 및 SMB2 (192.168.2.222)에 RDMA를 수행 합니다.
+Vswitch 집합 팀의 두 멤버 모두에 대해 원격 시스템에서 vSwitch를 포함 하는 로컬 시스템으로 RDMA 기능의 유효성을 검사 하려고 합니다.<p>호스트 vNICs \(SMB1 및 SMB2\) 모두 VLAN 102에 할당 되기 때문에 원격 시스템에서 VLAN 102 어댑터를 선택할 수 있습니다. <p>이 예에서 NIC 40G-2는 SMB1 (192.168.2.111) 및 SMB2 (192.168.2.222)에 RDMA를 수행 합니다.
 
 >[!TIP]
 >이 시스템에서 방화벽을 사용 하지 않도록 설정 해야 할 수도 있습니다.  자세한 내용은 패브릭 정책을 참조 하세요.
@@ -1407,7 +1407,7 @@ Vswitch 집합 팀의 두 멤버 모두에 대해 원격 시스템에서 vSwitch
    VERBOSE: RDMA traffic test SUCCESSFUL: RDMA traffic was sent to 192.168.2.5
    ```
 
-이 출력의 마지막 줄 "RDMA 트래픽 테스트가 성공 했습니다. RDMA 트래픽이 192.168.2.5로 전송 되었습니다. "는 어댑터에서 수렴 형 NIC를 성공적으로 구성 되었음을 보여 줍니다.
+이 출력의 마지막 줄 "RDMA 트래픽 테스트 성공: RDMA 트래픽이 192.168.2.5로 전송 되었습니다."는 어댑터에서 수렴 형 NIC를 성공적으로 구성 했음을 보여 줍니다.
 
 ## <a name="related-topics"></a>관련 항목 
 

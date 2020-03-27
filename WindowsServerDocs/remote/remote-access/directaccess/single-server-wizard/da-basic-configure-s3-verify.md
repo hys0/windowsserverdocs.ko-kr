@@ -10,14 +10,14 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 45e9edd6-acca-4d59-851a-a0cc8bd8b4c6
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 29457f6f1859a8f3aee2f9d0f84e226b20905175
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: ad45c0b5deb59a847413371083ff413eae8e8762
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71388534"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80308906"
 ---
 # <a name="step-3-verify-deployments"></a>3 단계는 배포 확인
 
@@ -37,7 +37,7 @@ ms.locfileid: "71388534"
   
     모든 회사 리소스에 액세스할 수 있어야 합니다.  
   
-## <a name="BKMK_Links"></a>이전 단계  
+## <a name="previous-step"></a><a name="BKMK_Links"></a>이전 단계  
   
 -   [2 단계: DirectAccess 서버 구성](da-basic-configure-s2-server.md)  
   

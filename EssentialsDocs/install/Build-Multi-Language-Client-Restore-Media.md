@@ -3,7 +3,7 @@ title: 다국어 클라이언트 복원 미디어 제작
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,19 +12,19 @@ ms.assetid: 2fdbc016-d464-43cb-bd75-8a63e61588a2
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 1ad934d297c3092050bd6adbb6bb0f50d1ec6f36
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2b9d98c8c370e41ef87f96befdcd7746b0bb59f2
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59879874"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80310081"
 ---
 # <a name="build-multi-language-client-restore-media"></a>다국어 클라이언트 복원 미디어 제작
 
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 > [!NOTE]
->  에 설명 된 대로 다국어 Windows 이미지를 먼저 만들어야 합니다를 [연습: 다국어 Windows 이미지 만들기](https://technet.microsoft.com/library/jj126995) Windows Server Essentials 언어 팩을 install.wim에 추가 하기 전에 합니다.  
+>  먼저 [연습: 다국어 Windows 이미지 만들기](https://technet.microsoft.com/library/jj126995) 의 설명에 따라 다국어 windows 이미지를 만든 후에 Windows Server Essentials install.wim pack을 설치 합니다.  
   
  다국어 서버 설치 DVD를 만들 때 Server install.wim에 대한 언어 팩이 설치됩니다. 복원 마법사를 위한 지역화된 리소스가 언어 팩의 일부로서 설치됩니다.  
   
@@ -91,13 +91,13 @@ ms.locfileid: "59879874"
   
 ## <a name="see-also"></a>관련 항목  
 
- [만들기 및 이미지를 사용자 지정](Creating-and-Customizing-the-Image.md)   
+ [이미지  만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)  
  [추가 사용자 지정](Additional-Customizations.md)   
- [배포용 이미지 준비](Preparing-the-Image-for-Deployment.md)   
+ [배포할 이미지를 준비 하는 중](Preparing-the-Image-for-Deployment.md)   
  [사용자 환경 테스트](Testing-the-Customer-Experience.md)
 
- [만들기 및 이미지를 사용자 지정](../install/Creating-and-Customizing-the-Image.md)   
+ [이미지  만들기 및 사용자 지정](../install/Creating-and-Customizing-the-Image.md)  
  [추가 사용자 지정](../install/Additional-Customizations.md)   
- [배포용 이미지 준비](../install/Preparing-the-Image-for-Deployment.md)   
+ [배포할 이미지를 준비 하는 중](../install/Preparing-the-Image-for-Deployment.md)   
  [사용자 환경 테스트](../install/Testing-the-Customer-Experience.md)
 

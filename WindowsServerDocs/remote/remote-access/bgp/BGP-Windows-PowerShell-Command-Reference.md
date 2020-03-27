@@ -10,14 +10,14 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4b0240a3-b927-4a1e-b241-5f8f29a9552f
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 2da5bc3008b9b686ddb2bce460ced39f98183f28
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 22f4475df00e975ffc5cd0956a0126673a67f907
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71394621"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80309271"
 ---
 # <a name="bgp-windows-powershell-command-reference"></a>BGP Windows PowerShell 명령 참조
 
@@ -32,7 +32,7 @@ Windows PowerShell 스크립트를 작성 하는 경우이 항목을 참조로 �
 ## <a name="bgp-command-reference"></a>BGP 명령 참조  
 다음 섹션에서는 각 BGP 명령의 명령 이름, 용도 및 구문과 각 명령에 대 한 자세한 정보를 포함 하는 원격 액세스 참조의 명령에 대 한 링크를 제공 합니다.  
   
-이 참조에는 다음 섹션이 포함 되어 있습니다.  
+이 참조에는 다음과 같은 섹션이 포함되어 있습니다.  
   
 -   [명령 추가](#bkmk_add)  
   
@@ -52,7 +52,7 @@ Windows PowerShell 스크립트를 작성 하는 경우이 항목을 참조로 �
   
 -   [제거 명령](#bkmk_uninstall)  
   
-### <a name="bkmk_add"></a>명령 추가  
+### <a name="add-commands"></a><a name="bkmk_add"></a>명령 추가  
 다음은 BGP 추가 명령입니다.  
   
 [Add-bgpcustomroute](https://technet.microsoft.com/library/dn262684.aspx)  
@@ -103,7 +103,7 @@ Bgp 피어에 BGP 라우팅 정책을 추가 합니다.
 Add-BgpRoutingPolicyForPeer -Direction <PolicyDirection> {Ingress | Egress} -PolicyName <String[]> [-CimSession <CimSession[]> ] [-Force] [-InformationAction <System.Management.Automation.ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <System.String> ] [-PeerName <String[]> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [-Confirm] [-WhatIf] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-### <a name="bkmk_clear"></a>Clear 명령  
+### <a name="clear-commands"></a><a name="bkmk_clear"></a>Clear 명령  
 다음은 BGP에 대 한 Clear 명령입니다.  
   
 [Clear-BgpRouteFlapDampening](https://technet.microsoft.com/library/mt463114.aspx)  
@@ -114,7 +114,7 @@ Add-BgpRoutingPolicyForPeer -Direction <PolicyDirection> {Ingress | Egress} -Pol
 Clear-BgpRouteFlapDampening [-CimSession <CimSession[]> ] [-Force] [-InformationAction <ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <String> ] [-Prefix <String[]> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [-Confirm] [-WhatIf] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-### <a name="bkmk_disable"></a>명령 사용 및 사용 안 함  
+### <a name="disable-and-enable-commands"></a><a name="bkmk_disable"></a>명령 사용 및 사용 안 함  
 다음은 BGP에 대해 사용 안 함 및 사용 명령입니다.  
   
 [Disable-BgpRouteFlapDampening](https://technet.microsoft.com/library/mt463100.aspx)  
@@ -133,7 +133,7 @@ Disable-BgpRouteFlapDampening [-CimSession <CimSession[]> ] [-Force] [-Informati
 Enable-BgpRouteFlapDampening [-CimSession <CimSession[]> ] [-Force] [-InformationAction <ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <String> ] [-PassThru] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [-Confirm] [-WhatIf] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-### <a name="bkmk_get"></a>Get 명령  
+### <a name="get-commands"></a><a name="bkmk_get"></a>Get 명령  
 다음은 BGP에 대 한 Get 명령입니다.  
   
 [Add-bgpcustomroute](https://technet.microsoft.com/library/dn262664.aspx)  
@@ -200,7 +200,7 @@ BGP 피어 링 관련 메시지 및 경로 광고 통계를 검색 합니다.
 Get-BgpStatistics [-CimSession <CimSession[]> ] [-InformationAction <System.Management.Automation.ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <System.String> ] [-PeerName <String[]> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-### <a name="bkmk_install"></a>설치 명령  
+### <a name="install-commands"></a><a name="bkmk_install"></a>설치 명령  
 다음은 RAS Gateway 및 BGP에 대 한 설치 명령입니다.  
   
 [설치-원격 액세스](https://technet.microsoft.com/library/hh918408.aspx)  
@@ -234,7 +234,7 @@ Enable-RemoteAccessRoutingDomain -Name $Fabrikam_RoutingDomain -Type All -PassTh
 Install-RemoteAccess -VpnType RoutingOnly  
 ```  
   
-### <a name="bkmk_remove"></a>명령 제거  
+### <a name="remove-commands"></a><a name="bkmk_remove"></a>명령 제거  
 다음은 BGP의 제거 명령입니다.  
   
 [Add-bgpcustomroute](https://technet.microsoft.com/library/dn262669.aspx)  
@@ -286,7 +286,7 @@ Parameter Set: Remove1
 Remove-BgpRoutingPolicyForPeer [-CimSession <CimSession[]> ] [-Direction <PolicyDirection> {Ingress | Egress} ] [-Force] [-InformationAction <System.Management.Automation.ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <System.String> ] [-PeerName <String[]> ] [-PolicyName <String[]> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [-Confirm] [-WhatIf] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-### <a name="bkmk_set"></a>Set 명령  
+### <a name="set-commands"></a><a name="bkmk_set"></a>Set 명령  
 다음은 BGP에 대 한 Set 명령입니다.  
   
 [되었거나 bgppeer가](https://technet.microsoft.com/library/dn262673.aspx)  
@@ -337,7 +337,7 @@ BGP 피어에 대 한 BGP 라우팅 정책을 수정 합니다.
 Set-BgpRoutingPolicyForPeer -Direction <PolicyDirection> {Ingress | Egress} -PolicyName <String[]> [-CimSession <CimSession[]> ] [-Force] [-InformationAction <System.Management.Automation.ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <System.String> ] [-PeerName <String[]> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [-Confirm] [-WhatIf] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-### <a name="bkmk_start"></a>시작 및 중지 명령  
+### <a name="start-and-stop-commands"></a><a name="bkmk_start"></a>시작 및 중지 명령  
 다음은 BGP에 대 한 시작 및 중지 명령입니다.  
   
 [되었거나 bgppeer가](https://technet.microsoft.com/library/dn262683.aspx)  
@@ -356,7 +356,7 @@ BGP 피어에 대 한 라우팅 세션을 중지 합니다.
 Stop-BgpPeer [-Name] <String[]> [-CimSession <CimSession[]> ] [-Force] [-InformationAction <System.Management.Automation.ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <System.String> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [-Confirm] [-WhatIf] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-### <a name="bkmk_uninstall"></a>제거 명령  
+### <a name="uninstall-commands"></a><a name="bkmk_uninstall"></a>제거 명령  
 다음은 RAS Gateway 및 BGP의 제거 명령입니다.  
   
 [제거-원격 액세스](https://technet.microsoft.com/library/hh918390.aspx)  

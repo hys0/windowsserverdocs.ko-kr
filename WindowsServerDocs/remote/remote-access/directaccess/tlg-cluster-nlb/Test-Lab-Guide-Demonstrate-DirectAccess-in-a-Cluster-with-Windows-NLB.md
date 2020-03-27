@@ -10,14 +10,14 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: db15dcf5-4d64-48d7-818a-06c2839e1289
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: e0c82f9f56ea680c11cd612e17326fe7cf96aeca
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 563ccf1cf68fc6ffd67a29533b3fb3b579a55ee6
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71388434"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80308842"
 ---
 # <a name="test-lab-guide-demonstrate-directaccess-in-a-cluster-with-windows-nlb"></a>테스트 랩 가이드: Windows NLB를 사용하여 클러스터에서 DirectAccess 시연
 
@@ -31,12 +31,12 @@ ms.locfileid: "71388434"
 > [!IMPORTANT]  
 > 이 랩을 통해 컴퓨터의 개수를 최소한으로 사용하는 개념을 파악할 수 있습니다. 이 가이드에 나와 있는 세부 구성은 테스트 랩 전용이므로, 프로덕션 환경에서 사용해서는 안 됩니다.  
   
-## <a name="KnownIssues"></a>알려진 문제  
+## <a name="known-issues"></a><a name="KnownIssues"></a>알려진 문제  
 클러스터 시나리오를 구성할 때의 알려진 문제는 다음과 같습니다.  
   
 -   IPv4 전용 배포에서 단일 네트워크 어댑터로 DirectAccess를 구성하여 기본 DNS64(":3333::"을 포함하는 IPv6 주소)가 자동으로 네트워크 어댑터에 구성된 후 원격 액세스 관리 콘솔을 통해 부하 분산 사용 설정을 시도하면 사용자가 IPv6 DIP를 공급하는 프롬프트가 만들어집니다. IPv6 DIP가 제공된 경우 **커밋** 클릭 후 매개 변수가 잘못되었습니다.라는 오류와 함께 구성에 실패합니다.  
   
-    이 문제를 해결하려면  
+    이 문제를 해결하려면 다음을 수행합니다.  
   
     1.  [원격 액세스 구성 백업 및 복원](https://gallery.technet.microsoft.com/Back-up-and-Restore-Remote-e157e6a6)에서 백업을 다운로드하고 스크립트를 복원합니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "71388434"
   
     3.  실패한 단계에서 부하 분산 사용 설정을 시도합니다. 부하 분산 사용 대화 상자에서 세부 정보 영역을 확장하여 세부 정보 영역에서 마우스 오른쪽 단추를 클릭한 다음 **스크립트 복사**를 클릭합니다.  
   
-    4.  메모장을 열고 클립보드의 내용을 붙여넣습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+    4.  메모장을 열고 클립보드의 내용을 붙여넣습니다. 예를 들면 다음과 같습니다.  
   
         ```  
         Set-RemoteAccessLoadBalancer -InternetDedicatedIPAddress @('10.244.4.19/255.255.255.0','fdc4:29bd:abde:3333::2/128') -InternetVirtualIPAddress @('fdc4:29bd:abde:3333::1/128', '10.244.4.21/255.255.255.0') -ComputerName 'DA1.domain1.corp.contoso.com' -Verbose  
@@ -52,7 +52,7 @@ ms.locfileid: "71388434"
   
     5.  열려 있는 모든 원격 액세스 대화 상자와 원격 액세스 관리 콘솔을 닫습니다.  
   
-    6.  붙여넣은 텍스트를 편집하고 IPv6 주소를 제거합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+    6.  붙여넣은 텍스트를 편집하고 IPv6 주소를 제거합니다. 예를 들면 다음과 같습니다.  
   
         ```  
         Set-RemoteAccessLoadBalancer -InternetDedicatedIPAddress @('10.244.4.19/255.255.255.0') -InternetVirtualIPAddress @('10.244.4.21/255.255.255.0') -ComputerName 'DA1.domain1.corp.contoso.com' -Verbose  

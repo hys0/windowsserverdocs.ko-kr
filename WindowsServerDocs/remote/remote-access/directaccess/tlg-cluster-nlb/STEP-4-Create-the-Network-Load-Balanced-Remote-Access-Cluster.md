@@ -10,14 +10,14 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 509eaa08-c49d-448d-a71e-c1c45519ccd5
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: f888ebadfaa91b35f0924b23e9818da1c32f26e5
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: c2f855512b978462f89b8f32b1f7edf59180f563
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71388485"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80310772"
 ---
 # <a name="step-4-create-the-network-load-balanced-remote-access-cluster"></a>4 단계 네트워크 부하 분산 된 원격 액세스 클러스터 만들기
 
@@ -33,7 +33,7 @@ ms.locfileid: "71388485"
   
 3. 부하 분산 된 클러스터에 EDGE2를 추가 합니다. 이제 부하 분산을 사용 하도록 설정한 후 클러스터에 EDGE2를 추가 하 여 DirectAccess 클라이언트 연결에 대 한 부하 분산 및 고가용성을 제공할 수 있습니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 조건
 
 가상 컴퓨터에서이 테스트 랩을 만드는 경우 EDGE1 및 EDGE2에서 MAC 주소 스푸핑을 사용 하도록 설정 해야 합니다.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "71388485"
   
 3.  에 **기능 선택** 대화 상자에서 **네트워크 로드 균형 조정**, 클릭 **기능 추가**, 클릭 **다음**, 를 클릭 하 고 **설치**.  
   
-4.  **설치 진행률** 대화 상자에서 설치가 완료되었는지 확인하고 **닫기**를 클릭합니다.  
+4.  **설치 진행률** 대화 상자에서 설치가 정상적으로 완료되었는지 확인하고 **닫기**를 클릭합니다.  
   
 5.  EDGE2에 대해이 절차를 반복 합니다.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "71388485"
   
 ### <a name="enable-load-balancing"></a>부하 분산 사용  
   
-1.  EDGE1에서 **시작**을 클릭 하 고 **ramgmtui.exe**를 입력 한 다음 enter 키를 누릅니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
+1.  EDGE1에서 **시작**을 클릭 하 고 **ramgmtui.exe**를 입력 한 다음 enter 키를 누릅니다. **사용자 계정 컨트롤** 대화 상자가 표시되면 원하는 작업이 표시되어 있는지 확인하고 **예**를 클릭합니다.  
   
 2.  왼쪽된 창에서 원격 액세스 관리 콘솔에서 클릭 **구성**, 한 다음는 **작업** 창에서 클릭 **로드 균형 조정 사용**합니다.  
   
@@ -111,13 +111,13 @@ ms.locfileid: "71388485"
   
 5.  에 **요약** 페이지에서 클릭 **추가**합니다.  
   
-6.  에 **완료** 페이지에서 클릭 **닫기**합니다.  
+6.  **완료** 페이지에서 **닫기**를 클릭합니다.  
   
 7.  에 **추가 또는 제거 하는 서버** 대화 상자를 클릭 하 여 **커밋**합니다.  
   
 8.  에 **추가 및 제거 하는 서버** 대화 상자를 클릭 하 여 **닫기**합니다.  
   
-9. **시작** 화면에서**nlbmgr**를 입력 하 고 enter 키를 누릅니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
+9. **시작** 화면에서**nlbmgr**를 입력 하 고 enter 키를 누릅니다. **사용자 계정 컨트롤** 대화 상자가 표시되면 원하는 작업이 표시되어 있는지 확인하고 **예**를 클릭합니다.  
   
 10. **네트워크 부하 분산 관리자**에서 **내부 DA 클러스터**를 클릭 합니다. 세부 정보 창에서 **EDGE1 (Corpnet)** 및 **EDGE2 (Corpnet)** 의 상태가 **수렴**됨 인지 확인 합니다.  
   

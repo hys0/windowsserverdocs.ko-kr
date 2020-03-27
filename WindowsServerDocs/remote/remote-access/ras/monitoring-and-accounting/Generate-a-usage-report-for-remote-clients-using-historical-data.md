@@ -10,20 +10,20 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0305467b-ce39-4532-a05a-2cc5ff946f55
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: bae50345e8a6fd4018857e2a754d0274ce02855d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: ce5219feca1d55191352d95f2aac017709a5a449
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71367247"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80314292"
 ---
 # <a name="generate-a-usage-report-for-remote-clients-using-historical-data"></a>기록 데이터를 사용 하 여 원격 클라이언트에 대 한 사용 현황 보고서를 생성 합니다.
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-**참고:** Windows Server 2012에는 DirectAccess와 RRAS(Routing and Remote Access Service)가 단일 원격 액세스 역할로 통합되어 있습니다.  
+**참고:** Windows Server 2012 DirectAccess 및 라우팅 및 원격 액세스 서비스 (RRAS)를 단일 원격 액세스 역할로 결합 합니다.  
   
 원격 액세스 서버에서 관리 콘솔에 액세스 하는 서버는 원격 클라이언트에 대 한 사용 현황 보고서 생성 데 사용할 수 있습니다. 원격 클라이언트에 대 한 사용 현황 보고서를 생성 하려면 먼저 계정에 원격 액세스 서버를 사용 합니다. 보고서를 생성 한 후에 서버에 부하 통계를 보려면 원격 액세스 서버에서 관리 콘솔에서 사용할 수 있는 모니터링 대시보드를 사용할 수 있습니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "71367247"
   
 ![Windows PowerShell](../../../media/Generate-a-usage-report-for-remote-clients-using-historical-data/PowerShellLogoSmall.gif)***<em>windows powershell 해당 명령</em>***  
   
-다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
+다음 Windows PowerShell cmdlet은 이전 절차와 동일한 기능을 수행합니다. 서식 조건 때문에 각 cmdlet이 여러 줄로 자동 줄 바꿈되어 표시되더라도 한 줄에 입력합니다.  
   
 다음 스크립트에서 검색할 보고서에서 날짜 범위를 변경 된 **-StartDateTime** 및 **-EndDateTime** 매개 변수입니다.  
   

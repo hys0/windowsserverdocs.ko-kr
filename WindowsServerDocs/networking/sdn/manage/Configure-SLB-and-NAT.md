@@ -10,29 +10,29 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 73bff8ba-939d-40d8-b1e5-3ba3ed5439c3
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 08/23/2018
-ms.openlocfilehash: 80f1319c1abc845d7e63a2d53868bf7a3c381019
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: a12d9a1ea953b587918fed8367ee21626697e256
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406095"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80309884"
 ---
 # <a name="configure-the-software-load-balancer-for-load-balancing-and-network-address-translation-nat"></a>부하 분산 및 NAT(Network Address Translation)에 대한 소프트웨어 부하 분산 장치 구성
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-이 항목을 사용 하 여 소프트웨어 정의 네트워킹 \(SDN\) 소프트웨어 부하 분산 장치 \(SLB\) 를 사용 하 여 아웃 바운드 네트워크 주소 변환 \(NAT\)를 제공 하는 방법을 배울 수 있습니다. 인바운드 NAT 또는 응용 프로그램의 여러 인스턴스 간 부하 분산.
+이 항목을 사용 하 여 소프트웨어 정의 네트워킹 \(SDN\) 소프트웨어 부하\) \(분산 장치를 사용 하는 방법에 대 한 자세한 내용은 \(NAT\), 인바운드 NAT 또는 응용 프로그램의 여러 인스턴스 간 부하 분산을 제공 하는 아웃 바운드 네트워크 주소 변환을 제공 합니다.
 
 ## <a name="software-load-balancer-overview"></a>소프트웨어 Load Balancer 개요
 
-SDN 소프트웨어 Load Balancer \(SLB\) 는 응용 프로그램에 고가용성 및 네트워크 성능을 제공 합니다. 이는 부하 분산 장치 \(집합에 정의\) 된 가상 머신 또는 cloud services의 정상 서비스 인스턴스 간에 들어오는 트래픽을 분산 하는 계층 4 TCP, UDP 부하 분산 장치입니다.
+SDN 소프트웨어 Load Balancer \(SLB\)는 응용 프로그램에 고가용성 및 네트워크 성능을 제공 합니다. 이는 부하 분산 장치 집합에 정의 된 클라우드 서비스 또는 가상 컴퓨터의 정상 서비스 인스턴스 간에 들어오는 트래픽을 분산 하는 계층 4 \(TCP, UDP\) 부하 분산 장치입니다.
 
 SLB를 구성 하 여 다음을 수행 합니다.
 
-- 가상 네트워크 외부의 들어오는 트래픽을 가상 머신 \(vm\)(공용 VIP 부하 분산이 라고도 함)으로 부하 분산 합니다.
+- 가상 네트워크 외부에서 들어오는 트래픽의 부하를 가상 컴퓨터 \(Vm\)(공용 VIP 부하 분산이 라고도 함)에 분산 합니다.
 - 가상 네트워크의 Vm 간, 클라우드 서비스의 Vm 간 또는 크로스-프레미스 가상 네트워크의 온-프레미스 컴퓨터와 Vm 간에 들어오는 트래픽의 부하를 분산 합니다. 
 - NAT (network address translation)를 사용 하 여 가상 네트워크에서 외부 대상으로 VM 네트워크 트래픽을 전달 합니다 (아웃 바운드 NAT 라고도 함).
 - 인바운드 NAT 라고도 하는 특정 VM에 외부 트래픽을 전달 합니다.
@@ -221,7 +221,7 @@ SLB를 구성 하 여 다음을 수행 합니다.
    ``` 
 
 
-## <a name="example-use-the-software-load-balancer-for-forwarding-traffic"></a>예: 트래픽 전달에 소프트웨어 Load Balancer 사용
+## <a name="example-use-the-software-load-balancer-for-forwarding-traffic"></a>예: 트래픽을 전달 하는 데 Software Load Balancer 사용
 개별 포트를 정의 하지 않고 가상 IP를 가상 네트워크의 단일 네트워크 인터페이스에 매핑해야 하는 경우 L3 전달 규칙을 만들 수 있습니다.  이 규칙은 PublicIPAddress 개체에 포함 된 할당 된 VIP를 통해 VM에 대 한 모든 트래픽을 전달 합니다.
 
 VIP 및 DIP를 동일한 서브넷으로 정의한 경우이는 NAT 없이 L3 전달을 수행 하는 것과 같습니다.
@@ -287,7 +287,7 @@ VIP 및 DIP를 동일한 서브넷으로 정의한 경우이는 NAT 없이 L3 �
    $nic.properties.IpConfigurations[0].Properties.PublicIPAddress = $publicIP
    New-NetworkControllerNetworkInterface -ConnectionUri $uri -ResourceId $nic.ResourceId -Properties $nic.properties -PassInnerException
    ```
-   ## <a name="example-remove-a-publicip-address-that-is-being-used-for-forwarding-traffic-and-return-it-to-the-vip-pool"></a>예: 트래픽 전달에 사용 되는 PublicIP 주소를 제거 하 고 VIP 풀로 반환 합니다.
+   ## <a name="example-remove-a-publicip-address-that-is-being-used-for-forwarding-traffic-and-return-it-to-the-vip-pool"></a>예: 트래픽을 전달 하는 데 사용 되는 PublicIP 주소를 제거 하 고 VIP 풀로 반환
    이 예제에서는 이전 예제에서 만든 PublicIPAddress 리소스를 제거 합니다.  PublicIPAddress 제거 되 면 PublicIPAddress에 대 한 참조가 네트워크 인터페이스에서 자동으로 제거 되 고, 트래픽이 전달 되지 않으며, 다시 사용 하기 위해 IP 주소가 공용 VIP 풀로 반환 됩니다.  
 
 4. PublicIP 제거

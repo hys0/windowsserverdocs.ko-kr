@@ -10,14 +10,14 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8cbdeb1d-5f7c-4360-bcc1-ab40d3cd8040
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 3a80697665eeb67c2dda0d4d25201c7d02ed0c7e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: d90b20716c49b2ea0b1cd002a1c1933fbd6e26e5
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404802"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80314572"
 ---
 # <a name="step-11-configure-the-multisite-deployment"></a>11 단계 멀티 사이트 배포 구성
 
@@ -31,9 +31,9 @@ ms.locfileid: "71404802"
   
 - 두 번째 진입점으로 2-EDGE1 추가  
   
-## <a name="configDA"></a>EDGE1에서 원격 액세스 구성  
+## <a name="configure-remote-access-on-edge1"></a><a name="configDA"></a>EDGE1에서 원격 액세스 구성  
   
-1.  **시작** 화면에서**ramgmtui.exe**를 입력 한 다음 enter 키를 누릅니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
+1.  **시작** 화면에서**ramgmtui.exe**를 입력 한 다음 enter 키를 누릅니다. **사용자 계정 컨트롤** 대화 상자가 표시되면 원하는 작업이 표시되어 있는지 확인하고 **예**를 클릭합니다.  
   
 2.  원격 액세스 관리 콘솔에서 **구성**을 클릭합니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "71404802"
   
 5.  콘솔 중간 창의 **3 단계 인프라 서버** 영역에서 **편집**을 클릭 합니다.  
   
-6.  **DNS 접미사 검색 목록**을 클릭 합니다. **Dns 접미사 검색 목록** 페이지에서 **dns 클라이언트 접미사 검색 목록을 사용 하 여 DirectAccess 클라이언트 구성** 확인란을 선택 하 고 **corp.contoso.com** 및 **corp2.corp.contoso.com** 도메인 접미사를 선택 했는지 확인 합니다. **사용할 도메인 접미사** 목록에 표시 되 면 **다음**을 클릭 한 다음 마침을 클릭 합니다.  
+6.  **DNS 접미사 검색 목록**을 클릭 합니다. **Dns 접미사 검색 목록** 페이지에서 **dns 클라이언트 접미사 검색 목록을 사용 하 여 DirectAccess 클라이언트 구성** 확인란을 선택 하 고 **corp.contoso.com** 및 **corp2.corp.contoso.com** 도메인 접미사가 **사용할 도메인 접미사** 목록에 표시 되는지 확인 한 다음 **다음**을 클릭 하 고 마침을 클릭 합니다.  
   
 7.  콘솔의 가운데 창에서 클릭 **마침**합니다.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "71404802"
   
 9. **작업** 창에서 **관리 서버 새로 고침**을 클릭 하 고 완료 되 면 **닫기** 를 클릭 합니다.  
   
-## <a name="EnabledMultisite"></a>EDGE1에서 멀티 사이트 구성 사용  
+## <a name="enable-multisite-configuration-on-edge1"></a><a name="EnabledMultisite"></a>EDGE1에서 멀티 사이트 구성 사용  
   
 1.  원격 액세스 관리 콘솔의 **작업** 창에서 **멀티 사이트 사용**을 클릭 합니다.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "71404802"
   
 6.  **클라이언트 지원** 페이지에서 **Windows 7을 실행 하는 클라이언트 컴퓨터가이 진입점에 액세스 하도록 허용**을 클릭 하 고 **추가**를 클릭 합니다.  
   
-7.  **그룹 선택** 대화 상자의 **선택할 개체 이름을 입력**하십시오 .에 **Win7_Clients_Site1**을 입력 하 고 **확인**을 클릭 한 후 **다음**을 클릭 합니다.  
+7.  **그룹 선택** 대화 상자의 **선택할 개체 이름 입력**에 **Win7_Clients_Site1**를 입력 하 고 **확인**을 클릭 한 후 **다음**을 클릭 합니다.  
   
 8.  **클라이언트 GPO 설정** 페이지에서 **다음**을 클릭 합니다.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "71404802"
   
 10. 에 **멀티 사이트 배포를 사용 하도록 설정** 대화 상자를 클릭 하 여 **닫기** 멀티 사이트 배포 사용 마법사에서를 클릭 하 고 **닫기**합니다.  
   
-## <a name="AddEP"></a>두 번째 진입점으로 2-EDGE1 추가  
+## <a name="add-2-edge1-as-a-second-entry-point"></a><a name="AddEP"></a>두 번째 진입점으로 2-EDGE1 추가  
   
 1.  원격 액세스 관리 콘솔의 **작업** 창에서 **진입점 추가**를 클릭 합니다.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "71404802"
   
 7.  **클라이언트 지원** 페이지에서 **Windows 7을 실행 하는 클라이언트 컴퓨터가이 진입점에 액세스 하도록 허용**을 클릭 하 고 **추가**를 클릭 합니다.  
   
-8.  **그룹 선택** 대화 상자의 **선택할 개체 이름을 입력**하십시오 .에 **Win7_Clients_Site2**을 입력 하 고 **확인**을 클릭 한 후 **다음**을 클릭 합니다.  
+8.  **그룹 선택** 대화 상자의 **선택할 개체 이름 입력**에 **Win7_Clients_Site2**를 입력 하 고 **확인**을 클릭 한 후 **다음**을 클릭 합니다.  
   
 9. **클라이언트 GPO 설정** 페이지에서 **다음**을 클릭 합니다.  
   

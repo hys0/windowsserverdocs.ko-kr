@@ -10,14 +10,14 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f45e5b6f-fc66-4deb-bed4-a1baa3cc6dae
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 971885b4e99b3ac83c26bf6df43c275a5b729510
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: cbc4e3ca18443152ca9af45c8b47130394f4b8df
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71388645"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80309174"
 ---
 # <a name="install-and-configure-advanced-directaccess"></a>고급 DirectAccess 설치 및 구성
 
@@ -31,7 +31,7 @@ ms.locfileid: "71388645"
   
 -   [2 단계: 고급 DirectAccess 서버를 구성](da-adv-configure-s2-servers.md)합니다.  
   
-    이 단계에서는 DirectAccess 클라이언트 컴퓨터, 서버 설정, 인프라 서버 및 응용 프로그램 서버를 구성합니다.  
+    이 단계에서는 DirectAccess 클라이언트 컴퓨터, 서버 설정, 인프라 서버 및 애플리케이션 서버를 구성합니다.  
   
 -   [3 단계: 고급 DirectAccess 배포를 확인](da-adv-configure-s3-verify.md)합니다.  
   

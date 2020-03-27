@@ -3,7 +3,7 @@ title: Windows Server Essentials에서 응용 프로그램 관리
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,24 +12,24 @@ ms.assetid: ae89c46a-0afd-4858-9150-ec97650f45a4
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 1a60a9e7fd958d447b4770431a69546f0ad6f229
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 7701cbc11ec691b4d4aadd5668dce6438eb9a076
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66433355"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80311411"
 ---
 # <a name="manage-applications-in-windows-server-essentials"></a>Windows Server Essentials에서 응용 프로그램 관리
 
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
  
- Windows Server Essentials의 서버 대시보드 및 Windows Server Essentials Experience 역할이 설치 된 Windows Server 2012 R2를 사용 하면 일반적인 관리 작업을 수행할 수 있습니다. 이러한 작업을 수행하려면 다음을 참조하세요.  
+ Windows server essentials Experience 역할이 설치 된 windows Server Essentials 및 Windows Server 2012 r 2의 서버 대시보드에서 일반적인 관리 작업을 수행할 수 있습니다. 이러한 작업을 수행하려면 다음을 참조하세요.  
   
--   [대시보드에서 응용 프로그램 관리 작업](Manage-Applications-in-Windows-Server-Essentials.md#BKMK_1)  
+-   [대시보드의 응용 프로그램 관리 작업](Manage-Applications-in-Windows-Server-Essentials.md#BKMK_1)  
   
--   [설치 또는 대시보드를 사용 하 여 추가 기능 제거](Manage-Applications-in-Windows-Server-Essentials.md#BKMK_2)  
+-   [대시보드를 사용 하 여 추가 기능 설치 또는 제거](Manage-Applications-in-Windows-Server-Essentials.md#BKMK_2)  
   
-##  <a name="BKMK_1"></a> 대시보드에서 응용 프로그램 관리 작업  
+##  <a name="application-management-tasks-in-the-dashboard"></a><a name="BKMK_1"></a>대시보드의 응용 프로그램 관리 작업  
  대시보드의 **응용 프로그램** 관리 페이지는 다음 정보를 제공합니다.  
   
 - 다음을 표시하는 설치된 추가 기능 목록:  
@@ -58,14 +58,14 @@ ms.locfileid: "66433355"
 |추가 기능에 대한 개인 정보 취급 방침 읽기|인터넷 브라우저를 열고 개인 정보 취급 방침을 볼 수 있는 소스 웹 사이트로 이동합니다.|  
 |추가 기능을 설치 또는 제거하는 방법|인터넷 브라우저를 열고 주제 도움말 항목을 표시하는 웹 페이지로 이동합니다.|  
   
-##  <a name="BKMK_2"></a> 설치 또는 대시보드를 사용 하 여 추가 기능 제거  
- 추가 기능은 서버에 대한 추가적인 기능을 제공하는 소프트웨어 응용 프로그램입니다. Microsoft 및 기타 ISV(Independent Software Vendor)에서 점점 더 많은 추가 기능을 제공하고 있습니다.  
+##  <a name="install-or-remove-add-ins-using-the-dashboard"></a><a name="BKMK_2"></a>대시보드를 사용 하 여 추가 기능 설치 또는 제거  
+ 추가 기능은 서버에 대한 추가적인 기능을 제공하는 소프트웨어 애플리케이션입니다. Microsoft 및 기타 ISV(Independent Software Vendor)에서 점점 더 많은 추가 기능을 제공하고 있습니다.  
   
  추가 기능이 제공하는 확장 기능을 사용하려면 먼저 서버에 추가 기능을 설치해야 합니다.  
   
 #### <a name="to-install-an-add-in-from-microsoft-pinpoint"></a>Microsoft Pinpoint에서 추가 기능을 설치하려면  
   
-1.  서버 대시보드에서 **응용 프로그램**, **Microsoft Pinpoint** 탭을 차례로 클릭합니다.  사용할 수 있는 추가 기능 목록이 표시됩니다.  
+1.  서버 대시보드에서 **응용 프로그램**을 클릭 한 다음 **Microsoft의 Microsoft** 에서 탭을 클릭 합니다.  사용 가능한 추가 기능 목록이 표시 됩니다.  
   
 2.  설치할 추가 기능을 클릭합니다. 추가 기능 정보 페이지가 표시됩니다.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66433355"
     > [!NOTE]
     >  추가 기능을 완전히 제거하려면 대시보드를 다시 시작해야 할 수 있습니다.  
   
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
   
 -   [대시보드 개요](Overview-of-the-Dashboard-in-Windows-Server-Essentials.md)  
   

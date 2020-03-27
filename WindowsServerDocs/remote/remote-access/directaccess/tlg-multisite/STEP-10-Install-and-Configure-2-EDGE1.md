@@ -10,14 +10,14 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d98d6f7a-a2e6-45b1-9c63-08e2986a5c03
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 7044a0d219decceb7669e92e884c78bcd9e3a61c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 7d21d80f4970a501e31a053483c37268bdddb811
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71388393"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80314609"
 ---
 # <a name="step-10-install-and-configure-2-edge1"></a>10 단계 설치 및 구성 2 단계 EDGE1
 
@@ -41,7 +41,7 @@ ms.locfileid: "71388393"
   
 2-EDGE1에는 두 개의 네트워크 어댑터가 설치 되어 있어야 합니다.  
   
-## <a name="installOS"></a>2-EDGE1에 운영 체제 설치  
+## <a name="install-the-operating-system-on-2-edge1"></a><a name="installOS"></a>2-EDGE1에 운영 체제 설치  
   
 1.  Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012 설치를 시작 합니다.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "71388393"
   
 4.  네트워크 어댑터 하나를 2 Corpnet 서브넷에, 다른 하나는 시뮬레이션 된 인터넷에 연결 합니다.  
   
-## <a name="tcpip"></a>TCP/IP 속성 구성  
+## <a name="configure-tcpip-properties"></a><a name="tcpip"></a>TCP/IP 속성 구성  
   
 1.  서버 관리자 콘솔에서 **로컬 서버**를 클릭 한 다음 **속성** 영역에서 **유선 이더넷 연결**옆에 있는 링크를 클릭 합니다.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "71388393"
   
 21. **네트워크 연결** 창을 닫습니다.  
   
-## <a name="routing"></a>서브넷 간 라우팅 구성  
+## <a name="configure-routing-between-subnets"></a><a name="routing"></a>서브넷 간 라우팅 구성  
   
 1.  **시작** 화면에서**cmd.exe**를 입력 한 다음 enter 키를 누릅니다.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "71388393"
   
 5.  명령 프롬프트 창을 닫습니다.  
   
-## <a name="Join"></a>조인 2-EDGE1 to the CORP2 domain  
+## <a name="join-2-edge1-to-the-corp2-domain"></a><a name="Join"></a>조인 2-EDGE1 to the CORP2 domain  
   
 1.  서버 관리자 콘솔의 **로컬 서버**에 있는 **속성** 영역에서 **컴퓨터 이름**옆에 있는 링크를 클릭 합니다.  
   
@@ -132,11 +132,11 @@ ms.locfileid: "71388393"
   
 9. 컴퓨터가 다시 시작 되 면 **사용자 전환**을 클릭 한 다음 **기타 사용자** 를 클릭 하 고 관리자 계정을 사용 하 여 CORP2 도메인에 로그온 합니다.  
   
-## <a name="certs"></a>2-EDGE1에서 인증서 가져오기  
+## <a name="obtain-certificates-on-2-edge1"></a><a name="certs"></a>2-EDGE1에서 인증서 가져오기  
   
 1.  **시작** 화면에서**mmc.exe**를 입력 한 다음 enter 키를 누릅니다.  
   
-2.  MMC 콘솔에서에 **파일** 메뉴 클릭 **스냅인 추가/제거**합니다.  
+2.  MMC 콘솔의 **파일** 메뉴에서 **스냅인 추가/제거**를 클릭합니다.  
   
 3.  에 **추가 / 제거 스냅인** 대화 상자를 클릭 **인증서**, 클릭 **추가**, 클릭 **컴퓨터 계정**, 클릭 **다음**, 클릭 **로컬 컴퓨터**, 클릭 **마침**, 클릭 하 고 **확인**합니다.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "71388393"
   
 5.  **개인**을 마우스 오른쪽 단추로 클릭 하 고 **모든 작업**을 가리킨 다음 **새 인증서 요청**을 클릭 합니다.  
   
-6.  **다음** 을 두 번 클릭합니다.  
+6.  **다음**을 두 번 클릭합니다.  
   
 7.  **인증서 요청** 페이지에서 **클라이언트-서버 인증** 및 **웹 서버** 확인란을 선택 하 고 **이 인증서를 등록 하려면 추가 정보가 필요**합니다 .를 클릭 합니다.  
   
@@ -152,19 +152,19 @@ ms.locfileid: "71388393"
   
 9. **값**에 **2-edge1.contoso.com**를 입력 한 다음 **추가**를 클릭 합니다.  
   
-10. 에 **대체 이름** 영역에서 **형식**, 선택, **DNS**합니다.  
+10. **대체 이름** 영역의 **유형**에서 **DNS**를 선택합니다.  
   
 11. **값**에 **2-edge1.contoso.com**를 입력 한 다음 **추가**를 클릭 합니다.  
   
 12. **일반** 탭의 **이름**에 **ip-https 인증서**를 입력 합니다.  
   
-13. 클릭 **확인**, 클릭 **등록**, 를 클릭 하 고 **마침**합니다.  
+13. **확인**, **등록**을 차례로 클릭한 다음 **마침**을 클릭합니다.  
   
 14. 인증서 스냅인의 세부 정보 창에서 이름이 2-edge1.contoso.com 인 새 인증서가 서버 인증의 용도에 등록 되어 있고 이름이 2-edge1.corp2.corp.contoso.com 인 새 인증서가 등록 되어 있는지 확인 합니다. 클라이언트 인증 및 서버 인증의 용도입니다.  
   
 15. 콘솔 창을 닫습니다. 설정을 저장할 것인지 묻는 메시지가 표시 되 면 **아니요**를 클릭 합니다.  
   
-## <a name="Access"></a>CORP\User1에 대 한 액세스 제공  
+## <a name="provide-access-to-corpuser1"></a><a name="Access"></a>CORP\User1에 대 한 액세스 제공  
   
 1.  **시작** 화면에서**compmgmt.msc**를 입력 한 다음 enter 키를 누릅니다.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "71388393"
   
 8.  컴퓨터 관리 창을 닫습니다.  
   
-## <a name="InstallDA"></a>2-EDGE1에 원격 액세스 역할 설치  
+## <a name="install-the-remote-access-role-on-2-edge1"></a><a name="InstallDA"></a>2-EDGE1에 원격 액세스 역할 설치  
   
 1.  서버 관리자 콘솔에서에 **대시보드**, 클릭 **역할 및 기능 추가**합니다.  
   
@@ -194,7 +194,7 @@ ms.locfileid: "71388393"
   
 5.  **설치 선택 확인** 대화 상자에서 **설치**를 클릭합니다.  
   
-6.  **설치 진행률** 대화 상자에서 설치가 완료되었는지 확인하고 **닫기**를 클릭합니다.  
+6.  **설치 진행률** 대화 상자에서 설치가 정상적으로 완료되었는지 확인하고 **닫기**를 클릭합니다.  
   
 
 

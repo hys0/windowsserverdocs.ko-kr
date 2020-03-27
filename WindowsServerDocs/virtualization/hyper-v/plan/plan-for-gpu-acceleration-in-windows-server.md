@@ -1,19 +1,19 @@
 ---
 title: Windows Server의 GPU 가속 계획
 description: DDA 및 RemoteFX vGPU를 포함 하 여 GPU 가속을 위한 다양 한 Hyper-v 기술에 대해 알아봅니다.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: rickman
 author: rick-man
 ms.author: rickman
 manager: stevelee
 ms.topic: article
 ms.date: 08/21/2019
-ms.openlocfilehash: f62357de1ab167d0a6be4eb63b9d6d23bfac7371
-ms.sourcegitcommit: 81198fbf9e46830b7f77dcd345b02abb71ae0ac2
+ms.openlocfilehash: 7ca8d29b58dc8682575d9cb8b0f26aa49b257335
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72923905"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80307853"
 ---
 # <a name="plan-for-gpu-acceleration-in-windows-server"></a>Windows Server의 GPU 가속 계획
 
@@ -26,7 +26,7 @@ ms.locfileid: "72923905"
 워크 로드에 따라 GPU 가속을 고려 하는 것이 좋습니다. GPU 가속을 선택 하기 전에 고려해 야 할 사항은 다음과 같습니다.
 
 - **앱 및 데스크톱 원격 (VDI/DaaS) 워크 로드**: Windows Server를 사용 하 여 앱 또는 데스크톱 원격 서비스를 빌드하는 경우 사용자가 실행할 것으로 생각 되는 앱의 카탈로그를 고려 합니다. CAD/CAM 앱, 시뮬레이션 앱, 게임 및 렌더링/시각화 앱과 같은 일부 유형의 앱은 부드러운 대화형 대화형 작업을 제공 하기 위해 3D 렌더링에 크게 의존 합니다. 대부분의 고객은 이러한 종류의 앱을 통해 적절 한 사용자 환경을 위해 Gpu를 사용 하는 것을 고려 합니다.
-- **원격 렌더링, 인코딩 및 시각화 워크 로드**: 이러한 그래픽 지향 작업을 수행 하기 위해 효율적인 3d 렌더링 및 프레임 인코딩/디코딩과 같은 GPU의 특수 기능에 크게 의존 하는 경향이 있습니다. 비용 효율성 및 처리량 목표. 이러한 종류의 워크 로드에서 단일 GPU 사용 VM은 많은 CPU 전용 vm의 처리량을 일치 시킬 수 있습니다.
+- **원격 렌더링, 인코딩 및 시각화 워크 로드**: 이러한 그래픽 지향 워크 로드는 비용 효율성 및 처리량 목표를 달성 하기 위해 효율적인 3d 렌더링 및 프레임 인코딩/디코딩과 같은 GPU의 특수화 된 기능에 크게 의존 하는 경향이 있습니다. 이러한 종류의 워크 로드에서 단일 GPU 사용 VM은 많은 CPU 전용 vm의 처리량을 일치 시킬 수 있습니다.
 - **HPC 및 ML 워크 로드**: 고성능 계산 및 기계 학습 모델 학습 또는 유추와 같은 매우 효율적인 데이터 병렬 계산 워크 로드의 경우 gpu는 결과, 유추 시간 및 학습 시간을 크게 단축할 수 있습니다. 또는 비교 가능한 성능 수준에서 CPU 전용 아키텍처 보다 더 나은 비용 효율성을 제공할 수 있습니다. 많은 HPC 및 기계 학습 프레임 워크에는 GPU 가속을 사용 하도록 설정 하는 옵션이 있습니다. 이로 인해 특정 작업에 도움이 될 수 있는지 여부를 고려 합니다.
 
 ## <a name="gpu-virtualization-in-windows-server"></a>Windows Server의 GPU 가상화
@@ -60,7 +60,7 @@ RemoteFX vGPU는 단일 실제 GPU를 여러 가상 컴퓨터에서 공유할 �
 
 자세한 내용은 아래 항목을 참조하세요.
 
-- [RemoteFX vGPU를 사용 하 여 그래픽 장치 배포](../deploy/deploy-graphics-devices-using-remotefx-vgpu.md)
+- [RemoteFX vGPU를 사용하여 그래픽 디바이스 배포](../deploy/deploy-graphics-devices-using-remotefx-vgpu.md)
 - [RemoteFX 3D 비디오 어댑터 (vGPU) 지원](../../../remote/remote-desktop-services/rds-supported-config.md#remotefx-3d-video-adapter-vgpu-support)
 
 ## <a name="comparing-dda-and-remotefx-vgpu"></a>DDA 및 RemoteFX vGPU 비교
@@ -76,7 +76,7 @@ RemoteFX vGPU는 단일 실제 GPU를 여러 가상 컴퓨터에서 공유할 �
 | GPU VRAM              | 최대 1GB 전용 VRAM                                                           | GPU에서 지원하는 최대 VRAM                                                     |
 | 프레임 속도            | 최대 30fps                                                                         | 최대 60fps                                                                         |
 | 게스트의 GPU 드라이버   | RemoteFX 3D 어댑터 디스플레이 드라이버(Microsoft)                                      | GPU 공급 업체 드라이버 (NVIDIA, AMD, Intel)                                              |
-| 호스트 OS 지원       | Windows Server 2016                                                                 | Windows Server 2016; Windows Server 2019                                            |
+| 호스트 OS 지원       | Windows Server 2016                                                                 | Windows Server 2016; Windows Server 2019                                            |
 | 게스트 OS 지원      | Windows Server 2012 R2; Windows Server 2016; Windows 7 SP1 Windows 8.1; Windows 10 | Windows Server 2012 R2; Windows Server 2016; Windows Server 2019; Windows 10; 용 |
 | 하이퍼바이저            | Microsoft Hyper-V                                                                   | Microsoft Hyper-V                                                                   |
 | GPU 하드웨어          | 엔터프라이즈 GPU(예: Nvidia Quadro/GRID 또는 AMD FirePro)                         | 엔터프라이즈 GPU(예: Nvidia Quadro/GRID 또는 AMD FirePro)                         |

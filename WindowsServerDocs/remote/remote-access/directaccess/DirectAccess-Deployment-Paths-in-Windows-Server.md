@@ -10,20 +10,20 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 22ccd5c3-0a26-484c-88c8-54119d1228cc
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: edbc9a3e44f3f2aa2586f7c82462255beec3733b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: f2874f5ab75723f6a0fec137dd1f1cd7d6a2efbb
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404997"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80310962"
 ---
 # <a name="directaccess-deployment-paths-in-windows-server"></a>Windows Server의 DirectAccess 배포 경로
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-이 항목에서는 두 가지 기본 원격 액세스 배포 경로에 대 한 설명서 목록을 제공 합니다. **기본** 및 **고급**.  
+이 항목에서는 두 가지 기본 원격 액세스 배포 경로에 대 한 설명서 목록 ( **기본** 및 **고급**)을 제공 합니다.  
   
 아래 섹션을 사용 하 여 DirectAccess 기본 경로와 고급 배포 경로 간의 차이점을 이해 하 고 설명서 링크를 사용 하 여 목표에 가장 적합 한 배포 가이드를 찾을 수 있습니다.  
   

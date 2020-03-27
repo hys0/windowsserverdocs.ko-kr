@@ -3,7 +3,7 @@ title: 공유 폴더 사용자 지정
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: 47bc4986-14eb-4a29-9930-83a25704a3a0
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: d8f52cbe76204bb00cb15c3093f69daf3d8abb6e
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 387f9570e87bd2bd65266489b0f3eac6c945e3be
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66433529"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80311913"
 ---
 # <a name="customize-shared-folders"></a>공유 폴더 사용자 지정
 
@@ -25,7 +25,7 @@ ms.locfileid: "66433529"
 
 기본적으로 서버 폴더는 디스크 0의 가장 큰 데이터 파티션에 생성됩니다. 파트너는 다음 단계에 따라 위치를 사용자 지정하고 추가 서버 폴더를 지정할 수 있습니다.  
   
-1. 사용자 지정 파티션 구성을 사용하여 출하 시 이미지를 만든 다음 sysprep을 사용하기 전에 새 저장소 레지스트리 키를 만듭니다. IC(초기 구성) 동안 저장소 IC 작업에서 이 레지스트리 키를 확인합니다. 레지스트리 키가 있는 경우 기본 서버 폴더가 C:\ServerFolders 디렉터리에 만들어집니다.  
+1. 사용자 지정 파티션 구성을 사용하여 출하 시 이미지를 만든 다음 sysprep을 사용하기 전에 새 저장소 레지스트리 키를 만듭니다. IC(초기 구성) 동안 스토리지 IC 작업에서 이 레지스트리 키를 확인합니다. 레지스트리 키가 있는 경우 기본 서버 폴더가 C:\ServerFolders 디렉터리에 만들어집니다.  
   
    #### <a name="to-create-a-new-storage-registry-key"></a>새 저장소 레지스트리 키를 만들려면  
   
@@ -47,13 +47,13 @@ ms.locfileid: "66433529"
   
    9. 이 새 키 값을 **1**로 설정한 다음 **확인**을 클릭합니다.  
   
-2. PostIC.cmd 스크립트를 사용하여 폴더를 다른 위치로 이동하거나 추가 폴더를 만듭니다. 다음 예제를 참조하십시오. [예제 1: 사용자 지정 폴더를 만들고 기본 폴더는 Windows PowerShell을 사용 하 여 PostIC.cmd에서 새 위치로 이동](Customize-Shared-Folders.md#BKMK_Example1)합니다.  
+2. PostIC.cmd 스크립트를 사용하여 폴더를 다른 위치로 이동하거나 추가 폴더를 만듭니다. [예제 1: Windows PowerShell을 사용하여 PostIC.cmd에서 사용자 지정 폴더를 만들고 기본 폴더를 새 위치로 이동](Customize-Shared-Folders.md#BKMK_Example1)을 참조하십시오.  
   
-3. Windows Server 솔루션 SDK를 사용하여 폴더를 다른 위치로 이동하거나 추가 폴더를 만듭니다. 다음 예제를 참조하십시오. [예제 2: 사용자 지정 폴더를 만들고 Windows Server 솔루션 SDK를 사용 하 여 기존 폴더를 이동](Customize-Shared-Folders.md#BKMK_Example2)합니다.  
+3. Windows Server 솔루션 SDK를 사용하여 폴더를 다른 위치로 이동하거나 추가 폴더를 만듭니다. [예제 2: Windows Server 솔루션 SDK를 사용하여 사용자 지정 폴더를 만들고 기존 폴더를 이동](Customize-Shared-Folders.md#BKMK_Example2)을 참조합니다.  
   
    선택적으로 파트너는 C 드라이브에 데이터 폴더를 남겨둘 수 있습니다. 이렇게 하면 최종 사용자 또는 대리점이 데이터 드라이브에서 데이터 폴더의 레이아웃을 확인할 수 있습니다.  
   
-###  <a name="BKMK_Example1"></a> 예제 1: Windows PowerShell을 사용하여 PostIC.cmd에서 사용자 지정 폴더를 만들고 기본 폴더를 새 위치로 이동합니다.  
+###  <a name="example-1-create-a-custom-folder-and-move-the-default-folders-to-a-new-location-from-posticcmd-by-using-windows-powershell"></a><a name="BKMK_Example1"></a>예제 1: Windows PowerShell을 사용 하 여 사용자 지정 폴더를 만들고 PostIC .cmd에서 새 위치로 기본 폴더 이동  
   
 1.  [초기 구성 후 작업 실행을 위해 PostIC.cmd 파일 만들기](Create-the-PostIC.cmd-File-for-Running-Post-Initial-Configuration-Tasks.md) 섹션의 세부 정보에 따라 초기 구성 후 작업 실행을 위해 PostIC.cmd 파일을 만듭니다.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66433529"
     Set ERRORLEVEL=%error_level%  
     ```  
   
-###  <a name="BKMK_Example2"></a> 예제 2: Windows Server 솔루션 SDK를 사용하여 사용자 지정 폴더를 만들고 기존 폴더를 이동합니다.  
+###  <a name="example-2-create-a-custom-folder-and-move-an-existing-folder-by-using-the-windows-server-solutions-sdk"></a><a name="BKMK_Example2"></a>예제 2: Windows Server 솔루션 SDK를 사용 하 여 사용자 지정 폴더를 만들고 기존 폴더를 이동 합니다.  
  만든 코드는 실행 파일로 컴파일하여 PostIC.cmd 파일에서 호출하거나 설치된 추가 기능에서 직접 호출할 수 있습니다.  
   
 ```  
@@ -144,7 +144,7 @@ static void Main(string[] args)
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [만들기 및 이미지를 사용자 지정](Creating-and-Customizing-the-Image.md)   
+ [이미지  만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)  
  [추가 사용자 지정](Additional-Customizations.md)   
- [배포용 이미지 준비](Preparing-the-Image-for-Deployment.md)   
+ [배포할 이미지를 준비 하는 중](Preparing-the-Image-for-Deployment.md)   
  [사용자 환경 테스트](Testing-the-Customer-Experience.md)
