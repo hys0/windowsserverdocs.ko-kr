@@ -10,14 +10,14 @@ ms.technology: networking-bc
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a4587cff-c086-49f1-a0bf-cd74b8a44440
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 15d57d12679d7441da080ad671264ca1e5e1f42c
-ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 1eea3e11231e1be94db1f88d77faa89a67d46444
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76822806"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318519"
 ---
 # <a name="branchcache"></a>BranchCache
 
@@ -33,11 +33,11 @@ ms.locfileid: "76822806"
 
 **BranchCache에 관심이 있는 사용자는 누구 인가요?**
 
-시스템 관리자, 네트워크 또는 스토리지 솔루션 구축자 또는 기타 IT 전문가라면 다음과 같은 상황에서 BranchCache를 사용할 수 있습니다.
+시스템 관리자, 네트워크/저장소 솔루션 구축자 또는 기타 IT 전문가라면 다음과 같은 상황에서 BranchCache를 사용할 수 있습니다.
 
 - 실제 위치가 둘 이상이고 지점에서 본사로 연결되는 WAN(광역 네트워크)을 사용하는 조직을 위해 IT 인프라를 디자인하거나 지원하는 경우
 
-- 클라우드 기술을 배포했으며 작업자들이 WAN 연결을 사용하여 원격 위치의 데이터 및 애플리케이션에 액세스하는 조직을 위해 IT 인프라를 디자인하거나 지원하는 경우
+- 클라우드 기술을 배포했으며 작업자들이 WAN 연결을 사용하여 원격 위치의 데이터 및 응용 프로그램에 액세스하는 조직을 위해 IT 인프라를 디자인하거나 지원하는 경우
 
 - 지점과 본사 간의 네트워크 트래픽 양을 줄여 WAN 대역폭 사용을 최적화하려는 경우
 
@@ -45,7 +45,7 @@ ms.locfileid: "76822806"
 
 - 지점에 클라이언트 컴퓨터는 Windows 10, Windows 8.1, Windows 8 또는 Windows 7 실행 됩니다.
 
-이 항목의 내용은 다음과 같습니다.
+이 항목은 다음과 같은 섹션으로 구성됩니다.
 
 -   [BranchCache 란?](#bkmk_what)
 
@@ -69,17 +69,17 @@ ms.locfileid: "76822806"
   
 -   [캐시 보안](#bkmk_cache)  
   
-## <a name="bkmk_what"></a>BranchCache 란?
+## <a name="what-is-branchcache"></a><a name="bkmk_what"></a>BranchCache 란?
 
-BranchCache는 일부 버전의 Windows Server 2016 및 Windows 10 운영 체제와 Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2 및 Windows 7의 일부 버전에 포함 되어 있는 광역 네트워크 (WAN) 대역폭 최적화 기술입니다. 사용자가 원격 서버의 콘텐츠에 액세스할 때 WAN 대역폭을 최적화하기 위해 BranchCache는 본사 또는 호스팅된 클라우드 콘텐츠 서버에서 콘텐츠를 가져와서 지점 사무실의 캐시에 해당 콘텐츠를 저장하기 때문에 지점 사무실의 클라이언트 컴퓨터가 WAN을 통해서가 아니라 로컬로 콘텐츠에 액세스할 수 있습니다.
+BranchCache는 일부 버전의 Windows Server 2016 및 Windows 10 운영 체제와 Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2 및 Windows 7의 일부 버전에 포함 되어 있는 광역 네트워크 (WAN) 대역폭 최적화 기술입니다. 파일을 사용자가 원격 서버의 콘텐츠에 액세스할 때 WAN 대역폭을 최적화 하려면 BranchCache 본사에서 콘텐츠를 가져오며 또는 호스트 된 클라우드 콘텐츠 서버 및 캐시 지점 사무실 위치에서 콘텐츠를 클라이언트 컴퓨터는 WAN을 통해이 아닌 로컬 콘텐츠를 액세스 하는 지사 사무소에 허용 합니다.
   
 지점에서 콘텐츠 캐시를 호스팅하도록 또는 Windows 10, Windows 8.1, Windows 8 또는 Windows 7를 실행 하는 클라이언트 컴퓨터에서 지점에 서버가 없는 경우 구성 된 서버에 저장 됩니다. 클라이언트 컴퓨터가 본사에서 콘텐츠를 요청하여 수신한 후 이 콘텐츠가 지점에 캐시되면 같은 지점의 다른 컴퓨터에서는 WAN 연결을 통해 콘텐츠 서버의 콘텐츠를 다운로드하지 않고도 로컬로 콘텐츠를 사용할 수 있게 됩니다.
 
-클라이언트 컴퓨터에서 같은 콘텐츠에 대한 후속 요청을 수행하는 경우 클라이언트는 실제 콘텐츠를 다운로드하는 것이 아니라 서버에서 *콘텐츠 정보* 를 다운로드합니다. 콘텐츠 정보는 원본 콘텐츠 청크를 사용하여 계산되는 해시로 구성되며 원본 데이터의 콘텐츠에 비해 크기가 매우 작습니다. 그런 다음 클라이언트 컴퓨터는 콘텐츠 정보를 사용하여 지사의 캐시(클라이언트 컴퓨터 또는 서버에 있음)에서 콘텐츠를 찾습니다. 또한 클라이언트 컴퓨터와 서버는 콘텐츠 정보를 사용하여 권한이 없는 사용자가 액세스할 수 없도록 캐시된 콘텐츠를 보호합니다.
+클라이언트 컴퓨터에서 같은 콘텐츠에 대한 후속 요청을 수행하는 경우 클라이언트는 실제 콘텐츠를 다운로드하는 것이 아니라 서버에서 *콘텐츠 정보*를 다운로드합니다. 콘텐츠 정보는 원본 콘텐츠 청크를 사용하여 계산되는 해시로 구성되며 원본 데이터의 콘텐츠에 비해 크기가 매우 작습니다. 그런 다음 클라이언트 컴퓨터는 콘텐츠 정보를 사용하여 지사의 캐시(클라이언트 컴퓨터 또는 서버에 있음)에서 콘텐츠를 찾습니다. 또한 클라이언트 컴퓨터와 서버는 콘텐츠 정보를 사용하여 권한이 없는 사용자가 액세스할 수 없도록 캐시된 콘텐츠를 보호합니다.
 
 BranchCache는 지점에 있는 클라이언트와 서버의 콘텐츠 쿼리 응답 속도를 개선하여 최종 사용자 생산성을 높일 뿐만 아니라, WAN 연결을 통한 트래픽을 줄임으로써 네트워크 성능도 향상시킬 수 있습니다.
 
-## <a name="BKMK_2"></a>BranchCache 모드
+## <a name="branchcache-modes"></a><a name="BKMK_2"></a>BranchCache 모드
 BranchCache에는 분산 캐시 모드와 호스트 캐시 모드의 두 가지 작동 모드가 있습니다.
 
 분산 캐시 모드로 BranchCache를 배포하는 경우 지점의 콘텐츠 캐시는 클라이언트 컴퓨터 간에 분산됩니다.
@@ -113,12 +113,12 @@ BranchCache를 배포할 지점에 추가 인프라(예: 다른 워크로드를 
 > [!CAUTION]
 > 파일 및 폴더의 SMB 캐싱을 위해 BranchCache를 사용하는 경우에는 오프라인 파일을 사용하지 않도록 설정하지 마세요. 오프라인 파일을 사용하지 않도록 설정하면 BranchCache SMB 캐싱이 올바르게 작동하지 않습니다.
 
-## <a name="BKMK_3"></a>BranchCache 사용 가능 콘텐츠 서버
+## <a name="branchcache-enabled-content-servers"></a><a name="BKMK_3"></a>BranchCache 사용 가능 콘텐츠 서버
 
 BranchCache를 배포할 때 원본 콘텐츠는 본사에서 또는 클라우드 데이터 센터에서 BranchCache 사용 가능 콘텐츠 서버에 저장 됩니다. BranchCache에서 지원되는 콘텐츠 서버 유형은 다음과 같습니다.
 
 > [!NOTE]
-> 소스 내용만-즉, 클라이언트 컴퓨터는 BranchCache 사용 가능 콘텐츠 서버에서 처음 가져온는 콘텐츠는 BranchCache에서 가속 됩니다. 클라이언트 컴퓨터가 인터넷의 웹 서버나 Windows 업데이트 등의 다른 출처로부터 직접 가져온 콘텐츠는 클라이언트 컴퓨터 또는 호스트 캐시 서버에서 캐시된 다음 지점의 다른 컴퓨터와 공유되지 않습니다. 그러나 Windows 업데이트 콘텐츠를 가속 하려는 경우 본사 또는 클라우드 데이터 센터에서 Windows Server Update Services (WSUS) 애플리케이션 서버를 설치 하 수 BranchCache 콘텐츠 서버로 구성 합니다.
+> 소스 내용만-즉, 클라이언트 컴퓨터는 BranchCache 사용 가능 콘텐츠 서버에서 처음 가져온는 콘텐츠는 BranchCache에서 가속 됩니다. 클라이언트 컴퓨터가 인터넷의 웹 서버나 Windows 업데이트 등의 다른 출처로부터 직접 가져온 콘텐츠는 클라이언트 컴퓨터 또는 호스트 캐시 서버에서 캐시된 다음 지점의 다른 컴퓨터와 공유되지 않습니다. 그러나 Windows 업데이트 콘텐츠를 가속 하려는 경우 본사 또는 클라우드 데이터 센터에서 Windows Server Update Services (WSUS) 응용 프로그램 서버를 설치 하 수 BranchCache 콘텐츠 서버로 구성 합니다.
 
 ### <a name="web-servers"></a>웹 서버
 
@@ -134,24 +134,24 @@ BranchCache를 배포할 때 원본 콘텐츠는 본사에서 또는 클라우�
 
 ### <a name="application-servers"></a>응용 프로그램 서버
 
-Windows Server 2016, Windows Server 2012 R2, Windows Server 2012를 실행 하는 컴퓨터를 포함 하는 지원 되는 애플리케이션 서버 또는 Windows Server 2008 r 2와 BITS Background Intelligent Transfer Service () 설치 하 고 사용 하도록 설정 합니다. 
+Windows Server 2016, Windows Server 2012 R2, Windows Server 2012를 실행 하는 컴퓨터를 포함 하는 지원 되는 응용 프로그램 서버 또는 Windows Server 2008 r 2와 BITS Background Intelligent Transfer Service () 설치 하 고 사용 하도록 설정 합니다. 
 
-또한 애플리케이션 서버에는 BranchCache 기능이 설치되어 있어야 합니다. 응용 프로그램 서버의 예로 WSUS (Microsoft Windows Server Update Services) 및 Microsoft 끝점 Configuration Manager 분기 배포 지점 서버를 BranchCache 콘텐츠 서버로 배포할 수 있습니다.
+또한 응용 프로그램 서버에는 BranchCache 기능이 설치되어 있어야 합니다. 응용 프로그램 서버의 예로 WSUS (Microsoft Windows Server Update Services) 및 Microsoft 끝점 Configuration Manager 분기 배포 지점 서버를 BranchCache 콘텐츠 서버로 배포할 수 있습니다.
 
-## <a name="BKMK_3a"></a>BranchCache 및 클라우드
+## <a name="branchcache-and-the-cloud"></a><a name="BKMK_3a"></a>BranchCache 및 클라우드
 
-클라우드를 사용하면 운영 경비를 줄이고 작동 범위를 새로운 수준으로 확장할 수 있어 매우 유용하지만, 사용자에게 익숙한 위치가 아닌 클라우드로 워크로드를 이전하는 경우 네트워킹 비용이 증가하고 생산성이 저하될 수 있습니다. 사용자는 고성능을 예상 하 고 애플리케이션 및 데이터 호스팅되는 신경 쓰지 않습니다. 
+클라우드를 사용하면 운영 경비를 줄이고 작동 범위를 새로운 수준으로 확장할 수 있어 매우 유용하지만, 사용자에게 익숙한 위치가 아닌 클라우드로 작업을 이전하는 경우 네트워킹 비용이 증가하고 생산성이 저하될 수 있습니다. 사용자는 고성능을 예상 하 고 응용 프로그램 및 데이터 호스팅되는 신경 쓰지 않습니다. 
 
-BranchCache는 공유 데이터 캐시를 통해 네트워크 애플리케이션의 성능을 개선하고 대역폭 사용량을 줄일 수 있습니다.  즉, BranchCache는 작업자들이 클라우드에 배포된 서버를 사용하는 본사와 지점의 생산성을 높여 줍니다.
+BranchCache는 공유 데이터 캐시를 통해 네트워크 응용 프로그램의 성능을 개선하고 대역폭 사용량을 줄일 수 있습니다.  즉, BranchCache는 작업자들이 클라우드에 배포된 서버를 사용하는 본사와 지점의 생산성을 높여 줍니다.
 
-BranchCache는 하드웨어를 새로 추가하거나 네트워크 토폴로지를 변경하지 않고도 사용할 수 있어 여러 사무실 위치와 퍼블릭 및 프라이빗 클라우드 간의 통신을 개선하는 데 최적의 솔루션입니다.
+BranchCache는 하드웨어를 새로 추가하거나 네트워크 토폴로지를 변경하지 않고도 사용할 수 있어 여러 사무실 위치와 공용 및 프라이빗 클라우드 간의 통신을 개선하는 데 최적의 솔루션입니다.
 
 > [!NOTE]
 > 일부 웹 프록시 비표준 Content-encoding 헤더를 처리할 수 없는 때문에 하이퍼 텍스트 전송 프로토콜 보안 (HTTPS) 및 HTTP가 아닌 BranchCache를 사용 하는 것이 좋습니다.
   
 = = = = = = = Windows Server 2016의 클라우드 기술에 대 한 자세한 내용은 [소프트웨어 정의 네트워킹 &#40;SDN&#41;](../sdn/Software-Defined-Networking--SDN-.md)을 참조 하세요.
   
-## <a name="bkmk_version"></a>콘텐츠 정보 버전
+## <a name="content-information-versions"></a><a name="bkmk_version"></a>콘텐츠 정보 버전
 
 두 가지 콘텐츠 정보 버전에는 다음의 두 가지 종류가 있습니다.
 
@@ -178,13 +178,13 @@ BranchCache는 하드웨어를 새로 추가하거나 네트워크 토폴로지�
 >[!IMPORTANT]
 >분산 캐시 모드에서 BranchCache를 배포할 경우 다른 콘텐츠 정보 버전을 사용하는 클라이언트는 다른 클라이언트와 콘텐츠를 공유하지 않습니다. 예를 들어, Windows 7을 실행 하는 클라이언트 컴퓨터와 동일한 지점에 설치 된 Windows 10을 실행 하는 클라이언트 컴퓨터를 서로 콘텐츠를 공유 하지 않습니다.
   
-## <a name="bkmk_handles"></a>BranchCache에서 파일의 콘텐츠 업데이트를 처리 하는 방법
+## <a name="how-branchcache-handles-content-updates-in-files"></a><a name="bkmk_handles"></a>BranchCache에서 파일의 콘텐츠 업데이트를 처리 하는 방법
 
 지점 사용자가 수정 하거나 문서의 콘텐츠를 업데이트 하는 경우 해당 변경 내용이 BranchCache의 개입 없이도 본사 콘텐츠 서버에 직접 기록 됩니다. 사용자가 콘텐츠 서버에서 문서를 다운로드했거나 지점의 호스트 캐시나 분산 캐시에서 문서를 가져온 경우에도 마찬가지입니다.
 
 수정된 파일을 지점의 다른 클라이언트에서 요청하는 경우, 파일의 새 세그먼트가 본사 서버에서 다운로드되어 해당 지점의 분산 캐시나 호스트 캐시에 추가됩니다. 이 때문에 지점 사용자는 항상 최신 버전의 캐시된 콘텐츠를 수신합니다.
 
-## <a name="BKMK_4"></a>BranchCache 설치 가이드
+## <a name="branchcache-installation-guide"></a><a name="BKMK_4"></a>BranchCache 설치 가이드
 
 Windows Server 2016의 BranchCache 기능 또는 파일 서비스 서버 역할의 네트워크 파일 역할 서비스용 BranchCache를 설치 하려면 서버 관리자를 사용할 수 있습니다. 다음 표를 사용하여 역할 서비스와 기능 중 설치할 항목을 결정할 수 있습니다.
 
@@ -198,13 +198,13 @@ Windows Server 2016의 BranchCache 기능 또는 파일 서비스 서버 역할�
 
 역할 서비스나 기능을 설치하려면 서버 관리자를 열고 BranchCache 기능을 사용하도록 설정할 컴퓨터를 선택합니다. 서버 관리자에서 **관리**, **역할 및 기능 추가**를 차례로 클릭합니다. **역할 및 기능 추가** 마법사가 열립니다. 마법사를 실행하면서 다음을 선택합니다.
 
-- **설치 유형 선택**마법사 페이지에서 **역할 기반 또는 기능 기반 설치**를 선택합니다.
+- **설치 유형 선택** 마법사 페이지에서 **역할 기반 또는 기능 기반 설치**를 선택합니다.
 
-- 마법사 페이지 **서버 역할 선택**에서 BranchCache 사용 가능 파일 서버를 설치하는 경우 **파일 및 스토리지 서비스** 및 **파일 및 iSCSI 서비스**를 확장한 다음, **네트워크 파일용 BranchCache**를 선택합니다.  디스크 공간을 절약 하기를 선택할 수도 있습니다는 **데이터 중복 제거** 역할 서비스를 선택한 다음 마법사를 통해 설치 및 완성을 계속 합니다. BranchCache 사용 가능 파일 서버를 설치하지 않으려면 네트워크 파일 역할 서비스용 BranchCache로 파일 및 스토리지 서비스 역할을 설치하지 마십시오.
+- 마법사 페이지에서 **서버 역할 선택**, BranchCache 사용 가능 파일 서버를 설치 하는 경우, 확장 **파일 및 저장소 서비스** 및 **파일 및 iSCSI 서비스**, 를 선택한 다음 **네트워크 파일용 BranchCache**합니다.  디스크 공간을 절약 하기를 선택할 수도 있습니다는 **데이터 중복 제거** 역할 서비스를 선택한 다음 마법사를 통해 설치 및 완성을 계속 합니다. BranchCache 사용 가능 파일 서버를 설치 하려면 네트워크 파일 역할 서비스용 BranchCache와의 파일 및 저장소 서비스 역할을 설치 하지 마십시오.
 
 - 마법사 페이지에서 **기능 선택**, 선택 하는 호스트 캐시 서버를 설치 하는 파일 서버를 콘텐츠 서버를 설치 하는 경우 **BranchCache**, 선택한 다음 마법사를 통해 설치 및 완성을 계속 합니다. 파일 서버나 호스트 캐시 서버 이외의 콘텐츠 서버를 설치하지 않으려면 BranchCache 기능을 설치하지 마세요.
   
-## <a name="bkmk_os"></a>BranchCache에 대 한 운영 체제 버전
+## <a name="operating-system-versions-for-branchcache"></a><a name="bkmk_os"></a>BranchCache에 대 한 운영 체제 버전
 
 다음은 각 BranchCache 기능 유형을 지원하는 운영 체제의 목록입니다.
 
@@ -214,15 +214,15 @@ Windows Server 2016의 BranchCache 기능 또는 파일 서비스 서버 역할�
 
 - Windows 10 Enterprise
 
-- Windows 10 Education
+- Windows 10 Education
 
-- Windows 8.1 Enterprise
+- Windows 8.1 Enterprise
 
 - Windows 8 Enterprise
 
 - Windows 7 Enterprise
 
-- Windows 7 Ultimate
+- Windows 7 Ultimate
 
 다음 운영 체제에서 BranchCache HTTP와 SMB 기능을 지원 하지 않지만 비트 BranchCache 기능을 지원 합니다.
 
@@ -235,7 +235,7 @@ Windows Server 2016의 BranchCache 기능 또는 파일 서비스 서버 역할�
 -   Windows 7 Pro 비트만 지원
 
 > [!NOTE]
-> BranchCache는 Windows Server 2008 또는 Windows Vista 운영 체제에서 기본적으로 제공 되지 않습니다. 그러나 이러한 운영 체제에서 다운로드 하 고 Windows 관리 프레임 워크 업데이트를 설치 하는 경우 BranchCache 기능을 사용할 수는 BITS Background Intelligent Transfer Service () 프로토콜입니다. 자세한 내용을 확인 하 고 Windows Management Framework를 다운로드 하려면 https://go.microsoft.com/fwlink/?LinkId=188677 에서 [Windows Management framework (Windows PowerShell 2.0, WinRM 2.0 및 BITS 4.0)](https://go.microsoft.com/fwlink/?LinkId=188677) 를 참조 하세요.
+> BranchCache는 Windows Server 2008 또는 Windows Vista 운영 체제에서 기본적으로 제공 되지 않습니다. 그러나 이러한 운영 체제에서 다운로드 하 고 Windows 관리 프레임 워크 업데이트를 설치 하는 경우 BranchCache 기능을 사용할 수는 BITS Background Intelligent Transfer Service () 프로토콜입니다. 자세한 내용을 확인 하 고 Windows Management Framework를 다운로드 하려면 https://go.microsoft.com/fwlink/?LinkId=188677에서 [Windows Management framework (Windows PowerShell 2.0, WinRM 2.0 및 BITS 4.0)](https://go.microsoft.com/fwlink/?LinkId=188677) 를 참조 하세요.
   
 ### <a name="operating-systems-for-branchcache-content-server-functionality"></a>BranchCache 콘텐츠 서버 기능을 지원하는 운영 체제
 
@@ -253,7 +253,7 @@ BranchCache 호스트 캐시 서버 운영 체제의 Windows Server 2016, Window
 
 또한 BranchCache 호스트 캐시 서버는 다음 Windows Server 2008 R2 운영 체제를 사용할 수 있습니다.
 
-- Windows Server 2008 R2 Enterprise
+- Windows Server 2008 R2 Enterprise
 
 - Hyper-v가 설치 된 Windows Server 2008 R2 Enterprise
 
@@ -261,7 +261,7 @@ BranchCache 호스트 캐시 서버 운영 체제의 Windows Server 2016, Window
 
 - Windows Server 2008 R2 Enterprise Server Core 설치 Hyper-v가 설치 된
 
-- Itanium 기반 시스템용 Windows Server 2008 R2
+- Itanium 기반 시스템용 Windows Server 2008 R2
 
 - Windows Server 2008 R2 Datacenter
 
@@ -269,11 +269,11 @@ BranchCache 호스트 캐시 서버 운영 체제의 Windows Server 2016, Window
 
 - Windows Server 2008 R2 Datacenter Server Core 설치 Hyper-v가 설치 된
 
-## <a name="bkmk_security"></a>BranchCache 보안
+## <a name="branchcache-security"></a><a name="bkmk_security"></a>BranchCache 보안
 
 BranchCache는 기존 네트워크 보안 아키텍처와 함께 원활하게 작동하는 기본 보안 방식을 구현하며, 추가 장비나 복잡한 추가 보안 구성을 사용할 필요가 없습니다.
   
-BranchCache는 침투성 솔루션이 아니고 Windows 인증 또는 권한 부여 프로세스를 변경하지 않습니다. BranchCache를 배포한 후에도 인증은 도메인 자격 증명을 사용하여 수행되며 ACL(액세스 제어 목록) 기능을 사용한 권한 부여 방식은 변경되지 않습니다. 또한 다른 구성도 BranchCache 배포 전과 동일하게 계속 작동합니다.
+BranchCache는 침투성 솔루션이 아니고 Windows 인증 또는 권한 부여 프로세스를 변경하지 않습니다. BranchCache를 배포한 후에도 인증은 도메인 자격 증명을 사용하여 수행되며 ACL(Access Control 목록) 기능을 사용한 권한 부여 방식은 변경되지 않습니다. 또한 다른 구성도 BranchCache 배포 전과 동일하게 계속 작동합니다.
 
 BranchCache 보안 모델은 일련의 해시 형식인 메타데이터 작성을 기반으로 합니다. 이러한 해시를 콘텐츠 정보라고도 합니다.
 
@@ -318,7 +318,7 @@ BranchCache는 피어 콘텐츠 캐싱 프로토콜 및 검색 프레임워크 �
 
 또한 BranchCache는 실제 콘텐츠 자체를 처리 및 전송할 때 사용하는 것과 같은 수준의 보안으로 콘텐츠 정보를 처리합니다.
 
-## <a name="bkmk_flow"></a>콘텐츠 흐름 및 프로세스
+## <a name="content-flow-and-processes"></a><a name="bkmk_flow"></a>콘텐츠 흐름 및 프로세스
 
 콘텐츠 정보 및 실제 콘텐츠의 흐름은 다음의 네 단계로 구분됩니다.
 
@@ -332,7 +332,7 @@ BranchCache는 피어 콘텐츠 캐싱 프로토콜 및 검색 프레임워크 �
 
 다음 섹션에서는 이러한 단계에 대해 설명합니다.
 
-## <a name="BKMK_8"></a>BranchCache 프로세스: 콘텐츠 요청
+## <a name="branchcache-processes-request-content"></a><a name="BKMK_8"></a>BranchCache 프로세스: 콘텐츠 요청
 
 첫 번째 단계에서는 지점의 클라이언트 컴퓨터가 본사와 같이 원격 위치에 있는 콘텐츠 서버에서 파일 또는 웹 페이지 등의 콘텐츠를 요청합니다. 그러면 콘텐츠 서버에서 클라이언트 컴퓨터가 요청한 콘텐츠를 받을 권한이 있는지 확인합니다. 클라이언트 컴퓨터에 권한이 있고 콘텐츠 서버와 클라이언트는 BranchCache 경우\-콘텐츠 서버는 콘텐츠 정보 생성을 사용 합니다.
 
@@ -352,7 +352,7 @@ BranchCache는 피어 콘텐츠 캐싱 프로토콜 및 검색 프레임워크 �
 
 이러한 방식이 사용되므로 서버 암호를 소유하고 있지 않은 엔터티는 데이터 블록의 실제 콘텐츠를 검색할 수 없습니다. 지정된 세그먼트의 세그먼트 암호를 알고 있으면 엔터티가 피어로부터 세그먼트를 가져와서 암호를 해독할 수 있으므로, 세그먼트 암호는 일반 텍스트 세그먼트와 동일한 수준의 보안으로 처리됩니다. 서버 암호를 확인한다고 해서 특정 일반 텍스트를 즉시 알아낼 수 있는 것은 아니지만, 서버 암호를 사용해 암호화 텍스트에서 특정 유형의 데이터를 파생시킨 다음 부분적으로 알려진 일부 데이터를 무차별 암호 대입 공격(brute force attack)에 노출시킬 수는 있습니다. 따라서 서버 암호는 기밀로 유지해야 합니다.
   
-## <a name="BKMK_9"></a>BranchCache 프로세스: 콘텐츠 찾기
+## <a name="branchcache-processes-locate-content"></a><a name="BKMK_9"></a>BranchCache 프로세스: 콘텐츠 찾기
 
 클라이언트 컴퓨터에서 콘텐츠 정보를 받으면 클라이언트가 세그먼트 ID를 사용해 로컬 지점 캐시에서 요청한 콘텐츠를 찾습니다. 캐시는 클라이언트 컴퓨터 간에 분산되어 있을 수도 있고, 호스트 캐시 서버에 있을 수도 있습니다.
 
@@ -372,7 +372,7 @@ WS-Discovery 프로세스가 정상적으로 진행되는지는 검색을 수행
 
 저장된 콘텐츠는 클라이언트 컴퓨터나 호스트 캐시 서버의 로컬 캐시에 추가됩니다. 이 경우 콘텐츠 정보는 클라이언트 또는 호스트 캐시 서버가 해시와 일치하지 않는 콘텐츠를 로컬 캐시에 추가하지 못하도록 합니다. 일치하는 해시로 콘텐츠를 확인하는 프로세스를 통해 유효한 콘텐츠만 캐시에 추가할 수 있으며 로컬 캐시의 무결성을 보호할 수 있습니다.
 
-## <a name="BKMK_10"></a>BranchCache 프로세스: 콘텐츠 검색
+## <a name="branchcache-processes-retrieve-content"></a><a name="BKMK_10"></a>BranchCache 프로세스: 콘텐츠 검색
 
 클라이언트 컴퓨터는 콘텐츠 호스트(호스트된 캐시 서버 또는 분산 캐시 모드 클라이언트 컴퓨터)에서 원하는 콘텐츠를 찾으면 콘텐츠 검색 프로세스를 시작합니다.
 
@@ -421,7 +421,7 @@ BranchCache는 암호화 알고리즘에 적합한 초기화 벡터를 생성하
 
     *클라이언트의 데이터 요청이 비정상적으로 많은 경우에 해당합니다*. BranchCache 프로토콜은 큐 관리 카운터와 타이머를 통합하여 클라이언트의 오버로드를 방지합니다.
 
-## <a name="BKMK_11"></a>BranchCache 프로세스: 콘텐츠 캐시
+## <a name="branchcache-processes-cache-content"></a><a name="BKMK_11"></a>BranchCache 프로세스: 콘텐츠 캐시
 
 지점에 있는 분산 캐시 모드 클라이언트 컴퓨터와 호스트 캐시 서버에서는 WAN 연결을 통해 콘텐츠를 검색하면 시간이 지남에 따라 콘텐츠 캐시가 작성됩니다.
 
@@ -433,10 +433,10 @@ BranchCache는 암호화 알고리즘에 적합한 초기화 벡터를 생성하
 
 - 클라이언트 컴퓨터가 호스트 캐시 서버에 제공할 수 있는 세그먼트 내에 블록 집합이 포함되어 있어야 합니다. 클라이언트는 제공된 세그먼트에 대한 콘텐츠 정보를 제공해야 합니다. 이 세그먼트는 세그먼트 ID, 세그먼트 데이터 해시, 세그먼트 암호 및 세그먼트 내에 포함된 모든 블록 해시 목록으로 구성됩니다.
 
-- 호스트 캐시에 대 한 인증서와 연결 된 프라이빗 키에는 Windows Server 2008 R2, 호스트 캐시 서버를 실행 하는 서버 필수 이며 인증서를 발급 한 인증 기관 (CA) 지점에서 클라이언트 컴퓨터에서 신뢰할 수 있어야 합니다. 그러면 클라이언트와 서버가 HTTPS 서버 인증에 정상적으로 참가할 수 있습니다.
+- Windows Server 2008 R2를 실행하는 호스트 캐시 서버의 경우, 호스팅된 캐시 서버 인증서와 관련 프라이빗 키가 필요하며 인증서를 발급하는 CA(인증 기관)는 지점에 있는 클라이언트 컴퓨터에서 신뢰할 수 있어야 합니다. 그러면 클라이언트와 서버가 HTTPS 서버 인증에 정상적으로 참가할 수 있습니다.
 
     > [!IMPORTANT]
-    > 호스트 캐시 서버 인증서와 연결 된 프라이빗 키에는 Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012를 실행 하는 호스트 캐시 서버가 필요 하지 않습니다.  
+    > 호스트 캐시 서버 인증서와 연결된 프라이빗 키에는 Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012를 실행하는 호스트 캐시 서버가 필요하지 않습니다.  
 
 - 클라이언트 컴퓨터는 호스트 캐시 서버가 BranchCache 트래픽을 수신 대기하는 TCP(Transmission Control Protocol) 포트 번호와 호스트 캐시 서버의 컴퓨터 이름을 사용해 구성되어 있어야 합니다. 호스트 캐시 서버 인증서는이 포트에 바인딩되어 있습니다. 호스트 캐시 서버의 컴퓨터 이름은 호스트 캐시 서버가 도메인 구성원 컴퓨터인 경우 FQDN(정규화된 도메인 이름)일 수 있으며, 호스트된 캐시 서버가 도메인 구성원이 아닌 경우에는 컴퓨터의 NetBIOS 이름일 수 있습니다.
 
@@ -454,7 +454,7 @@ BranchCache는 암호화 알고리즘에 적합한 초기화 벡터를 생성하
 
 세그먼트 데이터 해시, 블록 해시 목록 및 세그먼트 암호는 다운로드 중인 콘텐츠가 변조되거나 변경되지 않았음을 확인하는 데 사용됩니다. 다운로드된 블록은 호스트 캐시 서버의 블록 캐시에 추가됩니다.
 
-## <a name="bkmk_cache"></a>캐시 보안  
+## <a name="cache-security"></a><a name="bkmk_cache"></a>캐시 보안  
 이 섹션에서는 BranchCache가 클라이언트 컴퓨터와 호스트 캐시 서버의 캐시된 데이터를 보호하는 방법에 대해 설명합니다.
 
 ### <a name="client-computer-cache-security"></a>클라이언트 컴퓨터 캐시 보안

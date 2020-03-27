@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: article
 ms.assetid: 55686a9c-60dd-47f4-9f1f-fe72c2873a44
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: dc6ade92eb5fe04271033973911ccb98e871d236
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 2ac8dc289cf321266d39016f841c243899fe6cf4
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406376"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80319066"
 ---
 # <a name="branchcache-hosted-cache-mode-deployment-overview"></a>BranchCache 호스트 캐시 모드 배포 개요
 
@@ -23,7 +23,7 @@ ms.locfileid: "71406376"
 
 이 개요에는 배포는 간단한 단계별 개요 뿐만 아니라 필요한 BranchCache 인프라에 포함 됩니다.
 
-## <a name="bkmk_components"></a>호스트 캐시 서버 배포 인프라
+## <a name="hosted-cache-server-deployment-infrastructure"></a><a name="bkmk_components"></a>호스트 캐시 서버 배포 인프라
 
 이 배포에서는 호스트 캐시 서버는 Active Directory 도메인 서비스에 서비스 연결 지점을 사용 하 여 배포 된 \(AD DS\), Windows Server 2016, Windows Server 2012 R2 및 Windows Server 2012에서는 웹에서의 공유 콘텐츠 prehash 파일 기반된 콘텐츠 서버를 BranchCache와 옵션이 후 호스트 캐시 서버에서 콘텐츠를 미리 로드 합니다.
 
@@ -56,7 +56,7 @@ D c 1은 도메인 컨트롤러 및 기본 도메인 정책 또는 다른 정책
 
 새 BranchCache 그룹 정책 설정을 적용 하 고 클라이언트를 찾아 호스트 캐시 서버를 사용 하도록 하려면 클라이언트 컴퓨터에서 그룹 정책을 새로 고쳐야 합니다.
 
-## <a name="bkmk_overview"></a>호스트 캐시 서버 배포 프로세스 개요
+## <a name="hosted-cache-server-deployment-process-overview"></a><a name="bkmk_overview"></a>호스트 캐시 서버 배포 프로세스 개요
 
 >[!NOTE]
 >이러한 단계를 수행 하는 방법에 대 한 세부 정보 섹션에 제공 됩니다 [BranchCache 호스트 캐시 모드 배포](4-Bc-Hcm-Deployment.md)합니다.

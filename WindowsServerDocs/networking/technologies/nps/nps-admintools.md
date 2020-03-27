@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 5de80dc0-53be-42b7-8e5b-24d213bf2b25
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 527fbf52d68f36d198068514476868bcba930a68
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 1bb6447197bfed1108a62be077b0a076bef995da
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71396454"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80316354"
 ---
 # <a name="network-policy-server-management-with-administration-tools"></a>관리 도구를 사용하여 네트워크 정책 서버 관리
 
@@ -38,7 +38,7 @@ NPS를 설치한 후에는이 절차를 사용 하 여 NPS MMC를 통해 로컬 
 
 **관리 자격 증명** 
 
-이 절차를 완료 하려면 Administrators 그룹의 멤버 여야 합니다.
+이 절차를 완료하려면 Administrators 그룹의 구성원이어야 합니다.
 
 ### <a name="to-configure-the-local-nps-by-using-the-nps-console"></a>NPS 콘솔을 사용 하 여 로컬 NPS를 구성 하려면
 
@@ -58,7 +58,7 @@ NPS를 설치한 후에는이 절차를 사용 하 여 NPS MMC를 통해 로컬 
 
 **관리 자격 증명** 
 
-이 절차를 완료 하려면 Administrators 그룹의 멤버 여야 합니다.
+이 절차를 완료하려면 Administrators 그룹의 구성원이어야 합니다.
 
 ### <a name="to-manage-multiple-npss-by-using-the-nps-snap-in"></a>에서 NPS snap\-를 사용 하 여 여러 NPSs를 관리 하려면
 

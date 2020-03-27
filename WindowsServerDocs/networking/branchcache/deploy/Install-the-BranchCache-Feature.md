@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 4f31dc61-2dbe-4c7e-b3f9-85ae49a45049
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 5ee438ef57d3355cf19713d8574591aeea6ae06f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: a895e65686a6ccfb1453bc7cc7ddfcab5720a206
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406437"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80319209"
 ---
 # <a name="install-the-branchcache-feature"></a>BranchCache 기능 설치
 
@@ -23,7 +23,7 @@ ms.locfileid: "71406437"
   
 멤버 자격이 **관리자** 또는 이와 동등한 최소한이이 절차를 수행 하려면 필요 합니다.  
   
-이 절차를 수행 하기 전에 설치 하 고 BITS 기반 응용 프로그램 또는 웹 서버를 구성 하는 것이 좋습니다.  
+이 절차를 수행 하기 전에 설치 하 고 BITS 기반 애플리케이션 또는 웹 서버를 구성 하는 것이 좋습니다.  
   
 > [!NOTE]  
 > 관리자는 Windows PowerShell을 실행 하는 Windows PowerShell을 사용 하 여이 절차를 수행 하려면 Windows PowerShell 프롬프트에서 다음 명령을 입력 하 고 ENTER 키를 누릅니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "71406437"
   
 5.  **기능 선택**, 클릭 **BranchCache**, 를 클릭 하 고 **다음**합니다.  
   
-6.  **설치 선택 확인**, 클릭 **설치**합니다. **설치 진행률**, BranchCache 기능 설치를 진행 합니다. 설치가 완료 되 면 클릭 **닫기**합니다.  
+6.  **설치 선택 확인**에서 **설치**를 클릭합니다. **설치 진행률**, BranchCache 기능 설치를 진행 합니다. 설치가 완료 되 면 클릭 **닫기**합니다.  
   
 BranchCache 기능을 설치한 후 라고도 PeerDistSvc-BranchCache 서비스-를 사용 하 고 시작 유형이 자동 인지 합니다.  
   

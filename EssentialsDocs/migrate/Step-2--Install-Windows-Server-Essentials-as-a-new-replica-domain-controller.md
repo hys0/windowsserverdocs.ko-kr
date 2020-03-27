@@ -3,7 +3,7 @@ title: '2단계: Windows Server Essentials를 새 복제본 도메인 컨트롤�
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,27 +12,27 @@ ms.assetid: c7ccfc34-63fd-436b-a1cd-e05810f60bfe
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 757012b7d1a57a001e3b55cdc0604b63852a3d3c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 5968db77c091dbca1eb7d38f5e924e5f449052ce
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59816464"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318773"
 ---
 # <a name="step-2-install-windows-server-essentials-as-a-new-replica-domain-controller"></a>2단계: Windows Server Essentials를 새 복제본 도메인 컨트롤러로 설치
 
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-이 섹션에서는 Windows Server Essentials 및 Windows Server 2012 R2 Standard (사용 하 여 사용 하도록 설정 하는 Windows Server Essentials Experience 역할)는 도메인 컨트롤러로 설치 하는 방법을 설명 합니다.  
+이 섹션에서는 windows server essentials 및 windows server 2012 R2 Standard (Windows Server Essentials Experience 역할이 사용 하도록 설정 된 상태)를 도메인 컨트롤러로 설치 하는 방법을 설명 합니다.  
   
- 최대 25 명의 사용자와 50 대 미만의 장치를 사용 하 여 환경에 대 한이 이전 버전의 Windows SBS에서 Windows Server Essentials로 마이그레이션이 가이드의 단계를 수행할 수 있습니다. 최대 100 명의 사용자와 200 대의 장치가 있는 환경의 Windows Server Essentials Experience 역할이 설치 된 Windows Server 2012 R2의 Standard 및 Datacenter 버전으로 마이그레이션할 동일한 지침을 따를 수 있습니다. 이 문서에서는 두 시나리오를 모두 설명합니다.  
+ 최대 25 명의 사용자와 50 장치가 있는 환경의 경우이 가이드의 단계를 수행 하 여 이전 버전의 Windows SBS에서 Windows Server Essentials로 마이그레이션할 수 있습니다. 최대 100 명의 사용자 및 200 장치가 있는 환경의 경우 동일한 지침에 따라 Windows Server Essentials Experience 역할이 설치 된 Windows Server 2012 R2 Standard 및 Datacenter 버전으로 마이그레이션할 수 있습니다. 이 문서에서는 두 시나리오를 모두 설명합니다.  
   
 > [!IMPORTANT]
->  Windows Server Essentials에 마이그레이션하는 경우에 네트워크에서 원본 서버를 제거할 때까지 21 일 유예 기간 동안 매일으로 이벤트 로그에 다음과 같은 오류 메시지가 추가 됩니다. 21일 유예 기간 이후에 원본 서버가 종료됩니다. <br> **FSMO 역할 검사 라이선스 정책을 준수 하지 않는 환경에서 조건을 감지 했습니다. 관리 서버는 주 도메인 컨트롤러 및 도메인 명명 마스터 Active Directory 역할을 보유하고 있어야 합니다. 지금 Active Directory 역할을 관리 서버로 이동하세요. 이 서버는 자동으로 종료이 조건이 처음 감지 된 시간 으로부터 21 일 내에 문제가 해결 되지 않으면**합니다.   
+>  Windows Server Essentials로 마이그레이션하는 경우 네트워크에서 원본 서버를 제거할 때까지 21 일 유예 기간에 매일 다음 오류 메시지가 이벤트 로그에 추가 됩니다. 21일 유예 기간 이후에 원본 서버가 종료됩니다. <br> **FSMO 역할 검사가 사용자 환경에서 라이선스 정책을 준수 하지 않는 조건을 검색 했습니다. 관리 서버는 주 도메인 컨트롤러 및 도메인 명명 마스터 Active Directory 역할을 보유 해야 합니다. 지금 Active Directory 역할을 관리 서버로 이동 하세요. 이 조건이 처음 감지 된 시간 으로부터 21 일 내에 문제가 해결 되지 않으면이 서버가 자동으로 종료**됩니다.   
   
-#### <a name="install-windows-server-essentials-or-windows-server-2012-r2-standard-on-the-destination-server"></a>대상 서버에서 Windows Server Essentials 또는 Windows Server 2012 R2 Standard 설치  
+#### <a name="install-windows-server-essentials-or-windows-server-2012-r2-standard-on-the-destination-server"></a>대상 서버에 Windows Server Essentials 또는 Windows Server 2012 R2 Standard 설치  
   
-1.  지침에 따라 사용 하도록 설정 된 Windows Server Essentials Experience 역할을 사용 하 여 Windows Server Essentials 또는 Windows Server 2012 R2 Standard를 설치 [설치 및 Windows Server Essentials 구성](../install/Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md)합니다.  
+1.  Windows server essentials [설치 및 구성](../install/Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md)의 지침에 따라 Windows Server essentials Experience 역할이 사용 하도록 설정 된 Windows server Essentials 또는 windows Server 2012 R2 Standard를 설치 합니다.  
   
     > [!NOTE]
     >  Windows Server Essentials 구성 마법사가 시작되면 취소합니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "59816464"
 2.  원본 서버에서 FSMO 역할을 전송합니다.  
   
     > [!NOTE]
-    >  Windows Server Essentials 도메인의 유일한 도메인 컨트롤러인 경우 FSMO 역할이 Windows Server Essentials를 실행 하 여 원본 서버의 수준을 내릴 때 서버에 자동으로 이동 됩니다.  
+    >  Windows Server Essentials가 도메인의 유일한 도메인 컨트롤러인 경우, 원본 서버의 수준을 내릴 때 FSMO 역할이 Windows Server Essentials를 실행 하는 서버로 자동으로 이동 합니다.  
   
 3.  서버 관리자를 열고 역할 및 기능 추가 마법사를 실행합니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "59816464"
     2.  **사용자** 탭을 클릭하고 Active Directory의 사용자 계정이 나열되어 있는지 확인합니다.  
   
 ### <a name="transfer-the-operations-master-roles"></a>작업 마스터 역할 전송  
- 작업 마스터 (신축 단일 마스터 작업 또는 FSMO 라고도 함) 역할이 대상 서버에서 Windows Server Essentials를 설치한 때 로부터 21 일 이내 대상 서버가 원본 서버에서 전송 되어야 합니다.  
+ 작업 마스터 (신축 단일 마스터 작업 또는 FSMO 라고도 함) 역할은 대상 서버에 Windows Server Essentials를 설치한 후 21 일 이내에 원본 서버에서 대상 서버로 전송 되어야 합니다.  
   
 ##### <a name="to-transfer-the-operations-master-roles"></a>작업 마스터 역할을 전송하려면  
   
@@ -79,7 +79,7 @@ ms.locfileid: "59816464"
   
     3.  **connections**를 입력하고 Enter 키를 누릅니다.  
   
-    4.  형식 **서버에 연결** *< ServerName\>*  (여기서 *< ServerName\>*  대상 서버의 이름), 한 다음 ENTER를 누릅니다.  
+    4.  **서버에 연결** *< servername\>* 을 입력 하 고 enter 키를 누릅니다. 여기서 *< servername\>* 은 대상 서버의 이름입니다.  
   
     5.  명령 프롬프트에 **q**를 입력하고 Enter 키를 누릅니다.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "59816464"
   
         4.  **transfer RID master**를 입력하고 Enter 키를 누른 후 **역할 전송 확인** 대화 상자에서 **예**를 클릭합니다.  
   
-        5.  **transfer schema master**를 입력하고 Enter 키를 누른 후 **역할 전송 확인** 대화 상자에서 **예** 를 클릭합니다.  
+        5.  **transfer schema master**를 입력하고 Enter 키를 누른 후 **역할 전송 확인** 대화 상자에서 **예**를 클릭합니다.  
   
     6.  **q**를 입력한 후 명령 프롬프트로 돌아갈 때까지 Enter 키를 누릅니다.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "59816464"
 >  네트워크의 모든 서버에서 작업 마스터 역할이 대상 서버로 전송되었는지 확인할 수 있습니다. 관리자 권한으로 명령 프롬프트 창을 엽니다(자세한 내용은 [관리자 권한으로 명령 프롬프트 창을 열려면](https://technet.microsoft.com/library/cc947813\(v=WS.10\).aspx)(영문) 참조). **netdom query fsmo**를 입력하고 Enter 키를 누릅니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- Windows Server Essentials를 새 복제본 도메인 컨트롤러로 설치 했습니다. 이제 [3 단계: 새 Windows Server Essentials 서버에 컴퓨터 가입](Step-3--Join-computers-to-the-new-Windows-Server-Essentials-server.md)합니다.  
+ Windows Server Essentials를 새 복제본 도메인 컨트롤러로 설치 했습니다. 이제 [3 단계: 새 Windows Server Essentials 서버에 컴퓨터 연결](Step-3--Join-computers-to-the-new-Windows-Server-Essentials-server.md)로 이동 합니다.  
   
-모든 단계를 보려면 [Windows Server Essentials로 마이그레이션](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md)합니다.
+모든 단계를 보려면 [Windows Server Essentials로 마이그레이션](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md)을 참조 하세요.
 

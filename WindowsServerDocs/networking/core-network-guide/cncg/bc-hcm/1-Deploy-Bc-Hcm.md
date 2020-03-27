@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: article
 ms.assetid: 4235231c-4732-4ea9-9330-2a8c8a616d39
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 49e74132dba2909b7e5b639c95ef50064cf23e8c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 1da6df19933d3a4b9866b0428fb0088ac5f862b9
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71356383"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80319094"
 ---
 # <a name="deploy-branchcache-hosted-cache-mode"></a>BranchCache 호스트 캐시 모드 배포
 
@@ -44,7 +44,7 @@ ms.locfileid: "71356383"
 
 - [추가 리소스](11-Bc-Hcm-additional-resources.md)
 
-## <a name="bkmk_pre"></a>이 가이드를 사용 하기 위한 필수 조건
+## <a name="prerequisites-for-using-this-guide"></a><a name="bkmk_pre"></a>이 가이드를 사용 하기 위한 필수 조건
 
 Windows Server 2016 핵심 네트워크 가이드에 부록 가이드입니다. 이 가이드를 사용하여 호스트 캐시 모드로 BranchCache를 배포하려면 먼저 다음을 수행해야 합니다.
 
@@ -60,7 +60,7 @@ Windows Server 2016 핵심 네트워크 가이드에 부록 가이드입니다. 
 - BITS Background Intelligent Transfer Service (), 하이퍼 텍스트 전송 프로토콜 (HTTP) 및 서버 메시지 블록 (SMB)를 지 원하는 BranchCache를 제공 하는 다음 운영 체제 중 하나를 실행 하는 지점의 클라이언트 컴퓨터를 배포 합니다.
     - Windows 10 Enterprise
     - Windows 10 Education
-    - Windows 8.1 Enterprise
+    - Windows 8.1 Enterprise
     - Windows 8 Enterprise
 
 > [!NOTE]
@@ -69,13 +69,13 @@ Windows Server 2016 핵심 네트워크 가이드에 부록 가이드입니다. 
 >     - Windows 8.1 Pro 비트만 지원
 >     - Windows 8 Pro 비트만 지원
 
-## <a name="bkmk_about"></a>이 가이드 정보
+## <a name="about-this-guide"></a><a name="bkmk_about"></a>이 가이드 정보
 
 이 가이드는 Windows Server 2016 핵심 네트워크 가이드 또는 Windows Server 2012 핵심 네트워크 가이드의 지침에 따라 핵심 네트워크를 배포 하는 네트워크 및 시스템 관리자를 위한 것 이며, Active Directory Domain Services \(AD DS\), 도메인 이름 서비스 \(DNS\), 동적 호스트 구성 프로토콜 \(DHCP\)및 TCP\/IP v4를 비롯 한 핵심 네트워크 가이드에 포함 된 기술을 이전에 배포한 사용자를 대상으로 합니다.
 
 이 배포 시나리오에서 사용되는 각 기술에 대한 디자인 및 배포 가이드를 검토하는 것이 좋습니다. 이들 가이드를 통해 이 배포 시나리오가 조직 네트워크에 필요한 서비스 및 구성을 제공하는지 확인할 수 있습니다.
 
-## <a name="bkmk_not"></a>이 가이드에서 제공 하지 않는 내용
+## <a name="what-this-guide-does-not-provide"></a><a name="bkmk_not"></a>이 가이드에서 제공 하지 않는 내용
 
 이 가이드에서는 BranchCache 모드 및 기능에 대한 정보를 포함하여 BranchCache에 대한 개념 정보를 제공하지 않습니다.  
 
@@ -88,7 +88,7 @@ Windows Server 2016 핵심 네트워크 가이드에 부록 가이드입니다. 
 > [!IMPORTANT]
 > Windows Server 2008 r 2를 사용 하 여 호스트 캐시 서버는 Windows Server 2008 r 2를 실행 하는 경우 [BranchCache 배포 가이드](https://technet.microsoft.com/library/ee649232(v=ws.10).aspx) 이 가이드를 호스트 캐시 모드로 BranchCache를 배포 하는 대신 합니다. Windows 10에 Windows 7에서의 Windows 버전을 실행 중인 모든 BranchCache 클라이언트에이 설명서에서 설명 하는 그룹 정책 설정을 적용 합니다. 이 가이드의 단계를 사용 하 여 Windows Server 2008 r 2를 실행 중인 컴퓨터를 구성할 수 없습니다.
 
-## <a name="bkmk_tech"></a>기술 개요
+## <a name="technology-overviews"></a><a name="bkmk_tech"></a>기술 개요
 
 이 부록 가이드에서 설치 및 구성하는 데 필요한 기술은 BranchCache뿐입니다. 웹 및 파일 서버와 같은 콘텐츠 서버에서 Windows PowerShell BranchCache 명령을 실행해야 하지만 어떤 방식으로든 콘텐츠 서버를 변경하거나 다시 구성할 필요가 없습니다. 또한 Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012에서 AD DS를 실행 중인 도메인 컨트롤러에서 그룹 정책을 사용 하 여 클라이언트 컴퓨터를 구성 해야 합니다.
 

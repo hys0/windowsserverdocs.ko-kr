@@ -10,14 +10,14 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a1ce7af5-f3fe-4fc9-82e8-926800e37bc1
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 71a6d38b9c77b3b8c24b28f78114daa63f5bd527
-ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 7c6b4e4d4975303aef6a2334bce164ce498f7254
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76822536"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80314281"
 ---
 # <a name="step-1-plan-the-remote-access-infrastructure"></a>1 단계 원격 액세스 인프라 계획
 
@@ -154,13 +154,13 @@ ISATAP는 DirectAccessclients를 원격으로 관리 하는 데 필요 하므로
   
 -   CRL을 항상 사용할 수 있도록 공용 CA를 사용하는 것이 좋습니다.  
   
--   주체 필드에 원격 액세스 서버 인터넷 어댑터의 IPv4 주소를 지정 하거나 IP-HTTPS URL (ConnectTo 주소)의 FQDN을 지정 합니다. 원격 액세스 서버가 NAT 디바이스 뒤에 있는 경우에는 NAT 디바이스의 공개 이름 또는 주소를 지정해야 합니다.  
+-   주체 필드에 원격 액세스 서버 인터넷 어댑터의 IPv4 주소를 지정 하거나 IP-HTTPS URL (ConnectTo 주소)의 FQDN을 지정 합니다. 원격 액세스 서버가 NAT 장치 뒤에 있는 경우에는 NAT 장치의 공개 이름 또는 주소를 지정해야 합니다.  
   
 -   인증서의 일반 이름이 IP-HTTPS 사이트의 이름과 일치해야 합니다.  
   
 -   에 대 한는 **향상 된 키 용도** 필드의 경우는 서버 인증 OID (개체 식별자)를 사용 합니다.  
   
--   에 대 한는 **CRL 배포 지점** 필드에서 인터넷에 연결 된 DirectAccess 클라이언트에서 액세스할 수 있는 CRL 배포 지점을 지정 합니다.  
+-   **CRL 배포 지점** 필드의 경우 인터넷에 연결된 DirectAccess 클라이언트에서 액세스할 수 있는 CRL 배포 지점을 지정합니다.  
   
     > [!NOTE]  
     > 이는 Windows 7을 실행 하는 클라이언트에만 필요 합니다.  
@@ -174,7 +174,7 @@ ISATAP는 DirectAccessclients를 원격으로 관리 하는 데 필요 하므로
 #### <a name="plan-website-certificates-for-the-network-location-server"></a>네트워크 위치 서버용 웹 사이트 인증서 계획  
 네트워크 위치 서버 웹 사이트를 계획할 때 다음 사항을 고려 하세요.  
   
--   에 **주체** 필드에 네트워크 위치 URL의 FQDN 또는 네트워크 위치 서버의 인트라넷 인터페이스의 IP 주소를 지정 합니다.  
+-   **주체** 필드에 네트워크 위치 서버의 인트라넷 인터페이스 IP 주소 또는 네트워크 위치 URL의 FQDN을 지정합니다.  
   
 -   확장 된 **키 사용** 필드의 경우 서버 인증 OID를 사용 합니다.  
   
@@ -270,14 +270,14 @@ HTTP 또는 PING을 통해 다른 웹 주소를 사용 하 여 추가 연결 검
   
 스플릿 브레인 DNS 배포에 대 한 인터넷 및 인트라넷에 중복 된 리소스를 결정 하는 Fqdn을 나열 해야 도달률은 인트라넷 또는 인터넷 버전 DirectAccess 클라이언트 해야 합니다. DirectAccess 클라이언트에서 인터넷 버전에 연결 하도록 하려면 해당 FQDN을 각 리소스의 NRPT에 예외 규칙으로 추가 해야 합니다.  
   
-분할 두뇌 DNS 환경에서 리소스의 두 버전을 모두 사용할 수 있도록 하려면 인터넷에서 사용 되는 이름과 중복 되지 않는 이름을 사용 하 여 인트라넷 리소스를 구성 합니다. 그런 다음 사용자가 인트라넷에서 리소스에 액세스할 때 대체 이름을 사용 하도록 지시 합니다. 예를 들어 내부 이름 www\.contoso.com에 대해 www\.internal.contoso.com이라는 대체 이름을 구성합니다.  
+분할 두뇌 DNS 환경에서 리소스의 두 버전을 모두 사용할 수 있도록 하려면 인터넷에서 사용 되는 이름과 중복 되지 않는 이름을 사용 하 여 인트라넷 리소스를 구성 합니다. 그런 다음 사용자가 인트라넷에서 리소스에 액세스할 때 대체 이름을 사용 하도록 지시 합니다. 예를 들어 www\.contoso.com의 내부 이름에 대해 www\.internal.contoso.com를 구성 합니다.  
   
 스플릿 브레인이 아닌 DNS 환경에서는 인터넷 네임스페이스가 인트라넷 네임스페이스와 다릅니다. 예를 들어 인터넷의 네임스페이스는 Contoso Corporation uses contoso.com이고 인트라넷의 네임스페이스는 corp.contoso.com인 경우를 살펴보겠습니다. 모든 인트라넷 리소스는 corp.contoso.com DNS 접미사를 사용하므로 corp.contoso.com에 대한 NRPT 규칙에 따라 인트라넷 리소스에 대한 모든 DNS 이름 쿼리가 인트라넷 DNS 서버로 라우팅됩니다. Contoso.com 접미사가 있는 이름에 대 한 DNS 쿼리는 NRPT의 corp.contoso.com 인트라넷 네임 스페이스 규칙과 일치 하지 않으므로 인터넷 DNS 서버로 전송 됩니다. 스플릿 브레인이 아닌 DNS 환경에서는 인트라넷 리소스와 인터넷 리소스의 FQDN이 중복되지 않으므로 NRPT에 대한 추가 구성이 필요 없습니다. DirectAccess 클라이언트는 조직의 인터넷 리소스와 인트라넷 리소스 모두에 액세스할 수 있습니다.  
   
 ##### <a name="plan-local-name-resolution-behavior-for-directaccess-clients"></a>DirectAccess 클라이언트에 대 한 로컬 이름 확인 동작 계획  
-DNS로 이름을 확인할 수 없는 경우 Windows Server 2012, Windows 8, Windows Server 2008 R2 및 Windows 7의 DNS 클라이언트 서비스는 로컬 서브넷에서 이름을 확인 하기 위해 LLMNR (링크-로컬 멀티 캐스트 이름 확인) 및 NetBIOS over TCP/IP 프로토콜을 사용 하 여 로컬 이름 확인을 사용할 수 있습니다. 로컬 이름 확인은 컴퓨터가 단일 서브넷 홈 네트워크와 같은 개인 네트워크에 있는 경우 일반적으로 피어-투-피어 연결에 필요합니다.  
+DNS로 이름을 확인할 수 없는 경우 Windows Server 2012, Windows 8, Windows Server 2008 R2 및 Windows 7의 DNS 클라이언트 서비스는 로컬 서브넷에서 이름을 확인 하기 위해 LLMNR (링크-로컬 멀티 캐스트 이름 확인) 및 NetBIOS over TCP/IP 프로토콜을 사용 하 여 로컬 이름 확인을 사용할 수 있습니다. 로컬 이름 확인은 컴퓨터가 단일 서브넷 홈 네트워크와 같은 프라이빗 네트워크에 있는 경우 일반적으로 피어-투-피어 연결에 필요합니다.  
   
-DNS 클라이언트 서비스에서 인트라넷 서버 이름에 대 한 로컬 이름 확인을 수행 하 고 컴퓨터가 인터넷의 공유 서브넷에 연결 되어 있으면 악의적인 사용자가 LLMNR 및 NetBIOS over TCP/IP 메시지를 캡처하여 인트라넷 서버 이름을 확인할 수 있습니다. 인프라 서버 설치 마법사의 DNS 페이지에서 인트라넷 DNS 서버 로부터 받은 응답 유형에 따라 로컬 이름 확인 동작을 구성할 수 있습니다. 다음 옵션을 사용할 수 있습니다.  
+DNS 클라이언트 서비스에서 인트라넷 서버 이름에 대 한 로컬 이름 확인을 수행 하 고 컴퓨터가 인터넷의 공유 서브넷에 연결 되어 있으면 악의적인 사용자가 LLMNR 및 NetBIOS over TCP/IP 메시지를 캡처하여 인트라넷 서버 이름을 확인할 수 있습니다. 인프라 서버 설치 마법사의 DNS 페이지에서 인트라넷 DNS 서버 로부터 받은 응답 유형에 따라 로컬 이름 확인 동작을 구성할 수 있습니다. 사용할 수 있는 옵션은 다음과 같습니다.  
   
 -   **DNS에 이름이 없는 경우 로컬 이름 확인 사용**:이 옵션은 DirectAccess 클라이언트가 인트라넷 DNS 서버에서 확인할 수 없는 서버 이름에 대해서만 로컬 이름 확인을 수행 하기 때문에 가장 안전 합니다. 인트라넷 DNS 서버에 연결할 수 있는 경우 인트라넷 서버의 이름이 확인됩니다. 인트라넷 DNS 서버에 연결할 수 없거나 다른 유형의 DNS 오류가 있는 경우에는 인트라넷 서버 이름이 로컬 이름 확인을 통해 서브넷에 유출되지 않습니다.  
   
@@ -419,7 +419,7 @@ Gpo를 구성할 때 다음 경고를 고려 하십시오.
   
 -   클라이언트 및 응용 프로그램 서버 Gpo를 만들 때 위치는 단일 도메인으로 설정 됩니다. GPO 이름은 각 도메인에서 조회 되 고 도메인은 DirectAccess 설정 (있는 경우)으로 채워집니다.  
   
--   연결 대상은 GPO가 만들어진 도메인의 루트로 설정됩니다. GPO는 클라이언트 컴퓨터 또는 애플리케이션 서버가 포함된 각 도메인에 만들어지며 각 도메인의 루트에 연결됩니다.  
+-   연결 대상은 GPO가 만들어진 도메인의 루트로 설정됩니다. GPO는 클라이언트 컴퓨터 또는 응용 프로그램 서버가 포함된 각 도메인에 만들어지며 각 도메인의 루트에 연결됩니다.  
   
 자동으로 만들어진 Gpo를 사용 하 여 DirectAccess 설정을 적용 하는 경우 원격 액세스 서버 관리자에 게 다음 권한이 필요 합니다.  
   

@@ -6,14 +6,14 @@ ms.topic: article
 ms.assetid: 65b36794-bb09-4c1b-a2e7-8fc780893d97
 ms.prod: windows-server
 ms.technology: networking
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 2af3a621991627addb94238e84cceb357fb47731
-ms.sourcegitcommit: b7f55949f166554614f581c9ddcef5a82fa00625
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 4df23cd64bcf3bf9c27190908fb5f2a48b30b833
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72588082"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318297"
 ---
 # <a name="capolicyinf-syntax"></a>Capolicy.inf 구문
 >   적용 대상: Windows Server(반기 채널), Windows Server 2016
@@ -42,9 +42,9 @@ Capolicy.inf를 사용 하면 다양 한 CA 특성 및 옵션을 지정 하 고 
 
 -   _Value_ – 매개 변수 이며 등호 오른쪽에 나타납니다.
 
-아래 예제에서 **[Version]** 은 섹션이 고, **Signature** 는 키 이며, **"\$Windows NT \$"** 는 값입니다.
+아래 예제에서 **[Version]** 은 섹션이 고, **Signature** 는 키 이며, **"\$Windows NT\$"** 는 값입니다.
 
-예제:
+예:
 
 ```PowerShell
 [Version]                     #section
@@ -146,7 +146,7 @@ URL=http://pki.wingtiptoys.com/Public/myCA.crt
 
 ### <a name="certsrv_server"></a>certsrv_Server
 
-Capolicy.inf의 또 다른 선택적 섹션은 [certsrv_server]입니다 .이 섹션은 갱신 키 길이, 갱신 유효 기간 및 갱신 되거나 설치 되는 CA에 대 한 CRL (인증서 해지 목록) 유효 기간을 지정 하는 데 사용 됩니다. 이 섹션에는 어떤 키도 필요 하지 않습니다. 이러한 설정 중 상당수는 대부분의 요구에 충분 한 기본값을 가지 며, Capolicy.inf 파일 에서만 생략 하면 됩니다. 또는 CA가 설치 된 후 이러한 설정 중 대부분을 변경할 수 있습니다.
+Capolicy.inf의 또 다른 선택적 섹션은 갱신 키 길이, 갱신 유효 기간 및 갱신 되거나 설치 되는 CA에 대 한 CRL (인증서 해지 목록) 유효 기간을 지정 하는 데 사용 되는 [certsrv_server]입니다. 이 섹션에는 어떤 키도 필요 하지 않습니다. 이러한 설정 중 상당수는 대부분의 요구에 충분 한 기본값을 가지 며, Capolicy.inf 파일 에서만 생략 하면 됩니다. 또는 CA가 설치 된 후 이러한 설정 중 대부분을 변경할 수 있습니다.
 
 예를 들면 다음과 같습니다.
 
@@ -193,7 +193,7 @@ Certutil -setreg CACRLDeltaPeriodUnits 1
 
 CA가 설치 된 후 즉시 인증서를 발급 하지 않을 수 있으므로 LoadDefaultTemplates 설정을 사용 하 여 기본 템플릿이 엔터프라이즈 CA에 추가 되지 않도록 할 수 있습니다. CA에 구성 된 템플릿이 없는 경우 인증서를 발급할 수 있습니다.
 
-**AlternateSignatureAlgorithm** ca 인증서 및 인증서 요청 모두에 대해 PKCS \#1 v 2.1 서명 형식을 지원 하도록 ca를 구성 합니다. 루트 CA에서 1로 설정 된 경우 CA 인증서에 PKCS \#1 V 2.1 서명 형식이 포함 됩니다. 하위 ca에 설정 된 경우 하위 CA는 PKCS \#1 V 2.1 서명 형식을 포함 하는 인증서 요청을 만듭니다.
+**AlternateSignatureAlgorithm** ca 인증서 및 인증서 요청 모두에 대해 PKCS\#1 v 2.1 서명 형식을 지원 하도록 ca를 구성 합니다. 루트 CA에서 1로 설정 된 경우 CA 인증서에 PKCS\#1 V 2.1 서명 형식이 포함 됩니다. 하위 ca에 설정 된 경우 하위 CA는 PKCS\#1 V 2.1 서명 형식을 포함 하는 인증서 요청을 만듭니다.
 
 **ForceUTF8** 는 Subject 및 Issuer 고유 이름에 있는 RDNs (상대 고유 이름)의 기본 인코딩을 u t f-8로 변경 합니다. RFC에 의해 디렉터리 문자열 형식으로 정의 된 것과 같이 u t f-8을 지 원하는 RDNs 영향을 받습니다. 예를 들어 DC (도메인 구성 요소)에 대 한 RDN은 인코딩을 IA5 또는 u t f-8로 지원 하는 반면, Country RDN (C)은 인쇄 가능한 문자열로의 인코딩만 지원 합니다. 따라서 ForceUTF8 지시문은 DC RDN에 영향을 주지만 C RDN에는 영향을 주지 않습니다.
 
@@ -234,7 +234,7 @@ AD CS를 설치 하기 전에 구성한 CAPolicy.inf 파일 특정 설정을 사
 
 5. % Systemroot% 폴더로 이동 합니다.
 
-6. 다음을 확인합니다.
+6. ID 열의 값이 ID 열의
 
    -   **파일 이름**이 **CAPolicy.inf**로 설정됨
 
@@ -242,7 +242,7 @@ AD CS를 설치 하기 전에 구성한 CAPolicy.inf 파일 특정 설정을 사
 
    -   **인코딩**이 **ANSI**임
 
-7. **Save**을 클릭합니다.
+7. **저장**을 클릭합니다.
 
 8. 파일을 덮어쓸지 묻는 메시지가 나타나면 **예**를 클릭합니다.
 
@@ -254,4 +254,4 @@ AD CS를 설치 하기 전에 구성한 CAPolicy.inf 파일 특정 설정을 사
 9. 메모장을 닫습니다.
 
 > [!IMPORTANT]
->   Capolicy.inf에서 URL https://pki.corp.contoso.com/pki/cps.txt 를 지정 하는 줄이 표시 되는 것을 볼 수 있습니다. CAPolicy.inf의 내부 정책 섹션은 CPS(인증서 사용 약관)의 위치를 지정하는 방법을 보여주는 예시로 제공되었습니다. 이 가이드에서는 CPS (certificate statement)를 만들도록 지시 하지 않습니다.
+>   Capolicy.inf에서 URL https://pki.corp.contoso.com/pki/cps.txt를 지정 하는 줄이 표시 되는 것을 볼 수 있습니다. CAPolicy.inf의 내부 정책 섹션은 CPS(인증서 사용 약관)의 위치를 지정하는 방법을 보여주는 예시로 제공되었습니다. 이 가이드에서는 CPS (certificate statement)를 만들도록 지시 하지 않습니다.

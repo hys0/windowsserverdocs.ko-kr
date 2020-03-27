@@ -3,7 +3,7 @@ title: Windows Server Essentials 마이그레이션을 위해 대상 서버에 �
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: 2b882e87-347a-4010-b7fd-9599d61198dd
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 8e173de32230a219bec99586e1b5b533bbe84b73
-ms.sourcegitcommit: 9a4ab3a0d00b06ff16173aed616624c857589459
+ms.openlocfilehash: 4f4ba08c17429f70ef754b0861553e38ba116e5d
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66826972"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318832"
 ---
 # <a name="move-settings-and-data-to-the-destination-server-for-windows-server-essentials-migration"></a>Windows Server Essentials 마이그레이션을 위해 대상 서버에 설정 및 데이터 이동
 
@@ -29,7 +29,7 @@ ms.locfileid: "66826972"
 
 2. [네트워크 구성](#configure-the-network) 
 
-3. [사용자 계정에 허용 되는 컴퓨터 매핑](#map-permitted-computers-to-user-accounts)
+3. [허용 된 컴퓨터를 사용자 계정에 매핑](#map-permitted-computers-to-user-accounts)
  
 ## <a name="copy-data-to-the-destination-server"></a>대상 서버에 데이터 복사
  원본 서버에서 대상 서버로 데이터를 복사하기 전에 다음 작업을 수행합니다. 
@@ -44,15 +44,15 @@ ms.locfileid: "66826972"
  
 1. 도메인 관리자로 대상 서버에 로그온하고 명령 창을 엽니다. 
  
-2. 명령 프롬프트에서 다음 명령을 입력하고 Enter 키를 누릅니다. 
+2. 명령 프롬프트에서 다음 명령을 입력한 다음 Enter 키를 누릅니다. 
  
  `robocopy \\<SourceServerName> \<SharedSourceFolderName> \\<DestinationServerName> \<SharedDestinationFolderName> /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt` 
  
  각 항목이 나타내는 의미는 다음과 같습니다.
- - \<SourceServerName\> 원본 서버의 이름
- - \<SharedSourceFolderName\> 원본 서버의 공유 폴더의 이름
- - \<DestinationServerName\> 대상 서버의 이름
- - \<SharedDestinationFolderName\> 데이터를 복사할 대상 서버의 공유 폴더입니다. 
+ - \<SourceServerName\>은 원본 서버의 이름입니다.
+ - \<SharedSourceFolderName\>은 원본 서버의 공유 폴더 이름입니다.
+ - DestinationServerName\> \<대상 서버의 이름입니다.
+ - \<SharedDestinationFolderName\>는 데이터가 복사 될 대상 서버의 공유 폴더입니다. 
  
 3. 원본 서버에서 마이그레이션할 각 공유 폴더에 대해 이전 단계를 반복합니다. 
  

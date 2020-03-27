@@ -10,15 +10,15 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6a7ac5af-85e9-4440-a631-6a3a38e9015d
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 08/27/2018
-ms.openlocfilehash: 6a1d210d25309be322359add20da4eb8d0eee091
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 1f18ad9ddb0ea1a7575f6fcb26189f36f818ada2
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71355808"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80317479"
 ---
 # <a name="use-access-control-lists-acls-to-manage-datacenter-network-traffic-flow"></a>Acl (액세스 제어 목록)을 사용 하 여 데이터 센터 네트워크 트래픽 흐름 관리
 
@@ -35,10 +35,10 @@ SDN을 배포한 후에는 새 환경에서 기본 네트워크 연결을 테스
 다음 표의 항목을 사용 하 여 모든 인바운드 및 아웃 바운드 네트워크 트래픽을 허용 하는 규칙 집합을 만듭니다.
 
 
-| 원본 IP | 대상 IP | Protocol | 원본 포트 | 대상 포트 | Direction | 작업 | 우선 순위 |
+| 원본 IP | 대상 IP | 프로토콜 | 원본 포트 | 대상 포트 | Direction | 작업 | Priority |
 |:---------:|:--------------:|:--------:|:-----------:|:----------------:|:---------:|:------:|:--------:|
-|    \*     |       \*       |   모두    |     \*      |        \*        |  인바운드  | Allow  |   100    |
-|    \*     |       \*       |   모두    |     \*      |        \*        | 아웃바운드  | Allow  |   110    |
+|    \*     |       \*       |   모두    |     \*      |        \*        |  인바운드  | 허용  |   100    |
+|    \*     |       \*       |   모두    |     \*      |        \*        | 아웃바운드  | 허용  |   110    |
 
 ---       
 
@@ -90,14 +90,14 @@ New-NetworkControllerAccessControlList -ResourceId "AllowAll" -Properties $aclli
 이 예제에서는 192.168.0.0/24 서브넷 내의 Vm이 서로 통신 하는 것을 방지 하는 ACL을 만듭니다. 이 유형의 ACL은 공격자가 서브넷 내에서 수평를 분산 하는 기능을 제한 하는 동시에 다른 서브넷의 다른 서비스와 통신 하는 것 뿐만 아니라 서브넷 외부에서 요청을 받을 수 있도록 하는 데 유용 합니다.   
 
 
-|   원본 IP    | 대상 IP | Protocol | 원본 포트 | 대상 포트 | Direction | 작업 | 우선 순위 |
+|   원본 IP    | 대상 IP | 프로토콜 | 원본 포트 | 대상 포트 | Direction | 작업 | Priority |
 |:--------------:|:--------------:|:--------:|:-----------:|:----------------:|:---------:|:------:|:--------:|
-|  192.168.0.1   |       \*       |   모두    |     \*      |        \*        |  인바운드  | Allow  |   100    |
-|       \*       |  192.168.0.1   |   모두    |     \*      |        \*        | 아웃바운드  | Allow  |   101    |
-| 192.168.0.0/24 |       \*       |   모두    |     \*      |        \*        |  인바운드  | 차단  |   102    |
-|       \*       | 192.168.0.0/24 |   모두    |     \*      |        \*        | 아웃바운드  | 차단  |   103    |
-|       \*       |       \*       |   모두    |     \*      |        \*        |  인바운드  | Allow  |   104    |
-|       \*       |       \*       |   모두    |     \*      |        \*        | 아웃바운드  | Allow  |   105    |
+|  192.168.0.1   |       \*       |   모두    |     \*      |        \*        |  인바운드  | 허용  |   100    |
+|       \*       |  192.168.0.1   |   모두    |     \*      |        \*        | 아웃바운드  | 허용  |   101    |
+| 192.168.0.0/24 |       \*       |   모두    |     \*      |        \*        |  인바운드  | 블록  |   102    |
+|       \*       | 192.168.0.0/24 |   모두    |     \*      |        \*        | 아웃바운드  | 블록  |   103    |
+|       \*       |       \*       |   모두    |     \*      |        \*        |  인바운드  | 허용  |   104    |
+|       \*       |       \*       |   모두    |     \*      |        \*        | 아웃바운드  | 허용  |   105    |
 
 --- 
 

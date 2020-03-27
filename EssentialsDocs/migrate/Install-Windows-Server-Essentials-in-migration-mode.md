@@ -1,9 +1,9 @@
 ---
-title: 마이그레이션 모드 1에서 Windows Server Essentials 설치
+title: Migration mode1에서 Windows Server Essentials 설치
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,22 +12,22 @@ ms.assetid: fd7196ac-cfa6-46a5-ba77-6962b47a825e
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 74c40cc0f06d73a922a3d7fb819f7e71b47ac088
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: dbbd9f7303995e1547e48aa9701467b45e4bad34
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66432958"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318994"
 ---
-# <a name="install-windows-server-essentials-in-migration-mode1"></a>마이그레이션 모드 1에서 Windows Server Essentials 설치
+# <a name="install-windows-server-essentials-in-migration-mode1"></a>Migration mode1에서 Windows Server Essentials 설치
 
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-Windows Server Essentials를 실행 하는 네트워크에 서버가 하나만 있고 서버 네트워크에 대 한 도메인 컨트롤러 여야 합니다.  
+네트워크에는 Windows Server Essentials를 실행 하는 서버가 하나만 있을 수 있으며 해당 서버는 네트워크에 대 한 도메인 컨트롤러 여야 합니다.  
   
- 마이그레이션 모드로 Windows Server Essentials를 설치할 때 설치 마법사는 다음 작업을 수행 합니다.  
+ 마이그레이션 모드에서 Windows Server Essentials를 설치 하면 설치 마법사에서 다음 작업을 수행 합니다.  
   
-1.  설치 하 고 대상 서버에서 Windows Server Essentials 서버 소프트웨어를 구성 합니다.  
+1.  대상 서버에 Windows Server Essentials 서버 소프트웨어를 설치 하 고 구성 합니다.  
   
 2.  도메인 스키마를 최신 버전으로 업데이트합니다.  
   
@@ -42,15 +42,15 @@ Windows Server Essentials를 실행 하는 네트워크에 서버가 하나만 �
   
 6.  대상 서버를 사이트 라이선스 서버로 구성합니다.  
   
-##  <a name="BKMK_Install"></a> 대상 서버에서 Windows Server Essentials 설치  
- 를 설치 및 마이그레이션 모드에서 대상 서버에서 Windows Server Essentials를 구성 하려면 다음 절차를 수행 합니다.  
+##  <a name="install-windows-server-essentials-on-the-destination-server"></a><a name="BKMK_Install"></a>대상 서버에 Windows Server Essentials 설치  
+ 마이그레이션 모드에서 대상 서버에 Windows Server Essentials를 설치 및 구성 하려면 다음 절차를 수행 합니다.  
   
-#### <a name="to-install-windows-server-essentials-on-the-destination-server"></a>대상 서버에서 Windows Server Essentials를 설치 하려면  
+#### <a name="to-install-windows-server-essentials-on-the-destination-server"></a>대상 서버에 Windows Server Essentials를 설치 하려면  
   
-1. 대상 서버 설정 하 고 Windows Server Essentials dvd1을 넣습니다 DVD 드라이브에 넣습니다. CD 또는 DVD에서 부팅할지 묻는 메시지가 표시되면 아무 키나 눌러 작업을 진행합니다.  
+1. 대상 서버를 설정 하 고 Windows Server Essentials DVD1을 DVD 드라이브에 삽입 합니다. CD 또는 DVD에서 부팅할지 묻는 메시지가 표시되면 아무 키나 눌러 작업을 진행합니다.  
   
    > [!NOTE]
-   >  대상 서버에서는 USB 플래시 드라이브에서 부팅 하는 경우 사용할 수 있습니다 합니다 **Windows 7 USB/DVD 다운로드 도구** Windows Server Essentials ISO 파일에서 부팅 가능 USB 플래시 드라이브를 만들려고 합니다. USB 플래시 드라이브를 사용하면 플래시 드라이브가 DVD-ROM 드라이브보다 훨씬 더 빠르게 데이터를 읽으므로 설치 프로세스 속도를 크게 높일 수 있습니다. 부팅 가능 USB 플래시 드라이브를 만들고 나서 플래시 드라이브에 응답 파일을 추가할 수 있습니다. 할 수 있습니다 [Windows 7 USB/DVD 다운로드 도구를 다운로드](https://go.microsoft.com/fwlink/p/?LinkId=248282) Microsoft Store 웹 사이트에서 무료입니다.  
+   >  대상 서버에서 USB 플래시 드라이브의 부팅을 지원 하면 **windows 7 USB/DVD 다운로드 도구** 를 사용 하 여 Windows SERVER Essentials ISO 파일에서 부팅 가능한 usb 플래시 드라이브를 만들 수 있습니다. USB 플래시 드라이브를 사용하면 플래시 드라이브가 DVD-ROM 드라이브보다 훨씬 더 빠르게 데이터를 읽으므로 설치 프로세스 속도를 크게 높일 수 있습니다. 부팅 가능 USB 플래시 드라이브를 만들고 나서 플래시 드라이브에 응답 파일을 추가할 수 있습니다. Microsoft Store 웹 사이트에서 [Windows 7 USB/DVD 다운로드 도구를 무료로 다운로드할](https://go.microsoft.com/fwlink/p/?LinkId=248282) 수 있습니다.  
   
    > [!NOTE]
    >  대상 서버가 DVD에서 부팅되지 않으면 컴퓨터를 다시 시작하고 BIOS 설정에서 **DVD-ROM**이 부팅 시퀀스에서 첫 번째로 나열되어 있는지 확인합니다. BIOS 설정 부팅 시퀀스를 변경하는 방법에 대한 자세한 내용은 하드웨어 제조업체의 설명서를 참조하세요.  
@@ -68,10 +68,10 @@ Windows Server Essentials를 실행 하는 네트워크에 서버가 하나만 �
    설치가 완료되고 나면 마이그레이션 응답 파일에 제공한 관리자 사용자 계정 및 암호를 사용하여 자동으로 로그온됩니다.  
   
 > [!NOTE]
->  Windows Server Essentials를 설치 하는 동안 데스크톱 잠금을 해제 하려면 기본 제공 관리자 계정을 사용 하 고 암호를 비워 둡니다.  
+>  Windows Server Essentials가 설치 되는 동안 데스크톱을 잠금 해제 하려면 기본 제공 관리자 계정을 사용 하 고 암호를 비워 둡니다.  
   
-##  <a name="BKMK_VerifyTheHealthOfDC"></a> 도메인 컨트롤러의 상태를 확인 합니다.  
- 마이그레이션을 계속 하기 전에 도메인 컨트롤러와 Windows Server Essentials 네트워크의 상태가 정상 인지 확인 해야 합니다.  
+##  <a name="verify-the-health-of-the-domain-controller"></a><a name="BKMK_VerifyTheHealthOfDC"></a>도메인 컨트롤러의 상태를 확인 합니다.  
+ 마이그레이션을 진행 하기 전에 도메인 컨트롤러 및 Windows Server Essentials 네트워크가 정상 상태 인지 확인 해야 합니다.  
   
  다음 표에는 대상 서버, 네트워크 및 도메인에서 문제를 진단하는 데 사용할 수 있는 도구가 나와 있습니다.  
   
@@ -84,4 +84,4 @@ Windows Server Essentials를 실행 하는 네트워크에 서버가 하나만 �
  마이그레이션을 진행하기 전에 이러한 도구에서 보고하는 모든 문제를 해결해야 합니다.  
   
 > [!NOTE]
->  다른 온-프레미스 Exchange 서버로 메일을 마이그레이션하려는 경우 참조 [Windows Server Essentials를 사용 하 여 온-프레미스 Exchange Server 통합](../manage/Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials.md) 온-프레미스 Exchange server를 설정 하는 방법에 대 한 정보에 대 한 합니다.
+>  다른 온-프레미스 Exchange server로 메일을 마이그레이션하려는 경우 온-프레미스 exchange server를 설정 하는 방법에 대 한 자세한 내용은 온- [프레미스 exchange server와 Windows Server Essentials 통합](../manage/Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials.md) 을 참조 하세요.

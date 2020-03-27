@@ -10,14 +10,14 @@ ms.technology: networking-nict
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 26d105e0-afc3-44b5-bb5e-0c884a4c5d62
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 3ff03dae44600ff79ed22d298ee338c570e61e36
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: d8e7130d5774c19cc3d51045786bfef319cf7d16
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405487"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80316430"
 ---
 # <a name="nic-teaming-mac-address-use-and-management"></a>NIC 팀 MAC 주소 사용 및 관리
 
@@ -34,7 +34,7 @@ ms.locfileid: "71405487"
 ## <a name="mac-address-use-on-transmitted-packets"></a>전송 된 패킷에 MAC 주소 사용  
 스위치 독립 모드에서 NIC 팀을 구성 하 고 주소 해시 또는 동적 부하 분산을 구성 하는 경우 단일 원본 (예: 단일 VM)의 패킷은 동시에 여러 팀 구성원에 게 분산 됩니다. 스위치가 혼동 되지 않도록 방지 하 고 MAC 플 래핑 경보를 방지 하기 위해 원본 MAC 주소가 주 팀 멤버가 아닌 팀 멤버에 게 전송 된 프레임에서 다른 MAC 주소로 바뀝니다. 이 때문에 각 팀 멤버에는 다른 MAC 주소를 사용 하 고 MAC 주소 충돌 하지 않는 한 및 오류가 발생할 때까지 실행할 수 없습니다.  
   
-기본 NIC에서 오류가 검색 되 면, NIC 팀 소프트웨어는 임시 주 팀 구성원 (즉, 이제 주 팀으로 스위치에 표시 되는 것으로 표시 됨)의 역할을 하는 팀 구성원의 기본 팀 구성원 MAC 주소를 사용 하 여 시작 합니다. m)).  이 변경 내용은 주 팀 구성원의 MAC 주소를 원본 MAC 주소로 사용 하 여 주 팀 구성원에 게 전송 하려는 트래픽에만 적용 됩니다. 다른 트래픽 어떤 원본 MAC 주소는 오류 전에 사용 되는 것으로 보내야 하는 계속 됩니다.  
+기본 NIC에서 오류가 검색 되 면 NIC 팀 소프트웨어는 임시 주 팀 구성원 (즉, 이제는 주 팀으로 스위치에 표시 되는 역할)의 역할을 하는 팀 구성원의 기본 팀 구성원 MAC 주소를 사용 하 여 시작 합니다. 멤버).  이 변경 내용은 주 팀 구성원의 MAC 주소를 원본 MAC 주소로 사용 하 여 주 팀 구성원에 게 전송 하려는 트래픽에만 적용 됩니다. 다른 트래픽 어떤 원본 MAC 주소는 오류 전에 사용 되는 것으로 보내야 하는 계속 됩니다.  
   
 다음은 팀 구성 방법에 따라 NIC 팀 MAC 주소 교체 동작을 설명 하는 목록입니다.  
   
@@ -69,13 +69,13 @@ ms.locfileid: "71405487"
     -   원본 MAC 주소 대체가 수행 되지 않습니다.  
   
 ## <a name="related-topics"></a>관련 항목
-- [NIC 팀](NIC-Teaming.md): 이 항목에서는 Windows Server 2016의 NIC (네트워크 인터페이스 카드) 팀에 대 한 개요를 제공 합니다. NIC 팀을 사용 하면 32 하나 이상의 실제 이더넷 네트워크 어댑터 간에 하나 이상의 소프트웨어 기반 가상 네트워크 어댑터로 그룹화 할 수 있습니다. 이 가상 네트워크 어댑터에는 빠른 성능과 네트워크 어댑터 오류 발생 시 내결함성을 제공합니다.  
+- [Nic 팀](NIC-Teaming.md):이 항목에서는 Windows Server 2016의 Nic (네트워크 인터페이스 카드) 팀에 대 한 개요를 제공 합니다. NIC 팀을 사용 하면 32 하나 이상의 실제 이더넷 네트워크 어댑터 간에 하나 이상의 소프트웨어 기반 가상 네트워크 어댑터로 그룹화 할 수 있습니다. 이 가상 네트워크 어댑터에는 빠른 성능과 네트워크 어댑터 오류 발생 시 내결함성을 제공합니다.  
 
-- [NIC 팀 설정](nic-teaming-settings.md): 이 항목에서는 팀 및 부하 분산 모드와 같은 NIC 팀 속성에 대 한 개요를 제공 합니다. 또한 대기 어댑터 설정 및 주 팀 인터페이스 속성에 대 한 세부 정보도 제공 합니다. NIC 팀에 네트워크 어댑터가 두 개 이상 있는 경우 내결함성을 위해 대기 어댑터를 지정할 필요가 없습니다.
+- [Nic 팀 설정](nic-teaming-settings.md):이 항목에서는 팀 및 부하 분산 모드와 같은 NIC 팀 속성에 대 한 개요를 제공 합니다. 또한 대기 어댑터 설정 및 주 팀 인터페이스 속성에 대 한 세부 정보도 제공 합니다. NIC 팀에 네트워크 어댑터가 두 개 이상 있는 경우 내결함성을 위해 대기 어댑터를 지정할 필요가 없습니다.
   
-- [호스트 컴퓨터 또는 VM에서 새 NIC 팀을 만듭니다](Create-a-New-NIC-Team-on-a-Host-Computer-or-VM.md). 이 항목에서는 호스트 컴퓨터 또는 Windows Server 2016를 실행 하는 Hyper-v VM (가상 컴퓨터)에서 새 NIC 팀을 만듭니다.
+- [호스트 컴퓨터 또는 vm에서 새 Nic 팀 만들기](Create-a-New-NIC-Team-on-a-Host-Computer-or-VM.md):이 항목에서는 Windows Server 2016를 실행 하는 hyper-v VM (가상 컴퓨터) 또는 호스트 컴퓨터에 새 nic 팀을 만듭니다.
 
-- [NIC 팀 문제 해결](Troubleshooting-NIC-Teaming.md): 이 항목에서는 Windows PowerShell을 사용 하 여 네트워크 어댑터를 사용 하지 않거나 사용 하지 않도록 설정 하거나 하드웨어와 같은 NIC 팀 문제를 해결 하는 방법에 대해 설명 합니다. 
+- [Nic 팀 문제 해결](Troubleshooting-NIC-Teaming.md):이 항목에서는 Windows PowerShell을 사용 하 여 네트워크 어댑터를 사용 하지 않거나 사용 하지 않도록 설정 하거나 하드웨어와 같은 nic 팀 문제를 해결 하는 방법에 대해 설명 합니다. 
   
 
 

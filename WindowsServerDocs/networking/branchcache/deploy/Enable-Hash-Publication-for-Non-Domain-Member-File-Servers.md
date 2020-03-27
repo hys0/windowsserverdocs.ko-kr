@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 11584b73-f9e2-4530-afa5-b8df970e6b24
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: e870863b497c17b4b56265d99d91274e34690767
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 223ffd17f1e623f974e97c787fb8b18a806e5d0c
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71356540"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80319264"
 ---
 # <a name="enable-hash-publication-for-non-domain-member-file-servers"></a>비도메인 구성원 파일 서버에 해시 게시 사용
 
@@ -32,11 +32,11 @@ ms.locfileid: "71356540"
   
 1.  Windows PowerShell을 열고 **mmc**를 입력한 후 Enter 키를 누릅니다. MMC(Microsoft Management Console)가 열립니다.  
   
-2.  Mmc에서에 **파일** 메뉴를 클릭 하 여 **스냅인 추가/제거**합니다. **추가 / 제거 스냅인** 대화 상자가 열립니다.  
+2.  MMC의 **파일** 메뉴에서 **스냅인 추가/제거**를 클릭합니다. **추가 / 제거 스냅인** 대화 상자가 열립니다.  
   
 3.  **추가 / 제거 스냅인**,  **사용 가능한 스냅인**, 를 두 번 클릭 **그룹 정책 개체 편집기**합니다. 로컬 컴퓨터 개체를 선택 하는 그룹 정책 마법사가 열립니다. **마침**을 클릭한 다음 **확인**을 클릭합니다.  
   
-4.  로컬 그룹 정책 편집기 MMC에서 다음 경로를 확장 합니다. **로컬 컴퓨터 정책**, **컴퓨터 구성**, **관리 템플릿**, **네트워크**, **Lanman Server**. 클릭 **Lanman Server**합니다.  
+4.  로컬 그룹 정책 편집기 MMC에서 경로 확장: **로컬 컴퓨터 정책**, **컴퓨터 구성**, **관리 템플릿**, **네트워크**, **Lanman Server**합니다. 클릭 **Lanman Server**합니다.  
   
 5.  세부 정보 창에서 두 번 클릭 **BranchCache 해시 게시**합니다. **BranchCache 해시 게시** 대화 상자가 열립니다.  
   

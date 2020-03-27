@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 2cda192f-6b45-4e6c-88d9-70ca179ddb94
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: f058dbec42997f22106666b014508191a8861694
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 40e871c25e31bbb15964d856da0f83cdaf50c48b
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406485"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80319312"
 ---
 # <a name="create-the-branchcache-file-servers-organizational-unit"></a>BranchCache 파일 서버 조직 구성 단위 만들기
 
@@ -21,7 +21,7 @@ ms.locfileid: "71406485"
 
 이 절차를 사용 하 여 Active Directory 도메인 서비스에 AD DS BranchCache 파일 서버에 대 한 조직 구성 단위 (OU)를 만들려면 수 있습니다.  
   
-멤버 자격이 **Domain Admins**, 또는 이와 동등한 최소한이이 절차를 수행 하려면 필요 합니다.  
+이 절차를 수행하려면 최소한 **Domain Admins** 그룹의 구성원이거나 이와 동등한 자격이 필요합니다.  
   
 ### <a name="to-create-the-branchcache-file-servers-organizational-unit"></a>BranchCache 파일 서버 조직 구성 단위를 만들려면  
   

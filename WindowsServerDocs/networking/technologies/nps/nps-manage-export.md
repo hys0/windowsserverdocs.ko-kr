@@ -6,18 +6,18 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: d268dc57-78f8-47ba-9a7a-a607e8b9225c
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: cbebd0388ccd5dd2540a20f5d325d7f97c7e2bb3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 8c1aef88aec45ee63614b889658daceca3779e91
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405437"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80316008"
 ---
 # <a name="export-an-nps-configuration-for-import-on-another-server"></a>다른 서버에서 가져오기 위한 NPS 구성 내보내기
 
-적용 대상: Windows Server 2016
+적용 대상: Windows Server 2016
 
 다른 nps에서 가져오기 위해 한 NPS에서 RADIUS 클라이언트 및 서버, 네트워크 정책, 연결 요청 정책, 레지스트리 및 로깅 구성을 비롯 한 전체 NPS 구성을 내보낼 수 있습니다. 
 
@@ -50,7 +50,7 @@ NPS 구성을 내보내기 위한 명령 구문은 다음과 같습니다.
 
 **관리 자격 증명**
 
-이 절차를 완료 하려면 Administrators 그룹의 멤버 여야 합니다.
+이 절차를 완료하려면 Administrators 그룹의 구성원이어야 합니다.
 
 ### <a name="export-example"></a>내보내기 예 
 
@@ -85,7 +85,7 @@ Network Shell \(Netsh\)를 사용 하 여 **netsh nps 내보내기** 명령을 �
 
 **관리 자격 증명**
 
-이 절차를 완료 하려면 Administrators 그룹의 멤버 여야 합니다.
+이 절차를 완료하려면 Administrators 그룹의 구성원이어야 합니다.
 
 ### <a name="to-copy-an-nps-configuration-to-another-nps-using-netsh-commands"></a>Netsh 명령을 사용 하 여 NPS 구성을 다른 NPS에 복사 하려면
 

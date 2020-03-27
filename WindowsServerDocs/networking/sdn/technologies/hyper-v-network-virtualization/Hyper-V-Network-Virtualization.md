@@ -10,14 +10,14 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 150976f0-ccd5-487a-a458-92261444a846
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 30e843e40f903bc6415159bfce13b9bc95eb05ef
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: a99fed5fb173ed2ef0698ab5c10bcf872e9abea8
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405875"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80317241"
 ---
 # <a name="hyper-v-network-virtualization"></a>Hyper-V 네트워크 가상화
 
@@ -33,4 +33,4 @@ Windows Server 2012에 도입 된, Hyper-v 네트워크 가상화 (HNV) 고객 �
   
 |||  
 |-|-|  
-|![클라우드](../../../media/Hyper-V-Network-Virtualization/All_Symbols_Cloud.png)|Microsoft Azure를 이용하면 클라우드에서 유사한 기능을 사용할 수 있다는 것을 아시나요? [Microsoft Azure 가상화 솔루션](https://aka.ms/f9bh7g)에 대해 자세히 알아보세요.<br /><br />Microsoft Azure에서 하이브리드 가상화 솔루션을 만들어 보세요.<br />- 은[사이트 간 VPN을 통해 온-프레미스 네트워크를 azure에 연결 하 고 azure에서 IAAS VM DC로 Active Directory를 확장](https://aka.ms/d1dinb) 합니다.|  
+|![클라우드](../../../media/Hyper-V-Network-Virtualization/All_Symbols_Cloud.png)|Microsoft Azure를 이용하면 클라우드에서 유사한 기능을 사용할 수 있다는 것을 아시나요? [Microsoft Azure 가상화 솔루션](https://aka.ms/f9bh7g)에 대해 자세히 알아보세요.<br /><br />Microsoft Azure에서 하이브리드 가상화 솔루션을 만들어 보세요.<br />[사이트 간 VPN을 통해 온-프레미스 네트워크를 azure에 연결 하 고 azure에서 IAAS VM DC로 Active Directory를 확장](https://aka.ms/d1dinb) - |  

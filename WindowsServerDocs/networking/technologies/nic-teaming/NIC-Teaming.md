@@ -10,15 +10,15 @@ ms.technology: networking-nict
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: abded6f3-5708-4e35-9a9e-890e81924fec
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 09/10/2018
-ms.openlocfilehash: 2356de674bfc6e57c9444136b1244934464a2d02
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f4d9dd20d626f998bee0a8414c281cd27b2d3dbb
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71396497"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80316444"
 ---
 # <a name="nic-teaming"></a>NIC 팀
 
@@ -155,11 +155,11 @@ VM의 Nic 간 장애 조치 (failover)로 인해 트래픽이 다른 vmNIC의 MA
 
 ## <a name="related-topics"></a>관련 항목
 
-- [NIC 팀 MAC 주소 사용 및 관리](NIC-Teaming-MAC-Address-Use-and-Management.md): 스위치 독립 모드를 사용 하 여 NIC 팀을 구성 하 고 주소 해시 또는 동적 부하 분산을 구성 하는 경우 팀은 아웃 바운드 트래픽에 기본 NIC 팀 구성원의 MAC (미디어 액세스 제어) 주소를 사용 합니다. 기본 NIC 팀 구성원은 초기 팀 구성원 집합에서 운영 체제에 의해 선택 된 네트워크 어댑터입니다.
+- [Nic 팀 MAC 주소 사용 및 관리](NIC-Teaming-MAC-Address-Use-and-Management.md): 스위치 독립 모드를 사용 하 여 nic 팀을 구성 하 고 주소 해시 또는 동적 부하 분산을 사용 하는 경우 팀에서 아웃 바운드 트래픽에 대 한 기본 nic 팀 구성원의 MAC (미디어 액세스 제어) 주소를 사용 합니다. 기본 NIC 팀 구성원은 초기 팀 구성원 집합에서 운영 체제에 의해 선택 된 네트워크 어댑터입니다.
 
-- [NIC 팀 설정](nic-teaming-settings.md): 이 항목에서는 팀 및 부하 분산 모드와 같은 NIC 팀 속성에 대 한 개요를 제공 합니다. 또한 대기 어댑터 설정 및 주 팀 인터페이스 속성에 대 한 세부 정보도 제공 합니다. NIC 팀에 네트워크 어댑터가 두 개 이상 있는 경우 내결함성을 위해 대기 어댑터를 지정할 필요가 없습니다.
+- [Nic 팀 설정](nic-teaming-settings.md):이 항목에서는 팀 및 부하 분산 모드와 같은 NIC 팀 속성에 대 한 개요를 제공 합니다. 또한 대기 어댑터 설정 및 주 팀 인터페이스 속성에 대 한 세부 정보도 제공 합니다. NIC 팀에 네트워크 어댑터가 두 개 이상 있는 경우 내결함성을 위해 대기 어댑터를 지정할 필요가 없습니다.
   
-- [호스트 컴퓨터 또는 VM에서 새 NIC 팀을 만듭니다](Create-a-New-NIC-Team-on-a-Host-Computer-or-VM.md). 이 항목에서는 호스트 컴퓨터 또는 Windows Server 2016를 실행 하는 Hyper-v VM (가상 컴퓨터)에서 새 NIC 팀을 만듭니다.
+- [호스트 컴퓨터 또는 vm에서 새 Nic 팀 만들기](Create-a-New-NIC-Team-on-a-Host-Computer-or-VM.md):이 항목에서는 Windows Server 2016를 실행 하는 hyper-v VM (가상 컴퓨터) 또는 호스트 컴퓨터에 새 nic 팀을 만듭니다.
 
-- [NIC 팀 문제 해결](Troubleshooting-NIC-Teaming.md): 이 항목에서는 Windows PowerShell을 사용 하 여 네트워크 어댑터를 사용 하지 않거나 사용 하지 않도록 설정 하거나 하드웨어와 같은 NIC 팀 문제를 해결 하는 방법에 대해 설명 합니다. 
+- [Nic 팀 문제 해결](Troubleshooting-NIC-Teaming.md):이 항목에서는 Windows PowerShell을 사용 하 여 네트워크 어댑터를 사용 하지 않거나 사용 하지 않도록 설정 하거나 하드웨어와 같은 nic 팀 문제를 해결 하는 방법에 대해 설명 합니다. 
  

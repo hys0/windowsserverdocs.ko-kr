@@ -6,18 +6,18 @@ ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: article
 ms.assetid: c7326f5b-87fb-4e57-9b77-72a5d0ab0444
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 66fb104fd6f72f3eca4fe26adfcdc41f3fd52c5a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 204a82226961fe43f07b2a197e6e9db5ab64eb0a
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71356360"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80319070"
 ---
 # <a name="branchcache-additional-resources"></a>BranchCache 추가 리소스
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 이 가이드에서 설명 하는 기술에 대 한 자세한 내용은 다음 리소스를 참조 합니다.
 

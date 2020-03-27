@@ -10,14 +10,14 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0115b7ad-d229-4c69-9d7e-a3f5fbaa3b2f
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 0eda30b0980f2080f1603eb906fd308440316248
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 2d85545224d8487b4778b95b9366a0336b27b343
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405948"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80317227"
 ---
 # <a name="hyper-v-network-virtualization-overview-in-windows-server-2016"></a>Windows Server 2016의 hyper-v 네트워크 가상화 개요
 
@@ -47,7 +47,7 @@ Windows Server 2016의 네트워킹 가상화에 대 한 자세한 기술 정보
 
 -   [Hyper-V 가상 스위치 개요](assetId:///e6ec46af-6ef4-49b3-b1f1-5268dc03f05b)  
 
-## <a name="BKMK_OVER"></a>기능 설명  
+## <a name="feature-description"></a><a name="BKMK_OVER"></a>기능 설명  
 Hyper-v 네트워크 가상화는 서버 가상화 (하이퍼바이저)가 운영 체제에 "가상 컴퓨터"를 제공 하는 방법과 유사 하 게 가상 컴퓨터에 "가상 네트워크" (VM 네트워크 라고 함)를 제공 합니다. 네트워크 가상화는 실제 네트워크 인프라에서 가상 네트워크를 분리하고 가상 컴퓨터 프로비저닝에서 VLAN 및 계층적 IP 주소 할당의 제약 조건을 제거합니다. 이러한 유연성 덕분에 고객은 쉽게 IaaS 클라우드로 이동하고 호스팅 서비스 공급자 및 데이터 센터 관리자는 효율적으로 인프라를 관리하면서 필요한 다중 테넌트 격리 및 보안 요구 사항을 유지 관리하고 겹치는 가상 컴퓨터 IP 주소를 지원할 수 있습니다.  
 
 고객은 데이터 센터를 클라우드로 원활하게 확장하기를 원합니다. 현재 이러한 원활한 하이브리드 클라우드 아키텍처를 구축하는 데 있어 기술적인 어려움이 있습니다. 고객이 직면 한 가장 큰 장애물 중 하나는 클라우드에서 기존 네트워크 토폴로지 (서브넷, IP 주소, 네트워크 서비스 등)를 다시 사용 하 고 온-프레미스 리소스와 클라우드 리소스를 브리징 하는 것입니다.  Hyper-V 네트워크 가상화는 기본 실제 네트워크와 무관한 VM 네트워크 개념을 제공합니다. 하나 이상의 가상 서브넷으로 구성된 이러한 VM 네트워크 개념을 통해 가상 네트워크에 연결된 가상 컴퓨터의 실제 네트워크 내 정확한 위치가 가상 네트워크 토폴로지에서 분리됩니다. 따라서 고객은 가상 서브넷을 클라우드로 손쉽게 이동하면서 클라우드에 기존 IP 주소 및 토폴로지를 보존하여 기존 서비스가 계속해서 서브넷의 실제 위치를 인식하지 않고 작동하도록 할 수 있습니다. 즉, Hyper-V 네트워크 가상화를 통해 원활한 하이브리드 클라우드가 가능해집니다.  
@@ -58,7 +58,7 @@ Hyper-v 네트워크 가상화는 서버 가상화 (하이퍼바이저)가 운�
 
 인프라 소유자의 경우 가상 컴퓨터 배치의 추가적인 유연성 덕분에 가상 컴퓨터를 변경하거나 네트워크를 다시 구성하지 않고도 데이터 센터 내의 어느 곳으로든 작업을 이동할 수 있습니다. 예를 들어, Hyper-V 네트워크 가상화를 통해 서브넷 간 실시간 마이그레이션이 가능하여 가상 컴퓨터는 서비스 중단 없이 데이터 센터 내의 어느 곳에서든 실시간 마이그레이션을 수행할 수 있습니다. 이전에는 실시간 마이그레이션이 동일한 서브넷으로 제한되어 가상 컴퓨터가 있을 수 있는 위치가 제한되었습니다. 서브넷 간 실시간 마이그레이션을 통해 관리자는 동적 리소스 요구 사항 및 에너지 효율성을 기반으로 작업을 통합할 수 있으며, 고객 작업 작동 시간을 중단하지 않고 인프라 유지 관리를 수용할 수 있습니다.  
 
-## <a name="BKMK_APP"></a>실용적인 응용 프로그램  
+## <a name="practical-applications"></a><a name="BKMK_APP"></a>실용적인 응용 프로그램  
 가상화된 데이터 센터의 성공으로 IT 조직 및 호스팅 공급자(공동 배치 또는 실제 서버 대여를 제공하는 공급자)는 주문형 서버 인스턴스를 고객에게 쉽게 제공할 수 있게 해주는 보다 유연한 가상화된 인프라를 제공하기 시작했습니다. 이러한 새 서비스 계층을 IaaS(Infrastructure as a Service)라고 합니다. Windows Server 2016는 엔터프라이즈 고객이 사설 클라우드를 구축 하 고이를 서비스 운영 모델로 전환 하는 데 필요한 모든 플랫폼 기능을 제공 합니다. Windows Server 2016 2016에서는 호스팅 서비스 공급자가 공용 클라우드를 구축 하 고 고객에 게 IaaS 솔루션을 제공할 수도 있습니다. Virtual Machine Manager Windows Azure 팩와 결합 하 여 Hyper-v 네트워크 가상화 정책을 관리 하는 경우 Microsoft는 강력한 클라우드 솔루션을 제공 합니다.  
 
 Windows Server 2016 Hyper-v 네트워크 가상화는 엔터프라이즈가 전용 IaaS 클라우드를 확장할 때 직면 하 게 되는 관리 오버 헤드를 줄여주는 정책 기반의 소프트웨어 제어 네트워크 가상화를 제공 하며, 클라우드 호스팅 서비스 공급자에 더 나은 기능을 제공 합니다. 가상 컴퓨터를 관리 하 여 리소스 사용률을 높일 수 있는 유연성 및 확장성.  
@@ -91,7 +91,7 @@ Vlan에서 제공 하는 단점 외에도 가상 컴퓨터 IP 주소 할당은 �
 
 Hyper-V 네트워크 가상화는 고객 가상 컴퓨터의 가상 네트워크를 실제 네트워크 인프라에서 분리합니다. 따라서 고객 가상 컴퓨터는 원래 IP 주소를 유지할 수 있고 데이터 센터 관리자는 실제 IP 주소 또는 VLAN ID를 다시 구성하지 않고 데이터 센터 내의 어느 위치에서나 고객 가상 컴퓨터를 프로비저닝할 수 있습니다. 다음 섹션에서는 주요 기능을 요약합니다.  
 
-## <a name="BKMK_NEW"></a>중요 한 기능  
+## <a name="important-functionality"></a><a name="BKMK_NEW"></a>중요 한 기능  
 다음은 Windows Server 2016의 Hyper-v 네트워크 가상화의 주요 기능, 이점 및 기능 목록입니다.  
 
 -   **유연한 작업 배치를 사용 하도록 설정-네트워크 격리 및 IP 주소를 Vlan 없이 다시 사용 합니다.**  
@@ -132,16 +132,16 @@ Hyper-V 네트워크 가상화는 고객 가상 컴퓨터의 가상 네트워크
 
     Windows Server 2016의 네트워크 가상화 정책은 Microsoft 네트워크 컨트롤러를 통해 구성 됩니다. 네트워크 컨트롤러에는 정책을 구성 하는 Windows PowerShell 인터페이스 및 RESTful northbound API가 있습니다. Microsoft 네트워크 컨트롤러에 대 한 자세한 내용은 [네트워크 컨트롤러](../../../sdn/technologies/network-controller/../../../sdn/technologies/network-controller/Network-Controller.md)를 참조 하세요.  
 
-## <a name="BKMK_SOFT"></a>소프트웨어 요구 사항  
+## <a name="software-requirements"></a><a name="BKMK_SOFT"></a>소프트웨어 요구 사항  
 Microsoft 네트워크 컨트롤러를 사용 하는 hyper-v 네트워크 가상화를 사용 하려면 Windows Server 2016 및 Hyper-v 역할이 필요 합니다.  
 
-## <a name="BKMK_LINKS"></a>참고 항목  
+## <a name="see-also"></a><a name="BKMK_LINKS"></a>참고 항목  
 Windows Server 2016의 Hyper-v 네트워크 가상화에 대해 자세히 알아보려면 다음 링크를 참조 하세요.  
 
 
-|       콘텐츠 형식       |                                                                                                                                참조                                                                                                                                |
+|       콘텐츠 유형       |                                                                                                                                참조                                                                                                                                |
 |--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **커뮤니티 리소스**  |     -   [사설 클라우드 아키텍처 블로그](https://blogs.technet.com/b/privatecloud/archive/2012/03/19/cloud-datacenter-network-architecture-in-the-windows-server-8-era.aspx)<br />-질문 하기: [cloudnetfb@microsoft.com](mailto:%20cloudnetfb@microsoft.com)     |
 |         **RFC**          |                                                                                                     -VXLAN- [RFC 7348](https://www.rfc-editor.org/info/rfc7348)                                                                                                      |
-| **관련 기술** | -   [네트워크 컨트롤러](../../../sdn/technologies/network-controller/../../../sdn/technologies/network-controller/Network-Controller.md)<br />-   [Hyper-v 네트워크 가상화 개요](assetId:///bf1dba9d-1960-4dd2-a5e2-99466a02044b) (Windows Server 2012 R2) |
+| **관련 기술** | [네트워크 컨트롤러](../../../sdn/technologies/network-controller/../../../sdn/technologies/network-controller/Network-Controller.md) -   <br />[Hyper-v 네트워크 가상화 개요](assetId:///bf1dba9d-1960-4dd2-a5e2-99466a02044b) -   (Windows Server 2012 R2) |
 
