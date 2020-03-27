@@ -10,14 +10,14 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ed49a0a3-1c45-42e5-8f13-cad20c1c1d68
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 83ea3c4e4feefacde3e1ed7be6b605d8c0e644a3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 9a3d3fadbe2f187ae6b5a77137393b7ad7be338b
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71366966"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80313629"
 ---
 # <a name="step-4-verify-directaccess-with-otp"></a>4 단계 OTP를 사용 하 여 DirectAccess 확인
 
@@ -36,7 +36,7 @@ ms.locfileid: "71366966"
 4. OTP 상태에 녹색 아이콘이 표시 되 고 작동 하는지 확인 합니다.  
   
     > [!NOTE]  
-    > 상태 업데이트 간격은 HKLM\SYSTEM\CCS\Services\Ramgmtsvc\parameters\HealthRefreshTimeout 레지스트리 키의 값 합계 및 원격 액세스에 설정 된 **서버 작업에 대 한 시간 간격** 의 최대값입니다. 구성.  
+    > 상태 업데이트 간격은 HKLM\SYSTEM\CCS\Services\Ramgmtsvc\parameters\HealthRefreshTimeout 레지스트리 키의 값 합계와 원격 액세스 구성에 설정 된 **서버 작업에 대 한 시간 간격** 의 최대값입니다.  
   
 ### <a name="to-verify-access-to-internal-resources-using-otp-authentication"></a>OTP 인증을 사용 하 여 내부 리소스에 대 한 액세스를 확인 하려면  
   

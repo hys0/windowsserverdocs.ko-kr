@@ -10,15 +10,15 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 0b9b0f80-415c-4f5e-8377-c09b51d9c5dd
 manager: dcscontentpm
-ms.author: pashort
+ms.author: lizross
 author: Teresa-Motiv
 ms.date: 12/23/2019
-ms.openlocfilehash: 3feec719934fb16ca34cebe1e653768da5fb9eb7
-ms.sourcegitcommit: 33c89b76ac902927490b9727f3cf92b374754699
+ms.openlocfilehash: f802804d64b3047a2612b7f346de03aff61c30cd
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75728434"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80316546"
 ---
 # <a name="performance-tuning-network-adapters"></a>네트워크 어댑터 성능 조정
 
@@ -35,7 +35,7 @@ ms.locfileid: "75728434"
 
 다음 섹션에서는 성능 조정 옵션 중 일부에 대해 설명합니다.  
 
-##  <a name="bkmk_offload"></a>오프 로드 기능 사용
+##  <a name="enabling-offload-features"></a><a name="bkmk_offload"></a>오프 로드 기능 사용
 
 일반적으로 네트워크 어댑터 오프로드 기능을 설정하는 것이 좋습니다. 그러나 네트워크 어댑터는 처리량이 높은 오프 로드 기능을 처리할 만큼 강력 하지 않을 수 있습니다.
 
@@ -48,7 +48,7 @@ ms.locfileid: "75728434"
 > [!NOTE]  
 > 일부 네트워크 어댑터에서는 송신 및 수신 경로에 대해 독립적으로 오프 로드 기능을 사용 하도록 설정 해야 합니다.
 
-##  <a name="bkmk_rss_web"></a>웹 서버에 대 한 RSS (수신측 배율) 사용
+##  <a name="enabling-receive-side-scaling-rss-for-web-servers"></a><a name="bkmk_rss_web"></a>웹 서버에 대 한 RSS (수신측 배율) 사용
 
 네트워크 어댑터 수가 서버의 논리 프로세서보다 적은 경우 RSS를 통해 웹 확장성과 성능을 개선할 수 있습니다. 모든 웹 트래픽이 RSS 가능 네트워크 어댑터를 통과 하는 경우 서버는 여러 다른 연결에서 들어오는 웹 요청을 여러 Cpu에서 동시에 처리할 수 있습니다.
 
@@ -63,7 +63,7 @@ ms.locfileid: "75728434"
 
 예를 들어 작업 관리자를 열고 서버에서 논리적 프로세서를 검토 하는 경우 수신 트래픽이 미달 사용 되는 것 처럼 보이는 경우, RSS 큐의 수를 네트워크 어댑터에서 지 원하는 최대 크기의 기본값인 2에서 늘릴 수 있습니다. 네트워크 어댑터에서 드라이버의 일부로 RSS 큐 수를 변경하는 옵션을 제공할 수 있습니다.
 
-##  <a name="bkmk_resources"></a>네트워크 어댑터 리소스를 늘립니다.
+##  <a name="increasing-network-adapter-resources"></a><a name="bkmk_resources"></a>네트워크 어댑터 리소스를 늘립니다.
 
 수신 및 송신 버퍼와 같은 리소스를 수동으로 구성할 수 있도록 하는 네트워크 어댑터의 경우 할당 된 리소스를 늘려야 합니다.  
 
@@ -78,7 +78,7 @@ ms.locfileid: "75728434"
 
 CPU 바인딩된 작업에 대 한 인터럽트 중재를 고려해 야 합니다. 인터럽트 조정을 사용 하는 경우에는 더 많은 인터럽트가 발생 하 고 대기 시간이 줄어들기 때문에 호스트 CPU 절약 시간과 대기 시간 간의 균형을 높이고 호스트 CPU의 절감 액을 높일 것을 고려 하십시오. 네트워크 어댑터가 인터럽트 조정을 수행 하지 않지만 버퍼 병합을 노출 하는 경우 송신 또는 수신 당 더 많은 버퍼를 허용 하도록 병합 된 버퍼의 수를 늘려서 성능을 향상 시킬 수 있습니다.
 
-##  <a name="bkmk_low"></a>낮은 대기 시간 패킷 처리를 위한 성능 조정
+##  <a name="performance-tuning-for-low-latency-packet-processing"></a><a name="bkmk_low"></a>낮은 대기 시간 패킷 처리를 위한 성능 조정
 
 대부분의 네트워크 어댑터는 운영 체제에서 발생하는 대기 시간을 최적화할 수 있는 옵션을 제공합니다. 대기 시간은 네트워크 드라이버에서 들어오는 패킷을 처리하여 다시 보낼 때까지 소요되는 시간입니다. 이 시간은 일반적으로 마이크로초 단위로 측정됩니다. 비교하자면, 멀리 떨어진 곳으로의 패킷 전송에 사용되는 전송 시간은 일반적으로 몇 배 더 큰 밀리초 단위로 측정됩니다. 이러한 조정은 전송 중에 패킷에서 소요되는 시간을 단축하지 않습니다.
 
@@ -98,7 +98,7 @@ CPU 바인딩된 작업에 대 한 인터럽트 중재를 고려해 야 합니�
 
 - 패킷을 처리하는 프로그램(사용자 스레드)에서 사용 중인 코어와 CPU 캐시를 공유하는 코어 프로세서에서 네트워크 어댑터 인터럽트 및 DPC를 처리합니다. CPU 선호도 조정을 사용하여 RSS 구성과 함께 프로세스를 특정 논리 프로세서로 전달하여 이를 실현할 수 있습니다. 인터럽트, DPC 및 사용자 모드 스레드에 동일한 코어를 사용하면 ISR, DPC 및 스레드가 코어 사용을 경합하기 때문에 로드가 증가하여 성능이 저하됩니다.
 
-##  <a name="bkmk_smi"></a>시스템 관리 인터럽트
+##  <a name="system-management-interrupts"></a><a name="bkmk_smi"></a>시스템 관리 인터럽트
 
 많은 하드웨어 시스템은 ECC (오류 수정 코드) 메모리 오류 보고, 레거시 USB 호환성 유지, 팬 제어, BIOS 제어 기능 관리 등의 다양 한 유지 관리 기능을 위해 SMI-S (시스템 관리 인터럽트)를 사용 합니다. 설정.
 
@@ -111,11 +111,11 @@ SMI-S는 시스템에서 우선 순위가 가장 높은 인터럽트 이며 CPU�
 > [!NOTE]  
 > 논리 프로세서가 특수 한 유지 관리 모드에서 실행 되 고 있으므로 운영 체제에서 SMIs를 제어할 수 없습니다 .이로 인해 운영 체제에서 작업을 수행할 수 없습니다.
 
-##  <a name="bkmk_tcp"></a>성능 조정 TCP
+##  <a name="performance-tuning-tcp"></a><a name="bkmk_tcp"></a>성능 조정 TCP
 
  다음 항목을 사용 하 여 TCP 성능을 튜닝할 수 있습니다.
 
-###  <a name="bkmk_tcp_params"></a>TCP 수신 창 autotuning
+###  <a name="tcp-receive-window-autotuning"></a><a name="bkmk_tcp_params"></a>TCP 수신 창 autotuning
 
 Windows Vista, Windows Server 2008 및 이후 버전의 windows에서 Windows 네트워크 스택은 tcp receive *window autotuning level* 이라는 기능을 사용 하 여 tcp 수신 창 크기를 협상 합니다. 이 기능은 TCP 핸드셰이크 중에 모든 TCP 통신에 대해 정의 된 수신 창 크기를 협상할 수 있습니다.
 
@@ -231,13 +231,13 @@ Set-NetTCPSetting -AutoTuningLevelLocal <Value>
 
 수신 창 autotuning을 5 가지 수준 중 하나로 설정할 수 있습니다. 기본 수준은 **Normal**입니다. 다음 표에서는 수준에 대해 설명 합니다.
 
-|수준 |16 진수 값 |설명 |
+|Level |16 진수 값 |설명 |
 | --- | --- | --- |
 |보통(기본 설정) |0x8 (8의 배율 인수) |거의 모든 시나리오를 수용할 수 있도록 TCP 수신 기간을 확장 하도록 설정 합니다. |
-|해제됨 |사용 가능한 배율 인수 없음 |TCP 수신 기간을 기본값으로 설정 합니다. |
+|사용 안 함 |사용 가능한 배율 인수 없음 |TCP 수신 기간을 기본값으로 설정 합니다. |
 |Restricted (제한됨) |0x4 (4의 배율 인수) |TCP 수신 창이 기본값 이상으로 증가 하도록 설정 하지만 일부 시나리오에서는 이러한 증가가 제한 됩니다. |
 |매우 제한 |0x2 (배율 인수 2) |TCP 수신 창이 기본값 이상으로 증가 하도록 설정 하지만 매우 신중 하 게 수행 해야 합니다. |
-|실험적 |0xE (배율 인수 14) |극단적인 시나리오를 수용할 수 있도록 TCP 수신 윈도를 증가 하도록 설정 합니다. |
+|시험용 |0xE (배율 인수 14) |극단적인 시나리오를 수용할 수 있도록 TCP 수신 윈도를 증가 하도록 설정 합니다. |
 
 응용 프로그램을 사용 하 여 네트워크 패킷을 캡처하는 경우 응용 프로그램은 다른 window autotuning 수준 설정에 대해 다음과 유사한 데이터를 보고 해야 합니다.
 
@@ -376,7 +376,7 @@ Windows Server 2003의 다음 레지스트리 설정은 더 이상 지원 되지
 
 > **HKEY_LOCAL_MACHINE \System\CurrentControlSet\Services\Tcpip\Parameters**  
 
-###  <a name="bkmk_wfp"></a>Windows 필터링 플랫폼
+###  <a name="windows-filtering-platform"></a><a name="bkmk_wfp"></a>Windows 필터링 플랫폼
 
 Windows Vista 및 Windows Server 2008에는 WFP (Windows 필터링 플랫폼)가 도입 되었습니다. WFP는 타사 Isv (독립 소프트웨어 공급 업체)에 게 패킷 처리 필터를 만들 수 있는 Api를 제공 합니다. 예를 들어 방화벽 및 바이러스 백신 소프트웨어가 여기에 해당합니다.
 

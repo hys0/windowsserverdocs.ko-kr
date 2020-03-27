@@ -10,14 +10,14 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 34d826c9-65bc-401f-889d-cf84e12f0144
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 7d9c37629c0e0d9964554ba90887aa45f74a330a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 5fca4fc6a636bcde155e60b6da3c827bc9313606
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71355611"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80313042"
 ---
 # <a name="ras-gateway-high-availability"></a>RAS 게이트웨이 고가용성
 
@@ -25,7 +25,7 @@ ms.locfileid: "71355611"
 
 이 항목을 사용 하 여 SDN (소프트웨어 정의 네트워킹) 용 RAS 다중 테 넌 트 게이트웨이의 고가용성 구성에 대해 알아볼 수 있습니다.  
   
-이 항목에는 다음 섹션이 수록되어 있습니다.  
+이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   
 -   [RAS 게이트웨이 개요](#bkmk_overview)  
   
@@ -35,7 +35,7 @@ ms.locfileid: "71355611"
   
 -   [네트워크 컨트롤러와 RAS 게이트웨이 통합](#bkmk_integration)  
   
-## <a name="bkmk_overview"></a>RAS 게이트웨이 개요  
+## <a name="ras-gateway-overview"></a><a name="bkmk_overview"></a>RAS 게이트웨이 개요  
 조직이 CSP (클라우드 서비스 공급자) 또는 다중 테 넌 트가 있는 엔터프라이즈 인 경우 다중 테 넌 트 모드에서 RAS 게이트웨이를 배포 하 여 인터넷을 포함 하 여 가상 네트워크와 실제 네트워크 간에 네트워크 트래픽 라우팅을 제공할 수 있습니다.  
   
 테 넌 트 고객 네트워크 트래픽을 테 넌 트 가상 네트워크 및 리소스로 라우팅하는 데 지 게이트웨이로 다중 테 넌 트 모드에서 RAS 게이트웨이를 배포할 수 있습니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "71355611"
   
 RAS 게이트웨이에 대 한 자세한 개요 정보는 [Ras gateway](../../../../remote/remote-access/ras-gateway/RAS-Gateway.md)를 참조 하세요.  
   
-## <a name="bkmk_pools"></a>게이트웨이 풀 개요  
+## <a name="gateway-pools-overview"></a><a name="bkmk_pools"></a>게이트웨이 풀 개요  
 Windows Server 2016에서는 하나 이상의 풀에 게이트웨이를 배포할 수 있습니다.  
   
 다음 그림은 가상 네트워크 간의 트래픽 라우팅을 제공 하는 여러 유형의 게이트웨이 풀을 보여 줍니다.  
@@ -73,7 +73,7 @@ Windows Server 2016에서는 하나 이상의 풀에 게이트웨이를 배포�
   
 -   여러 풀에서 동일한 게이트웨이 함수를 제공할 수 있지만 용량은 서로 다를 수 있습니다. 예를 들어 높은 처리량 및 낮은 처리량 IKEv2 S2S 연결을 모두 지 원하는 게이트웨이 풀을 만들 수 있습니다.  
   
-## <a name="bkmk_deployment"></a>RAS 게이트웨이 배포 개요  
+## <a name="ras-gateway-deployment-overview"></a><a name="bkmk_deployment"></a>RAS 게이트웨이 배포 개요  
 다음 그림에서는 RAS 게이트웨이의 일반적인 CSP (클라우드 서비스 공급자) 배포를 보여 줍니다.  
   
 ![RAS 게이트웨이 배포 개요](../../../media/RAS-Gateway-High-Availability/ras_csp_deploy.png)  
@@ -84,7 +84,7 @@ Windows Server 2016에서는 하나 이상의 풀에 게이트웨이를 배포�
   
 BGP 라우터는이 중앙 라우팅 개념을 파악 하기 위해 다이어그램에서 분리 되어 있습니다. 또한 게이트웨이 BGP 구현에서는 클라우드를 전송 지점으로 사용 하 여 두 개의 테 넌 트 사이트 간 라우팅을 수행할 수 있는 전송 라우팅을 제공 합니다. 이러한 BGP 기능은 모든 게이트웨이 기능에 적용 됩니다.  
   
-## <a name="bkmk_integration"></a>네트워크 컨트롤러와 RAS 게이트웨이 통합  
+## <a name="ras-gateway-integration-with-network-controller"></a><a name="bkmk_integration"></a>네트워크 컨트롤러와 RAS 게이트웨이 통합  
 RAS 게이트웨이는 Windows Server 2016의 네트워크 컨트롤러와 완전히 통합 됩니다. RAS 게이트웨이 및 네트워크 컨트롤러를 배포 하는 경우 네트워크 컨트롤러는 다음 기능을 수행 합니다.  
   
 -   게이트웨이 풀 배포  
@@ -103,7 +103,7 @@ RAS 게이트웨이는 Windows Server 2016의 네트워크 컨트롤러와 완�
   
 -   [L3 전달 게이트웨이에 대 한 고가용성](#bkmk_l3)  
   
-### <a name="bkmk_provisioning"></a>게이트웨이 연결의 프로 비전 및 부하 분산 (IKEv2, L3 및 GRE)  
+### <a name="provisioning-and-load-balancing-of-gateway-connections-ikev2-l3-and-gre"></a><a name="bkmk_provisioning"></a>게이트웨이 연결의 프로 비전 및 부하 분산 (IKEv2, L3 및 GRE)  
 테 넌 트가 게이트웨이 연결을 요청 하면 요청이 네트워크 컨트롤러에 전송 됩니다. 네트워크 컨트롤러는 각 풀의 용량 및 모든 풀의 모든 게이트웨이를 포함 하 여 모든 게이트웨이 풀에 대 한 정보로 구성 됩니다. 네트워크 컨트롤러가 연결에 대 한 올바른 풀 및 게이트웨이를 선택 합니다. 이 선택은 연결에 대 한 대역폭 요구 사항을 기반으로 합니다. 네트워크 컨트롤러는 "가장 적합 한" 알고리즘을 사용 하 여 풀에서 연결을 효율적으로 선택 합니다. 연결에 대 한 BGP 피어 링 지점은 현재이 테 넌 트의 첫 번째 연결 인 경우에도 지정 됩니다.  
   
 네트워크 컨트롤러에서 연결에 대 한 RAS 게이트웨이를 선택 하면 네트워크 컨트롤러는 게이트웨이에서 연결에 필요한 구성을 프로 비전 합니다. 연결이 IKEv2 S2S 연결 인 경우 네트워크 컨트롤러는 SLB 풀에서 NAT (Network Address Translation) 규칙도 프로 비전 합니다. SLB 풀의이 NAT 규칙은 테 넌 트의 연결 요청을 지정 된 게이트웨이로 보냅니다. 테 넌 트는 고유한 것으로 예상 되는 원본 IP로 구분 됩니다.  
@@ -113,7 +113,7 @@ RAS 게이트웨이는 Windows Server 2016의 네트워크 컨트롤러와 완�
   
 연결에 대해 BGP 라우팅이 사용 되는 경우 BGP 피어 링은 RAS Gateway에 의해 시작 되 고 온-프레미스와 클라우드 게이트웨이 간에 경로가 교환 됩니다. BGP에서 학습 된 경로 (또는 BGP를 사용 하지 않는 경우 정적으로 구성 된 경로)는 네트워크 컨트롤러에 전송 됩니다. 그런 다음 네트워크 컨트롤러는 테 넌 트 Vm이 설치 된 Hyper-v 호스트로 경로를 될 때마다 트리거되 합니다. 이제 테 넌 트 트래픽이 올바른 온-프레미스 사이트로 라우팅될 수 있습니다. 또한 네트워크 컨트롤러는 게이트웨이 위치를 지정 하는 연결 된 Hyper-v 네트워크 가상화 정책을 만들고 Hyper-v 호스트로 될 때마다 트리거되 합니다.  
   
-### <a name="bkmk_ike"></a>IKEv2 S2S의 고가용성  
+### <a name="high-availability-for-ikev2-s2s"></a><a name="bkmk_ike"></a>IKEv2 S2S의 고가용성  
 풀의 RAS 게이트웨이는 다른 테 넌 트의 연결 및 BGP 피어 링으로 구성 됩니다. 모든 풀에는 ' 활성 게이트웨이 및 ' N ' 대기 게이트웨이가 있습니다.  
   
 네트워크 컨트롤러는 다음과 같은 방식으로 게이트웨이 오류를 처리 합니다.  
@@ -140,8 +140,8 @@ RAS 게이트웨이는 Windows Server 2016의 네트워크 컨트롤러와 완�
   
 -   새 활성 게이트웨이에서 구성이 들어오면 IKEv2 S2S 연결 및 BGP 피어 링이 다시 설정 됩니다. 연결 및 BGP 피어 링은 클라우드 게이트웨이 또는 온-프레미스 게이트웨이를 통해 시작할 수 있습니다. 게이트웨이는 해당 경로를 새로 고치고 네트워크 컨트롤러에 보냅니다. 네트워크 컨트롤러가 게이트웨이에서 검색 된 새 경로를 학습 한 후 네트워크 컨트롤러는 해당 경로 및 관련 Hyper-v 네트워크 가상화 정책을 장애에 영향을 받는 테 넌 트의 Vm이 있는 Hyper-v 호스트로 보냅니다. 이 네트워크 컨트롤러 작업은 새 연결을 설정 하는 것과 유사 하며,이는 더 큰 규모에서 발생 합니다.  
   
-### <a name="bkmk_gre"></a>GRE의 고가용성  
-네트워크 컨트롤러의 RAS Gateway 장애 조치 (failover) 응답 프로세스-실패 검색, 연결 및 라우팅 구성을 대기 게이트웨이로 복사, 영향을 받는 연결 (출금 및 포함)의 BGP/static 라우팅 장애 조치 (failover) 계산 호스트와 BGP 피어 링에 대 한 경로 다시 연결) 및 계산 호스트의 Hyper-v 네트워크 가상화 정책 재구성-GRE 게이트웨이 및 연결에 대해 동일 합니다. 그러나 GRE 연결을 다시 설정 하는 방식은 다르게 이루어지므로 GRE의 고가용성 솔루션에는 몇 가지 추가 요구 사항이 있습니다.  
+### <a name="high-availability-for-gre"></a><a name="bkmk_gre"></a>GRE의 고가용성  
+네트워크 컨트롤러의 RAS Gateway 장애 조치 (failover) 응답 프로세스-실패 검색, 연결 및 라우팅 구성을 대기 게이트웨이로 복사, 영향을 받는 연결 (계산 호스트 및 BGP 피어 링의 출금 및 다시 연결을 포함 하 여)의 BGP/고정 라우팅 장애 조치, 계산 호스트의 Hyper-v 네트워크 가상화 정책 재구성 등은 GRE 게이트웨이 및 연결에 대해 동일 합니다. 그러나 GRE 연결을 다시 설정 하는 방식은 다르게 이루어지므로 GRE의 고가용성 솔루션에는 몇 가지 추가 요구 사항이 있습니다.  
   
 ![GRE의 고가용성](../../../media/RAS-Gateway-High-Availability/ras_ha.png)  
   
@@ -151,7 +151,7 @@ GRE 연결을 프로 비전 할 때, 네트워크 컨트롤러는 게이트웨�
   
 게이트웨이가 실패 하면 네트워크 컨트롤러는 실패 한 게이트웨이 및 기타 구성 데이터의 VIP 주소를 대기 게이트웨이로 복사 합니다. 대기 게이트웨이가 활성화 되 면 VIP가 해당 하는 스위치에 추가 되 고 실제 네트워크에 추가 됩니다. 원격 라우터는 계속 GRE 터널을 동일한 VIP에 연결 하 고 라우팅 인프라는 패킷이 새 활성 게이트웨이로 라우팅되도록 합니다.  
   
-### <a name="bkmk_l3"></a>L3 전달 게이트웨이에 대 한 고가용성  
+### <a name="high-availability-for-l3-forwarding-gateways"></a><a name="bkmk_l3"></a>L3 전달 게이트웨이에 대 한 고가용성  
 Hyper-v 네트워크 가상화 L3 전달 게이트웨이는 데이터 센터의 물리적 인프라와 Hyper-v 네트워크 가상화 클라우드의 가상화 된 인프라 간의 브리지입니다. 다중 테 넌 트 L3 전달 게이트웨이에서 각 테 넌 트는 테 넌 트의 실제 네트워크와 연결 하기 위해 자체 VLAN 태그가 지정 된 논리 네트워크를 사용 합니다.  
   
 새 테 넌 트가 새 L3 게이트웨이를 만들 때 네트워크 컨트롤러 게이트웨이는 사용 가능한 게이트웨이 VM을 선택 하 고 테 넌 트의 VLAN 태그가 지정 된 논리 네트워크에서 항상 사용 가능한 CA (고객 주소) 공간 IP 주소를 사용 하 여 새 테 넌 트 인터페이스를 구성 Service Manager 합니다. ). IP 주소는 원격 (실제 네트워크) 게이트웨이에서 피어 IP 주소로 사용 되 고, 테 넌 트의 Hyper-v 네트워크 가상화 네트워크에 도달 하는 다음 홉입니다.  

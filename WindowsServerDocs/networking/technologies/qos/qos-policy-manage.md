@@ -6,14 +6,14 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 04fdfa54-6600-43d4-8945-35f75e15275a
 manager: brianlic
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 4b8f10ab7b3da05fbefabb735ee2b8bb4ef1cb8a
-ms.sourcegitcommit: effbc183bf4b370905d95c975626c1ccde057401
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 36c30372b6cac40b603658eca9636a265801fb1a
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74781350"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80315447"
 ---
 # <a name="manage-qos-policy"></a>QoS 정책 관리
 
@@ -32,7 +32,7 @@ Windows 운영 체제에서 QoS 정책은 표준 기반 QoS의 기능을 그룹 
 
 -  [QoS 정책 보기, 편집 또는 삭제](#bkmk_editpolicy)
 
-##  <a name="bkmk_createpolicy"></a>QoS 정책 만들기
+##  <a name="create-a-qos-policy"></a><a name="bkmk_createpolicy"></a>QoS 정책 만들기
 
 QoS 정책을 만들기 전에 네트워크 트래픽을 관리 하는 데 사용 되는 두 가지 주요 QoS 제어를 이해 하는 것이 중요 합니다.
 
@@ -94,7 +94,7 @@ QoS 정책 마법사의 두 번째 페이지에서 모든 응용 프로그램, �
 
 - **이 URL에 대 한 요청에 응답 하는 http 서버 응용** 프로그램만 QoS 정책 마법사의 첫 번째 페이지에 있는 트래픽 관리 설정이 특정 HTTP 서버 응용 프로그램에만 적용 되도록 지정 합니다.
 
-선택적으로 응용 프로그램의 경로를 입력할 수 있습니다. 응용 프로그램 경로를 지정하려면 경로에 응용 프로그램 이름을 포함하십시오. 경로에는 환경 변수가 포함 될 수 있습니다. 경로는 예를 들어 %ProgramFiles%\My Application Path\MyApp.exe나 c:\program files\my application path\myapp.exe가 될 수 있습니다.
+선택적으로 애플리케이션의 경로를 입력할 수 있습니다. 애플리케이션 경로를 지정하려면 경로에 애플리케이션 이름을 포함하십시오. 경로에는 환경 변수가 포함 될 수 있습니다. 경로는 예를 들어 %ProgramFiles%\My Application Path\MyApp.exe나 c:\program files\my application path\myapp.exe가 될 수 있습니다.
 
 >[!NOTE]
 >응용 프로그램 경로에는 기호화 된 링크로 확인 되는 경로를 포함할 수 없습니다.
@@ -176,7 +176,7 @@ QoS 정책 마법사의 네 번째 페이지에서 마법사의 첫 번째 페�
   
 사용자 또는 컴퓨터에 QoS 정책 설정을 적용 하려면 QoS 정책이 있는 GPO를 도메인, 사이트 또는 OU (조직 구성 단위)와 같은 Active Directory Domain Services 컨테이너에 연결 합니다.  
   
-##  <a name="bkmk_editpolicy"></a>QoS 정책 보기, 편집 또는 삭제
+##  <a name="view-edit-or-delete-a-qos-policy"></a><a name="bkmk_editpolicy"></a>QoS 정책 보기, 편집 또는 삭제
 
 위에 설명 된 QoS 정책 마법사 페이지는 정책의 속성을 보거나 편집할 때 표시 되는 속성 페이지에 해당 합니다.  
   
@@ -188,7 +188,7 @@ QoS 정책 마법사의 네 번째 페이지에서 마법사의 첫 번째 페�
   
     -   정책 프로필  
   
-    -   응용 프로그램 이름  
+    -   Application Name  
   
     -   IP 주소  
   
@@ -253,10 +253,10 @@ QoS 정책을 사용 하는 목적은 기업의 네트워크에서 트래픽을 
   
 Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows Server 2008 및 Windows Vista 이전 버전의 windows에서 TCP 수신 창이 변경 되었습니다. 이전 버전의 Windows에서는 TCP 수신 측 기간이 최대 64 킬로바이트 (KB)로 제한 되는 반면, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows Server 2008 및 Windows Vista에서는 자동으로 수신 측 창의 크기를 최대 16mb (MB)로 제한 합니다. ). 인바운드 TCP 트래픽 제어에서 TCP 수신 창이 증가할 수 있는 최대값을 설정 하 여 인바운드 처리량 수준을 제어할 수 있습니다. 수준은 다음 최대값에 해당 합니다. 
   
-|인바운드 처리량 수준|최대|  
+|인바운드 처리량 수준|최대값|  
 |------------------------|-------|  
-|0|64 KB|
-|1|256 KB|
+|0|64KB|
+|1|256KB|
 |2|1MB|
 |3|16mb|
 
@@ -280,7 +280,7 @@ DSCP 표시 재정의는 응용 프로그램의 기능을 지정 하 여 QoS 정
 
 ##### <a name="wireless-multimedia-and-dscp-values"></a>무선 멀티미디어 및 DSCP 값
 
-Wi-fi [동맹](https://go.microsoft.com/fwlink/?LinkId=160769) 은 wi-fi 무선 네트워크에서 전송 되는 네트워크 트래픽의 우선 순위를 정하는\) WMM_AC \(4 개의 액세스 범주를 정의 하는 무선 멀티미디어\) \(에 대 한 인증을 설정 했습니다. 액세스 범주에는 음성, 비디오, 최상의 작업 및 배경\)의 가장 높은 우선 순위에 \(포함 됩니다. 각각 .VO.MSECND.NET, VI, be 및 BK으로 축약 됩니다. WMM 사양은 네 가지 액세스 범주 각각에 해당 하는 DSCP 값을 정의 합니다.
+Wi-fi [동맹](https://go.microsoft.com/fwlink/?LinkId=160769) 은 wi-fi 무선 네트워크에서 전송 되는 네트워크 트래픽의 우선 순위를 정하는\) WMM_AC \(4 개의 액세스 범주를 정의 하는 무선 멀티미디어\) \(에 대 한 인증을 설정 했습니다.\- 액세스 범주에는 음성, 비디오, 최상의 작업 및 배경\)의 가장 높은 우선 순위에 \(포함 됩니다. 각각 .VO.MSECND.NET, VI, be 및 BK으로 축약 됩니다. WMM 사양은 네 가지 액세스 범주 각각에 해당 하는 DSCP 값을 정의 합니다.
   
 |DSCP 값|WMM 액세스 범주|
 |----------|-------------------|
@@ -291,7 +291,7 @@ Wi-fi [동맹](https://go.microsoft.com/fwlink/?LinkId=160769) 은 wi-fi 무선 
 
 이러한 DSCP 값을 사용 하는 QoS 정책을 만들 수 있습니다. 이러한 DSCP 값을 사용 하는 휴대용 컴퓨터에 대 한 wi-fi 인증을 사용 하는\-에 대 한 wi-fi 인증 된\-™에 대 한 wi-fi 인증
   
-### <a name="BKMK_precedencerules"></a>QoS 정책 우선 순위 규칙
+### <a name="qos-policy-precedence-rules"></a><a name="BKMK_precedencerules"></a>QoS 정책 우선 순위 규칙
 
 GPO의 우선 순위와 마찬가지로 QoS 정책에는 여러 QoS 정책이 특정 트래픽 집합에 적용 될 때 충돌을 해결 하기 위한 선행 규칙이 있습니다. 아웃 바운드 TCP 또는 UDP 트래픽의 경우 한 번에 하나의 QoS 정책만 적용할 수 있습니다. 즉, 제한 비율을 합산 하는 등의 QoS 정책에는 누적 효과가 없습니다.
 

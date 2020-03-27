@@ -10,14 +10,14 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5dc529f7-7bc3-48dd-b83d-92a09e4055c4
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 4437101c6cde25ebb370fe54a2f8ef821997f15d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 09cfde5bdd9e213e166345fb6844dcff08275b3f
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71388773"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80314764"
 ---
 # <a name="step-1-configure-the-directaccess-infrastructure"></a>1 단계 DirectAccess 인프라 구성
 
@@ -25,7 +25,7 @@ ms.locfileid: "71388773"
 
 이 항목에서는 기존 VPN 배포에서 DirectAccess를 사용하는 데 필요한 인프라를 구성하는 방법에 대해 설명합니다. 에 설명 된 계획 단계를 완료 한 확인 배포 단계를 시작 하기 전에 [1 단계: DirectAccess 인프라 계획](Step-1-Plan-DirectAccess-Infrastructure.md)합니다.  
   
-|태스크|설명|  
+|작업|설명|  
 |----|--------|  
 |서버 네트워크 설정 구성|원격 액세스 서버에서 서버 네트워크 설정을 구성합니다.|  
 |회사 네트워크의 라우팅을 구성합니다.|트래픽이 적절히 라우팅되도록 회사 네트워크의 라우팅을 구성합니다.|  
@@ -37,8 +37,8 @@ ms.locfileid: "71388773"
 |보안 그룹 구성|DirectAccess 클라이언트 컴퓨터를 포함할 보안 그룹 및 배포에 필요한 기타 보안 그룹을 구성합니다.|  
 |네트워크 위치 서버 구성|DirectAccess 사용 마법사는 DirectAccess 서버에서 네트워크 위치 서버를 구성합니다.|  
   
-## <a name="ConfigNetworkSettings"></a>서버 네트워크 설정 구성  
-IPv4 및 IPv6을 사용하는 환경에 단일 서버를 배포하려면 다음 네트워크 인터페이스 설정이 필요합니다. 모든 IP 주소를 사용 하 여 구성 된 **어댑터 설정 변경** 에 **Windows 네트워크 및 공유 센터**합니다.  
+## <a name="configure-server-network-settings"></a><a name="ConfigNetworkSettings"></a>서버 네트워크 설정 구성  
+IPv4 및 IPv6을 사용하는 환경에 단일 서버를 배포하려면 다음 네트워크 인터페이스 설정이 필요합니다. 모든 IP 주소는 **Windows 네트워크 및 공유 센터**에서 **어댑터 설정 변경**을 사용하여 구성합니다.  
   
 -   에지 토폴로지  
   
@@ -66,14 +66,14 @@ IPv4 및 IPv6을 사용하는 환경에 단일 서버를 배포하려면 다음 
 >     Save-NetGPO -GPOSession $gposession  
 >     ```  
   
-## <a name="ConfigRouting"></a>회사 네트워크에서 라우팅 구성  
+## <a name="configure-routing-in-the-corporate-network"></a><a name="ConfigRouting"></a>회사 네트워크에서 라우팅 구성  
 다음과 같이 회사 네트워크의 라우팅을 구성합니다.  
   
 -   조직에 기본 IPv6이 배포된 경우 내부 네트워크의 라우터가 원격 액세스 서버를 통해 IPv6 트래픽을 다시 라우팅할 수 있도록 경로를 추가합니다.  
   
 -   원격 액세스 서버에서 조직의 IPv4 및 IPv6 경로를 수동으로 구성합니다. 조직(/48) IPv6 접두사가 있는 모든 트래픽이 내부 네트워크로 전달되도록 게시된 경로를 추가합니다. 또한 IPv4 트래픽의 경우 내부 네트워크로 IPv4 트래픽이 전달되도록 명시적인 경로를 추가합니다.  
   
-## <a name="ConfigFirewalls"></a>방화벽 구성  
+## <a name="configure-firewalls"></a><a name="ConfigFirewalls"></a>방화벽 구성  
 배포에서 추가 방화벽을 사용하는 경우 원격 액세스 서버가 IPv4 인터넷에 있으면 원격 액세스 트래픽에 대해 다음 인터넷 연결 방화벽 예외를 적용합니다.  
   
 -   6to4 트래픽-IP 프로토콜 41 인바운드 및 아웃 바운드입니다.  
@@ -92,10 +92,10 @@ IPv4 및 IPv6을 사용하는 환경에 단일 서버를 배포하려면 다음 
   
 -   TCP/UDP - 모든 IPv4/IPv6 트래픽  
   
-## <a name="ConfigCAs"></a>Ca 및 인증서 구성  
+## <a name="configure-cas-and-certificates"></a><a name="ConfigCAs"></a>Ca 및 인증서 구성  
 DirectAccess 사용 마법사는 사용자 이름 및 암호를 사용하여 인증하는 기본 제공 Kerberos 프록시를 구성합니다. 또한 원격 액세스 서버에서 IP-HTTPS 인증서를 구성합니다.  
   
-### <a name="ConfigCertTemp"></a>인증서 템플릿 구성  
+### <a name="configure-certificate-templates"></a><a name="ConfigCertTemp"></a>인증서 템플릿 구성  
 내부 CA를 사용하여 인증서를 발급하는 경우 IP-HTTPS 인증서 및 네트워크 위치 서버 웹 사이트 인증서용 인증서 템플릿을 구성해야 합니다.  
   
 ##### <a name="to-configure-a-certificate-template"></a>인증서 템플릿을 구성하려면  
@@ -111,7 +111,7 @@ DirectAccess 사용 마법사는 사용자 이름 및 암호를 사용하여 인
   
     IP-HTTPS 인증에 사용되는 인증서. 인증서 주체 이름이 와일드카드가 아닌 경우에는 원격 액세스 서버 IP-HTTPS 연결에만 사용되는 외부에서 확인 가능한 FQDN URL이어야 합니다.  
   
--   **개인**-아직 존재 하지 않는 경우에 다음이 필요 합니다.  
+-   **프라이빗**-아직 존재하지 않는 경우에 다음이 필요합니다.  
   
     -   IP-HTTPS 인증에 사용되는 웹 사이트 인증서. 인증서 주체는 인터넷에서 연결할 수 있는 외부에서 확인 가능한 FQDN(정규화된 도메인 이름)이어야 합니다.  
   
@@ -154,44 +154,44 @@ IP-HTTPS 인증에 사용되는 웹 사이트 인증서는 다음 요구 사항�
   
 5.  **인증서**를 마우스 오른쪽 단추로 클릭하고 **모든 작업**을 가리킨 다음 **새 인증서 요청**을 클릭합니다.  
   
-6.  **다음** 을 두 번 클릭합니다.  
+6.  **다음**을 두 번 클릭합니다.  
   
 7.  에 **인증서 요청** 페이지 인증서 템플릿에 대 한 확인란을 선택 하 고 필요한 경우 클릭 **이 인증서를 등록 하려면 추가 정보가 필요**합니다.  
   
 8.  **인증서 속성** 대화 상자의 **주체** 탭에 있는 **주체 이름** 영역 내 **유형**에서 **일반 이름**을 선택합니다.  
   
-9. **값**, 원격 액세스 서버 외부 연결 어댑터의 IPv4 주소 또는 IP-HTTPS URL의 FQDN을 지정 하 고 클릭 한 다음 **추가**합니다.  
+9. **값**에서 원격 액세스 서버 외부 연결 어댑터의 IPv4 주소 또는 IP-HTTPS URL의 FQDN을 지정하고 **추가**를 클릭합니다.  
   
-10. 에 **대체 이름** 영역에서 **형식**, 선택, **DNS**합니다.  
+10. **대체 이름** 영역의 **유형**에서 **DNS**를 선택합니다.  
   
-11. **값**, 원격 액세스 서버 외부 연결 어댑터의 IPv4 주소 또는 IP-HTTPS URL의 FQDN을 지정 하 고 클릭 한 다음 **추가**합니다.  
+11. **값**에서 원격 액세스 서버 외부 연결 어댑터의 IPv4 주소 또는 IP-HTTPS URL의 FQDN을 지정하고 **추가**를 클릭합니다.  
   
 12. **일반** 탭의 **이름**에 인증서를 식별하는 데 도움이 되는 이름을 입력할 수 있습니다.  
   
-13. 에 **확장** 탭 옆에 **확장 키 용도**, 화살표를 클릭 하 고 서버 인증에 있는지 확인 하십시오는 **선택한 옵션** 목록입니다.  
+13. **확장** 탭에서 **확장된 키 사용** 옆에 있는 화살표를 클릭하고 서버 인증이 **선택한 옵션** 목록에 있는지 확인합니다.  
   
-14. 클릭 **확인**, 클릭 **등록**, 를 클릭 하 고 **마침**합니다.  
+14. **확인**, **등록**을 차례로 클릭한 다음 **마침**을 클릭합니다.  
   
 15. 인증서 스냅인의 세부 정보 창에서 새 인증서가 서버 인증 용도로 등록되었는지 확인합니다.  
   
-## <a name="ConfigDNS"></a>DNS 서버 구성  
+## <a name="configure-the-dns-server"></a><a name="ConfigDNS"></a>DNS 서버 구성  
 배포의 내부 네트워크에 대한 네트워크 위치 서버 웹 사이트의 DNS 항목을 수동으로 구성해야 합니다.  
   
-### <a name="NLS_DNS"></a>네트워크 위치 서버 및 웹 프로브 DNS 레코드를 만들려면  
+### <a name="to-create-the-network-location-server-and-web-probe-dns-records"></a><a name="NLS_DNS"></a>네트워크 위치 서버 및 웹 프로브 DNS 레코드를 만들려면  
   
 1.  내부 네트워크 DNS 서버: **시작** 화면에서 * * dnsmgmt.msc * *를 입력 한 다음 enter 키를 누릅니다.  
   
 2.  **DNS 관리자** 콘솔의 왼쪽 창에서 도메인에 대한 정방향 조회 영역을 확장합니다. 도메인을 마우스 오른쪽 단추로 클릭하고 **새 호스트(A 또는 AAAA)** 를 클릭합니다.  
   
-3.  에 **새 호스트** 대화 상자는 **이름 (부모 도메인 이름 사용 비어 있는 경우)** 상자에 네트워크 위치 서버 웹 사이트 (이 이름은 DirectAccess 클라이언트는 네트워크 위치 서버에 연결 하는 데 사용)에 대 한 DNS 이름을 입력 합니다. 에 **IP 주소** 상자에 네트워크 위치 서버의 IPv4 주소를 입력 한 다음 클릭 **호스트 추가할**합니다. 에 **DNS** 대화 상자를 클릭 하 여 **확인**합니다.  
+3.  **새 호스트** 대화 상자의 **이름(입력하지 않으면 부모 도메인 이름 사용)** 상자에 네트워크 위치 서버 웹 사이트의 DNS 이름(DirectAccess 클라이언트에서 네트워크 위치 서버에 연결하는 데 사용하는 이름)을 입력합니다. **IP 주소** 상자에 네트워크 위치 서버의 IPv4 주소를 입력하고 **호스트 추가**를 클릭합니다. **DNS** 대화 상자에서 **확인**을 클릭합니다.  
   
-4.  **새 호스트** 대화 상자의 **이름(입력하지 않으면 부모 도메인 이름 사용)** 상자에 웹 검색의 DNS 이름(기본 웹 검색의 이름은 directaccess-webprobehost)을 입력합니다. **IP 주소** 상자에 웹 검색의 IPv4 주소를 입력하고 **호스트 추가**를 클릭합니다. directaccess-corpconnectivityhost 및 수동으로 만든 모든 연결 검증 도구에 대해 이 프로세스를 반복합니다. 에 **DNS** 대화 상자를 클릭 하 여 **확인**합니다.  
+4.  **새 호스트** 대화 상자의 **이름(입력하지 않으면 부모 도메인 이름 사용)** 상자에 웹 검색의 DNS 이름(기본 웹 검색의 이름은 directaccess-webprobehost)을 입력합니다. **IP 주소** 상자에 웹 검색의 IPv4 주소를 입력하고 **호스트 추가**를 클릭합니다. directaccess-corpconnectivityhost 및 수동으로 만든 모든 연결 검증 도구에 대해 이 프로세스를 반복합니다. **DNS** 대화 상자에서 **확인**을 클릭합니다.  
   
 5.  **완료**를 클릭합니다.  
 
 ![Windows PowerShell](../../../media/Step-1-Configure-the-DirectAccess-Infrastructure_3/PowerShellLogoSmall.gif)***<em>windows powershell 해당 명령</em>***  
   
-다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
+다음 Windows PowerShell cmdlet은 이전 절차와 동일한 기능을 수행합니다. 서식 조건 때문에 각 cmdlet이 여러 줄로 자동 줄 바꿈되어 표시되더라도 한 줄에 입력합니다.  
   
 ```  
 Add-DnsServerResourceRecordA -Name <network_location_server_name> -ZoneName <DNS_zone_name> -IPv4Address <network_location_server_IPv4_address>  
@@ -204,7 +204,7 @@ Add-DnsServerResourceRecordAAAA -Name <network_location_server_name> -ZoneName <
   
 -   **CRL 해지 확인**-DirectAccess에서는 DirectAccess 클라이언트 및 원격 액세스 서버 간의 IP-HTTPS 연결 및 DirectAccess 클라이언트와 네트워크 위치 서버 간의 HTTPS 기반 연결에 대 한 인증서 해지를 확인 합니다. 두 경우 모두 DirectAccess 클라이언트에서 CRL 배포 지점 위치를 확인하고 액세스할 수 있어야 합니다.  
   
-## <a name="ConfigAD"></a>Active Directory 구성  
+## <a name="configure-active-directory"></a><a name="ConfigAD"></a>Active Directory 구성  
 원격 액세스 서버와 모든 DirectAccess 클라이언트 컴퓨터는 Active Directory 도메인에 가입되어 있어야 합니다. DirectAccess 클라이언트 컴퓨터에는 다음 도메인 유형 중 하나의 구성원이어야 합니다.  
   
 -   원격 액세스 서버와 동일한 포리스트에 속한 도메인  
@@ -231,11 +231,11 @@ Add-DnsServerResourceRecordAAAA -Name <network_location_server_name> -ZoneName <
   
 8.  컴퓨터를 다시 시작해야 한다는 메시지가 표시되면 **확인**을 클릭합니다.  
   
-9. 에 **시스템 속성** 대화 상자에서 닫기를 클릭 합니다. 클릭 **지금 다시 시작** 메시지가 표시 되 면 합니다.  
+9. 에 **시스템 속성** 대화 상자에서 닫기를 클릭 합니다. 메시지가 표시되면 **지금 다시 시작**을 클릭합니다.  
   
 ![Windows PowerShell](../../../media/Step-1-Configure-the-DirectAccess-Infrastructure_3/PowerShellLogoSmall.gif)***<em>windows powershell 해당 명령</em>***  
   
-다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
+다음 Windows PowerShell cmdlet은 이전 절차와 동일한 기능을 수행합니다. 서식 조건 때문에 각 cmdlet이 여러 줄로 자동 줄 바꿈되어 표시되더라도 한 줄에 입력합니다.  
   
 아래의 Add-Computer 명령을 입력한 후 도메인 자격 증명을 제공해야 합니다.  
   
@@ -244,7 +244,7 @@ Add-Computer -DomainName <domain_name>
 Restart-Computer  
 ```  
   
-## <a name="ConfigGPOs"></a>Gpo 구성  
+## <a name="configure-gpos"></a><a name="ConfigGPOs"></a>Gpo 구성  
 원격 액세스를 배포 하려면 최소 두 개의 그룹 정책 개체의 필요한: DirectAccess 클라이언트 컴퓨터에 대 한 설정을 포함 하 고 하나의 그룹 정책 개체에는 원격 액세스 서버에 대 한 설정이 포함 되어 있습니다. 원격 액세스를 구성 하는 경우 마법사는 자동으로 필요한 그룹 정책 개체를 만듭니다. 그러나 조직에서 명명 규칙을 적용 또는 만들기 또는 그룹 정책 개체를 편집 하는 데 필요한 권한이 없는 경우 원격 액세스를 구성 하기 전에 만들 수 있어야 합니다.  
   
 그룹 정책 개체를 만들려면 참조 [만들고 그룹 정책 개체 편집](https://technet.microsoft.com/library/cc754740.aspx)합니다.  
@@ -260,18 +260,18 @@ Restart-Computer
 > [!NOTE]  
 > 그룹 정책 개체를 수동으로 만든 경우 그룹 정책 개체는 사용할 수 없는 DirectAccess 구성 중 불가능 해제 합니다. 그룹 정책 개체 관리 컴퓨터에 가장 가까운 도메인 컨트롤러에 복제 되지 않을 수 있습니다. 이 경우 관리자는 복제가 완료될 때까지 기다리거나 복제를 강제로 실행할 수 있습니다.  
   
-## <a name="ConfigSGs"></a>보안 그룹 구성  
+## <a name="configure-security-groups"></a><a name="ConfigSGs"></a>보안 그룹 구성  
 클라이언트 컴퓨터 그룹 정책 개체에에서 포함 된 DirectAccess 설정은 원격 액세스를 구성할 때 지정 하는 보안 그룹의 구성원 인 컴퓨터에만 적용 됩니다. 또한 보안 그룹을 사용하여 응용 프로그램 서버를 관리하는 경우 이러한 서버의 보안 그룹을 만듭니다.  
   
-### <a name="Sec_Group"></a>DirectAccess 클라이언트에 대 한 보안 그룹을 만들려면  
+### <a name="to-create-a-security-group-for-directaccess-clients"></a><a name="Sec_Group"></a>DirectAccess 클라이언트에 대 한 보안 그룹을 만들려면  
   
 1.  에 **시작** 화면에서 입력**dsa.msc**, 한 다음 ENTER를 누릅니다. 에 **Active Directory 사용자 및 컴퓨터** 보안 그룹에 포함 되 면 마우스 오른쪽 단추로 클릭 하는 도메인을 확장 하는 콘솔의 왼쪽된 창에서 **사용자**, 가리킨 **새로**, 클릭 하 고 **그룹**합니다.  
   
-2.  에 **새 개체-그룹** 대화 상자의 **그룹 이름**, 보안 그룹의 이름을 입력 합니다.  
+2.  **새 개체 - 그룹** 대화 상자의 **그룹 이름**에 보안 그룹의 이름을 입력합니다.  
   
-3.  아래에서 **그룹 범위**, 클릭 **Global**, 아래에서 **그룹 종류**, 클릭 **보안**, 를 클릭 하 고 **확인**합니다.  
+3.  **그룹 범위** 아래에서 **전역**을 클릭하고 **그룹 종류**에서 **보안**을 클릭한 다음 **확인**을 클릭합니다.  
   
-4.  DirectAccess 클라이언트 컴퓨터 보안 그룹을 두 번 클릭 하 고 속성 대화 상자에서 클릭 된 **멤버** 탭 합니다.  
+4.  DirectAccess 클라이언트 컴퓨터 보안 그룹을 두 번 클릭하고 속성 대화 상자에서 **구성원** 탭을 클릭합니다.  
   
 5.  **구성원** 탭에서 **추가**를 클릭합니다.  
   
@@ -279,17 +279,17 @@ Restart-Computer
   
 ![Windows PowerShell](../../../media/Step-1-Configure-the-DirectAccess-Infrastructure_3/PowerShellLogoSmall.gif)**Windows powershell 해당 명령**  
   
-다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
+다음 Windows PowerShell cmdlet은 이전 절차와 동일한 기능을 수행합니다. 서식 조건 때문에 각 cmdlet이 여러 줄로 자동 줄 바꿈되어 표시되더라도 한 줄에 입력합니다.  
   
 ```  
 New-ADGroup -GroupScope global -Name <DirectAccess_clients_group_name>  
 Add-ADGroupMember -Identity DirectAccess_clients_group_name -Members <computer_name>  
 ```  
   
-## <a name="ConfigNLS"></a>네트워크 위치 서버 구성  
+## <a name="configure-the-network-location-server"></a><a name="ConfigNLS"></a>네트워크 위치 서버 구성  
 네트워크 위치 서버는 항상 사용 가능한 서버여야 하며, DirectAccess 클라이언트에서 신뢰할 수 있는 유효한 SSL 인증서가 있어야 합니다. 네트워크 위치 서버 인증서에 대한 인증서 옵션에는 다음 두 가지가 있습니다.  
   
--   **개인**-아직 존재 하지 않는 경우에 다음이 필요 합니다.  
+-   **프라이빗**-아직 존재하지 않는 경우에 다음이 필요합니다.  
   
     -   네트워크 위치 서버에 사용되는 웹 사이트 인증서. 인증서 주체는 네트워크 위치 서버의 URL이어야 합니다.   
   
@@ -317,21 +317,21 @@ Add-ADGroupMember -Identity DirectAccess_clients_group_name -Members <computer_n
   
 5.  **인증서**를 마우스 오른쪽 단추로 클릭하고 **모든 작업**을 가리킨 다음 **새 인증서 요청**을 클릭합니다.  
   
-6.  **다음** 을 두 번 클릭합니다.  
+6.  **다음**을 두 번 클릭합니다.  
   
 7.  에 **인증서 요청** 페이지 인증서 템플릿에 대 한 확인란을 선택 하 고 필요한 경우 클릭 **이 인증서를 등록 하려면 추가 정보가 필요**합니다.  
   
 8.  **인증서 속성** 대화 상자의 **주체** 탭에 있는 **주체 이름** 영역 내 **유형**에서 **일반 이름**을 선택합니다.  
   
-9. **값**, 네트워크 위치 서버 웹 사이트의 FQDN을 입력 하 고 클릭 한 다음 **추가**합니다.  
+9. **값**에 네트워크 위치 서버 웹 사이트의 FQDN을 입력하고 **추가**를 클릭합니다.  
   
-10. 에 **대체 이름** 영역에서 **형식**, 선택, **DNS**합니다.  
+10. **대체 이름** 영역의 **유형**에서 **DNS**를 선택합니다.  
   
-11. **값**, 네트워크 위치 서버 웹 사이트의 FQDN을 입력 하 고 클릭 한 다음 **추가**합니다.  
+11. **값**에 네트워크 위치 서버 웹 사이트의 FQDN을 입력하고 **추가**를 클릭합니다.  
   
 12. **일반** 탭의 **이름**에 인증서를 식별하는 데 도움이 되는 이름을 입력할 수 있습니다.  
   
-13. 클릭 **확인**, 클릭 **등록**, 를 클릭 하 고 **마침**합니다.  
+13. **확인**, **등록**을 차례로 클릭한 다음 **마침**을 클릭합니다.  
   
 14. 인증서 스냅인의 세부 정보 창에서 새 인증서가 서버 인증 용도로 등록되었는지 확인합니다.  
   

@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking-dhcp
 ms.topic: get-started-article
 ms.assetid: c6f36998-5b64-45d1-b1f0-0f0d6604dbe3
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 8032b7c8e78170d57b0367775672577d9fd900e2
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 58d849fa1003148b034cc426817b97d3a70d4421
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71355446"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80312691"
 ---
 # <a name="whats-new-in-dhcp"></a>DHCP의 새로운 기능
 
@@ -48,10 +48,10 @@ NAP 지원은 windows Server 2008를 사용 하는 DHCP 서버 역할에 도입 
   
 |운영 체제|NAP 지원|  
 |--------------------|---------------|  
-| Windows Server 2008 |지원함|  
-| Windows Server 2008 R2 |지원함|  
-| Windows Server 2012 |지원함|  
-| Windows Server 2012 R2 |지원함|  
+| Windows Server 2008 |지원됨|  
+| Windows Server 2008 R2 |지원됨|  
+| Windows Server 2012 |지원됨|  
+| Windows Server 2012 R2 |지원됨|  
 | Windows Server 2016|지원되지 않음|  
   
 NAP 배포의 경우 NAP을 지 원하는 운영 체제를 실행 하는 DHCP 서버는 NAP DHCP 적용 방법에 대 한 NAP 적용 지점을 작동할 수 있습니다. DHCP nap에서에 대 한 자세한 내용은 참조 [검사 목록: DHCP 적용 디자인 구현](https://technet.microsoft.com/library/dd314186.aspx)합니다.  

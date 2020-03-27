@@ -3,7 +3,7 @@ title: Windows Server Essentials 마이그레이션을 위해 대상 서버에 W
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: 16b24026-2fe3-4bd0-b82f-900e1564be99
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: ef8e717fe235b8d85f4d53442610818b31ad7d1d
-ms.sourcegitcommit: 9f955be34c641b58ae8b3000768caa46ad535d43
+ms.openlocfilehash: d7b1edf2ffd602cd844fa399ac9368a2f4e08643
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2019
-ms.locfileid: "68590423"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318854"
 ---
 # <a name="move-windows-sbs-2011-standard-settings-and-data-to-the-destination-server-for-windows-server-essentials-migration"></a>Windows Server Essentials 마이그레이션을 위해 대상 서버에 Windows SBS 2011 Standard 설정 및 데이터 이동
 
@@ -50,15 +50,15 @@ ms.locfileid: "68590423"
 
 1. 도메인 관리자로 대상 서버에 로그온하고 명령 창을 엽니다. 
 
-2. 명령 프롬프트에서 다음 명령을 입력하고 Enter 키를 누릅니다. 
+2. 명령 프롬프트에서 다음 명령을 입력한 다음 Enter 키를 누릅니다. 
 
     `robocopy \\<SourceServerName> \<SharedSourceFolderName> \\<DestinationServerName> \<SharedDestinationFolderName> /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt`
  
  각 항목이 나타내는 의미는 다음과 같습니다.
- - \<SourceServerName\> 은 원본 서버의 이름입니다.
- - \<Sharedsourcefoldername\> 은 원본 서버에 있는 공유 폴더의 이름입니다.
- - \<Destinationservername\> 은 대상 서버의 이름입니다.
- - \<Shareddestinationfoldername\> 은 데이터가 복사 될 대상 서버의 공유 폴더입니다. 
+ - \<SourceServerName\>은 원본 서버의 이름입니다.
+ - \<SharedSourceFolderName\>은 원본 서버의 공유 폴더 이름입니다.
+ - DestinationServerName\> \<대상 서버의 이름입니다.
+ - \<SharedDestinationFolderName\>는 데이터가 복사 될 대상 서버의 공유 폴더입니다. 
 
 3. 원본 서버에서 마이그레이션할 각 공유 폴더에 대해 이전 단계를 반복합니다. 
 
@@ -133,7 +133,7 @@ ms.locfileid: "68590423"
  
 3. 탐색 창에서 **고급 관리**를 클릭 하 고 **그룹 정책 관리**를 클릭 한 다음 **포리스트:** _< 해당 domainname\>_ 을 클릭 합니다. 
  
-4. **도메인**을 클릭 하 고 < 도메인 *\>이름*을 클릭 한 다음 **그룹 정책 개체**를 클릭 합니다. 
+4. **도메인**을 클릭 하 고 *< 도메인 이름\>* 를 클릭 한 다음 **그룹 정책 개체**를 클릭 합니다. 
  
 5. **Small Business Server 감사 정책**을 마우스 오른쪽 단추로 클릭하고 **삭제**, **확인**을 차례로 클릭합니다. 
  
@@ -161,9 +161,9 @@ ms.locfileid: "68590423"
  
 2. **시작**을 클릭한 다음 **서버 관리**를 클릭합니다. 
  
-3. 탐색 창에서 **기능**을 클릭 하 고 **그룹 정책 관리**를 클릭 한 후 **포리스트:** _< 해당\> networkdomainname_ 을 클릭 합니다. 
+3. 탐색 창에서 **기능**을 클릭 하 고 **그룹 정책 관리**를 클릭 한 다음 **포리스트:** _< 해당 networkdomainname_ 을 클릭\> 
  
-4. **도메인**을 클릭 하 고 *< networkdomainname\>* 을 클릭 한 다음 **WMI 필터**를 클릭 합니다. 
+4. **도메인**을 클릭 하 고 *< networkdomainname\>* 를 클릭 한 다음 **WMI 필터**를 클릭 합니다. 
  
 5. **Windows SBS 클라이언트**를 마우스 오른쪽 단추로 클릭하고 **삭제**, **예**를 차례로 클릭합니다. 
  

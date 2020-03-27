@@ -1,27 +1,27 @@
 ---
 title: SDN(소프트웨어 정의 네트워킹)
-description: SDN(소프트웨어 방식 네트워킹)은 데이터 센터의 라우터, 스위치 및 게이트웨이 같은 실제 및 가상 네트워크 장치를 중앙에서 구성하고 관리하는 방법을 제공합니다. 이 항목을 사용 하 여 Windows Server, System Center 및 Microsoft Azure에 제공 된 SDN (소프트웨어 정의 네트워킹) 기술에 대해 알아봅니다.
+description: SDN(소프트웨어 방식 네트워킹)은 데이터 센터의 라우터, 스위치 및 게이트웨이 같은 실제 및 가상 네트워크 디바이스를 중앙에서 구성하고 관리하는 방법을 제공합니다. 이 항목을 사용 하 여 Windows Server, System Center 및 Microsoft Azure에 제공 된 SDN (소프트웨어 정의 네트워킹) 기술에 대해 알아봅니다.
 manager: dougkim
 ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: 9a1ea73c-20cd-42c5-95ad-b003b9cc6d64
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 08/09/2018
-ms.openlocfilehash: dd2b39f3563a47db18564de282f2646ec269e584
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: a1283c6afcebe7b6abc12f9847865d6305bd3f2c
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405926"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80317274"
 ---
 # <a name="sdn-in-windows-server-overview"></a>Windows Server의 SDN 개요
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 
-SDN(소프트웨어 방식 네트워킹)은 데이터 센터의 라우터, 스위치 및 게이트웨이 같은 실제 및 가상 네트워크 장치를 중앙에서 구성하고 관리하는 방법을 제공합니다. 기존 SDN 호환 장치를 사용 하 여 가상 네트워크와 실제 네트워크 간의 긴밀 한 통합을 구현할 수 있습니다. Hyper-v 가상 스위치, Hyper-v 네트워크 가상화, RAS 게이트웨이 등의 가상 네트워크 요소는 SDN 인프라의 필수적인 요소가 되도록 설계 되었습니다. 
+SDN(소프트웨어 방식 네트워킹)은 데이터 센터의 라우터, 스위치 및 게이트웨이 같은 실제 및 가상 네트워크 디바이스를 중앙에서 구성하고 관리하는 방법을 제공합니다. 기존 SDN 호환 장치를 사용 하 여 가상 네트워크와 실제 네트워크 간의 긴밀 한 통합을 구현할 수 있습니다. Hyper-v 가상 스위치, Hyper-v 네트워크 가상화, RAS 게이트웨이 등의 가상 네트워크 요소는 SDN 인프라의 필수적인 요소가 되도록 설계 되었습니다. 
 
 >[!Note]
 >네트워크 컨트롤러 및 소프트웨어 부하 분산 노드와 같은 SDN 인프라 서버를 실행 하는 hyper-v 호스트 및 Vm (가상 컴퓨터)에는 Windows Server 2016 Datacenter edition이 설치 되어 있어야 합니다. 

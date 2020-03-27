@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 2de954fd-a7d8-4cc6-85b1-b0c3c06f788f
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 6b72624f5817d2da5d2fb4e8622883e1ef4559cb
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 63d630250b0b24937a3dfc01bcba7ec63faa3c3e
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71396179"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80315960"
 ---
 # <a name="register-an-nps-in-an-active-directory-domain"></a>Active Directory 도메인에서 NPS 등록
 
@@ -36,7 +36,7 @@ NPSs는 권한 부여 프로세스 동안 사용자 계정의 전화 접속 속�
 
 2. **NPS (로컬)** 를 마우스 오른쪽 단추로 클릭 한 다음 **Active Directory에 서버 등록**을 클릭 합니다. **네트워크 정책 서버** 대화 상자가 열립니다.
 
-3. **네트워크 정책 서버**, 클릭 **확인**, 를 클릭 하 고 **확인** 다시 합니다.
+3. **네트워크 정책 서버**에서 **확인**을 클릭한 다음 **확인**을 다시 클릭합니다.
 
 ## <a name="register-an-nps-in-another-domain"></a>다른 도메인에 NPS 등록
 
@@ -61,7 +61,7 @@ Active Directory에서 사용자 계정의 전화 접속 속성을 읽을 수 �
 
 1. 명령 프롬프트 또는 windows PowerShell을 엽니다. 
 
-2. 명령 프롬프트에서 다음을 입력 합니다. **netsh nps add registeredserver** &nbsp;*도메인* &nbsp;*서버*를 입력 한 다음 enter 키를 누릅니다.
+2. 명령 프롬프트에서 **netsh nps add registeredserver** &nbsp;*domain* &nbsp;*SERVER*를 입력 하 고 enter 키를 누릅니다.
 
 >[!NOTE]
 >위의 명령에서 *domain* 은 nps를 등록할 도메인의 DNS 도메인 이름이 고, *server* 는 nps 컴퓨터의 이름입니다.

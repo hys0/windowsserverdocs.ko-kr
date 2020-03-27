@@ -10,14 +10,14 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 354ae5e3-bae1-44f9-afd7-7eaba70f2346
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: a2b8d7decad482ca8756aa4d82baa35abf16f5fe
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 513bcae13d4a8f3ab935d2bda77745baa1788fa9
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404443"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80313791"
 ---
 # <a name="troubleshooting-general-issues"></a>일반적인 문제 해결
 
@@ -30,7 +30,7 @@ ms.locfileid: "71404443"
   
 이 오류를 받은 후 원격 액세스 관리 콘솔이 응답 하지 않습니다.  
   
-**가능한 원인**  
+**원인**  
   
 DirectAccess에서 배포의 진입점 중 하나에 대 한 GPO에 액세스할 수 없으므로 구성이 로드 되지 않습니다.  
   
@@ -43,7 +43,7 @@ DirectAccess에서 배포의 진입점 중 하나에 대 한 GPO에 액세스할
 > [!NOTE]  
 > 이 시나리오는 현재 진입점의 서버 GPO를 사용할 수 없는 경우에는 발생 하지 않습니다.  
   
-`Get-DAEntryPointDC` cmdlet을 사용 하 여 서버 Gpo 및 `Get-DAMultiSite`를 `Get-RemoteAccess`와 함께 저장 하는 모든 도메인 컨트롤러를 나열 하 여 배포에서 전체 서버 Gpo 목록을 검색할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+`Get-DAEntryPointDC` cmdlet을 사용 하 여 서버 Gpo 및 `Get-DAMultiSite`를 `Get-RemoteAccess`와 함께 저장 하는 모든 도메인 컨트롤러를 나열 하 여 배포에서 전체 서버 Gpo 목록을 검색할 수 있습니다. 예를 들면 다음과 같습니다.  
   
 ```  
 $ServerGpos = Get-DAEntryPointDC | ForEach-Object {   
@@ -57,7 +57,7 @@ $ServerGpos | ForEach-Object { $GpoName = $_['GpoName'] ; $DC = $_['DC'] ; Write
 ## <a name="windows-7-to-windows-8-or-10-client-upgrade"></a>Windows 7에서 Windows 8 또는 10 클라이언트 업그레이드  
 **증상**. Windows 7 클라이언트를 멀티 사이트 배포에서 Windows 10 또는 Windows 8로 업그레이드 한 후에는 네트워크 목록에 DirectAccess 연결이 표시 되지 않습니다.  
   
-**가능한 원인**  
+**원인**  
   
 멀티 사이트 배포의 Windows 7 Gpo에는 Windows 8 네트워크 연결 길잡이 구성이 포함 되어 있지 않습니다.  
   
@@ -80,7 +80,7 @@ Remove-GPRegistryValue -Name <Windows7GpoName> -Domain <DomainName> -Key "HKEY_L
   
     **오류가 수신**되었습니다. < Server_name 또는 entry_point_name >에 대해 도메인 컨트롤러 < domain_controller >에 연결할 수 없습니다.  
   
-    **가능한 원인**  
+    **원인**  
   
     멀티 사이트 배포에서 구성 일관성을 유지하려면 각 GPO를 한 도메인 컨트롤러로 관리하는 것이 중요합니다. 진입점의 서버 GPO를 관리 하는 도메인 컨트롤러를 사용할 수 없는 경우 원격 액세스 구성 설정을 읽거나 수정할 수 없습니다.  
   
@@ -92,7 +92,7 @@ Remove-GPRegistryValue -Name <Windows7GpoName> -Domain <DomainName> -Key "HKEY_L
   
     **오류가 수신**되었습니다. 도메인 < domain_name >의 주 도메인 컨트롤러에 연결할 수 없습니다.  
   
-    **가능한 원인**  
+    **원인**  
   
     멀티 사이트 배포에서 구성 일관성을 유지하려면 각 GPO를 한 도메인 컨트롤러로 관리하는 것이 중요합니다. 클라이언트 GPO는 기본 도메인 컨트롤러에서 관리됩니다. 기본 도메인 컨트롤러가 없다면 원격 액세스 구성 설정을 읽거나 수정할 수 없습니다.  
   

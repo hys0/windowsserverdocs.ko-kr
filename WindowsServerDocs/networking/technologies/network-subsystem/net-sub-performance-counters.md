@@ -6,14 +6,14 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 7ebaa271-2557-4c24-a679-c3d863e6bf9e
 manager: brianlic
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 7ebff972d670f3fd0b8d12959d161bce03ac487e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: e62b92fbb78dc267dbd9cd09927bf54c62d8245f
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71401845"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80316608"
 ---
 # <a name="network-related-performance-counters"></a>네트워크 관련 성능 카운터
 
@@ -27,7 +27,7 @@ ms.locfileid: "71401845"
   
 -   [RSC (수신측 통합) 성능](#bkmk_rsc)  
   
-##  <a name="bkmk_ru"></a>리소스 사용률  
+##  <a name="resource-utilization"></a><a name="bkmk_ru"></a>리소스 사용률  
 
 다음 성능 카운터는 네트워크 리소스 사용량과 관련이 있습니다.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "71401845"
   
 - 네트워크 인터페이스 (*), 네트워크 어댑터 (\*)  
   
-  - 받은 바이트/초  
+  - Bytes Received/sec  
   
   - 보낸 바이트/초  
   
@@ -61,7 +61,7 @@ ms.locfileid: "71401845"
   
 - 프로세서 정보  
   
-  - % 프로세서 시간  
+  - % Processor Time  
   
   - 인터럽트/초  
   
@@ -69,7 +69,7 @@ ms.locfileid: "71401845"
   
     이 카운터는 Dpc가 논리 프로세서의 DPC 큐에 추가 되는 평균 비율입니다. 각 논리 프로세서에는 자체 DPC 큐가 있습니다. 이 카운터는 큐의 Dpc 수가 아니라 Dpc가 큐에 추가 되는 속도를 측정 합니다. 마지막 두 샘플에서 관찰 된 값의 차이를 샘플 간격 기간으로 나눈 값을 표시 합니다.  
   
-##  <a name="bkmk_np"></a>잠재적인 네트워크 문제  
+##  <a name="potential-network-problems"></a><a name="bkmk_np"></a>잠재적인 네트워크 문제  
 
 다음 성능 카운터는 잠재적인 네트워크 문제와 관련 됩니다.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "71401845"
   
     -   거부 된 연결/초  
   
-##  <a name="bkmk_rsc"></a>RSC (수신측 통합) 성능  
+##  <a name="receive-side-coalescing-rsc-performance"></a><a name="bkmk_rsc"></a>RSC (수신측 통합) 성능  
 
 다음 성능 카운터는 RSC 성능과 관련 됩니다.  
   

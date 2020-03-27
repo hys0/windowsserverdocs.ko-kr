@@ -6,15 +6,15 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: dfde2e21-f3d5-41e8-8492-cb3f0d028afb
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 05/25/2018
-ms.openlocfilehash: 0c154d4d4534f4c343107eecd158974b92903e39
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 26edf4d1ae4a30ccd9219392c7c4ee3604dcdad9
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405566"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80316360"
 ---
 # <a name="configure-network-policy-server-accounting"></a>네트워크 정책 서버 계정 구성
 
@@ -90,7 +90,7 @@ NPS (네트워크 정책 서버)를 구성 하 여 사용자 인증 요청, 액�
 >[!NOTE]
 >NPS는 계정 데이터를 NPS에서 지정 하는 SQL Server 데이터베이스의 **report_event** 저장 프로시저에 보내는 XML 문서로 서식 지정 합니다. SQL Server 로깅이 제대로 작동 하려면 NPS에서 XML 문서를 받고 구문 분석할 수 있는 SQL Server 데이터베이스에 **report_event** 라는 저장 프로시저가 있어야 합니다.
 
-이 절차를 완료 하려면 최소한 Domain Admins의 구성원 이거나이에 해당 하는 권한이 있어야 합니다.
+이 절차를 완료하려면 Domain Admins의 멤버 자격 또는 동등 멤버 자격이 최소한 필요합니다.
 
 ### <a name="to-configure-sql-server-logging-in-nps"></a>NPS에서 SQL Server 로깅을 구성 하려면
 

@@ -10,20 +10,20 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: beb94475-b21f-46a9-ac51-bf2bb28ca94e
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 03d87fb086a9f2797af8399be3d833b11bed79a5
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 4b2377816255189efbaa6d5c39cd4e91b923a039
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71367263"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80314225"
 ---
 # <a name="monitor-connected-remote-clients-for-activity-and-status"></a>연결된 원격 클라이언트에서 활동 및 상태 모니터링
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-**참고:** Windows Server 2012에서는 DirectAccess 및 원격 액세스 서비스 (RAS)를 단일 원격 액세스 역할로 결합 합니다.  
+**참고:** Windows Server 2012 DirectAccess 및 원격 액세스 서비스 (RAS)를 단일 원격 액세스 역할로 결합 합니다.  
   
 원격 액세스 서버에서 원격 클라이언트의 작업 및 상태를 모니터링 하는 관리 콘솔을 사용할 수 있습니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "71367263"
   
 ![Windows PowerShell](../../../media/Monitor-connected-remote-clients-for-activity-and-status/PowerShellLogoSmall.gif)***<em>windows powershell 해당 명령</em>***  
   
-다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
+다음 Windows PowerShell cmdlet은 이전 절차와 동일한 기능을 수행합니다. 서식 조건 때문에 각 cmdlet이 여러 줄로 자동 줄 바꿈되어 표시되더라도 한 줄에 입력합니다.  
   
 ```  
 PS> Get-RemoteAccessConnectionStatistics  
@@ -54,13 +54,13 @@ PS> Get-RemoteAccessConnectionStatistics
 |-------|-----|  
 |Username|원격 사용자의 사용자 이름 또는 별칭입니다. 예: contoso 사용자 그룹을 선택 하는 와일드 카드 문자를 사용할 수 있습니다\\* 또는 \*\administrator 합니다.|  
 |Hostname|원격 사용자의 컴퓨터 계정 이름입니다. 또한 IPv4 또는 IPv6 주소 지정할 수 있습니다.|  
-|type|DirectAccess 또는 VPN입니다. DirectAccess를 선택 하는 경우 DirectAccess를 사용 하 여 연결 된 모든 원격 사용자가 나열 됩니다. VPN을 선택 하면 VPN을 사용 하 여 연결 된 모든 원격 사용자가 나열 됩니다.|  
+|형식|DirectAccess 또는 VPN입니다. DirectAccess를 선택 하는 경우 DirectAccess를 사용 하 여 연결 된 모든 원격 사용자가 나열 됩니다. VPN을 선택 하면 VPN을 사용 하 여 연결 된 모든 원격 사용자가 나열 됩니다.|  
 |ISP 주소|원격 사용자의 IPv4 또는 IPv6 주소입니다.|  
 |IPv4 주소|원격 사용자는 회사 네트워크에 연결 하는 터널의 내부 IPv4 주소입니다.|  
 |IPv6 주소|원격 사용자를 회사 네트워크에 연결하는 터널의 내부 IPv6 주소입니다.|  
 |프로토콜/터널|원격 클라이언트에 의해 사용 되는 전환 기술입니다. 이 Teredo, 6to4 또는 IP-HTTPS DirectAccess 사용자에 대 한 아니며 PPTP, L2TP, SSTP 또는 IKEv2 VPN 사용자에 대 한 합니다.|  
-|액세스한 리소스|특정 회사 리소스나 끝점에 액세스하고 있는 모든 사용자입니다. 이 필드에 해당 하는 값이 서버의 호스트 이름/i P 주소입니다.|  
-|서버|클라이언트가 연결될 원격 액세스 서버입니다. 이 필드는 클러스터 및 멀티 사이트 배포에만 해당됩니다.|  
+|액세스한 리소스|특정 회사 리소스나 엔드포인트에 액세스하고 있는 모든 사용자입니다. 이 필드에 해당 하는 값이 서버의 호스트 이름/i P 주소입니다.|  
+|Server|클라이언트가 연결될 원격 액세스 서버입니다. 이 필드는 클러스터 및 멀티 사이트 배포에만 해당됩니다.|  
   
   
   

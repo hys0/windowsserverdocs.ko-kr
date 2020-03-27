@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: e4a9b134-6d1d-40d7-a49c-5f46d5fdb419
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: c241191f54080ed92a1f1a274c0b2aff0b8c564c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 4ee256184cd551c5f2c2fcdb8544e4d061ea2bf3
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405342"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80315764"
 ---
 # <a name="network-policies"></a>네트워크 정책
 
@@ -52,7 +52,7 @@ NPS에서 여러 네트워크 정책이 구성 된 경우에는 정렬 된 규�
  이러한 속성을 사용 하 여 정책을 사용할 수 있는지 여부, 정책에서 액세스를 허용 하거나 거부 하는지 여부 및 특정 네트워크 연결 방법 또는 NAS (네트워크 액세스 서버)의 유형이 연결 요청에 필요한 지 여부를 지정할 수 있습니다. 개요 속성을 사용 하면 AD DS의 사용자 계정에 대 한 전화 접속 속성을 무시할지 여부를 지정할 수도 있습니다. 이 옵션을 선택 하면 NPS에서 네트워크 정책의 설정만 사용 하 여 연결이 인증 되었는지 여부를 확인 합니다.
 
 
-### <a name="conditions"></a>조건
+### <a name="conditions"></a>상태
 
  이러한 속성을 사용 하면 연결 요청이 네트워크 정책과 일치 하기 위해 충족 해야 하는 조건을 지정할 수 있습니다. 정책에 구성 된 조건이 연결 요청과 일치 하면 NPS는 네트워크 정책에 지정 된 설정을 연결에 적용 합니다. 예를 들어 NAS IPv4 주소를 네트워크 정책의 조건으로 지정 하 고 NPS가 지정 된 IP 주소를 가진 NAS에서 연결 요청을 수신 하는 경우 정책 조건이 연결 요청과 일치 합니다. 
 

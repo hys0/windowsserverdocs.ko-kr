@@ -10,18 +10,18 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a32357a5-ab1a-4a4c-848a-7a4ed65b1921
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 20fc19dc31ee612de0a736bfe989f930a9afa202
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 415a5f4728b1b08e59630935e47f22d74b0267e8
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405865"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80312937"
 ---
 # <a name="ras-gateway-for-sdn"></a>SDN용 RAS 게이트웨이
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016 # # RAS Gateway for SDN  
+>적용 대상: Windows Server (반기 채널), Windows Server 2016 # # SDN 용 RAS 게이트웨이  
 
 
 RAS 게이트웨이는 Hyper-v 네트워크 가상화를 사용 하 여 여러 테 넌 트 가상 네트워크를 호스팅하는 회사 및 Csp (클라우드 서비스 공급자) 용으로 설계 된 소프트웨어 기반, 다중 테 넌 트 Border Gateway Protocol (BGP) 지원 라우터입니다. RAS 게이트웨이는 위치에 관계 없이 실제 네트워크 리소스와 VM 네트워크 리소스 간에 네트워크 트래픽을 라우팅합니다. 네트워크 트래픽을 동일한 실제 위치 또는 여러 위치에서 라우팅할 수 있습니다.   
@@ -59,7 +59,7 @@ SDN에 사용 하기 위해 다중 테 넌 트 모드에서 RAS 게이트웨이�
   
 -   **지점 및 사이트 간 VPN**. 이 RAS 게이트웨이 기능을 통해 조직 직원 또는 관리자는 원격 위치에서 조직의 네트워크에 연결할 수 있습니다.  다중 테 넌 트 배포의 경우, 테 넌 트 네트워크 관리자는 지점 및 사이트 간 VPN 연결을 사용 하 여 CSP 데이터 센터의 가상 네트워크 리소스에 액세스할 수 있습니다.  
   
--   **GRE 터널링**. GRE (Generic Routing 캡슐화) 기반 터널을 사용 하면 테 넌 트 가상 네트워크와 외부 네트워크 간의 연결을 설정할 수 있습니다. GRE 프로토콜은 간단하고 대부분의 네트워크 장치에서 GRE가 지원되므로 데이터 암호화가 필요하지 않은 터널링에 이상적입니다. S2S (Site to Site) 터널의 GRE 지원은이 항목의 뒷부분에 설명 된 대로 다중 테 넌 트 게이트웨이를 사용 하는 테 넌 트 가상 네트워크와 테 넌 트 외부 네트워크 간의 전달 문제를 해결 합니다.  
+-   **GRE 터널링**. GRE (Generic Routing 캡슐화) 기반 터널을 사용 하면 테 넌 트 가상 네트워크와 외부 네트워크 간의 연결을 설정할 수 있습니다. GRE 프로토콜은 간단하고 대부분의 네트워크 디바이스에서 GRE가 지원되므로 데이터 암호화가 필요하지 않은 터널링에 이상적입니다. S2S (Site to Site) 터널의 GRE 지원은이 항목의 뒷부분에 설명 된 대로 다중 테 넌 트 게이트웨이를 사용 하는 테 넌 트 가상 네트워크와 테 넌 트 외부 네트워크 간의 전달 문제를 해결 합니다.  
   
 -   **BGP (Border Gateway Protocol)를 사용 하는 동적 라우팅** BGP는 동적 라우팅 프로토콜이기 때문에 라우터에서 수동으로 경로를 구성할 필요성이 줄어들고 사이트 간 VPN 연결을 사용하여 연결된 사이트 간 경로를 자동으로 알아냅니다. 조직에 RAS 게이트웨이와 같은 BGP 사용 라우터를 사용 하 여 연결 된 여러 사이트가 있는 경우 BGP를 사용 하면 네트워크 중단 또는 실패가 발생할 경우 라우터가 자동으로 유효한 경로를 계산 하 고 사용할 수 있습니다. 자세한 내용은 [RFC 4271](https://tools.ietf.org/html/rfc4271)을 참조 하세요.  
   
