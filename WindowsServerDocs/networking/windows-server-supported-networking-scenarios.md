@@ -7,14 +7,14 @@ ms.technology: networking
 ms.topic: article
 ms.date: ''
 ms.assetid: 6de4232d-b0b3-4e43-8735-ebae35ae4f9f
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: f338ddf0a7d3a4fe41277ddbf49b0c3db34ae11b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: e2e59b70b102e7ca942e2aafb8b216fecd62fc32
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71395702"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80315154"
 ---
 # <a name="windows-server-supported-networking-scenarios"></a>Windows Server 지원 네트워킹 시나리오
 
@@ -24,7 +24,7 @@ ms.locfileid: "71395702"
 >[!IMPORTANT]
 >모든 프로덕션 시나리오에 대 한 original equipment manufacturer에서 서명 된 하드웨어가 최신 드라이버를 사용 하 여 \(OEM\) 또는 독립 하드웨어 공급 업체 \(IHV\)합니다.
   
-## <a name="bkmk_supp"></a>지원 되는 네트워킹 시나리오
+## <a name="supported-networking-scenarios"></a><a name="bkmk_supp"></a>지원 되는 네트워킹 시나리오
 
 이 섹션에는 Windows Server 2016 용 지원 되는 네트워킹 시나리오에 대 한 정보를 포함 및 시나리오 범주가 포함 됩니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "71395702"
 
 - [\) 시나리오를 설정 하 \(포함 된 팀 전환](#bkmk_set)
   
-### <a name="bkmk_sdn"></a>SDN (소프트웨어 정의 네트워킹) 시나리오
+### <a name="software-defined-networking-sdn-scenarios"></a><a name="bkmk_sdn"></a>SDN (소프트웨어 정의 네트워킹) 시나리오
  
 Windows Server 2016 SDN 시나리오를 배포 하려면 다음 문서를 사용할 수 있습니다.  
   
@@ -49,7 +49,7 @@ Windows Server 2016 SDN 시나리오를 배포 하려면 다음 문서를 사용
   
 자세한 내용은 참조 [소프트웨어 정의 네트워킹 & #40; SDN (& a) #41;](sdn/software-defined-networking.md)합니다.  
   
-#### <a name="bkmk_netc"></a>네트워크 컨트롤러 시나리오
+#### <a name="network-controller-scenarios"></a><a name="bkmk_netc"></a>네트워크 컨트롤러 시나리오
 
 네트워크 컨트롤러 시나리오를 수행할 수 있습니다.  
   
@@ -61,7 +61,7 @@ Windows Server 2016 SDN 시나리오를 배포 하려면 다음 문서를 사용
   
 자세한 내용은 [네트워크 컨트롤러](sdn/technologies/network-controller/Network-Controller.md)를 참조하세요.  
   
-#### <a name="bkmk_netf"></a>네트워크 기능 가상화 (NFV) 시나리오  
+#### <a name="network-function-virtualization-nfv-scenarios"></a><a name="bkmk_netf"></a>네트워크 기능 가상화 (NFV) 시나리오  
 NFV 시나리오를 수행할 수 있습니다.  
   
 -   배포 하 고 northbound 및 southbound 트래픽을 분산 하기 위해 소프트웨어 부하 분산 장치를 사용 합니다.  
@@ -84,7 +84,7 @@ NFV 시나리오를 수행할 수 있습니다.
   
 자세한 내용은 참조 [네트워크 기능 가상화](sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md)합니다.  
   
-### <a name="bkmk_netp"></a>네트워크 플랫폼 시나리오
+### <a name="network-platform-scenarios"></a><a name="bkmk_netp"></a>네트워크 플랫폼 시나리오
 
 Windows Server 네트워킹이 섹션의 시나리오에 대 한 팀 인증 드라이버는 Windows Server 2016의 사용을 지원 합니다. 네트워크 인터페이스 카드를 확인 하십시오 \(NIC\) 제조업체는 가장 최신 드라이버 업데이트 했는지 확인 하십시오.
   
@@ -98,7 +98,7 @@ Windows Server 네트워킹이 섹션의 시나리오에 대 한 팀 인증 드�
   
 자세한 내용은 참조 [원격 직접 메모리 액세스 & #40; RDMA & #41; 포함 된 팀 & #40; 전환 집합 & #41;](../virtualization/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md)합니다.  
   
-#### <a name="bkmk_switch"></a>Hyper-v 가상 스위치 시나리오
+#### <a name="hyper-v-virtual-switch-scenarios"></a><a name="bkmk_switch"></a>Hyper-v 가상 스위치 시나리오
 
 Hyper-v 가상 스위치 등의 시나리오를 수행할 수 있습니다.  
   
@@ -112,7 +112,7 @@ Hyper-v 가상 스위치 등의 시나리오를 수행할 수 있습니다.
   
 자세한 내용은 참조 [원격 직접 메모리 액세스 & #40; RDMA & #41; 포함 된 팀 & #40; 전환 집합 & #41;](../virtualization/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md)  
   
-### <a name="bkmk_dns"></a>DNS 서버 시나리오
+### <a name="dns-server-scenarios"></a><a name="bkmk_dns"></a>DNS 서버 시나리오
 
 DNS 서버 시나리오를 수행할 수 있습니다.  
   
@@ -138,7 +138,7 @@ DNS 서버 시나리오를 수행할 수 있습니다.
   
 자세한 내용은 항목을 참조 하십시오. [Windows Server 2016의 DNS 클라이언트의 새로운](dns/What-s-New-in-DNS-Client.md) 및 [Windows Server 2016에서 DNS 서버에서 새로운](dns/What-s-New-in-DNS-Server.md)합니다.  
   
-### <a name="bkmk_ipam"></a>DHCP 및 DNS를 사용 하는 IPAM 시나리오
+### <a name="ipam-scenarios-with-dhcp-and-dns"></a><a name="bkmk_ipam"></a>DHCP 및 DNS를 사용 하는 IPAM 시나리오
 
 IPAM 시나리오를 수행할 수 있습니다.  
   
@@ -152,7 +152,7 @@ IPAM 시나리오를 수행할 수 있습니다.
   
     자세한 내용은 참조 [IPAM 관리](technologies/ipam/Manage-IPAM.md)합니다.  
   
-### <a name="bkmk_nicteam"></a>NIC 팀 시나리오
+### <a name="nic-teaming-scenarios"></a><a name="bkmk_nicteam"></a>NIC 팀 시나리오
 
 NIC 팀 등의 시나리오를 수행할 수 있습니다.  
   
@@ -169,7 +169,7 @@ NIC 팀 등의 시나리오를 수행할 수 있습니다.
 
 자세한 내용은 참조 [NIC 팀](technologies/nic-teaming/NIC-Teaming.md)합니다. 
 
-### <a name="bkmk_set"></a>\) 시나리오를 설정 하 \(포함 된 팀 전환
+### <a name="switch-embedded-teaming-set-scenarios"></a><a name="bkmk_set"></a>\) 시나리오를 설정 하 \(포함 된 팀 전환
 
 집합은 Windows Server 2016에 Hyper-v 및 네트워킹 SDN (소프트웨어) 스택을 포함 하는 환경에서 사용할 수 있는 대체 NIC 팀 솔루션. 일부 NIC 팀 기능은 Hyper-v 가상 스위치에 통합 하는 설정 합니다. 
 
@@ -177,7 +177,7 @@ NIC 팀 등의 시나리오를 수행할 수 있습니다.
   
  
   
-## <a name="bkmk_unsupp"></a>지원 되지 않는 네트워킹 시나리오  
+## <a name="unsupported-networking-scenarios"></a><a name="bkmk_unsupp"></a>지원 되지 않는 네트워킹 시나리오  
 다음과 같은 네트워킹 시나리오는 Windows Server 2016에서 지원 되지 않습니다.  
   
 -   VLAN 기반 테 넌 트 가상 네트워크 지원  

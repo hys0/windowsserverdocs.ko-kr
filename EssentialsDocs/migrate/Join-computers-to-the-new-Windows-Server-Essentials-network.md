@@ -1,9 +1,9 @@
 ---
-title: 새 Windows Server Essentials network1에 컴퓨터 가입
+title: 새 Windows Server Essentials 서버에 컴퓨터 가입
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,22 +12,22 @@ ms.assetid: d94de050-3300-4323-a5ea-c824cb9cecc9
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 62f31f859ed3fd0f77baf37d3467d4702b24ad95
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 48703ed78ee7d604e67be06b540d4206617d4578
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66432908"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318979"
 ---
-# <a name="join-computers-to-the-new-windows-server-essentials-network1"></a>새 Windows Server Essentials network1에 컴퓨터 가입
+# <a name="join-computers-to-the-new-windows-server-essentials-network1"></a>새 Windows Server Essentials 서버에 컴퓨터 가입
 
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 ##  <a name="BKMK_JoinComputers"></a>   
- 마이그레이션 프로세스의 다음 단계는 새 Windows Server Essentials 네트워크에 클라이언트 컴퓨터를 가입 시키고 그룹 정책 설정을 업데이트 하는 것입니다.  
+ 마이그레이션 프로세스의 다음 단계에서는 새 Windows Server Essentials 네트워크에 클라이언트 컴퓨터를 연결 하 고 그룹 정책 설정을 업데이트 합니다.  
   
 ### <a name="domain-joined-client-computers"></a>도메인에 가입된 클라이언트 컴퓨터  
- **http://** <em>destination-servername</em> **/connect**로 이동하고 새 컴퓨터인 것처럼 Windows Server Connector 소프트웨어를 설치합니다. 설치 프로세스는 도메인에 가입 되거나 도메인에 가입 되지 않은 클라이언트 컴퓨터에 대해 동일합니다.  
+ **http://** <em>destination-servername</em> **/connect**로 이동하고 새 컴퓨터인 것처럼 Windows Server Connector 소프트웨어를 설치합니다. 설치 프로세스는 도메인에 가입되거나 도메인에 가입되지 않은 클라이언트 컴퓨터에 대해 동일합니다.  
   
 > [!NOTE]
 >  Windows Server Connector 소프트웨어에서는 Windows XP 또는 Windows Vista를 실행 중인 컴퓨터를 지원하지 않습니다. 이미 도메인에 가입된 Windows XP 또는 Windows Vista를 실행하는 컴퓨터에 있으면 이 단계를 건너뛸 수 있습니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "66432908"
   
 2.  명령 프롬프트에 **GPRESULT /R**을 입력하고 Enter 키를 누릅니다.  
   
-3.  섹션에서 적용 한 그룹 정책에 대 한 결과 출력을 검토 합니다: 대상 서버와 같은 나열 되는지 확인 하 고 **DestinationSrv.Domain.local**합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+3.  에서 적용 한 그룹 정책 섹션에 대 한 결과 출력을 검토 하 고 대상 서버 (예: **Destinationsrv. local. local**)가 나열 되는지 확인 합니다. 예를 들면 다음과 같습니다.  
   
     ```  
     USER SETTINGS  
@@ -67,8 +67,8 @@ ms.locfileid: "66432908"
   
 5.  그래도 대상 서버가 나타나지 않으면 그룹 정책 설정에 오류가 있거나 이 특정 클라이언트 컴퓨터에 해당 설정을 적용하는 데 오류가 있을 수 있습니다. 대상 서버가 나타나지 않으면 다음 단계를 수행합니다.  
   
-    1.  **시작**, **실행**을 차례로 클릭하고 **rsop.msc** (정책 결과 집합)를 입력하고 Enter 키를 누릅니다.  
+    1.  **시작**, **실행**을 차례로 클릭하고 **rsop.msc**(정책 결과 집합)를 입력하고 Enter 키를 누릅니다.  
   
-    2.  노드에 도달할 때까지에 X가 있는 트리를 확장 합니다.  
+    2.  노드에 도달할 때까지 X가 있는 트리를 확장 합니다.  
   
     3.  노드를 마우스 오른쪽 단추로 클릭하고 **오류 보기**를 클릭하여 나열된 컴퓨터에서 그룹 정책 설정이 실패하는 이유를 확인합니다.

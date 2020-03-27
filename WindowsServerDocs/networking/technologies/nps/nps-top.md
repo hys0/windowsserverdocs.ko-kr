@@ -6,15 +6,15 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 9c7a67e0-0953-479c-8736-ccb356230bde
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 06/20/2018
-ms.openlocfilehash: 5685d4dae742245c131ff2fee3114e905e94e9bc
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b509bb14757fab6ebd32490d0146b2801bc8e9f1
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71396009"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80315621"
 ---
 # <a name="network-policy-server-nps"></a>NPS(네트워크 정책 서버)
 
@@ -55,7 +55,7 @@ NPS는 설치 하는 Windows Server 버전에 따라 다양 한 기능을 제공
 
 ### <a name="windows-server-2016-or-windows-server-2019-standarddatacenter-edition"></a>Windows Server 2016 또는 Windows Server 2019 Standard/Datacenter Edition
 
-Windows Server 2016 Standard 또는 Datacenter의 NPS를 사용 하 여 RADIUS 클라이언트와 원격 RADIUS 서버 그룹을 무제한 구성할 수 있습니다. IP 주소 범위를 지정하여 RADIUS 클라이언트를 구성할 수도 있습니다.
+Windows Server 2016 Standard 또는 Datacenter의 NPS를 사용 하 여 RADIUS 클라이언트와 원격 RADIUS 서버 그룹을 무제한 구성할 수 있습니다. 또한 IP 주소 범위를 지정하여 RADIUS 클라이언트를 구성할 수 있습니다.
 
 > [!NOTE]
 > WIndows 네트워크 정책 및 액세스 서비스 기능은 Server Core 설치 옵션과 함께 설치 된 시스템에서 사용할 수 없습니다.
@@ -141,7 +141,7 @@ NPS 구성은 다음과 같은 시나리오에 대해 만들 수 있습니다.
 
 **원격 RADIUS에서 Windows 사용자 매핑으로 NPS** 이 예제에서 NPS는 인증 요청을 원격 RADIUS 서버에 전달 하는 동시에 권한 부여에 대 한 로컬 Windows 사용자 계정을 사용 하 여 각 개별 연결 요청에 대 한 radius 프록시로 RADIUS 서버 역할을 합니다. 이 구성은 연결 요청 정책의 조건으로 원격 RADIUS에서 Windows 사용자 매핑 특성을 구성 하 여 구현 합니다. 또한 원격 RADIUS 서버에서 인증을 수행 하는 원격 사용자 계정과 동일한 이름을 가진 RADIUS 서버에서 로컬로 사용자 계정을 만들어야 합니다. \(\)
 
-## <a name="configuration"></a>Configuration
+## <a name="configuration"></a>구성
 
 NPS를 RADIUS 서버로 구성 하려면 NPS 콘솔 또는 서버 관리자에서 표준 구성 또는 고급 구성을 사용할 수 있습니다. RADIUS 프록시로 NPS를 구성 하려면 고급 구성을 사용 해야 합니다.
 

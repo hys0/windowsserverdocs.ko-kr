@@ -3,7 +3,7 @@ title: Windows Server Essentials 로그 수집기 설치
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: d271c54f-1ffa-464e-afa5-27b8df61854e
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: a1b1a5492a6e5dbc48899b3918314676884e0454
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: 75faeb3fe1c9ced32a37f2ac96ffedbadb2db76f
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79322095"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318682"
 ---
 # <a name="install-the-windows-server-essentials-log-collector"></a>Windows Server Essentials 로그 수집기 설치
 
@@ -25,7 +25,7 @@ ms.locfileid: "79322095"
 
 Windows Server Essentials 로그 수집기 설치 마법사에서 로그 수집기를 실행 패드 추가 기능으로 설치 합니다. 네트워크 컴퓨터 또는 서버나 이 둘 모두에서 로그 수집기를 설치하고 사용할 수 있습니다. 설치하고 나면 로그 수집기가 대시보드에 표시됩니다.  
   
-###  <a name="BKMK_ToInstall"></a>로그 수집기를 설치 하려면  
+###  <a name="to-install-the-log-collector"></a><a name="BKMK_ToInstall"></a>로그 수집기를 설치 하려면  
   
 1.  로그 수집기 설치 패키지를 서버 또는 네트워크의 컴퓨터에 다운로드합니다.  
   
@@ -42,7 +42,7 @@ Windows Server Essentials 로그 수집기 설치 마법사에서 로그 수집�
   
 6.  **추가 기능 설치**를 클릭합니다.  
   
-###  <a name="BKMK_Reinstall"></a>로그 수집기 다시 설치  
+###  <a name="reinstalling-the-log-collector"></a><a name="BKMK_Reinstall"></a>로그 수집기 다시 설치  
  로그 수집기를 다시 설치해야 한다면 서버 및 네트워크에 있는 네트워크 컴퓨터에서 로그 수집기를 제거하고 다시 설치해야 합니다. 대시보드를 통해 서버에서 로그 수집기를 제거하면 모든 네트워크 컴퓨터에서 로그 수집기가 자동으로 제거됩니다.  
   
 ##### <a name="to-uninstall-and-reinstall-the-log-collector"></a>로그 수집기를 제거하고 다시 설치하려면  

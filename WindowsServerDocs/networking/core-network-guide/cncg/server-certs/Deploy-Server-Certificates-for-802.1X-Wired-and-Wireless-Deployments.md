@@ -6,14 +6,14 @@ ms.topic: article
 ms.assetid: 0a39ecae-39cc-4f26-bd6f-b71ed02fc4ad
 ms.prod: windows-server
 ms.technology: networking
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 0dce886555167ad651704045120fb92eff0dcea1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 0636fc321b4e94351628fd577526a8e81b4fc4cf
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71356181"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318316"
 ---
 # <a name="deploy-server-certificates-for-8021x-wired-and-wireless-deployments"></a>802.1 X 유선 및 무선 배포용 서버 인증서 배포
 
@@ -56,12 +56,12 @@ ms.locfileid: "71356181"
 - 도메인의 모든 컴퓨터에 신뢰할 수 있는 루트 인증 기관에 설치 된 CA 인증서를 자동으로 수신 모든 도메인 구성원 컴퓨터에 저장 합니다. 이 인해 도메인의 모든 컴퓨터는 CA에서 발급 한 인증서를 신뢰 합니다. 이 트러스트를 서로 자신의 id를 증명 및 보안 통신에 참여 하 여 인증 서버 수 있습니다.  
 - 그룹 정책 새로 고침을 이외의 모든 서버 수동 재구성 필요 하지 않습니다.  
 - 확장 키 사용 현황 EKU (향상)에서 서버 인증 용도로 및 클라이언트 인증 용도의 모두를 포함 하는 모든 서버 인증서입니다.  
-- 확장성입니다. 이 가이드에 엔터프라이즈 루트 CA를 배포한 후 엔터프라이즈 하위 Ca를 추가 하 여 공개 키 인프라 (PKI)를 확장할 수 있습니다.  
+- 확장성. 이 가이드에 엔터프라이즈 루트 CA를 배포한 후 엔터프라이즈 하위 Ca를 추가 하 여 공개 키 인프라 (PKI)를 확장할 수 있습니다.  
 - 관리 효율성입니다. AD CS 콘솔을 사용 하거나 Windows PowerShell 명령 및 스크립트를 사용 하 여 AD CS를 관리할 수 있습니다.  
-- 단순성입니다. Active Directory 그룹 계정 및 그룹 멤버 자격을 사용 하 여 서버 인증서를 등록 하는 서버를 지정 합니다.   
+- 단순성. Active Directory 그룹 계정 및 그룹 멤버 자격을 사용 하 여 서버 인증서를 등록 하는 서버를 지정 합니다.   
 - 서버 인증서를 배포할 때 인증서는이 가이드의 지침을 구성 하는 서식 파일을 기반으로 합니다. 즉, 특정 서버 유형에 대 한 다른 인증서 템플릿을 사용자 지정할 수 있습니다 하거나 발급 하고자 하는 모든 서버 인증서에 대 한 같은 서식 파일을 사용할 수 있습니다.  
 
-## <a name="bkmk_pre"></a>이 가이드를 사용 하기 위한 필수 조건  
+## <a name="prerequisites-for-using-this-guide"></a><a name="bkmk_pre"></a>이 가이드를 사용 하기 위한 필수 조건  
 
 이 가이드에서는 Windows Server 2016의 AD CS 및 웹 서버 (IIS) 서버 역할을 사용 하 여 서버 인증서를 배포 하는 방법을 설명 합니다. 이 가이드의 절차를 수행 하기 위한 필수 구성 요소는 다음과가 같습니다.  
 
@@ -76,10 +76,10 @@ ms.locfileid: "71356181"
 >[!NOTE]  
 >이 가이드에도 사용자 조직 명명 규칙에 따라 컴퓨터 이름에 대 한 배포 하는 웹 및 AD CS 서버에 고정 IP 주소를 할당할 준비가 됩니다. 또한 사용자의 도메인에 컴퓨터를 조인 해야 합니다.  
 
-## <a name="bkmk_not"></a>이 가이드에서 제공 하지 않는 내용  
+## <a name="what-this-guide-does-not-provide"></a><a name="bkmk_not"></a>이 가이드에서 제공 하지 않는 내용  
 이 가이드는 설계 및 AD CS를 사용 하 여 공개 키 인프라 (PKI)를 배포 하기 위한 포괄적인 지침을 제공 하지 않습니다. AD CS 및 PKI 디자인 설명서가이 가이드에 포함 된 기술을 배포 하기 전에 검토 하는 것이 좋습니다.   
 
-## <a name="bkmk_tech"></a>기술 개요  
+## <a name="technology-overviews"></a><a name="bkmk_tech"></a>기술 개요  
 다음은 AD CS 및 웹 서버 (IIS)에 대 한 기술 개요입니다.  
 
 ### <a name="active-directory-certificate-services"></a>Active Directory 인증서 서비스  

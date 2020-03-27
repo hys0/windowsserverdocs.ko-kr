@@ -6,23 +6,23 @@ ms.technology: networking-ras
 ms.topic: article
 ms.assetid: ''
 ms.localizationpriority: medium
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 08/30/2018
 ms.reviewer: deverette
-ms.openlocfilehash: c04074338cf4ba0189eb1e9bc45a80b948fdbfbf
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9d3afb21c466ef1010a20ec811df45b9dcb2b711
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71388038"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80312257"
 ---
 # <a name="step-3-configure-the-remote-access-server-for-always-on-vpn"></a>3단계. Always On VPN에 대한 원격 액세스 서버 구성
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-- [**선행** 2단계. 서버 인프라 구성](vpn-deploy-server-infrastructure.md)
-- [**선행** 4단계. NPS (네트워크 정책 서버) 설치 및 구성](vpn-deploy-nps.md)
+- [**이전:** 2 단계. 서버 인프라 구성](vpn-deploy-server-infrastructure.md)
+- [**이전:** 4 단계. NPS (네트워크 정책 서버) 설치 및 구성](vpn-deploy-nps.md)
 
 RRAS는 광범위 한 기능을 지원 하기 때문에 라우터 및 원격 액세스 서버 모두를 수행 하도록 설계 되었습니다. 이 배포를 위해 IKEv2 VPN 연결 및 LAN 라우팅에 대 한 지원의 작은 하위 집합만 필요 합니다.
 
@@ -95,7 +95,7 @@ IKEv2는 인터넷 엔지니어링 작업 Force Request for Comments 7296에 설
 
 14. 설치 선택 확인 페이지에서 선택 사항을 검토 한 다음 **설치**를 선택 합니다.
 
-15. 설치가 완료되면 **닫기**를 선택합니다.
+15. 설치가 완료 되 면 **닫기**를 선택 합니다.
 
 ## <a name="configure-remote-access-as-a-vpn-server"></a>VPN 서버로 원격 액세스 구성
 
@@ -136,7 +136,7 @@ IKEv2는 인터넷 엔지니어링 작업 Force Request for Comments 7296에 설
 
     a. **인증 공급자** 를 선택 하 고 **RADIUS 인증**을 선택 합니다.
 
-    b. **구성**을 선택합니다.
+    b. **구성**을 선택 합니다.
 
        RADIUS 인증 대화 상자가 열립니다.
 
@@ -144,7 +144,7 @@ IKEv2는 인터넷 엔지니어링 작업 Force Request for Comments 7296에 설
 
        RADIUS 서버 추가 대화 상자가 열립니다.
 
-    d. **서버 이름**에 조직/회사 네트워크에 있는 NPS 서버의 FQDN (정규화 된 도메인 이름)을 입력 합니다.
+    . **서버 이름**에 조직/회사 네트워크에 있는 NPS 서버의 FQDN (정규화 된 도메인 이름)을 입력 합니다.
     
        예를 들어 NPS 서버의 NetBIOS 이름이 NPS1이 고 도메인 이름이 corp.contoso.com 인 경우 **NPS1.corp.contoso.com**을 입력 합니다.
 
@@ -165,7 +165,7 @@ IKEv2는 인터넷 엔지니어링 작업 Force Request for Comments 7296에 설
 
     - **초기 점수**
 
-    - **포트**
+    - **포트인**
 
 13. 필요한 경우 사용자 환경의 요구 사항과 일치 하도록 값을 변경 하 고 **확인**을 선택 합니다.
 
@@ -173,7 +173,7 @@ IKEv2는 인터넷 엔지니어링 작업 Force Request for Comments 7296에 설
 
 14. **계정 공급자**에 대 한 설정을 검토 합니다.
 
-    |                    원하는 경우 ...                     |                                                     발생하는 결과                                                      |
+    |                    원하는 경우 ...                     |                                                     결과                                                      |
     |-----------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
     | 원격 액세스 서버에 기록 된 원격 액세스 활동 |                               **Windows 계정** 이 선택 되어 있는지 확인 합니다.                               |
     |        VPN에 대 한 계정 서비스를 수행 하는 NPS         | **계정 공급자** 를 **RADIUS 계정** 으로 변경한 다음 NPS를 계정 공급자로 구성 합니다. |
@@ -188,7 +188,7 @@ IKEv2는 인터넷 엔지니어링 작업 Force Request for Comments 7296에 설
 
     c. **시작 ip 주소**에서 VPN 클라이언트에 할당 하려는 범위의 시작 ip 주소를 입력 합니다.
 
-    d. **끝 ip 주소**에서 VPN 클라이언트에 할당 하려는 범위의 끝 ip 주소를 입력 하거나, **주소 수**에 사용할 수 있도록 설정할 주소 수를 입력 합니다. 이 서브넷에 DHCP를 사용 하는 경우 DHCP 서버에서 해당 주소 제외를 구성 해야 합니다.
+    . **끝 ip 주소**에서 VPN 클라이언트에 할당 하려는 범위의 끝 ip 주소를 입력 하거나, **주소 수**에 사용할 수 있도록 설정할 주소 수를 입력 합니다. 이 서브넷에 DHCP를 사용 하는 경우 DHCP 서버에서 해당 주소 제외를 구성 해야 합니다.
 
     e. 필드 DHCP를 사용 하는 경우 **어댑터**를 선택 하 고 결과 목록에서 내부 경계 네트워크에 연결 된 이더넷 어댑터를 선택 합니다.
 
@@ -198,7 +198,7 @@ IKEv2는 인터넷 엔지니어링 작업 Force Request for Comments 7296에 설
 
     a. **Microsoft 라우팅 및 원격 액세스 서버 네트워크 정책에 대 한 연결** 을 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.
 
-    b. 액세스 권한 **부여를 선택 합니다. 연결 요청이이 정책** 옵션과 일치 하는 경우 액세스 권한을 부여 합니다.
+    b. **액세스 권한 부여를 선택 합니다. 연결 요청이이 정책 옵션과 일치 하는 경우 액세스 권한을 부여** 합니다.
 
     c. 네트워크 액세스 서버 유형 아래에 있는 드롭다운에서 **원격 액세스 서버 (VPN-전화 접속)** 를 선택 합니다.
 
@@ -234,4 +234,4 @@ IKEv2는 인터넷 엔지니어링 작업 Force Request for Comments 7296에 설
 
 ## <a name="next-step"></a>다음 단계
 
-[4단계. NPS (네트워크 정책 서버)](vpn-deploy-nps.md)설치 및 구성: 이 단계에서는 Windows PowerShell 또는 서버 관리자 역할 및 기능 추가 마법사를 사용 하 여 NPS (네트워크 정책 서버)를 설치 합니다. 또한 VPN 서버에서 받는 연결 요청에 대 한 모든 인증, 권한 부여 및 계정 의무를 처리 하도록 NPS를 구성 합니다.
+[4 단계. NPS (네트워크 정책 서버) 설치 및 구성](vpn-deploy-nps.md):이 단계에서는 Windows PowerShell 또는 서버 관리자 역할 및 기능 추가 마법사를 사용 하 여 NPS (네트워크 정책 서버)를 설치 합니다. 또한 VPN 서버에서 받는 연결 요청에 대 한 모든 인증, 권한 부여 및 계정 의무를 처리 하도록 NPS를 구성 합니다.

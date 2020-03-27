@@ -6,15 +6,15 @@ ms.topic: article
 ms.assetid: f77a3989-9f92-41ef-92a8-031651dd73a8
 ms.prod: windows-server
 ms.technology: networking
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 07/26/2018
-ms.openlocfilehash: 94304f6ae2604dad9f1d21be62d19e4a57a7a1ae
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6434b05d45cf9b8309fac4f6cd5cb5d6d149a7c2
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71356172"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318400"
 ---
 # <a name="configure-the-cdp-and-aia-extensions-on-ca1"></a>C a 1에서 CDP 및 AIA 확장 구성
 
@@ -26,7 +26,7 @@ C a 1에서 인증서 CRL (해지 목록) 배포 지점 (CDP) 및 액세스 AIA 
   
 #### <a name="to-configure-the-cdp-and-aia-extensions-on-ca1"></a>C a 1에서 CDP 및 AIA 확장을 구성 하려면  
   
-1.  서버 관리자에서 **도구** 를 클릭한 뒤 **인증 기관**을 클릭합니다.  
+1.  서버 관리자에서 **도구**를 클릭한 뒤 **인증 기관**을 클릭합니다.  
   
 2.  인증 기관 콘솔 트리에서 마우스 오른쪽 단추로 **corp-c a 1-CA**, 를 클릭 하 고 **속성**합니다.  
   

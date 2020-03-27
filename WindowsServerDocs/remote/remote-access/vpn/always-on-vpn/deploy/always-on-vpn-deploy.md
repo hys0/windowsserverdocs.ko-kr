@@ -7,14 +7,14 @@ ms.topic: article
 ms.assetid: 5ae1a40b-4f10-4ace-8aaf-13f7ab581f4f
 ms.localizationpriority: medium
 ms.date: 12/20/2018
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 5eba89cf61354627b63bcdf2420c25e7a44e3d9a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: ca064f887a524c5f41b29837e8f8fec586a8d928
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71388146"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80313262"
 ---
 # <a name="always-on-vpn-deployment-for-windows-server-and-windows-10"></a>Windows Server 및 Windows 10에 대 한 Always On VPN 배포
 
@@ -25,7 +25,7 @@ ms.locfileid: "71388146"
 
 Always On VPN은 원격 액세스를 위한 단일의 통합 된 솔루션을 제공 하 고 도메인에 가입 된 (작업 그룹) 또는 Azure AD-조인 된 장치 (개인적으로 소유 하는 장치 포함)를 지원 합니다. Always On VPN을 사용하는 경우 연결 형식이 사용자 또는 디바이스만으로 지정될 필요가 없지만 둘 모두를 조합할 수는 있습니다. 예를 들어 원격 디바이스 관리를 위해 디바이스 인증을 사용하도록 설정한 다음, 내부 회사 사이트 및 서비스에 연결하는 데 사용자 인증을 사용하도록 설정할 수 있습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>필수 조건
 
 Always On VPN을 배포 하는 데 사용할 수 있는 기술이 배포 되어 있을 가능성이 높습니다. Always On VPN 배포에는 DC/DNS 서버 외에 NPS (RADIUS) 서버, CA (인증 기관) 서버 및 원격 액세스 (라우팅/v m) 서버가 필요 합니다. 인프라를 설정한 후에는 클라이언트를 등록 한 다음 여러 네트워크 변경을 통해 클라이언트를 온-프레미스에 안전 하 게 연결 해야 합니다.
 
