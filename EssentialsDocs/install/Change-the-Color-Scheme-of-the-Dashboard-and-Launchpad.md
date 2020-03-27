@@ -3,7 +3,7 @@ title: 대시보드 및 실행 패드 색 구성표 변경
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: b2913e51-7979-4d48-a431-d2ec5f1042be
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: f7079c9e59c44907fa203db48ce366c2b5a1102b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a3ffac0b89a62b04b73aada0a49cb755c7e7bd9a
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59879644"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80312280"
 ---
 # <a name="change-the-color-scheme-of-the-dashboard-and-launchpad"></a>대시보드 및 실행 패드 색 구성표 변경
 
@@ -142,37 +142,37 @@ XML로 형식이 지정된 파일에서 사용하려는 색을 정의하고 서�
   
 8.  파일을 %programFiles%\Windows Server\Bin\OEM으로 복사합니다. OEM 디렉터리가 없으면 새로 만듭니다.  
   
-##  <a name="BKMK_Dashboard"></a> 변경할 수 있는 대시보드 및 실행 패드 영역  
+##  <a name="dashboard-and-launchpad-areas-that-can-be-changed"></a><a name="BKMK_Dashboard"></a>변경할 수 있는 대시보드 및 실행 패드 영역  
  이 섹션은 사용자 지정할 수 있는 대시보드 및 실행 패드 영역의 예를 포함합니다.  
   
 ### <a name="examples"></a>예  
   
-####  <a name="BKMK_Figure1"></a> 그림 1: 대시보드 로그인 페이지  
- ![Windows Server Essentials Dashboard](media/SBS8_ADK_Dashboard_Signin_RC.png "SBS8_ADK_Dashboard_Signin_RC")  
+####  <a name="figure-1-sign-in-page-of-the-dashboard"></a><a name="BKMK_Figure1"></a>그림 1: 대시보드의 로그인 페이지  
+ ![Windows Server Essentials 대시보드](media/SBS8_ADK_Dashboard_Signin_RC.png "SBS8_ADK_Dashboard_Signin_RC")  
   
-####  <a name="BKMK_Figure2"></a> 그림 2: 실행 패드  
- ![Windows SBS Launchpad Sign&#45;in](media/SBS8_ADK_LaunchpadSignin2.png "SBS8_ADK_LaunchpadSignin2")  
+####  <a name="figure-2-launchpad"></a><a name="BKMK_Figure2"></a>그림 2: 실행 패드  
+ ![Windows SBS 실행 패드&#45;로그인](media/SBS8_ADK_LaunchpadSignin2.png "SBS8_ADK_LaunchpadSignin2")  
   
-####  <a name="BKMK_Figure3"></a> 그림 3: 실행 패드 로그인 페이지  
+####  <a name="figure-3-sign-in-page-of-the-launchpad"></a><a name="BKMK_Figure3"></a>그림 3: 실행 패드의 로그인 페이지  
  ![Windows Server Essentials 실행 패드](media/SBS8_ADK_Launchpad_Signin_RC.png "SBS8_ADK_Launchpad_Signin_RC")  
   
-####  <a name="BKMK_Figure4"></a> 그림 4: 대시보드 텍스트  
+####  <a name="figure-4-dashboard-text"></a><a name="BKMK_Figure4"></a>그림 4: 대시보드 텍스트  
  ![Windows Server Essentials 탐색 창](media/SBS8_ADK_Navigation_RC.png "SBS8_ADK_Navigation_RC")  
   
-####  <a name="BKMK_Figure5"></a> 그림 5: 하위 탭 테두리  
+####  <a name="figure-5-subtab-border"></a><a name="BKMK_Figure5"></a>그림 5: 하위 탭 border  
  ![Windows SBS 대시보드 하위 탭 테두리](media/SBS8_ADK_DashboardSubtabborder.png "SBS8_ADK_DashboardSubtabborder")  
   
-####  <a name="BKMK_Figure6"></a> 그림 6: 작업 창  
- ![Windows SBS 대시보드 작업창](media/SBS8_ADK_DashboardTaskPane.png "SBS8_ADK_DashboardTaskPane")  
+####  <a name="figure-6-task-pane"></a><a name="BKMK_Figure6"></a>그림 6: 작업 창  
+ ![Windows SBS 대시보드 작업 창](media/SBS8_ADK_DashboardTaskPane.png "SBS8_ADK_DashboardTaskPane")  
   
-####  <a name="BKMK_Figure9"></a> 그림 7a: 제품 시작 화면  
+####  <a name="figure-7a-product-splash-screen"></a><a name="BKMK_Figure9"></a>그림 7a: 제품 시작 화면  
  ![Windows Server Essentials 시작 화면](media/SBS8_ADK_productspalshscreen_RC.png "SBS8_ADK_productspalshscreen_RC")  
   
 #### <a name="figure-7b-home-page"></a>그림 7b: 홈 페이지  
  ![Windows Server Essentials 홈 페이지](media/SBS8_ADK_Dashboard_HomePage_RC.png "SBS8_ADK_Dashboard_HomePage_RC")  
   
 ## <a name="see-also"></a>관련 항목  
- [만들기 및 이미지를 사용자 지정](Creating-and-Customizing-the-Image.md)   
+ [이미지  만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)  
  [추가 사용자 지정](Additional-Customizations.md)   
- [배포용 이미지 준비](Preparing-the-Image-for-Deployment.md)   
+ [배포할 이미지를 준비 하는 중](Preparing-the-Image-for-Deployment.md)   
  [사용자 환경 테스트](Testing-the-Customer-Experience.md)

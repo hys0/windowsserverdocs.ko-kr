@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: 1324ba18-4e28-4b9d-bbe7-75707e6d30ab
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 6ad3b66ff0b271c3b6f6134a96aaf6b5171bc7d4
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: f23b6c1056ea29f583da055b303fb648539240ba
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406165"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80317710"
 ---
 # <a name="domain-name-system-dns"></a>DNS(Domain Name System)
 
@@ -35,7 +35,7 @@ Active Directory 도메인 서비스 (AD DS) 도메인 컨트롤러 위치 메�
   
 DNS 클라이언트 서비스 Windows 운영 체제의 모든 클라이언트 및 서버 버전에 포함 되어 있으며 운영 체제 설치 시 기본적으로 실행 됩니다. DNS 서버의 IP 주소와는 TCP/IP 네트워크 연결을 구성한 경우 DNS 클라이언트는 도메인 컨트롤러를 검색 하 고 컴퓨터 이름을 IP 주소로 확인 하도록 DNS 서버를 쿼리 합니다. 예를 들어, Active Directory 사용자 계정이 있는 네트워크 사용자가 Active Directory 도메인에 로그인 할 때 DNS 클라이언트 서비스는 DNS 서버를 Active Directory 도메인에 대 한 도메인 컨트롤러를 찾을 쿼리 합니다. DNS 서버 쿼리에 응답 하 고 클라이언트에 도메인 컨트롤러의 IP 주소를 제공 하는 경우 클라이언트는 도메인 컨트롤러에 연결 및 인증 프로세스를 시작할 수 있습니다.  
   
-Windows Server 2016 DNS 서버 및 DNS 클라이언트 서비스는 tcp/ip 프로토콜에에서 포함 된 DNS 프로토콜을 사용 합니다. DNS는 TCP/IP 참조 모델의 응용 프로그램 계층의 일부는 다음 그림에 나와 있는 것 처럼입니다.  
+Windows Server 2016 DNS 서버 및 DNS 클라이언트 서비스는 tcp/ip 프로토콜에에서 포함 된 DNS 프로토콜을 사용 합니다. DNS는 TCP/IP 참조 모델의 애플리케이션 계층의 일부는 다음 그림에 나와 있는 것 처럼입니다.  
   
 ![TCP/IP의 DNS](../media/Domain-Name-System--DNS-/dns_in_tcpip.jpg)  
   

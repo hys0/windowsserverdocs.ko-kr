@@ -10,14 +10,14 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 79df3bbe-48fd-4eff-8df6-35f6317566f3
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 338d5a285f2524932a91a66db186554cd0f50e2a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 1d5d5aaae5983e062dae203c60a7001f36e5629b
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71355654"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80309814"
 ---
 # <a name="network-function-virtualization"></a>네트워크 기능 가상화
 
@@ -33,10 +33,10 @@ ms.locfileid: "71355654"
   
 오늘날의 소프트웨어에서 점점 더 가상 어플라이언스로 대 정의 된 데이터 센터, 하드웨어 장비 (예: 부하 분산 장치, 방화벽, 라우터, 스위치 및 등)에서 수행 되는 네트워크 기능 가상화 되 고 됩니다. 이 "네트워크 기능 가상화" 서버 가상화 및 네트워크 가상화의 자연 스러운 진행 됩니다. 가상 어플라이언스는 신속 하 게 새로운 및 새로운 시장 있습니다. 관심을 생성 하 고 업계 동향 가상화 플랫폼 모두에 대 한 권한을 얻는 및 클라우드 서비스를 계속 합니다.  
   
-Microsoft은 Windows Server 2012 r 2로 시작 하는 가상 어플라이언스로 독립 실행형 게이트웨이 추가 합니다. 자세한 내용은 [Windows Server 게이트웨이](https://technet.microsoft.com/library/dn313101.aspx)를 참조하세요. 이제 Windows Server 2016 Microsoft 확장 하 고 네트워크 기능 가상화 시장에 대 한 투자를 계속 합니다.  
+Microsoft은 Windows Server 2012 r 2로 시작 하는 가상 어플라이언스로 독립 실행형 게이트웨이 추가 합니다. 자세한 내용은 [Windows Server 게이트웨이](https://technet.microsoft.com/library/dn313101.aspx)를 참조하십시오. 이제 Windows Server 2016 Microsoft 확장 하 고 네트워크 기능 가상화 시장에 대 한 투자를 계속 합니다.  
   
 ## <a name="virtual-appliance-benefits"></a>가상 어플라이언스 혜택  
-가상 어플라이언스 동적 이며 쉽게 미리 작성 된, 사용자 지정 된 가상 컴퓨터는 이기 때문에 변경할 수 있습니다. 패키지, 업데이트 및 하나의 단위로 관리 하나 이상의 가상 컴퓨터 수 있습니다. 소프트웨어와 함께 정의 네트워킹 (SDN), 민첩성 및 오늘날의 클라우드 기반 인프라에 필요한 유연성을 얻게 됩니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+가상 어플라이언스 동적 이며 쉽게 미리 작성 된, 사용자 지정 된 가상 컴퓨터는 이기 때문에 변경할 수 있습니다. 패키지, 업데이트 및 하나의 단위로 관리 하나 이상의 가상 컴퓨터 수 있습니다. 소프트웨어와 함께 정의 네트워킹 (SDN), 민첩성 및 오늘날의 클라우드 기반 인프라에 필요한 유연성을 얻게 됩니다. 예를 들면 다음과 같습니다.  
   
 -   SDN 풀링되 고 동적 리소스와 네트워크를 표시합니다.  
   
@@ -90,7 +90,7 @@ Microsoft SDN에 대 한 자세한 내용은 참조 [소프트웨어 정의 네�
 ## <a name="why-microsoft-is-a-great-platform-for-virtual-appliances"></a>왜 Microsoft는 가상 장비에 대 한 훌륭한 플랫폼  
 ![가상 네트워크 스택](../../../media/Network-Function-Virtualization/Microsoft-Network-Function-Virtualization.png)  
   
-Microsoft 플랫폼이를 가상 장비 빌드하여 배포 훌륭한 플랫폼으로 설계 되었다는 점입니다. 그 이유는 다음과 같습니다.  
+Microsoft 플랫폼이를 가상 장비 빌드하여 배포 훌륭한 플랫폼으로 설계 되었다는 점입니다. 이유는 다음과 같습니다.  
   
 -   Microsoft은 Windows Server 2016 키 가상화 된 네트워크 기능을 제공합니다.  
   
@@ -121,7 +121,7 @@ Windows Server 2016은 다음 가상 어플라이언스 제공 됩니다.
   
 -   **GRE 터널 게이트웨이**  
   
-    GRE 기반의 터널을 사용하면 테넌트 가상 네트워크와 외부 네트워크를 연결할 수 있습니다. GRE 대부분의 네트워크 장치에서 사용할 수 없으면 GRE 프로토콜은 간단 하며 지원, 데이터 암호화 필요 하지 않은 터널링에 이상적인 선택 됩니다. S2S(Site to Site) 터널의 GRE 지원은 다중 테넌트 게이트웨이를 사용하는 테넌트 가상 네트워크와 테넌트 외부 네트워크 간의 전달 문제를 해결합니다. GRE 터널에 대 한 자세한 내용은 참조 [Windows Server 2016에서 GRE 터널링](https://technet.microsoft.com/library/dn765485.aspx)합니다.  
+    GRE 기반의 터널을 사용하면 테넌트 가상 네트워크와 외부 네트워크를 연결할 수 있습니다. GRE 대부분의 네트워크 디바이스에서 사용할 수 없으면 GRE 프로토콜은 간단 하며 지원, 데이터 암호화 필요 하지 않은 터널링에 이상적인 선택 됩니다. S2S(Site to Site) 터널의 GRE 지원은 다중 테넌트 게이트웨이를 사용하는 테넌트 가상 네트워크와 테넌트 외부 네트워크 간의 전달 문제를 해결합니다. GRE 터널에 대 한 자세한 내용은 참조 [Windows Server 2016에서 GRE 터널링](https://technet.microsoft.com/library/dn765485.aspx)합니다.  
   
 **BGP를 사용 하 여 제어 평면 라우팅**  
   

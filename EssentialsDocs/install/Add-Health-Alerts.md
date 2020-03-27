@@ -3,7 +3,7 @@ title: 상태 경고 추가
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: 270e0aac-dc42-46f3-a20b-a68ffbded06d
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 8c3ba4746211690ad52f775b8bdc1ccf9b6c74b7
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 4166d65d0008f3427947322b285221e7b0090029
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66433721"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80310249"
 ---
 # <a name="add-health-alerts"></a>상태 경고 추가
 
@@ -50,7 +50,7 @@ ms.locfileid: "66433721"
     >  이 작업은 이진 파일을 설치하지 않습니다. 클라이언트 컴퓨터의 **%ProgramFiles%\Windows Server\Bin** 폴더에 이진 파일을 수동으로 복사해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [만들기 및 이미지를 사용자 지정](Creating-and-Customizing-the-Image.md)   
+ [이미지  만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)  
  [추가 사용자 지정](Additional-Customizations.md)   
- [배포용 이미지 준비](Preparing-the-Image-for-Deployment.md)   
+ [배포할 이미지를 준비 하는 중](Preparing-the-Image-for-Deployment.md)   
  [사용자 환경 테스트](Testing-the-Customer-Experience.md)

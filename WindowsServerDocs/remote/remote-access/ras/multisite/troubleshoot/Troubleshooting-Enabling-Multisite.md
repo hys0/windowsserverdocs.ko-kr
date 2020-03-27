@@ -10,14 +10,14 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 570c81d6-c4f4-464c-bee9-0acbd4993584
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: fc42040d68b8a22dcfc46aa30db3a2a3c3bc060a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 59db462e3772b551f0d80819e7cd79519e95fb14
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71367065"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80313820"
 ---
 # <a name="troubleshooting-enabling-multisite"></a>멀티 사이트 사용 관련 문제 해결
 
@@ -28,7 +28,7 @@ ms.locfileid: "71367065"
 ## <a name="user-connectivity-issues"></a>사용자 연결 문제  
 구성이 잘못된 경우 멀티 사이트를 사용하도록 설정하면 연결 문제가 발생할 수 있습니다.  
   
-**가능한 원인**  
+**원인**  
   
 멀티 사이트 배포에서 Windows 10 및 Windows 8 클라이언트 컴퓨터는 서로 다른 진입점 간에 로밍할 수 있습니다.  Windows 7 클라이언트 컴퓨터는 멀티 사이트 배포의 특정 진입점에 연결 되어야 합니다. 클라이언트 컴퓨터가 올바른 보안 그룹에 없는 경우 잘못된 그룹 정책 설정이 수신될 수 있습니다.  
   
@@ -41,7 +41,7 @@ DirectAccess에는 모든 Windows 10 및 Windows 8 클라이언트 컴퓨터에 
 ## <a name="kerberos-proxy-authentication"></a>Kerberos 프록시 인증  
 **오류가 수신**되었습니다. 멀티 사이트 배포에서는 Kerberos 프록시 인증이 지원 되지 않습니다. IPsec 사용자 인증 시 컴퓨터 인증서를 사용하도록 설정해야 합니다.  
   
-**가능한 원인**  
+**원인**  
   
 멀티 사이트를 사용하도록 설정하기 전에 컴퓨터 인증서 인증을 사용하도록 설정해야 합니다.  
   
@@ -53,12 +53,12 @@ DirectAccess에는 모든 Windows 10 및 Windows 8 클라이언트 컴퓨터에 
   
 2.  **원격 액세스 서버 설정** 마법사의 **인증** 페이지에서 **컴퓨터 인증서 사용** 확인란을 선택하고 배포에 인증서를 발급하는 루트 인증 기관 또는 중간 인증 기관을 선택합니다.  
   
-Windows PowerShell을 사용 하 여 컴퓨터 인증서 인증을 사용 하도록 설정 하려면 `Set-DAServer` cmdlet을 사용 하 고 Azure *인증서 매개 변수를 지정 합니다.*  
+Windows PowerShell을 사용 하 여 컴퓨터 인증서 인증을 사용 하도록 설정 하려면 `Set-DAServer` cmdlet을 사용 하 고 Azure *인증서* 매개 변수를 지정 합니다.  
   
 ## <a name="ip-https-certificates"></a>IP-HTTPS 인증서  
 **오류가 수신**되었습니다. DirectAccess 서버는 자체 서명 된 ip-https 인증서를 사용 합니다. 알려진 CA로부터 서명된 인증서를 사용하도록 IP-HTTPS를 구성하십시오.  
   
-**가능한 원인**  
+**원인**  
   
 IP-HTTPS 인증서가 자체 서명되었습니다. 멀티 사이트 배포에서는 자체 서명된 인증서를 사용할 수 없습니다.  
   
@@ -76,7 +76,7 @@ IP-HTTPS 인증서를 선택하려면:
   
     **오류가 수신**되었습니다. DirectAccess는 네트워크 위치 서버에 자체 서명 된 인증서를 사용 하도록 구성 됩니다. 네트워크 위치 서버가 CA로부터 서명된 인증서를 사용하도록 구성하십시오.  
   
-    **가능한 원인**  
+    **원인**  
   
     네트워크 위치 서버가 원격 액세스 서버에 배포되었으며 자체 서명된 인증서를 사용합니다. 멀티 사이트 배포에서는 자체 서명된 인증서를 사용할 수 없습니다.  
   
@@ -92,7 +92,7 @@ IP-HTTPS 인증서를 선택하려면:
   
     **오류가 수신**되었습니다. 네트워크 부하 분산 된 클러스터 또는 멀티 사이트 배포를 배포 하려면 주체 이름이 원격 액세스 서버의 내부 이름과 다른 네트워크 위치 서버에 대 한 인증서를 가져옵니다.  
   
-    **가능한 원인**  
+    **원인**  
   
     네트워크 위치 서버 웹 사이트에 사용된 인증서의 주체 이름이 원격 액세스 서버의 내부 이름과 동일합니다. 이 경우 이름 확인 문제가 발생합니다.  
   
@@ -109,7 +109,7 @@ IP-HTTPS 인증서를 선택하려면:
 ## <a name="windows-7-client-computers"></a>Windows 7 클라이언트 컴퓨터  
 **경고가 수신**되었습니다. 멀티 사이트를 사용 하도록 설정 하는 경우 DirectAccess 클라이언트에 대해 구성 된 보안 그룹은 Windows 7 컴퓨터를 포함 하지 않아야 합니다. 멀티 사이트 배포에서 Windows 7 클라이언트 컴퓨터를 지원하려면 진입점마다 이 클라이언트를 포함하는 보안 그룹을 선택하십시오.  
   
-**가능한 원인**  
+**원인**  
   
 기존 DirectAccess 배포에서는 Windows 7 클라이언트 지원이 사용 하도록 설정 되었습니다.  
   
@@ -118,9 +118,9 @@ IP-HTTPS 인증서를 선택하려면:
 DirectAccess에는 모든 Windows 8 클라이언트 컴퓨터에 대 한 보안 그룹이 하나 이상 필요 하 고 각 진입점에 대 한 Windows 7 클라이언트 컴퓨터의 보안 그룹이 필요 합니다. 각 클라이언트 컴퓨터는 하나의 보안 그룹에만 포함되어야 합니다. 따라서 windows 8 클라이언트의 보안 그룹에 Windows 8을 실행 하는 컴퓨터만 포함 되어 있으며, 각 Windows 7 클라이언트 컴퓨터가 관련 진입점에 대 한 단일 전용 보안 그룹에 속하고 Windows 8 클라이언트는 포함 하지 않는지 확인 해야 합니다. Windows 7 보안 그룹에 속합니다.  
   
 ## <a name="active-directory-site"></a>Active Directory 사이트  
-**오류가 수신**되었습니다. 서버 < 서버 없음 >이 Active Directory 사이트와 연결 되어 있지 않습니다.  
+**오류가 수신**되었습니다. 서버 < server_name > Active Directory 사이트에 연결 되어 있지 않습니다.  
   
-**가능한 원인**  
+**원인**  
   
 DirectAccess에서 Active Directory 사이트를 확인할 수 없습니다. Active Directory 사이트 및 서비스 콘솔에서 네트워크에 대해 여러 서브넷을 구성하고 각 서브넷을 관련 Active Directory 사이트에 연결할 수 있습니다. 이 오류는 원격 액세스 서버가 어떠한 서브넷에도 속해 있지 않거나 IP 주소가 속한 서브넷이 Active Directory 사이트에서 정의되지 않은 경우 발생할 수 있습니다.  
   
@@ -128,10 +128,10 @@ DirectAccess에서 Active Directory 사이트를 확인할 수 없습니다. Act
   
 원격 액세스 서버에서 `nltest /dsgetsite` 명령을 실행하여 이 문제인지 확인합니다. 이 문제가 맞으면 명령에서 ERROR_NO_SITENAME이(가) 반환됩니다. 이 문제를 해결하려면 도메인 컨트롤러에서 내부 서버 IP 주소를 포함하는 서브넷이 있는지 그리고 이 서브넷이 Active Directory 사이트에서 정의되었는지 확인하십시오.  
   
-## <a name="SaveGPOSettings"></a>서버 GPO 설정 저장 중  
+## <a name="saving-server-gpo-settings"></a><a name="SaveGPOSettings"></a>서버 GPO 설정 저장 중  
 **오류가 수신**되었습니다. 원격 액세스 설정을 GPO < GPO_name >에 저장 하는 동안 오류가 발생 했습니다.  
   
-**가능한 원인**  
+**원인**  
   
 연결에 문제가 있거나 다른 사용자가 파일을 registry.pol 파일에 대 한 공유 위반이 발생 하 여 서버 GPO에 대 한 변경 내용을 저장할 수 없습니다.  
   
@@ -139,10 +139,10 @@ DirectAccess에서 Active Directory 사이트를 확인할 수 없습니다. Act
   
 원격 액세스 서버와 도메인 컨트롤러 간 연결이 설정되어 있는지 확인하십시오. 연결이 설정되어 있으면 도메인 컨트롤러에서 다른 사용자가 registry.pol 파일을 잠갔는지 그리고 필요한 경우 파일 잠금을 해제할 수 있도록 해당 사용자 세션이 종료되었는지 확인하십시오.  
   
-## <a name="InternalServerError"></a>내부 오류가 발생 했습니다.  
+## <a name="internal-error-occurred"></a><a name="InternalServerError"></a>내부 오류가 발생 했습니다.  
 **오류가 수신**되었습니다. 내부 오류가 발생했습니다.  
   
-**가능한 원인**  
+**원인**  
   
 클라이언트 GPO의 예상치 못한 진입점 테이블 구성으로 인한 오류일 수 있습니다. 관리자가 DirectAccess 클라이언트 cmdlet을 사용하여 클라이언트 GPO의 진입점 테이블을 편집했을 수 있습니다.  
   

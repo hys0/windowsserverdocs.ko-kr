@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: da956be0-c92d-46ea-99eb-85e2bd67bf07
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: a96b67b235b813ad455d5b289b7238f671e4c547
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 4a86d37fe8744127a91b7fb89e4f34d4a0a021fa
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71356712"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318493"
 ---
 # <a name="configure-firewall-rules-for-non-domain-members-to-allow-branchcache-traffic"></a>도메인 구성원이 아닌 BranchCache 트래픽을 허용 하도록 방화벽 규칙 구성
 
@@ -27,18 +27,18 @@ ms.locfileid: "71356712"
   
 멤버 자격이 **관리자**, 또는 이와 동등한 이러한 구성을 변경 하는 데 필요한 최소값입니다.  
   
-## <a name="ms-pccrd-peer-content-caching-and-retrieval-discovery-protocol"></a>[MS PCCRD]: 피어 콘텐츠 캐싱 및 검색 검색 프로토콜  
+## <a name="ms-pccrd-peer-content-caching-and-retrieval-discovery-protocol"></a>[MS PCCRD]: 피어 콘텐츠 캐싱 및 검색의 검색 프로토콜  
 분산된 캐시 클라이언트는 웹 서비스 동적 검색 (Ws-discovery) 프로토콜에 전달 되는 인바운드 및 아웃 바운드 MS PCCRD 트래픽을 허용 해야 합니다.  
   
 방화벽 설정에는 인바운드 및 아웃 바운드 트래픽 외에 멀티 캐스트 트래픽을 허용 해야 합니다. 분산된 캐시 모드에 대 한 방화벽 예외를 구성 하려면 다음 설정을 사용할 수 있습니다.  
   
 IPv4 멀티 캐스트: 239.255.255.250  
   
-IPv6 멀티 캐스트: FF02:: C  
+IPv6 멀티 캐스트: FF02::C  
   
-인바운드 트래픽: 로컬 포트: 3702, 원격 포트: 임시  
+인바운드 트래픽을: 로컬 포트: 3702, 원격 포트: 임시  
   
-아웃 바운드 트래픽: 로컬 포트: 임시, 원격 포트: 3702  
+아웃 바운드 트래픽을: 로컬 포트: 임시, 원격 포트: 3702  
   
 프로그램의 경우: %systemroot%\system32\svchost.exe (BranchCache 서비스 [PeerDistSvc])  
   
@@ -47,9 +47,9 @@ IPv6 멀티 캐스트: FF02:: C
   
 방화벽 설정에는 인바운드 및 아웃 바운드 트래픽을 허용 해야 합니다. 분산된 캐시 모드에 대 한 방화벽 예외를 구성 하려면 다음 설정을 사용할 수 있습니다.  
   
-인바운드 트래픽: 로컬 포트: 80, 원격 포트: 임시  
+인바운드 트래픽을: 로컬 포트: 80, 원격 포트: 임시  
   
-아웃 바운드 트래픽: 로컬 포트: 임시, 원격 포트: 80  
+아웃 바운드 트래픽을: 로컬 포트: 임시, 원격 포트: 80  
   
 
 

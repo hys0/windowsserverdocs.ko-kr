@@ -10,15 +10,15 @@ ms.technology: networking-nict
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a4caaa86-5799-4580-8775-03ee213784a3
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 09/13/2018
-ms.openlocfilehash: 1785b34741ce525a5bdd27b77a0e52fc2ca6c1b6
-ms.sourcegitcommit: 9a6a692a7b2a93f52bb9e2de549753e81d758d28
+ms.openlocfilehash: 1463d3b9a596436b93423806a0acdb40728a15fb
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72591103"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80316689"
 ---
 # <a name="create-a-new-nic-team-on-a-host-computer-or-vm"></a>호스트 컴퓨터 또는 VM에서 새 NIC 팀 만들기
 
@@ -46,11 +46,11 @@ VM에서 NIC 팀을 만들기 위한 물리적 스위치, Hyper-v 가상 스위�
 ## <a name="step-1-configure-the-physical-and-virtual-network"></a>1단계. 실제 및 가상 네트워크 구성  
 이 절차에서는 두 개의 외부 Hyper-v 가상 스위치를 만들고, VM을 스위치에 연결 하 고, 스위치에 대 한 VM 연결을 구성 합니다.  
 
-### <a name="prerequisites"></a>필수 구성 요소
+### <a name="prerequisites"></a>필수 조건
 
 **관리자**또는 이와 동등한 멤버 자격이 있어야 합니다.  
 
-### <a name="procedure"></a>절차
+### <a name="procedure"></a>프로시저
 
 1.  Hyper-v 호스트에서 Hyper-v 관리자를 열고 작업 아래에서 **가상 스위치 관리자**를 클릭 합니다.  
 
@@ -99,7 +99,7 @@ VM에서 NIC 팀을 만들기 위한 물리적 스위치, Hyper-v 가상 스위�
 
     c. **게스트 운영 체제에서이 네트워크 어댑터가 팀의 일부가 되도록 설정**을 클릭 하 여 선택 합니다. 
 
-    d. **확인**을 클릭합니다.  
+    . **확인**을 클릭합니다.  
 
     ![팀에 네트워크 어댑터 추가](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_05.jpg)  
 
@@ -141,11 +141,11 @@ _**집들이!**_  실제 및 가상 네트워크를 구성 했습니다.  이제
 
 이러한 설정에 대 한 자세한 내용은 [NIC 팀 설정](nic-teaming-settings.md)을 참조 하세요.
 
-### <a name="prerequisites"></a>필수 구성 요소
+### <a name="prerequisites"></a>필수 조건
 
 **관리자**또는 이와 동등한 멤버 자격이 있어야 합니다.  
 
-### <a name="procedure"></a>절차
+### <a name="procedure"></a>프로시저
 
 1. 서버 관리자에서 **로컬 서버**를 클릭합니다.  
 
@@ -210,9 +210,9 @@ _**집들이!**_  호스트 컴퓨터 또는 VM에서 새 NIC 팀을 만들었�
 
 ## <a name="related-topics"></a>관련 항목
 
-- [Nic 팀](NIC-Teaming.md):이 항목에서는 Windows Server 2016의 Nic (네트워크 인터페이스 카드) 팀에 대 한 개요를 제공 합니다. NIC 팀을 사용 하면 32 하나 이상의 실제 이더넷 네트워크 어댑터 간에 하나 이상의 소프트웨어 기반 가상 네트워크 어댑터로 그룹화 할 수 있습니다. 이러한 가상 네트워크 어댑터는 빠른 성능과 네트워크 어댑터 오류 발생 시 내결함성을 제공합니다.   
+- [Nic 팀](NIC-Teaming.md):이 항목에서는 Windows Server 2016의 Nic (네트워크 인터페이스 카드) 팀에 대 한 개요를 제공 합니다. NIC 팀을 사용 하면 32 하나 이상의 실제 이더넷 네트워크 어댑터 간에 하나 이상의 소프트웨어 기반 가상 네트워크 어댑터로 그룹화 할 수 있습니다. 이 가상 네트워크 어댑터에는 빠른 성능과 네트워크 어댑터 오류 발생 시 내결함성을 제공합니다.   
 
-- [Nic 팀 MAC 주소 사용 및 관리](NIC-Teaming-MAC-Address-Use-and-Management.md): 스위치 독립 모드를 사용 하 여 nic 팀을 구성 하 고 주소 해시 또는 동적 부하 분산을 구성 하는 경우 팀은 아웃 바운드에서 기본 NIC 팀 구성원의 MAC (미디어 액세스 제어) 주소를 사용 합니다. 교통. 기본 NIC 팀 구성원은 초기 팀 구성원 집합에서 운영 체제에 의해 선택 된 네트워크 어댑터입니다.
+- [Nic 팀 MAC 주소 사용 및 관리](NIC-Teaming-MAC-Address-Use-and-Management.md): 스위치 독립 모드를 사용 하 여 nic 팀을 구성 하 고 주소 해시 또는 동적 부하 분산을 사용 하는 경우 팀에서 아웃 바운드 트래픽에 대 한 기본 nic 팀 구성원의 MAC (미디어 액세스 제어) 주소를 사용 합니다. 기본 NIC 팀 구성원은 초기 팀 구성원 집합에서 운영 체제에 의해 선택 된 네트워크 어댑터입니다.
 
 - [Nic 팀 설정](nic-teaming-settings.md):이 항목에서는 팀 및 부하 분산 모드와 같은 NIC 팀 속성에 대 한 개요를 제공 합니다. 또한 대기 어댑터 설정 및 주 팀 인터페이스 속성에 대 한 세부 정보도 제공 합니다. NIC 팀에 네트워크 어댑터가 두 개 이상 있는 경우 내결함성을 위해 대기 어댑터를 지정할 필요가 없습니다.
 

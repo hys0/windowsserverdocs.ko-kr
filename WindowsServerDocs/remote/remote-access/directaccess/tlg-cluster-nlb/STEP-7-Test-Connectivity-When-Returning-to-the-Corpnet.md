@@ -10,14 +10,14 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5a7252d0-6db8-4a9d-98ee-75082ecd2929
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: fa89745d6efcae3591bba2aa5a694ee651bc9912
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 491533ae5d141de4ab4f15126d8977cf15c8f7f4
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404856"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80314681"
 ---
 # <a name="step-7-test-connectivity-when-returning-to-the-corpnet"></a>7 단계 Corpnet 반환 시 연결 테스트
 
@@ -31,7 +31,7 @@ ms.locfileid: "71404856"
   
 2. 관리자 권한 Windows PowerShell 창을 열고 **ipconfig/all**을 입력 한 다음 enter 키를 누릅니다. 출력은 c l i e n t 1에 로컬 IP 주소가 있고 활성 6to4, Teredo 또는 IP-HTTPS 터널이 없음을 표시 합니다.  
   
-3. APP2의 네트워크 공유에 대 한 연결을 테스트 합니다. **시작** 화면에서<strong>\\ \ APP2\Files</strong>를 입력 한 다음 enter 키를 누릅니다. 해당 폴더에서 파일을 열 수 있습니다.  
+3. APP2의 네트워크 공유에 대 한 연결을 테스트 합니다. **시작** 화면에서<strong>\\\APP2\Files</strong>를 입력 한 다음 enter 키를 누릅니다. 해당 폴더에서 파일을 열 수 있습니다.  
   
 
 

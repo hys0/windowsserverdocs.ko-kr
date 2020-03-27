@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: d011eaad-f72a-4a83-8099-8589c4ee8994
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 7f9c611b793df36c2e588b2fa099df4e5382194c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: dba00395b32980d3139cf88e25571c8001cac24e
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405470"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80316239"
 ---
 # <a name="realm-names"></a>영역 이름
 

@@ -6,15 +6,15 @@ ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: 9be83ed2-9e62-49e8-88e7-f52d3449aac5
-ms.author: pashort
+ms.author: lizross
 author: JMesser81
 ms.date: 08/14/2018
-ms.openlocfilehash: 2782419f0c3d99e7ec7f4ee3389f174df400bd55
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 5827ad3b23d6f084e0138bf34ad47223eccb4e76
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75949920"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80312842"
 ---
 # <a name="troubleshoot-the-windows-server-software-defined-networking-stack"></a>Windows Server 소프트웨어 정의 네트워킹 스택 문제 해결
 
@@ -121,9 +121,9 @@ Message:          Host is not Connected.
 아래 표에서 오류 코드, 메시지 및 관찰 된 구성 상태에 따라 수행할 작업이의 목록입니다.
 
 
-| **코드**| **메시지**| **작업**|  
+| **Code**| **메시지**| **작업**|  
 |--------|-----------|----------|  
-| Unknown| 알 수 없는 오류| |  
+| 알 수 없음| 알 수 없는 오류| |  
 | HostUnreachable                       | 호스트 컴퓨터에 연결할 수 없다는 | 네트워크 컨트롤러와 호스트 간의 네트워크 연결을 관리 확인 |  
 | PAIpAddressExhausted                  | PA Ip 주소가 모두 사용된 했습니다. | HNV 공급자 논리 서브넷의 IP 풀 크기 늘리기 |  
 | PAMacAddressExhausted                 | PA Mac 주소를 모두 사용된 했습니다. | Mac 풀 범위를 넓힐 |  
@@ -140,7 +140,7 @@ Message:          Host is not Connected.
 | DistributedRouterConfigurationFailure | 호스트 vNic에 분산 라우터 설정을 구성 하지 못했습니다.                          | TCPIP 스택 오류가 발생 했습니다. 이 오류를 보고 서버에서 PA 및 DR 호스트 vNICs를 정리 해야 할 수 있습니다. |
 | DhcpAddressAllocationFailure          | VMNic에 대 한 DHCP 주소를 할당 하지 못했습니다.                                                    | NIC 리소스에 대해 정적 IP 주소 특성은 구성 확인 |  
 | CertificateNotTrusted<br>CertificateNotAuthorized | 네트워크 또는 인증 오류로 인해 Mux에 연결 하지 못했습니다. | 오류 메시지 코드에 제공 된 숫자 코드를 확인 하십시오: winsock 오류 코드에 해당 합니다. 인증서 오류 세분화 됩니다 (예를 들어 인증서를 확인할 수 없으면 cert 권한이 없는 등이 있습니다.) |  
-| HostUnreachable                       | MUX은 비정상 (일반적인 경우 BGPRouter 연결 끊김) | RRAS (BGP 가상 머신) 또는 위쪽-Tor () 스위치에 대한 BGP 피어를 성공적으로 액세스할 수 없거나 하지 피어 링입니다. 소프트웨어 부하 분산 장치 멀티플렉서 리소스와 BGP 피어 (ToR 또는 RRAS 가상 머신)에서 BGP 설정을 확인합니다. |  
+| HostUnreachable                       | MUX은 비정상 (일반적인 경우 BGPRouter 연결 끊김) | RRAS (BGP 가상 컴퓨터) 또는 위쪽-Tor () 스위치에 대 한 BGP 피어를 성공적으로 액세스할 수 없거나 하지 피어 링입니다. 소프트웨어 부하 분산 장치 멀티플렉서 리소스와 BGP 피어 (ToR 또는 RRAS 가상 컴퓨터)에서 BGP 설정을 확인합니다 |  
 | HostNotConnectedToController          | SLB 호스트 에이전트에 연결 되어 있지 않습니다.  | SLB 호스트 에이전트 서비스가 실행 중인지 확인 같은 이유로 SLB 호스트 에이전트 로그 (자동 실행)를 참조 이유, SLBM (NC) 실행 되는 호스트 에이전트를 제공한 인증서를 거부 하는 경우 상태 정보가 표시 됩니다 미묘한  |  
 | PortBlocked                           | VNET의 부족으로 인해 VFP 포트는 차단 됩니다 / ACL 정책 | 다른 오류를 정책을 구성 하지 않을 수를 확인 합니다. |  
 | 오버로드됨                            | Loadbalancer MUX 오버 로드  | MUX 성능 문제 |  
@@ -300,10 +300,10 @@ SLB 구성 상태 정보를 찾을 수는 _진단 slbstateResults.Json_ 이 디�
    * MuxState-이 섹션은 하나의 값에 나열 각 SLB 먹 싱 배포는 mux의 상태를 제공 합니다.
    * 라우터 구성-이 섹션에는 업스트림 라우터 (BGP 피어) 나열 됩니다 번호 ASN (Autonomous System), 전송 중인 IP 주소 및 id입니다. 또한 SLB Muxes ASN 및 전송 IP 나열 됩니다.
    * 호스트 정보-이 섹션에 연결 된 목록 관리 IP 다룰 모든 Hyper-v 호스트 부하 분산 된 작업을 실행할 수 있습니다.
-   * Vip 범위-이 섹션은 공용 및 개인 VIP IP 풀 범위를 나열 합니다. SLBM VIP는 이러한 범위 중 하나에서 할당 된 IP로 포함 됩니다. 
+   * Vip 범위-이 섹션은 공용 및 프라이빗 VIP IP 풀 범위를 나열합니다. SLBM VIP는 이러한 범위 중 하나에서 할당 된 IP로 포함 됩니다. 
    * Mux 경로-이 섹션에 대 한 각 SLB 먹 싱 배포 된 모든 해당 특정 mux에 대 한 경로 알림에 포함 된 하나의 값을 나열 됩니다.
  * 테넌트
-   * VipConsolidatedState-이 섹션 보급 된 경로 접두사, Hyper-v 호스트 및 DIP 엔드포인트를 포함 하 여 각 테 넌 트 VIP에 대 한 연결 상태를 나열 됩니다.
+   * VipConsolidatedState-이 섹션 보급 된 경로 접두사, Hyper-v 호스트 및 DIP 끝점을 포함 하 여 각 테 넌 트 VIP에 대 한 연결 상태를 나열 됩니다.
 
 > [!NOTE]
 > SLB 상태를 사용 하 여 직접 조사할 수 있습니다는 [DumpSlbRestState](https://github.com/Microsoft/SDN/blob/master/Diagnostics/DumpSlbRestState.ps1) 스크립트에서 사용할 수는 [Microsoft SDN GitHub 리포지토리](https://github.com/microsoft/sdn)합니다. 
@@ -504,7 +504,7 @@ Verifying Physical Nic : <NIC> Ethernet Adapter
 Physical Nic  <NIC> Ethernet Adapter can support SDN traffic. Encapoverhead value set on the nic is  160
 ```
 
-HNV 공급자 논리 네트워크는 더 큰 MTU 크기에 엔드투엔드 지원 여부를 테스트 하려면 사용 하 여 _테스트 LogicalNetworkSupportsJumboPacket_ cmdlet:
+HNV 공급자 논리 네트워크가 더 큰 MTU 크기를 엔드투엔드 지원하는지 테스트하려면 _Test-LogicalNetworkSupportsJumboPacket_ cmdlet을 사용합니다.
 ```none
 # Get credentials for both source host and destination host (or use the same credential if in the same domain)
 $sourcehostcred = Get-Credential
@@ -527,13 +527,13 @@ Cannot send jumbo packets to the destination. Physical switch ports may not be c
 # TODO: Success Results aftering updating MTU on physical switch ports
 ```
 
-*수정*
+*재구성*
 * 적어도 물리적 스위치 포트에서 MTU 크기 조정 1674B (14B 이더넷 헤더 및 트레일러 포함)
 * NIC 카드 EncapOverhead 키워드를 지원 하지 않는 경우 조정 적어도 JumboPacket 키워드 1674B
 
 
 #### <a name="check-tenant-vm-nic-connectivity"></a>테 넌 트 VM NIC 연결 확인
-게스트 VM에 할당 된 각 VM NIC에 개인 고객 주소 (CA)와 HNV PA (공급자 주소) 공간 간의 CA-PA 매핑이 있습니다. 이러한 매핑은 각 Hyper-v 호스트에서 OVSDB 서버 테이블에 유지 되 고 다음 cmdlet을 실행 하 여 찾을 수 있습니다.
+게스트 VM에 할당 된 각 VM NIC에 프라이빗 고객 주소(CA)와 HNV PA (공급자 주소) 공간 간의 CA-PA 매핑이 있습니다. 이러한 매핑은 각 Hyper-v 호스트에서 OVSDB 서버 테이블에 유지 되 고 다음 cmdlet을 실행 하 여 찾을 수 있습니다.
 
 ```none
 # Get all known PA-CA Mappings from this particular Hyper-V Host
@@ -560,13 +560,13 @@ CA IP Address CA MAC Address    Virtual Subnet ID PA IP Address
 ### <a name="no-network-connectivity-between-two-tenant-virtual-machines"></a>두 개의 테 넌 트 가상 컴퓨터 간 네트워크 연결 없음
 
 1.  [Tenant] 테 넌 트 가상 컴퓨터에서 Windows 방화벽이 트래픽을 차단 하지 확인 합니다.  
-2.  [테넌트] _ipconfig_를 실행하여 IP 주소가 테넌트 가상 머신에 할당되어 있는지 확인하세요. 
+2.  [Tenant] IP 주소를 실행 하 여 테 넌 트 가상 컴퓨터에 할당 된 있는지 확인 하십시오. _ipconfig_합니다. 
 3.  호스팅 Hyper-v 호스트에서 **VirtualNetworkConnection** 를 실행 하 여 해당 하는 두 개의 테 넌 트 가상 컴퓨터 간의 연결을 확인 합니다. 
 
 >[!NOTE]
 >Vsid가 참조 된 가상 서브넷 id. VXLAN의 경우는 VXLAN 네트워크 식별자 (vni) 또는입니다. 이 값은 **PACAMapping** cmdlet을 실행 하 여 찾을 수 있습니다.
 
-#### <a name="example"></a>예
+#### <a name="example"></a>예제
 
     $password = ConvertTo-SecureString -String "password" -AsPlainText -Force
     $cred = New-Object pscredential -ArgumentList (".\administrator", $password) 
@@ -609,7 +609,7 @@ Sa18.nttest.microsoft.com 도메인의 sa18n30nc에 있는 데모 환경에서 �
 ## <a name="look-at-ip-configuration-and-virtual-subnets-which-are-referencing-this-acl"></a>이 ACL을 참조 하는 IP 구성 및 가상 서브넷을 확인 합니다.
 
 1. [호스터] 실행 ``Get-ProviderAddress`` 두 hyper-v 호스트 두 호스팅 질문의 가상 컴퓨터를 테 넌 트 한 다음 실행 ``Test-LogicalNetworkConnection`` 또는 ``ping -c <compartment>`` HNV 공급자 논리 네트워크에 대 한 연결 유효성을 검사 하는 Hyper-v 호스트에서
-2.  [호스터] Hyper-v 호스트에 올바른 및 모든 계층 2 디바이스 사이 Hyper-v 호스트를 전환 MTU 설정 되어 있는지 확인 합니다. 실행 ``Test-EncapOverheadValue`` 에 모든 Hyper-v 호스트에 있습니다. 또한 확인 사이 있는 모든 계층 2 스위치 MTU 160 바이트의 최대 오버 헤드를 고려 하 1674 바이트 이상으로 설정 합니다.  
+2.  [호스터] Hyper-v 호스트에 올바른 및 모든 계층 2 장치 사이 Hyper-v 호스트를 전환 MTU 설정 되어 있는지 확인 합니다. 실행 ``Test-EncapOverheadValue`` 에 모든 Hyper-v 호스트에 있습니다. 또한 확인 사이 있는 모든 계층 2 스위치 MTU 160 바이트의 최대 오버 헤드를 고려 하 1674 바이트 이상으로 설정 합니다.  
 3.  [호스터] PA IP 주소가 없는 경우, CA 연결이 끊어진 네트워크 정책을 받은 있는지 확인 합니다. 실행 ``Get-PACAMapping`` 캡슐화 규칙 및 오버레이 가상 네트워크를 만드는 데 필요한 CA-PA 매핑은 올바르게 설정 하는 경우를 확인 합니다.  
 4.  [호스터] 네트워크 컨트롤러 호스트 에이전트가 네트워크 컨트롤러에 연결 되어 있는지 확인 합니다. 실행 ``netstat -anp tcp |findstr 6640`` 있는지는   
 5.  [호스터] HKLM에 호스트 ID 확인 / 테 넌 트 가상 컴퓨터를 호스팅하는 서버 리소스의 인스턴스 ID와 일치 합니다.  
@@ -623,7 +623,7 @@ Sa18.nttest.microsoft.com 도메인의 sa18n30nc에 있는 데모 환경에서 �
 
 자동으로 네트워크 컨트롤러 디버거 로그를 수집 하 고 중앙 집중화 된 위치에 저장할 수 있습니다. 처음으로 또는 나중에 네트워크 컨트롤러를 배포 하는 경우 로그 수집을 사용 하도록 설정할 수 있습니다. 로그의 네트워크 컨트롤러에서 수집 되 고 네트워크 네트워크 컨트롤러가 관리 하는 요소: 컴퓨터, 소프트웨어 부하 분산 장치 (SLB) 및 게이트웨이 컴퓨터를 호스트 합니다. 
 
-이러한 로그 네트워크 컨트롤러 클러스터, 네트워크 컨트롤러 애플리케이션, 게이트웨이 로그, SLB, 가상 네트워킹 및 분산된 방화벽에 대 한 디버그 로그를 포함 합니다. 새 호스트/SLB/게이트웨이 네트워크 컨트롤러에 추가 되 면 때마다 로깅 해당 컴퓨터에서 시작 됩니다. 마찬가지로, 호스트/SLB/게이트웨이 네트워크 컨트롤러에서 제거 되 면 해당 컴퓨터에서 로깅이 중지 됩니다.
+이러한 로그 네트워크 컨트롤러 클러스터, 네트워크 컨트롤러 응용 프로그램, 게이트웨이 로그, SLB, 가상 네트워킹 및 분산된 방화벽에 대 한 디버그 로그를 포함 합니다. 새 호스트/SLB/게이트웨이 네트워크 컨트롤러에 추가 되 면 때마다 로깅 해당 컴퓨터에서 시작 됩니다. 마찬가지로, 호스트/SLB/게이트웨이 네트워크 컨트롤러에서 제거 되 면 해당 컴퓨터에서 로깅이 중지 됩니다.
 
 #### <a name="enable-logging"></a>로깅 사용
 
@@ -653,12 +653,12 @@ VMM 배포는 기본적으로 네트워크 컨트롤러에 대 한 중앙 집중
 
 파일 위치를 로컬 지정 되지 않은 경우 로깅은 C:\Windows\tracing\SDNDiagnostics로 저장 된 로그와 각 네트워크 컨트롤러 노드에 사용 됩니다. 이러한 로그는 다음과 같은 계층을 사용 하 여 저장 됩니다.
 
-- 크래시 덤프
+- CrashDumps
 - NCApplicationCrashDumps
 - NCApplicationLogs
 - PerfCounters
 - SDNDiagnostics
-- 추적
+- Traces
 
 네트워크 컨트롤러는 서비스 패브릭 (Azure)를 사용합니다. 서비스 패브릭 로그는 특정 문제를 해결할 때 필요할 수 있습니다. 네트워크 컨트롤러 노드마다 C:\ProgramData\Microsoft\Service 패브릭에서 이러한 로그를 볼 수 있습니다.
 
@@ -668,14 +668,14 @@ VMM 배포는 기본적으로 네트워크 컨트롤러에 대 한 중앙 집중
 
 #### <a name="slbm-fabric-errors-hosting-service-provider-actions"></a>SLBM 패브릭 오류 (호스팅 서비스 공급자 동작)
 
-1.  소프트웨어 부하 분산 장치 관리자 (SLBM) 작동 하 고 오케스트레이션 레이어가 서로 통신할 수 있는지 확인 하십시오: SLBM-SLB Mux > 하 고 SLBM SLB 호스트 에이전트. 실행 [DumpSlbRestState](https://github.com/Microsoft/SDN/blob/master/Diagnostics/DumpSlbRestState.ps1) 네트워크 컨트롤러 REST 엔드포인트에 액세스할 수 있는 모든 노드에서 합니다.  
+1.  소프트웨어 부하 분산 장치 관리자 (SLBM) 작동 하 고 오케스트레이션 레이어가 서로 통신할 수 있는지 확인 하십시오: SLBM-SLB Mux > 하 고 SLBM SLB 호스트 에이전트. 실행 [DumpSlbRestState](https://github.com/Microsoft/SDN/blob/master/Diagnostics/DumpSlbRestState.ps1) 네트워크 컨트롤러 REST 끝점에 액세스할 수 있는 모든 노드에서 합니다.  
 2.  유효성 검사는 *SDNSLBMPerfCounters* 네트워크 컨트롤러 노드 Vm (가급적 주 네트워크 컨트롤러 노드-Get NetworkControllerReplica) 중 하나에서 성능 모니터에서:
     1.  부하 분산 장치 (LB) 엔진 SLBM에 연결 되어 있습니까? (*SLBM LBEngine 구성 총* > 0)  
-    2.  SLBM 적어도 알 자체 엔드포인트에 대 한? (*VIP 엔드포인트 총* &gt; = 2)  
+    2.  SLBM 적어도 알 자체 끝점에 대 한? (*VIP 끝점 총* > = 2)  
     3.  Hyper-v (DIP) 호스트 SLBM에 연결 되어 있습니까? (*연결 된 HP 클라이언트*  num 서버 = =)   
     4.  SLBM은 Muxes에 연결 되어 있습니까? (*Muxes 연결* == *Muxes Healthy on SLBM* == *Muxes 보고 정상* = # SLB Muxes Vm).  
 3.  구성 된 BGP 라우터는 SLB MUX와 피어 링 성공적으로 확인 합니다.  
-    1.  RRAS를 사용하여 원격 액세스(예: BGP 가상 머신)하는 경우:  
+    1.  RRAS를 사용 하 여 원격 액세스 (예: BGP 가상 컴퓨터)와 하는 경우:  
         1.  Get bgppeer가 연결 된 나타나야 합니다.  
         2.  Get BgpRouteInformation는 SLBM에 대 한 최소한의 경로 표시 해야 자체 VIP  
     2.  BGP 피어로 전환 물리적-Top-of-rack ToR ()를 사용 하 여, 설명서를 참조 하십시오.  
@@ -683,7 +683,7 @@ VMM 배포는 기본적으로 네트워크 컨트롤러에 대 한 중앙 집중
 4.  유효성 검사는 *SlbMuxPerfCounters* 및 *SLBMUX* SLB Mux VM에는 PerfMon 카운터
 5.  구성 상태 및 소프트웨어 부하 분산 장치 관리자 리소스에 대 한 VIP 범위를 확인 합니다.  
     1.  Get NetworkControllerLoadBalancerConfiguration ConnectionUri < https://<FQDN or IP>| convertto json-8 깊이 (IP 풀의 VIP 범위 SLBM 자체 VIP를 확인 하십시오 (*LoadBalanacerManagerIPAddress*) 및 모든 테 넌 트 쪽 Vip는이 범위 내)  
-        1. "< 공개/개인 VIP 논리 네트워크 리소스 ID >" get NetworkControllerIpPool-NetworkId-SubnetId "< 공개/개인 VIP 논리 서브넷 리소스 ID >"-ResourceId "<IP Pool Resource Id>"-ConnectionUri $uri | convertto json-8 깊이 
+        1. "&lt; 공개/프라이빗 VIP 논리 네트워크 리소스 ID &gt;" get NetworkControllerIpPool-NetworkId-SubnetId "&lt; 공개/프라이빗 VIP 논리 서브넷 리소스 ID &gt;"-ResourceId "<IP Pool Resource Id>"-ConnectionUri $uri | convertto json-8 깊이 
     2.  디버그-NetworkControllerConfigurationState-  
 
 검사 실패 위의 경우에 실패 모드에 테 넌 트 SLB 상태 수도 있습니다.  
@@ -700,22 +700,22 @@ VMM 배포는 기본적으로 네트워크 컨트롤러에 대 한 중앙 집중
 #### <a name="slbm-tenant-errors-hosting-service-provider--and-tenant-actions"></a>테 넌 트 SLBM 오류 (호스팅 서비스 공급자 및 테 넌 트 작업)
 
 1.  [호스터] 확인 *디버그 NetworkControllerConfigurationState* LoadBalancer 리소스 오류 상태에 있는지 확인 하기 위해. 부록에는 테이블 작업 항목에 따라 완화 하려고 합니다.   
-    1.  VIP 엔드포인트는 현재 및 광고 경로 인지 확인  
-    2.  VIP 엔드포인트에 대 한 검색 된 DIP 엔드포인트 수 확인  
+    1.  VIP 끝점은 현재 및 광고 경로 인지 확인  
+    2.  VIP 끝점에 대 한 검색 된 DIP 끝점 수 확인  
 2.  [Tenant] 유효성을 검사 부하 분산 장치 리소스를 올바르게 지정  
-    1.  DIP의 유효성을 검사 SLBM에 등록 되어 있는 엔드포인트 LoadBalancer 백 엔드 주소 풀의 IP 구성에 해당 하는 테 넌 트 가상 컴퓨터를 호스트  
-3.  [호스터] DIP 엔드포인트 발견 하지 않거나 연결 합니다.   
+    1.  DIP의 유효성을 검사 SLBM에 등록 되어 있는 끝점 LoadBalancer 백 엔드 주소 풀의 IP 구성에 해당 하는 테 넌 트 가상 컴퓨터를 호스트  
+3.  [호스터] DIP 끝점 발견 하지 않거나 연결 합니다.   
     1.  확인 *NetworkControllerConfigurationState 디버그*  
         1.  ``netstat -anp tcp |findstr 6640)``를 사용 하 여 NC 및 SLB 호스트 에이전트가 네트워크 컨트롤러 이벤트 코디네이터에 성공적으로 연결 되었는지 확인 합니다.  
     2.  확인 *HostId* 에서 *nchostagent* 서비스 레지스트리 키 (참조 *HostNotConnected* 부록에 오류 코드) 해당 하는 서버 리소스의 인스턴스 Id와 일치 (``Get-NCServer |convertto-json -depth 8``)  
-    3.  가상 머신 포트에 대한 포트 프로필 id에 해당 가상 머신 NIC 리소스의 인스턴스 Id와 일치 확인   
+    3.  가상 컴퓨터 포트에 대 한 포트 프로필 id에 해당 가상 컴퓨터 NIC 리소스의 인스턴스 Id와 일치 확인   
 4.  [호스팅 공급자] 로그 수집   
 
 #### <a name="slb-mux-tracing"></a>SLB Mux 추적
 
 소프트웨어 부하 분산 장치 Muxes의 정보는 또한 이벤트 뷰어를 통해 확인할 수 있습니다. 
 1. 이벤트 뷰어 보기 메뉴에서 "표시 분석 및 디버그 로그"를 클릭 합니다.
-2. "애플리케이션 및 서비스 로그"로 이동 &gt; Microsoft &gt; Windows &gt; SlbMuxDriver &gt; 이벤트 뷰어에서 추적 
+2. "응용 프로그램 및 서비스 로그"로 이동 > Microsoft > Windows > SlbMuxDriver > 이벤트 뷰어에서 추적 
 3. 마우스 오른쪽 단추로 클릭 하 고 "로그 사용"을 선택 합니다.
 
 >[!NOTE]

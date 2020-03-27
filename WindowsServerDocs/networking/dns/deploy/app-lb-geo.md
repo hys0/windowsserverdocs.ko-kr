@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: b6e679c6-4398-496c-88bc-115099f3a819
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: ea3f959612de0f2bc56a887ba73aba47f1d3f141
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: d4e005e65a3ff645ed91f488820435aff5173390
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406215"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80317897"
 ---
 # <a name="use-dns-policy-for-application-load-balancing-with-geo-location-awareness"></a>응용 프로그램 부하를 분산 하는 지리적 위치 인식 기능을 위한 DNS 정책을 사용 하 여
 
@@ -45,7 +45,7 @@ Contoso 선물 서비스 DNS 관리자는에 있는 웹 서버 간에 응용 프
 >[!IMPORTANT]
 >다음 섹션에서는 예제 많은 매개 변수 값이 포함 된 예제 Windows PowerShell 명령을 포함 합니다. 이러한 명령에 대 한 예제 값은 다음이 명령을 실행 하기 전에 배포에 적합 한 값으로 바꾸는 것을 확인 합니다.
 
-### <a name="bkmk_clientsubnets"></a>DNS 클라이언트 서브넷 만들기
+### <a name="create-the-dns-client-subnets"></a><a name="bkmk_clientsubnets"></a>DNS 클라이언트 서브넷 만들기
 
 먼저 북아메리카 및 유럽 지역의 서브넷 또는 IP 주소 공간을 식별 해야 합니다.
 
@@ -61,7 +61,7 @@ DNS 클라이언트 서브넷을 만드는 다음 Windows PowerShell 명령을 �
     
 자세한 내용은 참조 [추가 DnsServerClientSubnet](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverclientsubnet?view=win10-ps)합니다.
 
-### <a name="bkmk_zscopes2"></a>영역 범위 만들기
+### <a name="create-the-zone-scopes"></a><a name="bkmk_zscopes2"></a>영역 범위 만들기
 
 클라이언트 서브넷이 준비 된 후에는 각 데이터 센터에 대해 contosogiftservices.com 영역을 다른 영역 범위로 분할 해야 합니다.
 
@@ -85,7 +85,7 @@ DNS 클라이언트 서브넷을 만드는 다음 Windows PowerShell 명령을 �
 
 자세한 내용은 참조 [DnsServerZoneScope 추가](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps)
 
-### <a name="bkmk_records2"></a>영역 범위에 레코드 추가
+### <a name="add-records-to-the-zone-scopes"></a><a name="bkmk_records2"></a>영역 범위에 레코드 추가
 
 이제 영역 범위에는 웹 서버 호스트를 나타내는 레코드를 추가 해야 합니다.
 
@@ -98,7 +98,7 @@ DNS 클라이언트 서브넷을 만드는 다음 Windows PowerShell 명령을 �
 
 자세한 내용은 참조 [추가 DnsServerResourceRecord](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps)합니다.
 
-### <a name="bkmk_policies2"></a>DNS 정책 만들기
+### <a name="create-the-dns-policies"></a><a name="bkmk_policies2"></a>DNS 정책 만들기
 
 파티션 (영역 범위)을 만들고 레코드를 추가한 후에는 이러한 범위 간에 들어오는 쿼리를 분산 하는 DNS 정책을 만들어야 합니다.
 

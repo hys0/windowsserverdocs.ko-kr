@@ -6,15 +6,15 @@ ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: get-started-article
 ms.assetid: 7f899e62-6e5b-4fca-9a59-130d4766ee2f
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 08/10/2018
-ms.openlocfilehash: 38d104bc3ceca478f0e261b3a364b5d4448b22f3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: a16d82e4db1e92a5dd20f6b4feb88f0619d50cc4
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406020"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80317518"
 ---
 # <a name="requirements-for-deploying-network-controller"></a>네트워크 컨트롤러 배포를 위한 요구 사항
 
@@ -61,7 +61,7 @@ ms.locfileid: "71406020"
 마지막으로, 다음에 수행할 작업은 동일한 서브넷 또는 다른 서브넷에 네트워크 컨트롤러 클러스터 노드를 배포 하는 것입니다. 
 
 
-|         해당하는 경우         |                                                                                                                                                         발생하는 결과                                                                                                                                                         |
+|         조건         |                                                                                                                                                         결과                                                                                                                                                         |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |  동일한 서브넷에서  |                                                                                                                                네트워크 컨트롤러 REST IP 주소를 제공 해야 합니다.                                                                                                                                 |
 | 다른 서브넷에서 | 배포 프로세스 중에 만든 네트워크 컨트롤러 REST DNS 이름을 제공 해야 합니다. 또한 다음을 수행 해야 합니다.<ul><li>DNS 서버에서 네트워크 컨트롤러 DNS 이름에 대 한 DNS 동적 업데이트를 구성 합니다.</li><li>DNS 동적 업데이트를 네트워크 컨트롤러 노드로만 제한 합니다.</li></ul> |
@@ -81,13 +81,13 @@ ms.locfileid: "71406020"
 
 2. 네트워크 컨트롤러 노드에 대 한 DNS 영역 보안 권한 구성
 
-   a.  클릭 하 고 **보안** 탭을 클릭 한 후 **고급**합니다. 
+   a.  **보안** 탭을 클릭하고 **고급**을 클릭합니다. 
 
    b. **고급 보안 설정**에서 **추가**를 클릭 합니다. 
 
    c. **보안 주체 선택**을 클릭합니다. 
 
-   d. **사용자, 컴퓨터, 서비스 계정 또는 그룹 선택** 대화 상자에서 **개체 유형**을 클릭 합니다. 
+   . **사용자, 컴퓨터, 서비스 계정 또는 그룹 선택** 대화 상자에서 **개체 유형**을 클릭 합니다. 
 
    e. **개체 유형**에서 **컴퓨터**를 선택 하 고 **확인**을 클릭 합니다.
 

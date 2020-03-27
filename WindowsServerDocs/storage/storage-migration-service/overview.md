@@ -4,16 +4,16 @@ description: Storage Migration Service를 사용 하면 저장소를 Windows Ser
 author: jasongerend
 ms.author: jgerend
 manager: elizapo
-ms.date: 01/17/2020
+ms.date: 03/26/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: 70ce4ebca35e071cf6e27fe429d3c4e6f67d342c
-ms.sourcegitcommit: 8b801bd86e2ddf8255899b11f547daa920e5f651
+ms.openlocfilehash: 0765c43333f23fb09c0f69ceca1ff21cfce25874
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80110676"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80310501"
 ---
 # <a name="storage-migration-service-overview"></a>Storage Migration Service 개요
 
@@ -21,7 +21,7 @@ ms.locfileid: "80110676"
 
 Storage Migration Service를 사용 하면 저장소를 Windows Server 또는 Azure로 쉽게 마이그레이션할 수 있습니다. Windows 및 Linux 서버에서 데이터를 인벤토리에 추가한 다음 최신 서버 또는 Azure virtual machines로 데이터를 전송 하는 그래픽 도구를 제공 합니다. Storage Migration Service는 앱 및 사용자가 링크나 경로를 변경 하지 않고도 데이터에 액세스할 수 있도록 대상 서버에 서버의 id를 전송 하는 옵션을 제공 합니다.
 
-이 항목에서는 저장소 마이그레이션 서비스를 사용 하려는 이유와 마이그레이션 프로세스의 작동 방식 및 원본 및 대상 서버에 대 한 요구 사항에 대해 설명 합니다.
+이 항목에서는 저장소 마이그레이션 서비스를 사용 하려는 이유, 마이그레이션 프로세스의 작동 방식, 원본 및 대상 서버에 대 한 요구 사항, [저장소 마이그레이션 서비스의 새로운 기능](#whats-new-in-storage-migration-service)등에 대해 설명 합니다.
 
 ## <a name="why-use-storage-migration-service"></a>저장소 마이그레이션 서비스를 사용 하는 이유
 
@@ -134,7 +134,12 @@ Orchestrator가 Windows Server, 버전 1903 이상을 실행 하거나 orchestra
 
 Windows 관리 센터 버전 1910을 사용 하 여 Azure 가상 컴퓨터를 배포할 수 있습니다. 이렇게 하면 VM 배포가 Storage Migration Service에 통합 됩니다. 워크 로드를 배포 하기 전에 직접 Azure Portal에서 새 서버 및 Vm을 구축 하는 대신, 필요한 단계 및 구성이 누락 될 수 있습니다. Windows 관리 센터에서 Azure VM을 배포 하 고, 저장소를 구성 하 고, 도메인에 가입 하 고, 역할을 설치 하 고, 그런 다음 분산 시스템을 설정 합니다. 
 
+   Storage Migration Service를 사용 하 여 Azure Vm으로 마이그레이션하는 방법을 보여 주는 비디오는 다음과 같습니다.
+   > [!VIDEO https://www.youtube-nocookie.com/embed/k8Z9LuVL0xQ] 
+
 ## <a name="whats-new-in-storage-migration-service"></a>저장소 마이그레이션 서비스의 새로운 기능
+
+Windows 관리 센터 버전 1910은 Azure virtual machines를 배포 하는 기능을 추가 합니다. Azure VM 배포를 Storage Migration Service에 통합 합니다. 자세한 내용은 [AZURE VM 마이그레이션](#azure-vm-migration)을 참조 하세요.
 
 Windows Server, 버전 1903 이상 또는 [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) 가 설치 된 이전 버전의 windows Server에서 Storage Migration Server orchestrator를 실행 하는 경우 다음과 같은 새로운 기능을 사용할 수 있습니다.
 

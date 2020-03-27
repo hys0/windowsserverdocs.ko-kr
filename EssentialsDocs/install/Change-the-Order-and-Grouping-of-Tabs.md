@@ -3,7 +3,7 @@ title: 탭 순서 및 그룹화 변경
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: 79a417fd-1b3e-47ab-ae33-bb1faf95c86d
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 578c5619cfdf076bb2735254494f393d56d35713
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: abb443994b413f35f6d70510191bc543fad418f5
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59887764"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80312232"
 ---
 # <a name="change-the-order-and-grouping-of-tabs"></a>탭 순서 및 그룹화 변경
 
@@ -30,7 +30,7 @@ ms.locfileid: "59887764"
   
 #### <a name="to-display-your-tab-first-in-the-list-of-tabs"></a>탭 목록에 사용자 탭을 제일 먼저 표시하려면  
   
-1.  참조 컴퓨터에서 **시작**을 클릭하고 **regedit**를 입력한 다음 **Enter**키를 누릅니다.  
+1.  참조 컴퓨터에서 **시작**을 클릭하고 **regedit**을 입력한 다음 **Enter** 키를 누릅니다.  
   
 2.  왼쪽 창에서 **HKEY_LOCAL_MACHINE**, **소프트웨어**, **Microsoft**, **Windows Server**를 차례로 확장합니다. **OEM** 키가 없으면 다음 단계를 수행하여 만들어야 합니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "59887764"
   
 5.  오른쪽 창에서 새 문자열을 마우스 오른쪽 단추로 클릭한 다음 **수정**을 클릭합니다.  
   
-6.  최상위 탭에 대해 정의된 GUID를 입력한 다음 **Enter**키를 누릅니다.  
+6.  최상위 탭에 대해 정의된 GUID를 입력한 다음 **Enter** 키를 누릅니다.  
   
      최상위 탭을 만들고 식별하는 방법에 대한 자세한 내용은 Windows Server Solutions SDK에서 [최상위 탭 만들기](https://msdn.microsoft.com/library/gg513957) 를 참조하세요.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "59887764"
 8.  레지스트리 변경 사항을 저장합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [만들기 및 이미지를 사용자 지정](Creating-and-Customizing-the-Image.md)   
+ [이미지  만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)  
  [추가 사용자 지정](Additional-Customizations.md)   
- [배포용 이미지 준비](Preparing-the-Image-for-Deployment.md)   
+ [배포할 이미지를 준비 하는 중](Preparing-the-Image-for-Deployment.md)   
  [사용자 환경 테스트](Testing-the-Customer-Experience.md)

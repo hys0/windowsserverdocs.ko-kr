@@ -10,14 +10,14 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 19a7a4a6-9a04-42ea-a5d0-ecb28a34dbaa
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: ea96a30caeedc188a5a41c097a5c8a90e2b5dbc7
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: dbeba9f1646cfb13d709cb4f7987802f69708adb
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71388206"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80314420"
 ---
 # <a name="step-2-configure-app1"></a>2 단계 APP1 구성
 
@@ -32,7 +32,7 @@ ms.locfileid: "71388206"
 > [!WARNING]  
 > 이 테스트 랩 가이드의 디자인에는 도메인 컨트롤러 및 Windows Server 2012 R2 또는 Windows Server 2012를 실행 하는 CA (인증 기관)와 같은 인프라 서버가 포함 되어 있습니다. 이 테스트 랩 가이드를 사용 하 여 다른 운영 체제를 실행 하는 인프라 서버를 구성 하는 것은 테스트 되지 않았으며 다른 운영 체제를 구성 하기 위한 지침은이 가이드에 포함 되어 있지 않습니다.  
   
-## <a name="DAOTPRA"></a>OTP 인증서 요청을 서명 하는 데 사용 되는 인증서 템플릿을 만들고 배포 하려면  
+## <a name="to-create-and-deploy-a-certificate-template-used-to-sign-otp-certificate-requests"></a><a name="DAOTPRA"></a>OTP 인증서 요청을 서명 하는 데 사용 되는 인증서 템플릿을 만들고 배포 하려면  
   
 1.  **Certtmpl**를 실행 한 다음 enter 키를 누릅니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "71388206"
   
 9. **확장** 탭을 클릭 하 고 **응용 프로그램 정책** 을 선택한 다음 **편집**을 클릭 합니다. 기존 응용 프로그램 정책을 모두 제거 합니다. **추가**를 클릭 하 고 **응용 프로그램 정책 추가** 대화 상자에서 **새로 만들기**를 클릭 하 고 **이름:** 필드에 **DA OTP RA** 를 입력 한 다음 **개체 식별자:** 필드에 **1.3.6.1.4.1.311.81.1.1** 를 입력 하 고 **확인**을 클릭 합니다. **응용 프로그램 정책 추가** 대화 상자에서 **확인**을 클릭 합니다. **응용 프로그램 정책 확장 편집**에서 **확인**을 클릭 합니다. **새 템플릿의 속성** 대화 상자에서 **확인**을 클릭 합니다.  
   
-## <a name="DAOTPLogon"></a>회사 CA에서 발급 한 OTP 인증서용 인증서 템플릿을 만들고 배포 하려면  
+## <a name="to-create-and-deploy-a-certificate-template-for-otp-certificates-issued-by-the-corporate-ca"></a><a name="DAOTPLogon"></a>회사 CA에서 발급 한 OTP 인증서용 인증서 템플릿을 만들고 배포 하려면  
   
 1.  인증서 템플릿 콘솔의 세부 정보 창에서 **스마트 카드 로그온** 템플릿을 마우스 오른쪽 단추로 클릭 하 고 **중복 된 템플릿**을 클릭 합니다.  
   
@@ -65,13 +65,13 @@ ms.locfileid: "71388206"
     > [!IMPORTANT]  
     > **Windows Server 2003 CA**. CA (인증 기관)가 Windows Server 2003를 실행 하는 컴퓨터에 있는 경우 다른 컴퓨터에 인증서 템플릿을 구성 해야 합니다. Windows Server 2008 및 Windows Vista 이전 버전을 실행 하는 경우에는 **유효 기간** 을 시간으로 설정 하지 못할 수 있으므로이 작업을 수행 해야 합니다. 템플릿을 구성 하는 데 사용 하는 컴퓨터에 Active Directory 인증서 서비스 서버 역할이 설치 되어 있지 않거나 클라이언트 컴퓨터인 경우 인증서 템플릿 스냅인을 설치 해야 할 수 있습니다. 자세한 내용은 [인증서 템플릿 스냅인 설치](https://technet.microsoft.com/library/cc732445.aspx)를 참조 하세요.  
     >   
-    > **Windows Server 2008 R2 CA**. Windows Server 2008 r 2를 실행 하는 CA (인증 기관)를 이미 배포한 경우 인증서 템플릿 **갱신 기간** 을 1 ~ 2 시간으로 구성 하 고 **유효 기간** 을 **갱신 기간**보다 길게 설정 해야 합니다. 4 시간 이내입니다. Windows Server 2008 r 2를 실행 하는 CA를 사용 하 여 인증서 템플릿 **유효 기간** 을 4 시간 이상으로 구성 하면 directaccess 설치 마법사에서 인증서 템플릿을 검색할 수 없으며 directaccess 설치가 실패 합니다.  
+    > **Windows Server 2008 R2 CA**. Windows Server 2008 r 2를 실행 하는 CA (인증 기관)를 이미 배포한 경우에는 인증서 템플릿 **갱신 기간** 을 1 ~ 2 시간으로 구성 해야 하 고 **유효 기간은** **갱신 기간**보다 길면 4 시간 이상 이어야 합니다. Windows Server 2008 r 2를 실행 하는 CA를 사용 하 여 인증서 템플릿 **유효 기간** 을 4 시간 이상으로 구성 하면 directaccess 설치 마법사에서 인증서 템플릿을 검색할 수 없으며 directaccess 설치가 실패 합니다.  
   
 5.  **보안** 탭을 클릭 하 고, **허용** 열에서 **인증 된 사용자**를 선택 하 고, **읽기** 및 **등록** 확인란을 선택 합니다. **확인**을 클릭합니다. **Domain admins** 및 **Enterprise admins**를 클릭 하 고 모두 **허용** 열에서 **모든 권한** 을 클릭 합니다. **적용**을 클릭합니다.  
   
 6.  **주체 이름** 탭을 클릭 한 다음 **이 Active Directory 정보에서 빌드**를 클릭 합니다. **주체 이름 형식:** 목록에서 완전 한 **고유 이름**을 선택 하 고 **UPN (사용자 계정 이름)** 확인란이 선택 되어 있는지 확인 한 다음 **적용**을 클릭 합니다.  
   
-7.  **서버** 탭을 클릭 하 고, **CA 데이터베이스에 인증서 및 요청 저장 안 함** 확인란을 선택 하 고, **발급 된 인증서에 해지 정보를 포함 하지** 않음 확인란의 선택을 취소 한 다음 **새 템플릿의 속성** 을 선택 합니다. 대화 상자에서 **적용**을 클릭 합니다.  
+7.  **서버** 탭을 클릭 하 고, **CA 데이터베이스에 인증서 및 요청 저장 안 함** 확인란을 선택 하 고, **발급 된 인증서에 해지 정보를 포함 하지** 않음 확인란의 선택을 취소 한 다음 **새 템플릿의 속성** 대화 상자에서 **적용**을 클릭 합니다.  
   
 8.  **발급 요구 사항** 탭을 클릭 하 고 **다음 개수의 권한 있는 서명:** 확인란을 선택 하 고 값을 1로 설정 합니다. **서명: 목록에 필요한 정책 형식** 에서 **응용 프로그램 정책**을 선택 하 고 **응용 프로그램 정책** 목록에서 **DA OTP RA**를 선택 합니다. **새 템플릿의 속성** 대화 상자에서 **확인**을 클릭 합니다.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "71388206"
   
 13. 인증서 템플릿 목록에서 **DAOTPRA** and **DAOTPLogon**를 클릭 하 고 **확인**을 클릭 합니다.  
   
-14. 콘솔의 세부 정보 창에 **DA OTP RA** **의 용도를 가진** **DAOTPRA** 인증서 템플릿 및 **스마트 카드 로그온** **용도** 에 해당 하는 **DAOTPLogon** 인증서 템플릿이 표시 됩니다. .  
+14. 콘솔의 세부 정보 **Intended Purpose** 창에 **DA OTP RA** 의 용도 및 **스마트 카드 로그온**용도 **를** 가진 **DAOTPLogon** 인증서 템플릿의 **DAOTPRA** 인증서 템플릿이 표시 됩니다.  
   
 15. 서비스를 다시 시작 합니다.  
   

@@ -3,7 +3,7 @@ title: Windows Server Essentials 마이그레이션을 위해 대상 서버에 W
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: 3ff7d040-ebd1-421c-80db-765deacedd4c
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 3d9e662a6474823cae42d0a2abec60963273ca18
-ms.sourcegitcommit: 9a4ab3a0d00b06ff16173aed616624c857589459
+ms.openlocfilehash: 61a5caee1aba9de5f60bf0723ee0dadaf4871e5e
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66828547"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318841"
 ---
 # <a name="move-windows-server-2008-foundation-settings-and-data-to-the-destination-server-for-windows-server-essentials-migration"></a>Windows Server Essentials 마이그레이션을 위해 대상 서버에 Windows Server 2008 Foundation 설정 및 데이터 이동
 
@@ -25,15 +25,15 @@ ms.locfileid: "66828547"
 
 다음과 같이 설정 및 데이터를 대상 서버로 이동합니다.
 
-1. [(선택 사항) 대상 서버에 데이터 복사](#copy-data-to-the-destination-server)
+1. [대상 서버에 데이터 복사 (선택 사항)](#copy-data-to-the-destination-server)
 
-2. [(선택 사항) Windows Server Essentials 대시보드에 Active Directory 사용자 계정 가져오기](#import-active-directory-user-accounts-to-the-windows-server-essentials-dashboard)
+2. [사용자 계정 Active Directory Windows Server Essentials 대시보드로 가져오기 (선택 사항)](#import-active-directory-user-accounts-to-the-windows-server-essentials-dashboard)
 
-3. [원본 서버에서 DHCP 서버 역할을 라우터로 이동](#move-the-dhcp-server-role-from-the-source-server-to-the-router)
+3. [원본 서버에서 라우터로 DHCP 서버 역할 이동](#move-the-dhcp-server-role-from-the-source-server-to-the-router)
 
 4. [네트워크 구성](#configure-the-network) 
 
-5. [사용자 계정에 허용 되는 컴퓨터 매핑](#map-permitted-computers-to-user-accounts)
+5. [허용 된 컴퓨터를 사용자 계정에 매핑](#map-permitted-computers-to-user-accounts)
   
 ## <a name="copy-data-to-the-destination-server"></a>대상 서버에 데이터 복사
  원본 서버에서 대상 서버로 데이터를 복사하기 전에 다음 작업을 수행합니다.  
@@ -48,22 +48,22 @@ ms.locfileid: "66828547"
   
 1.  도메인 관리자로 대상 서버에 로그온하고 명령 창을 엽니다.  
   
-2.  명령 프롬프트에서 다음 명령을 입력하고 Enter 키를 누릅니다.  
+2.  명령 프롬프트에서 다음 명령을 입력한 다음 Enter 키를 누릅니다.  
   
     `robocopy \\<SourceServerName> \<SharedSourceFolderName> \\<DestinationServerName> \<SharedDestinationFolderName> /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt`  
   
      각 항목이 나타내는 의미는 다음과 같습니다.
-     - \<SourceServerName\> 원본 서버의 이름
-     - \<SharedSourceFolderName\> 원본 서버의 공유 폴더의 이름
-     - \<DestinationServerName\> 대상 서버의 이름
-     - \<SharedDestinationFolderName\> 데이터를 복사할 대상 서버의 공유 폴더입니다.  
+     - \<SourceServerName\>은 원본 서버의 이름입니다.
+     - \<SharedSourceFolderName\>은 원본 서버의 공유 폴더 이름입니다.
+     - DestinationServerName\> \<대상 서버의 이름입니다.
+     - \<SharedDestinationFolderName\>는 데이터가 복사 될 대상 서버의 공유 폴더입니다.  
   
 3.  원본 서버에서 마이그레이션할 각 공유 폴더에 대해 이전 단계를 반복합니다.  
   
-## <a name="import-active-directory-user-accounts-to-the-windows-server-essentials-dashboard"></a>Windows Server Essentials 대시보드에 Active Directory 사용자 계정 가져오기
+## <a name="import-active-directory-user-accounts-to-the-windows-server-essentials-dashboard"></a>Windows Server Essentials 대시보드로 사용자 계정 Active Directory 가져오기
  기본적으로 원본 서버에서 만든 모든 사용자 계정은 Windows Server Essentials의 대시보드로 자동으로 마이그레이션됩니다. 그러나 일부 속성이 마이그레이션 요구 사항을 충족하지 않으면 Active Directory 사용자 계정의 자동 마이그레이션이 실패합니다. 다음 Windows PowerShell cmdlet을 사용하여 Active Directory 사용자를 가져올 수 있습니다.  
   
-#### <a name="to-import-an-active-directory-user-account-to-the-windows-server-essentials-dashboard"></a>Active Directory 사용자 계정을 Windows Server Essentials 대시보드를 가져오려면
+#### <a name="to-import-an-active-directory-user-account-to-the-windows-server-essentials-dashboard"></a>Windows Server Essentials 대시보드에 Active Directory 사용자 계정을 가져오려면
   
 1.  도메인 관리자로 대상 서버에 로그온합니다.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "66828547"
 -   포트 443: HTTPS 웹 트래픽  
   
 ## <a name="map-permitted-computers-to-user-accounts"></a>허용되는 컴퓨터를 사용자 계정에 매핑  
- Windows Server Essentials에서 사용자 원격 웹 액세스에 표시할 컴퓨터를 명시적으로 할당 되어야 합니다. Windows Server 2008 Foundation에서 마이그레이션된 각 사용자 계정을 하나 이상의 컴퓨터에 매핑해야 합니다.  
+ Windows Server Essentials에서는 사용자가 원격 웹 액세스에 표시 되기 위해 컴퓨터에 명시적으로 할당 되어야 합니다. Windows Server 2008 Foundation에서 마이그레이션된 각 사용자 계정을 하나 이상의 컴퓨터에 매핑해야 합니다.  
   
 #### <a name="to-map-user-accounts-to-computers"></a>사용자 계정을 컴퓨터에 매핑하려면  
   

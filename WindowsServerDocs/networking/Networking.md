@@ -7,20 +7,20 @@ ms.technology: networking
 ms.topic: landing-page
 ms.assetid: daaf6b61-5953-4c2d-b6b8-7c885b552646
 manager: dougkim
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.localizationpriority: medium
-ms.openlocfilehash: f3b580b108677b391065ad83f61e52504fe9ac91
-ms.sourcegitcommit: 68483ee9284285f5643dd67dce06f5a102cb9469
+ms.openlocfilehash: e625bb537ef514ff68241669c3e75f482a61f068
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74823842"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318574"
 ---
 # <a name="networking"></a>네트워킹
 
 >[!TIP]
-> 이전 버전의 Windows Server에 대한 정보를 찾으시나요? docs.microsoft.com에서 다른 [Windows Server 라이브러리](/previous-versions/windows/)를 확인하세요. [이 사이트에서 특정 정보를 검색](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions)할 수도 있습니다.
+> 이전 버전의 Windows Server에 대한 자세한 내용이 궁금하십니까? docs.microsoft.com에서 다른 [Windows Server 라이브러리](/previous-versions/windows/)를 확인하세요. [이 사이트에서 특정 정보를 검색](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions)할 수도 있습니다.
 
 <hr />
 
@@ -53,7 +53,7 @@ ms.locfileid: "74823842"
 
 <hr />
 
-<h2>소프트웨어 정의 네트워킹</h2>
+<h2>소프트웨어 방식 네트워킹</h2>
 
 <ul class="cardsF panelContent">
     <li>
@@ -68,7 +68,7 @@ ms.locfileid: "74823842"
                     <div class="cardText">
                         <h3><a href="https://docs.microsoft.com/windows-server/networking/sdn/">SDN(소프트웨어 정의 네트워킹)</a></h3>
                         <hr />
-                        <p>이 항목을 사용하여 Windows Server, System Center 및 Microsoft Azure에서 제공되는 SDN 기술에 대해 자세히 알아볼 수 있습니다.</p>
+                        <p>Windows Server, System Center 및 Microsoft Azure에서 제공 되는 SDN 기술에 대해 자세히 알아보려면이 항목을 사용할 수 있습니다.</p>
                         <p><b>참고:</b> 네트워크 컨트롤러 및 소프트웨어 부하 분산 노드와 같이 SDN 인프라 서버를 실행 하는 Hyper-v 호스트 및 Vm (가상 머신)의 경우 Windows Server Datacenter edition을 설치 해야 합니다. SDN 제어 네트워크에 연결 된 테 넌 트 워크 로드 Vm만 포함 하는 Hyper-v 호스트의 경우 Windows Server Standard edition을 실행할 수 있습니다.</p>
                     </div>
                 </div>
@@ -183,7 +183,7 @@ ms.locfileid: "74823842"
                     <div class="cardText">
                         <h3><a href="sdn/technologies/network-function-virtualization/Datacenter-Firewall-Overview.md">데이터 센터 방화벽 개요</a></h3>
                         <hr />
-                        <p>데이터 센터 방화벽은 네트워크 계층, 5 개 튜플(프로토콜, 원본 및 대상 포트 번호, 원본 및 대상 IP 주소) 상태 저장, 다중 테넌트 방화벽입니다.</p>
+                        <p>데이터 센터 방화벽은 네트워크 계층, 5 개 튜플 (프로토콜, 원본 및 대상 포트 번호, 원본 및 대상 IP 주소) 상태 저장, 다중 테 넌 트 방화벽입니다.</p>
                     </div>
                 </div>
             </div>
@@ -193,7 +193,7 @@ ms.locfileid: "74823842"
 
 <hr />
 
-## <a name="bkmk_networking"></a>네트워킹 기술
+## <a name="networking-technologies"></a><a name="bkmk_networking"></a>네트워킹 기술
 
 <ul class="cardsF panelContent">
     <li>
@@ -208,7 +208,7 @@ ms.locfileid: "74823842"
                     <div class="cardText">
                         <h3><a href="branchcache/BranchCache.md">BranchCache</a></h3>
                         <hr />
-                        <p>BranchCache는 WAN(광역 네트워크) 대역폭 최적화 기술입니다. 사용자가 원격 서버의 콘텐츠에 액세스할 때 WAN 대역폭을 최적화하기 위해 BranchCache는 본사 또는 호스팅된 클라우드 콘텐츠 서버에서 콘텐츠를 가져와서 지점 사무실의 캐시에 해당 콘텐츠를 저장하기 때문에 지점 사무실의 클라이언트 컴퓨터가 WAN을 통해서가 아니라 로컬로 콘텐츠에 액세스할 수 있습니다.</p>
+                        <p>BranchCache는 WAN(광역 네트워크) 대역폭 최적화 기술입니다. 파일을 사용자가 원격 서버의 콘텐츠에 액세스할 때 WAN 대역폭을 최적화 하려면 BranchCache 본사에서 콘텐츠를 가져오며 또는 호스트 된 클라우드 콘텐츠 서버 및 캐시 지점 사무실 위치에서 콘텐츠를 클라이언트 컴퓨터는 WAN을 통해이 아닌 로컬 콘텐츠를 액세스 하는 지사 사무소에 허용 합니다.</p>
                     </div>
                 </div>
             </div>
@@ -462,7 +462,7 @@ ms.locfileid: "74823842"
                     <div class="cardText">
                         <h3><a href="technologies/nic-teaming/NIC-Teaming.md">NIC 팀</a></h3>
                         <hr />
-                        <p>NIC 팀 기능을 사용하면 실제 이더넷 네트워크 어댑터를 하나 이상의 소프트웨어 기반 가상 네트워크 어댑터로 그룹화할 수 있습니다. 이러한 가상 네트워크 어댑터는 빠른 성능과 네트워크 어댑터 오류 발생 시 내결함성을 제공합니다.</p>
+                        <p>NIC 팀 하나 이상의 소프트웨어 기반 가상 네트워크 어댑터에 실제 이더넷 네트워크 어댑터를 그룹화 할 수 있습니다. 이 가상 네트워크 어댑터에는 빠른 성능과 네트워크 어댑터 오류 발생 시 내결함성을 제공합니다.</p>
                     </div>
                 </div>
             </div>
@@ -572,7 +572,7 @@ ms.locfileid: "74823842"
 
 ## <a name="additional-resources"></a>추가 리소스
 
-Windows Server 2016 이전 버전의 운영 체제를 위한 네트워킹 리소스는 다음 위치에서 사용할 수 있습니다.
+네트워킹 리소스는 다음 위치에서 사용할 수 있는 Windows Server 2016 보다 이전의 운영 체제.
 
 - Windows Server 2012 및 Windows Server 2012 R2 [네트워킹 개요](https://technet.microsoft.com/library/hh831357.aspx)
 - Windows Server 2008 및 Windows Server 2008 R2 [네트워킹](https://technet.microsoft.com/library/cc753940)

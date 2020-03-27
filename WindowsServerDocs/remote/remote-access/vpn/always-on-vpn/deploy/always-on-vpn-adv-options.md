@@ -6,16 +6,16 @@ ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.date: 07/24/2019
-ms.author: pashort, v-tea
-author: shortpatti
+ms.author: lizross, v-tea
+author: eross-msft
 ms.localizationpriority: medium
 ms.reviewer: deverette
-ms.openlocfilehash: 73d64cd143b7bbd13e0eb9bb5fadfbb1e7c65416
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: 30a8e3053f263ffad3be940a52e845fb7159dde1
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79322545"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80313292"
 ---
 # <a name="advanced-features-of-always-on-vpn"></a>Always On VPN의 고급 기능
 
@@ -67,7 +67,7 @@ ms.locfileid: "79322545"
 |운영 체제 버전 |릴리스  |
 |---------|---------|
 |Windows Server, 버전 1903  |[KB4501375](https://support.microsoft.com/help/4501375/windows-10-update-kb4501375) |
-|Windows Server 2019<br />Windows Server, 버전 1809  |[KB4505658](https://support.microsoft.com/help/4505658/windows-10-update-kb4505658)  |
+|시작<br />Windows Server, 버전 1809  |[KB4505658](https://support.microsoft.com/help/4505658/windows-10-update-kb4505658)  |
 |Windows Server, 버전 1803  |[KB4507466](https://support.microsoft.com/help/4507466/windows-10-update-kb4507466)  |
 |Windows Server, 버전 1709  |[KB4507465](https://support.microsoft.com/help/4507465/windows-10-update-kb4507465)  |
 |Windows Server 2016, 버전 1607  |[KB4503294](https://support.microsoft.com/help/4503294/windows-10-update-kb4503294) |
@@ -161,6 +161,6 @@ Windows 10의 TPM 키 증명에 대 한 자세한 내용은 [Tpm 키 증명](htt
 
 - [Vpn 자동 트리거 프로필 옵션](https://docs.microsoft.com/windows/access-protection/vpn/vpn-auto-trigger-profile):이 항목에서는 앱 트리거, 이름 기반 트리거 및 ALWAYS ON 같은 vpn 자동 트리거 프로필 옵션을 제공 합니다.
 
-- [VPN 및 조건부 액세스](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access):이 항목에서는 원격 클라이언트에 대 한 장치 준수 옵션을 제공 하기 위한 클라우드 기반 조건부 액세스 플랫폼의 개요를 제공 합니다. 조건부 액세스는 Azure AD(Azure Active Directory)에 연결된 응용 프로그램에 대한 액세스 규칙을 만드는 데 사용되는 정책 기반 평가 엔진입니다. 
+- [VPN 및 조건부 액세스](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access):이 항목에서는 원격 클라이언트에 대 한 장치 준수 옵션을 제공 하기 위한 클라우드 기반 조건부 액세스 플랫폼의 개요를 제공 합니다. 조건부 액세스는 Azure AD(Azure Active Directory)에 연결된 애플리케이션에 대한 액세스 규칙을 만드는 데 사용되는 정책 기반 평가 엔진입니다. 
 
 - [Tpm 키 증명](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/component-updates/tpm-key-attestation):이 항목에서는 tpm (신뢰할 수 있는 플랫폼 모듈)에 대 한 개요와 tpm 키 증명을 배포 하는 단계를 제공 합니다. 문제 해결 정보 및 문제를 해결 하는 단계를 찾을 수도 있습니다.

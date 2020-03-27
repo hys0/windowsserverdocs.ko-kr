@@ -6,15 +6,15 @@ ms.prod: windows-server
 ms.technology: networking-hv-switch
 ms.topic: get-started-article
 ms.assetid: 378213f5-2d59-4c9b-9607-1fc83f8072f1
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 08/08/2018
-ms.openlocfilehash: 40150e312f4776ec093c9230eedb646eec277f49
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e68da9be84e9567458467c9ebd89155e7c405c5c
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405804"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80312820"
 ---
 # <a name="configure-encryption-for-a-virtual-subnet"></a>가상 서브넷에 대 한 암호화 구성
 
@@ -118,7 +118,7 @@ Virtual network 암호화를 사용 하면 ' 암호화 사용 '으로 표시 된
 
 3. 각 hyper-v 호스트에 인증서를 설치 합니다. 
 
-   PS c:\> dir C:\$subjectname. *
+   PS C:\> dir C:\$subjectname *
 
 
 ~~~

@@ -3,7 +3,7 @@ title: Windows Server Essentials 사용(영문)
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: 86f158a5-c807-4242-b73d-e97b604adb5f
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 7b440215d7ddf2c9119ee4adb8f1c98c7ea1bb34
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 830570565d865861af404954031723451ec794bd
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59822604"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80313111"
 ---
 # <a name="use-windows-server-essentials"></a>Windows Server Essentials 사용(영문)
 
@@ -29,11 +29,11 @@ ms.locfileid: "59822604"
   
 -   [공유 폴더 사용](Use-Shared-Folders-in-Windows-Server-Essentials.md)  
   
--   [원격 작업](Work-Remotely-in-Windows-Server-Essentials.md)  
+-   [원격으로 작업](Work-Remotely-in-Windows-Server-Essentials.md)  
   
 -   [디지털 미디어 재생](Play-Digital-Media-in-Windows-Server-Essentials.md)  
   
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
   
 -   [Windows Server Essentials 설치](../install/Install-Windows-Server-Essentials.md)  
   

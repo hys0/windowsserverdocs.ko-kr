@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: a9ee7a56-f062-474f-a61c-9387ff260929
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 6a7836160fc7363ec3d7b2fb11e194db82970f9a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: f9bc1a35016ca5946eddeada2088a83f1fa8ca05
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406161"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80317758"
 ---
 # <a name="use-dns-policy-for-geo-location-based-traffic-management-with-primary-secondary-deployments"></a>주-보조 배포를 사용한 지리적 위치 기반 트래픽 관리에 DNS 정책 사용
 
@@ -37,7 +37,7 @@ Woodgrove.com 고객 웹 사이트에서 응답성이 뛰어난 환경을 얻을
   
 Contoso 클라우드 서비스에서 미국 및 유럽, Contoso는 해당 식료품 woodgrove.com에 대 한 포털 주문를 호스트에서 다른 두 데이터 센터를 있습니다.  
   
-Contoso DNS 배포에는 두 개의 보조 서버가 포함 됩니다. IP 주소가 10.0.0.2 인 **SecondaryServer1** IP 주소가 10.0.0.3 인 and **SecondaryServer2**. 이러한 보조 서버 역할을 하는 이름 서버는 두 개의 서로 다른 지역에서 유럽과 미국에 있는 SecondaryServer2에 SecondaryServer1와
+두 명의 보조 서버를 포함 하는 Contoso DNS 배포: **SecondaryServer1**, IP 주소가 10.0.0.2; 및 **SecondaryServer2**, ip 주소 10.0.0.3 합니다. 이러한 보조 서버 역할을 하는 이름 서버는 두 개의 서로 다른 지역에서 유럽과 미국에 있는 SecondaryServer2에 SecondaryServer1와
   
 쓰기 가능한 영역의 주 복사본에 없는 **PrimaryServer** (IP 주소 10.0.0.1) 여기서 영역 변경 합니다. 보조 서버에 일반 영역 전송 보조 서버는 항상 최신는 PrimaryServer에 영역에 새 변경 사항입니다.
   

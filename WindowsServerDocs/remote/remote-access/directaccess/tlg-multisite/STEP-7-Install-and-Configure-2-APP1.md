@@ -10,14 +10,14 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1cc0abc6-be4d-4cbe-bd0c-cc448bf294f6
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: c5a316e1230692fb800c088d752c26ec4a0f3349
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: fddffbc2954ef7f0687fc7865ec295295b32983a
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71388256"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80314527"
 ---
 # <a name="step-7-install-and-configure-2-app1"></a>7 단계 2-APP1 설치 및 구성
 
@@ -35,7 +35,7 @@ ms.locfileid: "71388256"
   
 - 2-APP1에서 공유 폴더 만들기 
   
-## <a name="bkmk_InstallOS"></a>2-APP1에 운영 체제 설치  
+## <a name="install-the-operating-system-on-2-app1"></a><a name="bkmk_InstallOS"></a>2-APP1에 운영 체제 설치  
 먼저 Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012를 설치 합니다.  
   
 #### <a name="to-install-the-operating-system-on-2-app1"></a>2-APP1에 운영 체제를 설치 하려면  
@@ -48,7 +48,7 @@ ms.locfileid: "71388256"
   
 4.  2-APP1을 2-Corpnet 서브넷에 연결 합니다.  
   
-## <a name="bkmk_TCP"></a>TCP/IP 속성 구성  
+## <a name="configure-tcpip-properties"></a><a name="bkmk_TCP"></a>TCP/IP 속성 구성  
 2-APP1에서 TCP/IP 속성을 구성 합니다.  
   
 #### <a name="to-configure-tcpip-properties"></a>TCP/IP 속성을 구성하려면  
@@ -63,7 +63,7 @@ ms.locfileid: "71388256"
   
 5.  **다음 DNS 서버 주소 사용**을 클릭합니다. **기본 설정 DNS 서버**에 **10.2.0.1**를 입력 합니다.  
   
-6.  **고급**을 클릭하고 **DNS** 탭을 클릭합니다. **이 연결에 대 한 DNS 접미사**에 **corp2.corp.contoso.com**를 입력 하 고 **확인** 을 두 번 클릭 합니다.  
+6.  **고급**을 클릭 한 다음 **DNS** 탭을 클릭 합니다. **이 연결에 대 한 DNS 접미사**에 **corp2.corp.contoso.com**를 입력 하 고 **확인** 을 두 번 클릭 합니다.  
   
 7.  **인터넷 프로토콜 버전 6(TCP/IPv6)** , **속성**을 차례로 클릭합니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "71388256"
   
 12. **네트워크 연결** 창을 닫습니다.  
   
-## <a name="bkmk_JoinDomain"></a>조인 2-APP1 to the CORP2 domain  
+## <a name="join-2-app1-to-the-corp2-domain"></a><a name="bkmk_JoinDomain"></a>조인 2-APP1 to the CORP2 domain  
 2-APP1을 corp2.corp.contoso.com 도메인에 가입 시킵니다.  
   
 #### <a name="to-join-2-app1-to-the-corp2-domain"></a>APP1을 CORP2 도메인에 가입 시키려면  
@@ -100,7 +100,7 @@ ms.locfileid: "71388256"
   
 9. 컴퓨터가 다시 시작 되 면 **사용자 전환**을 클릭 한 다음 **기타 사용자** 를 클릭 하 고 관리자 계정을 사용 하 여 CORP2 도메인에 로그온 합니다.  
   
-## <a name="bkmk_IIS"></a>2-APP1에 웹 서버 (IIS) 역할을 설치 합니다.  
+## <a name="install-the-web-server-iis-role-on-2-app1"></a><a name="bkmk_IIS"></a>2-APP1에 웹 서버 (IIS) 역할을 설치 합니다.  
 웹 서버를 2 APP1 설정 하려면 웹 서버 (IIS) 역할을 설치 합니다.  
   
 #### <a name="to-install-the-web-server-iis-role"></a>웹 서버 (IIS) 역할을 설치 하려면  
@@ -115,7 +115,7 @@ ms.locfileid: "71388256"
   
 5.  설치가 완료 되었는지 확인 하 고 **닫기**를 클릭 합니다.  
   
-## <a name="bkmk_Share"></a>2-APP1에서 공유 폴더 만들기  
+## <a name="create-a-shared-folder-on-2-app1"></a><a name="bkmk_Share"></a>2-APP1에서 공유 폴더 만들기  
 APP1의 폴더 내에 공유 폴더와 텍스트 파일을 만듭니다.  
   
 #### <a name="to-create-a-shared-folder"></a>공유 폴더를 만들려면  

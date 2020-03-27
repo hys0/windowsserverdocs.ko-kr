@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: f62c6a67-4dda-47f8-8bdf-9b76c37953e6
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: d62beb3106141d4683c957020bc96e4a7dfb306f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 7b42dd9470b44b0f1c7d25627d491cd6f2a2dfae
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405472"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80316289"
 ---
 # <a name="configure-connection-request-policies"></a>연결 요청 정책 구성
 
@@ -35,7 +35,7 @@ NPS가 RADIUS 서버 역할을 하 고, 연결 요청을 로컬로 처리 하 �
 
 ## <a name="add-a-connection-request-policy"></a>연결 요청 정책 추가
 
-**Domain Admins**의 구성원이거나 이에 준하는 자격이 있어야 이 절차를 완료할 수 있습니다.
+이 절차를 완료하려면 적어도 **Domain Admins** 그룹 구성원이거나 이에 해당하는 권한이 있어야 합니다.
 
 ### <a name="to-add-a-new-connection-request-policy"></a>새 연결 요청 정책을 추가 하려면 
 

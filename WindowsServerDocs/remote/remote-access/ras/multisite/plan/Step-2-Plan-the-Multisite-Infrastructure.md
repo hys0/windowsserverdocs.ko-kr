@@ -10,21 +10,21 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 64c10107-cb03-41f3-92c6-ac249966f574
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: ff8a58aa679691132d074ef52b876cea05366ab5
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 6e23c3c3d22509af46b1a1741b545a787be00bfc
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71367098"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80313887"
 ---
 # <a name="step-2-plan-the-multisite-infrastructure"></a>2 단계 계획 멀티 사이트 인프라
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 
 원격 액세스 멀티 사이트 토폴로지에 배포 하는 다음 단계는; 멀티 사이트 인프라 계획을 완료 하는 것 포함 하 여 Active Directory 보안 그룹, 그룹 정책 개체입니다.  
-## <a name="bkmk_2_1_AD"></a>2.1 계획 Active Directory  
+## <a name="21-plan-active-directory"></a><a name="bkmk_2_1_AD"></a>2.1 계획 Active Directory  
 다양 한 토폴로지는 원격 액세스 멀티 사이트 배포를 구성할 수 있습니다.  
   
 -   **단일 Active Directory 사이트, 여러 진입점**-이 토폴로지에서 단일 Active Directory 사이트, 사이트 전체에 걸쳐 고속 인트라넷 링크와 함께 전체 조직에 대해 있지만 각 역할 진입점을 조직 전체에 걸쳐 배포 하는 여러 원격 액세스 서버가 있는 합니다. 이 토폴로지는 지리적 예는 미국 동부 및 서 부 해안 진입점에 대 한 단일 Active Directory 사이트를 것입니다.  
@@ -50,22 +50,22 @@ ms.locfileid: "71367098"
   
 5.  클라이언트 Gpo 및 선택적 응용 프로그램 서버 Gpo는 주 도메인 컨트롤러 (PDC) 에뮬레이터와 실행 중인 도메인 컨트롤러에서 관리 됩니다. 즉, Gpo 반드시 진입점을 포함 하는 Active Directory 사이트에 관리 되지 않는 클라이언트는 클라이언트에 연결 합니다.  
   
-6.  Active Directory 사이트에 대 한 도메인 컨트롤러에 연결할 수 없는 경우 원격 액세스 서버 (있는 경우)는 사이트의 다른 도메인 컨트롤러에 연결 됩니다. 그렇지 않으면 다른 사이트는 업데이트 된 GPO를 검색 하 고 클라이언트를 인증 하는 도메인 컨트롤러에 연결 합니다. 두 경우 모두 원격 액세스 관리 콘솔 및 PowerShell cmdlet를 검색 하거나 구성 설정을 수정 하 여 도메인 컨트롤러를 사용할 때까지 사용할 수 없습니다. 다음에 유의하세요.  
+6.  Active Directory 사이트에 대 한 도메인 컨트롤러에 연결할 수 없는 경우 원격 액세스 서버 (있는 경우)는 사이트의 다른 도메인 컨트롤러에 연결 됩니다. 그렇지 않으면 다른 사이트는 업데이트 된 GPO를 검색 하 고 클라이언트를 인증 하는 도메인 컨트롤러에 연결 합니다. 두 경우 모두 원격 액세스 관리 콘솔 및 PowerShell cmdlet를 검색 하거나 구성 설정을 수정 하 여 도메인 컨트롤러를 사용할 때까지 사용할 수 없습니다. 유의 사항은 다음과 같습니다.  
   
     1.  PDC 에뮬레이터 역할을 실행 하는 서버에 사용할 수 없는 경우이 Gpo는 PDC 에뮬레이터 역할을 업데이트 하는 사용 가능한 도메인 컨트롤러를 지정 해야 합니다.  
   
     2.  서버 GPO를 관리 하는 도메인 컨트롤러를 사용할 수 없는 경우 새 도메인 컨트롤러를 진입점에 연결할 Set-daentrypointdc PowerShell cmdlet을 사용 합니다. 새 도메인 컨트롤러에는 cmdlet을 실행 하기 전에 최신 Gpo 있어야 합니다.  
   
-## <a name="bkmk_2_2_SG"></a>2.2 보안 그룹 계획  
+## <a name="22-plan-security-groups"></a><a name="bkmk_2_2_SG"></a>2.2 보안 그룹 계획  
 고급 설정으로는 단일 서버 배포 하는 동안 DirectAccess 통해 내부 네트워크에 액세스 하는 모든 클라이언트 컴퓨터 보안 그룹으로 수집 되었습니다. 멀티 사이트 배포에서는이 보안 그룹은 Windows 8 클라이언트 컴퓨터에 사용 됩니다. 멀티 사이트 배포에 대 한 Windows 7 클라이언트 컴퓨터에서 멀티 사이트 배포의 각 진입점에 대 한 별도 보안 그룹으로 수집 됩니다. 예를 들어 이전에 DA_Clients 그룹의 모든 클라이언트 컴퓨터를 그룹화 하면 이제 해당 그룹에서 모든 Windows 7 컴퓨터를 제거 하며 다른 보안 그룹에 배치 합니다. 예를 들어, 여러 Active Directory 사이트의 여러 진입점 토폴로지에서는 미국 진입점 (DA_Clients_US)에 대 한 보안 그룹 및 유럽 진입점 (DA_Clients_Europe)에 대 한 하나 만듭니다. DA_Clients_US 그룹에서 위해서 및 DA_Clients_Europe 그룹에서에 있는 모든 유럽에 있는 모든 Windows 7 클라이언트 컴퓨터를 배치 합니다. Windows 7 클라이언트 컴퓨터를 하지 않은 경우 Windows 7 컴퓨터에 대 한 보안 그룹 계획 필요가 없습니다.  
   
 필요한 보안 그룹은 다음과 같습니다.  
   
 -   모든 Windows 8 클라이언트 컴퓨터에 대 한 하나의 보안 그룹입니다. 각 도메인에 대 한 이러한 클라이언트에 대 한 고유한 보안 그룹을 만드는 것이 좋습니다.  
   
--   각 진입점에 대 한 Windows 7 클라이언트 컴퓨터를 포함 하는 고유한 보안 그룹입니다. 각 도메인에 대 한 고유한 그룹을 만드는 것이 좋습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다. Domain1\DA_Clients_Europe; Domain2\DA_Clients_Europe; Domain1\DA_Clients_US; Domain2\DA_Clients_US.  
+-   각 진입점에 대 한 Windows 7 클라이언트 컴퓨터를 포함 하는 고유한 보안 그룹입니다. 각 도메인에 대 한 고유한 그룹을 만드는 것이 좋습니다. 예를 들어: Domain1\DA_Clients_Europe; Domain2\DA_Clients_Europe; Domain1\DA_Clients_US; Domain2\DA_Clients_US 합니다.  
   
-## <a name="bkmk_2_3_GPO"></a>2.3 그룹 정책 개체 계획  
+## <a name="23-plan-group-policy-objects"></a><a name="bkmk_2_3_GPO"></a>2.3 그룹 정책 개체 계획  
 원격 액세스 배포 중 구성 된 DirectAccess 설정은 Gpo에 수집 됩니다. DirectAccess 클라이언트의 원격 액세스 서버 및 필요에 따라 응용 프로그램 서버에 대 한 Gpo를 사용 하는 이미 단일 서버 배포 합니다. 멀티 사이트 배포에는 다음 Gpo 사항이 필요합니다.  
   
 -   각 진입점에 대 한 서버 GPO입니다.  
@@ -165,7 +165,7 @@ Note 복제 및 Gpo 연결에 대 한 올바른 사용 권한이 존재 하지 �
   
 -   **구성 배포의 최적화**-네트워크 인프라 변경 후의 진입점으로 동일한 Active Directory 사이트에 도메인 컨트롤러에는 진입점의 서버 GPO를 관리 하는 데 필요한 수 있습니다.   
   
-## <a name="bkmk_2_4_DNS"></a>2.4 DNS 계획  
+## <a name="24-plan-dns"></a><a name="bkmk_2_4_DNS"></a>2.4 DNS 계획  
 멀티 사이트 배포에 대 한 DNS를 계획할 때 다음 note:  
   
 1.  클라이언트 컴퓨터는 원격 액세스 서버에 연결 하기 위해 ConnectTo 주소를 사용 합니다. 배포의 각 진입점에 다른 ConnectTo 주소가 필요합니다. 각 항목 지점 ConnectTo 주소는 공용 DNS에서 사용할 수 있어야 하 고 선택 하는 주소는 IP-HTTPS 연결에 대 한 배포 하는 IP-HTTPS 인증서의 주체 이름 일치 해야 합니다.   

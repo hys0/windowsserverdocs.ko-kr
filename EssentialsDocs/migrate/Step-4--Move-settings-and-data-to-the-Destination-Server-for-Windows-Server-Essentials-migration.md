@@ -1,9 +1,9 @@
 ---
-title: '4단계: Windows Server Essentials 마이그레이션을 위해 대상 서버에 설정 및 데이터 이동'
+title: '4단계: Windows Server Essentials 마이그레이션을 위해 대상 서버로 설정 및 데이터 이동'
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,14 +12,14 @@ ms.assetid: e143df43-e227-4629-a4ab-9f70d9bf6e84
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: fa6ab8e2108e569b7cef6bfbf0d20af4fa31016d
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: d9aea85513e2453c02f6c14fb3f4d708be211d3f
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66432572"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318752"
 ---
-# <a name="step-4-move-settings-and-data-to-the-destination-server-for-windows-server-essentials-migration"></a>4단계: Windows Server Essentials 마이그레이션을 위해 대상 서버에 설정 및 데이터 이동
+# <a name="step-4-move-settings-and-data-to-the-destination-server-for-windows-server-essentials-migration"></a>4단계: Windows Server Essentials 마이그레이션을 위해 대상 서버로 설정 및 데이터 이동
 
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
@@ -29,9 +29,9 @@ ms.locfileid: "66432572"
   
 -   [네트워크 구성](Step-4--Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_Network)  
   
--   [사용자 계정에 허용 되는 컴퓨터 매핑](Step-4--Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_MapPermittedComputers)  
+-   [허용 된 컴퓨터를 사용자 계정에 매핑](Step-4--Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_MapPermittedComputers)  
   
-##  <a name="BKMK_CopyData"></a> 대상 서버에 데이터 복사  
+##  <a name="copy-data-to-the-destination-server"></a><a name="BKMK_CopyData"></a>대상 서버에 데이터 복사  
  원본 서버에서 대상 서버로 데이터를 복사하기 전에 다음 작업을 수행합니다.  
   
 -   각 폴더에 대한 사용 권한을 비롯하여 원본 서버의 공유 폴더 목록을 검토합니다. 원본 서버에서 마이그레이션할 폴더 구조와 일치하도록 대상 서버에서 폴더를 만들거나 사용자 지정합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "66432572"
   
 -   **클라이언트 컴퓨터 백업** 폴더는 대상 서버로 마이그레이션할 수 없습니다. 서버 마이그레이션 전에 모든 클라이언트 컴퓨터가 정상 상태인지 확인합니다. 서버 마이그레이션 후에는 모든 중요한 클라이언트 컴퓨터의 데이터가 백업되도록 클라이언트 컴퓨터 백업을 구성하고 시작하는 것이 좋습니다.  
   
--   합니다 **파일 히스토리 백업** 폴더는 Windows Server Essentials의 폴더 구조 및 백업 메타 데이터 변경으로 인해 대상 서버로 직접 마이그레이션할 수 없습니다. 그러나 특정 컴퓨터에서 특정 사용자에 대한 **파일 히스토리 백업** 폴더를 마이그레이션할 수는 있습니다. 이렇게 하려면 해당 사용자 및 컴퓨터의 **파일 히스토리 백업** 폴더에서 **데이터** 폴더를 찾은 후 해당 **데이터** 폴더를 대상 서버의 **파일 히스토리 백업** 폴더에 복사해야 합니다.  
+-   Windows Server Essentials의 폴더 구조 및 백업 메타 데이터 변경 때문에 **파일 히스토리 백업** 폴더는 대상 서버로 직접 마이그레이션할 수 없습니다. 그러나 특정 컴퓨터에서 특정 사용자에 대한 **파일 히스토리 백업** 폴더를 마이그레이션할 수는 있습니다. 이렇게 하려면 해당 사용자 및 컴퓨터의 **파일 히스토리 백업** 폴더에서 **데이터** 폴더를 찾은 후 해당 **데이터** 폴더를 대상 서버의 **파일 히스토리 백업** 폴더에 복사해야 합니다.  
   
 #### <a name="to-copy-data-from-the-source-server-to-the-destination-server"></a>원본 서버에서 대상 서버로 데이터를 복사하려면  
   
@@ -54,13 +54,13 @@ ms.locfileid: "66432572"
   
     각 항목이 나타내는 의미는 다음과 같습니다.  
   
-   - \<SourceServerName\> 원본 서버의 이름  
+   - \<SourceServerName\>은 원본 서버의 이름입니다.  
   
-   - \<SharedSourceFolderName\> 원본 서버의 공유 폴더의 이름  
+   - \<SharedSourceFolderName\>은 원본 서버의 공유 폴더 이름입니다.  
   
-   - \<PathOfTheDestination\> 폴더를 이동 하려는 절대 경로  
+   - \<Paanfto Destination\>는 폴더를 이동 하려는 절대 경로입니다.  
   
-   - \<SharedDestinationFolderName\> 는 데이터를 복사할 대상 서버의 폴더  
+   - \<SharedDestinationFolderName\>는 데이터가 복사 될 대상 서버의 폴더입니다.  
   
      `robocopy \\sourceserver\MyData "d:\ServerFolders\MyData" /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt`를 예로 들 수 있습니다.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66432572"
   
 4. 원본 서버에서 마이그레이션하는 각 공유 폴더에 대해 이 프로세스를 반복합니다.  
   
-##  <a name="BKMK_Network"></a> 네트워크 구성  
+##  <a name="configure-the-network"></a><a name="BKMK_Network"></a>네트워크 구성  
   
 #### <a name="to-configure-the-network"></a>네트워크를 구성하려면  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66432572"
 > [!NOTE]
 >  대상 서버에서 공용 도메인 이름을 구성하려면 동적 DNS 업데이트 경쟁을 방지하기 위해 원본 서버에서 도메인 이름을 해제해야 합니다.  
   
-##  <a name="BKMK_MapPermittedComputers"></a> 사용자 계정에 허용 되는 컴퓨터 매핑  
+##  <a name="map-permitted-computers-to-user-accounts"></a><a name="BKMK_MapPermittedComputers"></a>허용 된 컴퓨터를 사용자 계정에 매핑  
  이전 버전의 Windows Small Business Server 또는 Windows Server Essentials에서 마이그레이션된 각 사용자 계정은 하나 이상의 컴퓨터에 매핑되어야 합니다.  
   
 #### <a name="to-map-user-accounts-to-computers"></a>사용자 계정을 컴퓨터에 매핑하려면  
@@ -115,8 +115,8 @@ ms.locfileid: "66432572"
 >  마이그레이션을 완료하고 나서 대상 서버에서 첫 번째 새 사용자 계정을 만들 때 문제가 발생하면 추가한 사용자 계정을 제거하고 다시 만듭니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 설정 및 데이터를 대상 서버로 이동했습니다. 이제 [5 단계: Windows Server Essentials의 대상 서버에 대 한 마이그레이션에 대 한 폴더 리디렉션 사용](Step-5--Enable-folder-redirection-on-the-Destination-Server-for-Windows-Server-Essentials-migration.md)합니다.  
+ 설정 및 데이터를 대상 서버로 이동했습니다. 이제 [5 단계: Windows Server Essentials 마이그레이션을 위해 대상 서버에서 폴더 리디렉션 사용](Step-5--Enable-folder-redirection-on-the-Destination-Server-for-Windows-Server-Essentials-migration.md)으로 이동 합니다.  
   
 
-모든 단계를 보려면 [Windows Server Essentials로 마이그레이션](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md)합니다.
+모든 단계를 보려면 [Windows Server Essentials로 마이그레이션](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md)을 참조 하세요.
 

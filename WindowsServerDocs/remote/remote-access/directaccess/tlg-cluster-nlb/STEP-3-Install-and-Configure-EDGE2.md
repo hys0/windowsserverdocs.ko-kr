@@ -10,14 +10,14 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f04eb11e-ed5f-42a1-a77b-57a248ba2d10
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 3dad1db575bd9b9b4a70a24da44d1d030273f021
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: cb869ad1617d52562e73eb6965a9f1c2184a56a7
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404865"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80310784"
 ---
 # <a name="step-3-install-and-configure-edge2"></a>3 단계 EDGE2 설치 및 구성
 
@@ -27,7 +27,7 @@ EDGE2는 원격 액세스 클러스터의 두 번째 멤버입니다. 클러스�
 
 EDGE2를 구성 하려면 다음 단계를 수행 합니다.
 
-## <a name="installOS"></a>EDGE2에 운영 체제 설치  
+## <a name="install-the-operating-system-on-edge2"></a><a name="installOS"></a>EDGE2에 운영 체제 설치  
   
 1.  EDGE2에서 Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012 설치를 시작 합니다.  
   
@@ -37,7 +37,7 @@ EDGE2를 구성 하려면 다음 단계를 수행 합니다.
   
 4.  네트워크 어댑터 하나를 Corpnet 서브넷에 연결 하거나, Corpnet 서브넷을 나타내는 가상 스위치와 인터넷 서브넷 또는 인터넷 서브넷을 나타내는 가상 스위치를 연결 합니다.  
   
-## <a name="TCP"></a>TCP/IP 속성 구성  
+## <a name="configure-tcpip-properties"></a><a name="TCP"></a>TCP/IP 속성 구성  
   
 1.  서버 관리자 콘솔에서 **로컬 서버**를 클릭 한 다음 **속성** 영역에서 **유선 이더넷 연결**옆에 있는 링크를 클릭 합니다.  
   
@@ -89,7 +89,7 @@ EDGE2를 구성 하려면 다음 단계를 수행 합니다.
   
 25. 명령 프롬프트 창을 닫습니다.  
   
-## <a name="rename"></a>EDGE2 이름 바꾸기 및 도메인에 조인  
+## <a name="rename-edge2-and-join-it-to-the-domain"></a><a name="rename"></a>EDGE2 이름 바꾸기 및 도메인에 조인  
   
 1.  서버 관리자 콘솔의 **로컬 서버**에 있는 **속성** 영역에서 **컴퓨터 이름**옆에 있는 링크를 클릭 합니다.  
   
@@ -109,11 +109,11 @@ EDGE2를 구성 하려면 다음 단계를 수행 합니다.
   
 9. 다시 시작한 후 Corp\user1 계정로 로그인 합니다.  
   
-## <a name="IPHTTPSCert"></a>IP-HTTPS 인증서를 설치 합니다.  
+## <a name="install-the-ip-https-certificate"></a><a name="IPHTTPSCert"></a>IP-HTTPS 인증서를 설치 합니다.  
   
-1.  **시작** 화면에서**mmc.exe**를 입력 한 다음 enter 키를 누릅니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
+1.  **시작** 화면에서**mmc.exe**를 입력 한 다음 enter 키를 누릅니다. **사용자 계정 컨트롤** 대화 상자가 표시되면 원하는 작업이 표시되어 있는지 확인하고 **예**를 클릭합니다.  
   
-2.  MMC 콘솔에서에 **파일** 메뉴 클릭 **스냅인 추가/제거**합니다.  
+2.  MMC 콘솔의 **파일** 메뉴에서 **스냅인 추가/제거**를 클릭합니다.  
   
 3.  에 **추가 / 제거 스냅인** 대화 상자를 클릭 **인증서**, 클릭 **추가**, 클릭 **컴퓨터 계정**, 클릭 **다음**, 클릭 **마침**, 클릭 하 고 **확인**합니다.  
   
@@ -133,13 +133,13 @@ EDGE2를 구성 하려면 다음 단계를 수행 합니다.
   
 11. **일반** 탭의 **이름**에 **ip-https 인증서**를 입력 합니다.  
   
-12. 클릭 **확인**, 클릭 **등록**, 를 클릭 하 고 **마침**합니다.  
+12. **확인**, **등록**을 차례로 클릭한 다음 **마침**을 클릭합니다.  
   
 13. 인증서 스냅인의 세부 정보 창에서 이름이 edge1.contoso.com 인 새 인증서가 서버 인증의 용도에 등록 되었는지 확인 합니다.  
   
 14. 콘솔 창을 닫습니다. 설정을 저장할 것인지 묻는 메시지가 표시 되 면 **아니요**를 클릭 합니다.  
   
-## <a name="InstallDA"></a>EDGE2에 원격 액세스 역할 설치  
+## <a name="install-the-remote-access-role-on-edge2"></a><a name="InstallDA"></a>EDGE2에 원격 액세스 역할 설치  
   
 1.  서버 관리자 콘솔에서에 **대시보드**, 클릭 **역할 및 기능 추가**합니다.  
   
@@ -151,7 +151,7 @@ EDGE2를 구성 하려면 다음 단계를 수행 합니다.
   
 5.  **설치 선택 확인** 대화 상자에서 **설치**를 클릭합니다.  
   
-6.  **설치 진행률** 대화 상자에서 설치가 완료되었는지 확인하고 **닫기**를 클릭합니다.  
+6.  **설치 진행률** 대화 상자에서 설치가 정상적으로 완료되었는지 확인하고 **닫기**를 클릭합니다.  
   
 
 

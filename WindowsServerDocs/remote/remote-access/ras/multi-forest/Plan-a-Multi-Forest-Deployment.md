@@ -10,14 +10,14 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8acc260f-d6d1-4d32-9e3a-1fd0b2a71586
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 2a0f04a3ff7797d18f7647416dc99319860c7030
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 8e483f5986a5a23123495e3a13440ddc57a6c521
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404518"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80314048"
 ---
 # <a name="plan-a-multi-forest-deployment"></a>다중 포리스트 배포 계획
 
@@ -25,7 +25,7 @@ ms.locfileid: "71404518"
 
 이 항목에서는 다중 포리스트 배포에서 원격 액세스를 구성할 때 필요한 계획 단계에 대해 설명합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>필수 조건  
 이 시나리오의 배포를 시작하기 전에 다음 목록에서 중요한 요구 사항을 검토하세요.  
   
 -   양방향 트러스트가 필요합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "71404518"
   
 또한 원격 액세스 관리자는 원래 원격 액세스 배포에 대한 진입점으로 추가된 새 포리스트의 원격 액세스 서버를 비롯하여 모든 원격 액세스 서버에 대한 로컬 관리자여야 합니다.  
   
-## <a name="ClientSG"></a>클라이언트 보안 그룹 계획  
+## <a name="plan-client-security-groups"></a><a name="ClientSG"></a>클라이언트 보안 그룹 계획  
 새 포리스트에서 DirectAccess 클라이언트 컴퓨터에 대해 하나 이상의 보안 그룹을 구성해야 합니다. 단일 보안 그룹은 여러 포리스트의 계정을 포함할 수 없기 때문입니다.  
   
 > [!NOTE]  

@@ -10,14 +10,14 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 55528736-6c19-40bd-99e8-5668169ef3c7
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 229e2955c7f382ff630829990a9dd6485d62652e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 09ed401fa4912a48033e4a51a29309e3fd4cc998
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71388880"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80310902"
 ---
 # <a name="directaccess-offline-domain-join"></a>DirectAccess 오프라인 도메인 가입
 
@@ -44,12 +44,12 @@ Windows Server 2008 r 2에 도입 된 도메인 컨트롤러에는 오프 라인
   
 3.  대상 컴퓨터를 다시 부팅 하면 컴퓨터가 도메인에 가입 됩니다.  
   
-### <a name="BKMK_ODJOverview"></a>DirectAccess 정책을 사용한 오프 라인 도메인 가입 시나리오 개요  
+### <a name="offline-domain-join-with-directaccess-policies-scenario-overview"></a><a name="BKMK_ODJOverview"></a>DirectAccess 정책을 사용한 오프 라인 도메인 가입 시나리오 개요  
 DirectAccess 오프 라인 도메인 가입은 Windows Server 2016, Windows Server 2012, Windows 10 및 Windows 8을 실행 하는 컴퓨터에서를 사용 하 여 회사 네트워크에 실제로 가입 하거나 VPN을 통해 연결 하지 않고도 도메인에 가입할 수 있는 프로세스입니다. 따라서 회사 네트워크에 연결 되지 않은 위치에서 도메인에 컴퓨터를 가입 시킬 수 있습니다. DirectAccess에 대 한 오프 라인 도메인 조인은 원격 프로 비전을 허용 하는 DirectAccess 정책을 클라이언트에 제공 합니다.  
   
 도메인 조인은 컴퓨터 계정을 만들고 Windows 운영 체제와 Active Directory 도메인을 실행 하는 컴퓨터 간의 트러스트 관계를 설정 합니다.  
   
-## <a name="BKMK_ODJRequirements"></a>오프 라인 도메인 가입 준비  
+## <a name="prepare-for-offline-domain-join"></a><a name="BKMK_ODJRequirements"></a>오프 라인 도메인 가입 준비  
   
 1.  컴퓨터 계정을 만듭니다.  
   
@@ -57,7 +57,7 @@ DirectAccess 오프 라인 도메인 가입은 Windows Server 2016, Windows Serv
   
 3.  새 클라이언트에 적용할 필수 컴퓨터 인증서, 그룹 정책 및 그룹 정책 개체를 수집 합니다.  
   
-을 선택합니다. 다음 섹션에서는 node.js를 사용 하 여 DirectAccess 오프 라인 도메인 가입을 수행 하기 위한 운영 체제 요구 사항 및 자격 증명 요구 사항에 대해 설명 합니다.  
+. 다음 섹션에서는 node.js를 사용 하 여 DirectAccess 오프 라인 도메인 가입을 수행 하기 위한 운영 체제 요구 사항 및 자격 증명 요구 사항에 대해 설명 합니다.  
   
 ### <a name="operating-system-requirements"></a>운영 체제 요구 사항  
 Windows Server 2016, Windows Server 2012 또는 Windows 8을 실행 하는 컴퓨터 에서만 DirectAccess에 대해 node.js를 실행할 수 있습니다. Node.js를 실행 하 여 컴퓨터 계정 데이터를 AD DS에 프로 비전 하는 컴퓨터는 Windows Server 2016, Windows 10, Windows Server 2012 또는 Windows 8을 실행 해야 합니다. 도메인에 가입 시킬 컴퓨터도 Windows Server 2016, Windows 10, Windows Server 2012 또는 Windows 8을 실행 해야 합니다.  
@@ -76,7 +76,7 @@ Windows Server 2016, Windows Server 2012 또는 Windows 8을 실행 하는 컴�
 #### <a name="granting-user-rights-to-join-workstations-to-the-domain"></a>도메인에 워크스테이션을 가입 시킬 수 있는 사용자 권한 부여  
 GPMC (그룹 정책 관리 콘솔)를 사용 하 여 도메인 정책을 수정 하거나 도메인에 워크스테이션을 추가할 수 있는 권한을 사용자에 게 부여 하는 설정이 있는 새 정책을 만들 수 있습니다.  
   
-사용자 권한을 부여 하려면 최소한 **Domain Admins**의 구성원 이거나 이와 동등한 자격이 필요 합니다.  [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477) 에서 적절 한 계정 및 그룹 구성원 자격 사용에 대 한 세부 정보를 검토 합니다 (https://go.microsoft.com/fwlink/?LinkId=83477) ).   
+사용자 권한을 부여 하려면 최소한 **Domain Admins**의 구성원 이거나 이와 동등한 자격이 필요 합니다.  [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477) (https://go.microsoft.com/fwlink/?LinkId=83477)에서 적절 한 계정 및 그룹 구성원 자격 사용에 대 한 세부 정보를 검토 합니다.   
   
 ###### <a name="to-grant-rights-to-join-workstations-to-a-domain"></a>워크스테이션을 도메인에 가입 시킬 수 있는 권한을 부여 하려면  
   
@@ -84,7 +84,7 @@ GPMC (그룹 정책 관리 콘솔)를 사용 하 여 도메인 정책을 수정 
   
 2.  포리스트의 이름을 두 번 클릭 하 고 **도메인**을 두 번 클릭 한 다음 컴퓨터에 가입 시킬 도메인의 이름을 두 번 클릭 하 고 **기본 도메인 정책**을 마우스 오른쪽 단추로 클릭 한 다음 **편집**을 클릭 합니다.  
   
-3.  콘솔 트리에서 **컴퓨터 구성**을 두 번 클릭 하 고 **정책**을 두 번 클릭 한 다음 **Windows 설정**을 두 번 클릭 하 고 **보안 설정**, **로컬 정책**을 차례로 두 번 클릭 한 후 다음을 두 번 클릭 **합니다. 사용자 권한 할당**.  
+3.  콘솔 트리에서 **컴퓨터 구성**을 두 번 클릭 하 고 **정책**을 두 번 클릭 한 다음 **Windows 설정**, **보안 설정**, **로컬 정책**을 차례로 두 번 클릭 하 고 **사용자 권한 할당**을 두 번 클릭 합니다.  
   
 4.  세부 정보 창에서 **도메인에 워크스테이션 추가**를 두 번 클릭 합니다.  
   
@@ -92,12 +92,12 @@ GPMC (그룹 정책 관리 콘솔)를 사용 하 여 도메인 정책을 수정 
   
 6.  사용자에 게 권한을 부여 하려는 계정 이름을 입력 하 고 **확인** 을 두 번 클릭 합니다.  
   
-## <a name="BKMK_ODKSxS"></a>오프 라인 도메인 가입 프로세스  
+## <a name="offline-domain-join-process"></a><a name="BKMK_ODKSxS"></a>오프 라인 도메인 가입 프로세스  
 관리자 권한 명령 프롬프트에서 node.js를 실행 하 여 컴퓨터 계정 메타 데이터를 프로 비전 합니다. 프로 비전 명령을 실행 하면 컴퓨터 계정 메타 데이터가 명령의 일부로 지정 된 이진 파일에 생성 됩니다.  
   
-오프 라인 도메인 가입 중에 컴퓨터 계정을 프로 비전 하는 데 사용 되는 NetProvisionComputerAccount 함수에 대 한 자세한 내용은 [NetProvisionComputerAccount 함수](https://go.microsoft.com/fwlink/?LinkId=162426) (https://go.microsoft.com/fwlink/?LinkId=162426) 을 참조 하세요. 대상 컴퓨터에서 로컬로 실행 되는 Netrequest외부 Domainjoin 함수에 대 한 자세한 내용은 [Netrequestststdomainjoin 함수](https://go.microsoft.com/fwlink/?LinkId=162427) (https://go.microsoft.com/fwlink/?LinkId=162427) 을 참조 하세요.  
+오프 라인 도메인 가입 중에 컴퓨터 계정을 프로 비전 하는 데 사용 되는 NetProvisionComputerAccount 함수에 대 한 자세한 내용은 [NetProvisionComputerAccount 함수](https://go.microsoft.com/fwlink/?LinkId=162426) (https://go.microsoft.com/fwlink/?LinkId=162426)를 참조 하세요. 대상 컴퓨터에서 로컬로 실행 되는 Netrequest외부 Domainjoin 함수에 대 한 자세한 내용은 [Netrequestststdomainjoin 함수](https://go.microsoft.com/fwlink/?LinkId=162427) (https://go.microsoft.com/fwlink/?LinkId=162427)를 참조 하세요.  
   
-## <a name="BKMK_ODJSteps"></a>DirectAccess 오프 라인 도메인 가입을 수행 하는 단계  
+## <a name="steps-for-performing-a-directaccess-offline-domain-join"></a><a name="BKMK_ODJSteps"></a>DirectAccess 오프 라인 도메인 가입을 수행 하는 단계  
 오프 라인 도메인 가입 프로세스에는 다음 단계가 포함 됩니다.  
   
 1.  각 원격 클라이언트에 대 한 새 컴퓨터 계정을 만들고 회사 네트워크에 있는 이미 도메인에 가입 된 컴퓨터의. n e x 명령을 사용 하 여 프로 비전 패키지를 생성 합니다.  
@@ -114,7 +114,7 @@ GPMC (그룹 정책 관리 콘솔)를 사용 하 여 도메인 정책을 수정 
   
 오프 라인 도메인 가입을 수행 하려면 다음 단계를 완료 합니다.  
   
-##### <a name="option1-create-a-provisioning-package-for-the-client-without-pki"></a>옵션 1: PKI 없이 클라이언트에 대 한 프로 비전 패키지 만들기  
+##### <a name="option1-create-a-provisioning-package-for-the-client-without-pki"></a>옵션 1 마이그레이션: PKI 없이 클라이언트에 대 한 프로 비전 패키지 만들기  
   
 1.  원격 액세스 서버의 명령 프롬프트에서 다음 명령을 입력 하 여 컴퓨터 계정을 프로 비전 합니다.  
   
@@ -122,7 +122,7 @@ GPMC (그룹 정책 관리 콘솔)를 사용 하 여 도메인 정책을 수정 
     Djoin /provision /domain <your domain name> /machine <remote machine name> /policynames DA Client GPO name /rootcacerts /savefile c:\files\provision.txt /reuse  
     ```  
   
-##### <a name="option2-create-a-provisioning-package-for-the-client-with-pki"></a>옵션 2 마이그레이션 PKI를 사용 하 여 클라이언트용 프로 비전 패키지 만들기  
+##### <a name="option2-create-a-provisioning-package-for-the-client-with-pki"></a>옵션 2 마이그레이션: PKI를 사용 하 여 클라이언트용 프로 비전 패키지 만들기  
   
 1.  원격 액세스 서버의 명령 프롬프트에서 다음 명령을 입력 하 여 컴퓨터 계정을 프로 비전 합니다.  
   

@@ -3,7 +3,7 @@ title: Windows Server Essentials로 서버 데이터 마이그레이션
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: dff2bf27-5d97-409b-81e8-286f7d933d90
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: fdf8e7c696187422ef19a26cf9577aef893824fe
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 28d486eaff886814a826dd62a937506ef35687be
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59883304"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318967"
 ---
 # <a name="migrate-server-data-to-windows-server-essentials"></a>Windows Server Essentials로 서버 데이터 마이그레이션
 
@@ -26,7 +26,7 @@ ms.locfileid: "59883304"
 다음 가이드에서는 기존에 설치된 Windows Small Business Server 또는 Windows Server Essentials를 Windows Server Essentials로 마이그레이션하는 방법에 대해 설명하며, 특정 Windows Server Essentials 마이그레이션 시나리오를 준비하고 계획하는 방법에 대한 정보를 제공합니다.  
   
 ## <a name="migrate-to-windows-server-essentials"></a>Windows Server Essentials로 마이그레이션  
- Windows Server Essentials에 기존 서버를 마이그레이션하는 동안 문제를 방지 하려면 마이그레이션하기 전에 마이그레이션 가이드를 읽습니다.  
+ 기존 서버를 Windows Server Essentials로 마이그레이션하는 동안 문제가 발생 하지 않도록 하려면 마이그레이션을 시작 하기 전에 마이그레이션 가이드를 참조 하세요.  
   
 
 -   [Windows Server Essentials로 마이그레이션](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md)  
@@ -39,14 +39,14 @@ ms.locfileid: "59883304"
 
   
 ## <a name="migrate-to-windows-server-essentials"></a>Windows Server Essentials로 마이그레이션  
- Windows Server Essentials에 기존 서버를 마이그레이션하는 동안 문제를 방지 하려면 마이그레이션하기 전에 비즈니스 시나리오에 적용 되는 마이그레이션 가이드를 읽습니다.  
+ 기존 서버를 Windows Server Essentials로 마이그레이션하는 동안 문제가 발생 하지 않도록 하려면 마이그레이션을 시작 하기 전에 비즈니스 시나리오에 적용 되는 마이그레이션 가이드를 참조 하세요.  
   
 
--   [Windows Server 2012 Standard 전환](Transition-from-Windows-Server-2012-Essentials-to-Windows-Server-2012-Standard.md)  
+-   [Windows Server 2012 Standard로 전환](Transition-from-Windows-Server-2012-Essentials-to-Windows-Server-2012-Standard.md)  
   
 -   [Windows SBS 2011 Essentials에서 마이그레이션](Migrate-Windows-Small-Business-Server-2011-Essentials-to-Windows-Server-Essentials.md)  
   
--   [표준 Windows SBS 2011에서 마이그레이션](Migrate-Windows-Small-Business-Server-2011-Standard-to-Windows-Server-Essentials.md)  
+-   [Windows SBS 2011 Standard에서 마이그레이션](Migrate-Windows-Small-Business-Server-2011-Standard-to-Windows-Server-Essentials.md)  
   
 -   [Windows SBS 2008에서 마이그레이션](Migrate-Windows-Small-Business-Server-2008-to-Windows-Server-Essentials.md)  
   
@@ -56,13 +56,13 @@ ms.locfileid: "59883304"
   
 -   [새 하드웨어로 마이그레이션](Migrate-Windows-Server-Essentials-to-New-Hardware.md)  
   
--   [Windows Server Essentials 분석기 BPA (모범 사례) 도구를 사용 하는 규칙](Rules-used-by-the-Windows-Server-Essentials-Best-Practices-Analyzer--BPA--Tool.md)  
+-   [Windows Server Essentials BPA(모범 사례 분석기) 도구에서 사용하는 규칙](Rules-used-by-the-Windows-Server-Essentials-Best-Practices-Analyzer--BPA--Tool.md)  
 
--   [Windows Server 2012 Standard 전환](../migrate/Transition-from-Windows-Server-2012-Essentials-to-Windows-Server-2012-Standard.md)  
+-   [Windows Server 2012 Standard로 전환](../migrate/Transition-from-Windows-Server-2012-Essentials-to-Windows-Server-2012-Standard.md)  
   
 -   [Windows SBS 2011 Essentials에서 마이그레이션](../migrate/Migrate-Windows-Small-Business-Server-2011-Essentials-to-Windows-Server-Essentials.md)  
   
--   [표준 Windows SBS 2011에서 마이그레이션](../migrate/Migrate-Windows-Small-Business-Server-2011-Standard-to-Windows-Server-Essentials.md)  
+-   [Windows SBS 2011 Standard에서 마이그레이션](../migrate/Migrate-Windows-Small-Business-Server-2011-Standard-to-Windows-Server-Essentials.md)  
   
 -   [Windows SBS 2008에서 마이그레이션](../migrate/Migrate-Windows-Small-Business-Server-2008-to-Windows-Server-Essentials.md)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "59883304"
   
 -   [새 하드웨어로 마이그레이션](../migrate/Migrate-Windows-Server-Essentials-to-New-Hardware.md)  
   
--   [Windows Server Essentials 분석기 BPA (모범 사례) 도구를 사용 하는 규칙](../migrate/Rules-used-by-the-Windows-Server-Essentials-Best-Practices-Analyzer--BPA--Tool.md)  
+-   [Windows Server Essentials BPA(모범 사례 분석기) 도구에서 사용하는 규칙](../migrate/Rules-used-by-the-Windows-Server-Essentials-Best-Practices-Analyzer--BPA--Tool.md)  
 
   
 ## <a name="end-to-end-solution-guides"></a>엔드투엔드 솔루션 가이드  
@@ -83,7 +83,7 @@ ms.locfileid: "59883304"
   
 -    파트너 및 공급업체와 안전하게 협업을 수행하는 방법을 알아보려면 [중소기업의 협업 개선](https://technet.microsoft.com/library/dn747893.aspx)을 참조하세요.  
   
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
   
 -   [Windows Server Essentials 설치](../install/Install-Windows-Server-Essentials.md)  
   

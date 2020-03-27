@@ -6,29 +6,29 @@ ms.prod: windows-server
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: 4846b548-8fbc-4a7f-af13-09e834acdec0
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 4307ce1512980277af819e0710e0447d8dbac8c4
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: be0604a850e54f4945e7416298fad30ce3dbf083
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406198"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80317841"
 ---
 # <a name="dns-responses-based-on-time-of-day-with-an-azure-cloud-app-server"></a>Azure 클라우드 응용 프로그램 서버로 시간 기반 DNS 응답
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-하루 중 시간을 기반으로 하는 DNS 정책을 사용 하 여 응용 프로그램의 서로 다른 지리적으로 분산 된 인스턴스 응용 프로그램 트래픽을 분산 하는 방법에 알아보려면이 항목을 사용할 수 있습니다. 
+하루 중 시간을 기반으로 하는 DNS 정책을 사용 하 여 애플리케이션의 서로 다른 지리적으로 분산 된 인스턴스 애플리케이션 트래픽을 분산 하는 방법에 알아보려면이 항목을 사용할 수 있습니다. 
 
-이 시나리오는 다른 표준 시간대에 있는 Microsoft Azure에서 호스팅되는 웹 서버와 같은 다른 응용 프로그램 서버를 한 표준 시간대에 트래픽을 전달 하려는 경우에 유용 합니다. 사용량이 많은 기간 중 응용 프로그램 인스턴스 간에 트래픽의 부하를 분산 하면 트래픽이 주 서버는 오버 로드 하는 경우 기간입니다. 
+이 시나리오는 다른 표준 시간대에 있는 Microsoft Azure에서 호스팅되는 웹 서버와 같은 다른 애플리케이션 서버를 한 표준 시간대에 트래픽을 전달 하려는 경우에 유용 합니다. 사용량이 많은 기간 중 애플리케이션 인스턴스 간에 트래픽의 부하를 분산 하면 트래픽이 주 서버는 오버 로드 하는 경우 기간입니다. 
 
 > [!NOTE]
 > Azure를 사용 하지 않고 지능형 DNS 응답에 대 한 DNS 정책을 사용 하는 방법을 알아보려면 다음을 참조 [기반에 대 한 지능형 DNS 응답 시간을 사용 하 여 DNS 정책](Scenario--Use-DNS-Policy-for-Intelligent-DNS-Responses-Based-on-the-Time-of-Day.md)합니다. 
 
 ## <a name="example-of-intelligent-dns-responses-based-on-the-time-of-day-with-azure-cloud-app-server"></a>Azure 클라우드 응용 프로그램 서버와 시간에 따라 지능형 DNS 응답의 예
 
-다음은 하루 중 시간에 따라 응용 프로그램 트래픽 분산을 DNS 정책 사용 방법의 예입니다.
+다음은 하루 중 시간에 따라 애플리케이션 트래픽 분산을 DNS 정책 사용 방법의 예입니다.
 
 이 예제에서는 가상의 회사를 해당 웹 사이트를 통해 전 세계에 걸쳐 온라인 gifting 솔루션에서 제공 하는 Contoso 선물 서비스를 사용 하 여 contosogiftservices.com 합니다. 
 
@@ -55,7 +55,7 @@ DNS 서버는 5-9 오후 매일 사이의 30%의 쿼리는 Azure에서 실행 �
 
 ## <a name="how-intelligent-dns-responses-based-on-time-of-day-with-azure-app-server-works"></a>응용 프로그램 서버를 작동 하는 Azure와 시간을 기준으로 지능형 DNS 응답 하는 방법
  
-이 문서에는 두 개의 서로 다른 응용 프로그램 서버 IP 주소로-DNS 쿼리에 응답 하도록 DNS 서버를 구성 하려면 웹 서버 1 개 시애틀에는 및 다른 하나는 Azure 데이터 센터는 방법을 보여줍니다.
+이 문서에는 두 개의 서로 다른 애플리케이션 서버 IP 주소로-DNS 쿼리에 응답 하도록 DNS 서버를 구성 하려면 웹 서버 1 개 시애틀에는 및 다른 하나는 Azure 데이터 센터는 방법을 보여줍니다.
 
 오후 6 시에 오후 9 시 시애틀의 사용량이 적은 시간을 기반으로 하는 새 DNS 정책의 구성한 후 DNS 서버에서 보내는 시애틀 웹 서버의 IP 주소를 포함 하는 클라이언트에 대 한 DNS 응답의 / 72% 및 Azure 웹 서버의 IP 주소를 포함 하는 클라이언트에 대 한 DNS 응답의 30% 있으므로 클라이언트 트래픽을 새 Azure 웹 서버로 보내는 및 시애틀 웹 서버 오버 로드를 방지 합니다. 
 
@@ -65,7 +65,7 @@ Azure 레코드에서 10 분의 TTL Azure VM을 제거 하기 전에 레코드�
 
 ## <a name="how-to-configure-dns-policy-for-intelligent-dns-responses-based-on-time-of-day-with-azure-app-server"></a>Azure 응용 프로그램 서버와 시간에 따라 지능형 DNS 응답에 대 한 DNS 정책을 구성 하는 방법
 
-시간 기반 일 응용 프로그램 부하 분산의 쿼리 응답에 대 한 DNS 정책을 구성 하려면 다음 단계를 수행 해야 합니다.
+시간 기반 일 애플리케이션 부하 분산의 쿼리 응답에 대 한 DNS 정책을 구성 하려면 다음 단계를 수행 해야 합니다.
 
 - [영역 범위 만들기](#create-the-zone-scopes)
 - [영역 범위에 레코드 추가](#add-records-to-the-zone-scopes)

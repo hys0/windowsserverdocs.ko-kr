@@ -10,15 +10,15 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 318659e5-e4a5-4e46-99d6-211dfc46f6b8
-ms.author: pashort
+ms.author: lizross
 author: jmesser81
 ms.date: 09/04/2018
-ms.openlocfilehash: 352b4303b7cf08a0c53712e46a309b8365c10d08
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e8ec74ff0ebf0f0cb87db4d79ed5d37583f9beb9
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71355682"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80317259"
 ---
 # <a name="container-networking-overview"></a>컨테이너 네트워킹 개요
 
@@ -39,6 +39,6 @@ Windows 컨테이너를 사용 하 여 VM 호스트에서 하나 이상의 가�
 
 ## <a name="related-topics"></a>관련 항목 
 
-- [Windows 컨테이너 네트워킹](https://docs.microsoft.com/virtualization/windowscontainers/container-networking/architecture): 비 오버레이/SDN 배포에 대 한 컨테이너 네트워크를 만들고 관리 하는 방법을 알아봅니다.
+- [Windows 컨테이너 네트워킹](https://docs.microsoft.com/virtualization/windowscontainers/container-networking/architecture): 오버레이가 아닌/SDN 배포에 대 한 컨테이너 네트워크를 만들고 관리 하는 방법을 알아봅니다.
 
 - [테 넌 트 가상 네트워크에 컨테이너 끝점 연결](../../manage/Connect-container-endpoints-to-a-Tenant-Virtual-Network.md): SDN을 사용 하 여 오버레이 가상 네트워크용 컨테이너 네트워크를 만들고 관리 하는 방법을 알아봅니다. 

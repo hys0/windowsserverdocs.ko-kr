@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: ca125e57-249c-4d97-85d1-2929cbf871f1
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: fe34d25d2b54b02bb56fcad99c433054a309f60b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: d9e1afd9505d3bbf1383d174cac6a2f543fcaae2
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405453"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80316188"
 ---
 # <a name="configure-remote-radius-server-groups"></a>원격 RADIUS 서버 그룹 구성
 
@@ -30,7 +30,7 @@ NPS를 RADIUS 프록시로 구성 하는 경우 NPS에서 다른 RADIUS 서버�
 >[!NOTE]
 >새 연결 요청 정책을 만드는 과정에서 새 원격 RADIUS 서버 그룹을 구성할 수도 있습니다.
 
-**Domain Admins**의 구성원이거나 이에 준하는 자격이 있어야 이 절차를 완료할 수 있습니다.
+이 절차를 완료하려면 적어도 **Domain Admins** 그룹 구성원이거나 이에 해당하는 권한이 있어야 합니다.
 
 ### <a name="to-add-a-remote-radius-server-group"></a>원격 RADIUS 서버 그룹을 추가 하려면 
 

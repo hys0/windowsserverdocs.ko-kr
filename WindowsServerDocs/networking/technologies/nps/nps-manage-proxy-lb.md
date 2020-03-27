@@ -6,18 +6,18 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 528280e6-b47e-489f-b310-b257d434aa0d
 manager: brianlic
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 2d138b9891fb3cfa8e15060be312ff945942c660
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 10a33494365f5a10923dd9ce46c3575675099b27
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405429"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80315970"
 ---
 # <a name="nps-proxy-server-load-balancing"></a>NPS 프록시 서버 부하 분산
 
-적용 대상: Windows Server 2016
+적용 대상: Windows Server 2016
 
 VPN (가상 사설망) 서버 및 무선 액세스 지점과 같은 네트워크 액세스 서버인 RADIUS(Remote Authentication Dial-In User Service) (RADIUS) 클라이언트는 연결 요청을 만들고 NPS와 같은 RADIUS 서버에 보냅니다. 경우에 따라 NPS에서 한 번에 너무 많은 연결 요청을 수신 하 여 성능이 저하 되거나 오버 로드 될 수 있습니다. NPS가 오버 로드 되 면 네트워크에 NPSs를 추가 하 고 부하 분산을 구성 하는 것이 좋습니다. 하나 이상의 NPSs의 오버 로드를 방지 하기 위해 들어오는 연결 요청을 여러 NPSs 간에 균등 하 게 분산 하는 경우이를 부하 분산 이라고 합니다.
 

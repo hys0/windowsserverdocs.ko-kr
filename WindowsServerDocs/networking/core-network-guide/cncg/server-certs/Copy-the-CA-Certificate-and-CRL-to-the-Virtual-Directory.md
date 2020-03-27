@@ -6,15 +6,15 @@ ms.topic: article
 ms.assetid: a1b5fa23-9cb1-4c32-916f-2d75f48b42c7
 ms.prod: windows-server
 ms.technology: networking
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 07/19/2018
-ms.openlocfilehash: 335efc4fae1f12f2af8443e91c67ff6ba936edb0
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 275bec5c950ea20c3a7d5a933648cf7e068164d1
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71356204"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318351"
 ---
 # <a name="copy-the-ca-certificate-and-crl-to-the-virtual-directory"></a>가상 디렉터리에 CA 인증서 및 CRL 복사
 
@@ -30,7 +30,7 @@ ms.locfileid: "71356204"
   
     - `certutil -crl`를 입력하고 Enter 키를 누릅니다.  
 
-    - C A 1 인증서를 웹 서버의 파일 공유에 복사 하려면 `copy C:\Windows\system32\certsrv\certenroll\*.crt \\WEB1\pki`을 입력 한 다음 ENTER 키를 누릅니다.  
+    - C A 1 인증서를 웹 서버의 파일 공유에 복사 하려면 `copy C:\Windows\system32\certsrv\certenroll\*.crt \\WEB1\pki`를 입력 한 다음 ENTER 키를 누릅니다.  
     
     - 인증서 해지 목록 웹 서버에서 파일 공유로 복사 하려면 다음을 입력 `copy C:\Windows\system32\certsrv\certenroll\*.crl \\WEB1\pki`, 한 다음 ENTER를 누릅니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "71356204"
 > [!TIP]  
 > 경우 **상태** 없는 모든 항목에 대 한 **확인**, 다음을 수행 합니다.  
 > -   인증서 및 인증서 해지 목록 파일 공유에 복사 성공적으로 되었는지 확인 하 여 웹 서버의 공유를 엽니다. 성공적으로 공유에 복사 되지 된 경우 올바른 파일 원본과 복사 명령을 수정 및 대상 공유 하 고 명령을 다시 실행 합니다.  
-> -   CA 확장 탭에서 CDP 및 AIA에 대 한 올바른 위치를 입력 했는지 확인 합니다. 사용자가 제공한 위치에서 다른 문자 또는 공백이 없고 없는지 확인 합니다.  
+> -   CA 확장 탭에서 CDP 및 AIA에 대 한 올바른 위치를 입력 했는지 확인 합니다. 입력 한 위치에 추가 공백이 나 다른 문자가 없는지 확인 하세요.  
 > -   웹 서버의 올바른 위치에 CRL 및 CA 인증서를 복사 하 고 위치는 CA의 CDP 및 AIA 위치에 대해 제공 하는 위치와 일치 하는지 확인 합니다.  
 > -   CA 인증서 및 CRL 저장 된 가상 폴더에 대 한 사용 권한을 올바르게 구성 했는지 확인 합니다.  
   

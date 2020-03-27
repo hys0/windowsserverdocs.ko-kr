@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: 566bc270-81c7-48c3-a904-3cba942ad463
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 613bb7f43b382389dc0db953a48668147cfaee88
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: a6fe98dea50dd194c2bb2303a663968f93818332
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71356048"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80317962"
 ---
 # <a name="dns-policies-overview"></a>DNS 정책 개요
 
@@ -53,9 +53,9 @@ Dns 쿼리 확인 정책을 사용 하 여 DNS 서버에서 들어오는 확인 
 |---------|---------------|-------------------|  
 |**이름**|정책 이름|-최대 256 문자<br />-파일 이름에 유효한 모든 문자를 포함할 수 있습니다.|  
 |**상태**|정책 상태|-Enable (기본값)<br />-사용 안 함|  
-|**Level**|정책 수준|-서버<br />-영역|  
+|**저수준**|정책 수준|-서버<br />-영역|  
 |**처리 순서**|쿼리가 수준별로 분류 되 고에 적용 되 면 서버는 쿼리가 조건과 일치 하는 첫 번째 정책을 찾고 쿼리에 적용 합니다.|-숫자 값<br />-동일한 수준을 포함 하 고 값에 적용 되는 정책 당 고유한 값|  
-|**동작**|DNS 서버에서 수행할 작업입니다.|-Allow (영역 수준에 대 한 기본값)<br />-Deny (서버 수준에서 기본값)<br />-무시|  
+|**작업**|DNS 서버에서 수행할 작업입니다.|-Allow (영역 수준에 대 한 기본값)<br />-Deny (서버 수준에서 기본값)<br />-무시|  
 |**조건**|정책 조건 (및/또는) 및 정책을 적용 하기 위해 충족 해야 하는 조건 목록|-Condition 연산자 (AND/OR)<br />-조건 목록 (아래 조건 표 참조)|  
 |**범위**|범위 당 영역 범위 및 가중치가 적용 된 값 목록입니다. 가중치가 적용 된 값은 부하 분산 배포에 사용 됩니다. 예를 들어,이 목록에 가중치가 3이 고 가중치가 5 인 datacenter1이 포함 된 경우 서버는 8 개의 요청에서 3 번 datacentre1의 레코드를 사용 하 여 응답 합니다.|-이름 및 가중치를 기준으로 영역 범위 목록|  
 
@@ -84,7 +84,7 @@ DNS 정책 기준 필드는 다음 두 요소로 구성 됩니다.
 |서버 인터페이스 IP 주소|EQ, 10.0.0.3|  
 |FQDN|EQ, *. contoso .com|  
 |쿼리 유형|NE, SRV|  
-|하루 중 시간|EQ, 20:00-22:00|  
+|시간|EQ, 20:00-22:00|  
 
 처리 순서에 다른 값이 있는 한 동일한 수준의 쿼리 확인 정책을 여러 개 만들 수 있습니다. 여러 정책을 사용할 수 있는 경우 DNS 서버는 다음과 같은 방식으로 들어오는 쿼리를 처리 합니다.  
 

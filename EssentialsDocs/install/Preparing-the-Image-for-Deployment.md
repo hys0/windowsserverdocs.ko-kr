@@ -3,7 +3,7 @@ title: 이미지 배포 준비
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: 681c6cad-7fde-494f-86a5-f4c7c15d23f9
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 16411ab073e9417c52592aa9a6b13707dd461537
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: aac776253c094c4a77269720bcc5762d6c41d720
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59838534"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80311556"
 ---
 # <a name="preparing-the-image-for-deployment"></a>이미지 배포 준비
 
@@ -123,7 +123,7 @@ ms.locfileid: "59838534"
     ```  
   
     > [!IMPORTANT]
-    >  unattend.xml을 sysprep의 매개 변수로 추가하지 않고 %systemdrive% 아래에 추가할 수도 있습니다. 파일을 c:\ 아래에 있는 경우 s 사용자 설정에 따라 적용 됩니다 있지만 sysprep의 매개 변수로 사용 하는 경우 해당 s 사용자 설정에 의해 적용 되지 됩니다. %systemdrive% 아래에 있는 unattend.xml은 서버가 다시 시작될 때마다 삭제됩니다. 따라서 %systemdrive% 아래에 unattend.xml을 만든 후에는 서버가 다시 시작되지 않도록 하세요.  
+    >  unattend.xml을 sysprep의 매개 변수로 추가하지 않고 %systemdrive% 아래에 추가할 수도 있습니다. 파일이 c:\ 아래에 있는 경우 사용자의 설정에 따라 다르지만 sysprep의 매개 변수로 사용 되는 경우에는 사용자의 설정에 포함 되지 않습니다. %systemdrive% 아래에 있는 unattend.xml은 서버가 다시 시작될 때마다 삭제됩니다. 따라서 %systemdrive% 아래에 unattend.xml을 만든 후에는 서버가 다시 시작되지 않도록 하세요.  
   
 10. 다음 명령을 실행하여 레지스트리 키를 추가하고 Windows OOBE 키 페이지를 건너뜁니다.  
   

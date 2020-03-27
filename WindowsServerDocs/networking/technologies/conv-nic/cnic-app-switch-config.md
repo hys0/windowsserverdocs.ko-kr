@@ -6,15 +6,15 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 6d53c797-fb67-4b9e-9066-1c9a8b76d2aa
 manager: dougkim
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 09/14/2018
-ms.openlocfilehash: d10e8ca6e4689b89a8b9532f77613f17280282b1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 57fc944461254e78635913ac298bacc26a0789f2
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71355480"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80309610"
 ---
 # <a name="physical-switch-configuration-for-converged-nic"></a>수렴 형 NIC에 대 한 물리적 스위치 구성
 
@@ -45,7 +45,7 @@ ms.locfileid: "71355480"
 13. 실행 \(표시 포트에서 구성이 올바르게 설정 되어 있는지 확인\)
 14. wr \(스위치 다시 부팅 전체에서 설정이 유지 되도록\)
 
-### <a name="tips"></a>팁
+### <a name="tips"></a>팁:
 1.  No #command # 부정 명령
 2.  새 VLAN을 추가 하는 방법: 저장소 네트워크가 VLAN 100에 있는 경우 int vlan 100 \(\)
 3.  기존 Vlan을 확인 하는 방법: vlan 표시

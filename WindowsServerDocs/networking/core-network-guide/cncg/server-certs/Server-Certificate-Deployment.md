@@ -6,14 +6,14 @@ ms.topic: article
 ms.assetid: 1ae4384b-f4e4-41e8-bc5f-9ac41953bca4
 ms.prod: windows-server
 ms.technology: networking
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 2105e2ccad69fcfdbc13e3201b4362e5c6b932e1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 63ae9ef71b913feeeb28e9838f636b316ea2969f
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406273"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318207"
 ---
 # <a name="server-certificate-deployment"></a>서버 인증서 배포
 
@@ -48,7 +48,7 @@ ms.locfileid: "71406273"
 -   [서버 인증서의 서버 등록 확인](../../../core-network-guide/cncg/server-certs/Verify-Server-Enrollment-of-a-Server-Certificate.md)  
   
 > [!NOTE]  
-> 이 가이드의 절차에는 사례에 대 한 지침을 포함 하지 마십시오는 **사용자 계정 컨트롤** 를 계속 하려면 권한이 요청 대화 상자가 열립니다. 이 가이드의 절차를 수행 하는 사용자의 작업에 대 한 응답에서 대화 상자를 연 경우 클릭 하는 동안이 대화 상자가 열리면 **계속**합니다.  
+> 이 가이드의 절차에는 사례에 대 한 지침을 포함 하지 마십시오는 **사용자 계정 컨트롤** 를 계속 하려면 권한이 요청 대화 상자가 열립니다. 이 가이드의 절차를 수행하는 동안 이 대화 상자가 열리는 경우와 작업에 대한 응답으로 이 대화 상자가 이미 열린 경우에는 **계속**을 클릭하십시오.  
   
 
 

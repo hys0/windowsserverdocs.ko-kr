@@ -3,7 +3,7 @@ title: 설치 중 추가 기능 설치 자동화
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,19 +12,19 @@ ms.assetid: 2e6ff6e4-8d68-4d49-9e38-8088bc8bf95e
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: c2345726a17a074fc7022c8c4dc9b2443e9ad384
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 579ed4e6e780c261ca582e943cebf2fc18b5ef62
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66433647"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80310111"
 ---
 # <a name="automate-installation-of-add-ins-during-setup"></a>설치 중 추가 기능 설치 자동화
 
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-##  <a name="BKMK_AddIns"></a> 설치 중 추가 기능 설치 자동화  
- 설치 중 추가 기능을 설치하려면 이 문서의 [초기 구성 후 작업 실행을 위해 PostIC.cmd 파일 만들기](Create-the-PostIC.cmd-File-for-Running-Post-Initial-Configuration-Tasks.md) 섹션에 설명되어 있는 PostIC.cmd 메서드를 사용합니다.  
+##  <a name="automate-installing-add-ins-during-setup"></a><a name="BKMK_AddIns"></a>설치 하는 동안 추가 기능 설치 자동화  
+ 설치 중 추가 기능을 설치하려면 이 문서의 [초기 구성 후 작업 실행을 위해 PostIC.cmd 파일 만들기](Create-the-PostIC.cmd-File-for-Running-Post-Initial-Configuration-Tasks.md)에 설명되어 있는 PostIC.cmd 메서드를 사용합니다.  
   
  PostIC.cmd에 다음 항목을 추가합니다.  
   
@@ -65,7 +65,7 @@ C:\Program Files\Windows Server\bin\Installaddin.exe <full path to wssx file> -q
 <¦>  
 ```  
   
- **exefile**은 설치 전 단계 수행을 위한 추가 기능 패키지의 실행 가능 파일이며 반드시 지정되어야 합니다. **NormalArgs**는 대화형 모드를 사용하는 경우 명령줄의 exefile로 전달될 인수를 지정합니다. 이 모드에서 exefile은 사용자 조작을 위한 팝업 창을 표시할 수 있습니다. **SilentArgs** 는 자동 모드를 사용하는 경우 명령줄의 exefile로 전달될 인수를 지정합니다(installaddin.exe 호출 시 -q 지정). 이 모드에서 exefile은 어떤 팝업 창도 표시하지 않을 것입니다. **IgnoreExitCode**를 참으로 지정한 경우 설치 전 단계는 항상 성공적인 것으로 간주되며 그렇지 않은 경우 종료 코드 0은 성공을, 1은 취소를, 그 외의 값은 실패를 나타냅니다. **NormalArgs**, **SilentArgs**및 **IgnoreExitCode** 태그는 모두 선택 사항입니다.  
+ **exefile**은 설치 전 단계 수행을 위한 추가 기능 패키지의 실행 가능 파일이며 반드시 지정되어야 합니다. **NormalArgs**는 대화형 모드를 사용하는 경우 명령줄의 exefile로 전달될 인수를 지정합니다. 이 모드에서 exefile은 사용자 조작을 위한 팝업 창을 표시할 수 있습니다. **SilentArgs** 는 자동 모드를 사용하는 경우 명령줄의 exefile로 전달될 인수를 지정합니다(installaddin.exe 호출 시 -q 지정). 이 모드에서 exefile은 어떤 팝업 창도 표시하지 않을 것입니다. **IgnoreExitCode**를 참으로 지정한 경우 설치 전 단계는 항상 성공적인 것으로 간주되며 그렇지 않은 경우 종료 코드 0은 성공을, 1은 취소를, 그 외의 값은 실패를 나타냅니다. **NormalArgs**, **SilentArgs** 및 **IgnoreExitCode** 태그는 모두 선택 사항입니다.  
   
  다음에 대해 사용자 지정된 제거 단계를 사용할 수 있습니다.  
   
@@ -118,7 +118,7 @@ C:\Program Files\Windows Server\bin\Installaddin.exe <full path to wssx file> -q
   exefile 호출 실패는 exefile이 0이나 1이 아닌 코드를 반환함에 따라 같은 동작의 반복으로 이어집니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [만들기 및 이미지를 사용자 지정](Creating-and-Customizing-the-Image.md)   
+ [이미지  만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)  
  [추가 사용자 지정](Additional-Customizations.md)   
- [배포용 이미지 준비](Preparing-the-Image-for-Deployment.md)   
+ [배포할 이미지를 준비 하는 중](Preparing-the-Image-for-Deployment.md)   
  [사용자 환경 테스트](Testing-the-Customer-Experience.md)

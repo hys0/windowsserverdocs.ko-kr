@@ -6,15 +6,15 @@ ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: bc625de9-ee31-40a4-9ad2-7448bfbfb6e6
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 08/23/2018
-ms.openlocfilehash: 78d5d2144e0def8e69a2a4ae5fdc2d7718936710
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: adf282222674130dcb16b0c7bfe0cf3ff05ed720
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71355773"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80317391"
 ---
 # <a name="kerberos-with-service-principal-name-spn"></a>SPN(서비스 사용자 이름) Kerberos
 
@@ -30,7 +30,7 @@ System Center Virtual Machine Manager Kerberos 기반 인증을 사용 합니다
 
 1.  도메인 컨트롤러 컴퓨터에서 **사용자 및 컴퓨터 Active Directory**를 시작 합니다.
 
-2.  **고급 보기 \>** 를 선택 합니다.
+2.  **보기 \> 고급**을 선택 합니다.
 
 3.  **컴퓨터**에서 네트워크 컨트롤러 컴퓨터 계정 중 하나를 찾은 다음 마우스 오른쪽 단추를 클릭 하 고 **속성**을 선택 합니다.
 
@@ -44,7 +44,7 @@ System Center Virtual Machine Manager Kerberos 기반 인증을 사용 합니다
 
     b.  사용 권한 아래에서 **Write ServicePrincipalName 유효성 검사**를 선택 합니다.
 
-    d.  아래로 스크롤하고 **속성** 아래에서 다음을 선택 합니다.
+    .  아래로 스크롤하고 **속성** 아래에서 다음을 선택 합니다.
 
        -  **ServicePrincipalName 읽기**
 
@@ -58,7 +58,7 @@ System Center Virtual Machine Manager Kerberos 기반 인증을 사용 합니다
 
 ## <a name="failure-to-provide-permissions-for-spn-registrationmodification"></a>SPN 등록/수정에 대 한 사용 권한을 제공 하지 못했습니다.
 
-**새** Windows Server 2019 배포에서 rest 클라이언트 인증에 Kerberos를 선택 하 고 네트워크 컨트롤러 노드에 SPN을 등록 하거나 수정할 수 있는 권한을 부여 하지 않은 경우 네트워크 컨트롤러의 REST 작업이 실패 하 여 관리 하지 못하게 됩니다. SDN입니다.
+**새** Windows Server 2019 배포에서 rest 클라이언트 인증에 Kerberos를 선택 하 고 네트워크 컨트롤러 노드에 SPN을 등록 하거나 수정할 수 있는 권한을 부여 하지 않으면 네트워크 컨트롤러의 REST 작업이 실패 하 여 SDN을 관리할 수 없게 됩니다.
 
 Windows Server 2016에서 Windows Server 2019로 업그레이드 하는 경우 REST 클라이언트 인증을 위해 Kerberos를 선택 하면 REST 작업이 차단 되지 않고 기존 프로덕션 배포에 대 한 투명도를 보장 합니다. 
 
@@ -66,7 +66,7 @@ SPN이 등록 되어 있지 않으면 REST 클라이언트 인증에서 NTLM을 
 
 
 >[!TIP]
->일반적으로는 REST 기반 작업에 IP 주소 또는 DNS 이름을 사용 하도록 네트워크 컨트롤러를 구성할 수 있습니다. 그러나 Kerberos를 구성 하는 경우 네트워크 컨트롤러에 대 한 REST 쿼리의 IP 주소를 사용할 수 없습니다. 예 \<를 들어를 사용할 https://networkcontroller.consotso.com\> 수는 있지만를 사용할 \< https://192.34.21.3\> 수는 없습니다. IP 주소가 사용 되는 경우 서비스 사용자 이름은 작동할 수 없습니다.
+>일반적으로는 REST 기반 작업에 IP 주소 또는 DNS 이름을 사용 하도록 네트워크 컨트롤러를 구성할 수 있습니다. 그러나 Kerberos를 구성 하는 경우 네트워크 컨트롤러에 대 한 REST 쿼리의 IP 주소를 사용할 수 없습니다. 예를 들어 \<https://networkcontroller.consotso.com\>를 사용할 수 있지만 \<https://192.34.21.3\>는 사용할 수 없습니다. IP 주소가 사용 되는 경우 서비스 사용자 이름은 작동할 수 없습니다.
 >
 >Windows Server 2016에서 Kerberos 인증과 함께 REST 작업에 IP 주소를 사용 하는 경우 실제 통신은 NTLM 인증을 통해 수행 된 것입니다. 이러한 배포에서 Windows Server 2019로 업그레이드 한 후에는 NTLM 기반 인증을 계속 사용 합니다. Kerberos 기반 인증으로 이동 하려면 REST 작업에 네트워크 컨트롤러 DNS 이름을 사용 하 고 SPN을 등록할 네트워크 컨트롤러 노드에 대 한 권한을 제공 해야 합니다.
 

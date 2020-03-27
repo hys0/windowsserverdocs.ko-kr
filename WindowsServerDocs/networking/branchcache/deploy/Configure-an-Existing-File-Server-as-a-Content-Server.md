@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: bdac7d2a-25b4-4f61-bed1-b290700c18f3
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: f675322c32db0816d5afb155d53fad9f096ad650
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 0568bf051fee3c9ee4fd5d1f403f5110f7669ad3
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71356686"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80319346"
 ---
 # <a name="configure-an-existing-file-server-as-a-content-server"></a>기존 파일 서버를 콘텐츠 서버로 구성
 

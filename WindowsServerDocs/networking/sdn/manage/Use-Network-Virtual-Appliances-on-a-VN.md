@@ -10,15 +10,15 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: networking-sdn
 ms.assetid: 3c361575-1050-46f4-ac94-fa42102f83c1
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 08/30/2018
-ms.openlocfilehash: 158183bab74e6e45c36c579f3259fc2095a939b5
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: db634af114610cce0bdbcacd58986ceb5f00dd99
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406043"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80317582"
 ---
 # <a name="use-network-virtual-appliances-on-a-virtual-network"></a>가상 네트워크에서 네트워크 가상 어플라이언스 사용
 
@@ -97,7 +97,7 @@ ms.locfileid: "71406043"
 
 이 예제에서는 MyVM_Ethernet1에 대 한 트래픽을 미러 Appliance_Ethernet1 구성 합니다.  두 Vm을 어플라이언스로, 다른 vm은 미러링을 사용 하 여 모니터링 하는 VM으로 배포 했다고 가정 합니다. 
 
-어플라이언스에는 관리를 위한 두 번째 네트워크 인터페이스가 있어야 합니다. Appliciance_Ethernet1에서 대상으로 미러링을 사용 하도록 설정한 후에는 더 이상 구성 된 IP 인터페이스로 향하는 트래픽을 수신 하지 않습니다.
+어플라이언스에는 관리를 위한 두 번째 네트워크 인터페이스가 있어야 합니다. Appliciance_Ethernet1에서 미러링을 사용 하도록 설정한 후에는 해당 위치에서 구성 된 IP 인터페이스로 향하는 트래픽을 더 이상 수신 하지 않습니다.
 
 
 **여기서**
@@ -168,6 +168,6 @@ ms.locfileid: "71406043"
    $srcNic = New-NetworkControllerNetworkInterface -ConnectionUri $uri  -Properties $srcNic.Properties -ResourceId $srcNic.ResourceId
    ```
 
-이러한 단계를 완료 한 후에는 Appliance_Ethernet1 인터페이스가 MyVM_Ethernet1 인터페이스에서 트래픽을 미러링합니다.
+이러한 단계를 완료 한 후 Appliance_Ethernet1 인터페이스는 MyVM_Ethernet1 인터페이스에서 트래픽을 미러링합니다.
  
 ---

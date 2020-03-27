@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: ef9828f8-c0ad-431d-ae52-e2065532e68f
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 9c313b88e2502a99baf5962a1f2eb224d67a38dc
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 5c74ca9fe60374d1bc1396d95c2e34cc5cd1fdd6
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406179"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80317761"
 ---
 # <a name="use-dns-policy-for-geo-location-based-traffic-management-with-primary-servers"></a>주 서버를 사용한 지리적 위치 기반 트래픽 관리에 DNS 정책 사용
 
@@ -42,7 +42,7 @@ DNS 클라이언트의 쿼리에 DNS 서버 응답을 제어 하는 다음 DNS �
 - **거부** DNS 서버는 해당 쿼리는 실패 응답으로 응답합니다.          
 - **허용** DNS 서버가 트래픽 관리 되는 응답으로 다시 응답 합니다.          
   
-##  <a name="bkmk_example"></a>지리적 위치 기반 트래픽 관리 예제
+##  <a name="geo-location-based-traffic-management-example"></a><a name="bkmk_example"></a>지리적 위치 기반 트래픽 관리 예제
 
 다음은 DNS 쿼리를 수행 하는 클라이언트의 실제 위치를 기준으로 트래픽 리디렉션은 달성 하기 위해 DNS 정책 사용 방법의 예입니다.   
   
@@ -56,7 +56,7 @@ Woodgrove.com 고객 웹 사이트에서 응답성이 뛰어난 환경을 얻을
   
 ![지리적 위치 기반 트래픽 관리 예제](../../media/DNS-Policy-Geo1/dns_policy_geo1.png)  
   
-##  <a name="bkmk_works"></a>DNS 이름 확인 프로세스의 작동 방식  
+##  <a name="how-the-dns-name-resolution-process-works"></a><a name="bkmk_works"></a>DNS 이름 확인 프로세스의 작동 방식  
   
 이름 확인 프로세스 중 사용자 www.woodgrove.com에 연결 하려고 합니다. 그러면 사용자의 컴퓨터에서 네트워크 연결 속성에서 구성 된 DNS 서버에 전송 되는 DNS 이름 확인 요청 됩니다. 일반적으로 역할 캐싱 해결 프로그램을 로컬 ISP에서 제공 하는 DNS 서버 이며는 LDNS 라고 합니다.   
   
@@ -69,7 +69,7 @@ Contoso 클라우드 서비스 DNS 서버 정책에 사용 하므로 contoso.com
 >[!NOTE]  
 >DNS 정책 DNS 쿼리를 포함 하는 UDP/TCP 패킷의 보낸 IP를 사용 합니다. 쿼리에서 여러 확인자/LDNS 홉을 통해 주 서버에 도달 하면 정책이 DNS 서버가 있는 쿼리를 받으면 마지막 해결 프로그램의 IP만을 고려 합니다.  
   
-##  <a name="bkmk_config"></a>지리적 위치 기반 쿼리 응답에 대 한 DNS 정책을 구성 하는 방법  
+##  <a name="how-to-configure-dns-policy-for-geo-location-based-query-responses"></a><a name="bkmk_config"></a>지리적 위치 기반 쿼리 응답에 대 한 DNS 정책을 구성 하는 방법  
 지리적 위치를 기반으로 쿼리 응답에 대 한 DNS 정책을 구성 하려면 다음 단계를 수행 해야 합니다.  
   
 1. [DNS 클라이언트 서브넷 만들기](#bkmk_subnets)  
@@ -85,7 +85,7 @@ Contoso 클라우드 서비스 DNS 서버 정책에 사용 하므로 contoso.com
 >[!IMPORTANT]  
 >다음 섹션에서는 예제 많은 매개 변수 값이 포함 된 예제 Windows PowerShell 명령을 포함 합니다. 이러한 명령에 대 한 예제 값은 다음이 명령을 실행 하기 전에 배포에 적합 한 값으로 바꾸는 것을 확인 합니다.  
   
-### <a name="bkmk_subnets"></a>DNS 클라이언트 서브넷 만들기  
+### <a name="create-the-dns-client-subnets"></a><a name="bkmk_subnets"></a>DNS 클라이언트 서브넷 만들기  
   
 첫 번째 단계 서브넷 또는 IP 주소 공간 트래픽을 리디렉션할 하려는 영역을 식별 하는 것입니다. 예를 들어 미국 및 유럽에 대 한 트래픽을 리디렉션할 하려면 서브넷 또는 IP 주소 공간 이러한 영역의 식별 해야 합니다.  
   
@@ -101,7 +101,7 @@ DNS 클라이언트 서브넷을 만드는 다음 Windows PowerShell 명령을 �
   
 자세한 내용은 참조 [추가 DnsServerClientSubnet](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverclientsubnet?view=win10-ps)합니다.  
   
-### <a name="bkmk_scopes"></a>영역 범위 만들기  
+### <a name="create-zone-scopes"></a><a name="bkmk_scopes"></a>영역 범위 만들기  
 클라이언트 서브넷 구성 요소를 두 개의 다른 영역 범위로 리디렉션할 트래픽을 각 사용자가 구성한 DNS 클라이언트 서브넷에 대 한 하나의 범위 영역을 분할 해야 합니다.   
   
 예를 들어, DNS 이름 www.woodgrove.com에 대 한 트래픽을 리디렉션할 하려는 경우에 만들어야 합니다 두 개의 다른 영역 범위가 미국 및 유럽 woodgrove.com 영역입니다.  
@@ -120,7 +120,7 @@ DNS 클라이언트 서브넷을 만드는 다음 Windows PowerShell 명령을 �
 
 자세한 내용은 참조 [추가 DnsServerZoneScope](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps)합니다.  
   
-### <a name="bkmk_records"></a>영역 범위에 레코드 추가  
+### <a name="add-records-to-the-zone-scopes"></a><a name="bkmk_records"></a>영역 범위에 레코드 추가  
 이제 두 영역 범위에는 웹 서버 호스트를 나타내는 레코드를 추가 해야 합니다.   
   
 예를 들어 **USZoneScope** 및 **EuropeZoneScope**합니다. USZoneScope를 IP 주소로 192.0.0.1, 미국 데이터 센터;에 있는 레코드 www.woodgrove.com를 추가할 수 있습니다. 및 EuropeZoneScope에서 유럽 데이터 센터에서 141.1.0.1 IP 주소와 동일한 레코드 (www.woodgrove.com)를 추가할 수 있습니다.   
@@ -145,7 +145,7 @@ DNS 클라이언트 서브넷을 만드는 다음 Windows PowerShell 명령을 �
   
 자세한 내용은 참조 [추가 DnsServerResourceRecord](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps)합니다.  
   
-### <a name="bkmk_policies"></a>정책 만들기  
+### <a name="create-the-policies"></a><a name="bkmk_policies"></a>정책 만들기  
 서브넷을 만든 후 (영역 범위), 파티션 및 사용자 레코드를 추가 했습니다, 그리고 영역의 올바른 범위 내에서 쿼리 응답의 DNS 클라이언트 서브넷 중 하나의 소스에서 쿼리 되 면 반환 되도록 서브넷과 파티션, 연결 하는 정책을 만들어야 합니다. 정책이 기본 영역 범위 매핑을 지정 해야 합니다.   
   
 DNS 클라이언트 서브넷에 연결 되 고 영역 범위가 DNS 정책을 만들려면 다음 Windows PowerShell 명령을 사용할 수 있습니다.   

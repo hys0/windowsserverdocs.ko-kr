@@ -3,7 +3,7 @@ title: Windows Server Essentials에서 서버 백업 관리
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: 0302d070-c58a-40f2-b56d-7e7842813d02
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 7e40a4675cf77d55a3047b41e0ab852fd7cd9de9
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: 9489ae5bdb8de594befc2d8aec18f686cb5cbedd
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79322245"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80311158"
 ---
 # <a name="manage-server-backup-in-windows-server-essentials"></a>Windows Server Essentials에서 서버 백업 관리
 
@@ -41,7 +41,7 @@ ms.locfileid: "79322245"
   
 -   [서버 백업에서 파일 및 폴더 복원](Manage-Server-Backup-in-Windows-Server-Essentials.md#BKMK_7)  
   
-##  <a name="BKMK_WhichBackup"></a>어떤 백업을 선택 해야 하나요?  
+##  <a name="which-backup-should-i-choose"></a><a name="BKMK_WhichBackup"></a>어떤 백업을 선택 해야 하나요?  
  최근에 백업을 정상적으로 수행했으며 해당 백업에 중요한 데이터가 모두 포함되어 있는 경우에는 백업을 간단하게 선택할 수 있습니다. 이전 백업에서 서버나 컴퓨터로 복원하는 동안 복원할 양호한 백업을 선택하려면 약간의 조사와 절충이 필요할 수 있습니다.  
   
 #### <a name="to-choose-a-backup"></a>백업을 선택하려면  
@@ -54,10 +54,10 @@ ms.locfileid: "79322245"
   
 4.  파일과 폴더를 대체 위치로 복원하고 파일 및 폴더의 소유자가 필요한 파일과 폴더를 원래 위치로 이동하게 하는 것이 좋습니다. 작업을 완료하면 대체 위치에 남아 있는 파일과 폴더를 삭제할 수 있습니다.  
   
-##  <a name="BKMK_1"></a>서버 백업 설정 또는 사용자 지정  
+##  <a name="set-up-or-customize-server-backup"></a><a name="BKMK_1"></a>서버 백업 설정 또는 사용자 지정  
  서버 백업은 설치 중에 자동으로 구성되지 않습니다. 매일 백업을 예약하여 서버와 해당 데이터를 자동으로 보호해야 합니다. 대부분 조직에서는 며칠 동안 생성된 데이터가 손실되면 안 되므로 매일 백업 계획을 유지 관리하는 것이 좋습니다. 자세한 내용은 [서버 백업 설정 또는 사용자 지정](Set-up-or-customize-server-backup.md)을 참조하세요.  
   
-##  <a name="BKMK_2"></a>서버 백업 중지 진행 중  
+##  <a name="stop-server-backup-in-progress"></a><a name="BKMK_2"></a>서버 백업 중지 진행 중  
  서버 백업이 정기적으로 예약된 시간에 시작되거나 서버 백업을 수동으로 시작하는지에 관계없이 진행 중인 백업을 중지할 수 있습니다.  
   
 #### <a name="to-stop-a-backup-in-progress"></a>진행 중인 백업을 중지하려면  
@@ -70,7 +70,7 @@ ms.locfileid: "79322245"
   
 4.  **예**를 클릭하여 작업을 확인합니다.  
   
-##  <a name="BKMK_3"></a>원격으로 백업 관리  
+##  <a name="remotely-manage-your-backups"></a><a name="BKMK_3"></a>원격으로 백업 관리  
  사무실을 비울 때 Windows Server Essentials 원격 웹 액세스를 통해 Windows Server Essentials 대시보드에 액세스하여 서버를 관리할 수 있습니다.  
   
 #### <a name="to-use-remote-web-access-to-manage-your-server"></a>원격 웹 액세스를 사용하여 서버를 관리하려면  
@@ -87,7 +87,7 @@ ms.locfileid: "79322245"
   
    원격 웹 액세스에 대 한 자세한 내용은 [원격 웹 액세스 개요](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_Overview)를 참조 하세요.  
   
-##  <a name="BKMK_4"></a>서버 백업 사용 안 함  
+##  <a name="disable-server-backup"></a><a name="BKMK_4"></a>서버 백업 사용 안 함  
  매일 백업을 예약하여 서버와 해당 데이터를 자동으로 보호해야 합니다. 대부분 조직에서는 며칠 동안 생성된 데이터가 손실되면 안 되므로 매일 백업 계획을 유지 관리하는 것이 좋습니다.  
   
  서버 백업이 이미 구성되어 있는데 나중에 타사 애플리케이션을 사용하여 서버를 백업하려면 Windows Server Essentials 서버 백업을 사용하지 않도록 설정할 수 있습니다.  
@@ -107,13 +107,13 @@ ms.locfileid: "79322245"
   
 5.  **구성 옵션** 페이지에서 **서버 백업 사용 안 함**을 클릭합니다. 마법사의 지시를 따릅니다.  
   
-##  <a name="BKMK_5"></a>서버 백업 설정에 대 한 자세한 정보  
+##  <a name="learn-more-about-setting-up-server-backup"></a><a name="BKMK_5"></a>서버 백업 설정에 대 한 자세한 정보  
  서버 백업은 서버 설정 중에 사용하도록 설정되지 않습니다.  
   
 > [!NOTE]
 >  서버 백업을 구성할 때 백업 대상 하드 드라이브로 사용할 외부 하드 드라이브 하나 이상을 서버에 연결해야 합니다.  
   
-###  <a name="BKMK_Target"></a>백업 대상 드라이브  
+###  <a name="backup-destination-drive"></a><a name="BKMK_Target"></a>백업 대상 드라이브  
  백업에 여러 외부 스토리지 드라이브를 사용하고 온사이트 및 오프사이트 스토리지 위치 사이에서 드라이브를 순환할 수 있습니다. 이렇게 하면 하드웨어 온사이트에 물리적 손상이 발생할 경우 데이터를 복구하는 데 도움이 되므로 재해 대비 계획을 향상할 수 있습니다.  
   
  서버 백업을 위한 스토리지 드라이브를 선택할 때 다음을 고려하세요.  
@@ -134,7 +134,7 @@ ms.locfileid: "79322245"
 ### <a name="server-backup-schedule"></a>서버 백업 일정  
  매일 백업을 예약하여 서버와 해당 데이터를 자동으로 보호해야 합니다. 대부분 조직에서는 며칠 동안 생성된 데이터가 손실되면 안 되므로 매일 백업 계획을 유지 관리하는 것이 좋습니다.  
   
- Windows Server Essentials 서버 백업 설정 마법사를 사용하면 하루에 여러 번 서버 데이터를 백업하도록 선택할 수 있습니다. 마법사에서는 차등 기반 백업을 예약하므로 백업이 빠르게 실행되고 서버 성능에 큰 영향을 미치지 않습니다. 기본적으로 **서버 백업 설정**에서는 매일 오후 12시 및 11시에 백업이 실행되도록 예약합니다. 그러나 조직의 요구에 따라 백업 일정을 조정할 수 있습니다. 때때로 백업 계획의 유효성을 평가하고 필요에 따라 계획을 변경해야 합니다.  
+ Windows Server Essentials 서버 백업 설정 마법사를 사용하면 하루에 여러 번 서버 데이터를 백업하도록 선택할 수 있습니다. 마법사에서는 차등 기반 백업을 예약하므로 백업이 빠르게 실행되고 서버 성능에 큰 영향을 미치지 않습니다. 기본적으로 **서버 백업 설정** 에서는 매일 오후 12시 및 11시에 백업이 실행되도록 예약합니다. 그러나 조직의 요구에 따라 백업 일정을 조정할 수 있습니다. 때때로 백업 계획의 유효성을 평가하고 필요에 따라 계획을 변경해야 합니다.  
   
 > [!NOTE]
 >  Windows Server Essentials의 기본 설치에서 서버는 매주 한 번 조각 모음을 자동으로 수행하도록 구성됩니다. 따라서 타사 이미징 소프트웨어를 사용할 경우 기본 백업보다 큰 백업이 만들어질 수 있습니다. 서버에서 정기적으로 조각 모음을 수행할 필요가 없으면 다음 단계에 따라 조각 모음 일정을 끌 수 있습니다.  
@@ -159,7 +159,7 @@ ms.locfileid: "79322245"
   
  예를 들어 많은 하드 드라이브 공간을 사용하는 녹화된 TV 프로그램이 포함된 폴더가 있을 수 있습니다. 일반적으로 이러한 프로그램을 시청한 이후에는 삭제하므로 이러한 파일을 백업하지 않도록 선택할 수 있습니다. 또는 유지하지 않으려는 임시 파일이 포함된 폴더가 있을 수 있습니다.  
   
-##  <a name="BKMK_6"></a>서버에서 하드 드라이브 다시 분할  
+##  <a name="repartition-a-hard-drive-on-the-server"></a><a name="BKMK_6"></a>서버에서 하드 드라이브 다시 분할  
  Windows Server Essentials 서버에서 포맷되지 않은 내부 하드 디스크 드라이브가 발견되면 새 하드 드라이브 추가 마법사의 링크가 포함된 상태 경고가 표시됩니다. 새 하드 드라이브 추가 마법사에서 하드 드라이브를 포맷하기 위한 다양한 옵션을 안내합니다. 마법사가 완료되면 드라이브 크기에 따라 포맷된 논리적 하드 드라이브 하나 이상이 하드 드라이브에서 생성되고 NTFS로 포맷됩니다.  
   
  하드 디스크 드라이브를 다시 분할해야 하면 다음 지침을 따르세요.  
@@ -168,7 +168,7 @@ ms.locfileid: "79322245"
   
 1.  **시작** 화면에서 **관리 도구**를 클릭하고 **컴퓨터 관리**를 두 번 클릭합니다.  
   
-2.  컴퓨터 관리에서 **스토리지**를 클릭하고 **디스크 관리**를 두 번 클릭합니다.  
+2.  컴퓨터 관리에서 **저장소**를 클릭하고 **디스크 관리**를 두 번 클릭합니다.  
   
 3.  다시 분할할 드라이브를 마우스 오른쪽 단추로 클릭하고 **볼륨 삭제**, **예**를 차례로 클릭합니다.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "79322245"
     > [!NOTE]
     >  하드 디스크 드라이브에서 모든 할당되지 않은 공간이 사용될 때까지 이 단계를 반복합니다.  
   
-##  <a name="BKMK_7"></a>서버 백업에서 파일 및 폴더 복원  
+##  <a name="restore-files-and-folders-from-a-server-backup"></a><a name="BKMK_7"></a>서버 백업에서 파일 및 폴더 복원  
  서버 백업에서 개별 파일과 폴더를 찾아서 복원할 수 있습니다.  
   
 #### <a name="to-restore-files-and-folders-from-a-server-backup"></a>서버 백업에서 파일 및 폴더를 복원하려면  

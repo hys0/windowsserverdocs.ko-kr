@@ -6,18 +6,18 @@ ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: article
 ms.assetid: 9adf420b-5a58-4e59-9906-71bd58f757fd
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: fe2120310c6c410b410649aff1372f93e0ea5db7
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 987b46b1748d5a889aa69823d3492a707948a100
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71356351"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318469"
 ---
 # <a name="install-the-branchcache-feature-and-configure-the-hosted-cache-server-by-service-connection-point"></a>서비스 연결 지점별 BranchCache 기능 설치 및 호스트 캐시 서버 구성
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 HCS1, 호스트 캐시 서버에서 BranchCache 기능을 설치 하 고 서비스 연결 지점이 등록 하려면 서버를 구성 하려면이 절차를 사용 하 여 수 \(SCP\) Active Directory 도메인 서비스에서 \(AD DS\)합니다.
 
@@ -26,7 +26,7 @@ AD DS에서 SCP를 사용 하 여 호스트 캐시 서버를 등록 하는 경�
 >[!IMPORTANT]
 >이 절차를 수행 하기 전에 컴퓨터를 도메인에 가입 하 고 고정 IP 주소를 사용 하 여 컴퓨터를 구성 해야 합니다.
 
-이 절차를 수행하려면 Administrators 그룹의 구성원이어야 합니다.
+이 절차를 수행하려면 Administrators 그룹의 멤버여야 합니다.
 
 ## <a name="to-install-the-branchcache-feature-and-configure-the-hosted-cache-server"></a>BranchCache 기능을 설치 하 고 호스트 캐시 서버를 구성 하려면  
 

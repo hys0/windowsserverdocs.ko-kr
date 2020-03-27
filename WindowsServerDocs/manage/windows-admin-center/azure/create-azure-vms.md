@@ -9,12 +9,12 @@ manager: jgerend
 ms.date: 01/28/2020
 ms.localizationpriority: medium
 ms.prod: windows-server
-ms.openlocfilehash: 08135ed3454bb22db1c2b0fa3a14a8342fbc2dab
-ms.sourcegitcommit: 8b801bd86e2ddf8255899b11f547daa920e5f651
+ms.openlocfilehash: 2249a69f60fe87758c74a58aa13b47124da41361
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80110666"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80319378"
 ---
 # <a name="deploy-azure-virtual-machines-from-within-windows-admin-center"></a>Windows 관리 센터 내에서 Azure virtual machines 배포
 
@@ -53,6 +53,10 @@ Azure VM 배포 단계와 마법사는 시나리오에 따라 달라 집니다. 
 이는 Windows Server 2012 R2, Windows Server 2016 또는 Windows Server 2019 Azure VM을 마이그레이션의 대상으로 선택 하는 단계별 만들기 도구를 시작 합니다. Storage Migration Service는 원본과 일치 하도록 권장 되는 VM 크기를 제공 하지만, **모든 크기 보기**를 클릭 하 여 재정의할 수 있습니다.
 <br><br>또한 원본 서버 데이터는 새 Azure VM을 Active Directory 도메인에 가입 하는 것 뿐만 아니라 관리 디스크와 해당 파일 시스템을 자동으로 구성 하는 데 사용 됩니다. VM이 Windows Server 2019 (권장) 인 경우 Windows 관리 센터에서 저장소 마이그레이션 서비스 프록시 기능을 설치 합니다. Azure VM을 만든 후에는 Windows 관리 센터에서 일반 저장소 마이그레이션 서비스 전송 워크플로로 돌아갑니다.  
 
+Storage Migration Service를 사용 하 여 Azure Vm으로 마이그레이션하는 방법을 보여 주는 비디오는 다음과 같습니다.
+
+> [!VIDEO https://www.youtube-nocookie.com/embed/k8Z9LuVL0xQ] 
+
 ### <a name="deploying-azure-vms-as-part-of-storage-replica"></a>저장소 복제본의 일부로 Azure Vm 배포
 
 1. Windows 관리 센터 내의 *저장소 복제본* 도구 *파트너 관계* 탭에서 **새로 만들기** 를 선택한 다음 *다른 서버와 복제* 에서 **새 Azure VM 사용** 을 선택 하 고 **다음**을 선택 합니다.
@@ -60,7 +64,7 @@ Azure VM 배포 단계와 마법사는 시나리오에 따라 달라 집니다. 
 그러면 Windows Server 2016 또는 Windows Server 2019 Azure VM을 마이그레이션 원본의 대상으로 자동으로 선택 하는 프로세스가 시작 됩니다. Storage Migration Service는 원본에 맞게 VM 크기를 권장 하지만 **모든 크기 보기**를 선택 하 여이를 재정의할 수 있습니다. 인벤토리 데이터는 새 Azure VM을 Active Directory 도메인에 가입 하는 것 뿐만 아니라 관리 디스크와 해당 파일 시스템을 자동으로 구성 하는 데 사용 됩니다. 
 3. Windows 관리 센터에서 Azure VM을 만든 후 복제 그룹 이름을 제공 하 고 **만들기**를 선택 합니다. 그러면 Windows 관리 센터에서 일반 저장소 복제본 초기 동기화 프로세스를 시작 하 여 데이터 보호를 시작 합니다.
 
-저장소 복제본을 사용 하 여 Azure Vm으로 마이그레이션하는 방법을 보여 주는 비디오는 다음과 같습니다.
+저장소 복제본을 사용 하 여 Azure Vm에 복제 하는 방법을 보여 주는 비디오는 다음과 같습니다.
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/_VqD7HjTewQ] 
 

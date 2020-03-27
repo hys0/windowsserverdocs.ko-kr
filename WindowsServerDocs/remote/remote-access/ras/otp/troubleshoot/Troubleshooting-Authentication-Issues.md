@@ -10,14 +10,14 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 71307757-f8f4-4f82-b8b3-ffd4fd8c5d6d
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 73fe8458910cbe7dfaf000a6546bcba9263a9683
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 74e332fff194374c6f3a5eeae5e26e8e4f5cfb42
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404303"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80313458"
 ---
 # <a name="troubleshooting-authentication-issues"></a>인증 문제 해결
 
@@ -30,7 +30,7 @@ ms.locfileid: "71404303"
   
 **받은 오류** (클라이언트 이벤트 로그)입니다. 사용자 <username>에 대해 OTP 인증서를 등록 하지 못했습니다 < CA_name >, 요청 실패, 가능한 실패 이유: CA 서버 이름을 확인할 수 없거나, 첫 번째 DirectAccess 터널을 통해 CA 서버에 액세스할 수 없거나, CA 서버에 대 한 연결을 설정할 수 없습니다.  
   
-**가능한 원인**  
+**원인**  
   
 사용자가 유효한 일회용 암호를 제공 하 고 DirectAccess 서버에서 인증서 요청을 서명 했습니다. 그러나 클라이언트 컴퓨터는 OTP 인증서를 발급 하는 CA에 연결 하 여 등록 프로세스를 완료할 수 없습니다.  
   
@@ -57,7 +57,7 @@ DirectAccess 서버에서 다음 Windows PowerShell 명령을 실행 합니다.
   
 -   기본 경로 < OTP_authentication_path > 및 포트 < OTP_authentication_port >를 사용 하 여 원격 액세스 서버 < DirectAccess_server_hostname >에서 응답을 받지 못했습니다. 오류 코드: internal_error_code >를 < 합니다.  
   
-**가능한 원인**  
+**원인**  
   
 클라이언트 컴퓨터는 네트워크 문제 또는 DirectAccess 서버의 잘못 구성 된 IIS 서버 때문에 인터넷을 통해 DirectAccess 서버에 액세스할 수 없습니다.  
   
@@ -70,7 +70,7 @@ DirectAccess 서버에서 다음 Windows PowerShell 명령을 실행 합니다.
   
 **받은 오류** (클라이언트 이벤트 로그)입니다. CA < CA_name >에서 인증서를 등록 하지 못했습니다. OTP 서명 인증서에서 예상한 대로 요청이 서명 되지 않았거나 사용자에 게 등록할 수 있는 권한이 없습니다.  
   
-**가능한 원인**  
+**원인**  
   
 사용자가 제공한 일회용 암호가 올바르지만 발급 된 CA (인증 기관)가 OTP 로그온 인증서를 발급 하는 것을 거부 했습니다. 인증서 요청이 올바른 EKU (OTP 등록 기관 응용 프로그램 정책)로 올바르게 서명 되지 않았거나 사용자에 게 DA OTP 템플릿에 대 한 "등록" 권한이 없는 것일 수 있습니다.  
   
@@ -83,7 +83,7 @@ DirectAccess OTP 사용자에 게 DirectAccess OTP 로그온 인증서에 대 �
   
 **받은 오류** (클라이언트 이벤트 로그)입니다.  OTP에 필요한 컴퓨터 인증서를 로컬 컴퓨터 인증서 저장소에서 찾을 수 없으므로 OTP 인증을 완료할 수 없습니다.  
   
-**가능한 원인**  
+**원인**  
   
 Directaccess OTP 인증에는 DirectAccess 서버와의 SSL 연결을 설정 하기 위해 클라이언트 컴퓨터 인증서가 필요 합니다. 그러나 클라이언트 컴퓨터 인증서가 없거나 유효 하지 않습니다. 예를 들어 인증서가 만료 된 경우입니다.  
   
@@ -104,7 +104,7 @@ Directaccess OTP 인증에는 DirectAccess 서버와의 SSL 연결을 설정 하
   
 **받은 오류** (클라이언트 이벤트 로그)입니다. DA 서버가 발급 CA의 주소를 반환 하지 않았으므로 OTP 인증을 완료할 수 없습니다.  
   
-**가능한 원인**  
+**원인**  
   
 OTP 인증서를 발급 하는 Ca가 없거나 OTP 인증서를 발급 하는 구성 된 모든 Ca가 응답 하지 않습니다.  
   
@@ -125,7 +125,7 @@ OTP 인증서를 발급 하는 Ca가 없거나 OTP 인증서를 발급 하는 �
   
 **받은 오류** (클라이언트 이벤트 로그)입니다. OTP 인증은 예상 대로 완료할 수 없습니다. 원격 액세스 서버의 이름이 나 주소를 확인할 수 없습니다.  오류 코드: error_code >를 < 합니다. 서버 관리자가 DirectAccess 설정의 유효성을 검사 해야 합니다.  
   
-**가능한 원인**  
+**원인**  
   
 DirectAccess 서버의 주소가 제대로 구성 되지 않았습니다.  
   
@@ -140,7 +140,7 @@ DirectAccess 서버의 주소가 제대로 구성 되지 않았습니다.
   
 **받은 오류** (클라이언트 이벤트 로그)입니다. OTP 인증에 대 한 인증서 요청을 초기화할 수 없습니다. 개인 키를 생성할 수 없거나 사용자 <username>가 도메인 컨트롤러에서 인증서 템플릿 < OTP_template_name >에 액세스할 수 없습니다.  
   
-**가능한 원인**  
+**원인**  
   
 이 오류의 가능한 원인은 두 가지입니다.  
   
@@ -159,7 +159,7 @@ DirectAccess 서버의 주소가 제대로 구성 되지 않았습니다.
   
 **받은 오류** (클라이언트 이벤트 로그)입니다. OTP 인증을 위해 도메인 컨트롤러와의 연결을 설정할 수 없습니다. 오류 코드: error_code >를 < 합니다.  
   
-**가능한 원인**  
+**원인**  
   
 이 오류의 가능한 원인은 두 가지입니다.  
   
@@ -178,7 +178,7 @@ DirectAccess 서버의 주소가 제대로 구성 되지 않았습니다.
   
 **받은 오류** (클라이언트 이벤트 로그)입니다. 사용자 (<username>)에 대해 원격 액세스 서버 (< DirectAccess_server_name >)를 사용 하는 OTP 인증에는 사용자의 과제가 필요 합니다.  
   
-**가능한 원인**  
+**원인**  
   
 사용 되는 OTP 공급자를 사용 하려면 사용자가 RADIUS 챌린지/응답 교환 형식으로 추가 자격 증명을 제공 해야 합니다 .이는 Windows Server 2012 DirectAccess OTP에서 지원 되지 않습니다.  
   
@@ -191,7 +191,7 @@ DirectAccess 서버의 주소가 제대로 구성 되지 않았습니다.
   
 **받은 오류** (클라이언트 이벤트 로그)입니다. 사용자 <username> 인증서를 요청한 CA 템플릿에서 OTP 인증서를 발급 하도록 구성 되지 않았습니다.  
   
-**가능한 원인**  
+**원인**  
   
 DirectAccess OTP 로그온 템플릿이 대체 되었고 클라이언트 컴퓨터가 이전 템플릿을 사용 하 여 인증을 시도 하 고 있습니다.  
   
@@ -208,7 +208,7 @@ DirectAccess OTP 로그온 템플릿이 대체 되었고 클라이언트 컴퓨�
   
 **받은 오류** (클라이언트 이벤트 로그)입니다. OTP 서명 인증서를 찾을 수 없습니다. OTP 인증서 등록 요청에 서명할 수 없습니다.  
   
-**가능한 원인**  
+**원인**  
   
 원격 액세스 서버에서 DirectAccess OTP 서명 인증서를 찾을 수 없습니다. 따라서 사용자 인증서 요청은 원격 액세스 서버에서 서명할 수 없습니다. 서명 인증서가 없거나 서명 인증서가 만료 되어 갱신 되지 않았습니다.  
   
@@ -239,7 +239,7 @@ OTP 서명 인증서 템플릿을 만들려면 3.3 등록 기관 인증서 계�
   
 OTP 인증에 지정 된 사용자 이름 <username> 존재 하지 않습니다.  
   
-**가능한 원인**  
+**원인**  
   
 사용자 계정에 UPN (사용자 계정 이름) 또는 DN (고유 이름) 특성이 적절히 설정 되지 않았습니다. 이러한 속성은 DirectAccess OTP의 적절 한 기능을 위해 필요 합니다.  
   
@@ -250,7 +250,7 @@ OTP 인증에 지정 된 사용자 이름 <username> 존재 하지 않습니다.
 ## <a name="otp-certificate-is-not-trusted-for-login"></a>OTP 인증서를 로그인에 대해 신뢰할 수 없음  
 **시나리오**. "내부 오류로 인해 인증 하지 못했습니다." 라는 오류로 인해 사용자가 OTP를 사용 하 여 인증 하지 못했습니다.  
   
-**가능한 원인**  
+**원인**  
   
 OTP 인증서를 발급 하는 CA가 enterprise NTAuth 스토어에 없습니다. 따라서 등록 된 인증서는 로그온에 사용할 수 없습니다. 이는 도메인 간 CA 트러스트가 설정 되지 않은 다중 도메인 및 다중 포리스트 환경에서 발생할 수 있습니다.  
   
@@ -263,7 +263,7 @@ OTP 인증서를 발급 하는 CA 계층 구조의 루트 인증서가 사용자
   
 **받은 오류** (클라이언트 컴퓨터)입니다. Windows에서 자격 증명을 확인 하는 동안 문제가 발생 했습니다. 다시 시도 하거나 관리자에 게 도움을 요청 하십시오.  
   
-**가능한 원인**  
+**원인**  
   
 DirectAccess OTP 로그온 인증서에 CRL이 포함 되지 않은 경우 Kerberos 인증 프로토콜이 작동 하지 않습니다. 다음 중 하나가 발생 하므로 DirectAccess OTP 로그온 인증서에 CRL이 포함 되지 않습니다.  
   

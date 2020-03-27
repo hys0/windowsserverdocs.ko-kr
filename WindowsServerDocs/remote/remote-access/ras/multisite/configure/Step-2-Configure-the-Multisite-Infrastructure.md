@@ -10,14 +10,14 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: faec70ac-88c0-4b0a-85c7-f0fe21e28257
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: b345ce7cdbb0cf9ff91ec99275232da5ba34edb0
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 6f020dc2bf5c0dc11d18e886346a98a4a40f3855
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71367200"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80314052"
 ---
 # <a name="step-2-configure-the-multisite-infrastructure"></a>멀티 사이트 인프라를 구성 하는 2 단계
 
@@ -25,7 +25,7 @@ ms.locfileid: "71367200"
 
 멀티 사이트 배포를 구성 하는 다양 한 네트워크 인프라 설정을 포함 하 여 수정 하는 데 필요한 단계: 사이트 및 도메인 컨트롤러, 추가 보안 그룹을 자동으로 사용 하지 않는 경우 그룹 정책 개체 (Gpo)를 구성 및 Gpo 구성 추가 Active Directory를 구성 합니다.  
   
-|태스크|설명|  
+|작업|설명|  
 |----|--------|  
 |2.1. 추가 Active Directory 사이트 구성|배포에 대 한 추가 Active Directory 사이트를 구성 합니다.|  
 |2.2. 추가 도메인 컨트롤러 구성|필요에 따라 추가 Active Directory 도메인 컨트롤러를 구성 합니다.|  
@@ -33,9 +33,9 @@ ms.locfileid: "71367200"
 |2.4. GPO 구성|필요에 따라 추가 그룹 정책 개체를 구성 합니다.|  
   
 > [!NOTE]  
-> 이 항목에는 설명한 절차의 일부를 자동화하는 데 사용할 수 있는 샘플 Windows PowerShell cmdlet이 포함되어 있습니다. 자세한 내용은 참조 [Cmdlet를 사용 하 여](https://go.microsoft.com/fwlink/p/?linkid=230693)합니다.  
+> 이 항목에는 설명된 일부 절차를 자동화하는 데 사용할 수 있는 예제 Windows PowerShell cmdlet이 포함되어 있습니다. 자세한 내용은 참조 [Cmdlet를 사용 하 여](https://go.microsoft.com/fwlink/p/?linkid=230693)합니다.  
   
-## <a name="BKMK_ConfigAD"></a>2.1. 추가 Active Directory 사이트 구성  
+## <a name="21-configure-additional-active-directory-sites"></a><a name="BKMK_ConfigAD"></a>2.1. 추가 Active Directory 사이트 구성  
 모든 진입점은 단일 Active Directory 사이트에 있을 수 있습니다. 따라서 하나 이상의 Active Directory 사이트에이 멀티 사이트 구성에 원격 액세스 서버 구현의 필요 합니다. 첫 번째 Active Directory 사이트를 만들어야 하는 경우 또는 멀티 사이트 배포에 대 한 추가 Active Directory 사이트를 사용 하려는 경우이 절차를 따르십시오. Active Directory 사이트 및 서비스 스냅인을 사용 하 여 새 사이트를 만들 조직의 "s 네트워크입니다.  
 
 멤버는 **Enterprise Admins** 포리스트의 그룹 또는 **Domain Admins** 포리스트 루트 도메인 또는 최소한 해당 그룹의 그룹은이 절차를 완료 해야 합니다. 적절 한 계정을 사용 하는 방법에 대 한 세부 정보를 검토 하 고 그룹 구성원 자격 [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477)합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "71367200"
   
 ![Windows PowerShell](../../../../media/Step-2-Configure-the-Multisite-Infrastructure/PowerShellLogoSmall.gif)***<em>windows powershell 해당 명령</em>***  
   
-다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
+다음 Windows PowerShell cmdlet은 이전 절차와 동일한 기능을 수행합니다. 서식 조건 때문에 각 cmdlet이 여러 줄로 자동 줄 바꿈되어 표시되더라도 한 줄에 입력합니다.  
   
 설치 하려면 "Windows PowerShell 용 Active Directory 모듈" Windows 기능:  
   
@@ -92,7 +92,7 @@ New-ADReplicationSubnet -Name "10.2.0.0/24" -Site "Second-Site"
 New-ADReplicationSubnet -Name "2001:db8:2::/64" -Site "Second-Site"  
 ```  
   
-## <a name="BKMK_AddDC"></a>2.2. 추가 도메인 컨트롤러 구성  
+## <a name="22-configure-additional-domain-controllers"></a><a name="BKMK_AddDC"></a>2.2. 추가 도메인 컨트롤러 구성  
 단일 도메인에서 멀티 사이트 배포를 구성 하려면 배포에서 각 사이트에 대 한 쓰기 가능한 도메인 컨트롤러가 하나 이상 있는지이 좋습니다.  
   
 도메인 컨트롤러 설치 되 고 도메인의 Domain Admins 그룹의 구성원 이어야 하는 최소한이 절차를 수행 합니다.  
@@ -148,14 +148,14 @@ New-ADReplicationSubnet -Name "2001:db8:2::/64" -Site "Second-Site"
   
 15. 자동으로 시작 되지 않은 경우 컴퓨터를 다시 시작 합니다.  
   
-## <a name="BKMK_ConfigSG"></a>2.3. 보안 그룹 구성  
+## <a name="23-configure-security-groups"></a><a name="BKMK_ConfigSG"></a>2.3. 보안 그룹 구성  
 멀티 사이트 배포는 Windows 7 클라이언트 컴퓨터에 액세스할 수 있는 배포의 모든 진입점에 대 한 Windows 7 클라이언트 컴퓨터에 대 한 추가 보안 그룹을 필요 합니다. Windows 7 클라이언트 컴퓨터를 포함 하는 여러 도메인에 있는 동일한 진입점에 대 한 각 도메인에서 보안 그룹을 만드는 권장 됩니다. 또는 두 도메인 모두에서 클라이언트 컴퓨터를 포함 하는 하나의 유니버설 보안 그룹을 사용할 수 있습니다. 예를 들어 두 도메인이 있는 환경에서 항목에 없지만 1과 3 이며 진입점에 Windows 7 클라이언트 컴퓨터에 대 한 액세스를 허용 하려는 경우 2, 다음 각 도메인의 각 진입점에 대 한 Windows 7 클라이언트 컴퓨터를 포함 하도록 두 개의 새 보안 그룹을 만들 합니다.  
   
 ### <a name="to-configure-additional-security-groups"></a>추가 보안 그룹을 구성 하려면  
   
 1.  주 도메인 컨트롤러에서 **시작**, 를 클릭 하 고 **Active Directory 사용자 및 컴퓨터**합니다.  
   
-2.  콘솔 트리에서 corp.contoso.com/Users 예를 들어, 새 그룹을 추가 하려는 폴더를 마우스 오른쪽 단추로 클릭 합니다. 가리킨 **새로**, 를 클릭 하 고 **그룹**합니다.  
+2.  콘솔 트리에서 corp.contoso.com/Users 예를 들어, 새 그룹을 추가 하려는 폴더를 마우스 오른쪽 단추로 클릭 합니다. **새로 만들기**를 가리킨 다음 **그룹**을 클릭합니다.  
   
 3.  에 **새 개체-그룹** 대화 상자의 **그룹 이름**, 예를 들어 Win7_Clients_Entrypoint1 새 그룹의 이름을 입력 합니다.  
   
@@ -171,7 +171,7 @@ New-ADReplicationSubnet -Name "2001:db8:2::/64" -Site "Second-Site"
   
 ![Windows PowerShell](../../../../media/Step-2-Configure-the-Multisite-Infrastructure/PowerShellLogoSmall.gif)***<em>windows powershell 해당 명령</em>***  
   
-다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
+다음 Windows PowerShell cmdlet은 이전 절차와 동일한 기능을 수행합니다. 서식 조건 때문에 각 cmdlet이 여러 줄로 자동 줄 바꿈되어 표시되더라도 한 줄에 입력합니다.  
   
 설치 하려면 "Windows PowerShell 용 Active Directory 모듈" Windows 기능:  
   
@@ -194,7 +194,7 @@ New-ADGroup -GroupScope universal -Name Win7_Clients_Entrypoint1
 Add-ADGroupMember -Identity Win7_Clients_Entrypoint1 -Members CLIENT2$  
 ```  
   
-## <a name="ConfigGPOs"></a>2.4. GPO 구성  
+## <a name="24-configure-gpos"></a><a name="ConfigGPOs"></a>2.4. GPO 구성  
 멀티 사이트 원격 액세스 배포에는 다음 그룹 정책 개체 사항이 필요합니다.  
   
 -   원격 액세스 서버에 대 한 모든 진입점에 대 한 GPO 합니다.  
@@ -213,10 +213,10 @@ Add-ADGroupMember -Identity Win7_Clients_Entrypoint1 -Members CLIENT2$
   
 그룹 정책 개체를 만들려면 참조 [만들고 그룹 정책 개체 편집](https://technet.microsoft.com/library/cc754740.aspx)합니다.  
   
-### <a name="DCMaintandDowntime"></a>도메인 컨트롤러 유지 관리 및 가동 중지 시간  
+### <a name="domain-controller-maintenance-and-downtime"></a><a name="DCMaintandDowntime"></a>도메인 컨트롤러 유지 관리 및 가동 중지 시간  
 PDC 에뮬레이터 역할을 실행 하는 도메인 컨트롤러 또는 서버 Gpo를 관리 하는 도메인 컨트롤러는 가동 중지 시간을 발생 하는 경우 로드 하거나 원격 액세스 구성을 수정 하는 것이 불가능 합니다. 다른 도메인 컨트롤러를 사용할 수 있는 경우 클라이언트 연결 되지 영향이 수 있습니다.  
   
-을 로드 하거나 원격 액세스 구성을 수정 하려면 클라이언트 또는 응용 프로그램 서버 Gpo;에 대 한 다른 도메인 컨트롤러에 PDC 에뮬레이터 역할을 전송할 수 있습니다. 서버 Gpo에 대 한 서버 Gpo를 관리 하는 도메인 컨트롤러를 변경 합니다.  
+을 로드 하거나 원격 액세스 구성을 수정 하려면 클라이언트 또는 애플리케이션 서버 Gpo;에 대 한 다른 도메인 컨트롤러에 PDC 에뮬레이터 역할을 전송할 수 있습니다. 서버 Gpo에 대 한 서버 Gpo를 관리 하는 도메인 컨트롤러를 변경 합니다.  
   
 > [!IMPORTANT]  
 > 도메인 관리자가만이 작업을 수행할 수 있습니다. 주 도메인 컨트롤러 변경에 따른 결과 원격 액세스를 제한 되지 않습니다. 따라서 PDC 에뮬레이터 역할을 전송 하는 경우 주의 해야 합니다.  
@@ -224,7 +224,7 @@ PDC 에뮬레이터 역할을 실행 하는 도메인 컨트롤러 또는 서버
 > [!NOTE]  
 > 도메인 컨트롤러 연결을 수정 하기 전에 모든 원격 액세스 배포에서 Gpo의 모든 도메인의 도메인 컨트롤러에 복제 되었는지 확인 합니다. GPO 동기화 되지 않으면 최근 구성 변경 내용을 손실 될 구성이 손상 시킬 수 있는 도메인 컨트롤러 연결을 수정한 후 합니다. GPO 동기화를 확인 하려면 참조 [그룹 정책 인프라 상태 확인](https://technet.microsoft.com/library/jj134176.aspx)합니다.  
   
-#### <a name="TransferPDC"></a>PDC 에뮬레이터 역할을 전송 하려면  
+#### <a name="to-transfer-the-pdc-emulator-role"></a><a name="TransferPDC"></a>PDC 에뮬레이터 역할을 전송 하려면  
   
 1.  에 **시작** 화면에서 입력**dsa.msc**, 한 다음 ENTER를 누릅니다.  
   
@@ -239,7 +239,7 @@ PDC 에뮬레이터 역할을 실행 하는 도메인 컨트롤러 또는 서버
   
 5.  클릭 **예** 하는 역할을 전송 하 고 클릭 한 다음 확인을 **닫기**합니다.  
   
-#### <a name="ChangeDC"></a>서버 Gpo를 관리 하는 도메인 컨트롤러를 변경 하려면  
+#### <a name="to-change-the-domain-controller-that-manages-server-gpos"></a><a name="ChangeDC"></a>서버 Gpo를 관리 하는 도메인 컨트롤러를 변경 하려면  
   
 -   Windows PowerShell cmdlet을 실행  `HYPERLINK "https://technet.microsoft.com/library/hh918412.aspx" Set-DAEntryPointDC` 원격 액세스 서버에 연결할 수 없는 도메인 컨트롤러의 이름을 지정 하 고는 *ExistingDC* 매개 변수입니다. 이 명령은 해당 도메인 컨트롤러에서 현재 관리 되는 진입점의 서버 Gpo에 대 한 도메인 컨트롤러 연결을 수정 합니다.  
   
@@ -255,7 +255,7 @@ PDC 에뮬레이터 역할을 실행 하는 도메인 컨트롤러 또는 서버
         Set-DAEntryPointDC "ExistingDC 'dc1.corp.contoso.com' "ComputerName 'DA1.corp.contoso.com' "ErrorAction Inquire  
         ```  
   
-### <a name="ChangeTwoDCs"></a>서버 Gpo를 관리 하는 두 개 이상의 도메인 컨트롤러 변경  
+### <a name="change-two-or-more-domain-controllers-that-manage-server-gpos"></a><a name="ChangeTwoDCs"></a>서버 Gpo를 관리 하는 두 개 이상의 도메인 컨트롤러 변경  
 사례 수가 최소 서버 Gpo를 관리 하는 도메인 컨트롤러 두 개 이상 제공 되지 않습니다. 이 경우 서버 Gpo에 대 한 도메인 컨트롤러 연결을 변경 하려면 더 많은 단계가 필요한 합니다.  
   
 원격 액세스 서버의 레지스트리에 모든 서버 Gpo에서 도메인 컨트롤러 연결 정보가 저장 됩니다. 다음 예제에서 두 명의 원격 액세스 서버를 "DA1" 인 두 개의 진입점에 있는 "1" 및 "d a 2"의 진입점 "진입점 2"입니다. "진입점 1"의 서버 GPO의 서버 GPO 하는 동안 도메인 컨트롤러 "d c 1"에서 관리 하는 "진입점 2"는 "DC2" 도메인 컨트롤러에서 관리 합니다. "D c 1" 및 "d c 2"을 모두 사용할 수 있습니다. 세 번째 도메인 컨트롤러 "DC3" 도메인에서 이용할 수 있으며 "DC1" 및 "d c 2"에서 데이터를 이미 "DC3"에 복제 됩니다.  
@@ -299,7 +299,7 @@ PDC 에뮬레이터 역할을 실행 하는 도메인 컨트롤러 또는 서버
   
     ![Windows PowerShell](../../../../media/Step-2-Configure-the-Multisite-Infrastructure/DCAssocFinal.png)  
   
-### <a name="ConfigDistOptimization"></a>구성 배포 최적화  
+### <a name="optimization-of-configuration-distribution"></a><a name="ConfigDistOptimization"></a>구성 배포 최적화  
 구성 변경 작업을 수행 하는 경우 서버 Gpo 원격 액세스 서버에 전파 된 후에 변경 내용이 적용 됩니다. 구성 배포 시간을 줄이기 위해 원격 액세스는 서버 GPO를 만들 때 원격 액세스 서버에 가장 가까운 "<https://technet.microsoft.com/library/cc978016.aspx>" 하이퍼링크 인 쓰기 가능한 도메인 컨트롤러를 자동으로 선택 합니다.  
   
 일부 시나리오에서는 해야 구성 배포 시간을 최적화 하기 위해 서버 GPO를 관리 하는 도메인 컨트롤러를 수동으로 수정 해야 합니다.  
@@ -332,7 +332,7 @@ PDC 에뮬레이터 역할을 실행 하는 도메인 컨트롤러 또는 서버
     > [!NOTE]  
     > 에 대 한 해당 진입점의 구성원 인 원격 액세스 서버를 지정 해야 특정 진입점과 연결 된 도메인 컨트롤러를 수정할 때는 *ComputerName* 매개 변수입니다.  
   
-## <a name="BKMK_Links"></a>참고 항목  
+## <a name="see-also"></a><a name="BKMK_Links"></a>참고 항목  
   
 -   [3 단계: 멀티 사이트 배포 구성](Step-3-Configure-the-Multisite-Deployment.md)  
 -   [1 단계: 단일 서버 원격 액세스 배포 구현](Step-1-Implement-a-Single-Server-Remote-Access-Deployment.md)  

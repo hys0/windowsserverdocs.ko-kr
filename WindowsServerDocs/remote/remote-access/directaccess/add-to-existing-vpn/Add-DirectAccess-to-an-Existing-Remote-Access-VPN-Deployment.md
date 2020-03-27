@@ -10,21 +10,21 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b5db01f7-1ae0-46f2-9be7-8d9e121446b2
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 9266acfb38c65711d6d0b12e2b6223a8a4e91746
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 1ad1b823cf48a2c322c7ccab1799c76993b1e9bf
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71388803"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80314809"
 ---
 # <a name="add-directaccess-to-an-existing-remote-access-vpn-deployment"></a>기존 원격 액세스(VPN) 배포에 DirectAccess 추가
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
   
-## <a name="BKMK_OVER"></a>시나리오 설명  
-이 시나리오에서는 VPN을 이미 설치 하 고 구성한 후 Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012를 실행 하는 단일 컴퓨터가 권장 설정으로 DirectAccess 서버로 구성 됩니다. 부하 분산 된 클러스터, 멀티 사이트 배포 또는 2 단계 클라이언트 인증과 같은 엔터프라이즈 기능을 사용 하 여 DirectAccess를 구성 하려면이 항목에 설명 된 시나리오를 완료 하 여 단일 서버를 설정한 다음 엔터프라이즈를 설정 합니다. [엔터프라이즈에 원격 액세스 배포](../../ras/Deploy-Remote-Access-in-an-Enterprise.md)에 설명 된 시나리오입니다.  
+## <a name="scenario-description"></a><a name="BKMK_OVER"></a>시나리오 설명  
+이 시나리오에서는 VPN을 이미 설치 하 고 구성한 후 Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012를 실행 하는 단일 컴퓨터가 권장 설정으로 DirectAccess 서버로 구성 됩니다. 부하 분산 된 클러스터, 멀티 사이트 배포 또는 2 단계 클라이언트 인증과 같은 엔터프라이즈 기능을 사용 하 여 DirectAccess를 구성 하려면이 항목에 설명 된 시나리오를 완료 하 여 단일 서버를 설정한 다음 [엔터프라이즈에 원격 액세스 배포](../../ras/Deploy-Remote-Access-in-an-Enterprise.md)에 설명 된 대로 엔터프라이즈 시나리오를 설정 합니다.  
   
 ## <a name="in-this-scenario"></a>이 시나리오의 내용  
 단일 원격 액세스 서버를 설치하려면 몇 가지 계획 및 배포 단계가 필요합니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "71388803"
   
     이 단계에서는 필요에 따라 배포가 작동하는지 확인합니다.  
   
-## <a name="BKMK_APP"></a>실용적인 응용 프로그램  
+## <a name="practical-applications"></a><a name="BKMK_APP"></a>실용적인 응용 프로그램  
 단일 원격 액세스 서버를 배포하면 다음과 같은 이점이 있습니다.  
   
 -   **간편한 액세스**  
@@ -66,15 +66,15 @@ ms.locfileid: "71388803"
   
     인터넷에 액세스할 수 있는 DirectAccess 클라이언트 컴퓨터는 회사 내부 네트워크에 없는 경우에도 원격 액세스 관리자가 DirectAccess를 통해 원격으로 관리할 수 있습니다. 회사 요구 사항을 충족하지 않는 클라이언트 컴퓨터를 관리 서버에서 자동으로 업데이트할 수 있습니다.  
   
-## <a name="BKMK_NEW"></a>이 시나리오에 필요한 역할 및 기능  
+## <a name="roles-and-features-required-for-this-scenario"></a><a name="BKMK_NEW"></a>이 시나리오에 필요한 역할 및 기능  
 다음 표에는 이 시나리오에 필요한 역할 및 기능이 나와 있습니다.  
   
 |역할/기능|이 시나리오를 지원하는 방법|  
 |---------|-----------------|  
-|원격 액세스 역할|이 역할은 서버 관리자 콘솔이나 Windows PowerShell을 사용하여 설치 및 제거됩니다. 이 역할에는 DirectAccess(이전의 Windows Server 2008 R2 기능)와 라우팅 및 원격 액세스 서비스(이전의 NPAS(네트워크 정책 및 액세스 서비스) 서버 역할의 역할 서비스)가 포함되어 있습니다. 원격 액세스 역할은 다음의 두 가지 구성 요소로 구성됩니다.<br /><br />1.  DirectAccess와 RRAS(라우팅 및 원격 액세스 서비스) VPN: 원격 액세스 관리 콘솔에서 관리됩니다.<br />2.  RRAS 라우팅: 라우팅 및 원격 액세스 콘솔에서 관리됩니다.<br /><br />원격 액세스 서버 역할은 다음과 같은 서버 기능에 종속됩니다.<br /><br />-인터넷 정보 서비스 (IIS) 웹 서버: 원격 액세스 서버에서 네트워크 위치 서버를 구성 하 고 기본 웹 프로브를 구성 하는 데 필요 합니다.<br />-Windows 내부 데이터베이스: 원격 액세스 서버의 로컬 계정에 사용됩니다.|  
-|원격 액세스 관리 도구 기능|이 기능은 다음과 같이 설치 됩니다.<br /><br />-기본적으로 원격 액세스 역할이 설치 될 때 원격 액세스 서버에 있습니다. 원격 관리 콘솔 사용자 인터페이스 및 Windows PowerShell cmdlet을 지원합니다.<br />-원격 액세스 서버 역할을 실행 하지 않는 서버에 선택적으로 설치 됩니다. 이 경우 이 기능은 DirectAccess 및 VPN을 실행하는 원격 액세스 컴퓨터를 원격으로 관리하는 데 사용됩니다.<br /><br />원격 액세스 관리 도구 기능의 구성 요소는 다음과 같습니다.<br /><br />-원격 액세스 GUI<br />-Windows PowerShell 용 원격 액세스 모듈<br /><br />이 기능은 다음 요소에 종속됩니다.<br /><br />그룹 정책 관리 콘솔<br />RAS 연결 관리자 관리 키트 (CMAK)<br />Windows PowerShell 3.0<br />-그래픽 관리 도구 및 인프라|  
+|원격 액세스 역할|이 역할은 서버 관리자 콘솔이나 Windows PowerShell을 사용하여 설치 및 제거됩니다. 이 역할에는 DirectAccess(이전의 Windows Server 2008 R2 기능)와 라우팅 및 원격 액세스 서비스(이전의 NPAS(네트워크 정책 및 액세스 서비스) 서버 역할의 역할 서비스)가 포함되어 있습니다. 원격 액세스 역할은 다음의 두 가지 구성 요소로 구성됩니다.<br /><br />1. DirectAccess 및 RRAS (라우팅 및 원격 액세스 서비스) VPN: 원격 액세스 관리 콘솔에서 관리 됩니다.<br />2. RRAS 라우팅: 라우팅 및 원격 액세스 콘솔에서 관리 됩니다.<br /><br />원격 액세스 서버 역할은 다음과 같은 서버 기능에 종속됩니다.<br /><br />-인터넷 정보 서비스 (IIS) 웹 서버: 원격 액세스 서버에서 네트워크 위치 서버를 구성 하 고 기본 웹 프로브를 구성 하는 데 필요 합니다.<br />-Windows 내부 데이터베이스: 원격 액세스 서버의 로컬 계정에 사용 됩니다.|  
+|원격 액세스 관리 도구 기능|이 기능은 다음과 같이 설치됩니다.<br /><br />-기본적으로 원격 액세스 역할이 설치 될 때 원격 액세스 서버에 있습니다. 원격 관리 콘솔 사용자 인터페이스 및 Windows PowerShell cmdlet을 지원합니다.<br />-원격 액세스 서버 역할을 실행 하지 않는 서버에 선택적으로 설치 됩니다. 이 경우 이 기능은 DirectAccess 및 VPN을 실행하는 원격 액세스 컴퓨터를 원격으로 관리하는 데 사용됩니다.<br /><br />원격 액세스 관리 도구 기능의 구성 요소는 다음과 같습니다.<br /><br />-원격 액세스 GUI<br />-Windows PowerShell 용 원격 액세스 모듈<br /><br />이 기능은 다음 요소에 종속됩니다.<br /><br />그룹 정책 관리 콘솔<br />RAS 연결 관리자 관리 키트 (CMAK)<br />Windows PowerShell 3.0<br />-그래픽 관리 도구 및 인프라|  
   
-## <a name="BKMK_HARD"></a>하드웨어 요구 사항  
+## <a name="hardware-requirements"></a><a name="BKMK_HARD"></a>하드웨어 요구 사항  
 이 시나리오의 하드웨어 요구 사항은 다음과 같습니다.  
   
 **서버 요구 사항**  
@@ -94,7 +94,7 @@ ms.locfileid: "71388803"
 -   클라이언트 컴퓨터는 Windows 8 또는 Windows 7을 실행 해야 합니다.  
   
     > [!NOTE]  
-    > DirectAccess 클라이언트로 사용할 수 있는 운영 체제는 Windows Server 2012, Windows Server 2008 R2, Windows 8 Enterprise, Windows 7 Enterprise 및 Windows 7 Ultimate  
+    > Windows Server 2012, Windows Server 2008 R2, Windows 8 Enterprise, Windows 7 Enterprise 및 Windows 7 Ultimate와 같은 운영 체제만 DirectAccess 클라이언트로 사용할 수 있습니다.  
   
 **인프라 및 관리 서버 요구 사항**  
   
@@ -104,14 +104,14 @@ ms.locfileid: "71388803"
   
 -   Windows Server 2012, Windows Server 2008 R2 또는 Windows Server 2008 s p 2를 실행 하는 DNS 서버가 필요 합니다.  
   
-## <a name="BKMK_SOFT"></a>소프트웨어 요구 사항  
+## <a name="software-requirements"></a><a name="BKMK_SOFT"></a>소프트웨어 요구 사항  
 이 시나리오의 소프트웨어 요구 사항은 다음과 같습니다.  
   
 **서버 요구 사항**  
   
 -   원격 액세스 서버가 도메인 구성원이어야 합니다. 서버는 내부 네트워크의 경계면 또는 다른 장치의 경계면 방화벽 뒤에 배포될 수 있습니다.  
   
--   원격 액세스 서버가 경계면 방화벽이나 NAT(네트워크 주소 변환) 장치 뒤에 있는 경우, 이 장치는 원격 액세스 서버와 트래픽을 주고받을 수 있도록 구성되어 있어야 합니다.  
+-   원격 액세스 서버가 경계면 방화벽이나 NAT(네트워크 주소 변환) 디바이스 뒤에 있는 경우, 이 디바이스는 원격 액세스 서버와 트래픽을 주고받을 수 있도록 구성되어 있어야 합니다.  
   
 -   서버에 원격 액세스를 배포하는 사람에게는 서버에 대한 로컬 관리자 권한과 도메인 사용자 권한이 필요합니다. 또한 관리자에게는 DirectAccess 배포에 사용되는 GPO 사용 권한이 필요합니다. 이동 컴퓨터에만 DirectAccess를 배포하도록 제한하는 기능을 활용하려면 도메인 컨트롤러에서 WMI 필터를 만들 수 있는 권한이 필요합니다.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "71388803"
   
 -   DirectAccess 클라이언트가 도메인 구성원이어야 합니다. 클라이언트가 포함된 도메인은 원격 액세스 서버와 동일한 포리스트에 속하거나, 원격 액세스 서버 포리스트 또는 도메인과 양방향 트러스트 관계를 유지할 수 있습니다.  
   
--   Active Directory 보안 그룹은 DirectAccess 클라이언트로 구성될 컴퓨터를 포함하는 데 필요합니다. DirectAccess 클라이언트 설정을 구성할 때 보안 그룹이 지정되지 않은 경우 기본적으로 Domain Computers 보안 그룹의 모든 DirectAccess 사용 랩톱 컴퓨터에 클라이언트 GPO가 적용됩니다. DirectAccess 클라이언트로 사용할 수 있는 운영 체제는  Windows Server 2012, Windows Server 2008 R2, Windows 8 Enterprise, Windows 7 Enterprise 및 Windows 7 Ultimate  
+-   Active Directory 보안 그룹은 DirectAccess 클라이언트로 구성될 컴퓨터를 포함하는 데 필요합니다. DirectAccess 클라이언트 설정을 구성할 때 보안 그룹이 지정되지 않은 경우 기본적으로 Domain Computers 보안 그룹의 모든 DirectAccess 사용 랩톱 컴퓨터에 클라이언트 GPO가 적용됩니다. Windows Server 2012, Windows Server 2008 R2, Windows 8 Enterprise, Windows 7 Enterprise 및 Windows 7 Ultimate와 같은 운영 체제만 DirectAccess 클라이언트로 사용할 수 있습니다.  
   
     > [!NOTE]  
     > DirectAccess 클라이언트로 구성할 컴퓨터가 포함된 각 도메인에 대해 보안 그룹을 만드는 것이 좋습니다.  

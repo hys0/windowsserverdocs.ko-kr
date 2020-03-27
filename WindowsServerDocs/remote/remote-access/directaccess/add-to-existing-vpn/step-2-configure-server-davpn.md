@@ -10,14 +10,14 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fe221fc9-c7d9-4508-b8a1-000d2515283c
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 7ee691a02df385e29bdac9656d50bc2c6d3af087
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: c26f1fbcfa2d94c001579aabd6794c6537bd06f8
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71388741"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80314738"
 ---
 #  <a name="step-2-configure-the-directaccess-vpn-server"></a>2 단계 DirectAccess-VPN 서버 구성
 
@@ -27,7 +27,7 @@ ms.locfileid: "71388741"
 
 다음 표에서는이 항목을 사용 하 여 완료할 수 있는 단계에 대 한 개요를 제공 합니다.
 
-|태스크       |설명|
+|작업       |설명|
 |-----------|-----------|
 |DirectAccess 클라이언트 구성|DirectAccess 클라이언트가 포함된 보안 그룹으로 원격 액세스 서버를 구성합니다.|
 |네트워크 토폴로지 구성|원격 액세스 서버 설정을 구성합니다.|
@@ -70,7 +70,7 @@ DNS 클라이언트의 경우 DNS 검색 기능을 확장하거나 수정하는 
 
 2. **새** 접미사에 새 접미사 이름을 입력 한 다음 **추가**를 클릭 합니다. 또한 검색 순서를 변경 하 고 **도메인 접미사에서 사용할**접미사를 제거할 수 있습니다.
 
->두고 연결 되지 않은 이름 공간 시나리오에서 하나 이상의 도메인 컴퓨터에 해당 컴퓨터가 속한 Active Directory 도메인과 일치 하지 않는 DNS 접미사가 \( 인 경우 필요한 모든 항목을 포함 하도록 검색 목록을 사용자 지정 해야 합니다. 접미사로. 원격 액세스 마법사는 기본적으로 Active Directory DNS 이름을 클라이언트의 주 DNS 접미사로 구성합니다. 관리자는 이름 확인을 위해 클라이언트에서 사용하는 DNS 접미사를 추가해야 합니다.
+>두고 연결 되지 않은 이름 공간 시나리오에서 하나 이상의 도메인 컴퓨터에 컴퓨터가\)속한 Active Directory 도메인과 일치 하지 않는 DNS 접미사가 있는 경우 필요한 모든 접미사를 포함 하도록 검색 목록을 사용자 지정 해야 \(합니다. 원격 액세스 마법사는 기본적으로 Active Directory DNS 이름을 클라이언트의 주 DNS 접미사로 구성합니다. 관리자는 이름 확인을 위해 클라이언트에서 사용하는 DNS 접미사를 추가해야 합니다.
 
 컴퓨터 및 서버의 경우 다음과 같은 기본 DNS 검색 동작을 미리 결정 하 고 정규화 되지 않은 약식 이름을 완료 하 고 해결할 때 사용 합니다. 접미사 검색 목록이 비어 있거나 지정 되지 않은 경우 컴퓨터의 주 DNS 접미사가 정규화 되지 않은 짧은 이름에 추가 되 고 결과 FQDN을 확인 하는 데 DNS 쿼리가 사용 됩니다. 
 

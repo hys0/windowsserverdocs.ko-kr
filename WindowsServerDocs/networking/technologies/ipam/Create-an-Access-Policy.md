@@ -10,14 +10,14 @@ ms.technology: networking-ipam
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 854bd064-2f86-4678-a940-a04b3e48ae10
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: da5cc366a08f9a3f5b69952a2dff1f717fb1647b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: b5ce4c6dae668372521e5b8e0d5168a94cbb86e2
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71355363"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80312647"
 ---
 # <a name="create-an-access-policy"></a>액세스 정책 만들기
 
@@ -64,7 +64,7 @@ ms.locfileid: "71355363"
   
     ![역할 선택](../../media/Create-an-Access-Policy/ipam_CreateAP_07.jpg)  
   
-10. **설정 추가**를 클릭 합니다.  
+10. **설정 추가**를 클릭합니다.  
   
     ![새 설정 추가](../../media/Create-an-Access-Policy/ipam_CreateAP_08.jpg)  
   

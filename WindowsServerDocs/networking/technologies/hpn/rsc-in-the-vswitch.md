@@ -7,14 +7,14 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: ''
 ms.author: dacuo
-author: shortpatti
+author: eross-msft
 ms.date: 09/07/2018
-ms.openlocfilehash: dce890d5ae542789c49bf08b5e7f25e62ea2e8c2
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 4a6fd33dce35cf2a185cf5e4357c37e8050197a2
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71355295"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80312511"
 ---
 # <a name="rsc-in-the-vswitch"></a>VSwitch의 RSC
 >적용 대상: Windows Server 2019
@@ -27,7 +27,7 @@ Windows Server 2012 이상에는 수신 세그먼트 병합이 라고도 하는 
 
 데이터 경로이이 기능을 통해 가상 스위치를 통과 하는 워크 로드입니다.
 
-예를 들어 다음과 같은 가치를 제공해야 합니다.
+예를 들면 다음과 같습니다.
 
 -   다음을 포함 하는 호스트 가상 Nic:
 
@@ -66,7 +66,7 @@ Get-VMSwitch -Name vSwitchName | Select-Object *RSC*
 
 
 >[!IMPORTANT]
->중요: VSwitch의 RSC를 사용 하도록 설정 하 고 기존 연결에 영향을 주지 않고 즉석에서 사용 하지 않도록 설정할 수 있습니다.
+>중요: vSwitch의 RSC를 사용 하도록 설정 하 고 기존 연결에 영향을 주지 않고 즉석에서 사용 하지 않도록 설정할 수 있습니다.
 
 
 **VSwitch에서 RSC를 사용 하지 않도록 설정**

@@ -10,14 +10,14 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ea7ecd52-4c12-4a49-92fd-b8c08cec42a9
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 3ae66c125548e31603318a7e600c36c00df9d005
-ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 0ac6e231ac797d1ba1e8dfb314c6aa3df99ff91d
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76822556"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80313967"
 ---
 # <a name="step-3-configure-the-multisite-deployment"></a>멀티 사이트 배포를 구성 하는 3 단계
 
@@ -36,9 +36,9 @@ ms.locfileid: "76822556"
 |3.7. 멀티 사이트 배포에 진입점 추가|멀티 사이트 배포에 추가 진입점을 추가 합니다.|  
   
 > [!NOTE]  
-> 이 항목에는 설명한 절차의 일부를 자동화하는 데 사용할 수 있는 샘플 Windows PowerShell cmdlet이 포함되어 있습니다. 자세한 내용은 참조 [Cmdlet를 사용 하 여](https://go.microsoft.com/fwlink/p/?linkid=230693)합니다.  
+> 이 항목에는 설명된 일부 절차를 자동화하는 데 사용할 수 있는 예제 Windows PowerShell cmdlet이 포함되어 있습니다. 자세한 내용은 참조 [Cmdlet를 사용 하 여](https://go.microsoft.com/fwlink/p/?linkid=230693)합니다.  
   
-## <a name="BKMK_ConfigServer"></a>3.1. 원격 액세스 서버를 구성 합니다.  
+## <a name="31-configure-remote-access-servers"></a><a name="BKMK_ConfigServer"></a>3.1. 원격 액세스 서버를 구성 합니다.  
 
   
 ### <a name="to-install-the-remote-access-role"></a>원격 액세스 역할을 설치하려면  
@@ -59,11 +59,11 @@ ms.locfileid: "76822556"
   
 8.  에 **역할 서비스 선택** 대화 상자에서 **DirectAccess 및 VPN (RAS)** 클릭 하 고 **기능 추가**합니다.  
   
-9.  선택 **라우팅**, 선택, **웹 애플리케이션 프록시**, 클릭 **기능 추가**, 를 클릭 하 고 **다음**합니다.  
+9.  선택 **라우팅**, 선택, **웹 응용 프로그램 프록시**, 클릭 **기능 추가**, 를 클릭 하 고 **다음**합니다.  
   
 10. **다음**을 클릭한 후 **설치**를 클릭합니다.  
   
-11.  **설치 진행률** 대화 상자에서 설치가 완료되었는지 확인하고 **닫기**를 클릭합니다.  
+11.  **설치 진행률** 대화 상자에서 설치가 정상적으로 완료되었는지 확인하고 **닫기**를 클릭합니다.  
   
   
 ![Windows PowerShell](../../../../media/Step-3-Configure-the-Multisite-Deployment/PowerShellLogoSmall.gif)***<em>windows powershell 해당 명령</em>***  
@@ -71,13 +71,13 @@ ms.locfileid: "76822556"
   
 1-3 단계 수동으로 수행 해야 하 고이 Windows PowerShell cmdlet을 사용 하 여 수행 되지 않습니다.  
   
-다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
+다음 Windows PowerShell cmdlet은 이전 절차와 동일한 기능을 수행합니다. 서식 조건 때문에 각 cmdlet이 여러 줄로 자동 줄 바꿈되어 표시되더라도 한 줄에 입력합니다.  
   
 ```  
 Install-WindowsFeature RemoteAccess -IncludeManagementTools  
 ```  
   
-## <a name="BKMK_Admin"></a>3.2. 관리자 액세스 권한 부여  
+## <a name="32-grant-administrator-access"></a><a name="BKMK_Admin"></a>3.2. 관리자 액세스 권한 부여  
   
 #### <a name="to-grant-administrator-permissions"></a>관리자 권한을 부여 하려면  
   
@@ -99,22 +99,22 @@ Install-WindowsFeature RemoteAccess -IncludeManagementTools
   
 9. 멀티 사이트 배포의 일부가 될 모든 원격 액세스 서버에서이 절차를 반복 합니다.  
   
-## <a name="BKMK_IPHTTPS"></a>3.3. 멀티 사이트 배포에 대 한 IP HTTPS를 구성 합니다.  
-멀티 사이트 배포에 추가 될 각 원격 액세스 서버에서 SSL 인증서가 IP-HTTPS 웹 서버에 대 한 HTTPS 연결을 확인 해야 합니다. 로컬의 멤버 자격이 **관리자** 그룹 또는 그에 해당 하는이 절차를 완료 하는 데 필요한 최소입니다.  
+## <a name="33-configure-ip-https-for-a-multisite-deployment"></a><a name="BKMK_IPHTTPS"></a>3.3. 멀티 사이트 배포에 대 한 IP HTTPS를 구성 합니다.  
+멀티 사이트 배포에 추가 될 각 원격 액세스 서버에서 SSL 인증서가 IP-HTTPS 웹 서버에 대 한 HTTPS 연결을 확인 해야 합니다. 로컬 **관리자** 그룹의 멤버십 또는 이에 상당하는 멤버십은 이 절차를 완료하기 위해 필요한 최소 기준입니다.  
   
 #### <a name="to-obtain-an-ip-https-certificate"></a>IP-HTTPS 인증서를 받으려면  
   
-1.  각 원격 액세스 서버에서:에 **시작** 화면에서 입력 **mmc**, 한 다음 ENTER를 누릅니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
+1.  각 원격 액세스 서버에서:에 **시작** 화면에서 입력 **mmc**, 한 다음 ENTER를 누릅니다. **사용자 계정 컨트롤** 대화 상자가 표시되면 원하는 작업이 표시되어 있는지 확인하고 **예**를 클릭합니다.  
   
 2.  클릭 **파일**, 를 클릭 하 고 **추가/제거 스냅인**합니다.  
   
 3.  클릭 **인증서**, 클릭 **추가**, 클릭 **컴퓨터 계정**, 클릭 **다음**, 선택, **로컬 컴퓨터**, 클릭 **마침**, 클릭 하 고 **확인**합니다.  
   
-4.  인증서 스냅인의 콘솔 트리에서 엽니다 **인증서 (로컬 컴퓨터) \Personal\Certificates**합니다.  
+4.  인증서 스냅인의 콘솔 트리에서 **인증서(로컬 컴퓨터)\개인\인증서**를 엽니다.  
   
-5.  마우스 오른쪽 단추로 클릭 **인증서**, 가리킨 **모든 작업**, 를 클릭 하 고 **새 인증서 요청**합니다.  
+5.  **인증서**를 마우스 오른쪽 단추로 클릭하고 **모든 작업**을 가리킨 다음 **새 인증서 요청**을 클릭합니다.  
   
-6.  **다음** 을 두 번 클릭합니다.  
+6.  **다음**을 두 번 클릭합니다.  
   
 7.  에 **인증서 요청** 페이지, 웹 서버 인증서 템플릿을 클릭 한 다음 클릭 **이 인증서를 등록 하려면 추가 정보가 필요**합니다.  
   
@@ -124,7 +124,7 @@ Install-WindowsFeature RemoteAccess -IncludeManagementTools
   
 9. **값**, 인터넷 이름 (예를 들어 Europe.contoso.com) 원격 액세스 서버의 정규화 된 도메인 이름 (FQDN)을 입력 하 고 클릭 한 다음 **추가**합니다.  
   
-10. 클릭 **확인**, 클릭 **등록**, 를 클릭 하 고 **마침**합니다.  
+10. **확인**, **등록**을 차례로 클릭한 다음 **마침**을 클릭합니다.  
   
 11. 인증서 스냅인의 세부 정보 창에서 FQDN으로 새 인증서가 등록을 확인 **용도** 의 **서버 인증**합니다.  
   
@@ -137,25 +137,25 @@ Install-WindowsFeature RemoteAccess -IncludeManagementTools
   
 14. 배포에서 모든 원격 액세스 서버에서이 절차를 반복 합니다.  
   
-## <a name="BKMK_NLS"></a>3.4. 멀티 사이트 배포에 대 한 네트워크 위치 서버 구성  
+## <a name="34-configure-the-network-location-server-for-a-multisite-deployment"></a><a name="BKMK_NLS"></a>3.4. 멀티 사이트 배포에 대 한 네트워크 위치 서버 구성  
 첫 번째 서버를 설치할 때 원격 액세스 서버에서 네트워크 위치 서버 웹 사이트를 설정 하려면 선택한 경우 추가 웹 서버 인증서로 구성 해야 하는 새로운 원격 액세스 서버 별로 있는 첫 번째 서버에 대 한 네트워크 위치 서버에 대해 선택한 동일한 주체 이름입니다. 각 서버에 네트워크 위치 서버에 연결을 인증 하는 인증서가 필요 하 고 내부 네트워크에 있는 클라이언트 컴퓨터가 DNS에 웹 사이트의 이름을 확인할 수 있어야 합니다.  
   
 #### <a name="to-install-a-certificate-for-network-location"></a>네트워크 위치에 대 한 인증서를 설치 하려면  
   
-1.  원격 액세스 서버에서:에 **시작** 화면에서 입력 **mmc**, 한 다음 ENTER를 누릅니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
+1.  원격 액세스 서버에서:에 **시작** 화면에서 입력 **mmc**, 한 다음 ENTER를 누릅니다. **사용자 계정 컨트롤** 대화 상자가 표시되면 원하는 작업이 표시되어 있는지 확인하고 **예**를 클릭합니다.  
   
 2.  클릭 **파일**, 를 클릭 하 고 **추가/제거 스냅인**합니다.  
   
 3.  클릭 **인증서**, 클릭 **추가**, 클릭 **컴퓨터 계정**, 클릭 **다음**, 선택, **로컬 컴퓨터**, 클릭 **마침**, 클릭 하 고 **확인**합니다.  
   
-4.  인증서 스냅인의 콘솔 트리에서 엽니다 **인증서 (로컬 컴퓨터) \Personal\Certificates**합니다.  
+4.  인증서 스냅인의 콘솔 트리에서 **인증서(로컬 컴퓨터)\개인\인증서**를 엽니다.  
   
-5.  마우스 오른쪽 단추로 클릭 **인증서**, 가리킨 **모든 작업**, 를 클릭 하 고 **새 인증서 요청**합니다.  
+5.  **인증서**를 마우스 오른쪽 단추로 클릭하고 **모든 작업**을 가리킨 다음 **새 인증서 요청**을 클릭합니다.  
   
     > [!NOTE]  
     > 또한 첫 번째 원격 액세스 서버에 대 한 네트워크 위치 서버에 사용 된 동일한 인증서를 가져올 수 있습니다.  
   
-6.  **다음** 을 두 번 클릭합니다.  
+6.  **다음**을 두 번 클릭합니다.  
   
 7.  에 **인증서 요청** 페이지, 웹 서버 인증서 템플릿을 클릭 한 다음 클릭 **이 인증서를 등록 하려면 추가 정보가 필요**합니다.  
   
@@ -165,7 +165,7 @@ Install-WindowsFeature RemoteAccess -IncludeManagementTools
   
 9. **값**, 첫 번째 원격 액세스 서버 (예를 들어 nls.corp.contoso.com)의 네트워크 위치 서버 인증서에 대해 구성 된 정규화 된 도메인 이름 (FQDN)을 입력 하 고 클릭 한 다음 **추가**합니다.  
   
-10. 클릭 **확인**, 클릭 **등록**, 를 클릭 하 고 **마침**합니다.  
+10. **확인**, **등록**을 차례로 클릭한 다음 **마침**을 클릭합니다.  
   
 11. 인증서 스냅인의 세부 정보 창에서 FQDN으로 새 인증서가 등록을 확인 **용도** 의 **서버 인증**합니다.  
   
@@ -178,15 +178,15 @@ Install-WindowsFeature RemoteAccess -IncludeManagementTools
   
 14. 배포에서 모든 원격 액세스 서버에서이 절차를 반복 합니다.  
   
-### <a name="NLS"></a>네트워크 위치 서버 DNS 레코드를 만들려면  
+### <a name="to-create-the-network-location-server-dns-records"></a><a name="NLS"></a>네트워크 위치 서버 DNS 레코드를 만들려면  
   
 1.  DNS 서버에서:에 **시작** 화면에서 입력 **dnsmgmt.msc**, 한 다음 ENTER를 누릅니다.  
   
 2.  왼쪽된 창에서는 **DNS 관리자** 콘솔에서 내부 네트워크에 대 한 정방향 조회 영역을 엽니다. 관련 영역을 마우스 오른쪽 단추로 클릭 하 고 클릭 **새 호스트 (A 또는 AAAA)** 합니다.  
   
-3.  에 **새 호스트** 대화 상자는 **이름 (부모 도메인 이름 사용 비어 있는 경우)** 첫 번째 원격 액세스 서버에 대 한 네트워크 위치 서버에 사용 된 이름을 입력 합니다. 에 **IP 주소** 상자에 원격 액세스 서버의 인트라넷 IPv4 주소를 입력 한 다음 클릭 **호스트 추가할**합니다. 에 **DNS** 대화 상자를 클릭 하 여 **확인**합니다.  
+3.  에 **새 호스트** 대화 상자는 **이름 (부모 도메인 이름 사용 비어 있는 경우)** 첫 번째 원격 액세스 서버에 대 한 네트워크 위치 서버에 사용 된 이름을 입력 합니다. 에 **IP 주소** 상자에 원격 액세스 서버의 인트라넷 IPv4 주소를 입력 한 다음 클릭 **호스트 추가할**합니다. **DNS** 대화 상자에서 **확인**을 클릭합니다.  
   
-4.  에 **새 호스트** 대화 상자는 **이름 (부모 도메인 이름 사용 비어 있는 경우)** 첫 번째 원격 액세스 서버에 대 한 네트워크 위치 서버에 사용 된 이름을 입력 합니다. 에 **IP 주소** 상자에 원격 액세스 서버의 인트라넷 IPv6 주소를 입력 한 다음 클릭 **호스트 추가할**합니다. 에 **DNS** 대화 상자를 클릭 하 여 **확인**합니다.  
+4.  에 **새 호스트** 대화 상자는 **이름 (부모 도메인 이름 사용 비어 있는 경우)** 첫 번째 원격 액세스 서버에 대 한 네트워크 위치 서버에 사용 된 이름을 입력 합니다. 에 **IP 주소** 상자에 원격 액세스 서버의 인트라넷 IPv6 주소를 입력 한 다음 클릭 **호스트 추가할**합니다. **DNS** 대화 상자에서 **확인**을 클릭합니다.  
   
 5.  모든 원격 액세스 서버 배포에 3, 4 단계를 반복 합니다.  
   
@@ -194,7 +194,7 @@ Install-WindowsFeature RemoteAccess -IncludeManagementTools
   
 7.  배포에 대 한 추가 진입점으로 서버를 추가 하기 전에이 절차를 반복 합니다.  
   
-## <a name="BKMK_Client"></a>3.5. 멀티 사이트 배포에 DirectAccess 클라이언트 구성  
+## <a name="35-configure-directaccess-clients-for-a-multisite-deployment"></a><a name="BKMK_Client"></a>3.5. 멀티 사이트 배포에 DirectAccess 클라이언트 구성  
 DirectAccess Windows 클라이언트 컴퓨터에 연결 하 여 DirectAccess를 정의 하는 보안 그룹의 구성원 이어야 합니다. 멀티 사이트를 사용 하기 전에 이러한 보안 그룹 포함 될 수 있습니다 Windows 8 클라이언트와 Windows 7 클라이언트 (적절 한 "하위" 모드가 선택 된) 경우입니다. 멀티 사이트를 사용 하도록 설정 하면 단일 서버 모드에서 기존 클라이언트 보안 그룹으로 변환 됩니다 보안 그룹 Windows 8 용만. 멀티 사이트를 설정한 후 해당 전용된 Windows 7 클라이언트 보안 그룹 (프로그램이 관련 된 특정 진입점)를 이동 해야 하는 Windows 7 DirectAccess 클라이언트 컴퓨터 또는 DirectAccess를 통해 연결할 수 없습니다. Windows 7 클라이언트는 이제 Windows 8 보안 그룹인 기존 보안 그룹에서 먼저 제거 해야 합니다. 주의: Windows 7 클라이언트 컴퓨터 둘 다 Windows 7 및 Windows 8 클라이언트 보안 그룹의 구성원 인 한 원격 연결이 끊어집니다 및 s p 1 설치 하지 않고 Windows 7 클라이언트 회사 연결도 손실 됩니다. 따라서 Windows 8 보안 그룹에서 모든 Windows 7 클라이언트 컴퓨터를 제거 해야 합니다.  
   
 #### <a name="remove--windows-7--clients-from-windows-8-security-groups"></a>Windows 8 보안 그룹에서 Windows 7 클라이언트를 제거 합니다.  
@@ -210,7 +210,7 @@ DirectAccess Windows 클라이언트 컴퓨터에 연결 하 여 DirectAccess를
 > [!IMPORTANT]  
 > 원격 액세스 멀티 사이트 구성으로 사용 하도록 설정할 때 모든 클라이언트 컴퓨터 (Windows 7 및 Windows 8)은 회사 네트워크에 직접 또는 그룹 정책을 업데이트 하는 VPN을 통해 연결 될 때까지 원격 연결이 끊어집니다. 이 처음에 대 한 멀티 사이트 기능을 활성화 하는 경우와 멀티 사이트를 비활성화 하는 경우.  
   
-## <a name="BKMK_Enable"></a>3.6. 멀티 사이트 배포를 사용 하도록 설정  
+## <a name="36-enable-the-multisite-deployment"></a><a name="BKMK_Enable"></a>3.6. 멀티 사이트 배포를 사용 하도록 설정  
 멀티 사이트 배포를 구성 하려면 기존 원격 액세스 서버에 멀티 사이트 기능을 설정 합니다. 배포에 멀티 사이트를 설정 하기 전에 다음 정보를 알고 있는지를 확인 합니다.  
   
 1.  전역 부하 분산 장치 설정 및 IP 주소를 로드 하려는 경우 배포의 모든 진입점에서 DirectAccess 클라이언트 연결을 조정 합니다.  
@@ -219,9 +219,9 @@ DirectAccess Windows 클라이언트 컴퓨터에 연결 하 여 DirectAccess를
   
 3.  그룹 정책 개체 이름, Windows 7 클라이언트 컴퓨터에 대 한 지원이 필요 하면 배포에 있는 첫 번째 진입점에 대 한 Windows 7 클라이언트 컴퓨터에 적용 되는 기본이 아닌 그룹 정책 개체를 사용 하 여 해야 하는 경우.  
   
-### <a name="EnabledMultisite"></a>멀티 사이트 구성을 사용 하도록 설정 하려면  
+### <a name="to-enable-a-multisite-configuration"></a><a name="EnabledMultisite"></a>멀티 사이트 구성을 사용 하도록 설정 하려면  
   
-1.  기존 원격 액세스 서버에서:에 **시작** 화면에서 입력 **RAMgmtUI.exe**, 한 다음 ENTER를 누릅니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
+1.  기존 원격 액세스 서버에서:에 **시작** 화면에서 입력 **RAMgmtUI.exe**, 한 다음 ENTER를 누릅니다. **사용자 계정 컨트롤** 대화 상자가 표시되면 원하는 작업이 표시되어 있는지 확인하고 **예**를 클릭합니다.  
   
 2.  원격 액세스 관리 콘솔에서 클릭 **구성**, 한 다음는 **작업** 창에서 클릭 **멀티 사이트 사용**합니다.  
   
@@ -231,7 +231,7 @@ DirectAccess Windows 클라이언트 컴퓨터에 연결 하 여 DirectAccess를
   
 5.  에 **지점 선택 항목이** 페이지에서 다음 중 하나를 수행 합니다.  
   
-    -   클릭 **진입점을 자동으로 할당 하 고 클라이언트를 수동으로 선택할 수 있도록** 라우트하도록 자동으로 클라이언트 컴퓨터에 가장 적합 한 진입점 하면서도 클라이언트 컴퓨터는 진입점을 직접 선택할 수 있습니다. 수동 입력 지점 선택은 Windows 8 컴퓨터에만 사용할 수 있습니다. 클릭 하 여 **다음**.  
+    -   클릭 **진입점을 자동으로 할당 하 고 클라이언트를 수동으로 선택할 수 있도록** 라우트하도록 자동으로 클라이언트 컴퓨터에 가장 적합 한 진입점 하면서도 클라이언트 컴퓨터는 진입점을 직접 선택할 수 있습니다. 수동 입력 지점 선택은 Windows 8 컴퓨터에만 사용할 수 있습니다. **다음**을 클릭합니다.  
   
     -   클릭 **진입점을 자동으로 할당** 자동으로 클라이언트 컴퓨터의 가장 적합 한 진입점을 클릭 한 다음에 **다음**합니다.  
   
@@ -262,7 +262,7 @@ DirectAccess Windows 클라이언트 컴퓨터에 연결 하 여 DirectAccess를
   
 ![Windows PowerShell](../../../../media/Step-3-Configure-the-Multisite-Deployment/PowerShellLogoSmall.gif)***<em>windows powershell 해당 명령</em>***  
   
-다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
+다음 Windows PowerShell cmdlet은 이전 절차와 동일한 기능을 수행합니다. 서식 조건 때문에 각 cmdlet이 여러 줄로 자동 줄 바꿈되어 표시되더라도 한 줄에 입력합니다.  
   
 첫 번째 진입점에 이름이 'Contoso' 멀티 사이트 배포를 사용 하도록 설정 하려면 ' Edge1-u S ' 라는 합니다. 배포는 클라이언트의 진입점을 수동으로 선택할 수 있습니다 및 전역 부하 분산 장치를 사용 하지 않습니다.  
   
@@ -276,7 +276,7 @@ DA_Clients_US 보안 그룹을 통해 첫 번째 진입점을 통해 Windows 7 �
 Add-DAClient -EntrypointName 'Edge1-US' -DownlevelSecurityGroupNameList @('corp.contoso.com\DA_Clients_US') -DownlevelGpoName @('corp.contoso.com\DA_W7_Clients_GPO_US)  
 ```  
   
-## <a name="BKMK_EntryPoint"></a>3.7. 멀티 사이트 배포에 진입점 추가  
+## <a name="37-add-entry-points-to-the-multisite-deployment"></a><a name="BKMK_EntryPoint"></a>3.7. 멀티 사이트 배포에 진입점 추가  
 배포에 멀티 사이트를 설정한 후 추가 진입점 추가 진입점 마법사를 사용 하 여 추가할 수 있습니다. 진입점을 추가 하기 전에 다음 정보를 알고 있는지 확인 합니다.  
   
 -   각 새 항목에 대 한 전역 부하 분산 장치 IP 주소를 사용할 경우 전역 부하 분산을 가리킵니다.  
@@ -287,9 +287,9 @@ Add-DAClient -EntrypointName 'Edge1-US' -DownlevelSecurityGroupNameList @('corp.
   
 -   조직의 네트워크에서 i p v 6를 배포할 경우에는 새로운 진입점에 대 한 IP-HTTPS 접두사를 준비 해야 합니다.  
   
-### <a name="AddEP"></a>진입점을 멀티 사이트 배포에 추가 하려면  
+### <a name="to-add-entry-points-to-your-multisite-deployment"></a><a name="AddEP"></a>진입점을 멀티 사이트 배포에 추가 하려면  
   
-1.  기존 원격 액세스 서버에서:에 **시작** 화면에서 입력 **RAMgmtUI.exe**, 한 다음 ENTER를 누릅니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
+1.  기존 원격 액세스 서버에서:에 **시작** 화면에서 입력 **RAMgmtUI.exe**, 한 다음 ENTER를 누릅니다. **사용자 계정 컨트롤** 대화 상자가 표시되면 원하는 작업이 표시되어 있는지 확인하고 **예**를 클릭합니다.  
   
 2.  원격 액세스 관리 콘솔에서 클릭 **구성**, 한 다음는 **작업** 창에서 클릭 **진입점 추가**합니다.  
   
@@ -302,7 +302,7 @@ Add-DAClient -EntrypointName 'Edge1-US' -DownlevelSecurityGroupNameList @('corp.
   
 5.  에 **네트워크 토폴로지** 페이지에서 해당 하는 네트워크 토폴로지를 추가 하 고을 클릭 한 다음 원격 액세스 서버의 토폴로지 클릭 **다음**합니다.  
   
-6.  에 **네트워크 이름 또는 IP 주소** 페이지 **공개 이름 또는 클라이언트에서 원격 액세스 서버에 연결 하는 데 사용 되는 IP 주소에서**, 공개 이름 또는 클라이언트에서 원격 액세스 서버에 연결 하는 데 사용 되는 IP 주소를 입력 합니다. 공개 이름 IP-HTTPS 인증서의 주체 이름으로 해당합니다. 여기서 지 네트워크 토폴로지 구현 된 경우, IP 주소를 사용 하면 원격 액세스 서버의 외부 어댑터의입니다. 클릭 하 여 **다음**.  
+6.  에 **네트워크 이름 또는 IP 주소** 페이지 **공개 이름 또는 클라이언트에서 원격 액세스 서버에 연결 하는 데 사용 되는 IP 주소에서**, 공개 이름 또는 클라이언트에서 원격 액세스 서버에 연결 하는 데 사용 되는 IP 주소를 입력 합니다. 공개 이름 IP-HTTPS 인증서의 주체 이름으로 해당합니다. 여기서 지 네트워크 토폴로지 구현 된 경우, IP 주소를 사용 하면 원격 액세스 서버의 외부 어댑터의입니다. **다음**을 클릭합니다.  
   
 7.  에 **네트워크 어댑터** 페이지 하나에서 다음을 수행 합니다.  
   
@@ -310,7 +310,7 @@ Add-DAClient -EntrypointName 'Edge1-US' -DownlevelSecurityGroupNameList @('corp.
   
     -   배포 하는 경우 토폴로지를 네트워크 어댑터에서 **네트워크 어댑터**, 내부 네트워크에 연결 된 어댑터를 선택 합니다.  
   
-8.  에 **네트워크 어댑터** 페이지 **IP-HTTPS 연결을 인증 하는 데 사용 하는 인증서 선택**, 클릭 **찾아보기** 을 찾아 IP-HTTPS 인증서를 선택 합니다. 클릭 하 여 **다음**.  
+8.  에 **네트워크 어댑터** 페이지 **IP-HTTPS 연결을 인증 하는 데 사용 하는 인증서 선택**, 클릭 **찾아보기** 을 찾아 IP-HTTPS 인증서를 선택 합니다. **다음**을 클릭합니다.  
   
 9. I p v 6에 회사 네트워크에 구성 된 경우는 **접두사 구성** 페이지 **클라이언트 컴퓨터에 할당 된 IPv6 접두사**, DirectAccess 클라이언트 컴퓨터에 IPv6 주소를 할당 하 고 클릭 하는 IP-HTTPS 접두사를 입력 **다음**합니다.  
   
@@ -344,7 +344,7 @@ Add-DAClient -EntrypointName 'Edge1-US' -DownlevelSecurityGroupNameList @('corp.
   
 ![Windows PowerShell](../../../../media/Step-3-Configure-the-Multisite-Deployment/PowerShellLogoSmall.gif)***<em>windows powershell 해당 명령</em>***  
   
-다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
+다음 Windows PowerShell cmdlet은 이전 절차와 동일한 기능을 수행합니다. 서식 조건 때문에 각 cmdlet이 여러 줄로 자동 줄 바꿈되어 표시되더라도 한 줄에 입력합니다.  
   
 두 번째 진입점으로 corp2 도메인에서 컴퓨터 edge2를 추가 하려면 이름이 Edge2 유럽입니다. 항목 지점 구성은: 클라이언트 IPv6 접두사 ' 2001:db8:2:2000:: / 64', 'edge2.contoso.com' 주소 (edge2 컴퓨터에서 IP-HTTPS 인증서), "DirectAccess 서버 설정-Edge2 유럽" 이라는 서버 GPO 및 각각 인터넷 및 Corpnet2 라는 내부 및 외부 인터페이스에 연결 합니다.  
   
@@ -358,6 +358,6 @@ DA_Clients_Europe 보안 그룹을 통해 두 번째 진입점을 통해 Windows
 Add-DAClient -EntrypointName 'Edge2-Europe' -DownlevelGpoName @('corp.contoso.com\ DA_W7_Clients_GPO_Europe') -DownlevelSecurityGroupNameList @('corp.contoso.com\DA_Clients_Europe')  
 ```  
   
-## <a name="BKMK_Links"></a>참고 항목  
+## <a name="see-also"></a><a name="BKMK_Links"></a>참고 항목  
   
 -   [2 단계: 멀티 사이트 인프라 구성](Step-2-Configure-the-Multisite-Infrastructure.md)

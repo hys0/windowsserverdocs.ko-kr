@@ -6,14 +6,14 @@ ms.topic: article
 ms.assetid: 4acdc3ad-078e-45cc-b54c-e9456e0c90f5
 ms.prod: windows-server
 ms.technology: networking
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 024fc73c4ed089d81808cf44d7cfe8b01bfffaa0
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: fffb03a707c48c8dd485c68b5c6bf10783b0e6cf
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406329"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318362"
 ---
 # <a name="install-the-certification-authority"></a>인증 기관 설치
 
@@ -60,7 +60,7 @@ ms.locfileid: "71406329"
   
 8.  **Active Directory 인증서 서비스**, 에서 제공 된 정보를 읽고 클릭 **다음**합니다.  
   
-9. **설치 선택 확인**, 클릭 **설치**합니다. 설치 과정에서 마법사를 닫지 마십시오. 설치가 완료 되 면 클릭 **대상 서버에서 Active Directory 인증서 서비스 구성**합니다. AD CS 구성 마법사가 열립니다. 자격 증명 정보를 읽고 필요한 경우 Enterprise Admins 그룹의 구성원 인 계정의 자격 증명을 제공 합니다. **다음**을 클릭합니다.  
+9. **설치 선택 확인**에서 **설치**를 클릭합니다. 설치 과정에서 마법사를 닫지 마십시오. 설치가 완료 되 면 클릭 **대상 서버에서 Active Directory 인증서 서비스 구성**합니다. AD CS 구성 마법사가 열립니다. 자격 증명 정보를 읽고 필요한 경우 Enterprise Admins 그룹의 구성원 인 계정의 자격 증명을 제공 합니다. **다음**을 클릭합니다.  
   
 10. **역할 서비스**, 클릭 **인증 기관**, 를 클릭 하 고 **다음**합니다.  
   

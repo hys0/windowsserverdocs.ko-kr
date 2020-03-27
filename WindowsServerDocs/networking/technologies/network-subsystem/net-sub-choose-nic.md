@@ -6,14 +6,14 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: a6615411-83d9-495f-8a6a-1ebc8b12f164
 manager: brianlic
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 9271cf4e5f50adf93f421e830a226507034ac454
-ms.sourcegitcommit: 1c75e4b3f5895f9fa33efffd06822dca301d4835
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 5e1ed095b3180f3aebd25381ec9086445bb141ec
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77517478"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80316620"
 ---
 # <a name="choosing-a-network-adapter"></a>네트워크 어댑터 선택
 
@@ -26,7 +26,7 @@ ms.locfileid: "77517478"
 > [!TIP]
 >  Windows PowerShell을 사용 하 여 네트워크 어댑터 설정을 구성할 수 있습니다. 자세한 내용은 [Windows PowerShell의 네트워크 어댑터 cmdlet](https://docs.microsoft.com/powershell/module/netadapter)(영문)을 참조 하세요.
 
-##  <a name="bkmk_offload"></a>오프 로드 기능
+##  <a name="offload-capabilities"></a><a name="bkmk_offload"></a>오프 로드 기능
 
 중앙 처리 장치 \(CPU\)에서 네트워크 어댑터로 작업을 오프 로드 하면 서버에서 CPU 사용량을 줄일 수 있으며이로 인해 전체 시스템 성능이 향상 됩니다.
 
@@ -42,7 +42,7 @@ Microsoft 제품의 네트워크 스택은 적절 한 오프 로드 기능이 �
 |RSS\) \(수신측 배율|RSS는 다중 프로세서 시스템의 여러 Cpu에서 네트워크 수신 처리를 효율적으로 배포할 수 있게 해 주는 네트워크 드라이버 기술입니다. RSS에 대 한 자세한 내용은이 항목의 뒷부분에 제공 됩니다.|  
 |RSC\) \(수신 세그먼트 통합|RSC는 호스트를 수행 하는 데 필요한 헤더 처리를 최소화 하기 위해 패킷을 그룹화 하는 기능입니다. 최대 64 KB의 수신 된 페이로드는 처리를 위해 하나의 큰 패킷으로 결합 될 수 있습니다. RSC에 대 한 자세한 내용은이 항목의 뒷부분에 제공 됩니다.|  
   
-###  <a name="bkmk_rss"></a>수신측 배율
+###  <a name="receive-side-scaling"></a><a name="bkmk_rss"></a>수신측 배율
 
 Windows Server 2016, Windows Server 2012, Windows Server 2012 R2, Windows Server 2008 R2 및 Windows Server 2008에서는 RSS\)\(수신측 크기 조정을 지원 합니다. 
 
@@ -158,7 +158,7 @@ Cpu를 완전히 활용 하려면 RSS 수신 큐의 수가 최대 프로세서 �
 
 NIC 팀을 사용 하 여 다른 네트워크 인터페이스 카드와 팀으로 구성 된 네트워크 어댑터에서 RSS를 사용 하도록 설정할 수 있습니다. 이 시나리오에서는 기본 실제 네트워크 어댑터만 RSS를 사용 하도록 구성할 수 있습니다. 사용자가 팀으로 구성 된 네트워크 어댑터에서 RSS cmdlet을 설정할 수 없습니다.
   
-###  <a name="bkmk_rsc"></a>RSC (수신 세그먼트 통합)
+###  <a name="receive-segment-coalescing-rsc"></a><a name="bkmk_rsc"></a>RSC (수신 세그먼트 통합)
 
 지정 된 용량의 수신 데이터에 대해 처리 되는 IP 헤더의 수를 줄여 \(RSC\)의 수신 세그먼트 병합을 사용할 수 있습니다. 이를 사용 하 여 \(를 그룹화 하거나 더 작은 패킷\) 더 큰 단위로 결합 하 여 수신 된 데이터의 성능을 확장할 수 있습니다.
 
@@ -206,7 +206,7 @@ RSC는 호스트 네트워크 어댑터가 Hyper-v 가상 스위치에 바인딩
 
 단일 루트 입/출력 가상화 \(SR-IOV\) 사용 하도록 설정 된 경우 가상 머신에 RSC를 사용 하도록 설정할 수 있습니다. 이 경우 가상 함수는 RSC 기능을 지원 합니다. 따라서 virtual machines에는 RSC의 이점도 제공 됩니다.
 
-##  <a name="bkmk_resources"></a>네트워크 어댑터 리소스
+##  <a name="network-adapter-resources"></a><a name="bkmk_resources"></a>네트워크 어댑터 리소스
 
 일부 네트워크 어댑터는 최적의 성능을 얻기 위해 리소스를 적극적으로 관리 합니다. 여러 네트워크 어댑터를 사용 하면 어댑터에 대 한 **고급 네트워킹** 탭을 사용 하 여 리소스를 수동으로 구성할 수 있습니다. 이러한 어댑터의 경우 수신 버퍼 수와 송신 버퍼의 수를 포함 하 여 다양 한 매개 변수 값을 설정할 수 있습니다.
 

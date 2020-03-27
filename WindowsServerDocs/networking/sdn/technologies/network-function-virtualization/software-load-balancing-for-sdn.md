@@ -10,14 +10,14 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 97abf182-4725-4026-801c-122db96964ed
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 35743d9e1a25c71a35eed018a4a3882a3d094d76
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 1e7870e045f9af79ed46ec1ad998dbc1f1474afd
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71355570"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80312908"
 ---
 # <a name="software-load-balancing-slb-for-sdn"></a>SDN에 대 한 소프트웨어 부하 분산 \(SLB\)
 
@@ -44,7 +44,7 @@ Windows Server SLB는 다음과 같은 기능이 포함 되어 있습니다.
 > [!NOTE]  
 > 그러나 다중 Vlan 네트워크 컨트롤러에서 지원 하지 않는 대 한, 사용할 수 있습니다 Vlan SLB와 서비스 공급자에 대 한 데이터 센터 인프라 및 고밀도 웹 서버 등의 작업을 관리 합니다.  
   
-Windows Server SLB를 사용 하 여 부하 분산 기능을 다른 VM 작업에 사용 되는 동일한 Hyper-v 계산 서버에서 SLB Vm을 사용 하 여 확장할 수 있습니다. 이 인해 SLB 신속 하 게 생성 및 CSP 작업에 필요한 부하 분산 끝점의 삭제를 지원 합니다. 또한 Windows Server SLB 수십 기가바이트 클러스터당 지원 간단한 프로 비전 모델을 제공 하며 규모 확장 및 감축 하기 쉽습니다.  
+Windows Server SLB를 사용 하 여 부하 분산 기능을 다른 VM 작업에 사용 되는 동일한 Hyper-v 컴퓨팅 서버에서 SLB Vm을 사용 하 여 확장할 수 있습니다. 이 인해 SLB 신속 하 게 생성 및 CSP 작업에 필요한 부하 분산 엔드포인트의 삭제를 지원 합니다. 또한 Windows Server SLB 수십 기가바이트 클러스터당 지원 간단한 프로 비전 모델을 제공 하며 규모 확장 및 감축 하기 쉽습니다.  
   
 **SLB 작동 방법**  
   
@@ -114,7 +114,7 @@ SLB 다음을 포함 하는 네트워크 인프라의 상태를 확인 하려면
   
 기존 부하 분산 장치 어플라이언스 프로브 기기에서 시작 하 고 DIP로 네트워크를 통해 이동 있는 달리 SLB 프로브 DIP의 위치를 더욱 호스트 간에 작업을 배포 하 고 DIP SLB 호스트 에이전트에서 직접 이동 하는 호스트에서 시작 됩니다.  
   
-## <a name="bkmk_infrastructure"></a>소프트웨어 부하 분산 인프라  
+## <a name="software-load-balancing-infrastructure"></a><a name="bkmk_infrastructure"></a>소프트웨어 부하 분산 인프라  
 Windows Server SLB를 배포 하려면 먼저 Windows Server 2016의 네트워크 컨트롤러와 하나 이상의 SLB MUX Vm를 배포 해야 합니다.  
   
 또한 SDN 사용이 가능한 Hyper-v 가상 스위치와 함께 Hyper-v 호스트를 구성 하 고 SLB 호스트 에이전트가 실행 되 고 있는지 확인 해야 합니다.  호스트 역할을 하는 라우터 같은 비용 (ECMP) 다중 경로 라우팅 및 프로토콜 BGP (Border Gateway)를 지원 해야 하 고 SLB MUXes에서 BGP 피어 링 요청을 수락 하도록 구성 되어야 합니다.  
@@ -131,12 +131,12 @@ System Center 2016에서 Windows Server 2016 년까지 SLB 관리자 및 상태 
 System Center 2016에 대 한 자세한 내용은 참조 [System Center 2016](https://www.microsoft.com/server-cloud/products/system-center-2016/)합니다.  
   
 > [!NOTE]  
-> System Center 2016을 사용 하지 않을 경우 설치 하 고 네트워크 컨트롤러 및 기타 SLB 인프라 구성 Windows PowerShell 또는 다른 관리 응용 프로그램을 사용할 수 있습니다. 자세한 내용은 참조 [Windows PowerShell을 사용 하 여 네트워크 컨트롤러 배포](../../../sdn/deploy/Deploy-Network-Controller-using-Windows-PowerShell.md)합니다.  
+> System Center 2016을 사용 하지 않을 경우 설치 하 고 네트워크 컨트롤러 및 기타 SLB 인프라 구성 Windows PowerShell 또는 다른 관리 애플리케이션을 사용할 수 있습니다. 자세한 내용은 참조 [Windows PowerShell을 사용 하 여 네트워크 컨트롤러 배포](../../../sdn/deploy/Deploy-Network-Controller-using-Windows-PowerShell.md)합니다.  
   
 ### <a name="network-controller"></a>네트워크 컨트롤러  
 네트워크 컨트롤러 SLB 관리자를 호스트 하 고 SLB에 대 한 다음 작업을 수행 합니다.  
   
--   Northbound API를 통해 System Center, Windows PowerShell 또는 다른 네트워크 관리 응용 프로그램에서 제공 하는 SLB 명령을 처리 합니다.  
+-   Northbound API를 통해 System Center, Windows PowerShell 또는 다른 네트워크 관리 애플리케이션에서 제공 하는 SLB 명령을 처리 합니다.  
   
 -   Hyper-v 호스트 및 SLB MUXes 배포에 대 한 정책을 계산합니다.  
   
@@ -149,7 +149,7 @@ SLB MUX 인바운드 네트워크 트래픽을 처리 하 고 Dip Vip 매핑됩�
 Windows Server 2016 및 Hyper-v를 실행 하는 컴퓨터와 SLB를 사용할 수 있습니다. Hyper-v 호스트의 Vm Hyper-v에서 지 원하는 모든 운영 체제를 실행할 수 있습니다.  
   
 ### <a name="slb-host-agent"></a>SLB 호스트 에이전트  
-SLB를 배포할 때 모든 Hyper-v 호스트 컴퓨터에 SLB 호스트 에이전트를 배포를 System Center, Windows PowerShell 또는 다른 관리 응용 프로그램을 사용 해야 합니다. Hyper-v 지원, Nano 서버를 포함 하 여 제공 하는 모든 버전의 Windows Server 2016에서 SLB 호스트 에이전트를 설치할 수 있습니다.  
+SLB를 배포할 때 모든 Hyper-v 호스트 컴퓨터에 SLB 호스트 에이전트를 배포를 System Center, Windows PowerShell 또는 다른 관리 애플리케이션을 사용 해야 합니다. Hyper-v 지원, Nano 서버를 포함 하 여 제공 하는 모든 버전의 Windows Server 2016에서 SLB 호스트 에이전트를 설치할 수 있습니다.  
   
 SLB 호스트 에이전트 SLB 정책 업데이트 네트워크 컨트롤러에서 수신 대기합니다. 또한 호스트 에이전트 프로그램은 규칙 SLB에 대 한 SDN 사용이 가능한 Hyper-v 가상 스위치는 로컬 컴퓨터에 구성 되어 있는에 있습니다.  
   
@@ -179,7 +179,7 @@ BGP 라우터 SLB에 대 한 다음 작업을 수행 합니다.
   
 -   활성 상태로 유지 실패 하면 SLB MUXes SLB 회전에서 제거 합니다.  
   
-## <a name="bkmk_features"></a>소프트웨어 부하 분산 기능  
+## <a name="software-load-balancing-features"></a><a name="bkmk_features"></a>소프트웨어 부하 분산 기능  
 다음은 일부의 기능 및 SLB의 기능입니다.  
   
 **핵심 기능**  

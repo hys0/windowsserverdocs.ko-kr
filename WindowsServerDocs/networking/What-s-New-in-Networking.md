@@ -5,14 +5,14 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: get-started-article
 ms.assetid: 08fb7563-d319-48a9-b181-ca0ca3032c18
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: da2166d28edda5662797824d9b26ad930f51083c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 35c3c3b2610918e8b0fd69ccf04422e3f6df4d0e
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406750"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318543"
 ---
 # <a name="whats-new-in-networking"></a>네트워킹의 새로운 기능
 
@@ -25,7 +25,7 @@ ms.locfileid: "71406750"
   
 -   [추가 네트워킹 기술에 대 한 새로운 기능](#bkmk_existing)  
   
-## <a name="bkmk_features"></a>새로운 네트워킹 기능 및 기술
+## <a name="new-networking-features-and-technologies"></a><a name="bkmk_features"></a>새로운 네트워킹 기능 및 기술
 
 네트워킹 소프트웨어 정의 된 데이터 센터 (SDDC) 플랫폼의 기본적인 일부인 및 Windows Server 2016 조직에 대해 완벽 하 게 실현된 SDDC 솔루션으로 이동 하는 데 도움이 하는 새로운 기능과 향상 된 네트워킹 SDN (소프트웨어) 기술을 제공 합니다.  
   
@@ -72,28 +72,28 @@ SDN에 대 한 자세한 내용은 참조 [소프트웨어 정의 네트워킹 &
   
 -   **스위치 (SET) 팀 포함**합니다.        집합에는 Hyper-v 가상 스위치에 통합 된 NIC 팀 솔루션입니다. 집합은 가용성을 향상 시키고 장애 조치를 제공 하는 단일 집합 팀에 최대 8 개의 실제 NIC 팀 구성 수 있습니다. Windows Server 2016에서 서버 메시지 블록 (SMB) 및 RDMA의 사용을 제한 하는 집합 팀을 만들 수 있습니다. 또한 Hyper-v 네트워크 가상화에 대 한 네트워크 트래픽을 분산 하기 위해 팀 집합을 사용할 수 있습니다. 자세한 내용은 참조 [원격 직접 메모리 액세스 & #40; RDMA & #41; 포함 된 팀 & #40; 전환 집합 & #41;](../virtualization/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md)합니다.  
   
-## <a name="bkmk_existing"></a>추가 네트워킹 기술에 대 한 새로운 기능
+## <a name="new-features-for-additional-networking-technologies"></a><a name="bkmk_existing"></a>추가 네트워킹 기술에 대 한 새로운 기능
 
 이 섹션에는 친숙 한 네트워킹 기술에 대 한 새로운 기능에 대 한 정보가 포함 되어 있습니다.
   
-## <a name="bkmk_dhcp"></a>DHCP  
+## <a name="dhcp"></a><a name="bkmk_dhcp"></a>인터페이스  
 DHCP는 프라이빗 인트라넷과 같은 TCP/IP 기반 네트워크에서 호스트를 구성할 때 복잡한 작업 및 관리 부담을 줄일 수 있도록 설계된 IETF(Internet Engineering Task Force) 표준입니다. DHCP 서버 서비스를 사용하면 DHCP 클라이언트에서 TCP/IP를 구성하는 프로세스가 자동으로 수행됩니다.  
   
 자세한 내용은 참조 [DHCP의 새로운](technologies/dhcp/What-s-New-in-DHCP.md)합니다.  
   
-## <a name="bkmk_dns"></a>DNS  
+## <a name="dns"></a><a name="bkmk_dns"></a>DNS  
 DNS는 TCP/IP 네트워크에서 컴퓨터 및 네트워크 서비스의 이름을 지정하는 데 사용되는 시스템입니다. DNS 명명 과정에서는 사용자에게 친숙한 이름을 통해 컴퓨터와 서비스를 찾습니다. 사용자가 응용 프로그램에서 DNS 이름을 입력하면 DNS 서비스는 이름과 연결된 다른 정보(IP 주소 등)로 이름을 확인할 수 있습니다.  
   
 다음은 DNS 클라이언트와 DNS 서버에 대 한 정보입니다.  
   
-### <a name="bkmk_dnsc"></a>DNS 클라이언트  
+### <a name="dns-client"></a><a name="bkmk_dnsc"></a>DNS 클라이언트  
 다음은 새로운 또는 향상 된 DNS 클라이언트 기술입니다.  
   
 -   **DNS 클라이언트 서비스 바인딩을**합니다. Windows 10에서 DNS 클라이언트 서비스는 둘 이상의 네트워크 인터페이스를 사용 하 여 컴퓨터에 대 한 향상 된 지원을 제공합니다.  
   
 자세한 내용은 [Windows Server 2016에서 제공 되는 DNS 클라이언트의 새로운 기능](dns/What-s-New-in-DNS-Client.md) 을 참조 하세요.  
   
-### <a name="bkmk_dnss"></a>DNS 서버  
+### <a name="dns-server"></a><a name="bkmk_dnss"></a>DNS 서버  
 다음은 새로운 또는 향상 된 DNS 서버 기술입니다.  
   
 -   **DNS 정책**합니다.  DNS는 DNS 서버 DNS 쿼리에 응답 하는 방법을 지정 하는 정책을 구성할 수 있습니다. DNS 응답을 기반으로 클라이언트 IP 주소 (위치), 시간, 일 및 다른 여러 매개 변수입니다. DNS 정책을 위치 인식 DNS, 트래픽 관리, 부하 분산, 스플릿 브레인 DNS 및 기타 시나리오를 사용 합니다.  
@@ -118,17 +118,17 @@ DNS는 TCP/IP 네트워크에서 컴퓨터 및 네트워크 서비스의 이름�
   
 자세한 내용은 [Windows server 2016에서 제공 되는 DNS 서버의 새로운 기능](dns/What-s-New-in-DNS-Server.md) 을 참조 하세요.  
   
-## <a name="bkmk_GRE"></a>GRE 터널링  
+## <a name="gre-tunneling"></a><a name="bkmk_GRE"></a>GRE 터널링  
 RAS 게이트웨이 이제 사이트 간 연결 및 게이트웨이 M + N 중복에 대 한 고가용성 캡슐화 GRE (Generic Routing) 터널을 지원합니다. GRE는 인터넷 프로토콜 네트워크를 통한 가상 지점 간 연결 내에서 다양한 네트워크 계층 프로토콜을 캡슐화할 수 있는 간단한 터널링 프로토콜입니다.  
   
 자세한 내용은 [Windows Server 2016의 GRE 터널링](../remote/remote-access/ras-gateway/gre-tunneling-windows-server.md)을 참조 하세요.  
   
-## <a name="HNV"></a>Hyper-v 네트워크 가상화  
+## <a name="hyper-v-network-virtualization"></a><a name="HNV"></a>Hyper-v 네트워크 가상화  
 Windows Server 2012에 도입 된, Hyper-v 네트워크 가상화 (HNV) 고객 네트워크 공유의 실제 네트워크 인프라의 가상화를 수 있습니다. 실제 네트워크 패브릭에서 필요한 최소한의 변화를 통해 HNV를 통해 서비스 공급자 배포 하 고 세 개의 클라우드에 걸쳐 아무 곳 이나 테 넌 트 작업을 마이그레이션하는 민첩성과: 서비스 공급자 클라우드, 프라이빗 클라우드 또는 Microsoft Azure 공용 클라우드입니다.  
   
 자세한 내용은 [Windows Server 2016에서 제공 되는 Hyper-v 네트워크 가상화의 새로운 기능](sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md) 을 참조 하세요.  
   
-## <a name="bkmk_ipam"></a>IPAM  
+## <a name="ipam"></a><a name="bkmk_ipam"></a>며  
 IPAM 조직 네트워크의 IP 주소 및 DNS 인프라에 대 한 사용자 정의 가능한 관리 및 모니터링 기능을 제공합니다. IPAM을 사용 하 여 모니터링, 감사 및 동적 호스트 구성 프로토콜 (DHCP) 및 도메인 이름 시스템 (DNS)를 실행 하는 서버를 관리할 수 있습니다.  
   
 -   **IP 주소 관리를 향상 된**합니다.  

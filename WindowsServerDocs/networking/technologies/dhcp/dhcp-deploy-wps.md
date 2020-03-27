@@ -6,14 +6,14 @@ ms.technology: networking-dhcp
 ms.topic: article
 ms.assetid: 7110ad21-a33e-48d5-bb3c-129982913bc8
 manager: brianlic
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 16900809c2c6b877d2b5c45f1c3ca26e55c6bea9
-ms.sourcegitcommit: 7df2bd3a7d07a50ace86477335ed6fbfb2dac373
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: a5b2e750bd7a0103382f6d91c515f4e283a112cb
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77027949"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80312667"
 ---
 # <a name="deploy-dhcp-using-windows-powershell"></a>Windows PowerShell을 사용하여 DHCP 배포
 
@@ -39,19 +39,19 @@ DHCP 서버를 사용 하 여 IP 주소를 할당 하면 네트워크에 있는 
 - [DHCP 용 Windows PowerShell 명령](#bkmk_dhcpwps)
 - [이 가이드의 Windows PowerShell 명령 목록](#bkmk_list)
 
-## <a name="bkmk_overview"></a>DHCP 배포 개요
+## <a name="dhcp-deployment-overview"></a><a name="bkmk_overview"></a>DHCP 배포 개요
 
 다음 그림에서는이 가이드를 사용 하 여 배포할 수 있는 시나리오를 보여 줍니다. 시나리오에는 Active Directory 도메인에 하나의 DHCP 서버가 포함 됩니다. 서버는 두 개의 서로 다른 서브넷에 있는 DHCP 클라이언트에 IP 주소를 제공 하도록 구성 됩니다. 서브넷은 DHCP 전달이 사용 하도록 설정 된 라우터로 구분 됩니다.
 
 ![DHCP 네트워크 토폴로지 개요](../../media/Core-Network-Guide/cng16_overview.jpg)
 
-## <a name="bkmk_technologies"></a>기술 개요
+## <a name="technology-overviews"></a><a name="bkmk_technologies"></a>기술 개요
 
 다음 섹션에서는 DHCP 및 TCP/IP에 대 한 간략 한 개요를 제공 합니다.
 
 ### <a name="dhcp-overview"></a>DHCP 개요
 
-DHCP는 호스트 IP 구성의 관리를 단순화하기 위한 IP 표준입니다. DHCP 표준은 네트워크에 있는 DHCP 지원 클라이언트의 IP 주소 및 기타 관련 구성 세부 사항의 동적 할당을 관리하는 방법으로서 DHCP 서버를 사용합니다.
+DHCP는 호스트 IP 구성의 관리를 단순화하기 위한 IP 표준입니다. DHCP 표준은 DHCP 서버를 IP 주소의 동적 할당 및 네트워크에서 DHCP가 설정된 클라이언트에 대한 기타 관련 구성 정보를 관리하는 방법으로 사용할 수 있도록 합니다.
 
 DHCP를 사용 하면 DHCP 서버를 사용 하 여 고정 IP 주소를 사용 하는 모든 장치를 수동으로 구성 하는 대신 로컬 네트워크의 컴퓨터 또는 다른 장치 (예: 프린터)에 IP 주소를 동적으로 할당할 수 있습니다.
 
@@ -79,11 +79,11 @@ Windows Server 2016의 TCP/IP는 다음과 같습니다.
 
 TCP/IP는 Windows 기반 컴퓨터를 다음과 같은 Microsoft 시스템 및 타사 시스템에 연결하고 해당 시스템과 정보를 공유할 수 있는 기본 TCP/IP 유틸리티를 제공합니다.
 
-- Windows Server 2016
+- Windows Server 2016
 
-- Windows 10
+- Windows 10
 
-- Windows Server 2012 R2
+- Windows Server 2012 R2
 
 - Windows 8.1
 
@@ -93,7 +93,7 @@ TCP/IP는 Windows 기반 컴퓨터를 다음과 같은 Microsoft 시스템 및 �
 
 - Windows Server 2008 R2
 
-- Windows 7
+- Windows 7
 
 - Windows Server 2008
 
@@ -113,7 +113,7 @@ TCP/IP는 Windows 기반 컴퓨터를 다음과 같은 Microsoft 시스템 및 �
 
 - 유선 이더넷 또는 무선 802.11 기술을 사용 하는 태블릿 및 휴대폰 전화
 
-## <a name="bkmk_plan"></a>DHCP 배포 계획
+## <a name="plan-dhcp-deployment"></a><a name="bkmk_plan"></a>DHCP 배포 계획
 
 다음은 DHCP 서버 역할을 설치 하기 전의 주요 계획 단계입니다.
 
@@ -131,7 +131,7 @@ DHCP 메시지는 브로드캐스트 메시지이기 때문에 라우터에 의�
 
 각 서브넷에는 자체의 고유한 IP 주소 범위가 있어야 합니다. 이 주소 범위는 DHCP 서버에서 범위로 표현됩니다.
 
-범위란 서브넷에서 DHCP 서비스를 사용하는 컴퓨터에 대한 IP 주소의 관리 그룹을 의미합니다. 관리자는 먼저 실제 서브넷마다 범위를 하나씩 만든 다음 범위를 사용하여 클라이언트에서 사용하는 매개 변수를 정의합니다.
+범위는 DHCP 서비스를 사용하는 서브넷에 있는 컴퓨터의 IP 주소에 대한 관리 그룹화입니다. 관리자는 먼저 실제 서브넷마다 범위를 하나씩 만든 다음 범위를 사용하여 클라이언트에서 사용하는 매개 변수를 정의합니다.
 
 범위에는 다음과 같은 속성이 있습니다.
 
@@ -139,9 +139,9 @@ DHCP 메시지는 브로드캐스트 메시지이기 때문에 라우터에 의�
 
 - 지정된 IP 주소의 서브넷을 결정하는 서브넷 마스크
 
-- 범위를 만들 때 할당되는 범위 이름
+- 범위 이름은 생성되면 할당됩니다.
 
-- 동적으로 할당되는 IP 주소를 받는 DHCP 클라이언트에 할당되는 임대 기간 값
+- 임대 기간 값은 동적으로 할당된 IP 주소를 수신하는 DHCP 클라이언트에 할당됩니다.
 
 - DHCP 클라이언트에 할당하도록 구성된 모든 DHCP 범위 옵션(예: DNS 서버 IP 주소, 라우터/기본 게이트웨이 IP 주소)
 
@@ -204,13 +204,13 @@ DHCP 서버에 대해 범위를 만들면 DHCP 서버가 컴퓨터 및 기타 �
 
 |구성 항목|예제 값|
 |-----------------------|------------------|
-|네트워크 연결 바인딩|Ethernet|
+|네트워크 연결 바인딩|이더넷|
 |DNS 서버 설정|DC1.corp.contoso.com|
 |기본 설정 DNS 서버 IP 주소|10.0.0.2|
 |범위 값<br /><br />1. 범위 이름<br />2. 시작 IP 주소<br />3. 끝 IP 주소<br />4. 서브넷 마스크<br />5. 기본 게이트웨이 (옵션)<br />6. 임대 기간|1. 기본 서브넷<br />2.10.0.0.1<br />3.10.0.0.254<br />4.255.255.255.0<br />5.10.0.0.1<br />6.8 일|
 |IPv6 DHCP 서버 작동 모드|사용 안 함|
 
-## <a name="bkmk_lab"></a>테스트 랩에서이 가이드 사용
+## <a name="using-this-guide-in-a-test-lab"></a><a name="bkmk_lab"></a>테스트 랩에서이 가이드 사용
 
 프로덕션 환경에를 배포 하기 전에이 가이드를 사용 하 여 테스트 랩에서 DHCP를 배포할 수 있습니다. 
 
@@ -273,7 +273,7 @@ Vm을 사용 하 여 테스트 랩에서 DHCP를 배포 하려면 다음 리소�
 3. Dhcp 서버가 dhcp 클라이언트에 IP 주소 및 DHCP 옵션을 동적으로 할당 하 고 있는지 확인 하는 데 사용할 Windows 클라이언트 운영 체제를 실행 하는 물리적 컴퓨터 1 대
 
 
-## <a name="bkmk_deploy"></a>DHCP 배포
+## <a name="deploy-dhcp"></a><a name="bkmk_deploy"></a>DHCP 배포
 
 이 섹션에서는 하나의 서버에 DHCP를 배포 하는 데 사용할 수 있는 Windows PowerShell 명령 예제를 제공 합니다. 서버에서 이러한 예제 명령을 실행 하기 전에 네트워크 및 환경에 맞게 명령을 수정 해야 합니다. 
 
@@ -490,7 +490,7 @@ Set-DhcpServerv4OptionValue -OptionID 3 -Value 10.0.1.1 -ScopeID 10.0.1.0 -Compu
 > [!IMPORTANT]
 > Dhcp 클라이언트와 dhcp 서버 간의 모든 라우터가 DHCP 메시지 전달을 위해 구성 되었는지 확인 합니다. DHCP 전달을 구성 하는 방법에 대 한 자세한 내용은 라우터 설명서를 참조 하세요.
 
-## <a name="bkmk_verify"></a>서버 기능 확인
+## <a name="verify-server-functionality"></a><a name="bkmk_verify"></a>서버 기능 확인
 
 Dhcp 서버가 DHCP 클라이언트에 IP 주소를 동적으로 할당 하 고 있는지 확인 하려면 다른 컴퓨터를 서비스 서브넷에 연결할 수 있습니다. 이더넷 케이블을 네트워크 어댑터에 연결 하 고 컴퓨터 전원을 연결한 후에는 DHCP 서버에서 IP 주소를 요청 합니다. **Ipconfig/all** 명령을 사용 하 고 결과를 검토 하거나 Windows 탐색기 또는 다른 응용 프로그램에서 브라우저를 사용 하 여 웹 리소스에 액세스 하려고 시도 하는 등의 연결 테스트를 수행 하 여 구성을 성공적으로 확인할 수 있습니다.
 
@@ -501,7 +501,7 @@ Dhcp 서버가 DHCP 클라이언트에 IP 주소를 동적으로 할당 하 고 
 3. Active Directory에서 권한이 부여 된 DHCP 서버 목록을 검색 하기 위해 다음 명령을 실행 하 여 Active Directory에서 DHCP 서버에 권한을 부여 했는지 확인 합니다. [-DhcpServerInDC를 가져옵니다](https://docs.microsoft.com/powershell/module/dhcpserver/Get-DhcpServerInDC).
 4. DHCP 콘솔 \(서버 관리자, **도구**, **dhcp**\)를 열고 서버 트리를 확장 하 여 범위를 검토 한 다음 각 범위를 마우스 오른쪽\-단추로 클릭 하 여 범위를 활성화 해야 합니다. 결과 메뉴에 선택 **활성화**가 포함 되어 있으면 **활성화**를 클릭 합니다. \(범위가 이미 활성화 되어 있으면 메뉴 선택이 **비활성화**를 읽습니다.\)
 
-## <a name="bkmk_dhcpwps"></a>DHCP 용 Windows PowerShell 명령
+## <a name="windows-powershell-commands-for-dhcp"></a><a name="bkmk_dhcpwps"></a>DHCP 용 Windows PowerShell 명령
 
 다음 참조에서는 Windows Server 2016에 대 한 모든 DHCP 서버 Windows PowerShell 명령에 대 한 명령 설명 및 구문을 제공 합니다. 항목은 **Get** 또는 **Set**와 같이 명령의 시작 부분에 있는 동사에 따라 사전순으로 명령을 나열 합니다.
 
@@ -517,7 +517,7 @@ Dhcp 서버가 DHCP 클라이언트에 IP 주소를 동적으로 할당 하 고 
 
 - [Windows PowerShell의 DHCP 서버 Cmdlet](https://docs.microsoft.com/windows-server/networking/technologies/dhcp/dhcp-deploy-wps)
 
-## <a name="bkmk_list"></a>이 가이드의 Windows PowerShell 명령 목록
+## <a name="list-of-windows-powershell-commands-in-this-guide"></a><a name="bkmk_list"></a>이 가이드의 Windows PowerShell 명령 목록
 
 다음은이 가이드에서 사용 되는 간단한 명령과 예제 값의 목록입니다.
 

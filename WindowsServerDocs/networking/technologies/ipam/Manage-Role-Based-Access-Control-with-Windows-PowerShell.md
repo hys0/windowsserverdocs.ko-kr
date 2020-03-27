@@ -10,14 +10,14 @@ ms.technology: networking-ipam
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4f13f78e-0114-4e41-9a28-82a4feccecfc
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: dec5c9b9b5d5fe858e063af70ff0a8e16991e632
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: a5cd347b849948052f4f7caa7fa8a863808e8c26
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71355215"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80309534"
 ---
 # <a name="manage-role-based-access-control-with-windows-powershell"></a>Windows PowerShell 을 사용하여 역할 기반 액세스 제어 관리
 
@@ -54,7 +54,7 @@ ScavengeStaleRecords : False
 ```  
   
 ## <a name="setting-access-scopes-on-ipam-objects"></a>IPAM 개체에 대 한 액세스 범위 설정  
-@No__t-0 명령을 사용 하 여 IPAM 개체에 대 한 액세스 범위를 설정할 수 있습니다. 이 명령을 사용 하 여 액세스 범위를 개체의 특정 값으로 설정 하거나 개체가 부모 개체에서 액세스 범위를 상속 하도록 할 수 있습니다. 다음은이 명령을 사용 하 여 구성할 수 있는 개체입니다.  
+`Set-IpamAccessScope` 명령을 사용 하 여 IPAM 개체에 대 한 액세스 범위를 설정할 수 있습니다. 이 명령을 사용 하 여 액세스 범위를 개체의 특정 값으로 설정 하거나 개체가 부모 개체에서 액세스 범위를 상속 하도록 할 수 있습니다. 다음은이 명령을 사용 하 여 구성할 수 있는 개체입니다.  
   
 -   DHCP 범위  
   

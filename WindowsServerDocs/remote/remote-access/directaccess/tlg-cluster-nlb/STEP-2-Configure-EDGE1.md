@@ -10,14 +10,14 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 84457351-1ca7-4e7c-8e2c-53d55b1fcdc0
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: b9eb37433e26c174ccae85482163c976577ff479
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: eea83bd9788ffd704b6169c140adc68465f9325d
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71388506"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80310848"
 ---
 # <a name="step-2-configure-edge1"></a>2 단계 EDGE1 구성
 
@@ -27,7 +27,7 @@ DirectAccess 서버에서 수행 되는 절차는 다음과 같습니다.
 
 ## <a name="to-configure-directaccess-on-edge1"></a>EDGE1에서 DirectAccess를 구성 하려면
   
-1.  **시작** 화면에서**ramgmtui.exe**를 입력 한 다음 enter 키를 누릅니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
+1.  **시작** 화면에서**ramgmtui.exe**를 입력 한 다음 enter 키를 누릅니다. **사용자 계정 컨트롤** 대화 상자가 표시되면 원하는 작업이 표시되어 있는지 확인하고 **예**를 클릭합니다.  
   
 2.  원격 액세스 관리 콘솔의 왼쪽 창에서 **구성**을 클릭 합니다.  
   

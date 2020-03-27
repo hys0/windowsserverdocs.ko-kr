@@ -11,18 +11,18 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9efe0231-94c1-4de7-be8e-becc2af84e69
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: e692384e9416e21e00556af6ada9af8df1713a03
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: a8628404de8a1b9caccc7f7f51b063cabb1caf27
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405852"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80317201"
 ---
 # <a name="hyper-v-network-virtualization-technical-details-in-windows-server-2016"></a>Windows Server 2016의 hyper-v 네트워크 가상화 기술 세부 정보
 
->적용 대상:  Windows Server 2016
+>적용 대상: Windows Server 2016
 
 서버 가상화를 사용하면 단일 실제 호스트에서 동시에 여러 서버 인스턴스를 실행할 수 있지만 서버 인스턴스는 서로 격리됩니다. 각 가상 컴퓨터는 기본적으로 해당 가상 컴퓨터가 실제 컴퓨터에서 실행되는 유일한 서버인 것처럼 작동합니다.  
 
@@ -35,7 +35,7 @@ ms.locfileid: "71405852"
 ## <a name="hyper-v-network-virtualization-concepts"></a>Hyper-V 네트워크 가상화 개념  
 HNV (Hyper-v 네트워크 가상화)에서 고객 또는 테 넌 트는 기업 또는 데이터 센터에 배포 되는 IP 서브넷 집합의 "소유자"로 정의 됩니다. 고객은 네트워크 격리를 필요로 하는 개인 데이터 센터 또는 서비스 공급자가 호스팅하는 공용 데이터 센터의 테 넌 트에 여러 부서나 사업부를 사용 하는 회사나 enterprise 일 수 있습니다. 각 고객은 데이터 센터에 하나 이상의 [가상 네트워크](#VirtualNetworks) 를 가질 수 있으며, 각 가상 네트워크는 하나 이상의 [가상 서브넷](#VirtualSubnets)으로 구성 됩니다.  
 
-Windows Server 2016에서 사용할 수 있는 두 가지 HNV 구현이 있습니다. HNVv1 및 HNVv2.  
+Windows Server 2016: HNVv1 및 HNVv2에서 사용할 수 있는 두 가지 HNV 구현이 있습니다.  
 
 -   **HNVv1**  
 
@@ -55,19 +55,19 @@ Windows Server 2016에서 사용할 수 있는 두 가지 HNV 구현이 있습�
     > [!IMPORTANT]  
     > 이 항목에서는 HNVv2에 대해 중점적으로 설명 합니다.  
 
-### <a name="VirtualNetworks"></a>가상 네트워크  
+### <a name="virtual-network"></a><a name="VirtualNetworks"></a>가상 네트워크  
 
 -   각 가상 네트워크는 하나 이상의 가상 서브넷으로 구성 됩니다. 가상 네트워크는 가상 네트워크 내의 가상 컴퓨터가 서로 통신할 수 있는 격리 경계를 형성 합니다. 일반적으로이 격리는 분리 된 IP 주소 범위 및 802.1 q 태그 또는 VLAN ID를 사용 하는 Vlan을 사용 하 여 적용 되었습니다. 그러나 HNV를 사용 하는 경우 NVGRE 또는 VXLAN 캡슐화를 사용 하 여 격리를 적용 하 여 고객 또는 테 넌 트 간에 IP 서브넷을 겹칠 가능성이 있는 오버레이 네트워크를 만듭니다.  
 
 -   각 가상 네트워크에는 호스트의 고유한 RDID (라우팅 도메인 ID)가 있습니다. 이 RDID는 대략 네트워크 컨트롤러의 가상 네트워크 REST 리소스를 식별 하기 위해 리소스 ID에 매핑됩니다. 가상 네트워크 REST 리소스는 추가 된 리소스 ID를 사용 하 여 URI (Uniform Resource Identifier) 네임 스페이스를 사용 하 여 참조 됩니다.  
 
-### <a name="VirtualSubnets"></a>가상 서브넷  
+### <a name="virtual-subnets"></a><a name="VirtualSubnets"></a>가상 서브넷  
 
 -   가상 서브넷은 동일한 가상 서브넷 내의 가상 컴퓨터에 대해 계층 3 IP 서브넷 의미 체계를 구현합니다. 가상 서브넷은 VLAN과 유사 하 게 브로드캐스트 도메인을 구성 하 고, NVGRE 테 넌 트 네트워크 ID (TNI) 또는 VXLAN 네트워크 식별자 (VNI) 필드를 사용 하 여 격리를 적용 합니다.  
 
 -   각 가상 서브넷은 단일 가상 네트워크 (RDID)에 속하며, 캡슐화 된 패킷 헤더의 TNI 또는 VNI 키를 사용 하 여 고유한 VSID (가상 서브넷 ID)에 할당 됩니다. VSID은 데이터 센터 내에서 고유 해야 하며 4096 ~ 2 ^ 24-2의 범위에 있습니다.  
 
-가상 네트워크 및 라우팅 도메인의 핵심 이점은 고객이 자신의 네트워크 토폴로지 (예: IP 서브넷)를 클라우드로 가져올 수 있다는 것입니다. 그림 2에서는 Contoso Corp에 별도의 두 네트워크 파란색 연구개발부 넷과 파란색 영업부 넷이 있는 예를 보여 줍니다. 이러한 네트워크는 서로 다른 라우팅 도메인 ID를 가지기 때문에 서로 상호 작용할 수 없습니다. 즉, Contoso R&D Net은 Contoso Corp에서 Contoso Sales Net과 함께 소유하고 있는 네트워크이지만 Contoso Sales Net으로부터 격리되어 있습니다. Contoso R&D Net에는 세 개의 가상 서브넷이 포함됩니다. RDID와 VSID는 둘 다 데이터 센터 내에서 고유합니다.  
+가상 네트워크 및 라우팅 도메인의 핵심 이점은 고객이 자신의 네트워크 토폴로지 (예: IP 서브넷)를 클라우드로 가져올 수 있다는 것입니다. 그림 2에서는 Contoso Corp에 별도의 두 네트워크 파란색 연구개발부 넷과 파란색 영업부 넷이 있는 예를 보여 줍니다. 이러한 네트워크는 서로 다른 라우팅 도메인 ID를 가지기 때문에 서로 상호 작용할 수 없습니다. 즉, Contoso Corp가 Contoso R&D Net과 Contoso Sales Net을 둘 다 소유하고 있더라도 이러한 두 네트워크는 서로 격리되어 있습니다. Contoso R&D Net에는 세 개의 가상 서브넷이 포함되어 있습니다. RDID와 VSID는 둘 다 데이터 센터 내에서 고유합니다.  
 
 ![고객 네트워크 및 가상 서브넷](../../../media/hyper-v-network-virtualization-technical-details-in-windows-server/VNetF6.gif)  
 
@@ -190,9 +190,9 @@ Windows Server 2016 이상에서 HNV는 기본적으로 NVGRE 및 VXLAN를 완�
 
 두 회사 모두 아래와 같이 네트워크 컨트롤러에서 다음 VSID (가상 서브넷 ID)를 할당 받습니다.  각 Hyper-v 호스트의 호스트 에이전트는 네트워크 컨트롤러에서 할당 된 PA IP 주소를 수신 하 고 기본이 아닌 네트워크 구획에 2 개의 PA 호스트 vNICs를 만듭니다. 아래와 같이 PA IP 주소가 할당 된 각 호스트 vNICs에 네트워크 인터페이스가 할당 됩니다.  
 
--   Contoso Corp의 virtual machines VSID 및 PAs: **VSID** 가 5001이 고, **SQL PA** 가 192.168.1.10, **웹 PA** is 192.168.2.20  
+-   Contoso Corp의 virtual machines VSID 및 PAs: **VSID** is 5001, **SQL PA** IS 192.168.1.10, **웹 PA** is 192.168.2.20  
 
--   Fabrikam Corp의 virtual machines VSID 및 PAs: **VSID** 가 6001이 고, **SQL PA** 가 192.168.1.10, **웹 PA** is 192.168.2.20  
+-   Fabrikam Corp의 virtual machines VSID 및 PAs: **VSID** is 6001, **SQL PA** IS 192.168.1.10, **웹 PA** is 192.168.2.20  
 
 네트워크 컨트롤러는 모든 네트워크 정책 (CA PA 매핑 포함)을 SDN 호스트 에이전트로 될 때마다 트리거되 하 여 영구 저장소 (OVSDB 데이터베이스 테이블)에 정책을 유지 합니다.  
 
@@ -233,7 +233,7 @@ Hyper-v 호스트 2의 Contoso Corp 웹 가상 컴퓨터 (10.1.1.12)가 10.1.1.1
 
 -   그런 다음 VFP 엔진은 대상 VM이 연결 된 vSwitch 포트로 패킷을 전달 합니다.  
 
-Fabrikam Corp **Web** 및 **SQL** 가상 컴퓨터 간의 트랙픽에 대해 비슷한 프로세스에서는 Fabrikam Corp의 HNV 정책 설정을 사용합니다. 결과적으로, Fabrikam Corp와 Contoso Corp 가상 컴퓨터는 HNV를 통해 원래의 인트라넷에서와 같이 상호 작용합니다. Fabrikam Corp 가상 컴퓨터와 Contoso Corp 가상 컴퓨터는 동일한 IP 주소를 사용하고 있더라도 서로 상호 작용할 수 없습니다.  
+Fabrikam Corp **Web** 가상 컴퓨터와 **SQL** 가상 컴퓨터 간의 트래픽에 대한 유사한 프로세스에서는 Fabrikam Corp에 대한 HNV 정책 설정을 사용합니다. 따라서 HNV를 통해 Fabrikam Corp 가상 컴퓨터와 Contoso Corp 가상 컴퓨터는 원래 인트라넷에 있는 것처럼 상호 작용합니다. Fabrikam Corp 가상 컴퓨터와 Contoso Corp 가상 컴퓨터는 동일한 IP 주소를 사용하고 있더라도 서로 상호 작용할 수 없습니다.  
 
 별도의 주소 (Ca 및 PAs), Hyper-v 호스트의 정책 설정 및 인바운드 및 아웃 바운드 가상 컴퓨터 트래픽에 대 한 CA와 PA 간의 주소 변환은 NVGRE 키 또는 VLXAN VNID를 사용 하 여 이러한 서버 집합을 격리 합니다. 또한 가상화 매핑과 변환에서는 실제 네트워크 인프라에서 가상 네트워크 아키텍처를 분리합니다. Contoso **SQL** 및 **Web** 과 Fabrikam **SQL** 및 **Web** 이 고유 CA IP 서브넷(10.1.1/24)에 상주하더라도 실제 배포는 각각 서로 다른 PA 서브넷의 두 호스트 192.168.1/24 및 192.168.2/24에서 수행됩니다. 여기에 함축된 의미는 HNV를 통해 서브넷 간 가상 컴퓨터 프로비저닝 및 실시간 마이그레이션이 가능하다는 것입니다.  
 
@@ -291,13 +291,13 @@ HNV 정책은 호스트 에이전트에서 프로그래밍 합니다. 각 가상
 ## <a name="summary"></a>요약  
 클라우드 기반 데이터 센터는 향상된 확장성 및 보다 우수한 리소스 사용률과 같은 여러 이점을 제공할 수 있습니다. 이러한 잠재적 이점을 실현하려면 기본적으로 동적 환경에서 다중 테넌트 확장성 문제를 해결하는 기술이 필요합니다. HNV는 실제 네트워크 토폴로지에 대해 가상 네트워크 토폴로지를 분리하여 이러한 문제를 해결하고 데이터 센터의 운영 효율성을 개선하도록 설계되었습니다. 기존 표준을 기반으로 구축 된 HNV는 오늘날의 데이터 센터에서 실행 되 고 기존 VXLAN 인프라와 함께 작동 합니다. 이제 HNV를 사용 하는 고객은 데이터 센터를 사설 클라우드로 통합 하거나 하이브리드 클라우드를 사용 하 여 호스팅 서버 공급자의 환경으로 데이터 센터를 원활 하 게 확장할 수 있습니다.  
 
-## <a name="BKMK_LINKS"></a>참고 항목  
+## <a name="see-also"></a><a name="BKMK_LINKS"></a>참고 항목  
 HNVv2에 대 한 자세한 내용은 다음 링크를 참조 하세요.  
 
 
-|       콘텐츠 형식       |                                                                                                                                              참조                                                                                                                                              |
+|       콘텐츠 유형       |                                                                                                                                              참조                                                                                                                                              |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **커뮤니티 리소스**  |                                                                -   [사설 클라우드 아키텍처 블로그](https://blogs.technet.com/b/privatecloud)<br />-질문 하기: [cloudnetfb@microsoft.com](mailto:%20cloudnetfb@microsoft.com)                                                                |
 |         **RFC**          |                                                                   -   [NVGRE 초안 RFC](https://www.ietf.org/id/draft-sridharan-virtualization-nvgre-07.txt)<br />-   [VXLAN-RFC 7348](https://www.rfc-editor.org/info/rfc7348)                                                                    |
-| **관련 기술** | -Windows Server 2012 r 2의 Hyper-v 네트워크 가상화 기술 세부 정보는 [Hyper-v 네트워크 가상화 기술 세부 정보](https://technet.microsoft.com/library/jj134174.aspx) 를 참조 하세요.<br />-   [네트워크 컨트롤러](../../../sdn/technologies/network-controller/Network-Controller.md) |
+| **관련 기술** | -Windows Server 2012 r 2의 Hyper-v 네트워크 가상화 기술 세부 정보는 [Hyper-v 네트워크 가상화 기술 세부 정보](https://technet.microsoft.com/library/jj134174.aspx) 를 참조 하세요.<br />[네트워크 컨트롤러](../../../sdn/technologies/network-controller/Network-Controller.md) -    |
 

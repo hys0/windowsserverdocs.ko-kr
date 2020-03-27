@@ -3,7 +3,7 @@ title: Windows Server Essentials 지원
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: ac12e9a9-ba7a-480a-9249-6e216c70941b
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: d6855e777ea6e59ce5a9596adc9ba2e186b0a3e5
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 9142f44e61a7361bd4c40bdfdb5869e326d67343
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75947379"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318667"
 ---
 # <a name="support-windows-server-essentials"></a>Windows Server Essentials 지원
 
@@ -25,7 +25,7 @@ ms.locfileid: "75947379"
 
 이 항목에서는 Windows Server Essentials에 대한 지원 및 문제 해결 옵션을 제공합니다.  
   
-##  <a name="BKMK_Top"></a>상위 지원 솔루션 및 업데이트  
+##  <a name="top-support-solutions-and-updates"></a><a name="BKMK_Top"></a>상위 지원 솔루션 및 업데이트  
   
 -   [Windows Server 2012 R2 및 Windows Server 2012에 대 한 상위 지원 솔루션](https://blogs.technet.com/b/topsupportsolutions/archive/2014/02/04/top-support-solutions-for-microsoft-windows-server-2012.aspx)  
   
@@ -102,7 +102,7 @@ ms.locfileid: "75947379"
   
 -   [지원 Microsoft 파트너 네트워크](https://mspartner.microsoft.com/en/us/Pages/Support/get-support.aspx)  
   
--   [Microsoft Business Hub](http://www.microsoftbusinesshub.com/Gigya/Insider)  
+-   [Microsoft 비즈니스 허브](http://www.microsoftbusinesshub.com/Gigya/Insider)  
   
 -   [Microsoft 프리미어 지원 서비스](https://www.microsoft.com/microsoftservices/support.aspx)  
   

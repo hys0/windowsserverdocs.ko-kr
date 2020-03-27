@@ -6,15 +6,15 @@ ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: eeca4cf7-90f0-485d-843c-76c5885c54b0
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 05/29/2018
-ms.openlocfilehash: d3ea6f0e29803b8a709f31811f77678bf03201a8
-ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
+ms.openlocfilehash: bd4d0d4d3b165a4e89a00cd2975ace20687aed7d
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76822584"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80314982"
 ---
 # <a name="overview-of-the-directaccess-to-always-on-vpn-migration"></a>DirectAccess-Always On VPN 마이그레이션 개요 
 
@@ -70,7 +70,7 @@ DirectAccess – Always On VPN 마이그레이션 프로세스는 4 가지 기�
 | 네트워크 토폴로지                      | 두 네트워크 어댑터를 사용 하는에 지 방화벽 뒤의 NAT (네트워크 주소 변환)                            |
 | 액세스 모드                           | 끝에서 가장자리로                                                                                                    |
 | 터널링                             | 분할 터널                                                                                                   |
-| Authentication                        | 컴퓨터 인증서를 사용 하는 표준 PKI (공개 키 인프라) 인증 및 Kerberos (KerbProxy가 아님) |
+| 인증                        | 컴퓨터 인증서를 사용 하는 표준 PKI (공개 키 인프라) 인증 및 Kerberos (KerbProxy가 아님) |
 | 프로토콜                             | HTTPS를 통한 IP (ip-https)                                                                                       |
 | 네트워크 위치 서버 (NLS) 오프 상자 | 예                                                                                                            |
 
@@ -82,14 +82,14 @@ DirectAccess – Always On VPN 마이그레이션 프로세스는 4 가지 기�
 
 | VPN 기능 | 배포 시나리오 구성 |
 |-----|-----|
-| 연결 유형 | IKEv2 (Native IKE(Internet Key Exchange) version 2) |
+| 연결 형식 | IKEv2 (Native IKE(Internet Key Exchange) version 2) |
 | 네트워크 어댑터   | 2        |
 | 사용자 인증  | Active Directory 자격 증명            |
 | 컴퓨터 인증서 사용        | 예                          |
 | 라우팅 | 분할 터널링 |
 | 이름 확인 | 도메인 이름 정보 목록 및 DNS (Domain Name System) 접미사 |
 | 트리거 | Always on 및 신뢰할 수 있는 네트워크 검색 |
-| Authentication  | 신뢰할 수 있는 플랫폼 모듈-보호 된 사용자 인증서를 사용 하 여 PEAP (protected Extensible Authentication Protocol-Transport Layer Security) |
+| 인증  | 신뢰할 수 있는 플랫폼 모듈-보호 된 사용자 인증서를 사용 하 여 PEAP (protected Extensible Authentication Protocol-Transport Layer Security) |
 
 ## <a name="next-step"></a>다음 단계
 

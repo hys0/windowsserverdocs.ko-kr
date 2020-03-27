@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: cde37849-ce79-4c26-aa14-cd0ef31cae18
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 6870029e02ae91b1ef5bf4d4302ac2bed2e27d84
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: b7bc75ea81133c91ad7e9883f03c3e32f085b5eb
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405294"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80315708"
 ---
 # <a name="configure-radius-clients"></a>RADIUS 클라이언트 구성
 
@@ -52,7 +52,7 @@ NPS에서 사용할 네트워크 액세스 서버를 구성 하려면 다음 절
 
 NPS에서 RADIUS 클라이언트로 네트워크 액세스 서버를 추가 하려면 다음 절차를 따르십시오. 이 절차에 따라 NPS 콘솔을 사용 하 여 NAS를 RADIUS 클라이언트로 구성할 수 있습니다.
 
-이 절차를 완료 하려면의 구성원 이어야는 **관리자** 그룹입니다.
+이 절차를 완료하려면 **Administrators** 그룹의 구성원이어야 합니다.
 
 ### <a name="to-add-a-network-access-server-as-a-radius-client-in-nps"></a>NPS에서 RADIUS 클라이언트로 네트워크 액세스 서버를 추가 하려면
 
@@ -77,7 +77,7 @@ Windows Server 2016 Standard에서 NPS를 실행 하는 경우 IP 주소 범위�
 
 범위의 모든 RADIUS 클라이언트는 동일한 구성 및 공유 암호를 사용 해야 합니다.
 
-이 절차를 완료 하려면의 구성원 이어야는 **관리자** 그룹입니다.
+이 절차를 완료하려면 **Administrators** 그룹의 구성원이어야 합니다.
 
 ### <a name="to-set-up-radius-clients-by-ip-address-range"></a>IP 주소 범위를 기준으로 RADIUS 클라이언트를 설정 하려면
 

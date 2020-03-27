@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 3830b356-36d3-44f9-a1d7-990ff3e57403
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 14eb9e5b4d5a28a64d3cfa0d27b5294ba7168da9
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: df6287f35c3fbf397df3b4d61812db3b14f3ce38
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71356733"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318513"
 ---
 # <a name="branchcache-deployment-guide"></a>BranchCache 배포 안내서
 
@@ -39,7 +39,7 @@ WAN 대역폭을 최적화하기 위해 BranchCache는 본사 콘텐츠 서버�
   
 **BranchCache 배포의 이점**  
   
-BranchCache 캐시 파일, 웹 및 응용 프로그램 콘텐츠 지점 사무실 위치에서 클라이언트 컴퓨터의 속도가 느린 WAN 연결을 통해 콘텐츠를 액세스 하는 대신 로컬 영역 네트워크 (LAN)를 사용 하 여 데이터 액세스를 허용 합니다.  
+BranchCache 캐시 파일, 웹 및 애플리케이션 콘텐츠 지점 사무실 위치에서 클라이언트 컴퓨터의 속도가 느린 WAN 연결을 통해 콘텐츠를 액세스 하는 대신 로컬 영역 네트워크 (LAN)를 사용 하 여 데이터 액세스를 허용 합니다.  
   
 BranchCache는 WAN 트래픽 및 지점 사용자가 네트워크에서 파일을 열에 필요한 시간을 줄일 수 있습니다.  BranchCache에는 항상 가장 최근의 데이터와 사용자가 제공 하 고 호스트 캐시 서버 및 클라이언트 컴퓨터에서 캐시를 암호화 하 여 콘텐츠에 대 한 보안 보호 합니다.  
   
@@ -64,7 +64,7 @@ BranchCache는 WAN 트래픽 및 지점 사용자가 네트워크에서 파일�
 
 다음은이 가이드를 사용 하 여 BranchCache를 배포 하기 위한 요구 사항입니다.  
   
--   **파일 및 웹 콘텐츠 서버** 는 BranchCache 기능을 제공 하기 위해 다음 운영 체제 중 하나를 실행 해야 합니다. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 또는 Windows Server 2008 R2. Windows 8 및 이후 클라이언트 계속 만들 수 있지만 Windows Server 2008 r 2를 실행 하는 콘텐츠 서버에 액세스할 때 BranchCache에서 혜택을 볼 새 청크 및 Windows Server 2016, Windows Server 2012 R2 및 Windows Server 2012의 기술 해시를 사용 합니다.  
+-   **파일 및 웹 콘텐츠 서버** BranchCache 기능을 제공 하는 다음 운영 체제 중 하나를 실행 해야 합니다: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 또는 Windows Server 2008 r 2입니다. Windows 8 및 이후 클라이언트 계속 만들 수 있지만 Windows Server 2008 r 2를 실행 하는 콘텐츠 서버에 액세스할 때 BranchCache에서 혜택을 볼 새 청크 및 Windows Server 2016, Windows Server 2012 R2 및 Windows Server 2012의 기술 해시를 사용 합니다.  
   
 -   **클라이언트 컴퓨터** 수 있도록 하는 Windows 10, Windows 8.1 또는 Windows 8 실행 해야 가장 최근의 배포 모델 및 청크 및 Windows Server 2012에서 도입 된 향상 된 기능 해시를 사용 합니다.  
   

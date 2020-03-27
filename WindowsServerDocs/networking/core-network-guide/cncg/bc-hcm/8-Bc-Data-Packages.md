@@ -6,18 +6,18 @@ ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: article
 ms.assetid: 31e8428f-a482-4734-be1b-213912e34825
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 104e3cfd0525c43857bb37d781f6b2475978238e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: a02741b163aafe12c52bf0afb4c235aa9436347a
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406387"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318443"
 ---
 # <a name="create-content-server-data-packages-for-web-and-file-content-optional"></a>웹 및 파일 콘텐츠에 대해 콘텐츠 서버 데이터 패키지 만들기(선택 사항)
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 이 절차를 사용 하 여 웹 및 파일 서버에서 콘텐츠를 미리 해시 한 다음 호스트 캐시 서버에서 가져올 데이터 패키지를 만들 수 있습니다. 
 
@@ -28,7 +28,7 @@ ms.locfileid: "71406387"
 >[!IMPORTANT]
 >이 절차를 수행 하기 전에 콘텐츠 서버에 BranchCache를 설치 하 고 구성 해야 합니다. 또한 콘텐츠 서버에서 서버 암호를 변경 하려는 경우 않은 하기 전에 이전\-콘텐츠 해시 – 서버 암호를 수정 합니다. 이전에 무효화\-해시를 생성 합니다.
 
-이 절차를 수행하려면 Administrators 그룹의 구성원이어야 합니다.
+이 절차를 수행하려면 Administrators 그룹의 멤버여야 합니다.
 
 ## <a name="to-create-content-server-data-packages"></a>콘텐츠 서버 데이터 패키지를 만들려면
 

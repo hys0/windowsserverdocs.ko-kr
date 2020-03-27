@@ -6,22 +6,22 @@ ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 3c9de3ec-4bbd-4db0-b47a-03507a315383
 ms.localizationpriority: medium
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 11/05/2018
-ms.openlocfilehash: f92cfdbe13633dd4c59012f566c6888fdc7fc7a1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e0e061a38170242a3808fbad0c82a4154bf9c536
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71388162"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80313301"
 ---
 # <a name="step-1-plan-the-always-on-vpn-deployment"></a>1단계. Always On VPN 배포 계획
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-- [**선행** Always On VPN을 배포 하기 위한 워크플로에 대해 알아보기](always-on-vpn-deploy-deployment.md)
-- [**그런** 2단계. 서버 인프라 구성](vpn-deploy-server-infrastructure.md)
+- [**이전:** Always On VPN을 배포 하기 위한 워크플로에 대해 알아보기](always-on-vpn-deploy-deployment.md)
+- [**다음:** 2 단계. 서버 인프라 구성](vpn-deploy-server-infrastructure.md)
 
 이 단계에서는 Always On VPN 배포 계획 및 준비를 시작 합니다. 를 VPN 서버로 사용 하려는 컴퓨터에 원격 액세스 서버 역할을 설치 하기 전에 다음 작업을 수행 합니다. 적절 한 계획 후에 Always On VPN을 배포 하 고, 선택적으로 Azure AD를 사용 하 여 VPN 연결에 대 한 조건부 액세스를 구성할 수 있습니다.
 
@@ -73,4 +73,4 @@ IKEv2는 [인터넷 엔지니어링 작업 Force Request For Comments 7296](http
 
 ## <a name="next-steps"></a>다음 단계
 
-[2단계. 서버 인프라](vpn-deploy-server-infrastructure.md)구성: 이 단계에서는 VPN을 지 원하는 데 필요한 서버 쪽 구성 요소를 설치 하 고 구성 합니다. 서버 쪽 구성 요소에는 사용자, VPN 서버 및 NPS 서버에서 사용 하는 인증서를 배포 하도록 PKI를 구성 하는 작업이 포함 됩니다.
+[2 단계. 서버 인프라 구성](vpn-deploy-server-infrastructure.md):이 단계에서는 VPN을 지 원하는 데 필요한 서버 쪽 구성 요소를 설치 하 고 구성 합니다. 서버 쪽 구성 요소에는 사용자, VPN 서버 및 NPS 서버에서 사용 하는 인증서를 배포 하도록 PKI를 구성 하는 작업이 포함 됩니다.

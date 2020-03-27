@@ -3,7 +3,7 @@ title: Windows Server Essentials의 컴퓨터 모니터링 문제 해결
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,27 +12,27 @@ ms.assetid: f1e6b377-4a24-4d28-9b25-05910914826b
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 1adf8ae2dd8763d0bc5a514609bb2470de6acde4
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 968c8c82bfde350e631f1f6ae4830a4fd920aa4b
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66436074"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318603"
 ---
 # <a name="troubleshoot-computer-monitoring-in-windows-server-essentials"></a>Windows Server Essentials의 컴퓨터 모니터링 문제 해결
 
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-이 항목에서는 경고 뷰어 및 Windows Server Essentials에서 전자 메일 알림을 통해 컴퓨터의 상태를 모니터링 하는 동안 발생 하는 문제 해결 방법을 제공 합니다.  
+이 항목에서는 경고 뷰어에서 컴퓨터 상태를 모니터링 하는 동안 발생 한 문제에 대 한 문제 해결을 제공 하 고 Windows Server Essentials에서 전자 메일 알림을 통해 제공 합니다.  
   
 > [!NOTE]
->  Windows Server Essentials 커뮤니티에서 최신 문제 해결 정보에 대 한 것이 좋습니다를 방문 하 여 [Windows Server Essentials 포럼](https://social.technet.microsoft.com/Forums/winserveressentials/threads)합니다. Windows Server Essentials 포럼은 도움말을 검색하거나 질문하기 좋은 곳입니다.  
+>  Windows Server Essentials 커뮤니티에서 제공 하는 최신 문제 해결 정보는 [Windows Server Essentials 포럼](https://social.technet.microsoft.com/Forums/winserveressentials/threads)을 참조 하는 것이 좋습니다. Windows Server Essentials 포럼은 도움말을 검색하거나 질문하기 좋은 곳입니다.  
   
-##  <a name="BKMK_TS"></a> 경고에 대 한 전자 메일 알림 문제 해결  
+##  <a name="troubleshooting-email-notifications-for-alerts"></a><a name="BKMK_TS"></a>경고에 대 한 전자 메일 알림 문제 해결  
  이 섹션에서는 경고에 대한 메일 알림을 사용하는 경우 발생할 수 있는 다양한 문제를 설명합니다.  
   
 ### <a name="cannot-send-the-test-email-for-the-alert"></a>경고에 대한 테스트 메일을 보낼 수 없음  
- **문제** 오류가 발생 하는 메시지 경고에 대 한 테스트 메일을 보낼 수 없습니다.  
+ **문제** 경고에 대 한 테스트 전자 메일을 보낼 수 없다는 오류 메시지가 표시 됩니다.  
   
  **원인** 이 오류는 경고 알림에 대한 설정에 다음과 같은 문제가 있어 발생할 수 있습니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66436074"
      %ProgramData%\Microsoft\Windows Server\Logs\SharedServiceHost-AlertServiceConfig.log  
   
     > [!TIP]
-    >  ProgramData 폴더를 보려면 표시되는 항목을 숨겼음에 틀림없습니다. 리본의 ProgramData 폴더가 표시 되지 않으면 **보기** 탭의 **표시/숨기기** 그룹을 선택 합니다 **숨겨진 항목** 텍스트 상자.  
+    >  ProgramData 폴더를 보려면 표시되는 항목을 숨겼음에 틀림없습니다. ProgramData 폴더가 표시 되지 않으면 리본의 **보기** 탭에 있는 **표시/숨기기** 그룹에서 **숨겨진 항목** 텍스트 상자를 선택 합니다.  
   
 ##### <a name="to-update-your-email-notification-setup-for-alerts"></a>경고에 대한 메일 알림 설정을 업데이트하려면  
   
@@ -61,13 +61,13 @@ ms.locfileid: "66436074"
   
 2.  경고 뷰어 아래쪽에서 **경고에 대한 메일 알림 설정**을 클릭합니다.  
   
-3.  **경고에 대한 메일 알림 설정** 대화 상자에서 **사용**을 클릭합니다.  
+3.  **경고에 대한 전자 메일 알림 설정** 대화 상자에서 **사용**을 클릭합니다.  
   
 4.  **SMTP 설정** 대화 상자에서 SMTP 설정을 업데이트한 후 **확인**을 클릭합니다.  
   
-5.  업데이트된 설정을 테스트하려면 **적용 후 메일 보내기**를 클릭합니다.  
+5.  업데이트된 설정을 테스트하려면 **적용 후 전자 메일 보내기**를 클릭합니다.  
   
-6.  테스트 전자 메일이 성공적인지 확인한 후 **확인**을 클릭하여 업데이트된 설정을 저장합니다.  
+6.  테스트 메일이 성공적인지 확인한 후 **확인**을 클릭하여 업데이트된 설정을 저장합니다.  
   
 ### <a name="test-email-notification-does-not-list-any-alerts"></a>테스트 메일 알림에 경고가 나열되지 않음  
  **문제** 경고 뷰어에 경고가 나열된 경우에도 경고에 대한 테스트 메일 알림에 경고가 표시되지 않습니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "66436074"
   
  **적용 후 메일 보내기**를 클릭하면 일반적으로 상태 경고가 나열되지 않은 샘플 메일 알림을 받게 됩니다. 그러나 메일 알림을 보내도록 구성된 상태 경고가 이 테스트 프로세스 중에 식별되면 해당 경고가 테스트 메일에 포함됩니다.  
   
-### <a name="active-alerts-are-displayed-for-an-uninstalled-application"></a>제거된 응용 프로그램에 대한 활성 경고가 표시됨  
+### <a name="active-alerts-are-displayed-for-an-uninstalled-application"></a>제거된 애플리케이션에 대한 활성 경고가 표시됨  
  **문제** 응용 프로그램 및 해당 상태 정의 파일이 제거된 경우에도 해당 응용 프로그램에 대한 활성 경고가 표시됩니다.  
   
  **해결 방법** 제거된 응용 프로그램의 활성 경고를 수동으로 삭제해야 합니다. 경고를 삭제하려면 다음을 수행하세요.  

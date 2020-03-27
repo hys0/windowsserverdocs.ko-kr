@@ -6,40 +6,40 @@ ms.prod: windows-server
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: f9c313ac-bb86-4e48-b9b9-de5004393e06
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 356c61c2cc5b60f43a69f17966c97f3c69d05cda
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 86ce83142cafe8ebe61aff2fb193e9b646172651
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71356043"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80317883"
 ---
 # <a name="use-dns-policy-for-application-load-balancing"></a>응용 프로그램 부하 분산에 대 한 DNS 정책을 사용 하 여
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-응용 프로그램 부하 분산을 수행 하는 DNS 정책을 구성 하는 방법에 알아보려면이 항목을 사용할 수 있습니다.
+애플리케이션 부하 분산을 수행 하는 DNS 정책을 구성 하는 방법에 알아보려면이 항목을 사용할 수 있습니다.
 
-이전 버전의 Windows Server DNS 라운드 로빈 응답;를 사용 하 여 부하 분산만 제공 됩니다. 하지만 Windows Server 2016, dns 응용 프로그램 부하 분산에 대 한 DNS 정책을 구성할 수 있습니다.
+이전 버전의 Windows Server DNS 라운드 로빈 응답;를 사용 하 여 부하 분산만 제공 됩니다. 하지만 Windows Server 2016, dns 애플리케이션 부하 분산에 대 한 DNS 정책을 구성할 수 있습니다.
 
-응용 프로그램의 여러 인스턴스를 배포한 경우 응용 프로그램에 대 한 트래픽 부하를 할당 하 여 동적으로, 다른 응용 프로그램 인스턴스 간에 트래픽 부하를 분산 DNS 정책을 사용할 수 있습니다.
+애플리케이션의 여러 인스턴스를 배포한 경우 애플리케이션에 대 한 트래픽 부하를 할당 하 여 동적으로, 다른 애플리케이션 인스턴스 간에 트래픽 부하를 분산 DNS 정책을 사용할 수 있습니다.
 
 ## <a name="example-of-application-load-balancing"></a>응용 프로그램 부하 분산의 예
 
-다음은 응용 프로그램 부하 분산에 대 한 DNS 정책 사용 방법의 예입니다.
+다음은 애플리케이션 부하 분산에 대 한 DNS 정책 사용 방법의 예입니다.
 
 이 예제에서는 하나의 가상 회사 Contoso 선물 서비스-온라인 gifing 서비스를 제공 하 고 (가) 라는 웹 사이트를 사용 하 여 **contosogiftservices.com**합니다.
 
 Contosogiftservices.com 웹 사이트는 각각 서로 다른 IP 주소를 갖고 있는 여러 데이터 센터에서 호스팅됩니다.
 
-Contoso 선물 서비스의 기본 시장의 북아메리카에서 웹 사이트는 다음 세 가지 데이터 센터에서 호스팅됩니다. 시카고, IL, 달라스, TX 및 시애틀, WA.
+세 개의 데이터 센터에서 호스팅되는 웹 사이트는 Contoso 선물 서비스에 대 한 기본 시장 북아메리카 지역에: 일리노이 주 시카고, 달라스, TX 및 미국 워싱턴주 시애틀 합니다.
 
-시애틀 웹 서버에 가장 적합 한 하드웨어 구성을 두 개의 다른 사이트와 두 배 많은 부하를 처리할 수 있습니다. Contoso 선물 서비스는 다음과 같은 방식에서 보낸 응용 프로그램 소통량을 하려고 합니다.
+시애틀 웹 서버에 가장 적합 한 하드웨어 구성을 두 개의 다른 사이트와 두 배 많은 부하를 처리할 수 있습니다. Contoso 선물 서비스는 다음과 같은 방식에서 보낸 애플리케이션 소통량을 하려고 합니다.
 
-- 시애틀 웹 서버에서 더 많은 리소스를 포함 하기 때문에이 서버에 전달 되는 응용 프로그램의 클라이언트의 절반
-- 응용 프로그램의 클라이언트의 1/4 Dallas 텍사스 데이터 센터에 매핑됩니다.
-- 응용 프로그램의 클라이언트의 1/4 주 시카고 데이터 센터에 매핑됩니다.
+- 시애틀 웹 서버에서 더 많은 리소스를 포함 하기 때문에이 서버에 전달 되는 애플리케이션의 클라이언트의 절반
+- 애플리케이션의 클라이언트의 1/4 Dallas 텍사스 데이터 센터에 매핑됩니다.
+- 애플리케이션의 클라이언트의 1/4 주 시카고 데이터 센터에 매핑됩니다.
 
 다음 그림에서는이 시나리오를 보여 줍니다.
 
@@ -48,7 +48,7 @@ Contoso 선물 서비스의 기본 시장의 북아메리카에서 웹 사이트
 
 ### <a name="how-application-load-balancing-works"></a>응용 프로그램 부하를 분산 작동
 
-구성한 후 응용 프로그램에 대 한 DNS 정책 사용 하 여 DNS 서버 로드이 예제 시나리오를 사용 하 여 분산 DNS 서버가 응답 하는 50%의 시간 Dallas 웹 서버 주소를 사용 하 여 시간의 25%에서 25% 시카고 웹 서버 주소를 사용 하 여 시간의 시애틀 웹 서버 주소를 사용 합니다.
+구성한 후 애플리케이션에 대 한 DNS 정책 사용 하 여 DNS 서버 로드이 예제 시나리오를 사용 하 여 분산 DNS 서버가 응답 하는 50%의 시간 Dallas 웹 서버 주소를 사용 하 여 시간의 25%에서 25% 시카고 웹 서버 주소를 사용 하 여 시간의 시애틀 웹 서버 주소를 사용 합니다.
 
 따라서 DNS 서버가 받으면 마다 4 개의 쿼리에 대 한 응답을 보냅니다 두 응답 시애틀과 마다 하나씩 댈러스와 시카고에 대 한 합니다.
 
@@ -58,7 +58,7 @@ Contoso 선물 서비스의 기본 시장의 북아메리카에서 웹 사이트
 
 ### <a name="how-to-configure-application-load-balancing"></a>응용 프로그램 부하 분산을 구성 하는 방법
 
-다음 섹션에서는 응용 프로그램 부하 분산에 대 한 DNS 정책을 구성 하는 방법을 보여 줍니다.
+다음 섹션에서는 애플리케이션 부하 분산에 대 한 DNS 정책을 구성 하는 방법을 보여 줍니다.
 
 #### <a name="create-the-zone-scopes"></a>영역 범위를 만듭니다
 
@@ -79,7 +79,7 @@ Contoso 선물 서비스의 기본 시장의 북아메리카에서 웹 사이트
 
 자세한 내용은 참조 [DnsServerZoneScope 추가](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps)
 
-#### <a name="bkmk_records"></a>영역 범위에 레코드 추가
+#### <a name="add-records-to-the-zone-scopes"></a><a name="bkmk_records"></a>영역 범위에 레코드 추가
 
 이제 영역 범위에는 웹 서버 호스트를 나타내는 레코드를 추가 해야 합니다.
 
@@ -100,11 +100,11 @@ Contoso 선물 서비스의 기본 시장의 북아메리카에서 웹 사이트
 
 자세한 내용은 참조 [추가 DnsServerResourceRecord](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps)합니다.
 
-#### <a name="bkmk_policies"></a>DNS 정책 만들기
+#### <a name="create-the-dns-policies"></a><a name="bkmk_policies"></a>DNS 정책 만들기
 
 파티션 (영역 범위)를 만든 후 레코드를 추가한 후 contosogiftservices.com에 대 한 쿼리의 50% 시애틀 데이터 센터의 웹 서버에 대 한 IP 주소를 가진 응답 하 고 나머지 시카고 및 Dallas 데이터 센터 간에 동일 하 게 배포 되도록 이러한 범위 간에 들어오는 쿼리를 분산 하는 DNS 정책을 만들어야 합니다.
 
-이러한 세 개의 데이터 센터에서 응용 프로그램 트래픽을 분산 하는 DNS 정책을 만들려면 다음 Windows PowerShell 명령을 사용할 수 있습니다.
+이러한 세 개의 데이터 센터에서 애플리케이션 트래픽을 분산 하는 DNS 정책을 만들려면 다음 Windows PowerShell 명령을 사용할 수 있습니다.
 
 >[!NOTE]
 >식 아래 예에서는 명령에서-ZoneScope "SeattleZoneScope, 2; ChicagoZoneScope, 1; DallasZoneScope, 1"DNS 서버를 구성 매개 변수 조합에 포함 된 배열을 사용 하 여 \<ZoneScope\>,\<가중치\>합니다.
@@ -114,6 +114,6 @@ Contoso 선물 서비스의 기본 시장의 북아메리카에서 웹 사이트
 
 자세한 내용은 참조 [추가 DnsServerQueryResolutionPolicy](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps)합니다.  
 
-이제 성공적으로 만든 세 가지 다른 데이터 센터의 웹 서버에 걸쳐 분산 응용 프로그램 부하를 제공 하는 DNS 정책을 합니다.
+이제 성공적으로 만든 세 가지 다른 데이터 센터의 웹 서버에 걸쳐 분산 애플리케이션 부하를 제공 하는 DNS 정책을 합니다.
 
 관리 요구 사항을 트래픽이 따라 DNS 정책의 수천을 만들 수 있습니다 하 고 들어오는 쿼리-DNS 서버를 다시 시작 하지 않고 모든 새 정책-동적으로 적용 됩니다.

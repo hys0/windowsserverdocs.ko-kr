@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: a09bfb03-95fc-4534-bf3c-97078ef6b07e
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: b8ae0ab02a5c14675d543087f635d53ee63e0423
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: dd56dfd4db9dd41c98141e2239efcca544a364fe
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71396255"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80316165"
 ---
 # <a name="disable-nas-notification-forwarding-in-nps"></a>NPS에서 NAS 알림 전달 사용 안 함
 
@@ -21,11 +21,11 @@ ms.locfileid: "71396255"
 
 이 절차를 사용 하 여 네트워크 액세스 서버 (Nas)에서 NPS에 구성 된 원격 RADIUS 서버 그룹의 구성원으로 시작 및 중지 메시지 전달을 사용 하지 않도록 설정할 수 있습니다.
 
-원격 RADIUS 서버 그룹이 구성 되어 있고 NPS **연결 요청 정책**에서 **이 원격 radius 서버 그룹에 대 한 계정 요청 전달** 확인란의 선택을 취소 한 경우 이러한 그룹은 계속 해 서 NAS 시작 및 중지 알림을 보냅니다. 메시지가. 
+원격 RADIUS 서버 그룹을 구성 하 고 NPS **연결 요청 정책**에서 **이 원격 radius 서버 그룹에 대 한 계정 요청 전달** 확인란의 선택을 취소 하면 이러한 그룹은 계속 해 서 NAS가 시작 및 중지 알림 메시지를 보냅니다. 
 
 이렇게 하면 불필요 한 네트워크 트래픽이 생성 됩니다. 이 트래픽을 제거 하려면 각 원격 RADIUS 서버 그룹의 개별 서버에 대 한 NAS 알림 전달을 사용 하지 않도록 설정 합니다.
 
-이 절차를 완료 하려면의 구성원 이어야는 **관리자** 그룹입니다.
+이 절차를 완료하려면 **Administrators** 그룹의 구성원이어야 합니다.
 
 ### <a name="to-disable-nas-notification-forwarding"></a>NAS 알림 전달을 사용 하지 않도록 설정 하려면
 

@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking-dhcp
 ms.topic: article
 ms.assetid: 0ff29ef3-c458-4432-9065-e50a7de5b4b9
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: c71517bc742cf9eda62cc7d83128f1ab9bd04547
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 5fc44d0f58ed73ff48f530bad3206baa675d9ac9
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71355402"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80312520"
 ---
 # <a name="dynamic-host-configuration-protocol-dhcp"></a>DHCP(동적 호스트 구성 프로토콜)
 
@@ -33,7 +33,7 @@ Windows Server 2016 DHCP 서버는 IP 주소를 임대 하 여 네트워크 및 
 
 ## <a name="why-use-dhcp"></a>DHCP를 사용 하는 이유는?
 
-모든 장치는 TCP 기반 네트워크에서 네트워크 및 해당 리소스에 액세스 하는 고유한 유니캐스트 IP 주소가 있어야 합니다. DHCP를 하지 않고 새 컴퓨터 또는 하나의 서브넷에서 다른 위치로 이동 하는 컴퓨터에 대 한 IP 주소 수동으로 구성 해야 합니다. 네트워크에서 제거 된 컴퓨터에 대 한 IP 주소를 수동으로 회수할 수 해야 합니다.
+모든 디바이스는 TCP 기반 네트워크에서 네트워크 및 해당 리소스에 액세스 하는 고유한 유니캐스트 IP 주소가 있어야 합니다. DHCP를 하지 않고 새 컴퓨터 또는 하나의 서브넷에서 다른 위치로 이동 하는 컴퓨터에 대 한 IP 주소 수동으로 구성 해야 합니다. 네트워크에서 제거 된 컴퓨터에 대 한 IP 주소를 수동으로 회수할 수 해야 합니다.
 
 Dhcp를이 전체 프로세스 자동화 하 고 중앙에서 관리 됩니다. DHCP 서버는 IP 주소 풀을 유지 관리 하 고 네트워크에서 시작 될 때 모든 DHCP 사용 클라이언트에 주소를 임대할 합니다. IP 주소는 정적 (영구적으로 할당) 하는 대신 (임대) 동적 이기 때문에 더 이상 사용 중인 주소 재할당에 대 한 풀에 자동으로 반환 됩니다.
 
@@ -67,7 +67,7 @@ DHCP는 다음과 같은 이점을 제공합니다.
 
     - DHCP 옵션을 사용 하 여 추가 TCP/IP 구성 값의 전체 범위를 지정할 수 있습니다.
 
-    - 무선 네트워크에서 다른 위치로 이동 하는 휴대용 장치에 대 한 것과 같은 자주 업데이트 해야 하는 클라이언트에 대 한 IP 주소를 효과적으로 처리 변경 합니다.
+    - 무선 네트워크에서 다른 위치로 이동 하는 휴대용 디바이스에 대 한 것과 같은 자주 업데이트 해야 하는 클라이언트에 대 한 IP 주소를 효과적으로 처리 변경 합니다.
 
     - 모든 서브넷에서 DHCP 서버에 대 한 필요성을 없애 주는 DHCP 릴레이 에이전트를 사용 하 여 초기 DHCP 메시지를 전달 합니다.
 

@@ -10,14 +10,14 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7ce84c9f-fd1f-4463-8fc7-d2f33344a2c9
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 831f484db8325bf9a27e9065ac5cf74913d0805c
-ms.sourcegitcommit: 4a03f263952c993dfdf339dd3491c73719854aba
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 1fd3a20cb6429d60f450478f5e817a7506b28346
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74791166"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80314244"
 ---
 # <a name="identify-and-resolve-remote-access-server-operations-problems"></a>원격 액세스 서버 작업 문제 식별 및 해결
 
@@ -38,7 +38,7 @@ ms.locfileid: "74791166"
   
 - IP 도우미 서비스를 복원 합니다.  
   
-### <a name="BKMK_Simulate"></a>작업 문제 시뮬레이트  
+### <a name="simulate-an-operations-issue"></a><a name="BKMK_Simulate"></a>작업 문제 시뮬레이트  
   
 > [!CAUTION]  
 > 구성 때문에 원격 액세스 서버는 제대로 및 not이 문제가 발생을 작업 문제를 시뮬레이션 하는 다음 절차를 사용할 수 있습니다. 서버에 현재 프로덕션 환경에서 클라이언트를 서비스 하 고, 경우 지금 이러한 작업을 수행 하지 않을 수 있습니다. 대신, 나중에 원격 액세스 서버에서 문제가 발생할 수 있는 문제를 해결 하는 방법을 이해 하는 단계를 읽을 수 있습니다.  
@@ -51,7 +51,7 @@ IP 도우미 서비스 (IPHlpSvc) 호스트 IPv6 전환 기술 (예: IP-HTTPS 6t
   
 2.  목록에서 **서비스**, 아래로 스크롤하여 마우스 오른쪽 단추로 클릭 **IP 도우미**, 를 클릭 하 고 **중지**합니다.  
   
-### <a name="BKMK_Identify"></a>작업 문제를 확인 하 고 정정 작업 수행  
+### <a name="identify-the-operations-issue-and-take-corrective-action"></a><a name="BKMK_Identify"></a>작업 문제를 확인 하 고 정정 작업 수행  
 IP 도우미 서비스를 해제 하면 원격 액세스 서버에서 심각한 오류가 발생 합니다. 모니터링 대시보드는 서버 작업 상태 및 문제에 대 한 세부 정보에 표시 됩니다.  
   
 ##### <a name="to-identify-the-details-and-take-corrective-action"></a>세부 정보를 식별 하 고 수정 작업을 수행 하려면  
@@ -82,7 +82,7 @@ IP 도우미 서비스를 해제 하면 원격 액세스 서버에서 심각한 
   
     3.  서비스를 다시 시작 하려면 입력 **서비스 다시 시작 iphlpsvc** 관리자 권한 Windows PowerShell 프롬프트에서.  
   
-### <a name="BKMK_Restart"></a>IP 도우미 서비스 복원  
+### <a name="restore-the-ip-helper-service"></a><a name="BKMK_Restart"></a>IP 도우미 서비스 복원  
 원격 액세스 서버에 IP 도우미 서비스를 복원 하려면 위의 하거나 서비스를 다시 시작 하려면 해결 단계를 수행 하거나 IP 도우미 서비스 오류를 시뮬레이션 하는 데 사용 하는 프로시저를 되돌리려면 다음 절차를 사용할 수 있습니다.  
   
 ##### <a name="to-restart-the-ip-helper-service-on-the-remote-access-server"></a>원격 액세스 서버에 IP 도우미 서비스를 다시 시작  
@@ -93,7 +93,7 @@ IP 도우미 서비스를 해제 하면 원격 액세스 서버에서 심각한 
   
 ![Windows PowerShell](../../../media/Identify-and-resolve-Remote-Access-server-operations-problems/PowerShellLogoSmall.gif)***<em>windows powershell 해당 명령</em>***  
   
-다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
+다음 Windows PowerShell cmdlet은 이전 절차와 동일한 기능을 수행합니다. 서식 조건 때문에 각 cmdlet이 여러 줄로 자동 줄 바꿈되어 표시되더라도 한 줄에 입력합니다.  
   
 ```PowerShell
 PS> Get-RemoteAccessHealth | Where-Object {$_.Component -eq "IP-HTTPS"} | Format-List -Property *  

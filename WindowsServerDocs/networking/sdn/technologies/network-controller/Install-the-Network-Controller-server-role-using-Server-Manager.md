@@ -7,14 +7,14 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 3a6e4352-ff62-4290-b8a4-5c83740070fc
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 8b656bbd823a10f1e36d1757bb53c4565d4e828c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: b8a3e1ede1cdec1ca5ee66be8d53d4420bec673b
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405836"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80317131"
 ---
 # <a name="install-the-network-controller-server-role-using-server-manager"></a>서버 관리자를 사용 하 여 네트워크 컨트롤러 서버 역할 설치
 
@@ -39,13 +39,13 @@ ms.locfileid: "71405836"
   
     ![네트워크 컨트롤러 서버 역할](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/netc_install_07.jpg)  
   
-5.  **네트워크 컨트롤러에 필요한 기능 추가** 대화 상자가 열립니다. 클릭 **기능 추가**합니다.  
+5.  **네트워크 컨트롤러에 필요한 기능 추가** 대화 상자가 열립니다. **기능 추가**를 클릭합니다.  
   
     ![네트워크 컨트롤러에 대 한 기능을 추가 합니다.](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/netc_install_06.jpg)  
   
 6.  **서버 역할 선택**, 클릭 **다음**합니다.  
   
-    ![다음을 클릭 합니다.](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/netc_install_07.jpg)  
+    ![다음을 클릭합니다.](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/netc_install_07.jpg)  
   
 7.  **기능 선택**, 클릭 **다음**합니다.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "71405836"
   
     ![역할 및 기능 추가 마법사](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/netc_install_11.jpg)  
   
-10. **설치 선택 확인**, 클릭 **설치**합니다.  
+10. **설치 선택 확인**에서 **설치**를 클릭합니다.  
   
 11. 대상 서버의 네트워크 컨트롤러 서버 역할 설치 하 고 서버를 다시 시작한 다음 키를 누릅니다.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "71405836"
   
     ![서버 관리자](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/nc_013.jpg)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
 [네트워크 컨트롤러](Network-Controller.md)  
   
 

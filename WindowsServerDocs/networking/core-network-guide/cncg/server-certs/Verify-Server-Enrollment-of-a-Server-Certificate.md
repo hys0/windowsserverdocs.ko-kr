@@ -6,14 +6,14 @@ ms.topic: article
 ms.assetid: bd80a018-5a30-47c3-89fc-aacb9f5ad298
 ms.prod: windows-server
 ms.technology: networking
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 5f87db78d6f07d11c36193b1a56cf66bd44e7160
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: b55988d9e5d4832acf6c74039815c9e8c9a8a6ca
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71356095"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318132"
 ---
 # <a name="verify-server-enrollment-of-a-server-certificate"></a>서버 인증서의 서버 등록 확인
 
@@ -40,11 +40,11 @@ NPS는 네트워크 연결 요청을 인증 하 고 권한을 부여 하는 데 
   
 4.  **조건 지정**, 클릭 **추가**합니다. **조건을 선택**, 클릭 **Windows 그룹**, 를 클릭 하 고 **추가**합니다.  
   
-5.  **그룹**, 클릭 **그룹 추가**합니다. **그룹 선택**, 형식 **도메인 사용자**, 한 다음 ENTER를 누릅니다. **확인**, **다음**을 차례로 클릭합니다.  
+5.  **그룹**, 클릭 **그룹 추가**합니다. **그룹 선택**, 형식 **도메인 사용자**, 한 다음 ENTER를 누릅니다. **확인**을 클릭하고 **다음**을 클릭합니다.  
   
 6.  **액세스 권한을 지정**, 되도록 **액세스 권한이 부여** 을 선택한 다음 클릭 **다음**합니다.  
   
-7.  **인증 방법 구성**, 클릭 **추가**합니다. **EAP 추가**에서 **microsoft를 클릭 합니다. PEAP (보호 된 EAP)** 을 클릭 한 다음 **확인**을 클릭 합니다. **EAP 형식**에서 **microsoft를 선택 합니다. PEAP (보호 된 EAP)** 을 클릭 한 다음 **편집**을 클릭 합니다. **보호 된 EAP 속성 편집** 대화 상자가 열립니다.  
+7.  **인증 방법 구성**, 클릭 **추가**합니다. **추가 EAP**, 클릭 **Microsoft: 보호 된 EAP (PEAP)** , 를 클릭 하 고 **확인**합니다. **EAP 종류**, 선택, **Microsoft: 보호 된 EAP (PEAP)** , 를 클릭 하 고 **편집**합니다. **보호 된 EAP 속성 편집** 대화 상자가 열립니다.  
   
 8.  에 **보호 된 EAP 속성 편집** 대화 상자의 **에 발급 된 인증서**, NPS 형식으로 서버 인증서의 이름을 표시 *ComputerName*.*도메인*합니다. 예를 들어 nps 이름이 NPS-01이 고 도메인이 example.com 인 경우 NPS는 인증서 **NPS-01.example.com**를 표시 합니다. 또한 **발급자**, 인증 기관의 이름이 표시 됩니다, 그리고 및 **만료 날짜**, 서버 인증서의 만료 날짜가 표시 됩니다. 이는 NPS가 VPN (가상 사설망) 서버, 802.1 등의 네트워크 액세스 서버를 통해 네트워크에 액세스를 시도 하는 클라이언트 컴퓨터에 대 한 id를 증명 하는 데 사용할 수 있는 유효한 서버 인증서를 등록 한 것을 보여 줍니다. 무선 액세스 지점과 원격 데스크톱 게이트웨이 서버, X 가능 이더넷 스위치를 802.1 합니다.  
   

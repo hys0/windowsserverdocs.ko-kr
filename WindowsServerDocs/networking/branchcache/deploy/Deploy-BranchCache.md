@@ -7,14 +7,14 @@ ms.technology: networking-bc
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 30b0a6d9-d6d5-4019-b8dc-ed5365d9921f
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 7126be417702eab54a36765c146acff14d8a8c88
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 6fe2cf5d593500565b02f60efb0976000095dd9e
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406473"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80319297"
 ---
 # <a name="deploy-branchcache"></a>BranchCache 배포
 
@@ -31,7 +31,7 @@ ms.locfileid: "71406473"
 -   [BranchCache 클라이언트 컴퓨터 구성](Configure-BranchCache-Client-Computers.md)  
   
 > [!NOTE]  
-> 이 가이드의 절차에는 계속하기 위해 권한을 요청하는 **사용자 계정 컨트롤** 대화 상자가 열리는 경우에 대한 지침은 포함되어 있지 않습니다. 이 가이드의 절차를 수행 하는 사용자의 작업에 대 한 응답에서 대화 상자를 연 경우 클릭 하는 동안이 대화 상자가 열리면 **계속**합니다.  
+> 이 가이드의 절차에는 계속하기 위해 권한을 요청하는 **사용자 계정 컨트롤** 대화 상자가 열리는 경우에 대한 지침은 포함되어 있지 않습니다. 이 가이드의 절차를 수행하는 동안 이 대화 상자가 열리는 경우와 작업에 대한 응답으로 이 대화 상자가 이미 열린 경우에는 **계속**을 클릭하십시오.  
   
 
 

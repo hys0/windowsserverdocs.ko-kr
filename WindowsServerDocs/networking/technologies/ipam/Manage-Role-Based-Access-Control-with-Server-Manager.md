@@ -10,14 +10,14 @@ ms.technology: networking-ipam
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 77b6ac92-eaff-46d7-95db-ee6fc96742ed
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 5dfc3c8f31d25f5b72f39e33759d6e26917ae70f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: a3fb0a4e09e348040a2e89f97c73371aca62bef0
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405624"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80316792"
 ---
 # <a name="manage-role-based-access-control-with-server-manager"></a>서버 관리자를 사용하여 역할 기반 액세스 제어 관리
 

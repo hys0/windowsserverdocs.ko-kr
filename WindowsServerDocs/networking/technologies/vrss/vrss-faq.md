@@ -8,14 +8,14 @@ ms.assetid: 61ae242e-82a8-430d-b07d-52b86c01e686
 ms.localizationpriority: medium
 manager: dougkim
 ms.date: 09/05/2018
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 5c7feb696c6ee9014032229543a4f43fb5884527
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 0ee9bf121d64eebe98798df907a2584747a00c7a
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71395851"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80315364"
 ---
 # <a name="vrss-frequently-asked-questions"></a>vRSS 질문과 대답
 
@@ -23,15 +23,15 @@ ms.locfileid: "71395851"
 
 ## <a name="what-are-the-requirements-for-the-physical-network-adapters-that-i-use-with-vrss"></a>VRSS에서 사용 하는 실제 네트워크 어댑터에 대 한 요구 사항은 무엇 인가요?
 
-네트워크 어댑터는 VMQ \(\) 가상 머신 큐와 호환 되어야 하며, 10gbps 이상의 링크 속도가 필요 합니다.
+네트워크 어댑터는 VMQ\) 가상 머신 큐 \(와 호환 되어야 하며, 10gbps 이상의 링크 속도가 필요 합니다.
 
 자세한 내용은 [VRSS 사용 계획](vrss-plan.md)을 참조 하세요.
 
 ## <a name="does-vrss-work-with-hyper-threaded-processor-cores"></a>VRSS는 하이퍼\-스레드 프로세서 코어에서 작동 하나요?
 
-아니요. VRSS와 VMQ는 모두 하이퍼\-스레드 프로세서 코어를 무시 합니다.
+No. VRSS와 VMQ는 모두 하이퍼\-스레드 프로세서 코어를 무시 합니다.
 
-## <a name="does-vrss-work-for-host-virtual-nics-vnics"></a>호스트 가상 nic \(vnics\)에 대해 vRSS가 작동 하나요?
+## <a name="does-vrss-work-for-host-virtual-nics-vnics"></a>\(vNICs\)호스트 가상 Nic에 대해 vRSS가 작동 하나요?
 
 예. **VMNetworkAdapter** Windows PowerShell 명령에서 가상 컴퓨터 \(VM\) 이름 대신 **-managementos** 매개 변수를 사용 하 고 호스트 vNIC에서 **-set-netadapterrss을 사용 하도록 설정** 합니다.
 
@@ -39,7 +39,7 @@ ms.locfileid: "71395851"
 
 ## <a name="how-many-logical-processors-does-a-vm-need-to-use-vrss"></a>VM에서 vRSS를 사용 하는 데 필요한 논리적 프로세서 수는 몇 개입니까?
 
-Vm은 vRSS를 사용할 수 있도록 \(두 개\) 이상의 논리 프로세서 lps가 필요 합니다.
+VRSS를 사용할 수 있으려면 Vm에 LPs\) \(두 개 이상의 논리 프로세서가 필요 합니다.
 
 자세한 내용은 [VRSS 사용 계획](vrss-plan.md)을 참조 하세요.
 

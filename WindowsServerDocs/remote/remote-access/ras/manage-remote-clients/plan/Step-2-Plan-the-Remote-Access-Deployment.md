@@ -10,14 +10,14 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cc9f02b9-8ddd-4cae-b397-a832996144dd
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 131520f567da6529e342229a0f6965d3223f928b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 39b6d0b924d4939361cb66109d049a6924e9be3e
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404577"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80314232"
 ---
 # <a name="step-2-plan-the-remote-access-deployment"></a>2 단계 원격 액세스 배포 계획
 
@@ -28,7 +28,7 @@ DirectAccess 클라이언트의 원격 관리를 위해 단일 원격 액세스 
 > [!NOTE]  
 > 이러한 작업을 계속 하기 전에 [1 단계: 원격 액세스 인프라 계획](Step-1-Plan-the-Remote-Access-Infrastructure.md)을 참조 하세요.  
   
-|태스크|설명|  
+|작업|설명|  
 |----|--------|  
 |[클라이언트 배포 전략 계획](#plan-a-client-deployment-strategy)|DirectAccess 클라이언트로 구성될 관리 컴퓨터를 정합니다.|  
 |[원격 액세스 서버 배포 전략 계획](#plan-a-remote-access-server-deployment-strategy)|원격 액세스 서버를 배포할 방법을 계획합니다.|  

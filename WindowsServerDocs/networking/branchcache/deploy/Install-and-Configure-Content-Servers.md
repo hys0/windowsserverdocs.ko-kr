@@ -6,20 +6,20 @@ ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: e753c56b-8902-4610-9c53-381e77bf29ab
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: c254a6f19d07f1c6b3197b46e208b7c837c8236c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: b41cc5151d24574bba254c01e26fb153a3dc3f9c
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71356550"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80319222"
 ---
 # <a name="install-and-configure-content-servers"></a>콘텐츠 서버 설치 및 구성
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 
-분산된 캐시 모드 또는 호스트 캐시 모드로 BranchCache를 배포 하는 경우에 본사 또는 클라우드 하나 이상의 콘텐츠 서버를 배포 해야 합니다. 콘텐츠 서버는 웹 서버 또는 응용 프로그램 서버를 BranchCache 기능을 사용 합니다. Windows Server 2016에서 파일 서비스 서버 역할의 네트워크 파일 역할 서비스용 BranchCache를 사용 하는 파일 서버는 콘텐츠 서버.  
+분산된 캐시 모드 또는 호스트 캐시 모드로 BranchCache를 배포 하는 경우에 본사 또는 클라우드 하나 이상의 콘텐츠 서버를 배포 해야 합니다. 콘텐츠 서버는 웹 서버 또는 애플리케이션 서버를 BranchCache 기능을 사용 합니다. Windows Server 2016에서 파일 서비스 서버 역할의 네트워크 파일 역할 서비스용 BranchCache를 사용 하는 파일 서버는 콘텐츠 서버.  
   
 콘텐츠 서버를 배포 하려면 다음 항목을 참조 하십시오.  
   

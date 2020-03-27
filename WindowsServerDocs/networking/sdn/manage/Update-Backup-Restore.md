@@ -7,14 +7,14 @@ ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: e9a8f2fd-48fe-4a90-9250-f6b32488b7a4
 ms.author: grcusanz
-author: shortpatti
+author: eross-msft
 ms.date: 08/27/2018
-ms.openlocfilehash: 7f385e094ca70027d1b036bf53af23c1fc4a1bd1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: fbb173224797d32bd05fbdadb1bf4cefdc475cb6
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406052"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80317603"
 ---
 # <a name="upgrade-backup-and-restore-sdn-infrastructure"></a>SDN 인프라 업그레이드, 백업 및 복원
 
@@ -57,16 +57,16 @@ SDN 인프라는 Windows Server 2016에서 Windows Server 2019로 업그레이�
 
     c. 업데이트를 위해 게이트웨이 VM을 다시 부팅 해야 하는 경우 VM을 다시 부팅 합니다.  
 
-    d. 방금 업데이트 된 게이트웨이 VM을 포함 하는 호스트에 업데이트를 설치 합니다.
+    . 방금 업데이트 된 게이트웨이 VM을 포함 하는 호스트에 업데이트를 설치 합니다.
 
     e. 업데이트에 필요한 경우 호스트를 다시 부팅 합니다.
 
     f. 대기 게이트웨이를 포함 하는 각 추가 호스트에 대해 반복 합니다.<p>대기 게이트웨이가 남아 있지 않으면 나머지 모든 호스트에 대해 이와 동일한 단계를 수행 합니다.
 
 
-### <a name="example-use-the-get-networkcontrollernode-cmdlet"></a>예: Networkcontrollernode cmdlet 사용 
+### <a name="example-use-the-get-networkcontrollernode-cmdlet"></a>예: networkcontrollernode cmdlet 사용 
 
-이 예제에서는 네트워크 컨트롤러 vm 중 하나에서 `get-networkcontrollernode` cmdlet 실행에 대 한 출력을 볼 수 있습니다.  
+이 예제에서는 네트워크 컨트롤러 Vm 중 하나에서 실행 되는 `get-networkcontrollernode` cmdlet에 대 한 출력이 표시 됩니다.  
 
 예제 출력에 표시 되는 노드의 상태는 다음과 같습니다.
 
@@ -80,7 +80,7 @@ SDN 인프라는 Windows Server 2016에서 Windows Server 2019로 업그레이�
 모든 네트워크 컨트롤러 노드를 업데이트 한 후 네트워크 컨트롤러는 1 시간 내에 네트워크 컨트롤러 클러스터 내에서 실행 되는 마이크로 서비스를 업데이트 합니다. 
 
 >[!TIP]
->Cmdlet을 `update-networkcontroller` 사용 하 여 즉시 업데이트를 트리거할 수 있습니다.
+>`update-networkcontroller` cmdlet을 사용 하 여 즉시 업데이트를 트리거할 수 있습니다.
 
 
 ```Powershell
@@ -107,8 +107,8 @@ NodeCertificate :
 Status          : Up
 ```
 
-### <a name="example-use-the-update-networkcontroller-cmdlet"></a>예: Networkcontroller cmdlet 사용
-이 예에서는 `update-networkcontroller` cmdlet에 대 한 출력을 확인 하 여 네트워크 컨트롤러를 강제로 업데이트 합니다. 
+### <a name="example-use-the-update-networkcontroller-cmdlet"></a>예: networkcontroller cmdlet 사용
+이 예제에서는 `update-networkcontroller` cmdlet에 대 한 출력을 확인 하 여 네트워크 컨트롤러를 강제로 업데이트 합니다. 
 
 >[!IMPORTANT]
 >설치할 업데이트가 더 이상 없을 때이 cmdlet을 실행 합니다.
@@ -125,7 +125,7 @@ NetworkControllerClusterVersion NetworkControllerVersion
 
 네트워크 컨트롤러 데이터베이스의 정기 백업은 재해 또는 데이터 손실이 발생할 경우 비즈니스 연속성을 보장 합니다.  네트워크 컨트롤러 Vm을 백업 하는 데는 세션이 여러 네트워크 컨트롤러 노드에서 계속 되는 것을 보장 하지 않기 때문에 충분 하지 않습니다.
 
-**사항이**
+**요구 사항:**
 * 공유 및 파일 시스템에 대 한 읽기/쓰기 권한이 있는 SMB 공유 및 자격 증명
 * 네트워크 컨트롤러가 GMSA를 사용 하 여 설치 된 경우 필요에 따라 GMSA (그룹 관리 서비스 계정)를 사용할 수 있습니다.
 
@@ -138,9 +138,9 @@ NetworkControllerClusterVersion NetworkControllerVersion
    >[!IMPORTANT]
    >네트워크 컨트롤러 백업이 완료 될 때까지 SCVMM 서비스를 다시 시작 하지 마십시오.
 
-3. `new-networkcontrollerbackup` Cmdlet을 사용 하 여 네트워크 컨트롤러 데이터베이스를 백업 합니다.
+3. `new-networkcontrollerbackup` cmdlet을 사용 하 여 네트워크 컨트롤러 데이터베이스를 백업 합니다.
 
-4. `get-networkcontrollerbackup` Cmdlet을 사용 하 여 백업 완료 및 성공 여부를 확인 합니다.
+4. `get-networkcontrollerbackup` cmdlet을 사용 하 여 백업 완료 및 성공 여부를 확인 합니다.
 
 5. SCVMM을 사용 하는 경우 SCVMM 서비스를 시작 합니다.
 
@@ -177,7 +177,7 @@ $BackupProperties.Credential = $ShareCredential
 $Backup = New-NetworkControllerBackup -ConnectionURI $URI -Credential $Credential -Properties $BackupProperties -ResourceId $BackupTime -Force
 ```
 
-### <a name="example-checking-the-status-of-a-network-controller-backup-operation"></a>예: 네트워크 컨트롤러 백업 작업의 상태를 확인 하는 중
+### <a name="example-checking-the-status-of-a-network-controller-backup-operation"></a>예: 네트워크 컨트롤러 백업 작업의 상태 확인
 
 ```Powershell
 PS C:\ > Get-NetworkControllerBackup -ConnectionUri $URI -Credential $Credential -ResourceId $Backup.ResourceId
@@ -286,7 +286,7 @@ PS C:\ > Get-NetworkControllerBackup -ConnectionUri $URI -Credential $Credential
 
 5. SLB Mux Vm을 중지 합니다.
 
-6. `new-networkcontrollerrestore` Cmdlet을 사용 하 여 네트워크 컨트롤러를 복원 합니다.
+6. `new-networkcontrollerrestore` cmdlet을 사용 하 여 네트워크 컨트롤러를 복원 합니다.
 
 7. 복원이 성공적으로 완료 되 면 restore **ProvisioningState** 를 확인 합니다.
 
@@ -326,7 +326,7 @@ $RestoreTime = (Get-Date).ToString("s").Replace(":", "_")
 New-NetworkControllerRestore -ConnectionURI $URI -Credential $Credential -Properties $RestoreProperties -ResourceId $RestoreTime -Force
 ```
 
-### <a name="example-checking-the-status-of-a-network-controller-database-restore"></a>예: 네트워크 컨트롤러 데이터베이스 복원의 상태를 확인 하는 중
+### <a name="example-checking-the-status-of-a-network-controller-database-restore"></a>예: 네트워크 컨트롤러 데이터베이스 복원 상태 확인
 
 ```PowerShell
 PS C:\ > get-networkcontrollerrestore -connectionuri $uri -credential $cred -ResourceId $restoreTime | convertto-json -depth 10

@@ -3,7 +3,7 @@ title: 대시보드, 원격 웹 액세스 및 실행 패드에 브랜딩 추가
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 04/10/2014
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,23 +12,23 @@ ms.assetid: 166262f8-b2a5-4b1c-a4a7-a141e1c54f10
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 02088b169e44cdcf87385425e1949232ffa408a6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 25a97f310347c9ecc1868bdeebc52b290808f1e8
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59823504"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80310261"
 ---
 # <a name="add-branding-to-the-dashboard-remote-web-access-and-launchpad"></a>대시보드, 원격 웹 액세스 및 실행 패드에 브랜딩 추가
 
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-##  <a name="BKMK_Branding"></a> 대시보드, 원격 웹 액세스 및 실행 패드에 브랜딩 추가  
+##  <a name="add-branding-to-the-dashboard-remote-web-access-and-launchpad"></a><a name="BKMK_Branding"></a>대시보드, 원격 웹 액세스 및 실행 패드에 브랜딩 추가  
  레지스트리에서 항목을 추가하여 여러 브랜딩을 추가할 수 있습니다. 운영 체제에 대한 레지스트리의 모든 브랜딩 항목은 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Server\OEM 아래에 위치합니다.  
   
  모든 공동 브랜딩은 다음 특정 로고 요구 사항을 충족해야 합니다.  
   
--   Windows Server Essentials 로고의 최소 너비는 있어야 합니다. **170 픽셀**를 사용 하 여 올바른 가로 세로 비율을 유지 **96DPI**합니다.  
+-   Windows Server Essentials 로고의 최소 너비는 **170 픽셀**이어야 하며 올바른 가로 세로 비율을 **96 DPI**로 유지 해야 합니다.  
   
 #### <a name="to-add-branding-by-changing-the-registry"></a>레지스트리를 변경하여 브랜딩을 추가하려면  
   
@@ -64,28 +64,28 @@ ms.locfileid: "59823504"
   
     2.  원격 액세스가 켜져 있는 경우 **구성**을 클릭한 다음 원격 액세스 설정 마법사의 **사용할 원격 액세스 기능 선택** 페이지에서 원격 웹 액세스 확인란 선택을 취소합니다.  
   
-    3.  클릭 **구성**합니다.  
+    3.  **구성**을 클릭합니다.  
   
-###  <a name="BKMK_RegStrings"></a> 다음 표에서 레지스트리 변경에 영향을 브랜딩 하는 위치, 문자열 이름 및 데이터 값을 나열 합니다.  
+###  <a name="the-following-table-lists-the-location-where-registry-changes-affect-branding-the-string-name-and-the-data-value"></a><a name="BKMK_RegStrings"></a>다음 표에서는 레지스트리 변경 내용이 브랜딩, 문자열 이름 및 데이터 값에 영향을 주는 위치를 보여 줍니다.  
   
 ### <a name="registry-strings-and-values"></a>레지스트리 문자열 및 값  
   
 |브랜딩 위치|설명|문자열 이름|데이터 값|  
 |--------------------------|-----------------|-----------------|----------------|  
-|대시보드 로고|대시보드에 로고 이미지를 추가합니다. 대시보드 로고 형식은 .png여야 하며, 로고 크기는 350 x 38 픽셀 이하여야 합니다.<br /><br /> **중요:** 로고를 사용하여 대시보드를 공동 브랜드로 만들려면 OPK DVD에 제공된 아트워크 구역을 편집하고 적절한 공백 문자 요구 사항에 따라 이미지에 회사 로고를 추가해야 합니다. 자세한 내용은 제공된 예제 구역을 참조하세요.|DashboardLogo|로고 이미지 파일의 이름입니다.|  
+|대시보드 로고|대시보드에 로고 이미지를 추가합니다. 대시보드 로고 형식은 .png여야 하며, 로고 크기는 350 x 38 픽셀 이하여야 합니다.<br /><br /> **중요:** 로고를 사용 하 여 대시보드를 공동 브랜드 하려면 OPK DVD에 제공 된 아트 워크 타일을 편집 하 고 적절 한 공백 요구 사항을 준수 하는 동안 이미지에 회사 로고를 추가 해야 합니다. 자세한 내용은 제공된 예제 구역을 참조하세요.|DashboardLogo|로고 이미지 파일의 이름입니다.|  
 |DashboardClientLogo|대시보드 클라이언트 로그인 화면에 로고 이미지를 추가합니다.|DashboardClientLogo|로고 이미지 파일의 이름입니다.|  
-|웹 사이트 배경 그림|원격 웹 액세스 로그온 페이지에 표시되는 배경 이미지를 변경합니다. 일반적인 해상도는 다음과 같이 나타납니다.<br /><br /> -1024 x 768 픽셀 해상도 로그온 페이지를 정확 하 게 채웁니다.<br /><br /> -800 x 600 픽셀 해상도 페이지의 가운데에 맞춰지고 검정색 테두리로 표시<br /><br /> -1280 x 720 픽셀 해상도 가운데에 맞춰지고 1024 x 768 픽셀 표시 되지 않습니다.|LogonBackground|배경 이미지 파일의 이름입니다.|  
-|웹 사이트 제목|제목 선택 하는 Windows Server Essentials에서 원격 웹 액세스 사이트 제목을 대체 합니다.|WebsiteName|새 원격 웹 액세스 사이트 제목입니다.|  
+|웹 사이트 배경 그림|원격 웹 액세스 로그온 페이지에 표시되는 배경 이미지를 변경합니다. 일반적인 해상도는 다음과 같이 나타납니다.<br /><br /> -1024x768 픽셀 해상도는 로그온 페이지를 정확 하 게 채웁니다.<br /><br /> -800x600 픽셀 해상도는 페이지 가운데에 맞춰지고 검정색 테두리가 표시 됩니다.<br /><br /> -1280x720 픽셀 해상도는 가운데에 맞춰지고 1024x768를 초과 하는 픽셀은 표시 되지 않습니다.|LogonBackground|배경 이미지 파일의 이름입니다.|  
+|웹 사이트 제목|Windows Server Essentials에서 원격 웹 액세스 사이트의 제목을 선택한 제목으로 바꿉니다.|WebsiteName|새 원격 웹 액세스 사이트 제목입니다.|  
 |웹 사이트 로고|원격 웹 액세스 사이트의 기본 로고를 변경합니다. 로고의 예상 크기는 32 x 32 픽셀입니다. 로고가 이 크기보다 작거나 큰 경우에는 이러한 치수에 맞게 늘리거나 줄입니다.|WebsiteLogo|로고 이미지 파일의 이름입니다.|  
 |첨부한 웹 사이트 로고|파트너 로고는 원격 웹 액세스 사이트에 표시된 Microsoft 로고 바로 아래에 표시됩니다. 로고의 예상 크기는 200 x 50 픽셀입니다. 로고가 이 크기보다 큰 경우에는 원래 가로 세로 비율을 유지하면서 크기에 맞게 줄입니다. 로고가 이 크기보다 작은 경우에는 200 x 50 픽셀 영역 내에서 중심에 위치하며 크기나 가로 세로 비율 모두 변경되지 않습니다.|OEMLogo|로고 이미지 파일의 이름입니다.|  
 
-| 웹 사이트 홈 페이지와 로그온 페이지에 대 한 링크 | 로그온 페이지 및 원격 웹 액세스 사이트의 홈 페이지에 대 한 링크를 추가 합니다. 링크 정보가 포함된 .xml은 %programFiles%\Windows Server\Bin\OEM에 있어야 합니다. 다음 예에서는 .xml 파일의 형식을 보여 줍니다.<br /><br /> <OemLinks\><br /> <LogonLinks\><br /> < 이름 연결\=LogonLinkName ><br /> <Text\>LogonLinkDescription</Text\><br /> <Url\>LogonLinkURL</Url\><br /> <Icon\>LinkIcon</Icon\><br /> </Link\><br /> </LogonLinks\><br /> <HomepageLinks\><br /> < 이름 연결\=HomepageLinkName ><br /> <Text\>HomepageLinkDescription</Text\><br /> <Url\>HomepageLinkURL</Url\><br /> </Link\><br /> </HomepageLinks\><br /> < / OemLinks\>| LinksXML | 참조 된 [LinksXML 요소](Add-Branding-to-the-Dashboard--Remote-Web-Access--and-Launchpad.md#BKMK_Links) 요소 및 설명 목록은 테이블입니다. |  
+| 웹 사이트 홈 페이지 및 로그온 페이지의 링크 | 원격 웹 액세스 사이트의 로그온 페이지 및 홈 페이지에 대 한 링크를 추가 합니다. 링크 정보가 포함된 .xml은 %programFiles%\Windows Server\Bin\OEM에 있어야 합니다. 다음 예에서는 .xml 파일의 형식을 보여 줍니다.<br /><br /> < OemLinks\><br /> < LogonLinks\><br /> < 링크 이름\=LogonLinkName ><br /> < 텍스트\>LogonLinkDescription </Text\><br /> < Url\>LogonLinkURL </Url\><br /> < 아이콘\>LinkIcon </아이콘\><br /> </Link\><br /> </로그온 링크\><br /> < HomepageLinks\><br /> < 링크 이름\=HomepageLinkName ><br /> < Text\>HomepageLinkDescription </Text\><br /> < Url\>HomepageLinkURL </Url\><br /> </Link\><br /> </HomepageLinks\><br /> </OemLinks\>| 링크 Xml | 요소 및 설명 목록은 [링크 xml 요소](Add-Branding-to-the-Dashboard--Remote-Web-Access--and-Launchpad.md#BKMK_Links) 표를 참조 하세요. |  
 
-| 웹 사이트 홈 페이지와 로그온 페이지에 대 한 링크 | 로그온 페이지 및 원격 웹 액세스 사이트의 홈 페이지에 대 한 링크를 추가 합니다. 링크 정보가 포함된 .xml은 %programFiles%\Windows Server\Bin\OEM에 있어야 합니다. 다음 예에서는 .xml 파일의 형식을 보여 줍니다.<br /><br /> <OemLinks\><br /> <LogonLinks\><br /> < 이름 연결\=LogonLinkName ><br /> <Text\>LogonLinkDescription</Text\><br /> <Url\>LogonLinkURL</Url\><br /> <Icon\>LinkIcon</Icon\><br /> </Link\><br /> </LogonLinks\><br /> <HomepageLinks\><br /> < 이름 연결\=HomepageLinkName ><br /> <Text\>HomepageLinkDescription</Text\><br /> <Url\>HomepageLinkURL</Url\><br /> </Link\><br /> </HomepageLinks\><br /> < / OemLinks\>| LinksXML | 참조 된 [LinksXML 요소](../install/Add-Branding-to-the-Dashboard--Remote-Web-Access--and-Launchpad.md#BKMK_Links) 요소 및 설명 목록은 테이블입니다. |  
+| 웹 사이트 홈 페이지 및 로그온 페이지의 링크 | 원격 웹 액세스 사이트의 로그온 페이지 및 홈 페이지에 대 한 링크를 추가 합니다. 링크 정보가 포함된 .xml은 %programFiles%\Windows Server\Bin\OEM에 있어야 합니다. 다음 예에서는 .xml 파일의 형식을 보여 줍니다.<br /><br /> < OemLinks\><br /> < LogonLinks\><br /> < 링크 이름\=LogonLinkName ><br /> < 텍스트\>LogonLinkDescription </Text\><br /> < Url\>LogonLinkURL </Url\><br /> < 아이콘\>LinkIcon </아이콘\><br /> </Link\><br /> </로그온 링크\><br /> < HomepageLinks\><br /> < 링크 이름\=HomepageLinkName ><br /> < Text\>HomepageLinkDescription </Text\><br /> < Url\>HomepageLinkURL </Url\><br /> </Link\><br /> </HomepageLinks\><br /> </OemLinks\>| 링크 Xml | 요소 및 설명 목록은 [링크 xml 요소](../install/Add-Branding-to-the-Dashboard--Remote-Web-Access--and-Launchpad.md#BKMK_Links) 표를 참조 하세요. |  
 
-| 실행 패드 로고 | 실행 패드에 로고 이미지를 추가합니다. 실행 패드 로고.png 형식 및 해야 하지 64 픽셀을 넘지 이어야 합니다. | LaunchpadLogo | 로고 이미지 파일의 이름 |  
+| 실행 패드 로고 | 실행 패드에 로고 이미지를 추가 합니다. 실행 패드 로고는 .png 형식 이어야 하며 64 픽셀 보다 커야 합니다. | LaunchpadLogo | 로고 이미지 파일의 이름 |  
   
-###  <a name="BKMK_Links"></a> 다음 표에서 나열 하 고 LinksXML 문자열 이름 요소에 설명 합니다.  
+###  <a name="the-following-table-lists-and-describes-the-linksxml-string-name-elements"></a><a name="BKMK_Links"></a>다음 표에서는 링크 Xml 문자열 이름 요소를 나열 하 고 설명 합니다.  
   
 ### <a name="linksxml-elements"></a>LinksXML 요소  
   
@@ -104,13 +104,13 @@ ms.locfileid: "59823504"
   
 ## <a name="see-also"></a>관련 항목  
 
- [만들기 및 이미지를 사용자 지정](Creating-and-Customizing-the-Image.md)   
+ [이미지  만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)  
  [추가 사용자 지정](Additional-Customizations.md)   
- [배포용 이미지 준비](Preparing-the-Image-for-Deployment.md)   
+ [배포할 이미지를 준비 하는 중](Preparing-the-Image-for-Deployment.md)   
  [사용자 환경 테스트](Testing-the-Customer-Experience.md)
 
- [만들기 및 이미지를 사용자 지정](../install/Creating-and-Customizing-the-Image.md)   
+ [이미지  만들기 및 사용자 지정](../install/Creating-and-Customizing-the-Image.md)  
  [추가 사용자 지정](../install/Additional-Customizations.md)   
- [배포용 이미지 준비](../install/Preparing-the-Image-for-Deployment.md)   
+ [배포할 이미지를 준비 하는 중](../install/Preparing-the-Image-for-Deployment.md)   
  [사용자 환경 테스트](../install/Testing-the-Customer-Experience.md)
 

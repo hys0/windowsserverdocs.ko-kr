@@ -1,9 +1,9 @@
 ---
-title: '5단계: Windows Server Essentials의 대상 서버에 대 한 마이그레이션에 대 한 폴더 리디렉션을 사용 하도록 설정'
+title: '5단계: Windows Server Essentials 마이그레이션을 위해 대상 서버에서 폴더 리디렉션 사용'
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,20 +12,20 @@ ms.assetid: d3925f80-552d-431f-b2a6-2af202e50ca4
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 98b1a7adc23fca15c06ae9588d52bc9bcd532252
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: fcc65db17cee65250296715036f0067659a0058e
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66432590"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318742"
 ---
-# <a name="step-5-enable-folder-redirection-on-the-destination-server-for-windows-server-essentials-migration"></a>5단계: Windows Server Essentials의 대상 서버에 대 한 마이그레이션에 대 한 폴더 리디렉션을 사용 하도록 설정
+# <a name="step-5-enable-folder-redirection-on-the-destination-server-for-windows-server-essentials-migration"></a>5단계: Windows Server Essentials 마이그레이션을 위해 대상 서버에서 폴더 리디렉션 사용
 
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 원본 서버에서 폴더 리디렉션을 사용하는 경우 대상 서버에서 폴더 리디렉션을 사용하도록 설정한 다음 이전 폴더 리디렉션 그룹 정책 설정을 삭제할 수 있습니다.  
   
- 첫째, Windows Server Essentials 대시보드를 사용 하 여 대상 서버에서 폴더 리디렉션을 사용 하도록 설정 합니다. 그런 다음 이전 폴더 리디렉션 그룹 정책 설정을 삭제합니다.  
+ 먼저 Windows Server Essentials 대시보드를 사용 하 여 대상 서버에서 폴더 리디렉션을 사용 하도록 설정 합니다. 그런 다음 이전 폴더 리디렉션 그룹 정책 설정을 삭제합니다.  
   
 ### <a name="to-enable-folder-redirection-on-the-destination-server"></a>대상 서버에서 폴더 리디렉션을 사용하도록 설정하려면  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66432590"
   
 1. 대상 서버에서 **그룹 정책 관리** 관리 도구를 엽니다.  
   
-2. **그룹 정책 관리**, 확장 **포리스트:** <em>YourNetworkDomainName</em>를 확장 하 고 **도메인**, 확장  *YourNetworkDomainName*을 펼친 다음 **그룹 정책 개체**합니다.  
+2. **그룹 정책 관리**에서 **포리스트: 해당**<em>networkdomainname</em>, **도메인**을 차례로 확장 하 고 해당 *networkdomainname*을 확장 한 다음 **그룹 정책 개체**를 확장 합니다.  
   
 3. 삭제하려는 정책을 마우스 오른쪽 단추로 클릭한 후 **삭제**를 클릭합니다.  
   
@@ -54,8 +54,8 @@ ms.locfileid: "66432590"
    폴더 리디렉션에 대한 변경 내용을 적용하려면 네트워크 사용자가 컴퓨터에서 로그오프했다가 다시 로그온해야 합니다. 이렇게 하면 모든 리디렉션된 폴더가 대상 서버로 전송됩니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 대상 서버에서 폴더 리디렉션 사용하도록 설정했습니다. 이제 [6 단계: 수준 내리기 및 새 Windows Server Essentials 네트워크에서 원본 서버 제거](Step-6--Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md)합니다.  
+ 대상 서버에서 폴더 리디렉션 사용하도록 설정했습니다. 이제 [6 단계: 새 Windows Server Essentials 네트워크에서 원본 서버 수준 내리기 및 제거](Step-6--Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md)로 이동 합니다.  
   
 
-모든 단계를 보려면 [Windows Server Essentials로 마이그레이션](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md)합니다.
+모든 단계를 보려면 [Windows Server Essentials로 마이그레이션](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md)을 참조 하세요.
 

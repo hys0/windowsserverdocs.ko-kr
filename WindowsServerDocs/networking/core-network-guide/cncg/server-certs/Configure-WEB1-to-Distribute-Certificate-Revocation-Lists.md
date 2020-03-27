@@ -6,14 +6,14 @@ ms.topic: article
 ms.assetid: fa4a8c41-8c2a-425c-8511-736fe5d196ac
 ms.prod: windows-server
 ms.technology: networking
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 5d53cbba37699346db110f0748a9c3e0c834c18e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 3319715e70c1e68739a10a4c67a9fa404d5ad80e
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71356290"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318411"
 ---
 # <a name="configure-web1-to-distribute-certificate-revocation-lists-crls"></a>인증서 해지 목록 (Crl)를 배포 하도록 WEB1 구성
 
@@ -21,7 +21,7 @@ ms.locfileid: "71356290"
 
 W e b 1 Crl을 배포 하려면 웹 서버를 구성 하려면이 절차를 사용할 수 있습니다.  
   
-루트 CA의 확장에서는 루트 CA의 CRL을 https://pki.corp.contoso.com/pki 을 통해 사용할 수 있음을 언급 했습니다. 현재 있는 아니므로 PKI 가상 디렉터리에 w e b 1을 만들어야 합니다.  
+루트 CA의 확장에서는 루트 CA의 CRL을 https://pki.corp.contoso.com/pki를 통해 사용할 수 있음을 언급 했습니다. 현재 있는 아니므로 PKI 가상 디렉터리에 w e b 1을 만들어야 합니다.  
   
 이 절차를 수행 하려면의 구성원 이어야 **Domain Admins**합니다.  
   
@@ -50,7 +50,7 @@ W e b 1 Crl을 배포 하려면 웹 서버를 구성 하려면이 절차를 사�
   
 10. 익명을 사용 하도록 설정 모든 클라이언트는 CA 인증서 및 Crl의 유효성을 검사할 수 있도록 pki 가상 디렉터리에 액세스 합니다. 이를 수행하려면:  
   
-    1.  에 **연결** 창에서 확인 **pki** 을 선택 합니다.  
+    1.  **연결** 창에서 **pki**가 선택되었는지 확인합니다.  
   
     2.  **pki 홈**에서 **인증**을 클릭합니다.  
   
@@ -72,7 +72,7 @@ W e b 1 Crl을 배포 하려면 웹 서버를 구성 하려면이 절차를 사�
   
 13. **파일 이름 확장명** 탭이 **요청 필터링** 창에서 기본적으로 선택되어 있습니다. **작업** 창에서 **기능 설정 편집**을 클릭합니다.  
   
-14. **요청 필터링 설정 편집**에서 **이중 이스케이프 허용** 을 선택하고 **확인**을 클릭합니다.  
+14. **요청 필터링 설정 편집**에서 **이중 이스케이프 허용**을 선택하고 **확인**을 클릭합니다.  
   
 15. 인터넷 정보 서비스 (IIS) 관리자 MMC에서 사용자의 웹 서버 이름을 클릭 합니다. 예를 들어 웹 서버 w e b 1 인 경우 클릭 하 여 **w e b 1**합니다.  
   

@@ -10,14 +10,14 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: df1e87f2-6a0f-433b-8e42-816ae75395f9
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 41cc5cc2df5ac9709818536df8fff098d2a0c297
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: d588d9b8675dad8bffc9e020032bc66bebf503b0
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404332"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80313673"
 ---
 # <a name="step-3-configure-the-remote-access-server-for-otp"></a>3 단계 OTP에 대 한 원격 액세스 서버 구성
 
@@ -25,16 +25,16 @@ ms.locfileid: "71404332"
 
 소프트웨어 배포 토큰을 사용 하 여 RADIUS 서버를 구성 하 고 나면 통신 포트가 열려, 공유 암호가 생성 되 고, Active Directory에 해당 하는 사용자 계정이 RADIUS 서버에서 생성 되었으며, 원격 액세스 서버에 RADIUS 인증 에이전트로 구성 된 후 OTP를 지원 하도록 원격 액세스 서버를 구성 해야 합니다.  
   
-|태스크|설명|  
+|작업|설명|  
 |----|--------|  
 |[3.1 OTP 인증에서 사용자를 제외 합니다 (선택 사항).](#BKMK_Exempt)|OTP 인증을 사용 하 여 DirectAccess에서 특정 사용자가 제외 되는 경우에는 다음 예비 단계를 따르세요.|  
 |[3.2 OTP를 지원 하도록 원격 액세스 서버 구성](#BKMK_Config)|원격 액세스 서버에서 OTP 2 단계 인증을 지원 하도록 원격 액세스 구성을 업데이트 합니다.|  
 |[3.3 추가 권한 부여에 대 한 스마트 카드](#BKMK_Smartcard)|스마트 카드 사용과 관련 된 추가 정보입니다.|  
   
 > [!NOTE]  
-> 이 항목에는 설명한 절차의 일부를 자동화하는 데 사용할 수 있는 샘플 Windows PowerShell cmdlet이 포함되어 있습니다. 자세한 내용은 참조 [Cmdlet를 사용 하 여](https://go.microsoft.com/fwlink/p/?linkid=230693)합니다.  
+> 이 항목에는 설명된 일부 절차를 자동화하는 데 사용할 수 있는 예제 Windows PowerShell cmdlet이 포함되어 있습니다. 자세한 내용은 참조 [Cmdlet를 사용 하 여](https://go.microsoft.com/fwlink/p/?linkid=230693)합니다.  
   
-## <a name="BKMK_Exempt"></a>3.1 OTP 인증에서 사용자를 제외 합니다 (선택 사항).  
+## <a name="31-exempt-users-from-otp-authentication-optional"></a><a name="BKMK_Exempt"></a>3.1 OTP 인증에서 사용자를 제외 합니다 (선택 사항).  
 특정 사용자가 OTP 인증에서 제외 되는 경우 원격 액세스 구성 전에 다음 단계를 수행 해야 합니다.  
   
 > [!NOTE]  
@@ -49,7 +49,7 @@ ms.locfileid: "71404332"
     > [!NOTE]  
     > OTP 예외 보안 그룹에는 컴퓨터 계정이 아닌 사용자 계정만 포함 해야 합니다.  
   
-## <a name="BKMK_Config"></a>3.2 OTP를 지원 하도록 원격 액세스 서버 구성  
+## <a name="32-configure-the-remote-access-server-to-support-otp"></a><a name="BKMK_Config"></a>3.2 OTP를 지원 하도록 원격 액세스 서버 구성  
 위의 섹션에서 RADIUS 서버 및 인증서 배포와 함께 2 단계 인증 및 OTP를 사용 하도록 원격 액세스를 구성 하려면 다음 단계를 사용 합니다.  
   
 #### <a name="configure-remote-access-for-otp"></a>OTP에 대 한 원격 액세스 구성  
@@ -63,7 +63,7 @@ ms.locfileid: "71404332"
     > [!NOTE]  
     > 원격 액세스 서버에서 OTP를 사용 하도록 설정한 후 otp **사용**을 선택 취소 하 여 otp를 사용 하지 않도록 설정 하면 서버에서 ISAPI 및 CGI 확장이 제거 됩니다.  
   
-4.  Windows 7 지원이 필요한 경우 **windows 7 클라이언트 컴퓨터에서 DirectAccess를 통해 연결 하도록 설정** 확인란을 선택 합니다. 참고: 계획 섹션에 설명 된 대로 Windows 7 클라이언트는 OTP를 사용 하 여 DirectAccess를 지원 하려면 DCA 2.0이 설치 되어 있어야 합니다.  
+4.  Windows 7 지원이 필요한 경우 **windows 7 클라이언트 컴퓨터에서 DirectAccess를 통해 연결 하도록 설정** 확인란을 선택 합니다. 참고: 계획 섹션에 설명 된 대로, OTP를 사용 하 여 DirectAccess를 지원 하려면 Windows 7 클라이언트에 DCA 2.0이 설치 되어 있어야 합니다.  
   
 5.  **다음**을 클릭합니다.  
   
@@ -99,15 +99,15 @@ ms.locfileid: "71404332"
   
 17. **원격 액세스 검토** 대화 상자에서 **적용**을 클릭 하 고, DirectAccess 정책이 업데이트 될 때까지 기다린 후 **닫기**를 클릭 합니다.  
   
-18. **시작** 화면에서**powershell**을 입력 하 고 **powershell**을 마우스 오른쪽 단추로 클릭 한 다음 **고급**을 클릭 하 고 **관리자 권한으로 실행**을 클릭 합니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
+18. **시작** 화면에서**powershell**을 입력 하 고 **powershell**을 마우스 오른쪽 단추로 클릭 한 다음 **고급**을 클릭 하 고 **관리자 권한으로 실행**을 클릭 합니다. **사용자 계정 컨트롤** 대화 상자가 표시되면 원하는 작업이 표시되어 있는지 확인하고 **예**를 클릭합니다.  
   
 19. Windows PowerShell 창에서 **gpupdate/force** 를 입력 하 고 enter 키를 누릅니다.  
   
 PowerShell 명령을 사용 하 여 OTP에 대 한 원격 액세스를 구성 하려면:  
   
-![Windows PowerShell](../../../../media/Step-3-Configure-the-Remote-Access-Server-for-OTP/PowerShellLogoSmall.gif)**windows powershell 해당 명령**  
+![Windows PowerShell](../../../../media/Step-3-Configure-the-Remote-Access-Server-for-OTP/PowerShellLogoSmall.gif)**Windows powershell 해당 명령**  
   
-다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
+다음 Windows PowerShell cmdlet은 이전 절차와 동일한 기능을 수행합니다. 서식 조건 때문에 각 cmdlet이 여러 줄로 자동 줄 바꿈되어 표시되더라도 한 줄에 입력합니다.  
   
 현재 컴퓨터 인증서 인증을 사용 하는 배포에서 2 단계 인증을 사용 하도록 원격 액세스를 구성 하려면:  
   
@@ -134,7 +134,7 @@ PowerShell 명령을 실행 한 후 이전 절차의 12-19 단계를 완료 하 
 > [!NOTE]  
 > 진입점을 추가 하기 전에 원격 액세스 서버에 OTP 설정을 적용 했는지 확인 해야 합니다.  
   
-## <a name="BKMK_Smartcard"></a>3.3 추가 권한 부여에 대 한 스마트 카드  
+## <a name="33-smart-cards-for-additional-authorization"></a><a name="BKMK_Smartcard"></a>3.3 추가 권한 부여에 대 한 스마트 카드  
 원격 액세스 설치 마법사에서 2 단계의 인증 페이지에서 내부 네트워크에 액세스 하기 위해 스마트 카드를 사용 하도록 요구할 수 있습니다. 이 옵션을 선택 하면 원격 액세스 설치 마법사가 DirectAccess 서버에서 인트라넷 터널에 대 한 IPsec 연결 보안 규칙을 구성 하 여 스마트 카드를 통한 터널 모드 인증을 요구 합니다. 터널 모드 권한 부여를 사용 하면 권한 있는 컴퓨터 또는 사용자만 인바운드 터널을 설정할 수 있도록 지정할 수 있습니다.  
   
 인트라넷 터널에 대해 IPsec 터널 모드 인증을 사용 하는 스마트 카드를 사용 하려면 스마트 카드 인프라를 사용 하 여 PKI (공개 키 인프라)를 배포 해야 합니다.  
@@ -150,7 +150,7 @@ DirectAccess 클라이언트는 인트라넷에 액세스 하기 위해 스마�
   
 스마트 카드를 사용할 수 없는 사용자에 게 액세스 권한을 부여 하려면 Active Directory 보안 그룹에 해당 사용자 계정을 임시로 추가 합니다. 스마트 카드를 사용할 수 있는 경우 그룹에서 사용자 계정을 제거 합니다.  
   
-### <a name="under-the-covers-smart-card-authorization"></a>내부적으로 다음을 수행 합니다. 스마트 카드 인증  
+### <a name="under-the-covers-smart-card-authorization"></a>커버: 스마트 카드 권한 부여  
 스마트 카드 권한 부여는 특정 Kerberos 기반 SID (보안 식별자)에 대 한 DirectAccess 서버의 인트라넷 터널 연결 보안 규칙에서 터널 모드 권한 부여를 사용 하도록 설정 하는 방식으로 작동 합니다. 스마트 카드 인증의 경우,이는 스마트 카드 기반 로그온에 매핑되는 잘 알려진 SID (S-1-5-65-1)입니다. 이 SID는 DirectAccess 클라이언트의 Kerberos 토큰에 존재 하며, 전역 IPsec 터널 모드 권한 부여 설정에서 구성 된 경우 "이 조직 인증서"로 지칭 됩니다.  
   
 DirectAccess 설치 마법사의 2 단계에서 스마트 카드 인증을 사용 하도록 설정 하는 경우 directaccess 설치 마법사는 DirectAccess 서버 그룹 정책 개체에 대해이 SID를 사용 하 여 전역 IPsec 터널 모드 권한 부여 설정을 구성 합니다. DirectAccess 서버 그룹 정책 개체에 대 한 고급 보안이 설정 된 Windows 방화벽 스냅인에서이 구성을 보려면 다음을 수행 합니다.  

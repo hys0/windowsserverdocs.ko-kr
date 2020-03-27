@@ -3,7 +3,7 @@ title: Microsoft 온라인 서비스 파트너 계약 공식 파트너 정보 �
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,19 +12,19 @@ ms.assetid: 9bd191d6-ecc5-4230-a88e-f3fc281cb956
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 39ce43228cd7392bcc86de4a410c52676ce15047
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ec8387c59ebf42eb4287807e5959a50cea4215c4
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59833044"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80310242"
 ---
 # <a name="add-microsoft-online-service-partner-agreement-partner-of-record-information"></a>Microsoft 온라인 서비스 파트너 계약 공식 파트너 정보 추가
 
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 ##  <a name="BKMK_3rdLevelDomanNames"></a>   
- Office 365에 대 한 Microsoft 온라인 서비스 파트너 계약 (MOSPA) 파트너 라면 올바르게 구독 요청은 Office 365 Integration Module을 통해 Windows Server Essentials에서 시작 하는 경우 보정 됩니다 확인 하려면 만들기를 사용자 레코드의 파트너 식별 (POR ID)를 포함 하는 레지스트리 키입니다. 다음 정보가 Office 365 등록 URL을 통해 서비스 공급자에게 전달됩니다.  
+ Office 365에 대 한 MOSPA (Microsoft 온라인 서비스 파트너 계약) 파트너인 경우 Office 365 통합 모듈을 통해 Windows Server Essentials에서 구독 요청이 발생 했을 때 올바르게 보정 되도록 하려면 다음을 만들어야 합니다. POR ID (레코드 파트너 id)를 포함 하는 레지스트리 키입니다. 다음 정보가 Office 365 등록 URL을 통해 서비스 공급자에게 전달됩니다.  
   
 -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Server\MSO  
   
@@ -54,13 +54,13 @@ ms.locfileid: "59833044"
   
 ## <a name="see-also"></a>관련 항목  
 
- [만들기 및 이미지를 사용자 지정](Creating-and-Customizing-the-Image.md)   
+ [이미지  만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)  
  [추가 사용자 지정](Additional-Customizations.md)   
- [배포용 이미지 준비](Preparing-the-Image-for-Deployment.md)   
+ [배포할 이미지를 준비 하는 중](Preparing-the-Image-for-Deployment.md)   
  [사용자 환경 테스트](Testing-the-Customer-Experience.md)
 
- [만들기 및 이미지를 사용자 지정](../install/Creating-and-Customizing-the-Image.md)   
+ [이미지  만들기 및 사용자 지정](../install/Creating-and-Customizing-the-Image.md)  
  [추가 사용자 지정](../install/Additional-Customizations.md)   
- [배포용 이미지 준비](../install/Preparing-the-Image-for-Deployment.md)   
+ [배포할 이미지를 준비 하는 중](../install/Preparing-the-Image-for-Deployment.md)   
  [사용자 환경 테스트](../install/Testing-the-Customer-Experience.md)
 

@@ -6,15 +6,15 @@ ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: bc625de9-ee31-40a4-9ad2-7448bfbfb6e6
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 08/30/2018
-ms.openlocfilehash: 54a8b9490fdf83d04c6b69fa88f4e8beca4f703a
-ms.sourcegitcommit: 51e0b575ef43cd16b2dab2db31c1d416e66eebe8
+ms.openlocfilehash: 196a124533b98c6945186ee827494b206028d2c8
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76259068"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80317407"
 ---
 # <a name="secure-the-network-controller"></a>네트워크 컨트롤러 보안
 
@@ -33,7 +33,7 @@ ms.locfileid: "76259068"
 
 네트워크 컨트롤러는 Northbound 통신을 위한 인증, 권한 부여 및 암호화를 지원 합니다. 다음 섹션에서는 이러한 보안 설정을 구성 하는 방법에 대 한 정보를 제공 합니다.
 
-### <a name="authentication"></a>Authentication
+### <a name="authentication"></a>인증
 
 네트워크 컨트롤러 Northbound 통신에 대 한 인증을 구성 하는 경우 네트워크 컨트롤러 클러스터 노드 및 관리 클라이언트가 통신 하는 장치의 id를 확인할 수 있습니다.
 
@@ -46,7 +46,7 @@ ms.locfileid: "76259068"
 
 2. **X509**. Active Directory 도메인에 가입 되지 않은 관리 클라이언트에 대해 인증서\-기반 인증에 대해 X509를 사용 합니다. 모든 네트워크 컨트롤러 클러스터 노드 및 관리 클라이언트에 인증서를 등록 해야 합니다. 또한 모든 노드 및 관리 클라이언트는 다른 사람의 인증서를 신뢰 해야 합니다.
 
-3. **None(없음)** . 테스트 환경에서 테스트 목적으로는 None을 사용 하 고 따라서 프로덕션 환경에서는 사용 하지 않는 것이 좋습니다. 이 모드를 선택 하면 노드와 관리 클라이언트 간에 인증이 수행 되지 않습니다.
+3. **없음**. 테스트 환경에서 테스트 목적으로는 None을 사용 하 고 따라서 프로덕션 환경에서는 사용 하지 않는 것이 좋습니다. 이 모드를 선택 하면 노드와 관리 클라이언트 간에 인증이 수행 되지 않습니다.
 
 _Clientauthentication_ 매개 변수와 함께 Windows PowerShell 명령 **[NetworkController](https://docs.microsoft.com/powershell/module/networkcontroller/install-networkcontroller)** 를 사용 하 여 Northbound 통신에 대 한 인증 모드를 구성할 수 있습니다. 
 
@@ -61,7 +61,7 @@ _Clientauthentication_ 매개 변수와 함께 Windows PowerShell 명령 **[Netw
 
 2.  **X509**. X509 인증 방법을 사용 하는 경우 네트워크 컨트롤러는 인증서 지문을 네트워크 컨트롤러에 알고 있는 관리 클라이언트의 요청만 수락 합니다. **[NetworkController](https://docs.microsoft.com/powershell/module/networkcontroller/install-networkcontroller)** Windows PowerShell 명령의 _clientcertificatethumbprint_ 매개 변수를 사용 하 여 이러한 지문을 구성할 수 있습니다. **[NetworkController](https://docs.microsoft.com/powershell/module/networkcontroller/Set-NetworkController)** 명령을 사용 하 여 언제 든 지 다른 클라이언트 지문을 추가할 수 있습니다.
 
-3.  **None(없음)** . 이 모드를 선택 하면 노드와 관리 클라이언트 간에 인증이 수행 되지 않습니다. 테스트 환경에서 테스트 목적으로는 None을 사용 하 고 따라서 프로덕션 환경에서는 사용 하지 않는 것이 좋습니다. 
+3.  **없음**. 이 모드를 선택 하면 노드와 관리 클라이언트 간에 인증이 수행 되지 않습니다. 테스트 환경에서 테스트 목적으로는 None을 사용 하 고 따라서 프로덕션 환경에서는 사용 하지 않는 것이 좋습니다. 
 
 
 ### <a name="encryption"></a>암호화
@@ -94,7 +94,7 @@ SSL 인증서는 네트워크 컨트롤러 노드에 수동으로 등록 해야 
 
 자세한 내용은 [NetworkControllerCluster](https://docs.microsoft.com/powershell/module/networkcontroller/install-networkcontrollercluster)를 참조 하세요.
 
-### <a name="authentication"></a>Authentication
+### <a name="authentication"></a>인증
 
 네트워크 컨트롤러 클러스터 통신에 대 한 인증을 구성 하는 경우 네트워크 컨트롤러 클러스터 노드에서 통신할 다른 노드의 id를 확인할 수 있습니다.
 
@@ -107,7 +107,7 @@ SSL 인증서는 네트워크 컨트롤러 노드에 수동으로 등록 해야 
 
 2. **X509**. X509는 인증서\-기반 인증입니다. 네트워크 컨트롤러 클러스터 노드가 Active Directory 도메인에 가입 되지 않은 경우 X509 인증을 사용할 수 있습니다. X509를 사용 하려면 모든 네트워크 컨트롤러 클러스터 노드에 인증서를 등록 해야 하며 모든 노드는 인증서를 신뢰 해야 합니다. 또한 각 노드에 등록 된 인증서의 주체 이름은 노드의 DNS 이름과 동일 해야 합니다.
 
-3. **None(없음)** . 이 모드를 선택 하면 네트워크 컨트롤러 노드 간에 인증이 수행 되지 않습니다. 이 모드는 테스트 목적 으로만 제공 되며 프로덕션 환경에서 사용 하지 않는 것이 좋습니다.
+3. **없음**. 이 모드를 선택 하면 네트워크 컨트롤러 노드 간에 인증이 수행 되지 않습니다. 이 모드는 테스트 목적 으로만 제공 되며 프로덕션 환경에서 사용 하지 않는 것이 좋습니다.
 
 ### <a name="authorization"></a>Authorization
 
@@ -119,13 +119,13 @@ SSL 인증서는 네트워크 컨트롤러 노드에 수동으로 등록 해야 
 
 2. **X509**. 네트워크 컨트롤러 노드는 다른 네트워크 컨트롤러 컴퓨터 계정의 통신 요청만 수락 합니다. [NetworkControllerNodeObject](https://docs.microsoft.com/powershell/module/networkcontroller/new-networkcontrollernodeobject) Windows PowerShell 명령의 **Name** 매개 변수를 사용 하 여 네트워크 컨트롤러를 배포할 때 이러한 계정을 구성할 수 있습니다.
 
-3. **None(없음)** . 이 모드를 선택 하면 네트워크 컨트롤러 노드 간에 권한 부여가 수행 되지 않습니다. 이 모드는 테스트 목적 으로만 제공 되며 프로덕션 환경에서 사용 하지 않는 것이 좋습니다.
+3. **없음**. 이 모드를 선택 하면 네트워크 컨트롤러 노드 간에 권한 부여가 수행 되지 않습니다. 이 모드는 테스트 목적 으로만 제공 되며 프로덕션 환경에서 사용 하지 않는 것이 좋습니다.
 
 ### <a name="encryption"></a>암호화
 
 네트워크 컨트롤러 노드 간 통신은 WCF 전송 수준 암호화를 사용 하 여 암호화 됩니다. 이러한 형태의 암호화는 인증 및 권한 부여 방법이 Kerberos 또는 X509 인증서 일 때 사용 됩니다. 자세한 내용은 다음 항목을 참조하세요.
 
-- [방법: Windows 자격 증명을 사용하여 서비스에 보안 설정](https://docs.microsoft.com/dotnet/framework/wcf/how-to-secure-a-service-with-windows-credentials)
+- [방법: Windows 자격 증명을 사용 하 여 서비스 보호](https://docs.microsoft.com/dotnet/framework/wcf/how-to-secure-a-service-with-windows-credentials)
 - [방법: X.509 인증서를 사용 하 여 서비스 보호](https://docs.microsoft.com/dotnet/framework/wcf/feature-details/how-to-secure-a-service-with-an-x-509-certificate)
 
 ## <a name="southbound-communication"></a>Southbound 통신
@@ -144,7 +144,7 @@ SSL 인증서는 네트워크 컨트롤러 노드에 수동으로 등록 해야 
 
 이러한 각 프로토콜에 대 한 통신 메커니즘은 다음 섹션에 설명 되어 있습니다.
 
-### <a name="authentication"></a>Authentication
+### <a name="authentication"></a>인증
 
 Southbound 통신의 경우 다음 프로토콜과 인증 방법이 사용 됩니다.
 

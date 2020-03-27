@@ -7,15 +7,15 @@ ms.topic: article
 ms.assetid: ''
 ms.localizationpriority: medium
 manager: dougkim
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 09/04/2018
-ms.openlocfilehash: 3bbb70657cb009ce760ccfe273b24c6df17d3ca7
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: c214b0f7ffdceb662b783b0a3603e65604243261
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75949908"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80315271"
 ---
 # <a name="resolve-vrss-issues"></a>VRSS 문제 해결
 
@@ -48,7 +48,7 @@ ms.locfileid: "75949908"
    Enable-NetAdapterRss *
    ```
    
-   RSS를 구성 하는 다른 시스템 차원의 방법은 netsh를 사용 하는 것입니다. 기본 수학에는 
+   RSS를 구성 하는 다른 시스템 차원의 방법은 netsh를 사용 하는 것입니다. 기능 
    
     ```cmd
    netsh int tcp show global

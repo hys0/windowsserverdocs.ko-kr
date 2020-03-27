@@ -6,15 +6,15 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
 manager: dougkim
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 09/12/2018
-ms.openlocfilehash: d5a4d5f06cd433fa92c617a3cb36e95d09be3b27
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 7b2030535e65a94e285a3db00779dddb85411c95
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950456"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80316991"
 ---
 # <a name="hardware-only-ho-features-and-technologies"></a>HO(하드웨어 전용) 기능 및 기술
 
@@ -79,6 +79,6 @@ Windows Server 2016에는 MTU_for_HNV 새 오프 로드가 있습니다. 이 새
 
 LSO를 사용 하면 응용 프로그램에서 많은 데이터 블록을 NIC에 전달할 수 있으며, NIC는 네트워크의 MTU (최대 전송 단위) 내에 적합 한 패킷으로 데이터를 나눕니다.
 
-## <a name="receive-segment-coalescing-rsc"></a>RSC(수신 세그먼트 통합)
+## <a name="receive-segment-coalescing-rsc"></a>Receive Segment Coalescing (RSC)
 
 대량 수신 오프 로드 라고도 하는 수신 세그먼트 통합은 네트워크 인터럽트 사이에 도착 하는 동일한 스트림의 일부인 패킷을 사용 하 고이를 운영 체제에 전달 하기 전에 단일 패킷에 결합 하는 NIC 기능입니다. Hyper-v 가상 스위치에 바인딩된 Nic에서는 RSC를 사용할 수 없습니다. 자세한 내용은 [RSC (수신 세그먼트 통합)](https://docs.microsoft.com/windows-server/networking/technologies/hpn/rsc-in-the-vswitch)를 참조 하세요.

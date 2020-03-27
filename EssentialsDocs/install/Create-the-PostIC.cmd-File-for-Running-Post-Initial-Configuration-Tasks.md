@@ -3,7 +3,7 @@ title: 초기 구성 후 작업 실행을 위해 PostIC.cmd 파일 만들기
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: 99e258bc-0695-48c9-b694-a7f3cbe2a2d0
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: e15cb8591fc701094dde884d0a55e08d2cf422bb
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 81a38f0baf3a47323f6bf8836e48d02bc955cde0
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66433603"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80312059"
 ---
 # <a name="create-the-posticcmd-file-for-running-post-initial-configuration-tasks"></a>초기 구성 후 작업 실행을 위해 PostIC.cmd 파일 만들기
 
@@ -43,7 +43,7 @@ ms.locfileid: "66433603"
   
 4.  (선택 사항) PostIC.cmd가 0이 아닌 값을 반환하면 코드를 실행하는 SetupFailure.cmd 파일을 만듭니다.  
   
-###  <a name="BKMK_SetupFailure"></a> SetupFailure.cmd  
+###  <a name="setupfailurecmd"></a><a name="BKMK_SetupFailure"></a>SetupFailure .cmd  
  SetupFailure.cmd를 사용하여 초기 구성에서의 문제에 대한 알림을 제공할 수 있습니다. SetupFailure.cmd 파일은 문제 발생 시 실행을 원하는 코드를 포함합니다. SetupFailure.cmd 파일은 C:\Windows\Setup\Scripts에 있으며 설치 작업에 문제가 발생하거나 PostIC.cmd 파일이 0이 아닌 값을 반환할 경우 실행됩니다.  
   
 ##### <a name="to-define-notifications"></a>알림을 정의하려면  
@@ -55,8 +55,8 @@ ms.locfileid: "66433603"
 3.  SetupFailure.cmd를 C:\Windows\Setup\Scripts에 저장합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Windows Server Essentials ADK 시작 하기](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
- [만들기 및 이미지를 사용자 지정](Creating-and-Customizing-the-Image.md)   
+ [Windows Server ESSENTIALS ADK를 사용 하 여 시작](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
+ [이미지  만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)  
  [추가 사용자 지정](Additional-Customizations.md)   
- [배포용 이미지 준비](Preparing-the-Image-for-Deployment.md)   
+ [배포할 이미지를 준비 하는 중](Preparing-the-Image-for-Deployment.md)   
  [사용자 환경 테스트](Testing-the-Customer-Experience.md)

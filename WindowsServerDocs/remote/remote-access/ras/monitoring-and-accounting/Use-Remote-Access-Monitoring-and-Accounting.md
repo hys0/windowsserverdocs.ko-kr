@@ -10,14 +10,14 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 92519b49-0df4-43c1-9717-f13570644212
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: eb7c052358bc50f9b466b7ac862e77be7b044685
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 81eb82310508242a82d3236f1ec5b4056ad4bf37
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71367152"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80314116"
 ---
 # <a name="use-remote-access-monitoring-and-accounting"></a>원격 액세스 모니터링 및 계정 사용
 
@@ -25,7 +25,7 @@ ms.locfileid: "71367152"
 
 원격 액세스 모니터링은 DirectAccess 및 VPN 연결에 대한 원격 사용자 활동 및 상태를 보고합니다. 특히, 클라이언트 연결 수 및 기간을 추적하며, 서버의 작업 상태를 모니터링합니다. 사용하기 쉬운 모니터링 콘솔에서 전체 원격 액세스 인프라 보기를 제공합니다. 모니터링 보기는 단일 서버, 클러스터 및 멀티 사이트 구성에 사용할 수 있습니다.  
   
-**참고:** Windows Server 2012에는 DirectAccess와 RRAS(Routing and Remote Access Service)가 단일 원격 액세스 역할로 통합되어 있습니다.  
+**참고:** Windows Server 2012 DirectAccess 및 라우팅 및 원격 액세스 서비스 (RRAS)를 단일 원격 액세스 역할로 결합 합니다.  
   
 > [!NOTE]  
 > 이 항목 외에도 원격 액세스 모니터링에 대한 다음 항목을 사용할 수 있습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "71367152"
 > -   [연결된 원격 클라이언트에서 활동 및 상태 모니터링](Monitor-connected-remote-clients-for-activity-and-status.md)  
 > -   [기록 데이터를 사용하여 원격 클라이언트에 대한 사용 보고서 생성](Generate-a-usage-report-for-remote-clients-using-historical-data.md)  
 
-## <a name="in-this-guide"></a>이 가이드의 내용  
+## <a name="in-this-guide"></a>설명서의 내용  
 이 문서에는 DirectAccess 관리 콘솔 및 원격 액세스 서버 역할의 일부로 제공되는 해당 Windows PowerShell cmdlet을 사용하여 원격 액세스의 모니터링 기능을 활용하는 방법에 대한 지침이 수록되어 있습니다.  
   
 이 문서에 설명된 모니터링 및 계정 시나리오는 다음과 같습니다.  

@@ -3,7 +3,7 @@ title: 로고 및 EULA를 포함한 Oobe.xml 파일 만들기
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: 8a7b3cc1-21bb-4344-8110-f5d5959b370d
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 5d7dac41ba6d6f73b0d3d65d3481fe45ff99a6bc
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 58d98aa84b8851e3226ebc76c86cffd574400c42
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66433615"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80312053"
 ---
 # <a name="create-the-oobexml-file-including-logo-and-eula"></a>로고 및 EULA를 포함한 Oobe.xml 파일 만들기
 
@@ -31,11 +31,11 @@ Oobe.xml 파일을 사용하여 초기 구성에 사용자 고유의 EULA(최종
   
 1. Oobe.xml 파일을 메모장과 같은 텍스트 편집기에서 엽니다.  
   
-2. 내에서 < /logopath&gt\>< / /logopath&gt\> 태그에 로고 파일의 절대 경로 입력 합니다. 이 파일에는 240 x 100 픽셀의 32비트 .png(이동 네트워크 그래픽) 파일이 있어야 합니다.  
+2. < Logopath\></logopath\> 태그 내에서 로고 파일의 절대 경로를 입력 합니다. 이 파일에는 240 x 100 픽셀의 32비트 .png(이동 네트워크 그래픽) 파일이 있어야 합니다.  
   
-3. 내에서 < /eulafilename&gt\>< / /eulafilename&gt\> 태그에 EULA 파일의 절대 경로 입력 합니다. EULA 파일은 서식 있는 텍스트(.rtf) 파일이어야 합니다.  
+3. < E\></eulafilename\> 태그 내에서 EULA 파일의 절대 경로를 입력 합니다. EULA 파일은 서식 있는 텍스트(.rtf) 파일이어야 합니다.  
   
-4. 내에서 < 이름\>< / 이름\> 태그에 회사 이름을 입력 합니다.  
+4. < 이름\></name\> 태그 내에 회사 이름을 입력 합니다.  
   
     다음 예제에서는 Oobe.xml 파일의 태그를 보여 줍니다.  
   
@@ -60,8 +60,8 @@ Oobe.xml 파일을 사용하여 초기 구성에 사용자 고유의 EULA(최종
    |Oobe.xml 위치|위치를 결정하는 조건|  
    |-----------------------|----------------------------------------|  
    |%windir%\system32\oobe\info\|서버는 단일 국가/지역 및 단일 언어 시스템으로 배송 됩니다.|  
-   |%windir%\system32\oobe\info\default\\<language\>|서버는 단일 국가/지역 및 다중 언어 시스템으로 배송됩니다.|  
-   |%windir%\system32\oobe\info\\< 국가/지역 > \ 및 %windir%\system32\oobe\info\\< 국가/지역 >\\< 언어\>\|서버는 둘 이상의 국가로 배송 됩니다 / 설정과 지역을 단일 언어를 사용 하 여 각 국가/지역 단위로 사용자 지정 해야합니다. 여기서 < 국가/지역 > 국가 또는 지역의 위치 서버를 배포의 지리적 위치 식별자 (GeoID)의 10 진수 버전은 및 < 언어\> 는 LCID (로캘 식별자)의 10 진수 버전입니다.|  
+   |%windir%\system32\oobe\info\default\\< language\>|서버는 단일 국가/지역 및 다중 언어 시스템으로 배송됩니다.|  
+   |%windir%\system32\oobe\info\\< country/region > \ 및%windir%\system32\oobe\info\\< 국가/지역 >\\언어 <\>국가/지역에 \|합니다. 즉, 각 국가/지역에 대 한 사용자 지정이 필요 하며, 각 국가/지역에는 단일 언어가 있습니다. 여기서 < country/region >는 서버를 배포할 국가 또는 지역의 GeoID (지리적 위치 식별자)의 10 진수 버전입니다. < language\>는 LCID (로캘 식별자)의 10 진수 버전입니다.|  
   
    배경이 파란색이므로 흰색 텍스트로 된 대체 회사 로고가 있다면 그 로고가 설정 흐름에서 더 잘 표시될 수 있습니다.  선택적으로 레지스트리 키 및 값을 설정하여 이 로고를 지정할 수 있습니다.  
   
@@ -71,7 +71,7 @@ Oobe.xml 파일을 사용하여 초기 구성에 사용자 고유의 EULA(최종
   
 2.  검색 상자에 **regedit**를 입력하고 Regedit 응용 프로그램을 클릭합니다.  
   
-3.  탐색 창에서  **HKEY_LOCAL_MACHINE**으로 이동하여 **SOFTWARE**, **Microsoft**, **Windows Server**를 차례로 확장합니다. OEM 키가 없는 경우 다음과 같이 키를 만듭니다.  
+3.  탐색 창에서 **HKEY_LOCAL_MACHINE**으로 이동하여 **SOFTWARE**, **Microsoft**, **Windows Server**를 차례로 확장합니다. OEM 키가 없는 경우 다음과 같이 키를 만듭니다.  
   
     1.  **Windows Server**를 마우스 오른쪽 단추로 클릭하고 **새로 만들기**를 클릭한 다음 **키**를 클릭합니다.  
   
@@ -88,8 +88,8 @@ Oobe.xml 파일을 사용하여 초기 구성에 사용자 고유의 EULA(최종
 8.  로고 이미지가 포함된 경로를 입력한 다음 확인을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Windows Server Essentials ADK 시작 하기](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
- [만들기 및 이미지를 사용자 지정](Creating-and-Customizing-the-Image.md)   
+ [Windows Server ESSENTIALS ADK를 사용 하 여 시작](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
+ [이미지  만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)  
  [추가 사용자 지정](Additional-Customizations.md)   
- [배포용 이미지 준비](Preparing-the-Image-for-Deployment.md)   
+ [배포할 이미지를 준비 하는 중](Preparing-the-Image-for-Deployment.md)   
  [사용자 환경 테스트](Testing-the-Customer-Experience.md)

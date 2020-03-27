@@ -10,14 +10,14 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6a78a078-d2e7-4cbd-b8d5-20cfb6d1524b
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 81ac8bf7321df915330d8d706fa5ba3912b8f54c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: e1a8d3208acb0e0ce891e517492916357b9fbfcc
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71367301"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80314350"
 ---
 # <a name="step-3-verify-the-deployment"></a>3 단계 배포 확인
 
@@ -35,7 +35,7 @@ ms.locfileid: "71367301"
   
 4.  회사 네트워크에서 컴퓨터를 제거 하 고 공용 네트워크에 연결 합니다.  
   
-5.  명령 프롬프트에서 **nltest/dsgetdc: [정규화 된 도메인 이름]** 을 입력 합니다. 이 명령은 회사 네트워크를 클라이언트에서 액세스할 수 있는지 확인 합니다. 도메인 컨트롤러에 액세스할 수 없는 경우 다음 오류 메시지가 표시 됩니다. 도메인이 존재 하지 않는 것으로 보고 합니다. ERROR_NO_SUCH_DOMAIN.  
+5.  명령 프롬프트에서 **nltest/dsgetdc: [정규화 된 도메인 이름]** 을 입력 합니다. 이 명령은 회사 네트워크를 클라이언트에서 액세스할 수 있는지 확인 합니다. 도메인 컨트롤러에 액세스할 수 없는 경우 다음 오류 메시지가 표시 됩니다. 도메인이 존재 하지 않는다는 보고: ERROR_NO_SUCH_DOMAIN.  
   
 
 

@@ -3,7 +3,7 @@ title: Windows Server Essentials 관리
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: 4f1902f1-a0e0-49a6-afa7-3c4b61a11b48
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 59dc0073aa6fe5a7dd35c84b477acda8294e100c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 79291293e69f88beae6e05112ec232a4ab3c77b5
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59873664"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80319044"
 ---
 # <a name="manage-windows-server-essentials"></a>Windows Server Essentials 관리
 
@@ -33,9 +33,9 @@ ms.locfileid: "59873664"
   
 -   [응용 프로그램 관리](Manage-Applications-in-Windows-Server-Essentials.md)  
   
--   [백업 관리 및 복원](Manage-Backup-and-Restore-in-Windows-Server-Essentials.md)  
+-   [백업 및 복원 관리](Manage-Backup-and-Restore-in-Windows-Server-Essentials.md)  
   
--   [Manage BranchCache](Manage-BranchCache-in-Windows-Server-Essentials.md)  
+-   [BranchCache 관리](Manage-BranchCache-in-Windows-Server-Essentials.md)  
   
 -   [장치 관리](Manage-Devices-in-Windows-Server-Essentials.md)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "59873664"
   
 -   [서버 저장소 관리](Manage-Server-Storage-in-Windows-Server-Essentials.md)  
   
--   [Manage System Health](Manage-System-Health-in-Windows-Server-Essentials.md)  
+-   [시스템 상태 관리](Manage-System-Health-in-Windows-Server-Essentials.md)  
   
 -   [사용자 계정 관리](Manage-User-Accounts-in-Windows-Server-Essentials.md)  
   
@@ -61,7 +61,7 @@ ms.locfileid: "59873664"
   
 -    파트너 및 공급업체와 안전하게 협업을 수행하는 방법을 알아보려면 [중소기업의 협업 개선](https://technet.microsoft.com/library/dn747893.aspx)을 참조하세요.  
   
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
   
 -   [Windows Server Essentials 설치](../install/Install-Windows-Server-Essentials.md)  
   

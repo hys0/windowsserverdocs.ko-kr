@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking-dhcp
 ms.topic: get-started-article
 ms.assetid: beb8c188-6fcf-4520-8825-d17f8ee9fb04
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: ccd8024af30f1103afa8eac52926a6b42d32940a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 5d167666e632aa1a8d92de71feafc9014b66e7ce
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71355430"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80312599"
 ---
 # <a name="dhcp-logging-events-for-dns-registrations"></a>DNS 등록을 위한 DHCP 로깅 이벤트
 
@@ -26,7 +26,7 @@ ms.locfileid: "71355430"
 
 다음 새 DHCP 이벤트는 DNS 역방향\-조회 영역을 잘못 구성 하거나 누락 하 여 DNS 등록에 실패 하는 경우 쉽게 식별할 수 있도록 지원 합니다.
 
-|id|이벤트|값|
+|ID|이벤트|값|
 |-----|--------------------|--------------------------------------------------------|
 |20317|DHCPv4. ForwardRecordDNSFailure|IPv4 주소 %1 및 FQDN %2에 대 한 전달 레코드 등록이 %3 오류로 인해 실패 했습니다. 이는이 레코드에 대 한 전방 조회 영역이 DNS 서버에 존재 하지 않기 때문에 발생할 수 있습니다.|
 |20318|ForwardRecordDNSTimeout|IPv4 주소 %1 및 FQDN %2에 대 한 전달 레코드 등록이 %3 오류로 인해 실패 했습니다.|

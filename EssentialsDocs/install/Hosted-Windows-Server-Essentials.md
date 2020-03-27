@@ -3,7 +3,7 @@ title: 호스트된 Windows Server Essentials
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: fda5628c-ad23-49de-8d94-430a4f253802
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 84464c69d4b8576906e5fb0d0a7de7e382a59537
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 76319f87a246c6fabbe0befaf7dc4c74d1416ac4
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75947504"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80311753"
 ---
 # <a name="hosted-windows-server-essentials"></a>호스트된 Windows Server Essentials
 
@@ -30,13 +30,13 @@ ms.locfileid: "75947504"
   
  **서버 운영 체제:** Windows Server 2012 제품 기술은 Windows Server Essentials의 핵심을 제공 합니다. 자세한 내용은 [Windows Server 2012 웹 사이트](https://www.microsoft.com/server-cloud/products/windows-server-2012-r2/default.aspx#fbid=ZH0GD_CRAWh)를 참조하세요.  
   
- **데이터 보호:** Windows Server Essentials는 Windows Server 2012에서 제공 되는 몇 가지 새로운 기능을 활용 하 여 데이터 보호 기능을 크게 향상 시켰습니다. [새 스토리지 공간 기능](https://technet.microsoft.com/library/hh831739.aspx) 을 사용하면 개별 하드 드라이브의 실제 스토리지 용량을 집계하고, 하드 드라이브를 동적으로 추가하며, 지정된 복원력 수준으로 데이터 볼륨을 만듭니다. Windows Server Essentials는 네트워크에 연결 된 클라이언트 컴퓨터 뿐만 아니라 서버 자체의 완전 한 시스템 백업 및 완전 복구를 수행할 수 있습니다. 이제 2tb 보다 큰 볼륨을 지원 합니다. Windows Server 2012에서 새로 도입된 [Microsoft Azure Online Backup](https://technet.microsoft.com/library/hh831419.aspx) 을 사용하면 Microsoft가 관리하는 클라우드 기반 스토리지 서비스에서 파일 및 폴더를 보호할 수 있습니다. 또한 Windows Server Essentials는 Windows 8.1 클라이언트의 파일 기록 기능을 중앙에서 관리 하 고 구성 하 여 사용자가 실수로 삭제 하거나 덮어쓴 파일을 관리자의 도움 없이 복구할 수 있도록 지원 합니다.  
+ **데이터 보호:** Windows Server Essentials는 Windows Server 2012에서 제공 되는 몇 가지 새로운 기능을 활용 하 여 데이터 보호 기능을 크게 향상 시켰습니다. [새 저장소 공간 기능](https://technet.microsoft.com/library/hh831739.aspx) 을 사용하면 개별 하드 드라이브의 실제 저장소 용량을 집계하고, 하드 드라이브를 동적으로 추가하며, 지정된 복원력 수준으로 데이터 볼륨을 만듭니다. Windows Server Essentials는 네트워크에 연결 된 클라이언트 컴퓨터 뿐만 아니라 서버 자체의 완전 한 시스템 백업 및 완전 복구를 수행할 수 있습니다. 이제 2tb 보다 큰 볼륨을 지원 합니다. Windows Server 2012에서 새로 도입된 [Microsoft Azure Online Backup](https://technet.microsoft.com/library/hh831419.aspx) 을 사용하면 Microsoft가 관리하는 클라우드 기반 저장소 서비스에서 파일 및 폴더를 보호할 수 있습니다. 또한 Windows Server Essentials는 Windows 8.1 클라이언트의 파일 기록 기능을 중앙에서 관리 하 고 구성 하 여 사용자가 실수로 삭제 하거나 덮어쓴 파일을 관리자의 도움 없이 복구할 수 있도록 지원 합니다.  
   
- **원격 액세스:** 원격 웹 액세스는 인터넷이 연결되는 거의 모든 곳에서 거의 모든 디바이스를 사용하여 애플리케이션 및 데이터에 액세스할 수 있는 간소한 터치 지원 브라우저 경험을 제공합니다. 또한 Windows Server Essentials는 업데이트 된 Windows Phone 앱 및 Windows 8.1 클라이언트 컴퓨터용 새 앱을 제공 하 여 사용자가 직관적으로 서버에 연결 하 고, 검색 하 고, 서버에서 파일 및 폴더에 액세스할 수 있도록 합니다. 또한 파일은 오프라인 액세스를 위해 자동으로 캐시되었다가 서버 연결을 사용할 수 있게 되면 동기화됩니다. Windows Server Essentials를 사용 하면 몇 번의 클릭 만으로 손쉽게 마법사 구동 프로세스로 VPN (가상 사설망)을 설정할 수 있으며 사용자에 대 한 VPN 액세스 관리가 간단해 집니다. 클라이언트 컴퓨터는 VPN 연결을 활용하여 사무실에 통근하지 않고도 Windows SBS 환경에 원격으로 참가할 수 있습니다.  
+ **원격 액세스:** 원격 웹 액세스는 인터넷이 연결되는 거의 모든 곳에서 거의 모든 장치를 사용하여 응용 프로그램 및 데이터에 액세스할 수 있는 간소한 터치 지원 브라우저 경험을 제공합니다. 또한 Windows Server Essentials는 업데이트 된 Windows Phone 앱 및 Windows 8.1 클라이언트 컴퓨터용 새 앱을 제공 하 여 사용자가 직관적으로 서버에 연결 하 고, 검색 하 고, 서버에서 파일 및 폴더에 액세스할 수 있도록 합니다. 또한 파일은 오프라인 액세스를 위해 자동으로 캐시되었다가 서버 연결을 사용할 수 있게 되면 동기화됩니다. Windows Server Essentials를 사용 하면 몇 번의 클릭 만으로 손쉽게 마법사 구동 프로세스로 VPN (가상 사설망)을 설정할 수 있으며 사용자에 대 한 VPN 액세스 관리가 간단해 집니다. 클라이언트 컴퓨터는 VPN 연결을 활용하여 사무실에 통근하지 않고도 Windows SBS 환경에 원격으로 참가할 수 있습니다.  
   
  **작업 유연성:** Windows Server Essentials는 고객이 온-프레미스에서 실행 되 고 클라우드에서 실행 되는 응용 프로그램과 서비스를 유연 하 게 선택할 수 있도록 설계 되었습니다. 이전 버전인 Windows Small Business Server Standard에는 Exchange Server가 구성 요소 제품으로 포함되어 클라우드 기반 메시징 및 협업 서비스를 활용하려는 고객 입장에서는 비용과 복잡성이 높았습니다. Windows Server Essentials를 사용 하는 고객은 온-프레미스 Exchange Server를 실행 하도록 선택 하거나, 호스트 된 Exchange 서비스에 가입 하거나, Microsoft Office 365를 구독 하도록 선택 하는 것과 같은 유형의 통합 관리 환경을 활용할 수 있습니다.  
   
- **상태 모니터링:** Windows Server Essentials는 자체 상태와 Windows 8.1, Windows 7 및 Mac OS X 버전 10.5 이상을 실행 하는 클라이언트 컴퓨터의 상태를 모니터링 합니다. 상태 모니터링 이후 컴퓨터 백업, 서버 스토리지, 디스크 공간 부족 등의 관련 문제에 대해 알립니다.  
+ **상태 모니터링:** Windows Server Essentials는 자체 상태와 Windows 8.1, Windows 7 및 Mac OS X 버전 10.5 이상을 실행 하는 클라이언트 컴퓨터의 상태를 모니터링 합니다. 상태 모니터링 이후 컴퓨터 백업, 서버 저장소, 디스크 공간 부족 등의 관련 문제에 대해 알립니다.  
   
  **확장성:** Windows Server Essentials는 다른 소프트웨어 공급 업체가 핵심 제품에 기능 및 기능을 추가 하 고 새 웹 서비스 Api 집합을 추가할 수 있도록 하는 Windows SBS 2011 Essentials의 확장성 모델을 기반으로 합니다. 또한 Windows SBS 2011 Essentials용으로 만든 기존 [SDK(소프트웨어 개발 키트)](https://msdn.microsoft.com/library/gg513958.aspx) 및 [추가 기능](https://pinpoint.microsoft.com/applications/search?fpt=300105&q=small+business+server+essentials) 과 호환성이 유지됩니다.  
   
@@ -57,10 +57,10 @@ ms.locfileid: "75947504"
   
    Virtual Machine Manager를 사용하는 경우 실행 중인 인스턴스를 사용하여 템플릿을 만들 수 있습니다. 템플릿을 만들면 인스턴스의 sysprep이 수행되고 서버가 종료됩니다. 라이브러리에 저장한 후 개별적으로 인스턴스를 불러 올 수 있습니다.  
   
-##  <a name="BKMK_automatedeployment"></a>배포를 자동화 어떻게 할까요??  
+##  <a name="how-do-i-automate-the-deployment"></a><a name="BKMK_automatedeployment"></a>배포를 자동화 어떻게 할까요??  
  사용자 지정된 이미지를 얻은 후에는 고유 이미지를 사용하여 배포할 수 있습니다. 반 무인 설치를 수행하려면 WinPE 설치를 위한 unattend.xml을 제공/배포해야 합니다. 완전 무인 설치를 수행 하려면 Windows Server Essentials 초기 구성에 대 한 cfg 파일을 제공 해야 합니다.  
   
-1. 무인 WinPE 설치만 수행합니다. 그러면 WinPE 설치만 자동화되며 최종 사용자가 직접 RDP 이후 서버 세션에 회사, 도메인 및 관리자 정보를 제공할 수 있도록 초기 구성 이전에 설치가 중지됩니다. 이렇게 하려면 다음을 수행합니다.  
+1. 무인 WinPE 설치만 수행합니다. 그러면 WinPE 설치만 자동화되며 최종 사용자가 직접 RDP 이후 서버 세션에 회사, 도메인 및 관리자 정보를 제공할 수 있도록 초기 구성 이전에 설치가 중지됩니다. 이렇게 하려면 다음과 같이 하십시오.  
   
    1.  unattend.xml 파일을 제공합니다. [WINDOWS 8.1 ADK](https://go.microsoft.com/fwlink/?LinkId=248694) 에 따라 파일을 생성 하 고 서버 이름, 제품 키 및 관리자 암호를 포함 하 여 필요한 모든 정보를 제공 합니다. Unattend.xml 파일의 Microsoft-Windows-설치 섹션에서 아래와 같은 정보를 제공 합니다.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "75947504"
   
    Virtual Machine Manager를 사용 중인 경우 템플릿에서 새 인스턴스를 만들 때 콘솔에서 관리자 암호를 지정할 수 있습니다.  
   
-2. 무인 초기 구성을 포함하여 완전 무인 설치를 수행합니다. 이렇게 하려면 다음을 수행합니다.  
+2. 무인 초기 구성을 포함하여 완전 무인 설치를 수행합니다. 이렇게 하려면 다음과 같이 하십시오.  
   
    1.  배포가 WinPE 설치부터 시작되는 경우 위에서 한 것처럼 unattend.xml 파일을 제공합니다.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "75947504"
    6.  위의 WebDomainName 정보를 제공하지 않은 경우에는 고객이 RDP를 사용하여 서버에 연결하고 VPN 구성을 마칠 수 있도록 포트 3389를 열어야 합니다.  
   
 > [!NOTE]
->  VM 호스트 서버 및 Windows Server Essentials VM의 표준 시간대 설정이 동일한 지 확인 합니다. 그렇지 않으면, 인증서 관련 작업에서 초기 구성이 실패하거나, 설치 후 몇 시간 동안 인증서가 작동하지 않거나, 디바이스 정보가 올바르게 업데이트되지 않는 등 몇 가지 오류가 발생할 수 있습니다.  
+>  VM 호스트 서버 및 Windows Server Essentials VM의 표준 시간대 설정이 동일한 지 확인 합니다. 그렇지 않으면, 인증서 관련 작업에서 초기 구성이 실패하거나, 설치 후 몇 시간 동안 인증서가 작동하지 않거나, 장치 정보가 올바르게 업데이트되지 않는 등 몇 가지 오류가 발생할 수 있습니다.  
   
  배포 후 HKLM\software\microsoft\windows server\setup 아래에서 다음 레지스트리 키를 점검하여 초기 구성이 성공적인지 확인합니다. SetupStage == ICDone && ICStatus == 1인 경우 초기 구성이 성공적으로 완료되었음을 의미합니다.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "75947504"
   
 - 토폴로지 1(기본)  
   
-  -   별도의 가상 네트워크에서 NAT 디바이스 아래에 서버가 위치합니다.  
+  -   별도의 가상 네트워크에서 NAT 장치 아래에 서버가 위치합니다.  
   
   -   DHCP 서비스를 가상 네트워크에서 사용하거나 서버에 정적 IP 주소가 할당됩니다.  
   
@@ -298,7 +298,7 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
   
 -   Microsoft.Windows.Server.2012.Essentials.mp  
   
--   Microsoft.Windows.Server.2012.Essentials.<locale\>.mp  
+-   Microsoft. < 로캘\>. n a m e. mp  
   
 ### <a name="back-up-and-restore"></a>백업 및 복원  
  Windows Server Essentials를 사용 하면 서버와 클라이언트를 모두 백업할 수 있습니다.  
@@ -310,7 +310,7 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
   
 - Windows Server Essentials VM을 백업 하는 다른 메커니즘이 있으며 사용자에 게 Windows server Essentials 기본 서버 백업 기능을 표시 하지 않으려는 경우이 기능을 해제 하 고 Windows Server Essentials에서 관련 된 모든 사용자 인터페이스를 제거할 수 있습니다. 대시보드와. 자세한 내용은 [ADK 문서](https://go.microsoft.com/fwlink/p/?LinkID=249124)의 서버 백업 사용자 지정 섹션을 참조 하세요.  
   
-  **오프-프레미스 백업** 은 정기적으로 서버 데이터를 클라우드 서비스로 백업할 수 있습니다. Microsoft에서 제공 하는 Azure Backup를 활용 하기 위해 Windows Server Essentials에 대 한 Microsoft Azure Backup 통합 모듈을 다운로드 하 고 설치할 수 있습니다.  
+  **오프-프레미스 백업**은 정기적으로 서버 데이터를 클라우드 서비스로 백업할 수 있습니다. Microsoft에서 제공 하는 Azure Backup를 활용 하기 위해 Windows Server Essentials에 대 한 Microsoft Azure Backup 통합 모듈을 다운로드 하 고 설치할 수 있습니다.  
   
   관리자 또는 사용자가 다른 클라우드 서비스를 선호하는 경우 다음을 수행해야 합니다.  
   
@@ -341,7 +341,7 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
   **파일 히스토리** 는 프로필 데이터 (라이브러리, 데스크톱, 연락처, 즐겨찾기)를 네트워크 공유에 백업 하는 Windows 8.1 기능입니다. Windows Server Essentials에서는 Windows Server Essentials에 연결 된 모든 Windows 8.1 클라이언트의 파일 히스토리 설정을 중앙에서 관리할 수 있습니다. 백업 데이터는 Windows Server Essentials를 실행하는 서버에 저장됩니다. [ADK 문서](https://technet.microsoft.com/library/jj200150)의 Cfg 파일 만들기 섹션에 있는 단계에 따라이 기능을 해제할 수 있습니다.  
   
 ### <a name="storage-management"></a>저장소 관리  
- [새 스토리지 공간 기능](https://technet.microsoft.com/library/hh831739.aspx) 을 사용하면 개별 하드 드라이브의 실제 스토리지 용량을 집계하고, 하드 드라이브를 동적으로 추가하며, 지정된 복원력 수준으로 데이터 볼륨을 만듭니다. Windows Server Essentials에 iSCSI 디스크를 연결 하 여 저장소를 확장할 수도 있습니다.  
+ [새 저장소 공간 기능](https://technet.microsoft.com/library/hh831739.aspx) 을 사용하면 개별 하드 드라이브의 실제 저장소 용량을 집계하고, 하드 드라이브를 동적으로 추가하며, 지정된 복원력 수준으로 데이터 볼륨을 만듭니다. Windows Server Essentials에 iSCSI 디스크를 연결 하 여 저장소를 확장할 수도 있습니다.  
   
 ## <a name="what-are-the-main-scenarios-i-should-test"></a>테스트할 주요 시나리오  
  호스트 관점에서 다음 시나리오를 테스트하는 것이 좋습니다.  
@@ -362,11 +362,11 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
   
 - 원격 액세스(VPN, 원격 웹 액세스, DirectAccess)를 구성합니다.  
   
-- 스토리지 및 서버 폴더를 구성합니다.  
+- 저장소 및 서버 폴더를 구성합니다.  
   
 - (해당하는 경우) 서버 백업, 온라인 백업, 클라이언트 백업, 파일 기록을 구성합니다.  
   
-- (해당하는 경우) 스토리지 공간을 구성하고 관리합니다.  
+- (해당하는 경우) 저장소 공간을 구성하고 관리합니다.  
   
 - (해당하는 경우) 메일 솔루션 통합(Office 365, 호스트된 Exchange 등)을 구성합니다.  
   
@@ -390,7 +390,7 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
   
 - 클라이언트에서 실행 패드를 사용하여 공유 폴더에 액세스합니다.  
   
-- 개인용 컴퓨터, 휴대폰, 태블릿 등의 여러 디바이스에서 원격 웹 액세스를 통해 서버 자산에 액세스합니다.  
+- 개인용 컴퓨터, 휴대폰, 태블릿 등의 여러 장치에서 원격 웹 액세스를 통해 서버 자산에 액세스합니다.  
   
 - Windows Phone용 내 서버 앱.  
   
@@ -403,6 +403,6 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
   
 - [SDK](https://go.microsoft.com/fwlink/p/?LinkID=248648)  
   
-- [ADK](https://go.microsoft.com/fwlink/p/?LinkID=249124)  
+- [용](https://go.microsoft.com/fwlink/p/?LinkID=249124)  
   
   Connect를 통해 기능 팀에 버그를 보고할 수 있습니다. 로그를 생성하려면 서버 및 서버에 연결한 클라이언트에서 C:\ProgramData\Microsoft\Windows Server\Logs 폴더를 압축합니다.

@@ -3,7 +3,7 @@ title: 원격 관리 서버에 대한 서버 복구 DVD 만들기
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,25 +12,25 @@ ms.assetid: 6141fa69-5952-4e3c-a868-40ef3f4badd2
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 999887f09c27c1df481cb5e46579942424a2847b
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: a9b571c2d3e5d531d8c923741500c72675022adc
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66433626"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80312197"
 ---
 # <a name="create-a-server-recovery-dvd-for-remotely-administered-servers"></a>원격 관리 서버에 대한 서버 복구 DVD 만들기
 
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-##  <a name="BKMK_HeadlessRecovery"></a> 원격으로 관리 되는 서버에 대 한 서버 복구 DVD 만들기  
+##  <a name="create-a-server-recovery-dvd-for-remotely-administered-servers"></a><a name="BKMK_HeadlessRecovery"></a>원격 관리 서버에 대 한 서버 복구 DVD 만들기  
  공장 기본 설정 및 서버 복구 모델에는 두 가지가 있으며, 고객에게 제공된 하드웨어에 따라 사용되는 모델이 다릅니다.  
   
  **원격 관리 서버**  
   
  이 서버 복구 옵션을 사용하려면 동일한 네트워크에 있는 클라이언트 컴퓨터에서 프로세스를 실행해야 합니다. 공장 기본 설정 복원을 위해서는 하드웨어별 이미지가 서버와 함께 출고되어야 하므로 파트너가 반드시 서버 복구 DVD를 제작해야 합니다.  
   
- **로컬 관리 서버**  
+ **로컬로 관리 되는 서버**  
   
  서버가 서버 콘솔에서 관리되는 일반 모델입니다. 복구를 실행하는 데 서버 설치 미디어가 사용되며, 서버에 DVD 판독기 외에 비디오 출력을 볼 수 있는 기능이 있어야 합니다. 고객은 이 서버 설치 미디어에서 부팅한 다음 적절한 복구 방법을 선택합니다. 로컬로 관리되는 서버에 대한 서버 복구 DVD를 만들 필요는 없습니다.  
   
@@ -41,9 +41,9 @@ ms.locfileid: "66433626"
   
  **공장 기본 설정**  
   
- 이 복구 유형은 서버를 공장에서 출고될 당시의 원래 상태로 되돌립니다. 공장 기본 설정 후, 처음 서버를 켰을 때 및 모든 설정과 사용자 지정이 손실되었을 때처럼 서버의 초기 구성을 수행할 것인지 묻는 메시지가 표시됩니다. 이 라고도 0 일? 공장 기본 설정 복원을 위해서는 하드웨어별 이미지가 서버와 함께 출고되어야 하므로 파트너가 반드시 서버 복구 DVD를 제작해야 합니다.  
+ 이 복구 유형은 서버를 공장에서 출고될 당시의 원래 상태로 되돌립니다. 공장 기본 설정 후, 처음 서버를 켰을 때 및 모든 설정과 사용자 지정이 손실되었을 때처럼 서버의 초기 구성을 수행할 것인지 묻는 메시지가 표시됩니다. 이를 Day 0이 라고도 합니다. 공장 기본 설정 복원을 위해서는 하드웨어별 이미지가 서버와 함께 출고되어야 하므로 파트너가 반드시 서버 복구 DVD를 제작해야 합니다.  
   
- **완전 복구**  
+ **운영 체제 미 설치 복원**  
   
  이 복구 유형은 서버 백업을 구성했으며, 서버 오류가 발생하기 전에 한 번 이상 서버 백업이 성공적으로 완료된 것으로 가정합니다. BMR(완전 복구)은 이전 서버 백업에서의 시스템 및 부팅 드라이브 복구만 지원합니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66433626"
 ### <a name="remotely-administered-server-recovery"></a>원격 관리 서버 복구  
  이 섹션은 파트너가 반드시 수행해야 하는 필수 사용자 지정과 각 서버와 함께 제공되어야 하는 최종 미디어에 관해 설명합니다. 세부 정보를 살펴보기 전에 먼저 고객 환경에 대해 알아보겠습니다.  
   
- 이 시나리오에서는 고객이 "™의 서버가 작동 하지 않습니다. 이는 바이러스, 하드 디스크 오류 또는 다른 사유 때문일 수 있습니다. 고객이 서버 복구 DVD를 서버와 동일한 네트워크에 있는 클라이언트 컴퓨터에 삽입합니다. 서버 복구 응용 프로그램이 해당 서버를 복구하기 위한 3단계를 안내합니다.  
+ 이 시나리오에서 고객 "™ s 서버는 더 이상 작동 하지 않습니다. 이는 바이러스, 하드 디스크 오류 또는 다른 사유 때문일 수 있습니다. 고객이 서버 복구 DVD를 서버와 동일한 네트워크에 있는 클라이언트 컴퓨터에 삽입합니다. 서버 복구 애플리케이션이 해당 서버를 복구하기 위한 3단계를 안내합니다.  
   
 1.  서버를 복구 모드로 다시 시작하는 데 사용되는 부팅 가능 USB 플래시 드라이브를 만듭니다. USB 플래시 드라이브는 8GB 이상이어야 합니다.  
   
@@ -63,9 +63,9 @@ ms.locfileid: "66433626"
 ### <a name="steps-for-creating-a-server-recovery-dvd-for-multiple-language-support"></a>다중 언어 지원을 위한 서버 복구 DVD를 만드는 단계  
  서버 복구 DVD 만들기는 6개의 주요 단계로 구성됩니다.  
   
-1.  [(선택 사항) WinPE 업데이트](Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers.md#BKMK_Updating)  
+1.  [필드 WinPE 업데이트](Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers.md#BKMK_Updating)  
   
-2.  [공장 재설정 이미지 및 XML 파일 수집](Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers.md#BKMK_Collecting)  
+2.  [공장 기본 설정 이미지 및 XML 파일 수집](Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers.md#BKMK_Collecting)  
   
 3.  [서버 복구 DVD 만들기](Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers.md#BKMK_Creating)  
   
@@ -75,12 +75,12 @@ ms.locfileid: "66433626"
   
 6.  [복구 DVD 테스트](Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers.md#BKMK_Testing)  
   
-####  <a name="BKMK_Updating"></a> 1 단계: (선택 사항) WinPE 업데이트  
- ADK에는 사용자 지정된 Windows PE가 포함되어 있습니다. 이 이미지를 부팅하면 클라이언트 복구 응용 프로그램에서 복구 모드의 서버에 연결하는 데 사용되는 탐지 장치가 자동으로 시작됩니다.  
+####  <a name="step-1-optional-update-winpe"></a><a name="BKMK_Updating"></a>1 단계: (선택 사항) WinPE 업데이트  
+ ADK에는 사용자 지정된 Windows PE가 포함되어 있습니다. 이 이미지를 부팅하면 클라이언트 복구 애플리케이션에서 복구 모드의 서버에 연결하는 데 사용되는 탐지 장치가 자동으로 시작됩니다.  
   
  네트워크 또는 디스크 컨트롤러 드라이버와 같은 하드웨어별 드라이버를 추가하여 Windows PE를 한층 더 사용자 지정해야 합니다. WinPE에서 부팅한 후에는 시스템의 하드 디스크를 인식할 수 있어야 하며 네트워크가 작동해야 합니다.  
   
-####  <a name="BKMK_Collecting"></a> 2 단계: 공장 기본 설정 이미지 및 XML 파일 수집  
+####  <a name="step-2-collect-the-factory-reset-images-and-xml-files"></a><a name="BKMK_Collecting"></a>2 단계: 공장 기본 설정 이미지 및 XML 파일 수집  
  서버를 공장 기본값으로 다시 설정하려면 다음 두 이미지를 캡처해야 합니다.  
   
 - 시스템 드라이브 이미지  
@@ -96,7 +96,7 @@ ms.locfileid: "66433626"
     > [!NOTE]
     >  파일이 4GB 이하여야 하는 FAT32 요구 사항을 충족하도록 시스템 .wim 파일이 분할됩니다. 이 프로세스가 진행되는 동안에는 .wim 파일을 캡처하는 데 사용되는 대상의 필요한 용량이 분할 프로세스를 수용할 수 있도록 8GB보다 커야 합니다.  
   
-####  <a name="BKMK_Creating"></a> 3 단계: 서버 복구 DVD 만들기  
+####  <a name="step-3-create-the-server-recovery-dvd"></a><a name="BKMK_Creating"></a>3 단계: 서버 복구 DVD 만들기  
  공장에서 출고되는 각 서버는 서버 복구 DVD와 함께 제공되어야 합니다. ADK 도구 DVD에는 DVD 작성을 위해 필요한 파일이 포함되어 있습니다.  
   
 ###### <a name="to-create-the-server-recovery-dvd"></a>서버 복구 DVD를 만들려면  
@@ -111,43 +111,43 @@ ms.locfileid: "66433626"
   
 5.  폴더에서 GenDiskXML.exe를 제거합니다. 이는 공장에서만 사용되므로 고객에게 제공되는 DVD에 포함되어서는 안 됩니다.  
   
-####  <a name="BKMK_Customizing"></a> 4 단계: 마법사 사용자 지정  
- 서버 복구 응용 프로그램은 장치 이미지 및 특정 장치를 복구 모드로 시작하는 방법을 설명하는 텍스트로 사용자 지정되어야 합니다. 파일 및 폴더 복원 마법사의 이 페이지는 하드웨어에 관련된 것이므로 서버를 복구 모드로 시작하는 단계는 달라질 수 있습니다.  
+####  <a name="step-4-customize-the-wizard"></a><a name="BKMK_Customizing"></a>4 단계: 마법사 사용자 지정  
+ 서버 복구 응용 프로그램은 디바이스 이미지 및 특정 디바이스를 복구 모드로 시작하는 방법을 설명하는 텍스트로 사용자 지정되어야 합니다. 파일 및 폴더 복원 마법사의 이 페이지는 하드웨어에 관련된 것이므로 서버를 복구 모드로 시작하는 단계는 달라질 수 있습니다.  
   
 > [!NOTE]
 >  나열된 파일 이름은 정확히 일치해야 합니다.  
   
 1. 마법사 페이지에는 추가 도움말에 대한 링크가 포함되어 있습니다. 이 .chm 파일이 있는 경우 웹 도움말에 대한 FWLink가 이 파일로 재정의됩니다. 도움말 파일은 다음 위치에 있습니다.  
   
-    < 루트 DVD\>\\$OEM$ \Customization\\< 문화권 이름\>\RestartHelp.chm  
+    < DVD 루트\>\\$OEM $ \Customization 지정\\< 문화권 이름\>\RestartHelp.chm  
   
 2. 이 파일에는 마법사 페이지에 표시되는 텍스트가 포함되어 있습니다. 이 텍스트는 서버를 복구 모드로 부팅하는 방법을 설명합니다. 컨트롤은 스크롤 가능하므로 추가할 수 있는 텍스트 양을 실용적으로 제한합니다.  
   
     다음 파일은 마법사의 샘플 그림을 대체하는 데 사용되며 주로 브랜딩에 관한 것입니다. 이 파일은 .png 파일이며, 파일 크기는 256 x 256 픽셀이어야 합니다. 그렇지 않으면 마법사에 표시될 때 잘립니다.  
   
-    < 루트 DVD\>\\$OEM$ \Customization\\< 문화권 이름\>\RestartInstructions.rtf  
+    < DVD 루트\>\\$OEM $ \Customization 지정\\< 문화권 이름\>\RestartInstructions.rtf  
   
-3. < 루트 DVD\>\\$OEM$ \Customization\\< 문화권 이름\>\ServerImage.png  
+3. < DVD 루트\>\\$OEM $ \Customization 지정\\< 문화권 이름\>\ServerImage.png  
   
    다중 언어를 지원하도록 서버 복구 DVD를 변환하려면 다음을 수행해야 합니다.  
   
-4. 항상 en-us 폴더가 있어야 합니다. 서버 복구 응용 프로그램이 실행되고 있는 클라이언트 컴퓨터와 일치하는 문화권별 파일이 없는 경우 en-us로 대체됩니다.  
+4. 항상 en-us 폴더가 있어야 합니다. 서버 복구 애플리케이션이 실행되고 있는 클라이언트 컴퓨터와 일치하는 문화권별 파일이 없는 경우 en-us로 대체됩니다.  
   
 5. 만드는 각 문화권 폴더에 세 가지 사용자 지정 파일(.png, .chm 및 .rtf)을 추가합니다.  
   
-6. 언어 팩에서의 두 문화권 폴더를 복사\\< CultureName\>\Server Recovery 서버 복구 DVD의 루트에 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다. 스페인어를 지원하려면 ES 폴더와 ES-ES 폴더를 둘 다 DVD의 루트에 복사합니다.  
+6. 언어 팩\\< CultureName\>\Server Recovery의 두 culture 폴더를 모두 서버 복구 DVD의 루트에 복사 합니다. 예: 스페인어를 지원하려면 ES 폴더와 ES-ES 폴더를 둘 다 DVD의 루트에 복사합니다.  
   
 7. ISO 파일을 마무리합니다.  
   
    지원되는 문화권 이름은 다음과 같습니다.  
 
 |-|-|  
-|- cs-CZ<br /><br /> -DE-DE<br /><br /> -영어-미국<br /><br /> -원본: ES-ES<br /><br /> - fr-FR<br /><br /> -HU-HU<br /><br /> -it IT<br /><br /> -JA-JP<br /><br /> - ko-KR<br /><br /> -NL-NL |-PL-PL<br /><br /> -PT-BR<br /><br /> -PT-PT<br /><br /> -RU-RU<br /><br /> -SV-SE<br /><br /> -TR-TR<br /><br /> - zh-CN<br /><br /> - zh-HK<br /><br /> - zh-TW
+|-cs-CZ<br /><br /> -de-de<br /><br /> -en-us<br /><br /> -es<br /><br /> -fr-fr<br /><br /> -hu-hu-HU-HU<br /><br /> -it<br /><br /> -ja-jp-JP<br /><br /> -ko-kr<br /><br /> -nl-NL |-pl-PL<br /><br /> -pt-BR<br /><br /> -pt-PT<br /><br /> -기능<br /><br /> -sv-SE<br /><br /> -tr-TR<br /><br /> -zh-cn-CN<br /><br /> -zh-cn-HK<br /><br /> -zh-cn
   
-####  <a name="BKMK_CreatingISO"></a> 5 단계: ISO 파일 만들기  
+####  <a name="step-5-create-the-iso-file"></a><a name="BKMK_CreatingISO"></a>5 단계: ISO 파일 만들기  
  만들어진 폴더 및 모든 내용을 DVD로 구울 수 있습니다. 이는 새 서버와 함께 고객에게 제공되는 DVD입니다.  
   
-####  <a name="BKMK_Testing"></a> 6 단계: 복구 DVD 테스트  
+####  <a name="step-6-test-the-recovery-dvd"></a><a name="BKMK_Testing"></a>6 단계: 복구 DVD 테스트  
  서버 설치를 완료한 후에는 서버 백업을 구성하고 실행한 다음 복구 DVD를 테스트합니다.  
   
 ###### <a name="to-configure-and-run-a-server-backup"></a>서버 백업을 구성하고 실행하려면  
@@ -156,7 +156,7 @@ ms.locfileid: "66433626"
   
 2.  마법사의 안내를 따라 백업 서버 백업을 구성합니다. 백업에는 외부 하드 디스크가 필요합니다.  
   
-3.  **작업** 창에서 **서버 백업 시작** 을 클릭한 다음 마법사의 안내를 따릅니다.  
+3.  **작업** 창에서 **서버 백업 시작**을 클릭한 다음 마법사의 안내를 따릅니다.  
   
 4.  백업이 완료되면 백업에 성공했는지 확인합니다.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "66433626"
 3.  **백업에서 서버 복원**을 클릭한 다음 마법사의 안내를 따릅니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [만들기 및 이미지를 사용자 지정](Creating-and-Customizing-the-Image.md)   
+ [이미지  만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)  
  [추가 사용자 지정](Additional-Customizations.md)   
- [배포용 이미지 준비](Preparing-the-Image-for-Deployment.md)   
+ [배포할 이미지를 준비 하는 중](Preparing-the-Image-for-Deployment.md)   
  [사용자 환경 테스트](Testing-the-Customer-Experience.md)

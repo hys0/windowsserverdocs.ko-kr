@@ -1,21 +1,21 @@
 ---
-title: BranchCache 기능을 사용 하는 콘텐츠 서버를 설치 합니다.
+title: BranchCache 기능을 사용하는 콘텐츠 서버 설치
 description: 이 항목은 일부는 BranchCache 배포 가이드에 대 한 Windows Server 2016, 지사에 WAN 대역폭 사용량을 최적화 하기 위해 분산 및 호스트 캐시 모드로 BranchCache를 배포 하는 방법을 보여 주는
 manager: brianlic
 ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 0f00ae6e-ae1b-41e3-8c50-65226b5b9c9e
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 9287408446b81805e3c13ff876535a615ecb03d5
-ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: dd02dff51d2d1a1a389765f6af7857083529834c
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76822796"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80319253"
 ---
-# <a name="install-content-servers-that-use-the-branchcache-feature"></a>BranchCache 기능을 사용 하는 콘텐츠 서버를 설치 합니다.
+# <a name="install-content-servers-that-use-the-branchcache-feature"></a>BranchCache 기능을 사용하는 콘텐츠 서버 설치
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016
 

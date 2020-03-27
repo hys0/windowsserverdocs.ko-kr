@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: f9533204-ad7e-4e49-81c1-559324a16aeb
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 1a05bdcbf6205b8be7044c92e3dcf71a6e62bed6
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 8bb95412702fed5b7f809e3e699b0ab0a556455c
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71356032"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80317853"
 ---
 # <a name="use-dns-policy-for-split-brain-dns-in-active-directory"></a>Active Directory에서 스플릿 브레인 DNS에 DNS 정책 사용
 
@@ -78,8 +78,8 @@ DNS 정책은 로컬 DNS 서버에 저장 됩니다. 다음 예제 Windows Power
 
 자세한 내용은 다음 Windows PowerShell 참조 항목을 참조 하세요.
 
-- [Get-DnsServerQueryResolutionPolicy](https://docs.microsoft.com/powershell/module/dnsserver/get-dnsserverqueryresolutionpolicy?view=win10-ps)
-- [Add-DnsServerQueryResolutionPolicy](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps)
+- [DnsServerQueryResolutionPolicy](https://docs.microsoft.com/powershell/module/dnsserver/get-dnsserverqueryresolutionpolicy?view=win10-ps)
+- [DnsServerQueryResolutionPolicy](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps)
 
 
 ## <a name="how-to-configure-dns-policy-for-split-brain-dns-in-active-directory"></a>Active Directory에서\-을 분할 하는 데 필요한 DNS 정책을 구성 하는 방법

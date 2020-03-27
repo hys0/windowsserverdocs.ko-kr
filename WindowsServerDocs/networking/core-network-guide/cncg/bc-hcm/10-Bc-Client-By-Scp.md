@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: article
 ms.assetid: ea1c34fd-5a33-4228-9437-9bb3d44230eb
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 60ccc8b80537da0d0b689f6c508c75ef15a339c5
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 9723dd40b831469c12412a7458376c4019dde199
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406395"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80319082"
 ---
 #  <a name="configure-client-automatic-hosted-cache-discovery-by-service-connection-point"></a>서비스 연결 지점별 클라이언트 자동 호스트 캐시 검색 구성
 
@@ -23,13 +23,13 @@ ms.locfileid: "71406395"
 
 - Windows 10 Enterprise
 - Windows 10 Education
-- Windows 8.1 Enterprise
+- Windows 8.1 Enterprise
 - Windows 8 Enterprise
 
 > [!NOTE]  
 > Windows Server 2008 R2 또는 Windows 7을 실행 하는 도메인에 가입 된 컴퓨터를 구성 하려면 Windows Server 2008 r 2를 참조 하십시오. [BranchCache 배포 가이드](https://technet.microsoft.com/library/ee649232.aspx)합니다.
 
-멤버 자격이 **Domain Admins**, 또는 이와 동등한 최소한이이 절차를 수행 하려면 필요 합니다.
+이 절차를 수행하려면 최소한 **Domain Admins** 그룹의 구성원이거나 이와 동등한 자격이 필요합니다.
 
 ### <a name="to-use-group-policy-to-configure-clients-for-hosted-cache-mode"></a>그룹 정책를 사용 하 여 호스트 캐시 모드로 클라이언트를 구성 하려면
 
@@ -39,7 +39,7 @@ ms.locfileid: "71406395"
 
 3. 오른쪽\-클릭 **그룹 정책 개체**, 를 클릭 하 고 **새로**합니다. **새 GPO** 대화 상자가 열립니다. **이름**, 새 그룹 정책 개체에 대 한 이름을 입력 \(GPO\)합니다. 예를 들어 개체 BranchCache 클라이언트 컴퓨터의 이름을 하려는 입력 **BranchCache 클라이언트 컴퓨터**합니다. **확인**을 클릭합니다.
 
-4. 그룹 정책 관리 콘솔에서 **그룹 정책 개체** 선택 되며, 세부 정보 창 오른쪽에 있는\-방금 만든 GPO를 클릭 합니다. 예를 들어 GPO BranchCache 클라이언트 컴퓨터를 이름을 마우스 오른쪽 단추로\-클릭 **BranchCache 클라이언트 컴퓨터**합니다. 클릭 **편집**합니다. 그룹 정책 관리 편집기 콘솔이 열립니다.
+4. 그룹 정책 관리 콘솔에서 **그룹 정책 개체** 선택 되며, 세부 정보 창 오른쪽에 있는\-방금 만든 GPO를 클릭 합니다. 예를 들어 GPO BranchCache 클라이언트 컴퓨터를 이름을 마우스 오른쪽 단추로\-클릭 **BranchCache 클라이언트 컴퓨터**합니다. **편집**을 클릭합니다. 그룹 정책 관리 편집기 콘솔이 열립니다.
 
 5. 그룹 정책 관리 편집기 콘솔에서 다음 경로 확장: **컴퓨터 구성**, **정책**, **관리 템플릿: 정책 정의 \(ADMX 파일\) 로컬 컴퓨터에서 검색 된**, **네트워크**, **BranchCache**합니다.
 

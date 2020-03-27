@@ -3,7 +3,7 @@ title: 라우터 사전 구성
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: 9153ac90-bb0c-4b8d-93b2-e2121ed13636
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: bbff22c03b7bf4310b86048848ded276547b911f
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: bdfa3215b7a2426bcde807119971d99ccc229716
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70865195"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80311572"
 ---
 # <a name="preconfiguring-a-router"></a>라우터 사전 구성
 
@@ -46,9 +46,9 @@ ms.locfileid: "70865195"
 -   라우터에 Active Directory® 도메인 서비스에 대해 통합 된 액세스 제어 기능이 있는 경우 서버의 초기 구성 중에 Active Directory 통합을 자동화할 수 있습니다. 또한 대시보드에서 라우터 관리 추가 기능을 통해 이 기능을 제공해야 합니다.  
   
 > [!NOTE]
->  무선 연결을 구성하는 방법에 대한 자세한 내용은 [Configure Support for a Wireless Network](Configure-Support-for-a-Wireless-Network.md)을 참조하세요.  
+>  무선 연결 구성에 대한 자세한 내용은 [무선 네트워크 지원 구성](Configure-Support-for-a-Wireless-Network.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Windows Server ESSENTIALS ADK를 사용 하 여 시작](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
  [이미지  만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)  
  [추가 사용자 지정](Additional-Customizations.md)   

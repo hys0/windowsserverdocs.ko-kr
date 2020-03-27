@@ -10,14 +10,14 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e5ea9d22-a503-4ed4-96b3-0ee2ccf4fd17
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 1320a5c8b8c267f270dae43e764533d9289006a4
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: e85998138f3aa3627b5e212766d491cd3fc8305f
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404453"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80313867"
 ---
 # <a name="step-3-plan-the-multisite-deployment"></a>3 단계 멀티 사이트 배포 계획
 
@@ -27,7 +27,7 @@ ms.locfileid: "71404453"
 
 다음 섹션에서는 자세한 계획 정보를 제공 합니다.
   
-## <a name="bkmk_3_1_IPHTTPS"></a>3.1 IP-HTTPS 인증서 요금제  
+## <a name="31-plan-ip-https-certificates"></a><a name="bkmk_3_1_IPHTTPS"></a>3.1 IP-HTTPS 인증서 요금제  
 진입점을 구성할 때 특정 ConnectTo 주소를 사용 하 여 각 진입점을 구성 합니다. 각 진입점에 대 한 IP-HTTPS 인증서가 ConnectTo 주소와 일치 해야 합니다. 인증서를 가져올 때 다음 사항에 유의 하세요.  
   
 -   멀티 사이트 배포에서는 자체 서명된 인증서를 사용할 수 없습니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "71404453"
   
 -   IP-HTTPS 인증서는 사용자가 아닌 컴퓨터의 개인 저장소로 직접 가져와야 합니다.  
   
-## <a name="bkmk_3_2_NLS"></a>3.2 네트워크 위치 서버 계획  
+## <a name="32-plan-the-network-location-server"></a><a name="bkmk_3_2_NLS"></a>3.2 네트워크 위치 서버 계획  
 네트워크 위치 서버 웹 사이트는 원격 액세스 서버 또는 조직의 다른 서버에서 호스팅될 수 있습니다. 원격 액세스 서버에서 네트워크 위치 서버를 호스트 하는 경우 원격 액세스를 배포할 때 웹 사이트가 자동으로 만들어집니다. 조직에서 Windows 운영 체제를 실행 하는 다른 서버에서 네트워크 위치 서버를 호스트 하는 경우 웹 사이트를 만들기 위해 인터넷 정보 서비스 (IIS)가 설치 되어 있는지 확인 해야 합니다.  
   
 ### <a name="321-certificate-requirements-for-the-network-location-server"></a>네트워크 위치 서버에 대 한 인증서 요구 사항 3.2.1  
@@ -79,7 +79,7 @@ ms.locfileid: "71404453"
 3.  CRL 배포 지점 필드의 경우 인트라넷에 연결 된 DirectAccess 클라이언트에서 액세스할 수 있는 CRL 배포 지점을 사용 합니다.  
   
 ### <a name="322dns-for-the-network-location-server"></a>네트워크 위치 서버에 대 한 3.2.2 DNS  
-원격 액세스 서버에서 네트워크 위치 서버를 호스트 하는 경우 배포의 모든 진입점에 대 한 네트워크 위치 서버 웹 사이트에 대 한 DNS 항목을 추가 해야 합니다. 다음에 유의하세요.  
+원격 액세스 서버에서 네트워크 위치 서버를 호스트 하는 경우 배포의 모든 진입점에 대 한 네트워크 위치 서버 웹 사이트에 대 한 DNS 항목을 추가 해야 합니다. 유의 사항은 다음과 같습니다.  
   
 -   멀티 사이트 배포에 있는 첫 번째 네트워크 위치 서버 인증서의 주체 이름은 모든 진입점에 대 한 네트워크 위치 서버 URL로 사용 되므로 주체 이름과 네트워크 위치 서버 URL은의 컴퓨터 이름과 같을 수 없습니다. 배포의 첫 번째 원격 액세스 서버입니다. 네트워크 위치 서버 전용 FQDN 이어야 합니다.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "71404453"
   
 -   진입점을 추가 하기 전에 진입점에 대 한 네트워크 위치 서버 인프라 (DNS 및 인증서 설정)를 만들어야 합니다.  
   
-## <a name="bkmk_3_3_IPsec"></a>3.3 모든 원격 액세스 서버에 대 한 IPsec 루트 인증서 계획  
+## <a name="33-plan-the-ipsec-root-certificate-for-all-remote-access-servers"></a><a name="bkmk_3_3_IPsec"></a>3.3 모든 원격 액세스 서버에 대 한 IPsec 루트 인증서 계획  
 멀티 사이트 배포에서 IPsec 클라이언트 인증을 계획할 때 다음 사항에 유의 하세요.  
   
 1.  단일 원격 액세스 서버를 설정할 때 컴퓨터 인증에 기본 제공 Kerberos 프록시를 사용 하도록 선택한 경우에는 Kerberos 프록시가 멀티 사이트에 대해 지원 되지 않으므로 내부 CA에서 발급 한 컴퓨터 인증서를 사용 하도록 설정을 변경 해야 합니다. 배포가.  
@@ -100,7 +100,7 @@ ms.locfileid: "71404453"
   
 4.  동일한 IPsec 루트 또는 중간 인증서를 멀티 사이트 배포의 모든 원격 액세스 서버에 설치 해야 합니다.  
   
-## <a name="bkmk_3_4_GSLB"></a>3.4 글로벌 서버 부하 분산 계획  
+## <a name="34-plan-global-server-load-balancing"></a><a name="bkmk_3_4_GSLB"></a>3.4 글로벌 서버 부하 분산 계획  
 멀티 사이트 배포에서는 글로벌 서버 부하 분산 장치를 추가로 구성할 수 있습니다. 배포에서 진입점 간에 트래픽 부하를 분산 시킬 수 있으므로 글로벌 서버 부하 분산 장치는 조직에 유용 하 게 사용할 수 있습니다.  가장 가까운 진입점의 진입점 정보를 DirectAccess 클라이언트에 제공 하도록 전역 서버 부하 분산 장치를 구성할 수 있습니다. 프로세스는 다음과 같이 작동 합니다.  
   
 1.  Windows 10 또는 Windows 8을 실행 하는 클라이언트 컴퓨터에는 각각 진입점과 연결 된 글로벌 서버 부하 분산 장치 IP 주소 목록이 있습니다.  
@@ -111,7 +111,7 @@ ms.locfileid: "71404453"
   
 원격 액세스를 지 원하는 글로벌 서버 부하 분산 장치의 목록은 [Microsoft 서버 및 클라우드 플랫폼](https://www.microsoft.com/server-cloud/)에서 파트너 찾기 페이지로 이동 합니다.  
   
-## <a name="bkmk_3_5_EP_Selection"></a>3.5 DirectAccess 클라이언트 진입점 선택 계획  
+## <a name="35-plan-directaccess-client-entry-point-selection"></a><a name="bkmk_3_5_EP_Selection"></a>3.5 DirectAccess 클라이언트 진입점 선택 계획  
 멀티 사이트 배포를 구성 하는 경우 기본적으로 Windows 10 및 Windows 8 클라이언트 컴퓨터는 배포의 모든 진입점에 연결 하 고 선택 항목에 따라 단일 진입점에 자동으로 연결 하는 데 필요한 정보를 사용 하 여 구성 됩니다. 알고리즘과. Windows 10 및 Windows 8 클라이언트 컴퓨터에서 연결할 진입점을 수동으로 선택할 수 있도록 배포를 구성할 수도 있습니다. Windows 10 또는 Windows 8 클라이언트 컴퓨터가 현재 미국 진입점에 연결 되어 있고 자동 진입점 선택이 사용 하도록 설정 된 경우 몇 분 후에 클라이언트 컴퓨터에서 연결을 시도할 수 있습니다. 유럽 진입 지점을 통해. 자동 진입점 선택을 사용 하는 것이 좋습니다. 그러나 수동으로 진입점 선택을 허용 하면 최종 사용자가 현재 네트워크 상태에 따라 다른 진입점에 연결할 수 있습니다. 예를 들어 컴퓨터를 미국 진입점에 연결 하 고 내부 네트워크에 대 한 연결이 예상 보다 훨씬 느립니다. 이 경우 최종 사용자는 수동으로 유럽 진입점에 연결 하 여 내부 네트워크에 대 한 연결을 향상 시킬 수 있습니다.  
   
 > [!NOTE]  
@@ -119,7 +119,7 @@ ms.locfileid: "71404453"
   
  Windows 7 클라이언트 컴퓨터는 멀티 사이트 배포에서 단일 진입점에 연결 하는 데 필요한 정보로 구성 됩니다. 여러 진입점에 대 한 정보를 동시에 저장할 수 없습니다. 예를 들어 Windows 7 클라이언트 컴퓨터는 미국 진입점에 연결 하도록 구성할 수 있지만 유럽 진입점에는 연결 하지 않을 수 있습니다. 미국 진입점에 연결할 수 없는 경우에는 진입점에 연결할 수 있을 때까지 Windows 7 클라이언트 컴퓨터가 내부 네트워크에 대 한 연결을 잃게 됩니다. 최종 사용자는 유럽 진입점에 대 한 연결 시도를 변경할 수 없습니다.  
   
-## <a name="bkmk_3_6_IPv6"></a>3.6 계획 접두사 및 라우팅  
+## <a name="36-plan-prefixes-and-routing"></a><a name="bkmk_3_6_IPv6"></a>3.6 계획 접두사 및 라우팅  
   
 ### <a name="internal-ipv6-prefix"></a>내부 IPv6 접두사  
 단일 원격 액세스 서버를 배포 하는 동안 내부 네트워크 IPv6 접두사는 멀티 사이트 배포에서 다음 사항을 확인 합니다.  
@@ -205,7 +205,7 @@ Windows 10 또는 Windows 8을 실행 하는 클라이언트 컴퓨터가 진입
   
 3.  EntryPointRange 매개 변수를 수정할 때는 IPsec 터널 끝점 및 DNS64 주소에 속하는 기존 128 비트 접두사를 제거 하지 않아야 합니다.  
   
-## <a name="bkmk_3_7_TransitionIPv6"></a>3.7 멀티 사이트 원격 액세스를 배포할 때 i p v 6으로의 전환 계획  
+## <a name="37-plan-the-transition-to-ipv6-when-multisite-remote-access-is-deployed"></a><a name="bkmk_3_7_TransitionIPv6"></a>3.7 멀티 사이트 원격 액세스를 배포할 때 i p v 6으로의 전환 계획  
 많은 조직에서는 회사 네트워크에서 IPv4 프로토콜을 사용 합니다. 사용 가능한 IPv4 접두사가 고갈 되 면 많은 조직에서 IPv4 전용에서 IPv6 전용 네트워크로의 전환을 수행 합니다.  
   
 이러한 전환은 다음과 같은 두 단계로 수행 될 가능성이 높습니다.  
@@ -216,7 +216,7 @@ Windows 10 또는 Windows 8을 실행 하는 클라이언트 컴퓨터가 진입
   
 각 파트에서 전환은 단계별로 수행 될 수 있습니다. 각 단계에서 네트워크의 서브넷 하나만 새 네트워크 구성으로 변경 될 수 있습니다. 따라서 DirectAccess 멀티 사이트 배포는 하이브리드 배포를 지원 하기 위해 필요 합니다. 예를 들어 일부 진입점은 IPv4 전용 서브넷에 속하고 다른 항목은 IPv6 + IPv4 서브넷에 속합니다. 또한 전환 프로세스 중의 구성 변경은 DirectAccess를 통해 클라이언트 연결을 중단 해서는 안 됩니다.  
   
-### <a name="TransitionIPv4toMixed"></a>IPv4 전용에서 IPv6 + IPv4 회사 네트워크로 전환  
+### <a name="transition-from-an-ipv4-only-to-an-ipv6ipv4-corporate-network"></a><a name="TransitionIPv4toMixed"></a>IPv4 전용에서 IPv6 + IPv4 회사 네트워크로 전환  
 IPv4 전용 회사 네트워크에 IPv6 주소를 추가 하는 경우 이미 배포 된 DirectAccess 서버에 IPv6 주소를 추가 하는 것이 좋습니다. 또한 IPv4 및 IPv6 주소를 모두 사용 하 여 부하 분산 된 클러스터에 진입점 또는 노드를 DirectAccess 배포에 추가 하려고 할 수 있습니다.  
   
 원격 액세스를 사용 하면 ipv4 주소와 IPv6 주소가 둘 다 있는 서버를 원래 IPv4 주소로만 구성 된 배포에 추가할 수 있습니다. 이러한 서버는 IPv4 전용 서버로 추가 되 고 IPv6 주소는 DirectAccess에서 무시 됩니다. 따라서 조직에서는 이러한 새 서버에 대 한 기본 IPv6 연결의 이점을 활용할 수 없습니다.  
@@ -226,7 +226,7 @@ IPv6 + IPv4 배포에 대 한 배포를 변환 하 고 기본 IPv6 기능을 활
 > [!NOTE]  
 > Ipv4 전용 네트워크와 마찬가지로 혼합 된 IPv4 + IPv6 네트워크에서 클라이언트 DNS 요청을 확인 하는 데 사용 되는 DNS 서버의 주소는 원격 액세스 서버 자체에 배포 되 고 회사 DNS가 아닌 구성 된 DNS64를 사용 하 여 구성 해야 합니다.  
   
-### <a name="TransitionMixedtoIPv6"></a>IPv6 + IPv4에서 IPv6 전용 회사 네트워크로 전환  
+### <a name="transition-from-an-ipv6ipv4-to-an-ipv6-only-corporate-network"></a><a name="TransitionMixedtoIPv6"></a>IPv6 + IPv4에서 IPv6 전용 회사 네트워크로 전환  
 DirectAccess를 사용 하면 배포의 첫 번째 원격 액세스 서버에서 원래 IPv4 및 IPv6 주소 또는 IPv6 주소만 모두 사용 하는 경우에만 IPv6 전용 진입점을 추가할 수 있습니다. 즉, DirectAccess를 다시 설치 하지 않고 단일 단계에서 IPv4 전용 네트워크에서 IPv6 전용 네트워크로 전환할 수 없습니다. IPv4 전용 네트워크에서 IPv6 전용 네트워크로 직접 전환 하려면 IPv4 전용에서 이중 DirectAccess 배포를 사용 하는 IPv6 전용 배포로 전환을 참조 하세요.  
   
 IPv4 전용 배포에서 IPv6 + IPv4 배포로의 전환을 완료 한 후에는 IPv6 전용 네트워크로 전환할 수 있습니다. 그리고 전환 후에 다음을 확인 합니다.  
@@ -239,7 +239,7 @@ IPv4 전용 배포에서 IPv6 + IPv4 배포로의 전환을 완료 한 후에는
   
 회사 네트워크에 대 한 클라이언트 연결을 지원 하려면 회사 DNS에서 IPv6 주소로 네트워크 위치 서버를 확인할 수 있는지 확인 해야 합니다. 또한 IPv4 주소를 추가로 설정할 수 있지만 반드시 필요한 것은 아닙니다.  
   
-### <a name="DualDeployment"></a>이중 DirectAccess 배포를 사용 하 여 IPv4 전용에서 IPv6 전용 배포로 전환  
+### <a name="transition-from-an-ipv4-only-to-an-ipv6-only-deployment-using-dual-directaccess-deployments"></a><a name="DualDeployment"></a>이중 DirectAccess 배포를 사용 하 여 IPv4 전용에서 IPv6 전용 배포로 전환  
 DirectAccess 배포를 다시 설치 하지 않으면 IPv4 전용에서 IPv6 전용 회사 네트워크로 전환할 수 없습니다. 전환 하는 동안 클라이언트 연결을 유지 하기 위해 다른 DirectAccess 배포를 사용할 수 있습니다. 이중 배포는 첫 번째 전환 단계가 완료 될 때 (ipv4 + IPv6으로 업그레이드 된 IPv4 전용 네트워크), IPv6 전용 회사 네트워크로의 이후 전환을 준비 하려는 경우에 필요 합니다. 기본 IPv6 연결 혜택을 활용 orto. 이중 배포는 다음과 같은 일반적인 단계에서 설명 합니다.  
   
 1.  두 번째 DirectAccess 배포를 설치 합니다. 새 서버에 DirectAccess를 설치 하거나 첫 번째 배포에서 서버를 제거 하 고 두 번째 배포에 사용할 수 있습니다.  

@@ -10,14 +10,14 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b58252ca-4c1d-4664-a3c4-7301e2121517
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: a1c18f264a6a8d263f3e9f50bc325ef97f4240af
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 2f3581451b65e96a277b23bd6808d2dea6ba45c9
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71366920"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80313444"
 ---
 # <a name="troubleshooting-enabling-otp"></a>OTP 사용 문제 해결
 
@@ -28,7 +28,7 @@ ms.locfileid: "71366920"
 ## <a name="failed-to-enroll-the-otp-signing-certificate"></a>OTP 서명 인증서를 등록 하지 못했습니다.  
 **오류를 받았습니다** (서버 이벤트 로그). 인증서 템플릿 < OTP_signing_template_name를 사용 하 여 OTP 서명 인증서를 등록할 수 없습니다 >  
   
-**가능한 원인**  
+**원인**  
   
 이 오류의 가능한 원인은 세 가지가 있습니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "71366920"
   
 **오류를 받았습니다** (서버 이벤트 로그). WebDAV IIS 확장이 서버에서 실행 중 이므로 DirectAccess OTP 설정을 적용할 수 없습니다. WebDAV를 제거 하 고 설정을 다시 적용 합니다.  
   
-**가능한 원인**  
+**원인**  
   
 DirectAccess OTP 서비스는 WebDAV 게시 기능과 호환 되지 않으며 WebDAV가 설치 되어 있는 동안에는 사용 하도록 설정할 수 없습니다.  
   
@@ -74,7 +74,7 @@ WebDAV 역할을 제거 합니다.
 ## <a name="no-templates-available-in-the-remote-access-management-console"></a>원격 액세스 관리 콘솔에서 사용할 수 있는 템플릿이 없습니다.  
 **시나리오**. 원격 액세스 관리 콘솔을 사용 하 여 OTP 또는 등록 기관 인증서 템플릿을 구성 하는 동안 선택 창에 일부 또는 모든 템플릿이 누락 됩니다.  
   
-**가능한 원인**  
+**원인**  
   
 이 오류의 가능한 원인은 두 가지입니다.  
   
@@ -97,7 +97,7 @@ WebDAV 역할을 제거 합니다.
 ## <a name="cannot-set-renewal-period-of-otp-template-to-1-hour"></a>OTP 템플릿의 갱신 기간을 1 시간으로 설정할 수 없음  
 **시나리오**. Windows 2003 CA를 사용 하 여 DirectAccess OTP 로그온 템플릿을 구성 하는 경우 템플릿의 갱신 기간을 1 시간으로 설정할 수 없습니다.  
   
-**가능한 원인**  
+**원인**  
   
 Windows Server 2003의 인증서 템플릿 MMC 스냅인을 사용 하면 템플릿의 갱신 기간을 1 시간으로 설정할 수 없습니다.  
   

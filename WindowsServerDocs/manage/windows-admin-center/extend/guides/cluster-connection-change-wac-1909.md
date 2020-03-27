@@ -7,13 +7,13 @@ author: daniellee-msft
 ms.author: jol
 ms.date: 10/01/2019
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
-ms.openlocfilehash: a07b30517f0d45b7e6f4f41f0ef9a6549e6e2117
-ms.sourcegitcommit: de71970be7d81b95610a0977c12d456c3917c331
+ms.prod: windows-server
+ms.openlocfilehash: 5324f782ea3c02ed24968d4b3ef58ab8b6ac9d32
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952774"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80319351"
 ---
 # <a name="cluster-connection-type-changes-in-windows-admin-center-v1909"></a>Windows 관리 센터 v1909의 클러스터 연결 형식 변경 내용
 
@@ -28,7 +28,7 @@ Windows 관리 센터 v1909에서는 두 개의 서로 다른 클러스터 연�
 
 ## <a name="manifestjson---solutionsids-and-connectiontypes"></a>매니페스트. json-솔루션 Sid 및 connectionTypes
 
-이전에는 장애 조치 (failover) 클러스터 또는 HCI 클러스터 연결 형식에 대해 도구를 표시 하려면 ```manifest.json``` 파일에서 다음 정의 중 하나를 사용 해야 합니다.
+이전에는 장애 조치 (failover) 클러스터 또는 HCI 클러스터 연결 형식에 대해 도구를 표시 하기 위해 ```manifest.json``` 파일에서 다음 정의 중 하나를 사용 했습니다.
 
 장애 조치 (failover) 클러스터의 경우:
 ``` json
@@ -85,7 +85,7 @@ Windows 관리 센터 1909 이상에서는 두 개의 솔루션 Id 및 connectio
 이는 현재에서 지원 되는 유일한 클러스터 관련 솔루션 Id 및 connectionTypes 유형입니다. 도구가이 솔루션 Id 및 connectionTypes 유형 으로만 정의 된 경우 HCI 클러스터 인지 여부에 관계 없이 모든 장애 조치 (failover) 클러스터 연결에 대해 로드 됩니다. HCI 클러스터 또는 비 HCI 클러스터에 대해서만 도구를 사용할 수 있도록 제한 하려는 경우 다음 섹션에 설명 된 새 인벤토리 속성을 추가로 사용 해야 합니다.
 
 ## <a name="manifestjson--inventory-properties"></a>매니페스트. json – 인벤토리 속성
-서버 또는 클러스터에 연결하는 경우 Windows 관리 센터에서 도구를 사용할 수 있는 시기를 결정하는 조건을 만드는 데 사용할 수 있는 인벤토리 속성 집합을 쿼리합니다 (도구를 사용하여 컨트롤의 "인벤토리 속성" 섹션 참조). [도구 표시 제어](dynamic-tool-display.md)추가 정보에 대한 표시 유형 문서입니다. Windows 관리 센터 v1909에서 클러스터가 하이퍼 수렴 형 클러스터 인지 여부를 확인 하는 데 사용할 수 있는 두 개의 새로운 속성을이 목록에 추가 했습니다. 
+서버 또는 클러스터에 연결할 때 Windows 관리 센터는 도구를 사용할 수 있는 시기를 결정 하는 조건을 만드는 데 사용할 수 있는 인벤토리 속성 집합을 쿼리 합니다. 자세한 내용은 [도구의 표시 유형 문서 제어](dynamic-tool-display.md) 에서 "인벤토리 속성" 섹션을 참조 하세요. Windows 관리 센터 v1909에서 클러스터가 하이퍼 수렴 형 클러스터 인지 여부를 확인 하는 데 사용할 수 있는 두 개의 새로운 속성을이 목록에 추가 했습니다. 
 
 ### <a name="iss2denabled"></a>isS2dEnabled
 기술적으로 하이퍼 수렴 형 클러스터는 S2D (스토리지 공간 다이렉트)를 사용 하는 장애 조치 (failover) 클러스터로 정의 됩니다. 하이퍼 수렴 형 클러스터에 대해서만 도구를 사용할 수 있도록 하려면 (예: S2D를 사용 하는 경우) 다음 인벤토리 조건을 추가 합니다.
@@ -168,8 +168,8 @@ Windows 관리 센터 1909 이상에서는 두 개의 솔루션 Id 및 connectio
     ]
 ```
 
-## <a name="known-issue-appcontextserviceactiveconnectionishyperconvergedclusterisfailovercluster-is-not-set-properly-in-windows-admin-center-v1909"></a>알려진 이슈: AppContextService. activeConnection. isHyperConvergedCluster/isFailoverCluster가 Windows 관리 센터 v1909에서 제대로 설정 되지 않았습니다.
-최근 변경 내용의 재발은 ```AppContextService.activeConnection.isHyperConvergedCluster/isFailoverCluster``` 속성이 Windows 관리 센터 v1909에서 올바르게 설정 되지 않으며 항상 false가 된다는 것입니다. 이 문제는 다음 릴리스에서 v1910 수정 될 예정 이지만, 더 이상 사용 되지 않으며 2020의 GA 릴리스에서 더 이상 사용할 수 없습니다. 나중에이 코드를 아래 코드로 바꾸고 ```this.connectHCI```을 사용할 수 있습니다.
+## <a name="known-issue-appcontextserviceactiveconnectionishyperconvergedclusterisfailovercluster-is-not-set-properly-in-windows-admin-center-v1909"></a>알려진 문제: AppContextService. activeConnection. isHyperConvergedCluster/isFailoverCluster가 Windows 관리 센터 v1909에서 제대로 설정 되지 않았습니다.
+최근 변경 내용의 재발은 ```AppContextService.activeConnection.isHyperConvergedCluster/isFailoverCluster``` 속성이 Windows 관리 센터 v1909에서 제대로 설정 되지 않으며 항상 false가 된다는 것입니다. 이 문제는 다음 릴리스에서 v1910 수정 될 예정 이지만, 더 이상 사용 되지 않으며 2020의 GA 릴리스에서 더 이상 사용할 수 없습니다. 나중에이 코드를 아래 코드로 바꾸고 ```this.connectHCI```를 사용할 수 있습니다.
 ```
     import { ClusterInventoryCache } from '@msft-sme/core';
 

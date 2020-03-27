@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: b3cd60f7-d380-4712-9a78-0a8f551e1121
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: cae789974c3f2b4f83c9120558d77dbe27f4190a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: a0da2265f8f66256ed2ba71d4847bf8a548626f8
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71356406"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80319139"
 ---
 # <a name="core-network-components"></a>핵심 네트워크 구성 요소
 
@@ -38,26 +38,26 @@ ms.locfileid: "71356406"
 
 - [부록 A ~ E](#BKMK_appendix)
 
-## <a name="BKMK_about"></a>이 가이드 정보
+## <a name="about-this-guide"></a><a name="BKMK_about"></a>이 가이드 정보
 이 가이드는 새 네트워크를 설치하고 있는 네트워크 및 시스템 관리자나, 작업 그룹으로 구성된 네트워크를 바꾸기 위해 도메인 기반 네트워크를 만들려는 네트워크 및 시스템 관리자를 대상으로 합니다. 이 가이드에서 제공하는 배포 시나리오는 향후에 네트워크에 서비스와 기능을 추가해야 하는 경우에 특히 유용합니다.
 
 이 배포 시나리오에서 사용되는 각 기술에 대한 디자인 및 배포 가이드를 검토하여 이 가이드가 자신에게 필요한 서비스나 구성을 제공하는지 파악하는 것이 좋습니다.
 
-핵심 네트워크는 조직의 IT(정보 기술) 요구 사항에 맞는 기반 서비스를 제공하는 네트워크 하드웨어, 장치 및 소프트웨어의 모음입니다.
+핵심 네트워크는 조직의 IT(정보 기술) 요구 사항에 맞는 기반 서비스를 제공하는 네트워크 하드웨어, 디바이스 및 소프트웨어의 모음입니다.
 
 Windows Server 핵심 네트워크는 다음을 포함한 다양한 이점을 제공합니다.
 
--   컴퓨터와 다른 TCP/IP 호환 장치 사이의 네트워크 연결을 위한 핵심 프로토콜. TCP/IP는 컴퓨터를 연결하고 네트워크를 구성하기 위한 표준 프로토콜 집합입니다. TCP/IP는 TCP/IP 프로토콜 모음을 구현 하 고 지 원하는 Microsoft Windows 운영 체제와 함께 제공 되는 네트워크 프로토콜 소프트웨어입니다.
+-   컴퓨터와 다른 TCP/IP 호환 디바이스 사이의 네트워크 연결을 위한 핵심 프로토콜. TCP/IP는 컴퓨터를 연결하고 네트워크를 구성하기 위한 표준 프로토콜 집합입니다. TCP/IP는 TCP/IP 프로토콜 모음을 구현 하 고 지 원하는 Microsoft Windows 운영 체제와 함께 제공 되는 네트워크 프로토콜 소프트웨어입니다.
 
--   DHCP 클라이언트로 구성된 컴퓨터 및 다른 장치에 DHCP(Dynamic Host Configuration Protocol) 자동 IP 주소 할당. 네트워크에 있는 모든 컴퓨터의 IP 주소를 수동으로 구성하는 작업은 DHCP 서버를 사용하여 컴퓨터 및 기타 장치에 IP 주소를 동적으로 제공하는 것보다 시간이 많이 걸리고 유연성도 낮습니다.
+-   DHCP 클라이언트로 구성된 컴퓨터 및 다른 디바이스에 DHCP(Dynamic Host Configuration Protocol) 자동 IP 주소 할당. 네트워크에 있는 모든 컴퓨터의 IP 주소를 수동으로 구성하는 작업은 DHCP 서버를 사용하여 컴퓨터 및 기타 디바이스에 IP 주소를 동적으로 제공하는 것보다 시간이 많이 걸리고 유연성도 낮습니다.
 
--   DNS(Domain Name System) 이름 확인 서비스. DNS를 통해 사용자, 컴퓨터, 응용 프로그램 및 서비스는 컴퓨터나 장치의 정규화된 도메인 이름을 사용하여 네트워크에 있는 컴퓨터와 장치의 IP 주소를 찾을 수 있습니다.
+-   DNS(Domain Name System) 이름 확인 서비스. DNS를 통해 사용자, 컴퓨터, 응용 프로그램 및 서비스는 컴퓨터나 디바이스의 정규화된 도메인 이름을 사용하여 네트워크에 있는 컴퓨터와 디바이스의 IP 주소를 찾을 수 있습니다.
 
 -   동일한 클래스와 특성 정의(스키마), 사이트와 복제 정보(구성) 및 포리스트 전체 검색 기능(글로벌 카탈로그)을 공유하는 하나 이상의 Active Directory 도메인인 포리스트
 
--   새 포리스트에서 처음으로 만든 도메인인 포리스트 루트 도메인. 포리스트 전체 관리 그룹인 Enterprise Admins 및 Schema Admins 그룹은 포리스트 루트 도메인에 위치합니다. 또한 포리스트 루트 도메인은 다른 도메인과 마찬가지로 AD DS(Active Directory 도메인 서비스)에서 관리자가 정의한 컴퓨터, 사용자 및 그룹 개체의 모음입니다. 이러한 개체는 공통의 디렉터리 데이터베이스 및 보안 정책을 공유합니다. 또한 조직의 규모가 커짐에 따라 도메인을 추가하는 경우 다른 도메인과의 보안 관계도 공유할 수 있습니다. 또한 디렉터리 서비스는 디렉터리 데이터를 저장하고, 권한 있는 컴퓨터, 응용 프로그램 및 사용자는 이 서비스를 통해 데이터에 액세스할 수 있습니다.
+-   새 포리스트에서 처음으로 만든 도메인인 포리스트 루트 도메인. 포리스트 전체 관리 그룹인 Enterprise Admins 및 Schema Admins 그룹은 포리스트 루트 도메인에 위치합니다. 또한 포리스트 루트 도메인은 다른 도메인과 마찬가지로 AD DS(Active Directory 도메인 서비스)에서 관리자가 정의한 컴퓨터, 사용자 및 그룹 개체의 모음입니다. 이러한 개체는 공통의 디렉터리 데이터베이스 및 보안 정책을 공유합니다. 또한 조직의 규모가 커짐에 따라 도메인을 추가하는 경우 다른 도메인과의 보안 관계도 공유할 수 있습니다. 또한 디렉터리 서비스는 디렉터리 데이터를 저장하고, 권한 있는 컴퓨터, 애플리케이션 및 사용자는 이 서비스를 통해 데이터에 액세스할 수 있습니다.
 
--   사용자 및 컴퓨터 계정 데이터베이스. 디렉터리 서비스는 네트워크에 연결할 수 있도록 권한이 부여된 사람 및 컴퓨터를 위한 사용자 및 컴퓨터 계정을 만들고 응용 프로그램, 데이터베이스, 공유된 파일과 폴더, 프린터 등의 네트워크 리소스에 액세스할 수 있는 중앙 집중식 사용자 계정 데이터베이스를 제공합니다.
+-   사용자 및 컴퓨터 계정 데이터베이스. 디렉터리 서비스는 네트워크에 연결할 수 있도록 권한이 부여된 사람 및 컴퓨터를 위한 사용자 및 컴퓨터 계정을 만들고 애플리케이션, 데이터베이스, 공유된 파일과 폴더, 프린터 등의 네트워크 리소스에 액세스할 수 있는 중앙 집중식 사용자 계정 데이터베이스를 제공합니다.
 
 또한 핵심 네트워크를 사용하면 조직의 규모가 커지고 IT 요구 사항이 변함에 따라 네트워크를 조정할 수 있습니다. 예를 들어 핵심 네트워크를 사용 하면 도메인, IP 서브넷, 원격 액세스 서비스, 무선 서비스 및 Windows Server 2016에서 제공 하는 기타 기능 및 서버 역할을 추가할 수 있습니다.
 
@@ -66,7 +66,7 @@ Windows Server 핵심 네트워크는 다음을 포함한 다양한 이점을 �
 
 -   이더넷, Fast Ethernet 또는 Gigabyte Ethernet 케이블
 
--   컴퓨터와 장치 사이에서 네트워크 트래픽을 릴레이하는 허브, 계층 2 또는 3 스위치, 라우터 또는 기타 장치
+-   컴퓨터와 디바이스 사이에서 네트워크 트래픽을 릴레이하는 허브, 계층 2 또는 3 스위치, 라우터 또는 기타 디바이스
 
 -   각 클라이언트 서버 운영 체제의 최소 하드웨어 요구 사항을 충족하는 컴퓨터
 
@@ -98,9 +98,9 @@ Windows Server 핵심 네트워크는 다음을 포함한 다양한 이점을 �
 DNS는 인터넷 또는 조직 네트워크와 같은 TCP/IP 네트워크를 위한 이름 확인 프로토콜입니다. DNS 서버는 클라이언트 컴퓨터 및 서비스에서 쉽게 인식할 수 있는 영숫자 DNS 이름을 컴퓨터가 서로 통신하는 데 사용하는 IP 주소로 확인하는 데 사용할 수 있는 정보를 호스트합니다.
 
 ### <a name="dhcp"></a>DHCP
-DHCP는 호스트 IP 구성의 관리를 단순화하기 위한 IP 표준입니다. DHCP 표준은 네트워크에 있는 DHCP 지원 클라이언트의 IP 주소 및 기타 관련 구성 세부 사항의 동적 할당을 관리하는 방법으로서 DHCP 서버를 사용합니다.
+DHCP는 호스트 IP 구성의 관리를 단순화하기 위한 IP 표준입니다. DHCP 표준은 DHCP 서버를 IP 주소의 동적 할당 및 네트워크에서 DHCP가 설정된 클라이언트에 대한 기타 관련 구성 정보를 관리하는 방법으로 사용할 수 있도록 합니다.
 
-DHCP에서는 DHCP 서버를 사용하여 로컬 네트워크에 있는 컴퓨터 또는 프린터와 같은 다른 장치에 IP 주소를 동적으로 할당할 수 있습니다. IP 주소 및 해당 관련 서브넷 마스크는 컴퓨터가 연결된 호스트 컴퓨터 및 서브넷을 모두 식별하므로 TCP/IP 네트워크의 모든 컴퓨터에는 고유한 IP 주소가 있어야 합니다. DHCP를 사용하여 DHCP 클라이언트로 구성된 모든 컴퓨터에 해당 네트워크 위치 및 서브넷에 적합한 IP 주소가 수신되도록 하고 기본 게이트웨이 및 DNS 서버와 같은 DHCP 옵션을 사용하여 DHCP 클라이언트가 네트워크에서 제대로 작동하는 데 필요한 정보를 이 클라이언트에 자동으로 제공할 수 있습니다.
+DHCP에서는 DHCP 서버를 사용하여 로컬 네트워크에 있는 컴퓨터 또는 프린터와 같은 다른 디바이스에 IP 주소를 동적으로 할당할 수 있습니다. IP 주소 및 해당 관련 서브넷 마스크는 컴퓨터가 연결된 호스트 컴퓨터 및 서브넷을 모두 식별하므로 TCP/IP 네트워크의 모든 컴퓨터에는 고유한 IP 주소가 있어야 합니다. DHCP를 사용하여 DHCP 클라이언트로 구성된 모든 컴퓨터에 해당 네트워크 위치 및 서브넷에 적합한 IP 주소가 수신되도록 하고 기본 게이트웨이 및 DNS 서버와 같은 DHCP 옵션을 사용하여 DHCP 클라이언트가 네트워크에서 제대로 작동하는 데 필요한 정보를 이 클라이언트에 자동으로 제공할 수 있습니다.
 
 TCP/IP 기반 네트워크의 경우 DHCP를 사용하면 컴퓨터를 다시 구성하는 작업에 수반되는 관리 작업의 양과 복잡성이 줄어듭니다.
 
@@ -153,7 +153,7 @@ TCP/IP는 Windows 기반 컴퓨터를 다음과 같은 Microsoft 시스템 및 �
 
 -   유선 이더넷 또는 무선 802.11 기술을 사용 하는 태블릿 및 휴대폰 전화
 
-## <a name="BKMK_overview"></a>핵심 네트워크 개요
+## <a name="core-network-overview"></a><a name="BKMK_overview"></a>핵심 네트워크 개요
 다음 그림에서는 Windows Server 핵심 네트워크 토폴로지를 보여 줍니다.
 
 ![Windows Server 핵심 네트워크 토폴로지](../media/Core-Network-Guide/cng16_overview.jpg)
@@ -179,7 +179,7 @@ DHCP1이라고 하는 DHCP 서버는 로컬 서브넷의 컴퓨터에 IP(인터�
 ##### <a name="client-computers"></a>클라이언트 컴퓨터
 Windows 클라이언트 운영 체제를 실행 하는 컴퓨터는 기본적으로 dhcp 서버에서 자동으로 IP 주소와 DHCP 옵션을 가져오는 DHCP 클라이언트로 구성 됩니다.
 
-## <a name="BKMK_planning"></a>핵심 네트워크 계획
+## <a name="core-network-planning"></a><a name="BKMK_planning"></a>핵심 네트워크 계획
 핵심 네트워크를 배포하기 전에 다음과 같은 항목을 계획해야 합니다.
 
 -   [서브넷 계획](#bkmk_NetFndtn_Pln_Subnt)
@@ -197,7 +197,7 @@ Windows 클라이언트 운영 체제를 실행 하는 컴퓨터는 기본적으
 > [!NOTE]
 > 배포 계획에 대 한 도움이 필요 하면 [부록 E-핵심 네트워크 계획 준비 시트](#BKMK_E)도 참조 하세요.
 
-### <a name="bkmk_NetFndtn_Pln_Subnt"></a>서브넷 계획
+### <a name="planning-subnets"></a><a name="bkmk_NetFndtn_Pln_Subnt"></a>서브넷 계획
 TCP/IP(Transmission Control Protocol/Internet Protocol) 네트워킹에서 라우터는 서브넷이라고 하는 여러 개의 실제 네트워크 세그먼트에서 사용되는 하드웨어와 소프트웨어를 상호 연결하는 데 사용됩니다. 라우터는 또한 각 서브넷 간에 IP 패킷을 전달하는 데도 사용됩니다. 이 가이드의 지침을 계속하기 전에 필요한 라우터와 서브넷의 수를 비롯하여 네트워크의 물리적 레이아웃을 결정하십시오.
 
 또한 네트워크의 서버를 고정 IP 주소로 구성하려면 핵심 네트워크 서버가 있는 서브넷에 사용할 IP 주소 범위를 결정해야 합니다. 이 가이드에서는 개인 IP 주소 범위 10.0.0.1-10.0.0.254 및 10.0.1.1-10.0.1.254를 예로 사용 하지만 원하는 개인 IP 주소 범위를 사용할 수 있습니다.
@@ -220,11 +220,11 @@ RFC 1918에 지정된 개인 IP 주소 범위를 사용할 때는 이 주소로 
 
 자세한 내용은 [DHCP1 배포 계획](#bkmk_NetFndtn_Pln_DHCP-01)을 참조하십시오.
 
-### <a name="bkmk_NetFndtn_Pln_AllSrvrs"></a>모든 서버의 기본 구성 계획
+### <a name="planning-basic-configuration-of-all-servers"></a><a name="bkmk_NetFndtn_Pln_AllSrvrs"></a>모든 서버의 기본 구성 계획
 핵심 네트워크의 각 서버에 대해 컴퓨터 이름을 바꾸고 컴퓨터에 대해 고정 IPv4 주소 및 기타 TCP/IP 속성을 할당 및 구성해야 합니다.
 
-#### <a name="planning-naming-conventions-for-computers-and-devices"></a>컴퓨터 및 장치에 대한 명명 규칙 계획
-네트워크에서의 일관성을 유지하기 위해 서버, 프린터 및 기타 장치에 일관된 이름을 사용하는 것이 좋습니다. 컴퓨터 이름은 사용자와 관리자가 서버, 프린터 또는 기타 장치의 용도와 위치를 쉽게 파악하는 데 도움이 될 수 있습니다. 예를 들어 세 개의 DNS 서버가 샌프란시스코에 하나, 로스앤젤레스에 하나, 시카고에 하나씩 있는 경우 명명 규칙 *서버 함수*-*위치*-*번호*를 사용할 수 있습니다.
+#### <a name="planning-naming-conventions-for-computers-and-devices"></a>컴퓨터 및 디바이스에 대한 명명 규칙 계획
+네트워크에서의 일관성을 유지하기 위해 서버, 프린터 및 기타 디바이스에 일관된 이름을 사용하는 것이 좋습니다. 컴퓨터 이름은 사용자와 관리자가 서버, 프린터 또는 기타 디바이스의 용도와 위치를 쉽게 파악하는 데 도움이 될 수 있습니다. 예를 들어 세 개의 DNS 서버가 샌프란시스코에 하나, 로스앤젤레스에 하나, 시카고에 하나씩 있는 경우 명명 규칙 *서버 함수*-*위치*-*번호*를 사용할 수 있습니다.
 
 -   DNS-DEN-01. 이 이름은 콜로라도, 덴버의 DNS 서버를 나타냅니다. 덴버에 DNS 서버가 더 추가되면 DNS-DEN-02 및 DNS-DEN-03과 같이 이름의 숫자 값을 늘릴 수 있습니다.
 
@@ -251,7 +251,7 @@ RFC 1918에 지정된 개인 IP 주소 범위를 사용할 때는 이 주소로 
 > [!NOTE]
 > 둘 이상의 DNS 서버를 배포하도록 계획하는 경우 대체 DNS 서버 IP 주소도 계획할 수 있습니다.
 
-### <a name="bkmk_NetFndtn_Pln_AD-DNS-01"></a>DC1 배포 계획
+### <a name="planning-the-deployment-of-dc1"></a><a name="bkmk_NetFndtn_Pln_AD-DNS-01"></a>DC1 배포 계획
 다음은 d c 1에서 Active Directory Domain Services (AD DS) 및 DNS를 설치 하기 전의 주요 계획 단계입니다.
 
 #### <a name="planning-the-name-of-the-forest-root-domain"></a>포리스트 루트 도메인의 이름 계획
@@ -292,7 +292,7 @@ AD DS를 설치 하는 동안 사용할 포리스트 기능 수준을 선택 해
 |응답 파일 이름(옵션)|**AD DS_AnswerFile**|
 
 #### <a name="planning-dns-zones"></a>DNS 영역 계획
-Active Directory 통합 주 DNS 서버에서는 DNS 서버 역할을 설치하는 동안 기본적으로 정방향 조회 영역이 만들어집니다. 컴퓨터와 장치는 정방향 조회 영역을 통해 DNS 이름을 기반으로 다른 컴퓨터나 장치의 IP 주소를 쿼리할 수 있습니다. 정방향 조회 영역 이외에 DNS 역방향 조회 영역도 만드는 것이 좋습니다. 컴퓨터와 장치는 DNS 역방향 조회 영역을 통해, IP 주소를 사용하여 다른 컴퓨터나 장치의 이름을 찾을 수 있습니다. 역방향 조회 영역을 배포하면 일반적으로 DNS 성능이 향상되고 DNS 쿼리의 성공률이 크게 높아집니다.
+Active Directory 통합 주 DNS 서버에서는 DNS 서버 역할을 설치하는 동안 기본적으로 정방향 조회 영역이 만들어집니다. 컴퓨터와 디바이스는 정방향 조회 영역을 통해 DNS 이름을 기반으로 다른 컴퓨터나 디바이스의 IP 주소를 쿼리할 수 있습니다. 정방향 조회 영역 이외에 DNS 역방향 조회 영역도 만드는 것이 좋습니다. 컴퓨터와 디바이스는 DNS 역방향 조회 영역을 통해, IP 주소를 사용하여 다른 컴퓨터나 디바이스의 이름을 찾을 수 있습니다. 역방향 조회 영역을 배포하면 일반적으로 DNS 성능이 향상되고 DNS 쿼리의 성공률이 크게 높아집니다.
 
 역방향 조회 영역을 만들면 in-addr.arpa 도메인이 DNS에 구성됩니다. 이 도메인은 실용적이고 안정적인 방법으로 역방향 쿼리를 수행하기 위해 DNS 표준에 정의되고 인터넷 DNS 네임스페이스에 예약되었습니다. 역방향 네임스페이스를 만들려면 점으로 구분된 십진수 IP 주소 표시에서 숫자의 순서를 역으로 정렬하여 in-addr.arpa 도메인 내에 하위 도메인을 구성합니다.
 
@@ -308,7 +308,7 @@ In-addr.arpa 도메인은 IPv4 (인터넷 프로토콜 버전 4) 주소 지정�
 |두 번째 역방향 조회 영역 이름 마법사 페이지|네트워크 ID = 10.0.0.|
 |동적 업데이트|**보안 동적 업데이트만 허용**|
 
-### <a name="bkmk_NetFndtn_Pln_DomAccess"></a>도메인 액세스 계획
+### <a name="planning-domain-access"></a><a name="bkmk_NetFndtn_Pln_DomAccess"></a>도메인 액세스 계획
 하려면 도메인에 로그온 컴퓨터는 도메인 구성원 컴퓨터 및 사용자 계정에 로그온 하기 전에 AD DS에 만들어야 합니다.
 
 > [!NOTE]
@@ -324,7 +324,7 @@ In-addr.arpa 도메인은 IPv4 (인터넷 프로토콜 버전 4) 주소 지정�
 
 -   도메인에 컴퓨터를 가입합니다. 네트워크 리소스를 제공하거나 이 리소스에 액세스하는 모든 컴퓨터는 도메인에 가입해야 합니다. 자세한 내용은 [도메인에 서버 컴퓨터 가입 및 로그온](#BKMK_joinlogserver) 및 [도메인에 클라이언트 컴퓨터 가입 및 로그온](#BKMK_joinlogclients)을 참조하십시오.
 
-### <a name="bkmk_NetFndtn_Pln_DHCP-01"></a>DHCP1 배포 계획
+### <a name="planning-the-deployment-of-dhcp1"></a><a name="bkmk_NetFndtn_Pln_DHCP-01"></a>DHCP1 배포 계획
 다음은 DHCP1에 DHCP 서버 역할을 설치하기 전의 주요 계획 단계입니다.
 
 #### <a name="planning-dhcp-servers-and-dhcp-forwarding"></a>DHCP 서버 및 DHCP 전달 계획
@@ -339,7 +339,7 @@ DHCP 메시지는 브로드캐스트 메시지이기 때문에 라우터에 의�
 #### <a name="planning-ip-address-ranges"></a>IP 주소 범위 계획
 각 서브넷에는 자체의 고유한 IP 주소 범위가 있어야 합니다. 이 주소 범위는 DHCP 서버에서 범위로 표현됩니다.
 
-범위란 서브넷에서 DHCP 서비스를 사용하는 컴퓨터에 대한 IP 주소의 관리 그룹을 의미합니다. 관리자는 먼저 실제 서브넷마다 범위를 하나씩 만든 다음 범위를 사용하여 클라이언트에서 사용하는 매개 변수를 정의합니다.
+범위는 DHCP 서비스를 사용하는 서브넷에 있는 컴퓨터의 IP 주소에 대한 관리 그룹화입니다. 관리자는 먼저 실제 서브넷마다 범위를 하나씩 만든 다음 범위를 사용하여 클라이언트에서 사용하는 매개 변수를 정의합니다.
 
 범위에는 다음과 같은 속성이 있습니다.
 
@@ -347,9 +347,9 @@ DHCP 메시지는 브로드캐스트 메시지이기 때문에 라우터에 의�
 
 -   지정된 IP 주소의 서브넷을 결정하는 서브넷 마스크
 
--   범위를 만들 때 할당되는 범위 이름
+-   범위 이름은 생성되면 할당됩니다.
 
--   동적으로 할당되는 IP 주소를 받는 DHCP 클라이언트에 할당되는 임대 기간 값
+-   임대 기간 값은 동적으로 할당된 IP 주소를 수신하는 DHCP 클라이언트에 할당됩니다.
 
 -   DHCP 클라이언트에 할당하도록 구성된 모든 DHCP 범위 옵션(예: DNS 서버 IP 주소, 라우터/기본 게이트웨이 IP 주소)
 
@@ -382,14 +382,14 @@ DHCP에서 범위를 만들고 범위에 대한 IP 주소 범위를 입력하면
 
 서브넷 마스크 길이를 사용자 지정하면 실제 호스트 ID에 사용되는 비트 수를 줄일 수 있습니다.
 
-주소 지정 및 라우팅 문제를 해결하려면 네트워크 세그먼트의 모든 TCP/IP 컴퓨터가 같은 서브넷 마스크를 사용하고 각 컴퓨터 또는 장치에 고유한 IP 주소가 있어야 합니다.
+주소 지정 및 라우팅 문제를 해결하려면 네트워크 세그먼트의 모든 TCP/IP 컴퓨터가 같은 서브넷 마스크를 사용하고 각 컴퓨터 또는 디바이스에 고유한 IP 주소가 있어야 합니다.
 
 #### <a name="planning-exclusion-ranges"></a>제외 범위 계획
-DHCP 서버에 대해 범위를 만들면 DHCP 서버가 컴퓨터 및 기타 장치와 같은 DHCP 클라이언트에 임대되도록 허용된 모든 IP 주소를 포함하는 IP 주소 범위를 지정할 수 있습니다. 이때 DHCP 서버가 사용하는 IP 주소 범위와 동일한 범위에서 고정 IP 주소로 일부 서버 및 기타 장치를 수동으로 구성한 경우 사용자 및 DHCP 서버 둘 다가 다른 장치에 동일한 IP 주소를 할당하는, IP 주소 충돌이 발생할 수 있습니다.
+DHCP 서버에 대해 범위를 만들면 DHCP 서버가 컴퓨터 및 기타 디바이스와 같은 DHCP 클라이언트에 임대되도록 허용된 모든 IP 주소를 포함하는 IP 주소 범위를 지정할 수 있습니다. 이때 DHCP 서버가 사용하는 IP 주소 범위와 동일한 범위에서 고정 IP 주소로 일부 서버 및 기타 디바이스를 수동으로 구성한 경우 사용자 및 DHCP 서버 둘 다가 다른 디바이스에 동일한 IP 주소를 할당하는, IP 주소 충돌이 발생할 수 있습니다.
 
 이 문제를 해결하기 위해 DHCP 범위에 대해 제외 범위를 만들 수 있습니다. 제외 범위는 DHCP 서버에서 사용할 수 없는 범위 IP 주소 범위 내에 있는 연속 된 IP 주소 범위입니다. 제외 범위를 만든 경우 DHCP 서버가 해당 범위의 주소를 할당하지 않으므로 IP 주소 충돌 없이 이 주소를 수동으로 할당할 수 있습니다.
 
-각 범위에 대한 제외 범위를 만들어 해당 IP 주소를 DHCP 서버의 배포에서 제외할 수 있습니다. 고정 IP 주소로 구성된 모든 장치를 제외해야 합니다. 제외 주소 범위에는 다른 서버, 비 DHCP 클라이언트, 디스크가 없는 워크스테이션 또는 라우팅 및 원격 액세스 및 PPP 클라이언트에 수동으로 할당한 모든 IP 주소가 포함되어야 합니다.
+각 범위에 대한 제외 범위를 만들어 해당 IP 주소를 DHCP 서버의 배포에서 제외할 수 있습니다. 고정 IP 주소로 구성된 모든 디바이스를 제외해야 합니다. 제외 주소 범위에는 다른 서버, 비 DHCP 클라이언트, 디스크가 없는 워크스테이션 또는 라우팅 및 원격 액세스 및 PPP 클라이언트에 수동으로 할당한 모든 IP 주소가 포함되어야 합니다.
 
 향후의 네트워크 확장을 고려하여 추가적인 주소로 제외 범위를 구성하는 것이 좋습니다. 다음 표에서는 IP 주소 범위가 10.0.0.1-10.0.0.254이 고 서브넷 마스크가 255.255.255.0 인 범위에 대 한 예제 제외 범위를 제공 합니다.
 
@@ -399,11 +399,11 @@ DHCP 서버에 대해 범위를 만들면 DHCP 서버가 컴퓨터 및 기타 �
 |제외 범위 끝 IP 주소|10.0.0.25|
 
 #### <a name="planning-tcpip-static-configuration"></a>TCP/IP 고정 구성 계획
-라우터, DHCP 서버 및 DNS 서버와 같은 특정 장치는 고정 IP 주소로 구성해야 합니다. 또한 프린터와 같이 항상 같은 IP 주소를 사용하는 것이 편리한 장치도 있습니다. 각 서브넷에 대해 정적으로 구성할 장치를 나열한 다음 고정적으로 구성된 장치의 IP 주소를 DHCP 서버에서 임대하지 않도록 하기 위해 DHCP 서버에서 사용할 제외 범위를 계획합니다. 제외 범위는 DHCP 서비스 제공에서 제외되는 범위로, 범위 내의 제한된 연속 IP 주소입니다. 제외 범위에 속하는 주소는 서버가 네트워크의 DHCP 클라이언트에 제공하지 않습니다.
+라우터, DHCP 서버 및 DNS 서버와 같은 특정 디바이스는 고정 IP 주소로 구성해야 합니다. 또한 프린터와 같이 항상 같은 IP 주소를 사용하는 것이 편리한 디바이스도 있습니다. 각 서브넷에 대해 정적으로 구성할 디바이스를 나열한 다음 고정적으로 구성된 디바이스의 IP 주소를 DHCP 서버에서 임대하지 않도록 하기 위해 DHCP 서버에서 사용할 제외 범위를 계획합니다. 제외 범위는 DHCP 서비스 제공에서 제외되는 범위로, 범위 내의 제한된 연속 IP 주소입니다. 제외 범위에 속하는 주소는 서버가 네트워크의 DHCP 클라이언트에 제공하지 않습니다.
 
 예를 들어 서브넷에 대한 IP 주소 범위가 192.168.0.1부터 192.168.0.254까지이며 고정 IP 주소로 구성할 장치가 10개인 경우에는 10개 이상의 IP 주소가 포함된 192.168.0.*x* 범위에 대한 제외 범위(192.168.0.1 - 192.168.0.15)를 만들 수 있습니다.
 
-이 예제에서는 제외되는 IP 주소 중 10개를 고정 IP 주소를 가진 서버 및 기타 장치로 구성하고 나머지 5개의 주소는 향후에 추가할 수 있는 새 장치의 고정 구성을 위해 남겨둡니다. 이 제외 범위를 적용하면 DHCP 서버는 192.168.0.16부터 192.168.0.254까지의 주소 풀을 사용합니다.
+이 예제에서는 제외되는 IP 주소 중 10개를 고정 IP 주소를 가진 서버 및 기타 디바이스로 구성하고 나머지 5개의 주소는 향후에 추가할 수 있는 새 디바이스의 고정 구성을 위해 남겨둡니다. 이 제외 범위를 적용하면 DHCP 서버는 192.168.0.16부터 192.168.0.254까지의 주소 풀을 사용합니다.
 
 다음 표에서는 AD DS 및 DNS에 대 한 추가 예제 구성 항목을 제공 합니다.
 
@@ -415,7 +415,7 @@ DHCP 서버에 대해 범위를 만들면 DHCP 서버가 컴퓨터 및 기타 �
 |범위 추가 대화 상자 값<br /><br />1. 범위 이름<br />2. 시작 IP 주소<br />3. 끝 IP 주소<br />4. 서브넷 마스크<br />5. 기본 게이트웨이 (옵션)<br />6. 임대 기간|1. 기본 서브넷<br />2.10.0.0.1<br />3.10.0.0.254<br />4.255.255.255.0<br />5.10.0.0.1<br />6.8 일|
 |IPv6 DHCP 서버 작동 모드|사용 안 함|
 
-## <a name="BKMK_deployment"></a>핵심 네트워크 배포
+## <a name="core-network-deployment"></a><a name="BKMK_deployment"></a>핵심 네트워크 배포
 핵심 네트워크를 배포하기 위한 기본 단계는 다음과 같습니다.
 
 1.  [모든 서버 구성](#BKMK_configuringAll)
@@ -431,10 +431,10 @@ DHCP 서버에 대해 범위를 만들면 DHCP 서버가 컴퓨터 및 기타 �
 6.  [네트워크 액세스 인증 및 웹 서비스에 대 한 선택적 기능 배포](#BKMK_optionalfeatures)
 
 > [!NOTE]
-> -   이 가이드에 나온 대부분의 절차에는 동일한 Windows PowerShell 명령이 제공됩니다. Windows PowerShell에서 이 cmdlet을 실행하기 전에 예제 값을 사용자 네트워크 배포에 적합한 값으로 바꾸십시오. 또한 Windows PowerShell에서 행마다 하나의 cmdlet을 입력해야 합니다. 이 가이드에서는 사용자 브라우저나 다른 응용 프로그램에서의 문서 표시 및 형식 지정 제약 조건으로 인해 개별 cmdlet이 여러 행에 걸쳐 나타날 수 있습니다.
-> -   이 가이드의 절차에는 계속하기 위해 권한을 요청하는 **사용자 계정 컨트롤** 대화 상자가 열리는 경우에 대한 지침은 포함되어 있지 않습니다. 이 가이드의 절차를 수행 하는 사용자의 작업에 대 한 응답에서 대화 상자를 연 경우 클릭 하는 동안이 대화 상자가 열리면 **계속**합니다.
+> -   이 가이드에 나온 대부분의 절차에는 동일한 Windows PowerShell 명령이 제공됩니다. Windows PowerShell에서 이 cmdlet을 실행하기 전에 예제 값을 사용자 네트워크 배포에 적합한 값으로 바꾸십시오. 또한 Windows PowerShell에서 행마다 하나의 cmdlet을 입력해야 합니다. 이 가이드에서는 사용자 브라우저나 다른 애플리케이션에서의 문서 표시 및 형식 지정 제약 조건으로 인해 개별 cmdlet이 여러 행에 걸쳐 나타날 수 있습니다.
+> -   이 가이드의 절차에는 계속하기 위해 권한을 요청하는 **사용자 계정 컨트롤** 대화 상자가 열리는 경우에 대한 지침은 포함되어 있지 않습니다. 이 가이드의 절차를 수행하는 동안 이 대화 상자가 열리는 경우와 작업에 대한 응답으로 이 대화 상자가 이미 열린 경우에는 **계속**을 클릭하십시오.
 
-### <a name="BKMK_configuringAll"></a>모든 서버 구성
+### <a name="configuring-all-servers"></a><a name="BKMK_configuringAll"></a>모든 서버 구성
 Active Directory Domain Services 또는 DHCP와 같은 다른 기술을 설치하기 전에 먼저 다음 항목을 구성해야 합니다.
 
 -   [컴퓨터 이름 바꾸기](#BKMK_rename)
@@ -445,7 +445,7 @@ Active Directory Domain Services 또는 DHCP와 같은 다른 기술을 설치�
 
 이 절차를 수행하려면 최소한 **Administrators** 그룹의 구성원이거나 이와 동등한 자격이 필요합니다.
 
-#### <a name="BKMK_rename"></a>컴퓨터 이름 바꾸기
+#### <a name="rename-the-computer"></a><a name="BKMK_rename"></a>컴퓨터 이름 바꾸기
 이 섹션의 절차를 사용 하 여 컴퓨터 이름을 변경할 수 있습니다. 컴퓨터 이름을 바꾸는 기능은 사용하기를 원하지 않는 컴퓨터 이름이 운영 체제에서 자동으로 만들어지는 경우에 유용합니다.
 
 > [!NOTE]
@@ -468,7 +468,7 @@ Active Directory Domain Services 또는 DHCP와 같은 다른 기술을 설치�
 > [!NOTE]
 > 다른 Microsoft 운영 체제를 실행 하는 컴퓨터의 이름을 바꾸는 방법에 대 한 자세한 내용은 [부록 a-컴퓨터 이름 바꾸기](#BKMK_A)를 참조 하세요.
 
-#### <a name="BKMK_ip"></a>고정 IP 주소 구성
+#### <a name="configure-a-static-ip-address"></a><a name="BKMK_ip"></a>고정 IP 주소 구성
 이 항목의 절차를 사용 하 여 Windows Server 2016를 실행 하는 컴퓨터에 대 한 고정 IP 주소를 사용 하는 네트워크 연결의 IPv4 (인터넷 프로토콜 버전 4) 속성을 구성할 수 있습니다.
 
 > [!NOTE]
@@ -506,7 +506,7 @@ Active Directory Domain Services 또는 DHCP와 같은 다른 기술을 설치�
 > [!NOTE]
 > 다른 Microsoft 운영 체제를 실행 하는 컴퓨터에서 고정 IP 주소를 구성 하는 방법에 대 한 자세한 내용은 [부록 B-고정 ip 주소 구성](#BKMK_B)을 참조 하세요.
 
-#### <a name="BKMK_deployADDNS01"></a>DC1 배포
+#### <a name="deploying-dc1"></a><a name="BKMK_deployADDNS01"></a>DC1 배포
 Active Directory Domain Services (AD DS) 및 DNS를 실행 하는 컴퓨터인 DC1을 배포 하려면 다음 단계를 순서 대로 완료 해야 합니다.
 
 -   [모든 서버 구성](#BKMK_configuringAll) 섹션의 단계 수행
@@ -535,7 +535,7 @@ Active Directory Domain Services (AD DS) 및 DNS를 실행 하는 컴퓨터인 D
 
 사용자가 컴퓨터에 로그온할 수 있는 날짜와 시간을 지정하도록 사용자 계정을 구성할 수 있습니다. 또한 각 사용자가 사용할 수 있는 컴퓨터도 지정할 수도 있습니다. 이러한 설정을 구성하려면 Active Directory 사용자 및 컴퓨터를 열고 구성할 사용자 계정을 찾은 다음 해당 계정을 두 번 클릭합니다. 사용자 계정 **속성**에서 **계정** 탭을 클릭한 다음 **로그온 시간** 또는 **로그온 대상**을 클릭합니다.
 
-#### <a name="BKMK_installAD-DNS"></a>새 포리스트에 대 한 AD DS 및 DNS 설치
+#### <a name="install-ad-ds-and-dns-for-a-new-forest"></a><a name="BKMK_installAD-DNS"></a>새 포리스트에 대 한 AD DS 및 DNS 설치
 
 다음 절차 중 하나를 사용 하 여 Active Directory Domain Services (AD DS) 및 DNS를 설치 하 고 새 포리스트에 새 도메인을 만들 수 있습니다. 
 
@@ -621,7 +621,7 @@ Get-WindowsFeature
 
 6.  **기능 선택**에서 **다음**을 클릭하고 **Active Directory Domain Services**에서 제공된 정보를 검토한 후 **다음**을 클릭합니다.
 
-7.  **설치 선택 확인**, 클릭 **설치**합니다. 설치 프로세스가 진행되는 동안 설치 진행률 페이지에 상태가 표시됩니다. 설치 프로세스가 완료되면 메시지 정보에서 **이 서버를 도메인 컨트롤러로 승격**을 클릭합니다. Active Directory Domain Services 구성 마법사가 열립니다.
+7.  **설치 선택 확인**에서 **설치**를 클릭합니다. 설치 프로세스가 진행되는 동안 설치 진행률 페이지에 상태가 표시됩니다. 설치 프로세스가 완료되면 메시지 정보에서 **이 서버를 도메인 컨트롤러로 승격**을 클릭합니다. Active Directory Domain Services 구성 마법사가 열립니다.
 
 8.  **배포 구성**에서 **새 포리스트 추가**를 선택합니다. **루트 도메인 이름**에, 도메인에 대한 FQDN(정규화된 도메인 이름)을 입력합니다. 예를 들어 FQDN이 corp.contoso.com이면 **corp.contoso.com**을 입력합니다. **다음**을 클릭합니다.
 
@@ -647,7 +647,7 @@ Get-WindowsFeature
 
 ![서버 관리자의 AD DS 및 DNS](../media/Core-Network-Guide/server-roles-installed-sm.jpg)
 
-##### <a name="BKMK_createUA"></a>Active Directory 사용자 및 컴퓨터에서 사용자 계정 만들기
+##### <a name="create-a-user-account-in-active-directory-users-and-computers"></a><a name="BKMK_createUA"></a>Active Directory 사용자 및 컴퓨터에서 사용자 계정 만들기
 다음 절차에 따라 Active Directory 사용자 및 컴퓨터 MMC(Microsoft Management Console)에서 새 도메인 사용자 계정을 만들 수 있습니다.
 
 이 절차를 수행하려면 최소한 **Domain Admins** 그룹의 구성원이거나 이와 동등한 자격이 필요합니다.
@@ -689,10 +689,10 @@ Get-WindowsFeature
 
 10. **다음**을 클릭하고 새 사용자 계정 설정을 검토한 다음 **마침**을 클릭합니다.
 
-##### <a name="BKMK_assigngroup"></a>그룹 멤버 자격 할당
+##### <a name="assign-group-membership"></a><a name="BKMK_assigngroup"></a>그룹 멤버 자격 할당
 다음 절차에 따라 Active Directory 사용자 및 컴퓨터 MMC(Microsoft Management Console)의 그룹에 사용자, 컴퓨터 또는 그룹을 추가할 수 있습니다.
 
-멤버 자격이 **Domain Admins**, 또는 이와 동등한 최소한이이 절차를 수행 하려면 필요 합니다.
+이 절차를 수행하려면 최소한 **Domain Admins** 그룹의 구성원이거나 이와 동등한 자격이 필요합니다.
 
 ###### <a name="to-assign-group-membership"></a>그룹 구성원을 할당하려면
 
@@ -712,7 +712,7 @@ Get-WindowsFeature
 
 6.  기타 사용자, 그룹 또는 컴퓨터에 그룹 구성원을 할당하려면 이 절차의 4 및 5단계를 반복합니다.
 
-##### <a name="BKMK_reverse"></a>DNS 역방향 조회 영역 구성
+##### <a name="configure-a-dns-reverse-lookup-zone"></a><a name="BKMK_reverse"></a>DNS 역방향 조회 영역 구성
 다음 절차에 따라 DNS(Domain Name System)에서 역방향 조회 영역을 구성할 수 있습니다.
 
 이 절차를 수행하려면 최소한 **Domain Admins**의 구성원이어야 합니다.
@@ -751,7 +751,7 @@ Get-WindowsFeature
 
 11. **새 영역 마법사 완료**에서 선택 내용을 검토한 다음 **마침**을 클릭합니다.
 
-#### <a name="BKMK_joinlogserver"></a>도메인에 서버 컴퓨터 가입 및 로그온
+#### <a name="joining-server-computers-to-the-domain-and-logging-on"></a><a name="BKMK_joinlogserver"></a>도메인에 서버 컴퓨터 가입 및 로그온
 Active Directory Domain Services (AD DS)를 설치 하 고 컴퓨터를 도메인에 가입할 수 있는 권한이 있는 사용자 계정을 하나 이상 만든 후에는 핵심 네트워크 서버를 도메인에 가입 하 고 서버에 로그온 하 여 추가 설치를 수행할 수 있습니다. DHCP (Dynamic Host Configuration Protocol)와 같은 기술
 
 AD DS를 실행 하는 서버를 제외 하 고 배포 하는 모든 서버에서 다음을 수행 합니다.
@@ -803,7 +803,7 @@ AD DS를 실행 하는 서버를 제외 하 고 배포 하는 모든 서버에�
 > [!NOTE]
 > 다른 Microsoft 운영 체제를 실행 하는 컴퓨터를 사용 하 여 도메인에 로그온 하는 방법에 대 한 자세한 내용은 [부록 D-도메인에 로그온](#BKMK_D)을 참조 하세요.
 
-#### <a name="BKMK_deployDHCP01"></a>DHCP1 배포
+#### <a name="deploying-dhcp1"></a><a name="BKMK_deployDHCP01"></a>DHCP1 배포
 핵심 네트워크의 이 구성 요소를 배포하기 전에 다음을 수행해야 합니다.
 
 -   [모든 서버 구성](#BKMK_configuringAll) 섹션의 단계 수행
@@ -837,7 +837,7 @@ DHCP(Dynamic Host Configuration Protocol) 서버 역할을 실행하는 컴퓨�
 >
 > `Add-DhcpServerInDC -DnsName DHCP1.corp.contoso.com`
 
-##### <a name="BKMK_installDHCP"></a>DHCP (Dynamic Host Configuration Protocol) 설치
+##### <a name="install-dynamic-host-configuration-protocol-dhcp"></a><a name="BKMK_installDHCP"></a>DHCP (Dynamic Host Configuration Protocol) 설치
 다음 절차에 따라 역할 및 기능 추가 마법사를 사용하여 DHCP 서버 역할을 설치하고 구성할 수 있습니다.
 
 이 절차를 수행하려면 최소한 **Domain Admins** 그룹의 구성원이거나 이와 동등한 자격이 필요합니다.
@@ -863,8 +863,8 @@ DHCP(Dynamic Host Configuration Protocol) 서버 역할을 실행하는 컴퓨�
 
 8.  **권한 부여**에서 Active Directory Domain Services의 DHCP 서버에 대해 권한을 부여하는 데 사용할 자격 증명을 지정한 다음 **커밋**을 클릭합니다. 권한 부여가 완료되면 **닫기**를 클릭합니다.
 
-##### <a name="BKMK_newscopeDHCP"></a>새 DHCP 범위 만들기 및 활성화
-다음 절차에 따라 DHCP MMC(Microsoft Management Console)를 사용하여 새 DHCP 범위를 만들 수 있습니다. 절차가 완료되면 범위가 활성화되고, 만든 제외 범위를 통해 고정 IP 주소가 필요한 서비스 및 기타 장치를 정적으로 구성하는 데 사용하는 IP 주소를 DHCP 서버에서 대여하지 않도록 할 수 있습니다.
+##### <a name="create-and-activate-a-new-dhcp-scope"></a><a name="BKMK_newscopeDHCP"></a>새 DHCP 범위 만들기 및 활성화
+다음 절차에 따라 DHCP MMC(Microsoft Management Console)를 사용하여 새 DHCP 범위를 만들 수 있습니다. 절차가 완료되면 범위가 활성화되고, 만든 제외 범위를 통해 고정 IP 주소가 필요한 서비스 및 기타 디바이스를 정적으로 구성하는 데 사용하는 IP 주소를 DHCP 서버에서 대여하지 않도록 할 수 있습니다.
 
 이 절차를 수행하려면 최소한 **DHCP 관리자** 그룹의 구성원이거나 이와 동등한 자격이 필요합니다.
 
@@ -922,12 +922,12 @@ DHCP(Dynamic Host Configuration Protocol) 서버 역할을 실행하는 컴퓨�
 
 15. **범위 활성화**에서 **예, 지금 활성화합니다.** 를 선택합니다.
 
-16. **다음**을 클릭한 다음 **마침**을 클릭합니다.
+16. **다음**을 클릭하고 **마침**을 클릭합니다.
 
 > [!IMPORTANT]
 > 추가 서브넷에 대해 새 범위를 만들려면 위의 절차를 반복합니다. 배포하려는 각 서브넷에 대해 서로 다른 IP 주소를 사용하고 DHCP 메시지가 다른 서브넷으로 전달되도록, DHCP 메시지 전달이 모든 라우터에서 사용하도록 설정되어 있는지 확인합니다.
 
-### <a name="BKMK_joinlogclients"></a>도메인에 클라이언트 컴퓨터 가입 및 로그온
+### <a name="joining-client-computers-to-the-domain-and-logging-on"></a><a name="BKMK_joinlogclients"></a>도메인에 클라이언트 컴퓨터 가입 및 로그온
 
 > [!NOTE]
 > Windows PowerShell을 사용하여 이 절차를 수행하려면 PowerShell을 열고 다음 cmdlet을 입력한 후 Enter 키를 누릅니다. 도메인 이름을, 사용하려는 이름으로 바꾸는 작업도 수행해야 합니다.
@@ -990,7 +990,7 @@ DHCP(Dynamic Host Configuration Protocol) 서버 역할을 실행하는 컴퓨�
 
 5.  **암호**에 도메인 암호를 입력한 다음 화살표를 클릭하거나 Enter 키를 누릅니다.
 
-### <a name="BKMK_optionalfeatures"></a>네트워크 액세스 인증 및 웹 서비스에 대 한 선택적 기능 배포
+### <a name="deploying-optional-features-for-network-access-authentication-and-web-services"></a><a name="BKMK_optionalfeatures"></a>네트워크 액세스 인증 및 웹 서비스에 대 한 선택적 기능 배포
 핵심 네트워크를 설치한 후 무선 액세스 지점이 나 VPN 서버와 같은 네트워크 액세스 서버를 배포 하려는 경우 NPS와 웹 서버를 모두 배포 하는 것이 좋습니다. 네트워크 액세스 배포의 경우 보안 인증서 기반 인증 방법을 사용하는 것이 좋습니다. NPS를 사용하여 네트워크 액세스 정책을 관리하고 보안 인증 방법을 배포할 수 있습니다. 웹 서버를 사용하여 보안 인증에 대한 인증서를 제공하는 CA(인증 기관)의 CRL(인증서 해지 목록)을 게시할 수 있습니다.
 
 > [!NOTE]
@@ -1006,7 +1006,7 @@ DHCP(Dynamic Host Configuration Protocol) 서버 역할을 실행하는 컴퓨�
 
 -   [WEB1 배포](#BKMK_IIS)
 
-#### <a name="BKMK_deployNPS1"></a>NPS1 배포
+#### <a name="deploying-nps1"></a><a name="BKMK_deployNPS1"></a>NPS1 배포
 NPS(네트워크 정책 서버) 서버는 VPN(가상 사설망) 서버, 무선 액세스 지점 및 802.1X 인증 스위치와 같은 다른 네트워크 액세스 기술을 배포하기 위한 준비 단계로 설치합니다.
 
 NPS (네트워크 정책 서버)를 사용 하면 다음 기능을 사용 하 여 네트워크 정책을 중앙에서 구성 하 고 관리할 수 있습니다. RADIUS(Remote Authentication Dial-In User Service) (RADIUS) 서버 및 RADIUS 프록시.
@@ -1035,7 +1035,7 @@ NPS는 핵심 네트워크의 선택적 구성 요소이지만 다음 중 한 �
 > [!NOTE]
 > 이 가이드에서는 독립 실행형 서버 또는 NPS1 이라는 VM에 NPS를 배포 하기 위한 지침을 제공 합니다.  또 다른 권장 되는 배포 모델은 도메인 컨트롤러에 NPS를 설치 하는 것입니다. 독립 실행형 서버 대신 도메인 컨트롤러에 NPS를 설치 하려는 경우에는 d c 1에 NPS를 설치 합니다.
 
-##### <a name="bkmk_NetFndtn_Pln_NPS-01"></a>NPS1 배포 계획
+##### <a name="planning-the-deployment-of-nps1"></a><a name="bkmk_NetFndtn_Pln_NPS-01"></a>NPS1 배포 계획
 핵심 네트워크 설치 후 무선 액세스 지점이나 VPN 서버와 같은 네트워크 액세스 서버를 배포하려는 경우에는 NPS를 배포하는 것이 좋습니다.
 
 NPS를 RADIUS(Remote Authentication Dial-In User Service) 서버로 사용하는 경우 NPS에서 네트워크 액세스 서버를 통해 연결 요청을 인증하고 권한 부여합니다. 또한 NPS를 사용하면 네트워크에 액세스할 수 있는 사용자, 네트워크에 액세스할 수 있는 방법 및 네트워크에 액세스할 수 있는 시기를 결정하는 네트워크 정책을 중앙에서 구성하고 관리할 수 있습니다.
@@ -1046,7 +1046,7 @@ NPS를 RADIUS(Remote Authentication Dial-In User Service) 서버로 사용하는
 
 - RADIUS 계정 구성을 계획합니다. NPS에서는 계정 데이터를 SQL Server 데이터베이스 또는 로컬 컴퓨터의 텍스트 파일로 기록할 수 있습니다. SQL Server 로깅을 사용하려는 경우에는 SQL Server를 실행하는 서버의 설치와 구성을 계획합니다.
 
-##### <a name="BKMK_installNPS"></a>NPS (네트워크 정책 서버) 설치
+##### <a name="install-network-policy-server-nps"></a><a name="BKMK_installNPS"></a>NPS (네트워크 정책 서버) 설치
 역할 및 기능 추가 마법사를 사용 하 여 NPS (네트워크 정책 서버)를 설치 하려면이 절차를 사용할 수 있습니다. NPS는 네트워크 정책 및 액세스 서비스 서버 역할의 역할 서비스입니다.
 
 > [!NOTE]
@@ -1082,7 +1082,7 @@ NPS를 RADIUS(Remote Authentication Dial-In User Service) 서버로 사용하는
 
 8.  **설치 선택 확인**에서 **필요한 경우 자동으로 대상 서버 다시 시작**을 클릭합니다. 이 선택을 확인하라는 메시지가 표시되면 **예**를 클릭한 다음 **설치**를 클릭합니다. 설치 프로세스가 진행되는 동안 설치 진행률 페이지에 상태가 표시됩니다. 프로세스가 완료 되 면 " *computername*에서 설치가 완료 되었습니다." 라는 메시지가 표시 됩니다. 여기서 *Computername* 은 네트워크 정책 서버를 설치한 컴퓨터의 이름입니다. **닫기**를 클릭합니다.
 
-##### <a name="BKMK_registerNPS"></a>기본 도메인에 NPS 등록
+##### <a name="register-the-nps-in-the-default-domain"></a><a name="BKMK_registerNPS"></a>기본 도메인에 NPS 등록
 이 절차를 사용 하 여 서버가 도메인 구성원 인 도메인에 NPS를 등록할 수 있습니다.
 
 NPSs는 권한 부여 프로세스 동안 사용자 계정의 전화 접속 속성을 읽을 수 있는 권한을 갖도록 Active Directory에 등록 되어야 합니다. NPS를 등록 하면 서버가 Active Directory의 **RAS 및 IAS 서버** 그룹에 추가 됩니다.
@@ -1102,21 +1102,21 @@ NPSs는 권한 부여 프로세스 동안 사용자 계정의 전화 접속 속�
 
 2.  **NPS(로컬)** 를 마우스 오른쪽 단추로 클릭한 다음 **Active Directory에 서버 등록**을 클릭합니다. **네트워크 정책 서버** 대화 상자가 열립니다.
 
-3.  **네트워크 정책 서버**, 클릭 **확인**, 를 클릭 하 고 **확인** 다시 합니다.
+3.  **네트워크 정책 서버**에서 **확인**을 클릭한 다음 **확인**을 다시 클릭합니다.
 
 네트워크 정책 서버에 대 한 자세한 내용은 [NPS (네트워크 정책 서버)](../technologies/nps/nps-top.md)를 참조 하세요.
 
-#### <a name="BKMK_IIS"></a>WEB1 배포
+#### <a name="deploying-web1"></a><a name="BKMK_IIS"></a>WEB1 배포
 
 Windows Server 2016의 웹 서버 (IIS) 역할은 웹 사이트, 서비스 및 응용 프로그램을 안정적으로 호스팅하기 위한 안전 하 고 확장 가능 하며 관리 하기 쉬운 모듈식 플랫폼을 제공 합니다. 인터넷 정보 서비스 (IIS)를 사용 하 여 인터넷, 인트라넷 또는 엑스트라넷의 사용자와 정보를 공유할 수 있습니다. IIS는 IIS, ASP.NET, FTP 서비스, PHP 및 WCF (Windows Communication Foundation)를 통합 하는 통합 웹 플랫폼입니다.
 
 웹 서버 (IIS) 서버 역할을 사용 하 여 도메인 구성원 컴퓨터에서 액세스할 수 있도록 CRL을 게시 하는 것 외에도 웹 서버 (IIS) 서버 역할을 사용 하면 여러 웹 사이트, 웹 응용 프로그램 및 FTP 사이트를 설정 하 고 관리할 수 있습니다. 또한 IIS는 다음과 같은 이점을 제공 합니다.
 
--   서버 공간 감소 및 자동 응용 프로그램 격리를 통해 웹 보안을 최대화할 수 있습니다.
+-   서버 공간 감소 및 자동 애플리케이션 격리를 통해 웹 보안을 최대화할 수 있습니다.
 
--   ASP.NET, 클래식 ASP 및 PHP 웹 응용 프로그램을 같은 서버에서 쉽게 배포 및 실행할 수 있습니다.
+-   ASP.NET, 클래식 ASP 및 PHP 웹 애플리케이션을 같은 서버에서 쉽게 배포 및 실행할 수 있습니다.
 
--   작업자 프로세스에 고유한 ID 및 샌드박스 구성을 기본적으로 제공하여 응용 프로그램을 격리함으로써 보안 위험을 더욱 줄입니다.
+-   작업자 프로세스에 고유한 ID 및 샌드박스 구성을 기본적으로 제공하여 애플리케이션을 격리함으로써 보안 위험을 더욱 줄입니다.
 
 -   고객의 요구 사항에 적합한 사용자 지정 모듈을 통해 기본 제공 IIS 구성 요소를 쉽게 추가, 제거 및 교체할 수 있습니다.
 
@@ -1130,8 +1130,8 @@ Windows Server 2016의 웹 서버 (IIS) 역할은 웹 사이트, 서비스 및 �
 
 -   [웹 서버 (IIS) 서버 역할을 설치 합니다.](#BKMK_install_IIS)
 
-##### <a name="BKMK_install_IIS"></a>웹 서버 (IIS) 서버 역할을 설치 합니다.
-이 절차를 완료 하려면의 구성원 이어야는 **관리자** 그룹입니다.
+##### <a name="install-the-web-server-iis-server-role"></a><a name="BKMK_install_IIS"></a>웹 서버 (IIS) 서버 역할을 설치 합니다.
+이 절차를 완료하려면 **Administrators** 그룹의 구성원이어야 합니다.
 
 > [!NOTE]
 > Windows PowerShell을 사용하여 이 절차를 수행하려면 PowerShell을 열고 다음을 입력한 후 Enter 키를 누릅니다.
@@ -1151,11 +1151,11 @@ Windows Server 2016의 웹 서버 (IIS) 역할은 웹 사이트, 서비스 및 �
 
 5.  **서버 역할 선택** 페이지에서를 스크롤하고 **웹 서버 (IIS)** 를 선택 합니다. **웹 서버 (IIS)에 필요한 기능 추가** 대화 상자가 열립니다. **기능 추가**를 클릭한 후 **다음**을 클릭합니다.
 
-6.  클릭 **다음** 모든 기본 웹 서버 설정 하 고 클릭 한 다음 사용자가 수락 될 때까지 **설치**합니다.
+6.  기본 웹 서버 설정이 모두 적용될 때까지 **다음**을 클릭한 후 **설치**를 클릭합니다.
 
-7.  설치 된 모든, 성공 했음을 확인 한 다음 클릭 **닫기**합니다.
+7.  모든 설치가 완료되었는지 확인한 다음 **닫기**를 클릭합니다.
 
-## <a name="BKMK_resources"></a>추가 기술 리소스
+## <a name="additional-technical-resources"></a><a name="BKMK_resources"></a>추가 기술 리소스
 이 가이드의 기술에 대한 자세한 내용은 다음 리소스를 참조하십시오.
 
  Windows Server 2016, Windows Server 2012 R2 및 Windows Server 2012 기술 라이브러리 리소스
@@ -1174,7 +1174,7 @@ Windows Server 2016의 웹 서버 (IIS) 역할은 웹 사이트, 서비스 및 �
 
 -   [웹 서버 (IIS) 개요](https://technet.microsoft.com/library/hh831725.aspx) https://technet.microsoft.com/library/hh831725.aspx.
 
-## <a name="BKMK_appendix"></a>부록 A ~ E
+## <a name="appendices-a-through-e"></a><a name="BKMK_appendix"></a>부록 A ~ E
 다음 섹션에는 Windows Server 2016, Windows 10, Windows Server 2012 및 Windows 8이 아닌 다른 운영 체제를 실행 하는 컴퓨터에 대 한 추가 구성 정보가 포함 되어 있습니다. 또한 배포를 지원 하기 위한 네트워크 준비 워크시트도 제공 됩니다.
 
 1.  [부록 A-컴퓨터 이름 바꾸기](#BKMK_A)
@@ -1187,14 +1187,14 @@ Windows Server 2016의 웹 서버 (IIS) 역할은 웹 사이트, 서비스 및 �
 
 5.  [부록 E-핵심 네트워크 계획 준비 시트](#BKMK_E)
 
-## <a name="BKMK_A"></a>부록 A-컴퓨터 이름 바꾸기
+## <a name="appendix-a---renaming-computers"></a><a name="BKMK_A"></a>부록 A-컴퓨터 이름 바꾸기
 이 섹션의 절차를 사용 하 여 Windows Server 2008 R2, Windows 7, Windows Server 2008 및 Windows Vista를 실행 하는 컴퓨터에 다른 컴퓨터 이름을 제공할 수 있습니다.
 
 -   [Windows Server 2008 R2 및 Windows 7](#bkmk_NetFndtn_Pln_rename_R2)
 
 -   [Windows Server 2008 및 Windows Vista](#bkmk_NetFndtn_Pln_Renam08)
 
-### <a name="bkmk_NetFndtn_Pln_rename_R2"></a>Windows Server 2008 R2 및 Windows 7
+### <a name="windows-server-2008-r2-and-windows-7"></a><a name="bkmk_NetFndtn_Pln_rename_R2"></a>Windows Server 2008 R2 및 Windows 7
 이 절차를 수행하려면 최소한 **Administrators** 그룹의 구성원이거나 이와 동등한 자격이 필요합니다.
 
 ##### <a name="to-rename-computers-running-windows-server-2008-r2-and-windows-7"></a>Windows Server 2008 R2 및 Windows 7을 실행하는 컴퓨터의 이름을 바꾸려면
@@ -1212,7 +1212,7 @@ Windows Server 2016의 웹 서버 (IIS) 역할은 웹 사이트, 서비스 및 �
 
 5.  **확인**을 차례로 두 번 클릭하고 **닫기**를 클릭한 다음 **지금 다시 시작**을 클릭하여 컴퓨터를 다시 시작합니다.
 
-### <a name="bkmk_NetFndtn_Pln_Renam08"></a>Windows Server 2008 및 Windows Vista
+### <a name="windows-server-2008-and-windows-vista"></a><a name="bkmk_NetFndtn_Pln_Renam08"></a>Windows Server 2008 및 Windows Vista
 이 절차를 수행하려면 최소한 **Administrators** 그룹의 구성원이거나 이와 동등한 자격이 필요합니다.
 
 ##### <a name="to-rename-computers-running-windows-server-2008-and-windows-vista"></a>Windows Server 2008 및 Windows Vista를 실행 하는 컴퓨터의 이름을 바꾸려면
@@ -1230,14 +1230,14 @@ Windows Server 2016의 웹 서버 (IIS) 역할은 웹 사이트, 서비스 및 �
 
 5.  **확인**을 차례로 두 번 클릭하고 **닫기**를 클릭한 다음 **지금 다시 시작**을 클릭하여 컴퓨터를 다시 시작합니다.
 
-## <a name="BKMK_B"></a>부록 B-고정 IP 주소 구성
+## <a name="appendix-b---configuring-static-ip-addresses"></a><a name="BKMK_B"></a>부록 B-고정 IP 주소 구성
 이 항목에서는 다음 운영 체제를 실행하는 컴퓨터에 대해 고정 IP 주소를 구성하는 절차를 설명합니다.
 
 -   [Windows Server 2008 R2](#bkmk_R2Cng_WS08R2IP)
 
 -   [Windows Server 2008](#bkmk_NetFndtn_Pln_CfgStatic08)
 
-### <a name="bkmk_R2Cng_WS08R2IP"></a>Windows Server 2008 R2
+### <a name="windows-server-2008-r2"></a><a name="bkmk_R2Cng_WS08R2IP"></a>Windows Server 2008 R2
 이 절차를 수행하려면 최소한 **Administrators** 그룹의 구성원이거나 이와 동등한 자격이 있어야 합니다.
 
 ##### <a name="to-configure-a-static-ip-address-on-a-computer-running-windows-server-2008-r2"></a>Windows Server 2008 R2를 실행하는 컴퓨터에 대해 고정 IP 주소를 구성하려면
@@ -1266,7 +1266,7 @@ Windows Server 2016의 웹 서버 (IIS) 역할은 웹 사이트, 서비스 및 �
 
 11. **확인**을 클릭한 다음 **닫기**를 클릭합니다.
 
-### <a name="bkmk_NetFndtn_Pln_CfgStatic08"></a>Windows Server 2008
+### <a name="windows-server-2008"></a><a name="bkmk_NetFndtn_Pln_CfgStatic08"></a>Windows Server 2008
 이 절차를 수행하려면 최소한 **Administrators** 그룹의 구성원이거나 이와 동등한 자격이 필요합니다.
 
 ##### <a name="to-configure-a-static-ip-address-on-a-computer-running-windows-server-2008"></a>Windows Server 2008을 실행하는 컴퓨터에 대해 고정 IP 주소를 구성하려면
@@ -1293,7 +1293,7 @@ Windows Server 2016의 웹 서버 (IIS) 역할은 웹 사이트, 서비스 및 �
 
 11. **확인**을 클릭한 다음 **닫기**를 클릭합니다.
 
-## <a name="BKMK_C"></a>부록 C-도메인에 컴퓨터 가입
+## <a name="appendix-c---joining-computers-to-the-domain"></a><a name="BKMK_C"></a>부록 C-도메인에 컴퓨터 가입
 이러한 절차를 사용 하 여 Windows Server 2008 R2, Windows 7, Windows Server 2008 및 Windows Vista를 실행 하는 컴퓨터를 도메인에 조인할 수 있습니다.
 
 -   [Windows Server 2008 R2 및 Windows 7](#BKMK_c1)
@@ -1303,7 +1303,7 @@ Windows Server 2016의 웹 서버 (IIS) 역할은 웹 사이트, 서비스 및 �
 > [!IMPORTANT]
 > 도메인에 컴퓨터를 가입하려면 로컬 Administrator 계정으로 컴퓨터에 로그온하거나, 로컬 컴퓨터 관리 자격 증명이 없는 사용자 계정으로 컴퓨터에 로그온한 경우 도메인에 컴퓨터를 가입하는 중에 로컬 Administrator 계정의 자격 증명을 제공해야 합니다. 또한 컴퓨터를 가입할 도메인에 사용자 계정이 있어야 합니다. 도메인에 컴퓨터를 가입하는 중에 도메인 계정 자격 증명(사용자 이름 및 암호)을 확인하는 메시지가 표시됩니다.
 
-### <a name="BKMK_c1"></a>Windows Server 2008 R2 및 Windows 7
+### <a name="windows-server-2008-r2-and-windows-7"></a><a name="BKMK_c1"></a>Windows Server 2008 R2 및 Windows 7
 이 절차를 수행하려면 최소한 **Domain Users** 그룹의 구성원이거나 이와 동등한 자격이 필요합니다.
 
 ##### <a name="to-join-computers-running-windows-server-2008-r2-and-windows-7-to-the-domain"></a>Windows Server 2008 R2 및 Windows 7을 실행 하는 컴퓨터를 도메인에 가입 시키려면
@@ -1329,7 +1329,7 @@ Windows Server 2016의 웹 서버 (IIS) 역할은 웹 사이트, 서비스 및 �
 
 9. **시스템 속성** 대화 상자의 **컴퓨터 이름** 탭에서 **닫기**를 클릭합니다. **Microsoft Windows** 대화 상자가 열리고, 변경 내용을 적용하려면 컴퓨터를 다시 시작해야 한다는 메시지가 다시 표시됩니다. **지금 다시 시작**을 클릭합니다.
 
-### <a name="BKMK_c2"></a>Windows Server 2008 및 Windows Vista
+### <a name="windows-server-2008-and-windows-vista"></a><a name="BKMK_c2"></a>Windows Server 2008 및 Windows Vista
 이 절차를 수행하려면 최소한 **Domain Users** 그룹의 구성원이거나 이와 동등한 자격이 필요합니다.
 
 ##### <a name="to-join-computers-running-windows-server-2008-and-windows-vista-to-the-domain"></a>Windows Server 2008 및 Windows Vista를 실행 하는 컴퓨터를 도메인에 가입 시키려면
@@ -1352,14 +1352,14 @@ Windows Server 2016의 웹 서버 (IIS) 역할은 웹 사이트, 서비스 및 �
 
 9. **시스템 속성** 대화 상자의 **컴퓨터 이름** 탭에서 **닫기**를 클릭합니다. **Microsoft Windows** 대화 상자가 열리고, 변경 내용을 적용하려면 컴퓨터를 다시 시작해야 한다는 메시지가 다시 표시됩니다. **지금 다시 시작**을 클릭합니다.
 
-## <a name="BKMK_D"></a>부록 D-도메인에 로그온
+## <a name="appendix-d---log-on-to-the-domain"></a><a name="BKMK_D"></a>부록 D-도메인에 로그온
 이러한 절차를 사용 하 여 Windows Server 2008 R2, Windows 7, Windows Server 2008 및 Windows Vista를 실행 하는 컴퓨터를 사용 하 여 도메인에 로그온 할 수 있습니다.
 
 -   [Windows Server 2008 R2 및 Windows 7](#BKMK_d1)
 
 -   [Windows Server 2008 및 Windows Vista](#BKMK_d2)
 
-### <a name="BKMK_d1"></a>Windows Server 2008 R2 및 Windows 7
+### <a name="windows-server-2008-r2-and-windows-7"></a><a name="BKMK_d1"></a>Windows Server 2008 R2 및 Windows 7
 이 절차를 수행하려면 최소한 **Domain Users** 그룹의 구성원이거나 이와 동등한 자격이 필요합니다.
 
 ##### <a name="log-on-to-the-domain-using-computers-running-windows-server-2008-r2-and-windows-7"></a>Windows Server 2008 R2 및 Windows 7을 실행 하는 컴퓨터를 사용 하 여 도메인에 로그온
@@ -1374,7 +1374,7 @@ Windows Server 2016의 웹 서버 (IIS) 역할은 웹 사이트, 서비스 및 �
 
 5.  **암호**에 도메인 암호를 입력한 다음 화살표를 클릭하거나 Enter 키를 누릅니다.
 
-### <a name="BKMK_d2"></a>Windows Server 2008 및 Windows Vista
+### <a name="windows-server-2008-and-windows-vista"></a><a name="BKMK_d2"></a>Windows Server 2008 및 Windows Vista
 이 절차를 수행하려면 최소한 **Domain Users** 그룹의 구성원이거나 이와 동등한 자격이 필요합니다.
 
 ##### <a name="log-on-to-the-domain-using-computers-running-windows-server-2008-and-windows-vista"></a>Windows Server 2008 및 Windows Vista를 실행 하는 컴퓨터를 사용 하 여 도메인에 로그온
@@ -1389,7 +1389,7 @@ Windows Server 2016의 웹 서버 (IIS) 역할은 웹 사이트, 서비스 및 �
 
 5.  **암호**에 도메인 암호를 입력한 다음 화살표를 클릭하거나 Enter 키를 누릅니다.
 
-## <a name="BKMK_E"></a>부록 E-핵심 네트워크 계획 준비 시트
+## <a name="appendix-e---core-network-planning-preparation-sheet"></a><a name="BKMK_E"></a>부록 E-핵심 네트워크 계획 준비 시트
 이 네트워크 계획 준비 시트를 사용하여 핵심 네트워크 설치에 필요한 정보를 수집할 수 있습니다. 이 항목에서는 설치 또는 구성 프로세스 도중 정보나 특정 값을 제공해야 하는 각 서버 컴퓨터에 대한 개별 구성 항목이 포함된 표를 제공합니다. 각 구성 항목에 대한 예제 값을 제공합니다.
 
 계획 및 추적을 위해, 각 표에는 자신의 배포에 사용한 값을 입력할 수 있는 공간이 있습니다. 이 표를 사용하여 보안 관련 값을 기록하는 경우에는 정보를 안전한 위치에 보관해야 합니다.
@@ -1408,7 +1408,7 @@ Windows Server 2016의 웹 서버 (IIS) 역할은 웹 사이트, 서비스 및 �
 
 3.  [네트워크 정책 서버 설치 (선택 사항)](#BKMK_FndtnPrep_InstallNPS)
 
-### <a name="BKMK_FndtnPrep_InstallAD"></a>Active Directory Domain Services 및 DNS 설치
+### <a name="installing-active-directory-domain-services-and-dns"></a><a name="BKMK_FndtnPrep_InstallAD"></a>Active Directory Domain Services 및 DNS 설치
 이 섹션의 표에는 Active Directory Domain Services (AD DS) 및 DNS의 사전 설치 및 설치에 대 한 구성 항목이 나열 되어 있습니다.
 
 ##### <a name="pre-installation-configuration-items-for-ad-ds-and-dns"></a>AD DS 및 DNS에 대 한 사전 설치 구성 항목
@@ -1443,7 +1443,7 @@ Windows Server 핵심 네트워크 배포 절차 [새 포리스트에 대한 AD 
 |디렉터리 복원 모드 관리자 암호|J*p2leO4$F||
 |응답 파일 이름(옵션)|AD DS_AnswerFile||
 
-#### <a name="BKMK_FndtnPrep_DNSRevrsLook"></a>DNS 역방향 조회 영역 구성
+#### <a name="configuring-a-dns-reverse-lookup-zone"></a><a name="BKMK_FndtnPrep_DNSRevrsLook"></a>DNS 역방향 조회 영역 구성
 
 |구성 항목|예제 값|값|
 |-----------------------|------------------|----------|
@@ -1453,7 +1453,7 @@ Windows Server 핵심 네트워크 배포 절차 [새 포리스트에 대한 AD 
 |역방향 조회 영역 이름<br /><br />(IP 유형)|-IPv4 역방향 조회 영역<br />-IPv6 역방향 조회 영역||
 |역방향 조회 영역 이름<br /><br />(네트워크 ID)|10.0.0||
 
-### <a name="BKMK_FndtnPrep_InstallDHCP"></a>DHCP 설치
+### <a name="installing-dhcp"></a><a name="BKMK_FndtnPrep_InstallDHCP"></a>DHCP 설치
 이 섹션의 표에는 DHCP의 사전 설치 및 설치에 대한 구성 항목이 나열되어 있습니다.
 
 ##### <a name="pre-installation-configuration-items-for-dhcp"></a>DHCP에 대한 사전 설치 구성 항목
@@ -1492,7 +1492,7 @@ Windows Server 핵심 네트워크 배포 절차 [DHCP(Dynamic Host Configuratio
 |임대 기간|8일||
 |IPv6 DHCP 서버 작동 모드|사용 안 함||
 
-#### <a name="BKMK_FndtnPrep_DHCP_Exclusn"></a>DHCP에서 제외 범위 만들기
+#### <a name="creating-an-exclusion-range-in-dhcp"></a><a name="BKMK_FndtnPrep_DHCP_Exclusn"></a>DHCP에서 제외 범위 만들기
 DHCP에서 범위를 만드는 동안 제외 범위를 만들기 위한 구성 항목입니다.
 
 |구성 항목|예제 값|값|
@@ -1502,7 +1502,7 @@ DHCP에서 범위를 만드는 동안 제외 범위를 만들기 위한 구성 �
 |제외 범위 시작 IP 주소|10.0.0.1||
 |제외 범위 끝 IP 주소|10.0.0.15||
 
-#### <a name="bkmk_NetFndtn_Pln_DHCP_NewScope"></a>새 DHCP 범위 만들기
+#### <a name="creating-a-new-dhcp-scope"></a><a name="bkmk_NetFndtn_Pln_DHCP_NewScope"></a>새 DHCP 범위 만들기
 Windows Server 핵심 네트워크 배포 절차 [새 DHCP 범위 만들기 및 활성화](#BKMK_newscopeDHCP)에 대한 구성 항목
 
 |구성 항목|예제 값|값|
@@ -1515,12 +1515,12 @@ Windows Server 핵심 네트워크 배포 절차 [새 DHCP 범위 만들기 및 
 |서브넷 마스크|255.255.255.0||
 |(제외 범위) 시작 IP 주소|10.0.1.1||
 |제외 범위 끝 IP 주소|10.0.1.15||
-|임대 기간<br /><br />요일<br /><br />시간<br /><br />분|-8<br />-   0<br />-   0||
+|임대 기간<br /><br />요일<br /><br />Hours<br /><br />분|-8<br />-   0<br />-   0||
 |라우터(기본 게이트웨이)<br /><br />IP 주소|10.0.1.1||
 |DNS 부모 도메인|corp.contoso.com||
 |DNS 서버<br /><br />IP 주소|10.0.0.2||
 
-### <a name="BKMK_FndtnPrep_InstallNPS"></a>네트워크 정책 서버 설치 (선택 사항)
+### <a name="installing-network-policy-server-optional"></a><a name="BKMK_FndtnPrep_InstallNPS"></a>네트워크 정책 서버 설치 (선택 사항)
 이 섹션의 표에서는 NPS의 사전 설치 및 설치에 대한 구성 항목을 보여 줍니다.
 
 ##### <a name="pre-installation-configuration-items"></a>사전 설치 구성 항목
