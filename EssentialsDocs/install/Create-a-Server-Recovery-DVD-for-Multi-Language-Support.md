@@ -2,26 +2,26 @@
 title: 다국어 지원을 위한 서버 복구 DVD 만들기
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: c7da0f6c-9732-4784-9c28-7dad72c4071d
 author: daveba
 ms.author: daveba
-ms.openlocfilehash: 59d8d41e5836ba88b405a058c8340f454b081c06
-ms.sourcegitcommit: 2082335e1260826fcbc3dccc208870d2d9be9306
+ms.openlocfilehash: b71fc748f7cc8d82420b7a62fe502135036db727
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69980237"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80312111"
 ---
 # <a name="create-a-server-recovery-dvd-for-multi-language-support"></a>다국어 지원을 위한 서버 복구 DVD 만들기
 
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-##  <a name="BKMK_MLHeadedRecovery"></a>로컬로 관리 되는 서버에서 다국어 지원을 위한 서버 설치 및 서버 복구 DVD 만들기  
+##  <a name="create-a-server-setup-and-server-recovery-dvd-for-multiple-language-support-on-locally-administered-servers"></a><a name="BKMK_MLHeadedRecovery"></a>로컬로 관리 되는 서버에서 다국어 지원을 위한 서버 설치 및 서버 복구 DVD 만들기  
   
 > [!NOTE]
->  먼저 연습에 설명 된 [대로 다국어 Windows 이미지를 만들어야 합니다. Windows Server Essentials install.wim](https://technet.microsoft.com/library/jj126995) 팩을 설치 하기 전에 다국어 windows 이미지를 만듭니다.  
+>  먼저 [연습: 다국어 Windows 이미지 만들기](https://technet.microsoft.com/library/jj126995) 의 설명에 따라 다국어 windows 이미지를 만든 후에 Windows Server Essentials install.wim pack을 설치 합니다.  
   
  설정은 Windows PE(Preinstallation Environment)와 초기 구성의 두 단계로 이루어집니다. 기본적으로 초기 구성의 언어 선택 페이지는 표시되지 않습니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "69980237"
   
 2.  배포 가능 미디어 만들기  
   
-### <a name="prerequisites"></a>사전 요구 사항  
+### <a name="prerequisites"></a>필수 조건  
  Windows 설치 프로그램에 다국어 지원을 추가하려면 다음이 필요합니다.  
   
 
@@ -57,16 +57,16 @@ ms.locfileid: "69980237"
   
 -   Windows Server Essentials 언어 팩 DVD.  
   
-###  <a name="BKMK_Steps"></a>여러 언어 지원 추가  
+###  <a name="adding-multiple-language-support"></a><a name="BKMK_Steps"></a>여러 언어 지원 추가  
  Windows 설치 프로그램에 여러 언어 지원을 추가 하려면 Windows Server 2012 및 Windows Server Essentials 언어 팩을 추가 하 여 설치 .wim을 업데이트 합니다.  
   
 #### <a name="update-installwim"></a>Install.wim 업데이트  
  이 단계에서는 Windows Server 2012 및 Windows Server Essentials 언어 팩을 설치 .wim에 추가 합니다.  
   
 > [!NOTE]
->  Windows Server 2012 용 언어 팩을 설치 했는지 확인 합니다. 이렇게 하면 적절한 브랜딩을 가져오게 됩니다. Windows Server 2012 다국어 사용자 인터페이스 언어 팩은 [Microsoft.com](https://www.microsoft.com/OEM/en/installation/downloads/Pages/technical-downloads.aspx)에서 사용할 수 있습니다. 이 [연습에서 설명 하는 지침을 따르세요. 다국어 windows 이미지](https://technet.microsoft.com/library/jj126995.aspx) 만들기 windows Server Essentials 언어 팩을 설치 하기 전에 다국어 windows 이미지를 만드는 데 사용할 수 있습니다.  
+>  Windows Server 2012 용 언어 팩을 설치 했는지 확인 합니다. 이렇게 하면 적절한 브랜딩을 가져오게 됩니다. Windows Server 2012 다국어 사용자 인터페이스 언어 팩은 [Microsoft.com](https://www.microsoft.com/OEM/en/installation/downloads/Pages/technical-downloads.aspx)에서 사용할 수 있습니다. Windows Server Essentials 언어 팩을 설치 하려면 먼저 [연습: 다국어 Windows 이미지 만들기](https://technet.microsoft.com/library/jj126995.aspx) 에 설명 된 지침에 따라 다국어 windows 이미지를 만듭니다.  
 >   
->  Windows Server Essentials 언어 팩은 \language\\pack의 언어 팩 미디어 < CultureName\>에서 다운로드할 수 있습니다.  
+>  Windows Server Essentials 언어 팩은 \Language pack의 언어 팩 미디어\\< CultureName\>에서 다운로드할 수 있습니다.  
   
 > [!NOTE]
 >  Windows Server 2012을 출시 하기 전에는 일부 언어 팩만 사용할 수 있는 것은 아닙니다.  
@@ -104,13 +104,13 @@ ms.locfileid: "69980237"
   
 ## <a name="see-also"></a>관련 항목  
 
- [이미지 만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)   
+ [이미지  만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)  
  [추가 사용자 지정](Additional-Customizations.md)   
- [배포를 위한 이미지 준비](Preparing-the-Image-for-Deployment.md)   
+ [배포할 이미지를 준비 하는 중](Preparing-the-Image-for-Deployment.md)   
  [사용자 환경 테스트](Testing-the-Customer-Experience.md)
 
- [이미지 만들기 및 사용자 지정](../install/Creating-and-Customizing-the-Image.md)   
+ [이미지  만들기 및 사용자 지정](../install/Creating-and-Customizing-the-Image.md)  
  [추가 사용자 지정](../install/Additional-Customizations.md)   
- [배포를 위한 이미지 준비](../install/Preparing-the-Image-for-Deployment.md)   
+ [배포할 이미지를 준비 하는 중](../install/Preparing-the-Image-for-Deployment.md)   
  [사용자 환경 테스트](../install/Testing-the-Customer-Experience.md)
 

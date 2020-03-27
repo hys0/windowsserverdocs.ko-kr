@@ -3,7 +3,7 @@ title: Windows Server Essentials에서 원격 웹 액세스 사용
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: 47ea21a0-5e05-4b4b-8fa4-338c82601276
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: f6a5d6fd42c5cd7e92821e1157748054c741ef04
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: 8ea6e5c1936cb87fb90cd24fd8e0f6186f42b129
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79322105"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80313129"
 ---
 # <a name="use-remote-web-access-in-windows-server-essentials"></a>Windows Server Essentials에서 원격 웹 액세스 사용
 
@@ -36,7 +36,7 @@ ms.locfileid: "79322105"
   
 -   [모바일 장치에서 연결](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_ConnectMobile)  
   
-##  <a name="BKMK_Connect"></a>원격 웹 액세스에 연결  
+##  <a name="connect-to-remote-web-access"></a><a name="BKMK_Connect"></a>원격 웹 액세스에 연결  
   
 -   [원격 웹 액세스에 로그온](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_1)  
   
@@ -48,14 +48,14 @@ ms.locfileid: "79322105"
   
 -   [모바일 장치에서 연결](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_ConnectMobile)  
   
-##  <a name="BKMK_Connect"></a>원격 웹 액세스에 연결  
+##  <a name="connect-to-remote-web-access"></a><a name="BKMK_Connect"></a>원격 웹 액세스에 연결  
   
 -   [원격 웹 액세스에 로그온](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_1)  
   
 -   [컴퓨터에 원격으로 액세스](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_1.5)  
 
   
-###  <a name="BKMK_1"></a>원격 웹 액세스에 로그온  
+###  <a name="log-on-to-remote-web-access"></a><a name="BKMK_1"></a>원격 웹 액세스에 로그온  
  로컬 또는 원격 컴퓨터에서 원격 웹 액세스에 로그온 할 때 Windows Server Essentials를 실행 하는 서버의 리소스와 네트워크의 컴퓨터에서 리소스에 액세스할 수 있습니다.  
   
 ##### <a name="to-log-on-to-remote-web-access-from-a-network-computer"></a>네트워크 컴퓨터에서 원격 웹 액세스에 로그온하려면  
@@ -76,7 +76,7 @@ ms.locfileid: "79322105"
   
 2.  원격 웹 액세스 로그온 페이지에서 텍스트 상자에 사용자 이름과 암호를 입력 한 다음 화살표를 클릭 합니다.  
   
-###  <a name="BKMK_1.5"></a>컴퓨터에 원격으로 액세스  
+###  <a name="remotely-access-your-computer"></a><a name="BKMK_1.5"></a>컴퓨터에 원격으로 액세스  
  사무실에 없을 때 웹 브라우저를 사용 하 여 원격 웹 액세스 사이트에 로그온 하 여 Windows Server Essentials 대시보드, 공유 폴더 및 네트워크의 컴퓨터에 원격으로 액세스할 수 있습니다.  
   
  대시보드에 연결하면 사무실에 있는 것처럼 Windows Server Essentials를 관리할 수 있습니다. 사용자 계정 추가, 공유 폴더 추가, 공유 폴더 액세스 설정과 같은 일반적인 관리 작업을 모두 수행할 수 있습니다. 네트워크의 컴퓨터에 연결하면 사무실에서 컴퓨터 앞에 있는 것처럼 데스크톱에 액세스할 수 있습니다.  
@@ -105,7 +105,7 @@ ms.locfileid: "79322105"
 #### <a name="to-connect-to-the-server-dashboard"></a>서버 대시보드에 연결하려면  
  **장치** 탭에서 서버 이름을 클릭합니다. **사용 가능** 상태의 컴퓨터만 선택할 수 있습니다. 대시보드를 사용하려면 서버에서 관리자의 사용자 계정과 암호를 제공할 수 있어야 합니다.  
   
-##  <a name="BKMK_SharedFolders"></a>파일 및 폴더 공유  
+##  <a name="share-files-and-folders"></a><a name="BKMK_SharedFolders"></a>파일 및 폴더 공유  
   
 
 -   [원격 웹 액세스에서 파일 업로드 및 다운로드](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_UploadRWA)  
@@ -117,7 +117,7 @@ ms.locfileid: "79322105"
 -   [원격 웹 액세스에서 파일 및 폴더 만들기, 이름 바꾸기, 이동, 삭제 또는 복사](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_2)  
 
   
-###  <a name="BKMK_UploadRWA"></a>원격 웹 액세스에서 파일 업로드 및 다운로드  
+###  <a name="upload-and-download-files-in-remote-web-access"></a><a name="BKMK_UploadRWA"></a>원격 웹 액세스에서 파일 업로드 및 다운로드  
  원격 웹 액세스 **공유 폴더** 탭에서 다음을 수행할 수 있습니다.  
   
 -   컴퓨터에서 Windows Server Essentials로 파일을 업로드(전송)할 수 있습니다.  
@@ -248,7 +248,7 @@ ms.locfileid: "79322105"
     > [!NOTE]
     >  타사 파일 압축 프로그램을 사용하는 경우 해당 프로그램에 대한 절차에 따라 압축 파일에서 파일을 추출합니다.  
   
-###  <a name="BKMK_2"></a>원격 웹 액세스에서 파일 및 폴더 만들기, 이름 바꾸기, 이동, 삭제 또는 복사  
+###  <a name="create-rename-move-delete-or-copy-files-and-folders-in-remote-web-access"></a><a name="BKMK_2"></a>원격 웹 액세스에서 파일 및 폴더 만들기, 이름 바꾸기, 이동, 삭제 또는 복사  
  원격 웹 액세스를 사용하여 기존 공유 폴더에 새 폴더를 만들고, 파일 및 폴더 이름을 바꾸고, 파일과 폴더를 이동 및 복사하고, 서버에서 파일과 폴더를 삭제할 수 있습니다.  
   
 > [!NOTE]
@@ -294,7 +294,7 @@ ms.locfileid: "79322105"
   
 3.  파일 또는 폴더를 복사할 대상 폴더를 마우스 오른쪽 단추로 클릭하고 **붙여넣기**를 클릭합니다.  
   
-##  <a name="BKMK_ConnectMobile"></a>모바일 장치에서 연결  
+##  <a name="connect-from-a-mobile-device"></a><a name="BKMK_ConnectMobile"></a>모바일 장치에서 연결  
   
 
 -   [모바일 장치에서 원격 웹 액세스 사용](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_8)  
@@ -306,7 +306,7 @@ ms.locfileid: "79322105"
 -   [모바일 장치에 대해 지원 되는 웹 브라우저](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_9)  
 
   
-###  <a name="BKMK_8"></a>모바일 장치에서 원격 웹 액세스 사용  
+###  <a name="use-remote-web-access-from-a-mobile-device"></a><a name="BKMK_8"></a>모바일 장치에서 원격 웹 액세스 사용  
  스마트 폰에서 원격 웹 액세스에 로그온하여 서버의 공유 폴더에 있는 파일과 폴더를 볼 수 있습니다.  
   
 > [!NOTE]
@@ -334,7 +334,7 @@ ms.locfileid: "79322105"
   
    서버의 공유 폴더에서 파일과 폴더를 검색할 수 있습니다.  
   
-###  <a name="BKMK_9"></a>모바일 장치에 대해 지원 되는 웹 브라우저  
+###  <a name="supported-web-browsers-for-mobile-devices"></a><a name="BKMK_9"></a>모바일 장치에 대해 지원 되는 웹 브라우저  
  모바일 디바이스에 대해 지원되는 웹 브라우저는 다음과 같습니다.  
   
 -   Internet Explorer Mobile 6.0 이상  

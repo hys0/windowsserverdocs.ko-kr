@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: get-started-article
 ms.assetid: 334b090d-bec4-4e67-8307-13831dbdd1d8
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 11f392e99803f0e0ddd0f8b62c9dbca5827a831c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: ce3a0dd33ff105fa7cc36305048b8a311577aa21
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405938"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80317062"
 ---
 # <a name="network-controller-high-availability"></a>네트워크 컨트롤러 고가용성
 
@@ -60,7 +60,7 @@ ms.locfileid: "71405938"
 - **빠른 장애 조치 (failover)** . Service Fabric은 매우 빠른 장애 조치 (failover)를 제공 합니다. 여러 핫 보조 서비스 복제본을 항상 사용할 수 있습니다. 하드웨어 오류로 인해 운영 체제 인스턴스를 사용할 수 없게 되 면 보조 복제본 중 하나가 주 복제본으로 즉시 승격 됩니다. 
 - **규모의 민첩성**. 리소스 요구 사항에 따라 몇 가지 인스턴스에서 최대 수천 개의 인스턴스로 이러한 신뢰할 수 있는 서비스를 쉽고 빠르게 확장할 수 있습니다. 
 
-### <a name="persistent-storage"></a>영구 저장소
+### <a name="persistent-storage"></a>영구 스토리지
 
 네트워크 컨트롤러 응용 프로그램의 구성 및 상태에 대 한 저장소 요구 사항이 크게 설정 되어 있습니다. 또한 응용 프로그램은 계획 되거나 계획 되지 않은 중단에서 사용할 수 있어야 합니다. 이러한 목적을 위해 Service Fabric는 복제 된 트랜잭션 및 지속형 저장소 인 키-값 저장소 \(KVS\)를 제공 합니다.
 

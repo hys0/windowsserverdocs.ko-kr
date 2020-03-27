@@ -6,14 +6,14 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: c4306f06-a117-4f65-b78b-9fd0d1133f95
 manager: brianlic
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 9ac5ab31db1b8c184fd179ecb3e6b87f7fffd2ba
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 927232a3b191be86ae91b1dd0d6af767d4f024ae
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405237"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80315424"
 ---
 # <a name="qos-policy-scenarios"></a>QoS 정책 시나리오
 
@@ -29,15 +29,15 @@ ms.locfileid: "71405237"
 >[!NOTE]
 >이 항목의 일부 섹션에는 설명 된 작업을 수행 하기 위해 수행할 수 있는 일반적인 단계가 포함 되어 있습니다. QoS 정책을 관리 하는 방법에 대 한 자세한 지침은 [Qos 정책 관리](qos-policy-manage.md)를 참조 하세요.
 
-## <a name="scenario-1-prioritize-network-traffic-for-a-line-of-business-application"></a>시나리오 1: Lob (기간 업무) 응용 프로그램에 대 한 네트워크 트래픽 우선 순위 지정
+## <a name="scenario-1-prioritize-network-traffic-for-a-line-of-business-application"></a>시나리오 1: lob (기간 업무) 응용 프로그램에 대 한 네트워크 트래픽 우선 순위 지정
 
 이 시나리오에서 IT 부서에는 QoS 정책을 사용 하 여 수행할 수 있는 여러 목표가 있습니다.
 
-- 중요 업무용\-응용 프로그램에 더 나은 네트워크 성능을 제공 합니다.
+- 중요 업무용 응용 프로그램에 더 나은 네트워크 성능을 제공\-합니다.
 - 특정 응용 프로그램을 사용 하는 동안 사용자의 키 집합에 대해 더 나은 네트워크 성능을 제공 합니다.
-- 회사\-전체 데이터 백업 응용 프로그램에서 한 번에 너무 많은 대역폭을 사용 하 여 네트워크 성능을 저하 하지 않도록 합니다.
+- 회사\-wide data 백업 응용 프로그램에서 한 번에 너무 많은 대역폭을 사용 하 여 네트워크 성능을 방해 하지 않는지 확인 합니다.
 
-IT 부서에서는 서비스 코드 포인트 \(DSCP\) 값 차별화를 사용 하 여 네트워크 트래픽을 분류 하 고 자체를 제공 하도록 라우터를 구성 하 여 특정 응용 프로그램의 우선 순위를 지정 하도록 QoS 정책을 구성 하기로 결정 합니다. 높은 우선 순위의 트래픽에 대 한 처리. 
+IT 부서에서는 DSCP\) 값 \(차별화 서비스 코드 포인트를 사용 하 여 특정 응용 프로그램의 우선 순위를 지정 하는 QoS 정책을 구성 하 여 네트워크 트래픽을 분류 하 고 우선 순위가 높은 트래픽에 대해 기본적으로 적용 되는 라우터를 구성 합니다. 
 
 >[!NOTE]
 >DSCP에 대 한 자세한 내용은 [qos (서비스 품질) 정책](qos-policy-top.md)항목의 **차등화 서비스 코드 포인트를 통해 Qos 우선 순위 정의** 섹션을 참조 하세요.
@@ -50,11 +50,11 @@ IT 관리자는 세 가지 별도 목표를 달성 하 여 세 가지 QoS 정책
 
 #### <a name="qos-policy-for-lob-app-servers"></a>LOB 앱 서버에 대 한 QoS 정책
 
-IT 부서가 QoS\-정책을\-만드는 첫 번째 업무상 중요 한 응용 프로그램은 기업 차원의 엔터프라이즈 리소스 계획 \(ERP\) 응용 프로그램입니다. ERP 응용 프로그램은 Windows Server 2016를 실행 하는 여러 컴퓨터에서 호스팅됩니다. Active Directory Domain Services에서 이러한 컴퓨터는 \(기간 업무 \(LOB\) 응용 프로그램 서버에\) 대해 만들어진 조직 구성 단위 OU의 구성원입니다. ERP 응용\-프로그램에 대 한 클라이언트 쪽 구성 요소는 Windows 10 및 Windows 8.1를 실행 하는 컴퓨터에 설치 됩니다.
+IT 부서가 QoS 정책을 만드는 첫 번째 업무\-중요 응용 프로그램은 회사\-wide Enterprise 리소스 계획 \(ERP\) 응용 프로그램입니다. ERP 응용 프로그램은 Windows Server 2016를 실행 하는 여러 컴퓨터에서 호스팅됩니다. Active Directory Domain Services에서 이러한 컴퓨터는 LOB (기간 업무) \(LOB\) 응용 프로그램 서버에 대해 만들어진 조직 구성 단위 \(OU\)의 멤버입니다. ERP 응용 프로그램의 클라이언트\-쪽 구성 요소는 Windows 10 및 Windows 8.1를 실행 하는 컴퓨터에 설치 됩니다.
 
-그룹 정책 IT 관리자는 QoS 정책이 적용 될 그룹 정책 개체 \(GPO\) 를 선택 합니다. IT 관리자는 qos 정책 마법사를 사용 하 여 모든 응용 프로그램, 모든 IP 주소, TCP 및 UDP 및 포트 번호\-에 대해 우선 순위가 높은 DSCP 값 44을 지정 하는 "서버 LOB 정책" 이라는 qos 정책을 만듭니다.
+그룹 정책 IT 관리자는 QoS 정책이 적용 될 GPO\) \(그룹 정책 개체를 선택 합니다. IT 관리자는 QoS 정책 마법사를 사용 하 여 모든 응용 프로그램, 모든 IP 주소, TCP 및 UDP 및 포트 번호에 대해 높은\-우선 순위 DSCP 값 44을 지정 하는 "서버 LOB 정책" 이라는 QoS 정책을 만듭니다.
 
-QoS 정책은 그룹 정책 관리 콘솔 \(GPMC\) 도구를 통해 GPO를 이러한 서버만 포함 하는 OU에 연결 하 여 LOB 서버에만 적용 됩니다. 이 초기 서버 LOB 정책은 컴퓨터에서 네트워크\-트래픽을 보낼 때마다 우선 순위가 높은 DSCP 값을 적용 합니다. 나중에이 QoS 정책을 그룹 정책 개체 편집기 도구 \(\) 에서 편집 하 여 ERP 응용 프로그램의 포트 번호를 포함할 수 있습니다 .이는 지정 된 포트 번호를 사용 하는 경우에만 정책이 적용 되도록 제한 합니다.
+QoS 정책은 그룹 정책 관리 콘솔 \(GPMC\) 도구를 통해 GPO를 이러한 서버만 포함 하는 OU에 연결 하 여 LOB 서버에만 적용 됩니다. 이 초기 서버 LOB 정책은 컴퓨터에서 네트워크 트래픽을 보낼 때마다 높은\-우선 순위 DSCP 값을 적용 합니다. 나중에이 QoS 정책을\) 그룹 정책 개체 편집기 \(편집 하 여 ERP 응용 프로그램의 포트 번호를 포함할 수 있습니다. 이렇게 하면 지정 된 포트 번호를 사용 하는 경우에만 정책이 적용 되도록 제한할 수 있습니다.
 
 #### <a name="qos-policy-for-the-finance-group"></a>재무 그룹에 대 한 QoS 정책
 
@@ -95,11 +95,11 @@ QoS 정책을 정의 하 고 그룹 정책를 사용 하 여 적용 하는 경�
 
 이 작업을 완료 하려면 다음 요구 사항을 충족 하는지 확인 합니다.
 
-- 관련 된 컴퓨터에서 QoS\-호환 운영 체제를 실행 하 고 있습니다.
+- 관련 된 컴퓨터가 QoS\-호환 되는 운영 체제를 실행 하 고 있습니다.
 
-- 관련 된 컴퓨터는 그룹 정책를 사용 하 \(여\) 구성할 수 있도록 Active Directory Domain Services AD DS 도메인의 구성원입니다.
+- 관련 된 컴퓨터는 그룹 정책를 사용 하 여 구성할 수 있도록\) 도메인 AD DS Active Directory Domain Services \(멤버입니다.
 
-- Tcp/ip 네트워크는 DSCP \(RFC 2474\)에 대해 구성 된 라우터를 사용 하 여 설정 됩니다. 자세한 내용은 [RFC 2474](https://www.ietf.org/rfc/rfc2474.txt)을 참조 하세요.
+- TCP/IP 네트워크는 \(RFC 2474\)에서 DSCP에 대해 구성 된 라우터를 사용 하 여 설정 됩니다. 자세한 내용은 [RFC 2474](https://www.ietf.org/rfc/rfc2474.txt)을 참조 하세요.
 
 - 관리자 자격 증명 요구 사항이 충족 됩니다.
 
@@ -122,7 +122,7 @@ QoS 정책을 정의 하 고 그룹 정책를 사용 하 여 적용 하는 경�
 
 Lob (기간 업무) 응용 프로그램의 우선 순위를 지정 하려면 다음 작업을 완료 합니다.
 
-1. QoS 정책을 사용 하 여 그룹 정책 \(개체\) GPO를 만들고 연결 합니다.
+1. QoS 정책을 사용 하 여 GPO\) \(그룹 정책 개체를 만들고 연결 합니다.
 
 2. 선택한 DSCP 값을 기준으로 기간 업무 응용 프로그램 (큐를 사용 하 여)을 differentially 처리 하도록 라우터를 구성 합니다. 이 작업의 절차는 보유 하 고 있는 라우터 유형에 따라 달라 집니다.
 
@@ -134,7 +134,7 @@ Windows Server 2016에서 정책 기반 QoS는 기능 URL 기반 정책을 포�
 
 이 시나리오에서는 모든 조직의 직원에 대해 학습 비디오를 호스트 하는 IIS 서버 집합을 관리 한다고 가정 합니다. 목표는 이러한 비디오 서버의 트래픽이 네트워크에 과부하가 걸리지 않도록 하 고, 비디오 트래픽이 네트워크의 음성 및 데이터 트래픽과 차별화 되는지 확인 하는 것입니다. 
 
-작업은 시나리오 1의 작업과 유사 합니다. 비디오 트래픽의 DSCP 값과 같은 트래픽 관리 설정을 디자인 하 고 구성 하 고, 기간 업무 (lob) 응용 프로그램의 경우와 동일 하 게 조정 요금을 구성 합니다. 그러나 트래픽을 지정할 때는 응용 프로그램 이름을 제공 하는 대신 HTTP 서버 응용 프로그램이 응답할 URL (예 https://hrweb/training:)만 입력 하면 됩니다.
+작업은 시나리오 1의 작업과 유사 합니다. 비디오 트래픽의 DSCP 값과 같은 트래픽 관리 설정을 디자인 하 고 구성 하 고, 기간 업무 (lob) 응용 프로그램의 경우와 동일 하 게 조정 요금을 구성 합니다. 그러나 트래픽을 지정할 때는 응용 프로그램 이름을 제공 하는 대신 HTTP 서버 응용 프로그램이 응답할 URL (예: https://hrweb/training)만 입력 하면 됩니다.
   
 > [!NOTE]
 >URL 기반 QoS 정책을 사용 하 여 Windows 7 및 Windows Server 2008 R2 이전에 릴리스된 Windows 운영 체제를 실행 하는 컴퓨터에 대 한 네트워크 트래픽의 우선 순위를 지정할 수 없습니다.
@@ -153,7 +153,7 @@ Windows Server 2016에서 정책 기반 QoS는 기능 URL 기반 정책을 포�
 
 하지만 어떤 것이 우선 순위를 부여 하나요? 규칙은 간단 합니다. URL 기반 정책은 왼쪽에서 오른쪽으로 읽는 순서로 우선 순위가 지정 됩니다. 따라서 가장 높은 우선 순위부터 가장 낮은 우선 순위로 URL 필드는 다음과 같습니다.
   
-[1. URL 구성표](#bkmk_QoS_UrlScheme)
+[1. URL 체계](#bkmk_QoS_UrlScheme)
 
 [2. URL 호스트](#bkmk_QoS_UrlHost)
 
@@ -163,11 +163,11 @@ Windows Server 2016에서 정책 기반 QoS는 기능 URL 기반 정책을 포�
 
 세부 정보는 다음과 같습니다.
 
-####  <a name="bkmk_QoS_UrlScheme"></a> 1. URL 구성표
+####  <a name="1-url-scheme"></a><a name="bkmk_QoS_UrlScheme"></a>1. URL 체계
 
- `https://`는 보다 `https://`우선 순위가 높습니다.
+ `https://` `https://`보다 우선 순위가 높습니다.
 
-####  <a name="bkmk_QoS_UrlHost"></a> 2. URL 호스트
+####  <a name="2-url-host"></a><a name="bkmk_QoS_UrlHost"></a>2. URL 호스트
 
  가장 높은 우선 순위의 우선 순위는 다음과 같습니다.
 
@@ -191,11 +191,11 @@ Windows Server 2016에서 정책 기반 QoS는 기능 URL 기반 정책을 포�
   
   **video.internal.training.hr.mycompany.com** 의 우선 순위가 가장 높고 **selfguide.training.mycompany.com** 에는 다음으로 높은 우선 순위가 있습니다. **학습** 및 **라이브러리** 공유는 동일한 낮은 우선 순위를 갖습니다.  
   
-####  <a name="bkmk_QoS_UrlPort"></a> 3. URL 포트
+####  <a name="3-url-port"></a><a name="bkmk_QoS_UrlPort"></a>3. URL 포트
 
 특정 또는 암시적 포트 번호는 와일드 카드 포트 보다 우선 순위가 높습니다.
 
-####  <a name="bkmk_QoS_UrlPath"></a> 4. URL 경로
+####  <a name="4-url-path"></a><a name="bkmk_QoS_UrlPath"></a>4. URL 경로
 
 호스트 이름과 마찬가지로 URL 경로는 여러 요소로 구성 될 수 있습니다. 더 많은 요소를 포함 하는 하나는 항상 더 작은 우선 순위 보다 우선 순위가 높습니다. 예를 들어 다음 경로는 우선 순위별로 나열 됩니다.  
 

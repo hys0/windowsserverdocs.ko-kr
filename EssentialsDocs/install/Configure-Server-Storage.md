@@ -3,7 +3,7 @@ title: 서버 저장소 구성
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: ef7ddcdd-3a74-40ca-9487-c3a6fc5155a5
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 718080c050dadc20837ab6b11a677029227e1709
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 3d7c2b49afc9d740e6a4b3fa7ed659e8358c8dc6
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70865034"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80312142"
 ---
 # <a name="configure-server-storage"></a>서버 저장소 구성
 
@@ -32,10 +32,10 @@ ms.locfileid: "70865034"
 |서버 수준|디스크 구성|  
 |------------------|------------------------|  
 |항목|-두 개의 실제 디스크<br /><br /> -다음을 포함 하는 RAID 1 미러된 세트로 구성 됩니다.<br /><br /> -C: 볼륨? 60GB<br /><br /> -D: 볼륨? 1000 GB|  
-|보통|-실제 디스크 3 개<br /><br /> -다음을 포함 하는 RAID 5 세트로 구성 됩니다.<br /><br /> -C: 볼륨? 60GB<br /><br /> -D: 볼륨? 1500 GB|  
+|중간|-실제 디스크 3 개<br /><br /> -다음을 포함 하는 RAID 5 세트로 구성 됩니다.<br /><br /> -C: 볼륨? 60GB<br /><br /> -D: 볼륨? 1500 GB|  
 |높음|-전체 실제 디스크 5 개 이상<br /><br /> -C: 볼륨을 포함 하는 RAID 1 미러된 집합의 두 디스크 100GB<br /><br /> -다음을 포함 하는 RAID 5 집합의 나머지 모든 디스크:<br /><br /> -D: 볼륨? 1500 GB<br /><br /> -E: 볼륨? 1500 GB|  
   
- 이러한 권장 사항은 설치된 운영 체제의 크기, 서버에서 사용하는 데이터 저장소의 평균 크기 및 서버 사용 수명 동안 예상되는 데이터 저장소의 증가를 고려한 것입니다. 볼륨은 단일 실제 디스크에 있는 여러 파티션이거나 별도의 실제 디스크에 둘 수 있습니다. 서버는 고객을 위한 중요 데이터를 저장 하므로 여러 실제 디스크를 사용 하 고 하드웨어 RAID 또는 저장소 공간을 사용 하 여 고객 데이터를 보호 하는 것이 좋습니다.  
+ 이러한 권장 사항은 설치된 운영 체제의 크기, 서버에서 사용하는 데이터 스토리지의 평균 크기 및 서버 사용 수명 동안 예상되는 데이터 스토리지의 증가를 고려한 것입니다. 볼륨은 단일 실제 디스크에 있는 여러 파티션이거나 별도의 실제 디스크에 둘 수 있습니다. 서버는 고객을 위한 중요 데이터를 저장 하므로 여러 실제 디스크를 사용 하 고 하드웨어 RAID 또는 저장소 공간을 사용 하 여 고객 데이터를 보호 하는 것이 좋습니다.  
   
 ## <a name="configuring-your-server-backup"></a>서버 백업 구성  
  서버에 있는 내부 하드 디스크 이외에 고객은 외부 USB 하드 디스크를 백업에 사용할 수 있습니다. 이상적인 경우 고객은 서버의 모든 데이터를 백업할 만한 충분한 공간을 가진 최소 두 개 이상의 외부 하드 디스크를 사용합니다. 외부 하드 디스크를 사용하는 경우 고객은 매일 밤 하나의 디스크를 오프사이트로 이동하여 데이터를 추가적으로 보호할 수 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "70865034"
 ## <a name="partition-configuration"></a>파티션 구성  
  서버의 초기 구성 동안 공유 폴더 및 클라이언트 컴퓨터 백업 폴더를 포함하는 일련의 기본 서버 폴더가 디스크 0의 가장 큰 데이터 파티션에 만들어집니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
 
  [Windows Server ESSENTIALS ADK를 사용 하 여 시작](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
  [이미지  만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)  

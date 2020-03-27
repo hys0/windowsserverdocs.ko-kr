@@ -3,7 +3,7 @@ title: Windows Server Essentials의 컴퓨터 백업 및 복원 오류 문제 �
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 06/25/2013
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: 5cc73aff-d2c0-4cf9-a23d-ef928ae5ddc9
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 37e79661442ba9f66a564b6c6c8fb57db1978454
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 28e3564c93f192563626bfb44992ef9bc4a49598
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59812334"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80313247"
 ---
 # <a name="troubleshoot-computer-backup-and-restore-errors-in-windows-server-essentials"></a>Windows Server Essentials의 컴퓨터 백업 및 복원 오류 문제 해결
 
@@ -26,9 +26,9 @@ ms.locfileid: "59812334"
 다음 절차를 통해 백업 구성 문제, 불완전한 백업 또는 실패한 백업, 백업 상태 경고 및 파일, 폴더 또는 전체 시스템 복원 문제 등 Windows Server Essentials의 컴퓨터 백업 문제를 해결할 수 있습니다.  
   
 > [!NOTE]
->  Windows Server Essentials 커뮤니티에서 최신 문제 해결 정보를 참조 하세요. 합니다 [Windows Server Essentials 포럼](https://social.technet.microsoft.com/Forums//winserveressentials/threads)합니다.  
+>  Windows Server Essentials 커뮤니티의 최신 문제 해결 정보는 [Windows Server Essentials 포럼](https://social.technet.microsoft.com/Forums//winserveressentials/threads)을 참조 하세요.  
   
-##  <a name="BKMK_TroubleshootBackupConfigurationIssues"></a> 연결된 된 컴퓨터에 대 한 백업 구성 문제 해결  
+##  <a name="troubleshoot-backup-configuration-issues-for-a-connected-computer"></a><a name="BKMK_TroubleshootBackupConfigurationIssues"></a>연결 된 컴퓨터의 백업 구성 문제 해결  
  다음 절차를 통해 Windows Server Essentials 서버에 백업된 컴퓨터의 백업 구성 문제를 해결할 수 있습니다.  
   
 ### <a name="errors"></a>오류  
@@ -73,7 +73,7 @@ ms.locfileid: "59812334"
   
 6.  컴퓨터에서 Windows Server Essentials Connector 소프트웨어를 제거한 후 다시 설치합니다. 자세한 내용은 [Connector 소프트웨어 제거](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_13)(영문) 및 [Connector 소프트웨어 설치](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_11)(영문) 항목을 참조하세요.  
   
-##  <a name="BKMK_TroubleshootaBackupThatDidNotCompleteProperly"></a> 제대로 완료 되지 않은 백업 문제 해결  
+##  <a name="troubleshoot-a-backup-that-did-not-complete-properly"></a><a name="BKMK_TroubleshootaBackupThatDidNotCompleteProperly"></a>제대로 완료 되지 않은 백업 문제 해결  
  백업 상태가 실패인 경우 백업에 성공한 부분이 없으며 복원에 사용할 수 있는 데이터가 없습니다. 그러나 백업의 상태가 완료 안 됨인 경우 백업 구성에 지정된 항목 중 일부가 백업되지 않았지만 일부 데이터는 복원에 사용할 수도 있습니다.  
   
 ### <a name="errors"></a>오류  
@@ -98,7 +98,7 @@ ms.locfileid: "59812334"
   
 1.  하드 디스크가 컴퓨터에 연결되어 있고 켜져 있으며 제대로 작동하는지 확인합니다.  
   
-2.  **chkdsk /f /r** 을 실행하여 하드 디스크에 대한 모든 오류를 해결하고( **/f**), 모든 불량 섹터에서 읽을 수 있는 정보를 복구합니다( **/r**). **chkdsk**를 실행하는 방법에 대한 자세한 내용은 [CHKDSK](https://go.microsoft.com/fwlink/?LinkId=206562)를 참조하세요.  
+2.  **chkdsk /f /r**을 실행하여 하드 디스크에 대한 모든 오류를 해결하고( **/f**), 모든 불량 섹터에서 읽을 수 있는 정보를 복구합니다( **/r**). **chkdsk**를 실행하는 방법에 대한 자세한 내용은 [CHKDSK](https://go.microsoft.com/fwlink/?LinkId=206562)를 참조하세요.  
   
 3.  백업이 실행되는 동안 컴퓨터가 종료되거나 네트워크에서 연결이 끊어지지 않았는지 확인합니다.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "59812334"
   
         2.  **관리 도구**에서 **하드 디스크 파티션 만들기 및 포맷**을 클릭합니다.  
   
-        3.  확장하려는 볼륨을 마우스 오른쪽 단추로 클릭합니다. **볼륨 확장** 이 사용하도록 설정된 경우 해당 옵션을 선택합니다. 이 옵션이 사용하도록 설정되지 않은 경우 볼륨을 확장할 수 없습니다.  
+        3.  확장하려는 볼륨을 마우스 오른쪽 단추로 클릭합니다. **볼륨 확장**이 사용하도록 설정된 경우 해당 옵션을 선택합니다. 이 옵션이 사용하도록 설정되지 않은 경우 볼륨을 확장할 수 없습니다.  
   
         4.  볼륨 확장 마법사의 단계에 따라 볼륨을 확장합니다.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "59812334"
   
 6.  명령 프롬프트에서 **vssadmin**을 실행하여 VSS(볼륨 섀도 복사본 서비스) 문제를 해결합니다. **vssadmin**에 대한 자세한 내용은 [VSSADMIN](https://go.microsoft.com/fwlink/?LinkID=94332)(영문)을 참조하세요.  
   
-##  <a name="BKMK_TroubleshootBackupHealthAlertIssues"></a> 백업 상태 경고 문제 해결  
+##  <a name="troubleshoot-backup-health-alert-issues"></a><a name="BKMK_TroubleshootBackupHealthAlertIssues"></a>백업 상태 경고 문제 해결  
   
 ### <a name="errors"></a>오류  
   
@@ -175,7 +175,7 @@ ms.locfileid: "59812334"
   
 5.  클라이언트 백업에 영향을 미칠 수 있는 다른 문제가 있는지 상태 경고를 확인합니다.  
   
-##  <a name="BKMK_FileAndFolder"></a> 파일 또는 폴더 복원 문제 해결  
+##  <a name="troubleshoot-a-file-or-folder-restore"></a><a name="BKMK_FileAndFolder"></a>파일 또는 폴더 복원 문제 해결  
   
 ### <a name="errors"></a>오류  
   
@@ -205,7 +205,7 @@ ms.locfileid: "59812334"
   
         1.  관리자 권한으로 명령 프롬프트를 열고 다음 명령을 실행합니다.  
   
-             **%ProgramFiles%\Windows Server\Bin\BackupDriverInstaller.exe?  �i**  
+             **%ProgramFiles%\Windows Server\Bin\BackupDriverInstaller.exe? -i**  
   
         2.  장치 관리자를 새로 고칩니다. 드라이버가 표시되어야 합니다.  
   
@@ -223,7 +223,7 @@ ms.locfileid: "59812334"
   
 6.  컴퓨터에서 Windows Server Essentials Connector 소프트웨어를 제거한 후 다시 설치합니다. 자세한 내용은 [Connector 소프트웨어 제거](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_13)(영문) 및 [Connector 소프트웨어 설치](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_11)(영문) 항목을 참조하세요.  
   
-##  <a name="BKMK_Troubleshootfullsystemrestoreissues"></a> 전체 시스템 복원 문제 해결  
+##  <a name="troubleshoot-a-full-system-restore"></a><a name="BKMK_Troubleshootfullsystemrestoreissues"></a>전체 시스템 복원 문제 해결  
   
 ### <a name="errors"></a>오류  
   
@@ -236,12 +236,12 @@ ms.locfileid: "59812334"
   
 1.  로컬 관리자로 컴퓨터에 로그온합니다.  
   
-2.  Connector 소프트웨어를 제거합니다. 자세한 내용은 [Uninstall the Connector software](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_13)를 참조하세요.  
+2.  Connector 소프트웨어를 제거합니다. 자세한 내용은 [Connector 소프트웨어 제거](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_13)(영문)를 참조하세요.  
   
-3.  도메인에서 컴퓨터를 제거합니다. 자세한 내용은 [Remove a computer from a Windows domain](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_8)를 참조하세요.  
+3.  도메인에서 컴퓨터를 제거합니다. 자세한 내용은 [Windows 도메인에서 컴퓨터 제거](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_8)(영문)를 참조하세요.  
   
 4.  서버에 컴퓨터를 다시 연결합니다. 자세한 내용은 [서버에 컴퓨터 연결](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)을 참조하세요.  
   
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
   
 -   [Windows Server Essentials 지원](Support-Windows-Server-Essentials.md)

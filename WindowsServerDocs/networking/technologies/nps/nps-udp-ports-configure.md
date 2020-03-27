@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 70569958-d7a7-474e-a817-6b7b5134784a
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 1ba6c059639b9ae7e77a9e103e7ed84f6a2032df
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: f874469666ab9b68d9eb970cf7fcb6a89ef27f0c
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405308"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80315577"
 ---
 # <a name="configure-nps-udp-port-information"></a>NPS UDP 포트 정보 구성
 
@@ -30,7 +30,7 @@ ms.locfileid: "71405308"
 
 >중요 한 RADIUS 기본 포트 번호를 사용 하지 않는 경우 새 포트에서 RADIUS 트래픽을 허용 하도록 로컬 컴퓨터의 방화벽에 대 한 예외를 구성 해야 합니다. 자세한 내용은 [RADIUS 트래픽에 대 한 방화벽 구성](nps-firewalls-configure.md)을 참조 하세요.
 
-**Domain Admins**의 구성원이거나 이에 준하는 자격이 있어야 이 절차를 완료할 수 있습니다.
+이 절차를 완료하려면 적어도 **Domain Admins** 그룹 구성원이거나 이에 해당하는 권한이 있어야 합니다.
 
 ## <a name="to-configure-nps-udp-port-information"></a>NPS UDP 포트 정보를 구성 하려면 
 

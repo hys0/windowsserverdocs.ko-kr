@@ -6,15 +6,15 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
 manager: dougkim
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 09/12/2018
-ms.openlocfilehash: f032717b9f4dca65454d8251083b73ff2d57dba7
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 93913acbe598c4fd1b8ee5556dbf70013f3d714a
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71355314"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80316940"
 ---
 # <a name="software-and-hardware-sh-integrated-features-and-technologies"></a>SH(소프트웨어 및 하드웨어) 통합 기능 및 기술
 
@@ -70,7 +70,7 @@ IPsec 작업 오프 로드는 운영 체제에서 NIC의 프로세서를 사용 
 
 PVLANs은 동일한 가상화 서버의 가상 컴퓨터 간에만 통신할 수 있도록 허용 합니다. 개인 가상 네트워크는 실제 네트워크 어댑터에 바인딩되지 않습니다. 개인 가상 네트워크는 가상화 서버의 모든 외부 네트워크 트래픽 및 관리 운영 체제와 외부 네트워크 간의 네트워크 트래픽에 격리 됩니다. 이 유형의 네트워크는 격리된 테스트 도메인과 같은 격리된 네트워킹 환경을 만들어야 할 경우에 유용합니다. Hyper-v 및 SDN 스택은 PVLAN 격리 된 포트 모드만 지원 합니다.
 
-PVLAN 격리에 대 한 자세한 내용은 [System Center: Virtual Machine Manager 엔지니어링 블로그](https://blogs.technet.microsoft.com/scvmm/2013/06/04/logical-networks-part-iv-pvlan-isolation/).
+PVLAN 격리에 대 한 자세한 내용은 [System Center: Virtual Machine Manager 엔지니어링 블로그](https://blogs.technet.microsoft.com/scvmm/2013/06/04/logical-networks-part-iv-pvlan-isolation/)를 참조 하세요.
 
 ## <a name="remote-direct-memory-access-rdma"></a>RDMA(원격 직접 메모리 액세스) 
 
@@ -90,7 +90,7 @@ SR-IOV를 사용 하면 Hyper-v 호스트를 통과 하지 않고도 VM 트래�
 
 SR-IOV를 사용 하는 트래픽은 Hyper-v 스위치를 우회 합니다. 즉, Acl 또는 대역폭 관리와 같은 모든 정책이 적용 되지 않습니다. 또한 SR-IOV 트래픽은 네트워크 가상화 기능을 통해 전달 될 수 없으므로 NV-GRE 또는 VxLAN 캡슐화를 적용할 수 없습니다. 특정 상황에서 잘 신뢰할 수 있는 작업에 대해서만 SR-IOV를 사용 합니다. 또한 호스트 정책, 대역폭 관리 및 가상화 기술을 사용할 수 없습니다.
 
-향후에는 두 가지 기술을 통해 SR-IOV를 사용할 수 있습니다. GFT (Generic Flow Tables) 및 하드웨어 QoS 오프 로드 (NIC의 대역폭 관리) – 에코 시스템의 Nic가 이러한 기능을 지원 합니다. 이러한 두 기술을 조합 하 여 SR-IOV를 모든 Vm에 유용 하 게 사용할 수 있으며, 정책, 가상화 및 대역폭 관리 규칙이 적용 될 수 있으며, SR-IOV의 일반 응용 프로그램에서 뛰어난 나갑니다을 얻을 수 있습니다.
+향후에는 두 가지 기술로 SR-IOV: GFT (Generic Flow Tables) 및 하드웨어 QoS 오프 로드 (NIC의 대역폭 관리)를 사용할 수 있으며,이 경우 에코 시스템의 Nic가 이러한 기능을 지원 합니다. 이러한 두 기술을 조합 하 여 SR-IOV를 모든 Vm에 유용 하 게 사용할 수 있으며, 정책, 가상화 및 대역폭 관리 규칙이 적용 될 수 있으며, SR-IOV의 일반 응용 프로그램에서 뛰어난 나갑니다을 얻을 수 있습니다.
 
 자세한 내용은 [단일 루트 I/o 가상화 (sr-iov) 개요](https://docs.microsoft.com/windows-hardware/drivers/network/overview-of-single-root-i-o-virtualization--sr-iov-)를 참조 하세요.
 

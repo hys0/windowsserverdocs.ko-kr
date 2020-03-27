@@ -10,14 +10,14 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: eca02eeb-d92d-463e-aae0-1f7038ba26fe
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: e8406286599e5b03173ce1b5d6c34c35245a9094
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: d34630b4faa8012eee73967a99bc0541f1305a09
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71366953"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80313527"
 ---
 # <a name="step-3-plan-otp-certificate-deployment"></a>3 단계 OTP 인증서 배포 계획
 
@@ -35,16 +35,16 @@ RADIUS 서버를 계획 한 후에는 OTP (일회용 암호) 인증서, OTP 인�
   
 5.  CA는 자격 증명과 요청을 확인 합니다.  
   
-|태스크|설명|  
+|작업|설명|  
 |----|--------|  
 |[3.1 OTP CA 계획](#bkmk_3_1_CA)|OTP 인증을 위해 DirectAccess 클라이언트에 인증서를 발급 하는 데 사용할 CA (인증 기관)를 계획 합니다.|  
 |[3.2 OTP 인증서 템플릿 계획](#bkmk_3_2_OTP_Cert)|OTP 인증서 템플릿을 계획 합니다.|
 |[3.3 등록 기관 인증서 계획](#bkmk_33RACert)|모든 OTP 인증 인증서 요청을 서명 하도록 등록 기관 인증서를 계획 합니다.|
 
-## <a name="bkmk_3_1_CA"></a>3.1 OTP CA 계획  
+## <a name="31-plan-the-otp-ca"></a><a name="bkmk_3_1_CA"></a>3.1 OTP CA 계획  
 OTP (일회성 암호 인증)를 사용 하 여 DirectAccess를 배포 하려면 DirectAccess 클라이언트 컴퓨터에 OTP 인증 인증서를 발급 하기 위한 내부 CA가 필요 합니다. 이러한 목적을 위해 일반 IPsec 컴퓨터 인증에 사용 되는 인증서를 발급 하는 데 사용 하는 것과 동일한 내부 CA를 사용할 수 있습니다.  
   
-## <a name="bkmk_3_2_OTP_Cert"></a>3.2 OTP 인증서 템플릿 계획  
+## <a name="32-plan-the-otp-certificate-template"></a><a name="bkmk_3_2_OTP_Cert"></a>3.2 OTP 인증서 템플릿 계획  
 각 DirectAccess 클라이언트는 내부 네트워크에 대 한 액세스 권한을 얻기 위해 OTP 인증 인증서가 필요 합니다. OTP 인증서에 대 한 내부 CA에서 템플릿을 구성 해야 합니다. OTP 인증서 템플릿을 구성할 때 다음 사항에 유의 하세요.  
   
 -   OTP 인증을 수행 해야 하는 모든 사용자에 게는이 템플릿에 대 한 읽기 및 등록 권한이 있어야 합니다.  
@@ -70,10 +70,10 @@ OTP (일회성 암호 인증)를 사용 하 여 DirectAccess를 배포 하려면
   
     -   OTP 인증 인증서 템플릿의 경우 key 1.3.6.1.4.1.311.20.2.2 키를 사용 합니다.  
   
-## <a name="bkmk_33RACert"></a>3.3 등록 기관 인증서 계획  
+## <a name="33-plan-the-registration-authority-certificate"></a><a name="bkmk_33RACert"></a>3.3 등록 기관 인증서 계획  
 DirectAccess 클라이언트가 OTP 인증서를 요청 하면 원격 액세스 서버에서 클라이언트의 요청을 수신 합니다. 원격 액세스 서버는 등록 기관 인증서를 사용 하 여 클라이언트의 모든 OTP 인증서 요청에 서명 합니다. CA는 원격 액세스 서버의 등록 기관 인증서에 의해 요청이 서명 된 경우에만 인증서를 발급 합니다. 인증서는 내부 CA에서 발급 해야 하며 인증서는 자체 서명 될 수 없습니다. OTP 인증서를 발급 한 ca는이를 발급 하지 않아도 되지만 OTP 인증서를 발급 하는 CA는 등록 기관 서명 인증서를 발급 하는 CA를 신뢰 해야 합니다.  
   
-## <a name="BKMK_Links"></a>참고 항목  
+## <a name="see-also"></a><a name="BKMK_Links"></a>참고 항목  
   
 -   [4 단계: 원격 액세스 서버에 대 한 OTP 계획](Step-4-Plan-for-OTP-on-the-Remote-Access-Server.md)  
   

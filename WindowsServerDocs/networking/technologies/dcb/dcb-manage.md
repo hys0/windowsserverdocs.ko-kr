@@ -6,14 +6,14 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 1575cc7c-62a7-4add-8f78-e5d93effe93f
 manager: brianlic
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: d635f96516040fcb30504f752c8194b0323c63f3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: d61287b82cd6d3b869b1120d3cb21b3c8792bd1e
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405780"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80312758"
 ---
 # <a name="manage-data-center-bridging-dcb"></a>데이터 센터 브리징 관리 (DCB)
 
@@ -87,7 +87,7 @@ DCB 구성에는 다음 단계가 포함 됩니다.
     
     c. 응용 프로그램 우선 순위 할당
     
-    d. DCBX 설정
+    . DCBX 설정
 
 2. 네트워크 어댑터에서 DCB를 구성 합니다.
 
@@ -428,7 +428,7 @@ DCB가 Windows Server 2016에 설치 되었는지 여부에 관계 없이 항상
 
 스위치에서 DCB을 구성 하 고 DCBX을 사용 하 여 구성을 네트워크 어댑터에 전파 하는 경우 네트워크 어댑터에서 DCB을 사용 하도록 설정 하면 운영 체제 쪽에서 네트워크 어댑터에 대해 받아서 적용 되는 구성을 확인할 수 있습니다.
 
-###  <a name="bkmk_enabledcb"></a>네트워크 어댑터에서 DCB 설정 사용 및 표시
+###  <a name="enable-and-display-dcb-settings-on--network-adapters"></a><a name="bkmk_enabledcb"></a>네트워크 어댑터에서 DCB 설정 사용 및 표시
 
 ```
 PS C:\> Enable-NetAdapterQos M1
@@ -470,18 +470,18 @@ Capabilities :                       Hardware     Current
                NumTCs(Max/ETS/PFC) : 8/8/8        0/0/0  
 
 ```
-## <a name="bkmk_wps"></a>DCB 용 Windows PowerShell 명령
+## <a name="windows-powershell-commands-for-dcb"></a><a name="bkmk_wps"></a>DCB 용 Windows PowerShell 명령
 
 Windows Server 2016 및 Windows Server 2012 r 2에 대 한 Windows PowerShell 명령 DCB 있습니다. Windows server 2016에서 Windows Server 2012 r 2에 대 한 모든 명령을 사용할 수 있습니다.
 
 ### <a name="windows-server-2016-windows-powershell-commands-for-dcb"></a>DCB 용 windows Server 2016 Windows PowerShell 명령
 
-Windows Server 2016에 대 한 다음 항목에서는 모든 데이터 센터 브리징 \(DCB\) 서비스 품질 \(QoS\)\-특정 cmdlet에 대 한 Windows PowerShell cmdlet 설명 및 구문을 제공 합니다. cmdlet은 cmdlet의 시작 부분에 있는 동사에 따라 사전순으로 나열됩니다.
+Windows Server 2016에 대 한 다음 항목에서는 모든 데이터 센터 브리징 \(DCB\) 서비스 품질 \(QoS\)\-특정 cmdlet에 대 한 Windows PowerShell cmdlet 설명 및 구문을 제공 합니다. 또한 cmdlet의 첫 부분에 있는 동사를 기준으로 알파벳 순서에 따라 cmdlet을 나열합니다.
 
 - [DcbQoS 모듈](https://technet.microsoft.com/itpro/powershell/windows/dcbqos/dcbqos)
 
 ### <a name="windows-server-2012-r2-windows-powershell-commands-for-dcb"></a>DCB 용 windows Server 2012 R2 Windows PowerShell 명령
 
-Windows Server 2012 r 2의 다음 항목에서는 모든 데이터 센터 브리징 \(DCB\) 서비스 품질 \(QoS\)\-특정 cmdlet에 대 한 Windows PowerShell cmdlet 설명 및 구문을 제공 합니다. cmdlet은 cmdlet의 시작 부분에 있는 동사에 따라 사전순으로 나열됩니다.
+Windows Server 2012 r 2의 다음 항목에서는 모든 데이터 센터 브리징 \(DCB\) 서비스 품질 \(QoS\)\-특정 cmdlet에 대 한 Windows PowerShell cmdlet 설명 및 구문을 제공 합니다. 또한 cmdlet의 첫 부분에 있는 동사를 기준으로 알파벳 순서에 따라 cmdlet을 나열합니다.
 
 - [Windows PowerShell의 DCB (데이터 센터 브리징) QoS (서비스 품질) Cmdlet](https://technet.microsoft.com/library/hh967440.aspx)
