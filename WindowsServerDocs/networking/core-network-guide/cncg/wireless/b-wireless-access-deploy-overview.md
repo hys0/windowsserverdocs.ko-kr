@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 29ae0f54-f045-465a-a08e-5867979345f2
-author: shortpatti
-ms.author: pashort
-ms.openlocfilehash: 93fb80c550771e4e7d8bc400d647b520b0c67fdf
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+author: eross-msft
+ms.author: lizross
+ms.openlocfilehash: 476e86dd4b762a46a97dca0b9ec100b245a58f81
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71356091"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318112"
 ---
 # <a name="wireless-access-deployment-overview"></a>무선 액세스 배포 개요
 
@@ -67,11 +67,11 @@ Windows Vista에 대 한 무선 네트워크 정책 및 이후 릴리스 구성,
 
 지점에도 연결 하려는 무선 네트워크가 있습니다. 지점에는 WlanBranch로 구성 된 SSID가 있습니다.
 
-이 시나리오에서는 회사 사무실에서 사용 되는 다른 장치 또는 각 네트워크 컴퓨터에 대 한 프로필을 구성할 수 있습니다 하 고 네트워크의 적용 범위의 범위에 물리적으로 서로 지점 무선 네트워크 중 하나 연결할 수 있습니다.
+이 시나리오에서는 회사 사무실에서 사용 되는 다른 디바이스 또는 각 네트워크 컴퓨터에 대 한 프로필을 구성할 수 있습니다 하 고 네트워크의 적용 범위의 범위에 물리적으로 서로 지점 무선 네트워크 중 하나 연결할 수 있습니다.
 
 ##### <a name="mixed-mode-wireless-networks"></a>혼합\-모드 무선 네트워크
 
-또는 네트워크에 여러 무선 컴퓨터와 다른 보안 표준을 지 원하는 장치에 있다고 가정 합니다. 일부 구형 컴퓨터 WPA에만 사용할 수 있는 무선 어댑터 경우가\-엔터프라이즈에서 강함 WPA2를 사용 하는 새로운 장치\-기업 표준입니다.
+또는 네트워크에 여러 무선 컴퓨터와 다른 보안 표준을 지 원하는 디바이스에 있다고 가정 합니다. 일부 구형 컴퓨터 WPA에만 사용할 수 있는 무선 어댑터 경우가\-엔터프라이즈에서 강함 WPA2를 사용 하는 새로운 장치\-기업 표준입니다.
 
 동일한 SSID와 거의 동일한 연결 및 보안 설정을 사용 하는 서로 다른 두 프로필을 만들 수 있습니다.
 
@@ -85,7 +85,7 @@ NPS를 만들고 연결 요청 인증 및 권한 부여에 대 한 네트워크 
 NPS를 RADIUS 서버로 사용 하는 경우 무선 액세스 지점과 같은 네트워크 액세스 서버를 NPS의 RADIUS 클라이언트로 구성 합니다. 또한 NPS에서 액세스 클라이언트를 인증 하 고 해당 연결 요청에 권한을 부여 하는 데 사용 하는 네트워크 정책을 구성 합니다.  
 
 ### <a name="wireless-client-computers"></a>무선 클라이언트 컴퓨터
-이 가이드에서는 무선 클라이언트 컴퓨터는 컴퓨터 및 IEEE 802.11 무선 네트워크 어댑터와 함께 설치 되어 Windows 클라이언트 또는 Windows Server 운영 체제를 실행 되는 및 기타 장치입니다.
+이 가이드에서는 무선 클라이언트 컴퓨터는 컴퓨터 및 IEEE 802.11 무선 네트워크 어댑터와 함께 설치 되어 Windows 클라이언트 또는 Windows Server 운영 체제를 실행 되는 및 기타 디바이스입니다.
 
 #### <a name="server-computers-as-wireless-clients"></a>무선 클라이언트와 서버 컴퓨터
 

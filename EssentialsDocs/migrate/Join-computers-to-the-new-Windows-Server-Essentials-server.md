@@ -1,9 +1,9 @@
 ---
-title: 새 Windows Server Essentials server1에 컴퓨터 가입
+title: 새 Windows Server Essentials server1에 컴퓨터 연결
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,19 +12,19 @@ ms.assetid: cdfa9504-9881-4265-b308-c7ee8721bfaa
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 0240abfff58baedd79ab038af93b107dbb898eb2
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 6f7d20e2d74c311a34b98de7c33c755b5981fcef
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66432944"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318971"
 ---
-# <a name="join-computers-to-the-new-windows-server-essentials-server1"></a>새 Windows Server Essentials server1에 컴퓨터 가입
+# <a name="join-computers-to-the-new-windows-server-essentials-server1"></a>새 Windows Server Essentials server1에 컴퓨터 연결
 
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 ##  <a name="BKMK_JoinComputers"></a>   
- 마이그레이션 프로세스의 다음 단계는 새 Windows Server Essentials 네트워크에 클라이언트 컴퓨터를 가입 시키고 그룹 정책 설정을 업데이트 하는 것입니다.  
+ 마이그레이션 프로세스의 다음 단계에서는 새 Windows Server Essentials 네트워크에 클라이언트 컴퓨터를 연결 하 고 그룹 정책 설정을 업데이트 합니다.  
   
 > [!NOTE]
 >  클라이언트 컴퓨터가 이미 원본 서버에 연결되어 있으면 컴퓨터를 대상 서버에 연결하기 전에 먼저 클라이언트 컴퓨터에서 Connector 소프트웨어를 제거해야 합니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "66432944"
   
 2.  명령 프롬프트에 **GPRESULT /R**을 입력하고 Enter 키를 누릅니다.  
   
-3.  섹션에서 적용 한 그룹 정책에 대 한 결과 출력을 검토 합니다: 대상 서버와 같은 나열 되는지 확인 하 고 **DestinationSrv.Domain.local**합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+3.  에서 적용 한 그룹 정책 섹션에 대 한 결과 출력을 검토 하 고 대상 서버 (예: **Destinationsrv. local. local**)가 나열 되는지 확인 합니다. 예를 들면 다음과 같습니다.  
   
     ```  
     USER SETTINGS  
@@ -65,8 +65,8 @@ ms.locfileid: "66432944"
   
 5.  그래도 대상 서버가 나타나지 않으면 그룹 정책 설정에 오류가 있거나 이 특정 클라이언트 컴퓨터에 해당 설정을 적용하는 데 오류가 있을 수 있습니다. 대상 서버가 나타나지 않으면 다음 단계를 수행합니다.  
   
-    1.  **시작**, **실행**을 차례로 클릭하고 **rsop.msc** (정책 결과 집합)를 입력하고 Enter 키를 누릅니다.  
+    1.  **시작**, **실행**을 차례로 클릭하고 **rsop.msc**(정책 결과 집합)를 입력하고 Enter 키를 누릅니다.  
   
-    2.  노드에 도달할 때까지에 X가 있는 트리를 확장 합니다.  
+    2.  노드에 도달할 때까지 X가 있는 트리를 확장 합니다.  
   
     3.  노드를 마우스 오른쪽 단추로 클릭하고 **오류 보기**를 클릭하여 나열된 컴퓨터에서 그룹 정책 설정이 실패하는 이유를 확인합니다.

@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 1f49fc3c-28a6-4d3d-b787-1be9e61e792f
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 489006c50ccbfa1f452d56b1a18217692d45cb1f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 5abe1520de24d366df43210219119ae9f806adc4
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406461"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80319231"
 ---
 # <a name="install-a-new-file-server-as-a-content-server"></a>콘텐츠 서버로 새 파일 서버 설치
 
@@ -36,7 +36,7 @@ ms.locfileid: "71406461"
   
 ### <a name="to-install-file-services-and-the-branchcache-for-network-files-role-service"></a>파일 서비스 및 네트워크 파일 역할 서비스용 BranchCache를 설치 하려면  
   
-1.  서버 관리자에서 **관리**, **역할 및 기능 추가**를 차례로 클릭합니다. 역할 및 기능 추가 마법사가 열립니다. **시작 하기 전에**, 를 클릭 하 여 **다음**합니다.  
+1.  서버 관리자에서 **관리**, **역할 및 기능 추가**를 차례로 클릭합니다. 역할 및 기능 추가 마법사가 열립니다. **시작하기 전**에서 **다음**을 클릭합니다.  
   
 2.  **설치 유형 선택**, 되도록 **역할 기반 또는 기능 기반 설치** 을 선택한 다음 클릭 **다음**합니다.  
   

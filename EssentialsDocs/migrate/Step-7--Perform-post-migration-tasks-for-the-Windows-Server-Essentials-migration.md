@@ -3,7 +3,7 @@ title: '7단계: Windows Server Essentials 마이그레이션을 위한 마이�
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: d382e3fd-d393-4bd0-883f-db50104a969f
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 6a61d28f29097bcb6993a471587f4cc1ae0bcc3f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 105f5ab013729b4323b56c278cd34c19898d2a9d
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59819164"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318723"
 ---
 # <a name="step-7-perform-post-migration-tasks-for-the-windows-server-essentials-migration"></a>7단계: Windows Server Essentials 마이그레이션을 위한 마이그레이션 후 작업 수행
 
@@ -27,9 +27,9 @@ ms.locfileid: "59819164"
   
 1.  [원본 서버에 대 한 DNS 항목 삭제](Step-7--Perform-post-migration-tasks-for-the-Windows-Server-Essentials-migration.md#BKMK_DeleteDNSEntries)  
   
-2.  [기간 업무 및 기타 응용 프로그램 데이터 폴더 공유](Step-7--Perform-post-migration-tasks-for-the-Windows-Server-Essentials-migration.md#BKMK_ShareLineOfBusinessAndOtherApplications)  
+2.  [Lob (기간 업무) 및 기타 응용 프로그램 데이터 폴더 공유](Step-7--Perform-post-migration-tasks-for-the-Windows-Server-Essentials-migration.md#BKMK_ShareLineOfBusinessAndOtherApplications)  
   
-##  <a name="BKMK_DeleteDNSEntries"></a> 원본 서버에 대 한 DNS 항목 삭제  
+##  <a name="delete-dns-entries-for-the-source-server"></a><a name="BKMK_DeleteDNSEntries"></a>원본 서버에 대 한 DNS 항목 삭제  
  원본 서버 서비스를 해제하고 나서 DNS(도메인 이름 서비스) 서버에는 원본 서버를 가리키는 항목이 포함되어 있을 수 있습니다. 이러한 DNS 항목을 삭제합니다.  
   
 #### <a name="to-delete-dns-entries-that-point-to-the-source-server"></a>원본 서버를 가리키는 DNS 항목을 삭제하려면  
@@ -54,14 +54,14 @@ ms.locfileid: "59819164"
   
 10. 6~9단계를 반복하여 원본 서버를 가리키는 모든 역방향 조회 영역을 제거합니다.  
   
-##  <a name="BKMK_ShareLineOfBusinessAndOtherApplications"></a> 기간 업무 및 기타 응용 프로그램 데이터 폴더 공유  
- 대상 서버로 복사한 LOB(기간 업무) 및 기타 응용 프로그램 데이터 폴더에 대해 공유 폴더 사용 권한 및 NTFS 사용 권한을 설정해야 합니다. 사용 권한을 설정하고 나서 공유 폴더가 대시보드의 **저장소** 탭에 표시됩니다.  
+##  <a name="share-line-of-business-and-other-application-data-folders"></a><a name="BKMK_ShareLineOfBusinessAndOtherApplications"></a>Lob (기간 업무) 및 기타 응용 프로그램 데이터 폴더 공유  
+ 대상 서버로 복사한 LOB(기간 업무) 및 기타 애플리케이션 데이터 폴더에 대해 공유 폴더 사용 권한 및 NTFS 사용 권한을 설정해야 합니다. 사용 권한을 설정하고 나서 공유 폴더가 대시보드의 **저장소** 탭에 표시됩니다.  
   
  로그온 스크립트를 사용하여 공유 폴더에 드라이브를 매핑하는 경우 스크립트를 업데이트하여 대상 서버의 드라이브에 매핑해야 합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- Windows Server Essentials 마이그레이션을 위한 마이그레이션 후 작업을 수행 했습니다. 이제 [단계 8-Windows Server Essentials 모범 사례 분석기 실행](Step-8--Run-the-Windows-Server-Essentials-Best-Practices-Analyzer.md)합니다.  
+ Windows Server Essentials 마이그레이션을 위한 마이그레이션 후 작업을 수행 했습니다. 이제 [8 단계로 이동 하 여 Windows Server Essentials 모범 사례 분석기를 실행](Step-8--Run-the-Windows-Server-Essentials-Best-Practices-Analyzer.md)합니다.  
   
 
-모든 단계를 보려면 [Windows Server Essentials로 마이그레이션](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md)합니다.
+모든 단계를 보려면 [Windows Server Essentials로 마이그레이션](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md)을 참조 하세요.
 

@@ -3,7 +3,7 @@ title: Windows Server Essentials에서 원격 액세스 문제 해결
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,23 +12,23 @@ ms.assetid: 68f2b05c-09eb-4cba-8db4-a91353b513c6
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: a14dbaed8c36f52814ba8080262ef60c399931dc
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 5e25a4f597fdab019171aa38e67780069c6380ee
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59874014"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318651"
 ---
 # <a name="troubleshoot-anywhere-access-in-windows-server-essentials"></a>Windows Server Essentials에서 원격 액세스 문제 해결
 
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-이 항목에서는 Windows Server Essentials에서 원격 액세스 복구 마법사를 사용 하 여 네트워크 사용자가 서버 리소스에 액세스 하지 못하는 문제를 해결 하는 일반적인 지침을 제공 합니다. 가상 사설망 (VPN), 원격 웹 액세스 기능을 원격 액세스 및 DirectAccess 사용 네트워크 사용자가 인터넷에 연결 된 모든 장치에서 언제 어디서 든 서버 리소스에 액세스할 수 있습니다.  
+이 항목에서는 Windows Server Essentials에서 원격 액세스 복구 마법사를 사용 하 여 네트워크 사용자가 서버 리소스에 액세스 하지 못하는 문제를 해결 하는 방법에 대 한 일반적인 지침을 제공 합니다. 원격 액세스 기능-원격 웹 액세스, VPN (가상 사설망) 및 DirectAccess-네트워크 사용자가 언제 어디서 든 인터넷에 연결 된 모든 장치에서 서버 리소스에 액세스할 수 있습니다.  
   
  원격 액세스 복구 마법사는 네트워크 사용자가 원격으로 서버 리소스에 액세스하지 못하게 하는 라우터, 도메인 이름 또는 방화벽 문제를 식별하여 해결하려고 시도합니다.  
   
 > [!NOTE]
->  Windows Server Essentials 커뮤니티에서 최신 문제 해결 정보에 대 한 것이 좋습니다를 방문 하 여 [Windows Server Essentials 포럼](https://social.technet.microsoft.com/Forums/winserveressentials/threads)합니다. Windows Server Essentials 포럼은 도움말을 검색하거나 질문하기 좋은 곳입니다.  
+>  Windows Server Essentials 커뮤니티에서 제공 하는 최신 문제 해결 정보는 [Windows Server Essentials 포럼](https://social.technet.microsoft.com/Forums/winserveressentials/threads)을 참조 하는 것이 좋습니다. Windows Server Essentials 포럼은 도움말을 검색하거나 질문하기 좋은 곳입니다.  
   
 ### <a name="to-repair-anywhere-access"></a>원격 액세스를 복구하려면  
   
@@ -61,4 +61,4 @@ ms.locfileid: "59874014"
 -   [방화벽 문제 해결](../support/Troubleshoot-your-firewall-in-Windows-Server-Essentials.md)  
 
   
--   확인 합니다 [Windows Server Essentials 포럼](https://social.technet.microsoft.com/Forums/winserveressentials/threads) 최신 Windows Server Essentials 커뮤니티에서 보고 한 문제에 대 한 합니다.
+-   Windows server essentials 커뮤니티에서 보고 한 최신 문제는 [Windows Server Essentials 포럼](https://social.technet.microsoft.com/Forums/winserveressentials/threads) 을 참조 하세요.

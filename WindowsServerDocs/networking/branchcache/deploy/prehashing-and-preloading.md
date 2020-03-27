@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 5a09d9f1-1049-447f-a9bf-74adf779af27
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 1a0694ebe30c5a927fb2f1152adc792f8b0c9157
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 7fe43b3a7c8dc7906e678a219b67ed096aa951d4
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71356385"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80319124"
 ---
 # <a name="prehashing-and-preloading-content-on-hosted-cache-servers-optional"></a>호스트 캐시 서버에서 콘텐츠 사전 해싱 및 사전 로딩(선택 사항)
 
@@ -33,6 +33,6 @@ ms.locfileid: "71356385"
   
 4.  원하는 파일 전송 기술을 사용 하 여 원격 호스트 캐시 서버로 데이터 패키지 파일을 이동 합니다.  FTP, SMB, HTTP, DVD 및 휴대용 하드 디스크는 모두 유효한 전송입니다.  
   
-5.  @No__t-0 명령을 사용 하 여 원격 호스트 캐시 서버에서 데이터 패키지 파일을 가져옵니다.  
+5.  `Import-BCCachePackage` 명령을 사용 하 여 원격 호스트 캐시 서버에서 데이터 패키지 파일을 가져옵니다.  
   
 

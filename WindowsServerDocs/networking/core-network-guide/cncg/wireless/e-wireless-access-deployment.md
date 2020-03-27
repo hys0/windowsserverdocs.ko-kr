@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 4b66f517-b17d-408c-828f-a3793086bc1f
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: f07520dcdefa04cb43760c5e5c66e28c0d1ce878
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: ddc5ebd5f2e00251bcd1cdd915702902dcdb14ae
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79322115"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318089"
 ---
 # <a name="wireless-access-deployment"></a>무선 액세스 배포
 
@@ -31,7 +31,7 @@ ms.locfileid: "79322115"
 
 - [새 무선 컴퓨터를 도메인에 가입](#bkmk_domain)
 
-## <a name="bkmk_aps"></a>무선 Ap 배포 및 구성
+## <a name="deploy-and-configure-wireless-aps"></a><a name="bkmk_aps"></a>무선 Ap 배포 및 구성
 
 무선 Ap를 배포 및 구성 하려면 다음 단계를 따르세요.
 
@@ -42,7 +42,7 @@ ms.locfileid: "79322115"
 >[!NOTE]
 >이 가이드의 절차에는 사례에 대 한 지침을 포함 하지 마십시오는 **사용자 계정 컨트롤** 를 계속 하려면 권한이 요청 대화 상자가 열립니다. 이 가이드의 절차를 수행하는 동안 이 대화 상자가 열리는 경우와 작업에 대한 응답으로 이 대화 상자가 이미 열린 경우에는 **계속**을 클릭하십시오.
 
-### <a name="bkmk_channel"></a>무선 AP 채널 빈도 지정
+### <a name="specify-wireless-ap-channel-frequencies"></a><a name="bkmk_channel"></a>무선 AP 채널 빈도 지정
 
 단일 지리적 사이트에서 여러 무선 Ap를 배포 하는 경우 고유한 채널 주파수를 사용 하 여 무선 Ap 간의 간섭을 줄이기 위해 겹치는 신호가 있는 무선 Ap를 구성 해야 합니다.
 
@@ -52,7 +52,7 @@ ms.locfileid: "79322115"
 
 - 조직 내의 인접 한 층에서 겹치는 무선 신호를 식별 합니다. 조직 외부 및 외부에서 겹치는 검사 영역을 확인 한 후 무선 Ap에 대 한 채널 빈도를 할당 하 여 범위가 겹치는 두 무선 Ap에 서로 다른 채널 주파수를 할당 합니다.
 
-### <a name="bkmk_wirelessaps"></a>무선 Ap 구성
+### <a name="configure-wireless-aps"></a><a name="bkmk_wirelessaps"></a>무선 Ap 구성
 
 무선 AP 제조업체에서 제공 하는 제품 설명서와 함께 다음 정보를 사용 하 여 무선 Ap를 구성 합니다.
 
@@ -95,7 +95,7 @@ ms.locfileid: "79322115"
 
 - [무선 보안 그룹에 사용자 추가](#bkmk_addusers)
 
-### <a name="bkmk_groups"></a>무선 사용자 보안 그룹 만들기
+### <a name="create-a-wireless-users-security-group"></a><a name="bkmk_groups"></a>무선 사용자 보안 그룹 만들기
 
 이 절차를 사용 하 여 Active Directory 사용자 및 컴퓨터 Microsoft Management Console에는 무선 보안 그룹을 만드는 \(MMC\) 스냅\-에 있습니다.  
 
@@ -123,7 +123,7 @@ ms.locfileid: "79322115"
 
 무선 사용자에 대 한 개 이상의 보안 그룹을 필요한 경우 추가 무선 사용자 그룹을 만들려면 다음이 단계를 반복 합니다. 나중에 NPS에서 개별 네트워크 정책을 만들어 각 그룹에 서로 다른 조건과 제약 조건을 적용 하 여 서로 다른 액세스 권한 및 연결 규칙을 제공할 수 있습니다.
 
-### <a name="bkmk_addusers"></a>무선 사용자 보안 그룹에 사용자 추가
+### <a name="add-users-to-the-wireless-users-security-group"></a><a name="bkmk_addusers"></a>무선 사용자 보안 그룹에 사용자 추가
 
 이 절차를 사용 하 여 Active Directory 사용자 및 컴퓨터 Microsoft 관리 콘솔에서 무선 보안 그룹에 사용자, 컴퓨터 또는 그룹을 추가 하려면 \(MMC\) 스냅\-에 있습니다.
 
@@ -147,7 +147,7 @@ ms.locfileid: "79322115"
 
 ##### <a name="to-add-a-computer"></a>컴퓨터를 추가하려면
 
-1. **개체 유형**을 클릭합니다. **개체 유형** 대화 상자가 열립니다.
+1. 클릭 **개체 유형**합니다. **개체 유형** 대화 상자가 열립니다.
 
 2. **개체 유형**, 선택 **컴퓨터**, 를 클릭 하 고 **확인**합니다.
 
@@ -155,7 +155,7 @@ ms.locfileid: "79322115"
 
 4. 그룹 구성원을 다른 컴퓨터를 할당 하려면 1 단계를 반복\-이 절차의 3입니다.
 
-## <a name="bkmk_policies"></a>무선 네트워크 \(IEEE 802.11\) 정책 구성
+## <a name="configure-wireless-network-ieee-80211-policies"></a><a name="bkmk_policies"></a>무선 네트워크 \(IEEE 802.11\) 정책 구성
 
 무선 네트워크를 구성 하려면 다음이 단계에 따라 \(IEEE 802.11\) 정책 그룹 정책 확장 합니다.
 
@@ -165,7 +165,7 @@ ms.locfileid: "79322115"
 
 - [새 무선 네트워크 정책 구성](#bkmk_policyconfig)
 
-### <a name="bkmk_opengpme"></a>그룹 정책 개체를 열거나 추가 하 고 엽니다.
+### <a name="open-or-add-and-open-a-group-policy-object"></a><a name="bkmk_opengpme"></a>그룹 정책 개체를 열거나 추가 하 고 엽니다.
 
 기본적으로 그룹 정책 관리 기능은 Active Directory Domain Services \(AD DS\) 서버 역할이 설치 되어 있고 서버가 도메인 컨트롤러로 구성 될 때 Windows Server 2016를 실행 하는 컴퓨터에 설치 됩니다. 그룹 정책 관리 콘솔을 여는 방법을 설명 하는 다음 절차 \(GPMC\) 도메인 컨트롤러에 있습니다. 절차 다음에 대해 설명 하거나 기존 도메인을 여는 방법에\-수준 그룹 정책 개체 \(GPO\) 편집 하거나 새 도메인 GPO를 만들고 열어 편집 합니다.
 
@@ -191,7 +191,7 @@ ms.locfileid: "79322115"
 
 다음 섹션에서는 무선 정책을 만드는 그룹 정책 관리 편집기를 사용 합니다.
 
-### <a name="bkmk_activate"></a>기본 무선 네트워크 \(IEEE 802.11\) 정책 활성화
+### <a name="activate-default-wireless-network-ieee-80211-policies"></a><a name="bkmk_activate"></a>기본 무선 네트워크 \(IEEE 802.11\) 정책 활성화
 
 이 절차에서는 그룹 정책 관리 편집기 \(GPME\)를 사용 하 여 기본 무선 네트워크 \(IEEE 802.11\) 정책을 활성화 하는 방법을 설명 합니다.
 
@@ -220,7 +220,7 @@ ms.locfileid: "79322115"
 
 다음 섹션에서 정책 구성, 정책 처리 우선 순위 및 네트워크 사용 권한으로 수행할 수 있습니다.
 
-### <a name="bkmk_policyconfig"></a>새 무선 네트워크 정책 구성
+### <a name="configure-the-new-wireless-network-policy"></a><a name="bkmk_policyconfig"></a>새 무선 네트워크 정책 구성
 
 무선 네트워크를 구성 하려면이 섹션의 절차를 사용할 수 \(IEEE 802.11\) 정책입니다. 이 정책을 사용 하면 보안 및 인증 설정을 구성 하 고, 무선 프로필을 관리 하 고, 기본 설정 네트워크로 구성 되지 않은 무선 네트워크에 대 한 사용 권한을 지정할 수 있습니다.
 
@@ -230,7 +230,7 @@ ms.locfileid: "79322115"
 
 - [네트워크 권한 정의](#bkmk_permissions)  
 
-#### <a name="bkmk_configureprofile"></a>PEAP\-MS\-CHAP v2에 대 한 무선 연결 프로필 구성
+#### <a name="configure-a-wireless-connection-profile-for-peap-ms-chap-v2"></a><a name="bkmk_configureprofile"></a>PEAP\-MS\-CHAP v2에 대 한 무선 연결 프로필 구성
 
 이 절차는 PEAP를 구성 하는 데 필요한 단계를 제공\-MS\-CHAP v2 무선 프로필입니다.  
 
@@ -309,7 +309,7 @@ ms.locfileid: "79322115"
 
 다음 섹션에서는 최적의 보안에 대 한 정책 프로필을 주문할 수 있습니다.
 
-#### <a name="bkmk_preferenceorder"></a>무선 연결 프로필의 기본 설정 순서 설정
+#### <a name="set-the-preference-order-for-wireless-connection-profiles"></a><a name="bkmk_preferenceorder"></a>무선 연결 프로필의 기본 설정 순서 설정
 무선 네트워크 정책에서 여러 무선 프로필을 만든 경우를 최적의 효율성 및 보안에 대 한 프로필을 요청 하려면이 절차를 사용할 수 있습니다.
 
 무선 클라이언트에 가장 높은 수준의 보안을 지원할 수 있는 연결을 유지 하려면 목록 맨 위에 있는 가장 제한적인 정책을 배치 합니다.
@@ -332,7 +332,7 @@ ms.locfileid: "79322115"
 
 다음 섹션에서는 무선 정책에 대 한 네트워크 사용 권한을 정의할 수 있습니다.
 
-#### <a name="bkmk_permissions"></a>네트워크 권한 정의
+#### <a name="define-network-permissions"></a><a name="bkmk_permissions"></a>네트워크 권한 정의
 무선 네트워크 \(IEEE 802.11\) 정책이 적용 되는 도메인 구성원에 대 한 **네트워크 사용 권한** 탭에서 설정을 구성할 수 있습니다.
 
 구성 되지 않은 무선 네트워크에 대 한 다음 설정을 적용할 수 있습니다는 **일반** 탭에 **무선 네트워크 정책 속성** 페이지:
@@ -382,7 +382,7 @@ ms.locfileid: "79322115"
 
     -   사용자가 그룹 정책 프로필을 사용 하 여 허용 된 네트워크에만 연결할 수 있는지를 지정 하려면 선택 **만 그룹 정책 프로필을 사용 하 여 허용 된 네트워크에 대 한**합니다.
 
-## <a name="bkmk_nps"></a>NPSs 구성
+## <a name="configure-your-npss"></a><a name="bkmk_nps"></a>NPSs 구성
 무선 액세스에 대해 802.1 X 인증을 수행 하도록 NPSs를 구성 하려면 다음 단계를 수행 합니다.
 
 - [Active Directory Domain Services에 NPS 등록](#bkmk_npsreg)
@@ -391,7 +391,7 @@ ms.locfileid: "79322115"
 
 - [마법사를 사용 하 여 802.1 X 무선에 대 한 NPS 정책 만들기](#bkmk_npspolicy)
 
-### <a name="bkmk_npsreg"></a>Active Directory Domain Services에 NPS 등록
+### <a name="register-nps-in-active-directory-domain-services"></a><a name="bkmk_npsreg"></a>Active Directory Domain Services에 NPS 등록
 이 절차를 사용 하 여 nps가 구성원 인 도메인에서 Active Directory Domain Services \(AD DS\)의 NPS\) \(네트워크 정책 서버를 실행 하는 서버를 등록할 수 있습니다. NPSs에 권한 부여 프로세스 중에 사용자 계정 속성의 전화 접속\-를 읽을 수 있는 권한을 부여 하려면 각 NPS를 AD DS에 등록 해야 합니다. NPS를 등록 하면 서버가 AD DS의 **RAS 및 IAS 서버** 보안 그룹에 추가 됩니다.
 
 >[!NOTE]
@@ -409,7 +409,7 @@ ms.locfileid: "79322115"
 
 3. **네트워크 정책 서버**에서 **확인**을 클릭한 다음 **확인**을 다시 클릭합니다.
 
-### <a name="bkmk_radiusclient"></a>NPS RADIUS 클라이언트로 무선 AP 구성
+### <a name="configure-a-wireless-ap-as-an-nps-radius-client"></a><a name="bkmk_radiusclient"></a>NPS RADIUS 클라이언트로 무선 AP 구성
 이 절차를 사용 하 여 라고도 AP를 구성 하는 *네트워크 액세스 서버 \(NAS\)* , 원격 인증 전화도\-사용자 서비스 \(RADIUS\) NPS 스냅인을 사용 하 여 클라이언트\-에 있습니다. 
 
 >[!IMPORTANT]
@@ -450,7 +450,7 @@ ms.locfileid: "79322115"
 
 9. **확인**을 클릭합니다. NAS가 NPS에 구성 된 RADIUS 클라이언트 목록에 표시 됩니다.
 
-### <a name="bkmk_npspolicy"></a>마법사를 사용 하 여 802.1 X 무선에 대 한 NPS 정책 만들기
+### <a name="create-nps-policies-for-8021x-wireless-using-a-wizard"></a><a name="bkmk_npspolicy"></a>마법사를 사용 하 여 802.1 X 무선에 대 한 NPS 정책 만들기
 이 절차를 사용 하 여 연결 요청 정책을 만들고 네트워크 정책 802.1 X 중 하나를 배포 하는 데 필요한\-원격 인증 전화와 가능 무선 액세스 지점을\-사용자 서비스 \(RADIUS\) 클라이언트가 네트워크 정책 서버를 실행 하는 RADIUS 서버를 \(NPS\)합니다.  
 마법사를 실행 한 후에는 다음 정책이 생성 됩니다.
 
@@ -473,7 +473,7 @@ ms.locfileid: "79322115"
 
 4.  에 **802.1 X 연결 유형 선택** 마법사 페이지의 **802.1 X 연결 유형을**, 선택, **무선 연결 보안**, 및 **이름**, 정책에 대 한 이름을 입력 하거나 기본 이름을 그대로 두고 **무선 연결 보안**합니다. **다음**을 클릭합니다.
 
-5.  에 **802.1 X 스위치 지정** 마법사 페이지의 **RADIUS 클라이언트**, 모든 802.1 X 스위치 및 무선 액세스 지점 NPS 스냅인에서 RADIUS 클라이언트로 추가\-에 표시 됩니다. 다음 중 하나를 수행하세요.
+5.  에 **802.1 X 스위치 지정** 마법사 페이지의 **RADIUS 클라이언트**, 모든 802.1 X 스위치 및 무선 액세스 지점 NPS 스냅인에서 RADIUS 클라이언트로 추가\-에 표시 됩니다. 다음 중 하나를 수행합니다.
 
     -   추가 네트워크 액세스 서버를 추가 하려면 \(Nas\), 무선 Ap와 같은 **RADIUS 클라이언트**, 클릭 **추가**, 한 다음 **새 RADIUS 클라이언트**, 에 대 한 정보를 입력: **이름**, **주소 \(IP 또는 DNS\)** , 및 **공유 암호**합니다.
 
@@ -512,7 +512,7 @@ ms.locfileid: "79322115"
 
 NPS 정책 이제 만들어지고 무선 컴퓨터를 도메인에 가입 하 이동할 수 있습니다.
 
-## <a name="bkmk_domain"></a>새 무선 컴퓨터를 도메인에 가입
+## <a name="join-new-wireless-computers-to-the-domain"></a><a name="bkmk_domain"></a>새 무선 컴퓨터를 도메인에 가입
 유선된 LAN 세그먼트에 컴퓨터를 물리적으로 연결 하는 새 무선 컴퓨터를 도메인에 가입 하는 가장 쉬운 방법은 \(세그먼트는 802.1 X 스위치에 의해 제어 되지\) 컴퓨터는 도메인에 가입 합니다. 이는 무선 그룹 정책 설정이 자동으로 즉시 적용 되 고 사용자 고유의 PKI를 배포한 경우 컴퓨터는 CA 인증서를 수신 하 여 신뢰할 수 있는 루트 인증 기관 인증서 저장소에 배치 하기 때문에 가장 쉽습니다. 무선 클라이언트가 CA에서 발급 한 서버 인증서와 NPSs를 신뢰 하도록 허용 합니다.
 
 마찬가지로, 새 무선 컴퓨터가 도메인에 가입 된 후 사용자가 도메인에 로그온 하는 기본 방법은 네트워크에 대 한 유선 연결을 사용 하 여 로그온을 수행 하는 것입니다.
@@ -528,7 +528,7 @@ NPS 정책 이제 만들어지고 무선 컴퓨터를 도메인에 가입 하 �
 
 자세한 내용은 섹션을 참조 하십시오. [부트스트랩 무선 프로필을 구성 하 여 사용자를 사용 하 여 도메인 및 로그온에 조인](#bkmk_userbootstrap)합니다.
 
-### <a name="bkmk_itstaff"></a>IT 직원 컴퓨터 구성 메서드를 사용 하 여 도메인에 가입 하 고 로그온 합니다.
+### <a name="join-the-domain-and-log-on-by-using-the-it-staff-computer-configuration-method"></a><a name="bkmk_itstaff"></a>IT 직원 컴퓨터 구성 메서드를 사용 하 여 도메인에 가입 하 고 로그온 합니다.
 도메인 구성원 사용자 도메인과\-조인 된 무선 클라이언트 컴퓨터는 802.1 X에 연결할 임시 무선 프로필을 사용할 수\-유선된 LAN에 연결 하지 않으면 무선 네트워크를 인증 합니다. 이 임시 무선 프로필 이라고는 *부트스트랩 무선 프로필*합니다.
 
 부트스트랩 무선 프로필에서 사용자가 도메인 사용자 계정 자격 증명을 수동으로 지정 해야 하 고 원격 인증 전화의 인증서 유효성을 검사 하지 않는\-사용자 서비스 \(RADIUS\) 네트워크 정책 서버를 실행 중인 서버 \(NPS\)합니다.
@@ -560,7 +560,7 @@ NPS 정책 이제 만들어지고 무선 컴퓨터를 도메인에 가입 하 �
 
 컴퓨터를 시작할 때 Windows 하 라는 메시지는 도메인 사용자 계정 이름 및 암호를 입력 합니다. Single Sign On이 사용 하도록 설정 되어 있기 때문에 컴퓨터는 도메인 사용자 계정 자격 증명을 사용 하 여 먼저 무선 네트워크와의 연결을 설정한 다음 도메인에 로그온 합니다.
 
-#### <a name="bkmk_w10"></a>Windows 10을 실행 하는 컴퓨터를 사용 하 여 도메인에 로그온
+#### <a name="log-on-to-the-domain-using-computers-running-windows-10"></a><a name="bkmk_w10"></a>Windows 10을 실행 하는 컴퓨터를 사용 하 여 도메인에 로그온
 
 1. 컴퓨터에서 로그오프하거나 컴퓨터를 다시 시작합니다.
 
@@ -575,7 +575,7 @@ NPS 정책 이제 만들어지고 무선 컴퓨터를 도메인에 가입 하 �
 >[!NOTE]
 >경우는 **기타 사용자** 화면에는 텍스트 **에 로그인:** 및 도메인 이름, 사용자 이름 형식으로 입력 해야 *도메인\\사용자*합니다. 예를 들어 명명 된 계정으로 도메인 example.com 로그온 **사용자\-01**, 형식 **예제\\사용자\-01**합니다.
 
-### <a name="bkmk_userbootstrap"></a>사용자의 부트스트랩 무선 프로필 구성을 사용 하 여 도메인에 가입 하 고 로그온 합니다.
+### <a name="join-the-domain-and-log-on-by-using-bootstrap-wireless-profile-configuration-by-users"></a><a name="bkmk_userbootstrap"></a>사용자의 부트스트랩 무선 프로필 구성을 사용 하 여 도메인에 가입 하 고 로그온 합니다.
 일반 단계 섹션의 단계를 완료 하면이 메서드로 도메인을 제공 합니다\-부트스트랩 무선 프로필 무선 컴퓨터를 수동으로 구성 하는 방법에 대 한 지침이 포함 된 멤버 사용자입니다. 부트스트랩 무선 프로필을 사용 하면 사용자가 무선 연결을 설정한 다음 도메인에 가입할 수 있습니다. 컴퓨터가 도메인에 가입 되 고 다시 시작 된 후에는 사용자가 무선 연결을 통해 도메인에 로그온 할 수 있습니다.
 
 #### <a name="general-steps"></a>일반적인 단계
@@ -592,7 +592,7 @@ NPS 정책 이제 만들어지고 무선 컴퓨터를 도메인에 가입 하 �
 
 1. 네트워크 관리자 또는 IT 지원에서 제공 하는 자격 증명을 사용 하 여 전문가를 로컬 컴퓨터의 관리자 계정으로 컴퓨터에 로그온 합니다.
 
-2. 오른쪽\-바탕 화면에서 네트워크 아이콘을 클릭 하 고 클릭 **개방 된 네트워크 및 공유 센터**합니다. **네트워크 및 공유 센터** 열립니다. **네트워킹 설정을 변경**, 클릭  **새 연결 또는 네트워크 설정**합니다. **연결 설정 또는 네트워크** 대화 상자가 열립니다.
+2. 오른쪽\-바탕 화면에서 네트워크 아이콘을 클릭 하 고 클릭 **개방 된 네트워크 및 공유 센터**합니다. **네트워크 및 공유 센터**가 열립니다. **네트워킹 설정을 변경**, 클릭  **새 연결 또는 네트워크 설정**합니다. **연결 설정 또는 네트워크** 대화 상자가 열립니다.
 
 3. 클릭 **무선 네트워크에 수동으로 연결**, 를 클릭 하 고 **다음**합니다.
 

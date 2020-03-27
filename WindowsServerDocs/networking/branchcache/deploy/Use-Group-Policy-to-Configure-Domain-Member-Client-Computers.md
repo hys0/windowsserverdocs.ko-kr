@@ -6,15 +6,15 @@ ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 911c1538-f79d-42e9-ba38-f4618f87b008
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 06/02/2018
-ms.openlocfilehash: 6f093e605ce735d8f86f7f4d479a646d144e8829
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: c6ca1ff8fabb559628afd2dd1abafc56a908909a
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71356521"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80319191"
 ---
 # <a name="use-group-policy-to-configure-domain-member-client-computers"></a>그룹 정책을 사용 하 여 도메인 구성원 클라이언트 컴퓨터를 구성 합니다.
 
@@ -35,7 +35,7 @@ ms.locfileid: "71356521"
   
 멤버 여야 **Domain Admins**, 또는 이러한 절차를 수행 하려면 해당 합니다.  
   
-## <a name="bkmk_gp"></a>그룹 정책 개체를 만들고 BranchCache 모드를 구성 하려면  
+## <a name="to-create-a-group-policy-object-and-configure-branchcache-modes"></a><a name="bkmk_gp"></a>그룹 정책 개체를 만들고 BranchCache 모드를 구성 하려면  
   
 1.  있는 Active Directory 도메인 서비스 서버 역할 설치 된 컴퓨터, 서버 관리자에서 클릭 **도구**, 를 클릭 하 고 **그룹 정책 관리**합니다. 그룹 정책 관리 콘솔이 열립니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "71356521"
   
 3.  마우스 오른쪽 단추로 클릭 **그룹 정책 개체**, 를 클릭 하 고 **새로**합니다. **새 GPO** 대화 상자가 열립니다. **이름**, 에 대 한 새 그룹 정책 개체 (GPO) 이름을 입력 합니다. 예를 들어 개체 BranchCache 클라이언트 컴퓨터의 이름을 하려는 입력 **BranchCache 클라이언트 컴퓨터**합니다. **확인**을 클릭합니다.  
   
-4.  그룹 정책 관리 콘솔에서 **그룹 정책 개체** 을 선택 하 고 세부 정보 창에서 방금 만든 GPO를 마우스 오른쪽 단추로 클릭 합니다. 예를 들어 GPO BranchCache 클라이언트 컴퓨터를 이름을 마우스 오른쪽 단추로 클릭 **BranchCache 클라이언트 컴퓨터**합니다. 클릭 **편집**합니다. 그룹 정책 관리 편집기 콘솔이 열립니다.  
+4.  그룹 정책 관리 콘솔에서 **그룹 정책 개체** 을 선택 하 고 세부 정보 창에서 방금 만든 GPO를 마우스 오른쪽 단추로 클릭 합니다. 예를 들어 GPO BranchCache 클라이언트 컴퓨터를 이름을 마우스 오른쪽 단추로 클릭 **BranchCache 클라이언트 컴퓨터**합니다. **편집**을 클릭합니다. 그룹 정책 관리 편집기 콘솔이 열립니다.  
   
 5.  그룹 정책 관리 편집기 콘솔에서 다음 경로 확장: **컴퓨터 구성**, **정책**, **관리 템플릿: 로컬 컴퓨터에서 검색 된 정책 정의 (ADMX 파일)** , **네트워크**, **BranchCache**합니다.  
   
@@ -64,11 +64,11 @@ ms.locfileid: "71356521"
   
 12. 그룹 정책을 사용 하 여 클라이언트 컴퓨터에서 방화벽 설정을 구성 하려면 다음 절차를 사용 합니다.  
   
-## <a name="bkmk_inbound"></a>고급 보안이 포함 된 Windows 방화벽 인바운드 트래픽 규칙을 구성 하려면  
+## <a name="to-configure-windows-firewall-with-advanced-security-inbound-traffic-rules"></a><a name="bkmk_inbound"></a>고급 보안이 포함 된 Windows 방화벽 인바운드 트래픽 규칙을 구성 하려면  
   
 1.  그룹 정책 관리 콘솔에서 다음 경로를 확장 합니다. **포리스트:** *example.com*, **도메인**, *example.com*, **그룹 정책 개체**, 여기서 *example.com* 은 구성 하려는 BranchCache 클라이언트 컴퓨터 계정이 있는 도메인의 이름입니다.  
   
-2.  그룹 정책 관리 콘솔에서 **그룹 정책 개체** 을 선택 하 고 세부 정보 창에서 BranchCache 클라이언트 컴퓨터 이전에 만든 GPO를 마우스 오른쪽 단추로 클릭 합니다. 예를 들어 GPO BranchCache 클라이언트 컴퓨터를 이름을 마우스 오른쪽 단추로 클릭 **BranchCache 클라이언트 컴퓨터**합니다. 클릭 **편집**합니다. 그룹 정책 관리 편집기 콘솔이 열립니다.  
+2.  그룹 정책 관리 콘솔에서 **그룹 정책 개체** 을 선택 하 고 세부 정보 창에서 BranchCache 클라이언트 컴퓨터 이전에 만든 GPO를 마우스 오른쪽 단추로 클릭 합니다. 예를 들어 GPO BranchCache 클라이언트 컴퓨터를 이름을 마우스 오른쪽 단추로 클릭 **BranchCache 클라이언트 컴퓨터**합니다. **편집**을 클릭합니다. 그룹 정책 관리 편집기 콘솔이 열립니다.  
   
 3.  그룹 정책 관리 편집기 콘솔에서 다음 경로 확장: **컴퓨터 구성**, **정책**, **Windows 설정**, **보안 설정을**, **고급 보안이 포함 된 Windows 방화벽**, **Windows Firewall with Advanced Security-LDAP**, **인바운드 규칙**합니다.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "71356521"
     > [!IMPORTANT]  
     > 선택 해야 **연결을 허용** 이 포트에서 트래픽을 받을 수 있으려면 BranchCache 클라이언트에 대 한 합니다.  
   
-## <a name="bkmk_outbound"></a>고급 보안 아웃 바운드 트래픽 규칙으로 Windows 방화벽을 구성 하려면  
+## <a name="to-configure-windows-firewall-with-advanced-security-outbound-traffic-rules"></a><a name="bkmk_outbound"></a>고급 보안 아웃 바운드 트래픽 규칙으로 Windows 방화벽을 구성 하려면  
   
 1.  그룹 정책 관리 편집기 콘솔에서 마우스 오른쪽 단추로 클릭 **아웃 바운드 규칙**, 를 클릭 하 고 **새 규칙**합니다. 새 아웃 바운드 규칙 마법사가 열립니다.  
   
