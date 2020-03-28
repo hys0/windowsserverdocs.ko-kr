@@ -2,19 +2,19 @@
 ms.assetid: ''
 title: 추적 가능성을 위한 Windows 시간
 description: 많은 섹터의 규정을 준수하려면 시스템을 UTC로 추적할 수 있어야 합니다.  이는 시스템의 오프셋이 UTC와 관련하여 증명될 수 있음을 의미합니다.
-author: shortpatti
+author: eross-msft
 ms.author: dacuo
 manager: dougkim
 ms.date: 10/17/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: networking
-ms.openlocfilehash: 307739042426088fa92c50e6ea4dc5d2a744f15a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e7f7a68d61729813583255d64afbf172475969e3
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405202"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80314931"
 ---
 # <a name="windows-time-for-traceability"></a>추적 가능성을 위한 Windows 시간
 >적용 대상: Windows Server 2016 버전 1709 이상 및 Windows 10 버전 1703 이상
@@ -41,7 +41,7 @@ ms.locfileid: "71405202"
 
 다음 섹션에서는 추적 가능성 시나리오에서 사용하도록 기록된 이벤트를 간략하게 설명합니다.
 
-# <a name="257tab257"></a>[257](#tab/257)
+# <a name="257"></a>[257](#tab/257)
 이 이벤트는 Windows 시간 서비스(W32Time)가 시작될 때 기록되며 현재 시간, 현재 틱 수, 런타임 구성, 시간 공급자 및 현재 클록 속도에 대한 정보를 기록합니다.
 
 |||
@@ -71,7 +71,7 @@ w32tm.exe /query /status /verbose
 ```
 
 
-# <a name="258tab258"></a>[258](#tab/258)
+# <a name="258"></a>[258](#tab/258)
 이 이벤트는 Windows 시간 서비스(W32Time)가 중지될 때 기록되고 현재 시간 및 틱 수에 대한 정보를 기록합니다.
 
 |||
@@ -84,7 +84,7 @@ w32tm.exe /query /status /verbose
 **예제 텍스트:** 
 `W32time service is stopping at 2018-03-01T05:42:13.944Z (UTC), System Tick Count 6370250.`
 
-# <a name="259tab259"></a>[259](#tab/259)
+# <a name="259"></a>[259](#tab/259)
 이 이벤트는 현재 시간 소스와 선택한 시간 소스를 주기적으로 기록합니다.  또한 현재 틱 수를 기록합니다.  이 이벤트는 시간 소스가 변경될 때마다 발생하지 않습니다.  이 기능은 이 문서의 뒷부분에 나오는 다른 이벤트가 제공합니다.
 
 |||
@@ -105,7 +105,7 @@ server1.fabrikam.com,0x8 (ntp.m|0x8|[::]:123->[IPAddress]:123)server2.fabrikam.c
 *Identify Peers*
 `w32tm.exe /query /peers`
 
-# <a name="260tab260"></a>[260](#tab/260)
+# <a name="260"></a>[260](#tab/260)
 
 |||
 |---|---|
@@ -113,7 +113,7 @@ server1.fabrikam.com,0x8 (ntp.m|0x8|[::]:123->[IPAddress]:123)server2.fabrikam.c
 |세부 정보 |W32time은 구성 및 상태를 주기적으로 기록합니다. 이것은 다음을 호출하는 것과 같습니다.<br><br>`w32tm /query /configuration /verbose`<br>또는<br>`w32tm /query /status /verbose` |
 |제한 메커니즘  |8시간마다 한 번씩 기록됩니다. |
 
-# <a name="261tab261"></a>[261](#tab/261)
+# <a name="261"></a>[261](#tab/261)
 SetSystemTime API를 사용하여 시스템 시간이 수정될 때 각 인스턴스를 기록합니다.
 
 |||
@@ -121,7 +121,7 @@ SetSystemTime API를 사용하여 시스템 시간이 수정될 때 각 인스�
 |이벤트 설명 |시스템 시간이 설정됨 |
 |제한 메커니즘  |없음<br><br>적절한 시간 동기화 시스템에서는 거의 발생하지 않으며, 발생할 때마다 기록하려고 합니다. 이벤트를 기록하는 동안 TimeJumpAuditOffset 설정은 무시합니다. 이 설정은 Windows 시스템 이벤트 로그에서 이벤트를 조절하기 위한 것이기 때문입니다. |
 
-# <a name="262tab262"></a>[262](#tab/262)
+# <a name="262"></a>[262](#tab/262)
 
 |||
 |---|---|
@@ -129,7 +129,7 @@ SetSystemTime API를 사용하여 시스템 시간이 수정될 때 각 인스�
 |세부 정보 |시스템 클록 주파수는 클록이 밀접하게 동기화되는 경우 W32time에 의해 지속적으로 수정됩니다. 이벤트 로그를 오버런하지 않고 클록 주파수에 대해 "합리적으로 중요한" 조정을 캡처하려고 합니다. |
 |제한 메커니즘  |TimeAdjustmentAuditThreshold(최소 = 128ppm(백만분율), 기본 = 800ppm) 이하의 모든 클록 조정은 기록되지 않습니다.<br><br>현재 세분성으로 클록 주파수에서 2PPM이 변경되면 클록 정확도가 120µsec/sec로 변경됩니다.<br><br>동기화된 시스템에서 대부분의 조정은 이 수준보다 낮습니다. 보다 세부적인 추적이 필요한 경우, 이 설정을 하향 조정하거나 PerfCounters를 사용하거나 두 가지를 모두 수행할 수 있습니다. |
 
-# <a name="263tab263"></a>[263](#tab/263)
+# <a name="263"></a>[263](#tab/263)
 
 |||
 |---|---|
@@ -138,7 +138,7 @@ SetSystemTime API를 사용하여 시스템 시간이 수정될 때 각 인스�
 |제한 메커니즘  |없음<br><br>이 이벤트는 관리자 또는 GP 업데이트가 시간 공급자를 변경한 다음, W32time을 트리거하는 경우에만 발생합니다. 설정 변경의 각 인스턴스를 기록하려고 합니다. |
 
 
-# <a name="264tab264"></a>[264](#tab/264)
+# <a name="264"></a>[264](#tab/264)
 
 |||
 |---|---|
@@ -146,7 +146,7 @@ SetSystemTime API를 사용하여 시스템 시간이 수정될 때 각 인스�
 |세부 정보 |NTP 클라이언트는 시간 서버/피어가 상태를 변경(**보류 중 ->동기화**, **동기화 -> 접근할 수 없음** 또는 기타 전환)할 때 시간 서버/피어의 현재 상태로 이벤트를 기록합니다 |
 |제한 메커니즘  |최대 빈도 – 일시적인 문제 및 잘못된 공급자 구현으로부터 로그를 보호하기 위해 5분에 한 번씩만. |
 
-# <a name="265tab265"></a>[265](#tab/265)
+# <a name="265"></a>[265](#tab/265)
 
 |||
 |---|---|
@@ -155,7 +155,7 @@ SetSystemTime API를 사용하여 시스템 시간이 수정될 때 각 인스�
 |제한 메커니즘  |없음 |
 
 
-# <a name="266tab266"></a>[266](#tab/266)
+# <a name="266"></a>[266](#tab/266)
 
 |||
 |---|---|

@@ -2,19 +2,19 @@
 ms.assetid: d1953097-63ea-4a0e-b860-2f3b7c175c41
 title: Windows 시간 서비스 작동 방식
 description: ''
-author: shortpatti
-ms.author: pashort
+author: eross-msft
+ms.author: lizross
 manager: dougkim
 ms.date: 05/08/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: networking
-ms.openlocfilehash: 2bf4a887218cd51e9c10954a75bbc1ba2112647f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d8532dedb6473a34591a1f160a94a785cc4ba367
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405149"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80315170"
 ---
 # <a name="how-the-windows-time-service-works"></a>Windows 시간 서비스 작동 방식
 
@@ -45,7 +45,7 @@ Windows 시간 서비스 네트워크 시간 프로토콜 (NTP)의 정확 하 �
 -   Windows 시간 서비스를 사용할 수 있는 CPU 및 네트워크 리소스의 양  
   
 > [!IMPORTANT]  
-> Windows Server 2016 이전에 W32Time 서비스는 시간이 중요한 애플리케이션 요구 사항을 충족하도록 설계되지 않았습니다.  그러나 이제 Windows Server 2016에 대한 업데이트를 통해 도메인에서 1밀리초의 정확도에 대한 솔루션을 구현할 수 있습니다.  자세한 내용은 [Windows 2016 정확한 시간](accurate-time.md) 및 [경계 지원으로 정확도가 높은 환경을 위한 Windows 시간 서비스 구성](support-boundary.md)을 참조하세요.  
+> Windows Server 2016 이전에 W32Time 서비스는 시간이 중요한 애플리케이션 요구 사항을 충족하도록 설계되지 않았습니다.  그러나 이제 Windows Server 2016으로 업데이트하면 도메인에서 1밀리초 정확도의 솔루션을 구현할 수 있습니다.  자세한 내용은 [Windows 2016 정확한 시간](accurate-time.md) 및 [경계 지원으로 정확도가 높은 환경을 위한 Windows 시간 서비스 구성](support-boundary.md)을 참조하세요.  
   
 시간이 덜 동기화되거나 도메인에 조인되지 않은 컴퓨터는 기본적으로 time.windows.com과 동기화되도록 구성됩니다.  따라서 간헐적이거나 네트워크에 연결되지 않은 컴퓨터에서는 시간 정확도를 보장할 수 없습니다.  
   

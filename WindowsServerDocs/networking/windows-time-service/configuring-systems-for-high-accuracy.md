@@ -2,18 +2,18 @@
 ms.assetid: ''
 title: 높은 정확성을 위한 시스템 구성
 description: Windows 10 및 Windows Server 2016의 시간 동기화가 크게 향상되었습니다.  합리적인 운영 조건에서 시스템은 UTC와 관련하여 1ms(밀리초) 이상의 정확도를 유지하도록 구성할 수 있습니다.
-author: shortpatti
+author: eross-msft
 ms.author: dacuo
 ms.date: 05/08/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: networking
-ms.openlocfilehash: b7cd256fdbbdbe7432e5b5d5b16254314132560f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 8cdded0eb0dc663d352011fb1a6765a2ed358764
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405195"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80315032"
 ---
 # <a name="configuring-systems-for-high-accuracy"></a>높은 정확성을 위한 시스템 구성
 >적용 대상: Windows Server 2016 및 Windows 10 버전 1607 이상:
@@ -106,7 +106,7 @@ W32Time(Windows 시간 서비스)은 계속 실행해야 합니다.  이렇게 �
 
 #### <a name="registry-settings"></a>레지스트리 설정
 
-# <a name="minpollintervaltabminpollinterval"></a>[MinPollInterval](#tab/MinPollInterval)
+# <a name="minpollinterval"></a>[MinPollInterval](#tab/MinPollInterval)
 시스템 폴링에 허용되는 최소 간격(log2초)을 구성합니다.
 
 |  |  | 
@@ -120,7 +120,7 @@ W32Time(Windows 시간 서비스)은 계속 실행해야 합니다.  이렇게 �
 `w32tm /config /update`
 
 
-# <a name="maxpollintervaltabmaxpollinterval"></a>[MaxPollInterval](#tab/MaxPollInterval)
+# <a name="maxpollinterval"></a>[MaxPollInterval](#tab/MaxPollInterval)
 시스템 폴링에 허용되는 최대 간격(log2초)을 구성합니다.
 
 |  |  |  
@@ -133,7 +133,7 @@ W32Time(Windows 시간 서비스)은 계속 실행해야 합니다.  이렇게 �
 
 `w32tm /config /update`
 
-# <a name="updateintervaltabupdateinterval"></a>[UpdateInterval](#tab/UpdateInterval)
+# <a name="updateinterval"></a>[UpdateInterval](#tab/UpdateInterval)
 단계 수정 조정 사이의 클록 틱 수입니다.
 
 |  |  |  
@@ -146,7 +146,7 @@ W32Time(Windows 시간 서비스)은 계속 실행해야 합니다.  이렇게 �
 
 `w32tm /config /update`
 
-# <a name="specialpollintervaltabspecialpollinterval"></a>[SpecialPollInterval](#tab/SpecialPollInterval)
+# <a name="specialpollinterval"></a>[SpecialPollInterval](#tab/SpecialPollInterval)
 SpecialInterval 0x1 플래그를 사용하는 경우 폴링 간격(초)을 구성합니다.
 
 |  |  |  
@@ -159,7 +159,7 @@ SpecialInterval 0x1 플래그를 사용하는 경우 폴링 간격(초)을 구�
 
 `net stop w32time && net start w32time`
 
-# <a name="frequencycorrectratetabfrequencycorrectrate"></a>[FrequencyCorrectRate](#tab/FrequencyCorrectRate)
+# <a name="frequencycorrectrate"></a>[FrequencyCorrectRate](#tab/FrequencyCorrectRate)
 
 |  |  |  
 |---------|---------|

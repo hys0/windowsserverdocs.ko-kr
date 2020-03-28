@@ -3,7 +3,7 @@ ms.assetid: 6086947f-f9ef-4e18-9f07-6c7c81d7002c
 title: Windows 시간 서비스 도구 및 설정
 description: ''
 author: Teresa-Motiv
-ms.author: pashort
+ms.author: lizross
 manager: dougkim
 ms.date: 02/24/2020
 ms.topic: article
@@ -13,12 +13,12 @@ ms.custom:
 - CI ID 113344
 - CSSTroubleshoot
 audience: Admin
-ms.openlocfilehash: e99c07428a1689e3c079ff2570759c849a61e945
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: e9432aa11446cdd4f00efca3af28c24d757d6019
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79323475"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80315138"
 ---
 # <a name="windows-time-service-tools-and-settings"></a>Windows 시간 서비스 도구 및 설정
 
@@ -256,7 +256,7 @@ Windows 시간 서비스는 다음 레지스트리 하위 키 아래에 정보�
 >  
 > 예를 들어 5분은 5 &times; 60 &times; 1000 &times; 10000 = 3,000,000,000 클록 틱이 됩니다.  
 
-### <a id="config"></a>"HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Config" 하위 키 항목
+### <a name="hklmsystemcurrentcontrolsetservicesw32timeconfig-subkey-entries"></a><a id="config"></a>"HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Config" 하위 키 항목
 
 |레지스트리 항목 |버전 |설명 |
 | --- | --- | --- |
@@ -289,7 +289,7 @@ Windows 시간 서비스는 다음 레지스트리 하위 키 아래에 정보�
 |**UpdateInterval** |모든 버전 |단계 수정 조정 사이의 클록 틱 수를 지정합니다. 도메인 컨트롤러의 기본값은 **100**입니다. 도메인 멤버의 기본값은 **30,000**입니다. 독립 실행형 클라이언트와 서버의 기본값은 **360,000**입니다.<br /><br />**참고**<br />0은 **UpdateInterval** 레지스트리 항목의 유효한 값이 아닙니다. Windows Server 2003, Windows Server 2003 R2, Windows Server 2008, Windows Server 2008 R2를 실행하는 컴퓨터에서 이 값을 **0**으로 설정하면 Windows 시간 서비스가 자동으로 **1**로 변경합니다.|
 |**UtilizeSslTimeData** |Windows 10 빌드 1511 이후의 Windows 버전 |값이 **1**이면 W32Time가 여러 SSL 타임스탬프를 사용하여 매우 부정확한 클록을 시드한다는 것을 나타냅니다. |
 
-### <a id="parameters"></a>"HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Parameters" 하위 키 항목
+### <a name="hklmsystemcurrentcontrolsetservicesw32timeparameters-subkey-entries"></a><a id="parameters"></a>"HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Parameters" 하위 키 항목
 
 | 레지스트리 항목 | 버전 | 설명 |
 | --- | --- | --- |
@@ -299,7 +299,7 @@ Windows 시간 서비스는 다음 레지스트리 하위 키 아래에 정보�
 |**ServiceMain** |모든 버전 |W32Time에서 유지 관리됩니다. 여기에는 Windows 운영 체제에서 사용하는 예약된 데이터가 포함되며, 이 설정을 변경하면 예기치 않은 결과가 발생할 수 있습니다. 도메인 멤버의 기본값은 **SvchostEntry_W32Time**입니다. 독립 실행형 클라이언트와 서버의 기본값은 **SvchostEntry_W32Time**입니다. |
 |**Type** |모든 버전 |동기화를 수락할 피어를 나타냅니다.  <ul><li>**NoSync**. 시간 서비스가 다른 원본과 동기화되지 않습니다.</li><li>**NTP**. 시간 서비스가 **NtpServer**에 지정된 서버에서 동기화됩니다. 레지스트리 항목입니다.</li><li>**NT5DS**. 시간 서비스가 도메인 계층 구조에서 동기화됩니다.  </li><li>**AllSync**. 시간 서비스에서 사용 가능한 모든 동기화 메커니즘을 사용합니다.  </li></ul>도메인 멤버의 기본값은 **NT5DS**입니다. 독립 실행형 클라이언트 및 서버의 기본값은 **NTP**입니다. |
 
-### <a id="ntpclient"></a>"HKLM\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient" 하위 키 항목
+### <a name="hklmsystemcurrentcontrolsetservicesw32timetimeprovidersntpclient-subkey-entries"></a><a id="ntpclient"></a>"HKLM\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient" 하위 키 항목
 
 |레지스트리 항목 |Version |설명 |
 | --- | --- | --- |
@@ -316,7 +316,7 @@ Windows 시간 서비스는 다음 레지스트리 하위 키 아래에 정보�
 |**SpecialPollInterval** |모든 버전 |수동 피어의 특수 폴링 간격을 초 단위로 지정합니다. **SpecialInterval** 0x1 플래그를 사용하도록 설정되면 W32Time은 운영 체제가 결정한 폴링 간격 대신 이 폴링 간격을 사용합니다. 도메인 멤버의 기본값은 **3,600**입니다. 독립 실행형 클라이언트와 서버의 기본값은 **604,800**입니다.<br/><br/>빌드 1702의 새로운 기능인 **SpecialPollInterval**은 **MinPollInterval** 및 **MaxPollInterval** 구성 레지스트리 값에 포함됩니다.|
 |**SpecialPollTimeRemaining** |모든 버전 |W32Time에서 유지 관리됩니다. 여기에는 Windows 운영 체제에서 사용하는 예약된 데이터가 포함됩니다. 컴퓨터가 다시 시작된 후 W32Time이 다시 동기화될 때까지의 시간(초)을 지정합니다. 이 설정을 변경하면 예기치 않은 결과가 발생할 수 있습니다. 도메인 멤버 및 독립 실행형 클라이언트 및 서버 모두의 기본값은 비어 있습니다. |
 
-### <a id="ntpserver"></a>"HKLM\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer" 하위 키 항목
+### <a name="hklmsystemcurrentcontrolsetservicesw32timetimeprovidersntpserver-subkey-entries"></a><a id="ntpserver"></a>"HKLM\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer" 하위 키 항목
 
 |레지스트리 항목 |버전 |설명 |
 | --- | --- | --- |
