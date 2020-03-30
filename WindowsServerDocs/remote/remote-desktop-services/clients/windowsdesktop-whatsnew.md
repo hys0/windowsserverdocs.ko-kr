@@ -11,14 +11,14 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 03/10/2020
+ms.date: 03/24/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 981a9071b3f5daf1ca97dcde8a8b32b2a2588d99
-ms.sourcegitcommit: fc900eb19ac26c3d6bc2de179cc4b2c1e971043e
+ms.openlocfilehash: 38b779b12b841e276d8f807af6f6332469c20817
+ms.sourcegitcommit: 9e8fddf683c9a36aad330ebef9b80d57f75ffb43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79038066"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233303"
 ---
 # <a name="whats-new-in-the-windows-desktop-client"></a>Windows 데스크톱 클라이언트의 새로운 기능
 
@@ -30,14 +30,14 @@ Windows 데스크톱 클라이언트에 대한 자세한 내용은 [Windows 데�
 
 |사용자 그룹 |Version  |
 |-----------|---------|
-|공용     |1.2.675  |
-|참가자    |1.2.787  |
+|공용     |1.2.790  |
+|참가자    |1.2.790  |
 
-## <a name="updates-for-version-12787"></a>1\.2.787 버전에 대한 업데이트
+## <a name="updates-for-version-12790"></a>1\.2.790 버전에 대한 업데이트
 
-*게시 날짜: 2020년 3월 10일*
+*게시 날짜: 2020/03/24*
 
-다운로드: [Windows 64비트](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4qZVh), [Windows 32비트](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4qXhC), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4qRVA)
+다운로드: [Windows 64비트](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4siSh), [Windows 32비트](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4siSi), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4sllb)
 
 - 다른 원격 데스크톱 클라이언트와 일치하도록 작업 영역에 대한 "업데이트" 작업의 이름이 "새로 고침"으로 변경되었습니다.
 - 이제 컨텍스트 메뉴에서 작업 영역을 직접 새로 고칠 수 있습니다.
