@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 436d4bbec0dbb31fd9cdfb4fc29057e32d87888a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 0fc273bc84e0bc25a7409941af6dca02b6042640
+ms.sourcegitcommit: 479ad84a0d6c7c7b8308122b8bac8308cb36fe9b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71374113"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80391701"
 ---
 # <a name="manage-bde-changekey"></a>manage-bde: 변환
 
@@ -43,11 +43,11 @@ manage-bde -changekey [<Drive>] [<PathToExternalKeyDirectory>] [-computername <N
 |-? 또는 /?|도움말에 대 한 간단한 명령 프롬프트에 표시 됩니다.|
 |-help 또는-h|명령 프롬프트에서 전체 도움말을 표시 합니다.|
 
-## <a name="BKMK_Examples"></a>예와
+## <a name="examples"></a><a name="BKMK_Examples"></a>예와
 
 다음 예제를 사용 하 여 **-변환** C 드라이브에서 BitLocker 암호화를 사용 하 여 E 드라이브에 시작 키를 새로 만드는 명령을
 ```
-manage-bde –changekey C: E:\
+manage-bde -changekey C: E:\
 ```
 
 #### <a name="additional-references"></a>추가 참조
