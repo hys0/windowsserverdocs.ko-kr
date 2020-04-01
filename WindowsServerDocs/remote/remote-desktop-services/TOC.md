@@ -63,7 +63,7 @@
 ### [VDI(가상 데스크톱 인프라)를 위한 Windows 10 버전 1909 최적화](rds_vdi-recommendations-1909.md)
 ### [VDI(가상 데스크톱 인프라)를 위한 Windows 10 버전 1803 최적화](rds-vdi-recommendations-1803.md)
 ### [RDS 컬렉션의 사용자 관리](rds-user-management.md)
-### [Windows Server에서 PowerShell을 사용하여 "작업 리소스" RDS 제목 사용자 지정](rds-work-resources.md)
+### [Windows Server에서 PowerShell을 사용하여 RDS 제목 "작업 리소스" 사용자 지정](rds-work-resources.md)
 ### [성능 카운터를 사용하여 앱 성능 문제 진단](rds-rdsh-performance-counters.md)
 
 ## 원격 데스크톱 리소스에 액세스
@@ -93,8 +93,8 @@
 #### [네트워크 외부에서 PC에 대한 액세스 허용](clients/remote-desktop-allow-outside-access.md)
 #### [PC에서 RD 수신 대기 포트 변경](clients/change-listening-port.md)
 ### 고급 정보
-#### [가장 적합한 클라이언트는?](clients/remote-desktop-app-compare.md)
-#### [원격 데스크톱 RDP 파일 설정](clients/rdp-files.md)
+#### [클라이언트 비교](clients/remote-desktop-app-compare.md)
+#### [지원되는 원격 데스크톱 RDP 파일 설정](clients/rdp-files.md)
 #### [원격 데스크톱 URI 체계](clients/remote-desktop-uri.md)
 #### [원격 데스크톱 클라이언트 FAQ](clients/remote-desktop-client-faq.md)
 #### [관리형 앱 및 데스크톱에 대한 개인 정보 설정](clients/remote-privacy-settings.md)
