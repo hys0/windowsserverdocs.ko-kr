@@ -8,12 +8,12 @@ ms.topic: article
 ms.assetid: 90e544bd-e826-4093-8c3b-6a6fc2dfd1d6
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 278d813aa13ea42b7f597bdbe7eb210f68cee955
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 4e6e6d2612af80bdaaa3900414bb08c3f0c18ea3
+ms.sourcegitcommit: 3c3dfee8ada0083f97a58997d22d218a5d73b9c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80316302"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80639906"
 ---
 # <a name="network-policy-server-best-practices"></a>네트워크 정책 서버 모범 사례
 
@@ -97,7 +97,7 @@ NPS 로깅을 가장 효과적으로 사용 하려면 다음을 수행 합니다
 
 - 가능한 경우 사용자를 참조 하려면 사용자 계정 이름을 사용 합니다. 사용자는 도메인 멤버 자격에 관계 없이 동일한 사용자 계정 이름을 가질 수 있습니다. 이 방법은 도메인 수가 많은 조직에 필요할 수 있는 확장성을 제공 합니다.
 
-- 도메인 컨트롤러가 아닌 컴퓨터에 nps\) \(네트워크 정책 서버를 설치 했지만 NPS에서 초당 많은 수의 인증 요청을 수신 하는 경우 nps와 도메인 컨트롤러 간에 허용 되는 동시 인증 수를 늘려서 NPS 성능을 향상 시킬 수 있습니다. 자세한 
+- 도메인 컨트롤러가 아닌 컴퓨터에 nps\) \(네트워크 정책 서버를 설치 했지만 NPS에서 초당 많은 수의 인증 요청을 수신 하는 경우 nps와 도메인 컨트롤러 간에 허용 되는 동시 인증 수를 늘려서 NPS 성능을 향상 시킬 수 있습니다. 자세한 내용은 [NPS에서 처리 하는 동시 인증 늘리기](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-concurrent-auth)를 참조 하세요.
 
 ## <a name="security-issues"></a>보안 문제
 

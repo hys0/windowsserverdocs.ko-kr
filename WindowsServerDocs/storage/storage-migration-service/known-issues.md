@@ -8,12 +8,12 @@ ms.date: 02/10/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: a9759f0ea8835c8e07bcd298b75024e3ee29c9ed
-ms.sourcegitcommit: b5c12007b4c8fdad56076d4827790a79686596af
+ms.openlocfilehash: f8a1e70bba740875e19660d5a729a952c9fae8f2
+ms.sourcegitcommit: d56c042c58833bdaa9a6fe54dd68f540af12fc6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856347"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80661073"
 ---
 # <a name="storage-migration-service-known-issues"></a>저장소 마이그레이션 서비스의 알려진 문제
 
@@ -23,7 +23,7 @@ Storage Migration Service는 Windows Server의 서비스와 Windows 관리 센�
 
 예를 들어 Windows Server, 버전 1903에는 저장소 마이그레이션 서비스에 대 한 새로운 기능 및 수정이 포함 되어 있습니다 .이 서비스는 [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534)를 설치 하 여 windows server 2019 및 windows server 버전 1809 에서도 사용할 수 있습니다.
 
-## <a name="collecting-logs"></a>Microsoft 지원 작업할 때 로그 파일을 수집 하는 방법
+## <a name="how-to-collect-log-files-when-working-with-microsoft-support"></a><a name="collecting-logs"></a>Microsoft 지원 작업할 때 로그 파일을 수집 하는 방법
 
 저장소 마이그레이션 서비스에는 Orchestrator 서비스와 프록시 서비스에 대 한 이벤트 로그가 포함 되어 있습니다. Orchestrator 서버는 항상 두 이벤트 로그를 모두 포함 하 고 프록시 서비스를 설치한 대상 서버는 프록시 로그를 포함 합니다. 이러한 로그는 다음 위치에 있습니다.
 
@@ -343,7 +343,7 @@ Windows Server 2008 R2 클러스터 원본에서 잘라내기를 실행 하려�
        at Microsoft.FailoverClusters.Framework.ClusterUtils.RenameFSNetName(SafeClusterHandle ClusterHandle, String clusterName, String FsResourceId, String NetNameResourceId, String newDnsName, CancellationToken ct)
        at Microsoft.StorageMigration.Proxy.Cutover.CutoverUtils.RenameFSNetName(NetworkCredential networkCredential, Boolean isLocal, String clusterName, String fsResourceId, String nnResourceId, String newDnsName, CancellationToken ct)    [d:\os\src\base\dms\proxy\cutover\cutoverproxy\CutoverUtils.cs::RenameFSNetName::1510]
 
-이 문제는 이전 버전의 Windows Server에서 API 누락으로 인해 발생 합니다. 현재 Windows Server 2008 및 Windows Server 2003 클러스터를 마이그레이션할 수 있는 방법은 없습니다. 인벤토리를 수행 하 고 Windows Server 2008 R2 클러스터에서 문제 없이 전송 한 다음 수동으로 클러스터의 원본 파일 서버 리소스 (netname 및 IP 주소)를 변경 하 고 대상 클러스터 netname 및 IP를 변경 하 여 수동으로 조치를 수행할 수 있습니다. 원본 원본과 일치 하는 주소입니다. 
+이 문제는 이전 버전의 Windows Server에서 API 누락으로 인해 발생 합니다. 현재 Windows Server 2008 및 Windows Server 2003 클러스터를 마이그레이션할 수 있는 방법은 없습니다. 인벤토리를 수행 하 고 Windows Server 2008 R2 클러스터에서 문제 없이 전송 한 다음 수동으로 클러스터의 원본 파일 서버 리소스 (netname 및 IP 주소)를 변경 하 고 대상 클러스터 netname 및 IP 주소를 원래 원본과 일치 하도록 변경 하 여 수동으로 조치를 수행할 수 있습니다. 
 
 ## <a name="cutover-hangs-on-38-mapping-network-interfaces-on-the-source-computer-when-using-dhcp"></a>"38% 매핑 네트워크 인터페이스를 원본 컴퓨터에서 중단" 하는 방법 " DHCP를 사용 하는 경우 
 
@@ -421,7 +421,7 @@ Windows Server 2008 R2 클러스터 원본에서 잘라내기를 실행 하려�
     Get-ADObject -Filter 'Description -like "*storage migration service renamed*"' -SearchBase 'DC=<domain>,DC=<TLD>' | ft name,distinguishedname
     ```
    
- 2. 원래 이름으로 반환 되는 모든 사용자에 대해 "사용자 로그온 이름 (Windows 이전 2000)"을 편집 하 여이 내용가 로그온 할 수 있도록 저장소 마이그레이션 서비스에서 추가 된 임의 문자 접미사를 제거 합니다.
+ 2. 원래 이름으로 반환 되는 모든 사용자에 대해 "사용자 로그온 이름 (Windows 이전 2000)"을 편집 하 여이 사용자가 로그온 할 수 있도록 저장소 마이그레이션 서비스에서 추가 된 임의 문자 접미사를 제거 합니다.
  3. 원래 이름으로 반환 되는 모든 그룹에 대해 "그룹 이름 (Windows 이전 2000)"을 편집 하 여 저장소 마이그레이션 서비스에 의해 추가 된 임의 문자 접미사를 제거 합니다.
  4. 저장소 마이그레이션 서비스에서 추가 된 접미사를 포함 하는 사용 하지 않도록 설정 된 사용자 또는 그룹의 경우 이러한 계정을 삭제할 수 있습니다. 사용자 계정에는 도메인 사용자 그룹만 포함 되 고 저장소 마이그레이션 서비스 전송 시작 시간과 일치 하는 날짜/시간이 만들어지므로 사용자 계정이 나중에 추가 되었는지 확인할 수 있습니다.
  
@@ -484,7 +484,7 @@ Windows Server 2008 R2 클러스터 원본에서 잘라내기를 실행 하려�
  - 원본 컴퓨터에서 원격 레지스트리 서비스가 실행 되 고 있지 않습니다.
  - 방화벽에서 Orchestrator의 원본 서버에 대 한 원격 레지스트리 연결을 허용 하지 않습니다.
  - 원본 컴퓨터에 연결할 수 있는 원격 레지스트리 권한이 원본 마이그레이션 계정에 없습니다.
- - 원본 컴퓨터의 레지스트리 내에서 "HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows NT\CurrentVersion" 또는 "HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Services\에 있는 원본 마이그레이션 계정에 읽기 권한이 없습니다. LanmanServer
+ - 원본 컴퓨터의 레지스트리 내에서 "HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows NT\CurrentVersion" 또는 "HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Services\LanmanServer" 아래의 원본 마이그레이션 계정에 읽기 권한이 없습니다.
  
  ## <a name="cutover-hangs-on-38-mapping-network-interfaces-on-the-source-computer"></a>"38% 매핑 네트워크 인터페이스를 원본 컴퓨터에서 중단" 하는 방법 " 
 

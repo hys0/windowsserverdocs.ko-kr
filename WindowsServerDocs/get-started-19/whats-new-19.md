@@ -8,12 +8,12 @@ author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: high
 ms.date: 06/04/2019
-ms.openlocfilehash: dd8cd6700323075a380aa062bfa1d208b3e30f83
-ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
+ms.openlocfilehash: 47269fbfac6aea3fe46513ad67d2cfa2f0c9b78e
+ms.sourcegitcommit: 3c3dfee8ada0083f97a58997d22d218a5d73b9c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77465497"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80639924"
 ---
 # <a name="whats-new-in-windows-server-2019"></a>Windows Server 2019의 새로운 기능
 
@@ -63,7 +63,7 @@ ATP의 심층적인 플랫폼 센서와 응답 작업은 메모리 및 커널 �
 
 -   [ASR(공격 범위 축소)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard?ocid=cx-blog-mmpc)은 엔터프라이즈에서 의심스러운 악성 파일(예: Office 파일), 스크립트, 측면 이동, 랜섬웨어 동작 및 이메일 기반 위협을 차단하여 머신에서 맬웨어를 방지할 수 있도록 하는 제어 세트입니다.
 
--   [네트워크 보호](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/network-protection-exploit-guard?ocid=cx-blog-mmpc)는 Windows Defender SmartScreen을 통해 디바이스에서 신뢰할 수 없는 호스트/IP 주소에 대한 모든 아웃바운드 프로세스를 차단하여 웹 기반 위협으로부터 엔드포인트를 보호합니다.
+-   [네트워크 보호](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/network-protection)는 Windows Defender SmartScreen을 통해 디바이스에서 신뢰할 수 없는 호스트/IP 주소에 대한 모든 아웃바운드 프로세스를 차단하여 웹 기반 위협으로부터 엔드포인트를 보호합니다.
 
 -   [제어된 폴더 액세스](https://cloudblogs.microsoft.com/microsoftsecure/2017/10/23/stopping-ransomware-where-it-counts-protecting-your-data-with-controlled-folder-access/?ocid=cx-blog-mmpc?source=mmpc)는 신뢰할 수 없는 프로세스가 보호되는 폴더로 액세스하는 것을 차단하여 랜섬웨어로부터 민감한 데이터를 보호합니다.
 

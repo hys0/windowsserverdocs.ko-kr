@@ -13,12 +13,12 @@ ms.assetid: deae35b9-7647-42b8-b6bf-45645a44c9c4
 author: KBDAzure
 ms.author: kathydav
 ms.date: 10/04/2016
-ms.openlocfilehash: fba83d22d9e5d9f31a5809781aa04943cc4cd3af
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6416a86b0f80861d0272581c8468fa7d5bb7f329
+ms.sourcegitcommit: 3c3dfee8ada0083f97a58997d22d218a5d73b9c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71364147"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80639951"
 ---
 # <a name="hyper-v-virtual-machine-connection"></a>Hyper-V Virtual Machine 연결
 
@@ -47,7 +47,7 @@ VMConnect 사용에 도움이 되는 다음 정보를 찾을 수 있습니다.
 |가상 머신의 설정 변경|**파일** > **설정**을 선택합니다.|  
 |DVD 이미지\(.iso 파일\) 또는 가상 플로피 디스크\(.vfd 파일\)에 연결|**미디어**를 선택합니다.<br /><br />가상 플로피 디스크는 2세대 가상 머신에서 지원되지 않습니다. 자세한 내용은 [Hyper-V에 1세대 또는 2세대 가상 머신을 만들어야 하나요?](../plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md)를 참조하세요.|  
 |Hyper\-V 가상 머신에서 호스트의 로컬 리소스 사용(예: USB 플래시 드라이브)|Hyper-V 호스트에서 고급 세션 모드를 켜고 VMConnect를 사용하여 가상 머신에 연결합니다. 연결하기 전에 사용할 로컬 리소스를 선택합니다. 특정 단계는 [VMConnect를 사용하여 Hyper\-V 가상 머신에서 로컬 리소스 사용](Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md)을 참조하세요.|  
-|가상 머신에 대한 저장된 VMConnect 설정 변경|Windows PowerShell 또는 명령 프롬프트에서 다음 명령을 실행합니다.<br /><br />`VMConnect.exe <ServerName> <VMName> \/edit`|  
+|가상 머신에 대한 저장된 VMConnect 설정 변경|Windows PowerShell 또는 명령 프롬프트에서 다음 명령을 실행합니다.<br /><br />`VMConnect.exe <ServerName> <VMName> /edit`|  
 |VMConnect 사용자가 다른 사용자의 VMConnect 세션을 수행하지 못하도록 방지|[Hyper-V 호스트에서 고급 세션 모드를 켭니다](Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md#turn-on-enhanced-session-mode-on-a-hyper-v-host).<br /><br />고급 세션 모드를 켜지 않으면 보안 및 프라이버시 위험에 노출될 수 있습니다. 사용자가 VMConnect를 통해 가상 머신에 연결되어 로그온되어 있는데 다른 권한 있는 사용자가 동일한 가상 머신에 연결한 경우 해당 세션은 두 번째 사용자에 의해 수행되고 첫 번째 사용자는 세션을 잃게 됩니다. 두 번째 사용자가 첫 번째 사용자의 데스크톱, 문서 및 애플리케이션을 볼 수 있습니다.|
 |VM이 Hyper-V 호스트와 통신할 수 있도록 하는 통합 서비스 또는 구성 요소 관리| Windows 10 또는 Windows Server 2016을 실행하는 Hyper-V 호스트에서는 VMConnect를 사용하여 통합 서비스를 관리할 수 없습니다. 다음 항목을 참조하세요. <br />- [Hyper-V 호스트에서 통합 서비스 켜기/끄기](https://msdn.microsoft.com/virtualization/hyperv_on_windows/user_guide/managing_ics) <br />- [Windows 가상 머신에서 통합 서비스 켜기/끄기](https://msdn.microsoft.com/virtualization/hyperv_on_windows/user_guide/managing_ics#manage-integration-services-from-guest-os-windows)<br />- [Linux 가상 머신에서 통합 서비스 켜기/끄기](https://msdn.microsoft.com/virtualization/hyperv_on_windows/user_guide/managing_ics#manage-integration-services-from-guest-os-linux) <br />- [가상 머신에서 통합 서비스를 업데이트된 상태로 유지](https://msdn.microsoft.com/virtualization/hyperv_on_windows/user_guide/managing_ics#integration-service-maintenance)  <br />Windows Server 2012 또는 Windows Server 2012 R2를 실행하는 호스트의 경우 [통합 서비스](https://technet.microsoft.com/library/dn798297(v=ws.11).aspx)를 참조하세요.|
 |VMConnect 창 크기 조정|Windows 운영 체제를 실행하는 2세대 가상 머신에 대한 VMConnect 창의 크기를 변경할 수 있습니다. 이렇게 하려면 Hyper-V 호스트에서 고급 세션 모드를 켜야 합니다. 자세한 내용은 [Hyper-V 호스트에서 고급 세션 모드 켜기](Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md#turn-on-enhanced-session-mode-on-a-hyper-v-host)를 참조하세요. Ubuntu를 실행 하는 가상 컴퓨터에 대 한 참조 [Hyper-v VM에서 Ubuntu 화면 해상도 변경](https://blogs.msdn.microsoft.com/virtual_pc_guy/2014/09/19/changing-ubuntu-screen-resolution-in-a-hyper-v-vm/)합니다.|

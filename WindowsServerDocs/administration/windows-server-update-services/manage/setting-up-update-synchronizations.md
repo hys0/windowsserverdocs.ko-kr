@@ -13,16 +13,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4559016388f9b0d765c8e4d76f76fa7ef0a7f0f0
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9c7bca5be7a8ec0e857cba65680fbc3b967af4f8
+ms.sourcegitcommit: 3c3dfee8ada0083f97a58997d22d218a5d73b9c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71361603"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80639749"
 ---
 # <a name="setting-up-update-synchronizations"></a>업데이트 동기화 설정
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server 2019, Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 동기화 하는 동안 WSUS 서버는 업데이트 원본에서 업데이트 (업데이트 메타 데이터 및 파일)을 다운로드 합니다. 또한 다운로드 새 제품 분류 및 범주 있으면 됩니다. WSUS 서버에 처음으로 동기화, 동기화 옵션을 구성할 때 지정한 업데이트를 모두 다운로드 됩니다. 첫 번째 동기화 후 WSUS 서버에 기존 업데이트 및 만료 정책에 대 한 메타 데이터에 대 한 수정 버전 뿐만 아니라 업데이트 원본에서 업데이트에만 업데이트를 다운로드합니다.
 

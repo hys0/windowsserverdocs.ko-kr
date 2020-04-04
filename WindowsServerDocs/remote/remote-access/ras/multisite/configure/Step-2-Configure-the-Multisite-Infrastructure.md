@@ -12,12 +12,12 @@ ms.topic: article
 ms.assetid: faec70ac-88c0-4b0a-85c7-f0fe21e28257
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 6f020dc2bf5c0dc11d18e886346a98a4a40f3855
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 9434f3192da110c8ad61e999d2aecd02bfff3812
+ms.sourcegitcommit: 3c3dfee8ada0083f97a58997d22d218a5d73b9c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80314052"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80639843"
 ---
 # <a name="step-2-configure-the-multisite-infrastructure"></a>멀티 사이트 인프라를 구성 하는 2 단계
 
@@ -115,7 +115,7 @@ New-ADReplicationSubnet -Name "2001:db8:2::/64" -Site "Second-Site"
   
 7.  **도메인**, 도메인을 입력 이름, 예를 들어 corp.contoso.com입니다.  
   
-8.  아래에서 **이 작업을 수행 하는 자격 증명**, 클릭 **변경**합니다. 에 **Windows 보안** 대화 상자에서 추가 도메인 컨트롤러를 설치할 수 있는 계정의 사용자 이름 및 암호를 제공 합니다. 추가 도메인 컨트롤러를 설치하려면 Enterprise Admins 그룹 또는 Domain Admins 그룹의 구성원이어야 합니다. 자격 증명을 제공했으면 **다음**을 클릭합니다.  
+8.  아래에서 **이 작업을 수행 하는 자격 증명**, 클릭 **변경**합니다. 에 **Windows 보안** 대화 상자에서 추가 도메인 컨트롤러를 설치할 수 있는 계정의 사용자 이름 및 암호를 제공 합니다. 추가 도메인 컨트롤러를 설치하려면 Enterprise Admins 그룹 또는 Domain Admins 그룹의 구성원이어야 합니다. 자격 증명을 제공 했으면 클릭 **다음**합니다.  
   
 9. 에 **도메인 컨트롤러 옵션** 페이지에서 다음을 수행 합니다.  
   
@@ -241,7 +241,7 @@ PDC 에뮬레이터 역할을 실행 하는 도메인 컨트롤러 또는 서버
   
 #### <a name="to-change-the-domain-controller-that-manages-server-gpos"></a><a name="ChangeDC"></a>서버 Gpo를 관리 하는 도메인 컨트롤러를 변경 하려면  
   
--   Windows PowerShell cmdlet을 실행  `HYPERLINK "https://technet.microsoft.com/library/hh918412.aspx" Set-DAEntryPointDC` 원격 액세스 서버에 연결할 수 없는 도메인 컨트롤러의 이름을 지정 하 고는 *ExistingDC* 매개 변수입니다. 이 명령은 해당 도메인 컨트롤러에서 현재 관리 되는 진입점의 서버 Gpo에 대 한 도메인 컨트롤러 연결을 수정 합니다.  
+-   원격 액세스 서버에서 Windows PowerShell cmdlet [set-daentrypointdc](https://docs.microsoft.com/powershell/module/remoteaccess/set-daentrypointdc) 를 실행 하 고 *existingdc* 매개 변수에 연결할 수 없는 도메인 컨트롤러 이름을 지정 합니다. 이 명령은 해당 도메인 컨트롤러에서 현재 관리 되는 진입점의 서버 Gpo에 대 한 도메인 컨트롤러 연결을 수정 합니다.
   
     -   도메인 컨트롤러 "dc2.corp.contoso.com"와 "dc1.corp.contoso.com" 연결할 수 없는 도메인 컨트롤러를 바꾸려면 다음을 수행 합니다.  
   
@@ -300,7 +300,7 @@ PDC 에뮬레이터 역할을 실행 하는 도메인 컨트롤러 또는 서버
     ![Windows PowerShell](../../../../media/Step-2-Configure-the-Multisite-Infrastructure/DCAssocFinal.png)  
   
 ### <a name="optimization-of-configuration-distribution"></a><a name="ConfigDistOptimization"></a>구성 배포 최적화  
-구성 변경 작업을 수행 하는 경우 서버 Gpo 원격 액세스 서버에 전파 된 후에 변경 내용이 적용 됩니다. 구성 배포 시간을 줄이기 위해 원격 액세스는 서버 GPO를 만들 때 원격 액세스 서버에 가장 가까운 "<https://technet.microsoft.com/library/cc978016.aspx>" 하이퍼링크 인 쓰기 가능한 도메인 컨트롤러를 자동으로 선택 합니다.  
+구성 변경 작업을 수행 하는 경우 서버 Gpo 원격 액세스 서버에 전파 된 후에 변경 내용이 적용 됩니다. 구성 배포 시간을 줄이기 위해 원격 액세스는 서버 GPO를 만들 때 [원격 액세스 서버에 가장 가까운](https://technet.microsoft.com/library/cc978016.aspx) 쓰기 가능한 도메인 컨트롤러를 자동으로 선택 합니다.  
   
 일부 시나리오에서는 해야 구성 배포 시간을 최적화 하기 위해 서버 GPO를 관리 하는 도메인 컨트롤러를 수동으로 수정 해야 합니다.  
   
@@ -336,4 +336,3 @@ PDC 에뮬레이터 역할을 실행 하는 도메인 컨트롤러 또는 서버
   
 -   [3 단계: 멀티 사이트 배포 구성](Step-3-Configure-the-Multisite-Deployment.md)  
 -   [1 단계: 단일 서버 원격 액세스 배포 구현](Step-1-Implement-a-Single-Server-Remote-Access-Deployment.md)  
-

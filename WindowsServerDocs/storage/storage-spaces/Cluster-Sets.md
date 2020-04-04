@@ -8,12 +8,12 @@ author: johnmarlin-msft
 ms.date: 01/30/2019
 description: 이 문서에서는 클러스터 집합 시나리오에 대해 설명 합니다.
 ms.localizationpriority: medium
-ms.openlocfilehash: 52d686fa9797d84f56182b15c36a26440792ec13
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: db427e8fa4e5574c6eb7837cf0ab4a9fcc180410
+ms.sourcegitcommit: 3c3dfee8ada0083f97a58997d22d218a5d73b9c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402917"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80639958"
 ---
 # <a name="cluster-sets"></a>클러스터 집합
 
@@ -65,7 +65,7 @@ ms.locfileid: "71402917"
 
 **가용성 집합**
 
-가용성 집합을 사용 하면 관리자가 장애 도메인 전체에서 클러스터 된 작업의 원하는 중복성을 구성할 수 있습니다 .이를 가용성 집합으로 구성 하 고 해당 가용성 집합에 워크 로드를 배포 합니다. 2 계층 응용 프로그램을 배포 하는 경우 각 계층에 대 한 가용성 집합에 두 개 이상의 가상 컴퓨터를 구성 하는 것이 좋습니다. 그러면 해당 가용성 집합의 장애 도메인 하나가 중단 되 고 응용 프로그램에 최소한의 응용 프로그램이 포함 됩니다. 각 계층의 한 가상 머신은 동일한 가용성 집합의 다른 장애 도메인에서 호스트 됩니다.
+가용성 집합을 사용 하면 관리자가 장애 도메인 전체에서 클러스터 된 작업의 원하는 중복성을 구성할 수 있습니다 .이를 가용성 집합으로 구성 하 고 해당 가용성 집합에 워크 로드를 배포 합니다. 2 계층 응용 프로그램을 배포 하는 경우 각 계층에 대 한 가용성 집합에 두 개 이상의 가상 컴퓨터를 구성 하는 것이 좋습니다. 그러면 해당 가용성 집합의 장애 도메인 하나가 다운 될 때 응용 프로그램에는 동일한 가용성 집합의 다른 장애 도메인에 호스트 된 각 계층에 가상 컴퓨터가 하나 이상 포함 됩니다.
 
 ## <a name="why-use-cluster-sets"></a>클러스터 세트를 사용 하는 이유
 
@@ -100,7 +100,7 @@ Windows Server 2019에는 인프라 스케일 아웃 파일 서버 (SOFS) 이라
 
 인프라 SOFS 역할에 적용 되는 고려 사항은 다음과 같습니다.
 
-1.  장애 조치 (Failover) 클러스터에는 하나의 인프라 SOFS 클러스터 역할만 있을 수 있습니다. 인프라 SOFS 역할은 **ClusterScaleOutFileServerRole** cmdlet에 " **-Infrastructure**" 스위치 매개 변수를 지정 하 여 만듭니다.  예를 들어 다음과 같은 가치를 제공해야 합니다.
+1.  장애 조치 (Failover) 클러스터에는 하나의 인프라 SOFS 클러스터 역할만 있을 수 있습니다. 인프라 SOFS 역할은 **ClusterScaleOutFileServerRole** cmdlet에 " **-Infrastructure**" 스위치 매개 변수를 지정 하 여 만듭니다.  예를 들면 다음과 같습니다.
 
         Add-ClusterScaleoutFileServerRole -Name "my_infra_sofs_name" -Infrastructure
 
@@ -116,7 +116,7 @@ Windows Server 2019에는 인프라 스케일 아웃 파일 서버 (SOFS) 이라
 
 ## <a name="creating-a-cluster-set"></a>클러스터 집합 만들기
 
-### <a name="prerequisites"></a>필수 구성 요소
+### <a name="prerequisites"></a>필수 조건
 
 클러스터 집합을 만들 때 다음 필수 구성 요소를 권장 합니다.
 
@@ -163,7 +163,7 @@ Windows Server 2019에는 인프라 스케일 아웃 파일 서버 (SOFS) 이라
 
         Get-ClusterSet -CimSession CSMASTER | Get-Cluster | Get-ClusterGroup 
 
-8. 클러스터 집합 생성 프로세스에서 각 클러스터 구성원에 대 한 인프라 SOFS에 하나의 SMB 공유 (Volume1로 식별 되거나 ScopeName로 레이블이 지정 된 CSV 파일 서버 이름 및 두 폴더의 경로)가 생성 되었는지 확인 하려면 CSV 볼륨:
+8. 클러스터 집합 생성 프로세스에서 각 클러스터 구성원의 CSV 볼륨에 대 한 인프라 SOFS에 하나의 SMB 공유 (Volume1로 식별 되거나 ScopeName로 레이블이 지정 된 CSV 폴더의 이름 및 두 파일의 경로)가 생성 되었는지 확인 하려면 다음을 수행 합니다.
 
         Get-SmbShare -CimSession CSMASTER
 
@@ -171,7 +171,7 @@ Windows Server 2019에는 인프라 스케일 아웃 파일 서버 (SOFS) 이라
 
         Get-ClusterSetLog -ClusterSetCimSession CSMASTER -IncludeClusterLog -IncludeManagementClusterLog -DestinationFolderPath <path>
 
-9. 모든 클러스터 집합 구성원 사이에서 Kerberos [제한 위임을](https://blogs.technet.microsoft.com/virtualization/2017/02/01/live-migration-via-constrained-delegation-with-kerberos-in-windows-server-2016/) 구성 합니다.
+9. 모든 클러스터 집합 구성원 사이에서 Kerberos [제한 위임을](https://techcommunity.microsoft.com/t5/virtualization/live-migration-via-constrained-delegation-with-kerberos-in/ba-p/382334) 구성 합니다.
 
 10. 클러스터 집합의 각 노드에서 클러스터 간 가상 머신 실시간 마이그레이션 인증 유형을 Kerberos로 구성 합니다.
 
@@ -260,7 +260,7 @@ VMStorage 이동에 대 한 자세한 내용은이 [링크](https://docs.microso
 
 클러스터 집합을 사용 하면 이러한 단계가 필요 하지 않으며 명령만 있으면 됩니다.  먼저 명령을 사용 하 여 마이그레이션에 사용할 수 있는 모든 네트워크를 설정 해야 합니다.
 
-    Set-VMHost -UseAnyNetworkMigration $true
+    Set-VMHost -UseAnyNetworkForMigration $true
 
 예를 들어 클러스터 집합 가상 머신을 CLUSTER1에서 CL3의 CLUSTER3로 이동 하려고 합니다.  단일 명령은 다음과 같습니다.
 

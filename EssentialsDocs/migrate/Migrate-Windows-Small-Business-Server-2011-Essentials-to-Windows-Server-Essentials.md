@@ -12,12 +12,12 @@ ms.assetid: 32fc90d8-31c5-4c7e-9fe3-483cf3c35f78
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 101a0e2e6e9e20c5a33e9daf2ec97c5b0984cb66
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 974182caa4d486dd162acc424aa9b85a9614aaa0
+ms.sourcegitcommit: 3c3dfee8ada0083f97a58997d22d218a5d73b9c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80318910"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80639878"
 ---
 # <a name="migrate-windows-small-business-server-2011-essentials-to-windows-server-essentials"></a>Windows Small Business Server 2011 Essentials에서 Windows Server Essentials로 마이그레이션
 
@@ -63,23 +63,6 @@ ms.locfileid: "80318910"
   
 8.  [Windows Server Essentials 모범 사례 분석기를 실행](Run-the-Windows-Server-Essentials-Best-Practices-Analyzer.md)합니다.  설정 및 데이터를 Windows Server Essentials로 마이그레이션한 후에는 Windows Server Essentials BPA를 다운로드 하 여 실행 해야 합니다.  
 
-1.  [Windows Server Essentials 마이그레이션을 위해 원본 서버를 준비](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md)합니다.  원본 서버 및 네트워크가 마이그레이션할 준비가 되었는지 확인해야 합니다. 이 섹션에서는 원본 서버를 백업하고, 원본 서버 시스템 상태를 평가하고, 최신 서비스 팩 및 수정 프로그램을 설치하고, 네트워크 구성을 확인하는 과정을 안내합니다.  
-  
-2.  [마이그레이션 모드에서 Windows Server Essentials를 설치](../migrate/Install-Windows-Server-Essentials-in-migration-mode.md)합니다.  이 섹션에서는 마이그레이션 모드에서 대상 서버에 Windows Server Essentials를 설치 하기 위해 수행 해야 하는 단계에 대해 설명 합니다.  
-  
-3.  [새 Windows Server Essentials 서버에 컴퓨터를 연결](../migrate/Join-computers-to-the-new-Windows-Server-Essentials-server.md)합니다.  이 섹션에서는 새 Windows Server Essentials 서버에 클라이언트 컴퓨터를 가입 하 고 그룹 정책 설정을 업데이트 하는 방법을 설명 합니다.  
-  
-4.  [SBS 2011 Essentials 설정 및 데이터를 대상 서버로 이동](../migrate/Move-Windows-SBS-2011-Essentials-to-the-Destination-Server-for-migration.md)합니다.  이 섹션에서는 원본 서버에서 데이터 및 설정을 마이그레이션하는 방법에 대한 정보를 제공합니다.  
-  
-5.  [Windows Server Essentials 대상 서버에서 폴더 리디렉션을 사용 하도록 설정](../migrate/Enable-folder-redirection-on-the-Windows-Server-Essentials-Destination-Server.md)합니다.  원본 서버에서 폴더 리디렉션을 사용하는 경우 대상 서버에서 폴더 리디렉션을 사용하도록 설정한 다음 이전 폴더 리디렉션 그룹 정책 설정을 삭제할 수 있습니다.  
-  
-6.  [새 Windows Server Essentials 네트워크에서 원본 서버 수준 내리기 및 제거](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md)  네트워크에서 원본 서버를 제거하기 전에 그룹 정책을 강제로 업데이트하고 원본 서버의 수준을 내려야 합니다.  
-  
-7.  [Windows Server Essentials 마이그레이션을 위한 마이그레이션 후 작업을 수행](../migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md)합니다.  모든 설정 및 데이터를 Windows Server Essentials로 마이그레이션한 후에는 허용 된 컴퓨터를 사용자 계정에 매핑할 수 있습니다.  
-  
-8.  [Windows Server Essentials 모범 사례 분석기를 실행](../migrate/Run-the-Windows-Server-Essentials-Best-Practices-Analyzer.md)합니다.  설정 및 데이터를 Windows Server Essentials로 마이그레이션한 후에는 Windows Server Essentials BPA를 다운로드 하 여 실행 해야 합니다.  
-
-  
  일부 마이그레이션 절차에서는 관리자 권한으로 명령 프롬프트 창을 열어야 합니다.  
   
 ###  <a name="to-open-a-command-prompt-window-on-the-source-server-as-an-administrator"></a><a name="BKMK_OpenACommandPromptAsAdmin"></a>원본 서버에서 관리자 권한으로 명령 프롬프트 창을 열려면  
