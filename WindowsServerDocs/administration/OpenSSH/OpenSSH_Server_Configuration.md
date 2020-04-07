@@ -6,18 +6,18 @@ contributor: maertendMSFT
 ms.product: w10
 author: maertendMSFT
 title: Windows용 OpenSSH 서버 구성
-ms.openlocfilehash: 61e6e24e6682802fd07e70dcb49aa0f382e1638e
-ms.sourcegitcommit: 9687d3eb221b89061a48bf1e73fb3b25bee69f9a
+ms.openlocfilehash: 3d8e656981661f8263484437e90780a4e1463d94
+ms.sourcegitcommit: 3c3dfee8ada0083f97a58997d22d218a5d73b9c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78169593"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80639938"
 ---
 # <a name="openssh-server-configuration-for-windows-10-1809-and-server-2019"></a>Windows 10 1809 및 Server 2019용 OpenSSH 서버 구성
 
 이 항목에서는 OpenSSH 서버(sshd)에 대한 Windows 특정 구성에 대해 설명합니다. 
 
-이 문서 집합에 중복되지 않은 구성 옵션에 대한 자세한 내용은 [OpenSSH.com](https://www.openssh.com/manual.html)에서 온라인으로 확인할 수 있습니다. 
+OpenSSH는 이 설명서 집합에 중복되지 않은 [OpenSSH.com](https://www.openssh.com/manual.html)에서 구성 옵션에 대한 자세한 설명서를 온라인으로 유지 관리합니다. 
 
 ## <a name="configuring-the-default-shell-for-openssh-in-windows"></a>Windows에서 OpenSSH에 대한 기본 셸 구성
 

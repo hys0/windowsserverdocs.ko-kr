@@ -13,12 +13,12 @@ ms.custom:
 - CI ID 113344
 - CSSTroubleshoot
 audience: Admin
-ms.openlocfilehash: e9432aa11446cdd4f00efca3af28c24d757d6019
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 52c3d1527726241313cf2b741fbc5a5799aca661
+ms.sourcegitcommit: d56c042c58833bdaa9a6fe54dd68f540af12fc6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80315138"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80661079"
 ---
 # <a name="windows-time-service-tools-and-settings"></a>Windows 시간 서비스 도구 및 설정
 
@@ -133,7 +133,7 @@ Windows는 이러한 하위 설정을 다음 하위 키 아래에 있는 레지�
 |시간 공급자\Windows NTP 서버 사용 |W32Time\TimeProviders\NtpServer |
 
 > <sup>1</sup> 범주 경로: **컴퓨터 구성\관리 템플릿\시스템\Windows 시간 서비스**  
-> <sup>2</sup> 하위 키: **HKLM\SOFTWARE\Policies\Microsoft\Windows**  
+> <sup>2</sup> 하위 키: **HKLM\SOFTWARE\Policies\Microsoft**  
 > <sup>3</sup> 하위 키: **HKLM\SYSTEM\CurrentControlSet\Services**
 
 ## <a name="enabling-w32time-logging"></a>W32Time 로깅 사용

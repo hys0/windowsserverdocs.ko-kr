@@ -10,16 +10,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 22554a9669c30cc827c509824f187fbaaedb1272
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5d71a26cbe889f5de11934b2af411ac407fc5e75
+ms.sourcegitcommit: 3c3dfee8ada0083f97a58997d22d218a5d73b9c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71361704"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80639857"
 ---
 # <a name="step-1-install-the-wsus-server-role"></a>1단계: WSUS 서버 역할 설치
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server 2019, Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 WSUS 서버 배포의 다음 단계는 WSUS 서버 역할을 설치하는 것입니다. 다음 절차에서는 서버 관리자를 사용하여 WSUS 서버를 설치하는 방법을 설명합니다.
 
@@ -38,7 +38,7 @@ WSUS 서버 배포의 다음 단계는 WSUS 서버 역할을 설치하는 것입
 
 5.  **대상 서버 선택** 페이지에서는 서버 위치(서버 풀 또는 가상 하드 디스크에서)를 선택합니다 위치를 선택한 후 WSUS 서버 역할을 설치할 서버를 선택하고 **다음**을 클릭합니다.
 
-6.  **서버 역할 선택** 페이지에서 **Windows Server Update Services**를 선택합니다.  **Windows Server Update Services에 필요한 기능 추가**가 열립니다. **기능 추가**를 클릭한 후 **다음**을 클릭합니다.
+6.  **서버 역할 선택** 페이지에서 **Windows Server Update Services**를 선택합니다.  **Windows Server Update Services에 필요한 기능 추가** 가 열립니다. **기능 추가**를 클릭한 후 **다음**을 클릭합니다.
 
 7.  **기능 선택**페이지에서 기본 선택 항목을 유지하고 **다음**을 클릭합니다.
 
