@@ -1,23 +1,19 @@
 ---
 title: RAS 게이트웨이 배포 아키텍처
 description: 이 항목을 사용 하 여 RAS 게이트웨이 풀, 반영자 라우팅, 개별 테 넌 트에 대해 여러 게이트웨이 배포를 비롯 하 여 Windows Server 2016에 RAS 게이트웨이의 RAS 게이트웨이를 배포 하는 방법을 알아볼 수 있습니다.
-manager: brianlic
-ms.custom: na
+manager: grcusanz
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-sdn
-ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: d46e4e91-ece0-41da-a812-af8ab153edc4
-ms.author: lizross
-author: eross-msft
-ms.openlocfilehash: 91d8081261d3cbc5e2da61cc2b5a9737e76a0dc7
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.author: anpaul
+author: AnirbanPaul
+ms.openlocfilehash: 1704cd6d933af1e796a9ac1237ff2de3a49fb3d3
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80309801"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859606"
 ---
 # <a name="ras-gateway-deployment-architecture"></a>RAS 게이트웨이 배포 아키텍처
 

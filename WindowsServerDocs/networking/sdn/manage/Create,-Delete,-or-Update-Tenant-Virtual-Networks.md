@@ -1,24 +1,20 @@
 ---
 title: 테 넌 트 가상 네트워크 만들기, 삭제 또는 업데이트
 description: 이 항목에서는 SDN (소프트웨어 정의 네트워킹)을 배포한 후 Hyper-v 네트워크 가상화 가상 네트워크를 만들고 삭제 하 고 업데이트 하는 방법에 대해 알아봅니다. Hyper-v 네트워크 가상화를 사용 하면 각 테 넌 트 네트워크가 별도의 엔터티가 되도록 테 넌 트 네트워크를 격리할 수 있습니다. 공용 액세스 작업을 구성 하지 않는 한 각 엔터티는 교차 연결 가능성이 없습니다.
-manager: dougkim
-ms.custom: na
+manager: grcusanz
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-sdn
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6a820826-e829-4ef2-9a20-f74235f8c25b
-ms.author: lizross
-author: eross-msft
+ms.author: anpaul
+author: AnirbanPaul
 ms.date: 08/24/2018
-ms.openlocfilehash: f85f593ec3dca33c5b35fb065c7d84ed12ea9af2
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: acb663cd33d015c1ce96241abffd4ca260cc5559
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80309821"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854526"
 ---
 # <a name="create-delete-or-update-tenant-virtual-networks"></a>테넌트 가상 네트워크 만들기, 삭제 또는 업데이트
 

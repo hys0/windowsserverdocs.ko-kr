@@ -1,7 +1,6 @@
 ---
 ms.assetid: 824005ae-c3c1-459b-9baa-1660158918ab
 title: 페더레이션 서버를 만들어야 하는 경우
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 91c260dad1bd260a7dad7320fecd15e6472c50a3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b1e58e8940d024b2fbca9ada5d5fa430aeab70a7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407887"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858476"
 ---
 # <a name="when-to-create-a-federation-server"></a>페더레이션 서버를 만들어야 하는 경우
 
@@ -31,7 +30,7 @@ Active Directory Federation Services \(AD FS\)에서 페더레이션 serverin �
   
 페더레이션 서버가 계정 파트너의 회사 네트워크에 배치 된 경우 해당 역할은 브라우저, 웹 서비스 또는 id 선택기 클라이언트의 사용자 자격 증명을 인증 하 고 클라이언트에 보안 토큰을 보내는 것입니다. 자세한 내용은 참조 [검토 하는 계정 파트너의 페더레이션 서버 역할을](Review-the-Role-of-the-Federation-Server-in-the-Account-Partner.md)합니다.  
   
-페더레이션 서버가 리소스 파트너의 회사 네트워크에 배치 된 경우 해당 역할은 리소스 파트너 조직의 페더레이션 서버에서 발급 한 보안 토큰에 따라 사용자를 인증 하거나, 해당 역할은에서 토큰 요청을 리디렉션하는 것입니다. 클라이언트가 속한 계정 파트너 조직에 웹 응용 프로그램 또는 웹 서비스를 구성 했습니다. 자세한 내용은 [Review the Role of the Federation Server in the Resource Partner](Review-the-Role-of-the-Federation-Server-in-the-Resource-Partner.md)를 참조하세요.  
+페더레이션 서버가 리소스 파트너의 회사 네트워크에 배치 되 면 해당 역할은 리소스 파트너 조직의 페더레이션 서버에서 발급 한 보안 토큰에 따라 사용자를 인증 하거나, 구성 된 웹 응용 프로그램 또는 웹 서비스의 토큰 요청을 클라이언트가 속한 계정 파트너 조직으로 리디렉션하는 것입니다. 자세한 내용은 [Review the Role of the Federation Server in the Resource Partner](Review-the-Role-of-the-Federation-Server-in-the-Resource-Partner.md)를 참조하세요.  
   
 ## <a name="determine-which-ad-fs-design-to-deploy"></a>배포할 AD FS 디자인 확인  
 다음 AD FS 디자인을 배포 하려는 경우 언제 든 지 조직에서 페더레이션 서버를 만듭니다.  
@@ -66,7 +65,7 @@ Active Directory Federation Services \(AD FS\)에서 페더레이션 serverin �
   
 -   페더레이션 서버 팜의 첫 번째 페더레이션 서버 만들기  
   
-    첫 번째 페더레이션 서버를 설정 또는 페더레이션 서버 팜에 추가 하는 방법에 대 한 자세한 내용은 참조 하세요. [페더레이션 서버 팜의 첫 번째 페더레이션 서버 만들기](../../ad-fs/deployment/Create-the-First-Federation-Server-in-a-Federation-Server-Farm.md)합니다.  
+    첫 번째 페더레이션 서버를 설정 또는 페더레이션 서버를 팜에 추가하는 방법에 대한 자세한 내용은 [Create the First Federation Server in a Federation Server Farm](../../ad-fs/deployment/Create-the-First-Federation-Server-in-a-Federation-Server-Farm.md)를 참조하세요.  
   
 -   페더레이션 서버 팜에 페더레이션 서버 추가  
   

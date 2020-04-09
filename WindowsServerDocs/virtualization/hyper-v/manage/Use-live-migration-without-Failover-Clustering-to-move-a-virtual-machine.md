@@ -2,25 +2,23 @@
 title: 가상 컴퓨터를 이동 하려면 장애 조치 클러스터링이 없는 실시간 마이그레이션 사용
 description: 독립 실행형 환경에서 실시간 마이그레이션을 수행 하기 위한 필수 구성 요소 및 지침을 제공 합니다.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 75c32e42-97f7-48df-aac9-1d82d34825e1
-author: KBDAzure
+author: kbdazure
 ms.author: kathydav
 ms.date: 01/17/2017
-ms.openlocfilehash: 55c96ff4696871e4013c3abd6247209d0d4517c0
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 41d5edb02d4384955e711024d4e4d68cee5d3937
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392561"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858926"
 ---
 # <a name="use-live-migration-without-failover-clustering-to-move-a-virtual-machine"></a>가상 컴퓨터를 이동 하려면 장애 조치 클러스터링이 없는 실시간 마이그레이션 사용
 
->적용 대상: Windows Server 2016
+>적용 대상: Windows Server 2016
 
 이 문서에서는 장애 조치 클러스터링을 사용 하지 않고 실시간 마이그레이션을 수행 하 여 가상 컴퓨터를 이동 하는 방법을 보여 줍니다. 실시간 마이그레이션 눈에 띄는 가동 중지 시간 없이 Hyper-v 호스트 간에 실행 중인 가상 컴퓨터를 이동합니다.   
   

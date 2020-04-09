@@ -2,24 +2,23 @@
 title: Windows Vista를 실행 하 고 동적 메모리를 사용 하 여 구성 하는 가상 컴퓨터 메모리 설정에 대 한 권장된 값을 사용 해야
 description: 이 모범 사례 분석기 규칙에서 보고 한 문제를 해결 하는 지침을 제공 합니다.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: c35f08b2-e624-4811-a159-c1e5bb6d5281
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: 0a9ce14c31d2ea6e26b03d5c430a428474255b84
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: fb74b68a561c756845a746c0e745aabff24c5b27
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71366581"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857856"
 ---
 # <a name="a-virtual-machine-running-windows-vista-and-configured-with-dynamic-memory-should-use-recommended-values-for-memory-settings"></a>Windows Vista를 실행 하 고 동적 메모리를 사용 하 여 구성 하는 가상 컴퓨터 메모리 설정에 대 한 권장된 값을 사용 해야
 
->적용 대상: Windows Server 2016
+>적용 대상: Windows Server 2016
 
 모범 사례 분석기 및 검사에 대한 자세한 내용은 [모범 사례 분석기 검사 실행 및 검사 결과 관리](https://go.microsoft.com/fwlink/p/?LinkID=223177)를 참조하세요.  
   
@@ -27,12 +26,12 @@ ms.locfileid: "71366581"
 |-|-|  
 |**운영 체제**|Windows Server 2016|  
 |**제품/기능**|Hyper-V|  
-|**Severity**|경고|  
-|**범주**|Configuration|  
+|**등급**|경고|  
+|**범주**|구성|  
   
 다음 섹션에서는 기울임꼴이이 문제에 대 한 모범 사례 분석기 도구에 표시 되는 UI 텍스트를 나타냅니다.  
   
-## <a name="issue"></a>문제점  
+## <a name="issue"></a>문제  
 *하나 이상의 가상 컴퓨터는 Windows Vista에 권장 되는 메모리 용량 보다 더 작은 동적 메모리를 사용 하도록 구성 되어 있습니다.*  
   
 ### <a name="impact"></a>영향  
@@ -40,7 +39,7 @@ ms.locfileid: "71366581"
   
 가상 컴퓨터 \<목록 >  
       
-## <a name="resolution"></a>해결 방법  
+## <a name="resolution"></a>해상도  
 *Hyper-v 관리자 또는 Windows PowerShell을 사용 하 여 최소 메모리를 256 MB 이상, 시작 메모리를 최소 512 MB 이상, 최대 메모리를 1gb 이상으로 늘립니다.*  
   
 #### <a name="increase-memory-using-hyper-v-manager"></a>Hyper-v 관리자를 사용 하 여 메모리 확보  

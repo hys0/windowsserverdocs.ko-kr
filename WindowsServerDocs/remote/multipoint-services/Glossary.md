@@ -1,26 +1,22 @@
 ---
-title: 용어 설명
+title: 용어집
 description: MultiPoint 서비스의 단어, 용어 및 개념을 정의 합니다.
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 807bce1d-b993-49c6-9783-b01a3c55846c
 author: evaseydl
 manager: scottman
 ms.author: evas
-ms.openlocfilehash: 0c966f0c8e1ad239769c58e4648832ae5020d0dc
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9a5f76f0f41d9ff1726a1a468fde7f53b6a7634d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71389652"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859226"
 ---
-# <a name="glossary"></a>용어 설명
+# <a name="glossary"></a>용어집
 **스테이션 연결**  
 어떤 모니터를 키보드와 마우스 등의 주변 장치와 주변 장치와 함께 사용할 것인지 지정 합니다. 직접 비디오 연결 스테이션의 경우,이 작업을 수행 하 라는 메시지가 표시 되 면 스테이션 키보드에서 지정 된 키를 누르면 됩니다. USB 제로 클라이언트 연결 스테이션의 경우 일반적으로 자동으로 발생 합니다.  
   
@@ -57,7 +53,7 @@ HID (휴먼 인터페이스 장치)는 사람과 직접 상호 작용 하는 컴
 **MultiPoint 서비스 시스템**  
 MultiPoint 서비스 역할을 사용 하도록 설정 하 고 하나 이상의 MultiPoint 스테이션을 설치 하 여 Windows Server 2016가 설치 된 컴퓨터 하나로 구성 된 하드웨어 및 소프트웨어의 모음입니다. 시스템 레이아웃 옵션에 대 한 자세한 내용은 [MultiPoint 서비스 사이트 계획](MultiPoint-services-Site-Planning.md) 을 참조 하십시오.  
   
-**partition**  
+**파티션마다**  
 별도의 디스크인 것 처럼 작동 하는 실제 디스크의 공간 섹션입니다.  
   
 **기본 스테이션**  
@@ -79,13 +75,13 @@ LAN (local area network)을 통해 RDP (원격 데스크톱 프로토콜)를 사
 MultiPoint 서비스를 실행 하는 컴퓨터에 연결 하기 위한 사용자 끝점입니다. 3 가지 스테이션 유형 (직접 비디오 연결, USB 0 클라이언트 연결 및 RDP over LAN 연결 스테이션)이 지원 됩니다. 스테이션에 대 한 자세한 내용은 참조 [MultiPoint 스테이션](MultiPoint-services-Stations.md)합니다.  
   
 **스테이션 허브**  
-MultiPoint 스테이션을 만들기 위해 모니터와 연결 된 USB 허브입니다. 주변 장치 USB 장치를 MultiPoint 서비스에 연결 합니다. 참고 항목: *Usb 제로 클라이언트* 및 *usb 허브*입니다.  
+MultiPoint 스테이션을 만들기 위해 모니터와 연결 된 USB 허브입니다. 주변 장치 USB 장치를 MultiPoint 서비스에 연결 합니다. 참고 항목: *usb 제로 클라이언트* 및 *usb 허브*.  
   
 **스테이션 모드**  
 MultiPoint 서비스를 시작할 수 있는 두 가지 모드 중 하나입니다. 일반적으로 MultiPoint 서비스 시스템은 스테이션 모드입니다. 스테이션 모드에서 MultiPoint 서비스 스테이션은 각 스테이션이 Windows 운영 체제를 실행 하는 별도의 컴퓨터인 것 처럼 작동 하며 여러 사용자가 동시에 시스템을 사용할 수 있습니다. 참고 항목: *콘솔 모드*.  
   
 **USB 허브**  
-USB (범용 직렬 버스) 2.0 이상 사양을 준수 하는 일반 다중 포트 USB 확장 허브입니다. 이러한 허브에는 일반적으로 여러 usb 장치가 컴퓨터의 단일 USB 포트에 연결 될 수 있도록 하는 여러 usb 포트가 있습니다. USB 허브는 일반적으로 *외부에서 전원을* 공급 하거나 *버스가 지원*될 수 있는 별도의 장치입니다. 일부 키보드 및 비디오 모니터와 같은 일부 다른 장치는 해당 디자인에 USB 허브를 통합할 수 있습니다. 참고 항목: *USB 제로 클라이언트*.  
+USB (범용 직렬 버스) 2.0 이상 사양을 준수 하는 일반 다중 포트 USB 확장 허브입니다. 이러한 허브에는 일반적으로 여러 usb 장치가 컴퓨터의 단일 USB 포트에 연결 될 수 있도록 하는 여러 usb 포트가 있습니다. USB 허브는 일반적으로 *외부에서 전원을* 공급 하거나 *버스가 지원*될 수 있는 별도의 장치입니다. 일부 키보드 및 비디오 모니터와 같은 일부 다른 장치는 해당 디자인에 USB 허브를 통합할 수 있습니다. 참고 항목: *USB 제로 클라이언트*  
   
 **이더넷 제로 클라이언트 USB**  
 Usb 포트가 아닌 LAN 연결을 통해 컴퓨터에 연결 하는 USB 제로 클라이언트입니다. 이 클라이언트는 이더넷 연결을 통해 데이터를 전송 하는 경우에도 서버에 USB 장치로 표시 됩니다.  

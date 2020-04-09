@@ -1,7 +1,6 @@
 ---
 ms.assetid: ad0bf21d-2ace-4565-b1f5-ce57c8eb2689
 title: 페더레이션 서버 프록시 팜을 만들어야 하는 경우
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 247daf1b9b49124188f6bb16bce7da381fe997ef
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d4b2b889159dee9f3b93a54a2b1924be286792f4
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402426"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858496"
 ---
 # <a name="when-to-create-a-federation-server-proxy-farm"></a>페더레이션 서버 프록시 팜을 만들어야 하는 경우
 
@@ -29,10 +28,10 @@ Microsoft NLB 기술을 사용 하 여 클러스터에 대 한 FQDN을 구성 �
 ## <a name="configuring-federation-server-proxies-for-a-farm"></a>팜에 대한 페더레이션 서버 프록시 구성  
 다음 표에서는 각 페더레이션 서버 프록시가 팜에 참여할 수 있도록 하기 위해 완료 해야 하는 작업에 대해 설명 합니다.  
   
-|태스크|설명|  
+|작업|설명|  
 |--------|---------------|  
-|팜의 모든 프록시가 동일한 AD FS 페더레이션 서비스 이름으로 가리키기|페더레이션 서버 프록시를 만들 때 팜에 참여 하는 모든 페더레이션 서버 프록시에 대 한 AD FS 페더레이션 서버 프록시 구성 마법사에 동일한 페더레이션 서비스 이름을 입력 해야 합니다. 페더레이션 서버 프록시는이 DNS 호스트 이름을 구성 하는 URL을 사용 하 여 AD FS 페더레이션 서비스 인스턴스를 확인 합니다.<br /><br />자세한 내용은 [컴퓨터 페더레이션 서버 프록시 역할에 대 한 구성](../../ad-fs/deployment/Configure-a-Computer-for-the-Federation-Server-Proxy-Role.md)합니다.|  
-|인증서 가져오기 및 공유|공용 인증 기관 \(CA\)에서 서버 인증 인증서를 가져온 다음 (예: VeriSign), 모든 페더레이션 서버 프록시가 각 페더레이션 서버 프록시에 대 한 기본 웹 사이트에 있는 동일한 인증서의 동일한 개인 키 부분을 공유 하도록 인증서를 구성할 수 있습니다. 인증서를 공유 하려면 각 페더레이션 서버 프록시에 대 한 기본 웹 사이트에 동일한 서버 인증 인증서를 설치 해야 합니다. 자세한 내용은 참조 [기본 웹 사이트로 서버 인증 인증서 가져오기](../../ad-fs/deployment/Import-a-Server-Authentication-Certificate-to-the-Default-Web-Site.md)합니다.<br /><br />자세한 내용은 [페더레이션 서버 프록시에 대 한 인증서 요구 사항](Certificate-Requirements-for-Federation-Server-Proxies.md)합니다.|  
+|팜의 모든 프록시가 동일한 AD FS 페더레이션 서비스 이름으로 가리키기|페더레이션 서버 프록시를 만들 때 팜에 참여 하는 모든 페더레이션 서버 프록시에 대 한 AD FS 페더레이션 서버 프록시 구성 마법사에 동일한 페더레이션 서비스 이름을 입력 해야 합니다. 페더레이션 서버 프록시는이 DNS 호스트 이름을 구성 하는 URL을 사용 하 여 AD FS 페더레이션 서비스 인스턴스를 확인 합니다.<p>자세한 내용은 [Configure a Computer for the Federation Server Proxy Role](../../ad-fs/deployment/Configure-a-Computer-for-the-Federation-Server-Proxy-Role.md)를 참조하세요.|  
+|인증서 가져오기 및 공유|공용 인증 기관 \(CA\)에서 서버 인증 인증서를 가져온 다음 (예: VeriSign), 모든 페더레이션 서버 프록시가 각 페더레이션 서버 프록시에 대 한 기본 웹 사이트에 있는 동일한 인증서의 동일한 개인 키 부분을 공유 하도록 인증서를 구성할 수 있습니다. 인증서를 공유 하려면 각 페더레이션 서버 프록시에 대 한 기본 웹 사이트에 동일한 서버 인증 인증서를 설치 해야 합니다. 자세한 내용은 참조 [기본 웹 사이트로 서버 인증 인증서 가져오기](../../ad-fs/deployment/Import-a-Server-Authentication-Certificate-to-the-Default-Web-Site.md)합니다.<p>자세한 내용은 [Certificate Requirements for Federation Server Proxies](Certificate-Requirements-for-Federation-Server-Proxies.md)를 참조하세요.|  
   
 새 페더레이션 서버 프록시를 추가 하 여 페더레이션 서버 프록시 팜을 만드는 방법에 대 한 자세한 내용은 [검사 목록: 페더레이션 서버 프록시 설정](../../ad-fs/deployment/Checklist--Setting-Up-a-Federation-Server-Proxy.md)을 참조 하세요.  
   

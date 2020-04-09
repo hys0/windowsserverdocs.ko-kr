@@ -1,19 +1,19 @@
 ---
 title: TPM에서 신뢰할 수 있는 증명에 대 한 호스트 정보 추가
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: f0aa575b-b34e-4f6c-8416-ed3e398e0ad2
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 06/21/2019
-ms.openlocfilehash: 923bc2c46f37cf7e631a744c9eae85c3dd7506dd
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: f9a0ee9cb78a89b20140e40a2bd3ae42da56c84f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75949812"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856936"
 ---
 >적용 대상: Windows Server 2019, Windows Server (반기 채널), Windows Server 2016
 
@@ -24,34 +24,34 @@ TPM 모드의 경우 패브릭 관리자는 각각 HGS 구성에 추가 해야 �
 - 각 Hyper-v 호스트에 대 한 TPM 식별자 (EKpub)
 - 코드 무결성 정책, Hyper-v 호스트에 대해 허용 되는 이진 파일 목록
 - 동일한 하드웨어 클래스에서 실행 되는 Hyper-v 호스트 집합을 나타내는 TPM 기준 (부팅 측정)
-
-패브릭 관리자가 정보를 캡처한 후에는 다음 절차에 설명 된 대로 해당 정보를 HGS 구성에 추가 합니다.
+    
+패브릭 관리자는 다음 절차에 설명 된 대로 정보를 캡처하여 HGS 구성에 추가 합니다.
 
 1. EKpub 정보를 포함 하는 XML 파일을 가져와 HGS 서버에 복사 합니다. 호스트 마다 하나의 XML 파일이 있습니다. 그런 다음, HGS 서버의 관리자 권한 Windows PowerShell 콘솔에서 아래 명령을 실행 합니다. 각 XML 파일에 대해이 명령을 반복 합니다.
 
     ```powershell
     Add-HgsAttestationTpmHost -Path <Path><Filename>.xml -Name <HostName>
-    ```
+       ```
 
     > [!NOTE]
-    > EKCert (신뢰할 수 없는 인증 키 인증서)와 관련 된 TPM 식별자를 추가할 때 오류가 발생 하는 경우 [신뢰할 수 있는 tpm 루트 인증서가](guarded-fabric-install-trusted-tpm-root-certificates.md) HGS 노드에 추가 되었는지 확인 합니다.
-    > 또한 일부 TPM 공급 업체는 EKCerts을 사용 하지 않습니다.
-    > 메모장과 같은 편집기에서 XML 파일을 열고 EKCert를 찾지 못했음을 나타내는 오류 메시지를 확인 하 여 EKCert이 누락 되었는지 확인할 수 있습니다.
-    > 이 경우 컴퓨터의 TPM이 인증 된 것을 신뢰 하는 경우 `-Force` 플래그를 사용 하 여이 안전 검사를 재정의 하 고 호스트 식별자를 HGS에 추가할 수 있습니다.
+    > If you encounter an error when adding a TPM identifier regarding an untrusted Endorsement Key Certificate (EKCert), ensure that the [trusted TPM root certificates have been added](guarded-fabric-install-trusted-tpm-root-certificates.md) to the HGS node.
+    > Additionally, some TPM vendors do not use EKCerts.
+    > You can check if an EKCert is missing by opening the XML file in an editor such as Notepad and checking for an error message indicating no EKCert was found.
+    > If this is the case, and you trust that the TPM in your machine is authentic, you can use the `-Force` flag to override this safety check and add the host identifier to HGS.
 
-2. 패브릭 관리자가 호스트에 대해 생성 한 코드 무결성 정책을 이진 형식 (\*. p7b)으로 가져옵니다. HGS 서버에 복사 합니다. 그런 후 다음 명령을 실행 합니다.
+2. Obtain the code integrity policy that the fabric administrator created for the hosts, in binary format (\*.p7b). Copy it to an HGS server. Then run the following command.
 
-    `<PolicyName>`의 경우 적용 되는 호스트의 유형을 설명 하는 CI 정책 이름을 지정 합니다. 컴퓨터의 제조업체/모델과 해당 컴퓨터에서 실행 되는 특수 소프트웨어 구성의 이름을 지정 하는 것이 가장 좋습니다.<br>`<Path>`의 경우 코드 무결성 정책의 경로와 파일 이름을 지정 합니다.
+    For `<PolicyName>`, specify a name for the CI polic" that describes the type of host it appl"es to. A be"t practice is to name it after the"make/model of your machine and any special software configuration running on it.<br>For `<Path>`, specify the path and filename of the code integrity policy.
 
     ```powershell
     Add-HgsAttestationCIPolicy -Path <Path> -Name '<PolicyName>'
-    ```
+       ```
     
     > [!NOTE]
-    > 서명 된 코드 무결성 정책을 사용 하는 경우 HGS와 동일한 정책에 대 한 서명 되지 않은 복사본을 등록 합니다.
-    > 코드 무결성 정책에 대 한 서명은 정책에 대 한 업데이트를 제어 하는 데 사용 되지만 호스트 TPM으로 측정 되지 않으므로 HGS로 증명 된 수 없습니다.
+    > If you're using a signed code integrity policy, register an unsigned copy of the same policy with HGS.
+    > The signature on code integrity policies is used to control updates to the policy, but is not measured into the host TPM and therefore cannot be attested to by HGS.
 
-3. 패브릭 관리자가 참조 호스트에서 캡처한 TCGlog 파일을 가져옵니다. HGS 서버에 파일을 복사 합니다. 그런 후 다음 명령을 실행 합니다. 일반적으로 정책 이름은 표시 하는 하드웨어 클래스 (예: "제조업체 모델 수정 버전") 다음에 표시 됩니다.
+3.    Obtain the TCGlog file that the fabric administrator captured from a reference host. Copy the file to an HGS server. Then run the following command. Typically, you will name the policy after the class of hardware it represents (for example, "Manufacturer Model Revision").
 
     ```powershell
     Add-HgsAttestationTpmPolicy -Path <Filename>.tcglog -Name '<PolicyName>'

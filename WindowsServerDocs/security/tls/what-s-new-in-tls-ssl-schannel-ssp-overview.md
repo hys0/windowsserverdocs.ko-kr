@@ -1,30 +1,26 @@
 ---
 title: TLS-SSL (Schannel SSP) 개요
 description: Windows Server 보안
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-tls-ssl
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c8836345-16bb-4dcc-8d2b-2b9b687456a3
 author: justinha
 ms.author: justinha
-manager: brianlic-msft
+manager: brianlic
 ms.date: 05/16/2018
-ms.openlocfilehash: c1ff76e6e611876a30196e1c8eefddbd783d86a9
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5478a97a6b333cfc92de100440d53a769a8c0fd9
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403358"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855194"
 ---
 # <a name="overview-of-tls---ssl-schannel-ssp"></a>TLS-SSL (Schannel SSP) 개요
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows 10
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows 10
 
-IT 전문가를 위한이 항목에서는 TLS (Transport Layer Security), SSL(Secure Sockets Layer) (SSL) 및 DTLS (데이터 그램 전송 계층 보안)을 포함 하는 Schannel SSP (Security Support Provider)의 기능 변경 내용에 대해 설명 합니다. Windows Server 2012 R2, Windows Server 2012, Windows 8.1 및 Windows 8에 대 한 인증 프로토콜입니다.
+IT 전문가를 위한이 항목에서는 Windows Server 2012 R2, Windows Server 2012, Windows 8.1 및 Windows 8에 대 한 TLS (Transport Layer Security), SSL(Secure Sockets Layer) (SSL) 및 DTLS (데이터 그램 전송 계층 보안) 인증 프로토콜을 포함 하는 Schannel SSP (Security Support Provider)의 기능에 대 한 변경 내용에 대해 설명 합니다.
 
 Schannel은 SSL, TLS 및 DTLS 인터넷 표준 인증 프로토콜을 구현한 SSP(Security Support Provider)입니다. SSPI(Security Support Provider Interface)는 인증을 비롯한 보안 관련 기능을 수행하기 위해 Windows 시스템에서 사용되는 API입니다. SSPI는 Schannel SSP를 포함한 몇몇 SSP(Security Support Provider)의 공용 인터페이스로 사용됩니다.
 
@@ -35,7 +31,7 @@ Schannel SSP에서 Microsoft의 TLS 및 SSL 구현에 대 한 자세한 내용�
 다음은 Schannel SSP의 TLS 기능을 설명 합니다.
 
 ### <a name="tls-session-resumption"></a>TLS 세션 다시 시작
-Schannel SSP(Security Support Provider)의 구성 요소인 TLS(전송 계층 보안) 프로토콜은 신뢰할 수 없는 네트워크에서 응용 프로그램 간에 전송되는 데이터를 보호하는 데 사용됩니다. TLS/SSL을 사용하면 서버와 클라이언트 컴퓨터를 인증한 다음 인증된 파티 간의 메시지를 암호화할 수 있습니다.
+Schannel SSP(Security Support Provider)의 구성 요소인 TLS(전송 계층 보안) 프로토콜은 신뢰할 수 없는 네트워크에서 애플리케이션 간에 전송되는 데이터를 보호하는 데 사용됩니다. TLS/SSL을 사용하면 서버와 클라이언트 컴퓨터를 인증한 다음 인증된 파티 간의 메시지를 암호화할 수 있습니다.
 
 서버에 TLS를 연결하는 장치는 세션 만료로 인해 다시 연결해야 하는 경우가 종종 있습니다. Windows 8.1 및 Windows Server 2012 R2는 이제 RFC 5077 (서버 쪽 상태 없이 TLS 세션 다시 시작)을 지원 합니다. 이 수정 사항은 다음을 통해 Windows Phone 및 Windows RT 장치를 제공 합니다.
 
@@ -51,15 +47,15 @@ Schannel SSP(Security Support Provider)의 구성 요소인 TLS(전송 계층 �
 상태 비저장 TLS 세션 다시 시작에 대한 자세한 내용은 IETF 문서 [RFC 5077](http://www.ietf.org/rfc/rfc5077)을 참조하세요.
 
 ### <a name="application-protocol-negotiation"></a>응용 프로그램 프로토콜 협상
- Windows Server 2012 R2 및 Windows 8.1는 클라이언트 쪽 TLS 응용 프로그램 프로토콜 협상을 지원 하므로 응용 프로그램에서 HTTP 2.0 표준 개발의 일부로 프로토콜을 활용 하 고 사용자가 실행 중인 앱을 사용 하 여 Google 및 Twitter와 같은 온라인 서비스에 액세스할 수 있습니다. SPDY 프로토콜입니다.
+ Windows Server 2012 R2 및 Windows 8.1는 클라이언트 쪽 TLS 응용 프로그램 프로토콜 협상을 지원 하므로 응용 프로그램은 HTTP 2.0 표준 개발의 일부로 프로토콜을 활용할 수 있으며, 사용자는 SPDY 프로토콜을 실행 하는 앱을 사용 하 여 Google 및 Twitter와 같은 온라인 서비스에 액세스할 수 있습니다.
 
 **작동 방식**
 
-지원되는 응용 프로그램 프로토콜 ID 목록을 기본 설정의 내림차순으로 제공하여 클라이언트 및 서버 응용 프로그램이 응용 프로그램 프로토콜 협상 확장을 사용하도록 설정합니다. TLS 클라이언트가 ClientHello 메시지에 클라이언트 지원 프로토콜 목록이 포함된 ALPN(Application Layer Protocol Negotiation) 확장을 포함시킴으로써 응용 프로그램 프로토콜 협상을 지원한다는 것을 나타냅니다.
+지원되는 애플리케이션 프로토콜 ID 목록을 기본 설정의 내림차순으로 제공하여 클라이언트 및 서버 애플리케이션이 애플리케이션 프로토콜 협상 확장을 사용하도록 설정합니다. TLS 클라이언트가 ClientHello 메시지에 클라이언트 지원 프로토콜 목록이 포함된 ALPN(Application Layer Protocol Negotiation) 확장을 포함시킴으로써 애플리케이션 프로토콜 협상을 지원한다는 것을 나타냅니다.
 
-TLS 클라이언트가 서버에 요청을 보내면 TLS 서버가 클라이언트도 지원하는 가장 선호하는 응용 프로그램 프로토콜에서 해당하는 지원 프로토콜 목록을 읽습니다. 이러한 프로토콜을 찾으면 서버는 선택한 프로토콜 ID로 응답하고 평상시처럼 핸드셰이크를 계속 진행합니다. 일반 응용 프로그램 프로토콜이 없는 경우 서버는 심각한 핸드셰이크 오류 경고를 보냅니다.
+TLS 클라이언트가 서버에 요청을 보내면 TLS 서버가 클라이언트도 지원하는 가장 선호하는 애플리케이션 프로토콜에서 해당하는 지원 프로토콜 목록을 읽습니다. 이러한 프로토콜을 찾으면 서버는 선택한 프로토콜 ID로 응답하고 평상시처럼 핸드셰이크를 계속 진행합니다. 일반 애플리케이션 프로토콜이 없는 경우 서버는 심각한 핸드셰이크 오류 경고를 보냅니다.
 
-### <a name="BKMK_TrustedIssuers"></a>클라이언트 인증에 대 한 신뢰할 수 있는 발급자 관리
+### <a name="management-of-trusted-issuers-for-client-authentication"></a><a name="BKMK_TrustedIssuers"></a>클라이언트 인증에 대 한 신뢰할 수 있는 발급자 관리
 클라이언트 컴퓨터의 인증에 SSL 또는 TLS를 사용해야 하는 경우 신뢰할 수 있는 인증서 발급자 목록을 보내도록 서버를 구성할 수 있습니다. 이 목록은 서버가 신뢰하는 인증서 발급자 집합을 포함하며 여러 인증서가 있는 경우 어떤 클라이언트 인증서를 선택할 것인가에 관해 클라이언트 컴퓨터에 힌트를 제공합니다. 또한 클라이언트 컴퓨터에서 서버로 보내는 인증서 체인은 신뢰할 수 있는 발급자 목록에 대해 유효성이 검사되어야 합니다.
 
 Windows Server 2012 및 Windows 8 이전에는 Schannel SSP (http.sys 및 IIS 포함)를 사용 하는 응용 프로그램이 나 프로세스에서 CTL (인증서 신뢰 목록)을 통해 클라이언트 인증에 대해 지원 되는 신뢰할 수 있는 발급자 목록을 제공할 수 있었습니다.
@@ -68,7 +64,7 @@ Windows Server 2012 및 Windows 8에서는 기본 인증 프로세스가 다음�
 
 -   CTL 기반의 신뢰할 수 있는 발급자 목록 관리가 더 이상 지원되지 않습니다.
 
--   신뢰할 수 있는 발급자 목록을 보내는 동작은 기본적으로 해제되어 있습니다. SendTrustedIssuerList 레지스트리 키의 기본값은 이제 1이 아닌 0(기본적으로 해제)입니다.
+-   기본적으로 신뢰할 수 있는 발급자 목록을 전송 하는 동작은 off입니다. SendTrustedIssuerList 레지스트리 키의 기본값은 이제 1이 아닌 0 (기본적으로 해제)입니다.
 
 -   이전 버전의 Windows 운영 체제와의 호환성은 유지됩니다.
 
@@ -76,7 +72,7 @@ Windows Server 2012 및 Windows 8에서는 기본 인증 프로세스가 다음�
 
 Windows Server 2012부터 CTL 사용이 인증서 저장소 기반 구현으로 대체 되었습니다. 이를 통해 PowerShell 공급자의 기존 인증서 관리 commandlet 및 certutil.exe와 같은 명령줄 도구를 사용하여 더욱 친숙한 방법으로 관리할 수 있게 되었습니다.
 
-Schannel SSP가 지 원하는 신뢰할 수 있는 인증 기관 목록의 최대 크기 (16kb)는 Windows Server 2008 r 2와 동일 하 게 유지 되지만, Windows Server 2012에서는 클라이언트 인증 발급자에 대 한 새로운 전용 인증서 저장소가 있습니다. 관련 되지 않은 인증서는 메시지에 포함 되지 않습니다.
+Schannel SSP가 지 원하는 신뢰할 수 있는 인증 기관 목록의 최대 크기 (16kb)는 Windows Server 2008 r 2와 동일 하 게 유지 되지만, Windows Server 2012에는 관련 되지 않은 인증서가 메시지에 포함 되지 않도록 클라이언트 인증 발급자에 대 한 새로운 전용 인증서 저장소가 있습니다.
 
 **어떻게 작동 하나요?**
 
@@ -102,7 +98,7 @@ PowerShell 공급자를 사용하여 인증서를 관리하는 방법에 대한 
 
 **신뢰 모드의 기본값**
 
-Schannel 공급자에서는 세 가지 클라이언트 인증 신뢰 모드를 지원합니다. 신뢰 모드는 클라이언트의 인증서 체인에 대 한 유효성 검사가 수행 되는 방식과 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\Schannel의 REG_DWORD "ClientAuthTrustMode"로 제어 되는 시스템 전체 설정을 제어 합니다. .
+Schannel 공급자에서는 세 가지 클라이언트 인증 신뢰 모드를 지원합니다. 신뢰 모드는 클라이언트의 인증서 체인에 대 한 유효성 검사를 수행 하는 방법을 제어 하며, HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\Schannel.의 "ClientAuthTrustMode" REG_DWORD에서 제어 하는 시스템 차원 설정입니다.
 
 |값|신뢰 모드|설명|
 |-----|-------|--------|
@@ -112,7 +108,7 @@ Schannel 공급자에서는 세 가지 클라이언트 인증 신뢰 모드를 �
 
 신뢰할 수 있는 발급자 구성 문제로 인한 인증 실패에 대한 자세한 내용은 기술 자료 문서 [280256](https://support.microsoft.com/kb/2802568)을 참조하세요.
 
-### <a name="BKMK_SNI"></a>SNI (서버 이름 표시기) 확장을 위한 TLS 지원
+### <a name="tls-support-for-server-name-indicator-sni-extensions"></a><a name="BKMK_SNI"></a>SNI (서버 이름 표시기) 확장을 위한 TLS 지원
 SNI(서버 이름 표시기) 기능은 단일 서버에 다수의 가상 이미지가 실행되고 있을 때 서버를 올바르게 식별할 수 있도록 SSL 및 TLS 프로토콜을 확장합니다. 클라이언트 컴퓨터와 서버 간의 통신을 적절히 보호하기 위해 클라이언트 컴퓨터는 서버에서 디지털 인증서를 요청합니다. 이 요청에 대한 응답으로 서버가 인증서를 보내고 나면 클라이언트 컴퓨터가 이를 검사하여 암호화하는 데 사용하고 정상적인 요청-응답 교환을 진행합니다. 하지만 가상 호스팅 시나리오에서 잠재적으로 각각의 개별 인증서를 소유하고 있는 몇몇 도메인이 단일 서버에서 호스팅됩니다. 이 경우 서버는 클라이언트 컴퓨터로 보낼 인증서를 사전에 알 수 있는 방법이 없습니다. SNI를 사용하면 클라이언트 컴퓨터가 프로토콜에서 대상 도메인을 더 일찍 알릴 수 있으므로 서버가 적절한 인증서를 올바르게 선택할 수 있습니다.
 
 **이는 어떤 값을 추가 하나요?**
@@ -133,8 +129,8 @@ Schannel SSP는 클라이언트에 허용된 클라이언트 연결 상태의 �
 
 올바른 인증서를 선택하도록 최종 사용자에게 힌트를 제공하는 믿을 만한 인증서 발급자 이름 목록을 구성할 수 있도록 하여 최종 사용자의 인증서 선택 환경이 개선되었습니다. 이 목록은 그룹 정책을 사용하여 구성할 수 있습니다.
 
-### <a name="BKMK_DTLS"></a>DTLS (데이터 그램 전송 계층 보안)
-DTLS 버전 1.0 프로토콜이 Schannel SSP(Security Support Provider)에 추가되었습니다. DTLS 프로토콜은 데이터그램 프로토콜에 대한 통신 보안을 제공합니다. 이 프로토콜을 통해 클라이언트/서버 응용 프로그램은 도청, 변조 또는 메시지 위조를 방지할 수 있도록 설계된 방식으로 통신할 수 있습니다. DTLS 프로토콜은 TLS(전송 계층 보안) 프로토콜에 기반을 두고 이와 동등한 보안 기능을 보장함으로써 IPsec을 사용하거나 사용자 지정 응용 프로그램 계층 보안 프로토콜을 설계할 필요성을 줄여줍니다.
+### <a name="datagram-transport-layer-security-dtls"></a><a name="BKMK_DTLS"></a>DTLS (데이터 그램 전송 계층 보안)
+DTLS 버전 1.0 프로토콜이 Schannel SSP(Security Support Provider)에 추가되었습니다. DTLS 프로토콜은 데이터그램 프로토콜에 대한 통신 보안을 제공합니다. 이 프로토콜을 통해 클라이언트/서버 애플리케이션은 도청, 변조 또는 메시지 위조를 방지할 수 있도록 설계된 방식으로 통신할 수 있습니다. DTLS 프로토콜은 TLS(전송 계층 보안) 프로토콜에 기반을 두고 이와 동등한 보안 기능을 보장함으로써 IPsec을 사용하거나 사용자 지정 애플리케이션 계층 보안 프로토콜을 설계할 필요성을 줄여줍니다.
 
 **이는 어떤 값을 추가 하나요?**
 
@@ -144,10 +140,10 @@ DTLS 버전 1.0 프로토콜이 Schannel SSP(Security Support Provider)에 추�
 
 UDP를 통해 DTLS를 사용 하는 응용 프로그램은 Windows Server 2012 및 Windows 8에서 SSPI 모델을 사용할 수 있습니다. TLS 구성 방법과 마찬가지로, 특정 암호화 모음을 구성에 사용할 수 있습니다. Schannel은 계속해서 CNG 암호화 공급자를 사용하므로 Windows Vista에 도입된 FIPS 140 인증을 활용할 수 있습니다.
 
-### <a name="BKMK_Deprecated"></a>사용 되지 않는 기능
+### <a name="deprecated-functionality"></a><a name="BKMK_Deprecated"></a>사용 되지 않는 기능
 Windows Server 2012 및 Windows 8 용 Schannel SSP에는 더 이상 사용 되지 않는 기능이 없습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 -   [사설 클라우드 보안 모델-래퍼 기능](https://social.technet.microsoft.com/wiki/contents/articles/6756.private-cloud-security-model-wrapper-functionality.aspx)
 
 

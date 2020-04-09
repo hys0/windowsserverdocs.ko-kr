@@ -2,22 +2,18 @@
 title: DirectAccess 클라이언트의 원격 관리 배포 계획
 description: 이 항목은 Windows Server 2016에서 원격으로 DirectAccess 클라이언트 관리 가이드의 일부입니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ras
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ab518c0d-a496-414e-b9c7-f4378d8b13aa
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 879fbe550482755c683c7eb04de31eeced4a1d1a
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 2ed833bb4125d732bac7e13b8f5a0f8b62c599c4
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80314312"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857616"
 ---
 # <a name="plan-deployment-for-remote-management-of-directaccess-clients"></a>DirectAccess 클라이언트의 원격 관리 배포 계획
 

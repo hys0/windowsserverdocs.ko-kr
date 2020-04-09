@@ -1,15 +1,15 @@
 ---
 title: HCN에 대한 RPC 컨텍스트 핸들
-description: ''
 ms.author: jmesser
 author: jmesser81
+ms.prod: windows-server
 ms.date: 11/05/2018
-ms.openlocfilehash: 0eb620fe52de5ee98a247e17ed73304b2325c7c8
-ms.sourcegitcommit: 213989f29cc0c30a39a78573bd4396128a59e729
+ms.openlocfilehash: d55a990b2158f8dfbc61d8e75e9b0606edc9bf7c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70031490"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859866"
 ---
 # <a name="rpc-context-handles-for-hcn"></a>HCN에 대한 RPC 컨텍스트 핸들
 
@@ -18,7 +18,7 @@ ms.locfileid: "70031490"
 
 ## <a name="hcn_network"></a>HCN_Network
 
-HCN 네트워크는 호스트 계산 네트워크 및 연결 된 시스템 리소스와 정책을 나타내는 데 사용 되는 엔터티입니다. 예를 들어 HCN 네트워크는 일반적으로 메타 데이터 집합 (예: id, 이름, 유형), 가상 스위치, 호스트 가상 네트워크 어댑터 (네트워크에 대 한 기본 게이트웨이 역할을 함), NAT 인스턴스 (네트워크 유형에 서 필요한 경우), 서브넷 및 MAC 풀 집합으로 구성 됩니다. 및 적용 되는 모든 네트워크 수준 정책 (예: Acl)
+HCN 네트워크는 호스트 계산 네트워크 및 연결 된 시스템 리소스와 정책을 나타내는 데 사용 되는 엔터티입니다. 예를 들어 HCN 네트워크는 일반적으로 메타 데이터 집합으로 구성 됩니다 (예: id, 이름, 유형), 가상 스위치, 호스트 가상 네트워크 어댑터 (네트워크에 대 한 기본 게이트웨이 역할을 함), NAT 인스턴스 (네트워크 유형에 서 필요한 경우), 서브넷 및 MAC 풀 집합, 적용 되는 모든 네트워크 수준 정책 (예: Acl)을 사용할 수 있습니다.
 
 HCN 네트워크 엔터티는 HCN_NETWORK RPC 컨텍스트 핸들을 사용 하 여 표시 됩니다.
 

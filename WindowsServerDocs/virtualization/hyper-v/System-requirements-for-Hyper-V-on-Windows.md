@@ -2,21 +2,19 @@
 title: Windows Server의 Hyper-v에 대 한 시스템 요구 사항
 description: Windows Server의 Hyper-v에 대 한 하드웨어 및 펌웨어 요구 사항을 나열 합니다.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bc4a4971-f727-40cd-91f5-2ee6d24b54cb
-author: KBDAzure
+author: kbdazure
 ms.author: kathydav
 ms.date: 9/30/2016
-ms.openlocfilehash: fabaa1933fef836bb6ce3fc01badf337b832d072
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9bb50448f1ee819b3b886536424ee1556775b78d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71365444"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857986"
 ---
 # <a name="system-requirements-for-hyper-v-on-windows-server"></a>Windows Server의 Hyper-v에 대 한 시스템 요구 사항
 
@@ -24,7 +22,7 @@ ms.locfileid: "71365444"
 
 Hyper-v는 특정 하드웨어 요구 사항 및 Hyper-v 기능이 몇 가지 추가 요구 사항이 있습니다. 이 문서에서 세부 정보를 사용 하 여 시스템을 계획 하는 방법은 Hyper-v를 사용할 수 있도록 충족 해야 하는 요구 사항을 결정 합니다. 그런 다음 검토는 [Windows Server 카탈로그](https://www.windowsservercatalog.com/)합니다. Hyper-v에 대 한 요구 사항을 가상화 환경에 더 많은 컴퓨팅 리소스가 필요 하기 때문에 Windows Server 2016에 대 한 일반 최소 요구 사항의 초과 하는 것을 염두에 두십시오.
 
-Hyper-v를 이미 사용 중인 경우 기존 하드웨어를 사용할 수 있는 가능성이 있습니다. Windows Server 2012 r 2에서 일반적인 하드웨어 요구 사항이 크게 변경 되지 않은 합니다.  그러나 최신 하드웨어를 사용 하 여 차폐 가상 컴퓨터나 불연속 장치 할당 해야 합니다. 이러한 기능은 아래에 설명 된 대로 특정 하드웨어 지원을 사용 합니다. 외에 원하는 하드웨어의 주요 차이점은 두 번째 수준 주소 변환 SLAT ()는 이제 필요한 대신 것이 좋습니다.
+Hyper-v를 이미 사용 중인 경우 기존 하드웨어를 사용할 수 있는 가능성이 있습니다. Windows Server 2012 r 2에서 일반적인 하드웨어 요구 사항이 크게 변경 되지 않은 합니다.  그러나 최신 하드웨어를 사용 하 여 차폐 가상 컴퓨터나 불연속 디바이스 할당 해야 합니다. 이러한 기능은 아래에 설명 된 대로 특정 하드웨어 지원을 사용 합니다. 외에 원하는 하드웨어의 주요 차이점은 두 번째 수준 주소 변환 SLAT ()는 이제 필요한 대신 것이 좋습니다.
 
 Hyper-v를 실행 중인 가상 컴퓨터의 수와 같은 지원 되는 최대 구성에 대 한 자세한 참조 [Windows Server 2016의 Hyper-v 확장성에 대 한 계획](plan/Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md)합니다. 가상 컴퓨터에서 실행할 수는 운영 체제의 목록에 대해서는 [Windows 서버에서 Hyper-v에 대 한 지원 되는 Windows 게스트 운영 체제](Supported-Windows-guest-operating-systems-for-Hyper-V-on-Windows.md)합니다.
 
@@ -56,9 +54,9 @@ Systeminfo.exe
 
 ## <a name="requirements-for-specific-features"></a>특정 기능에 대 한 요구 사항
 
-개별 장치 할당 및 차폐 가상 컴퓨터에 대 한 요구 사항은 다음과 같습니다. 이러한 기능에 대 한 설명은 [Windows Server에서 hyper-v의 새로운](What-s-new-in-Hyper-V-on-Windows.md)기능을 참조 하세요.
+개별 디바이스 할당 및 차폐 가상 컴퓨터에 대 한 요구 사항은 다음과 같습니다. 이러한 기능에 대 한 설명은 [Windows Server에서 hyper-v의 새로운](What-s-new-in-Hyper-V-on-Windows.md)기능을 참조 하세요.
 
-### <a name="discrete-device-assignment"></a>개별 장치 할당
+### <a name="discrete-device-assignment"></a>개별 디바이스 할당
 
 **호스트** 요구 사항은 Hyper-v에서 SR-IOV 기능에 대 한 기존 요구 사항과 유사 합니다.
 
@@ -74,7 +72,7 @@ Systeminfo.exe
 
 - 펌웨어 테이블에는 Windows 하이퍼바이저 I/O MMU 노출 해야 합니다. 에 유의 BIOS 또는 UEFI에서이 기능을 해제 될 수 있습니다. 자세한 내용은 하드웨어 설명서를 참조 하거나 하드웨어 제조업체에 문의 합니다.
 
-**장치** GPU 또는 비휘발성 메모리 (NVMe) express 필요 합니다. GPU, 특정 장치에만 개별 장치 할당을 지원합니다. 을 확인 하려면 하드웨어 설명서를 참조 하거나 하드웨어 제조업체에 문의 합니다. 게시물을 참조 및 고려 사항, 사용 하는 방법을 비롯 하 여이 기능에 대 한 자세한 "[불연속 장치 할당-설명 및 배경](https://blogs.technet.com/b/virtualization/archive/2015/11/19/discrete-device-assignment.aspx)" 가상화 블로그에서입니다.
+**장치** GPU 또는 비휘발성 메모리 (NVMe) express 필요 합니다. GPU, 특정 디바이스에만 개별 디바이스 할당을 지원합니다. 을 확인 하려면 하드웨어 설명서를 참조 하거나 하드웨어 제조업체에 문의 합니다. 게시물을 참조 및 고려 사항, 사용 하는 방법을 비롯 하 여이 기능에 대 한 자세한 "[불연속 장치 할당-설명 및 배경](https://blogs.technet.com/b/virtualization/archive/2015/11/19/discrete-device-assignment.aspx)" 가상화 블로그에서입니다.
 
 ### <a name="shielded-virtual-machines"></a>실드 된 가상 컴퓨터
 

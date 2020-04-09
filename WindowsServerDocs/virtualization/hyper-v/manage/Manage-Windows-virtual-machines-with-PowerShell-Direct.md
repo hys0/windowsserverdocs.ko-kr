@@ -2,21 +2,19 @@
 title: PowerShell Direct를 사용 하 여 Windows 가상 머신 관리
 description: PowerShell Direct를 사용 하 여 네트워크 또는 원격 연결을 사용 하지 않고 가상 컴퓨터를 관리 하는 방법에 대 한 지침을 제공 합니다.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b5715c02-a90f-4de9-a71e-0fc09093ba2d
-author: KBDAzure
+author: kbdazure
 ms.author: kathydav
 ms.date: 10/04/2016
-ms.openlocfilehash: f42e221b073cf199117f85ea96beef4997bbbbc5
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: c4a051de2d8f62c38ae0c44b1a62d5bf9df339e8
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392750"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859436"
 ---
 # <a name="manage-windows-virtual-machines-with-powershell-direct"></a>PowerShell Direct를 사용 하 여 Windows 가상 머신 관리
 
@@ -83,7 +81,7 @@ Invoke-Command -VMName PSTest  -ScriptBlock { cmdlet }
   
 Hyper-v cmdlet을 사용 [하 여 사용](https://docs.microsoft.com/powershell/module/hyper-v/get-vm) 중인 자격 증명에 hyper-v 관리자 역할이 있는지 확인 하 고 호스트에서 로컬로 실행 되 고 부팅 되는 가상 컴퓨터의 목록을 가져올 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [Enter-PSSession](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Core/Enter-PSSession)  
 [종료-PSSession](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Core/Exit-PSSession)  
 [Invoke 명령](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Core/Invoke-Command)  

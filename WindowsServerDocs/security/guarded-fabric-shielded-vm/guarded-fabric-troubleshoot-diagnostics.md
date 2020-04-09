@@ -1,19 +1,19 @@
 ---
 title: 보호 된 패브릭 진단 도구를 사용 하 여 문제 해결
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: 07691d5b-046c-45ea-8570-a0a85c3f2d22
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 01/14/2020
-ms.openlocfilehash: c69fc70282ff61ecce25f6413244d7ba3a5ba3bc
-ms.sourcegitcommit: c5709021aa98abd075d7a8f912d4fd2263db8803
+ms.openlocfilehash: 3cf2b71113e812774cfb39b2ed21df8b41f83f12
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2020
-ms.locfileid: "76265825"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856416"
 ---
 # <a name="troubleshooting-using-the-guarded-fabric-diagnostic-tool"></a>보호 된 패브릭 진단 도구를 사용 하 여 문제 해결
 
@@ -164,7 +164,7 @@ Get-HgsTrace -Target $hgs01,$hgs02,$gh01,$gh02 -RunDiagnostics
 
 수동 진단을 수행 하는 단계는 다음과 같습니다.
 
-1. 각 호스트 관리자가 결과 추적에 대해 실행 하려는 알려진 `-Path`와 진단 목록을 지정 하 `Get-HgsTrace`를 실행 하도록 요청 합니다.  예를 들어 다음과 같은 가치를 제공해야 합니다.
+1. 각 호스트 관리자가 결과 추적에 대해 실행 하려는 알려진 `-Path`와 진단 목록을 지정 하 `Get-HgsTrace`를 실행 하도록 요청 합니다.  예를 들면 다음과 같습니다.
 
    ```PowerShell
    Get-HgsTrace -Path C:\Traces -Diagnostic Networking,BestPractices
@@ -190,7 +190,7 @@ Get-HgsTrace -Target $hgs01,$hgs02,$gh01,$gh02 -RunDiagnostics
          |- [..]
       ```
 
-4. 진단을 실행 하 여 `-Path` 매개 변수에 어셈블된 추적 폴더의 경로를 제공 하 고 `-RunDiagnostics` 스위치 및 관리자에 게 추적을 수집 하도록 요청한 진단을 지정 합니다.  진단은 경로 내에 있는 호스트에 액세스할 수 없어 미리 수집 된 추적만 사용 하려고 한다고 가정 합니다.  추적이 누락 되거나 손상 된 경우 진단에서 영향을 받는 테스트만 실패 하 고 정상적으로 진행 됩니다.  예를 들어 다음과 같은 가치를 제공해야 합니다.
+4. 진단을 실행 하 여 `-Path` 매개 변수에 어셈블된 추적 폴더의 경로를 제공 하 고 `-RunDiagnostics` 스위치 및 관리자에 게 추적을 수집 하도록 요청한 진단을 지정 합니다.  진단은 경로 내에 있는 호스트에 액세스할 수 없어 미리 수집 된 추적만 사용 하려고 한다고 가정 합니다.  추적이 누락 되거나 손상 된 경우 진단에서 영향을 받는 테스트만 실패 하 고 정상적으로 진행 됩니다.  예를 들면 다음과 같습니다.
 
    ```PowerShell
    Get-HgsTrace -RunDiagnostics -Diagnostic Networking,BestPractices -Path ".\FabricTraces"

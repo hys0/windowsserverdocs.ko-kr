@@ -2,22 +2,18 @@
 title: 고급 설정을 사용하여 단일 DirectAccess 서버 배포
 description: 이 항목은 Windows Server 2016에 대 한 고급 설정을 사용 하 여 단일 DirectAccess 서버 배포 가이드의 일부입니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-da
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b211a9ca-1208-4e1f-a0fe-26a610936c30
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 4e6c8379f225dbeefd7c97ac96b9a0047dfd4a0b
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 7f6a6724a2ab7bb6da48a11d31fb04461912e388
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80309214"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859526"
 ---
 # <a name="deploy-a-single-directaccess-server-with-advanced-settings"></a>고급 설정을 사용하여 단일 DirectAccess 서버 배포
 
@@ -60,14 +56,14 @@ DirectAccess를 배포 하기 전에 다음 항목을 사용 하 여 필수 구�
   
 1.  **DirectAccess 인프라 계획**. 이 단계에서는 DirectAccess 배포를 시작하기 전에 네트워크 인프라를 설치하는 데 필요한 계획에 대해 설명하며, 네트워크 및 서버 토폴로지, 인증서 계획, DNS, Active Directory 및 GPO(그룹 정책 개체) 구성, DirectAccess 네트워크 위치 서버 계획이 포함됩니다.  
   
-2.  **DirectAccess 배포 계획**. 이 단계에서는 DirectAccess 배포를 준비하는 데 필요한 계획 단계에 대해 설명하며, DirectAccess 클라이언트 컴퓨터, 서버 및 클라이언트 인증 요구 사항, VPN 설정, 인프라 서버, 관리 및 응용 프로그램 서버 계획이 포함됩니다.  
+2.  **DirectAccess 배포 계획**. 이 단계에서는 DirectAccess 배포를 준비하는 데 필요한 계획 단계에 대해 설명하며, DirectAccess 클라이언트 컴퓨터, 서버 및 클라이언트 인증 요구 사항, VPN 설정, 인프라 서버, 관리 및 애플리케이션 서버 계획이 포함됩니다.  
   
 ### <a name="deployment-steps"></a>배포 단계  
 배포는 세 개의 단계로 나누어집니다.  
   
 1.  **DirectAccess 인프라 구성**. 이 단계에는 네트워크 및 라우팅 구성, 필요한 경우 방화벽 설정 구성, 인증서, DNS 서버, Active Directory, GPO 설정 및 DirectAccess 네트워크 위치 서버 구성이 포함됩니다.  
   
-2.  **DirectAccess 서버 설정 구성**. 이 단계에는 DirectAccess 클라이언트 컴퓨터, DirectAccess 서버, 인프라 서버, 관리 및 응용 프로그램 서버 구성을 위한 단계가 포함됩니다.  
+2.  **DirectAccess 서버 설정 구성**. 이 단계에는 DirectAccess 클라이언트 컴퓨터, DirectAccess 서버, 인프라 서버, 관리 및 애플리케이션 서버 구성을 위한 단계가 포함됩니다.  
   
 3.  **배포 확인**. 이 단계에는 DirectAccess 배포를 확인하는 단계가 포함됩니다.  
   
@@ -85,8 +81,8 @@ DirectAccess를 배포 하기 전에 다음 항목을 사용 하 여 필수 구�
   
 |역할/기능|이 시나리오를 지원하는 방법|  
 |---------|-----------------|  
-|원격 액세스 역할|이 역할은 서버 관리자 콘솔이나 Windows PowerShell을 사용하여 설치 및 제거됩니다. 이 역할에는 DirectAccess와 RRAS(라우팅 및 원격 액세스 서비스)가 둘 다 포함됩니다. 원격 액세스 역할은 다음의 두 가지 구성 요소로 구성됩니다.<br/><br/>1. DirectAccess 및 RRAS VPN. DirectAccess와 VPN은 원격 액세스 관리 콘솔에서 함께 관리 됩니다.<br/>2. RRAS 라우팅. RRAS 라우팅 기능은 레거시 라우팅 및 원격 액세스 콘솔에서 관리 됩니다.<br /><br />원격 액세스 서버 역할은 다음과 같은 서버 역할/기능에 종속됩니다.<br/><br/> -인터넷 정보 서비스 (IIS) 웹 서버-이 기능은 DirectAccess 서버의 네트워크 위치 서버와 기본 웹 프로브를 구성 하는 데 필요 합니다.<br/> -Windows 내부 데이터베이스 DirectAccess 서버의 로컬 계정에 사용 됩니다.|  
-|원격 액세스 관리 도구 기능|이 기능은 다음과 같이 설치됩니다.<br /><br />-원격 액세스 역할이 설치 될 때 DirectAccess 서버에 기본적으로 설치 되며, 원격 관리 콘솔 사용자 인터페이스 및 Windows PowerShell cmdlet을 지원 합니다.<br />-선택적으로 DirectAccess 서버 역할을 실행 하지 않는 서버에 설치 될 수 있습니다. 이 경우 이 기능은 DirectAccess 및 VPN을 실행하는 원격 액세스 컴퓨터를 원격으로 관리하는 데 사용됩니다.<br /><br />원격 액세스 관리 도구 기능의 구성 요소는 다음과 같습니다.<br /><br />-원격 액세스 GUI (그래픽 사용자 인터페이스)<br />-Windows PowerShell 용 원격 액세스 모듈<br /><br />이 기능은 다음 요소에 종속됩니다.<br /><br />그룹 정책 관리 콘솔<br />RAS 연결 관리자 관리 키트 (CMAK)<br />Windows PowerShell 3.0<br />-그래픽 관리 도구 및 인프라|  
+|원격 액세스 역할|이 역할은 서버 관리자 콘솔이나 Windows PowerShell을 사용하여 설치 및 제거됩니다. 이 역할에는 DirectAccess와 RRAS(라우팅 및 원격 액세스 서비스)가 둘 다 포함됩니다. 원격 액세스 역할은 다음의 두 가지 구성 요소로 구성됩니다.<br/><br/>1. DirectAccess 및 RRAS VPN. DirectAccess와 VPN은 원격 액세스 관리 콘솔에서 함께 관리 됩니다.<br/>2. RRAS 라우팅. RRAS 라우팅 기능은 레거시 라우팅 및 원격 액세스 콘솔에서 관리 됩니다.<p>원격 액세스 서버 역할은 다음과 같은 서버 역할/기능에 종속됩니다.<br/><br/> -인터넷 정보 서비스 (IIS) 웹 서버-이 기능은 DirectAccess 서버의 네트워크 위치 서버와 기본 웹 프로브를 구성 하는 데 필요 합니다.<br/> -Windows 내부 데이터베이스 DirectAccess 서버의 로컬 계정에 사용 됩니다.|  
+|원격 액세스 관리 도구 기능|이 기능은 다음과 같이 설치됩니다.<p>-원격 액세스 역할이 설치 될 때 DirectAccess 서버에 기본적으로 설치 되며, 원격 관리 콘솔 사용자 인터페이스 및 Windows PowerShell cmdlet을 지원 합니다.<br />-선택적으로 DirectAccess 서버 역할을 실행 하지 않는 서버에 설치 될 수 있습니다. 이 경우 이 기능은 DirectAccess 및 VPN을 실행하는 원격 액세스 컴퓨터를 원격으로 관리하는 데 사용됩니다.<p>원격 액세스 관리 도구 기능의 구성 요소는 다음과 같습니다.<p>-원격 액세스 GUI (그래픽 사용자 인터페이스)<br />-Windows PowerShell 용 원격 액세스 모듈<p>이 기능은 다음 요소에 종속됩니다.<p>그룹 정책 관리 콘솔<br />RAS 연결 관리자 관리 키트 (CMAK)<br />Windows PowerShell 3.0<br />-그래픽 관리 도구 및 인프라|  
   
 ## <a name="hardware-requirements"></a><a name="BKMK_HARD"></a>하드웨어 요구 사항  
 이 시나리오의 하드웨어 요구 사항은 다음과 같습니다.  
@@ -125,9 +121,9 @@ DirectAccess를 배포 하기 전에 다음 항목을 사용 하 여 필수 구�
   
 -   서버 요구 사항:  
   
-    -   DirectAccess 서버가 도메인 구성원이어야 합니다. 서버는 내부 네트워크의 경계면 또는 다른 장치의 경계면 방화벽 뒤에 배포될 수 있습니다.  
+    -   DirectAccess 서버가 도메인 구성원이어야 합니다. 서버는 내부 네트워크의 경계면 또는 다른 디바이스의 경계면 방화벽 뒤에 배포될 수 있습니다.  
   
-    -   DirectAccess 서버가 경계면 방화벽이나 NAT 장치 뒤에 있는 경우, 이 장치는 DirectAccess 서버와 트래픽을 주고받을 수 있도록 구성되어 있어야 합니다.  
+    -   DirectAccess 서버가 경계면 방화벽이나 NAT 디바이스 뒤에 있는 경우, 이 디바이스는 DirectAccess 서버와 트래픽을 주고받을 수 있도록 구성되어 있어야 합니다.  
   
     -   서버에 원격 액세스를 배포하는 사람에게는 서버에 대한 로컬 관리자 권한과 도메인 사용자 권한이 필요합니다. 또한 관리자에게는 DirectAccess 배포에 사용되는 GPO 사용 권한이 필요합니다. 이동 컴퓨터에만 DirectAccess를 배포하도록 제한하는 기능을 활용하려면 도메인 컨트롤러에서 WMI 필터를 만들 수 있는 권한이 필요합니다.  
   
@@ -148,9 +144,9 @@ DirectAccess를 배포 하기 전에 다음 항목을 사용 하 여 필수 구�
   
 |콘텐츠 유형|참조|  
 |--------|-------|  
-|**배포**|[Windows Server의 DirectAccess 배포 경로](../../../remote-access/directaccess/DirectAccess-Deployment-Paths-in-Windows-Server.md)<br /><br />[시작 마법사를 사용 하 여 단일 DirectAccess 서버 배포](../../../remote-access/directaccess/single-server-wizard/Deploy-a-Single-DirectAccess-Server-Using-the-Getting-Started-Wizard.md)|  
+|**배포**|[Windows Server의 DirectAccess 배포 경로](../../../remote-access/directaccess/DirectAccess-Deployment-Paths-in-Windows-Server.md)<p>[시작 마법사를 사용 하 여 단일 DirectAccess 서버 배포](../../../remote-access/directaccess/single-server-wizard/Deploy-a-Single-DirectAccess-Server-Using-the-Getting-Started-Wizard.md)|  
 |**도구 및 설정**|[원격 액세스 PowerShell cmdlet](https://technet.microsoft.com/library/hh918399.aspx)|  
-|**커뮤니티 리소스**|[DirectAccess 유지 가이드](https://social.technet.microsoft.com/wiki/contents/articles/23210.directaccess-survival-guide.aspx)<br /><br />[DirectAccess Wiki 항목](https://go.microsoft.com/fwlink/?LinkId=236871)|  
+|**커뮤니티 리소스**|[DirectAccess 유지 가이드](https://social.technet.microsoft.com/wiki/contents/articles/23210.directaccess-survival-guide.aspx)<p>[DirectAccess Wiki 항목](https://go.microsoft.com/fwlink/?LinkId=236871)|  
 |**관련 기술**|[IPv6 작동 방법](https://technet.microsoft.com/library/cc781672(v=WS.10).aspx)|  
   
 

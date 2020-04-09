@@ -1,17 +1,17 @@
 ---
 title: 스토리지 공간 다이렉트 볼륨의 할당을 구분 합니다.
 ms.author: cosmosdarwin
-ms.manager: eldenc
+manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 03/29/2018
-ms.openlocfilehash: 19e5a38ca406878b7dbc5a187b0057e97e4fe2d1
-ms.sourcegitcommit: 74107a32efe1e53b36c938166600739a79dd0f51
+ms.openlocfilehash: 26454881279e1d33392a827f794788370def2cab
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76918299"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858976"
 ---
 # <a name="delimit-the-allocation-of-volumes-in-storage-spaces-direct"></a>스토리지 공간 다이렉트 볼륨의 할당을 구분 합니다.
 > 적용 대상: Windows Server 2019
@@ -21,14 +21,14 @@ Windows Server 2019에는 스토리지 공간 다이렉트 볼륨의 할당을 �
    > [!IMPORTANT]
    > 이 기능은 Windows Server 2019에 새로 있습니다. Windows Server 2016에서는 사용할 수 없습니다. 
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>필수 조건
 
-### <a name="green-checkmark-iconmediadelimit-volume-allocationsupportedpng-consider-using-this-option-if"></a>![녹색 확인 표시 아이콘입니다.](media/delimit-volume-allocation/supported.png) 다음 경우에이 옵션을 사용 하는 것이 좋습니다.
+### <a name="green-checkmark-icon-consider-using-this-option-if"></a>![녹색 확인 표시 아이콘입니다.](media/delimit-volume-allocation/supported.png) 다음 경우에이 옵션을 사용 하는 것이 좋습니다.
 
 - 클러스터에 6 개 이상의 서버가 있습니다. 하거나
 - 클러스터에서 [3 방향 미러](storage-spaces-fault-tolerance.md#mirroring) 복원 력을 사용 합니다.
 
-### <a name="red-x-iconmediadelimit-volume-allocationunsupportedpng-do-not-use-this-option-if"></a>![빨간색 X 아이콘.](media/delimit-volume-allocation/unsupported.png) 다음 경우에는이 옵션을 사용 하지 마십시오.
+### <a name="red-x-icon-do-not-use-this-option-if"></a>![빨간색 X 아이콘.](media/delimit-volume-allocation/unsupported.png) 다음 경우에는이 옵션을 사용 하지 마십시오.
 
 - 클러스터에 6 개 미만의 서버가 있습니다. 디스크나
 - 클러스터에서 [패리티](storage-spaces-fault-tolerance.md#parity) 또는 [미러 가속 패리티](storage-spaces-fault-tolerance.md#mirror-accelerated-parity) 복원 력을 사용 합니다.
@@ -56,7 +56,7 @@ Windows Server 2019에는 스토리지 공간 다이렉트 볼륨의 할당을 �
 구분 된 할당을 사용 하 여 사용할 서버의 하위 집합을 지정 합니다 (최소 4 개). 이 볼륨은 이전과 같이 세 번 복사 된 줄임로 나뉩니다. 하지만 모든 서버에서 할당 하는 대신 **줄임는 지정한 서버의 하위 집합에만 할당 됩니다**.
 
 예를 들어 8 개 노드 클러스터 (노드 1 ~ 8)가 있는 경우 노드 1, 2, 3, 4의 디스크에만 위치할 볼륨을 지정할 수 있습니다.
-#### <a name="advantages"></a>이점
+#### <a name="advantages"></a>장점
 
 예제 할당을 사용 하는 경우 볼륨은 3 개의 동시 오류를 존속 시킬 가능성이 높습니다. 노드 1, 2, 6이 다운 되 면 볼륨의 데이터 복사본 3 개를 포함 하는 노드 2 개만 다운 되 고 볼륨이 온라인 상태로 유지 됩니다.
 
@@ -153,7 +153,7 @@ MyVolume                300 GB         0       100 GB  100 GB  100 GB  100 GB  0
 
 S e r v e r 1에 *Myvolume* 의 줄임이 더 이상 포함 되지 않습니다. 대신 Server5이 수행 합니다.
 
-## <a name="best-practices"></a>최선의 구현 방법
+## <a name="best-practices"></a>모범 사례
 
 구분 된 볼륨 할당을 사용할 때 따라야 할 모범 사례는 다음과 같습니다.
 
@@ -194,7 +194,7 @@ S e r v e r 1에 *Myvolume* 의 줄임이 더 이상 포함 되지 않습니다.
 
 ### <a name="can-i-delimit-some-volumes-but-not-others"></a>일부 볼륨을 구분할 수 있나요?
 
-그렇습니다. 할당을 구분할 지 여부에 따라 볼륨별를 선택할 수 있습니다.
+예. 할당을 구분할 지 여부에 따라 볼륨별를 선택할 수 있습니다.
 
 ### <a name="does-delimited-allocation-change-how-drive-replacement-works"></a>구분 된 할당을 통해 드라이브 교체가 어떻게 작동 하나요?
 
