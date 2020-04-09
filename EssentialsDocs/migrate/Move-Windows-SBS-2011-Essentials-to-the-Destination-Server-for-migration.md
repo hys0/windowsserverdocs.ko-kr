@@ -1,23 +1,19 @@
 ---
 title: Windows Server Essentials 마이그레이션을 위해 대상 서버에 Windows SBS 2011 Essentials 설정 및 데이터 이동
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 47548994-9fa0-42e0-afa4-c2ccbd063acb
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 78047680840d5d63f7f8dd884107e9c30658fdbe
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: efc479f4c84baf72b1656afb85eef22d9ca710d8
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80318867"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852466"
 ---
 # <a name="move-windows-sbs-2011-essentials-settings-and-data-to-the-destination-server-for-windows-server-essentials-migration"></a>Windows Server Essentials 마이그레이션을 위해 대상 서버에 Windows SBS 2011 Essentials 설정 및 데이터 이동
 

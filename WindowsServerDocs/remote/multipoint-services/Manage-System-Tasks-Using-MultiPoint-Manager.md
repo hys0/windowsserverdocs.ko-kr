@@ -1,24 +1,20 @@
 ---
 title: MultiPoint 관리자를 사용하여 시스템 작업 관리
 description: MultiPoint 관리자의 관리 작업 개요
-ms.custom: na
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: efb34298-391c-4435-afdf-1a749f1ce224
 author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: 185f4c88286138af61f92f3f349efd8f584ed73c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: a1f51d459634f9657a8623e52ed30b88158167ad
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405052"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853516"
 ---
 # <a name="manage-system-tasks-using-multipoint-manager"></a>MultiPoint 관리자를 사용하여 시스템 작업 관리
 다중 포인트 관리자에서 사용할 수 있습니다는 **홈** 탭 하 MultiPoint 서비스 작업을 수행 하 고 시스템의 상태를 확인 합니다. **홈** 탭에서 수행할 수 있는 작업은 다음과 같습니다.  

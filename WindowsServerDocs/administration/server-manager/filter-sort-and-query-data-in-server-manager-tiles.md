@@ -1,32 +1,28 @@
 ---
 title: 서버 관리자 타일에서 데이터 필터링, 정렬 및 쿼리
 description: 서버 관리자
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-server-manager
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8786f791-73e5-4c75-8d12-46e88a196976
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 89604b73fd071030d0f800b3a38a7ac3858ef1c6
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e8447d06c03b6adca00966d05978d4337d9b5984
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71383198"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80851536"
 ---
 # <a name="filter-sort-and-query-data-in-server-manager-tiles"></a>서버 관리자 타일에서 데이터 필터링, 정렬 및 쿼리
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Windows server에서는 서버 관리자 let 필터링의 타일 데이터를 정렬 하 고 만들고 및 사용자 지정 쿼리를 저장 합니다. 정렬 지정, 키워드 필터를 사용 및 서버 역할이 나 그룹 페이지에서 서버 관리자에서 이벤트, 성능, 모범 사례 분석기, 서비스 및 역할 및 기능 타일의 목록 항목에서 쿼리를 실행 합니다.  
   
-이 항목에는 다음 섹션이 수록되어 있습니다.  
+이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   
 -   [타일의 목록 항목 필터링](#BKMK_tiles)  
   
@@ -34,7 +30,7 @@ Windows server에서는 서버 관리자 let 필터링의 타일 데이터를 �
   
 -   [타일 데이터에 대 한 사용자 지정 쿼리 만들기 및 실행](#BKMK_query)  
   
-## <a name="BKMK_tiles"></a>타일의 목록 항목 필터링  
+## <a name="filter-list-entries-in-tiles"></a><a name=BKMK_tiles></a>타일의 목록 항목 필터링  
 **필터** 텍스트 상자를 사용하면 지정된 텍스트 문자열을 포함하는 항목에 한해 타일에 표시되는 항목의 목록 수를 손쉽게 줄일 수 있습니다.  
   
 #### <a name="to-apply-a-filter-to-the-list-of-entries-in-a-tile"></a>타일에 표시되는 항목의 목록에 필터를 적용하려면  
@@ -49,10 +45,10 @@ Windows server에서는 서버 관리자 let 필터링의 타일 데이터를 �
   
 4.  필터를 지우려면 필터 상자의 문자열을 삭제하거나 **X**를 클릭합니다.  
   
-## <a name="BKMK_sort"></a>타일의 목록 항목 정렬  
+## <a name="sort-list-entries-in-tiles"></a><a name=BKMK_sort></a>타일의 목록 항목 정렬  
 열 머리글을 클릭 하 여 서버 관리자 타일의 목록 항목을 정렬 합니다. 열 제목을 처음 클릭하면 열 값이 영숫자 오름차순(위 화살표)으로 정렬되고, 한 번 더 클릭하면 영숫자 내림차순(아래 화살표)으로 정렬됩니다.  
   
-## <a name="BKMK_query"></a>타일 데이터에 대 한 사용자 지정 쿼리 만들기 및 실행  
+## <a name="create-and-run-custom-queries-on-tile-data"></a><a name=BKMK_query></a>타일 데이터에 대 한 사용자 지정 쿼리 만들기 및 실행  
 서버 관리자에서 이벤트, 성능, 모범 사례 분석기, 서비스 또는 역할 및 기능 타일에서 사용자 지정 쿼리를 만들 수 있습니다. 기본적으로 사용자 지정 쿼리를 작성 하는 데 사용할 조건을 선택할 수 있는 타일 도구 모음의 영역은 숨겨집니다. **확장** (타일 도구 모음의 오른쪽 모서리에 있는 갈매기형 수장 단추)을 클릭 하 여 쿼리 조건을 표시 합니다.  
   
 #### <a name="to-create-a-custom-query-for-tile-data"></a>타일 데이터에 대한 사용자 지정 쿼리를 만들려면  

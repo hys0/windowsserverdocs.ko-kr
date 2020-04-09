@@ -1,24 +1,20 @@
 ---
 title: nfsshare
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 437a2615-335a-442f-9713-d50d5f3983a3
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d205bcfad11d22fea7fc9d0651aca61f234347cf
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 032baaf3013d2658b1040345da3a35cb6a1631f2
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75948503"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80838906"
 ---
 # <a name="nfsshare"></a>nfsshare
 

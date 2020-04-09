@@ -1,30 +1,26 @@
 ---
 title: 사용자 스테이션 관리
 description: MultiPoint 서비스에서 사용자 스테이션을 관리 하는 방법 알아보기
-ms.custom: na
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b418578d-3a4c-49b0-90db-8389b320b2f6
 author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: 7f46d2a68fc6247bddc1251c32ac55544b6fbf52
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 7b434002b5f542e3a9242290217fa66d418ee2f1
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405064"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853496"
 ---
 # <a name="manage-user-stations"></a>사용자 스테이션 관리
 이 섹션에서는 MultiPoint 서비스 시스템을 구성하는 *스테이션*의 관리에 대해 논의합니다. MultiPoint 서비스 시스템 관리에는 다중 포인트 관리자의 하드웨어 및 소프트웨어 구성 요소 관리가 모두 포함 됩니다. MultiPoint 서비스 시스템에서 데스크톱은 각 사용자 스테이션의 모니터에 표시 된 소프트웨어 사용자 인터페이스입니다.  
   
 ## <a name="station-status"></a>스테이션 상태  
-**스테이션** 탭에서는 각 데스크톱의 다음과 같은 상태 유형을 볼 수 있습니다. 상태에는 다음이 포함됩니다.  
+**스테이션** 탭에서 각 데스크톱에 대해 다음과 같은 유형의 상태를 확인할 수 있습니다. 상태는 다음과 같습니다.  
   
 -   로그온된 사용자  
   

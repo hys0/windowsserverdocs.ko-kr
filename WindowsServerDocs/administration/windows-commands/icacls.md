@@ -1,24 +1,20 @@
 ---
 title: icacls
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 403edfcc-328a-479d-b641-80c290ccf73e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 08/21/2018
-ms.openlocfilehash: 494c87073cfd78c7f5e17c72d4c65bec33a49b98
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 59d10b9ed681b7e0af120798dde9f200182d67d3
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71375493"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80842266"
 ---
 # <a name="icacls"></a>icacls
 
@@ -33,7 +29,7 @@ icacls <FileName> [/grant[:r] <Sid>:<Perm>[...]] [/deny <Sid>:<Perm>[...]] [/rem
 icacls <Directory> [/substitute <SidOld> <SidNew> [...]] [/restore <ACLfile> [/c] [/l] [/q]]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
@@ -56,7 +52,7 @@ icacls <Directory> [/substitute <SidOld> <SidNew> [...]] [/restore <ACLfile> [/c
 |/restore \<ACLfile > [/c] [/l] [/q]|저장 된 Dacl 적용 *ACLfile* 지정된 된 디렉터리의 파일에 있습니다. 필요는 *디렉터리* 매개 변수입니다.|
 |/inheritancelevel: [e\|d\|r]|상속 수준을 설정 합니다. <br>  **e** -enheritance 사용 <br>**d** -상속을 사용 하지 않도록 설정 하 고 ace를 복사 합니다. <br>**r** -상속 된 모든 ace를 제거 합니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 -   Sid는 숫자 또는 친숙 한 이름 형식을 사용할 수 있습니다. 숫자 형식을 사용 하는 경우에는 와일드 카드 문자 **&#42;** 를 SID의 시작 부분으로 접사.
 -   **icacls** 설명 된 대로 항목 ACE의 정식 순서를 유지 합니다.  
@@ -141,18 +137,18 @@ C:\Windows 디렉터리 및 하위 디렉터리에 있는 ACLFile 내의 모든 
 icacls c:\windows\ /restore aclfile
 ```
 
-사용자에 "Test1" 이라는 파일에 User1 삭제 하 고 DAC 쓰기 권한을 부여 하려면 다음을 입력 합니다.
+사용자에 게 이름이 Test1 인 파일에 대 한 DAC 삭제 및 쓰기 권한을 부여 하려면 다음을 입력 합니다.
 
 ```
 icacls test1 /grant User1:(d,wdac)
 ```
 
-"Test2" 라는 파일에 대 한 SID S-1-1-0 삭제 및 DAC를 작성 하 여 정의 된 사용자 권한을 부여 하려면 다음을 입력 합니다.
+이름이 Test2 인 파일에 대 한 SID S-1-1-0 Delete 및 Write DAC 권한으로 정의한 사용자를 부여 하려면 다음을 입력 합니다.
 
 ```
 icacls test2 /grant *S-1-1-0:(d,wdac)
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

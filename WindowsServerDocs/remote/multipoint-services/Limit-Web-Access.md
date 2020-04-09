@@ -1,24 +1,20 @@
 ---
 title: 웹 액세스 제한
 description: MultiPoint 서비스에서 인터넷에 대 한 사용자 액세스를 제한 하는 방법을 알아봅니다.
-ms.custom: na
 ms.date: 07/08/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 044f2fd5-5b87-42bb-ba0d-c06516ac48c8
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.openlocfilehash: 8e12eebd55aa066979bbcbe4d2f3e613b5876a01
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 485c82284df4d77eea075d092fa08c820567f6c3
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71395325"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853686"
 ---
 # <a name="limit-web-access"></a>웹 액세스 제한
 개별 데스크톱에서 사용자 활동을 모니터링 하는 것 외에도, 관리자는 사용자를 제한할 수 있습니다 지정 된 웹 사이트에 대 한 사용자 액세스 허용 가능한 웹 사이트 및 사용자 액세스를 차단 하려는 웹 사이트를 지정 하 여.  
@@ -42,7 +38,7 @@ ms.locfileid: "71395325"
   
 1. 다중 포인트 대시보드에서에 **웹 제한** 탭을 클릭 하 여 시작\-메뉴 아래쪽 한 다음 클릭 **' 모든 데스크톱 '에 대 한 웹 액세스 제한**합니다.  
   
-   **Configure Web Limiting(웹 제한 구성)** 페이지가 열립니다. 사용자가 액세스할 수 있는 사이트가 나열됩니다. 다음 중 하나를 수행합니다.  
+   **Configure Web Limiting(웹 제한 구성)** 페이지가 열립니다. 사용자가 액세스할 수 있는 사이트가 나열됩니다. 다음 작업 중 하나를 수행합니다.  
   
 2. 허용된 사이트를 추가하려면 **Allow only these sites(이러한 사이트만 허용)** 를 클릭하고 허용되는 웹 주소를 입력한 다음 **추가**를 클릭합니다.  
   

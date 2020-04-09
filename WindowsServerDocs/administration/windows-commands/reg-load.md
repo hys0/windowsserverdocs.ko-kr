@@ -1,24 +1,20 @@
 ---
 title: reg 로드
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3b0b2b1b-f510-4108-9e9d-7057e924aa6e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: db661e311e3fe8c393750716de5dab375e7817f4
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 140c6b51b9f88081a8686ebebbc9400f241b5ef6
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71384703"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80836386"
 ---
 # <a name="reg-load"></a>reg 로드
 
@@ -34,7 +30,7 @@ ms.locfileid: "71384703"
 reg load KeyName FileName
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
@@ -42,22 +38,22 @@ reg load KeyName FileName
 |\<파일 이름 >|로드할 파일의 경로 이름을 지정 합니다. 이 파일을 사용 하 여 사전에 만들 수 있어야는 **reg 저장** 작업과.hiv 확장 합니다.|
 |/?|에 대 한 도움말을 표시 **reg 부하** 명령 프롬프트입니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 다음 표에 대 한 반환 값은 **reg 부하** 작업 합니다.
 
 |값|설명|
 |-----|-----------|
-|0|Success|
+|0|성공|
 |1|실패|
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
 키 만듭니다 TempHive.hiv 라는 파일을 로드 하려면 다음을 입력 합니다.
 ```
 REG LOAD HKLM\TempHive TempHive.hiv
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

@@ -1,24 +1,20 @@
 ---
 title: if
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 698b3fb9-532b-4c2b-af7f-179f8dc57131
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e8518fffc4f271369b13899e149ebd30145726b8
-ms.sourcegitcommit: 51e0b575ef43cd16b2dab2db31c1d416e66eebe8
+ms.openlocfilehash: 706ac1569ac3ca7ae504410935f334be360eda3a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76259030"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80842236"
 ---
 # <a name="if"></a>if
 
@@ -42,7 +38,7 @@ if cmdextversion <Number> <Command> [else <Expression>]
 if defined <Variable> <Command> [else <Expression>]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |        매개 변수        |                                                                                                                                                                                                                설명                                                                                                                                                                                                                 |
 |-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -58,7 +54,7 @@ if defined <Variable> <Command> [else <Expression>]
 |      \<식 >      |                                                                                                                                                                   명령에 전달 되는 명령줄 명령 및 매개 변수를 지정 된 **다른** 절.                                                                                                                                                                   |
 |           /?            |                                                                                                                                                                                                    명령 프롬프트에 도움말을 표시합니다.                                                                                                                                                                                                    |
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 -   **If** 절에 지정 된 조건이 true 이면 조건 다음에 오는 명령이 수행 됩니다. 조건이 false 이면 **if** 절의 명령이 무시 되 고 명령이 **else** 절에 지정 된 명령을 실행 합니다.
 -   프로그램이 중지 되 면 종료 코드를 반환 합니다. 종료 코드를 조건으로 사용 하려면 **errorlevel**합니다.
@@ -68,9 +64,9 @@ if defined <Variable> <Command> [else <Expression>]
     -   **%cmdextversion%** 의 현재 값의 문자열 표현으로 확장 **cmdextversion**합니다. 이 있다고 가정 하지 CMDEXTVERSION 이름의 기존 환경 변수-없는 경우, 받습니다 CMDEXTVERSION 값 대신 합니다.
 -   사용 해야는 **다른** 절 뒤의 명령과 동일한 줄에는 **경우**합니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
-메시지를 표시 하려면 "데이터 파일을 찾을 수 없습니다" 파일 Product.dat을 찾을 수 없는 입력 합니다.
+데이터 파일을 찾을 수 없습니다. .dat 파일을 찾을 수 없는 경우 메시지를 표시 하려면 다음을 입력 합니다.
 ```
 if not exist product.dat echo Cannot find data file 
 ```
@@ -110,15 +106,15 @@ echo The Product.dat file is missing.
 > :end
 > echo Done! 
 > ```
-> ERRORLEVEL 환경 변수의 값이 1 보다 작거나 "무방" 레이블로 이동:
+> ERRORLEVEL 환경 변수의 값이 1 보다 작거나 같으면 확인 레이블로 이동 하려면 다음을 입력 합니다.
 > ```
 > if %errorlevel% LEQ 1 goto okay
 > ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)
 
-[If](if.md)
+[때](if.md)
 
 [Goto](goto.md)

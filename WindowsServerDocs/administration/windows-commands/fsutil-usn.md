@@ -9,12 +9,12 @@ ms.technology: storage
 audience: IT Pro
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: b62d031c547f140ac5008af20a9e0ee4bcecc919
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 326390a5b40de46ca932043e9982f84c7758d901
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71376791"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80844006"
 ---
 # <a name="fsutil-usn"></a>Fsutil usn
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
@@ -33,7 +33,7 @@ fsutil usn [readdata] <FileName>
 fsutil usn [readjournal] [c= <chunk-size> s=<file-size-threshold>] <volumepath>
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |-------------|---------------|
@@ -60,7 +60,7 @@ fsutil usn [readjournal] [c= <chunk-size> s=<file-size-threshold>] <volumepath>
 |startusn =\<USN 번호 >|Usn 저널 읽기를 시작 하는 USN입니다. 기본값은 0입니다.|
 
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 -   USN 변경 저널에 대 한
 
@@ -82,9 +82,9 @@ fsutil usn [readjournal] [c= <chunk-size> s=<file-size-threshold>] <volumepath>
 
 -   사용 하 여 **deletejournal**
 
-    활성 변경 저널을 삭제 하거나 사용 하지 않도록 설정 하면 시스템에서 MFT (마스터 파일 테이블)의 모든 레코드에 액세스 하 여 마지막 USN 특성을 0 (영)으로 설정 해야 하기 때문에 시간이 많이 소요 됩니다. 이 프로세스는 몇 분 정도 걸릴 수 하 고 다시 시작이 필요한 경우 시스템을 다시 시작한 후 계속할 수 있습니다. 이 과정에서 변경 저널 활성으로 간주 되지 않습니다도 그 사용 하지 않으면. 시스템 업무 일지를 비활성화 하는 동안 액세스할 수 없으며, 및 모든 저널 작업 오류를 반환 합니다. 주의 기울여야 극단적인 활성 저널을 사용 하지 않도록 설정 하는 경우 부정적인 영향을 주므로 저널을 사용 하는 다른 응용 프로그램입니다.
+    활성 변경 저널을 삭제 하거나 사용 하지 않도록 설정 하면 시스템에서 MFT (마스터 파일 테이블)의 모든 레코드에 액세스 하 여 마지막 USN 특성을 0 (영)으로 설정 해야 하기 때문에 시간이 많이 소요 됩니다. 이 프로세스는 몇 분 정도 걸릴 수 하 고 다시 시작이 필요한 경우 시스템을 다시 시작한 후 계속할 수 있습니다. 이 과정에서 변경 저널 활성으로 간주 되지 않습니다도 그 사용 하지 않으면. 시스템 업무 일지를 비활성화 하는 동안 액세스할 수 없으며, 및 모든 저널 작업 오류를 반환 합니다. 주의 기울여야 극단적인 활성 저널을 사용 하지 않도록 설정 하는 경우 부정적인 영향을 주므로 저널을 사용 하는 다른 애플리케이션입니다.
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name="BKMK_examples"></a>예와
 USN 변경 유형 C 드라이브에 저널을 만들려면:
 
 ```
@@ -127,8 +127,8 @@ fsutil usn readdata c:\temp\sample.txt
 fsutil usn readjournal startusn=0xF00
 ```
 
-#### <a name="additional-references"></a>추가 참조
-[명령줄 구문 키](Command-Line-Syntax-Key.md)
+## <a name="additional-references"></a>추가 참조
+- [명령줄 구문 키](command-line-syntax-key.md)
 
 [Fsutil](Fsutil.md)
 

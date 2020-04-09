@@ -1,24 +1,20 @@
 ---
 title: 'ksetup: listrealmflags'
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aa96e4da-6b98-4c05-bccf-73cbf33258c2
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8f103875dc10dfbf7b0c604a8e2060fe58ee7a92
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 265f988d85deb7602e91677626d207bc3a7873ef
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71374974"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80841496"
 ---
 # <a name="ksetuplistrealmflags"></a>ksetup: listrealmflags
 
@@ -32,11 +28,11 @@ ms.locfileid: "71374974"
 ksetup /listrealmflags
 ```
 
-### <a name="parameters"></a>매개 변수
+#### <a name="parameters"></a>매개 변수
 
 없음
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 영역 플래그는 비 Windows 기반 Kerberos 영역에 대 한 추가 기능을 지정 합니다. Windows server 2003, Windows Server 2008 또는 Windows Server 2008 r 2를 실행 하는 컴퓨터는 windows Server 운영 체제를 실행 하는 도메인을 사용 하는 대신 Windows 기반이 아닌 Kerberos 서버를 사용 하 여 인증을 관리할 수 있습니다. 이러한 시스템은 Windows 도메인 대신 Kerberos 영역에 참여 합니다. 이 항목은 영역의 기능을 설정 합니다. 다음 표에서는 각에 대해 설명 합니다.
 
@@ -52,7 +48,7 @@ ksetup /listrealmflags
 
 영역 플래그는 **HKEY_LOCAL_MACHINE \system\currentcontrolset\control\lsa\kerberos\domains\\** 의 레지스트리에 저장 <em>됩니다.</em> 이 항목은 기본적으로 레지스트리에 없습니다. 사용할 수는 [Ksetup:addrealmflags](ksetup-addrealmflags.md) 레지스트리를 채우는 데는 명령입니다.
 
-## <a name="BKMK_Examples"></a>예와
+## <a name="examples"></a><a name=BKMK_Examples></a>예와
 
 이 컴퓨터에 알려진 영역 플래그를 나열 합니다.
 ```
@@ -66,10 +62,10 @@ ksetup /setrealmflags CORP.CONTOSO.COM sendaddress tcpsupported delete ncsupport
 ksetup /setrealmflags CORP.CONTOSO.COM 0xF
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
 -   [Ksetup:setrealmflags](ksetup-setrealmflags.md)
 -   [Ksetup:addrealmflags](ksetup-addrealmflags.md)
 -   [Ksetup:delrealmflags](ksetup-delrealmflags.md)
 -   [Ksetup](ksetup.md)
--   [명령줄 구문 키](command-line-syntax-key.md)
+-   - [명령줄 구문 키](command-line-syntax-key.md)

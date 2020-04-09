@@ -1,24 +1,20 @@
 ---
 title: nslookup view
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c1d9fff7-b567-451c-af80-6be8f604e193
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d59e7365ac4fbead527450ad78a76aad4165d0d9
-ms.sourcegitcommit: 9a6a692a7b2a93f52bb9e2de549753e81d758d28
+ms.openlocfilehash: c4a800562b461dc7f075b8371d7b1737e54b5329
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72591032"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80838136"
 ---
 # <a name="nslookup-view"></a>nslookup view
 
@@ -29,7 +25,7 @@ ms.locfileid: "72591032"
 ```  
 view <FileName>  
 ```  
-## <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
 
 |    매개 변수    |                                            설명                                            |
 |-----------------|---------------------------------------------------------------------------------------------------|
@@ -37,5 +33,5 @@ view <FileName>
 | {도움말 및 #124;?} |                       간단한 요약이 표시 되며 **nslookup** 하위 명령입니다.                       |
 
 ## <a name="additional-references"></a>추가 참조  
-[명령줄 구문 키](command-line-syntax-key.md)  
+- [명령줄 구문 키](command-line-syntax-key.md)  
 [nslookup ls](nslookup-ls.md)  

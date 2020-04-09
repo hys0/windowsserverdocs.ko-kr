@@ -9,12 +9,12 @@ ms.technology: storage
 audience: IT Pro
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: c4496cfec94823ae177bc6de4fac83dc977fb61d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 587ff48bd0af80667f9a336323641b87be808b1d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71376701"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80843936"
 ---
 # <a name="fsutil-volume"></a>Fsutil 볼륨
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
@@ -34,7 +34,7 @@ fsutil volume [list]
 fsutil volume [querycluster] <VolumePath> <Cluster> [<Cluster>] … …
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |-------------|---------------|
@@ -44,11 +44,11 @@ fsutil volume [querycluster] <VolumePath> <Cluster> [<Cluster>] … …
 |분리|볼륨을 분리합니다.|
 |filelayout|지정 된 파일에 대 한 NTFS 메타 데이터를 표시 합니다.|
 |fileid > \<|파일 id를 지정 합니다.|
-|목록|시스템의 모든 볼륨을 나열 합니다.|
-|querycluster|파일은 지정된 된 클러스터를 사용 하 여 찾습니다. 여러 클러스터를 지정할 수는 **querycluster** 매개 변수입니다.<br /><br />이 매개 변수가 적용 됩니다: Windows Server 2008 R2 및 Windows 7입니다.|
+|list|시스템의 모든 볼륨을 나열 합니다.|
+|querycluster|파일은 지정된 된 클러스터를 사용 하 여 찾습니다. 여러 클러스터를 지정할 수는 **querycluster** 매개 변수입니다.<p>이 매개 변수가 적용 됩니다: Windows Server 2008 R2 및 Windows 7입니다.|
 |\<클러스터 >|LCN (logical cluster number)을 지정 합니다.|
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name="BKMK_examples"></a>예와
 할당 된 클러스터 보고서를 표시 하려면 다음을 입력 합니다.
 
 ```
@@ -87,8 +87,8 @@ fsutil volume list
 fsutil volume querycluster C: 50 0x2000
 ```
 
-#### <a name="additional-references"></a>추가 참조
-[명령줄 구문 키](Command-Line-Syntax-Key.md)
+## <a name="additional-references"></a>추가 참조
+- [명령줄 구문 키](command-line-syntax-key.md)
 
 [Fsutil](Fsutil.md)
 

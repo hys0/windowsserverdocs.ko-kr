@@ -9,12 +9,12 @@ ms.technology: storage
 audience: IT Pro
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: 2b89d96535512f79c83c601be50327c24dc40787
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 175b5e17f186653d4fdbc7efb505637e915cfe38
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71376984"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80844326"
 ---
 # <a name="fsutil-file"></a>Fsutil 파일
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
@@ -42,7 +42,7 @@ fsutil file [setzerodata] offset=<offset> length=<length> <filename>
 
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |-------------|---------------|
@@ -51,9 +51,9 @@ fsutil file [setzerodata] offset=<offset> length=<length> <filename>
 |\<길이 >|파일의 유효한 데이터 길이 지정합니다.|
 |findbysid|디스크 할당량을 사용 하도록 설정 된 NTFS 볼륨에 지정된 된 사용자에 속하는 파일을 찾습니다.|
 |\<사용자 이름 >|사용자의 사용자 이름이 나 로그온 이름을 지정합니다.|
-|\<directory>|디렉터리의 전체 경로를 지정 합니다 (예: C:\users.).|
+|\<directory >|디렉터리의 전체 경로를 지정 합니다 (예: C:\users.).|
 |optimizemetadata|이렇게 하면 지정 된 파일에 대 한 메타 데이터의 즉시 압축이 수행 됩니다.|
-|/ A|최적화 전후에 파일 메타 데이터를 분석 합니다.|
+|/A|최적화 전후에 파일 메타 데이터를 분석 합니다.|
 |queryallocranges|NTFS 볼륨에 있는 파일에 할당 된 범위를 쿼리합니다. 파일을 스파스 영역에 있는지 여부를 결정 하는 데 유용 합니다.|
 |offset =\<offset >|0으로 설정 해야 하는 범위의 시작을 지정 합니다.|
 |길이 =\<길이 >|범위의 길이 (바이트)를 지정 합니다.|
@@ -61,9 +61,9 @@ fsutil file [setzerodata] offset=<offset> length=<length> <filename>
 |/R|<filename> 재분석 지점인 경우 대상 대신 엽니다.|
 |\<startingvcn >|쿼리할 첫 번째 VCN을 지정 합니다. 생략 하면 VCN 0에서 시작 합니다.|
 |\<numvcns >|쿼리할 VCNs의 수입니다. 생략 하거나 0 인 경우 EOF까지 쿼리 합니다.|
-|queryfileid|NTFS 볼륨에 있는 파일의 파일 ID를 쿼리합니다.<br /><br />이 매개 변수가 적용 됩니다: Windows Server 2008 R2 및 Windows 7입니다.|
+|queryfileid|NTFS 볼륨에 있는 파일의 파일 ID를 쿼리합니다.<p>이 매개 변수가 적용 됩니다: Windows Server 2008 R2 및 Windows 7입니다.|
 |볼륨 > \<|드라이브 이름 뒤에 콜론으로 볼륨을 지정 합니다.|
-|queryfilenamebyid|NTFS 볼륨에 지정 된 파일 ID에 대 한 임의 링크 이름을 표시합니다. 파일을 해당 파일을 가리키는 둘 이상의 링크 이름 수 없으므로 파일 링크를 사용 하는 파일 이름에 대 한 쿼리의 결과로 제공 될 보장 되지 않습니다.<br /><br />이 매개 변수가 적용 됩니다: Windows Server 2008 R2 및 Windows 7입니다.|
+|queryfilenamebyid|NTFS 볼륨에 지정 된 파일 ID에 대 한 임의 링크 이름을 표시합니다. 파일을 해당 파일을 가리키는 둘 이상의 링크 이름 수 없으므로 파일 링크를 사용 하는 파일 이름에 대 한 쿼리의 결과로 제공 될 보장 되지 않습니다.<p>이 매개 변수가 적용 됩니다: Windows Server 2008 R2 및 Windows 7입니다.|
 |fileid > \<|NTFS 볼륨에 파일의 ID를 지정합니다.|
 |queryoptimizemetadata|파일의 메타 데이터 상태를 쿼리 합니다.|
 |queryvaliddata|파일의 유효한 데이터 길이를 쿼리 합니다.|
@@ -75,7 +75,7 @@ fsutil file [setzerodata] offset=<offset> length=<length> <filename>
 |\<datalength >|파일의 길이 바이트 단위로 지정 합니다.|
 |setzerodata|파일의 범위 ( *오프셋* 및 *길이로*지정)를 0으로 설정 하 여 파일을 비웁니다. 스파스 파일의 파일을 사용 하는 경우 원본 할당 단위는 취소 됩니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 -   NTFS에는 파일 길이에 대 한 두 가지 중요 한 개념인 EOF (파일 끝) 표식과 올바른 데이터 길이 (VDL)가 있습니다. EOF 파일의 실제 길이 나타냅니다. VDL은 디스크에 유효한 데이터의 길이 식별합니다. VDL과 EOF 사이의 모든 읽기는 자동으로 다시 사용 요구 사항을 C2 개체를 보존 하려면 0을 반환 합니다.
 
@@ -87,7 +87,7 @@ fsutil file [setzerodata] offset=<offset> length=<length> <filename>
 
     -   성능에 문제가 있을 때 파일 크기를 최소화 합니다. 이 파일을 만들거나 확장할 때 파일을 0으로 채우는 데 걸리는 시간을 방지 합니다.
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name="BKMK_examples"></a>예와
 C 드라이브에 scottb 라는 사용자가 소유 하는 파일을 찾으려면 다음을 입력 합니다.
 
 ```
@@ -136,8 +136,8 @@ NTFS 볼륨에 파일의 범위 비우기에 0을 설정 하려면 다음을 입
 fsutil file setzerodata offset=100 length=150 c:\temp\sample.txt  
 ```
 
-#### <a name="additional-references"></a>추가 참조
-[명령줄 구문 키](Command-Line-Syntax-Key.md)
+## <a name="additional-references"></a>추가 참조
+- [명령줄 구문 키](command-line-syntax-key.md)
 
 [Fsutil](Fsutil.md)
 

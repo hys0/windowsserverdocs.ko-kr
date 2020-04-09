@@ -1,30 +1,26 @@
 ---
-title: mode
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+title: 모드
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b59b04f2-b41d-42df-b5be-19c3721445b1
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 00dabdbeb7f0665c99714d0a97c7d3c78b22e04e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 528277075f7448c86ca2d660c5e65c59098afbc0
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71373614"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80839436"
 ---
-# <a name="mode"></a>mode
+# <a name="mode"></a>모드
 
 
 
-시스템 상태를 표시 하 고, 시스템 설정을 변경 또는 포트 또는 장치를 다시 구성 합니다. 매개 변수 없이 사용 하는 경우 **모드** 콘솔 및 사용 가능한 COM 장치 제어할 수 있는 모든 특성을 표시 합니다.
+시스템 상태를 표시 하 고, 시스템 설정을 변경 또는 포트 또는 디바이스를 다시 구성 합니다. 매개 변수 없이 사용 하는 경우 **모드** 콘솔 및 사용 가능한 COM 장치 제어할 수 있는 모든 특성을 표시 합니다.
 
 사용할 수 있습니다 **모드** 다음 작업을 수행할-각 작업에서 다른 구문을 사용 합니다.
 -   [직렬 통신 포트를 구성 하려면](#BKMK_1)
@@ -34,7 +30,7 @@ ms.locfileid: "71373614"
 -   [명령 프롬프트 화면 버퍼의 크기를 변경 하려면](#BKMK_5)
 -   [키보드 입력 rate를 설정 하려면](#BKMK_6)
 
-## <a name="BKMK_1"></a>직렬 통신 포트를 구성 하려면
+## <a name="to-configure-a-serial-communications-port"></a><a name=BKMK_1></a>직렬 통신 포트를 구성 하려면
 
 ### <a name="syntax"></a>구문
 
@@ -42,7 +38,7 @@ ms.locfileid: "71373614"
 mode com<M>[:] [baud=<B>] [parity=<P>] [data=<D>] [stop=<S>] [to={on|off}] [xon={on|off}] [odsr={on|off}] [octs={on|off}] [dtr={on|off|hs}] [rts={on|off|hs|tg}] [idsr={on|off}]
 ```
 
-### <a name="parameters"></a>매개 변수
+#### <a name="parameters"></a>매개 변수
 
 |  매개 변수  |                                                                                                                                                                                     설명                                                                                                                                                                                     |
 |-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -51,16 +47,16 @@ mode com<M>[:] [baud=<B>] [parity=<P>] [data=<D>] [stop=<S>] [to={on|off}] [xon=
 | 패리티 =\<P > |                              시스템 전송 오류를 검사 패리티 비트를 사용 하는 방법을 지정 합니다. 다음 표에서는 *P*의 유효한 값을 보여 줍니다. 기본값은 **e**입니다. 일부 컴퓨터는 값을 지 원하는 **m** 및 **s**합니다.</br>-   **n** = 없음</br>-   **e** = 짝수</br>-   **o** = 홀수</br>-   **m** = 표시</br>-   **s** = 공간                              |
 |  data =\<D >  |                                                                                                    문자에서 데이터 비트의 수를 지정합니다. 유효한 값에 대 한 **d** 범위는 5-8입니다. 기본값은 7입니다. 일부 컴퓨터 5 및 6 값을 지원 합니다.                                                                                                     |
 |  stop =\<S >  |                                                                                  끝 문자를 정의 하는 정지 비트의 수를 지정 합니다. 1, 1.5 또는 2입니다. 전송 속도 110 인 경우 기본값은 2입니다. 그렇지 않은 경우 기본값은 1입니다. 일부 컴퓨터에서 값 1.5를 지원합니다.                                                                                   |
-|   to = {on    |                                                                                                                                                                                        해제                                                                                                                                                                                         |
-|   xon = {on   |                                                                                                                                                                                        해제                                                                                                                                                                                         |
-|  odsr = {on   |                                                                                                                                                                                        해제                                                                                                                                                                                         |
-|  octs = {on   |                                                                                                                                                                                        해제                                                                                                                                                                                         |
+|   to = {on    |                                                                                                                                                                                        off}                                                                                                                                                                                         |
+|   xon = {on   |                                                                                                                                                                                        off}                                                                                                                                                                                         |
+|  odsr = {on   |                                                                                                                                                                                        off}                                                                                                                                                                                         |
+|  octs = {on   |                                                                                                                                                                                        off}                                                                                                                                                                                         |
 |   dtr = {on   |                                                                                                                                                                                         끕니다                                                                                                                                                                                         |
 |   rts = {on   |                                                                                                                                                                                         끕니다                                                                                                                                                                                         |
-|  idsr = {on   |                                                                                                                                                                                        해제                                                                                                                                                                                         |
+|  idsr = {on   |                                                                                                                                                                                        off}                                                                                                                                                                                         |
 |     /?      |                                                                                                                                                                        명령 프롬프트에 도움말을 표시합니다.                                                                                                                                                                         |
 
-## <a name="BKMK_2"></a>모든 장치 또는 단일 장치의 상태를 표시 하려면
+## <a name="to-display-the-status-of-all-devices-or-of-a-single-device"></a><a name=BKMK_2></a>모든 장치 또는 단일 장치의 상태를 표시 하려면
 
 ### <a name="syntax"></a>구문
 
@@ -68,19 +64,19 @@ mode com<M>[:] [baud=<B>] [parity=<P>] [data=<D>] [stop=<S>] [to={on|off}] [xon=
 mode [<Device>] [/status]
 ```
 
-### <a name="parameters"></a>매개 변수
+#### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
-|\<장치 >|상태를 표시 하려는 장치의 이름을 지정 합니다.|
+|\<장치 >|상태를 표시 하려는 디바이스의 이름을 지정 합니다.|
 |/status|리디렉션된 모든 병렬 프린터의 상태를 요청 합니다. 로 간략하게 작성할 수는 **/status** 명령줄 옵션을 **/sta**합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 매개 변수 없이 사용 하는 경우 **모드** 시스템에 설치 된 모든 장치의 상태를 표시 합니다.
 
-## <a name="BKMK_3"></a>병렬 포트에서 직렬 통신 포트로 출력을 리디렉션하려면
+## <a name="to-redirect-output-from-a-parallel-port-to-a-serial-communications-port"></a><a name=BKMK_3></a>병렬 포트에서 직렬 통신 포트로 출력을 리디렉션하려면
 
 ### <a name="syntax"></a>구문
 
@@ -88,15 +84,15 @@ mode [<Device>] [/status]
 mode lpt<N>[:]=com<M>[:]
 ```
 
-### <a name="parameters"></a>매개 변수
+#### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
-|lpt\<N > [:]|필수 요소. 병렬 포트를 지정합니다. 유효한 값에 대 한 *N* 범위는 1-3입니다.|
-|com\<M > [:]|필수 요소. 직렬 포트를 지정합니다. 유효한 값에 대 한 *M* 범위는 1 ~ 4입니다.|
+|lpt\<N > [:]|필수입니다. 병렬 포트를 지정합니다. 유효한 값에 대 한 *N* 범위는 1-3입니다.|
+|com\<M > [:]|필수입니다. 직렬 포트를 지정합니다. 유효한 값에 대 한 *M* 범위는 1 ~ 4입니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 인쇄를 리디렉션할 Administrators 그룹의 구성원 이어야 합니다.
 
@@ -115,7 +111,7 @@ mode lpt1
 ```
 이 명령은 c o m 1에 p t 1에서 파일을 리디렉션할 수 없습니다.
 
-## <a name="BKMK_4"></a>콘솔에 대 한 코드 페이지 번호를 선택, 새로 고침 또는 표시 하려면
+## <a name="to-select-refresh-or-display-the-numbers-of-the-code-pages-for-the-console"></a><a name=BKMK_4></a>콘솔에 대 한 코드 페이지 번호를 선택, 새로 고침 또는 표시 하려면
 
 ### <a name="syntax"></a>구문
 
@@ -124,18 +120,18 @@ mode <Device> codepage select=<YYY>
 mode <Device> codepage [/status]
 ```
 
-### <a name="parameters"></a>매개 변수
+#### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
-|\<장치 >|필수 요소. 코드 페이지를 선택 하려는 장치를 지정 합니다. 장치에만 유효한 이름인 CON 합니다.|
-|코드 페이지 선택 =|필수 요소. 지정된 된 장치를 사용 하는 코드 페이지를 지정 합니다. **코드 페이지** 의 약어를 **cp** **sel**으로 **선택할** 수 있습니다.|
-|\<YYY >|필수 요소. 선택 하는 코드 페이지의 수를 지정 합니다. 다음 목록에 표시 된 각 코드 지원 되는 페이지와 국가/지역 또는 언어입니다.</br>437: United States</br>850: 다국어 (라틴어 I)</br>852: 슬라브어 (라틴어 II)</br>855: 키릴 자모 (러시아어)</br>857: 터키어</br>860: 포르투갈어</br>861: 아이슬란드어</br>863: 캐나다-프랑스어</br>865: 북유럽어</br>866: 러시아어</br>869: 현대 그리스어|
-|코드 페이지|필수 요소. 표시 된 코드의 숫자 페이지입니다 (있는 경우) 지정된 된 장치에 대해 선택한.|
-|/status|지정된 된 장치에 대해 선택한 현재 코드 페이지의 번호를 표시 합니다. 축약할 수 **/status** 에 **/sta**합니다. 지정 하는 여부 **/status**, **모드 코드 페이지** 의 지정된 된 장치에 대해 선택한 코드 페이지 번호를 표시 합니다.|
+|\<장치 >|필수입니다. 코드 페이지를 선택 하려는 디바이스를 지정 합니다. 디바이스에만 유효한 이름인 CON 합니다.|
+|코드 페이지 선택 =|필수입니다. 지정된 된 디바이스를 사용 하는 코드 페이지를 지정 합니다. **코드 페이지** 의 약어를 **cp** **sel**으로 **선택할** 수 있습니다.|
+|\<YYY >|필수입니다. 선택 하는 코드 페이지의 수를 지정 합니다. 다음 목록에 표시 된 각 코드 지원 되는 페이지와 국가/지역 또는 언어입니다.</br>437: United States</br>850: 다국어 (라틴어 I)</br>852: 슬라브어 (라틴어 II)</br>855: 키릴 자모 (러시아어)</br>857: 터키어</br>860: 포르투갈어</br>861: 아이슬란드어</br>863: 캐나다-프랑스어</br>865: 북유럽어</br>866: 러시아어</br>869: 현대 그리스어|
+|코드 페이지|필수입니다. 표시 된 코드의 숫자 페이지입니다 (있는 경우) 지정된 된 디바이스에 대해 선택한.|
+|/status|지정된 된 디바이스에 대해 선택한 현재 코드 페이지의 번호를 표시 합니다. 축약할 수 **/status** 에 **/sta**합니다. 지정 하는 여부 **/status**, **모드 코드 페이지** 의 지정된 된 장치에 대해 선택한 코드 페이지 번호를 표시 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="BKMK_5"></a>명령 프롬프트 화면 버퍼의 크기를 변경 하려면
+## <a name="to-change-the-size-of-the-command-prompt-screen-buffer"></a><a name=BKMK_5></a>명령 프롬프트 화면 버퍼의 크기를 변경 하려면
 
 ### <a name="syntax"></a>구문
 
@@ -143,16 +139,16 @@ mode <Device> codepage [/status]
 mode con[:] [cols=<C>] [lines=<N>]
 ```
 
-### <a name="parameters"></a>매개 변수
+#### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
-|con [:]|필수 요소. 명령 프롬프트 창에 변경 내용을 적용 된다는 것을 나타냅니다.|
+|con [:]|필수입니다. 명령 프롬프트 창에 변경 내용을 적용 된다는 것을 나타냅니다.|
 |cols =\<C >|명령 프롬프트 화면 버퍼에서 열 수를 지정합니다.|
 |줄 =\<N >|명령 프롬프트 화면 버퍼에서 줄의 수를 지정합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="BKMK_6"></a>키보드 입력 rate를 설정 하려면
+## <a name="to-set-the-keyboard-typematic-rate"></a><a name=BKMK_6></a>키보드 입력 rate를 설정 하려면
 
 ### <a name="syntax"></a>구문
 
@@ -160,16 +156,16 @@ mode con[:] [cols=<C>] [lines=<N>]
 mode con[:] [rate=<R> delay=<D>]
 ```
 
-### <a name="parameters"></a>매개 변수
+#### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
-|con [:]|필수 요소. 키보드를 참조 합니다.|
+|con [:]|필수입니다. 키보드를 참조 합니다.|
 |rate =\<R >|키를 누르고 있을 때 화면에 문자가 반복 되는 속도 지정 합니다.|
 |delay =\<D >|키를 눌러 문자 출력 되풀이 전에 키를 누른 후에 걸리는 시간을 지정 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 - 입력 속도 해당 문자에 대 한 키를 누르고 있을 때 문자 반복 하는 속도입니다. 입력 속도 두 가지 구성 요소, 속도 및 지연 합니다. 일부 키보드에는이 명령을 인식 하지 못합니다.
 - 사용 하 여 **속도 =** <em>R</em>
@@ -179,6 +175,6 @@ mode con[:] [rate=<R> delay=<D>]
 
   유효한 값에 대 한 *D* 는 1, 2, 3 및 4 (0.25, 나타내는 0.50, 0.75, 1 초)입니다. 기본값은 2입니다. 지연 시간을 설정 하는 경우 속도 설정 해야 합니다.
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

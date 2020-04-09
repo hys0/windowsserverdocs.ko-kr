@@ -5,13 +5,13 @@ ms.prod: windows-server
 ms.author: helohr
 ms.date: 11/01/2017
 ms.topic: article
-author: Heidilohr
-ms.openlocfilehash: 0a109d0bfc4fc09b5e8097059d68b728d17752a6
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+author: heidilohr
+ms.openlocfilehash: 13167dad848ac31827c42045360e45c76718207a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71383378"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80851596"
 ---
 # <a name="what-is-server-core-2008"></a>Server Core 2008 이란?
 >적용 대상: Windows Server 2008
@@ -43,14 +43,14 @@ Server Core 옵션은 Windows Server 2008 Standard, Enterprise 또는 Datacenter
 
 **그림 1-1** 설치할 Server Core 설치 옵션 선택
 
-그림 1-1에서 볼륨 라이선스 (또는 정품 미디어에 대 한 제품 키)는 두 번째 옵션 (Windows Server 2008 Enterprise의 전체 설치)과 다섯 번째 옵션 (Windows의 Server Core 설치) 중에서 선택할 수 있는 두 가지 설치 옵션을 제공 합니다. Server 2008 Enterprise)를 선택 합니다. 
+그림 1-1에서 볼륨 라이선스 (또는 정품 미디어를 위한 제품 키)는 두 번째 옵션 (Windows Server 2008 Enterprise의 전체 설치)과 다섯 번째 옵션 (Windows Server 2008 Enterprise의 Server Core 설치) 중에서 선택할 수 있는 두 가지 설치 옵션을 제공 합니다 .이 예제에서는 후자를 선택 합니다. 
 
-## <a name="full-vs-server-core"></a>완전 트랜잭션 내구성과 Server Core 
+## <a name="full-vs-server-core"></a>Full과 Server Core 비교 
 Microsoft Windows 플랫폼의 초반부터 Windows server는 기본적으로 모든 종류의 기능을 포함 하는 "모든" 서버 였습니다. 이러한 서버 중 일부는 실제로 네트워킹 환경에서 사용 하지 못할 수 있습니다. 예를 들어, 시스템에 Windows Server 2003를 설치한 경우에는이 서비스가 필요 하지 않더라도 RRAS (라우팅 및 원격 액세스 서비스)에 대 한 이진 파일이 서버에 설치 됩니다 (여전히 RRAS를 구성 하 고 사용할 수 있도록 설정 해야 함). Windows Server 2008에서는 서버에 특정 역할을 설치 하도록 선택한 경우에만 서버 역할에 필요한 이진 파일을 설치 하 여 이전 버전을 개선 합니다. 그러나 Windows Server 2008의 전체 설치 옵션은 종종 특정 사용 시나리오에 필요 하지 않은 많은 서비스 및 기타 구성 요소를 설치 합니다. 
 
 Microsoft에서 Windows Server 2008에 대 한 두 번째 설치 옵션인 Server Core를 만든 이유 때문에 일반적으로 사용 되는 특정 서버 역할의 지원에 필수적인 서비스 및 기타 기능을 제거 해야 합니다. 예를 들어 dns (Domain Name System) 서버에는 보안상의 이유로 DNS 서버에서 웹을 검색 하지 않으려는 경우 Windows Internet Explorer가 설치 되어 있지 않아도 됩니다. 및 dns 서버는 강력한 Dnscmd 명령을 사용 하 여 명령줄에서 또는 DNS MMC (Microsoft Management Console) 스냅인을 사용 하 여 원격으로 DNS의 거의 모든 측면을 관리할 수 있으므로 GUI (그래픽 사용자 인터페이스)가 필요 하지 않습니다.
 
-이러한 문제를 방지 하기 위해 Microsoft는 Active Directory Domain Services (AD DS), DNS, DHCP (Dynamic Host Configuration Protocol), 파일 및 인쇄 등의 핵심 네트워크 서비스를 실행 하는 데 반드시 필요한 것은 아니지만 Windows Server 2008에서 모든 항목을 제거 하기로 결정 했습니다. 다른 서버 역할은 거의 없습니다. 결과는 제한 된 수의 역할 및 기능만 지 원하는 서버를 만드는 데 사용할 수 있는 새 Server Core 설치 옵션입니다. 
+이러한 문제를 방지 하기 위해 Microsoft는 Active Directory Domain Services (AD DS), DNS, DHCP (Dynamic Host Configuration Protocol), 파일 및 인쇄, 몇 가지 다른 서버 역할과 같은 핵심 네트워크 서비스를 실행 하는 데 반드시 필요한 것은 아니지만 Windows Server 2008에서 모든 것을 제거 하기로 결정 했습니다. 결과는 제한 된 수의 역할 및 기능만 지 원하는 서버를 만드는 데 사용할 수 있는 새 Server Core 설치 옵션입니다. 
 
 ## <a name="the-server-core-gui"></a>Server Core GUI
 시스템에 Server Core를 설치 하 고 처음으로 로그온 하는 경우에는 약간의 문제가 있습니다. 그림 1-2에서는 처음 로그온 한 후의 Server Core 사용자 인터페이스를 보여 줍니다.
@@ -59,7 +59,7 @@ Microsoft에서 Windows Server 2008에 대 한 두 번째 설치 옵션인 Serve
 
 **그림 1-2** Server Core 사용자 인터페이스
 
-데스크톱이 없습니다. 즉, 시작 메뉴, 작업 표시줄 및 표시 하는 데 사용할 수 있는 다른 기능을 포함 하는 Windows 탐색기 셸이 없습니다. 명령 프롬프트만 있습니다. 즉, 명령을 한 번에 하나씩 입력 하거나, 느리거나 스크립트 및 배치 파일을 사용 하 여 Server Core 설치를 구성 하는 대부분의 작업을 수행 해야 합니다 .이를 통해 구성의 속도를 높이고 간소화 하는 데 도움이 될 수 있습니다. 작업을 자동화 하는 작업 Server Core의 무인 설치를 수행 하는 경우 응답 파일을 사용 하 여 일부 초기 구성 작업을 수행할 수도 있습니다. 
+데스크톱이 없습니다. 즉, 시작 메뉴, 작업 표시줄 및 표시 하는 데 사용할 수 있는 다른 기능을 포함 하는 Windows 탐색기 셸이 없습니다. 명령 프롬프트만 있습니다. 즉, 명령을 한 번에 하나씩 입력 하거나 스크립트 및 배치 파일을 사용 하 여 Server Core 설치를 구성 하는 대부분의 작업을 수행 해야 합니다 .이를 통해 구성 작업을 자동화 하 여 구성 작업을 신속 하 고 간소화 하는 데 도움이 될 수 있습니다. Server Core의 무인 설치를 수행 하는 경우 응답 파일을 사용 하 여 일부 초기 구성 작업을 수행할 수도 있습니다. 
 
 Netsh.exe, sqlservr.exe 및 Dnscmd와 같은 명령줄 도구를 사용 하는 전문가를 대상으로 하는 관리자의 경우, Server Core 설치를 구성 및 관리 하는 것이 편리 하 고 재미 있습니다. 그러나 전문가가 아닌 사용자의 경우에는 모두 손실 되지 않습니다. 여전히 표준 Windows Server 2008 MMC 도구를 사용 하 여 Server Core 설치를 관리할 수 있습니다. Windows Server 2008 또는 Windows Vista 서비스 팩 1의 전체 설치를 실행 하는 다른 시스템에만 사용 해야 합니다. 
 
@@ -75,7 +75,7 @@ Netsh.exe, sqlservr.exe 및 Dnscmd와 같은 명령줄 도구를 사용 하는 �
 | -------------   | -------------       | 
 | 명령 프롬프트 | %WINDIR%\System32\Cmd.exe |
 | Microsoft 지원 진단 도구 | %WINDIR%\System32\MSdt.exe |
-| Windows 메모장 | %WINDIR%\System32\Notepad.exe |
+| 메모장 | %WINDIR%\System32\Notepad.exe |
 | 레지스트리 편집기 | %WINDIR%\System32\Regedt32.exe |
 | 시스템 정보 | %WINDIR%\System32\MSinfo32.exe |
 | 작업 관리자 | %WINDIR%\System32\Taskmgr.exe |
@@ -86,7 +86,7 @@ Netsh.exe, sqlservr.exe 및 Dnscmd와 같은 명령줄 도구를 사용 하는 �
 * 모든 MMC 콘솔 
 * 국가 및 언어 옵션 (국제 .cpl) 및 날짜 및 시간 (Timedate .cpl)을 제외한 모든 제어판 유틸리티 
 * Internet Explorer 및 HTML 도움말을 비롯 한 모든 HTML(Hypertext Markup Language) (HTML) 렌더링 엔진 
-* Windows 메일 
+* Windows Mail 
 * Windows Media Player 
 * 그림판, 계산기 및 워드 패드와 같은 대부분의 액세서리
 
@@ -162,7 +162,7 @@ Server Core 설치에는 Windows Server 2008 전체 설치에서 사용할 수 �
 | 텔넷 클라이언트  | X | X  |
 | 텔넷 서버  | X   |  |
 | TFTP 클라이언트  | X   |  |
-| Windows 내부 데이터베이스  | X  |  |
+| Windows Internal Database  | X  |  |
 | Windows PowerShell  | X  |  |
 | Windows 제품 정품 인증 서비스  | X   |  |
 | Windows Server 백업 기능  | X  | X  |
@@ -178,7 +178,7 @@ Server Core 설치에는 Windows Server 2008 전체 설치에서 사용할 수 �
 Server Core에 대해 자세히 살펴보기, 전체 설치와 비교 하 여 Windows Server 2008의 Server Core 설치 아키텍처를 간략하게 살펴보겠습니다. 첫째, Server Core는 Windows Server 2008의 다른 버전이 아니라 시스템에 Windows Server 2008을 설치할 때 선택할 수 있는 설치 옵션 일 뿐입니다. 이것은 다음을 의미합니다.
 * Server Core 설치에 대 한 커널은 동일한 하드웨어 아키텍처 (x86 또는 x64) 및 edition의 전체 설치에 있는 것과 동일 합니다. 
 * Server Core 설치에 이진 파일이 있는 경우 동일한 하드웨어 아키텍처 (x86 또는 x64) 및 edition의 전체 설치에는 해당 특정 이진 파일의 동일한 버전이 있습니다 (뒷부분에서 설명 하는 두 가지 예외). 
-* 특정 설정 (예: 특정 서비스의 특정 방화벽 예외 또는 시작 유형)에 특정 기본 구성이 Server Core 설치에 있는 경우이 설정은 동일 하 게 전체 설치에 대해 동일한 방식으로 구성 됩니다. 하드웨어 아키텍처 (x86 또는 x64) 및 edition.
+* 특정 설정 (예: 특정 서비스의 특정 방화벽 예외 또는 시작 유형)에 Server Core 설치에 대 한 특정 기본 구성이 있는 경우 동일한 하드웨어 아키텍처 (x86 또는 x64) 및 edition의 전체 설치에서 해당 설정이 동일한 방식으로 구성 됩니다.
 
 그림 1-3에서는 Windows Server 2008의 전체 설치 및 Server Core 설치의 아키텍처에 대 한 간단한 보기를 보여 줍니다. 점선은 Server Core의 아키텍처를 나타내고 전체 다이어그램은 전체 설치의 아키텍처를 나타냅니다. 
 
@@ -200,7 +200,7 @@ Server Core 설치에서 드라이버 설치 프로세스는 두 가지 자격�
 
 여기에 표시 된 세 가지 장치 범주 각각에 대해 Server Core는 동일한 하드웨어 아키텍처에 대해 해당 하는 전체 설치에 있는 동일한 기본 제공 드라이버를 포함 합니다. 
 
-또한 PnP 하위 시스템이 새 장치용 드라이버를 자동으로 설치 하는 경우 자동으로 수행 되므로 풍선 팝업 알림이 표시 되지 않습니다. 왜 안 돼요? Server Core에는 GUI 없으므로 작업 표시줄은 없으므로 작업 표시줄에 알림 영역이 없습니다. 
+또한 PnP 하위 시스템이 새 장치용 드라이버를 자동으로 설치 하는 경우 자동으로 수행 되므로 풍선 팝업 알림이 표시 되지 않습니다. 그 이유는 무엇입니까? Server Core에는 GUI 없으므로 작업 표시줄은 없으므로 작업 표시줄에 알림 영역이 없습니다. 
 
 따라서 Server Core 설치에 인쇄 서비스 역할을 추가할 때 프린터를 설치 하려면 어떻게 해야 하나요? 서버에 프린터 드라이버를 수동으로 추가 하는 경우-Server Core에는 기본 인쇄 드라이버가 없습니다.
 
@@ -211,13 +211,13 @@ Server Core는 최소 설치 이므로 동일한 하드웨어 아키텍처 및 �
 
 **표 1-5** 기본적으로 Server Core에 설치 된 시스템 서비스
 
-| 서비스 이름  | Display name  | 시작 모드  | 계정  |
+| 서비스 이름  | Display name  | 시작 모드  | Account  |
 | ------------- | ------------- | ------------ | ------------ |
 | AeLookupSvc  | 응용 프로그램 환경  | 자동 | LocalSystem |
 | AppMgmt  | 응용 프로그램 관리  | 수동 | LocalSystem |
 | BFE | 기본 필터링 엔진  | 자동 | LocalService |
 | BITS | BITS(Background Intelligent Transfer Service)  | 자동 | LocalSystem |
-| 브라우저 | 컴퓨터 브라우저  | 수동 | LocalSystem |
+| 브라우저. | 컴퓨터 브라우저  | 수동 | LocalSystem |
 | CertPropSvc | 인증서 전파  | 수동 | LocalSystem |
 | COMSysApp  | COM+ 시스템 응용 프로그램  | 수동 | LocalSystem |
 | CryptSvc  | 암호화 서비스  | 자동 | 네트워크 서비스 |
@@ -235,12 +235,12 @@ Server Core는 최소 설치 이므로 동일한 하드웨어 아키텍처 및 �
 | iphlpsvc  | IP 도우미  | 자동 | LocalSystem |
 | KeyIso | CNG 키 격리  | 수동 | LocalSystem |
 | KtmRm  | DTC(Distributed Transaction Coordinator)용 KtmRm  | 자동 | 네트워크 서비스 |
-| LanmanServer  | 서버  | 자동 | LocalSystem |
+| LanmanServer  | Server  | 자동 | LocalSystem |
 | LanmanWorkstation  | Workstatione  | 자동 | LocalService |
-| lltdsvc  | Link-Layer Topology Discovery Mapper  | 수동 | LocalService |
+| lltdsvc  | 연결 계층 토폴로지 검색 맵 편집기  | 수동 | LocalService |
 | lmhosts  | TCP/IP NetBIOS 도우미  | 자동 | LocalService |
 | MpsSvc  | Windows 방화벽  | 자동 | LocalService |
-| MSDTC  | DTC(Microsoft Distributed Transaction Coordinator)  | 자동 | 네트워크 서비스 |
+| MSDTC  | DTC(Distributed Transaction Coordinator)  | 자동 | 네트워크 서비스 |
 | MSiSCSI  | Microsoft iSCSI 초기자 서비스  | 수동 | LocalSystem |
 | msiserver  | Windows Installer  | 수동 | LocalSystem |
 | napagent  | 네트워크 액세스 보호 에이전트  | 수동 | 네트워크 서비스 |
@@ -282,4 +282,4 @@ Server Core는 최소 설치 이므로 동일한 하드웨어 아키텍처 및 �
 | Winmgmt | Windows Management Instrumentation | 자동 | LocalSystem |
 | WinRM  | Windows 원격 관리(WS-Management) | 자동 | 네트워크 서비스 |
 | wmiApSrv  | WMI Performance Adapter  | 수동 | LocalSystem |
-| wuauserv | Windows 업데이트 | 자동 | LocalSystem |
+| wuauserv | Windows Update | 자동 | LocalSystem |

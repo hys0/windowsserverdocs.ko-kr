@@ -1,24 +1,20 @@
 ---
 title: Net 인쇄
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f59b2015-4698-415d-9a74-09566c466f40
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 241f9d74cb537924cf69c1e0bb5fd73a422c4b23
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: ad631788a59c24dcb92d180330de25a5be320154
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71373298"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80839056"
 ---
 # <a name="net-print"></a>Net 인쇄
 
@@ -33,17 +29,17 @@ ms.locfileid: "71373298"
 > Net print {\\<computerName>\<Sharename> | 
 > \\<computerName> <JobNumber> [/hold | /release | /delete]} [help]
 > ```
-> ## <a name="parameters"></a>매개 변수
+> ### <a name="parameters"></a>매개 변수
 > 
 > |               매개 변수               |                                                                                                                                                                                                                     설명                                                                                                                                                                                                                      |
 > |----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 > |    \\\\<computerName>\\<Sharename>     |                                                                                                                                                                            에 대 한 정보를 표시 하려면 컴퓨터와 인쇄 큐 이름을 사용 하 여 지정 합니다.                                                                                                                                                                             |
 > |           \\\\<computerName>           |                                                                                                                                 컨트롤에 인쇄 작업을 호스트 하는 컴퓨터 이름을 사용 하 여 지정 합니다. 컴퓨터를 지정 하지 않으면 로컬 컴퓨터 간주 됩니다. 필요는 <JobNumber> 매개 변수입니다.                                                                                                                                  |
 > |              <JobNumber>               |                                             제어 하려는 인쇄 작업의 수를 지정 합니다. 이 숫자는 인쇄 작업 전송 대상 인쇄 큐를 호스팅하는 컴퓨터에서 할당 됩니다. 컴퓨터가 숫자에 할당 된 인쇄 작업을 수 해당 컴퓨터에서 호스팅하는 모든 큐의 다른 인쇄 작업에 할당 되지 않은 합니다. \\\\<computerName> 매개 변수를 사용 하는 경우 필요 합니다.                                             |
-> | [/ 보류 & #124 /release & #124; /delete] | 인쇄 작업으로 수행할 동작을 지정 합니다.<br /><br />- **보관/** 매개 변수는 작업을 지연 다른 인쇄 작업을 놓을 때까지를 무시 하도록 허용 합니다.<br />- **/릴리스** 매개 변수 연기 된 인쇄 작업을 해제 합니다.<br />- **/Delete** 매개 변수는 인쇄 대기열에서 인쇄 작업을 제거 합니다.<br /><br />작업 번호를 지정 하지만 아무 작업도 지정 하지 않으면 인쇄 작업에 대 한 정보가 표시 됩니다. |
+> | [/ 보류 &#124;/release &#124; /delete] | 인쇄 작업으로 수행할 동작을 지정 합니다.<p>- **보관/** 매개 변수는 작업을 지연 다른 인쇄 작업을 놓을 때까지를 무시 하도록 허용 합니다.<br />- **/릴리스** 매개 변수 연기 된 인쇄 작업을 해제 합니다.<br />- **/Delete** 매개 변수는 인쇄 대기열에서 인쇄 작업을 제거 합니다.<p>작업 번호를 지정 하지만 아무 작업도 지정 하지 않으면 인쇄 작업에 대 한 정보가 표시 됩니다. |
 > |                  도움말                  |                                                                                                                                                                                                     에 대 한 도움말을 표시는 **인쇄 Net** 명령입니다.                                                                                                                                                                                                     |
 > 
-> ## <a name="remarks"></a>설명
+> ## <a name="remarks"></a>주의
 > - **Net print** \\\\<computerName> 공유 프린터 큐의 인쇄 작업 정보를 표시 합니다. 다음은 레이저 라는 공유 프린터에 대 한 큐에서 모든 인쇄 작업에 대 한 보고서의 예입니다.
 >   ```
 >   printers at \\PRODUCTION
@@ -66,7 +62,7 @@ ms.locfileid: "71373298"
 >   Job parameters
 >   additional info
 >   ```
->   ## <a name="BKMK_examples"></a>예와
+>   ## <a name="examples"></a><a name=BKMK_examples></a>예와
 >   Dotmatrix 인쇄 큐의 내용을 나열 하는 방법을 보여 주는이 예제는 \\\Production 컴퓨터:
 >   ```
 >   Net print \\Production\Dotmatrix 
@@ -83,6 +79,6 @@ ms.locfileid: "71373298"
 >   ```
 >   Net print \\Production 263 /release 
 >   ```
->   #### <a name="additional-references"></a>추가 참조
->   명령줄 [구문 키](command-line-syntax-key.md)
+>   ## <a name="additional-references"></a>추가 참조
+>   - 명령줄 [구문 키](command-line-syntax-key.md)
 >   [인쇄 명령 참조](print-command-reference.md)

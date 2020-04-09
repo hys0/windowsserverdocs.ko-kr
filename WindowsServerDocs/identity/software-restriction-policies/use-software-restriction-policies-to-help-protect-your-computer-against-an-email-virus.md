@@ -1,24 +1,20 @@
 ---
 title: 소프트웨어 제한 정책을 사용하여 전자 메일 바이러스로부터 컴퓨터 보호
 description: Windows Server 보안
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-software-restriction-policies
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 02f23979-f832-4e46-bdea-21fd77db35b2
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: 4c691255683eb37eecdbeaa55c094b7ce5c4e26d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 680d0435d77164e101f045b439be6ccb6601dfef
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71357654"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855736"
 ---
 # <a name="use-software-restriction-policies-to-help-protect-your-computer-against-an-email-virus"></a>소프트웨어 제한 정책을 사용하여 전자 메일 바이러스로부터 컴퓨터 보호
 
@@ -27,7 +23,7 @@ ms.locfileid: "71357654"
 이 항목에서는 SRP (소프트웨어 제한 정책)를 사용 하 여 응용 프로그램 제어 정책을 설정 하는 방법에 대 한 정보를 제공 하 여 Windows Server 2008 및 Windows Vista부터 전자 메일 바이러스 로부터 컴퓨터를 보호 합니다.
 
 ## <a name="introduction"></a>소개
-SRP(소프트웨어 제한 정책)는 도메인의 컴퓨터에서 실행 중인 소프트웨어 프로그램을 식별하고, 실행할 해당 프로그램의 기능을 제어하는 그룹 정책 기반 기능입니다. 소프트웨어 제한 정책을 사용하면 명확하게 식별된 응용 프로그램만 실행할 수 있도록 고도로 제한된 컴퓨터 구성을 만들 수 있습니다. 이러한 기능은 Microsoft Active Directory Domain Services 및 그룹 정책와 통합 되어 있지만 독립 실행형 컴퓨터 에서도 구성할 수 있습니다. SRP에 대 한 시작 지점은 [소프트웨어 제한 정책](software-restriction-policies.md)을 참조 하세요.
+SRP(소프트웨어 제한 정책)는 도메인의 컴퓨터에서 실행 중인 소프트웨어 프로그램을 식별하고, 실행할 해당 프로그램의 기능을 제어하는 그룹 정책 기반 기능입니다. 소프트웨어 제한 정책을 사용하면 명확하게 식별된 애플리케이션만 실행할 수 있도록 고도로 제한된 컴퓨터 구성을 만들 수 있습니다. 이러한 기능은 Microsoft Active Directory Domain Services 및 그룹 정책와 통합 되어 있지만 독립 실행형 컴퓨터 에서도 구성할 수 있습니다. SRP에 대 한 시작 지점은 [소프트웨어 제한 정책](software-restriction-policies.md)을 참조 하세요.
 
 Windows Server 2008 R2 및 Windows 7 부터는 응용 프로그램 제어 전략의 일부에 대 한 SRP를 사용 하거나 사용 하지 않고 Windows AppLocker를 사용할 수 있습니다. 
 

@@ -9,12 +9,12 @@ ms.technology: storage
 audience: IT Pro
 ms.topic: article
 ms.date: 08/21/2018
-ms.openlocfilehash: 0f338c80dca0ed88ca206aea5aeb415bc191e03a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 717c287995be2ab56bd49f2f24d46001f77e0e68
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71376675"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80843906"
 ---
 # <a name="fsutil"></a>Fsutil
 
@@ -32,14 +32,14 @@ ms.locfileid: "71376675"
 >```
 > 설치 되 면 컴퓨터를 다시 시작 하 라는 메시지가 표시 됩니다. 컴퓨터를 다시 시작한 후 관리자 권한으로 **Fsutil** 을 실행할 수 있습니다.
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |하위 명령 |설명|
 |---|---|
 |[Fsutil 8dot3name](fsutil-8dot3name.md) | 예를 들어 시스템에서 짧은 이름 동작에 대 한 설정을 쿼리하거나 변경 하 여 8.3 문자 길이 파일 이름을 생성 합니다. 디렉터리 내의 모든 파일의 짧은 이름 제거 디렉터리를 검색 하 고 짧은 이름 디렉터리의 파일에서 제거 된 경우 영향을 받을 수 있는 레지스트리 키를 식별 합니다.|
 |[Fsutil 동작](fsutil-behavior.md) |볼륨 동작을 쿼리하거나 설정 합니다.|
 |[Fsutil 더티](fsutil-dirty.md)| 볼륨의 더티 비트 설정 된 볼륨의 더티 비트를 설정 하는지 여부를 쿼리 합니다. 볼륨의 더티 비트가 설정 됩니다, **않은** 자동으로 오류에 대 한 볼륨을 다음에 컴퓨터를 다시 확인 합니다.|
-|[Fsutil 파일](fsutil-file.md)|사용자 이름 (디스크 할당량을 사용 하도록 설정 된 경우)을 사용 하 여 파일을 찾고, 파일에 할당 된 범위를 쿼리하고, 파일의 짧은 이름을 설정 하 고, 파일의 유효한 데이터 길이를 설정 하 고, 파일에 대해 0 데이터를 설정 하 고, 지정 된 크기의 새 파일을 만들고, 이름이 지정 된 경우 파일 ID를 찾습니다. 또는 지정 된 파일 ID에 대 한 파일 링크 이름을 찾습니다.|
+|[Fsutil 파일](fsutil-file.md)|사용자 이름 (디스크 할당량을 사용 하는 경우)을 사용 하 여 파일을 찾고, 파일에 할당 된 범위를 쿼리하고, 파일의 짧은 이름을 설정 하 고, 파일의 유효한 데이터 길이를 설정 하 고, 파일의 유효한 데이터 길이를 설정 하거나, 지정 된 크기의 새 파일을 만들거나, 지정 된 파일 ID에 대 한 파일 링크 이름을 찾습니다.|
 |[Fsutil fsinfo](fsutil-fsinfo.md)|모든 드라이브를 나열 하 고 드라이브 종류, 볼륨 정보, NTFS 특정 볼륨 정보 또는 파일 시스템 통계를 쿼리 합니다.|
 |[Fsutil hardlink create](fsutil-hardlink.md)|파일에 대 한 하드 링크를 나열 하거나 하드 링크를 만듭니다 (파일에 대 한 디렉터리 항목). 모든 파일을 하나 이상의 하드 링크 간주할 수 있습니다. NTFS 볼륨에서 각 파일에는 여러 하드 링크가 있을 수 있으므로 단일 파일이 여러 디렉터리 (또는 이름이 다른 같은 디렉터리에도 표시 될 수 있음)에 표시 될 수 있습니다. 동일한 파일을 참조 하는 모든 링크가 하므로 프로그램 링크 연 파일을 수정 합니다. 에 대 한 모든 링크를 삭제 한 후에 파일을 파일 시스템에서 삭제 됩니다. 하드 링크를 만든 후 프로그램에서 다른 파일 이름 처럼 사용할 수 있습니다.|
 |[Fsutil objectid](fsutil-objectid.md)|파일 및 디렉터리와 같은 개체를 추적 하는 Windows 운영 체제에서 사용 되는 개체 식별자를 관리 합니다.|
@@ -54,5 +54,5 @@ ms.locfileid: "71376675"
 |[Fsutil 볼륨](fsutil-volume.md)|볼륨을 관리합니다. 볼륨을 쿼리 하는 디스크에서 사용 가능한 공간을 분리 하거나 지정된 된 클러스터를 사용 하는 파일을 찾습니다.|
 |[Fsutil wim](fsutil-wim.md)|WIM 지원 파일을 검색 하 고 관리 하는 함수를 제공 합니다.|
 
-## <a name="see-also"></a>참조
-[명령줄 구문 키](Command-Line-Syntax-Key.md)
+## <a name="see-also"></a>참고 항목
+- [명령줄 구문 키](command-line-syntax-key.md)

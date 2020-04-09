@@ -1,24 +1,20 @@
 ---
 title: ipconfig
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 15071c2c-4815-4893-93b2-ab30232e312e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4bfe3476dd90016291881ca8cee2b66283772bce
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 1c93b75d6518746df7ef936c7059bd03fcf96ab6
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71375381"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80842076"
 ---
 # <a name="ipconfig"></a>ipconfig
 
@@ -32,7 +28,7 @@ ms.locfileid: "71375381"
 ipconfig [/allcompartments] [/all] [/renew [<Adapter>]] [/release [<Adapter>]] [/renew6[<Adapter>]] [/release6 [<Adapter>]] [/flushdns] [/displaydns] [/registerdns] [/showclassid <Adapter>] [/setclassid <Adapter> [<ClassID>]]
 ```
 
-### <a name="parameters"></a>매개 변수
+#### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
@@ -47,12 +43,12 @@ ipconfig [/allcompartments] [/all] [/renew [<Adapter>]] [/release [<Adapter>]] [
 |/renew6 [\<어댑터 >]|경우 DHCPv6 구성 (어댑터를 지정 하지 않으면) 하는 경우 모든 어댑터에 대해 또는 특정 어댑터에 대 한 갱신 된 *어댑터* 매개 변수가 포함 됩니다. 이 매개 변수는 자동으로 IPv6 주소를 가져오도록 구성 된 어댑터를 사용 하는 컴퓨터에만 사용할 수 있습니다. 어댑터 이름을 지정 하려면 사용할 때 표시 되는 어댑터 이름을 입력 **ipconfig** 매개 변수 없이 합니다.|
 |/setclassid \<어댑터 > [<ClassID>]|지정된 된 어댑터에 대 한 DHCP 클래스 ID를 구성합니다. 모든 어댑터에 대 한 DHCP 클래스 ID를 설정 하려면 *어댑터*대신 별표 **&#42;** () 와일드 카드 문자를 사용 합니다. 이 매개 변수는 자동으로 IP 주소를 가져오도록 구성 된 어댑터를 사용 하는 컴퓨터에만 사용할 수 있습니다. DHCP 클래스 ID를 지정 하지 않으면 현재 클래스 ID 제거 됩니다.|
 |/showclassid \<어댑터 >|지정된 된 어댑터에 대 한 DHCP 클래스 ID를 표시합니다. 모든 어댑터에 대 한 DHCP 클래스 ID를 확인 하려면 *어댑터*대신 별표 **&#42;** () 와일드 카드 문자를 사용 합니다. 이 매개 변수는 자동으로 IP 주소를 가져오도록 구성 된 어댑터를 사용 하는 컴퓨터에만 사용할 수 있습니다.|
-|/?|명령 프롬프트에 도움말을 표시합니다.|
+|/?|명령 프롬프트에서 도움말을 표시합니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 - 이 명령은 IP 주소를 자동으로 가져오도록 구성 된 컴퓨터에서 가장 유용 합니다. 그러면 사용자가 DHCP, 자동 개인 IP 주소 지정 APIPA (), 또는 대체 구성으로 구성 된 TCP/IP 구성 값을 확인할 수 있습니다.
-- 이름에 대해 제공 하는 경우 *어댑터* 어댑터 이름에 따옴표를 사용 하 여 공백을 포함 (예: **"** <em>어댑터 이름</em> **"** ).
+- *어댑터* 에 대해 제공 하는 이름에 공백이 포함 된 경우 어댑터 이름을 따옴표로 묶어야 합니다 (예: * * * *<em>어댑터 이름</em>* * * *).
 - 어댑터 이름에 대해 **ipconfig** 별표의 사용을 지원 (\*) 와일드 카드 문자를 이름이 지정된 된 문자열 또는 이름이 지정된 된 문자열을 포함 하는 어댑터로 시작 하는 어댑터를 사용 합니다. 예를 들어 **로컬\*** 는 로컬 문자열로 시작 하는 모든 어댑터와 일치 하 고 **\*Con\*** 은 con 문자열이 포함 된 모든 어댑터와 일치 합니다.
 
 ## <a name="examples"></a>예
@@ -67,7 +63,7 @@ ipconfig /all
 ```
 로컬 영역 연결 어댑터만 대 한 DHCP 할당 된 IP 주소 구성을 갱신 하려면 다음을 입력 합니다.
 ```
-ipconfig /renew "Local Area Connection"
+ipconfig /renew Local Area Connection
 ```
 DNS 이름 확인 문제를 해결 하는 경우 DNS 확인자 캐시를 플러시하려면를 입력 합니다.
 ```
@@ -79,9 +75,9 @@ ipconfig /showclassid Local*
 ```
 테스트를 로컬 영역 연결 어댑터에 대 한 DHCP 클래스 ID를 설정 하려면 다음을 입력 합니다.
 ```
-ipconfig /setclassid "Local Area Connection" TEST
+ipconfig /setclassid Local Area Connection TEST
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
--   [명령줄 구문 키](command-line-syntax-key.md)
+-   - [명령줄 구문 키](command-line-syntax-key.md)

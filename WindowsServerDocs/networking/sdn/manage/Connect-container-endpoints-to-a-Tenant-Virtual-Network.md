@@ -1,24 +1,20 @@
 ---
 title: 테넌트 가상 네트워크에 컨테이너 엔드포인트 연결
 description: 이 항목에서는 SDN을 통해 만든 기존 테 넌 트 가상 네트워크에 컨테이너 끝점을 연결 하는 방법을 보여 줍니다. Docker 용 Windows l2bridge (및 선택적으로 l2tunnel) 네트워크 드라이버를 사용 하 여 테 넌 트 VM에 컨테이너 네트워크를 만들 수 있습니다.
-manager: ravirao
-ms.custom: na
+manager: grcusanz
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-sdn
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f7af1eb6-d035-4f74-a25b-d4b7e4ea9329
-ms.author: lizross
-author: jmesser81
+ms.author: anpaul
+author: AnirbanPaul
 ms.date: 08/24/2018
-ms.openlocfilehash: 5673cb6f808f37fb7737e22cf93c3984073e4f48
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 2b8927ec260b4f5a42aa59a25db1b18896ce91ef
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80309833"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854536"
 ---
 # <a name="connect-container-endpoints-to-a-tenant-virtual-network"></a>테넌트 가상 네트워크에 컨테이너 엔드포인트 연결
 

@@ -1,24 +1,20 @@
 ---
 title: openfiles
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c3be561d-a11f-4bf1-9835-8e4e96fe98ec
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 38b1d27b86551c6d4cd9e6b1ad87bfc0e8dd221d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f684acc48fbb279ced8ce1dfb3a930ff15f3bf13
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71372504"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80837826"
 ---
 # <a name="openfiles"></a>openfiles
 
@@ -31,7 +27,7 @@ ms.locfileid: "71372504"
 -   [openfiles/query](#BKMK_query)
 -   [openfiles/local](#BKMK_local)
 
-## <a name="BKMK_disconnect"></a>openfiles/disconnect
+## <a name="openfiles-disconnect"></a><a name=BKMK_disconnect></a>openfiles/disconnect
 
 관리자가 파일 및 폴더를 공유 폴더를 통해 원격으로 열린 연결을 끊을 수 있습니다.
 
@@ -41,7 +37,7 @@ ms.locfileid: "71372504"
 openfiles /disconnect [/s <System> [/u [<Domain>\]<UserName> [/p [<Password>]]]] {[/id <OpenFileID>] | [/a <AccessedBy>] | [/o {read | write | read/write}]} [/op <OpenFile>]
 ```
 
-### <a name="parameters"></a>매개 변수
+#### <a name="parameters"></a>매개 변수
 
 |            매개 변수             |                                                                                                                                 설명                                                                                                                                  |
 |----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -60,7 +56,7 @@ ID 26843578 파일을 사용 하 여 열려 있는 모든 파일 연결을 끊�
 ```
 openfiles /disconnect /id 26843578
 ```
-모든 열려 있는 파일 및 디렉터리 "hiropln" 사용자가 액세스 연결을 끊으려면 다음을 입력 합니다.
+사용자 hiropln에서 액세스 하는 열려 있는 모든 파일 및 디렉터리의 연결을 끊으려면 다음을 입력 합니다.
 ```
 openfiles /disconnect /a hiropln
 ```
@@ -68,16 +64,16 @@ openfiles /disconnect /a hiropln
 ```
 openfiles /disconnect /o read/write
 ```
-파일에 액세스 하는 사용자에 관계 없이 열린 파일 이름 "C:\TestShare\"를 사용 하 여 디렉터리의 연결을 끊으려면 다음을 입력 합니다.
+열린 파일 이름 C:\TestShare\,를 사용 하 여 디렉터리와의 연결을 끊으려면 다음을 입력 합니다.
 ```
-openfiles /disconnect /a * /op "c:\testshare\"
+openfiles /disconnect /a * /op c:\testshare\
 ```
-가 ID에 관계 없이 "srvmain" 원격 컴퓨터에서 "hiropln" 사용자가 액세스 하는 모든 열린 파일을 분리 하려면 다음을 입력 합니다.
+사용자 hiropln가 액세스 하는 원격 컴퓨터 srvmain에서 열려 있는 모든 파일의 연결을 끊으려면 다음을 입력 합니다.
 ```
 openfiles /disconnect /s srvmain /u maindom\hiropln /id *
 ```
 
-## <a name="BKMK_query"></a>openfiles/query
+## <a name="openfiles-query"></a><a name=BKMK_query></a>openfiles/query
 
 쿼리하고 열려 있는 모든 파일을 표시 합니다.
 
@@ -87,7 +83,7 @@ openfiles /disconnect /s srvmain /u maindom\hiropln /id *
 openfiles /query [/s <System> [/u [<Domain>\]<UserName> [/p [<Password>]]]] [/fo {TABLE | LIST | CSV}] [/nh] [/v]
 ```
 
-### <a name="parameters"></a>매개 변수
+#### <a name="parameters"></a>매개 변수
 
 |          매개 변수           |                                                                                                                                 설명                                                                                                                                  |
 |------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -113,7 +109,7 @@ openfiles /query /fo table /nh
 ```
 openfiles /query /fo list /v
 ```
-쿼리하고 "hiropln" "maindom" 도메인에서 사용자에 대 한 자격 증명을 사용 하 여 "srvmain" 원격 시스템에서 열려 있는 모든 파일을 표시 하려면 다음을 입력 합니다.
+Maindom 도메인에서 사용자 hiropln에 대 한 자격 증명을 사용 하 여 원격 시스템 srvmain에서 열려 있는 모든 파일을 쿼리하고 표시 하려면 다음을 입력 합니다.
 ```
 openfiles /query /s srvmain /u maindom\hiropln /p p@ssW23
 ```
@@ -121,7 +117,7 @@ openfiles /query /s srvmain /u maindom\hiropln /p p@ssW23
 > [!NOTE]
 > 이 예제에서는 암호를 명령줄에 제공 합니다. 암호 표시를 방지 하려면 생략 된 **/p** 옵션입니다. 화면에 표시 되지 암호를 묻는 메시지가 나타납니다.
 
-## <a name="BKMK_local"></a>openfiles/local
+## <a name="openfiles-local"></a><a name=BKMK_local></a>openfiles/local
 
 시스템 개체 목록을 유지 관리 하려면 전역 플래그를 사용 하지 않도록 설정 하거나 사용 합니다. 매개 변수 없이 사용 하는 경우 **openfiles /local** 개체 목록을 유지 관리 하려면 전역 플래그의 현재 상태를 표시 합니다.
 
@@ -131,14 +127,14 @@ openfiles /query /s srvmain /u maindom\hiropln /p p@ssW23
 openfiles /local [on | off]
 ```
 
-### <a name="parameters"></a>매개 변수
+#### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
 |[on \| 꺼짐]|사용 하거나 시스템 로컬 파일 핸들을 추적 하는 개체 목록을 유지 관리 전역 플래그를 사용 하지 않도록 설정 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 -   개체 목록을 유지 관리 하려면 전역 플래그를 사용 하도록 설정 하면 시스템 느려질 수 있습니다.
 -   변경 내용을 사용 하 여는 **에** 또는 **오프** 시스템을 다시 시작 될 때까지 옵션 내용이 적용 되지 않습니다.
@@ -167,6 +163,6 @@ SUCCESS: The system global flag 'maintain objects list' is enabled.
 openfiles /local off
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

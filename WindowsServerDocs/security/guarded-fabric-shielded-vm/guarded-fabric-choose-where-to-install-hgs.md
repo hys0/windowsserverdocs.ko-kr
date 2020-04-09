@@ -1,22 +1,22 @@
 ---
 title: 새 포리스트 또는 기존 요새 포리스트에 HGS를 설치할지 여부를 선택 합니다.
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 28c7eceefa4747a35d1b989df4a2c5e43a8d6a42
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 52376a4e193b8021dc58214003e9b7579b096a79
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386796"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856886"
 ---
 # <a name="choose-whether-to-install-hgs-in-its-own-dedicated-forest-or-in-an-existing-bastion-forest"></a>자체 전용 포리스트 또는 기존 요새 포리스트에 HGS를 설치할지 여부를 선택 합니다.
 
->적용 대상: Windows server 2019, Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server 2019, Windows Server (반기 채널), Windows Server 2016
 
 
 해당 관리자는 보호 된 Vm을 제어 하는 키에 액세스할 수 있으므로 HGS의 Active Directory 포리스트는 중요 합니다. 기본 설치에서는 HGS 전용의 새 포리스트를 설정 하 고 다른 종속성을 구성 합니다. 환경이 자체 포함 되 고 생성 시 보안이 유지 되는 것으로 알려져 있으므로이 옵션을 선택 하는 것이 좋습니다. 

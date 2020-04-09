@@ -1,28 +1,24 @@
 ---
 title: logman 추적 만들기
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1b4dfecd-6f56-4c51-b622-c2054b4aabd7
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 39e54cc10827a473bc19304c91dd6cd7afbf008c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 0b415bba125c9ae85f1bba9d5580c28c5c7af9b5
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71374532"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80840856"
 ---
 # <a name="logman-create-trace"></a>logman 추적 만들기
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 이벤트 추적 데이터 수집기를 만듭니다.  
 
@@ -30,7 +26,7 @@ ms.locfileid: "71374532"
 ```  
 logman create trace <[-n] <name>> [options]  
 ```  
-## <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
 
 |                         매개 변수                          |                                                                                                                                                                                                                                                                                                                                설명                                                                                                                                                                                                                                                                                                                                |
 |------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -40,7 +36,7 @@ logman create trace <[-n] <name>> [options]
 |                            -ets                            |                                                                                                                                                                                                                                                                                               이벤트 추적 세션 명령을 저장 하거나 예약 하지 않고 직접 보냅니다.                                                                                                                                                                                                                                                                                                |
 |                        [-n] <name>                         |                                                                                                                                                                                                                                                                                                                        대상 개체의 이름입니다.                                                                                                                                                                                                                                                                                                                         |
 |      -f < bin &#124; bincirc &#124; csv 및 &#124; tsv &#124; sql >      |                                                                                                                                                                                                                                                                                                             데이터 수집기에 대 한 로그 형식을 지정합니다.                                                                                                                                                                                                                                                                                                              |
-|                  -[-u < 사용자 [password] >                   |                                                                                                                                                                                                                                                  사용자 계정으로 실행을 지정합니다. 암호에 대해 \*을 입력 하면 암호를 묻는 메시지가 생성 됩니다. 암호 프롬프트에서 입력할 때 암호 표시 되지 않습니다.                                                                                                                                                                                                                                                  |
+|                  -[-u < 사용자 [password] >                   |                                                                                                                                                                                                                                                  사용자 계정으로 실행을 지정합니다. 암호에 대 한 \*를 입력 하면 암호를 묻는 메시지가 생성 됩니다. 암호 프롬프트에서 입력할 때 암호 표시 되지 않습니다.                                                                                                                                                                                                                                                  |
 |         -m < [시작] [stop] [[시작] [stop] [...]] >         |                                                                                                                                                                                                                                                                                                 예약 된 시작 시간 또는 종료 시간 대신 수동 시작 또는 중지로 변경 합니다.                                                                                                                                                                                                                                                                                                  |
 |                     -rf < [[hh:] mm:] ss >                     |                                                                                                                                                                                                                                                                                                         지정 된 기간에 대 한 데이터 수집기를 실행 합니다.                                                                                                                                                                                                                                                                                                          |
 |             -b < M/d/yyyy h:mm: ss [AM&#124;PM] >              |                                                                                                                                                                                                                                                                                                               지정된 된 시간에 데이터 수집을 시작 합니다.                                                                                                                                                                                                                                                                                                                |
@@ -63,14 +59,14 @@ logman create trace <[-n] <name>> [options]
 |                           -[-] ul                           |                                                                                                                                                                                                                                                                                                                 사용자 모드에서 이벤트 추적 세션을 실행 합니다.                                                                                                                                                                                                                                                                                                                 |
 |                        -bs <value>                         |                                                                                                                                                                                                                                                                                                           이벤트 추적 세션 버퍼 크기 (kb)를 지정 합니다.                                                                                                                                                                                                                                                                                                            |
 |                       -nb <min max>                        |                                                                                                                                                                                                                                                                                                           이벤트 추적 세션 버퍼의 수를 지정합니다.                                                                                                                                                                                                                                                                                                            |
-| -< globalsequence &#124;localsequence &#124; pagedmemory > 모드 | 이벤트 추적 세션으로 거 모드를 지정합니다.<br /><br />**Globalsequence** 이벤트 추적 프로그램 받는 모든 이벤트는 추적에 관계 없이 세션 이벤트를 수신 하는 시퀀스 번호를 추가 하도록 지정 합니다.<br /><br />**Localsequence** 추가 하도록 지정 된 이벤트는 특정 추적 세션에서 수신 된 이벤트에 대 한 시퀀스 번호입니다. 경우는 **localsequence** 옵션을 사용 하는 경우 중복 시퀀스 번호가 모든 세션에 걸쳐 있을 수 있지만 각 추적 세션 내에서 설치 됩니다.<br /><br />**Pagedmemory** 이벤트 추적 프로그램의 기본 메모리 비페이징 풀 보다는 페이징된 메모리 버퍼 할당에 대 한 사용을 지정 합니다. |
+| -< globalsequence &#124;localsequence &#124; pagedmemory > 모드 | 이벤트 추적 세션으로 거 모드를 지정합니다.<p>**Globalsequence** 이벤트 추적 프로그램 받는 모든 이벤트는 추적에 관계 없이 세션 이벤트를 수신 하는 시퀀스 번호를 추가 하도록 지정 합니다.<p>**Localsequence** 추가 하도록 지정 된 이벤트는 특정 추적 세션에서 수신 된 이벤트에 대 한 시퀀스 번호입니다. 경우는 **localsequence** 옵션을 사용 하는 경우 중복 시퀀스 번호가 모든 세션에 걸쳐 있을 수 있지만 각 추적 세션 내에서 설치 됩니다.<p>**Pagedmemory** 이벤트 추적 프로그램의 기본 메모리 비페이징 풀 보다는 페이징된 메모리 버퍼 할당에 대 한 사용을 지정 합니다. |
 
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
 [-] 나열 되는 위치는 추가 된-옵션을 부정 합니다.  
-## <a name="BKMK_examples"></a>예와  
+## <a name="examples"></a><a name=BKMK_examples></a>예와  
 다음 예제에서는 이벤트 추적 데이터 수집기의 크기 보다 작은 16 비트 및 256 개 이하의 버퍼 없음, 각 버퍼 64 kb를 사용 하 여 trace_log 라는 만들고 위치 c:\logfile에 대 한 결과 출력 합니다.  
 ```  
 logman create trace trace_log -nb 16 256 -bs 64 -o c:\logfile  
 ```  
-#### <a name="additional-references"></a>추가 참조  
+## <a name="additional-references"></a>추가 참조  
 [logman](logman.md)  

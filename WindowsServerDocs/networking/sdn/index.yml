@@ -8,8 +8,8 @@ metadata:
   text: SDN(소프트웨어 정의 네트워킹)을 사용하면 데이터 센터 네트워킹을 동적으로 관리하여 워크로드 및 애플리케이션 요구 사항을 충족시킬 수 있습니다. 네트워크 정책은 새 워크로드를 배포하거나 가상 또는 실제 네트워크에서 워크로드를 이동하는 경우에도 규모에 따라 일관되게 구현할 수 있습니다.
   keywords: 'Windows Server, Windows Server 2016 소프트웨어 정의 네트워킹, SDN'
   ms.localizationpriority: medium
-  author: eross-msft
-  ms.author: lizross
+  author: AnirbanPaul
+  ms.author: anpaul
   ms.date: 09/04/2018
   ms.topic: article
   ms.devlang: na

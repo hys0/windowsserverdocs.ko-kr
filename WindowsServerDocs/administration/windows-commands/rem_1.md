@@ -1,24 +1,20 @@
 ---
 title: rem
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7245aedb-ba6f-49bb-9f77-848c4853c68f
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 56534f75baf514d1c1760edfd41f6f94ab4ae1ab
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 78c35c94bedb7fa204cbb074871ec2581183cbf0
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71371604"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80836096"
 ---
 # <a name="rem"></a>rem
 
@@ -32,7 +28,7 @@ ms.locfileid: "71371604"
 rem
 ```
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
 이 예제 스크립트에서는 **rem** 스크립트 용도 대 한 설명을 제공 하는 데 사용 됩니다.
 ```
@@ -50,7 +46,7 @@ create partition logical
 assign f:
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)
 

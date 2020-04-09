@@ -1,24 +1,20 @@
 ---
 title: netcfg
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e2daaab7-12db-4e36-b70c-db8906d084f7 vhorne
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bfbe8cd757f78bfa3e808a9126af7d1698579885
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: 4895928ffdd5d923d370f82e699d69f42c0f81a5
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79320007"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80838936"
 ---
 # <a name="netcfg"></a>netcfg
 
@@ -29,7 +25,7 @@ Windows 사전 설치 환경 (WinPE) 워크스테이션을 배포 하는 데 사
 ```
 netcfg [/v] [/e] [/winpe] [/l ] /c /i
 ```
-### <a name="parameters"></a>매개 변수
+#### <a name="parameters"></a>매개 변수
 |매개 변수|설명|
 |-------|--------|
 |/v|**자세한 정보** 표시 모드에서 실행|
@@ -38,11 +34,11 @@ netcfg [/v] [/e] [/winpe] [/l ] /c /i
 |/l|INF의 **위치** 를 제공 합니다.|
 |/c|설치할 구성 요소의 **클래스** 를 제공 합니다. 프로토콜, 서비스 또는 클라이언트|
 |/i|구성 요소 **ID** 를 제공 합니다.|
-|/s|**표시할**구성 요소의 형식을 제공 합니다.<br /><br />\ta 어댑터, n = = net 구성 요소|
+|/s|**표시할**구성 요소의 형식을 제공 합니다.<p>\ta 어댑터, n = = net 구성 요소|
 |/b|경로 이름을 포함 하는 문자열이 뒤에 오는 경우 **바인딩 경로**를 표시 합니다.|
 |/?|명령 프롬프트에서 **도움말** 을 표시 합니다.|
 
-## <a name="BKMK_Examples"></a>예와
+## <a name="examples"></a><a name=BKMK_Examples></a>예와
 
 프로토콜을 설치 하려면 *예제* c:\oemdir\example.inf를 사용 하 여:
 ```
@@ -73,4 +69,4 @@ netcfg /s n
 netcfg /b ms_tcpip
 ```
 ## <a name="additional-references"></a>추가 참조
--   [명령줄 구문 키](command-line-syntax-key.md)
+-   - [명령줄 구문 키](command-line-syntax-key.md)

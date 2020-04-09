@@ -2,22 +2,18 @@
 title: BranchCache 네트워크 셸 및 Windows PowerShell 명령
 description: 이 항목에서는 Windows Server 2016의 BranchCache 용 네트워크 셸 및 Windows PowerShell 명령 참조 리소스에 대 한 링크를 제공
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-bc
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a0726752-0a78-472b-9667-2f91636c1b3b
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 6d32f0f9c9dc11847ed1f0d1715149185e04bcd5
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 83826e07e19a799c76072b6fc519b3bae6290261
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80318532"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855786"
 ---
 # <a name="branchcache-network-shell-and-windows-powershell-commands"></a>BranchCache 네트워크 셸 및 Windows PowerShell 명령
 

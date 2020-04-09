@@ -1,24 +1,20 @@
 ---
 title: freedisk
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 91c15166-5baa-4b80-9e0c-4cd815d00530
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8e417a8f9768706fe391f705adde37c62ceaa818
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5d652aa89c689a97bf2ecc67383bc2fd464a3054
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71377031"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80844446"
 ---
 # <a name="freedisk"></a>freedisk
 
@@ -30,7 +26,7 @@ ms.locfileid: "71377031"
 ```
 freedisk [/s <computer> [/u [<Domain>\]<User> [/p [<Password>]]]] [/d <Drive>] [<Value>]
 ```
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |       매개 변수       |                                                                                         설명                                                                                          |
 |-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -40,11 +36,11 @@ freedisk [/s <computer> [/u [<Domain>\]<User> [/p [<Password>]]]] [/d <Drive>] [
 |      /d <Drive>       |                              사용 가능한 공간의 가용성을 확인 하려면 원하는 드라이브를 지정 합니다. 지정 해야 <Drive>원격 컴퓨터에 대 한 합니다.                               |
 |        <Value>        |                                     사용 가능한 디스크 공간의 특정 크기를 확인. 지정할 수 있습니다. <Value>바이트, KB, MB, GB, TB, PB, EB, ZB 또는 YB입니다.                                      |
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 - 사용 하는 **/s**, **/u**, 및 **/p** 명령줄 옵션을 사용 하는 경우에 사용할 수 **/s**합니다. 사용자 암호를 제공 하려면 **/p** 를 **/u**와 함께 사용 해야 합니다.
 - 무인 설치의 경우 설치를 계속 하기 전에 설치 배치 파일에서 **freedisk** 를 사용 하 여 사용 가능한 공간 크기를 확인할 수 있습니다.
 - 사용 하는 경우 **freedisk** 배치 파일에서 반환 된 **0** 충분 한 공간이 및 **1** 충분 한 공간이 없는 경우.
-  ## <a name="BKMK_examples"></a>예와
+  ## <a name="examples"></a><a name=BKMK_examples></a>예와
   C: 드라이브에 사용 가능한 최소한 50 MB의 여유 공간이 있는지를 확인 하려면 다음을 입력 합니다.
   ```
   freedisk 50mb 
@@ -54,4 +50,4 @@ freedisk [/s <computer> [/u [<Domain>\]<User> [/p [<Password>]]]] [/d <Drive>] [
   INFO: The specified 52,428,800 byte(s) of free space is available on current drive.
   ```
   ## <a name="additional-references"></a>추가 참조
-  [명령줄 구문 키](command-line-syntax-key.md)
+  - [명령줄 구문 키](command-line-syntax-key.md)

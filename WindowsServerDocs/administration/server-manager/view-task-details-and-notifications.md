@@ -1,28 +1,24 @@
 ---
 title: 작업 세부 정보 및 알림 보기
 description: 서버 관리자
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-server-manager
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 95117407-2dd3-4f9a-841f-4331be3544c3
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a3dcbac95e60fce75316f8a4427aef54bdfad15b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 0047a9f2d4b6b66cec85b2746b1975af2ced3316
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71383024"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80851456"
 ---
 # <a name="view-task-details-and-notifications"></a>작업 세부 정보 및 알림 보기
 
->적용 대상: Windows Server 2016
+>적용 대상: Windows Server 2016
 
 서버 관리자에서 Windows Server 2012 R2 또는 Windows Server 2012에서 역할 및 기능을 추가 하는 등의 관리 작업을 수행할 때 서비스, 서버 관리자 콘솔에 표시 되는 데이터 새로 고침 또는 서버의 사용자 지정 그룹을 만드는 시작 알림이 표시 됩니다에 **알림을** 서버 관리자 콘솔 헤더의 영역입니다. 알림 및 작업 **세부 정보** 대화 상자 (플래그 아이콘을 클릭 하 여 **알림** 메뉴에서 열 수 있음), 사용자 작업이 나 요청 상태 표시, 작업 실패 여부 표시, 작업 실패에 대 한 자세한 오류 메시지를 가리켜 문제를 해결 하는 데 도움을 줄 수 있습니다.
 
@@ -50,8 +46,8 @@ ms.locfileid: "71383024"
 ## <a name="viewing-and-troubleshooting-tasks-by-using-task-details"></a>작업 세부 정보를 사용 하 여 작업 보기 및 문제 해결
 **알림** 메뉴 하단의 작업 **세부 정보** 명령은 작업 **세부 정보** 대화 상자를 엽니다 .이 대화 상자에서는 작업 이벤트 (시작, 중지, 경고, 성공 또는 실패)에 대 한 전체 설명을 제공 합니다. **이벤트**, **서비스**및 **모범 사례 분석기** 타일과 같은 서버 관리자의 다른 목록 컨트롤과 같이 **작업 세부 정보** 대화 상자에 표시 되는 작업에 대해 실행할 쿼리를 필터링 하 고 만들 수 있습니다. 목록 컨트롤에서 쿼리를 필터링 하 고 만드는 방법에 대 한 자세한 내용은 [서버 관리자 타일에서 데이터 필터링, 정렬 및 쿼리](filter-sort-and-query-data-in-server-manager-tiles.md)를 참조 하세요.) 위쪽 창에서 **알림 메뉴에 표시 된 알림을 검토** 하 고 동일한 작업에 대해 생성 된 알림 수를 확인할 수 있습니다. 위쪽 창에서 알림을 선택 하면 아래쪽 창에 알림에 대 한 자세한 정보가 표시 됩니다.
 
-하단 창은 실패한 작업과 관련하여 문제를 해결할 때 특히 유용합니다. 서버 풀의 구성원 인 서버에 대 한 데이터에 연결할 수 없거나이 데이터를 가져올 수 없는 서버 관리자 경우이 창의 항목에는 기본 WinRM (Windows 원격 관리), 네트워킹 또는 보안 문제와 관련 한 전체 텍스트를 비롯 한 자세한 메시지가 포함 되어 있는 경우가 많습니다. 서버 관리자 대상 서버와의 통신을 방지 합니다.
+하단 창은 실패한 작업과 관련하여 문제를 해결할 때 특히 유용합니다. 서버 관리자 서버 풀의 구성원 인 서버에 대 한 데이터에 연결할 수 없거나이 데이터를 가져올 수 없는 경우이 창의 항목에는 대상 서버와의 통신을 서버 관리자 방해 하는 기본 WinRM (Windows 원격 관리), 네트워킹 또는 보안 문제의 전체 텍스트를 비롯 한 자세한 메시지가 포함 되어 있는 경우가 많습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 [서버 관리자 타일의 데이터 필터링, 정렬 및 쿼리](filter-sort-and-query-data-in-server-manager-tiles.md)
 [서버 관리자 문제 해결 가이드](https://social.technet.microsoft.com/wiki/contents/articles/13443.windows-server-2012-server-manager-troubleshooting-guide-part-i-overview.aspx)

@@ -1,24 +1,20 @@
 ---
 title: Sc 쿼리
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ac365f89-4b20-4de6-a582-b204c5e7d0eb
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4d2f3f603ad173b5ab90bc56a9a4e589c0fe9d8a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 38d83fa07e9f85f3a5a4b86388bbed41fcf326d1
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71384337"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80835286"
 ---
 # <a name="sc-query"></a>Sc 쿼리
 
@@ -34,7 +30,7 @@ ms.locfileid: "71384337"
 sc [<ServerName>] query [<ServiceName>] [type= {driver | service | all}] [type= {own | share | interact | kernel | filesys | rec | adapt}] [state= {active | inactive | all}] [bufsize= <BufferSize>] [ri= <ResumeIndex>] [group= <GroupName>]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |       매개 변수        |                                                                                                                          설명                                                                                                                          |
 |------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -42,13 +38,13 @@ sc [<ServerName>] query [<ServiceName>] [type= {driver | service | all}] [type= 
 |     \<ServiceName >     |                                      반환 된 서비스 이름을 지정는 **getkeyname** 작업 합니다. 이 **쿼리** 매개 변수는 다른와 함께에서 사용 하지 **쿼리** 매개 변수 (이외의 *ServerName*).                                      |
 |     type = {driver      |                                                                                                                            서비스                                                                                                                            |
 |       유형 = {소유       |                                                                                                                             공유                                                                                                                             |
-|     상태 = {활성     |                                                                                                                           라                                                                                                                            |
+|     상태 = {활성     |                                                                                                                           inactive                                                                                                                            |
 | bufsize = \<BufferSize > |                     크기 (바이트) 열거 버퍼를 지정합니다. 기본 버퍼 크기는 1024 바이트입니다. 1, 024 바이트를 초과 하는 쿼리에서 결과 표시할 때 열거 버퍼의 크기를 늘려야 합니다.                      |
 |   ri = \<ResumeIndex >   | 열거를 시작 하거나 다시 인덱스 번호를 지정 합니다. 기본값은 **0** (영)입니다. 이 매개 변수를 사용 하 여 함께에서 **bufsize =** 버퍼의 기본 표시할 수 있는 보다 자세한 정보는 쿼리에 의해 반환 될 때 매개 변수입니다. |
-|  group = \<GroupName >   |                                                                             서비스 그룹을 열거할 수를 지정 합니다. 기본적으로 모든 그룹 열거 (**그룹 = ""** ).                                                                              |
+|  group = \<GroupName >   |                                                                             서비스 그룹을 열거할 수를 지정 합니다. 기본적으로 모든 그룹이 열거 됩니다 (* * group = * *).                                                                              |
 |           /?           |                                                                                                             명령 프롬프트에 도움말을 표시합니다.                                                                                                              |
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 - 매개 변수 및 값 사이 공백 없이 (즉, **유형 = 자체**, 이 아니라 **유형 = 자체**), 작업이 실패 합니다.
 - **쿼리** 서비스에 대 한 다음 정보를 표시 하는 작업: WIN32_EXIT_B, SERVICE_EXIT_B, 검사점 및 WAIT_HINT (뿐만 아니라 상태는 사용할 수 없는), 상태 SERVICE_NAME (서비스의 레지스트리 하위 키 이름)을 입력 합니다.
@@ -62,7 +58,7 @@ sc [<ServerName>] query [<ServiceName>] [type= {driver | service | all}] [type= 
   sc query bufsize= 1822 ri= 79
   ```
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
 만 활성화 된 서비스에 대 한 정보를 표시 하려면 다음 명령 중 하나를 입력 합니다.
 ```
@@ -98,6 +94,6 @@ sc query type= driver
 sc query type= driver group= ndis
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)
