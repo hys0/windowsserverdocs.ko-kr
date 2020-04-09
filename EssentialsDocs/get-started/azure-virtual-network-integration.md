@@ -1,23 +1,19 @@
 ---
 title: Azure Virtual network 통합
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d7d38505-cff5-4f15-9fd5-ae6dba15ce88
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 92c8241d861e72d5f9f409a334e6edbeed5eae4c
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: d79530b2c4bfb71b23fa984731d624f30e9a3ef6
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80310572"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80815216"
 ---
 # <a name="azure-virtual-network-integration"></a>Azure Virtual network 통합
 
@@ -69,7 +65,7 @@ Azure 가상 네트워크의 구성이 완료 되 면 상태가 연결 됨으로
 
 -   **Azure VNET 통합 사용 안 함** Azure VNET의 연결을 끊고 Windows Server Essentials 대시보드에서 통합을 제거 합니다. Azure vnet을 삭제 하지 않습니다. 나중에 Azure VNET을 대시보드와 다시 통합 하려는 경우에도 Azure에서 설정이 유지 됩니다.
 
--   **AZURE VNET 에 대해 자세히 알아보세요** [https://azure.microsoft.com/services/virtual-network/](https://azure.microsoft.com/services/virtual-network/).
+-   [https://azure.microsoft.com/services/virtual-network/](https://azure.microsoft.com/services/virtual-network/)**AZURE VNET 에 대해 자세히 알아보세요**.
 
 <a name="see-also"></a>참고 항목
 --------
