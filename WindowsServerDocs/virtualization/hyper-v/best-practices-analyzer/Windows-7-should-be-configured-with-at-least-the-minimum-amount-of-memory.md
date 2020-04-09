@@ -2,20 +2,19 @@
 title: Windows 7 해야 적어도 최소 메모리 양을 사용 하 여 구성
 description: 이 모범 사례 분석기 규칙에서 보고 한 문제를 해결 하는 지침을 제공 합니다. "
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 1b81ec0b-ceca-4fba-83ea-90d5f1d9bda8
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: fee0fb772ff0f3c2344ed3ef4ef2b9786480ff8e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9f29ff11b601bf3fe841e2634be6096e59d78cd5
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71393229"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854976"
 ---
 # <a name="windows-7-should-be-configured-with-at-least-the-minimum-amount-of-memory"></a>Windows 7 해야 적어도 최소 메모리 양을 사용 하 여 구성
 
@@ -23,16 +22,16 @@ ms.locfileid: "71393229"
 
 모범 사례 및 검사에 대한 자세한 내용은 [모범 사례 분석기](https://go.microsoft.com/fwlink/?LinkId=122786)를 참조하세요.  
   
-|속성|설명|  
+|속성|세부 정보|  
 |-|-|  
 |**운영 체제**|Windows Server 2016|  
 |**제품/기능**|Hyper-V|  
-|**Severity**|Error|  
-|**범주**|Configuration|  
+|**등급**|오류|  
+|**범주**|구성|  
 
 다음 섹션에서는 기울임꼴이이 문제에 대 한 모범 사례 분석기 도구에 표시 되는 UI 텍스트를 나타냅니다.
 
-## <a name="issue"></a>문제점  
+## <a name="issue"></a>문제  
   
 *Windows 7을 실행 하는 가상 머신은 512 RAM의 최소 크기 보다 더 작은 수준으로 구성 됩니다.*  
   
@@ -42,13 +41,13 @@ ms.locfileid: "71393229"
 ```  
 <list of virtual machine names>  
 ```  
-## <a name="resolution"></a>해결 방법  
+## <a name="resolution"></a>해상도  
   
 *Hyper-v 관리자를 사용 하 여이 가상 컴퓨터에 할당 된 메모리를 512 이상으로 늘립니다.*  
   
 ### <a name="to-increase-the-memory-using-hyper-v-manager"></a>Hyper-v 관리자를 사용 하 여 메모리를 늘리려면  
   
-1.  Hyper-V 관리자를 엽니다. 클릭 **시작**, 가리킨 **관리 도구**, 를 클릭 하 고 **Hyper-v 관리자**합니다.  
+1.  Hyper-V 관리자를 엽니다. **시작**을 클릭하고 **관리 도구**를 가리킨 다음 **Hyper-V 관리자**를 클릭합니다.  
   
 2.  결과 창에서 아래 **가상 컴퓨터**, 구성 하려는 가상 컴퓨터를 선택 합니다. 으로 가상 컴퓨터의 상태를 표시 해야 **오프**합니다. 그렇지 않은 경우 가상 컴퓨터를 마우스 오른쪽 단추로 클릭 하 고 클릭 한 다음 **종료**합니다.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "71393229"
 Set-VMMemory <MyVM> -StartupBytes 512MB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [설정-VMMemory](https://technet.microsoft.com/library/hh848572.aspx)  
   
 

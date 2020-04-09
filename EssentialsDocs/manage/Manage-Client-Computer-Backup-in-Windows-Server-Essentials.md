@@ -1,23 +1,19 @@
 ---
 title: Windows Server Essentials에서 클라이언트 컴퓨터 백업 관리
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1b4776e8-9504-4b98-ae80-11da797d9819
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 30c99c67644cad359d13fe351fe406b837819840
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: ae59fb050b41cef866a8f0e97d8d07d28b54ca52
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80311324"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852826"
 ---
 # <a name="manage-client-computer-backup-in-windows-server-essentials"></a>Windows Server Essentials에서 클라이언트 컴퓨터 백업 관리
 
@@ -150,7 +146,7 @@ ms.locfileid: "80311324"
   
 3.  **클라이언트 컴퓨터 백업 설정 및 도구**의 **컴퓨터 백업** 탭에서 요구 사항에 맞게 시작 및 종료 시간을 변경할 수 있습니다.  
   
-4.  **적용**을 클릭한 다음 **확인**을 클릭합니다.  
+4.  **적용**, **확인**을 차례로 클릭합니다.  
   
 ##  <a name="change-the-computer-backup-retention-policy"></a><a name="BKMK_5"></a>컴퓨터 백업 보존 정책 변경  
  모든 컴퓨터의 일별 백업은 시간이 지나면서 서버에 누적됩니다. 이러한 백업 관리를 도와주기 위한 Windows Server Essentials를 사용하여 컴퓨터 백업의 데이터베이스를 관리할 수 있습니다. 모든 컴퓨터에 대해 유지할 백업 수를 구성할 수 있습니다.  
@@ -210,7 +206,7 @@ ms.locfileid: "80311324"
     > [!NOTE]
     >  기본 설정으로 다시 설정하면 사용자 지정된 일정 및 보존 정책 설정이 제거되므로 설정을 적어 두는 것이 좋습니다.  
   
-4.  **적용**을 클릭한 다음 **확인**을 클릭합니다.  
+4.  **적용**, **확인**을 차례로 클릭합니다.  
   
 ##  <a name="use-repair-and-recovery-tools"></a><a name="BKMK_7"></a>복구 및 복구 도구 사용  
  **백업 복구:** 컴퓨터 백업 데이터베이스가 어떤 이유로 손상되거나 사용할 수 없게 되면 백업 데이터베이스 복구 마법사를 사용하여 데이터베이스 복구를 시도할 수 있습니다. 마법사에서는 백업 파일을 분석하여 복구할 수 있는 문제가 있는지 확인합니다. 그런 다음 발견된 문제를 모두 수정하려고 합니다.  

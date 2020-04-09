@@ -1,30 +1,27 @@
 ---
-title: 사용 안 함 명령을 사용 하 여
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+title: 사용 안 함
+description: 사용 하지 않도록 설정 하는 Windows 명령 항목 Windows 배포 서비스에 대 한 모든 서비스를 비활성화 합니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 08d1b9ea-1e25-486a-b7df-ad26c53b4e77
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 52e1bdf48d682c06356cd2cc52cb8ca3f65a89f4
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: ffb63db8a865f9e4368c180e86724120823d097e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71363553"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80831656"
 ---
-# <a name="using-the-disable-command"></a>사용 안 함 명령을 사용 하 여
+# <a name="disable"></a>사용 안 함
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Windows 배포 서비스에 대 한 모든 서비스를 사용 하지 않도록 설정 합니다.
+
 ## <a name="subcommands"></a>하위 명령
 |하위 명령|설명|
 |-------|--------|

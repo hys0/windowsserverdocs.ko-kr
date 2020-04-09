@@ -4,15 +4,15 @@ description: Windows Server 16의 웹 서버에 대한 성능 튜닝 권장 사�
 ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: landing-page
-ms.author: DavSo; Ericam; YaShi
+ms.author: davso; ericam; yashi
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 9587eb5215d2920a0146e8a697c6f36c50f19f27
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: ec36d87957e5bbe897597e330e766c3193cd30d0
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71370047"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80851696"
 ---
 # <a name="performance-tuning-web-servers"></a>웹 서버 성능 튜닝
 

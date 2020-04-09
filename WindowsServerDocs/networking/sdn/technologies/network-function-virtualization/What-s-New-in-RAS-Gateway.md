@@ -1,23 +1,19 @@
 ---
 title: RAS 게이트웨이의 새로운 기능
 description: 다중 테 넌 트, Windows Server 2016에서 프로토콜 BGP (Border Gateway) 가능 라우터는 소프트웨어 기반 RAS 게이트웨이의 새 기능에 알아보려면이 항목을 사용할 수 있습니다.
-manager: brianlic
-ms.custom: na
+manager: grcusanz
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-sdn
-ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 709cb192-313a-47b5-954e-eb5f6fee51a7
-ms.author: lizross
-author: eross-msft
-ms.openlocfilehash: b65f4aa2d10b1bdf6c0d212a111a169bad23591a
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.author: anpaul
+author: AnirbanPaul
+ms.openlocfilehash: 40d553ad5f41c68e8135c3d2c56ac8571d738e95
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80312881"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859586"
 ---
 # <a name="whats-new-in-ras-gateway"></a>RAS 게이트웨이의 새로운 기능
 
@@ -52,7 +48,7 @@ Windows Server 2016에서 서로 다른 유형의 게이트웨이 풀을 만들 
   
 -   터널 종류 (IKEv2 VPN, l 3 VPN GRE VPN)  
   
--   용  
+-   용량  
   
 -   중복 수준 (테 넌 트에 대 한 청구 계획에 따라 안정성)  
   

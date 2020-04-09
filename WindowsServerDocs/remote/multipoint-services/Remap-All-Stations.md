@@ -1,24 +1,20 @@
 ---
 title: 모든 스테이션 다시 매핑
 description: MultiPoint 서비스에서 스테이션을 다시 매핑하는 방법에 대해 알아봅니다.
-ms.custom: na
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5460bced-9a3b-4660-9d20-3b14df509dfc
 author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: 406431fc66012c7607b8b7e921bba6ca825d7aad
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5e69522c317845477e71d728d33bdcab26ac6a51
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71389481"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853926"
 ---
 # <a name="remap-all-stations"></a>모든 스테이션 다시 매핑
 스테이션을 다시 매핑하면 키보드와 마우스를 모니터에 연결할 수 있습니다. 모든 스테이션을 다시 매핑하도록 이름 및 자동 로그온 정보 등의 원래 설정은 삭제 됩니다. 다시 매핑하는 동안 모든 로컬 사용자 스테이션이 일시 중단됩니다.  

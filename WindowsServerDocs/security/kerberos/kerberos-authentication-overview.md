@@ -1,24 +1,20 @@
 ---
 title: Kerberos Authentication Overview
 description: Windows Server 보안
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-kerberos
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 646c6309-e865-4be2-b415-44dd125af5c2
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: 33712dc8502035bd9e47e1d2bdd4583eb8347dec
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6b5ec9bfa5c17a9ee9a5ad15af183d25bd533d7e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386310"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856326"
 ---
 # <a name="kerberos-authentication-overview"></a>Kerberos Authentication Overview
 
@@ -26,12 +22,12 @@ ms.locfileid: "71386310"
 
 Kerberos는 사용자나 호스트의 ID를 확인하는 데 사용되는 인증 프로토콜입니다. 이 항목에는 Windows Server 2012 및 Windows 8의 Kerberos 인증에 대 한 정보가 포함 되어 있습니다.
 
-## <a name="BKMK_OVER"></a>기능 설명
+## <a name="feature-description"></a><a name="BKMK_OVER"></a>기능 설명
 Windows Server 운영 체제는 공용 키 인증, 권한 부여 데이터 전송 및 위임을 위한 Kerberos 버전 5 인증 프로토콜 및 확장을 구현합니다. Kerberos 인증 클라이언트는 SSP\)\(보안 지원 공급자로 구현 되며, SSPI\)\(보안 지원 공급자 인터페이스를 통해 액세스할 수 있습니다. 초기 사용자 인증은 아키텍처의 Winlogon 단일 기호\-와 통합 됩니다.
 
 Kerberos 키 배포 센터 \(KDC\)는 도메인 컨트롤러에서 실행 되는 다른 Windows Server 보안 서비스와 통합 됩니다. KDC는 도메인의 Active Directory Domain Services 데이터베이스를 보안 계정 데이터베이스로 사용 합니다. Active Directory Domain Services는 도메인 또는 포리스트 내의 기본 Kerberos 구현에 필요합니다.
 
-## <a name="kerb_tr_Kerb_Benefits"></a>실용적인 응용 프로그램
+## <a name="practical-applications"></a><a name="kerb_tr_Kerb_Benefits"></a>실용적인 응용 프로그램
 도메인\-기반 인증에 Kerberos를 사용 하 여 얻을 수 있는 이점은 다음과 같습니다.
 
 -   **위임 된 인증.**
@@ -48,7 +44,7 @@ Kerberos 키 배포 센터 \(KDC\)는 도메인 컨트롤러에서 실행 되는
 
 -   **서버에 대 한 보다 효율적인 인증.**
 
-    Kerberos 이전의 NTLM 인증에서는 모든 클라이언트 컴퓨터나 서비스를 인증하기 위해 응용 프로그램 서버가 도메인 컨트롤러에 연결해야 했습니다. Kerberos 프로토콜을 사용 하면 갱신 가능한 세션 티켓이 인증을 통해\-전달 됩니다. 권한 특성 인증서 \(PAC\)\)의 유효성을 검사 해야 하는 경우가 아니면 서버는 도메인 컨트롤러 \(으로 이동할 필요가 없습니다. 대신 서버는 클라이언트에서 제공하는 자격 증명을 검사하여 클라이언트 컴퓨터를 인증할 수 있습니다. 클라이언트 컴퓨터는 특정 서버용 자격 증명을 한 번 가져온 다음 네트워크 로그온 세션 전체에서 해당 자격 증명을 다시 사용할 수 있습니다.
+    Kerberos 이전의 NTLM 인증에서는 모든 클라이언트 컴퓨터나 서비스를 인증하기 위해 애플리케이션 서버가 도메인 컨트롤러에 연결해야 했습니다. Kerberos 프로토콜을 사용 하면 갱신 가능한 세션 티켓이 인증을 통해\-전달 됩니다. 권한 특성 인증서 \(PAC\)\)의 유효성을 검사 해야 하는 경우가 아니면 서버는 도메인 컨트롤러 \(으로 이동할 필요가 없습니다. 대신 서버는 클라이언트에서 제공하는 자격 증명을 검사하여 클라이언트 컴퓨터를 인증할 수 있습니다. 클라이언트 컴퓨터는 특정 서버용 자격 증명을 한 번 가져온 다음 네트워크 로그온 세션 전체에서 해당 자격 증명을 다시 사용할 수 있습니다.
 
 -   **상호 인증.**
 

@@ -1,28 +1,22 @@
 ---
 title: setlocal
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: 배치 파일에서 환경 변수를 지역화 하기 시작 하는 setlocal의 Windows 명령 항목입니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e4e4b6d3-3f1a-4851-a782-25ee2470e16e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 997c996854f488bb1776f135e3288e3b094e683c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 24ed41289bb517d41db11fd3ebc41e5751b7afd9
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71384092"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80834366"
 ---
 # <a name="setlocal"></a>setlocal
-
-
 
 배치 파일에서 환경 변수의 지역화를 시작합니다. 지역화 일치 될 때까지 계속 **endlocal** 명령이 나 배치 파일의 끝에 도달 했습니다.
 
@@ -44,7 +38,7 @@ setlocal [enableextensions | disableextensions] [enabledelayedexpansion | disabl
 |disabledelayedexpansion|일치 하는 때까지 지연된 환경 변수 확장을 사용 하지 않도록 설정 **endlocal** 하기 전에 설정에 관계 없이 명령이 발견 되는 **setlocal** 명령이 실행 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 -   사용 하 여 **setlocal**
 
@@ -65,7 +59,7 @@ setlocal [enableextensions | disableextensions] [enabledelayedexpansion | disabl
     ```  
     때문에 **cmd** 명령 확장 비활성화 되 면 ERRORLEVEL 변수를 설정 하지 않는 **확인** 명령에 잘못 된 인수를 사용 하는 경우 0이 아닌 값으로 ERRORLEVEL 변수를 초기화 합니다. 또한 사용 하는 경우는 **setlocal** 명령 인수에 {**enableextensions** | **disableextensions**} 또는 {**enabledelayedexpansion** | **disabledelayedexpansion**} ERRORLEVEL 변수 설정 하지 않으므로 및 **1**, 명령 확장을 사용할 수 없습니다.
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
 다음 예제 스크립트에 표시 된 대로 배치 파일에서 환경 변수를 지역화할 수 있습니다.
 ```
@@ -82,6 +76,6 @@ endlocal
 start notepad c:\superapp.out
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

@@ -1,23 +1,19 @@
 ---
 title: TLS (전송 계층 보안) 관리
 description: Windows Server 보안
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-tls-ssl
-ms.tgt_pltfrm: na
 ms.topic: article
 author: justinha
 ms.author: justinha
-manager: brianlic-msft
+manager: brianlic
 ms.date: 05/16/2018
-ms.openlocfilehash: a4ac1ea5b0648dbb80f103c146ad3df23fc04ab7
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: 065c8932667eed12d347e796c29cc7ee013c0383
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79322685"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852936"
 ---
 # <a name="manage-transport-layer-security-tls"></a>TLS (전송 계층 보안) 관리
 
@@ -121,11 +117,11 @@ Certutil.exe –deleteEccCurve curveName
 조직에서는 그룹 정책 및 그룹 정책 기본 설정 레지스트리 확장을 사용 하 여 엔터프라이즈, 도메인에 가입 된 컴퓨터에 곡선 매개 변수를 배포할 수 있습니다.  
 곡선을 배포 하는 프로세스는 다음과 같습니다.
 
-1.  Windows 10 및 Windows Server 2016에서는 **certutil.exe** 를 사용 하 여 windows에 등록 된 새 새 곡선을 추가 합니다.
-2.  동일한 컴퓨터에서 그룹 정책 관리 콘솔 (GPMC)를 열고 새 그룹 정책 개체를 만든 다음 편집 합니다.
-3.  **컴퓨터 구성으로 이동 | 기본 설정 | Windows 설정 | 레지스트리**.  **레지스트리**를 마우스 오른쪽 단추로 클릭 합니다. **새** 항목 위로 마우스를 이동 하 고 **컬렉션 항목**을 선택 합니다. 곡선의 이름과 일치 하도록 컬렉션 항목의 이름을 바꿉니다. *HKEY_LOCAL_MACHINE \currentcontrolset\control\cryptography\eccparameters*에서 각 레지스트리 키에 대해 하나의 레지스트리 컬렉션 항목을 만듭니다.
-4.  *HKEY_LOCAL_MACHINE \currentcontrolset\control\cryptography\eccparameters\[curveName]* 아래에 나열 된 각 레지스트리 값에 새 **레지스트리 항목** 을 추가 하 여 새로 만든 그룹 정책 기본 설정 레지스트리 컬렉션을 구성 합니다.
-5.  새 명명 된 곡선을 받아야 하는 Windows 10 및 Windows Server 2016 컴퓨터에 그룹 정책 레지스트리 컬렉션 항목을 포함 하는 그룹 정책 개체를 배포 합니다.
+1.    Windows 10 및 Windows Server 2016에서는 **certutil.exe** 를 사용 하 여 windows에 등록 된 새 새 곡선을 추가 합니다.
+2.    동일한 컴퓨터에서 그룹 정책 관리 콘솔 (GPMC)를 열고 새 그룹 정책 개체를 만든 다음 편집 합니다.
+3.    **컴퓨터 구성으로 이동 | 기본 설정 | Windows 설정 | 레지스트리**.  **레지스트리**를 마우스 오른쪽 단추로 클릭 합니다. **새** 항목 위로 마우스를 이동 하 고 **컬렉션 항목**을 선택 합니다. 곡선의 이름과 일치 하도록 컬렉션 항목의 이름을 바꿉니다. *HKEY_LOCAL_MACHINE \currentcontrolset\control\cryptography\eccparameters*에서 각 레지스트리 키에 대해 하나의 레지스트리 컬렉션 항목을 만듭니다.
+4.    *HKEY_LOCAL_MACHINE \currentcontrolset\control\cryptography\eccparameters\[curveName]* 아래에 나열 된 각 레지스트리 값에 새 **레지스트리 항목** 을 추가 하 여 새로 만든 그룹 정책 기본 설정 레지스트리 컬렉션을 구성 합니다.
+5.    새 명명 된 곡선을 받아야 하는 Windows 10 및 Windows Server 2016 컴퓨터에 그룹 정책 레지스트리 컬렉션 항목을 포함 하는 그룹 정책 개체를 배포 합니다.
 
     ![GPP 분포 곡선](../media/Transport-Layer-Security-protocol/gpp-distribute-curves.png)
 
@@ -133,7 +129,7 @@ Certutil.exe –deleteEccCurve curveName
 
 ## <a name="managing-tls-ecc-order"></a>TLS ECC 주문 관리
 
-Windows 10 및 Windows Server 2016부터 ECC 곡선 순서 그룹 정책 설정을 사용 하 여 기본 TLS ECC 곡선 순서를 구성할 수 있습니다. 조직에서는 일반 ECC 및이 설정을 사용 하 여 TLS에서 사용 하도록 승인 된 고유한 명명 된 곡선을 운영 체제에 추가한 다음, 이러한 명명 된 곡선을 곡선 우선 순위에 추가 하 그룹 정책 설정 하 여 이후 TLS에서 사용 되는지 확인 합니다. 핸드셰이크. 새 곡선 우선 순위 목록은 정책 설정을 받은 후 다음에 다시 부팅할 때 활성화 됩니다.     
+Windows 10 및 Windows Server 2016부터 ECC 곡선 순서 그룹 정책 설정을 사용 하 여 기본 TLS ECC 곡선 순서를 구성할 수 있습니다. 조직에서는 일반 ECC 및이 설정을 사용 하 여 TLS에서 사용 하도록 승인 된 고유한 명명 된 곡선을 운영 체제에 추가한 다음, 이러한 명명 된 곡선을 곡선 우선 그룹 정책 순위에 추가 하 여 이후 TLS 핸드셰이크에서 사용 되는지 확인할 수 있습니다. 새 곡선 우선 순위 목록은 정책 설정을 받은 후 다음에 다시 부팅할 때 활성화 됩니다.     
 
 ![GPP 분포 곡선](../media/Transport-Layer-Security-protocol/gp-managing-tls-curve-priority-order.png)
 

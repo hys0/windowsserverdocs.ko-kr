@@ -1,9 +1,7 @@
 ---
 title: Microsoft 제품에 대 한 Linux 소프트웨어 리포지토리
 description: 이 문서에서는 Microsoft 제품에 대 한 Linux 소프트웨어 패키지를 사용 하 고 설치 하는 방법을 설명 합니다.
-ms.custom: na
 ms.prod: windows-server
-ms.service: na
 manager: szark
 ms.technology: compute
 ms.topic: article
@@ -11,12 +9,12 @@ ms.assetid: b5387444-595f-4f38-abb7-163a70ea1895
 author: szarkos
 ms.author: szark
 ms.date: 10/16/2017
-ms.openlocfilehash: e32c11dac1d887ba0ae0192bb658f71ece77a42c
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: b57a1e7243f989a4529a666880572a9ceaa57644
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75947239"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852066"
 ---
 # <a name="linux-software-repository-for-microsoft-products"></a>Microsoft 제품에 대 한 Linux 소프트웨어 리포지토리
 
@@ -30,7 +28,7 @@ Microsoft의 Linux 소프트웨어 리포지토리는 여러 하위 리포지토
  - mssql-server-Microsoft SQL Server on Linux에 대 한 패키지를 포함 합니다. 참고 항목: [SQL Server on Linux](https://www.microsoft.com/sql-server/sql-server-vnext-including-Linux).
 
 > [!Note]
-> Linux 소프트웨어 리포지토리의 패키지에는 패키지에 있는 사용 조건이 적용 됩니다. 패키지를 사용하기 전에 사용 조건을 읽어보시기 바랍니다. 패키지를 설치 및 사용하면 이러한 사용 조건에 동의하게 됩니다. 사용 조건에 동의하지 않는 경우, 패키지를 사용하지 마세요.
+> Linux 소프트웨어 리포지토리의 패키지에는 패키지에 있는 사용 조건이 적용 됩니다. 패키지를 사용 하기 전에 사용 조건을 읽어 보십시오. 패키지를 설치 하 고 사용 하면 이러한 조건에 동의 하는 것입니다. 사용 조건에 동의 하지 않는 경우 패키지를 사용 하지 마십시오.
 
 
 ## <a name="configuring-the-repositories"></a>리포지토리 구성
@@ -63,19 +61,19 @@ Linux 배포 및 버전에 적용 되는 Linux 패키지를 설치 하 여 리�
 
  - Ubuntu 18.04 (Bionic)
 
-        curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+         curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
         sudo apt-add-repository https://packages.microsoft.com/ubuntu/18.04/prod
         sudo apt-get update
 
  - Ubuntu 18.10 (우주)
 
-        curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+         curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
         sudo apt-add-repository https://packages.microsoft.com/ubuntu/18.10/prod
         sudo apt-get update
 
  - Ubuntu 19.04 (Disco)
 
-        curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+         curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
         sudo apt-add-repository https://packages.microsoft.com/ubuntu/19.04/prod
         sudo apt-get update
 
@@ -95,7 +93,7 @@ Linux 배포 및 버전에 적용 되는 Linux 패키지를 설치 하 여 리�
  - 공개 키 ID: Microsoft (릴리스 서명) <gpgsecurity@microsoft.com>
  - 공개 키 지문: `BC52 8686 B50D 79E3 39D3 721C EB3E 94AD BE12 29CF`
 
-### <a name="examples"></a>예:
+### <a name="examples"></a>예제:
 
  - RHEL/CentOS 7
 

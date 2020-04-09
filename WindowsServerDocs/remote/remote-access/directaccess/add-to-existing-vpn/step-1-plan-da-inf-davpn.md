@@ -2,22 +2,18 @@
 title: 1 단계 DirectAccess 인프라 계획
 description: 이 항목은 Windows Server 2016에 대 한 기존 원격 액세스 (VPN) 배포에 DirectAccess 추가 가이드의 일부입니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-da
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4ca50ea8-6987-4081-acd5-5bf9ead62acd
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 726a8dce5dce9ef0c87eee64cea86d979219079c
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: be4d7028f1922152b2779e82a7c78d9b3a5b753a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80309220"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859556"
 ---
 # <a name="step-1-plan-directaccess-infrastructure"></a>1 단계 DirectAccess 인프라 계획
 
@@ -27,7 +23,7 @@ ms.locfileid: "80309220"
   
 |작업|설명|  
 |----|--------|  
-|네트워크 토폴로지 및 설정 계획|원격 액세스 서버의 위치(NAT(네트워크 주소 변환) 장치 또는 방화벽의 경계면이나 뒤)를 결정하고 IP 주소 지정 및 라우팅을 계획합니다.|  
+|네트워크 토폴로지 및 설정 계획|원격 액세스 서버의 위치(NAT(네트워크 주소 변환) 디바이스 또는 방화벽의 경계면이나 뒤)를 결정하고 IP 주소 지정 및 라우팅을 계획합니다.|  
 |방화벽 요구 사항 계획|원격 액세스가 경계면 방화벽을 통과하도록 허용할 계획을 수립합니다.|  
 |인증서 요구 사항 계획|원격 액세스는 클라이언트 인증에 Kerberos 또는 인증서를 사용할 수 있습니다. 이 기본 원격 액세스 배포에서는 Kerberos가 자동으로 구성되며 원격 액세스 서버에서 자동으로 발급된 자체 서명된 인증서를 사용하여 인증이 수행됩니다.|  
 |DNS 요구 사항 계획|원격 액세스 서버, 인프라 서버, 로컬 이름 확인 옵션 및 클라이언트 연결에 대한 DNS 설정을 계획합니다.|  
@@ -110,7 +106,7 @@ IPsec에 대한 인증서 요구 사항에는 클라이언트와 원격 액세�
   
 - CRL을 항상 사용할 수 있도록 공용 CA를 사용하는 것이 좋습니다.  
   
-- 주체 필드에 원격 액세스 서버 인터넷 어댑터의 IPv4 주소 또는 IP-HTTPS URL(ConnectTo 주소)의 FQDN을 지정합니다. 원격 액세스 서버가 NAT 장치 뒤에 있는 경우에는 NAT 장치의 공개 이름 또는 주소를 지정해야 합니다.  
+- 주체 필드에 원격 액세스 서버 인터넷 어댑터의 IPv4 주소 또는 IP-HTTPS URL(ConnectTo 주소)의 FQDN을 지정합니다. 원격 액세스 서버가 NAT 디바이스 뒤에 있는 경우에는 NAT 디바이스의 공개 이름 또는 주소를 지정해야 합니다.  
   
 - 인증서의 일반 이름이 IP-HTTPS 사이트의 이름과 일치해야 합니다.  
   
@@ -186,7 +182,7 @@ IPsec에 대한 인증서 요구 사항에는 클라이언트와 원격 액세�
   
 - **보안 그룹**: 원격 액세스는 보안 그룹을 사용 하 여 DirectAccess 클라이언트 컴퓨터와 원격 액세스 서버를 함께 수집 하 고 식별 합니다. 그룹 정책은 필요한 보안 그룹에 적용됩니다.  
   
-- **확장 된 ipsec 정책**: 원격 액세스는 클라이언트와 원격 액세스 서버 간에 IPsec 인증 및 암호화를 사용할 수 있습니다. 지정된 내부 응용 프로그램 서버로 IPsec 인증 및 암호화를 확장할 수 있습니다.   
+- **확장 된 ipsec 정책**: 원격 액세스는 클라이언트와 원격 액세스 서버 간에 IPsec 인증 및 암호화를 사용할 수 있습니다. 지정된 내부 애플리케이션 서버로 IPsec 인증 및 암호화를 확장할 수 있습니다.   
   
 #### <a name="active-directory-requirements"></a>Active Directory 요구 사항  
   
@@ -241,7 +237,7 @@ DirectAccess가 특정 GPO를 사용하도록 구성된 후에는 다른 GPO를 
   
 - DirectAccess 서버 GPO의 경우 위치 및 연결 매개 변수는 둘 다 원격 액세스 서버를 포함하는 도메인을 가리킵니다.  
   
-- 클라이언트 GPO가 만들어지면 해당 GPO가 만들어지는 단일 도메인으로 위치가 설정됩니다. GPO 이름은 각 도메인에서 조회되며 DirectAccess 설정(있는 경우)으로 채워집니다. 연결 대상은 GPO가 만들어진 도메인의 루트로 설정됩니다. GPO는 클라이언트 컴퓨터 또는 응용 프로그램 서버가 포함된 각 도메인에 만들어지며 각 도메인의 루트에 연결됩니다.  
+- 클라이언트 GPO가 만들어지면 해당 GPO가 만들어지는 단일 도메인으로 위치가 설정됩니다. GPO 이름은 각 도메인에서 조회되며 DirectAccess 설정(있는 경우)으로 채워집니다. 연결 대상은 GPO가 만들어진 도메인의 루트로 설정됩니다. GPO는 클라이언트 컴퓨터 또는 애플리케이션 서버가 포함된 각 도메인에 만들어지며 각 도메인의 루트에 연결됩니다.  
   
 자동으로 만들어진 GPO를 사용하는 경우 DirectAccess 설정을 적용하려면 원격 액세스 서버 관리자에게 다음 권한이 필요합니다.  
   
@@ -271,7 +267,7 @@ GPO 연결을 위한 올바른 권한이 없으면 경고가 발생합니다. �
   
 #### <a name="recovering-from-a-deleted-gpo"></a>삭제된 GPO 복구
 
-원격 액세스 서버, 클라이언트 또는 응용 프로그램 서버 GPO를 실수로 삭제한 경우 사용 가능한 백업이 없다면 구성 설정을 제거하고 다시 구성해야 합니다. 그러나 백업을 사용할 수 있는 경우 백업에서 GPO를 복구할 수 있습니다.  
+원격 액세스 서버, 클라이언트 또는 애플리케이션 서버 GPO를 실수로 삭제한 경우 사용 가능한 백업이 없다면 구성 설정을 제거하고 다시 구성해야 합니다. 그러나 백업을 사용할 수 있는 경우 백업에서 GPO를 복구할 수 있습니다.  
   
 **원격 액세스 관리** 에 다음과 같은 오류 메시지가 표시 됩니다. **gpo (gpo 이름)를 찾을 수 없습니다**. 구성 설정을 제거하려면 다음 단계를 따릅니다.  
   

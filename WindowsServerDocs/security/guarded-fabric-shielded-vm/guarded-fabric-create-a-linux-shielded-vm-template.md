@@ -1,19 +1,19 @@
 ---
 title: Linux 차폐 VM 템플릿 디스크 만들기
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: d0e1d4fb-97fc-4389-9421-c869ba532944
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 66d5f70f747a6209f2856afde58b6f486ea597f8
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 1a6325a5d8e931f1e62c83ba4013d94760e39f86
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386712"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856796"
 ---
 # <a name="create-a-linux-shielded-vm-template-disk"></a>Linux 차폐 VM 템플릿 디스크 만들기
 
@@ -21,7 +21,7 @@ ms.locfileid: "71386712"
 
 이 항목에서는 하나 이상의 테 넌 트 Vm을 인스턴스화하는 데 사용할 수 있는 Linux 차폐 Vm의 템플릿 디스크를 준비 하는 방법에 대해 설명 합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 조건
 
 Linux 차폐 VM을 준비 하 고 테스트 하려면 다음 리소스를 사용할 수 있어야 합니다.
 
@@ -169,7 +169,7 @@ Linux 차폐 VM을 준비 하 고 테스트 하려면 다음 리소스를 사용
 Certificate 속성 | 필요한 값
 ---------------------|---------------
 키 알고리즘 | RSA
-최소 키 크기 | 2048 비트
+최소 키 크기 | 2048비트
 서명 알고리즘 | SHA256 (권장)
 키 사용 | 디지털 서명
 
@@ -187,7 +187,7 @@ New-SelfSignedCertificate -Subject "CN=Linux Shielded VM Template Disk Signing C
 ### <a name="process-the-disk-with-the-template-disk-wizard-cmdlet"></a>템플릿 디스크 마법사 cmdlet을 사용 하 여 디스크 처리
 
 Windows Server, 버전 1709을 실행 하는 컴퓨터에 템플릿 디스크 및 인증서를 복사한 후 다음 명령을 실행 하 여 서명 프로세스를 시작 합니다.
-@No__t-0 매개 변수에 제공한 VHDX는 업데이트 된 템플릿 디스크로 덮어쓰여집니다. 따라서 명령을 실행 하기 전에 복사본을 만들어야 합니다.
+`-Path` 매개 변수에 제공 하는 VHDX는 업데이트 된 템플릿 디스크로 덮어쓰여집니다. 따라서 명령을 실행 하기 전에 복사본을 만들어야 합니다.
 
 > [!IMPORTANT]
 > Windows Server 2016 또는 Windows 10에서 사용할 수 있는 원격 서버 관리 도구는 Linux 차폐 VM 템플릿 디스크를 준비 하는 데 사용할 수 없습니다.

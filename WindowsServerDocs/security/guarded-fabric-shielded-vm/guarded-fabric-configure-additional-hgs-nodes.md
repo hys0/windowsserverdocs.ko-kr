@@ -1,19 +1,19 @@
 ---
 title: 추가 HGS 노드 구성
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: 227f723b-acb2-42a7-bbe3-44e82f930e35
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 01/14/2020
-ms.openlocfilehash: ece005617c4a2faac41c2be15967b2f43951517e
-ms.sourcegitcommit: c5709021aa98abd075d7a8f912d4fd2263db8803
+ms.openlocfilehash: d131643db4dfb179f5bdb8bcbad9f003d1ae61e1
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2020
-ms.locfileid: "76265865"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856896"
 ---
 # <a name="configure-additional-hgs-nodes"></a>추가 HGS 노드 구성
 
@@ -28,7 +28,7 @@ ms.locfileid: "76265865"
 |새 HGS 포리스트  | [PFX 파일 사용](#dedicated-hgs-forest-with-pfx-certificates) | [인증서 지문 사용](#dedicated-hgs-forest-with-certificate-thumbprints) |
 |기존 요새 포리스트 |  [PFX 파일 사용](#existing-bastion-forest-with-pfx-certificates) | [인증서 지문 사용](#existing-bastion-forest-with-certificate-thumbprints) |
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>필수 조건
 
 각 추가 노드가 다음과 같은지 확인 합니다. 
 - 에는 주 노드와 동일한 하드웨어 및 소프트웨어 구성이 있습니다. 

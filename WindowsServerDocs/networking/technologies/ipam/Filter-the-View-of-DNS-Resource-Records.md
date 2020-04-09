@@ -2,22 +2,18 @@
 title: DNS 리소스 레코드의 보기 필터링
 description: 이 항목은 Windows Server 2016의 IPAM (IP 주소 관리) 관리 가이드의 일부입니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ipam
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5b80294a-7325-476b-84eb-69f0d051e8b2
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 4e032e2c5b89dc362fceb34e06525d8632f7b19e
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 21e43751981b0b7b945c0c9404f6f93f36c48f16
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80312401"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860666"
 ---
 # <a name="filter-the-view-of-dns-resource-records"></a>DNS 리소스 레코드의 보기 필터링
 
@@ -59,7 +55,7 @@ ms.locfileid: "80312401"
   
     ![필터 실행](../../media/Filter-the-View-of-DNS-Resource-Records/ipam_FilterRR_05.jpg)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [DNS 리소스 레코드 관리](DNS-Resource-Record-Management.md)  
 [IPAM 관리](Manage-IPAM.md)  
   

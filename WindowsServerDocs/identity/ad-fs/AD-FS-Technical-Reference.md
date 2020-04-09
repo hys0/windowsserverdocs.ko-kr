@@ -1,7 +1,6 @@
 ---
 ms.assetid: e2c940f5-4b1f-457a-bc71-dcced0c752f7
 title: AD FS 기술 참조
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 29c52b21e5bb30fc54c2f561015c64ae93447836
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 54d97a0dc9e4c752f4b5141fba015edc4ed4d8b4
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408567"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854146"
 ---
 # <a name="ad-fs-technical-reference"></a>AD FS 기술 참조
 
@@ -29,7 +28,7 @@ ms.locfileid: "71408567"
 > [!TIP]
 > 추가 AD FS 2.0 디자인 콘텐츠는 Microsoft TechNet WiKi의 [AD FS 2.0 콘텐츠 맵](https://social.technet.microsoft.com/wiki/contents/articles/2735.ad-fs-2-0-content-map.aspx) (영문) 페이지에서 확인할 수 있습니다. 이 페이지는 AD FS 2.0 커뮤니티의 회원이 관리하며, AD FS 제품 팀이 정기적으로 모니터링합니다.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 [Active Directory Federation Services 개요](AD-FS-2016-Overview.md)
 
 

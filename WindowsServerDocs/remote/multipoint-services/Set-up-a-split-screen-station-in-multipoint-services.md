@@ -1,24 +1,20 @@
 ---
 title: 화면 분할 스테이션 설정
 description: 두 사용자가 단일 시스템을 공유할 수 있도록 MultiPoint 서비스를 설정 하는 방법을 설명 합니다.
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 35d1d434-79b2-4e0a-835f-d94ed8ee6b21
 author: evaseydl
 manager: scottman
 ms.author: evas
-ms.openlocfilehash: d50148e9d39fb337bf02d95d0db09b4e07ee4720
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 006422614b87cd331dd157218ac910b6f7af1602
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71395043"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853916"
 ---
 # <a name="set-up-a-split-screen-station"></a>화면 분할 스테이션 설정
 두 사용자가 동시에 시스템을 사용할 수 있도록 분할 화면 스테이션을 설정할 수 있습니다.
@@ -58,7 +54,7 @@ ms.locfileid: "71395043"
   
 2.  키보드와 마우스를 USB 허브에 연결 합니다.  
   
-    ![USB 허브 입력 장치 연결 이미지](./media/WMSUSBDeviceConnection.gif)  
+    ![USB 허브 입력 디바이스 연결 이미지](./media/WMSUSBDeviceConnection.gif)  
   
 3.  헤드폰 등의 추가 주변 장치를 USB 허브에 연결 합니다.  
   

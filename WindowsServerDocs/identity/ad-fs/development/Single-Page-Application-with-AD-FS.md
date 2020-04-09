@@ -8,12 +8,12 @@ ms.date: 06/13/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: active-directory-federation-services
-ms.openlocfilehash: f4973da0d9e0c347cff8fc910f96277055b66dec
-ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
+ms.openlocfilehash: f7e68558945fcd26d5e8ab405f39e86266beeea8
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77465547"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853866"
 ---
 # <a name="build-a-single-page-web-application-using-oauth-and-adaljs-with-ad-fs-2016-or-later"></a>OAuth 및 ADAL을 사용 하 여 단일 페이지 웹 응용 프로그램을 빌드합니다. AD FS 2016 이상 버전
 
@@ -43,9 +43,9 @@ ADAL이 인증에 대 한 트리거를 발견 하면 응용 프로그램에서 �
 ## <a name="setting-up-the-environment"></a>환경 설정
 이 연습에서는의 기본 설정을 사용 합니다.
 
-1.  DC: AD FS를 호스팅할 도메인의 도메인 컨트롤러입니다.
-2.  AD FS Server: 도메인의 AD FS 서버
-3.  개발 컴퓨터: Visual Studio를 설치 하 고 샘플을 개발 하는 컴퓨터
+1.    DC: AD FS를 호스팅할 도메인의 도메인 컨트롤러입니다.
+2.    AD FS Server: 도메인의 AD FS 서버
+3.    개발 컴퓨터: Visual Studio를 설치 하 고 샘플을 개발 하는 컴퓨터
 
 사용할 수 있습니다, 원하는 경우 컴퓨터가 두 대만. 하나는 DC/AD FS이 고 다른 하나는 샘플을 개발 하는 데 사용할입니다.
 

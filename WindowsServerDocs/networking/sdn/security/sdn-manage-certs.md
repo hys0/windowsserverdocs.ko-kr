@@ -1,20 +1,20 @@
 ---
 title: 소프트웨어 정의 네트워킹에 대 한 인증서 관리
 description: 이 항목을 사용 하 여 Windows Server 2016 데이터 센터에서 SDN (소프트웨어 정의 네트워킹)을 배포할 때 네트워크 컨트롤러 Northbound 및 Southbound 통신용 인증서를 관리 하는 방법을 배울 수 있습니다.
-manager: dougkim
+manager: grcusanz
 ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: c4e2f6c7-0364-4bf8-bb66-9af59c0bbd74
-ms.author: lizross
-author: eross-msft
+ms.author: anpaul
+author: AnirbanPaul
 ms.date: 08/22/2018
-ms.openlocfilehash: 20448e9bdef41f676bf5422c811be535bcf30ca2
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 3225b3f5065e49521411b35fa3781338086b4e59
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80317359"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854356"
 ---
 # <a name="manage-certificates-for-software-defined-networking"></a>소프트웨어 정의 네트워킹에 대 한 인증서 관리
 
@@ -137,7 +137,7 @@ CA를 사용 하 여 인증서를 만드는 단계는 다음과 같습니다.
    2. **응용 프로그램 정책** 에 **서버 인증** \(1.3.6.1.5.5.7.3.1\) 및 **클라이언트 인증** \(1.3.6.1.5.5.7.3.2\)가 모두 포함 되어 있는지 확인 합니다.
 7. **속성**을 클릭합니다.
 8. **주체** 탭에서 **주체 이름**의 **유형**으로 **일반 이름**을 선택 합니다. 값에서 **네트워크 컨트롤러 REST 끝점**을 지정 합니다.
-9. **적용**을 클릭한 다음 **확인**을 클릭합니다.
+9. **적용**, **확인**을 차례로 클릭합니다.
 10. **등록**을 클릭합니다.
 
 인증서 MMC에서 개인 저장소를 클릭 하 여 CA에서 등록 한 인증서를 확인 합니다.

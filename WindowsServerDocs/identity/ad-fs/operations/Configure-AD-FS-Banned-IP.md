@@ -1,6 +1,5 @@
 ---
 title: 금지 AD FS IP Addesses 구성
-description: ''
 author: billmath
 ms.author: billmath
 manager: mtillman
@@ -8,12 +7,12 @@ ms.date: 06/28/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 2b518f92f80d06e4bd0854fde94013a412aae515
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 1a1e8a9e668caa0c766f6fe3012d5ae6ecaddb50
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407711"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859926"
 ---
 # <a name="ad-fs-and-banned-ip-addresses"></a>AD FS 및 금지 IP 주소
 

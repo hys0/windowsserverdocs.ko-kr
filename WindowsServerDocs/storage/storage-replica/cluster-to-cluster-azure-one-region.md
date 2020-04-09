@@ -1,7 +1,6 @@
 ---
 title: Azure의 동일한 지역 내에서 클러스터에서 저장소 복제본으로 클러스터
 description: Azure의 동일한 지역 내에서 클러스터 간 저장소 복제
-keywords: 저장소 복제본, 서버 관리자, Windows Server, Azure, 클러스터, 동일한 지역
 author: arduppal
 ms.author: arduppal
 ms.date: 04/26/2019
@@ -9,12 +8,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: storage-replica
 manager: mchad
-ms.openlocfilehash: 3e620b5597a2d25a7bb02daf80c5812d25f6a987
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 00dbf709139ef245b94a3f083ab83a12503131c2
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950031"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856296"
 ---
 # <a name="cluster-to-cluster-storage-replica-within-the-same-region-in-azure"></a>Azure의 동일한 지역 내에서 클러스터에서 저장소 복제본으로 클러스터
 
@@ -103,7 +102,7 @@ Azure의 동일한 지역 내에서 클러스터를 클러스터로 구성할 �
      $IPResourceName = "Cluster IP Address" # IP Address cluster resource name.
      $ILBIP = "10.3.0.100" # IP Address in Internal Load Balancer (ILB) - The static IP address for the load balancer configured in the Azure portal.
      [int]$ProbePort = 59999
-     Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";”ProbeFailureThreshold”=5;"EnableDhcp"=0}
+     Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";"ProbeFailureThreshold"=5;"EnableDhcp"=0}
     ```
 
 14. **Az2az3**/**az2az4**한 노드에서 다음 명령을 실행 합니다. 
@@ -113,7 +112,7 @@ Azure의 동일한 지역 내에서 클러스터를 클러스터로 구성할 �
     $IPResourceName = "Cluster IP Address" # IP Address cluster resource name.
     $ILBIP = "10.3.0.101" # IP Address in Internal Load Balancer (ILB) - The static IP address for the load balancer configured in the Azure portal.
     [int]$ProbePort = 59999
-    Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";”ProbeFailureThreshold”=5;"EnableDhcp"=0}  
+    Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";"ProbeFailureThreshold"=5;"EnableDhcp"=0}  
     ```   
     두 클러스터 모두 서로 연결/통신할 수 있는지 확인 합니다. 
 
@@ -126,20 +125,20 @@ Azure의 동일한 지역 내에서 클러스터를 클러스터로 구성할 �
      Get-Cluster -Name SRAZC2 (ran from az2az1)
     ```   
 
-15. 두 클러스터에 대 한 cloud 미러링 모니터 서버를 만듭니다. 동일한 리소스 그룹 (az2azcw)의 각 클러스터에 대해 azure에서 [저장소 계정](https://ms.portal.azure.com/#create/Microsoft.StorageAccount-ARM) (, **az2azcw2** **)을**두 개 만듭니다.
+15. 두 클러스터에 대 한 cloud 미러링 모니터 서버를 만듭니다. 동일한 리소스 그룹 (az2azcw)의 각 클러스터에 대해 azure에서 [저장소 계정](https://ms.portal.azure.com/#create/Microsoft.StorageAccount-ARM) (**az2azcw**, **az2azcw2** **)을**두 개 만듭니다.
 
     - "액세스 키"에서 저장소 계정 이름 및 키를 복사 합니다.
     - "장애 조치 (failover) 클러스터 관리자"에서 클라우드 감시를 만들고 위의 계정 이름 및 키를 사용 하 여 만듭니다.
 
 16. 다음 단계로 이동 하기 전에 [클러스터 유효성 검사 테스트](../../failover-clustering/create-failover-cluster.md#validate-the-configuration) 를 실행 합니다.
 
-17. Windows PowerShell을 시작하고 [Test-SRTopology](https://docs.microsoft.com/powershell/module/storagereplica/test-srtopology?view=win10-ps) cmdlet을 사용하여 모든 스토리지 복제본 요구 사항을 충족하는지 확인합니다. 장기 실행 성능 평가 모드 뿐만 아니라 빠른 테스트에 대 한 요구 사항 전용 모드에서 cmdlet을 사용할 수 있습니다.
+17. Windows PowerShell을 시작하고 [Test-SRTopology](https://docs.microsoft.com/powershell/module/storagereplica/test-srtopology?view=win10-ps) cmdlet을 사용하여 모든 저장소 복제본 요구 사항을 충족하는지 확인합니다. 장기 실행 성능 평가 모드 뿐만 아니라 빠른 테스트에 대 한 요구 사항 전용 모드에서 cmdlet을 사용할 수 있습니다.
 
 18. 클러스터 간 저장소 복제본을 구성 합니다.
    
     두 방향으로 한 클러스터에서 다른 클러스터로의 액세스 권한 부여:
 
-    이 예제에서는 다음과 같습니다.
+    예제:
 
     ```PowerShell
       Grant-SRAccess -ComputerName az2az1 -Cluster SRAZC2

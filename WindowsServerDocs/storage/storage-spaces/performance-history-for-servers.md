@@ -1,19 +1,18 @@
 ---
 title: 서버에 대 한 성능 기록
 ms.author: cosdar
-ms.manager: eldenc
+manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 02/05/2018
-Keywords: 저장소 공간 다이렉트
 ms.localizationpriority: medium
-ms.openlocfilehash: bbfc92f7926b93f5f6716514e64672f4aa304c0f
-ms.sourcegitcommit: e817a130c2ed9caaddd1def1b2edac0c798a6aa2
+ms.openlocfilehash: cf4bdabb132c832370e5dffec215c24b54aebdd7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74945245"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856196"
 ---
 # <a name="performance-history-for-servers"></a>서버에 대 한 성능 기록
 

@@ -1,24 +1,20 @@
 ---
 title: 사용자를 위한 Windows MultiPoint 서비스 시스템 준비
 description: MultiPoint 서비스의 사용자 관리 계획에 대 한 탐색 항목
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e392f423-a64b-4825-91ab-334058721c4d
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.openlocfilehash: 2323e23c91e4e4bdfa98654ccf3ab32b2eb36e53
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 4b9bfb245277439ce28c2993534abd817d45eee8
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405029"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853366"
 ---
 # <a name="prepare-your-multipoint-services-system-for-users"></a>사용자를 위한 MultiPoint 서비스 시스템 준비
 MultiPoint 서비스를 설치 및 구성 하 고 추가 구성 및 하드웨어 설치를 수행 하면 시스템에 대 한 액세스 권한을 사용자에 게 제공할 준비가 된 것입니다. 사용자 계정을 계획 하 고 만들어야 합니다. 일부 환경에서는 자동 로그온을 위한 스테이션을 구성 하 고 공유 사용자 계정에 여러 세션을 허용 해야 합니다. 그리고 사용자에 대해 파일 공유를 설정 하는 방법을 결정 해야 합니다. 이 섹션에서는 이러한 모든 항목에 대해 설명 합니다.  

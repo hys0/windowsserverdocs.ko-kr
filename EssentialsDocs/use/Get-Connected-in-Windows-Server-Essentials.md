@@ -1,23 +1,19 @@
 ---
 title: Windows Server Essentials에서 연결
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.custom: na
 ms.date: 05/07/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 149a5d34-43b7-4b9e-99e7-9f2294ab9ddb
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 14acbff8b538224546884e5bb51c40a22b8849b4
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 7591efcc896dd382afd50cf0e360e28e0cb08f3e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80318550"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852156"
 ---
 # <a name="get-connected-in-windows-server-essentials"></a>Windows Server Essentials에서 연결
 
@@ -176,7 +172,7 @@ ms.locfileid: "80318550"
 
   **Windows 8 운영 체제**  
 
-- Windows 8  
+- Windows 8  
 
 - Windows 8 Pro  
 
@@ -232,7 +228,7 @@ ms.locfileid: "80318550"
 
   **Windows 8 운영 체제**  
 
-- Windows 8  
+- Windows 8  
 
 - Windows 8 Pro  
 
@@ -448,7 +444,7 @@ ms.locfileid: "80318550"
     > [!NOTE]
     >  Windows 8을 실행하는 컴퓨터를 서버에 연결한 후 네트워크 계정을 사용하여 처음 로그온하면 이전 사용자 계정에서 파일 및 애플리케이션을 마이그레이션하는 방법에 대한 지침이 표시됩니다. **이전 사용자 계정에서 파일 및 응용 프로그램을 마이그레이션하는 방법** 페이지의 안내에 따라 모든 파일 및 응용 프로그램을 네트워크 사용자 계정으로 마이그레이션합니다.  
 
-9. 컴퓨터가 서버에 성공적으로 연결 되 면 커넥터 TrayApp 및 서버 대시보드에 대 한 바로 가기가 시작 메뉴에 표시 됩니다 .이 메뉴에는 다음과 같이 사용할 수 있습니다. 컴퓨터에서 Windows 8, Windows 8.1 또는 Windows 10, 대시보드 및 커넥터를 실행 하는 경우에 사용할 수 있습니다. TrayApp는 컴퓨터의 시작 화면에서 사용할 수 있습니다.):  
+9. 컴퓨터가 서버에 성공적으로 연결 되 면 커넥터 TrayApp 및 서버 대시보드에 대 한 바로 가기가 시작 메뉴에 표시 됩니다 .이 메뉴는 다음과 같이 사용할 수 있습니다. 컴퓨터에서 Windows 8, Windows 8.1 또는 Windows 10을 실행 하는 경우 컴퓨터의 시작 화면에서 대시보드 및 커넥터 TrayApp을 사용할 수 있습니다.  
 
     -   컴퓨터에서 Windows 8, Windows 8.1 또는 Windows 10을 실행 하는 경우 대시보드 및 커넥터 TrayApp는 앱으로 검색 가능 합니다.  
 

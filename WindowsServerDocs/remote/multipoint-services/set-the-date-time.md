@@ -1,24 +1,20 @@
 ---
 title: 날짜, 시간 및 표준 시간대 설정
 description: MultiPoint 서비스에서 날짜, 시간 및 표준 시간대를 설정 하는 방법에 대해 알아봅니다.
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 22a87c5f-3bfc-4da1-9905-24f768ede959
 author: evaseydl
 manager: scottman
 ms.author: evas
-ms.openlocfilehash: ab8b65cc9890a66c602f1e4b4eb102ac068ba8d3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: a5c476078c7f83c2e0b4f388f42b023057af6820
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71394607"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858876"
 ---
 # <a name="set-the-date-time-and-time-zone"></a>날짜, 시간 및 표준 시간대 설정
 장치 드라이버 설치를 완료 한 후에는 MultiPoint server에서 날짜, 시간 및 표준 시간대를 설정 합니다.  

@@ -8,12 +8,12 @@ ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 2a3cf6cd523f5cfd69785104fed7aa3938d79525
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6c2f9c8079eb2dfaf208c8835940351a925d0a16
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71359392"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857506"
 ---
 # <a name="migrate-active-directory-federation-services-role-services-to-windows-server-2012-r2"></a>Windows Server 2012 R2로 Active Directory Federation Services 역할 서비스 마이그레이션
  이 문서에서는 Windows Server 2012 r 2와 함께 설치 된 Active Directory Federation Services (AD FS)로 다음 역할 서비스를 마이그레이션하는 지침을 제공 합니다.  
@@ -57,10 +57,10 @@ ms.locfileid: "71359392"
 ### <a name="supported-ad-fs-role-services-and-features"></a>지원 되는 AD FS 역할 서비스 및 기능  
  다음 표에서는 AD FS 역할 서비스의 마이그레이션 시나리오와이 가이드에서 설명 하는 각 설정에 대해 설명 합니다.  
   
-|보낸 사람|Windows Server 2012 r 2와 함께 설치 된 AD FS|  
+|원본|Windows Server 2012 r 2와 함께 설치 된 AD FS|  
 |----------|----------------------------------------------------------------------------------------------|  
-|AD FS 2.0 페더레이션 서버가 Windows Server 2008 또는 Windows Server 2008 r 2에 설치 됨|동일 서버에서의 마이그레이션이 지원됩니다. 참조 항목:<br /><br /> [AD FS 페더레이션 서버 마이그레이션을 준비 하는 중](prepare-migrate-ad-fs-server-r2.md)<br /><br /> [AD FS 페더레이션 서버 마이그레이션](migrate-ad-fs-fed-server-r2.md)|  
-|Windows Server 2012에 설치 된 AD FS 페더레이션 서버|동일 서버에서의 마이그레이션이 지원됩니다.  자세한 내용은 다음을 참조하세요.<br /><br /> [AD FS 페더레이션 서버 마이그레이션을 준비 하는 중](prepare-migrate-ad-fs-server-r2.md)<br /><br /> [AD FS 페더레이션 서버 마이그레이션](migrate-ad-fs-fed-server-r2.md)|  
+|AD FS 2.0 페더레이션 서버가 Windows Server 2008 또는 Windows Server 2008 r 2에 설치 됨|동일 서버에서의 마이그레이션이 지원됩니다. 자세한 내용은 다음을 참조하세요.<p> [AD FS 페더레이션 서버 마이그레이션을 준비 하는 중](prepare-migrate-ad-fs-server-r2.md)<p> [AD FS 페더레이션 서버 마이그레이션](migrate-ad-fs-fed-server-r2.md)|  
+|Windows Server 2012에 설치 된 AD FS 페더레이션 서버|동일 서버에서의 마이그레이션이 지원됩니다.  자세한 내용은 다음을 참조하십시오.<p> [AD FS 페더레이션 서버 마이그레이션을 준비 하는 중](prepare-migrate-ad-fs-server-r2.md)<p> [AD FS 페더레이션 서버 마이그레이션](migrate-ad-fs-fed-server-r2.md)|  
   
 ## <a name="next-steps"></a>다음 단계
  [AD FS 페더레이션 서버 마이그레이션을 준비 하는 중](prepare-migrate-ad-fs-server-r2.md)   

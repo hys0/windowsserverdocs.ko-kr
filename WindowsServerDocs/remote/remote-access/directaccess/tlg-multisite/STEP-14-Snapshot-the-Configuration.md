@@ -2,22 +2,18 @@
 title: 14 단계 구성 스냅숏 만들기
 description: 이 항목은 테스트 랩 가이드-Windows Server 2016에 대 한 DirectAccess 멀티 사이트 배포 시연의 일부입니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-da
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8e17d886-f216-400e-bd31-808aceb88033
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 2b6a279ea114262dd3a9f97ac2ce808bfd0e184a
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 63d053cd4e573f2174164bc5666db6dbc2dc18a7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80308712"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861616"
 ---
 # <a name="step-14-snapshot-the-configuration"></a>14 단계 구성 스냅숏 만들기
 

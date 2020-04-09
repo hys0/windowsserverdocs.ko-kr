@@ -2,18 +2,17 @@
 title: DNS 클라이언트에서 DNS 클라이언트 쪽 캐싱을 사용 하지 않도록 설정
 description: 이 문서에서는 DNS 클라이언트에서 DNS 클라이언트 쪽 캐싱을 사용 하지 않도록 설정 하는 방법을 소개 합니다.
 manager: dcscontentpm
-ms.prod: ''
 ms.technology: networking-dns
 ms.topic: article
 ms.author: delhan
 ms.date: 8/8/2019
 author: Deland-Han
-ms.openlocfilehash: 51a9dbfd05402a9d018aec3bfea8a5c89e9e5d5e
-ms.sourcegitcommit: c5709021aa98abd075d7a8f912d4fd2263db8803
+ms.openlocfilehash: 09af41a544cacb0fd0977847b7bc2e6b0d8a59f7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2020
-ms.locfileid: "76265845"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860076"
 ---
 # <a name="disable-dns-client-side-caching-on-dns-clients"></a>DNS 클라이언트에서 DNS 클라이언트 쪽 캐싱을 사용 하지 않도록 설정
 
@@ -52,7 +51,7 @@ ipconfig /displaydns
 ## <a name="using-the-registry-to-control-the-caching-time"></a>레지스트리를 사용 하 여 캐싱 시간 제어
 
 > [!IMPORTANT]  
-> 이 섹션의 단계를 신중하게 따릅니다. 레지스트리를 잘못 수정할 경우 심각한 문제가 발생할 수 있습니다. 수정하기 전에, 문제가 발생할 경우를 대비하여 [복원을 위해 레지스트리를 백업](https://support.microsoft.com/help/322756)해 두세요.
+> 이 섹션의 단계를 신중하게 따릅니다. 레지스트리를 잘못 수정하면 심각한 문제가 발생할 수 있습니다. 수정하기 전에, 문제가 발생할 경우를 대비하여 [복원을 위해 레지스트리를 백업](https://support.microsoft.com/help/322756)해 두세요.
 
 긍정 또는 부정 응답을 캐시 하는 기간은 다음 레지스트리 키의 항목 값에 따라 달라 집니다.
 

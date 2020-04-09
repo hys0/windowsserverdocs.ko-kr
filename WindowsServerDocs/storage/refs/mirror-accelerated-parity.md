@@ -2,18 +2,18 @@
 title: 미러 가속 패리티
 ms.prod: windows-server
 ms.author: gawatu
-ms.manager: masriniv
+manager: masriniv
 ms.technology: storage-file-systems
 ms.topic: article
 author: gawatu
 ms.date: 10/17/2018
 ms.assetid: ''
-ms.openlocfilehash: 2721f1c744c5c03d8e4bce0508fd23fa5237f95f
-ms.sourcegitcommit: 9a6a692a7b2a93f52bb9e2de549753e81d758d28
+ms.openlocfilehash: 752073e4f12db3b994261a70a9306d45b9a00d77
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72591091"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861516"
 ---
 # <a name="mirror-accelerated-parity"></a>미러 가속 패리티
 
@@ -23,7 +23,7 @@ ms.locfileid: "72591091"
 
 ![미러-가속 패리티 볼륨](media/mirror-accelerated-parity/Mirror-Accelerated-Parity-Volume.png)
 
-## <a name="background"></a>백그라운드
+## <a name="background"></a>배경
 
 미러 및 패리티 복원 체계는 기본적으로 다른 저장소 및 성능 특징을 갖고 있습니다.
 - 미러 복원 력을 통해 사용자는 빠른 쓰기 성능을 얻을 수 있지만 각 복사본에 대 한 데이터를 복제 하는 것은 공간 효율성이 크지 않습니다. 
@@ -53,17 +53,17 @@ ReFS는 미러와 패리티 간에 데이터를 실시간으로 순환시킵니�
 
     - **a.** 들어오는 쓰기가 미러에서 기존 데이터를 수정할 경우 ReFS가 데이터를 바로 수정합니다.
     - **1b.** 들어오는 쓰기가 새로운 쓰기이고 ReFS가 미러에서 이 쓰기를 처리하기에 충분한 여유 공간을 찾을 수 있는 경우 ReFS가 미러에 씁니다.
-    ![Write-미러 ](media/mirror-accelerated-parity/Write-to-Mirror.png)
+    ![쓰기-미러](media/mirror-accelerated-parity/Write-to-Mirror.png)
 
 2. **미러에서 쓰고 패리티에서 다시 할당 합니다.**
 
     들어오는 쓰기가 패리티 데이터를 수정 하 고 ReFS에서 들어오는 쓰기를 처리할 수 있는 충분 한 사용 가능한 공간을 성공적으로 찾으면 ReFS는 먼저 이전 데이터를 패리티로 무효화 한 다음 미러 서버에 씁니다. 이 무효화는 패리티에 대한 쓰기 성능 향상에 도움이 되는 빠르고 저렴한 메타데이터 작업입니다.
-    ![Reallocated-쓰기 ](media/mirror-accelerated-parity/Reallocated-Write.png)
+    ![다시 할당 됨-쓰기](media/mirror-accelerated-parity/Reallocated-Write.png)
 
 3. **패리티에 씁니다.**
     
     ReFS가 미러에서 충분한 여유 공간을 찾지 못할 경우 ReFS가 패리티에 새 데이터를 쓰거나 패리티의 기존 데이터를 직접 수정합니다. 아래 “성능 최적화” 세션에서는 패리티에 쓰기를 최소화하는 데 도움이 되는 참고 자료를 제공합니다.
-    ![Write-패리티 ](media/mirror-accelerated-parity/Write-to-Parity.png)
+    ![쓰기-패리티](media/mirror-accelerated-parity/Write-to-Parity.png)
 
 **읽기:** ReFS가 관련 데이터가 들어 있는 계층에서 직접 읽습니다. 패리티가 HDD로 생성된 경우 저장소 공간 다이렉트의 캐시가 이 데이터를 캐시하여 이후 읽기를 가속화합니다. 
 

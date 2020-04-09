@@ -2,22 +2,18 @@
 title: 2 단계 계획 멀티 사이트 인프라
 description: 이 항목은 Windows Server 2016에서 멀티 사이트 배포에서 여러 원격 액세스 서버 배포 가이드의 일부입니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ras
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 64c10107-cb03-41f3-92c6-ac249966f574
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 6e23c3c3d22509af46b1a1741b545a787be00bfc
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 61d4faafa91a685cad50b4f47aaad8efd9b9a500
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80313887"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858346"
 ---
 # <a name="step-2-plan-the-multisite-infrastructure"></a>2 단계 계획 멀티 사이트 인프라
 
@@ -46,9 +42,9 @@ ms.locfileid: "80313887"
   
 3.  각 Active Directory 사이트에 도메인 컨트롤러는 것이 좋습니다. 읽기 전용 도메인 컨트롤러 수 있습니다.  
   
-4.  도메인 컨트롤러를 포함 하는 각 Active Directory 사이트, 진입점의 서버에 대 한 The GPO는 끝점과 연결 된 Active Directory 사이트에 도메인 컨트롤러 중 하나에 의해 관리 됩니다. 이 사이트에 있는 쓰기 가능한 도메인 컨트롤러가 없는 경우 가장 가까운 진입점에 구성 된 첫 번째 원격 액세스 서버에 있는 쓰기 가능한 도메인 컨트롤러에는 서버에 대 한 GPO 관리 됩니다. 가장 가까운 링크 비용 계산에 의해 결정 됩니다. 이 시나리오에서는 변경한 후 구성이 있을 수 있습니다 지연 GPO를 관리 하는 도메인 컨트롤러와 서버의 Active Directory 사이트에 읽기 전용 도메인 컨트롤러 간에 복제할 때는 note 합니다.  
+4.  도메인 컨트롤러를 포함 하는 각 Active Directory 사이트, 진입점의 서버에 대 한 The GPO는 엔드포인트과 연결 된 Active Directory 사이트에 도메인 컨트롤러 중 하나에 의해 관리 됩니다. 이 사이트에 있는 쓰기 가능한 도메인 컨트롤러가 없는 경우 가장 가까운 진입점에 구성 된 첫 번째 원격 액세스 서버에 있는 쓰기 가능한 도메인 컨트롤러에는 서버에 대 한 GPO 관리 됩니다. 가장 가까운 링크 비용 계산에 의해 결정 됩니다. 이 시나리오에서는 변경한 후 구성이 있을 수 있습니다 지연 GPO를 관리 하는 도메인 컨트롤러와 서버의 Active Directory 사이트에 읽기 전용 도메인 컨트롤러 간에 복제할 때는 note 합니다.  
   
-5.  클라이언트 Gpo 및 선택적 응용 프로그램 서버 Gpo는 주 도메인 컨트롤러 (PDC) 에뮬레이터와 실행 중인 도메인 컨트롤러에서 관리 됩니다. 즉, Gpo 반드시 진입점을 포함 하는 Active Directory 사이트에 관리 되지 않는 클라이언트는 클라이언트에 연결 합니다.  
+5.  클라이언트 Gpo 및 선택적 애플리케이션 서버 Gpo는 주 도메인 컨트롤러 (PDC) 에뮬레이터와 실행 중인 도메인 컨트롤러에서 관리 됩니다. 즉, Gpo 반드시 진입점을 포함 하는 Active Directory 사이트에 관리 되지 않는 클라이언트는 클라이언트에 연결 합니다.  
   
 6.  Active Directory 사이트에 대 한 도메인 컨트롤러에 연결할 수 없는 경우 원격 액세스 서버 (있는 경우)는 사이트의 다른 도메인 컨트롤러에 연결 됩니다. 그렇지 않으면 다른 사이트는 업데이트 된 GPO를 검색 하 고 클라이언트를 인증 하는 도메인 컨트롤러에 연결 합니다. 두 경우 모두 원격 액세스 관리 콘솔 및 PowerShell cmdlet를 검색 하거나 구성 설정을 수정 하 여 도메인 컨트롤러를 사용할 때까지 사용할 수 없습니다. 유의 사항은 다음과 같습니다.  
   
@@ -66,7 +62,7 @@ ms.locfileid: "80313887"
 -   각 진입점에 대 한 Windows 7 클라이언트 컴퓨터를 포함 하는 고유한 보안 그룹입니다. 각 도메인에 대 한 고유한 그룹을 만드는 것이 좋습니다. 예를 들어: Domain1\DA_Clients_Europe; Domain2\DA_Clients_Europe; Domain1\DA_Clients_US; Domain2\DA_Clients_US 합니다.  
   
 ## <a name="23-plan-group-policy-objects"></a><a name="bkmk_2_3_GPO"></a>2.3 그룹 정책 개체 계획  
-원격 액세스 배포 중 구성 된 DirectAccess 설정은 Gpo에 수집 됩니다. DirectAccess 클라이언트의 원격 액세스 서버 및 필요에 따라 응용 프로그램 서버에 대 한 Gpo를 사용 하는 이미 단일 서버 배포 합니다. 멀티 사이트 배포에는 다음 Gpo 사항이 필요합니다.  
+원격 액세스 배포 중 구성 된 DirectAccess 설정은 Gpo에 수집 됩니다. DirectAccess 클라이언트의 원격 액세스 서버 및 필요에 따라 애플리케이션 서버에 대 한 Gpo를 사용 하는 이미 단일 서버 배포 합니다. 멀티 사이트 배포에는 다음 Gpo 사항이 필요합니다.  
   
 -   각 진입점에 대 한 서버 GPO입니다.  
   

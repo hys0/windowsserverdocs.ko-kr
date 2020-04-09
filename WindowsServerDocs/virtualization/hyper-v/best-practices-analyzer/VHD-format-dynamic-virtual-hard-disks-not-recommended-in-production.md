@@ -2,24 +2,23 @@
 title: VHD 포맷 동적 가상 하드 디스크는 프로덕션 환경에서 서버 작업을 실행 하는 가상 컴퓨터에 대 한 권장 되지 않습니다.
 description: 이 모범 사례 분석기 규칙에 대 한 텍스트의 온라인 버전입니다.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 324a60a0-1d15-4ef2-9f17-23cbd2eb42ce
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: bf5464208fc145a31571f01822bb5ba54efe89c4
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 195bc4c85d380c8f0b15b27d042b30491f635d5d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71364595"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854176"
 ---
 # <a name="vhd-format-dynamic-virtual-hard-disks-are-not-recommended-for-virtual-machines-that-run-server-workloads-in-a-production-environment"></a>VHD 포맷 동적 가상 하드 디스크는 프로덕션 환경에서 서버 작업을 실행 하는 가상 컴퓨터에 대 한 권장 되지 않습니다.
 
->적용 대상: Windows Server 2016
+>적용 대상: Windows Server 2016
 
 모범 사례 분석기 및 검사에 대한 자세한 내용은 [모범 사례 분석기 검사 실행 및 검사 결과 관리](https://go.microsoft.com/fwlink/p/?LinkID=223177)를 참조하세요.  
   
@@ -27,12 +26,12 @@ ms.locfileid: "71364595"
 |-|-|  
 |**운영 체제**|Windows Server 2016|  
 |**제품/기능**|Hyper-V|  
-|**Severity**|경고|  
-|**범주**|Configuration|  
+|**등급**|경고|  
+|**범주**|구성|  
   
 다음 섹션에서는 기울임꼴이이 문제에 대 한 모범 사례 분석기 도구에 표시 되는 UI 텍스트를 나타냅니다.
   
-## <a name="issue"></a>**문제점**  
+## <a name="issue"></a>**문제**  
 *하나 이상의 가상 컴퓨터에서 VHD 형식의 동적 확장 가상 하드 디스크를 사용 합니다.*  
   
 ## <a name="impact"></a>**식**  

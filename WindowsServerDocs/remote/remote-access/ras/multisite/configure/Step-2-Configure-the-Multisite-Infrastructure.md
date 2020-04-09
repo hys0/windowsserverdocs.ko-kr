@@ -2,22 +2,18 @@
 title: 멀티 사이트 인프라를 구성 하는 2 단계
 description: 이 항목은 Windows Server 2016에서 멀티 사이트 배포에서 여러 원격 액세스 서버 배포 가이드의 일부입니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ras
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: faec70ac-88c0-4b0a-85c7-f0fe21e28257
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 9434f3192da110c8ad61e999d2aecd02bfff3812
-ms.sourcegitcommit: 3c3dfee8ada0083f97a58997d22d218a5d73b9c4
+ms.openlocfilehash: b636396ac7102d52ca5700dd2a4a4f81357b1685
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80639843"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858406"
 ---
 # <a name="step-2-configure-the-multisite-infrastructure"></a>멀티 사이트 인프라를 구성 하는 2 단계
 
@@ -115,7 +111,7 @@ New-ADReplicationSubnet -Name "2001:db8:2::/64" -Site "Second-Site"
   
 7.  **도메인**, 도메인을 입력 이름, 예를 들어 corp.contoso.com입니다.  
   
-8.  아래에서 **이 작업을 수행 하는 자격 증명**, 클릭 **변경**합니다. 에 **Windows 보안** 대화 상자에서 추가 도메인 컨트롤러를 설치할 수 있는 계정의 사용자 이름 및 암호를 제공 합니다. 추가 도메인 컨트롤러를 설치하려면 Enterprise Admins 그룹 또는 Domain Admins 그룹의 구성원이어야 합니다. 자격 증명을 제공 했으면 클릭 **다음**합니다.  
+8.  아래에서 **이 작업을 수행 하는 자격 증명**, 클릭 **변경**합니다. 에 **Windows 보안** 대화 상자에서 추가 도메인 컨트롤러를 설치할 수 있는 계정의 사용자 이름 및 암호를 제공 합니다. 추가 도메인 컨트롤러를 설치하려면 Enterprise Admins 그룹 또는 Domain Admins 그룹의 구성원이어야 합니다. 자격 증명을 제공했으면 **다음**을 클릭합니다.  
   
 9. 에 **도메인 컨트롤러 옵션** 페이지에서 다음을 수행 합니다.  
   

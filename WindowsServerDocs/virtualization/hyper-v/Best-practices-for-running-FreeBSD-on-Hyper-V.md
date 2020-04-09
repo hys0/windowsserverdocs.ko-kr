@@ -2,25 +2,23 @@
 title: Hyper-v에 FreeBSD를 실행 하기 위한 모범 사례
 description: 가상 컴퓨터에서 FreeBSD을 실행 하기 위한 권장 사항을 제공 합니다.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0c66f1c8-2606-43a3-b4cc-166acaaf2d2a
 author: shirgall
 ms.author: kathydav
 ms.date: 01/09/2017
-ms.openlocfilehash: 1d284b38e1bdb642aa40ecbb8e82caa7712f7aad
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 18f59020ed4878e9a54150dcda18bca3da1dd614
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71365633"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853286"
 ---
 # <a name="best-practices-for-running-freebsd-on-hyper-v"></a>Hyper-v에 FreeBSD를 실행 하기 위한 모범 사례
 
->적용 대상: Windows Server 2019, Windows Server 2016, Hyper-v Server 2016, Windows Server 2012 R2, Hyper-v Server 2012 R2, Windows Server 2012, Hyper-v 서버 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
+>적용 대상: Windows Server 2019, Windows Server 2016, Hyper-v 서버 2016, Windows Server 2012 R2, Hyper-v Server 2012 R2, Windows Server 2012, Hyper-v Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
 
 이 항목에는 Hyper-v 가상 컴퓨터에서 게스트 운영 체제로 FreeBSD를 실행 하기 위한 권장 사항 목록이 포함 되어 있습니다.
 
@@ -42,7 +40,7 @@ ms.locfileid: "71365633"
 
 ## <a name="create-labels-for-disk-devices"></a>디스크 장치에 대 한 레이블 만들기
 
-시작 하는 동안 새 장치는 검색 된 것으로 장치 노드가 만들어집니다. 이 새 장치가 추가 되 면 장치 이름을 변경할 수 의미할 수 있습니다. 시작 하는 동안 루트 탑재 오류가 발생 하는 경우 충돌 및 변경을 방지 하기 위해 각 IDE 파티션에 대 한 레이블을 만들어야 합니다. 방법에 대 한 자세한 내용은 [디스크 장치 레이블](https://www.freebsd.org/doc/handbook/geom-glabel.html)지정을 참조 하세요. 예를 들면 다음과 같습니다. 
+시작 하는 동안 새 디바이스는 검색 된 것으로 디바이스 노드가 만들어집니다. 이 새 디바이스가 추가 되 면 디바이스 이름을 변경할 수 의미할 수 있습니다. 시작 하는 동안 루트 탑재 오류가 발생 하는 경우 충돌 및 변경을 방지 하기 위해 각 IDE 파티션에 대 한 레이블을 만들어야 합니다. 방법에 대 한 자세한 내용은 [디스크 장치 레이블](https://www.freebsd.org/doc/handbook/geom-glabel.html)지정을 참조 하세요. 예를 들면 다음과 같습니다. 
 
 > [!IMPORTANT]
 > 변경 하기 전에 프로그램 fstab의 백업 복사본을 확인 합니다.
@@ -62,7 +60,7 @@ ms.locfileid: "71365633"
    # exit
    ```
 
-   형상 레이블에 대 한 추가 정보는 다음 위치에서 찾을 수 있습니다. [디스크 장치에 레이블을](https://www.freebsd.org/doc/handbook/geom-glabel.html)지정 합니다.
+   형상 레이블에 대 한 추가 정보는 [디스크 장치 레이블](https://www.freebsd.org/doc/handbook/geom-glabel.html)지정에서 찾을 수 있습니다.
 
 3. 시스템이 다중 사용자 부팅을 계속 합니다. 부팅이 완료 된 후/etc/fstab를 편집 하 고 기존 장치 이름을 해당 레이블로 바꿉니다. 최종/etc/fstab는 다음과 같습니다.
 
@@ -90,6 +88,6 @@ ms.locfileid: "71365633"
 ```
 
 
-참조
+참고 항목
 
 * [Hyper-v에서 지원 되는 FreeBSD 가상 컴퓨터](Supported-FreeBSD-virtual-machines-on-Hyper-V.md)

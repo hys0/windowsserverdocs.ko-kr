@@ -1,24 +1,20 @@
 ---
 title: Acl (액세스 제어 목록)을 사용 하 여 데이터 센터 네트워크 트래픽 흐름 관리
 description: 이 항목에서는 Acl (액세스 제어 목록)을 구성 하 여 가상 서브넷의 데이터 센터 방화벽과 Acl을 사용 하는 데이터 트래픽 흐름을 관리 하는 방법에 대해 알아봅니다. 가상 서브넷 또는 네트워크 인터페이스에 적용 되는 Acl을 만들어 데이터 센터 방화벽을 사용 하도록 설정 하 고 구성 합니다.
-manager: dougkim
-ms.custom: na
+manager: grcusanz
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-sdn
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6a7ac5af-85e9-4440-a631-6a3a38e9015d
-ms.author: lizross
-author: eross-msft
+ms.author: anpaul
+author: AnirbanPaul
 ms.date: 08/27/2018
-ms.openlocfilehash: 1f18ad9ddb0ea1a7575f6fcb26189f36f818ada2
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 2b8a3af119ac11f3bcfd704bb4f43f12c989dbf6
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80317479"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854416"
 ---
 # <a name="use-access-control-lists-acls-to-manage-datacenter-network-traffic-flow"></a>Acl (액세스 제어 목록)을 사용 하 여 데이터 센터 네트워크 트래픽 흐름 관리
 

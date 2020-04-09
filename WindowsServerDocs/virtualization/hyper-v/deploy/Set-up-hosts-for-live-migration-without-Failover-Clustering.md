@@ -2,21 +2,19 @@
 title: 장애 조치 클러스터링이 없는 실시간 마이그레이션에 대 한 호스트 설정
 description: 클러스터 되지 않은 환경에서 실시간 마이그레이션을 설정 하는 방법에 대 한 지침을 제공 합니다.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b5e3c405-cb76-4ff2-8042-c2284448c435
-author: KBDAzure
+author: kbdazure
 ms.author: kathydav
 ms.date: 9/30/2016
-ms.openlocfilehash: 3f0c13ba44eb498635b9b0c049b2921776049840
-ms.sourcegitcommit: 9a6a692a7b2a93f52bb9e2de549753e81d758d28
+ms.openlocfilehash: 2c2f671bf59e95de2604c91944fab3d65f82410e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72591060"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860886"
 ---
 # <a name="set-up-hosts-for-live-migration-without-failover-clustering"></a>장애 조치 클러스터링이 없는 실시간 마이그레이션에 대 한 호스트 설정
 
@@ -33,7 +31,7 @@ ms.locfileid: "72591060"
 - 원본 및 대상 서버에 Windows Server 2016 또는 Windows Server 2012 r 2의 Hyper-v 역할이 설치 되어 있어야 합니다. 가상 컴퓨터가 버전 5 이상인 경우 Windows Server 2016 및 Windows Server 2012 r 2를 실행 하는 호스트 간에 실시간 마이그레이션을 수행할 수 있습니다. <br>버전 업그레이드 지침은 [windows 10 또는 Windows Server 2016에서 hyper-v의 가상 머신 버전 업그레이드](Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md)를 참조 하세요. 설치 지침은 [Windows Server에 hyper-v 역할 설치](../get-started/Install-the-Hyper-V-role-on-Windows-Server.md)를 참조 하세요.
 
 - 동일한 Active Directory 도메인에 속하거나 서로 신뢰 하는 도메인에 속해 있는 원본 및 대상 컴퓨터.
-- 원본 또는 대상 서버에 도구를 설치 하지 않은 경우 Windows Server 2016 또는 Windows 10을 실행 하는 컴퓨터에 설치 된 Hyper-v 관리 도구는 서버에서 도구를 실행 합니다.
+- 도구는 원본 또는 대상 서버에 설치 되어 있지 않으면 Windows Server 2016 또는 Windows 10을 실행 하는 컴퓨터에 설치 된 Hyper-v 관리 도구는 서버에서 도구를 실행 합니다.
 
 ## <a name="consider-options-for-authentication-and-networking"></a>인증 및 네트워킹에 대 한 옵션을 고려
 
@@ -52,7 +50,7 @@ ms.locfileid: "72591060"
 
 -  **기본 설정 네트워크**:는 사용 가능한 모든 네트워크를 통해 실시간 마이그레이션 트래픽을 허용 하거나 특정 네트워크로 트래픽을 격리할? 보안을 유지하는 가장 좋은 방법으로 실시간 마이그레이션 트래픽은 네트워크를 통해 전송될 때 암호화되지 않으므로 트래픽을 신뢰할 수 있는 프라이빗 네트워크로 격리하는 것이 좋습니다. 네트워크 격리는 물리적으로 떨어진 네트워크나 VLAN 등의 또 다른 신뢰할 수 있는 네트워킹 기술을 통해 구현할 수 있습니다.
 
-## <a name="BKMK_Step1"></a>1 단계: 제한 된 위임 구성 (선택 사항)
+## <a name="step-1-configure-constrained-delegation-optional"></a><a name="BKMK_Step1"></a>1 단계: 제한 된 위임 구성 (선택 사항)
 실시간 마이그레이션 트래픽을 인증에 Kerberos를 사용 하 여 했으면 Domain Administrators 그룹의 구성원 인 계정을 사용 하는 제한 된 위임을 구성 합니다.
 
 ### <a name="use-the-users-and-computers-snap-in-to-configure-constrained-delegation"></a>사용자 및 컴퓨터 스냅인을 사용 하 여 제한 된 위임 구성
@@ -75,7 +73,7 @@ ms.locfileid: "72591060"
 
 9. **서비스 추가**, 사용 가능한 서비스 목록에서 다음을 수행 하 고 클릭, **확인**:
 
-    -   가상 컴퓨터 저장소를 이동하려면 **cifs**를 선택합니다. 이동 하려는 가상 컴퓨터와 함께 저장소도 가상 컴퓨터의 저장소만 이동 하려는 경우 처럼이 소프트웨어가 필요 합니다. 서버가 Hyper-V용 SMB 저장소를 사용하도록 구성된 경우 이미 이 선택 사항이 선택되어 있습니다.
+    -   가상 컴퓨터 저장소를 이동하려면 **cifs**를 선택합니다. 이동 하려는 가상 컴퓨터와 함께 스토리지도 가상 컴퓨터의 스토리지만 이동 하려는 경우 처럼이 소프트웨어가 필요 합니다. 서버가 Hyper-V용 SMB 스토리지를 사용하도록 구성된 경우 이미 이 선택 사항이 선택되어 있습니다.
 
     -   가상 컴퓨터를 이동하려면 **Microsoft 가상 시스템 마이그레이션 서비스**를 선택합니다.
 
@@ -88,7 +86,7 @@ ms.locfileid: "72591060"
   -  Hyper-v를 실행 하는 서버에 로그인 하는 도메인 컨트롤러에 변경 내용이 복제 됩니다.
   -  도메인 컨트롤러에서 새 Kerberos 티켓을 발급 합니다.
 
-## <a name="BKMK_Step2"></a>2 단계: 실시간 마이그레이션을 위한 원본 및 대상 컴퓨터 설정
+## <a name="step-2-set-up-the-source-and-destination-computers-for-live-migration"></a><a name="BKMK_Step2"></a>2 단계: 실시간 마이그레이션을 위한 원본 및 대상 컴퓨터 설정
 이 단계에서는 인증 및 네트워킹에 대 한 옵션을 선택 합니다. 보안 모범 사례로, 위에서 설명한 대로 실시간 마이그레이션 트래픽에 사용할 특정 네트워크를 선택 하는 것이 좋습니다. 또한이 단계는 성능 옵션을 선택 하는 방법을 보여줍니다.
 
 ### <a name="use-hyper-v-manager-to-set-up-the-source-and-destination-computers-for-live-migration"></a>Hyper-v 관리자를 사용 하 여 실시간 마이그레이션 위한 원본 및 대상 컴퓨터를 설정 하려면
@@ -103,7 +101,7 @@ ms.locfileid: "72591060"
 
 5.  아래에서 **동시 실시간 마이그레이션**, 2의 기본값을 사용 하지 않으려는 경우 다른 숫자를 지정 합니다.
 
-6.  특정 네트워크 연결을 사용하여 실시간 마이그레이션 트래픽을 수용하려는 경우 **들어오는 실시간 마이그레이션**아래에서 **추가** 를 클릭하여 IP 주소 정보를 입력합니다. 그렇지 않은 경우, **사용 가능한 모든 네트워크를 실시간 마이그레이션에 사용**을 클릭합니다. **확인**을 클릭합니다.
+6.  특정 네트워크 연결을 사용하여 실시간 마이그레이션 트래픽을 수용하려는 경우 **들어오는 실시간 마이그레이션** 아래에서 **추가**를 클릭하여 IP 주소 정보를 입력합니다. 그렇지 않은 경우, **사용 가능한 모든 네트워크를 실시간 마이그레이션에 사용**을 클릭합니다. **확인**을 클릭합니다.
 
 7.  Kerberos 및 성능 옵션을 선택 하려면 확장 **실시간 마이그레이션** 선택한 다음 **고급 기능**합니다.
 
@@ -143,7 +141,7 @@ PS C:\> Set-VMHost -VirtualMachineMigrationPerformanceOption SMB
 |----------|---------------|
     |TCP/IP|TCP/IP 연결을 통해 대상 서버에 가상 컴퓨터의 메모리를 복사합니다.|
     |압축|TCP/IP 연결을 통해 대상 서버로 복사 하기 전에 가상 컴퓨터의 메모리 내용이 압축 합니다. **참고:** 이것이 **기본** 설정 합니다.|
-    |SMB|SMB 3.0 연결을 통해 대상 서버에 가상 컴퓨터의 메모리를 복사합니다.<br /><br />-원본 및 대상 서버에서 네트워크 어댑터는 원격 직접 메모리 액세스 (RDMA) 기능이 사용 하도록 설정 하는 경우 SMB 다이렉트가 사용 됩니다.<br />-SMB 다중 채널은 자동으로 감지 하 고 적절 한 SMB 다중 채널 구성이 식별 된 다중 연결 사용 합니다.<br /><br />자세한 내용은 [SMB 다이렉트를 사용한 파일 서버의 성능 향상](https://technet.microsoft.com/library/jj134210(WS.11).aspx)을 참조하십시오.|
+    |SMB|SMB 3.0 연결을 통해 대상 서버에 가상 컴퓨터의 메모리를 복사합니다.<p>-원본 및 대상 서버에서 네트워크 어댑터는 원격 직접 메모리 액세스 (RDMA) 기능이 사용 하도록 설정 하는 경우 SMB 다이렉트가 사용 됩니다.<br />-SMB 다중 채널은 자동으로 감지 하 고 적절 한 SMB 다중 채널 구성이 식별 된 다중 연결 사용 합니다.<p>자세한 내용은 [SMB 다이렉트를 사용한 파일 서버의 성능 향상](https://technet.microsoft.com/library/jj134210(WS.11).aspx)을 참조하십시오.|
 
  ## <a name="next-steps"></a>다음 단계
 

@@ -2,19 +2,19 @@
 title: 소프트웨어 정의 네트워크 인프라 배포
 description: 이 항목에서는 Windows Server 2016의 스크립트를 사용 하 여 Microsoft SDN (소프트웨어 정의 네트워크) 인프라를 배포 하는 방법에 대 한 항목의 링크를 제공 합니다.
 ms.prod: windows-server
-ms.service: virtual-network
 ms.technology: networking-sdn
 ms.topic: get-started-article
 ms.assetid: 6c665c88-df28-4150-81d4-a47e9fa5255c
-ms.author: daveba
 ms.date: 08/23/2018
-author: daveba
-ms.openlocfilehash: 6450419e03b07c4350edbf58a8c3ab8e48cbac7a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: anpaul
+author: AnirbanPaul
+manager: grcusanz
+ms.openlocfilehash: 99b5b54e12362f3468220c6ddb9a4f32ace243a6
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406141"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860716"
 ---
 # <a name="deploy-a-software-defined-network-infrastructure"></a>소프트웨어 정의 네트워크 인프라 배포
 

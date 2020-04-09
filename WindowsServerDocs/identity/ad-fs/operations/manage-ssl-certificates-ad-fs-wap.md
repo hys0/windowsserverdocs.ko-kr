@@ -9,12 +9,12 @@ ms.date: 10/02/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 230fdaac28f4766c33e62362ca4c7e4d20f22c8e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b832756e123bee0223738ee804ac3a4db2371e84
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71357742"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855296"
 ---
 # <a name="managing-ssl-certificates-in-ad-fs-and-wap-in-windows-server-2016"></a>Windows Server 2016의 AD FS 및 WAP의 SSL 인증서 관리
 
@@ -38,7 +38,7 @@ ms.locfileid: "71357742"
 
 ## <a name="replacing-the-ssl-certificate-for-ad-fs"></a>AD FS에 대 한 SSL 인증서 바꾸기
 > [!NOTE]
-> AD FS SSL 인증서는 AD FS 관리 스냅인에 있는 AD FS 서비스 통신 인증서와 동일 하지 않습니다. AD FS SSL 인증서를 변경 하려면 PowerShell을 사용 해야 합니다.
+> AD FS SSL 인증서는 AD FS 관리 스냅인에 있는 AD FS 서비스 통신 인증서와 다릅니다. AD FS SSL 인증서를 변경 하려면 PowerShell을 사용 해야 합니다.
 
 먼저, AD FS 서버가 실행 중인 인증서 바인딩 모드 (기본 인증서 인증 바인딩 또는 대체 클라이언트 TLS 바인딩 모드)를 확인 합니다.
 

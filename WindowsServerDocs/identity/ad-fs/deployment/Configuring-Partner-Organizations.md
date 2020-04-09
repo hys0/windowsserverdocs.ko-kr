@@ -1,7 +1,6 @@
 ---
 ms.assetid: 4d002764-58b4-4137-9c86-1e55b02e07ce
 title: 파트너 조직 구성
-description: ''
 author: billmath
 manager: femila
 ms.date: 05/31/2017
@@ -9,12 +8,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 575d7e3fc97496c3f7c147220fe342add66517c3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: ac83d9754365f3ceea5b363af4df93862bdb59e6
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408395"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855496"
 ---
 # <a name="configuring-partner-organizations"></a>파트너 조직 구성
 
@@ -28,7 +27,7 @@ Active Directory Federation Services \(AD FS\)에 새 파트너 조직을 배포
   
 즉, 계정 파트너는 계정\-쪽 페더레이션 서버에서 보안 토큰을 발급 하는 사용자의 조직을 나타냅니다. 계정 파트너 조직의 페더레이션 서버는 로컬 사용자를 인증 하 고 리소스 파트너가 권한 부여 결정을 내리는 데 사용 하는 보안 토큰을 만듭니다.  
   
-특성 저장소와 관련 하 여 AD FS의 계정 파트너는 개념적으로 다른 포리스트에 있는 리소스에 대 한 액세스 권한이 필요한 단일 Active Directory 포리스트와 개념적으로 동일 합니다. 이 포리스트의 계정은 두 포리스트 간에 외부 트러스트 또는 포리스트 트러스트 관계가 존재 하는 경우와 사용자가 액세스 권한을 얻으려고 하는 리소스가 적절 한 권한 부여로 설정 된 경우에만 리소스 포리스트의 리소스에 액세스할 수 있습니다. 권한에.  
+특성 저장소와 관련 하 여 AD FS의 계정 파트너는 개념적으로 다른 포리스트에 있는 리소스에 대 한 액세스 권한이 필요한 단일 Active Directory 포리스트와 개념적으로 동일 합니다. 이 포리스트의 계정은 두 포리스트 간에 외부 트러스트 또는 포리스트 트러스트 관계가 존재 하는 경우와 사용자가 액세스 하려고 하는 리소스가 적절 한 권한 부여 권한으로 설정 된 경우에만 리소스 포리스트의 리소스에 액세스할 수 있습니다.  
   
 ## <a name="about-resource-partner-organizations"></a>리소스 파트너 조직 정보  
 리소스 파트너는 웹 서버가 있는 AD FS 배포의 조직입니다. 리소스 파트너는 계정 파트너를 신뢰 하 여 사용자를 인증 합니다. 따라서 권한 부여 결정을 내리기 위해 리소스 파트너는 계정 파트너의 사용자가 제공 하는 보안 토큰에 패키지 된 클레임을 사용 합니다.  

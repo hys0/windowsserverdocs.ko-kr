@@ -4,15 +4,15 @@ description: PowerShell의 성능에 대 한 스크립팅
 ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author: JasonSh
+ms.author: jasonsh
 author: lzybkr
 ms.date: 10/16/2017
-ms.openlocfilehash: 2898cf5ee965da77c9f6a3473e55c1cee6b53f2b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f22a4f1ba5c0f048e2aa01c744feb3b2b83007a0
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71354981"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80851926"
 ---
 # <a name="powershell-scripting-performance-considerations"></a>PowerShell 스크립팅 성능 고려 사항
 
@@ -30,20 +30,20 @@ $null = $arrayList.Add($item)
 [void]$arrayList.Add($item)
 ```
 
-@No__t-0에 대 한 할당 또는 `[void]`로의 캐스팅은 거의 동일 하며, 일반적으로 성능이 중요 한 경우에는 우선적으로 사용할 수 있어야 합니다.
+`$null` 또는 `[void]`로의 캐스팅에 대 한 할당은 거의 동일 하며, 일반적으로 성능이 중요 한 경우에는 우선적으로 사용할 수 있습니다.
 
 ```PowerShell
 $arrayList.Add($item) > $null
 ```
 
-@No__t-0에 대 한 파일 리디렉션은 이전 대체와 거의 동일 하지만 대부분의 스크립트는 차이점을 알 수 없습니다.
+`$null`에 대 한 파일 리디렉션은 이전 대체와 거의 동일 하지만 대부분의 스크립트는 차이점을 알 수 없습니다.
 시나리오에 따라 파일 리디렉션은 약간 약간의 오버 헤드를 발생 시키지만
 
 ```PowerShell
 $arrayList.Add($item) | Out-Null
 ```
 
-파이프에 `Out-Null`은 대체 항목에 비해 상당한 오버 헤드가 발생 합니다.
+파이프를 `Out-Null`에 대 한 대체와 비교할 때 상당한 오버 헤드가 발생 합니다.
 성능에 중요 한 코드는 피해 야 합니다.
 
 ```PowerShell
@@ -53,8 +53,8 @@ $null = . {
 }
 ```
 
-스크립트 블록을 소개 하 고이를 호출 하 고 (점 소싱을 사용 하 여), `$null`에 결과를 할당 하면 많은 스크립트 블록의 출력을 표시 하지 않는 편리한 기술입니다.
-이 기법은 `Out-Null`에 대 한 파이프 및 파이프를 수행 하므로 성능이 중요 한 스크립트에서 피해 야 합니다.
+스크립트 블록을 소개 하 고이를 호출 하 여 (점 소싱을 사용 하는 경우), `$null`에 결과를 할당 하면 많은 스크립트 블록의 출력을 억제 하는 편리한 기술입니다.
+이 기술은 `Out-Null` 파이프 뿐만 아니라 대략적으로 수행 되며 성능에 민감한 스크립트에서 피해 야 합니다.
 이 예의 추가 오버 헤드는 이전에 인라인 스크립트인 스크립트 블록을 만들고 호출 하는 것에서 나옵니다.
 
 
@@ -84,8 +84,8 @@ $results.AddRange((Do-SomethingElse))
 $results
 ```
 
-배열이 필요 하면 고유한 `ArrayList`을 사용 하 고 배열을 원할 때 `ArrayList.ToArray`을 호출 하기만 하면 됩니다.
-또는 PowerShell에서 `ArrayList` 및 `Array`을 만들도록 할 수 있습니다.
+배열이 필요 하면 고유한 `ArrayList` 사용 하 고 배열을 원할 때 `ArrayList.ToArray`를 호출할 수 있습니다.
+또는 PowerShell에서 `ArrayList` 및 `Array`를 만들도록 할 수 있습니다.
 
 ```PowerShell
 $results = @(
@@ -94,8 +94,8 @@ $results = @(
 )
 ```
 
-이 예에서 PowerShell은 배열 식 내의 파이프라인에 기록 된 결과를 저장 하는 `ArrayList`을 만듭니다.
-@No__t-0에 할당 하기 직전에 PowerShell은 `ArrayList`을 `object[]`로 변환 합니다.
+이 예제에서 PowerShell은 배열 식 내에 파이프라인에 기록 된 결과를 저장 하는 `ArrayList`을 만듭니다.
+`$results`에 할당 하기 직전에 PowerShell은 `ArrayList`을 `object[]`변환 합니다.
 
 ## <a name="processing-large-files"></a>큰 파일 보고서 처리
 
@@ -127,9 +127,9 @@ finally
 
 ## <a name="avoid-write-host"></a>쓰기 방지-호스트
 
-일반적으로 출력을 콘솔에 직접 작성 하는 것이 좋지 않은 경우는 거의 없습니다. 그러나 많은 스크립트에서 `Write-Host`을 사용 합니다.
+일반적으로 출력을 콘솔에 직접 작성 하는 것이 좋지 않은 경우는 거의 없지만 많은 스크립트에서 `Write-Host`사용 하는 것이 좋습니다.
 
-콘솔에 많은 메시지를 작성 해야 하는 경우 `Write-Host`은 `[Console]::WriteLine()` 보다 속도가 느릴 수 있습니다. 그러나 `[Console]::WriteLine()`은 powershell .exe 또는 powershell_ise와 같은 특정 호스트에 대 한 적절 한 대안이 며 모든 호스트에서 작동 하지 않을 수 있습니다.
+콘솔에 많은 메시지를 작성 해야 하는 경우 `Write-Host` `[Console]::WriteLine()`보다 속도가 느릴 수 있습니다. 그러나 `[Console]::WriteLine()`은 powershell .exe 나 powershell_ise와 같은 특정 호스트에 대 한 적절 한 대안이 며 모든 호스트에서 작동 하지 않을 수 있습니다.
 
-@No__t-0을 사용 하는 대신 [쓰기 출력](/powershell/module/Microsoft.PowerShell.Utility/Write-Output?view=powershell-5.1)을 사용 하는 것이 좋습니다.
+`Write-Host`를 사용 하는 대신 [쓰기 출력](/powershell/module/Microsoft.PowerShell.Utility/Write-Output?view=powershell-5.1)을 사용 하는 것이 좋습니다.
 

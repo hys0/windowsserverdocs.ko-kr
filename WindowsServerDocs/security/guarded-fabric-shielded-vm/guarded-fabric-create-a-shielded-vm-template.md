@@ -1,19 +1,19 @@
 ---
 title: Windows 차폐 VM 템플릿 디스크 만들기
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: 9c8b84e8-1f5a-47a1-83ca-b1dbd801cb0b
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 01/29/2019
-ms.openlocfilehash: 04fdd52544b69d2c41abcbee00dd00b31bf5f21c
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 766ea9688b7f08914ca68a960cc21393963bd0e9
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75949780"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856776"
 ---
 # <a name="create-a-windows-shielded-vm-template-disk"></a>Windows 차폐 VM 템플릿 디스크 만들기
 
@@ -69,7 +69,7 @@ Windows Server 2016, Windows 10 (원격 서버 관리 도구, RSAT가 설치 된
 
 4. 시작 메뉴의 **관리 도구** 폴더에서 **템플릿 디스크 마법사** 를 시작 하거나 명령 프롬프트에 템플릿 **disk마법사나 .Exe** 를 입력 하 여 템플릿 디스크 마법사를 시작 합니다.
 
-5. **인증서** 페이지에서 **찾아보기** 를 클릭 하 여 인증서 목록을 표시 합니다. 디스크 템플릿을 준비 하는 데 사용할 인증서를 선택 합니다. **확인** 을 클릭하고 **다음**을 클릭합니다.
+5. **인증서** 페이지에서 **찾아보기** 를 클릭 하 여 인증서 목록을 표시 합니다. 디스크 템플릿을 준비 하는 데 사용할 인증서를 선택 합니다. **확인**을 클릭하고 **다음**을 클릭합니다.
 
 6. 가상 디스크 페이지에서 **찾아보기** 를 클릭 하 여 준비한 VHDX를 선택 하 고 **다음**을 클릭 합니다.
 
@@ -105,7 +105,7 @@ VMM을 사용 하는 경우 템플릿 디스크를 만든 후 VMM 라이브러�
 
     c. **운영 체제**의 경우 목록을 확장 하 고 디스크에 설치 된 운영 체제를 선택 합니다. 운영 체제를 선택 하는 것은 VMM에 VHDX가 비어 있지 않음을 나타냅니다.
 
-    d. 속성을 업데이트한 경우 **확인**을 클릭합니다.
+    . 속성을 업데이트한 경우 **확인**을 클릭합니다.
 
 디스크 이름 옆의 작은 방패 아이콘은 디스크를 보호 된 Vm의 준비 된 템플릿 디스크로 나타냅니다. 열 머리글을 마우스 오른쪽 단추로 클릭 하 고 **차폐** 열을 설정/해제 하 여 디스크가 일반 또는 차폐 VM 배포용으로 사용 되는지 여부를 나타내는 텍스트 표현을 볼 수도 있습니다.
 
@@ -113,7 +113,7 @@ VMM을 사용 하는 경우 템플릿 디스크를 만든 후 VMM 라이브러�
 
 ## <a name="create-the-shielded-vm-template-in-vmm-using-the-prepared-template-disk"></a>준비 된 템플릿 디스크를 사용 하 여 VMM에서 보호 된 VM 템플릿 만들기
 
-VMM 라이브러리에 준비 된 템플릿 디스크가 있으면 보호 된 Vm에 대 한 VM 템플릿을 만들 준비가 된 것입니다. 보호 된 Vm에 대 한 VM 템플릿은 특정 설정 (2 세대 VM, UEFI 및 보안 부팅 사용 등)이 고정 되 고 다른 일부는 사용할 수 없게 된다는 점에서 기존 VM 템플릿과 약간 다릅니다. 테 넌 트 사용자 지정은 몇 가지 VM 속성을 선택 하는 것으로 제한 됩니다. . VM 템플릿을 만들려면 다음 단계를 수행 합니다.
+VMM 라이브러리에 준비 된 템플릿 디스크가 있으면 보호 된 Vm에 대 한 VM 템플릿을 만들 준비가 된 것입니다. 보호 된 Vm에 대 한 VM 템플릿은 특정 설정 (2 세대 VM, UEFI 및 보안 부팅 사용 등)이 고정 되 고 다른 일부는 사용할 수 없게 된다는 점에서 기존 VM 템플릿과 약간 다릅니다. 테 넌 트 사용자 지정은 VM의 몇 가지 속성을 선택 하는 것으로 제한 됩니다. VM 템플릿을 만들려면 다음 단계를 수행 합니다.
 
 1. **라이브러리** 작업 영역의 맨 위에 있는 홈 탭에서 **VM 템플릿 만들기** 를 클릭 합니다.
 

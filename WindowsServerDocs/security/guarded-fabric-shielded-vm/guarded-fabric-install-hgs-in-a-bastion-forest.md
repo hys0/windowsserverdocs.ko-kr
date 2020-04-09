@@ -1,18 +1,18 @@
 ---
 title: 기존 요새 포리스트에 HGS 설치
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 5c503331893dbea65c99d79eb7444893d5f3b657
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 20e0d5e73713c0d6280e95d51ec8de8fde612350
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403592"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856586"
 ---
 # <a name="install-hgs-in-an-existing-bastion-forest"></a>기존 요새 포리스트에 HGS 설치 
 

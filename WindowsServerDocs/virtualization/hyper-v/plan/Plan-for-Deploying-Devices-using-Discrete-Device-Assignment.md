@@ -2,19 +2,17 @@
 title: 불연속 장치 할당을 사용 하 여 장치 배포 계획
 description: Windows Server에서 DDA가 작동 하는 방식에 대해 알아봅니다.
 ms.prod: windows-server
-ms.service: na
 ms.technology: hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 author: chrishuybregts
 ms.author: chrihu
 ms.date: 08/21/2019
-ms.openlocfilehash: 114dd87b86bfffd1070229af57ae65deea2c2db0
-ms.sourcegitcommit: 81198fbf9e46830b7f77dcd345b02abb71ae0ac2
+ms.openlocfilehash: 9cc9614524c424398df550351aa2abfa7d173d43
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72923870"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856096"
 ---
 # <a name="plan-for-deploying-devices-using-discrete-device-assignment"></a>불연속 장치 할당을 사용 하 여 장치 배포 계획
 >적용 대상: Microsoft Hyper-V Server 2016, Windows Server 2016, Microsoft Hyper-V Server 2019, Windows Server 2019
@@ -29,11 +27,11 @@ GPU 가상화의 다른 방법에 대 한 자세한 내용은 [Windows Server에
 불연속 장치 할당은 1 세대 또는 2 세대 Vm에 대해 지원 됩니다.  또한 지원 되는 게스트에는 Windows 10, Windows Server 2019, Windows Server 2016, Windows Server 2012r2 [KB 3133690](https://support.microsoft.com/kb/3133690) 이 적용 되 고 다양 한 [Linux OS](../supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows.md) 배포가 포함 됩니다.
 
 ## <a name="system-requirements"></a>시스템 요구 사항
-[Windows server에 대 한 시스템 요구 사항](../../../get-started/System-Requirements--and-Installation.md) 및 [hyper-v에 대 한 시스템 요구 사항](../System-requirements-for-Hyper-V-on-Windows.md)외에도 불연속 장치 할당에는 PCIe 구성에 대해 운영 체제 제어를 부여할 수 있는 서버 클래스 하드웨어가 필요 합니다. 패브릭 (네이티브 PCI Express 컨트롤) 또한 PCIe 루트 복소수는 ACS ("Access Control Services")를 지원 해야 합니다 .이를 통해 Hyper-v에서 i/o MMU을 통해 모든 PCIe 트래픽을 강제로 적용할 수 있습니다.
+[Windows server에 대 한 시스템 요구 사항](../../../get-started/System-Requirements--and-Installation.md) 및 [hyper-v에 대 한 시스템 요구 사항](../System-requirements-for-Hyper-V-on-Windows.md)외에도 불연속 장치 할당을 사용 하려면 PCIE 패브릭 (네이티브 PCI Express 컨트롤) 구성에 대 한 운영 체제 제어 권한을 부여할 수 있는 서버 클래스 하드웨어가 필요 합니다. 또한 PCIe 루트 복소수는 ACS ("Access Control Services")를 지원 해야 합니다 .이를 통해 Hyper-v에서 i/o MMU을 통해 모든 PCIe 트래픽을 강제로 적용할 수 있습니다.
 
 이러한 기능은 일반적으로 서버의 BIOS에서 직접 노출 되지 않으며 다른 설정 뒤에 숨겨진 경우가 많습니다.  예를 들어, SR-IOV 지원과 BIOS에서 동일한 기능이 필요 합니다. "SR-IOV 사용"을 설정 해야 할 수 있습니다.  BIOS에서 올바른 설정을 확인할 수 없는 경우 시스템 공급 업체에 문의 하세요.
 
-하드웨어에서 개별 장치 할당을 할 수 있는 하드웨어를 보장 하기 위해 엔지니어는 Hyper-v 사용 가능 호스트에서 실행 하 여 서버가 올바르게 설정 되어 있는지 여부를 테스트 하는 데 사용할 수 있는 [컴퓨터 프로필 스크립트](#machine-profile-script) 와 불연속 장치 할당.
+하드웨어에서 개별 장치 할당을 수행할 수 있도록 하드웨어를 관리 하기 위해 microsoft 엔지니어가 Hyper-v 사용 가능 호스트에서 실행 하 여 서버를 올바르게 설정 했는지 여부와 개별 장치 할당을 수행할 수 있는 장치를 테스트할 수 있는 [컴퓨터 프로필 스크립트](#machine-profile-script) 를 만들었습니다.
 
 ## <a name="device-requirements"></a>장치 요구 사항
 모든 PCIe 장치를 불연속 장치 할당과 함께 사용할 수 있는 것은 아닙니다.  예를 들어 레거시 (INTx) PCI 인터럽트를 활용 하는 이전 장치는 지원 되지 않습니다. Jake Oshin의 [블로그 게시물](https://blogs.technet.microsoft.com/virtualization/2015/11/20/discrete-device-assignment-machines-and-devices/) 에 대 한 세부 정보가 표시 됩니다. 그러나 소비자의 경우 [컴퓨터 프로필 스크립트](#machine-profile-script) 를 실행 하면 불연속 장치 할당에 사용할 수 있는 장치가 표시 됩니다.
@@ -63,7 +61,7 @@ GPU 가상화의 다른 방법에 대 한 자세한 내용은 [Windows Server에
 호스트에서 장치를 분리 하 고 탑재 하려면 PCIe 위치 경로가 필요 합니다.  위치 경로 예제는 다음과 같습니다. `"PCIROOT(20)#PCI(0300)#PCI(0000)#PCI(0800)#PCI(0000)"`.   또한 [컴퓨터 프로필 스크립트](#machine-profile-script) 는 PCIe 장치의 위치 경로도 반환 합니다.
 
 ### <a name="getting-the-location-path-by-using-device-manager"></a>Device Manager를 사용 하 여 위치 경로 가져오기
-![장치 관리자를 입력하고](../deploy/media/dda-devicemanager.png)
+![장치 관리자](../deploy/media/dda-devicemanager.png)
 - Device Manager를 열고 장치를 찾습니다.  
 - 장치를 마우스 오른쪽 단추로 클릭 하 고 "속성"을 선택 합니다.
 - 세부 정보 탭으로 이동 하 여 속성 드롭다운에서 "위치 경로"를 선택 합니다.  

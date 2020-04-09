@@ -1,7 +1,6 @@
 ---
 ms.assetid: d282bb4e-38a0-4c7c-83d8-f6ea89278057
 title: AD FS 2016 이상에서 Openid connect Connect를 사용 하 여 웹 응용 프로그램 빌드
-description: ''
 author: billmath
 ms.author: billmath
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 9b3d64558c27e7b4bda20b6af27e02d55431c94d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 49d952a49cf474708f57a0ae2a7760d2470af607
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71358794"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857496"
 ---
 # <a name="build-a-web-application-using-openid-connect-with-ad-fs-2016-and-later"></a>AD FS 2016 이상에서 Openid connect Connect를 사용 하 여 웹 응용 프로그램 빌드
 
@@ -38,9 +37,9 @@ ms.locfileid: "71358794"
 
     ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_1.PNG)  
 
-3.  복사는 **클라이언트 식별자** 값입니다.  그는 나중에 값으로 ida: ClientId 응용 프로그램 web.config 파일에 대 한 합니다.  
+3.  복사는 **클라이언트 식별자** 값입니다.  그는 나중에 값으로 ida: ClientId 애플리케이션 web.config 파일에 대 한 합니다.  
 
-4.  **리디렉션 URI** - **에대해다음을입력합니다. https://localhost:44320/**  **추가**를 클릭합니다. **다음**을 클릭합니다.  
+4.  **리디렉션 URI:**  -  **https://localhost:44320/** 에 대해 다음을 입력 합니다.  **추가**를 클릭합니다. **다음**을 클릭합니다.  
 
     ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_2.PNG)  
 

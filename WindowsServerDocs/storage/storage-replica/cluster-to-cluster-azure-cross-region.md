@@ -1,7 +1,6 @@
 ---
 title: Azure의 교차 지역 클러스터 간 저장소 복제
 description: Azure에서 클러스터 간 저장소 복제 교차 지역
-keywords: 저장소 복제본, 서버 관리자, Windows Server, Azure, 클러스터, 지역 간, 다른 지역
 author: arduppal
 ms.author: arduppal
 ms.date: 12/19/2018
@@ -9,12 +8,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: storage-replica
 manager: mchad
-ms.openlocfilehash: 806857d5de067c0f4640344ed80338b474dd758e
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: ee4f508cf0a65b59c3253d6865c649cc9652c569
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950066"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856306"
 ---
 # <a name="cluster-to-cluster-storage-replica-cross-region-in-azure"></a>Azure의 교차 지역 클러스터 간 저장소 복제
 
@@ -32,13 +31,13 @@ Azure에서 지역 간 응용 프로그램에 대 한 저장소 복제본을 클
 
 1. Azure Portal에서 두 개의 다른 지역에 [리소스 그룹](https://ms.portal.azure.com/#create/Microsoft.ResourceGroup) 을 만듭니다.
 
-    예를 들어 위에 나와 있는 것 처럼 미국 서 부 **2** 및 **AZCROSS** 의AZ2AZ에 대 한 **sr-iov** 가 있습니다.
+    예를 들어 위에 나와 있는 것 처럼 미국 서 부 **2** 및 **AZCROSS** 의 **West Central US**AZ2AZ에 대 한 **sr-iov** 가 있습니다.
 
 2. 각 클러스터에 대 한 각 리소스 그룹에 하나씩 두 개의 [가용성 집합](https://ms.portal.azure.com/#create/Microsoft.AvailabilitySet-ARM)을 만듭니다.
     - 가용성 집합 (**az2azAS1**) (**AZ2AZ**)
     - 가용성 집합 (**azcross**) IN (**azcross**)
 
-3. 두 가상 네트워크 만들기
+3. 두 개의 가상 네트워크 만들기
    - 하나의 서브넷과 하나의 게이트웨이 서브넷이 있는 첫 번째 리소스 그룹 (**az2az**)에 [가상 네트워크](https://ms.portal.azure.com/#create/Microsoft.VirtualNetwork-ARM) (**az2az**)를 만듭니다.
    - 하나의 서브넷과 하나의 게이트웨이 서브넷이 있는 두 번째 리소스 그룹 (**azcross**)에 [가상 네트워크](https://ms.portal.azure.com/#create/Microsoft.VirtualNetwork-ARM) (**azcross**)를 만듭니다.
 
@@ -135,7 +134,7 @@ Azure에서 지역 간 응용 프로그램에 대 한 저장소 복제본을 클
      $IPResourceName = "Cluster IP Address" # IP Address cluster resource name.
      $ILBIP = "10.3.0.100" # IP Address in Internal Load Balancer (ILB) - The static IP address for the load balancer configured in the Azure portal.
      [int]$ProbePort = 59999
-     Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";”ProbeFailureThreshold”=5;"EnableDhcp"=0}  
+     Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";"ProbeFailureThreshold"=5;"EnableDhcp"=0}  
     ```
 
 12. **Azcross1**/**azcross2** 한 노드에서 다음 명령을 실행 합니다.
@@ -144,7 +143,7 @@ Azure에서 지역 간 응용 프로그램에 대 한 저장소 복제본을 클
      $IPResourceName = "Cluster IP Address" # IP Address cluster resource name.
      $ILBIP = "10.0.0.10" # IP Address in Internal Load Balancer (ILB) - The static IP address for the load balancer configured in the Azure portal.
      [int]$ProbePort = 59999
-     Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";”ProbeFailureThreshold”=5;"EnableDhcp"=0}  
+     Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";"ProbeFailureThreshold"=5;"EnableDhcp"=0}  
     ```
 
     두 클러스터 모두 서로 연결/통신할 수 있는지 확인 합니다.
@@ -166,7 +165,7 @@ Azure에서 지역 간 응용 프로그램에 대 한 저장소 복제본을 클
 
 14. 다음 단계로 이동 하기 전에 [클러스터 유효성 검사 테스트](../../failover-clustering/create-failover-cluster.md#validate-the-configuration) 를 실행 합니다.
 
-15. Windows PowerShell을 시작하고 [Test-SRTopology](https://docs.microsoft.com/powershell/module/storagereplica/test-srtopology?view=win10-ps) cmdlet을 사용하여 모든 스토리지 복제본 요구 사항을 충족하는지 확인합니다. 장기 실행 성능 평가 모드뿐만 아니라 빠른 테스트를 위해 요구 사항 전용 모드에서 cmdlet을 사용할 수 있습니다.
+15. Windows PowerShell을 시작하고 [Test-SRTopology](https://docs.microsoft.com/powershell/module/storagereplica/test-srtopology?view=win10-ps) cmdlet을 사용하여 모든 저장소 복제본 요구 사항을 충족하는지 확인합니다. 장기 실행 성능 평가 모드뿐만 아니라 빠른 테스트를 위해 요구 사항 전용 모드에서 cmdlet을 사용할 수 있습니다.
  
 16. 클러스터 간 저장소 복제본을 구성 합니다.
     두 방향으로 한 클러스터에서 다른 클러스터로의 액세스 권한 부여:

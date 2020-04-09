@@ -1,24 +1,20 @@
 ---
 title: 보호된 사용자 보안 그룹
 description: Windows Server 보안
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-credential-protection
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1b0b5180-f65a-43ac-8ef3-66014116f296
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: 10234611904a4ed5b58939d3fd5ca341221c073c
-ms.sourcegitcommit: 51e0b575ef43cd16b2dab2db31c1d416e66eebe8
+ms.openlocfilehash: c6883513fdc02f4f4d1b874995780639279cc178
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76259148"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857056"
 ---
 # <a name="protected-users-security-group"></a>보호된 사용자 보안 그룹
 
@@ -26,7 +22,7 @@ ms.locfileid: "76259148"
 
 IT 전문가를 위한 이 항목에서는 Active Directory 보안 그룹인 보호된 사용자에 대해 알아보고 작동 방식을 설명합니다. 이 그룹은 Windows Server 2012 R2 도메인 컨트롤러에서 도입 되었습니다.
 
-## <a name="BKMK_ProtectedUsers"></a>개요
+## <a name="overview"></a><a name="BKMK_ProtectedUsers"></a>설명은
 
 이 보안 그룹은 엔터프라이즈 내에서 자격 증명 노출을 관리 하기 위한 전략의 일부로 설계 되었습니다. 이 그룹의 구성원 계정에는 구성할 수 없는 보호가 자동으로 적용됩니다. 보호된 그룹의 구성원은 기본적으로 사전에 엄격하게 보호됩니다. 계정에 대한 이러한 보호를 수정하려면 보안 그룹에서 해당 계정을 제거하는 방법밖에 없습니다.
 
@@ -38,7 +34,7 @@ IT 전문가를 위한 이 항목에서는 Active Directory 보안 그룹인 보
 자세한 내용은이 항목에서 [보호 된 사용자 그룹의 작동 방식](#BKMK_HowItWorks) 을 참조 하십시오.
 
 
-## <a name="BKMK_Requirements"></a>보호 된 사용자 그룹 요구 사항
+## <a name="protected-users-group-requirements"></a><a name="BKMK_Requirements"></a>보호 된 사용자 그룹 요구 사항
 보호 된 사용자 그룹의 구성원에 대 한 장치 보호를 제공 하기 위한 요구 사항은 다음과 같습니다.
 
 - 보호된 사용자 글로벌 보안 그룹이 계정 도메인의 모든 도메인 컨트롤러에 복제되어야 합니다.
@@ -58,14 +54,14 @@ Windows Server 2012 R2 이전 운영 체제를 실행 하는 도메인 컨트롤
 
 보호 된 사용자 그룹은 Windows Server 2012 r 2를 실행 하는 도메인 컨트롤러에 [PDC (주 도메인 컨트롤러) 에뮬레이터 역할을 전송](https://technet.microsoft.com/library/cc816944(v=ws.10).aspx) 하 여 만들 수 있습니다. 해당 그룹 개체를 다른 도메인 컨트롤러에 복제한 후 이전 버전의 Windows Server를 실행하는 도메인 컨트롤러에서 PDC 에뮬레이터 역할을 호스트할 수 있습니다.
 
-### <a name="BKMK_ADgroup"></a>보호 된 사용자 그룹 AD 속성
+### <a name="protected-users-group-ad-properties"></a><a name="BKMK_ADgroup"></a>보호 된 사용자 그룹 AD 속성
 
 다음 표에는 보호된 사용자 그룹의 속성이 나와 있습니다.
 
-|특성|Value|
+|특성|값|
 |-------|-----|
 |잘 알려진 SID/RID|S-1-5-21-<domain>-525|
-|작업 표시줄의 검색 상자에|도메인 전역|
+|형식|도메인 전역|
 |기본 컨테이너|CN=Users, DC=<domain>, DC=|
 |기본 구성원|없음|
 |기본 소속|없음|
@@ -74,7 +70,7 @@ Windows Server 2012 R2 이전 운영 체제를 실행 하는 도메인 컨트롤
 |이 그룹의 관리를 서비스 관리자가 아닌 관리자에게 안전하게 위임?|아니요|
 |기본 사용자 권한|기본 사용자 권한 없음|
 
-## <a name="BKMK_HowItWorks"></a>보호 된 사용자 그룹의 작동 방식
+## <a name="how-protected-users-group-works"></a><a name="BKMK_HowItWorks"></a>보호 된 사용자 그룹의 작동 방식
 이 섹션에서는 다음과 같은 경우 보호된 사용자 그룹의 작동 방식에 대해 설명합니다.
 
 - Windows 장치에 서명 됨
@@ -110,20 +106,20 @@ Windows Server 2012 R2 도메인을 인증 하는 보호 된 사용자 그룹의
 
 - 초기 4시간의 수명이 지난 후 Kerberos 갱신
 
-보호된 사용자 그룹의 모든 계정에 구성할 수 없는 TGT 만료 설정이 지정됩니다. 일반적으로 도메인 컨트롤러는 **사용자 티켓 최대 수명** 및 **사용자 티켓 갱신 최대 수명**도메인 정책에 따라 TGT 수명 및 갱신을 설정합니다. 보호된 사용자 그룹의 경우 이러한 도메인 정책에 대해 600분이 설정됩니다.
+보호된 사용자 그룹의 모든 계정에 구성할 수 없는 TGT 만료 설정이 지정됩니다. 일반적으로 도메인 컨트롤러는 **사용자 티켓 최대 수명** 및 **사용자 티켓 갱신 최대 수명** 도메인 정책에 따라 TGT 수명 및 갱신을 설정합니다. 보호된 사용자 그룹의 경우 이러한 도메인 정책에 대해 600분이 설정됩니다.
 
-자세한 내용은 [How to Configure Protected Accounts](how-to-configure-protected-accounts.md)를 참조하세요.
+자세한 내용은 [보호된 계정을 구성하는 방법](how-to-configure-protected-accounts.md)을 참조하세요.
 
 ## <a name="troubleshooting"></a>문제 해결
 보호된 사용자와 관련된 이벤트 문제를 해결하는 데 도움이 되는 두 가지 작업 관리 로그가 있습니다. 이러한 새 로그는 이벤트 뷰어에 있으며, 기본적으로 사용 하지 않도록 설정 되어 있으며, **응용 프로그램 및 서비스 Logs\Microsoft\Windows\Authentication**아래에 있습니다.
 
 |이벤트 ID 및 로그|설명|
 |----------|--------|
-|104<br /><br />**ProtectedUser-Client**|이유: 클라이언트의 보안 패키지에 자격 증명이 없습니다.<br /><br />이 오류는 계정이 보호된 사용자 보안 그룹의 구성원인 경우 클라이언트 컴퓨터에 기록됩니다. 이 이벤트는 보안 패키지가 서버의 인증을 받는 데 필요한 자격 증명을 캐시하지 않음을 나타냅니다.<br /><br />패키지 이름, 사용자 이름, 도메인 이름 및 서버 이름을 표시합니다.|
-|304<br /><br />**ProtectedUser-Client**|이유: 보안 패키지는 보호 된 사용자의 자격 증명을 저장 하지 않습니다.<br /><br />보안 패키지가 사용자의 로그인 자격 증명을 캐시 하지 않음을 나타내는 정보 이벤트가 클라이언트에 기록 됩니다. 다이제스트(WDigest), 자격 증명 위임(CredSSP) 및 NTLM은 보호된 사용자에 대한 로그온 자격 증명을 유지하지 못합니다. 자격 증명을 묻는 메시지가 나타나는 경우에도 애플리케이션을 실행할 수 있습니다.<br /><br />패키지 이름, 사용자 이름 및 도메인 이름을 표시합니다.|
-|100<br /><br />**ProtectedUserFailures-DomainController**|이유: 보호된 사용자 보안 그룹에 속한 계정에서 NTLM 로그인 실패가 발생합니다.<br /><br />계정이 보호된 사용자 보안 그룹의 구성원이기 때문에 NTLM 인증에 실패했음을 나타내는 오류가 도메인 컨트롤러에 기록됩니다.<br /><br />계정 이름 및 디바이스 이름을 표시합니다.|
-|104<br /><br />**ProtectedUserFailures-DomainController**|이유: DES 또는 RC4 암호화 종류는 Kerberos 인증에 사용되므로 보호된 사용자 보안 그룹의 사용자에 대해서는 로그인 실패가 발생합니다.<br /><br />계정이 보호된 사용자 보안 그룹의 구성원인 경우에는 DES 또는 RC4 암호화 종류를 사용할 수 없으므로 Kerberos 사전 인증에 실패했습니다.<br /><br />(AES는 허용됩니다.)|
-|303<br /><br />**ProtectedUserSuccesses-DomainController**|이유: 보호된 사용자 그룹의 구성원에게 Kerberos TGT(허용 티켓)가 성공적으로 발급되었습니다.|
+|104<p>**ProtectedUser-Client**|이유: 클라이언트의 보안 패키지에 자격 증명이 없습니다.<p>이 오류는 계정이 보호된 사용자 보안 그룹의 구성원인 경우 클라이언트 컴퓨터에 기록됩니다. 이 이벤트는 보안 패키지가 서버의 인증을 받는 데 필요한 자격 증명을 캐시하지 않음을 나타냅니다.<p>패키지 이름, 사용자 이름, 도메인 이름 및 서버 이름을 표시합니다.|
+|304<p>**ProtectedUser-Client**|이유: 보안 패키지는 보호 된 사용자의 자격 증명을 저장 하지 않습니다.<p>보안 패키지가 사용자의 로그인 자격 증명을 캐시 하지 않음을 나타내는 정보 이벤트가 클라이언트에 기록 됩니다. 다이제스트(WDigest), 자격 증명 위임(CredSSP) 및 NTLM은 보호된 사용자에 대한 로그온 자격 증명을 유지하지 못합니다. 자격 증명을 묻는 메시지가 나타나는 경우에도 응용 프로그램을 실행할 수 있습니다.<p>패키지 이름, 사용자 이름 및 도메인 이름을 표시합니다.|
+|100<p>**ProtectedUserFailures-DomainController**|이유: 보호된 사용자 보안 그룹에 속한 계정에서 NTLM 로그인 실패가 발생합니다.<p>계정이 보호된 사용자 보안 그룹의 구성원이기 때문에 NTLM 인증에 실패했음을 나타내는 오류가 도메인 컨트롤러에 기록됩니다.<p>계정 이름 및 디바이스 이름을 표시합니다.|
+|104<p>**ProtectedUserFailures-DomainController**|이유: DES 또는 RC4 암호화 종류는 Kerberos 인증에 사용되므로 보호된 사용자 보안 그룹의 사용자에 대해서는 로그인 실패가 발생합니다.<p>계정이 보호된 사용자 보안 그룹의 구성원인 경우에는 DES 또는 RC4 암호화 종류를 사용할 수 없으므로 Kerberos 사전 인증에 실패했습니다.<p>(AES는 허용됩니다.)|
+|303<p>**ProtectedUserSuccesses-DomainController**|이유: 보호된 사용자 그룹의 구성원에게 Kerberos TGT(허용 티켓)가 성공적으로 발급되었습니다.|
 
 
 ## <a name="additional-resources"></a>추가 리소스

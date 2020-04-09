@@ -4,15 +4,15 @@ description: Active Directory 성능 튜닝에서 사이트 정의 및 도메인
 ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author: TimWi; ChrisRob; HerbertM; KenBrumf;  MLeary; ShawnRab
+ms.author: timwi; chrisrob; herbertm; kenbrumf;  mleary; shawnrab
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 66c6f94f1f3fee924ba0d9a3bfa0c712d62bb095
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: aac7b8f37de2132778bd681d2f2e29ad0ad0810d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75947115"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80851876"
 ---
 # <a name="proper-placement-of-domain-controllers-and-site-considerations"></a>도메인 컨트롤러 및 사이트 고려 사항에 대 한 적절 한 배치
 

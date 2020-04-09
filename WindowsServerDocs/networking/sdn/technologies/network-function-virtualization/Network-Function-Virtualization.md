@@ -1,23 +1,19 @@
 ---
 title: 네트워크 기능 가상화
 description: 이 항목을 사용 하 여 Windows Server 2016의 데이터 센터 방화벽, 다중 테 넌 트 RAS 게이트웨이 및 SLB (소프트웨어 부하 분산)와 같은 가상 네트워킹 어플라이언스를 배포할 수 있도록 하는 네트워크 기능 가상화에 대해 알아볼 수 있습니다.
-manager: brianlic
-ms.custom: na
+manager: grcusanz
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-sdn
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 79df3bbe-48fd-4eff-8df6-35f6317566f3
-ms.author: lizross
-author: eross-msft
-ms.openlocfilehash: 1d5d5aaae5983e062dae203c60a7001f36e5629b
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.author: anpaul
+author: AnirbanPaul
+ms.openlocfilehash: aed1591756e7b491bd4c9ab325694dfb3e6fddb1
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80309814"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859626"
 ---
 # <a name="network-function-virtualization"></a>네트워크 기능 가상화
 
@@ -90,7 +86,7 @@ Microsoft SDN에 대 한 자세한 내용은 참조 [소프트웨어 정의 네�
 ## <a name="why-microsoft-is-a-great-platform-for-virtual-appliances"></a>왜 Microsoft는 가상 장비에 대 한 훌륭한 플랫폼  
 ![가상 네트워크 스택](../../../media/Network-Function-Virtualization/Microsoft-Network-Function-Virtualization.png)  
   
-Microsoft 플랫폼이를 가상 장비 빌드하여 배포 훌륭한 플랫폼으로 설계 되었다는 점입니다. 이유는 다음과 같습니다.  
+Microsoft 플랫폼이를 가상 장비 빌드하여 배포 훌륭한 플랫폼으로 설계 되었다는 점입니다. 그 이유는 다음과 같습니다.  
   
 -   Microsoft은 Windows Server 2016 키 가상화 된 네트워크 기능을 제공합니다.  
   

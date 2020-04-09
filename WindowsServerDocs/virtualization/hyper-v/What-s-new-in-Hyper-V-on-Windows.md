@@ -2,27 +2,25 @@
 title: Windows Server 2016에 Hyper-v의 새로운 기능
 description: Hyper-v의 새로운 기능에 대 한 요약 정보를 제공 합니다.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1a65a98e-54b6-4c41-9732-1e3d32fe3a5f
-author: KBDAzure
+author: kbdazure
 ms.author: kathydav
 ms.date: 09/21/2017
-ms.openlocfilehash: 195d78ff8de75ca9e3a88d4300bb2f52cd45632f
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: 5fc82d8eea78ad5605dceb6a21e8d543f9d9c88e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79322305"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857966"
 ---
 # <a name="whats-new-in-hyper-v-on-windows-server"></a>Windows Server에서 제공 되는 Hyper-v의 새로운 기능
 
 >적용 대상: Windows Server 2019, Microsoft Hyper-V Server 2016, Windows Server 2016
   
-이 문서에서는 Windows Server 2019, Windows Server 2016 및 Microsoft Hyper-V Server 2016에서 Hyper-v의 새로운 기능 및 변경 된 기능에 대해 설명 합니다. Windows server 2012 r 2를 사용 하 여 만든 가상 컴퓨터에서 새 기능을 사용 하 고 Windows Server 2019 또는 Windows Server 2016에서 Hyper-v를 실행 하는 서버로 이동 하거나 가져온 후에는 가상 컴퓨터 구성 버전을 수동으로 업그레이드 해야 합니다. 자세한 내용은 [가상 머신을 업그레이드 버전](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md)을 참고하세요.  
+이 문서에서는 Windows Server 2019, Windows Server 2016 및 Microsoft Hyper-V Server 2016에서 Hyper-v의 새로운 기능 및 변경 된 기능에 대해 설명 합니다. Windows server 2012 r 2를 사용 하 여 만든 가상 컴퓨터에서 새 기능을 사용 하 고 Windows Server 2019 또는 Windows Server 2016에서 Hyper-v를 실행 하는 서버로 이동 하거나 가져온 후에는 가상 컴퓨터 구성 버전을 수동으로 업그레이드 해야 합니다. 자세한 내용은 [가상 컴퓨터를 업그레이드 버전](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md)합니다.  
   
 다음은이 문서에 포함 된 항목 및 기능은 새로운 또는 업데이트 된 여부입니다.  
 
@@ -64,11 +62,11 @@ ms.locfileid: "79322305"
   
 ### <a name="discrete-device-assignment-new"></a>불연속 장치 할당 \(새\)
 
-이 기능은 일부 PCIe 하드웨어 장치에 가상 컴퓨터 직접 및 단독 액세스할 수 있도록 수 있습니다. 이러한 방식으로 장치를 사용 하 여 빠른 액세스는 Hyper-v 가상화 스택을 무시 합니다. 에 대 한 자세한 내용은 지원 되는 하드웨어, "불연속 디바이스 할당"을 참조 [Windows Server 2016에서 Hyper-v에 대 한 시스템 요구 사항](System-requirements-for-Hyper-V-on-Windows.md)합니다. 이 기능을 사용 하는 방법 및 고려 사항을 포함 하 여 자세한 내용은 가상화 블로그의 "[불연속 장치 할당-설명 및 배경](https://blogs.technet.microsoft.com/virtualization/2015/11/19/discrete-device-assignment-description-and-background/)" 게시물을 참조 하세요.
+이 기능은 일부 PCIe 하드웨어 디바이스에 가상 컴퓨터 직접 및 단독 액세스할 수 있도록 수 있습니다. 이러한 방식으로 디바이스를 사용 하 여 빠른 액세스는 Hyper-v 가상화 스택을 무시 합니다. 에 대 한 자세한 내용은 지원 되는 하드웨어, "불연속 장치 할당"을 참조 [Windows Server 2016에서 Hyper-v에 대 한 시스템 요구 사항](System-requirements-for-Hyper-V-on-Windows.md)합니다. 이 기능을 사용 하는 방법 및 고려 사항을 포함 하 여 자세한 내용은 가상화 블로그의 "[불연속 장치 할당-설명 및 배경](https://blogs.technet.microsoft.com/virtualization/2015/11/19/discrete-device-assignment-description-and-background/)" 게시물을 참조 하세요.
 
 ### <a name="encryption-support-for-the-operating-system-disk-in-generation-1-virtual-machines-new"></a>1 세대 가상 컴퓨터에 운영 체제 디스크에 대 한 암호화 지원을 \(새로 만들기)
 
-이제 BitLocker 드라이브 암호화를 사용 하 여 1 세대 가상 컴퓨터에 운영 체제 디스크를 보호할 수 있습니다. 새 기능인 키 저장소는 시스템 드라이브의 BitLocker 키를 저장할 작고 전용 드라이브를 만듭니다. 2 세대 가상 컴퓨터에만 제공 되는 가상 모듈 TPM (Trusted Platform)를 사용 하는 대신 수행 됩니다. 디스크의 암호를 해독 하 고 가상 컴퓨터를 시작하려면 Hyper-v 호스트는 인증된 가드 된 패브릭의 일부 이거나 가상 컴퓨터의 보호자 중 하나에서 프라이빗 키가 있습니다. 키 저장소 버전 8 가상 컴퓨터를 필요합니다. 가상 머신 버전에 대한 자세한 내용은 [Windows 10 또는 Windows Server 2016에서 Hyper-V의 가상 머신 버전 업그레이드](./deploy/upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server.md)을 참조하세요.  
+이제 BitLocker 드라이브 암호화를 사용 하 여 1 세대 가상 컴퓨터에 운영 체제 디스크를 보호할 수 있습니다. 새 기능인 키 저장소는 시스템 드라이브의 BitLocker 키를 저장할 작고 전용 드라이브를 만듭니다. 2 세대 가상 컴퓨터에만 제공 되는 가상 모듈 TPM (Trusted Platform)를 사용 하는 대신 수행 됩니다. 디스크의 암호를 해독 하 고 가상 컴퓨터를 시작하려면 Hyper-v 호스트는 인증된 가드 된 패브릭의 일부 이거나 가상 컴퓨터의 보호자 중 하나에서 프라이빗 키가 있습니다. 키 스토리지 버전 8 가상 컴퓨터를 필요합니다. 가상 컴퓨터 버전에 대 한 자세한 내용은 참조 [Windows 10 또는 Windows Server 2016에 Hyper-v에서 가상 컴퓨터를 업그레이드 버전](./deploy/upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server.md)합니다.  
   
 ### <a name="host-resource-protection-new"></a>새\) \(호스트 리소스 보호
 
@@ -113,7 +111,7 @@ Hyper-v의 Linux 가상 컴퓨터에 대 한 자세한 내용은 참조 하십�
 
 ### <a name="more-memory-and-processors-for-generation-2-virtual-machines-and-hyper-v-hosts-updated"></a>2 세대 가상 컴퓨터 및 Hyper-v 호스트에 대 한 더 많은 메모리 및 프로세서가 업데이트 \(\)
 
-버전 8 이상에서는 2 세대 가상 컴퓨터 훨씬 더 많은 메모리와 가상 프로세서를 사용할 수 있습니다. 호스트도 구성할 수 있습니다 훨씬 더 많은 메모리와 가상 프로세서 지원 하 던 것 보다. 이러한 변경 내용은 전자 상거래 온라인 트랜잭션 처리 (OLTP) 및 데이터 웨어하우징 (DW)에 대 한 큰 메모리 내 데이터베이스를 실행 하는 등 새로운 시나리오를 지원 합니다. Windows Server 블로그 최근 5.5 테라바이트의 4TB 메모리 내 데이터베이스를 실행 하는 128 가상 프로세서 및 메모리와 가상 컴퓨터의 성능 결과 게시 합니다. 성능은 물리적 서버 성능의 95% 이상입니다. 자세한 내용은 다음을 참조 하십시오. [메모리 내 트랜잭션 처리를 위해 Windows Server 2016 Hyper-v 대규모 VM 성능](https://blogs.technet.microsoft.com/windowsserver/2016/09/28/windows-server-2016-hyper-v-large-scale-vm-performance-for-in-memory-transaction-processing/)합니다. 가상 머신 버전에 대한 자세한 정보는 [Windows 10 또는 Windows Server 2016에서 Hyper-V의 가상 머신 버전 업그레이드](./deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md) 지원 되는 최대 구성의 전체 목록을 참조 하십시오. [Windows Server 2016의 Hyper-v 확장성에 대 한 계획](./plan/plan-hyper-v-scalability-in-windows-server.md)합니다. 
+버전 8 이상에서는 2 세대 가상 컴퓨터 훨씬 더 많은 메모리와 가상 프로세서를 사용할 수 있습니다. 호스트도 구성할 수 있습니다 훨씬 더 많은 메모리와 가상 프로세서 지원 하 던 것 보다. 이러한 변경 내용은 전자 상거래 온라인 트랜잭션 처리 (OLTP) 및 데이터 웨어하우징 (DW)에 대 한 큰 메모리 내 데이터베이스를 실행 하는 등 새로운 시나리오를 지원 합니다. Windows Server 블로그 최근 5.5 테라바이트의 4TB 메모리 내 데이터베이스를 실행 하는 128 가상 프로세서 및 메모리와 가상 컴퓨터의 성능 결과 게시 합니다. 성능은 물리적 서버 성능의 95% 이상입니다. 자세한 내용은 다음을 참조 하십시오. [메모리 내 트랜잭션 처리를 위해 Windows Server 2016 Hyper-v 대규모 VM 성능](https://blogs.technet.microsoft.com/windowsserver/2016/09/28/windows-server-2016-hyper-v-large-scale-vm-performance-for-in-memory-transaction-processing/)합니다. 가상 컴퓨터 버전에 대 한 자세한 참조 [Windows 10 또는 Windows Server 2016에 Hyper-v에서 가상 컴퓨터를 업그레이드 버전](./deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md)합니다. 지원 되는 최대 구성의 전체 목록을 참조 하십시오. [Windows Server 2016의 Hyper-v 확장성에 대 한 계획](./plan/plan-hyper-v-scalability-in-windows-server.md)합니다. 
 
 ### <a name="nested-virtualization-new"></a>중첩 된 가상화 \(새\)
 
@@ -131,7 +129,7 @@ Hyper-v의 Linux 가상 컴퓨터에 대 한 자세한 내용은 참조 하십�
   
 -   **원격 직접 메모리 액세스 (RDMA)와 포함 된 팀 (SET) 전환**합니다. 집합은 또한 사용 여부에 관계 없이 Hyper-v 가상 스위치에 바인딩된 네트워크 어댑터에서 RDMA를 설정할 수 있습니다. NIC 팀으로 동일한 기능 중 일부와 가상 스위치를 제공합니다. 자세한 내용은 다음을 참조 하십시오. [원격 직접 메모리 액세스 (RDMA) 및 스위치 포함 된 팀 (SET)](https://docs.microsoft.com/windows-server/virtualization/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming)합니다.  
   
--   **가상 머신 다중 큐 (VMMQ)** . 여러 하드웨어 큐 당 가상 컴퓨터를 할당 하 여 VMQ 처리량을 개선 합니다.  기본 큐는 가상 컴퓨터에 대 한 큐 집합을 되며 큐 간에 분산 되는 트래픽입니다.  
+-   **가상 컴퓨터 다중 큐 (VMMQ)** 합니다. 여러 하드웨어 큐 당 가상 컴퓨터를 할당 하 여 VMQ 처리량을 개선 합니다.  기본 큐는 가상 컴퓨터에 대 한 큐 집합을 되며 큐 간에 분산 되는 트래픽입니다.  
   
 -   **서비스 품질 (QoS 소프트웨어 정의 네트워크에 대 한)** 합니다. 기본 클래스 대역폭 내에서 가상 스위치를 통해 트래픽의 기본 클래스를 관리합니다.  
   
@@ -167,7 +165,7 @@ Windows server 2012 R2, Windows Server 2019 및 Windows Server 2016을 실행 �
   
 -   새로운 Hyper-v 기능을 사용할 수 있습니다.  
   
--   새 가상 컴퓨터 기능을 사용할 수 있도록 가상 컴퓨터 구성 수준을 수동으로 업데이트 하려면 업데이트 VmConfigurationVersion cmdlet을 사용 합니다. 자세한 내용은 [가상 머신을 업그레이드 버전](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md)을 참고하세요.    
+-   새 가상 컴퓨터 기능을 사용할 수 있도록 가상 컴퓨터 구성 수준을 수동으로 업데이트 하려면 업데이트 VmConfigurationVersion cmdlet을 사용 합니다. 자세한 내용은 [가상 컴퓨터를 업그레이드 버전](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md)합니다.    
 -   Windows Server 2012 r 2를 실행 하는 Hyper-v 클러스터에 노드를 추가할 수 없습니다.  
   
 > [!NOTE]  
@@ -201,11 +199,11 @@ Windows server 2012 R2, Windows Server 2019 및 Windows Server 2016을 실행 �
 .  
 ### <a name="storage-quality-of-service-qos-updated"></a>저장소 QoS (서비스 품질) \(업데이트\)
 
-이제 스케일 아웃 파일 서버에서 저장소 QoS 정책을 만들고 Hyper-V 가상 컴퓨터에서 하나 이상의 가상 디스크에 할당할 수 있습니다. 저장소 로드 변동에 따라 정책을 준수하도록 저장소 성능이 자동으로 재조정됩니다. 자세한 내용은 [스토리지 서비스 품질](../../storage/storage-qos/storage-qos-overview.md)을 참조하세요.  
+이제 스케일 아웃 파일 서버에서 스토리지 QoS 정책을 만들고 Hyper-V 가상 컴퓨터에서 하나 이상의 가상 디스크에 할당할 수 있습니다. 스토리지 로드 변동에 따라 정책을 준수하도록 스토리지 성능이 자동으로 재조정됩니다. 자세한 내용은 다음을 참조 하십시오. [저장소 서비스 품질](../../storage/storage-qos/storage-qos-overview.md)합니다.  
   
 ### <a name="virtual-machine-configuration-file-format-updated"></a>가상 컴퓨터 구성 파일 형식이 업데이트 \(\)
 
-가상 컴퓨터 구성 파일에는 구성 데이터를 보다 효율적으로 읽기 및 쓰기를 수행 하는 새 형식을 사용 합니다. 형식 뿐만 아니라 데이터가 손상 가능성이 더 낮아집니다 저장소 오류가 발생 하면 됩니다. .Vmcx 파일 이름 확장명을 사용 하는 가상 컴퓨터 구성 데이터 파일 및 런타임 상태 데이터 파일.vmrs 파일 이름 확장명을 사용 합니다.  
+가상 컴퓨터 구성 파일에는 구성 데이터를 보다 효율적으로 읽기 및 쓰기를 수행 하는 새 형식을 사용 합니다. 형식 뿐만 아니라 데이터가 손상 가능성이 더 낮아집니다 스토리지 오류가 발생 하면 됩니다. .Vmcx 파일 이름 확장명을 사용 하는 가상 컴퓨터 구성 데이터 파일 및 런타임 상태 데이터 파일.vmrs 파일 이름 확장명을 사용 합니다.  
   
 > [!IMPORTANT]  
 > .Vmcx 파일 이름 확장명 이진 파일을 나타냅니다. .Vmcx 또는.vmrs 파일 편집이 지원 되지 않습니다.  
@@ -216,7 +214,7 @@ Windows server 2012 R2, Windows Server 2019 및 Windows Server 2016을 실행 �
   
 Windows server 2016 또는 windows server 2012 2019에서 Hyper-v를 실행 하는 서버로 가상 머신을 이동 하거나 가져오는 경우 가상 머신의 구성이 자동으로 업데이트 되지 않습니다. 즉, Windows Server 2012 r 2를 실행 하는 서버에 다시 가상 컴퓨터를 이동할 수 있습니다. 그러나 즉, 가상 컴퓨터 구성의 버전을 수동으로 업데이트 될 때까지 새 가상 컴퓨터 기능을 사용할 수 없습니다.  
   
-검사 및 버전 업그레이드에 대한 지침은 [가상 머신 버전 업그레이드](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md)를 참조하세요. 이 문서는 또한 일부 기능이 도입 된 버전을 나열 합니다.   
+에 대 한 지침은 검사 및 버전 업그레이드를 참조 하십시오. [가상 컴퓨터를 업그레이드 버전](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md)합니다. 이 문서는 또한 일부 기능이 도입 된 버전을 나열 합니다.   
   
 > [!IMPORTANT]  
 > -   버전을 업데이트 한 후에 Windows Server 2012 r 2를 실행 하는 서버에 가상 컴퓨터를 이동할 수 없습니다.  
@@ -225,15 +223,15 @@ Windows server 2016 또는 windows server 2012 2019에서 Hyper-v를 실행 하�
 
 ### <a name="virtualization-based-security-for-generation-2-virtual-machines-new"></a>2 세대 가상 컴퓨터에 대 한 Virtualization-based 보안 \(새로 만들기)
 
-가상화 기반 보안 장치 가드 맬웨어로부터 악용 으로부터 운영 체제의 향상 된 보호를 제공 하는 가드를 자격 증명 등의 기능을 제공 합니다. 가상화 기반 보안은 버전 8부터 세대 2 게스트 가상 컴퓨터에서 사용할 수 있습니다. 가상 머신 버전에 대한 자세한 내용은 [Windows 10 또는 Windows Server 2016에서 Hyper-V의 가상 머신 버전 업그레이드](./deploy/upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server.md)을 참조하세요.
+가상화 기반 보안 장치 가드 맬웨어로부터 악용 으로부터 운영 체제의 향상 된 보호를 제공 하는 가드를 자격 증명 등의 기능을 제공 합니다. 가상화 기반 보안은 버전 8부터 세대 2 게스트 가상 컴퓨터에서 사용할 수 있습니다. 가상 컴퓨터 버전에 대 한 자세한 내용은 참조 [Windows 10 또는 Windows Server 2016에 Hyper-v에서 가상 컴퓨터를 업그레이드 버전](./deploy/upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server.md)합니다.
 
 ### <a name="windows-containers-new"></a>Windows 컨테이너 \(새\)
 
-Windows 컨테이너 여러 격리 된 응용 프로그램을 한 컴퓨터 시스템에서 실행을 허용 합니다. 신속 하 게 구축 하 고 뛰어나고 휴대용 됩니다. 두 가지 유형의 런타임 컨테이너를 사용할 수는 각각 서로 다른 수준의 응용 프로그램을 격리 합니다. Windows Server 컨테이너 네임 스페이스 및 프로세스 격리를 사용 합니다. Hyper-v 컨테이너는 각 컨테이너에 대 한 간단한 가상 컴퓨터를 사용합니다.  
+Windows 컨테이너 여러 격리 된 애플리케이션을 한 컴퓨터 시스템에서 실행을 허용 합니다. 신속 하 게 구축 하 고 뛰어나고 휴대용 됩니다. 두 가지 유형의 런타임 컨테이너를 사용할 수는 각각 서로 다른 수준의 애플리케이션을 격리 합니다. Windows Server 컨테이너 네임 스페이스 및 프로세스 격리를 사용 합니다. Hyper-v 컨테이너는 각 컨테이너에 대 한 간단한 가상 컴퓨터를 사용합니다.  
   
 주요 기능은 다음과 같습니다.  
   
--   웹 사이트 및 HTTPS를 사용 하 여 응용 프로그램에 대 한 지원  
+-   웹 사이트 및 HTTPS를 사용 하 여 애플리케이션에 대 한 지원  
   
 -   Windows 서버와 Hyper-v 컨테이너 Nano 서버를 호스팅할 수 있습니다.  
   

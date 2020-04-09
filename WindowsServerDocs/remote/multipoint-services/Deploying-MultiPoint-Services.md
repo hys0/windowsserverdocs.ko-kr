@@ -1,27 +1,23 @@
 ---
 title: MultiPoint 서비스 배포
 description: MultiPoint 서비스 배포 프로세스 개요
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 594bc09e-5d2d-4984-a9de-79d40b1308d6
 author: evaseydl
 ms.author: evas
 manager: scottman
-ms.openlocfilehash: 842b7b743624aa1e4b168b1be8e94f6d405d07e3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b6dff10519a951e002facc200beeb987546f5ee2
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71395693"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859746"
 ---
 # <a name="deploying-multipoint-services"></a>MultiPoint 서비스 배포
-이 가이드에서는 MultiPoint 서비스를 실행 하는 서버를 배포 하 고 MultiPoint 스테이션을 설정 하 고, 시스템을 설치 및 구성 하 고, 사용자 계정을 설정 하 고, 디스크 보호 설정 및 백업 설정과 같은 몇 가지 기본적인 관리 작업을 수행 하는 방법을 설명 합니다. 시스템 사용을 시작 하기 전에  
+이 가이드에서는 시스템 사용을 시작 하기 전에 MultiPoint 서비스를 실행 하는 서버를 배포 하 고 MultiPoint 스테이션을 설정 하 고, 시스템을 설치 및 구성 하 고, 사용자 계정을 설정 하 고, 디스크 보호를 설정 하 고 백업을 설정 하는 등의 몇 가지 기본적인 관리 작업을 수행 하는 방법을 설명 합니다.  
   
 > [!NOTE]  
 > 추가 지원이 필요한 경우 multipoint 서비스 도움말을 참조 하세요 .이 도움말은 MultiPoint 관리자 또는 MultiPoint 대시보드 화면에서 도움말 아이콘 또는 F1 키를 클릭 하 여 열 수 있습니다.  
@@ -43,7 +39,7 @@ ms.locfileid: "71395693"
   
     서버 사용을 시작 하기 전에 몇 가지 기본적인 서버 관리 작업을 수행 합니다. 디스크 보호 설정 서버 백업 설치 전원을 절약 하려면 절전 모드 설정을 구성 합니다. 도메인 배포에 대 한 그룹 정책 및 레지스트리를 구성 합니다.  
   
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
   
 - [MultiPoint 서비스](MultiPoint-Services.md)
 -   [MultiPoint 서비스 포럼](https://social.technet.microsoft.com/Forums/windowsserver/home?forum=windowsmultipointserver&filter=alltypes&sort=lastpostdesc)  

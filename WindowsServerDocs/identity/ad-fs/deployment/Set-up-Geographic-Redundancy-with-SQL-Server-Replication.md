@@ -1,6 +1,5 @@
 ---
 title: SQL Server 복제를 사용 하 여 지리적 중복성 설정
-description: ''
 author: billmath
 manager: femila
 ms.date: 05/31/2017
@@ -9,12 +8,12 @@ ms.prod: windows-server
 ms.technology: active-directory-federation-services
 ms.author: billmath
 ms.assetId: 7b9f9a4f-888c-4358-bacd-3237661b1935
-ms.openlocfilehash: 16cf1a237043aa546d4fc24164045aa9f9a1e6ac
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 54106ae635d44368542986c7c469560981f9888a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71359823"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855846"
 ---
 # <a name="setup-geographic-redundancy-with-sql-server-replication"></a>SQL Server 복제를 사용 하 여 지리적 중복성 설정
 
@@ -24,7 +23,7 @@ ms.locfileid: "71359823"
   
 AD FS 구성 데이터베이스로 SQL Server를 사용 하는 경우 SQL Server 복제를 사용 하 여 AD FS 팜에 대해 지역\-중복성을 설정할 수 있습니다. 지역\-중복성은 응용 프로그램이 한 사이트에서 다른 사이트로 전환할 수 있도록 두 개의 지리적으로 멀리 떨어진 사이트 간에 데이터를 복제 합니다. 이러한 방식으로 한 사이트의 장애가 발생 하는 경우에도 두 번째 사이트에서 모든 구성 데이터를 사용할 수 있습니다. 자세한 내용은 [SQL Server를 사용 하 여 페더레이션 서버 팜](../design/Federation-Server-Farm-Using-SQL-Server.md)에서 "SQL Server 지리적 중복성 섹션"을 참조 하세요.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>필수 조건  
 SQL server 팜을 설치 하 고 구성 합니다. 자세한 내용은 [https://technet.microsoft.com/evalcenter/hh225126.aspx](https://technet.microsoft.com/evalcenter/hh225126.aspx)를 참조 하세요. 초기 SQL Server에서 SQL Server 에이전트 서비스가 실행 중이 고 자동 시작으로 설정 되어 있는지 확인 합니다.  
   
 ## <a name="create-the-second-replica-sql-server-for-geo-redundancy"></a>지역\-중복성에 대 한 두 번째 \(복제본\) SQL Server 만들기  
@@ -156,7 +155,7 @@ SQL server 팜을 설치 하 고 구성 합니다. 자세한 내용은 [https://
   
 4.  또한 **SQL Server 에이전트\\작업** 노드 아래에서 게시\/구독의 작업을 실행 하도록 예약 된\) 작업\(을 확인할 수 있습니다.  로컬 작업만 표시 되므로 문제 해결을 위해 게시자와 구독자를 확인 해야 합니다.  작업을 마우스 오른쪽 단추로 클릭 하 고 **기록 보기** 를 선택 하 여 실행 기록 및 결과를 표시\-합니다.  
   
-## <a name="sqlagent"></a>도메인 계정 CONTOSO\\sqlagent에 대 한 SQL 로그인 구성  
+## <a name="configure-sql-login-for-the-domain-account-contososqlagent"></a><a name="sqlagent"></a>도메인 계정 CONTOSO\\sqlagent에 대 한 SQL 로그인 구성  
   
 1.  위의 절차에서 **에이전트 보안** 페이지에서 만들고 구성한 새 도메인 사용자의 이름을 \(CONTOSO\\sqlagent 이라는 기본 및 복제본 SQL Server에 새 로그인을 만듭니다.\)  
   

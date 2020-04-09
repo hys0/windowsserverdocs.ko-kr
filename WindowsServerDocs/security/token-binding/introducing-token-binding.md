@@ -1,6 +1,5 @@
 ---
 title: 토큰 바인딩 소개
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: 4623a48c-cefd-4a27-9173-2af58ac212f2
@@ -8,12 +7,12 @@ manager: alanth
 author: justinha
 ms.technology: security-authentication
 ms.date: 11/09/2016
-ms.openlocfilehash: 52ba35808b34eb07ecd6ac92819e9dc7a693b15b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d067db04fe881193143104ce9f75a0c9932907e7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403331"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855896"
 ---
 # <a name="introducing-token-binding"></a>토큰 바인딩 소개
 
@@ -30,7 +29,7 @@ ms.locfileid: "71403331"
     - 토큰 바인딩 프로토콜이 업데이트 됨 [[tokbind-01]](https://datatracker.ietf.org/doc/draft-ietf-tokbind-protocol/01/)
     - 토큰 바인딩 협상이 추가 된 TLS 확장 [[popov-tokbind-00]](https://tools.ietf.org/html/draft-popov-tokbind-negotiation-00)
     - WinInet & HTTP. SYS HTTP 업데이트를 통한 토큰 바인딩 지원 [[draft-ietf-tokbind-02]](https://datatracker.ietf.org/doc/draft-ietf-tokbind-https/02/)
-- Windows 10, 버전 1507 (서비스 업데이트 [KB4034668](https://support.microsoft.com/kb/KB4034668), windows 10, 버전 1511, 서비스 업데이트 [KB4034660](https://support.microsoft.com/kb/KB4034660), windows 10, 버전 1607 및 windows Server 2016 서비스 업데이트 [KB4034658](https://support.microsoft.com/kb/KB4034658) 지원 토큰 바인딩 프로토콜) 버전 0.10 – 기본적으로 설정
+- Windows 10, 버전 1507 서비스 업데이트 [KB4034668](https://support.microsoft.com/kb/KB4034668), windows 10, 버전 1511, 서비스 업데이트 [KB4034660](https://support.microsoft.com/kb/KB4034660), windows 10, 버전 1607 및 windows Server 2016 서비스 업데이트 [KB4034658](https://support.microsoft.com/kb/KB4034658) 지원 토큰 바인딩 프로토콜 버전 0.10-기본적으로 설정
     - 토큰 바인딩 프로토콜이 업데이트 됨 [[tokbind-10]](https://datatracker.ietf.org/doc/draft-ietf-tokbind-protocol/10/)
     - 토큰 바인딩 협상이 추가 된 TLS 확장 [[tokbind]](https://tools.ietf.org/html/draft-ietf-tokbind-negotiation-05)
     - WinInet & HTTP. SYS HTTP 업데이트를 통한 토큰 바인딩 지원 [[draft-ietf-tokbind-06]](https://datatracker.ietf.org/doc/draft-ietf-tokbind-https/06/)

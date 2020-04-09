@@ -1,7 +1,6 @@
 ---
 ms.assetid: 77aa61bf-9c04-4889-a5d2-6f45bc1b8bd2
 title: 변환 클레임 규칙을 사용하는 경우
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: b7cdf68783db1b6b775209e4e42dc6b6ccf0e1b8
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 2b69156d1e2825f4287112735493ebc5cc8469d2
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71385423"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853786"
 ---
 # <a name="when-to-use-a-transform-claim-rule"></a>변환 클레임 규칙을 사용하는 경우
 들어오는 클레임 유형을 나가는 클레임 유형에 매핑한 후 들어오는 클레임의 값에 따라 발생 해야 하는 출력을 결정 하는 작업을 적용 하는 Active Directory Federation Services \(\) AD FS에서이 규칙을 사용할 수 있습니다. 이 규칙을 사용하는 경우 다음 표에 설명된 대로 규칙에서 구성하는 옵션 중 하나에 따라 다음 규칙 논리와 일치하는 클레임을 통과 또는 변환합니다.  
@@ -76,13 +75,13 @@ Ad FS 용어 *클레임 변환* 수단을 대체 한 들어오는 클레임 다�
 이 서식 파일을 만드는 방법에 대 한 자세한 내용은 참조 하십시오. [들어오는 클레임 변환 하는 규칙을 만들](https://technet.microsoft.com/library/dd807068.aspx) AD FS 배포 가이드에 있습니다.  
   
 ## <a name="using-the-claim-rule-language"></a>클레임 규칙 언어 사용  
-둘 이상의 들어오는 클레임 내용에서 나가는 클레임을 생성해야 하는 경우 대신 사용자 지정 규칙을 사용해야 합니다. 나가는 클레임의 클레임 값이 들어오는 클레임 값을 기반으로 해야 하지만 추가 콘텐츠도 포함해야 하는 경우에도 사용자 지정 규칙을 사용해야 합니다. 자세한 내용은 [사용자 지정 클레임 규칙을 사용 하는 경우](When-to-Use-a-Custom-Claim-Rule.md)합니다.  
+둘 이상의 들어오는 클레임 내용에서 나가는 클레임을 생성해야 하는 경우 대신 사용자 지정 규칙을 사용해야 합니다. 나가는 클레임의 클레임 값이 들어오는 클레임 값을 기반으로 해야 하지만 추가 콘텐츠도 포함해야 하는 경우에도 사용자 지정 규칙을 사용해야 합니다. 자세한 내용은 [When to Use a Custom Claim Rule](When-to-Use-a-Custom-Claim-Rule.md)를 참조하세요.  
   
 ### <a name="examples-of-how-to-construct-a-transform-rule-syntax"></a>변환 규칙 구문을 생성하는 방법의 예  
-클레임 규칙 언어 구문을 사용하여 클레임을 변환하는 경우 변환된 클레임의 속성을 새 리터럴 값으로 설정할 수 있습니다. 예를 들어 다음 규칙은 동일한 클레임 유형을 유지하면서 역할 클레임의 값을 "Administrators"에서 "root"로 변경합니다.  
+클레임 규칙 언어 구문을 사용하여 클레임을 변환하는 경우 변환된 클레임의 속성을 새 리터럴 값으로 설정할 수 있습니다. 예를 들어 다음 규칙은 동일한 클레임 유형을 유지 하면서 역할 클레임의 값을 "Administrators"에서 "root"로 변경 합니다.  
   
 ```  
-c:[type == “https://schemas.microsoft.com/ws/2008/06/identity/claims/role”, value == “Administrators”]  => issue(type = c.type, value = “root”);  
+c:[type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/role", value == "Administrators"]  => issue(type = c.type, value = "root");  
 ```  
   
 정규식을 클레임 변환에 사용할 수도 있습니다. 예를 들어, 다음 규칙은 도메인 설정 windows 사용자 이름 클레임에 도메인에\\fabrikam 사용자 형식:  
@@ -97,7 +96,7 @@ c:[type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"] => issu
 |클레임 속성|설명|  
 |------------------|---------------|  
 |Type, Value, ValueType|이러한 속성은 할당에 자주 사용됩니다. 결과로 변환된 클레임에 대한 최소한의 유형 및 값을 지정해야 합니다.|  
-|발급자|클레임 규칙 언어에서는 클레임 발급자 설정을 허용하지만 일반적으로 설정하지 않는 것이 좋습니다. 클레임 발급자는 토큰에 직렬화되지 않습니다. 토큰이 수신되면 모든 클레임의 발급자 속성이 토큰에 서명한 페더레이션 서버의 식별자로 설정됩니다. 따라서 규칙에서 클레임 발급자를 설정해도 토큰의 내용에는 영향을 주지 않으며 클레임이 토큰에 패키지되면 설정이 손실됩니다. 클레임 발급자 설정이 타당한 유일한 시나리오는 클레임 공급자 규칙 집합에서 특정 값으로 설정되고 신뢰 당사자 규칙 집합이 이 특정 값을 참조하는 규칙으로 작성된 경우입니다. 클레임 규칙에서 Issuer 속성이 명시적으로 특정 값으로 설정되지 않은 경우 클레임 발급 엔진에서 "LOCAL AUTHORITY"로 설정합니다.|  
+|발급자|클레임 규칙 언어에서는 클레임 발급자 설정을 허용하지만 일반적으로 설정하지 않는 것이 좋습니다. 클레임 발급자는 토큰에 직렬화되지 않습니다. 토큰이 수신되면 모든 클레임의 발급자 속성이 토큰에 서명한 페더레이션 서버의 식별자로 설정됩니다. 따라서 규칙에서 클레임 발급자를 설정해도 토큰의 내용에는 영향을 주지 않으며 클레임이 토큰에 패키지되면 설정이 손실됩니다. 클레임 발급자 설정이 타당한 유일한 시나리오는 클레임 공급자 규칙 집합에서 특정 값으로 설정되고 신뢰 당사자 규칙 집합이 이 특정 값을 참조하는 규칙으로 작성된 경우입니다. 발급자 속성이 클레임 규칙의 값으로 명시적으로 설정 되지 않은 경우 클레임 발급 엔진은이를 "로컬 기관"으로 설정 합니다.|  
 |OriginalIssuer|Issuer와 마찬가지로, 일반적으로 OriginalIssuer에는 명시적으로 값이 할당되지 않습니다. Issuer와 달리 OriginalIssuer 속성은 토큰에 직렬화되지만 토큰 소비자가 설정된 속성에 원래 클레임을 발급한 페더레이션 서버의 식별자가 포함된다고 예상합니다.|  
 |속성|이전 섹션에서 설명한 대로 클레임의 속성 모음은 토큰에 지속되지 않으므로 후속 로컬 정책에서 속성에 저장된 정보를 참조하는 경우에만 속성에 할당해야 합니다.|  
   

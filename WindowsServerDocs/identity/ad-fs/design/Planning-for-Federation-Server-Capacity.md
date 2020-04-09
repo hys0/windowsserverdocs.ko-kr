@@ -1,7 +1,6 @@
 ---
 ms.assetid: 7013fc21-9ced-4f9d-9588-cb04d6d60924
 title: 페더레이션 서버 용량 계획
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 418bc5d53a2bd11afa8563b07bbff76c89495715
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5801196921c1f7632725dfddb2a5c8c2bf4ae2b5
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407979"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858626"
 ---
 # <a name="planning-for-federation-server-capacity"></a>페더레이션 서버 용량 계획
 
@@ -47,7 +46,7 @@ AD FS 구성 데이터베이스에 대 한 추가 배포 정보는 [AD FS 배포
 > [!NOTE]  
 > AD FS 제품 팀에서 AD FS 구성 데이터베이스를 저장 하는 전용 SQL Server 구성 된 페더레이션 서버 팜을 사용 하 여 수행한 테스트에서 SQL Server의 전체 부하가 경향이. 단일 SQL Server를 사용 하도록 구성 된 4 개의\-페더레이션\-서버 팜을 사용 하는 한 테스트에서 페더레이션 서버를 대상으로 하는 테스트에도 불구 하 고 CPU 사용률이 10%를 초과 하지 않았습니다.  
   
-## <a name="bk_estimatefs"></a>조직의 페더레이션 서버 수 예측  
+## <a name="estimate-the-number-of-federation-servers-for-your-organization"></a><a name="bk_estimatefs"></a>조직의 페더레이션 서버 수 예측  
 페더레이션 서버에 대 한 하드웨어 계획 프로세스를 간소화 하기 위해 AD FS 제품 팀에서 AD FS 용량 계획 크기 조정 스프레드시트를 개발 했습니다. 이 Excel 스프레드시트에는 조직의 사용자에 게 제공 하는 예상 된 사용 현황 데이터를 사용 하 고 AD FS 프로덕션 환경에 대해 권장 되는 최적의 페더레이션 서버 수를 반환 하는 기능과 같은 계산기\-포함 되어 있습니다.  
   
 > [!NOTE]  

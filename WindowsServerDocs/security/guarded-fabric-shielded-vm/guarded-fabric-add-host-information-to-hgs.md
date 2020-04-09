@@ -1,23 +1,23 @@
 ---
 title: HGS 구성에 호스트 정보 추가
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: 0d1d19b6-820a-4b3f-9b97-6386dd544a64
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 9f55742796e45046c867ae34814715feacca2b97
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: ddb12d6e3c9f82d6452bd331dace23fffa6d3cdb
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403702"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856926"
 ---
 # <a name="add-host-information-to-the-hgs-configuration"></a>HGS 구성에 호스트 정보 추가
 
->적용 대상: Windows server 2019, Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server 2019, Windows Server (반기 채널), Windows Server 2016
 
 패브릭 관리자에서 호스트에 대 한 정보를 가져오고이를 HGS에 추가 합니다. 이 단계는 증명의 모드에 따라 달라 집니다.
 

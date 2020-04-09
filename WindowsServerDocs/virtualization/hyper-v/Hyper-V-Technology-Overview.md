@@ -2,21 +2,19 @@
 title: Hyper-v 기술 개요
 description: Hyper-v에 대해 설명 하 고,이를 가져오는 방법, 주요 기능 및 일반적인 용도를 설명 합니다.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ac069fed-7bf5-4cc3-aff5-25a2766040b8
-author: KBDAzure
+author: kbdazure
 ms.author: kathydav
 ms.date: 11/29/2016
-ms.openlocfilehash: 053f92f1ef07a2e574c93412626ee792d4d982e3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d21bec24a22607213771bdad0b48df18fd88eb4d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71366787"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853246"
 ---
 # <a name="hyper-v-technology-overview"></a>Hyper-v 기술 개요
 
@@ -97,7 +95,7 @@ Hyper-v에는 관리 및 연결 도구도 있습니다. Hyper-v 역할이 설치
 
 다음은 Hyper-v에서 자주 사용 되는 Microsoft의 기술입니다.
 
-- [장애 조치(failover) 클러스터링](../../failover-clustering/whats-new-in-failover-clustering.md)
+- [장애 조치 클러스터링](../../failover-clustering/whats-new-in-failover-clustering.md)
 - [원격 데스크톱 서비스](../../remote/remote-desktop-services/Host-desktops-and-apps-in-Remote-Desktop-Services.md)
 - [System Center Virtual Machine Manager](https://docs.microsoft.com/system-center/vmm/overview)
 

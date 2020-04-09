@@ -1,6 +1,5 @@
 ---
 title: SQL Server를 사용 하 여 Windows Server 2016의 AD FS로 업그레이드
-description: ''
 author: billmath
 manager: mtillman
 ms.date: 04/11/2018
@@ -9,12 +8,12 @@ ms.prod: windows-server
 ms.assetid: 70f279bf-aea1-4f4f-9ab3-e9157233e267
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: dd843724faf1c7a8101def84091484a5e7f7900f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e9488357eecb4a2093d6989e4ebfcc195ce68567
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408236"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854006"
 ---
 # <a name="upgrading-to-ad-fs-in-windows-server-2016-with-sql-server"></a>SQL Server를 사용 하 여 Windows Server 2016의 AD FS로 업그레이드
 
@@ -33,7 +32,7 @@ Windows server 2016 AD FS 서버는 windows server 2012 R2 팜에 추가할 수 
 
 -   관리자는 새로운 Windows Server 2016 페더레이션 서버를 기존 Windows Server 2012 R2 팜에 추가할 수 있습니다.  결과적으로 팜은 "혼합 모드" 이며 Windows Server 2012 R2 팜 동작 수준을 운영 합니다.  팜 전체에서 일관성 있는 동작을 보장 하기 위해이 모드에서는 새로운 Windows Server 2016 기능을 구성 하거나 사용할 수 없습니다.  
 
--   모든 Windows Server 2012 R2 페더레이션 서버가 혼합 모드 팜에서 제거 되 고 WID 팜의 경우 새 Windows 서비스 2016 페더레이션 서버 중 하나가 주 노드의 역할로 승격 된 후 관리자가 FBL를 발생 시킬 수 있습니다. dows Server 2012 R2에서 Windows Server 2016로  따라서 새로운 AD FS Windows Server 2016 기능을 구성 하 고 사용할 수 있습니다.  
+-   모든 Windows Server 2012 R2 페더레이션 서버가 혼합 모드 팜에서 제거 되 고 WID 팜의 경우 새 Windows 서비스 2016 페더레이션 서버 중 하나가 주 노드의 역할로 승격 된 후 관리자가 Windows Server 2012 r 2에서 Windows server 2016로 FBL 수 있습니다.  따라서 새로운 AD FS Windows Server 2016 기능을 구성 하 고 사용할 수 있습니다.  
 
 -   혼합 팜 기능의 결과로 Windows Server 2016로 업그레이드 하려고 하는 Windows Server 2012 R2 조직 AD FS 완전히 새로운 팜을 배포 하 고, 구성 데이터를 내보내고 가져올 필요가 없습니다.  대신, Windows Server 2016 노드는 온라인 상태에서 기존 팜에 추가 하 고 FBL에 관련 된 상대적으로 짧은 가동 중지 시간을 발생 시킬 수 있습니다.  
 

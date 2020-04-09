@@ -1,6 +1,5 @@
 ---
 title: 클레임 규칙 언어의 역할
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,15 +8,15 @@ ms.topic: article
 ms.prod: windows-server
 ms.assetid: dda9d148-d72f-4bff-aa2a-f2249fa47e4c
 ms.technology: identity-adfs
-ms.openlocfilehash: ff4c43bb8dc5582716638f0a3f6e4f6a8022aece
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 742e0ce781225303c623461439f8d4460fec97c9
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407376"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860106"
 ---
 # <a name="the-role-of-the-claim-rule-language"></a>클레임 규칙 언어의 역할
-Active Directory Federation Services (AD FS) 클레임 규칙 언어는 들어오고 나가는 클레임의 동작에 대 한 관리 구성 요소 역할을 하는 반면 클레임 엔진은 클레임 규칙 언어의 논리에 대 한 처리 엔진 역할을 합니다. 사용자 지정 규칙을 정의 합니다. 모든 규칙은 클레임 엔진에서 처리 하는 방법에 대 한 자세한 내용은 참조 하십시오. [클레임 엔진의 역할](The-Role-of-the-Claims-Engine.md)합니다.  
+Active Directory Federation Services (AD FS) 클레임 규칙 언어는 들어오고 나가는 클레임의 동작에 대 한 관리 구성 요소 역할을 하며, 클레임 엔진은 사용자 지정 규칙을 정의 하는 클레임 규칙 언어의 논리에 대 한 처리 엔진 역할을 합니다. 모든 규칙은 클레임 엔진에서 처리 하는 방법에 대 한 자세한 내용은 참조 하십시오. [클레임 엔진의 역할](The-Role-of-the-Claims-Engine.md)합니다.  
 
 ## <a name="creating-custom-claim-rules-using-the-claim-rule-language"></a>클레임 규칙 언어를 사용하여 사용자 지정 클레임 규칙 만들기  
 AD FS 클레임 규칙 언어를 id 클레임의 동작을 결정 하기 위해 사용 하는 사용자 지정 규칙을 정의 하는 옵션으로는 관리자를 제공 합니다. 이 항목의 클레임 규칙 언어 구문 예를 사용하여 조직의 요구 사항에 맞게 클레임을 열거, 추가, 삭제 및 수정하는 사용자 지정 규칙을 만들 수 있습니다. **사용자 지정 클레임을 사용하여 클레임 보내기** 규칙 템플릿에 클레임 규칙 언어 구문을 입력하여 사용자 지정 규칙을 작성할 수 있습니다.  
@@ -27,7 +26,7 @@ AD FS 클레임 규칙 언어를 id 클레임의 동작을 결정 하기 위해 
 사용자 지정 규칙을 사용 하는 경우에 대 한 자세한 내용은 참조 [사용자 지정 클레임 규칙을 사용 하는 경우](When-to-Use-a-Custom-Claim-Rule.md)합니다.  
 
 ## <a name="using-claim-rule-templates-to-learn-about-the-claim-rule-language-syntax"></a>클레임 규칙 템플릿을 사용하여 클레임 규칙 언어 구문 학습  
-AD FS에는 또한 미리 정의 된 클레임 발급 및 일반적인 구현 하는 데 사용할 수 있는 허용 규칙 템플릿 클레임 규칙 클레임 집합을 제공 합니다. 에 **클레임 규칙 편집** 대화 상자 지정된 트러스트에 대 한 미리 정의 된 규칙을 만들 수 있습니다-해당 규칙을 구성 하는 클레임 규칙 언어 구문을 보려면 및-클릭 하 여는 **규칙 언어 보기** 해당 규칙에 대 한 탭 합니다. 이 섹션의 정보를 사용 하 고 **규칙 언어 보기** 기술은 사용자 지정 규칙을 생성 하는 방법에 대 한 정보를 제공할 수 있습니다.  
+AD FS에는 또한 미리 정의 된 클레임 발급 및 일반적인 구현 하는 데 사용할 수 있는 허용 규칙 템플릿 클레임 규칙 클레임 집합을 제공 합니다. 지정된 트러스트에 대한 **클레임 규칙 편집** 대화 상자에서 미리 정의된 규칙을 만들 수 있고 해당 규칙에 대한 **규칙 언어 보기** 탭을 클릭하여 해당 규칙을 구성하는 클레임 규칙 언어 구문을 볼 수 있습니다. 이 섹션의 정보와 **규칙 언어 보기** 기술을 사용하여 사용자 고유의 사용자 지정 규칙을 생성하는 방법에 대한 통찰력을 얻을 수 있습니다.  
 
 클레임 규칙 및 클레임 규칙 템플릿에 대 한 정보를 자세한 참조 [규칙의 역할 클레임](The-Role-of-Claim-Rules.md)합니다.  
 
@@ -38,7 +37,7 @@ AD FS에는 또한 미리 정의 된 클레임 발급 및 일반적인 구현 �
 
 -   발급 문  
 
-### <a name="conditions"></a>조건  
+### <a name="conditions"></a>상태  
 규칙의 조건을 사용하여 입력 클레임을 확인하고 규칙의 발급 문을 실행할지를 결정할 수 있습니다. 조건은 규칙 본문 부분을 실행할 때 true로 평가되어야 하는 논리 식을 나타냅니다. 이 부분이 없으면 논리 true가 가정 됩니다. 즉, 규칙의 본문이 항상 실행 됩니다. 조건 부분에는 결합 논리 연산자 ("& &")와 함께 결합 된 조건 목록이 포함 됩니다. 전체 조건 부분이 true로 평가되려면 목록의 모든 조건이 true로 평가되어야 합니다. 조건은 클레임 선택 연산자 또는 집계 함수 호출일 수 있습니다. 이 둘은 상호 배타적인데 이는 클레임 선택기와 집계 함수가 단일 규칙 조건 부분에서 결합될 수 없음을 의미합니다.  
 
 조건은 규칙에서 선택 사항입니다. 예를 들어 다음 규칙에는 조건이 없습니다.  
@@ -75,7 +74,7 @@ AD FS에는 또한 미리 정의 된 클레임 발급 및 일반적인 구현 �
 
 |                                                                                                                   조건 설명                                                                                                                    |                                        조건 구문 예                                        |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
-| 이 규칙에 지정 된 클레임 형식을 사용 하 여 각 클레임, 두 개의 입력을 확인 하는 조건이 ("<http://test/name>" 및 "<http://test/email>"). 두 개의 일치하는 클레임이 입력 클레임에 있으면 규칙이 이름 클레임을 출력 클레임 집합에 복사합니다. | ``` c1: [type  == "http://test/name"] && c2: [type == "http://test/email"] => issue (claim  = c1 );``` |
+| 이 규칙에는 각각 지정 된 클레임 유형 ("<http://test/name>" 및 "<http://test/email>")을 가진 두 개의 입력 클레임을 확인 하는 조건이 있습니다. 두 개의 일치하는 클레임이 입력 클레임에 있으면 규칙이 이름 클레임을 출력 클레임 집합에 복사합니다. | ``` c1: [type  == "http://test/name"] && c2: [type == "http://test/email"] => issue (claim  = c1 );``` |
 
 #### <a name="regular--condition-examples"></a>정규 조건 예제  
 다음 표에서는 일반적인 식 기반 조건의 예를 제공 합니다.  
@@ -118,10 +117,10 @@ AD FS에는 또한 미리 정의 된 클레임 발급 및 일반적인 구현 �
 |---------------------------|----------------------------------|-------------------------------------|  
 |보통|다음 규칙은 사용자가 지정된 클레임 유형과 값을 가질 때마다 항상 동일한 클레임을 내보냅니다.|```c: [type  == "http://test/employee", value  == "true"] => issue (type = "http://test/role", value = "employee");```|  
 |보통|다음 규칙은 한 클레임 유형을 다른 유형으로 변환합니다. 조건 "c"와 일치하는 클레임 값이 발급 문에 사용되었습니다.|```c: [type  == "http://test/group" ] => issue (type  = "http://test/role", value  = c.Value );```|  
-|특성 저장소|다음 규칙은 들어오는 클레임의 값을 사용 하 여 Active Directory 특성 저장소를 쿼리 합니다.|```c: [Type  == "http://test/name" ] => issue (store  = "Enterprise AD Attribute Store", types  =  ("http://test/email" ), query  = ";mail;{0}", param  = c.Value )```|  
+|특성 저장소|다음과 같은 규칙이 들어오는 클레임의 값을 사용 하 여 Active Directory 특성 저장소를 쿼리.|```c: [Type  == "http://test/name" ] => issue (store  = "Enterprise AD Attribute Store", types  =  ("http://test/email" ), query  = ";mail;{0}", param  = c.Value )```|  
 |특성 저장소|다음 규칙은 들어오는 클레임의 값을 사용 하 여 이전에 구성 된 구조적 쿼리 언어 (SQL) 특성 저장소를 쿼리 합니다.|```c: [type  == "http://test/name"] => issue (store  = "Custom SQL store", types  =  ("http://test/email","http://test/displayname" ), query  = "SELECT mail, displayname FROM users WHERE name ={0}", param  = c.value );```|  
 
-#### <a name="expressions"></a>표현식  
+#### <a name="expressions"></a>식  
 식은 클레임 선택기 제약 조건과 발급 문 매개 변수 둘 다에 대해 오른쪽에 사용됩니다. 언어가 지원하는 다양한 종류의 식이 있습니다. 언어의 모든 식은 문자열 기반이며 이는 문자열을 입력으로 사용하고 문자열을 생성함을 의미합니다. 식에서 날짜/시간 등 숫자 또는 다른 데이터 형식은 지원되지 않습니다. 다음은 언어가 지원하는 식의 형식입니다.  
 
 -   문자열 리터럴: 양쪽의 따옴표 (") 문자로 구분 되는 문자열 값입니다.  

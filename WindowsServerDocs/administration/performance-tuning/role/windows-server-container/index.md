@@ -4,15 +4,15 @@ description: Windows Server 16의 컨테이너에 대한 성능 튜닝 추천 �
 ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: landing-page
-ms.author: DavSo; Ericam; YaShi
+ms.author: davso; ericam; yashi
 author: akino
 ms.date: 10/16/2017
-ms.openlocfilehash: 890632c9e8adf221e56ffa91331e5371a3fcdf86
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: a4508e28e54562748422b198f703e23326d15720
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71384945"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80851636"
 ---
 # <a name="performance-tuning-windows-server-containers"></a>Windows 서버 컨테이너에 대한 성능 튜닝
 
@@ -35,7 +35,7 @@ Hyper-V 컨테이너에서 제공하는 추가 격리는 대부분 컨테이너�
 
 Windows Server 컨테이너와 Hyper-V 컨테이너는 Server Core 및 Windows Server 2016에서 사용할 수 있는 새로운 설치 옵션인 [Nano Server](https://technet.microsoft.com/windows-server-docs/compute/nano-server/getting-started-with-nano-server)를 지원합니다. 
 
-Nano 서버는 프라이빗 클라우드 및 데이터 센터에 최적화된 원격 관리 서버 운영 체제입니다. Server Core 모드의 Windows Server와 유사하지만 훨씬 작고 로컬 로그온 기능이 없으며 64비트 응용 프로그램, 도구 및 에이전트에만 지원합니다. 디스크 공간을 훨씬 적게 차지하며 더 빠르게 시작합니다.
+Nano 서버는 프라이빗 클라우드 및 데이터 센터에 최적화된 원격 관리 서버 운영 체제입니다. Server Core 모드의 Windows Server와 유사하지만 훨씬 작고 로컬 로그온 기능이 없으며 64비트 애플리케이션, 도구 및 에이전트에만 지원합니다. 디스크 공간을 훨씬 적게 차지하며 더 빠르게 시작합니다.
 
 ## <a name="container-start-up-time"></a>컨테이너 시작 시간
 컨테이너 시작 시간은 컨테이너에서 가장 큰 이점을 제공하는 많은 시나리오의 주요 메트릭입니다. 따라서 컨테이너 시작 시간을 최적화하는 방법을 이해해야 합니다. 시작 시간을 향상시키기 위해 이해해야 할 튜닝 상의 몇 가지 절충 사항은 다음과 같습니다.
@@ -52,7 +52,7 @@ Windows Server 2016용 Hyper-V는 중첩된 하이퍼바이저 지원을 도입�
 
 컨테이너의 경우 이는 가상 머신 내에서 Hyper-V 컨테이너를 실행할 때 영향을 줍니다. Hyper-V 컨테이너는 자체와 컨테이너 호스트 간의 하이퍼바이저 계층을 통해 격리를 제공하므로, 컨테이너 호스트가 Hyper-V 기반 가상 머신인 경우 컨테이너 시작 시간, 스토리지 IO, 네트워크 IO 및 처리량, CPU와 관련된 성능 오버헤드가 있습니다.
 
-## <a name="storage"></a>저장 공간
+## <a name="storage"></a>스토리지
 ### <a name="mounted-data-volumes"></a>탑재된 데이터 볼륨
 
 컨테이너는 호스트 시스템 드라이브를 컨테이너 스크래치 공간에 컨테이너 사용할 수 있는 기능을 제공합니다. 그러나 컨테이너 스크래치 공간에는 컨테이너의 수명과 동일한 수명이 있습니다. 즉, 컨테이너가 중지되면 스크래치 공간과 관련된 모든 데이터가 사라집니다.
@@ -69,7 +69,7 @@ Windows Server 컨테이너와 Hyper-V 컨테이너는 다양한 네트워킹 �
 
 ### <a name="windows-network-address-translation-winnat"></a>WinNAT(Windows Network Address Translation)
 
-각 컨테이너는 내부 사설 IP 접두사(예: 172.16.0.0/12)에서 IP 주소를 받습니다. 컨테이너 호스트에서 컨테이너 끝점으로의 포트 전달/매핑이 지원됩니다. Docker는 dockerd를 처음 실행할 때 기본적으로 NAT 네트워크를 만듭니다.
+각 컨테이너는 내부 사설 IP 접두사(예: 172.16.0.0/12)에서 IP 주소를 받습니다. 컨테이너 호스트에서 컨테이너 엔드포인트으로의 포트 전달/매핑이 지원됩니다. Docker는 dockerd를 처음 실행할 때 기본적으로 NAT 네트워크를 만듭니다.
 
 이러한 세 가지 모드 중 NAT 구성은 비용이 가장 많이 드는 네트워크 IO 경로이지만 최소한 구성만 필요합니다. 
 
@@ -82,7 +82,7 @@ Windows Server 컨테이너는 호스트 vNIC를 사용하여 가상 스위치�
 투명 모드는 네트워크 IO 경로 측면에서 비용이 가장 적게 듭니다. 외부 패킷은 컨테이너 가상 NIC에 직접 전달되어 외부 네트워크에 직접 액세스할 수 있습니다.
 
 ### <a name="l2-bridge"></a>L2 브리지
-각 컨테이너 엔드포인트는 컨테이너 호스트와 동일한 IP 서브넷에 있습니다. IP 주소는 컨테이너 호스트와 동일한 접두사에서 정적으로 할당해야 합니다. 호스트의 모든 컨테이너 끝점은 계층 2 주소 변환으로 인해 MAC 주소가 동일합니다.
+각 컨테이너 엔드포인트는 컨테이너 호스트와 동일한 IP 서브넷에 있습니다. IP 주소는 컨테이너 호스트와 동일한 접두사에서 정적으로 할당해야 합니다. 호스트의 모든 컨테이너 엔드포인트은 계층 2 주소 변환으로 인해 MAC 주소가 동일합니다.
 
 L2 브리지 모드는 외부 네트워크에 직접 액세스할 수 있으므로 WinNAT 모드보다 성능이 높지만, MAC 주소 변환도 도입하므로 투명 모드보다는 성능이 낮습니다.
 

@@ -2,22 +2,18 @@
 title: 진입점 추가 관련 문제 해결
 description: 이 항목은 Windows Server 2016에서 멀티 사이트 배포에서 여러 원격 액세스 서버 배포 가이드의 일부입니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ras
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: dcc1037f-1a65-4497-99e6-0df9aef748a8
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 2cb0566dc2cdc68c4653f85c06869585bc6454ef
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 9e8f67709e6059b879eab92fdd06609df90cb9a2
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80313833"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858306"
 ---
 # <a name="troubleshooting-adding-entry-points"></a>진입점 추가 관련 문제 해결
 

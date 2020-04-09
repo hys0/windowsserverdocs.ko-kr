@@ -1,24 +1,20 @@
 ---
 title: Kerberos Constrained Delegation Overview
 description: Windows Server 보안
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-kerberos
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 51923b0a-0c1a-47b2-93a0-d36f8e295589
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: e6e62effcb875c0e3a1cdd6c886f3d74923e1b94
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 07717743017c15a7bdabd3c3ce38d75a02980460
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403415"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858866"
 ---
 # <a name="kerberos-constrained-delegation-overview"></a>Kerberos Constrained Delegation Overview
 
@@ -42,7 +38,7 @@ Kerberos 프로토콜의 Windows Server 2012 R2 및 Windows Server 2012 구현�
 
 제한 된 위임을 통해 서비스 관리자는 응용 프로그램 서비스가 사용자 대신 작업을 수행할 수 있는 범위를 제한 하 여 응용 프로그램 트러스트 경계를 지정 하 고 적용할 수 있습니다. 서비스 관리자는 백 엔드 서비스에 위임할 수 있는 프런트 엔드 서비스 계정을 구성할 수 있습니다.
 
-Windows Server 2012 R2 및 Windows Server 2012에서 도메인 간 제한 위임을 지원 함으로써 ISA (Microsoft Internet Security and 가속화) 서버, Microsoft Forefront Threat Management Gateway, Microsoft Exchange 등의 프런트 엔드 서비스를 지원 합니다. Outlook 웹 액세스 (OWA) 및 Microsoft SharePoint Server 제한 된 위임을 사용 하 여 다른 도메인의 서버에 인증 하도록 구성할 수 있습니다. 그러면 기존 Kerberos 인프라를 사용한 도메인 간 서비스 솔루션이 지원됩니다. Kerberos 제한 위임은 도메인 관리자나 서비스 관리자가 관리할 수 있습니다.
+Windows Server 2012 R2 및 Windows Server 2012에서 도메인 간 제한 위임을 지원 함으로써 Microsoft Internet Security and 가속도 (ISA) Server, Microsoft Forefront Threat Management Gateway, Microsoft Exchange Outlook 웹 액세스 (OWA)와 같은 프런트 엔드 서비스 Microsoft SharePoint Server와 제한 된 위임을 사용 하 여 다른 도메인의 서버에 인증 하도록 구성할 수 있습니다. 그러면 기존 Kerberos 인프라를 사용한 도메인 간 서비스 솔루션이 지원됩니다. Kerberos 제한 위임은 도메인 관리자나 서비스 관리자가 관리할 수 있습니다.
 
 ## <a name="resource-based-constrained-delegation-across-domains"></a>여러 도메인에 걸친 리소스 기반 제한 위임
 
@@ -81,9 +77,9 @@ KDC는 프로토콜 전환을 제한 하지 않으므로, 리소스 관리자에
 
 -   보안 주체 목록을 검색 하려면 **PrincipalsAllowedToDelegateToAccount** 매개 변수를 사용 하 여 **uninstall-adserviceaccount** **및 get** **adcomputer** cmdlet을 사용 합니다.
 
--   리소스 서비스를 구성 하려면 **uninstall-adserviceaccount**, Uninstall-adserviceaccount 및 **PrincipalsAllowedToDelegateToAccount** 매개 변수를 사용 하 여및 설정 **-** **adcomputer** **cmdlet을** **사용 합니다.**
+-   리소스 서비스를 구성 하려면 **uninstall-adserviceaccount**, Uninstall-adserviceaccount 및 **PrincipalsAllowedToDelegateToAccount** 매개 변수를 사용 하 여 **Set-ADServiceAccount**및 설정 **-** **adcomputer** **cmdlet을** **사용 합니다.**
 
-## <a name="BKMK_SOFT"></a>소프트웨어 요구 사항
+## <a name="software-requirements"></a><a name="BKMK_SOFT"></a>소프트웨어 요구 사항
 리소스 기반 제한 위임은 Windows Server 2012 R2 및 Windows Server 2012를 실행 하는 도메인 컨트롤러 에서만 구성할 수 있지만 혼합 모드 포리스트 내에서 적용할 수 있습니다.
 
 Windows server 이전 버전의 운영 체제를 실행 하는 프런트 엔드 도메인 및 백 엔드 도메인 간 조회 경로의 사용자 계정 도메인에서 Windows Server 2012를 실행 하는 모든 도메인 컨트롤러에 대해 windows server를 실행 하는 모든 도메인 컨트롤러에 다음 핫픽스를 적용 해야 합니다. Windows Server 2008 R2 기반 도메인 컨트롤러가 있는 환경에서 리소스 기반의 제한 된 위임 KDC_ERR_POLICY 실패 합니다 (https://support.microsoft.com/en-gb/help/2665790/resource-based-constrained-delegation-kdc-err-policy-failure-in-enviro).

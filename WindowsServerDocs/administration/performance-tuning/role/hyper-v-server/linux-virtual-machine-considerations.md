@@ -4,15 +4,15 @@ description: Linux 및 BSD 가상 컴퓨터
 ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author: Asmahi; SandySp; JoPoulso
+ms.author: asmahi; sandysp; jopoulso
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 5668629e7eded214525561d30fec496a4e91b8dc
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 7abc1ef5473365dd26dce1167bb685f116822a7d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71385073"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80851746"
 ---
 # <a name="linux-virtual-machine-considerations"></a>Linux 가상 머신 고려 사항
 

@@ -2,22 +2,18 @@
 title: 멀티 사이트 사용 관련 문제 해결
 description: 이 항목은 Windows Server 2016에서 멀티 사이트 배포에서 여러 원격 액세스 서버 배포 가이드의 일부입니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ras
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 570c81d6-c4f4-464c-bee9-0acbd4993584
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 59db462e3772b551f0d80819e7cd79519e95fb14
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: ae01a63a494504120ca248ec56dd9bc9648c1ae4
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80313820"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858296"
 ---
 # <a name="troubleshooting-enabling-multisite"></a>멀티 사이트 사용 관련 문제 해결
 

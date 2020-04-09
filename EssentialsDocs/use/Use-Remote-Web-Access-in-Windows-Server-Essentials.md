@@ -1,23 +1,19 @@
 ---
 title: Windows Server Essentials에서 원격 웹 액세스 사용
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 47ea21a0-5e05-4b4b-8fa4-338c82601276
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 8ea6e5c1936cb87fb90cd24fd8e0f6186f42b129
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 5a26f331c8bfe6d30dc74d555ba5f4a4cdbd6232
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80313129"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852126"
 ---
 # <a name="use-remote-web-access-in-windows-server-essentials"></a>Windows Server Essentials에서 원격 웹 액세스 사용
 
@@ -69,7 +65,7 @@ ms.locfileid: "80313129"
   
 ##### <a name="to-log-on-to-remote-web-access-from-a-remote-computer"></a>원격 컴퓨터에서 원격 웹 액세스에 로그온하려면  
   
-1.  웹 브라우저를 열고 주소 표시줄에 **https://** _</remote domainname\>_ 를 입력 한 다음 enter 키를 누릅니다.  
+1.  웹 브라우저를 열고 주소 표시줄에 **https://** _</remote domainname\>_ **/remote** 를 입력 한 다음 enter 키를 누릅니다.  
   
     > [!NOTE]
     >  도메인 이름 정보에 대해서는 네트워크 관리자에게 문의하세요. S가 https에 포함 되어 있는지 확인 합니다.  
@@ -314,19 +310,19 @@ ms.locfileid: "80313129"
   
 ##### <a name="to-log-on-to-remote-web-access-from-a-mobile-device"></a>모바일 디바이스에서 원격 웹 액세스에 로그온하려면  
   
-1.  웹 브라우저를 열고 주소 표시줄에 **https://** _</remote domainname\>_ 을 입력 합니다.  S가 https에 포함 되어 있는지 확인 합니다.  
+1.  웹 브라우저를 열고 주소 표시줄에 **https://** _</remote domainname\>_ **/remote** 을 입력 합니다.  S가 https에 포함 되어 있는지 확인 합니다.  
   
 2.  원격 웹 액세스 로그온 페이지에서 텍스트 상자에 사용자 이름과 암호를 입력 한 다음 화살표를 클릭 합니다. 원격 웹 액세스의 모바일 버전에 로그온됩니다.  
   
 ##### <a name="to-switch-to-the-desktop-version-of-remote-web-access"></a>원격 웹 액세스의 데스크톱 버전으로 전환하려면  
   
-1.  웹 브라우저를 열고 주소 표시줄에 **https://** _</remote domainname\>_ 을 입력 합니다.  S가 https에 포함 되어 있는지 확인 합니다.  
+1.  웹 브라우저를 열고 주소 표시줄에 **https://** _</remote domainname\>_ **/remote** 을 입력 합니다.  S가 https에 포함 되어 있는지 확인 합니다.  
   
 2.  원격 웹 액세스 로그온 페이지에서 텍스트 상자에 사용자 이름과 암호를 입력 하 고 **데스크톱 버전 보기**를 클릭 한 다음 화살표를 클릭 합니다. 원격 웹 액세스의 데스크톱 버전에 로그온됩니다.  
   
 ##### <a name="to-return-to-the-mobile-version-of-remote-web-access"></a>원격 웹 액세스의 모바일 버전으로 돌아가려면  
   
-1. 로그 오프 합니다.  
+1. 로그오프합니다.  
   
 2. 웹 브라우저를 열고 주소 표시줄에 **https://** _< 해당 domainname\>_ **/remote/m** 을 입력 합니다. S가 https에 포함 되어 있는지 확인 합니다.  
   

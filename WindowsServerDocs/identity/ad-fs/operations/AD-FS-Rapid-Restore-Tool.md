@@ -1,7 +1,6 @@
 ---
 ms.assetid: 4deff06a-d0ef-4e5a-9701-5911ba667201
 title: AD FS 신속 복원 도구
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 07/02/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 2570aae52da2925a62dd6c9262af325fb5461fff
-ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
+ms.openlocfilehash: 506734812689a42ec17768652ac715f5c7e24401
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77465267"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858106"
 ---
 # <a name="ad-fs-rapid-restore-tool"></a>AD FS 신속 복원 도구
 
@@ -79,7 +78,7 @@ Cmdlet은 다음 매개 변수를 사용 합니다.
 
 - **BackupDKM** -기본 구성 (자동으로 생성 된 토큰 서명 및 인증서를 암호 해독)에서 AD FS 키를 포함 하는 Active Directory DKM 컨테이너를 백업 합니다. 이는 ad 도구 ' ldifde '를 사용 하 여 AD 컨테이너와 해당 하위 트리를 모두 내보냅니다.
 
-- -**Storagetype &lt;문자열&gt;** -사용자가 사용 하려는 저장소의 유형입니다. "FileSystem"은 사용자가 로컬 또는 "Azure" 네트워크에서 해당 파일을 저장 하려는 경우 사용자가 백업을 수행할 때 사용자가 Azure Storage 컨테이너에 저장 하려는 경우 백업 위치 (파일 시스템 또는 pnrp. 사용할 Azure에 대 한 Azure 저장소 자격 증명을 cmdlet으로 전달 되어야 합니다. 저장소 자격 증명의 계정 이름 및 키를 포함 합니다. 또한이 컨테이너 이름에 전달 합니다. 컨테이너가 존재 하지 않는 경우 백업 중에 생성 됩니다. 사용할 파일 시스템에 대 한 저장소 경로 제공 합니다. 해당 디렉터리에 각 백업에 대해 새 디렉터리가 생성 됩니다. 만든 각 디렉터리에는 백업된 파일이 포함 됩니다. 
+- -**Storagetype &lt;문자열&gt;** -사용자가 사용 하려는 저장소의 유형입니다. "FileSystem"은 사용자가 로컬 또는 네트워크에 있는 폴더에 저장 하려고 함을 나타냅니다. "Azure"는 사용자가 백업을 수행할 때 사용자가 백업을 수행할 때 Azure Storage 컨테이너에 저장 하려고 함을 나타내고, 파일 시스템 또는 클라우드에서 백업 위치를 선택 합니다. 사용할 Azure에 대 한 Azure 저장소 자격 증명을 cmdlet으로 전달 되어야 합니다. 스토리지 자격 증명의 계정 이름 및 키를 포함 합니다. 또한이 컨테이너 이름에 전달 합니다. 컨테이너가 존재 하지 않는 경우 백업 중에 생성 됩니다. 사용할 파일 시스템에 대 한 스토리지 경로 제공 합니다. 해당 디렉터리에 각 백업에 대해 새 디렉터리가 생성 됩니다. 만든 각 디렉터리에는 백업된 파일이 포함 됩니다. 
 
 - **EncryptionPassword &lt;문자열&gt;** -백업된 된 모든 파일을 저장 하기 전에 암호화 하는 데 사용 될 것 이라고 암호
 
@@ -117,7 +116,7 @@ Backup-ADFS -StorageType "Azure" -AzureConnectionCredentials $cred -AzureStorage
 
 ### <a name="backup-the-ad-fs-configuration-without-the-dkm-to-the-file-system"></a>파일 시스템에 대 한 DKM 없이 AD FS 구성 백업
 
-```powershell   
+```powershell     
 Backup-ADFS -StorageType "FileSystem" -StoragePath "C:\Users\administrator\testExport\" -EncryptionPassword "password" -BackupComment "Clean Install of ADFS (FS)"
 ```
 

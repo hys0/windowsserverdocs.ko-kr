@@ -2,35 +2,34 @@
 title: Windows 하이퍼바이저를 실행 중 이어야 합니다.
 description: 이 모범 사례 분석기 규칙에서 보고 한 문제를 해결 하는 지침을 제공 합니다.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 501a9beb-c464-46c0-88c5-e3e7e3e70101
-author: KBDAzure
+author: kbdazure
 ms.date: 10/03/2016
-ms.openlocfilehash: 51f863425bd1107894fb5e4d44ed7c742a806394
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b24700e0ed617177af888013e36f971870d0ac59
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71393052"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860956"
 ---
 # <a name="windows-hypervisor-must-be-running"></a>Windows 하이퍼바이저를 실행 중 이어야 합니다.
 
->적용 대상: Windows Server 2016
+>적용 대상: Windows Server 2016
   
 |속성|세부 정보|  
 |-|-|  
 |**운영 체제**|Windows Server 2016|  
 |**제품/기능**|Hyper-V|  
-|**Severity**|경고|  
-|**범주**|필수 구성 요소|  
+|**등급**|경고|  
+|**범주**|필수 조건|  
   
 다음 섹션에서는 기울임꼴이이 문제에 대 한 모범 사례 분석기 도구에 표시 되는 UI 텍스트를 나타냅니다.  
   
-## <a name="issue"></a>문제점  
+## <a name="issue"></a>문제  
   
 *Windows 하이퍼바이저가 실행 되 고 있지 않습니다.*  
   
@@ -38,14 +37,14 @@ ms.locfileid: "71393052"
   
 *Windows 하이퍼바이저가 실행 될 때까지 가상 컴퓨터를 시작할 수 없습니다.*  
   
-## <a name="resolution"></a>해결 방법  
+## <a name="resolution"></a>해상도  
   
 *Windows Server 카탈로그를 확인 하 여이 서버가 Hyper-v를 실행 하도록 한정 되어 있는지 확인 합니다. 그런 다음 하드웨어 지원 가상화 및 하드웨어 적용 데이터 실행 방지를 위해 BIOS를 사용 하도록 설정 해야 합니다. 그런 다음 Hyper-v-하이퍼바이저 이벤트 로그를 확인 합니다.*  
   
 카탈로그를 확인 하려면 [Windows Server catalog](https://go.microsoft.com/fwlink/?LinkId=111228) (https://go.microsoft.com/fwlink/?LinkId=111228)를 참조 하세요.  
   
 > [!CAUTION]  
-> 컴퓨터의 시스템 BIOS에서 특정 매개 변수를 변경 하는 해당 컴퓨터의 운영 체제를 로드 중지 될 수 있습니다 또는 수 있도록 하드 디스크 드라이브 등의 하드웨어 장치를 사용할 수 없습니다. 항상 시스템 BIOS를 구성 하는 적절 한 방법을 결정 하는 컴퓨터에 대 한 사용자 설명서를 참조 하십시오. 또한 매개 변수를 수정 하 고 필요한 경우 나중에 복원할 수 있도록 원래 값을 추적 하는 것이 좋습니다는 항상 있습니다. 시스템 BIOS에서 매개 변수를 변경한 후 문제를 발생 하는 경우 기본 설정 (옵션은 일반적으로 BIOS 구성 유틸리티에서 사용할 수 있는)를 로드 하려고 하거나 컴퓨터 제조업체에 문의 합니다.  
+> 컴퓨터의 시스템 BIOS에서 특정 매개 변수를 변경 하는 해당 컴퓨터의 운영 체제를 로드 중지 될 수 있습니다 또는 수 있도록 하드 디스크 드라이브 등의 하드웨어 디바이스를 사용할 수 없습니다. 항상 시스템 BIOS를 구성 하는 적절 한 방법을 결정 하는 컴퓨터에 대 한 사용자 설명서를 참조 하십시오. 또한 매개 변수를 수정 하 고 필요한 경우 나중에 복원할 수 있도록 원래 값을 추적 하는 것이 좋습니다는 항상 있습니다. 시스템 BIOS에서 매개 변수를 변경한 후 문제를 발생 하는 경우 기본 설정 (옵션은 일반적으로 BIOS 구성 유틸리티에서 사용할 수 있는)를 로드 하려고 하거나 컴퓨터 제조업체에 문의 합니다.  
   
 #### <a name="to-verify-virtualization-support-in-the-bios-or-uefi"></a>BIOS 또는 UEFI에서 가상화 지원을 확인 하려면  
   

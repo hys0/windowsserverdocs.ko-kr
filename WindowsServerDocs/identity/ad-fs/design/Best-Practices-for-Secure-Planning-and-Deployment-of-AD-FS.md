@@ -1,7 +1,6 @@
 ---
 ms.assetid: 963a3d37-d5f1-4153-b8d5-2537038863cb
 title: AD FS 보안 계획 및 배포 모범 사례
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: be488ccffee7b267d2a3a120b85436abf206f65a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: bcddb3cc7534f45f0a84e25a6174648f1e3b82af
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71359204"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858416"
 ---
 # <a name="best-practices-for-secure-planning-and-deployment-of-ad-fs"></a>AD FS 보안 계획 및 배포 모범 사례
 
@@ -57,12 +56,12 @@ ms.locfileid: "71359204"
   
     다음 표에서는 AD FS를 설치한 컴퓨터에서 선택한 AD FS 서버 역할에 따라 적절한 SCW 역할 확장을 등록하는 방법에 대해 설명합니다.  
   
-    |AD FS 서버 역할|사용하는 AD FS 구성 데이터베이스|명령 프롬프트에서 다음 명령을 입력합니다.|  
+    |AD FS 서버 역할|사용하는 AD FS 구성 데이터베이스|명령 프롬프트에 다음 명령을 입력합니다.|  
     |---------------------|-------------------------------------|---------------------------------------------------|  
-    |독립 실행형 페더레이션 서버|Windows 내부 데이터베이스|`scwcmd register /kbname:ADFS2Standalone /kbfile:"WindowsADFSscwStandAlone.xml"`|  
-    |팜에 가입된 페더레이션 서버|Windows 내부 데이터베이스|`scwcmd register /kbname:ADFS2Standalone /kbfile:"WindowsADFSscwFarm.xml"`|  
+    |독립 실행형 페더레이션 서버|Windows Internal Database|`scwcmd register /kbname:ADFS2Standalone /kbfile:"WindowsADFSscwStandAlone.xml"`|  
+    |팜에 가입된 페더레이션 서버|Windows Internal Database|`scwcmd register /kbname:ADFS2Standalone /kbfile:"WindowsADFSscwFarm.xml"`|  
     |팜에 가입된 페더레이션 서버|SQL Server|`scwcmd register /kbname:ADFS2Standalone /kbfile:"WindowsADFSscwSQLFarm.xml"`|  
-    |페더레이션 서버 프록시|해당 없음|`scwcmd register /kbname:ADFS2Standalone /kbfile:"WindowsADFSscwProxy.xml"`|  
+    |페더레이션 서버 프록시|N/A|`scwcmd register /kbname:ADFS2Standalone /kbfile:"WindowsADFSscwProxy.xml"`|  
   
     AD FS에서 사용할 수 있는 데이터베이스에 대한 자세한 내용은 [AD FS 구성 데이터베이스의 역할](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)을 참조하세요.  
   
@@ -75,7 +74,7 @@ ms.locfileid: "71359204"
   
     토큰 암호화는 AD FS 배포에 대해 시도 될 수 있는 잠재적 MITM (메시지 가로채기 (man-in-the-middle) 공격을 방지 하 고 보안을 강화 하는 것이 좋습니다. 암호화를 사용하면 처리량이 약간 저하되지만 일반적으로 인식할 수 있는 수준은 아니며, 대부분의 배포에서는 강화된 보안 이점이 서버 성능 면에서 소요되는 모든 비용을 능가합니다.  
   
-    토큰 암호화를 사용하려면 먼저 신뢰 당사자 트러스트에 대한 암호화 인증서 추가를 설정합니다. 신뢰 당사자 트러스트를 만들 때 또는 그 이후에 암호화 인증서를 구성할 수 있습니다. 나중에 기존 신뢰 당사자 트러스트에 암호화 인증서를 추가 하려면 AD FS 스냅인을 사용 하는 동안 트러스트 속성 내의 **암호화** 탭에서 사용할 인증서를 설정할 수 있습니다. AD FS cmdlet을 사용 하 여 기존 트러스트에 대 한 인증서를 지정 하려면 ClaimsProviderTrust 또는 **하려면 set-relyingpartytrust** Cmdlet의 certificate 매개 변수를 사용 합니다. 토큰 암호를 해독할 때 사용할 페더레이션 서비스 인증서를 설정 하려면 **ADFSCertificate** cmdlet을 사용 하 고 *certificatetype* 매개 변수에 "`Token-Encryption`"을 지정 합니다. 특정 신뢰 당사자 트러스트에 대해 암호화를 사용하거나 사용하지 않도록 설정하려면 *Set-RelyingPartyTrust* cmdlet의 **EncryptClaims** 매개 변수를 사용하면 됩니다.  
+    토큰 암호화를 사용하려면 먼저 신뢰 당사자 트러스트에 대한 암호화 인증서 추가를 설정합니다. 신뢰 당사자 트러스트를 만들 때 또는 그 이후에 암호화 인증서를 구성할 수 있습니다. 나중에 기존 신뢰 당사자 트러스트에 암호화 인증서를 추가 하려면 AD FS 스냅인을 사용 하는 동안 트러스트 속성 내의 **암호화** 탭에서 사용할 인증서를 설정할 수 있습니다. AD FS cmdlet을 사용 하 여 기존 트러스트에 대 한 인증서를 지정 하려면 ClaimsProviderTrust 또는 **하려면 set-relyingpartytrust** Cmdlet의 **Set-ClaimsProviderTrust** certificate 매개 변수를 사용 합니다. 토큰 암호를 해독할 때 사용할 페더레이션 서비스 인증서를 설정 하려면 **ADFSCertificate** cmdlet을 사용 하 고 *certificatetype* 매개 변수에 "`Token-Encryption`"을 지정 합니다. 특정 신뢰 당사자 트러스트에 대해 암호화를 사용하거나 사용하지 않도록 설정하려면 *Set-RelyingPartyTrust* cmdlet의 **EncryptClaims** 매개 변수를 사용하면 됩니다.  
   
 -   **인증에 확장 된 보호 활용**  
   
@@ -83,7 +82,7 @@ ms.locfileid: "71359204"
   
     인증에 대한 확장된 보호는 공격자가 클라이언트 자격 증명을 가로채 서버로 전달하는 MITM(메시지 가로채기) 공격을 방지하는 데 도움이 됩니다. 이러한 공격은 CBT(채널 바인딩 토큰)를 통해 방지할 수 있으며, CBT는 클라이언트와의 통신을 설정할 때 서버에서 필요로 하거나, 허용하거나, 필요로 하지 않을 수 있습니다.  
   
-    확장된 보호 기능을 사용하려면 **Set-ADFSProperties** cmdlet에서 **ExtendedProtectionTokenCheck** 매개 변수를 사용합니다. 이 설정의 가능한 값과 해당 값에서 제공하는 보안 수준은 다음 표에 설명되어 있습니다.  
+    확장된 보호 기능을 사용하려면 **ExtendedProtectionTokenCheck** cmdlet에서 **Set-ADFSProperties** 매개 변수를 사용합니다. 이 설정의 가능한 값과 해당 값에서 제공하는 보안 수준은 다음 표에 설명되어 있습니다.  
   
     |매개 변수 값|보안 수준|보호 설정|  
     |-------------------|------------------|----------------------|  
@@ -114,7 +113,7 @@ ms.locfileid: "71359204"
      Windows Server 2016의 AD FS에 대 한 엑스트라넷 스마트 잠금 [AD FS 엑스트라넷 스마트 잠금 보호](../../ad-fs/operations/Configure-AD-FS-Extranet-Smart-Lockout-Protection.md)를 참조 하세요.  
   
 ## <a name="sql-serverspecific-security-best-practices-for-ad-fs"></a>AD FS에 대한 SQL Server 관련 보안 모범 사례  
-다음 보안 모범 사례는 Microsoft SQL Server® 나 WID (Windows 내부 데이터베이스)를 사용 하는 것과 관련이 있습니다. 이러한 데이터베이스 기술은 AD FS 디자인 및 배포에서 데이터를 관리 하는 데 사용 됩니다.  
+다음 보안 모범 사례는 Microsoft SQL Server&reg; 나 WID (Windows 내부 데이터베이스)를 사용 하는 것과 관련이 있습니다. 이러한 데이터베이스 기술은 AD FS 디자인 및 배포에서 데이터를 관리 하는 데 사용 됩니다.  
   
 > [!NOTE]  
 > 이러한 권장 사항은 SQL Server 제품 보안 지침을 대체하는 것이 아니라 확장하는 것입니다. 보안 SQL Server 설치를 계획 하는 방법에 대 한 자세한 내용은 보안 [SQL 설치를 위한 보안 고려 사항](https://go.microsoft.com/fwlink/?LinkID=139831) (https://go.microsoft.com/fwlink/?LinkID=139831)을 참조 하세요.  
@@ -125,11 +124,11 @@ ms.locfileid: "71359204"
   
 -   **기본 제공 되는 기본 시스템 서비스 계정을 사용 하는 대신 서비스 계정에서 SQL Server를 실행 합니다.**  
   
-    기본적으로 SQL Server는 지원되는 기본 제공 시스템 계정(예: LocalSystem 또는 NetworkService 계정) 중 하나를 사용하도록 설치 및 구성되는 경우가 많습니다. AD FS에 대 한 SQL Server 설치의 보안을 강화 하려면 가능한 경우 별도의 서비스 계정을 사용 하 여 SQL Server 서비스에 액세스 하 고에이 계정의 SPN (보안 주체 이름)을 등록 하 여 Kerberos 인증을 사용 하도록 설정 합니다. 배포를 Active Directory 합니다. 이는 클라이언트와 서버 간의 상호 인증을 지원합니다. 별도 서비스 계정의 SPN을 등록하지 않으면 SQL Server에서 Windows 기반 인증용 NTLM을 사용하므로 클라이언트만 인증됩니다.  
+    기본적으로 SQL Server는 지원되는 기본 제공 시스템 계정(예: LocalSystem 또는 NetworkService 계정) 중 하나를 사용하도록 설치 및 구성되는 경우가 많습니다. AD FS에 대 한 SQL Server 설치의 보안을 강화 하려면 가능한 경우 별도의 서비스 계정을 사용 하 여 SQL Server 서비스에 액세스 하 고 Active Directory 배포에이 계정의 SPN (보안 주체 이름)을 등록 하 여 Kerberos 인증을 사용 하도록 설정 합니다. 이는 클라이언트와 서버 간의 상호 인증을 지원합니다. 별도 서비스 계정의 SPN을 등록하지 않으면 SQL Server에서 Windows 기반 인증용 NTLM을 사용하므로 클라이언트만 인증됩니다.  
   
 -   **SQL Server의 노출 영역을 최소화 합니다.**  
   
-    필요한 SQL Server 끝점만 사용합니다. 기본적으로 SQL Server는 제거할 수 없는 단일 기본 제공 TCP 끝점을 제공합니다. AD FS의 경우 Kerberos 인증에이 TCP 끝점을 사용 하도록 설정 해야 합니다. 현재 TCP 끝점을 검토하여 추가 사용자 정의 TCP 포트가 SQL 설치에 추가되었는지 알아보려면 Transact-SQL(T-SQL) 세션에서 "SELECT * FROM sys.tcp_endpoints" 쿼리 문을 사용하면 됩니다. SQL Server 끝점 구성에 대 한 자세한 내용은 [방법: 여러 TCP 포트에서 수신 하도록 데이터베이스 엔진 구성](https://go.microsoft.com/fwlink/?LinkID=189231) (https://go.microsoft.com/fwlink/?LinkID=189231)을 참조 하십시오.  
+    필요한 SQL Server 엔드포인트만 사용합니다. 기본적으로 SQL Server는 제거할 수 없는 단일 기본 제공 TCP 엔드포인트을 제공합니다. AD FS의 경우 Kerberos 인증에이 TCP 끝점을 사용 하도록 설정 해야 합니다. 현재 TCP 끝점을 검토하여 추가 사용자 정의 TCP 포트가 SQL 설치에 추가되었는지 알아보려면 Transact-SQL(T-SQL) 세션에서 "SELECT * FROM sys.tcp_endpoints" 쿼리 문을 사용하면 됩니다. SQL Server 끝점 구성에 대 한 자세한 내용은 [방법: 여러 TCP 포트에서 수신 하도록 데이터베이스 엔진 구성](https://go.microsoft.com/fwlink/?LinkID=189231) (https://go.microsoft.com/fwlink/?LinkID=189231)을 참조 하십시오.  
   
 -   **SQL 기반 인증을 사용 하지 마십시오.**  
   

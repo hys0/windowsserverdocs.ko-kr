@@ -1,24 +1,20 @@
 ---
 title: 도메인 배포를 위한 그룹 정책 구성
 description: MultiPoint 서비스에서 그룹 정책을 설정 하는 방법 알아보기
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 13e5fa90-d330-4155-a6b8-78eb650cbbfa
 author: evaseydl
 manager: scottman
 ms.author: evas
-ms.openlocfilehash: 5ac6524289d231d152e366d2ba750a59d27ce14f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e851d12dad29de8b3498aad220354d31917fadee
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71395517"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80862186"
 ---
 # <a name="configure-group-policies-for-a-domain-deployment"></a>도메인 배포를 위한 그룹 정책 구성
 MultiPoint 서비스의 도메인 배포가 제대로 작동 하도록 하려면 MultiPoint 서비스 시스템의 WMSshell 사용자 계정에 다음 그룹 정책 설정을 적용 합니다.  
@@ -38,15 +34,15 @@ WMSshell 사용자 계정은 MultiPoint 서비스에서 콘솔에 로그인 하�
   
 |설정|값|  
 |-----------|----------|  
-|화면 보호기 사용|해제됨|  
-|화면 보호기 시간 제한|해제됨<br /><br />초: xxx|  
-|암호로 화면 보호기 보호|해제됨|  
+|화면 보호기 사용|사용 안 함|  
+|화면 보호기 시간 제한|사용 안 함<p>초: xxx|  
+|암호로 화면 보호기 보호|사용 안 함|  
   
 **정책:** 컴퓨터 구성 > Windows 설정 > 보안 설정 > 로컬 정책 > 사용자 권한 할당 > 로컬 **로그온 허용**  
   
 |설정|값|  
 |-----------|----------|  
-|로컬 로그온 허용|계정 목록에 WMSshell 계정이 포함 되어 있는지 확인 합니다.<br /><br />**참고:** 기본적으로 WMSshell 계정은 Users 그룹의 구성원입니다. 사용자 그룹이 목록에 있고 WMSshell가 Users 그룹의 구성원 인 경우에는 WMSshell 계정을 목록에 추가할 필요가 없습니다.|  
+|로컬 로그온 허용|계정 목록에 WMSshell 계정이 포함 되어 있는지 확인 합니다.<p>**참고:** 기본적으로 WMSshell 계정은 Users 그룹의 구성원입니다. 사용자 그룹이 목록에 있고 WMSshell가 Users 그룹의 구성원 인 경우에는 WMSshell 계정을 목록에 추가할 필요가 없습니다.|  
   
 > [!IMPORTANT]  
 > 그룹 정책을 설정 하는 경우 해당 정책이 MultiPoint 서버에서 자동 업데이트 및 오류 Windows 오류 보고를 방해 하지 않는지 확인 합니다. 이러한 설정은 **자동으로 업데이트 설치** 및 자동 **Windows 오류 보고** 설정에 의해 설정 되며,이 설정은 **서버 설정 편집**을 사용 하 여 Multipoint Manager에서 구성 되거나, 디스크 보호를 위해 예약 된 업데이트에서 구성 된 Windows multipoint server 설치 중에 선택 되었습니다.  
@@ -55,7 +51,7 @@ WMSshell 사용자 계정은 MultiPoint 서비스에서 콘솔에 로그인 하�
 MultiPoint 서비스의 도메인 배포의 경우 다음 레지스트리 하위 키를 업데이트 해야 합니다.  
   
 > [!IMPORTANT]  
-> 레지스트리를 잘못 편집하면 시스템에 심각한 손상을 줄 수 있습니다. 따라서 레지스트리를 변경하기 전에 컴퓨터의 중요한 데이터를 백업해 두어야 합니다.  
+> 레지스트리를 잘못 편집하면 시스템이 크게 손상될 수 있습니다. 따라서 레지스트리를 변경하기 전에 컴퓨터의 중요한 데이터를 백업해 두어야 합니다.  
   
 #### <a name="to-update-registry-subkeys-for-a-domain-deployment-of-multipoint-services"></a>MultiPoint 서비스의 도메인 배포에 대 한 레지스트리 하위 키를 업데이트 하려면  
   

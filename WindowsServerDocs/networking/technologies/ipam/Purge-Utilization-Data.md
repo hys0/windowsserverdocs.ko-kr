@@ -2,22 +2,18 @@
 title: 사용률 데이터 제거
 description: 이 항목은 Windows Server 2016의 IPAM (IP 주소 관리) 관리 가이드의 일부입니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ipam
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 45cada9e-69b9-43df-b6f5-6d3942435809
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: a8542e643a9c4d33acad18523fd34eed8926413d
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: a4454131c6a73626b0668b3ca3ab4eefb3e3334f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80316772"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860626"
 ---
 # <a name="purge-utilization-data"></a>사용률 데이터 제거
 

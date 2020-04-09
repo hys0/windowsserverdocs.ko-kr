@@ -1,24 +1,20 @@
 ---
 title: PowerShell_ise
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 32c41b5b-a210-47d9-bd8c-91eb9830b4f0
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 65d8b9e7b7952ec64cd24e8106802cf66de693c6
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b6ae96dcd40c894e0a528c06b461173f626fb2d2
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71372193"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80837396"
 ---
 # <a name="powershell_ise"></a>PowerShell_ise
 
@@ -59,7 +55,7 @@ Windows PowerShell ISE (통합 스크립팅 환경)는 그래픽 지원 환경�
 
 Windows PowerShell ISE를 시작 하는 다른 방법에 대 한 자세한 내용은 [Windows PowerShell 시작](https://go.microsoft.com/fwlink/?LinkID=135259)을 참조 하세요.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 Windows PowerShell은 Windows Server 운영 체제의 Server Core 설치 옵션에서 실행 됩니다. 그러나 Windows PowerShell ISE에는 그래픽 사용자 인터페이스가 필요 하기 때문에 Server Core 설치에서 실행 되지 않습니다.
 

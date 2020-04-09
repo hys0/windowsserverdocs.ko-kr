@@ -1,19 +1,19 @@
 ---
 title: OS 전문화 응답 파일 만들기
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: 299aa38e-28d2-4cbe-af16-5b8c533eba1f
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 4920f9a90bd0190d390a9d35b3d265023d69efac
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: be099a234b7e2e73375d23b19161e59876f71d61
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386498"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856506"
 ---
 # <a name="create-os-specialization-answer-file"></a>OS 전문화 응답 파일 만들기
 

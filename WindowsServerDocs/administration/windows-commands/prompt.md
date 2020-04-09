@@ -1,24 +1,20 @@
 ---
 title: prompt
 description: 명령 프롬프트를 사용자 지정 하는 방법을 알아봅니다.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3d98e965-02eb-46ad-9d0a-5dc44830373e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 2df80d3af6344644a68b1b2d01ba48fbf41f1581
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6662cb7fb00b7d21311fef2ca127ba89591a00b2
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71372025"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80837136"
 ---
 # <a name="prompt"></a>prompt
 
@@ -34,14 +30,14 @@ Cmd.exe 명령 프롬프트를 변경합니다. 매개 변수 없이 사용 하�
 prompt [<Text>]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
-|\< 텍스트 >|텍스트 및 명령 프롬프트에 포함 하려는 정보를 지정 합니다.|
+|\<텍스트 >|텍스트 및 명령 프롬프트에 포함 하려는 정보를 지정 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 현재 디렉터리, 시간 및 날짜 및 Microsoft Windows 버전 번호의 이름으로 이러한 정보를 포함 하 여 원하는 텍스트를 표시 하려면 명령 프롬프트를 사용자 지정할 수 있습니다.
 
@@ -50,7 +46,7 @@ prompt [<Text>]
 | 문자 |                                 설명                                 |
 |-----------|-----------------------------------------------------------------------------|
 |    $q     |                               = (등호)                                |
-|    $$     |                               $(달러 기호)                               |
+|    $$     |                               $ (달러 기호)                               |
 |    $t     |                                현재 시간                                 |
 |    $d     |                                현재 날짜                                 |
 |    $p     |                           현재 드라이브 및 경로                            |
@@ -65,7 +61,7 @@ prompt [<Text>]
 |    $는     |                                & (앰퍼샌드)                                |
 |    $c     |                            ((왼쪽된 괄호)                             |
 |    $f     |                            ) (오른쪽 괄호)                            |
-|    $s     |                                    공간                                    |
+|    $s     |                                    공백                                    |
 
 명령 확장을 사용 하는 경우 (기본값)는 **프롬프트** 명령이 다음 형식 지정 문자를 지원 합니다.  
 
@@ -76,7 +72,7 @@ prompt [<Text>]
 
 포함 하는 경우는 **$p** 문자 텍스트 매개 변수에서 디스크를 각 명령 (현재 드라이브와 경로 결정)를 입력 한 후 읽습니다. 이 특히 플로피 디스크 드라이브에 대 한 시간이 걸릴 수 있습니다.
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name="BKMK_examples"></a>예와
 
 첫 번째 줄 및 보다 큼 다음 줄에서 기호에 현재 날짜 및 시간으로 두 줄 명령 프롬프트를 설정 하려면 다음을 입력 합니다.
 ```
@@ -96,6 +92,6 @@ prompt --$g
 prompt $p$g
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

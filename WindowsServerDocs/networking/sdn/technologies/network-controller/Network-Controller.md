@@ -1,19 +1,19 @@
 ---
 title: 네트워크 컨트롤러
 description: 이 항목에서는 Windows Server 2016의 네트워크 컨트롤러에 대 한 개요를 제공 합니다.
-manager: brianlic
+manager: grcusanz
 ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: 31f3fa4e-cd25-4bf3-89e9-a01a6cec7893
-ms.author: lizross
-author: eross-msft
-ms.openlocfilehash: ad13e41e756f0185a748fe9e17df64c71a8754bc
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.author: anpaul
+author: AnirbanPaul
+ms.openlocfilehash: f8221c92dc91d0c2e04df906ccd839a2c9895f94
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80317076"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859666"
 ---
 # <a name="network-controller"></a>네트워크 컨트롤러
 
@@ -21,7 +21,7 @@ ms.locfileid: "80317076"
 
 새로운 네트워크 컨트롤러에서 Windows Server 2016 관리, 구성, 모니터링 및 데이터 센터의 가상 및 실제 네트워크 인프라의 문제를 해결 하는 자동화의 프로그래밍 가능한 중앙된 위치를 제공 합니다. 
 
-네트워크 컨트롤러를 사용하여 네트워크 장치 및 서비스를 수동으로 구성하는 대신 네트워크 인프라의 구성을 자동화할 수 있습니다.
+네트워크 컨트롤러를 사용하여 네트워크 디바이스 및 서비스를 수동으로 구성하는 대신 네트워크 인프라의 구성을 자동화할 수 있습니다.
 
 > [!NOTE]
 > 이 항목 외에 다음과 같은 네트워크 컨트롤러 설명서를 사용할 수 있습니다.

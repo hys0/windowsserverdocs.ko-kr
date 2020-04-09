@@ -1,21 +1,18 @@
 ---
 title: 스토리지 공간 다이렉트를 사용 하 여 진단 데이터 수집
 description: 데이터 수집 도구를 사용 하 여 이러한 도구를 실행 하 고 사용 하는 방법에 대 한 구체적인 예제를 이해 스토리지 공간 다이렉트.
-keywords: 저장소 공간, 데이터 수집, 문제 해결, 이벤트 채널, SDDCDiagnosticInfo
-ms.assetid: ''
 ms.prod: windows-server
 ms.author: adagashe
 ms.technology: storage-spaces
 ms.topic: article
 author: adagashe
 ms.date: 10/24/2018
-ms.localizationpriority: ''
-ms.openlocfilehash: 0d64e6188b24b5a1ec45242c3d99366fdde5a623
-ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
+ms.openlocfilehash: 75a74017f48b357dd029b062a7ce06775836bd0a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77465217"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858966"
 ---
 # <a name="collect-diagnostic-data-with-storage-spaces-direct"></a>스토리지 공간 다이렉트를 사용 하 여 진단 데이터 수집
 

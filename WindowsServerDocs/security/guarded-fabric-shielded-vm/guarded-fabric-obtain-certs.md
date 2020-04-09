@@ -1,23 +1,23 @@
 ---
 title: HGS 용 인증서 가져오기
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: f4b4d1a8-bf6d-4881-9150-ddeca8b48038
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 09/25/2019
-ms.openlocfilehash: e8f4a3696ec5096281ba1ffd130aa97004530cc1
-ms.sourcegitcommit: de71970be7d81b95610a0977c12d456c3917c331
+ms.openlocfilehash: da1ae4bacd5a6b2e38b22930aacf06f65b16bb29
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71940731"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856536"
 ---
 # <a name="obtain-certificates-for-hgs"></a>HGS 용 인증서 가져오기
 
->적용 대상: Windows server 2019, Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server 2019, Windows Server (반기 채널), Windows Server 2016
 
 HGS를 배포할 때 보호 된 VM을 시작 하는 데 필요한 중요 한 정보를 보호 하는 데 사용 되는 서명 및 암호화 인증서를 제공 하 라는 메시지가 표시 됩니다.
 이러한 인증서는 HGS를 떠나지 않으며, 실행 중인 호스트가 정상 상태를 증명 한 경우 보호 된 VM 키의 암호를 해독 하는 데만 사용 됩니다.
@@ -37,7 +37,7 @@ HGS를 배포할 때 보호 된 VM을 시작 하는 데 필요한 중요 한 정
 ------------------------------|----------------
 암호화 공급자               | 모든 KSP (키 저장소 공급자)입니다. 레거시 Csp (암호화 서비스 공급자)는 지원 **되지 않습니다** .
 키 알고리즘                 | RSA
-최소 키 크기              | 2048 비트
+최소 키 크기              | 2048비트
 서명 알고리즘           | 권장: SHA256
 키 사용                     | 디지털 서명 *및* 데이터 암호화
 확장 된 키 사용            | 서버 인증
@@ -74,14 +74,14 @@ Remove-Item $encCert.PSPath
 
 ## <a name="request-an-ssl-certificate"></a>SSL 인증서 요청
 
-Hyper-v 호스트와 HGS 사이에서 전송 되는 모든 키와 중요 한 정보는 메시지 수준에서 암호화 됩니다. 즉, HGS 또는 Hyper-v에 알려진 키로 정보가 암호화 되어 누군가 네트워크 트래픽을 스니핑 하 고 키를 도용 하지 못하도록 합니다. Vm에 연결할 수 있습니다.
+Hyper-v 호스트와 HGS 사이에서 전송 되는 모든 키와 중요 한 정보는 메시지 수준에서 암호화 됩니다. 즉,이 정보는 HGS 또는 Hyper-v로 알려진 키로 암호화 되므로 누군가가 네트워크 트래픽을 스니핑 하 고 Vm에 대 한 키를 도용 하는 것을 방지할 수 있습니다.
 그러나 준수를 reqiurements 하거나 Hyper-v와 HGS 간의 모든 통신을 암호화 하는 것이 좋습니다. 전송 수준에서 모든 데이터를 암호화 하는 SSL 인증서를 사용 하 여 HGS를 구성할 수 있습니다.
 
 Hyper-v 호스트와 HGS 노드 모두 사용자가 제공 하는 SSL 인증서를 신뢰 해야 하므로 엔터프라이즈 인증 기관에서 SSL 인증서를 요청 하는 것이 좋습니다. 인증서를 요청할 때 다음을 지정 해야 합니다.
 
 SSL 인증서 속성 | 필요한 값
 -------------------------|---------------
-주체 이름             | HGS 클러스터의 이름 (분산 네트워크 이름 또는 가상 컴퓨터 개체 FQDN 이라고 함)입니다. @No__t-0 및 HGS 도메인 이름에 제공 되는 HGS 서비스 이름의 연결입니다.
+주체 이름             | HGS 클러스터의 이름 (분산 네트워크 이름 또는 가상 컴퓨터 개체 FQDN 이라고 함)입니다. `Initialize-HgsServer`에 제공 된 HGS 서비스 이름과 HGS 도메인 이름을 연결 하는 것입니다.
 주체 대체 이름 | 다른 DNS 이름을 사용 하 여 HGS 클러스터에 연결 하는 경우 (예: 부하 분산 장치 뒤에 있는 경우) 인증서 요청의 SAN 필드에 해당 DNS 이름을 포함 해야 합니다.
 
 HGS 서버를 초기화할 때이 인증서를 지정 하는 옵션은 [첫 번째 hgs 노드 구성](guarded-fabric-initialize-hgs.md)에서 설명 합니다.

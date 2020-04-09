@@ -2,22 +2,18 @@
 title: 2 단계 ROUTER1 설치 및 구성
 description: 이 항목은 테스트 랩 가이드-Windows Server 2016에 대 한 DirectAccess 멀티 사이트 배포 시연의 일부입니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-da
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: dc20b1a0-540d-4531-a176-50b87c071600
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 3cd73f1a5e2612f4551be1f16e49e9645c5e12c0
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 5e2b0759e85c05b4ee33971849bd1096d4c8419c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80308740"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861606"
 ---
 # <a name="step-2-install-and-configure-router1"></a>2 단계 ROUTER1 설치 및 구성
 

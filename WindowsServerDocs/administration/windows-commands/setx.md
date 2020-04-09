@@ -1,28 +1,22 @@
 ---
 title: setx
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: Setx에 대 한 Windows 명령 항목을 참조 하세요 .이 항목은 프로그래밍 또는 스크립팅이 필요 하지 않고 사용자 또는 시스템 환경에서 환경 변수를 만들거나 수정 합니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ef37482f-f8a8-4765-951a-2518faac3f44
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c206f36e2d0bc947329124b08fb797091e838bcd
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 19f6625ffaaf745ae2af26e52986e97382f42702
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71384034"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80834346"
 ---
 # <a name="setx"></a>setx
-
-
 
 만들거나 프로그래밍 또는 스크립팅 필요 없이 사용자 또는 시스템 환경에서 환경 변수를 수정 합니다. **Setx** 또한 레지스트리 키의 값을 검색 하 고 텍스트 파일에 씁니다.
 
@@ -33,10 +27,10 @@ ms.locfileid: "71384034"
 ```
 setx [/s <Computer> [/u [<Domain>\]<User name> [/p [<Password>]]]] <Variable> <Value> [/m]
 setx [/s <Computer> [/u [<Domain>\]<User name> [/p [<Password>]]]] [<Variable>] /k <Path> [/m]
-setx [/s <Computer> [/u [<Domain>\]<User name> [/p [<Password>]]]] /f <FileName> {[<Variable>] {/a <X>,<Y> | /r <X>,<Y> "<String>"} [/m] | /x} [/d <Delimiters>]
+setx [/s <Computer> [/u [<Domain>\]<User name> [/p [<Password>]]]] /f <FileName> {[<Variable>] {/a <X>,<Y> | /r <X>,<Y> <String>} [/m] | /x} [/d <Delimiters>]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |         매개 변수          |                                                                                                                                              설명                                                                                                                                              |
 |----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -48,13 +42,13 @@ setx [/s <Computer> [/u [<Domain>\]<User name> [/p [<Password>]]]] /f <FileName>
 |         /k \<경로 >         | 레지스트리 키에서 정보에 변수가 기반으로 설정 되도록 지정 합니다. P *"ath"* 는 다음 구문을 사용 합니다.</br>`\\<HIVE>\<KEY>\...\<Value>`</br>예를 들어 다음 경로 지정할 수 있습니다.</br>`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation\StandardName` |
 |      /f \<파일 이름 >       |                                                                                                                               사용 하 여 원하는 파일을 지정 합니다.                                                                                                                                |
 |        /a \<X >,<Y>         |                                                                                                                    검색 매개 변수로 절대 좌표와 오프셋을 지정합니다.                                                                                                                    |
-|   /r \<X ><Y> "<String>"   |                                                                                                            상대 좌표 및 오프셋이 지정 **문자열** 매개 변수를 검색으로 합니다.                                                                                                            |
+|   /r \<X >,<Y> <String>   |                                                                                                            상대 좌표 및 오프셋이 지정 **문자열** 매개 변수를 검색으로 합니다.                                                                                                            |
 |             /m             |                                                                                                시스템 환경에서 변수를 설정 하도록 지정 합니다. 기본 설정은 로컬 환경입니다.                                                                                                 |
 |             /x             |                                                                                                       표시 파일을 무시 하 고 좌표는 **/a**, **/r**, 및 **/d** 명령줄 옵션입니다.                                                                                                        |
-|      /d \<구분 기호 >      |                    와 같은 구분 기호를 지정 " **,** "또는" **\\** " 4 개의 기본 제공 구분 기호 외에도 사용할 수-공백, 탭, ENTER, 및 줄 바꿈 합니다. 모든 ASCII 문자를 포함 하는 유효한 구분 기호. 구분 기호는 최대 수는 15, 기본 제공 구분 기호를 포함 합니다.                    |
+|      /d \<구분 기호 >      |                    공백, 탭, ENTER 및 줄 바꿈 등 네 가지 기본 제공 구분 기호 외에 사용할 **\\** **와 같은 구분 기호를 지정** 합니다. 모든 ASCII 문자를 포함 하는 유효한 구분 기호. 구분 기호는 최대 수는 15, 기본 제공 구분 기호를 포함 합니다.                    |
 |             /?             |                                                                                                                                 명령 프롬프트에 도움말을 표시합니다.                                                                                                                                  |
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 -   **Setx** 명령 SETENV UNIX 유틸리티와 비슷합니다.
 -   **Setx** 직접 고 영구적으로 시스템 환경 값을 설정 하는 명령줄 또는 프로그램 방법을 제공 합니다. 시스템 환경 변수를 통해 수동으로 구성할 수는 **제어판** 또는 레지스트리 편집기를 통해. **설정** 명령 인터프리터 (Cmd.exe)의 내부 인 명령의 현재 콘솔 창에 사용자 환경 변수를 설정 합니다.
@@ -66,7 +60,7 @@ setx [/s <Computer> [/u [<Domain>\]<User name> [/p [<Password>]]]] /f <FileName>
 -   REG_DWORD 레지스트리 값 추출 되 고 16 진수 모드에서 사용 됩니다.
 -   캐리지 리턴를 구문 분석 하는 파일 모드를 지원 하 고 줄 바꿈 (CRLF) 텍스트 파일에만 합니다.
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
 Brand1 값에 로컬 환경에서 컴퓨터 환경 변수를 설정 하려면 다음을 입력 합니다.
 ```
@@ -74,7 +68,7 @@ setx MACHINE Brand1
 ```
 값 Brand1 컴퓨터에 시스템 환경에서 컴퓨터 환경 변수를 설정 하려면 다음을 입력 합니다.
 ```
-setx MACHINE "Brand1 Computer" /m
+setx MACHINE Brand1 Computer /m
 ```
 PATH 환경 변수에 정의 된 검색 경로 사용 하 여 로컬 환경에서 MYPATH 환경 변수를 설정 하려면 다음을 입력 합니다.
 ```
@@ -102,11 +96,11 @@ setx /s computer1 /u maindom\hiropln /p p@ssW23 TZONE /k HKEY_LOCAL_MACHINE\Syst
 ```
 에 있는 값에 시스템 환경에서 빌드 환경 변수를 설정 하는 **HKEY_LOCAL_MACHINE\Software\Microsoft\WindowsNT\CurrentVersion\CurrentBuildNumber** 레지스트리 키, 유형:
 ```
-setx BUILD /k "HKEY_LOCAL_MACHINE\Software\Microsoft\WindowsNT\CurrentVersion\CurrentBuildNumber" /m
+setx BUILD /k HKEY_LOCAL_MACHINE\Software\Microsoft\WindowsNT\CurrentVersion\CurrentBuildNumber /m
 ```
 에 있는 값을 Computer1 라는 원격 컴퓨터의 시스템 환경에서 빌드 환경 변수를 설정 하는 **HKEY_LOCAL_MACHINE\Software\Microsoft\WindowsNT\CurrentVersion\CurrentBuildNumber** 레지스트리 키, 유형:
 ```
-setx /s computer1 /u maindom\hiropln /p p@ssW23  BUILD /k "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\CurrentBuildNumber" /m
+setx /s computer1 /u maindom\hiropln /p p@ssW23  BUILD /k HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\CurrentBuildNumber /m
 ```
 내용 해당 하는 좌표와 함께 Ipconfig.out, 라는 파일의 내용을 표시 하려면 다음을 입력 합니다.
 ```
@@ -116,11 +110,11 @@ setx /f ipconfig.out /x
 ```
 setx IPADDR /f ipconfig.out /a 5,11
 ```
-구분 기호를 사용 하 여 파일 Ipconfig.out에에서 5,3 좌표에 있는 값에 로컬 환경에서 OCTET1 환경 변수를 설정 하려면 **"#$\*."** , 유형:
+로컬 환경에서 OCTET1 환경 변수를 파일에서 3의 좌표에 있는 값으로 설정 하려면 \*. 구분 기호를 사용 하 여 **#$합니다**.를 입력 합니다.
 ```
-setx OCTET1 /f ipconfig.out /a 5,3 /d "#$*." 
+setx OCTET1 /f ipconfig.out /a 5,3 /d #$*. 
 ```
-Ipconfig.out 파일에 "게이트웨이"의 좌표와 관련 하 여 0,7 좌표에 있는 값에 로컬 환경에서 IPGATEWAY 환경 변수를 설정 하려면 다음을 입력 합니다.
+로컬 환경의 IPGATEWAY 환경 변수를 파일 Ipconfig의 게이트웨이 좌표를 기준으로 0, 7 좌표에 있는 값으로 설정 하려면 다음을 입력 합니다.
 ```
 setx IPGATEWAY /f ipconfig.out /r 0,7 Gateway 
 ```
@@ -129,6 +123,6 @@ Ipconfig.out 라는 파일의 내용을 표시 하려면-내용 해당 하는 �
 setx /s computer1 /u maindom\hiropln /p p@ssW23 /f ipconfig.out /x 
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

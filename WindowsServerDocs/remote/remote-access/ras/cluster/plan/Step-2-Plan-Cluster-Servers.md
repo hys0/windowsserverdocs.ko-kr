@@ -2,22 +2,18 @@
 title: 2 단계 클러스터 서버 계획
 description: 이 항목은 Windows Server 2016의 클러스터에 원격 액세스 배포 가이드의 일부입니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ras
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 673c5bfb-b590-4932-8e54-ca0a466d90cc
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 608bc4b2805639e2638ac12f74b712c812ce165f
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 7ac00278e501115d81d80f55c1ceae33a379cc4a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80308242"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855246"
 ---
 # <a name="step-2-plan-cluster-servers"></a>2 단계 클러스터 서버 계획
 

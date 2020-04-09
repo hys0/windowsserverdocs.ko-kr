@@ -4,15 +4,15 @@ description: AD 성능 조정의 하드웨어 고려 사항
 ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author: TimWi; ChrisRob; HerbertM; KenBrumf;  MLeary; ShawnRab
+ms.author: timwi; chrisrob; herbertm; kenbrumf;  mleary; shawnrab
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 8e9b121036d33bc36cabb92ca682407bc2382fca
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: c40faca06668adf6fd29a5e4e753e5790b8104b7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71355104"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80851916"
 ---
 # <a name="hardware-considerations-in-adds-performance-tuning"></a>성능 튜닝 추가의 하드웨어 고려 사항 
 
@@ -43,11 +43,11 @@ Active Directory는 메모리를 허용 하는 만큼의 데이터베이스를 �
 
     -   Database = =&gt; Instances (lsass/NTDSA)\\i/o 데이터베이스 읽기 평균 대기 시간 &lt; 15ms
 
-    -   Database = =&gt; Instances (lsass/NTDSA)\\i/o 데이터베이스 읽기/초 &lt; 10
+    -   Database = =&gt; 인스턴스 (lsass/NTDSA)\\i/o Database Reads/sec &lt; 10
 
-    -   Database = =&gt; Instances (lsass/NTDSA)\\i/o 로그 쓰기 평균 대기 시간 &lt; 10ms
+    -   Database = =&gt; 인스턴스 (lsass/NTDSA)\\i/o 로그 쓰기 평균 대기 시간 &lt; 10ms
 
-    -   Database = =&gt; Instances (lsass/NTDSA)\\i/o Log Writes/sec – 정보용 으로만 제공 됩니다.
+    -   Database = =&gt; 인스턴스 (lsass/NTDSA)\\i/o 로그 쓰기/초 – 정보 제공 용입니다.
 
         데이터의 일관성을 유지 하려면 모든 변경 내용을 로그에 써야 합니다. 여기에는 올바른 또는 잘못 된 숫자가 없으며, 저장소에서 지 원하는 정도를 측정 한 것입니다.
 
@@ -55,13 +55,13 @@ Active Directory는 메모리를 허용 하는 만큼의 데이터베이스를 �
 
 ## <a name="dont-over-tax-the-processors"></a>프로세서의 세금을 초과 하지 않음
 
-사용 가능한 주기가 충분 하지 않은 프로세서는 실행을 위해 프로세서에 스레드를 가져오는 데 긴 대기 시간이 발생할 수 있습니다. 대부분의 환경에서 이러한 시나리오에서 클라이언트 응답성에 미치는 영향을 최소화 하기 위해 부하의 급증 또는 급증을 수용 하기에 충분 한 헤드 공간이 있는지 확인 하는 것이 좋습니다. 간단히 말해서, 아래 임계값을 초과 하는 것은 단기 (5 ~ 15 분 a 일)에서 잘못 된 것 이지만 이러한 종류의 통계를 사용 하 여 지속적으로 실행 되는 시스템은 비정상적인 부하를 수용할 수 있는 충분 한 공간을 제공 하지 않으며 taxed s에 쉽게 배치할 수 있습니다. cenario. 임계값을 초과 하는 기간 동안 지속 되는 기간을 초과 하는 시스템은 프로세서 부하를 줄이는 방법으로 조사 해야 합니다.
+사용 가능한 주기가 충분 하지 않은 프로세서는 실행을 위해 프로세서에 스레드를 가져오는 데 긴 대기 시간이 발생할 수 있습니다. 대부분의 환경에서 이러한 시나리오에서 클라이언트 응답성에 미치는 영향을 최소화 하기 위해 부하의 급증 또는 급증을 수용 하기에 충분 한 헤드 공간이 있는지 확인 하는 것이 좋습니다. 즉, 아래 임계값을 초과 하는 것은 단기 (5 ~ 15 분 a 일)에서 잘못 된 것 이지만 이러한 종류의 통계를 사용 하 여 지속적으로 실행 되는 시스템은 비정상적인 부하를 수용할 수 있는 충분 한 공간을 제공 하지 않으며 taxed 시나리오에 쉽게 적용할 수 있습니다. 임계값을 초과 하는 기간 동안 지속 되는 기간을 초과 하는 시스템은 프로세서 부하를 줄이는 방법으로 조사 해야 합니다.
 
 -   프로세서를 선택 하는 방법에 대 한 자세한 내용은 [서버 하드웨어 성능 조정](../../hardware/index.md)을 참조 하세요.
 
 -   CPU 부하를 줄이기 위해 하드웨어를 추가 하거나, 부하를 최적화 하 고, 다른 곳에서 클라이언트를 추가 하거나, 환경에서 로드를 제거 합니다.
 
--   프로세서 정보 (\_ 합계) \\% 프로세서 사용률 &lt; 60% 성능 카운터를 사용 합니다.
+-   프로세서 정보 (총\_)\\% 프로세서 사용률 &lt; 60% 성능 카운터를 사용 합니다.
 
 ## <a name="avoid-overloading-the-network-adapter"></a>네트워크 어댑터 오버 로드 방지
 
@@ -71,7 +71,7 @@ Active Directory는 메모리를 허용 하는 만큼의 데이터베이스를 �
 
 -   Compare NetworkInterface (\*)\\Bytes Sent/Sec with NetworkInterface (\*)\\Current 대역폭 성능 카운터를 사용 합니다. 비율은 60% 미만 이어야 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 - [성능 튜닝 Active Directory 서버](index.md)
 - [LDAP 고려 사항](ldap-considerations.md)
 - [적절한 도메인 컨트롤러 배치 및 사이트 고려 사항](site-definition-considerations.md)

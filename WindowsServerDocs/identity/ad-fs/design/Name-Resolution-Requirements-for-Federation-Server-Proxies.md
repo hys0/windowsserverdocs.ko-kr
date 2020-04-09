@@ -1,7 +1,6 @@
 ---
 ms.assetid: c28c60ff-693d-49ee-a75b-58f24866217b
 title: 페더레이션 서버 프록시에 대한 이름 확인 요구 사항
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 51176101b471ec940e2b43a95e1a1a8d37b394f3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 47c5bd23d3ba82c3df81c71951c2a50db0fe99d7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408060"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853046"
 ---
 # <a name="name-resolution-requirements-for-federation-server-proxies"></a>페더레이션 서버 프록시에 대한 이름 확인 요구 사항
 
@@ -29,7 +28,7 @@ ms.locfileid: "71408060"
   
 -   페더레이션 서버 프록시는 정규화 된 도메인 이름 확인을 호스트 파일에 설정이 있어야 \(FQDN\) 페더레이션 서버 또는 페더레이션 서버 클러스터의 IP 주소로 페더레이션 서버 끝점 URL입니다.  
   
--   페더레이션 서버 끝점 URL의 FQDN의 페더레이션 서버 프록시 IP 주소로 확인 되도록 하는 계정 파트너의 경계 네트워크에 DNS는 구성 합니다.  
+-   페더레이션 서버 엔드포인트 URL의 FQDN의 페더레이션 서버 프록시 IP 주소로 확인 되도록 하는 계정 파트너의 경계 네트워크에 DNS는 구성 합니다.  
   
 다음 그림과 해당 단계에서는 이러한 각 조건이 지정된 예에서 어떻게 달성되는지를 보여 줍니다. 이 그림에서 Microsoft 네트워크 부하 분산 \(NLB\) 기술을 단일, 클러스터 FQDN 및 단일 기존 페더레이션 서버 팜에 대 한 클러스터 IP 주소를 제공 합니다.  
   

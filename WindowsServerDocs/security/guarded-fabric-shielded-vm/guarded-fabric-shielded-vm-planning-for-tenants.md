@@ -1,18 +1,18 @@
 ---
 title: 호스팅 서비스 공급자에 대 한 보호 된 패브릭 및 차폐 VM 계획 가이드
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: 392af37f-a02d-4d40-a25d-384211cbbfdd
 manager: dongill
 author: nirb-ms
+ms.author: nirb
 ms.technology: security-guarded-fabric
-ms.openlocfilehash: 255429960735d70ff3a4d260bd9090b95882b6bd
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 829d6a3efef082e35c6a4f98e0ba9e4b70c27a93
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75949777"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856476"
 ---
 # <a name="guarded-fabric-and-shielded-vm-planning-guide-for-tenants"></a>테 넌 트 용 보호 된 패브릭 및 차폐 VM 계획 가이드
 
@@ -63,7 +63,7 @@ Vm이 보호 되는지, 아니면 암호화가 지원 되는지에 따라 VM을 
 
 보호 데이터는 보호 데이터 파일 마법사를 사용 하 여 생성 되며 VM 소유자가 보호 된 패브릭에 업로드 하는 PDK 파일에 저장 됩니다.
 
-보호 된 Vm은 손상 된 가상화 패브릭의 공격 으로부터 보호 하는 데 도움이 되므로 관리자의 암호, 도메인 가입 자격 증명 또는 RDP 인증서와 같이 중요 한 초기화 데이터를 전달 하는 안전한 메커니즘이 필요 합니다. 가상화 패브릭 자체 또는 관리자에 게 또한 보호 데이터에는 다음이 포함 됩니다.
+보호 된 Vm은 손상 된 가상화 패브릭의 공격 으로부터 보호 하는 데 도움이 되므로 관리자의 암호, 도메인 가입 자격 증명 또는 RDP 인증서와 같은 중요 한 초기화 데이터를 가상화 패브릭 자체 또는 관리자에 게 노출 하지 않고 전달 하는 안전한 메커니즘이 필요 합니다. 또한 보호 데이터에는 다음이 포함 됩니다.
 
 1. 보안 수준 – 차폐 또는 암호화-지원 됨
 2. VM을 실행할 수 있는 신뢰할 수 있는 호스트 보호자의 소유자 및 목록

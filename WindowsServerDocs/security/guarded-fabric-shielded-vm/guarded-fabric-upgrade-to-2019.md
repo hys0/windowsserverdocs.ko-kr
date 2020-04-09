@@ -4,18 +4,19 @@ ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 11/21/2018
-ms.openlocfilehash: 621d4175894bb235475155507a896a251dec0f7e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 50e35939031a74173fb031cf963af97bf8bb6dba
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386343"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856356"
 ---
 # <a name="upgrade-a-guarded-fabric-to-windows-server-2019"></a>Windows Server 2019로 보호된 패브릭 업그레이드
 
-> 적용 대상: Windows server 2019, Windows Server (반기 채널), Windows Server 2016
+> 적용 대상: Windows Server 2019, Windows Server (반기 채널), Windows Server 2016
 
 이 문서에서는 Windows Server 2016, Windows Server 버전 1709 또는 Windows Server 버전 1803에서 windows server 2019로 기존의 보호 된 패브릭을 업그레이드 하는 데 필요한 단계를 설명 합니다.
 
@@ -39,8 +40,8 @@ Windows Server 2019에서 보호 된 패브릭을 실행 하는 경우 다음과
 
 |  | WS2016 HGS | WS2019 HGS|
 |---|---|---|
-|**WS2016 Hyper-v 호스트** | 지원됨 | 지원 됨<sup>1</sup>|
-|**WS2019 Hyper-v 호스트** | 지원 되지 않는<sup>2</sup> | 지원됨|
+|**WS2016 Hyper-v 호스트** | 지원함 | 지원 됨<sup>1</sup>|
+|**WS2019 Hyper-v 호스트** | 지원 되지 않는<sup>2</sup> | 지원함|
 
 <sup>1</sup> windows server 2016 호스트는 v1 증명 프로토콜을 사용 하 여 windows SERVER 2019 HGS 서버에 대해서만 증명할 수 있습니다. 호스트 키 증명을 비롯 한 v2 증명 프로토콜에서 독점적으로 사용할 수 있는 새로운 기능은 Windows Server 2016 호스트에서 지원 되지 않습니다.
 
@@ -54,8 +55,8 @@ HGS 클러스터를 업그레이드 하는 경우 업그레이드 하는 동안 
 
 HGS 클러스터를 업그레이드 하려면 클러스터의 각 노드에서 한 번에 하나의 노드만 다음 단계를 수행 합니다.
 
-1.  관리자 권한 PowerShell 프롬프트에서를 실행 `Clear-HgsServer` 하 여 클러스터에서 HGS 서버를 제거 합니다. 이 cmdlet은 장애 조치 (failover) 클러스터에서 HGS 복제 저장소, HGS 웹 사이트 및 노드를 제거 합니다.
-2.  HGS 서버가 도메인 컨트롤러 (기본 구성) 인 경우 OS 업그레이드를 위해 도메인을 준비 하려면 `adprep /forestprep` 업그레이드 `adprep /domainprep` 되는 첫 번째 노드에서 및를 실행 해야 합니다. 자세한 내용은 [Active Directory Domain Services 업그레이드 설명서](https://docs.microsoft.com/windows-server/identity/ad-ds/deploy/upgrade-domain-controllers#supported-in-place-upgrade-paths) 를 참조 하세요.
+1.  관리자 권한 PowerShell 프롬프트에서 `Clear-HgsServer`를 실행 하 여 클러스터에서 HGS 서버를 제거 합니다. 이 cmdlet은 장애 조치 (failover) 클러스터에서 HGS 복제 저장소, HGS 웹 사이트 및 노드를 제거 합니다.
+2.  HGS 서버가 도메인 컨트롤러 (기본 구성) 인 경우 OS 업그레이드를 위해 도메인을 준비 하려면 업그레이드 되는 첫 번째 노드에서 `adprep /forestprep` 및 `adprep /domainprep`를 실행 해야 합니다. 자세한 내용은 [Active Directory Domain Services 업그레이드 설명서](https://docs.microsoft.com/windows-server/identity/ad-ds/deploy/upgrade-domain-controllers#supported-in-place-upgrade-paths) 를 참조 하세요.
 3.  Windows Server 2019로 [전체 업그레이드](../../get-started-19/install-upgrade-migrate-19.md) 를 수행 합니다.
 4.  [HgsServer](guarded-fabric-configure-additional-hgs-nodes.md) 를 실행 하 여 노드를 클러스터에 다시 가입 시킵니다.
 
@@ -72,7 +73,7 @@ Hyper-v 호스트를 Windows Server 2019로 업그레이드 하기 전에 HGS �
 1.  서버에서 Windows Defender 응용 프로그램 제어 코드 무결성 정책 (항상 TPM 증명을 사용 하는 경우)을 사용 하는 경우, 서버 업그레이드를 시도 하기 전에 정책이 감사 모드 또는 사용 안 함으로 설정 되어 있는지 확인 합니다. [WDAC 정책을 사용 하지 않도록 설정 하는 방법 알아보기](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/disable-windows-defender-application-control-policies)
 2.  [Windows server 업그레이드 콘텐츠의](../../upgrade/upgrade-overview.md) 지침에 따라 호스트를 windows server 2019로 업그레이드 합니다. Hyper-v 호스트가 장애 조치 (Failover) 클러스터의 일부인 경우 [클러스터 운영 체제 롤링 업그레이드](../../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md)를 사용 하는 것이 좋습니다.
 3.  업그레이드 전에 활성화 한 경우 Windows Defender 응용 프로그램 제어 정책을 [테스트 하 고 다시 사용 하도록 설정](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/audit-windows-defender-application-control-policies) 합니다.
-4.  `Get-HgsClientConfiguration` **Ishostguarded = True**인지 확인 하려면를 실행 합니다. 즉, 호스트가 HGS 서버와 증명을 성공적으로 전달 하는 것을 의미 합니다.
+4.  `Get-HgsClientConfiguration`를 실행 하 여 **Ishostguarded = True**인지 확인 합니다. 즉, 호스트가 HGS 서버와 증명을 성공적으로 전달 하 고 있음을 의미 합니다.
 5.  TPM 증명을 사용 하는 경우 증명을 전달 하기 위해 업그레이드 후 [tpm 기준 또는 코드 무결성 정책을 다시 캡처해야](guarded-fabric-add-host-information-for-tpm-trusted-attestation.md) 할 수 있습니다.
 6.  호스트에서 보호 된 Vm 실행을 다시 시작 합니다.
 

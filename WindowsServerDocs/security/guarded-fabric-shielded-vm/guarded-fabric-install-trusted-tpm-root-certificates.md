@@ -1,26 +1,26 @@
 ---
 title: 신뢰할 수 있는 TPM 루트 인증서 설치
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 06/27/2019
-ms.openlocfilehash: 15614ce1065170bc557fad10a168b3dda6a5b05a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 096a40f422f308a036b8062e4515ebe698c31f08
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386554"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856576"
 ---
 # <a name="install-trusted-tpm-root-certificates"></a>신뢰할 수 있는 TPM 루트 인증서 설치
 
->적용 대상: Windows server 2019, Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server 2019, Windows Server (반기 채널), Windows Server 2016
 
 TPM 증명을 사용 하도록 HGS를 구성 하는 경우 서버에서 Tpm 공급 업체를 신뢰 하도록 HGS를 구성 해야 합니다.
 이 추가 확인 프로세스를 통해 인증 된 신뢰할 수 있는 Tpm만 HGS로 증명할 수 있습니다.
-@No__t-0을 사용 하 여 신뢰할 수 없는 TPM을 등록 하려고 하면 TPM 공급 업체를 신뢰할 수 없다는 오류가 표시 됩니다.
+`Add-HgsAttestationTpmHost`를 사용 하 여 신뢰할 수 없는 TPM을 등록 하려고 하면 TPM 공급 업체를 신뢰할 수 없다는 오류가 표시 됩니다.
 
 Tpm을 신뢰 하려면 서버 Tpm의 인증 키에 서명 하는 데 사용 되는 루트 및 중간 서명 인증서를 HGS에 설치 해야 합니다.
 데이터 센터에서 TPM 모델을 둘 이상 사용 하는 경우 각 모델에 대해 서로 다른 인증서를 설치 해야 할 수 있습니다.
@@ -35,7 +35,7 @@ HGS는 공급 업체 인증서에 대 한 "TrustedTPM_RootCA" 및 "TrustedTPM_In
 
 **모든 HGS 서버**에서 다음 단계를 반복 합니다.
 
-1.  [@No__t-1](https://go.microsoft.com/fwlink/?linkid=2097925)에서 최신 패키지를 다운로드 합니다.
+1.  [https://go.microsoft.com/fwlink/?linkid=2097925](https://go.microsoft.com/fwlink/?linkid=2097925)에서 최신 패키지를 다운로드 합니다.
 
 2.  Cab 파일의 서명을 확인 하 여 정품 인증을 확인 하십시오. 서명이 유효 하지 않은 경우에는 진행 하지 마십시오.
 

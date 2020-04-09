@@ -1,7 +1,6 @@
 ---
 ms.assetid: 73a4deba-7da6-4eae-8fdd-2a4d369f9cbb
 title: 가상화된 도메인 컨트롤러 기술 참조 부록
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: e1018d5bbff5922df5a696e5c4fad12dc9f6ec3d
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: ee5a46781a61b8546fef113763c0d8ef9ca9f6cc
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79323135"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853986"
 ---
 # <a name="virtualized-domain-controller-technical-reference-appendix"></a>가상화된 도메인 컨트롤러 기술 참조 부록
 
@@ -26,7 +25,7 @@ ms.locfileid: "79323135"
   
 -   [FixVDCPermissions. p s 1](../../../ad-ds/reference/virtual-dc/../../../ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-Technical-Reference-Appendix.md#BKMK_FixPDCPerms)  
   
-## <a name="BKMK_Terms"></a>기술  
+## <a name="terminology"></a><a name="BKMK_Terms"></a>기술  
   
 -   **스냅숏** -특정 시점에 있는 가상 컴퓨터의 상태입니다. 이는 사용 된 이전 스냅숏의 체인, 하드웨어 및 가상화 플랫폼에 따라 달라 집니다.  
   
@@ -44,7 +43,7 @@ ms.locfileid: "79323135"
   
 -   **가져오기/내보내기** -사용자가 전체 가상 컴퓨터 (VM 파일, VHD 및 컴퓨터 구성)를 저장할 수 있도록 하는 hyper-v 기능입니다. 그런 다음 사용자가 해당 파일 집합을 사용 하 여 동일한 VM (복원)과 동일한 컴퓨터에서 동일한 VM (이동) 또는 새 VM (복사)로 컴퓨터를 다시 가져올 수 있습니다.  
   
-## <a name="BKMK_FixPDCPerms"></a>FixVDCPermissions. p s 1  
+## <a name="fixvdcpermissionsps1"></a><a name="BKMK_FixPDCPerms"></a>FixVDCPermissions. p s 1  
   
 ```  
 # Unsigned script, requires use of set-executionpolicy remotesigned -force  

@@ -1,7 +1,6 @@
 ---
 ms.assetid: 24c4b9bb-928a-4118-acf1-5eb06c6b08e5
 title: AD FS 2016 및 Azure MFA 구성
-description: ''
 ms.author: billmath
 author: billmath
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 01/28/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: b658644d1ba7cec1b02a2a51331cd7b7152efc77
-ms.sourcegitcommit: 75e611fd5de8b8aa03fc26c2a3d5dbf8211b8ce3
+ms.openlocfilehash: d519b47d048068ad53e4f11a6b64621ab5f232b1
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77145490"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855316"
 ---
 # <a name="configure-azure-mfa-as-authentication-provider-with-ad-fs"></a>AD FS를 사용 하 여 Azure MFA를 인증 공급자로 구성
 
@@ -56,7 +55,7 @@ Set-AdfsClaimsProviderTrust -AnchorClaimType "http://schemas.xmlsoap.org/ws/2005
 
 ### <a name="azure-mfa-as-additional-authentication-to-office-365"></a>Office 365에 대 한 추가 인증으로 서의 Azure MFA
 
-이전에는 Office 365 또는 기타 신뢰 당사자에 대 한 AD FS에서 Azure MFA를 추가 인증 방법으로 사용할 수 있도록 하는 것이 가장 좋습니다. 복합 MFA를 수행 하도록 Azure AD를 구성 하는 것입니다 .이는 기본 인증이 AD FS에서 온-프레미스에서 수행 되 고 MFA는 tr입니다. Azure AD의 iggered 이제 도메인 지원 Smfa 설정이 $True으로 설정 된 경우 AD FS에서 Azure MFA를 추가 인증으로 사용할 수 있습니다.  
+이전에는 Office 365 또는 기타 신뢰 당사자에 대 한 AD FS에서 Azure MFA를 추가 인증 방법으로 사용할 수 있도록 하는 것이 가장 좋습니다. 복합 MFA를 수행 하도록 Azure AD를 구성 하는 것입니다 .이는 AD FS에서 기본 인증이 수행 되 고 MFA가 Azure AD에 의해 트리거되는 것입니다. 이제 도메인 지원 Smfa 설정이 $True으로 설정 된 경우 AD FS에서 Azure MFA를 추가 인증으로 사용할 수 있습니다.  
 
 위에서 설명한 것 처럼, 아직 등록 하지 않은 모든 AD FS 사용자 (MFA 확인 정보 구성)를 사용 [https://aka.ms/mfasetup](https://aka.ms/mfasetup) 하 여 사용자 지정 된 AD FS 오류 페이지를 통해 확인 정보를 구성한 다음 로그인 AD FS 다시 시도 하 라는 메시지가 표시 되어야 합니다.  
 

@@ -1,19 +1,19 @@
 ---
 title: 호스트 키를 만들어 HGS에 추가
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: a12c8494-388c-4523-8d70-df9400bbc2c0
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 2aea6c8416a0f3af04ad6056c5d09a4d07708eaa
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: 664b3cfc1e529fe3591f6477ae0eb0b64e32441a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79322015"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856736"
 ---
 # <a name="create-a-host-key-and-add-it-to-hgs"></a>호스트 키를 만들어 HGS에 추가
 
@@ -24,14 +24,14 @@ ms.locfileid: "79322015"
 
 ## <a name="create-a-host-key"></a>호스트 키 만들기
 
-1.  Hyper-v 호스트 컴퓨터에 Windows Server 2019을 설치 합니다.
-2.  Hyper-v 및 호스트 보호 Hyper-v 지원 기능을 설치 합니다.
+1.    Hyper-v 호스트 컴퓨터에 Windows Server 2019을 설치 합니다.
+2.    Hyper-v 및 호스트 보호 Hyper-v 지원 기능을 설치 합니다.
 
     ```powershell
     Install-WindowsFeature Hyper-V, HostGuardian -IncludeManagementTools -Restart
     ``` 
 
-3.  호스트 키를 자동으로 생성 하거나 기존 인증서를 선택 합니다. 사용자 지정 인증서를 사용 하는 경우 적어도 2048 비트 RSA 키, 클라이언트 인증 EKU 및 디지털 서명 키 사용이 있어야 합니다.
+3.    호스트 키를 자동으로 생성 하거나 기존 인증서를 선택 합니다. 사용자 지정 인증서를 사용 하는 경우 적어도 2048 비트 RSA 키, 클라이언트 인증 EKU 및 디지털 서명 키 사용이 있어야 합니다.
 
     ```powershell
     Set-HgsClientHostKey
@@ -41,17 +41,17 @@ ms.locfileid: "79322015"
     이는 여러 컴퓨터에서 인증서를 공유 하거나 TPM 또는 HSM에 바인딩된 인증서를 사용 하려는 경우에 유용할 수 있습니다. 다음은 TPM 바인딩된 인증서를 만드는 예제입니다 (개인 키를 도난당 하 고 다른 컴퓨터에서 사용 하 고 TPM 1.2만 필요).
 
     ```powershell
-    $tpmBoundCert = New-SelfSignedCertificate -Subject “Host Key Attestation ($env:computername)” -Provider “Microsoft Platform Crypto Provider”
+    $tpmBoundCert = New-SelfSignedCertificate -Subject "Host Key Attestation ($env:computername)" -Provider "Microsoft Platform Crypto Provider"
     Set-HgsClientHostKey -Thumbprint $tpmBoundCert.Thumbprint
     ```
 
-4.  HGS 서버에 제공할 키의 공개 절반을 가져옵니다. 다음 cmdlet을 사용할 수도 있고, 다른 위치에 저장 된 인증서가 있는 경우 키의 공개 절반을 포함 하는 .cer을 제공할 수도 있습니다. HGS의 공개 키만 저장 하 고 유효성을 검사 합니다. 인증서 정보를 유지 하거나 인증서 체인이 나 만료 날짜의 유효성을 검사 하지 않습니다.
+4.    HGS 서버에 제공할 키의 공개 절반을 가져옵니다. 다음 cmdlet을 사용할 수도 있고, 다른 위치에 저장 된 인증서가 있는 경우 키의 공개 절반을 포함 하는 .cer을 제공할 수도 있습니다. HGS의 공개 키만 저장 하 고 유효성을 검사 합니다. 인증서 정보를 유지 하거나 인증서 체인이 나 만료 날짜의 유효성을 검사 하지 않습니다.
 
     ```powershell
     Get-HgsClientHostKey -Path "C:\temp\$env:hostname-HostKey.cer"
     ```
 
-5.  .Cer 파일을 HGS 서버에 복사 합니다.
+5.    .Cer 파일을 HGS 서버에 복사 합니다.
 
 ## <a name="add-the-host-key-to-the-attestation-service"></a>증명 서비스에 호스트 키를 추가 합니다.
 

@@ -1,7 +1,6 @@
 ---
 ms.assetid: a2f23877-30a7-439f-817d-387da9e00e86
 title: 페더레이션 서버 프록시 역할에 대해 컴퓨터 구성
-description: ''
 author: billmath
 manager: femila
 ms.date: 05/31/2017
@@ -9,12 +8,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: d47f7d3985aa779276f0712347eb9030857cefdb
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: a8bfe21f50a68edfcdbc7c937dc914ff1e1d94c3
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71359793"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854906"
 ---
 # <a name="configure-a-computer-for-the-federation-server-proxy-role"></a>페더레이션 서버 프록시 역할에 대해 컴퓨터 구성
 
@@ -25,11 +24,11 @@ ms.locfileid: "71359793"
   
 컴퓨터 설정을 마친 후에는 페더레이션 서버 프록시가 예상대로 작동하는지 확인합니다. 자세한 내용은 [페더레이션 서버 프록시 작동 확인](Verify-That-a-Federation-Server-Proxy-Is-Operational.md)을 참조하세요.  
   
-로컬 컴퓨터에서 이 절차를 완료하기 위해서는 최소한 **관리자** 또는 이와 동등한 자격이 있어야 합니다.  적절 한 계정을 사용 하는 방법에 대 한 세부 정보를 검토 하 고 그룹 구성원 자격 [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477)합니다.   
+이 절차를 완료하려면 최소한 로컬 컴퓨터의 **Administrators** 구성원 자격 또는 동급의 권한이 필요합니다.  적절 한 계정을 사용 하는 방법에 대 한 세부 정보를 검토 하 고 그룹 구성원 자격 [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477)합니다.   
   
 ### <a name="to-configure-a-computer-for-the-federation-server-proxy-role"></a>페더레이션 서버 프록시 역할에 대해 컴퓨터를 구성하려면  
   
-1.  AD FS 페더레이션 서버 구성 마법사를 시작 하는 방법에는 두 가지가 있습니다. 마법사를 시작하려면 다음 중 하나를 수행합니다.  
+1.  AD FS 페더레이션 서버 구성 마법사는 두 가지 방법으로 시작할 수 있습니다. 마법사를 시작하려면 다음 중 하나를 수행합니다.  
   
     -   **시작** 화면에서**AD FS 페더레이션 서버 프록시 구성 마법사**를 입력 하 고 enter 키를 누릅니다.  
   
@@ -39,13 +38,13 @@ ms.locfileid: "71359793"
   
 3.  **페더레이션 서비스 이름 지정** 페이지의 **페더레이션 서비스 이름**에 이 컴퓨터가 프록시 역할을 할 페더레이션 서비스를 나타내는 이름을 입력합니다.  
   
-4.  특정 네트워크 요구 사항에 따라, HTTP 프록시 서버를 사용하여 페더레이션 서비스로 요청을 전달해야 하는지 여부를 결정합니다. HTTP 프록시 서버를 사용해야 하는 경우 **이 페더레이션 서비스로 요청을 보낼 때 HTTP 프록시 서버 사용** 확인란을 선택하고 **HTTP 프록시 서버 주소** 에 프록시 서버의 주소를 입력한 다음 **연결 테스트** 를 클릭하여 연결을 확인하고 **다음**을 클릭합니다.  
+4.  특정 네트워크 요구 사항에 따라 페더레이션 서비스에 요청을 전달하기 위해 HTTP 프록시 서버를 사용해야 하는지 여부를 결정합니다. HTTP를 사용해야 하는 경우 **이 페더레이션 서비스로 요청을 보낼 때 HTTP 프록시 서버 사용** 확인란을 선택하고 **HTTP 프록시 서버 주소**에 프록시 서버의 주소를 입력한 후 **연결 테스트**를 클릭하여 연결을 테스트하고 **다음**을 클릭합니다.  
   
 5.  메시지가 나타나면 이 페더레이션 서버 프록시와 페더레이션 서비스 간에 트러스트를 설정하는 데 필요한 자격 증명을 지정합니다.  
   
     기본적으로 페더레이션 서비스에서 사용 하는 서비스 계정 또는 로컬 BUILTIN\\Administrators 그룹의 구성원만 페더레이션 서버 프록시를 인증할 수 있습니다.  
   
-6.  **설정 적용 준비 완료** 페이지에서 세부 정보를 검토합니다. 설정이 올바르게 표시되면 **다음**을 클릭하여 이러한 프록시 설정으로 이 컴퓨터 구성을 시작합니다.  
+6.  **설정 적용 준비 완료** 페이지에서 세부 정보를 검토하고 설정이 올바르면 **다음**을 클릭하여 해당 프록시 설정으로 이 컴퓨터의 구성을 시작합니다.  
   
 7.  **구성 결과** 페이지에서 결과를 검토합니다. 모든 구성 단계가 완료되면 **닫기**  를 클릭하여 마법사를 종료합니다.  
   
@@ -80,7 +79,7 @@ ms.locfileid: "71359793"
     > [!NOTE]  
     > 끝점 Url은 페더레이션 서버 프록시 서비스에 대해 기본적으로 사용 하도록 설정 되어 있지 않습니다. 새 페더레이션 서버 설치를 구성 하는 경우 먼저 페더레이션 서버 프록시 서비스 끝점을 사용 하도록 설정 해야 합니다. 예를 들어이 절차의 예제에서 참조 하는 모든 끝점에 대해의 AD FS 관리\-스냅인에서 선택한 다음 **프록시에서 사용**을 선택 하 여 프록시에 사용 하도록 설정한 것으로 가정 합니다.  
   
-3.  페더레이션 서버 프록시에서 IIS 설치를 업데이트 하면 Security Assertion Markup Language \(SAML\) 및 WS\-신뢰 끝점이 업데이트 된 포트 번호를 반영 하도록 구성 됩니다. 이렇게 하려면 메모장을 사용 하 여 web.config 파일에서 다음을 수정할 수 있습니다 .이 파일은 inetpub%\\\\adfs\\ls\\ 페더레이션 서버 프록시 컴퓨터에 있습니다. 예를 들어 sts1.contoso.com 라는 페더레이션 서버가 있고 새 포트 번호가 444 인 경우, 페더레이션 서버 프록시 컴퓨터의 메모장에서 web.config 파일을 찾아서 열고 다음 섹션을 찾아 다음 섹션에서 포트 번호를 수정 합니다. 아래에 강조 표시 된 다음 저장 하 고 메모장을 종료 합니다.  
+3.  페더레이션 서버 프록시에서 IIS 설치를 업데이트 하면 Security Assertion Markup Language \(SAML\) 및 WS\-신뢰 끝점이 업데이트 된 포트 번호를 반영 하도록 구성 됩니다. 이렇게 하려면 메모장을 사용 하 여 web.config 파일에서 다음을 수정할 수 있습니다 .이 파일은 inetpub%\\\\adfs\\ls\\ 페더레이션 서버 프록시 컴퓨터에 있습니다. 예를 들어 sts1.contoso.com 라는 페더레이션 서버가 있고 새 포트 번호가 444 인 경우, 페더레이션 서버 프록시 컴퓨터의 메모장에서 web.config 파일을 찾아서 열고 다음 섹션을 찾은 후 아래에 강조 표시 된 대로 포트 번호를 수정 하 고 메모장을 저장 한 후 종료 합니다.  
   
     ```  
     <securityTokenService samlProtocolEndpoint="https://sts1.contoso.com:444/adfs/services/trust/samlprotocol/proxycertificatetransport"  

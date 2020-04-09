@@ -1,29 +1,25 @@
 ---
 title: Windows Server Essentials에서 Windows Server 2012 Standard로 전환
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 51bcf124-c215-4e9d-9fa8-a90fa2c2fa22
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 0d7ed80f61dcfa313f867afda5689b2c64b1406a
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: aace7849244bb65ec0042971e6ec899f554a62d2
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80318702"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852306"
 ---
 # <a name="transition-from-windows-server-essentials-to-windows-server-2012-standard"></a>Windows Server Essentials에서 Windows Server 2012 Standard로 전환
 
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
- Windows Server® 2012 Essentials는 최대 25 명의 사용자와 50 장치를 지원 합니다. 비즈니스 요구 사항이 제한을 초과 하는 경우 Windows Server Essentials에서 Windows Server 2012 Standard로의 내부 라이선스 전환을 수행 하 여 라이선스를 준수할 수 있습니다.  
+ Windows Server&reg; 2012 Essentials는 최대 25 명의 사용자와 50 장치를 지원 합니다. 비즈니스 요구 사항이 제한을 초과 하는 경우 Windows Server Essentials에서 Windows Server 2012 Standard로의 내부 라이선스 전환을 수행 하 여 라이선스를 준수할 수 있습니다.  
   
 ## <a name="how-the-transition-affects-user-and-device-limits"></a>전환이 사용자 및 디바이스 제한에 미치는 영향  
  Windows Server 2012 Standard로 전환 하면 사용자 계정 및 장치 제한이 제거 되지만 Windows Server Essentials에 고유한 기능 (예: 대시보드, 원격 웹 액세스 및 클라이언트 컴퓨터 백업)은 계속 사용할 수 있습니다. 그러나 이러한 기능에는 최대 75개의 사용자 계정과 75대의 디바이스를 지원하는 기술적 제한이 있습니다. 75 개 이상의 사용자 계정 또는 장치를 추가 해야 하는 경우 Windows Server Essentials 기능을 끄고 Windows Server 2012 표준 네이티브 도구를 사용 하 여 사용자 계정 및 장치를 관리 해야 합니다.  

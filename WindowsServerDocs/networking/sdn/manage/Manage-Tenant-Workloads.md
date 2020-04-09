@@ -1,24 +1,20 @@
 ---
 title: 테넌트 워크로드 관리
 description: 이 항목은 Windows Server 2016에서 테 넌 트 워크 로드 및 가상 네트워크를 관리 하는 방법에 대 한 소프트웨어 정의 네트워킹 가이드의 일부입니다.
-manager: dougkim
-ms.custom: na
+manager: grcusanz
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-sdn
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 16359b15-a0e4-4f42-9d70-6ef0d851d219
-ms.author: lizross
-author: eross-msft
+ms.author: anpaul
+author: AnirbanPaul
 ms.date: 08/26/2018
-ms.openlocfilehash: 9518bab68b2d2f24f6c05c46e064035cc08d777f
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: a99e42b452920746e96b8bf7258e3f05735459e4
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80312983"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854496"
 ---
 # <a name="manage-tenant-workloads"></a>테넌트 워크로드 관리
 

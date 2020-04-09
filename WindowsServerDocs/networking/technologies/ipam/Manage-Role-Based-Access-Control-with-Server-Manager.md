@@ -2,22 +2,18 @@
 title: 서버 관리자를 사용하여 역할 기반 액세스 제어 관리
 description: 이 항목은 Windows Server 2016의 IPAM (IP 주소 관리) 관리 가이드의 일부입니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ipam
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 77b6ac92-eaff-46d7-95db-ee6fc96742ed
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: a3fb0a4e09e348040a2e89f97c73371aca62bef0
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 6d84b275b76803347330666c7c8ce0995452ce1d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80316792"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860636"
 ---
 # <a name="manage-role-based-access-control-with-server-manager"></a>서버 관리자를 사용하여 역할 기반 액세스 제어 관리
 
@@ -37,7 +33,7 @@ ms.locfileid: "80316792"
   
 또는 Windows PowerShell을 사용 하 여 IPAM 역할 기반 액세스 제어를 관리할 수 있습니다. 자세한 내용은 [Windows PowerShell을 사용 하 여 역할 기반 Access Control 관리](../../technologies/ipam/Manage-Role-Based-Access-Control-with-Windows-PowerShell.md)를 참조 하세요.
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [IPAM 관리](Manage-IPAM.md)  
   
 

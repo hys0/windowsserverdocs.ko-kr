@@ -2,21 +2,19 @@
 title: Hyper-v에서 Linux를 실행 하기 위한 모범 사례
 description: 가상 머신에서 Linux를 실행 하기 위한 권장 사항을 제공 합니다.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a08648eb-eea0-4e2b-87fb-52bfe8953491
 author: shirgall
 ms.author: kathydav
 ms.date: 3/1/2019
-ms.openlocfilehash: 3488bbc1e295a68befc7044b83379bd65a5f28df
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 7baf71af401b8318ccd136fe12d6eb810cf9434e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71365575"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853306"
 ---
 # <a name="best-practices-for-running-linux-on-hyper-v"></a>Hyper-v에서 Linux를 실행 하기 위한 모범 사례
 

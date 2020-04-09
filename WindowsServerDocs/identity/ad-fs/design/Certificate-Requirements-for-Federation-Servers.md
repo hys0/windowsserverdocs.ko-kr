@@ -1,7 +1,6 @@
 ---
 ms.assetid: 9831b421-8fb7-4e15-ac27-c013cbca6d05
 title: 페더레이션 서버에 대한 인증서 요구 사항
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,23 +8,23 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 7eeff82ef3311f18c8252c44c96310fcf3c18217
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9154e168fa03b08177dd0125fcbc1707d8e5594f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71359177"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853216"
 ---
 # <a name="certificate-requirements-for-federation-servers"></a>페더레이션 서버에 대한 인증서 요구 사항
 
 Active Directory Federation Services \(AD FS\) 디자인에서 다양 한 인증서를 사용 하 여 통신을 보호 하 고 인터넷 클라이언트와 페더레이션 서버 간의 사용자 인증을 용이 하 게 해야 합니다. 각 페더레이션 서버는 서비스 통신 인증서 및 토큰 있어야\-AD FS 통신에 참여 하려면 먼저 인증서에 서명 합니다. 다음 표에서 페더레이션 서버와 연결 된 인증서 종류를 설명 합니다.  
   
-|인증서 종류|설명|  
+|인증서 유형|설명|  
 |--------------------|---------------|  
-|토큰\-서명 인증서|토큰\-서명 인증서가는 X509 인증서입니다. 페더레이션 서버에 연결 된 공개 사용 하 여\/를 생성 하는 모든 보안 토큰을 디지털 서명 하는 개인 키 쌍입니다. 여기에는 게시된 페더레이션 메타데이터 및 아티팩트 확인 요청에 대한 서명이 포함됩니다.<br /><br />여러 토큰을 사용할 수 있습니다\-AD FS 관리 스냅인에서 인증서를 구성 서명\-에 하나의 인증서가 만료 될 때 인증서 롤오버에 대 한 허용 하도록 합니다. 기본적으로 목록에 있는 모든 인증서는 게시, 기본 토큰만 있지만\-서명 인증서가 사용 되는 AD FS에서 실제로 토큰을 서명 합니다. 선택한 모든 인증서에 해당 프라이빗 키가 있어야 합니다.<br /><br />자세한 내용은 [Token-Signing Certificates](Token-Signing-Certificates.md) 및 [Add a Token-Signing Certificate](../../ad-fs/deployment/Add-a-Token-Signing-Certificate.md)을 참조하세요.|  
-|서비스 통신 인증서|페더레이션 서버에 Windows Communication foundation 서비스 통신이 라고도 서버 인증 인증서를 사용 하 여 \(WCF\) 메시지 보안입니다. 기본적으로이 Secure Sockets Layer로 사용 하는 페더레이션 서버는 동일한 인증서 \(SSL\) 인터넷 정보 서비스에서 인증서 \(IIS\)합니다. **참고:** AD FS 관리 스냅인\-서비스 통신 인증서로 페더레이션 서버에 대 한 서버 인증 인증서를 참조 합니다.<br /><br />자세한 내용은 참조 [서비스 통신 인증서](Service-Communications-Certificates.md) 및 [서비스 통신 인증서 설정](../../ad-fs/deployment/Set-a-Service-Communications-Certificate.md)합니다.<br /><br />클라이언트 컴퓨터에서 서비스 통신 인증서를 신뢰할 해야 하기 때문에 신뢰할 수 있는 인증 기관에서 서명한 인증서를 사용 하는 것이 좋습니다 \(CA\)합니다. 선택한 모든 인증서에 해당 프라이빗 키가 있어야 합니다.|  
-|Secure Sockets Layer \(SSL\) 인증서|페더레이션 서버는 SSL 인증서를 사용하여 웹 클라이언트 및 페더레이션 서버 프록시와의 SSL 통신에 대한 웹 서비스 트래픽의 보안을 유지합니다.<br /><br />클라이언트 컴퓨터에서 SSL 인증서를 신뢰할 수 있어야 하므로 신뢰할 수 있는 CA에서 서명한 인증서를 사용하는 것이 좋습니다. 선택한 모든 인증서에 해당 프라이빗 키가 있어야 합니다.|  
-|토큰\-암호 해독 인증서|이 인증서는이 페더레이션 서버에서 받은 토큰의 해독에 사용 됩니다.<br /><br />여러 암호 해독 인증서를 유지할 수 있습니다. 이렇게 하면 리소스 페더레이션 서버를 새 인증서를 기본 암호 해독 인증서로 설정 된 후 이전 인증서를 통해 발급 된 토큰을 해독할 수 있습니다. 암호 해독, 하지만 주 토큰에 대 한 모든 인증서를 사용할 수 있습니다\-페더레이션 메타 데이터에 실제로 게시는 인증서의 암호를 해독 합니다. 선택한 모든 인증서에 해당 프라이빗 키가 있어야 합니다.<br /><br />자세한 내용은 참조 [토큰 암호 해독 인증서 추가](../../ad-fs/deployment/Add-a-Token-Decrypting-Certificate.md)합니다.|  
+|토큰\-서명 인증서|토큰\-서명 인증서가는 X509 인증서입니다. 페더레이션 서버에 연결 된 공개 사용 하 여\/를 생성 하는 모든 보안 토큰을 디지털 서명 하는 개인 키 쌍입니다. 여기에는 게시된 페더레이션 메타데이터 및 아티팩트 확인 요청에 대한 서명이 포함됩니다.<p>여러 토큰을 사용할 수 있습니다\-AD FS 관리 스냅인에서 인증서를 구성 서명\-에 하나의 인증서가 만료 될 때 인증서 롤오버에 대 한 허용 하도록 합니다. 기본적으로 목록에 있는 모든 인증서는 게시, 기본 토큰만 있지만\-서명 인증서가 사용 되는 AD FS에서 실제로 토큰을 서명 합니다. 선택한 모든 인증서에 해당 프라이빗 키가 있어야 합니다.<p>자세한 내용은 [토큰 서명 인증서](Token-Signing-Certificates.md) 및 [토큰 서명 인증서 추가](../../ad-fs/deployment/Add-a-Token-Signing-Certificate.md)를 참조하세요.|  
+|서비스 통신 인증서|페더레이션 서버에 Windows Communication foundation 서비스 통신이 라고도 서버 인증 인증서를 사용 하 여 \(WCF\) 메시지 보안입니다. 기본적으로이 Secure Sockets Layer로 사용 하는 페더레이션 서버는 동일한 인증서 \(SSL\) 인터넷 정보 서비스에서 인증서 \(IIS\)합니다. **참고:** AD FS 관리 스냅인\-서비스 통신 인증서로 페더레이션 서버에 대 한 서버 인증 인증서를 참조 합니다.<p>자세한 내용은 참조 [서비스 통신 인증서](Service-Communications-Certificates.md) 및 [서비스 통신 인증서 설정](../../ad-fs/deployment/Set-a-Service-Communications-Certificate.md)합니다.<p>클라이언트 컴퓨터에서 서비스 통신 인증서를 신뢰할 해야 하기 때문에 신뢰할 수 있는 인증 기관에서 서명한 인증서를 사용 하는 것이 좋습니다 \(CA\)합니다. 선택한 모든 인증서에 해당 프라이빗 키가 있어야 합니다.|  
+|Secure Sockets Layer \(SSL\) 인증서|페더레이션 서버는 SSL 인증서를 사용하여 웹 클라이언트 및 페더레이션 서버 프록시와의 SSL 통신에 대한 웹 서비스 트래픽의 보안을 유지합니다.<p>클라이언트 컴퓨터에서 SSL 인증서를 신뢰할 수 있어야 하므로 신뢰할 수 있는 CA에서 서명한 인증서를 사용하는 것이 좋습니다. 선택한 모든 인증서에 해당 프라이빗 키가 있어야 합니다.|  
+|토큰\-암호 해독 인증서|이 인증서는이 페더레이션 서버에서 받은 토큰의 해독에 사용 됩니다.<p>여러 암호 해독 인증서를 유지할 수 있습니다. 이렇게 하면 리소스 페더레이션 서버를 새 인증서를 기본 암호 해독 인증서로 설정 된 후 이전 인증서를 통해 발급 된 토큰을 해독할 수 있습니다. 암호 해독, 하지만 주 토큰에 대 한 모든 인증서를 사용할 수 있습니다\-페더레이션 메타 데이터에 실제로 게시는 인증서의 암호를 해독 합니다. 선택한 모든 인증서에 해당 프라이빗 키가 있어야 합니다.<p>자세한 내용은 참조 [토큰 암호 해독 인증서 추가](../../ad-fs/deployment/Add-a-Token-Decrypting-Certificate.md)합니다.|  
   
 요청 하 고 Microsoft Management Console을 통해 서비스 통신 인증서를 요청 하 여 SSL 인증서 또는 서비스 통신 인증서를 설치할 수 있습니다 \(MMC\) 스냅\-에서 IIS에 대 한 합니다. SSL 인증서를 사용 하는 방법에 대 한 자세한 내용은 iis [7.0: iis 7.0에서 SSL(Secure Sockets Layer) 구성](https://go.microsoft.com/fwlink/?LinkID=108544) [7.0: Iis 7.0에서 서버 인증서 구성](https://go.microsoft.com/fwlink/?LinkID=108545) 을 참조 하십시오.  
   

@@ -2,21 +2,19 @@
 title: Windows Server에 Hyper-v 역할 설치
 description: 서버 관리자 또는 Windows PowerShell을 사용 하 여 Hyper-v를 설치 하기 위한 지침을 제공 합니다.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 8e871317-09d2-4314-a6ec-ced12b7aee89
-author: KBDAzure
+author: kbdazure
 ms.author: kathydav
 ms.date: 12/02/2016
-ms.openlocfilehash: 2687a907852e2a81f03b147df1425cd01b34fb76
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d4d8f2343f0935ea7185890319a3e33564750572
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392805"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860826"
 ---
 # <a name="install-the-hyper-v-role-on-windows-server"></a>Windows Server에 Hyper-v 역할 설치
 
@@ -42,11 +40,11 @@ Hyper-v 관리자와 같은 관리 도구만 설치 하려면 hyper-v [관리자
   
 4. **대상 서버 선택** 페이지에서 서버 풀의 서버를 선택하고 **다음**을 클릭합니다.  
   
-5. 에 **서버 역할 선택** 페이지에서 선택 **Hyper-v**합니다.  
+5. **서버 역할 선택** 페이지에서 **Hyper-V**를 선택합니다.  
   
-6. 가상 컴퓨터 만들기 및 관리를 사용 하는 도구를 추가 하려면 클릭 **기능 추가**합니다. 기능 페이지에서 클릭 **다음**합니다.  
+6. 가상 컴퓨터를 만들고 관리하는 데 사용할 도구를 추가하려면 **기능 추가**를 클릭합니다. 기능 페이지에서 **다음**을 클릭합니다.  
   
-7. 에 **가상 스위치 만들기** 페이지 **가상 컴퓨터 마이그레이션** 페이지 및 **기본 저장소** 페이지 적절 한 옵션을 선택 합니다.  
+7. **가상 스위치 만들기** 페이지, **가상 컴퓨터 마이그레이션** 페이지 및 **기본 저장소** 페이지에서 적절한 옵션을 선택합니다.  
   
 8. **설치 선택 확인** 페이지에서 **필요한 경우 자동으로 대상 서버 다시 시작**을 선택하고 **설치**를 클릭합니다.  
   
@@ -75,8 +73,8 @@ Hyper-v 관리자와 같은 관리 도구만 설치 하려면 hyper-v [관리자
     서버에 로컬로 연결 하는 경우 명령을 입력 하지 않고 `-ComputerName <computer_name>`합니다.  
   
 > [!NOTE]  
-> Windows Server 2016의 Server Core 설치 옵션을 실행 하는 서버에이 역할을 설치 하 고 매개 변수 `-IncludeManagementTools`을 사용 하는 경우 Windows PowerShell 용 Hyper-v 모듈도 설치 됩니다. 원격으로 Server Core 설치에서 실행 되는 Hyper-v 호스트를 관리 하려면 다른 컴퓨터에서 Hyper-v 관리자의 GUI 관리 도구를 사용할 수 있습니다. 원격으로 연결 하는 방법에 대 한 지침은 [Hyper-v 관리자를 사용 하 여 hyper-v 호스트 원격 관리](../Manage/Remotely-manage-Hyper-V-hosts.md)를 참조 하세요.  
+> Windows Server 2016의 Server Core 설치 옵션을 실행 하는 서버에이 역할을 설치 하 고 `-IncludeManagementTools`매개 변수를 사용 하는 경우 Windows PowerShell 용 Hyper-v 모듈도 설치 됩니다. 원격으로 Server Core 설치에서 실행 되는 Hyper-v 호스트를 관리 하려면 다른 컴퓨터에서 Hyper-v 관리자의 GUI 관리 도구를 사용할 수 있습니다. 원격으로 연결 하는 방법에 대 한 지침은 [Hyper-v 관리자를 사용 하 여 hyper-v 호스트 원격 관리](../Manage/Remotely-manage-Hyper-V-hosts.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
   
 - [설치-Add-windowsfeature](https://docs.microsoft.com/powershell/module/Microsoft.Windows.ServerManager.Migration/Install-WindowsFeature)  

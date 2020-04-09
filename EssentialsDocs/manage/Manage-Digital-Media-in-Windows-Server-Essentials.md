@@ -1,23 +1,19 @@
 ---
 title: Windows Server Essentials에서 디지털 미디어 관리
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9378bffa-487c-43ca-9ec3-7e7864d2dd9a
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 560fe8b7cb03b5c0840e604767f4682b8779f502
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: bc94e7617960c789638324f67574f22c84ca656c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80311307"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852806"
 ---
 # <a name="manage-digital-media-in-windows-server-essentials"></a>Windows Server Essentials에서 디지털 미디어 관리
 
@@ -58,7 +54,7 @@ ms.locfileid: "80311307"
 ### <a name="why-would-i-want-to-stream-my-digital-media"></a>디지털 미디어를 스트리밍하려는 이유  
  대부분의 사용자는 Windows Server Essentials의 공유 폴더에 음악, 비디오 및 사진을 저장 합니다. 다음과 같은 작업을 수행할 수 있습니다.  
   
--   **비디오 보기**. 서버를 사용하여 비디오 및 녹화된 TV 프로그램의 광범위한 모음을 네트워크의 컴퓨터 및 기타 재생 장치에 저장하고 스트리밍할 수 있습니다. Windows Media Player를 사용하여 Xbox 360 또는 컴퓨터에 비디오를 스트리밍할 수 있습니다.  
+-   **비디오 보기**. 서버를 사용하여 비디오 및 녹화된 TV 프로그램의 광범위한 모음을 네트워크의 컴퓨터 및 기타 재생 디바이스에 저장하고 스트리밍할 수 있습니다. Windows Media Player를 사용하여 Xbox 360 또는 컴퓨터에 비디오를 스트리밍할 수 있습니다.  
   
 -   **음악 재생**. **음악** 공유 폴더에 대한 미디어 공유를 켜면 Windows Media Connect를 지원하는 장치에서 음악에 액세스할 수 있습니다. 공유 기능을 켜고 나면 사용자 계정을 사용하도록 설정하고 **음악** 공유 폴더에서 스트리밍하도록 구성할 필요가 없습니다.  
   
@@ -67,7 +63,7 @@ ms.locfileid: "80311307"
 ###  <a name="sharing-copy-protected-media"></a><a name="BKMK_1.5"></a>복사 방지 된 미디어 공유  
   Windows Server Essentials는 복사 방지 된 미디어 공유를 지원 하지 않습니다. 여기에는 온라인 음악 스토어를 통해 구매한 음악이 포함됩니다.  
   
- 복사 방지된 미디어는 미디어를 구매할 때 사용한 컴퓨터나 장치에서만 재생할 수 있습니다. 복사 방지를 사용하면 미디어를 서버로 복사하고 서버에서 재생하더라도 두 대 이상의 컴퓨터 또는 장치에서 미디어를 재생할 수 없습니다. 그러나 Windows Server Essentials에 복사 방지 된 미디어를 저장 하 고 해당 미디어를 구매 하는 데 사용한 컴퓨터 또는 장치에서 미디어를 계속 재생할 수 있습니다.  
+ 복사 방지된 미디어는 미디어를 구매할 때 사용한 컴퓨터나 디바이스에서만 재생할 수 있습니다. 복사 방지를 사용하면 미디어를 서버로 복사하고 서버에서 재생하더라도 두 대 이상의 컴퓨터 또는 디바이스에서 미디어를 재생할 수 없습니다. 그러나 Windows Server Essentials에 복사 방지 된 미디어를 저장 하 고 해당 미디어를 구매 하는 데 사용한 컴퓨터 또는 장치에서 미디어를 계속 재생할 수 있습니다.  
   
 ##  <a name="manage-media-server-using-the-dashboard"></a><a name="BKMK_2"></a>대시보드를 사용 하 여 미디어 서버 관리  
   Windows Server Essentials에서는 Windows Server Essentials 대시보드를 사용 하 여 일반적인 관리 작업을 수행할 수 있습니다. 대시보드 서버 **설정** 페이지의 **미디어** 탭에서는 다음을 제공합니다.  
@@ -83,7 +79,7 @@ ms.locfileid: "80311307"
 ##  <a name="how-media-streaming-works"></a><a name="BKMK_3"></a>미디어 스트리밍의 작동 원리  
  Windows Server Essentials의 미디어 스트리밍 기능을 사용 하면 네트워크로 연결 된 컴퓨터와 일부 네트워크로 연결 된 디지털 미디어 장치에서 서버에 저장 된 디지털 미디어 파일을 재생할 수 있습니다.  
   
- 미디어 서버를 켜면 미디어 라이브러리에서 공유하는 콘텐츠를 서버에서 스트리밍 미디어를 수신할 수 있는 네트워크의 장치에서 재생할 수 있습니다. 대부분 디지털 미디어 파일 형식을 스트리밍할 수 있습니다. 스트리밍할 수 있는 더욱 일반적인 일부 파일 형식은 다음과 같습니다.  
+ 미디어 서버를 켜면 미디어 라이브러리에서 공유하는 콘텐츠를 서버에서 스트리밍 미디어를 수신할 수 있는 네트워크의 디바이스에서 재생할 수 있습니다. 대부분 디지털 미디어 파일 형식을 스트리밍할 수 있습니다. 스트리밍할 수 있는 더욱 일반적인 일부 파일 형식은 다음과 같습니다.  
   
 - Windows Media 형식(.asf, .wma, .wmv, .wm)  
   
@@ -190,7 +186,7 @@ ms.locfileid: "80311307"
 4.  **적용** 또는 **확인**을 클릭하여 변경 내용을 저장합니다.  
   
 ##  <a name="enable-media-devices-that-use-the-server-message-block-smb-protocol-to-access-shared-files-on-the-server"></a><a name="BKMK_10"></a>SMB (서버 메시지 블록) 프로토콜을 사용 하 여 서버의 공유 파일에 액세스 하는 미디어 장치 사용  
- 네트워크 파일 및 공유 액세스에 대해 미디어 스트리밍용 DLNA가 아니라 SMB(Server Message Block)를 사용하는 장치에서는 게스트 계정을 활성화해야 합니다. 이렇게 하면 네트워크에 있는 모든 장치나 사용자가 인증 없이 공유 폴더의 콘텐츠를 볼 수 있습니다.  
+ 네트워크 파일 및 공유 액세스에 대해 미디어 스트리밍용 DLNA가 아니라 SMB(Server Message Block)를 사용하는 장치에서는 게스트 계정을 활성화해야 합니다. 이렇게 하면 네트워크에 있는 모든 디바이스나 사용자가 인증 없이 공유 폴더의 콘텐츠를 볼 수 있습니다.  
   
 > [!CAUTION]
 >  게스트 계정을 사용하도록 설정하면 누구나 기본적으로 서버의 공유 리소스에 액세스할 수 있습니다.  
@@ -198,9 +194,9 @@ ms.locfileid: "80311307"
 ##  <a name="common-processors-and-the-video-profiles-they-support"></a><a name="BKMK_CommonProcessors"></a>일반 프로세서 및 지원 되는 비디오 프로필  
  Windows Server Essentials 서버에서 미디어를 스트리밍하려면 Windows 7 또는 Windows 8 운영 체제를 실행 하는 컴퓨터 또는 기타 네트워크 장치 (예: 디지털 미디어 플레이어) 또는 Media Center extender (예: Xbox 360)를 사용할 수 있습니다. 네트워크에서 멀리 있을 경우 원격 웹 액세스 미디어 플레이어를 사용하여 서버에 저장된 파일을 재생합니다.  
   
- 200KBps에서 10MBps 사이의 데이터 전송 속도가 필요합니다. 컴퓨터와 장치에서 인식하고 재생할 수 있는 미디어 형식을 사용해야 합니다. 모든 장치에서 같은 미디어 형식을 지원하는 것은 아니므로 컴퓨터와 장치에서 보유한 미디어 파일을 재생할 방법이 있어야 합니다.  
+ 200KBps에서 10MBps 사이의 데이터 전송 속도가 필요합니다. 컴퓨터와 디바이스에서 인식하고 재생할 수 있는 미디어 형식을 사용해야 합니다. 모든 디바이스에서 같은 미디어 형식을 지원하는 것은 아니므로 컴퓨터와 디바이스에서 보유한 미디어 파일을 재생할 방법이 있어야 합니다.  
   
-  Windows Server Essentials에는 컴퓨터 또는 장치의 기능을 결정 하는 트랜스 코딩 지원이 포함 되어 있으며, 지원 되지 않는 비디오 파일을 지원 되는 항목으로 동적으로 변환 합니다. 일반적으로 Windows 7 또는 Windows 8을 실행 중인 컴퓨터에서 Windows Media Player 12로 콘텐츠를 재생할 수 있으면 서버의 콘텐츠가 네트워크로 연결된 장치에서 재생됩니다.  
+  Windows Server Essentials에는 컴퓨터 또는 장치의 기능을 결정 하는 트랜스 코딩 지원이 포함 되어 있으며, 지원 되지 않는 비디오 파일을 지원 되는 항목으로 동적으로 변환 합니다. 일반적으로 Windows 7 또는 Windows 8을 실행 중인 컴퓨터에서 Windows Media Player 12로 콘텐츠를 재생할 수 있으면 서버의 콘텐츠가 네트워크로 연결된 디바이스에서 재생됩니다.  
   
  트랜스코딩을 위해 선택된 형식과 비트 전송률은 서버 프로세서 성능에 따라 달라집니다. 프로세서 성능은 Windows 체험 지수의 일부로 식별됩니다. 서버의 성능 점수를 확인하려면 다음의 하나를 수행합니다.  
   

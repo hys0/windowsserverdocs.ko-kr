@@ -1,24 +1,20 @@
 ---
 title: 파일 공유
 description: 공유 폴더 및 네트워크를 사용 하 여 MultiPoint 서비스에서 파일을 공유 하는 방법을 알아봅니다.
-ms.custom: na
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5e138e01-39e3-4d60-ad3c-5a33b1e0b076
 author: lizap
 manager: dongill
 ms.date: 08/04/2016
 ms.author: elizapo
-ms.openlocfilehash: f050691603ed0989ab3b0ea3aac34a5fd74e1fbd
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: db2707803a6be2db83ac574e7b50c8698d6bd0b5
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71394990"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855616"
 ---
 # <a name="share-files"></a>파일 공유
 Windows 탐색기에서 공용 폴더에 콘텐츠를 저장하여 다른 MultiPoint 서비스 사용자와 콘텐츠를 공유할 수 있습니다. MultiPoint 서비스 시스템의 모든 사용자는 Windows 탐색기에서 MultiPoint 서비스 시스템의 공용 폴더에 저장된 모든 콘텐츠에 액세스할 수 있습니다.  
@@ -45,7 +41,7 @@ Windows 탐색기 라이브러리의 **공용 문서**, **공용 음악** 및 �
   
 5.  특정 사용자를 선택하거나 **Everyone**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [사용자 파일 관리](Manage-User-Files.md)  
 [USB 플래시 드라이브에 파일 저장 및 공유](Save-and-Share-Files-on-a-USB-Flash-Drive.md)  
 [파일을 비공개로 유지](Keep-Files-Private.md) 

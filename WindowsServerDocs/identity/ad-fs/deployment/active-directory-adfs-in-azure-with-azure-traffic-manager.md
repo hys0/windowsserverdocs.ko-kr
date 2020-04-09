@@ -1,26 +1,20 @@
 ---
 title: Azure Traffic Manager를 사용 하 여 Azure에서 고가용성 교차 지리적 AD FS 배포 | Microsoft Docs
-description: 이 문서에서는 Azure에서 high 가용성에 AD FS를 배포 하는 방법에 대해 설명 합니다.
-keywords: Azure traffic manager를 사용 하는 Ad fs, Azure Traffic Manager, 지리, 다중 데이터 센터, 지리적 데이터 센터, 다중 지리적 데이터 센터, azure에서 AD FS 배포, azure adfs 배포, azure adfs, azure ad fs 배포, adfs 배포, ad fs 배포, azure에서 adfs 배포, ad fs 배포 azure에서 adfs 배포, azure에 AD FS 배포, adfs azure에서 AD FS, Azure AD FS, azure, iaas, ADFS, adfs를 azure로 이동
+description: 고가용성을 위해 Azure에 AD FS를 배포 하는 방법
 services: active-directory
-documentationcenter: ''
 author: anandyadavmsft
 manager: mtillman
-editor: ''
+ms.prod: windows-server
 ms.assetid: a14bc870-9fad-45ed-acd5-a90ccd432e54
-ms.service: active-directory
-ms.workload: identity
-ms.tgt_pltfrm: na
-ms.devlang: na
 ms.topic: get-started-article
 ms.date: 09/01/2016
 ms.author: anandy;billmath
-ms.openlocfilehash: d98eb126513d707bce7abe3e901c8bf584d2319c
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 9bfb59fadd2cf6b07d3c47ab69f0fe67974706a3
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70868021"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855206"
 ---
 # <a name="high-availability-cross-geographic-ad-fs-deployment-in-azure-with-azure-traffic-manager"></a>Azure Traffic Manager를 사용 하 여 Azure에서 고가용성 교차 지리적 AD FS 배포
 Azure [의 AD FS 배포](how-to-connect-fed-azure-adfs.md) 는 azure에서 조직에 대 한 간단한 AD FS 인프라를 배포할 수 있는 방법에 대 한 단계별 지침을 제공 합니다. 이 문서에서는 azure [Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/)를 사용 하 여 azure에서 AD FS의 지역 간 배포를 만드는 다음 단계를 제공 합니다. Azure Traffic Manager는 인프라의 다양 한 요구에 맞게 사용할 수 있는 라우팅 메서드 범위를 사용 하 여 조직에 대 한 지리적으로 분산 된 고가용성 및 고성능 AD FS 인프라를 만드는 데 도움이 됩니다.
@@ -60,20 +54,20 @@ Azure [의 AD FS 배포](how-to-connect-fed-azure-adfs.md) 는 azure에서 조�
     ![Traffic Manager 프로필 만들기](./media/active-directory-adfs-in-azure-with-azure-traffic-manager/trafficmanager01.png)
 2. **트래픽 라우팅 방법:** Traffic manager에서 사용할 수 있는 세 가지 라우팅 옵션은 다음과 같습니다.
    
-   * 우선 순위 
+   * Priority 
    * 성능
    * 정도
      
      **성능은** 응답성이 높은 AD FS 인프라를 얻기 위해 권장 되는 옵션입니다. 그러나 배포 요구 사항에 가장 적합 한 라우팅 방법을 선택할 수 있습니다. AD FS 기능은 선택한 라우팅 옵션의 영향을 받지 않습니다. 자세한 내용은 [Traffic Manager 트래픽 라우팅 방법](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-routing-methods) 을 참조 하세요. 위의 샘플 스크린샷에서 **성능** 메서드를 선택 하는 것을 볼 수 있습니다.
 3. **끝점 구성:** Traffic manager 페이지에서 끝점을 클릭 하 고 추가를 선택 합니다. 그러면 아래 스크린샷 처럼 끝점 추가 페이지가 열립니다.
    
-   ![끝점 구성](./media/active-directory-adfs-in-azure-with-azure-traffic-manager/eastfsendpoint.png)
+   ![엔드포인트 구성](./media/active-directory-adfs-in-azure-with-azure-traffic-manager/eastfsendpoint.png)
    
    다른 입력의 경우 아래 지침을 따르세요.
    
    **유형:** Azure 공용 IP 주소를 가리킬 때 Azure 끝점을 선택 합니다.
    
-   **Name:** 끝점과 연결 하려는 이름을 만듭니다. Dns 이름이 아니므로 DNS 레코드에 대 한 관계가 없습니다.
+   **이름:** 끝점과 연결 하려는 이름을 만듭니다. Dns 이름이 아니므로 DNS 레코드에 대 한 관계가 없습니다.
    
    **대상 리소스 유형:** 이 속성의 값으로 공용 IP 주소를 선택 합니다. 
    
@@ -106,7 +100,7 @@ AD FS를 테스트 하는 가장 쉬운 방법은 Idpinitiatedsignon.aspx 페이
 
 1. PowerShell을 사용 하 여 AD FS 서버에서 아래 cmdlet을 실행 하 여 사용으로 설정 합니다. 
    Set-adfsproperties-EnableIdPInitiatedSignonPage $true
-2. 모든 외부 컴퓨터 액세스 https://에서\<yourfederationservicedns>/adfs/ls/IdpInitiatedSignon.aspx
+2. 모든 외부 컴퓨터 액세스 https://<yourfederationservicedns>/adfs/ls/IdpInitiatedSignon.aspx
 3. 다음과 같이 AD FS 페이지가 표시 됩니다.
    
     ![ADFS 테스트-인증 챌린지](./media/active-directory-adfs-in-azure-with-azure-traffic-manager/adfstest1.png)

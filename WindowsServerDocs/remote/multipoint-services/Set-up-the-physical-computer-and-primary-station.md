@@ -1,24 +1,20 @@
 ---
 title: 실제 컴퓨터 및 기본 스테이션 설정
 description: MultiPoint 서비스에서 첫 번째 시스템, 기본 스테이션을 설정 하는 방법에 대해 알아봅니다.
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4e83b126-ce9a-4cd7-a0bd-6627c9e0f81b
 author: evaseydl
 manager: scottman
 ms.author: evas
-ms.openlocfilehash: 1a5865b6bd15b6cd07cde393012afd495e3378be
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 0f52d3fa4aeca8fd4e036a93ee5a175bf1e96d0b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71395292"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855626"
 ---
 # <a name="set-up-the-physical-computer-and-primary-station"></a>실제 컴퓨터 및 기본 스테이션 설정
 MultiPoint 서비스를 설치 하기 전에 MultiPoint 서비스 시스템에 대 한 기본 스테이션을 설정 해야 합니다. LAN (local area network)을 사용 하는 경우 컴퓨터를 LAN에 연결 합니다.  
@@ -48,7 +44,7 @@ MultiPoint 서비스를 설치 하기 전에 MultiPoint 서비스 시스템에 �
   
     2.  Usb 키보드 및 마우스를 USB 허브에 연결 합니다.  
   
-        ![USB 허브 입력 장치 연결 이미지](./media/WMSUSBDeviceConnection.gif)  
+        ![USB 허브 입력 디바이스 연결 이미지](./media/WMSUSBDeviceConnection.gif)  
   
         > [!NOTE]  
         > MultiPoint 서비스 컴퓨터에 PS/2 포트가 있는 경우 필요한 경우 PS/2 키보드와 마우스를 컴퓨터에 직접 연결 하 여 사용할 수 있습니다. 그러나이 설정에는 상당한 제한 사항이 있습니다. 사용자는 PS/2 스테이션에서 오디오 장치, 웹 카메라 및 플래시 드라이브를 사용할 수 없습니다.  

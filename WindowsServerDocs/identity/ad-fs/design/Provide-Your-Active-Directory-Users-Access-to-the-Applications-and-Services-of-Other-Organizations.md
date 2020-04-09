@@ -1,7 +1,6 @@
 ---
 ms.assetid: 2d62386c-b466-4a54-b6fa-5d16cda120d8
 title: Active Directory 사용자에게 다른 조직의 응용 프로그램 및 서비스에 대한 액세스 제공
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: bcf9b9ec91c1757ad060747a6aa1589012c1ec14
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 13b8c3650442ac85b8b248b58372448543c8ba02
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71359034"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858586"
 ---
 # <a name="provide-your-active-directory-users-access-to-the-applications-and-services-of-other-organizations"></a>Active Directory 사용자에게 다른 조직의 응용 프로그램 및 서비스에 대한 액세스 제공
 
@@ -36,7 +35,7 @@ ms.locfileid: "71359034"
   
 -   **경계 DNS:** Domain Name System이이 구현 \(DNS\) 경계 네트워크에 대 한 호스트 이름을 제공 합니다. 페더레이션 서버 프록시에 대 한 경계 DNS를 구성 하는 방법에 대 한 자세한 내용은 참조 [페더레이션 서버 프록시에 대 한 이름 확인 요구 사항](Name-Resolution-Requirements-for-Federation-Server-Proxies.md)합니다.  
   
--   **원격 직원:** 웹 액세스 하는 원격 직원\-기반 응용 프로그램 \(지원 되는 웹 브라우저를 통해\) 또는 웹\-기반 서비스 \(응용 프로그램을 통해\), 직원은 인터넷을 사용 하 여 오프 사이트를 회사 네트워크에서 유효한 자격 증명을 사용 하 여 합니다. 직원의 클라이언트 컴퓨터는 원격 위치에서 토큰을 생성 하 고 응용 프로그램이 나 서비스에 인증 하는 페더레이션 서버 프록시가와 직접 통신 합니다.  
+-   **원격 직원:** 웹 액세스 하는 원격 직원\-기반 응용 프로그램 \(지원 되는 웹 브라우저를 통해\) 또는 웹\-기반 서비스 \(응용 프로그램을 통해\), 직원은 인터넷을 사용 하 여 오프 사이트를 회사 네트워크에서 유효한 자격 증명을 사용 하 여 합니다. 직원의 클라이언트 컴퓨터는 원격 위치에서 토큰을 생성 하 고 애플리케이션이 나 서비스에 인증 하는 페더레이션 서버 프록시가와 직접 통신 합니다.  
   
 링크된 항목의 정보를 검토한 후 [Checklist: Implementing a Federated Web SSO Design](../../ad-fs/deployment/Checklist--Implementing-a-Federated-Web-SSO-Design.md)의 단계를 따라 이 목표 배포를 시작할 수 있습니다.  
   

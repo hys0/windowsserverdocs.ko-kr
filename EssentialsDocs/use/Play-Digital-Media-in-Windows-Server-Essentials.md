@@ -1,23 +1,19 @@
 ---
 title: Windows Server Essentials에서 디지털 미디어 재생
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5f570492-ee21-471b-92c1-3fd9bfb84f55
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 168569fc6ce7937090a45bf9e7c68353f8b62714
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: ad75f815173c53ca40fdc5146f6f27fbc1e2740b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80310972"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852146"
 ---
 # <a name="play-digital-media-in-windows-server-essentials"></a>Windows Server Essentials에서 디지털 미디어 재생
 
@@ -65,7 +61,7 @@ ms.locfileid: "80310972"
 ### <a name="why-would-i-want-to-stream-my-digital-media"></a>디지털 미디어를 스트리밍하려는 이유  
  대부분의 사용자는 Windows Server Essentials의 공유 폴더에 음악, 비디오 및 사진을 저장 합니다. 다음과 같은 작업을 수행할 수 있습니다.  
   
--   **비디오 보기**. 서버를 사용하여 비디오 및 녹화된 TV 프로그램의 광범위한 모음을 네트워크의 컴퓨터 및 기타 재생 장치에 저장하고 스트리밍할 수 있습니다. Windows Media Player를 사용하여 Xbox 360 또는 컴퓨터에 비디오를 스트리밍할 수 있습니다.  
+-   **비디오 보기**. 서버를 사용하여 비디오 및 녹화된 TV 프로그램의 광범위한 모음을 네트워크의 컴퓨터 및 기타 재생 디바이스에 저장하고 스트리밍할 수 있습니다. Windows Media Player를 사용하여 Xbox 360 또는 컴퓨터에 비디오를 스트리밍할 수 있습니다.  
   
 -   **음악 재생**. **음악** 공유 폴더에 대한 미디어 공유를 켜면 Windows Media Connect를 지원하는 장치에서 음악에 액세스할 수 있습니다. 공유 기능을 켜고 나면 사용자 계정을 사용하도록 설정하고 **음악** 공유 폴더에서 스트리밍하도록 구성할 필요가 없습니다.  
   
@@ -74,7 +70,7 @@ ms.locfileid: "80310972"
 ### <a name="sharing-copy-protected-media"></a>복사 방지된 미디어 공유  
   Windows Server Essentials는 복사 방지 된 미디어 공유를 지원 하지 않습니다. 여기에는 온라인 음악 스토어를 통해 구매한 음악이 포함됩니다.  
   
- 복사 방지된 미디어는 미디어를 구매할 때 사용한 컴퓨터나 장치에서만 재생할 수 있습니다. 복사 방지를 사용하면 미디어를 서버로 복사하고 서버에서 재생하더라도 두 대 이상의 컴퓨터 또는 장치에서 미디어를 재생할 수 없습니다. 그러나 Windows Server Essentials에 복사 방지 된 미디어를 저장 하 고 해당 미디어를 구매 하는 데 사용한 컴퓨터 또는 장치에서 미디어를 계속 재생할 수 있습니다.  
+ 복사 방지된 미디어는 미디어를 구매할 때 사용한 컴퓨터나 디바이스에서만 재생할 수 있습니다. 복사 방지를 사용하면 미디어를 서버로 복사하고 서버에서 재생하더라도 두 대 이상의 컴퓨터 또는 디바이스에서 미디어를 재생할 수 없습니다. 그러나 Windows Server Essentials에 복사 방지 된 미디어를 저장 하 고 해당 미디어를 구매 하는 데 사용한 컴퓨터 또는 장치에서 미디어를 계속 재생할 수 있습니다.  
   
 ##  <a name="play-and-share-digital-media"></a><a name="BKMK_2"></a>디지털 미디어 재생 및 공유  
  네트워크를 설정하고 컴퓨터와 미디어 디바이스를 서버 네트워크에 연결하고 나면 서버에서 저장 및 공유하는 디지털 미디어 파일을 검색할 수 있습니다.  

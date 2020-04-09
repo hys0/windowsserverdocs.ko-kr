@@ -2,20 +2,19 @@
 title: 유지 관리를 위해 저장소 공간 다이렉트 서버를 오프라인으로 전환
 ms.prod: windows-server
 ms.author: eldenc
-ms.manager: eldenc
+manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
 ms.date: 10/08/2018
-Keywords: 저장소 공간 다이렉트, S2D, 유지 관리
 ms.assetid: 73dd8f9c-dcdb-4b25-8540-1d8707e9a148
 ms.localizationpriority: medium
-ms.openlocfilehash: 20439a06c255a73f20a297f765e6ed11abfde6f2
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 2ccf8d809354f96277701cd365966ba5e914f64b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402830"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857536"
 ---
 # <a name="taking-a-storage-spaces-direct-server-offline-for-maintenance"></a>유지 관리를 위해 저장소 공간 다이렉트 서버를 오프라인으로 전환
 
@@ -155,7 +154,7 @@ MyVolume2    Mirror                InService         Warning      True          
 MyVolume3    Mirror                InService         Warning      True           1 TB
 ```
 
-작업이 완료되면 `Get-VirtualDisk` cmdlet을 사용하여 볼륨이 다시 **정상**으로 표시되는지 확인합니다. 다음은 몇 가지 출력 예제입니다.
+작업이 완료되면 **cmdlet을 사용하여 볼륨이 다시**정상`Get-VirtualDisk`으로 표시되는지 확인합니다. 다음은 몇 가지 출력 예제입니다.
 
 ```
 FriendlyName ResiliencySettingName OperationalStatus HealthStatus IsManualAttach Size
@@ -184,7 +183,7 @@ MyVolume3    Mirror                OK                Healthy      True          
 10. **VirtualDisk** **cmdlet을 실행** 하 여 가상 디스크의 상태를 모니터링 합니다.
 
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [스토리지 공간 다이렉트 개요](storage-spaces-direct-overview.md)
 - [CAU (클러스터 인식 업데이트)](https://technet.microsoft.com/library/hh831694.aspx)

@@ -1,20 +1,20 @@
 ---
 title: SDN 방화벽 감사
 description: 방화벽 감사는 Windows Server 2019의 SDN 방화벽에 대 한 새로운 기능입니다. SDN 방화벽을 사용 하도록 설정 하면 로깅이 설정 된 SDN 방화벽 규칙 (Acl)에서 처리 되는 모든 흐름이 기록 됩니다.
-manager: dougkim
+manager: grcusanz
 ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: c4e2f6c7-0364-4bf8-bb66-9af59c0bbd74
-ms.author: lizross
-author: eross-msft
+ms.author: anpaul
+author: AnirbanPaul
 ms.date: 08/22/2018
-ms.openlocfilehash: 1452720d8ba71e7306dce0271ea7a9e6011b2952
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: d834c78d393fdbaeaa65900f16f4d1e32f2e5131
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80317378"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854386"
 ---
 # <a name="sdn-firewall-auditing"></a>SDN 방화벽 감사
 

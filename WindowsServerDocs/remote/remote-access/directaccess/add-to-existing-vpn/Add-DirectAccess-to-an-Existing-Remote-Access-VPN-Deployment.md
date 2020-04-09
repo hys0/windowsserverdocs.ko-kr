@@ -2,22 +2,18 @@
 title: 기존 원격 액세스(VPN) 배포에 DirectAccess 추가
 description: 이 항목은 Windows Server 2016에 대 한 기존 원격 액세스 (VPN) 배포에 DirectAccess 추가 가이드의 일부입니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-da
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b5db01f7-1ae0-46f2-9be7-8d9e121446b2
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 1ad1b823cf48a2c322c7ccab1799c76993b1e9bf
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 6d948c01721cc960d46da7d026fb4caab12670a6
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80314809"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854065"
 ---
 # <a name="add-directaccess-to-an-existing-remote-access-vpn-deployment"></a>기존 원격 액세스(VPN) 배포에 DirectAccess 추가
 
@@ -71,8 +67,8 @@ ms.locfileid: "80314809"
   
 |역할/기능|이 시나리오를 지원하는 방법|  
 |---------|-----------------|  
-|원격 액세스 역할|이 역할은 서버 관리자 콘솔이나 Windows PowerShell을 사용하여 설치 및 제거됩니다. 이 역할에는 DirectAccess(이전의 Windows Server 2008 R2 기능)와 라우팅 및 원격 액세스 서비스(이전의 NPAS(네트워크 정책 및 액세스 서비스) 서버 역할의 역할 서비스)가 포함되어 있습니다. 원격 액세스 역할은 다음의 두 가지 구성 요소로 구성됩니다.<br /><br />1. DirectAccess 및 RRAS (라우팅 및 원격 액세스 서비스) VPN: 원격 액세스 관리 콘솔에서 관리 됩니다.<br />2. RRAS 라우팅: 라우팅 및 원격 액세스 콘솔에서 관리 됩니다.<br /><br />원격 액세스 서버 역할은 다음과 같은 서버 기능에 종속됩니다.<br /><br />-인터넷 정보 서비스 (IIS) 웹 서버: 원격 액세스 서버에서 네트워크 위치 서버를 구성 하 고 기본 웹 프로브를 구성 하는 데 필요 합니다.<br />-Windows 내부 데이터베이스: 원격 액세스 서버의 로컬 계정에 사용 됩니다.|  
-|원격 액세스 관리 도구 기능|이 기능은 다음과 같이 설치됩니다.<br /><br />-기본적으로 원격 액세스 역할이 설치 될 때 원격 액세스 서버에 있습니다. 원격 관리 콘솔 사용자 인터페이스 및 Windows PowerShell cmdlet을 지원합니다.<br />-원격 액세스 서버 역할을 실행 하지 않는 서버에 선택적으로 설치 됩니다. 이 경우 이 기능은 DirectAccess 및 VPN을 실행하는 원격 액세스 컴퓨터를 원격으로 관리하는 데 사용됩니다.<br /><br />원격 액세스 관리 도구 기능의 구성 요소는 다음과 같습니다.<br /><br />-원격 액세스 GUI<br />-Windows PowerShell 용 원격 액세스 모듈<br /><br />이 기능은 다음 요소에 종속됩니다.<br /><br />그룹 정책 관리 콘솔<br />RAS 연결 관리자 관리 키트 (CMAK)<br />Windows PowerShell 3.0<br />-그래픽 관리 도구 및 인프라|  
+|원격 액세스 역할|이 역할은 서버 관리자 콘솔이나 Windows PowerShell을 사용하여 설치 및 제거됩니다. 이 역할에는 DirectAccess(이전의 Windows Server 2008 R2 기능)와 라우팅 및 원격 액세스 서비스(이전의 NPAS(네트워크 정책 및 액세스 서비스) 서버 역할의 역할 서비스)가 포함되어 있습니다. 원격 액세스 역할은 다음의 두 가지 구성 요소로 구성됩니다.<p>1. DirectAccess 및 RRAS (라우팅 및 원격 액세스 서비스) VPN: 원격 액세스 관리 콘솔에서 관리 됩니다.<br />2. RRAS 라우팅: 라우팅 및 원격 액세스 콘솔에서 관리 됩니다.<p>원격 액세스 서버 역할은 다음과 같은 서버 기능에 종속됩니다.<p>-인터넷 정보 서비스 (IIS) 웹 서버: 원격 액세스 서버에서 네트워크 위치 서버를 구성 하 고 기본 웹 프로브를 구성 하는 데 필요 합니다.<br />-Windows 내부 데이터베이스: 원격 액세스 서버의 로컬 계정에 사용 됩니다.|  
+|원격 액세스 관리 도구 기능|이 기능은 다음과 같이 설치됩니다.<p>-기본적으로 원격 액세스 역할이 설치 될 때 원격 액세스 서버에 있습니다. 원격 관리 콘솔 사용자 인터페이스 및 Windows PowerShell cmdlet을 지원합니다.<br />-원격 액세스 서버 역할을 실행 하지 않는 서버에 선택적으로 설치 됩니다. 이 경우 이 기능은 DirectAccess 및 VPN을 실행하는 원격 액세스 컴퓨터를 원격으로 관리하는 데 사용됩니다.<p>원격 액세스 관리 도구 기능의 구성 요소는 다음과 같습니다.<p>-원격 액세스 GUI<br />-Windows PowerShell 용 원격 액세스 모듈<p>이 기능은 다음 요소에 종속됩니다.<p>그룹 정책 관리 콘솔<br />RAS 연결 관리자 관리 키트 (CMAK)<br />Windows PowerShell 3.0<br />-그래픽 관리 도구 및 인프라|  
   
 ## <a name="hardware-requirements"></a><a name="BKMK_HARD"></a>하드웨어 요구 사항  
 이 시나리오의 하드웨어 요구 사항은 다음과 같습니다.  
@@ -109,7 +105,7 @@ ms.locfileid: "80314809"
   
 **서버 요구 사항**  
   
--   원격 액세스 서버가 도메인 구성원이어야 합니다. 서버는 내부 네트워크의 경계면 또는 다른 장치의 경계면 방화벽 뒤에 배포될 수 있습니다.  
+-   원격 액세스 서버가 도메인 구성원이어야 합니다. 서버는 내부 네트워크의 경계면 또는 다른 디바이스의 경계면 방화벽 뒤에 배포될 수 있습니다.  
   
 -   원격 액세스 서버가 경계면 방화벽이나 NAT(네트워크 주소 변환) 디바이스 뒤에 있는 경우, 이 디바이스는 원격 액세스 서버와 트래픽을 주고받을 수 있도록 구성되어 있어야 합니다.  
   

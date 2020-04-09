@@ -1,30 +1,24 @@
 ---
 title: sort
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: 정렬에 대 한 Windows 명령 항목은 입력을 읽고, 데이터를 정렬 하 고, 결과를 화면, 파일 또는 다른 장치에 기록 합니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 77116469-4790-4442-8a21-9fa73b65ef9f
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 65b091a6de4f20ce94389ed39f4fe645c72b3560
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 853a9d5dc0928eec78199c8e0d0fe1715ea64808
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71383954"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80834086"
 ---
 # <a name="sort"></a>sort
 
-
-
-입력, 데이터를 읽고 결과 화면, 파일 또는 다른 장치 합니다.
+입력, 데이터를 읽고 결과 화면, 파일 또는 다른 디바이스 합니다.
 
 이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
 
@@ -34,7 +28,7 @@ ms.locfileid: "71383954"
 sort [/r] [/+<N>] [/m <Kilobytes>] [/l <Locale>] [/rec <Characters>] [[<Drive1>:][<Path1>]<FileName1>] [/t [<Drive2>:][<Path2>]] [/o [<Drive3>:][<Path3>]<FileName3>]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
@@ -48,7 +42,7 @@ sort [/r] [/+<N>] [/m <Kilobytes>] [/l <Locale>] [/rec <Characters>] [[<Drive1>:
 |/o [\<Drive3 >:] [\<Path3 >]\<FileName3 >|정렬된 결과를 저장할 파일을 지정 합니다. 지정 하지 않으면 데이터는 표준 출력에 기록 됩니다. 출력 파일을 지정 하는 것은 동일한 파일을 표준 출력 리디렉션 보다 빠릅니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 -   **/+** 명령줄 옵션 사용
 
@@ -60,7 +54,7 @@ sort [/r] [/+<N>] [/m <Kilobytes>] [/l <Locale>] [/rec <Characters>] [[<Drive1>:
     크기가 지정 되지 않은 경우 기본 최대 메모리 크기는 그렇지 않은 경우 입력과 출력 모두에 파일을 경우 사용 가능한 주 메모리의 90% 또는 주 메모리의 45%입니다. 기본 설정은 대개 최상의 성능을 제공 합니다.
 -   **/L** 명령줄 옵션 사용
 
-    현재 기본 로캘에 대 한 유일한 대안은 "C" 로캘로, 자연어 정렬 보다 빠릅니다 (이진 인코딩에 따라 문자를 정렬).
+    현재 기본 로캘에 대 한 유일한 대안은 C 로캘로, 자연어 정렬 보다 빠릅니다 (이진 인코딩에 따라 문자를 정렬).
 -   **Sort** 명령과 함께 리디렉션 기호 사용
 
     파이프 기호 ( **|** )를 사용 하 여 입력 데이터를 다른 명령의 **sort** 명령으로 전달 하거나 정렬 된 출력을 다른 명령으로 보낼 수 있습니다. 리디렉션 기호를 사용 하 여 입력 및 출력 파일을 지정할 수 있습니다 ( **<** 또는 **>** ). (특히 큰 파일)에 빠르고 효율적으로 입력된 파일을 직접 지정할 수 있습니다 (에 정의 된 대로 *FileName1* 명령 구문에서)를 사용 하 여 출력 파일을 지정 합니다는 **/o** 매개 변수입니다.
@@ -73,11 +67,11 @@ sort [/r] [/+<N>] [/m <Kilobytes>] [/l <Locale>] [/rec <Characters>] [[<Drive1>:
 -   데이터 정렬 순서
 
     정렬 프로그램은 국가/지역 코드 및 코드 페이지 설정에 해당 하는 데이터 정렬 시퀀스 테이블을 사용 합니다. ASCII 코드 127 보다 큰 문자에 지정 된 대체 파일 또는 Country.sys 파일에서 정보를 기준으로 정렬는 **국가** Config.nt 파일에 명령 합니다.
--   메모리 사용
+-   메모리 사용량
 
     정렬이 최대 메모리 크기 (기본적으로 설정 된 경우 또는 **/m** 매개 변수에 의해 지정 된 대로)에 맞는 경우에는 단일 패스에서 정렬이 수행 됩니다. 두 개의 별도의 정렬 및 병합 단계, 정렬을 수행 하 고 모두 전달에 사용 되는 메모리의 양을 같거나 그렇지 않은 경우. 두 과정을 수행 하는 경우에 부분적으로 정렬 된 데이터 디스크에 임시 파일에 저장 됩니다. 메모리가 부족 하 여 두 개의 패스에서 정렬을 수행할 없는 경우 런타임 오류가 발생 합니다. 하는 경우는 **/m** 자세한 실제로 사용할 수 있는 것 보다 메모리, 성능 저하를 지정 하려면 명령줄 옵션을 사용 또는 런타임 오류가 발생할 수 있습니다.
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
 **파일 정렬**
 
@@ -87,9 +81,9 @@ sort [/r] [/+<N>] [/m <Kilobytes>] [/l <Locale>] [/rec <Characters>] [[<Drive1>:
 
 **명령의 출력 정렬**
 
-"Jones" 텍스트에 대 한 "Jones" 라는 이름의 대량 파일을 검색 하 고 검색 결과를 정렬 하려면 다음과 같이 파이프 (|)를 사용 하 여 **찾기** 명령의 출력을 **sort** 명령으로 보냅니다.
+텍스트 Jones에 대해 Maillist .txt 라는 규모가 많은 파일을 검색 하 고 검색 결과를 정렬 하려면 다음과 같이 파이프 (|)를 사용 하 여 **찾기** 명령의 출력을 **sort** 명령으로 전달 합니다.
 
-`find "Jones" maillist.txt | sort`
+`find Jones maillist.txt | sort`
 
 명령은 지정 된 텍스트를 포함 하는 정렬 된 줄 목록을 생성 합니다.
 
@@ -101,6 +95,6 @@ sort [/r] [/+<N>] [/m <Kilobytes>] [/l <Locale>] [/rec <Characters>] [[<Drive1>:
 
 그런 다음 정렬 하려는 텍스트를 입력 하 고 각 줄의 끝에서 ENTER 키를 누릅니다. 텍스트를 입력 했으면 CTRL + Z를 하 고 ENTER 키를 누릅니다. **정렬** 명령은 사전순으로 정렬, 입력 한 텍스트를 표시 합니다.
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

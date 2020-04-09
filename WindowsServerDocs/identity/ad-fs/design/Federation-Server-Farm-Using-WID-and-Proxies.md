@@ -1,7 +1,6 @@
 ---
 ms.assetid: f0464182-56a2-4bfa-a8c8-7e39c1bd62d3
 title: WID와 프록시를 사용하는 페더레이션 서버 팜
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,21 +8,21 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 6a123afaebba002b8ee4fb98d5cee5aded286a96
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 523e076ad9593f09ac2f9db5c45fa8c2e82f05bb
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71359127"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853106"
 ---
 # <a name="federation-server-farm-using-wid-and-proxies"></a>WID와 프록시를 사용하는 페더레이션 서버 팜
 
 Active Directory Federation Services \(AD FS\)에 대 한이 배포 토폴로지는 WID \(토폴로지를 사용 하는 페더레이션 서버 팜과 동일 하지만, 외부 사용자를 지원 하기 위해 경계 네트워크에 프록시 컴퓨터를 추가 합니다.\) 이러한 프록시는 회사 네트워크 외부에서 가져온 클라이언트 인증 요청을 페더레이션 서버 팜으로 리디렉션합니다. 이전 버전의 AD FS에서는 이러한 프록시를 페더레이션 서버 프록시 라고 했습니다.  
   
 > [!IMPORTANT]  
-> Windows Server 2012 r 2에서\) \(AD FS Active Directory Federation Services 페더레이션 서버 프록시의 역할은 웹 응용 프로그램 프록시 라는 새 원격 액세스 역할 서비스에 의해 처리 됩니다. 회사 네트워크 외부에서의 접근성에 대 한 AD FS를 사용 하도록 설정 하려면 Windows Server 2012의 AD FS 2.0 및 AD FS와 같이 AD FS의 레거시 버전에서 페더레이션 서버 프록시를 배포 하기 위한 것입니다. D FS in Windows Server 2012 R2.  
+> Windows Server 2012 r 2에서\) \(AD FS Active Directory Federation Services 페더레이션 서버 프록시의 역할은 웹 응용 프로그램 프록시 라는 새 원격 액세스 역할 서비스에 의해 처리 됩니다. 회사 네트워크 외부에서의 접근성에 대 한 AD FS를 사용 하도록 설정 하려면 windows server 2012에서 AD FS 2.0 및 AD FS와 같이 AD FS의 레거시 버전에서 페더레이션 서버 프록시를 배포 하기 위한 것입니다. Windows Server 2012 r 2에서 AD FS 용 웹 응용 프로그램 프록시를 하나 이상 배포할 수 있습니다.  
 >   
-> AD FS 컨텍스트에서 웹 응용 프로그램 프록시는 AD FS 페더레이션 서버 프록시로 작동 합니다. 이 외에도 웹 응용 프로그램 프록시는 회사 네트워크 내부의 웹 응용 프로그램에 대해 역방향 프록시 기능을 제공하여 모든 장치의 사용자가 회사 네트워크 권역을 벗어나서도 해당 네트워크에 접근할 수 있습니다. 웹 응용 프로그램 프록시 역할 서비스에 대한 자세한 내용은 웹 응용 프로그램 프록시 개요를 참조하세요.  
+> AD FS 컨텍스트에서 웹 응용 프로그램 프록시는 AD FS 페더레이션 서버 프록시로 작동 합니다. 이 외에도 웹 응용 프로그램 프록시는 회사 네트워크 내부의 웹 응용 프로그램에 대해 역방향 프록시 기능을 제공하여 모든 디바이스의 사용자가 회사 네트워크 권역을 벗어나서도 해당 네트워크에 접근할 수 있습니다. 웹 응용 프로그램 프록시 역할 서비스에 대한 자세한 내용은 웹 응용 프로그램 프록시 개요를 참조하세요.  
 >   
 > 웹 응용 프로그램 프록시 배포를 계획하려면 다음 항목의 정보를 검토하면 됩니다.  
 >   
@@ -61,7 +60,7 @@ Active Directory Federation Services \(AD FS\)에 대 한이 배포 토폴로지
   
 ![WID 팜 및 프록시](media/WIDFarmADFSBlue.gif)  
   
-페더레이션 서버 또는 웹 응용 프로그램 프록시 사용 하기 위해 네트워킹 환경을 구성 하는 방법에 대 한 자세한 내용은 "이름 확인 요구 사항"을 참조 하십시오. 섹션 [AD FS 요구 사항](AD-FS-Requirements.md) 및 [웹 응용 프로그램 프록시 인프라 (WAP) 계획](https://technet.microsoft.com/library/dn383648.aspx)합니다.  
+페더레이션 서버 또는 웹 응용 프로그램 프록시를 사용 하도록 네트워킹 환경을 구성 하는 방법에 대 한 자세한 내용은 [AD FS 요구 사항](AD-FS-Requirements.md) 에서 "이름 확인 요구 사항" 섹션을 참조 하 고 [웹 응용 프로그램 프록시 인프라 (WAP)를 계획](https://technet.microsoft.com/library/dn383648.aspx)하세요.  
   
 ## <a name="see-also"></a>참고 항목  
 [AD FS 배포 토폴로지 계획](Plan-Your-AD-FS-Deployment-Topology.md)  

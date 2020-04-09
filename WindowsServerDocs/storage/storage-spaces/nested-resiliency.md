@@ -2,17 +2,17 @@
 title: 스토리지 공간 다이렉트에 대 한 중첩 복원 력
 ms.prod: windows-server
 ms.author: jgerend
-ms.manager: dansimp
+manager: dansimp
 ms.technology: storagespaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 03/15/2019
-ms.openlocfilehash: ea1c4b2c249759634e00f6a1ac2caa34f8085ae1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: ac4edccf0c1f8882dd2544b2544c3d8555bbc716
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402862"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857346"
 ---
 # <a name="nested-resiliency-for-storage-spaces-direct"></a>스토리지 공간 다이렉트에 대 한 중첩 복원 력
 
@@ -20,14 +20,14 @@ ms.locfileid: "71402862"
 
 중첩 된 복원 력은 Windows Server 2019에 [스토리지 공간 다이렉트](storage-spaces-direct-overview.md) 의 새로운 기능으로,이 기능을 통해 두 서버 클러스터는 저장소 가용성의 손실 없이 여러 하드웨어 오류를 동시에 견딜 수 있으므로 사용자, 앱 및 가상 머신은 중단 없이 계속 실행 됩니다. 이 항목에서는 작동 방식에 대해 설명 하 고, 시작 하는 단계별 지침을 제공 하 고, 가장 자주 묻는 질문에 대 한 답을 제공 합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>필수 조건
 
-### <a name="green-checkmark-iconmedianested-resiliencysupportedpng-consider-nested-resiliency-if"></a>![녹색 확인 표시 아이콘입니다.](media/nested-resiliency/supported.png) 다음과 같은 경우 중첩 된 복원 력을 고려 합니다.
+### <a name="green-checkmark-icon-consider-nested-resiliency-if"></a>![녹색 확인 표시 아이콘입니다.](media/nested-resiliency/supported.png) 다음과 같은 경우 중첩 된 복원 력을 고려 합니다.
 
 - 클러스터가 Windows Server 2019를 실행 합니다. 하거나
 - 클러스터에 서버 노드가 정확히 2 개 있습니다.
 
-### <a name="red-x-iconmedianested-resiliencyunsupportedpng-you-cant-use-nested-resiliency-if"></a>![빨간색 X 아이콘.](media/nested-resiliency/unsupported.png) 다음과 같은 경우에는 중첩 된 복원 력을 사용할 수 없습니다.
+### <a name="red-x-icon-you-cant-use-nested-resiliency-if"></a>![빨간색 X 아이콘.](media/nested-resiliency/unsupported.png) 다음과 같은 경우에는 중첩 된 복원 력을 사용할 수 없습니다.
 
 - 클러스터가 Windows Server 2016를 실행 합니다. 디스크나
 - 클러스터에 서버 노드가 3 개 이상 있습니다.
@@ -70,7 +70,7 @@ Windows Server 2019의 스토리지 공간 다이렉트에서는 특수 RAID 하
 
   | 서버당 용량 드라이브 | 10% 미러 | 20% 미러 | 30% 미러 |
   |----------------------------|------------|------------|------------|
-  | 추가를 클릭합니다.                          | 35.7%      | 34.1%      | 32.6%      |
+  | 4                          | 35.7%      | 34.1%      | 32.6%      |
   | 5                          | 37.7%      | 35.7%      | 33.9%      |
   | 6                          | 39.1%      | 36.8%      | 34.7%      |
   | 7 이상                         | 40.0%      | 37.5%      | 35.3%      |
@@ -111,7 +111,7 @@ New-StorageTier -StoragePoolFriendlyName S2D* -FriendlyName NestedParity -Resili
 
 #### <a name="nested-two-way-mirror"></a>중첩 된 양방향 미러
 
-중첩 양방향 미러를 사용 하려면 `NestedMirror` 계층 템플릿을 참조 하 고 크기를 지정 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+중첩 양방향 미러를 사용 하려면 `NestedMirror` 계층 템플릿을 참조 하 고 크기를 지정 합니다. 예를 들면 다음과 같습니다.
 
 ```PowerShell
 New-Volume -StoragePoolFriendlyName S2D* -FriendlyName Volume01 -StorageTierFriendlyNames NestedMirror -StorageTierSizes 500GB
@@ -171,11 +171,11 @@ Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Storage.N
 
 ### <a name="does-nested-resiliency-change-how-drive-replacement-works"></a>중첩 된 복원 력이 드라이브 교체의 작동 방식을 변경 하나요?
 
-아니요.
+No.
 
 ### <a name="does-nested-resiliency-change-how-server-node-replacement-works"></a>중첩 된 복원 력이 서버 노드 교체의 작동 방식을 변경 하나요?
 
-아니요. 서버 노드와 해당 드라이브를 교체 하려면 다음 순서를 따르세요.
+No. 서버 노드와 해당 드라이브를 교체 하려면 다음 순서를 따르세요.
 
 1. 보내는 서버에서 드라이브 사용 중지
 2. 새 서버와 해당 드라이브를 클러스터에 추가 합니다.

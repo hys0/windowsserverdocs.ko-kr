@@ -2,23 +2,23 @@
 title: ReFS(복원 파일 시스템) 개요
 ms.prod: windows-server
 ms.author: gawatu
-ms.manager: mchad
+manager: mchad
 ms.technology: storage-file-systems
 ms.topic: article
 author: gawatu
 ms.date: 06/17/2019
-ms.openlocfilehash: 91fdd5aa696c170cacc8903a65e996beb71c4b8f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 8d32ef6bc4ce169ff73f9ab147783ac0607617f2
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403017"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857546"
 ---
 # <a name="resilient-file-system-refs-overview"></a>ReFS(복원 파일 시스템) 개요
 
 >적용 대상: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server (반기 채널)
 
-ReFS(복원 파일 시스템)는 데이터 가용성을 극대화하고, 다양한 워크로드의 대규모 데이터 집합으로 효율적으로 확장하고, 손상 복구를 통해 데이터 무결성을 제공하도록 설계된 Microsoft의 최신 파일 시스템입니다. 확장되는 저장소 시나리오 집합에 대응하고 미래의 혁신을 위한 토대를 마련하기 위한 것입니다.
+ReFS(복원 파일 시스템)는 데이터 가용성을 극대화하고, 다양한 워크로드의 대규모 데이터 집합으로 효율적으로 확장하고, 손상 복구를 통해 데이터 무결성을 제공하도록 설계된 Microsoft의 최신 파일 시스템입니다. 확장되는 스토리지 시나리오 집합에 대응하고 미래의 혁신을 위한 토대를 마련하기 위한 것입니다.
 
 ## <a name="key-benefits"></a>주요 이점
 
@@ -45,7 +45,7 @@ ReFS는 향상된 복원력을 제공할 뿐만 아니라 성능에 민감한 �
       | 미러된 SSD | 패리티 SSD |
       | 미러된 SSD | 패리티 HDD |
             
-    - 이러한 계층이 구성되면 ReFS는 이러한 계층을 사용하여 핫 데이터에는 빠른 저장소를, 콜드 데이터에는 용량 효율적인 저장소를 제공합니다.
+    - 이러한 계층이 구성되면 ReFS는 이러한 계층을 사용하여 핫 데이터에는 빠른 스토리지를, 콜드 데이터에는 용량 효율적인 스토리지를 제공합니다.
         - 모든 쓰기 작업이 성능 계층에서 수행되며, 성능 계층에 남아 있는 큰 데이터 청크는 실시간으로 용량 계층으로 효율적으로 이동됩니다.
         - 하이브리드 배포 (플래시 및 HDD 드라이브 혼합)를 사용 하는 경우 [스토리지 공간 다이렉트 캐시](../storage-spaces/understand-the-cache.md) 를 사용 하 여 읽기를 가속화 하 고 가상화 된 작업의 데이터 조각화 특성의 영향을 줄일 수 있습니다. 그렇지 않고 모든 플래시 배포를 사용 하는 경우 성능 계층 에서도 읽기가 수행 됩니다.
 
@@ -64,7 +64,7 @@ ReFS는 수백만 테라바이트에 이르는 매우 큰 데이터 집합을 �
 
 ## <a name="supported-deployments"></a>지원되는 배포
 
-Microsoft는 광범위 한 구성 및 워크 로드와 함께 일반적인 용도의 NTFS를 개발 했지만, 특히 ReFS에서 제공 하는 가용성, 복원 력 및/또는 규모를 요구 하는 고객을 위해 Microsoft에서 사용할 ReFS를 지원 합니다. 구성 및 시나리오는 다음과 같습니다. 
+Microsoft는 광범위 한 구성 및 워크 로드와 함께 일반적인 용도의 NTFS를 개발 했습니다. 그러나 ReFS에서 제공 하는 가용성, 복원 력 및/또는 규모를 특별히 요구 하는 고객의 경우 Microsoft는 다음 구성 및 시나리오에서 사용할 ReFS를 지원 합니다. 
 
 > [!NOTE]
 > 모든 ReFS 지원 구성은 [Windows Server 카탈로그](https://www.WindowsServerCatalog.com) 인증 된 하드웨어를 사용 하 고 응용 프로그램 요구 사항을 충족 해야 합니다.
@@ -147,28 +147,28 @@ ReFS를 백업 대상으로 배포 하는 것은 자체 복원 력 및 가용성
 |---------------------------|------------------|-----------------------|
 | 블록 복제 | 예 | 아니요 |
 | 스파스 VDL | 예 | 아니요 |
-| 미러 가속 패리티| 예(저장소 공간 다이렉트에서) | 아니오 |
+| 미러 가속 패리티| 예(저장소 공간 다이렉트에서) | 아니요 |
 
 #### <a name="the-following-features-are-unavailable-on-refs-at-this-time"></a>현재 ReFS에서 다음과 같은 기능은 사용할 수 없습니다.
 
 | 기능       | ReFS                                        | NTFS |
 |---------------------------|------------------|-----------------------|
-| 파일 시스템 압축 | 아니오 | 예 |
-| 파일 시스템 암호화 | 아니오 | 예 |
-| 의 | 아니요 | 예 |
+| 파일 시스템 압축 | 아니요 | 예 |
+| 파일 시스템 암호화 | 아니요 | 예 |
+| 트랜잭션 | 아니요 | 예 |
 | 하드 링크 | 아니요 | 예 |
 | 개체 ID | 아니요 | 예 |
 | ODX (오프 로드 된 데이터 전송) | 아니요 | 예 |
-| 짧은 이름 | 아니오 | 예 |
-| 확장 특성 | 아니오 | 예 |
-| 디스크 할당량 | 아니오 | 예 |
+| 짧은 이름 | 아니요 | 예 |
+| 확장 특성 | 아니요 | 예 |
+| 디스크 할당량 | 아니요 | 예 |
 | 부팅 가능 | 아니요 | 예 |
-| 페이지 파일 지원 | 아니오 | 예 |
-| 이동식 미디어에서 지원 | 아니오 | 예 |
+| 페이지 파일 지원 | 아니요 | 예 |
+| 이동식 미디어에서 지원 | 아니요 | 예 |
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [ReFS 및 NTFS에 대 한 클러스터 크기 권장 사항](https://techcommunity.microsoft.com/t5/Storage-at-Microsoft/Cluster-size-recommendations-for-ReFS-and-NTFS/ba-p/425960)
+- [ReFS 및 NTFS에 대한 클러스터 크기 권장 사항](https://techcommunity.microsoft.com/t5/Storage-at-Microsoft/Cluster-size-recommendations-for-ReFS-and-NTFS/ba-p/425960)
 - [스토리지 공간 다이렉트 개요](../storage-spaces/storage-spaces-direct-overview.md)
 - [ReFS 블록 복제](block-cloning.md)
 - [ReFS 무결성 스트림](integrity-streams.md)

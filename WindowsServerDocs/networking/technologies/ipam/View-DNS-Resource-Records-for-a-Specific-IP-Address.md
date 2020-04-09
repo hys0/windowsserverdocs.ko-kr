@@ -2,22 +2,18 @@
 title: 특정 IP 주소에 대 한 DNS 리소스 레코드 보기
 description: 이 항목은 Windows Server 2016의 IPAM (IP 주소 관리) 관리 가이드의 일부입니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ipam
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f590fb86-4195-4f90-98cb-e90459d4c1e3
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 170be9d3d47374188640ef4b132adce9043e4e29
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: d3694d3e551f3b9d38e2b7ea879b84ae07270b0f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80309471"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854826"
 ---
 # <a name="view-dns-resource-records-for-a-specific-ip-address"></a>특정 IP 주소에 대 한 DNS 리소스 레코드 보기
 
@@ -39,7 +35,7 @@ ms.locfileid: "80309471"
   
     ![DNS 리소스 레코드 보기](../../media/View-DNS-Resource-Records-for-a-Specific-IP-Address/ipam_IPInventory_02.jpg)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [DNS 리소스 레코드 관리](DNS-Resource-Record-Management.md)  
 [IPAM 관리](Manage-IPAM.md)  
   

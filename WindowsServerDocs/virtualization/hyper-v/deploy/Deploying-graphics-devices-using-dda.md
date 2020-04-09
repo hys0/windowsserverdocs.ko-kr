@@ -2,20 +2,18 @@
 title: 불연속 장치 할당을 사용 하 여 그래픽 장치 배포
 description: DDA를 사용 하 여 Windows Server에서 그래픽 장치를 배포 하는 방법을 알아봅니다.
 ms.prod: windows-server
-ms.service: na
 ms.technology: hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 author: chrishuybregts
 ms.author: chrihu
 ms.assetid: 67a01889-fa36-4bc6-841d-363d76df6a66
 ms.date: 08/21/2019
-ms.openlocfilehash: 5466cecf9f11a53dc6e205f36d50d7b27b310ea1
-ms.sourcegitcommit: 81198fbf9e46830b7f77dcd345b02abb71ae0ac2
+ms.openlocfilehash: 07f0ba19aaf998bb7b2fe8cf4ef1ba6cf8cae322
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72923873"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860916"
 ---
 # <a name="deploy-graphics-devices-using-discrete-device-assignment"></a>불연속 장치 할당을 사용 하 여 그래픽 장치 배포
 
@@ -100,7 +98,7 @@ Mount-VMHostAssignableDevice -LocationPath $locationPath
 ```
 그런 다음 장치 관리자에서 장치를 다시 사용 하도록 설정 하면 호스트 운영 체제가 장치와 상호 작용할 수 있습니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 ### <a name="mounting-a-gpu-to-a-vm"></a>VM에 GPU 탑재
 이 예제에서는 PowerShell을 사용 하 여 "ddatest1" 라는 VM을 구성 하 고 제조업체 NVIDIA에서 사용 가능한 첫 번째 GPU를 가져와 VM에 할당 합니다.  
@@ -141,4 +139,4 @@ VM에 GPU를 전달 했지만 원격 데스크톱이 나 응용 프로그램이 
 - 장치에 VM 내에 할당 된 MMIO 공간이 충분 한지 확인 합니다. 자세한 내용은 [MMIO Space](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md#mmio-space)를 참조 하세요.
 - 공급 업체에서 지 원하는 GPU를이 구성에서 사용 하 고 있는지 확인 합니다. 예를 들어 일부 공급 업체는 VM으로 전달 될 때 해당 소비자 카드가 작동 하지 않도록 합니다.
 - 실행 중인 응용 프로그램이 VM 내에서의 실행을 지원 하 고 GPU와 관련 드라이버가 응용 프로그램에서 지원 되는지 확인 합니다. 일부 응용 프로그램에는 Gpu 및 환경을 허용 하는 목록이 있습니다.
-- 게스트에서 원격 데스크톱 세션 호스트 역할 또는 Windows Multipoint 서비스를 사용 하는 경우 특정 그룹 정책 항목이 기본 GPU를 사용할 수 있도록 설정 되어 있는지 확인 해야 합니다. 게스트 또는 게스트의 로컬 그룹 정책 편집기에 적용 된 그룹 정책 개체를 사용 하 여 다음 그룹 정책 항목으로 이동 합니다. **컴퓨터 구성** > **관리자 템플릿** > **Windows 구성 요소** > **원격 세션 환경** >  > **원격 데스크톱 서비스** **원격 데스크톱 세션 호스트** > **모든 원격 데스크톱 서비스 세션에 하드웨어 기본 그래픽 어댑터를 사용**합니다. 정책이 적용 된 후이 값을 사용으로 설정 하 고 VM을 다시 부팅 합니다.
+- 게스트에서 원격 데스크톱 세션 호스트 역할 또는 Windows Multipoint 서비스를 사용 하는 경우 특정 그룹 정책 항목이 기본 GPU를 사용할 수 있도록 설정 되어 있는지 확인 해야 합니다. 게스트 (또는 게스트의 로컬 그룹 정책 편집기)에 적용 된 그룹 정책 개체를 사용 하 여 다음 그룹 정책 항목으로 이동 합니다. **컴퓨터 구성** > **관리자 템플릿** > **Windows 구성 요소** > **원격 데스크톱 서비스** > **원격 데스크톱 세션 호스트** >  > **원격 세션 환경** 원격 데스크톱 서비스 **모든 세션에 하드웨어 기본 그래픽 어댑터를 사용**합니다. 정책이 적용 된 후이 값을 사용으로 설정 하 고 VM을 다시 부팅 합니다.

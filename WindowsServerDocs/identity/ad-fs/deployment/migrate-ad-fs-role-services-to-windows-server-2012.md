@@ -8,12 +8,12 @@ ms.date: 06/28/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: cdb5523ade5c3c7572656d62d1b4f744683ec96e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 36d37eb2cc886d9831b995aa8cfdda16765994b8
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408275"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857516"
 ---
 # <a name="migrate-active-directory-federation-services-role-services-to-windows-server-2012"></a>Windows Server 2012로 Active Directory Federation Services 역할 서비스 마이그레이션
 
@@ -62,7 +62,7 @@ ms.locfileid: "71408275"
 ### <a name="supported-ad-fs-role-services-and-features"></a>지원 되는 AD FS 역할 서비스 및 기능  
  다음 표에서는 AD FS 역할 서비스의 마이그레이션 시나리오와이 가이드에서 설명 하는 각 설정에 대해 설명 합니다.  
   
-|보낸 사람|Windows Server 2012를 사용 하 여 설치 된 AD FS|  
+|원본|Windows Server 2012를 사용 하 여 설치 된 AD FS|  
 |----------|-----|  
 |AD FS 1.0 페더레이션 서버가 Windows Server 2003 r 2와 함께 설치 됨|마이그레이션은 지원되지 않음|  
 |AD FS 1.0 페더레이션 서버 프록시가 Windows Server 2003 r 2와 함께 설치 됨|마이그레이션은 지원되지 않음|  
@@ -70,10 +70,10 @@ ms.locfileid: "71408275"
 |AD FS 1.0 클레임 인식 에이전트가 Windows Server 2003 r 2와 함께 설치 됨)|마이그레이션은 지원되지 않음|  
 |Windows Server 2008 또는 Windows Server 2008 r 2와 함께 설치 된 AD FS 1.1 페더레이션 서버|마이그레이션은 지원되지 않음|  
 |AD FS 1.1 페더레이션 서버 프록시가 Windows Server 2008 또는 Windows Server 2008 r 2와 함께 설치 됨|마이그레이션은 지원되지 않음|  
-|AD FS 1.1 windows Server 2008 또는 Windows Server 2008 r 2와 함께 설치 된 Windows 토큰 기반 에이전트|동일한 서버에서의 마이그레이션은 지원 되지만 마이그레이션된 AD FS Windows 토큰 기반 에이전트는 Windows Server 2008 또는 Windows Server 2008 r 2와 함께 설치 된 AD FS 1.1 페더레이션 서비스 에서만 작동 합니다. 참조 항목:<br /><br /> [AD FS 1.1 웹 에이전트 마이그레이션](migrate-the-ad-fs-web-agent.md)<br /><br /> [AD FS 1.x와 상호 운용](Interoperating-with-AD-FS-1.x.md)|  
-|AD FS 1.1 클레임 인식 에이전트가 Windows Server 2008 또는 Windows Server 2008 r 2와 함께 설치 됨)|동일 서버에서의 마이그레이션이 지원됩니다. 마이그레이션된 AD FS 1.1 클레임 인식 웹 에이전트는 다음과 같은 기능을 수행 합니다.<br /><br /> AD FS 1.1 페더레이션 서비스가 Windows Server 2008 또는 Windows Server 2008 r 2와 함께 설치 됨<br /><br /> AD FS 2.0 페더레이션 서비스가 Windows Server 2008 또는 Windows Server 2008 r 2에 설치 됨<br /><br /> Windows Server 2012를 사용 하 여 설치 된 AD FS 페더레이션 서비스<br /><br /> 참조 항목:<br /><br /> [AD FS 1.1 웹 에이전트 마이그레이션](migrate-the-ad-fs-web-agent.md)<br /><br /> [AD FS 1.x와 상호 운용](Interoperating-with-AD-FS-1.x.md)|  
-|AD FS 2.0 페더레이션 서버가 Windows Server 2008 또는 Windows Server 2008 r 2에 설치 됨|동일 서버에서의 마이그레이션이 지원됩니다. 참조 항목:<br /><br /> [AD FS 2.0 페더레이션 서버 마이그레이션 준비](prepare-to-migrate-ad-fs-fed-server.md)<br /><br /> [AD FS 2.0 페더레이션 서버 마이그레이션](migrate-the-ad-fs-fed-server.md)|  
-|AD FS 2.0 페더레이션 서버 프록시가 Windows Server 2008 또는 Windows Server 2008 r 2에 설치 됨|동일 서버에서의 마이그레이션이 지원됩니다.  자세한 내용은 다음을 참조하세요.<br /><br /> [AD FS 2.0 페더레이션 서버 프록시 마이그레이션 준비](prepare-to-migrate-ad-fs-fed-proxy.md)<br /><br /> [AD FS 2.0 페더레이션 서버 프록시 마이그레이션](migrate-the-ad-fs-2-fed-server-proxy.md)|  
+|AD FS 1.1 windows Server 2008 또는 Windows Server 2008 r 2와 함께 설치 된 Windows 토큰 기반 에이전트|동일한 서버에서의 마이그레이션은 지원 되지만 마이그레이션된 AD FS Windows 토큰 기반 에이전트는 Windows Server 2008 또는 Windows Server 2008 r 2와 함께 설치 된 AD FS 1.1 페더레이션 서비스 에서만 작동 합니다. 자세한 내용은 다음을 참조하세요.<p> [AD FS 1.1 웹 에이전트 마이그레이션](migrate-the-ad-fs-web-agent.md)<p> [AD FS 1.x와 상호 운용](Interoperating-with-AD-FS-1.x.md)|  
+|AD FS 1.1 클레임 인식 에이전트가 Windows Server 2008 또는 Windows Server 2008 r 2와 함께 설치 됨)|동일 서버에서의 마이그레이션이 지원됩니다. 마이그레이션된 AD FS 1.1 클레임 인식 웹 에이전트는 다음과 같은 기능을 수행 합니다.<p> AD FS 1.1 페더레이션 서비스가 Windows Server 2008 또는 Windows Server 2008 r 2와 함께 설치 됨<p> AD FS 2.0 페더레이션 서비스가 Windows Server 2008 또는 Windows Server 2008 r 2에 설치 됨<p> Windows Server 2012를 사용 하 여 설치 된 AD FS 페더레이션 서비스<p> 자세한 내용은 다음을 참조하세요.<p> [AD FS 1.1 웹 에이전트 마이그레이션](migrate-the-ad-fs-web-agent.md)<p> [AD FS 1.x와 상호 운용](Interoperating-with-AD-FS-1.x.md)|  
+|AD FS 2.0 페더레이션 서버가 Windows Server 2008 또는 Windows Server 2008 r 2에 설치 됨|동일 서버에서의 마이그레이션이 지원됩니다. 자세한 내용은 다음을 참조하세요.<p> [AD FS 2.0 페더레이션 서버 마이그레이션 준비](prepare-to-migrate-ad-fs-fed-server.md)<p> [AD FS 2.0 페더레이션 서버 마이그레이션](migrate-the-ad-fs-fed-server.md)|  
+|AD FS 2.0 페더레이션 서버 프록시가 Windows Server 2008 또는 Windows Server 2008 r 2에 설치 됨|동일 서버에서의 마이그레이션이 지원됩니다.  자세한 내용은 다음을 참조하십시오.<p> [AD FS 2.0 페더레이션 서버 프록시 마이그레이션 준비](prepare-to-migrate-ad-fs-fed-proxy.md)<p> [AD FS 2.0 페더레이션 서버 프록시 마이그레이션](migrate-the-ad-fs-2-fed-server-proxy.md)|  
   
 ## <a name="see-also"></a>참고 항목  
  [AD FS 2.0 페더레이션 서버 마이그레이션 준비](prepare-to-migrate-ad-fs-fed-server.md)   

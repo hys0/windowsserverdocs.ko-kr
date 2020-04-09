@@ -2,22 +2,18 @@
 title: DNS 영역에 대한 DNS 리소스 레코드 보기
 description: 이 항목은 Windows Server 2016의 IPAM (IP 주소 관리) 관리 가이드의 일부입니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ipam
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 375feefc-949e-47c3-9e61-35b79e021966
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: ca2cf532fc9fa7e1f12e5294b40d29863fd42261
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: dfd772f89d913cd75b8c31ef4e5236f3cc11263c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80312337"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854846"
 ---
 # <a name="view-dns-resource-records-for-a-dns-zone"></a>DNS 영역에 대한 DNS 리소스 레코드 보기
 
@@ -50,7 +46,7 @@ IPAM 클라이언트 콘솔에서 DNS 영역에 대 한 DNS 리소스 레코드�
   
     ![레코드를 필터링 할 조건을 사용 하 여](../../media/View-DNS-Resource-Records-for-a-DNS-Zone/ipam_DNSzones_01d.jpg)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [DNS 영역 관리](DNS-Zone-Management.md)  
 [IPAM 관리](Manage-IPAM.md)  
   

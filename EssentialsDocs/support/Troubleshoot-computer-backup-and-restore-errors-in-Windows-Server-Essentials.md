@@ -1,23 +1,19 @@
 ---
 title: Windows Server Essentials의 컴퓨터 백업 및 복원 오류 문제 해결
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.custom: na
 ms.date: 06/25/2013
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5cc73aff-d2c0-4cf9-a23d-ef928ae5ddc9
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 28e3564c93f192563626bfb44992ef9bc4a49598
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 542c0a583aca56ce72ef0e2e55f2b1543558dfa8
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80313247"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852186"
 ---
 # <a name="troubleshoot-computer-backup-and-restore-errors-in-windows-server-essentials"></a>Windows Server Essentials의 컴퓨터 백업 및 복원 오류 문제 해결
 
@@ -43,9 +39,9 @@ ms.locfileid: "80313247"
   
 ##### <a name="to-troubleshoot-errors-that-occur-while-you-configure-backups-for-a-connected-computer"></a>연결된 컴퓨터에 대한 백업을 구성하는 동안 발생하는 오류 문제를 해결하려면  
   
-1.  컴퓨터가 네트워크 장치를 통해 네트워크에 연결되어 있는지 확인합니다.  
+1.  컴퓨터가 네트워크 디바이스를 통해 네트워크에 연결되어 있는지 확인합니다.  
   
-2.  컴퓨터가 연결된 네트워크 장치가 네트워크에도 연결되어 있고 전원이 켜져 있으며 제대로 작동하는지 확인합니다.  
+2.  컴퓨터가 연결된 네트워크 디바이스가 네트워크에도 연결되어 있고 전원이 켜져 있으며 제대로 작동하는지 확인합니다.  
   
 3.  Windows Server Client Backup Service 및 Windows Server Client Computer Backup Provider Service가 서버에서 실행되고 있는지 확인합니다.  
   
@@ -185,9 +181,9 @@ ms.locfileid: "80313247"
   
 ##### <a name="to-troubleshoot-an-unsuccessful-file-or-folder-restore"></a>실패한 파일 또는 폴더 복원 문제를 해결하려면  
   
-1.  컴퓨터가 네트워크 장치를 통해 네트워크에 연결되어 있는지 확인합니다.  
+1.  컴퓨터가 네트워크 디바이스를 통해 네트워크에 연결되어 있는지 확인합니다.  
   
-2.  컴퓨터가 연결된 네트워크 장치가 네트워크에도 연결되어 있고 전원이 켜져 있으며 제대로 작동하는지 확인합니다.  
+2.  컴퓨터가 연결된 네트워크 디바이스가 네트워크에도 연결되어 있고 전원이 켜져 있으며 제대로 작동하는지 확인합니다.  
   
 3.  경고를 확인하여 백업 데이터베이스에 오류가 있는지 확인합니다. 오류가 있는 경우 경고의 지침에 따라 백업 데이터베이스를 복구합니다.  
   

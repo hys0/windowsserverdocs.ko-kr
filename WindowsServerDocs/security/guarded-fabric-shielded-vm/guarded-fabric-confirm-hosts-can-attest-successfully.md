@@ -1,19 +1,19 @@
 ---
 title: 보호 된 호스트가 증명할 수 있는지 확인
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: 7485796b-b840-4678-9b33-89e9710fbbc7
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 09/25/2019
-ms.openlocfilehash: 2bab2b653127ae13d27dea76225ada91b3ee8ecc
-ms.sourcegitcommit: de71970be7d81b95610a0977c12d456c3917c331
+ms.openlocfilehash: aa2075bda71c6713fa76577b685315118199e63b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71940692"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856786"
 ---
 # <a name="confirm-guarded-hosts-can-attest"></a>보호 된 호스트가 증명할 수 있는지 확인
 
@@ -31,7 +31,7 @@ ms.locfileid: "71940692"
 
 3. 호스트의 키 보호 및 증명 Url을 구성 합니다.
 
-    - **Windows powershell을 통해**: 관리자 권한 windows powershell 콘솔에서 다음 명령을 실행 하 여 키 보호 및 증명 url을 구성할 수 있습니다. &lt;FQDN&gt;의 경우 HGS 클러스터의 FQDN (정규화 된 도메인 이름) (예: HgsServer)을 사용 하거나, hgs 관리자에 게 hgs 서버에서 cmdlet을 실행 하 여 url을 검색 하도록 요청 합니다.
+    - **Windows powershell을 통해**: 관리자 권한 windows powershell 콘솔에서 다음 명령을 실행 하 여 키 보호 및 증명 url을 구성할 수 있습니다. &lt;FQDN&gt;의 경우 HGS 클러스터의 FQDN (정규화 된 도메인 이름) (예: HgsServer)을 사용 하거나, hgs 관리자에 게 hgs 서버에서 **Get-HgsServer** cmdlet을 실행 하 여 url을 검색 하도록 요청 합니다.
 
         ```PowerShell
         Set-HgsClientConfiguration -AttestationServerUrl 'http://<FQDN>/Attestation' -KeyProtectionServerUrl 'http://<FQDN>/KeyProtection'

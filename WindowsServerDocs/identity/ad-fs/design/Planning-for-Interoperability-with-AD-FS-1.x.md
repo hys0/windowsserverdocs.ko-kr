@@ -1,7 +1,6 @@
 ---
 ms.assetid: 04b63d9f-e924-4146-9b1d-785ed8b4239c
 title: AD FS 1.x와의 상호 운용성 계획
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,16 +8,16 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: e9f72bd83c90a804749329521a72e3232589c735
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: a0bbf64a7bf110e3d73084dd047c84b2b83be8d9
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407964"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858616"
 ---
 # <a name="planning-for-interoperability-with-ad-fs-1x"></a>AD FS 1.x와의 상호 운용성 계획
 
-Windows server® 2012를 실행 하는 Active Directory Federation Services \(AD FS\) 페더레이션 서버는 windows server 2003 R2 AD FS \(과 함께 설치 된\) 1.0 페더레이션 서비스 및 Windows server 2008 또는 Windows Server 2008 R2 AD FS \(과 함께 설치 된\) 1.1 페더레이션 서비스와 상호 운용할 수 있습니다. 다음과 같은 상호 운용성 조합이 지원됩니다.  
+Windows server&reg; 2012를 실행 하는 Active Directory Federation Services \(AD FS\) 페더레이션 서버는 windows server 2003 R2 AD FS \(과 함께 설치 된\) 1.0 페더레이션 서비스 및 Windows server 2008 또는 Windows Server 2008 R2 AD FS \(과 함께 설치 된\) 1.1 페더레이션 서비스와 상호 운용할 수 있습니다. 다음과 같은 상호 운용성 조합이 지원됩니다.  
 
 -   모든 AD FS 1입니다. *x* 페더레이션 서비스 Windows Server 2012의 AD FS 페더레이션 서비스에서 사용할 수 있는 클레임을 보낼 수 있습니다. 자세한 내용은 [검사 목록: AD FS 1.x에서 클레임을 사용 하도록 AD FS 구성](../../ad-fs/deployment/Checklist--Configuring-AD-FS--to-Consume-Claims-from-AD-FS-1.x.md)을 참조 하세요.  
 

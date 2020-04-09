@@ -1,36 +1,35 @@
 ---
-title: 가상 머신에 대 한 성능 기록
+title: 가상 컴퓨터에 대 한 성능 기록
 ms.author: cosdar
-ms.manager: eldenc
+manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 09/07/2018
-Keywords: 저장소 공간 다이렉트
 ms.localizationpriority: medium
-ms.openlocfilehash: f8072ab5fc853248f2eedd26019956ec864a891d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: aefc9c3c33cb93be241aae4ef18d815a9f8defef
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59890874"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856146"
 ---
-# <a name="performance-history-for-virtual-machines"></a>가상 머신에 대 한 성능 기록
+# <a name="performance-history-for-virtual-machines"></a>가상 컴퓨터에 대 한 성능 기록
 
-> 적용 대상: Windows Server Insider Preview
+> 적용 대상: Windows Server 2019
 
-이 하위 항목의 [저장소 공간 다이렉트에 대 한 성능 기록을](performance-history.md) virtual machines (VM)에 대 한 수집 된 성능 기록 세부 정보에 설명 합니다. 성능 기록의 모든 실행, 클러스터 된 VM에 대 한 제품은입니다.
+[스토리지 공간 다이렉트에 대 한 성능 기록](performance-history.md) 의이 하위 항목에서는 VM (가상 컴퓨터)에 대해 수집 된 성능 기록에 대해 자세히 설명 합니다. 성능 기록은 실행 중인 모든 클러스터 된 VM에 대해 사용할 수 있습니다.
 
    > [!NOTE]
-   > 새로 만든이 또는 이름이 바뀐 vm을 시작 하려면 컬렉션에 대 일 분 정도 걸릴 수 있습니다.
+   > 새로 만들어지거나 이름이 변경 되는 Vm에 대해 수집이 시작 되는 데 몇 분 정도 걸릴 수 있습니다.
 
 ## <a name="series-names-and-units"></a>계열 이름 및 단위
 
-이 시리즈는 적합 한 모든 VM에 대해 수집 됩니다.
+이러한 시리즈는 적합 한 모든 VM에 대해 수집 됩니다.
 
-| 시리즈                            | 단위             |
+| 계열                            | 단위             |
 |-----------------------------------|------------------|
-| `vm.cpu.usage`                    | %          |
+| `vm.cpu.usage`                    | percent          |
 | `vm.memory.assigned`              | 바이트            |
 | `vm.memory.available`             | 바이트            |
 | `vm.memory.maximum`               | 바이트            |
@@ -38,43 +37,43 @@ ms.locfileid: "59890874"
 | `vm.memory.pressure`              | -                |
 | `vm.memory.startup`               | 바이트            |
 | `vm.memory.total`                 | 바이트            |
-| `vmnetworkadapter.bandwidth.inbound`  | 비트 / 초 |
-| `vmnetworkadapter.bandwidth.outbound` | 비트 / 초 |
-| `vmnetworkadapter.bandwidth.total`    | 비트 / 초 |
+| `vmnetworkadapter.bandwidth.inbound`  | 초당 비트 수 |
+| `vmnetworkadapter.bandwidth.outbound` | 초당 비트 수 |
+| `vmnetworkadapter.bandwidth.total`    | 초당 비트 수 |
 
-또한 모든 가상 하드 디스크 (VHD) 시리즈와 같은 `vhd.iops.total`, VM에 연결 된 모든 VHD에 대 한 집계 됩니다.
+또한 VM에 연결 된 모든 VHD에 대해 `vhd.iops.total`와 같은 모든 VHD (가상 하드 디스크) 시리즈를 집계 합니다.
 
-## <a name="how-to-interpret"></a>해석 하는 방법
+## <a name="how-to-interpret"></a>해석 방법
 
 
-| 시리즈                            | 설명                                                                                                  |
+| 계열                            | 설명                                                                                                  |
 |-----------------------------------|--------------------------------------------------------------------------------------------------------------|
-| `vm.cpu.usage`                    | 백분율 가상 머신이 해당 호스트 서버의 프로세서의 사용 중입니다.                                   |
-| `vm.memory.assigned`              | 가상 컴퓨터에 할당 된 메모리 양입니다.                                                      |
-| `vm.memory.available`             | 남아 있는 할당 된 크기의 사용 가능한 메모리 양입니다.                                       |
-| `vm.memory.maximum`               | 동적 메모리를 사용 하는 경우 가상 머신에 할당할 수 있는 메모리의 최대 수입니다. |
-| `vm.memory.minimum`               | 동적 메모리를 사용 하는 경우 가상 머신에 할당할 수 있는 메모리의 최소 양입니다. |
-| `vm.memory.pressure`              | 가상 머신에 할당 된 메모리는 가상 컴퓨터에서 요구 하는 메모리의 비율입니다.            |
-| `vm.memory.startup`               | 가상 컴퓨터를 시작 하는 데 필요한 메모리 양입니다.                                            |
+| `vm.cpu.usage`                    | 가상 컴퓨터가 호스트 서버 프로세서를 사용 하 고 있는 비율입니다.                                   |
+| `vm.memory.assigned`              | 가상 컴퓨터에 할당 된 메모리의 양입니다.                                                      |
+| `vm.memory.available`             | 할당 된 양에 사용 가능한 상태로 남아 있는 메모리의 양입니다.                                       |
+| `vm.memory.maximum`               | 동적 메모리를 사용 하는 경우 가상 컴퓨터에 할당할 수 있는 최대 메모리 양입니다. |
+| `vm.memory.minimum`               | 동적 메모리를 사용 하는 경우 가상 컴퓨터에 할당할 수 있는 최소 메모리 양입니다. |
+| `vm.memory.pressure`              | 가상 컴퓨터에서 가상 컴퓨터에 할당 된 메모리에 대해 요구 하는 메모리의 비율입니다.            |
+| `vm.memory.startup`               | 가상 컴퓨터를 시작 하는 데 필요한 메모리의 양입니다.                                            |
 | `vm.memory.total`                 | 총 메모리입니다. |
-| `vmnetworkadapter.bandwidth.inbound`  | 모든 가상 네트워크 어댑터에서 가상 컴퓨터에서 받은 데이터의 비율입니다.                        |
-| `vmnetworkadapter.bandwidth.outbound` | 모든 가상 네트워크 어댑터에서 가상 컴퓨터에서 보낸 데이터의 비율입니다.                            |
-| `vmnetworkadapter.bandwidth.total`    | 총 데이터 변동률 받거나 모든 가상 네트워크 어댑터를 통해 가상 컴퓨터에 전송 합니다.          |
+| `vmnetworkadapter.bandwidth.inbound`  | 가상 컴퓨터가 가상 네트워크 어댑터를 통해 받은 데이터의 요금입니다.                        |
+| `vmnetworkadapter.bandwidth.outbound` | 가상 컴퓨터가 가상 네트워크 어댑터를 통해 보낸 데이터의 요금입니다.                            |
+| `vmnetworkadapter.bandwidth.total`    | 가상 컴퓨터에서 모든 가상 네트워크 어댑터에 대해 받거나 보낸 데이터의 총 비율입니다.          |
 
    > [!NOTE]
-   > 카운터는 샘플링 되지 전체 간격을 측정 됩니다. 예: VM 9 초 하지만 급격히 증가 하는 호스트 CPU의 50%를 사용 하 여 10 초에서 동안 유휴 상태 이면 해당 `vm.cpu.usage` 으로 기록 됩니다 5% 평균 10 초 간격입니다. 이렇게 하면 성능 기록과 모든 활동을 캡처하고 노이즈를 강력 합니다.
+   > 카운터는 샘플링 되지 않고 전체 간격으로 측정 됩니다. 예를 들어 VM이 9 초 동안 유휴 상태 이지만 10 초 동안 50%의 호스트 CPU를 사용 하도록 급증 하는 경우 해당 `vm.cpu.usage` 10 초 간격 동안 평균 5%로 기록 됩니다. 이렇게 하면 성능 기록이 모든 활동을 캡처하고 소음에 대해 강력 하 게 됩니다.
 
 ## <a name="usage-in-powershell"></a>PowerShell에서 사용
 
-사용 된 [GET-VM](https://docs.microsoft.com/powershell/module/hyper-v/get-vm) cmdlet:
+[GET VM](https://docs.microsoft.com/powershell/module/hyper-v/get-vm) cmdlet을 사용 합니다.
 
 ```PowerShell
 Get-VM <Name> | Get-ClusterPerf
 ```
 
    > [!NOTE]
-   > GET-VM cmdlet을 로컬 (또는 지정한) 서버의 가상 컴퓨터 클러스터 전체가 아닌만 반환합니다.
+   > VM cmdlet은 클러스터가 아닌 로컬 (지정 된) 서버의 가상 컴퓨터만 반환 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [저장소 공간 다이렉트에 대 한 성능 기록](performance-history.md)
+- [스토리지 공간 다이렉트에 대 한 성능 기록](performance-history.md)

@@ -6,19 +6,18 @@ ms.author: billmath
 manager: femila
 ms.date: 03/20/2020
 ms.topic: article
-ms.custom: it-pro
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 47ef535c7e761f9de8331b80508703421feb68e9
-ms.sourcegitcommit: 5197a87e659589bcc8d2a32069803ae736b02892
+ms.openlocfilehash: b0c64d90fcbeaf2aa03312b9707bcfa43379271f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79376260"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859936"
 ---
 # <a name="configure-browsers-to-use-windows-integrated-authentication-wia-with-ad-fs"></a>AD FS에서 WIA (Windows 통합 인증)를 사용 하도록 브라우저 구성
 
-기본적으로 WIA (Windows 통합 인증)는 Windows Server 2012 r 2의 Active Directory Federation Services (AD FS)에서를 사용 하는 응용 프로그램에 대해 조직의 내부 네트워크 (인트라넷) 내에서 발생 하는 인증 요청에 대해 사용 하도록 설정 됩니다. 브라우저의 인증입니다.
+기본적으로 windows Server 2012 r 2의 Active Directory Federation Services (AD FS)에서 브라우저를 사용 하 여 해당 인증에 대해 브라우저를 사용 하는 응용 프로그램에 대 한 인증 요청에 대 한 windows Server r 2에서 WIA (Windows 통합 인증)가 사용 됩니다.
 
 이제 AD FS 2016에는 향상 된 기본 설정이 포함 되어 있습니다 .이 설정을 통해 Edge 브라우저에서 WIA를 수행할 뿐만 아니라 (잘못 된) Windows Phone를 catch 할 수 있습니다.
 
@@ -63,7 +62,7 @@ Windows Server 2016 이상에서 AD FS 경우:
 |사용자 에이전트|사용 사례|
 |-----|-----|
 |MSIE 6.0|IE 6.0|
-|7\.0; MSIE Windows NT|IE 7, IE 인트라넷 영역에 있습니다. "Windows NT" 조각 데스크톱 운영 체제에서 전송 됩니다.|
+|7\.0; MSIE Windows NT|IE 7, IE 인트라넷 영역에 있습니다. "Windows NT" 조각은 데스크톱 운영 체제에서 전송 됩니다.|
 |MSIE 8.0|IE 8.0 (디바이스가 없으면이 전송, 보다 구체적인 해야 하므로)|
 |MSIE 9.0|IE 9.0 (디바이스가 보내기이 더 해야이 더 구체적인)|
 |10.0; MSIE Windows NT 6|Windows XP 및 데스크톱 운영 체제의 최신 버전 IE 10.0</br></br>Windows Phone 8.0 디바이스 (기본 설정에서 모바일 설정)를 전송 하기 때문에 제외 됩니다.</br></br>사용자 에이전트: Mozilla/5.0 (호환; 10.0; MSIE Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; 터치; NOKIA; Lumia 920)|

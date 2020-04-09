@@ -8,12 +8,12 @@ ms.assetid: 7110ad21-a33e-48d5-bb3c-129982913bc8
 manager: brianlic
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: a5b2e750bd7a0103382f6d91c515f4e283a112cb
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 1e962948feaf6bb37beeb3c241d3ae3369be77dc
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80312667"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860706"
 ---
 # <a name="deploy-dhcp-using-windows-powershell"></a>Windows PowerShell을 사용하여 DHCP 배포
 
@@ -89,7 +89,7 @@ TCP/IP는 Windows 기반 컴퓨터를 다음과 같은 Microsoft 시스템 및 �
 
 - Windows Server 2012
 
-- Windows 8
+- Windows 8
 
 - Windows Server 2008 R2
 
@@ -207,7 +207,7 @@ DHCP 서버에 대해 범위를 만들면 DHCP 서버가 컴퓨터 및 기타 �
 |네트워크 연결 바인딩|이더넷|
 |DNS 서버 설정|DC1.corp.contoso.com|
 |기본 설정 DNS 서버 IP 주소|10.0.0.2|
-|범위 값<br /><br />1. 범위 이름<br />2. 시작 IP 주소<br />3. 끝 IP 주소<br />4. 서브넷 마스크<br />5. 기본 게이트웨이 (옵션)<br />6. 임대 기간|1. 기본 서브넷<br />2.10.0.0.1<br />3.10.0.0.254<br />4.255.255.255.0<br />5.10.0.0.1<br />6.8 일|
+|범위 값<p>1. 범위 이름<br />2. 시작 IP 주소<br />3. 끝 IP 주소<br />4. 서브넷 마스크<br />5. 기본 게이트웨이 (옵션)<br />6. 임대 기간|1. 기본 서브넷<br />2.10.0.0.1<br />3.10.0.0.254<br />4.255.255.255.0<br />5.10.0.0.1<br />6.8 일|
 |IPv6 DHCP 서버 작동 모드|사용 안 함|
 
 ## <a name="using-this-guide-in-a-test-lab"></a><a name="bkmk_lab"></a>테스트 랩에서이 가이드 사용

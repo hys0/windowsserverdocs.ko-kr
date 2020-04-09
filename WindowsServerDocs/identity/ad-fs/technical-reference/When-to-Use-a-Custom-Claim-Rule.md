@@ -1,7 +1,6 @@
 ---
 ms.assetid: 20d183f0-ef94-44bb-9dfc-ed93799dd1a6
 title: 사용자 지정 클레임 규칙을 사용하는 경우
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: c784c4b6dbfee7034dd9302dc87fc74b896763f5
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 41e7ea7c2bc627f2fce198e5c7227148e8b03d88
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950139"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853826"
 ---
 # <a name="when-to-use-a-custom-claim-rule"></a>사용자 지정 클레임 규칙을 사용하는 경우
 클레임 발급 엔진이 프로그래밍 방식으로 클레임을 생성, 변환, 통과 및 필터링 하는 데 사용 하는 프레임 워크인 클레임 규칙 언어를 사용 하 여 Active Directory Federation Services \(AD FS\)에서 사용자 지정 클레임 규칙을 작성 합니다. 사용자 지정 규칙을 사용하여 표준 규칙 템플릿보다 더 복잡한 논리를 포함하는 규칙을 만들 수 있습니다. 다음을 수행하려는 경우 사용자 지정 규칙을 사용하는 것이 좋습니다.  
@@ -39,7 +38,7 @@ ms.locfileid: "75950139"
   
 클레임 규칙 언어는 규칙 기반입니다. 조건 부분과 실행 부분이 있습니다. 클레임 규칙 언어 구문을 사용하여 조직의 요구에 맞게 클레임을 열거, 추가, 삭제 또는 수정할 수 있습니다. 이러한 각 부분의 작동 방식에 대 한 자세한 내용은 [클레임 규칙 언어의 역할](The-Role-of-the-Claim-Rule-Language.md)을 참조 하세요.  
   
-다음 섹션에서는 클레임 규칙에 대한 기본 사항을 제공합니다. 또한 사용자 지정 클레임 규칙을 사용하는 경우에 대한 세부 정보를 제공합니다.  
+다음 섹션에서는 클레임 규칙에 대한 기본 사항을 소개합니다. 또한 사용자 지정 클레임 규칙을 사용하는 경우에 대한 세부 정보를 제공합니다.  
   
 ## <a name="about-claim-rules"></a>클레임 규칙 정보  
 클레임 규칙은 들어오는 클레임을 사용 하는 비즈니스 논리의 인스턴스를 나타내며, x\) 인 경우 \(에 조건을 적용 하 고 조건 매개 변수를 기반으로 나가는 클레임을 생성 합니다.  
@@ -47,7 +46,7 @@ ms.locfileid: "75950139"
 > [!IMPORTANT]  
 > -   의 AD FS 관리\-스냅인에서 클레임 규칙은 클레임 규칙 템플릿만 사용 하 여 만들 수 있습니다.  
 > -   클레임 규칙은 Active Directory 또는 다른 페더레이션 서비스\) 나 클레임 공급자 트러스트에 대 한 수락 변환 규칙의 출력에서 들어오는 클레임을 \(직접 처리 합니다.  
-> -   클레임 규칙은 지정된 규칙 집합 내에서 시간 순서대로 클레임 발급 엔진에 의해 처리됩니다. 규칙에 우선 순위를 설정하여 지정된 규칙 집합 내의 이전 규칙에 의해 생성된 클레임을 더욱 구체화하거나 필터링할 수 있습니다.  
+> -   클레임 규칙은 지정된 규칙 집합 내의 시간 순서대로 클레임 발급 엔진에 의해 처리됩니다. 규칙에 우선 순위를 설정하여 지정된 규칙 집합 내의 이전 규칙에 의해 생성된 클레임을 더욱 구체화하거나 필터링할 수 있습니다.  
 > -   클레임 규칙 템플릿에서는 항상 들어오는 클레임 유형을 지정해야 합니다. 그러나 단일 규칙을 사용하여 동일한 클레임 유형 내의 여러 클레임 값을 처리할 수 있습니다.  
   
 클레임 규칙 및 클레임 규칙 집합에 대 한 정보를 자세한 참조 [규칙의 역할 클레임](The-Role-of-Claim-Rules.md)합니다. 규칙은 처리 하는 방법에 대 한 자세한 내용은 참조 [클레임 엔진의 역할](The-Role-of-the-Claims-Engine.md)합니다. 자세한 내용은 클레임 규칙 집합을 처리 하는 방법을 참조 하십시오 [클레임 파이프라인의 역할](The-Role-of-the-Claims-Pipeline.md)합니다.  
@@ -70,12 +69,12 @@ ms.locfileid: "75950139"
 ## <a name="using-the-claim-rule-language"></a>클레임 규칙 언어 사용  
   
 ### <a name="example-how-to-combine-first-and-last-names-based-on-a-users-name-attribute-values"></a>예: 사용자의 이름 특성 값을 기반으로 성과 이름을 결합 하는 방법  
-다음 규칙 구문은 지정된 특성 저장소에 있는 특성 값의 이름과 성을 결합합니다. 정책 엔진은 각 조건에 대한 일치 항목의 카티전 곱을 형성합니다. 예를 들어 이름 {"Frank", "Alan"}과 성 {"Miller", "Shen"}의 출력은 {"Frank Miller", "Frank Shen", "Alan Miller", "Alan Shen"입니다.  
+다음 규칙 구문은 지정된 특성 저장소에 있는 특성 값의 이름과 성을 결합합니다. 정책 엔진은 각 조건에 대한 일치 항목의 카티전 곱을 형성합니다. 예를 들어 이름 {"Frank", "Alan"} 및 last names {"", "Shen"}는 {"Frank", "Frank Shen", "Alan", "Alan Shen"}의 출력입니다.  
   
 ```  
 c1:[type == "http://exampleschema/firstname" ]  
 &&  c2:[type == "http://exampleschema/lastname",]   
-=> issue(type = "http://exampleschema/name", value = c1.value + “  “ + c2.value);  
+=> issue(type = "http://exampleschema/name", value = c1.value + "  " + c2.value);  
 ```  
   
 ### <a name="example-how-to-issue-a-manager-claim-based-on-whether-users-have-direct-reports"></a>예: 사용자에게 부하 직원이 있는지 여부에 따라 관리자 클레임을 발급하는 방법  
@@ -83,7 +82,7 @@ c1:[type == "http://exampleschema/firstname" ]
   
 ```  
 c:[type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"] => add(store = "SQL Store", types = ("http://schemas.xmlsoap.org/claims/Reports"), query = "SELECT Reports FROM dbo.DirectReports WHERE UserName = {0}", param = c.value );  
-count([type == “http://schemas.xmlsoap.org/claims/Reports“] ) > 0 => issue(= "http://schemas.xmlsoap.org/claims/ismanager", value = "true");  
+count([type == "http://schemas.xmlsoap.org/claims/Reports"] ) > 0 => issue(= "http://schemas.xmlsoap.org/claims/ismanager", value = "true");  
 ```  
   
 ### <a name="example-how-to-issue-a-ppid-claim-based-on-an-ldap-attribute"></a>예: LDAP 특성을 기준으로 PPID 클레임을 발급하는 방법  

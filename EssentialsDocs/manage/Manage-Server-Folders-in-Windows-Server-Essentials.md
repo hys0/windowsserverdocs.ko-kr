@@ -1,23 +1,19 @@
 ---
 title: Windows Server Essentials에서 서버 폴더 관리
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 090cf1b8-7b9b-48b9-ae85-b98477b8d7cc
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 6ba5dd5e5978687c9d80a6d34e5e622aaa37c4b9
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: f0b7bd05c7d9cc65378f5fc636b4972b97b407d1
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80311120"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852746"
 ---
 # <a name="manage-server-folders-in-windows-server-essentials"></a>Windows Server Essentials에서 서버 폴더 관리
 
@@ -106,7 +102,7 @@ ms.locfileid: "80311120"
 -   [서버 폴더 속성 보기 또는 수정](Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_10)  
   
 ###  <a name="hide-server-folders"></a><a name="BKMK_Hide"></a>서버 폴더 숨기기  
- 네트워크 관리자는 이러한 서버 폴더를 숨기도록 선택하여 원격 웹 액세스 웹 사이트나 웹 서비스 응용 프로그램(예: 내 서버)에 표시되지 않게 할 수 있습니다.  
+ 네트워크 관리자는 이러한 서버 폴더를 숨기도록 선택하여 원격 웹 액세스 웹 사이트나 웹 서비스 애플리케이션(예: 내 서버)에 표시되지 않게 할 수 있습니다.  
   
 > [!NOTE]
 >  이 절차를 수행하려면 네트워크 관리자여야 합니다.  
@@ -190,7 +186,7 @@ ms.locfileid: "80311120"
   
 - 데이터 하드 드라이브에 더 이상 데이터를 저장할 충분한 공간이 없는 경우  
   
-- 기본 저장소 위치를 변경하려는 경우. 더 빠르게 이동하려면 빈 서버 폴더를 이동해 보세요.  
+- 기본 스토리지 위치를 변경하려는 경우. 더 빠르게 이동하려면 빈 서버 폴더를 이동해 보세요.  
   
 - 기존 하드 드라이브를 포함된 서버 폴더의 손실 없이 제거하려는 경우  
   
@@ -289,7 +285,7 @@ ms.locfileid: "80311120"
  서버 백업에서 파일을 복원 하는 방법에 대 한 자세한 내용은 [백업 및 복원 관리](Manage-Backup-and-Restore-in-Windows-Server-Essentials.md)항목에서 파일 및 폴더 복원에 대 한 자세한 정보 섹션을 참조 하세요.  
   
 ##  <a name="understand-shared-folders"></a><a name="BKMK_11"></a>공유 폴더 이해  
- 서버에 연결된 장치에서 다양한 방법으로 Windows Server Essentials의 공유 폴더에 액세스할 수 있습니다. 자세한 내용은 [공유 폴더 사용](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md)항목을 참조 하세요.  
+ 서버에 연결된 디바이스에서 다양한 방법으로 Windows Server Essentials의 공유 폴더에 액세스할 수 있습니다. 자세한 내용은 [공유 폴더 사용](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md)항목을 참조 하세요.  
   
 ##  <a name="understand-shadow-copies"></a><a name="BKMK_Shadow"></a>섀도 복사본 이해  
  서버 섀도 복사본을 사용하면 공유 파일 및 폴더를 과거 시점에 존재하던 대로 볼 수 있습니다. 사용자가 다음을 수행할 때 파일의 이전 버전 또는 섀도 복사본에 액세스하는 것이 유용합니다.  

@@ -2,20 +2,19 @@
 title: Hyper-v 역할만 사용 하도록 설정된 해야 합니다.
 description: 이 모범 사례 분석기 규칙에서 보고 한 문제를 해결 하는 지침을 제공 합니다.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 5a0ed176-048f-40b1-b56c-8391b805fd37
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: 9b16a3be1e2f842c251ff3ab31d467ef7f128c8a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 40dae4baad782d3be4fc6ca8ba2bc4e506131dbf
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71364761"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861916"
 ---
 # <a name="hyper-v-should-be-the-only-enabled-role"></a>Hyper-v 역할만 사용 하도록 설정된 해야 합니다.
 
@@ -23,16 +22,16 @@ ms.locfileid: "71364761"
 
 모범 사례 및 검사에 대한 자세한 내용은 [모범 사례 분석기](https://go.microsoft.com/fwlink/?LinkId=122786)를 참조하세요.  
   
-|속성|설명|  
+|속성|세부 정보|  
 |-|-|  
 |**운영 체제**|Windows Server 2016|  
 |**제품/기능**|Hyper-V|  
-|**Severity**|경고|  
-|**범주**|Configuration|  
+|**등급**|경고|  
+|**범주**|구성|  
   
 다음 섹션에서는 기울임꼴이이 문제에 대 한 모범 사례 분석기 도구에 표시 되는 UI 텍스트를 나타냅니다.  
   
-## <a name="issue"></a>문제점  
+## <a name="issue"></a>문제  
   
 *Hyper-v 이외의 역할은이 서버에서 사용 하도록 설정 됩니다.*  
   
@@ -42,9 +41,9 @@ ms.locfileid: "71364761"
   
 *Hyper-v 역할은 서버에서 사용할 수 있는 유일한 역할 이어야 합니다.*  
   
-이 모범 사례는 호스트 운영 체제 역할, 기능 및 Hyper-v를 실행 하는 데 필요한 아닌 응용 프로그램의 무료 보호할 수 있습니다. Nano 서버에 Hyper-v를 실행 하 고이 최상의 방법에 Nano 서버 Hyper-v 서비스 구성 요소 및 Windows 하이퍼바이저 들어 있기 때문에 소프트웨어 업데이트를 적용 해야 하는 업데이트의 수를 줄일 수 있습니다.  
+이 모범 사례는 호스트 운영 체제 역할, 기능 및 Hyper-v를 실행 하는 데 필요한 아닌 애플리케이션의 무료 보호할 수 있습니다. Nano 서버에 Hyper-v를 실행 하 고이 최상의 방법에 Nano 서버 Hyper-v 서비스 구성 요소 및 Windows 하이퍼바이저 들어 있기 때문에 소프트웨어 업데이트를 적용 해야 하는 업데이트의 수를 줄일 수 있습니다.  
   
-## <a name="resolution"></a>해결 방법  
+## <a name="resolution"></a>해상도  
   
 *서버 관리자를 사용 하 여 Hyper-v를 제외한 모든 역할을 제거 합니다.*  
   

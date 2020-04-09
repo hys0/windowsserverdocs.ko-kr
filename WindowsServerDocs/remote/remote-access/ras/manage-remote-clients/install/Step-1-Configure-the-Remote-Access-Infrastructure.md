@@ -2,22 +2,18 @@
 title: 1 단계 원격 액세스 인프라 구성
 description: 이 항목은 Windows Server 2016에서 원격으로 DirectAccess 클라이언트 관리 가이드의 일부입니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ras
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0e7d1f5b-c939-47ca-892f-5bb285027fbc
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 549150b10dede7dca9786fe38da40e9b7dea706f
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: d4588304ee3635c20f6b79817dfb54b0fa315357
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80308149"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859206"
 ---
 # <a name="step-1-configure-the-remote-access-infrastructure"></a>1 단계 원격 액세스 인프라 구성
 
@@ -43,7 +39,7 @@ ms.locfileid: "80308149"
 > 이 항목에는 설명된 일부 절차를 자동화하는 데 사용할 수 있는 예제 Windows PowerShell cmdlet이 포함되어 있습니다. 자세한 내용은 참조 [Cmdlet를 사용 하 여](https://go.microsoft.com/fwlink/p/?linkid=230693)합니다.  
   
 ## <a name="configure-server-network-settings"></a><a name="BKMK_ConfigNetworkSettings"></a>서버 네트워크 설정 구성  
-에 따라 네트워크 주소 변환 (NAT) 장치 뒤 또는 가장자리에 원격 액세스 서버를 배치 하려는 경우 다음 네트워크 인터페이스 주소 설정은 IPv4 및 i p v 6는 환경에서 단일 서버 배포에 필요한입니다. 모든 IP 주소는 **Windows 네트워크 및 공유 센터**에서 **어댑터 설정 변경**을 사용하여 구성합니다.  
+에 따라 네트워크 주소 변환 (NAT) 디바이스 뒤 또는 가장자리에 원격 액세스 서버를 배치 하려는 경우 다음 네트워크 인터페이스 주소 설정은 IPv4 및 i p v 6는 환경에서 단일 서버 배포에 필요한입니다. 모든 IP 주소는 **Windows 네트워크 및 공유 센터**에서 **어댑터 설정 변경**을 사용하여 구성합니다.  
   
 **지 토폴로지**:  
   

@@ -1,18 +1,18 @@
 ---
 title: 새 전용 포리스트에서 AD 모드를 사용 하 여 HGS 클러스터 초기화 (기본값)
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 4dd10efecf391f7087962e514db7a59135bd93e8
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 851ee57545aa233fd7d6c728b213ba687a1c1371
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403647"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856686"
 ---
 # <a name="initialize-the-hgs-cluster-using-ad-mode-in-a-new-dedicated-forest-default"></a>새 전용 포리스트에서 AD 모드를 사용 하 여 HGS 클러스터 초기화 (기본값)
 
@@ -35,7 +35,7 @@ ms.locfileid: "71403647"
         Initialize-HgsServer -HgsServiceName 'MyHgsDNN' -SigningCertificatePath '.\signCert.pfx' -SigningCertificatePassword $signingCertPass -EncryptionCertificatePath '.\encCert.pfx' -EncryptionCertificatePassword $encryptionCertPass -TrustActiveDirectory
         ```
 
-    -   로컬 인증서 저장소에 설치 된 내보낼 수 없는 인증서를 사용 하는 경우 다음 명령을 실행 합니다. 인증서 지문을 모르는 경우 `Get-ChildItem Cert:\LocalMachine\My`을 실행 하 여 사용 가능한 인증서를 나열할 수 있습니다.
+    -   로컬 인증서 저장소에 설치 된 내보낼 수 없는 인증서를 사용 하는 경우 다음 명령을 실행 합니다. 인증서 지문을 모르는 경우 `Get-ChildItem Cert:\LocalMachine\My`를 실행 하 여 사용 가능한 인증서를 나열할 수 있습니다.
 
         ```powershell
         Initialize-HgsServer -HgsServiceName 'MyHgsDNN' -SigningCertificateThumbprint '1A2B3C4D5E6F...' -EncryptionCertificateThumbprint '0F9E8D7C6B5A...' --TrustActiveDirectory

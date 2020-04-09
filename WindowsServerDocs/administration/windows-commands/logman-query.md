@@ -1,36 +1,32 @@
 ---
 title: logman 쿼리
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1116a0f0-5415-4369-a045-12f79f8f66de
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6acf6cf5240dd59357f4c788577190699a354744
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e7b7cc202266a568108c7cbf0eac89260721014a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71374423"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80840666"
 ---
 # <a name="logman-query"></a>logman 쿼리
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 데이터 수집기 또는 데이터 수집기 집합 속성을 쿼리 합니다.  
 
 ## <a name="syntax"></a>구문  
 ```  
-logman query [providers|"Data Collector Set name"] [options]  
+logman query [providers|Data Collector Set name] [options]  
 ```  
-## <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
 
 |     매개 변수      |                                 설명                                  |
 |--------------------|------------------------------------------------------------------------------|
@@ -40,18 +36,18 @@ logman query [providers|"Data Collector Set name"] [options]
 |    [-n] <name>     |                          대상 개체의 이름입니다.                          |
 |        -ets        | 이벤트 추적 세션 명령을 저장 하거나 예약 하지 않고 직접 보냅니다. |
 
-## <a name="BKMK_examples"></a>예와  
+## <a name="examples"></a><a name=BKMK_examples></a>예와  
 다음 명령은 대상 시스템에 구성 된 모든 데이터 수집기 집합을 나열 합니다.  
 ```  
 logman query  
 ```  
 다음 명령은 perf_log 데이터 수집기 집합에 포함 된 데이터 수집기를 나열 합니다.  
 ```  
-logman query "perf_log"  
+logman query perf_log  
 ```  
 다음 명령은 대상 시스템에 데이터 수집기의 모든 사용 가능한 공급자를 나열 합니다.  
 ```  
 logman query providers  
 ```  
-#### <a name="additional-references"></a>추가 참조  
+## <a name="additional-references"></a>추가 참조  
 [logman](logman.md)  

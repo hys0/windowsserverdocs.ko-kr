@@ -2,18 +2,18 @@
 title: FSRM(파일 서버 리소스 관리자) 개요
 ms.prod: windows-server
 ms.author: jgerend
-ms.manager: brianlic
+manager: brianlic
 ms.technology: storage
 ms.topic: article
 author: jasongerend
 ms.date: 5/14/2018
 description: FSRM (파일 서버 리소스 관리자)은 Windows Server 파일 서버에서 데이터를 관리 및 분류 하는 데 사용할 수 있는 도구입니다.
-ms.openlocfilehash: 719176307afc320ad676fd1acfc07ad9d15920cf
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 0ed7e5abce9389283a9b9d641f813b5df89a586b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71394170"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854246"
 ---
 # <a name="file-server-resource-manager-fsrm-overview"></a>FSRM(파일 서버 리소스 관리자) 개요
 
@@ -51,9 +51,9 @@ FSRM(파일 서버 리소스 관리자)는 파일 서버에 저장된 데이터�
   
 -   개인 공유 폴더에 음악 파일을 저장하도록 허용하지 않습니다.  
   
--   매주 일요일 자정에 지난 이틀간 가장 많이 사용된 파일의 목록을 생성하는 보고서가 실행되도록 예약합니다. 이렇게 하면 주말의 저장소 작업을 파악하여 서버 가동 중지 시간을 적절하게 계획할 수 있습니다.  
+-   매주 일요일 자정에 지난 이틀간 가장 많이 사용된 파일의 목록을 생성하는 보고서가 실행되도록 예약합니다. 이렇게 하면 주말의 스토리지 작업을 파악하여 서버 가동 중지 시간을 적절하게 계획할 수 있습니다.  
 
-## <a name="whats-new"></a>새로운 기능-FSRM이 변경 저널을 만들 수 없도록 설정
+## <a name="whats-new---prevent-fsrm-from-creating-change-journals"></a><a name="whats-new"></a>새로운 기능-FSRM이 변경 저널을 만들 수 없도록 설정
 
 Windows Server, 버전 1803부터, 서비스를 시작할 때 파일 서버 리소스 관리자 서비스에서 볼륨에 변경 저널 (USN 저널이 라고도 함)을 만들 수 없도록 할 수 있습니다. 이렇게 하면 각 볼륨에서 약간의 공간을 절약할 수 있지만 실시간 파일 분류는 사용 하지 않도록 설정 됩니다.
 
@@ -61,18 +61,18 @@ Windows Server, 버전 1803부터, 서비스를 시작할 때 파일 서버 리�
 
 서비스가 시작 될 때 파일 서버 리소스 관리자에서 일부 또는 모든 볼륨에 변경 저널을 만들지 않도록 하려면 다음 단계를 사용 합니다. 
 
-1. SRMSVC 서비스를 중지 합니다. 예를 들어 관리자 권한으로 PowerShell 세션을 열고을 입력 `Stop-Service SrmSvc`합니다.
+1. SRMSVC 서비스를 중지 합니다. 예를 들어 관리자 권한으로 PowerShell 세션을 열고 `Stop-Service SrmSvc`를 입력 합니다.
 2. Fsutil 명령을 사용 하 여 공간을 절약 하려는 볼륨의 USN 저널을 삭제 합니다. 
 
       ```
       fsutil usn deletejournal /d <VolumeName>
       ```
-    예: `fsutil usn deletejournal /d c:`
+    예를 들면 다음과 같습니다. `fsutil usn deletejournal /d c:`
 
-3. 예를 들어 동일한 PowerShell 세션에를 입력 `regedit` 하 여 레지스트리 편집기를 엽니다.
-4. 다음 키로 이동 합니다. **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SrmSvc\Settings**
+3. 예를 들어 동일한 PowerShell 세션에 `regedit`를 입력 하 여 레지스트리 편집기를 엽니다.
+4. 다음 키로 이동 합니다. **HKEY_LOCAL_MACHINE \system\currentcontrolset\services\srmsvc\settings**
 5. 전체 서버에 대 한 변경 저널 만들기를 선택적으로 건너뛰려면 (특정 볼륨에 대해서만 사용 하지 않도록 설정 하려는 경우이 단계를 건너뜁니다.)
-    1. **설정** 키를 마우스 오른쪽 단추로 클릭 한 다음 **새** > **DWORD (32 비트) 값**을 선택 합니다. 
+    1. **설정** 키를 마우스 오른쪽 단추로 클릭 한 다음 **새로 만들기** > **DWORD (32 비트) 값**을 선택 합니다. 
     1. 값 `SkipUSNCreationForSystem`의 이름을로 합니다.
     1. 값을 **1** (16 진수)로 설정 합니다.
 6. 특정 볼륨에 대 한 변경 저널 만들기를 선택적으로 건너뛰려면:
@@ -88,9 +88,9 @@ Windows Server, 버전 1803부터, 서비스를 시작할 때 파일 서버 리�
                     System Reserved \\?\Volume{8d3c9e8a-0000-0000-0000-100000000000}\
         C                           \\?\Volume{8d3c9e8a-0000-0000-0000-501f00000000}\
        ```
-    2. 레지스트리 편집기로 돌아가서 **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SrmSvc\Settings** 키를 마우스 오른쪽 단추로 클릭 한 다음 **새로 만들기** > **다중 문자열 값**을 선택 합니다.
+    2. 레지스트리 편집기로 돌아가서 **HKEY_LOCAL_MACHINE \system\currentcontrolset\services\srmsvc\settings** 키를 마우스 오른쪽 단추로 클릭 한 다음 **새로 만들기** > **다중 문자열 값**을 선택 합니다.
     3. 값 `SkipUSNCreationForVolumes`의 이름을로 합니다.
-    4. 변경 저널 생성을 건너뛰는 각 볼륨의 경로를 입력 하 여 각 경로를 별도의 줄에 배치 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+    4. 변경 저널 생성을 건너뛰는 각 볼륨의 경로를 입력 하 여 각 경로를 별도의 줄에 배치 합니다. 예를 들면 다음과 같습니다.
 
         ```
         \\?\Volume{8d3c9e8a-0000-0000-0000-100000000000}\
@@ -98,12 +98,12 @@ Windows Server, 버전 1803부터, 서비스를 시작할 때 파일 서버 리�
         ```
 
         > [!NOTE] 
-        > 레지스트리 편집기에서 빈 문자열을 제거 하는 것을 알 수 있습니다 .이 경고는 무시 해도 됩니다.  *형식의 데이터에는 빈 문자열을 사용할 수 없습니다. 레지스트리 편집기는 발견 되는 빈 문자열을 모두 제거 합니다.*
+        > 레지스트리 편집기에서 빈 문자열을 제거 하 여 안전 하 게 무시할 수 있다는 경고를 표시 하는 것을 알 수 있습니다. *REG_MULTI_SZ 형식의 데이터에 빈 문자열을 포함할 수 없습니다. 레지스트리 편집기는 발견 되는 빈 문자열을 모두 제거 합니다.*
 
-7. SRMSVC 서비스를 시작 합니다. 예를 들어 PowerShell 세션에서을 입력 `Start-Service SrmSvc`합니다.
+7. SRMSVC 서비스를 시작 합니다. 예를 들어 PowerShell 세션에서 `Start-Service SrmSvc`를 입력 합니다.
 
 
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [동적 Access Control](https://technet.microsoft.com/library/dn408191(v=ws.11).aspx) 

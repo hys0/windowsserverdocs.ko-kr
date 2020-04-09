@@ -1,23 +1,19 @@
 ---
 title: Windows Server Essentials에서 서버에 컴퓨터 연결 시 발생하는 문제 해결
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e45b3d89-c057-4c70-a627-86fb06dd22aa
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 4e2a707bf72ca7e371b6503116262e737102c769
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 2d98d4cc561a3c29ce73455f38f787709149d056
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80318592"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852196"
 ---
 # <a name="troubleshoot-connecting-computers-to-the-server-in-windows-server-essentials"></a>Windows Server Essentials에서 서버에 컴퓨터 연결 시 발생하는 문제 해결
 
@@ -229,7 +225,7 @@ ms.locfileid: "80318592"
   
 2.  탐색 창에서 **WSS 인증서 웹 서비스**를 클릭합니다.  
   
-3.  **작업** 창에서 **시작**을 클릭합니다.  
+3.  **동작** 창에서 **시작**을 클릭합니다.  
   
 ##  <a name="issue-7"></a><a name="BKMK_ConnectorIssueReconnect"></a>문제 7  
  **문제**  

@@ -1,7 +1,6 @@
 ---
 ms.assetid: dc24adb7-385d-4a92-ab81-78ba73df0118
 title: 페더레이션 서버 프록시에 대한 인증서 요구 사항
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: dab77c3e3226e89eb3ac9b74e7db9b6df8f181bf
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: cc32288d01d7e1386f146716f45f0e49ced3d48e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408142"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858126"
 ---
 # <a name="certificate-requirements-for-federation-server-proxies"></a>페더레이션 서버 프록시에 대한 인증서 요구 사항
 
@@ -22,7 +21,7 @@ Active Directory Federation Services \(AD FS\)에서 페더레이션 서버 프�
   
 일반적으로 페더레이션 서버 프록시는 PKI\)\(엔터프라이즈 공개 키 인프라에 포함 되지 않은 인터넷 상의 컴퓨터에 노출 됩니다. 따라서 인증 기관 \(인증 기관 CA\)(예: VeriSign)\)\-\(에서 발급 한 서버 인증 인증서를 사용 합니다.  
   
-페더레이션 서버 프록시 팜이 있는 경우 모든 페더레이션 서버 프록시 컴퓨터에서 동일한 서버 인증 인증서를 사용 해야 합니다. 자세한 내용은 참조 [페더레이션 서버 프록시 배치 위치](When-to-Create-a-Federation-Server-Proxy-Farm.md)합니다.  
+페더레이션 서버 프록시 팜이 있는 경우 모든 페더레이션 서버 프록시 컴퓨터에서 동일한 서버 인증 인증서를 사용 해야 합니다. 자세한 내용은 [When to Create a Federation Server Proxy Farm](When-to-Create-a-Federation-Server-Proxy-Farm.md)를 참조하세요.  
   
 서버 인증 인증서의 주체 이름이의 AD FS Management snap\-에 지정 된 페더레이션 서비스 이름 값과 일치 하는지 확인 하는 것이 중요 합니다. 이 값을 찾으려면에서 snap\-를 열고\-**서비스**를 클릭 한 다음 **페더레이션 서비스 속성 편집**을 클릭 하 고 **페더레이션 서비스 이름** 입력란에서 값을 찾습니다.  
   

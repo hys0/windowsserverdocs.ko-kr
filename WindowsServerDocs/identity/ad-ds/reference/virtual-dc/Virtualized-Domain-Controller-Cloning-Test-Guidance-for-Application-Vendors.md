@@ -1,7 +1,6 @@
 ---
 ms.assetid: fde99b44-cb9f-49bf-b888-edaeabe6b88d
 title: 응용 프로그램 공급업체를 위한 가상화된 도메인 컨트롤러 복제 테스트 지침
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,18 +8,18 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 4926fabe255f964b6d39e6c39c5e794a37423111
-ms.sourcegitcommit: 1c75e4b3f5895f9fa33efffd06822dca301d4835
+ms.openlocfilehash: 7273c59022edf4b03276a9e26c8291849ef93b40
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77517468"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853996"
 ---
 # <a name="virtualized-domain-controller-cloning-test-guidance-for-application-vendors"></a>응용 프로그램 공급업체를 위한 가상화된 도메인 컨트롤러 복제 테스트 지침
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-이 항목에서는 가상화 된 DC (도메인 컨트롤러) 복제 프로세스가 완료 된 후 응용 프로그램이 계속 해 서 예상 대로 작동 하도록 하기 위해 응용 프로그램 공급 업체에서 고려해 야 할 사항에 대해 설명 합니다. 응용 프로그램 공급 업체 및 추가 테스트를 보장할 수 있는 시나리오에 관심이 있는 복제 프로세스의 이러한 측면을 다룹니다. 응용 프로그램이 복제 된 가상화 된 도메인 컨트롤러에서 작동 하는지 확인 한 응용 프로그램 공급 업체는이 항목의 맨 아래에 있는 커뮤니티 콘텐츠에 응용 프로그램의 이름을 나열 하는 것이 좋습니다. 사용자가 유효성 검사에 대해 자세히 알아볼 수 있는 조직의 웹 사이트입니다.
+이 항목에서는 가상화 된 DC (도메인 컨트롤러) 복제 프로세스가 완료 된 후 응용 프로그램이 계속 해 서 예상 대로 작동 하도록 하기 위해 응용 프로그램 공급 업체에서 고려해 야 할 사항에 대해 설명 합니다. 응용 프로그램 공급 업체 및 추가 테스트를 보장할 수 있는 시나리오에 관심이 있는 복제 프로세스의 이러한 측면을 다룹니다. 사용자가 복제 된 가상화 된 도메인 컨트롤러에서 응용 프로그램이 작동 하는지 확인 한 응용 프로그램 공급 업체는이 항목의 맨 아래에 있는 커뮤니티 콘텐츠에서 응용 프로그램의 이름을 나열 하는 것이 좋습니다 .이 경우 사용자가 유효성 검사에 대해 자세히 알아볼 수 있는 조직의 웹 사이트에 대 한 링크도 함께 제공 됩니다.
 
 ## <a name="overview-of-virtualized-dc-cloning"></a>가상화 된 DC 복제 개요
 가상화 된 도메인 컨트롤러 복제 프로세스는 [AD DS (Active Directory Domain Services) 가상화 (수준 100)](https://docs.microsoft.com/windows-server/identity/ad-ds/introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100) 및 [가상화 된 도메인 컨트롤러 기술 참조 (수준 300)](https://docs.microsoft.com/windows-server/identity/ad-ds/deploy/virtual-dc/virtualized-domain-controller-technical-reference--level-300-)에 자세히 설명 되어 있습니다. 응용 프로그램의 관점에서 보면 응용 프로그램에 대 한 복제의 영향을 평가할 때 고려해 야 할 몇 가지 고려 사항이 있습니다.
@@ -31,7 +30,7 @@ ms.locfileid: "77517468"
 
 -   복제는 다른 서버 역할을 복제 하는 일반적인 용도의 확장이 아니라 가상화 된 도메인 컨트롤러에 대 한 특정 배포 기능입니다. 일부 서버 역할은 특히 복제를 지원 하지 않습니다.
 
-    -   DHCP(동적 호스트 구성 프로토콜)
+    -   DHCP(Dynamic Host Configuration Protocol)
 
     -   AD CS(Active Directory 인증서 서비스)
 

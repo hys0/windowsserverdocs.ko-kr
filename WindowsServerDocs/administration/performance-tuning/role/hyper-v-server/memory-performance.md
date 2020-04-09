@@ -4,15 +4,15 @@ description: 성능 튜닝 Hyper-v의 메모리 고려 사항
 ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author: Asmahi; SandySp; JoPoulso
+ms.author: asmahi; sandysp; jopoulso
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 88827176e8a425e9bf68fdc170a4a114346562f0
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5f683b85657b8dd263e93380b71c646ad677950c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71385092"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80851726"
 ---
 # <a name="hyper-v-memory-performance"></a>Hyper-v 메모리 성능
 
@@ -41,7 +41,7 @@ ms.locfileid: "71385092"
 
 Windows Server 2016의 hyper-v는 루트 파티션의 높은 성능과 안정성을 보장 하면서 자식 파티션에 안전 하 게 할당할 수 있는 메모리 양을 확인 하기 위해 루트 파티션의 관리 운영 체제의 런타임 상태를 모니터링 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 -   [Hyper-V 용어](terminology.md)
 

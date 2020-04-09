@@ -1,21 +1,20 @@
 ---
 title: SDN 기술
 description: 이 섹션의 항목에서는 Windows Server 2016에 포함 된 소프트웨어 정의 네트워킹 기술에 대 한 개요 및 기술 정보를 제공 합니다.
-manager: dougkim
+manager: grcusanz
 ms.prod: windows-server
-ms.service: virtual-network
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: b491089c-5bcb-49d4-95b1-915b7ce69f88
-ms.author: lizross
-author: eross-msft
+ms.author: anpaul
+author: AnirbanPaul
 ms.date: 02/14/2019
-ms.openlocfilehash: f6a33d59cedecc49b50d01ebffb0fef9fe460afd
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: bf67c9520fb824fe2da1faf495573fa39e3105a2
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80317213"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854286"
 ---
 # <a name="sdn-technologies"></a>SDN 기술
 

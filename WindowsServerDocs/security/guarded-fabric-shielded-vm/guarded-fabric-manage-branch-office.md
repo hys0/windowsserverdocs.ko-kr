@@ -1,17 +1,17 @@
 ---
 title: 지점 고려 사항
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
-ms.openlocfilehash: 5a07553e6662fd79230d566ba2049c5e8997f4d6
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: a9893ecd76e142dd243a1d99e83a48d2edfd5872
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79322505"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856566"
 ---
 # <a name="branch-office-considerations"></a>지점 고려 사항
 
@@ -61,4 +61,4 @@ Set-HgsKeyProtectionConfiguration -AllowKeyMaterialCaching:$true
 ```
 
 캐시할 수 있는 키 보호기는 보호 된 각 VM 마다 고유 하므로,이 설정이 HGS에서 사용 하도록 설정 된 후에는 (다시 시작 하지 않음) 완전히 종료 하 고 보호 된 키 보호기를 얻기 위해 보호 된 Vm을 시작 해야 합니다.
-보호 된 VM이 이전 버전의 Windows Server를 실행 하는 Hyper-v 호스트로 마이그레이션하거나 이전 버전의 HGS에서 새 키 보호기를 가져오는 경우 오프 라인 모드에서 자동으로 시작 될 수 없지만, HGS에 대 한 액세스를 사용할 수 있는 경우 온라인 모드에서 계속 실행할 수 있습니다. 되지.
+보호 된 VM이 이전 버전의 Windows Server를 실행 하는 Hyper-v 호스트로 마이그레이션하거나 이전 버전의 HGS에서 새 키 보호기를 가져오는 경우 오프 라인 모드에서 자동으로 시작 될 수 없지만, HGS에 대 한 액세스를 사용할 수 있는 경우 온라인 모드에서 계속 실행할 수 있습니다.

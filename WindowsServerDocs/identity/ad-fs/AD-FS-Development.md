@@ -1,7 +1,6 @@
 ---
 ms.assetid: e9563792-cd73-4a32-b4a1-5bd6a2109016
 title: AD FS 개발
-description: ''
 author: billmath
 ms.author: billmath
 manager: mtillman
@@ -9,17 +8,17 @@ ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: d9d170678b845446706c148c8816b5dc83e19371
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b4c94553116d7a888ad76fd999f12cecd70e3523
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71360112"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854096"
 ---
 # <a name="ad-fs-development"></a>AD FS 개발
 
 
-이 문서에는 AD FS 개발을 위한 모든 설명서 연습 목록이 포함 되어 있습니다. 여기에는 다음이 포함됩니다.  
+이 문서에는 AD FS 개발을 위한 모든 설명서 연습 목록이 포함 되어 있습니다. 이러한 특성은 다음과 같습니다.  
   
  
 - [AD FS용 사용자 지정 인증 방법 빌드](../ad-fs/development/ad-fs-build-custom-auth-method.md)
@@ -38,7 +37,7 @@ ms.locfileid: "71360112"
 
 - [AD FS 2016에서 OAuth 공용 클라이언트를 사용 하 여 네이티브 클라이언트 응용 프로그램 빌드](../ad-fs/development/native-client-with-ad-fs.md)
 
-- [Openid connect Connect 또는 OAuth with AD FS 2016를 사용할 때 id_token에서 내보낼 클레임 사용자 지정](../ad-fs/development/Customize-Id-Token-AD-FS-2016.md)
+- [Openid connect Connect 또는 OAuth를 AD FS 2016와 함께 사용 하는 경우 id_token에서 내보낼 클레임 사용자 지정](../ad-fs/development/Customize-Id-Token-AD-FS-2016.md)
 
 - [AD FS를 사용 하 여 id 위임](../ad-fs/development/ad-fs-identity-delegation.md)
 

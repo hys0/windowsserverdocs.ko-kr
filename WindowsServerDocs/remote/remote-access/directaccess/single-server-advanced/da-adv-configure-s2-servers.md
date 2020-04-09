@@ -2,22 +2,18 @@
 title: 2 단계 고급 DirectAccess 서버 구성
 description: 이 항목은 Windows Server 2016에 대 한 고급 설정을 사용 하 여 단일 DirectAccess 서버 배포 가이드의 일부입니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-da
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 35afec8e-39a4-463b-839a-3c300ab01174
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: bf740143c4d9c855df080addd75fdaeee6a1ceac
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: bfcdd58da67f41e84ff0956e3f0a0d9b63fa4f75
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80309109"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854876"
 ---
 # <a name="step-2-configure-advanced-directaccess-servers"></a>2 단계 고급 DirectAccess 서버 구성
 
@@ -32,7 +28,7 @@ ms.locfileid: "80309109"
 |[고급 DirectAccess 배포 계획](Plan-an-Advanced-DirectAccess-Deployment.md)|DirectAccess 클라이언트가 포함된 보안 그룹으로 원격 액세스 서버를 구성합니다.|  
 |2.4. 원격 액세스 서버 구성|원격 액세스 서버 설정을 구성합니다.|  
 |2.5. 인프라 서버 구성|조직에서 사용되는 인프라 서버를 구성합니다.|  
-|2.6. 응용 프로그램 서버 구성|인증 및 암호화를 요구하도록 응용 프로그램 서버를 구성합니다.|  
+|2.6. 애플리케이션 서버 구성|인증 및 암호화를 요구하도록 애플리케이션 서버를 구성합니다.|  
 |2.7. 구성 요약 및 대체 GPO|원격 액세스 구성 요약을 확인하고 필요한 경우 GPO를 수정합니다.|  
 |2.8. Windows PowerShell을 사용하여 원격 액세스 서버를 구성하는 방법|Windows PowerShell을 사용 하 여 원격 액세스를 구성 합니다.|  
   
@@ -172,13 +168,13 @@ DirectAccess를 사용하여 클라이언트 컴퓨터를 프로비전하려면 
   
 6.  **마침**을 클릭합니다.  
   
-## <a name="26-configure-application-servers"></a><a name="BKMK_App"></a>2.6. 응용 프로그램 서버 구성  
-응용 프로그램 서버 구성은 원격 액세스 배포에서 선택적 작업입니다. 원격 액세스를 사용하면 응용 프로그램 서버 보안 그룹에 포함되었는지 여부에 따라 선택한 응용 프로그램 서버에 대한 인증을 요구할 수 있습니다. 기본적으로 인증을 요구하는 응용 프로그램 서버로의 트래픽은 암호화되기도 하지만 이 트래픽을 암호화하지 인증만 사용하도록 선택할 수 있습니다.  
+## <a name="26-configure-application-servers"></a><a name="BKMK_App"></a>2.6. 애플리케이션 서버 구성  
+애플리케이션 서버 구성은 원격 액세스 배포에서 선택적 작업입니다. 원격 액세스를 사용하면 애플리케이션 서버 보안 그룹에 포함되었는지 여부에 따라 선택한 애플리케이션 서버에 대한 인증을 요구할 수 있습니다. 기본적으로 인증을 요구하는 애플리케이션 서버로의 트래픽은 암호화되기도 하지만 이 트래픽을 암호화하지 인증만 사용하도록 선택할 수 있습니다.  
   
 > [!NOTE]  
-> 인증을 암호화 하지 않고 Windows Server 2012 R2, Windows Server 2012 또는 Windows Server 2008 r 2를 실행 하는 응용 프로그램 서버 에서만 지원 됩니다.  
+> 인증을 암호화 하지 않고 Windows Server 2012 R2, Windows Server 2012 또는 Windows Server 2008 r 2를 실행 하는 애플리케이션 서버 에서만 지원 됩니다.  
   
-#### <a name="to-configure-application-servers"></a>응용 프로그램 서버를 구성하려면  
+#### <a name="to-configure-application-servers"></a>애플리케이션 서버를 구성하려면  
   
 1.  원격 액세스 관리 콘솔의 가운데 창에 있는 **4단계 응용 프로그램 서버** 영역에서 **구성**을 클릭합니다.  
   

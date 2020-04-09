@@ -1,20 +1,20 @@
 ---
 title: SDN(소프트웨어 정의 네트워킹)
 description: SDN(소프트웨어 방식 네트워킹)은 데이터 센터의 라우터, 스위치 및 게이트웨이 같은 실제 및 가상 네트워크 디바이스를 중앙에서 구성하고 관리하는 방법을 제공합니다. 이 항목을 사용 하 여 Windows Server, System Center 및 Microsoft Azure에 제공 된 SDN (소프트웨어 정의 네트워킹) 기술에 대해 알아봅니다.
-manager: dougkim
+manager: grcusanz
 ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: 9a1ea73c-20cd-42c5-95ad-b003b9cc6d64
-ms.author: lizross
-author: eross-msft
+ms.author: anpaul
+author: AnirbanPaul
 ms.date: 08/09/2018
-ms.openlocfilehash: a1283c6afcebe7b6abc12f9847865d6305bd3f2c
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 355375b17132a46f070d5ef34cd6ea02a36868e0
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80317274"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854336"
 ---
 # <a name="sdn-in-windows-server-overview"></a>Windows Server의 SDN 개요
 

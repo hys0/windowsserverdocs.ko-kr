@@ -1,6 +1,5 @@
 ---
 title: Active Directory Federation Services 및 인증서 키 사양 속성 정보
-description: ''
 author: billmath
 manager: femila
 ms.date: 05/31/2017
@@ -9,12 +8,12 @@ ms.prod: windows-server
 ms.assetid: a5307da5-02ff-4c31-80f0-47cb17a87272
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 51c9828cfe494c68422f4985e5b17113020c8414
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e3ddc427d84a79d831c61cad8087dbfa1d3fb564
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407422"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860246"
 ---
 # <a name="ad-fs-and-certificate-keyspec-property-information"></a>AD FS 및 certificate KeySpec 속성 정보
 키 사양 ("KeySpec")은 인증서 및 키와 연결 된 속성입니다. 인증서와 연결 된 개인 키를 서명, 암호화 또는 둘 다에 사용할 수 있는지 여부를 지정 합니다.   
@@ -53,14 +52,14 @@ CNG (Cryptography Next Generation) 공급자를 사용 하 여 키가 생성 된
 ### <a name="example"></a>예제
 레거시 CSP의 예로는 Microsoft 고급 암호화 공급자가 있습니다. 
 
-Microsoft RSA CSP key blob 형식에는 각 <strong>AT_KEYEXCHANGE * * 또는 * * AT_SIGNATURE</strong> 키에 대 한 요청을 처리 하기 위한 알고리즘 식별자 ( **CALG_RSA_KEYX** 또는 **CALG_RSA_SIGN**)가 포함 되어 있습니다.
+Microsoft RSA CSP key blob 형식에는 <strong>AT_KEYEXCHANGE * * 또는 * * AT_SIGNATURE</strong> 키에 대 한 요청을 처리 하기 위해 각각 **CALG_RSA_KEYX** 또는 **CALG_RSA_SIGN**알고리즘 식별자가 포함 됩니다.
 
 RSA 키 알고리즘 식별자는 다음과 같이 KeySpec 값에 매핑됩니다.
 
 | 공급자 지원 알고리즘| CAPI 호출에 대 한 키 사양 값 |
 | --- | --- |
-|CALG_RSA_KEYX : 서명 및 암호 해독에 사용할 수 있는 RSA 키입니다.| AT_KEYEXCHANGE (또는 KeySpec = 1)|
-CALG_RSA_SIGN : RSA 서명만 키 |AT_SIGNATURE (또는 KeySpec = 2)|
+|CALG_RSA_KEYX: 서명 및 암호 해독에 사용할 수 있는 RSA 키| AT_KEYEXCHANGE (또는 KeySpec = 1)|
+CALG_RSA_SIGN: RSA 서명만 키 |AT_SIGNATURE (또는 KeySpec = 2)|
 
 ## <a name="keyspec-values-and-associated-meanings"></a>KeySpec 값 및 관련 된 의미
 다음은 다양 한 KeySpec 값의 의미입니다.
@@ -78,11 +77,11 @@ CALG_RSA_SIGN : RSA 서명만 키 |AT_SIGNATURE (또는 KeySpec = 2)|
 
 ![Keyspec cert](media/AD-FS-and-KeySpec-Property/keyspec1.png)
 
-CERT_KEY_PROV_INFO_PROP_ID 아래에서 두 가지를 찾습니다.
+CERT_KEY_PROV_INFO_PROP_ID에서 다음 두 가지 항목을 찾습니다.
 
 
 1. **Providertype:** 인증서가 기존 CSP (암호화 저장소 공급자)를 사용 하는지 아니면 최신 CNG (Certificate next Generation) api를 기반으로 하는 키 저장소 공급자를 사용 하는지 여부를 나타냅니다.  0이 아닌 값은 레거시 공급자를 나타냅니다.
-2. **KeySpec** AD FS 인증서의 유효한 KeySpec 값은 다음과 같습니다.
+2. **KeySpec:** AD FS 인증서의 유효한 KeySpec 값은 다음과 같습니다.
 
    레거시 CSP 공급자 (ProviderType은 0과 같지 않음):
 
@@ -108,7 +107,7 @@ KeySpec 값을 변경 하는 경우 인증서를 다시 생성 하거나 인증 
 3. 각 AD FS 및 WAP 서버에 대해 다음 단계를 수행 합니다.
     1. AD FS/WAP 서버에서 인증서를 삭제 합니다.
     2. 관리자 권한 PowerShell 명령 프롬프트를 열고 아래 cmdlet 구문을 사용 하 여 각 AD FS 및 WAP 서버에서 PFX 파일을 가져오고, AT_KEYEXCHANGE 값 (모든 AD FS 인증 목적으로 작동)을 지정 합니다.
-        1. C: \>certutil – importpfx certfile .pfx .pfx AT_KEYEXCHANGE
+        1. C:\>certutil – importpfx certfile .pfx AT_KEYEXCHANGE
         2. PFX 암호 입력
     3. 위의 작업이 완료 되 면 다음을 수행 합니다.
         1. 개인 키 사용 권한 확인

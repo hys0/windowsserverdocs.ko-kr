@@ -1,23 +1,19 @@
 ---
 title: SDN용 RAS 게이트웨이
 description: 이 항목을 사용 하 여 Windows Server 2016에서 사용할 수 있는 소프트웨어 기반, 다중 테 넌 트, 다중 테 넌 트 (Border Gateway Protocol)를 지 원하는 RAS 게이트웨이에 대해 알아볼 수 있습니다.
-manager: brianlic
-ms.custom: na
+manager: grcusanz
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-sdn
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a32357a5-ab1a-4a4c-848a-7a4ed65b1921
-ms.author: lizross
-author: eross-msft
-ms.openlocfilehash: 415a5f4728b1b08e59630935e47f22d74b0267e8
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.author: anpaul
+author: AnirbanPaul
+ms.openlocfilehash: 3059da769e8ab5719be657c82d3f075a686f6691
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80312937"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859596"
 ---
 # <a name="ras-gateway-for-sdn"></a>SDN용 RAS 게이트웨이
 

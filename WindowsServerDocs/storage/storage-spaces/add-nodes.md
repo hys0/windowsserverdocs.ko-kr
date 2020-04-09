@@ -3,19 +3,19 @@ ms.assetid: 898d72f1-01e7-4b87-8eb3-a8e0e2e6e6da
 title: 저장소 공간 다이렉트에 서버 또는 드라이브 추가
 ms.prod: windows-server
 ms.author: cosdar
-ms.manager: dongill
+manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 11/06/2017
 description: 스토리지 공간 다이렉트 클러스터에 서버 또는 드라이브를 추가 하는 방법
 ms.localizationpriority: medium
-ms.openlocfilehash: f5fb9da903bb76de3a075fa7feeeaba468d802c2
-ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
+ms.openlocfilehash: be79a2d3e0e8c56afc409298518d967c9bc80453
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77465627"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859126"
 ---
 # <a name="adding-servers-or-drives-to-storage-spaces-direct"></a>저장소 공간 다이렉트에 서버 또는 드라이브 추가
 
@@ -23,7 +23,7 @@ ms.locfileid: "77465627"
 
 이 항목에서는 저장소 공간 다이렉트에 서버 또는 드라이브를 추가하는 방법에 대해 설명합니다.
 
-## <a name="adding-servers"></a>서버 추가
+## <a name="adding-servers"></a><a name="adding-servers"></a>서버 추가
 
 규모 확장이라고도 하는 서버 추가는 스토리지 용량을 추가하고, 스토리지 성능을 개선하고, 스토리지 효율성을 더욱 높입니다. 하이퍼 수렴형 배포인 경우 서버를 추가하면 워크로드에 더 많은 컴퓨팅 리소스가 제공됩니다.
 
@@ -130,7 +130,7 @@ New-StorageTier -StoragePoolFriendlyName S2D* -MediaType HDD -PhysicalDiskRedund
 New-StorageTier -StoragePoolFriendlyName S2D* -MediaType HDD -PhysicalDiskRedundancy 2 -ResiliencySettingName Parity -FriendlyName Capacity
 ```
 
-정말 간단하죠. 이제 이 계층 템플릿을 참조하여 미러-가속 패리티 볼륨을 만들 준비가 되었습니다.
+간단하죠. 이제 이 계층 템플릿을 참조하여 미러-가속 패리티 볼륨을 만들 준비가 되었습니다.
 
 #### <a name="example"></a>예제
 
@@ -166,7 +166,7 @@ New-Volume -FriendlyName "Sir-Mix-A-Lot" -FileSystem CSVFS_ReFS -StoragePoolFrie
 
 3. [서버 추가](#adding-servers)에 설명된 대로 클러스터에 서버를 추가합니다. 새 서버를 클러스터에 추가하면 자동으로 자리 표시자 장애 도메인과 연결됩니다(자체 이름 사용).
 
-## <a name="adding-drives"></a>드라이브 추가
+## <a name="adding-drives"></a><a name="adding-drives"></a>드라이브 추가
 
 드라이브 추가(강화라고도 함)는 스토리지 용량을 추가하고 성능도 향상할 수 있습니다. 사용 가능한 슬롯이 있는 경우 서버를 추가하지 않고 각 서버에 드라이브를 추가하여 스토리지 용량을 확장할 수 있습니다. 캐시 드라이브 또는 용량 드라이브를 언제든지 독립적으로 추가할 수 있습니다.
 

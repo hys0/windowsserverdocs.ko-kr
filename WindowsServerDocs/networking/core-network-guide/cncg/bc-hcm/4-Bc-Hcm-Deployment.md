@@ -3,18 +3,17 @@ title: BranchCache 호스트 캐시 모드 배포
 description: 이 가이드에서는 Windows Server 2016 및 Windows 10을 실행 하는 컴퓨터에서 호스트 캐시 모드로 BranchCache를 배포 하는 방법 지침을 제공
 manager: brianlic
 ms.prod: windows-server
-ms.suite: na
 ms.technology: networking-bc
 ms.topic: article
 ms.assetid: c635fa48-d064-4b8b-9dce-9f26abfbcfa4
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: a03a4bc51429daea0d1a6cfaeb3da2f8805e711e
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 10aba87b82804234a91dbc011be75b45724a1e9d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80318488"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861746"
 ---
 # <a name="branchcache-hosted-cache-mode-deployment"></a>BranchCache 호스트 캐시 모드 배포
 

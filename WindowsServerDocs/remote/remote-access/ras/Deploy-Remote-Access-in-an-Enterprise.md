@@ -2,22 +2,18 @@
 title: 엔터프라이즈에 원격 액세스 배포
 description: 이 항목에서는 엔터프라이즈에 대 한 Windows Server 2016의 DirectAccess 시나리오를 소개 합니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ras
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4781df0a-158b-4562-b8f5-32b27615a4f8
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: aebdbd02ebe256872b52e794c755e0d590b175a5
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 6d0a9248865dca4afb3db9609b284048155f9eef
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80308472"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857436"
 ---
 # <a name="deploy-remote-access-in-an-enterprise"></a>엔터프라이즈에 원격 액세스 배포
 
@@ -41,7 +37,7 @@ ms.locfileid: "80308472"
 원격 액세스에는 Windows NLB(네트워크 부하 분산) 또는 외부 부하 분산 장치를 사용하여 부하가 분산된 클러스터에 여러 원격 액세스 서버를 배포하고, 원격 액세스 서버가 여러 장소에 배치되는 멀티 사이트 배포를 설정하며, OTP(1회용 암호)를 사용하여 2단계 클라이언트 인증을 통해 DirectAccess를 배포하는 등 다양한 엔터프라이즈 기능이 포함되어 있습니다.  
   
 ## <a name="in-this-scenario"></a>이 시나리오의 내용  
-각 엔터프라이즈 시나리오에 대해서는 계획 및 배포 지침이 포함된 문서에서 설명합니다. 참조 항목:  
+각 엔터프라이즈 시나리오에 대해서는 계획 및 배포 지침이 포함된 문서에서 설명합니다. 자세한 내용은 다음을 참조하세요.  
   
 -   [클러스터에 원격 액세스 배포](cluster/Deploy-Remote-Access-In-Cluster.md)  
   
@@ -67,8 +63,8 @@ ms.locfileid: "80308472"
   
 |역할/기능|이 시나리오를 지원하는 방법|  
 |---------|-----------------|  
-|원격 액세스 서버 역할|이 역할은 서버 관리자 콘솔을 사용하여 설치 및 제거됩니다. 이 역할에는 DirectAccess(이전의 Windows Server 2008 R2 기능)와 라우팅 및 원격 액세스 서비스(이전의 NPAS(네트워크 정책 및 액세스 서비스) 서버 역할의 역할 서비스)가 모두 포함되어 있습니다. 원격 액세스 역할은 다음의 두 가지 구성 요소로 구성됩니다.<br /><br />1. DirectAccess 및 RRAS (라우팅 및 원격 액세스 서비스) VPN-DirectAccess와 VPN은 원격 액세스 관리 콘솔에서 함께 관리 됩니다.<br />2. RRAS 라우팅-RRAS 라우팅 기능은 레거시 라우팅 및 원격 액세스 콘솔에서 관리 됩니다.<br /><br />원격 액세스 서버 역할은 다음과 같은 서버 기능에 종속됩니다.<br /><br />-인터넷 정보 서비스 (IIS)-이 기능은 네트워크 위치 서버와 기본 웹 프로브를 구성 하는 데 필요 합니다.<br />-그룹 정책 관리 콘솔 기능은 DirectAccess가 Active Directory에서 Gpo (그룹 정책 개체)를 만들고 관리 하는 데 필요 하며, 서버 역할에 필요한 기능으로 설치 되어 있어야 합니다.|  
-|원격 액세스 관리 도구 기능|이 기능은 다음과 같이 설치됩니다.<br /><br />-이 값은 원격 액세스 역할이 설치 되어 있고 원격 관리 콘솔 사용자 인터페이스를 지 원하는 때 기본적으로 원격 액세스 서버에 설치 됩니다.<br />-앱는 하지 원격 액세스 서버 역할을 실행 하는 서버에 필요에 따라 설치 수 있습니다. 이 경우 이 기능은 DirectAccess 및 VPN을 실행하는 원격 액세스 컴퓨터를 원격으로 관리하는 데 사용됩니다.<br /><br />원격 액세스 관리 도구 기능의 구성 요소는 다음과 같습니다.<br /><br />1. 원격 액세스 GUI 및 명령줄 도구<br />2. Windows PowerShell 용 원격 액세스 모듈<br /><br />이 기능은 다음 요소에 종속됩니다.<br /><br />1. 그룹 정책 관리 콘솔<br />2. RAS CMAK (연결 관리자 관리 키트)<br />3. Windows PowerShell 3.0<br />4. 그래픽 관리 도구 및 인프라|  
+|원격 액세스 서버 역할|이 역할은 서버 관리자 콘솔을 사용하여 설치 및 제거됩니다. 이 역할에는 DirectAccess(이전의 Windows Server 2008 R2 기능)와 라우팅 및 원격 액세스 서비스(이전의 NPAS(네트워크 정책 및 액세스 서비스) 서버 역할의 역할 서비스)가 모두 포함되어 있습니다. 원격 액세스 역할은 다음의 두 가지 구성 요소로 구성됩니다.<p>1. DirectAccess 및 RRAS (라우팅 및 원격 액세스 서비스) VPN-DirectAccess와 VPN은 원격 액세스 관리 콘솔에서 함께 관리 됩니다.<br />2. RRAS 라우팅-RRAS 라우팅 기능은 레거시 라우팅 및 원격 액세스 콘솔에서 관리 됩니다.<p>원격 액세스 서버 역할은 다음과 같은 서버 기능에 종속됩니다.<p>-인터넷 정보 서비스 (IIS)-이 기능은 네트워크 위치 서버와 기본 웹 프로브를 구성 하는 데 필요 합니다.<br />-그룹 정책 관리 콘솔 기능은 DirectAccess가 Active Directory에서 Gpo (그룹 정책 개체)를 만들고 관리 하는 데 필요 하며, 서버 역할에 필요한 기능으로 설치 되어 있어야 합니다.|  
+|원격 액세스 관리 도구 기능|이 기능은 다음과 같이 설치됩니다.<p>-이 값은 원격 액세스 역할이 설치 되어 있고 원격 관리 콘솔 사용자 인터페이스를 지 원하는 때 기본적으로 원격 액세스 서버에 설치 됩니다.<br />-앱는 하지 원격 액세스 서버 역할을 실행 하는 서버에 필요에 따라 설치 수 있습니다. 이 경우 이 기능은 DirectAccess 및 VPN을 실행하는 원격 액세스 컴퓨터를 원격으로 관리하는 데 사용됩니다.<p>원격 액세스 관리 도구 기능의 구성 요소는 다음과 같습니다.<p>1. 원격 액세스 GUI 및 명령줄 도구<br />2. Windows PowerShell 용 원격 액세스 모듈<p>이 기능은 다음 요소에 종속됩니다.<p>1. 그룹 정책 관리 콘솔<br />2. RAS CMAK (연결 관리자 관리 키트)<br />3. Windows PowerShell 3.0<br />4. 그래픽 관리 도구 및 인프라|  
 |Windows NLB|이 기능을 사용하면 여러 원격 액세스 서버에 부하를 분산할 수 있습니다.|  
   
 

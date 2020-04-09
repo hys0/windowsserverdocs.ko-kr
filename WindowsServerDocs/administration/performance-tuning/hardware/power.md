@@ -4,15 +4,15 @@ description: 서버 하드웨어 전원 고려 사항
 ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author: Qizha;TristanB
+ms.author: qizha;tristanb
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: a9d4653824d497ea0c42337260aa788bab354ba3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 865899e5f33bde97dff97efaff6010b95aafd3e6
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71355018"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80851986"
 ---
 # <a name="server-hardware-power-considerations"></a>서버 하드웨어 전원 고려 사항
 
@@ -67,7 +67,7 @@ Windows Server 2016는 기본적으로 USB 장치에 대 한 선택적 일시 �
 
 ![프로세서 용어](../media/perftune-guide-figure-1.png)
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 - [서버 하드웨어 성능 고려 사항](index.md)
 - [전원 및 성능 튜닝](power/power-performance-tuning.md)
 - [프로세서 전원 관리 튜닝](power/processor-power-management-tuning.md)

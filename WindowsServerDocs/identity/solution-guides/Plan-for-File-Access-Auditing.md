@@ -1,7 +1,6 @@
 ---
 ms.assetid: 3ea48a72-20a2-4da4-84e4-26b5728513ce
 title: 파일 액세스 감사 계획
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 25d6e1c3dd3ab0d10f04cef3e88a7671957b51db
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: ffe8843f9ace604bc0904ba2d1eaef78d2872b99
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407082"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861166"
 ---
 # <a name="plan-for-file-access-auditing"></a>파일 액세스 감사 계획
 
@@ -31,7 +30,7 @@ Windows Server 2012의 다음과 같은 보안 감사 기능을 동적 Access Co
   
 -   **개체 액세스 감사의 추가 정보**. 파일 액세스 감사는 Windows Server 2012의 새로운 기능은 아닙니다. 적절한 감사 정책이 적용되어 있는 경우 Windows 및 Windows Server 운영 체제에서는 사용자가 파일에 액세스할 때마다 감사 이벤트를 생성합니다. 기존 파일 액세스 이벤트(4656, 4663)에는 액세스한 파일의 특성에 대한 정보가 포함됩니다. 이벤트 로그 필터링 도구에서는 이 추가 정보를 사용하여 가장 관련성 높은 감사 이벤트를 식별할 수 있습니다. 자세한 내용은 [핸들 조작 감사](https://technet.microsoft.com//library/dd772626(WS.10).aspx) (영문) 및 [보안 계정 관리자 감사](https://go.microsoft.com/fwlink/?LinkId=241501)(영문)를 참조하세요.  
   
--   **사용자 로그온 이벤트의 자세한 정보**. 적절한 감사 정책이 적용되어 있는 경우 Windows 운영 체제에서는 사용자가 로컬로 또는 원격으로 컴퓨터에 로그인할 때마다 감사 이벤트를 생성합니다. Windows Server 2012 또는 Windows 8에서는 사용자의 보안 토큰과 연결 된 사용자 및 장치 클레임을 모니터링할 수도 있습니다. 이벤트 4626에는 이러한 사용자 클레임 및 장치 클레임에 대한 정보가 포함되며, 감사 로그 관리 도구에서는 이 정보를 활용하여 사용자 로그온 이벤트와 개체 액세스 이벤트를 상호 연결하여 파일 특성 및 사용자 특성을 기반으로 하는 이벤트 필터링을 사용하도록 설정할 수 있습니다. 사용자 로그온 감사에 대한 자세한 내용은 [로그온 감사](https://go.microsoft.com/fwlink/?LinkId=241502)(영문)를 참조하세요.  
+-   **사용자 로그온 이벤트의 자세한 정보**. 적절한 감사 정책이 적용되어 있는 경우 Windows 운영 체제에서는 사용자가 로컬로 또는 원격으로 컴퓨터에 로그인할 때마다 감사 이벤트를 생성합니다. Windows Server 2012 또는 Windows 8에서는 사용자의 보안 토큰과 연결 된 사용자 및 장치 클레임을 모니터링할 수도 있습니다. 이벤트 4626에는 이러한 사용자 클레임 및 디바이스 클레임에 대한 정보가 포함되며, 감사 로그 관리 도구에서는 이 정보를 활용하여 사용자 로그온 이벤트와 개체 액세스 이벤트를 상호 연결하여 파일 특성 및 사용자 특성을 기반으로 하는 이벤트 필터링을 사용하도록 설정할 수 있습니다. 사용자 로그온 감사에 대한 자세한 내용은 [로그온 감사](https://go.microsoft.com/fwlink/?LinkId=241502)(영문)를 참조하세요.  
   
 -   **새 유형의 보안 개체에 대한 변경 추적**. 다음 시나리오에서는 보안 개체에 대한 변경 추적이 중요할 수 있습니다.  
   

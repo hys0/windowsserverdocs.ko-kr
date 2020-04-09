@@ -1,24 +1,20 @@
 ---
 title: ftp put
 description: FTP-put에 대 한 Windows 명령 항목
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 95cc1e3f-523d-4374-98b8-16e6c276b2ca vhorne
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 03/30/2020
-ms.openlocfilehash: 019a81364dbedb443a3a23d5c5a6f8db1496d83d
-ms.sourcegitcommit: 479ad84a0d6c7c7b8308122b8bac8308cb36fe9b
+ms.openlocfilehash: ecd579a313fe1cad1b8a5b4a622aaaec2d6a6d63
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80391721"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80843136"
 ---
 # <a name="ftp-put"></a>ftp: put
 
@@ -29,7 +25,7 @@ ms.locfileid: "80391721"
 ```
 put <LocalFile> [<remoteFile>]
 ```
-### <a name="parameters"></a>매개 변수
+#### <a name="parameters"></a>매개 변수
 
 |    매개 변수     |                    설명                    |
 |------------------|---------------------------------------------------|
@@ -51,4 +47,4 @@ put <LocalFile> [<remoteFile>]
   ## <a name="additional-references"></a>추가 참조
 - [ftp: ascii](ftp-ascii.md)
 - [ftp: 이진](ftp-binary.md)
-- [명령줄 구문 키](command-line-syntax-key.md)
+- - [명령줄 구문 키](command-line-syntax-key.md)

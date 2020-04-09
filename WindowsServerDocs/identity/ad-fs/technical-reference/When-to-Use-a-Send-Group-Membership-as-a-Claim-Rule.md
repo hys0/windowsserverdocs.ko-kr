@@ -1,7 +1,6 @@
 ---
 ms.assetid: af16e847-47c2-461e-9df1-cc352a322043
 title: 그룹 구성원을 클레임으로 보내기 규칙을 사용할 경우
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,15 +8,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 82dd9cec2c75a796eb0def508082508a5d0dbf5f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 266f46ef30082541d49bf62d933c551f00fa08da
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71385426"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853796"
 ---
 # <a name="when-to-use-a-send-group-membership-as-a-claim-rule"></a>그룹 구성원을 클레임으로 보내기 규칙을 사용할 경우
-지정 된 Active Directory 보안 그룹의 구성원 \(인\) 사용자 에게만 새 나가는 클레임 값을 발급 하려는 경우 Active Directory Federation Services AD FS에서이 규칙을 사용할 수 있습니다. 이 규칙을 사용하는 경우 다음 표에 설명된 대로 직접 지정하고 규칙 논리와 일치하는 그룹에 대한 단일 클레임만 발급합니다.  
+지정 Active Directory 된 보안 그룹의 구성원 인 사용자 에게만 새 나가는 클레임 값을 발급 하려는 경우 Active Directory Federation Services \(AD FS\)에서이 규칙을 사용할 수 있습니다. 이 규칙을 사용하는 경우 다음 표에 설명된 대로 직접 지정하고 규칙 논리와 일치하는 그룹에 대한 단일 클레임만 발급합니다.  
   
 |규칙 옵션|규칙 논리|  
 |---------------|--------------|  
@@ -41,7 +40,7 @@ ms.locfileid: "71385426"
 ## <a name="outgoing-claim-value"></a>나가는 클레임 값  
 그룹 구성원을 클레임으로 보내기 규칙 템플릿을 사용하여 사용자가 지정한 그룹의 구성원인지에 따라 클레임을 발급할 수 있습니다.  
   
-즉,이 규칙 템플릿은 사용자에 게 관리자가 지정 하는 Active Directory 그룹과 일치 하는 그룹 \(보안\) ID SID가 있는 경우에만 클레임을 발급 합니다. Active Directory Domain Services \(ADDS\) 에 대해 인증 하는 모든 사용자는 자신이 속한 각 그룹에 대 한 들어오는 그룹 SID 클레임을 갖게 됩니다. 기본적으로 Active Directory 클레임 공급자 트러스트의 수용 변환 규칙은 이러한 그룹 SID 클레임을 통과합니다. 이러한 그룹 Sid를 클레임 발급 기준으로 사용 하는 것은 AD DS에서 사용자 그룹을 조회 하는 것 보다 훨씬 빠릅니다.  
+즉,이 규칙 템플릿은 사용자에 게 관리자가 지정 하는 Active Directory 그룹과 일치 하는 그룹 보안 ID \(SID\) 있는 경우에만 클레임을 발급 합니다. Active Directory Domain Services \(AD DS\)에 대해 인증 하는 모든 사용자는 자신이 속한 각 그룹에 대 한 들어오는 그룹 SID 클레임을 갖게 됩니다. 기본적으로 Active Directory 클레임 공급자 트러스트의 수용 변환 규칙은 이러한 그룹 SID 클레임을 통과합니다. 이러한 그룹 Sid를 클레임 발급 기준으로 사용 하는 것은 AD DS에서 사용자 그룹을 조회 하는 것 보다 훨씬 빠릅니다.  
   
 이 규칙을 사용하면 선택한 Active Directory 그룹에 따라 단일 클레임만 전송됩니다. 예를 들어 이 규칙 템플릿을 사용하여 사용자가 Domain Admins 보안 그룹의 구성원인 경우 값이 “Admins”인 그룹 클레임을 보내는 규칙을 만들 수 있습니다.  
   
@@ -49,7 +48,7 @@ ms.locfileid: "71385426"
 관리자는 그룹 SID가 Active Directory 또는 AD DS를 제외한 모든 클레임 공급자에게는 일반적이지 않은 클레임 공급자에서 수신될 때만 클레임 공급자 트러스트의 수용 변환 규칙에서 이 규칙 유형을 사용합니다.  
   
 ## <a name="how-to-create-this-rule"></a>이 규칙을 만드는 방법  
-클레임 규칙 언어를 사용 하거나 AD FS 관리 스냅인\-에서 LDAP 그룹 구성원을 클레임으로 보내기 규칙 템플릿을 사용 하 여이 규칙을 만듭니다. 이 규칙 템플릿은 다음과 같은 구성 옵션을 제공합니다.  
+클레임 규칙 언어를 사용 하거나의 AD FS 관리\-스냅인에서 클레임 규칙 템플릿으로 LDAP 그룹 멤버 자격 보내기를 사용 하 여이 규칙을 만듭니다. 이 규칙 템플릿은 다음과 같은 구성 옵션을 제공합니다.  
   
 -   클레임 규칙 이름 지정  
   
@@ -57,7 +56,7 @@ ms.locfileid: "71385426"
   
 -   나가는 클레임 유형 선택  
   
--   보내는 클레임 유형 필드에서 이름 \(id를 선택한 경우에만 사용할 수 있는 나가는 이름 id 형식을 선택 합니다.\)  
+-   나가는 클레임 유형 필드에서 이름 ID를 선택한 경우에만 사용할 수 있는 \(나가는 이름 ID 형식을 선택\)  
   
 -   나가는 클레임 값 선택  
   

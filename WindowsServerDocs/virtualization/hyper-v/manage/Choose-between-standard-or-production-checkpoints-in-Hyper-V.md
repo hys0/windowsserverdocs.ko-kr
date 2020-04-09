@@ -2,21 +2,19 @@
 title: Hyper-v에서 표준 또는 프로덕션 검사점 중에서 선택
 description: 표준 또는 프로덕션 검사점을 사용 하도록 가상 컴퓨터를 구성 하는 방법에 대 한 지침을 제공 합니다.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 92bb573b-03b7-470e-b72e-e35edf52b349
-author: KBDAzure
+author: kbdazure
 ms.author: kathydav
 ms.date: 10/04/2016
-ms.openlocfilehash: 29c7b8be5b1e9d392cead304ab35c3d5dd5ee86a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 80e26c76e1377c904901f9da10e5fea347e2d333
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71364213"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852896"
 ---
 # <a name="choose-between-standard-or-production-checkpoints-in-hyper-v"></a>Hyper-v에서 표준 또는 프로덕션 검사점 중에서 선택
 
@@ -46,7 +44,7 @@ Windows Server 2016 및 Windows 10 이상에서는 각 가상 컴퓨터에 대 �
 > [!NOTE]
 > **프로덕션 검사점** 만 Active Directory Domain Services 역할 (도메인 컨트롤러) 또는 Active Directory LDS(Lightweight Directory Services) 역할을 실행 하는 게스트에서 지원 됩니다.
 
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
   
 -   [프로덕션 검사점](../What-s-new-in-Hyper-V-on-Windows.md#production-checkpoints-new)  
   

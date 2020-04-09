@@ -8,12 +8,12 @@ ms.topic: get-started-article
 ms.assetid: 8dcb8cf9-0e08-4fdd-9d7e-ec577ce8d8a0
 author: kumudd
 ms.date: 10/10/2016
-ms.openlocfilehash: ed7d7ca4f41784f2ae12220eb2e30077e2467175
-ms.sourcegitcommit: 056d355516f199e8a505c32b9aa685d0cde89e44
+ms.openlocfilehash: 1a320a53ccda78ea19c8dc7b8e22c2bb2c1d236b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79518748"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854116"
 ---
 # <a name="storage-quality-of-service"></a>저장소 서비스 품질
 
@@ -31,10 +31,10 @@ Windows Server 2016의 저장소 QoS를 사용하여 다음을 수행할 수 있
 
 이 문서에서는 기업에서 새로운 저장소 QoS 기능을 활용하는 방법을 설명합니다. Windows Server, Windows Server 장애 조치(failover) 클러스터링, 스케일 아웃 파일 서버, Hyper-V 및 Windows PowerShell에 대한 이전 작업 지식이 있다고 가정합니다.
 
-## <a name="BKMK_Overview"></a>설명은  
+## <a name="overview"></a><a name="BKMK_Overview"></a>설명은  
 이 섹션에서는 저장소 QoS를 사용하기 위한 요구 사항, 저장소 QoS를 사용하는 소프트웨어 정의 솔루션의 개요 및 저장소 QoS 관련 용어 목록을 설명합니다.  
 
-### <a name="BKMK_Requirements"></a>저장소 QoS 요구 사항  
+### <a name="storage-qos-requirements"></a><a name="BKMK_Requirements"></a>저장소 QoS 요구 사항  
 저장소 QoS는 두 가지 배포 시나리오를 지원합니다.  
 
 -   **스케일 아웃 파일 서버를 사용하는 Hyper-V** 이 시나리오에는 다음 두 클러스터가 모두 필요합니다.  
@@ -55,7 +55,7 @@ Windows Server 2016의 저장소 QoS를 사용하여 다음을 수행할 수 있
 
 장애 조치(failover) 클러스터가 필요합니다. 모든 서버에서 동일한 버전의 Windows Server 2016을 실행해야 합니다.  
 
-### <a name="BKMK_SolutionOverview"></a>소프트웨어 정의 저장소 솔루션에서 저장소 QoS 사용  
+### <a name="using-storage-qos-in-a-software-defined-storage-solution"></a><a name="BKMK_SolutionOverview"></a>소프트웨어 정의 저장소 솔루션에서 저장소 QoS 사용  
 스토리지 서비스 품질은 스케일 아웃 파일 서버 및 Hyper-V에서 제공되는 Microsoft 소프트웨어 정의 스토리지 솔루션에 기본 제공됩니다. 스케일 아웃 파일 서버는 SMB3 프로토콜을 사용하여 Hyper-V 서버에 파일 공유를 노출합니다. 새로운 정책 관리자가 파일 서버 클러스터에 추가되어 중앙 스토리지 성능 모니터링을 제공합니다.  
 
 ![스케일 아웃 파일 서버와 저장소 QoS](media/overview-Clustering_SOFSStorageQoS.png)  
@@ -66,11 +66,11 @@ Hyper-V 서버에서 가상 컴퓨터를 시작하면 정책 관리자가 이를
 
 저장소 QoS 정책 또는 가상 컴퓨터의 성능 요구 사항이 변경된 경우 정책 관리자는 동작을 조정하도록 Hyper-V 서버에 알립니다. 이 피드백 루프는 모든 가상 컴퓨터 VHD가 정의된 저장소 QoS 정책에 따라 일관성 있게 수행되도록 합니다.  
 
-### <a name="BKMK_Glossary"></a>들은  
+### <a name="glossary"></a><a name="BKMK_Glossary"></a>들은  
 
 |용어|설명|  
 |--------|---------------|  
-|정규화된 IOPS|모든 스토리지 사용은 "정규화된 IOPS"로 측정됩니다.  이는 초당 스토리지 입력/출력 작업 수입니다.  8KB 이하인 IO는 하나의 정규화된 IO로 간주됩니다.  8KB보다 큰 모든 IO는 여러 개의 정규화된 IO로 처리됩니다. 예를 들어 256KB 요청은 32개의 정규화된 IOPS로 처리됩니다.<br /><br />Windows Server 2016에는 IO를 정규화하는 데 사용되는 크기를 지정할 수 있는 기능이 포함되어 있습니다.  스토리지 클러스터에서 정규화된 크기를 지정하여 전체 정규화 계산 클러스터에 적용할 수 있습니다.  기본값은 8KB입니다.|  
+|정규화된 IOPS|모든 스토리지 사용은 "정규화된 IOPS"로 측정됩니다.  이는 초당 스토리지 입력/출력 작업 수입니다.  8KB 이하인 IO는 하나의 정규화된 IO로 간주됩니다.  8KB보다 큰 모든 IO는 여러 개의 정규화된 IO로 처리됩니다. 예를 들어 256KB 요청은 32개의 정규화된 IOPS로 처리됩니다.<p>Windows Server 2016에는 IO를 정규화하는 데 사용되는 크기를 지정할 수 있는 기능이 포함되어 있습니다.  스토리지 클러스터에서 정규화된 크기를 지정하여 전체 정규화 계산 클러스터에 적용할 수 있습니다.  기본값은 8KB입니다.|  
 |흐름|Hyper-V Server에서 연 각 파일 핸들부터 VHD 또는 VHDX 파일까지가 "흐름"으로 간주됩니다. 가상 컴퓨터에 두 개의 가상 하드 디스크가 연결된 경우 파일당 파일 서버 클러스터로 하나의 흐름이 생성됩니다. VHDX가 여러 가상 컴퓨터와 공유하는 경우 가상 컴퓨터당 하나의 흐름이 생성됩니다.|  
 |InitiatorName|각 흐름에 대해 스케일 아웃 파일 서버에 보고되는 가상 컴퓨터의 이름입니다.|  
 |InitiatorID|가상 컴퓨터 ID와 일치하는 식별자입니다.  이는 가상 컴퓨터의 InitiatorName이 동일한 경우에도 항상 개별 흐름 가상 컴퓨터를 고유하게 식별하는 데 사용될 수 있습니다.|  
@@ -81,10 +81,10 @@ Hyper-V 서버에서 가상 컴퓨터를 시작하면 정책 관리자가 이를
 |집계 |지정된 MinimumIOPS 및 MaximumIOPS와 대역폭이 정책에 할당된 모든 흐름 간에 공유되는 정책 유형입니다. 해당 스토리지 시스템에 할당된 VHD의 모든 정책에는 공유할 수 있는 단일 I/O 대역폭 할당이 있습니다.|  
 |Dedicated|지정된 Minimum 및 MaximumIOPs와 대역폭이 개별 VHD/VHDx에 대해 관리되는 정책 유형입니다.|  
 
-## <a name="BKMK_SetUpQoS"></a>저장소 QoS를 설정 하 고 기본 성능을 모니터링 하는 방법  
+## <a name="how-to-set-up-storage-qos-and-monitor-basic-performance"></a><a name="BKMK_SetUpQoS"></a>저장소 QoS를 설정 하 고 기본 성능을 모니터링 하는 방법  
 이 섹션에서는 새 스토리지 QoS 기능을 사용하도록 설정하는 방법 및 사용자 지정 정책을 적용하지 않고 스토리지 성능을 모니터링하는 방법을 설명합니다.  
 
-### <a name="BKMK_SetupStorageQoSonStorageCluster"></a>저장소 클러스터에서 저장소 QoS 설정  
+### <a name="set-up-storage-qos-on-a-storage-cluster"></a><a name="BKMK_SetupStorageQoSonStorageCluster"></a>저장소 클러스터에서 저장소 QoS 설정  
 이 섹션에서는 신규 또는 기존 장애 조치(failover) 클러스터와 Windows Server 2016를 실행하는 스케일 아웃 파일 서버에서 저장소 QoS를 사용하도록 설정하는 방법을 설명합니다.  
 
 #### <a name="set-up-storage-qos-on-a-new-installation"></a>새로운 설치에 저장소 QoS 설정  
@@ -107,7 +107,7 @@ Name                   State      OwnerGroup        ResourceType
 Storage Qos Resource   Online     Cluster Group     Storage QoS Policy Manager  
 ```  
 
-### <a name="BKMK_SetupStorageQoSonComputeCluster"></a>계산 클러스터에서 저장소 QoS 설정  
+### <a name="set-up-storage-qos-on-a-compute-cluster"></a><a name="BKMK_SetupStorageQoSonComputeCluster"></a>계산 클러스터에서 저장소 QoS 설정  
 Windows Server 2016의 Hyper-V 역할은 저장소 QoS에 대한 지원을 기본 제공하며 기본적으로 사용하도록 설정됩니다.  
 
 #### <a name="install-remote-administration-tools-to-manage-storage-qos-policies-from-remote-computers"></a>원격 관리 도구를 설치하여 원격 컴퓨터에서 저장소 QoS 정책 관리  
@@ -289,7 +289,7 @@ MaximumIops    : 0
 MinimumIops    : 781  
 ```  
 
-## <a name="BKMK_CreateQoSPolicies"></a>저장소 QoS 정책을 만들고 모니터링 하는 방법  
+## <a name="how-to-create-and-monitor-storage-qos-policies"></a><a name="BKMK_CreateQoSPolicies"></a>저장소 QoS 정책을 만들고 모니터링 하는 방법  
 이 섹션에는 스토리지 QoS 정책을 만들고, 이러한 정책을 가상 컴퓨터에 적용하고, 정책이 적용된 후 스토리지 클러스터를 모니터링하는 방법을 설명합니다.  
 
 ### <a name="create-storage-qos-policies"></a>저장소 QoS 정책 만들기  
@@ -531,10 +531,10 @@ WinOltp1      7e2f3e73-1ae4-4710-8219-0769a4aba072        1500         250      
 WinOltp1      7e2f3e73-1ae4-4710-8219-0769a4aba072        6000        1000            4507  
 ```  
 
-## <a name="BKMK_KnownIssues"></a>일반적인 문제를 식별 하 고 해결 하는 방법  
+## <a name="how-to-identify-and-address-common-issues"></a><a name="BKMK_KnownIssues"></a>일반적인 문제를 식별 하 고 해결 하는 방법  
 이 섹션에서는 잘못된 저장소 QoS 정책을 사용하는 가상 컴퓨터를 찾는 방법, 일치하는 정책을 다시 만드는 방법, 가상 컴퓨터에서 정책을 제거하는 방법 및 저장소 QoS 정책 요구 사항을 충족하지 않는 가상 컴퓨터를 식별하는 방법을 설명합니다.  
 
-### <a name="BKMK_FindingVMsWithInvalidPolicies"></a>잘못 된 정책이 있는 가상 컴퓨터 식별  
+### <a name="identify-virtual-machines-with-invalid-policies"></a><a name="BKMK_FindingVMsWithInvalidPolicies"></a>잘못 된 정책이 있는 가상 컴퓨터 식별  
 
 가상 컴퓨터에서 파일 서버를 제거하기 전에 파일 서버에서 정책이 삭제된 경우 가상 컴퓨터는 적용된 정책이 없는 것처럼 계속 실행됩니다.  
 
@@ -578,7 +578,7 @@ WinOltp1      UnknownPolicyId           0           0            4926 UnknownPol
 WinOltp1      UnknownPolicyId           0           0               0 UnknownPolicyId BOO...  
 ```  
 
-#### <a name="BKMK_RecreateMatchingPolicy"></a>일치 하는 저장소 QoS 정책 다시 만들기  
+#### <a name="recreate-a-matching-storage-qos-policy"></a><a name="BKMK_RecreateMatchingPolicy"></a>일치 하는 저장소 QoS 정책 다시 만들기  
 실수로 정책을 제거한 경우 이전 PolicyId를 사용하여 새 정책을 만들 수 있습니다.  먼저 필요한 PolicyId를 가져옵니다.  
 
 ```PowerShell
@@ -629,7 +629,7 @@ TR20-VMM          Ok          33         666              10     Ok BOOT.VHDX
 WinOltp1          Ok          25         500               0     Ok 9914.0.AMD64FRE.WINMA...  
 ```  
 
-#### <a name="BKMK_RemovePolicyFromVM"></a>저장소 QoS 정책 제거  
+#### <a name="remove-storage-qos-policies"></a><a name="BKMK_RemovePolicyFromVM"></a>저장소 QoS 정책 제거  
 
 정책을 의도적으로 제거하거나 필요 없는 정책을 사용하여 VM을 가져온 경우 제거할 수 있습니다.  
 
@@ -667,7 +667,7 @@ WinOltp1                0           0            1811     Ok IOMETER.VHDX
 WinOltp1                0           0               0     Ok BOOT.VHDX  
 ```  
 
-### <a name="BKMK_VMsThatDoNotMeetStorageQoSPoilicies"></a>저장소 QoS 정책을 충족 하지 않는 가상 머신 찾기  
+### <a name="find-virtual-machines-that-are-not-meeting-storage-qos-policies"></a><a name="BKMK_VMsThatDoNotMeetStorageQoSPoilicies"></a>저장소 QoS 정책을 충족 하지 않는 가상 머신 찾기  
 **InsufficientThroughput** 상태는 다음 흐름에 할당됩니다.  
 
 -   정책에 설정된 최소 IOPS가 정의된 흐름  
@@ -729,7 +729,7 @@ MaximumIops        : 20000
 MinimumIops        : 15000  
 ```  
 
-## <a name="BKMK_Health"></a>저장소 QoS를 사용 하 여 상태 모니터링  
+## <a name="monitor-health-using-storage-qos"></a><a name="BKMK_Health"></a>저장소 QoS를 사용 하 여 상태 모니터링  
 새로운 상태 서비스는 모든 노드에서 실행 가능한 이벤트를 확인할 단일 장소를 제공하여 저장소 클러스터의 모니터링을 간소화합니다. 이 섹션에서는 `debug-storagesubsystem` cmdlet을 사용하여 저장소 클러스터의 상태를 모니터링하는 방법을 설명합니다.  
 
 ### <a name="view-storage-status-with-debug-storagesubsystem"></a>Debug-StorageSubSystem을 사용하여 저장소 상태 보기  
@@ -823,7 +823,7 @@ System Center Virtual Machine Manager를 사용하여 여러 스토리지 클러
 
 정책의 최대값에 도달한 흐름이 있을 때 더 높거나 낮게 만들기 위해 정책을 변경한 경우 PowerShell cmdlet을 사용하여 흐름의 대기 시간/IOPS/대역폭을 즉시 확인할 수 있습니다. 흐름에 대한 정책 변경의 전체 영향이 표시되는 데 최대 5분이 걸립니다.  몇 초 내에 새 제한이 적용되지만 **Get-StorgeQoSFlow** PowerShell cmdlet에서는 5분 길이의 슬라이딩 윈도우를 통해 각 카운터의 평균을 사용합니다.  그렇지 않고 현재 값이 표시되며 PowerShell cmdlet을 여러 번 연속으로 실행한 경우 완전히 다른 값이 표시될 수 있습니다. IOPS 및 대기 시간 값은 초 단위로 크게 변동할 수 있기 때문입니다.
 
-### <a name="BKMK_Updates"></a>Windows Server 2016에 추가 된 새로운 기능
+### <a name="what-new-functionality-was-added-in-windows-server-2016"></a><a name="BKMK_Updates"></a>Windows Server 2016에 추가 된 새로운 기능
 
 Windows Server 2016에서 저장소 QoS 정책 유형 이름이 변경되었습니다.  **다중 인스턴스** 정책 유형은 **전용**으로, **단일 인스턴스** 정책 유형은 **집계**로 바뀌었습니다. 전용 정책의 관리 동작도 수정되었습니다. 동일한 **전용** 정책이 적용된 동일한 가상 컴퓨터 내의 VHD/VHDX 파일이 I/O 할당을 공유하지 않습니다.  
 

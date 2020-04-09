@@ -1,7 +1,6 @@
 ---
 ms.assetid: e831f781-3c45-4d44-b411-160d121d1324
 title: 클레임 변환 규칙 언어
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 200d592bc68562856bbdee623e70d73d41457c15
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f391c3f8ef2bb5b12f0dd15db55df4f861c05f9b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71357585"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861276"
 ---
 # <a name="claims-transformation-rules-language"></a>클레임 변환 규칙 언어
 
@@ -24,7 +23,7 @@ ms.locfileid: "71357585"
   
 포리스트 간 트러스트의 변환 정책에 대 한 Windows PowerShell cmdlet에는 일반적인 시나리오에 필요한 간단한 정책을 설정 하는 옵션이 있습니다. 이러한 cmdlet은 사용자 입력을 클레임 변환 규칙 언어의 정책 및 규칙으로 변환한 다음 지정 된 형식으로 Active Directory에 저장 합니다. 클레임 변환에 대 한 cmdlet에 대 한 자세한 내용은 [AD DS cmdlet For Dynamic Access Control](https://go.microsoft.com/fwlink/?LinkId=243150)을 참조 하세요.  
   
-Active Directory 포리스트에 있는 포리스트 간 트러스트에 적용 되는 요구 사항 및 클레임 구성에 따라 클레임 변환 정책은 Windows PowerShell cmdlet이 활성화 된 정책 보다 더 복잡 해야 할 수 있습니다. 디렉터리나. 이러한 정책을 효과적으로 작성 하려면 클레임 변환 규칙 언어 구문 및 의미 체계를 이해 하는 것이 중요 합니다. Active Directory의이 클레임 변환 규칙 언어 ("언어")는 비슷한 목적을 위해 [Active Directory Federation Services](https://go.microsoft.com/fwlink/?LinkId=243982) 에서 사용 하는 언어의 하위 집합이 며 구문과 의미 체계가 매우 유사 합니다. 그러나 허용 되는 작업이 적고 언어의 Active Directory 버전에 추가 구문 제한이 적용 됩니다.  
+Active Directory 포리스트에 있는 포리스트 간 트러스트에 대 한 요구 사항 및 요구 사항에 따라 클레임 변환 정책은 Active Directory에 대해 Windows PowerShell cmdlet이 지 원하는 정책 보다 복잡 해야 할 수 있습니다. 이러한 정책을 효과적으로 작성 하려면 클레임 변환 규칙 언어 구문 및 의미 체계를 이해 하는 것이 중요 합니다. Active Directory의이 클레임 변환 규칙 언어 ("언어")는 비슷한 목적을 위해 [Active Directory Federation Services](https://go.microsoft.com/fwlink/?LinkId=243982) 에서 사용 하는 언어의 하위 집합이 며 구문과 의미 체계가 매우 유사 합니다. 그러나 허용 되는 작업이 적고 언어의 Active Directory 버전에 추가 구문 제한이 적용 됩니다.  
   
 이 항목에서는 Active Directory에서 클레임 변환 규칙 언어의 구문 및 의미 체계와 정책을 제작할 때 수행할 사항을 간략하게 설명 합니다. 이 클래스는 사용자가 시작 하는 데 사용할 수 있는 몇 가지 예제 규칙 집합을 제공 하 고, 잘못 된 구문과 생성 되는 메시지의 예를 제공 하 여 규칙을 작성할 때 오류 메시지를 쉽게 해독할 수 있도록 합니다.  
   
@@ -225,7 +224,7 @@ Active Directory에는 포리스트를 입력 하는 클레임의 잘못 된 구
   
 이 섹션에서는 잘못 된 구문과 파서에서 생성 되는 해당 구문 오류를 사용 하 여 작성 된 규칙의 몇 가지 예를 보여 줍니다.  
   
-1. 예제:  
+1. 예:  
   
    ```  
    c1;[]=>Issue(claim=c1);  
@@ -237,7 +236,7 @@ Active Directory에는 포리스트를 입력 하는 클레임의 잘못 된 구
    *줄 번호: 1, 열 번호: 2, 오류 토큰:;. 줄: ' c1; [] = > Issue (클레임 = c1); '.*  
    *파서 오류: ' POLICY0030: 구문 오류가 발생 했습니다. 예기치 않은 '; ' 다음 중 하나가 필요 합니다. ': '. '*  
   
-2. 예제:  
+2. 예:  
   
    ```  
    c1:[]=>Issue(claim=c2);  
@@ -247,7 +246,7 @@ Active Directory에는 포리스트를 입력 하는 클레임의 잘못 된 구
    **오류 메시지**:   
    *POLICY0011: 클레임 규칙의 조건이 CopyIssuanceStatement에 지정 된 조건 태그와 일치 하지 않습니다. ' c2 '.*  
   
-3. 예제:  
+3. 예:  
   
    ```  
    c1:[type=="x1", value=="1", valuetype=="bool"]=>Issue(claim=c1)  
@@ -259,7 +258,7 @@ Active Directory에는 포리스트를 입력 하는 클레임의 잘못 된 구
    줄 번호: 1, 열 번호: 39, 오류 토큰: "bool". 줄: ' c1: [type = = "x1", 값 = = "1", valuetype = = "bool"] = > Issue (클레임 = c1); '.   
    *파서 오류: ' POLICY0030: 구문 오류, 예기치 않은 ' STRING ', ' INT64_TYPE ' ' UINT64_TYPE ' ' STRING_TYPE ' ' BOOLEAN_TYPE ' ' 식별자 ' 중 하나가 필요 합니다.*  
   
-4. 예제:  
+4. 예:  
   
    ```  
    c1:[type=="x1", value==1, valuetype=="boolean"]=>Issue(claim=c1);  
@@ -270,7 +269,7 @@ Active Directory에는 포리스트를 입력 하는 클레임의 잘못 된 구
    *POLICY0002: 정책 데이터를 구문 분석할 수 없습니다.*  
    *줄 번호: 1, 열 번호: 23, 오류 토큰: 1. 줄: ' c1: [type = = "x1", 값 = = 1, valuetype = = "bool"] = > Issue (클레임 = c1); '.* <em>파서 오류: ' POLICY0029: 예기치 않은 입력입니다.</em>  
   
-5. 예제:  
+5. 예:  
   
    ```  
    c1:[type == "x1", value == "1", valuetype == "boolean"] =>   
@@ -285,7 +284,7 @@ Active Directory에는 포리스트를 입력 하는 클레임의 잘못 된 구
    *valuetype = = "boolean"] = > Issue (type = c1. type, value = "0", valuetype = = "boolean"); '.*  
    *파서 오류: ' POLICY0030: 구문 오류가 발생 했습니다. 예기치 않은 ' = = ' 다음 중 하나가 필요 합니다. ' = '*  
   
-6. 예제:  
+6. 예:  
   
    ```  
    c1:[type=="x1", value=="boolean", valuetype=="string"] =>   
@@ -295,10 +294,10 @@ Active Directory에는 포리스트를 입력 하는 클레임의 잘못 된 구
   
    이 예는 구문상 및 의미 체계가 올바릅니다. 그러나 문자열 값으로 "boolean"을 사용 하면 혼동을 발생 시킬 수 있으므로이를 피해 야 합니다. 앞에서 설명한 것 처럼 가능한 경우에는 언어 터미널을 클레임 값으로 사용 하지 않아야 합니다.  
   
-## <a name="BKMK_LT"></a>언어 터미널  
+## <a name="language-terminals"></a><a name="BKMK_LT"></a>언어 터미널  
 다음 표에서는 클레임 변환 규칙 언어에서 사용 되는 터미널 문자열 및 관련 언어 터미널의 전체 집합을 보여 줍니다. 이러한 정의는 대/소문자를 구분 하지 않는 UTF-16 문자열을 사용 합니다.  
   
-|문자열|터미널과|  
+|String|터미널|  
 |----------|------------|  
 |"= >"|의미|  
 |";"|;|  
@@ -316,7 +315,7 @@ Active Directory에는 포리스트를 입력 하는 클레임의 잘못 된 구
 |"="|할당|  
 |"& &"|AND|  
 |문제|문제|  
-|입력할|TYPE|  
+|입력할|유형|  
 |기본값|값|  
 |system.valuetype|VALUE_TYPE|  
 |요청할|요청할|  
@@ -324,7 +323,7 @@ Active Directory에는 포리스트를 입력 하는 클레임의 잘못 된 구
 |"\\" [^\\"\n] *\\" "|문자열|  
 |작아|UINT64_TYPE|  
 |푸시하고|INT64_TYPE|  
-|문자열|STRING_TYPE|  
+|"string"|STRING_TYPE|  
 |부울|BOOLEAN_TYPE|  
   
 ## <a name="language-syntax"></a>언어 구문  

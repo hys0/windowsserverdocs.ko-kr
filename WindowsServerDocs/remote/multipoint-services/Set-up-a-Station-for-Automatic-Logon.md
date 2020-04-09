@@ -1,24 +1,20 @@
 ---
 title: 스테이션에서 자동 로그온 설정
 description: MultiPoint 서비스 스테이션의 자동 로그온을 구성 하는 방법 알아보기
-ms.custom: na
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7a326085-7438-41de-9874-59aca393fa4a
 author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: d1b082cb9115951676685ec71e0b0ba54f698ec7
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: cd6de249e8bca7bebb03ec3c0947f8cdf7b395ee
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71389382"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855636"
 ---
 # <a name="set-up-a-station-for-automatic-logon"></a>스테이션에서 자동 로그온 설정
 자동 로그온 하면 MultiPoint 서비스를 실행 하는 컴퓨터를 시작 하는 경우에 자동으로 로그온 워크스테이션 각 하 고 바탕 화면을 표시 합니다. 관리자는 개별 스테이션이나 모든 스테이션에 대해 기능을 설정할 수 있습니다.  
@@ -35,5 +31,5 @@ ms.locfileid: "71389382"
   
 6.  **확인**을 클릭합니다. 페이지가 닫힙니다. 계정 이름에 표시 되는 **자동 로그온** 열입니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [사용자 스테이션 관리](Manage-User-Stations.md)

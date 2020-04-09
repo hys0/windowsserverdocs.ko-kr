@@ -1,24 +1,20 @@
 ---
 title: 소프트웨어 제한 정책에 대한 허용-거부 목록 및 응용 프로그램 인벤토리 확인
 description: Windows Server 보안
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-software-restriction-policies
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0abb73b6-b5d8-4505-8ab1-2f29e4bf0411
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: 4ddea6daeb2150bd9fd3131a8457a6a4b408cfc3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 7609ebb0fdcb6d429cd40d99399eaaedb732df08
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71357663"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855096"
 ---
 # <a name="determine-allow-deny-list-and-application-inventory-for-software-restriction-policies"></a>소프트웨어 제한 정책에 대한 허용-거부 목록 및 응용 프로그램 인벤토리 확인
 
@@ -27,7 +23,7 @@ ms.locfileid: "71357663"
 IT 전문가를 위한이 항목에서는 Windows Server 2008 및 Windows Vista부터 응용 프로그램에 대 한 허용 및 거부 목록을 SRP (소프트웨어 제한 정책)로 관리 하는 방법에 대 한 지침을 제공 합니다.
 
 ## <a name="introduction"></a>소개
-SRP(소프트웨어 제한 정책)는 도메인의 컴퓨터에서 실행 중인 소프트웨어 프로그램을 식별하고, 실행할 해당 프로그램의 기능을 제어하는 그룹 정책 기반 기능입니다. 소프트웨어 제한 정책을 사용하면 명확하게 식별된 응용 프로그램만 실행할 수 있도록 고도로 제한된 컴퓨터 구성을 만들 수 있습니다. 이러한 기능은 Microsoft Active Directory Domain Services 및 그룹 정책와 통합 되어 있지만 독립 실행형 컴퓨터 에서도 구성할 수 있습니다. SRP에 대 한 시작 지점은 [소프트웨어 제한 정책](software-restriction-policies.md)을 참조 하세요.
+SRP(소프트웨어 제한 정책)는 도메인의 컴퓨터에서 실행 중인 소프트웨어 프로그램을 식별하고, 실행할 해당 프로그램의 기능을 제어하는 그룹 정책 기반 기능입니다. 소프트웨어 제한 정책을 사용하면 명확하게 식별된 애플리케이션만 실행할 수 있도록 고도로 제한된 컴퓨터 구성을 만들 수 있습니다. 이러한 기능은 Microsoft Active Directory Domain Services 및 그룹 정책와 통합 되어 있지만 독립 실행형 컴퓨터 에서도 구성할 수 있습니다. SRP에 대 한 시작 지점은 [소프트웨어 제한 정책](software-restriction-policies.md)을 참조 하세요.
 
 Windows Server 2008 R2 및 Windows 7 부터는 응용 프로그램 제어 전략의 일부에 대 한 SRP를 사용 하거나 사용 하지 않고 Windows AppLocker를 사용할 수 있습니다.
 
@@ -38,7 +34,7 @@ SRP를 사용 하 여 특정 작업을 수행 하는 방법에 대 한 자세한
 -   [소프트웨어 제한 정책을 사용 하 여 전자 메일 바이러스 로부터 컴퓨터를 보호 합니다.](use-software-restriction-policies-to-help-protect-your-computer-against-an-email-virus.md)
 
 ### <a name="what-default-rule-to-choose-allow-or-deny"></a>선택할 기본 규칙: 허용 또는 거부
-소프트웨어 제한 정책은 기본 규칙을 기반으로 하는 두 가지 모드 중 하나로 배포할 수 있습니다. 허용 목록 또는 거부 목록입니다. 사용자 환경에서 실행할 수 있는 모든 응용 프로그램을 식별 하는 정책을 만들 수 있습니다. 정책 내의 기본 규칙은 제한 되며 명시적으로 실행을 허용 하지 않는 모든 응용 프로그램을 차단 합니다. 또는 실행할 수 없는 모든 응용 프로그램을 식별 하는 정책을 만들 수 있습니다. 기본 규칙은 무제한 이며 명시적으로 나열 된 응용 프로그램만 제한 합니다.
+소프트웨어 제한 정책은 기본 규칙의 기본 인 허용 목록 또는 거부 목록 중 하나로 배포할 수 있습니다. 사용자 환경에서 실행할 수 있는 모든 응용 프로그램을 식별 하는 정책을 만들 수 있습니다. 정책 내의 기본 규칙은 제한 되며 명시적으로 실행을 허용 하지 않는 모든 응용 프로그램을 차단 합니다. 또는 실행할 수 없는 모든 응용 프로그램을 식별 하는 정책을 만들 수 있습니다. 기본 규칙은 무제한 이며 명시적으로 나열 된 응용 프로그램만 제한 합니다.
 
 > [!IMPORTANT]
 > 거부 목록 모드는 응용 프로그램 제어와 관련 하 여 조직에 대 한 높은 유지 관리 전략 일 수 있습니다. 모든 맬웨어 및 기타 문제가 있는 응용 프로그램을 차단 하는 진화 하는 목록을 만들고 유지 관리 하는 데는 시간이 많이 걸리고 실수에 취약 합니다.
@@ -52,9 +48,9 @@ SRP를 사용 하 여 특정 작업을 수행 하는 방법에 대 한 자세한
 
 2.  고급 로깅 기능을 사용 하도록 설정 하 고 로그 파일을 쓸 경로를 설정 하려면 다음 레지스트리 값을 만듭니다.
 
-    **"HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Safer\ CodeIdentifiers"**
+    **"HKEY_LOCAL_MACHINE \SOFTWARE\Policies\Microsoft\Windows\Safer\ CodeIdentifiers"**
 
-    문자열 값: *NameLogFile의 경로 이름 로그 파일*
+    문자열 값: *namelogfile의 경로 NameLogFile*
 
     SRP는 실행 될 때 모든 응용 프로그램을 평가 하므로 응용 프로그램이 실행 될 때마다 로그 파일 *Namelogfile* 에 항목이 기록 됩니다.
 

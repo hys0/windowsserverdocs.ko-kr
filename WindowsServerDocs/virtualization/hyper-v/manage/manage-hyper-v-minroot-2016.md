@@ -1,19 +1,16 @@
 ---
 title: Minroot
 description: 호스트 CPU 리소스 컨트롤 구성
-keywords: windows 10, Hyper-V
 author: allenma
 ms.date: 12/15/2017
 ms.topic: article
-ms.prod: windows-10-hyperv
-ms.service: windows-10-hyperv
-ms.assetid: ''
-ms.openlocfilehash: 92de899a39aed05e2f598fcb3aae3fbae3f1cb67
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.prod: windows-server
+ms.openlocfilehash: de621b3bfdc9792e61e6d21d9f3774da76c55df6
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70872042"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860786"
 ---
 # <a name="hyper-v-host-cpu-resource-management"></a>Hyper-v 호스트 CPU 리소스 관리
 
@@ -39,7 +36,7 @@ Hyper-v 호스트 CPU 리소스에 대 한 컨트롤을 설정 하기 전에 Hyp
 
 ## <a name="the-minimum-root-or-minroot-configuration"></a>최소 루트 또는 "Minroot" 구성
 
-Hyper-v의 초기 버전에는 파티션당 아키텍처 최대 제한인 64 VPs가 있습니다.  이는 루트 및 게스트 파티션에 적용 됩니다.  논리 프로세서가 64 개를 초과 하는 시스템은 고성능 서버에 표시 되기 때문에 Hyper-v는 최대 320 LPs를 사용 하는 호스트를 지 원하는 한 지점에서 이러한 대규모 시스템을 지원 하기 위해 호스트 규모 제한을 발전 했습니다.  그러나이 시간에 64 VP의 파티션 제한에 도달 하면 여러 가지 과제가 발생 하 고 파티션당 64 VPs 이상으로 지원 되는 복잡성이 도입 되었습니다.  이를 해결 하기 위해 Hyper-v는 기본 컴퓨터에 더 많은 논리 프로세서를 사용할 수 있는 경우에도 루트 파티션에 지정 된 VPs 수를 64로 제한 합니다.  하이퍼바이저는 게스트 VPs을 실행 하는 데 사용할 수 있는 모든 LPs를 계속 활용 하지만 64에서 루트 파티션을 인위적으로 사용 합니다.  이 구성을 "최소 루트" 또는 "minroot" 구성 이라고 합니다.  성능 테스트를 통해 64 LPs를 초과 하는 대규모 시스템 에서도, 많은 수의 게스트 Vm 및 게스트 64 VPs에 충분 한 지원을 제공 하기 위해 루트에 64 root VPs 이상 필요 하지 않은 것으로 확인 되었습니다. , 게스트 Vm의 수와 크기, 실행 중인 특정 워크 로드 등을 기준으로 합니다.
+Hyper-v의 초기 버전에는 파티션당 아키텍처 최대 제한인 64 VPs가 있습니다.  이는 루트 및 게스트 파티션에 적용 됩니다.  논리 프로세서가 64 개를 초과 하는 시스템은 고성능 서버에 표시 되기 때문에 Hyper-v는 최대 320 LPs를 사용 하는 호스트를 지 원하는 한 지점에서 이러한 대규모 시스템을 지원 하기 위해 호스트 규모 제한을 발전 했습니다.  그러나이 시간에 64 VP의 파티션 제한에 도달 하면 여러 가지 과제가 발생 하 고 파티션당 64 VPs 이상으로 지원 되는 복잡성이 도입 되었습니다.  이를 해결 하기 위해 Hyper-v는 기본 컴퓨터에 더 많은 논리 프로세서를 사용할 수 있는 경우에도 루트 파티션에 지정 된 VPs 수를 64로 제한 합니다.  하이퍼바이저는 게스트 VPs을 실행 하는 데 사용할 수 있는 모든 LPs를 계속 활용 하지만 64에서 루트 파티션을 인위적으로 사용 합니다.  이 구성을 "최소 루트" 또는 "minroot" 구성 이라고 합니다.  성능 테스트를 통해 64 LPs를 초과 하는 대규모 시스템 에서도, 많은 수의 게스트 Vm 및 게스트 VPs에 충분 한 지원을 제공 하기 위해 루트에 64 root VPs 이상 필요 하지 않은 것으로 확인 된 경우, 게스트 Vm의 수와 크기에 따라 64 root VPs가 훨씬 더 적합 한 경우가 많았습니다. , 특정 작업을 실행 하는 등의 작업을 수행 합니다.
 
 현재이 "minroot" 개념은 계속 활용 됩니다.  실제로 Windows Server 2016 Hyper-v는 호스트 LPs에서 512 LPs로의 최대 아키텍처 지원 제한을 증가 시켰습니다. 루트 파티션은 여전히 최대 320 LPs로 제한 됩니다.
 
@@ -51,13 +48,13 @@ Windows Server 2016 Hyper-v에서 기본 임계값이 320 LPs 이면 매우 큰 
 Minroot 구성은 하이퍼바이저 BCD 항목을 통해 제어 됩니다. Minroot를 사용 하도록 설정 하려면 cmd 프롬프트에서 관리자 권한으로 다음을 수행 합니다.
 
 ```
-    bcdedit /set hypervisorrootproc n
+     bcdedit /set hypervisorrootproc n
 ```
 여기서 n은 root VPs의 수입니다. 
 
 시스템을 다시 부팅 해야 하며, OS 부팅 수명 동안 새 루트 프로세서 수가 유지 됩니다.  Minroot 구성은 런타임에 동적으로 변경할 수 없습니다.
 
-NUMA 노드가 여러 개 있는 경우 각 노드는 프로세서를 `n/NumaNodeCount` 가져옵니다.
+NUMA 노드가 여러 개 있는 경우 각 노드는 `n/NumaNodeCount` 프로세서를 가져옵니다.
 
 여러 NUMA 노드를 사용 하는 경우 VM의 토폴로지가 각 NUMA 노드에 해당 VM의 NUMA 노드 VPs을 실행 하기에 충분 한 무료 LPs (즉, root VPs가 없는 LPs)가 있는지 확인 해야 합니다.
 

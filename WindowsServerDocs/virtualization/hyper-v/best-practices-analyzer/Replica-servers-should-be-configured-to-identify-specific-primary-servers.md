@@ -2,20 +2,19 @@
 title: 복제 트래픽을 보낼 수 있는 권한이 고유한 기본 서버를 식별 하도록 복제 서버를 구성 해야
 description: 이 모범 사례 분석기 규칙에서 보고 한 문제를 해결 하는 지침을 제공 합니다.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 0aeb1f4b-2e75-430b-9557-fe64738c4992
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: 567b20d00d2f245ae7e9577d9d200dca116a9b4d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 649af22f615f2f36baceb1fa23b79c54b038f9c2
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71364741"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861836"
 ---
 # <a name="replica-servers-should-be-configured-to-identify-specific-primary-servers-authorized-to-send-replication-traffic"></a>복제 트래픽을 보낼 수 있는 권한이 고유한 기본 서버를 식별 하도록 복제 서버를 구성 해야
 
@@ -27,18 +26,18 @@ ms.locfileid: "71364741"
 |-|-|  
 |**운영 체제**|Windows Server 2016|  
 |**제품/기능**|Hyper-V|  
-|**Severity**|경고|  
-|**범주**|Configuration|  
+|**등급**|경고|  
+|**범주**|구성|  
   
 다음 섹션에서는 기울임꼴이이 문제에 대 한 모범 사례 분석기 도구에 표시 되는 UI 텍스트를 나타냅니다.  
   
-## <a name="issue"></a>문제점  
+## <a name="issue"></a>문제  
 *구성 된 대로이 복제 서버는 모든 주 서버에서 복제 트래픽을 받아서 단일 위치에 저장 합니다.*  
   
 ### <a name="impact"></a>영향  
 *모든 주 서버의 모든 복제는 한 위치에 저장 되므로 개인 정보나 보안 문제가 발생할 수 있습니다.*  
   
-## <a name="resolution"></a>해결 방법  
+## <a name="resolution"></a>해상도  
 *Hyper-v 관리자를 사용 하 여 특정 주 서버에 대 한 새 권한 부여 항목을 만들고 각각에 대해 별도의 저장소 위치를 지정 합니다. 와일드 카드 문자를 사용 하 여 각 권한 부여 항목에 대 한 기본 서버를 집합으로 그룹화 할 수 있습니다.*  
   
 #### <a name="create-authorization-entries-using-hyper-v-manager"></a>Hyper-v 관리자를 사용 하 여 권한 부여 항목 만들기  

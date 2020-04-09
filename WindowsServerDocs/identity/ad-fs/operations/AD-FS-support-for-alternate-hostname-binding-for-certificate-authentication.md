@@ -1,7 +1,6 @@
 ---
 ms.assetid: 4b71b212-7e5b-4fad-81ee-75b3d1f27869
 title: 인증서 인증을 위한 대체 호스트 이름 바인딩에 대한 AD FS 지원
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,16 +8,16 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: be522f4dd990a920e910950c1bf2564d795bf9fa
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e3764977e29413ea1e361fa78cadd040adabcf04
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71358591"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858096"
 ---
 # <a name="ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication"></a>인증서 인증을 위한 대체 호스트 이름 바인딩에 대한 AD FS 지원
 
-대부분의 네트워크에는 로컬 방화벽 정책 못할 수 있습니다 트래픽 49443 같은 비표준 포트를 통해. 이는 Windows Server 2016에서 AD FS 이전에 AD FS를 사용 하 여 인증서 인증을 수행 하려고 할 때 문제가 됩니다. 즉, 동일한 호스트에 장치 인증 및 사용자 인증서 인증에 대 한 서로 다른 바인딩을 같을 수 없었습니다. 기본 포트 443 장치 인증서를 받이 바인딩되고 동일한 채널에서 여러 바인딩을 지원 하기 위해 변경할 수 없습니다. 결과적으로 스마트 카드 인증이 작동 하지 않습니다 하 고 사용자가 실제로 변경 된 내용에 대 한 표시가 없습니다 이후 발생 한 일 수 있었습니다.  
+대부분의 네트워크에는 로컬 방화벽 정책 못할 수 있습니다 트래픽 49443 같은 비표준 포트를 통해. 이는 Windows Server 2016에서 AD FS 이전에 AD FS를 사용 하 여 인증서 인증을 수행 하려고 할 때 문제가 됩니다. 즉, 동일한 호스트에 디바이스 인증 및 사용자 인증서 인증에 대 한 서로 다른 바인딩을 같을 수 없었습니다. 기본 포트 443 디바이스 인증서를 받이 바인딩되고 동일한 채널에서 여러 바인딩을 지원 하기 위해 변경할 수 없습니다. 결과적으로 스마트 카드 인증이 작동 하지 않습니다 하 고 사용자가 실제로 변경 된 내용에 대 한 표시가 없습니다 이후 발생 한 일 수 있었습니다.  
   
 Windows Server 2016에서 AD FS를 사용 하 여이를 수행할 수 있습니다.
   
@@ -31,7 +30,7 @@ Windows Server 2016에서 AD FS를 사용 하 여이를 수행할 수 있습니�
   
 ![대체 호스트 이름 바인딩](media/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication/ADFS_CA_2.png)  
   
-마찬가지로 Windows Server 2016의 AD FS 배포 된 후 PowerShell cmdlet을 사용할 수 있습니다. AdfsAlternateTlsClientBinding를 설정 합니다.
+마찬가지로 Windows Server 2016의 AD FS 배포 된 후 PowerShell cmdlet AdfsAlternateTlsClientBinding을 사용할 수 있습니다.
   
 ```powershell
 Set-AdfsAlternateTlsClientBinding -Member DC1.contoso.com -Thumbprint '<thumbprint of cert>'

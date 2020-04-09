@@ -1,23 +1,19 @@
 ---
 title: '4단계: Windows Server Essentials 마이그레이션을 위해 대상 서버로 설정 및 데이터 이동'
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e143df43-e227-4629-a4ab-9f70d9bf6e84
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: d9aea85513e2453c02f6c14fb3f4d708be211d3f
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: e19f3a8333cc08568f8d437da2e35a6c64920df1
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80318752"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852356"
 ---
 # <a name="step-4-move-settings-and-data-to-the-destination-server-for-windows-server-essentials-migration"></a>4단계: Windows Server Essentials 마이그레이션을 위해 대상 서버로 설정 및 데이터 이동
 
@@ -52,7 +48,7 @@ ms.locfileid: "80318752"
   
    `robocopy \\<SourceServerName>\<SharedSourceFolderName> "<PathOfTheDestination>\<SharedDestinationFolderName>" /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt`
   
-    각 항목이 나타내는 의미는 다음과 같습니다.  
+    여기서 각 값은 다음과 같습니다.  
   
    - \<SourceServerName\>은 원본 서버의 이름입니다.  
   

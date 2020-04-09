@@ -1,7 +1,6 @@
 ---
 ms.assetid: 3095e6a7-b562-4c6a-bf29-13b32c133cac
 title: AD FS용 SSL 인증서 등록
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,16 +8,16 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: efa7c7aee848a5bbb68d3ce7140e135d37c2161d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6f7af40f23c3fa3bd0a31ecb74b11013133a4b32
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408366"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855436"
 ---
 # <a name="enroll-an-ssl-certificate-for-ad-fs"></a>AD FS용 SSL 인증서 등록
 
-Active Directory Federation Services \(AD FS\)에는 페더레이션 서버 팜의 각 페더레이션 서버에서 SSL \(서버 인증\) 보안 소켓 계층에 대 한 인증서가 필요 합니다. 팜의 각 페더레이션 서버에서 동일한 인증서를 사용할 수 있습니다. 인증서와 해당 프라이빗 키는 모두 사용할 수 있는 상태여야 합니다. 예를 들어 .pfx 파일에 인증서와 해당 프라이빗 키가 있는 경우 AD FS(Active Directory Federation Services) 구성 마법사에 직접 파일을 가져올 수 있습니다. 이 SSL 인증서에는 다음 사항이 포함되어 있어야 합니다.  
+Active Directory Federation Services \(AD FS\)에는 페더레이션 서버 팜의 각 페더레이션 서버에서 SSL \(서버 인증\) 보안 소켓 계층에 대 한 인증서가 필요 합니다. 팜의 각 페더레이션 서버에서 동일한 인증서를 사용할 수 있습니다. 인증서와 해당 개인 키를 모두 사용할 수 있어야 합니다. 예를 들어 .pfx 파일에 인증서와 해당 프라이빗 키가 있는 경우 AD FS(Active Directory Federation Services) 구성 마법사에 직접 파일을 가져올 수 있습니다. 이 SSL 인증서는 다음 항목을 포함해야 합니다.  
   
 1.  주체 이름과 주체 대체 이름에는 fs.contoso.com와 같은 페더레이션 서비스 이름이 포함 되어야 합니다.  
   

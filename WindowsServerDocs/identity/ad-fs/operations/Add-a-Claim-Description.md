@@ -1,7 +1,6 @@
 ---
 ms.assetid: 7d230527-f4fe-4572-8838-0b354ee0b06b
 title: 클레임 설명 추가
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: ff50ac8d41a5bbde282b1d5b93c85610f841b5ab
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9c5293dc6070c9483054ce1dd827a20ec377573b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407781"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859716"
 ---
 # <a name="add-a-claim-description"></a>클레임 설명 추가
 
@@ -25,14 +24,14 @@ ms.locfileid: "71407781"
 
 다음 절차를 사용 하 여 클레임을 추가할 수 있습니다.
 
-로컬 컴퓨터에서 이 절차를 완료하기 위해서는 최소한 **관리자** 또는 이와 동등한 자격이 있어야 합니다.  적절 한 계정을 사용 하는 방법에 대 한 세부 정보를 검토 하 고 그룹 구성원 자격 [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477)합니다.
+이 절차를 완료하려면 최소한 로컬 컴퓨터의 **Administrators** 구성원 자격 또는 동급의 권한이 필요합니다.  적절 한 계정을 사용 하는 방법에 대 한 세부 정보를 검토 하 고 그룹 구성원 자격 [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477)합니다.
 
 ## <a name="to-add-a-claim-description"></a>클레임 설명을 추가 하려면
 
 1. 서버 관리자에서 클릭 **도구**, 를 선택한 다음 **AD FS 관리**합니다. 
 
 2. 확장 **서비스** 에서 마우스 오른쪽 단추로 클릭 하 고 **클레임 설명 추가**합니다.
-   ![클레임 설명 추가](media/Add-a-Claim-Description/claimdesc1.png)
+   클레임 설명을 추가 ![](media/Add-a-Claim-Description/claimdesc1.png)
 
 3. 추가 클레임 설명 대화 상자의 **표시 이름**, 그룹 또는이 클레임에 대 한 역할을 식별 하는 고유한 이름을 입력 합니다.
 
@@ -55,5 +54,5 @@ ms.locfileid: "71407781"
 ![클레임 설명 추가](media/Add-a-Claim-Description/claimdesc2.png)
 
 
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [AD FS 작업](../../ad-fs/AD-FS-2016-Operations.md) 

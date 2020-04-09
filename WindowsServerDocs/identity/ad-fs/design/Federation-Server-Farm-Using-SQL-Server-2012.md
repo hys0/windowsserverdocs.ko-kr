@@ -1,7 +1,6 @@
 ---
 ms.assetid: 6618b3ce-0e94-4009-b887-d8e05453358b
 title: SQL Server를 사용하는 페더레이션 서버 팜
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,16 +8,16 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 358199fd37cdbb320bc8f3e3e5b2900d261986f0
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 862cbc74833e2d4e9f385ba961b58a1f703e6611
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71359147"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853136"
 ---
 # <a name="federation-server-farm-using-sql-server"></a>SQL Server를 사용하는 페더레이션 서버 팜
 
-AD FS \( \(\) Active Directory Federation Services에 대 한이 토폴로지는 Windows 내부 데이터베이스 WID 배포 토폴로지를 사용 하는 페더레이션 서버 팜과 다릅니다 .이 토폴로지는에 데이터를 복제 하지 않습니다.\) 팜의 각 페더레이션 서버. 대신, 팜의 모든 페더레이션 서버는 회사 네트워크에 있는 Microsoft SQL Server을 실행 하는 서버에 저장 된 공통 데이터베이스로 데이터를 읽고 쓸 수 있습니다.  
+AD FS \(Active Directory Federation Services에 대 한이 토폴로지는 팜의 각 페더레이션 서버에 데이터를 복제 하지 않는다는 점에서 WID \(배포 토폴로지를 사용 하는 페더레이션 서버 팜과\) 다릅니다.\) 대신, 팜의 모든 페더레이션 서버는 회사 네트워크에 있는 Microsoft SQL Server을 실행 하는 서버에 저장 된 공통 데이터베이스로 데이터를 읽고 쓸 수 있습니다.  
   
 ## <a name="deployment-considerations"></a>배포 고려 사항  
 이 섹션에서는 대상, 이점 및이 배포 토폴로지와 연결 된 제한 사항에 대 한 다양 한 고려 사항을 설명 합니다.  
@@ -31,9 +30,9 @@ AD FS \( \(\) Active Directory Federation Services에 대 한이 토폴로지는
   
 ### <a name="what-are-the-benefits-of-using-this-topology"></a>이 토폴로지를 사용 하 여의 장점은 무엇입니까?  
   
--   더 많은 수의 트러스트 관계 \(지원 100\)  
+-   100 이상 \(더 많은 트러스트 관계 지원\)  
   
--   토큰 재생 검색 \(에 대 한 지원 Security Assertion Markup Language\) \(SAML\) 2.0 프로토콜 \(의 보안 기능 및 아티팩트 해결 부분\)  
+-   토큰 재생 검색에 대 한 지원은 Security Assertion Markup Language \(SAML\) 2.0 프로토콜의 일부 \(보안 기능\) 및 아티팩트 해상도를 \(\)  
   
 -   데이터베이스 미러링, 장애 조치 (failover) 클러스터링, 보고 및 관리 도구와 같은 SQL Server의 모든 이점에 대 한 지원  
   
@@ -44,7 +43,7 @@ AD FS \( \(\) Active Directory Federation Services에 대 한이 토폴로지는
 > [!NOTE]  
 > SQL Server는 장애 조치 (failover) 클러스터링, 데이터베이스 미러링 및 여러 가지 유형의 SQL Server 복제를 비롯 한 다양 한 데이터 및 응용 프로그램 중복성 옵션을 지원 합니다.  
   
-\(Microsoft Information 기술 IT\) 부서는 보호 우선\- \(동기\) 모드 및 장애 조치 (failover) 클러스터링에 SQL Server 데이터베이스 미러링을\- 사용 하 여 높은 수준의 기능을 제공 합니다. SQL Server 인스턴스에 대 한 가용성 지원. SQL Server 트랜잭션 \(\-피어투피어\)및 병합 복제가 Microsoft의 AD FS 제품 팀에서 테스트 되지 않았습니다.\- SQL Server에 대 한 자세한 내용은 참조 [고가용성 솔루션 개요](https://go.microsoft.com/fwlink/?LinkId=179853) 또는 [적절 한 복제 유형을 선택 하면](https://go.microsoft.com/fwlink/?LinkId=214648)합니다.  
+IT\) 부서 \(Microsoft 정보 기술에서는 높은\-안전 \(동기\) 모드 및 장애 조치 (failover) 클러스터링에서 SQL Server 데이터베이스 미러링을 사용 하 여\-인스턴스에 대해 높은 SQL Server 가용성 지원을 제공 합니다. 피어\)\-피어\-트랜잭션 \(SQL Server Microsoft의 AD FS 제품 팀에서 병합 복제를 테스트 하지 않았습니다. SQL Server에 대 한 자세한 내용은 참조 [고가용성 솔루션 개요](https://go.microsoft.com/fwlink/?LinkId=179853) 또는 [적절 한 복제 유형을 선택 하면](https://go.microsoft.com/fwlink/?LinkId=214648)합니다.  
   
 ### <a name="supported-sql-server-versions"></a>지원 되는 SQL Server 버전  
 다음 SQL server 버전은 Windows Server 2012와 함께 설치 된 AD FS와 함께 지원 됩니다.  
@@ -62,5 +61,5 @@ WID 토폴로지는 페더레이션 서버 팜을 마찬가지로, 페더레이�
   
 페더레이션 서버 또는 페더레이션 서버 프록시를 사용 하기 위해 네트워킹 환경을 구성 하는 방법에 대 한 자세한 내용은 참조 [페더레이션 서버에 대 한 이름 확인 요구 사항](Name-Resolution-Requirements-for-Federation-Servers.md) 또는 [페더레이션 서버 프록시에 대 한 이름 확인 요구 사항](Name-Resolution-Requirements-for-Federation-Server-Proxies.md)합니다.  
   
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 [Windows Server 2012의 AD FS 디자인 가이드](AD-FS-Design-Guide-in-Windows-Server-2012.md)

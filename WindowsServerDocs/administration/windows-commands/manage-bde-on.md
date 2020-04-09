@@ -1,24 +1,20 @@
 ---
 title: manage-bde on
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f6a12814-df74-416c-a04a-62ea8512263e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a95bbc375c0a5b62b96f7c68f7d5ab5e09371d1c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 1785c10ade5f7aace8595d8d0972fb1fa315232b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71373998"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80840016"
 ---
 # <a name="manage-bde-on"></a>manage-bde: on
 
@@ -35,7 +31,7 @@ manage-bde –on <Drive> {[-recoveryPassword <NumericalPassword>]|[-recoverykey 
 [{-?|/?}] [{-help|-h}]
 ```
 
-### <a name="parameters"></a>매개 변수
+#### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
@@ -50,7 +46,7 @@ manage-bde –on <Drive> {[-recoveryPassword <NumericalPassword>]|[-recoverykey 
 |-tpmandpin|신뢰할 수 있는 플랫폼 모듈 (TPM) 및 운영 체제 드라이브에 대 한 개인 식별 번호 (PIN) 보호기를 추가합니다. 사용할 수도 있습니다 **-tp** 이 명령의 축약된 버전으로 합니다.|
 |-tpmandstartupkey|운영 체제 드라이브에 대 한 TPM 및 시작 키 보호기를 추가합니다. 사용할 수도 있습니다 **-tsk** 이 명령의 축약된 버전으로 합니다.|
 |-tpmandpinandstartupkey|TPM, PIN 및 운영 체제 드라이브에 대 한 시작 키 보호기를 추가합니다. 사용할 수도 있습니다 **-tpsk** 이 명령의 축약된 버전으로 합니다.|
-|-암호|데이터 드라이브에 암호 키 보호기를 추가합니다. 사용할 수도 있습니다 **-pw** 이 명령의 축약된 버전으로 합니다.|
+|-password|데이터 드라이브에 암호 키 보호기를 추가합니다. 사용할 수도 있습니다 **-pw** 이 명령의 축약된 버전으로 합니다.|
 |-ADAccountOrGroup|볼륨에 대 한 SID 기반 id 보호기를 추가합니다. 볼륨에서 사용자 또는 컴퓨터에 적절 한 자격 증명 하는 경우 자동으로 잠금이 해제 됩니다. 컴퓨터 계정을 지정할 때 추가 **$** 컴퓨터에 이름을 지정 하 고 지정 **– 서비스** 사용자 대신 BitLocker 서버의 내용에 잠금을 수행 해야 함을 나타냅니다. 사용할 수도 있습니다 **-sid** 이 명령의 축약된 버전으로 합니다.|
 |-UsedSpaceOnly|사용 중인 공간만 암호화를 암호화 모드를 설정합니다. 사용 중인된 공간을 포함 하는 볼륨의 섹션을 암호화 됩니다 하지 않지만 사용 가능한 공간이 없습니다. 이 옵션을 지정 하지 않으면 모든 공간을 사용 하 고 볼륨에 여유 공간이 암호화 됩니다... 사용할 수도 있습니다 **-사용** 이 명령의 축약된 버전으로 합니다.|
 |-encryptionMethod|암호화 알고리즘 및 키 크기를 구성합니다. 사용할 수도 있습니다 **-em** 이 명령의 축약된 버전으로 합니다.|
@@ -64,7 +60,7 @@ manage-bde –on <Drive> {[-recoveryPassword <NumericalPassword>]|[-recoverykey 
 |-? 또는 /?|도움말에 대 한 간단한 명령 프롬프트에 표시 됩니다.|
 |-help 또는-h|명령 프롬프트에서 전체 도움말을 표시 합니다.|
 
-## <a name="BKMK_Examples"></a>예와
+## <a name="examples"></a><a name=BKMK_Examples></a>예와
 
 다음 예제를 사용 하는 **-에** C 드라이브에 대 한 BitLocker를 사용 하 여 드라이브에 복구 암호를 추가 하는 명령입니다.
 ```
@@ -87,7 +83,7 @@ manage-bde –on E: -pw
 manage-bde –on C: -fet Hardware
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
--   [명령줄 구문 키](command-line-syntax-key.md)
+-   - [명령줄 구문 키](command-line-syntax-key.md)
 -   [Manage-bde](manage-bde.md)

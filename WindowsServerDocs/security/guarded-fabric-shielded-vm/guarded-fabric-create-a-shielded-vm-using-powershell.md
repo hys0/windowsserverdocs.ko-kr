@@ -1,18 +1,18 @@
 ---
 title: PowerShell을 사용 하 여 보호 된 VM 만들기
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 09/25/2019
-ms.openlocfilehash: 6111b3fbff508c3c485f2a998bab8c0b16beaed6
-ms.sourcegitcommit: 471464a674a53c468a2f1e28575c91245ce9badf
+ms.openlocfilehash: 09e09fa30a38ef5f6046f623e24be0bc7b6ce87e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75548176"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856756"
 ---
 # <a name="create-a-shielded-vm-using-powershell"></a>PowerShell을 사용 하 여 보호 된 VM 만들기
 
@@ -22,7 +22,7 @@ ms.locfileid: "75548176"
 
 간단히 말해서 모든 컴퓨터에 템플릿 디스크, 보호 데이터 파일, 무인 설치 응답 파일 및 기타 보안 아티팩트를 만든 다음, 이러한 파일을 보호 된 호스트에 복사 하 고 보호 된 VM을 프로 비전 합니다.
 
-## <a name="create-a-signed-template-disk"></a>서명된 템플릿 디스크 만들기
+## <a name="create-a-signed-template-disk"></a>서명 된 템플릿 디스크 만들기
 
 새 차폐 VM을 만들려면 먼저 서명 된 OS 볼륨 (또는 Linux의 부팅 및 루트 파티션)으로 미리 암호화 된 보호 된 VM 템플릿 디스크가 필요 합니다.
 템플릿 디스크를 만드는 방법에 대 한 자세한 내용은 아래 링크를 참조 하세요.

@@ -1,27 +1,23 @@
 ---
 title: MultiPoint 대시보드 사용자 계정 만들기
-ms.custom: na
 description: 대시보드와 함께 사용할 계정 만들기
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: eb9d7da1-eb5e-42c0-8d59-bb6d7b007ea9
 author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: b4e5fb85ae1dcaf7bd698f052e990e6ac1ac8dbc
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b94c02fe514b4f7a694b908600127eda7c664c09
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71389773"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859796"
 ---
 # <a name="create-a-multipoint-dashboard-user-account"></a>MultiPoint 대시보드 사용자 계정 만들기
-스테이션을 정기적으로 액세스 하 게 하지만 MultiPoint 서비스 컴퓨터를 관리 하지 않을 사용자에 대 한 다중 포인트 대시보드 사용자 계정을 만듭니다. 다중 포인트 대시보드 사용자 계정이 있는 사용자는 대부분의 응용 프로그램을 실행 하 고 저장 파일을 하지만 다중 포인트 관리자를 실행할 수 없습니다. 다중 포인트 관리자에서 다중 포인트 대시보드 사용자 액세스 권한이 있는 사용자를 보려면 클릭는 **사용자** 탭 합니다. MultiPoint 대시보드 사용자 계정은 **계정 유형** 열에 **MultiPoint 대시보드 사용자**로 표시됩니다.  
+스테이션에 정기적으로 액세스하지만 MultiPoint 서비스 시스템을 관리하지는 않을 사용자에 대해 MultiPoint 대시보드 사용자 계정을 만들 수 있습니다. 다중 포인트 대시보드 사용자 계정이 있는 사용자는 대부분의 애플리케이션을 실행 하 고 저장 파일을 하지만 다중 포인트 관리자를 실행할 수 없습니다. Multipoint 대시보드 사용자 액세스 권한이 있는 사용자를 확인 하려면 MultiPoint 관리자에서 **사용자** 탭을 클릭 합니다. multipoint 대시보드 사용자 계정은 **계정 유형** 열에 **multipoint 대시보드 사용자**로 표시 됩니다.  
   
 MultiPoint 서비스 사용자가 Windows에 프라이빗 문서를 저장할 경우 각 사용자는 고유한 사용자 이름과 암호를 사용하여 MultiPoint 서비스 시스템에 로그온해야 합니다.  
   
@@ -46,5 +42,5 @@ MultiPoint 서비스 사용자가 Windows에 프라이빗 문서를 저장할 �
   
 8.  **마침**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [사용자 계정 고려 사항](User-Account-Considerations.md)

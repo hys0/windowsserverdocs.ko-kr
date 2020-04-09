@@ -1,7 +1,6 @@
 ---
 ms.assetid: d555041a-709e-42c7-920a-8dfd2c7e0488
 title: 페더레이션 서버 프록시 작동 여부 확인
-description: ''
 author: billmath
 manager: femila
 ms.date: 05/31/2017
@@ -9,12 +8,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 24f4fe2a152244dc904be82c4c10abe71abffcc4
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 3e74af4a63476040ca44522ceb7c0ae22e914fec
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71359973"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855856"
 ---
 # <a name="verify-that-a-federation-server-proxy-is-operational"></a>페더레이션 서버 프록시 작동 여부 확인
 
@@ -24,7 +23,7 @@ ms.locfileid: "71359973"
 > [!IMPORTANT]  
 > 이 테스트에 성공하면 이벤트 뷰어에 페더레이션 서버 프록시 컴퓨터에 대한 특정 이벤트가 생성됩니다.  
   
-로컬 컴퓨터에서 이 절차를 완료하기 위해서는 최소한 **관리자** 또는 이와 동등한 자격이 있어야 합니다.  적절 한 계정을 사용 하는 방법에 대 한 세부 정보를 검토 하 고 그룹 구성원 자격 [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477)합니다.   
+이 절차를 완료하려면 최소한 로컬 컴퓨터의 **Administrators** 구성원 자격 또는 동급의 권한이 필요합니다.  적절 한 계정을 사용 하는 방법에 대 한 세부 정보를 검토 하 고 그룹 구성원 자격 [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477)합니다.   
   
 ### <a name="to-verify-that-a-federation-server-proxy-is-operational"></a>페더레이션 서버 프록시가 작동 하는지 확인 하려면  
   

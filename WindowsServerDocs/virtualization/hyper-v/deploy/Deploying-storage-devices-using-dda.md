@@ -2,23 +2,21 @@
 title: 불연속 장치 할당을 사용 하 여 NVMe 저장소 장치 배포
 description: DDA를 사용 하 여 저장소 장치를 배포 하는 방법을 알아봅니다.
 ms.prod: windows-server
-ms.service: na
 ms.technology: hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 author: chrishuybregts
 ms.author: chrihu
 ms.assetid: 1c36107e-78c9-4ec0-a313-6ed557ac0ffc
-ms.openlocfilehash: eb76b25e8ff1428b2c03b37dde1f76562751d3bb
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 2b92b175a6e914b62b069f76f92255cb99d55d74
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71364320"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860906"
 ---
 # <a name="deploy-nvme-storage-devices-using-discrete-device-assignment"></a>불연속 장치 할당을 사용 하 여 NVMe 저장소 장치 배포
 
->적용 대상: Microsoft Hyper-V Server 2016, Windows Server 2016
+>적용 대상: Microsoft Hyper-v Server 2016의 경우 Windows Server 2016
 
 Windows Server 2016 부터는 불연속 장치 할당 또는 DDA를 사용 하 여 전체 PCIe 장치를 VM에 전달할 수 있습니다.  이렇게 하면 장치 기본 드라이버를 활용할 수 있는 동안 VM 내에서 NVMe 저장소 또는 그래픽 카드와 같은 장치에 고성능 액세스할 수 있습니다.  작동 하는 장치에 대 한 자세한 내용은 [개별 장치 할당을 사용 하 여 장치 배포 계획](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md) (영문)을 참조 하세요. DDA에서 장치를 사용 하는 세 가지 단계가 있습니다.
 -   DDA에 대 한 VM 구성
@@ -39,7 +37,7 @@ Set-VM -Name VMName -AutomaticStopAction TurnOff
 ## <a name="dismount-the-device-from-the-host-partition"></a>호스트 파티션에서 장치를 분리 합니다.
 
 ### <a name="locating-the-devices-location-path"></a>장치의 위치 경로 찾기
-PCI 위치 경로는 호스트에서 장치를 분리 하 고 탑재 하는 데 필요 합니다.  예제 위치 경로 `"PCIROOT(20)#PCI(0300)#PCI(0000)#PCI(0800)#PCI(0000)"`는 다음과 같습니다.   위치 경로에 대 한 자세한 내용은 다음 위치에서 찾을 수 있습니다. [불연속 장치 할당을 사용 하 여 장치 배포를 계획](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md)합니다.
+PCI 위치 경로는 호스트에서 장치를 분리 하 고 탑재 하는 데 필요 합니다.  위치 경로 예제는 다음과 같습니다. `"PCIROOT(20)#PCI(0300)#PCI(0000)#PCI(0800)#PCI(0000)"`.   위치 경로에 대 한 자세한 내용은 [불연속 장치 할당을 사용 하 여 장치를 배포 하기 위한 계획](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md)을 참조 하세요.
 
 ### <a name="disable-the-device"></a>장치 사용 안 함
 Device Manager 또는 PowerShell을 사용 하 여 장치가 "사용 안 함" 인지 확인 합니다.  

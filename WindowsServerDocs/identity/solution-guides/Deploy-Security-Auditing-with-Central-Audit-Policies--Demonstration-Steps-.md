@@ -1,7 +1,6 @@
 ---
 ms.assetid: 22347a94-aeea-44b4-85fb-af2c968f432a
 title: 중앙 감사 정책으로 보안 감사 배포(시연 단계)
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: ecbaa33d83d7b37f376a426571c0d2df89c7695d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9ad3f069eaea6917d29f56a00c6ecde035ecb01d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407118"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861196"
 ---
 # <a name="deploy-security-auditing-with-central-audit-policies-demonstration-steps"></a>중앙 감사 정책으로 보안 감사 배포(시연 단계)
 
@@ -23,13 +22,13 @@ ms.locfileid: "71407118"
 이 시나리오에서는 [중앙 액세스 정책 &#40;&#41;데모 단계 배포](Deploy-a-Central-Access-Policy--Demonstration-Steps-.md)에서 만든 금융 정책을 사용 하 여 금융 문서 폴더의 파일에 대 한 액세스를 감사 합니다. 폴더에 대한 액세스 권한이 없는 사용자가 이 폴더에 액세스할 경우 이벤트 뷰어에 작업이 캡처됩니다.   
  이 시나리오를 테스트하려면 다음 단계가 필요합니다.  
   
-|태스크|설명|  
+|작업|설명|  
 |--------|---------------|  
 |[전역 개체 액세스 구성](Deploy-Security-Auditing-with-Central-Audit-Policies--Demonstration-Steps-.md#BKMK_1)|이 단계에서는 도메인 컨트롤러에서 글로벌 개체 액세스 정책을 구성합니다.|  
 |[그룹 정책 설정 업데이트](Deploy-Security-Auditing-with-Central-Audit-Policies--Demonstration-Steps-.md#BKMK_2)|파일 서버에 로그인하고 그룹 정책 업데이트를 적용합니다.|  
 |[글로벌 개체 액세스 정책이 적용 되었는지 확인](Deploy-Security-Auditing-with-Central-Audit-Policies--Demonstration-Steps-.md#BKMK_3)|이벤트 뷰어에서 관련 이벤트를 봅니다. 이벤트에는 국가 및 문서 종류에 대한 메타데이터가 포함되어야 합니다.|  
   
-## <a name="BKMK_1"></a>전역 개체 액세스 정책 구성  
+## <a name="configure-global-object-access-policy"></a><a name="BKMK_1"></a>전역 개체 액세스 정책 구성  
 이 단계에서는 도메인 컨트롤러에서 글로벌 개체 액세스 정책을 구성합니다.  
   
 #### <a name="to-configure-a-global-object-access-policy"></a>글로벌 개체 액세스 정책을 구성하려면  
@@ -65,7 +64,7 @@ ms.locfileid: "71407118"
   
 15. 탐색 창에서 **개체 액세스**를 클릭하고 결과 창에서 **핸들 조작 감사**를 두 번 클릭합니다. **다음 감사 이벤트 구성**, **성공**, **실패**를 클릭하고 **확인**을 클릭한 후 유연한 액세스 GPO를 닫습니다.  
   
-## <a name="BKMK_2"></a>그룹 정책 설정 업데이트  
+## <a name="update-group-policy-settings"></a><a name="BKMK_2"></a>그룹 정책 설정 업데이트  
 이 단계에서는 감사 정책을 만든 후 그룹 정책 설정을 업데이트합니다.  
   
 #### <a name="to-update-group-policy-settings"></a>그룹 정책 설정을 업데이트하려면  
@@ -75,11 +74,11 @@ ms.locfileid: "71407118"
 2. Windows 키+R을 누른 다음 **cmd**를 입력하여 명령 프롬프트 창을 엽니다.  
   
    > [!NOTE]  
-   > **사용자 계정 컨트롤** 대화 상자가 나타나면 원하는 작업이 표시되었는지 확인한 다음 **예**를 클릭합니다.  
+   > **사용자 계정 컨트롤** 대화 상자가 표시되면 원하는 작업이 표시되어 있는지 확인하고 **예**를 클릭합니다.  
   
 3. **gpupdate /force**를 입력한 다음 Enter 키를 누릅니다.  
   
-## <a name="BKMK_3"></a>글로벌 개체 액세스 정책이 적용 되었는지 확인  
+## <a name="verify-that-the-global-object-access-policy-has-been-applied"></a><a name="BKMK_3"></a>글로벌 개체 액세스 정책이 적용 되었는지 확인  
 그룹 정책 설정이 적용된 후 감사 정책 설정이 올바르게 적용되었는지 확인할 수 있습니다.  
   
 #### <a name="to-verify-that-the-global-object-access-policy-has-been-applied"></a>글로벌 개체 액세스 정책이 적용되었는지 확인하려면  
@@ -91,7 +90,7 @@ ms.locfileid: "71407118"
 > [!IMPORTANT]  
 > 유효한 액세스를 검사 중인 사용자 대신 리소스가 위치한 컴퓨터에 대해 새 로그온 이벤트가 생성됩니다. 사용자 로그인 작업에 대한 보안 감사 로그 분석 시 유효한 액세스로 인해 생성된 로그온 이벤트와 대화형 네트워크 사용자 로그인으로 인해 생성된 로그온 이벤트를 구별하기 위해 가장 수준 정보가 포함됩니다. 로그온 이벤트가 유효한 액세스로 인해 생성된 경우 가장 수준이 ID가 됩니다. 네트워크 대화형 사용자 로그인에서는 일반적으로 가장 수준이 가장 또는  위임인 로그온 이벤트가 생성됩니다.  
   
-## <a name="BKMK_Links"></a>참고 항목  
+## <a name="see-also"></a><a name="BKMK_Links"></a>참고 항목  
   
 -   [시나리오: 파일 액세스 감사](Scenario--File-Access-Auditing.md)  
   

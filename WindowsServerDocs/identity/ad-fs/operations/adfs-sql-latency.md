@@ -8,12 +8,12 @@ ms.date: 06/20/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: e5e90119066285ae8e04b392a13ab1a38488f5ee
-ms.sourcegitcommit: c5709021aa98abd075d7a8f912d4fd2263db8803
+ms.openlocfilehash: b0881bff3455b471b0e51e960e1b0e522508a8b3
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2020
-ms.locfileid: "76265755"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854866"
 ---
 # <a name="fine-tuning-sql-and-addressing-latency-issues-with-ad-fs"></a>SQL을 미세 조정 하 고 AD FS의 대기 시간 문제 해결
 [AD FS 2016](https://support.microsoft.com/help/4503294/windows-10-update-kb4503294) 에 대 한 업데이트에서는 데이터베이스 간 대기 시간을 줄이기 위해 다음과 같은 향상 된 기능이 도입 되었습니다. AD FS 2019의 예정 된 업데이트에는 이러한 향상 된 기능이 포함 됩니다.

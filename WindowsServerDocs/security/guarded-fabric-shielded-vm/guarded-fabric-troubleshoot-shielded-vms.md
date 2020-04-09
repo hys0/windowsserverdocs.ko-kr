@@ -1,22 +1,22 @@
 ---
 title: 차폐 Vm 문제 해결
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 10/3/2018
-ms.openlocfilehash: b0d4338d20238eb528c19221151f380cc154a2db
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: c80663256a2e3404666b739c0a81cd06ec3caced
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386370"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856376"
 ---
 # <a name="troubleshoot-shielded-vms"></a>차폐 Vm 문제 해결
 
->적용 대상: Windows server 2019, Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server 2019, Windows Server (반기 채널), Windows Server 2016
 
 Windows Server 버전 1803부터 VMConnect (가상 컴퓨터 연결) 고급 세션 모드 및 PS Direct는 완전히 보호 된 Vm에 대해 다시 사용 하도록 설정 됩니다. 가상화 관리자는 vm에 대 한 액세스 권한을 얻기 위해 VM 게스트 자격 증명이 필요 하지만,이를 통해 호스팅 서비스 공급자는 네트워크 구성이 끊어질 때 보호 된 VM의 문제를 더 쉽게 해결할 수 있습니다.
 

@@ -1,24 +1,20 @@
 ---
 title: mapadmin
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b17332c7-8622-4223-9c43-2fb9cf4d992d
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: fc4b76c1989298ea83c480b9c838ce0fc18fef5f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5ea60f4d9753ed90c0d13ee48289b011aeafe6b0
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71373762"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80839676"
 ---
 # <a name="mapadmin"></a>mapadmin
 
@@ -57,14 +53,14 @@ mapadmin [<computer>] [-u <user> [-p <password>]] listdomainmaps
 -p &lt;암호&gt; 사용자의 암호를 지정 합니다. 지정 하는 경우는 **-u** 옵션은 있 생략 된 **-p** 옵션을 사용자의 암호를 묻는 메시지가 나타납니다.
 특정 작업 하는 **mapadmin** 수행 지정 하는 명령 인수에 따라 달라 집니다.
 
-## <a name="parameters"></a>매개 변수
-### <a name="start"></a>start
+### <a name="parameters"></a>매개 변수
+### <a name="start"></a>시작
 사용자 이름 매핑 서비스를 시작 합니다.
 
 ### <a name="stop"></a>stop
 사용자 이름 매핑 서비스를 중지합니다.
 
-### <a name="config"></a>구성
+### <a name="config"></a>config
 사용자 이름 매핑에 대 한 일반 설정을 지정합니다. 다음 옵션은이 명령 인수와 함께 사용할 수 있습니다. **-r &lt;dddd&gt;:&lt;hh&gt;:&lt;mm&gt;** -WINDOWS 및 NIS 데이터베이스에서 업데이트 하기 위한 새로 고침 간격을 일, 시간 및 분 단위로 지정 합니다. 최소 간격은 5 분입니다.
 **-i {예 | 없는}** -단순한 매핑 켜 집니다 (**예**) / 사용 안 함 (**없는**). 기본적으로 단순 매핑 켜져 있습니다.
 **추가** -사용자 또는 그룹에 대 한 새 매핑을 만듭니다. 다음 옵션을이 명령 인수를 사용할 수 있습니다.
@@ -136,4 +132,4 @@ mapadmin [<computer>] [-u <user> [-p <password>]] listdomainmaps
 -   UNIX 그룹의 경우 &lt;NISdomain&gt;\\&lt;groupname&gt;, &lt;groupname&gt;@&lt;NISdomain&gt;, &lt;groupname&gt;@PCNFS또는 PCNFS\\&lt;을 사용&gt;
 
 ## <a name="additional-references"></a>추가 참조
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

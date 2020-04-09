@@ -1,7 +1,6 @@
 ---
 ms.assetid: 6a852428-c1ec-4703-b3b3-a4bfdf8cbb9d
-title: Windows&#39;Server 2016에 Active Directory Domain Services의 새로운 기능
-description: ''
+title: Windows Server 2016에 Active Directory Domain Services의 새로운 기능
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -9,22 +8,22 @@ ms.date: 08/07/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 1ef77613919ea6caf39a7cb41ba575652680466d
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: a82f45772e5e35afffc632de2b40c02c75b5e5e4
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950112"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856286"
 ---
-# <a name="whats-new-in-active-directory-domain-services-for-windows-server-2016"></a>Windows Server 2016에 대 한 Active Directory Domain Services의 새로운 방법
+# <a name="whats-new-in-active-directory-domain-services-for-windows-server-2016"></a>Active Directory 도메인 서비스에 대 한 Windows Server 2016의 새로운 기능
 
->적용 대상: Windows Server 2016
+>적용 대상: Windows Server 2016
 
 Active Directory 도메인 서비스 (AD DS)에서 다음과 같은 새로운 기능이 Active Directory 환경 보안을 유지 하 고 클라우드 전용 배포 및 하이브리드 배포, 여기서 클라우드에서 호스팅되는 일부 애플리케이션 및 서비스 하 고 온-프레미스에서 호스팅되는 다른 사용자로 마이그레이션할 수 있도록 지원 하는 조직 위한 능력을 개선 합니다. 다음과 같은 향상 된 기능  
   
 - [권한 있는 액세스 관리](https://docs.microsoft.com/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services)  
   
-- [Azure Active Directory 조인을 통해 클라우드 기능을 Windows 10 디바이스로 확장](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-overview/)
+- [Azure Active Directory Join을 통해 클라우드 기능을 Windows 10 장치로 확장](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-overview/)
   
 - [도메인에 가입 된 장치를 Windows 10 용 Azure AD 환경에 연결](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-devices-group-policy/)
   
@@ -63,7 +62,7 @@ Azure Active Directory 조인을 회사 및 개인 디바이스에 대 한 향�
   
 이점:  
   
-- **최신 설정을 사용할** 회사 소유 Windows 디바이스에 있습니다. 산소 Services에는 더 이상 개인 Microsoft 계정 필요 하지 않습니다. 이제 사용자의 기존 회사 계정을 사용 하 여 규정 준수를 보장 합니다. 산소 Services는 온-프레미스 Windows 도메인에 가입한 Pc와, Azure AD 테 넌 트에 "가입" 된 Pc 및 장치 ("클라우드 도메인")에서 작동 합니다. 이러한 설정은 다음과 같습니다.  
+- **최신 설정을 사용할** 회사 소유 Windows 장치에 있습니다. 산소 Services에는 더 이상 개인 Microsoft 계정 필요 하지 않습니다. 이제 사용자의 기존 회사 계정을 사용 하 여 규정 준수를 보장 합니다. 산소 Services는 온-프레미스 Windows 도메인에 가입한 Pc와, Azure AD 테 넌 트에 "가입" 된 Pc 및 장치 ("클라우드 도메인")에서 작동 합니다. 이러한 설정은 다음과 같습니다.  
 
    - 로밍 또는 개인 설정, 내게 필요한 옵션 설정 및 자격 증명  
    - 백업 및 복원  
@@ -72,11 +71,11 @@ Azure Active Directory 조인을 회사 및 개인 디바이스에 대 한 향�
   
 - 회사 소유 또는 BYOD와 상관 없이 Windows 도메인에 조인할 수 없는 모바일 장치 (휴대폰, phablets)의 **조직 리소스에 액세스** 합니다.  
 - **Single Sign On** Office 365 및 기타 조직 앱, 웹 사이트 및 리소스에 있습니다.  
-- **BYOD 디바이스**, 개인 소유 디바이스에 회사 계정 (온-프레미스 도메인 또는 Azure AD)에서 추가 하 고는 유지할 규정 준수 증명과 조건부 계정 제어 및 디바이스 상태 같은 새로운 기능을 사용 하는 방법에서 리소스, 앱 및 웹에서 작업 하는 SSO를 이용할 수 있습니다.  
-- **MDM 통합** 디바이스에 MDM (Intune 또는 제 3 자)를 자동으로 등록 하면  
-- **"키오스크" 모드를 설정 하 고 공유 디바이스** 조직에서 여러 사용자에 대 한  
+- **BYOD 장치**, 개인 소유 장치에 회사 계정 (온-프레미스 도메인 또는 Azure AD)에서 추가 하 고는 유지할 규정 준수 증명과 조건부 계정 제어 및 장치 상태 같은 새로운 기능을 사용 하는 방법에서 리소스, 앱 및 웹에서 작업 하는 SSO를 이용할 수 있습니다.  
+- **MDM 통합** 장치에 MDM (Intune 또는 제 3 자)를 자동으로 등록 하면  
+- **"키오스크" 모드를 설정 하 고 공유 장치** 조직에서 여러 사용자에 대 한  
 - **개발자 환경을** 기업 및 개인 컨텍스트 공유 프로그래밍 스택을를 모두 제공 하는 앱을 빌드할 수 있습니다.  
-- **이미징** 옵션을 사용 하는 첫 실행 경험 동안 직접 회사 소유의 디바이스를 구성 하 고 사용자가 허용 하는 이미징 중에서 선택할 수 있습니다.  
+- **이미징** 옵션을 사용 하는 첫 실행 경험 동안 직접 회사 소유의 장치를 구성 하 고 사용자가 허용 하는 이미징 중에서 선택할 수 있습니다.  
   
 자세한 내용은 [Azure Active Directory의 장치 관리 소개](https://docs.microsoft.com/azure/active-directory/devices/overview)를 참조 하세요.  
   

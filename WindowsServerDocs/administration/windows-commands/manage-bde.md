@@ -1,24 +1,20 @@
 ---
 title: manage-bde
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 276a7841-7289-48d4-a57d-bc7c300affbb
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7ca23e5f4499672f1e4bfcca6b9ad27f4e84039b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 816e20152ec40ce54c1192f3075c6f4556aed3db
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71373771"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80839696"
 ---
 # <a name="manage-bde"></a>manage-bde
 
@@ -33,7 +29,7 @@ manage-bde [-status] [–on] [–off] [–pause] [–resume] [–lock] [–unloc
 [–SetIdentifier] [-ForceRecovery] [–changepassword] [–changepin] [–changekey] [-KeyPackage] [–upgrade] [-WipeFreeSpace] [{-?|/?}] [{-help|-h}]
 ```
 
-### <a name="parameters"></a>매개 변수
+#### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
@@ -58,7 +54,7 @@ manage-bde [-status] [–on] [–off] [–pause] [–resume] [–lock] [–unloc
 |-? 또는 /?|도움말에 대 한 간단한 명령 프롬프트에 표시 됩니다.|
 |-help 또는-h|명령 프롬프트에서 전체 도움말을 표시 합니다.|
 
-## <a name="BKMK_Examples"></a>예와
+## <a name="examples"></a><a name=BKMK_Examples></a>예와
 
 다음 예제에서는 컴퓨터의 드라이브를 표시 하 고 식별 BitLocker로 보호 되는 여부 및 현재 암호화 상태입니다.
 ```
@@ -73,7 +69,7 @@ manage-bde –on C: -recoverypassword
 manage-bde –unlock E: -recoverypassword 111111-222222-333333-444444-555555-666666-777777-888888
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
--   [명령줄 구문 키](command-line-syntax-key.md)
+-   - [명령줄 구문 키](command-line-syntax-key.md)
 -   [명령줄을 사용 하 여 BitLocker 사용](https://technet.microsoft.com/library/dd894351(v=ws.10).aspx)

@@ -1,7 +1,6 @@
 ---
 ms.assetid: eb778f63-f7be-438e-8c5e-1fd9b194b967
 title: 웹 SSO 디자인
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,16 +8,16 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: d7f52cd36588a1e5de4536a760c38c147dd1e003
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 47c946ac617cc64c224c1bc3153fcaf55c2d069c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407831"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858516"
 ---
 # <a name="web-sso-design"></a>웹 SSO 디자인
 
-Active Directory Federation Services \(AD FS\)의 SSO\) 디자인에서 웹 Single\-Sign \(\-에서 한 번만 인증 해야 AD FS 보안 응용 프로그램 또는 서비스에 액세스할 수 있습니다.\- 이 디자인에서 모든 사용자는 외부 사용자이며, 파트너 조직이 없기 때문에 페더레이션 트러스트가 없습니다. 일반적으로 다음 그림에 나와 있는 것 처럼 인터넷을 통해 하나 이상의 AD FS 보안 서비스 또는 응용 프로그램에 대 한 개별 소비자 또는 고객 액세스를 제공 하려는 경우이 디자인을 배포 합니다.  
+Active Directory Federation Services \(AD FS\)의 SSO\) 디자인에서 웹 Single\-Sign \(\-에서 한 번만 인증 해야 AD FS 보안 응용 프로그램 또는 서비스에 액세스할 수 있습니다.\- 이 디자인에서 모든 사용자는 외부 사용자이며, 파트너 조직이 없기 때문에 페더레이션 트러스트가 없습니다. 일반적으로 다음 그림에 나와 있는 것 처럼 인터넷을 통해 하나 이상의 AD FS 보안 서비스 또는 애플리케이션에 대 한 개별 소비자 또는 고객 액세스를 제공 하려는 경우이 디자인을 배포 합니다.  
   
 ![웹 sso 디자인](media/adfs2_WebSSODesign.gif)  
   

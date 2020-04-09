@@ -1,18 +1,18 @@
 ---
 title: 호스트 보호자 서비스 관리
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: eecb002e-6ae5-4075-9a83-2bbcee2a891c
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
-ms.openlocfilehash: 41912c90beacbb0c0c285ea4da8305c1afdf2a51
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: 2eb9107427ff005c1b3c27e7064d677429d817ee
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79322605"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856556"
 ---
 # <a name="managing-the-host-guardian-service"></a>호스트 보호자 서비스 관리
 
@@ -138,7 +138,7 @@ HGS의 이벤트는 Windows 이벤트 로그에 2 개 원본으로 표시 됩니
 
 먼저 HGS가 백업 하는 데 중요 한 사항을 이해 하는 것이 중요 합니다.
 HGS는 보호 된 Vm을 실행할 수 있는 권한이 있는 호스트를 결정 하는 데 도움이 되는 몇 가지 정보를 유지 합니다.
-다음을 포함합니다.
+여기에는 다음이 포함됩니다.
 1. Active Directory 증명을 사용 하는 경우 신뢰할 수 있는 호스트를 포함 하는 그룹에 대 한 보안 식별자를 Active Directory 합니다.
 2. 사용자 환경에 있는 각 호스트의 고유한 TPM 식별자
 3. 호스트의 각 고유 구성에 대 한 TPM 정책 하거나
@@ -706,7 +706,7 @@ HGS 노드에서 다음 단계를 수행 하 여 새 쌍의 암호화 및 서명
    $updatedKP = Get-Content -Path .\updatedVM001.kp
    Set-VMKeyProtector -VMName VM001 -KeyProtector $updatedKP
    ```
-12. 마지막으로 VM을 시작 하 고 성공적으로 실행 되는지 확인 합니다.
+12.    마지막으로 VM을 시작 하 고 성공적으로 실행 되는지 확인 합니다.
 
 > [!NOTE]
 > Vm 소유자가 vm에서 잘못 된 키 보호기를 설정 하 고 패브릭에서 VM을 실행할 수 있는 권한을 부여 하지 않는 경우 보호 된 VM을 시작할 수 없습니다.

@@ -1,7 +1,7 @@
 ---
 ms.assetid: b7bf7579-ca53-49e3-a26a-6f9f8690762f
 title: AD FS 및 웹 응용 프로그램 프록시 보안 설정에 대 한 모범 사례
-description: 이 문서에서는 Active Directory Federation Services (AD FS) 및 웹 응용 프로그램 프록시의 보안 계획 및 배포에 대 한 모범 사례를 제공 합니다.
+description: Active Directory Federation Services (AD FS) 및 웹 응용 프로그램 프록시를 안전 하 게 계획 하 고 배포 하는 방법에 대 한 모범 사례입니다.
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 717308a157d7f4a5f54e3aef2e829fbed9f12152
-ms.sourcegitcommit: 1c75e4b3f5895f9fa33efffd06822dca301d4835
+ms.openlocfilehash: 8206ddc43eab7a220a9f0f988c294c627bc8c977
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77517548"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853026"
 ---
 # <a name="best-practices-for-securing-active-directory-federation-services"></a>Active Directory Federation Services 보안에 대 한 모범 사례
 
@@ -83,7 +83,7 @@ Azure AD 및 Office 365 시나리오에 대 한 AD FS 및 WAP만 배포 하는 �
 |/adfs/services/trust/13/usernamemixed|Office 2013 이전 버전의 Office 클라이언트에서 Exchange Online에 사용 되는 2015 업데이트 일 수 있습니다.  이후 클라이언트는 passive \adfs\ls 끝점을 사용 합니다.
 |/adfs/oauth2|이는 AD FS (예: AAD를 통해)에 직접 인증 하도록 구성 된 모든 최신 앱 (예: 프레미스 또는 클라우드에서)에 사용 됩니다.
 |/adfs/services/trust/mex|Office 2013 이전 버전의 Office 클라이언트에서 Exchange Online에 사용 되는 2015 업데이트 일 수 있습니다.  이후 클라이언트는 passive \adfs\ls 끝점을 사용 합니다.
-|/adfs/ls/federationmetadata/2007-06/federationmetadata.xml |수동 흐름에 대 한 요구 사항 그리고 Office 365/Azure AD에서 AD FS 인증서를 확인 하는 데 사용 됩니다.
+|/adfs/ls/federationmetadata/2007-06/federationmetadata.xml    |수동 흐름에 대 한 요구 사항 그리고 Office 365/Azure AD에서 AD FS 인증서를 확인 하는 데 사용 됩니다.
 
 
 다음 PowerShell cmdlet을 사용 하 여 프록시에서 AD FS 끝점을 사용 하지 않도록 설정할 수 있습니다.
@@ -109,11 +109,11 @@ Azure AD 및 Office 365 시나리오에 대 한 AD FS 및 WAP만 배포 하는 �
 페더레이션 서비스 프록시 (WAP의 일부)는 정체 제어를 제공 하 여 많은 요청에서 AD FS 서비스를 보호 합니다.  웹 응용 프로그램 프록시는 웹 응용 프로그램 프록시와 페더레이션 서버 간의 대기 시간으로 검색 된 대로 페더레이션 서버가 오버 로드 되는 경우 외부 클라이언트 인증 요청을 거부 합니다.  이 기능은 기본적으로 권장 되는 대기 시간 임계값 수준으로 구성 됩니다.
 
 #### <a name="to-verify-the-settings-you-can-do-the-following"></a>설정을 확인 하려면 다음을 수행할 수 있습니다.
-1.  웹 응용 프로그램 프록시 컴퓨터에서 관리자 권한 명령 창을 시작합니다.
-2.  %WINDIR%\adfs\config.에서 ADFS 디렉터리로 이동 합니다.
-3.  정체 제어 설정을 기본값에서 '<congestionControl latencyThresholdInMSec="8000" minCongestionWindowSize="64" enabled="true" />'로 변경 합니다.
-4.  파일을 저장하고 닫습니다.
-5.  ' Net stop adfssrv ' 및 ' net start adfssrv '를 실행 하 여 AD FS 서비스를 다시 시작 합니다.
+1.    웹 응용 프로그램 프록시 컴퓨터에서 관리자 권한 명령 창을 시작합니다.
+2.    %WINDIR%\adfs\config.에서 ADFS 디렉터리로 이동 합니다.
+3.    정체 제어 설정을 기본값에서 '<congestionControl latencyThresholdInMSec="8000" minCongestionWindowSize="64" enabled="true" />'로 변경 합니다.
+4.    파일을 저장한 후 닫습니다.
+5.    ' Net stop adfssrv ' 및 ' net start adfssrv '를 실행 하 여 AD FS 서비스를 다시 시작 합니다.
 참조용으로이 기능에 대 한 지침은 [여기](https://msdn.microsoft.com/library/azure/dn528859.aspx )에서 찾을 수 있습니다.
 
 ### <a name="standard-http-request-checks-at-the-proxy"></a>프록시에서 표준 HTTP 요청 검사
@@ -124,7 +124,7 @@ Azure AD 및 Office 365 시나리오에 대 한 AD FS 및 WAP만 배포 하는 �
 - FS-P는 AD FS 서비스에 필요 하지 않은 HTTP 헤더를 특별히 필터링 하는 HTTP 요청 유효성 검사를 수행 합니다.
 
 ## <a name="recommended-security-configurations"></a>권장 보안 구성
-모든 AD FS 및 WAP 서버가 최신 업데이트를 수신 하는지 확인 AD FS 인프라의 가장 중요 한 보안 권장 사항은 모든 보안 업데이트와 함께 AD FS 및 WAP 서버를 최신 상태로 유지 하 고 해당 옵션을 선택 하는 것이 좋습니다. 이 페이지의 AD FS에 대 한 업데이트를 중요 한 것으로 지정 합니다.
+모든 AD FS 및 WAP 서버가 최신 업데이트를 수신 하는지 확인 AD FS 인프라의 가장 중요 한 보안 권장 사항은 모든 보안 업데이트를 사용 하 여 AD FS 및 WAP 서버를 최신 상태로 유지 하 고이 페이지의 AD FS에 중요 한 것으로 지정 된 선택적 업데이트를 유지 하는 수단을 제공 하는 것입니다.
 
 Azure AD 고객이 인프라를 모니터링 하 고 최신 상태로 유지 하는 데 권장 되는 방법은 Azure AD Premium의 기능인 AD FS에 대 한 Azure AD Connect Health를 통하는 것입니다.  Azure AD Connect Health에는 AD FS 또는 WAP 컴퓨터에 AD FS 및 WAP 전용 중요 업데이트 중 하나가 없는 경우 트리거되는 모니터 및 경고가 포함 되어 있습니다.
 
@@ -162,7 +162,7 @@ AD FS에는 프록시를 통해 인터넷에서 들어오는 로컬, 회사 네�
 
     PS:\>Install-AdfsFarm -CertificateThumbprint <String> -DecryptionCertificateThumbprint <String> -FederationServiceName <String> -ServiceAccountCredential <PSCredential> -SigningCertificateThumbprint <String>
 
-각 항목이 나타내는 의미는 다음과 같습니다.
+여기서
 
 
 - SSL 인증서 `CertificateThumbprint`

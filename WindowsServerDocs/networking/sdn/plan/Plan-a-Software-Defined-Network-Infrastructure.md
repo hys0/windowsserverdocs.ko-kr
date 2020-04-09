@@ -1,25 +1,20 @@
 ---
 title: 소프트웨어 정의 네트워크 인프라 계획
 description: 이 항목에서는 SDN (소프트웨어 정의 네트워크) 인프라 배포를 계획 하는 방법에 대 한 정보를 제공 합니다.
-manager: dougkim
-ms.custom: na
+manager: grcusanz
 ms.prod: windows-server
-ms.reviewer: na
-ms.service: virtual-network
-ms.suite: na
 ms.technology: networking-sdn
-ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: ea7e53c8-11ec-410b-b287-897c7aaafb13
-ms.author: lizross
-author: eross-msft
+ms.author: anpaul
+author: AnirbanPaul
 ms.date: 08/10/2018
-ms.openlocfilehash: 83f94d3770c475fca7f5d4b8cc2f5a5ade1a20d7
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 1542ff2c81ec0b6b4bc598dd5039578a67d0fc3e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80317461"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854406"
 ---
 # <a name="plan-a-software-defined-network-infrastructure"></a>소프트웨어 정의 네트워크 인프라 계획
 
@@ -96,9 +91,9 @@ Microsoft SDN 배포에서 네트워크를 가상화 하는 데 사용할 수 �
 |    관리    | 10.184.108.0 |    24    |          7           | 10.184.108.1 | 10.184.108.1 – 라우터 10.184.108.4-네트워크 컨트롤러 10.184.108.10-계산 호스트 110.184.108.11-계산 호스트 210.184.108-계산 호스트 X |
 |   HNV 공급자   |  10.10.56.0  |    23    |          11          |  10.10.56.1  |                                                    10.10.56.1 – 라우터 10.10.56.2-SLB/MUX1                                                     |
 |     전환      |  10.10.10.0  |    24    |          10          |  10.10.10.1  |                                                               10.10.10.1 – 라우터                                                               |
-|    공용 VIP    |  41.40.40.0  |    27    |          NA          |  41.40.40.1  |                                    41.40.40.1 – router 41.40.40.2-SLB/MUX VIP 41.40.40.3-IPSec S2S VPN VIP                                    |
-|   개인 VIP    |  20.20.20.0  |    27    |          NA          |  20.20.20.1  |                                                        20.20.20.1-기본 GW (라우터)                                                         |
-|     GRE VIP      |  31.30.30.0  |    24    |          NA          |  31.30.30.1  |                                                             31.30.30.1-기본 GW                                                             |
+|    공용 VIP    |  41.40.40.0  |    27    |          해당 없음          |  41.40.40.1  |                                    41.40.40.1 – router 41.40.40.2-SLB/MUX VIP 41.40.40.3-IPSec S2S VPN VIP                                    |
+|   개인 VIP    |  20.20.20.0  |    27    |          해당 없음          |  20.20.20.1  |                                                        20.20.20.1-기본 GW (라우터)                                                         |
+|     GRE VIP      |  31.30.30.0  |    24    |          해당 없음          |  31.30.30.1  |                                                             31.30.30.1-기본 GW                                                             |
 
 ---
 
@@ -225,7 +220,7 @@ VXLAN 또는 NVGRE 캡슐화 헤더에 의해 발생 하는 테 넌 트 가상 �
 실제 스위치 또는 라우터를 구성 하는 데 도움이 되도록 다양 한 스위치 모델 및 공급 업체에 대 한 샘플 구성 파일 집합을 [MICROSOFT SDN Github 리포지토리에서](https://github.com/microsoft/SDN/tree/master/SwitchConfigExamples)사용할 수 있습니다. 특정 스위치에 대 한 자세한 추가 정보 및 테스트 된 CLI (명령줄 인터페이스) 명령이 제공 됩니다.         
 
 
-## <a name="compute"></a>컴퓨팅  
+## <a name="compute"></a>계산  
 모든 Hyper-v 호스트에는 Windows Server 2016을 설치 하 고, Hyper-v를 사용 하도록 설정 하 고, 관리 논리 네트워크에 연결 된 하나 이상의 실제 어댑터를 사용 하 여 만든 외부 Hyper-v 가상 스위치가 있어야 합니다. 호스트는 관리 호스트 vNIC에 할당 된 관리 IP 주소를 통해 연결할 수 있어야 합니다.  
 
 Hyper-v와 호환 되는 모든 저장소 유형 (공유 또는 로컬)을 사용할 수 있습니다.   
@@ -238,7 +233,7 @@ Hyper-v와 호환 되는 모든 저장소 유형 (공유 또는 로컬)을 사�
 
 Host|하드웨어 요구 사항|소프트웨어 요구 사항|  
 --------|-------------------------|-------------------------  
-|실제 Hyper-v 호스트|4 코어 2.66 g h z CPU<br /><br />32GB RAM<br /><br />300 g b의 디스크 공간<br /><br />1gb/s (또는 더 빠른) 실제 네트워크 어댑터|OS: Windows Server 2016<br /><br />설치 된 hyper-v 역할|  
+|실제 Hyper-v 호스트|4 코어 2.66 g h z CPU<p>32GB RAM<p>300 g b의 디스크 공간<p>1gb/s (또는 더 빠른) 실제 네트워크 어댑터|OS: Windows Server 2016<p>설치 된 hyper-v 역할|  
 
 
 **SDN 인프라 가상 컴퓨터 역할 요구 사항**  
@@ -247,8 +242,8 @@ Role|vCPU 요구 사항|메모리 요구 사항|디스크 요구 사항|
 --------|---------------------|-----------------------|---------------------  
 |네트워크 컨트롤러 (3 개 노드)|4 개 vCPUs|4gb 분 (8gb 권장)|OS 드라이브의 75 GB  
 |SLB/MUX (3 개 노드)|vCPUs 8 개|8gb 권장|OS 드라이브의 75 GB  
-|RAS 게이트웨이<br /><br />(세 개의 노드 게이트웨이의 단일 풀, 두 개의 활성, 하나의 수동)|vCPUs 8 개|8gb 권장|OS 드라이브의 75 GB  
-|SLB/MUX 피어 링 용 RAS 게이트웨이 BGP 라우터<br /><br />(또는를 BGP 라우터로 사용 합니다.)|2 개 vCPUs|2GB|OS 드라이브의 75 GB|  
+|RAS 게이트웨이<p>(세 개의 노드 게이트웨이의 단일 풀, 두 개의 활성, 하나의 수동)|vCPUs 8 개|8gb 권장|OS 드라이브의 75 GB  
+|SLB/MUX 피어 링 용 RAS 게이트웨이 BGP 라우터<p>(또는를 BGP 라우터로 사용 합니다.)|2 개 vCPUs|2GB|OS 드라이브의 75 GB|  
 
 
 배포에 VMM을 사용 하는 경우 VMM 및 기타 비 SDN 인프라에 추가 인프라 가상 컴퓨터 리소스가 필요 합니다. 자세한 내용은 [System Center Technical Preview에 대 한 최소 하드웨어 권장 사항](https://technet.microsoft.com/library/dn997303.aspx) 을 참조 하세요.  
@@ -259,7 +254,7 @@ Role|vCPU 요구 사항|메모리 요구 사항|디스크 요구 사항|
 테 넌 트 워크 로드 가상 컴퓨터가 실제 Hyper-v 호스트에서 너무 많은 리소스를 사용 하기 시작 하면 실제 호스트를 더 추가 하 여 인프라를 확장할 수 있습니다. 이 작업은 Virtual Machine Manager 또는 PowerShell 스크립트를 사용 하 여 수행할 수 있습니다 (인프라를 처음 배포 하는 방법에 따라) 하 여 네트워크 컨트롤러를 통해 새 서버 리소스를 만듭니다. HNV 공급자 네트워크에 대 한 추가 IP 주소를 추가 해야 하는 경우 호스트에서 사용할 수 있는 새 논리 서브넷 (해당 IP 풀 포함)을 만들 수 있습니다.  
 
 
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [네트워크 컨트롤러 배포를 위한 설치 및 준비 요구 사항](Installation-and-Preparation-Requirements-for-Deploying-Network-Controller.md)  
 [소프트웨어 정의 네트워킹 &#40;SDN&#41;](../Software-Defined-Networking--SDN-.md)  
 

@@ -1,24 +1,20 @@
 ---
 title: Windows Server 용 windows Defender 개요
 description: Windows Server 보안
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-windows-defender
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 751efb33-a08e-4e90-9208-6f2bc319e029
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: 238f7b2eeb9ce8364784a9222ccef77be8edd1de
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 0eb88a0ad80de1060971b6de5e0c5ba313ce0fad
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403242"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855066"
 ---
 # <a name="windows-defender-antivirus-for-windows-server"></a>Windows Server 용 windows Defender 바이러스 백신
 

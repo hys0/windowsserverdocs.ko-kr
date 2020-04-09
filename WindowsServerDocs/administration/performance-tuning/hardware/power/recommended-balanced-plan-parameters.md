@@ -4,15 +4,15 @@ description: 빠른 응답 시간에 대 한 권장 분산 전원 계획 매개 
 ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author: Qizha;TristanB
+ms.author: qizha;tristanb
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 96037a577c9f2a835e9c49bf9339ed8dc6da1a6b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 288746b5361c550e167f64886a929c96c81ff8d0
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71383506"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80851966"
 ---
 # <a name="recommended-balanced-power-plan-parameters-for-workloads-requiring-quick-response-times"></a>빠른 응답 시간이 필요한 워크 로드에 대해 권장 되는 분산 전원 계획 매개 변수
 
@@ -21,7 +21,7 @@ ms.locfileid: "71383506"
 그러나 사용률이 증가 함에 **따라 응답 시간이** 급격히 늘어날 수 있습니다. 오늘날 빠른 응답 시간에 대 한 요구 사항이 크게 증가 했습니다. Microsoft에서 사용자에 게 빠른 응답 시간이 필요한 경우 **고성능** 전원 계획으로 전환 하는 것을 제안 했지만, 일부 사용자는 보통 부하 수준에 대 한 전력 혜택을 잃지 않으려고 합니다. 따라서 Microsoft는 빠른 응답 시간이 필요한 워크 로드에 대해 다음과 같은 권장 매개 변수 변경 집합을 제공 합니다.
 
 
-| 매개 변수 | 설명 | Default Value | 제안 된 값 |
+| 매개 변수 | 설명 | 기본값 | 제안 된 값 |
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 프로세서 성능 증가 임계값 | 빈도가 증가 하는 임계값을 초과 하는 사용률 임계값 | 90 | 60 |
 | 프로세서 성능 감소 임계값 | 빈도가 감소 되는 사용률 임계값 | 80 | 40 |

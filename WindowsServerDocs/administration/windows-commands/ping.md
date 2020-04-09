@@ -1,24 +1,20 @@
 ---
 title: ping
 description: Ping을 사용 하 여 네트워크 연결을 확인 합니다.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 49272671-2eec-4fa5-881f-65c24cfbef52
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 7d9841c12d403d91e14021ff9df65246d322debd
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: c9e03b45d889bcac87bd3e533ab69c7a07be74ee
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71372312"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80837556"
 ---
 # <a name="ping"></a>ping
 
@@ -32,12 +28,12 @@ ms.locfileid: "71372312"
 ping [/t] [/a] [/n <Count>] [/l <Size>] [/f] [/I <TTL>] [/v <TOS>] [/r <Count>] [/s <Count>] [{/j <Hostlist> | /k <Hostlist>}] [/w <timeout>] [/R] [/S <Srcaddr>] [/4] [/6] <TargetName>
 ```
 
-### <a name="parameters"></a>매개 변수
+#### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |-------|--------|
 |/t|Ping이 중단 될 때까지 대상에 에코 요청 메시지를 계속 보내도록 지정 합니다. 통계를 중단 하 고 표시 하려면 CTRL + break를 누릅니다. **Ping**을 중단 하 고 종료 하려면 Ctrl + C를 누릅니다.|
-|/ a|대상 IP 주소에 대해 역방향 이름 확인을 수행 하도록 지정 합니다. 성공할 경우 ping은 해당 호스트 이름을 표시 합니다.|
+|/a|대상 IP 주소에 대해 역방향 이름 확인을 수행 하도록 지정 합니다. 성공할 경우 ping은 해당 호스트 이름을 표시 합니다.|
 |/n \<개수\>|전송 된 echo Request 메시지의 수를 지정 합니다. 기본값은 4입니다.|
 |/l \<크기\>|전송 된 에코 요청 메시지에 있는 데이터 필드의 길이 (바이트)를 지정 합니다. 기본값은 32입니다. 최대 크기는 65527입니다.|
 |/f|IP 헤더에서 1로 설정 된 IP 헤더의 Do not Fragment 플래그를 사용 하 여 에코 요청 메시지를 보내도록 지정 합니다 (IPv4 에서만 사용 가능). 에코 요청 메시지는 대상 경로에 있는 라우터로 조각화 할 수 없습니다. 이 매개 변수는 PMTU (경로 최대 전송 단위) 문제를 해결 하는 데 유용 합니다.|
@@ -55,12 +51,12 @@ ping [/t] [/a] [/n <Count>] [/l <Size>] [/f] [/I <TTL>] [/v <TOS>] [/r <Count>] 
 |\<TargetName\>|대상의 호스트 이름 또는 IP 주소를 지정 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 -   **Ping** 을 사용 하 여 컴퓨터 이름과 컴퓨터의 IP 주소를 모두 테스트할 수 있습니다. IP 주소를 ping 하는 데 성공 했지만 컴퓨터 이름 ping을 수행할 수 없는 경우 이름 확인 문제가 있을 수 있습니다. 이 경우 DNS (Domain Name System) 쿼리를 사용 하거나 NetBIOS 이름 확인 기술을 통해 지정 하는 컴퓨터 이름을 로컬 호스트 파일을 통해 확인할 수 있는지 확인 합니다.
 -   이 명령은 네트워크 연결에서 네트워크 어댑터의 속성에 구성 요소로 인터넷 프로토콜 (TCP/IP) 프로토콜을 설치 하는 경우에 사용할 수입니다.
 
-## <a name="BKMK_Examples"></a>예와
+## <a name="examples"></a><a name="BKMK_Examples"></a>예와
 
 다음 예에서는 **ping** 명령 출력을 보여 줍니다.
 
@@ -98,4 +94,4 @@ ping /j 10.12.0.1 10.29.3.1 10.1.44.1 10.0.99.221
 ```
 
 ## <a name="additional-references"></a>추가 참조
--   [명령줄 구문 키](command-line-syntax-key.md)
+-   - [명령줄 구문 키](command-line-syntax-key.md)

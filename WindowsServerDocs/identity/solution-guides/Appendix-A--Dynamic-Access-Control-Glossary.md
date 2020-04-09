@@ -1,7 +1,6 @@
 ---
 ms.assetid: 7f6b27e5-dc55-4ffc-8e76-6d57e65a870b
 title: 부록 A 동적 Access Control 용어집
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 5508c3397039a1a70c07f1dc5f29e06bd02234a0
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 328d8c74e57150c94d0a6032ff88a3600fe0baf3
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71357613"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859286"
 ---
 # <a name="appendix-a-dynamic-access-control-glossary"></a>부록 A: 동적 액세스 제어 용어
 

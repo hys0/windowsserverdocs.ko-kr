@@ -1,30 +1,26 @@
 ---
 title: Diskpart 스크립트 및 예제
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: 'Diskpart 스크립트 및 디스크 관련 작업을 자동화 하는 방법에 대 한 예를 보여 주는 Windows 명령 항목 (예: 볼륨 만들기 또는 동적 디스크로 디스크 변환)을 참조 하십시오.'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 319c0795-11df-47c8-b203-eadb0577ee0d
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9c40ce79664795297af4369e35cbda7422617e6e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: bdfa35e8597479f32bc9bd854549cb3f74e4c0d3
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71377846"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80845496"
 ---
 # <a name="diskpart-scripts-and-examples"></a>Diskpart 스크립트 및 예제
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Diskpart `/s`를 사용 하 여 볼륨을 만들거나 동적 디스크로 디스크를 변환 하는 등 디스크\-관련 작업을 자동화 하는 스크립트를 실행할 수 있습니다. 이러한 작업은 부팅 볼륨이 아닌 볼륨 만들기를 지원 하지 않는 무인 설치 또는 Sysprep 도구를 사용 하 여 Windows를 배포 하는 경우에 유용 합니다.  
+Diskpart `/s`를 사용 하 여 볼륨을 만들거나 동적 디스크로 디스크를 변환 하는 등의 디스크 관련 작업을 자동화 하는 스크립트를 실행할 수 있습니다. 이러한 작업은 부팅 볼륨이 아닌 볼륨 만들기를 지원 하지 않는 무인 설치 또는 Sysprep 도구를 사용 하 여 Windows를 배포 하는 경우에 유용 합니다.  
   
 -   Diskpart 스크립트를 만들려면 실행할 Diskpart 명령이 포함 된 텍스트 파일을 만듭니다. 한 줄에 한 개의 명령만 있으면 빈 줄이 없습니다. `rem` 줄을 시작 하 여 줄을 주석으로 만들 수 있습니다.  
   
@@ -35,8 +31,8 @@ Diskpart `/s`를 사용 하 여 볼륨을 만들거나 동적 디스크로 디�
     clean  
     convert gpt  
     create partition primary size=300  
-    format quick fs=ntfs label="Windows RE tools"  
-    assign letter="T"  
+    format quick fs=ntfs label=Windows RE tools  
+    assign letter=T  
     ```  
   
 -   DiskPart 스크립트를 실행 하려면 명령 프롬프트에서 다음 명령을 입력 합니다. 여기서 *scriptname* 은 스크립트를 포함 하는 텍스트 파일의 이름입니다.  
@@ -56,9 +52,10 @@ Diskpart `/s`를 사용 하 여 볼륨을 만들거나 동적 디스크로 디�
   
 DiskPart가 시작 되 면 명령 프롬프트에 DiskPart 버전 및 컴퓨터 이름이 표시 됩니다. 기본적으로 스크립팅된 태스크를 수행 하는 동안 DiskPart에 오류가 발생 하는 경우 DiskPart는 스크립트 처리를 중지 하 고\)**noerr** 매개 변수를 지정 하지 않으면 오류 코드 \(표시 합니다. 그러나 DiskPart **는 매개 변수를 사용** 했는지 여부에 관계 없이 구문 오류가 발생할 경우 항상 오류를 반환 합니다. **Noerr** 매개 변수를 사용 하면 총 디스크 수에 관계 없이 단일 스크립트를 사용 하 여 모든 디스크의 모든 파티션을 삭제 하는 것과 같은 유용한 작업을 수행할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
-[샘플: Windows PE 및 DiskPart를 사용 하 여 UEFI\/gpt\-기반 하드 드라이브 파티션 구성](https://technet.microsoft.com/library/hh825686.aspx)  
-[샘플: Windows PE 및 DiskPart를 사용 하 여 BIOS\/MBR\-기반 하드 디스크 파티션 구성](https://technet.microsoft.com/library/hh825677.aspx)  
-[Windows PowerShell의 저장소 Cmdlet](https://technet.microsoft.com/library/hh848705.aspx)  
+## <a name="additional-references"></a>추가 참조
+  
+- [샘플: Windows PE 및 DiskPart를 사용 하 여 UEFI\/gpt\-기반 하드 드라이브 파티션 구성](https://technet.microsoft.com/library/hh825686.aspx)  
+- [샘플: Windows PE 및 DiskPart를 사용 하 여 BIOS\/MBR\-기반 하드 디스크 파티션 구성](https://technet.microsoft.com/library/hh825677.aspx)  
+- [Windows PowerShell의 저장소 Cmdlet](https://technet.microsoft.com/library/hh848705.aspx)  
   
 

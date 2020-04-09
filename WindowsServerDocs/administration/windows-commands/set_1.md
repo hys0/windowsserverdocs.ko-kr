@@ -1,28 +1,22 @@
 ---
-title: 집합
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+title: set
+description: CMD를 표시, 설정 또는 제거 하는 집합에 대 한 Windows 명령 항목입니다. EXE 환경 변수
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5fdd60d6-addf-4574-8c92-8aa53fa73d76
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 12dce38bf8ad050c65a7a8c0fca4a71267cca93f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 7477caa47ef8f728b2ebe99fe0bbf961888b846e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71384096"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80834396"
 ---
-# <a name="set"></a>집합
-
-
+# <a name="set"></a>set
 
 표시 설정 하거나 명령줄을 제거 합니다. EXE 환경 변수입니다. 매개 변수 없이 사용 하는 경우 **설정** 현재 환경 변수 설정을 표시 합니다.
 
@@ -36,26 +30,26 @@ set [/p] <Variable>=[<PromptString>]
 set /a <Variable>=<Expression>
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
 |\<변수 >|설정 하거나 수정 하는 환경 변수를 지정 합니다.|
 |\<문자열 >|지정된 된 환경 변수와 연결할 문자열을 지정 합니다.|
 |/p|값을 설정 *변수* 사용자가 입력 하는 입력의 줄으로 합니다.|
-|\<PromptString >|선택 사항. 입력에 대 한 사용자에 게 묻는 메시지를 지정 합니다. 이 매개 변수는 함께 사용 되는 **/p** 명령줄 옵션입니다.|
-|/ a|집합 *문자열* 평가 되는 숫자 식입니다.|
+|\<PromptString >|(선택 사항) 입력에 대 한 사용자에 게 묻는 메시지를 지정 합니다. 이 매개 변수는 함께 사용 되는 **/p** 명령줄 옵션입니다.|
+|/a|집합 *문자열* 평가 되는 숫자 식입니다.|
 |\<식 >|숫자 식을 지정합니다. 사용할 수 있는 유효한 연산자에 대 한 설명을 참조 하십시오. *식*합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 - 사용 하 여 **설정** 명령 확장을 사용 하도록 설정
 
   명령 확장을 사용 하는 경우 (기본값) 실행 하 고 **설정** 값을 갖는 모든 표시의 해당 값으로 시작 하는 변수입니다.
 - 특수 문자를 사용 하 여
 
-  문자 **<** , **>** , **|** , **&** , **^** 명령 셸 문자 및 이스케이프 문자 앞 해야 ( **^** ) 따옴표로 묶인에서 사용 될 때 또는 *문자열* (예를 들어 **"StringContaining & 기호"** ). 인용 부호를 사용 하 여 특수 문자 중 하나를 포함 하는 문자열을 묶을 때 따옴표 환경 변수 값의 일부로 설정 됩니다.
+  **<** , **>** , **|** , **&** **^** 문자는 특수 명령 셸 문자 이며, *문자열* (예: **^기호가 포함 된 stringcontaining**에서 사용할 때 이스케이프 문자 ( **&** ) 뒤에 또는 따옴표로 묶어야 합니다. 인용 부호를 사용 하 여 특수 문자 중 하나를 포함 하는 문자열을 묶을 때 따옴표 환경 변수 값의 일부로 설정 됩니다.
 - 환경 변수를 사용 하 여
 
   환경 변수를 사용 하 여 일부 배치 파일이 나 프로그램의 동작을 제어 하 고 방법은 창 및 MS-DOS 제어를 하위 시스템 표시 및 작동 합니다. **설정** 명령은 대개 Autoexec.nt 파일에서 환경 변수를 설정 합니다.
@@ -71,15 +65,15 @@ set /a <Variable>=<Expression>
 
   다음 표에서에 대 한 지원 되는 연산자를 보여 줍니다. **/a** 우선 순위의 내림차순입니다.  
 
-  |        Operator         | 수행 작업  |
+  |        연산자         | 수행 작업  |
   |-------------------------|----------------------|
   |           ( )           |       그룹화       |
   |          ! ~ -          |        단항         |
   |         \*/%          |      산술 연산      |
   |           + -           |      산술 연산      |
-  |          < < > >          |    논리 시프트     |
+  |          << >>          |    논리 시프트     |
   |            &            |     비트 AND      |
-  |            ^            | 비트 배타적 OR |
+  |            ^            | 배타적 비트 OR |
   |                         |                      |
   | = \*=/=% = + =-= & = ^ = |      = < < = > > =       |
   |            ,            | 식 구분 기호 |
@@ -105,7 +99,7 @@ set /a <Variable>=<Expression>
 
   **설정** 다른 매개 변수와 함께 명령을 복구 콘솔에서 사용할 수 있습니다.
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
 TEST 라는 환경 변수를 설정 하려면 ^1, 유형:
 ```
@@ -115,11 +109,11 @@ set testVar=test^^1
 > [!NOTE]
 > **설정** 명령은 변수의 값에 등호 (=) 뒤에 오는 모든 항목을 할당 합니다. 입력 하는 경우:
 > ```
-> set testVar="test^1"
+> set testVar=test^1
 > ```
 > 다음과 같은 결과 얻게 됩니다.
 > ```
-> testVar="test^1"
+> testVar=test^1
 > ```
 > 환경 변수 설정 라는를 TEST & 1 유형:
 > ```
@@ -135,7 +129,7 @@ set testVar=test^^1
 > ```
 > 이 명령이 처리 되는 경우 해당 문자열 C:\Inc 대체 **% % 포함**합니다.
 
-사용할 수도 있습니다 **설정** 새 디렉터리를 PATH 환경 변수에 추가 하는 일괄 프로그램입니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+사용할 수도 있습니다 **설정** 새 디렉터리를 PATH 환경 변수에 추가 하는 일괄 프로그램입니다. 예를 들면 다음과 같습니다.
 ```
 @echo off
 rem ADDPATH.BAT adds a new directory
@@ -151,6 +145,6 @@ set p
 > [!NOTE]
 > 이 명령은 기본적으로 사용 하도록 설정 된 명령 확장 필요 합니다.
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

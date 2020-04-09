@@ -2,24 +2,23 @@
 title: 프로덕션 환경에서 서버 작업을 실행 하는 가상 컴퓨터에서 가상 하드 디스크를 차이점 보관용 VHD 포맷을 사용 하지 마십시오
 description: 이 모범 사례 분석기 규칙에 대 한 텍스트의 온라인 버전입니다.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 272de33d-2708-4679-8564-ee28848a2839
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: 7b6bee685a72f8f9af2e16ffe7ac5cc1e1f22a4f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: a11959266db4c9f3da73123c41a211198f27b9a5
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71366427"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857726"
 ---
 # <a name="avoid-using-vhd-format-differencing-virtual-hard-disks-on-virtual-machines-that-run-server-workloads-in-a-production-environment"></a>프로덕션 환경에서 서버 작업을 실행 하는 가상 컴퓨터에서 가상 하드 디스크를 차이점 보관용 VHD 포맷을 사용 하지 마십시오
 
->적용 대상: Windows Server 2016
+>적용 대상: Windows Server 2016
 
 모범 사례 분석기 및 검사에 대한 자세한 내용은 [모범 사례 분석기 검사 실행 및 검사 결과 관리](https://go.microsoft.com/fwlink/p/?LinkID=223177)를 참조하세요.  
   
@@ -27,12 +26,12 @@ ms.locfileid: "71366427"
 |-|-|  
 |**운영 체제**|Windows Server 2016|  
 |**제품/기능**|Hyper-V|  
-|**Severity**|경고|  
-|**범주**|Configuration|  
+|**등급**|경고|  
+|**범주**|구성|  
   
 다음 섹션에서는 기울임꼴이이 문제에 대 한 모범 사례 분석기 도구에 표시 되는 UI 텍스트를 나타냅니다.  
   
-## <a name="issue"></a>**문제점**  
+## <a name="issue"></a>**문제**  
 *하나 이상의 가상 컴퓨터에서 VHD 형식의 차이점 보관용 가상 하드 디스크를 사용 합니다.*  
   
 ## <a name="impact"></a>**식**  

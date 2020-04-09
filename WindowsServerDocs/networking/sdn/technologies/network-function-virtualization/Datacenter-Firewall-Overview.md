@@ -1,23 +1,19 @@
 ---
 title: 데이터 센터 방화벽 개요
 description: 이 항목을 사용 하 여 네트워크 계층, 5 튜플 (프로토콜, 원본 및 대상 포트 번호, 원본 및 대상 IP 주소), 상태 저장, Windows Server 2016의 다중 테 넌 트 방화벽 인 데이터 센터 방화벽에 대해 알아볼 수 있습니다.
-manager: brianlic
-ms.custom: na
+manager: grcusanz
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-sdn
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 67576533-206b-428a-956c-ed8c53218d9b
-ms.author: lizross
-author: eross-msft
-ms.openlocfilehash: 141057d2ee3e648f589d255ea04fdef179cedf3c
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.author: anpaul
+author: AnirbanPaul
+ms.openlocfilehash: 2f50ee45d64f6888306a5fb5efc8c9b801a1c3d0
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80317031"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859646"
 ---
 # <a name="datacenter-firewall-overview"></a>데이터 센터 방화벽 개요
 

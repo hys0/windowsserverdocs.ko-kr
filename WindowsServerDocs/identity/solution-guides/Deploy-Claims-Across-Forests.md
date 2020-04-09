@@ -1,7 +1,6 @@
 ---
 ms.assetid: ceb9ce18-5a94-4166-9edd-2685b81fc15f
 title: 포리스트에 클레임 배포
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 21ddcbd3b71a8d623950f1600b654e04ecc41f1e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 99af1022870c891c75bb2008f57e8d8e171961ff
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71357573"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861236"
 ---
 # <a name="deploy-claims-across-forests"></a>포리스트에 클레임 배포
 
@@ -49,7 +48,7 @@ Windows Server 2012에서 클레임 유형은 연결 된 개체에 대 한 어�
   
 -   [클레임 변환 규칙 언어](Claims-Transformation-Rules-Language.md)  
   
-## <a name="BKMK_NEW"></a>이 시나리오에 포함 된 역할 및 기능  
+## <a name="roles-and-features-included-in-this-scenario"></a><a name="BKMK_NEW"></a>이 시나리오에 포함 된 역할 및 기능  
 다음 표에는 이 시나리오에 포함된 역할 및 기능이 나열되어 있으며, 이러한 역할 및 기능이 시나리오를 지원하는 방법에 대한 설명이 나와 있습니다.  
   
 |역할/기능|이 시나리오를 지원하는 방법|  

@@ -1,24 +1,20 @@
 ---
 title: MultiPoint 서비스 사이트 계획
 description: Windows Server 2016에서 MultiPoint 서비스 배포에 대 한 정보 계획
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 063783cd-d748-489e-b175-46eadc993f7a
 author: evaseydl
 manager: scottman
 ms.author: evas
-ms.openlocfilehash: 744e49f47f7144dac82dbe68c885060b0c08490d
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: 1ad91d0e4f3e8de806ff46bf6b83051177025661
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79322795"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853446"
 ---
 # <a name="multipoint-services-site-planning"></a>MultiPoint 서비스 사이트 계획
 MultiPoint 서비스를 실행 하는 하나 이상의 컴퓨터와 연결 된 스테이션이 배포 될 위치를 고려해 야 합니다.  
@@ -148,7 +144,7 @@ LAN 클라이언트에 대 한 실제 거리 제한은 없습니다. LAN에 있�
   
 **강의 실** 이 설정에서 스테이션은 행으로 설정 됩니다. 이 설정의 장점은 모든 학생이 강사에 게 직면 한다는 것입니다.  
   
-![구성된 강의실](./media/WMS_LectureRoom.gif)  
+![강당으로 구성된 강의실](./media/WMS_LectureRoom.gif)  
   
 **활동 센터** 이 설치 프로그램은 책상에 대 한 기존 강의 공간 레이아웃으로 구성 되며 연결 된 스테이션을 사용 하 여 MultiPoint 서비스를 실행 하는 단일 컴퓨터와 별도의 영역이 있습니다.  
   

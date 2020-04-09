@@ -1,20 +1,20 @@
 ---
 title: 네트워크 컨트롤러 보안
 description: 이 항목을 사용 하 여 네트워크 컨트롤러와 기타 소프트웨어 및 장치 간의 모든 통신에 대 한 보안을 구성 하는 방법을 배울 수 있습니다.
-manager: dougkim
+manager: grcusanz
 ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: bc625de9-ee31-40a4-9ad2-7448bfbfb6e6
-ms.author: lizross
-author: eross-msft
+ms.author: anpaul
+author: AnirbanPaul
 ms.date: 08/30/2018
-ms.openlocfilehash: 196a124533b98c6945186ee827494b206028d2c8
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 64bcf94c2e439d7999e96de939962a3a14d1246d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80317407"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854366"
 ---
 # <a name="secure-the-network-controller"></a>네트워크 컨트롤러 보안
 
@@ -51,7 +51,7 @@ ms.locfileid: "80317407"
 _Clientauthentication_ 매개 변수와 함께 Windows PowerShell 명령 **[NetworkController](https://docs.microsoft.com/powershell/module/networkcontroller/install-networkcontroller)** 를 사용 하 여 Northbound 통신에 대 한 인증 모드를 구성할 수 있습니다. 
 
 
-### <a name="authorization"></a>Authorization
+### <a name="authorization"></a>권한 부여
 
 네트워크 컨트롤러 Northbound 통신에 대 한 권한 부여를 구성 하는 경우 네트워크 컨트롤러 클러스터 노드 및 관리 클라이언트에서 통신 하는 데 사용 되는 장치가 신뢰할 수 있고에 참여할 권한이 있는지 확인할 수 있습니다. 통신이.
 
@@ -109,7 +109,7 @@ SSL 인증서는 네트워크 컨트롤러 노드에 수동으로 등록 해야 
 
 3. **없음**. 이 모드를 선택 하면 네트워크 컨트롤러 노드 간에 인증이 수행 되지 않습니다. 이 모드는 테스트 목적 으로만 제공 되며 프로덕션 환경에서 사용 하지 않는 것이 좋습니다.
 
-### <a name="authorization"></a>Authorization
+### <a name="authorization"></a>권한 부여
 
 네트워크 컨트롤러 클러스터 통신에 대 한 권한 부여를 구성 하는 경우 네트워크 컨트롤러 클러스터 노드에서 통신 중인 노드가 신뢰 되 고 통신에 참여할 수 있는 권한이 있는지 확인할 수 있습니다.
 
@@ -154,7 +154,7 @@ Southbound 통신의 경우 다음 프로토콜과 인증 방법이 사용 됩�
 
 2. **WinRM**. 이 프로토콜의 경우 도메인에 가입 된 컴퓨터\) Kerberos \(를 사용 하 고 도메인에 가입 되지 않은 컴퓨터\)에 대해 인증서 \(를 사용 하 여 인증을 수행 합니다.
 
-### <a name="authorization"></a>Authorization
+### <a name="authorization"></a>권한 부여
 
 Southbound 통신의 경우 다음 프로토콜과 권한 부여 방법이 사용 됩니다.
 

@@ -1,24 +1,20 @@
 ---
 title: 키 배포 서비스 KDS 루트 키 만들기
 description: Windows Server 보안
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-gmsa
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 42e5db8f-1516-4d42-be0a-fa932f5588e9
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: fd335d61eae7cf753d09436d54f14c7d6004d643
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d26cd32f021e8b00c6c9c6d3949a00f71096a3c9
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386897"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857016"
 ---
 # <a name="create-the-key-distribution-services-kds-root-key"></a>키 배포 서비스 KDS 루트 키 만들기
 
@@ -65,7 +61,7 @@ DC가 하나뿐인 테스트 환경의 경우 키 생성 대기를 방지하기 
 
     **New-kdsrootkey-EffectiveTime ((가져오기-날짜). addhours (-10))**
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 [그룹 관리 서비스 계정 시작](getting-started-with-group-managed-service-accounts.md)
 
 

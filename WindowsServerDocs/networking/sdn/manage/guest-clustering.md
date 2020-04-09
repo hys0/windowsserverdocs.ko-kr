@@ -1,24 +1,20 @@
 ---
 title: 가상 네트워크에서 게스트 클러스터링
 description: 가상 네트워크에 연결 된 가상 컴퓨터는 네트워크에서 통신 하기 위해 네트워크 컨트롤러가 할당 한 IP 주소만 사용할 수 있습니다.  Microsoft 장애 조치 (Failover) 클러스터링과 같이 부동 IP 주소를 필요로 하는 클러스터링 기술을 제대로 작동 하려면 몇 가지 추가 단계가 필요 합니다.
-manager: dougkim
-ms.custom: na
+manager: grcusanz
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-sdn
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8e9e5c81-aa61-479e-abaf-64c5e95f90dc
 ms.author: grcusanz
-author: eross-msft
+author: AnirbanPaul
 ms.date: 08/26/2018
-ms.openlocfilehash: 200d53d856d4b37daffde0c6213ec4f5eb26773d
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 6889b58f5d49a4932ef8277b11e1002e85606f3f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80317577"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854456"
 ---
 # <a name="guest-clustering-in-a-virtual-network"></a>가상 네트워크에서 게스트 클러스터링
 
@@ -146,7 +142,7 @@ ms.locfileid: "80317577"
    
    $ClusterNetworkName = "Cluster Network 1"
    $IPResourceName =  
-   $ILBIP = “192.168.2.100” 
+   $ILBIP = "192.168.2.100" 
 
    $nodes = @("DB1", "DB2")
    ```

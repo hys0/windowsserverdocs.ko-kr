@@ -2,22 +2,18 @@
 title: 확장 포트 액세스 제어 목록을 사용하여 보안 정책 만들기
 description: 이 항목에서는 Windows Server 2016의 확장 된 포트 Access Control 목록 (Acl)에 대해 설명 합니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-hv-switch
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a92e61c3-f7d4-4e42-8575-79d75d05a218
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 2beb4ec1d78200b5c62d18ffb3f935843bd12ae0
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: e4ea3d118a00a4862ce9eb3f93b079f05cc1cd1b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80308028"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853316"
 ---
 # <a name="create-security-policies-with-extended-port-access-control-lists"></a>확장 포트 액세스 제어 목록을 사용하여 보안 정책 만들기
 
@@ -108,7 +104,7 @@ Hyper-v 가상 스위치 확장 Acl에는 Hyper-v 가상 스위치에 연결 된
   
 |원본 IP|대상 IP|프로토콜|원본 포트|대상 포트|Direction|작업|  
 |-------------|------------------|------------|---------------|--------------------|-------------|----------|  
-|*|*|TCP|*|3389|입력|허용|  
+|*|*|TCP|*|3389|안쪽|허용|  
   
 다음은 Windows PowerShell 명령을 사용하여 규칙을 만들 수 있는 방법에 대한 두 가지 예입니다. 첫 번째 예제에서는 규칙은 "ApplicationServer." 라는 VM에 모든 트래픽을 차단합니다 "ApplicationServer" 라는 VM의 네트워크 어댑터에 적용 되는 두 번째 예제에서는 규칙을 VM에 인바운드 RDP 트래픽만을 허용 합니다.  
   
@@ -129,7 +125,7 @@ Add-VMNetworkAdapterExtendedAcl -VMName "ApplicationServer" -Action "Allow" -Dir
 |-------------|------------------|------------|---------------|--------------------|-------------|----------|  
 |*|주소인|UDP|*|67|바깥쪽|허용|  
 |*|10.175.124.0/25|UDP|*|67|바깥쪽|허용|  
-|10.175.124.0/25|*|UDP|*|68|입력|허용|  
+|10.175.124.0/25|*|UDP|*|68|안쪽|허용|  
   
 다음은 Windows PowerShell 명령을 사용하여 이러한 규칙을 만들 수 있는 방법에 대한 예입니다.  
   
@@ -148,7 +144,7 @@ Add-VMNetworkAdapterExtendedAcl -VMName "ServerName" -Action "Allow" -Direction 
   
 |원본 IP|대상 IP|프로토콜|원본 포트|대상 포트|Direction|작업|  
 |-------------|------------------|------------|---------------|--------------------|-------------|----------|  
-|*|*|0x02|*|*|입력|허용|  
+|*|*|0x02|*|*|안쪽|허용|  
 |*|*|0x02|*|*|바깥쪽|허용|  
   
 다음은 Windows PowerShell 명령을 사용하여 이러한 규칙을 만들 수 있는 방법에 대한 예입니다.  
@@ -190,7 +186,7 @@ Add-VMNetworkAdapterExtendedAcl -VMName "ServerName" -Action "Allow" -Direction 
 |프로토콜|*|*|TCP|  
 |원본 포트|*|*|*|  
 |대상 포트|*|*|80|  
-|Direction|입력|바깥쪽|바깥쪽|  
+|Direction|안쪽|바깥쪽|바깥쪽|  
 |작업|Deny|Deny|허용|  
 |상태 저장|아니요|아니요|예|  
 |시간 제한(초)|N/A|N/A|3600|  

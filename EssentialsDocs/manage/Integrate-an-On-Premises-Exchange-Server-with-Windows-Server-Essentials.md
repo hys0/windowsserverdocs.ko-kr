@@ -1,23 +1,19 @@
 ---
 title: 온-프레미스 Exchange Server와 Windows Server Essentials 통합
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b56a21e2-c9e3-4ba9-97d9-719ea6a0854b
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: f6b9ddfc26f6c939349ef7b1dfc456dc5b770621
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: a18da3e8de1337eb3253725a7c50c1ebed1dc6c7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80311469"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852876"
 ---
 # <a name="integrate-an-on-premises-exchange-server-with-windows-server-essentials"></a>온-프레미스 Exchange Server와 Windows Server Essentials 통합
 
@@ -61,7 +57,7 @@ ms.locfileid: "80311469"
 |         메일         |      호스트(A)       |                                                        Address=*ISP가 할당한 공용 IP 주소*                                                         |                                                                                                                                                                                                   Exchange Server에서 mail.contoso.com으로 주소가 지정된 메일을 받습니다.<br /><br /> 원하는 다른 이름을 사용할 수 있습니다.                                                                                                                                                                                                    |
 |          MX          | MX(메일 교환기) |                                            Hostname=@<br /><br /> Address=mail.contoso.com<br /><br /> Preference=0                                             |                                                                                                                                                                                                      는 Exchange Server를 실행 하는 온-프레미스 서버에 도착할 email@contoso.com의 메일 메시지 라우팅을 제공 합니다.                                                                                                                                                                                                       |
 |         SPF          |     텍스트(TXT)      |                                                                        v=spf1 a mx ~all                                                                         |                                                                                                                                                                                                                      서버에서 보낸 메일이 스팸으로 식별되지 않도록 도와주는 리소스 레코드입니다.                                                                                                                                                                                                                      |
-|  autodiscover._tcp   |    서비스(SRV)    | 서비스: _autodiscover<br /><br /> Protocol: _tcp<br /><br /> 우선 순위: 0<br /><br /> 가중치: 0<br /><br /> 포트: 443<br /><br /> Target host: mail.contoso.com | Microsoft Office Outlook 및 모바일 장치에서 Exchange Server를 실행하는 온-프레미스 서버를 자동으로 검색하도록 해줍니다.<br /><br /> **참고:** 또한 자동 검색 호스트 (A) 리소스 레코드를 구성 하 고 Exchange Server를 실행 하는 온-프레미스 서버의 공용 IP 주소에 대 한 레코드를 가리킬 수 있습니다. 그러나 이 옵션을 구현하려면 mail.contoso.com 및 autodiscover.contoso.com 도메인 이름을 둘 다 지원하는 SAN(주체 대체 이름) SSL 인증서도 제공해야 합니다. |
+|  autodiscover._tcp   |    서비스(SRV)    | 서비스: _autodiscover<br /><br /> Protocol: _tcp<br /><br /> 우선 순위: 0<br /><br /> 가중치: 0<br /><br /> 포트: 443<br /><br /> Target host: mail.contoso.com | Microsoft Office Outlook 및 모바일 디바이스에서 Exchange Server를 실행하는 온-프레미스 서버를 자동으로 검색하도록 해줍니다.<br /><br /> **참고:** 또한 자동 검색 호스트 (A) 리소스 레코드를 구성 하 고 Exchange Server를 실행 하는 온-프레미스 서버의 공용 IP 주소에 대 한 레코드를 가리킬 수 있습니다. 그러나 이 옵션을 구현하려면 mail.contoso.com 및 autodiscover.contoso.com 도메인 이름을 둘 다 지원하는 SAN(주체 대체 이름) SSL 인증서도 제공해야 합니다. |
 
 > [!NOTE]
 >  -   이 예의 *contoso.com* 인스턴스를 등록한 인터넷 도메인 이름으로 바꾸세요.  

@@ -1,24 +1,20 @@
 ---
 title: 소프트웨어 제한 정책 관리
 description: Windows Server 보안
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-software-restriction-policies
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8cc22093-67d1-47b6-9ddd-4569b6761ce9
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: c75c7813041870f79ed95250857a5c7d1576c7dc
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: 88e745b6951ab27f22cc412ee63f792d30775d14
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79322985"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855116"
 ---
 # <a name="administer-software-restriction-policies"></a>소프트웨어 제한 정책 관리
 
@@ -53,7 +49,7 @@ SRP를 사용 하 여 특정 작업을 수행 하는 방법에 대 한 자세한
 
 -   [소프트웨어 제한 정책을 사용 하 여 전자 메일 바이러스 로부터 컴퓨터를 보호 합니다.](use-software-restriction-policies-to-help-protect-your-computer-against-an-email-virus.md)
 
-## <a name="BKMK_Open_SRP"></a>소프트웨어 제한 정책을 열려면
+## <a name="to-open-software-restriction-policies"></a><a name="BKMK_Open_SRP"></a>소프트웨어 제한 정책을 열려면
 
 -   [로컬 컴퓨터의 경우](#BKMK_1)
 
@@ -63,7 +59,7 @@ SRP를 사용 하 여 특정 작업을 수행 하는 방법에 대 한 자세한
 
 -   [사이트의 경우, 원격 서버 관리 도구 설치 된 도메인 컨트롤러 또는 워크스테이션에 있습니다.](#BKMK_4)
 
-### <a name="BKMK_1"></a>로컬 컴퓨터의 경우
+### <a name="for-your-local-computer"></a><a name="BKMK_1"></a>로컬 컴퓨터의 경우
 
 1.  로컬 보안 설정을 엽니다.
 
@@ -76,7 +72,7 @@ SRP를 사용 하 여 특정 작업을 수행 하는 방법에 대 한 자세한
 > [!NOTE]
 > 이 절차를 수행하려면 로컬 컴퓨터에서 Administrators 그룹의 멤버이거나 적절한 권한을 위임 받아야 합니다.
 
-### <a name="BKMK_2"></a>도메인, 사이트 또는 조직 구성 단위의 경우 도메인에 가입 된 워크스테이션 또는 구성원 서버에 있는 경우
+### <a name="for-a-domain-site-or-organizational-unit-and-you-are-on-a-member-server-or-on-a-workstation-that-is-joined-to-a-domain"></a><a name="BKMK_2"></a>도메인, 사이트 또는 조직 구성 단위의 경우 도메인에 가입 된 워크스테이션 또는 구성원 서버에 있는 경우
 
 1.  MMC(Microsoft Management Console)를 엽니다.
 
@@ -101,7 +97,7 @@ SRP를 사용 하 여 특정 작업을 수행 하는 방법에 대 한 자세한
 > [!NOTE]
 > 이 절차를 수행 하려면 Domain Admins 그룹의 구성원 이어야 합니다.
 
-### <a name="BKMK_3"></a>도메인 또는 조직 구성 단위에 대해, 원격 서버 관리 도구 설치 된 도메인 컨트롤러 또는 워크스테이션에 있습니다.
+### <a name="for-a-domain-or-organizational-unit-and-you-are-on-a-domain-controller-or-on-a-workstation-that-has-the-remote-server-administration-tools-installed"></a><a name="BKMK_3"></a>도메인 또는 조직 구성 단위에 대해, 원격 서버 관리 도구 설치 된 도메인 컨트롤러 또는 워크스테이션에 있습니다.
 
 1.  그룹 정책 관리 콘솔를 엽니다.
 
@@ -120,7 +116,7 @@ SRP를 사용 하 여 특정 작업을 수행 하는 방법에 대 한 자세한
 > [!NOTE]
 > 이 절차를 수행 하려면 Domain Admins 그룹의 구성원 이어야 합니다.
 
-### <a name="BKMK_4"></a>사이트의 경우, 원격 서버 관리 도구 설치 된 도메인 컨트롤러 또는 워크스테이션에 있습니다.
+### <a name="for-a-site-and-you-are-on-a-domain-controller-or-on-a-workstation-that-has-the-remote-server-administration-tools-installed"></a><a name="BKMK_4"></a>사이트의 경우, 원격 서버 관리 도구 설치 된 도메인 컨트롤러 또는 워크스테이션에 있습니다.
 
 1.  그룹 정책 관리 콘솔를 엽니다.
 
@@ -145,7 +141,7 @@ SRP를 사용 하 여 특정 작업을 수행 하는 방법에 대 한 자세한
 > -   컴퓨터에 적용 되는 정책 설정을 설정 하려면 사용자가 로그온 하는 사용자에 관계 없이 **컴퓨터 구성**을 클릭 합니다.
 > -   사용자가 로그온 하는 컴퓨터에 관계 없이 사용자에 게 적용 되는 정책 설정을 설정 하려면 **사용자 구성**을 클릭 합니다.
 
-## <a name="BKMK_Create_SRP"></a>새 소프트웨어 제한 정책을 만들려면
+## <a name="to-create-new-software-restriction-policies"></a><a name="BKMK_Create_SRP"></a>새 소프트웨어 제한 정책을 만들려면
 
 1.  소프트웨어 제한 정책을 엽니다.
 
@@ -158,7 +154,7 @@ SRP를 사용 하 여 특정 작업을 수행 하는 방법에 대 한 자세한
 >     -   도메인에 가입된 컴퓨터에 대한 새 소프트웨어 제한 정책을 만들 경우 Domain Admins 그룹의 구성원이 이 절차를 수행할 수 있습니다.
 > -   소프트웨어 제한 정책이 GPO(그룹 정책 개체)에 대해 생성된 경우 **새 소프트웨어 제한 정책** 명령이 **작업** 메뉴에 나타나지 않습니다. 콘솔 트리에서 GPO에 적용되는 소프트웨어 제한 정책을 삭제하려면 **소프트웨어 제한 정책**을 마우스 오른쪽 단추로 클릭하고 **소프트웨어 제한 정책 삭제**를 클릭합니다. GPO에 대 한 소프트웨어 제한 정책을 삭제 하면 해당 GPO에 대 한 모든 소프트웨어 제한 정책 규칙도 삭제 됩니다. 소프트웨어 제한 정책을 삭제했으면 해당 GPO에 대한 새 소프트웨어 제한 정책을 만들 수 있습니다.
 
-## <a name="BKMK_Add_Del"></a>지정 된 파일 형식을 추가 하거나 삭제 하려면
+## <a name="to-add-or-delete-a-designated-file-type"></a><a name="BKMK_Add_Del"></a>지정 된 파일 형식을 추가 하거나 삭제 하려면
 
 1.  소프트웨어 제한 정책을 엽니다.
 
@@ -178,7 +174,7 @@ SRP를 사용 하 여 특정 작업을 수행 하는 방법에 대 한 자세한
 > -   아직 이와 같이 적용하지 않은 경우 GPO(그룹 정책 개체)에 대해 새 소프트웨어 제한 정책 설정을 만들어야 할 수 있습니다.
 > -   지정 된 파일 형식 목록은 컴퓨터 구성 및 GPO에 대 한 사용자 구성 모두에 대 한 모든 규칙에서 공유 됩니다.
 
-## <a name="BKMK_Prevent_Admin"></a>소프트웨어 제한 정책이 로컬 관리자에 게 적용 되지 않도록 하려면
+## <a name="to-prevent-software-restriction-policies-from-applying-to-local-administrators"></a><a name="BKMK_Prevent_Admin"></a>소프트웨어 제한 정책이 로컬 관리자에 게 적용 되지 않도록 하려면
 
 1.  소프트웨어 제한 정책을 엽니다.
 
@@ -192,7 +188,7 @@ SRP를 사용 하 여 특정 작업을 수행 하는 방법에 대 한 자세한
 > -   일반적으로 사용자가 사용자 조직의 컴퓨터에서 로컬 관리자 그룹의 구성원인 경우 이 옵션이 필요하지 않을 수도 있습니다.
 > -   로컬 컴퓨터에 대한 소프트웨어 제한 정책 설정을 정의하는 경우 이 절차를 통해 로컬 관리자가 적용된 소프트웨어 제한 정책을 적용하지 못하도록 방지합니다. 네트워크에 대 한 소프트웨어 제한 정책 설정을 정의 하는 경우 그룹 정책를 통해 보안 그룹의 멤버 자격에 따라 사용자 정책 설정을 필터링 합니다.
 
-## <a name="BKMK_Sec_Lvl"></a>소프트웨어 제한 정책의 기본 보안 수준을 변경 하려면
+## <a name="to-change-the-default-security-level-of-software-restriction-policies"></a><a name="BKMK_Sec_Lvl"></a>소프트웨어 제한 정책의 기본 보안 수준을 변경 하려면
 
 1.  소프트웨어 제한 정책을 엽니다.
 
@@ -210,7 +206,7 @@ SRP를 사용 하 여 특정 작업을 수행 하는 방법에 대 한 자세한
 > -   소프트웨어 제한 정책 규칙은 기본 보안 수준에 대 한 예외를 지정 하기 위해 생성 됩니다. 기본 보안 수준이 **무제한**으로 설정되면 규칙을 통해 실행이 허용되지 않는 소프트웨어를 지정할 수 있습니다. 기본 보안 수준이 **허용 안 함**으로 설정되면 규칙을 통해 실행이 허용되는 소프트웨어를 지정할 수 있습니다.
 > -   설치 시 시스템에 있는 모든 파일에 대한 소프트웨어 제한 정책의 기본 보안 수준은 **무제한**으로 설정됩니다.
 
-## <a name="BKMK_Apply_SRP_DLLs"></a>Dll에 소프트웨어 제한 정책을 적용 하려면
+## <a name="to-apply-software-restriction-policies-to-dlls"></a><a name="BKMK_Apply_SRP_DLLs"></a>Dll에 소프트웨어 제한 정책을 적용 하려면
 
 1.  소프트웨어 제한 정책을 엽니다.
 

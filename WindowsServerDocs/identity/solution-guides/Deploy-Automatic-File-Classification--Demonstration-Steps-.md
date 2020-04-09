@@ -1,7 +1,6 @@
 ---
 ms.assetid: 01988844-df02-4952-8535-c87aefd8a38a
 title: Deploy Automatic File Classification (Demonstration Steps)
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 7b8d613653bc2effdae155d34a1a94a820bae3aa
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: cc89e97aacab3b764df7314beeab701df846048a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71357593"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861256"
 ---
 # <a name="deploy-automatic-file-classification-demonstration-steps"></a>Deploy Automatic File Classification (Demonstration Steps)
 
@@ -37,9 +36,9 @@ ms.locfileid: "71357593"
 -   [4 단계: 파일이 분류 되었는지 확인](Deploy-Automatic-File-Classification--Demonstration-Steps-.md#BKMK_Step4)  
   
 > [!NOTE]  
-> 이 항목에는 설명한 절차의 일부를 자동화하는 데 사용할 수 있는 샘플 Windows PowerShell cmdlet이 포함되어 있습니다. 자세한 내용은 참조 [Cmdlet를 사용 하 여](https://go.microsoft.com/fwlink/p/?linkid=230693)합니다.  
+> 이 항목에는 설명된 일부 절차를 자동화하는 데 사용할 수 있는 예제 Windows PowerShell cmdlet이 포함되어 있습니다. 자세한 내용은 참조 [Cmdlet를 사용 하 여](https://go.microsoft.com/fwlink/p/?linkid=230693)합니다.  
   
-## <a name="BKMK_Step1"></a>1 단계: 리소스 속성 정의 만들기  
+## <a name="step-1-create-resource-property-definitions"></a><a name="BKMK_Step1"></a>1 단계: 리소스 속성 정의 만들기  
 파일 분류 인프라가 네트워크 공유 폴더에서 검사된 파일에 태그를 지정할 수 있도록 영향 및 개인 식별이 가능한 정보 리소스 속성을 설정합니다.  
   
 [Windows PowerShell을 사용 하 여이 단계 수행](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep1)  
@@ -58,14 +57,14 @@ ms.locfileid: "71357593"
   
 ![솔루션 가이드](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
-다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
+다음 Windows PowerShell cmdlet은 이전 절차와 동일한 기능을 수행합니다. 서식 조건 때문에 각 cmdlet이 여러 줄로 자동 줄 바꿈되어 표시되더라도 한 줄에 입력합니다.  
   
 ```  
 Set-ADResourceProperty '"Enabled:$true '"Identity:'CN=Impact_MS,CN=Resource Properties,CN=Claims Configuration,CN=Services,CN=Configuration,DC=contoso,DC=com'   
 Set-ADResourceProperty '"Enabled:$true '"Identity:'CN=PII_MS,CN=Resource Properties,CN=Claims Configuration,CN=Services,CN=Configuration,DC=contoso,DC=com'  
 ```  
   
-## <a name="BKMK_Step2"></a>2 단계: 문자열 콘텐츠 분류 규칙 만들기  
+## <a name="step-2-create-a-string-content-classification-rule"></a><a name="BKMK_Step2"></a>2 단계: 문자열 콘텐츠 분류 규칙 만들기  
 문자열 콘텐츠 분류 규칙은 파일에서 특정 문자열을 검사합니다. 문자열이 발견되면 리소스 속성 값을 구성할 수 있습니다. 이 예제에서는 검색 네트워크 공유 폴더에 있는 각 파일 하 고 ' Contoso Confidential.' 문자열을 찾습니다. 문자열이 발견되면 해당 파일은 높은 비즈니스 영향을 가진 것으로 분류됩니다.  
   
 [Windows PowerShell을 사용 하 여이 단계 수행](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep2)  
@@ -109,7 +108,7 @@ Set-ADResourceProperty '"Enabled:$true '"Identity:'CN=PII_MS,CN=Resource Propert
   
 ![솔루션 가이드](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
-다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
+다음 Windows PowerShell cmdlet은 이전 절차와 동일한 기능을 수행합니다. 서식 조건 때문에 각 cmdlet이 여러 줄로 자동 줄 바꿈되어 표시되더라도 한 줄에 입력합니다.  
   
 ```  
 $date = Get-Date  
@@ -118,7 +117,7 @@ Set-FsrmClassification -Continuous -schedule $AutomaticClassificationScheduledTa
 New-FSRMClassificationRule -Name 'Contoso Confidential' -Property "Impact_MS" -PropertyValue "3000" -Namespace @('D:\Finance Documents') -ClassificationMechanism "Content Classifier" -Parameters @("StringEx=Min=1;Expr=Contoso Confidential") -ReevaluateProperty Overwrite  
 ```  
   
-## <a name="BKMK_Step3"></a>3 단계: 정규식 콘텐츠 분류 규칙 만들기  
+## <a name="step-3-create-a-regular-expression-content-classification-rule"></a><a name="BKMK_Step3"></a>3 단계: 정규식 콘텐츠 분류 규칙 만들기  
 정규식 분류 규칙은 파일에서 정규식과 일치하는 패턴을 검사합니다. 정규식과 일치하는 문자열이 발견되면 리소스 속성 값을 구성할 수 있습니다. 이 예제에서는 네트워크 공유 폴더에 있는 각 파일을 검사하여 주민 등록 번호(XXX XX XXXX) 패턴과 일치하는 문자열을 찾습니다. 패턴이 발견되면 해당 파일은 개인 식별이 가능한 정보를 가진 것으로 분류됩니다.  
   
 [Windows PowerShell을 사용 하 여이 단계 수행](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep3)  
@@ -157,13 +156,13 @@ New-FSRMClassificationRule -Name 'Contoso Confidential' -Property "Impact_MS" -P
   
 ![솔루션 가이드](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell 해당 명령</em>***  
   
-다음 Windows PowerShell cmdlet은 이전 절차와 같은 기능을 수행합니다. 서식 제약 조건으로 인해 각 cmdlet이 여러 줄에 자동 줄 바꿈되어 표시될 수 있지만 각 cmdlet을 한 줄에 입력하세요.  
+다음 Windows PowerShell cmdlet은 이전 절차와 동일한 기능을 수행합니다. 서식 조건 때문에 각 cmdlet이 여러 줄로 자동 줄 바꿈되어 표시되더라도 한 줄에 입력합니다.  
   
 ```  
 New-FSRMClassificationRule -Name "PII Rule" -Property "PII_MS" -PropertyValue "5000" -Namespace @('D:\Finance Documents') -ClassificationMechanism "Content Classifier" -Parameters @("RegularExpressionEx=Min=10;Expr=^(?!000)([0-7]\d{2}|7([0-7]\d|7[012]))([ -]?)(?!00)\d\d\3(?!0000)\d{4}$") -ReevaluateProperty Overwrite  
 ```  
   
-## <a name="BKMK_Step4"></a>4 단계: 파일이 올바르게 분류 되었는지 확인  
+## <a name="step-4-verify-that-the-files-are-classified-correctly"></a><a name="BKMK_Step4"></a>4 단계: 파일이 올바르게 분류 되었는지 확인  
 분류 규칙에 지정된 폴더에 만들어진 파일의 속성을 보고 파일이 올바르게 분류되었는지 확인할 수 있습니다.  
   
 #### <a name="to-verify-that-the-files-are-classified-correctly"></a>파일이 올바르게 분류되었는지 확인하려면  
@@ -184,7 +183,7 @@ New-FSRMClassificationRule -Name "PII Rule" -Property "PII_MS" -PropertyValue "5
   
 4.  **분류** 탭을 클릭하고 파일이 올바르게 분류되었는지 확인합니다.  
   
-## <a name="BKMK_Links"></a>참고 항목  
+## <a name="see-also"></a><a name="BKMK_Links"></a>참고 항목  
   
 -   [시나리오: 분류를 사용 하 여 데이터에 대 한 통찰력 얻기](Scenario--Get-Insight-into-Your-Data-by-Using-Classification.md)  
   

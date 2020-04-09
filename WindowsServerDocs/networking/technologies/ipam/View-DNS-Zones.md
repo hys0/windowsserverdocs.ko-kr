@@ -2,22 +2,18 @@
 title: DNS 영역 보기
 description: 이 항목은 Windows Server 2016의 IPAM (IP 주소 관리) 관리 가이드의 일부입니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ipam
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2cfe4e40-ec6d-4541-baa9-d772409fe27c
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: f60f80f20b5465918f34d5c0140d5a461d90c571
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 523143cc050c0c346f2f5ff4dc249bae3c5c21dc
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80312388"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854806"
 ---
 # <a name="view-dns-zones"></a>DNS 영역 보기
 
@@ -43,7 +39,7 @@ ms.locfileid: "80312388"
   
     -   조건부 전달자  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [DNS 영역 관리](DNS-Zone-Management.md)  
 [IPAM 관리](Manage-IPAM.md)  
   

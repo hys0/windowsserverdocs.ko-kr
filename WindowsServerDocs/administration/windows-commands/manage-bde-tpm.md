@@ -1,28 +1,24 @@
 ---
 title: manage-bde tpm 관리
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 11a8530d-edd7-4fe3-ae81-b943766760fe
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 577f5f2ecb85ac8c0c28fef2ca343635796454d2
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b6495bfbfedea7219ae175145f72fc12314ce7ae
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71373833"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80839766"
 ---
 # <a name="manage-bde-tpm"></a>manage-bde: tpm
 
-> 적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 > 
 > [!IMPORTANT]
 > Windows 8, Windows Server 2012 또는 이후 운영 체제를 실행 하는 컴퓨터에서 사용 하기 위해이 명령은 지원 되지 않습니다. 해당 컴퓨터에 대해 사용할 수는 [Windows PowerShell에 대 한 TPM 관리 cmdlet](https://docs.microsoft.com/powershell/module/trustedplatformmodule/)합니다.
@@ -31,7 +27,7 @@ ms.locfileid: "71373833"
 > ```
 > manage-bde -tpm [-turnon] [-takeownership <OwnerPassword>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 > ```
-> ### <a name="parameters"></a>매개 변수
+> #### <a name="parameters"></a>매개 변수
 > 
 > |    매개 변수    |                                                                              설명                                                                               |
 > |-----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -43,15 +39,15 @@ ms.locfileid: "71373833"
 > |    -? 또는 /?     |                                                               명령 프롬프트에 대 한 간단한 도움말을 표시 합니다.                                                               |
 > |   -help 또는-h   |                                                             명령 프롬프트에서 전체 도움말을 표시 합니다.                                                              |
 > 
-> ## <a name="BKMK_Examples"></a>예와
+> ## <a name="examples"></a><a name=BKMK_Examples></a>예와
 > 다음 예제를 사용 하는 **tpm** TPM을 설정 하는 명령입니다.
 > ```
 > manage-bde  tpm -turnon
 > ```
-> 다음 예에서는 **tpm** 명령을 사용 하 여 tpm의 소유권을 가져오고 소유자 암호를 0wnerP@ss로 설정 하는 방법을 보여 줍니다.
+> 다음 예에서는 **tpm** 명령을 사용 하 여 tpm의 소유권을 가져오고 소유자 암호를 0wnerP@ss으로 설정 하는 방법을 보여 줍니다.
 > ```
 > manage-bde  tpm  takeownership 0wnerP@ss
 > ```
 > ## <a name="additional-references"></a>추가 참조
-> -   [명령줄 구문 키](command-line-syntax-key.md)
+> -   - [명령줄 구문 키](command-line-syntax-key.md)
 > -   [manage-bde](manage-bde.md)

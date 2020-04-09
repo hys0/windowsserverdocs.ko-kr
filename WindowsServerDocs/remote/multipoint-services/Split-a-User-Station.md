@@ -1,27 +1,23 @@
 ---
 title: 사용자 스테이션 분할
 description: 두 명의 사용자가 동일한 스테이션을 사용할 수 있도록 MultiPoint 서비스에서 디스플레이를 분할 하는 방법을 알아봅니다.
-ms.custom: na
 ms.date: 07/08/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f0d1fc9c-f5ea-45bc-a8da-623c5d081cdf
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.openlocfilehash: 5067df3f5902570d56ee130264c751d66b5b0d3f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: db828da06045bb884db138458f875af1d4d5b99d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71394954"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853896"
 ---
 # <a name="split-a-user-station"></a>사용자 스테이션 분할
-해상도가 1024x768 이상인 모든 MultiPoint 서비스 스테이션 모니터는 **스테이션** 탭의 **스테이션 분할** 작업을 사용하여 두 스테이션으로 분할할 수 있습니다. 분할이 이루어질 때 모니터에 표시되어 있던 데스크톱은 모니터의 왼쪽 반으로 이동되고 새로운 스테이션이 동일한 모니터의 오른쪽 반에 생성됩니다. 이러한 분할 생성을 완료하려면 새로운 스테이션을 키보드, 마우스 및 USB 허브에 매핑해야 합니다. 스테이션이 분할되면 한 사용자가 왼쪽 스테이션에 로그온한 상태에서 다른 사용자가 오른쪽 스테이션에 로그온할 수 있습니다.  
+해상도가 1024x768 이상인 MultiPoint 서비스 스테이션 **모니터는 스테이션 탭의** **스테이션 분할** 작업을 사용 하 여 두 개의 스테이션으로 분할할 수 있습니다. 분할이 발생 했을 때 모니터에 있는 데스크톱이 모니터의 왼쪽 절반으로 이동 하 고, 동일한 모니터의 오른쪽 절반에 새 스테이션이 생성 됩니다. 이러한 분할 생성을 완료하려면 새로운 스테이션을 키보드, 마우스 및 USB 허브에 매핑해야 합니다. 스테이션이 분할되면 한 사용자가 왼쪽 스테이션에 로그온한 상태에서 다른 사용자가 오른쪽 스테이션에 로그온할 수 있습니다.  
   
 화면 분할 스테이션 사용의 이점 포함 될 수 있습니다.  
   
@@ -50,5 +46,5 @@ ms.locfileid: "71394954"
   
 3.  **스테이션 작업**에서 **스테이션 분할 해제**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [사용자 스테이션 관리](Manage-User-Stations.md)

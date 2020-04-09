@@ -1,24 +1,20 @@
 ---
 title: 컨테이너 네트워킹 개요
 description: 이 항목은 Windows 컨테이너의 네트워킹 스택에 대 한 개요 이며 컨테이너 네트워크를 만들고 구성 하 고 관리 하는 방법에 대 한 추가 지침에 대 한 링크를 제공 합니다.
-manager: ravirao
-ms.custom: na
+manager: grcusanz
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-sdn
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 318659e5-e4a5-4e46-99d6-211dfc46f6b8
-ms.author: lizross
-author: jmesser81
+ms.author: anpaul
+author: AnirbanPaul
 ms.date: 09/04/2018
-ms.openlocfilehash: e8ec74ff0ebf0f0cb87db4d79ed5d37583f9beb9
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 8e2f10c7577f6f271c3766cff9a4fb1cc9d41140
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80317259"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854316"
 ---
 # <a name="container-networking-overview"></a>컨테이너 네트워킹 개요
 

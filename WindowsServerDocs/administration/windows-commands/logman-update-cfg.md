@@ -1,24 +1,20 @@
 ---
 title: logman update cfg
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9da4e8b4-3be5-42d3-b0b4-c429630c35c4 britw
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 880499048978f3a451f2ccb4e898155b49e33bcb
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: c74370432dbc21f244dd675bb62cc65a13fa2ec7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71374362"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80840536"
 ---
 # <a name="logman-update-cfg"></a>logman update cfg
 
@@ -30,7 +26,7 @@ ms.locfileid: "71374362"
 ```  
 logman update cfg <[-n] <name>> [options]  
 ```  
-## <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
 
 |                    매개 변수                     |                                                                               설명                                                                               |
 |--------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -42,10 +38,10 @@ logman update cfg <[-n] <name>> [options]
 |             -[-u < 사용자 [password] >              | 사용자 계정으로 실행을 지정합니다. 암호에 대 한 \*를 입력 하면 암호를 묻는 메시지가 생성 됩니다. 암호 프롬프트에서 입력할 때 암호 표시 되지 않습니다. |
 |    -m < [시작] [stop] [[시작] [stop] [...]] >    |                                                예약 된 시작 시간 또는 종료 시간 대신 수동 시작 또는 중지로 변경 합니다.                                                 |
 |                -rf < [[hh:] mm:] ss >                |                                                        지정 된 기간에 대 한 데이터 수집기를 실행 합니다.                                                         |
-|        -b < M/d/yyyy h:mm: ss [AM&#124;PM] >         |                                                              지정된 된 시간에 데이터 수집을 시작 합니다.                                                               |
+|        -b < M/d/yyyy h:mm: ss [AM (& a) #124; PM] >         |                                                              지정된 된 시간에 데이터 수집을 시작 합니다.                                                               |
 |        -e < M/d/yyyy h:mm: ss [AM (& a) #124; PM] >         |                                                               지정된 된 시간에 대 한 데이터 수집을 종료 합니다.                                                                |
 |                -si < [[hh:] mm:] ss >                |                                                 성능 카운터 데이터 수집기에 대 한 샘플 간격을 지정합니다.                                                  |
-|              -o < 경로 &#124;; dsn! 로그 >              |                                              SQL 데이터베이스에 출력 로그 파일 또는 DSN 및 로그 설정 이름을 지정 합니다.                                               |
+|              -o < 경로 & #124; dsn! 로그 >              |                                              SQL 데이터베이스에 출력 로그 파일 또는 DSN 및 로그 설정 이름을 지정 합니다.                                               |
 |                      -[-]r                       |                                                  지정 된 시작 및 종료 시간에 매일 데이터 수집기를 반복 합니다.                                                  |
 |                      -[-]a                       |                                                                     기존 로그 파일에 추가 합니다.                                                                     |
 |                      -[-] ow                      |                                                                     기존 로그 파일을 덮어씁니다.                                                                     |
@@ -59,13 +55,13 @@ logman update cfg <[-n] <name>> [options]
 |            -mgt < 쿼리 [쿼리 [...]] >            |                                                      SQL 쿼리 언어를 사용 하 여 수집 하는 WMI 개체를 지정 합니다.                                                       |
 |             -ftc < 경로 [경로 [...]] >             |                                                           수집할 파일의 전체 경로 지정 합니다.                                                            |
 
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
 [-] 나열 되는 위치는 추가 된-옵션을 부정 합니다.  
-## <a name="BKMK_examples"></a>예와  
+## <a name="examples"></a><a name=BKMK_examples></a>예와  
 다음 명령은 cfg_log HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows NT\Currentverion\\레지스트리 키를 수집 하도록 기존 구성 데이터 수집기를 업데이트 합니다.  
 ```  
-logman update cfg cfg_log -reg "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Currentverion\"  
+logman update cfg cfg_log -reg HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Currentverion\  
 ```  
-#### <a name="additional-references"></a>추가 참조  
+## <a name="additional-references"></a>추가 참조  
 [logman](logman.md)  
 [logman 만들기 cfg](logman-create-cfg.md)  

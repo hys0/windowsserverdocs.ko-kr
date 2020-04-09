@@ -1,6 +1,5 @@
 ---
 title: 보호 된 패브릭 배포에 대 한 빠른 시작
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: e060e052-39a0-4154-90bb-b97cc6dde68e
@@ -9,12 +8,12 @@ author: justinha
 ms.author: justinha
 ms.technology: security-guarded-fabric
 ms.date: 01/30/2019
-ms.openlocfilehash: e2b8400fc7b7f0e01e000fcb2f6472bdb4059ac8
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: c0e29abf14ff1dded12e7e20a0c0a74f80a91d8e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75949807"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856746"
 ---
 # <a name="quick-start-for-guarded-fabric-deployment"></a>보호 된 패브릭 배포에 대 한 빠른 시작
 
@@ -105,9 +104,9 @@ LiveKd에서 사용 하는 것과 같은 대체 디버깅 기술은 차단 되�
 
 TPM 모드의 경우 다음과 같은 세 가지 작업이 필요 합니다. 
 
-1.  각 및 모든 Hyper-v 호스트의 TPM 2.0에서 _공개 인증 키_ (또는 _EKpub_) EKpub를 캡처하려면 `Get-PlatformIdentifier`를 사용 합니다. 
-2.  _하드웨어 기준_입니다. Hyper-v 호스트가 동일한 경우에는 단일 기준이 모두 필요 합니다. 그렇지 않은 경우 각 하드웨어 클래스에 대해 하나가 필요 합니다. 기준은 신뢰할 수 있는 컴퓨팅 그룹 로그 파일 또는 TCGlog 형식입니다. TCGlog에는 호스트가 완전히 부팅 되는 것과 같이 UEFI 펌웨어에서 커널이 발생 한 모든 항목이 포함 됩니다. 하드웨어 기준을 캡처하려면 Hyper-v 역할 및 호스트 보호 Hyper-v 지원 기능을 설치 하 고 `Get-HgsAttestationBaselinePolicy`를 사용 합니다. 
-3.  _코드 무결성 정책_입니다. Hyper-v 호스트가 동일한 경우에는 단일 CI 정책만 있으면 됩니다. 그렇지 않은 경우 각 하드웨어 클래스에 대해 하나가 필요 합니다. Windows Server 2016 및 Windows 10에는 모두 _HVCI (하이퍼바이저 적용 코드 무결성)_ 라고 하는 CI 정책에 대 한 새로운 형태의 적용이 있습니다. HVCI는 강력한 적용을 제공 하며, 호스트가 신뢰할 수 있는 관리자가 실행할 수 있는 이진 파일만 실행할 수 있도록 합니다. 이러한 지침은 HGS에 추가 되는 CI 정책에 래핑됩니다. HGS는 보호 된 Vm을 실행 하도록 허용 되기 전에 각 호스트의 CI 정책을 측정 합니다. CI 정책을 캡처하려면 `New-CIPolicy`를 사용 합니다. 그런 다음 `ConvertFrom-CIPolicy`를 사용 하 여 정책을 이진 형식으로 변환 해야 합니다.
+1.    각 및 모든 Hyper-v 호스트의 TPM 2.0에서 _공개 인증 키_ (또는 _EKpub_) EKpub를 캡처하려면 `Get-PlatformIdentifier`를 사용 합니다. 
+2.    _하드웨어 기준_입니다. Hyper-v 호스트가 동일한 경우에는 단일 기준이 모두 필요 합니다. 그렇지 않은 경우 각 하드웨어 클래스에 대해 하나가 필요 합니다. 기준은 신뢰할 수 있는 컴퓨팅 그룹 로그 파일 또는 TCGlog 형식입니다. TCGlog에는 호스트가 완전히 부팅 되는 것과 같이 UEFI 펌웨어에서 커널이 발생 한 모든 항목이 포함 됩니다. 하드웨어 기준을 캡처하려면 Hyper-v 역할 및 호스트 보호 Hyper-v 지원 기능을 설치 하 고 `Get-HgsAttestationBaselinePolicy`를 사용 합니다. 
+3.    _코드 무결성 정책_입니다. Hyper-v 호스트가 동일한 경우에는 단일 CI 정책만 있으면 됩니다. 그렇지 않은 경우 각 하드웨어 클래스에 대해 하나가 필요 합니다. Windows Server 2016 및 Windows 10에는 모두 _HVCI (하이퍼바이저 적용 코드 무결성)_ 라고 하는 CI 정책에 대 한 새로운 형태의 적용이 있습니다. HVCI는 강력한 적용을 제공 하며, 호스트가 신뢰할 수 있는 관리자가 실행할 수 있는 이진 파일만 실행할 수 있도록 합니다. 이러한 지침은 HGS에 추가 되는 CI 정책에 래핑됩니다. HGS는 보호 된 Vm을 실행 하도록 허용 되기 전에 각 호스트의 CI 정책을 측정 합니다. CI 정책을 캡처하려면 `New-CIPolicy`를 사용 합니다. 그런 다음 `ConvertFrom-CIPolicy`를 사용 하 여 정책을 이진 형식으로 변환 해야 합니다.
 
 ![Id, 기준 및 CI 정책 추출](../media/Guarded-Fabric-Shielded-VM/guarded-fabric-deployment-step-three-extract-identity-baseline-ci-policy.png)
 
